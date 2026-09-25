@@ -1,0 +1,93 @@
+{
+  "buys": [],
+  "cash": 9436.34,
+  "date": "2026-09-14",
+  "equity": 9436.34,
+  "fees": 25.1014,
+  "fills": [
+    {
+      "fees": 3.172,
+      "pnl": 22.75,
+      "price": 5.03,
+      "shares": 242,
+      "side": "SELL",
+      "ticker": "BNC"
+    },
+    {
+      "fees": 4.9758,
+      "pnl": 134.52,
+      "price": 3.51,
+      "shares": 380,
+      "side": "SELL",
+      "ticker": "CMRC"
+    },
+    {
+      "fees": 5.7721,
+      "pnl": 32.64,
+      "price": 2.8,
+      "shares": 441,
+      "side": "SELL",
+      "ticker": "INDP"
+    },
+    {
+      "fees": 2.7016,
+      "pnl": -65.1,
+      "price": 5.49,
+      "shares": 206,
+      "side": "SELL",
+      "ticker": "INTR"
+    },
+    {
+      "fees": 2.031,
+      "pnl": -165.11,
+      "price": 141.42,
+      "shares": 7,
+      "side": "SELL",
+      "ticker": "ORCL"
+    },
+    {
+      "fees": 2.052,
+      "pnl": 20.98,
+      "price": 86.06,
+      "shares": 14,
+      "side": "SELL",
+      "ticker": "SWKS"
+    },
+    {
+      "fees": 2.055,
+      "pnl": -7.54,
+      "price": 77.1,
+      "shares": 15,
+      "side": "SELL",
+      "ticker": "VIST"
+    },
+    {
+      "fees": 2.3419,
+      "pnl": -75.94,
+      "price": 10.29,
+      "shares": 108,
+      "side": "SELL",
+      "ticker": "WLTH"
+    }
+  ],
+  "holdings": [],
+  "mean": -0.9549,
+  "n_trades_today": 8,
+  "recipe": "union_vol_ab_h1",
+  "sells": [
+    "BNC",
+    "CMRC",
+    "INDP",
+    "INTR",
+    "ORCL",
+    "SWKS",
+    "VIST",
+    "WLTH"
+  ],
+  "state": {
+    "after": "2026-09-14",
+    "cash": 9436.34,
+    "pos": {},
+    "yday_equity": 9436.34
+  }
+}

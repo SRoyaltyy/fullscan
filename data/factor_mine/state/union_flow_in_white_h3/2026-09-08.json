@@ -1,0 +1,66 @@
+{
+  "buys": [],
+  "cash": 14.24,
+  "date": "2026-09-08",
+  "equity": 10124.49,
+  "fees": 0,
+  "fills": [],
+  "holdings": [
+    "ADCT",
+    "ATRC",
+    "XP"
+  ],
+  "mean": 0.092,
+  "n_trades_today": 0,
+  "recipe": "union_flow_in_white_h3",
+  "sells": [],
+  "state": {
+    "after": "2026-09-08",
+    "cash": 14.24,
+    "pos": {
+      "ADCT": {
+        "close_px": 1.2999999523162842,
+        "cost": 3366.2754777389528,
+        "entry_date": "2026-09-04",
+        "entry_px": 1.2999999523162842,
+        "fee_in": 33.0756,
+        "last_px": 1.3300000429153442,
+        "min_hold": 3,
+        "notional": 3333.1998777389526,
+        "peak_px": 1.3300000429153442,
+        "reason": "combo gate; gate flow_in=True,zero_red=True; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+17.9; leftover $3333.33",
+        "shares": 2564,
+        "ticker": "ADCT"
+      },
+      "ATRC": {
+        "close_px": 53.72999954223633,
+        "cost": 3332.101921875,
+        "entry_date": "2026-09-04",
+        "entry_px": 52.029998779296875,
+        "fee_in": 2.182,
+        "last_px": 54.310001373291016,
+        "min_hold": 3,
+        "notional": 3329.919921875,
+        "peak_px": 54.310001373291016,
+        "reason": "combo gate; gate flow_in=True,zero_red=True; list flatten,mover_buy; \ud83d\udd35; \u26aa; ret5=+6.5; leftover $3333.33",
+        "shares": 64,
+        "ticker": "ATRC"
+      },
+      "XP": {
+        "close_px": 19.989999771118164,
+        "cost": 3287.381012741089,
+        "entry_date": "2026-09-04",
+        "entry_px": 19.670000076293945,
+        "fee_in": 2.491,
+        "last_px": 20.459999084472656,
+        "min_hold": 3,
+        "notional": 3284.890012741089,
+        "peak_px": 20.459999084472656,
+        "reason": "combo gate; gate flow_in=True,zero_red=True; list mover_buy; \ud83d\udd35; \u26aa; ret5=+13.1; leftover $3333.33",
+        "shares": 167,
+        "ticker": "XP"
+      }
+    },
+    "yday_equity": 10124.49
+  }
+}

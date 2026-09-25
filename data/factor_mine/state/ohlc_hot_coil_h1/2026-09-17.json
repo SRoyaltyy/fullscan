@@ -1,0 +1,222 @@
+{
+  "buys": [
+    "PGEN",
+    "SABR",
+    "QTRX",
+    "BNC",
+    "SFL",
+    "LPG"
+  ],
+  "cash": 43.1,
+  "date": "2026-09-17",
+  "equity": 9949.53,
+  "fees": 39.3863,
+  "fills": [
+    {
+      "fees": 2.0581,
+      "pnl": 12.86,
+      "price": 109.13,
+      "shares": 15,
+      "side": "SELL",
+      "ticker": "INSW"
+    },
+    {
+      "fees": 2.0169,
+      "pnl": 1.05,
+      "price": 682.44,
+      "shares": 2,
+      "side": "SELL",
+      "ticker": "META"
+    },
+    {
+      "fees": 2.0232,
+      "pnl": -2.75,
+      "price": 350.5,
+      "shares": 4,
+      "side": "SELL",
+      "ticker": "NTRA"
+    },
+    {
+      "fees": 2.0362,
+      "pnl": 5.39,
+      "price": 190.35,
+      "shares": 8,
+      "side": "SELL",
+      "ticker": "QCOM"
+    },
+    {
+      "fees": 2.132,
+      "pnl": -101.04,
+      "price": 37.57,
+      "shares": 40,
+      "side": "SELL",
+      "ticker": "SM"
+    },
+    {
+      "fees": 2.0237,
+      "pnl": 8.33,
+      "price": 366.2,
+      "shares": 4,
+      "side": "SELL",
+      "ticker": "WST"
+    },
+    {
+      "fees": 2.7477,
+      "pnl": null,
+      "price": 7.59,
+      "shares": 213,
+      "side": "BUY",
+      "ticker": "PGEN"
+    },
+    {
+      "fees": 8.6946,
+      "pnl": null,
+      "price": 2.4,
+      "shares": 674,
+      "side": "BUY",
+      "ticker": "SABR"
+    },
+    {
+      "fees": 7.095,
+      "pnl": null,
+      "price": 2.94,
+      "shares": 550,
+      "side": "BUY",
+      "ticker": "QTRX"
+    },
+    {
+      "fees": 4.1409,
+      "pnl": null,
+      "price": 5.03,
+      "shares": 321,
+      "side": "BUY",
+      "ticker": "BNC"
+    },
+    {
+      "fees": 2.347,
+      "pnl": null,
+      "price": 13.55,
+      "shares": 119,
+      "side": "BUY",
+      "ticker": "SFL"
+    },
+    {
+      "fees": 2.071,
+      "pnl": null,
+      "price": 57.93,
+      "shares": 27,
+      "side": "BUY",
+      "ticker": "LPG"
+    }
+  ],
+  "holdings": [
+    "BNC",
+    "LPG",
+    "PGEN",
+    "QTRX",
+    "SABR",
+    "SFL"
+  ],
+  "mean": 3.0766,
+  "n_trades_today": 12,
+  "recipe": "ohlc_hot_coil_h1",
+  "sells": [
+    "INSW",
+    "META",
+    "NTRA",
+    "QCOM",
+    "SM",
+    "WST"
+  ],
+  "state": {
+    "after": "2026-09-17",
+    "cash": 43.1,
+    "pos": {
+      "BNC": {
+        "close_px": 5.420000076293945,
+        "cost": 1618.7709673484803,
+        "entry_date": "2026-09-17",
+        "entry_px": 5.03000020980835,
+        "fee_in": 4.1409,
+        "last_px": 5.03000020980835,
+        "min_hold": 1,
+        "notional": 1614.6300673484802,
+        "peak_px": 5.03000020980835,
+        "reason": "hot list \u2229 not exploded; gate ret_5_min=0.0,ret_5_max=10.0,rvol_max=2.2; list ohlc_hot; ret5=+7.4; leftover $1618.78",
+        "shares": 321,
+        "ticker": "BNC"
+      },
+      "LPG": {
+        "close_px": 58.310001373291016,
+        "cost": 1566.181008239746,
+        "entry_date": "2026-09-17",
+        "entry_px": 57.93000030517578,
+        "fee_in": 2.071,
+        "last_px": 57.93000030517578,
+        "min_hold": 1,
+        "notional": 1564.110008239746,
+        "peak_px": 57.93000030517578,
+        "reason": "hot list \u2229 not exploded; gate ret_5_min=0.0,ret_5_max=10.0,rvol_max=2.2; list ohlc_hot; ret5=+7.9; leftover $1618.78",
+        "shares": 27,
+        "ticker": "LPG"
+      },
+      "PGEN": {
+        "close_px": 7.869999885559082,
+        "cost": 1619.4177325012206,
+        "entry_date": "2026-09-17",
+        "entry_px": 7.590000152587891,
+        "fee_in": 2.7477,
+        "last_px": 7.590000152587891,
+        "min_hold": 1,
+        "notional": 1616.6700325012207,
+        "peak_px": 7.590000152587891,
+        "reason": "hot list \u2229 not exploded; gate ret_5_min=0.0,ret_5_max=10.0,rvol_max=2.2; list flatten,ohlc_hot; ret5=+9.4; leftover $1618.78",
+        "shares": 213,
+        "ticker": "PGEN"
+      },
+      "QTRX": {
+        "close_px": 3.119999885559082,
+        "cost": 1624.0950314712525,
+        "entry_date": "2026-09-17",
+        "entry_px": 2.940000057220459,
+        "fee_in": 7.095,
+        "last_px": 2.940000057220459,
+        "min_hold": 1,
+        "notional": 1617.0000314712524,
+        "peak_px": 2.940000057220459,
+        "reason": "hot list \u2229 not exploded; gate ret_5_min=0.0,ret_5_max=10.0,rvol_max=2.2; list yday_gainer,ohlc_hot; ret5=+9.8; leftover $1618.78",
+        "shares": 550,
+        "ticker": "QTRX"
+      },
+      "SABR": {
+        "close_px": 2.319999933242798,
+        "cost": 1626.294664277649,
+        "entry_date": "2026-09-17",
+        "entry_px": 2.4000000953674316,
+        "fee_in": 8.6946,
+        "last_px": 2.4000000953674316,
+        "min_hold": 1,
+        "notional": 1617.600064277649,
+        "peak_px": 2.4000000953674316,
+        "reason": "hot list \u2229 not exploded; gate ret_5_min=0.0,ret_5_max=10.0,rvol_max=2.2; list probable,yday_gainer,yday_mover,ohlc_hot; \ud83d\udd35; \u26aa; ret5=+8.4; leftover $1618.78",
+        "shares": 674,
+        "ticker": "SABR"
+      },
+      "SFL": {
+        "close_px": 13.75,
+        "cost": 1614.7970226974487,
+        "entry_date": "2026-09-17",
+        "entry_px": 13.550000190734863,
+        "fee_in": 2.347,
+        "last_px": 13.550000190734863,
+        "min_hold": 1,
+        "notional": 1612.4500226974487,
+        "peak_px": 13.550000190734863,
+        "reason": "hot list \u2229 not exploded; gate ret_5_min=0.0,ret_5_max=10.0,rvol_max=2.2; list ohlc_hot; ret5=+7.8; leftover $1618.78",
+        "shares": 119,
+        "ticker": "SFL"
+      }
+    },
+    "yday_equity": 9949.53
+  }
+}

@@ -1,0 +1,215 @@
+{
+  "buys": [
+    "SANM",
+    "NVT",
+    "BAK",
+    "APPS",
+    "VIST",
+    "BAND",
+    "PAGS",
+    "REAX"
+  ],
+  "cash": 265.45,
+  "date": "2026-09-11",
+  "equity": 8976.27,
+  "fees": 21.5113,
+  "fills": [
+    {
+      "fees": 2.005,
+      "pnl": null,
+      "price": 206.84,
+      "shares": 5,
+      "side": "BUY",
+      "ticker": "SANM"
+    },
+    {
+      "fees": 2.008,
+      "pnl": null,
+      "price": 157.78,
+      "shares": 6,
+      "side": "BUY",
+      "ticker": "NVT"
+    },
+    {
+      "fees": 6.6693,
+      "pnl": null,
+      "price": 2.12,
+      "shares": 517,
+      "side": "BUY",
+      "ticker": "BAK"
+    },
+    {
+      "fees": 2.266,
+      "pnl": null,
+      "price": 11.88,
+      "shares": 92,
+      "side": "BUY",
+      "ticker": "APPS"
+    },
+    {
+      "fees": 2.032,
+      "pnl": null,
+      "price": 77.33,
+      "shares": 14,
+      "side": "BUY",
+      "ticker": "VIST"
+    },
+    {
+      "fees": 2.05,
+      "pnl": null,
+      "price": 52.55,
+      "shares": 20,
+      "side": "BUY",
+      "ticker": "BAND"
+    },
+    {
+      "fees": 2.314,
+      "pnl": null,
+      "price": 10.11,
+      "shares": 108,
+      "side": "BUY",
+      "ticker": "PAGS"
+    },
+    {
+      "fees": 2.167,
+      "pnl": null,
+      "price": 18.56,
+      "shares": 59,
+      "side": "BUY",
+      "ticker": "REAX"
+    }
+  ],
+  "holdings": [
+    "APPS",
+    "BAK",
+    "BAND",
+    "NVT",
+    "PAGS",
+    "REAX",
+    "SANM",
+    "VIST"
+  ],
+  "mean": 2.2659,
+  "n_trades_today": 8,
+  "recipe": "coil_h3_exit_alarm",
+  "sells": [],
+  "state": {
+    "after": "2026-09-11",
+    "cash": 265.45,
+    "pos": {
+      "APPS": {
+        "close_px": 11.8100004196167,
+        "cost": 1095.2260105285645,
+        "entry_date": "2026-09-11",
+        "entry_px": 11.880000114440918,
+        "fee_in": 2.266,
+        "last_px": 11.880000114440918,
+        "min_hold": 3,
+        "notional": 1092.9600105285645,
+        "peak_px": 11.880000114440918,
+        "reason": "coil, exit on \ud83d\udea8; gate ret_5_min=0.0,ret_5_max=10.0,rvol_max=2.2; list probable,yday_gainer; ret5=+8.5; leftover $1097.17",
+        "shares": 92,
+        "ticker": "APPS"
+      },
+      "BAK": {
+        "close_px": 2.0799999237060547,
+        "cost": 1102.7092408340454,
+        "entry_date": "2026-09-11",
+        "entry_px": 2.119999885559082,
+        "fee_in": 6.6693,
+        "last_px": 2.119999885559082,
+        "min_hold": 3,
+        "notional": 1096.0399408340454,
+        "peak_px": 2.119999885559082,
+        "reason": "coil, exit on \ud83d\udea8; gate ret_5_min=0.0,ret_5_max=10.0,rvol_max=2.2; list probable,yday_gainer,ohlc_hot; \ud83d\udd35; ret5=+8.8; leftover $1097.17",
+        "shares": 517,
+        "ticker": "BAK"
+      },
+      "BAND": {
+        "close_px": 56.869998931884766,
+        "cost": 1053.049984741211,
+        "entry_date": "2026-09-11",
+        "entry_px": 52.54999923706055,
+        "fee_in": 2.05,
+        "last_px": 52.54999923706055,
+        "min_hold": 3,
+        "notional": 1050.999984741211,
+        "peak_px": 52.54999923706055,
+        "reason": "coil, exit on \ud83d\udea8; gate ret_5_min=0.0,ret_5_max=10.0,rvol_max=2.2; list probable,yday_gainer; \ud83d\udd35; \u26aa; ret5=+9.6; leftover $1097.17",
+        "shares": 20,
+        "ticker": "BAND"
+      },
+      "NVT": {
+        "close_px": 162.3800048828125,
+        "cost": 948.6879926757813,
+        "entry_date": "2026-09-11",
+        "entry_px": 157.77999877929688,
+        "fee_in": 2.008,
+        "last_px": 157.77999877929688,
+        "min_hold": 3,
+        "notional": 946.6799926757812,
+        "peak_px": 157.77999877929688,
+        "reason": "coil, exit on \ud83d\udea8; gate ret_5_min=0.0,ret_5_max=10.0,rvol_max=2.2; list flatten; \ud83d\udd35; ret5=+2.0; leftover $1097.17",
+        "shares": 6,
+        "ticker": "NVT"
+      },
+      "PAGS": {
+        "close_px": 10.119999885559082,
+        "cost": 1094.1939629211427,
+        "entry_date": "2026-09-11",
+        "entry_px": 10.109999656677246,
+        "fee_in": 2.314,
+        "last_px": 10.109999656677246,
+        "min_hold": 3,
+        "notional": 1091.8799629211426,
+        "peak_px": 10.109999656677246,
+        "reason": "coil, exit on \ud83d\udea8; gate ret_5_min=0.0,ret_5_max=10.0,rvol_max=2.2; list probable,yday_gainer; \u26aa; ret5=+1.7; leftover $1097.17",
+        "shares": 108,
+        "ticker": "PAGS"
+      },
+      "REAX": {
+        "close_px": 20.280000686645508,
+        "cost": 1097.2069684906005,
+        "entry_date": "2026-09-11",
+        "entry_px": 18.559999465942383,
+        "fee_in": 2.167,
+        "last_px": 18.559999465942383,
+        "min_hold": 3,
+        "notional": 1095.0399684906006,
+        "peak_px": 18.559999465942383,
+        "reason": "coil, exit on \ud83d\udea8; gate ret_5_min=0.0,ret_5_max=10.0,rvol_max=2.2; list yday_mover; ret5=+0.7; leftover $1097.17",
+        "shares": 59,
+        "ticker": "REAX"
+      },
+      "SANM": {
+        "close_px": 216.0,
+        "cost": 1036.2049816894532,
+        "entry_date": "2026-09-11",
+        "entry_px": 206.83999633789062,
+        "fee_in": 2.005,
+        "last_px": 206.83999633789062,
+        "min_hold": 3,
+        "notional": 1034.1999816894531,
+        "peak_px": 206.83999633789062,
+        "reason": "coil, exit on \ud83d\udea8; gate ret_5_min=0.0,ret_5_max=10.0,rvol_max=2.2; list flatten; ret5=+3.9; leftover $1097.17",
+        "shares": 5,
+        "ticker": "SANM"
+      },
+      "VIST": {
+        "close_px": 76.2699966430664,
+        "cost": 1084.6520256347656,
+        "entry_date": "2026-09-11",
+        "entry_px": 77.33000183105469,
+        "fee_in": 2.032,
+        "last_px": 77.33000183105469,
+        "min_hold": 3,
+        "notional": 1082.6200256347656,
+        "peak_px": 77.33000183105469,
+        "reason": "coil, exit on \ud83d\udea8; gate ret_5_min=0.0,ret_5_max=10.0,rvol_max=2.2; list probable,yday_gainer; ret5=+5.8; leftover $1097.17",
+        "shares": 14,
+        "ticker": "VIST"
+      }
+    },
+    "yday_equity": 8976.27
+  }
+}

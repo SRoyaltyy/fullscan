@@ -1,0 +1,430 @@
+{
+  "buys": [
+    "CBRL",
+    "CTAS",
+    "GIS",
+    "KBH",
+    "PAYX",
+    "DXCM",
+    "A",
+    "OMER",
+    "TNGX",
+    "NMRA",
+    "TTAN",
+    "VKTX",
+    "MAZE"
+  ],
+  "cash": 194.52,
+  "date": "2026-09-23",
+  "equity": 9492.74,
+  "fees": 52.5265,
+  "fills": [
+    {
+      "fees": 2.043,
+      "pnl": -52.91,
+      "price": 98.3,
+      "shares": 11,
+      "side": "SELL",
+      "ticker": "ABVX"
+    },
+    {
+      "fees": 2.076,
+      "pnl": -37.57,
+      "price": 53.55,
+      "shares": 22,
+      "side": "SELL",
+      "ticker": "ANAB"
+    },
+    {
+      "fees": 2.019,
+      "pnl": 33.09,
+      "price": 331.78,
+      "shares": 3,
+      "side": "SELL",
+      "ticker": "ARM"
+    },
+    {
+      "fees": 2.118,
+      "pnl": -80.54,
+      "price": 25.9,
+      "shares": 36,
+      "side": "SELL",
+      "ticker": "FSLY"
+    },
+    {
+      "fees": 2.148,
+      "pnl": -34.18,
+      "price": 21.29,
+      "shares": 46,
+      "side": "SELL",
+      "ticker": "GRPN"
+    },
+    {
+      "fees": 2.013,
+      "pnl": 12.19,
+      "price": 747.6,
+      "shares": 1,
+      "side": "SELL",
+      "ticker": "META"
+    },
+    {
+      "fees": 2.187,
+      "pnl": -57.45,
+      "price": 19.76,
+      "shares": 59,
+      "side": "SELL",
+      "ticker": "MLKN"
+    },
+    {
+      "fees": 2.058,
+      "pnl": -22.02,
+      "price": 71.41,
+      "shares": 16,
+      "side": "SELL",
+      "ticker": "THO"
+    },
+    {
+      "fees": 2.4907,
+      "pnl": 47.75,
+      "price": 6.93,
+      "shares": 155,
+      "side": "SELL",
+      "ticker": "XXI"
+    },
+    {
+      "fees": 2.05,
+      "pnl": null,
+      "price": 47.57,
+      "shares": 20,
+      "side": "BUY",
+      "ticker": "CBRL"
+    },
+    {
+      "fees": 2.002,
+      "pnl": null,
+      "price": 196.78,
+      "shares": 4,
+      "side": "BUY",
+      "ticker": "CTAS"
+    },
+    {
+      "fees": 2.071,
+      "pnl": null,
+      "price": 35.74,
+      "shares": 27,
+      "side": "BUY",
+      "ticker": "GIS"
+    },
+    {
+      "fees": 2.05,
+      "pnl": null,
+      "price": 47.15,
+      "shares": 20,
+      "side": "BUY",
+      "ticker": "KBH"
+    },
+    {
+      "fees": 2.014,
+      "pnl": null,
+      "price": 109.67,
+      "shares": 8,
+      "side": "BUY",
+      "ticker": "PAYX"
+    },
+    {
+      "fees": 2.011,
+      "pnl": null,
+      "price": 89.5,
+      "shares": 7,
+      "side": "BUY",
+      "ticker": "DXCM"
+    },
+    {
+      "fees": 1.999,
+      "pnl": null,
+      "price": 166.54,
+      "shares": 3,
+      "side": "BUY",
+      "ticker": "A"
+    },
+    {
+      "fees": 2.083,
+      "pnl": null,
+      "price": 20.65,
+      "shares": 31,
+      "side": "BUY",
+      "ticker": "OMER"
+    },
+    {
+      "fees": 2.065,
+      "pnl": null,
+      "price": 25.4,
+      "shares": 25,
+      "side": "BUY",
+      "ticker": "TNGX"
+    },
+    {
+      "fees": 8.9178,
+      "pnl": null,
+      "price": 0.768,
+      "shares": 835,
+      "side": "BUY",
+      "ticker": "NMRA"
+    },
+    {
+      "fees": 2.02,
+      "pnl": null,
+      "price": 62.16,
+      "shares": 10,
+      "side": "BUY",
+      "ticker": "TTAN"
+    },
+    {
+      "fees": 2.035,
+      "pnl": null,
+      "price": 41.76,
+      "shares": 15,
+      "side": "BUY",
+      "ticker": "VKTX"
+    },
+    {
+      "fees": 2.056,
+      "pnl": null,
+      "price": 28.3,
+      "shares": 22,
+      "side": "BUY",
+      "ticker": "MAZE"
+    }
+  ],
+  "holdings": [
+    "A",
+    "CBRL",
+    "CTAS",
+    "DXCM",
+    "GIS",
+    "KBH",
+    "MAZE",
+    "NMRA",
+    "OMER",
+    "PAYX",
+    "TNGX",
+    "TTAN",
+    "VKTX"
+  ],
+  "mean": -2.6698,
+  "n_trades_today": 22,
+  "recipe": "combo_je1_5050_shared",
+  "sells": [
+    "ABVX",
+    "ANAB",
+    "ARM",
+    "FSLY",
+    "GRPN",
+    "META",
+    "MLKN",
+    "THO",
+    "XXI"
+  ],
+  "state": {
+    "after": "2026-09-23",
+    "cash": 194.52,
+    "pos": {
+      "A": {
+        "close_px": 165.32000732421875,
+        "cost": 501.61897985839846,
+        "entry_date": "2026-09-23",
+        "entry_px": 166.5399932861328,
+        "fee_in": 1.999,
+        "last_px": 166.5399932861328,
+        "notional": 499.61997985839844,
+        "owner": "union_join_vol_green_h1",
+        "peak_px": 166.5399932861328,
+        "reason": "combo gate; gate join=good,vol=good,last_green=True; list flatten; \ud83d\udd35; \u26aa; ret5=+11.3; combo leftover $641.36; owner union_join_vol_green_h1",
+        "shares": 3,
+        "side": "long",
+        "ticker": "A"
+      },
+      "CBRL": {
+        "close_px": 47.52000045776367,
+        "cost": 953.4499938964843,
+        "entry_date": "2026-09-23",
+        "entry_px": 47.56999969482422,
+        "fee_in": 2.05,
+        "last_px": 47.56999969482422,
+        "notional": 951.3999938964844,
+        "owner": "union_e_fresh_h1",
+        "peak_px": 47.56999969482422,
+        "reason": "union \u2229 e_fresh, no \ud83d\udea8; gate days_since_E_max=1,flag_E_min=0; list earn_react; \ud83d\udd35; ret5=+0.7; combo leftover $966.49; owner union_e_fresh_h1",
+        "shares": 20,
+        "side": "long",
+        "ticker": "CBRL"
+      },
+      "CTAS": {
+        "close_px": 191.97000122070312,
+        "cost": 789.1219951171875,
+        "entry_date": "2026-09-23",
+        "entry_px": 196.77999877929688,
+        "fee_in": 2.002,
+        "last_px": 196.77999877929688,
+        "notional": 787.1199951171875,
+        "owner": "union_e_fresh_h1",
+        "peak_px": 196.77999877929688,
+        "reason": "union \u2229 e_fresh, no \ud83d\udea8; gate days_since_E_max=1,flag_E_min=0; list earn_react; \ud83d\udd35; \u26aa; ret5=-0.1; combo leftover $966.49; owner union_e_fresh_h1",
+        "shares": 4,
+        "side": "long",
+        "ticker": "CTAS"
+      },
+      "DXCM": {
+        "close_px": 87.7300033569336,
+        "cost": 628.511,
+        "entry_date": "2026-09-23",
+        "entry_px": 89.5,
+        "fee_in": 2.011,
+        "last_px": 89.5,
+        "notional": 626.5,
+        "owner": "union_join_vol_green_h1",
+        "peak_px": 89.5,
+        "reason": "combo gate; gate join=good,vol=good,last_green=True; list flatten; \ud83d\udd35; \u26aa; ret5=+3.6; combo leftover $641.36; owner union_join_vol_green_h1",
+        "shares": 7,
+        "side": "long",
+        "ticker": "DXCM"
+      },
+      "GIS": {
+        "close_px": 35.81999969482422,
+        "cost": 967.0510453186035,
+        "entry_date": "2026-09-23",
+        "entry_px": 35.7400016784668,
+        "fee_in": 2.071,
+        "last_px": 35.7400016784668,
+        "notional": 964.9800453186035,
+        "owner": "union_e_fresh_h1",
+        "peak_px": 35.7400016784668,
+        "reason": "union \u2229 e_fresh, no \ud83d\udea8; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=-3.1; combo leftover $966.49; owner union_e_fresh_h1",
+        "shares": 27,
+        "side": "long",
+        "ticker": "GIS"
+      },
+      "KBH": {
+        "close_px": 47.150001525878906,
+        "cost": 945.0500305175781,
+        "entry_date": "2026-09-23",
+        "entry_px": 47.150001525878906,
+        "fee_in": 2.05,
+        "last_px": 47.150001525878906,
+        "notional": 943.0000305175781,
+        "owner": "union_e_fresh_h1",
+        "peak_px": 47.150001525878906,
+        "reason": "union \u2229 e_fresh, no \ud83d\udea8; gate days_since_E_max=1,flag_E_min=0; list earn_react; \ud83d\udd35; ret5=-1.9; combo leftover $966.49; owner union_e_fresh_h1",
+        "shares": 20,
+        "side": "long",
+        "ticker": "KBH"
+      },
+      "MAZE": {
+        "close_px": 28.09000015258789,
+        "cost": 624.6559832153321,
+        "entry_date": "2026-09-23",
+        "entry_px": 28.299999237060547,
+        "fee_in": 2.056,
+        "last_px": 28.299999237060547,
+        "notional": 622.599983215332,
+        "owner": "union_join_vol_green_h1",
+        "peak_px": 28.299999237060547,
+        "reason": "combo gate; gate join=good,vol=good,last_green=True; list yday_gainer,yday_mover,ohlc_hot; \ud83d\udd35; ret5=+17.1; combo leftover $641.36; owner union_join_vol_green_h1",
+        "shares": 22,
+        "side": "long",
+        "ticker": "MAZE"
+      },
+      "NMRA": {
+        "close_px": 0.7310000061988831,
+        "cost": 650.1978055742263,
+        "entry_date": "2026-09-23",
+        "entry_px": 0.7680000066757202,
+        "fee_in": 8.9178,
+        "last_px": 0.7680000066757202,
+        "notional": 641.2800055742264,
+        "owner": "union_join_vol_green_h1",
+        "peak_px": 0.7680000066757202,
+        "reason": "combo gate; gate join=good,vol=good,last_green=True; list probable,yday_gainer,yday_mover; \ud83d\udd35; ret5=-6.3; combo leftover $641.36; owner union_join_vol_green_h1",
+        "shares": 835,
+        "side": "long",
+        "ticker": "NMRA"
+      },
+      "OMER": {
+        "close_px": 20.739999771118164,
+        "cost": 642.2329881744384,
+        "entry_date": "2026-09-23",
+        "entry_px": 20.649999618530273,
+        "fee_in": 2.083,
+        "last_px": 20.649999618530273,
+        "notional": 640.1499881744385,
+        "owner": "union_join_vol_green_h1",
+        "peak_px": 20.649999618530273,
+        "reason": "combo gate; gate join=good,vol=good,last_green=True; list flatten,yday_gainer,yday_mover; \ud83d\udd35; \u26aa; ret5=+22.6; combo leftover $641.36; owner union_join_vol_green_h1",
+        "shares": 31,
+        "side": "long",
+        "ticker": "OMER"
+      },
+      "PAYX": {
+        "close_px": 104.48999786376953,
+        "cost": 879.3739853515625,
+        "entry_date": "2026-09-23",
+        "entry_px": 109.66999816894531,
+        "fee_in": 2.014,
+        "last_px": 109.66999816894531,
+        "notional": 877.3599853515625,
+        "owner": "union_e_fresh_h1",
+        "peak_px": 109.66999816894531,
+        "reason": "union \u2229 e_fresh, no \ud83d\udea8; gate days_since_E_max=1,flag_E_min=0; list earn_react; \ud83d\udd35; \u26aa; ret5=-3.2; combo leftover $966.49; owner union_e_fresh_h1",
+        "shares": 8,
+        "side": "long",
+        "ticker": "PAYX"
+      },
+      "TNGX": {
+        "close_px": 24.450000762939453,
+        "cost": 637.0649904632569,
+        "entry_date": "2026-09-23",
+        "entry_px": 25.399999618530273,
+        "fee_in": 2.065,
+        "last_px": 25.399999618530273,
+        "notional": 634.9999904632568,
+        "owner": "union_join_vol_green_h1",
+        "peak_px": 25.399999618530273,
+        "reason": "combo gate; gate join=good,vol=good,last_green=True; list probable,yday_gainer,yday_mover; \ud83d\udd35; ret5=+6.9; combo leftover $641.36; owner union_join_vol_green_h1",
+        "shares": 25,
+        "side": "long",
+        "ticker": "TNGX"
+      },
+      "TTAN": {
+        "close_px": 61.650001525878906,
+        "cost": 623.6199984741211,
+        "entry_date": "2026-09-23",
+        "entry_px": 62.15999984741211,
+        "fee_in": 2.02,
+        "last_px": 62.15999984741211,
+        "notional": 621.5999984741211,
+        "owner": "union_join_vol_green_h1",
+        "peak_px": 62.15999984741211,
+        "reason": "combo gate; gate join=good,vol=good,last_green=True; list probable; \ud83d\udd35; \u26aa; ret5=+5.1; combo leftover $641.36; owner union_join_vol_green_h1",
+        "shares": 10,
+        "side": "long",
+        "ticker": "TTAN"
+      },
+      "VKTX": {
+        "close_px": 41.650001525878906,
+        "cost": 628.434974822998,
+        "entry_date": "2026-09-23",
+        "entry_px": 41.7599983215332,
+        "fee_in": 2.035,
+        "last_px": 41.7599983215332,
+        "notional": 626.399974822998,
+        "owner": "union_join_vol_green_h1",
+        "peak_px": 41.7599983215332,
+        "reason": "combo gate; gate join=good,vol=good,last_green=True; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+36.4; combo leftover $641.36; owner union_join_vol_green_h1",
+        "shares": 15,
+        "side": "long",
+        "ticker": "VKTX"
+      }
+    },
+    "yday_equity": 9492.74
+  }
+}

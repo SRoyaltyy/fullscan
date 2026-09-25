@@ -1,0 +1,215 @@
+{
+  "buys": [
+    "COO",
+    "RWT",
+    "NAVN",
+    "SION",
+    "RH",
+    "AEO",
+    "AXGN",
+    "SLBT"
+  ],
+  "cash": 145.43,
+  "date": "2026-09-11",
+  "equity": 9361.82,
+  "fees": 24.4698,
+  "fills": [
+    {
+      "fees": 2.053,
+      "pnl": null,
+      "price": 54.66,
+      "shares": 21,
+      "side": "BUY",
+      "ticker": "COO"
+    },
+    {
+      "fees": 4.2828,
+      "pnl": null,
+      "price": 3.52,
+      "shares": 332,
+      "side": "BUY",
+      "ticker": "RWT"
+    },
+    {
+      "fees": 2.158,
+      "pnl": null,
+      "price": 20.61,
+      "shares": 56,
+      "side": "BUY",
+      "ticker": "NAVN"
+    },
+    {
+      "fees": 2.44,
+      "pnl": null,
+      "price": 7.79,
+      "shares": 150,
+      "side": "BUY",
+      "ticker": "SION"
+    },
+    {
+      "fees": 2.014,
+      "pnl": null,
+      "price": 135.71,
+      "shares": 8,
+      "side": "BUY",
+      "ticker": "RH"
+    },
+    {
+      "fees": 2.227,
+      "pnl": null,
+      "price": 14.71,
+      "shares": 79,
+      "side": "BUY",
+      "ticker": "AEO"
+    },
+    {
+      "fees": 2.071,
+      "pnl": null,
+      "price": 42.48,
+      "shares": 27,
+      "side": "BUY",
+      "ticker": "AXGN"
+    },
+    {
+      "fees": 7.224,
+      "pnl": null,
+      "price": 2.09,
+      "shares": 560,
+      "side": "BUY",
+      "ticker": "SLBT"
+    }
+  ],
+  "holdings": [
+    "AEO",
+    "AXGN",
+    "COO",
+    "NAVN",
+    "RH",
+    "RWT",
+    "SION",
+    "SLBT"
+  ],
+  "mean": -0.132,
+  "n_trades_today": 8,
+  "recipe": "union_rsi_h1",
+  "sells": [],
+  "state": {
+    "after": "2026-09-11",
+    "cash": 145.43,
+    "pos": {
+      "AEO": {
+        "close_px": 15.020000457763672,
+        "cost": 1164.317003013611,
+        "entry_date": "2026-09-11",
+        "entry_px": 14.710000038146973,
+        "fee_in": 2.227,
+        "last_px": 14.710000038146973,
+        "min_hold": 1,
+        "notional": 1162.0900030136108,
+        "peak_px": 14.710000038146973,
+        "reason": "rank by rsi; rank rsi; list yday_mover; ret5=-14.6; leftover $1171.77",
+        "shares": 79,
+        "ticker": "AEO"
+      },
+      "AXGN": {
+        "close_px": 42.15999984741211,
+        "cost": 1149.0309876403808,
+        "entry_date": "2026-09-11",
+        "entry_px": 42.47999954223633,
+        "fee_in": 2.071,
+        "last_px": 42.47999954223633,
+        "min_hold": 1,
+        "notional": 1146.9599876403809,
+        "peak_px": 42.47999954223633,
+        "reason": "rank by rsi; rank rsi; list yday_mover; ret5=-11.1; leftover $1171.77",
+        "shares": 27,
+        "ticker": "AXGN"
+      },
+      "COO": {
+        "close_px": 53.90999984741211,
+        "cost": 1149.9129967956544,
+        "entry_date": "2026-09-11",
+        "entry_px": 54.65999984741211,
+        "fee_in": 2.053,
+        "last_px": 54.65999984741211,
+        "min_hold": 1,
+        "notional": 1147.8599967956543,
+        "peak_px": 54.65999984741211,
+        "reason": "rank by rsi; rank rsi; list yday_mover; ret5=-23.3; leftover $1171.77",
+        "shares": 21,
+        "ticker": "COO"
+      },
+      "NAVN": {
+        "close_px": 21.020000457763672,
+        "cost": 1156.3180341796874,
+        "entry_date": "2026-09-11",
+        "entry_px": 20.610000610351562,
+        "fee_in": 2.158,
+        "last_px": 20.610000610351562,
+        "min_hold": 1,
+        "notional": 1154.1600341796875,
+        "peak_px": 20.610000610351562,
+        "reason": "rank by rsi; rank rsi; list yday_mover; ret5=-26.9; leftover $1171.77",
+        "shares": 56,
+        "ticker": "NAVN"
+      },
+      "RH": {
+        "close_px": 134.07000732421875,
+        "cost": 1087.6940537109374,
+        "entry_date": "2026-09-11",
+        "entry_px": 135.7100067138672,
+        "fee_in": 2.014,
+        "last_px": 135.7100067138672,
+        "min_hold": 1,
+        "notional": 1085.6800537109375,
+        "peak_px": 135.7100067138672,
+        "reason": "rank by rsi; rank rsi; list earn_react; ret5=-8.6; leftover $1171.77",
+        "shares": 8,
+        "ticker": "RH"
+      },
+      "RWT": {
+        "close_px": 3.549999952316284,
+        "cost": 1172.9227936676025,
+        "entry_date": "2026-09-11",
+        "entry_px": 3.5199999809265137,
+        "fee_in": 4.2828,
+        "last_px": 3.5199999809265137,
+        "min_hold": 1,
+        "notional": 1168.6399936676025,
+        "peak_px": 3.5199999809265137,
+        "reason": "rank by rsi; rank rsi; list yday_mover; \ud83d\udd35; ret5=-19.0; leftover $1171.77",
+        "shares": 332,
+        "ticker": "RWT"
+      },
+      "SION": {
+        "close_px": 7.849999904632568,
+        "cost": 1170.9399942779542,
+        "entry_date": "2026-09-11",
+        "entry_px": 7.789999961853027,
+        "fee_in": 2.44,
+        "last_px": 7.789999961853027,
+        "min_hold": 1,
+        "notional": 1168.499994277954,
+        "peak_px": 7.789999961853027,
+        "reason": "rank by rsi; rank rsi; list ohlc_hot; ret5=+12.9; leftover $1171.77",
+        "shares": 150,
+        "ticker": "SION"
+      },
+      "SLBT": {
+        "close_px": 2.059999942779541,
+        "cost": 1177.6239519348144,
+        "entry_date": "2026-09-11",
+        "entry_px": 2.0899999141693115,
+        "fee_in": 7.224,
+        "last_px": 2.0899999141693115,
+        "min_hold": 1,
+        "notional": 1170.3999519348145,
+        "peak_px": 2.0899999141693115,
+        "reason": "rank by rsi; rank rsi; list yday_mover; ret5=-33.3; leftover $1171.77",
+        "shares": 560,
+        "ticker": "SLBT"
+      }
+    },
+    "yday_equity": 9361.82
+  }
+}

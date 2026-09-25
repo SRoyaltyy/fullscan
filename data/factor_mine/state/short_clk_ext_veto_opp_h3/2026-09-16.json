@@ -1,0 +1,30 @@
+{
+  "buys": [],
+  "cash": 10185.19,
+  "date": "2026-09-16",
+  "equity": 10185.19,
+  "fees": 8.6559,
+  "fills": [
+    {
+      "fees": 8.6559,
+      "pnl": 42.79,
+      "price": 7.46,
+      "shares": 671,
+      "side": "COVER",
+      "ticker": "UGP"
+    }
+  ],
+  "holdings": [],
+  "mean": -0.2163,
+  "n_trades_today": 1,
+  "recipe": "short_clk_ext_veto_opp_h3",
+  "sells": [
+    "UGP"
+  ],
+  "state": {
+    "after": "2026-09-16",
+    "cash": 10185.19,
+    "pos": {},
+    "yday_equity": 10185.19
+  }
+}

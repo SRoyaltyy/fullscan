@@ -1,0 +1,90 @@
+{
+  "buys": [
+    "RARE",
+    "FLNC"
+  ],
+  "cash": 5.89,
+  "date": "2026-09-18",
+  "equity": 7963.45,
+  "fees": 58.706,
+  "fills": [
+    {
+      "fees": 2.3514,
+      "pnl": -184.49,
+      "price": 8.68,
+      "shares": 111,
+      "side": "SELL",
+      "ticker": "ALHC"
+    },
+    {
+      "fees": 45.8282,
+      "pnl": -791.62,
+      "price": 2.07,
+      "shares": 3503,
+      "side": "SELL",
+      "ticker": "MRLN"
+    },
+    {
+      "fees": 3.5604,
+      "pnl": null,
+      "price": 14.79,
+      "shares": 276,
+      "side": "BUY",
+      "ticker": "RARE"
+    },
+    {
+      "fees": 6.966,
+      "pnl": null,
+      "price": 7.535,
+      "shares": 540,
+      "side": "BUY",
+      "ticker": "FLNC"
+    }
+  ],
+  "holdings": [
+    "FLNC",
+    "RARE"
+  ],
+  "mean": -2.6798,
+  "n_trades_today": 4,
+  "recipe": "union_rsi_os_h1",
+  "sells": [
+    "ALHC",
+    "MRLN"
+  ],
+  "state": {
+    "after": "2026-09-18",
+    "cash": 5.89,
+    "pos": {
+      "FLNC": {
+        "close_px": 7.320000171661377,
+        "cost": 4075.865917602539,
+        "entry_date": "2026-09-18",
+        "entry_px": 7.534999847412109,
+        "fee_in": 6.966,
+        "last_px": 7.534999847412109,
+        "min_hold": 1,
+        "notional": 4068.899917602539,
+        "peak_px": 7.534999847412109,
+        "reason": "union \u2229 rsi_os, no \ud83d\udea8; gate rsi_os=True; list yday_mover; \ud83d\udd35; ret5=-20.9; leftover $4083.68",
+        "shares": 540,
+        "ticker": "FLNC"
+      },
+      "RARE": {
+        "close_px": 14.510000228881836,
+        "cost": 4085.6003894714354,
+        "entry_date": "2026-09-18",
+        "entry_px": 14.789999961853027,
+        "fee_in": 3.5604,
+        "last_px": 14.789999961853027,
+        "min_hold": 1,
+        "notional": 4082.0399894714355,
+        "peak_px": 14.789999961853027,
+        "reason": "union \u2229 rsi_os, no \ud83d\udea8; gate rsi_os=True; list probable,yday_gainer; \ud83d\udd35; \u26aa; ret5=+0.7; leftover $4083.68",
+        "shares": 276,
+        "ticker": "RARE"
+      }
+    },
+    "yday_equity": 7963.45
+  }
+}

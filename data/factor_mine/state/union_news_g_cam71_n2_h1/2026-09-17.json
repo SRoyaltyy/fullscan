@@ -1,0 +1,66 @@
+{
+  "buys": [
+    "SMTC"
+  ],
+  "cash": 80.18,
+  "date": "2026-09-17",
+  "equity": 8633.3,
+  "fees": 7.0508,
+  "fills": [
+    {
+      "fees": 2.2951,
+      "pnl": 40.33,
+      "price": 37.64,
+      "shares": 88,
+      "side": "SELL",
+      "ticker": "DBX"
+    },
+    {
+      "fees": 2.6217,
+      "pnl": 39.71,
+      "price": 26.51,
+      "shares": 187,
+      "side": "SELL",
+      "ticker": "WAY"
+    },
+    {
+      "fees": 2.134,
+      "pnl": null,
+      "price": 170.85,
+      "shares": 48,
+      "side": "BUY",
+      "ticker": "SMTC"
+    }
+  ],
+  "holdings": [
+    "SMTC"
+  ],
+  "mean": 3.8681,
+  "n_trades_today": 3,
+  "recipe": "union_news_g_cam71_n2_h1",
+  "sells": [
+    "DBX",
+    "WAY"
+  ],
+  "state": {
+    "after": "2026-09-17",
+    "cash": 80.18,
+    "pos": {
+      "SMTC": {
+        "close_px": 178.19000244140625,
+        "cost": 8202.93429296875,
+        "entry_date": "2026-09-17",
+        "entry_px": 170.85000610351562,
+        "fee_in": 2.134,
+        "last_px": 170.85000610351562,
+        "min_hold": 1,
+        "notional": 8200.80029296875,
+        "peak_px": 170.85000610351562,
+        "reason": "topheavy leftover on news\ud83d\udfe2 +7 \u2212\u22641; gate news=good,n_pos_min=7,cam_bad_max=1; rank cond; list probable,yday_gainer,yday_mover; \ud83d\udd35; ret5=+2.2; leftover $8283.11",
+        "shares": 48,
+        "ticker": "SMTC"
+      }
+    },
+    "yday_equity": 8633.3
+  }
+}

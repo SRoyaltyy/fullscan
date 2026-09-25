@@ -1,0 +1,97 @@
+{
+  "buys": [
+    "BBNX",
+    "GFR"
+  ],
+  "cash": 15155.51,
+  "date": "2026-09-16",
+  "equity": 9759.91,
+  "fees": 31.5145,
+  "fills": [
+    {
+      "fees": 11.0553,
+      "pnl": 131.95,
+      "price": 1.85,
+      "shares": 857,
+      "side": "COVER",
+      "ticker": "CRDL"
+    },
+    {
+      "fees": 6.6564,
+      "pnl": -209.54,
+      "price": 3.75,
+      "shares": 516,
+      "side": "COVER",
+      "ticker": "MYGN"
+    },
+    {
+      "fees": 6.3726,
+      "pnl": -240.13,
+      "price": 3.98,
+      "shares": 494,
+      "side": "COVER",
+      "ticker": "RWT"
+    },
+    {
+      "fees": 2.5063315091067797,
+      "pnl": null,
+      "price": 18.61,
+      "shares": 135,
+      "side": "SHORT",
+      "ticker": "BBNX"
+    },
+    {
+      "fees": 4.923835615664965,
+      "pnl": null,
+      "price": 6.83,
+      "shares": 370,
+      "side": "SHORT",
+      "ticker": "GFR"
+    }
+  ],
+  "holdings": [
+    "BBNX",
+    "GFR"
+  ],
+  "mean": -3.5112,
+  "n_trades_today": 5,
+  "recipe": "short_news_head_h3",
+  "sells": [
+    "CRDL",
+    "MYGN",
+    "RWT"
+  ],
+  "state": {
+    "after": "2026-09-16",
+    "cash": 15155.51,
+    "pos": {
+      "BBNX": {
+        "close_px": 22.18000030517578,
+        "cost": 2.5063315091067797,
+        "entry_date": "2026-09-16",
+        "entry_px": 18.610000610351562,
+        "fee_in": 2.5063315091067797,
+        "last_px": 18.610000610351562,
+        "notional": 2512.350082397461,
+        "peak_px": 18.610000610351562,
+        "reason": "short prior-export headline\ud83d\udd34; gate headline=bad; list probable,yday_gainer,yday_mover; ret5=-0.5; leftover $2530.87",
+        "shares": 135,
+        "ticker": "BBNX"
+      },
+      "GFR": {
+        "close_px": 6.489999771118164,
+        "cost": 4.923835615664965,
+        "entry_date": "2026-09-16",
+        "entry_px": 6.829999923706055,
+        "fee_in": 4.923835615664965,
+        "last_px": 6.829999923706055,
+        "notional": 2527.0999717712402,
+        "peak_px": 6.829999923706055,
+        "reason": "short prior-export headline\ud83d\udd34; gate headline=bad; list ohlc_hot; ret5=+11.2; leftover $2530.87",
+        "shares": 370,
+        "ticker": "GFR"
+      }
+    },
+    "yday_equity": 9759.91
+  }
+}

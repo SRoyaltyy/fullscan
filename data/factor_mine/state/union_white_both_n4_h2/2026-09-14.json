@@ -1,0 +1,66 @@
+{
+  "buys": [],
+  "cash": 58.01,
+  "date": "2026-09-14",
+  "equity": 9344.74,
+  "fees": 0,
+  "fills": [],
+  "holdings": [
+    "BAND",
+    "PAYP",
+    "SWKS"
+  ],
+  "mean": -7.7662,
+  "n_trades_today": 0,
+  "recipe": "union_white_both_n4_h2",
+  "sells": [],
+  "state": {
+    "after": "2026-09-14",
+    "cash": 58.01,
+    "pos": {
+      "BAND": {
+        "close_px": 48.970001220703125,
+        "cost": 3207.722953460693,
+        "entry_date": "2026-09-11",
+        "entry_px": 52.54999923706055,
+        "fee_in": 2.173,
+        "last_px": 56.900001525878906,
+        "min_hold": 2,
+        "notional": 3205.5499534606934,
+        "peak_px": 56.900001525878906,
+        "reason": "\u22120 red + yday up AND catalyst, top 4 by Score; gate cam_bad_max=0,yday_and_catalyst=True; rank list; list probable,yday_gainer; \ud83d\udd35; \u26aa; ret5=+9.6; leftover $3231.14",
+        "shares": 61,
+        "ticker": "BAND"
+      },
+      "PAYP": {
+        "close_px": 18.68000030517578,
+        "cost": 3223.3178657226563,
+        "entry_date": "2026-09-11",
+        "entry_px": 18.299999237060547,
+        "fee_in": 2.518,
+        "last_px": 18.280000686645508,
+        "min_hold": 2,
+        "notional": 3220.7998657226562,
+        "peak_px": 18.299999237060547,
+        "reason": "\u22120 red + yday up AND catalyst, top 4 by Score; gate cam_bad_max=0,yday_and_catalyst=True; rank list; list ohlc_hot; \u26aa; ret5=+7.7; leftover $3231.14",
+        "shares": 176,
+        "ticker": "PAYP"
+      },
+      "SWKS": {
+        "close_px": 79.26000213623047,
+        "cost": 3204.3638724365233,
+        "entry_date": "2026-09-11",
+        "entry_px": 84.2699966430664,
+        "fee_in": 2.104,
+        "last_px": 86.05999755859375,
+        "min_hold": 2,
+        "notional": 3202.2598724365234,
+        "peak_px": 86.05999755859375,
+        "reason": "\u22120 red + yday up AND catalyst, top 4 by Score; gate cam_bad_max=0,yday_and_catalyst=True; rank list; list yday_gainer,ohlc_hot; \u26aa; ret5=+17.5; leftover $3231.14",
+        "shares": 38,
+        "ticker": "SWKS"
+      }
+    },
+    "yday_equity": 9344.74
+  }
+}

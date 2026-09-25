@@ -1,0 +1,93 @@
+{
+  "buys": [],
+  "cash": 9510.39,
+  "date": "2026-09-24",
+  "equity": 9510.39,
+  "fees": 30.5934,
+  "fills": [
+    {
+      "fees": 2.031,
+      "pnl": -22.17,
+      "price": 163.95,
+      "shares": 7,
+      "side": "SELL",
+      "ticker": "A"
+    },
+    {
+      "fees": 2.049,
+      "pnl": -27.74,
+      "price": 87.68,
+      "shares": 13,
+      "side": "SELL",
+      "ticker": "DXCM"
+    },
+    {
+      "fees": 2.097,
+      "pnl": -13.16,
+      "price": 41.24,
+      "shares": 29,
+      "side": "SELL",
+      "ticker": "GLBE"
+    },
+    {
+      "fees": 2.061,
+      "pnl": -10.05,
+      "price": 70.49,
+      "shares": 17,
+      "side": "SELL",
+      "ticker": "INOD"
+    },
+    {
+      "fees": 2.04,
+      "pnl": -12.06,
+      "price": 117.34,
+      "shares": 10,
+      "side": "SELL",
+      "ticker": "NICE"
+    },
+    {
+      "fees": 2.2121,
+      "pnl": 6.32,
+      "price": 18.39,
+      "shares": 67,
+      "side": "SELL",
+      "ticker": "NTSK"
+    },
+    {
+      "fees": 14.4871,
+      "pnl": -161.74,
+      "price": 1.0,
+      "shares": 1108,
+      "side": "SELL",
+      "ticker": "OPTU"
+    },
+    {
+      "fees": 3.6162,
+      "pnl": -163.12,
+      "price": 3.925,
+      "shares": 276,
+      "side": "SELL",
+      "ticker": "SVIA"
+    }
+  ],
+  "holdings": [],
+  "mean": -1.3897,
+  "n_trades_today": 8,
+  "recipe": "union_candle_score_h1",
+  "sells": [
+    "A",
+    "DXCM",
+    "GLBE",
+    "INOD",
+    "NICE",
+    "NTSK",
+    "OPTU",
+    "SVIA"
+  ],
+  "state": {
+    "after": "2026-09-24",
+    "cash": 9510.39,
+    "pos": {},
+    "yday_equity": 9510.39
+  }
+}

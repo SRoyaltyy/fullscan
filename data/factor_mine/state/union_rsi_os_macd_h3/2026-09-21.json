@@ -1,0 +1,66 @@
+{
+  "buys": [
+    "SION"
+  ],
+  "cash": 2.29,
+  "date": "2026-09-21",
+  "equity": 12026.29,
+  "fees": 76.2787,
+  "fills": [
+    {
+      "fees": 19.5669,
+      "pnl": 274.9,
+      "price": 3.87,
+      "shares": 1494,
+      "side": "SELL",
+      "ticker": "EYPT"
+    },
+    {
+      "fees": 30.8602,
+      "pnl": 740.44,
+      "price": 2.68,
+      "shares": 2358,
+      "side": "SELL",
+      "ticker": "ZSQR"
+    },
+    {
+      "fees": 25.8516,
+      "pnl": null,
+      "price": 6.0,
+      "shares": 2004,
+      "side": "BUY",
+      "ticker": "SION"
+    }
+  ],
+  "holdings": [
+    "SION"
+  ],
+  "mean": -0.3843,
+  "n_trades_today": 3,
+  "recipe": "union_rsi_os_macd_h3",
+  "sells": [
+    "EYPT",
+    "ZSQR"
+  ],
+  "state": {
+    "after": "2026-09-21",
+    "cash": 2.29,
+    "pos": {
+      "SION": {
+        "close_px": 6.0,
+        "cost": 12049.8516,
+        "entry_date": "2026-09-21",
+        "entry_px": 6.0,
+        "fee_in": 25.8516,
+        "last_px": 6.0,
+        "min_hold": 3,
+        "notional": 12024.0,
+        "peak_px": 6.0,
+        "reason": "combo gate; gate rsi_os=True,macd_up=True; list yday_mover; \ud83d\udd35; ret5=-24.1; leftover $12052.14",
+        "shares": 2004,
+        "ticker": "SION"
+      }
+    },
+    "yday_equity": 12026.29
+  }
+}

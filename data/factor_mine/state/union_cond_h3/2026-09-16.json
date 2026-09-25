@@ -1,0 +1,288 @@
+{
+  "buys": [
+    "CRWD",
+    "DBX",
+    "OKTA",
+    "WAY",
+    "ADPT",
+    "AVAH",
+    "DOCU",
+    "FFIV"
+  ],
+  "cash": 485.44,
+  "date": "2026-09-16",
+  "equity": 8549.35,
+  "fees": 33.2383,
+  "fills": [
+    {
+      "fees": 2.07,
+      "pnl": -88.52,
+      "price": 50.69,
+      "shares": 20,
+      "side": "SELL",
+      "ticker": "ASO"
+    },
+    {
+      "fees": 2.073,
+      "pnl": -87.08,
+      "price": 48.6,
+      "shares": 21,
+      "side": "SELL",
+      "ticker": "BAND"
+    },
+    {
+      "fees": 2.067,
+      "pnl": -95.31,
+      "price": 51.29,
+      "shares": 19,
+      "side": "SELL",
+      "ticker": "COHU"
+    },
+    {
+      "fees": 2.028,
+      "pnl": -150.44,
+      "price": 140.03,
+      "shares": 6,
+      "side": "SELL",
+      "ticker": "ORCL"
+    },
+    {
+      "fees": 2.3483,
+      "pnl": -83.87,
+      "price": 9.39,
+      "shares": 110,
+      "side": "SELL",
+      "ticker": "PAGS"
+    },
+    {
+      "fees": 2.037,
+      "pnl": 44.05,
+      "price": 118.18,
+      "shares": 9,
+      "side": "SELL",
+      "ticker": "QRVO"
+    },
+    {
+      "fees": 2.025,
+      "pnl": -64.03,
+      "price": 194.84,
+      "shares": 5,
+      "side": "SELL",
+      "ticker": "SANM"
+    },
+    {
+      "fees": 2.049,
+      "pnl": 62.35,
+      "price": 89.38,
+      "shares": 13,
+      "side": "SELL",
+      "ticker": "SWKS"
+    },
+    {
+      "fees": 2.002,
+      "pnl": null,
+      "price": 236.92,
+      "shares": 4,
+      "side": "BUY",
+      "ticker": "CRWD"
+    },
+    {
+      "fees": 2.074,
+      "pnl": null,
+      "price": 37.13,
+      "shares": 28,
+      "side": "BUY",
+      "ticker": "DBX"
+    },
+    {
+      "fees": 2.005,
+      "pnl": null,
+      "price": 186.52,
+      "shares": 5,
+      "side": "BUY",
+      "ticker": "OKTA"
+    },
+    {
+      "fees": 2.11,
+      "pnl": null,
+      "price": 26.27,
+      "shares": 40,
+      "side": "BUY",
+      "ticker": "WAY"
+    },
+    {
+      "fees": 2.107,
+      "pnl": null,
+      "price": 27.09,
+      "shares": 39,
+      "side": "BUY",
+      "ticker": "ADPT"
+    },
+    {
+      "fees": 2.212,
+      "pnl": null,
+      "price": 14.31,
+      "shares": 74,
+      "side": "BUY",
+      "ticker": "AVAH"
+    },
+    {
+      "fees": 2.035,
+      "pnl": null,
+      "price": 70.6,
+      "shares": 15,
+      "side": "BUY",
+      "ticker": "DOCU"
+    },
+    {
+      "fees": 1.996,
+      "pnl": null,
+      "price": 430.12,
+      "shares": 2,
+      "side": "BUY",
+      "ticker": "FFIV"
+    }
+  ],
+  "holdings": [
+    "ADPT",
+    "AVAH",
+    "CRWD",
+    "DBX",
+    "DOCU",
+    "FFIV",
+    "OKTA",
+    "WAY"
+  ],
+  "mean": 0.0727,
+  "n_trades_today": 16,
+  "recipe": "union_cond_h3",
+  "sells": [
+    "ASO",
+    "BAND",
+    "COHU",
+    "ORCL",
+    "PAGS",
+    "QRVO",
+    "SANM",
+    "SWKS"
+  ],
+  "state": {
+    "after": "2026-09-16",
+    "cash": 485.44,
+    "pos": {
+      "ADPT": {
+        "close_px": 27.670000076293945,
+        "cost": 1058.6170059509277,
+        "entry_date": "2026-09-16",
+        "entry_px": 27.09000015258789,
+        "fee_in": 2.107,
+        "last_px": 27.09000015258789,
+        "min_hold": 3,
+        "notional": 1056.5100059509277,
+        "peak_px": 27.09000015258789,
+        "reason": "rank by cond; rank cond; list probable,yday_gainer,ohlc_hot; \ud83d\udd35; \u26aa; ret5=+9.6; leftover $1063.42",
+        "shares": 39,
+        "ticker": "ADPT"
+      },
+      "AVAH": {
+        "close_px": 14.260000228881836,
+        "cost": 1061.1520310516357,
+        "entry_date": "2026-09-16",
+        "entry_px": 14.3100004196167,
+        "fee_in": 2.212,
+        "last_px": 14.3100004196167,
+        "min_hold": 3,
+        "notional": 1058.9400310516357,
+        "peak_px": 14.3100004196167,
+        "reason": "rank by cond; rank cond; list flatten; \u26aa; ret5=+4.8; leftover $1063.42",
+        "shares": 74,
+        "ticker": "AVAH"
+      },
+      "CRWD": {
+        "close_px": 241.36000061035156,
+        "cost": 949.6819926757812,
+        "entry_date": "2026-09-16",
+        "entry_px": 236.9199981689453,
+        "fee_in": 2.002,
+        "last_px": 236.9199981689453,
+        "min_hold": 3,
+        "notional": 947.6799926757812,
+        "peak_px": 236.9199981689453,
+        "reason": "rank by cond; rank cond; list ohlc_hot; \u26aa; ret5=+15.5; leftover $1063.42",
+        "shares": 4,
+        "ticker": "CRWD"
+      },
+      "DBX": {
+        "close_px": 37.7400016784668,
+        "cost": 1041.7140299072266,
+        "entry_date": "2026-09-16",
+        "entry_px": 37.130001068115234,
+        "fee_in": 2.074,
+        "last_px": 37.130001068115234,
+        "min_hold": 3,
+        "notional": 1039.6400299072266,
+        "peak_px": 37.130001068115234,
+        "reason": "rank by cond; rank cond; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+11.3; leftover $1063.42",
+        "shares": 28,
+        "ticker": "DBX"
+      },
+      "DOCU": {
+        "close_px": 70.4000015258789,
+        "cost": 1061.0349771118165,
+        "entry_date": "2026-09-16",
+        "entry_px": 70.5999984741211,
+        "fee_in": 2.035,
+        "last_px": 70.5999984741211,
+        "min_hold": 3,
+        "notional": 1058.9999771118164,
+        "peak_px": 70.5999984741211,
+        "reason": "rank by cond; rank cond; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+10.4; leftover $1063.42",
+        "shares": 15,
+        "ticker": "DOCU"
+      },
+      "FFIV": {
+        "close_px": 423.5899963378906,
+        "cost": 862.235990234375,
+        "entry_date": "2026-09-16",
+        "entry_px": 430.1199951171875,
+        "fee_in": 1.996,
+        "last_px": 430.1199951171875,
+        "min_hold": 3,
+        "notional": 860.239990234375,
+        "peak_px": 430.1199951171875,
+        "reason": "rank by cond; rank cond; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+10.6; leftover $1063.42",
+        "shares": 2,
+        "ticker": "FFIV"
+      },
+      "OKTA": {
+        "close_px": 188.1199951171875,
+        "cost": 934.6050213623047,
+        "entry_date": "2026-09-16",
+        "entry_px": 186.52000427246094,
+        "fee_in": 2.005,
+        "last_px": 186.52000427246094,
+        "min_hold": 3,
+        "notional": 932.6000213623047,
+        "peak_px": 186.52000427246094,
+        "reason": "rank by cond; rank cond; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+13.6; leftover $1063.42",
+        "shares": 5,
+        "ticker": "OKTA"
+      },
+      "WAY": {
+        "close_px": 26.59000015258789,
+        "cost": 1052.9100183105468,
+        "entry_date": "2026-09-16",
+        "entry_px": 26.270000457763672,
+        "fee_in": 2.11,
+        "last_px": 26.270000457763672,
+        "min_hold": 3,
+        "notional": 1050.8000183105469,
+        "peak_px": 26.270000457763672,
+        "reason": "rank by cond; rank cond; list yday_gainer,ohlc_hot; \ud83d\udd35; \u26aa; ret5=+10.0; leftover $1063.42",
+        "shares": 40,
+        "ticker": "WAY"
+      }
+    },
+    "yday_equity": 8549.35
+  }
+}

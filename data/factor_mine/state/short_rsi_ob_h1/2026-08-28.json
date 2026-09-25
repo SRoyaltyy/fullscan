@@ -1,0 +1,207 @@
+{
+  "buys": [
+    "ANF",
+    "BZ",
+    "CRDL",
+    "SBET",
+    "EL",
+    "CXM",
+    "PATH",
+    "FSM"
+  ],
+  "cash": 14819.4,
+  "date": "2026-08-28",
+  "equity": 10075.13,
+  "fees": 19.0047,
+  "fills": [
+    {
+      "fees": 2.0380076720355307,
+      "pnl": null,
+      "price": 146.07,
+      "shares": 4,
+      "side": "SHORT",
+      "ticker": "ANF"
+    },
+    {
+      "fees": 2.128906848959727,
+      "pnl": null,
+      "price": 18.15,
+      "shares": 34,
+      "side": "SHORT",
+      "ticker": "BZ"
+    },
+    {
+      "fees": 3.9861008214428,
+      "pnl": null,
+      "price": 2.06,
+      "shares": 303,
+      "side": "SHORT",
+      "ticker": "CRDL"
+    },
+    {
+      "fees": 2.245063012946142,
+      "pnl": null,
+      "price": 8.65,
+      "shares": 72,
+      "side": "SHORT",
+      "ticker": "SBET"
+    },
+    {
+      "fees": 2.0396561640909274,
+      "pnl": null,
+      "price": 106.99,
+      "shares": 5,
+      "side": "SHORT",
+      "ticker": "EL"
+    },
+    {
+      "fees": 2.2671553427134477,
+      "pnl": null,
+      "price": 7.88,
+      "shares": 79,
+      "side": "SHORT",
+      "ticker": "CXM"
+    },
+    {
+      "fees": 2.1288835616438355,
+      "pnl": null,
+      "price": 18.125,
+      "shares": 34,
+      "side": "SHORT",
+      "ticker": "PATH"
+    },
+    {
+      "fees": 2.170885479652718,
+      "pnl": null,
+      "price": 12.84,
+      "shares": 48,
+      "side": "SHORT",
+      "ticker": "FSM"
+    }
+  ],
+  "holdings": [
+    "ANF",
+    "BZ",
+    "CRDL",
+    "CXM",
+    "EL",
+    "FSM",
+    "PATH",
+    "SBET"
+  ],
+  "mean": 0.7513,
+  "n_trades_today": 8,
+  "recipe": "short_rsi_ob_h1",
+  "sells": [],
+  "state": {
+    "after": "2026-08-28",
+    "cash": 14819.4,
+    "pos": {
+      "ANF": {
+        "close_px": 148.4199981689453,
+        "cost": 2.0380076720355307,
+        "entry_date": "2026-08-28",
+        "entry_px": 146.07000732421875,
+        "fee_in": 2.0380076720355307,
+        "last_px": 146.07000732421875,
+        "notional": 584.280029296875,
+        "peak_px": 146.07000732421875,
+        "reason": "RSI overbought; gate rsi_ob=True; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+38.8; leftover $625.00",
+        "shares": 4,
+        "ticker": "ANF"
+      },
+      "BZ": {
+        "close_px": 17.799999237060547,
+        "cost": 2.128906848959727,
+        "entry_date": "2026-08-28",
+        "entry_px": 18.149999618530273,
+        "fee_in": 2.128906848959727,
+        "last_px": 18.149999618530273,
+        "notional": 617.0999870300293,
+        "peak_px": 18.149999618530273,
+        "reason": "RSI overbought; gate rsi_ob=True; list yday_gainer,yday_mover; ret5=+14.1; leftover $625.00",
+        "shares": 34,
+        "ticker": "BZ"
+      },
+      "CRDL": {
+        "close_px": 1.940000057220459,
+        "cost": 3.9861008214428,
+        "entry_date": "2026-08-28",
+        "entry_px": 2.059999942779541,
+        "fee_in": 3.9861008214428,
+        "last_px": 2.059999942779541,
+        "notional": 624.1799826622009,
+        "peak_px": 2.059999942779541,
+        "reason": "RSI overbought; gate rsi_ob=True; list yday_gainer; ret5=+9.3; leftover $625.00",
+        "shares": 303,
+        "ticker": "CRDL"
+      },
+      "CXM": {
+        "close_px": 8.15999984741211,
+        "cost": 2.2671553427134477,
+        "entry_date": "2026-08-28",
+        "entry_px": 7.880000114440918,
+        "fee_in": 2.2671553427134477,
+        "last_px": 7.880000114440918,
+        "notional": 622.5200090408325,
+        "peak_px": 7.880000114440918,
+        "reason": "RSI overbought; gate rsi_ob=True; list ohlc_hot; \ud83d\udd35; ret5=+10.3; leftover $625.00",
+        "shares": 79,
+        "ticker": "CXM"
+      },
+      "EL": {
+        "close_px": 103.38999938964844,
+        "cost": 2.0396561640909274,
+        "entry_date": "2026-08-28",
+        "entry_px": 106.98999786376953,
+        "fee_in": 2.0396561640909274,
+        "last_px": 106.98999786376953,
+        "notional": 534.9499893188477,
+        "peak_px": 106.98999786376953,
+        "reason": "RSI overbought; gate rsi_ob=True; list ohlc_hot; ret5=+10.5; leftover $625.00",
+        "shares": 5,
+        "ticker": "EL"
+      },
+      "FSM": {
+        "close_px": 12.260000228881836,
+        "cost": 2.170885479652718,
+        "entry_date": "2026-08-28",
+        "entry_px": 12.84000015258789,
+        "fee_in": 2.170885479652718,
+        "last_px": 12.84000015258789,
+        "notional": 616.3200073242188,
+        "peak_px": 12.84000015258789,
+        "reason": "RSI overbought; gate rsi_ob=True; list ohlc_hot; ret5=+7.6; leftover $625.00",
+        "shares": 48,
+        "ticker": "FSM"
+      },
+      "PATH": {
+        "close_px": 18.149999618530273,
+        "cost": 2.1288835616438355,
+        "entry_date": "2026-08-28",
+        "entry_px": 18.125,
+        "fee_in": 2.1288835616438355,
+        "last_px": 18.125,
+        "notional": 616.25,
+        "peak_px": 18.125,
+        "reason": "RSI overbought; gate rsi_ob=True; list ohlc_hot; \ud83d\udd35; ret5=+15.1; leftover $625.00",
+        "shares": 34,
+        "ticker": "PATH"
+      },
+      "SBET": {
+        "close_px": 8.199999809265137,
+        "cost": 2.245063012946142,
+        "entry_date": "2026-08-28",
+        "entry_px": 8.649999618530273,
+        "fee_in": 2.245063012946142,
+        "last_px": 8.649999618530273,
+        "notional": 622.7999725341797,
+        "peak_px": 8.649999618530273,
+        "reason": "RSI overbought; gate rsi_ob=True; list ohlc_hot; ret5=+17.0; leftover $625.00",
+        "shares": 72,
+        "ticker": "SBET"
+      }
+    },
+    "yday_equity": 10075.13
+  }
+}

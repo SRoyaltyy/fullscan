@@ -1,0 +1,48 @@
+{
+  "buys": [],
+  "cash": 10083.12,
+  "date": "2026-09-21",
+  "equity": 10083.12,
+  "fees": 11.3383,
+  "fills": [
+    {
+      "fees": 2.2022,
+      "pnl": -199.66,
+      "price": 53.39,
+      "shares": 59,
+      "side": "SELL",
+      "ticker": "ARE"
+    },
+    {
+      "fees": 5.9062,
+      "pnl": -90.46,
+      "price": 7.36,
+      "shares": 450,
+      "side": "SELL",
+      "ticker": "FLNC"
+    },
+    {
+      "fees": 3.2299,
+      "pnl": 196.96,
+      "price": 14.65,
+      "shares": 245,
+      "side": "SELL",
+      "ticker": "PURR"
+    }
+  ],
+  "holdings": [],
+  "mean": 1.5016,
+  "n_trades_today": 3,
+  "recipe": "union_clk_hold_vs_sector_opp_h1",
+  "sells": [
+    "ARE",
+    "FLNC",
+    "PURR"
+  ],
+  "state": {
+    "after": "2026-09-21",
+    "cash": 10083.12,
+    "pos": {},
+    "yday_equity": 10083.12
+  }
+}

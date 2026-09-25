@@ -1,0 +1,207 @@
+{
+  "buys": [
+    "GPRO",
+    "BAK",
+    "SLBT",
+    "IRD",
+    "FMC",
+    "TARS",
+    "LENZ",
+    "ASST"
+  ],
+  "cash": 15198.27,
+  "date": "2026-09-04",
+  "equity": 10006.7,
+  "fees": 23.7755,
+  "fills": [
+    {
+      "fees": 5.645835616663057,
+      "pnl": null,
+      "price": 1.48,
+      "shares": 430,
+      "side": "SHORT",
+      "ticker": "GPRO"
+    },
+    {
+      "fees": 4.313033425171735,
+      "pnl": null,
+      "price": 1.94,
+      "shares": 328,
+      "side": "SHORT",
+      "ticker": "BAK"
+    },
+    {
+      "fees": 2.6669328772401157,
+      "pnl": null,
+      "price": 3.15,
+      "shares": 202,
+      "side": "SHORT",
+      "ticker": "SLBT"
+    },
+    {
+      "fees": 2.4605753432704978,
+      "pnl": null,
+      "price": 4.53,
+      "shares": 140,
+      "side": "SHORT",
+      "ticker": "IRD"
+    },
+    {
+      "fees": 2.174384931250794,
+      "pnl": null,
+      "price": 12.95,
+      "shares": 49,
+      "side": "SHORT",
+      "ticker": "FMC"
+    },
+    {
+      "fees": 2.0468602733873342,
+      "pnl": null,
+      "price": 82.7,
+      "shares": 7,
+      "side": "SHORT",
+      "ticker": "TARS"
+    },
+    {
+      "fees": 2.3656287671232876,
+      "pnl": null,
+      "price": 5.75,
+      "shares": 110,
+      "side": "SHORT",
+      "ticker": "LENZ"
+    },
+    {
+      "fees": 2.10224657555149,
+      "pnl": null,
+      "price": 25.18,
+      "shares": 25,
+      "side": "SHORT",
+      "ticker": "ASST"
+    }
+  ],
+  "holdings": [
+    "ASST",
+    "BAK",
+    "FMC",
+    "GPRO",
+    "IRD",
+    "LENZ",
+    "SLBT",
+    "TARS"
+  ],
+  "mean": -1.9276,
+  "n_trades_today": 8,
+  "recipe": "short_extended_h3",
+  "sells": [],
+  "state": {
+    "after": "2026-09-04",
+    "cash": 15198.27,
+    "pos": {
+      "ASST": {
+        "close_px": 27.139999389648438,
+        "cost": 2.10224657555149,
+        "entry_date": "2026-09-04",
+        "entry_px": 25.18000030517578,
+        "fee_in": 2.10224657555149,
+        "last_px": 25.18000030517578,
+        "notional": 629.5000076293945,
+        "peak_px": 25.18000030517578,
+        "reason": "ret_5>15; gate ret_5_min=15.0; list ohlc_hot; \ud83d\udd35; ret5=+16.0; leftover $637.71",
+        "shares": 25,
+        "ticker": "ASST"
+      },
+      "BAK": {
+        "close_px": 1.8899999856948853,
+        "cost": 4.313033425171735,
+        "entry_date": "2026-09-04",
+        "entry_px": 1.940000057220459,
+        "fee_in": 4.313033425171735,
+        "last_px": 1.940000057220459,
+        "notional": 636.3200187683105,
+        "peak_px": 1.940000057220459,
+        "reason": "ret_5>15; gate ret_5_min=15.0; list yday_gainer,yday_mover; ret5=+18.3; leftover $637.71",
+        "shares": 328,
+        "ticker": "BAK"
+      },
+      "FMC": {
+        "close_px": 12.970000267028809,
+        "cost": 2.174384931250794,
+        "entry_date": "2026-09-04",
+        "entry_px": 12.949999809265137,
+        "fee_in": 2.174384931250794,
+        "last_px": 12.949999809265137,
+        "notional": 634.5499906539917,
+        "peak_px": 12.949999809265137,
+        "reason": "ret_5>15; gate ret_5_min=15.0; list yday_gainer,yday_mover; ret5=+21.8; leftover $637.71",
+        "shares": 49,
+        "ticker": "FMC"
+      },
+      "GPRO": {
+        "close_px": 1.7000000476837158,
+        "cost": 5.645835616663057,
+        "entry_date": "2026-09-04",
+        "entry_px": 1.4800000190734863,
+        "fee_in": 5.645835616663057,
+        "last_px": 1.4800000190734863,
+        "notional": 636.4000082015991,
+        "peak_px": 1.4800000190734863,
+        "reason": "ret_5>15; gate ret_5_min=15.0; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+129.8; leftover $637.71",
+        "shares": 430,
+        "ticker": "GPRO"
+      },
+      "IRD": {
+        "close_px": 4.670000076293945,
+        "cost": 2.4605753432704978,
+        "entry_date": "2026-09-04",
+        "entry_px": 4.53000020980835,
+        "fee_in": 2.4605753432704978,
+        "last_px": 4.53000020980835,
+        "notional": 634.200029373169,
+        "peak_px": 4.53000020980835,
+        "reason": "ret_5>15; gate ret_5_min=15.0; list yday_gainer,yday_mover; \ud83d\udd35; \u26aa; ret5=+19.5; leftover $637.71",
+        "shares": 140,
+        "ticker": "IRD"
+      },
+      "LENZ": {
+        "close_px": 5.960000038146973,
+        "cost": 2.3656287671232876,
+        "entry_date": "2026-09-04",
+        "entry_px": 5.75,
+        "fee_in": 2.3656287671232876,
+        "last_px": 5.75,
+        "notional": 632.5,
+        "peak_px": 5.75,
+        "reason": "ret_5>15; gate ret_5_min=15.0; list yday_gainer; \ud83d\udd35; \u26aa; ret5=+21.2; leftover $637.71",
+        "shares": 110,
+        "ticker": "LENZ"
+      },
+      "SLBT": {
+        "close_px": 2.880000114440918,
+        "cost": 2.6669328772401157,
+        "entry_date": "2026-09-04",
+        "entry_px": 3.1500000953674316,
+        "fee_in": 2.6669328772401157,
+        "last_px": 3.1500000953674316,
+        "notional": 636.3000192642212,
+        "peak_px": 3.1500000953674316,
+        "reason": "ret_5>15; gate ret_5_min=15.0; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+19.3; leftover $637.71",
+        "shares": 202,
+        "ticker": "SLBT"
+      },
+      "TARS": {
+        "close_px": 90.77999877929688,
+        "cost": 2.0468602733873342,
+        "entry_date": "2026-09-04",
+        "entry_px": 82.69999694824219,
+        "fee_in": 2.0468602733873342,
+        "last_px": 82.69999694824219,
+        "notional": 578.8999786376953,
+        "peak_px": 82.69999694824219,
+        "reason": "ret_5>15; gate ret_5_min=15.0; list yday_gainer,ohlc_hot; \ud83d\udd35; \u26aa; ret5=+15.7; leftover $637.71",
+        "shares": 7,
+        "ticker": "TARS"
+      }
+    },
+    "yday_equity": 10006.7
+  }
+}

@@ -1,0 +1,288 @@
+{
+  "buys": [
+    "IQ",
+    "IOVA",
+    "TWST",
+    "GME",
+    "ANGI",
+    "HLP",
+    "QTRX",
+    "SMTC"
+  ],
+  "cash": 70.17,
+  "date": "2026-09-17",
+  "equity": 10128.34,
+  "fees": 58.854,
+  "fills": [
+    {
+      "fees": 2.1484,
+      "pnl": 48.16,
+      "price": 28.23,
+      "shares": 46,
+      "side": "SELL",
+      "ticker": "ADPT"
+    },
+    {
+      "fees": 2.112,
+      "pnl": 2.94,
+      "price": 36.67,
+      "shares": 34,
+      "side": "SELL",
+      "ticker": "BLFS"
+    },
+    {
+      "fees": 2.1421,
+      "pnl": 14.88,
+      "price": 28.595,
+      "shares": 44,
+      "side": "SELL",
+      "ticker": "CAI"
+    },
+    {
+      "fees": 2.04,
+      "pnl": -34.26,
+      "price": 120.07,
+      "shares": 10,
+      "side": "SELL",
+      "ticker": "CRUS"
+    },
+    {
+      "fees": 4.4786,
+      "pnl": -132.01,
+      "price": 3.3,
+      "shares": 342,
+      "side": "SELL",
+      "ticker": "INDP"
+    },
+    {
+      "fees": 2.043,
+      "pnl": 8.36,
+      "price": 109.13,
+      "shares": 11,
+      "side": "SELL",
+      "ticker": "INSW"
+    },
+    {
+      "fees": 2.0494,
+      "pnl": 65.86,
+      "price": 99.61,
+      "shares": 13,
+      "side": "SELL",
+      "ticker": "WGS"
+    },
+    {
+      "fees": 2.019,
+      "pnl": 5.25,
+      "price": 366.2,
+      "shares": 3,
+      "side": "SELL",
+      "ticker": "WST"
+    },
+    {
+      "fees": 15.0672,
+      "pnl": null,
+      "price": 1.07,
+      "shares": 1168,
+      "side": "BUY",
+      "ticker": "IQ"
+    },
+    {
+      "fees": 2.356,
+      "pnl": null,
+      "price": 10.25,
+      "shares": 122,
+      "side": "BUY",
+      "ticker": "IOVA"
+    },
+    {
+      "fees": 2.014,
+      "pnl": null,
+      "price": 151.43,
+      "shares": 8,
+      "side": "BUY",
+      "ticker": "TWST"
+    },
+    {
+      "fees": 2.158,
+      "pnl": null,
+      "price": 22.12,
+      "shares": 56,
+      "side": "BUY",
+      "ticker": "GME"
+    },
+    {
+      "fees": 3.0573,
+      "pnl": null,
+      "price": 5.27,
+      "shares": 237,
+      "side": "BUY",
+      "ticker": "ANGI"
+    },
+    {
+      "fees": 7.6755,
+      "pnl": null,
+      "price": 2.1,
+      "shares": 595,
+      "side": "BUY",
+      "ticker": "HLP"
+    },
+    {
+      "fees": 5.4825,
+      "pnl": null,
+      "price": 2.94,
+      "shares": 425,
+      "side": "BUY",
+      "ticker": "QTRX"
+    },
+    {
+      "fees": 2.011,
+      "pnl": null,
+      "price": 170.85,
+      "shares": 7,
+      "side": "BUY",
+      "ticker": "SMTC"
+    }
+  ],
+  "holdings": [
+    "ANGI",
+    "GME",
+    "HLP",
+    "IOVA",
+    "IQ",
+    "QTRX",
+    "SMTC",
+    "TWST"
+  ],
+  "mean": 2.598,
+  "n_trades_today": 16,
+  "recipe": "union_candle_score_h1",
+  "sells": [
+    "ADPT",
+    "BLFS",
+    "CAI",
+    "CRUS",
+    "INDP",
+    "INSW",
+    "WGS",
+    "WST"
+  ],
+  "state": {
+    "after": "2026-09-17",
+    "cash": 70.17,
+    "pos": {
+      "ANGI": {
+        "close_px": 5.300000190734863,
+        "cost": 1252.0472954795837,
+        "entry_date": "2026-09-17",
+        "entry_px": 5.269999980926514,
+        "fee_in": 3.0573,
+        "last_px": 5.269999980926514,
+        "min_hold": 1,
+        "notional": 1248.9899954795837,
+        "peak_px": 5.269999980926514,
+        "reason": "rank by candle_score; rank candle_score; list ohlc_hot; \ud83d\udd35; ret5=+12.1; leftover $1250.54",
+        "shares": 237,
+        "ticker": "ANGI"
+      },
+      "GME": {
+        "close_px": 22.770000457763672,
+        "cost": 1240.8780469970702,
+        "entry_date": "2026-09-17",
+        "entry_px": 22.1200008392334,
+        "fee_in": 2.158,
+        "last_px": 22.1200008392334,
+        "min_hold": 1,
+        "notional": 1238.7200469970703,
+        "peak_px": 22.1200008392334,
+        "reason": "rank by candle_score; rank candle_score; list ohlc_hot; \ud83d\udd35; ret5=+10.5; leftover $1250.54",
+        "shares": 56,
+        "ticker": "GME"
+      },
+      "HLP": {
+        "close_px": 2.0199999809265137,
+        "cost": 1257.1754432563782,
+        "entry_date": "2026-09-17",
+        "entry_px": 2.0999999046325684,
+        "fee_in": 7.6755,
+        "last_px": 2.0999999046325684,
+        "min_hold": 1,
+        "notional": 1249.4999432563782,
+        "peak_px": 2.0999999046325684,
+        "reason": "rank by candle_score; rank candle_score; list yday_gainer,yday_mover; ret5=+60.5; leftover $1250.54",
+        "shares": 595,
+        "ticker": "HLP"
+      },
+      "IOVA": {
+        "close_px": 10.020000457763672,
+        "cost": 1252.856,
+        "entry_date": "2026-09-17",
+        "entry_px": 10.25,
+        "fee_in": 2.356,
+        "last_px": 10.25,
+        "min_hold": 1,
+        "notional": 1250.5,
+        "peak_px": 10.25,
+        "reason": "rank by candle_score; rank candle_score; list flatten,ohlc_hot; ret5=+17.1; leftover $1250.54",
+        "shares": 122,
+        "ticker": "IOVA"
+      },
+      "IQ": {
+        "close_px": 1.100000023841858,
+        "cost": 1264.827261264038,
+        "entry_date": "2026-09-17",
+        "entry_px": 1.0700000524520874,
+        "fee_in": 15.0672,
+        "last_px": 1.0700000524520874,
+        "min_hold": 1,
+        "notional": 1249.760061264038,
+        "peak_px": 1.0700000524520874,
+        "reason": "rank by candle_score; rank candle_score; list yday_gainer,ohlc_hot; \ud83d\udd35; ret5=+15.8; leftover $1250.54",
+        "shares": 1168,
+        "ticker": "IQ"
+      },
+      "QTRX": {
+        "close_px": 3.119999885559082,
+        "cost": 1254.9825243186951,
+        "entry_date": "2026-09-17",
+        "entry_px": 2.940000057220459,
+        "fee_in": 5.4825,
+        "last_px": 2.940000057220459,
+        "min_hold": 1,
+        "notional": 1249.500024318695,
+        "peak_px": 2.940000057220459,
+        "reason": "rank by candle_score; rank candle_score; list yday_gainer,ohlc_hot; ret5=+9.8; leftover $1250.54",
+        "shares": 425,
+        "ticker": "QTRX"
+      },
+      "SMTC": {
+        "close_px": 178.19000244140625,
+        "cost": 1197.9610427246093,
+        "entry_date": "2026-09-17",
+        "entry_px": 170.85000610351562,
+        "fee_in": 2.011,
+        "last_px": 170.85000610351562,
+        "min_hold": 1,
+        "notional": 1195.9500427246094,
+        "peak_px": 170.85000610351562,
+        "reason": "rank by candle_score; rank candle_score; list probable,yday_gainer,yday_mover; \ud83d\udd35; ret5=+2.2; leftover $1250.54",
+        "shares": 7,
+        "ticker": "SMTC"
+      },
+      "TWST": {
+        "close_px": 155.55999755859375,
+        "cost": 1213.45394140625,
+        "entry_date": "2026-09-17",
+        "entry_px": 151.42999267578125,
+        "fee_in": 2.014,
+        "last_px": 151.42999267578125,
+        "min_hold": 1,
+        "notional": 1211.43994140625,
+        "peak_px": 151.42999267578125,
+        "reason": "rank by candle_score; rank candle_score; list flatten,ohlc_hot; ret5=+14.0; leftover $1250.54",
+        "shares": 8,
+        "ticker": "TWST"
+      }
+    },
+    "yday_equity": 10128.34
+  }
+}

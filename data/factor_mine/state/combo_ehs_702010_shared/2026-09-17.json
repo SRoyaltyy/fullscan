@@ -1,0 +1,263 @@
+{
+  "buys": [
+    "ALMU",
+    "LEN",
+    "IQ",
+    "BULL",
+    "TRMD"
+  ],
+  "cash": 584.67,
+  "date": "2026-09-17",
+  "equity": 9616.6,
+  "fees": 18.7676,
+  "fills": [
+    {
+      "fees": 2.058,
+      "pnl": 2.86,
+      "price": 28.595,
+      "shares": 16,
+      "side": "SELL",
+      "ticker": "CAI"
+    },
+    {
+      "fees": 2.067,
+      "pnl": 11.09,
+      "price": 24.09,
+      "shares": 19,
+      "side": "SELL",
+      "ticker": "SDGR"
+    },
+    {
+      "fees": 2.248,
+      "pnl": null,
+      "price": 11.21,
+      "shares": 86,
+      "side": "BUY",
+      "ticker": "ALMU"
+    },
+    {
+      "fees": 2.023,
+      "pnl": null,
+      "price": 81.0,
+      "shares": 11,
+      "side": "BUY",
+      "ticker": "LEN"
+    },
+    {
+      "fees": 7.3659,
+      "pnl": null,
+      "price": 1.07,
+      "shares": 571,
+      "side": "BUY",
+      "ticker": "IQ"
+    },
+    {
+      "fees": 1.5089205478511443,
+      "pnl": null,
+      "price": 7.95,
+      "shares": 18,
+      "side": "SHORT",
+      "ticker": "BULL"
+    },
+    {
+      "fees": 1.4968021918309877,
+      "pnl": null,
+      "price": 36.52,
+      "shares": 4,
+      "side": "SHORT",
+      "ticker": "TRMD"
+    }
+  ],
+  "holdings": [
+    "ALMU",
+    "BBNX",
+    "BULL",
+    "FPS",
+    "GFR",
+    "HLP",
+    "INDP",
+    "IQ",
+    "LEN",
+    "TCOM",
+    "TRMD"
+  ],
+  "mean": 4.4993,
+  "n_trades_today": 7,
+  "recipe": "combo_ehs_702010_shared",
+  "sells": [
+    "CAI",
+    "SDGR"
+  ],
+  "state": {
+    "after": "2026-09-17",
+    "cash": 584.67,
+    "pos": {
+      "ALMU": {
+        "close_px": 11.545000076293945,
+        "cost": 966.3080032806397,
+        "entry_date": "2026-09-17",
+        "entry_px": 11.210000038146973,
+        "fee_in": 2.248,
+        "last_px": 11.210000038146973,
+        "notional": 964.0600032806396,
+        "owner": "union_e_fresh_h3",
+        "peak_px": 11.210000038146973,
+        "reason": "union \u2229 e_fresh, no \ud83d\udea8; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=+1.0; combo leftover $971.66; owner union_e_fresh_h3",
+        "shares": 86,
+        "side": "long",
+        "ticker": "ALMU"
+      },
+      "BBNX": {
+        "close_px": 21.43000030517578,
+        "cost": 2.0977465757605147,
+        "entry_date": "2026-09-16",
+        "entry_px": 18.610000610351562,
+        "fee_in": 2.0977465757605147,
+        "last_px": 22.459999084472656,
+        "notional": 465.25001525878906,
+        "owner": "short_news_r_h3",
+        "peak_px": 18.610000610351562,
+        "reason": "news\ud83d\udd34; gate news=bad; list probable,yday_gainer,yday_mover; ret5=-0.5; combo leftover $469.85; owner short_news_r_h3",
+        "shares": 25,
+        "side": "short",
+        "ticker": "BBNX"
+      },
+      "BULL": {
+        "close_px": 7.710000038146973,
+        "cost": 1.5089205478511443,
+        "entry_date": "2026-09-17",
+        "entry_px": 7.949999809265137,
+        "fee_in": 1.5089205478511443,
+        "last_px": 7.949999809265137,
+        "notional": 143.09999656677246,
+        "owner": "short_news_r_h3",
+        "peak_px": 7.949999809265137,
+        "reason": "news\ud83d\udd34; gate news=bad; list yday_mover; \ud83d\udd35; \u26aa; ret5=-18.4; combo leftover $149.25; owner short_news_r_h3",
+        "shares": 18,
+        "side": "short",
+        "ticker": "BULL"
+      },
+      "FPS": {
+        "close_px": 38.060001373291016,
+        "cost": 3183.71794140625,
+        "entry_date": "2026-09-16",
+        "entry_px": 33.13999938964844,
+        "fee_in": 2.278,
+        "last_px": 36.7599983215332,
+        "notional": 3181.43994140625,
+        "owner": "union_e_fresh_h3",
+        "peak_px": 36.7599983215332,
+        "reason": "union \u2229 e_fresh, no \ud83d\udea8; gate days_since_E_max=1,flag_E_min=0; list yday_gainer; \ud83d\udd35; ret5=-2.9; combo leftover $3198.12; owner union_e_fresh_h3",
+        "shares": 96,
+        "side": "long",
+        "ticker": "FPS"
+      },
+      "GFR": {
+        "close_px": 6.659999847412109,
+        "cost": 2.2280243834195073,
+        "entry_date": "2026-09-16",
+        "entry_px": 6.829999923706055,
+        "fee_in": 2.2280243834195073,
+        "last_px": 6.480000019073486,
+        "notional": 464.4399948120117,
+        "owner": "short_news_r_h3",
+        "peak_px": 6.480000019073486,
+        "reason": "news\ud83d\udd34; gate news=bad; list ohlc_hot; ret5=+11.2; combo leftover $469.85; owner short_news_r_h3",
+        "shares": 68,
+        "side": "short",
+        "ticker": "GFR"
+      },
+      "HLP": {
+        "close_px": 2.0199999809265137,
+        "cost": 462.28948784065244,
+        "entry_date": "2026-09-16",
+        "entry_px": 1.7999999523162842,
+        "fee_in": 3.2895,
+        "last_px": 2.0999999046325684,
+        "notional": 458.99998784065247,
+        "owner": "union_hot_n4_h1",
+        "peak_px": 2.0999999046325684,
+        "reason": "top 4 by hot; rank hot_score; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+30.5; combo leftover $459.83; owner union_hot_n4_h1",
+        "shares": 255,
+        "side": "long",
+        "ticker": "HLP"
+      },
+      "INDP": {
+        "close_px": 3.930000066757202,
+        "cost": 459.86501072883607,
+        "entry_date": "2026-09-16",
+        "entry_px": 3.6600000858306885,
+        "fee_in": 2.365,
+        "last_px": 3.299999952316284,
+        "notional": 457.50001072883606,
+        "owner": "union_hot_n4_h1",
+        "peak_px": 3.6600000858306885,
+        "reason": "top 4 by hot; rank hot_score; list yday_gainer,yday_mover; ret5=+96.8; combo leftover $459.83; owner union_hot_n4_h1",
+        "shares": 125,
+        "side": "long",
+        "ticker": "INDP"
+      },
+      "IQ": {
+        "close_px": 1.100000023841858,
+        "cost": 618.3359299501419,
+        "entry_date": "2026-09-17",
+        "entry_px": 1.0700000524520874,
+        "fee_in": 7.3659,
+        "last_px": 1.0700000524520874,
+        "notional": 610.9700299501419,
+        "owner": "union_hot_n4_h1",
+        "peak_px": 1.0700000524520874,
+        "reason": "top 4 by hot; rank hot_score; list yday_gainer,ohlc_hot; \ud83d\udd35; ret5=+15.8; combo leftover $611.22; owner union_hot_n4_h1",
+        "shares": 571,
+        "side": "long",
+        "ticker": "IQ"
+      },
+      "LEN": {
+        "close_px": 79.69999694824219,
+        "cost": 893.023,
+        "entry_date": "2026-09-17",
+        "entry_px": 81.0,
+        "fee_in": 2.023,
+        "last_px": 81.0,
+        "notional": 891.0,
+        "owner": "union_e_fresh_h3",
+        "peak_px": 81.0,
+        "reason": "union \u2229 e_fresh, no \ud83d\udea8; gate days_since_E_max=1,flag_E_min=0; list earn_react; \ud83d\udd35; ret5=-3.0; combo leftover $971.66; owner union_e_fresh_h3",
+        "shares": 11,
+        "side": "long",
+        "ticker": "LEN"
+      },
+      "TCOM": {
+        "close_px": 40.36000061035156,
+        "cost": 3194.764023803711,
+        "entry_date": "2026-09-16",
+        "entry_px": 40.93000030517578,
+        "fee_in": 2.224,
+        "last_px": 40.790000915527344,
+        "notional": 3192.540023803711,
+        "owner": "union_e_fresh_h3",
+        "peak_px": 40.93000030517578,
+        "reason": "union \u2229 e_fresh, no \ud83d\udea8; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=-3.1; combo leftover $3198.12; owner union_e_fresh_h3",
+        "shares": 78,
+        "side": "long",
+        "ticker": "TCOM"
+      },
+      "TRMD": {
+        "close_px": 36.630001068115234,
+        "cost": 1.4968021918309877,
+        "entry_date": "2026-09-17",
+        "entry_px": 36.52000045776367,
+        "fee_in": 1.4968021918309877,
+        "last_px": 36.52000045776367,
+        "notional": 146.0800018310547,
+        "owner": "short_news_r_h3",
+        "peak_px": 36.52000045776367,
+        "reason": "news\ud83d\udd34; gate news=bad; list ohlc_hot; ret5=+3.2; combo leftover $149.25; owner short_news_r_h3",
+        "shares": 4,
+        "side": "short",
+        "ticker": "TRMD"
+      }
+    },
+    "yday_equity": 9616.6
+  }
+}

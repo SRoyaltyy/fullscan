@@ -1,0 +1,119 @@
+{
+  "buys": [
+    "GWRE",
+    "IOT",
+    "LULU",
+    "MAMA"
+  ],
+  "cash": 93.86,
+  "date": "2026-09-04",
+  "equity": 9217.3,
+  "fees": 8.689,
+  "fills": [
+    {
+      "fees": 2.032,
+      "pnl": null,
+      "price": 167.55,
+      "shares": 14,
+      "side": "BUY",
+      "ticker": "GWRE"
+    },
+    {
+      "fees": 2.149,
+      "pnl": null,
+      "price": 44.9,
+      "shares": 53,
+      "side": "BUY",
+      "ticker": "IOT"
+    },
+    {
+      "fees": 2.062,
+      "pnl": null,
+      "price": 98.15,
+      "shares": 24,
+      "side": "BUY",
+      "ticker": "LULU"
+    },
+    {
+      "fees": 2.446,
+      "pnl": null,
+      "price": 15.7,
+      "shares": 152,
+      "side": "BUY",
+      "ticker": "MAMA"
+    }
+  ],
+  "holdings": [
+    "GWRE",
+    "IOT",
+    "LULU",
+    "MAMA"
+  ],
+  "mean": -3.685,
+  "n_trades_today": 4,
+  "recipe": "union_e_green_h3",
+  "sells": [],
+  "state": {
+    "after": "2026-09-04",
+    "cash": 93.86,
+    "pos": {
+      "GWRE": {
+        "close_px": 162.4199981689453,
+        "cost": 2347.7320427246095,
+        "entry_date": "2026-09-04",
+        "entry_px": 167.5500030517578,
+        "fee_in": 2.032,
+        "last_px": 167.5500030517578,
+        "min_hold": 3,
+        "notional": 2345.7000427246094,
+        "peak_px": 167.5500030517578,
+        "reason": "combo gate; gate earn_react=True,last_green=True; list earn_react; ret5=+0.9; leftover $2392.49",
+        "shares": 14,
+        "ticker": "GWRE"
+      },
+      "IOT": {
+        "close_px": 40.20000076293945,
+        "cost": 2381.849080871582,
+        "entry_date": "2026-09-04",
+        "entry_px": 44.900001525878906,
+        "fee_in": 2.149,
+        "last_px": 44.900001525878906,
+        "min_hold": 3,
+        "notional": 2379.700080871582,
+        "peak_px": 44.900001525878906,
+        "reason": "combo gate; gate earn_react=True,last_green=True; list earn_react; ret5=-7.5; leftover $2392.49",
+        "shares": 53,
+        "ticker": "IOT"
+      },
+      "LULU": {
+        "close_px": 100.61000061035156,
+        "cost": 2357.6620366210936,
+        "entry_date": "2026-09-04",
+        "entry_px": 98.1500015258789,
+        "fee_in": 2.062,
+        "last_px": 98.1500015258789,
+        "min_hold": 3,
+        "notional": 2355.6000366210938,
+        "peak_px": 98.1500015258789,
+        "reason": "combo gate; gate earn_react=True,last_green=True; list earn_react; ret5=+5.9; leftover $2392.49",
+        "shares": 24,
+        "ticker": "LULU"
+      },
+      "MAMA": {
+        "close_px": 15.15999984741211,
+        "cost": 2388.8459710083007,
+        "entry_date": "2026-09-04",
+        "entry_px": 15.699999809265137,
+        "fee_in": 2.446,
+        "last_px": 15.699999809265137,
+        "min_hold": 3,
+        "notional": 2386.399971008301,
+        "peak_px": 15.699999809265137,
+        "reason": "combo gate; gate earn_react=True,last_green=True; list earn_react; ret5=-0.4; leftover $2392.49",
+        "shares": 152,
+        "ticker": "MAMA"
+      }
+    },
+    "yday_equity": 9217.3
+  }
+}

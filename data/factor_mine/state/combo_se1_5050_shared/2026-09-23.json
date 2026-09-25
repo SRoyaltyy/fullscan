@@ -1,0 +1,290 @@
+{
+  "buys": [
+    "CBRL",
+    "CTAS",
+    "GIS",
+    "KBH",
+    "HALO",
+    "BAND"
+  ],
+  "cash": 16167.34,
+  "date": "2026-09-23",
+  "equity": 8902.17,
+  "fees": 21.6541,
+  "fills": [
+    {
+      "fees": 2.0871,
+      "pnl": -106.27,
+      "price": 98.3,
+      "shares": 23,
+      "side": "SELL",
+      "ticker": "ABVX"
+    },
+    {
+      "fees": 2.1474,
+      "pnl": -69.63,
+      "price": 53.55,
+      "shares": 43,
+      "side": "SELL",
+      "ticker": "ANAB"
+    },
+    {
+      "fees": 2.3723,
+      "pnl": -108.21,
+      "price": 19.76,
+      "shares": 115,
+      "side": "SELL",
+      "ticker": "MLKN"
+    },
+    {
+      "fees": 2.1179,
+      "pnl": -41.17,
+      "price": 71.41,
+      "shares": 33,
+      "side": "SELL",
+      "ticker": "THO"
+    },
+    {
+      "fees": 2.173,
+      "pnl": null,
+      "price": 47.57,
+      "shares": 61,
+      "side": "BUY",
+      "ticker": "CBRL"
+    },
+    {
+      "fees": 2.032,
+      "pnl": null,
+      "price": 196.78,
+      "shares": 14,
+      "side": "BUY",
+      "ticker": "CTAS"
+    },
+    {
+      "fees": 2.233,
+      "pnl": null,
+      "price": 35.74,
+      "shares": 81,
+      "side": "BUY",
+      "ticker": "GIS"
+    },
+    {
+      "fees": 2.176,
+      "pnl": null,
+      "price": 47.15,
+      "shares": 62,
+      "side": "BUY",
+      "ticker": "KBH"
+    },
+    {
+      "fees": 2.1284246567817586,
+      "pnl": null,
+      "price": 116.85,
+      "shares": 18,
+      "side": "SHORT",
+      "ticker": "HALO"
+    },
+    {
+      "fees": 2.187004655832787,
+      "pnl": null,
+      "price": 58.01,
+      "shares": 37,
+      "side": "SHORT",
+      "ticker": "BAND"
+    }
+  ],
+  "holdings": [
+    "AEHL",
+    "AMD",
+    "BAND",
+    "CBRL",
+    "CTAS",
+    "FIVN",
+    "GIS",
+    "HALO",
+    "KBH",
+    "PAYX",
+    "USFD"
+  ],
+  "mean": 0.3562,
+  "n_trades_today": 10,
+  "recipe": "combo_se1_5050_shared",
+  "sells": [
+    "ABVX",
+    "ANAB",
+    "MLKN",
+    "THO"
+  ],
+  "state": {
+    "after": "2026-09-23",
+    "cash": 16167.34,
+    "pos": {
+      "AEHL": {
+        "close_px": 8.229999542236328,
+        "cost": 3.873927399078787,
+        "entry_date": "2026-09-21",
+        "entry_px": 8.260000228881836,
+        "fee_in": 3.873927399078787,
+        "last_px": 7.619999885559082,
+        "notional": 2395.4000663757324,
+        "owner": "short_news_r_h3",
+        "peak_px": 7.619999885559082,
+        "reason": "news\ud83d\udd34; gate news=bad; list yday_mover; ret5=+7.7; combo leftover $2401.84; owner short_news_r_h3",
+        "shares": 290,
+        "side": "short",
+        "ticker": "AEHL"
+      },
+      "AMD": {
+        "close_px": 614.6099853515625,
+        "cost": 2.0946868498501714,
+        "entry_date": "2026-09-21",
+        "entry_px": 583.8800048828125,
+        "fee_in": 2.0946868498501714,
+        "last_px": 621.5,
+        "notional": 2335.52001953125,
+        "owner": "short_news_r_h3",
+        "peak_px": 583.8800048828125,
+        "reason": "news\ud83d\udd34; gate news=bad; list ohlc_hot; ret5=+8.5; combo leftover $2401.84; owner short_news_r_h3",
+        "shares": 4,
+        "side": "short",
+        "ticker": "AMD"
+      },
+      "BAND": {
+        "close_px": 59.130001068115234,
+        "cost": 2.187004655832787,
+        "entry_date": "2026-09-23",
+        "entry_px": 58.0099983215332,
+        "fee_in": 2.187004655832787,
+        "last_px": 58.0099983215332,
+        "notional": 2146.3699378967285,
+        "owner": "short_news_r_h3",
+        "peak_px": 58.0099983215332,
+        "reason": "news\ud83d\udd34; gate news=bad; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+16.6; combo leftover $2201.43; owner short_news_r_h3",
+        "shares": 37,
+        "side": "short",
+        "ticker": "BAND"
+      },
+      "CBRL": {
+        "close_px": 47.52000045776367,
+        "cost": 2903.942981384277,
+        "entry_date": "2026-09-23",
+        "entry_px": 47.56999969482422,
+        "fee_in": 2.173,
+        "last_px": 47.56999969482422,
+        "notional": 2901.7699813842773,
+        "owner": "union_e_fresh_h1",
+        "peak_px": 47.56999969482422,
+        "reason": "union \u2229 e_fresh, no \ud83d\udea8; gate days_since_E_max=1,flag_E_min=0; list earn_react; \ud83d\udd35; ret5=+0.7; combo leftover $2925.69; owner union_e_fresh_h1",
+        "shares": 61,
+        "side": "long",
+        "ticker": "CBRL"
+      },
+      "CTAS": {
+        "close_px": 191.97000122070312,
+        "cost": 2756.9519829101564,
+        "entry_date": "2026-09-23",
+        "entry_px": 196.77999877929688,
+        "fee_in": 2.032,
+        "last_px": 196.77999877929688,
+        "notional": 2754.9199829101562,
+        "owner": "union_e_fresh_h1",
+        "peak_px": 196.77999877929688,
+        "reason": "union \u2229 e_fresh, no \ud83d\udea8; gate days_since_E_max=1,flag_E_min=0; list earn_react; \ud83d\udd35; \u26aa; ret5=-0.1; combo leftover $2925.69; owner union_e_fresh_h1",
+        "shares": 14,
+        "side": "long",
+        "ticker": "CTAS"
+      },
+      "FIVN": {
+        "close_px": 37.68000030517578,
+        "cost": 2.6038986248695686,
+        "entry_date": "2026-09-18",
+        "entry_px": 34.439998626708984,
+        "fee_in": 2.6038986248695686,
+        "last_px": 38.904998779296875,
+        "notional": 4821.599807739258,
+        "owner": "short_news_r_h3",
+        "peak_px": 33.0,
+        "reason": "news\ud83d\udd34; gate news=bad; list flatten; \ud83d\udd35; \u26aa; ret5=+14.0; combo leftover $4845.78; owner short_news_r_h3",
+        "shares": 140,
+        "side": "short",
+        "ticker": "FIVN"
+      },
+      "GIS": {
+        "close_px": 35.81999969482422,
+        "cost": 2897.1731359558107,
+        "entry_date": "2026-09-23",
+        "entry_px": 35.7400016784668,
+        "fee_in": 2.233,
+        "last_px": 35.7400016784668,
+        "notional": 2894.9401359558105,
+        "owner": "union_e_fresh_h1",
+        "peak_px": 35.7400016784668,
+        "reason": "union \u2229 e_fresh, no \ud83d\udea8; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=-3.1; combo leftover $2925.69; owner union_e_fresh_h1",
+        "shares": 81,
+        "side": "long",
+        "ticker": "GIS"
+      },
+      "HALO": {
+        "close_px": 112.44000244140625,
+        "cost": 2.1284246567817586,
+        "entry_date": "2026-09-23",
+        "entry_px": 116.8499984741211,
+        "fee_in": 2.1284246567817586,
+        "last_px": 116.8499984741211,
+        "notional": 2103.2999725341797,
+        "owner": "short_news_r_h3",
+        "peak_px": 116.8499984741211,
+        "reason": "news\ud83d\udd34; gate news=bad; list flatten; \ud83d\udd35; \u26aa; ret5=+8.4; combo leftover $2201.43; owner short_news_r_h3",
+        "shares": 18,
+        "side": "short",
+        "ticker": "HALO"
+      },
+      "KBH": {
+        "close_px": 47.150001525878906,
+        "cost": 2925.476094604492,
+        "entry_date": "2026-09-23",
+        "entry_px": 47.150001525878906,
+        "fee_in": 2.176,
+        "last_px": 47.150001525878906,
+        "notional": 2923.300094604492,
+        "owner": "union_e_fresh_h1",
+        "peak_px": 47.150001525878906,
+        "reason": "union \u2229 e_fresh, no \ud83d\udea8; gate days_since_E_max=1,flag_E_min=0; list earn_react; \ud83d\udd35; ret5=-1.9; combo leftover $2925.69; owner union_e_fresh_h1",
+        "shares": 62,
+        "side": "long",
+        "ticker": "KBH"
+      },
+      "PAYX": {
+        "close_px": 104.48999786376953,
+        "cost": 2.1419027397260275,
+        "entry_date": "2026-09-22",
+        "entry_px": 115.71,
+        "fee_in": 2.1419027397260275,
+        "last_px": 109.66999816894531,
+        "notional": 2314.2,
+        "owner": "short_news_r_h3",
+        "peak_px": 109.66999816894531,
+        "reason": "news\ud83d\udd34; gate news=bad; list overnight; ret5=-3.0; combo leftover $2329.65; owner short_news_r_h3",
+        "shares": 20,
+        "side": "short",
+        "ticker": "PAYX"
+      },
+      "USFD": {
+        "close_px": 93.93000030517578,
+        "cost": 2.1519608219178084,
+        "entry_date": "2026-09-22",
+        "entry_px": 94.08,
+        "fee_in": 2.1519608219178084,
+        "last_px": 93.97000122070312,
+        "notional": 2257.92,
+        "owner": "short_news_r_h3",
+        "peak_px": 93.97000122070312,
+        "reason": "news\ud83d\udd34; gate news=bad; list flatten; ret5=-0.6; combo leftover $2329.65; owner short_news_r_h3",
+        "shares": 24,
+        "side": "short",
+        "ticker": "USFD"
+      }
+    },
+    "yday_equity": 8902.17
+  }
+}

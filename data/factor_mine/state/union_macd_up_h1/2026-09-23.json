@@ -1,0 +1,288 @@
+{
+  "buys": [
+    "DXCM",
+    "A",
+    "ARQT",
+    "PGEN",
+    "ADMA",
+    "FTRE",
+    "INDP",
+    "TNGX"
+  ],
+  "cash": 178.44,
+  "date": "2026-09-23",
+  "equity": 8657.01,
+  "fees": 51.5845,
+  "fills": [
+    {
+      "fees": 2.2944,
+      "pnl": -4.56,
+      "price": 12.24,
+      "shares": 93,
+      "side": "SELL",
+      "ticker": "APPS"
+    },
+    {
+      "fees": 2.019,
+      "pnl": 33.09,
+      "price": 331.78,
+      "shares": 3,
+      "side": "SELL",
+      "ticker": "ARM"
+    },
+    {
+      "fees": 2.154,
+      "pnl": -14.37,
+      "price": 23.3,
+      "shares": 48,
+      "side": "SELL",
+      "ticker": "ARQQ"
+    },
+    {
+      "fees": 5.2625,
+      "pnl": -26.53,
+      "price": 2.8,
+      "shares": 402,
+      "side": "SELL",
+      "ticker": "BTQ"
+    },
+    {
+      "fees": 2.04,
+      "pnl": 13.64,
+      "price": 108.52,
+      "shares": 10,
+      "side": "SELL",
+      "ticker": "GRAL"
+    },
+    {
+      "fees": 14.3479,
+      "pnl": -96.87,
+      "price": 0.95,
+      "shares": 1132,
+      "side": "SELL",
+      "ticker": "IVVD"
+    },
+    {
+      "fees": 2.5002,
+      "pnl": -68.16,
+      "price": 6.83,
+      "shares": 158,
+      "side": "SELL",
+      "ticker": "NUAI"
+    },
+    {
+      "fees": 2.124,
+      "pnl": -14.49,
+      "price": 29.51,
+      "shares": 38,
+      "side": "SELL",
+      "ticker": "TDC"
+    },
+    {
+      "fees": 2.026,
+      "pnl": null,
+      "price": 89.5,
+      "shares": 12,
+      "side": "BUY",
+      "ticker": "DXCM"
+    },
+    {
+      "fees": 2.008,
+      "pnl": null,
+      "price": 166.54,
+      "shares": 6,
+      "side": "BUY",
+      "ticker": "A"
+    },
+    {
+      "fees": 2.11,
+      "pnl": null,
+      "price": 27.79,
+      "shares": 40,
+      "side": "BUY",
+      "ticker": "ARQT"
+    },
+    {
+      "fees": 2.413,
+      "pnl": null,
+      "price": 7.95,
+      "shares": 141,
+      "side": "BUY",
+      "ticker": "PGEN"
+    },
+    {
+      "fees": 2.332,
+      "pnl": null,
+      "price": 9.81,
+      "shares": 114,
+      "side": "BUY",
+      "ticker": "ADMA"
+    },
+    {
+      "fees": 2.155,
+      "pnl": null,
+      "price": 20.25,
+      "shares": 55,
+      "side": "BUY",
+      "ticker": "FTRE"
+    },
+    {
+      "fees": 3.6765,
+      "pnl": null,
+      "price": 3.93,
+      "shares": 285,
+      "side": "BUY",
+      "ticker": "INDP"
+    },
+    {
+      "fees": 2.122,
+      "pnl": null,
+      "price": 25.4,
+      "shares": 44,
+      "side": "BUY",
+      "ticker": "TNGX"
+    }
+  ],
+  "holdings": [
+    "A",
+    "ADMA",
+    "ARQT",
+    "DXCM",
+    "FTRE",
+    "INDP",
+    "PGEN",
+    "TNGX"
+  ],
+  "mean": -3.5903,
+  "n_trades_today": 16,
+  "recipe": "union_macd_up_h1",
+  "sells": [
+    "APPS",
+    "ARM",
+    "ARQQ",
+    "BTQ",
+    "GRAL",
+    "IVVD",
+    "NUAI",
+    "TDC"
+  ],
+  "state": {
+    "after": "2026-09-23",
+    "cash": 178.44,
+    "pos": {
+      "A": {
+        "close_px": 165.32000732421875,
+        "cost": 1001.2479597167969,
+        "entry_date": "2026-09-23",
+        "entry_px": 166.5399932861328,
+        "fee_in": 2.008,
+        "last_px": 166.5399932861328,
+        "min_hold": 1,
+        "notional": 999.2399597167969,
+        "peak_px": 166.5399932861328,
+        "reason": "union \u2229 macd_up, no \ud83d\udea8; gate macd_up=True; list flatten; \ud83d\udd35; \u26aa; ret5=+11.3; leftover $1121.60",
+        "shares": 6,
+        "ticker": "A"
+      },
+      "ADMA": {
+        "close_px": 9.699999809265137,
+        "cost": 1120.6720478363038,
+        "entry_date": "2026-09-23",
+        "entry_px": 9.8100004196167,
+        "fee_in": 2.332,
+        "last_px": 9.8100004196167,
+        "min_hold": 1,
+        "notional": 1118.3400478363037,
+        "peak_px": 9.8100004196167,
+        "reason": "union \u2229 macd_up, no \ud83d\udea8; gate macd_up=True; list flatten; \ud83d\udd35; \u26aa; ret5=+13.9; leftover $1121.60",
+        "shares": 114,
+        "ticker": "ADMA"
+      },
+      "ARQT": {
+        "close_px": 26.3799991607666,
+        "cost": 1113.7100366210936,
+        "entry_date": "2026-09-23",
+        "entry_px": 27.790000915527344,
+        "fee_in": 2.11,
+        "last_px": 27.790000915527344,
+        "min_hold": 1,
+        "notional": 1111.6000366210938,
+        "peak_px": 27.790000915527344,
+        "reason": "union \u2229 macd_up, no \ud83d\udea8; gate macd_up=True; list flatten; \ud83d\udd35; \u26aa; ret5=+18.2; leftover $1121.60",
+        "shares": 40,
+        "ticker": "ARQT"
+      },
+      "DXCM": {
+        "close_px": 87.7300033569336,
+        "cost": 1076.026,
+        "entry_date": "2026-09-23",
+        "entry_px": 89.5,
+        "fee_in": 2.026,
+        "last_px": 89.5,
+        "min_hold": 1,
+        "notional": 1074.0,
+        "peak_px": 89.5,
+        "reason": "union \u2229 macd_up, no \ud83d\udea8; gate macd_up=True; list flatten; \ud83d\udd35; \u26aa; ret5=+3.6; leftover $1121.60",
+        "shares": 12,
+        "ticker": "DXCM"
+      },
+      "FTRE": {
+        "close_px": 19.520000457763672,
+        "cost": 1115.905,
+        "entry_date": "2026-09-23",
+        "entry_px": 20.25,
+        "fee_in": 2.155,
+        "last_px": 20.25,
+        "min_hold": 1,
+        "notional": 1113.75,
+        "peak_px": 20.25,
+        "reason": "union \u2229 macd_up, no \ud83d\udea8; gate macd_up=True; list flatten; \ud83d\udd35; \u26aa; ret5=+3.5; leftover $1121.60",
+        "shares": 55,
+        "ticker": "FTRE"
+      },
+      "INDP": {
+        "close_px": 3.7699999809265137,
+        "cost": 1123.7265190258026,
+        "entry_date": "2026-09-23",
+        "entry_px": 3.930000066757202,
+        "fee_in": 3.6765,
+        "last_px": 3.930000066757202,
+        "min_hold": 1,
+        "notional": 1120.0500190258026,
+        "peak_px": 3.930000066757202,
+        "reason": "union \u2229 macd_up, no \ud83d\udea8; gate macd_up=True; list probable,yday_gainer,yday_mover,ohlc_hot; \ud83d\udd35; ret5=+9.6; leftover $1121.60",
+        "shares": 285,
+        "ticker": "INDP"
+      },
+      "PGEN": {
+        "close_px": 7.440000057220459,
+        "cost": 1123.3629731063843,
+        "entry_date": "2026-09-23",
+        "entry_px": 7.949999809265137,
+        "fee_in": 2.413,
+        "last_px": 7.949999809265137,
+        "min_hold": 1,
+        "notional": 1120.9499731063843,
+        "peak_px": 7.949999809265137,
+        "reason": "union \u2229 macd_up, no \ud83d\udea8; gate macd_up=True; list flatten; \ud83d\udd35; \u26aa; ret5=+12.7; leftover $1121.60",
+        "shares": 141,
+        "ticker": "PGEN"
+      },
+      "TNGX": {
+        "close_px": 24.450000762939453,
+        "cost": 1119.721983215332,
+        "entry_date": "2026-09-23",
+        "entry_px": 25.399999618530273,
+        "fee_in": 2.122,
+        "last_px": 25.399999618530273,
+        "min_hold": 1,
+        "notional": 1117.599983215332,
+        "peak_px": 25.399999618530273,
+        "reason": "union \u2229 macd_up, no \ud83d\udea8; gate macd_up=True; list probable,yday_gainer,yday_mover; \ud83d\udd35; ret5=+6.9; leftover $1121.60",
+        "shares": 44,
+        "ticker": "TNGX"
+      }
+    },
+    "yday_equity": 8657.01
+  }
+}

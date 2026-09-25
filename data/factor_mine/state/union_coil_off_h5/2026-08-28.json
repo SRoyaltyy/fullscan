@@ -1,0 +1,215 @@
+{
+  "buys": [
+    "CRK",
+    "GRRR",
+    "TTMI",
+    "EQ",
+    "BTSG",
+    "CRDL",
+    "ZYME",
+    "FIGR"
+  ],
+  "cash": 74.95,
+  "date": "2026-08-28",
+  "equity": 9592.11,
+  "fees": 27.1206,
+  "fills": [
+    {
+      "fees": 2.245,
+      "pnl": null,
+      "price": 14.63,
+      "shares": 85,
+      "side": "BUY",
+      "ticker": "CRK"
+    },
+    {
+      "fees": 2.227,
+      "pnl": null,
+      "price": 15.66,
+      "shares": 79,
+      "side": "BUY",
+      "ticker": "GRRR"
+    },
+    {
+      "fees": 2.02,
+      "pnl": null,
+      "price": 122.81,
+      "shares": 10,
+      "side": "BUY",
+      "ticker": "TTMI"
+    },
+    {
+      "fees": 6.5532,
+      "pnl": null,
+      "price": 2.46,
+      "shares": 508,
+      "side": "BUY",
+      "ticker": "EQ"
+    },
+    {
+      "fees": 2.05,
+      "pnl": null,
+      "price": 60.54,
+      "shares": 20,
+      "side": "BUY",
+      "ticker": "BTSG"
+    },
+    {
+      "fees": 7.8174,
+      "pnl": null,
+      "price": 2.06,
+      "shares": 606,
+      "side": "BUY",
+      "ticker": "CRDL"
+    },
+    {
+      "fees": 2.119,
+      "pnl": null,
+      "price": 28.91,
+      "shares": 43,
+      "side": "BUY",
+      "ticker": "ZYME"
+    },
+    {
+      "fees": 2.089,
+      "pnl": null,
+      "price": 37.49,
+      "shares": 33,
+      "side": "BUY",
+      "ticker": "FIGR"
+    }
+  ],
+  "holdings": [
+    "BTSG",
+    "CRDL",
+    "CRK",
+    "EQ",
+    "FIGR",
+    "GRRR",
+    "TTMI",
+    "ZYME"
+  ],
+  "mean": -4.0789,
+  "n_trades_today": 8,
+  "recipe": "union_coil_off_h5",
+  "sells": [],
+  "state": {
+    "after": "2026-08-28",
+    "cash": 74.95,
+    "pos": {
+      "BTSG": {
+        "close_px": 59.130001068115234,
+        "cost": 1212.8500183105468,
+        "entry_date": "2026-08-28",
+        "entry_px": 60.540000915527344,
+        "fee_in": 2.05,
+        "last_px": 60.540000915527344,
+        "min_hold": 5,
+        "notional": 1210.8000183105469,
+        "peak_px": 60.540000915527344,
+        "reason": "union \u2229 coil_off hold 5, no \ud83d\udea8; gate ret_5_min=0.0,ret_5_max=10.0,rvol_min=0.7,rvol_max=2.2; list yday_gainer; ret5=+2.3; leftover $1250.00",
+        "shares": 20,
+        "ticker": "BTSG"
+      },
+      "CRDL": {
+        "close_px": 1.940000057220459,
+        "cost": 1256.1773653244018,
+        "entry_date": "2026-08-28",
+        "entry_px": 2.059999942779541,
+        "fee_in": 7.8174,
+        "last_px": 2.059999942779541,
+        "min_hold": 5,
+        "notional": 1248.3599653244019,
+        "peak_px": 2.059999942779541,
+        "reason": "union \u2229 coil_off hold 5, no \ud83d\udea8; gate ret_5_min=0.0,ret_5_max=10.0,rvol_min=0.7,rvol_max=2.2; list yday_gainer; ret5=+9.3; leftover $1250.00",
+        "shares": 606,
+        "ticker": "CRDL"
+      },
+      "CRK": {
+        "close_px": 14.289999961853027,
+        "cost": 1245.795009727478,
+        "entry_date": "2026-08-28",
+        "entry_px": 14.630000114440918,
+        "fee_in": 2.245,
+        "last_px": 14.630000114440918,
+        "min_hold": 5,
+        "notional": 1243.550009727478,
+        "peak_px": 14.630000114440918,
+        "reason": "union \u2229 coil_off hold 5, no \ud83d\udea8; gate ret_5_min=0.0,ret_5_max=10.0,rvol_min=0.7,rvol_max=2.2; list flatten; ret5=+5.8; leftover $1250.00",
+        "shares": 85,
+        "ticker": "CRK"
+      },
+      "EQ": {
+        "close_px": 2.390000104904175,
+        "cost": 1256.2332193786622,
+        "entry_date": "2026-08-28",
+        "entry_px": 2.4600000381469727,
+        "fee_in": 6.5532,
+        "last_px": 2.4600000381469727,
+        "min_hold": 5,
+        "notional": 1249.680019378662,
+        "peak_px": 2.4600000381469727,
+        "reason": "union \u2229 coil_off hold 5, no \ud83d\udea8; gate ret_5_min=0.0,ret_5_max=10.0,rvol_min=0.7,rvol_max=2.2; list yday_gainer; ret5=+7.9; leftover $1250.00",
+        "shares": 508,
+        "ticker": "EQ"
+      },
+      "FIGR": {
+        "close_px": 36.04999923706055,
+        "cost": 1239.2590553894042,
+        "entry_date": "2026-08-28",
+        "entry_px": 37.4900016784668,
+        "fee_in": 2.089,
+        "last_px": 37.4900016784668,
+        "min_hold": 5,
+        "notional": 1237.1700553894043,
+        "peak_px": 37.4900016784668,
+        "reason": "union \u2229 coil_off hold 5, no \ud83d\udea8; gate ret_5_min=0.0,ret_5_max=10.0,rvol_min=0.7,rvol_max=2.2; list yday_mover; ret5=+5.4; leftover $1250.00",
+        "shares": 33,
+        "ticker": "FIGR"
+      },
+      "GRRR": {
+        "close_px": 14.40999984741211,
+        "cost": 1239.3669879455567,
+        "entry_date": "2026-08-28",
+        "entry_px": 15.65999984741211,
+        "fee_in": 2.227,
+        "last_px": 15.65999984741211,
+        "min_hold": 5,
+        "notional": 1237.1399879455566,
+        "peak_px": 15.65999984741211,
+        "reason": "union \u2229 coil_off hold 5, no \ud83d\udea8; gate ret_5_min=0.0,ret_5_max=10.0,rvol_min=0.7,rvol_max=2.2; list probable,yday_gainer,yday_mover; \ud83d\udd35; ret5=+2.7; leftover $1250.00",
+        "shares": 79,
+        "ticker": "GRRR"
+      },
+      "TTMI": {
+        "close_px": 118.6500015258789,
+        "cost": 1230.1199755859375,
+        "entry_date": "2026-08-28",
+        "entry_px": 122.80999755859375,
+        "fee_in": 2.02,
+        "last_px": 122.80999755859375,
+        "min_hold": 5,
+        "notional": 1228.0999755859375,
+        "peak_px": 122.80999755859375,
+        "reason": "union \u2229 coil_off hold 5, no \ud83d\udea8; gate ret_5_min=0.0,ret_5_max=10.0,rvol_min=0.7,rvol_max=2.2; list yday_gainer,mover_buy; \ud83d\udd35; \u26aa; ret5=+9.0; leftover $1250.00",
+        "shares": 10,
+        "ticker": "TTMI"
+      },
+      "ZYME": {
+        "close_px": 28.270000457763672,
+        "cost": 1245.2489934387206,
+        "entry_date": "2026-08-28",
+        "entry_px": 28.90999984741211,
+        "fee_in": 2.119,
+        "last_px": 28.90999984741211,
+        "min_hold": 5,
+        "notional": 1243.1299934387207,
+        "peak_px": 28.90999984741211,
+        "reason": "union \u2229 coil_off hold 5, no \ud83d\udea8; gate ret_5_min=0.0,ret_5_max=10.0,rvol_min=0.7,rvol_max=2.2; list yday_gainer; ret5=+9.2; leftover $1250.00",
+        "shares": 43,
+        "ticker": "ZYME"
+      }
+    },
+    "yday_equity": 9592.11
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "buys": [],
+  "cash": 7961.57,
+  "date": "2026-09-24",
+  "equity": 7961.57,
+  "fees": 10.7647,
+  "fills": [
+    {
+      "fees": 7.1531,
+      "pnl": -330.28,
+      "price": 7.37,
+      "shares": 545,
+      "side": "SELL",
+      "ticker": "PGEN"
+    },
+    {
+      "fees": 3.6116,
+      "pnl": -374.31,
+      "price": 14.38,
+      "shares": 274,
+      "side": "SELL",
+      "ticker": "SGRY"
+    }
+  ],
+  "holdings": [],
+  "mean": -1.2189,
+  "n_trades_today": 2,
+  "recipe": "union_news_g_cam61_h1",
+  "sells": [
+    "PGEN",
+    "SGRY"
+  ],
+  "state": {
+    "after": "2026-09-24",
+    "cash": 7961.57,
+    "pos": {},
+    "yday_equity": 7961.57
+  }
+}

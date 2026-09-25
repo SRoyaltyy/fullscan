@@ -1,0 +1,282 @@
+{
+  "buys": [
+    "BBNX",
+    "EMAT",
+    "IOVA",
+    "CPRI",
+    "IQ",
+    "TWST"
+  ],
+  "cash": 86.24,
+  "date": "2026-09-17",
+  "equity": 10420.45,
+  "fees": 14.5314,
+  "fills": [
+    {
+      "fees": 2.049,
+      "pnl": 28.29,
+      "price": 86.76,
+      "shares": 13,
+      "side": "SELL",
+      "ticker": "SWKS"
+    },
+    {
+      "fees": 2.02,
+      "pnl": null,
+      "price": 22.46,
+      "shares": 10,
+      "side": "BUY",
+      "ticker": "BBNX"
+    },
+    {
+      "fees": 2.164,
+      "pnl": null,
+      "price": 3.86,
+      "shares": 58,
+      "side": "BUY",
+      "ticker": "EMAT"
+    },
+    {
+      "fees": 2.053,
+      "pnl": null,
+      "price": 10.25,
+      "shares": 21,
+      "side": "BUY",
+      "ticker": "IOVA"
+    },
+    {
+      "fees": 2.032,
+      "pnl": null,
+      "price": 15.01,
+      "shares": 14,
+      "side": "BUY",
+      "ticker": "CPRI"
+    },
+    {
+      "fees": 2.6961,
+      "pnl": null,
+      "price": 1.07,
+      "shares": 209,
+      "side": "BUY",
+      "ticker": "IQ"
+    },
+    {
+      "fees": 1.5173,
+      "pnl": null,
+      "price": 151.43,
+      "shares": 1,
+      "side": "BUY",
+      "ticker": "TWST"
+    }
+  ],
+  "holdings": [
+    "BBNX",
+    "CAI",
+    "CPRI",
+    "CRWD",
+    "EMAT",
+    "FTRE",
+    "HLP",
+    "INDP",
+    "IOVA",
+    "IQ",
+    "NAT",
+    "SDGR",
+    "TWST"
+  ],
+  "mean": 7.7824,
+  "n_trades_today": 7,
+  "recipe": "union_ret_5_h3",
+  "sells": [
+    "SWKS"
+  ],
+  "state": {
+    "after": "2026-09-17",
+    "cash": 86.24,
+    "pos": {
+      "BBNX": {
+        "close_px": 21.43000030517578,
+        "cost": 226.61999084472657,
+        "entry_date": "2026-09-17",
+        "entry_px": 22.459999084472656,
+        "fee_in": 2.02,
+        "last_px": 22.459999084472656,
+        "min_hold": 3,
+        "notional": 224.59999084472656,
+        "peak_px": 22.459999084472656,
+        "reason": "rank by ret_5; rank ret_5; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+27.3; leftover $224.61",
+        "shares": 10,
+        "ticker": "BBNX"
+      },
+      "CAI": {
+        "close_px": 30.920000076293945,
+        "cost": 1156.6729937438965,
+        "entry_date": "2026-09-16",
+        "entry_px": 28.15999984741211,
+        "fee_in": 2.113,
+        "last_px": 28.594999313354492,
+        "min_hold": 3,
+        "notional": 1154.5599937438965,
+        "peak_px": 28.594999313354492,
+        "reason": "rank by ret_5; rank ret_5; list yday_gainer,ohlc_hot; \u26aa; ret5=+14.8; leftover $1167.61",
+        "shares": 41,
+        "ticker": "CAI"
+      },
+      "CPRI": {
+        "close_px": 14.949999809265137,
+        "cost": 212.1720032043457,
+        "entry_date": "2026-09-17",
+        "entry_px": 15.010000228881836,
+        "fee_in": 2.032,
+        "last_px": 15.010000228881836,
+        "min_hold": 3,
+        "notional": 210.1400032043457,
+        "peak_px": 15.010000228881836,
+        "reason": "rank by ret_5; rank ret_5; list ohlc_hot; \ud83d\udd35; ret5=+15.9; leftover $224.61",
+        "shares": 14,
+        "ticker": "CPRI"
+      },
+      "CRWD": {
+        "close_px": 245.6999969482422,
+        "cost": 949.6819926757812,
+        "entry_date": "2026-09-16",
+        "entry_px": 236.9199981689453,
+        "fee_in": 2.002,
+        "last_px": 236.0399932861328,
+        "min_hold": 3,
+        "notional": 947.6799926757812,
+        "peak_px": 236.9199981689453,
+        "reason": "rank by ret_5; rank ret_5; list ohlc_hot; \u26aa; ret5=+15.5; leftover $1167.61",
+        "shares": 4,
+        "ticker": "CRWD"
+      },
+      "EMAT": {
+        "close_px": 4.019999980926514,
+        "cost": 226.04399391555785,
+        "entry_date": "2026-09-17",
+        "entry_px": 3.859999895095825,
+        "fee_in": 2.164,
+        "last_px": 3.859999895095825,
+        "min_hold": 3,
+        "notional": 223.87999391555786,
+        "peak_px": 3.859999895095825,
+        "reason": "rank by ret_5; rank ret_5; list yday_gainer,yday_mover; ret5=+18.7; leftover $224.61",
+        "shares": 58,
+        "ticker": "EMAT"
+      },
+      "FTRE": {
+        "close_px": 20.280000686645508,
+        "cost": 1167.417,
+        "entry_date": "2026-09-16",
+        "entry_px": 19.75,
+        "fee_in": 2.167,
+        "last_px": 20.309999465942383,
+        "min_hold": 3,
+        "notional": 1165.25,
+        "peak_px": 20.309999465942383,
+        "reason": "rank by ret_5; rank ret_5; list yday_gainer,yday_mover,ohlc_hot; \ud83d\udd35; ret5=+15.7; leftover $1167.61",
+        "shares": 59,
+        "ticker": "FTRE"
+      },
+      "HLP": {
+        "close_px": 2.0199999809265137,
+        "cost": 1174.7591691009522,
+        "entry_date": "2026-09-16",
+        "entry_px": 1.7999999523162842,
+        "fee_in": 8.3592,
+        "last_px": 2.0999999046325684,
+        "min_hold": 3,
+        "notional": 1166.3999691009521,
+        "peak_px": 2.0999999046325684,
+        "reason": "rank by ret_5; rank ret_5; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+30.5; leftover $1167.61",
+        "shares": 648,
+        "ticker": "HLP"
+      },
+      "INDP": {
+        "close_px": 3.930000066757202,
+        "cost": 1109.5761195026398,
+        "entry_date": "2026-09-11",
+        "entry_px": 2.700000047683716,
+        "fee_in": 5.2761,
+        "last_px": 3.299999952316284,
+        "min_hold": 3,
+        "notional": 1104.3000195026398,
+        "peak_px": 3.6600000858306885,
+        "reason": "rank by ret_5; rank ret_5; list yday_gainer,yday_mover; ret5=+120.7; leftover $1104.52",
+        "shares": 409,
+        "ticker": "INDP"
+      },
+      "IOVA": {
+        "close_px": 10.020000457763672,
+        "cost": 217.303,
+        "entry_date": "2026-09-17",
+        "entry_px": 10.25,
+        "fee_in": 2.053,
+        "last_px": 10.25,
+        "min_hold": 3,
+        "notional": 215.25,
+        "peak_px": 10.25,
+        "reason": "rank by ret_5; rank ret_5; list flatten,ohlc_hot; ret5=+17.1; leftover $224.61",
+        "shares": 21,
+        "ticker": "IOVA"
+      },
+      "IQ": {
+        "close_px": 1.100000023841858,
+        "cost": 226.32611096248627,
+        "entry_date": "2026-09-17",
+        "entry_px": 1.0700000524520874,
+        "fee_in": 2.6961,
+        "last_px": 1.0700000524520874,
+        "min_hold": 3,
+        "notional": 223.63001096248627,
+        "peak_px": 1.0700000524520874,
+        "reason": "rank by ret_5; rank ret_5; list yday_gainer,ohlc_hot; \ud83d\udd35; ret5=+15.8; leftover $224.61",
+        "shares": 209,
+        "ticker": "IQ"
+      },
+      "NAT": {
+        "close_px": 8.149999618530273,
+        "cost": 1168.6740169372558,
+        "entry_date": "2026-09-16",
+        "entry_px": 7.880000114440918,
+        "fee_in": 2.434,
+        "last_px": 8.020000457763672,
+        "min_hold": 3,
+        "notional": 1166.2400169372559,
+        "peak_px": 8.020000457763672,
+        "reason": "rank by ret_5; rank ret_5; list ohlc_hot; ret5=+14.2; leftover $1167.61",
+        "shares": 148,
+        "ticker": "NAT"
+      },
+      "SDGR": {
+        "close_px": 30.239999771118164,
+        "cost": 1166.6400457763673,
+        "entry_date": "2026-09-16",
+        "entry_px": 23.290000915527344,
+        "fee_in": 2.14,
+        "last_px": 24.09000015258789,
+        "min_hold": 3,
+        "notional": 1164.5000457763672,
+        "peak_px": 24.09000015258789,
+        "reason": "rank by ret_5; rank ret_5; list yday_gainer; \ud83d\udd35; \u26aa; ret5=+16.1; leftover $1167.61",
+        "shares": 50,
+        "ticker": "SDGR"
+      },
+      "TWST": {
+        "close_px": 155.55999755859375,
+        "cost": 152.94729267578126,
+        "entry_date": "2026-09-17",
+        "entry_px": 151.42999267578125,
+        "fee_in": 1.5173,
+        "last_px": 151.42999267578125,
+        "min_hold": 3,
+        "notional": 151.42999267578125,
+        "peak_px": 151.42999267578125,
+        "reason": "rank by ret_5; rank ret_5; list flatten,ohlc_hot; ret5=+14.0; leftover $224.61",
+        "shares": 1,
+        "ticker": "TWST"
+      }
+    },
+    "yday_equity": 10420.45
+  }
+}

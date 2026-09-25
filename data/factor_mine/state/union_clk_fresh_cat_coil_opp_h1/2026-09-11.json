@@ -1,0 +1,215 @@
+{
+  "buys": [
+    "PBR",
+    "INTR",
+    "PAYP",
+    "NAT",
+    "BAND",
+    "RDDT",
+    "GTE",
+    "FUBO"
+  ],
+  "cash": 147.12,
+  "date": "2026-09-11",
+  "equity": 9924.24,
+  "fees": 18.2938,
+  "fills": [
+    {
+      "fees": 2.161,
+      "pnl": null,
+      "price": 21.21,
+      "shares": 57,
+      "side": "BUY",
+      "ticker": "PBR"
+    },
+    {
+      "fees": 2.7348,
+      "pnl": null,
+      "price": 5.78,
+      "shares": 212,
+      "side": "BUY",
+      "ticker": "INTR"
+    },
+    {
+      "fees": 2.191,
+      "pnl": null,
+      "price": 18.3,
+      "shares": 67,
+      "side": "BUY",
+      "ticker": "PAYP"
+    },
+    {
+      "fees": 2.5,
+      "pnl": null,
+      "price": 7.19,
+      "shares": 170,
+      "side": "BUY",
+      "ticker": "NAT"
+    },
+    {
+      "fees": 2.059,
+      "pnl": null,
+      "price": 52.55,
+      "shares": 23,
+      "side": "BUY",
+      "ticker": "BAND"
+    },
+    {
+      "fees": 2.011,
+      "pnl": null,
+      "price": 157.55,
+      "shares": 7,
+      "side": "BUY",
+      "ticker": "RDDT"
+    },
+    {
+      "fees": 2.329,
+      "pnl": null,
+      "price": 10.84,
+      "shares": 113,
+      "side": "BUY",
+      "ticker": "GTE"
+    },
+    {
+      "fees": 2.308,
+      "pnl": null,
+      "price": 11.55,
+      "shares": 106,
+      "side": "BUY",
+      "ticker": "FUBO"
+    }
+  ],
+  "holdings": [
+    "BAND",
+    "FUBO",
+    "GTE",
+    "INTR",
+    "NAT",
+    "PAYP",
+    "PBR",
+    "RDDT"
+  ],
+  "mean": 1.1763,
+  "n_trades_today": 8,
+  "recipe": "union_clk_fresh_cat_coil_opp_h1",
+  "sells": [],
+  "state": {
+    "after": "2026-09-11",
+    "cash": 147.12,
+    "pos": {
+      "BAND": {
+        "close_px": 56.869998931884766,
+        "cost": 1210.7089824523925,
+        "entry_date": "2026-09-11",
+        "entry_px": 52.54999923706055,
+        "fee_in": 2.059,
+        "last_px": 52.54999923706055,
+        "min_hold": 1,
+        "notional": 1208.6499824523926,
+        "peak_px": 52.54999923706055,
+        "reason": "Clock-B #2 \u2229 Theme Radar T\u22121 oppset; gate clk_fresh_cat_coil=True,oppset=True; rank opp_rvol; list probable,yday_gainer; \ud83d\udd35; \u26aa; ret5=+9.6; leftover $1226.11",
+        "shares": 23,
+        "ticker": "BAND"
+      },
+      "FUBO": {
+        "close_px": 11.529999732971191,
+        "cost": 1226.6080202178955,
+        "entry_date": "2026-09-11",
+        "entry_px": 11.550000190734863,
+        "fee_in": 2.308,
+        "last_px": 11.550000190734863,
+        "min_hold": 1,
+        "notional": 1224.3000202178955,
+        "peak_px": 11.550000190734863,
+        "reason": "Clock-B #2 \u2229 Theme Radar T\u22121 oppset; gate clk_fresh_cat_coil=True,oppset=True; rank opp_rvol; list probable,yday_gainer; ret5=-1.6; leftover $1226.11",
+        "shares": 106,
+        "ticker": "FUBO"
+      },
+      "GTE": {
+        "close_px": 10.789999961853027,
+        "cost": 1227.2490172424316,
+        "entry_date": "2026-09-11",
+        "entry_px": 10.84000015258789,
+        "fee_in": 2.329,
+        "last_px": 10.84000015258789,
+        "min_hold": 1,
+        "notional": 1224.9200172424316,
+        "peak_px": 10.84000015258789,
+        "reason": "Clock-B #2 \u2229 Theme Radar T\u22121 oppset; gate clk_fresh_cat_coil=True,oppset=True; rank opp_rvol; list ohlc_hot; ret5=+8.9; leftover $1226.11",
+        "shares": 113,
+        "ticker": "GTE"
+      },
+      "INTR": {
+        "close_px": 5.710000038146973,
+        "cost": 1228.09484447937,
+        "entry_date": "2026-09-11",
+        "entry_px": 5.78000020980835,
+        "fee_in": 2.7348,
+        "last_px": 5.78000020980835,
+        "min_hold": 1,
+        "notional": 1225.3600444793701,
+        "peak_px": 5.78000020980835,
+        "reason": "Clock-B #2 \u2229 Theme Radar T\u22121 oppset; gate clk_fresh_cat_coil=True,oppset=True; rank opp_rvol; list probable,yday_gainer; \ud83d\udd35; ret5=-0.3; leftover $1226.11",
+        "shares": 212,
+        "ticker": "INTR"
+      },
+      "NAT": {
+        "close_px": 7.460000038146973,
+        "cost": 1224.800009727478,
+        "entry_date": "2026-09-11",
+        "entry_px": 7.190000057220459,
+        "fee_in": 2.5,
+        "last_px": 7.190000057220459,
+        "min_hold": 1,
+        "notional": 1222.300009727478,
+        "peak_px": 7.190000057220459,
+        "reason": "Clock-B #2 \u2229 Theme Radar T\u22121 oppset; gate clk_fresh_cat_coil=True,oppset=True; rank opp_rvol; list ohlc_hot; ret5=+5.5; leftover $1226.11",
+        "shares": 170,
+        "ticker": "NAT"
+      },
+      "PAYP": {
+        "close_px": 18.450000762939453,
+        "cost": 1228.2909488830567,
+        "entry_date": "2026-09-11",
+        "entry_px": 18.299999237060547,
+        "fee_in": 2.191,
+        "last_px": 18.299999237060547,
+        "min_hold": 1,
+        "notional": 1226.0999488830566,
+        "peak_px": 18.299999237060547,
+        "reason": "Clock-B #2 \u2229 Theme Radar T\u22121 oppset; gate clk_fresh_cat_coil=True,oppset=True; rank opp_rvol; list ohlc_hot; \u26aa; ret5=+7.7; leftover $1226.11",
+        "shares": 67,
+        "ticker": "PAYP"
+      },
+      "PBR": {
+        "close_px": 21.200000762939453,
+        "cost": 1211.1309478149415,
+        "entry_date": "2026-09-11",
+        "entry_px": 21.209999084472656,
+        "fee_in": 2.161,
+        "last_px": 21.209999084472656,
+        "min_hold": 1,
+        "notional": 1208.9699478149414,
+        "peak_px": 21.209999084472656,
+        "reason": "Clock-B #2 \u2229 Theme Radar T\u22121 oppset; gate clk_fresh_cat_coil=True,oppset=True; rank opp_rvol; list ohlc_hot; ret5=+4.2; leftover $1226.11",
+        "shares": 57,
+        "ticker": "PBR"
+      },
+      "RDDT": {
+        "close_px": 157.77000427246094,
+        "cost": 1104.8610213623047,
+        "entry_date": "2026-09-11",
+        "entry_px": 157.5500030517578,
+        "fee_in": 2.011,
+        "last_px": 157.5500030517578,
+        "min_hold": 1,
+        "notional": 1102.8500213623047,
+        "peak_px": 157.5500030517578,
+        "reason": "Clock-B #2 \u2229 Theme Radar T\u22121 oppset; gate clk_fresh_cat_coil=True,oppset=True; rank opp_rvol; list probable,yday_gainer; ret5=-0.4; leftover $1226.11",
+        "shares": 7,
+        "ticker": "RDDT"
+      }
+    },
+    "yday_equity": 9924.24
+  }
+}

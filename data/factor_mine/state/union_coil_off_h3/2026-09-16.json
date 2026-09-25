@@ -1,0 +1,288 @@
+{
+  "buys": [
+    "IQV",
+    "AVAH",
+    "BLFS",
+    "TEM",
+    "RIG",
+    "VAL",
+    "MRCY",
+    "QLYS"
+  ],
+  "cash": 540.94,
+  "date": "2026-09-16",
+  "equity": 8102.79,
+  "fees": 46.7817,
+  "fills": [
+    {
+      "fees": 2.2913,
+      "pnl": -57.92,
+      "price": 11.3,
+      "shares": 92,
+      "side": "SELL",
+      "ticker": "APPS"
+    },
+    {
+      "fees": 6.739,
+      "pnl": -157.58,
+      "price": 1.84,
+      "shares": 515,
+      "side": "SELL",
+      "ticker": "BAK"
+    },
+    {
+      "fees": 2.07,
+      "pnl": -83.12,
+      "price": 48.6,
+      "shares": 20,
+      "side": "SELL",
+      "ticker": "BAND"
+    },
+    {
+      "fees": 10.2015,
+      "pnl": -90.46,
+      "price": 1.31,
+      "shares": 780,
+      "side": "SELL",
+      "ticker": "GPRO"
+    },
+    {
+      "fees": 2.028,
+      "pnl": -63.98,
+      "price": 147.79,
+      "shares": 6,
+      "side": "SELL",
+      "ticker": "NVT"
+    },
+    {
+      "fees": 2.3419,
+      "pnl": -82.42,
+      "price": 9.39,
+      "shares": 108,
+      "side": "SELL",
+      "ticker": "PAGS"
+    },
+    {
+      "fees": 2.184,
+      "pnl": 22.91,
+      "price": 19.03,
+      "shares": 58,
+      "side": "SELL",
+      "ticker": "REAX"
+    },
+    {
+      "fees": 2.052,
+      "pnl": -12.2,
+      "price": 76.75,
+      "shares": 14,
+      "side": "SELL",
+      "ticker": "VIST"
+    },
+    {
+      "fees": 1.999,
+      "pnl": null,
+      "price": 270.89,
+      "shares": 3,
+      "side": "BUY",
+      "ticker": "IQV"
+    },
+    {
+      "fees": 2.203,
+      "pnl": null,
+      "price": 14.31,
+      "shares": 71,
+      "side": "BUY",
+      "ticker": "AVAH"
+    },
+    {
+      "fees": 2.074,
+      "pnl": null,
+      "price": 36.46,
+      "shares": 28,
+      "side": "BUY",
+      "ticker": "BLFS"
+    },
+    {
+      "fees": 2.032,
+      "pnl": null,
+      "price": 68.79,
+      "shares": 14,
+      "side": "BUY",
+      "ticker": "TEM"
+    },
+    {
+      "fees": 2.515,
+      "pnl": null,
+      "price": 5.87,
+      "shares": 175,
+      "side": "BUY",
+      "ticker": "RIG"
+    },
+    {
+      "fees": 2.023,
+      "pnl": null,
+      "price": 87.4,
+      "shares": 11,
+      "side": "BUY",
+      "ticker": "VAL"
+    },
+    {
+      "fees": 2.023,
+      "pnl": null,
+      "price": 87.52,
+      "shares": 11,
+      "side": "BUY",
+      "ticker": "MRCY"
+    },
+    {
+      "fees": 2.005,
+      "pnl": null,
+      "price": 179.6,
+      "shares": 5,
+      "side": "BUY",
+      "ticker": "QLYS"
+    }
+  ],
+  "holdings": [
+    "AVAH",
+    "BLFS",
+    "IQV",
+    "MRCY",
+    "QLYS",
+    "RIG",
+    "TEM",
+    "VAL"
+  ],
+  "mean": -4.4902,
+  "n_trades_today": 16,
+  "recipe": "union_coil_off_h3",
+  "sells": [
+    "APPS",
+    "BAK",
+    "BAND",
+    "GPRO",
+    "NVT",
+    "PAGS",
+    "REAX",
+    "VIST"
+  ],
+  "state": {
+    "after": "2026-09-16",
+    "cash": 540.94,
+    "pos": {
+      "AVAH": {
+        "close_px": 14.260000228881836,
+        "cost": 1018.2130297927856,
+        "entry_date": "2026-09-16",
+        "entry_px": 14.3100004196167,
+        "fee_in": 2.203,
+        "last_px": 14.3100004196167,
+        "min_hold": 3,
+        "notional": 1016.0100297927856,
+        "peak_px": 14.3100004196167,
+        "reason": "union \u2229 coil_off, no \ud83d\udea8; gate ret_5_min=0.0,ret_5_max=10.0,rvol_min=0.7,rvol_max=2.2; list flatten; \u26aa; ret5=+4.8; leftover $1027.48",
+        "shares": 71,
+        "ticker": "AVAH"
+      },
+      "BLFS": {
+        "close_px": 36.11000061035156,
+        "cost": 1022.9539743652343,
+        "entry_date": "2026-09-16",
+        "entry_px": 36.459999084472656,
+        "fee_in": 2.074,
+        "last_px": 36.459999084472656,
+        "min_hold": 3,
+        "notional": 1020.8799743652344,
+        "peak_px": 36.459999084472656,
+        "reason": "union \u2229 coil_off, no \ud83d\udea8; gate ret_5_min=0.0,ret_5_max=10.0,rvol_min=0.7,rvol_max=2.2; list flatten; \ud83d\udd35; \u26aa; ret5=+2.9; leftover $1027.48",
+        "shares": 28,
+        "ticker": "BLFS"
+      },
+      "IQV": {
+        "close_px": 268.82000732421875,
+        "cost": 814.6690439453125,
+        "entry_date": "2026-09-16",
+        "entry_px": 270.8900146484375,
+        "fee_in": 1.999,
+        "last_px": 270.8900146484375,
+        "min_hold": 3,
+        "notional": 812.6700439453125,
+        "peak_px": 270.8900146484375,
+        "reason": "union \u2229 coil_off, no \ud83d\udea8; gate ret_5_min=0.0,ret_5_max=10.0,rvol_min=0.7,rvol_max=2.2; list flatten; \u26aa; ret5=+4.0; leftover $1027.48",
+        "shares": 3,
+        "ticker": "IQV"
+      },
+      "MRCY": {
+        "close_px": 87.25,
+        "cost": 964.7429630737305,
+        "entry_date": "2026-09-16",
+        "entry_px": 87.5199966430664,
+        "fee_in": 2.023,
+        "last_px": 87.5199966430664,
+        "min_hold": 3,
+        "notional": 962.7199630737305,
+        "peak_px": 87.5199966430664,
+        "reason": "union \u2229 coil_off, no \ud83d\udea8; gate ret_5_min=0.0,ret_5_max=10.0,rvol_min=0.7,rvol_max=2.2; list yday_gainer; \ud83d\udd35; ret5=+4.3; leftover $1027.48",
+        "shares": 11,
+        "ticker": "MRCY"
+      },
+      "QLYS": {
+        "close_px": 183.05999755859375,
+        "cost": 900.0050305175781,
+        "entry_date": "2026-09-16",
+        "entry_px": 179.60000610351562,
+        "fee_in": 2.005,
+        "last_px": 179.60000610351562,
+        "min_hold": 3,
+        "notional": 898.0000305175781,
+        "peak_px": 179.60000610351562,
+        "reason": "union \u2229 coil_off, no \ud83d\udea8; gate ret_5_min=0.0,ret_5_max=10.0,rvol_min=0.7,rvol_max=2.2; list yday_gainer; \ud83d\udd35; ret5=+8.8; leftover $1027.48",
+        "shares": 5,
+        "ticker": "QLYS"
+      },
+      "RIG": {
+        "close_px": 5.539999961853027,
+        "cost": 1029.7649799728395,
+        "entry_date": "2026-09-16",
+        "entry_px": 5.869999885559082,
+        "fee_in": 2.515,
+        "last_px": 5.869999885559082,
+        "min_hold": 3,
+        "notional": 1027.2499799728394,
+        "peak_px": 5.869999885559082,
+        "reason": "union \u2229 coil_off, no \ud83d\udea8; gate ret_5_min=0.0,ret_5_max=10.0,rvol_min=0.7,rvol_max=2.2; list probable,yday_gainer; \ud83d\udd35; ret5=+3.1; leftover $1027.48",
+        "shares": 175,
+        "ticker": "RIG"
+      },
+      "TEM": {
+        "close_px": 69.97000122070312,
+        "cost": 965.0920128173829,
+        "entry_date": "2026-09-16",
+        "entry_px": 68.79000091552734,
+        "fee_in": 2.032,
+        "last_px": 68.79000091552734,
+        "min_hold": 3,
+        "notional": 963.0600128173828,
+        "peak_px": 68.79000091552734,
+        "reason": "union \u2229 coil_off, no \ud83d\udea8; gate ret_5_min=0.0,ret_5_max=10.0,rvol_min=0.7,rvol_max=2.2; list probable,yday_gainer; \ud83d\udd35; \u26aa; ret5=+7.1; leftover $1027.48",
+        "shares": 14,
+        "ticker": "TEM"
+      },
+      "VAL": {
+        "close_px": 82.5199966430664,
+        "cost": 963.423016784668,
+        "entry_date": "2026-09-16",
+        "entry_px": 87.4000015258789,
+        "fee_in": 2.023,
+        "last_px": 87.4000015258789,
+        "min_hold": 3,
+        "notional": 961.400016784668,
+        "peak_px": 87.4000015258789,
+        "reason": "union \u2229 coil_off, no \ud83d\udea8; gate ret_5_min=0.0,ret_5_max=10.0,rvol_min=0.7,rvol_max=2.2; list probable,yday_gainer; \ud83d\udd35; ret5=+3.2; leftover $1027.48",
+        "shares": 11,
+        "ticker": "VAL"
+      }
+    },
+    "yday_equity": 8102.79
+  }
+}

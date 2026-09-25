@@ -1,0 +1,63 @@
+{
+  "buys": [],
+  "cash": 15550.47,
+  "date": "2026-09-09",
+  "equity": 10509.88,
+  "fees": 0,
+  "fills": [],
+  "holdings": [
+    "GSM",
+    "OPK",
+    "PIPR"
+  ],
+  "mean": 0.71,
+  "n_trades_today": 0,
+  "recipe": "short_news_r_macd_h3",
+  "sells": [],
+  "state": {
+    "after": "2026-09-09",
+    "cash": 15550.47,
+    "pos": {
+      "GSM": {
+        "close_px": 4.489999771118164,
+        "cost": 4.9087676720083575,
+        "entry_date": "2026-09-04",
+        "entry_px": 4.670000076293945,
+        "fee_in": 4.9087676720083575,
+        "last_px": 4.519999980926514,
+        "notional": 1732.5700283050537,
+        "peak_px": 4.519999980926514,
+        "reason": "short news\ud83d\udd34 \u2229 prior MACD histogram > 0; gate news=bad,macd_up=True; list yday_gainer; ret5=+11.9; leftover $1736.48",
+        "shares": 371,
+        "ticker": "GSM"
+      },
+      "OPK": {
+        "close_px": 1.5399999618530273,
+        "cost": 14.329569316067108,
+        "entry_date": "2026-09-04",
+        "entry_px": 1.590000033378601,
+        "fee_in": 14.329569316067108,
+        "last_px": 1.5800000429153442,
+        "notional": 1736.2800364494324,
+        "peak_px": 1.5800000429153442,
+        "reason": "short news\ud83d\udd34 \u2229 prior MACD histogram > 0; gate news=bad,macd_up=True; list flatten,yday_gainer,mover_buy; \ud83d\udd35; \u26aa; ret5=+7.3; leftover $1736.48",
+        "shares": 1092,
+        "ticker": "OPK"
+      },
+      "PIPR": {
+        "close_px": 76.95999908447266,
+        "cost": 2.1256397278668127,
+        "entry_date": "2026-09-04",
+        "entry_px": 76.55000305175781,
+        "fee_in": 2.1256397278668127,
+        "last_px": 77.23999786376953,
+        "notional": 1684.1000671386719,
+        "peak_px": 76.55000305175781,
+        "reason": "short news\ud83d\udd34 \u2229 prior MACD histogram > 0; gate news=bad,macd_up=True; list mover_buy; \ud83d\udd35; \u26aa; ret5=+4.4; leftover $1736.48",
+        "shares": 22,
+        "ticker": "PIPR"
+      }
+    },
+    "yday_equity": 10509.88
+  }
+}

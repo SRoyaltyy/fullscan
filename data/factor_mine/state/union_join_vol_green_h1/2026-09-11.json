@@ -1,0 +1,215 @@
+{
+  "buys": [
+    "INDP",
+    "WLTH",
+    "BNC",
+    "SWKS",
+    "TYRA",
+    "ASO",
+    "IRD",
+    "COO"
+  ],
+  "cash": 103.68,
+  "date": "2026-09-11",
+  "equity": 9666.16,
+  "fees": 22.2498,
+  "fills": [
+    {
+      "fees": 5.8437,
+      "pnl": null,
+      "price": 2.7,
+      "shares": 453,
+      "side": "BUY",
+      "ticker": "INDP"
+    },
+    {
+      "fees": 2.323,
+      "pnl": null,
+      "price": 10.95,
+      "shares": 111,
+      "side": "BUY",
+      "ticker": "WLTH"
+    },
+    {
+      "fees": 3.2121,
+      "pnl": null,
+      "price": 4.91,
+      "shares": 249,
+      "side": "BUY",
+      "ticker": "BNC"
+    },
+    {
+      "fees": 2.032,
+      "pnl": null,
+      "price": 84.27,
+      "shares": 14,
+      "side": "BUY",
+      "ticker": "SWKS"
+    },
+    {
+      "fees": 2.143,
+      "pnl": null,
+      "price": 23.63,
+      "shares": 51,
+      "side": "BUY",
+      "ticker": "TYRA"
+    },
+    {
+      "fees": 2.056,
+      "pnl": null,
+      "price": 54.91,
+      "shares": 22,
+      "side": "BUY",
+      "ticker": "ASO"
+    },
+    {
+      "fees": 2.584,
+      "pnl": null,
+      "price": 6.16,
+      "shares": 198,
+      "side": "BUY",
+      "ticker": "IRD"
+    },
+    {
+      "fees": 2.056,
+      "pnl": null,
+      "price": 54.66,
+      "shares": 22,
+      "side": "BUY",
+      "ticker": "COO"
+    }
+  ],
+  "holdings": [
+    "ASO",
+    "BNC",
+    "COO",
+    "INDP",
+    "IRD",
+    "SWKS",
+    "TYRA",
+    "WLTH"
+  ],
+  "mean": -1.3879,
+  "n_trades_today": 8,
+  "recipe": "union_join_vol_green_h1",
+  "sells": [],
+  "state": {
+    "after": "2026-09-11",
+    "cash": 103.68,
+    "pos": {
+      "ASO": {
+        "close_px": 55.36000061035156,
+        "cost": 1210.0759966430664,
+        "entry_date": "2026-09-11",
+        "entry_px": 54.90999984741211,
+        "fee_in": 2.056,
+        "last_px": 54.90999984741211,
+        "min_hold": 1,
+        "notional": 1208.0199966430664,
+        "peak_px": 54.90999984741211,
+        "reason": "combo gate; gate join=good,vol=good,last_green=True; list yday_gainer; \ud83d\udd35; ret5=+24.1; leftover $1225.28",
+        "shares": 22,
+        "ticker": "ASO"
+      },
+      "BNC": {
+        "close_px": 4.800000190734863,
+        "cost": 1225.8020620056152,
+        "entry_date": "2026-09-11",
+        "entry_px": 4.909999847412109,
+        "fee_in": 3.2121,
+        "last_px": 4.909999847412109,
+        "min_hold": 1,
+        "notional": 1222.5899620056152,
+        "peak_px": 4.909999847412109,
+        "reason": "combo gate; gate join=good,vol=good,last_green=True; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+76.3; leftover $1225.28",
+        "shares": 249,
+        "ticker": "BNC"
+      },
+      "COO": {
+        "close_px": 53.90999984741211,
+        "cost": 1204.5759966430664,
+        "entry_date": "2026-09-11",
+        "entry_px": 54.65999984741211,
+        "fee_in": 2.056,
+        "last_px": 54.65999984741211,
+        "min_hold": 1,
+        "notional": 1202.5199966430664,
+        "peak_px": 54.65999984741211,
+        "reason": "combo gate; gate join=good,vol=good,last_green=True; list yday_mover; ret5=-23.3; leftover $1225.28",
+        "shares": 22,
+        "ticker": "COO"
+      },
+      "INDP": {
+        "close_px": 2.7699999809265137,
+        "cost": 1228.9437216007232,
+        "entry_date": "2026-09-11",
+        "entry_px": 2.700000047683716,
+        "fee_in": 5.8437,
+        "last_px": 2.700000047683716,
+        "min_hold": 1,
+        "notional": 1223.1000216007233,
+        "peak_px": 2.700000047683716,
+        "reason": "combo gate; gate join=good,vol=good,last_green=True; list yday_gainer,yday_mover; ret5=+120.7; leftover $1225.28",
+        "shares": 453,
+        "ticker": "INDP"
+      },
+      "IRD": {
+        "close_px": 6.039999961853027,
+        "cost": 1222.2639697875977,
+        "entry_date": "2026-09-11",
+        "entry_px": 6.159999847412109,
+        "fee_in": 2.584,
+        "last_px": 6.159999847412109,
+        "min_hold": 1,
+        "notional": 1219.6799697875977,
+        "peak_px": 6.159999847412109,
+        "reason": "combo gate; gate join=good,vol=good,last_green=True; list yday_gainer; ret5=+32.0; leftover $1225.28",
+        "shares": 198,
+        "ticker": "IRD"
+      },
+      "SWKS": {
+        "close_px": 88.3499984741211,
+        "cost": 1181.8119530029296,
+        "entry_date": "2026-09-11",
+        "entry_px": 84.2699966430664,
+        "fee_in": 2.032,
+        "last_px": 84.2699966430664,
+        "min_hold": 1,
+        "notional": 1179.7799530029297,
+        "peak_px": 84.2699966430664,
+        "reason": "combo gate; gate join=good,vol=good,last_green=True; list yday_gainer,ohlc_hot; \u26aa; ret5=+17.5; leftover $1225.28",
+        "shares": 14,
+        "ticker": "SWKS"
+      },
+      "TYRA": {
+        "close_px": 22.030000686645508,
+        "cost": 1207.2729571990967,
+        "entry_date": "2026-09-11",
+        "entry_px": 23.6299991607666,
+        "fee_in": 2.143,
+        "last_px": 23.6299991607666,
+        "min_hold": 1,
+        "notional": 1205.1299571990967,
+        "peak_px": 23.6299991607666,
+        "reason": "combo gate; gate join=good,vol=good,last_green=True; list yday_gainer; ret5=-5.3; leftover $1225.28",
+        "shares": 51,
+        "ticker": "TYRA"
+      },
+      "WLTH": {
+        "close_px": 10.380000114440918,
+        "cost": 1217.7729788284303,
+        "entry_date": "2026-09-11",
+        "entry_px": 10.949999809265137,
+        "fee_in": 2.323,
+        "last_px": 10.949999809265137,
+        "min_hold": 1,
+        "notional": 1215.4499788284302,
+        "peak_px": 10.949999809265137,
+        "reason": "combo gate; gate join=good,vol=good,last_green=True; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+16.6; leftover $1225.28",
+        "shares": 111,
+        "ticker": "WLTH"
+      }
+    },
+    "yday_equity": 9666.16
+  }
+}

@@ -1,0 +1,261 @@
+{
+  "buys": [
+    "USFD",
+    "APPS",
+    "ARHS",
+    "EL",
+    "MLKN",
+    "TDC",
+    "ANAB",
+    "PACS"
+  ],
+  "cash": 174.12,
+  "date": "2026-09-22",
+  "equity": 10072.71,
+  "fees": 27.9405,
+  "fills": [
+    {
+      "fees": 2.043,
+      "pnl": 48.04,
+      "price": 163.08,
+      "shares": 10,
+      "side": "SELL",
+      "ticker": "A"
+    },
+    {
+      "fees": 2.2093,
+      "pnl": -4.39,
+      "price": 25.95,
+      "shares": 65,
+      "side": "SELL",
+      "ticker": "GLXY"
+    },
+    {
+      "fees": 2.0241,
+      "pnl": -35.15,
+      "price": 378.42,
+      "shares": 4,
+      "side": "SELL",
+      "ticker": "HUM"
+    },
+    {
+      "fees": 2.3989,
+      "pnl": -43.51,
+      "price": 13.16,
+      "shares": 125,
+      "side": "SELL",
+      "ticker": "MGTX"
+    },
+    {
+      "fees": 2.0732,
+      "pnl": -26.32,
+      "price": 82.42,
+      "shares": 20,
+      "side": "SELL",
+      "ticker": "MXL"
+    },
+    {
+      "fees": 2.029,
+      "pnl": null,
+      "price": 94.08,
+      "shares": 13,
+      "side": "BUY",
+      "ticker": "USFD"
+    },
+    {
+      "fees": 2.299,
+      "pnl": null,
+      "price": 12.24,
+      "shares": 103,
+      "side": "BUY",
+      "ticker": "APPS"
+    },
+    {
+      "fees": 2.413,
+      "pnl": null,
+      "price": 8.9,
+      "shares": 141,
+      "side": "BUY",
+      "ticker": "ARHS"
+    },
+    {
+      "fees": 2.026,
+      "pnl": null,
+      "price": 98.02,
+      "shares": 12,
+      "side": "BUY",
+      "ticker": "EL"
+    },
+    {
+      "fees": 2.173,
+      "pnl": null,
+      "price": 20.66,
+      "shares": 61,
+      "side": "BUY",
+      "ticker": "MLKN"
+    },
+    {
+      "fees": 2.116,
+      "pnl": null,
+      "price": 29.78,
+      "shares": 42,
+      "side": "BUY",
+      "ticker": "TDC"
+    },
+    {
+      "fees": 2.056,
+      "pnl": null,
+      "price": 55.07,
+      "shares": 22,
+      "side": "BUY",
+      "ticker": "ANAB"
+    },
+    {
+      "fees": 2.08,
+      "pnl": null,
+      "price": 41.93,
+      "shares": 30,
+      "side": "BUY",
+      "ticker": "PACS"
+    }
+  ],
+  "holdings": [
+    "ANAB",
+    "APPS",
+    "ARHS",
+    "EL",
+    "MLKN",
+    "PACS",
+    "TDC",
+    "USFD"
+  ],
+  "mean": -0.8168,
+  "n_trades_today": 13,
+  "recipe": "union_clk_fresh_cat_coil_h1",
+  "sells": [
+    "A",
+    "GLXY",
+    "HUM",
+    "MGTX",
+    "MXL"
+  ],
+  "state": {
+    "after": "2026-09-22",
+    "cash": 174.12,
+    "pos": {
+      "ANAB": {
+        "close_px": 53.92,
+        "cost": 1213.596,
+        "entry_date": "2026-09-22",
+        "entry_px": 55.07,
+        "fee_in": 2.056,
+        "last_px": 55.07,
+        "min_hold": 1,
+        "notional": 1211.54,
+        "peak_px": 55.07,
+        "reason": "Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list earn_react; ret5=+1.5; leftover $1260.83",
+        "shares": 22,
+        "ticker": "ANAB"
+      },
+      "APPS": {
+        "close_px": 12.19,
+        "cost": 1263.019,
+        "entry_date": "2026-09-22",
+        "entry_px": 12.24,
+        "fee_in": 2.299,
+        "last_px": 12.24,
+        "min_hold": 1,
+        "notional": 1260.72,
+        "peak_px": 12.24,
+        "reason": "Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list probable,yday_gainer; ret5=+2.7; leftover $1260.83",
+        "shares": 103,
+        "ticker": "APPS"
+      },
+      "ARHS": {
+        "close_px": 9.29,
+        "cost": 1257.313,
+        "entry_date": "2026-09-22",
+        "entry_px": 8.9,
+        "fee_in": 2.413,
+        "last_px": 8.9,
+        "min_hold": 1,
+        "notional": 1254.9,
+        "peak_px": 8.9,
+        "reason": "Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list probable; \ud83d\udd35; ret5=+7.5; leftover $1260.83",
+        "shares": 141,
+        "ticker": "ARHS"
+      },
+      "EL": {
+        "close_px": 100.29,
+        "cost": 1178.266,
+        "entry_date": "2026-09-22",
+        "entry_px": 98.02,
+        "fee_in": 2.026,
+        "last_px": 98.02,
+        "min_hold": 1,
+        "notional": 1176.24,
+        "peak_px": 98.02,
+        "reason": "Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list flatten; ret5=-1.9; leftover $1260.83",
+        "shares": 12,
+        "ticker": "EL"
+      },
+      "MLKN": {
+        "close_px": 20.29,
+        "cost": 1262.433,
+        "entry_date": "2026-09-22",
+        "entry_px": 20.66,
+        "fee_in": 2.173,
+        "last_px": 20.66,
+        "min_hold": 1,
+        "notional": 1260.26,
+        "peak_px": 20.66,
+        "reason": "Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list earn_react; ret5=-4.4; leftover $1260.83",
+        "shares": 61,
+        "ticker": "MLKN"
+      },
+      "PACS": {
+        "close_px": 41.53,
+        "cost": 1259.98,
+        "entry_date": "2026-09-22",
+        "entry_px": 41.93,
+        "fee_in": 2.08,
+        "last_px": 41.93,
+        "min_hold": 1,
+        "notional": 1257.9,
+        "peak_px": 41.93,
+        "reason": "Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list flatten; ret5=-5.6; leftover $1260.83",
+        "shares": 30,
+        "ticker": "PACS"
+      },
+      "TDC": {
+        "close_px": 29.41,
+        "cost": 1252.876,
+        "entry_date": "2026-09-22",
+        "entry_px": 29.78,
+        "fee_in": 2.116,
+        "last_px": 29.78,
+        "min_hold": 1,
+        "notional": 1250.76,
+        "peak_px": 29.78,
+        "reason": "Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list flatten; ret5=-0.0; leftover $1260.83",
+        "shares": 42,
+        "ticker": "TDC"
+      },
+      "USFD": {
+        "close_px": 94.2,
+        "cost": 1225.069,
+        "entry_date": "2026-09-22",
+        "entry_px": 94.08,
+        "fee_in": 2.029,
+        "last_px": 94.08,
+        "min_hold": 1,
+        "notional": 1223.04,
+        "peak_px": 94.08,
+        "reason": "Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list flatten; ret5=-0.6; leftover $1260.83",
+        "shares": 13,
+        "ticker": "USFD"
+      }
+    },
+    "yday_equity": 10072.71
+  }
+}

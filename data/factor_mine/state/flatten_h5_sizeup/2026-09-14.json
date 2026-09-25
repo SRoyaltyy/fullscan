@@ -1,0 +1,110 @@
+{
+  "buys": [],
+  "cash": 8974.87,
+  "date": "2026-09-14",
+  "equity": 8977.61,
+  "fees": 40.2998,
+  "fills": [
+    {
+      "fees": 6.4385,
+      "pnl": -194.83,
+      "price": 2.15,
+      "shares": 492,
+      "side": "SELL",
+      "ticker": "ALEC"
+    },
+    {
+      "fees": 2.0791,
+      "pnl": 60.49,
+      "price": 54.84,
+      "shares": 23,
+      "side": "SELL",
+      "ticker": "ATRC"
+    },
+    {
+      "fees": 2.5857,
+      "pnl": -149.43,
+      "price": 5.93,
+      "shares": 185,
+      "side": "SELL",
+      "ticker": "BHC"
+    },
+    {
+      "fees": 8.5421,
+      "pnl": -137.77,
+      "price": 1.715,
+      "shares": 653,
+      "side": "SELL",
+      "ticker": "BMEA"
+    },
+    {
+      "fees": 4.7007,
+      "pnl": -274.99,
+      "price": 2.72,
+      "shares": 359,
+      "side": "SELL",
+      "ticker": "CABA"
+    },
+    {
+      "fees": 3.3941,
+      "pnl": -175.09,
+      "price": 4.13,
+      "shares": 259,
+      "side": "SELL",
+      "ticker": "OABI"
+    },
+    {
+      "fees": 10.2145,
+      "pnl": -20.29,
+      "price": 1.59,
+      "shares": 781,
+      "side": "SELL",
+      "ticker": "OPK"
+    },
+    {
+      "fees": 2.3451,
+      "pnl": -67.88,
+      "price": 10.73,
+      "shares": 109,
+      "side": "SELL",
+      "ticker": "VIR"
+    }
+  ],
+  "holdings": [
+    "OVID"
+  ],
+  "mean": 0.0865,
+  "n_trades_today": 8,
+  "recipe": "flatten_h5_sizeup",
+  "sells": [
+    "ALEC",
+    "ATRC",
+    "BHC",
+    "BMEA",
+    "CABA",
+    "OABI",
+    "OPK",
+    "VIR"
+  ],
+  "state": {
+    "after": "2026-09-14",
+    "cash": 8974.87,
+    "pos": {
+      "OVID": {
+        "close_px": 2.740000009536743,
+        "cost": 2.7603000190734863,
+        "entry_date": "2026-09-11",
+        "entry_px": 2.7300000190734863,
+        "fee_in": 0.0303,
+        "last_px": 2.755000114440918,
+        "min_hold": 5,
+        "notional": 2.7300000190734863,
+        "peak_px": 2.755000114440918,
+        "reason": "S\u2265+5: 1.35\u00d7 leftover; list flatten; wish-list (live io HOLD \u2014 not a ticket); ret5=-5.4; leftover $4.06",
+        "shares": 1,
+        "ticker": "OVID"
+      }
+    },
+    "yday_equity": 8977.61
+  }
+}

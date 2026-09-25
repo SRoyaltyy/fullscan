@@ -1,0 +1,215 @@
+{
+  "buys": [
+    "AIIO",
+    "SWBI",
+    "SION",
+    "CRDO",
+    "FCEL",
+    "PL",
+    "MAMA",
+    "UNFI"
+  ],
+  "cash": 77.42,
+  "date": "2026-09-04",
+  "equity": 9420.61,
+  "fees": 24.1357,
+  "fills": [
+    {
+      "fees": 8.6817,
+      "pnl": null,
+      "price": 1.75,
+      "shares": 673,
+      "side": "BUY",
+      "ticker": "AIIO"
+    },
+    {
+      "fees": 2.239,
+      "pnl": null,
+      "price": 14.12,
+      "shares": 83,
+      "side": "BUY",
+      "ticker": "SWBI"
+    },
+    {
+      "fees": 2.518,
+      "pnl": null,
+      "price": 6.68,
+      "shares": 176,
+      "side": "BUY",
+      "ticker": "SION"
+    },
+    {
+      "fees": 2.011,
+      "pnl": null,
+      "price": 162.1,
+      "shares": 7,
+      "side": "BUY",
+      "ticker": "CRDO"
+    },
+    {
+      "fees": 2.233,
+      "pnl": null,
+      "price": 14.52,
+      "shares": 81,
+      "side": "BUY",
+      "ticker": "FCEL"
+    },
+    {
+      "fees": 2.17,
+      "pnl": null,
+      "price": 19.64,
+      "shares": 60,
+      "side": "BUY",
+      "ticker": "PL"
+    },
+    {
+      "fees": 2.215,
+      "pnl": null,
+      "price": 15.7,
+      "shares": 75,
+      "side": "BUY",
+      "ticker": "MAMA"
+    },
+    {
+      "fees": 2.068,
+      "pnl": null,
+      "price": 43.8,
+      "shares": 26,
+      "side": "BUY",
+      "ticker": "UNFI"
+    }
+  ],
+  "holdings": [
+    "AIIO",
+    "CRDO",
+    "FCEL",
+    "MAMA",
+    "PL",
+    "SION",
+    "SWBI",
+    "UNFI"
+  ],
+  "mean": -0.1257,
+  "n_trades_today": 8,
+  "recipe": "union_rsi_h1",
+  "sells": [],
+  "state": {
+    "after": "2026-09-04",
+    "cash": 77.42,
+    "pos": {
+      "AIIO": {
+        "close_px": 1.840000033378601,
+        "cost": 1186.4317,
+        "entry_date": "2026-09-04",
+        "entry_px": 1.75,
+        "fee_in": 8.6817,
+        "last_px": 1.75,
+        "min_hold": 1,
+        "notional": 1177.75,
+        "peak_px": 1.75,
+        "reason": "rank by rsi; rank rsi; list yday_mover; \ud83d\udd35; ret5=-24.6; leftover $1179.06",
+        "shares": 673,
+        "ticker": "AIIO"
+      },
+      "CRDO": {
+        "close_px": 170.57000732421875,
+        "cost": 1136.7110427246093,
+        "entry_date": "2026-09-04",
+        "entry_px": 162.10000610351562,
+        "fee_in": 2.011,
+        "last_px": 162.10000610351562,
+        "min_hold": 1,
+        "notional": 1134.7000427246094,
+        "peak_px": 162.10000610351562,
+        "reason": "rank by rsi; rank rsi; list yday_mover; \ud83d\udd35; ret5=-31.7; leftover $1179.06",
+        "shares": 7,
+        "ticker": "CRDO"
+      },
+      "FCEL": {
+        "close_px": 14.949999809265137,
+        "cost": 1178.3530370788574,
+        "entry_date": "2026-09-04",
+        "entry_px": 14.520000457763672,
+        "fee_in": 2.233,
+        "last_px": 14.520000457763672,
+        "min_hold": 1,
+        "notional": 1176.1200370788574,
+        "peak_px": 14.520000457763672,
+        "reason": "rank by rsi; rank rsi; list yday_mover; ret5=-24.1; leftover $1179.06",
+        "shares": 81,
+        "ticker": "FCEL"
+      },
+      "MAMA": {
+        "close_px": 15.15999984741211,
+        "cost": 1179.7149856948852,
+        "entry_date": "2026-09-04",
+        "entry_px": 15.699999809265137,
+        "fee_in": 2.215,
+        "last_px": 15.699999809265137,
+        "min_hold": 1,
+        "notional": 1177.4999856948853,
+        "peak_px": 15.699999809265137,
+        "reason": "rank by rsi; rank rsi; list earn_react; ret5=-0.4; leftover $1179.06",
+        "shares": 75,
+        "ticker": "MAMA"
+      },
+      "PL": {
+        "close_px": 18.1200008392334,
+        "cost": 1180.5699633789063,
+        "entry_date": "2026-09-04",
+        "entry_px": 19.639999389648438,
+        "fee_in": 2.17,
+        "last_px": 19.639999389648438,
+        "min_hold": 1,
+        "notional": 1178.3999633789062,
+        "peak_px": 19.639999389648438,
+        "reason": "rank by rsi; rank rsi; list earn_react; ret5=-13.3; leftover $1179.06",
+        "shares": 60,
+        "ticker": "PL"
+      },
+      "SION": {
+        "close_px": 7.179999828338623,
+        "cost": 1178.1979697875977,
+        "entry_date": "2026-09-04",
+        "entry_px": 6.679999828338623,
+        "fee_in": 2.518,
+        "last_px": 6.679999828338623,
+        "min_hold": 1,
+        "notional": 1175.6799697875977,
+        "peak_px": 6.679999828338623,
+        "reason": "rank by rsi; rank rsi; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+11.4; leftover $1179.06",
+        "shares": 176,
+        "ticker": "SION"
+      },
+      "SWBI": {
+        "close_px": 12.890000343322754,
+        "cost": 1174.1989905014038,
+        "entry_date": "2026-09-04",
+        "entry_px": 14.119999885559082,
+        "fee_in": 2.239,
+        "last_px": 14.119999885559082,
+        "min_hold": 1,
+        "notional": 1171.9599905014038,
+        "peak_px": 14.119999885559082,
+        "reason": "rank by rsi; rank rsi; list earn_react; ret5=-6.1; leftover $1179.06",
+        "shares": 83,
+        "ticker": "SWBI"
+      },
+      "UNFI": {
+        "close_px": 43.93000030517578,
+        "cost": 1140.8679801635742,
+        "entry_date": "2026-09-04",
+        "entry_px": 43.79999923706055,
+        "fee_in": 2.068,
+        "last_px": 43.79999923706055,
+        "min_hold": 1,
+        "notional": 1138.7999801635742,
+        "peak_px": 43.79999923706055,
+        "reason": "rank by rsi; rank rsi; list overnight; ret5=-7.7; leftover $1179.06",
+        "shares": 26,
+        "ticker": "UNFI"
+      }
+    },
+    "yday_equity": 9420.61
+  }
+}

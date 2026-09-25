@@ -1,0 +1,360 @@
+{
+  "buys": [
+    "GPRO",
+    "ASST",
+    "DFDV",
+    "HOOD",
+    "CABA",
+    "ALEC",
+    "BHC",
+    "BMEA",
+    "OABI",
+    "OPK",
+    "VIR",
+    "ATRC"
+  ],
+  "cash": 37.35,
+  "date": "2026-09-04",
+  "equity": 10156.41,
+  "fees": 54.6782,
+  "fills": [
+    {
+      "fees": 2.2923,
+      "pnl": 29.48,
+      "price": 15.0,
+      "shares": 92,
+      "side": "SELL",
+      "ticker": "CRK"
+    },
+    {
+      "fees": 2.1792,
+      "pnl": 54.46,
+      "price": 25.0,
+      "shares": 56,
+      "side": "SELL",
+      "ticker": "MOS"
+    },
+    {
+      "fees": 2.1068,
+      "pnl": 15.65,
+      "price": 42.36,
+      "shares": 32,
+      "side": "SELL",
+      "ticker": "RRC"
+    },
+    {
+      "fees": 6.6083,
+      "pnl": -139.37,
+      "price": 2.43,
+      "shares": 505,
+      "side": "SELL",
+      "ticker": "SLI"
+    },
+    {
+      "fees": 10.7844,
+      "pnl": null,
+      "price": 1.48,
+      "shares": 836,
+      "side": "BUY",
+      "ticker": "GPRO"
+    },
+    {
+      "fees": 2.137,
+      "pnl": null,
+      "price": 25.18,
+      "shares": 49,
+      "side": "BUY",
+      "ticker": "ASST"
+    },
+    {
+      "fees": 2.7477,
+      "pnl": null,
+      "price": 5.79,
+      "shares": 213,
+      "side": "BUY",
+      "ticker": "DFDV"
+    },
+    {
+      "fees": 2.02,
+      "pnl": null,
+      "price": 120.475,
+      "shares": 10,
+      "side": "BUY",
+      "ticker": "HOOD"
+    },
+    {
+      "fees": 2.53,
+      "pnl": null,
+      "price": 3.46,
+      "shares": 180,
+      "side": "BUY",
+      "ticker": "CABA"
+    },
+    {
+      "fees": 3.1863,
+      "pnl": null,
+      "price": 2.52,
+      "shares": 247,
+      "side": "BUY",
+      "ticker": "ALEC"
+    },
+    {
+      "fees": 2.266,
+      "pnl": null,
+      "price": 6.71,
+      "shares": 92,
+      "side": "BUY",
+      "ticker": "BHC"
+    },
+    {
+      "fees": 4.2183,
+      "pnl": null,
+      "price": 1.9,
+      "shares": 327,
+      "side": "BUY",
+      "ticker": "BMEA"
+    },
+    {
+      "fees": 2.38,
+      "pnl": null,
+      "price": 4.78,
+      "shares": 130,
+      "side": "BUY",
+      "ticker": "OABI"
+    },
+    {
+      "fees": 5.0439,
+      "pnl": null,
+      "price": 1.59,
+      "shares": 391,
+      "side": "BUY",
+      "ticker": "OPK"
+    },
+    {
+      "fees": 2.155,
+      "pnl": null,
+      "price": 11.31,
+      "shares": 55,
+      "side": "BUY",
+      "ticker": "VIR"
+    },
+    {
+      "fees": 2.023,
+      "pnl": null,
+      "price": 52.03,
+      "shares": 11,
+      "side": "BUY",
+      "ticker": "ATRC"
+    }
+  ],
+  "holdings": [
+    "ALEC",
+    "ASST",
+    "ATRC",
+    "BHC",
+    "BMEA",
+    "CABA",
+    "DFDV",
+    "GPRO",
+    "HOOD",
+    "OABI",
+    "OPK",
+    "VIR"
+  ],
+  "mean": 2.1192,
+  "n_trades_today": 16,
+  "recipe": "combo_hf_5050_shared",
+  "sells": [
+    "CRK",
+    "MOS",
+    "RRC",
+    "SLI"
+  ],
+  "state": {
+    "after": "2026-09-04",
+    "cash": 37.35,
+    "pos": {
+      "ALEC": {
+        "close_px": 2.4600000381469727,
+        "cost": 625.6262952888488,
+        "entry_date": "2026-09-04",
+        "entry_px": 2.5199999809265137,
+        "fee_in": 3.1863,
+        "last_px": 2.5199999809265137,
+        "notional": 622.4399952888489,
+        "owner": "flatten_h5",
+        "peak_px": 2.5199999809265137,
+        "reason": "baseline list, no extra gate; list flatten,probable,yday_gainer,yday_mover,mover_buy; live flatten mover; \ud83d\udd35; \u26aa; ret5=+5.0; combo leftover $622.81; owner flatten_h5",
+        "shares": 247,
+        "side": "long",
+        "ticker": "ALEC"
+      },
+      "ASST": {
+        "close_px": 27.139999389648438,
+        "cost": 1235.9570149536132,
+        "entry_date": "2026-09-04",
+        "entry_px": 25.18000030517578,
+        "fee_in": 2.137,
+        "last_px": 25.18000030517578,
+        "notional": 1233.8200149536133,
+        "owner": "union_hot_n4_h1",
+        "peak_px": 25.18000030517578,
+        "reason": "top 4 by hot; rank hot_score; list ohlc_hot; \ud83d\udd35; ret5=+16.0; combo leftover $1238.66; owner union_hot_n4_h1",
+        "shares": 49,
+        "side": "long",
+        "ticker": "ASST"
+      },
+      "ATRC": {
+        "close_px": 51.52000045776367,
+        "cost": 574.3529865722656,
+        "entry_date": "2026-09-04",
+        "entry_px": 52.029998779296875,
+        "fee_in": 2.023,
+        "last_px": 52.029998779296875,
+        "notional": 572.3299865722656,
+        "owner": "flatten_h5",
+        "peak_px": 52.029998779296875,
+        "reason": "baseline list, no extra gate; list flatten,mover_buy; live flatten mover; \ud83d\udd35; \u26aa; ret5=+6.5; combo leftover $622.81; owner flatten_h5",
+        "shares": 11,
+        "side": "long",
+        "ticker": "ATRC"
+      },
+      "BHC": {
+        "close_px": 6.559999942779541,
+        "cost": 619.5860035095214,
+        "entry_date": "2026-09-04",
+        "entry_px": 6.710000038146973,
+        "fee_in": 2.266,
+        "last_px": 6.710000038146973,
+        "notional": 617.3200035095215,
+        "owner": "flatten_h5",
+        "peak_px": 6.710000038146973,
+        "reason": "baseline list, no extra gate; list flatten,mover_buy; live flatten mover; \ud83d\udd35; \u26aa; ret5=+7.3; combo leftover $622.81; owner flatten_h5",
+        "shares": 92,
+        "side": "long",
+        "ticker": "BHC"
+      },
+      "BMEA": {
+        "close_px": 2.0299999713897705,
+        "cost": 625.5182922037125,
+        "entry_date": "2026-09-04",
+        "entry_px": 1.899999976158142,
+        "fee_in": 4.2183,
+        "last_px": 1.899999976158142,
+        "notional": 621.2999922037125,
+        "owner": "flatten_h5",
+        "peak_px": 1.899999976158142,
+        "reason": "baseline list, no extra gate; list flatten,mover_buy; live flatten mover; \ud83d\udd35; \u26aa; ret5=+13.7; combo leftover $622.81; owner flatten_h5",
+        "shares": 327,
+        "side": "long",
+        "ticker": "BMEA"
+      },
+      "CABA": {
+        "close_px": 3.4700000286102295,
+        "cost": 625.330006866455,
+        "entry_date": "2026-09-04",
+        "entry_px": 3.4600000381469727,
+        "fee_in": 2.53,
+        "last_px": 3.4600000381469727,
+        "notional": 622.8000068664551,
+        "owner": "flatten_h5",
+        "peak_px": 3.4600000381469727,
+        "reason": "baseline list, no extra gate; list flatten,mover_buy; live flatten mover; \ud83d\udd35; \u26aa; ret5=+3.0; combo leftover $622.81; owner flatten_h5",
+        "shares": 180,
+        "side": "long",
+        "ticker": "CABA"
+      },
+      "DFDV": {
+        "close_px": 5.869999885559082,
+        "cost": 1236.0176918746947,
+        "entry_date": "2026-09-04",
+        "entry_px": 5.789999961853027,
+        "fee_in": 2.7477,
+        "last_px": 5.789999961853027,
+        "notional": 1233.2699918746948,
+        "owner": "union_hot_n4_h1",
+        "peak_px": 5.789999961853027,
+        "reason": "top 4 by hot; rank hot_score; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+15.2; combo leftover $1238.66; owner union_hot_n4_h1",
+        "shares": 213,
+        "side": "long",
+        "ticker": "DFDV"
+      },
+      "GPRO": {
+        "close_px": 1.7000000476837158,
+        "cost": 1248.0644159454346,
+        "entry_date": "2026-09-04",
+        "entry_px": 1.4800000190734863,
+        "fee_in": 10.7844,
+        "last_px": 1.4800000190734863,
+        "notional": 1237.2800159454346,
+        "owner": "union_hot_n4_h1",
+        "peak_px": 1.4800000190734863,
+        "reason": "top 4 by hot; rank hot_score; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+129.8; combo leftover $1238.66; owner union_hot_n4_h1",
+        "shares": 836,
+        "side": "long",
+        "ticker": "GPRO"
+      },
+      "HOOD": {
+        "close_px": 122.11000061035156,
+        "cost": 1206.769984741211,
+        "entry_date": "2026-09-04",
+        "entry_px": 120.4749984741211,
+        "fee_in": 2.02,
+        "last_px": 120.4749984741211,
+        "notional": 1204.749984741211,
+        "owner": "union_hot_n4_h1",
+        "peak_px": 120.4749984741211,
+        "reason": "top 4 by hot; rank hot_score; list ohlc_hot; \ud83d\udd35; ret5=+13.6; combo leftover $1238.66; owner union_hot_n4_h1",
+        "shares": 10,
+        "side": "long",
+        "ticker": "HOOD"
+      },
+      "OABI": {
+        "close_px": 4.329999923706055,
+        "cost": 623.7800272750854,
+        "entry_date": "2026-09-04",
+        "entry_px": 4.78000020980835,
+        "fee_in": 2.38,
+        "last_px": 4.78000020980835,
+        "notional": 621.4000272750854,
+        "owner": "flatten_h5",
+        "peak_px": 4.78000020980835,
+        "reason": "baseline list, no extra gate; list flatten,probable,yday_gainer,yday_mover,mover_buy; live flatten mover; \ud83d\udd35; \u26aa; ret5=+3.0; combo leftover $622.81; owner flatten_h5",
+        "shares": 130,
+        "side": "long",
+        "ticker": "OABI"
+      },
+      "OPK": {
+        "close_px": 1.6399999856948853,
+        "cost": 626.733913051033,
+        "entry_date": "2026-09-04",
+        "entry_px": 1.590000033378601,
+        "fee_in": 5.0439,
+        "last_px": 1.590000033378601,
+        "notional": 621.690013051033,
+        "owner": "flatten_h5",
+        "peak_px": 1.590000033378601,
+        "reason": "baseline list, no extra gate; list flatten,yday_gainer,mover_buy; live flatten mover; \ud83d\udd35; \u26aa; ret5=+7.3; combo leftover $622.81; owner flatten_h5",
+        "shares": 391,
+        "side": "long",
+        "ticker": "OPK"
+      },
+      "VIR": {
+        "close_px": 11.385000228881836,
+        "cost": 624.2050230789184,
+        "entry_date": "2026-09-04",
+        "entry_px": 11.3100004196167,
+        "fee_in": 2.155,
+        "last_px": 11.3100004196167,
+        "notional": 622.0500230789185,
+        "owner": "flatten_h5",
+        "peak_px": 11.3100004196167,
+        "reason": "baseline list, no extra gate; list flatten,mover_buy; live flatten mover; \ud83d\udd35; \u26aa; ret5=+1.2; combo leftover $622.81; owner flatten_h5",
+        "shares": 55,
+        "side": "long",
+        "ticker": "VIR"
+      }
+    },
+    "yday_equity": 10156.41
+  }
+}

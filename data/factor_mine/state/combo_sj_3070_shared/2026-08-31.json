@@ -1,0 +1,91 @@
+{
+  "buys": [],
+  "cash": 12834.36,
+  "date": "2026-08-31",
+  "equity": 9923.84,
+  "fees": 8.8061,
+  "fills": [
+    {
+      "fees": 2.046,
+      "pnl": 17.49,
+      "price": 148.03,
+      "shares": 11,
+      "side": "SELL",
+      "ticker": "ANF"
+    },
+    {
+      "fees": 2.2245,
+      "pnl": -124.12,
+      "price": 22.98,
+      "shares": 70,
+      "side": "SELL",
+      "ticker": "GAP"
+    },
+    {
+      "fees": 2.241,
+      "pnl": -52.46,
+      "price": 22.66,
+      "shares": 75,
+      "side": "SELL",
+      "ticker": "NCNO"
+    },
+    {
+      "fees": 2.2946,
+      "pnl": -85.06,
+      "price": 18.125,
+      "shares": 92,
+      "side": "SELL",
+      "ticker": "TH"
+    }
+  ],
+  "holdings": [
+    "FIG",
+    "SIMO"
+  ],
+  "mean": -0.491,
+  "n_trades_today": 4,
+  "recipe": "combo_sj_3070_shared",
+  "sells": [
+    "ANF",
+    "GAP",
+    "NCNO",
+    "TH"
+  ],
+  "state": {
+    "after": "2026-08-31",
+    "cash": 12834.36,
+    "pos": {
+      "FIG": {
+        "close_px": 27.489999771118164,
+        "cost": 2.211596164818333,
+        "entry_date": "2026-08-28",
+        "entry_px": 30.18000030517578,
+        "fee_in": 2.211596164818333,
+        "last_px": 27.600000381469727,
+        "notional": 1569.3600158691406,
+        "owner": "short_news_r_h3",
+        "peak_px": 27.600000381469727,
+        "reason": "news\ud83d\udd34; gate news=bad; list ohlc_hot; ret5=+12.1; combo leftover $1580.36; owner short_news_r_h3",
+        "shares": 52,
+        "side": "short",
+        "ticker": "FIG"
+      },
+      "SIMO": {
+        "close_px": 246.83999633789062,
+        "cost": 2.071564110492027,
+        "entry_date": "2026-08-28",
+        "entry_px": 252.24000549316406,
+        "fee_in": 2.071564110492027,
+        "last_px": 247.0500030517578,
+        "notional": 1513.4400329589844,
+        "owner": "short_news_r_h3",
+        "peak_px": 247.0500030517578,
+        "reason": "news\ud83d\udd34; gate news=bad; list probable,yday_gainer; \u26aa; ret5=+2.2; combo leftover $1580.36; owner short_news_r_h3",
+        "shares": 6,
+        "side": "short",
+        "ticker": "SIMO"
+      }
+    },
+    "yday_equity": 9923.84
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "buys": [],
+  "cash": 10278.73,
+  "date": "2026-09-08",
+  "equity": 10278.73,
+  "fees": 38.295,
+  "fills": [
+    {
+      "fees": 33.5285,
+      "pnl": 10.32,
+      "price": 1.33,
+      "shares": 2564,
+      "side": "SELL",
+      "ticker": "ADCT"
+    },
+    {
+      "fees": 2.2204,
+      "pnl": 141.52,
+      "price": 54.31,
+      "shares": 64,
+      "side": "SELL",
+      "ticker": "ATRC"
+    },
+    {
+      "fees": 2.5461,
+      "pnl": 126.89,
+      "price": 20.46,
+      "shares": 167,
+      "side": "SELL",
+      "ticker": "XP"
+    }
+  ],
+  "holdings": [],
+  "mean": 1.6169,
+  "n_trades_today": 3,
+  "recipe": "union_flow_in_white_h1",
+  "sells": [
+    "ADCT",
+    "ATRC",
+    "XP"
+  ],
+  "state": {
+    "after": "2026-09-08",
+    "cash": 10278.73,
+    "pos": {},
+    "yday_equity": 10278.73
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "buys": [],
+  "cash": 9310.32,
+  "date": "2026-09-14",
+  "equity": 9310.32,
+  "fees": 34.2097,
+  "fills": [
+    {
+      "fees": 2.9368,
+      "pnl": 36.73,
+      "price": 5.57,
+      "shares": 224,
+      "side": "SELL",
+      "ticker": "ANGX"
+    },
+    {
+      "fees": 2.076,
+      "pnl": -7.65,
+      "price": 54.75,
+      "shares": 22,
+      "side": "SELL",
+      "ticker": "ASO"
+    },
+    {
+      "fees": 3.2242,
+      "pnl": 23.12,
+      "price": 5.03,
+      "shares": 246,
+      "side": "SELL",
+      "ticker": "BNC"
+    },
+    {
+      "fees": 2.7408,
+      "pnl": -66.05,
+      "price": 5.49,
+      "shares": 209,
+      "side": "SELL",
+      "ticker": "INTR"
+    },
+    {
+      "fees": 16.4284,
+      "pnl": -49.85,
+      "price": 0.838,
+      "shares": 1422,
+      "side": "SELL",
+      "ticker": "LDI"
+    },
+    {
+      "fees": 2.031,
+      "pnl": -165.11,
+      "price": 141.42,
+      "shares": 7,
+      "side": "SELL",
+      "ticker": "ORCL"
+    },
+    {
+      "fees": 2.4242,
+      "pnl": -59.76,
+      "price": 8.57,
+      "shares": 134,
+      "side": "SELL",
+      "ticker": "TSSI"
+    },
+    {
+      "fees": 2.3483,
+      "pnl": -77.27,
+      "price": 10.29,
+      "shares": 110,
+      "side": "SELL",
+      "ticker": "WLTH"
+    }
+  ],
+  "holdings": [],
+  "mean": -1.3357,
+  "n_trades_today": 8,
+  "recipe": "union_blue_vol_h1",
+  "sells": [
+    "ANGX",
+    "ASO",
+    "BNC",
+    "INTR",
+    "LDI",
+    "ORCL",
+    "TSSI",
+    "WLTH"
+  ],
+  "state": {
+    "after": "2026-09-14",
+    "cash": 9310.32,
+    "pos": {},
+    "yday_equity": 9310.32
+  }
+}

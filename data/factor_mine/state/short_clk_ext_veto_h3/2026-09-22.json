@@ -1,0 +1,157 @@
+{
+  "buys": [
+    "GLND",
+    "USDE",
+    "FWDI",
+    "NTSK"
+  ],
+  "cash": 20554.6,
+  "date": "2026-09-22",
+  "equity": 10453.0,
+  "fees": 19.7696,
+  "fills": [
+    {
+      "fees": 2.089,
+      "pnl": -8.21,
+      "price": 52.0,
+      "shares": 33,
+      "side": "COVER",
+      "ticker": "CVI"
+    },
+    {
+      "fees": 2.53,
+      "pnl": 75.85,
+      "price": 9.3,
+      "shares": 180,
+      "side": "COVER",
+      "ticker": "HAFN"
+    },
+    {
+      "fees": 2.134,
+      "pnl": 42.7,
+      "price": 35.54,
+      "shares": 48,
+      "side": "COVER",
+      "ticker": "TRMD"
+    },
+    {
+      "fees": 5.860643836314058,
+      "pnl": null,
+      "price": 2.94,
+      "shares": 445,
+      "side": "SHORT",
+      "ticker": "GLND"
+    },
+    {
+      "fees": 2.3525890404688172,
+      "pnl": null,
+      "price": 12.99,
+      "shares": 100,
+      "side": "SHORT",
+      "ticker": "USDE"
+    },
+    {
+      "fees": 2.542813698630137,
+      "pnl": null,
+      "price": 8.17,
+      "shares": 160,
+      "side": "SHORT",
+      "ticker": "FWDI"
+    },
+    {
+      "fees": 2.2605610958904108,
+      "pnl": null,
+      "price": 18.23,
+      "shares": 71,
+      "side": "SHORT",
+      "ticker": "NTSK"
+    }
+  ],
+  "holdings": [
+    "FTK",
+    "FWDI",
+    "GLND",
+    "NTSK",
+    "USDE"
+  ],
+  "mean": 1.8379,
+  "n_trades_today": 7,
+  "recipe": "short_clk_ext_veto_h3",
+  "sells": [
+    "CVI",
+    "HAFN",
+    "TRMD"
+  ],
+  "state": {
+    "after": "2026-09-22",
+    "cash": 20554.6,
+    "pos": {
+      "FTK": {
+        "close_px": 30.86,
+        "cost": 2.6746630170430223,
+        "entry_date": "2026-09-21",
+        "entry_px": 31.450000762939453,
+        "fee_in": 2.6746630170430223,
+        "last_px": 30.5,
+        "notional": 5032.0001220703125,
+        "peak_px": 30.5,
+        "reason": "Clock-B #5 extreme ext + fade/fail-break as a short; gate clk_ext_veto=True; list ohlc_hot; ret5=+14.9; leftover $5061.65",
+        "shares": 160,
+        "ticker": "FTK"
+      },
+      "FWDI": {
+        "close_px": 8.6,
+        "cost": 2.542813698630137,
+        "entry_date": "2026-09-22",
+        "entry_px": 8.17,
+        "fee_in": 2.542813698630137,
+        "last_px": 8.17,
+        "notional": 1307.2,
+        "peak_px": 8.17,
+        "reason": "Clock-B #5 extreme ext + fade/fail-break as a short; gate clk_ext_veto=True; list ohlc_hot; ret5=+17.6; leftover $1309.85",
+        "shares": 160,
+        "ticker": "FWDI"
+      },
+      "GLND": {
+        "close_px": 2.509999990463257,
+        "cost": 5.860643836314058,
+        "entry_date": "2026-09-22",
+        "entry_px": 2.940000057220459,
+        "fee_in": 5.860643836314058,
+        "last_px": 2.940000057220459,
+        "notional": 1308.3000254631042,
+        "peak_px": 2.940000057220459,
+        "reason": "Clock-B #5 extreme ext + fade/fail-break as a short; gate clk_ext_veto=True; list yday_gainer,yday_mover; ret5=+136.1; leftover $1309.85",
+        "shares": 445,
+        "ticker": "GLND"
+      },
+      "NTSK": {
+        "close_px": 18.55,
+        "cost": 2.2605610958904108,
+        "entry_date": "2026-09-22",
+        "entry_px": 18.23,
+        "fee_in": 2.2605610958904108,
+        "last_px": 18.23,
+        "notional": 1294.33,
+        "peak_px": 18.23,
+        "reason": "Clock-B #5 extreme ext + fade/fail-break as a short; gate clk_ext_veto=True; list ohlc_hot; ret5=+8.2; leftover $1309.85",
+        "shares": 71,
+        "ticker": "NTSK"
+      },
+      "USDE": {
+        "close_px": 13.539999961853027,
+        "cost": 2.3525890404688172,
+        "entry_date": "2026-09-22",
+        "entry_px": 12.989999771118164,
+        "fee_in": 2.3525890404688172,
+        "last_px": 12.989999771118164,
+        "notional": 1298.9999771118164,
+        "peak_px": 12.989999771118164,
+        "reason": "Clock-B #5 extreme ext + fade/fail-break as a short; gate clk_ext_veto=True; list yday_gainer,yday_mover; ret5=+69.4; leftover $1309.85",
+        "shares": 100,
+        "ticker": "USDE"
+      }
+    },
+    "yday_equity": 10453.0
+  }
+}

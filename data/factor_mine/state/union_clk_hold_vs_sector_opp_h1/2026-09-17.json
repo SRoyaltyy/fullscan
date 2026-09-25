@@ -1,0 +1,144 @@
+{
+  "buys": [
+    "FTAI",
+    "EROC"
+  ],
+  "cash": 120.89,
+  "date": "2026-09-17",
+  "equity": 10131.84,
+  "fees": 25.2463,
+  "fills": [
+    {
+      "fees": 2.1252,
+      "pnl": 133.33,
+      "price": 36.76,
+      "shares": 38,
+      "side": "SELL",
+      "ticker": "FPS"
+    },
+    {
+      "fees": 2.0824,
+      "pnl": 38.82,
+      "price": 54.31,
+      "shares": 24,
+      "side": "SELL",
+      "ticker": "FRO"
+    },
+    {
+      "fees": 2.5857,
+      "pnl": -69.88,
+      "price": 6.48,
+      "shares": 185,
+      "side": "SELL",
+      "ticker": "GFR"
+    },
+    {
+      "fees": 2.109,
+      "pnl": -8.16,
+      "price": 37.89,
+      "shares": 33,
+      "side": "SELL",
+      "ticker": "KRMN"
+    },
+    {
+      "fees": 2.052,
+      "pnl": 20.42,
+      "price": 89.27,
+      "shares": 14,
+      "side": "SELL",
+      "ticker": "MRCY"
+    },
+    {
+      "fees": 2.8192,
+      "pnl": -67.94,
+      "price": 5.58,
+      "shares": 215,
+      "side": "SELL",
+      "ticker": "RIG"
+    },
+    {
+      "fees": 2.2216,
+      "pnl": -52.02,
+      "price": 17.19,
+      "shares": 70,
+      "side": "SELL",
+      "ticker": "TALO"
+    },
+    {
+      "fees": 2.052,
+      "pnl": -62.88,
+      "price": 83.2,
+      "shares": 14,
+      "side": "SELL",
+      "ticker": "VAL"
+    },
+    {
+      "fees": 2.065,
+      "pnl": null,
+      "price": 196.5,
+      "shares": 25,
+      "side": "BUY",
+      "ticker": "FTAI"
+    },
+    {
+      "fees": 5.1342,
+      "pnl": null,
+      "price": 12.64,
+      "shares": 398,
+      "side": "BUY",
+      "ticker": "EROC"
+    }
+  ],
+  "holdings": [
+    "EROC",
+    "FTAI"
+  ],
+  "mean": 1.9173,
+  "n_trades_today": 10,
+  "recipe": "union_clk_hold_vs_sector_opp_h1",
+  "sells": [
+    "FPS",
+    "FRO",
+    "GFR",
+    "KRMN",
+    "MRCY",
+    "RIG",
+    "TALO",
+    "VAL"
+  ],
+  "state": {
+    "after": "2026-09-17",
+    "cash": 120.89,
+    "pos": {
+      "EROC": {
+        "close_px": 12.899999618530273,
+        "cost": 5035.8543366424565,
+        "entry_date": "2026-09-17",
+        "entry_px": 12.640000343322754,
+        "fee_in": 5.1342,
+        "last_px": 12.640000343322754,
+        "min_hold": 1,
+        "notional": 5030.720136642456,
+        "peak_px": 12.640000343322754,
+        "reason": "Clock-B #6 \u2229 Theme Radar T\u22121 oppset; gate clk_hold_vs_sector=True,oppset=True; rank opp_rvol; list probable,yday_gainer; ret5=-3.6; leftover $5035.66",
+        "shares": 398,
+        "ticker": "EROC"
+      },
+      "FTAI": {
+        "close_px": 195.07000732421875,
+        "cost": 4914.565,
+        "entry_date": "2026-09-17",
+        "entry_px": 196.5,
+        "fee_in": 2.065,
+        "last_px": 196.5,
+        "min_hold": 1,
+        "notional": 4912.5,
+        "peak_px": 196.5,
+        "reason": "Clock-B #6 \u2229 Theme Radar T\u22121 oppset; gate clk_hold_vs_sector=True,oppset=True; rank opp_rvol; list yday_gainer; \ud83d\udd35; ret5=+2.5; leftover $5035.66",
+        "shares": 25,
+        "ticker": "FTAI"
+      }
+    },
+    "yday_equity": 10131.84
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "buys": [
+    "ISRG"
+  ],
+  "cash": 303.16,
+  "date": "2026-09-21",
+  "equity": 8737.81,
+  "fees": 7.1812,
+  "fills": [
+    {
+      "fees": 2.0679,
+      "pnl": -219.14,
+      "price": 231.62,
+      "shares": 14,
+      "side": "SELL",
+      "ticker": "CRWD"
+    },
+    {
+      "fees": 3.0603,
+      "pnl": -33.76,
+      "price": 22.78,
+      "shares": 231,
+      "side": "SELL",
+      "ticker": "GME"
+    },
+    {
+      "fees": 2.053,
+      "pnl": null,
+      "price": 393.89,
+      "shares": 21,
+      "side": "BUY",
+      "ticker": "ISRG"
+    }
+  ],
+  "holdings": [
+    "ISRG"
+  ],
+  "mean": 1.2011,
+  "n_trades_today": 3,
+  "recipe": "union_news_g_cam71_n2_h1",
+  "sells": [
+    "CRWD",
+    "GME"
+  ],
+  "state": {
+    "after": "2026-09-21",
+    "cash": 303.16,
+    "pos": {
+      "ISRG": {
+        "close_px": 401.6499938964844,
+        "cost": 8273.743307617187,
+        "entry_date": "2026-09-21",
+        "entry_px": 393.8900146484375,
+        "fee_in": 2.053,
+        "last_px": 393.8900146484375,
+        "min_hold": 1,
+        "notional": 8271.690307617188,
+        "peak_px": 393.8900146484375,
+        "reason": "topheavy leftover on news\ud83d\udfe2 +7 \u2212\u22641; gate news=good,n_pos_min=7,cam_bad_max=1; rank cond; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+6.6; leftover $8576.90",
+        "shares": 21,
+        "ticker": "ISRG"
+      }
+    },
+    "yday_equity": 8737.81
+  }
+}

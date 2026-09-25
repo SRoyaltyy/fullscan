@@ -1,0 +1,215 @@
+{
+  "buys": [
+    "PLAY",
+    "ALHC",
+    "FPS",
+    "GFR",
+    "HQ",
+    "SDGR",
+    "DMRA",
+    "RVTY"
+  ],
+  "cash": 80.09,
+  "date": "2026-09-16",
+  "equity": 9330.98,
+  "fees": 17.984,
+  "fills": [
+    {
+      "fees": 2.503,
+      "pnl": null,
+      "price": 6.86,
+      "shares": 171,
+      "side": "BUY",
+      "ticker": "PLAY"
+    },
+    {
+      "fees": 2.332,
+      "pnl": null,
+      "price": 10.3,
+      "shares": 114,
+      "side": "BUY",
+      "ticker": "ALHC"
+    },
+    {
+      "fees": 2.095,
+      "pnl": null,
+      "price": 33.14,
+      "shares": 35,
+      "side": "BUY",
+      "ticker": "FPS"
+    },
+    {
+      "fees": 2.506,
+      "pnl": null,
+      "price": 6.83,
+      "shares": 172,
+      "side": "BUY",
+      "ticker": "GFR"
+    },
+    {
+      "fees": 2.263,
+      "pnl": null,
+      "price": 12.89,
+      "shares": 91,
+      "side": "BUY",
+      "ticker": "HQ"
+    },
+    {
+      "fees": 2.14,
+      "pnl": null,
+      "price": 23.29,
+      "shares": 50,
+      "side": "BUY",
+      "ticker": "SDGR"
+    },
+    {
+      "fees": 2.131,
+      "pnl": null,
+      "price": 24.88,
+      "shares": 47,
+      "side": "BUY",
+      "ticker": "DMRA"
+    },
+    {
+      "fees": 2.014,
+      "pnl": null,
+      "price": 140.88,
+      "shares": 8,
+      "side": "BUY",
+      "ticker": "RVTY"
+    }
+  ],
+  "holdings": [
+    "ALHC",
+    "DMRA",
+    "FPS",
+    "GFR",
+    "HQ",
+    "PLAY",
+    "RVTY",
+    "SDGR"
+  ],
+  "mean": -0.8806,
+  "n_trades_today": 8,
+  "recipe": "oppset_h1",
+  "sells": [],
+  "state": {
+    "after": "2026-09-16",
+    "cash": 80.09,
+    "pos": {
+      "ALHC": {
+        "close_px": 8.710000038146973,
+        "cost": 1176.5320217437745,
+        "entry_date": "2026-09-16",
+        "entry_px": 10.300000190734863,
+        "fee_in": 2.332,
+        "last_px": 10.300000190734863,
+        "min_hold": 1,
+        "notional": 1174.2000217437744,
+        "peak_px": 10.300000190734863,
+        "reason": "Theme Radar Clock-B oppset universe (flagged T\u22121 names; research; not KEEP); gate oppset=True; rank opp_rvol; list yday_mover; ret5=-23.0; leftover $1176.73",
+        "shares": 114,
+        "ticker": "ALHC"
+      },
+      "DMRA": {
+        "close_px": 24.530000686645508,
+        "cost": 1171.4909605560304,
+        "entry_date": "2026-09-16",
+        "entry_px": 24.8799991607666,
+        "fee_in": 2.131,
+        "last_px": 24.8799991607666,
+        "min_hold": 1,
+        "notional": 1169.3599605560303,
+        "peak_px": 24.8799991607666,
+        "reason": "Theme Radar Clock-B oppset universe (flagged T\u22121 names; research; not KEEP); gate oppset=True; rank opp_rvol; list yday_mover; \ud83d\udd35; ret5=-15.2; leftover $1176.73",
+        "shares": 47,
+        "ticker": "DMRA"
+      },
+      "FPS": {
+        "close_px": 34.84000015258789,
+        "cost": 1161.9949786376953,
+        "entry_date": "2026-09-16",
+        "entry_px": 33.13999938964844,
+        "fee_in": 2.095,
+        "last_px": 33.13999938964844,
+        "min_hold": 1,
+        "notional": 1159.8999786376953,
+        "peak_px": 33.13999938964844,
+        "reason": "Theme Radar Clock-B oppset universe (flagged T\u22121 names; research; not KEEP); gate oppset=True; rank opp_rvol; list yday_gainer; \ud83d\udd35; ret5=-2.9; leftover $1176.73",
+        "shares": 35,
+        "ticker": "FPS"
+      },
+      "GFR": {
+        "close_px": 6.489999771118164,
+        "cost": 1177.2659868774415,
+        "entry_date": "2026-09-16",
+        "entry_px": 6.829999923706055,
+        "fee_in": 2.506,
+        "last_px": 6.829999923706055,
+        "min_hold": 1,
+        "notional": 1174.7599868774414,
+        "peak_px": 6.829999923706055,
+        "reason": "Theme Radar Clock-B oppset universe (flagged T\u22121 names; research; not KEEP); gate oppset=True; rank opp_rvol; list ohlc_hot; ret5=+11.2; leftover $1176.73",
+        "shares": 172,
+        "ticker": "GFR"
+      },
+      "HQ": {
+        "close_px": 13.5600004196167,
+        "cost": 1175.2530312423705,
+        "entry_date": "2026-09-16",
+        "entry_px": 12.890000343322754,
+        "fee_in": 2.263,
+        "last_px": 12.890000343322754,
+        "min_hold": 1,
+        "notional": 1172.9900312423706,
+        "peak_px": 12.890000343322754,
+        "reason": "Theme Radar Clock-B oppset universe (flagged T\u22121 names; research; not KEEP); gate oppset=True; rank opp_rvol; list yday_gainer,yday_mover; \ud83d\udd35; ret5=-18.2; leftover $1176.73",
+        "shares": 91,
+        "ticker": "HQ"
+      },
+      "PLAY": {
+        "close_px": 6.860000133514404,
+        "cost": 1175.563022830963,
+        "entry_date": "2026-09-16",
+        "entry_px": 6.860000133514404,
+        "fee_in": 2.503,
+        "last_px": 6.860000133514404,
+        "min_hold": 1,
+        "notional": 1173.0600228309631,
+        "peak_px": 6.860000133514404,
+        "reason": "Theme Radar Clock-B oppset universe (flagged T\u22121 names; research; not KEEP); gate oppset=True; rank opp_rvol; list yday_mover; \ud83d\udd35; ret5=-22.4; leftover $1176.73",
+        "shares": 171,
+        "ticker": "PLAY"
+      },
+      "RVTY": {
+        "close_px": 145.72999572753906,
+        "cost": 1129.0540390625,
+        "entry_date": "2026-09-16",
+        "entry_px": 140.8800048828125,
+        "fee_in": 2.014,
+        "last_px": 140.8800048828125,
+        "min_hold": 1,
+        "notional": 1127.0400390625,
+        "peak_px": 140.8800048828125,
+        "reason": "Theme Radar Clock-B oppset universe (flagged T\u22121 names; research; not KEEP); gate oppset=True; rank opp_rvol; list yday_gainer,ohlc_hot; \ud83d\udd35; \u26aa; ret5=+10.3; leftover $1176.73",
+        "shares": 8,
+        "ticker": "RVTY"
+      },
+      "SDGR": {
+        "close_px": 23.93000030517578,
+        "cost": 1166.6400457763673,
+        "entry_date": "2026-09-16",
+        "entry_px": 23.290000915527344,
+        "fee_in": 2.14,
+        "last_px": 23.290000915527344,
+        "min_hold": 1,
+        "notional": 1164.5000457763672,
+        "peak_px": 23.290000915527344,
+        "reason": "Theme Radar Clock-B oppset universe (flagged T\u22121 names; research; not KEEP); gate oppset=True; rank opp_rvol; list yday_gainer; \ud83d\udd35; \u26aa; ret5=+16.1; leftover $1176.73",
+        "shares": 50,
+        "ticker": "SDGR"
+      }
+    },
+    "yday_equity": 9330.98
+  }
+}

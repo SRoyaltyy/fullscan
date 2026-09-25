@@ -1,0 +1,215 @@
+{
+  "buys": [
+    "EL",
+    "FIG",
+    "SAIC",
+    "ULTA",
+    "RRC",
+    "BRZE",
+    "CXM",
+    "NEO"
+  ],
+  "cash": 389.47,
+  "date": "2026-08-28",
+  "equity": 9839.12,
+  "fees": 16.982,
+  "fills": [
+    {
+      "fees": 2.023,
+      "pnl": null,
+      "price": 106.99,
+      "shares": 11,
+      "side": "BUY",
+      "ticker": "EL"
+    },
+    {
+      "fees": 2.113,
+      "pnl": null,
+      "price": 30.18,
+      "shares": 41,
+      "side": "BUY",
+      "ticker": "FIG"
+    },
+    {
+      "fees": 2.017,
+      "pnl": null,
+      "price": 129.46,
+      "shares": 9,
+      "side": "BUY",
+      "ticker": "SAIC"
+    },
+    {
+      "fees": 1.996,
+      "pnl": null,
+      "price": 542.0,
+      "shares": 2,
+      "side": "BUY",
+      "ticker": "ULTA"
+    },
+    {
+      "fees": 2.077,
+      "pnl": null,
+      "price": 41.74,
+      "shares": 29,
+      "side": "BUY",
+      "ticker": "RRC"
+    },
+    {
+      "fees": 2.098,
+      "pnl": null,
+      "price": 34.06,
+      "shares": 36,
+      "side": "BUY",
+      "ticker": "BRZE"
+    },
+    {
+      "fees": 2.464,
+      "pnl": null,
+      "price": 7.88,
+      "shares": 158,
+      "side": "BUY",
+      "ticker": "CXM"
+    },
+    {
+      "fees": 2.194,
+      "pnl": null,
+      "price": 18.36,
+      "shares": 68,
+      "side": "BUY",
+      "ticker": "NEO"
+    }
+  ],
+  "holdings": [
+    "BRZE",
+    "CXM",
+    "EL",
+    "FIG",
+    "NEO",
+    "RRC",
+    "SAIC",
+    "ULTA"
+  ],
+  "mean": -1.6088,
+  "n_trades_today": 8,
+  "recipe": "union_candle_score_h1",
+  "sells": [],
+  "state": {
+    "after": "2026-08-28",
+    "cash": 389.47,
+    "pos": {
+      "BRZE": {
+        "close_px": 34.529998779296875,
+        "cost": 1228.2580494384765,
+        "entry_date": "2026-08-28",
+        "entry_px": 34.060001373291016,
+        "fee_in": 2.098,
+        "last_px": 34.060001373291016,
+        "min_hold": 1,
+        "notional": 1226.1600494384766,
+        "peak_px": 34.060001373291016,
+        "reason": "rank by candle_score; rank candle_score; list ohlc_hot; ret5=+11.0; leftover $1250.00",
+        "shares": 36,
+        "ticker": "BRZE"
+      },
+      "CXM": {
+        "close_px": 8.15999984741211,
+        "cost": 1247.504018081665,
+        "entry_date": "2026-08-28",
+        "entry_px": 7.880000114440918,
+        "fee_in": 2.464,
+        "last_px": 7.880000114440918,
+        "min_hold": 1,
+        "notional": 1245.040018081665,
+        "peak_px": 7.880000114440918,
+        "reason": "rank by candle_score; rank candle_score; list ohlc_hot; \ud83d\udd35; ret5=+10.3; leftover $1250.00",
+        "shares": 158,
+        "ticker": "CXM"
+      },
+      "EL": {
+        "close_px": 103.38999938964844,
+        "cost": 1178.9129765014648,
+        "entry_date": "2026-08-28",
+        "entry_px": 106.98999786376953,
+        "fee_in": 2.023,
+        "last_px": 106.98999786376953,
+        "min_hold": 1,
+        "notional": 1176.8899765014648,
+        "peak_px": 106.98999786376953,
+        "reason": "rank by candle_score; rank candle_score; list ohlc_hot; ret5=+10.5; leftover $1250.00",
+        "shares": 11,
+        "ticker": "EL"
+      },
+      "FIG": {
+        "close_px": 28.81999969482422,
+        "cost": 1239.493012512207,
+        "entry_date": "2026-08-28",
+        "entry_px": 30.18000030517578,
+        "fee_in": 2.113,
+        "last_px": 30.18000030517578,
+        "min_hold": 1,
+        "notional": 1237.380012512207,
+        "peak_px": 30.18000030517578,
+        "reason": "rank by candle_score; rank candle_score; list ohlc_hot; ret5=+12.1; leftover $1250.00",
+        "shares": 41,
+        "ticker": "FIG"
+      },
+      "NEO": {
+        "close_px": 18.049999237060547,
+        "cost": 1250.6740415039062,
+        "entry_date": "2026-08-28",
+        "entry_px": 18.360000610351562,
+        "fee_in": 2.194,
+        "last_px": 18.360000610351562,
+        "min_hold": 1,
+        "notional": 1248.4800415039062,
+        "peak_px": 18.360000610351562,
+        "reason": "rank by candle_score; rank candle_score; list ohlc_hot; ret5=+12.8; leftover $1250.00",
+        "shares": 68,
+        "ticker": "NEO"
+      },
+      "RRC": {
+        "close_px": 41.459999084472656,
+        "cost": 1212.537048675537,
+        "entry_date": "2026-08-28",
+        "entry_px": 41.7400016784668,
+        "fee_in": 2.077,
+        "last_px": 41.7400016784668,
+        "min_hold": 1,
+        "notional": 1210.460048675537,
+        "peak_px": 41.7400016784668,
+        "reason": "rank by candle_score; rank candle_score; list flatten; ret5=+2.4; leftover $1250.00",
+        "shares": 29,
+        "ticker": "RRC"
+      },
+      "SAIC": {
+        "close_px": 125.95999908447266,
+        "cost": 1167.1570604248047,
+        "entry_date": "2026-08-28",
+        "entry_px": 129.4600067138672,
+        "fee_in": 2.017,
+        "last_px": 129.4600067138672,
+        "min_hold": 1,
+        "notional": 1165.1400604248047,
+        "peak_px": 129.4600067138672,
+        "reason": "rank by candle_score; rank candle_score; list overnight; ret5=+2.1; leftover $1250.00",
+        "shares": 9,
+        "ticker": "SAIC"
+      },
+      "ULTA": {
+        "close_px": 517.5,
+        "cost": 1085.996,
+        "entry_date": "2026-08-28",
+        "entry_px": 542.0,
+        "fee_in": 1.996,
+        "last_px": 542.0,
+        "min_hold": 1,
+        "notional": 1084.0,
+        "peak_px": 542.0,
+        "reason": "rank by candle_score; rank candle_score; list earn_react; ret5=+4.8; leftover $1250.00",
+        "shares": 2,
+        "ticker": "ULTA"
+      }
+    },
+    "yday_equity": 9839.12
+  }
+}

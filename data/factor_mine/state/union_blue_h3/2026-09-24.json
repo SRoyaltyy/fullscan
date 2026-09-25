@@ -1,0 +1,116 @@
+{
+  "buys": [],
+  "cash": 7319.91,
+  "date": "2026-09-24",
+  "equity": 7791.07,
+  "fees": 21.152,
+  "fills": [
+    {
+      "fees": 2.031,
+      "pnl": 38.52,
+      "price": 163.95,
+      "shares": 7,
+      "side": "SELL",
+      "ticker": "A"
+    },
+    {
+      "fees": 8.2808,
+      "pnl": -82.91,
+      "price": 1.72,
+      "shares": 633,
+      "side": "SELL",
+      "ticker": "BTBT"
+    },
+    {
+      "fees": 2.049,
+      "pnl": -19.03,
+      "price": 87.68,
+      "shares": 13,
+      "side": "SELL",
+      "ticker": "DXCM"
+    },
+    {
+      "fees": 2.142,
+      "pnl": -46.28,
+      "price": 24.995,
+      "shares": 44,
+      "side": "SELL",
+      "ticker": "GLXY"
+    },
+    {
+      "fees": 2.016,
+      "pnl": -27.33,
+      "price": 374.54,
+      "shares": 2,
+      "side": "SELL",
+      "ticker": "HUM"
+    },
+    {
+      "fees": 2.2691,
+      "pnl": -178.76,
+      "price": 11.42,
+      "shares": 85,
+      "side": "SELL",
+      "ticker": "MGTX"
+    },
+    {
+      "fees": 2.3641,
+      "pnl": -26.55,
+      "price": 9.8,
+      "shares": 115,
+      "side": "SELL",
+      "ticker": "SBET"
+    }
+  ],
+  "holdings": [
+    "ARHS",
+    "IVVD"
+  ],
+  "mean": -1.4908,
+  "n_trades_today": 7,
+  "recipe": "union_blue_h3",
+  "sells": [
+    "A",
+    "BTBT",
+    "DXCM",
+    "GLXY",
+    "HUM",
+    "MGTX",
+    "SBET"
+  ],
+  "state": {
+    "after": "2026-09-24",
+    "cash": 7319.91,
+    "pos": {
+      "ARHS": {
+        "close_px": 9.470000267028809,
+        "cost": 242.371,
+        "entry_date": "2026-09-22",
+        "entry_px": 8.9,
+        "fee_in": 2.071,
+        "last_px": 9.210000038146973,
+        "min_hold": 3,
+        "notional": 240.3,
+        "peak_px": 9.319999694824219,
+        "reason": "union \u2229 blue, no \ud83d\udea8; gate blue=True; list probable; \ud83d\udd35; ret5=+7.5; leftover $242.35",
+        "shares": 27,
+        "ticker": "ARHS"
+      },
+      "IVVD": {
+        "close_px": 0.9129999876022339,
+        "cost": 241.4043977493286,
+        "entry_date": "2026-09-22",
+        "entry_px": 1.0099999904632568,
+        "fee_in": 3.0444,
+        "last_px": 0.949999988079071,
+        "min_hold": 3,
+        "notional": 238.3599977493286,
+        "peak_px": 1.0099999904632568,
+        "reason": "union \u2229 blue, no \ud83d\udea8; gate blue=True; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+14.3; leftover $242.35",
+        "shares": 236,
+        "ticker": "IVVD"
+      }
+    },
+    "yday_equity": 7791.07
+  }
+}

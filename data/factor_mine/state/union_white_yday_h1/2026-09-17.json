@@ -1,0 +1,120 @@
+{
+  "buys": [
+    "SABR"
+  ],
+  "cash": 2.47,
+  "date": "2026-09-17",
+  "equity": 9693.11,
+  "fees": 70.4467,
+  "fills": [
+    {
+      "fees": 2.1484,
+      "pnl": 48.16,
+      "price": 28.23,
+      "shares": 46,
+      "side": "SELL",
+      "ticker": "ADPT"
+    },
+    {
+      "fees": 2.025,
+      "pnl": -8.43,
+      "price": 236.04,
+      "shares": 5,
+      "side": "SELL",
+      "ticker": "CRWD"
+    },
+    {
+      "fees": 2.109,
+      "pnl": 12.63,
+      "price": 37.64,
+      "shares": 33,
+      "side": "SELL",
+      "ticker": "DBX"
+    },
+    {
+      "fees": 2.061,
+      "pnl": -28.58,
+      "price": 69.16,
+      "shares": 17,
+      "side": "SELL",
+      "ticker": "DOCU"
+    },
+    {
+      "fees": 2.016,
+      "pnl": -13.13,
+      "price": 425.56,
+      "shares": 2,
+      "side": "SELL",
+      "ticker": "FFIV"
+    },
+    {
+      "fees": 2.025,
+      "pnl": 42.77,
+      "price": 233.85,
+      "shares": 5,
+      "side": "SELL",
+      "ticker": "ILMN"
+    },
+    {
+      "fees": 2.028,
+      "pnl": -25.16,
+      "price": 183.0,
+      "shares": 6,
+      "side": "SELL",
+      "ticker": "OKTA"
+    },
+    {
+      "fees": 2.151,
+      "pnl": 7.0,
+      "price": 26.51,
+      "shares": 47,
+      "side": "SELL",
+      "ticker": "WAY"
+    },
+    {
+      "fees": 53.8833,
+      "pnl": null,
+      "price": 2.4,
+      "shares": 4177,
+      "side": "BUY",
+      "ticker": "SABR"
+    }
+  ],
+  "holdings": [
+    "SABR"
+  ],
+  "mean": -4.3023,
+  "n_trades_today": 9,
+  "recipe": "union_white_yday_h1",
+  "sells": [
+    "ADPT",
+    "CRWD",
+    "DBX",
+    "DOCU",
+    "FFIV",
+    "ILMN",
+    "OKTA",
+    "WAY"
+  ],
+  "state": {
+    "after": "2026-09-17",
+    "cash": 2.47,
+    "pos": {
+      "SABR": {
+        "close_px": 2.319999933242798,
+        "cost": 10078.683698349761,
+        "entry_date": "2026-09-17",
+        "entry_px": 2.4000000953674316,
+        "fee_in": 53.8833,
+        "last_px": 2.4000000953674316,
+        "min_hold": 1,
+        "notional": 10024.800398349762,
+        "peak_px": 2.4000000953674316,
+        "reason": "union looker: 0 red cameras + yesterday up, rank +G\u2212R; gate zero_red=True,yday_up=True; rank cond; list probable,yday_gainer,yday_mover,ohlc_hot; \ud83d\udd35; \u26aa; ret5=+8.4; leftover $10081.16",
+        "shares": 4177,
+        "ticker": "SABR"
+      }
+    },
+    "yday_equity": 9693.11
+  }
+}

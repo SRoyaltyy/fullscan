@@ -1,0 +1,66 @@
+{
+  "buys": [
+    "LITE"
+  ],
+  "cash": 106.57,
+  "date": "2026-09-17",
+  "equity": 8149.06,
+  "fees": 6.4889,
+  "fills": [
+    {
+      "fees": 2.104,
+      "pnl": 22.98,
+      "price": 190.35,
+      "shares": 23,
+      "side": "SELL",
+      "ticker": "QCOM"
+    },
+    {
+      "fees": 2.3679,
+      "pnl": -268.47,
+      "price": 37.57,
+      "shares": 109,
+      "side": "SELL",
+      "ticker": "SM"
+    },
+    {
+      "fees": 2.017,
+      "pnl": null,
+      "price": 934.88,
+      "shares": 9,
+      "side": "BUY",
+      "ticker": "LITE"
+    }
+  ],
+  "holdings": [
+    "LITE"
+  ],
+  "mean": -3.7273,
+  "n_trades_today": 3,
+  "recipe": "union_news_pack_net3_h1",
+  "sells": [
+    "QCOM",
+    "SM"
+  ],
+  "state": {
+    "after": "2026-09-17",
+    "cash": 106.57,
+    "pos": {
+      "LITE": {
+        "close_px": 893.6099853515625,
+        "cost": 8415.937043945312,
+        "entry_date": "2026-09-17",
+        "entry_px": 934.8800048828125,
+        "fee_in": 2.017,
+        "last_px": 934.8800048828125,
+        "min_hold": 1,
+        "notional": 8413.920043945312,
+        "peak_px": 934.8800048828125,
+        "reason": "packet\ud83d\udfe2 and camera net \u2265 3; gate news_box=good,cam_net_min=3; rank cond; list yday_gainer; \ud83d\udd35; ret5=-7.0; leftover $8522.51",
+        "shares": 9,
+        "ticker": "LITE"
+      }
+    },
+    "yday_equity": 8149.06
+  }
+}

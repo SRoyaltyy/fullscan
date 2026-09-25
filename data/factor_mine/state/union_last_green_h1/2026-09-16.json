@@ -1,0 +1,215 @@
+{
+  "buys": [
+    "IQV",
+    "RDNT",
+    "BLFS",
+    "BBNX",
+    "ARQQ",
+    "TEM",
+    "RIG",
+    "QTRX"
+  ],
+  "cash": 239.4,
+  "date": "2026-09-16",
+  "equity": 9965.05,
+  "fees": 20.9379,
+  "fills": [
+    {
+      "fees": 2.002,
+      "pnl": null,
+      "price": 270.89,
+      "shares": 4,
+      "side": "BUY",
+      "ticker": "IQV"
+    },
+    {
+      "fees": 2.035,
+      "pnl": null,
+      "price": 77.12,
+      "shares": 15,
+      "side": "BUY",
+      "ticker": "RDNT"
+    },
+    {
+      "fees": 2.089,
+      "pnl": null,
+      "price": 36.46,
+      "shares": 33,
+      "side": "BUY",
+      "ticker": "BLFS"
+    },
+    {
+      "fees": 2.185,
+      "pnl": null,
+      "price": 18.61,
+      "shares": 65,
+      "side": "BUY",
+      "ticker": "BBNX"
+    },
+    {
+      "fees": 2.188,
+      "pnl": null,
+      "price": 18.21,
+      "shares": 66,
+      "side": "BUY",
+      "ticker": "ARQQ"
+    },
+    {
+      "fees": 2.041,
+      "pnl": null,
+      "price": 68.79,
+      "shares": 17,
+      "side": "BUY",
+      "ticker": "TEM"
+    },
+    {
+      "fees": 2.6574,
+      "pnl": null,
+      "price": 5.87,
+      "shares": 206,
+      "side": "BUY",
+      "ticker": "RIG"
+    },
+    {
+      "fees": 5.7405,
+      "pnl": null,
+      "price": 2.72,
+      "shares": 445,
+      "side": "BUY",
+      "ticker": "QTRX"
+    }
+  ],
+  "holdings": [
+    "ARQQ",
+    "BBNX",
+    "BLFS",
+    "IQV",
+    "QTRX",
+    "RDNT",
+    "RIG",
+    "TEM"
+  ],
+  "mean": 2.6855,
+  "n_trades_today": 8,
+  "recipe": "union_last_green_h1",
+  "sells": [],
+  "state": {
+    "after": "2026-09-16",
+    "cash": 239.4,
+    "pos": {
+      "ARQQ": {
+        "close_px": 19.010000228881836,
+        "cost": 1204.0479395751954,
+        "entry_date": "2026-09-16",
+        "entry_px": 18.209999084472656,
+        "fee_in": 2.188,
+        "last_px": 18.209999084472656,
+        "min_hold": 1,
+        "notional": 1201.8599395751953,
+        "peak_px": 18.209999084472656,
+        "reason": "union \u2229 last_green, no \ud83d\udea8; gate last_green=True; list probable,yday_gainer; \ud83d\udd35; ret5=-19.1; leftover $1213.06",
+        "shares": 66,
+        "ticker": "ARQQ"
+      },
+      "BBNX": {
+        "close_px": 22.18000030517578,
+        "cost": 1211.8350396728515,
+        "entry_date": "2026-09-16",
+        "entry_px": 18.610000610351562,
+        "fee_in": 2.185,
+        "last_px": 18.610000610351562,
+        "min_hold": 1,
+        "notional": 1209.6500396728516,
+        "peak_px": 18.610000610351562,
+        "reason": "union \u2229 last_green, no \ud83d\udea8; gate last_green=True; list probable,yday_gainer,yday_mover; ret5=-0.5; leftover $1213.06",
+        "shares": 65,
+        "ticker": "BBNX"
+      },
+      "BLFS": {
+        "close_px": 36.11000061035156,
+        "cost": 1205.2689697875976,
+        "entry_date": "2026-09-16",
+        "entry_px": 36.459999084472656,
+        "fee_in": 2.089,
+        "last_px": 36.459999084472656,
+        "min_hold": 1,
+        "notional": 1203.1799697875977,
+        "peak_px": 36.459999084472656,
+        "reason": "union \u2229 last_green, no \ud83d\udea8; gate last_green=True; list flatten; \ud83d\udd35; \u26aa; ret5=+2.9; leftover $1213.06",
+        "shares": 33,
+        "ticker": "BLFS"
+      },
+      "IQV": {
+        "close_px": 268.82000732421875,
+        "cost": 1085.56205859375,
+        "entry_date": "2026-09-16",
+        "entry_px": 270.8900146484375,
+        "fee_in": 2.002,
+        "last_px": 270.8900146484375,
+        "min_hold": 1,
+        "notional": 1083.56005859375,
+        "peak_px": 270.8900146484375,
+        "reason": "union \u2229 last_green, no \ud83d\udea8; gate last_green=True; list flatten; \u26aa; ret5=+4.0; leftover $1213.06",
+        "shares": 4,
+        "ticker": "IQV"
+      },
+      "QTRX": {
+        "close_px": 2.9100000858306885,
+        "cost": 1216.1405127315522,
+        "entry_date": "2026-09-16",
+        "entry_px": 2.7200000286102295,
+        "fee_in": 5.7405,
+        "last_px": 2.7200000286102295,
+        "min_hold": 1,
+        "notional": 1210.4000127315521,
+        "peak_px": 2.7200000286102295,
+        "reason": "union \u2229 last_green, no \ud83d\udea8; gate last_green=True; list probable,yday_gainer; ret5=-0.4; leftover $1213.06",
+        "shares": 445,
+        "ticker": "QTRX"
+      },
+      "RDNT": {
+        "close_px": 75.77999877929688,
+        "cost": 1158.8350411987306,
+        "entry_date": "2026-09-16",
+        "entry_px": 77.12000274658203,
+        "fee_in": 2.035,
+        "last_px": 77.12000274658203,
+        "min_hold": 1,
+        "notional": 1156.8000411987305,
+        "peak_px": 77.12000274658203,
+        "reason": "union \u2229 last_green, no \ud83d\udea8; gate last_green=True; list flatten; \u26aa; ret5=+7.2; leftover $1213.06",
+        "shares": 15,
+        "ticker": "RDNT"
+      },
+      "RIG": {
+        "close_px": 5.539999961853027,
+        "cost": 1211.877376425171,
+        "entry_date": "2026-09-16",
+        "entry_px": 5.869999885559082,
+        "fee_in": 2.6574,
+        "last_px": 5.869999885559082,
+        "min_hold": 1,
+        "notional": 1209.219976425171,
+        "peak_px": 5.869999885559082,
+        "reason": "union \u2229 last_green, no \ud83d\udea8; gate last_green=True; list probable,yday_gainer; \ud83d\udd35; ret5=+3.1; leftover $1213.06",
+        "shares": 206,
+        "ticker": "RIG"
+      },
+      "TEM": {
+        "close_px": 69.97000122070312,
+        "cost": 1171.4710155639648,
+        "entry_date": "2026-09-16",
+        "entry_px": 68.79000091552734,
+        "fee_in": 2.041,
+        "last_px": 68.79000091552734,
+        "min_hold": 1,
+        "notional": 1169.4300155639648,
+        "peak_px": 68.79000091552734,
+        "reason": "union \u2229 last_green, no \ud83d\udea8; gate last_green=True; list probable,yday_gainer; \ud83d\udd35; \u26aa; ret5=+7.1; leftover $1213.06",
+        "shares": 17,
+        "ticker": "TEM"
+      }
+    },
+    "yday_equity": 9965.05
+  }
+}

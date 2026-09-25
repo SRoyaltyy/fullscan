@@ -1,0 +1,71 @@
+{
+  "buys": [
+    "MRNA",
+    "MNRO"
+  ],
+  "cash": 64.72,
+  "date": "2026-08-28",
+  "equity": 10255.24,
+  "fees": 7.2967,
+  "fills": [
+    {
+      "fees": 2.098,
+      "pnl": null,
+      "price": 137.19,
+      "shares": 36,
+      "side": "BUY",
+      "ticker": "MRNA"
+    },
+    {
+      "fees": 5.1987,
+      "pnl": null,
+      "price": 12.38,
+      "shares": 403,
+      "side": "BUY",
+      "ticker": "MNRO"
+    }
+  ],
+  "holdings": [
+    "MNRO",
+    "MRNA"
+  ],
+  "mean": 2.5524,
+  "n_trades_today": 2,
+  "recipe": "union_clk_nr7_mom_opp_h1",
+  "sells": [],
+  "state": {
+    "after": "2026-08-28",
+    "cash": 64.72,
+    "pos": {
+      "MNRO": {
+        "close_px": 12.960000038146973,
+        "cost": 4994.33874611969,
+        "entry_date": "2026-08-28",
+        "entry_px": 12.380000114440918,
+        "fee_in": 5.1987,
+        "last_px": 12.380000114440918,
+        "min_hold": 1,
+        "notional": 4989.14004611969,
+        "peak_px": 12.380000114440918,
+        "reason": "Clock-B #10 \u2229 Theme Radar T\u22121 oppset; gate clk_nr7_mom=True,oppset=True; rank opp_rvol; list yday_mover; ret5=+4.5; leftover $5000.00",
+        "shares": 403,
+        "ticker": "MNRO"
+      },
+      "MRNA": {
+        "close_px": 137.99000549316406,
+        "cost": 4940.938087890625,
+        "entry_date": "2026-08-28",
+        "entry_px": 137.19000244140625,
+        "fee_in": 2.098,
+        "last_px": 137.19000244140625,
+        "min_hold": 1,
+        "notional": 4938.840087890625,
+        "peak_px": 137.19000244140625,
+        "reason": "Clock-B #10 \u2229 Theme Radar T\u22121 oppset; gate clk_nr7_mom=True,oppset=True; rank opp_rvol; list ohlc_hot; ret5=+7.1; leftover $5000.00",
+        "shares": 36,
+        "ticker": "MRNA"
+      }
+    },
+    "yday_equity": 10255.24
+  }
+}

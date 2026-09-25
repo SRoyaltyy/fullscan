@@ -1,0 +1,215 @@
+{
+  "buys": [
+    "RRC",
+    "SEDG",
+    "OPTX",
+    "CAPR",
+    "SMTC",
+    "ERAS",
+    "BBWI",
+    "ZYME"
+  ],
+  "cash": 214.16,
+  "date": "2026-08-28",
+  "equity": 9729.0,
+  "fees": 17.48,
+  "fills": [
+    {
+      "fees": 2.077,
+      "pnl": null,
+      "price": 41.74,
+      "shares": 29,
+      "side": "BUY",
+      "ticker": "RRC"
+    },
+    {
+      "fees": 2.101,
+      "pnl": null,
+      "price": 32.9,
+      "shares": 37,
+      "side": "BUY",
+      "ticker": "SEDG"
+    },
+    {
+      "fees": 2.425,
+      "pnl": null,
+      "price": 8.61,
+      "shares": 145,
+      "side": "BUY",
+      "ticker": "OPTX"
+    },
+    {
+      "fees": 2.374,
+      "pnl": null,
+      "price": 9.73,
+      "shares": 128,
+      "side": "BUY",
+      "ticker": "CAPR"
+    },
+    {
+      "fees": 2.014,
+      "pnl": null,
+      "price": 141.76,
+      "shares": 8,
+      "side": "BUY",
+      "ticker": "SMTC"
+    },
+    {
+      "fees": 2.182,
+      "pnl": null,
+      "price": 19.25,
+      "shares": 64,
+      "side": "BUY",
+      "ticker": "ERAS"
+    },
+    {
+      "fees": 2.188,
+      "pnl": null,
+      "price": 18.75,
+      "shares": 66,
+      "side": "BUY",
+      "ticker": "BBWI"
+    },
+    {
+      "fees": 2.119,
+      "pnl": null,
+      "price": 28.91,
+      "shares": 43,
+      "side": "BUY",
+      "ticker": "ZYME"
+    }
+  ],
+  "holdings": [
+    "BBWI",
+    "CAPR",
+    "ERAS",
+    "OPTX",
+    "RRC",
+    "SEDG",
+    "SMTC",
+    "ZYME"
+  ],
+  "mean": -2.71,
+  "n_trades_today": 8,
+  "recipe": "union_news_g_h1",
+  "sells": [],
+  "state": {
+    "after": "2026-08-28",
+    "cash": 214.16,
+    "pos": {
+      "BBWI": {
+        "close_px": 19.219999313354492,
+        "cost": 1239.688,
+        "entry_date": "2026-08-28",
+        "entry_px": 18.75,
+        "fee_in": 2.188,
+        "last_px": 18.75,
+        "min_hold": 1,
+        "notional": 1237.5,
+        "peak_px": 18.75,
+        "reason": "union \u2229 news_g, no \ud83d\udea8; gate news=good; list yday_gainer; ret5=-4.1; leftover $1250.00",
+        "shares": 66,
+        "ticker": "BBWI"
+      },
+      "CAPR": {
+        "close_px": 9.59000015258789,
+        "cost": 1247.81394140625,
+        "entry_date": "2026-08-28",
+        "entry_px": 9.729999542236328,
+        "fee_in": 2.374,
+        "last_px": 9.729999542236328,
+        "min_hold": 1,
+        "notional": 1245.43994140625,
+        "peak_px": 9.729999542236328,
+        "reason": "union \u2229 news_g, no \ud83d\udea8; gate news=good; list yday_gainer,yday_mover; ret5=+47.1; leftover $1250.00",
+        "shares": 128,
+        "ticker": "CAPR"
+      },
+      "ERAS": {
+        "close_px": 18.030000686645508,
+        "cost": 1234.182,
+        "entry_date": "2026-08-28",
+        "entry_px": 19.25,
+        "fee_in": 2.182,
+        "last_px": 19.25,
+        "min_hold": 1,
+        "notional": 1232.0,
+        "peak_px": 19.25,
+        "reason": "union \u2229 news_g, no \ud83d\udea8; gate news=good; list yday_gainer; ret5=+14.1; leftover $1250.00",
+        "shares": 64,
+        "ticker": "ERAS"
+      },
+      "OPTX": {
+        "close_px": 8.520000457763672,
+        "cost": 1250.8749502182006,
+        "entry_date": "2026-08-28",
+        "entry_px": 8.609999656677246,
+        "fee_in": 2.425,
+        "last_px": 8.609999656677246,
+        "min_hold": 1,
+        "notional": 1248.4499502182007,
+        "peak_px": 8.609999656677246,
+        "reason": "union \u2229 news_g, no \ud83d\udea8; gate news=good; list probable,yday_gainer; ret5=-0.7; leftover $1250.00",
+        "shares": 145,
+        "ticker": "OPTX"
+      },
+      "RRC": {
+        "close_px": 41.459999084472656,
+        "cost": 1212.537048675537,
+        "entry_date": "2026-08-28",
+        "entry_px": 41.7400016784668,
+        "fee_in": 2.077,
+        "last_px": 41.7400016784668,
+        "min_hold": 1,
+        "notional": 1210.460048675537,
+        "peak_px": 41.7400016784668,
+        "reason": "union \u2229 news_g, no \ud83d\udea8; gate news=good; list flatten; ret5=+2.4; leftover $1250.00",
+        "shares": 29,
+        "ticker": "RRC"
+      },
+      "SEDG": {
+        "close_px": 31.40999984741211,
+        "cost": 1219.4010564575196,
+        "entry_date": "2026-08-28",
+        "entry_px": 32.900001525878906,
+        "fee_in": 2.101,
+        "last_px": 32.900001525878906,
+        "min_hold": 1,
+        "notional": 1217.3000564575195,
+        "peak_px": 32.900001525878906,
+        "reason": "union \u2229 news_g, no \ud83d\udea8; gate news=good; list probable,yday_gainer,yday_mover; \ud83d\udd35; ret5=+8.4; leftover $1250.00",
+        "shares": 37,
+        "ticker": "SEDG"
+      },
+      "SMTC": {
+        "close_px": 131.1699981689453,
+        "cost": 1136.0939560546874,
+        "entry_date": "2026-08-28",
+        "entry_px": 141.75999450683594,
+        "fee_in": 2.014,
+        "last_px": 141.75999450683594,
+        "min_hold": 1,
+        "notional": 1134.0799560546875,
+        "peak_px": 141.75999450683594,
+        "reason": "union \u2229 news_g, no \ud83d\udea8; gate news=good; list yday_gainer,yday_mover,mover_buy; \ud83d\udd35; \u26aa; ret5=+14.1; leftover $1250.00",
+        "shares": 8,
+        "ticker": "SMTC"
+      },
+      "ZYME": {
+        "close_px": 28.270000457763672,
+        "cost": 1245.2489934387206,
+        "entry_date": "2026-08-28",
+        "entry_px": 28.90999984741211,
+        "fee_in": 2.119,
+        "last_px": 28.90999984741211,
+        "min_hold": 1,
+        "notional": 1243.1299934387207,
+        "peak_px": 28.90999984741211,
+        "reason": "union \u2229 news_g, no \ud83d\udea8; gate news=good; list yday_gainer; ret5=+9.2; leftover $1250.00",
+        "shares": 43,
+        "ticker": "ZYME"
+      }
+    },
+    "yday_equity": 9729.0
+  }
+}

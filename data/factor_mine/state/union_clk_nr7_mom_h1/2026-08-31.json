@@ -1,0 +1,48 @@
+{
+  "buys": [],
+  "cash": 9977.18,
+  "date": "2026-08-31",
+  "equity": 9977.18,
+  "fees": 8.0963,
+  "fills": [
+    {
+      "fees": 3.5422,
+      "pnl": 97.9,
+      "price": 12.77,
+      "shares": 269,
+      "side": "SELL",
+      "ticker": "MNRO"
+    },
+    {
+      "fees": 2.4564,
+      "pnl": -42.39,
+      "price": 23.68,
+      "shares": 139,
+      "side": "SELL",
+      "ticker": "MOS"
+    },
+    {
+      "fees": 2.0977,
+      "pnl": -78.32,
+      "price": 134.1,
+      "shares": 24,
+      "side": "SELL",
+      "ticker": "MRNA"
+    }
+  ],
+  "holdings": [],
+  "mean": -1.3979,
+  "n_trades_today": 3,
+  "recipe": "union_clk_nr7_mom_h1",
+  "sells": [
+    "MNRO",
+    "MOS",
+    "MRNA"
+  ],
+  "state": {
+    "after": "2026-08-31",
+    "cash": 9977.18,
+    "pos": {},
+    "yday_equity": 9977.18
+  }
+}

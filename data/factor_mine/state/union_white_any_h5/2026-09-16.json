@@ -1,0 +1,215 @@
+{
+  "buys": [
+    "IQV",
+    "RDNT",
+    "AVAH",
+    "BLFS",
+    "TEM",
+    "ADPT",
+    "SDGR",
+    "CAI"
+  ],
+  "cash": 115.67,
+  "date": "2026-09-16",
+  "equity": 8771.97,
+  "fees": 16.712,
+  "fills": [
+    {
+      "fees": 2.002,
+      "pnl": null,
+      "price": 270.89,
+      "shares": 4,
+      "side": "BUY",
+      "ticker": "IQV"
+    },
+    {
+      "fees": 2.032,
+      "pnl": null,
+      "price": 77.12,
+      "shares": 14,
+      "side": "BUY",
+      "ticker": "RDNT"
+    },
+    {
+      "fees": 2.218,
+      "pnl": null,
+      "price": 14.31,
+      "shares": 76,
+      "side": "BUY",
+      "ticker": "AVAH"
+    },
+    {
+      "fees": 2.08,
+      "pnl": null,
+      "price": 36.46,
+      "shares": 30,
+      "side": "BUY",
+      "ticker": "BLFS"
+    },
+    {
+      "fees": 2.035,
+      "pnl": null,
+      "price": 68.79,
+      "shares": 15,
+      "side": "BUY",
+      "ticker": "TEM"
+    },
+    {
+      "fees": 2.11,
+      "pnl": null,
+      "price": 27.09,
+      "shares": 40,
+      "side": "BUY",
+      "ticker": "ADPT"
+    },
+    {
+      "fees": 2.131,
+      "pnl": null,
+      "price": 23.29,
+      "shares": 47,
+      "side": "BUY",
+      "ticker": "SDGR"
+    },
+    {
+      "fees": 2.104,
+      "pnl": null,
+      "price": 28.16,
+      "shares": 38,
+      "side": "BUY",
+      "ticker": "CAI"
+    }
+  ],
+  "holdings": [
+    "ADPT",
+    "AVAH",
+    "BLFS",
+    "CAI",
+    "IQV",
+    "RDNT",
+    "SDGR",
+    "TEM"
+  ],
+  "mean": 0.1693,
+  "n_trades_today": 8,
+  "recipe": "union_white_any_h5",
+  "sells": [],
+  "state": {
+    "after": "2026-09-16",
+    "cash": 115.67,
+    "pos": {
+      "ADPT": {
+        "close_px": 27.670000076293945,
+        "cost": 1085.7100061035155,
+        "entry_date": "2026-09-16",
+        "entry_px": 27.09000015258789,
+        "fee_in": 2.11,
+        "last_px": 27.09000015258789,
+        "min_hold": 5,
+        "notional": 1083.6000061035156,
+        "peak_px": 27.09000015258789,
+        "reason": "\u22120 red + (yday up or major catalyst), then Score; gate cam_bad_max=0,yday_or_catalyst=True; rank list; list probable,yday_gainer,ohlc_hot; \ud83d\udd35; \u26aa; ret5=+9.6; leftover $1094.64",
+        "shares": 40,
+        "ticker": "ADPT"
+      },
+      "AVAH": {
+        "close_px": 14.260000228881836,
+        "cost": 1089.7780318908692,
+        "entry_date": "2026-09-16",
+        "entry_px": 14.3100004196167,
+        "fee_in": 2.218,
+        "last_px": 14.3100004196167,
+        "min_hold": 5,
+        "notional": 1087.5600318908691,
+        "peak_px": 14.3100004196167,
+        "reason": "\u22120 red + (yday up or major catalyst), then Score; gate cam_bad_max=0,yday_or_catalyst=True; rank list; list flatten; \u26aa; ret5=+4.8; leftover $1094.64",
+        "shares": 76,
+        "ticker": "AVAH"
+      },
+      "BLFS": {
+        "close_px": 36.11000061035156,
+        "cost": 1095.8799725341796,
+        "entry_date": "2026-09-16",
+        "entry_px": 36.459999084472656,
+        "fee_in": 2.08,
+        "last_px": 36.459999084472656,
+        "min_hold": 5,
+        "notional": 1093.7999725341797,
+        "peak_px": 36.459999084472656,
+        "reason": "\u22120 red + (yday up or major catalyst), then Score; gate cam_bad_max=0,yday_or_catalyst=True; rank list; list flatten; \ud83d\udd35; \u26aa; ret5=+2.9; leftover $1094.64",
+        "shares": 30,
+        "ticker": "BLFS"
+      },
+      "CAI": {
+        "close_px": 28.209999084472656,
+        "cost": 1072.1839942016602,
+        "entry_date": "2026-09-16",
+        "entry_px": 28.15999984741211,
+        "fee_in": 2.104,
+        "last_px": 28.15999984741211,
+        "min_hold": 5,
+        "notional": 1070.0799942016602,
+        "peak_px": 28.15999984741211,
+        "reason": "\u22120 red + (yday up or major catalyst), then Score; gate cam_bad_max=0,yday_or_catalyst=True; rank list; list yday_gainer,ohlc_hot; \u26aa; ret5=+14.8; leftover $1094.64",
+        "shares": 38,
+        "ticker": "CAI"
+      },
+      "IQV": {
+        "close_px": 268.82000732421875,
+        "cost": 1085.56205859375,
+        "entry_date": "2026-09-16",
+        "entry_px": 270.8900146484375,
+        "fee_in": 2.002,
+        "last_px": 270.8900146484375,
+        "min_hold": 5,
+        "notional": 1083.56005859375,
+        "peak_px": 270.8900146484375,
+        "reason": "\u22120 red + (yday up or major catalyst), then Score; gate cam_bad_max=0,yday_or_catalyst=True; rank list; list flatten; \u26aa; ret5=+4.0; leftover $1094.64",
+        "shares": 4,
+        "ticker": "IQV"
+      },
+      "RDNT": {
+        "close_px": 75.77999877929688,
+        "cost": 1081.7120384521484,
+        "entry_date": "2026-09-16",
+        "entry_px": 77.12000274658203,
+        "fee_in": 2.032,
+        "last_px": 77.12000274658203,
+        "min_hold": 5,
+        "notional": 1079.6800384521484,
+        "peak_px": 77.12000274658203,
+        "reason": "\u22120 red + (yday up or major catalyst), then Score; gate cam_bad_max=0,yday_or_catalyst=True; rank list; list flatten; \u26aa; ret5=+7.2; leftover $1094.64",
+        "shares": 14,
+        "ticker": "RDNT"
+      },
+      "SDGR": {
+        "close_px": 23.93000030517578,
+        "cost": 1096.7610430297852,
+        "entry_date": "2026-09-16",
+        "entry_px": 23.290000915527344,
+        "fee_in": 2.131,
+        "last_px": 23.290000915527344,
+        "min_hold": 5,
+        "notional": 1094.6300430297852,
+        "peak_px": 23.290000915527344,
+        "reason": "\u22120 red + (yday up or major catalyst), then Score; gate cam_bad_max=0,yday_or_catalyst=True; rank list; list yday_gainer; \ud83d\udd35; \u26aa; ret5=+16.1; leftover $1094.64",
+        "shares": 47,
+        "ticker": "SDGR"
+      },
+      "TEM": {
+        "close_px": 69.97000122070312,
+        "cost": 1033.8850137329102,
+        "entry_date": "2026-09-16",
+        "entry_px": 68.79000091552734,
+        "fee_in": 2.035,
+        "last_px": 68.79000091552734,
+        "min_hold": 5,
+        "notional": 1031.8500137329102,
+        "peak_px": 68.79000091552734,
+        "reason": "\u22120 red + (yday up or major catalyst), then Score; gate cam_bad_max=0,yday_or_catalyst=True; rank list; list probable,yday_gainer; \ud83d\udd35; \u26aa; ret5=+7.1; leftover $1094.64",
+        "shares": 15,
+        "ticker": "TEM"
+      }
+    },
+    "yday_equity": 8771.97
+  }
+}

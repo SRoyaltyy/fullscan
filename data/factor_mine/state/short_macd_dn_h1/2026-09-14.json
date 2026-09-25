@@ -1,0 +1,93 @@
+{
+  "buys": [],
+  "cash": 9942.93,
+  "date": "2026-09-14",
+  "equity": 9942.93,
+  "fees": 27.8072,
+  "fills": [
+    {
+      "fees": 3.9345,
+      "pnl": 1.2,
+      "price": 2.01,
+      "shares": 305,
+      "side": "COVER",
+      "ticker": "AMTX"
+    },
+    {
+      "fees": 2.104,
+      "pnl": 5.26,
+      "price": 16.03,
+      "shares": 38,
+      "side": "COVER",
+      "ticker": "AUPH"
+    },
+    {
+      "fees": 8.3302,
+      "pnl": -8.11,
+      "price": 0.838,
+      "shares": 732,
+      "side": "COVER",
+      "ticker": "LDI"
+    },
+    {
+      "fees": 2.08,
+      "pnl": -18.9,
+      "price": 21.1,
+      "shares": 30,
+      "side": "COVER",
+      "ticker": "NAVN"
+    },
+    {
+      "fees": 2.9412,
+      "pnl": -11.65,
+      "price": 2.755,
+      "shares": 228,
+      "side": "COVER",
+      "ticker": "OVID"
+    },
+    {
+      "fees": 2.518,
+      "pnl": -6.85,
+      "price": 3.53,
+      "shares": 176,
+      "side": "COVER",
+      "ticker": "RWT"
+    },
+    {
+      "fees": 3.8313,
+      "pnl": 13.05,
+      "price": 2.02,
+      "shares": 297,
+      "side": "COVER",
+      "ticker": "SLBT"
+    },
+    {
+      "fees": 2.068,
+      "pnl": 7.01,
+      "price": 23.2,
+      "shares": 26,
+      "side": "COVER",
+      "ticker": "TYRA"
+    }
+  ],
+  "holdings": [],
+  "mean": -0.5957,
+  "n_trades_today": 8,
+  "recipe": "short_macd_dn_h1",
+  "sells": [
+    "AMTX",
+    "AUPH",
+    "LDI",
+    "NAVN",
+    "OVID",
+    "RWT",
+    "SLBT",
+    "TYRA"
+  ],
+  "state": {
+    "after": "2026-09-14",
+    "cash": 9942.93,
+    "pos": {},
+    "yday_equity": 9942.93
+  }
+}

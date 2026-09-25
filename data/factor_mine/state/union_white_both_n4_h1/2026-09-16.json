@@ -1,0 +1,119 @@
+{
+  "buys": [
+    "IQV",
+    "RDNT",
+    "BLFS",
+    "TEM"
+  ],
+  "cash": 112.99,
+  "date": "2026-09-16",
+  "equity": 9931.73,
+  "fees": 8.395,
+  "fills": [
+    {
+      "fees": 2.017,
+      "pnl": null,
+      "price": 270.89,
+      "shares": 9,
+      "side": "BUY",
+      "ticker": "IQV"
+    },
+    {
+      "fees": 2.086,
+      "pnl": null,
+      "price": 77.12,
+      "shares": 32,
+      "side": "BUY",
+      "ticker": "RDNT"
+    },
+    {
+      "fees": 2.194,
+      "pnl": null,
+      "price": 36.46,
+      "shares": 68,
+      "side": "BUY",
+      "ticker": "BLFS"
+    },
+    {
+      "fees": 2.098,
+      "pnl": null,
+      "price": 68.79,
+      "shares": 36,
+      "side": "BUY",
+      "ticker": "TEM"
+    }
+  ],
+  "holdings": [
+    "BLFS",
+    "IQV",
+    "RDNT",
+    "TEM"
+  ],
+  "mean": -0.5132,
+  "n_trades_today": 4,
+  "recipe": "union_white_both_n4_h1",
+  "sells": [],
+  "state": {
+    "after": "2026-09-16",
+    "cash": 112.99,
+    "pos": {
+      "BLFS": {
+        "close_px": 36.11000061035156,
+        "cost": 2481.4739377441406,
+        "entry_date": "2026-09-16",
+        "entry_px": 36.459999084472656,
+        "fee_in": 2.194,
+        "last_px": 36.459999084472656,
+        "min_hold": 1,
+        "notional": 2479.2799377441406,
+        "peak_px": 36.459999084472656,
+        "reason": "\u22120 red + yday up AND catalyst, top 4 by Score; gate cam_bad_max=0,yday_and_catalyst=True; rank list; list flatten; \ud83d\udd35; \u26aa; ret5=+2.9; leftover $2495.74",
+        "shares": 68,
+        "ticker": "BLFS"
+      },
+      "IQV": {
+        "close_px": 268.82000732421875,
+        "cost": 2440.0271318359373,
+        "entry_date": "2026-09-16",
+        "entry_px": 270.8900146484375,
+        "fee_in": 2.017,
+        "last_px": 270.8900146484375,
+        "min_hold": 1,
+        "notional": 2438.0101318359375,
+        "peak_px": 270.8900146484375,
+        "reason": "\u22120 red + yday up AND catalyst, top 4 by Score; gate cam_bad_max=0,yday_and_catalyst=True; rank list; list flatten; \u26aa; ret5=+4.0; leftover $2495.74",
+        "shares": 9,
+        "ticker": "IQV"
+      },
+      "RDNT": {
+        "close_px": 75.77999877929688,
+        "cost": 2469.926087890625,
+        "entry_date": "2026-09-16",
+        "entry_px": 77.12000274658203,
+        "fee_in": 2.086,
+        "last_px": 77.12000274658203,
+        "min_hold": 1,
+        "notional": 2467.840087890625,
+        "peak_px": 77.12000274658203,
+        "reason": "\u22120 red + yday up AND catalyst, top 4 by Score; gate cam_bad_max=0,yday_and_catalyst=True; rank list; list flatten; \u26aa; ret5=+7.2; leftover $2495.74",
+        "shares": 32,
+        "ticker": "RDNT"
+      },
+      "TEM": {
+        "close_px": 69.97000122070312,
+        "cost": 2478.5380329589843,
+        "entry_date": "2026-09-16",
+        "entry_px": 68.79000091552734,
+        "fee_in": 2.098,
+        "last_px": 68.79000091552734,
+        "min_hold": 1,
+        "notional": 2476.4400329589844,
+        "peak_px": 68.79000091552734,
+        "reason": "\u22120 red + yday up AND catalyst, top 4 by Score; gate cam_bad_max=0,yday_and_catalyst=True; rank list; list probable,yday_gainer; \ud83d\udd35; \u26aa; ret5=+7.1; leftover $2495.74",
+        "shares": 36,
+        "ticker": "TEM"
+      }
+    },
+    "yday_equity": 9931.73
+  }
+}

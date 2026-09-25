@@ -1,0 +1,105 @@
+{
+  "buys": [
+    "DBX",
+    "WAY",
+    "SM"
+  ],
+  "cash": 44.54,
+  "date": "2026-09-16",
+  "equity": 7928.23,
+  "fees": 8.9189,
+  "fills": [
+    {
+      "fees": 2.2349,
+      "pnl": -1395.2,
+      "price": 140.03,
+      "shares": 57,
+      "side": "SELL",
+      "ticker": "ORCL"
+    },
+    {
+      "fees": 2.203,
+      "pnl": null,
+      "price": 37.13,
+      "shares": 71,
+      "side": "BUY",
+      "ticker": "DBX"
+    },
+    {
+      "fees": 2.293,
+      "pnl": null,
+      "price": 26.27,
+      "shares": 101,
+      "side": "BUY",
+      "ticker": "WAY"
+    },
+    {
+      "fees": 2.188,
+      "pnl": null,
+      "price": 39.99,
+      "shares": 66,
+      "side": "BUY",
+      "ticker": "SM"
+    }
+  ],
+  "holdings": [
+    "DBX",
+    "SM",
+    "WAY"
+  ],
+  "mean": -0.9038,
+  "n_trades_today": 4,
+  "recipe": "union_news_or_net5_h3",
+  "sells": [
+    "ORCL"
+  ],
+  "state": {
+    "after": "2026-09-16",
+    "cash": 44.54,
+    "pos": {
+      "DBX": {
+        "close_px": 37.7400016784668,
+        "cost": 2638.4330758361816,
+        "entry_date": "2026-09-16",
+        "entry_px": 37.130001068115234,
+        "fee_in": 2.203,
+        "last_px": 37.130001068115234,
+        "min_hold": 3,
+        "notional": 2636.2300758361816,
+        "peak_px": 37.130001068115234,
+        "reason": "packet\ud83d\udfe2 OR headline\ud83d\udfe2 and camera net \u2265 5; gate news_or_headline=True,cam_net_min=5; rank cond; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+11.3; leftover $2660.02",
+        "shares": 71,
+        "ticker": "DBX"
+      },
+      "SM": {
+        "close_px": 38.15999984741211,
+        "cost": 2641.5281107788087,
+        "entry_date": "2026-09-16",
+        "entry_px": 39.9900016784668,
+        "fee_in": 2.188,
+        "last_px": 39.9900016784668,
+        "min_hold": 3,
+        "notional": 2639.3401107788086,
+        "peak_px": 39.9900016784668,
+        "reason": "packet\ud83d\udfe2 OR headline\ud83d\udfe2 and camera net \u2265 5; gate news_or_headline=True,cam_net_min=5; rank cond; list ohlc_hot; \ud83d\udd35; ret5=+9.3; leftover $2660.02",
+        "shares": 66,
+        "ticker": "SM"
+      },
+      "WAY": {
+        "close_px": 26.59000015258789,
+        "cost": 2655.563046234131,
+        "entry_date": "2026-09-16",
+        "entry_px": 26.270000457763672,
+        "fee_in": 2.293,
+        "last_px": 26.270000457763672,
+        "min_hold": 3,
+        "notional": 2653.270046234131,
+        "peak_px": 26.270000457763672,
+        "reason": "packet\ud83d\udfe2 OR headline\ud83d\udfe2 and camera net \u2265 5; gate news_or_headline=True,cam_net_min=5; rank cond; list yday_gainer,ohlc_hot; \ud83d\udd35; \u26aa; ret5=+10.0; leftover $2660.02",
+        "shares": 101,
+        "ticker": "WAY"
+      }
+    },
+    "yday_equity": 7928.23
+  }
+}

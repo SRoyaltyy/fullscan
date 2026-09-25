@@ -1,0 +1,39 @@
+{
+  "buys": [],
+  "cash": 9652.63,
+  "date": "2026-08-31",
+  "equity": 9652.63,
+  "fees": 58.506,
+  "fills": [
+    {
+      "fees": 56.3493,
+      "pnl": -758.45,
+      "price": 1.01,
+      "shares": 4310,
+      "side": "SELL",
+      "ticker": "LX"
+    },
+    {
+      "fees": 2.1567,
+      "pnl": 411.08,
+      "price": 140.39,
+      "shares": 38,
+      "side": "SELL",
+      "ticker": "SAIC"
+    }
+  ],
+  "holdings": [],
+  "mean": -2.4543,
+  "n_trades_today": 2,
+  "recipe": "union_overnight_h1",
+  "sells": [
+    "LX",
+    "SAIC"
+  ],
+  "state": {
+    "after": "2026-08-31",
+    "cash": 9652.63,
+    "pos": {},
+    "yday_equity": 9652.63
+  }
+}

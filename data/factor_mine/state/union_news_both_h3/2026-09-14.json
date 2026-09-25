@@ -1,0 +1,51 @@
+{
+  "buys": [],
+  "cash": 219.57,
+  "date": "2026-09-14",
+  "equity": 9875.27,
+  "fees": 0,
+  "fills": [],
+  "holdings": [
+    "ADBE",
+    "ORCL"
+  ],
+  "mean": 1.0509,
+  "n_trades_today": 0,
+  "recipe": "union_news_both_h3",
+  "sells": [],
+  "state": {
+    "after": "2026-09-14",
+    "cash": 219.57,
+    "pos": {
+      "ADBE": {
+        "close_px": 265.6000061035156,
+        "cost": 4845.449963378906,
+        "entry_date": "2026-09-11",
+        "entry_px": 242.1699981689453,
+        "fee_in": 2.05,
+        "last_px": 261.510009765625,
+        "min_hold": 3,
+        "notional": 4843.399963378906,
+        "peak_px": 261.510009765625,
+        "reason": "packet\ud83d\udfe2 AND headline\ud83d\udfe2 (thin; kept as a KILL); gate news_and_headline=True; rank cond; list earn_react; \ud83d\udd35; ret5=-12.9; leftover $5000.00",
+        "shares": 20,
+        "ticker": "ADBE"
+      },
+      "ORCL": {
+        "close_px": 144.7899932861328,
+        "cost": 4934.979780273437,
+        "entry_date": "2026-09-11",
+        "entry_px": 164.42999267578125,
+        "fee_in": 2.08,
+        "last_px": 141.4199981689453,
+        "min_hold": 3,
+        "notional": 4932.8997802734375,
+        "peak_px": 164.42999267578125,
+        "reason": "packet\ud83d\udfe2 AND headline\ud83d\udfe2 (thin; kept as a KILL); gate news_and_headline=True; rank cond; list flatten,earn_react; \ud83d\udd35; \u26aa; ret5=-0.7; leftover $5000.00",
+        "shares": 30,
+        "ticker": "ORCL"
+      }
+    },
+    "yday_equity": 9875.27
+  }
+}

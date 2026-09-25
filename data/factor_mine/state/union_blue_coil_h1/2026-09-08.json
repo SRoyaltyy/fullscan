@@ -1,0 +1,93 @@
+{
+  "buys": [],
+  "cash": 9447.89,
+  "date": "2026-09-08",
+  "equity": 9447.89,
+  "fees": 25.3002,
+  "fills": [
+    {
+      "fees": 6.2947,
+      "pnl": -79.84,
+      "price": 2.38,
+      "shares": 481,
+      "side": "SELL",
+      "ticker": "ALEC"
+    },
+    {
+      "fees": 2.079,
+      "pnl": 48.3,
+      "price": 54.31,
+      "shares": 23,
+      "side": "SELL",
+      "ticker": "ATRC"
+    },
+    {
+      "fees": 2.5699,
+      "pnl": -30.3,
+      "price": 6.57,
+      "shares": 180,
+      "side": "SELL",
+      "ticker": "BHC"
+    },
+    {
+      "fees": 4.5831,
+      "pnl": -19.6,
+      "price": 3.43,
+      "shares": 350,
+      "side": "SELL",
+      "ticker": "CABA"
+    },
+    {
+      "fees": 2.022,
+      "pnl": -42.58,
+      "price": 253.72,
+      "shares": 4,
+      "side": "SELL",
+      "ticker": "CRM"
+    },
+    {
+      "fees": 2.097,
+      "pnl": 16.13,
+      "price": 42.2,
+      "shares": 29,
+      "side": "SELL",
+      "ticker": "HRMY"
+    },
+    {
+      "fees": 3.3157,
+      "pnl": -128.02,
+      "price": 4.3,
+      "shares": 253,
+      "side": "SELL",
+      "ticker": "OABI"
+    },
+    {
+      "fees": 2.3388,
+      "pnl": -14.28,
+      "price": 11.22,
+      "shares": 107,
+      "side": "SELL",
+      "ticker": "VIR"
+    }
+  ],
+  "holdings": [],
+  "mean": -0.6367,
+  "n_trades_today": 8,
+  "recipe": "union_blue_coil_h1",
+  "sells": [
+    "ALEC",
+    "ATRC",
+    "BHC",
+    "CABA",
+    "CRM",
+    "HRMY",
+    "OABI",
+    "VIR"
+  ],
+  "state": {
+    "after": "2026-09-08",
+    "cash": 9447.89,
+    "pos": {},
+    "yday_equity": 9447.89
+  }
+}

@@ -1,0 +1,132 @@
+{
+  "buys": [],
+  "cash": 15426.97,
+  "date": "2026-09-14",
+  "equity": 10071.96,
+  "fees": 19.2454,
+  "fills": [
+    {
+      "fees": 2.022,
+      "pnl": 73.34,
+      "price": 261.51,
+      "shares": 4,
+      "side": "SELL",
+      "ticker": "ADBE"
+    },
+    {
+      "fees": 6.7129,
+      "pnl": -28.72,
+      "price": 2.01,
+      "shares": 513,
+      "side": "SELL",
+      "ticker": "AMTX"
+    },
+    {
+      "fees": 6.4515,
+      "pnl": -47.32,
+      "price": 2.05,
+      "shares": 493,
+      "side": "SELL",
+      "ticker": "BAK"
+    },
+    {
+      "fees": 2.028,
+      "pnl": -142.1,
+      "price": 141.42,
+      "shares": 6,
+      "side": "SELL",
+      "ticker": "ORCL"
+    },
+    {
+      "fees": 2.031,
+      "pnl": -34.21,
+      "price": 131.4,
+      "shares": 7,
+      "side": "SELL",
+      "ticker": "RH"
+    }
+  ],
+  "holdings": [
+    "CRDL",
+    "MYGN",
+    "QRVO",
+    "RWT"
+  ],
+  "mean": -2.1114,
+  "n_trades_today": 5,
+  "recipe": "combo_sn_5050_shared",
+  "sells": [
+    "ADBE",
+    "AMTX",
+    "BAK",
+    "ORCL",
+    "RH"
+  ],
+  "state": {
+    "after": "2026-09-14",
+    "cash": 15426.97,
+    "pos": {
+      "CRDL": {
+        "close_px": 1.9900000095367432,
+        "cost": 8.447661369359002,
+        "entry_date": "2026-09-11",
+        "entry_px": 2.0299999713897705,
+        "fee_in": 8.447661369359002,
+        "last_px": 1.9800000190734863,
+        "notional": 1305.2899816036224,
+        "owner": "short_news_r_h3",
+        "peak_px": 1.9800000190734863,
+        "reason": "news\ud83d\udd34; gate news=bad; list yday_mover; ret5=-8.3; combo leftover $1306.37; owner short_news_r_h3",
+        "shares": 643,
+        "side": "short",
+        "ticker": "CRDL"
+      },
+      "MYGN": {
+        "close_px": 3.7899999618530273,
+        "cost": 5.102731231663325,
+        "entry_date": "2026-09-11",
+        "entry_px": 3.369999885559082,
+        "fee_in": 5.102731231663325,
+        "last_px": 3.430000066757202,
+        "notional": 1304.1899557113647,
+        "owner": "short_news_r_h3",
+        "peak_px": 3.369999885559082,
+        "reason": "news\ud83d\udd34; gate news=bad; list yday_gainer,ohlc_hot; ret5=+4.0; combo leftover $1306.37; owner short_news_r_h3",
+        "shares": 387,
+        "side": "short",
+        "ticker": "MYGN"
+      },
+      "QRVO": {
+        "close_px": 107.9800033569336,
+        "cost": 2.0770050682172383,
+        "entry_date": "2026-09-11",
+        "entry_px": 112.83499908447266,
+        "fee_in": 2.0770050682172383,
+        "last_px": 114.11000061035156,
+        "notional": 1241.1849899291992,
+        "owner": "short_news_r_h3",
+        "peak_px": 112.83499908447266,
+        "reason": "news\ud83d\udd34; gate news=bad; list yday_gainer,ohlc_hot; \ud83d\udd35; ret5=+11.9; combo leftover $1306.37; owner short_news_r_h3",
+        "shares": 11,
+        "side": "short",
+        "ticker": "QRVO"
+      },
+      "RWT": {
+        "close_px": 3.8299999237060547,
+        "cost": 4.893678629943116,
+        "entry_date": "2026-09-11",
+        "entry_px": 3.5199999809265137,
+        "fee_in": 4.893678629943116,
+        "last_px": 3.5299999713897705,
+        "notional": 1305.9199929237366,
+        "owner": "short_news_r_h3",
+        "peak_px": 3.5199999809265137,
+        "reason": "news\ud83d\udd34; gate news=bad; list yday_mover; \ud83d\udd35; ret5=-19.0; combo leftover $1306.37; owner short_news_r_h3",
+        "shares": 371,
+        "side": "short",
+        "ticker": "RWT"
+      }
+    },
+    "yday_equity": 10071.96
+  }
+}

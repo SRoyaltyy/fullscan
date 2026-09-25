@@ -1,0 +1,99 @@
+{
+  "buys": [
+    "WAY",
+    "CRUS"
+  ],
+  "cash": 32.7,
+  "date": "2026-09-16",
+  "equity": 8774.41,
+  "fees": 10.8307,
+  "fills": [
+    {
+      "fees": 2.0653,
+      "pnl": 141.12,
+      "price": 253.34,
+      "shares": 13,
+      "side": "SELL",
+      "ticker": "ADBE"
+    },
+    {
+      "fees": 2.0783,
+      "pnl": -467.73,
+      "price": 140.03,
+      "shares": 19,
+      "side": "SELL",
+      "ticker": "ORCL"
+    },
+    {
+      "fees": 2.0921,
+      "pnl": -237.83,
+      "price": 125.55,
+      "shares": 23,
+      "side": "SELL",
+      "ticker": "RH"
+    },
+    {
+      "fees": 2.497,
+      "pnl": null,
+      "price": 26.27,
+      "shares": 169,
+      "side": "BUY",
+      "ticker": "WAY"
+    },
+    {
+      "fees": 2.098,
+      "pnl": null,
+      "price": 123.09,
+      "shares": 36,
+      "side": "BUY",
+      "ticker": "CRUS"
+    }
+  ],
+  "holdings": [
+    "CRUS",
+    "WAY"
+  ],
+  "mean": -2.0864,
+  "n_trades_today": 5,
+  "recipe": "union_news_vol_h3",
+  "sells": [
+    "ADBE",
+    "ORCL",
+    "RH"
+  ],
+  "state": {
+    "after": "2026-09-16",
+    "cash": 32.7,
+    "pos": {
+      "CRUS": {
+        "close_px": 118.0,
+        "cost": 4433.3378681640625,
+        "entry_date": "2026-09-16",
+        "entry_px": 123.08999633789062,
+        "fee_in": 2.098,
+        "last_px": 123.08999633789062,
+        "min_hold": 3,
+        "notional": 4431.2398681640625,
+        "peak_px": 123.08999633789062,
+        "reason": "combo gate; gate news=good,vol=good; list ohlc_hot; \ud83d\udd35; ret5=+10.3; leftover $4454.08",
+        "shares": 36,
+        "ticker": "CRUS"
+      },
+      "WAY": {
+        "close_px": 26.59000015258789,
+        "cost": 4442.127077362061,
+        "entry_date": "2026-09-16",
+        "entry_px": 26.270000457763672,
+        "fee_in": 2.497,
+        "last_px": 26.270000457763672,
+        "min_hold": 3,
+        "notional": 4439.630077362061,
+        "peak_px": 26.270000457763672,
+        "reason": "combo gate; gate news=good,vol=good; list yday_gainer,ohlc_hot; \ud83d\udd35; \u26aa; ret5=+10.0; leftover $4454.08",
+        "shares": 169,
+        "ticker": "WAY"
+      }
+    },
+    "yday_equity": 8774.41
+  }
+}

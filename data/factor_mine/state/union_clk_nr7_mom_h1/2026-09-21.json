@@ -1,0 +1,71 @@
+{
+  "buys": [
+    "ASST",
+    "A"
+  ],
+  "cash": 145.22,
+  "date": "2026-09-21",
+  "equity": 11211.86,
+  "fees": 4.619,
+  "fills": [
+    {
+      "fees": 2.524,
+      "pnl": null,
+      "price": 31.64,
+      "shares": 178,
+      "side": "BUY",
+      "ticker": "ASST"
+    },
+    {
+      "fees": 2.095,
+      "pnl": null,
+      "price": 157.87,
+      "shares": 35,
+      "side": "BUY",
+      "ticker": "A"
+    }
+  ],
+  "holdings": [
+    "A",
+    "ASST"
+  ],
+  "mean": -0.8433,
+  "n_trades_today": 2,
+  "recipe": "union_clk_nr7_mom_h1",
+  "sells": [],
+  "state": {
+    "after": "2026-09-21",
+    "cash": 145.22,
+    "pos": {
+      "A": {
+        "close_px": 161.94000244140625,
+        "cost": 5527.544829101563,
+        "entry_date": "2026-09-21",
+        "entry_px": 157.8699951171875,
+        "fee_in": 2.095,
+        "last_px": 157.8699951171875,
+        "min_hold": 1,
+        "notional": 5525.4498291015625,
+        "peak_px": 157.8699951171875,
+        "reason": "Clock-B #10 NR7 + moderate momentum; gate clk_nr7_mom=True; rank hot_score; list flatten; \ud83d\udd35; \u26aa; ret5=+6.5; leftover $5653.60",
+        "shares": 35,
+        "ticker": "A"
+      },
+      "ASST": {
+        "close_px": 30.329999923706055,
+        "cost": 5634.443891357422,
+        "entry_date": "2026-09-21",
+        "entry_px": 31.639999389648438,
+        "fee_in": 2.524,
+        "last_px": 31.639999389648438,
+        "min_hold": 1,
+        "notional": 5631.919891357422,
+        "peak_px": 31.639999389648438,
+        "reason": "Clock-B #10 NR7 + moderate momentum; gate clk_nr7_mom=True; rank hot_score; list ohlc_hot; \ud83d\udd35; ret5=+8.9; leftover $5653.60",
+        "shares": 178,
+        "ticker": "ASST"
+      }
+    },
+    "yday_equity": 11211.86
+  }
+}

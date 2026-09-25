@@ -1,0 +1,383 @@
+{
+  "buys": [
+    "AMBA",
+    "ASAN",
+    "ASST",
+    "DFDV",
+    "DOCU",
+    "GPRO",
+    "GWRE",
+    "HOOD",
+    "IOT",
+    "LULU",
+    "MAMA",
+    "PATH",
+    "GSM",
+    "OPK",
+    "PIPR"
+  ],
+  "cash": 8067.0,
+  "date": "2026-09-04",
+  "equity": 10006.66,
+  "fees": 39.3919,
+  "fills": [
+    {
+      "fees": 2.002,
+      "pnl": null,
+      "price": 63.18,
+      "shares": 4,
+      "side": "BUY",
+      "ticker": "AMBA"
+    },
+    {
+      "fees": 2.089,
+      "pnl": null,
+      "price": 8.74,
+      "shares": 33,
+      "side": "BUY",
+      "ticker": "ASAN"
+    },
+    {
+      "fees": 2.062,
+      "pnl": null,
+      "price": 25.18,
+      "shares": 24,
+      "side": "BUY",
+      "ticker": "ASST"
+    },
+    {
+      "fees": 2.308,
+      "pnl": null,
+      "price": 5.79,
+      "shares": 106,
+      "side": "BUY",
+      "ticker": "DFDV"
+    },
+    {
+      "fees": 2.002,
+      "pnl": null,
+      "price": 68.52,
+      "shares": 4,
+      "side": "BUY",
+      "ticker": "DOCU"
+    },
+    {
+      "fees": 5.3664,
+      "pnl": null,
+      "price": 1.48,
+      "shares": 416,
+      "side": "BUY",
+      "ticker": "GPRO"
+    },
+    {
+      "fees": 1.6785,
+      "pnl": null,
+      "price": 167.55,
+      "shares": 1,
+      "side": "BUY",
+      "ticker": "GWRE"
+    },
+    {
+      "fees": 2.005,
+      "pnl": null,
+      "price": 120.475,
+      "shares": 5,
+      "side": "BUY",
+      "ticker": "HOOD"
+    },
+    {
+      "fees": 2.008,
+      "pnl": null,
+      "price": 44.9,
+      "shares": 6,
+      "side": "BUY",
+      "ticker": "IOT"
+    },
+    {
+      "fees": 1.969,
+      "pnl": null,
+      "price": 98.15,
+      "shares": 2,
+      "side": "BUY",
+      "ticker": "LULU"
+    },
+    {
+      "fees": 2.044,
+      "pnl": null,
+      "price": 15.7,
+      "shares": 18,
+      "side": "BUY",
+      "ticker": "MAMA"
+    },
+    {
+      "fees": 2.041,
+      "pnl": null,
+      "price": 16.24,
+      "shares": 17,
+      "side": "BUY",
+      "ticker": "PATH"
+    },
+    {
+      "fees": 2.609369863400394,
+      "pnl": null,
+      "price": 4.67,
+      "shares": 185,
+      "side": "SHORT",
+      "ticker": "GSM"
+    },
+    {
+      "fees": 7.1415975347440535,
+      "pnl": null,
+      "price": 1.59,
+      "shares": 544,
+      "side": "SHORT",
+      "ticker": "OPK"
+    },
+    {
+      "fees": 2.0660698639334067,
+      "pnl": null,
+      "price": 76.55,
+      "shares": 11,
+      "side": "SHORT",
+      "ticker": "PIPR"
+    }
+  ],
+  "holdings": [],
+  "mean": 0.2802,
+  "n_trades_today": 15,
+  "recipe": "combo_seh_502525_split",
+  "sells": [],
+  "state": {
+    "after": "2026-09-04",
+    "cash": 8067.0,
+    "members": [
+      {
+        "cash": 7756.32,
+        "pos": {
+          "GSM": {
+            "close_px": 4.670000076293945,
+            "cost": 2.609369863400394,
+            "entry_date": "2026-09-04",
+            "entry_px": 4.670000076293945,
+            "fee_in": 2.609369863400394,
+            "last_px": 4.670000076293945,
+            "notional": 863.9500141143799,
+            "peak_px": 4.670000076293945,
+            "reason": "news\ud83d\udd34; gate news=bad; list yday_gainer; ret5=+11.9; leftover $866.20",
+            "shares": 185,
+            "ticker": "GSM"
+          },
+          "OPK": {
+            "close_px": 1.6399999856948853,
+            "cost": 7.1415975347440535,
+            "entry_date": "2026-09-04",
+            "entry_px": 1.590000033378601,
+            "fee_in": 7.1415975347440535,
+            "last_px": 1.590000033378601,
+            "notional": 864.960018157959,
+            "peak_px": 1.590000033378601,
+            "reason": "news\ud83d\udd34; gate news=bad; list flatten,yday_gainer,mover_buy; \ud83d\udd35; \u26aa; ret5=+7.3; leftover $866.20",
+            "shares": 544,
+            "ticker": "OPK"
+          },
+          "PIPR": {
+            "close_px": 77.04000091552734,
+            "cost": 2.0660698639334067,
+            "entry_date": "2026-09-04",
+            "entry_px": 76.55000305175781,
+            "fee_in": 2.0660698639334067,
+            "last_px": 76.55000305175781,
+            "notional": 842.0500335693359,
+            "peak_px": 76.55000305175781,
+            "reason": "news\ud83d\udd34; gate news=bad; list mover_buy; \ud83d\udd35; \u26aa; ret5=+4.4; leftover $866.20",
+            "shares": 11,
+            "ticker": "PIPR"
+          }
+        },
+        "yday_equity": 5152.77
+      },
+      {
+        "cash": 293.52,
+        "pos": {
+          "AMBA": {
+            "close_px": 62.88999938964844,
+            "cost": 254.72200122070313,
+            "entry_date": "2026-09-04",
+            "entry_px": 63.18000030517578,
+            "fee_in": 2.002,
+            "last_px": 63.18000030517578,
+            "min_hold": 3,
+            "notional": 252.72000122070312,
+            "peak_px": 63.18000030517578,
+            "reason": "union \u2229 e_fresh, no \ud83d\udea8; gate days_since_E_max=1,flag_E_min=0; list earn_react; \ud83d\udd35; ret5=-10.9; leftover $289.56",
+            "shares": 4,
+            "ticker": "AMBA"
+          },
+          "ASAN": {
+            "close_px": 8.8100004196167,
+            "cost": 290.5089924468994,
+            "entry_date": "2026-09-04",
+            "entry_px": 8.739999771118164,
+            "fee_in": 2.089,
+            "last_px": 8.739999771118164,
+            "min_hold": 3,
+            "notional": 288.4199924468994,
+            "peak_px": 8.739999771118164,
+            "reason": "union \u2229 e_fresh, no \ud83d\udea8; gate days_since_E_max=1,flag_E_min=0; list earn_react; \ud83d\udd35; ret5=-0.8; leftover $289.56",
+            "shares": 33,
+            "ticker": "ASAN"
+          },
+          "DOCU": {
+            "close_px": 68.41000366210938,
+            "cost": 276.08198657226563,
+            "entry_date": "2026-09-04",
+            "entry_px": 68.5199966430664,
+            "fee_in": 2.002,
+            "last_px": 68.5199966430664,
+            "min_hold": 3,
+            "notional": 274.0799865722656,
+            "peak_px": 68.5199966430664,
+            "reason": "union \u2229 e_fresh, no \ud83d\udea8; gate days_since_E_max=1,flag_E_min=0; list earn_react; \ud83d\udd35; ret5=+3.4; leftover $289.56",
+            "shares": 4,
+            "ticker": "DOCU"
+          },
+          "GWRE": {
+            "close_px": 162.4199981689453,
+            "cost": 169.22850305175783,
+            "entry_date": "2026-09-04",
+            "entry_px": 167.5500030517578,
+            "fee_in": 1.6785,
+            "last_px": 167.5500030517578,
+            "min_hold": 3,
+            "notional": 167.5500030517578,
+            "peak_px": 167.5500030517578,
+            "reason": "union \u2229 e_fresh, no \ud83d\udea8; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=+0.9; leftover $289.56",
+            "shares": 1,
+            "ticker": "GWRE"
+          },
+          "IOT": {
+            "close_px": 40.20000076293945,
+            "cost": 271.4080091552734,
+            "entry_date": "2026-09-04",
+            "entry_px": 44.900001525878906,
+            "fee_in": 2.008,
+            "last_px": 44.900001525878906,
+            "min_hold": 3,
+            "notional": 269.40000915527344,
+            "peak_px": 44.900001525878906,
+            "reason": "union \u2229 e_fresh, no \ud83d\udea8; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=-7.5; leftover $289.56",
+            "shares": 6,
+            "ticker": "IOT"
+          },
+          "LULU": {
+            "close_px": 100.61000061035156,
+            "cost": 198.2690030517578,
+            "entry_date": "2026-09-04",
+            "entry_px": 98.1500015258789,
+            "fee_in": 1.969,
+            "last_px": 98.1500015258789,
+            "min_hold": 3,
+            "notional": 196.3000030517578,
+            "peak_px": 98.1500015258789,
+            "reason": "union \u2229 e_fresh, no \ud83d\udea8; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=+5.9; leftover $289.56",
+            "shares": 2,
+            "ticker": "LULU"
+          },
+          "MAMA": {
+            "close_px": 15.15999984741211,
+            "cost": 284.64399656677244,
+            "entry_date": "2026-09-04",
+            "entry_px": 15.699999809265137,
+            "fee_in": 2.044,
+            "last_px": 15.699999809265137,
+            "min_hold": 3,
+            "notional": 282.59999656677246,
+            "peak_px": 15.699999809265137,
+            "reason": "union \u2229 e_fresh, no \ud83d\udea8; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=-0.4; leftover $289.56",
+            "shares": 18,
+            "ticker": "MAMA"
+          },
+          "PATH": {
+            "close_px": 15.1899995803833,
+            "cost": 278.1209961090088,
+            "entry_date": "2026-09-04",
+            "entry_px": 16.239999771118164,
+            "fee_in": 2.041,
+            "last_px": 16.239999771118164,
+            "min_hold": 3,
+            "notional": 276.0799961090088,
+            "peak_px": 16.239999771118164,
+            "reason": "union \u2229 e_fresh, no \ud83d\udea8; gate days_since_E_max=1,flag_E_min=0; list earn_react; \ud83d\udd35; ret5=-0.6; leftover $289.56",
+            "shares": 17,
+            "ticker": "PATH"
+          }
+        },
+        "yday_equity": 2245.4
+      },
+      {
+        "cash": 17.16,
+        "pos": {
+          "ASST": {
+            "close_px": 27.139999389648438,
+            "cost": 606.3820073242188,
+            "entry_date": "2026-09-04",
+            "entry_px": 25.18000030517578,
+            "fee_in": 2.062,
+            "last_px": 25.18000030517578,
+            "min_hold": 1,
+            "notional": 604.3200073242188,
+            "peak_px": 25.18000030517578,
+            "reason": "top 4 by hot; rank hot_score; list ohlc_hot; \ud83d\udd35; ret5=+16.0; leftover $616.25",
+            "shares": 24,
+            "ticker": "ASST"
+          },
+          "DFDV": {
+            "close_px": 5.869999885559082,
+            "cost": 616.0479959564209,
+            "entry_date": "2026-09-04",
+            "entry_px": 5.789999961853027,
+            "fee_in": 2.308,
+            "last_px": 5.789999961853027,
+            "min_hold": 1,
+            "notional": 613.7399959564209,
+            "peak_px": 5.789999961853027,
+            "reason": "top 4 by hot; rank hot_score; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+15.2; leftover $616.25",
+            "shares": 106,
+            "ticker": "DFDV"
+          },
+          "GPRO": {
+            "close_px": 1.7000000476837158,
+            "cost": 621.0464079345703,
+            "entry_date": "2026-09-04",
+            "entry_px": 1.4800000190734863,
+            "fee_in": 5.3664,
+            "last_px": 1.4800000190734863,
+            "min_hold": 1,
+            "notional": 615.6800079345703,
+            "peak_px": 1.4800000190734863,
+            "reason": "top 4 by hot; rank hot_score; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+129.8; leftover $616.25",
+            "shares": 416,
+            "ticker": "GPRO"
+          },
+          "HOOD": {
+            "close_px": 122.11000061035156,
+            "cost": 604.3799923706055,
+            "entry_date": "2026-09-04",
+            "entry_px": 120.4749984741211,
+            "fee_in": 2.005,
+            "last_px": 120.4749984741211,
+            "min_hold": 1,
+            "notional": 602.3749923706055,
+            "peak_px": 120.4749984741211,
+            "reason": "top 4 by hot; rank hot_score; list ohlc_hot; \ud83d\udd35; ret5=+13.6; leftover $616.25",
+            "shares": 5,
+            "ticker": "HOOD"
+          }
+        },
+        "yday_equity": 2608.49
+      }
+    ],
+    "pos": {},
+    "yday_equity": 10006.66
+  }
+}

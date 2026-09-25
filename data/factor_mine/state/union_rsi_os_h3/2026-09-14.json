@@ -1,0 +1,66 @@
+{
+  "buys": [],
+  "cash": 7.09,
+  "date": "2026-09-14",
+  "equity": 9240.94,
+  "fees": 0,
+  "fills": [],
+  "holdings": [
+    "COO",
+    "NAVN",
+    "RWT"
+  ],
+  "mean": 3.3921,
+  "n_trades_today": 0,
+  "recipe": "union_rsi_os_h3",
+  "sells": [],
+  "state": {
+    "after": "2026-09-14",
+    "cash": 7.09,
+    "pos": {
+      "COO": {
+        "close_px": 54.220001220703125,
+        "cost": 2953.791991760254,
+        "entry_date": "2026-09-11",
+        "entry_px": 54.65999984741211,
+        "fee_in": 2.152,
+        "last_px": 54.779998779296875,
+        "min_hold": 3,
+        "notional": 2951.639991760254,
+        "peak_px": 54.779998779296875,
+        "reason": "union \u2229 rsi_os, no \ud83d\udea8; gate rsi_os=True; list yday_mover; ret5=-23.3; leftover $2969.79",
+        "shares": 54,
+        "ticker": "COO"
+      },
+      "NAVN": {
+        "close_px": 21.3700008392334,
+        "cost": 2970.262087890625,
+        "entry_date": "2026-09-11",
+        "entry_px": 20.610000610351562,
+        "fee_in": 2.422,
+        "last_px": 21.100000381469727,
+        "min_hold": 3,
+        "notional": 2967.840087890625,
+        "peak_px": 21.100000381469727,
+        "reason": "union \u2229 rsi_os, no \ud83d\udea8; gate rsi_os=True; list yday_mover; ret5=-26.9; leftover $2969.79",
+        "shares": 144,
+        "ticker": "NAVN"
+      },
+      "RWT": {
+        "close_px": 3.8299999237060547,
+        "cost": 2978.234683921051,
+        "entry_date": "2026-09-11",
+        "entry_px": 3.5199999809265137,
+        "fee_in": 10.8747,
+        "last_px": 3.5299999713897705,
+        "min_hold": 3,
+        "notional": 2967.359983921051,
+        "peak_px": 3.5299999713897705,
+        "reason": "union \u2229 rsi_os, no \ud83d\udea8; gate rsi_os=True; list yday_mover; \ud83d\udd35; ret5=-19.0; leftover $2969.79",
+        "shares": 843,
+        "ticker": "RWT"
+      }
+    },
+    "yday_equity": 9240.94
+  }
+}

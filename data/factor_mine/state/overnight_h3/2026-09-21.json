@@ -1,0 +1,114 @@
+{
+  "buys": [
+    "ABVX",
+    "MLKN",
+    "THO"
+  ],
+  "cash": 90.24,
+  "date": "2026-09-21",
+  "equity": 8534.77,
+  "fees": 13.1076,
+  "fills": [
+    {
+      "fees": 4.3201,
+      "pnl": -213.55,
+      "price": 13.125,
+      "shares": 328,
+      "side": "SELL",
+      "ticker": "ALMU"
+    },
+    {
+      "fees": 2.2025,
+      "pnl": -208.76,
+      "price": 76.98,
+      "shares": 56,
+      "side": "SELL",
+      "ticker": "LEN"
+    },
+    {
+      "fees": 2.071,
+      "pnl": null,
+      "price": 105.72,
+      "shares": 27,
+      "side": "BUY",
+      "ticker": "ABVX"
+    },
+    {
+      "fees": 2.401,
+      "pnl": null,
+      "price": 20.85,
+      "shares": 137,
+      "side": "BUY",
+      "ticker": "MLKN"
+    },
+    {
+      "fees": 2.113,
+      "pnl": null,
+      "price": 68.39,
+      "shares": 41,
+      "side": "BUY",
+      "ticker": "THO"
+    }
+  ],
+  "holdings": [
+    "ABVX",
+    "MLKN",
+    "THO"
+  ],
+  "mean": 0.9288,
+  "n_trades_today": 5,
+  "recipe": "overnight_h3",
+  "sells": [
+    "ALMU",
+    "LEN"
+  ],
+  "state": {
+    "after": "2026-09-21",
+    "cash": 90.24,
+    "pos": {
+      "ABVX": {
+        "close_px": 103.44999694824219,
+        "cost": 2856.5110329589843,
+        "entry_date": "2026-09-21",
+        "entry_px": 105.72000122070312,
+        "fee_in": 2.071,
+        "last_px": 105.72000122070312,
+        "min_hold": 3,
+        "notional": 2854.4400329589844,
+        "peak_px": 105.72000122070312,
+        "reason": "baseline list, no extra gate; list overnight; ret5=-11.5; leftover $2870.57",
+        "shares": 27,
+        "ticker": "ABVX"
+      },
+      "MLKN": {
+        "close_px": 20.31999969482422,
+        "cost": 2858.8510522613524,
+        "entry_date": "2026-09-21",
+        "entry_px": 20.850000381469727,
+        "fee_in": 2.401,
+        "last_px": 20.850000381469727,
+        "min_hold": 3,
+        "notional": 2856.4500522613525,
+        "peak_px": 20.850000381469727,
+        "reason": "baseline list, no extra gate; list overnight; ret5=-2.5; leftover $2870.57",
+        "shares": 137,
+        "ticker": "MLKN"
+      },
+      "THO": {
+        "close_px": 69.94000244140625,
+        "cost": 2806.1029749755858,
+        "entry_date": "2026-09-21",
+        "entry_px": 68.38999938964844,
+        "fee_in": 2.113,
+        "last_px": 68.38999938964844,
+        "min_hold": 3,
+        "notional": 2803.989974975586,
+        "peak_px": 68.38999938964844,
+        "reason": "baseline list, no extra gate; list overnight; ret5=-7.0; leftover $2870.57",
+        "shares": 41,
+        "ticker": "THO"
+      }
+    },
+    "yday_equity": 8534.77
+  }
+}

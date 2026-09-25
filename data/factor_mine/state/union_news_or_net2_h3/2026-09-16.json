@@ -1,0 +1,171 @@
+{
+  "buys": [
+    "DBX",
+    "WAY",
+    "SM",
+    "CRUS",
+    "QCOM"
+  ],
+  "cash": 114.34,
+  "date": "2026-09-16",
+  "equity": 8561.76,
+  "fees": 34.144,
+  "fills": [
+    {
+      "fees": 2.0653,
+      "pnl": 141.12,
+      "price": 253.34,
+      "shares": 13,
+      "side": "SELL",
+      "ticker": "ADBE"
+    },
+    {
+      "fees": 19.5164,
+      "pnl": -456.52,
+      "price": 1.84,
+      "shares": 1492,
+      "side": "SELL",
+      "ticker": "BAK"
+    },
+    {
+      "fees": 2.0783,
+      "pnl": -467.73,
+      "price": 140.03,
+      "shares": 19,
+      "side": "SELL",
+      "ticker": "ORCL"
+    },
+    {
+      "fees": 2.128,
+      "pnl": null,
+      "price": 37.13,
+      "shares": 46,
+      "side": "BUY",
+      "ticker": "DBX"
+    },
+    {
+      "fees": 2.188,
+      "pnl": null,
+      "price": 26.27,
+      "shares": 66,
+      "side": "BUY",
+      "ticker": "WAY"
+    },
+    {
+      "fees": 2.119,
+      "pnl": null,
+      "price": 39.99,
+      "shares": 43,
+      "side": "BUY",
+      "ticker": "SM"
+    },
+    {
+      "fees": 2.032,
+      "pnl": null,
+      "price": 123.09,
+      "shares": 14,
+      "side": "BUY",
+      "ticker": "CRUS"
+    },
+    {
+      "fees": 2.017,
+      "pnl": null,
+      "price": 189.17,
+      "shares": 9,
+      "side": "BUY",
+      "ticker": "QCOM"
+    }
+  ],
+  "holdings": [
+    "CRUS",
+    "DBX",
+    "QCOM",
+    "SM",
+    "WAY"
+  ],
+  "mean": -6.8067,
+  "n_trades_today": 8,
+  "recipe": "union_news_or_net2_h3",
+  "sells": [
+    "ADBE",
+    "BAK",
+    "ORCL"
+  ],
+  "state": {
+    "after": "2026-09-16",
+    "cash": 114.34,
+    "pos": {
+      "CRUS": {
+        "close_px": 118.0,
+        "cost": 1725.2919487304687,
+        "entry_date": "2026-09-16",
+        "entry_px": 123.08999633789062,
+        "fee_in": 2.032,
+        "last_px": 123.08999633789062,
+        "min_hold": 3,
+        "notional": 1723.2599487304688,
+        "peak_px": 123.08999633789062,
+        "reason": "packet\ud83d\udfe2 OR headline\ud83d\udfe2 and camera net \u2265 2; gate news_or_headline=True,cam_net_min=2; rank cond; list ohlc_hot; \ud83d\udd35; ret5=+10.3; leftover $1742.40",
+        "shares": 14,
+        "ticker": "CRUS"
+      },
+      "DBX": {
+        "close_px": 37.7400016784668,
+        "cost": 1710.1080491333007,
+        "entry_date": "2026-09-16",
+        "entry_px": 37.130001068115234,
+        "fee_in": 2.128,
+        "last_px": 37.130001068115234,
+        "min_hold": 3,
+        "notional": 1707.9800491333008,
+        "peak_px": 37.130001068115234,
+        "reason": "packet\ud83d\udfe2 OR headline\ud83d\udfe2 and camera net \u2265 2; gate news_or_headline=True,cam_net_min=2; rank cond; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+11.3; leftover $1742.40",
+        "shares": 46,
+        "ticker": "DBX"
+      },
+      "QCOM": {
+        "close_px": 184.83999633789062,
+        "cost": 1704.5469835205079,
+        "entry_date": "2026-09-16",
+        "entry_px": 189.1699981689453,
+        "fee_in": 2.017,
+        "last_px": 189.1699981689453,
+        "min_hold": 3,
+        "notional": 1702.5299835205078,
+        "peak_px": 189.1699981689453,
+        "reason": "packet\ud83d\udfe2 OR headline\ud83d\udfe2 and camera net \u2265 2; gate news_or_headline=True,cam_net_min=2; rank cond; list ohlc_hot; \ud83d\udd35; ret5=+7.9; leftover $1742.40",
+        "shares": 9,
+        "ticker": "QCOM"
+      },
+      "SM": {
+        "close_px": 38.15999984741211,
+        "cost": 1721.6890721740722,
+        "entry_date": "2026-09-16",
+        "entry_px": 39.9900016784668,
+        "fee_in": 2.119,
+        "last_px": 39.9900016784668,
+        "min_hold": 3,
+        "notional": 1719.5700721740723,
+        "peak_px": 39.9900016784668,
+        "reason": "packet\ud83d\udfe2 OR headline\ud83d\udfe2 and camera net \u2265 2; gate news_or_headline=True,cam_net_min=2; rank cond; list ohlc_hot; \ud83d\udd35; ret5=+9.3; leftover $1742.40",
+        "shares": 43,
+        "ticker": "SM"
+      },
+      "WAY": {
+        "close_px": 26.59000015258789,
+        "cost": 1736.0080302124024,
+        "entry_date": "2026-09-16",
+        "entry_px": 26.270000457763672,
+        "fee_in": 2.188,
+        "last_px": 26.270000457763672,
+        "min_hold": 3,
+        "notional": 1733.8200302124023,
+        "peak_px": 26.270000457763672,
+        "reason": "packet\ud83d\udfe2 OR headline\ud83d\udfe2 and camera net \u2265 2; gate news_or_headline=True,cam_net_min=2; rank cond; list yday_gainer,ohlc_hot; \ud83d\udd35; \u26aa; ret5=+10.0; leftover $1742.40",
+        "shares": 66,
+        "ticker": "WAY"
+      }
+    },
+    "yday_equity": 8561.76
+  }
+}

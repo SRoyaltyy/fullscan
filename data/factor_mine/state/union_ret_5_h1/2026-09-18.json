@@ -1,0 +1,270 @@
+{
+  "buys": [
+    "SDGR",
+    "CYPH",
+    "TEM",
+    "LVWR",
+    "RXT",
+    "VICR",
+    "RBRK"
+  ],
+  "cash": 259.28,
+  "date": "2026-09-18",
+  "equity": 10207.8,
+  "fees": 65.7587,
+  "fills": [
+    {
+      "fees": 2.175,
+      "pnl": -68.13,
+      "price": 21.3,
+      "shares": 55,
+      "side": "SELL",
+      "ticker": "BBNX"
+    },
+    {
+      "fees": 2.2596,
+      "pnl": -7.78,
+      "price": 14.97,
+      "shares": 82,
+      "side": "SELL",
+      "ticker": "CPRI"
+    },
+    {
+      "fees": 4.2175,
+      "pnl": 27.05,
+      "price": 3.97,
+      "shares": 322,
+      "side": "SELL",
+      "ticker": "EMAT"
+    },
+    {
+      "fees": 8.974,
+      "pnl": 91.94,
+      "price": 1.96,
+      "shares": 686,
+      "side": "SELL",
+      "ticker": "HLP"
+    },
+    {
+      "fees": 2.3831,
+      "pnl": -20.47,
+      "price": 10.12,
+      "shares": 121,
+      "side": "SELL",
+      "ticker": "IOVA"
+    },
+    {
+      "fees": 15.1931,
+      "pnl": 27.92,
+      "price": 1.12,
+      "shares": 1162,
+      "side": "SELL",
+      "ticker": "IQ"
+    },
+    {
+      "fees": 2.0341,
+      "pnl": 48.83,
+      "price": 158.04,
+      "shares": 8,
+      "side": "SELL",
+      "ticker": "TWST"
+    },
+    {
+      "fees": 2.116,
+      "pnl": null,
+      "price": 29.32,
+      "shares": 42,
+      "side": "BUY",
+      "ticker": "SDGR"
+    },
+    {
+      "fees": 5.3406,
+      "pnl": null,
+      "price": 3.035,
+      "shares": 414,
+      "side": "BUY",
+      "ticker": "CYPH"
+    },
+    {
+      "fees": 2.035,
+      "pnl": null,
+      "price": 81.4,
+      "shares": 15,
+      "side": "BUY",
+      "ticker": "TEM"
+    },
+    {
+      "fees": 10.8876,
+      "pnl": null,
+      "price": 1.49,
+      "shares": 844,
+      "side": "BUY",
+      "ticker": "LVWR"
+    },
+    {
+      "fees": 4.1151,
+      "pnl": null,
+      "price": 3.94,
+      "shares": 319,
+      "side": "BUY",
+      "ticker": "RXT"
+    },
+    {
+      "fees": 2.005,
+      "pnl": null,
+      "price": 219.62,
+      "shares": 5,
+      "side": "BUY",
+      "ticker": "VICR"
+    },
+    {
+      "fees": 2.023,
+      "pnl": null,
+      "price": 108.55,
+      "shares": 11,
+      "side": "BUY",
+      "ticker": "RBRK"
+    }
+  ],
+  "holdings": [
+    "CYPH",
+    "INDP",
+    "LVWR",
+    "RBRK",
+    "RXT",
+    "SDGR",
+    "TEM",
+    "VICR"
+  ],
+  "mean": 0.3466,
+  "n_trades_today": 14,
+  "recipe": "union_ret_5_h1",
+  "sells": [
+    "BBNX",
+    "CPRI",
+    "EMAT",
+    "HLP",
+    "IOVA",
+    "IQ",
+    "TWST"
+  ],
+  "state": {
+    "after": "2026-09-18",
+    "cash": 259.28,
+    "pos": {
+      "CYPH": {
+        "close_px": 3.5999999046325684,
+        "cost": 1261.830635533905,
+        "entry_date": "2026-09-18",
+        "entry_px": 3.0350000858306885,
+        "fee_in": 5.3406,
+        "last_px": 3.0350000858306885,
+        "min_hold": 1,
+        "notional": 1256.490035533905,
+        "peak_px": 3.0350000858306885,
+        "reason": "rank by ret_5; rank ret_5; list yday_gainer,yday_mover; \ud83d\udd35; \u26aa; ret5=+39.5; leftover $1257.61",
+        "shares": 414,
+        "ticker": "CYPH"
+      },
+      "INDP": {
+        "close_px": 3.549999952316284,
+        "cost": 1237.767328924942,
+        "entry_date": "2026-09-16",
+        "entry_px": 3.6600000858306885,
+        "fee_in": 4.3473,
+        "last_px": 3.8499999046325684,
+        "min_hold": 1,
+        "notional": 1233.420028924942,
+        "peak_px": 3.8499999046325684,
+        "reason": "rank by ret_5; rank ret_5; list yday_gainer,yday_mover; ret5=+96.8; leftover $1236.06",
+        "shares": 337,
+        "ticker": "INDP"
+      },
+      "LVWR": {
+        "close_px": 1.6299999952316284,
+        "cost": 1268.4476080490113,
+        "entry_date": "2026-09-18",
+        "entry_px": 1.4900000095367432,
+        "fee_in": 10.8876,
+        "last_px": 1.4900000095367432,
+        "min_hold": 1,
+        "notional": 1257.5600080490112,
+        "peak_px": 1.4900000095367432,
+        "reason": "rank by ret_5; rank ret_5; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+25.7; leftover $1257.61",
+        "shares": 844,
+        "ticker": "LVWR"
+      },
+      "RBRK": {
+        "close_px": 106.70999908447266,
+        "cost": 1196.0730335693358,
+        "entry_date": "2026-09-18",
+        "entry_px": 108.55000305175781,
+        "fee_in": 2.023,
+        "last_px": 108.55000305175781,
+        "min_hold": 1,
+        "notional": 1194.050033569336,
+        "peak_px": 108.55000305175781,
+        "reason": "rank by ret_5; rank ret_5; list flatten; \u26aa; ret5=+21.3; leftover $1257.61",
+        "shares": 11,
+        "ticker": "RBRK"
+      },
+      "RXT": {
+        "close_px": 3.799999952316284,
+        "cost": 1260.9751182533264,
+        "entry_date": "2026-09-18",
+        "entry_px": 3.940000057220459,
+        "fee_in": 4.1151,
+        "last_px": 3.940000057220459,
+        "min_hold": 1,
+        "notional": 1256.8600182533264,
+        "peak_px": 3.940000057220459,
+        "reason": "rank by ret_5; rank ret_5; list yday_gainer; \ud83d\udd35; \u26aa; ret5=+25.2; leftover $1257.61",
+        "shares": 319,
+        "ticker": "RXT"
+      },
+      "SDGR": {
+        "close_px": 29.020000457763672,
+        "cost": 1233.5559871826172,
+        "entry_date": "2026-09-18",
+        "entry_px": 29.31999969482422,
+        "fee_in": 2.116,
+        "last_px": 29.31999969482422,
+        "min_hold": 1,
+        "notional": 1231.4399871826172,
+        "peak_px": 29.31999969482422,
+        "reason": "rank by ret_5; rank ret_5; list yday_gainer,yday_mover; \ud83d\udd35; \u26aa; ret5=+60.9; leftover $1257.61",
+        "shares": 42,
+        "ticker": "SDGR"
+      },
+      "TEM": {
+        "close_px": 77.83999633789062,
+        "cost": 1223.0350228881837,
+        "entry_date": "2026-09-18",
+        "entry_px": 81.4000015258789,
+        "fee_in": 2.035,
+        "last_px": 81.4000015258789,
+        "min_hold": 1,
+        "notional": 1221.0000228881836,
+        "peak_px": 81.4000015258789,
+        "reason": "rank by ret_5; rank ret_5; list yday_gainer,yday_mover; \ud83d\udd35; \u26aa; ret5=+36.8; leftover $1257.61",
+        "shares": 15,
+        "ticker": "TEM"
+      },
+      "VICR": {
+        "close_px": 222.72000122070312,
+        "cost": 1100.1049755859376,
+        "entry_date": "2026-09-18",
+        "entry_px": 219.6199951171875,
+        "fee_in": 2.005,
+        "last_px": 219.6199951171875,
+        "min_hold": 1,
+        "notional": 1098.0999755859375,
+        "peak_px": 219.6199951171875,
+        "reason": "rank by ret_5; rank ret_5; list flatten,yday_gainer,yday_mover; \ud83d\udd35; ret5=+21.5; leftover $1257.61",
+        "shares": 5,
+        "ticker": "VICR"
+      }
+    },
+    "yday_equity": 10207.8
+  }
+}

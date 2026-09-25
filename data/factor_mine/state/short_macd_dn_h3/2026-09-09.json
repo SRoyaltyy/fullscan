@@ -1,0 +1,133 @@
+{
+  "buys": [],
+  "cash": 14827.65,
+  "date": "2026-09-09",
+  "equity": 10020.2,
+  "fees": 0,
+  "fills": [],
+  "holdings": [
+    "AIIO",
+    "ASTS",
+    "BHC",
+    "CRDO",
+    "HQ",
+    "PLAY",
+    "SCZM",
+    "UAMY"
+  ],
+  "mean": 1.2863,
+  "n_trades_today": 0,
+  "recipe": "short_macd_dn_h3",
+  "sells": [],
+  "state": {
+    "after": "2026-09-09",
+    "cash": 14827.65,
+    "pos": {
+      "AIIO": {
+        "close_px": 1.8600000143051147,
+        "cost": 4.704764383561644,
+        "entry_date": "2026-09-04",
+        "entry_px": 1.75,
+        "fee_in": 4.704764383561644,
+        "last_px": 1.9299999475479126,
+        "notional": 626.5,
+        "peak_px": 1.75,
+        "reason": "MACD histogram < 0; gate macd_down=True; list yday_mover; \ud83d\udd35; ret5=-24.6; leftover $627.91",
+        "shares": 358,
+        "ticker": "AIIO"
+      },
+      "ASTS": {
+        "close_px": 62.41999816894531,
+        "cost": 2.052632877088573,
+        "entry_date": "2026-09-04",
+        "entry_px": 63.400001525878906,
+        "fee_in": 2.052632877088573,
+        "last_px": 66.56999969482422,
+        "notional": 570.6000137329102,
+        "peak_px": 63.15999984741211,
+        "reason": "MACD histogram < 0; gate macd_down=True; list yday_gainer; \ud83d\udd35; ret5=+1.1; leftover $627.91",
+        "shares": 9,
+        "ticker": "ASTS"
+      },
+      "BHC": {
+        "close_px": 6.159999847412109,
+        "cost": 2.3114967124259636,
+        "entry_date": "2026-09-04",
+        "entry_px": 6.710000038146973,
+        "fee_in": 2.3114967124259636,
+        "last_px": 6.380000114440918,
+        "notional": 624.0300035476685,
+        "peak_px": 6.380000114440918,
+        "reason": "MACD histogram < 0; gate macd_down=True; list flatten,mover_buy; \ud83d\udd35; \u26aa; ret5=+7.3; leftover $627.91",
+        "shares": 93,
+        "ticker": "BHC"
+      },
+      "CRDO": {
+        "close_px": 167.9199981689453,
+        "cost": 2.0323232881728917,
+        "entry_date": "2026-09-04",
+        "entry_px": 162.10000610351562,
+        "fee_in": 2.0323232881728917,
+        "last_px": 165.02000427246094,
+        "notional": 486.3000183105469,
+        "peak_px": 162.10000610351562,
+        "reason": "MACD histogram < 0; gate macd_down=True; list yday_mover; \ud83d\udd35; ret5=-31.7; leftover $627.91",
+        "shares": 3,
+        "ticker": "CRDO"
+      },
+      "HQ": {
+        "close_px": 16.06999969482422,
+        "cost": 2.143989040688292,
+        "entry_date": "2026-09-04",
+        "entry_px": 15.899999618530273,
+        "fee_in": 2.143989040688292,
+        "last_px": 15.720000267028809,
+        "notional": 620.0999851226807,
+        "peak_px": 15.399999618530273,
+        "reason": "MACD histogram < 0; gate macd_down=True; list probable,yday_gainer,yday_mover; ret5=-4.1; leftover $627.91",
+        "shares": 39,
+        "ticker": "HQ"
+      },
+      "PLAY": {
+        "close_px": 8.1899995803833,
+        "cost": 2.2482800003051757,
+        "entry_date": "2026-09-04",
+        "entry_px": 8.59000015258789,
+        "fee_in": 2.2482800003051757,
+        "last_px": 8.789999961853027,
+        "notional": 627.070011138916,
+        "peak_px": 8.59000015258789,
+        "reason": "MACD histogram < 0; gate macd_down=True; list yday_gainer; \ud83d\udd35; ret5=-5.6; leftover $627.91",
+        "shares": 73,
+        "ticker": "PLAY"
+      },
+      "SCZM": {
+        "close_px": 10.430000305175781,
+        "cost": 2.2133372598203893,
+        "entry_date": "2026-09-04",
+        "entry_px": 10.029999732971191,
+        "fee_in": 2.2133372598203893,
+        "last_px": 10.119999885559082,
+        "notional": 621.8599834442139,
+        "peak_px": 9.899999618530273,
+        "reason": "MACD histogram < 0; gate macd_down=True; list yday_gainer; ret5=+4.0; leftover $627.91",
+        "shares": 62,
+        "ticker": "SCZM"
+      },
+      "UAMY": {
+        "close_px": 5.309999942779541,
+        "cost": 2.393916438356164,
+        "entry_date": "2026-09-04",
+        "entry_px": 5.25,
+        "fee_in": 2.393916438356164,
+        "last_px": 5.449999809265137,
+        "notional": 624.75,
+        "peak_px": 5.25,
+        "reason": "MACD histogram < 0; gate macd_down=True; list probable,yday_gainer,yday_mover; ret5=-0.4; leftover $627.91",
+        "shares": 119,
+        "ticker": "UAMY"
+      }
+    },
+    "yday_equity": 10020.2
+  }
+}

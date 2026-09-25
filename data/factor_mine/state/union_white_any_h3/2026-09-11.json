@@ -1,0 +1,167 @@
+{
+  "buys": [
+    "ORCL",
+    "COHU",
+    "BAND",
+    "PAGS",
+    "SWKS",
+    "PAYP"
+  ],
+  "cash": 235.72,
+  "date": "2026-09-11",
+  "equity": 8680.07,
+  "fees": 12.825,
+  "fills": [
+    {
+      "fees": 2.014,
+      "pnl": null,
+      "price": 164.43,
+      "shares": 8,
+      "side": "BUY",
+      "ticker": "ORCL"
+    },
+    {
+      "fees": 2.065,
+      "pnl": null,
+      "price": 56.09,
+      "shares": 25,
+      "side": "BUY",
+      "ticker": "COHU"
+    },
+    {
+      "fees": 2.071,
+      "pnl": null,
+      "price": 52.55,
+      "shares": 27,
+      "side": "BUY",
+      "ticker": "BAND"
+    },
+    {
+      "fees": 2.413,
+      "pnl": null,
+      "price": 10.11,
+      "shares": 141,
+      "side": "BUY",
+      "ticker": "PAGS"
+    },
+    {
+      "fees": 2.038,
+      "pnl": null,
+      "price": 84.27,
+      "shares": 16,
+      "side": "BUY",
+      "ticker": "SWKS"
+    },
+    {
+      "fees": 2.224,
+      "pnl": null,
+      "price": 18.3,
+      "shares": 78,
+      "side": "BUY",
+      "ticker": "PAYP"
+    }
+  ],
+  "holdings": [
+    "BAND",
+    "COHU",
+    "ORCL",
+    "PAGS",
+    "PAYP",
+    "SWKS"
+  ],
+  "mean": 1.092,
+  "n_trades_today": 6,
+  "recipe": "union_white_any_h3",
+  "sells": [],
+  "state": {
+    "after": "2026-09-11",
+    "cash": 235.72,
+    "pos": {
+      "BAND": {
+        "close_px": 56.869998931884766,
+        "cost": 1420.9209794006347,
+        "entry_date": "2026-09-11",
+        "entry_px": 52.54999923706055,
+        "fee_in": 2.071,
+        "last_px": 52.54999923706055,
+        "min_hold": 3,
+        "notional": 1418.8499794006348,
+        "peak_px": 52.54999923706055,
+        "reason": "\u22120 red + (yday up or major catalyst), then Score; gate cam_bad_max=0,yday_or_catalyst=True; rank list; list probable,yday_gainer; \ud83d\udd35; \u26aa; ret5=+9.6; leftover $1431.05",
+        "shares": 27,
+        "ticker": "BAND"
+      },
+      "COHU": {
+        "close_px": 57.08000183105469,
+        "cost": 1404.3150038146973,
+        "entry_date": "2026-09-11",
+        "entry_px": 56.09000015258789,
+        "fee_in": 2.065,
+        "last_px": 56.09000015258789,
+        "min_hold": 3,
+        "notional": 1402.2500038146973,
+        "peak_px": 56.09000015258789,
+        "reason": "\u22120 red + (yday up or major catalyst), then Score; gate cam_bad_max=0,yday_or_catalyst=True; rank list; list flatten; \ud83d\udd35; \u26aa; ret5=+19.0; leftover $1431.05",
+        "shares": 25,
+        "ticker": "COHU"
+      },
+      "ORCL": {
+        "close_px": 150.27999877929688,
+        "cost": 1317.45394140625,
+        "entry_date": "2026-09-11",
+        "entry_px": 164.42999267578125,
+        "fee_in": 2.014,
+        "last_px": 164.42999267578125,
+        "min_hold": 3,
+        "notional": 1315.43994140625,
+        "peak_px": 164.42999267578125,
+        "reason": "\u22120 red + (yday up or major catalyst), then Score; gate cam_bad_max=0,yday_or_catalyst=True; rank list; list flatten,earn_react; \ud83d\udd35; \u26aa; ret5=-0.7; leftover $1431.05",
+        "shares": 8,
+        "ticker": "ORCL"
+      },
+      "PAGS": {
+        "close_px": 10.119999885559082,
+        "cost": 1427.9229515914917,
+        "entry_date": "2026-09-11",
+        "entry_px": 10.109999656677246,
+        "fee_in": 2.413,
+        "last_px": 10.109999656677246,
+        "min_hold": 3,
+        "notional": 1425.5099515914917,
+        "peak_px": 10.109999656677246,
+        "reason": "\u22120 red + (yday up or major catalyst), then Score; gate cam_bad_max=0,yday_or_catalyst=True; rank list; list probable,yday_gainer; \u26aa; ret5=+1.7; leftover $1431.05",
+        "shares": 141,
+        "ticker": "PAGS"
+      },
+      "PAYP": {
+        "close_px": 18.450000762939453,
+        "cost": 1429.6239404907226,
+        "entry_date": "2026-09-11",
+        "entry_px": 18.299999237060547,
+        "fee_in": 2.224,
+        "last_px": 18.299999237060547,
+        "min_hold": 3,
+        "notional": 1427.3999404907227,
+        "peak_px": 18.299999237060547,
+        "reason": "\u22120 red + (yday up or major catalyst), then Score; gate cam_bad_max=0,yday_or_catalyst=True; rank list; list ohlc_hot; \u26aa; ret5=+7.7; leftover $1431.05",
+        "shares": 78,
+        "ticker": "PAYP"
+      },
+      "SWKS": {
+        "close_px": 88.3499984741211,
+        "cost": 1350.3579462890625,
+        "entry_date": "2026-09-11",
+        "entry_px": 84.2699966430664,
+        "fee_in": 2.038,
+        "last_px": 84.2699966430664,
+        "min_hold": 3,
+        "notional": 1348.3199462890625,
+        "peak_px": 84.2699966430664,
+        "reason": "\u22120 red + (yday up or major catalyst), then Score; gate cam_bad_max=0,yday_or_catalyst=True; rank list; list yday_gainer,ohlc_hot; \u26aa; ret5=+17.5; leftover $1431.05",
+        "shares": 16,
+        "ticker": "SWKS"
+      }
+    },
+    "yday_equity": 8680.07
+  }
+}

@@ -1,0 +1,119 @@
+{
+  "buys": [
+    "RBRK",
+    "ECO",
+    "FIVN",
+    "RARE"
+  ],
+  "cash": 105.95,
+  "date": "2026-09-18",
+  "equity": 9875.35,
+  "fees": 8.848,
+  "fills": [
+    {
+      "fees": 2.059,
+      "pnl": null,
+      "price": 108.55,
+      "shares": 23,
+      "side": "BUY",
+      "ticker": "RBRK"
+    },
+    {
+      "fees": 2.077,
+      "pnl": null,
+      "price": 85.0,
+      "shares": 29,
+      "side": "BUY",
+      "ticker": "ECO"
+    },
+    {
+      "fees": 2.209,
+      "pnl": null,
+      "price": 34.44,
+      "shares": 73,
+      "side": "BUY",
+      "ticker": "FIVN"
+    },
+    {
+      "fees": 2.503,
+      "pnl": null,
+      "price": 14.79,
+      "shares": 171,
+      "side": "BUY",
+      "ticker": "RARE"
+    }
+  ],
+  "holdings": [
+    "ECO",
+    "FIVN",
+    "RARE",
+    "RBRK"
+  ],
+  "mean": -2.4142,
+  "n_trades_today": 4,
+  "recipe": "union_white_both_n4_h1",
+  "sells": [],
+  "state": {
+    "after": "2026-09-18",
+    "cash": 105.95,
+    "pos": {
+      "ECO": {
+        "close_px": 84.94999694824219,
+        "cost": 2467.077,
+        "entry_date": "2026-09-18",
+        "entry_px": 85.0,
+        "fee_in": 2.077,
+        "last_px": 85.0,
+        "min_hold": 1,
+        "notional": 2465.0,
+        "peak_px": 85.0,
+        "reason": "\u22120 red + yday up AND catalyst, top 4 by Score; gate cam_bad_max=0,yday_and_catalyst=True; rank list; list flatten; \ud83d\udd35; \u26aa; ret5=+18.3; leftover $2529.91",
+        "shares": 29,
+        "ticker": "ECO"
+      },
+      "FIVN": {
+        "close_px": 32.470001220703125,
+        "cost": 2516.3288997497557,
+        "entry_date": "2026-09-18",
+        "entry_px": 34.439998626708984,
+        "fee_in": 2.209,
+        "last_px": 34.439998626708984,
+        "min_hold": 1,
+        "notional": 2514.119899749756,
+        "peak_px": 34.439998626708984,
+        "reason": "\u22120 red + yday up AND catalyst, top 4 by Score; gate cam_bad_max=0,yday_and_catalyst=True; rank list; list flatten; \ud83d\udd35; \u26aa; ret5=+14.0; leftover $2529.91",
+        "shares": 73,
+        "ticker": "FIVN"
+      },
+      "RARE": {
+        "close_px": 14.510000228881836,
+        "cost": 2531.592993476868,
+        "entry_date": "2026-09-18",
+        "entry_px": 14.789999961853027,
+        "fee_in": 2.503,
+        "last_px": 14.789999961853027,
+        "min_hold": 1,
+        "notional": 2529.0899934768677,
+        "peak_px": 14.789999961853027,
+        "reason": "\u22120 red + yday up AND catalyst, top 4 by Score; gate cam_bad_max=0,yday_and_catalyst=True; rank list; list probable,yday_gainer; \ud83d\udd35; \u26aa; ret5=+0.7; leftover $2529.91",
+        "shares": 171,
+        "ticker": "RARE"
+      },
+      "RBRK": {
+        "close_px": 106.70999908447266,
+        "cost": 2498.70907019043,
+        "entry_date": "2026-09-18",
+        "entry_px": 108.55000305175781,
+        "fee_in": 2.059,
+        "last_px": 108.55000305175781,
+        "min_hold": 1,
+        "notional": 2496.6500701904297,
+        "peak_px": 108.55000305175781,
+        "reason": "\u22120 red + yday up AND catalyst, top 4 by Score; gate cam_bad_max=0,yday_and_catalyst=True; rank list; list flatten; \u26aa; ret5=+21.3; leftover $2529.91",
+        "shares": 23,
+        "ticker": "RBRK"
+      }
+    },
+    "yday_equity": 9875.35
+  }
+}

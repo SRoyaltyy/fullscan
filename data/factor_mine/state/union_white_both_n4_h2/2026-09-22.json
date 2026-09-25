@@ -1,0 +1,89 @@
+{
+  "buys": [],
+  "cash": 9796.75,
+  "date": "2026-09-22",
+  "equity": 9853.37,
+  "fees": 8.9517,
+  "fills": [
+    {
+      "fees": 2.1014,
+      "pnl": -204.94,
+      "price": 77.83,
+      "shares": 28,
+      "side": "SELL",
+      "ticker": "ECO"
+    },
+    {
+      "fees": 2.2324,
+      "pnl": 183.17,
+      "price": 37.12,
+      "shares": 70,
+      "side": "SELL",
+      "ticker": "FIVN"
+    },
+    {
+      "fees": 2.5319,
+      "pnl": -6.67,
+      "price": 14.78,
+      "shares": 165,
+      "side": "SELL",
+      "ticker": "RARE"
+    },
+    {
+      "fees": 2.086,
+      "pnl": 110.26,
+      "price": 113.75,
+      "shares": 22,
+      "side": "SELL",
+      "ticker": "RBRK"
+    }
+  ],
+  "holdings": [
+    "IOVA",
+    "MGTX"
+  ],
+  "mean": -0.9741,
+  "n_trades_today": 4,
+  "recipe": "union_white_both_n4_h2",
+  "sells": [
+    "ECO",
+    "FIVN",
+    "RARE",
+    "RBRK"
+  ],
+  "state": {
+    "after": "2026-09-22",
+    "cash": 9796.75,
+    "pos": {
+      "IOVA": {
+        "close_px": 10.640000343322754,
+        "cost": 31.611900915527343,
+        "entry_date": "2026-09-21",
+        "entry_px": 10.430000305175781,
+        "fee_in": 0.3219,
+        "last_px": 10.180000305175781,
+        "min_hold": 2,
+        "notional": 31.290000915527344,
+        "peak_px": 10.430000305175781,
+        "reason": "\u22120 red + yday up AND catalyst, top 4 by Score; gate cam_bad_max=0,yday_and_catalyst=True; rank list; list flatten; \u26aa; ret5=+19.2; leftover $36.42",
+        "shares": 3,
+        "ticker": "IOVA"
+      },
+      "MGTX": {
+        "close_px": 12.35,
+        "cost": 27.21540053405762,
+        "entry_date": "2026-09-21",
+        "entry_px": 13.470000267028809,
+        "fee_in": 0.2754,
+        "last_px": 13.16,
+        "min_hold": 2,
+        "notional": 26.940000534057617,
+        "peak_px": 13.470000267028809,
+        "reason": "\u22120 red + yday up AND catalyst, top 4 by Score; gate cam_bad_max=0,yday_and_catalyst=True; rank list; list flatten; \ud83d\udd35; \u26aa; ret5=+3.6; leftover $36.42",
+        "shares": 2,
+        "ticker": "MGTX"
+      }
+    },
+    "yday_equity": 9853.37
+  }
+}

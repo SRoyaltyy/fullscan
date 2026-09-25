@@ -1,0 +1,93 @@
+{
+  "buys": [],
+  "cash": 10059.38,
+  "date": "2026-08-31",
+  "equity": 10059.38,
+  "fees": 26.0044,
+  "fills": [
+    {
+      "fees": 2.107,
+      "pnl": 12.13,
+      "price": 15.46,
+      "shares": 39,
+      "side": "COVER",
+      "ticker": "BHVN"
+    },
+    {
+      "fees": 2.107,
+      "pnl": 43.33,
+      "price": 14.44,
+      "shares": 39,
+      "side": "COVER",
+      "ticker": "GRRR"
+    },
+    {
+      "fees": 2.068,
+      "pnl": 2.85,
+      "price": 23.68,
+      "shares": 26,
+      "side": "COVER",
+      "ticker": "MOS"
+    },
+    {
+      "fees": 11.3334,
+      "pnl": -17.89,
+      "price": 0.362,
+      "shares": 1712,
+      "side": "COVER",
+      "ticker": "SAFX"
+    },
+    {
+      "fees": 2.044,
+      "pnl": 27.38,
+      "price": 31.15,
+      "shares": 18,
+      "side": "COVER",
+      "ticker": "SEDG"
+    },
+    {
+      "fees": 1.996,
+      "pnl": 6.35,
+      "price": 247.05,
+      "shares": 2,
+      "side": "COVER",
+      "ticker": "SIMO"
+    },
+    {
+      "fees": 2.011,
+      "pnl": -11.2,
+      "price": 80.44,
+      "shares": 7,
+      "side": "COVER",
+      "ticker": "URBN"
+    },
+    {
+      "fees": 2.338,
+      "pnl": -3.56,
+      "price": 5.37,
+      "shares": 116,
+      "side": "COVER",
+      "ticker": "XPOF"
+    }
+  ],
+  "holdings": [],
+  "mean": -0.2245,
+  "n_trades_today": 8,
+  "recipe": "short_last_red_h1",
+  "sells": [
+    "BHVN",
+    "GRRR",
+    "MOS",
+    "SAFX",
+    "SEDG",
+    "SIMO",
+    "URBN",
+    "XPOF"
+  ],
+  "state": {
+    "after": "2026-08-31",
+    "cash": 10059.38,
+    "pos": {},
+    "yday_equity": 10059.38
+  }
+}

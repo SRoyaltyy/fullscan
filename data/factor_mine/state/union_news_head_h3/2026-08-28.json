@@ -1,0 +1,215 @@
+{
+  "buys": [
+    "SMTC",
+    "SEDG",
+    "TLS",
+    "TH",
+    "OPTX",
+    "BBWI",
+    "CAPR",
+    "ERAS"
+  ],
+  "cash": 183.04,
+  "date": "2026-08-28",
+  "equity": 9726.29,
+  "fees": 18.8101,
+  "fills": [
+    {
+      "fees": 2.014,
+      "pnl": null,
+      "price": 141.76,
+      "shares": 8,
+      "side": "BUY",
+      "ticker": "SMTC"
+    },
+    {
+      "fees": 2.101,
+      "pnl": null,
+      "price": 32.9,
+      "shares": 37,
+      "side": "BUY",
+      "ticker": "SEDG"
+    },
+    {
+      "fees": 3.3411,
+      "pnl": null,
+      "price": 4.82,
+      "shares": 259,
+      "side": "BUY",
+      "ticker": "TLS"
+    },
+    {
+      "fees": 2.185,
+      "pnl": null,
+      "price": 19.0,
+      "shares": 65,
+      "side": "BUY",
+      "ticker": "TH"
+    },
+    {
+      "fees": 2.425,
+      "pnl": null,
+      "price": 8.61,
+      "shares": 145,
+      "side": "BUY",
+      "ticker": "OPTX"
+    },
+    {
+      "fees": 2.188,
+      "pnl": null,
+      "price": 18.75,
+      "shares": 66,
+      "side": "BUY",
+      "ticker": "BBWI"
+    },
+    {
+      "fees": 2.374,
+      "pnl": null,
+      "price": 9.73,
+      "shares": 128,
+      "side": "BUY",
+      "ticker": "CAPR"
+    },
+    {
+      "fees": 2.182,
+      "pnl": null,
+      "price": 19.25,
+      "shares": 64,
+      "side": "BUY",
+      "ticker": "ERAS"
+    }
+  ],
+  "holdings": [
+    "BBWI",
+    "CAPR",
+    "ERAS",
+    "OPTX",
+    "SEDG",
+    "SMTC",
+    "TH",
+    "TLS"
+  ],
+  "mean": -2.7371,
+  "n_trades_today": 8,
+  "recipe": "union_news_head_h3",
+  "sells": [],
+  "state": {
+    "after": "2026-08-28",
+    "cash": 183.04,
+    "pos": {
+      "BBWI": {
+        "close_px": 19.219999313354492,
+        "cost": 1239.688,
+        "entry_date": "2026-08-28",
+        "entry_px": 18.75,
+        "fee_in": 2.188,
+        "last_px": 18.75,
+        "min_hold": 3,
+        "notional": 1237.5,
+        "peak_px": 18.75,
+        "reason": "prior-export headline\ud83d\udfe2 only; gate headline=good; rank cond; list yday_gainer; ret5=-4.1; leftover $1250.00",
+        "shares": 66,
+        "ticker": "BBWI"
+      },
+      "CAPR": {
+        "close_px": 9.59000015258789,
+        "cost": 1247.81394140625,
+        "entry_date": "2026-08-28",
+        "entry_px": 9.729999542236328,
+        "fee_in": 2.374,
+        "last_px": 9.729999542236328,
+        "min_hold": 3,
+        "notional": 1245.43994140625,
+        "peak_px": 9.729999542236328,
+        "reason": "prior-export headline\ud83d\udfe2 only; gate headline=good; rank cond; list yday_gainer,yday_mover; ret5=+47.1; leftover $1250.00",
+        "shares": 128,
+        "ticker": "CAPR"
+      },
+      "ERAS": {
+        "close_px": 18.030000686645508,
+        "cost": 1234.182,
+        "entry_date": "2026-08-28",
+        "entry_px": 19.25,
+        "fee_in": 2.182,
+        "last_px": 19.25,
+        "min_hold": 3,
+        "notional": 1232.0,
+        "peak_px": 19.25,
+        "reason": "prior-export headline\ud83d\udfe2 only; gate headline=good; rank cond; list yday_gainer; ret5=+14.1; leftover $1250.00",
+        "shares": 64,
+        "ticker": "ERAS"
+      },
+      "OPTX": {
+        "close_px": 8.520000457763672,
+        "cost": 1250.8749502182006,
+        "entry_date": "2026-08-28",
+        "entry_px": 8.609999656677246,
+        "fee_in": 2.425,
+        "last_px": 8.609999656677246,
+        "min_hold": 3,
+        "notional": 1248.4499502182007,
+        "peak_px": 8.609999656677246,
+        "reason": "prior-export headline\ud83d\udfe2 only; gate headline=good; rank cond; list probable,yday_gainer; ret5=-0.7; leftover $1250.00",
+        "shares": 145,
+        "ticker": "OPTX"
+      },
+      "SEDG": {
+        "close_px": 31.40999984741211,
+        "cost": 1219.4010564575196,
+        "entry_date": "2026-08-28",
+        "entry_px": 32.900001525878906,
+        "fee_in": 2.101,
+        "last_px": 32.900001525878906,
+        "min_hold": 3,
+        "notional": 1217.3000564575195,
+        "peak_px": 32.900001525878906,
+        "reason": "prior-export headline\ud83d\udfe2 only; gate headline=good; rank cond; list probable,yday_gainer,yday_mover; \ud83d\udd35; ret5=+8.4; leftover $1250.00",
+        "shares": 37,
+        "ticker": "SEDG"
+      },
+      "SMTC": {
+        "close_px": 131.1699981689453,
+        "cost": 1136.0939560546874,
+        "entry_date": "2026-08-28",
+        "entry_px": 141.75999450683594,
+        "fee_in": 2.014,
+        "last_px": 141.75999450683594,
+        "min_hold": 3,
+        "notional": 1134.0799560546875,
+        "peak_px": 141.75999450683594,
+        "reason": "prior-export headline\ud83d\udfe2 only; gate headline=good; rank cond; list yday_gainer,yday_mover,mover_buy; \ud83d\udd35; \u26aa; ret5=+14.1; leftover $1250.00",
+        "shares": 8,
+        "ticker": "SMTC"
+      },
+      "TH": {
+        "close_px": 18.549999237060547,
+        "cost": 1237.185,
+        "entry_date": "2026-08-28",
+        "entry_px": 19.0,
+        "fee_in": 2.185,
+        "last_px": 19.0,
+        "min_hold": 3,
+        "notional": 1235.0,
+        "peak_px": 19.0,
+        "reason": "prior-export headline\ud83d\udfe2 only; gate headline=good; rank cond; list ohlc_hot; ret5=+7.5; leftover $1250.00",
+        "shares": 65,
+        "ticker": "TH"
+      },
+      "TLS": {
+        "close_px": 4.789999961853027,
+        "cost": 1251.7211444602967,
+        "entry_date": "2026-08-28",
+        "entry_px": 4.820000171661377,
+        "fee_in": 3.3411,
+        "last_px": 4.820000171661377,
+        "min_hold": 3,
+        "notional": 1248.3800444602966,
+        "peak_px": 4.820000171661377,
+        "reason": "prior-export headline\ud83d\udfe2 only; gate headline=good; rank cond; list ohlc_hot; \ud83d\udd35; ret5=+8.8; leftover $1250.00",
+        "shares": 259,
+        "ticker": "TLS"
+      }
+    },
+    "yday_equity": 9726.29
+  }
+}

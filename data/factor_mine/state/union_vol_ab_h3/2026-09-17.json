@@ -1,0 +1,282 @@
+{
+  "buys": [
+    "PGEN",
+    "ARQT",
+    "SABR",
+    "CYPH",
+    "AMRX",
+    "PALI"
+  ],
+  "cash": 327.76,
+  "date": "2026-09-17",
+  "equity": 9774.38,
+  "fees": 12.093,
+  "fills": [
+    {
+      "fees": 2.049,
+      "pnl": 28.29,
+      "price": 86.76,
+      "shares": 13,
+      "side": "SELL",
+      "ticker": "SWKS"
+    },
+    {
+      "fees": 1.578,
+      "pnl": null,
+      "price": 7.59,
+      "shares": 20,
+      "side": "BUY",
+      "ticker": "PGEN"
+    },
+    {
+      "fees": 1.575,
+      "pnl": null,
+      "price": 25.95,
+      "shares": 6,
+      "side": "BUY",
+      "ticker": "ARQT"
+    },
+    {
+      "fees": 1.782,
+      "pnl": null,
+      "price": 2.4,
+      "shares": 66,
+      "side": "BUY",
+      "ticker": "SABR"
+    },
+    {
+      "fees": 1.7552,
+      "pnl": null,
+      "price": 2.675,
+      "shares": 59,
+      "side": "BUY",
+      "ticker": "CYPH"
+    },
+    {
+      "fees": 1.5088,
+      "pnl": null,
+      "price": 18.56,
+      "shares": 8,
+      "side": "BUY",
+      "ticker": "AMRX"
+    },
+    {
+      "fees": 1.845,
+      "pnl": null,
+      "price": 1.75,
+      "shares": 90,
+      "side": "BUY",
+      "ticker": "PALI"
+    }
+  ],
+  "holdings": [
+    "ADPT",
+    "AMRX",
+    "ARQT",
+    "CAI",
+    "CYPH",
+    "FPS",
+    "PALI",
+    "PGEN",
+    "RDNT",
+    "RIG",
+    "SABR",
+    "SDGR",
+    "VAL"
+  ],
+  "mean": 7.2222,
+  "n_trades_today": 7,
+  "recipe": "union_vol_ab_h3",
+  "sells": [
+    "SWKS"
+  ],
+  "state": {
+    "after": "2026-09-17",
+    "cash": 327.76,
+    "pos": {
+      "ADPT": {
+        "close_px": 28.549999237060547,
+        "cost": 1139.8960064086914,
+        "entry_date": "2026-09-16",
+        "entry_px": 27.09000015258789,
+        "fee_in": 2.116,
+        "last_px": 28.229999542236328,
+        "min_hold": 3,
+        "notional": 1137.7800064086914,
+        "peak_px": 28.229999542236328,
+        "reason": "combo gate; gate vol=good,ab=good; list probable,yday_gainer,ohlc_hot; \ud83d\udd35; \u26aa; ret5=+9.6; leftover $1149.92",
+        "shares": 42,
+        "ticker": "ADPT"
+      },
+      "AMRX": {
+        "close_px": 18.280000686645508,
+        "cost": 149.98879572753907,
+        "entry_date": "2026-09-17",
+        "entry_px": 18.559999465942383,
+        "fee_in": 1.5088,
+        "last_px": 18.559999465942383,
+        "min_hold": 3,
+        "notional": 148.47999572753906,
+        "peak_px": 18.559999465942383,
+        "reason": "combo gate; gate vol=good,ab=good; list yday_gainer; \ud83d\udd35; ret5=+4.8; leftover $158.44",
+        "shares": 8,
+        "ticker": "AMRX"
+      },
+      "ARQT": {
+        "close_px": 26.459999084472656,
+        "cost": 157.2750045776367,
+        "entry_date": "2026-09-17",
+        "entry_px": 25.950000762939453,
+        "fee_in": 1.575,
+        "last_px": 25.950000762939453,
+        "min_hold": 3,
+        "notional": 155.70000457763672,
+        "peak_px": 25.950000762939453,
+        "reason": "combo gate; gate vol=good,ab=good; list probable,yday_gainer,yday_mover,ohlc_hot; ret5=+9.6; leftover $158.44",
+        "shares": 6,
+        "ticker": "ARQT"
+      },
+      "CAI": {
+        "close_px": 30.920000076293945,
+        "cost": 1128.5099938964843,
+        "entry_date": "2026-09-16",
+        "entry_px": 28.15999984741211,
+        "fee_in": 2.11,
+        "last_px": 28.594999313354492,
+        "min_hold": 3,
+        "notional": 1126.3999938964844,
+        "peak_px": 28.594999313354492,
+        "reason": "combo gate; gate vol=good,ab=good; list yday_gainer,ohlc_hot; \u26aa; ret5=+14.8; leftover $1149.92",
+        "shares": 40,
+        "ticker": "CAI"
+      },
+      "CYPH": {
+        "close_px": 3.069999933242798,
+        "cost": 159.58019718666077,
+        "entry_date": "2026-09-17",
+        "entry_px": 2.674999952316284,
+        "fee_in": 1.7552,
+        "last_px": 2.674999952316284,
+        "min_hold": 3,
+        "notional": 157.82499718666077,
+        "peak_px": 2.674999952316284,
+        "reason": "combo gate; gate vol=good,ab=good; list yday_gainer; \ud83d\udd35; ret5=-0.4; leftover $158.44",
+        "shares": 59,
+        "ticker": "CYPH"
+      },
+      "FPS": {
+        "close_px": 38.060001373291016,
+        "cost": 1128.851979248047,
+        "entry_date": "2026-09-16",
+        "entry_px": 33.13999938964844,
+        "fee_in": 2.092,
+        "last_px": 36.7599983215332,
+        "min_hold": 3,
+        "notional": 1126.7599792480469,
+        "peak_px": 36.7599983215332,
+        "reason": "combo gate; gate vol=good,ab=good; list yday_gainer; \ud83d\udd35; ret5=-2.9; leftover $1149.92",
+        "shares": 34,
+        "ticker": "FPS"
+      },
+      "PALI": {
+        "close_px": 1.7000000476837158,
+        "cost": 159.345,
+        "entry_date": "2026-09-17",
+        "entry_px": 1.75,
+        "fee_in": 1.845,
+        "last_px": 1.75,
+        "min_hold": 3,
+        "notional": 157.5,
+        "peak_px": 1.75,
+        "reason": "combo gate; gate vol=good,ab=good; list yday_mover; ret5=-17.6; leftover $158.44",
+        "shares": 90,
+        "ticker": "PALI"
+      },
+      "PGEN": {
+        "close_px": 7.869999885559082,
+        "cost": 153.37800305175782,
+        "entry_date": "2026-09-17",
+        "entry_px": 7.590000152587891,
+        "fee_in": 1.578,
+        "last_px": 7.590000152587891,
+        "min_hold": 3,
+        "notional": 151.8000030517578,
+        "peak_px": 7.590000152587891,
+        "reason": "combo gate; gate vol=good,ab=good; list flatten,ohlc_hot; ret5=+9.4; leftover $158.44",
+        "shares": 20,
+        "ticker": "PGEN"
+      },
+      "RDNT": {
+        "close_px": 77.77999877929688,
+        "cost": 1081.7120384521484,
+        "entry_date": "2026-09-16",
+        "entry_px": 77.12000274658203,
+        "fee_in": 2.032,
+        "last_px": 76.44000244140625,
+        "min_hold": 3,
+        "notional": 1079.6800384521484,
+        "peak_px": 77.12000274658203,
+        "reason": "combo gate; gate vol=good,ab=good; list flatten; \u26aa; ret5=+7.2; leftover $1149.92",
+        "shares": 14,
+        "ticker": "RDNT"
+      },
+      "RIG": {
+        "close_px": 5.659999847412109,
+        "cost": 1147.224977684021,
+        "entry_date": "2026-09-16",
+        "entry_px": 5.869999885559082,
+        "fee_in": 2.575,
+        "last_px": 5.579999923706055,
+        "min_hold": 3,
+        "notional": 1144.649977684021,
+        "peak_px": 5.869999885559082,
+        "reason": "combo gate; gate vol=good,ab=good; list probable,yday_gainer; \ud83d\udd35; ret5=+3.1; leftover $1149.92",
+        "shares": 195,
+        "ticker": "RIG"
+      },
+      "SABR": {
+        "close_px": 2.319999933242798,
+        "cost": 160.1820062942505,
+        "entry_date": "2026-09-17",
+        "entry_px": 2.4000000953674316,
+        "fee_in": 1.782,
+        "last_px": 2.4000000953674316,
+        "min_hold": 3,
+        "notional": 158.4000062942505,
+        "peak_px": 2.4000000953674316,
+        "reason": "combo gate; gate vol=good,ab=good; list probable,yday_gainer,yday_mover,ohlc_hot; \ud83d\udd35; \u26aa; ret5=+8.4; leftover $158.44",
+        "shares": 66,
+        "ticker": "SABR"
+      },
+      "SDGR": {
+        "close_px": 30.239999771118164,
+        "cost": 1143.3470448608398,
+        "entry_date": "2026-09-16",
+        "entry_px": 23.290000915527344,
+        "fee_in": 2.137,
+        "last_px": 24.09000015258789,
+        "min_hold": 3,
+        "notional": 1141.2100448608398,
+        "peak_px": 24.09000015258789,
+        "reason": "combo gate; gate vol=good,ab=good; list yday_gainer; \ud83d\udd35; \u26aa; ret5=+16.1; leftover $1149.92",
+        "shares": 49,
+        "ticker": "SDGR"
+      },
+      "VAL": {
+        "close_px": 84.05000305175781,
+        "cost": 1138.2290198364258,
+        "entry_date": "2026-09-16",
+        "entry_px": 87.4000015258789,
+        "fee_in": 2.029,
+        "last_px": 83.19999694824219,
+        "min_hold": 3,
+        "notional": 1136.2000198364258,
+        "peak_px": 87.4000015258789,
+        "reason": "combo gate; gate vol=good,ab=good; list probable,yday_gainer; \ud83d\udd35; ret5=+3.2; leftover $1149.92",
+        "shares": 13,
+        "ticker": "VAL"
+      }
+    },
+    "yday_equity": 9774.38
+  }
+}

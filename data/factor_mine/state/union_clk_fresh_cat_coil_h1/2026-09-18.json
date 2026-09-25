@@ -1,0 +1,240 @@
+{
+  "buys": [
+    "AMD",
+    "DDD",
+    "INTC",
+    "SHLS",
+    "BHVN",
+    "RANI"
+  ],
+  "cash": 0.58,
+  "date": "2026-09-18",
+  "equity": 9897.83,
+  "fees": 58.7725,
+  "fills": [
+    {
+      "fees": 2.061,
+      "pnl": 26.67,
+      "price": 69.72,
+      "shares": 17,
+      "side": "SELL",
+      "ticker": "AXTI"
+    },
+    {
+      "fees": 2.4781,
+      "pnl": -20.02,
+      "price": 7.85,
+      "shares": 151,
+      "side": "SELL",
+      "ticker": "BULL"
+    },
+    {
+      "fees": 2.031,
+      "pnl": 13.18,
+      "price": 171.11,
+      "shares": 7,
+      "side": "SELL",
+      "ticker": "CRDO"
+    },
+    {
+      "fees": 5.8906,
+      "pnl": 150.3,
+      "price": 3.035,
+      "shares": 450,
+      "side": "SELL",
+      "ticker": "CYPH"
+    },
+    {
+      "fees": 2.013,
+      "pnl": -23.23,
+      "price": 915.66,
+      "shares": 1,
+      "side": "SELL",
+      "ticker": "LITE"
+    },
+    {
+      "fees": 2.5003,
+      "pnl": 56.66,
+      "price": 7.98,
+      "shares": 158,
+      "side": "SELL",
+      "ticker": "PGEN"
+    },
+    {
+      "fees": 2.2786,
+      "pnl": 12.19,
+      "price": 13.74,
+      "shares": 88,
+      "side": "SELL",
+      "ticker": "SFL"
+    },
+    {
+      "fees": 2.0312,
+      "pnl": 76.32,
+      "price": 182.33,
+      "shares": 7,
+      "side": "SELL",
+      "ticker": "SMTC"
+    },
+    {
+      "fees": 1.999,
+      "pnl": null,
+      "price": 547.37,
+      "shares": 3,
+      "side": "BUY",
+      "ticker": "AMD"
+    },
+    {
+      "fees": 5.9598,
+      "pnl": null,
+      "price": 3.58,
+      "shares": 462,
+      "side": "BUY",
+      "ticker": "DDD"
+    },
+    {
+      "fees": 2.035,
+      "pnl": null,
+      "price": 109.8,
+      "shares": 15,
+      "side": "BUY",
+      "ticker": "INTC"
+    },
+    {
+      "fees": 2.7864,
+      "pnl": null,
+      "price": 7.64,
+      "shares": 216,
+      "side": "BUY",
+      "ticker": "SHLS"
+    },
+    {
+      "fees": 2.341,
+      "pnl": null,
+      "price": 14.07,
+      "shares": 117,
+      "side": "BUY",
+      "ticker": "BHVN"
+    },
+    {
+      "fees": 22.3675,
+      "pnl": null,
+      "price": 0.85,
+      "shares": 1945,
+      "side": "BUY",
+      "ticker": "RANI"
+    }
+  ],
+  "holdings": [
+    "AMD",
+    "BHVN",
+    "DDD",
+    "INTC",
+    "RANI",
+    "SHLS"
+  ],
+  "mean": 0.7344,
+  "n_trades_today": 14,
+  "recipe": "union_clk_fresh_cat_coil_h1",
+  "sells": [
+    "AXTI",
+    "BULL",
+    "CRDO",
+    "CYPH",
+    "LITE",
+    "PGEN",
+    "SFL",
+    "SMTC"
+  ],
+  "state": {
+    "after": "2026-09-18",
+    "cash": 0.58,
+    "pos": {
+      "AMD": {
+        "close_px": 559.8200073242188,
+        "cost": 1644.1089853515625,
+        "entry_date": "2026-09-18",
+        "entry_px": 547.3699951171875,
+        "fee_in": 1.999,
+        "last_px": 547.3699951171875,
+        "min_hold": 1,
+        "notional": 1642.1099853515625,
+        "peak_px": 547.3699951171875,
+        "reason": "Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list ohlc_hot; ret5=+8.2; leftover $1655.14",
+        "shares": 3,
+        "ticker": "AMD"
+      },
+      "BHVN": {
+        "close_px": 13.619999885559082,
+        "cost": 1648.5309642944335,
+        "entry_date": "2026-09-18",
+        "entry_px": 14.069999694824219,
+        "fee_in": 2.341,
+        "last_px": 14.069999694824219,
+        "min_hold": 1,
+        "notional": 1646.1899642944336,
+        "peak_px": 14.069999694824219,
+        "reason": "Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list probable,yday_gainer,yday_mover; \ud83d\udd35; ret5=+8.6; leftover $1655.14",
+        "shares": 117,
+        "ticker": "BHVN"
+      },
+      "DDD": {
+        "close_px": 3.630000114440918,
+        "cost": 1659.9197647521974,
+        "entry_date": "2026-09-18",
+        "entry_px": 3.5799999237060547,
+        "fee_in": 5.9598,
+        "last_px": 3.5799999237060547,
+        "min_hold": 1,
+        "notional": 1653.9599647521973,
+        "peak_px": 3.5799999237060547,
+        "reason": "Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list probable,yday_gainer; \ud83d\udd35; ret5=+8.3; leftover $1655.14",
+        "shares": 462,
+        "ticker": "DDD"
+      },
+      "INTC": {
+        "close_px": 108.5999984741211,
+        "cost": 1649.0350457763673,
+        "entry_date": "2026-09-18",
+        "entry_px": 109.80000305175781,
+        "fee_in": 2.035,
+        "last_px": 109.80000305175781,
+        "min_hold": 1,
+        "notional": 1647.0000457763672,
+        "peak_px": 109.80000305175781,
+        "reason": "Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list ohlc_hot; \ud83d\udd35; ret5=+8.5; leftover $1655.14",
+        "shares": 15,
+        "ticker": "INTC"
+      },
+      "RANI": {
+        "close_px": 0.8619999885559082,
+        "cost": 1675.6175463724137,
+        "entry_date": "2026-09-18",
+        "entry_px": 0.8500000238418579,
+        "fee_in": 22.3675,
+        "last_px": 0.8500000238418579,
+        "min_hold": 1,
+        "notional": 1653.2500463724136,
+        "peak_px": 0.8500000238418579,
+        "reason": "Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list probable,yday_gainer; ret5=+3.6; leftover $1655.14",
+        "shares": 1945,
+        "ticker": "RANI"
+      },
+      "SHLS": {
+        "close_px": 7.599999904632568,
+        "cost": 1653.0263711608886,
+        "entry_date": "2026-09-18",
+        "entry_px": 7.639999866485596,
+        "fee_in": 2.7864,
+        "last_px": 7.639999866485596,
+        "min_hold": 1,
+        "notional": 1650.2399711608887,
+        "peak_px": 7.639999866485596,
+        "reason": "Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list probable,yday_gainer; \ud83d\udd35; ret5=+7.6; leftover $1655.14",
+        "shares": 216,
+        "ticker": "SHLS"
+      }
+    },
+    "yday_equity": 9897.83
+  }
+}

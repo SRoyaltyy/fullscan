@@ -1,0 +1,318 @@
+{
+  "buys": [
+    "A",
+    "DXCM",
+    "PGEN",
+    "IOVA",
+    "MGTX",
+    "NEO",
+    "ISRG"
+  ],
+  "cash": 261.48,
+  "date": "2026-09-21",
+  "equity": 9310.53,
+  "fees": 22.9716,
+  "fills": [
+    {
+      "fees": 2.088,
+      "pnl": 11.96,
+      "price": 8.57,
+      "shares": 26,
+      "side": "SELL",
+      "ticker": "BULL"
+    },
+    {
+      "fees": 2.2818,
+      "pnl": -17.0,
+      "price": 2.26,
+      "shares": 89,
+      "side": "SELL",
+      "ticker": "SABR"
+    },
+    {
+      "fees": 2.1488,
+      "pnl": 278.16,
+      "price": 29.43,
+      "shares": 46,
+      "side": "SELL",
+      "ticker": "SDGR"
+    },
+    {
+      "fees": 2.055,
+      "pnl": 150.26,
+      "price": 79.08,
+      "shares": 15,
+      "side": "SELL",
+      "ticker": "TEM"
+    },
+    {
+      "fees": 1.996,
+      "pnl": null,
+      "price": 157.87,
+      "shares": 2,
+      "side": "BUY",
+      "ticker": "A"
+    },
+    {
+      "fees": 2.002,
+      "pnl": null,
+      "price": 88.83,
+      "shares": 4,
+      "side": "BUY",
+      "ticker": "DXCM"
+    },
+    {
+      "fees": 2.155,
+      "pnl": null,
+      "price": 7.84,
+      "shares": 55,
+      "side": "BUY",
+      "ticker": "PGEN"
+    },
+    {
+      "fees": 2.113,
+      "pnl": null,
+      "price": 10.43,
+      "shares": 41,
+      "side": "BUY",
+      "ticker": "IOVA"
+    },
+    {
+      "fees": 2.086,
+      "pnl": null,
+      "price": 13.47,
+      "shares": 32,
+      "side": "BUY",
+      "ticker": "MGTX"
+    },
+    {
+      "fees": 2.053,
+      "pnl": null,
+      "price": 19.92,
+      "shares": 21,
+      "side": "BUY",
+      "ticker": "NEO"
+    },
+    {
+      "fees": 1.993,
+      "pnl": null,
+      "price": 393.89,
+      "shares": 1,
+      "side": "BUY",
+      "ticker": "ISRG"
+    }
+  ],
+  "holdings": [
+    "A",
+    "CYPH",
+    "DXCM",
+    "ECO",
+    "FIVN",
+    "IOVA",
+    "ISRG",
+    "MGTX",
+    "NEO",
+    "PGEN",
+    "RARE",
+    "RBRK",
+    "RXT"
+  ],
+  "mean": 1.792,
+  "n_trades_today": 11,
+  "recipe": "union_white_any_h2",
+  "sells": [
+    "BULL",
+    "SABR",
+    "SDGR",
+    "TEM"
+  ],
+  "state": {
+    "after": "2026-09-21",
+    "cash": 261.48,
+    "pos": {
+      "A": {
+        "close_px": 161.94000244140625,
+        "cost": 317.735990234375,
+        "entry_date": "2026-09-21",
+        "entry_px": 157.8699951171875,
+        "fee_in": 1.996,
+        "last_px": 157.8699951171875,
+        "min_hold": 2,
+        "notional": 315.739990234375,
+        "peak_px": 157.8699951171875,
+        "reason": "\u22120 red + (yday up or major catalyst), then Score; gate cam_bad_max=0,yday_or_catalyst=True; rank list; list flatten; \ud83d\udd35; \u26aa; ret5=+6.5; leftover $435.57",
+        "shares": 2,
+        "ticker": "A"
+      },
+      "CYPH": {
+        "close_px": 3.4000000953674316,
+        "cost": 1033.2381290966034,
+        "entry_date": "2026-09-18",
+        "entry_px": 3.0350000858306885,
+        "fee_in": 4.3731,
+        "last_px": 4.0,
+        "min_hold": 2,
+        "notional": 1028.8650290966034,
+        "peak_px": 4.0,
+        "reason": "\u22120 red + (yday up or major catalyst), then Score; gate cam_bad_max=0,yday_or_catalyst=True; rank list; list yday_gainer,yday_mover; \ud83d\udd35; \u26aa; ret5=+39.5; leftover $1030.52",
+        "shares": 339,
+        "ticker": "CYPH"
+      },
+      "DXCM": {
+        "close_px": 89.16999816894531,
+        "cost": 357.32200732421876,
+        "entry_date": "2026-09-21",
+        "entry_px": 88.83000183105469,
+        "fee_in": 2.002,
+        "last_px": 88.83000183105469,
+        "min_hold": 2,
+        "notional": 355.32000732421875,
+        "peak_px": 88.83000183105469,
+        "reason": "\u22120 red + (yday up or major catalyst), then Score; gate cam_bad_max=0,yday_or_catalyst=True; rank list; list flatten; \ud83d\udd35; \u26aa; ret5=+7.6; leftover $435.57",
+        "shares": 4,
+        "ticker": "DXCM"
+      },
+      "ECO": {
+        "close_px": 82.62999725341797,
+        "cost": 1022.026,
+        "entry_date": "2026-09-18",
+        "entry_px": 85.0,
+        "fee_in": 2.026,
+        "last_px": 82.83000183105469,
+        "min_hold": 2,
+        "notional": 1020.0,
+        "peak_px": 85.0,
+        "reason": "\u22120 red + (yday up or major catalyst), then Score; gate cam_bad_max=0,yday_or_catalyst=True; rank list; list flatten; \ud83d\udd35; \u26aa; ret5=+18.3; leftover $1030.52",
+        "shares": 12,
+        "ticker": "ECO"
+      },
+      "FIVN": {
+        "close_px": 37.0099983215332,
+        "cost": 1000.8369601745605,
+        "entry_date": "2026-09-18",
+        "entry_px": 34.439998626708984,
+        "fee_in": 2.077,
+        "last_px": 33.0,
+        "min_hold": 2,
+        "notional": 998.7599601745605,
+        "peak_px": 34.439998626708984,
+        "reason": "\u22120 red + (yday up or major catalyst), then Score; gate cam_bad_max=0,yday_or_catalyst=True; rank list; list flatten; \ud83d\udd35; \u26aa; ret5=+14.0; leftover $1030.52",
+        "shares": 29,
+        "ticker": "FIVN"
+      },
+      "IOVA": {
+        "close_px": 10.1899995803833,
+        "cost": 429.74301251220703,
+        "entry_date": "2026-09-21",
+        "entry_px": 10.430000305175781,
+        "fee_in": 2.113,
+        "last_px": 10.430000305175781,
+        "min_hold": 2,
+        "notional": 427.63001251220703,
+        "peak_px": 10.430000305175781,
+        "reason": "\u22120 red + (yday up or major catalyst), then Score; gate cam_bad_max=0,yday_or_catalyst=True; rank list; list flatten; \u26aa; ret5=+19.2; leftover $435.57",
+        "shares": 41,
+        "ticker": "IOVA"
+      },
+      "ISRG": {
+        "close_px": 401.6499938964844,
+        "cost": 395.8830146484375,
+        "entry_date": "2026-09-21",
+        "entry_px": 393.8900146484375,
+        "fee_in": 1.993,
+        "last_px": 393.8900146484375,
+        "min_hold": 2,
+        "notional": 393.8900146484375,
+        "peak_px": 393.8900146484375,
+        "reason": "\u22120 red + (yday up or major catalyst), then Score; gate cam_bad_max=0,yday_or_catalyst=True; rank list; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+6.6; leftover $435.57",
+        "shares": 1,
+        "ticker": "ISRG"
+      },
+      "MGTX": {
+        "close_px": 13.079999923706055,
+        "cost": 433.1260085449219,
+        "entry_date": "2026-09-21",
+        "entry_px": 13.470000267028809,
+        "fee_in": 2.086,
+        "last_px": 13.470000267028809,
+        "min_hold": 2,
+        "notional": 431.0400085449219,
+        "peak_px": 13.470000267028809,
+        "reason": "\u22120 red + (yday up or major catalyst), then Score; gate cam_bad_max=0,yday_or_catalyst=True; rank list; list flatten; \ud83d\udd35; \u26aa; ret5=+3.6; leftover $435.57",
+        "shares": 32,
+        "ticker": "MGTX"
+      },
+      "NEO": {
+        "close_px": 19.40999984741211,
+        "cost": 420.37300160217285,
+        "entry_date": "2026-09-21",
+        "entry_px": 19.920000076293945,
+        "fee_in": 2.053,
+        "last_px": 19.920000076293945,
+        "min_hold": 2,
+        "notional": 418.32000160217285,
+        "peak_px": 19.920000076293945,
+        "reason": "\u22120 red + (yday up or major catalyst), then Score; gate cam_bad_max=0,yday_or_catalyst=True; rank list; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+15.0; leftover $435.57",
+        "shares": 21,
+        "ticker": "NEO"
+      },
+      "PGEN": {
+        "close_px": 7.699999809265137,
+        "cost": 433.35500839233396,
+        "entry_date": "2026-09-21",
+        "entry_px": 7.840000152587891,
+        "fee_in": 2.155,
+        "last_px": 7.840000152587891,
+        "min_hold": 2,
+        "notional": 431.200008392334,
+        "peak_px": 7.840000152587891,
+        "reason": "\u22120 red + (yday up or major catalyst), then Score; gate cam_bad_max=0,yday_or_catalyst=True; rank list; list flatten; \u26aa; ret5=+13.6; leftover $435.57",
+        "shares": 55,
+        "ticker": "PGEN"
+      },
+      "RARE": {
+        "close_px": 14.649999618530273,
+        "cost": 1022.7069973678589,
+        "entry_date": "2026-09-18",
+        "entry_px": 14.789999961853027,
+        "fee_in": 2.197,
+        "last_px": 14.579999923706055,
+        "min_hold": 2,
+        "notional": 1020.5099973678589,
+        "peak_px": 14.789999961853027,
+        "reason": "\u22120 red + (yday up or major catalyst), then Score; gate cam_bad_max=0,yday_or_catalyst=True; rank list; list probable,yday_gainer; \ud83d\udd35; \u26aa; ret5=+0.7; leftover $1030.52",
+        "shares": 69,
+        "ticker": "RARE"
+      },
+      "RBRK": {
+        "close_px": 112.95999908447266,
+        "cost": 978.9670274658204,
+        "entry_date": "2026-09-18",
+        "entry_px": 108.55000305175781,
+        "fee_in": 2.017,
+        "last_px": 107.56999969482422,
+        "min_hold": 2,
+        "notional": 976.9500274658203,
+        "peak_px": 108.55000305175781,
+        "reason": "\u22120 red + (yday up or major catalyst), then Score; gate cam_bad_max=0,yday_or_catalyst=True; rank list; list flatten; \u26aa; ret5=+21.3; leftover $1030.52",
+        "shares": 9,
+        "ticker": "RBRK"
+      },
+      "RXT": {
+        "close_px": 4.039999961853027,
+        "cost": 1031.7069149345398,
+        "entry_date": "2026-09-18",
+        "entry_px": 3.940000057220459,
+        "fee_in": 3.3669,
+        "last_px": 3.9000000953674316,
+        "min_hold": 2,
+        "notional": 1028.3400149345398,
+        "peak_px": 3.940000057220459,
+        "reason": "\u22120 red + (yday up or major catalyst), then Score; gate cam_bad_max=0,yday_or_catalyst=True; rank list; list yday_gainer; \ud83d\udd35; \u26aa; ret5=+25.2; leftover $1030.52",
+        "shares": 261,
+        "ticker": "RXT"
+      }
+    },
+    "yday_equity": 9310.53
+  }
+}

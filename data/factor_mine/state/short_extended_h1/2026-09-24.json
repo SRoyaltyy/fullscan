@@ -1,0 +1,93 @@
+{
+  "buys": [],
+  "cash": 9420.94,
+  "date": "2026-09-24",
+  "equity": 9420.94,
+  "fees": 17.12,
+  "fills": [
+    {
+      "fees": 2.05,
+      "pnl": 27.26,
+      "price": 26.22,
+      "shares": 20,
+      "side": "COVER",
+      "ticker": "ARQT"
+    },
+    {
+      "fees": 2.164,
+      "pnl": 40.88,
+      "price": 9.12,
+      "shares": 58,
+      "side": "COVER",
+      "ticker": "BFLY"
+    },
+    {
+      "fees": 2.179,
+      "pnl": 35.3,
+      "price": 8.5,
+      "shares": 63,
+      "side": "COVER",
+      "ticker": "DNA"
+    },
+    {
+      "fees": 2.581,
+      "pnl": 55.85,
+      "price": 2.61,
+      "shares": 197,
+      "side": "COVER",
+      "ticker": "FEAM"
+    },
+    {
+      "fees": 2.05,
+      "pnl": -6.54,
+      "price": 28.42,
+      "shares": 20,
+      "side": "COVER",
+      "ticker": "MAZE"
+    },
+    {
+      "fees": 2.071,
+      "pnl": -0.67,
+      "price": 20.52,
+      "shares": 27,
+      "side": "COVER",
+      "ticker": "OMER"
+    },
+    {
+      "fees": 1.996,
+      "pnl": -19.93,
+      "price": 274.45,
+      "shares": 2,
+      "side": "COVER",
+      "ticker": "VICR"
+    },
+    {
+      "fees": 2.029,
+      "pnl": 70.46,
+      "price": 36.025,
+      "shares": 13,
+      "side": "COVER",
+      "ticker": "VKTX"
+    }
+  ],
+  "holdings": [],
+  "mean": 0.9813,
+  "n_trades_today": 8,
+  "recipe": "short_extended_h1",
+  "sells": [
+    "ARQT",
+    "BFLY",
+    "DNA",
+    "FEAM",
+    "MAZE",
+    "OMER",
+    "VICR",
+    "VKTX"
+  ],
+  "state": {
+    "after": "2026-09-24",
+    "cash": 9420.94,
+    "pos": {},
+    "yday_equity": 9420.94
+  }
+}

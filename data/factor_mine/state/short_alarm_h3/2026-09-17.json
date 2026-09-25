@@ -1,0 +1,207 @@
+{
+  "buys": [
+    "ILMN",
+    "RVTY",
+    "AMN",
+    "FPS",
+    "ADPT",
+    "FRO",
+    "CVI",
+    "NAT"
+  ],
+  "cash": 14868.41,
+  "date": "2026-09-17",
+  "equity": 10014.4,
+  "fees": 16.7058,
+  "fills": [
+    {
+      "fees": 2.0288136989645764,
+      "pnl": null,
+      "price": 233.85,
+      "shares": 2,
+      "side": "SHORT",
+      "ticker": "ILMN"
+    },
+    {
+      "fees": 2.038176438423052,
+      "pnl": null,
+      "price": 147.61,
+      "shares": 4,
+      "side": "SHORT",
+      "ticker": "RVTY"
+    },
+    {
+      "fees": 2.081225753575155,
+      "pnl": null,
+      "price": 34.93,
+      "shares": 18,
+      "side": "SHORT",
+      "ticker": "AMN"
+    },
+    {
+      "fees": 2.078121095108659,
+      "pnl": null,
+      "price": 36.76,
+      "shares": 17,
+      "side": "SHORT",
+      "ticker": "FPS"
+    },
+    {
+      "fees": 2.093015342189841,
+      "pnl": null,
+      "price": 28.23,
+      "shares": 22,
+      "side": "SHORT",
+      "ticker": "ADPT"
+    },
+    {
+      "fees": 2.0593673976741425,
+      "pnl": null,
+      "price": 54.31,
+      "shares": 11,
+      "side": "SHORT",
+      "ticker": "FRO"
+    },
+    {
+      "fees": 2.0630564387073256,
+      "pnl": null,
+      "price": 51.88,
+      "shares": 12,
+      "side": "SHORT",
+      "ticker": "CVI"
+    },
+    {
+      "fees": 2.264038631115221,
+      "pnl": null,
+      "price": 8.02,
+      "shares": 78,
+      "side": "SHORT",
+      "ticker": "NAT"
+    }
+  ],
+  "holdings": [
+    "ADPT",
+    "AMN",
+    "CVI",
+    "FPS",
+    "FRO",
+    "ILMN",
+    "NAT",
+    "RVTY"
+  ],
+  "mean": -0.9135,
+  "n_trades_today": 8,
+  "recipe": "short_alarm_h3",
+  "sells": [],
+  "state": {
+    "after": "2026-09-17",
+    "cash": 14868.41,
+    "pos": {
+      "ADPT": {
+        "close_px": 28.549999237060547,
+        "cost": 2.093015342189841,
+        "entry_date": "2026-09-17",
+        "entry_px": 28.229999542236328,
+        "fee_in": 2.093015342189841,
+        "last_px": 28.229999542236328,
+        "notional": 621.0599899291992,
+        "peak_px": 28.229999542236328,
+        "reason": "alarm; gate alarm=True; list ohlc_hot; ret5=+13.3; leftover $631.67",
+        "shares": 22,
+        "ticker": "ADPT"
+      },
+      "AMN": {
+        "close_px": 34.54999923706055,
+        "cost": 2.081225753575155,
+        "entry_date": "2026-09-17",
+        "entry_px": 34.93000030517578,
+        "fee_in": 2.081225753575155,
+        "last_px": 34.93000030517578,
+        "notional": 628.7400054931641,
+        "peak_px": 34.93000030517578,
+        "reason": "alarm; gate alarm=True; list flatten; ret5=+1.6; leftover $631.67",
+        "shares": 18,
+        "ticker": "AMN"
+      },
+      "CVI": {
+        "close_px": 54.13999938964844,
+        "cost": 2.0630564387073256,
+        "entry_date": "2026-09-17",
+        "entry_px": 51.880001068115234,
+        "fee_in": 2.0630564387073256,
+        "last_px": 51.880001068115234,
+        "notional": 622.5600128173828,
+        "peak_px": 51.880001068115234,
+        "reason": "alarm; gate alarm=True; list ohlc_hot; ret5=+11.1; leftover $631.67",
+        "shares": 12,
+        "ticker": "CVI"
+      },
+      "FPS": {
+        "close_px": 38.060001373291016,
+        "cost": 2.078121095108659,
+        "entry_date": "2026-09-17",
+        "entry_px": 36.7599983215332,
+        "fee_in": 2.078121095108659,
+        "last_px": 36.7599983215332,
+        "notional": 624.9199714660645,
+        "peak_px": 36.7599983215332,
+        "reason": "alarm; gate alarm=True; list yday_gainer,yday_mover,ohlc_hot; ret5=+12.4; leftover $631.67",
+        "shares": 17,
+        "ticker": "FPS"
+      },
+      "FRO": {
+        "close_px": 54.029998779296875,
+        "cost": 2.0593673976741425,
+        "entry_date": "2026-09-17",
+        "entry_px": 54.310001373291016,
+        "fee_in": 2.0593673976741425,
+        "last_px": 54.310001373291016,
+        "notional": 597.4100151062012,
+        "peak_px": 54.310001373291016,
+        "reason": "alarm; gate alarm=True; list ohlc_hot; ret5=+13.7; leftover $631.67",
+        "shares": 11,
+        "ticker": "FRO"
+      },
+      "ILMN": {
+        "close_px": 245.17999267578125,
+        "cost": 2.0288136989645764,
+        "entry_date": "2026-09-17",
+        "entry_px": 233.85000610351562,
+        "fee_in": 2.0288136989645764,
+        "last_px": 233.85000610351562,
+        "notional": 467.70001220703125,
+        "peak_px": 233.85000610351562,
+        "reason": "alarm; gate alarm=True; list flatten,ohlc_hot; ret5=+11.7; leftover $631.67",
+        "shares": 2,
+        "ticker": "ILMN"
+      },
+      "NAT": {
+        "close_px": 8.149999618530273,
+        "cost": 2.264038631115221,
+        "entry_date": "2026-09-17",
+        "entry_px": 8.020000457763672,
+        "fee_in": 2.264038631115221,
+        "last_px": 8.020000457763672,
+        "notional": 625.5600357055664,
+        "peak_px": 8.020000457763672,
+        "reason": "alarm; gate alarm=True; list ohlc_hot; ret5=+14.2; leftover $631.67",
+        "shares": 78,
+        "ticker": "NAT"
+      },
+      "RVTY": {
+        "close_px": 146.72999572753906,
+        "cost": 2.038176438423052,
+        "entry_date": "2026-09-17",
+        "entry_px": 147.61000061035156,
+        "fee_in": 2.038176438423052,
+        "last_px": 147.61000061035156,
+        "notional": 590.4400024414062,
+        "peak_px": 147.61000061035156,
+        "reason": "alarm; gate alarm=True; list flatten,ohlc_hot; ret5=+17.7; leftover $631.67",
+        "shares": 4,
+        "ticker": "RVTY"
+      }
+    },
+    "yday_equity": 10014.4
+  }
+}

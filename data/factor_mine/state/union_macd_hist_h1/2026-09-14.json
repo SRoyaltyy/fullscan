@@ -1,0 +1,107 @@
+{
+  "buys": [],
+  "cash": 7335.22,
+  "date": "2026-09-14",
+  "equity": 9699.24,
+  "fees": 12.7998,
+  "fills": [
+    {
+      "fees": 2.055,
+      "pnl": -22.39,
+      "price": 81.2,
+      "shares": 15,
+      "side": "SELL",
+      "ticker": "APH"
+    },
+    {
+      "fees": 2.076,
+      "pnl": -7.65,
+      "price": 54.75,
+      "shares": 22,
+      "side": "SELL",
+      "ticker": "ASO"
+    },
+    {
+      "fees": 2.076,
+      "pnl": -89.05,
+      "price": 52.23,
+      "shares": 22,
+      "side": "SELL",
+      "ticker": "COHU"
+    },
+    {
+      "fees": 2.031,
+      "pnl": -165.11,
+      "price": 141.42,
+      "shares": 7,
+      "side": "SELL",
+      "ticker": "ORCL"
+    },
+    {
+      "fees": 2.5098,
+      "pnl": 3.07,
+      "price": 7.84,
+      "shares": 161,
+      "side": "SELL",
+      "ticker": "SION"
+    },
+    {
+      "fees": 2.052,
+      "pnl": 20.98,
+      "price": 86.06,
+      "shares": 14,
+      "side": "SELL",
+      "ticker": "SWKS"
+    }
+  ],
+  "holdings": [
+    "QRVO",
+    "SANM"
+  ],
+  "mean": -4.758,
+  "n_trades_today": 6,
+  "recipe": "union_macd_hist_h1",
+  "sells": [
+    "APH",
+    "ASO",
+    "COHU",
+    "ORCL",
+    "SION",
+    "SWKS"
+  ],
+  "state": {
+    "after": "2026-09-14",
+    "cash": 7335.22,
+    "pos": {
+      "QRVO": {
+        "close_px": 107.9800033569336,
+        "cost": 1243.2079899291991,
+        "entry_date": "2026-09-11",
+        "entry_px": 112.83499908447266,
+        "fee_in": 2.023,
+        "last_px": 114.11000061035156,
+        "min_hold": 1,
+        "notional": 1241.1849899291992,
+        "peak_px": 114.11000061035156,
+        "reason": "rank by macd_hist; rank macd_hist; list yday_gainer,ohlc_hot; \ud83d\udd35; ret5=+11.9; leftover $1260.20",
+        "shares": 11,
+        "ticker": "QRVO"
+      },
+      "SANM": {
+        "close_px": 196.0399932861328,
+        "cost": 1243.0479780273438,
+        "entry_date": "2026-09-11",
+        "entry_px": 206.83999633789062,
+        "fee_in": 2.008,
+        "last_px": 206.5,
+        "min_hold": 1,
+        "notional": 1241.0399780273438,
+        "peak_px": 206.83999633789062,
+        "reason": "rank by macd_hist; rank macd_hist; list flatten; ret5=+3.9; leftover $1260.20",
+        "shares": 6,
+        "ticker": "SANM"
+      }
+    },
+    "yday_equity": 9699.24
+  }
+}

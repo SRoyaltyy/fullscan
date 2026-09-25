@@ -1,0 +1,57 @@
+{
+  "buys": [],
+  "cash": 8756.96,
+  "date": "2026-09-24",
+  "equity": 8756.96,
+  "fees": 54.4533,
+  "fills": [
+    {
+      "fees": 24.634,
+      "pnl": -143.14,
+      "price": 1.17,
+      "shares": 1884,
+      "side": "SELL",
+      "ticker": "CMPX"
+    },
+    {
+      "fees": 3.8456,
+      "pnl": -177.57,
+      "price": 7.37,
+      "shares": 293,
+      "side": "SELL",
+      "ticker": "PGEN"
+    },
+    {
+      "fees": 2.4756,
+      "pnl": -203.23,
+      "price": 14.38,
+      "shares": 148,
+      "side": "SELL",
+      "ticker": "SGRY"
+    },
+    {
+      "fees": 23.4981,
+      "pnl": -64.65,
+      "price": 1.29,
+      "shares": 1797,
+      "side": "SELL",
+      "ticker": "VERI"
+    }
+  ],
+  "holdings": [],
+  "mean": -1.1469,
+  "n_trades_today": 4,
+  "recipe": "union_news_head_h1",
+  "sells": [
+    "CMPX",
+    "PGEN",
+    "SGRY",
+    "VERI"
+  ],
+  "state": {
+    "after": "2026-09-24",
+    "cash": 8756.96,
+    "pos": {},
+    "yday_equity": 8756.96
+  }
+}

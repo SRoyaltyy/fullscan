@@ -1,0 +1,36 @@
+{
+  "buys": [],
+  "cash": 253.58,
+  "date": "2026-09-10",
+  "equity": 9244.58,
+  "fees": 0,
+  "fills": [],
+  "holdings": [
+    "CRM"
+  ],
+  "mean": -0.4621,
+  "n_trades_today": 0,
+  "recipe": "flatten_white_yday_h5",
+  "sells": [],
+  "state": {
+    "after": "2026-09-10",
+    "cash": 253.58,
+    "pos": {
+      "CRM": {
+        "close_px": 243.0,
+        "cost": 9746.420458007813,
+        "entry_date": "2026-09-04",
+        "entry_px": 263.3599853515625,
+        "fee_in": 2.101,
+        "last_px": 245.35000610351562,
+        "min_hold": 5,
+        "notional": 9744.319458007812,
+        "peak_px": 263.3599853515625,
+        "reason": "flatten looker: 0 red + yesterday up; gate zero_red=True,yday_up=True; rank cond; list flatten,mover_buy; live flatten mover; \ud83d\udd35; \u26aa; ret5=+4.9; leftover $10000.00",
+        "shares": 37,
+        "ticker": "CRM"
+      }
+    },
+    "yday_equity": 9244.58
+  }
+}

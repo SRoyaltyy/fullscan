@@ -1,0 +1,288 @@
+{
+  "buys": [
+    "BULL",
+    "MAMA",
+    "PGEN",
+    "SMTC",
+    "EROC",
+    "LITE",
+    "CRDO",
+    "AXTI"
+  ],
+  "cash": 547.79,
+  "date": "2026-09-17",
+  "equity": 10082.95,
+  "fees": 35.3614,
+  "fills": [
+    {
+      "fees": 2.2108,
+      "pnl": 249.7,
+      "price": 22.46,
+      "shares": 66,
+      "side": "SELL",
+      "ticker": "BBNX"
+    },
+    {
+      "fees": 2.025,
+      "pnl": 42.77,
+      "price": 233.85,
+      "shares": 5,
+      "side": "SELL",
+      "ticker": "ILMN"
+    },
+    {
+      "fees": 2.106,
+      "pnl": -8.03,
+      "price": 37.89,
+      "shares": 32,
+      "side": "SELL",
+      "ticker": "KRMN"
+    },
+    {
+      "fees": 2.028,
+      "pnl": 3.28,
+      "price": 180.82,
+      "shares": 6,
+      "side": "SELL",
+      "ticker": "QLYS"
+    },
+    {
+      "fees": 2.7539,
+      "pnl": -66.36,
+      "price": 5.58,
+      "shares": 210,
+      "side": "SELL",
+      "ticker": "RIG"
+    },
+    {
+      "fees": 2.5607,
+      "pnl": 51.56,
+      "price": 7.27,
+      "shares": 177,
+      "side": "SELL",
+      "ticker": "SION"
+    },
+    {
+      "fees": 2.061,
+      "pnl": 62.37,
+      "price": 72.7,
+      "shares": 17,
+      "side": "SELL",
+      "ticker": "TEM"
+    },
+    {
+      "fees": 2.052,
+      "pnl": -62.88,
+      "price": 83.2,
+      "shares": 14,
+      "side": "SELL",
+      "ticker": "VAL"
+    },
+    {
+      "fees": 2.467,
+      "pnl": null,
+      "price": 7.95,
+      "shares": 159,
+      "side": "BUY",
+      "ticker": "BULL"
+    },
+    {
+      "fees": 2.257,
+      "pnl": null,
+      "price": 14.21,
+      "shares": 89,
+      "side": "BUY",
+      "ticker": "MAMA"
+    },
+    {
+      "fees": 2.491,
+      "pnl": null,
+      "price": 7.59,
+      "shares": 167,
+      "side": "BUY",
+      "ticker": "PGEN"
+    },
+    {
+      "fees": 2.011,
+      "pnl": null,
+      "price": 170.85,
+      "shares": 7,
+      "side": "BUY",
+      "ticker": "SMTC"
+    },
+    {
+      "fees": 2.29,
+      "pnl": null,
+      "price": 12.64,
+      "shares": 100,
+      "side": "BUY",
+      "ticker": "EROC"
+    },
+    {
+      "fees": 1.993,
+      "pnl": null,
+      "price": 934.88,
+      "shares": 1,
+      "side": "BUY",
+      "ticker": "LITE"
+    },
+    {
+      "fees": 2.011,
+      "pnl": null,
+      "price": 168.65,
+      "shares": 7,
+      "side": "BUY",
+      "ticker": "CRDO"
+    },
+    {
+      "fees": 2.044,
+      "pnl": null,
+      "price": 67.91,
+      "shares": 18,
+      "side": "BUY",
+      "ticker": "AXTI"
+    }
+  ],
+  "holdings": [
+    "AXTI",
+    "BULL",
+    "CRDO",
+    "EROC",
+    "LITE",
+    "MAMA",
+    "PGEN",
+    "SMTC"
+  ],
+  "mean": 0.7076,
+  "n_trades_today": 16,
+  "recipe": "union_clk_fresh_cat_coil_opp_h1",
+  "sells": [
+    "BBNX",
+    "ILMN",
+    "KRMN",
+    "QLYS",
+    "RIG",
+    "SION",
+    "TEM",
+    "VAL"
+  ],
+  "state": {
+    "after": "2026-09-17",
+    "cash": 547.79,
+    "pos": {
+      "AXTI": {
+        "close_px": 67.75,
+        "cost": 1224.4240659179688,
+        "entry_date": "2026-09-17",
+        "entry_px": 67.91000366210938,
+        "fee_in": 2.044,
+        "last_px": 67.91000366210938,
+        "min_hold": 1,
+        "notional": 1222.3800659179688,
+        "peak_px": 67.91000366210938,
+        "reason": "Clock-B #2 \u2229 Theme Radar T\u22121 oppset; gate clk_fresh_cat_coil=True,oppset=True; rank opp_rvol; list probable,yday_gainer,yday_mover; \ud83d\udd35; ret5=-6.7; leftover $1269.92",
+        "shares": 18,
+        "ticker": "AXTI"
+      },
+      "BULL": {
+        "close_px": 7.710000038146973,
+        "cost": 1266.5169696731568,
+        "entry_date": "2026-09-17",
+        "entry_px": 7.949999809265137,
+        "fee_in": 2.467,
+        "last_px": 7.949999809265137,
+        "min_hold": 1,
+        "notional": 1264.0499696731567,
+        "peak_px": 7.949999809265137,
+        "reason": "Clock-B #2 \u2229 Theme Radar T\u22121 oppset; gate clk_fresh_cat_coil=True,oppset=True; rank opp_rvol; list yday_mover; \ud83d\udd35; \u26aa; ret5=-18.4; leftover $1269.92",
+        "shares": 159,
+        "ticker": "BULL"
+      },
+      "CRDO": {
+        "close_px": 168.25,
+        "cost": 1182.5609572753906,
+        "entry_date": "2026-09-17",
+        "entry_px": 168.64999389648438,
+        "fee_in": 2.011,
+        "last_px": 168.64999389648438,
+        "min_hold": 1,
+        "notional": 1180.5499572753906,
+        "peak_px": 168.64999389648438,
+        "reason": "Clock-B #2 \u2229 Theme Radar T\u22121 oppset; gate clk_fresh_cat_coil=True,oppset=True; rank opp_rvol; list yday_gainer; ret5=-3.8; leftover $1269.92",
+        "shares": 7,
+        "ticker": "CRDO"
+      },
+      "EROC": {
+        "close_px": 12.899999618530273,
+        "cost": 1266.2900343322754,
+        "entry_date": "2026-09-17",
+        "entry_px": 12.640000343322754,
+        "fee_in": 2.29,
+        "last_px": 12.640000343322754,
+        "min_hold": 1,
+        "notional": 1264.0000343322754,
+        "peak_px": 12.640000343322754,
+        "reason": "Clock-B #2 \u2229 Theme Radar T\u22121 oppset; gate clk_fresh_cat_coil=True,oppset=True; rank opp_rvol; list probable,yday_gainer; ret5=-3.6; leftover $1269.92",
+        "shares": 100,
+        "ticker": "EROC"
+      },
+      "LITE": {
+        "close_px": 893.6099853515625,
+        "cost": 936.8730048828126,
+        "entry_date": "2026-09-17",
+        "entry_px": 934.8800048828125,
+        "fee_in": 1.993,
+        "last_px": 934.8800048828125,
+        "min_hold": 1,
+        "notional": 934.8800048828125,
+        "peak_px": 934.8800048828125,
+        "reason": "Clock-B #2 \u2229 Theme Radar T\u22121 oppset; gate clk_fresh_cat_coil=True,oppset=True; rank opp_rvol; list yday_gainer; \ud83d\udd35; ret5=-7.0; leftover $1269.92",
+        "shares": 1,
+        "ticker": "LITE"
+      },
+      "MAMA": {
+        "close_px": 13.109999656677246,
+        "cost": 1266.9470033950806,
+        "entry_date": "2026-09-17",
+        "entry_px": 14.210000038146973,
+        "fee_in": 2.257,
+        "last_px": 14.210000038146973,
+        "min_hold": 1,
+        "notional": 1264.6900033950806,
+        "peak_px": 14.210000038146973,
+        "reason": "Clock-B #2 \u2229 Theme Radar T\u22121 oppset; gate clk_fresh_cat_coil=True,oppset=True; rank opp_rvol; list yday_gainer; ret5=-6.5; leftover $1269.92",
+        "shares": 89,
+        "ticker": "MAMA"
+      },
+      "PGEN": {
+        "close_px": 7.869999885559082,
+        "cost": 1270.0210254821777,
+        "entry_date": "2026-09-17",
+        "entry_px": 7.590000152587891,
+        "fee_in": 2.491,
+        "last_px": 7.590000152587891,
+        "min_hold": 1,
+        "notional": 1267.5300254821777,
+        "peak_px": 7.590000152587891,
+        "reason": "Clock-B #2 \u2229 Theme Radar T\u22121 oppset; gate clk_fresh_cat_coil=True,oppset=True; rank opp_rvol; list flatten,ohlc_hot; ret5=+9.4; leftover $1269.92",
+        "shares": 167,
+        "ticker": "PGEN"
+      },
+      "SMTC": {
+        "close_px": 178.19000244140625,
+        "cost": 1197.9610427246093,
+        "entry_date": "2026-09-17",
+        "entry_px": 170.85000610351562,
+        "fee_in": 2.011,
+        "last_px": 170.85000610351562,
+        "min_hold": 1,
+        "notional": 1195.9500427246094,
+        "peak_px": 170.85000610351562,
+        "reason": "Clock-B #2 \u2229 Theme Radar T\u22121 oppset; gate clk_fresh_cat_coil=True,oppset=True; rank opp_rvol; list probable,yday_gainer,yday_mover; \ud83d\udd35; ret5=+2.2; leftover $1269.92",
+        "shares": 7,
+        "ticker": "SMTC"
+      }
+    },
+    "yday_equity": 10082.95
+  }
+}

@@ -1,0 +1,147 @@
+{
+  "buys": [],
+  "cash": 9802.41,
+  "date": "2026-09-08",
+  "equity": 9802.41,
+  "fees": 33.0185,
+  "fills": [
+    {
+      "fees": 2.3008,
+      "pnl": 10.62,
+      "price": 6.48,
+      "shares": 95,
+      "side": "SELL",
+      "ticker": "AHCO"
+    },
+    {
+      "fees": 2.079,
+      "pnl": 24.84,
+      "price": 26.44,
+      "shares": 23,
+      "side": "SELL",
+      "ticker": "ASST"
+    },
+    {
+      "fees": 5.8374,
+      "pnl": -11.59,
+      "price": 1.94,
+      "shares": 446,
+      "side": "SELL",
+      "ticker": "BAK"
+    },
+    {
+      "fees": 2.019,
+      "pnl": 88.8,
+      "price": 267.76,
+      "shares": 3,
+      "side": "SELL",
+      "ticker": "BE"
+    },
+    {
+      "fees": 2.019,
+      "pnl": -32.94,
+      "price": 253.72,
+      "shares": 3,
+      "side": "SELL",
+      "ticker": "CRM"
+    },
+    {
+      "fees": 2.013,
+      "pnl": 3.36,
+      "price": 521.15,
+      "shares": 1,
+      "side": "SELL",
+      "ticker": "DELL"
+    },
+    {
+      "fees": 2.3293,
+      "pnl": -2.55,
+      "price": 5.81,
+      "shares": 104,
+      "side": "SELL",
+      "ticker": "DFDV"
+    },
+    {
+      "fees": 2.166,
+      "pnl": 13.37,
+      "price": 16.74,
+      "shares": 52,
+      "side": "SELL",
+      "ticker": "FRNM"
+    },
+    {
+      "fees": 2.013,
+      "pnl": -21.6,
+      "price": 360.75,
+      "shares": 1,
+      "side": "SELL",
+      "ticker": "MDB"
+    },
+    {
+      "fees": 2.043,
+      "pnl": 31.02,
+      "price": 78.84,
+      "shares": 11,
+      "side": "SELL",
+      "ticker": "MRX"
+    },
+    {
+      "fees": 2.028,
+      "pnl": -2.42,
+      "price": 137.62,
+      "shares": 6,
+      "side": "SELL",
+      "ticker": "MSTR"
+    },
+    {
+      "fees": 2.082,
+      "pnl": 3.18,
+      "price": 24.67,
+      "shares": 24,
+      "side": "SELL",
+      "ticker": "SLDE"
+    },
+    {
+      "fees": 2.031,
+      "pnl": 44.75,
+      "price": 89.67,
+      "shares": 7,
+      "side": "SELL",
+      "ticker": "TARS"
+    },
+    {
+      "fees": 2.058,
+      "pnl": 0.86,
+      "price": 37.75,
+      "shares": 16,
+      "side": "SELL",
+      "ticker": "TDS"
+    }
+  ],
+  "holdings": [],
+  "mean": -0.2884,
+  "n_trades_today": 14,
+  "recipe": "combo_nj_5050_shared",
+  "sells": [
+    "AHCO",
+    "ASST",
+    "BAK",
+    "BE",
+    "CRM",
+    "DELL",
+    "DFDV",
+    "FRNM",
+    "MDB",
+    "MRX",
+    "MSTR",
+    "SLDE",
+    "TARS",
+    "TDS"
+  ],
+  "state": {
+    "after": "2026-09-08",
+    "cash": 9802.41,
+    "pos": {},
+    "yday_equity": 9802.41
+  }
+}

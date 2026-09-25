@@ -1,0 +1,30 @@
+{
+  "buys": [],
+  "cash": 10316.39,
+  "date": "2026-09-22",
+  "equity": 10316.39,
+  "fees": 2.407,
+  "fills": [
+    {
+      "fees": 2.407,
+      "pnl": 131.2,
+      "price": 35.54,
+      "shares": 139,
+      "side": "COVER",
+      "ticker": "TRMD"
+    }
+  ],
+  "holdings": [],
+  "mean": 2.1508,
+  "n_trades_today": 1,
+  "recipe": "short_clk_ext_veto_opp_h3",
+  "sells": [
+    "TRMD"
+  ],
+  "state": {
+    "after": "2026-09-22",
+    "cash": 10316.39,
+    "pos": {},
+    "yday_equity": 10316.39
+  }
+}

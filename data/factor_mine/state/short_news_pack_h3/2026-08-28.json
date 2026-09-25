@@ -1,0 +1,46 @@
+{
+  "buys": [
+    "FIG"
+  ],
+  "cash": 14977.01,
+  "date": "2026-08-28",
+  "equity": 10221.71,
+  "fees": 2.6886,
+  "fills": [
+    {
+      "fees": 2.688630138365863,
+      "pnl": null,
+      "price": 30.18,
+      "shares": 165,
+      "side": "SHORT",
+      "ticker": "FIG"
+    }
+  ],
+  "holdings": [
+    "FIG"
+  ],
+  "mean": 2.2171,
+  "n_trades_today": 1,
+  "recipe": "short_news_pack_h3",
+  "sells": [],
+  "state": {
+    "after": "2026-08-28",
+    "cash": 14977.01,
+    "pos": {
+      "FIG": {
+        "close_px": 28.81999969482422,
+        "cost": 2.688630138365863,
+        "entry_date": "2026-08-28",
+        "entry_px": 30.18000030517578,
+        "fee_in": 2.688630138365863,
+        "last_px": 30.18000030517578,
+        "notional": 4979.700050354004,
+        "peak_px": 30.18000030517578,
+        "reason": "short morning packet news\ud83d\udd34; gate news_box=bad; list ohlc_hot; ret5=+12.1; leftover $5000.00",
+        "shares": 165,
+        "ticker": "FIG"
+      }
+    },
+    "yday_equity": 10221.71
+  }
+}

@@ -1,0 +1,173 @@
+{
+  "buys": [
+    "FPS",
+    "TCOM",
+    "INDP",
+    "HLP",
+    "SDGR",
+    "CAI"
+  ],
+  "cash": 33.32,
+  "date": "2026-09-16",
+  "equity": 9742.33,
+  "fees": 21.5548,
+  "fills": [
+    {
+      "fees": 2.206,
+      "pnl": null,
+      "price": 33.14,
+      "shares": 72,
+      "side": "BUY",
+      "ticker": "FPS"
+    },
+    {
+      "fees": 2.164,
+      "pnl": null,
+      "price": 40.93,
+      "shares": 58,
+      "side": "BUY",
+      "ticker": "TCOM"
+    },
+    {
+      "fees": 4.257,
+      "pnl": null,
+      "price": 3.66,
+      "shares": 330,
+      "side": "BUY",
+      "ticker": "INDP"
+    },
+    {
+      "fees": 8.6688,
+      "pnl": null,
+      "price": 1.8,
+      "shares": 672,
+      "side": "BUY",
+      "ticker": "HLP"
+    },
+    {
+      "fees": 2.143,
+      "pnl": null,
+      "price": 23.29,
+      "shares": 51,
+      "side": "BUY",
+      "ticker": "SDGR"
+    },
+    {
+      "fees": 2.116,
+      "pnl": null,
+      "price": 28.16,
+      "shares": 42,
+      "side": "BUY",
+      "ticker": "CAI"
+    }
+  ],
+  "holdings": [
+    "CAI",
+    "FPS",
+    "HLP",
+    "INDP",
+    "SDGR",
+    "TCOM"
+  ],
+  "mean": 1.453,
+  "n_trades_today": 6,
+  "recipe": "combo_he1_5050_shared",
+  "sells": [],
+  "state": {
+    "after": "2026-09-16",
+    "cash": 33.32,
+    "pos": {
+      "CAI": {
+        "close_px": 28.209999084472656,
+        "cost": 1184.8359935913086,
+        "entry_date": "2026-09-16",
+        "entry_px": 28.15999984741211,
+        "fee_in": 2.116,
+        "last_px": 28.15999984741211,
+        "notional": 1182.7199935913086,
+        "owner": "union_hot_n4_h1",
+        "peak_px": 28.15999984741211,
+        "reason": "top 4 by hot; rank hot_score; list yday_gainer,ohlc_hot; \u26aa; ret5=+14.8; combo leftover $1209.60; owner union_hot_n4_h1",
+        "shares": 42,
+        "side": "long",
+        "ticker": "CAI"
+      },
+      "FPS": {
+        "close_px": 34.84000015258789,
+        "cost": 2388.2859560546876,
+        "entry_date": "2026-09-16",
+        "entry_px": 33.13999938964844,
+        "fee_in": 2.206,
+        "last_px": 33.13999938964844,
+        "notional": 2386.0799560546875,
+        "owner": "union_e_fresh_h1",
+        "peak_px": 33.13999938964844,
+        "reason": "union \u2229 e_fresh, no \ud83d\udea8; gate days_since_E_max=1,flag_E_min=0; list yday_gainer; \ud83d\udd35; ret5=-2.9; combo leftover $2400.70; owner union_e_fresh_h1",
+        "shares": 72,
+        "side": "long",
+        "ticker": "FPS"
+      },
+      "HLP": {
+        "close_px": 2.069999933242798,
+        "cost": 1218.268767956543,
+        "entry_date": "2026-09-16",
+        "entry_px": 1.7999999523162842,
+        "fee_in": 8.6688,
+        "last_px": 1.7999999523162842,
+        "notional": 1209.599967956543,
+        "owner": "union_hot_n4_h1",
+        "peak_px": 1.7999999523162842,
+        "reason": "top 4 by hot; rank hot_score; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+30.5; combo leftover $1209.60; owner union_hot_n4_h1",
+        "shares": 672,
+        "side": "long",
+        "ticker": "HLP"
+      },
+      "INDP": {
+        "close_px": 3.2100000381469727,
+        "cost": 1212.0570283241273,
+        "entry_date": "2026-09-16",
+        "entry_px": 3.6600000858306885,
+        "fee_in": 4.257,
+        "last_px": 3.6600000858306885,
+        "notional": 1207.8000283241272,
+        "owner": "union_hot_n4_h1",
+        "peak_px": 3.6600000858306885,
+        "reason": "top 4 by hot; rank hot_score; list yday_gainer,yday_mover; ret5=+96.8; combo leftover $1209.60; owner union_hot_n4_h1",
+        "shares": 330,
+        "side": "long",
+        "ticker": "INDP"
+      },
+      "SDGR": {
+        "close_px": 23.93000030517578,
+        "cost": 1189.9330466918946,
+        "entry_date": "2026-09-16",
+        "entry_px": 23.290000915527344,
+        "fee_in": 2.143,
+        "last_px": 23.290000915527344,
+        "notional": 1187.7900466918945,
+        "owner": "union_hot_n4_h1",
+        "peak_px": 23.290000915527344,
+        "reason": "top 4 by hot; rank hot_score; list yday_gainer; \ud83d\udd35; \u26aa; ret5=+16.1; combo leftover $1209.60; owner union_hot_n4_h1",
+        "shares": 51,
+        "side": "long",
+        "ticker": "SDGR"
+      },
+      "TCOM": {
+        "close_px": 40.43000030517578,
+        "cost": 2376.1040177001955,
+        "entry_date": "2026-09-16",
+        "entry_px": 40.93000030517578,
+        "fee_in": 2.164,
+        "last_px": 40.93000030517578,
+        "notional": 2373.9400177001953,
+        "owner": "union_e_fresh_h1",
+        "peak_px": 40.93000030517578,
+        "reason": "union \u2229 e_fresh, no \ud83d\udea8; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=-3.1; combo leftover $2400.70; owner union_e_fresh_h1",
+        "shares": 58,
+        "side": "long",
+        "ticker": "TCOM"
+      }
+    },
+    "yday_equity": 9742.33
+  }
+}

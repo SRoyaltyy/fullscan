@@ -1,0 +1,140 @@
+{
+  "buys": [
+    "FIVN",
+    "ECO",
+    "RBRK"
+  ],
+  "cash": 57.71,
+  "date": "2026-09-18",
+  "equity": 9622.12,
+  "fees": 2.9837,
+  "fills": [
+    {
+      "fees": 1.0422,
+      "pnl": null,
+      "price": 34.44,
+      "shares": 3,
+      "side": "BUY",
+      "ticker": "FIVN"
+    },
+    {
+      "fees": 0.853,
+      "pnl": null,
+      "price": 85.0,
+      "shares": 1,
+      "side": "BUY",
+      "ticker": "ECO"
+    },
+    {
+      "fees": 1.0885,
+      "pnl": null,
+      "price": 108.55,
+      "shares": 1,
+      "side": "BUY",
+      "ticker": "RBRK"
+    }
+  ],
+  "holdings": [
+    "BLFS",
+    "ECO",
+    "FIVN",
+    "IQV",
+    "RBRK",
+    "RDNT"
+  ],
+  "mean": -1.3438,
+  "n_trades_today": 3,
+  "recipe": "flatten_white_yday_h5",
+  "sells": [],
+  "state": {
+    "after": "2026-09-18",
+    "cash": 57.71,
+    "pos": {
+      "BLFS": {
+        "close_px": 36.689998626708984,
+        "cost": 3210.7339194335937,
+        "entry_date": "2026-09-16",
+        "entry_px": 36.459999084472656,
+        "fee_in": 2.254,
+        "last_px": 36.72999954223633,
+        "min_hold": 5,
+        "notional": 3208.4799194335938,
+        "peak_px": 36.72999954223633,
+        "reason": "flatten looker: 0 red + yesterday up; gate zero_red=True,yday_up=True; rank cond; list flatten; wish-list (live io HOLD \u2014 not a ticket); \ud83d\udd35; \u26aa; ret5=+2.9; leftover $3238.05",
+        "shares": 88,
+        "ticker": "BLFS"
+      },
+      "ECO": {
+        "close_px": 84.94999694824219,
+        "cost": 85.853,
+        "entry_date": "2026-09-18",
+        "entry_px": 85.0,
+        "fee_in": 0.853,
+        "last_px": 85.0,
+        "min_hold": 5,
+        "notional": 85.0,
+        "peak_px": 85.0,
+        "reason": "flatten looker: 0 red + yesterday up; gate zero_red=True,yday_up=True; rank cond; list flatten; wish-list (live io HOLD \u2014 not a ticket); \ud83d\udd35; \u26aa; ret5=+18.3; leftover $119.19",
+        "shares": 1,
+        "ticker": "ECO"
+      },
+      "FIVN": {
+        "close_px": 32.470001220703125,
+        "cost": 104.36219588012695,
+        "entry_date": "2026-09-18",
+        "entry_px": 34.439998626708984,
+        "fee_in": 1.0422,
+        "last_px": 34.439998626708984,
+        "min_hold": 5,
+        "notional": 103.31999588012695,
+        "peak_px": 34.439998626708984,
+        "reason": "flatten looker: 0 red + yesterday up; gate zero_red=True,yday_up=True; rank cond; list flatten; wish-list (live io HOLD \u2014 not a ticket); \ud83d\udd35; \u26aa; ret5=+14.0; leftover $119.19",
+        "shares": 3,
+        "ticker": "FIVN"
+      },
+      "IQV": {
+        "close_px": 266.4200134277344,
+        "cost": 2981.8131611328126,
+        "entry_date": "2026-09-16",
+        "entry_px": 270.8900146484375,
+        "fee_in": 2.023,
+        "last_px": 269.45001220703125,
+        "min_hold": 5,
+        "notional": 2979.7901611328125,
+        "peak_px": 273.1499938964844,
+        "reason": "flatten looker: 0 red + yesterday up; gate zero_red=True,yday_up=True; rank cond; list flatten; wish-list (live io HOLD \u2014 not a ticket); \u26aa; ret5=+4.0; leftover $3238.05",
+        "shares": 11,
+        "ticker": "IQV"
+      },
+      "RBRK": {
+        "close_px": 106.70999908447266,
+        "cost": 109.63850305175781,
+        "entry_date": "2026-09-18",
+        "entry_px": 108.55000305175781,
+        "fee_in": 1.0885,
+        "last_px": 108.55000305175781,
+        "min_hold": 5,
+        "notional": 108.55000305175781,
+        "peak_px": 108.55000305175781,
+        "reason": "flatten looker: 0 red + yesterday up; gate zero_red=True,yday_up=True; rank cond; list flatten; wish-list (live io HOLD \u2014 not a ticket); \u26aa; ret5=+21.3; leftover $119.19",
+        "shares": 1,
+        "ticker": "RBRK"
+      },
+      "RDNT": {
+        "close_px": 76.0,
+        "cost": 3164.033112609863,
+        "entry_date": "2026-09-16",
+        "entry_px": 77.12000274658203,
+        "fee_in": 2.113,
+        "last_px": 77.66000366210938,
+        "min_hold": 5,
+        "notional": 3161.9201126098633,
+        "peak_px": 77.66000366210938,
+        "reason": "flatten looker: 0 red + yesterday up; gate zero_red=True,yday_up=True; rank cond; list flatten; wish-list (live io HOLD \u2014 not a ticket); \u26aa; ret5=+7.2; leftover $3238.05",
+        "shares": 41,
+        "ticker": "RDNT"
+      }
+    },
+    "yday_equity": 9622.12
+  }
+}

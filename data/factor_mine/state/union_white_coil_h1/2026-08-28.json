@@ -1,0 +1,215 @@
+{
+  "buys": [
+    "TTMI",
+    "KEYS",
+    "AVT",
+    "CGNX",
+    "COHR",
+    "LSCC",
+    "MTSI",
+    "OLED"
+  ],
+  "cash": 753.13,
+  "date": "2026-08-28",
+  "equity": 9684.07,
+  "fees": 16.151,
+  "fills": [
+    {
+      "fees": 2.02,
+      "pnl": null,
+      "price": 122.81,
+      "shares": 10,
+      "side": "BUY",
+      "ticker": "TTMI"
+    },
+    {
+      "fees": 1.999,
+      "pnl": null,
+      "price": 324.41,
+      "shares": 3,
+      "side": "BUY",
+      "ticker": "KEYS"
+    },
+    {
+      "fees": 2.029,
+      "pnl": null,
+      "price": 91.49,
+      "shares": 13,
+      "side": "BUY",
+      "ticker": "AVT"
+    },
+    {
+      "fees": 2.047,
+      "pnl": null,
+      "price": 62.82,
+      "shares": 19,
+      "side": "BUY",
+      "ticker": "CGNX"
+    },
+    {
+      "fees": 2.002,
+      "pnl": null,
+      "price": 289.44,
+      "shares": 4,
+      "side": "BUY",
+      "ticker": "COHR"
+    },
+    {
+      "fees": 2.02,
+      "pnl": null,
+      "price": 119.76,
+      "shares": 10,
+      "side": "BUY",
+      "ticker": "LSCC"
+    },
+    {
+      "fees": 2.002,
+      "pnl": null,
+      "price": 275.2,
+      "shares": 4,
+      "side": "BUY",
+      "ticker": "MTSI"
+    },
+    {
+      "fees": 2.032,
+      "pnl": null,
+      "price": 85.02,
+      "shares": 14,
+      "side": "BUY",
+      "ticker": "OLED"
+    }
+  ],
+  "holdings": [
+    "AVT",
+    "CGNX",
+    "COHR",
+    "KEYS",
+    "LSCC",
+    "MTSI",
+    "OLED",
+    "TTMI"
+  ],
+  "mean": -3.1593,
+  "n_trades_today": 8,
+  "recipe": "union_white_coil_h1",
+  "sells": [],
+  "state": {
+    "after": "2026-08-28",
+    "cash": 753.13,
+    "pos": {
+      "AVT": {
+        "close_px": 88.62999725341797,
+        "cost": 1191.398972229004,
+        "entry_date": "2026-08-28",
+        "entry_px": 91.48999786376953,
+        "fee_in": 2.029,
+        "last_px": 91.48999786376953,
+        "min_hold": 1,
+        "notional": 1189.369972229004,
+        "peak_px": 91.48999786376953,
+        "reason": "combo gate; gate zero_red=True,ret_5_max=10.0,rvol_max=2.2; list mover_buy; \ud83d\udd35; \u26aa; ret5=+5.3; leftover $1250.00",
+        "shares": 13,
+        "ticker": "AVT"
+      },
+      "CGNX": {
+        "close_px": 60.459999084472656,
+        "cost": 1195.6269942016602,
+        "entry_date": "2026-08-28",
+        "entry_px": 62.81999969482422,
+        "fee_in": 2.047,
+        "last_px": 62.81999969482422,
+        "min_hold": 1,
+        "notional": 1193.5799942016602,
+        "peak_px": 62.81999969482422,
+        "reason": "combo gate; gate zero_red=True,ret_5_max=10.0,rvol_max=2.2; list mover_buy; \ud83d\udd35; \u26aa; ret5=+5.4; leftover $1250.00",
+        "shares": 19,
+        "ticker": "CGNX"
+      },
+      "COHR": {
+        "close_px": 279.20001220703125,
+        "cost": 1159.762009765625,
+        "entry_date": "2026-08-28",
+        "entry_px": 289.44000244140625,
+        "fee_in": 2.002,
+        "last_px": 289.44000244140625,
+        "min_hold": 1,
+        "notional": 1157.760009765625,
+        "peak_px": 289.44000244140625,
+        "reason": "combo gate; gate zero_red=True,ret_5_max=10.0,rvol_max=2.2; list mover_buy; \ud83d\udd35; \u26aa; ret5=+1.8; leftover $1250.00",
+        "shares": 4,
+        "ticker": "COHR"
+      },
+      "KEYS": {
+        "close_px": 319.9700012207031,
+        "cost": 975.2290109863281,
+        "entry_date": "2026-08-28",
+        "entry_px": 324.4100036621094,
+        "fee_in": 1.999,
+        "last_px": 324.4100036621094,
+        "min_hold": 1,
+        "notional": 973.2300109863281,
+        "peak_px": 324.4100036621094,
+        "reason": "combo gate; gate zero_red=True,ret_5_max=10.0,rvol_max=2.2; list mover_buy; \ud83d\udd35; \u26aa; ret5=+2.9; leftover $1250.00",
+        "shares": 3,
+        "ticker": "KEYS"
+      },
+      "LSCC": {
+        "close_px": 114.4000015258789,
+        "cost": 1199.6200213623047,
+        "entry_date": "2026-08-28",
+        "entry_px": 119.76000213623047,
+        "fee_in": 2.02,
+        "last_px": 119.76000213623047,
+        "min_hold": 1,
+        "notional": 1197.6000213623047,
+        "peak_px": 119.76000213623047,
+        "reason": "combo gate; gate zero_red=True,ret_5_max=10.0,rvol_max=2.2; list mover_buy; \ud83d\udd35; \u26aa; ret5=+2.5; leftover $1250.00",
+        "shares": 10,
+        "ticker": "LSCC"
+      },
+      "MTSI": {
+        "close_px": 265.2699890136719,
+        "cost": 1102.802048828125,
+        "entry_date": "2026-08-28",
+        "entry_px": 275.20001220703125,
+        "fee_in": 2.002,
+        "last_px": 275.20001220703125,
+        "min_hold": 1,
+        "notional": 1100.800048828125,
+        "peak_px": 275.20001220703125,
+        "reason": "combo gate; gate zero_red=True,ret_5_max=10.0,rvol_max=2.2; list mover_buy; \ud83d\udd35; \u26aa; ret5=+4.1; leftover $1250.00",
+        "shares": 4,
+        "ticker": "MTSI"
+      },
+      "OLED": {
+        "close_px": 82.9800033569336,
+        "cost": 1192.3119530029296,
+        "entry_date": "2026-08-28",
+        "entry_px": 85.0199966430664,
+        "fee_in": 2.032,
+        "last_px": 85.0199966430664,
+        "min_hold": 1,
+        "notional": 1190.2799530029297,
+        "peak_px": 85.0199966430664,
+        "reason": "combo gate; gate zero_red=True,ret_5_max=10.0,rvol_max=2.2; list mover_buy; \ud83d\udd35; \u26aa; ret5=-1.9; leftover $1250.00",
+        "shares": 14,
+        "ticker": "OLED"
+      },
+      "TTMI": {
+        "close_px": 118.6500015258789,
+        "cost": 1230.1199755859375,
+        "entry_date": "2026-08-28",
+        "entry_px": 122.80999755859375,
+        "fee_in": 2.02,
+        "last_px": 122.80999755859375,
+        "min_hold": 1,
+        "notional": 1228.0999755859375,
+        "peak_px": 122.80999755859375,
+        "reason": "combo gate; gate zero_red=True,ret_5_max=10.0,rvol_max=2.2; list yday_gainer,mover_buy; \ud83d\udd35; \u26aa; ret5=+9.0; leftover $1250.00",
+        "shares": 10,
+        "ticker": "TTMI"
+      }
+    },
+    "yday_equity": 9684.07
+  }
+}

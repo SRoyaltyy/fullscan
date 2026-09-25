@@ -1,0 +1,160 @@
+{
+  "buys": [],
+  "cash": 3222.07,
+  "date": "2026-09-01",
+  "equity": 9540.28,
+  "fees": 2.025,
+  "fills": [
+    {
+      "fees": 2.025,
+      "pnl": 11.27,
+      "price": 140.25,
+      "shares": 5,
+      "side": "SELL",
+      "ticker": "MRNA"
+    }
+  ],
+  "holdings": [
+    "ADSK",
+    "BBAR",
+    "ESTC",
+    "FINV",
+    "FRO",
+    "GAP",
+    "HAFN",
+    "RBRK"
+  ],
+  "mean": -1.8405,
+  "n_trades_today": 1,
+  "recipe": "combo_eh_7030_shared",
+  "sells": [
+    "MRNA"
+  ],
+  "state": {
+    "after": "2026-09-01",
+    "cash": 3222.07,
+    "pos": {
+      "ADSK": {
+        "close_px": 247.69000244140625,
+        "cost": 785.4790109863281,
+        "entry_date": "2026-08-28",
+        "entry_px": 261.1600036621094,
+        "fee_in": 1.999,
+        "last_px": 253.47999572753906,
+        "notional": 783.4800109863281,
+        "owner": "union_e_fresh_h3",
+        "peak_px": 261.1600036621094,
+        "reason": "union \u2229 e_fresh, no \ud83d\udea8; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=+7.8; combo leftover $875.00; owner union_e_fresh_h3",
+        "shares": 3,
+        "side": "long",
+        "ticker": "ADSK"
+      },
+      "BBAR": {
+        "close_px": 15.109999656677246,
+        "cost": 872.7440132751465,
+        "entry_date": "2026-08-28",
+        "entry_px": 15.010000228881836,
+        "fee_in": 2.164,
+        "last_px": 14.819999694824219,
+        "notional": 870.5800132751465,
+        "owner": "union_e_fresh_h3",
+        "peak_px": 15.010000228881836,
+        "reason": "union \u2229 e_fresh, no \ud83d\udea8; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=+3.7; combo leftover $875.00; owner union_e_fresh_h3",
+        "shares": 58,
+        "side": "long",
+        "ticker": "BBAR"
+      },
+      "ESTC": {
+        "close_px": 92.38999938964844,
+        "cost": 833.1339951171875,
+        "entry_date": "2026-08-28",
+        "entry_px": 103.88999938964844,
+        "fee_in": 2.014,
+        "last_px": 95.76000213623047,
+        "notional": 831.1199951171875,
+        "owner": "union_e_fresh_h3",
+        "peak_px": 103.88999938964844,
+        "reason": "union \u2229 e_fresh, no \ud83d\udea8; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=-2.5; combo leftover $875.00; owner union_e_fresh_h3",
+        "shares": 8,
+        "side": "long",
+        "ticker": "ESTC"
+      },
+      "FINV": {
+        "close_px": 3.319999933242798,
+        "cost": 875.9025257492066,
+        "entry_date": "2026-08-28",
+        "entry_px": 3.880000114440918,
+        "fee_in": 2.9025,
+        "last_px": 3.5799999237060547,
+        "notional": 873.0000257492065,
+        "owner": "union_e_fresh_h3",
+        "peak_px": 3.880000114440918,
+        "reason": "union \u2229 e_fresh, no \ud83d\udea8; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=-8.6; combo leftover $875.00; owner union_e_fresh_h3",
+        "shares": 225,
+        "side": "long",
+        "ticker": "FINV"
+      },
+      "FRO": {
+        "close_px": 44.31999969482422,
+        "cost": 845.6470289916992,
+        "entry_date": "2026-08-28",
+        "entry_px": 44.400001525878906,
+        "fee_in": 2.047,
+        "last_px": 44.38999938964844,
+        "notional": 843.6000289916992,
+        "owner": "union_e_fresh_h3",
+        "peak_px": 44.849998474121094,
+        "reason": "union \u2229 e_fresh, no \ud83d\udea8; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=+0.4; combo leftover $875.00; owner union_e_fresh_h3",
+        "shares": 19,
+        "side": "long",
+        "ticker": "FRO"
+      },
+      "GAP": {
+        "close_px": 22.0,
+        "cost": 866.2450186920166,
+        "entry_date": "2026-08-28",
+        "entry_px": 24.690000534057617,
+        "fee_in": 2.095,
+        "last_px": 22.049999237060547,
+        "notional": 864.1500186920166,
+        "owner": "union_e_fresh_h3",
+        "peak_px": 24.690000534057617,
+        "reason": "union \u2229 e_fresh, no \ud83d\udea8; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=+5.8; combo leftover $875.00; owner union_e_fresh_h3",
+        "shares": 35,
+        "side": "long",
+        "ticker": "GAP"
+      },
+      "HAFN": {
+        "close_px": 8.59000015258789,
+        "cost": 870.7020396728516,
+        "entry_date": "2026-08-28",
+        "entry_px": 8.350000381469727,
+        "fee_in": 2.302,
+        "last_px": 8.5600004196167,
+        "notional": 868.4000396728516,
+        "owner": "union_e_fresh_h3",
+        "peak_px": 8.5600004196167,
+        "reason": "union \u2229 e_fresh, no \ud83d\udea8; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=+5.1; combo leftover $875.00; owner union_e_fresh_h3",
+        "shares": 104,
+        "side": "long",
+        "ticker": "HAFN"
+      },
+      "RBRK": {
+        "close_px": 88.4000015258789,
+        "cost": 793.6139755859375,
+        "entry_date": "2026-08-28",
+        "entry_px": 98.94999694824219,
+        "fee_in": 2.014,
+        "last_px": 91.69999694824219,
+        "notional": 791.5999755859375,
+        "owner": "union_e_fresh_h3",
+        "peak_px": 98.94999694824219,
+        "reason": "union \u2229 e_fresh, no \ud83d\udea8; gate days_since_E_max=1,flag_E_min=0; list ohlc_hot,earn_react; ret5=+9.7; combo leftover $875.00; owner union_e_fresh_h3",
+        "shares": 8,
+        "side": "long",
+        "ticker": "RBRK"
+      }
+    },
+    "yday_equity": 9540.28
+  }
+}

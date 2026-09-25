@@ -1,0 +1,257 @@
+{
+  "buys": [
+    "GLND",
+    "GRAL",
+    "NUAI",
+    "USDE",
+    "VGZ",
+    "AMRX",
+    "FWDI"
+  ],
+  "cash": 13658.67,
+  "date": "2026-09-22",
+  "equity": 9583.95,
+  "fees": 36.5197,
+  "fills": [
+    {
+      "fees": 2.053,
+      "pnl": 45.0,
+      "price": 29.3,
+      "shares": 21,
+      "side": "COVER",
+      "ticker": "ASST"
+    },
+    {
+      "fees": 4.0506,
+      "pnl": -157.34,
+      "price": 3.51,
+      "shares": 314,
+      "side": "COVER",
+      "ticker": "CYPH"
+    },
+    {
+      "fees": 3.483,
+      "pnl": -7.04,
+      "price": 2.47,
+      "shares": 270,
+      "side": "COVER",
+      "ticker": "FEAM"
+    },
+    {
+      "fees": 2.029,
+      "pnl": 18.39,
+      "price": 48.1,
+      "shares": 13,
+      "side": "COVER",
+      "ticker": "FRO"
+    },
+    {
+      "fees": 2.182,
+      "pnl": 11.6,
+      "price": 10.18,
+      "shares": 64,
+      "side": "COVER",
+      "ticker": "IOVA"
+    },
+    {
+      "fees": 2.089,
+      "pnl": 16.9,
+      "price": 19.28,
+      "shares": 33,
+      "side": "COVER",
+      "ticker": "NEO"
+    },
+    {
+      "fees": 2.107,
+      "pnl": -30.38,
+      "price": 17.58,
+      "shares": 39,
+      "side": "COVER",
+      "ticker": "TJGC"
+    },
+    {
+      "fees": 2.041,
+      "pnl": 28.69,
+      "price": 35.54,
+      "shares": 17,
+      "side": "COVER",
+      "ticker": "TRMD"
+    },
+    {
+      "fees": 2.678751233194952,
+      "pnl": null,
+      "price": 2.94,
+      "shares": 203,
+      "side": "SHORT",
+      "ticker": "GLND"
+    },
+    {
+      "fees": 2.039623287671233,
+      "pnl": null,
+      "price": 106.75,
+      "shares": 5,
+      "side": "SHORT",
+      "ticker": "GRAL"
+    },
+    {
+      "fees": 2.275842739768877,
+      "pnl": null,
+      "price": 7.23,
+      "shares": 82,
+      "side": "SHORT",
+      "ticker": "NUAI"
+    },
+    {
+      "fees": 2.164370958615656,
+      "pnl": null,
+      "price": 12.99,
+      "shares": 46,
+      "side": "SHORT",
+      "ticker": "USDE"
+    },
+    {
+      "fees": 2.9661356170262376,
+      "pnl": null,
+      "price": 2.65,
+      "shares": 225,
+      "side": "SHORT",
+      "ticker": "VGZ"
+    },
+    {
+      "fees": 2.112890410958904,
+      "pnl": null,
+      "price": 20.0,
+      "shares": 29,
+      "side": "SHORT",
+      "ticker": "AMRX"
+    },
+    {
+      "fees": 2.24744,
+      "pnl": null,
+      "price": 8.17,
+      "shares": 73,
+      "side": "SHORT",
+      "ticker": "FWDI"
+    }
+  ],
+  "holdings": [
+    "AMRX",
+    "FWDI",
+    "GLND",
+    "GRAL",
+    "NUAI",
+    "USDE",
+    "VGZ"
+  ],
+  "mean": 0.2741,
+  "n_trades_today": 15,
+  "recipe": "short_rsi_ob_h1",
+  "sells": [
+    "ASST",
+    "CYPH",
+    "FEAM",
+    "FRO",
+    "IOVA",
+    "NEO",
+    "TJGC",
+    "TRMD"
+  ],
+  "state": {
+    "after": "2026-09-22",
+    "cash": 13658.67,
+    "pos": {
+      "AMRX": {
+        "close_px": 19.5,
+        "cost": 2.112890410958904,
+        "entry_date": "2026-09-22",
+        "entry_px": 20.0,
+        "fee_in": 2.112890410958904,
+        "last_px": 20.0,
+        "notional": 580.0,
+        "peak_px": 20.0,
+        "reason": "RSI overbought; gate rsi_ob=True; list ohlc_hot; ret5=+17.1; leftover $598.85",
+        "shares": 29,
+        "ticker": "AMRX"
+      },
+      "FWDI": {
+        "close_px": 8.6,
+        "cost": 2.24744,
+        "entry_date": "2026-09-22",
+        "entry_px": 8.17,
+        "fee_in": 2.24744,
+        "last_px": 8.17,
+        "notional": 596.41,
+        "peak_px": 8.17,
+        "reason": "RSI overbought; gate rsi_ob=True; list ohlc_hot; ret5=+17.6; leftover $598.85",
+        "shares": 73,
+        "ticker": "FWDI"
+      },
+      "GLND": {
+        "close_px": 2.509999990463257,
+        "cost": 2.678751233194952,
+        "entry_date": "2026-09-22",
+        "entry_px": 2.940000057220459,
+        "fee_in": 2.678751233194952,
+        "last_px": 2.940000057220459,
+        "notional": 596.8200116157532,
+        "peak_px": 2.940000057220459,
+        "reason": "RSI overbought; gate rsi_ob=True; list yday_gainer,yday_mover; ret5=+136.1; leftover $598.85",
+        "shares": 203,
+        "ticker": "GLND"
+      },
+      "GRAL": {
+        "close_px": 108.52,
+        "cost": 2.039623287671233,
+        "entry_date": "2026-09-22",
+        "entry_px": 106.75,
+        "fee_in": 2.039623287671233,
+        "last_px": 106.75,
+        "notional": 533.75,
+        "peak_px": 106.75,
+        "reason": "RSI overbought; gate rsi_ob=True; list yday_gainer,yday_mover; ret5=+42.9; leftover $598.85",
+        "shares": 5,
+        "ticker": "GRAL"
+      },
+      "NUAI": {
+        "close_px": 6.974999904632568,
+        "cost": 2.275842739768877,
+        "entry_date": "2026-09-22",
+        "entry_px": 7.230000019073486,
+        "fee_in": 2.275842739768877,
+        "last_px": 7.230000019073486,
+        "notional": 592.8600015640259,
+        "peak_px": 7.230000019073486,
+        "reason": "RSI overbought; gate rsi_ob=True; list yday_gainer,yday_mover; ret5=+36.6; leftover $598.85",
+        "shares": 82,
+        "ticker": "NUAI"
+      },
+      "USDE": {
+        "close_px": 13.539999961853027,
+        "cost": 2.164370958615656,
+        "entry_date": "2026-09-22",
+        "entry_px": 12.989999771118164,
+        "fee_in": 2.164370958615656,
+        "last_px": 12.989999771118164,
+        "notional": 597.5399894714355,
+        "peak_px": 12.989999771118164,
+        "reason": "RSI overbought; gate rsi_ob=True; list yday_gainer,yday_mover; ret5=+69.4; leftover $598.85",
+        "shares": 46,
+        "ticker": "USDE"
+      },
+      "VGZ": {
+        "close_px": 2.819999933242798,
+        "cost": 2.9661356170262376,
+        "entry_date": "2026-09-22",
+        "entry_px": 2.6500000953674316,
+        "fee_in": 2.9661356170262376,
+        "last_px": 2.6500000953674316,
+        "notional": 596.2500214576721,
+        "peak_px": 2.6500000953674316,
+        "reason": "RSI overbought; gate rsi_ob=True; list yday_gainer,yday_mover; ret5=+26.3; leftover $598.85",
+        "shares": 225,
+        "ticker": "VGZ"
+      }
+    },
+    "yday_equity": 9583.95
+  }
+}

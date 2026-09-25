@@ -1,0 +1,111 @@
+{
+  "buys": [],
+  "cash": 263.29,
+  "date": "2026-09-24",
+  "equity": 7896.02,
+  "fees": 0,
+  "fills": [],
+  "holdings": [
+    "BB",
+    "DRI",
+    "FUL",
+    "NEOV",
+    "SFIX",
+    "SNX"
+  ],
+  "mean": -8.8553,
+  "n_trades_today": 0,
+  "recipe": "overnight_h5",
+  "sells": [],
+  "state": {
+    "after": "2026-09-24",
+    "cash": 263.29,
+    "pos": {
+      "BB": {
+        "close_px": 8.729999542236328,
+        "cost": 1481.706065612793,
+        "entry_date": "2026-09-23",
+        "entry_px": 8.600000381469727,
+        "fee_in": 2.506,
+        "last_px": 8.420000076293945,
+        "min_hold": 5,
+        "notional": 1479.200065612793,
+        "peak_px": 8.600000381469727,
+        "reason": "baseline list, no extra gate; list overnight; \ud83d\udd35; \u26aa; ret5=+10.5; leftover $1483.54",
+        "shares": 172,
+        "ticker": "BB"
+      },
+      "DRI": {
+        "close_px": 207.24000549316406,
+        "cost": 1292.6080366210938,
+        "entry_date": "2026-09-23",
+        "entry_px": 215.10000610351562,
+        "fee_in": 2.008,
+        "last_px": 208.8800048828125,
+        "min_hold": 5,
+        "notional": 1290.6000366210938,
+        "peak_px": 215.10000610351562,
+        "reason": "baseline list, no extra gate; list overnight; \ud83d\udd35; ret5=+2.1; leftover $1483.54",
+        "shares": 6,
+        "ticker": "DRI"
+      },
+      "FUL": {
+        "close_px": 50.0,
+        "cost": 1466.866951324463,
+        "entry_date": "2026-09-23",
+        "entry_px": 50.5099983215332,
+        "fee_in": 2.077,
+        "last_px": 49.290000915527344,
+        "min_hold": 5,
+        "notional": 1464.789951324463,
+        "peak_px": 50.5099983215332,
+        "reason": "baseline list, no extra gate; list overnight; \ud83d\udd35; ret5=+0.4; leftover $1483.54",
+        "shares": 29,
+        "ticker": "FUL"
+      },
+      "NEOV": {
+        "close_px": 2.3949999809265137,
+        "cost": 1488.0244415802001,
+        "entry_date": "2026-09-23",
+        "entry_px": 3.4000000953674316,
+        "fee_in": 5.6244,
+        "last_px": 2.6500000953674316,
+        "min_hold": 5,
+        "notional": 1482.4000415802002,
+        "peak_px": 3.4000000953674316,
+        "reason": "baseline list, no extra gate; list overnight; \ud83d\udd35; ret5=+1.8; leftover $1483.54",
+        "shares": 436,
+        "ticker": "NEOV"
+      },
+      "SFIX": {
+        "close_px": 2.2100000381469727,
+        "cost": 1489.4384047302246,
+        "entry_date": "2026-09-23",
+        "entry_px": 2.990000009536743,
+        "fee_in": 6.3984,
+        "last_px": 2.309999942779541,
+        "min_hold": 5,
+        "notional": 1483.0400047302246,
+        "peak_px": 2.990000009536743,
+        "reason": "baseline list, no extra gate; list overnight; ret5=+1.7; leftover $1483.54",
+        "shares": 496,
+        "ticker": "SFIX"
+      },
+      "SNX": {
+        "close_px": 259.4700012207031,
+        "cost": 1419.3049572753907,
+        "entry_date": "2026-09-23",
+        "entry_px": 283.4599914550781,
+        "fee_in": 2.005,
+        "last_px": 262.1199951171875,
+        "min_hold": 5,
+        "notional": 1417.2999572753906,
+        "peak_px": 283.4599914550781,
+        "reason": "baseline list, no extra gate; list overnight; ret5=+7.9; leftover $1483.54",
+        "shares": 5,
+        "ticker": "SNX"
+      }
+    },
+    "yday_equity": 7896.02
+  }
+}

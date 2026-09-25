@@ -1,0 +1,180 @@
+{
+  "buys": [
+    "HELP",
+    "INTC",
+    "AMD",
+    "EWTX"
+  ],
+  "cash": 506.89,
+  "date": "2026-09-18",
+  "equity": 9667.07,
+  "fees": 31.8428,
+  "fills": [
+    {
+      "fees": 2.0935,
+      "pnl": -6.32,
+      "price": 57.85,
+      "shares": 27,
+      "side": "SELL",
+      "ticker": "LPG"
+    },
+    {
+      "fees": 2.7967,
+      "pnl": 77.53,
+      "price": 7.98,
+      "shares": 213,
+      "side": "SELL",
+      "ticker": "PGEN"
+    },
+    {
+      "fees": 7.2,
+      "pnl": 84.7,
+      "price": 3.12,
+      "shares": 550,
+      "side": "SELL",
+      "ticker": "QTRX"
+    },
+    {
+      "fees": 8.8188,
+      "pnl": -91.65,
+      "price": 2.29,
+      "shares": 674,
+      "side": "SELL",
+      "ticker": "SABR"
+    },
+    {
+      "fees": 2.3798,
+      "pnl": 17.88,
+      "price": 13.74,
+      "shares": 119,
+      "side": "SELL",
+      "ticker": "SFL"
+    },
+    {
+      "fees": 2.392,
+      "pnl": null,
+      "price": 15.15,
+      "shares": 134,
+      "side": "BUY",
+      "ticker": "HELP"
+    },
+    {
+      "fees": 2.044,
+      "pnl": null,
+      "price": 109.8,
+      "shares": 18,
+      "side": "BUY",
+      "ticker": "INTC"
+    },
+    {
+      "fees": 1.999,
+      "pnl": null,
+      "price": 547.37,
+      "shares": 3,
+      "side": "BUY",
+      "ticker": "AMD"
+    },
+    {
+      "fees": 2.119,
+      "pnl": null,
+      "price": 46.79,
+      "shares": 43,
+      "side": "BUY",
+      "ticker": "EWTX"
+    }
+  ],
+  "holdings": [
+    "AMD",
+    "BNC",
+    "EWTX",
+    "HELP",
+    "INTC"
+  ],
+  "mean": -2.8389,
+  "n_trades_today": 9,
+  "recipe": "ohlc_hot_coil_h1",
+  "sells": [
+    "LPG",
+    "PGEN",
+    "QTRX",
+    "SABR",
+    "SFL"
+  ],
+  "state": {
+    "after": "2026-09-18",
+    "cash": 506.89,
+    "pos": {
+      "AMD": {
+        "close_px": 559.8200073242188,
+        "cost": 1644.1089853515625,
+        "entry_date": "2026-09-18",
+        "entry_px": 547.3699951171875,
+        "fee_in": 1.999,
+        "last_px": 547.3699951171875,
+        "min_hold": 1,
+        "notional": 1642.1099853515625,
+        "peak_px": 547.3699951171875,
+        "reason": "hot list \u2229 not exploded; gate ret_5_min=0.0,ret_5_max=10.0,rvol_max=2.2; list ohlc_hot; ret5=+8.2; leftover $2044.01",
+        "shares": 3,
+        "ticker": "AMD"
+      },
+      "BNC": {
+        "close_px": 5.980000019073486,
+        "cost": 1618.7709673484803,
+        "entry_date": "2026-09-17",
+        "entry_px": 5.03000020980835,
+        "fee_in": 4.1409,
+        "last_px": 5.829999923706055,
+        "min_hold": 1,
+        "notional": 1614.6300673484802,
+        "peak_px": 5.829999923706055,
+        "reason": "hot list \u2229 not exploded; gate ret_5_min=0.0,ret_5_max=10.0,rvol_max=2.2; list ohlc_hot; ret5=+7.4; leftover $1618.78",
+        "shares": 321,
+        "ticker": "BNC"
+      },
+      "EWTX": {
+        "close_px": 45.31999969482422,
+        "cost": 2014.0890393676757,
+        "entry_date": "2026-09-18",
+        "entry_px": 46.790000915527344,
+        "fee_in": 2.119,
+        "last_px": 46.790000915527344,
+        "min_hold": 1,
+        "notional": 2011.9700393676758,
+        "peak_px": 46.790000915527344,
+        "reason": "hot list \u2229 not exploded; gate ret_5_min=0.0,ret_5_max=10.0,rvol_max=2.2; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+9.4; leftover $2044.01",
+        "shares": 43,
+        "ticker": "EWTX"
+      },
+      "HELP": {
+        "close_px": 12.369999885559082,
+        "cost": 2032.4919488830567,
+        "entry_date": "2026-09-18",
+        "entry_px": 15.149999618530273,
+        "fee_in": 2.392,
+        "last_px": 15.149999618530273,
+        "min_hold": 1,
+        "notional": 2030.0999488830566,
+        "peak_px": 15.149999618530273,
+        "reason": "hot list \u2229 not exploded; gate ret_5_min=0.0,ret_5_max=10.0,rvol_max=2.2; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+9.2; leftover $2044.01",
+        "shares": 134,
+        "ticker": "HELP"
+      },
+      "INTC": {
+        "close_px": 108.5999984741211,
+        "cost": 1978.4440549316407,
+        "entry_date": "2026-09-18",
+        "entry_px": 109.80000305175781,
+        "fee_in": 2.044,
+        "last_px": 109.80000305175781,
+        "min_hold": 1,
+        "notional": 1976.4000549316406,
+        "peak_px": 109.80000305175781,
+        "reason": "hot list \u2229 not exploded; gate ret_5_min=0.0,ret_5_max=10.0,rvol_max=2.2; list ohlc_hot; \ud83d\udd35; ret5=+8.5; leftover $2044.01",
+        "shares": 18,
+        "ticker": "INTC"
+      }
+    },
+    "yday_equity": 9667.07
+  }
+}

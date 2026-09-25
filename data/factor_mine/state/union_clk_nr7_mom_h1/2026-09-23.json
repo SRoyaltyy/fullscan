@@ -1,0 +1,167 @@
+{
+  "buys": [
+    "ZS",
+    "SNX",
+    "FTRE",
+    "DXCM",
+    "DRI",
+    "FUL"
+  ],
+  "cash": 474.55,
+  "date": "2026-09-23",
+  "equity": 10965.49,
+  "fees": 12.447,
+  "fills": [
+    {
+      "fees": 2.014,
+      "pnl": null,
+      "price": 213.0,
+      "shares": 8,
+      "side": "BUY",
+      "ticker": "ZS"
+    },
+    {
+      "fees": 2.008,
+      "pnl": null,
+      "price": 283.46,
+      "shares": 6,
+      "side": "BUY",
+      "ticker": "SNX"
+    },
+    {
+      "fees": 2.263,
+      "pnl": null,
+      "price": 20.25,
+      "shares": 91,
+      "side": "BUY",
+      "ticker": "FTRE"
+    },
+    {
+      "fees": 2.05,
+      "pnl": null,
+      "price": 89.5,
+      "shares": 20,
+      "side": "BUY",
+      "ticker": "DXCM"
+    },
+    {
+      "fees": 2.014,
+      "pnl": null,
+      "price": 215.1,
+      "shares": 8,
+      "side": "BUY",
+      "ticker": "DRI"
+    },
+    {
+      "fees": 2.098,
+      "pnl": null,
+      "price": 50.51,
+      "shares": 36,
+      "side": "BUY",
+      "ticker": "FUL"
+    }
+  ],
+  "holdings": [
+    "DRI",
+    "DXCM",
+    "FTRE",
+    "FUL",
+    "SNX",
+    "ZS"
+  ],
+  "mean": -0.8874,
+  "n_trades_today": 6,
+  "recipe": "union_clk_nr7_mom_h1",
+  "sells": [],
+  "state": {
+    "after": "2026-09-23",
+    "cash": 474.55,
+    "pos": {
+      "DRI": {
+        "close_px": 213.69000244140625,
+        "cost": 1722.814048828125,
+        "entry_date": "2026-09-23",
+        "entry_px": 215.10000610351562,
+        "fee_in": 2.014,
+        "last_px": 215.10000610351562,
+        "min_hold": 1,
+        "notional": 1720.800048828125,
+        "peak_px": 215.10000610351562,
+        "reason": "Clock-B #10 NR7 + moderate momentum; gate clk_nr7_mom=True; rank hot_score; list overnight; \ud83d\udd35; ret5=+2.1; leftover $1843.94",
+        "shares": 8,
+        "ticker": "DRI"
+      },
+      "DXCM": {
+        "close_px": 87.7300033569336,
+        "cost": 1792.05,
+        "entry_date": "2026-09-23",
+        "entry_px": 89.5,
+        "fee_in": 2.05,
+        "last_px": 89.5,
+        "min_hold": 1,
+        "notional": 1790.0,
+        "peak_px": 89.5,
+        "reason": "Clock-B #10 NR7 + moderate momentum; gate clk_nr7_mom=True; rank hot_score; list flatten; \ud83d\udd35; \u26aa; ret5=+3.6; leftover $1843.94",
+        "shares": 20,
+        "ticker": "DXCM"
+      },
+      "FTRE": {
+        "close_px": 19.520000457763672,
+        "cost": 1845.013,
+        "entry_date": "2026-09-23",
+        "entry_px": 20.25,
+        "fee_in": 2.263,
+        "last_px": 20.25,
+        "min_hold": 1,
+        "notional": 1842.75,
+        "peak_px": 20.25,
+        "reason": "Clock-B #10 NR7 + moderate momentum; gate clk_nr7_mom=True; rank hot_score; list flatten; \ud83d\udd35; \u26aa; ret5=+3.5; leftover $1843.94",
+        "shares": 91,
+        "ticker": "FTRE"
+      },
+      "FUL": {
+        "close_px": 50.209999084472656,
+        "cost": 1820.4579395751953,
+        "entry_date": "2026-09-23",
+        "entry_px": 50.5099983215332,
+        "fee_in": 2.098,
+        "last_px": 50.5099983215332,
+        "min_hold": 1,
+        "notional": 1818.3599395751953,
+        "peak_px": 50.5099983215332,
+        "reason": "Clock-B #10 NR7 + moderate momentum; gate clk_nr7_mom=True; rank hot_score; list overnight; \ud83d\udd35; ret5=+0.4; leftover $1843.94",
+        "shares": 36,
+        "ticker": "FUL"
+      },
+      "SNX": {
+        "close_px": 287.8900146484375,
+        "cost": 1702.7679487304688,
+        "entry_date": "2026-09-23",
+        "entry_px": 283.4599914550781,
+        "fee_in": 2.008,
+        "last_px": 283.4599914550781,
+        "min_hold": 1,
+        "notional": 1700.7599487304688,
+        "peak_px": 283.4599914550781,
+        "reason": "Clock-B #10 NR7 + moderate momentum; gate clk_nr7_mom=True; rank hot_score; list overnight; ret5=+7.9; leftover $1843.94",
+        "shares": 6,
+        "ticker": "SNX"
+      },
+      "ZS": {
+        "close_px": 214.4499969482422,
+        "cost": 1706.014,
+        "entry_date": "2026-09-23",
+        "entry_px": 213.0,
+        "fee_in": 2.014,
+        "last_px": 213.0,
+        "min_hold": 1,
+        "notional": 1704.0,
+        "peak_px": 213.0,
+        "reason": "Clock-B #10 NR7 + moderate momentum; gate clk_nr7_mom=True; rank hot_score; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+8.4; leftover $1843.94",
+        "shares": 8,
+        "ticker": "ZS"
+      }
+    },
+    "yday_equity": 10965.49
+  }
+}

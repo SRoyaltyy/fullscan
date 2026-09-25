@@ -1,0 +1,122 @@
+{
+  "buys": [
+    "FLNC"
+  ],
+  "cash": 34.06,
+  "date": "2026-09-18",
+  "equity": 8051.4,
+  "fees": 0.0783,
+  "fills": [
+    {
+      "fees": 0.0783,
+      "pnl": null,
+      "price": 7.535,
+      "shares": 1,
+      "side": "BUY",
+      "ticker": "FLNC"
+    }
+  ],
+  "holdings": [
+    "BAK",
+    "CRUS",
+    "DBX",
+    "FLNC",
+    "SION",
+    "WAY"
+  ],
+  "mean": -6.2163,
+  "n_trades_today": 1,
+  "recipe": "union_news_head_h3",
+  "sells": [],
+  "state": {
+    "after": "2026-09-18",
+    "cash": 34.06,
+    "pos": {
+      "BAK": {
+        "close_px": 1.7000000476837158,
+        "cost": 8.953499904632569,
+        "entry_date": "2026-09-17",
+        "entry_px": 1.7699999809265137,
+        "fee_in": 0.1035,
+        "last_px": 1.7699999809265137,
+        "min_hold": 3,
+        "notional": 8.849999904632568,
+        "peak_px": 1.7699999809265137,
+        "reason": "prior-export headline\ud83d\udfe2 only; gate headline=good; rank cond; list yday_mover; ret5=-10.2; leftover $10.12",
+        "shares": 5,
+        "ticker": "BAK"
+      },
+      "CRUS": {
+        "close_px": 118.81999969482422,
+        "cost": 2094.570937744141,
+        "entry_date": "2026-09-16",
+        "entry_px": 123.08999633789062,
+        "fee_in": 2.041,
+        "last_px": 120.83999633789062,
+        "min_hold": 3,
+        "notional": 2092.5299377441406,
+        "peak_px": 123.08999633789062,
+        "reason": "prior-export headline\ud83d\udfe2 only; gate headline=good; rank cond; list ohlc_hot; \ud83d\udd35; ret5=+10.3; leftover $2131.13",
+        "shares": 17,
+        "ticker": "CRUS"
+      },
+      "DBX": {
+        "close_px": 36.47999954223633,
+        "cost": 2118.5710608825684,
+        "entry_date": "2026-09-16",
+        "entry_px": 37.130001068115234,
+        "fee_in": 2.161,
+        "last_px": 37.650001525878906,
+        "min_hold": 3,
+        "notional": 2116.4100608825684,
+        "peak_px": 37.650001525878906,
+        "reason": "prior-export headline\ud83d\udfe2 only; gate headline=good; rank cond; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+11.3; leftover $2131.13",
+        "shares": 57,
+        "ticker": "DBX"
+      },
+      "FLNC": {
+        "close_px": 7.320000171661377,
+        "cost": 7.613299847412109,
+        "entry_date": "2026-09-18",
+        "entry_px": 7.534999847412109,
+        "fee_in": 0.0783,
+        "last_px": 7.534999847412109,
+        "min_hold": 3,
+        "notional": 7.534999847412109,
+        "peak_px": 7.534999847412109,
+        "reason": "prior-export headline\ud83d\udfe2 only; gate headline=good; rank cond; list yday_mover; \ud83d\udd35; ret5=-20.9; leftover $10.42",
+        "shares": 1,
+        "ticker": "FLNC"
+      },
+      "SION": {
+        "close_px": 5.960000038146973,
+        "cost": 2130.647341635132,
+        "entry_date": "2026-09-16",
+        "entry_px": 6.949999809265137,
+        "fee_in": 3.9474,
+        "last_px": 7.119999885559082,
+        "min_hold": 3,
+        "notional": 2126.699941635132,
+        "peak_px": 7.269999980926514,
+        "reason": "prior-export headline\ud83d\udfe2 only; gate headline=good; rank cond; list yday_mover; ret5=-5.8; leftover $2131.13",
+        "shares": 306,
+        "ticker": "SION"
+      },
+      "WAY": {
+        "close_px": 25.65999984741211,
+        "cost": 2130.1030370788576,
+        "entry_date": "2026-09-16",
+        "entry_px": 26.270000457763672,
+        "fee_in": 2.233,
+        "last_px": 26.950000762939453,
+        "min_hold": 3,
+        "notional": 2127.8700370788574,
+        "peak_px": 26.950000762939453,
+        "reason": "prior-export headline\ud83d\udfe2 only; gate headline=good; rank cond; list yday_gainer,ohlc_hot; \ud83d\udd35; \u26aa; ret5=+10.0; leftover $2131.13",
+        "shares": 81,
+        "ticker": "WAY"
+      }
+    },
+    "yday_equity": 8051.4
+  }
+}

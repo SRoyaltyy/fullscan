@@ -1,0 +1,30 @@
+{
+  "buys": [],
+  "cash": 9986.12,
+  "date": "2026-09-14",
+  "equity": 9986.12,
+  "fees": 11.3689,
+  "fills": [
+    {
+      "fees": 11.3689,
+      "pnl": -13.87,
+      "price": 11.56,
+      "shares": 864,
+      "side": "SELL",
+      "ticker": "FUBO"
+    }
+  ],
+  "holdings": [],
+  "mean": 0.1459,
+  "n_trades_today": 1,
+  "recipe": "union_catal_present_h1",
+  "sells": [
+    "FUBO"
+  ],
+  "state": {
+    "after": "2026-09-14",
+    "cash": 9986.12,
+    "pos": {},
+    "yday_equity": 9986.12
+  }
+}

@@ -1,0 +1,279 @@
+{
+  "buys": [
+    "FJET",
+    "DEFT",
+    "APPS",
+    "ALOY",
+    "ARHS",
+    "HELP",
+    "NN",
+    "BTQ"
+  ],
+  "cash": 2.63,
+  "date": "2026-09-22",
+  "equity": 9699.69,
+  "fees": 79.2886,
+  "fills": [
+    {
+      "fees": 2.3043,
+      "pnl": 24.7,
+      "price": 13.43,
+      "shares": 96,
+      "side": "SELL",
+      "ticker": "ALMU"
+    },
+    {
+      "fees": 9.0386,
+      "pnl": -38.68,
+      "price": 1.795,
+      "shares": 691,
+      "side": "SELL",
+      "ticker": "BTBT"
+    },
+    {
+      "fees": 2.2944,
+      "pnl": -53.39,
+      "price": 12.95,
+      "shares": 93,
+      "side": "SELL",
+      "ticker": "BTDR"
+    },
+    {
+      "fees": 2.154,
+      "pnl": -4.29,
+      "price": 25.95,
+      "shares": 48,
+      "side": "SELL",
+      "ticker": "GLXY"
+    },
+    {
+      "fees": 14.853,
+      "pnl": -97.67,
+      "price": 1.05,
+      "shares": 1136,
+      "side": "SELL",
+      "ticker": "ORBS"
+    },
+    {
+      "fees": 2.3989,
+      "pnl": -14.85,
+      "price": 9.91,
+      "shares": 126,
+      "side": "SELL",
+      "ticker": "SBET"
+    },
+    {
+      "fees": 2.393,
+      "pnl": 34.3,
+      "price": 10.45,
+      "shares": 124,
+      "side": "SELL",
+      "ticker": "SGML"
+    },
+    {
+      "fees": 7.9335,
+      "pnl": null,
+      "price": 2.02,
+      "shares": 615,
+      "side": "BUY",
+      "ticker": "FJET"
+    },
+    {
+      "fees": 18.7434,
+      "pnl": null,
+      "price": 0.59,
+      "shares": 2106,
+      "side": "BUY",
+      "ticker": "DEFT"
+    },
+    {
+      "fees": 2.293,
+      "pnl": null,
+      "price": 12.24,
+      "shares": 101,
+      "side": "BUY",
+      "ticker": "APPS"
+    },
+    {
+      "fees": 2.386,
+      "pnl": null,
+      "price": 9.4,
+      "shares": 132,
+      "side": "BUY",
+      "ticker": "ALOY"
+    },
+    {
+      "fees": 2.407,
+      "pnl": null,
+      "price": 8.9,
+      "shares": 139,
+      "side": "BUY",
+      "ticker": "ARHS"
+    },
+    {
+      "fees": 2.254,
+      "pnl": null,
+      "price": 14.01,
+      "shares": 88,
+      "side": "BUY",
+      "ticker": "HELP"
+    },
+    {
+      "fees": 2.224,
+      "pnl": null,
+      "price": 15.76,
+      "shares": 78,
+      "side": "BUY",
+      "ticker": "NN"
+    },
+    {
+      "fees": 5.6115,
+      "pnl": null,
+      "price": 2.84,
+      "shares": 435,
+      "side": "BUY",
+      "ticker": "BTQ"
+    }
+  ],
+  "holdings": [
+    "ALOY",
+    "APPS",
+    "ARHS",
+    "BTQ",
+    "DEFT",
+    "FJET",
+    "HELP",
+    "NN"
+  ],
+  "mean": -3.2251,
+  "n_trades_today": 15,
+  "recipe": "probable_h1",
+  "sells": [
+    "ALMU",
+    "BTBT",
+    "BTDR",
+    "GLXY",
+    "ORBS",
+    "SBET",
+    "SGML"
+  ],
+  "state": {
+    "after": "2026-09-22",
+    "cash": 2.63,
+    "pos": {
+      "ALOY": {
+        "close_px": 9.029999732971191,
+        "cost": 1243.185949645996,
+        "entry_date": "2026-09-22",
+        "entry_px": 9.399999618530273,
+        "fee_in": 2.386,
+        "last_px": 9.399999618530273,
+        "min_hold": 1,
+        "notional": 1240.799949645996,
+        "peak_px": 9.399999618530273,
+        "reason": "baseline list, no extra gate; list probable,yday_gainer; ret5=+9.5; leftover $1242.88",
+        "shares": 132,
+        "ticker": "ALOY"
+      },
+      "APPS": {
+        "close_px": 12.19,
+        "cost": 1238.533,
+        "entry_date": "2026-09-22",
+        "entry_px": 12.24,
+        "fee_in": 2.293,
+        "last_px": 12.24,
+        "min_hold": 1,
+        "notional": 1236.24,
+        "peak_px": 12.24,
+        "reason": "baseline list, no extra gate; list probable,yday_gainer; ret5=+2.7; leftover $1242.88",
+        "shares": 101,
+        "ticker": "APPS"
+      },
+      "ARHS": {
+        "close_px": 9.29,
+        "cost": 1239.507,
+        "entry_date": "2026-09-22",
+        "entry_px": 8.9,
+        "fee_in": 2.407,
+        "last_px": 8.9,
+        "min_hold": 1,
+        "notional": 1237.1000000000001,
+        "peak_px": 8.9,
+        "reason": "baseline list, no extra gate; list probable; \ud83d\udd35; ret5=+7.5; leftover $1242.88",
+        "shares": 139,
+        "ticker": "ARHS"
+      },
+      "BTQ": {
+        "close_px": 2.680000066757202,
+        "cost": 1241.0114626636505,
+        "entry_date": "2026-09-22",
+        "entry_px": 2.8399999141693115,
+        "fee_in": 5.6115,
+        "last_px": 2.8399999141693115,
+        "min_hold": 1,
+        "notional": 1235.3999626636505,
+        "peak_px": 2.8399999141693115,
+        "reason": "baseline list, no extra gate; list probable; ret5=+1.4; leftover $1242.88",
+        "shares": 435,
+        "ticker": "BTQ"
+      },
+      "DEFT": {
+        "close_px": 0.58,
+        "cost": 1261.2834,
+        "entry_date": "2026-09-22",
+        "entry_px": 0.59,
+        "fee_in": 18.7434,
+        "last_px": 0.59,
+        "min_hold": 1,
+        "notional": 1242.54,
+        "peak_px": 0.59,
+        "reason": "baseline list, no extra gate; list probable,yday_gainer,yday_mover; ret5=-1.7; leftover $1242.88",
+        "shares": 2106,
+        "ticker": "DEFT"
+      },
+      "FJET": {
+        "close_px": 1.94,
+        "cost": 1250.2335,
+        "entry_date": "2026-09-22",
+        "entry_px": 2.02,
+        "fee_in": 7.9335,
+        "last_px": 2.02,
+        "min_hold": 1,
+        "notional": 1242.3,
+        "peak_px": 2.02,
+        "reason": "baseline list, no extra gate; list probable,yday_gainer,yday_mover; ret5=+0.5; leftover $1242.88",
+        "shares": 615,
+        "ticker": "FJET"
+      },
+      "HELP": {
+        "close_px": 13.71,
+        "cost": 1235.1339999999998,
+        "entry_date": "2026-09-22",
+        "entry_px": 14.01,
+        "fee_in": 2.254,
+        "last_px": 14.01,
+        "min_hold": 1,
+        "notional": 1232.8799999999999,
+        "peak_px": 14.01,
+        "reason": "baseline list, no extra gate; list probable; ret5=+0.4; leftover $1242.88",
+        "shares": 88,
+        "ticker": "HELP"
+      },
+      "NN": {
+        "close_px": 15.33,
+        "cost": 1231.504,
+        "entry_date": "2026-09-22",
+        "entry_px": 15.76,
+        "fee_in": 2.224,
+        "last_px": 15.76,
+        "min_hold": 1,
+        "notional": 1229.28,
+        "peak_px": 15.76,
+        "reason": "baseline list, no extra gate; list probable; ret5=+0.8; leftover $1242.88",
+        "shares": 78,
+        "ticker": "NN"
+      }
+    },
+    "yday_equity": 9699.69
+  }
+}

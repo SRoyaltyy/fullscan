@@ -1,0 +1,81 @@
+{
+  "buys": [],
+  "cash": 303.37,
+  "date": "2026-09-17",
+  "equity": 9997.56,
+  "fees": 0,
+  "fills": [],
+  "holdings": [
+    "BLFS",
+    "IQV",
+    "RDNT",
+    "TEM"
+  ],
+  "mean": 4.9146,
+  "n_trades_today": 0,
+  "recipe": "union_white_both_n4_h3",
+  "sells": [],
+  "state": {
+    "after": "2026-09-17",
+    "cash": 303.37,
+    "pos": {
+      "BLFS": {
+        "close_px": 36.849998474121094,
+        "cost": 2372.0849404907226,
+        "entry_date": "2026-09-16",
+        "entry_px": 36.459999084472656,
+        "fee_in": 2.185,
+        "last_px": 36.66999816894531,
+        "min_hold": 3,
+        "notional": 2369.8999404907227,
+        "peak_px": 36.66999816894531,
+        "reason": "\u22120 red + yday up AND catalyst, top 4 by Score; gate cam_bad_max=0,yday_and_catalyst=True; rank list; list flatten; \ud83d\udd35; \u26aa; ret5=+2.9; leftover $2394.59",
+        "shares": 65,
+        "ticker": "BLFS"
+      },
+      "IQV": {
+        "close_px": 269.44000244140625,
+        "cost": 2169.1341171875,
+        "entry_date": "2026-09-16",
+        "entry_px": 270.8900146484375,
+        "fee_in": 2.014,
+        "last_px": 273.1499938964844,
+        "min_hold": 3,
+        "notional": 2167.1201171875,
+        "peak_px": 273.1499938964844,
+        "reason": "\u22120 red + yday up AND catalyst, top 4 by Score; gate cam_bad_max=0,yday_and_catalyst=True; rank list; list flatten; \u26aa; ret5=+4.0; leftover $2394.59",
+        "shares": 8,
+        "ticker": "IQV"
+      },
+      "RDNT": {
+        "close_px": 77.77999877929688,
+        "cost": 2392.803085144043,
+        "entry_date": "2026-09-16",
+        "entry_px": 77.12000274658203,
+        "fee_in": 2.083,
+        "last_px": 76.44000244140625,
+        "min_hold": 3,
+        "notional": 2390.720085144043,
+        "peak_px": 77.12000274658203,
+        "reason": "\u22120 red + yday up AND catalyst, top 4 by Score; gate cam_bad_max=0,yday_and_catalyst=True; rank list; list flatten; \u26aa; ret5=+7.2; leftover $2394.59",
+        "shares": 31,
+        "ticker": "RDNT"
+      },
+      "TEM": {
+        "close_px": 80.36000061035156,
+        "cost": 2340.95203112793,
+        "entry_date": "2026-09-16",
+        "entry_px": 68.79000091552734,
+        "fee_in": 2.092,
+        "last_px": 72.69999694824219,
+        "min_hold": 3,
+        "notional": 2338.8600311279297,
+        "peak_px": 72.69999694824219,
+        "reason": "\u22120 red + yday up AND catalyst, top 4 by Score; gate cam_bad_max=0,yday_and_catalyst=True; rank list; list probable,yday_gainer; \ud83d\udd35; \u26aa; ret5=+7.1; leftover $2394.59",
+        "shares": 34,
+        "ticker": "TEM"
+      }
+    },
+    "yday_equity": 9997.56
+  }
+}

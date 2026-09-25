@@ -1,0 +1,39 @@
+{
+  "buys": [],
+  "cash": 7998.49,
+  "date": "2026-09-24",
+  "equity": 7998.49,
+  "fees": 49.5061,
+  "fills": [
+    {
+      "fees": 45.8945,
+      "pnl": -266.67,
+      "price": 1.17,
+      "shares": 3510,
+      "side": "SELL",
+      "ticker": "CMPX"
+    },
+    {
+      "fees": 3.6116,
+      "pnl": -374.31,
+      "price": 14.38,
+      "shares": 274,
+      "side": "SELL",
+      "ticker": "SGRY"
+    }
+  ],
+  "holdings": [],
+  "mean": -1.2205,
+  "n_trades_today": 2,
+  "recipe": "union_news_vol_h1",
+  "sells": [
+    "CMPX",
+    "SGRY"
+  ],
+  "state": {
+    "after": "2026-09-24",
+    "cash": 7998.49,
+    "pos": {},
+    "yday_equity": 7998.49
+  }
+}

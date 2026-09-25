@@ -1,0 +1,127 @@
+{
+  "buys": [],
+  "cash": 12816.63,
+  "date": "2026-08-31",
+  "equity": 9878.62,
+  "fees": 17.7321,
+  "fills": [
+    {
+      "fees": 2.019,
+      "pnl": -14.37,
+      "price": 257.71,
+      "shares": 3,
+      "side": "SELL",
+      "ticker": "ADSK"
+    },
+    {
+      "fees": 2.184,
+      "pnl": -11.89,
+      "price": 14.88,
+      "shares": 58,
+      "side": "SELL",
+      "ticker": "BBAR"
+    },
+    {
+      "fees": 2.034,
+      "pnl": -51.17,
+      "price": 98.0,
+      "shares": 8,
+      "side": "SELL",
+      "ticker": "ESTC"
+    },
+    {
+      "fees": 2.9498,
+      "pnl": -116.1,
+      "price": 3.39,
+      "shares": 225,
+      "side": "SELL",
+      "ticker": "FINV"
+    },
+    {
+      "fees": 2.067,
+      "pnl": 4.44,
+      "price": 44.85,
+      "shares": 19,
+      "side": "SELL",
+      "ticker": "FRO"
+    },
+    {
+      "fees": 2.115,
+      "pnl": -64.06,
+      "price": 22.98,
+      "shares": 35,
+      "side": "SELL",
+      "ticker": "GAP"
+    },
+    {
+      "fees": 2.3293,
+      "pnl": 14.09,
+      "price": 8.53,
+      "shares": 104,
+      "side": "SELL",
+      "ticker": "HAFN"
+    },
+    {
+      "fees": 2.034,
+      "pnl": -53.01,
+      "price": 92.83,
+      "shares": 8,
+      "side": "SELL",
+      "ticker": "RBRK"
+    }
+  ],
+  "holdings": [
+    "FIG",
+    "SIMO"
+  ],
+  "mean": 0.4423,
+  "n_trades_today": 8,
+  "recipe": "combo_e1s_7030_shared",
+  "sells": [
+    "ADSK",
+    "BBAR",
+    "ESTC",
+    "FINV",
+    "FRO",
+    "GAP",
+    "HAFN",
+    "RBRK"
+  ],
+  "state": {
+    "after": "2026-08-31",
+    "cash": 12816.63,
+    "pos": {
+      "FIG": {
+        "close_px": 27.489999771118164,
+        "cost": 2.2156230141417623,
+        "entry_date": "2026-08-28",
+        "entry_px": 30.18000030517578,
+        "fee_in": 2.2156230141417623,
+        "last_px": 27.600000381469727,
+        "notional": 1599.5400161743164,
+        "owner": "short_news_r_h3",
+        "peak_px": 27.600000381469727,
+        "reason": "news\ud83d\udd34; gate news=bad; list ohlc_hot; ret5=+12.1; combo leftover $1628.27; owner short_news_r_h3",
+        "shares": 53,
+        "side": "short",
+        "ticker": "FIG"
+      },
+      "SIMO": {
+        "close_px": 246.83999633789062,
+        "cost": 2.071564110492027,
+        "entry_date": "2026-08-28",
+        "entry_px": 252.24000549316406,
+        "fee_in": 2.071564110492027,
+        "last_px": 247.0500030517578,
+        "notional": 1513.4400329589844,
+        "owner": "short_news_r_h3",
+        "peak_px": 247.0500030517578,
+        "reason": "news\ud83d\udd34; gate news=bad; list probable,yday_gainer; \u26aa; ret5=+2.2; combo leftover $1628.27; owner short_news_r_h3",
+        "shares": 6,
+        "side": "short",
+        "ticker": "SIMO"
+      }
+    },
+    "yday_equity": 9878.62
+  }
+}

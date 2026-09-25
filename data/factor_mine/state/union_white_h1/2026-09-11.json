@@ -1,0 +1,167 @@
+{
+  "buys": [
+    "ORCL",
+    "COHU",
+    "BAND",
+    "PAGS",
+    "SWKS",
+    "PAYP"
+  ],
+  "cash": 199.77,
+  "date": "2026-09-11",
+  "equity": 9612.35,
+  "fees": 12.921,
+  "fills": [
+    {
+      "fees": 2.017,
+      "pnl": null,
+      "price": 164.43,
+      "shares": 9,
+      "side": "BUY",
+      "ticker": "ORCL"
+    },
+    {
+      "fees": 2.074,
+      "pnl": null,
+      "price": 56.09,
+      "shares": 28,
+      "side": "BUY",
+      "ticker": "COHU"
+    },
+    {
+      "fees": 2.08,
+      "pnl": null,
+      "price": 52.55,
+      "shares": 30,
+      "side": "BUY",
+      "ticker": "BAND"
+    },
+    {
+      "fees": 2.458,
+      "pnl": null,
+      "price": 10.11,
+      "shares": 156,
+      "side": "BUY",
+      "ticker": "PAGS"
+    },
+    {
+      "fees": 2.044,
+      "pnl": null,
+      "price": 84.27,
+      "shares": 18,
+      "side": "BUY",
+      "ticker": "SWKS"
+    },
+    {
+      "fees": 2.248,
+      "pnl": null,
+      "price": 18.3,
+      "shares": 86,
+      "side": "BUY",
+      "ticker": "PAYP"
+    }
+  ],
+  "holdings": [
+    "BAND",
+    "COHU",
+    "ORCL",
+    "PAGS",
+    "PAYP",
+    "SWKS"
+  ],
+  "mean": 1.1039,
+  "n_trades_today": 6,
+  "recipe": "union_white_h1",
+  "sells": [],
+  "state": {
+    "after": "2026-09-11",
+    "cash": 199.77,
+    "pos": {
+      "BAND": {
+        "close_px": 56.869998931884766,
+        "cost": 1578.5799771118163,
+        "entry_date": "2026-09-11",
+        "entry_px": 52.54999923706055,
+        "fee_in": 2.08,
+        "last_px": 52.54999923706055,
+        "min_hold": 1,
+        "notional": 1576.4999771118164,
+        "peak_px": 52.54999923706055,
+        "reason": "union \u2229 white, no \ud83d\udea8; gate zero_red=True; list probable,yday_gainer; \ud83d\udd35; \u26aa; ret5=+9.6; leftover $1584.57",
+        "shares": 30,
+        "ticker": "BAND"
+      },
+      "COHU": {
+        "close_px": 57.08000183105469,
+        "cost": 1572.594004272461,
+        "entry_date": "2026-09-11",
+        "entry_px": 56.09000015258789,
+        "fee_in": 2.074,
+        "last_px": 56.09000015258789,
+        "min_hold": 1,
+        "notional": 1570.520004272461,
+        "peak_px": 56.09000015258789,
+        "reason": "union \u2229 white, no \ud83d\udea8; gate zero_red=True; list flatten; \ud83d\udd35; \u26aa; ret5=+19.0; leftover $1584.57",
+        "shares": 28,
+        "ticker": "COHU"
+      },
+      "ORCL": {
+        "close_px": 150.27999877929688,
+        "cost": 1481.8869340820313,
+        "entry_date": "2026-09-11",
+        "entry_px": 164.42999267578125,
+        "fee_in": 2.017,
+        "last_px": 164.42999267578125,
+        "min_hold": 1,
+        "notional": 1479.8699340820312,
+        "peak_px": 164.42999267578125,
+        "reason": "union \u2229 white, no \ud83d\udea8; gate zero_red=True; list flatten,earn_react; \ud83d\udd35; \u26aa; ret5=-0.7; leftover $1584.57",
+        "shares": 9,
+        "ticker": "ORCL"
+      },
+      "PAGS": {
+        "close_px": 10.119999885559082,
+        "cost": 1579.6179464416505,
+        "entry_date": "2026-09-11",
+        "entry_px": 10.109999656677246,
+        "fee_in": 2.458,
+        "last_px": 10.109999656677246,
+        "min_hold": 1,
+        "notional": 1577.1599464416504,
+        "peak_px": 10.109999656677246,
+        "reason": "union \u2229 white, no \ud83d\udea8; gate zero_red=True; list probable,yday_gainer; \u26aa; ret5=+1.7; leftover $1584.57",
+        "shares": 156,
+        "ticker": "PAGS"
+      },
+      "PAYP": {
+        "close_px": 18.450000762939453,
+        "cost": 1576.047934387207,
+        "entry_date": "2026-09-11",
+        "entry_px": 18.299999237060547,
+        "fee_in": 2.248,
+        "last_px": 18.299999237060547,
+        "min_hold": 1,
+        "notional": 1573.799934387207,
+        "peak_px": 18.299999237060547,
+        "reason": "union \u2229 white, no \ud83d\udea8; gate zero_red=True; list ohlc_hot; \u26aa; ret5=+7.7; leftover $1584.57",
+        "shares": 86,
+        "ticker": "PAYP"
+      },
+      "SWKS": {
+        "close_px": 88.3499984741211,
+        "cost": 1518.9039395751954,
+        "entry_date": "2026-09-11",
+        "entry_px": 84.2699966430664,
+        "fee_in": 2.044,
+        "last_px": 84.2699966430664,
+        "min_hold": 1,
+        "notional": 1516.8599395751953,
+        "peak_px": 84.2699966430664,
+        "reason": "union \u2229 white, no \ud83d\udea8; gate zero_red=True; list yday_gainer,ohlc_hot; \u26aa; ret5=+17.5; leftover $1584.57",
+        "shares": 18,
+        "ticker": "SWKS"
+      }
+    },
+    "yday_equity": 9612.35
+  }
+}

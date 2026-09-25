@@ -1,0 +1,270 @@
+{
+  "buys": [
+    "CRWD",
+    "NAT",
+    "NEO",
+    "SDGR",
+    "INDP",
+    "TEM",
+    "ECO"
+  ],
+  "cash": 160.08,
+  "date": "2026-09-18",
+  "equity": 9910.16,
+  "fees": 55.2311,
+  "fills": [
+    {
+      "fees": 3.1067,
+      "pnl": 0.95,
+      "price": 5.3,
+      "shares": 237,
+      "side": "SELL",
+      "ticker": "ANGI"
+    },
+    {
+      "fees": 7.7843,
+      "pnl": -98.76,
+      "price": 1.96,
+      "shares": 595,
+      "side": "SELL",
+      "ticker": "HLP"
+    },
+    {
+      "fees": 2.3863,
+      "pnl": -20.6,
+      "price": 10.12,
+      "shares": 122,
+      "side": "SELL",
+      "ticker": "IOVA"
+    },
+    {
+      "fees": 15.2716,
+      "pnl": 28.06,
+      "price": 1.12,
+      "shares": 1168,
+      "side": "SELL",
+      "ticker": "IQ"
+    },
+    {
+      "fees": 5.5637,
+      "pnl": 65.45,
+      "price": 3.12,
+      "shares": 425,
+      "side": "SELL",
+      "ticker": "QTRX"
+    },
+    {
+      "fees": 2.0312,
+      "pnl": 76.32,
+      "price": 182.33,
+      "shares": 7,
+      "side": "SELL",
+      "ticker": "SMTC"
+    },
+    {
+      "fees": 2.0341,
+      "pnl": 48.83,
+      "price": 158.04,
+      "shares": 8,
+      "side": "SELL",
+      "ticker": "TWST"
+    },
+    {
+      "fees": 2.005,
+      "pnl": null,
+      "price": 246.98,
+      "shares": 5,
+      "side": "BUY",
+      "ticker": "CRWD"
+    },
+    {
+      "fees": 2.452,
+      "pnl": null,
+      "price": 8.2,
+      "shares": 154,
+      "side": "BUY",
+      "ticker": "NAT"
+    },
+    {
+      "fees": 2.179,
+      "pnl": null,
+      "price": 19.91,
+      "shares": 63,
+      "side": "BUY",
+      "ticker": "NEO"
+    },
+    {
+      "fees": 2.119,
+      "pnl": null,
+      "price": 29.32,
+      "shares": 43,
+      "side": "BUY",
+      "ticker": "SDGR"
+    },
+    {
+      "fees": 4.2312,
+      "pnl": null,
+      "price": 3.85,
+      "shares": 328,
+      "side": "BUY",
+      "ticker": "INDP"
+    },
+    {
+      "fees": 2.035,
+      "pnl": null,
+      "price": 81.4,
+      "shares": 15,
+      "side": "BUY",
+      "ticker": "TEM"
+    },
+    {
+      "fees": 2.032,
+      "pnl": null,
+      "price": 85.0,
+      "shares": 14,
+      "side": "BUY",
+      "ticker": "ECO"
+    }
+  ],
+  "holdings": [
+    "CRWD",
+    "ECO",
+    "GME",
+    "INDP",
+    "NAT",
+    "NEO",
+    "SDGR",
+    "TEM"
+  ],
+  "mean": -2.1542,
+  "n_trades_today": 14,
+  "recipe": "union_candle_score_h1",
+  "sells": [
+    "ANGI",
+    "HLP",
+    "IOVA",
+    "IQ",
+    "QTRX",
+    "SMTC",
+    "TWST"
+  ],
+  "state": {
+    "after": "2026-09-18",
+    "cash": 160.08,
+    "pos": {
+      "CRWD": {
+        "close_px": 237.64999389648438,
+        "cost": 1236.9049786376954,
+        "entry_date": "2026-09-18",
+        "entry_px": 246.97999572753906,
+        "fee_in": 2.005,
+        "last_px": 246.97999572753906,
+        "min_hold": 1,
+        "notional": 1234.8999786376953,
+        "peak_px": 246.97999572753906,
+        "reason": "rank by candle_score; rank candle_score; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+17.6; leftover $1266.25",
+        "shares": 5,
+        "ticker": "CRWD"
+      },
+      "ECO": {
+        "close_px": 84.94999694824219,
+        "cost": 1192.032,
+        "entry_date": "2026-09-18",
+        "entry_px": 85.0,
+        "fee_in": 2.032,
+        "last_px": 85.0,
+        "min_hold": 1,
+        "notional": 1190.0,
+        "peak_px": 85.0,
+        "reason": "rank by candle_score; rank candle_score; list flatten; \ud83d\udd35; \u26aa; ret5=+18.3; leftover $1266.25",
+        "shares": 14,
+        "ticker": "ECO"
+      },
+      "GME": {
+        "close_px": 22.639999389648438,
+        "cost": 1240.8780469970702,
+        "entry_date": "2026-09-17",
+        "entry_px": 22.1200008392334,
+        "fee_in": 2.158,
+        "last_px": 22.899999618530273,
+        "min_hold": 1,
+        "notional": 1238.7200469970703,
+        "peak_px": 22.899999618530273,
+        "reason": "rank by candle_score; rank candle_score; list ohlc_hot; \ud83d\udd35; ret5=+10.5; leftover $1250.54",
+        "shares": 56,
+        "ticker": "GME"
+      },
+      "INDP": {
+        "close_px": 3.549999952316284,
+        "cost": 1267.0311687194824,
+        "entry_date": "2026-09-18",
+        "entry_px": 3.8499999046325684,
+        "fee_in": 4.2312,
+        "last_px": 3.8499999046325684,
+        "min_hold": 1,
+        "notional": 1262.7999687194824,
+        "peak_px": 3.8499999046325684,
+        "reason": "rank by candle_score; rank candle_score; list yday_gainer,yday_mover; ret5=+53.5; leftover $1266.25",
+        "shares": 328,
+        "ticker": "INDP"
+      },
+      "NAT": {
+        "close_px": 8.25,
+        "cost": 1265.251970626831,
+        "entry_date": "2026-09-18",
+        "entry_px": 8.199999809265137,
+        "fee_in": 2.452,
+        "last_px": 8.199999809265137,
+        "min_hold": 1,
+        "notional": 1262.799970626831,
+        "peak_px": 8.199999809265137,
+        "reason": "rank by candle_score; rank candle_score; list ohlc_hot; \ud83d\udd35; ret5=+13.0; leftover $1266.25",
+        "shares": 154,
+        "ticker": "NAT"
+      },
+      "NEO": {
+        "close_px": 19.90999984741211,
+        "cost": 1256.508990386963,
+        "entry_date": "2026-09-18",
+        "entry_px": 19.90999984741211,
+        "fee_in": 2.179,
+        "last_px": 19.90999984741211,
+        "min_hold": 1,
+        "notional": 1254.329990386963,
+        "peak_px": 19.90999984741211,
+        "reason": "rank by candle_score; rank candle_score; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+12.9; leftover $1266.25",
+        "shares": 63,
+        "ticker": "NEO"
+      },
+      "SDGR": {
+        "close_px": 29.020000457763672,
+        "cost": 1262.8789868774413,
+        "entry_date": "2026-09-18",
+        "entry_px": 29.31999969482422,
+        "fee_in": 2.119,
+        "last_px": 29.31999969482422,
+        "min_hold": 1,
+        "notional": 1260.7599868774414,
+        "peak_px": 29.31999969482422,
+        "reason": "rank by candle_score; rank candle_score; list yday_gainer,yday_mover; \ud83d\udd35; \u26aa; ret5=+60.9; leftover $1266.25",
+        "shares": 43,
+        "ticker": "SDGR"
+      },
+      "TEM": {
+        "close_px": 77.83999633789062,
+        "cost": 1223.0350228881837,
+        "entry_date": "2026-09-18",
+        "entry_px": 81.4000015258789,
+        "fee_in": 2.035,
+        "last_px": 81.4000015258789,
+        "min_hold": 1,
+        "notional": 1221.0000228881836,
+        "peak_px": 81.4000015258789,
+        "reason": "rank by candle_score; rank candle_score; list yday_gainer,yday_mover; \ud83d\udd35; \u26aa; ret5=+36.8; leftover $1266.25",
+        "shares": 15,
+        "ticker": "TEM"
+      }
+    },
+    "yday_equity": 9910.16
+  }
+}

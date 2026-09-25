@@ -1,0 +1,288 @@
+{
+  "buys": [
+    "AMD",
+    "VICR",
+    "CRWD",
+    "GNRC",
+    "GH",
+    "NTRA",
+    "INTC",
+    "ECO"
+  ],
+  "cash": 881.98,
+  "date": "2026-09-18",
+  "equity": 9909.02,
+  "fees": 35.7945,
+  "fills": [
+    {
+      "fees": 2.055,
+      "pnl": -14.44,
+      "price": 78.33,
+      "shares": 15,
+      "side": "SELL",
+      "ticker": "APH"
+    },
+    {
+      "fees": 2.3388,
+      "pnl": 50.46,
+      "price": 11.705,
+      "shares": 107,
+      "side": "SELL",
+      "ticker": "BYND"
+    },
+    {
+      "fees": 2.2533,
+      "pnl": -7.68,
+      "price": 14.97,
+      "shares": 80,
+      "side": "SELL",
+      "ticker": "CPRI"
+    },
+    {
+      "fees": 2.034,
+      "pnl": 26.43,
+      "price": 149.79,
+      "shares": 8,
+      "side": "SELL",
+      "ticker": "CVLT"
+    },
+    {
+      "fees": 2.172,
+      "pnl": 37.8,
+      "price": 22.9,
+      "shares": 54,
+      "side": "SELL",
+      "ticker": "GME"
+    },
+    {
+      "fees": 4.7672,
+      "pnl": 190.74,
+      "price": 3.85,
+      "shares": 364,
+      "side": "SELL",
+      "ticker": "INDP"
+    },
+    {
+      "fees": 2.07,
+      "pnl": -5.72,
+      "price": 57.85,
+      "shares": 20,
+      "side": "SELL",
+      "ticker": "LPG"
+    },
+    {
+      "fees": 2.0312,
+      "pnl": 76.32,
+      "price": 182.33,
+      "shares": 7,
+      "side": "SELL",
+      "ticker": "SMTC"
+    },
+    {
+      "fees": 1.996,
+      "pnl": null,
+      "price": 547.37,
+      "shares": 2,
+      "side": "BUY",
+      "ticker": "AMD"
+    },
+    {
+      "fees": 2.005,
+      "pnl": null,
+      "price": 219.62,
+      "shares": 5,
+      "side": "BUY",
+      "ticker": "VICR"
+    },
+    {
+      "fees": 2.005,
+      "pnl": null,
+      "price": 246.98,
+      "shares": 5,
+      "side": "BUY",
+      "ticker": "CRWD"
+    },
+    {
+      "fees": 2.005,
+      "pnl": null,
+      "price": 209.52,
+      "shares": 5,
+      "side": "BUY",
+      "ticker": "GNRC"
+    },
+    {
+      "fees": 2.008,
+      "pnl": null,
+      "price": 183.0,
+      "shares": 6,
+      "side": "BUY",
+      "ticker": "GH"
+    },
+    {
+      "fees": 1.999,
+      "pnl": null,
+      "price": 365.78,
+      "shares": 3,
+      "side": "BUY",
+      "ticker": "NTRA"
+    },
+    {
+      "fees": 2.023,
+      "pnl": null,
+      "price": 109.8,
+      "shares": 11,
+      "side": "BUY",
+      "ticker": "INTC"
+    },
+    {
+      "fees": 2.032,
+      "pnl": null,
+      "price": 85.0,
+      "shares": 14,
+      "side": "BUY",
+      "ticker": "ECO"
+    }
+  ],
+  "holdings": [
+    "AMD",
+    "CRWD",
+    "ECO",
+    "GH",
+    "GNRC",
+    "INTC",
+    "NTRA",
+    "VICR"
+  ],
+  "mean": -0.7017,
+  "n_trades_today": 16,
+  "recipe": "union_macd_hist_h1",
+  "sells": [
+    "APH",
+    "BYND",
+    "CPRI",
+    "CVLT",
+    "GME",
+    "INDP",
+    "LPG",
+    "SMTC"
+  ],
+  "state": {
+    "after": "2026-09-18",
+    "cash": 881.98,
+    "pos": {
+      "AMD": {
+        "close_px": 559.8200073242188,
+        "cost": 1096.735990234375,
+        "entry_date": "2026-09-18",
+        "entry_px": 547.3699951171875,
+        "fee_in": 1.996,
+        "last_px": 547.3699951171875,
+        "min_hold": 1,
+        "notional": 1094.739990234375,
+        "peak_px": 547.3699951171875,
+        "reason": "rank by macd_hist; rank macd_hist; list ohlc_hot; ret5=+8.2; leftover $1245.82",
+        "shares": 2,
+        "ticker": "AMD"
+      },
+      "CRWD": {
+        "close_px": 237.64999389648438,
+        "cost": 1236.9049786376954,
+        "entry_date": "2026-09-18",
+        "entry_px": 246.97999572753906,
+        "fee_in": 2.005,
+        "last_px": 246.97999572753906,
+        "min_hold": 1,
+        "notional": 1234.8999786376953,
+        "peak_px": 246.97999572753906,
+        "reason": "rank by macd_hist; rank macd_hist; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+17.6; leftover $1245.82",
+        "shares": 5,
+        "ticker": "CRWD"
+      },
+      "ECO": {
+        "close_px": 84.94999694824219,
+        "cost": 1192.032,
+        "entry_date": "2026-09-18",
+        "entry_px": 85.0,
+        "fee_in": 2.032,
+        "last_px": 85.0,
+        "min_hold": 1,
+        "notional": 1190.0,
+        "peak_px": 85.0,
+        "reason": "rank by macd_hist; rank macd_hist; list flatten; \ud83d\udd35; \u26aa; ret5=+18.3; leftover $1245.82",
+        "shares": 14,
+        "ticker": "ECO"
+      },
+      "GH": {
+        "close_px": 179.3800048828125,
+        "cost": 1100.008,
+        "entry_date": "2026-09-18",
+        "entry_px": 183.0,
+        "fee_in": 2.008,
+        "last_px": 183.0,
+        "min_hold": 1,
+        "notional": 1098.0,
+        "peak_px": 183.0,
+        "reason": "rank by macd_hist; rank macd_hist; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+15.1; leftover $1245.82",
+        "shares": 6,
+        "ticker": "GH"
+      },
+      "GNRC": {
+        "close_px": 207.44000244140625,
+        "cost": 1049.6050213623048,
+        "entry_date": "2026-09-18",
+        "entry_px": 209.52000427246094,
+        "fee_in": 2.005,
+        "last_px": 209.52000427246094,
+        "min_hold": 1,
+        "notional": 1047.6000213623047,
+        "peak_px": 209.52000427246094,
+        "reason": "rank by macd_hist; rank macd_hist; list flatten,yday_gainer,yday_mover; \ud83d\udd35; ret5=+14.1; leftover $1245.82",
+        "shares": 5,
+        "ticker": "GNRC"
+      },
+      "INTC": {
+        "close_px": 108.5999984741211,
+        "cost": 1209.8230335693358,
+        "entry_date": "2026-09-18",
+        "entry_px": 109.80000305175781,
+        "fee_in": 2.023,
+        "last_px": 109.80000305175781,
+        "min_hold": 1,
+        "notional": 1207.800033569336,
+        "peak_px": 109.80000305175781,
+        "reason": "rank by macd_hist; rank macd_hist; list ohlc_hot; \ud83d\udd35; ret5=+8.5; leftover $1245.82",
+        "shares": 11,
+        "ticker": "INTC"
+      },
+      "NTRA": {
+        "close_px": 369.3900146484375,
+        "cost": 1099.3389963378906,
+        "entry_date": "2026-09-18",
+        "entry_px": 365.7799987792969,
+        "fee_in": 1.999,
+        "last_px": 365.7799987792969,
+        "min_hold": 1,
+        "notional": 1097.3399963378906,
+        "peak_px": 365.7799987792969,
+        "reason": "rank by macd_hist; rank macd_hist; list ohlc_hot; \ud83d\udd35; ret5=+12.3; leftover $1245.82",
+        "shares": 3,
+        "ticker": "NTRA"
+      },
+      "VICR": {
+        "close_px": 222.72000122070312,
+        "cost": 1100.1049755859376,
+        "entry_date": "2026-09-18",
+        "entry_px": 219.6199951171875,
+        "fee_in": 2.005,
+        "last_px": 219.6199951171875,
+        "min_hold": 1,
+        "notional": 1098.0999755859375,
+        "peak_px": 219.6199951171875,
+        "reason": "rank by macd_hist; rank macd_hist; list flatten,yday_gainer,yday_mover; \ud83d\udd35; ret5=+21.5; leftover $1245.82",
+        "shares": 5,
+        "ticker": "VICR"
+      }
+    },
+    "yday_equity": 9909.02
+  }
+}

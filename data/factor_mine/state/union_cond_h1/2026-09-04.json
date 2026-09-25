@@ -1,0 +1,215 @@
+{
+  "buys": [
+    "CABA",
+    "ALEC",
+    "ATRC",
+    "BHC",
+    "BMEA",
+    "CRM",
+    "HRMY",
+    "MLYS"
+  ],
+  "cash": 155.24,
+  "date": "2026-09-04",
+  "equity": 9676.65,
+  "fees": 29.6726,
+  "fills": [
+    {
+      "fees": 4.5021,
+      "pnl": null,
+      "price": 3.46,
+      "shares": 349,
+      "side": "BUY",
+      "ticker": "CABA"
+    },
+    {
+      "fees": 6.1791,
+      "pnl": null,
+      "price": 2.52,
+      "shares": 479,
+      "side": "BUY",
+      "ticker": "ALEC"
+    },
+    {
+      "fees": 2.059,
+      "pnl": null,
+      "price": 52.03,
+      "shares": 23,
+      "side": "BUY",
+      "ticker": "ATRC"
+    },
+    {
+      "fees": 2.53,
+      "pnl": null,
+      "price": 6.71,
+      "shares": 180,
+      "side": "BUY",
+      "ticker": "BHC"
+    },
+    {
+      "fees": 8.2044,
+      "pnl": null,
+      "price": 1.9,
+      "shares": 636,
+      "side": "BUY",
+      "ticker": "BMEA"
+    },
+    {
+      "fees": 2.002,
+      "pnl": null,
+      "price": 263.36,
+      "shares": 4,
+      "side": "BUY",
+      "ticker": "CRM"
+    },
+    {
+      "fees": 2.077,
+      "pnl": null,
+      "price": 41.5,
+      "shares": 29,
+      "side": "BUY",
+      "ticker": "HRMY"
+    },
+    {
+      "fees": 2.119,
+      "pnl": null,
+      "price": 28.0,
+      "shares": 43,
+      "side": "BUY",
+      "ticker": "MLYS"
+    }
+  ],
+  "holdings": [
+    "ALEC",
+    "ATRC",
+    "BHC",
+    "BMEA",
+    "CABA",
+    "CRM",
+    "HRMY",
+    "MLYS"
+  ],
+  "mean": 0.034,
+  "n_trades_today": 8,
+  "recipe": "union_cond_h1",
+  "sells": [],
+  "state": {
+    "after": "2026-09-04",
+    "cash": 155.24,
+    "pos": {
+      "ALEC": {
+        "close_px": 2.4600000381469727,
+        "cost": 1213.2590908638,
+        "entry_date": "2026-09-04",
+        "entry_px": 2.5199999809265137,
+        "fee_in": 6.1791,
+        "last_px": 2.5199999809265137,
+        "min_hold": 1,
+        "notional": 1207.0799908638,
+        "peak_px": 2.5199999809265137,
+        "reason": "rank by cond; rank cond; list flatten,probable,yday_gainer,yday_mover,mover_buy; \ud83d\udd35; \u26aa; ret5=+5.0; leftover $1209.17",
+        "shares": 479,
+        "ticker": "ALEC"
+      },
+      "ATRC": {
+        "close_px": 51.52000045776367,
+        "cost": 1198.748971923828,
+        "entry_date": "2026-09-04",
+        "entry_px": 52.029998779296875,
+        "fee_in": 2.059,
+        "last_px": 52.029998779296875,
+        "min_hold": 1,
+        "notional": 1196.6899719238281,
+        "peak_px": 52.029998779296875,
+        "reason": "rank by cond; rank cond; list flatten,mover_buy; \ud83d\udd35; \u26aa; ret5=+6.5; leftover $1209.17",
+        "shares": 23,
+        "ticker": "ATRC"
+      },
+      "BHC": {
+        "close_px": 6.559999942779541,
+        "cost": 1210.330006866455,
+        "entry_date": "2026-09-04",
+        "entry_px": 6.710000038146973,
+        "fee_in": 2.53,
+        "last_px": 6.710000038146973,
+        "min_hold": 1,
+        "notional": 1207.800006866455,
+        "peak_px": 6.710000038146973,
+        "reason": "rank by cond; rank cond; list flatten,mover_buy; \ud83d\udd35; \u26aa; ret5=+7.3; leftover $1209.17",
+        "shares": 180,
+        "ticker": "BHC"
+      },
+      "BMEA": {
+        "close_px": 2.0299999713897705,
+        "cost": 1216.6043848365784,
+        "entry_date": "2026-09-04",
+        "entry_px": 1.899999976158142,
+        "fee_in": 8.2044,
+        "last_px": 1.899999976158142,
+        "min_hold": 1,
+        "notional": 1208.3999848365784,
+        "peak_px": 1.899999976158142,
+        "reason": "rank by cond; rank cond; list flatten,mover_buy; \ud83d\udd35; \u26aa; ret5=+13.7; leftover $1209.17",
+        "shares": 636,
+        "ticker": "BMEA"
+      },
+      "CABA": {
+        "close_px": 3.4700000286102295,
+        "cost": 1212.0421133132934,
+        "entry_date": "2026-09-04",
+        "entry_px": 3.4600000381469727,
+        "fee_in": 4.5021,
+        "last_px": 3.4600000381469727,
+        "min_hold": 1,
+        "notional": 1207.5400133132935,
+        "peak_px": 3.4600000381469727,
+        "reason": "rank by cond; rank cond; list flatten,mover_buy; \ud83d\udd35; \u26aa; ret5=+3.0; leftover $1209.17",
+        "shares": 349,
+        "ticker": "CABA"
+      },
+      "CRM": {
+        "close_px": 259.2300109863281,
+        "cost": 1055.44194140625,
+        "entry_date": "2026-09-04",
+        "entry_px": 263.3599853515625,
+        "fee_in": 2.002,
+        "last_px": 263.3599853515625,
+        "min_hold": 1,
+        "notional": 1053.43994140625,
+        "peak_px": 263.3599853515625,
+        "reason": "rank by cond; rank cond; list flatten,mover_buy; \ud83d\udd35; \u26aa; ret5=+4.9; leftover $1209.17",
+        "shares": 4,
+        "ticker": "CRM"
+      },
+      "HRMY": {
+        "close_px": 42.25,
+        "cost": 1205.577,
+        "entry_date": "2026-09-04",
+        "entry_px": 41.5,
+        "fee_in": 2.077,
+        "last_px": 41.5,
+        "min_hold": 1,
+        "notional": 1203.5,
+        "peak_px": 41.5,
+        "reason": "rank by cond; rank cond; list flatten,mover_buy; \ud83d\udd35; \u26aa; ret5=+5.0; leftover $1209.17",
+        "shares": 29,
+        "ticker": "HRMY"
+      },
+      "MLYS": {
+        "close_px": 28.209999084472656,
+        "cost": 1206.119,
+        "entry_date": "2026-09-04",
+        "entry_px": 28.0,
+        "fee_in": 2.119,
+        "last_px": 28.0,
+        "min_hold": 1,
+        "notional": 1204.0,
+        "peak_px": 28.0,
+        "reason": "rank by cond; rank cond; list probable,yday_gainer,yday_mover; \ud83d\udd35; \u26aa; ret5=+8.7; leftover $1209.17",
+        "shares": 43,
+        "ticker": "MLYS"
+      }
+    },
+    "yday_equity": 9676.65
+  }
+}

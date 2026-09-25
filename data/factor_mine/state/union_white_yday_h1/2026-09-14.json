@@ -1,0 +1,57 @@
+{
+  "buys": [],
+  "cash": 10045.89,
+  "date": "2026-09-14",
+  "equity": 10045.89,
+  "fees": 9.8942,
+  "fills": [
+    {
+      "fees": 2.1589,
+      "pnl": 195.81,
+      "price": 56.9,
+      "shares": 46,
+      "side": "SELL",
+      "ticker": "BAND"
+    },
+    {
+      "fees": 3.1945,
+      "pnl": -33.06,
+      "price": 10.0,
+      "shares": 243,
+      "side": "SELL",
+      "ticker": "PAGS"
+    },
+    {
+      "fees": 2.4338,
+      "pnl": -7.51,
+      "price": 18.28,
+      "shares": 134,
+      "side": "SELL",
+      "ticker": "PAYP"
+    },
+    {
+      "fees": 2.107,
+      "pnl": 47.73,
+      "price": 86.06,
+      "shares": 29,
+      "side": "SELL",
+      "ticker": "SWKS"
+    }
+  ],
+  "holdings": [],
+  "mean": -1.2471,
+  "n_trades_today": 4,
+  "recipe": "union_white_yday_h1",
+  "sells": [
+    "BAND",
+    "PAGS",
+    "PAYP",
+    "SWKS"
+  ],
+  "state": {
+    "after": "2026-09-14",
+    "cash": 10045.89,
+    "pos": {},
+    "yday_equity": 10045.89
+  }
+}

@@ -1,0 +1,181 @@
+{
+  "buys": [
+    "DELL",
+    "SMTC"
+  ],
+  "cash": 19607.08,
+  "date": "2026-09-18",
+  "equity": 10106.82,
+  "fees": 4.2189,
+  "fills": [
+    {
+      "fees": 2.096002742401541,
+      "pnl": null,
+      "price": 593.15,
+      "shares": 4,
+      "side": "SHORT",
+      "ticker": "DELL"
+    },
+    {
+      "fees": 2.1229394527069507,
+      "pnl": null,
+      "price": 182.33,
+      "shares": 13,
+      "side": "SHORT",
+      "ticker": "SMTC"
+    }
+  ],
+  "holdings": [
+    "ADPT",
+    "AMN",
+    "CVI",
+    "DELL",
+    "FPS",
+    "FRO",
+    "ILMN",
+    "NAT",
+    "RVTY",
+    "SMTC"
+  ],
+  "mean": 0.9229,
+  "n_trades_today": 2,
+  "recipe": "short_alarm_h3",
+  "sells": [],
+  "state": {
+    "after": "2026-09-18",
+    "cash": 19607.08,
+    "pos": {
+      "ADPT": {
+        "close_px": 28.610000610351562,
+        "cost": 2.093015342189841,
+        "entry_date": "2026-09-17",
+        "entry_px": 28.229999542236328,
+        "fee_in": 2.093015342189841,
+        "last_px": 28.549999237060547,
+        "notional": 621.0599899291992,
+        "peak_px": 28.229999542236328,
+        "reason": "alarm; gate alarm=True; list ohlc_hot; ret5=+13.3; leftover $631.67",
+        "shares": 22,
+        "ticker": "ADPT"
+      },
+      "AMN": {
+        "close_px": 34.2599983215332,
+        "cost": 2.081225753575155,
+        "entry_date": "2026-09-17",
+        "entry_px": 34.93000030517578,
+        "fee_in": 2.081225753575155,
+        "last_px": 34.52000045776367,
+        "notional": 628.7400054931641,
+        "peak_px": 34.52000045776367,
+        "reason": "alarm; gate alarm=True; list flatten; ret5=+1.6; leftover $631.67",
+        "shares": 18,
+        "ticker": "AMN"
+      },
+      "CVI": {
+        "close_px": 53.689998626708984,
+        "cost": 2.0630564387073256,
+        "entry_date": "2026-09-17",
+        "entry_px": 51.880001068115234,
+        "fee_in": 2.0630564387073256,
+        "last_px": 54.099998474121094,
+        "notional": 622.5600128173828,
+        "peak_px": 51.880001068115234,
+        "reason": "alarm; gate alarm=True; list ohlc_hot; ret5=+11.1; leftover $631.67",
+        "shares": 12,
+        "ticker": "CVI"
+      },
+      "DELL": {
+        "close_px": 568.0599975585938,
+        "cost": 2.096002742401541,
+        "entry_date": "2026-09-18",
+        "entry_px": 593.1500244140625,
+        "fee_in": 2.096002742401541,
+        "last_px": 593.1500244140625,
+        "notional": 2372.60009765625,
+        "peak_px": 593.1500244140625,
+        "reason": "alarm; gate alarm=True; list flatten,ohlc_hot; ret5=+16.1; leftover $2502.83",
+        "shares": 4,
+        "ticker": "DELL"
+      },
+      "FPS": {
+        "close_px": 39.439998626708984,
+        "cost": 2.078121095108659,
+        "entry_date": "2026-09-17",
+        "entry_px": 36.7599983215332,
+        "fee_in": 2.078121095108659,
+        "last_px": 39.5,
+        "notional": 624.9199714660645,
+        "peak_px": 36.7599983215332,
+        "reason": "alarm; gate alarm=True; list yday_gainer,yday_mover,ohlc_hot; ret5=+12.4; leftover $631.67",
+        "shares": 17,
+        "ticker": "FPS"
+      },
+      "FRO": {
+        "close_px": 51.41999816894531,
+        "cost": 2.0593673976741425,
+        "entry_date": "2026-09-17",
+        "entry_px": 54.310001373291016,
+        "fee_in": 2.0593673976741425,
+        "last_px": 51.189998626708984,
+        "notional": 597.4100151062012,
+        "peak_px": 51.189998626708984,
+        "reason": "alarm; gate alarm=True; list ohlc_hot; ret5=+13.7; leftover $631.67",
+        "shares": 11,
+        "ticker": "FRO"
+      },
+      "ILMN": {
+        "close_px": 239.6199951171875,
+        "cost": 2.0288136989645764,
+        "entry_date": "2026-09-17",
+        "entry_px": 233.85000610351562,
+        "fee_in": 2.0288136989645764,
+        "last_px": 249.1300048828125,
+        "notional": 467.70001220703125,
+        "peak_px": 233.85000610351562,
+        "reason": "alarm; gate alarm=True; list flatten,ohlc_hot; ret5=+11.7; leftover $631.67",
+        "shares": 2,
+        "ticker": "ILMN"
+      },
+      "NAT": {
+        "close_px": 8.25,
+        "cost": 2.264038631115221,
+        "entry_date": "2026-09-17",
+        "entry_px": 8.020000457763672,
+        "fee_in": 2.264038631115221,
+        "last_px": 8.199999809265137,
+        "notional": 625.5600357055664,
+        "peak_px": 8.020000457763672,
+        "reason": "alarm; gate alarm=True; list ohlc_hot; ret5=+14.2; leftover $631.67",
+        "shares": 78,
+        "ticker": "NAT"
+      },
+      "RVTY": {
+        "close_px": 143.4499969482422,
+        "cost": 2.038176438423052,
+        "entry_date": "2026-09-17",
+        "entry_px": 147.61000061035156,
+        "fee_in": 2.038176438423052,
+        "last_px": 146.5,
+        "notional": 590.4400024414062,
+        "peak_px": 146.5,
+        "reason": "alarm; gate alarm=True; list flatten,ohlc_hot; ret5=+17.7; leftover $631.67",
+        "shares": 4,
+        "ticker": "RVTY"
+      },
+      "SMTC": {
+        "close_px": 185.0,
+        "cost": 2.1229394527069507,
+        "entry_date": "2026-09-18",
+        "entry_px": 182.3300018310547,
+        "fee_in": 2.1229394527069507,
+        "last_px": 182.3300018310547,
+        "notional": 2370.290023803711,
+        "peak_px": 182.3300018310547,
+        "reason": "alarm; gate alarm=True; list ohlc_hot; ret5=+12.0; leftover $2502.83",
+        "shares": 13,
+        "ticker": "SMTC"
+      }
+    },
+    "yday_equity": 10106.82
+  }
+}

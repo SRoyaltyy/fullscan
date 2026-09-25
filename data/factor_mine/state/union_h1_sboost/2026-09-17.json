@@ -1,0 +1,420 @@
+{
+  "buys": [
+    "ILMN",
+    "TWST",
+    "RVTY",
+    "IOVA",
+    "PGEN",
+    "AMN",
+    "BRUN",
+    "AXTI",
+    "ARQT",
+    "SMTC",
+    "SABR",
+    "CIFR"
+  ],
+  "cash": 269.73,
+  "date": "2026-09-17",
+  "equity": 9390.31,
+  "fees": 53.9794,
+  "fills": [
+    {
+      "fees": 2.094,
+      "pnl": 27.75,
+      "price": 28.23,
+      "shares": 28,
+      "side": "SELL",
+      "ticker": "ADPT"
+    },
+    {
+      "fees": 2.133,
+      "pnl": 52.33,
+      "price": 19.59,
+      "shares": 41,
+      "side": "SELL",
+      "ticker": "ARQQ"
+    },
+    {
+      "fees": 2.169,
+      "pnl": -3.26,
+      "price": 14.33,
+      "shares": 53,
+      "side": "SELL",
+      "ticker": "AVAH"
+    },
+    {
+      "fees": 2.13,
+      "pnl": 149.76,
+      "price": 22.46,
+      "shares": 40,
+      "side": "SELL",
+      "ticker": "BBNX"
+    },
+    {
+      "fees": 2.07,
+      "pnl": 0.08,
+      "price": 36.67,
+      "shares": 20,
+      "side": "SELL",
+      "ticker": "BLFS"
+    },
+    {
+      "fees": 2.016,
+      "pnl": 0.51,
+      "price": 273.15,
+      "shares": 2,
+      "side": "SELL",
+      "ticker": "IQV"
+    },
+    {
+      "fees": 2.07,
+      "pnl": -6.52,
+      "price": 37.89,
+      "shares": 20,
+      "side": "SELL",
+      "ticker": "KRMN"
+    },
+    {
+      "fees": 3.6554,
+      "pnl": 54.13,
+      "price": 2.94,
+      "shares": 279,
+      "side": "SELL",
+      "ticker": "QTRX"
+    },
+    {
+      "fees": 2.037,
+      "pnl": -10.17,
+      "price": 76.44,
+      "shares": 9,
+      "side": "SELL",
+      "ticker": "RDNT"
+    },
+    {
+      "fees": 2.4084,
+      "pnl": -42.2,
+      "price": 5.58,
+      "shares": 129,
+      "side": "SELL",
+      "ticker": "RIG"
+    },
+    {
+      "fees": 2.043,
+      "pnl": 38.94,
+      "price": 72.7,
+      "shares": 11,
+      "side": "SELL",
+      "ticker": "TEM"
+    },
+    {
+      "fees": 2.034,
+      "pnl": -37.65,
+      "price": 83.2,
+      "shares": 8,
+      "side": "SELL",
+      "ticker": "VAL"
+    },
+    {
+      "fees": 1.999,
+      "pnl": null,
+      "price": 233.85,
+      "shares": 3,
+      "side": "BUY",
+      "ticker": "ILMN"
+    },
+    {
+      "fees": 2.005,
+      "pnl": null,
+      "price": 151.43,
+      "shares": 5,
+      "side": "BUY",
+      "ticker": "TWST"
+    },
+    {
+      "fees": 2.005,
+      "pnl": null,
+      "price": 147.61,
+      "shares": 5,
+      "side": "BUY",
+      "ticker": "RVTY"
+    },
+    {
+      "fees": 2.218,
+      "pnl": null,
+      "price": 10.25,
+      "shares": 76,
+      "side": "BUY",
+      "ticker": "IOVA"
+    },
+    {
+      "fees": 2.296,
+      "pnl": null,
+      "price": 7.59,
+      "shares": 102,
+      "side": "BUY",
+      "ticker": "PGEN"
+    },
+    {
+      "fees": 2.056,
+      "pnl": null,
+      "price": 34.93,
+      "shares": 22,
+      "side": "BUY",
+      "ticker": "AMN"
+    },
+    {
+      "fees": 2.137,
+      "pnl": null,
+      "price": 15.87,
+      "shares": 49,
+      "side": "BUY",
+      "ticker": "BRUN"
+    },
+    {
+      "fees": 2.023,
+      "pnl": null,
+      "price": 67.91,
+      "shares": 11,
+      "side": "BUY",
+      "ticker": "AXTI"
+    },
+    {
+      "fees": 2.08,
+      "pnl": null,
+      "price": 25.95,
+      "shares": 30,
+      "side": "BUY",
+      "ticker": "ARQT"
+    },
+    {
+      "fees": 2.002,
+      "pnl": null,
+      "price": 170.85,
+      "shares": 4,
+      "side": "BUY",
+      "ticker": "SMTC"
+    },
+    {
+      "fees": 4.1796,
+      "pnl": null,
+      "price": 2.4,
+      "shares": 324,
+      "side": "BUY",
+      "ticker": "SABR"
+    },
+    {
+      "fees": 2.119,
+      "pnl": null,
+      "price": 18.035,
+      "shares": 43,
+      "side": "BUY",
+      "ticker": "CIFR"
+    }
+  ],
+  "holdings": [
+    "AMN",
+    "ARQT",
+    "AXTI",
+    "BRUN",
+    "CIFR",
+    "ILMN",
+    "IOVA",
+    "PGEN",
+    "RVTY",
+    "SABR",
+    "SMTC",
+    "TWST"
+  ],
+  "mean": 1.6975,
+  "n_trades_today": 24,
+  "recipe": "union_h1_sboost",
+  "sells": [
+    "ADPT",
+    "ARQQ",
+    "AVAH",
+    "BBNX",
+    "BLFS",
+    "IQV",
+    "KRMN",
+    "QTRX",
+    "RDNT",
+    "RIG",
+    "TEM",
+    "VAL"
+  ],
+  "state": {
+    "after": "2026-09-17",
+    "cash": 269.73,
+    "pos": {
+      "AMN": {
+        "close_px": 34.54999923706055,
+        "cost": 770.5160067138672,
+        "entry_date": "2026-09-17",
+        "entry_px": 34.93000030517578,
+        "fee_in": 2.056,
+        "last_px": 34.93000030517578,
+        "min_hold": 1,
+        "notional": 768.4600067138672,
+        "peak_px": 34.93000030517578,
+        "reason": "S\u2265+5: sizeup + more names; list flatten; ret5=+1.6; leftover $779.57",
+        "shares": 22,
+        "ticker": "AMN"
+      },
+      "ARQT": {
+        "close_px": 26.459999084472656,
+        "cost": 780.5800228881836,
+        "entry_date": "2026-09-17",
+        "entry_px": 25.950000762939453,
+        "fee_in": 2.08,
+        "last_px": 25.950000762939453,
+        "min_hold": 1,
+        "notional": 778.5000228881836,
+        "peak_px": 25.950000762939453,
+        "reason": "S\u2265+5: sizeup + more names; list probable,yday_gainer,yday_mover,ohlc_hot; ret5=+9.6; leftover $779.57",
+        "shares": 30,
+        "ticker": "ARQT"
+      },
+      "AXTI": {
+        "close_px": 67.75,
+        "cost": 749.0330402832031,
+        "entry_date": "2026-09-17",
+        "entry_px": 67.91000366210938,
+        "fee_in": 2.023,
+        "last_px": 67.91000366210938,
+        "min_hold": 1,
+        "notional": 747.0100402832031,
+        "peak_px": 67.91000366210938,
+        "reason": "S\u2265+5: sizeup + more names; list probable,yday_gainer,yday_mover; \ud83d\udd35; ret5=-6.7; leftover $779.57",
+        "shares": 11,
+        "ticker": "AXTI"
+      },
+      "BRUN": {
+        "close_px": 16.68000030517578,
+        "cost": 779.766994392395,
+        "entry_date": "2026-09-17",
+        "entry_px": 15.869999885559082,
+        "fee_in": 2.137,
+        "last_px": 15.869999885559082,
+        "min_hold": 1,
+        "notional": 777.629994392395,
+        "peak_px": 15.869999885559082,
+        "reason": "S\u2265+5: sizeup + more names; list probable,yday_gainer,yday_mover; ret5=-12.7; leftover $779.57",
+        "shares": 49,
+        "ticker": "BRUN"
+      },
+      "CIFR": {
+        "close_px": 16.940000534057617,
+        "cost": 777.6239934387207,
+        "entry_date": "2026-09-17",
+        "entry_px": 18.03499984741211,
+        "fee_in": 2.119,
+        "last_px": 18.03499984741211,
+        "min_hold": 1,
+        "notional": 775.5049934387207,
+        "peak_px": 18.03499984741211,
+        "reason": "S\u2265+5: sizeup + more names; list probable,yday_gainer,yday_mover; \ud83d\udd35; ret5=-1.1; leftover $779.57",
+        "shares": 43,
+        "ticker": "CIFR"
+      },
+      "ILMN": {
+        "close_px": 245.17999267578125,
+        "cost": 703.5490183105469,
+        "entry_date": "2026-09-17",
+        "entry_px": 233.85000610351562,
+        "fee_in": 1.999,
+        "last_px": 233.85000610351562,
+        "min_hold": 1,
+        "notional": 701.5500183105469,
+        "peak_px": 233.85000610351562,
+        "reason": "S\u2265+5: sizeup + more names; list flatten,ohlc_hot; ret5=+11.7; leftover $779.57",
+        "shares": 3,
+        "ticker": "ILMN"
+      },
+      "IOVA": {
+        "close_px": 10.020000457763672,
+        "cost": 781.218,
+        "entry_date": "2026-09-17",
+        "entry_px": 10.25,
+        "fee_in": 2.218,
+        "last_px": 10.25,
+        "min_hold": 1,
+        "notional": 779.0,
+        "peak_px": 10.25,
+        "reason": "S\u2265+5: sizeup + more names; list flatten,ohlc_hot; ret5=+17.1; leftover $779.57",
+        "shares": 76,
+        "ticker": "IOVA"
+      },
+      "PGEN": {
+        "close_px": 7.869999885559082,
+        "cost": 776.4760155639649,
+        "entry_date": "2026-09-17",
+        "entry_px": 7.590000152587891,
+        "fee_in": 2.296,
+        "last_px": 7.590000152587891,
+        "min_hold": 1,
+        "notional": 774.1800155639648,
+        "peak_px": 7.590000152587891,
+        "reason": "S\u2265+5: sizeup + more names; list flatten,ohlc_hot; ret5=+9.4; leftover $779.57",
+        "shares": 102,
+        "ticker": "PGEN"
+      },
+      "RVTY": {
+        "close_px": 146.72999572753906,
+        "cost": 740.0550030517578,
+        "entry_date": "2026-09-17",
+        "entry_px": 147.61000061035156,
+        "fee_in": 2.005,
+        "last_px": 147.61000061035156,
+        "min_hold": 1,
+        "notional": 738.0500030517578,
+        "peak_px": 147.61000061035156,
+        "reason": "S\u2265+5: sizeup + more names; list flatten,ohlc_hot; ret5=+17.7; leftover $779.57",
+        "shares": 5,
+        "ticker": "RVTY"
+      },
+      "SABR": {
+        "close_px": 2.319999933242798,
+        "cost": 781.7796308990479,
+        "entry_date": "2026-09-17",
+        "entry_px": 2.4000000953674316,
+        "fee_in": 4.1796,
+        "last_px": 2.4000000953674316,
+        "min_hold": 1,
+        "notional": 777.6000308990479,
+        "peak_px": 2.4000000953674316,
+        "reason": "S\u2265+5: sizeup + more names; list probable,yday_gainer,yday_mover,ohlc_hot; \ud83d\udd35; \u26aa; ret5=+8.4; leftover $779.57",
+        "shares": 324,
+        "ticker": "SABR"
+      },
+      "SMTC": {
+        "close_px": 178.19000244140625,
+        "cost": 685.4020244140625,
+        "entry_date": "2026-09-17",
+        "entry_px": 170.85000610351562,
+        "fee_in": 2.002,
+        "last_px": 170.85000610351562,
+        "min_hold": 1,
+        "notional": 683.4000244140625,
+        "peak_px": 170.85000610351562,
+        "reason": "S\u2265+5: sizeup + more names; list probable,yday_gainer,yday_mover; \ud83d\udd35; ret5=+2.2; leftover $779.57",
+        "shares": 4,
+        "ticker": "SMTC"
+      },
+      "TWST": {
+        "close_px": 155.55999755859375,
+        "cost": 759.1549633789062,
+        "entry_date": "2026-09-17",
+        "entry_px": 151.42999267578125,
+        "fee_in": 2.005,
+        "last_px": 151.42999267578125,
+        "min_hold": 1,
+        "notional": 757.1499633789062,
+        "peak_px": 151.42999267578125,
+        "reason": "S\u2265+5: sizeup + more names; list flatten,ohlc_hot; ret5=+14.0; leftover $779.57",
+        "shares": 5,
+        "ticker": "TWST"
+      }
+    },
+    "yday_equity": 9390.31
+  }
+}

@@ -1,0 +1,273 @@
+{
+  "buys": [
+    "INDP",
+    "BNC",
+    "VISN",
+    "GPRO",
+    "WLTH",
+    "SWKS",
+    "TYRA",
+    "ASO",
+    "IRD",
+    "COO"
+  ],
+  "cash": 178.71,
+  "date": "2026-09-11",
+  "equity": 9739.0,
+  "fees": 35.8192,
+  "fills": [
+    {
+      "fees": 5.8824,
+      "pnl": null,
+      "price": 2.7,
+      "shares": 456,
+      "side": "BUY",
+      "ticker": "INDP"
+    },
+    {
+      "fees": 3.2379,
+      "pnl": null,
+      "price": 4.91,
+      "shares": 251,
+      "side": "BUY",
+      "ticker": "BNC"
+    },
+    {
+      "fees": 2.56,
+      "pnl": null,
+      "price": 6.49,
+      "shares": 190,
+      "side": "BUY",
+      "ticker": "VISN"
+    },
+    {
+      "fees": 11.3649,
+      "pnl": null,
+      "price": 1.4,
+      "shares": 881,
+      "side": "BUY",
+      "ticker": "GPRO"
+    },
+    {
+      "fees": 2.212,
+      "pnl": null,
+      "price": 10.95,
+      "shares": 74,
+      "side": "BUY",
+      "ticker": "WLTH"
+    },
+    {
+      "fees": 2.017,
+      "pnl": null,
+      "price": 84.27,
+      "shares": 9,
+      "side": "BUY",
+      "ticker": "SWKS"
+    },
+    {
+      "fees": 2.092,
+      "pnl": null,
+      "price": 23.63,
+      "shares": 34,
+      "side": "BUY",
+      "ticker": "TYRA"
+    },
+    {
+      "fees": 2.032,
+      "pnl": null,
+      "price": 54.91,
+      "shares": 14,
+      "side": "BUY",
+      "ticker": "ASO"
+    },
+    {
+      "fees": 2.389,
+      "pnl": null,
+      "price": 6.16,
+      "shares": 133,
+      "side": "BUY",
+      "ticker": "IRD"
+    },
+    {
+      "fees": 2.032,
+      "pnl": null,
+      "price": 54.66,
+      "shares": 14,
+      "side": "BUY",
+      "ticker": "COO"
+    }
+  ],
+  "holdings": [
+    "ASO",
+    "BNC",
+    "COO",
+    "GPRO",
+    "INDP",
+    "IRD",
+    "SWKS",
+    "TYRA",
+    "VISN",
+    "WLTH"
+  ],
+  "mean": -1.3278,
+  "n_trades_today": 10,
+  "recipe": "combo_hj_5050_shared",
+  "sells": [],
+  "state": {
+    "after": "2026-09-11",
+    "cash": 178.71,
+    "pos": {
+      "ASO": {
+        "close_px": 55.36000061035156,
+        "cost": 770.7719978637696,
+        "entry_date": "2026-09-11",
+        "entry_px": 54.90999984741211,
+        "fee_in": 2.032,
+        "last_px": 54.90999984741211,
+        "notional": 768.7399978637695,
+        "owner": "union_join_vol_green_h1",
+        "peak_px": 54.90999984741211,
+        "reason": "combo gate; gate join=good,vol=good,last_green=True; list yday_gainer; \ud83d\udd35; ret5=+24.1; combo leftover $819.48; owner union_join_vol_green_h1",
+        "shares": 14,
+        "side": "long",
+        "ticker": "ASO"
+      },
+      "BNC": {
+        "close_px": 4.800000190734863,
+        "cost": 1235.6478617004395,
+        "entry_date": "2026-09-11",
+        "entry_px": 4.909999847412109,
+        "fee_in": 3.2379,
+        "last_px": 4.909999847412109,
+        "notional": 1232.4099617004395,
+        "owner": "union_hot_n4_h1",
+        "peak_px": 4.909999847412109,
+        "reason": "top 4 by hot; rank hot_score; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+76.3; combo leftover $1233.76; owner union_hot_n4_h1",
+        "shares": 251,
+        "side": "long",
+        "ticker": "BNC"
+      },
+      "COO": {
+        "close_px": 53.90999984741211,
+        "cost": 767.2719978637696,
+        "entry_date": "2026-09-11",
+        "entry_px": 54.65999984741211,
+        "fee_in": 2.032,
+        "last_px": 54.65999984741211,
+        "notional": 765.2399978637695,
+        "owner": "union_join_vol_green_h1",
+        "peak_px": 54.65999984741211,
+        "reason": "combo gate; gate join=good,vol=good,last_green=True; list yday_mover; ret5=-23.3; combo leftover $819.48; owner union_join_vol_green_h1",
+        "shares": 14,
+        "side": "long",
+        "ticker": "COO"
+      },
+      "GPRO": {
+        "close_px": 1.3799999952316284,
+        "cost": 1244.7648789953232,
+        "entry_date": "2026-09-11",
+        "entry_px": 1.399999976158142,
+        "fee_in": 11.3649,
+        "last_px": 1.399999976158142,
+        "notional": 1233.3999789953232,
+        "owner": "union_hot_n4_h1",
+        "peak_px": 1.399999976158142,
+        "reason": "top 4 by hot; rank hot_score; list ohlc_hot; ret5=+0.7; combo leftover $1233.76; owner union_hot_n4_h1",
+        "shares": 881,
+        "side": "long",
+        "ticker": "GPRO"
+      },
+      "INDP": {
+        "close_px": 2.7699999809265137,
+        "cost": 1237.0824217437744,
+        "entry_date": "2026-09-11",
+        "entry_px": 2.700000047683716,
+        "fee_in": 5.8824,
+        "last_px": 2.700000047683716,
+        "notional": 1231.2000217437744,
+        "owner": "union_hot_n4_h1",
+        "peak_px": 2.700000047683716,
+        "reason": "top 4 by hot; rank hot_score; list yday_gainer,yday_mover; ret5=+120.7; combo leftover $1233.76; owner union_hot_n4_h1",
+        "shares": 456,
+        "side": "long",
+        "ticker": "INDP"
+      },
+      "IRD": {
+        "close_px": 6.039999961853027,
+        "cost": 821.6689797058106,
+        "entry_date": "2026-09-11",
+        "entry_px": 6.159999847412109,
+        "fee_in": 2.389,
+        "last_px": 6.159999847412109,
+        "notional": 819.2799797058105,
+        "owner": "union_join_vol_green_h1",
+        "peak_px": 6.159999847412109,
+        "reason": "combo gate; gate join=good,vol=good,last_green=True; list yday_gainer; ret5=+32.0; combo leftover $819.48; owner union_join_vol_green_h1",
+        "shares": 133,
+        "side": "long",
+        "ticker": "IRD"
+      },
+      "SWKS": {
+        "close_px": 88.3499984741211,
+        "cost": 760.4469697875977,
+        "entry_date": "2026-09-11",
+        "entry_px": 84.2699966430664,
+        "fee_in": 2.017,
+        "last_px": 84.2699966430664,
+        "notional": 758.4299697875977,
+        "owner": "union_join_vol_green_h1",
+        "peak_px": 84.2699966430664,
+        "reason": "combo gate; gate join=good,vol=good,last_green=True; list yday_gainer,ohlc_hot; \u26aa; ret5=+17.5; combo leftover $819.48; owner union_join_vol_green_h1",
+        "shares": 9,
+        "side": "long",
+        "ticker": "SWKS"
+      },
+      "TYRA": {
+        "close_px": 22.030000686645508,
+        "cost": 805.5119714660644,
+        "entry_date": "2026-09-11",
+        "entry_px": 23.6299991607666,
+        "fee_in": 2.092,
+        "last_px": 23.6299991607666,
+        "notional": 803.4199714660645,
+        "owner": "union_join_vol_green_h1",
+        "peak_px": 23.6299991607666,
+        "reason": "combo gate; gate join=good,vol=good,last_green=True; list yday_gainer; ret5=-5.3; combo leftover $819.48; owner union_join_vol_green_h1",
+        "shares": 34,
+        "side": "long",
+        "ticker": "TYRA"
+      },
+      "VISN": {
+        "close_px": 6.480000019073486,
+        "cost": 1235.6599565124511,
+        "entry_date": "2026-09-11",
+        "entry_px": 6.489999771118164,
+        "fee_in": 2.56,
+        "last_px": 6.489999771118164,
+        "notional": 1233.0999565124512,
+        "owner": "union_hot_n4_h1",
+        "peak_px": 6.489999771118164,
+        "reason": "top 4 by hot; rank hot_score; list ohlc_hot; \ud83d\udd35; ret5=+0.5; combo leftover $1233.76; owner union_hot_n4_h1",
+        "shares": 190,
+        "side": "long",
+        "ticker": "VISN"
+      },
+      "WLTH": {
+        "close_px": 10.380000114440918,
+        "cost": 812.5119858856201,
+        "entry_date": "2026-09-11",
+        "entry_px": 10.949999809265137,
+        "fee_in": 2.212,
+        "last_px": 10.949999809265137,
+        "notional": 810.2999858856201,
+        "owner": "union_join_vol_green_h1",
+        "peak_px": 10.949999809265137,
+        "reason": "combo gate; gate join=good,vol=good,last_green=True; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+16.6; combo leftover $819.48; owner union_join_vol_green_h1",
+        "shares": 74,
+        "side": "long",
+        "ticker": "WLTH"
+      }
+    },
+    "yday_equity": 9739.0
+  }
+}

@@ -1,0 +1,153 @@
+{
+  "buys": [
+    "DBX",
+    "WAY",
+    "SM",
+    "CRUS",
+    "QCOM"
+  ],
+  "cash": 177.28,
+  "date": "2026-09-16",
+  "equity": 7961.21,
+  "fees": 12.6799,
+  "fills": [
+    {
+      "fees": 2.2349,
+      "pnl": -1395.2,
+      "price": 140.03,
+      "shares": 57,
+      "side": "SELL",
+      "ticker": "ORCL"
+    },
+    {
+      "fees": 2.119,
+      "pnl": null,
+      "price": 37.13,
+      "shares": 43,
+      "side": "BUY",
+      "ticker": "DBX"
+    },
+    {
+      "fees": 2.173,
+      "pnl": null,
+      "price": 26.27,
+      "shares": 61,
+      "side": "BUY",
+      "ticker": "WAY"
+    },
+    {
+      "fees": 2.11,
+      "pnl": null,
+      "price": 39.99,
+      "shares": 40,
+      "side": "BUY",
+      "ticker": "SM"
+    },
+    {
+      "fees": 2.029,
+      "pnl": null,
+      "price": 123.09,
+      "shares": 13,
+      "side": "BUY",
+      "ticker": "CRUS"
+    },
+    {
+      "fees": 2.014,
+      "pnl": null,
+      "price": 189.17,
+      "shares": 8,
+      "side": "BUY",
+      "ticker": "QCOM"
+    }
+  ],
+  "holdings": [
+    "CRUS",
+    "DBX",
+    "QCOM",
+    "SM",
+    "WAY"
+  ],
+  "mean": -1.9603,
+  "n_trades_today": 6,
+  "recipe": "union_news_or_net3_h3",
+  "sells": [
+    "ORCL"
+  ],
+  "state": {
+    "after": "2026-09-16",
+    "cash": 177.28,
+    "pos": {
+      "CRUS": {
+        "close_px": 118.0,
+        "cost": 1602.1989523925781,
+        "entry_date": "2026-09-16",
+        "entry_px": 123.08999633789062,
+        "fee_in": 2.029,
+        "last_px": 123.08999633789062,
+        "min_hold": 3,
+        "notional": 1600.1699523925781,
+        "peak_px": 123.08999633789062,
+        "reason": "packet\ud83d\udfe2 OR headline\ud83d\udfe2 and camera net \u2265 3; gate news_or_headline=True,cam_net_min=3; rank cond; list ohlc_hot; \ud83d\udd35; ret5=+10.3; leftover $1619.98",
+        "shares": 13,
+        "ticker": "CRUS"
+      },
+      "DBX": {
+        "close_px": 37.7400016784668,
+        "cost": 1598.709045928955,
+        "entry_date": "2026-09-16",
+        "entry_px": 37.130001068115234,
+        "fee_in": 2.119,
+        "last_px": 37.130001068115234,
+        "min_hold": 3,
+        "notional": 1596.590045928955,
+        "peak_px": 37.130001068115234,
+        "reason": "packet\ud83d\udfe2 OR headline\ud83d\udfe2 and camera net \u2265 3; gate news_or_headline=True,cam_net_min=3; rank cond; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+11.3; leftover $1619.98",
+        "shares": 43,
+        "ticker": "DBX"
+      },
+      "QCOM": {
+        "close_px": 184.83999633789062,
+        "cost": 1515.3739853515624,
+        "entry_date": "2026-09-16",
+        "entry_px": 189.1699981689453,
+        "fee_in": 2.014,
+        "last_px": 189.1699981689453,
+        "min_hold": 3,
+        "notional": 1513.3599853515625,
+        "peak_px": 189.1699981689453,
+        "reason": "packet\ud83d\udfe2 OR headline\ud83d\udfe2 and camera net \u2265 3; gate news_or_headline=True,cam_net_min=3; rank cond; list ohlc_hot; \ud83d\udd35; ret5=+7.9; leftover $1619.98",
+        "shares": 8,
+        "ticker": "QCOM"
+      },
+      "SM": {
+        "close_px": 38.15999984741211,
+        "cost": 1601.7100671386718,
+        "entry_date": "2026-09-16",
+        "entry_px": 39.9900016784668,
+        "fee_in": 2.11,
+        "last_px": 39.9900016784668,
+        "min_hold": 3,
+        "notional": 1599.6000671386719,
+        "peak_px": 39.9900016784668,
+        "reason": "packet\ud83d\udfe2 OR headline\ud83d\udfe2 and camera net \u2265 3; gate news_or_headline=True,cam_net_min=3; rank cond; list ohlc_hot; \ud83d\udd35; ret5=+9.3; leftover $1619.98",
+        "shares": 40,
+        "ticker": "SM"
+      },
+      "WAY": {
+        "close_px": 26.59000015258789,
+        "cost": 1604.643027923584,
+        "entry_date": "2026-09-16",
+        "entry_px": 26.270000457763672,
+        "fee_in": 2.173,
+        "last_px": 26.270000457763672,
+        "min_hold": 3,
+        "notional": 1602.470027923584,
+        "peak_px": 26.270000457763672,
+        "reason": "packet\ud83d\udfe2 OR headline\ud83d\udfe2 and camera net \u2265 3; gate news_or_headline=True,cam_net_min=3; rank cond; list yday_gainer,ohlc_hot; \ud83d\udd35; \u26aa; ret5=+10.0; leftover $1619.98",
+        "shares": 61,
+        "ticker": "WAY"
+      }
+    },
+    "yday_equity": 7961.21
+  }
+}

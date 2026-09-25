@@ -1,0 +1,93 @@
+{
+  "buys": [],
+  "cash": 9106.67,
+  "date": "2026-09-14",
+  "equity": 9106.67,
+  "fees": 36.7737,
+  "fills": [
+    {
+      "fees": 2.052,
+      "pnl": -21.16,
+      "price": 81.2,
+      "shares": 14,
+      "side": "SELL",
+      "ticker": "APH"
+    },
+    {
+      "fees": 7.2878,
+      "pnl": -53.46,
+      "price": 2.05,
+      "shares": 557,
+      "side": "SELL",
+      "ticker": "BAK"
+    },
+    {
+      "fees": 2.076,
+      "pnl": 91.57,
+      "price": 56.9,
+      "shares": 22,
+      "side": "SELL",
+      "ticker": "BAND"
+    },
+    {
+      "fees": 2.6755,
+      "pnl": -64.47,
+      "price": 5.49,
+      "shares": 204,
+      "side": "SELL",
+      "ticker": "INTR"
+    },
+    {
+      "fees": 16.0474,
+      "pnl": -48.69,
+      "price": 0.838,
+      "shares": 1389,
+      "side": "SELL",
+      "ticker": "LDI"
+    },
+    {
+      "fees": 2.031,
+      "pnl": -58.5,
+      "price": 150.0,
+      "shares": 7,
+      "side": "SELL",
+      "ticker": "NVT"
+    },
+    {
+      "fees": 2.031,
+      "pnl": -165.11,
+      "price": 141.42,
+      "shares": 7,
+      "side": "SELL",
+      "ticker": "ORCL"
+    },
+    {
+      "fees": 2.573,
+      "pnl": -21.4,
+      "price": 6.4,
+      "shares": 181,
+      "side": "SELL",
+      "ticker": "VISN"
+    }
+  ],
+  "holdings": [],
+  "mean": -3.1354,
+  "n_trades_today": 8,
+  "recipe": "union_blue_coil_h1",
+  "sells": [
+    "APH",
+    "BAK",
+    "BAND",
+    "INTR",
+    "LDI",
+    "NVT",
+    "ORCL",
+    "VISN"
+  ],
+  "state": {
+    "after": "2026-09-14",
+    "cash": 9106.67,
+    "pos": {},
+    "yday_equity": 9106.67
+  }
+}

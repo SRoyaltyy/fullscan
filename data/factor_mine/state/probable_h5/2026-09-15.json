@@ -1,0 +1,107 @@
+{
+  "buys": [],
+  "cash": 8953.0,
+  "date": "2026-09-15",
+  "equity": 9061.68,
+  "fees": 2.016,
+  "fills": [
+    {
+      "fees": 2.016,
+      "pnl": 51.53,
+      "price": 541.55,
+      "shares": 2,
+      "side": "SELL",
+      "ticker": "DELL"
+    }
+  ],
+  "holdings": [
+    "APPS",
+    "BAK",
+    "FUBO",
+    "INTR",
+    "PAGS"
+  ],
+  "mean": 0.1073,
+  "n_trades_today": 1,
+  "recipe": "probable_h5",
+  "sells": [
+    "DELL"
+  ],
+  "state": {
+    "after": "2026-09-15",
+    "cash": 8953.0,
+    "pos": {
+      "APPS": {
+        "close_px": 11.380000114440918,
+        "cost": 24.003600228881837,
+        "entry_date": "2026-09-11",
+        "entry_px": 11.880000114440918,
+        "fee_in": 0.2436,
+        "last_px": 11.510000228881836,
+        "min_hold": 5,
+        "notional": 23.760000228881836,
+        "peak_px": 11.880000114440918,
+        "reason": "baseline list, no extra gate; list probable,yday_gainer; ret5=+8.5; leftover $24.90",
+        "shares": 2,
+        "ticker": "APPS"
+      },
+      "BAK": {
+        "close_px": 2.0999999046325684,
+        "cost": 23.586198741149904,
+        "entry_date": "2026-09-11",
+        "entry_px": 2.119999885559082,
+        "fee_in": 0.2662,
+        "last_px": 2.0199999809265137,
+        "min_hold": 5,
+        "notional": 23.319998741149902,
+        "peak_px": 2.119999885559082,
+        "reason": "baseline list, no extra gate; list probable,yday_gainer,ohlc_hot; \ud83d\udd35; ret5=+8.8; leftover $24.90",
+        "shares": 11,
+        "ticker": "BAK"
+      },
+      "FUBO": {
+        "close_px": 10.90999984741211,
+        "cost": 23.337000381469725,
+        "entry_date": "2026-09-11",
+        "entry_px": 11.550000190734863,
+        "fee_in": 0.237,
+        "last_px": 11.699999809265137,
+        "min_hold": 5,
+        "notional": 23.100000381469727,
+        "peak_px": 11.699999809265137,
+        "reason": "baseline list, no extra gate; list probable,yday_gainer; ret5=-1.6; leftover $24.90",
+        "shares": 2,
+        "ticker": "FUBO"
+      },
+      "INTR": {
+        "close_px": 5.440000057220459,
+        "cost": 23.3632008392334,
+        "entry_date": "2026-09-11",
+        "entry_px": 5.78000020980835,
+        "fee_in": 0.2432,
+        "last_px": 5.510000228881836,
+        "min_hold": 5,
+        "notional": 23.1200008392334,
+        "peak_px": 5.78000020980835,
+        "reason": "baseline list, no extra gate; list probable,yday_gainer; \ud83d\udd35; ret5=-0.3; leftover $24.90",
+        "shares": 4,
+        "ticker": "INTR"
+      },
+      "PAGS": {
+        "close_px": 9.619999885559082,
+        "cost": 20.428199313354494,
+        "entry_date": "2026-09-11",
+        "entry_px": 10.109999656677246,
+        "fee_in": 0.2082,
+        "last_px": 9.9399995803833,
+        "min_hold": 5,
+        "notional": 20.219999313354492,
+        "peak_px": 10.109999656677246,
+        "reason": "baseline list, no extra gate; list probable,yday_gainer; \u26aa; ret5=+1.7; leftover $24.90",
+        "shares": 2,
+        "ticker": "PAGS"
+      }
+    },
+    "yday_equity": 9061.68
+  }
+}

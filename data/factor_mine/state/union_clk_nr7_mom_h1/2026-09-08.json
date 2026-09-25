@@ -1,0 +1,30 @@
+{
+  "buys": [],
+  "cash": 9803.36,
+  "date": "2026-09-08",
+  "equity": 9803.36,
+  "fees": 14.634,
+  "fills": [
+    {
+      "fees": 14.634,
+      "pnl": -173.82,
+      "price": 8.81,
+      "shares": 1114,
+      "side": "SELL",
+      "ticker": "HAFN"
+    }
+  ],
+  "holdings": [],
+  "mean": -4.5877,
+  "n_trades_today": 1,
+  "recipe": "union_clk_nr7_mom_h1",
+  "sells": [
+    "HAFN"
+  ],
+  "state": {
+    "after": "2026-09-08",
+    "cash": 9803.36,
+    "pos": {},
+    "yday_equity": 9803.36
+  }
+}

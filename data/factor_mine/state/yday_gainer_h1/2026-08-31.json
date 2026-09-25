@@ -1,0 +1,93 @@
+{
+  "buys": [],
+  "cash": 9679.13,
+  "date": "2026-08-31",
+  "equity": 9679.13,
+  "fees": 42.1166,
+  "fills": [
+    {
+      "fees": 2.2501,
+      "pnl": -100.86,
+      "price": 14.44,
+      "shares": 79,
+      "side": "SELL",
+      "ticker": "GRRR"
+    },
+    {
+      "fees": 2.4591,
+      "pnl": -17.93,
+      "price": 8.52,
+      "shares": 145,
+      "side": "SELL",
+      "ticker": "OPTX"
+    },
+    {
+      "fees": 4.9228,
+      "pnl": -54.89,
+      "price": 3.2,
+      "shares": 376,
+      "side": "SELL",
+      "ticker": "PYXS"
+    },
+    {
+      "fees": 23.2453,
+      "pnl": -56.29,
+      "price": 0.362,
+      "shares": 3424,
+      "side": "SELL",
+      "ticker": "SAFX"
+    },
+    {
+      "fees": 2.121,
+      "pnl": -68.97,
+      "price": 31.15,
+      "shares": 37,
+      "side": "SELL",
+      "ticker": "SEDG"
+    },
+    {
+      "fees": 2.022,
+      "pnl": -24.78,
+      "price": 247.05,
+      "shares": 4,
+      "side": "SELL",
+      "ticker": "SIMO"
+    },
+    {
+      "fees": 2.055,
+      "pnl": 11.21,
+      "price": 80.44,
+      "shares": 15,
+      "side": "SELL",
+      "ticker": "URBN"
+    },
+    {
+      "fees": 3.0413,
+      "pnl": -8.35,
+      "price": 5.37,
+      "shares": 232,
+      "side": "SELL",
+      "ticker": "XPOF"
+    }
+  ],
+  "holdings": [],
+  "mean": -0.7086,
+  "n_trades_today": 8,
+  "recipe": "yday_gainer_h1",
+  "sells": [
+    "GRRR",
+    "OPTX",
+    "PYXS",
+    "SAFX",
+    "SEDG",
+    "SIMO",
+    "URBN",
+    "XPOF"
+  ],
+  "state": {
+    "after": "2026-08-31",
+    "cash": 9679.13,
+    "pos": {},
+    "yday_equity": 9679.13
+  }
+}

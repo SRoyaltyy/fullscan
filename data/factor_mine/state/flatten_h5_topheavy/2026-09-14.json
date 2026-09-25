@@ -1,0 +1,125 @@
+{
+  "buys": [],
+  "cash": 8593.73,
+  "date": "2026-09-14",
+  "equity": 8615.62,
+  "fees": 41.7037,
+  "fills": [
+    {
+      "fees": 4.4394,
+      "pnl": -134.24,
+      "price": 2.15,
+      "shares": 339,
+      "side": "SELL",
+      "ticker": "ALEC"
+    },
+    {
+      "fees": 2.055,
+      "pnl": 38.06,
+      "price": 54.84,
+      "shares": 15,
+      "side": "SELL",
+      "ticker": "ATRC"
+    },
+    {
+      "fees": 2.4021,
+      "pnl": -103.83,
+      "price": 5.93,
+      "shares": 127,
+      "side": "SELL",
+      "ticker": "BHC"
+    },
+    {
+      "fees": 5.8897,
+      "pnl": -94.94,
+      "price": 1.715,
+      "shares": 450,
+      "side": "SELL",
+      "ticker": "BMEA"
+    },
+    {
+      "fees": 15.0902,
+      "pnl": -883.18,
+      "price": 2.72,
+      "shares": 1153,
+      "side": "SELL",
+      "ticker": "CABA"
+    },
+    {
+      "fees": 2.5635,
+      "pnl": -120.79,
+      "price": 4.13,
+      "shares": 178,
+      "side": "SELL",
+      "ticker": "OABI"
+    },
+    {
+      "fees": 7.0264,
+      "pnl": -13.95,
+      "price": 1.59,
+      "shares": 537,
+      "side": "SELL",
+      "ticker": "OPK"
+    },
+    {
+      "fees": 2.2374,
+      "pnl": -47.95,
+      "price": 10.73,
+      "shares": 75,
+      "side": "SELL",
+      "ticker": "VIR"
+    }
+  ],
+  "holdings": [
+    "AUPH",
+    "OVID"
+  ],
+  "mean": -0.2041,
+  "n_trades_today": 8,
+  "recipe": "flatten_h5_topheavy",
+  "sells": [
+    "ALEC",
+    "ATRC",
+    "BHC",
+    "BMEA",
+    "CABA",
+    "OABI",
+    "OPK",
+    "VIR"
+  ],
+  "state": {
+    "after": "2026-09-14",
+    "cash": 8593.73,
+    "pos": {
+      "AUPH": {
+        "close_px": 16.40999984741211,
+        "cost": 16.44580068664551,
+        "entry_date": "2026-09-11",
+        "entry_px": 16.280000686645508,
+        "fee_in": 0.1658,
+        "last_px": 16.030000686645508,
+        "min_hold": 5,
+        "notional": 16.280000686645508,
+        "peak_px": 16.280000686645508,
+        "reason": "40% to #1, rest split; list flatten; wish-list (live io HOLD \u2014 not a ticket); ret5=-0.1; leftover $20.48",
+        "shares": 1,
+        "ticker": "AUPH"
+      },
+      "OVID": {
+        "close_px": 2.740000009536743,
+        "cost": 5.520600038146973,
+        "entry_date": "2026-09-11",
+        "entry_px": 2.7300000190734863,
+        "fee_in": 0.0606,
+        "last_px": 2.755000114440918,
+        "min_hold": 5,
+        "notional": 5.460000038146973,
+        "peak_px": 2.755000114440918,
+        "reason": "40% to #1, rest split; list flatten; wish-list (live io HOLD \u2014 not a ticket); ret5=-5.4; leftover $6.15",
+        "shares": 2,
+        "ticker": "OVID"
+      }
+    },
+    "yday_equity": 8615.62
+  }
+}

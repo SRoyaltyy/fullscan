@@ -1,0 +1,129 @@
+{
+  "buys": [],
+  "cash": 8782.97,
+  "date": "2026-09-24",
+  "equity": 8782.97,
+  "fees": 52.1035,
+  "fills": [
+    {
+      "fees": 2.019,
+      "pnl": -11.79,
+      "price": 163.95,
+      "shares": 3,
+      "side": "SELL",
+      "ticker": "A"
+    },
+    {
+      "fees": 12.9584,
+      "pnl": -75.29,
+      "price": 1.17,
+      "shares": 991,
+      "side": "SELL",
+      "ticker": "CMPX"
+    },
+    {
+      "fees": 2.028,
+      "pnl": -14.96,
+      "price": 87.68,
+      "shares": 6,
+      "side": "SELL",
+      "ticker": "DXCM"
+    },
+    {
+      "fees": 2.07,
+      "pnl": -1.72,
+      "price": 28.42,
+      "shares": 20,
+      "side": "SELL",
+      "ticker": "MAZE"
+    },
+    {
+      "fees": 8.0326,
+      "pnl": -32.71,
+      "price": 0.746,
+      "shares": 755,
+      "side": "SELL",
+      "ticker": "NMRA"
+    },
+    {
+      "fees": 2.094,
+      "pnl": -7.81,
+      "price": 20.52,
+      "shares": 28,
+      "side": "SELL",
+      "ticker": "OMER"
+    },
+    {
+      "fees": 2.4812,
+      "pnl": -93.09,
+      "price": 7.37,
+      "shares": 152,
+      "side": "SELL",
+      "ticker": "PGEN"
+    },
+    {
+      "fees": 2.2406,
+      "pnl": -106.3,
+      "price": 14.38,
+      "shares": 76,
+      "side": "SELL",
+      "ticker": "SGRY"
+    },
+    {
+      "fees": 2.076,
+      "pnl": -35.15,
+      "price": 23.99,
+      "shares": 22,
+      "side": "SELL",
+      "ticker": "TNGX"
+    },
+    {
+      "fees": 2.037,
+      "pnl": -7.47,
+      "price": 61.78,
+      "shares": 9,
+      "side": "SELL",
+      "ticker": "TTAN"
+    },
+    {
+      "fees": 12.0177,
+      "pnl": -33.06,
+      "price": 1.29,
+      "shares": 919,
+      "side": "SELL",
+      "ticker": "VERI"
+    },
+    {
+      "fees": 2.049,
+      "pnl": -78.63,
+      "price": 36.025,
+      "shares": 13,
+      "side": "SELL",
+      "ticker": "VKTX"
+    }
+  ],
+  "holdings": [],
+  "mean": -1.6917,
+  "n_trades_today": 12,
+  "recipe": "combo_nj_5050_shared",
+  "sells": [
+    "A",
+    "CMPX",
+    "DXCM",
+    "MAZE",
+    "NMRA",
+    "OMER",
+    "PGEN",
+    "SGRY",
+    "TNGX",
+    "TTAN",
+    "VERI",
+    "VKTX"
+  ],
+  "state": {
+    "after": "2026-09-24",
+    "cash": 8782.97,
+    "pos": {},
+    "yday_equity": 8782.97
+  }
+}

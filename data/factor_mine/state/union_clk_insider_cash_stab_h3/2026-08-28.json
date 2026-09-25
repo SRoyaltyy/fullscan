@@ -1,0 +1,47 @@
+{
+  "buys": [
+    "ADSK"
+  ],
+  "cash": 73.82,
+  "date": "2026-08-28",
+  "equity": 9978.9,
+  "fees": 2.104,
+  "fills": [
+    {
+      "fees": 2.104,
+      "pnl": null,
+      "price": 261.16,
+      "shares": 38,
+      "side": "BUY",
+      "ticker": "ADSK"
+    }
+  ],
+  "holdings": [
+    "ADSK"
+  ],
+  "mean": -0.211,
+  "n_trades_today": 1,
+  "recipe": "union_clk_insider_cash_stab_h3",
+  "sells": [],
+  "state": {
+    "after": "2026-08-28",
+    "cash": 73.82,
+    "pos": {
+      "ADSK": {
+        "close_px": 260.6600036621094,
+        "cost": 9926.184139160156,
+        "entry_date": "2026-08-28",
+        "entry_px": 261.1600036621094,
+        "fee_in": 2.104,
+        "last_px": 261.1600036621094,
+        "min_hold": 3,
+        "notional": 9924.080139160156,
+        "peak_px": 261.1600036621094,
+        "reason": "Clock-B #7 insider/Form-4 + inst Tx + stabilize (if data); gate clk_insider_cash_stab=True; rank cond; list earn_react; ret5=+7.8; leftover $10000.00",
+        "shares": 38,
+        "ticker": "ADSK"
+      }
+    },
+    "yday_equity": 9978.9
+  }
+}

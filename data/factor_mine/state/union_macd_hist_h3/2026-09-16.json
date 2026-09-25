@@ -1,0 +1,252 @@
+{
+  "buys": [
+    "META",
+    "FFIV",
+    "QCOM",
+    "OKTA",
+    "WST",
+    "CRUS"
+  ],
+  "cash": 1085.81,
+  "date": "2026-09-16",
+  "equity": 8899.03,
+  "fees": 24.7414,
+  "fills": [
+    {
+      "fees": 2.073,
+      "pnl": -92.75,
+      "price": 50.69,
+      "shares": 21,
+      "side": "SELL",
+      "ticker": "ASO"
+    },
+    {
+      "fees": 2.073,
+      "pnl": -104.93,
+      "price": 51.29,
+      "shares": 21,
+      "side": "SELL",
+      "ticker": "COHU"
+    },
+    {
+      "fees": 2.031,
+      "pnl": -174.84,
+      "price": 140.03,
+      "shares": 7,
+      "side": "SELL",
+      "ticker": "ORCL"
+    },
+    {
+      "fees": 2.04,
+      "pnl": 49.39,
+      "price": 118.18,
+      "shares": 10,
+      "side": "SELL",
+      "ticker": "QRVO"
+    },
+    {
+      "fees": 2.025,
+      "pnl": -64.03,
+      "price": 194.84,
+      "shares": 5,
+      "side": "SELL",
+      "ticker": "SANM"
+    },
+    {
+      "fees": 2.4844,
+      "pnl": -133.45,
+      "price": 6.95,
+      "shares": 153,
+      "side": "SELL",
+      "ticker": "SION"
+    },
+    {
+      "fees": 1.993,
+      "pnl": null,
+      "price": 679.91,
+      "shares": 1,
+      "side": "BUY",
+      "ticker": "META"
+    },
+    {
+      "fees": 1.996,
+      "pnl": null,
+      "price": 430.12,
+      "shares": 2,
+      "side": "BUY",
+      "ticker": "FFIV"
+    },
+    {
+      "fees": 2.005,
+      "pnl": null,
+      "price": 189.17,
+      "shares": 5,
+      "side": "BUY",
+      "ticker": "QCOM"
+    },
+    {
+      "fees": 2.005,
+      "pnl": null,
+      "price": 186.52,
+      "shares": 5,
+      "side": "BUY",
+      "ticker": "OKTA"
+    },
+    {
+      "fees": 1.999,
+      "pnl": null,
+      "price": 363.11,
+      "shares": 3,
+      "side": "BUY",
+      "ticker": "WST"
+    },
+    {
+      "fees": 2.017,
+      "pnl": null,
+      "price": 123.09,
+      "shares": 9,
+      "side": "BUY",
+      "ticker": "CRUS"
+    }
+  ],
+  "holdings": [
+    "APH",
+    "CRUS",
+    "FFIV",
+    "META",
+    "OKTA",
+    "QCOM",
+    "SWKS",
+    "WST"
+  ],
+  "mean": -1.282,
+  "n_trades_today": 12,
+  "recipe": "union_macd_hist_h3",
+  "sells": [
+    "ASO",
+    "COHU",
+    "ORCL",
+    "QRVO",
+    "SANM",
+    "SION"
+  ],
+  "state": {
+    "after": "2026-09-16",
+    "cash": 1085.81,
+    "pos": {
+      "APH": {
+        "close_px": 77.26000213623047,
+        "cost": 1155.9119743652343,
+        "entry_date": "2026-09-11",
+        "entry_px": 82.41999816894531,
+        "fee_in": 2.032,
+        "last_px": 79.0199966430664,
+        "min_hold": 3,
+        "notional": 1153.8799743652344,
+        "peak_px": 82.41999816894531,
+        "reason": "rank by macd_hist; rank macd_hist; list ohlc_hot; \ud83d\udd35; ret5=-2.2; leftover $1196.49",
+        "shares": 14,
+        "ticker": "APH"
+      },
+      "CRUS": {
+        "close_px": 118.0,
+        "cost": 1109.8269670410157,
+        "entry_date": "2026-09-16",
+        "entry_px": 123.08999633789062,
+        "fee_in": 2.017,
+        "last_px": 123.08999633789062,
+        "min_hold": 3,
+        "notional": 1107.8099670410156,
+        "peak_px": 123.08999633789062,
+        "reason": "rank by macd_hist; rank macd_hist; list ohlc_hot; \ud83d\udd35; ret5=+10.3; leftover $1118.93",
+        "shares": 9,
+        "ticker": "CRUS"
+      },
+      "FFIV": {
+        "close_px": 423.5899963378906,
+        "cost": 862.235990234375,
+        "entry_date": "2026-09-16",
+        "entry_px": 430.1199951171875,
+        "fee_in": 1.996,
+        "last_px": 430.1199951171875,
+        "min_hold": 3,
+        "notional": 860.239990234375,
+        "peak_px": 430.1199951171875,
+        "reason": "rank by macd_hist; rank macd_hist; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+10.6; leftover $1118.93",
+        "shares": 2,
+        "ticker": "FFIV"
+      },
+      "META": {
+        "close_px": 673.3099975585938,
+        "cost": 681.9029731445313,
+        "entry_date": "2026-09-16",
+        "entry_px": 679.9099731445312,
+        "fee_in": 1.993,
+        "last_px": 679.9099731445312,
+        "min_hold": 3,
+        "notional": 679.9099731445312,
+        "peak_px": 679.9099731445312,
+        "reason": "rank by macd_hist; rank macd_hist; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+9.3; leftover $1118.93",
+        "shares": 1,
+        "ticker": "META"
+      },
+      "OKTA": {
+        "close_px": 188.1199951171875,
+        "cost": 934.6050213623047,
+        "entry_date": "2026-09-16",
+        "entry_px": 186.52000427246094,
+        "fee_in": 2.005,
+        "last_px": 186.52000427246094,
+        "min_hold": 3,
+        "notional": 932.6000213623047,
+        "peak_px": 186.52000427246094,
+        "reason": "rank by macd_hist; rank macd_hist; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+13.6; leftover $1118.93",
+        "shares": 5,
+        "ticker": "OKTA"
+      },
+      "QCOM": {
+        "close_px": 184.83999633789062,
+        "cost": 947.8549908447266,
+        "entry_date": "2026-09-16",
+        "entry_px": 189.1699981689453,
+        "fee_in": 2.005,
+        "last_px": 189.1699981689453,
+        "min_hold": 3,
+        "notional": 945.8499908447266,
+        "peak_px": 189.1699981689453,
+        "reason": "rank by macd_hist; rank macd_hist; list ohlc_hot; \ud83d\udd35; ret5=+7.9; leftover $1118.93",
+        "shares": 5,
+        "ticker": "QCOM"
+      },
+      "SWKS": {
+        "close_px": 85.58999633789062,
+        "cost": 1181.8119530029296,
+        "entry_date": "2026-09-11",
+        "entry_px": 84.2699966430664,
+        "fee_in": 2.032,
+        "last_px": 89.37999725341797,
+        "min_hold": 3,
+        "notional": 1179.7799530029297,
+        "peak_px": 89.37999725341797,
+        "reason": "rank by macd_hist; rank macd_hist; list yday_gainer,ohlc_hot; \u26aa; ret5=+17.5; leftover $1196.49",
+        "shares": 14,
+        "ticker": "SWKS"
+      },
+      "WST": {
+        "close_px": 362.010009765625,
+        "cost": 1091.3289560546875,
+        "entry_date": "2026-09-16",
+        "entry_px": 363.1099853515625,
+        "fee_in": 1.999,
+        "last_px": 363.1099853515625,
+        "min_hold": 3,
+        "notional": 1089.3299560546875,
+        "peak_px": 363.1099853515625,
+        "reason": "rank by macd_hist; rank macd_hist; list ohlc_hot; \u26aa; ret5=+8.1; leftover $1118.93",
+        "shares": 3,
+        "ticker": "WST"
+      }
+    },
+    "yday_equity": 8899.03
+  }
+}

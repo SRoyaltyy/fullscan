@@ -1,0 +1,207 @@
+{
+  "buys": [
+    "INDP",
+    "WLTH",
+    "BNC",
+    "SWKS",
+    "ANGX",
+    "QRVO",
+    "ASO",
+    "IRD"
+  ],
+  "cash": 15328.7,
+  "date": "2026-09-11",
+  "equity": 10326.59,
+  "fees": 18.6824,
+  "fills": [
+    {
+      "fees": 3.150479452367025,
+      "pnl": null,
+      "price": 2.7,
+      "shares": 239,
+      "side": "SHORT",
+      "ticker": "INDP"
+    },
+    {
+      "fees": 2.2046999996916887,
+      "pnl": null,
+      "price": 10.95,
+      "shares": 59,
+      "side": "SHORT",
+      "ticker": "WLTH"
+    },
+    {
+      "fees": 2.4323221912331774,
+      "pnl": null,
+      "price": 4.91,
+      "shares": 131,
+      "side": "SHORT",
+      "ticker": "BNC"
+    },
+    {
+      "fees": 2.0471613692192183,
+      "pnl": null,
+      "price": 84.27,
+      "shares": 7,
+      "side": "SHORT",
+      "ticker": "SWKS"
+    },
+    {
+      "fees": 2.397587671609121,
+      "pnl": null,
+      "price": 5.38,
+      "shares": 120,
+      "side": "SHORT",
+      "ticker": "ANGX"
+    },
+    {
+      "fees": 2.0404568491896535,
+      "pnl": null,
+      "price": 112.835,
+      "shares": 5,
+      "side": "SHORT",
+      "ticker": "QRVO"
+    },
+    {
+      "fees": 2.059548219132097,
+      "pnl": null,
+      "price": 54.91,
+      "shares": 11,
+      "side": "SHORT",
+      "ticker": "ASO"
+    },
+    {
+      "fees": 2.3501205475062537,
+      "pnl": null,
+      "price": 6.16,
+      "shares": 105,
+      "side": "SHORT",
+      "ticker": "IRD"
+    }
+  ],
+  "holdings": [
+    "ANGX",
+    "ASO",
+    "BNC",
+    "INDP",
+    "IRD",
+    "QRVO",
+    "SWKS",
+    "WLTH"
+  ],
+  "mean": -0.3451,
+  "n_trades_today": 8,
+  "recipe": "short_rsi_ob_h3",
+  "sells": [],
+  "state": {
+    "after": "2026-09-11",
+    "cash": 15328.7,
+    "pos": {
+      "ANGX": {
+        "close_px": 5.449999809265137,
+        "cost": 2.397587671609121,
+        "entry_date": "2026-09-11",
+        "entry_px": 5.380000114440918,
+        "fee_in": 2.397587671609121,
+        "last_px": 5.380000114440918,
+        "notional": 645.6000137329102,
+        "peak_px": 5.380000114440918,
+        "reason": "RSI overbought; gate rsi_ob=True; list yday_gainer; \ud83d\udd35; ret5=+19.8; leftover $647.65",
+        "shares": 120,
+        "ticker": "ANGX"
+      },
+      "ASO": {
+        "close_px": 55.36000061035156,
+        "cost": 2.059548219132097,
+        "entry_date": "2026-09-11",
+        "entry_px": 54.90999984741211,
+        "fee_in": 2.059548219132097,
+        "last_px": 54.90999984741211,
+        "notional": 604.0099983215332,
+        "peak_px": 54.90999984741211,
+        "reason": "RSI overbought; gate rsi_ob=True; list yday_gainer; \ud83d\udd35; ret5=+24.1; leftover $647.65",
+        "shares": 11,
+        "ticker": "ASO"
+      },
+      "BNC": {
+        "close_px": 4.800000190734863,
+        "cost": 2.4323221912331774,
+        "entry_date": "2026-09-11",
+        "entry_px": 4.909999847412109,
+        "fee_in": 2.4323221912331774,
+        "last_px": 4.909999847412109,
+        "notional": 643.2099800109863,
+        "peak_px": 4.909999847412109,
+        "reason": "RSI overbought; gate rsi_ob=True; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+76.3; leftover $647.65",
+        "shares": 131,
+        "ticker": "BNC"
+      },
+      "INDP": {
+        "close_px": 2.7699999809265137,
+        "cost": 3.150479452367025,
+        "entry_date": "2026-09-11",
+        "entry_px": 2.700000047683716,
+        "fee_in": 3.150479452367025,
+        "last_px": 2.700000047683716,
+        "notional": 645.3000113964081,
+        "peak_px": 2.700000047683716,
+        "reason": "RSI overbought; gate rsi_ob=True; list yday_gainer,yday_mover; ret5=+120.7; leftover $647.65",
+        "shares": 239,
+        "ticker": "INDP"
+      },
+      "IRD": {
+        "close_px": 6.039999961853027,
+        "cost": 2.3501205475062537,
+        "entry_date": "2026-09-11",
+        "entry_px": 6.159999847412109,
+        "fee_in": 2.3501205475062537,
+        "last_px": 6.159999847412109,
+        "notional": 646.7999839782715,
+        "peak_px": 6.159999847412109,
+        "reason": "RSI overbought; gate rsi_ob=True; list yday_gainer; ret5=+32.0; leftover $647.65",
+        "shares": 105,
+        "ticker": "IRD"
+      },
+      "QRVO": {
+        "close_px": 116.6500015258789,
+        "cost": 2.0404568491896535,
+        "entry_date": "2026-09-11",
+        "entry_px": 112.83499908447266,
+        "fee_in": 2.0404568491896535,
+        "last_px": 112.83499908447266,
+        "notional": 564.1749954223633,
+        "peak_px": 112.83499908447266,
+        "reason": "RSI overbought; gate rsi_ob=True; list yday_gainer,ohlc_hot; \ud83d\udd35; ret5=+11.9; leftover $647.65",
+        "shares": 5,
+        "ticker": "QRVO"
+      },
+      "SWKS": {
+        "close_px": 88.3499984741211,
+        "cost": 2.0471613692192183,
+        "entry_date": "2026-09-11",
+        "entry_px": 84.2699966430664,
+        "fee_in": 2.0471613692192183,
+        "last_px": 84.2699966430664,
+        "notional": 589.8899765014648,
+        "peak_px": 84.2699966430664,
+        "reason": "RSI overbought; gate rsi_ob=True; list yday_gainer,ohlc_hot; \u26aa; ret5=+17.5; leftover $647.65",
+        "shares": 7,
+        "ticker": "SWKS"
+      },
+      "WLTH": {
+        "close_px": 10.380000114440918,
+        "cost": 2.2046999996916887,
+        "entry_date": "2026-09-11",
+        "entry_px": 10.949999809265137,
+        "fee_in": 2.2046999996916887,
+        "last_px": 10.949999809265137,
+        "notional": 646.0499887466431,
+        "peak_px": 10.949999809265137,
+        "reason": "RSI overbought; gate rsi_ob=True; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+16.6; leftover $647.65",
+        "shares": 59,
+        "ticker": "WLTH"
+      }
+    },
+    "yday_equity": 10326.59
+  }
+}

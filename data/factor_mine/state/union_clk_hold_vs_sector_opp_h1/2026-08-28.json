@@ -1,0 +1,215 @@
+{
+  "buys": [
+    "ANF",
+    "SYRE",
+    "ERAS",
+    "TH",
+    "FIGR",
+    "FRO",
+    "HAFN",
+    "IREN"
+  ],
+  "cash": 187.79,
+  "date": "2026-08-28",
+  "equity": 9768.35,
+  "fees": 17.099,
+  "fills": [
+    {
+      "fees": 2.014,
+      "pnl": null,
+      "price": 146.07,
+      "shares": 8,
+      "side": "BUY",
+      "ticker": "ANF"
+    },
+    {
+      "fees": 2.029,
+      "pnl": null,
+      "price": 91.75,
+      "shares": 13,
+      "side": "BUY",
+      "ticker": "SYRE"
+    },
+    {
+      "fees": 2.182,
+      "pnl": null,
+      "price": 19.25,
+      "shares": 64,
+      "side": "BUY",
+      "ticker": "ERAS"
+    },
+    {
+      "fees": 2.185,
+      "pnl": null,
+      "price": 19.0,
+      "shares": 65,
+      "side": "BUY",
+      "ticker": "TH"
+    },
+    {
+      "fees": 2.089,
+      "pnl": null,
+      "price": 37.49,
+      "shares": 33,
+      "side": "BUY",
+      "ticker": "FIGR"
+    },
+    {
+      "fees": 2.074,
+      "pnl": null,
+      "price": 44.4,
+      "shares": 28,
+      "side": "BUY",
+      "ticker": "FRO"
+    },
+    {
+      "fees": 2.437,
+      "pnl": null,
+      "price": 8.35,
+      "shares": 149,
+      "side": "BUY",
+      "ticker": "HAFN"
+    },
+    {
+      "fees": 2.089,
+      "pnl": null,
+      "price": 37.645,
+      "shares": 33,
+      "side": "BUY",
+      "ticker": "IREN"
+    }
+  ],
+  "holdings": [
+    "ANF",
+    "ERAS",
+    "FIGR",
+    "FRO",
+    "HAFN",
+    "IREN",
+    "SYRE",
+    "TH"
+  ],
+  "mean": -2.3165,
+  "n_trades_today": 8,
+  "recipe": "union_clk_hold_vs_sector_opp_h1",
+  "sells": [],
+  "state": {
+    "after": "2026-08-28",
+    "cash": 187.79,
+    "pos": {
+      "ANF": {
+        "close_px": 148.4199981689453,
+        "cost": 1170.57405859375,
+        "entry_date": "2026-08-28",
+        "entry_px": 146.07000732421875,
+        "fee_in": 2.014,
+        "last_px": 146.07000732421875,
+        "min_hold": 1,
+        "notional": 1168.56005859375,
+        "peak_px": 146.07000732421875,
+        "reason": "Clock-B #6 \u2229 Theme Radar T\u22121 oppset; gate clk_hold_vs_sector=True,oppset=True; rank opp_rvol; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+38.8; leftover $1250.00",
+        "shares": 8,
+        "ticker": "ANF"
+      },
+      "ERAS": {
+        "close_px": 18.030000686645508,
+        "cost": 1234.182,
+        "entry_date": "2026-08-28",
+        "entry_px": 19.25,
+        "fee_in": 2.182,
+        "last_px": 19.25,
+        "min_hold": 1,
+        "notional": 1232.0,
+        "peak_px": 19.25,
+        "reason": "Clock-B #6 \u2229 Theme Radar T\u22121 oppset; gate clk_hold_vs_sector=True,oppset=True; rank opp_rvol; list yday_gainer; ret5=+14.1; leftover $1250.00",
+        "shares": 64,
+        "ticker": "ERAS"
+      },
+      "FIGR": {
+        "close_px": 36.04999923706055,
+        "cost": 1239.2590553894042,
+        "entry_date": "2026-08-28",
+        "entry_px": 37.4900016784668,
+        "fee_in": 2.089,
+        "last_px": 37.4900016784668,
+        "min_hold": 1,
+        "notional": 1237.1700553894043,
+        "peak_px": 37.4900016784668,
+        "reason": "Clock-B #6 \u2229 Theme Radar T\u22121 oppset; gate clk_hold_vs_sector=True,oppset=True; rank opp_rvol; list yday_mover; ret5=+5.4; leftover $1250.00",
+        "shares": 33,
+        "ticker": "FIGR"
+      },
+      "FRO": {
+        "close_px": 44.189998626708984,
+        "cost": 1245.2740427246094,
+        "entry_date": "2026-08-28",
+        "entry_px": 44.400001525878906,
+        "fee_in": 2.074,
+        "last_px": 44.400001525878906,
+        "min_hold": 1,
+        "notional": 1243.2000427246094,
+        "peak_px": 44.400001525878906,
+        "reason": "Clock-B #6 \u2229 Theme Radar T\u22121 oppset; gate clk_hold_vs_sector=True,oppset=True; rank opp_rvol; list earn_react; ret5=+0.4; leftover $1250.00",
+        "shares": 28,
+        "ticker": "FRO"
+      },
+      "HAFN": {
+        "close_px": 8.470000267028809,
+        "cost": 1246.5870568389892,
+        "entry_date": "2026-08-28",
+        "entry_px": 8.350000381469727,
+        "fee_in": 2.437,
+        "last_px": 8.350000381469727,
+        "min_hold": 1,
+        "notional": 1244.1500568389893,
+        "peak_px": 8.350000381469727,
+        "reason": "Clock-B #6 \u2229 Theme Radar T\u22121 oppset; gate clk_hold_vs_sector=True,oppset=True; rank opp_rvol; list earn_react; ret5=+5.1; leftover $1250.00",
+        "shares": 149,
+        "ticker": "HAFN"
+      },
+      "IREN": {
+        "close_px": 35.45000076293945,
+        "cost": 1244.374015106201,
+        "entry_date": "2026-08-28",
+        "entry_px": 37.64500045776367,
+        "fee_in": 2.089,
+        "last_px": 37.64500045776367,
+        "min_hold": 1,
+        "notional": 1242.2850151062012,
+        "peak_px": 37.64500045776367,
+        "reason": "Clock-B #6 \u2229 Theme Radar T\u22121 oppset; gate clk_hold_vs_sector=True,oppset=True; rank opp_rvol; list earn_react; ret5=-4.9; leftover $1250.00",
+        "shares": 33,
+        "ticker": "IREN"
+      },
+      "SYRE": {
+        "close_px": 90.36000061035156,
+        "cost": 1194.779,
+        "entry_date": "2026-08-28",
+        "entry_px": 91.75,
+        "fee_in": 2.029,
+        "last_px": 91.75,
+        "min_hold": 1,
+        "notional": 1192.75,
+        "peak_px": 91.75,
+        "reason": "Clock-B #6 \u2229 Theme Radar T\u22121 oppset; gate clk_hold_vs_sector=True,oppset=True; rank opp_rvol; list yday_mover; ret5=-13.2; leftover $1250.00",
+        "shares": 13,
+        "ticker": "SYRE"
+      },
+      "TH": {
+        "close_px": 18.549999237060547,
+        "cost": 1237.185,
+        "entry_date": "2026-08-28",
+        "entry_px": 19.0,
+        "fee_in": 2.185,
+        "last_px": 19.0,
+        "min_hold": 1,
+        "notional": 1235.0,
+        "peak_px": 19.0,
+        "reason": "Clock-B #6 \u2229 Theme Radar T\u22121 oppset; gate clk_hold_vs_sector=True,oppset=True; rank opp_rvol; list ohlc_hot; ret5=+7.5; leftover $1250.00",
+        "shares": 65,
+        "ticker": "TH"
+      }
+    },
+    "yday_equity": 9768.35
+  }
+}

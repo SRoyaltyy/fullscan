@@ -1,0 +1,363 @@
+{
+  "buys": [
+    "A",
+    "HUM",
+    "DXCM",
+    "MGTX",
+    "CYPH",
+    "BTDR",
+    "ORBS"
+  ],
+  "cash": 260.03,
+  "date": "2026-09-21",
+  "equity": 8890.87,
+  "fees": 50.6066,
+  "fills": [
+    {
+      "fees": 2.187,
+      "pnl": 133.71,
+      "price": 20.55,
+      "shares": 59,
+      "side": "SELL",
+      "ticker": "ARQQ"
+    },
+    {
+      "fees": 2.1843,
+      "pnl": 198.65,
+      "price": 22.11,
+      "shares": 58,
+      "side": "SELL",
+      "ticker": "BBNX"
+    },
+    {
+      "fees": 2.097,
+      "pnl": 2.79,
+      "price": 36.7,
+      "shares": 29,
+      "side": "SELL",
+      "ticker": "BLFS"
+    },
+    {
+      "fees": 2.022,
+      "pnl": -20.54,
+      "price": 266.76,
+      "shares": 4,
+      "side": "SELL",
+      "ticker": "IQV"
+    },
+    {
+      "fees": 0.1014,
+      "pnl": 0.07,
+      "price": 7.84,
+      "shares": 1,
+      "side": "SELL",
+      "ticker": "PGEN"
+    },
+    {
+      "fees": 5.2233,
+      "pnl": 153.22,
+      "price": 3.13,
+      "shares": 399,
+      "side": "SELL",
+      "ticker": "QTRX"
+    },
+    {
+      "fees": 2.052,
+      "pnl": -15.98,
+      "price": 76.27,
+      "shares": 14,
+      "side": "SELL",
+      "ticker": "RDNT"
+    },
+    {
+      "fees": 2.5857,
+      "pnl": -51.38,
+      "price": 5.62,
+      "shares": 185,
+      "side": "SELL",
+      "ticker": "RIG"
+    },
+    {
+      "fees": 2.055,
+      "pnl": 150.26,
+      "price": 79.08,
+      "shares": 15,
+      "side": "SELL",
+      "ticker": "TEM"
+    },
+    {
+      "fees": 2.014,
+      "pnl": null,
+      "price": 157.87,
+      "shares": 8,
+      "side": "BUY",
+      "ticker": "A"
+    },
+    {
+      "fees": 1.999,
+      "pnl": null,
+      "price": 386.2,
+      "shares": 3,
+      "side": "BUY",
+      "ticker": "HUM"
+    },
+    {
+      "fees": 2.032,
+      "pnl": null,
+      "price": 88.83,
+      "shares": 14,
+      "side": "BUY",
+      "ticker": "DXCM"
+    },
+    {
+      "fees": 2.281,
+      "pnl": null,
+      "price": 13.47,
+      "shares": 97,
+      "side": "BUY",
+      "ticker": "MGTX"
+    },
+    {
+      "fees": 4.2312,
+      "pnl": null,
+      "price": 4.0,
+      "shares": 328,
+      "side": "BUY",
+      "ticker": "CYPH"
+    },
+    {
+      "fees": 2.281,
+      "pnl": null,
+      "price": 13.475,
+      "shares": 97,
+      "side": "BUY",
+      "ticker": "BTDR"
+    },
+    {
+      "fees": 15.2607,
+      "pnl": null,
+      "price": 1.11,
+      "shares": 1183,
+      "side": "BUY",
+      "ticker": "ORBS"
+    }
+  ],
+  "holdings": [
+    "A",
+    "BNC",
+    "BTDR",
+    "CYPH",
+    "DDD",
+    "DXCM",
+    "EYPT",
+    "HUM",
+    "IOVA",
+    "MGTX",
+    "ORBS",
+    "RANI",
+    "SABR"
+  ],
+  "mean": -3.1811,
+  "n_trades_today": 16,
+  "recipe": "union_h3_exit_red",
+  "sells": [
+    "ARQQ",
+    "BBNX",
+    "BLFS",
+    "IQV",
+    "PGEN",
+    "QTRX",
+    "RDNT",
+    "RIG",
+    "TEM"
+  ],
+  "state": {
+    "after": "2026-09-21",
+    "cash": 260.03,
+    "pos": {
+      "A": {
+        "close_px": 161.94000244140625,
+        "cost": 1264.9739609375,
+        "entry_date": "2026-09-21",
+        "entry_px": 157.8699951171875,
+        "fee_in": 2.014,
+        "last_px": 157.8699951171875,
+        "min_hold": 3,
+        "notional": 1262.9599609375,
+        "peak_px": 157.8699951171875,
+        "reason": "buy last-green, sell next 09:30 if last bar flipped red; gate last_green=True; list flatten; \ud83d\udd35; \u26aa; ret5=+6.5; leftover $1313.44",
+        "shares": 8,
+        "ticker": "A"
+      },
+      "BNC": {
+        "close_px": 6.570000171661377,
+        "cost": 5.891299923706055,
+        "entry_date": "2026-09-18",
+        "entry_px": 5.829999923706055,
+        "fee_in": 0.0613,
+        "last_px": 6.414999961853027,
+        "min_hold": 3,
+        "notional": 5.829999923706055,
+        "peak_px": 6.414999961853027,
+        "reason": "buy last-green, sell next 09:30 if last bar flipped red; gate last_green=True; list probable,yday_gainer,yday_mover,ohlc_hot; \ud83d\udd35; ret5=+8.6; leftover $8.37",
+        "shares": 1,
+        "ticker": "BNC"
+      },
+      "BTDR": {
+        "close_px": 13.140000343322754,
+        "cost": 1309.3560370025634,
+        "entry_date": "2026-09-21",
+        "entry_px": 13.475000381469727,
+        "fee_in": 2.281,
+        "last_px": 13.475000381469727,
+        "min_hold": 3,
+        "notional": 1307.0750370025635,
+        "peak_px": 13.475000381469727,
+        "reason": "buy last-green, sell next 09:30 if last bar flipped red; gate last_green=True; list probable,yday_gainer,yday_mover,ohlc_hot; ret5=+8.4; leftover $1313.44",
+        "shares": 97,
+        "ticker": "BTDR"
+      },
+      "CYPH": {
+        "close_px": 3.4000000953674316,
+        "cost": 1316.2312,
+        "entry_date": "2026-09-21",
+        "entry_px": 4.0,
+        "fee_in": 4.2312,
+        "last_px": 4.0,
+        "min_hold": 3,
+        "notional": 1312.0,
+        "peak_px": 4.0,
+        "reason": "buy last-green, sell next 09:30 if last bar flipped red; gate last_green=True; list flatten,yday_gainer,yday_mover; \ud83d\udd35; \u26aa; ret5=+58.9; leftover $1313.44",
+        "shares": 328,
+        "ticker": "CYPH"
+      },
+      "DDD": {
+        "close_px": 3.4800000190734863,
+        "cost": 7.23759984741211,
+        "entry_date": "2026-09-18",
+        "entry_px": 3.5799999237060547,
+        "fee_in": 0.0776,
+        "last_px": 3.7100000381469727,
+        "min_hold": 3,
+        "notional": 7.159999847412109,
+        "peak_px": 3.7100000381469727,
+        "reason": "buy last-green, sell next 09:30 if last bar flipped red; gate last_green=True; list probable,yday_gainer; \ud83d\udd35; ret5=+8.3; leftover $8.37",
+        "shares": 2,
+        "ticker": "DDD"
+      },
+      "DXCM": {
+        "close_px": 89.16999816894531,
+        "cost": 1245.6520256347656,
+        "entry_date": "2026-09-21",
+        "entry_px": 88.83000183105469,
+        "fee_in": 2.032,
+        "last_px": 88.83000183105469,
+        "min_hold": 3,
+        "notional": 1243.6200256347656,
+        "peak_px": 88.83000183105469,
+        "reason": "buy last-green, sell next 09:30 if last bar flipped red; gate last_green=True; list flatten; \ud83d\udd35; \u26aa; ret5=+7.6; leftover $1313.44",
+        "shares": 14,
+        "ticker": "DXCM"
+      },
+      "EYPT": {
+        "close_px": 4.019999980926514,
+        "cost": 7.985000095367432,
+        "entry_date": "2026-09-18",
+        "entry_px": 3.950000047683716,
+        "fee_in": 0.085,
+        "last_px": 3.869999885559082,
+        "min_hold": 3,
+        "notional": 7.900000095367432,
+        "peak_px": 3.950000047683716,
+        "reason": "buy last-green, sell next 09:30 if last bar flipped red; gate last_green=True; list probable,yday_gainer,yday_mover; \ud83d\udd35; ret5=-6.1; leftover $8.37",
+        "shares": 2,
+        "ticker": "EYPT"
+      },
+      "HUM": {
+        "close_px": 378.5799865722656,
+        "cost": 1160.5990366210938,
+        "entry_date": "2026-09-21",
+        "entry_px": 386.20001220703125,
+        "fee_in": 1.999,
+        "last_px": 386.20001220703125,
+        "min_hold": 3,
+        "notional": 1158.6000366210938,
+        "peak_px": 386.20001220703125,
+        "reason": "buy last-green, sell next 09:30 if last bar flipped red; gate last_green=True; list flatten; \ud83d\udd35; ret5=-5.8; leftover $1313.44",
+        "shares": 3,
+        "ticker": "HUM"
+      },
+      "IOVA": {
+        "close_px": 10.1899995803833,
+        "cost": 10.3555,
+        "entry_date": "2026-09-17",
+        "entry_px": 10.25,
+        "fee_in": 0.1055,
+        "last_px": 10.430000305175781,
+        "min_hold": 3,
+        "notional": 10.25,
+        "peak_px": 10.430000305175781,
+        "reason": "buy last-green, sell next 09:30 if last bar flipped red; gate last_green=True; list flatten,ohlc_hot; ret5=+17.1; leftover $12.13",
+        "shares": 1,
+        "ticker": "IOVA"
+      },
+      "MGTX": {
+        "close_px": 13.079999923706055,
+        "cost": 1308.8710259017944,
+        "entry_date": "2026-09-21",
+        "entry_px": 13.470000267028809,
+        "fee_in": 2.281,
+        "last_px": 13.470000267028809,
+        "min_hold": 3,
+        "notional": 1306.5900259017944,
+        "peak_px": 13.470000267028809,
+        "reason": "buy last-green, sell next 09:30 if last bar flipped red; gate last_green=True; list flatten; \ud83d\udd35; \u26aa; ret5=+3.6; leftover $1313.44",
+        "shares": 97,
+        "ticker": "MGTX"
+      },
+      "ORBS": {
+        "close_px": 1.0499999523162842,
+        "cost": 1328.3907169229508,
+        "entry_date": "2026-09-21",
+        "entry_px": 1.1100000143051147,
+        "fee_in": 15.2607,
+        "last_px": 1.1100000143051147,
+        "min_hold": 3,
+        "notional": 1313.1300169229507,
+        "peak_px": 1.1100000143051147,
+        "reason": "buy last-green, sell next 09:30 if last bar flipped red; gate last_green=True; list probable,yday_gainer,yday_mover; ret5=+6.9; leftover $1313.44",
+        "shares": 1183,
+        "ticker": "ORBS"
+      },
+      "RANI": {
+        "close_px": 0.7889999747276306,
+        "cost": 7.753500214576722,
+        "entry_date": "2026-09-18",
+        "entry_px": 0.8500000238418579,
+        "fee_in": 0.1035,
+        "last_px": 0.8640000224113464,
+        "min_hold": 3,
+        "notional": 7.650000214576721,
+        "peak_px": 0.8640000224113464,
+        "reason": "buy last-green, sell next 09:30 if last bar flipped red; gate last_green=True; list probable,yday_gainer; ret5=+3.6; leftover $8.37",
+        "shares": 9,
+        "ticker": "RANI"
+      },
+      "SABR": {
+        "close_px": 2.3299999237060547,
+        "cost": 12.135000476837158,
+        "entry_date": "2026-09-17",
+        "entry_px": 2.4000000953674316,
+        "fee_in": 0.135,
+        "last_px": 2.259999990463257,
+        "min_hold": 3,
+        "notional": 12.000000476837158,
+        "peak_px": 2.4000000953674316,
+        "reason": "buy last-green, sell next 09:30 if last bar flipped red; gate last_green=True; list probable,yday_gainer,yday_mover,ohlc_hot; \ud83d\udd35; \u26aa; ret5=+8.4; leftover $12.13",
+        "shares": 5,
+        "ticker": "SABR"
+      }
+    },
+    "yday_equity": 8890.87
+  }
+}

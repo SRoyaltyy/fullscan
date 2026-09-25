@@ -1,0 +1,95 @@
+{
+  "buys": [
+    "MRNA",
+    "MNRO",
+    "MOS"
+  ],
+  "cash": 40.23,
+  "date": "2026-08-28",
+  "equity": 10118.63,
+  "fees": 7.9391,
+  "fills": [
+    {
+      "fees": 2.062,
+      "pnl": null,
+      "price": 137.19,
+      "shares": 24,
+      "side": "BUY",
+      "ticker": "MRNA"
+    },
+    {
+      "fees": 3.4701,
+      "pnl": null,
+      "price": 12.38,
+      "shares": 269,
+      "side": "BUY",
+      "ticker": "MNRO"
+    },
+    {
+      "fees": 2.407,
+      "pnl": null,
+      "price": 23.95,
+      "shares": 139,
+      "side": "BUY",
+      "ticker": "MOS"
+    }
+  ],
+  "holdings": [
+    "MNRO",
+    "MOS",
+    "MRNA"
+  ],
+  "mean": 1.1863,
+  "n_trades_today": 3,
+  "recipe": "union_clk_nr7_mom_h1",
+  "sells": [],
+  "state": {
+    "after": "2026-08-28",
+    "cash": 40.23,
+    "pos": {
+      "MNRO": {
+        "close_px": 12.960000038146973,
+        "cost": 3333.690130784607,
+        "entry_date": "2026-08-28",
+        "entry_px": 12.380000114440918,
+        "fee_in": 3.4701,
+        "last_px": 12.380000114440918,
+        "min_hold": 1,
+        "notional": 3330.220030784607,
+        "peak_px": 12.380000114440918,
+        "reason": "Clock-B #10 NR7 + moderate momentum; gate clk_nr7_mom=True; rank hot_score; list yday_mover; ret5=+4.5; leftover $3333.33",
+        "shares": 269,
+        "ticker": "MNRO"
+      },
+      "MOS": {
+        "close_px": 23.600000381469727,
+        "cost": 3331.457106048584,
+        "entry_date": "2026-08-28",
+        "entry_px": 23.950000762939453,
+        "fee_in": 2.407,
+        "last_px": 23.950000762939453,
+        "min_hold": 1,
+        "notional": 3329.050106048584,
+        "peak_px": 23.950000762939453,
+        "reason": "Clock-B #10 NR7 + moderate momentum; gate clk_nr7_mom=True; rank hot_score; list flatten; ret5=+1.8; leftover $3333.33",
+        "shares": 139,
+        "ticker": "MOS"
+      },
+      "MRNA": {
+        "close_px": 137.99000549316406,
+        "cost": 3294.62205859375,
+        "entry_date": "2026-08-28",
+        "entry_px": 137.19000244140625,
+        "fee_in": 2.062,
+        "last_px": 137.19000244140625,
+        "min_hold": 1,
+        "notional": 3292.56005859375,
+        "peak_px": 137.19000244140625,
+        "reason": "Clock-B #10 NR7 + moderate momentum; gate clk_nr7_mom=True; rank hot_score; list ohlc_hot; ret5=+7.1; leftover $3333.33",
+        "shares": 24,
+        "ticker": "MRNA"
+      }
+    },
+    "yday_equity": 10118.63
+  }
+}

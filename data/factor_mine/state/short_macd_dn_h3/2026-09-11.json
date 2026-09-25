@@ -1,0 +1,207 @@
+{
+  "buys": [
+    "AUPH",
+    "OVID",
+    "AMTX",
+    "TYRA",
+    "LDI",
+    "NAVN",
+    "SLBT",
+    "RWT"
+  ],
+  "cash": 15129.42,
+  "date": "2026-09-11",
+  "equity": 10181.8,
+  "fees": 28.7914,
+  "fills": [
+    {
+      "fees": 2.1409490418107544,
+      "pnl": null,
+      "price": 16.28,
+      "shares": 38,
+      "side": "SHORT",
+      "ticker": "AUPH"
+    },
+    {
+      "fees": 3.058652328888358,
+      "pnl": null,
+      "price": 2.73,
+      "shares": 232,
+      "side": "SHORT",
+      "ticker": "OVID"
+    },
+    {
+      "fees": 4.0778260270732725,
+      "pnl": null,
+      "price": 2.04,
+      "shares": 310,
+      "side": "SHORT",
+      "ticker": "AMTX"
+    },
+    {
+      "fees": 2.104832328169313,
+      "pnl": null,
+      "price": 23.63,
+      "shares": 26,
+      "side": "SHORT",
+      "ticker": "TYRA"
+    },
+    {
+      "fees": 8.718549315555128,
+      "pnl": null,
+      "price": 0.85,
+      "shares": 745,
+      "side": "SHORT",
+      "ticker": "LDI"
+    },
+    {
+      "fees": 2.1169397265290564,
+      "pnl": null,
+      "price": 20.61,
+      "shares": 30,
+      "side": "SHORT",
+      "ticker": "NAVN"
+    },
+    {
+      "fees": 3.986349862301186,
+      "pnl": null,
+      "price": 2.09,
+      "shares": 303,
+      "side": "SHORT",
+      "ticker": "SLBT"
+    },
+    {
+      "fees": 2.587258904015528,
+      "pnl": null,
+      "price": 3.52,
+      "shares": 180,
+      "side": "SHORT",
+      "ticker": "RWT"
+    }
+  ],
+  "holdings": [
+    "AMTX",
+    "AUPH",
+    "LDI",
+    "NAVN",
+    "OVID",
+    "RWT",
+    "SLBT",
+    "TYRA"
+  ],
+  "mean": 0.4022,
+  "n_trades_today": 8,
+  "recipe": "short_macd_dn_h3",
+  "sells": [],
+  "state": {
+    "after": "2026-09-11",
+    "cash": 15129.42,
+    "pos": {
+      "AMTX": {
+        "close_px": 2.009999990463257,
+        "cost": 4.0778260270732725,
+        "entry_date": "2026-09-11",
+        "entry_px": 2.0399999618530273,
+        "fee_in": 4.0778260270732725,
+        "last_px": 2.0399999618530273,
+        "notional": 632.3999881744385,
+        "peak_px": 2.0399999618530273,
+        "reason": "MACD histogram < 0; gate macd_down=True; list yday_gainer,yday_mover,ohlc_hot; \ud83d\udd35; ret5=+10.9; leftover $633.81",
+        "shares": 310,
+        "ticker": "AMTX"
+      },
+      "AUPH": {
+        "close_px": 16.100000381469727,
+        "cost": 2.1409490418107544,
+        "entry_date": "2026-09-11",
+        "entry_px": 16.280000686645508,
+        "fee_in": 2.1409490418107544,
+        "last_px": 16.280000686645508,
+        "notional": 618.6400260925293,
+        "peak_px": 16.280000686645508,
+        "reason": "MACD histogram < 0; gate macd_down=True; list flatten; ret5=-0.1; leftover $633.81",
+        "shares": 38,
+        "ticker": "AUPH"
+      },
+      "LDI": {
+        "close_px": 0.8349999785423279,
+        "cost": 8.718549315555128,
+        "entry_date": "2026-09-11",
+        "entry_px": 0.8500000238418579,
+        "fee_in": 8.718549315555128,
+        "last_px": 0.8500000238418579,
+        "notional": 633.2500177621841,
+        "peak_px": 0.8500000238418579,
+        "reason": "MACD histogram < 0; gate macd_down=True; list yday_gainer; \ud83d\udd35; ret5=-11.5; leftover $633.81",
+        "shares": 745,
+        "ticker": "LDI"
+      },
+      "NAVN": {
+        "close_px": 21.020000457763672,
+        "cost": 2.1169397265290564,
+        "entry_date": "2026-09-11",
+        "entry_px": 20.610000610351562,
+        "fee_in": 2.1169397265290564,
+        "last_px": 20.610000610351562,
+        "notional": 618.3000183105469,
+        "peak_px": 20.610000610351562,
+        "reason": "MACD histogram < 0; gate macd_down=True; list yday_mover; ret5=-26.9; leftover $633.81",
+        "shares": 30,
+        "ticker": "NAVN"
+      },
+      "OVID": {
+        "close_px": 2.690000057220459,
+        "cost": 3.058652328888358,
+        "entry_date": "2026-09-11",
+        "entry_px": 2.7300000190734863,
+        "fee_in": 3.058652328888358,
+        "last_px": 2.7300000190734863,
+        "notional": 633.3600044250488,
+        "peak_px": 2.7300000190734863,
+        "reason": "MACD histogram < 0; gate macd_down=True; list flatten; ret5=-5.4; leftover $633.81",
+        "shares": 232,
+        "ticker": "OVID"
+      },
+      "RWT": {
+        "close_px": 3.549999952316284,
+        "cost": 2.587258904015528,
+        "entry_date": "2026-09-11",
+        "entry_px": 3.5199999809265137,
+        "fee_in": 2.587258904015528,
+        "last_px": 3.5199999809265137,
+        "notional": 633.5999965667725,
+        "peak_px": 3.5199999809265137,
+        "reason": "MACD histogram < 0; gate macd_down=True; list yday_mover; \ud83d\udd35; ret5=-19.0; leftover $633.81",
+        "shares": 180,
+        "ticker": "RWT"
+      },
+      "SLBT": {
+        "close_px": 2.059999942779541,
+        "cost": 3.986349862301186,
+        "entry_date": "2026-09-11",
+        "entry_px": 2.0899999141693115,
+        "fee_in": 3.986349862301186,
+        "last_px": 2.0899999141693115,
+        "notional": 633.2699739933014,
+        "peak_px": 2.0899999141693115,
+        "reason": "MACD histogram < 0; gate macd_down=True; list yday_mover; ret5=-33.3; leftover $633.81",
+        "shares": 303,
+        "ticker": "SLBT"
+      },
+      "TYRA": {
+        "close_px": 22.030000686645508,
+        "cost": 2.104832328169313,
+        "entry_date": "2026-09-11",
+        "entry_px": 23.6299991607666,
+        "fee_in": 2.104832328169313,
+        "last_px": 23.6299991607666,
+        "notional": 614.3799781799316,
+        "peak_px": 23.6299991607666,
+        "reason": "MACD histogram < 0; gate macd_down=True; list yday_gainer; ret5=-5.3; leftover $633.81",
+        "shares": 26,
+        "ticker": "TYRA"
+      }
+    },
+    "yday_equity": 10181.8
+  }
+}

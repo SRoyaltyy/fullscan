@@ -1,0 +1,39 @@
+{
+  "buys": [],
+  "cash": 8389.46,
+  "date": "2026-09-21",
+  "equity": 8389.46,
+  "fees": 4.4824,
+  "fills": [
+    {
+      "fees": 2.1022,
+      "pnl": -201.04,
+      "price": 180.61,
+      "shares": 23,
+      "side": "SELL",
+      "ticker": "QCOM"
+    },
+    {
+      "fees": 2.3802,
+      "pnl": -465.75,
+      "price": 35.91,
+      "shares": 113,
+      "side": "SELL",
+      "ticker": "SM"
+    }
+  ],
+  "holdings": [],
+  "mean": -0.6841,
+  "n_trades_today": 2,
+  "recipe": "union_news_pack_net2_h3",
+  "sells": [
+    "QCOM",
+    "SM"
+  ],
+  "state": {
+    "after": "2026-09-21",
+    "cash": 8389.46,
+    "pos": {},
+    "yday_equity": 8389.46
+  }
+}

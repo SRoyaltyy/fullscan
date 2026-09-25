@@ -1,0 +1,176 @@
+{
+  "buys": [
+    "IVVD",
+    "GRAL"
+  ],
+  "cash": 4.59,
+  "date": "2026-09-22",
+  "equity": 8758.1,
+  "fees": 4.8211,
+  "fills": [
+    {
+      "fees": 2.8251,
+      "pnl": null,
+      "price": 1.01,
+      "shares": 219,
+      "side": "BUY",
+      "ticker": "IVVD"
+    },
+    {
+      "fees": 1.996,
+      "pnl": null,
+      "price": 106.75,
+      "shares": 2,
+      "side": "BUY",
+      "ticker": "GRAL"
+    }
+  ],
+  "holdings": [
+    "AMTX",
+    "FLNC",
+    "GRAL",
+    "ISRG",
+    "IVVD",
+    "MARA",
+    "SION",
+    "SMTC",
+    "VICR"
+  ],
+  "mean": 3.5011,
+  "n_trades_today": 2,
+  "recipe": "union_news_vol_h3",
+  "sells": [],
+  "state": {
+    "after": "2026-09-22",
+    "cash": 4.59,
+    "pos": {
+      "AMTX": {
+        "close_px": 2.12,
+        "cost": 1455.6317641822816,
+        "entry_date": "2026-09-21",
+        "entry_px": 2.1500000953674316,
+        "fee_in": 8.6817,
+        "last_px": 2.09,
+        "min_hold": 3,
+        "notional": 1446.9500641822815,
+        "peak_px": 2.1500000953674316,
+        "reason": "combo gate; gate news=good,vol=good; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+7.5; leftover $1448.04",
+        "shares": 673,
+        "ticker": "AMTX"
+      },
+      "FLNC": {
+        "close_px": 7.269999980926514,
+        "cost": 7.613299847412109,
+        "entry_date": "2026-09-18",
+        "entry_px": 7.534999847412109,
+        "fee_in": 0.0783,
+        "last_px": 7.489999771118164,
+        "min_hold": 3,
+        "notional": 7.534999847412109,
+        "peak_px": 7.534999847412109,
+        "reason": "combo gate; gate news=good,vol=good; list yday_mover; \ud83d\udd35; ret5=-20.9; leftover $10.90",
+        "shares": 1,
+        "ticker": "FLNC"
+      },
+      "GRAL": {
+        "close_px": 108.52,
+        "cost": 215.496,
+        "entry_date": "2026-09-22",
+        "entry_px": 106.75,
+        "fee_in": 1.996,
+        "last_px": 106.75,
+        "min_hold": 3,
+        "notional": 213.5,
+        "peak_px": 106.75,
+        "reason": "combo gate; gate news=good,vol=good; list yday_gainer,yday_mover; ret5=+42.9; leftover $222.05",
+        "shares": 2,
+        "ticker": "GRAL"
+      },
+      "ISRG": {
+        "close_px": 402.09,
+        "cost": 1183.6690439453125,
+        "entry_date": "2026-09-21",
+        "entry_px": 393.8900146484375,
+        "fee_in": 1.999,
+        "last_px": 403.0,
+        "min_hold": 3,
+        "notional": 1181.6700439453125,
+        "peak_px": 403.0,
+        "reason": "combo gate; gate news=good,vol=good; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+6.6; leftover $1448.04",
+        "shares": 3,
+        "ticker": "ISRG"
+      },
+      "IVVD": {
+        "close_px": 0.9639999866485596,
+        "cost": 224.01509791145324,
+        "entry_date": "2026-09-22",
+        "entry_px": 1.0099999904632568,
+        "fee_in": 2.8251,
+        "last_px": 1.0099999904632568,
+        "min_hold": 3,
+        "notional": 221.18999791145325,
+        "peak_px": 1.0099999904632568,
+        "reason": "combo gate; gate news=good,vol=good; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+14.3; leftover $222.05",
+        "shares": 219,
+        "ticker": "IVVD"
+      },
+      "MARA": {
+        "close_px": 13.630000114440918,
+        "cost": 1438.11895677948,
+        "entry_date": "2026-09-21",
+        "entry_px": 13.9399995803833,
+        "fee_in": 2.299,
+        "last_px": 13.130000114440918,
+        "min_hold": 3,
+        "notional": 1435.81995677948,
+        "peak_px": 13.9399995803833,
+        "reason": "combo gate; gate news=good,vol=good; list yday_gainer,ohlc_hot; \ud83d\udd35; ret5=+10.5; leftover $1448.04",
+        "shares": 103,
+        "ticker": "MARA"
+      },
+      "SION": {
+        "close_px": 6.019999980926514,
+        "cost": 1449.1089,
+        "entry_date": "2026-09-21",
+        "entry_px": 6.0,
+        "fee_in": 3.1089,
+        "last_px": 5.989999771118164,
+        "min_hold": 3,
+        "notional": 1446.0,
+        "peak_px": 6.0,
+        "reason": "combo gate; gate news=good,vol=good; list yday_mover; \ud83d\udd35; ret5=-24.1; leftover $1448.04",
+        "shares": 241,
+        "ticker": "SION"
+      },
+      "SMTC": {
+        "close_px": 174.33,
+        "cost": 1334.1110213623047,
+        "entry_date": "2026-09-21",
+        "entry_px": 190.3000030517578,
+        "fee_in": 2.011,
+        "last_px": 174.12,
+        "min_hold": 3,
+        "notional": 1332.1000213623047,
+        "peak_px": 190.3000030517578,
+        "reason": "combo gate; gate news=good,vol=good; list ohlc_hot; ret5=+10.6; leftover $1448.04",
+        "shares": 7,
+        "ticker": "SMTC"
+      },
+      "VICR": {
+        "close_px": 268.34,
+        "cost": 1383.508,
+        "entry_date": "2026-09-21",
+        "entry_px": 230.25,
+        "fee_in": 2.008,
+        "last_px": 241.04,
+        "min_hold": 3,
+        "notional": 1381.5,
+        "peak_px": 241.04,
+        "reason": "combo gate; gate news=good,vol=good; list ohlc_hot; ret5=+12.5; leftover $1448.04",
+        "shares": 6,
+        "ticker": "VICR"
+      }
+    },
+    "yday_equity": 8758.1
+  }
+}

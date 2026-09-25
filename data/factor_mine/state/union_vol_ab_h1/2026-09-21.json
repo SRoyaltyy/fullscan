@@ -1,0 +1,270 @@
+{
+  "buys": [
+    "A",
+    "DXCM",
+    "PGEN",
+    "BTDR",
+    "USDE",
+    "FEAM",
+    "CAN"
+  ],
+  "cash": 85.03,
+  "date": "2026-09-21",
+  "equity": 9673.36,
+  "fees": 52.2778,
+  "fills": [
+    {
+      "fees": 2.049,
+      "pnl": -32.29,
+      "price": 82.83,
+      "shares": 13,
+      "side": "SELL",
+      "ticker": "ECO"
+    },
+    {
+      "fees": 2.025,
+      "pnl": -1.63,
+      "price": 210.0,
+      "shares": 5,
+      "side": "SELL",
+      "ticker": "GNRC"
+    },
+    {
+      "fees": 2.2501,
+      "pnl": -21.07,
+      "price": 14.58,
+      "shares": 79,
+      "side": "SELL",
+      "ticker": "RARE"
+    },
+    {
+      "fees": 2.13,
+      "pnl": 0.16,
+      "price": 29.43,
+      "shares": 40,
+      "side": "SELL",
+      "ticker": "SDGR"
+    },
+    {
+      "fees": 2.052,
+      "pnl": -36.56,
+      "price": 79.08,
+      "shares": 14,
+      "side": "SELL",
+      "ticker": "TEM"
+    },
+    {
+      "fees": 2.025,
+      "pnl": 49.12,
+      "price": 230.25,
+      "shares": 5,
+      "side": "SELL",
+      "ticker": "VICR"
+    },
+    {
+      "fees": 2.3261,
+      "pnl": 64.38,
+      "price": 12.05,
+      "shares": 103,
+      "side": "SELL",
+      "ticker": "VITL"
+    },
+    {
+      "fees": 2.011,
+      "pnl": null,
+      "price": 157.87,
+      "shares": 7,
+      "side": "BUY",
+      "ticker": "A"
+    },
+    {
+      "fees": 2.029,
+      "pnl": null,
+      "price": 88.83,
+      "shares": 13,
+      "side": "BUY",
+      "ticker": "DXCM"
+    },
+    {
+      "fees": 2.44,
+      "pnl": null,
+      "price": 7.84,
+      "shares": 150,
+      "side": "BUY",
+      "ticker": "PGEN"
+    },
+    {
+      "fees": 2.251,
+      "pnl": null,
+      "price": 13.475,
+      "shares": 87,
+      "side": "BUY",
+      "ticker": "BTDR"
+    },
+    {
+      "fees": 2.26,
+      "pnl": null,
+      "price": 13.05,
+      "shares": 90,
+      "side": "BUY",
+      "ticker": "USDE"
+    },
+    {
+      "fees": 6.1533,
+      "pnl": null,
+      "price": 2.47,
+      "shares": 477,
+      "side": "BUY",
+      "ticker": "FEAM"
+    },
+    {
+      "fees": 20.2763,
+      "pnl": null,
+      "price": 0.418,
+      "shares": 2824,
+      "side": "BUY",
+      "ticker": "CAN"
+    }
+  ],
+  "holdings": [
+    "A",
+    "BTDR",
+    "CAN",
+    "CYPH",
+    "DXCM",
+    "FEAM",
+    "PGEN",
+    "USDE"
+  ],
+  "mean": -1.307,
+  "n_trades_today": 14,
+  "recipe": "union_vol_ab_h1",
+  "sells": [
+    "ECO",
+    "GNRC",
+    "RARE",
+    "SDGR",
+    "TEM",
+    "VICR",
+    "VITL"
+  ],
+  "state": {
+    "after": "2026-09-21",
+    "cash": 85.03,
+    "pos": {
+      "A": {
+        "close_px": 161.94000244140625,
+        "cost": 1107.1009658203125,
+        "entry_date": "2026-09-21",
+        "entry_px": 157.8699951171875,
+        "fee_in": 2.011,
+        "last_px": 157.8699951171875,
+        "min_hold": 1,
+        "notional": 1105.0899658203125,
+        "peak_px": 157.8699951171875,
+        "reason": "combo gate; gate vol=good,ab=good; list flatten; \ud83d\udd35; \u26aa; ret5=+6.5; leftover $1180.54",
+        "shares": 7,
+        "ticker": "A"
+      },
+      "BTDR": {
+        "close_px": 13.140000343322754,
+        "cost": 1174.5760331878662,
+        "entry_date": "2026-09-21",
+        "entry_px": 13.475000381469727,
+        "fee_in": 2.251,
+        "last_px": 13.475000381469727,
+        "min_hold": 1,
+        "notional": 1172.3250331878662,
+        "peak_px": 13.475000381469727,
+        "reason": "combo gate; gate vol=good,ab=good; list probable,yday_gainer,yday_mover,ohlc_hot; ret5=+8.4; leftover $1180.54",
+        "shares": 87,
+        "ticker": "BTDR"
+      },
+      "CAN": {
+        "close_px": 0.4169999957084656,
+        "cost": 1200.7083356845856,
+        "entry_date": "2026-09-21",
+        "entry_px": 0.4180000126361847,
+        "fee_in": 20.2763,
+        "last_px": 0.4180000126361847,
+        "min_hold": 1,
+        "notional": 1180.4320356845856,
+        "peak_px": 0.4180000126361847,
+        "reason": "combo gate; gate vol=good,ab=good; list yday_gainer,yday_mover; ret5=+10.7; leftover $1180.54",
+        "shares": 2824,
+        "ticker": "CAN"
+      },
+      "CYPH": {
+        "close_px": 3.4000000953674316,
+        "cost": 1188.0517789237977,
+        "entry_date": "2026-09-17",
+        "entry_px": 2.674999952316284,
+        "fee_in": 5.7018,
+        "last_px": 4.0,
+        "min_hold": 1,
+        "notional": 1182.3499789237976,
+        "peak_px": 4.0,
+        "reason": "combo gate; gate vol=good,ab=good; list yday_gainer; \ud83d\udd35; ret5=-0.4; leftover $1184.82",
+        "shares": 442,
+        "ticker": "CYPH"
+      },
+      "DXCM": {
+        "close_px": 89.16999816894531,
+        "cost": 1156.819023803711,
+        "entry_date": "2026-09-21",
+        "entry_px": 88.83000183105469,
+        "fee_in": 2.029,
+        "last_px": 88.83000183105469,
+        "min_hold": 1,
+        "notional": 1154.790023803711,
+        "peak_px": 88.83000183105469,
+        "reason": "combo gate; gate vol=good,ab=good; list flatten; \ud83d\udd35; \u26aa; ret5=+7.6; leftover $1180.54",
+        "shares": 13,
+        "ticker": "DXCM"
+      },
+      "FEAM": {
+        "close_px": 2.4800000190734863,
+        "cost": 1184.3433136470794,
+        "entry_date": "2026-09-21",
+        "entry_px": 2.4700000286102295,
+        "fee_in": 6.1533,
+        "last_px": 2.4700000286102295,
+        "min_hold": 1,
+        "notional": 1178.1900136470795,
+        "peak_px": 2.4700000286102295,
+        "reason": "combo gate; gate vol=good,ab=good; list yday_gainer,yday_mover; ret5=+73.6; leftover $1180.54",
+        "shares": 477,
+        "ticker": "FEAM"
+      },
+      "PGEN": {
+        "close_px": 7.699999809265137,
+        "cost": 1178.4400228881836,
+        "entry_date": "2026-09-21",
+        "entry_px": 7.840000152587891,
+        "fee_in": 2.44,
+        "last_px": 7.840000152587891,
+        "min_hold": 1,
+        "notional": 1176.0000228881836,
+        "peak_px": 7.840000152587891,
+        "reason": "combo gate; gate vol=good,ab=good; list flatten; \u26aa; ret5=+13.6; leftover $1180.54",
+        "shares": 150,
+        "ticker": "PGEN"
+      },
+      "USDE": {
+        "close_px": 12.600000381469727,
+        "cost": 1176.7600171661377,
+        "entry_date": "2026-09-21",
+        "entry_px": 13.050000190734863,
+        "fee_in": 2.26,
+        "last_px": 13.050000190734863,
+        "min_hold": 1,
+        "notional": 1174.5000171661377,
+        "peak_px": 13.050000190734863,
+        "reason": "combo gate; gate vol=good,ab=good; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+40.4; leftover $1180.54",
+        "shares": 90,
+        "ticker": "USDE"
+      }
+    },
+    "yday_equity": 9673.36
+  }
+}

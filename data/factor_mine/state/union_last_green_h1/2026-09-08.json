@@ -1,0 +1,93 @@
+{
+  "buys": [],
+  "cash": 9770.62,
+  "date": "2026-09-08",
+  "equity": 9770.62,
+  "fees": 20.3627,
+  "fills": [
+    {
+      "fees": 2.1542,
+      "pnl": 56.19,
+      "price": 26.44,
+      "shares": 48,
+      "side": "SELL",
+      "ticker": "ASST"
+    },
+    {
+      "fees": 2.022,
+      "pnl": -42.58,
+      "price": 253.72,
+      "shares": 4,
+      "side": "SELL",
+      "ticker": "CRM"
+    },
+    {
+      "fees": 2.016,
+      "pnl": 10.73,
+      "price": 521.15,
+      "shares": 2,
+      "side": "SELL",
+      "ticker": "DELL"
+    },
+    {
+      "fees": 2.7669,
+      "pnl": -1.27,
+      "price": 5.81,
+      "shares": 211,
+      "side": "SELL",
+      "ticker": "DFDV"
+    },
+    {
+      "fees": 2.2661,
+      "pnl": 50.93,
+      "price": 15.18,
+      "shares": 84,
+      "side": "SELL",
+      "ticker": "FCEL"
+    },
+    {
+      "fees": 2.019,
+      "pnl": -56.79,
+      "price": 360.75,
+      "shares": 3,
+      "side": "SELL",
+      "ticker": "MDB"
+    },
+    {
+      "fees": 5.0665,
+      "pnl": -114.55,
+      "price": 2.88,
+      "shares": 387,
+      "side": "SELL",
+      "ticker": "SLBT"
+    },
+    {
+      "fees": 2.052,
+      "pnl": 93.5,
+      "price": 89.67,
+      "shares": 14,
+      "side": "SELL",
+      "ticker": "TARS"
+    }
+  ],
+  "holdings": [],
+  "mean": -1.1616,
+  "n_trades_today": 8,
+  "recipe": "union_last_green_h1",
+  "sells": [
+    "ASST",
+    "CRM",
+    "DELL",
+    "DFDV",
+    "FCEL",
+    "MDB",
+    "SLBT",
+    "TARS"
+  ],
+  "state": {
+    "after": "2026-09-08",
+    "cash": 9770.62,
+    "pos": {},
+    "yday_equity": 9770.62
+  }
+}

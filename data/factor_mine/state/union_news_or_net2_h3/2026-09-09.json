@@ -1,0 +1,96 @@
+{
+  "buys": [],
+  "cash": 85.69,
+  "date": "2026-09-09",
+  "equity": 9607.53,
+  "fees": 0,
+  "fills": [],
+  "holdings": [
+    "BAK",
+    "BE",
+    "CRM",
+    "FRNM",
+    "MRX"
+  ],
+  "mean": -1.0467,
+  "n_trades_today": 0,
+  "recipe": "union_news_or_net2_h3",
+  "sells": [],
+  "state": {
+    "after": "2026-09-09",
+    "cash": 85.69,
+    "pos": {
+      "BAK": {
+        "close_px": 1.9700000286102295,
+        "cost": 1921.6536563049317,
+        "entry_date": "2026-09-04",
+        "entry_px": 1.940000057220459,
+        "fee_in": 12.6936,
+        "last_px": 2.015000104904175,
+        "min_hold": 3,
+        "notional": 1908.9600563049316,
+        "peak_px": 2.015000104904175,
+        "reason": "packet\ud83d\udfe2 OR headline\ud83d\udfe2 and camera net \u2265 2; gate news_or_headline=True,cam_net_min=2; rank cond; list yday_gainer,yday_mover; ret5=+18.3; leftover $1909.50",
+        "shares": 984,
+        "ticker": "BAK"
+      },
+      "BE": {
+        "close_px": 269.2799987792969,
+        "cost": 1896.57405859375,
+        "entry_date": "2026-09-04",
+        "entry_px": 236.82000732421875,
+        "fee_in": 2.014,
+        "last_px": 272.989990234375,
+        "min_hold": 3,
+        "notional": 1894.56005859375,
+        "peak_px": 272.989990234375,
+        "reason": "packet\ud83d\udfe2 OR headline\ud83d\udfe2 and camera net \u2265 2; gate news_or_headline=True,cam_net_min=2; rank cond; list ohlc_hot; ret5=+8.1; leftover $1909.50",
+        "shares": 8,
+        "ticker": "BE"
+      },
+      "CRM": {
+        "close_px": 244.16000366210938,
+        "cost": 1845.5308974609375,
+        "entry_date": "2026-09-04",
+        "entry_px": 263.3599853515625,
+        "fee_in": 2.011,
+        "last_px": 249.77999877929688,
+        "min_hold": 3,
+        "notional": 1843.5198974609375,
+        "peak_px": 263.3599853515625,
+        "reason": "packet\ud83d\udfe2 OR headline\ud83d\udfe2 and camera net \u2265 2; gate news_or_headline=True,cam_net_min=2; rank cond; list flatten,mover_buy; \ud83d\udd35; \u26aa; ret5=+4.9; leftover $1909.50",
+        "shares": 7,
+        "ticker": "CRM"
+      },
+      "FRNM": {
+        "close_px": 15.75,
+        "cost": 1904.7379557495117,
+        "entry_date": "2026-09-04",
+        "entry_px": 16.399999618530273,
+        "fee_in": 2.338,
+        "last_px": 15.960000038146973,
+        "min_hold": 3,
+        "notional": 1902.3999557495117,
+        "peak_px": 16.739999771118164,
+        "reason": "packet\ud83d\udfe2 OR headline\ud83d\udfe2 and camera net \u2265 2; gate news_or_headline=True,cam_net_min=2; rank cond; list mover_buy; \ud83d\udd35; \u26aa; ret5=+21.2; leftover $1909.50",
+        "shares": 116,
+        "ticker": "FRNM"
+      },
+      "MRX": {
+        "close_px": 75.72000122070312,
+        "cost": 1893.3150381469727,
+        "entry_date": "2026-09-04",
+        "entry_px": 75.6500015258789,
+        "fee_in": 2.065,
+        "last_px": 76.5999984741211,
+        "min_hold": 3,
+        "notional": 1891.2500381469727,
+        "peak_px": 78.83999633789062,
+        "reason": "packet\ud83d\udfe2 OR headline\ud83d\udfe2 and camera net \u2265 2; gate news_or_headline=True,cam_net_min=2; rank cond; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+6.0; leftover $1909.50",
+        "shares": 25,
+        "ticker": "MRX"
+      }
+    },
+    "yday_equity": 9607.53
+  }
+}

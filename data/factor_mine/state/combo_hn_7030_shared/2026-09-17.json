@@ -1,0 +1,303 @@
+{
+  "buys": [
+    "BBNX",
+    "IQ",
+    "SMTC",
+    "TNDM",
+    "BAK",
+    "JBHT",
+    "GME"
+  ],
+  "cash": 562.62,
+  "date": "2026-09-17",
+  "equity": 10213.19,
+  "fees": 56.7861,
+  "fills": [
+    {
+      "fees": 2.1971,
+      "pnl": 22.16,
+      "price": 28.595,
+      "shares": 61,
+      "side": "SELL",
+      "ticker": "CAI"
+    },
+    {
+      "fees": 2.022,
+      "pnl": -16.1,
+      "price": 120.07,
+      "shares": 4,
+      "side": "SELL",
+      "ticker": "CRUS"
+    },
+    {
+      "fees": 2.049,
+      "pnl": 2.55,
+      "price": 37.64,
+      "shares": 13,
+      "side": "SELL",
+      "ticker": "DBX"
+    },
+    {
+      "fees": 2.016,
+      "pnl": -1.65,
+      "price": 190.35,
+      "shares": 2,
+      "side": "SELL",
+      "ticker": "QCOM"
+    },
+    {
+      "fees": 2.2385,
+      "pnl": 54.75,
+      "price": 24.09,
+      "shares": 74,
+      "side": "SELL",
+      "ticker": "SDGR"
+    },
+    {
+      "fees": 2.2248,
+      "pnl": 18.29,
+      "price": 7.27,
+      "shares": 71,
+      "side": "SELL",
+      "ticker": "SION"
+    },
+    {
+      "fees": 2.046,
+      "pnl": -33.11,
+      "price": 37.57,
+      "shares": 12,
+      "side": "SELL",
+      "ticker": "SM"
+    },
+    {
+      "fees": 2.064,
+      "pnl": 0.21,
+      "price": 26.51,
+      "shares": 18,
+      "side": "SELL",
+      "ticker": "WAY"
+    },
+    {
+      "fees": 2.29,
+      "pnl": null,
+      "price": 22.46,
+      "shares": 100,
+      "side": "BUY",
+      "ticker": "BBNX"
+    },
+    {
+      "fees": 27.3222,
+      "pnl": null,
+      "price": 1.07,
+      "shares": 2118,
+      "side": "BUY",
+      "ticker": "IQ"
+    },
+    {
+      "fees": 1.7115,
+      "pnl": null,
+      "price": 170.85,
+      "shares": 1,
+      "side": "BUY",
+      "ticker": "SMTC"
+    },
+    {
+      "fees": 2.044,
+      "pnl": null,
+      "price": 17.72,
+      "shares": 18,
+      "side": "BUY",
+      "ticker": "TNDM"
+    },
+    {
+      "fees": 2.536,
+      "pnl": null,
+      "price": 1.77,
+      "shares": 182,
+      "side": "BUY",
+      "ticker": "BAK"
+    },
+    {
+      "fees": 1.993,
+      "pnl": null,
+      "price": 238.6,
+      "shares": 1,
+      "side": "BUY",
+      "ticker": "JBHT"
+    },
+    {
+      "fees": 2.032,
+      "pnl": null,
+      "price": 22.12,
+      "shares": 14,
+      "side": "BUY",
+      "ticker": "GME"
+    }
+  ],
+  "holdings": [
+    "BAK",
+    "BBNX",
+    "GME",
+    "HLP",
+    "INDP",
+    "IQ",
+    "JBHT",
+    "SMTC",
+    "TNDM"
+  ],
+  "mean": 2.6894,
+  "n_trades_today": 15,
+  "recipe": "combo_hn_7030_shared",
+  "sells": [
+    "CAI",
+    "CRUS",
+    "DBX",
+    "QCOM",
+    "SDGR",
+    "SION",
+    "SM",
+    "WAY"
+  ],
+  "state": {
+    "after": "2026-09-17",
+    "cash": 562.62,
+    "pos": {
+      "BAK": {
+        "close_px": 1.7899999618530273,
+        "cost": 324.6759965286255,
+        "entry_date": "2026-09-17",
+        "entry_px": 1.7699999809265137,
+        "fee_in": 2.536,
+        "last_px": 1.7699999809265137,
+        "notional": 322.1399965286255,
+        "owner": "union_news_g_h1",
+        "peak_px": 1.7699999809265137,
+        "reason": "union \u2229 news_g, no \ud83d\udea8; gate news=good; list yday_mover; ret5=-10.2; combo leftover $322.19; owner union_news_g_h1",
+        "shares": 182,
+        "side": "long",
+        "ticker": "BAK"
+      },
+      "BBNX": {
+        "close_px": 21.43000030517578,
+        "cost": 2248.2899084472656,
+        "entry_date": "2026-09-17",
+        "entry_px": 22.459999084472656,
+        "fee_in": 2.29,
+        "last_px": 22.459999084472656,
+        "notional": 2245.9999084472656,
+        "owner": "union_hot_n4_h1",
+        "peak_px": 22.459999084472656,
+        "reason": "top 4 by hot; rank hot_score; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+27.3; combo leftover $2266.26; owner union_hot_n4_h1",
+        "shares": 100,
+        "side": "long",
+        "ticker": "BBNX"
+      },
+      "GME": {
+        "close_px": 22.770000457763672,
+        "cost": 311.71201174926756,
+        "entry_date": "2026-09-17",
+        "entry_px": 22.1200008392334,
+        "fee_in": 2.032,
+        "last_px": 22.1200008392334,
+        "notional": 309.6800117492676,
+        "owner": "union_news_g_h1",
+        "peak_px": 22.1200008392334,
+        "reason": "union \u2229 news_g, no \ud83d\udea8; gate news=good; list ohlc_hot; \ud83d\udd35; ret5=+10.5; combo leftover $322.19; owner union_news_g_h1",
+        "shares": 14,
+        "side": "long",
+        "ticker": "GME"
+      },
+      "HLP": {
+        "close_px": 2.0199999809265137,
+        "cost": 1745.8226540805817,
+        "entry_date": "2026-09-16",
+        "entry_px": 1.7999999523162842,
+        "fee_in": 12.4227,
+        "last_px": 2.0999999046325684,
+        "notional": 1733.3999540805817,
+        "owner": "union_hot_n4_h1",
+        "peak_px": 2.0999999046325684,
+        "reason": "top 4 by hot; rank hot_score; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+30.5; combo leftover $1735.07; owner union_hot_n4_h1",
+        "shares": 963,
+        "side": "long",
+        "ticker": "HLP"
+      },
+      "INDP": {
+        "close_px": 3.930000066757202,
+        "cost": 1740.9546406837464,
+        "entry_date": "2026-09-16",
+        "entry_px": 3.6600000858306885,
+        "fee_in": 6.1146,
+        "last_px": 3.299999952316284,
+        "notional": 1734.8400406837463,
+        "owner": "union_hot_n4_h1",
+        "peak_px": 3.6600000858306885,
+        "reason": "top 4 by hot; rank hot_score; list yday_gainer,yday_mover; ret5=+96.8; combo leftover $1735.07; owner union_hot_n4_h1",
+        "shares": 474,
+        "side": "long",
+        "ticker": "INDP"
+      },
+      "IQ": {
+        "close_px": 1.100000023841858,
+        "cost": 2293.582311093521,
+        "entry_date": "2026-09-17",
+        "entry_px": 1.0700000524520874,
+        "fee_in": 27.3222,
+        "last_px": 1.0700000524520874,
+        "notional": 2266.260111093521,
+        "owner": "union_hot_n4_h1",
+        "peak_px": 1.0700000524520874,
+        "reason": "top 4 by hot; rank hot_score; list yday_gainer,ohlc_hot; \ud83d\udd35; ret5=+15.8; combo leftover $2266.26; owner union_hot_n4_h1",
+        "shares": 2118,
+        "side": "long",
+        "ticker": "IQ"
+      },
+      "JBHT": {
+        "close_px": 236.8000030517578,
+        "cost": 240.59300610351562,
+        "entry_date": "2026-09-17",
+        "entry_px": 238.60000610351562,
+        "fee_in": 1.993,
+        "last_px": 238.60000610351562,
+        "notional": 238.60000610351562,
+        "owner": "union_news_g_h1",
+        "peak_px": 238.60000610351562,
+        "reason": "union \u2229 news_g, no \ud83d\udea8; gate news=good; list yday_mover; ret5=-11.6; combo leftover $322.19; owner union_news_g_h1",
+        "shares": 1,
+        "side": "long",
+        "ticker": "JBHT"
+      },
+      "SMTC": {
+        "close_px": 178.19000244140625,
+        "cost": 172.56150610351563,
+        "entry_date": "2026-09-17",
+        "entry_px": 170.85000610351562,
+        "fee_in": 1.7115,
+        "last_px": 170.85000610351562,
+        "notional": 170.85000610351562,
+        "owner": "union_news_g_h1",
+        "peak_px": 170.85000610351562,
+        "reason": "union \u2229 news_g, no \ud83d\udea8; gate news=good; list probable,yday_gainer,yday_mover; \ud83d\udd35; ret5=+2.2; combo leftover $322.19; owner union_news_g_h1",
+        "shares": 1,
+        "side": "long",
+        "ticker": "SMTC"
+      },
+      "TNDM": {
+        "close_px": 17.229999542236328,
+        "cost": 321.00398764038084,
+        "entry_date": "2026-09-17",
+        "entry_px": 17.719999313354492,
+        "fee_in": 2.044,
+        "last_px": 17.719999313354492,
+        "notional": 318.95998764038086,
+        "owner": "union_news_g_h1",
+        "peak_px": 17.719999313354492,
+        "reason": "union \u2229 news_g, no \ud83d\udea8; gate news=good; list yday_gainer; ret5=-8.3; combo leftover $322.19; owner union_news_g_h1",
+        "shares": 18,
+        "side": "long",
+        "ticker": "TNDM"
+      }
+    },
+    "yday_equity": 10213.19
+  }
+}

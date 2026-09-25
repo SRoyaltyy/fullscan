@@ -1,0 +1,225 @@
+{
+  "buys": [
+    "ADPT",
+    "META",
+    "WST",
+    "TALO",
+    "NTRA",
+    "SM",
+    "QCOM",
+    "RDNT"
+  ],
+  "cash": 1111.0,
+  "date": "2026-09-16",
+  "equity": 9903.06,
+  "fees": 18.5335,
+  "fills": [
+    {
+      "fees": 2.0855,
+      "pnl": 107.6,
+      "price": 52.52,
+      "shares": 25,
+      "side": "SELL",
+      "ticker": "FRO"
+    },
+    {
+      "fees": 2.128,
+      "pnl": null,
+      "price": 27.09,
+      "shares": 46,
+      "side": "BUY",
+      "ticker": "ADPT"
+    },
+    {
+      "fees": 1.993,
+      "pnl": null,
+      "price": 679.91,
+      "shares": 1,
+      "side": "BUY",
+      "ticker": "META"
+    },
+    {
+      "fees": 1.999,
+      "pnl": null,
+      "price": 363.11,
+      "shares": 3,
+      "side": "BUY",
+      "ticker": "WST"
+    },
+    {
+      "fees": 2.2,
+      "pnl": null,
+      "price": 17.87,
+      "shares": 70,
+      "side": "BUY",
+      "ticker": "TALO"
+    },
+    {
+      "fees": 1.999,
+      "pnl": null,
+      "price": 350.18,
+      "shares": 3,
+      "side": "BUY",
+      "ticker": "NTRA"
+    },
+    {
+      "fees": 2.083,
+      "pnl": null,
+      "price": 39.99,
+      "shares": 31,
+      "side": "BUY",
+      "ticker": "SM"
+    },
+    {
+      "fees": 2.008,
+      "pnl": null,
+      "price": 189.17,
+      "shares": 6,
+      "side": "BUY",
+      "ticker": "QCOM"
+    },
+    {
+      "fees": 2.038,
+      "pnl": null,
+      "price": 77.12,
+      "shares": 16,
+      "side": "BUY",
+      "ticker": "RDNT"
+    }
+  ],
+  "holdings": [
+    "ADPT",
+    "META",
+    "NTRA",
+    "QCOM",
+    "RDNT",
+    "SM",
+    "TALO",
+    "WST"
+  ],
+  "mean": -1.2826,
+  "n_trades_today": 9,
+  "recipe": "union_clk_mom_break_peer_h1",
+  "sells": [
+    "FRO"
+  ],
+  "state": {
+    "after": "2026-09-16",
+    "cash": 1111.0,
+    "pos": {
+      "ADPT": {
+        "close_px": 27.670000076293945,
+        "cost": 1248.268007019043,
+        "entry_date": "2026-09-16",
+        "entry_px": 27.09000015258789,
+        "fee_in": 2.128,
+        "last_px": 27.09000015258789,
+        "min_hold": 1,
+        "notional": 1246.140007019043,
+        "peak_px": 27.09000015258789,
+        "reason": "Clock-B #1 mom+breakout+peer/sector (research; not KEEP); gate clk_mom_break_peer=True; rank hot_score; list probable,yday_gainer,ohlc_hot; \ud83d\udd35; \u26aa; ret5=+9.6; leftover $1256.61",
+        "shares": 46,
+        "ticker": "ADPT"
+      },
+      "META": {
+        "close_px": 673.3099975585938,
+        "cost": 681.9029731445313,
+        "entry_date": "2026-09-16",
+        "entry_px": 679.9099731445312,
+        "fee_in": 1.993,
+        "last_px": 679.9099731445312,
+        "min_hold": 1,
+        "notional": 679.9099731445312,
+        "peak_px": 679.9099731445312,
+        "reason": "Clock-B #1 mom+breakout+peer/sector (research; not KEEP); gate clk_mom_break_peer=True; rank hot_score; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+9.3; leftover $1256.61",
+        "shares": 1,
+        "ticker": "META"
+      },
+      "NTRA": {
+        "close_px": 345.3399963378906,
+        "cost": 1052.5389780273438,
+        "entry_date": "2026-09-16",
+        "entry_px": 350.17999267578125,
+        "fee_in": 1.999,
+        "last_px": 350.17999267578125,
+        "min_hold": 1,
+        "notional": 1050.5399780273438,
+        "peak_px": 350.17999267578125,
+        "reason": "Clock-B #1 mom+breakout+peer/sector (research; not KEEP); gate clk_mom_break_peer=True; rank hot_score; list ohlc_hot; \u26aa; ret5=+8.2; leftover $1256.61",
+        "shares": 3,
+        "ticker": "NTRA"
+      },
+      "QCOM": {
+        "close_px": 184.83999633789062,
+        "cost": 1137.027989013672,
+        "entry_date": "2026-09-16",
+        "entry_px": 189.1699981689453,
+        "fee_in": 2.008,
+        "last_px": 189.1699981689453,
+        "min_hold": 1,
+        "notional": 1135.0199890136719,
+        "peak_px": 189.1699981689453,
+        "reason": "Clock-B #1 mom+breakout+peer/sector (research; not KEEP); gate clk_mom_break_peer=True; rank hot_score; list ohlc_hot; \ud83d\udd35; ret5=+7.9; leftover $1256.61",
+        "shares": 6,
+        "ticker": "QCOM"
+      },
+      "RDNT": {
+        "close_px": 75.77999877929688,
+        "cost": 1235.9580439453125,
+        "entry_date": "2026-09-16",
+        "entry_px": 77.12000274658203,
+        "fee_in": 2.038,
+        "last_px": 77.12000274658203,
+        "min_hold": 1,
+        "notional": 1233.9200439453125,
+        "peak_px": 77.12000274658203,
+        "reason": "Clock-B #1 mom+breakout+peer/sector (research; not KEEP); gate clk_mom_break_peer=True; rank hot_score; list flatten; \u26aa; ret5=+7.2; leftover $1256.61",
+        "shares": 16,
+        "ticker": "RDNT"
+      },
+      "SM": {
+        "close_px": 38.15999984741211,
+        "cost": 1241.7730520324708,
+        "entry_date": "2026-09-16",
+        "entry_px": 39.9900016784668,
+        "fee_in": 2.083,
+        "last_px": 39.9900016784668,
+        "min_hold": 1,
+        "notional": 1239.6900520324707,
+        "peak_px": 39.9900016784668,
+        "reason": "Clock-B #1 mom+breakout+peer/sector (research; not KEEP); gate clk_mom_break_peer=True; rank hot_score; list ohlc_hot; \ud83d\udd35; ret5=+9.3; leftover $1256.61",
+        "shares": 31,
+        "ticker": "SM"
+      },
+      "TALO": {
+        "close_px": 17.420000076293945,
+        "cost": 1253.100058746338,
+        "entry_date": "2026-09-16",
+        "entry_px": 17.8700008392334,
+        "fee_in": 2.2,
+        "last_px": 17.8700008392334,
+        "min_hold": 1,
+        "notional": 1250.900058746338,
+        "peak_px": 17.8700008392334,
+        "reason": "Clock-B #1 mom+breakout+peer/sector (research; not KEEP); gate clk_mom_break_peer=True; rank hot_score; list ohlc_hot; \ud83d\udd35; ret5=+6.8; leftover $1256.61",
+        "shares": 70,
+        "ticker": "TALO"
+      },
+      "WST": {
+        "close_px": 362.010009765625,
+        "cost": 1091.3289560546875,
+        "entry_date": "2026-09-16",
+        "entry_px": 363.1099853515625,
+        "fee_in": 1.999,
+        "last_px": 363.1099853515625,
+        "min_hold": 1,
+        "notional": 1089.3299560546875,
+        "peak_px": 363.1099853515625,
+        "reason": "Clock-B #1 mom+breakout+peer/sector (research; not KEEP); gate clk_mom_break_peer=True; rank hot_score; list ohlc_hot; \u26aa; ret5=+8.1; leftover $1256.61",
+        "shares": 3,
+        "ticker": "WST"
+      }
+    },
+    "yday_equity": 9903.06
+  }
+}

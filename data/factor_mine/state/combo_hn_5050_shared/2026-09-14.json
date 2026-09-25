@@ -1,0 +1,111 @@
+{
+  "buys": [],
+  "cash": 8599.8,
+  "date": "2026-09-14",
+  "equity": 9804.0,
+  "fees": 30.6019,
+  "fills": [
+    {
+      "fees": 2.022,
+      "pnl": 73.34,
+      "price": 261.51,
+      "shares": 4,
+      "side": "SELL",
+      "ticker": "ADBE"
+    },
+    {
+      "fees": 6.3862,
+      "pnl": -27.32,
+      "price": 2.01,
+      "shares": 488,
+      "side": "SELL",
+      "ticker": "AMTX"
+    },
+    {
+      "fees": 6.151,
+      "pnl": -45.11,
+      "price": 2.05,
+      "shares": 470,
+      "side": "SELL",
+      "ticker": "BAK"
+    },
+    {
+      "fees": 3.329,
+      "pnl": 23.87,
+      "price": 5.03,
+      "shares": 254,
+      "side": "SELL",
+      "ticker": "BNC"
+    },
+    {
+      "fees": 6.0468,
+      "pnl": 34.19,
+      "price": 2.8,
+      "shares": 462,
+      "side": "SELL",
+      "ticker": "INDP"
+    },
+    {
+      "fees": 2.028,
+      "pnl": -142.1,
+      "price": 141.42,
+      "shares": 6,
+      "side": "SELL",
+      "ticker": "ORCL"
+    },
+    {
+      "fees": 2.031,
+      "pnl": -34.21,
+      "price": 131.4,
+      "shares": 7,
+      "side": "SELL",
+      "ticker": "RH"
+    },
+    {
+      "fees": 2.6079,
+      "pnl": -22.45,
+      "price": 6.4,
+      "shares": 192,
+      "side": "SELL",
+      "ticker": "VISN"
+    }
+  ],
+  "holdings": [
+    "GPRO"
+  ],
+  "mean": -0.5,
+  "n_trades_today": 8,
+  "recipe": "combo_hn_5050_shared",
+  "sells": [
+    "ADBE",
+    "AMTX",
+    "BAK",
+    "BNC",
+    "INDP",
+    "ORCL",
+    "RH",
+    "VISN"
+  ],
+  "state": {
+    "after": "2026-09-14",
+    "cash": 8599.8,
+    "pos": {
+      "GPRO": {
+        "close_px": 1.350000023841858,
+        "cost": 1260.3067787330629,
+        "entry_date": "2026-09-11",
+        "entry_px": 1.399999976158142,
+        "fee_in": 11.5068,
+        "last_px": 1.3700000047683716,
+        "notional": 1248.7999787330627,
+        "owner": "union_hot_n4_h1",
+        "peak_px": 1.399999976158142,
+        "reason": "top 4 by hot; rank hot_score; list ohlc_hot; ret5=+0.7; combo leftover $1249.99; owner union_hot_n4_h1",
+        "shares": 892,
+        "side": "long",
+        "ticker": "GPRO"
+      }
+    },
+    "yday_equity": 9804.0
+  }
+}

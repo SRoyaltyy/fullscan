@@ -1,0 +1,95 @@
+{
+  "buys": [
+    "BAND",
+    "SWKS",
+    "PAYP"
+  ],
+  "cash": 31.42,
+  "date": "2026-09-11",
+  "equity": 10104.99,
+  "fees": 6.795,
+  "fills": [
+    {
+      "fees": 2.173,
+      "pnl": null,
+      "price": 52.55,
+      "shares": 61,
+      "side": "BUY",
+      "ticker": "BAND"
+    },
+    {
+      "fees": 2.104,
+      "pnl": null,
+      "price": 84.27,
+      "shares": 38,
+      "side": "BUY",
+      "ticker": "SWKS"
+    },
+    {
+      "fees": 2.518,
+      "pnl": null,
+      "price": 18.3,
+      "shares": 176,
+      "side": "BUY",
+      "ticker": "PAYP"
+    }
+  ],
+  "holdings": [
+    "BAND",
+    "PAYP",
+    "SWKS"
+  ],
+  "mean": 4.5327,
+  "n_trades_today": 3,
+  "recipe": "union_white_both_n4_h1",
+  "sells": [],
+  "state": {
+    "after": "2026-09-11",
+    "cash": 31.42,
+    "pos": {
+      "BAND": {
+        "close_px": 56.869998931884766,
+        "cost": 3207.722953460693,
+        "entry_date": "2026-09-11",
+        "entry_px": 52.54999923706055,
+        "fee_in": 2.173,
+        "last_px": 52.54999923706055,
+        "min_hold": 1,
+        "notional": 3205.5499534606934,
+        "peak_px": 52.54999923706055,
+        "reason": "\u22120 red + yday up AND catalyst, top 4 by Score; gate cam_bad_max=0,yday_and_catalyst=True; rank list; list probable,yday_gainer; \ud83d\udd35; \u26aa; ret5=+9.6; leftover $3222.27",
+        "shares": 61,
+        "ticker": "BAND"
+      },
+      "PAYP": {
+        "close_px": 18.450000762939453,
+        "cost": 3223.3178657226563,
+        "entry_date": "2026-09-11",
+        "entry_px": 18.299999237060547,
+        "fee_in": 2.518,
+        "last_px": 18.299999237060547,
+        "min_hold": 1,
+        "notional": 3220.7998657226562,
+        "peak_px": 18.299999237060547,
+        "reason": "\u22120 red + yday up AND catalyst, top 4 by Score; gate cam_bad_max=0,yday_and_catalyst=True; rank list; list ohlc_hot; \u26aa; ret5=+7.7; leftover $3222.27",
+        "shares": 176,
+        "ticker": "PAYP"
+      },
+      "SWKS": {
+        "close_px": 88.3499984741211,
+        "cost": 3204.3638724365233,
+        "entry_date": "2026-09-11",
+        "entry_px": 84.2699966430664,
+        "fee_in": 2.104,
+        "last_px": 84.2699966430664,
+        "min_hold": 1,
+        "notional": 3202.2598724365234,
+        "peak_px": 84.2699966430664,
+        "reason": "\u22120 red + yday up AND catalyst, top 4 by Score; gate cam_bad_max=0,yday_and_catalyst=True; rank list; list yday_gainer,ohlc_hot; \u26aa; ret5=+17.5; leftover $3222.27",
+        "shares": 38,
+        "ticker": "SWKS"
+      }
+    },
+    "yday_equity": 10104.99
+  }
+}

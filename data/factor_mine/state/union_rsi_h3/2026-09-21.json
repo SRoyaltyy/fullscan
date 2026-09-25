@@ -1,0 +1,288 @@
+{
+  "buys": [
+    "XENE",
+    "SION",
+    "THO",
+    "KDK",
+    "MLKN",
+    "ABVX",
+    "SGML",
+    "HUM"
+  ],
+  "cash": 457.22,
+  "date": "2026-09-21",
+  "equity": 8809.33,
+  "fees": 89.8787,
+  "fills": [
+    {
+      "fees": 2.3451,
+      "pnl": -219.39,
+      "price": 8.33,
+      "shares": 109,
+      "side": "SELL",
+      "ticker": "ALHC"
+    },
+    {
+      "fees": 2.5224,
+      "pnl": 102.24,
+      "price": 7.51,
+      "shares": 165,
+      "side": "SELL",
+      "ticker": "CRBP"
+    },
+    {
+      "fees": 5.4455,
+      "pnl": 22.47,
+      "price": 2.8,
+      "shares": 416,
+      "side": "SELL",
+      "ticker": "CTMX"
+    },
+    {
+      "fees": 33.7533,
+      "pnl": -66.32,
+      "price": 0.16,
+      "shares": 7080,
+      "side": "SELL",
+      "ticker": "DVLT"
+    },
+    {
+      "fees": 4.0474,
+      "pnl": 56.86,
+      "price": 3.87,
+      "shares": 309,
+      "side": "SELL",
+      "ticker": "EYPT"
+    },
+    {
+      "fees": 14.1493,
+      "pnl": -173.1,
+      "price": 0.737,
+      "shares": 1342,
+      "side": "SELL",
+      "ticker": "NMRA"
+    },
+    {
+      "fees": 2.091,
+      "pnl": -2.27,
+      "price": 41.0,
+      "shares": 27,
+      "side": "SELL",
+      "ticker": "TCOM"
+    },
+    {
+      "fees": 6.1773,
+      "pnl": 148.21,
+      "price": 2.68,
+      "shares": 472,
+      "side": "SELL",
+      "ticker": "ZSQR"
+    },
+    {
+      "fees": 2.071,
+      "pnl": null,
+      "price": 40.0,
+      "shares": 27,
+      "side": "BUY",
+      "ticker": "XENE"
+    },
+    {
+      "fees": 2.548,
+      "pnl": null,
+      "price": 6.0,
+      "shares": 186,
+      "side": "BUY",
+      "ticker": "SION"
+    },
+    {
+      "fees": 2.038,
+      "pnl": null,
+      "price": 68.39,
+      "shares": 16,
+      "side": "BUY",
+      "ticker": "THO"
+    },
+    {
+      "fees": 4.2054,
+      "pnl": null,
+      "price": 3.42,
+      "shares": 326,
+      "side": "BUY",
+      "ticker": "KDK"
+    },
+    {
+      "fees": 2.149,
+      "pnl": null,
+      "price": 20.85,
+      "shares": 53,
+      "side": "BUY",
+      "ticker": "MLKN"
+    },
+    {
+      "fees": 2.02,
+      "pnl": null,
+      "price": 105.72,
+      "shares": 10,
+      "side": "BUY",
+      "ticker": "ABVX"
+    },
+    {
+      "fees": 2.32,
+      "pnl": null,
+      "price": 10.135,
+      "shares": 110,
+      "side": "BUY",
+      "ticker": "SGML"
+    },
+    {
+      "fees": 1.996,
+      "pnl": null,
+      "price": 386.2,
+      "shares": 2,
+      "side": "BUY",
+      "ticker": "HUM"
+    }
+  ],
+  "holdings": [
+    "ABVX",
+    "HUM",
+    "KDK",
+    "MLKN",
+    "SGML",
+    "SION",
+    "THO",
+    "XENE"
+  ],
+  "mean": -0.8777,
+  "n_trades_today": 16,
+  "recipe": "union_rsi_h3",
+  "sells": [
+    "ALHC",
+    "CRBP",
+    "CTMX",
+    "DVLT",
+    "EYPT",
+    "NMRA",
+    "TCOM",
+    "ZSQR"
+  ],
+  "state": {
+    "after": "2026-09-21",
+    "cash": 457.22,
+    "pos": {
+      "ABVX": {
+        "close_px": 103.44999694824219,
+        "cost": 1059.2200122070312,
+        "entry_date": "2026-09-21",
+        "entry_px": 105.72000122070312,
+        "fee_in": 2.02,
+        "last_px": 105.72000122070312,
+        "min_hold": 3,
+        "notional": 1057.2000122070312,
+        "peak_px": 105.72000122070312,
+        "reason": "rank by rsi; rank rsi; list overnight; ret5=-11.5; leftover $1116.40",
+        "shares": 10,
+        "ticker": "ABVX"
+      },
+      "HUM": {
+        "close_px": 378.5799865722656,
+        "cost": 774.3960244140625,
+        "entry_date": "2026-09-21",
+        "entry_px": 386.20001220703125,
+        "fee_in": 1.996,
+        "last_px": 386.20001220703125,
+        "min_hold": 3,
+        "notional": 772.4000244140625,
+        "peak_px": 386.20001220703125,
+        "reason": "rank by rsi; rank rsi; list flatten; \ud83d\udd35; ret5=-5.8; leftover $1116.40",
+        "shares": 2,
+        "ticker": "HUM"
+      },
+      "KDK": {
+        "close_px": 3.2699999809265137,
+        "cost": 1119.1254248718262,
+        "entry_date": "2026-09-21",
+        "entry_px": 3.4200000762939453,
+        "fee_in": 4.2054,
+        "last_px": 3.4200000762939453,
+        "min_hold": 3,
+        "notional": 1114.9200248718262,
+        "peak_px": 3.4200000762939453,
+        "reason": "rank by rsi; rank rsi; list yday_mover; ret5=-12.3; leftover $1116.40",
+        "shares": 326,
+        "ticker": "KDK"
+      },
+      "MLKN": {
+        "close_px": 20.31999969482422,
+        "cost": 1107.1990202178954,
+        "entry_date": "2026-09-21",
+        "entry_px": 20.850000381469727,
+        "fee_in": 2.149,
+        "last_px": 20.850000381469727,
+        "min_hold": 3,
+        "notional": 1105.0500202178955,
+        "peak_px": 20.850000381469727,
+        "reason": "rank by rsi; rank rsi; list overnight; ret5=-2.5; leftover $1116.40",
+        "shares": 53,
+        "ticker": "MLKN"
+      },
+      "SGML": {
+        "close_px": 10.270000457763672,
+        "cost": 1117.170025177002,
+        "entry_date": "2026-09-21",
+        "entry_px": 10.135000228881836,
+        "fee_in": 2.32,
+        "last_px": 10.135000228881836,
+        "min_hold": 3,
+        "notional": 1114.850025177002,
+        "peak_px": 10.135000228881836,
+        "reason": "rank by rsi; rank rsi; list probable,yday_gainer; ret5=+4.9; leftover $1116.40",
+        "shares": 110,
+        "ticker": "SGML"
+      },
+      "SION": {
+        "close_px": 6.0,
+        "cost": 1118.548,
+        "entry_date": "2026-09-21",
+        "entry_px": 6.0,
+        "fee_in": 2.548,
+        "last_px": 6.0,
+        "min_hold": 3,
+        "notional": 1116.0,
+        "peak_px": 6.0,
+        "reason": "rank by rsi; rank rsi; list yday_mover; \ud83d\udd35; ret5=-24.1; leftover $1116.40",
+        "shares": 186,
+        "ticker": "SION"
+      },
+      "THO": {
+        "close_px": 69.94000244140625,
+        "cost": 1096.277990234375,
+        "entry_date": "2026-09-21",
+        "entry_px": 68.38999938964844,
+        "fee_in": 2.038,
+        "last_px": 68.38999938964844,
+        "min_hold": 3,
+        "notional": 1094.239990234375,
+        "peak_px": 68.38999938964844,
+        "reason": "rank by rsi; rank rsi; list overnight; ret5=-7.0; leftover $1116.40",
+        "shares": 16,
+        "ticker": "THO"
+      },
+      "XENE": {
+        "close_px": 38.9900016784668,
+        "cost": 1082.071,
+        "entry_date": "2026-09-21",
+        "entry_px": 40.0,
+        "fee_in": 2.071,
+        "last_px": 40.0,
+        "min_hold": 3,
+        "notional": 1080.0,
+        "peak_px": 40.0,
+        "reason": "rank by rsi; rank rsi; list yday_mover; \ud83d\udd35; ret5=-32.2; leftover $1116.40",
+        "shares": 27,
+        "ticker": "XENE"
+      }
+    },
+    "yday_equity": 8809.33
+  }
+}

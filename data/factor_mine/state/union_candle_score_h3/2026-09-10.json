@@ -1,0 +1,93 @@
+{
+  "buys": [],
+  "cash": 9116.75,
+  "date": "2026-09-10",
+  "equity": 9116.75,
+  "fees": 17.9773,
+  "fills": [
+    {
+      "fees": 2.151,
+      "pnl": 37.08,
+      "price": 26.06,
+      "shares": 47,
+      "side": "SELL",
+      "ticker": "ASST"
+    },
+    {
+      "fees": 2.7016,
+      "pnl": -122.78,
+      "price": 5.22,
+      "shares": 206,
+      "side": "SELL",
+      "ticker": "DFDV"
+    },
+    {
+      "fees": 2.228,
+      "pnl": -59.15,
+      "price": 15.64,
+      "shares": 72,
+      "side": "SELL",
+      "ticker": "FRNM"
+    },
+    {
+      "fees": 2.3768,
+      "pnl": -53.51,
+      "price": 9.55,
+      "shares": 119,
+      "side": "SELL",
+      "ticker": "PAGS"
+    },
+    {
+      "fees": 2.052,
+      "pnl": -29.4,
+      "price": 80.892,
+      "shares": 14,
+      "side": "SELL",
+      "ticker": "TARS"
+    },
+    {
+      "fees": 2.103,
+      "pnl": 6.97,
+      "price": 37.8,
+      "shares": 31,
+      "side": "SELL",
+      "ticker": "TDS"
+    },
+    {
+      "fees": 2.2469,
+      "pnl": -111.33,
+      "price": 13.81,
+      "shares": 78,
+      "side": "SELL",
+      "ticker": "TTD"
+    },
+    {
+      "fees": 2.118,
+      "pnl": -108.62,
+      "price": 29.75,
+      "shares": 36,
+      "side": "SELL",
+      "ticker": "ZETA"
+    }
+  ],
+  "holdings": [],
+  "mean": -1.7949,
+  "n_trades_today": 8,
+  "recipe": "union_candle_score_h3",
+  "sells": [
+    "ASST",
+    "DFDV",
+    "FRNM",
+    "PAGS",
+    "TARS",
+    "TDS",
+    "TTD",
+    "ZETA"
+  ],
+  "state": {
+    "after": "2026-09-10",
+    "cash": 9116.75,
+    "pos": {},
+    "yday_equity": 9116.75
+  }
+}

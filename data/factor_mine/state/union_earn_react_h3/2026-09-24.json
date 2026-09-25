@@ -1,0 +1,81 @@
+{
+  "buys": [],
+  "cash": 99.26,
+  "date": "2026-09-24",
+  "equity": 8255.35,
+  "fees": 0,
+  "fills": [],
+  "holdings": [
+    "ABVX",
+    "ANAB",
+    "MLKN",
+    "THO"
+  ],
+  "mean": -0.0225,
+  "n_trades_today": 0,
+  "recipe": "union_earn_react_h3",
+  "sells": [],
+  "state": {
+    "after": "2026-09-24",
+    "cash": 99.26,
+    "pos": {
+      "ABVX": {
+        "close_px": 94.87000274658203,
+        "cost": 2159.593,
+        "entry_date": "2026-09-22",
+        "entry_px": 102.74,
+        "fee_in": 2.053,
+        "last_px": 92.97000122070312,
+        "min_hold": 3,
+        "notional": 2157.54,
+        "peak_px": 102.74,
+        "reason": "union \u2229 earn_react, no \ud83d\udea8; gate earn_react=True; list earn_react; ret5=-8.9; leftover $2171.44",
+        "shares": 21,
+        "ticker": "ABVX"
+      },
+      "ANAB": {
+        "close_px": 51.70000076293945,
+        "cost": 2149.837,
+        "entry_date": "2026-09-22",
+        "entry_px": 55.07,
+        "fee_in": 2.107,
+        "last_px": 50.59000015258789,
+        "min_hold": 3,
+        "notional": 2147.73,
+        "peak_px": 55.07,
+        "reason": "union \u2229 earn_react, no \ud83d\udea8; gate earn_react=True; list earn_react; ret5=+1.5; leftover $2171.44",
+        "shares": 39,
+        "ticker": "ANAB"
+      },
+      "MLKN": {
+        "close_px": 19.90999984741211,
+        "cost": 2171.605,
+        "entry_date": "2026-09-22",
+        "entry_px": 20.66,
+        "fee_in": 2.305,
+        "last_px": 19.959999084472656,
+        "min_hold": 3,
+        "notional": 2169.3,
+        "peak_px": 20.66,
+        "reason": "union \u2229 earn_react, no \ud83d\udea8; gate earn_react=True; list earn_react; ret5=-4.4; leftover $2171.44",
+        "shares": 105,
+        "ticker": "MLKN"
+      },
+      "THO": {
+        "close_px": 70.93000030517578,
+        "cost": 2105.447,
+        "entry_date": "2026-09-22",
+        "entry_px": 72.53,
+        "fee_in": 2.077,
+        "last_px": 72.58000183105469,
+        "min_hold": 3,
+        "notional": 2103.37,
+        "peak_px": 72.58000183105469,
+        "reason": "union \u2229 earn_react, no \ud83d\udea8; gate earn_react=True; list earn_react; ret5=-4.8; leftover $2171.44",
+        "shares": 29,
+        "ticker": "THO"
+      }
+    },
+    "yday_equity": 8255.35
+  }
+}

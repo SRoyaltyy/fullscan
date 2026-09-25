@@ -1,0 +1,93 @@
+{
+  "buys": [],
+  "cash": 9765.64,
+  "date": "2026-09-08",
+  "equity": 9765.64,
+  "fees": 18.9913,
+  "fills": [
+    {
+      "fees": 2.1151,
+      "pnl": 38.14,
+      "price": 35.9,
+      "shares": 35,
+      "side": "SELL",
+      "ticker": "BLSH"
+    },
+    {
+      "fees": 2.046,
+      "pnl": 27.97,
+      "price": 100.65,
+      "shares": 12,
+      "side": "SELL",
+      "ticker": "CRCL"
+    },
+    {
+      "fees": 2.022,
+      "pnl": -42.58,
+      "price": 253.72,
+      "shares": 4,
+      "side": "SELL",
+      "ticker": "CRM"
+    },
+    {
+      "fees": 2.175,
+      "pnl": 12.72,
+      "price": 22.15,
+      "shares": 55,
+      "side": "SELL",
+      "ticker": "ETD"
+    },
+    {
+      "fees": 4.0476,
+      "pnl": 47.59,
+      "price": 4.13,
+      "shares": 309,
+      "side": "SELL",
+      "ticker": "GORO"
+    },
+    {
+      "fees": 2.4306,
+      "pnl": -22.51,
+      "price": 8.81,
+      "shares": 136,
+      "side": "SELL",
+      "ticker": "HAFN"
+    },
+    {
+      "fees": 2.034,
+      "pnl": -1.89,
+      "price": 137.62,
+      "shares": 8,
+      "side": "SELL",
+      "ticker": "MSTR"
+    },
+    {
+      "fees": 2.121,
+      "pnl": -62.31,
+      "price": 31.08,
+      "shares": 37,
+      "side": "SELL",
+      "ticker": "ZETA"
+    }
+  ],
+  "holdings": [],
+  "mean": -1.942,
+  "n_trades_today": 8,
+  "recipe": "union_coil_green_h1",
+  "sells": [
+    "BLSH",
+    "CRCL",
+    "CRM",
+    "ETD",
+    "GORO",
+    "HAFN",
+    "MSTR",
+    "ZETA"
+  ],
+  "state": {
+    "after": "2026-09-08",
+    "cash": 9765.64,
+    "pos": {},
+    "yday_equity": 9765.64
+  }
+}

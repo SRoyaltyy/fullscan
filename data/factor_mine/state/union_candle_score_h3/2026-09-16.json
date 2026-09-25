@@ -1,0 +1,288 @@
+{
+  "buys": [
+    "CAI",
+    "BLFS",
+    "ADPT",
+    "CRUS",
+    "INDP",
+    "INSW",
+    "WGS",
+    "WST"
+  ],
+  "cash": 253.22,
+  "date": "2026-09-16",
+  "equity": 9116.61,
+  "fees": 42.2353,
+  "fills": [
+    {
+      "fees": 2.7669,
+      "pnl": -22.37,
+      "price": 5.3,
+      "shares": 211,
+      "side": "SELL",
+      "ticker": "ANGX"
+    },
+    {
+      "fees": 3.1328,
+      "pnl": -11.0,
+      "price": 4.73,
+      "shares": 239,
+      "side": "SELL",
+      "ticker": "CLOV"
+    },
+    {
+      "fees": 4.7662,
+      "pnl": 117.94,
+      "price": 3.48,
+      "shares": 364,
+      "side": "SELL",
+      "ticker": "CMRC"
+    },
+    {
+      "fees": 2.07,
+      "pnl": -100.12,
+      "price": 51.29,
+      "shares": 20,
+      "side": "SELL",
+      "ticker": "COHU"
+    },
+    {
+      "fees": 2.3863,
+      "pnl": 28.2,
+      "price": 9.59,
+      "shares": 122,
+      "side": "SELL",
+      "ticker": "HAFN"
+    },
+    {
+      "fees": 4.4264,
+      "pnl": 119.65,
+      "price": 3.75,
+      "shares": 338,
+      "side": "SELL",
+      "ticker": "MYGN"
+    },
+    {
+      "fees": 2.1963,
+      "pnl": -39.71,
+      "price": 17.73,
+      "shares": 62,
+      "side": "SELL",
+      "ticker": "PAYP"
+    },
+    {
+      "fees": 2.04,
+      "pnl": 49.39,
+      "price": 118.18,
+      "shares": 10,
+      "side": "SELL",
+      "ticker": "QRVO"
+    },
+    {
+      "fees": 2.113,
+      "pnl": null,
+      "price": 28.16,
+      "shares": 41,
+      "side": "BUY",
+      "ticker": "CAI"
+    },
+    {
+      "fees": 2.083,
+      "pnl": null,
+      "price": 36.46,
+      "shares": 31,
+      "side": "BUY",
+      "ticker": "BLFS"
+    },
+    {
+      "fees": 2.116,
+      "pnl": null,
+      "price": 27.09,
+      "shares": 42,
+      "side": "BUY",
+      "ticker": "ADPT"
+    },
+    {
+      "fees": 2.017,
+      "pnl": null,
+      "price": 123.09,
+      "shares": 9,
+      "side": "BUY",
+      "ticker": "CRUS"
+    },
+    {
+      "fees": 4.0764,
+      "pnl": null,
+      "price": 3.66,
+      "shares": 316,
+      "side": "BUY",
+      "ticker": "INDP"
+    },
+    {
+      "fees": 2.02,
+      "pnl": null,
+      "price": 108.0,
+      "shares": 10,
+      "side": "BUY",
+      "ticker": "INSW"
+    },
+    {
+      "fees": 2.026,
+      "pnl": null,
+      "price": 94.23,
+      "shares": 12,
+      "side": "BUY",
+      "ticker": "WGS"
+    },
+    {
+      "fees": 1.999,
+      "pnl": null,
+      "price": 363.11,
+      "shares": 3,
+      "side": "BUY",
+      "ticker": "WST"
+    }
+  ],
+  "holdings": [
+    "ADPT",
+    "BLFS",
+    "CAI",
+    "CRUS",
+    "INDP",
+    "INSW",
+    "WGS",
+    "WST"
+  ],
+  "mean": -2.0179,
+  "n_trades_today": 16,
+  "recipe": "union_candle_score_h3",
+  "sells": [
+    "ANGX",
+    "CLOV",
+    "CMRC",
+    "COHU",
+    "HAFN",
+    "MYGN",
+    "PAYP",
+    "QRVO"
+  ],
+  "state": {
+    "after": "2026-09-16",
+    "cash": 253.22,
+    "pos": {
+      "ADPT": {
+        "close_px": 27.670000076293945,
+        "cost": 1139.8960064086914,
+        "entry_date": "2026-09-16",
+        "entry_px": 27.09000015258789,
+        "fee_in": 2.116,
+        "last_px": 27.09000015258789,
+        "min_hold": 3,
+        "notional": 1137.7800064086914,
+        "peak_px": 27.09000015258789,
+        "reason": "rank by candle_score; rank candle_score; list probable,yday_gainer,ohlc_hot; \ud83d\udd35; \u26aa; ret5=+9.6; leftover $1157.34",
+        "shares": 42,
+        "ticker": "ADPT"
+      },
+      "BLFS": {
+        "close_px": 36.11000061035156,
+        "cost": 1132.3429716186524,
+        "entry_date": "2026-09-16",
+        "entry_px": 36.459999084472656,
+        "fee_in": 2.083,
+        "last_px": 36.459999084472656,
+        "min_hold": 3,
+        "notional": 1130.2599716186523,
+        "peak_px": 36.459999084472656,
+        "reason": "rank by candle_score; rank candle_score; list flatten; \ud83d\udd35; \u26aa; ret5=+2.9; leftover $1157.34",
+        "shares": 31,
+        "ticker": "BLFS"
+      },
+      "CAI": {
+        "close_px": 28.209999084472656,
+        "cost": 1156.6729937438965,
+        "entry_date": "2026-09-16",
+        "entry_px": 28.15999984741211,
+        "fee_in": 2.113,
+        "last_px": 28.15999984741211,
+        "min_hold": 3,
+        "notional": 1154.5599937438965,
+        "peak_px": 28.15999984741211,
+        "reason": "rank by candle_score; rank candle_score; list yday_gainer,ohlc_hot; \u26aa; ret5=+14.8; leftover $1157.34",
+        "shares": 41,
+        "ticker": "CAI"
+      },
+      "CRUS": {
+        "close_px": 118.0,
+        "cost": 1109.8269670410157,
+        "entry_date": "2026-09-16",
+        "entry_px": 123.08999633789062,
+        "fee_in": 2.017,
+        "last_px": 123.08999633789062,
+        "min_hold": 3,
+        "notional": 1107.8099670410156,
+        "peak_px": 123.08999633789062,
+        "reason": "rank by candle_score; rank candle_score; list ohlc_hot; \ud83d\udd35; ret5=+10.3; leftover $1157.34",
+        "shares": 9,
+        "ticker": "CRUS"
+      },
+      "INDP": {
+        "close_px": 3.2100000381469727,
+        "cost": 1160.6364271224975,
+        "entry_date": "2026-09-16",
+        "entry_px": 3.6600000858306885,
+        "fee_in": 4.0764,
+        "last_px": 3.6600000858306885,
+        "min_hold": 3,
+        "notional": 1156.5600271224976,
+        "peak_px": 3.6600000858306885,
+        "reason": "rank by candle_score; rank candle_score; list yday_gainer,yday_mover; ret5=+96.8; leftover $1157.34",
+        "shares": 316,
+        "ticker": "INDP"
+      },
+      "INSW": {
+        "close_px": 109.37999725341797,
+        "cost": 1082.02,
+        "entry_date": "2026-09-16",
+        "entry_px": 108.0,
+        "fee_in": 2.02,
+        "last_px": 108.0,
+        "min_hold": 3,
+        "notional": 1080.0,
+        "peak_px": 108.0,
+        "reason": "rank by candle_score; rank candle_score; list ohlc_hot; \ud83d\udd35; ret5=+9.2; leftover $1157.34",
+        "shares": 10,
+        "ticker": "INSW"
+      },
+      "WGS": {
+        "close_px": 97.41999816894531,
+        "cost": 1132.7860402832032,
+        "entry_date": "2026-09-16",
+        "entry_px": 94.2300033569336,
+        "fee_in": 2.026,
+        "last_px": 94.2300033569336,
+        "min_hold": 3,
+        "notional": 1130.7600402832031,
+        "peak_px": 94.2300033569336,
+        "reason": "rank by candle_score; rank candle_score; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+10.2; leftover $1157.34",
+        "shares": 12,
+        "ticker": "WGS"
+      },
+      "WST": {
+        "close_px": 362.010009765625,
+        "cost": 1091.3289560546875,
+        "entry_date": "2026-09-16",
+        "entry_px": 363.1099853515625,
+        "fee_in": 1.999,
+        "last_px": 363.1099853515625,
+        "min_hold": 3,
+        "notional": 1089.3299560546875,
+        "peak_px": 363.1099853515625,
+        "reason": "rank by candle_score; rank candle_score; list ohlc_hot; \u26aa; ret5=+8.1; leftover $1157.34",
+        "shares": 3,
+        "ticker": "WST"
+      }
+    },
+    "yday_equity": 9116.61
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "buys": [],
+  "cash": 8870.69,
+  "date": "2026-09-15",
+  "equity": 9010.25,
+  "fees": 2.016,
+  "fills": [
+    {
+      "fees": 2.016,
+      "pnl": 51.53,
+      "price": 541.55,
+      "shares": 2,
+      "side": "SELL",
+      "ticker": "DELL"
+    }
+  ],
+  "holdings": [
+    "APPS",
+    "BAK",
+    "FUBO"
+  ],
+  "mean": 0.1049,
+  "n_trades_today": 1,
+  "recipe": "union_last_green_h5",
+  "sells": [
+    "DELL"
+  ],
+  "state": {
+    "after": "2026-09-15",
+    "cash": 8870.69,
+    "pos": {
+      "APPS": {
+        "close_px": 11.380000114440918,
+        "cost": 48.00720045776367,
+        "entry_date": "2026-09-11",
+        "entry_px": 11.880000114440918,
+        "fee_in": 0.4872,
+        "last_px": 11.510000228881836,
+        "min_hold": 5,
+        "notional": 47.52000045776367,
+        "peak_px": 11.880000114440918,
+        "reason": "union \u2229 last_green hold 5, no \ud83d\udea8; gate last_green=True; list probable,yday_gainer; ret5=+8.5; leftover $51.46",
+        "shares": 4,
+        "ticker": "APPS"
+      },
+      "BAK": {
+        "close_px": 2.0999999046325684,
+        "cost": 51.460797253417965,
+        "entry_date": "2026-09-11",
+        "entry_px": 2.119999885559082,
+        "fee_in": 0.5808,
+        "last_px": 2.0199999809265137,
+        "min_hold": 5,
+        "notional": 50.87999725341797,
+        "peak_px": 2.119999885559082,
+        "reason": "union \u2229 last_green hold 5, no \ud83d\udea8; gate last_green=True; list probable,yday_gainer,ohlc_hot; \ud83d\udd35; ret5=+8.8; leftover $51.46",
+        "shares": 24,
+        "ticker": "BAK"
+      },
+      "FUBO": {
+        "close_px": 10.90999984741211,
+        "cost": 46.67400076293945,
+        "entry_date": "2026-09-11",
+        "entry_px": 11.550000190734863,
+        "fee_in": 0.474,
+        "last_px": 11.699999809265137,
+        "min_hold": 5,
+        "notional": 46.20000076293945,
+        "peak_px": 11.699999809265137,
+        "reason": "union \u2229 last_green hold 5, no \ud83d\udea8; gate last_green=True; list probable,yday_gainer; ret5=-1.6; leftover $51.46",
+        "shares": 4,
+        "ticker": "FUBO"
+      }
+    },
+    "yday_equity": 9010.25
+  }
+}

@@ -1,0 +1,180 @@
+{
+  "buys": [
+    "CBRL",
+    "CTAS",
+    "GIS",
+    "KBH",
+    "PAYX"
+  ],
+  "cash": 215.86,
+  "date": "2026-09-23",
+  "equity": 9170.2,
+  "fees": 19.143,
+  "fills": [
+    {
+      "fees": 2.0871,
+      "pnl": -106.27,
+      "price": 98.3,
+      "shares": 23,
+      "side": "SELL",
+      "ticker": "ABVX"
+    },
+    {
+      "fees": 2.1474,
+      "pnl": -69.63,
+      "price": 53.55,
+      "shares": 43,
+      "side": "SELL",
+      "ticker": "ANAB"
+    },
+    {
+      "fees": 2.3756,
+      "pnl": -109.11,
+      "price": 19.76,
+      "shares": 116,
+      "side": "SELL",
+      "ticker": "MLKN"
+    },
+    {
+      "fees": 2.1179,
+      "pnl": -41.17,
+      "price": 71.41,
+      "shares": 33,
+      "side": "SELL",
+      "ticker": "THO"
+    },
+    {
+      "fees": 2.107,
+      "pnl": null,
+      "price": 47.57,
+      "shares": 39,
+      "side": "BUY",
+      "ticker": "CBRL"
+    },
+    {
+      "fees": 2.017,
+      "pnl": null,
+      "price": 196.78,
+      "shares": 9,
+      "side": "BUY",
+      "ticker": "CTAS"
+    },
+    {
+      "fees": 2.146,
+      "pnl": null,
+      "price": 35.74,
+      "shares": 52,
+      "side": "BUY",
+      "ticker": "GIS"
+    },
+    {
+      "fees": 2.107,
+      "pnl": null,
+      "price": 47.15,
+      "shares": 39,
+      "side": "BUY",
+      "ticker": "KBH"
+    },
+    {
+      "fees": 2.038,
+      "pnl": null,
+      "price": 109.67,
+      "shares": 16,
+      "side": "BUY",
+      "ticker": "PAYX"
+    }
+  ],
+  "holdings": [
+    "CBRL",
+    "CTAS",
+    "GIS",
+    "KBH",
+    "PAYX"
+  ],
+  "mean": -3.1589,
+  "n_trades_today": 9,
+  "recipe": "union_e_fresh_h1",
+  "sells": [
+    "ABVX",
+    "ANAB",
+    "MLKN",
+    "THO"
+  ],
+  "state": {
+    "after": "2026-09-23",
+    "cash": 215.86,
+    "pos": {
+      "CBRL": {
+        "close_px": 47.52000045776367,
+        "cost": 1857.3369880981445,
+        "entry_date": "2026-09-23",
+        "entry_px": 47.56999969482422,
+        "fee_in": 2.107,
+        "last_px": 47.56999969482422,
+        "min_hold": 1,
+        "notional": 1855.2299880981445,
+        "peak_px": 47.56999969482422,
+        "reason": "union \u2229 e_fresh, no \ud83d\udea8; gate days_since_E_max=1,flag_E_min=0; list earn_react; \ud83d\udd35; ret5=+0.7; leftover $1860.91",
+        "shares": 39,
+        "ticker": "CBRL"
+      },
+      "CTAS": {
+        "close_px": 191.97000122070312,
+        "cost": 1773.036989013672,
+        "entry_date": "2026-09-23",
+        "entry_px": 196.77999877929688,
+        "fee_in": 2.017,
+        "last_px": 196.77999877929688,
+        "min_hold": 1,
+        "notional": 1771.0199890136719,
+        "peak_px": 196.77999877929688,
+        "reason": "union \u2229 e_fresh, no \ud83d\udea8; gate days_since_E_max=1,flag_E_min=0; list earn_react; \ud83d\udd35; \u26aa; ret5=-0.1; leftover $1860.91",
+        "shares": 9,
+        "ticker": "CTAS"
+      },
+      "GIS": {
+        "close_px": 35.81999969482422,
+        "cost": 1860.6260872802734,
+        "entry_date": "2026-09-23",
+        "entry_px": 35.7400016784668,
+        "fee_in": 2.146,
+        "last_px": 35.7400016784668,
+        "min_hold": 1,
+        "notional": 1858.4800872802734,
+        "peak_px": 35.7400016784668,
+        "reason": "union \u2229 e_fresh, no \ud83d\udea8; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=-3.1; leftover $1860.91",
+        "shares": 52,
+        "ticker": "GIS"
+      },
+      "KBH": {
+        "close_px": 47.150001525878906,
+        "cost": 1840.9570595092773,
+        "entry_date": "2026-09-23",
+        "entry_px": 47.150001525878906,
+        "fee_in": 2.107,
+        "last_px": 47.150001525878906,
+        "min_hold": 1,
+        "notional": 1838.8500595092773,
+        "peak_px": 47.150001525878906,
+        "reason": "union \u2229 e_fresh, no \ud83d\udea8; gate days_since_E_max=1,flag_E_min=0; list earn_react; \ud83d\udd35; ret5=-1.9; leftover $1860.91",
+        "shares": 39,
+        "ticker": "KBH"
+      },
+      "PAYX": {
+        "close_px": 104.48999786376953,
+        "cost": 1756.757970703125,
+        "entry_date": "2026-09-23",
+        "entry_px": 109.66999816894531,
+        "fee_in": 2.038,
+        "last_px": 109.66999816894531,
+        "min_hold": 1,
+        "notional": 1754.719970703125,
+        "peak_px": 109.66999816894531,
+        "reason": "union \u2229 e_fresh, no \ud83d\udea8; gate days_since_E_max=1,flag_E_min=0; list earn_react; \ud83d\udd35; \u26aa; ret5=-3.2; leftover $1860.91",
+        "shares": 16,
+        "ticker": "PAYX"
+      }
+    },
+    "yday_equity": 9170.2
+  }
+}

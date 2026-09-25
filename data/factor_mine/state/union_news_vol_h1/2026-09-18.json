@@ -1,0 +1,123 @@
+{
+  "buys": [
+    "BHVN",
+    "RARE",
+    "FLNC"
+  ],
+  "cash": 0.61,
+  "date": "2026-09-18",
+  "equity": 9080.89,
+  "fees": 17.5913,
+  "fills": [
+    {
+      "fees": 2.0587,
+      "pnl": -25.68,
+      "price": 236.8,
+      "shares": 12,
+      "side": "SELL",
+      "ticker": "JBHT"
+    },
+    {
+      "fees": 2.0803,
+      "pnl": 202.52,
+      "price": 182.33,
+      "shares": 18,
+      "side": "SELL",
+      "ticker": "SMTC"
+    },
+    {
+      "fees": 2.5647,
+      "pnl": -107.74,
+      "price": 17.13,
+      "shares": 174,
+      "side": "SELL",
+      "ticker": "TNDM"
+    },
+    {
+      "fees": 2.8509,
+      "pnl": null,
+      "price": 14.07,
+      "shares": 221,
+      "side": "BUY",
+      "ticker": "BHVN"
+    },
+    {
+      "fees": 2.709,
+      "pnl": null,
+      "price": 14.79,
+      "shares": 210,
+      "side": "BUY",
+      "ticker": "RARE"
+    },
+    {
+      "fees": 5.3277,
+      "pnl": null,
+      "price": 7.535,
+      "shares": 413,
+      "side": "BUY",
+      "ticker": "FLNC"
+    }
+  ],
+  "holdings": [
+    "BHVN",
+    "FLNC",
+    "RARE"
+  ],
+  "mean": -2.2342,
+  "n_trades_today": 6,
+  "recipe": "union_news_vol_h1",
+  "sells": [
+    "JBHT",
+    "SMTC",
+    "TNDM"
+  ],
+  "state": {
+    "after": "2026-09-18",
+    "cash": 0.61,
+    "pos": {
+      "BHVN": {
+        "close_px": 13.619999885559082,
+        "cost": 3112.3208325561523,
+        "entry_date": "2026-09-18",
+        "entry_px": 14.069999694824219,
+        "fee_in": 2.8509,
+        "last_px": 14.069999694824219,
+        "min_hold": 1,
+        "notional": 3109.4699325561523,
+        "peak_px": 14.069999694824219,
+        "reason": "combo gate; gate news=good,vol=good; list probable,yday_gainer,yday_mover; \ud83d\udd35; ret5=+8.6; leftover $3112.94",
+        "shares": 221,
+        "ticker": "BHVN"
+      },
+      "FLNC": {
+        "close_px": 7.320000171661377,
+        "cost": 3117.282636981201,
+        "entry_date": "2026-09-18",
+        "entry_px": 7.534999847412109,
+        "fee_in": 5.3277,
+        "last_px": 7.534999847412109,
+        "min_hold": 1,
+        "notional": 3111.954936981201,
+        "peak_px": 7.534999847412109,
+        "reason": "combo gate; gate news=good,vol=good; list yday_mover; \ud83d\udd35; ret5=-20.9; leftover $3112.94",
+        "shares": 413,
+        "ticker": "FLNC"
+      },
+      "RARE": {
+        "close_px": 14.510000228881836,
+        "cost": 3108.6089919891356,
+        "entry_date": "2026-09-18",
+        "entry_px": 14.789999961853027,
+        "fee_in": 2.709,
+        "last_px": 14.789999961853027,
+        "min_hold": 1,
+        "notional": 3105.8999919891357,
+        "peak_px": 14.789999961853027,
+        "reason": "combo gate; gate news=good,vol=good; list probable,yday_gainer; \ud83d\udd35; \u26aa; ret5=+0.7; leftover $3112.94",
+        "shares": 210,
+        "ticker": "RARE"
+      }
+    },
+    "yday_equity": 9080.89
+  }
+}

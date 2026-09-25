@@ -1,0 +1,105 @@
+{
+  "buys": [
+    "CRWD",
+    "GME",
+    "RARE"
+  ],
+  "cash": 232.48,
+  "date": "2026-09-18",
+  "equity": 8594.89,
+  "fees": 9.192,
+  "fills": [
+    {
+      "fees": 2.214,
+      "pnl": 546.69,
+      "price": 182.33,
+      "shares": 48,
+      "side": "SELL",
+      "ticker": "SMTC"
+    },
+    {
+      "fees": 2.023,
+      "pnl": null,
+      "price": 246.98,
+      "shares": 11,
+      "side": "BUY",
+      "ticker": "CRWD"
+    },
+    {
+      "fees": 2.371,
+      "pnl": null,
+      "price": 22.9,
+      "shares": 127,
+      "side": "BUY",
+      "ticker": "GME"
+    },
+    {
+      "fees": 2.584,
+      "pnl": null,
+      "price": 14.79,
+      "shares": 198,
+      "side": "BUY",
+      "ticker": "RARE"
+    }
+  ],
+  "holdings": [
+    "CRWD",
+    "GME",
+    "RARE"
+  ],
+  "mean": -0.0181,
+  "n_trades_today": 4,
+  "recipe": "union_news_g_cam71_h1",
+  "sells": [
+    "SMTC"
+  ],
+  "state": {
+    "after": "2026-09-18",
+    "cash": 232.48,
+    "pos": {
+      "CRWD": {
+        "close_px": 237.64999389648438,
+        "cost": 2718.80295300293,
+        "entry_date": "2026-09-18",
+        "entry_px": 246.97999572753906,
+        "fee_in": 2.023,
+        "last_px": 246.97999572753906,
+        "min_hold": 1,
+        "notional": 2716.7799530029297,
+        "peak_px": 246.97999572753906,
+        "reason": "merged news\ud83d\udfe2 and cameras +7 \u2212\u22641; gate news=good,n_pos_min=7,cam_bad_max=1; rank cond; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+17.6; leftover $2930.99",
+        "shares": 11,
+        "ticker": "CRWD"
+      },
+      "GME": {
+        "close_px": 22.639999389648438,
+        "cost": 2910.670951553345,
+        "entry_date": "2026-09-18",
+        "entry_px": 22.899999618530273,
+        "fee_in": 2.371,
+        "last_px": 22.899999618530273,
+        "min_hold": 1,
+        "notional": 2908.2999515533447,
+        "peak_px": 22.899999618530273,
+        "reason": "merged news\ud83d\udfe2 and cameras +7 \u2212\u22641; gate news=good,n_pos_min=7,cam_bad_max=1; rank cond; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+11.7; leftover $2930.99",
+        "shares": 127,
+        "ticker": "GME"
+      },
+      "RARE": {
+        "close_px": 14.510000228881836,
+        "cost": 2931.0039924468992,
+        "entry_date": "2026-09-18",
+        "entry_px": 14.789999961853027,
+        "fee_in": 2.584,
+        "last_px": 14.789999961853027,
+        "min_hold": 1,
+        "notional": 2928.4199924468994,
+        "peak_px": 14.789999961853027,
+        "reason": "merged news\ud83d\udfe2 and cameras +7 \u2212\u22641; gate news=good,n_pos_min=7,cam_bad_max=1; rank cond; list probable,yday_gainer; \ud83d\udd35; \u26aa; ret5=+0.7; leftover $2930.99",
+        "shares": 198,
+        "ticker": "RARE"
+      }
+    },
+    "yday_equity": 8594.89
+  }
+}

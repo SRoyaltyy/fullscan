@@ -1,0 +1,279 @@
+{
+  "buys": [
+    "FJET",
+    "DEFT",
+    "APPS",
+    "ALOY",
+    "GLND",
+    "CRML",
+    "IVVD",
+    "GRAL"
+  ],
+  "cash": 3.23,
+  "date": "2026-09-22",
+  "equity": 9325.88,
+  "fees": 93.7496,
+  "fills": [
+    {
+      "fees": 9.0778,
+      "pnl": -38.85,
+      "price": 1.795,
+      "shares": 694,
+      "side": "SELL",
+      "ticker": "BTBT"
+    },
+    {
+      "fees": 2.2976,
+      "pnl": -53.92,
+      "price": 12.95,
+      "shares": 94,
+      "side": "SELL",
+      "ticker": "BTDR"
+    },
+    {
+      "fees": 4.1389,
+      "pnl": -163.06,
+      "price": 3.51,
+      "shares": 316,
+      "side": "SELL",
+      "ticker": "CYPH"
+    },
+    {
+      "fees": 2.154,
+      "pnl": -4.29,
+      "price": 25.95,
+      "shares": 48,
+      "side": "SELL",
+      "ticker": "GLXY"
+    },
+    {
+      "fees": 14.9183,
+      "pnl": -98.1,
+      "price": 1.05,
+      "shares": 1141,
+      "side": "SELL",
+      "ticker": "ORBS"
+    },
+    {
+      "fees": 2.3989,
+      "pnl": -14.85,
+      "price": 9.91,
+      "shares": 126,
+      "side": "SELL",
+      "ticker": "SBET"
+    },
+    {
+      "fees": 2.393,
+      "pnl": 34.3,
+      "price": 10.45,
+      "shares": 124,
+      "side": "SELL",
+      "ticker": "SGML"
+    },
+    {
+      "fees": 7.8174,
+      "pnl": null,
+      "price": 2.02,
+      "shares": 606,
+      "side": "BUY",
+      "ticker": "FJET"
+    },
+    {
+      "fees": 18.4675,
+      "pnl": null,
+      "price": 0.59,
+      "shares": 2075,
+      "side": "BUY",
+      "ticker": "DEFT"
+    },
+    {
+      "fees": 2.29,
+      "pnl": null,
+      "price": 12.24,
+      "shares": 100,
+      "side": "BUY",
+      "ticker": "APPS"
+    },
+    {
+      "fees": 2.38,
+      "pnl": null,
+      "price": 9.4,
+      "shares": 130,
+      "side": "BUY",
+      "ticker": "ALOY"
+    },
+    {
+      "fees": 5.3664,
+      "pnl": null,
+      "price": 2.94,
+      "shares": 416,
+      "side": "BUY",
+      "ticker": "GLND"
+    },
+    {
+      "fees": 2.392,
+      "pnl": null,
+      "price": 9.11,
+      "shares": 134,
+      "side": "BUY",
+      "ticker": "CRML"
+    },
+    {
+      "fees": 15.6348,
+      "pnl": null,
+      "price": 1.01,
+      "shares": 1212,
+      "side": "BUY",
+      "ticker": "IVVD"
+    },
+    {
+      "fees": 2.023,
+      "pnl": null,
+      "price": 106.75,
+      "shares": 11,
+      "side": "BUY",
+      "ticker": "GRAL"
+    }
+  ],
+  "holdings": [
+    "ALOY",
+    "APPS",
+    "CRML",
+    "DEFT",
+    "FJET",
+    "GLND",
+    "GRAL",
+    "IVVD"
+  ],
+  "mean": -5.0918,
+  "n_trades_today": 15,
+  "recipe": "yday_gainer_h1",
+  "sells": [
+    "BTBT",
+    "BTDR",
+    "CYPH",
+    "GLXY",
+    "ORBS",
+    "SBET",
+    "SGML"
+  ],
+  "state": {
+    "after": "2026-09-22",
+    "cash": 3.23,
+    "pos": {
+      "ALOY": {
+        "close_px": 9.029999732971191,
+        "cost": 1224.3799504089357,
+        "entry_date": "2026-09-22",
+        "entry_px": 9.399999618530273,
+        "fee_in": 2.38,
+        "last_px": 9.399999618530273,
+        "min_hold": 1,
+        "notional": 1221.9999504089355,
+        "peak_px": 9.399999618530273,
+        "reason": "baseline list, no extra gate; list probable,yday_gainer; ret5=+9.5; leftover $1224.52",
+        "shares": 130,
+        "ticker": "ALOY"
+      },
+      "APPS": {
+        "close_px": 12.19,
+        "cost": 1226.29,
+        "entry_date": "2026-09-22",
+        "entry_px": 12.24,
+        "fee_in": 2.29,
+        "last_px": 12.24,
+        "min_hold": 1,
+        "notional": 1224.0,
+        "peak_px": 12.24,
+        "reason": "baseline list, no extra gate; list probable,yday_gainer; ret5=+2.7; leftover $1224.52",
+        "shares": 100,
+        "ticker": "APPS"
+      },
+      "CRML": {
+        "close_px": 8.539999961853027,
+        "cost": 1223.131953994751,
+        "entry_date": "2026-09-22",
+        "entry_px": 9.109999656677246,
+        "fee_in": 2.392,
+        "last_px": 9.109999656677246,
+        "min_hold": 1,
+        "notional": 1220.739953994751,
+        "peak_px": 9.109999656677246,
+        "reason": "baseline list, no extra gate; list yday_gainer,yday_mover; ret5=+44.4; leftover $1224.52",
+        "shares": 134,
+        "ticker": "CRML"
+      },
+      "DEFT": {
+        "close_px": 0.58,
+        "cost": 1242.7175,
+        "entry_date": "2026-09-22",
+        "entry_px": 0.59,
+        "fee_in": 18.4675,
+        "last_px": 0.59,
+        "min_hold": 1,
+        "notional": 1224.25,
+        "peak_px": 0.59,
+        "reason": "baseline list, no extra gate; list probable,yday_gainer,yday_mover; ret5=-1.7; leftover $1224.52",
+        "shares": 2075,
+        "ticker": "DEFT"
+      },
+      "FJET": {
+        "close_px": 1.94,
+        "cost": 1231.9374,
+        "entry_date": "2026-09-22",
+        "entry_px": 2.02,
+        "fee_in": 7.8174,
+        "last_px": 2.02,
+        "min_hold": 1,
+        "notional": 1224.1200000000001,
+        "peak_px": 2.02,
+        "reason": "baseline list, no extra gate; list probable,yday_gainer,yday_mover; ret5=+0.5; leftover $1224.52",
+        "shares": 606,
+        "ticker": "FJET"
+      },
+      "GLND": {
+        "close_px": 2.509999990463257,
+        "cost": 1228.406423803711,
+        "entry_date": "2026-09-22",
+        "entry_px": 2.940000057220459,
+        "fee_in": 5.3664,
+        "last_px": 2.940000057220459,
+        "min_hold": 1,
+        "notional": 1223.040023803711,
+        "peak_px": 2.940000057220459,
+        "reason": "baseline list, no extra gate; list yday_gainer,yday_mover; ret5=+136.1; leftover $1224.52",
+        "shares": 416,
+        "ticker": "GLND"
+      },
+      "GRAL": {
+        "close_px": 108.52,
+        "cost": 1176.273,
+        "entry_date": "2026-09-22",
+        "entry_px": 106.75,
+        "fee_in": 2.023,
+        "last_px": 106.75,
+        "min_hold": 1,
+        "notional": 1174.25,
+        "peak_px": 106.75,
+        "reason": "baseline list, no extra gate; list yday_gainer,yday_mover; ret5=+42.9; leftover $1224.52",
+        "shares": 11,
+        "ticker": "GRAL"
+      },
+      "IVVD": {
+        "close_px": 0.9639999866485596,
+        "cost": 1239.7547884414673,
+        "entry_date": "2026-09-22",
+        "entry_px": 1.0099999904632568,
+        "fee_in": 15.6348,
+        "last_px": 1.0099999904632568,
+        "min_hold": 1,
+        "notional": 1224.1199884414673,
+        "peak_px": 1.0099999904632568,
+        "reason": "baseline list, no extra gate; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+14.3; leftover $1224.52",
+        "shares": 1212,
+        "ticker": "IVVD"
+      }
+    },
+    "yday_equity": 9325.88
+  }
+}

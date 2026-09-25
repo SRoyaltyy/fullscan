@@ -1,0 +1,215 @@
+{
+  "buys": [
+    "DY",
+    "BBWI",
+    "SYRE",
+    "SEDG",
+    "ZYME",
+    "MRNA",
+    "TH",
+    "FIGR"
+  ],
+  "cash": 160.35,
+  "date": "2026-08-28",
+  "equity": 9796.0,
+  "fees": 16.73,
+  "fills": [
+    {
+      "fees": 2.002,
+      "pnl": null,
+      "price": 306.34,
+      "shares": 4,
+      "side": "BUY",
+      "ticker": "DY"
+    },
+    {
+      "fees": 2.188,
+      "pnl": null,
+      "price": 18.75,
+      "shares": 66,
+      "side": "BUY",
+      "ticker": "BBWI"
+    },
+    {
+      "fees": 2.029,
+      "pnl": null,
+      "price": 91.75,
+      "shares": 13,
+      "side": "BUY",
+      "ticker": "SYRE"
+    },
+    {
+      "fees": 2.101,
+      "pnl": null,
+      "price": 32.9,
+      "shares": 37,
+      "side": "BUY",
+      "ticker": "SEDG"
+    },
+    {
+      "fees": 2.119,
+      "pnl": null,
+      "price": 28.91,
+      "shares": 43,
+      "side": "BUY",
+      "ticker": "ZYME"
+    },
+    {
+      "fees": 2.017,
+      "pnl": null,
+      "price": 137.19,
+      "shares": 9,
+      "side": "BUY",
+      "ticker": "MRNA"
+    },
+    {
+      "fees": 2.185,
+      "pnl": null,
+      "price": 19.0,
+      "shares": 65,
+      "side": "BUY",
+      "ticker": "TH"
+    },
+    {
+      "fees": 2.089,
+      "pnl": null,
+      "price": 37.49,
+      "shares": 33,
+      "side": "BUY",
+      "ticker": "FIGR"
+    }
+  ],
+  "holdings": [
+    "BBWI",
+    "DY",
+    "FIGR",
+    "MRNA",
+    "SEDG",
+    "SYRE",
+    "TH",
+    "ZYME"
+  ],
+  "mean": -2.04,
+  "n_trades_today": 8,
+  "recipe": "union_clk_fresh_cat_coil_opp_h1",
+  "sells": [],
+  "state": {
+    "after": "2026-08-28",
+    "cash": 160.35,
+    "pos": {
+      "BBWI": {
+        "close_px": 19.219999313354492,
+        "cost": 1239.688,
+        "entry_date": "2026-08-28",
+        "entry_px": 18.75,
+        "fee_in": 2.188,
+        "last_px": 18.75,
+        "min_hold": 1,
+        "notional": 1237.5,
+        "peak_px": 18.75,
+        "reason": "Clock-B #2 \u2229 Theme Radar T\u22121 oppset; gate clk_fresh_cat_coil=True,oppset=True; rank opp_rvol; list yday_gainer; ret5=-4.1; leftover $1250.00",
+        "shares": 66,
+        "ticker": "BBWI"
+      },
+      "DY": {
+        "close_px": 294.3399963378906,
+        "cost": 1227.3619853515625,
+        "entry_date": "2026-08-28",
+        "entry_px": 306.3399963378906,
+        "fee_in": 2.002,
+        "last_px": 306.3399963378906,
+        "min_hold": 1,
+        "notional": 1225.3599853515625,
+        "peak_px": 306.3399963378906,
+        "reason": "Clock-B #2 \u2229 Theme Radar T\u22121 oppset; gate clk_fresh_cat_coil=True,oppset=True; rank opp_rvol; list yday_mover; ret5=-23.0; leftover $1250.00",
+        "shares": 4,
+        "ticker": "DY"
+      },
+      "FIGR": {
+        "close_px": 36.04999923706055,
+        "cost": 1239.2590553894042,
+        "entry_date": "2026-08-28",
+        "entry_px": 37.4900016784668,
+        "fee_in": 2.089,
+        "last_px": 37.4900016784668,
+        "min_hold": 1,
+        "notional": 1237.1700553894043,
+        "peak_px": 37.4900016784668,
+        "reason": "Clock-B #2 \u2229 Theme Radar T\u22121 oppset; gate clk_fresh_cat_coil=True,oppset=True; rank opp_rvol; list yday_mover; ret5=+5.4; leftover $1250.00",
+        "shares": 33,
+        "ticker": "FIGR"
+      },
+      "MRNA": {
+        "close_px": 137.99000549316406,
+        "cost": 1236.7270219726563,
+        "entry_date": "2026-08-28",
+        "entry_px": 137.19000244140625,
+        "fee_in": 2.017,
+        "last_px": 137.19000244140625,
+        "min_hold": 1,
+        "notional": 1234.7100219726562,
+        "peak_px": 137.19000244140625,
+        "reason": "Clock-B #2 \u2229 Theme Radar T\u22121 oppset; gate clk_fresh_cat_coil=True,oppset=True; rank opp_rvol; list ohlc_hot; ret5=+7.1; leftover $1250.00",
+        "shares": 9,
+        "ticker": "MRNA"
+      },
+      "SEDG": {
+        "close_px": 31.40999984741211,
+        "cost": 1219.4010564575196,
+        "entry_date": "2026-08-28",
+        "entry_px": 32.900001525878906,
+        "fee_in": 2.101,
+        "last_px": 32.900001525878906,
+        "min_hold": 1,
+        "notional": 1217.3000564575195,
+        "peak_px": 32.900001525878906,
+        "reason": "Clock-B #2 \u2229 Theme Radar T\u22121 oppset; gate clk_fresh_cat_coil=True,oppset=True; rank opp_rvol; list probable,yday_gainer,yday_mover; \ud83d\udd35; ret5=+8.4; leftover $1250.00",
+        "shares": 37,
+        "ticker": "SEDG"
+      },
+      "SYRE": {
+        "close_px": 90.36000061035156,
+        "cost": 1194.779,
+        "entry_date": "2026-08-28",
+        "entry_px": 91.75,
+        "fee_in": 2.029,
+        "last_px": 91.75,
+        "min_hold": 1,
+        "notional": 1192.75,
+        "peak_px": 91.75,
+        "reason": "Clock-B #2 \u2229 Theme Radar T\u22121 oppset; gate clk_fresh_cat_coil=True,oppset=True; rank opp_rvol; list yday_mover; ret5=-13.2; leftover $1250.00",
+        "shares": 13,
+        "ticker": "SYRE"
+      },
+      "TH": {
+        "close_px": 18.549999237060547,
+        "cost": 1237.185,
+        "entry_date": "2026-08-28",
+        "entry_px": 19.0,
+        "fee_in": 2.185,
+        "last_px": 19.0,
+        "min_hold": 1,
+        "notional": 1235.0,
+        "peak_px": 19.0,
+        "reason": "Clock-B #2 \u2229 Theme Radar T\u22121 oppset; gate clk_fresh_cat_coil=True,oppset=True; rank opp_rvol; list ohlc_hot; ret5=+7.5; leftover $1250.00",
+        "shares": 65,
+        "ticker": "TH"
+      },
+      "ZYME": {
+        "close_px": 28.270000457763672,
+        "cost": 1245.2489934387206,
+        "entry_date": "2026-08-28",
+        "entry_px": 28.90999984741211,
+        "fee_in": 2.119,
+        "last_px": 28.90999984741211,
+        "min_hold": 1,
+        "notional": 1243.1299934387207,
+        "peak_px": 28.90999984741211,
+        "reason": "Clock-B #2 \u2229 Theme Radar T\u22121 oppset; gate clk_fresh_cat_coil=True,oppset=True; rank opp_rvol; list yday_gainer; ret5=+9.2; leftover $1250.00",
+        "shares": 43,
+        "ticker": "ZYME"
+      }
+    },
+    "yday_equity": 9796.0
+  }
+}

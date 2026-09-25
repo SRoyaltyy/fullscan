@@ -1,0 +1,95 @@
+{
+  "buys": [
+    "NAVN",
+    "RWT",
+    "COO"
+  ],
+  "cash": 7.09,
+  "date": "2026-09-11",
+  "equity": 8937.76,
+  "fees": 15.4487,
+  "fills": [
+    {
+      "fees": 2.422,
+      "pnl": null,
+      "price": 20.61,
+      "shares": 144,
+      "side": "BUY",
+      "ticker": "NAVN"
+    },
+    {
+      "fees": 10.8747,
+      "pnl": null,
+      "price": 3.52,
+      "shares": 843,
+      "side": "BUY",
+      "ticker": "RWT"
+    },
+    {
+      "fees": 2.152,
+      "pnl": null,
+      "price": 54.66,
+      "shares": 54,
+      "side": "BUY",
+      "ticker": "COO"
+    }
+  ],
+  "holdings": [
+    "COO",
+    "NAVN",
+    "RWT"
+  ],
+  "mean": 0.3185,
+  "n_trades_today": 3,
+  "recipe": "union_rsi_os_h3",
+  "sells": [],
+  "state": {
+    "after": "2026-09-11",
+    "cash": 7.09,
+    "pos": {
+      "COO": {
+        "close_px": 53.90999984741211,
+        "cost": 2953.791991760254,
+        "entry_date": "2026-09-11",
+        "entry_px": 54.65999984741211,
+        "fee_in": 2.152,
+        "last_px": 54.65999984741211,
+        "min_hold": 3,
+        "notional": 2951.639991760254,
+        "peak_px": 54.65999984741211,
+        "reason": "union \u2229 rsi_os, no \ud83d\udea8; gate rsi_os=True; list yday_mover; ret5=-23.3; leftover $2969.79",
+        "shares": 54,
+        "ticker": "COO"
+      },
+      "NAVN": {
+        "close_px": 21.020000457763672,
+        "cost": 2970.262087890625,
+        "entry_date": "2026-09-11",
+        "entry_px": 20.610000610351562,
+        "fee_in": 2.422,
+        "last_px": 20.610000610351562,
+        "min_hold": 3,
+        "notional": 2967.840087890625,
+        "peak_px": 20.610000610351562,
+        "reason": "union \u2229 rsi_os, no \ud83d\udea8; gate rsi_os=True; list yday_mover; ret5=-26.9; leftover $2969.79",
+        "shares": 144,
+        "ticker": "NAVN"
+      },
+      "RWT": {
+        "close_px": 3.549999952316284,
+        "cost": 2978.234683921051,
+        "entry_date": "2026-09-11",
+        "entry_px": 3.5199999809265137,
+        "fee_in": 10.8747,
+        "last_px": 3.5199999809265137,
+        "min_hold": 3,
+        "notional": 2967.359983921051,
+        "peak_px": 3.5199999809265137,
+        "reason": "union \u2229 rsi_os, no \ud83d\udea8; gate rsi_os=True; list yday_mover; \ud83d\udd35; ret5=-19.0; leftover $2969.79",
+        "shares": 843,
+        "ticker": "RWT"
+      }
+    },
+    "yday_equity": 8937.76
+  }
+}

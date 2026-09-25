@@ -1,0 +1,321 @@
+{
+  "buys": [
+    "CBRL",
+    "CTAS",
+    "GIS",
+    "KBH",
+    "PAYX",
+    "PGEN",
+    "SGRY",
+    "CMPX",
+    "VERI"
+  ],
+  "cash": 0.5,
+  "date": "2026-09-23",
+  "equity": 8586.85,
+  "fees": 68.9233,
+  "fills": [
+    {
+      "fees": 2.043,
+      "pnl": -52.91,
+      "price": 98.3,
+      "shares": 11,
+      "side": "SELL",
+      "ticker": "ABVX"
+    },
+    {
+      "fees": 2.07,
+      "pnl": -34.52,
+      "price": 53.55,
+      "shares": 20,
+      "side": "SELL",
+      "ticker": "ANAB"
+    },
+    {
+      "fees": 3.5248,
+      "pnl": -1.61,
+      "price": 4.3,
+      "shares": 269,
+      "side": "SELL",
+      "ticker": "DGXX"
+    },
+    {
+      "fees": 2.04,
+      "pnl": 13.64,
+      "price": 108.52,
+      "shares": 10,
+      "side": "SELL",
+      "ticker": "GRAL"
+    },
+    {
+      "fees": 14.4872,
+      "pnl": -97.81,
+      "price": 0.95,
+      "shares": 1143,
+      "side": "SELL",
+      "ticker": "IVVD"
+    },
+    {
+      "fees": 2.172,
+      "pnl": -52.92,
+      "price": 19.76,
+      "shares": 54,
+      "side": "SELL",
+      "ticker": "MLKN"
+    },
+    {
+      "fees": 2.028,
+      "pnl": 85.39,
+      "price": 183.405,
+      "shares": 6,
+      "side": "SELL",
+      "ticker": "MRNA"
+    },
+    {
+      "fees": 2.055,
+      "pnl": -20.89,
+      "price": 71.41,
+      "shares": 15,
+      "side": "SELL",
+      "ticker": "THO"
+    },
+    {
+      "fees": 2.044,
+      "pnl": null,
+      "price": 47.57,
+      "shares": 18,
+      "side": "BUY",
+      "ticker": "CBRL"
+    },
+    {
+      "fees": 2.002,
+      "pnl": null,
+      "price": 196.78,
+      "shares": 4,
+      "side": "BUY",
+      "ticker": "CTAS"
+    },
+    {
+      "fees": 2.062,
+      "pnl": null,
+      "price": 35.74,
+      "shares": 24,
+      "side": "BUY",
+      "ticker": "GIS"
+    },
+    {
+      "fees": 2.044,
+      "pnl": null,
+      "price": 47.15,
+      "shares": 18,
+      "side": "BUY",
+      "ticker": "KBH"
+    },
+    {
+      "fees": 2.014,
+      "pnl": null,
+      "price": 109.67,
+      "shares": 8,
+      "side": "BUY",
+      "ticker": "PAYX"
+    },
+    {
+      "fees": 2.428,
+      "pnl": null,
+      "price": 7.95,
+      "shares": 146,
+      "side": "BUY",
+      "ticker": "PGEN"
+    },
+    {
+      "fees": 2.212,
+      "pnl": null,
+      "price": 15.72,
+      "shares": 74,
+      "side": "BUY",
+      "ticker": "SGRY"
+    },
+    {
+      "fees": 12.3195,
+      "pnl": null,
+      "price": 1.22,
+      "shares": 955,
+      "side": "BUY",
+      "ticker": "CMPX"
+    },
+    {
+      "fees": 11.3778,
+      "pnl": null,
+      "price": 1.3,
+      "shares": 882,
+      "side": "BUY",
+      "ticker": "VERI"
+    }
+  ],
+  "holdings": [
+    "CBRL",
+    "CMPX",
+    "CTAS",
+    "GIS",
+    "KBH",
+    "PAYX",
+    "PGEN",
+    "SGRY",
+    "VERI"
+  ],
+  "mean": -4.9194,
+  "n_trades_today": 17,
+  "recipe": "combo_ne1_5050_shared",
+  "sells": [
+    "ABVX",
+    "ANAB",
+    "DGXX",
+    "GRAL",
+    "IVVD",
+    "MLKN",
+    "MRNA",
+    "THO"
+  ],
+  "state": {
+    "after": "2026-09-23",
+    "cash": 0.5,
+    "pos": {
+      "CBRL": {
+        "close_px": 47.52000045776367,
+        "cost": 858.3039945068359,
+        "entry_date": "2026-09-23",
+        "entry_px": 47.56999969482422,
+        "fee_in": 2.044,
+        "last_px": 47.56999969482422,
+        "notional": 856.2599945068359,
+        "owner": "union_e_fresh_h1",
+        "peak_px": 47.56999969482422,
+        "reason": "union \u2229 e_fresh, no \ud83d\udea8; gate days_since_E_max=1,flag_E_min=0; list earn_react; \ud83d\udd35; ret5=+0.7; combo leftover $890.19; owner union_e_fresh_h1",
+        "shares": 18,
+        "side": "long",
+        "ticker": "CBRL"
+      },
+      "CMPX": {
+        "close_px": 1.1699999570846558,
+        "cost": 1177.4195273227692,
+        "entry_date": "2026-09-23",
+        "entry_px": 1.2200000286102295,
+        "fee_in": 12.3195,
+        "last_px": 1.2200000286102295,
+        "notional": 1165.1000273227692,
+        "owner": "union_news_g_h1",
+        "peak_px": 1.2200000286102295,
+        "reason": "union \u2229 news_g, no \ud83d\udea8; gate news=good; list yday_mover; \ud83d\udd35; ret5=-33.0; combo leftover $1166.13; owner union_news_g_h1",
+        "shares": 955,
+        "side": "long",
+        "ticker": "CMPX"
+      },
+      "CTAS": {
+        "close_px": 191.97000122070312,
+        "cost": 789.1219951171875,
+        "entry_date": "2026-09-23",
+        "entry_px": 196.77999877929688,
+        "fee_in": 2.002,
+        "last_px": 196.77999877929688,
+        "notional": 787.1199951171875,
+        "owner": "union_e_fresh_h1",
+        "peak_px": 196.77999877929688,
+        "reason": "union \u2229 e_fresh, no \ud83d\udea8; gate days_since_E_max=1,flag_E_min=0; list earn_react; \ud83d\udd35; \u26aa; ret5=-0.1; combo leftover $890.19; owner union_e_fresh_h1",
+        "shares": 4,
+        "side": "long",
+        "ticker": "CTAS"
+      },
+      "GIS": {
+        "close_px": 35.81999969482422,
+        "cost": 859.8220402832031,
+        "entry_date": "2026-09-23",
+        "entry_px": 35.7400016784668,
+        "fee_in": 2.062,
+        "last_px": 35.7400016784668,
+        "notional": 857.7600402832031,
+        "owner": "union_e_fresh_h1",
+        "peak_px": 35.7400016784668,
+        "reason": "union \u2229 e_fresh, no \ud83d\udea8; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=-3.1; combo leftover $890.19; owner union_e_fresh_h1",
+        "shares": 24,
+        "side": "long",
+        "ticker": "GIS"
+      },
+      "KBH": {
+        "close_px": 47.150001525878906,
+        "cost": 850.7440274658203,
+        "entry_date": "2026-09-23",
+        "entry_px": 47.150001525878906,
+        "fee_in": 2.044,
+        "last_px": 47.150001525878906,
+        "notional": 848.7000274658203,
+        "owner": "union_e_fresh_h1",
+        "peak_px": 47.150001525878906,
+        "reason": "union \u2229 e_fresh, no \ud83d\udea8; gate days_since_E_max=1,flag_E_min=0; list earn_react; \ud83d\udd35; ret5=-1.9; combo leftover $890.19; owner union_e_fresh_h1",
+        "shares": 18,
+        "side": "long",
+        "ticker": "KBH"
+      },
+      "PAYX": {
+        "close_px": 104.48999786376953,
+        "cost": 879.3739853515625,
+        "entry_date": "2026-09-23",
+        "entry_px": 109.66999816894531,
+        "fee_in": 2.014,
+        "last_px": 109.66999816894531,
+        "notional": 877.3599853515625,
+        "owner": "union_e_fresh_h1",
+        "peak_px": 109.66999816894531,
+        "reason": "union \u2229 e_fresh, no \ud83d\udea8; gate days_since_E_max=1,flag_E_min=0; list earn_react; \ud83d\udd35; \u26aa; ret5=-3.2; combo leftover $890.19; owner union_e_fresh_h1",
+        "shares": 8,
+        "side": "long",
+        "ticker": "PAYX"
+      },
+      "PGEN": {
+        "close_px": 7.440000057220459,
+        "cost": 1163.12797215271,
+        "entry_date": "2026-09-23",
+        "entry_px": 7.949999809265137,
+        "fee_in": 2.428,
+        "last_px": 7.949999809265137,
+        "notional": 1160.69997215271,
+        "owner": "union_news_g_h1",
+        "peak_px": 7.949999809265137,
+        "reason": "union \u2229 news_g, no \ud83d\udea8; gate news=good; list flatten; \ud83d\udd35; \u26aa; ret5=+12.7; combo leftover $1166.13; owner union_news_g_h1",
+        "shares": 146,
+        "side": "long",
+        "ticker": "PGEN"
+      },
+      "SGRY": {
+        "close_px": 14.5600004196167,
+        "cost": 1165.4920197601318,
+        "entry_date": "2026-09-23",
+        "entry_px": 15.720000267028809,
+        "fee_in": 2.212,
+        "last_px": 15.720000267028809,
+        "notional": 1163.2800197601318,
+        "owner": "union_news_g_h1",
+        "peak_px": 15.720000267028809,
+        "reason": "union \u2229 news_g, no \ud83d\udea8; gate news=good; list yday_gainer,yday_mover,ohlc_hot; \ud83d\udd35; ret5=+15.8; combo leftover $1166.13; owner union_news_g_h1",
+        "shares": 74,
+        "side": "long",
+        "ticker": "SGRY"
+      },
+      "VERI": {
+        "close_px": 1.2899999618530273,
+        "cost": 1157.9777579429626,
+        "entry_date": "2026-09-23",
+        "entry_px": 1.2999999523162842,
+        "fee_in": 11.3778,
+        "last_px": 1.2999999523162842,
+        "notional": 1146.5999579429626,
+        "owner": "union_news_g_h1",
+        "peak_px": 1.2999999523162842,
+        "reason": "union \u2229 news_g, no \ud83d\udea8; gate news=good; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+15.3; combo leftover $1166.13; owner union_news_g_h1",
+        "shares": 882,
+        "side": "long",
+        "ticker": "VERI"
+      }
+    },
+    "yday_equity": 8586.85
+  }
+}

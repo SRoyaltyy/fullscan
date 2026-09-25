@@ -1,0 +1,30 @@
+{
+  "buys": [],
+  "cash": 9420.24,
+  "date": "2026-09-23",
+  "equity": 9420.24,
+  "fees": 8.3205,
+  "fills": [
+    {
+      "fees": 8.3205,
+      "pnl": -7.25,
+      "price": 7.52,
+      "shares": 645,
+      "side": "COVER",
+      "ticker": "FLNC"
+    }
+  ],
+  "holdings": [],
+  "mean": -1.7682,
+  "n_trades_today": 1,
+  "recipe": "short_clk_neg_weak_fail_opp_h3",
+  "sells": [
+    "FLNC"
+  ],
+  "state": {
+    "after": "2026-09-23",
+    "cash": 9420.24,
+    "pos": {},
+    "yday_equity": 9420.24
+  }
+}

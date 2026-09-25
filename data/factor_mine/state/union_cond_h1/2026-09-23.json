@@ -1,0 +1,288 @@
+{
+  "buys": [
+    "A",
+    "BFLY",
+    "DXCM",
+    "HALO",
+    "IBRX",
+    "NEOG",
+    "OMER",
+    "ADMA"
+  ],
+  "cash": 277.09,
+  "date": "2026-09-23",
+  "equity": 8715.35,
+  "fees": 47.3147,
+  "fills": [
+    {
+      "fees": 5.0665,
+      "pnl": 1.55,
+      "price": 2.96,
+      "shares": 387,
+      "side": "SELL",
+      "ticker": "AMC"
+    },
+    {
+      "fees": 2.2913,
+      "pnl": -4.56,
+      "price": 12.24,
+      "shares": 92,
+      "side": "SELL",
+      "ticker": "APPS"
+    },
+    {
+      "fees": 2.154,
+      "pnl": -14.37,
+      "price": 23.3,
+      "shares": 48,
+      "side": "SELL",
+      "ticker": "ARQQ"
+    },
+    {
+      "fees": 2.1,
+      "pnl": 49.37,
+      "price": 38.905,
+      "shares": 30,
+      "side": "SELL",
+      "ticker": "FIVN"
+    },
+    {
+      "fees": 2.13,
+      "pnl": -89.04,
+      "price": 25.9,
+      "shares": 40,
+      "side": "SELL",
+      "ticker": "FSLY"
+    },
+    {
+      "fees": 2.013,
+      "pnl": 12.19,
+      "price": 747.6,
+      "shares": 1,
+      "side": "SELL",
+      "ticker": "META"
+    },
+    {
+      "fees": 12.0699,
+      "pnl": -23.98,
+      "price": 1.23,
+      "shares": 923,
+      "side": "SELL",
+      "ticker": "UPXI"
+    },
+    {
+      "fees": 2.046,
+      "pnl": -5.39,
+      "price": 93.97,
+      "shares": 12,
+      "side": "SELL",
+      "ticker": "USFD"
+    },
+    {
+      "fees": 2.008,
+      "pnl": null,
+      "price": 166.54,
+      "shares": 6,
+      "side": "BUY",
+      "ticker": "A"
+    },
+    {
+      "fees": 2.329,
+      "pnl": null,
+      "price": 9.9,
+      "shares": 113,
+      "side": "BUY",
+      "ticker": "BFLY"
+    },
+    {
+      "fees": 2.026,
+      "pnl": null,
+      "price": 89.5,
+      "shares": 12,
+      "side": "BUY",
+      "ticker": "DXCM"
+    },
+    {
+      "fees": 2.017,
+      "pnl": null,
+      "price": 116.85,
+      "shares": 9,
+      "side": "BUY",
+      "ticker": "HALO"
+    },
+    {
+      "fees": 2.353,
+      "pnl": null,
+      "price": 9.26,
+      "shares": 121,
+      "side": "BUY",
+      "ticker": "IBRX"
+    },
+    {
+      "fees": 2.227,
+      "pnl": null,
+      "price": 14.21,
+      "shares": 79,
+      "side": "BUY",
+      "ticker": "NEOG"
+    },
+    {
+      "fees": 2.152,
+      "pnl": null,
+      "price": 20.65,
+      "shares": 54,
+      "side": "BUY",
+      "ticker": "OMER"
+    },
+    {
+      "fees": 2.332,
+      "pnl": null,
+      "price": 9.81,
+      "shares": 114,
+      "side": "BUY",
+      "ticker": "ADMA"
+    }
+  ],
+  "holdings": [
+    "A",
+    "ADMA",
+    "BFLY",
+    "DXCM",
+    "HALO",
+    "IBRX",
+    "NEOG",
+    "OMER"
+  ],
+  "mean": -3.6024,
+  "n_trades_today": 16,
+  "recipe": "union_cond_h1",
+  "sells": [
+    "AMC",
+    "APPS",
+    "ARQQ",
+    "FIVN",
+    "FSLY",
+    "META",
+    "UPXI",
+    "USFD"
+  ],
+  "state": {
+    "after": "2026-09-23",
+    "cash": 277.09,
+    "pos": {
+      "A": {
+        "close_px": 165.32000732421875,
+        "cost": 1001.2479597167969,
+        "entry_date": "2026-09-23",
+        "entry_px": 166.5399932861328,
+        "fee_in": 2.008,
+        "last_px": 166.5399932861328,
+        "min_hold": 1,
+        "notional": 999.2399597167969,
+        "peak_px": 166.5399932861328,
+        "reason": "rank by cond; rank cond; list flatten; \ud83d\udd35; \u26aa; ret5=+11.3; leftover $1126.83",
+        "shares": 6,
+        "ticker": "A"
+      },
+      "ADMA": {
+        "close_px": 9.699999809265137,
+        "cost": 1120.6720478363038,
+        "entry_date": "2026-09-23",
+        "entry_px": 9.8100004196167,
+        "fee_in": 2.332,
+        "last_px": 9.8100004196167,
+        "min_hold": 1,
+        "notional": 1118.3400478363037,
+        "peak_px": 9.8100004196167,
+        "reason": "rank by cond; rank cond; list flatten; \ud83d\udd35; \u26aa; ret5=+13.9; leftover $1126.83",
+        "shares": 114,
+        "ticker": "ADMA"
+      },
+      "BFLY": {
+        "close_px": 9.199999809265137,
+        "cost": 1121.0289568939208,
+        "entry_date": "2026-09-23",
+        "entry_px": 9.899999618530273,
+        "fee_in": 2.329,
+        "last_px": 9.899999618530273,
+        "min_hold": 1,
+        "notional": 1118.699956893921,
+        "peak_px": 9.899999618530273,
+        "reason": "rank by cond; rank cond; list yday_gainer,yday_mover; \ud83d\udd35; \u26aa; ret5=+27.3; leftover $1126.83",
+        "shares": 113,
+        "ticker": "BFLY"
+      },
+      "DXCM": {
+        "close_px": 87.7300033569336,
+        "cost": 1076.026,
+        "entry_date": "2026-09-23",
+        "entry_px": 89.5,
+        "fee_in": 2.026,
+        "last_px": 89.5,
+        "min_hold": 1,
+        "notional": 1074.0,
+        "peak_px": 89.5,
+        "reason": "rank by cond; rank cond; list flatten; \ud83d\udd35; \u26aa; ret5=+3.6; leftover $1126.83",
+        "shares": 12,
+        "ticker": "DXCM"
+      },
+      "HALO": {
+        "close_px": 112.44000244140625,
+        "cost": 1053.66698626709,
+        "entry_date": "2026-09-23",
+        "entry_px": 116.8499984741211,
+        "fee_in": 2.017,
+        "last_px": 116.8499984741211,
+        "min_hold": 1,
+        "notional": 1051.6499862670898,
+        "peak_px": 116.8499984741211,
+        "reason": "rank by cond; rank cond; list flatten; \ud83d\udd35; \u26aa; ret5=+8.4; leftover $1126.83",
+        "shares": 9,
+        "ticker": "HALO"
+      },
+      "IBRX": {
+        "close_px": 8.630000114440918,
+        "cost": 1122.8130276947022,
+        "entry_date": "2026-09-23",
+        "entry_px": 9.260000228881836,
+        "fee_in": 2.353,
+        "last_px": 9.260000228881836,
+        "min_hold": 1,
+        "notional": 1120.4600276947021,
+        "peak_px": 9.260000228881836,
+        "reason": "rank by cond; rank cond; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+14.1; leftover $1126.83",
+        "shares": 121,
+        "ticker": "IBRX"
+      },
+      "NEOG": {
+        "close_px": 13.569999694824219,
+        "cost": 1124.817003013611,
+        "entry_date": "2026-09-23",
+        "entry_px": 14.210000038146973,
+        "fee_in": 2.227,
+        "last_px": 14.210000038146973,
+        "min_hold": 1,
+        "notional": 1122.5900030136108,
+        "peak_px": 14.210000038146973,
+        "reason": "rank by cond; rank cond; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+14.1; leftover $1126.83",
+        "shares": 79,
+        "ticker": "NEOG"
+      },
+      "OMER": {
+        "close_px": 20.739999771118164,
+        "cost": 1117.2519794006348,
+        "entry_date": "2026-09-23",
+        "entry_px": 20.649999618530273,
+        "fee_in": 2.152,
+        "last_px": 20.649999618530273,
+        "min_hold": 1,
+        "notional": 1115.0999794006348,
+        "peak_px": 20.649999618530273,
+        "reason": "rank by cond; rank cond; list flatten,yday_gainer,yday_mover; \ud83d\udd35; \u26aa; ret5=+22.6; leftover $1126.83",
+        "shares": 54,
+        "ticker": "OMER"
+      }
+    },
+    "yday_equity": 8715.35
+  }
+}

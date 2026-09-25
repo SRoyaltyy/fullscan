@@ -1,0 +1,95 @@
+{
+  "buys": [
+    "BAND",
+    "PAGS",
+    "PAYP"
+  ],
+  "cash": 58.75,
+  "date": "2026-09-11",
+  "equity": 8910.58,
+  "fees": 8.2895,
+  "fills": [
+    {
+      "fees": 2.152,
+      "pnl": null,
+      "price": 52.55,
+      "shares": 54,
+      "side": "BUY",
+      "ticker": "BAND"
+    },
+    {
+      "fees": 3.6765,
+      "pnl": null,
+      "price": 10.11,
+      "shares": 285,
+      "side": "BUY",
+      "ticker": "PAGS"
+    },
+    {
+      "fees": 2.461,
+      "pnl": null,
+      "price": 18.3,
+      "shares": 157,
+      "side": "BUY",
+      "ticker": "PAYP"
+    }
+  ],
+  "holdings": [
+    "BAND",
+    "PAGS",
+    "PAYP"
+  ],
+  "mean": 2.9032,
+  "n_trades_today": 3,
+  "recipe": "union_white_coil_h3",
+  "sells": [],
+  "state": {
+    "after": "2026-09-11",
+    "cash": 58.75,
+    "pos": {
+      "BAND": {
+        "close_px": 56.869998931884766,
+        "cost": 2839.8519588012696,
+        "entry_date": "2026-09-11",
+        "entry_px": 52.54999923706055,
+        "fee_in": 2.152,
+        "last_px": 52.54999923706055,
+        "min_hold": 3,
+        "notional": 2837.6999588012695,
+        "peak_px": 52.54999923706055,
+        "reason": "combo gate; gate zero_red=True,ret_5_max=10.0,rvol_max=2.2; list probable,yday_gainer; \ud83d\udd35; \u26aa; ret5=+9.6; leftover $2886.40",
+        "shares": 54,
+        "ticker": "BAND"
+      },
+      "PAGS": {
+        "close_px": 10.119999885559082,
+        "cost": 2885.026402153015,
+        "entry_date": "2026-09-11",
+        "entry_px": 10.109999656677246,
+        "fee_in": 3.6765,
+        "last_px": 10.109999656677246,
+        "min_hold": 3,
+        "notional": 2881.349902153015,
+        "peak_px": 10.109999656677246,
+        "reason": "combo gate; gate zero_red=True,ret_5_max=10.0,rvol_max=2.2; list probable,yday_gainer; \u26aa; ret5=+1.7; leftover $2886.40",
+        "shares": 285,
+        "ticker": "PAGS"
+      },
+      "PAYP": {
+        "close_px": 18.450000762939453,
+        "cost": 2875.5608802185056,
+        "entry_date": "2026-09-11",
+        "entry_px": 18.299999237060547,
+        "fee_in": 2.461,
+        "last_px": 18.299999237060547,
+        "min_hold": 3,
+        "notional": 2873.099880218506,
+        "peak_px": 18.299999237060547,
+        "reason": "combo gate; gate zero_red=True,ret_5_max=10.0,rvol_max=2.2; list ohlc_hot; \u26aa; ret5=+7.7; leftover $2886.40",
+        "shares": 157,
+        "ticker": "PAYP"
+      }
+    },
+    "yday_equity": 8910.58
+  }
+}

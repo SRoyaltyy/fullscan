@@ -1,0 +1,176 @@
+{
+  "buys": [
+    "SABR",
+    "AIB"
+  ],
+  "cash": 57.77,
+  "date": "2026-09-17",
+  "equity": 8335.6,
+  "fees": 0.1866,
+  "fills": [
+    {
+      "fees": 0.081,
+      "pnl": null,
+      "price": 2.4,
+      "shares": 3,
+      "side": "BUY",
+      "ticker": "SABR"
+    },
+    {
+      "fees": 0.1056,
+      "pnl": null,
+      "price": 1.46,
+      "shares": 6,
+      "side": "BUY",
+      "ticker": "AIB"
+    }
+  ],
+  "holdings": [
+    "ADPT",
+    "AIB",
+    "ARQQ",
+    "KRMN",
+    "QTRX",
+    "RIG",
+    "SABR",
+    "TEM",
+    "VAL"
+  ],
+  "mean": 3.9278,
+  "n_trades_today": 2,
+  "recipe": "probable_probable_ok_h3",
+  "sells": [],
+  "state": {
+    "after": "2026-09-17",
+    "cash": 57.77,
+    "pos": {
+      "ADPT": {
+        "close_px": 28.549999237060547,
+        "cost": 1139.8960064086914,
+        "entry_date": "2026-09-16",
+        "entry_px": 27.09000015258789,
+        "fee_in": 2.116,
+        "last_px": 28.229999542236328,
+        "min_hold": 3,
+        "notional": 1137.7800064086914,
+        "peak_px": 28.229999542236328,
+        "reason": "combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer,ohlc_hot; \ud83d\udd35; \u26aa; ret5=+9.6; leftover $1146.58",
+        "shares": 42,
+        "ticker": "ADPT"
+      },
+      "AIB": {
+        "close_px": 1.399999976158142,
+        "cost": 8.865600228881837,
+        "entry_date": "2026-09-17",
+        "entry_px": 1.4600000381469727,
+        "fee_in": 0.1056,
+        "last_px": 1.4600000381469727,
+        "min_hold": 3,
+        "notional": 8.760000228881836,
+        "peak_px": 1.4600000381469727,
+        "reason": "combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer; \ud83d\udd35; ret5=+4.4; leftover $9.24",
+        "shares": 6,
+        "ticker": "AIB"
+      },
+      "ARQQ": {
+        "close_px": 19.520000457763672,
+        "cost": 1131.1959432373046,
+        "entry_date": "2026-09-16",
+        "entry_px": 18.209999084472656,
+        "fee_in": 2.176,
+        "last_px": 19.59000015258789,
+        "min_hold": 3,
+        "notional": 1129.0199432373047,
+        "peak_px": 19.59000015258789,
+        "reason": "combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer; \ud83d\udd35; ret5=-19.1; leftover $1146.58",
+        "shares": 62,
+        "ticker": "ARQQ"
+      },
+      "KRMN": {
+        "close_px": 35.25,
+        "cost": 1142.379949645996,
+        "entry_date": "2026-09-16",
+        "entry_px": 38.0099983215332,
+        "fee_in": 2.08,
+        "last_px": 37.88999938964844,
+        "min_hold": 3,
+        "notional": 1140.299949645996,
+        "peak_px": 38.0099983215332,
+        "reason": "combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer; \ud83d\udd35; ret5=-5.6; leftover $1146.58",
+        "shares": 30,
+        "ticker": "KRMN"
+      },
+      "QTRX": {
+        "close_px": 3.119999885559082,
+        "cost": 1150.5509120449067,
+        "entry_date": "2026-09-16",
+        "entry_px": 2.7200000286102295,
+        "fee_in": 5.4309,
+        "last_px": 2.940000057220459,
+        "min_hold": 3,
+        "notional": 1145.1200120449066,
+        "peak_px": 2.940000057220459,
+        "reason": "combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer; ret5=-0.4; leftover $1146.58",
+        "shares": 421,
+        "ticker": "QTRX"
+      },
+      "RIG": {
+        "close_px": 5.659999847412109,
+        "cost": 1147.224977684021,
+        "entry_date": "2026-09-16",
+        "entry_px": 5.869999885559082,
+        "fee_in": 2.575,
+        "last_px": 5.579999923706055,
+        "min_hold": 3,
+        "notional": 1144.649977684021,
+        "peak_px": 5.869999885559082,
+        "reason": "combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer; \ud83d\udd35; ret5=+3.1; leftover $1146.58",
+        "shares": 195,
+        "ticker": "RIG"
+      },
+      "SABR": {
+        "close_px": 2.319999933242798,
+        "cost": 7.281000286102295,
+        "entry_date": "2026-09-17",
+        "entry_px": 2.4000000953674316,
+        "fee_in": 0.081,
+        "last_px": 2.4000000953674316,
+        "min_hold": 3,
+        "notional": 7.200000286102295,
+        "peak_px": 2.4000000953674316,
+        "reason": "combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer,yday_mover,ohlc_hot; \ud83d\udd35; \u26aa; ret5=+8.4; leftover $9.24",
+        "shares": 3,
+        "ticker": "SABR"
+      },
+      "TEM": {
+        "close_px": 80.36000061035156,
+        "cost": 1102.6780146484375,
+        "entry_date": "2026-09-16",
+        "entry_px": 68.79000091552734,
+        "fee_in": 2.038,
+        "last_px": 72.69999694824219,
+        "min_hold": 3,
+        "notional": 1100.6400146484375,
+        "peak_px": 72.69999694824219,
+        "reason": "combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer; \ud83d\udd35; \u26aa; ret5=+7.1; leftover $1146.58",
+        "shares": 16,
+        "ticker": "TEM"
+      },
+      "VAL": {
+        "close_px": 84.05000305175781,
+        "cost": 1138.2290198364258,
+        "entry_date": "2026-09-16",
+        "entry_px": 87.4000015258789,
+        "fee_in": 2.029,
+        "last_px": 83.19999694824219,
+        "min_hold": 3,
+        "notional": 1136.2000198364258,
+        "peak_px": 87.4000015258789,
+        "reason": "combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer; \ud83d\udd35; ret5=+3.2; leftover $1146.58",
+        "shares": 13,
+        "ticker": "VAL"
+      }
+    },
+    "yday_equity": 8335.6
+  }
+}

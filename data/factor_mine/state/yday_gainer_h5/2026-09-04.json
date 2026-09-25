@@ -1,0 +1,288 @@
+{
+  "buys": [
+    "ALEC",
+    "OABI",
+    "OPK",
+    "HQ",
+    "EOSE",
+    "DELL",
+    "MLYS",
+    "CCOI"
+  ],
+  "cash": 191.0,
+  "date": "2026-09-04",
+  "equity": 9625.79,
+  "fees": 74.9107,
+  "fills": [
+    {
+      "fees": 2.2501,
+      "pnl": -170.38,
+      "price": 13.56,
+      "shares": 79,
+      "side": "SELL",
+      "ticker": "GRRR"
+    },
+    {
+      "fees": 2.4591,
+      "pnl": -123.78,
+      "price": 7.79,
+      "shares": 145,
+      "side": "SELL",
+      "ticker": "OPTX"
+    },
+    {
+      "fees": 4.9234,
+      "pnl": 69.19,
+      "price": 3.53,
+      "shares": 376,
+      "side": "SELL",
+      "ticker": "PYXS"
+    },
+    {
+      "fees": 23.7935,
+      "pnl": -2.05,
+      "price": 0.378,
+      "shares": 3424,
+      "side": "SELL",
+      "ticker": "SAFX"
+    },
+    {
+      "fees": 2.121,
+      "pnl": 31.3,
+      "price": 33.86,
+      "shares": 37,
+      "side": "SELL",
+      "ticker": "SEDG"
+    },
+    {
+      "fees": 2.022,
+      "pnl": -56.06,
+      "price": 239.23,
+      "shares": 4,
+      "side": "SELL",
+      "ticker": "SIMO"
+    },
+    {
+      "fees": 2.055,
+      "pnl": -2.14,
+      "price": 79.55,
+      "shares": 15,
+      "side": "SELL",
+      "ticker": "URBN"
+    },
+    {
+      "fees": 3.0413,
+      "pnl": -115.07,
+      "price": 4.91,
+      "shares": 232,
+      "side": "SELL",
+      "ticker": "XPOF"
+    },
+    {
+      "fees": 6.1533,
+      "pnl": null,
+      "price": 2.52,
+      "shares": 477,
+      "side": "BUY",
+      "ticker": "ALEC"
+    },
+    {
+      "fees": 3.2379,
+      "pnl": null,
+      "price": 4.78,
+      "shares": 251,
+      "side": "BUY",
+      "ticker": "OABI"
+    },
+    {
+      "fees": 9.7653,
+      "pnl": null,
+      "price": 1.59,
+      "shares": 757,
+      "side": "BUY",
+      "ticker": "OPK"
+    },
+    {
+      "fees": 2.215,
+      "pnl": null,
+      "price": 15.9,
+      "shares": 75,
+      "side": "BUY",
+      "ticker": "HQ"
+    },
+    {
+      "fees": 4.4118,
+      "pnl": null,
+      "price": 3.52,
+      "shares": 342,
+      "side": "BUY",
+      "ticker": "EOSE"
+    },
+    {
+      "fees": 1.996,
+      "pnl": null,
+      "price": 513.78,
+      "shares": 2,
+      "side": "BUY",
+      "ticker": "DELL"
+    },
+    {
+      "fees": 2.116,
+      "pnl": null,
+      "price": 28.0,
+      "shares": 42,
+      "side": "BUY",
+      "ticker": "MLYS"
+    },
+    {
+      "fees": 2.35,
+      "pnl": null,
+      "price": 10.02,
+      "shares": 120,
+      "side": "BUY",
+      "ticker": "CCOI"
+    }
+  ],
+  "holdings": [
+    "ALEC",
+    "CCOI",
+    "DELL",
+    "EOSE",
+    "HQ",
+    "MLYS",
+    "OABI",
+    "OPK"
+  ],
+  "mean": -0.7885,
+  "n_trades_today": 16,
+  "recipe": "yday_gainer_h5",
+  "sells": [
+    "GRRR",
+    "OPTX",
+    "PYXS",
+    "SAFX",
+    "SEDG",
+    "SIMO",
+    "URBN",
+    "XPOF"
+  ],
+  "state": {
+    "after": "2026-09-04",
+    "cash": 191.0,
+    "pos": {
+      "ALEC": {
+        "close_px": 2.4600000381469727,
+        "cost": 1208.193290901947,
+        "entry_date": "2026-09-04",
+        "entry_px": 2.5199999809265137,
+        "fee_in": 6.1533,
+        "last_px": 2.5199999809265137,
+        "min_hold": 5,
+        "notional": 1202.039990901947,
+        "peak_px": 2.5199999809265137,
+        "reason": "baseline list, no extra gate; list flatten,probable,yday_gainer,yday_mover,mover_buy; \ud83d\udd35; \u26aa; ret5=+5.0; leftover $1203.87",
+        "shares": 477,
+        "ticker": "ALEC"
+      },
+      "CCOI": {
+        "close_px": 10.050000190734863,
+        "cost": 1204.7500549316405,
+        "entry_date": "2026-09-04",
+        "entry_px": 10.020000457763672,
+        "fee_in": 2.35,
+        "last_px": 10.020000457763672,
+        "min_hold": 5,
+        "notional": 1202.4000549316406,
+        "peak_px": 10.020000457763672,
+        "reason": "baseline list, no extra gate; list probable,yday_gainer,yday_mover; \ud83d\udd35; ret5=+3.2; leftover $1203.87",
+        "shares": 120,
+        "ticker": "CCOI"
+      },
+      "DELL": {
+        "close_px": 524.1400146484375,
+        "cost": 1029.55605859375,
+        "entry_date": "2026-09-04",
+        "entry_px": 513.780029296875,
+        "fee_in": 1.996,
+        "last_px": 513.780029296875,
+        "min_hold": 5,
+        "notional": 1027.56005859375,
+        "peak_px": 513.780029296875,
+        "reason": "baseline list, no extra gate; list probable,yday_gainer,yday_mover,ohlc_hot,mover_buy; \ud83d\udd35; \u26aa; ret5=+9.3; leftover $1203.87",
+        "shares": 2,
+        "ticker": "DELL"
+      },
+      "EOSE": {
+        "close_px": 3.880000114440918,
+        "cost": 1208.2517934768678,
+        "entry_date": "2026-09-04",
+        "entry_px": 3.5199999809265137,
+        "fee_in": 4.4118,
+        "last_px": 3.5199999809265137,
+        "min_hold": 5,
+        "notional": 1203.8399934768677,
+        "peak_px": 3.5199999809265137,
+        "reason": "baseline list, no extra gate; list probable,yday_gainer,yday_mover; \ud83d\udd35; ret5=+2.3; leftover $1203.87",
+        "shares": 342,
+        "ticker": "EOSE"
+      },
+      "HQ": {
+        "close_px": 15.5600004196167,
+        "cost": 1194.7149713897704,
+        "entry_date": "2026-09-04",
+        "entry_px": 15.899999618530273,
+        "fee_in": 2.215,
+        "last_px": 15.899999618530273,
+        "min_hold": 5,
+        "notional": 1192.4999713897705,
+        "peak_px": 15.899999618530273,
+        "reason": "baseline list, no extra gate; list probable,yday_gainer,yday_mover; ret5=-4.1; leftover $1203.87",
+        "shares": 75,
+        "ticker": "HQ"
+      },
+      "MLYS": {
+        "close_px": 28.209999084472656,
+        "cost": 1178.116,
+        "entry_date": "2026-09-04",
+        "entry_px": 28.0,
+        "fee_in": 2.116,
+        "last_px": 28.0,
+        "min_hold": 5,
+        "notional": 1176.0,
+        "peak_px": 28.0,
+        "reason": "baseline list, no extra gate; list probable,yday_gainer,yday_mover; \ud83d\udd35; \u26aa; ret5=+8.7; leftover $1203.87",
+        "shares": 42,
+        "ticker": "MLYS"
+      },
+      "OABI": {
+        "close_px": 4.329999923706055,
+        "cost": 1203.0179526618958,
+        "entry_date": "2026-09-04",
+        "entry_px": 4.78000020980835,
+        "fee_in": 3.2379,
+        "last_px": 4.78000020980835,
+        "min_hold": 5,
+        "notional": 1199.7800526618958,
+        "peak_px": 4.78000020980835,
+        "reason": "baseline list, no extra gate; list flatten,probable,yday_gainer,yday_mover,mover_buy; \ud83d\udd35; \u26aa; ret5=+3.0; leftover $1203.87",
+        "shares": 251,
+        "ticker": "OABI"
+      },
+      "OPK": {
+        "close_px": 1.6399999856948853,
+        "cost": 1213.395325267601,
+        "entry_date": "2026-09-04",
+        "entry_px": 1.590000033378601,
+        "fee_in": 9.7653,
+        "last_px": 1.590000033378601,
+        "min_hold": 5,
+        "notional": 1203.630025267601,
+        "peak_px": 1.590000033378601,
+        "reason": "baseline list, no extra gate; list flatten,yday_gainer,mover_buy; \ud83d\udd35; \u26aa; ret5=+7.3; leftover $1203.87",
+        "shares": 757,
+        "ticker": "OPK"
+      }
+    },
+    "yday_equity": 9625.79
+  }
+}

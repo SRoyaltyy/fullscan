@@ -1,0 +1,215 @@
+{
+  "buys": [
+    "ORCL",
+    "NVT",
+    "BAK",
+    "BAND",
+    "INTR",
+    "LDI",
+    "VISN",
+    "APH"
+  ],
+  "cash": 130.71,
+  "date": "2026-09-11",
+  "equity": 9401.44,
+  "fees": 36.4334,
+  "fills": [
+    {
+      "fees": 2.011,
+      "pnl": null,
+      "price": 164.43,
+      "shares": 7,
+      "side": "BUY",
+      "ticker": "ORCL"
+    },
+    {
+      "fees": 2.011,
+      "pnl": null,
+      "price": 157.78,
+      "shares": 7,
+      "side": "BUY",
+      "ticker": "NVT"
+    },
+    {
+      "fees": 7.1853,
+      "pnl": null,
+      "price": 2.12,
+      "shares": 557,
+      "side": "BUY",
+      "ticker": "BAK"
+    },
+    {
+      "fees": 2.056,
+      "pnl": null,
+      "price": 52.55,
+      "shares": 22,
+      "side": "BUY",
+      "ticker": "BAND"
+    },
+    {
+      "fees": 2.6316,
+      "pnl": null,
+      "price": 5.78,
+      "shares": 204,
+      "side": "BUY",
+      "ticker": "INTR"
+    },
+    {
+      "fees": 15.9735,
+      "pnl": null,
+      "price": 0.85,
+      "shares": 1389,
+      "side": "BUY",
+      "ticker": "LDI"
+    },
+    {
+      "fees": 2.533,
+      "pnl": null,
+      "price": 6.49,
+      "shares": 181,
+      "side": "BUY",
+      "ticker": "VISN"
+    },
+    {
+      "fees": 2.032,
+      "pnl": null,
+      "price": 82.42,
+      "shares": 14,
+      "side": "BUY",
+      "ticker": "APH"
+    }
+  ],
+  "holdings": [
+    "APH",
+    "BAK",
+    "BAND",
+    "INTR",
+    "LDI",
+    "NVT",
+    "ORCL",
+    "VISN"
+  ],
+  "mean": -0.4916,
+  "n_trades_today": 8,
+  "recipe": "union_blue_coil_h1",
+  "sells": [],
+  "state": {
+    "after": "2026-09-11",
+    "cash": 130.71,
+    "pos": {
+      "APH": {
+        "close_px": 83.91999816894531,
+        "cost": 1155.9119743652343,
+        "entry_date": "2026-09-11",
+        "entry_px": 82.41999816894531,
+        "fee_in": 2.032,
+        "last_px": 82.41999816894531,
+        "min_hold": 1,
+        "notional": 1153.8799743652344,
+        "peak_px": 82.41999816894531,
+        "reason": "combo gate; gate blue=True,ret_5_max=10.0; list ohlc_hot; \ud83d\udd35; ret5=-2.2; leftover $1180.99",
+        "shares": 14,
+        "ticker": "APH"
+      },
+      "BAK": {
+        "close_px": 2.0799999237060547,
+        "cost": 1188.0252362564088,
+        "entry_date": "2026-09-11",
+        "entry_px": 2.119999885559082,
+        "fee_in": 7.1853,
+        "last_px": 2.119999885559082,
+        "min_hold": 1,
+        "notional": 1180.8399362564087,
+        "peak_px": 2.119999885559082,
+        "reason": "combo gate; gate blue=True,ret_5_max=10.0; list probable,yday_gainer,ohlc_hot; \ud83d\udd35; ret5=+8.8; leftover $1180.99",
+        "shares": 557,
+        "ticker": "BAK"
+      },
+      "BAND": {
+        "close_px": 56.869998931884766,
+        "cost": 1158.155983215332,
+        "entry_date": "2026-09-11",
+        "entry_px": 52.54999923706055,
+        "fee_in": 2.056,
+        "last_px": 52.54999923706055,
+        "min_hold": 1,
+        "notional": 1156.099983215332,
+        "peak_px": 52.54999923706055,
+        "reason": "combo gate; gate blue=True,ret_5_max=10.0; list probable,yday_gainer; \ud83d\udd35; \u26aa; ret5=+9.6; leftover $1180.99",
+        "shares": 22,
+        "ticker": "BAND"
+      },
+      "INTR": {
+        "close_px": 5.710000038146973,
+        "cost": 1181.7516428009033,
+        "entry_date": "2026-09-11",
+        "entry_px": 5.78000020980835,
+        "fee_in": 2.6316,
+        "last_px": 5.78000020980835,
+        "min_hold": 1,
+        "notional": 1179.1200428009033,
+        "peak_px": 5.78000020980835,
+        "reason": "combo gate; gate blue=True,ret_5_max=10.0; list probable,yday_gainer; \ud83d\udd35; ret5=-0.3; leftover $1180.99",
+        "shares": 204,
+        "ticker": "INTR"
+      },
+      "LDI": {
+        "close_px": 0.8349999785423279,
+        "cost": 1196.6235331163407,
+        "entry_date": "2026-09-11",
+        "entry_px": 0.8500000238418579,
+        "fee_in": 15.9735,
+        "last_px": 0.8500000238418579,
+        "min_hold": 1,
+        "notional": 1180.6500331163406,
+        "peak_px": 0.8500000238418579,
+        "reason": "combo gate; gate blue=True,ret_5_max=10.0; list yday_gainer; \ud83d\udd35; ret5=-11.5; leftover $1180.99",
+        "shares": 1389,
+        "ticker": "LDI"
+      },
+      "NVT": {
+        "close_px": 162.3800048828125,
+        "cost": 1106.470991455078,
+        "entry_date": "2026-09-11",
+        "entry_px": 157.77999877929688,
+        "fee_in": 2.011,
+        "last_px": 157.77999877929688,
+        "min_hold": 1,
+        "notional": 1104.4599914550781,
+        "peak_px": 157.77999877929688,
+        "reason": "combo gate; gate blue=True,ret_5_max=10.0; list flatten; \ud83d\udd35; ret5=+2.0; leftover $1180.99",
+        "shares": 7,
+        "ticker": "NVT"
+      },
+      "ORCL": {
+        "close_px": 150.27999877929688,
+        "cost": 1153.0209487304687,
+        "entry_date": "2026-09-11",
+        "entry_px": 164.42999267578125,
+        "fee_in": 2.011,
+        "last_px": 164.42999267578125,
+        "min_hold": 1,
+        "notional": 1151.0099487304688,
+        "peak_px": 164.42999267578125,
+        "reason": "combo gate; gate blue=True,ret_5_max=10.0; list flatten,earn_react; \ud83d\udd35; \u26aa; ret5=-0.7; leftover $1180.99",
+        "shares": 7,
+        "ticker": "ORCL"
+      },
+      "VISN": {
+        "close_px": 6.480000019073486,
+        "cost": 1177.2229585723876,
+        "entry_date": "2026-09-11",
+        "entry_px": 6.489999771118164,
+        "fee_in": 2.533,
+        "last_px": 6.489999771118164,
+        "min_hold": 1,
+        "notional": 1174.6899585723877,
+        "peak_px": 6.489999771118164,
+        "reason": "combo gate; gate blue=True,ret_5_max=10.0; list ohlc_hot; \ud83d\udd35; ret5=+0.5; leftover $1180.99",
+        "shares": 181,
+        "ticker": "VISN"
+      }
+    },
+    "yday_equity": 9401.44
+  }
+}

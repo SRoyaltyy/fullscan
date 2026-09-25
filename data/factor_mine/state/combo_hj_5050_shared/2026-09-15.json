@@ -1,0 +1,30 @@
+{
+  "buys": [],
+  "cash": 9741.57,
+  "date": "2026-09-15",
+  "equity": 9741.57,
+  "fees": 11.5211,
+  "fills": [
+    {
+      "fees": 11.5211,
+      "pnl": -71.34,
+      "price": 1.345,
+      "shares": 881,
+      "side": "SELL",
+      "ticker": "GPRO"
+    }
+  ],
+  "holdings": [],
+  "mean": -0.1633,
+  "n_trades_today": 1,
+  "recipe": "combo_hj_5050_shared",
+  "sells": [
+    "GPRO"
+  ],
+  "state": {
+    "after": "2026-09-15",
+    "cash": 9741.57,
+    "pos": {},
+    "yday_equity": 9741.57
+  }
+}

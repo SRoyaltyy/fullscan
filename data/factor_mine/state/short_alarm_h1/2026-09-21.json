@@ -1,0 +1,180 @@
+{
+  "buys": [
+    "ALMU",
+    "AEHL",
+    "FRO",
+    "AMD",
+    "TH",
+    "HAFN"
+  ],
+  "cash": 14478.86,
+  "date": "2026-09-21",
+  "equity": 9934.48,
+  "fees": 17.1255,
+  "fills": [
+    {
+      "fees": 2.002,
+      "pnl": 21.42,
+      "price": 586.77,
+      "shares": 4,
+      "side": "COVER",
+      "ticker": "DELL"
+    },
+    {
+      "fees": 2.029,
+      "pnl": -107.76,
+      "price": 190.3,
+      "shares": 13,
+      "side": "COVER",
+      "ticker": "SMTC"
+    },
+    {
+      "fees": 2.218594520547945,
+      "pnl": null,
+      "price": 13.125,
+      "shares": 62,
+      "side": "SHORT",
+      "ticker": "ALMU"
+    },
+    {
+      "fees": 2.335803836237241,
+      "pnl": null,
+      "price": 8.26,
+      "shares": 99,
+      "side": "SHORT",
+      "ticker": "AEHL"
+    },
+    {
+      "fees": 2.079843288473887,
+      "pnl": null,
+      "price": 49.83,
+      "shares": 16,
+      "side": "SHORT",
+      "ticker": "FRO"
+    },
+    {
+      "fees": 2.0289967124625425,
+      "pnl": null,
+      "price": 583.88,
+      "shares": 1,
+      "side": "SHORT",
+      "ticker": "AMD"
+    },
+    {
+      "fees": 2.1429465749557703,
+      "pnl": null,
+      "price": 21.65,
+      "shares": 37,
+      "side": "SHORT",
+      "ticker": "TH"
+    },
+    {
+      "fees": 2.2883383561643833,
+      "pnl": null,
+      "price": 9.75,
+      "shares": 84,
+      "side": "SHORT",
+      "ticker": "HAFN"
+    }
+  ],
+  "holdings": [
+    "AEHL",
+    "ALMU",
+    "AMD",
+    "FRO",
+    "HAFN",
+    "TH"
+  ],
+  "mean": -0.725,
+  "n_trades_today": 8,
+  "recipe": "short_alarm_h1",
+  "sells": [
+    "DELL",
+    "SMTC"
+  ],
+  "state": {
+    "after": "2026-09-21",
+    "cash": 14478.86,
+    "pos": {
+      "AEHL": {
+        "close_px": 6.920000076293945,
+        "cost": 2.335803836237241,
+        "entry_date": "2026-09-21",
+        "entry_px": 8.260000228881836,
+        "fee_in": 2.335803836237241,
+        "last_px": 8.260000228881836,
+        "notional": 817.7400226593018,
+        "peak_px": 8.260000228881836,
+        "reason": "alarm; gate alarm=True; list yday_mover; ret5=+7.7; leftover $821.60",
+        "shares": 99,
+        "ticker": "AEHL"
+      },
+      "ALMU": {
+        "close_px": 13.609999656677246,
+        "cost": 2.218594520547945,
+        "entry_date": "2026-09-21",
+        "entry_px": 13.125,
+        "fee_in": 2.218594520547945,
+        "last_px": 13.125,
+        "notional": 813.75,
+        "peak_px": 13.125,
+        "reason": "alarm; gate alarm=True; list probable; ret5=-5.1; leftover $821.60",
+        "shares": 62,
+        "ticker": "ALMU"
+      },
+      "AMD": {
+        "close_px": 615.52001953125,
+        "cost": 2.0289967124625425,
+        "entry_date": "2026-09-21",
+        "entry_px": 583.8800048828125,
+        "fee_in": 2.0289967124625425,
+        "last_px": 583.8800048828125,
+        "notional": 583.8800048828125,
+        "peak_px": 583.8800048828125,
+        "reason": "alarm; gate alarm=True; list ohlc_hot; ret5=+8.5; leftover $821.60",
+        "shares": 1,
+        "ticker": "AMD"
+      },
+      "FRO": {
+        "close_px": 49.810001373291016,
+        "cost": 2.079843288473887,
+        "entry_date": "2026-09-21",
+        "entry_px": 49.83000183105469,
+        "fee_in": 2.079843288473887,
+        "last_px": 49.83000183105469,
+        "notional": 797.280029296875,
+        "peak_px": 49.83000183105469,
+        "reason": "alarm; gate alarm=True; list ohlc_hot; ret5=+11.9; leftover $821.60",
+        "shares": 16,
+        "ticker": "FRO"
+      },
+      "HAFN": {
+        "close_px": 9.710000038146973,
+        "cost": 2.2883383561643833,
+        "entry_date": "2026-09-21",
+        "entry_px": 9.75,
+        "fee_in": 2.2883383561643833,
+        "last_px": 9.75,
+        "notional": 819.0,
+        "peak_px": 9.75,
+        "reason": "alarm; gate alarm=True; list ohlc_hot; ret5=+7.9; leftover $821.60",
+        "shares": 84,
+        "ticker": "HAFN"
+      },
+      "TH": {
+        "close_px": 21.280000686645508,
+        "cost": 2.1429465749557703,
+        "entry_date": "2026-09-21",
+        "entry_px": 21.649999618530273,
+        "fee_in": 2.1429465749557703,
+        "last_px": 21.649999618530273,
+        "notional": 801.0499858856201,
+        "peak_px": 21.649999618530273,
+        "reason": "alarm; gate alarm=True; list ohlc_hot; ret5=+10.1; leftover $821.60",
+        "shares": 37,
+        "ticker": "TH"
+      }
+    },
+    "yday_equity": 9934.48
+  }
+}

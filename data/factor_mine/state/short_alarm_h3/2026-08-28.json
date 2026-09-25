@@ -1,0 +1,207 @@
+{
+  "buys": [
+    "PYXS",
+    "SAFX",
+    "XPOF",
+    "OPTU",
+    "ABTC",
+    "SBET",
+    "CRCL",
+    "BTU"
+  ],
+  "cash": 14887.11,
+  "date": "2026-08-28",
+  "equity": 10123.64,
+  "fees": 33.5095,
+  "fills": [
+    {
+      "fees": 2.6123002736287577,
+      "pnl": null,
+      "price": 3.32,
+      "shares": 188,
+      "side": "SHORT",
+      "ticker": "PYXS"
+    },
+    {
+      "fees": 11.696120000447312,
+      "pnl": null,
+      "price": 0.365,
+      "shares": 1712,
+      "side": "SHORT",
+      "ticker": "SAFX"
+    },
+    {
+      "fees": 2.384398082555484,
+      "pnl": null,
+      "price": 5.38,
+      "shares": 116,
+      "side": "SHORT",
+      "ticker": "XPOF"
+    },
+    {
+      "fees": 8.193323287671232,
+      "pnl": null,
+      "price": 1.0,
+      "shares": 625,
+      "side": "SHORT",
+      "ticker": "OPTU"
+    },
+    {
+      "fees": 2.244984108911802,
+      "pnl": null,
+      "price": 8.61,
+      "shares": 72,
+      "side": "SHORT",
+      "ticker": "ABTC"
+    },
+    {
+      "fees": 2.245063012946142,
+      "pnl": null,
+      "price": 8.65,
+      "shares": 72,
+      "side": "SHORT",
+      "ticker": "SBET"
+    },
+    {
+      "fees": 2.0432235617441674,
+      "pnl": null,
+      "price": 92.61,
+      "shares": 6,
+      "side": "SHORT",
+      "ticker": "CRCL"
+    },
+    {
+      "fees": 2.0900991776871356,
+      "pnl": null,
+      "price": 29.72,
+      "shares": 21,
+      "side": "SHORT",
+      "ticker": "BTU"
+    }
+  ],
+  "holdings": [
+    "ABTC",
+    "BTU",
+    "CRCL",
+    "OPTU",
+    "PYXS",
+    "SAFX",
+    "SBET",
+    "XPOF"
+  ],
+  "mean": 1.2364,
+  "n_trades_today": 8,
+  "recipe": "short_alarm_h3",
+  "sells": [],
+  "state": {
+    "after": "2026-08-28",
+    "cash": 14887.11,
+    "pos": {
+      "ABTC": {
+        "close_px": 7.690000057220459,
+        "cost": 2.244984108911802,
+        "entry_date": "2026-08-28",
+        "entry_px": 8.609999656677246,
+        "fee_in": 2.244984108911802,
+        "last_px": 8.609999656677246,
+        "notional": 619.9199752807617,
+        "peak_px": 8.609999656677246,
+        "reason": "alarm; gate alarm=True; list yday_mover; ret5=+3.4; leftover $625.00",
+        "shares": 72,
+        "ticker": "ABTC"
+      },
+      "BTU": {
+        "close_px": 28.920000076293945,
+        "cost": 2.0900991776871356,
+        "entry_date": "2026-08-28",
+        "entry_px": 29.719999313354492,
+        "fee_in": 2.0900991776871356,
+        "last_px": 29.719999313354492,
+        "notional": 624.1199855804443,
+        "peak_px": 29.719999313354492,
+        "reason": "alarm; gate alarm=True; list ohlc_hot; ret5=+9.6; leftover $625.00",
+        "shares": 21,
+        "ticker": "BTU"
+      },
+      "CRCL": {
+        "close_px": 87.13999938964844,
+        "cost": 2.0432235617441674,
+        "entry_date": "2026-08-28",
+        "entry_px": 92.61000061035156,
+        "fee_in": 2.0432235617441674,
+        "last_px": 92.61000061035156,
+        "notional": 555.6600036621094,
+        "peak_px": 92.61000061035156,
+        "reason": "alarm; gate alarm=True; list ohlc_hot; ret5=+12.6; leftover $625.00",
+        "shares": 6,
+        "ticker": "CRCL"
+      },
+      "OPTU": {
+        "close_px": 1.0199999809265137,
+        "cost": 8.193323287671232,
+        "entry_date": "2026-08-28",
+        "entry_px": 1.0,
+        "fee_in": 8.193323287671232,
+        "last_px": 1.0,
+        "notional": 625.0,
+        "peak_px": 1.0,
+        "reason": "alarm; gate alarm=True; list yday_gainer; ret5=+16.8; leftover $625.00",
+        "shares": 625,
+        "ticker": "OPTU"
+      },
+      "PYXS": {
+        "close_px": 3.2300000190734863,
+        "cost": 2.6123002736287577,
+        "entry_date": "2026-08-28",
+        "entry_px": 3.319999933242798,
+        "fee_in": 2.6123002736287577,
+        "last_px": 3.319999933242798,
+        "notional": 624.159987449646,
+        "peak_px": 3.319999933242798,
+        "reason": "alarm; gate alarm=True; list probable,yday_gainer; ret5=+6.4; leftover $625.00",
+        "shares": 188,
+        "ticker": "PYXS"
+      },
+      "SAFX": {
+        "close_px": 0.35899999737739563,
+        "cost": 11.696120000447312,
+        "entry_date": "2026-08-28",
+        "entry_px": 0.36500000953674316,
+        "fee_in": 11.696120000447312,
+        "last_px": 0.36500000953674316,
+        "notional": 624.8800163269043,
+        "peak_px": 0.36500000953674316,
+        "reason": "alarm; gate alarm=True; list probable,yday_gainer; ret5=+7.6; leftover $625.00",
+        "shares": 1712,
+        "ticker": "SAFX"
+      },
+      "SBET": {
+        "close_px": 8.199999809265137,
+        "cost": 2.245063012946142,
+        "entry_date": "2026-08-28",
+        "entry_px": 8.649999618530273,
+        "fee_in": 2.245063012946142,
+        "last_px": 8.649999618530273,
+        "notional": 622.7999725341797,
+        "peak_px": 8.649999618530273,
+        "reason": "alarm; gate alarm=True; list ohlc_hot; ret5=+17.0; leftover $625.00",
+        "shares": 72,
+        "ticker": "SBET"
+      },
+      "XPOF": {
+        "close_px": 5.429999828338623,
+        "cost": 2.384398082555484,
+        "entry_date": "2026-08-28",
+        "entry_px": 5.380000114440918,
+        "fee_in": 2.384398082555484,
+        "last_px": 5.380000114440918,
+        "notional": 624.0800132751465,
+        "peak_px": 5.380000114440918,
+        "reason": "alarm; gate alarm=True; list probable,yday_gainer; ret5=+6.5; leftover $625.00",
+        "shares": 116,
+        "ticker": "XPOF"
+      }
+    },
+    "yday_equity": 10123.64
+  }
+}

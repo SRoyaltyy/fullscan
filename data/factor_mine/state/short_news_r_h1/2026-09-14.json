@@ -1,0 +1,64 @@
+{
+  "buys": [],
+  "cash": 11376.45,
+  "date": "2026-09-14",
+  "equity": 9955.2,
+  "fees": 14.7037,
+  "fills": [
+    {
+      "fees": 8.0496,
+      "pnl": 14.95,
+      "price": 1.98,
+      "shares": 624,
+      "side": "COVER",
+      "ticker": "CRDL"
+    },
+    {
+      "fees": 2.023,
+      "pnl": -18.13,
+      "price": 114.11,
+      "shares": 11,
+      "side": "COVER",
+      "ticker": "QRVO"
+    },
+    {
+      "fees": 4.6311,
+      "pnl": -12.96,
+      "price": 3.53,
+      "shares": 359,
+      "side": "COVER",
+      "ticker": "RWT"
+    }
+  ],
+  "holdings": [
+    "MYGN"
+  ],
+  "mean": -1.0828,
+  "n_trades_today": 3,
+  "recipe": "short_news_r_h1",
+  "sells": [
+    "CRDL",
+    "QRVO",
+    "RWT"
+  ],
+  "state": {
+    "after": "2026-09-14",
+    "cash": 11376.45,
+    "pos": {
+      "MYGN": {
+        "close_px": 3.7899999618530273,
+        "cost": 4.94452328649547,
+        "entry_date": "2026-09-11",
+        "entry_px": 3.369999885559082,
+        "fee_in": 4.94452328649547,
+        "last_px": 3.430000066757202,
+        "notional": 1263.7499570846558,
+        "peak_px": 3.369999885559082,
+        "reason": "news\ud83d\udd34; gate news=bad; list yday_gainer,ohlc_hot; ret5=+4.0; leftover $1266.72",
+        "shares": 375,
+        "ticker": "MYGN"
+      }
+    },
+    "yday_equity": 9955.2
+  }
+}

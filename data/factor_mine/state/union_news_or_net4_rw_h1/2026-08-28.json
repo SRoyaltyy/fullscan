@@ -1,0 +1,95 @@
+{
+  "buys": [
+    "KEYS",
+    "SMTC",
+    "CIEN"
+  ],
+  "cash": 1522.36,
+  "date": "2026-08-28",
+  "equity": 9630.33,
+  "fees": 6.081,
+  "fills": [
+    {
+      "fees": 2.026,
+      "pnl": null,
+      "price": 324.41,
+      "shares": 12,
+      "side": "BUY",
+      "ticker": "KEYS"
+    },
+    {
+      "fees": 2.053,
+      "pnl": null,
+      "price": 141.76,
+      "shares": 21,
+      "side": "BUY",
+      "ticker": "SMTC"
+    },
+    {
+      "fees": 2.002,
+      "pnl": null,
+      "price": 400.42,
+      "shares": 4,
+      "side": "BUY",
+      "ticker": "CIEN"
+    }
+  ],
+  "holdings": [
+    "CIEN",
+    "KEYS",
+    "SMTC"
+  ],
+  "mean": -3.6967,
+  "n_trades_today": 3,
+  "recipe": "union_news_or_net4_rw_h1",
+  "sells": [],
+  "state": {
+    "after": "2026-08-28",
+    "cash": 1522.36,
+    "pos": {
+      "CIEN": {
+        "close_px": 378.44000244140625,
+        "cost": 1603.6820537109375,
+        "entry_date": "2026-08-28",
+        "entry_px": 400.4200134277344,
+        "fee_in": 2.002,
+        "last_px": 400.4200134277344,
+        "min_hold": 1,
+        "notional": 1601.6800537109375,
+        "peak_px": 400.4200134277344,
+        "reason": "OR news + net\u22654; leftover weighted by camera rank; gate news_or_headline=True,cam_net_min=4; rank cond; list mover_buy; \ud83d\udd35; ret5=+1.9; leftover $2000.00",
+        "shares": 4,
+        "ticker": "CIEN"
+      },
+      "KEYS": {
+        "close_px": 319.9700012207031,
+        "cost": 3894.9460439453123,
+        "entry_date": "2026-08-28",
+        "entry_px": 324.4100036621094,
+        "fee_in": 2.026,
+        "last_px": 324.4100036621094,
+        "min_hold": 1,
+        "notional": 3892.9200439453125,
+        "peak_px": 324.4100036621094,
+        "reason": "OR news + net\u22654; leftover weighted by camera rank; gate news_or_headline=True,cam_net_min=4; rank cond; list mover_buy; \ud83d\udd35; \u26aa; ret5=+2.9; leftover $4000.00",
+        "shares": 12,
+        "ticker": "KEYS"
+      },
+      "SMTC": {
+        "close_px": 131.1699981689453,
+        "cost": 2979.0128846435546,
+        "entry_date": "2026-08-28",
+        "entry_px": 141.75999450683594,
+        "fee_in": 2.053,
+        "last_px": 141.75999450683594,
+        "min_hold": 1,
+        "notional": 2976.9598846435547,
+        "peak_px": 141.75999450683594,
+        "reason": "OR news + net\u22654; leftover weighted by camera rank; gate news_or_headline=True,cam_net_min=4; rank cond; list yday_gainer,yday_mover,mover_buy; \ud83d\udd35; \u26aa; ret5=+14.1; leftover $3000.00",
+        "shares": 21,
+        "ticker": "SMTC"
+      }
+    },
+    "yday_equity": 9630.33
+  }
+}

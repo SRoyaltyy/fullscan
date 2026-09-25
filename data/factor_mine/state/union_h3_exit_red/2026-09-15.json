@@ -1,0 +1,137 @@
+{
+  "buys": [],
+  "cash": 1354.45,
+  "date": "2026-09-15",
+  "equity": 8852.7,
+  "fees": 2.073,
+  "fills": [
+    {
+      "fees": 2.073,
+      "pnl": -67.97,
+      "price": 49.51,
+      "shares": 21,
+      "side": "SELL",
+      "ticker": "BAND"
+    }
+  ],
+  "holdings": [
+    "APPS",
+    "BAK",
+    "COHU",
+    "FUBO",
+    "RDDT",
+    "SANM",
+    "VIST"
+  ],
+  "mean": -0.9495,
+  "n_trades_today": 1,
+  "recipe": "union_h3_exit_red",
+  "sells": [
+    "BAND"
+  ],
+  "state": {
+    "after": "2026-09-15",
+    "cash": 1354.45,
+    "pos": {
+      "APPS": {
+        "close_px": 11.380000114440918,
+        "cost": 1154.641011100769,
+        "entry_date": "2026-09-11",
+        "entry_px": 11.880000114440918,
+        "fee_in": 2.281,
+        "last_px": 11.510000228881836,
+        "min_hold": 3,
+        "notional": 1152.360011100769,
+        "peak_px": 11.880000114440918,
+        "reason": "buy last-green, sell next 09:30 if last bar flipped red; gate last_green=True; list probable,yday_gainer; ret5=+8.5; leftover $1154.08",
+        "shares": 97,
+        "ticker": "APPS"
+      },
+      "BAK": {
+        "close_px": 2.0999999046325684,
+        "cost": 1160.2975377441405,
+        "entry_date": "2026-09-11",
+        "entry_px": 2.119999885559082,
+        "fee_in": 7.0176,
+        "last_px": 2.0199999809265137,
+        "min_hold": 3,
+        "notional": 1153.2799377441406,
+        "peak_px": 2.119999885559082,
+        "reason": "buy last-green, sell next 09:30 if last bar flipped red; gate last_green=True; list probable,yday_gainer,ohlc_hot; \ud83d\udd35; ret5=+8.8; leftover $1154.08",
+        "shares": 544,
+        "ticker": "BAK"
+      },
+      "COHU": {
+        "close_px": 49.970001220703125,
+        "cost": 1123.8500030517578,
+        "entry_date": "2026-09-11",
+        "entry_px": 56.09000015258789,
+        "fee_in": 2.05,
+        "last_px": 51.06999969482422,
+        "min_hold": 3,
+        "notional": 1121.8000030517578,
+        "peak_px": 56.09000015258789,
+        "reason": "buy last-green, sell next 09:30 if last bar flipped red; gate last_green=True; list flatten; \ud83d\udd35; \u26aa; ret5=+19.0; leftover $1154.08",
+        "shares": 20,
+        "ticker": "COHU"
+      },
+      "FUBO": {
+        "close_px": 10.90999984741211,
+        "cost": 1145.7370188827515,
+        "entry_date": "2026-09-11",
+        "entry_px": 11.550000190734863,
+        "fee_in": 2.287,
+        "last_px": 11.699999809265137,
+        "min_hold": 3,
+        "notional": 1143.4500188827515,
+        "peak_px": 11.699999809265137,
+        "reason": "buy last-green, sell next 09:30 if last bar flipped red; gate last_green=True; list probable,yday_gainer; ret5=-1.6; leftover $1154.08",
+        "shares": 99,
+        "ticker": "FUBO"
+      },
+      "RDDT": {
+        "close_px": 159.6300048828125,
+        "cost": 1104.8610213623047,
+        "entry_date": "2026-09-11",
+        "entry_px": 157.5500030517578,
+        "fee_in": 2.011,
+        "last_px": 157.89999389648438,
+        "min_hold": 3,
+        "notional": 1102.8500213623047,
+        "peak_px": 160.0,
+        "reason": "buy last-green, sell next 09:30 if last bar flipped red; gate last_green=True; list probable,yday_gainer; ret5=-0.4; leftover $1154.08",
+        "shares": 7,
+        "ticker": "RDDT"
+      },
+      "SANM": {
+        "close_px": 191.61000061035156,
+        "cost": 1036.2049816894532,
+        "entry_date": "2026-09-11",
+        "entry_px": 206.83999633789062,
+        "fee_in": 2.005,
+        "last_px": 198.32000732421875,
+        "min_hold": 3,
+        "notional": 1034.1999816894531,
+        "peak_px": 206.83999633789062,
+        "reason": "buy last-green, sell next 09:30 if last bar flipped red; gate last_green=True; list flatten; ret5=+3.9; leftover $1154.08",
+        "shares": 5,
+        "ticker": "SANM"
+      },
+      "VIST": {
+        "close_px": 78.36000061035156,
+        "cost": 1084.6520256347656,
+        "entry_date": "2026-09-11",
+        "entry_px": 77.33000183105469,
+        "fee_in": 2.032,
+        "last_px": 76.73999786376953,
+        "min_hold": 3,
+        "notional": 1082.6200256347656,
+        "peak_px": 77.33000183105469,
+        "reason": "buy last-green, sell next 09:30 if last bar flipped red; gate last_green=True; list probable,yday_gainer; ret5=+5.8; leftover $1154.08",
+        "shares": 14,
+        "ticker": "VIST"
+      }
+    },
+    "yday_equity": 8852.7
+  }
+}

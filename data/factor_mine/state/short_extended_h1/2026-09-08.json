@@ -1,0 +1,93 @@
+{
+  "buys": [],
+  "cash": 9917.8,
+  "date": "2026-09-08",
+  "equity": 9917.8,
+  "fees": 23.1513,
+  "fills": [
+    {
+      "fees": 2.062,
+      "pnl": -34.4,
+      "price": 26.44,
+      "shares": 24,
+      "side": "COVER",
+      "ticker": "ASST"
+    },
+    {
+      "fees": 4.1667,
+      "pnl": -8.41,
+      "price": 1.94,
+      "shares": 323,
+      "side": "COVER",
+      "ticker": "BAK"
+    },
+    {
+      "fees": 2.134,
+      "pnl": -11.99,
+      "price": 13.11,
+      "shares": 48,
+      "side": "COVER",
+      "ticker": "FMC"
+    },
+    {
+      "fees": 5.4696,
+      "pnl": -47.08,
+      "price": 1.565,
+      "shares": 424,
+      "side": "COVER",
+      "ticker": "GPRO"
+    },
+    {
+      "fees": 2.404,
+      "pnl": -4.86,
+      "price": 4.53,
+      "shares": 138,
+      "side": "COVER",
+      "ticker": "IRD"
+    },
+    {
+      "fees": 2.317,
+      "pnl": -26.48,
+      "price": 5.95,
+      "shares": 109,
+      "side": "COVER",
+      "ticker": "LENZ"
+    },
+    {
+      "fees": 2.587,
+      "pnl": 48.5,
+      "price": 2.88,
+      "shares": 199,
+      "side": "COVER",
+      "ticker": "SLBT"
+    },
+    {
+      "fees": 2.011,
+      "pnl": -52.85,
+      "price": 89.67,
+      "shares": 7,
+      "side": "COVER",
+      "ticker": "TARS"
+    }
+  ],
+  "holdings": [],
+  "mean": 0.5699,
+  "n_trades_today": 8,
+  "recipe": "short_extended_h1",
+  "sells": [
+    "ASST",
+    "BAK",
+    "FMC",
+    "GPRO",
+    "IRD",
+    "LENZ",
+    "SLBT",
+    "TARS"
+  ],
+  "state": {
+    "after": "2026-09-08",
+    "cash": 9917.8,
+    "pos": {},
+    "yday_equity": 9917.8
+  }
+}

@@ -1,0 +1,174 @@
+{
+  "buys": [
+    "IQV",
+    "RDNT",
+    "AVAH",
+    "BLFS"
+  ],
+  "cash": 297.22,
+  "date": "2026-09-16",
+  "equity": 8444.14,
+  "fees": 26.4419,
+  "fills": [
+    {
+      "fees": 2.2965,
+      "pnl": -15.73,
+      "price": 16.16,
+      "shares": 93,
+      "side": "SELL",
+      "ticker": "AUPH"
+    },
+    {
+      "fees": 2.0921,
+      "pnl": -133.76,
+      "price": 51.29,
+      "shares": 27,
+      "side": "SELL",
+      "ticker": "COHU"
+    },
+    {
+      "fees": 2.0376,
+      "pnl": -93.96,
+      "price": 147.79,
+      "shares": 9,
+      "side": "SELL",
+      "ticker": "NVT"
+    },
+    {
+      "fees": 2.0371,
+      "pnl": -223.65,
+      "price": 140.03,
+      "shares": 9,
+      "side": "SELL",
+      "ticker": "ORCL"
+    },
+    {
+      "fees": 7.2637,
+      "pnl": -19.97,
+      "price": 2.72,
+      "shares": 555,
+      "side": "SELL",
+      "ticker": "OVID"
+    },
+    {
+      "fees": 2.0319,
+      "pnl": -88.04,
+      "price": 194.84,
+      "shares": 7,
+      "side": "SELL",
+      "ticker": "SANM"
+    },
+    {
+      "fees": 2.011,
+      "pnl": null,
+      "price": 270.89,
+      "shares": 7,
+      "side": "BUY",
+      "ticker": "IQV"
+    },
+    {
+      "fees": 2.071,
+      "pnl": null,
+      "price": 77.12,
+      "shares": 27,
+      "side": "BUY",
+      "ticker": "RDNT"
+    },
+    {
+      "fees": 2.437,
+      "pnl": null,
+      "price": 14.31,
+      "shares": 149,
+      "side": "BUY",
+      "ticker": "AVAH"
+    },
+    {
+      "fees": 2.164,
+      "pnl": null,
+      "price": 36.46,
+      "shares": 58,
+      "side": "BUY",
+      "ticker": "BLFS"
+    }
+  ],
+  "holdings": [
+    "AVAH",
+    "BLFS",
+    "IQV",
+    "RDNT"
+  ],
+  "mean": -0.3804,
+  "n_trades_today": 10,
+  "recipe": "flatten_h3_sizeup",
+  "sells": [
+    "AUPH",
+    "COHU",
+    "NVT",
+    "ORCL",
+    "OVID",
+    "SANM"
+  ],
+  "state": {
+    "after": "2026-09-16",
+    "cash": 297.22,
+    "pos": {
+      "AVAH": {
+        "close_px": 14.260000228881836,
+        "cost": 2134.627062522888,
+        "entry_date": "2026-09-16",
+        "entry_px": 14.3100004196167,
+        "fee_in": 2.437,
+        "last_px": 14.3100004196167,
+        "min_hold": 3,
+        "notional": 2132.190062522888,
+        "peak_px": 14.3100004196167,
+        "reason": "S\u2265+5: 1.35\u00d7 leftover; list flatten; wish-list (live io HOLD \u2014 not a ticket); \u26aa; ret5=+4.8; leftover $2132.81",
+        "shares": 149,
+        "ticker": "AVAH"
+      },
+      "BLFS": {
+        "close_px": 36.11000061035156,
+        "cost": 2116.8439468994143,
+        "entry_date": "2026-09-16",
+        "entry_px": 36.459999084472656,
+        "fee_in": 2.164,
+        "last_px": 36.459999084472656,
+        "min_hold": 3,
+        "notional": 2114.679946899414,
+        "peak_px": 36.459999084472656,
+        "reason": "S\u2265+5: 1.35\u00d7 leftover; list flatten; wish-list (live io HOLD \u2014 not a ticket); \ud83d\udd35; \u26aa; ret5=+2.9; leftover $2132.81",
+        "shares": 58,
+        "ticker": "BLFS"
+      },
+      "IQV": {
+        "close_px": 268.82000732421875,
+        "cost": 1898.2411025390625,
+        "entry_date": "2026-09-16",
+        "entry_px": 270.8900146484375,
+        "fee_in": 2.011,
+        "last_px": 270.8900146484375,
+        "min_hold": 3,
+        "notional": 1896.2301025390625,
+        "peak_px": 270.8900146484375,
+        "reason": "S\u2265+5: 1.35\u00d7 leftover; list flatten; wish-list (live io HOLD \u2014 not a ticket); \u26aa; ret5=+4.0; leftover $2132.81",
+        "shares": 7,
+        "ticker": "IQV"
+      },
+      "RDNT": {
+        "close_px": 75.77999877929688,
+        "cost": 2084.3110741577148,
+        "entry_date": "2026-09-16",
+        "entry_px": 77.12000274658203,
+        "fee_in": 2.071,
+        "last_px": 77.12000274658203,
+        "min_hold": 3,
+        "notional": 2082.240074157715,
+        "peak_px": 77.12000274658203,
+        "reason": "S\u2265+5: 1.35\u00d7 leftover; list flatten; wish-list (live io HOLD \u2014 not a ticket); \u26aa; ret5=+7.2; leftover $2132.81",
+        "shares": 27,
+        "ticker": "RDNT"
+      }
+    },
+    "yday_equity": 8444.14
+  }
+}

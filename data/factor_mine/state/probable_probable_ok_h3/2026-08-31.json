@@ -1,0 +1,36 @@
+{
+  "buys": [],
+  "cash": 6.06,
+  "date": "2026-08-31",
+  "equity": 9498.27,
+  "fees": 0,
+  "fills": [],
+  "holdings": [
+    "OPTX"
+  ],
+  "mean": -3.8709,
+  "n_trades_today": 0,
+  "recipe": "probable_probable_ok_h3",
+  "sells": [],
+  "state": {
+    "after": "2026-08-31",
+    "cash": 6.06,
+    "pos": {
+      "OPTX": {
+        "close_px": 8.1899995803833,
+        "cost": 9993.940702088928,
+        "entry_date": "2026-08-28",
+        "entry_px": 8.609999656677246,
+        "fee_in": 14.9511,
+        "last_px": 8.520000457763672,
+        "min_hold": 3,
+        "notional": 9978.989602088928,
+        "peak_px": 8.609999656677246,
+        "reason": "combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer; ret5=-0.7; leftover $10000.00",
+        "shares": 1159,
+        "ticker": "OPTX"
+      }
+    },
+    "yday_equity": 9498.27
+  }
+}

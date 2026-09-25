@@ -1,0 +1,66 @@
+{
+  "buys": [],
+  "cash": 9737.93,
+  "date": "2026-08-31",
+  "equity": 9737.93,
+  "fees": 10.6718,
+  "fills": [
+    {
+      "fees": 2.0544,
+      "pnl": 21.4,
+      "price": 148.03,
+      "shares": 13,
+      "side": "SELL",
+      "ticker": "ANF"
+    },
+    {
+      "fees": 2.2745,
+      "pnl": -58.92,
+      "price": 22.66,
+      "shares": 85,
+      "side": "SELL",
+      "ticker": "NCNO"
+    },
+    {
+      "fees": 2.195,
+      "pnl": -109.37,
+      "price": 31.15,
+      "shares": 60,
+      "side": "SELL",
+      "ticker": "SEDG"
+    },
+    {
+      "fees": 2.0568,
+      "pnl": -136.53,
+      "price": 132.3,
+      "shares": 14,
+      "side": "SELL",
+      "ticker": "SMTC"
+    },
+    {
+      "fees": 2.0911,
+      "pnl": 21.34,
+      "price": 80.44,
+      "shares": 25,
+      "side": "SELL",
+      "ticker": "URBN"
+    }
+  ],
+  "holdings": [],
+  "mean": -0.6105,
+  "n_trades_today": 5,
+  "recipe": "union_blue_vol_h1",
+  "sells": [
+    "ANF",
+    "NCNO",
+    "SEDG",
+    "SMTC",
+    "URBN"
+  ],
+  "state": {
+    "after": "2026-08-31",
+    "cash": 9737.93,
+    "pos": {},
+    "yday_equity": 9737.93
+  }
+}

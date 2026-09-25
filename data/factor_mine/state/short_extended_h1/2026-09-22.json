@@ -1,0 +1,262 @@
+{
+  "buys": [
+    "GLND",
+    "CRML",
+    "GRAL",
+    "NUAI",
+    "VGZ",
+    "ARM",
+    "ARQQ"
+  ],
+  "cash": 14312.71,
+  "date": "2026-09-22",
+  "equity": 9221.8,
+  "fees": 34.2702,
+  "fills": [
+    {
+      "fees": 2.838,
+      "pnl": -110.24,
+      "price": 3.51,
+      "shares": 220,
+      "side": "COVER",
+      "ticker": "CYPH"
+    },
+    {
+      "fees": 2.287,
+      "pnl": 28.05,
+      "price": 6.18,
+      "shares": 99,
+      "side": "COVER",
+      "ticker": "DFDV"
+    },
+    {
+      "fees": 3.3927,
+      "pnl": -6.86,
+      "price": 2.47,
+      "shares": 263,
+      "side": "COVER",
+      "ticker": "FEAM"
+    },
+    {
+      "fees": 2.227,
+      "pnl": -0.54,
+      "price": 8.17,
+      "shares": 79,
+      "side": "COVER",
+      "ticker": "FWDI"
+    },
+    {
+      "fees": 2.329,
+      "pnl": -38.6,
+      "price": 6.055,
+      "shares": 113,
+      "side": "COVER",
+      "ticker": "GEMI"
+    },
+    {
+      "fees": 2.176,
+      "pnl": 11.11,
+      "price": 10.18,
+      "shares": 62,
+      "side": "COVER",
+      "ticker": "IOVA"
+    },
+    {
+      "fees": 2.104,
+      "pnl": -29.71,
+      "price": 17.58,
+      "shares": 38,
+      "side": "COVER",
+      "ticker": "TJGC"
+    },
+    {
+      "fees": 2.928581644183642,
+      "pnl": null,
+      "price": 2.94,
+      "shares": 222,
+      "side": "SHORT",
+      "ticker": "GLND"
+    },
+    {
+      "fees": 2.242520821249975,
+      "pnl": null,
+      "price": 9.11,
+      "shares": 71,
+      "side": "SHORT",
+      "ticker": "CRML"
+    },
+    {
+      "fees": 2.0455479452054797,
+      "pnl": null,
+      "price": 106.75,
+      "shares": 6,
+      "side": "SHORT",
+      "ticker": "GRAL"
+    },
+    {
+      "fees": 2.3027273973073044,
+      "pnl": null,
+      "price": 7.23,
+      "shares": 90,
+      "side": "SHORT",
+      "ticker": "NUAI"
+    },
+    {
+      "fees": 3.2552328773576917,
+      "pnl": null,
+      "price": 2.65,
+      "shares": 247,
+      "side": "SHORT",
+      "ticker": "VGZ"
+    },
+    {
+      "fees": 2.033501918008883,
+      "pnl": null,
+      "price": 319.41,
+      "shares": 2,
+      "side": "SHORT",
+      "ticker": "ARM"
+    },
+    {
+      "fees": 2.10839095890411,
+      "pnl": null,
+      "price": 23.51,
+      "shares": 27,
+      "side": "SHORT",
+      "ticker": "ARQQ"
+    }
+  ],
+  "holdings": [
+    "ARM",
+    "ARQQ",
+    "CRML",
+    "GLND",
+    "GRAL",
+    "NUAI",
+    "USDE",
+    "VGZ"
+  ],
+  "mean": 0.1675,
+  "n_trades_today": 14,
+  "recipe": "short_extended_h1",
+  "sells": [
+    "CYPH",
+    "DFDV",
+    "FEAM",
+    "FWDI",
+    "GEMI",
+    "IOVA",
+    "TJGC"
+  ],
+  "state": {
+    "after": "2026-09-22",
+    "cash": 14312.71,
+    "pos": {
+      "ARM": {
+        "close_px": 333.20001220703125,
+        "cost": 2.033501918008883,
+        "entry_date": "2026-09-22",
+        "entry_px": 319.4100036621094,
+        "fee_in": 2.033501918008883,
+        "last_px": 319.4100036621094,
+        "notional": 638.8200073242188,
+        "peak_px": 319.4100036621094,
+        "reason": "ret_5>15; gate ret_5_min=15.0; list yday_gainer,yday_mover; ret5=+35.1; leftover $655.31",
+        "shares": 2,
+        "ticker": "ARM"
+      },
+      "ARQQ": {
+        "close_px": 23.04,
+        "cost": 2.10839095890411,
+        "entry_date": "2026-09-22",
+        "entry_px": 23.51,
+        "fee_in": 2.10839095890411,
+        "last_px": 23.51,
+        "notional": 634.7700000000001,
+        "peak_px": 23.51,
+        "reason": "ret_5>15; gate ret_5_min=15.0; list yday_gainer,yday_mover; ret5=+44.4; leftover $655.31",
+        "shares": 27,
+        "ticker": "ARQQ"
+      },
+      "CRML": {
+        "close_px": 8.539999961853027,
+        "cost": 2.242520821249975,
+        "entry_date": "2026-09-22",
+        "entry_px": 9.109999656677246,
+        "fee_in": 2.242520821249975,
+        "last_px": 9.109999656677246,
+        "notional": 646.8099756240845,
+        "peak_px": 9.109999656677246,
+        "reason": "ret_5>15; gate ret_5_min=15.0; list yday_gainer,yday_mover; ret5=+44.4; leftover $655.31",
+        "shares": 71,
+        "ticker": "CRML"
+      },
+      "GLND": {
+        "close_px": 2.509999990463257,
+        "cost": 2.928581644183642,
+        "entry_date": "2026-09-22",
+        "entry_px": 2.940000057220459,
+        "fee_in": 2.928581644183642,
+        "last_px": 2.940000057220459,
+        "notional": 652.6800127029419,
+        "peak_px": 2.940000057220459,
+        "reason": "ret_5>15; gate ret_5_min=15.0; list yday_gainer,yday_mover; ret5=+136.1; leftover $655.31",
+        "shares": 222,
+        "ticker": "GLND"
+      },
+      "GRAL": {
+        "close_px": 108.52,
+        "cost": 2.0455479452054797,
+        "entry_date": "2026-09-22",
+        "entry_px": 106.75,
+        "fee_in": 2.0455479452054797,
+        "last_px": 106.75,
+        "notional": 640.5,
+        "peak_px": 106.75,
+        "reason": "ret_5>15; gate ret_5_min=15.0; list yday_gainer,yday_mover; ret5=+42.9; leftover $655.31",
+        "shares": 6,
+        "ticker": "GRAL"
+      },
+      "NUAI": {
+        "close_px": 6.974999904632568,
+        "cost": 2.3027273973073044,
+        "entry_date": "2026-09-22",
+        "entry_px": 7.230000019073486,
+        "fee_in": 2.3027273973073044,
+        "last_px": 7.230000019073486,
+        "notional": 650.7000017166138,
+        "peak_px": 7.230000019073486,
+        "reason": "ret_5>15; gate ret_5_min=15.0; list yday_gainer,yday_mover; ret5=+36.6; leftover $655.31",
+        "shares": 90,
+        "ticker": "NUAI"
+      },
+      "USDE": {
+        "close_px": 13.539999961853027,
+        "cost": 2.174519178338247,
+        "entry_date": "2026-09-21",
+        "entry_px": 13.050000190734863,
+        "fee_in": 2.174519178338247,
+        "last_px": 12.989999771118164,
+        "notional": 639.4500093460083,
+        "peak_px": 12.989999771118164,
+        "reason": "ret_5>15; gate ret_5_min=15.0; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+40.4; leftover $650.36",
+        "shares": 49,
+        "ticker": "USDE"
+      },
+      "VGZ": {
+        "close_px": 2.819999933242798,
+        "cost": 3.2552328773576917,
+        "entry_date": "2026-09-22",
+        "entry_px": 2.6500000953674316,
+        "fee_in": 3.2552328773576917,
+        "last_px": 2.6500000953674316,
+        "notional": 654.5500235557556,
+        "peak_px": 2.6500000953674316,
+        "reason": "ret_5>15; gate ret_5_min=15.0; list yday_gainer,yday_mover; ret5=+26.3; leftover $655.31",
+        "shares": 247,
+        "ticker": "VGZ"
+      }
+    },
+    "yday_equity": 9221.8
+  }
+}

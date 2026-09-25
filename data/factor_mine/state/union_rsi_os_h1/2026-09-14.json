@@ -1,0 +1,48 @@
+{
+  "buys": [],
+  "cash": 9190.75,
+  "date": "2026-09-14",
+  "equity": 9190.75,
+  "fees": 15.9958,
+  "fills": [
+    {
+      "fees": 2.1891,
+      "pnl": 2.26,
+      "price": 54.78,
+      "shares": 55,
+      "side": "SELL",
+      "ticker": "COO"
+    },
+    {
+      "fees": 2.4802,
+      "pnl": 67.12,
+      "price": 21.1,
+      "shares": 147,
+      "side": "SELL",
+      "ticker": "NAVN"
+    },
+    {
+      "fees": 11.3265,
+      "pnl": -13.84,
+      "price": 3.53,
+      "shares": 865,
+      "side": "SELL",
+      "ticker": "RWT"
+    }
+  ],
+  "holdings": [],
+  "mean": 0.2871,
+  "n_trades_today": 3,
+  "recipe": "union_rsi_os_h1",
+  "sells": [
+    "COO",
+    "NAVN",
+    "RWT"
+  ],
+  "state": {
+    "after": "2026-09-14",
+    "cash": 9190.75,
+    "pos": {},
+    "yday_equity": 9190.75
+  }
+}

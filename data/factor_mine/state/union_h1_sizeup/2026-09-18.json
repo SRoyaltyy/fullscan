@@ -1,0 +1,288 @@
+{
+  "buys": [
+    "RBRK",
+    "DELL",
+    "GNRC",
+    "VICR",
+    "ECO",
+    "FIVN",
+    "EYPT",
+    "BHVN"
+  ],
+  "cash": 331.49,
+  "date": "2026-09-18",
+  "equity": 9467.39,
+  "fees": 35.6978,
+  "fills": [
+    {
+      "fees": 2.109,
+      "pnl": -17.73,
+      "price": 34.52,
+      "shares": 33,
+      "side": "SELL",
+      "ticker": "AMN"
+    },
+    {
+      "fees": 2.061,
+      "pnl": 26.67,
+      "price": 69.72,
+      "shares": 17,
+      "side": "SELL",
+      "ticker": "AXTI"
+    },
+    {
+      "fees": 2.2346,
+      "pnl": 111.73,
+      "price": 17.44,
+      "shares": 74,
+      "side": "SELL",
+      "ticker": "BRUN"
+    },
+    {
+      "fees": 2.025,
+      "pnl": 72.37,
+      "price": 249.13,
+      "shares": 5,
+      "side": "SELL",
+      "ticker": "ILMN"
+    },
+    {
+      "fees": 2.3641,
+      "pnl": -19.65,
+      "price": 10.12,
+      "shares": 115,
+      "side": "SELL",
+      "ticker": "IOVA"
+    },
+    {
+      "fees": 2.4907,
+      "pnl": 55.5,
+      "price": 7.98,
+      "shares": 155,
+      "side": "SELL",
+      "ticker": "PGEN"
+    },
+    {
+      "fees": 2.031,
+      "pnl": -11.81,
+      "price": 146.5,
+      "shares": 7,
+      "side": "SELL",
+      "ticker": "RVTY"
+    },
+    {
+      "fees": 2.031,
+      "pnl": 42.23,
+      "price": 158.04,
+      "shares": 7,
+      "side": "SELL",
+      "ticker": "TWST"
+    },
+    {
+      "fees": 2.023,
+      "pnl": null,
+      "price": 108.55,
+      "shares": 11,
+      "side": "BUY",
+      "ticker": "RBRK"
+    },
+    {
+      "fees": 1.996,
+      "pnl": null,
+      "price": 593.15,
+      "shares": 2,
+      "side": "BUY",
+      "ticker": "DELL"
+    },
+    {
+      "fees": 2.005,
+      "pnl": null,
+      "price": 209.52,
+      "shares": 5,
+      "side": "BUY",
+      "ticker": "GNRC"
+    },
+    {
+      "fees": 2.005,
+      "pnl": null,
+      "price": 219.62,
+      "shares": 5,
+      "side": "BUY",
+      "ticker": "VICR"
+    },
+    {
+      "fees": 2.032,
+      "pnl": null,
+      "price": 85.0,
+      "shares": 14,
+      "side": "BUY",
+      "ticker": "ECO"
+    },
+    {
+      "fees": 2.095,
+      "pnl": null,
+      "price": 34.44,
+      "shares": 35,
+      "side": "BUY",
+      "ticker": "FIVN"
+    },
+    {
+      "fees": 3.9474,
+      "pnl": null,
+      "price": 3.95,
+      "shares": 306,
+      "side": "BUY",
+      "ticker": "EYPT"
+    },
+    {
+      "fees": 2.248,
+      "pnl": null,
+      "price": 14.07,
+      "shares": 86,
+      "side": "BUY",
+      "ticker": "BHVN"
+    }
+  ],
+  "holdings": [
+    "BHVN",
+    "DELL",
+    "ECO",
+    "EYPT",
+    "FIVN",
+    "GNRC",
+    "RBRK",
+    "VICR"
+  ],
+  "mean": -0.9124,
+  "n_trades_today": 16,
+  "recipe": "union_h1_sizeup",
+  "sells": [
+    "AMN",
+    "AXTI",
+    "BRUN",
+    "ILMN",
+    "IOVA",
+    "PGEN",
+    "RVTY",
+    "TWST"
+  ],
+  "state": {
+    "after": "2026-09-18",
+    "cash": 331.49,
+    "pos": {
+      "BHVN": {
+        "close_px": 13.619999885559082,
+        "cost": 1212.2679737548829,
+        "entry_date": "2026-09-18",
+        "entry_px": 14.069999694824219,
+        "fee_in": 2.248,
+        "last_px": 14.069999694824219,
+        "min_hold": 1,
+        "notional": 1210.0199737548828,
+        "peak_px": 14.069999694824219,
+        "reason": "S\u2265+5: 1.35\u00d7 leftover; list probable,yday_gainer,yday_mover; \ud83d\udd35; ret5=+8.6; leftover $1211.25",
+        "shares": 86,
+        "ticker": "BHVN"
+      },
+      "DELL": {
+        "close_px": 568.0599975585938,
+        "cost": 1188.296048828125,
+        "entry_date": "2026-09-18",
+        "entry_px": 593.1500244140625,
+        "fee_in": 1.996,
+        "last_px": 593.1500244140625,
+        "min_hold": 1,
+        "notional": 1186.300048828125,
+        "peak_px": 593.1500244140625,
+        "reason": "S\u2265+5: 1.35\u00d7 leftover; list flatten,ohlc_hot; ret5=+16.1; leftover $1211.25",
+        "shares": 2,
+        "ticker": "DELL"
+      },
+      "ECO": {
+        "close_px": 84.94999694824219,
+        "cost": 1192.032,
+        "entry_date": "2026-09-18",
+        "entry_px": 85.0,
+        "fee_in": 2.032,
+        "last_px": 85.0,
+        "min_hold": 1,
+        "notional": 1190.0,
+        "peak_px": 85.0,
+        "reason": "S\u2265+5: 1.35\u00d7 leftover; list flatten; \ud83d\udd35; \u26aa; ret5=+18.3; leftover $1211.25",
+        "shares": 14,
+        "ticker": "ECO"
+      },
+      "EYPT": {
+        "close_px": 3.8499999046325684,
+        "cost": 1212.647414591217,
+        "entry_date": "2026-09-18",
+        "entry_px": 3.950000047683716,
+        "fee_in": 3.9474,
+        "last_px": 3.950000047683716,
+        "min_hold": 1,
+        "notional": 1208.700014591217,
+        "peak_px": 3.950000047683716,
+        "reason": "S\u2265+5: 1.35\u00d7 leftover; list probable,yday_gainer,yday_mover; \ud83d\udd35; ret5=-6.1; leftover $1211.25",
+        "shares": 306,
+        "ticker": "EYPT"
+      },
+      "FIVN": {
+        "close_px": 32.470001220703125,
+        "cost": 1207.4949519348145,
+        "entry_date": "2026-09-18",
+        "entry_px": 34.439998626708984,
+        "fee_in": 2.095,
+        "last_px": 34.439998626708984,
+        "min_hold": 1,
+        "notional": 1205.3999519348145,
+        "peak_px": 34.439998626708984,
+        "reason": "S\u2265+5: 1.35\u00d7 leftover; list flatten; \ud83d\udd35; \u26aa; ret5=+14.0; leftover $1211.25",
+        "shares": 35,
+        "ticker": "FIVN"
+      },
+      "GNRC": {
+        "close_px": 207.44000244140625,
+        "cost": 1049.6050213623048,
+        "entry_date": "2026-09-18",
+        "entry_px": 209.52000427246094,
+        "fee_in": 2.005,
+        "last_px": 209.52000427246094,
+        "min_hold": 1,
+        "notional": 1047.6000213623047,
+        "peak_px": 209.52000427246094,
+        "reason": "S\u2265+5: 1.35\u00d7 leftover; list flatten,yday_gainer,yday_mover; \ud83d\udd35; ret5=+14.1; leftover $1211.25",
+        "shares": 5,
+        "ticker": "GNRC"
+      },
+      "RBRK": {
+        "close_px": 106.70999908447266,
+        "cost": 1196.0730335693358,
+        "entry_date": "2026-09-18",
+        "entry_px": 108.55000305175781,
+        "fee_in": 2.023,
+        "last_px": 108.55000305175781,
+        "min_hold": 1,
+        "notional": 1194.050033569336,
+        "peak_px": 108.55000305175781,
+        "reason": "S\u2265+5: 1.35\u00d7 leftover; list flatten; \u26aa; ret5=+21.3; leftover $1211.25",
+        "shares": 11,
+        "ticker": "RBRK"
+      },
+      "VICR": {
+        "close_px": 222.72000122070312,
+        "cost": 1100.1049755859376,
+        "entry_date": "2026-09-18",
+        "entry_px": 219.6199951171875,
+        "fee_in": 2.005,
+        "last_px": 219.6199951171875,
+        "min_hold": 1,
+        "notional": 1098.0999755859375,
+        "peak_px": 219.6199951171875,
+        "reason": "S\u2265+5: 1.35\u00d7 leftover; list flatten,yday_gainer,yday_mover; \ud83d\udd35; ret5=+21.5; leftover $1211.25",
+        "shares": 5,
+        "ticker": "VICR"
+      }
+    },
+    "yday_equity": 9467.39
+  }
+}

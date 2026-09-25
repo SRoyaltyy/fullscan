@@ -1,0 +1,193 @@
+{
+  "buys": [],
+  "cash": 20826.68,
+  "date": "2026-09-24",
+  "equity": 8774.67,
+  "fees": 49.4461,
+  "fills": [
+    {
+      "fees": 2.0517,
+      "pnl": -35.16,
+      "price": 163.95,
+      "shares": 12,
+      "side": "SELL",
+      "ticker": "A"
+    },
+    {
+      "fees": 2.002,
+      "pnl": -69.66,
+      "price": 600.27,
+      "shares": 4,
+      "side": "COVER",
+      "ticker": "AMD"
+    },
+    {
+      "fees": 2.0888,
+      "pnl": -47.83,
+      "price": 87.68,
+      "shares": 24,
+      "side": "SELL",
+      "ticker": "DXCM"
+    },
+    {
+      "fees": 2.416,
+      "pnl": -440.97,
+      "price": 37.51,
+      "shares": 142,
+      "side": "COVER",
+      "ticker": "FIVN"
+    },
+    {
+      "fees": 2.2445,
+      "pnl": 4.54,
+      "price": 28.42,
+      "shares": 75,
+      "side": "SELL",
+      "ticker": "MAZE"
+    },
+    {
+      "fees": 29.7482,
+      "pnl": -121.19,
+      "price": 0.746,
+      "shares": 2798,
+      "side": "SELL",
+      "ticker": "NMRA"
+    },
+    {
+      "fees": 2.3363,
+      "pnl": -18.16,
+      "price": 20.52,
+      "shares": 104,
+      "side": "SELL",
+      "ticker": "OMER"
+    },
+    {
+      "fees": 2.2721,
+      "pnl": -122.95,
+      "price": 23.99,
+      "shares": 84,
+      "side": "SELL",
+      "ticker": "TNGX"
+    },
+    {
+      "fees": 2.1188,
+      "pnl": -17.13,
+      "price": 61.78,
+      "shares": 34,
+      "side": "SELL",
+      "ticker": "TTAN"
+    },
+    {
+      "fees": 2.1677,
+      "pnl": -296.8,
+      "price": 36.025,
+      "shares": 51,
+      "side": "SELL",
+      "ticker": "VKTX"
+    }
+  ],
+  "holdings": [
+    "AEHL",
+    "BAND",
+    "HALO",
+    "PAYX",
+    "USFD"
+  ],
+  "mean": -6.3058,
+  "n_trades_today": 10,
+  "recipe": "combo_sj_3070_shared",
+  "sells": [
+    "A",
+    "AMD",
+    "DXCM",
+    "FIVN",
+    "MAZE",
+    "NMRA",
+    "OMER",
+    "TNGX",
+    "TTAN",
+    "VKTX"
+  ],
+  "state": {
+    "after": "2026-09-24",
+    "cash": 20826.68,
+    "pos": {
+      "AEHL": {
+        "close_px": 8.960000038146973,
+        "cost": 4.16780602935373,
+        "entry_date": "2026-09-21",
+        "entry_px": 8.260000228881836,
+        "fee_in": 4.16780602935373,
+        "last_px": 8.210000038146973,
+        "notional": 2577.120071411133,
+        "owner": "short_news_r_h3",
+        "peak_px": 7.619999885559082,
+        "reason": "news\ud83d\udd34; gate news=bad; list yday_mover; ret5=+7.7; combo leftover $2583.13; owner short_news_r_h3",
+        "shares": 312,
+        "side": "short",
+        "ticker": "AEHL"
+      },
+      "BAND": {
+        "close_px": 61.83000183105469,
+        "cost": 2.20217260090031,
+        "entry_date": "2026-09-23",
+        "entry_px": 58.0099983215332,
+        "fee_in": 2.20217260090031,
+        "last_px": 58.0,
+        "notional": 2320.399932861328,
+        "owner": "short_news_r_h3",
+        "peak_px": 58.0,
+        "reason": "news\ud83d\udd34; gate news=bad; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+16.6; combo leftover $2368.74; owner short_news_r_h3",
+        "shares": 40,
+        "side": "short",
+        "ticker": "BAND"
+      },
+      "HALO": {
+        "close_px": 115.22000122070312,
+        "cost": 2.142727396424176,
+        "entry_date": "2026-09-23",
+        "entry_px": 116.8499984741211,
+        "fee_in": 2.142727396424176,
+        "last_px": 112.12999725341797,
+        "notional": 2336.999969482422,
+        "owner": "short_news_r_h3",
+        "peak_px": 112.12999725341797,
+        "reason": "news\ud83d\udd34; gate news=bad; list flatten; \ud83d\udd35; \u26aa; ret5=+8.4; combo leftover $2368.74; owner short_news_r_h3",
+        "shares": 20,
+        "side": "short",
+        "ticker": "HALO"
+      },
+      "PAYX": {
+        "close_px": 101.58999633789062,
+        "cost": 2.1489728767123286,
+        "entry_date": "2026-09-22",
+        "entry_px": 115.71,
+        "fee_in": 2.1489728767123286,
+        "last_px": 105.48999786376953,
+        "notional": 2429.91,
+        "owner": "short_news_r_h3",
+        "peak_px": 105.48999786376953,
+        "reason": "news\ud83d\udd34; gate news=bad; list overnight; ret5=-3.0; combo leftover $2435.60; owner short_news_r_h3",
+        "shares": 21,
+        "side": "short",
+        "ticker": "PAYX"
+      },
+      "USFD": {
+        "close_px": 93.81999969482422,
+        "cost": 2.1582383561643836,
+        "entry_date": "2026-09-22",
+        "entry_px": 94.08,
+        "fee_in": 2.1582383561643836,
+        "last_px": 94.20999908447266,
+        "notional": 2352.0,
+        "owner": "short_news_r_h3",
+        "peak_px": 93.97000122070312,
+        "reason": "news\ud83d\udd34; gate news=bad; list flatten; ret5=-0.6; combo leftover $2435.60; owner short_news_r_h3",
+        "shares": 25,
+        "side": "short",
+        "ticker": "USFD"
+      }
+    },
+    "yday_equity": 8774.67
+  }
+}

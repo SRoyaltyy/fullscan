@@ -1,0 +1,288 @@
+{
+  "buys": [
+    "RBRK",
+    "GNRC",
+    "VICR",
+    "ECO",
+    "EYPT",
+    "BNC",
+    "SHLS",
+    "SDGR"
+  ],
+  "cash": 312.97,
+  "date": "2026-09-18",
+  "equity": 9244.12,
+  "fees": 50.8753,
+  "fills": [
+    {
+      "fees": 10.5543,
+      "pnl": -61.31,
+      "price": 1.41,
+      "shares": 807,
+      "side": "SELL",
+      "ticker": "AIB"
+    },
+    {
+      "fees": 2.145,
+      "pnl": 4.28,
+      "price": 26.14,
+      "shares": 45,
+      "side": "SELL",
+      "ticker": "ARQT"
+    },
+    {
+      "fees": 2.166,
+      "pnl": -64.63,
+      "price": 21.3,
+      "shares": 52,
+      "side": "SELL",
+      "ticker": "BBNX"
+    },
+    {
+      "fees": 2.2058,
+      "pnl": -19.67,
+      "price": 17.8,
+      "shares": 65,
+      "side": "SELL",
+      "ticker": "CIFR"
+    },
+    {
+      "fees": 3.9951,
+      "pnl": 25.62,
+      "price": 3.97,
+      "shares": 305,
+      "side": "SELL",
+      "ticker": "EMAT"
+    },
+    {
+      "fees": 2.3641,
+      "pnl": -19.65,
+      "price": 10.12,
+      "shares": 115,
+      "side": "SELL",
+      "ticker": "IOVA"
+    },
+    {
+      "fees": 6.4254,
+      "pnl": -66.77,
+      "price": 2.29,
+      "shares": 491,
+      "side": "SELL",
+      "ticker": "SABR"
+    },
+    {
+      "fees": 2.028,
+      "pnl": 64.84,
+      "price": 182.33,
+      "shares": 6,
+      "side": "SELL",
+      "ticker": "SMTC"
+    },
+    {
+      "fees": 2.02,
+      "pnl": null,
+      "price": 108.55,
+      "shares": 10,
+      "side": "BUY",
+      "ticker": "RBRK"
+    },
+    {
+      "fees": 2.005,
+      "pnl": null,
+      "price": 209.52,
+      "shares": 5,
+      "side": "BUY",
+      "ticker": "GNRC"
+    },
+    {
+      "fees": 2.005,
+      "pnl": null,
+      "price": 219.62,
+      "shares": 5,
+      "side": "BUY",
+      "ticker": "VICR"
+    },
+    {
+      "fees": 2.029,
+      "pnl": null,
+      "price": 85.0,
+      "shares": 13,
+      "side": "BUY",
+      "ticker": "ECO"
+    },
+    {
+      "fees": 3.7926,
+      "pnl": null,
+      "price": 3.95,
+      "shares": 294,
+      "side": "BUY",
+      "ticker": "EYPT"
+    },
+    {
+      "fees": 2.587,
+      "pnl": null,
+      "price": 5.83,
+      "shares": 199,
+      "side": "BUY",
+      "ticker": "BNC"
+    },
+    {
+      "fees": 2.446,
+      "pnl": null,
+      "price": 7.64,
+      "shares": 152,
+      "side": "BUY",
+      "ticker": "SHLS"
+    },
+    {
+      "fees": 2.107,
+      "pnl": null,
+      "price": 29.32,
+      "shares": 39,
+      "side": "BUY",
+      "ticker": "SDGR"
+    }
+  ],
+  "holdings": [
+    "BNC",
+    "ECO",
+    "EYPT",
+    "GNRC",
+    "RBRK",
+    "SDGR",
+    "SHLS",
+    "VICR"
+  ],
+  "mean": -0.3556,
+  "n_trades_today": 16,
+  "recipe": "union_macd_up_h1",
+  "sells": [
+    "AIB",
+    "ARQT",
+    "BBNX",
+    "CIFR",
+    "EMAT",
+    "IOVA",
+    "SABR",
+    "SMTC"
+  ],
+  "state": {
+    "after": "2026-09-18",
+    "cash": 312.97,
+    "pos": {
+      "BNC": {
+        "close_px": 5.980000019073486,
+        "cost": 1162.7569848175049,
+        "entry_date": "2026-09-18",
+        "entry_px": 5.829999923706055,
+        "fee_in": 2.587,
+        "last_px": 5.829999923706055,
+        "min_hold": 1,
+        "notional": 1160.1699848175049,
+        "peak_px": 5.829999923706055,
+        "reason": "union \u2229 macd_up, no \ud83d\udea8; gate macd_up=True; list probable,yday_gainer,yday_mover,ohlc_hot; \ud83d\udd35; ret5=+8.6; leftover $1161.80",
+        "shares": 199,
+        "ticker": "BNC"
+      },
+      "ECO": {
+        "close_px": 84.94999694824219,
+        "cost": 1107.029,
+        "entry_date": "2026-09-18",
+        "entry_px": 85.0,
+        "fee_in": 2.029,
+        "last_px": 85.0,
+        "min_hold": 1,
+        "notional": 1105.0,
+        "peak_px": 85.0,
+        "reason": "union \u2229 macd_up, no \ud83d\udea8; gate macd_up=True; list flatten; \ud83d\udd35; \u26aa; ret5=+18.3; leftover $1161.80",
+        "shares": 13,
+        "ticker": "ECO"
+      },
+      "EYPT": {
+        "close_px": 3.8499999046325684,
+        "cost": 1165.0926140190124,
+        "entry_date": "2026-09-18",
+        "entry_px": 3.950000047683716,
+        "fee_in": 3.7926,
+        "last_px": 3.950000047683716,
+        "min_hold": 1,
+        "notional": 1161.3000140190125,
+        "peak_px": 3.950000047683716,
+        "reason": "union \u2229 macd_up, no \ud83d\udea8; gate macd_up=True; list probable,yday_gainer,yday_mover; \ud83d\udd35; ret5=-6.1; leftover $1161.80",
+        "shares": 294,
+        "ticker": "EYPT"
+      },
+      "GNRC": {
+        "close_px": 207.44000244140625,
+        "cost": 1049.6050213623048,
+        "entry_date": "2026-09-18",
+        "entry_px": 209.52000427246094,
+        "fee_in": 2.005,
+        "last_px": 209.52000427246094,
+        "min_hold": 1,
+        "notional": 1047.6000213623047,
+        "peak_px": 209.52000427246094,
+        "reason": "union \u2229 macd_up, no \ud83d\udea8; gate macd_up=True; list flatten,yday_gainer,yday_mover; \ud83d\udd35; ret5=+14.1; leftover $1161.80",
+        "shares": 5,
+        "ticker": "GNRC"
+      },
+      "RBRK": {
+        "close_px": 106.70999908447266,
+        "cost": 1087.520030517578,
+        "entry_date": "2026-09-18",
+        "entry_px": 108.55000305175781,
+        "fee_in": 2.02,
+        "last_px": 108.55000305175781,
+        "min_hold": 1,
+        "notional": 1085.5000305175781,
+        "peak_px": 108.55000305175781,
+        "reason": "union \u2229 macd_up, no \ud83d\udea8; gate macd_up=True; list flatten; \u26aa; ret5=+21.3; leftover $1161.80",
+        "shares": 10,
+        "ticker": "RBRK"
+      },
+      "SDGR": {
+        "close_px": 29.020000457763672,
+        "cost": 1145.5869880981445,
+        "entry_date": "2026-09-18",
+        "entry_px": 29.31999969482422,
+        "fee_in": 2.107,
+        "last_px": 29.31999969482422,
+        "min_hold": 1,
+        "notional": 1143.4799880981445,
+        "peak_px": 29.31999969482422,
+        "reason": "union \u2229 macd_up, no \ud83d\udea8; gate macd_up=True; list yday_gainer,yday_mover; \ud83d\udd35; \u26aa; ret5=+60.9; leftover $1161.80",
+        "shares": 39,
+        "ticker": "SDGR"
+      },
+      "SHLS": {
+        "close_px": 7.599999904632568,
+        "cost": 1163.7259797058105,
+        "entry_date": "2026-09-18",
+        "entry_px": 7.639999866485596,
+        "fee_in": 2.446,
+        "last_px": 7.639999866485596,
+        "min_hold": 1,
+        "notional": 1161.2799797058105,
+        "peak_px": 7.639999866485596,
+        "reason": "union \u2229 macd_up, no \ud83d\udea8; gate macd_up=True; list probable,yday_gainer; \ud83d\udd35; ret5=+7.6; leftover $1161.80",
+        "shares": 152,
+        "ticker": "SHLS"
+      },
+      "VICR": {
+        "close_px": 222.72000122070312,
+        "cost": 1100.1049755859376,
+        "entry_date": "2026-09-18",
+        "entry_px": 219.6199951171875,
+        "fee_in": 2.005,
+        "last_px": 219.6199951171875,
+        "min_hold": 1,
+        "notional": 1098.0999755859375,
+        "peak_px": 219.6199951171875,
+        "reason": "union \u2229 macd_up, no \ud83d\udea8; gate macd_up=True; list flatten,yday_gainer,yday_mover; \ud83d\udd35; ret5=+21.5; leftover $1161.80",
+        "shares": 5,
+        "ticker": "VICR"
+      }
+    },
+    "yday_equity": 9244.12
+  }
+}

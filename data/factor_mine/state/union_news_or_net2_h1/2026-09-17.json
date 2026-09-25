@@ -1,0 +1,189 @@
+{
+  "buys": [
+    "SMTC",
+    "GME",
+    "JBHT",
+    "LITE",
+    "TNDM"
+  ],
+  "cash": 282.99,
+  "date": "2026-09-17",
+  "equity": 9449.73,
+  "fees": 21.251,
+  "fills": [
+    {
+      "fees": 2.0594,
+      "pnl": -49.39,
+      "price": 120.07,
+      "shares": 15,
+      "side": "SELL",
+      "ticker": "CRUS"
+    },
+    {
+      "fees": 2.1684,
+      "pnl": 21.7,
+      "price": 37.64,
+      "shares": 51,
+      "side": "SELL",
+      "ticker": "DBX"
+    },
+    {
+      "fees": 2.0452,
+      "pnl": 7.73,
+      "price": 190.35,
+      "shares": 10,
+      "side": "SELL",
+      "ticker": "QCOM"
+    },
+    {
+      "fees": 2.1584,
+      "pnl": -120.45,
+      "price": 37.57,
+      "shares": 48,
+      "side": "SELL",
+      "ticker": "SM"
+    },
+    {
+      "fees": 2.2366,
+      "pnl": 13.07,
+      "price": 26.51,
+      "shares": 73,
+      "side": "SELL",
+      "ticker": "WAY"
+    },
+    {
+      "fees": 2.023,
+      "pnl": null,
+      "price": 170.85,
+      "shares": 11,
+      "side": "BUY",
+      "ticker": "SMTC"
+    },
+    {
+      "fees": 2.245,
+      "pnl": null,
+      "price": 22.12,
+      "shares": 85,
+      "side": "BUY",
+      "ticker": "GME"
+    },
+    {
+      "fees": 2.011,
+      "pnl": null,
+      "price": 238.6,
+      "shares": 7,
+      "side": "BUY",
+      "ticker": "JBHT"
+    },
+    {
+      "fees": 1.996,
+      "pnl": null,
+      "price": 934.88,
+      "shares": 2,
+      "side": "BUY",
+      "ticker": "LITE"
+    },
+    {
+      "fees": 2.308,
+      "pnl": null,
+      "price": 17.72,
+      "shares": 106,
+      "side": "BUY",
+      "ticker": "TNDM"
+    }
+  ],
+  "holdings": [
+    "GME",
+    "JBHT",
+    "LITE",
+    "SMTC",
+    "TNDM"
+  ],
+  "mean": 0.1542,
+  "n_trades_today": 10,
+  "recipe": "union_news_or_net2_h1",
+  "sells": [
+    "CRUS",
+    "DBX",
+    "QCOM",
+    "SM",
+    "WAY"
+  ],
+  "state": {
+    "after": "2026-09-17",
+    "cash": 282.99,
+    "pos": {
+      "GME": {
+        "close_px": 22.770000457763672,
+        "cost": 1882.4450713348388,
+        "entry_date": "2026-09-17",
+        "entry_px": 22.1200008392334,
+        "fee_in": 2.245,
+        "last_px": 22.1200008392334,
+        "min_hold": 1,
+        "notional": 1880.2000713348389,
+        "peak_px": 22.1200008392334,
+        "reason": "packet\ud83d\udfe2 OR headline\ud83d\udfe2 and camera net \u2265 2; gate news_or_headline=True,cam_net_min=2; rank cond; list ohlc_hot; \ud83d\udd35; ret5=+10.5; leftover $1894.28",
+        "shares": 85,
+        "ticker": "GME"
+      },
+      "JBHT": {
+        "close_px": 236.8000030517578,
+        "cost": 1672.2110427246093,
+        "entry_date": "2026-09-17",
+        "entry_px": 238.60000610351562,
+        "fee_in": 2.011,
+        "last_px": 238.60000610351562,
+        "min_hold": 1,
+        "notional": 1670.2000427246094,
+        "peak_px": 238.60000610351562,
+        "reason": "packet\ud83d\udfe2 OR headline\ud83d\udfe2 and camera net \u2265 2; gate news_or_headline=True,cam_net_min=2; rank cond; list yday_mover; ret5=-11.6; leftover $1894.28",
+        "shares": 7,
+        "ticker": "JBHT"
+      },
+      "LITE": {
+        "close_px": 893.6099853515625,
+        "cost": 1871.756009765625,
+        "entry_date": "2026-09-17",
+        "entry_px": 934.8800048828125,
+        "fee_in": 1.996,
+        "last_px": 934.8800048828125,
+        "min_hold": 1,
+        "notional": 1869.760009765625,
+        "peak_px": 934.8800048828125,
+        "reason": "packet\ud83d\udfe2 OR headline\ud83d\udfe2 and camera net \u2265 2; gate news_or_headline=True,cam_net_min=2; rank cond; list yday_gainer; \ud83d\udd35; ret5=-7.0; leftover $1894.28",
+        "shares": 2,
+        "ticker": "LITE"
+      },
+      "SMTC": {
+        "close_px": 178.19000244140625,
+        "cost": 1881.3730671386718,
+        "entry_date": "2026-09-17",
+        "entry_px": 170.85000610351562,
+        "fee_in": 2.023,
+        "last_px": 170.85000610351562,
+        "min_hold": 1,
+        "notional": 1879.3500671386719,
+        "peak_px": 170.85000610351562,
+        "reason": "packet\ud83d\udfe2 OR headline\ud83d\udfe2 and camera net \u2265 2; gate news_or_headline=True,cam_net_min=2; rank cond; list probable,yday_gainer,yday_mover; \ud83d\udd35; ret5=+2.2; leftover $1894.28",
+        "shares": 11,
+        "ticker": "SMTC"
+      },
+      "TNDM": {
+        "close_px": 17.229999542236328,
+        "cost": 1880.6279272155762,
+        "entry_date": "2026-09-17",
+        "entry_px": 17.719999313354492,
+        "fee_in": 2.308,
+        "last_px": 17.719999313354492,
+        "min_hold": 1,
+        "notional": 1878.3199272155762,
+        "peak_px": 17.719999313354492,
+        "reason": "packet\ud83d\udfe2 OR headline\ud83d\udfe2 and camera net \u2265 2; gate news_or_headline=True,cam_net_min=2; rank cond; list yday_gainer; ret5=-8.3; leftover $1894.28",
+        "shares": 106,
+        "ticker": "TNDM"
+      }
+    },
+    "yday_equity": 9449.73
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "buys": [
+    "SABR"
+  ],
+  "cash": 2.45,
+  "date": "2026-09-17",
+  "equity": 9403.09,
+  "fees": 68.8047,
+  "fills": [
+    {
+      "fees": 2.2659,
+      "pnl": -2.83,
+      "price": 14.33,
+      "shares": 84,
+      "side": "SELL",
+      "ticker": "AVAH"
+    },
+    {
+      "fees": 2.109,
+      "pnl": 2.73,
+      "price": 36.67,
+      "shares": 33,
+      "side": "SELL",
+      "ticker": "BLFS"
+    },
+    {
+      "fees": 2.025,
+      "pnl": 42.77,
+      "price": 233.85,
+      "shares": 5,
+      "side": "SELL",
+      "ticker": "ILMN"
+    },
+    {
+      "fees": 2.022,
+      "pnl": 5.02,
+      "price": 273.15,
+      "shares": 4,
+      "side": "SELL",
+      "ticker": "IQV"
+    },
+    {
+      "fees": 2.013,
+      "pnl": -1.48,
+      "price": 682.44,
+      "shares": 1,
+      "side": "SELL",
+      "ticker": "META"
+    },
+    {
+      "fees": 2.019,
+      "pnl": -3.06,
+      "price": 350.5,
+      "shares": 3,
+      "side": "SELL",
+      "ticker": "NTRA"
+    },
+    {
+      "fees": 2.061,
+      "pnl": 62.37,
+      "price": 72.7,
+      "shares": 17,
+      "side": "SELL",
+      "ticker": "TEM"
+    },
+    {
+      "fees": 2.019,
+      "pnl": 5.25,
+      "price": 366.2,
+      "shares": 3,
+      "side": "SELL",
+      "ticker": "WST"
+    },
+    {
+      "fees": 52.2708,
+      "pnl": null,
+      "price": 2.4,
+      "shares": 4052,
+      "side": "BUY",
+      "ticker": "SABR"
+    }
+  ],
+  "holdings": [
+    "SABR"
+  ],
+  "mean": -2.5202,
+  "n_trades_today": 9,
+  "recipe": "union_white_coil_h1",
+  "sells": [
+    "AVAH",
+    "BLFS",
+    "ILMN",
+    "IQV",
+    "META",
+    "NTRA",
+    "TEM",
+    "WST"
+  ],
+  "state": {
+    "after": "2026-09-17",
+    "cash": 2.45,
+    "pos": {
+      "SABR": {
+        "close_px": 2.319999933242798,
+        "cost": 9777.071186428833,
+        "entry_date": "2026-09-17",
+        "entry_px": 2.4000000953674316,
+        "fee_in": 52.2708,
+        "last_px": 2.4000000953674316,
+        "min_hold": 1,
+        "notional": 9724.800386428833,
+        "peak_px": 2.4000000953674316,
+        "reason": "combo gate; gate zero_red=True,ret_5_max=10.0,rvol_max=2.2; list probable,yday_gainer,yday_mover,ohlc_hot; \ud83d\udd35; \u26aa; ret5=+8.4; leftover $9779.53",
+        "shares": 4052,
+        "ticker": "SABR"
+      }
+    },
+    "yday_equity": 9403.09
+  }
+}

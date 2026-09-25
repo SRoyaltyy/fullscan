@@ -1,0 +1,93 @@
+{
+  "buys": [],
+  "cash": 7397.53,
+  "date": "2026-09-24",
+  "equity": 7397.53,
+  "fees": 29.1046,
+  "fills": [
+    {
+      "fees": 2.025,
+      "pnl": -16.98,
+      "price": 163.95,
+      "shares": 5,
+      "side": "SELL",
+      "ticker": "A"
+    },
+    {
+      "fees": 2.04,
+      "pnl": -22.26,
+      "price": 87.68,
+      "shares": 10,
+      "side": "SELL",
+      "ticker": "DXCM"
+    },
+    {
+      "fees": 3.2242,
+      "pnl": -45.76,
+      "price": 3.77,
+      "shares": 246,
+      "side": "SELL",
+      "ticker": "INDP"
+    },
+    {
+      "fees": 13.4094,
+      "pnl": -54.62,
+      "price": 0.746,
+      "shares": 1261,
+      "side": "SELL",
+      "ticker": "NMRA"
+    },
+    {
+      "fees": 2.148,
+      "pnl": -10.26,
+      "price": 20.52,
+      "shares": 46,
+      "side": "SELL",
+      "ticker": "OMER"
+    },
+    {
+      "fees": 2.124,
+      "pnl": -57.81,
+      "price": 23.99,
+      "shares": 38,
+      "side": "SELL",
+      "ticker": "TNGX"
+    },
+    {
+      "fees": 2.055,
+      "pnl": -9.79,
+      "price": 61.78,
+      "shares": 15,
+      "side": "SELL",
+      "ticker": "TTAN"
+    },
+    {
+      "fees": 2.079,
+      "pnl": -136.04,
+      "price": 36.025,
+      "shares": 23,
+      "side": "SELL",
+      "ticker": "VKTX"
+    }
+  ],
+  "holdings": [],
+  "mean": -2.2795,
+  "n_trades_today": 8,
+  "recipe": "union_blue_vol_h1",
+  "sells": [
+    "A",
+    "DXCM",
+    "INDP",
+    "NMRA",
+    "OMER",
+    "TNGX",
+    "TTAN",
+    "VKTX"
+  ],
+  "state": {
+    "after": "2026-09-24",
+    "cash": 7397.53,
+    "pos": {},
+    "yday_equity": 7397.53
+  }
+}

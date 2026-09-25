@@ -1,0 +1,66 @@
+{
+  "buys": [],
+  "cash": 68.29,
+  "date": "2026-09-22",
+  "equity": 9523.6,
+  "fees": 0,
+  "fills": [],
+  "holdings": [
+    "SION",
+    "THO",
+    "XENE"
+  ],
+  "mean": 2.0551,
+  "n_trades_today": 0,
+  "recipe": "union_rsi_os_h3",
+  "sells": [],
+  "state": {
+    "after": "2026-09-22",
+    "cash": 68.29,
+    "pos": {
+      "SION": {
+        "close_px": 6.019999980926514,
+        "cost": 3120.6951,
+        "entry_date": "2026-09-21",
+        "entry_px": 6.0,
+        "fee_in": 6.6951,
+        "last_px": 5.989999771118164,
+        "min_hold": 3,
+        "notional": 3114.0,
+        "peak_px": 6.0,
+        "reason": "union \u2229 rsi_os, no \ud83d\udea8; gate rsi_os=True; list yday_mover; \ud83d\udd35; ret5=-24.1; leftover $3116.96",
+        "shares": 519,
+        "ticker": "SION"
+      },
+      "THO": {
+        "close_px": 73.8,
+        "cost": 3079.6749725341797,
+        "entry_date": "2026-09-21",
+        "entry_px": 68.38999938964844,
+        "fee_in": 2.125,
+        "last_px": 72.53,
+        "min_hold": 3,
+        "notional": 3077.5499725341797,
+        "peak_px": 72.53,
+        "reason": "union \u2229 rsi_os, no \ud83d\udea8; gate rsi_os=True; list overnight; ret5=-7.0; leftover $3116.96",
+        "shares": 45,
+        "ticker": "THO"
+      },
+      "XENE": {
+        "close_px": 39.09,
+        "cost": 3082.221,
+        "entry_date": "2026-09-21",
+        "entry_px": 40.0,
+        "fee_in": 2.221,
+        "last_px": 39.76,
+        "min_hold": 3,
+        "notional": 3080.0,
+        "peak_px": 40.0,
+        "reason": "union \u2229 rsi_os, no \ud83d\udea8; gate rsi_os=True; list yday_mover; \ud83d\udd35; ret5=-32.2; leftover $3116.96",
+        "shares": 77,
+        "ticker": "XENE"
+      }
+    },
+    "yday_equity": 9523.6
+  }
+}

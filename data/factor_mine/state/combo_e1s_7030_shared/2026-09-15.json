@@ -1,0 +1,85 @@
+{
+  "buys": [],
+  "cash": 12941.52,
+  "date": "2026-09-15",
+  "equity": 9531.08,
+  "fees": 0,
+  "fills": [],
+  "holdings": [
+    "CRDL",
+    "MYGN",
+    "QRVO",
+    "RWT"
+  ],
+  "mean": -0.5704,
+  "n_trades_today": 0,
+  "recipe": "combo_e1s_7030_shared",
+  "sells": [],
+  "state": {
+    "after": "2026-09-15",
+    "cash": 12941.52,
+    "pos": {
+      "CRDL": {
+        "close_px": 1.850000023841858,
+        "cost": 5.271802191466501,
+        "entry_date": "2026-09-11",
+        "entry_px": 2.0299999713897705,
+        "fee_in": 5.271802191466501,
+        "last_px": 1.9600000381469727,
+        "notional": 814.029988527298,
+        "owner": "short_news_r_h3",
+        "peak_px": 1.9600000381469727,
+        "reason": "news\ud83d\udd34; gate news=bad; list yday_mover; ret5=-8.3; combo leftover $815.99; owner short_news_r_h3",
+        "shares": 401,
+        "side": "short",
+        "ticker": "CRDL"
+      },
+      "MYGN": {
+        "close_px": 3.880000114440918,
+        "cost": 3.194343560885077,
+        "entry_date": "2026-09-11",
+        "entry_px": 3.369999885559082,
+        "fee_in": 3.194343560885077,
+        "last_px": 3.799999952316284,
+        "notional": 815.5399723052979,
+        "owner": "short_news_r_h3",
+        "peak_px": 3.369999885559082,
+        "reason": "news\ud83d\udd34; gate news=bad; list yday_gainer,ohlc_hot; ret5=+4.0; combo leftover $815.99; owner short_news_r_h3",
+        "shares": 242,
+        "side": "short",
+        "ticker": "MYGN"
+      },
+      "QRVO": {
+        "close_px": 118.05999755859375,
+        "cost": 2.0526395888655156,
+        "entry_date": "2026-09-11",
+        "entry_px": 112.83499908447266,
+        "fee_in": 2.0526395888655156,
+        "last_px": 108.4000015258789,
+        "notional": 789.8449935913086,
+        "owner": "short_news_r_h3",
+        "peak_px": 108.4000015258789,
+        "reason": "news\ud83d\udd34; gate news=bad; list yday_gainer,ohlc_hot; \ud83d\udd35; ret5=+11.9; combo leftover $815.99; owner short_news_r_h3",
+        "shares": 7,
+        "side": "short",
+        "ticker": "QRVO"
+      },
+      "RWT": {
+        "close_px": 3.9100000858306885,
+        "cost": 3.050477260153261,
+        "entry_date": "2026-09-11",
+        "entry_px": 3.5199999809265137,
+        "fee_in": 3.050477260153261,
+        "last_px": 3.799999952316284,
+        "notional": 813.1199955940247,
+        "owner": "short_news_r_h3",
+        "peak_px": 3.5199999809265137,
+        "reason": "news\ud83d\udd34; gate news=bad; list yday_mover; \ud83d\udd35; ret5=-19.0; combo leftover $815.99; owner short_news_r_h3",
+        "shares": 231,
+        "side": "short",
+        "ticker": "RWT"
+      }
+    },
+    "yday_equity": 9531.08
+  }
+}

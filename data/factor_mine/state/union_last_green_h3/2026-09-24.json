@@ -1,0 +1,221 @@
+{
+  "buys": [],
+  "cash": 8351.39,
+  "date": "2026-09-24",
+  "equity": 8567.39,
+  "fees": 30.4302,
+  "fills": [
+    {
+      "fees": 2.0345,
+      "pnl": 44.59,
+      "price": 163.95,
+      "shares": 8,
+      "side": "SELL",
+      "ticker": "A"
+    },
+    {
+      "fees": 2.3071,
+      "pnl": -122.44,
+      "price": 12.26,
+      "shares": 97,
+      "side": "SELL",
+      "ticker": "BTDR"
+    },
+    {
+      "fees": 4.2826,
+      "pnl": -204.7,
+      "price": 3.4,
+      "shares": 327,
+      "side": "SELL",
+      "ticker": "CYPH"
+    },
+    {
+      "fees": 2.052,
+      "pnl": -20.18,
+      "price": 87.68,
+      "shares": 14,
+      "side": "SELL",
+      "ticker": "DXCM"
+    },
+    {
+      "fees": 2.019,
+      "pnl": -39.0,
+      "price": 374.54,
+      "shares": 3,
+      "side": "SELL",
+      "ticker": "HUM"
+    },
+    {
+      "fees": 2.3071,
+      "pnl": -203.44,
+      "price": 11.42,
+      "shares": 97,
+      "side": "SELL",
+      "ticker": "MGTX"
+    },
+    {
+      "fees": 15.4279,
+      "pnl": -101.45,
+      "price": 1.05,
+      "shares": 1180,
+      "side": "SELL",
+      "ticker": "ORBS"
+    }
+  ],
+  "holdings": [
+    "ADMA",
+    "APPS",
+    "ARHS",
+    "FTRE",
+    "HELP",
+    "NN",
+    "OMER",
+    "PGEN",
+    "TDC"
+  ],
+  "mean": -1.8366,
+  "n_trades_today": 7,
+  "recipe": "union_last_green_h3",
+  "sells": [
+    "A",
+    "BTDR",
+    "CYPH",
+    "DXCM",
+    "HUM",
+    "MGTX",
+    "ORBS"
+  ],
+  "state": {
+    "after": "2026-09-24",
+    "cash": 8351.39,
+    "pos": {
+      "ADMA": {
+        "close_px": 9.520000457763672,
+        "cost": 19.8222008392334,
+        "entry_date": "2026-09-23",
+        "entry_px": 9.8100004196167,
+        "fee_in": 0.2022,
+        "last_px": 9.670000076293945,
+        "min_hold": 3,
+        "notional": 19.6200008392334,
+        "peak_px": 9.8100004196167,
+        "reason": "union \u2229 last_green, no \ud83d\udea8; gate last_green=True; list flatten; \ud83d\udd35; \u26aa; ret5=+13.9; leftover $26.09",
+        "shares": 2,
+        "ticker": "ADMA"
+      },
+      "APPS": {
+        "close_px": 10.880000114440918,
+        "cost": 24.730800000000002,
+        "entry_date": "2026-09-22",
+        "entry_px": 12.24,
+        "fee_in": 0.2508,
+        "last_px": 11.329999923706055,
+        "min_hold": 3,
+        "notional": 24.48,
+        "peak_px": 12.24,
+        "reason": "union \u2229 last_green, no \ud83d\udea8; gate last_green=True; list probable,yday_gainer; ret5=+2.7; leftover $34.35",
+        "shares": 2,
+        "ticker": "APPS"
+      },
+      "ARHS": {
+        "close_px": 9.470000267028809,
+        "cost": 26.976000000000003,
+        "entry_date": "2026-09-22",
+        "entry_px": 8.9,
+        "fee_in": 0.276,
+        "last_px": 9.210000038146973,
+        "min_hold": 3,
+        "notional": 26.700000000000003,
+        "peak_px": 9.319999694824219,
+        "reason": "union \u2229 last_green, no \ud83d\udea8; gate last_green=True; list probable; \ud83d\udd35; ret5=+7.5; leftover $34.35",
+        "shares": 3,
+        "ticker": "ARHS"
+      },
+      "FTRE": {
+        "close_px": 20.020000457763672,
+        "cost": 20.4555,
+        "entry_date": "2026-09-23",
+        "entry_px": 20.25,
+        "fee_in": 0.2055,
+        "last_px": 19.399999618530273,
+        "min_hold": 3,
+        "notional": 20.25,
+        "peak_px": 20.25,
+        "reason": "union \u2229 last_green, no \ud83d\udea8; gate last_green=True; list flatten; \ud83d\udd35; \u26aa; ret5=+3.5; leftover $26.09",
+        "shares": 1,
+        "ticker": "FTRE"
+      },
+      "HELP": {
+        "close_px": 12.59000015258789,
+        "cost": 28.3062,
+        "entry_date": "2026-09-22",
+        "entry_px": 14.01,
+        "fee_in": 0.2862,
+        "last_px": 12.800000190734863,
+        "min_hold": 3,
+        "notional": 28.02,
+        "peak_px": 14.01,
+        "reason": "union \u2229 last_green, no \ud83d\udea8; gate last_green=True; list probable; ret5=+0.4; leftover $34.35",
+        "shares": 2,
+        "ticker": "HELP"
+      },
+      "NN": {
+        "close_px": 14.449999809265137,
+        "cost": 31.8412,
+        "entry_date": "2026-09-22",
+        "entry_px": 15.76,
+        "fee_in": 0.3212,
+        "last_px": 14.260000228881836,
+        "min_hold": 3,
+        "notional": 31.52,
+        "peak_px": 15.76,
+        "reason": "union \u2229 last_green, no \ud83d\udea8; gate last_green=True; list probable; ret5=+0.8; leftover $34.35",
+        "shares": 2,
+        "ticker": "NN"
+      },
+      "OMER": {
+        "close_px": 20.1299991607666,
+        "cost": 20.859499618530272,
+        "entry_date": "2026-09-23",
+        "entry_px": 20.649999618530273,
+        "fee_in": 0.2095,
+        "last_px": 20.520000457763672,
+        "min_hold": 3,
+        "notional": 20.649999618530273,
+        "peak_px": 20.649999618530273,
+        "reason": "union \u2229 last_green, no \ud83d\udea8; gate last_green=True; list flatten,yday_gainer,yday_mover; \ud83d\udd35; \u26aa; ret5=+22.6; leftover $26.09",
+        "shares": 1,
+        "ticker": "OMER"
+      },
+      "PGEN": {
+        "close_px": 7.699999809265137,
+        "cost": 24.09749942779541,
+        "entry_date": "2026-09-23",
+        "entry_px": 7.949999809265137,
+        "fee_in": 0.2475,
+        "last_px": 7.369999885559082,
+        "min_hold": 3,
+        "notional": 23.84999942779541,
+        "peak_px": 7.949999809265137,
+        "reason": "union \u2229 last_green, no \ud83d\udea8; gate last_green=True; list flatten; \ud83d\udd35; \u26aa; ret5=+12.7; leftover $26.09",
+        "shares": 3,
+        "ticker": "PGEN"
+      },
+      "TDC": {
+        "close_px": 29.459999084472656,
+        "cost": 30.0808,
+        "entry_date": "2026-09-22",
+        "entry_px": 29.78,
+        "fee_in": 0.3008,
+        "last_px": 29.209999084472656,
+        "min_hold": 3,
+        "notional": 29.78,
+        "peak_px": 29.78,
+        "reason": "union \u2229 last_green, no \ud83d\udea8; gate last_green=True; list flatten; ret5=-0.0; leftover $34.35",
+        "shares": 1,
+        "ticker": "TDC"
+      }
+    },
+    "yday_equity": 8567.39
+  }
+}

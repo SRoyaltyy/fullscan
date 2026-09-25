@@ -1,0 +1,47 @@
+{
+  "buys": [
+    "BB"
+  ],
+  "cash": 6.85,
+  "date": "2026-09-23",
+  "equity": 9895.25,
+  "fees": 15.222,
+  "fills": [
+    {
+      "fees": 15.222,
+      "pnl": null,
+      "price": 8.6,
+      "shares": 1180,
+      "side": "BUY",
+      "ticker": "BB"
+    }
+  ],
+  "holdings": [
+    "BB"
+  ],
+  "mean": -2.7022,
+  "n_trades_today": 1,
+  "recipe": "union_flow_in_white_h1",
+  "sells": [],
+  "state": {
+    "after": "2026-09-23",
+    "cash": 6.85,
+    "pos": {
+      "BB": {
+        "close_px": 8.380000114440918,
+        "cost": 10163.222450134277,
+        "entry_date": "2026-09-23",
+        "entry_px": 8.600000381469727,
+        "fee_in": 15.222,
+        "last_px": 8.600000381469727,
+        "min_hold": 1,
+        "notional": 10148.000450134277,
+        "peak_px": 8.600000381469727,
+        "reason": "combo gate; gate flow_in=True,zero_red=True; list overnight; \ud83d\udd35; \u26aa; ret5=+10.5; leftover $10170.07",
+        "shares": 1180,
+        "ticker": "BB"
+      }
+    },
+    "yday_equity": 9895.25
+  }
+}

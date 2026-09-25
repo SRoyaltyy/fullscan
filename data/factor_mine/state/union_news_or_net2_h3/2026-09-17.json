@@ -1,0 +1,146 @@
+{
+  "buys": [
+    "GME",
+    "TNDM"
+  ],
+  "cash": 74.1,
+  "date": "2026-09-17",
+  "equity": 8567.1,
+  "fees": 0.4044,
+  "fills": [
+    {
+      "fees": 0.2242,
+      "pnl": null,
+      "price": 22.12,
+      "shares": 1,
+      "side": "BUY",
+      "ticker": "GME"
+    },
+    {
+      "fees": 0.1802,
+      "pnl": null,
+      "price": 17.72,
+      "shares": 1,
+      "side": "BUY",
+      "ticker": "TNDM"
+    }
+  ],
+  "holdings": [
+    "CRUS",
+    "DBX",
+    "GME",
+    "QCOM",
+    "SM",
+    "TNDM",
+    "WAY"
+  ],
+  "mean": 0.0624,
+  "n_trades_today": 2,
+  "recipe": "union_news_or_net2_h3",
+  "sells": [],
+  "state": {
+    "after": "2026-09-17",
+    "cash": 74.1,
+    "pos": {
+      "CRUS": {
+        "close_px": 120.37000274658203,
+        "cost": 1725.2919487304687,
+        "entry_date": "2026-09-16",
+        "entry_px": 123.08999633789062,
+        "fee_in": 2.032,
+        "last_px": 120.06999969482422,
+        "min_hold": 3,
+        "notional": 1723.2599487304688,
+        "peak_px": 123.08999633789062,
+        "reason": "packet\ud83d\udfe2 OR headline\ud83d\udfe2 and camera net \u2265 2; gate news_or_headline=True,cam_net_min=2; rank cond; list ohlc_hot; \ud83d\udd35; ret5=+10.3; leftover $1742.40",
+        "shares": 14,
+        "ticker": "CRUS"
+      },
+      "DBX": {
+        "close_px": 37.61000061035156,
+        "cost": 1710.1080491333007,
+        "entry_date": "2026-09-16",
+        "entry_px": 37.130001068115234,
+        "fee_in": 2.128,
+        "last_px": 37.63999938964844,
+        "min_hold": 3,
+        "notional": 1707.9800491333008,
+        "peak_px": 37.63999938964844,
+        "reason": "packet\ud83d\udfe2 OR headline\ud83d\udfe2 and camera net \u2265 2; gate news_or_headline=True,cam_net_min=2; rank cond; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+11.3; leftover $1742.40",
+        "shares": 46,
+        "ticker": "DBX"
+      },
+      "GME": {
+        "close_px": 22.770000457763672,
+        "cost": 22.344200839233398,
+        "entry_date": "2026-09-17",
+        "entry_px": 22.1200008392334,
+        "fee_in": 0.2242,
+        "last_px": 22.1200008392334,
+        "min_hold": 3,
+        "notional": 22.1200008392334,
+        "peak_px": 22.1200008392334,
+        "reason": "packet\ud83d\udfe2 OR headline\ud83d\udfe2 and camera net \u2265 2; gate news_or_headline=True,cam_net_min=2; rank cond; list ohlc_hot; \ud83d\udd35; ret5=+10.5; leftover $22.87",
+        "shares": 1,
+        "ticker": "GME"
+      },
+      "QCOM": {
+        "close_px": 188.7100067138672,
+        "cost": 1704.5469835205079,
+        "entry_date": "2026-09-16",
+        "entry_px": 189.1699981689453,
+        "fee_in": 2.017,
+        "last_px": 190.35000610351562,
+        "min_hold": 3,
+        "notional": 1702.5299835205078,
+        "peak_px": 190.35000610351562,
+        "reason": "packet\ud83d\udfe2 OR headline\ud83d\udfe2 and camera net \u2265 2; gate news_or_headline=True,cam_net_min=2; rank cond; list ohlc_hot; \ud83d\udd35; ret5=+7.9; leftover $1742.40",
+        "shares": 9,
+        "ticker": "QCOM"
+      },
+      "SM": {
+        "close_px": 36.970001220703125,
+        "cost": 1721.6890721740722,
+        "entry_date": "2026-09-16",
+        "entry_px": 39.9900016784668,
+        "fee_in": 2.119,
+        "last_px": 37.56999969482422,
+        "min_hold": 3,
+        "notional": 1719.5700721740723,
+        "peak_px": 39.9900016784668,
+        "reason": "packet\ud83d\udfe2 OR headline\ud83d\udfe2 and camera net \u2265 2; gate news_or_headline=True,cam_net_min=2; rank cond; list ohlc_hot; \ud83d\udd35; ret5=+9.3; leftover $1742.40",
+        "shares": 43,
+        "ticker": "SM"
+      },
+      "TNDM": {
+        "close_px": 17.229999542236328,
+        "cost": 17.90019931335449,
+        "entry_date": "2026-09-17",
+        "entry_px": 17.719999313354492,
+        "fee_in": 0.1802,
+        "last_px": 17.719999313354492,
+        "min_hold": 3,
+        "notional": 17.719999313354492,
+        "peak_px": 17.719999313354492,
+        "reason": "packet\ud83d\udfe2 OR headline\ud83d\udfe2 and camera net \u2265 2; gate news_or_headline=True,cam_net_min=2; rank cond; list yday_gainer; ret5=-8.3; leftover $22.87",
+        "shares": 1,
+        "ticker": "TNDM"
+      },
+      "WAY": {
+        "close_px": 26.510000228881836,
+        "cost": 1736.0080302124024,
+        "entry_date": "2026-09-16",
+        "entry_px": 26.270000457763672,
+        "fee_in": 2.188,
+        "last_px": 26.510000228881836,
+        "min_hold": 3,
+        "notional": 1733.8200302124023,
+        "peak_px": 26.510000228881836,
+        "reason": "packet\ud83d\udfe2 OR headline\ud83d\udfe2 and camera net \u2265 2; gate news_or_headline=True,cam_net_min=2; rank cond; list yday_gainer,ohlc_hot; \ud83d\udd35; \u26aa; ret5=+10.0; leftover $1742.40",
+        "shares": 66,
+        "ticker": "WAY"
+      }
+    },
+    "yday_equity": 8567.1
+  }
+}

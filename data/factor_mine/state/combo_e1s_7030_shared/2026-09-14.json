@@ -1,0 +1,159 @@
+{
+  "buys": [],
+  "cash": 12941.52,
+  "date": "2026-09-14",
+  "equity": 9585.76,
+  "fees": 17.0052,
+  "fills": [
+    {
+      "fees": 2.019,
+      "pnl": 54.0,
+      "price": 261.51,
+      "shares": 3,
+      "side": "SELL",
+      "ticker": "ADBE"
+    },
+    {
+      "fees": 2.088,
+      "pnl": -40.04,
+      "price": 30.63,
+      "shares": 26,
+      "side": "SELL",
+      "ticker": "CPRT"
+    },
+    {
+      "fees": 2.4591,
+      "pnl": -12.13,
+      "price": 5.86,
+      "shares": 145,
+      "side": "SELL",
+      "ticker": "DBI"
+    },
+    {
+      "fees": 2.043,
+      "pnl": 61.6,
+      "price": 77.68,
+      "shares": 11,
+      "side": "SELL",
+      "ticker": "DSGX"
+    },
+    {
+      "fees": 2.055,
+      "pnl": 45.26,
+      "price": 59.31,
+      "shares": 15,
+      "side": "SELL",
+      "ticker": "KR"
+    },
+    {
+      "fees": 2.2881,
+      "pnl": -51.87,
+      "price": 8.85,
+      "shares": 91,
+      "side": "SELL",
+      "ticker": "LPTH"
+    },
+    {
+      "fees": 2.025,
+      "pnl": -119.08,
+      "price": 141.42,
+      "shares": 5,
+      "side": "SELL",
+      "ticker": "ORCL"
+    },
+    {
+      "fees": 2.028,
+      "pnl": -29.9,
+      "price": 131.4,
+      "shares": 6,
+      "side": "SELL",
+      "ticker": "RH"
+    }
+  ],
+  "holdings": [
+    "CRDL",
+    "MYGN",
+    "QRVO",
+    "RWT"
+  ],
+  "mean": -1.3151,
+  "n_trades_today": 8,
+  "recipe": "combo_e1s_7030_shared",
+  "sells": [
+    "ADBE",
+    "CPRT",
+    "DBI",
+    "DSGX",
+    "KR",
+    "LPTH",
+    "ORCL",
+    "RH"
+  ],
+  "state": {
+    "after": "2026-09-14",
+    "cash": 12941.52,
+    "pos": {
+      "CRDL": {
+        "close_px": 1.9900000095367432,
+        "cost": 5.271802191466501,
+        "entry_date": "2026-09-11",
+        "entry_px": 2.0299999713897705,
+        "fee_in": 5.271802191466501,
+        "last_px": 1.9800000190734863,
+        "notional": 814.029988527298,
+        "owner": "short_news_r_h3",
+        "peak_px": 1.9800000190734863,
+        "reason": "news\ud83d\udd34; gate news=bad; list yday_mover; ret5=-8.3; combo leftover $815.99; owner short_news_r_h3",
+        "shares": 401,
+        "side": "short",
+        "ticker": "CRDL"
+      },
+      "MYGN": {
+        "close_px": 3.7899999618530273,
+        "cost": 3.194343560885077,
+        "entry_date": "2026-09-11",
+        "entry_px": 3.369999885559082,
+        "fee_in": 3.194343560885077,
+        "last_px": 3.430000066757202,
+        "notional": 815.5399723052979,
+        "owner": "short_news_r_h3",
+        "peak_px": 3.369999885559082,
+        "reason": "news\ud83d\udd34; gate news=bad; list yday_gainer,ohlc_hot; ret5=+4.0; combo leftover $815.99; owner short_news_r_h3",
+        "shares": 242,
+        "side": "short",
+        "ticker": "MYGN"
+      },
+      "QRVO": {
+        "close_px": 107.9800033569336,
+        "cost": 2.0526395888655156,
+        "entry_date": "2026-09-11",
+        "entry_px": 112.83499908447266,
+        "fee_in": 2.0526395888655156,
+        "last_px": 114.11000061035156,
+        "notional": 789.8449935913086,
+        "owner": "short_news_r_h3",
+        "peak_px": 112.83499908447266,
+        "reason": "news\ud83d\udd34; gate news=bad; list yday_gainer,ohlc_hot; \ud83d\udd35; ret5=+11.9; combo leftover $815.99; owner short_news_r_h3",
+        "shares": 7,
+        "side": "short",
+        "ticker": "QRVO"
+      },
+      "RWT": {
+        "close_px": 3.8299999237060547,
+        "cost": 3.050477260153261,
+        "entry_date": "2026-09-11",
+        "entry_px": 3.5199999809265137,
+        "fee_in": 3.050477260153261,
+        "last_px": 3.5299999713897705,
+        "notional": 813.1199955940247,
+        "owner": "short_news_r_h3",
+        "peak_px": 3.5199999809265137,
+        "reason": "news\ud83d\udd34; gate news=bad; list yday_mover; \ud83d\udd35; ret5=-19.0; combo leftover $815.99; owner short_news_r_h3",
+        "shares": 231,
+        "side": "short",
+        "ticker": "RWT"
+      }
+    },
+    "yday_equity": 9585.76
+  }
+}

@@ -1,0 +1,215 @@
+{
+  "buys": [
+    "NVT",
+    "BAK",
+    "APPS",
+    "VIST",
+    "BAND",
+    "PAGS",
+    "REAX",
+    "GPRO"
+  ],
+  "cash": 62.72,
+  "date": "2026-09-11",
+  "equity": 9446.54,
+  "fees": 30.6702,
+  "fills": [
+    {
+      "fees": 2.011,
+      "pnl": null,
+      "price": 157.78,
+      "shares": 7,
+      "side": "BUY",
+      "ticker": "NVT"
+    },
+    {
+      "fees": 7.0692,
+      "pnl": null,
+      "price": 2.12,
+      "shares": 548,
+      "side": "BUY",
+      "ticker": "BAK"
+    },
+    {
+      "fees": 2.281,
+      "pnl": null,
+      "price": 11.88,
+      "shares": 97,
+      "side": "BUY",
+      "ticker": "APPS"
+    },
+    {
+      "fees": 2.035,
+      "pnl": null,
+      "price": 77.33,
+      "shares": 15,
+      "side": "BUY",
+      "ticker": "VIST"
+    },
+    {
+      "fees": 2.056,
+      "pnl": null,
+      "price": 52.55,
+      "shares": 22,
+      "side": "BUY",
+      "ticker": "BAND"
+    },
+    {
+      "fees": 2.335,
+      "pnl": null,
+      "price": 10.11,
+      "shares": 115,
+      "side": "BUY",
+      "ticker": "PAGS"
+    },
+    {
+      "fees": 2.176,
+      "pnl": null,
+      "price": 18.56,
+      "shares": 62,
+      "side": "BUY",
+      "ticker": "REAX"
+    },
+    {
+      "fees": 10.707,
+      "pnl": null,
+      "price": 1.4,
+      "shares": 830,
+      "side": "BUY",
+      "ticker": "GPRO"
+    }
+  ],
+  "holdings": [
+    "APPS",
+    "BAK",
+    "BAND",
+    "GPRO",
+    "NVT",
+    "PAGS",
+    "REAX",
+    "VIST"
+  ],
+  "mean": 1.5387,
+  "n_trades_today": 8,
+  "recipe": "union_coil_off_h1",
+  "sells": [],
+  "state": {
+    "after": "2026-09-11",
+    "cash": 62.72,
+    "pos": {
+      "APPS": {
+        "close_px": 11.8100004196167,
+        "cost": 1154.641011100769,
+        "entry_date": "2026-09-11",
+        "entry_px": 11.880000114440918,
+        "fee_in": 2.281,
+        "last_px": 11.880000114440918,
+        "min_hold": 1,
+        "notional": 1152.360011100769,
+        "peak_px": 11.880000114440918,
+        "reason": "union \u2229 coil_off, no \ud83d\udea8; gate ret_5_min=0.0,ret_5_max=10.0,rvol_min=0.7,rvol_max=2.2; list probable,yday_gainer; ret5=+8.5; leftover $1162.92",
+        "shares": 97,
+        "ticker": "APPS"
+      },
+      "BAK": {
+        "close_px": 2.0799999237060547,
+        "cost": 1168.8291372863769,
+        "entry_date": "2026-09-11",
+        "entry_px": 2.119999885559082,
+        "fee_in": 7.0692,
+        "last_px": 2.119999885559082,
+        "min_hold": 1,
+        "notional": 1161.759937286377,
+        "peak_px": 2.119999885559082,
+        "reason": "union \u2229 coil_off, no \ud83d\udea8; gate ret_5_min=0.0,ret_5_max=10.0,rvol_min=0.7,rvol_max=2.2; list probable,yday_gainer,ohlc_hot; \ud83d\udd35; ret5=+8.8; leftover $1162.92",
+        "shares": 548,
+        "ticker": "BAK"
+      },
+      "BAND": {
+        "close_px": 56.869998931884766,
+        "cost": 1158.155983215332,
+        "entry_date": "2026-09-11",
+        "entry_px": 52.54999923706055,
+        "fee_in": 2.056,
+        "last_px": 52.54999923706055,
+        "min_hold": 1,
+        "notional": 1156.099983215332,
+        "peak_px": 52.54999923706055,
+        "reason": "union \u2229 coil_off, no \ud83d\udea8; gate ret_5_min=0.0,ret_5_max=10.0,rvol_min=0.7,rvol_max=2.2; list probable,yday_gainer; \ud83d\udd35; \u26aa; ret5=+9.6; leftover $1162.92",
+        "shares": 22,
+        "ticker": "BAND"
+      },
+      "GPRO": {
+        "close_px": 1.3799999952316284,
+        "cost": 1172.706980211258,
+        "entry_date": "2026-09-11",
+        "entry_px": 1.399999976158142,
+        "fee_in": 10.707,
+        "last_px": 1.399999976158142,
+        "min_hold": 1,
+        "notional": 1161.999980211258,
+        "peak_px": 1.399999976158142,
+        "reason": "union \u2229 coil_off, no \ud83d\udea8; gate ret_5_min=0.0,ret_5_max=10.0,rvol_min=0.7,rvol_max=2.2; list ohlc_hot; ret5=+0.7; leftover $1162.92",
+        "shares": 830,
+        "ticker": "GPRO"
+      },
+      "NVT": {
+        "close_px": 162.3800048828125,
+        "cost": 1106.470991455078,
+        "entry_date": "2026-09-11",
+        "entry_px": 157.77999877929688,
+        "fee_in": 2.011,
+        "last_px": 157.77999877929688,
+        "min_hold": 1,
+        "notional": 1104.4599914550781,
+        "peak_px": 157.77999877929688,
+        "reason": "union \u2229 coil_off, no \ud83d\udea8; gate ret_5_min=0.0,ret_5_max=10.0,rvol_min=0.7,rvol_max=2.2; list flatten; \ud83d\udd35; ret5=+2.0; leftover $1162.92",
+        "shares": 7,
+        "ticker": "NVT"
+      },
+      "PAGS": {
+        "close_px": 10.119999885559082,
+        "cost": 1164.9849605178833,
+        "entry_date": "2026-09-11",
+        "entry_px": 10.109999656677246,
+        "fee_in": 2.335,
+        "last_px": 10.109999656677246,
+        "min_hold": 1,
+        "notional": 1162.6499605178833,
+        "peak_px": 10.109999656677246,
+        "reason": "union \u2229 coil_off, no \ud83d\udea8; gate ret_5_min=0.0,ret_5_max=10.0,rvol_min=0.7,rvol_max=2.2; list probable,yday_gainer; \u26aa; ret5=+1.7; leftover $1162.92",
+        "shares": 115,
+        "ticker": "PAGS"
+      },
+      "REAX": {
+        "close_px": 20.280000686645508,
+        "cost": 1152.8959668884277,
+        "entry_date": "2026-09-11",
+        "entry_px": 18.559999465942383,
+        "fee_in": 2.176,
+        "last_px": 18.559999465942383,
+        "min_hold": 1,
+        "notional": 1150.7199668884277,
+        "peak_px": 18.559999465942383,
+        "reason": "union \u2229 coil_off, no \ud83d\udea8; gate ret_5_min=0.0,ret_5_max=10.0,rvol_min=0.7,rvol_max=2.2; list yday_mover; ret5=+0.7; leftover $1162.92",
+        "shares": 62,
+        "ticker": "REAX"
+      },
+      "VIST": {
+        "close_px": 76.2699966430664,
+        "cost": 1161.9850274658204,
+        "entry_date": "2026-09-11",
+        "entry_px": 77.33000183105469,
+        "fee_in": 2.035,
+        "last_px": 77.33000183105469,
+        "min_hold": 1,
+        "notional": 1159.9500274658203,
+        "peak_px": 77.33000183105469,
+        "reason": "union \u2229 coil_off, no \ud83d\udea8; gate ret_5_min=0.0,ret_5_max=10.0,rvol_min=0.7,rvol_max=2.2; list probable,yday_gainer; ret5=+5.8; leftover $1162.92",
+        "shares": 15,
+        "ticker": "VIST"
+      }
+    },
+    "yday_equity": 9446.54
+  }
+}

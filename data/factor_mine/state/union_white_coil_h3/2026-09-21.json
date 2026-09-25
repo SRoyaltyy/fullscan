@@ -1,0 +1,159 @@
+{
+  "buys": [
+    "A",
+    "MGTX"
+  ],
+  "cash": 15.77,
+  "date": "2026-09-21",
+  "equity": 8243.91,
+  "fees": 21.838,
+  "fills": [
+    {
+      "fees": 2.2248,
+      "pnl": -51.29,
+      "price": 13.65,
+      "shares": 71,
+      "side": "SELL",
+      "ticker": "AVAH"
+    },
+    {
+      "fees": 2.091,
+      "pnl": 2.32,
+      "price": 36.7,
+      "shares": 27,
+      "side": "SELL",
+      "ticker": "BLFS"
+    },
+    {
+      "fees": 2.022,
+      "pnl": 64.06,
+      "price": 241.51,
+      "shares": 4,
+      "side": "SELL",
+      "ticker": "ILMN"
+    },
+    {
+      "fees": 2.019,
+      "pnl": -16.41,
+      "price": 266.76,
+      "shares": 3,
+      "side": "SELL",
+      "ticker": "IQV"
+    },
+    {
+      "fees": 2.013,
+      "pnl": -3.62,
+      "price": 680.3,
+      "shares": 1,
+      "side": "SELL",
+      "ticker": "META"
+    },
+    {
+      "fees": 2.016,
+      "pnl": 39.47,
+      "price": 371.92,
+      "shares": 2,
+      "side": "SELL",
+      "ticker": "NTRA"
+    },
+    {
+      "fees": 2.052,
+      "pnl": 139.98,
+      "price": 79.08,
+      "shares": 14,
+      "side": "SELL",
+      "ticker": "TEM"
+    },
+    {
+      "fees": 2.016,
+      "pnl": -2.67,
+      "price": 363.78,
+      "shares": 2,
+      "side": "SELL",
+      "ticker": "WST"
+    },
+    {
+      "fees": 2.056,
+      "pnl": null,
+      "price": 157.87,
+      "shares": 22,
+      "side": "BUY",
+      "ticker": "A"
+    },
+    {
+      "fees": 3.3282,
+      "pnl": null,
+      "price": 13.47,
+      "shares": 258,
+      "side": "BUY",
+      "ticker": "MGTX"
+    }
+  ],
+  "holdings": [
+    "A",
+    "MGTX",
+    "SABR"
+  ],
+  "mean": 0.6495,
+  "n_trades_today": 10,
+  "recipe": "union_white_coil_h3",
+  "sells": [
+    "AVAH",
+    "BLFS",
+    "ILMN",
+    "IQV",
+    "META",
+    "NTRA",
+    "TEM",
+    "WST"
+  ],
+  "state": {
+    "after": "2026-09-21",
+    "cash": 15.77,
+    "pos": {
+      "A": {
+        "close_px": 161.94000244140625,
+        "cost": 3475.195892578125,
+        "entry_date": "2026-09-21",
+        "entry_px": 157.8699951171875,
+        "fee_in": 2.056,
+        "last_px": 157.8699951171875,
+        "min_hold": 3,
+        "notional": 3473.139892578125,
+        "peak_px": 157.8699951171875,
+        "reason": "combo gate; gate zero_red=True,ret_5_max=10.0,rvol_max=2.2; list flatten; \ud83d\udd35; \u26aa; ret5=+6.5; leftover $3484.78",
+        "shares": 22,
+        "ticker": "A"
+      },
+      "MGTX": {
+        "close_px": 13.079999923706055,
+        "cost": 3478.5882688934325,
+        "entry_date": "2026-09-21",
+        "entry_px": 13.470000267028809,
+        "fee_in": 3.3282,
+        "last_px": 13.470000267028809,
+        "min_hold": 3,
+        "notional": 3475.2600688934326,
+        "peak_px": 13.470000267028809,
+        "reason": "combo gate; gate zero_red=True,ret_5_max=10.0,rvol_max=2.2; list flatten; \ud83d\udd35; \u26aa; ret5=+3.6; leftover $3484.78",
+        "shares": 258,
+        "ticker": "MGTX"
+      },
+      "SABR": {
+        "close_px": 2.3299999237060547,
+        "cost": 1336.7466528335572,
+        "entry_date": "2026-09-17",
+        "entry_px": 2.4000000953674316,
+        "fee_in": 7.1466,
+        "last_px": 2.259999990463257,
+        "min_hold": 3,
+        "notional": 1329.6000528335571,
+        "peak_px": 2.4000000953674316,
+        "reason": "combo gate; gate zero_red=True,ret_5_max=10.0,rvol_max=2.2; list probable,yday_gainer,yday_mover,ohlc_hot; \ud83d\udd35; \u26aa; ret5=+8.4; leftover $1337.57",
+        "shares": 554,
+        "ticker": "SABR"
+      }
+    },
+    "yday_equity": 8243.91
+  }
+}

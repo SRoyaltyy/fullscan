@@ -1,0 +1,102 @@
+{
+  "buys": [],
+  "cash": 8525.15,
+  "date": "2026-09-24",
+  "equity": 8525.15,
+  "fees": 38.9847,
+  "fills": [
+    {
+      "fees": 2.064,
+      "pnl": -16.53,
+      "price": 46.88,
+      "shares": 18,
+      "side": "SELL",
+      "ticker": "CBRL"
+    },
+    {
+      "fees": 12.488,
+      "pnl": -72.56,
+      "price": 1.17,
+      "shares": 955,
+      "side": "SELL",
+      "ticker": "CMPX"
+    },
+    {
+      "fees": 2.022,
+      "pnl": -22.1,
+      "price": 192.26,
+      "shares": 4,
+      "side": "SELL",
+      "ticker": "CTAS"
+    },
+    {
+      "fees": 2.082,
+      "pnl": 1.14,
+      "price": 35.96,
+      "shares": 24,
+      "side": "SELL",
+      "ticker": "GIS"
+    },
+    {
+      "fees": 2.064,
+      "pnl": -4.29,
+      "price": 47.14,
+      "shares": 18,
+      "side": "SELL",
+      "ticker": "KBH"
+    },
+    {
+      "fees": 2.034,
+      "pnl": -37.49,
+      "price": 105.49,
+      "shares": 8,
+      "side": "SELL",
+      "ticker": "PAYX"
+    },
+    {
+      "fees": 2.4622,
+      "pnl": -89.57,
+      "price": 7.37,
+      "shares": 146,
+      "side": "SELL",
+      "ticker": "PGEN"
+    },
+    {
+      "fees": 2.2343,
+      "pnl": -103.61,
+      "price": 14.38,
+      "shares": 74,
+      "side": "SELL",
+      "ticker": "SGRY"
+    },
+    {
+      "fees": 11.5342,
+      "pnl": -31.73,
+      "price": 1.29,
+      "shares": 882,
+      "side": "SELL",
+      "ticker": "VERI"
+    }
+  ],
+  "holdings": [],
+  "mean": -0.7185,
+  "n_trades_today": 9,
+  "recipe": "combo_ne1_5050_shared",
+  "sells": [
+    "CBRL",
+    "CMPX",
+    "CTAS",
+    "GIS",
+    "KBH",
+    "PAYX",
+    "PGEN",
+    "SGRY",
+    "VERI"
+  ],
+  "state": {
+    "after": "2026-09-24",
+    "cash": 8525.15,
+    "pos": {},
+    "yday_equity": 8525.15
+  }
+}

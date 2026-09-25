@@ -1,0 +1,39 @@
+{
+  "buys": [],
+  "cash": 9559.95,
+  "date": "2026-09-10",
+  "equity": 9559.95,
+  "fees": 4.181,
+  "fills": [
+    {
+      "fees": 2.0966,
+      "pnl": 449.73,
+      "price": 260.708,
+      "shares": 19,
+      "side": "SELL",
+      "ticker": "BE"
+    },
+    {
+      "fees": 2.0844,
+      "pnl": -310.3,
+      "price": 245.35,
+      "shares": 17,
+      "side": "SELL",
+      "ticker": "CRM"
+    }
+  ],
+  "holdings": [],
+  "mean": -1.5126,
+  "n_trades_today": 2,
+  "recipe": "union_news_pack_net3_h3",
+  "sells": [
+    "BE",
+    "CRM"
+  ],
+  "state": {
+    "after": "2026-09-10",
+    "cash": 9559.95,
+    "pos": {},
+    "yday_equity": 9559.95
+  }
+}

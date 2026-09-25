@@ -1,0 +1,215 @@
+{
+  "buys": [
+    "TALO",
+    "VAL",
+    "RIG",
+    "ILMN",
+    "ADPT",
+    "MRCY",
+    "TEM",
+    "SM"
+  ],
+  "cash": 238.34,
+  "date": "2026-09-16",
+  "equity": 9704.59,
+  "fees": 17.221,
+  "fills": [
+    {
+      "fees": 2.197,
+      "pnl": null,
+      "price": 17.87,
+      "shares": 69,
+      "side": "BUY",
+      "ticker": "TALO"
+    },
+    {
+      "fees": 2.032,
+      "pnl": null,
+      "price": 87.4,
+      "shares": 14,
+      "side": "BUY",
+      "ticker": "VAL"
+    },
+    {
+      "fees": 2.709,
+      "pnl": null,
+      "price": 5.87,
+      "shares": 210,
+      "side": "BUY",
+      "ticker": "RIG"
+    },
+    {
+      "fees": 2.005,
+      "pnl": null,
+      "price": 224.49,
+      "shares": 5,
+      "side": "BUY",
+      "ticker": "ILMN"
+    },
+    {
+      "fees": 2.125,
+      "pnl": null,
+      "price": 27.09,
+      "shares": 45,
+      "side": "BUY",
+      "ticker": "ADPT"
+    },
+    {
+      "fees": 2.032,
+      "pnl": null,
+      "price": 87.52,
+      "shares": 14,
+      "side": "BUY",
+      "ticker": "MRCY"
+    },
+    {
+      "fees": 2.041,
+      "pnl": null,
+      "price": 68.79,
+      "shares": 17,
+      "side": "BUY",
+      "ticker": "TEM"
+    },
+    {
+      "fees": 2.08,
+      "pnl": null,
+      "price": 39.99,
+      "shares": 30,
+      "side": "BUY",
+      "ticker": "SM"
+    }
+  ],
+  "holdings": [
+    "ADPT",
+    "ILMN",
+    "MRCY",
+    "RIG",
+    "SM",
+    "TALO",
+    "TEM",
+    "VAL"
+  ],
+  "mean": -1.7834,
+  "n_trades_today": 8,
+  "recipe": "union_clk_mom_break_peer_opp_h1",
+  "sells": [],
+  "state": {
+    "after": "2026-09-16",
+    "cash": 238.34,
+    "pos": {
+      "ADPT": {
+        "close_px": 27.670000076293945,
+        "cost": 1221.175006866455,
+        "entry_date": "2026-09-16",
+        "entry_px": 27.09000015258789,
+        "fee_in": 2.125,
+        "last_px": 27.09000015258789,
+        "min_hold": 1,
+        "notional": 1219.050006866455,
+        "peak_px": 27.09000015258789,
+        "reason": "Clock-B #1 \u2229 Theme Radar T\u22121 oppset; gate clk_mom_break_peer=True,oppset=True; rank opp_rvol; list probable,yday_gainer,ohlc_hot; \ud83d\udd35; \u26aa; ret5=+9.6; leftover $1235.10",
+        "shares": 45,
+        "ticker": "ADPT"
+      },
+      "ILMN": {
+        "close_px": 228.92999267578125,
+        "cost": 1124.4550274658204,
+        "entry_date": "2026-09-16",
+        "entry_px": 224.49000549316406,
+        "fee_in": 2.005,
+        "last_px": 224.49000549316406,
+        "min_hold": 1,
+        "notional": 1122.4500274658203,
+        "peak_px": 224.49000549316406,
+        "reason": "Clock-B #1 \u2229 Theme Radar T\u22121 oppset; gate clk_mom_break_peer=True,oppset=True; rank opp_rvol; list yday_gainer; \ud83d\udd35; \u26aa; ret5=+5.3; leftover $1235.10",
+        "shares": 5,
+        "ticker": "ILMN"
+      },
+      "MRCY": {
+        "close_px": 87.25,
+        "cost": 1227.3119530029296,
+        "entry_date": "2026-09-16",
+        "entry_px": 87.5199966430664,
+        "fee_in": 2.032,
+        "last_px": 87.5199966430664,
+        "min_hold": 1,
+        "notional": 1225.2799530029297,
+        "peak_px": 87.5199966430664,
+        "reason": "Clock-B #1 \u2229 Theme Radar T\u22121 oppset; gate clk_mom_break_peer=True,oppset=True; rank opp_rvol; list yday_gainer; \ud83d\udd35; ret5=+4.3; leftover $1235.10",
+        "shares": 14,
+        "ticker": "MRCY"
+      },
+      "RIG": {
+        "close_px": 5.539999961853027,
+        "cost": 1235.4089759674073,
+        "entry_date": "2026-09-16",
+        "entry_px": 5.869999885559082,
+        "fee_in": 2.709,
+        "last_px": 5.869999885559082,
+        "min_hold": 1,
+        "notional": 1232.6999759674072,
+        "peak_px": 5.869999885559082,
+        "reason": "Clock-B #1 \u2229 Theme Radar T\u22121 oppset; gate clk_mom_break_peer=True,oppset=True; rank opp_rvol; list probable,yday_gainer; \ud83d\udd35; ret5=+3.1; leftover $1235.10",
+        "shares": 210,
+        "ticker": "RIG"
+      },
+      "SM": {
+        "close_px": 38.15999984741211,
+        "cost": 1201.7800503540038,
+        "entry_date": "2026-09-16",
+        "entry_px": 39.9900016784668,
+        "fee_in": 2.08,
+        "last_px": 39.9900016784668,
+        "min_hold": 1,
+        "notional": 1199.700050354004,
+        "peak_px": 39.9900016784668,
+        "reason": "Clock-B #1 \u2229 Theme Radar T\u22121 oppset; gate clk_mom_break_peer=True,oppset=True; rank opp_rvol; list ohlc_hot; \ud83d\udd35; ret5=+9.3; leftover $1235.10",
+        "shares": 30,
+        "ticker": "SM"
+      },
+      "TALO": {
+        "close_px": 17.420000076293945,
+        "cost": 1235.2270579071044,
+        "entry_date": "2026-09-16",
+        "entry_px": 17.8700008392334,
+        "fee_in": 2.197,
+        "last_px": 17.8700008392334,
+        "min_hold": 1,
+        "notional": 1233.0300579071045,
+        "peak_px": 17.8700008392334,
+        "reason": "Clock-B #1 \u2229 Theme Radar T\u22121 oppset; gate clk_mom_break_peer=True,oppset=True; rank opp_rvol; list ohlc_hot; \ud83d\udd35; ret5=+6.8; leftover $1235.10",
+        "shares": 69,
+        "ticker": "TALO"
+      },
+      "TEM": {
+        "close_px": 69.97000122070312,
+        "cost": 1171.4710155639648,
+        "entry_date": "2026-09-16",
+        "entry_px": 68.79000091552734,
+        "fee_in": 2.041,
+        "last_px": 68.79000091552734,
+        "min_hold": 1,
+        "notional": 1169.4300155639648,
+        "peak_px": 68.79000091552734,
+        "reason": "Clock-B #1 \u2229 Theme Radar T\u22121 oppset; gate clk_mom_break_peer=True,oppset=True; rank opp_rvol; list probable,yday_gainer; \ud83d\udd35; \u26aa; ret5=+7.1; leftover $1235.10",
+        "shares": 17,
+        "ticker": "TEM"
+      },
+      "VAL": {
+        "close_px": 82.5199966430664,
+        "cost": 1225.6320213623046,
+        "entry_date": "2026-09-16",
+        "entry_px": 87.4000015258789,
+        "fee_in": 2.032,
+        "last_px": 87.4000015258789,
+        "min_hold": 1,
+        "notional": 1223.6000213623047,
+        "peak_px": 87.4000015258789,
+        "reason": "Clock-B #1 \u2229 Theme Radar T\u22121 oppset; gate clk_mom_break_peer=True,oppset=True; rank opp_rvol; list probable,yday_gainer; \ud83d\udd35; ret5=+3.2; leftover $1235.10",
+        "shares": 14,
+        "ticker": "VAL"
+      }
+    },
+    "yday_equity": 9704.59
+  }
+}

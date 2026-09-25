@@ -1,0 +1,48 @@
+{
+  "buys": [],
+  "cash": 9606.5,
+  "date": "2026-08-31",
+  "equity": 9606.5,
+  "fees": 8.0766,
+  "fills": [
+    {
+      "fees": 3.4095,
+      "pnl": -156.97,
+      "price": 12.26,
+      "shares": 259,
+      "side": "SELL",
+      "ticker": "FSM"
+    },
+    {
+      "fees": 2.0977,
+      "pnl": -78.32,
+      "price": 134.1,
+      "shares": 24,
+      "side": "SELL",
+      "ticker": "MRNA"
+    },
+    {
+      "fees": 2.5694,
+      "pnl": -158.21,
+      "price": 18.125,
+      "shares": 175,
+      "side": "SELL",
+      "ticker": "TH"
+    }
+  ],
+  "holdings": [],
+  "mean": -1.7972,
+  "n_trades_today": 3,
+  "recipe": "ohlc_hot_coil_h1",
+  "sells": [
+    "FSM",
+    "MRNA",
+    "TH"
+  ],
+  "state": {
+    "after": "2026-08-31",
+    "cash": 9606.5,
+    "pos": {},
+    "yday_equity": 9606.5
+  }
+}

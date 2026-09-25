@@ -1,0 +1,81 @@
+{
+  "buys": [
+    "CRWD",
+    "GME"
+  ],
+  "cash": 77.17,
+  "date": "2026-09-18",
+  "equity": 8634.11,
+  "fees": 7.2259,
+  "fills": [
+    {
+      "fees": 2.214,
+      "pnl": 546.69,
+      "price": 182.33,
+      "shares": 48,
+      "side": "SELL",
+      "ticker": "SMTC"
+    },
+    {
+      "fees": 2.032,
+      "pnl": null,
+      "price": 246.98,
+      "shares": 14,
+      "side": "BUY",
+      "ticker": "CRWD"
+    },
+    {
+      "fees": 2.9799,
+      "pnl": null,
+      "price": 22.9,
+      "shares": 231,
+      "side": "BUY",
+      "ticker": "GME"
+    }
+  ],
+  "holdings": [
+    "CRWD",
+    "GME"
+  ],
+  "mean": 0.0094,
+  "n_trades_today": 3,
+  "recipe": "union_news_g_cam71_n2_h1",
+  "sells": [
+    "SMTC"
+  ],
+  "state": {
+    "after": "2026-09-18",
+    "cash": 77.17,
+    "pos": {
+      "CRWD": {
+        "close_px": 237.64999389648438,
+        "cost": 3459.751940185547,
+        "entry_date": "2026-09-18",
+        "entry_px": 246.97999572753906,
+        "fee_in": 2.032,
+        "last_px": 246.97999572753906,
+        "min_hold": 1,
+        "notional": 3457.719940185547,
+        "peak_px": 246.97999572753906,
+        "reason": "topheavy leftover on news\ud83d\udfe2 +7 \u2212\u22641; gate news=good,n_pos_min=7,cam_bad_max=1; rank cond; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+17.6; leftover $3531.92",
+        "shares": 14,
+        "ticker": "CRWD"
+      },
+      "GME": {
+        "close_px": 22.639999389648438,
+        "cost": 5292.879811880493,
+        "entry_date": "2026-09-18",
+        "entry_px": 22.899999618530273,
+        "fee_in": 2.9799,
+        "last_px": 22.899999618530273,
+        "min_hold": 1,
+        "notional": 5289.899911880493,
+        "peak_px": 22.899999618530273,
+        "reason": "topheavy leftover on news\ud83d\udfe2 +7 \u2212\u22641; gate news=good,n_pos_min=7,cam_bad_max=1; rank cond; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+11.7; leftover $5297.88",
+        "shares": 231,
+        "ticker": "GME"
+      }
+    },
+    "yday_equity": 8634.11
+  }
+}

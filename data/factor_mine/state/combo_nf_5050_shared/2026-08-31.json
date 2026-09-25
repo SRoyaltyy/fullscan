@@ -1,0 +1,143 @@
+{
+  "buys": [],
+  "cash": 4691.18,
+  "date": "2026-08-31",
+  "equity": 9803.48,
+  "fees": 16.8566,
+  "fills": [
+    {
+      "fees": 2.109,
+      "pnl": 12.3,
+      "price": 19.25,
+      "shares": 33,
+      "side": "SELL",
+      "ticker": "BBWI"
+    },
+    {
+      "fees": 2.2026,
+      "pnl": -19.1,
+      "price": 9.5,
+      "shares": 64,
+      "side": "SELL",
+      "ticker": "CAPR"
+    },
+    {
+      "fees": 2.106,
+      "pnl": -48.35,
+      "price": 17.87,
+      "shares": 32,
+      "side": "SELL",
+      "ticker": "ERAS"
+    },
+    {
+      "fees": 2.228,
+      "pnl": -10.91,
+      "price": 8.52,
+      "shares": 72,
+      "side": "SELL",
+      "ticker": "OPTX"
+    },
+    {
+      "fees": 2.052,
+      "pnl": -0.44,
+      "price": 42.0,
+      "shares": 14,
+      "side": "SELL",
+      "ticker": "RRC"
+    },
+    {
+      "fees": 2.064,
+      "pnl": -35.61,
+      "price": 31.15,
+      "shares": 18,
+      "side": "SELL",
+      "ticker": "SEDG"
+    },
+    {
+      "fees": 2.022,
+      "pnl": -41.86,
+      "price": 132.3,
+      "shares": 4,
+      "side": "SELL",
+      "ticker": "SMTC"
+    },
+    {
+      "fees": 2.073,
+      "pnl": -21.98,
+      "price": 28.06,
+      "shares": 21,
+      "side": "SELL",
+      "ticker": "ZYME"
+    }
+  ],
+  "holdings": [
+    "CRK",
+    "MOS",
+    "SLI"
+  ],
+  "mean": 1.0979,
+  "n_trades_today": 8,
+  "recipe": "combo_nf_5050_shared",
+  "sells": [
+    "BBWI",
+    "CAPR",
+    "ERAS",
+    "OPTX",
+    "RRC",
+    "SEDG",
+    "SMTC",
+    "ZYME"
+  ],
+  "state": {
+    "after": "2026-08-31",
+    "cash": 4691.18,
+    "pos": {
+      "CRK": {
+        "close_px": 14.430000305175781,
+        "cost": 1714.0510133895873,
+        "entry_date": "2026-08-28",
+        "entry_px": 14.630000114440918,
+        "fee_in": 2.341,
+        "last_px": 14.539999961853027,
+        "notional": 1711.7100133895874,
+        "owner": "flatten_h5",
+        "peak_px": 14.630000114440918,
+        "reason": "baseline list, no extra gate; list flatten; wish-list (live io HOLD \u2014 not a ticket); ret5=+5.8; combo leftover $1718.40; owner flatten_h5",
+        "shares": 117,
+        "side": "long",
+        "ticker": "CRK"
+      },
+      "MOS": {
+        "close_px": 24.1200008392334,
+        "cost": 1702.6530541687011,
+        "entry_date": "2026-08-28",
+        "entry_px": 23.950000762939453,
+        "fee_in": 2.203,
+        "last_px": 23.68000030517578,
+        "notional": 1700.4500541687012,
+        "owner": "flatten_h5",
+        "peak_px": 23.950000762939453,
+        "reason": "baseline list, no extra gate; list flatten; wish-list (live io HOLD \u2014 not a ticket); ret5=+1.8; combo leftover $1718.40; owner flatten_h5",
+        "shares": 71,
+        "side": "long",
+        "ticker": "MOS"
+      },
+      "SLI": {
+        "close_px": 2.6700000762939453,
+        "cost": 1726.1489427913666,
+        "entry_date": "2026-08-28",
+        "entry_px": 2.680000066757202,
+        "fee_in": 8.2689,
+        "last_px": 2.5799999237060547,
+        "notional": 1717.8800427913666,
+        "owner": "flatten_h5",
+        "peak_px": 2.680000066757202,
+        "reason": "baseline list, no extra gate; list flatten,ohlc_hot; wish-list (live io HOLD \u2014 not a ticket); ret5=+16.3; combo leftover $1718.40; owner flatten_h5",
+        "shares": 641,
+        "side": "long",
+        "ticker": "SLI"
+      }
+    },
+    "yday_equity": 9803.48
+  }
+}

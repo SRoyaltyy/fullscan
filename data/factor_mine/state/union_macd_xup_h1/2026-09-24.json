@@ -1,0 +1,93 @@
+{
+  "buys": [],
+  "cash": 9805.94,
+  "date": "2026-09-24",
+  "equity": 9805.94,
+  "fees": 21.1618,
+  "fills": [
+    {
+      "fees": 2.4149,
+      "pnl": -23.14,
+      "price": 9.67,
+      "shares": 131,
+      "side": "SELL",
+      "ticker": "ADMA"
+    },
+    {
+      "fees": 2.052,
+      "pnl": -29.56,
+      "price": 87.68,
+      "shares": 14,
+      "side": "SELL",
+      "ticker": "DXCM"
+    },
+    {
+      "fees": 2.2533,
+      "pnl": -97.28,
+      "price": 14.81,
+      "shares": 80,
+      "side": "SELL",
+      "ticker": "FDMT"
+    },
+    {
+      "fees": 2.1452,
+      "pnl": 1.13,
+      "price": 28.42,
+      "shares": 45,
+      "side": "SELL",
+      "ticker": "MAZE"
+    },
+    {
+      "fees": 2.2596,
+      "pnl": -114.38,
+      "price": 14.38,
+      "shares": 82,
+      "side": "SELL",
+      "ticker": "SGRY"
+    },
+    {
+      "fees": 2.034,
+      "pnl": -52.53,
+      "price": 140.56,
+      "shares": 8,
+      "side": "SELL",
+      "ticker": "SHOP"
+    },
+    {
+      "fees": 5.9028,
+      "pnl": -43.29,
+      "price": 2.79,
+      "shares": 451,
+      "side": "SELL",
+      "ticker": "THM"
+    },
+    {
+      "fees": 2.1,
+      "pnl": -176.23,
+      "price": 36.025,
+      "shares": 30,
+      "side": "SELL",
+      "ticker": "VKTX"
+    }
+  ],
+  "holdings": [],
+  "mean": -2.3201,
+  "n_trades_today": 8,
+  "recipe": "union_macd_xup_h1",
+  "sells": [
+    "ADMA",
+    "DXCM",
+    "FDMT",
+    "MAZE",
+    "SGRY",
+    "SHOP",
+    "THM",
+    "VKTX"
+  ],
+  "state": {
+    "after": "2026-09-24",
+    "cash": 9805.94,
+    "pos": {},
+    "yday_equity": 9805.94
+  }
+}

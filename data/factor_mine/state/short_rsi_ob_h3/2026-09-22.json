@@ -1,0 +1,356 @@
+{
+  "buys": [
+    "GLND",
+    "GRAL",
+    "NUAI",
+    "USDE",
+    "VGZ",
+    "AMRX",
+    "FWDI"
+  ],
+  "cash": 23259.24,
+  "date": "2026-09-22",
+  "equity": 9657.74,
+  "fees": 27.535,
+  "fills": [
+    {
+      "fees": 2.095,
+      "pnl": 28.31,
+      "price": 27.3,
+      "shares": 35,
+      "side": "COVER",
+      "ticker": "ADPT"
+    },
+    {
+      "fees": 2.047,
+      "pnl": -6.42,
+      "price": 52.0,
+      "shares": 19,
+      "side": "COVER",
+      "ticker": "CVI"
+    },
+    {
+      "fees": 2.044,
+      "pnl": 107.65,
+      "price": 48.1,
+      "shares": 18,
+      "side": "COVER",
+      "ticker": "FRO"
+    },
+    {
+      "fees": 2.281,
+      "pnl": 2.17,
+      "price": 10.18,
+      "shares": 97,
+      "side": "COVER",
+      "ticker": "IOVA"
+    },
+    {
+      "fees": 2.362,
+      "pnl": 23.74,
+      "price": 7.79,
+      "shares": 124,
+      "side": "COVER",
+      "ticker": "NAT"
+    },
+    {
+      "fees": 2.770815068822364,
+      "pnl": null,
+      "price": 2.94,
+      "shares": 210,
+      "side": "SHORT",
+      "ticker": "GLND"
+    },
+    {
+      "fees": 2.039623287671233,
+      "pnl": null,
+      "price": 106.75,
+      "shares": 5,
+      "side": "SHORT",
+      "ticker": "GRAL"
+    },
+    {
+      "fees": 2.2859369863457877,
+      "pnl": null,
+      "price": 7.23,
+      "shares": 85,
+      "side": "SHORT",
+      "ticker": "NUAI"
+    },
+    {
+      "fees": 2.167726849020344,
+      "pnl": null,
+      "price": 12.99,
+      "shares": 47,
+      "side": "SHORT",
+      "ticker": "USDE"
+    },
+    {
+      "fees": 3.071316438964948,
+      "pnl": null,
+      "price": 2.65,
+      "shares": 233,
+      "side": "SHORT",
+      "ticker": "VGZ"
+    },
+    {
+      "fees": 2.116438356164384,
+      "pnl": null,
+      "price": 20.0,
+      "shares": 30,
+      "side": "SHORT",
+      "ticker": "AMRX"
+    },
+    {
+      "fees": 2.2541876712328768,
+      "pnl": null,
+      "price": 8.17,
+      "shares": 75,
+      "side": "SHORT",
+      "ticker": "FWDI"
+    }
+  ],
+  "holdings": [
+    "AMRX",
+    "ASST",
+    "CYPH",
+    "ECO",
+    "FEAM",
+    "FWDI",
+    "GLND",
+    "GRAL",
+    "NEO",
+    "NTRA",
+    "NUAI",
+    "TEM",
+    "TJGC",
+    "TRMD",
+    "USDE",
+    "VGZ"
+  ],
+  "mean": -0.4264,
+  "n_trades_today": 12,
+  "recipe": "short_rsi_ob_h3",
+  "sells": [
+    "ADPT",
+    "CVI",
+    "FRO",
+    "IOVA",
+    "NAT"
+  ],
+  "state": {
+    "after": "2026-09-22",
+    "cash": 23259.24,
+    "pos": {
+      "AMRX": {
+        "close_px": 19.5,
+        "cost": 2.116438356164384,
+        "entry_date": "2026-09-22",
+        "entry_px": 20.0,
+        "fee_in": 2.116438356164384,
+        "last_px": 20.0,
+        "notional": 600.0,
+        "peak_px": 20.0,
+        "reason": "RSI overbought; gate rsi_ob=True; list ohlc_hot; ret5=+17.1; leftover $618.51",
+        "shares": 30,
+        "ticker": "AMRX"
+      },
+      "ASST": {
+        "close_px": 29.350000381469727,
+        "cost": 2.1221386296520492,
+        "entry_date": "2026-09-21",
+        "entry_px": 31.639999389648438,
+        "fee_in": 2.1221386296520492,
+        "last_px": 29.299999237060547,
+        "notional": 917.5599822998047,
+        "peak_px": 29.299999237060547,
+        "reason": "RSI overbought; gate rsi_ob=True; list ohlc_hot; \ud83d\udd35; ret5=+8.9; leftover $935.25",
+        "shares": 29,
+        "ticker": "ASST"
+      },
+      "CYPH": {
+        "close_px": 3.7300000190734863,
+        "cost": 5.243393973538647,
+        "entry_date": "2026-09-18",
+        "entry_px": 3.0350000858306885,
+        "fee_in": 5.243393973538647,
+        "last_px": 3.509999990463257,
+        "notional": 1207.930034160614,
+        "peak_px": 3.0350000858306885,
+        "reason": "RSI overbought; gate rsi_ob=True; list yday_gainer,yday_mover; \ud83d\udd35; \u26aa; ret5=+39.5; leftover $1209.40",
+        "shares": 398,
+        "ticker": "CYPH"
+      },
+      "ECO": {
+        "close_px": 77.54,
+        "cost": 2.0846027397260274,
+        "entry_date": "2026-09-18",
+        "entry_px": 85.0,
+        "fee_in": 2.0846027397260274,
+        "last_px": 77.83,
+        "notional": 1190.0,
+        "peak_px": 77.83,
+        "reason": "RSI overbought; gate rsi_ob=True; list flatten; \ud83d\udd35; \u26aa; ret5=+18.3; leftover $1209.40",
+        "shares": 14,
+        "ticker": "ECO"
+      },
+      "FEAM": {
+        "close_px": 2.94,
+        "cost": 4.97447972632369,
+        "entry_date": "2026-09-21",
+        "entry_px": 2.4700000286102295,
+        "fee_in": 4.97447972632369,
+        "last_px": 2.47,
+        "notional": 933.6600108146667,
+        "peak_px": 2.47,
+        "reason": "RSI overbought; gate rsi_ob=True; list yday_gainer,yday_mover; ret5=+73.6; leftover $935.25",
+        "shares": 378,
+        "ticker": "FEAM"
+      },
+      "FWDI": {
+        "close_px": 8.6,
+        "cost": 2.2541876712328768,
+        "entry_date": "2026-09-22",
+        "entry_px": 8.17,
+        "fee_in": 2.2541876712328768,
+        "last_px": 8.17,
+        "notional": 612.75,
+        "peak_px": 8.17,
+        "reason": "RSI overbought; gate rsi_ob=True; list ohlc_hot; ret5=+17.6; leftover $618.51",
+        "shares": 75,
+        "ticker": "FWDI"
+      },
+      "GLND": {
+        "close_px": 2.509999990463257,
+        "cost": 2.770815068822364,
+        "entry_date": "2026-09-22",
+        "entry_px": 2.940000057220459,
+        "fee_in": 2.770815068822364,
+        "last_px": 2.940000057220459,
+        "notional": 617.4000120162964,
+        "peak_px": 2.940000057220459,
+        "reason": "RSI overbought; gate rsi_ob=True; list yday_gainer,yday_mover; ret5=+136.1; leftover $618.51",
+        "shares": 210,
+        "ticker": "GLND"
+      },
+      "GRAL": {
+        "close_px": 108.52,
+        "cost": 2.039623287671233,
+        "entry_date": "2026-09-22",
+        "entry_px": 106.75,
+        "fee_in": 2.039623287671233,
+        "last_px": 106.75,
+        "notional": 533.75,
+        "peak_px": 106.75,
+        "reason": "RSI overbought; gate rsi_ob=True; list yday_gainer,yday_mover; ret5=+42.9; leftover $618.51",
+        "shares": 5,
+        "ticker": "GRAL"
+      },
+      "NEO": {
+        "close_px": 18.89,
+        "cost": 2.173104657630398,
+        "entry_date": "2026-09-21",
+        "entry_px": 19.920000076293945,
+        "fee_in": 2.173104657630398,
+        "last_px": 19.28,
+        "notional": 916.3200035095215,
+        "peak_px": 19.28,
+        "reason": "RSI overbought; gate rsi_ob=True; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+15.0; leftover $935.25",
+        "shares": 46,
+        "ticker": "NEO"
+      },
+      "NTRA": {
+        "close_px": 390.9,
+        "cost": 2.0490641094887097,
+        "entry_date": "2026-09-18",
+        "entry_px": 365.7799987792969,
+        "fee_in": 2.0490641094887097,
+        "last_px": 368.26,
+        "notional": 1097.3399963378906,
+        "peak_px": 365.7799987792969,
+        "reason": "RSI overbought; gate rsi_ob=True; list ohlc_hot; \ud83d\udd35; ret5=+12.3; leftover $1209.40",
+        "shares": 3,
+        "ticker": "NTRA"
+      },
+      "NUAI": {
+        "close_px": 6.974999904632568,
+        "cost": 2.2859369863457877,
+        "entry_date": "2026-09-22",
+        "entry_px": 7.230000019073486,
+        "fee_in": 2.2859369863457877,
+        "last_px": 7.230000019073486,
+        "notional": 614.5500016212463,
+        "peak_px": 7.230000019073486,
+        "reason": "RSI overbought; gate rsi_ob=True; list yday_gainer,yday_mover; ret5=+36.6; leftover $618.51",
+        "shares": 85,
+        "ticker": "NUAI"
+      },
+      "TEM": {
+        "close_px": 77.19000244140625,
+        "cost": 2.083221918393488,
+        "entry_date": "2026-09-18",
+        "entry_px": 81.4000015258789,
+        "fee_in": 2.083221918393488,
+        "last_px": 77.98999786376953,
+        "notional": 1139.6000213623047,
+        "peak_px": 77.98999786376953,
+        "reason": "RSI overbought; gate rsi_ob=True; list yday_gainer,yday_mover; \ud83d\udd35; \u26aa; ret5=+36.8; leftover $1209.40",
+        "shares": 14,
+        "ticker": "TEM"
+      },
+      "TJGC": {
+        "close_px": 16.9,
+        "cost": 2.200480821687881,
+        "entry_date": "2026-09-21",
+        "entry_px": 16.90999984741211,
+        "fee_in": 2.200480821687881,
+        "last_px": 17.58,
+        "notional": 930.049991607666,
+        "peak_px": 16.90999984741211,
+        "reason": "RSI overbought; gate rsi_ob=True; list yday_gainer,yday_mover; ret5=+50.5; leftover $935.25",
+        "shares": 55,
+        "ticker": "TJGC"
+      },
+      "TRMD": {
+        "close_px": 34.63,
+        "cost": 2.106637809021832,
+        "entry_date": "2026-09-21",
+        "entry_px": 37.470001220703125,
+        "fee_in": 2.106637809021832,
+        "last_px": 35.54,
+        "notional": 899.280029296875,
+        "peak_px": 35.54,
+        "reason": "RSI overbought; gate rsi_ob=True; list ohlc_hot; \ud83d\udd35; ret5=+9.0; leftover $935.25",
+        "shares": 24,
+        "ticker": "TRMD"
+      },
+      "USDE": {
+        "close_px": 13.539999961853027,
+        "cost": 2.167726849020344,
+        "entry_date": "2026-09-22",
+        "entry_px": 12.989999771118164,
+        "fee_in": 2.167726849020344,
+        "last_px": 12.989999771118164,
+        "notional": 610.5299892425537,
+        "peak_px": 12.989999771118164,
+        "reason": "RSI overbought; gate rsi_ob=True; list yday_gainer,yday_mover; ret5=+69.4; leftover $618.51",
+        "shares": 47,
+        "ticker": "USDE"
+      },
+      "VGZ": {
+        "close_px": 2.819999933242798,
+        "cost": 3.071316438964948,
+        "entry_date": "2026-09-22",
+        "entry_px": 2.6500000953674316,
+        "fee_in": 3.071316438964948,
+        "last_px": 2.6500000953674316,
+        "notional": 617.4500222206116,
+        "peak_px": 2.6500000953674316,
+        "reason": "RSI overbought; gate rsi_ob=True; list yday_gainer,yday_mover; ret5=+26.3; leftover $618.51",
+        "shares": 233,
+        "ticker": "VGZ"
+      }
+    },
+    "yday_equity": 9657.74
+  }
+}

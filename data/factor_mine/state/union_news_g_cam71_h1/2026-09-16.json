@@ -1,0 +1,95 @@
+{
+  "buys": [
+    "DBX",
+    "WAY",
+    "SM"
+  ],
+  "cash": 27.7,
+  "date": "2026-09-16",
+  "equity": 8309.78,
+  "fees": 6.72,
+  "fills": [
+    {
+      "fees": 2.215,
+      "pnl": null,
+      "price": 37.13,
+      "shares": 75,
+      "side": "BUY",
+      "ticker": "DBX"
+    },
+    {
+      "fees": 2.308,
+      "pnl": null,
+      "price": 26.27,
+      "shares": 106,
+      "side": "BUY",
+      "ticker": "WAY"
+    },
+    {
+      "fees": 2.197,
+      "pnl": null,
+      "price": 39.99,
+      "shares": 69,
+      "side": "BUY",
+      "ticker": "SM"
+    }
+  ],
+  "holdings": [
+    "DBX",
+    "SM",
+    "WAY"
+  ],
+  "mean": -0.6376,
+  "n_trades_today": 3,
+  "recipe": "union_news_g_cam71_h1",
+  "sells": [],
+  "state": {
+    "after": "2026-09-16",
+    "cash": 27.7,
+    "pos": {
+      "DBX": {
+        "close_px": 37.7400016784668,
+        "cost": 2786.9650801086427,
+        "entry_date": "2026-09-16",
+        "entry_px": 37.130001068115234,
+        "fee_in": 2.215,
+        "last_px": 37.130001068115234,
+        "min_hold": 1,
+        "notional": 2784.7500801086426,
+        "peak_px": 37.130001068115234,
+        "reason": "merged news\ud83d\udfe2 and cameras +7 \u2212\u22641; gate news=good,n_pos_min=7,cam_bad_max=1; rank cond; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+11.3; leftover $2787.70",
+        "shares": 75,
+        "ticker": "DBX"
+      },
+      "SM": {
+        "close_px": 38.15999984741211,
+        "cost": 2761.507115814209,
+        "entry_date": "2026-09-16",
+        "entry_px": 39.9900016784668,
+        "fee_in": 2.197,
+        "last_px": 39.9900016784668,
+        "min_hold": 1,
+        "notional": 2759.310115814209,
+        "peak_px": 39.9900016784668,
+        "reason": "merged news\ud83d\udfe2 and cameras +7 \u2212\u22641; gate news=good,n_pos_min=7,cam_bad_max=1; rank cond; list ohlc_hot; \ud83d\udd35; ret5=+9.3; leftover $2787.70",
+        "shares": 69,
+        "ticker": "SM"
+      },
+      "WAY": {
+        "close_px": 26.59000015258789,
+        "cost": 2786.928048522949,
+        "entry_date": "2026-09-16",
+        "entry_px": 26.270000457763672,
+        "fee_in": 2.308,
+        "last_px": 26.270000457763672,
+        "min_hold": 1,
+        "notional": 2784.620048522949,
+        "peak_px": 26.270000457763672,
+        "reason": "merged news\ud83d\udfe2 and cameras +7 \u2212\u22641; gate news=good,n_pos_min=7,cam_bad_max=1; rank cond; list yday_gainer,ohlc_hot; \ud83d\udd35; \u26aa; ret5=+10.0; leftover $2787.70",
+        "shares": 106,
+        "ticker": "WAY"
+      }
+    },
+    "yday_equity": 8309.78
+  }
+}

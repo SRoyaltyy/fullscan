@@ -1,0 +1,39 @@
+{
+  "buys": [],
+  "cash": 8376.59,
+  "date": "2026-09-22",
+  "equity": 8376.59,
+  "fees": 6.1818,
+  "fills": [
+    {
+      "fees": 2.1119,
+      "pnl": 131.28,
+      "price": 163.08,
+      "shares": 26,
+      "side": "SELL",
+      "ticker": "A"
+    },
+    {
+      "fees": 4.0699,
+      "pnl": -103.85,
+      "price": 13.16,
+      "shares": 309,
+      "side": "SELL",
+      "ticker": "MGTX"
+    }
+  ],
+  "holdings": [],
+  "mean": 0.5785,
+  "n_trades_today": 2,
+  "recipe": "union_white_coil_h1",
+  "sells": [
+    "A",
+    "MGTX"
+  ],
+  "state": {
+    "after": "2026-09-22",
+    "cash": 8376.59,
+    "pos": {},
+    "yday_equity": 8376.59
+  }
+}

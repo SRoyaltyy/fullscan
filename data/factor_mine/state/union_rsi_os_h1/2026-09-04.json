@@ -1,0 +1,95 @@
+{
+  "buys": [
+    "SION",
+    "AIIO",
+    "SWBI"
+  ],
+  "cash": 3.15,
+  "date": "2026-09-04",
+  "equity": 9324.91,
+  "fees": 31.3986,
+  "fills": [
+    {
+      "fees": 5.934,
+      "pnl": null,
+      "price": 6.68,
+      "shares": 460,
+      "side": "BUY",
+      "ticker": "SION"
+    },
+    {
+      "fees": 22.6782,
+      "pnl": null,
+      "price": 1.75,
+      "shares": 1758,
+      "side": "BUY",
+      "ticker": "AIIO"
+    },
+    {
+      "fees": 2.7864,
+      "pnl": null,
+      "price": 14.12,
+      "shares": 216,
+      "side": "BUY",
+      "ticker": "SWBI"
+    }
+  ],
+  "holdings": [
+    "AIIO",
+    "SION",
+    "SWBI"
+  ],
+  "mean": 0.987,
+  "n_trades_today": 3,
+  "recipe": "union_rsi_os_h1",
+  "sells": [],
+  "state": {
+    "after": "2026-09-04",
+    "cash": 3.15,
+    "pos": {
+      "AIIO": {
+        "close_px": 1.840000033378601,
+        "cost": 3099.1782,
+        "entry_date": "2026-09-04",
+        "entry_px": 1.75,
+        "fee_in": 22.6782,
+        "last_px": 1.75,
+        "min_hold": 1,
+        "notional": 3076.5,
+        "peak_px": 1.75,
+        "reason": "union \u2229 rsi_os, no \ud83d\udea8; gate rsi_os=True; list yday_mover; \ud83d\udd35; ret5=-24.6; leftover $3077.92",
+        "shares": 1758,
+        "ticker": "AIIO"
+      },
+      "SION": {
+        "close_px": 7.179999828338623,
+        "cost": 3078.733921035767,
+        "entry_date": "2026-09-04",
+        "entry_px": 6.679999828338623,
+        "fee_in": 5.934,
+        "last_px": 6.679999828338623,
+        "min_hold": 1,
+        "notional": 3072.7999210357666,
+        "peak_px": 6.679999828338623,
+        "reason": "union \u2229 rsi_os, no \ud83d\udea8; gate rsi_os=True; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+11.4; leftover $3077.92",
+        "shares": 460,
+        "ticker": "SION"
+      },
+      "SWBI": {
+        "close_px": 12.890000343322754,
+        "cost": 3052.7063752807617,
+        "entry_date": "2026-09-04",
+        "entry_px": 14.119999885559082,
+        "fee_in": 2.7864,
+        "last_px": 14.119999885559082,
+        "min_hold": 1,
+        "notional": 3049.9199752807617,
+        "peak_px": 14.119999885559082,
+        "reason": "union \u2229 rsi_os, no \ud83d\udea8; gate rsi_os=True; list earn_react; ret5=-6.1; leftover $3077.92",
+        "shares": 216,
+        "ticker": "SWBI"
+      }
+    },
+    "yday_equity": 9324.91
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "buys": [],
+  "cash": 8770.21,
+  "date": "2026-09-14",
+  "equity": 10218.93,
+  "fees": 21.7604,
+  "fills": [
+    {
+      "fees": 3.0285,
+      "pnl": 37.88,
+      "price": 5.57,
+      "shares": 231,
+      "side": "SELL",
+      "ticker": "ANGX"
+    },
+    {
+      "fees": 2.076,
+      "pnl": -7.65,
+      "price": 54.75,
+      "shares": 22,
+      "side": "SELL",
+      "ticker": "ASO"
+    },
+    {
+      "fees": 3.3159,
+      "pnl": 23.78,
+      "price": 5.03,
+      "shares": 253,
+      "side": "SELL",
+      "ticker": "BNC"
+    },
+    {
+      "fees": 6.0338,
+      "pnl": 34.12,
+      "price": 2.8,
+      "shares": 461,
+      "side": "SELL",
+      "ticker": "INDP"
+    },
+    {
+      "fees": 2.6495,
+      "pnl": -33.54,
+      "price": 6.02,
+      "shares": 202,
+      "side": "SELL",
+      "ticker": "IRD"
+    },
+    {
+      "fees": 2.052,
+      "pnl": 20.98,
+      "price": 86.06,
+      "shares": 14,
+      "side": "SELL",
+      "ticker": "SWKS"
+    },
+    {
+      "fees": 2.6047,
+      "pnl": -22.36,
+      "price": 6.4,
+      "shares": 191,
+      "side": "SELL",
+      "ticker": "VISN"
+    }
+  ],
+  "holdings": [
+    "CMRC"
+  ],
+  "mean": 0.6591,
+  "n_trades_today": 7,
+  "recipe": "union_w_hot_candle_h1",
+  "sells": [
+    "ANGX",
+    "ASO",
+    "BNC",
+    "INDP",
+    "IRD",
+    "SWKS",
+    "VISN"
+  ],
+  "state": {
+    "after": "2026-09-14",
+    "cash": 8770.21,
+    "pos": {
+      "CMRC": {
+        "close_px": 3.640000104904175,
+        "cost": 1250.8742455474853,
+        "entry_date": "2026-09-11",
+        "entry_px": 3.130000114440918,
+        "fee_in": 5.1342,
+        "last_px": 3.509999990463257,
+        "min_hold": 1,
+        "notional": 1245.7400455474854,
+        "peak_px": 3.509999990463257,
+        "reason": "rank by w_hot_candle; rank w_hot_candle; list yday_gainer,yday_mover; ret5=+22.7; leftover $1245.98",
+        "shares": 398,
+        "ticker": "CMRC"
+      }
+    },
+    "yday_equity": 10218.93
+  }
+}

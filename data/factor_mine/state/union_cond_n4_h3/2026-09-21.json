@@ -1,0 +1,201 @@
+{
+  "buys": [
+    "MSTR",
+    "VICR",
+    "A",
+    "ABSI"
+  ],
+  "cash": 263.23,
+  "date": "2026-09-21",
+  "equity": 8089.69,
+  "fees": 17.1691,
+  "fills": [
+    {
+      "fees": 2.0388,
+      "pnl": -46.45,
+      "price": 231.62,
+      "shares": 8,
+      "side": "SELL",
+      "ticker": "CRWD"
+    },
+    {
+      "fees": 2.181,
+      "pnl": -47.51,
+      "price": 36.345,
+      "shares": 55,
+      "side": "SELL",
+      "ticker": "DBX"
+    },
+    {
+      "fees": 2.0492,
+      "pnl": -32.89,
+      "price": 183.9,
+      "shares": 11,
+      "side": "SELL",
+      "ticker": "OKTA"
+    },
+    {
+      "fees": 2.2531,
+      "pnl": -30.22,
+      "price": 25.94,
+      "shares": 78,
+      "side": "SELL",
+      "ticker": "WAY"
+    },
+    {
+      "fees": 2.026,
+      "pnl": null,
+      "price": 164.58,
+      "shares": 12,
+      "side": "BUY",
+      "ticker": "MSTR"
+    },
+    {
+      "fees": 2.014,
+      "pnl": null,
+      "price": 230.25,
+      "shares": 8,
+      "side": "BUY",
+      "ticker": "VICR"
+    },
+    {
+      "fees": 2.026,
+      "pnl": null,
+      "price": 157.87,
+      "shares": 12,
+      "side": "BUY",
+      "ticker": "A"
+    },
+    {
+      "fees": 2.581,
+      "pnl": null,
+      "price": 10.06,
+      "shares": 197,
+      "side": "BUY",
+      "ticker": "ABSI"
+    }
+  ],
+  "holdings": [
+    "A",
+    "ABSI",
+    "BULL",
+    "FIVN",
+    "MSTR",
+    "SABR",
+    "VICR"
+  ],
+  "mean": -0.3738,
+  "n_trades_today": 8,
+  "recipe": "union_cond_n4_h3",
+  "sells": [
+    "CRWD",
+    "DBX",
+    "OKTA",
+    "WAY"
+  ],
+  "state": {
+    "after": "2026-09-21",
+    "cash": 263.23,
+    "pos": {
+      "A": {
+        "close_px": 161.94000244140625,
+        "cost": 1896.46594140625,
+        "entry_date": "2026-09-21",
+        "entry_px": 157.8699951171875,
+        "fee_in": 2.026,
+        "last_px": 157.8699951171875,
+        "min_hold": 3,
+        "notional": 1894.43994140625,
+        "peak_px": 157.8699951171875,
+        "reason": "top 4 by cond; rank cond; list flatten; \ud83d\udd35; \u26aa; ret5=+6.5; leftover $1991.27",
+        "shares": 12,
+        "ticker": "A"
+      },
+      "ABSI": {
+        "close_px": 9.819999694824219,
+        "cost": 1984.4010826644896,
+        "entry_date": "2026-09-21",
+        "entry_px": 10.0600004196167,
+        "fee_in": 2.581,
+        "last_px": 10.0600004196167,
+        "min_hold": 3,
+        "notional": 1981.8200826644897,
+        "peak_px": 10.0600004196167,
+        "reason": "top 4 by cond; rank cond; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+17.5; leftover $1991.27",
+        "shares": 197,
+        "ticker": "ABSI"
+      },
+      "BULL": {
+        "close_px": 8.25,
+        "cost": 48.19499885559082,
+        "entry_date": "2026-09-17",
+        "entry_px": 7.949999809265137,
+        "fee_in": 0.495,
+        "last_px": 8.569999694824219,
+        "min_hold": 3,
+        "notional": 47.69999885559082,
+        "peak_px": 8.569999694824219,
+        "reason": "top 4 by cond; rank cond; list yday_mover; \ud83d\udd35; \u26aa; ret5=-18.4; leftover $52.35",
+        "shares": 6,
+        "ticker": "BULL"
+      },
+      "FIVN": {
+        "close_px": 37.0099983215332,
+        "cost": 34.787398626708985,
+        "entry_date": "2026-09-18",
+        "entry_px": 34.439998626708984,
+        "fee_in": 0.3474,
+        "last_px": 33.0,
+        "min_hold": 3,
+        "notional": 34.439998626708984,
+        "peak_px": 34.439998626708984,
+        "reason": "top 4 by cond; rank cond; list flatten; \ud83d\udd35; \u26aa; ret5=+14.0; leftover $36.75",
+        "shares": 1,
+        "ticker": "FIVN"
+      },
+      "MSTR": {
+        "close_px": 168.5,
+        "cost": 1976.9860219726563,
+        "entry_date": "2026-09-21",
+        "entry_px": 164.5800018310547,
+        "fee_in": 2.026,
+        "last_px": 164.5800018310547,
+        "min_hold": 3,
+        "notional": 1974.9600219726562,
+        "peak_px": 164.5800018310547,
+        "reason": "top 4 by cond; rank cond; list yday_gainer,yday_mover,ohlc_hot; ret5=+17.5; leftover $1991.27",
+        "shares": 12,
+        "ticker": "MSTR"
+      },
+      "SABR": {
+        "close_px": 2.3299999237060547,
+        "cost": 50.967002002716065,
+        "entry_date": "2026-09-17",
+        "entry_px": 2.4000000953674316,
+        "fee_in": 0.567,
+        "last_px": 2.259999990463257,
+        "min_hold": 3,
+        "notional": 50.400002002716064,
+        "peak_px": 2.4000000953674316,
+        "reason": "top 4 by cond; rank cond; list probable,yday_gainer,yday_mover,ohlc_hot; \ud83d\udd35; \u26aa; ret5=+8.4; leftover $52.35",
+        "shares": 21,
+        "ticker": "SABR"
+      },
+      "VICR": {
+        "close_px": 223.89999389648438,
+        "cost": 1844.014,
+        "entry_date": "2026-09-21",
+        "entry_px": 230.25,
+        "fee_in": 2.014,
+        "last_px": 230.25,
+        "min_hold": 3,
+        "notional": 1842.0,
+        "peak_px": 230.25,
+        "reason": "top 4 by cond; rank cond; list ohlc_hot; ret5=+12.5; leftover $1991.27",
+        "shares": 8,
+        "ticker": "VICR"
+      }
+    },
+    "yday_equity": 8089.69
+  }
+}

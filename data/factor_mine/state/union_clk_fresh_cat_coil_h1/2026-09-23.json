@@ -1,0 +1,288 @@
+{
+  "buys": [
+    "DXCM",
+    "HALO",
+    "CTAS",
+    "PAYX",
+    "SAIL",
+    "TTAN",
+    "ZS",
+    "CBRL"
+  ],
+  "cash": 488.38,
+  "date": "2026-09-23",
+  "equity": 9837.03,
+  "fees": 33.7402,
+  "fills": [
+    {
+      "fees": 2.076,
+      "pnl": -37.57,
+      "price": 53.55,
+      "shares": 22,
+      "side": "SELL",
+      "ticker": "ANAB"
+    },
+    {
+      "fees": 2.3262,
+      "pnl": -4.63,
+      "price": 12.24,
+      "shares": 103,
+      "side": "SELL",
+      "ticker": "APPS"
+    },
+    {
+      "fees": 2.4469,
+      "pnl": 54.36,
+      "price": 9.32,
+      "shares": 141,
+      "side": "SELL",
+      "ticker": "ARHS"
+    },
+    {
+      "fees": 2.046,
+      "pnl": 20.41,
+      "price": 100.06,
+      "shares": 12,
+      "side": "SELL",
+      "ticker": "EL"
+    },
+    {
+      "fees": 2.1931,
+      "pnl": -59.27,
+      "price": 19.76,
+      "shares": 61,
+      "side": "SELL",
+      "ticker": "MLKN"
+    },
+    {
+      "fees": 2.1,
+      "pnl": -22.48,
+      "price": 41.32,
+      "shares": 30,
+      "side": "SELL",
+      "ticker": "PACS"
+    },
+    {
+      "fees": 2.136,
+      "pnl": -15.59,
+      "price": 29.51,
+      "shares": 42,
+      "side": "SELL",
+      "ticker": "TDC"
+    },
+    {
+      "fees": 2.049,
+      "pnl": -5.51,
+      "price": 93.97,
+      "shares": 13,
+      "side": "SELL",
+      "ticker": "USFD"
+    },
+    {
+      "fees": 2.029,
+      "pnl": null,
+      "price": 89.5,
+      "shares": 13,
+      "side": "BUY",
+      "ticker": "DXCM"
+    },
+    {
+      "fees": 2.02,
+      "pnl": null,
+      "price": 116.85,
+      "shares": 10,
+      "side": "BUY",
+      "ticker": "HALO"
+    },
+    {
+      "fees": 2.008,
+      "pnl": null,
+      "price": 196.78,
+      "shares": 6,
+      "side": "BUY",
+      "ticker": "CTAS"
+    },
+    {
+      "fees": 2.023,
+      "pnl": null,
+      "price": 109.67,
+      "shares": 11,
+      "side": "BUY",
+      "ticker": "PAYX"
+    },
+    {
+      "fees": 2.164,
+      "pnl": null,
+      "price": 21.51,
+      "shares": 58,
+      "side": "BUY",
+      "ticker": "SAIL"
+    },
+    {
+      "fees": 2.05,
+      "pnl": null,
+      "price": 62.16,
+      "shares": 20,
+      "side": "BUY",
+      "ticker": "TTAN"
+    },
+    {
+      "fees": 2.005,
+      "pnl": null,
+      "price": 213.0,
+      "shares": 5,
+      "side": "BUY",
+      "ticker": "ZS"
+    },
+    {
+      "fees": 2.068,
+      "pnl": null,
+      "price": 47.57,
+      "shares": 26,
+      "side": "BUY",
+      "ticker": "CBRL"
+    }
+  ],
+  "holdings": [
+    "CBRL",
+    "CTAS",
+    "DXCM",
+    "HALO",
+    "PAYX",
+    "SAIL",
+    "TTAN",
+    "ZS"
+  ],
+  "mean": -2.3398,
+  "n_trades_today": 16,
+  "recipe": "union_clk_fresh_cat_coil_h1",
+  "sells": [
+    "ANAB",
+    "APPS",
+    "ARHS",
+    "EL",
+    "MLKN",
+    "PACS",
+    "TDC",
+    "USFD"
+  ],
+  "state": {
+    "after": "2026-09-23",
+    "cash": 488.38,
+    "pos": {
+      "CBRL": {
+        "close_px": 47.52000045776367,
+        "cost": 1238.8879920654297,
+        "entry_date": "2026-09-23",
+        "entry_px": 47.56999969482422,
+        "fee_in": 2.068,
+        "last_px": 47.56999969482422,
+        "min_hold": 1,
+        "notional": 1236.8199920654297,
+        "peak_px": 47.56999969482422,
+        "reason": "Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list earn_react; \ud83d\udd35; ret5=+0.7; leftover $1252.05",
+        "shares": 26,
+        "ticker": "CBRL"
+      },
+      "CTAS": {
+        "close_px": 191.97000122070312,
+        "cost": 1182.6879926757813,
+        "entry_date": "2026-09-23",
+        "entry_px": 196.77999877929688,
+        "fee_in": 2.008,
+        "last_px": 196.77999877929688,
+        "min_hold": 1,
+        "notional": 1180.6799926757812,
+        "peak_px": 196.77999877929688,
+        "reason": "Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list earn_react; \ud83d\udd35; \u26aa; ret5=-0.1; leftover $1252.05",
+        "shares": 6,
+        "ticker": "CTAS"
+      },
+      "DXCM": {
+        "close_px": 87.7300033569336,
+        "cost": 1165.529,
+        "entry_date": "2026-09-23",
+        "entry_px": 89.5,
+        "fee_in": 2.029,
+        "last_px": 89.5,
+        "min_hold": 1,
+        "notional": 1163.5,
+        "peak_px": 89.5,
+        "reason": "Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list flatten; \ud83d\udd35; \u26aa; ret5=+3.6; leftover $1252.05",
+        "shares": 13,
+        "ticker": "DXCM"
+      },
+      "HALO": {
+        "close_px": 112.44000244140625,
+        "cost": 1170.519984741211,
+        "entry_date": "2026-09-23",
+        "entry_px": 116.8499984741211,
+        "fee_in": 2.02,
+        "last_px": 116.8499984741211,
+        "min_hold": 1,
+        "notional": 1168.499984741211,
+        "peak_px": 116.8499984741211,
+        "reason": "Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list flatten; \ud83d\udd35; \u26aa; ret5=+8.4; leftover $1252.05",
+        "shares": 10,
+        "ticker": "HALO"
+      },
+      "PAYX": {
+        "close_px": 104.48999786376953,
+        "cost": 1208.3929798583983,
+        "entry_date": "2026-09-23",
+        "entry_px": 109.66999816894531,
+        "fee_in": 2.023,
+        "last_px": 109.66999816894531,
+        "min_hold": 1,
+        "notional": 1206.3699798583984,
+        "peak_px": 109.66999816894531,
+        "reason": "Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list earn_react; \ud83d\udd35; \u26aa; ret5=-3.2; leftover $1252.05",
+        "shares": 11,
+        "ticker": "PAYX"
+      },
+      "SAIL": {
+        "close_px": 21.40999984741211,
+        "cost": 1249.7440132751465,
+        "entry_date": "2026-09-23",
+        "entry_px": 21.510000228881836,
+        "fee_in": 2.164,
+        "last_px": 21.510000228881836,
+        "min_hold": 1,
+        "notional": 1247.5800132751465,
+        "peak_px": 21.510000228881836,
+        "reason": "Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+7.0; leftover $1252.05",
+        "shares": 58,
+        "ticker": "SAIL"
+      },
+      "TTAN": {
+        "close_px": 61.650001525878906,
+        "cost": 1245.2499969482421,
+        "entry_date": "2026-09-23",
+        "entry_px": 62.15999984741211,
+        "fee_in": 2.05,
+        "last_px": 62.15999984741211,
+        "min_hold": 1,
+        "notional": 1243.1999969482422,
+        "peak_px": 62.15999984741211,
+        "reason": "Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list probable; \ud83d\udd35; \u26aa; ret5=+5.1; leftover $1252.05",
+        "shares": 20,
+        "ticker": "TTAN"
+      },
+      "ZS": {
+        "close_px": 214.4499969482422,
+        "cost": 1067.005,
+        "entry_date": "2026-09-23",
+        "entry_px": 213.0,
+        "fee_in": 2.005,
+        "last_px": 213.0,
+        "min_hold": 1,
+        "notional": 1065.0,
+        "peak_px": 213.0,
+        "reason": "Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+8.4; leftover $1252.05",
+        "shares": 5,
+        "ticker": "ZS"
+      }
+    },
+    "yday_equity": 9837.03
+  }
+}

@@ -1,0 +1,167 @@
+{
+  "buys": [
+    "KEYS",
+    "CIEN",
+    "MPWR",
+    "DDOG",
+    "ADSK",
+    "RRC"
+  ],
+  "cash": 821.98,
+  "date": "2026-08-28",
+  "equity": 9794.63,
+  "fees": 12.123,
+  "fills": [
+    {
+      "fees": 2.005,
+      "pnl": null,
+      "price": 324.41,
+      "shares": 5,
+      "side": "BUY",
+      "ticker": "KEYS"
+    },
+    {
+      "fees": 2.002,
+      "pnl": null,
+      "price": 400.42,
+      "shares": 4,
+      "side": "BUY",
+      "ticker": "CIEN"
+    },
+    {
+      "fees": 1.993,
+      "pnl": null,
+      "price": 1306.03,
+      "shares": 1,
+      "side": "BUY",
+      "ticker": "MPWR"
+    },
+    {
+      "fees": 2.008,
+      "pnl": null,
+      "price": 240.22,
+      "shares": 6,
+      "side": "BUY",
+      "ticker": "DDOG"
+    },
+    {
+      "fees": 2.008,
+      "pnl": null,
+      "price": 261.16,
+      "shares": 6,
+      "side": "BUY",
+      "ticker": "ADSK"
+    },
+    {
+      "fees": 2.107,
+      "pnl": null,
+      "price": 41.74,
+      "shares": 39,
+      "side": "BUY",
+      "ticker": "RRC"
+    }
+  ],
+  "holdings": [
+    "ADSK",
+    "CIEN",
+    "DDOG",
+    "KEYS",
+    "MPWR",
+    "RRC"
+  ],
+  "mean": -2.0537,
+  "n_trades_today": 6,
+  "recipe": "union_news_pack_h1",
+  "sells": [],
+  "state": {
+    "after": "2026-08-28",
+    "cash": 821.98,
+    "pos": {
+      "ADSK": {
+        "close_px": 260.6600036621094,
+        "cost": 1568.9680219726563,
+        "entry_date": "2026-08-28",
+        "entry_px": 261.1600036621094,
+        "fee_in": 2.008,
+        "last_px": 261.1600036621094,
+        "min_hold": 1,
+        "notional": 1566.9600219726562,
+        "peak_px": 261.1600036621094,
+        "reason": "morning packet news\ud83d\udfe2 only (not the merged box); gate news_box=good; rank cond; list earn_react; ret5=+7.8; leftover $1666.67",
+        "shares": 6,
+        "ticker": "ADSK"
+      },
+      "CIEN": {
+        "close_px": 378.44000244140625,
+        "cost": 1603.6820537109375,
+        "entry_date": "2026-08-28",
+        "entry_px": 400.4200134277344,
+        "fee_in": 2.002,
+        "last_px": 400.4200134277344,
+        "min_hold": 1,
+        "notional": 1601.6800537109375,
+        "peak_px": 400.4200134277344,
+        "reason": "morning packet news\ud83d\udfe2 only (not the merged box); gate news_box=good; rank cond; list mover_buy; \ud83d\udd35; ret5=+1.9; leftover $1666.67",
+        "shares": 4,
+        "ticker": "CIEN"
+      },
+      "DDOG": {
+        "close_px": 236.97999572753906,
+        "cost": 1443.3280073242188,
+        "entry_date": "2026-08-28",
+        "entry_px": 240.22000122070312,
+        "fee_in": 2.008,
+        "last_px": 240.22000122070312,
+        "min_hold": 1,
+        "notional": 1441.3200073242188,
+        "peak_px": 240.22000122070312,
+        "reason": "morning packet news\ud83d\udfe2 only (not the merged box); gate news_box=good; rank cond; list mover_buy; \ud83d\udd35; ret5=+4.5; leftover $1666.67",
+        "shares": 6,
+        "ticker": "DDOG"
+      },
+      "KEYS": {
+        "close_px": 319.9700012207031,
+        "cost": 1624.055018310547,
+        "entry_date": "2026-08-28",
+        "entry_px": 324.4100036621094,
+        "fee_in": 2.005,
+        "last_px": 324.4100036621094,
+        "min_hold": 1,
+        "notional": 1622.0500183105469,
+        "peak_px": 324.4100036621094,
+        "reason": "morning packet news\ud83d\udfe2 only (not the merged box); gate news_box=good; rank cond; list mover_buy; \ud83d\udd35; \u26aa; ret5=+2.9; leftover $1666.67",
+        "shares": 5,
+        "ticker": "KEYS"
+      },
+      "MPWR": {
+        "close_px": 1256.260009765625,
+        "cost": 1308.023029296875,
+        "entry_date": "2026-08-28",
+        "entry_px": 1306.030029296875,
+        "fee_in": 1.993,
+        "last_px": 1306.030029296875,
+        "min_hold": 1,
+        "notional": 1306.030029296875,
+        "peak_px": 1306.030029296875,
+        "reason": "morning packet news\ud83d\udfe2 only (not the merged box); gate news_box=good; rank cond; list mover_buy; \ud83d\udd35; ret5=+0.0; leftover $1666.67",
+        "shares": 1,
+        "ticker": "MPWR"
+      },
+      "RRC": {
+        "close_px": 41.459999084472656,
+        "cost": 1629.967065460205,
+        "entry_date": "2026-08-28",
+        "entry_px": 41.7400016784668,
+        "fee_in": 2.107,
+        "last_px": 41.7400016784668,
+        "min_hold": 1,
+        "notional": 1627.860065460205,
+        "peak_px": 41.7400016784668,
+        "reason": "morning packet news\ud83d\udfe2 only (not the merged box); gate news_box=good; rank cond; list flatten; ret5=+2.4; leftover $1666.67",
+        "shares": 39,
+        "ticker": "RRC"
+      }
+    },
+    "yday_equity": 9794.63
+  }
+}

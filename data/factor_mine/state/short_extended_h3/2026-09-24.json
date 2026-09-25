@@ -1,0 +1,273 @@
+{
+  "buys": [],
+  "cash": 19128.22,
+  "date": "2026-09-24",
+  "equity": 8376.5,
+  "fees": 15.0596,
+  "fills": [
+    {
+      "fees": 2.335,
+      "pnl": 79.23,
+      "price": 5.78,
+      "shares": 115,
+      "side": "COVER",
+      "ticker": "DFDV"
+    },
+    {
+      "fees": 3.9216,
+      "pnl": -50.48,
+      "price": 2.61,
+      "shares": 304,
+      "side": "COVER",
+      "ticker": "FEAM"
+    },
+    {
+      "fees": 2.263,
+      "pnl": 20.91,
+      "price": 7.94,
+      "shares": 91,
+      "side": "COVER",
+      "ticker": "FWDI"
+    },
+    {
+      "fees": 2.38,
+      "pnl": 17.94,
+      "price": 5.58,
+      "shares": 130,
+      "side": "COVER",
+      "ticker": "GEMI"
+    },
+    {
+      "fees": 2.161,
+      "pnl": 11.6,
+      "price": 12.77,
+      "shares": 57,
+      "side": "COVER",
+      "ticker": "USDE"
+    },
+    {
+      "fees": 1.999,
+      "pnl": -168.53,
+      "price": 274.45,
+      "shares": 3,
+      "side": "COVER",
+      "ticker": "VICR"
+    }
+  ],
+  "holdings": [
+    "ARM",
+    "ARQQ",
+    "ARQT",
+    "BFLY",
+    "CRML",
+    "DNA",
+    "GLND",
+    "GRAL",
+    "MAZE",
+    "NUAI",
+    "OMER",
+    "TJGC",
+    "VGZ",
+    "VKTX"
+  ],
+  "mean": -8.6969,
+  "n_trades_today": 6,
+  "recipe": "short_extended_h3",
+  "sells": [
+    "DFDV",
+    "FEAM",
+    "FWDI",
+    "GEMI",
+    "USDE",
+    "VICR"
+  ],
+  "state": {
+    "after": "2026-09-24",
+    "cash": 19128.22,
+    "pos": {
+      "ARM": {
+        "close_px": 306.3399963378906,
+        "cost": 2.033501918008883,
+        "entry_date": "2026-09-22",
+        "entry_px": 319.4100036621094,
+        "fee_in": 2.033501918008883,
+        "last_px": 319.2300109863281,
+        "notional": 638.8200073242188,
+        "peak_px": 319.2300109863281,
+        "reason": "ret_5>15; gate ret_5_min=15.0; list yday_gainer,yday_mover; ret5=+35.1; leftover $664.41",
+        "shares": 2,
+        "ticker": "ARM"
+      },
+      "ARQQ": {
+        "close_px": 23.1200008392334,
+        "cost": 2.1120350684931504,
+        "entry_date": "2026-09-22",
+        "entry_px": 23.51,
+        "fee_in": 2.1120350684931504,
+        "last_px": 21.940000534057617,
+        "notional": 658.2800000000001,
+        "peak_px": 21.940000534057617,
+        "reason": "ret_5>15; gate ret_5_min=15.0; list yday_gainer,yday_mover; ret5=+44.4; leftover $664.41",
+        "shares": 28,
+        "ticker": "ARQQ"
+      },
+      "ARQT": {
+        "close_px": 26.270000457763672,
+        "cost": 2.1115569869786093,
+        "entry_date": "2026-09-23",
+        "entry_px": 27.790000915527344,
+        "fee_in": 2.1115569869786093,
+        "last_px": 26.219999313354492,
+        "notional": 750.3300247192383,
+        "peak_px": 26.219999313354492,
+        "reason": "ret_5>15; gate ret_5_min=15.0; list flatten; \ud83d\udd35; \u26aa; ret5=+18.2; leftover $765.05",
+        "shares": 27,
+        "ticker": "ARQT"
+      },
+      "BFLY": {
+        "close_px": 9.40999984741211,
+        "cost": 2.2646849307021046,
+        "entry_date": "2026-09-23",
+        "entry_px": 9.899999618530273,
+        "fee_in": 2.2646849307021046,
+        "last_px": 9.119999885559082,
+        "notional": 762.299970626831,
+        "peak_px": 9.119999885559082,
+        "reason": "ret_5>15; gate ret_5_min=15.0; list yday_gainer,yday_mover; \ud83d\udd35; \u26aa; ret5=+27.3; leftover $765.05",
+        "shares": 77,
+        "ticker": "BFLY"
+      },
+      "CRML": {
+        "close_px": 8.170000076293945,
+        "cost": 2.245970410281665,
+        "entry_date": "2026-09-22",
+        "entry_px": 9.109999656677246,
+        "fee_in": 2.245970410281665,
+        "last_px": 7.860000133514404,
+        "notional": 655.9199752807617,
+        "peak_px": 7.860000133514404,
+        "reason": "ret_5>15; gate ret_5_min=15.0; list yday_gainer,yday_mover; ret5=+44.4; leftover $664.41",
+        "shares": 72,
+        "ticker": "CRML"
+      },
+      "DNA": {
+        "close_px": 10.25,
+        "cost": 2.283561370123249,
+        "entry_date": "2026-09-23",
+        "entry_px": 9.130000114440918,
+        "fee_in": 2.283561370123249,
+        "last_px": 8.5,
+        "notional": 757.7900094985962,
+        "peak_px": 8.5,
+        "reason": "ret_5>15; gate ret_5_min=15.0; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+34.0; leftover $765.05",
+        "shares": 83,
+        "ticker": "DNA"
+      },
+      "GLND": {
+        "close_px": 5.349999904632568,
+        "cost": 2.967923288023962,
+        "entry_date": "2026-09-22",
+        "entry_px": 2.940000057220459,
+        "fee_in": 2.967923288023962,
+        "last_px": 3.2200000286102295,
+        "notional": 661.5000128746033,
+        "peak_px": 2.700000047683716,
+        "reason": "ret_5>15; gate ret_5_min=15.0; list yday_gainer,yday_mover; ret5=+136.1; leftover $664.41",
+        "shares": 225,
+        "ticker": "GLND"
+      },
+      "GRAL": {
+        "close_px": 125.20999908447266,
+        "cost": 2.0455479452054797,
+        "entry_date": "2026-09-22",
+        "entry_px": 106.75,
+        "fee_in": 2.0455479452054797,
+        "last_px": 105.5,
+        "notional": 640.5,
+        "peak_px": 105.5,
+        "reason": "ret_5>15; gate ret_5_min=15.0; list yday_gainer,yday_mover; ret5=+42.9; leftover $664.41",
+        "shares": 6,
+        "ticker": "GRAL"
+      },
+      "MAZE": {
+        "close_px": 26.209999084472656,
+        "cost": 2.1119342460109767,
+        "entry_date": "2026-09-23",
+        "entry_px": 28.299999237060547,
+        "fee_in": 2.1119342460109767,
+        "last_px": 28.420000076293945,
+        "notional": 764.0999794006348,
+        "peak_px": 28.299999237060547,
+        "reason": "ret_5>15; gate ret_5_min=15.0; list yday_gainer,yday_mover,ohlc_hot; \ud83d\udd35; ret5=+17.1; leftover $765.05",
+        "shares": 27,
+        "ticker": "MAZE"
+      },
+      "NUAI": {
+        "close_px": 6.940000057220459,
+        "cost": 2.3061254794996078,
+        "entry_date": "2026-09-22",
+        "entry_px": 7.230000019073486,
+        "fee_in": 2.3061254794996078,
+        "last_px": 6.619999885559082,
+        "notional": 657.9300017356873,
+        "peak_px": 6.619999885559082,
+        "reason": "ret_5>15; gate ret_5_min=15.0; list yday_gainer,yday_mover; ret5=+36.6; leftover $664.41",
+        "shares": 91,
+        "ticker": "NUAI"
+      },
+      "OMER": {
+        "close_px": 20.1299991607666,
+        "cost": 2.1419328763256336,
+        "entry_date": "2026-09-23",
+        "entry_px": 20.649999618530273,
+        "fee_in": 2.1419328763256336,
+        "last_px": 20.520000457763672,
+        "notional": 764.0499858856201,
+        "peak_px": 20.520000457763672,
+        "reason": "ret_5>15; gate ret_5_min=15.0; list flatten,yday_gainer,yday_mover; \ud83d\udd35; \u26aa; ret5=+22.6; leftover $765.05",
+        "shares": 37,
+        "ticker": "OMER"
+      },
+      "TJGC": {
+        "close_px": 28.200000762939453,
+        "cost": 2.1623846573503047,
+        "entry_date": "2026-09-21",
+        "entry_px": 16.90999984741211,
+        "fee_in": 2.1623846573503047,
+        "last_px": 24.030000686645508,
+        "notional": 744.0399932861328,
+        "peak_px": 16.90999984741211,
+        "reason": "ret_5>15; gate ret_5_min=15.0; list yday_gainer,yday_mover; ret5=+50.5; leftover $752.58",
+        "shares": 44,
+        "ticker": "TJGC"
+      },
+      "VGZ": {
+        "close_px": 2.7100000381469727,
+        "cost": 3.2946506855847084,
+        "entry_date": "2026-09-22",
+        "entry_px": 2.6500000953674316,
+        "fee_in": 3.2946506855847084,
+        "last_px": 2.7300000190734863,
+        "notional": 662.5000238418579,
+        "peak_px": 2.6500000953674316,
+        "reason": "ret_5>15; gate ret_5_min=15.0; list yday_gainer,yday_mover; ret5=+26.3; leftover $664.41",
+        "shares": 250,
+        "ticker": "VGZ"
+      },
+      "VKTX": {
+        "close_px": 36.75,
+        "cost": 2.0845939717750026,
+        "entry_date": "2026-09-23",
+        "entry_px": 41.7599983215332,
+        "fee_in": 2.0845939717750026,
+        "last_px": 36.025001525878906,
+        "notional": 751.6799697875977,
+        "peak_px": 36.025001525878906,
+        "reason": "ret_5>15; gate ret_5_min=15.0; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+36.4; leftover $765.05",
+        "shares": 18,
+        "ticker": "VKTX"
+      }
+    },
+    "yday_equity": 8376.5
+  }
+}

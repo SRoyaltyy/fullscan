@@ -1,0 +1,93 @@
+{
+  "buys": [],
+  "cash": 9449.99,
+  "date": "2026-09-14",
+  "equity": 9449.99,
+  "fees": 16.7436,
+  "fills": [
+    {
+      "fees": 2.073,
+      "pnl": -7.49,
+      "price": 54.75,
+      "shares": 21,
+      "side": "SELL",
+      "ticker": "ASO"
+    },
+    {
+      "fees": 2.076,
+      "pnl": 91.57,
+      "price": 56.9,
+      "shares": 22,
+      "side": "SELL",
+      "ticker": "BAND"
+    },
+    {
+      "fees": 2.073,
+      "pnl": -85.19,
+      "price": 52.23,
+      "shares": 21,
+      "side": "SELL",
+      "ticker": "COHU"
+    },
+    {
+      "fees": 2.031,
+      "pnl": -165.11,
+      "price": 141.42,
+      "shares": 7,
+      "side": "SELL",
+      "ticker": "ORCL"
+    },
+    {
+      "fees": 2.3736,
+      "pnl": -17.7,
+      "price": 10.0,
+      "shares": 118,
+      "side": "SELL",
+      "ticker": "PAGS"
+    },
+    {
+      "fees": 2.04,
+      "pnl": 8.69,
+      "price": 114.11,
+      "shares": 10,
+      "side": "SELL",
+      "ticker": "QRVO"
+    },
+    {
+      "fees": 2.025,
+      "pnl": -5.73,
+      "price": 206.5,
+      "shares": 5,
+      "side": "SELL",
+      "ticker": "SANM"
+    },
+    {
+      "fees": 2.052,
+      "pnl": 20.98,
+      "price": 86.06,
+      "shares": 14,
+      "side": "SELL",
+      "ticker": "SWKS"
+    }
+  ],
+  "holdings": [],
+  "mean": -3.1949,
+  "n_trades_today": 8,
+  "recipe": "union_cond_h1",
+  "sells": [
+    "ASO",
+    "BAND",
+    "COHU",
+    "ORCL",
+    "PAGS",
+    "QRVO",
+    "SANM",
+    "SWKS"
+  ],
+  "state": {
+    "after": "2026-09-14",
+    "cash": 9449.99,
+    "pos": {},
+    "yday_equity": 9449.99
+  }
+}

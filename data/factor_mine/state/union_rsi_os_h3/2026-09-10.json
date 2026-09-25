@@ -1,0 +1,48 @@
+{
+  "buys": [],
+  "cash": 8909.38,
+  "date": "2026-09-10",
+  "equity": 8909.38,
+  "fees": 30.1102,
+  "fills": [
+    {
+      "fees": 21.7267,
+      "pnl": 56.51,
+      "price": 1.81,
+      "shares": 1661,
+      "side": "SELL",
+      "ticker": "AIIO"
+    },
+    {
+      "fees": 5.7095,
+      "pnl": 301.88,
+      "price": 7.4,
+      "shares": 435,
+      "side": "SELL",
+      "ticker": "SION"
+    },
+    {
+      "fees": 2.674,
+      "pnl": -169.72,
+      "price": 13.31,
+      "shares": 203,
+      "side": "SELL",
+      "ticker": "SWBI"
+    }
+  ],
+  "holdings": [],
+  "mean": -1.8316,
+  "n_trades_today": 3,
+  "recipe": "union_rsi_os_h3",
+  "sells": [
+    "AIIO",
+    "SION",
+    "SWBI"
+  ],
+  "state": {
+    "after": "2026-09-10",
+    "cash": 8909.38,
+    "pos": {},
+    "yday_equity": 8909.38
+  }
+}

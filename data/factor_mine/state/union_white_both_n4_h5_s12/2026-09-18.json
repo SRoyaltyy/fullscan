@@ -1,0 +1,207 @@
+{
+  "buys": [
+    "RBRK",
+    "ECO",
+    "FIVN",
+    "RARE"
+  ],
+  "cash": 200.16,
+  "date": "2026-09-18",
+  "equity": 10425.77,
+  "fees": 14.425,
+  "fills": [
+    {
+      "fees": 2.058,
+      "pnl": -25.94,
+      "price": 51.185,
+      "shares": 16,
+      "side": "SELL",
+      "ticker": "BAND"
+    },
+    {
+      "fees": 2.148,
+      "pnl": -22.22,
+      "price": 17.91,
+      "shares": 46,
+      "side": "SELL",
+      "ticker": "PAYP"
+    },
+    {
+      "fees": 2.04,
+      "pnl": 73.74,
+      "price": 92.05,
+      "shares": 10,
+      "side": "SELL",
+      "ticker": "SWKS"
+    },
+    {
+      "fees": 2.005,
+      "pnl": null,
+      "price": 108.55,
+      "shares": 5,
+      "side": "BUY",
+      "ticker": "RBRK"
+    },
+    {
+      "fees": 2.011,
+      "pnl": null,
+      "price": 85.0,
+      "shares": 7,
+      "side": "BUY",
+      "ticker": "ECO"
+    },
+    {
+      "fees": 2.044,
+      "pnl": null,
+      "price": 34.44,
+      "shares": 18,
+      "side": "BUY",
+      "ticker": "FIVN"
+    },
+    {
+      "fees": 2.119,
+      "pnl": null,
+      "price": 14.79,
+      "shares": 43,
+      "side": "BUY",
+      "ticker": "RARE"
+    }
+  ],
+  "holdings": [
+    "BLFS",
+    "ECO",
+    "FIVN",
+    "IQV",
+    "RARE",
+    "RBRK",
+    "RDNT",
+    "TEM"
+  ],
+  "mean": -1.8643,
+  "n_trades_today": 7,
+  "recipe": "union_white_both_n4_h5_s12",
+  "sells": [
+    "BAND",
+    "PAYP",
+    "SWKS"
+  ],
+  "state": {
+    "after": "2026-09-18",
+    "cash": 200.16,
+    "pos": {
+      "BLFS": {
+        "close_px": 36.689998626708984,
+        "cost": 1934.5289514770507,
+        "entry_date": "2026-09-16",
+        "entry_px": 36.459999084472656,
+        "fee_in": 2.149,
+        "last_px": 36.72999954223633,
+        "min_hold": 5,
+        "notional": 1932.3799514770508,
+        "peak_px": 36.72999954223633,
+        "reason": "both+top4 hold5, stop \u221212% at 09:30 even inside hold; gate cam_bad_max=0,yday_and_catalyst=True; rank list; list flatten; \ud83d\udd35; \u26aa; ret5=+2.9; leftover $1933.98",
+        "shares": 53,
+        "ticker": "BLFS"
+      },
+      "ECO": {
+        "close_px": 84.94999694824219,
+        "cost": 597.011,
+        "entry_date": "2026-09-18",
+        "entry_px": 85.0,
+        "fee_in": 2.011,
+        "last_px": 85.0,
+        "min_hold": 5,
+        "notional": 595.0,
+        "peak_px": 85.0,
+        "reason": "both+top4 hold5, stop \u221212% at 09:30 even inside hold; gate cam_bad_max=0,yday_and_catalyst=True; rank list; list flatten; \ud83d\udd35; \u26aa; ret5=+18.3; leftover $650.49",
+        "shares": 7,
+        "ticker": "ECO"
+      },
+      "FIVN": {
+        "close_px": 32.470001220703125,
+        "cost": 621.9639752807617,
+        "entry_date": "2026-09-18",
+        "entry_px": 34.439998626708984,
+        "fee_in": 2.044,
+        "last_px": 34.439998626708984,
+        "min_hold": 5,
+        "notional": 619.9199752807617,
+        "peak_px": 34.439998626708984,
+        "reason": "both+top4 hold5, stop \u221212% at 09:30 even inside hold; gate cam_bad_max=0,yday_and_catalyst=True; rank list; list flatten; \ud83d\udd35; \u26aa; ret5=+14.0; leftover $650.49",
+        "shares": 18,
+        "ticker": "FIVN"
+      },
+      "IQV": {
+        "close_px": 266.4200134277344,
+        "cost": 1898.2411025390625,
+        "entry_date": "2026-09-16",
+        "entry_px": 270.8900146484375,
+        "fee_in": 2.011,
+        "last_px": 269.45001220703125,
+        "min_hold": 5,
+        "notional": 1896.2301025390625,
+        "peak_px": 273.1499938964844,
+        "reason": "both+top4 hold5, stop \u221212% at 09:30 even inside hold; gate cam_bad_max=0,yday_and_catalyst=True; rank list; list flatten; \u26aa; ret5=+4.0; leftover $1933.98",
+        "shares": 7,
+        "ticker": "IQV"
+      },
+      "RARE": {
+        "close_px": 14.510000228881836,
+        "cost": 638.0889983596802,
+        "entry_date": "2026-09-18",
+        "entry_px": 14.789999961853027,
+        "fee_in": 2.119,
+        "last_px": 14.789999961853027,
+        "min_hold": 5,
+        "notional": 635.9699983596802,
+        "peak_px": 14.789999961853027,
+        "reason": "both+top4 hold5, stop \u221212% at 09:30 even inside hold; gate cam_bad_max=0,yday_and_catalyst=True; rank list; list probable,yday_gainer; \ud83d\udd35; \u26aa; ret5=+0.7; leftover $650.49",
+        "shares": 43,
+        "ticker": "RARE"
+      },
+      "RBRK": {
+        "close_px": 106.70999908447266,
+        "cost": 544.7550152587891,
+        "entry_date": "2026-09-18",
+        "entry_px": 108.55000305175781,
+        "fee_in": 2.005,
+        "last_px": 108.55000305175781,
+        "min_hold": 5,
+        "notional": 542.7500152587891,
+        "peak_px": 108.55000305175781,
+        "reason": "both+top4 hold5, stop \u221212% at 09:30 even inside hold; gate cam_bad_max=0,yday_and_catalyst=True; rank list; list flatten; \u26aa; ret5=+21.3; leftover $650.49",
+        "shares": 5,
+        "ticker": "RBRK"
+      },
+      "RDNT": {
+        "close_px": 76.0,
+        "cost": 1930.0650686645508,
+        "entry_date": "2026-09-16",
+        "entry_px": 77.12000274658203,
+        "fee_in": 2.065,
+        "last_px": 77.66000366210938,
+        "min_hold": 5,
+        "notional": 1928.0000686645508,
+        "peak_px": 77.66000366210938,
+        "reason": "both+top4 hold5, stop \u221212% at 09:30 even inside hold; gate cam_bad_max=0,yday_and_catalyst=True; rank list; list flatten; \u26aa; ret5=+7.2; leftover $1933.98",
+        "shares": 25,
+        "ticker": "RDNT"
+      },
+      "TEM": {
+        "close_px": 77.83999633789062,
+        "cost": 1928.1940256347657,
+        "entry_date": "2026-09-16",
+        "entry_px": 68.79000091552734,
+        "fee_in": 2.074,
+        "last_px": 81.4000015258789,
+        "min_hold": 5,
+        "notional": 1926.1200256347656,
+        "peak_px": 81.4000015258789,
+        "reason": "both+top4 hold5, stop \u221212% at 09:30 even inside hold; gate cam_bad_max=0,yday_and_catalyst=True; rank list; list probable,yday_gainer; \ud83d\udd35; \u26aa; ret5=+7.1; leftover $1933.98",
+        "shares": 28,
+        "ticker": "TEM"
+      }
+    },
+    "yday_equity": 10425.77
+  }
+}

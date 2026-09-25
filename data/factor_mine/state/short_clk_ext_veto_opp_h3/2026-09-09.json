@@ -1,0 +1,49 @@
+{
+  "buys": [],
+  "cash": 15006.55,
+  "date": "2026-09-09",
+  "equity": 10031.95,
+  "fees": 0,
+  "fills": [],
+  "holdings": [
+    "ASST",
+    "HOOD"
+  ],
+  "mean": 0.887,
+  "n_trades_today": 0,
+  "recipe": "short_clk_ext_veto_opp_h3",
+  "sells": [],
+  "state": {
+    "after": "2026-09-09",
+    "cash": 15006.55,
+    "pos": {
+      "ASST": {
+        "close_px": 26.690000534057617,
+        "cost": 2.395686302205961,
+        "entry_date": "2026-09-04",
+        "entry_px": 25.18000030517578,
+        "fee_in": 2.395686302205961,
+        "last_px": 28.0,
+        "notional": 2518.000030517578,
+        "peak_px": 25.18000030517578,
+        "reason": "Clock-B #5 \u2229 Theme Radar T\u22121 oppset; gate clk_ext_veto=True,oppset=True; rank opp_rvol; list ohlc_hot; \ud83d\udd35; ret5=+16.0; leftover $2520.90",
+        "shares": 100,
+        "ticker": "ASST"
+      },
+      "HOOD": {
+        "close_px": 115.27999877929688,
+        "cost": 2.145313697794039,
+        "entry_date": "2026-09-04",
+        "entry_px": 120.4749984741211,
+        "fee_in": 2.145313697794039,
+        "last_px": 120.7699966430664,
+        "notional": 2409.499969482422,
+        "peak_px": 120.4749984741211,
+        "reason": "Clock-B #5 \u2229 Theme Radar T\u22121 oppset; gate clk_ext_veto=True,oppset=True; rank opp_rvol; list ohlc_hot; \ud83d\udd35; ret5=+13.6; leftover $2520.90",
+        "shares": 20,
+        "ticker": "HOOD"
+      }
+    },
+    "yday_equity": 10031.95
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "buys": [],
+  "cash": 9483.05,
+  "date": "2026-09-16",
+  "equity": 9483.05,
+  "fees": 4.2241,
+  "fills": [
+    {
+      "fees": 2.1005,
+      "pnl": 219.25,
+      "price": 253.34,
+      "shares": 20,
+      "side": "SELL",
+      "ticker": "ADBE"
+    },
+    {
+      "fees": 2.1236,
+      "pnl": -736.2,
+      "price": 140.03,
+      "shares": 30,
+      "side": "SELL",
+      "ticker": "ORCL"
+    }
+  ],
+  "holdings": [],
+  "mean": -1.0664,
+  "n_trades_today": 2,
+  "recipe": "union_news_both_h3",
+  "sells": [
+    "ADBE",
+    "ORCL"
+  ],
+  "state": {
+    "after": "2026-09-16",
+    "cash": 9483.05,
+    "pos": {},
+    "yday_equity": 9483.05
+  }
+}

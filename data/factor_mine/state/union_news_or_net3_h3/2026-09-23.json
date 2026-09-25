@@ -1,0 +1,174 @@
+{
+  "buys": [
+    "PGEN",
+    "SGRY",
+    "VERI"
+  ],
+  "cash": 11.41,
+  "date": "2026-09-23",
+  "equity": 7780.69,
+  "fees": 6.2387,
+  "fills": [
+    {
+      "fees": 0.4742,
+      "pnl": 1.4,
+      "price": 14.84,
+      "shares": 3,
+      "side": "SELL",
+      "ticker": "BHVN"
+    },
+    {
+      "fees": 0.334,
+      "pnl": 0.58,
+      "price": 15.4,
+      "shares": 2,
+      "side": "SELL",
+      "ticker": "RARE"
+    },
+    {
+      "fees": 1.7325,
+      "pnl": null,
+      "price": 7.95,
+      "shares": 21,
+      "side": "BUY",
+      "ticker": "PGEN"
+    },
+    {
+      "fees": 1.602,
+      "pnl": null,
+      "price": 15.72,
+      "shares": 10,
+      "side": "BUY",
+      "ticker": "SGRY"
+    },
+    {
+      "fees": 2.096,
+      "pnl": null,
+      "price": 1.3,
+      "shares": 131,
+      "side": "BUY",
+      "ticker": "VERI"
+    }
+  ],
+  "holdings": [
+    "ISRG",
+    "PGEN",
+    "SGRY",
+    "SION",
+    "SMTC",
+    "VERI",
+    "VICR"
+  ],
+  "mean": -1.75,
+  "n_trades_today": 5,
+  "recipe": "union_news_or_net3_h3",
+  "sells": [
+    "BHVN",
+    "RARE"
+  ],
+  "state": {
+    "after": "2026-09-23",
+    "cash": 11.41,
+    "pos": {
+      "ISRG": {
+        "close_px": 398.29998779296875,
+        "cost": 1577.56205859375,
+        "entry_date": "2026-09-21",
+        "entry_px": 393.8900146484375,
+        "fee_in": 2.002,
+        "last_px": 400.8800048828125,
+        "min_hold": 3,
+        "notional": 1575.56005859375,
+        "peak_px": 403.0,
+        "reason": "packet\ud83d\udfe2 OR headline\ud83d\udfe2 and camera net \u2265 3; gate news_or_headline=True,cam_net_min=3; rank cond; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+6.6; leftover $1905.74",
+        "shares": 4,
+        "ticker": "ISRG"
+      },
+      "PGEN": {
+        "close_px": 7.440000057220459,
+        "cost": 168.68249599456786,
+        "entry_date": "2026-09-23",
+        "entry_px": 7.949999809265137,
+        "fee_in": 1.7325,
+        "last_px": 7.949999809265137,
+        "min_hold": 3,
+        "notional": 166.94999599456787,
+        "peak_px": 7.949999809265137,
+        "reason": "packet\ud83d\udfe2 OR headline\ud83d\udfe2 and camera net \u2265 3; gate news_or_headline=True,cam_net_min=3; rank cond; list flatten; \ud83d\udd35; \u26aa; ret5=+12.7; leftover $170.43",
+        "shares": 21,
+        "ticker": "PGEN"
+      },
+      "SGRY": {
+        "close_px": 14.5600004196167,
+        "cost": 158.8020026702881,
+        "entry_date": "2026-09-23",
+        "entry_px": 15.720000267028809,
+        "fee_in": 1.602,
+        "last_px": 15.720000267028809,
+        "min_hold": 3,
+        "notional": 157.2000026702881,
+        "peak_px": 15.720000267028809,
+        "reason": "packet\ud83d\udfe2 OR headline\ud83d\udfe2 and camera net \u2265 3; gate news_or_headline=True,cam_net_min=3; rank cond; list yday_gainer,yday_mover,ohlc_hot; \ud83d\udd35; ret5=+15.8; leftover $170.43",
+        "shares": 10,
+        "ticker": "SGRY"
+      },
+      "SION": {
+        "close_px": 5.510000228881836,
+        "cost": 1906.0893,
+        "entry_date": "2026-09-21",
+        "entry_px": 6.0,
+        "fee_in": 4.0893,
+        "last_px": 6.03000020980835,
+        "min_hold": 3,
+        "notional": 1902.0,
+        "peak_px": 6.03000020980835,
+        "reason": "packet\ud83d\udfe2 OR headline\ud83d\udfe2 and camera net \u2265 3; gate news_or_headline=True,cam_net_min=3; rank cond; list yday_mover; \ud83d\udd35; ret5=-24.1; leftover $1905.74",
+        "shares": 317,
+        "ticker": "SION"
+      },
+      "SMTC": {
+        "close_px": 169.3300018310547,
+        "cost": 1905.020030517578,
+        "entry_date": "2026-09-21",
+        "entry_px": 190.3000030517578,
+        "fee_in": 2.02,
+        "last_px": 174.5,
+        "min_hold": 3,
+        "notional": 1903.0000305175781,
+        "peak_px": 190.3000030517578,
+        "reason": "packet\ud83d\udfe2 OR headline\ud83d\udfe2 and camera net \u2265 3; gate news_or_headline=True,cam_net_min=3; rank cond; list ohlc_hot; ret5=+10.6; leftover $1905.74",
+        "shares": 10,
+        "ticker": "SMTC"
+      },
+      "VERI": {
+        "close_px": 1.2899999618530273,
+        "cost": 172.39599375343323,
+        "entry_date": "2026-09-23",
+        "entry_px": 1.2999999523162842,
+        "fee_in": 2.096,
+        "last_px": 1.2999999523162842,
+        "min_hold": 3,
+        "notional": 170.29999375343323,
+        "peak_px": 1.2999999523162842,
+        "reason": "packet\ud83d\udfe2 OR headline\ud83d\udfe2 and camera net \u2265 3; gate news_or_headline=True,cam_net_min=3; rank cond; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+15.3; leftover $170.43",
+        "shares": 131,
+        "ticker": "VERI"
+      },
+      "VICR": {
+        "close_px": 283.1600036621094,
+        "cost": 1844.014,
+        "entry_date": "2026-09-21",
+        "entry_px": 230.25,
+        "fee_in": 2.014,
+        "last_px": 266.5,
+        "min_hold": 3,
+        "notional": 1842.0,
+        "peak_px": 266.5,
+        "reason": "packet\ud83d\udfe2 OR headline\ud83d\udfe2 and camera net \u2265 3; gate news_or_headline=True,cam_net_min=3; rank cond; list ohlc_hot; ret5=+12.5; leftover $1905.74",
+        "shares": 8,
+        "ticker": "VICR"
+      }
+    },
+    "yday_equity": 7780.69
+  }
+}

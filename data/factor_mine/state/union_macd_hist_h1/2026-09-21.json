@@ -1,0 +1,246 @@
+{
+  "buys": [
+    "SMTC",
+    "ISRG",
+    "MXL",
+    "FORM",
+    "SION",
+    "ABTC"
+  ],
+  "cash": 1539.73,
+  "date": "2026-09-21",
+  "equity": 9892.6,
+  "fees": 27.3362,
+  "fills": [
+    {
+      "fees": 2.016,
+      "pnl": 69.01,
+      "price": 583.88,
+      "shares": 2,
+      "side": "SELL",
+      "ticker": "AMD"
+    },
+    {
+      "fees": 2.025,
+      "pnl": -80.83,
+      "price": 231.62,
+      "shares": 5,
+      "side": "SELL",
+      "ticker": "CRWD"
+    },
+    {
+      "fees": 2.052,
+      "pnl": -34.46,
+      "price": 82.83,
+      "shares": 14,
+      "side": "SELL",
+      "ticker": "ECO"
+    },
+    {
+      "fees": 2.028,
+      "pnl": -13.82,
+      "price": 181.37,
+      "shares": 6,
+      "side": "SELL",
+      "ticker": "GH"
+    },
+    {
+      "fees": 2.025,
+      "pnl": -1.63,
+      "price": 210.0,
+      "shares": 5,
+      "side": "SELL",
+      "ticker": "GNRC"
+    },
+    {
+      "fees": 2.0433,
+      "pnl": 69.96,
+      "price": 116.53,
+      "shares": 11,
+      "side": "SELL",
+      "ticker": "INTC"
+    },
+    {
+      "fees": 2.019,
+      "pnl": 14.4,
+      "price": 371.92,
+      "shares": 3,
+      "side": "SELL",
+      "ticker": "NTRA"
+    },
+    {
+      "fees": 2.008,
+      "pnl": null,
+      "price": 190.3,
+      "shares": 6,
+      "side": "BUY",
+      "ticker": "SMTC"
+    },
+    {
+      "fees": 1.999,
+      "pnl": null,
+      "price": 393.89,
+      "shares": 3,
+      "side": "BUY",
+      "ticker": "ISRG"
+    },
+    {
+      "fees": 2.035,
+      "pnl": null,
+      "price": 83.53,
+      "shares": 15,
+      "side": "BUY",
+      "ticker": "MXL"
+    },
+    {
+      "fees": 2.02,
+      "pnl": null,
+      "price": 123.0,
+      "shares": 10,
+      "side": "BUY",
+      "ticker": "FORM"
+    },
+    {
+      "fees": 2.7219,
+      "pnl": null,
+      "price": 6.0,
+      "shares": 211,
+      "side": "BUY",
+      "ticker": "SION"
+    },
+    {
+      "fees": 2.344,
+      "pnl": null,
+      "price": 10.71,
+      "shares": 118,
+      "side": "BUY",
+      "ticker": "ABTC"
+    }
+  ],
+  "holdings": [
+    "ABTC",
+    "FORM",
+    "ISRG",
+    "MXL",
+    "SION",
+    "SMTC",
+    "VICR"
+  ],
+  "mean": -0.1657,
+  "n_trades_today": 13,
+  "recipe": "union_macd_hist_h1",
+  "sells": [
+    "AMD",
+    "CRWD",
+    "ECO",
+    "GH",
+    "GNRC",
+    "INTC",
+    "NTRA"
+  ],
+  "state": {
+    "after": "2026-09-21",
+    "cash": 1539.73,
+    "pos": {
+      "ABTC": {
+        "close_px": 10.300000190734863,
+        "cost": 1266.1240045013428,
+        "entry_date": "2026-09-21",
+        "entry_px": 10.710000038146973,
+        "fee_in": 2.344,
+        "last_px": 10.710000038146973,
+        "min_hold": 1,
+        "notional": 1263.7800045013428,
+        "peak_px": 10.710000038146973,
+        "reason": "rank by macd_hist; rank macd_hist; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+21.4; leftover $1269.87",
+        "shares": 118,
+        "ticker": "ABTC"
+      },
+      "FORM": {
+        "close_px": 119.30999755859375,
+        "cost": 1232.02,
+        "entry_date": "2026-09-21",
+        "entry_px": 123.0,
+        "fee_in": 2.02,
+        "last_px": 123.0,
+        "min_hold": 1,
+        "notional": 1230.0,
+        "peak_px": 123.0,
+        "reason": "rank by macd_hist; rank macd_hist; list ohlc_hot; ret5=+3.0; leftover $1269.87",
+        "shares": 10,
+        "ticker": "FORM"
+      },
+      "ISRG": {
+        "close_px": 401.6499938964844,
+        "cost": 1183.6690439453125,
+        "entry_date": "2026-09-21",
+        "entry_px": 393.8900146484375,
+        "fee_in": 1.999,
+        "last_px": 393.8900146484375,
+        "min_hold": 1,
+        "notional": 1181.6700439453125,
+        "peak_px": 393.8900146484375,
+        "reason": "rank by macd_hist; rank macd_hist; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+6.6; leftover $1269.87",
+        "shares": 3,
+        "ticker": "ISRG"
+      },
+      "MXL": {
+        "close_px": 85.9800033569336,
+        "cost": 1254.9849816894532,
+        "entry_date": "2026-09-21",
+        "entry_px": 83.52999877929688,
+        "fee_in": 2.035,
+        "last_px": 83.52999877929688,
+        "min_hold": 1,
+        "notional": 1252.9499816894531,
+        "peak_px": 83.52999877929688,
+        "reason": "rank by macd_hist; rank macd_hist; list ohlc_hot; ret5=+8.8; leftover $1269.87",
+        "shares": 15,
+        "ticker": "MXL"
+      },
+      "SION": {
+        "close_px": 6.0,
+        "cost": 1268.7219,
+        "entry_date": "2026-09-21",
+        "entry_px": 6.0,
+        "fee_in": 2.7219,
+        "last_px": 6.0,
+        "min_hold": 1,
+        "notional": 1266.0,
+        "peak_px": 6.0,
+        "reason": "rank by macd_hist; rank macd_hist; list yday_mover; \ud83d\udd35; ret5=-24.1; leftover $1269.87",
+        "shares": 211,
+        "ticker": "SION"
+      },
+      "SMTC": {
+        "close_px": 177.3699951171875,
+        "cost": 1143.808018310547,
+        "entry_date": "2026-09-21",
+        "entry_px": 190.3000030517578,
+        "fee_in": 2.008,
+        "last_px": 190.3000030517578,
+        "min_hold": 1,
+        "notional": 1141.8000183105469,
+        "peak_px": 190.3000030517578,
+        "reason": "rank by macd_hist; rank macd_hist; list ohlc_hot; ret5=+10.6; leftover $1269.87",
+        "shares": 6,
+        "ticker": "SMTC"
+      },
+      "VICR": {
+        "close_px": 223.89999389648438,
+        "cost": 1100.1049755859376,
+        "entry_date": "2026-09-18",
+        "entry_px": 219.6199951171875,
+        "fee_in": 2.005,
+        "last_px": 230.25,
+        "min_hold": 1,
+        "notional": 1098.0999755859375,
+        "peak_px": 230.25,
+        "reason": "rank by macd_hist; rank macd_hist; list flatten,yday_gainer,yday_mover; \ud83d\udd35; ret5=+21.5; leftover $1245.82",
+        "shares": 5,
+        "ticker": "VICR"
+      }
+    },
+    "yday_equity": 9892.6
+  }
+}

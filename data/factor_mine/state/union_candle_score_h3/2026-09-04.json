@@ -1,0 +1,215 @@
+{
+  "buys": [
+    "ASST",
+    "DFDV",
+    "PAGS",
+    "TTD",
+    "FRNM",
+    "TARS",
+    "TDS",
+    "ZETA"
+  ],
+  "cash": 119.59,
+  "date": "2026-09-04",
+  "equity": 9634.37,
+  "fees": 17.7784,
+  "fills": [
+    {
+      "fees": 2.131,
+      "pnl": null,
+      "price": 25.18,
+      "shares": 47,
+      "side": "BUY",
+      "ticker": "ASST"
+    },
+    {
+      "fees": 2.6574,
+      "pnl": null,
+      "price": 5.79,
+      "shares": 206,
+      "side": "BUY",
+      "ticker": "DFDV"
+    },
+    {
+      "fees": 2.347,
+      "pnl": null,
+      "price": 9.96,
+      "shares": 119,
+      "side": "BUY",
+      "ticker": "PAGS"
+    },
+    {
+      "fees": 2.224,
+      "pnl": null,
+      "price": 15.18,
+      "shares": 78,
+      "side": "BUY",
+      "ticker": "TTD"
+    },
+    {
+      "fees": 2.206,
+      "pnl": null,
+      "price": 16.4,
+      "shares": 72,
+      "side": "BUY",
+      "ticker": "FRNM"
+    },
+    {
+      "fees": 2.032,
+      "pnl": null,
+      "price": 82.7,
+      "shares": 14,
+      "side": "BUY",
+      "ticker": "TARS"
+    },
+    {
+      "fees": 2.083,
+      "pnl": null,
+      "price": 37.44,
+      "shares": 31,
+      "side": "BUY",
+      "ticker": "TDS"
+    },
+    {
+      "fees": 2.098,
+      "pnl": null,
+      "price": 32.65,
+      "shares": 36,
+      "side": "BUY",
+      "ticker": "ZETA"
+    }
+  ],
+  "holdings": [
+    "ASST",
+    "DFDV",
+    "FRNM",
+    "PAGS",
+    "TARS",
+    "TDS",
+    "TTD",
+    "ZETA"
+  ],
+  "mean": 0.8044,
+  "n_trades_today": 8,
+  "recipe": "union_candle_score_h3",
+  "sells": [],
+  "state": {
+    "after": "2026-09-04",
+    "cash": 119.59,
+    "pos": {
+      "ASST": {
+        "close_px": 27.139999389648438,
+        "cost": 1185.5910143432618,
+        "entry_date": "2026-09-04",
+        "entry_px": 25.18000030517578,
+        "fee_in": 2.131,
+        "last_px": 25.18000030517578,
+        "min_hold": 3,
+        "notional": 1183.4600143432617,
+        "peak_px": 25.18000030517578,
+        "reason": "rank by candle_score; rank candle_score; list ohlc_hot; \ud83d\udd35; ret5=+16.0; leftover $1194.69",
+        "shares": 47,
+        "ticker": "ASST"
+      },
+      "DFDV": {
+        "close_px": 5.869999885559082,
+        "cost": 1195.3973921417237,
+        "entry_date": "2026-09-04",
+        "entry_px": 5.789999961853027,
+        "fee_in": 2.6574,
+        "last_px": 5.789999961853027,
+        "min_hold": 3,
+        "notional": 1192.7399921417236,
+        "peak_px": 5.789999961853027,
+        "reason": "rank by candle_score; rank candle_score; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+15.2; leftover $1194.69",
+        "shares": 206,
+        "ticker": "DFDV"
+      },
+      "FRNM": {
+        "close_px": 16.309999465942383,
+        "cost": 1183.0059725341796,
+        "entry_date": "2026-09-04",
+        "entry_px": 16.399999618530273,
+        "fee_in": 2.206,
+        "last_px": 16.399999618530273,
+        "min_hold": 3,
+        "notional": 1180.7999725341797,
+        "peak_px": 16.399999618530273,
+        "reason": "rank by candle_score; rank candle_score; list mover_buy; \ud83d\udd35; \u26aa; ret5=+21.2; leftover $1194.69",
+        "shares": 72,
+        "ticker": "FRNM"
+      },
+      "PAGS": {
+        "close_px": 9.729999542236328,
+        "cost": 1187.5870045394897,
+        "entry_date": "2026-09-04",
+        "entry_px": 9.960000038146973,
+        "fee_in": 2.347,
+        "last_px": 9.960000038146973,
+        "min_hold": 3,
+        "notional": 1185.2400045394897,
+        "peak_px": 9.960000038146973,
+        "reason": "rank by candle_score; rank candle_score; list ohlc_hot; \ud83d\udd35; ret5=+11.5; leftover $1194.69",
+        "shares": 119,
+        "ticker": "PAGS"
+      },
+      "TARS": {
+        "close_px": 90.77999877929688,
+        "cost": 1159.8319572753906,
+        "entry_date": "2026-09-04",
+        "entry_px": 82.69999694824219,
+        "fee_in": 2.032,
+        "last_px": 82.69999694824219,
+        "min_hold": 3,
+        "notional": 1157.7999572753906,
+        "peak_px": 82.69999694824219,
+        "reason": "rank by candle_score; rank candle_score; list yday_gainer,ohlc_hot; \ud83d\udd35; \u26aa; ret5=+15.7; leftover $1194.69",
+        "shares": 14,
+        "ticker": "TARS"
+      },
+      "TDS": {
+        "close_px": 37.83000183105469,
+        "cost": 1162.7229574279786,
+        "entry_date": "2026-09-04",
+        "entry_px": 37.439998626708984,
+        "fee_in": 2.083,
+        "last_px": 37.439998626708984,
+        "min_hold": 3,
+        "notional": 1160.6399574279785,
+        "peak_px": 37.439998626708984,
+        "reason": "rank by candle_score; rank candle_score; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+14.1; leftover $1194.69",
+        "shares": 31,
+        "ticker": "TDS"
+      },
+      "TTD": {
+        "close_px": 14.430000305175781,
+        "cost": 1186.2640238037109,
+        "entry_date": "2026-09-04",
+        "entry_px": 15.180000305175781,
+        "fee_in": 2.224,
+        "last_px": 15.180000305175781,
+        "min_hold": 3,
+        "notional": 1184.040023803711,
+        "peak_px": 15.180000305175781,
+        "reason": "rank by candle_score; rank candle_score; list ohlc_hot; \ud83d\udd35; ret5=+12.4; leftover $1194.69",
+        "shares": 78,
+        "ticker": "TTD"
+      },
+      "ZETA": {
+        "close_px": 31.350000381469727,
+        "cost": 1177.4980549316406,
+        "entry_date": "2026-09-04",
+        "entry_px": 32.650001525878906,
+        "fee_in": 2.098,
+        "last_px": 32.650001525878906,
+        "min_hold": 3,
+        "notional": 1175.4000549316406,
+        "peak_px": 32.650001525878906,
+        "reason": "rank by candle_score; rank candle_score; list ohlc_hot; ret5=+8.1; leftover $1194.69",
+        "shares": 36,
+        "ticker": "ZETA"
+      }
+    },
+    "yday_equity": 9634.37
+  }
+}

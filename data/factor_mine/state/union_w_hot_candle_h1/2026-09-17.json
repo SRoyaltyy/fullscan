@@ -1,0 +1,252 @@
+{
+  "buys": [
+    "BBNX",
+    "IQ",
+    "IOVA",
+    "TWST",
+    "GME",
+    "ANGI"
+  ],
+  "cash": 57.04,
+  "date": "2026-09-17",
+  "equity": 10502.81,
+  "fees": 40.6251,
+  "fills": [
+    {
+      "fees": 2.1516,
+      "pnl": 49.3,
+      "price": 28.23,
+      "shares": 47,
+      "side": "SELL",
+      "ticker": "ADPT"
+    },
+    {
+      "fees": 2.1453,
+      "pnl": 15.3,
+      "price": 28.595,
+      "shares": 45,
+      "side": "SELL",
+      "ticker": "CAI"
+    },
+    {
+      "fees": 2.5133,
+      "pnl": 17.69,
+      "price": 8.02,
+      "shares": 162,
+      "side": "SELL",
+      "ticker": "NAT"
+    },
+    {
+      "fees": 2.1724,
+      "pnl": 38.88,
+      "price": 24.09,
+      "shares": 54,
+      "side": "SELL",
+      "ticker": "SDGR"
+    },
+    {
+      "fees": 2.2754,
+      "pnl": -78.48,
+      "price": 13.77,
+      "shares": 87,
+      "side": "SELL",
+      "ticker": "SSL"
+    },
+    {
+      "fees": 2.0613,
+      "pnl": 10.86,
+      "price": 75.38,
+      "shares": 17,
+      "side": "SELL",
+      "ticker": "TXG"
+    },
+    {
+      "fees": 2.161,
+      "pnl": null,
+      "price": 22.46,
+      "shares": 57,
+      "side": "BUY",
+      "ticker": "BBNX"
+    },
+    {
+      "fees": 15.4671,
+      "pnl": null,
+      "price": 1.07,
+      "shares": 1199,
+      "side": "BUY",
+      "ticker": "IQ"
+    },
+    {
+      "fees": 2.365,
+      "pnl": null,
+      "price": 10.25,
+      "shares": 125,
+      "side": "BUY",
+      "ticker": "IOVA"
+    },
+    {
+      "fees": 2.014,
+      "pnl": null,
+      "price": 151.43,
+      "shares": 8,
+      "side": "BUY",
+      "ticker": "TWST"
+    },
+    {
+      "fees": 2.164,
+      "pnl": null,
+      "price": 22.12,
+      "shares": 58,
+      "side": "BUY",
+      "ticker": "GME"
+    },
+    {
+      "fees": 3.1347,
+      "pnl": null,
+      "price": 5.27,
+      "shares": 243,
+      "side": "BUY",
+      "ticker": "ANGI"
+    }
+  ],
+  "holdings": [
+    "ANGI",
+    "BBNX",
+    "GME",
+    "HLP",
+    "INDP",
+    "IOVA",
+    "IQ",
+    "TWST"
+  ],
+  "mean": 2.5267,
+  "n_trades_today": 12,
+  "recipe": "union_w_hot_candle_h1",
+  "sells": [
+    "ADPT",
+    "CAI",
+    "NAT",
+    "SDGR",
+    "SSL",
+    "TXG"
+  ],
+  "state": {
+    "after": "2026-09-17",
+    "cash": 57.04,
+    "pos": {
+      "ANGI": {
+        "close_px": 5.300000190734863,
+        "cost": 1283.744695365143,
+        "entry_date": "2026-09-17",
+        "entry_px": 5.269999980926514,
+        "fee_in": 3.1347,
+        "last_px": 5.269999980926514,
+        "min_hold": 1,
+        "notional": 1280.6099953651428,
+        "peak_px": 5.269999980926514,
+        "reason": "rank by w_hot_candle; rank w_hot_candle; list ohlc_hot; \ud83d\udd35; ret5=+12.1; leftover $1283.96",
+        "shares": 243,
+        "ticker": "ANGI"
+      },
+      "BBNX": {
+        "close_px": 21.43000030517578,
+        "cost": 1282.3809478149415,
+        "entry_date": "2026-09-17",
+        "entry_px": 22.459999084472656,
+        "fee_in": 2.161,
+        "last_px": 22.459999084472656,
+        "min_hold": 1,
+        "notional": 1280.2199478149414,
+        "peak_px": 22.459999084472656,
+        "reason": "rank by w_hot_candle; rank w_hot_candle; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+27.3; leftover $1283.96",
+        "shares": 57,
+        "ticker": "BBNX"
+      },
+      "GME": {
+        "close_px": 22.770000457763672,
+        "cost": 1285.124048675537,
+        "entry_date": "2026-09-17",
+        "entry_px": 22.1200008392334,
+        "fee_in": 2.164,
+        "last_px": 22.1200008392334,
+        "min_hold": 1,
+        "notional": 1282.960048675537,
+        "peak_px": 22.1200008392334,
+        "reason": "rank by w_hot_candle; rank w_hot_candle; list ohlc_hot; \ud83d\udd35; ret5=+10.5; leftover $1283.96",
+        "shares": 58,
+        "ticker": "GME"
+      },
+      "HLP": {
+        "close_px": 2.0199999809265137,
+        "cost": 1285.3460661922454,
+        "entry_date": "2026-09-16",
+        "entry_px": 1.7999999523162842,
+        "fee_in": 9.1461,
+        "last_px": 2.0999999046325684,
+        "min_hold": 1,
+        "notional": 1276.1999661922455,
+        "peak_px": 2.0999999046325684,
+        "reason": "rank by w_hot_candle; rank w_hot_candle; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+30.5; leftover $1276.71",
+        "shares": 709,
+        "ticker": "HLP"
+      },
+      "INDP": {
+        "close_px": 3.930000066757202,
+        "cost": 1278.1692298690796,
+        "entry_date": "2026-09-16",
+        "entry_px": 3.6600000858306885,
+        "fee_in": 4.4892,
+        "last_px": 3.299999952316284,
+        "min_hold": 1,
+        "notional": 1273.6800298690796,
+        "peak_px": 3.6600000858306885,
+        "reason": "rank by w_hot_candle; rank w_hot_candle; list yday_gainer,yday_mover; ret5=+96.8; leftover $1276.71",
+        "shares": 348,
+        "ticker": "INDP"
+      },
+      "IOVA": {
+        "close_px": 10.020000457763672,
+        "cost": 1283.615,
+        "entry_date": "2026-09-17",
+        "entry_px": 10.25,
+        "fee_in": 2.365,
+        "last_px": 10.25,
+        "min_hold": 1,
+        "notional": 1281.25,
+        "peak_px": 10.25,
+        "reason": "rank by w_hot_candle; rank w_hot_candle; list flatten,ohlc_hot; ret5=+17.1; leftover $1283.96",
+        "shares": 125,
+        "ticker": "IOVA"
+      },
+      "IQ": {
+        "close_px": 1.100000023841858,
+        "cost": 1298.3971628900529,
+        "entry_date": "2026-09-17",
+        "entry_px": 1.0700000524520874,
+        "fee_in": 15.4671,
+        "last_px": 1.0700000524520874,
+        "min_hold": 1,
+        "notional": 1282.9300628900528,
+        "peak_px": 1.0700000524520874,
+        "reason": "rank by w_hot_candle; rank w_hot_candle; list yday_gainer,ohlc_hot; \ud83d\udd35; ret5=+15.8; leftover $1283.96",
+        "shares": 1199,
+        "ticker": "IQ"
+      },
+      "TWST": {
+        "close_px": 155.55999755859375,
+        "cost": 1213.45394140625,
+        "entry_date": "2026-09-17",
+        "entry_px": 151.42999267578125,
+        "fee_in": 2.014,
+        "last_px": 151.42999267578125,
+        "min_hold": 1,
+        "notional": 1211.43994140625,
+        "peak_px": 151.42999267578125,
+        "reason": "rank by w_hot_candle; rank w_hot_candle; list flatten,ohlc_hot; ret5=+14.0; leftover $1283.96",
+        "shares": 8,
+        "ticker": "TWST"
+      }
+    },
+    "yday_equity": 10502.81
+  }
+}

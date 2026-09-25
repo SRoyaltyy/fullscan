@@ -1,0 +1,57 @@
+{
+  "buys": [],
+  "cash": 9672.98,
+  "date": "2026-08-31",
+  "equity": 9672.98,
+  "fees": 8.2874,
+  "fills": [
+    {
+      "fees": 2.1003,
+      "pnl": -60.87,
+      "price": 89.39,
+      "shares": 27,
+      "side": "SELL",
+      "ticker": "AVT"
+    },
+    {
+      "fees": 2.0391,
+      "pnl": -17.49,
+      "price": 322.49,
+      "shares": 7,
+      "side": "SELL",
+      "ticker": "KEYS"
+    },
+    {
+      "fees": 2.069,
+      "pnl": -164.93,
+      "price": 132.3,
+      "shares": 17,
+      "side": "SELL",
+      "ticker": "SMTC"
+    },
+    {
+      "fees": 2.079,
+      "pnl": -83.73,
+      "price": 118.83,
+      "shares": 20,
+      "side": "SELL",
+      "ticker": "TTMI"
+    }
+  ],
+  "holdings": [],
+  "mean": 0.5476,
+  "n_trades_today": 4,
+  "recipe": "union_white_both_n4_h1",
+  "sells": [
+    "AVT",
+    "KEYS",
+    "SMTC",
+    "TTMI"
+  ],
+  "state": {
+    "after": "2026-08-31",
+    "cash": 9672.98,
+    "pos": {},
+    "yday_equity": 9672.98
+  }
+}

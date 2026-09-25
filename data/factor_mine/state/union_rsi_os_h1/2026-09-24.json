@@ -1,0 +1,57 @@
+{
+  "buys": [],
+  "cash": 7377.64,
+  "date": "2026-09-24",
+  "equity": 7377.64,
+  "fees": 56.5408,
+  "fills": [
+    {
+      "fees": 21.7182,
+      "pnl": -126.2,
+      "price": 1.17,
+      "shares": 1661,
+      "side": "SELL",
+      "ticker": "CMPX"
+    },
+    {
+      "fees": 2.324,
+      "pnl": -189.45,
+      "price": 17.63,
+      "shares": 101,
+      "side": "SELL",
+      "ticker": "EVER"
+    },
+    {
+      "fees": 28.0684,
+      "pnl": -114.34,
+      "price": 0.746,
+      "shares": 2640,
+      "side": "SELL",
+      "ticker": "NMRA"
+    },
+    {
+      "fees": 4.4302,
+      "pnl": -302.85,
+      "price": 5.12,
+      "shares": 338,
+      "side": "SELL",
+      "ticker": "XNDU"
+    }
+  ],
+  "holdings": [],
+  "mean": -1.1777,
+  "n_trades_today": 4,
+  "recipe": "union_rsi_os_h1",
+  "sells": [
+    "CMPX",
+    "EVER",
+    "NMRA",
+    "XNDU"
+  ],
+  "state": {
+    "after": "2026-09-24",
+    "cash": 7377.64,
+    "pos": {},
+    "yday_equity": 7377.64
+  }
+}

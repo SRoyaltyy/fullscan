@@ -1,0 +1,162 @@
+{
+  "buys": [
+    "A",
+    "HUM",
+    "PGEN",
+    "NEO",
+    "UMC"
+  ],
+  "cash": 367.69,
+  "date": "2026-09-21",
+  "equity": 9039.32,
+  "fees": 16.0648,
+  "fills": [
+    {
+      "fees": 2.2061,
+      "pnl": -212.42,
+      "price": 76.98,
+      "shares": 57,
+      "side": "SELL",
+      "ticker": "LEN"
+    },
+    {
+      "fees": 2.3848,
+      "pnl": 3.2,
+      "price": 41.0,
+      "shares": 113,
+      "side": "SELL",
+      "ticker": "TCOM"
+    },
+    {
+      "fees": 2.023,
+      "pnl": null,
+      "price": 157.87,
+      "shares": 11,
+      "side": "BUY",
+      "ticker": "A"
+    },
+    {
+      "fees": 2.002,
+      "pnl": null,
+      "price": 386.2,
+      "shares": 4,
+      "side": "BUY",
+      "ticker": "HUM"
+    },
+    {
+      "fees": 2.9799,
+      "pnl": null,
+      "price": 7.84,
+      "shares": 231,
+      "side": "BUY",
+      "ticker": "PGEN"
+    },
+    {
+      "fees": 2.263,
+      "pnl": null,
+      "price": 19.92,
+      "shares": 91,
+      "side": "BUY",
+      "ticker": "NEO"
+    },
+    {
+      "fees": 2.206,
+      "pnl": null,
+      "price": 24.93,
+      "shares": 72,
+      "side": "BUY",
+      "ticker": "UMC"
+    }
+  ],
+  "holdings": [
+    "A",
+    "HUM",
+    "NEO",
+    "PGEN",
+    "UMC"
+  ],
+  "mean": 0.255,
+  "n_trades_today": 7,
+  "recipe": "union_flow_in_h3",
+  "sells": [
+    "LEN",
+    "TCOM"
+  ],
+  "state": {
+    "after": "2026-09-21",
+    "cash": 367.69,
+    "pos": {
+      "A": {
+        "close_px": 161.94000244140625,
+        "cost": 1738.5929462890624,
+        "entry_date": "2026-09-21",
+        "entry_px": 157.8699951171875,
+        "fee_in": 2.023,
+        "last_px": 157.8699951171875,
+        "min_hold": 3,
+        "notional": 1736.5699462890625,
+        "peak_px": 157.8699951171875,
+        "reason": "union \u2229 flow_in, no \ud83d\udea8; gate flow_in=True; list flatten; \ud83d\udd35; \u26aa; ret5=+6.5; leftover $1815.85",
+        "shares": 11,
+        "ticker": "A"
+      },
+      "HUM": {
+        "close_px": 378.5799865722656,
+        "cost": 1546.802048828125,
+        "entry_date": "2026-09-21",
+        "entry_px": 386.20001220703125,
+        "fee_in": 2.002,
+        "last_px": 386.20001220703125,
+        "min_hold": 3,
+        "notional": 1544.800048828125,
+        "peak_px": 386.20001220703125,
+        "reason": "union \u2229 flow_in, no \ud83d\udea8; gate flow_in=True; list flatten; \ud83d\udd35; ret5=-5.8; leftover $1815.85",
+        "shares": 4,
+        "ticker": "HUM"
+      },
+      "NEO": {
+        "close_px": 19.40999984741211,
+        "cost": 1814.983006942749,
+        "entry_date": "2026-09-21",
+        "entry_px": 19.920000076293945,
+        "fee_in": 2.263,
+        "last_px": 19.920000076293945,
+        "min_hold": 3,
+        "notional": 1812.720006942749,
+        "peak_px": 19.920000076293945,
+        "reason": "union \u2229 flow_in, no \ud83d\udea8; gate flow_in=True; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+15.0; leftover $1815.85",
+        "shares": 91,
+        "ticker": "NEO"
+      },
+      "PGEN": {
+        "close_px": 7.699999809265137,
+        "cost": 1814.0199352478028,
+        "entry_date": "2026-09-21",
+        "entry_px": 7.840000152587891,
+        "fee_in": 2.9799,
+        "last_px": 7.840000152587891,
+        "min_hold": 3,
+        "notional": 1811.0400352478027,
+        "peak_px": 7.840000152587891,
+        "reason": "union \u2229 flow_in, no \ud83d\udea8; gate flow_in=True; list flatten; \u26aa; ret5=+13.6; leftover $1815.85",
+        "shares": 231,
+        "ticker": "PGEN"
+      },
+      "UMC": {
+        "close_px": 25.43000030517578,
+        "cost": 1797.1660219726562,
+        "entry_date": "2026-09-21",
+        "entry_px": 24.93000030517578,
+        "fee_in": 2.206,
+        "last_px": 24.93000030517578,
+        "min_hold": 3,
+        "notional": 1794.9600219726562,
+        "peak_px": 24.93000030517578,
+        "reason": "union \u2229 flow_in, no \ud83d\udea8; gate flow_in=True; list ohlc_hot; ret5=+8.7; leftover $1815.85",
+        "shares": 72,
+        "ticker": "UMC"
+      }
+    },
+    "yday_equity": 9039.32
+  }
+}

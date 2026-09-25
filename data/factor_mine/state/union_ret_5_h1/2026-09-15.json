@@ -1,0 +1,30 @@
+{
+  "buys": [],
+  "cash": 9888.51,
+  "date": "2026-09-15",
+  "equity": 9888.51,
+  "fees": 5.0678,
+  "fills": [
+    {
+      "fees": 5.0678,
+      "pnl": 187.31,
+      "price": 3.64,
+      "shares": 387,
+      "side": "SELL",
+      "ticker": "CMRC"
+    }
+  ],
+  "holdings": [],
+  "mean": -0.0512,
+  "n_trades_today": 1,
+  "recipe": "union_ret_5_h1",
+  "sells": [
+    "CMRC"
+  ],
+  "state": {
+    "after": "2026-09-15",
+    "cash": 9888.51,
+    "pos": {},
+    "yday_equity": 9888.51
+  }
+}

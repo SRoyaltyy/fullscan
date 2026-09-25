@@ -1,0 +1,215 @@
+{
+  "buys": [
+    "BAK",
+    "APPS",
+    "PAGS",
+    "INDP",
+    "CMRC",
+    "WLTH",
+    "DBI",
+    "AMTX"
+  ],
+  "cash": 1.06,
+  "date": "2026-09-11",
+  "equity": 9849.52,
+  "fees": 35.6805,
+  "fills": [
+    {
+      "fees": 7.4691,
+      "pnl": null,
+      "price": 2.12,
+      "shares": 579,
+      "side": "BUY",
+      "ticker": "BAK"
+    },
+    {
+      "fees": 2.299,
+      "pnl": null,
+      "price": 11.88,
+      "shares": 103,
+      "side": "BUY",
+      "ticker": "APPS"
+    },
+    {
+      "fees": 2.353,
+      "pnl": null,
+      "price": 10.11,
+      "shares": 121,
+      "side": "BUY",
+      "ticker": "PAGS"
+    },
+    {
+      "fees": 5.8566,
+      "pnl": null,
+      "price": 2.7,
+      "shares": 454,
+      "side": "BUY",
+      "ticker": "INDP"
+    },
+    {
+      "fees": 5.0568,
+      "pnl": null,
+      "price": 3.13,
+      "shares": 392,
+      "side": "BUY",
+      "ticker": "CMRC"
+    },
+    {
+      "fees": 2.326,
+      "pnl": null,
+      "price": 10.95,
+      "shares": 112,
+      "side": "BUY",
+      "ticker": "WLTH"
+    },
+    {
+      "fees": 2.6703,
+      "pnl": null,
+      "price": 5.91,
+      "shares": 207,
+      "side": "BUY",
+      "ticker": "DBI"
+    },
+    {
+      "fees": 7.6497,
+      "pnl": null,
+      "price": 2.04,
+      "shares": 593,
+      "side": "BUY",
+      "ticker": "AMTX"
+    }
+  ],
+  "holdings": [
+    "AMTX",
+    "APPS",
+    "BAK",
+    "CMRC",
+    "DBI",
+    "INDP",
+    "PAGS",
+    "WLTH"
+  ],
+  "mean": 0.2657,
+  "n_trades_today": 8,
+  "recipe": "union_break10_h1",
+  "sells": [],
+  "state": {
+    "after": "2026-09-11",
+    "cash": 1.06,
+    "pos": {
+      "AMTX": {
+        "close_px": 2.009999990463257,
+        "cost": 1217.3696773788452,
+        "entry_date": "2026-09-11",
+        "entry_px": 2.0399999618530273,
+        "fee_in": 7.6497,
+        "last_px": 2.0399999618530273,
+        "min_hold": 1,
+        "notional": 1209.7199773788452,
+        "peak_px": 2.0399999618530273,
+        "reason": "union \u2229 break10, no \ud83d\udea8; gate break_10=True; list yday_gainer,yday_mover,ohlc_hot; \ud83d\udd35; ret5=+10.9; leftover $1227.93",
+        "shares": 593,
+        "ticker": "AMTX"
+      },
+      "APPS": {
+        "close_px": 11.8100004196167,
+        "cost": 1225.9390117874145,
+        "entry_date": "2026-09-11",
+        "entry_px": 11.880000114440918,
+        "fee_in": 2.299,
+        "last_px": 11.880000114440918,
+        "min_hold": 1,
+        "notional": 1223.6400117874146,
+        "peak_px": 11.880000114440918,
+        "reason": "union \u2229 break10, no \ud83d\udea8; gate break_10=True; list probable,yday_gainer; ret5=+8.5; leftover $1227.93",
+        "shares": 103,
+        "ticker": "APPS"
+      },
+      "BAK": {
+        "close_px": 2.0799999237060547,
+        "cost": 1234.9490337387085,
+        "entry_date": "2026-09-11",
+        "entry_px": 2.119999885559082,
+        "fee_in": 7.4691,
+        "last_px": 2.119999885559082,
+        "min_hold": 1,
+        "notional": 1227.4799337387085,
+        "peak_px": 2.119999885559082,
+        "reason": "union \u2229 break10, no \ud83d\udea8; gate break_10=True; list probable,yday_gainer,ohlc_hot; \ud83d\udd35; ret5=+8.8; leftover $1227.93",
+        "shares": 579,
+        "ticker": "BAK"
+      },
+      "CMRC": {
+        "close_px": 3.505000114440918,
+        "cost": 1232.01684486084,
+        "entry_date": "2026-09-11",
+        "entry_px": 3.130000114440918,
+        "fee_in": 5.0568,
+        "last_px": 3.130000114440918,
+        "min_hold": 1,
+        "notional": 1226.9600448608398,
+        "peak_px": 3.130000114440918,
+        "reason": "union \u2229 break10, no \ud83d\udea8; gate break_10=True; list yday_gainer,yday_mover; ret5=+22.7; leftover $1227.93",
+        "shares": 392,
+        "ticker": "CMRC"
+      },
+      "DBI": {
+        "close_px": 5.880000114440918,
+        "cost": 1226.0402684143066,
+        "entry_date": "2026-09-11",
+        "entry_px": 5.909999847412109,
+        "fee_in": 2.6703,
+        "last_px": 5.909999847412109,
+        "min_hold": 1,
+        "notional": 1223.3699684143066,
+        "peak_px": 5.909999847412109,
+        "reason": "union \u2229 break10, no \ud83d\udea8; gate break_10=True; list yday_gainer,yday_mover; ret5=+16.3; leftover $1227.93",
+        "shares": 207,
+        "ticker": "DBI"
+      },
+      "INDP": {
+        "close_px": 2.7699999809265137,
+        "cost": 1231.656621648407,
+        "entry_date": "2026-09-11",
+        "entry_px": 2.700000047683716,
+        "fee_in": 5.8566,
+        "last_px": 2.700000047683716,
+        "min_hold": 1,
+        "notional": 1225.800021648407,
+        "peak_px": 2.700000047683716,
+        "reason": "union \u2229 break10, no \ud83d\udea8; gate break_10=True; list yday_gainer,yday_mover; ret5=+120.7; leftover $1227.93",
+        "shares": 454,
+        "ticker": "INDP"
+      },
+      "PAGS": {
+        "close_px": 10.119999885559082,
+        "cost": 1225.6629584579468,
+        "entry_date": "2026-09-11",
+        "entry_px": 10.109999656677246,
+        "fee_in": 2.353,
+        "last_px": 10.109999656677246,
+        "min_hold": 1,
+        "notional": 1223.3099584579468,
+        "peak_px": 10.109999656677246,
+        "reason": "union \u2229 break10, no \ud83d\udea8; gate break_10=True; list probable,yday_gainer; \u26aa; ret5=+1.7; leftover $1227.93",
+        "shares": 121,
+        "ticker": "PAGS"
+      },
+      "WLTH": {
+        "close_px": 10.380000114440918,
+        "cost": 1228.7259786376953,
+        "entry_date": "2026-09-11",
+        "entry_px": 10.949999809265137,
+        "fee_in": 2.326,
+        "last_px": 10.949999809265137,
+        "min_hold": 1,
+        "notional": 1226.3999786376953,
+        "peak_px": 10.949999809265137,
+        "reason": "union \u2229 break10, no \ud83d\udea8; gate break_10=True; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+16.6; leftover $1227.93",
+        "shares": 112,
+        "ticker": "WLTH"
+      }
+    },
+    "yday_equity": 9849.52
+  }
+}

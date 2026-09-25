@@ -1,0 +1,57 @@
+{
+  "buys": [],
+  "cash": 10475.92,
+  "date": "2026-09-21",
+  "equity": 10475.92,
+  "fees": 11.0758,
+  "fills": [
+    {
+      "fees": 2.0307,
+      "pnl": 142.01,
+      "price": 583.88,
+      "shares": 4,
+      "side": "SELL",
+      "ticker": "AMD"
+    },
+    {
+      "fees": 2.5832,
+      "pnl": -35.89,
+      "price": 13.9,
+      "shares": 181,
+      "side": "SELL",
+      "ticker": "BHVN"
+    },
+    {
+      "fees": 2.0904,
+      "pnl": 150.64,
+      "price": 116.53,
+      "shares": 23,
+      "side": "SELL",
+      "ticker": "INTC"
+    },
+    {
+      "fees": 4.3715,
+      "pnl": 14.64,
+      "price": 7.71,
+      "shares": 333,
+      "side": "SELL",
+      "ticker": "SHLS"
+    }
+  ],
+  "holdings": [],
+  "mean": 3.5062,
+  "n_trades_today": 4,
+  "recipe": "union_clk_fresh_cat_coil_opp_h1",
+  "sells": [
+    "AMD",
+    "BHVN",
+    "INTC",
+    "SHLS"
+  ],
+  "state": {
+    "after": "2026-09-21",
+    "cash": 10475.92,
+    "pos": {},
+    "yday_equity": 10475.92
+  }
+}

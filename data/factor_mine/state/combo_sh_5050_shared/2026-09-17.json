@@ -1,0 +1,206 @@
+{
+  "buys": [
+    "IQ",
+    "BULL",
+    "TRMD",
+    "LEN"
+  ],
+  "cash": 11284.4,
+  "date": "2026-09-17",
+  "equity": 10436.43,
+  "fees": 89.1818,
+  "fills": [
+    {
+      "fees": 2.1453,
+      "pnl": 15.3,
+      "price": 28.595,
+      "shares": 45,
+      "side": "SELL",
+      "ticker": "CAI"
+    },
+    {
+      "fees": 2.1756,
+      "pnl": 39.67,
+      "price": 24.09,
+      "shares": 55,
+      "side": "SELL",
+      "ticker": "SDGR"
+    },
+    {
+      "fees": 77.7741,
+      "pnl": null,
+      "price": 1.07,
+      "shares": 6029,
+      "side": "BUY",
+      "ticker": "IQ"
+    },
+    {
+      "fees": 2.7763041085021136,
+      "pnl": null,
+      "price": 7.95,
+      "shares": 208,
+      "side": "SHORT",
+      "ticker": "BULL"
+    },
+    {
+      "fees": 2.1931246580986126,
+      "pnl": null,
+      "price": 36.52,
+      "shares": 45,
+      "side": "SHORT",
+      "ticker": "TRMD"
+    },
+    {
+      "fees": 2.1173835616438357,
+      "pnl": null,
+      "price": 81.0,
+      "shares": 20,
+      "side": "SHORT",
+      "ticker": "LEN"
+    }
+  ],
+  "holdings": [
+    "BBNX",
+    "BULL",
+    "GFR",
+    "HLP",
+    "INDP",
+    "IQ",
+    "LEN",
+    "TRMD"
+  ],
+  "mean": 4.4648,
+  "n_trades_today": 6,
+  "recipe": "combo_sh_5050_shared",
+  "sells": [
+    "CAI",
+    "SDGR"
+  ],
+  "state": {
+    "after": "2026-09-17",
+    "cash": 11284.4,
+    "pos": {
+      "BBNX": {
+        "close_px": 21.43000030517578,
+        "cost": 2.517861098198041,
+        "entry_date": "2026-09-16",
+        "entry_px": 18.610000610351562,
+        "fee_in": 2.517861098198041,
+        "last_px": 22.459999084472656,
+        "notional": 2568.1800842285156,
+        "owner": "short_news_r_h3",
+        "peak_px": 18.610000610351562,
+        "reason": "news\ud83d\udd34; gate news=bad; list probable,yday_gainer,yday_mover; ret5=-0.5; combo leftover $2572.65; owner short_news_r_h3",
+        "shares": 138,
+        "side": "short",
+        "ticker": "BBNX"
+      },
+      "BULL": {
+        "close_px": 7.710000038146973,
+        "cost": 2.7763041085021136,
+        "entry_date": "2026-09-17",
+        "entry_px": 7.949999809265137,
+        "fee_in": 2.7763041085021136,
+        "last_px": 7.949999809265137,
+        "notional": 1653.5999603271484,
+        "owner": "short_news_r_h3",
+        "peak_px": 7.949999809265137,
+        "reason": "news\ud83d\udd34; gate news=bad; list yday_mover; \ud83d\udd35; \u26aa; ret5=-18.4; combo leftover $1658.78; owner short_news_r_h3",
+        "shares": 208,
+        "side": "short",
+        "ticker": "BULL"
+      },
+      "GFR": {
+        "close_px": 6.659999847412109,
+        "cost": 5.0037583553784515,
+        "entry_date": "2026-09-16",
+        "entry_px": 6.829999923706055,
+        "fee_in": 5.0037583553784515,
+        "last_px": 6.480000019073486,
+        "notional": 2568.0799713134766,
+        "owner": "short_news_r_h3",
+        "peak_px": 6.480000019073486,
+        "reason": "news\ud83d\udd34; gate news=bad; list ohlc_hot; ret5=+11.2; combo leftover $2572.65; owner short_news_r_h3",
+        "shares": 376,
+        "side": "short",
+        "ticker": "GFR"
+      },
+      "HLP": {
+        "close_px": 2.0199999809265137,
+        "cost": 1296.2234659061432,
+        "entry_date": "2026-09-16",
+        "entry_px": 1.7999999523162842,
+        "fee_in": 9.2235,
+        "last_px": 2.0999999046325684,
+        "notional": 1286.9999659061432,
+        "owner": "union_hot_n4_h1",
+        "peak_px": 2.0999999046325684,
+        "reason": "top 4 by hot; rank hot_score; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+30.5; combo leftover $1288.58; owner union_hot_n4_h1",
+        "shares": 715,
+        "side": "long",
+        "ticker": "HLP"
+      },
+      "INDP": {
+        "close_px": 3.930000066757202,
+        "cost": 1292.8608302124023,
+        "entry_date": "2026-09-16",
+        "entry_px": 3.6600000858306885,
+        "fee_in": 4.5408,
+        "last_px": 3.299999952316284,
+        "notional": 1288.3200302124023,
+        "owner": "union_hot_n4_h1",
+        "peak_px": 3.6600000858306885,
+        "reason": "top 4 by hot; rank hot_score; list yday_gainer,yday_mover; ret5=+96.8; combo leftover $1288.58; owner union_hot_n4_h1",
+        "shares": 352,
+        "side": "long",
+        "ticker": "INDP"
+      },
+      "IQ": {
+        "close_px": 1.100000023841858,
+        "cost": 6528.804416233635,
+        "entry_date": "2026-09-17",
+        "entry_px": 1.0700000524520874,
+        "fee_in": 77.7741,
+        "last_px": 1.0700000524520874,
+        "notional": 6451.030316233635,
+        "owner": "union_hot_n4_h1",
+        "peak_px": 1.0700000524520874,
+        "reason": "top 4 by hot; rank hot_score; list yday_gainer,ohlc_hot; \ud83d\udd35; ret5=+15.8; combo leftover $6451.65; owner union_hot_n4_h1",
+        "shares": 6029,
+        "side": "long",
+        "ticker": "IQ"
+      },
+      "LEN": {
+        "close_px": 79.69999694824219,
+        "cost": 2.1173835616438357,
+        "entry_date": "2026-09-17",
+        "entry_px": 81.0,
+        "fee_in": 2.1173835616438357,
+        "last_px": 81.0,
+        "notional": 1620.0,
+        "owner": "short_news_r_h3",
+        "peak_px": 81.0,
+        "reason": "news\ud83d\udd34; gate news=bad; list earn_react; \ud83d\udd35; ret5=-3.0; combo leftover $1658.78; owner short_news_r_h3",
+        "shares": 20,
+        "side": "short",
+        "ticker": "LEN"
+      },
+      "TRMD": {
+        "close_px": 36.630001068115234,
+        "cost": 2.1931246580986126,
+        "entry_date": "2026-09-17",
+        "entry_px": 36.52000045776367,
+        "fee_in": 2.1931246580986126,
+        "last_px": 36.52000045776367,
+        "notional": 1643.4000205993652,
+        "owner": "short_news_r_h3",
+        "peak_px": 36.52000045776367,
+        "reason": "news\ud83d\udd34; gate news=bad; list ohlc_hot; ret5=+3.2; combo leftover $1658.78; owner short_news_r_h3",
+        "shares": 45,
+        "side": "short",
+        "ticker": "TRMD"
+      }
+    },
+    "yday_equity": 10436.43
+  }
+}

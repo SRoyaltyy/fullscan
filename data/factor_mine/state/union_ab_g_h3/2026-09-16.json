@@ -1,0 +1,288 @@
+{
+  "buys": [
+    "IQV",
+    "RDNT",
+    "AVAH",
+    "BLFS",
+    "TEM",
+    "RIG",
+    "VAL",
+    "KRMN"
+  ],
+  "cash": 397.39,
+  "date": "2026-09-16",
+  "equity": 8024.23,
+  "fees": 41.6583,
+  "fills": [
+    {
+      "fees": 2.2913,
+      "pnl": -57.92,
+      "price": 11.3,
+      "shares": 92,
+      "side": "SELL",
+      "ticker": "APPS"
+    },
+    {
+      "fees": 2.2121,
+      "pnl": -12.44,
+      "price": 16.16,
+      "shares": 67,
+      "side": "SELL",
+      "ticker": "AUPH"
+    },
+    {
+      "fees": 6.7913,
+      "pnl": -158.81,
+      "price": 1.84,
+      "shares": 519,
+      "side": "SELL",
+      "ticker": "BAK"
+    },
+    {
+      "fees": 2.067,
+      "pnl": -95.31,
+      "price": 51.29,
+      "shares": 19,
+      "side": "SELL",
+      "ticker": "COHU"
+    },
+    {
+      "fees": 2.028,
+      "pnl": -63.98,
+      "price": 147.79,
+      "shares": 6,
+      "side": "SELL",
+      "ticker": "NVT"
+    },
+    {
+      "fees": 2.028,
+      "pnl": -150.44,
+      "price": 140.03,
+      "shares": 6,
+      "side": "SELL",
+      "ticker": "ORCL"
+    },
+    {
+      "fees": 5.2756,
+      "pnl": -14.5,
+      "price": 2.72,
+      "shares": 403,
+      "side": "SELL",
+      "ticker": "OVID"
+    },
+    {
+      "fees": 2.025,
+      "pnl": -64.03,
+      "price": 194.84,
+      "shares": 5,
+      "side": "SELL",
+      "ticker": "SANM"
+    },
+    {
+      "fees": 1.999,
+      "pnl": null,
+      "price": 270.89,
+      "shares": 3,
+      "side": "BUY",
+      "ticker": "IQV"
+    },
+    {
+      "fees": 2.029,
+      "pnl": null,
+      "price": 77.12,
+      "shares": 13,
+      "side": "BUY",
+      "ticker": "RDNT"
+    },
+    {
+      "fees": 2.203,
+      "pnl": null,
+      "price": 14.31,
+      "shares": 71,
+      "side": "BUY",
+      "ticker": "AVAH"
+    },
+    {
+      "fees": 2.074,
+      "pnl": null,
+      "price": 36.46,
+      "shares": 28,
+      "side": "BUY",
+      "ticker": "BLFS"
+    },
+    {
+      "fees": 2.032,
+      "pnl": null,
+      "price": 68.79,
+      "shares": 14,
+      "side": "BUY",
+      "ticker": "TEM"
+    },
+    {
+      "fees": 2.512,
+      "pnl": null,
+      "price": 5.87,
+      "shares": 174,
+      "side": "BUY",
+      "ticker": "RIG"
+    },
+    {
+      "fees": 2.023,
+      "pnl": null,
+      "price": 87.4,
+      "shares": 11,
+      "side": "BUY",
+      "ticker": "VAL"
+    },
+    {
+      "fees": 2.068,
+      "pnl": null,
+      "price": 38.01,
+      "shares": 26,
+      "side": "BUY",
+      "ticker": "KRMN"
+    }
+  ],
+  "holdings": [
+    "AVAH",
+    "BLFS",
+    "IQV",
+    "KRMN",
+    "RDNT",
+    "RIG",
+    "TEM",
+    "VAL"
+  ],
+  "mean": -3.5118,
+  "n_trades_today": 16,
+  "recipe": "union_ab_g_h3",
+  "sells": [
+    "APPS",
+    "AUPH",
+    "BAK",
+    "COHU",
+    "NVT",
+    "ORCL",
+    "OVID",
+    "SANM"
+  ],
+  "state": {
+    "after": "2026-09-16",
+    "cash": 397.39,
+    "pos": {
+      "AVAH": {
+        "close_px": 14.260000228881836,
+        "cost": 1018.2130297927856,
+        "entry_date": "2026-09-16",
+        "entry_px": 14.3100004196167,
+        "fee_in": 2.203,
+        "last_px": 14.3100004196167,
+        "min_hold": 3,
+        "notional": 1016.0100297927856,
+        "peak_px": 14.3100004196167,
+        "reason": "union \u2229 ab_g, no \ud83d\udea8; gate ab=good; list flatten; \u26aa; ret5=+4.8; leftover $1025.07",
+        "shares": 71,
+        "ticker": "AVAH"
+      },
+      "BLFS": {
+        "close_px": 36.11000061035156,
+        "cost": 1022.9539743652343,
+        "entry_date": "2026-09-16",
+        "entry_px": 36.459999084472656,
+        "fee_in": 2.074,
+        "last_px": 36.459999084472656,
+        "min_hold": 3,
+        "notional": 1020.8799743652344,
+        "peak_px": 36.459999084472656,
+        "reason": "union \u2229 ab_g, no \ud83d\udea8; gate ab=good; list flatten; \ud83d\udd35; \u26aa; ret5=+2.9; leftover $1025.07",
+        "shares": 28,
+        "ticker": "BLFS"
+      },
+      "IQV": {
+        "close_px": 268.82000732421875,
+        "cost": 814.6690439453125,
+        "entry_date": "2026-09-16",
+        "entry_px": 270.8900146484375,
+        "fee_in": 1.999,
+        "last_px": 270.8900146484375,
+        "min_hold": 3,
+        "notional": 812.6700439453125,
+        "peak_px": 270.8900146484375,
+        "reason": "union \u2229 ab_g, no \ud83d\udea8; gate ab=good; list flatten; \u26aa; ret5=+4.0; leftover $1025.07",
+        "shares": 3,
+        "ticker": "IQV"
+      },
+      "KRMN": {
+        "close_px": 36.939998626708984,
+        "cost": 990.3279563598633,
+        "entry_date": "2026-09-16",
+        "entry_px": 38.0099983215332,
+        "fee_in": 2.068,
+        "last_px": 38.0099983215332,
+        "min_hold": 3,
+        "notional": 988.2599563598633,
+        "peak_px": 38.0099983215332,
+        "reason": "union \u2229 ab_g, no \ud83d\udea8; gate ab=good; list probable,yday_gainer; \ud83d\udd35; ret5=-5.6; leftover $1025.07",
+        "shares": 26,
+        "ticker": "KRMN"
+      },
+      "RDNT": {
+        "close_px": 75.77999877929688,
+        "cost": 1004.5890357055664,
+        "entry_date": "2026-09-16",
+        "entry_px": 77.12000274658203,
+        "fee_in": 2.029,
+        "last_px": 77.12000274658203,
+        "min_hold": 3,
+        "notional": 1002.5600357055664,
+        "peak_px": 77.12000274658203,
+        "reason": "union \u2229 ab_g, no \ud83d\udea8; gate ab=good; list flatten; \u26aa; ret5=+7.2; leftover $1025.07",
+        "shares": 13,
+        "ticker": "RDNT"
+      },
+      "RIG": {
+        "close_px": 5.539999961853027,
+        "cost": 1023.8919800872802,
+        "entry_date": "2026-09-16",
+        "entry_px": 5.869999885559082,
+        "fee_in": 2.512,
+        "last_px": 5.869999885559082,
+        "min_hold": 3,
+        "notional": 1021.3799800872803,
+        "peak_px": 5.869999885559082,
+        "reason": "union \u2229 ab_g, no \ud83d\udea8; gate ab=good; list probable,yday_gainer; \ud83d\udd35; ret5=+3.1; leftover $1025.07",
+        "shares": 174,
+        "ticker": "RIG"
+      },
+      "TEM": {
+        "close_px": 69.97000122070312,
+        "cost": 965.0920128173829,
+        "entry_date": "2026-09-16",
+        "entry_px": 68.79000091552734,
+        "fee_in": 2.032,
+        "last_px": 68.79000091552734,
+        "min_hold": 3,
+        "notional": 963.0600128173828,
+        "peak_px": 68.79000091552734,
+        "reason": "union \u2229 ab_g, no \ud83d\udea8; gate ab=good; list probable,yday_gainer; \ud83d\udd35; \u26aa; ret5=+7.1; leftover $1025.07",
+        "shares": 14,
+        "ticker": "TEM"
+      },
+      "VAL": {
+        "close_px": 82.5199966430664,
+        "cost": 963.423016784668,
+        "entry_date": "2026-09-16",
+        "entry_px": 87.4000015258789,
+        "fee_in": 2.023,
+        "last_px": 87.4000015258789,
+        "min_hold": 3,
+        "notional": 961.400016784668,
+        "peak_px": 87.4000015258789,
+        "reason": "union \u2229 ab_g, no \ud83d\udea8; gate ab=good; list probable,yday_gainer; \ud83d\udd35; ret5=+3.2; leftover $1025.07",
+        "shares": 11,
+        "ticker": "VAL"
+      }
+    },
+    "yday_equity": 8024.23
+  }
+}

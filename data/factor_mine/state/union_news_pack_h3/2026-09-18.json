@@ -1,0 +1,51 @@
+{
+  "buys": [],
+  "cash": 96.4,
+  "date": "2026-09-18",
+  "equity": 8287.63,
+  "fees": 0,
+  "fills": [],
+  "holdings": [
+    "QCOM",
+    "SM"
+  ],
+  "mean": -2.9597,
+  "n_trades_today": 0,
+  "recipe": "union_news_pack_h3",
+  "sells": [],
+  "state": {
+    "after": "2026-09-18",
+    "cash": 96.4,
+    "pos": {
+      "QCOM": {
+        "close_px": 177.72000122070312,
+        "cost": 4352.968957885742,
+        "entry_date": "2026-09-16",
+        "entry_px": 189.1699981689453,
+        "fee_in": 2.059,
+        "last_px": 191.33999633789062,
+        "min_hold": 3,
+        "notional": 4350.909957885742,
+        "peak_px": 191.33999633789062,
+        "reason": "morning packet news\ud83d\udfe2 only (not the merged box); gate news_box=good; rank cond; list ohlc_hot; \ud83d\udd35; ret5=+7.9; leftover $4445.29",
+        "shares": 23,
+        "ticker": "QCOM"
+      },
+      "SM": {
+        "close_px": 36.970001220703125,
+        "cost": 4441.213186309815,
+        "entry_date": "2026-09-16",
+        "entry_px": 39.9900016784668,
+        "fee_in": 2.323,
+        "last_px": 36.869998931884766,
+        "min_hold": 3,
+        "notional": 4438.890186309814,
+        "peak_px": 39.9900016784668,
+        "reason": "morning packet news\ud83d\udfe2 only (not the merged box); gate news_box=good; rank cond; list ohlc_hot; \ud83d\udd35; ret5=+9.3; leftover $4445.29",
+        "shares": 111,
+        "ticker": "SM"
+      }
+    },
+    "yday_equity": 8287.63
+  }
+}

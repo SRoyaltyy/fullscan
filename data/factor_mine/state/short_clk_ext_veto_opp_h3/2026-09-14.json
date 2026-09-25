@@ -1,0 +1,35 @@
+{
+  "buys": [],
+  "cash": 15199.51,
+  "date": "2026-09-14",
+  "equity": 10207.27,
+  "fees": 0,
+  "fills": [],
+  "holdings": [
+    "UGP"
+  ],
+  "mean": 0.0658,
+  "n_trades_today": 0,
+  "recipe": "short_clk_ext_veto_opp_h3",
+  "sells": [],
+  "state": {
+    "after": "2026-09-14",
+    "cash": 15199.51,
+    "pos": {
+      "UGP": {
+        "close_px": 7.440000057220459,
+        "cost": 8.946595893917346,
+        "entry_date": "2026-09-11",
+        "entry_px": 7.550000190734863,
+        "fee_in": 8.946595893917346,
+        "last_px": 7.320000171661377,
+        "notional": 5066.050127983093,
+        "peak_px": 7.320000171661377,
+        "reason": "Clock-B #5 \u2229 Theme Radar T\u22121 oppset; gate clk_ext_veto=True,oppset=True; rank opp_rvol; list ohlc_hot; ret5=+5.6; leftover $5071.20",
+        "shares": 671,
+        "ticker": "UGP"
+      }
+    },
+    "yday_equity": 10207.27
+  }
+}

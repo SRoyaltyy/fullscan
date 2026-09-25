@@ -1,0 +1,93 @@
+{
+  "buys": [],
+  "cash": 9290.83,
+  "date": "2026-09-24",
+  "equity": 9290.83,
+  "fees": 20.158,
+  "fills": [
+    {
+      "fees": 2.031,
+      "pnl": -22.17,
+      "price": 163.95,
+      "shares": 7,
+      "side": "SELL",
+      "ticker": "A"
+    },
+    {
+      "fees": 2.3799,
+      "pnl": -98.33,
+      "price": 9.12,
+      "shares": 120,
+      "side": "SELL",
+      "ticker": "BFLY"
+    },
+    {
+      "fees": 2.049,
+      "pnl": -27.74,
+      "price": 87.68,
+      "shares": 13,
+      "side": "SELL",
+      "ticker": "DXCM"
+    },
+    {
+      "fees": 5.3671,
+      "pnl": -137.76,
+      "price": 2.61,
+      "shares": 410,
+      "side": "SELL",
+      "ticker": "FEAM"
+    },
+    {
+      "fees": 2.058,
+      "pnl": -9.7,
+      "price": 70.49,
+      "shares": 16,
+      "side": "SELL",
+      "ticker": "INOD"
+    },
+    {
+      "fees": 2.184,
+      "pnl": -11.89,
+      "price": 20.52,
+      "shares": 58,
+      "side": "SELL",
+      "ticker": "OMER"
+    },
+    {
+      "fees": 2.067,
+      "pnl": -11.33,
+      "price": 61.78,
+      "shares": 19,
+      "side": "SELL",
+      "ticker": "TTAN"
+    },
+    {
+      "fees": 2.022,
+      "pnl": 27.78,
+      "price": 274.45,
+      "shares": 4,
+      "side": "SELL",
+      "ticker": "VICR"
+    }
+  ],
+  "holdings": [],
+  "mean": -1.2901,
+  "n_trades_today": 8,
+  "recipe": "union_vol_ab_h1",
+  "sells": [
+    "A",
+    "BFLY",
+    "DXCM",
+    "FEAM",
+    "INOD",
+    "OMER",
+    "TTAN",
+    "VICR"
+  ],
+  "state": {
+    "after": "2026-09-24",
+    "cash": 9290.83,
+    "pos": {},
+    "yday_equity": 9290.83
+  }
+}

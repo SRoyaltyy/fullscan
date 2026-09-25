@@ -1,0 +1,159 @@
+{
+  "buys": [],
+  "cash": 6334.68,
+  "date": "2026-09-02",
+  "equity": 9577.47,
+  "fees": 17.7321,
+  "fills": [
+    {
+      "fees": 2.019,
+      "pnl": -47.4,
+      "price": 246.7,
+      "shares": 3,
+      "side": "SELL",
+      "ticker": "ADSK"
+    },
+    {
+      "fees": 2.184,
+      "pnl": -4.35,
+      "price": 15.01,
+      "shares": 58,
+      "side": "SELL",
+      "ticker": "BBAR"
+    },
+    {
+      "fees": 2.034,
+      "pnl": -99.17,
+      "price": 92.0,
+      "shares": 8,
+      "side": "SELL",
+      "ticker": "ESTC"
+    },
+    {
+      "fees": 2.9498,
+      "pnl": -131.85,
+      "price": 3.32,
+      "shares": 225,
+      "side": "SELL",
+      "ticker": "FINV"
+    },
+    {
+      "fees": 2.067,
+      "pnl": -8.48,
+      "price": 44.17,
+      "shares": 19,
+      "side": "SELL",
+      "ticker": "FRO"
+    },
+    {
+      "fees": 2.115,
+      "pnl": -99.41,
+      "price": 21.97,
+      "shares": 35,
+      "side": "SELL",
+      "ticker": "GAP"
+    },
+    {
+      "fees": 2.3293,
+      "pnl": 19.29,
+      "price": 8.58,
+      "shares": 104,
+      "side": "SELL",
+      "ticker": "HAFN"
+    },
+    {
+      "fees": 2.034,
+      "pnl": -83.65,
+      "price": 89.0,
+      "shares": 8,
+      "side": "SELL",
+      "ticker": "RBRK"
+    }
+  ],
+  "holdings": [
+    "CRK",
+    "MOS",
+    "RRC",
+    "SLI"
+  ],
+  "mean": -0.4768,
+  "n_trades_today": 8,
+  "recipe": "combo_ef_7030_shared",
+  "sells": [
+    "ADSK",
+    "BBAR",
+    "ESTC",
+    "FINV",
+    "FRO",
+    "GAP",
+    "HAFN",
+    "RBRK"
+  ],
+  "state": {
+    "after": "2026-09-02",
+    "cash": 6334.68,
+    "pos": {
+      "CRK": {
+        "close_px": 15.539999961853027,
+        "cost": 806.8050062942505,
+        "entry_date": "2026-08-28",
+        "entry_px": 14.630000114440918,
+        "fee_in": 2.155,
+        "last_px": 15.699999809265137,
+        "notional": 804.6500062942505,
+        "owner": "flatten_h5",
+        "peak_px": 15.819999694824219,
+        "reason": "baseline list, no extra gate; list flatten; wish-list (live io HOLD \u2014 not a ticket); ret5=+5.8; combo leftover $814.13; owner flatten_h5",
+        "shares": 55,
+        "side": "long",
+        "ticker": "CRK"
+      },
+      "MOS": {
+        "close_px": 25.780000686645508,
+        "cost": 792.439025177002,
+        "entry_date": "2026-08-28",
+        "entry_px": 23.950000762939453,
+        "fee_in": 2.089,
+        "last_px": 24.700000762939453,
+        "notional": 790.350025177002,
+        "owner": "flatten_h5",
+        "peak_px": 24.700000762939453,
+        "reason": "baseline list, no extra gate; list flatten; wish-list (live io HOLD \u2014 not a ticket); ret5=+1.8; combo leftover $814.13; owner flatten_h5",
+        "shares": 33,
+        "side": "long",
+        "ticker": "MOS"
+      },
+      "RRC": {
+        "close_px": 42.47999954223633,
+        "cost": 795.1070318908692,
+        "entry_date": "2026-08-28",
+        "entry_px": 41.7400016784668,
+        "fee_in": 2.047,
+        "last_px": 42.099998474121094,
+        "notional": 793.0600318908691,
+        "owner": "flatten_h5",
+        "peak_px": 42.099998474121094,
+        "reason": "baseline list, no extra gate; list flatten; wish-list (live io HOLD \u2014 not a ticket); ret5=+2.4; combo leftover $814.13; owner flatten_h5",
+        "shares": 19,
+        "side": "long",
+        "ticker": "RRC"
+      },
+      "SLI": {
+        "close_px": 2.4100000858306885,
+        "cost": 815.9487202274322,
+        "entry_date": "2026-08-28",
+        "entry_px": 2.680000066757202,
+        "fee_in": 3.9087,
+        "last_px": 2.490000009536743,
+        "notional": 812.0400202274323,
+        "owner": "flatten_h5",
+        "peak_px": 2.680000066757202,
+        "reason": "baseline list, no extra gate; list flatten,ohlc_hot; wish-list (live io HOLD \u2014 not a ticket); ret5=+16.3; combo leftover $814.13; owner flatten_h5",
+        "shares": 303,
+        "side": "long",
+        "ticker": "SLI"
+      }
+    },
+    "yday_equity": 9577.47
+  }
+}

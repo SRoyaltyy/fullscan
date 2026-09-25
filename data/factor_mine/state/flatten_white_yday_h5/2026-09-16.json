@@ -1,0 +1,95 @@
+{
+  "buys": [
+    "RDNT",
+    "BLFS",
+    "IQV"
+  ],
+  "cash": 357.56,
+  "date": "2026-09-16",
+  "equity": 9599.24,
+  "fees": 6.39,
+  "fills": [
+    {
+      "fees": 2.113,
+      "pnl": null,
+      "price": 77.12,
+      "shares": 41,
+      "side": "BUY",
+      "ticker": "RDNT"
+    },
+    {
+      "fees": 2.254,
+      "pnl": null,
+      "price": 36.46,
+      "shares": 88,
+      "side": "BUY",
+      "ticker": "BLFS"
+    },
+    {
+      "fees": 2.023,
+      "pnl": null,
+      "price": 270.89,
+      "shares": 11,
+      "side": "BUY",
+      "ticker": "IQV"
+    }
+  ],
+  "holdings": [
+    "BLFS",
+    "IQV",
+    "RDNT"
+  ],
+  "mean": -1.1828,
+  "n_trades_today": 3,
+  "recipe": "flatten_white_yday_h5",
+  "sells": [],
+  "state": {
+    "after": "2026-09-16",
+    "cash": 357.56,
+    "pos": {
+      "BLFS": {
+        "close_px": 36.11000061035156,
+        "cost": 3210.7339194335937,
+        "entry_date": "2026-09-16",
+        "entry_px": 36.459999084472656,
+        "fee_in": 2.254,
+        "last_px": 36.459999084472656,
+        "min_hold": 5,
+        "notional": 3208.4799194335938,
+        "peak_px": 36.459999084472656,
+        "reason": "flatten looker: 0 red + yesterday up; gate zero_red=True,yday_up=True; rank cond; list flatten; wish-list (live io HOLD \u2014 not a ticket); \ud83d\udd35; \u26aa; ret5=+2.9; leftover $3238.05",
+        "shares": 88,
+        "ticker": "BLFS"
+      },
+      "IQV": {
+        "close_px": 268.82000732421875,
+        "cost": 2981.8131611328126,
+        "entry_date": "2026-09-16",
+        "entry_px": 270.8900146484375,
+        "fee_in": 2.023,
+        "last_px": 270.8900146484375,
+        "min_hold": 5,
+        "notional": 2979.7901611328125,
+        "peak_px": 270.8900146484375,
+        "reason": "flatten looker: 0 red + yesterday up; gate zero_red=True,yday_up=True; rank cond; list flatten; wish-list (live io HOLD \u2014 not a ticket); \u26aa; ret5=+4.0; leftover $3238.05",
+        "shares": 11,
+        "ticker": "IQV"
+      },
+      "RDNT": {
+        "close_px": 75.77999877929688,
+        "cost": 3164.033112609863,
+        "entry_date": "2026-09-16",
+        "entry_px": 77.12000274658203,
+        "fee_in": 2.113,
+        "last_px": 77.12000274658203,
+        "min_hold": 5,
+        "notional": 3161.9201126098633,
+        "peak_px": 77.12000274658203,
+        "reason": "flatten looker: 0 red + yesterday up; gate zero_red=True,yday_up=True; rank cond; list flatten; wish-list (live io HOLD \u2014 not a ticket); \u26aa; ret5=+7.2; leftover $3238.05",
+        "shares": 41,
+        "ticker": "RDNT"
+      }
+    },
+    "yday_equity": 9599.24
+  }
+}

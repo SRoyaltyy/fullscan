@@ -1,0 +1,215 @@
+{
+  "buys": [
+    "SEDG",
+    "ZYME",
+    "TH",
+    "HAFN",
+    "S",
+    "ADSK",
+    "PD",
+    "RBRK"
+  ],
+  "cash": 321.1,
+  "date": "2026-08-28",
+  "equity": 9889.07,
+  "fees": 17.309,
+  "fills": [
+    {
+      "fees": 2.101,
+      "pnl": null,
+      "price": 32.9,
+      "shares": 37,
+      "side": "BUY",
+      "ticker": "SEDG"
+    },
+    {
+      "fees": 2.119,
+      "pnl": null,
+      "price": 28.91,
+      "shares": 43,
+      "side": "BUY",
+      "ticker": "ZYME"
+    },
+    {
+      "fees": 2.185,
+      "pnl": null,
+      "price": 19.0,
+      "shares": 65,
+      "side": "BUY",
+      "ticker": "TH"
+    },
+    {
+      "fees": 2.437,
+      "pnl": null,
+      "price": 8.35,
+      "shares": 149,
+      "side": "BUY",
+      "ticker": "HAFN"
+    },
+    {
+      "fees": 2.164,
+      "pnl": null,
+      "price": 21.49,
+      "shares": 58,
+      "side": "BUY",
+      "ticker": "S"
+    },
+    {
+      "fees": 2.002,
+      "pnl": null,
+      "price": 261.16,
+      "shares": 4,
+      "side": "BUY",
+      "ticker": "ADSK"
+    },
+    {
+      "fees": 2.275,
+      "pnl": null,
+      "price": 13.09,
+      "shares": 95,
+      "side": "BUY",
+      "ticker": "PD"
+    },
+    {
+      "fees": 2.026,
+      "pnl": null,
+      "price": 98.95,
+      "shares": 12,
+      "side": "BUY",
+      "ticker": "RBRK"
+    }
+  ],
+  "holdings": [
+    "ADSK",
+    "HAFN",
+    "PD",
+    "RBRK",
+    "S",
+    "SEDG",
+    "TH",
+    "ZYME"
+  ],
+  "mean": -1.1093,
+  "n_trades_today": 8,
+  "recipe": "union_clk_mom_break_peer_opp_h1",
+  "sells": [],
+  "state": {
+    "after": "2026-08-28",
+    "cash": 321.1,
+    "pos": {
+      "ADSK": {
+        "close_px": 260.6600036621094,
+        "cost": 1046.6420146484375,
+        "entry_date": "2026-08-28",
+        "entry_px": 261.1600036621094,
+        "fee_in": 2.002,
+        "last_px": 261.1600036621094,
+        "min_hold": 1,
+        "notional": 1044.6400146484375,
+        "peak_px": 261.1600036621094,
+        "reason": "Clock-B #1 \u2229 Theme Radar T\u22121 oppset; gate clk_mom_break_peer=True,oppset=True; rank opp_rvol; list earn_react; ret5=+7.8; leftover $1250.00",
+        "shares": 4,
+        "ticker": "ADSK"
+      },
+      "HAFN": {
+        "close_px": 8.470000267028809,
+        "cost": 1246.5870568389892,
+        "entry_date": "2026-08-28",
+        "entry_px": 8.350000381469727,
+        "fee_in": 2.437,
+        "last_px": 8.350000381469727,
+        "min_hold": 1,
+        "notional": 1244.1500568389893,
+        "peak_px": 8.350000381469727,
+        "reason": "Clock-B #1 \u2229 Theme Radar T\u22121 oppset; gate clk_mom_break_peer=True,oppset=True; rank opp_rvol; list earn_react; ret5=+5.1; leftover $1250.00",
+        "shares": 149,
+        "ticker": "HAFN"
+      },
+      "PD": {
+        "close_px": 13.829999923706055,
+        "cost": 1245.8250144958497,
+        "entry_date": "2026-08-28",
+        "entry_px": 13.09000015258789,
+        "fee_in": 2.275,
+        "last_px": 13.09000015258789,
+        "min_hold": 1,
+        "notional": 1243.5500144958496,
+        "peak_px": 13.09000015258789,
+        "reason": "Clock-B #1 \u2229 Theme Radar T\u22121 oppset; gate clk_mom_break_peer=True,oppset=True; rank opp_rvol; list earn_react; ret5=+4.2; leftover $1250.00",
+        "shares": 95,
+        "ticker": "PD"
+      },
+      "RBRK": {
+        "close_px": 93.05000305175781,
+        "cost": 1189.4259633789063,
+        "entry_date": "2026-08-28",
+        "entry_px": 98.94999694824219,
+        "fee_in": 2.026,
+        "last_px": 98.94999694824219,
+        "min_hold": 1,
+        "notional": 1187.3999633789062,
+        "peak_px": 98.94999694824219,
+        "reason": "Clock-B #1 \u2229 Theme Radar T\u22121 oppset; gate clk_mom_break_peer=True,oppset=True; rank opp_rvol; list ohlc_hot,earn_react; ret5=+9.7; leftover $1250.00",
+        "shares": 12,
+        "ticker": "RBRK"
+      },
+      "S": {
+        "close_px": 21.540000915527344,
+        "cost": 1248.5839867248535,
+        "entry_date": "2026-08-28",
+        "entry_px": 21.489999771118164,
+        "fee_in": 2.164,
+        "last_px": 21.489999771118164,
+        "min_hold": 1,
+        "notional": 1246.4199867248535,
+        "peak_px": 21.489999771118164,
+        "reason": "Clock-B #1 \u2229 Theme Radar T\u22121 oppset; gate clk_mom_break_peer=True,oppset=True; rank opp_rvol; list earn_react; ret5=+8.5; leftover $1250.00",
+        "shares": 58,
+        "ticker": "S"
+      },
+      "SEDG": {
+        "close_px": 31.40999984741211,
+        "cost": 1219.4010564575196,
+        "entry_date": "2026-08-28",
+        "entry_px": 32.900001525878906,
+        "fee_in": 2.101,
+        "last_px": 32.900001525878906,
+        "min_hold": 1,
+        "notional": 1217.3000564575195,
+        "peak_px": 32.900001525878906,
+        "reason": "Clock-B #1 \u2229 Theme Radar T\u22121 oppset; gate clk_mom_break_peer=True,oppset=True; rank opp_rvol; list probable,yday_gainer,yday_mover; \ud83d\udd35; ret5=+8.4; leftover $1250.00",
+        "shares": 37,
+        "ticker": "SEDG"
+      },
+      "TH": {
+        "close_px": 18.549999237060547,
+        "cost": 1237.185,
+        "entry_date": "2026-08-28",
+        "entry_px": 19.0,
+        "fee_in": 2.185,
+        "last_px": 19.0,
+        "min_hold": 1,
+        "notional": 1235.0,
+        "peak_px": 19.0,
+        "reason": "Clock-B #1 \u2229 Theme Radar T\u22121 oppset; gate clk_mom_break_peer=True,oppset=True; rank opp_rvol; list ohlc_hot; ret5=+7.5; leftover $1250.00",
+        "shares": 65,
+        "ticker": "TH"
+      },
+      "ZYME": {
+        "close_px": 28.270000457763672,
+        "cost": 1245.2489934387206,
+        "entry_date": "2026-08-28",
+        "entry_px": 28.90999984741211,
+        "fee_in": 2.119,
+        "last_px": 28.90999984741211,
+        "min_hold": 1,
+        "notional": 1243.1299934387207,
+        "peak_px": 28.90999984741211,
+        "reason": "Clock-B #1 \u2229 Theme Radar T\u22121 oppset; gate clk_mom_break_peer=True,oppset=True; rank opp_rvol; list yday_gainer; ret5=+9.2; leftover $1250.00",
+        "shares": 43,
+        "ticker": "ZYME"
+      }
+    },
+    "yday_equity": 9889.07
+  }
+}

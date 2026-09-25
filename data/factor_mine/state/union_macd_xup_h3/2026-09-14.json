@@ -1,0 +1,96 @@
+{
+  "buys": [],
+  "cash": 13.64,
+  "date": "2026-09-14",
+  "equity": 9112.08,
+  "fees": 0,
+  "fills": [],
+  "holdings": [
+    "APPS",
+    "DBI",
+    "HPK",
+    "INSP",
+    "XHLD"
+  ],
+  "mean": -4.3384,
+  "n_trades_today": 0,
+  "recipe": "union_macd_xup_h3",
+  "sells": [],
+  "state": {
+    "after": "2026-09-14",
+    "cash": 13.64,
+    "pos": {
+      "APPS": {
+        "close_px": 11.729999542236328,
+        "cost": 1831.9720176239014,
+        "entry_date": "2026-09-11",
+        "entry_px": 11.880000114440918,
+        "fee_in": 2.452,
+        "last_px": 11.75,
+        "min_hold": 3,
+        "notional": 1829.5200176239014,
+        "peak_px": 11.880000114440918,
+        "reason": "union \u2229 macd_xup, no \ud83d\udea8; gate macd_cross_up=True; list probable,yday_gainer; ret5=+8.5; leftover $1832.51",
+        "shares": 154,
+        "ticker": "APPS"
+      },
+      "DBI": {
+        "close_px": 6.53000020980835,
+        "cost": 1836.098952697754,
+        "entry_date": "2026-09-11",
+        "entry_px": 5.909999847412109,
+        "fee_in": 3.999,
+        "last_px": 5.860000133514404,
+        "min_hold": 3,
+        "notional": 1832.099952697754,
+        "peak_px": 5.909999847412109,
+        "reason": "union \u2229 macd_xup, no \ud83d\udea8; gate macd_cross_up=True; list yday_gainer,yday_mover; ret5=+16.3; leftover $1832.51",
+        "shares": 310,
+        "ticker": "DBI"
+      },
+      "HPK": {
+        "close_px": 8.380000114440918,
+        "cost": 1827.9863588012695,
+        "entry_date": "2026-09-11",
+        "entry_px": 8.449999809265137,
+        "fee_in": 2.7864,
+        "last_px": 8.649999618530273,
+        "min_hold": 3,
+        "notional": 1825.1999588012695,
+        "peak_px": 8.649999618530273,
+        "reason": "union \u2229 macd_xup, no \ud83d\udea8; gate macd_cross_up=True; list ohlc_hot; ret5=+3.5; leftover $1832.51",
+        "shares": 216,
+        "ticker": "HPK"
+      },
+      "INSP": {
+        "close_px": 74.31999969482422,
+        "cost": 1818.9479285888672,
+        "entry_date": "2026-09-11",
+        "entry_px": 69.87999725341797,
+        "fee_in": 2.068,
+        "last_px": 72.13999938964844,
+        "min_hold": 3,
+        "notional": 1816.8799285888672,
+        "peak_px": 72.13999938964844,
+        "reason": "union \u2229 macd_xup, no \ud83d\udea8; gate macd_cross_up=True; list ohlc_hot; ret5=+9.6; leftover $1832.51",
+        "shares": 26,
+        "ticker": "INSP"
+      },
+      "XHLD": {
+        "close_px": 8.920000076293945,
+        "cost": 1833.9130065231323,
+        "entry_date": "2026-09-11",
+        "entry_px": 10.710000038146973,
+        "fee_in": 2.503,
+        "last_px": 12.420000076293945,
+        "min_hold": 3,
+        "notional": 1831.4100065231323,
+        "peak_px": 12.420000076293945,
+        "reason": "union \u2229 macd_xup, no \ud83d\udea8; gate macd_cross_up=True; list ohlc_hot; ret5=+17.4; leftover $1832.51",
+        "shares": 171,
+        "ticker": "XHLD"
+      }
+    },
+    "yday_equity": 9112.08
+  }
+}

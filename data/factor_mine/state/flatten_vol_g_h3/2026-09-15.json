@@ -1,0 +1,36 @@
+{
+  "buys": [],
+  "cash": 30.14,
+  "date": "2026-09-15",
+  "equity": 7609.04,
+  "fees": 0,
+  "fills": [],
+  "holdings": [
+    "ORCL"
+  ],
+  "mean": -3.0547,
+  "n_trades_today": 0,
+  "recipe": "flatten_vol_g_h3",
+  "sells": [],
+  "state": {
+    "after": "2026-09-15",
+    "cash": 30.14,
+    "pos": {
+      "ORCL": {
+        "close_px": 140.35000610351562,
+        "cost": 8881.371604492188,
+        "entry_date": "2026-09-11",
+        "entry_px": 164.42999267578125,
+        "fee_in": 2.152,
+        "last_px": 143.4600067138672,
+        "min_hold": 3,
+        "notional": 8879.219604492188,
+        "peak_px": 164.42999267578125,
+        "reason": "flatten wish-list \u2229 vol\ud83d\udfe2; gate vol=good; list flatten,earn_react; wish-list (live io HOLD \u2014 not a ticket); \ud83d\udd35; \u26aa; ret5=-0.7; leftover $8911.51",
+        "shares": 54,
+        "ticker": "ORCL"
+      }
+    },
+    "yday_equity": 7609.04
+  }
+}

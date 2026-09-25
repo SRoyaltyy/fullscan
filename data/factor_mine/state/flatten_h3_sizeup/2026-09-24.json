@@ -1,0 +1,203 @@
+{
+  "buys": [],
+  "cash": 7553.35,
+  "date": "2026-09-24",
+  "equity": 7831.81,
+  "fees": 13.9155,
+  "fills": [
+    {
+      "fees": 2.0431,
+      "pnl": 56.74,
+      "price": 163.95,
+      "shares": 10,
+      "side": "SELL",
+      "ticker": "A"
+    },
+    {
+      "fees": 5.3944,
+      "pnl": -257.91,
+      "price": 3.4,
+      "shares": 412,
+      "side": "SELL",
+      "ticker": "CYPH"
+    },
+    {
+      "fees": 2.0666,
+      "pnl": -24.81,
+      "price": 87.68,
+      "shares": 18,
+      "side": "SELL",
+      "ticker": "DXCM"
+    },
+    {
+      "fees": 2.024,
+      "pnl": -50.67,
+      "price": 374.54,
+      "shares": 4,
+      "side": "SELL",
+      "ticker": "HUM"
+    },
+    {
+      "fees": 2.3874,
+      "pnl": -254.84,
+      "price": 11.42,
+      "shares": 122,
+      "side": "SELL",
+      "ticker": "MGTX"
+    }
+  ],
+  "holdings": [
+    "ADMA",
+    "ARQT",
+    "DLO",
+    "FTRE",
+    "MKC",
+    "OMER",
+    "PACS",
+    "PGEN",
+    "TDC"
+  ],
+  "mean": -1.97,
+  "n_trades_today": 5,
+  "recipe": "flatten_h3_sizeup",
+  "sells": [
+    "A",
+    "CYPH",
+    "DXCM",
+    "HUM",
+    "MGTX"
+  ],
+  "state": {
+    "after": "2026-09-24",
+    "cash": 7553.35,
+    "pos": {
+      "ADMA": {
+        "close_px": 9.520000457763672,
+        "cost": 29.733301258850098,
+        "entry_date": "2026-09-23",
+        "entry_px": 9.8100004196167,
+        "fee_in": 0.3033,
+        "last_px": 9.670000076293945,
+        "min_hold": 3,
+        "notional": 29.430001258850098,
+        "peak_px": 9.8100004196167,
+        "reason": "S\u2265+5: 1.35\u00d7 leftover; list flatten; wish-list (live io HOLD \u2014 not a ticket); \ud83d\udd35; \u26aa; ret5=+13.9; leftover $30.09",
+        "shares": 3,
+        "ticker": "ADMA"
+      },
+      "ARQT": {
+        "close_px": 26.270000457763672,
+        "cost": 28.070900915527343,
+        "entry_date": "2026-09-23",
+        "entry_px": 27.790000915527344,
+        "fee_in": 0.2809,
+        "last_px": 26.219999313354492,
+        "min_hold": 3,
+        "notional": 27.790000915527344,
+        "peak_px": 27.790000915527344,
+        "reason": "S\u2265+5: 1.35\u00d7 leftover; list flatten; wish-list (live io HOLD \u2014 not a ticket); \ud83d\udd35; \u26aa; ret5=+18.2; leftover $30.09",
+        "shares": 1,
+        "ticker": "ARQT"
+      },
+      "DLO": {
+        "close_px": 13.880000114440918,
+        "cost": 43.944,
+        "entry_date": "2026-09-22",
+        "entry_px": 14.5,
+        "fee_in": 0.444,
+        "last_px": 14.0600004196167,
+        "min_hold": 3,
+        "notional": 43.5,
+        "peak_px": 14.5,
+        "reason": "S\u2265+5: 1.35\u00d7 leftover; list flatten; wish-list (live io HOLD \u2014 not a ticket); ret5=-3.6; leftover $57.83",
+        "shares": 3,
+        "ticker": "DLO"
+      },
+      "FTRE": {
+        "close_px": 20.020000457763672,
+        "cost": 20.4555,
+        "entry_date": "2026-09-23",
+        "entry_px": 20.25,
+        "fee_in": 0.2055,
+        "last_px": 19.399999618530273,
+        "min_hold": 3,
+        "notional": 20.25,
+        "peak_px": 20.25,
+        "reason": "S\u2265+5: 1.35\u00d7 leftover; list flatten; wish-list (live io HOLD \u2014 not a ticket); \ud83d\udd35; \u26aa; ret5=+3.5; leftover $30.09",
+        "shares": 1,
+        "ticker": "FTRE"
+      },
+      "MKC": {
+        "close_px": 47.81999969482422,
+        "cost": 50.0687,
+        "entry_date": "2026-09-22",
+        "entry_px": 49.57,
+        "fee_in": 0.4987,
+        "last_px": 49.459999084472656,
+        "min_hold": 3,
+        "notional": 49.57,
+        "peak_px": 49.57,
+        "reason": "S\u2265+5: 1.35\u00d7 leftover; list flatten; wish-list (live io HOLD \u2014 not a ticket); ret5=-3.0; leftover $57.83",
+        "shares": 1,
+        "ticker": "MKC"
+      },
+      "OMER": {
+        "close_px": 20.1299991607666,
+        "cost": 20.859499618530272,
+        "entry_date": "2026-09-23",
+        "entry_px": 20.649999618530273,
+        "fee_in": 0.2095,
+        "last_px": 20.520000457763672,
+        "min_hold": 3,
+        "notional": 20.649999618530273,
+        "peak_px": 20.649999618530273,
+        "reason": "S\u2265+5: 1.35\u00d7 leftover; list flatten,yday_gainer,yday_mover; wish-list (live io HOLD \u2014 not a ticket); \ud83d\udd35; \u26aa; ret5=+22.6; leftover $30.09",
+        "shares": 1,
+        "ticker": "OMER"
+      },
+      "PACS": {
+        "close_px": 41.459999084472656,
+        "cost": 42.3523,
+        "entry_date": "2026-09-22",
+        "entry_px": 41.93,
+        "fee_in": 0.4223,
+        "last_px": 41.099998474121094,
+        "min_hold": 3,
+        "notional": 41.93,
+        "peak_px": 41.93,
+        "reason": "S\u2265+5: 1.35\u00d7 leftover; list flatten; wish-list (live io HOLD \u2014 not a ticket); ret5=-5.6; leftover $57.83",
+        "shares": 1,
+        "ticker": "PACS"
+      },
+      "PGEN": {
+        "close_px": 7.699999809265137,
+        "cost": 24.09749942779541,
+        "entry_date": "2026-09-23",
+        "entry_px": 7.949999809265137,
+        "fee_in": 0.2475,
+        "last_px": 7.369999885559082,
+        "min_hold": 3,
+        "notional": 23.84999942779541,
+        "peak_px": 7.949999809265137,
+        "reason": "S\u2265+5: 1.35\u00d7 leftover; list flatten; wish-list (live io HOLD \u2014 not a ticket); \ud83d\udd35; \u26aa; ret5=+12.7; leftover $30.09",
+        "shares": 3,
+        "ticker": "PGEN"
+      },
+      "TDC": {
+        "close_px": 29.459999084472656,
+        "cost": 30.0808,
+        "entry_date": "2026-09-22",
+        "entry_px": 29.78,
+        "fee_in": 0.3008,
+        "last_px": 29.209999084472656,
+        "min_hold": 3,
+        "notional": 29.78,
+        "peak_px": 29.78,
+        "reason": "S\u2265+5: 1.35\u00d7 leftover; list flatten; wish-list (live io HOLD \u2014 not a ticket); ret5=-0.0; leftover $57.83",
+        "shares": 1,
+        "ticker": "TDC"
+      }
+    },
+    "yday_equity": 7831.81
+  }
+}

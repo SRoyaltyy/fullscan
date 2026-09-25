@@ -1,0 +1,46 @@
+{
+  "buys": [
+    "TRMD"
+  ],
+  "cash": 15258.86,
+  "date": "2026-09-17",
+  "equity": 10167.29,
+  "fees": 2.6098,
+  "fills": [
+    {
+      "fees": 2.6097761661268257,
+      "pnl": null,
+      "price": 36.52,
+      "shares": 139,
+      "side": "SHORT",
+      "ticker": "TRMD"
+    }
+  ],
+  "holdings": [
+    "TRMD"
+  ],
+  "mean": -0.1757,
+  "n_trades_today": 1,
+  "recipe": "short_clk_ext_veto_opp_h3",
+  "sells": [],
+  "state": {
+    "after": "2026-09-17",
+    "cash": 15258.86,
+    "pos": {
+      "TRMD": {
+        "close_px": 36.630001068115234,
+        "cost": 2.6097761661268257,
+        "entry_date": "2026-09-17",
+        "entry_px": 36.52000045776367,
+        "fee_in": 2.6097761661268257,
+        "last_px": 36.52000045776367,
+        "notional": 5076.28006362915,
+        "peak_px": 36.52000045776367,
+        "reason": "Clock-B #5 \u2229 Theme Radar T\u22121 oppset; gate clk_ext_veto=True,oppset=True; rank opp_rvol; list ohlc_hot; ret5=+3.2; leftover $5092.60",
+        "shares": 139,
+        "ticker": "TRMD"
+      }
+    },
+    "yday_equity": 10167.29
+  }
+}

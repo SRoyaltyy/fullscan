@@ -1,0 +1,51 @@
+{
+  "buys": [],
+  "cash": 1.35,
+  "date": "2026-09-18",
+  "equity": 12072.69,
+  "fees": 0,
+  "fills": [],
+  "holdings": [
+    "EYPT",
+    "ZSQR"
+  ],
+  "mean": 1.0121,
+  "n_trades_today": 0,
+  "recipe": "union_rsi_os_macd_h3",
+  "sells": [],
+  "state": {
+    "after": "2026-09-18",
+    "cash": 1.35,
+    "pos": {
+      "EYPT": {
+        "close_px": 3.8499999046325684,
+        "cost": 5487.312728231049,
+        "entry_date": "2026-09-16",
+        "entry_px": 3.6600000858306885,
+        "fee_in": 19.2726,
+        "last_px": 3.950000047683716,
+        "min_hold": 3,
+        "notional": 5468.040128231049,
+        "peak_px": 3.950000047683716,
+        "reason": "combo gate; gate rsi_os=True,macd_up=True; list yday_mover; \ud83d\udd35; ret5=-19.7; leftover $5518.40",
+        "shares": 1494,
+        "ticker": "EYPT"
+      },
+      "ZSQR": {
+        "close_px": 2.680000066757202,
+        "cost": 5548.137997611237,
+        "entry_date": "2026-09-16",
+        "entry_px": 2.3399999141693115,
+        "fee_in": 30.4182,
+        "last_px": 2.5,
+        "min_hold": 3,
+        "notional": 5517.719797611237,
+        "peak_px": 2.5,
+        "reason": "combo gate; gate rsi_os=True,macd_up=True; list yday_mover; \ud83d\udd35; ret5=-25.2; leftover $5518.40",
+        "shares": 2358,
+        "ticker": "ZSQR"
+      }
+    },
+    "yday_equity": 12072.69
+  }
+}

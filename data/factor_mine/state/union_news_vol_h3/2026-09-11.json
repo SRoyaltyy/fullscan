@@ -1,0 +1,95 @@
+{
+  "buys": [
+    "ORCL",
+    "ADBE",
+    "RH"
+  ],
+  "cash": 72.76,
+  "date": "2026-09-11",
+  "equity": 9290.68,
+  "fees": 6.135,
+  "fills": [
+    {
+      "fees": 2.047,
+      "pnl": null,
+      "price": 164.43,
+      "shares": 19,
+      "side": "BUY",
+      "ticker": "ORCL"
+    },
+    {
+      "fees": 2.029,
+      "pnl": null,
+      "price": 242.17,
+      "shares": 13,
+      "side": "BUY",
+      "ticker": "ADBE"
+    },
+    {
+      "fees": 2.059,
+      "pnl": null,
+      "price": 135.71,
+      "shares": 23,
+      "side": "BUY",
+      "ticker": "RH"
+    }
+  ],
+  "holdings": [
+    "ADBE",
+    "ORCL",
+    "RH"
+  ],
+  "mean": -1.9205,
+  "n_trades_today": 3,
+  "recipe": "union_news_vol_h3",
+  "sells": [],
+  "state": {
+    "after": "2026-09-11",
+    "cash": 72.76,
+    "pos": {
+      "ADBE": {
+        "close_px": 252.22999572753906,
+        "cost": 3150.238976196289,
+        "entry_date": "2026-09-11",
+        "entry_px": 242.1699981689453,
+        "fee_in": 2.029,
+        "last_px": 242.1699981689453,
+        "min_hold": 3,
+        "notional": 3148.209976196289,
+        "peak_px": 242.1699981689453,
+        "reason": "combo gate; gate news=good,vol=good; list earn_react; \ud83d\udd35; ret5=-12.9; leftover $3157.53",
+        "shares": 13,
+        "ticker": "ADBE"
+      },
+      "ORCL": {
+        "close_px": 150.27999877929688,
+        "cost": 3126.216860839844,
+        "entry_date": "2026-09-11",
+        "entry_px": 164.42999267578125,
+        "fee_in": 2.047,
+        "last_px": 164.42999267578125,
+        "min_hold": 3,
+        "notional": 3124.1698608398438,
+        "peak_px": 164.42999267578125,
+        "reason": "combo gate; gate news=good,vol=good; list flatten,earn_react; \ud83d\udd35; \u26aa; ret5=-0.7; leftover $3157.53",
+        "shares": 19,
+        "ticker": "ORCL"
+      },
+      "RH": {
+        "close_px": 134.07000732421875,
+        "cost": 3123.3891544189455,
+        "entry_date": "2026-09-11",
+        "entry_px": 135.7100067138672,
+        "fee_in": 2.059,
+        "last_px": 135.7100067138672,
+        "min_hold": 3,
+        "notional": 3121.3301544189453,
+        "peak_px": 135.7100067138672,
+        "reason": "combo gate; gate news=good,vol=good; list earn_react; ret5=-8.6; leftover $3157.53",
+        "shares": 23,
+        "ticker": "RH"
+      }
+    },
+    "yday_equity": 9290.68
+  }
+}

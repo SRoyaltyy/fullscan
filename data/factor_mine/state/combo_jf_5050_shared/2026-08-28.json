@@ -1,0 +1,223 @@
+{
+  "buys": [
+    "ANF",
+    "NCNO",
+    "TH",
+    "GAP",
+    "RRC",
+    "CRK",
+    "MOS",
+    "SLI"
+  ],
+  "cash": 33.2,
+  "date": "2026-08-28",
+  "equity": 9772.96,
+  "fees": 21.1213,
+  "fills": [
+    {
+      "fees": 2.014,
+      "pnl": null,
+      "price": 146.07,
+      "shares": 8,
+      "side": "BUY",
+      "ticker": "ANF"
+    },
+    {
+      "fees": 2.149,
+      "pnl": null,
+      "price": 23.3,
+      "shares": 53,
+      "side": "BUY",
+      "ticker": "NCNO"
+    },
+    {
+      "fees": 2.185,
+      "pnl": null,
+      "price": 19.0,
+      "shares": 65,
+      "side": "BUY",
+      "ticker": "TH"
+    },
+    {
+      "fees": 2.14,
+      "pnl": null,
+      "price": 24.69,
+      "shares": 50,
+      "side": "BUY",
+      "ticker": "GAP"
+    },
+    {
+      "fees": 2.08,
+      "pnl": null,
+      "price": 41.74,
+      "shares": 30,
+      "side": "BUY",
+      "ticker": "RRC"
+    },
+    {
+      "fees": 2.251,
+      "pnl": null,
+      "price": 14.63,
+      "shares": 87,
+      "side": "BUY",
+      "ticker": "CRK"
+    },
+    {
+      "fees": 2.149,
+      "pnl": null,
+      "price": 23.95,
+      "shares": 53,
+      "side": "BUY",
+      "ticker": "MOS"
+    },
+    {
+      "fees": 6.1533,
+      "pnl": null,
+      "price": 2.68,
+      "shares": 477,
+      "side": "BUY",
+      "ticker": "SLI"
+    }
+  ],
+  "holdings": [
+    "ANF",
+    "CRK",
+    "GAP",
+    "MOS",
+    "NCNO",
+    "RRC",
+    "SLI",
+    "TH"
+  ],
+  "mean": -2.2704,
+  "n_trades_today": 8,
+  "recipe": "combo_jf_5050_shared",
+  "sells": [],
+  "state": {
+    "after": "2026-08-28",
+    "cash": 33.2,
+    "pos": {
+      "ANF": {
+        "close_px": 148.4199981689453,
+        "cost": 1170.57405859375,
+        "entry_date": "2026-08-28",
+        "entry_px": 146.07000732421875,
+        "fee_in": 2.014,
+        "last_px": 146.07000732421875,
+        "notional": 1168.56005859375,
+        "owner": "union_join_vol_green_h1",
+        "peak_px": 146.07000732421875,
+        "reason": "combo gate; gate join=good,vol=good,last_green=True; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+38.8; combo leftover $1250.00; owner union_join_vol_green_h1",
+        "shares": 8,
+        "side": "long",
+        "ticker": "ANF"
+      },
+      "CRK": {
+        "close_px": 14.289999961853027,
+        "cost": 1275.0610099563598,
+        "entry_date": "2026-08-28",
+        "entry_px": 14.630000114440918,
+        "fee_in": 2.251,
+        "last_px": 14.630000114440918,
+        "notional": 1272.8100099563599,
+        "owner": "flatten_h5",
+        "peak_px": 14.630000114440918,
+        "reason": "baseline list, no extra gate; list flatten; wish-list (live io HOLD \u2014 not a ticket); ret5=+5.8; combo leftover $1279.64; owner flatten_h5",
+        "shares": 87,
+        "side": "long",
+        "ticker": "CRK"
+      },
+      "GAP": {
+        "close_px": 23.479999542236328,
+        "cost": 1236.640026702881,
+        "entry_date": "2026-08-28",
+        "entry_px": 24.690000534057617,
+        "fee_in": 2.14,
+        "last_px": 24.690000534057617,
+        "notional": 1234.5000267028809,
+        "owner": "union_join_vol_green_h1",
+        "peak_px": 24.690000534057617,
+        "reason": "combo gate; gate join=good,vol=good,last_green=True; list earn_react; ret5=+5.8; combo leftover $1250.00; owner union_join_vol_green_h1",
+        "shares": 50,
+        "side": "long",
+        "ticker": "GAP"
+      },
+      "MOS": {
+        "close_px": 23.600000381469727,
+        "cost": 1271.499040435791,
+        "entry_date": "2026-08-28",
+        "entry_px": 23.950000762939453,
+        "fee_in": 2.149,
+        "last_px": 23.950000762939453,
+        "notional": 1269.350040435791,
+        "owner": "flatten_h5",
+        "peak_px": 23.950000762939453,
+        "reason": "baseline list, no extra gate; list flatten; wish-list (live io HOLD \u2014 not a ticket); ret5=+1.8; combo leftover $1279.64; owner flatten_h5",
+        "shares": 53,
+        "side": "long",
+        "ticker": "MOS"
+      },
+      "NCNO": {
+        "close_px": 22.989999771118164,
+        "cost": 1237.0489595642089,
+        "entry_date": "2026-08-28",
+        "entry_px": 23.299999237060547,
+        "fee_in": 2.149,
+        "last_px": 23.299999237060547,
+        "notional": 1234.899959564209,
+        "owner": "union_join_vol_green_h1",
+        "peak_px": 23.299999237060547,
+        "reason": "combo gate; gate join=good,vol=good,last_green=True; list ohlc_hot; \ud83d\udd35; ret5=+14.5; combo leftover $1250.00; owner union_join_vol_green_h1",
+        "shares": 53,
+        "side": "long",
+        "ticker": "NCNO"
+      },
+      "RRC": {
+        "close_px": 41.459999084472656,
+        "cost": 1254.2800503540038,
+        "entry_date": "2026-08-28",
+        "entry_px": 41.7400016784668,
+        "fee_in": 2.08,
+        "last_px": 41.7400016784668,
+        "notional": 1252.200050354004,
+        "owner": "flatten_h5",
+        "peak_px": 41.7400016784668,
+        "reason": "baseline list, no extra gate; list flatten; wish-list (live io HOLD \u2014 not a ticket); ret5=+2.4; combo leftover $1279.64; owner flatten_h5",
+        "shares": 30,
+        "side": "long",
+        "ticker": "RRC"
+      },
+      "SLI": {
+        "close_px": 2.549999952316284,
+        "cost": 1284.5133318431854,
+        "entry_date": "2026-08-28",
+        "entry_px": 2.680000066757202,
+        "fee_in": 6.1533,
+        "last_px": 2.680000066757202,
+        "notional": 1278.3600318431854,
+        "owner": "flatten_h5",
+        "peak_px": 2.680000066757202,
+        "reason": "baseline list, no extra gate; list flatten,ohlc_hot; wish-list (live io HOLD \u2014 not a ticket); ret5=+16.3; combo leftover $1279.64; owner flatten_h5",
+        "shares": 477,
+        "side": "long",
+        "ticker": "SLI"
+      },
+      "TH": {
+        "close_px": 18.549999237060547,
+        "cost": 1237.185,
+        "entry_date": "2026-08-28",
+        "entry_px": 19.0,
+        "fee_in": 2.185,
+        "last_px": 19.0,
+        "notional": 1235.0,
+        "owner": "union_join_vol_green_h1",
+        "peak_px": 19.0,
+        "reason": "combo gate; gate join=good,vol=good,last_green=True; list ohlc_hot; ret5=+7.5; combo leftover $1250.00; owner union_join_vol_green_h1",
+        "shares": 65,
+        "side": "long",
+        "ticker": "TH"
+      }
+    },
+    "yday_equity": 9772.96
+  }
+}

@@ -1,0 +1,191 @@
+{
+  "buys": [
+    "ARQQ",
+    "TEM",
+    "RIG",
+    "QTRX",
+    "VAL",
+    "KRMN",
+    "ADPT"
+  ],
+  "cash": 94.07,
+  "date": "2026-09-16",
+  "equity": 9934.43,
+  "fees": 20.3858,
+  "fills": [
+    {
+      "fees": 2.221,
+      "pnl": null,
+      "price": 18.21,
+      "shares": 77,
+      "side": "BUY",
+      "ticker": "ARQQ"
+    },
+    {
+      "fees": 2.05,
+      "pnl": null,
+      "price": 68.79,
+      "shares": 20,
+      "side": "BUY",
+      "ticker": "TEM"
+    },
+    {
+      "fees": 3.1089,
+      "pnl": null,
+      "price": 5.87,
+      "shares": 241,
+      "side": "BUY",
+      "ticker": "RIG"
+    },
+    {
+      "fees": 6.7209,
+      "pnl": null,
+      "price": 2.72,
+      "shares": 521,
+      "side": "BUY",
+      "ticker": "QTRX"
+    },
+    {
+      "fees": 2.038,
+      "pnl": null,
+      "price": 87.4,
+      "shares": 16,
+      "side": "BUY",
+      "ticker": "VAL"
+    },
+    {
+      "fees": 2.101,
+      "pnl": null,
+      "price": 38.01,
+      "shares": 37,
+      "side": "BUY",
+      "ticker": "KRMN"
+    },
+    {
+      "fees": 2.146,
+      "pnl": null,
+      "price": 27.09,
+      "shares": 52,
+      "side": "BUY",
+      "ticker": "ADPT"
+    }
+  ],
+  "holdings": [
+    "ADPT",
+    "ARQQ",
+    "KRMN",
+    "QTRX",
+    "RIG",
+    "TEM",
+    "VAL"
+  ],
+  "mean": -0.0326,
+  "n_trades_today": 7,
+  "recipe": "probable_probable_ok_h1",
+  "sells": [],
+  "state": {
+    "after": "2026-09-16",
+    "cash": 94.07,
+    "pos": {
+      "ADPT": {
+        "close_px": 27.670000076293945,
+        "cost": 1410.8260079345703,
+        "entry_date": "2026-09-16",
+        "entry_px": 27.09000015258789,
+        "fee_in": 2.146,
+        "last_px": 27.09000015258789,
+        "min_hold": 1,
+        "notional": 1408.6800079345703,
+        "peak_px": 27.09000015258789,
+        "reason": "combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer,ohlc_hot; \ud83d\udd35; \u26aa; ret5=+9.6; leftover $1419.67",
+        "shares": 52,
+        "ticker": "ADPT"
+      },
+      "ARQQ": {
+        "close_px": 19.010000228881836,
+        "cost": 1404.3909295043945,
+        "entry_date": "2026-09-16",
+        "entry_px": 18.209999084472656,
+        "fee_in": 2.221,
+        "last_px": 18.209999084472656,
+        "min_hold": 1,
+        "notional": 1402.1699295043945,
+        "peak_px": 18.209999084472656,
+        "reason": "combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer; \ud83d\udd35; ret5=-19.1; leftover $1419.67",
+        "shares": 77,
+        "ticker": "ARQQ"
+      },
+      "KRMN": {
+        "close_px": 36.939998626708984,
+        "cost": 1408.4709378967286,
+        "entry_date": "2026-09-16",
+        "entry_px": 38.0099983215332,
+        "fee_in": 2.101,
+        "last_px": 38.0099983215332,
+        "min_hold": 1,
+        "notional": 1406.3699378967285,
+        "peak_px": 38.0099983215332,
+        "reason": "combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer; \ud83d\udd35; ret5=-5.6; leftover $1419.67",
+        "shares": 37,
+        "ticker": "KRMN"
+      },
+      "QTRX": {
+        "close_px": 2.9100000858306885,
+        "cost": 1423.8409149059296,
+        "entry_date": "2026-09-16",
+        "entry_px": 2.7200000286102295,
+        "fee_in": 6.7209,
+        "last_px": 2.7200000286102295,
+        "min_hold": 1,
+        "notional": 1417.1200149059296,
+        "peak_px": 2.7200000286102295,
+        "reason": "combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer; ret5=-0.4; leftover $1419.67",
+        "shares": 521,
+        "ticker": "QTRX"
+      },
+      "RIG": {
+        "close_px": 5.539999961853027,
+        "cost": 1417.7788724197387,
+        "entry_date": "2026-09-16",
+        "entry_px": 5.869999885559082,
+        "fee_in": 3.1089,
+        "last_px": 5.869999885559082,
+        "min_hold": 1,
+        "notional": 1414.6699724197388,
+        "peak_px": 5.869999885559082,
+        "reason": "combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer; \ud83d\udd35; ret5=+3.1; leftover $1419.67",
+        "shares": 241,
+        "ticker": "RIG"
+      },
+      "TEM": {
+        "close_px": 69.97000122070312,
+        "cost": 1377.8500183105468,
+        "entry_date": "2026-09-16",
+        "entry_px": 68.79000091552734,
+        "fee_in": 2.05,
+        "last_px": 68.79000091552734,
+        "min_hold": 1,
+        "notional": 1375.8000183105469,
+        "peak_px": 68.79000091552734,
+        "reason": "combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer; \ud83d\udd35; \u26aa; ret5=+7.1; leftover $1419.67",
+        "shares": 20,
+        "ticker": "TEM"
+      },
+      "VAL": {
+        "close_px": 82.5199966430664,
+        "cost": 1400.4380244140625,
+        "entry_date": "2026-09-16",
+        "entry_px": 87.4000015258789,
+        "fee_in": 2.038,
+        "last_px": 87.4000015258789,
+        "min_hold": 1,
+        "notional": 1398.4000244140625,
+        "peak_px": 87.4000015258789,
+        "reason": "combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer; \ud83d\udd35; ret5=+3.2; leftover $1419.67",
+        "shares": 16,
+        "ticker": "VAL"
+      }
+    },
+    "yday_equity": 9934.43
+  }
+}

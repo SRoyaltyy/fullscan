@@ -1,0 +1,30 @@
+{
+  "buys": [],
+  "cash": 8363.1,
+  "date": "2026-09-14",
+  "equity": 8363.1,
+  "fees": 2.2438,
+  "fills": [
+    {
+      "fees": 2.2438,
+      "pnl": -1362.0,
+      "price": 141.42,
+      "shares": 59,
+      "side": "SELL",
+      "ticker": "ORCL"
+    }
+  ],
+  "holdings": [],
+  "mean": -5.9066,
+  "n_trades_today": 1,
+  "recipe": "union_news_g_cam71_h1",
+  "sells": [
+    "ORCL"
+  ],
+  "state": {
+    "after": "2026-09-14",
+    "cash": 8363.1,
+    "pos": {},
+    "yday_equity": 8363.1
+  }
+}

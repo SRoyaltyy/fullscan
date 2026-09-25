@@ -1,0 +1,133 @@
+{
+  "buys": [],
+  "cash": 14915.47,
+  "date": "2026-08-31",
+  "equity": 10144.16,
+  "fees": 0,
+  "fills": [],
+  "holdings": [
+    "ANF",
+    "BHVN",
+    "CAPR",
+    "LVWR",
+    "OPTU",
+    "SBET",
+    "SLI",
+    "VYX"
+  ],
+  "mean": 0.6185,
+  "n_trades_today": 0,
+  "recipe": "short_extended_h3",
+  "sells": [],
+  "state": {
+    "after": "2026-08-31",
+    "cash": 14915.47,
+    "pos": {
+      "ANF": {
+        "close_px": 143.0800018310547,
+        "cost": 2.0380076720355307,
+        "entry_date": "2026-08-28",
+        "entry_px": 146.07000732421875,
+        "fee_in": 2.0380076720355307,
+        "last_px": 148.02999877929688,
+        "notional": 584.280029296875,
+        "peak_px": 146.07000732421875,
+        "reason": "ret_5>15; gate ret_5_min=15.0; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+38.8; leftover $625.00",
+        "shares": 4,
+        "ticker": "ANF"
+      },
+      "BHVN": {
+        "close_px": 15.270000457763672,
+        "cost": 2.143967671355156,
+        "entry_date": "2026-08-28",
+        "entry_px": 15.880000114440918,
+        "fee_in": 2.143967671355156,
+        "last_px": 15.460000038146973,
+        "notional": 619.3200044631958,
+        "peak_px": 15.460000038146973,
+        "reason": "ret_5>15; gate ret_5_min=15.0; list yday_gainer,yday_mover; ret5=+19.4; leftover $625.00",
+        "shares": 39,
+        "ticker": "BHVN"
+      },
+      "CAPR": {
+        "close_px": 9.90999984741211,
+        "cost": 2.219660821115154,
+        "entry_date": "2026-08-28",
+        "entry_px": 9.729999542236328,
+        "fee_in": 2.219660821115154,
+        "last_px": 9.5,
+        "notional": 622.719970703125,
+        "peak_px": 9.5,
+        "reason": "ret_5>15; gate ret_5_min=15.0; list yday_gainer,yday_mover; ret5=+47.1; leftover $625.00",
+        "shares": 64,
+        "ticker": "CAPR"
+      },
+      "LVWR": {
+        "close_px": 1.2200000286102295,
+        "cost": 5.8936989039336165,
+        "entry_date": "2026-08-28",
+        "entry_px": 1.3899999856948853,
+        "fee_in": 5.8936989039336165,
+        "last_px": 1.2999999523162842,
+        "notional": 624.1099935770035,
+        "peak_px": 1.2999999523162842,
+        "reason": "ret_5>15; gate ret_5_min=15.0; list yday_gainer,yday_mover; ret5=+20.4; leftover $625.00",
+        "shares": 449,
+        "ticker": "LVWR"
+      },
+      "OPTU": {
+        "close_px": 0.9729999899864197,
+        "cost": 8.193323287671232,
+        "entry_date": "2026-08-28",
+        "entry_px": 1.0,
+        "fee_in": 8.193323287671232,
+        "last_px": 1.059999942779541,
+        "notional": 625.0,
+        "peak_px": 1.0,
+        "reason": "ret_5>15; gate ret_5_min=15.0; list yday_gainer; ret5=+16.8; leftover $625.00",
+        "shares": 625,
+        "ticker": "OPTU"
+      },
+      "SBET": {
+        "close_px": 8.630000114440918,
+        "cost": 2.245063012946142,
+        "entry_date": "2026-08-28",
+        "entry_px": 8.649999618530273,
+        "fee_in": 2.245063012946142,
+        "last_px": 8.239999771118164,
+        "notional": 622.7999725341797,
+        "peak_px": 8.239999771118164,
+        "reason": "ret_5>15; gate ret_5_min=15.0; list ohlc_hot; ret5=+17.0; leftover $625.00",
+        "shares": 72,
+        "ticker": "SBET"
+      },
+      "SLI": {
+        "close_px": 2.6700000762939453,
+        "cost": 3.071507945631628,
+        "entry_date": "2026-08-28",
+        "entry_px": 2.680000066757202,
+        "fee_in": 3.071507945631628,
+        "last_px": 2.5799999237060547,
+        "notional": 624.4400155544281,
+        "peak_px": 2.5799999237060547,
+        "reason": "ret_5>15; gate ret_5_min=15.0; list flatten,ohlc_hot; ret5=+16.3; leftover $625.00",
+        "shares": 233,
+        "ticker": "SLI"
+      },
+      "VYX": {
+        "close_px": 8.380000114440918,
+        "cost": 2.2323093152816984,
+        "entry_date": "2026-08-28",
+        "entry_px": 9.130000114440918,
+        "fee_in": 2.2323093152816984,
+        "last_px": 8.65999984741211,
+        "notional": 620.8400077819824,
+        "peak_px": 8.65999984741211,
+        "reason": "ret_5>15; gate ret_5_min=15.0; list yday_gainer; \ud83d\udd35; ret5=+20.0; leftover $625.00",
+        "shares": 68,
+        "ticker": "VYX"
+      }
+    },
+    "yday_equity": 10144.16
+  }
+}

@@ -1,0 +1,173 @@
+{
+  "buys": [
+    "CAPR",
+    "MRNA",
+    "ANF",
+    "SNPS",
+    "SIMO",
+    "FIG"
+  ],
+  "cash": 12104.89,
+  "date": "2026-08-28",
+  "equity": 10142.45,
+  "fees": 12.6686,
+  "fills": [
+    {
+      "fees": 2.221,
+      "pnl": null,
+      "price": 9.73,
+      "shares": 77,
+      "side": "BUY",
+      "ticker": "CAPR"
+    },
+    {
+      "fees": 2.005,
+      "pnl": null,
+      "price": 137.19,
+      "shares": 5,
+      "side": "BUY",
+      "ticker": "MRNA"
+    },
+    {
+      "fees": 2.005,
+      "pnl": null,
+      "price": 146.07,
+      "shares": 5,
+      "side": "BUY",
+      "ticker": "ANF"
+    },
+    {
+      "fees": 1.993,
+      "pnl": null,
+      "price": 461.85,
+      "shares": 1,
+      "side": "BUY",
+      "ticker": "SNPS"
+    },
+    {
+      "fees": 2.1073961657380402,
+      "pnl": null,
+      "price": 252.24,
+      "shares": 9,
+      "side": "SHORT",
+      "ticker": "SIMO"
+    },
+    {
+      "fees": 2.3372016445212167,
+      "pnl": null,
+      "price": 30.18,
+      "shares": 82,
+      "side": "SHORT",
+      "ticker": "FIG"
+    }
+  ],
+  "holdings": [
+    "ANF",
+    "CAPR",
+    "FIG",
+    "MRNA",
+    "SIMO",
+    "SNPS"
+  ],
+  "mean": 1.4245,
+  "n_trades_today": 6,
+  "recipe": "combo_sh_7030_shared",
+  "sells": [],
+  "state": {
+    "after": "2026-08-28",
+    "cash": 12104.89,
+    "pos": {
+      "ANF": {
+        "close_px": 148.4199981689453,
+        "cost": 732.3550366210937,
+        "entry_date": "2026-08-28",
+        "entry_px": 146.07000732421875,
+        "fee_in": 2.005,
+        "last_px": 146.07000732421875,
+        "notional": 730.3500366210938,
+        "owner": "union_hot_n4_h1",
+        "peak_px": 146.07000732421875,
+        "reason": "top 4 by hot; rank hot_score; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+38.8; combo leftover $750.00; owner union_hot_n4_h1",
+        "shares": 5,
+        "side": "long",
+        "ticker": "ANF"
+      },
+      "CAPR": {
+        "close_px": 9.59000015258789,
+        "cost": 751.4309647521973,
+        "entry_date": "2026-08-28",
+        "entry_px": 9.729999542236328,
+        "fee_in": 2.221,
+        "last_px": 9.729999542236328,
+        "notional": 749.2099647521973,
+        "owner": "union_hot_n4_h1",
+        "peak_px": 9.729999542236328,
+        "reason": "top 4 by hot; rank hot_score; list yday_gainer,yday_mover; ret5=+47.1; combo leftover $750.00; owner union_hot_n4_h1",
+        "shares": 77,
+        "side": "long",
+        "ticker": "CAPR"
+      },
+      "FIG": {
+        "close_px": 28.81999969482422,
+        "cost": 2.3372016445212167,
+        "entry_date": "2026-08-28",
+        "entry_px": 30.18000030517578,
+        "fee_in": 2.3372016445212167,
+        "last_px": 30.18000030517578,
+        "notional": 2474.760025024414,
+        "owner": "short_news_r_h3",
+        "peak_px": 30.18000030517578,
+        "reason": "news\ud83d\udd34; gate news=bad; list ohlc_hot; ret5=+12.1; combo leftover $2497.94; owner short_news_r_h3",
+        "shares": 82,
+        "side": "short",
+        "ticker": "FIG"
+      },
+      "MRNA": {
+        "close_px": 137.99000549316406,
+        "cost": 687.9550122070312,
+        "entry_date": "2026-08-28",
+        "entry_px": 137.19000244140625,
+        "fee_in": 2.005,
+        "last_px": 137.19000244140625,
+        "notional": 685.9500122070312,
+        "owner": "union_hot_n4_h1",
+        "peak_px": 137.19000244140625,
+        "reason": "top 4 by hot; rank hot_score; list ohlc_hot; ret5=+7.1; combo leftover $750.00; owner union_hot_n4_h1",
+        "shares": 5,
+        "side": "long",
+        "ticker": "MRNA"
+      },
+      "SIMO": {
+        "close_px": 245.80999755859375,
+        "cost": 2.1073961657380402,
+        "entry_date": "2026-08-28",
+        "entry_px": 252.24000549316406,
+        "fee_in": 2.1073961657380402,
+        "last_px": 252.24000549316406,
+        "notional": 2270.1600494384766,
+        "owner": "short_news_r_h3",
+        "peak_px": 252.24000549316406,
+        "reason": "news\ud83d\udd34; gate news=bad; list probable,yday_gainer; \u26aa; ret5=+2.2; combo leftover $2497.94; owner short_news_r_h3",
+        "shares": 9,
+        "side": "short",
+        "ticker": "SIMO"
+      },
+      "SNPS": {
+        "close_px": 442.6099853515625,
+        "cost": 463.8430061035156,
+        "entry_date": "2026-08-28",
+        "entry_px": 461.8500061035156,
+        "fee_in": 1.993,
+        "last_px": 461.8500061035156,
+        "notional": 461.8500061035156,
+        "owner": "union_hot_n4_h1",
+        "peak_px": 461.8500061035156,
+        "reason": "top 4 by hot; rank hot_score; list ohlc_hot; ret5=+16.8; combo leftover $750.00; owner union_hot_n4_h1",
+        "shares": 1,
+        "side": "long",
+        "ticker": "SNPS"
+      }
+    },
+    "yday_equity": 10142.45
+  }
+}

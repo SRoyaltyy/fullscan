@@ -1,0 +1,167 @@
+{
+  "buys": [],
+  "cash": 7891.33,
+  "date": "2026-09-24",
+  "equity": 8105.25,
+  "fees": 13.9269,
+  "fills": [
+    {
+      "fees": 2.0905,
+      "pnl": 123.54,
+      "price": 163.95,
+      "shares": 21,
+      "side": "SELL",
+      "ticker": "A"
+    },
+    {
+      "fees": 2.2374,
+      "pnl": -95.58,
+      "price": 12.26,
+      "shares": 75,
+      "side": "SELL",
+      "ticker": "BTDR"
+    },
+    {
+      "fees": 3.3026,
+      "pnl": -157.75,
+      "price": 3.4,
+      "shares": 252,
+      "side": "SELL",
+      "ticker": "CYPH"
+    },
+    {
+      "fees": 2.043,
+      "pnl": -16.72,
+      "price": 87.68,
+      "shares": 11,
+      "side": "SELL",
+      "ticker": "DXCM"
+    },
+    {
+      "fees": 2.016,
+      "pnl": -27.33,
+      "price": 374.54,
+      "shares": 2,
+      "side": "SELL",
+      "ticker": "HUM"
+    },
+    {
+      "fees": 2.2374,
+      "pnl": -158.2,
+      "price": 11.42,
+      "shares": 75,
+      "side": "SELL",
+      "ticker": "MGTX"
+    }
+  ],
+  "holdings": [
+    "ADMA",
+    "DEFT",
+    "DLO",
+    "FJET",
+    "PACS",
+    "PGEN"
+  ],
+  "mean": -1.5168,
+  "n_trades_today": 6,
+  "recipe": "union_h3_topheavy",
+  "sells": [
+    "A",
+    "BTDR",
+    "CYPH",
+    "DXCM",
+    "HUM",
+    "MGTX"
+  ],
+  "state": {
+    "after": "2026-09-24",
+    "cash": 7891.33,
+    "pos": {
+      "ADMA": {
+        "close_px": 9.520000457763672,
+        "cost": 9.9111004196167,
+        "entry_date": "2026-09-23",
+        "entry_px": 9.8100004196167,
+        "fee_in": 0.1011,
+        "last_px": 9.670000076293945,
+        "min_hold": 3,
+        "notional": 9.8100004196167,
+        "peak_px": 9.8100004196167,
+        "reason": "40% to #1, rest split; list flatten; \ud83d\udd35; \u26aa; ret5=+13.9; leftover $17.03",
+        "shares": 1,
+        "ticker": "ADMA"
+      },
+      "DEFT": {
+        "close_px": 0.5320000052452087,
+        "cost": 28.7472,
+        "entry_date": "2026-09-22",
+        "entry_px": 0.59,
+        "fee_in": 0.4272,
+        "last_px": 0.5199999809265137,
+        "min_hold": 3,
+        "notional": 28.32,
+        "peak_px": 0.59,
+        "reason": "40% to #1, rest split; list probable,yday_gainer,yday_mover; ret5=-1.7; leftover $28.53",
+        "shares": 48,
+        "ticker": "DEFT"
+      },
+      "DLO": {
+        "close_px": 13.880000114440918,
+        "cost": 14.648,
+        "entry_date": "2026-09-22",
+        "entry_px": 14.5,
+        "fee_in": 0.148,
+        "last_px": 14.0600004196167,
+        "min_hold": 3,
+        "notional": 14.5,
+        "peak_px": 14.5,
+        "reason": "40% to #1, rest split; list flatten; ret5=-3.6; leftover $28.53",
+        "shares": 1,
+        "ticker": "DLO"
+      },
+      "FJET": {
+        "close_px": 1.7999999523162842,
+        "cost": 28.6048,
+        "entry_date": "2026-09-22",
+        "entry_px": 2.02,
+        "fee_in": 0.3248,
+        "last_px": 1.9199999570846558,
+        "min_hold": 3,
+        "notional": 28.28,
+        "peak_px": 2.02,
+        "reason": "40% to #1, rest split; list probable,yday_gainer,yday_mover; ret5=+0.5; leftover $28.53",
+        "shares": 14,
+        "ticker": "FJET"
+      },
+      "PACS": {
+        "close_px": 41.459999084472656,
+        "cost": 127.0569,
+        "entry_date": "2026-09-22",
+        "entry_px": 41.93,
+        "fee_in": 1.2669,
+        "last_px": 41.099998474121094,
+        "min_hold": 3,
+        "notional": 125.78999999999999,
+        "peak_px": 41.93,
+        "reason": "40% to #1, rest split; list flatten; ret5=-5.6; leftover $133.15",
+        "shares": 3,
+        "ticker": "PACS"
+      },
+      "PGEN": {
+        "close_px": 7.699999809265137,
+        "cost": 16.064999618530273,
+        "entry_date": "2026-09-23",
+        "entry_px": 7.949999809265137,
+        "fee_in": 0.165,
+        "last_px": 7.369999885559082,
+        "min_hold": 3,
+        "notional": 15.899999618530273,
+        "peak_px": 7.949999809265137,
+        "reason": "40% to #1, rest split; list flatten; \ud83d\udd35; \u26aa; ret5=+12.7; leftover $17.03",
+        "shares": 2,
+        "ticker": "PGEN"
+      }
+    },
+    "yday_equity": 8105.25
+  }
+}

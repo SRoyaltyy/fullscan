@@ -1,0 +1,183 @@
+{
+  "buys": [
+    "GRAL",
+    "MRNA",
+    "IVVD",
+    "DGXX"
+  ],
+  "cash": 92.7,
+  "date": "2026-09-22",
+  "equity": 9246.46,
+  "fees": 61.6185,
+  "fills": [
+    {
+      "fees": 8.0851,
+      "pnl": -53.14,
+      "price": 2.09,
+      "shares": 618,
+      "side": "SELL",
+      "ticker": "AMTX"
+    },
+    {
+      "fees": 2.1636,
+      "pnl": -4.31,
+      "price": 25.95,
+      "shares": 51,
+      "side": "SELL",
+      "ticker": "GLXY"
+    },
+    {
+      "fees": 2.019,
+      "pnl": 23.31,
+      "price": 403.0,
+      "shares": 3,
+      "side": "SELL",
+      "ticker": "ISRG"
+    },
+    {
+      "fees": 2.3008,
+      "pnl": -81.53,
+      "price": 13.13,
+      "shares": 95,
+      "side": "SELL",
+      "ticker": "MARA"
+    },
+    {
+      "fees": 2.8982,
+      "pnl": -7.96,
+      "price": 5.99,
+      "shares": 221,
+      "side": "SELL",
+      "ticker": "SION"
+    },
+    {
+      "fees": 2.028,
+      "pnl": -101.12,
+      "price": 174.12,
+      "shares": 6,
+      "side": "SELL",
+      "ticker": "SMTC"
+    },
+    {
+      "fees": 2.025,
+      "pnl": 49.92,
+      "price": 241.04,
+      "shares": 5,
+      "side": "SELL",
+      "ticker": "VICR"
+    },
+    {
+      "fees": 2.053,
+      "pnl": null,
+      "price": 106.75,
+      "shares": 21,
+      "side": "BUY",
+      "ticker": "GRAL"
+    },
+    {
+      "fees": 2.029,
+      "pnl": null,
+      "price": 168.5,
+      "shares": 13,
+      "side": "BUY",
+      "ticker": "MRNA"
+    },
+    {
+      "fees": 29.1411,
+      "pnl": null,
+      "price": 1.01,
+      "shares": 2259,
+      "side": "BUY",
+      "ticker": "IVVD"
+    },
+    {
+      "fees": 6.8757,
+      "pnl": null,
+      "price": 4.28,
+      "shares": 533,
+      "side": "BUY",
+      "ticker": "DGXX"
+    }
+  ],
+  "holdings": [
+    "DGXX",
+    "GRAL",
+    "IVVD",
+    "MRNA"
+  ],
+  "mean": 1.5901,
+  "n_trades_today": 11,
+  "recipe": "union_news_g_cond_h1",
+  "sells": [
+    "AMTX",
+    "GLXY",
+    "ISRG",
+    "MARA",
+    "SION",
+    "SMTC",
+    "VICR"
+  ],
+  "state": {
+    "after": "2026-09-22",
+    "cash": 92.7,
+    "pos": {
+      "DGXX": {
+        "close_px": 4.36,
+        "cost": 2288.1157000000003,
+        "entry_date": "2026-09-22",
+        "entry_px": 4.28,
+        "fee_in": 6.8757,
+        "last_px": 4.28,
+        "min_hold": 1,
+        "notional": 2281.2400000000002,
+        "peak_px": 4.28,
+        "reason": "merged news\ud83d\udfe2, rank +G\u2212R; gate news=good; rank cond; list ohlc_hot; ret5=+16.9; leftover $2281.97",
+        "shares": 533,
+        "ticker": "DGXX"
+      },
+      "GRAL": {
+        "close_px": 108.52,
+        "cost": 2243.803,
+        "entry_date": "2026-09-22",
+        "entry_px": 106.75,
+        "fee_in": 2.053,
+        "last_px": 106.75,
+        "min_hold": 1,
+        "notional": 2241.75,
+        "peak_px": 106.75,
+        "reason": "merged news\ud83d\udfe2, rank +G\u2212R; gate news=good; rank cond; list yday_gainer,yday_mover; ret5=+42.9; leftover $2281.97",
+        "shares": 21,
+        "ticker": "GRAL"
+      },
+      "IVVD": {
+        "close_px": 0.9639999866485596,
+        "cost": 2310.731078456497,
+        "entry_date": "2026-09-22",
+        "entry_px": 1.0099999904632568,
+        "fee_in": 29.1411,
+        "last_px": 1.0099999904632568,
+        "min_hold": 1,
+        "notional": 2281.589978456497,
+        "peak_px": 1.0099999904632568,
+        "reason": "merged news\ud83d\udfe2, rank +G\u2212R; gate news=good; rank cond; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+14.3; leftover $2281.97",
+        "shares": 2259,
+        "ticker": "IVVD"
+      },
+      "MRNA": {
+        "close_px": 182.55999755859375,
+        "cost": 2192.529,
+        "entry_date": "2026-09-22",
+        "entry_px": 168.5,
+        "fee_in": 2.029,
+        "last_px": 168.5,
+        "min_hold": 1,
+        "notional": 2190.5,
+        "peak_px": 168.5,
+        "reason": "merged news\ud83d\udfe2, rank +G\u2212R; gate news=good; rank cond; list ohlc_hot; ret5=+17.9; leftover $2281.97",
+        "shares": 13,
+        "ticker": "MRNA"
+      }
+    },
+    "yday_equity": 9246.46
+  }
+}

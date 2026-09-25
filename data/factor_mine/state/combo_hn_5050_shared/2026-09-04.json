@@ -1,0 +1,273 @@
+{
+  "buys": [
+    "GPRO",
+    "ASST",
+    "DFDV",
+    "HOOD",
+    "CRM",
+    "BAK",
+    "MSTR",
+    "MRX",
+    "BE",
+    "FRNM"
+  ],
+  "cash": 324.42,
+  "date": "2026-09-04",
+  "equity": 10111.32,
+  "fees": 33.0964,
+  "fills": [
+    {
+      "fees": 10.6425,
+      "pnl": null,
+      "price": 1.48,
+      "shares": 825,
+      "side": "BUY",
+      "ticker": "GPRO"
+    },
+    {
+      "fees": 2.134,
+      "pnl": null,
+      "price": 25.18,
+      "shares": 48,
+      "side": "BUY",
+      "ticker": "ASST"
+    },
+    {
+      "fees": 2.709,
+      "pnl": null,
+      "price": 5.79,
+      "shares": 210,
+      "side": "BUY",
+      "ticker": "DFDV"
+    },
+    {
+      "fees": 2.02,
+      "pnl": null,
+      "price": 120.475,
+      "shares": 10,
+      "side": "BUY",
+      "ticker": "HOOD"
+    },
+    {
+      "fees": 1.999,
+      "pnl": null,
+      "price": 263.36,
+      "shares": 3,
+      "side": "BUY",
+      "ticker": "CRM"
+    },
+    {
+      "fees": 5.4309,
+      "pnl": null,
+      "price": 1.94,
+      "shares": 421,
+      "side": "BUY",
+      "ticker": "BAK"
+    },
+    {
+      "fees": 2.005,
+      "pnl": null,
+      "price": 137.35,
+      "shares": 5,
+      "side": "BUY",
+      "ticker": "MSTR"
+    },
+    {
+      "fees": 2.02,
+      "pnl": null,
+      "price": 75.65,
+      "shares": 10,
+      "side": "BUY",
+      "ticker": "MRX"
+    },
+    {
+      "fees": 1.999,
+      "pnl": null,
+      "price": 236.82,
+      "shares": 3,
+      "side": "BUY",
+      "ticker": "BE"
+    },
+    {
+      "fees": 2.137,
+      "pnl": null,
+      "price": 16.4,
+      "shares": 49,
+      "side": "BUY",
+      "ticker": "FRNM"
+    }
+  ],
+  "holdings": [
+    "ASST",
+    "BAK",
+    "BE",
+    "CRM",
+    "DFDV",
+    "FRNM",
+    "GPRO",
+    "HOOD",
+    "MRX",
+    "MSTR"
+  ],
+  "mean": 3.473,
+  "n_trades_today": 10,
+  "recipe": "combo_hn_5050_shared",
+  "sells": [],
+  "state": {
+    "after": "2026-09-04",
+    "cash": 324.42,
+    "pos": {
+      "ASST": {
+        "close_px": 27.139999389648438,
+        "cost": 1210.7740146484375,
+        "entry_date": "2026-09-04",
+        "entry_px": 25.18000030517578,
+        "fee_in": 2.134,
+        "last_px": 25.18000030517578,
+        "notional": 1208.6400146484375,
+        "owner": "union_hot_n4_h1",
+        "peak_px": 25.18000030517578,
+        "reason": "top 4 by hot; rank hot_score; list ohlc_hot; \ud83d\udd35; ret5=+16.0; combo leftover $1221.49; owner union_hot_n4_h1",
+        "shares": 48,
+        "side": "long",
+        "ticker": "ASST"
+      },
+      "BAK": {
+        "close_px": 1.8899999856948853,
+        "cost": 822.1709240898132,
+        "entry_date": "2026-09-04",
+        "entry_px": 1.940000057220459,
+        "fee_in": 5.4309,
+        "last_px": 1.940000057220459,
+        "notional": 816.7400240898132,
+        "owner": "union_news_g_h1",
+        "peak_px": 1.940000057220459,
+        "reason": "union \u2229 news_g, no \ud83d\udea8; gate news=good; list yday_gainer,yday_mover; ret5=+18.3; combo leftover $817.36; owner union_news_g_h1",
+        "shares": 421,
+        "side": "long",
+        "ticker": "BAK"
+      },
+      "BE": {
+        "close_px": 252.8699951171875,
+        "cost": 712.4590219726563,
+        "entry_date": "2026-09-04",
+        "entry_px": 236.82000732421875,
+        "fee_in": 1.999,
+        "last_px": 236.82000732421875,
+        "notional": 710.4600219726562,
+        "owner": "union_news_g_h1",
+        "peak_px": 236.82000732421875,
+        "reason": "union \u2229 news_g, no \ud83d\udea8; gate news=good; list ohlc_hot; ret5=+8.1; combo leftover $817.36; owner union_news_g_h1",
+        "shares": 3,
+        "side": "long",
+        "ticker": "BE"
+      },
+      "CRM": {
+        "close_px": 259.2300109863281,
+        "cost": 792.0789560546875,
+        "entry_date": "2026-09-04",
+        "entry_px": 263.3599853515625,
+        "fee_in": 1.999,
+        "last_px": 263.3599853515625,
+        "notional": 790.0799560546875,
+        "owner": "union_news_g_h1",
+        "peak_px": 263.3599853515625,
+        "reason": "union \u2229 news_g, no \ud83d\udea8; gate news=good; list flatten,mover_buy; \ud83d\udd35; \u26aa; ret5=+4.9; combo leftover $817.36; owner union_news_g_h1",
+        "shares": 3,
+        "side": "long",
+        "ticker": "CRM"
+      },
+      "DFDV": {
+        "close_px": 5.869999885559082,
+        "cost": 1218.6089919891358,
+        "entry_date": "2026-09-04",
+        "entry_px": 5.789999961853027,
+        "fee_in": 2.709,
+        "last_px": 5.789999961853027,
+        "notional": 1215.8999919891357,
+        "owner": "union_hot_n4_h1",
+        "peak_px": 5.789999961853027,
+        "reason": "top 4 by hot; rank hot_score; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+15.2; combo leftover $1221.49; owner union_hot_n4_h1",
+        "shares": 210,
+        "side": "long",
+        "ticker": "DFDV"
+      },
+      "FRNM": {
+        "close_px": 16.309999465942383,
+        "cost": 805.7369813079833,
+        "entry_date": "2026-09-04",
+        "entry_px": 16.399999618530273,
+        "fee_in": 2.137,
+        "last_px": 16.399999618530273,
+        "notional": 803.5999813079834,
+        "owner": "union_news_g_h1",
+        "peak_px": 16.399999618530273,
+        "reason": "union \u2229 news_g, no \ud83d\udea8; gate news=good; list mover_buy; \ud83d\udd35; \u26aa; ret5=+21.2; combo leftover $817.36; owner union_news_g_h1",
+        "shares": 49,
+        "side": "long",
+        "ticker": "FRNM"
+      },
+      "GPRO": {
+        "close_px": 1.7000000476837158,
+        "cost": 1231.6425157356261,
+        "entry_date": "2026-09-04",
+        "entry_px": 1.4800000190734863,
+        "fee_in": 10.6425,
+        "last_px": 1.4800000190734863,
+        "notional": 1221.0000157356262,
+        "owner": "union_hot_n4_h1",
+        "peak_px": 1.4800000190734863,
+        "reason": "top 4 by hot; rank hot_score; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+129.8; combo leftover $1221.49; owner union_hot_n4_h1",
+        "shares": 825,
+        "side": "long",
+        "ticker": "GPRO"
+      },
+      "HOOD": {
+        "close_px": 122.11000061035156,
+        "cost": 1206.769984741211,
+        "entry_date": "2026-09-04",
+        "entry_px": 120.4749984741211,
+        "fee_in": 2.02,
+        "last_px": 120.4749984741211,
+        "notional": 1204.749984741211,
+        "owner": "union_hot_n4_h1",
+        "peak_px": 120.4749984741211,
+        "reason": "top 4 by hot; rank hot_score; list ohlc_hot; \ud83d\udd35; ret5=+13.6; combo leftover $1221.49; owner union_hot_n4_h1",
+        "shares": 10,
+        "side": "long",
+        "ticker": "HOOD"
+      },
+      "MRX": {
+        "close_px": 78.2699966430664,
+        "cost": 758.520015258789,
+        "entry_date": "2026-09-04",
+        "entry_px": 75.6500015258789,
+        "fee_in": 2.02,
+        "last_px": 75.6500015258789,
+        "notional": 756.5000152587891,
+        "owner": "union_news_g_h1",
+        "peak_px": 75.6500015258789,
+        "reason": "union \u2229 news_g, no \ud83d\udea8; gate news=good; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+6.0; combo leftover $817.36; owner union_news_g_h1",
+        "shares": 10,
+        "side": "long",
+        "ticker": "MRX"
+      },
+      "MSTR": {
+        "close_px": 142.8000030517578,
+        "cost": 688.7550305175781,
+        "entry_date": "2026-09-04",
+        "entry_px": 137.35000610351562,
+        "fee_in": 2.005,
+        "last_px": 137.35000610351562,
+        "notional": 686.7500305175781,
+        "owner": "union_news_g_h1",
+        "peak_px": 137.35000610351562,
+        "reason": "union \u2229 news_g, no \ud83d\udea8; gate news=good; list ohlc_hot; ret5=+5.4; combo leftover $817.36; owner union_news_g_h1",
+        "shares": 5,
+        "side": "long",
+        "ticker": "MSTR"
+      }
+    },
+    "yday_equity": 10111.32
+  }
+}

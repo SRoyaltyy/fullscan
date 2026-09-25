@@ -1,0 +1,119 @@
+{
+  "buys": [],
+  "cash": 15177.23,
+  "date": "2026-09-15",
+  "equity": 10103.2,
+  "fees": 0,
+  "fills": [],
+  "holdings": [
+    "AXGN",
+    "BHVN",
+    "CPRT",
+    "LPTH",
+    "REAX",
+    "TGB",
+    "TYRA"
+  ],
+  "mean": -0.047,
+  "n_trades_today": 0,
+  "recipe": "short_clk_neg_weak_fail_opp_h3",
+  "sells": [],
+  "state": {
+    "after": "2026-09-15",
+    "cash": 15177.23,
+    "pos": {
+      "AXGN": {
+        "close_px": 44.970001220703125,
+        "cost": 2.080785205266247,
+        "entry_date": "2026-09-11",
+        "entry_px": 42.47999954223633,
+        "fee_in": 2.080785205266247,
+        "last_px": 43.849998474121094,
+        "notional": 722.1599922180176,
+        "peak_px": 41.54999923706055,
+        "reason": "Clock-B #4 \u2229 Theme Radar T\u22121 oppset; gate clk_neg_weak_fail=True,oppset=True; rank opp_rvol; list yday_mover; ret5=-11.1; leftover $726.67",
+        "shares": 17,
+        "ticker": "AXGN"
+      },
+      "BHVN": {
+        "close_px": 12.34000015258789,
+        "cost": 2.19463424617297,
+        "entry_date": "2026-09-11",
+        "entry_px": 13.029999732971191,
+        "fee_in": 2.19463424617297,
+        "last_px": 12.569999694824219,
+        "notional": 716.6499853134155,
+        "peak_px": 12.520000457763672,
+        "reason": "Clock-B #4 \u2229 Theme Radar T\u22121 oppset; gate clk_neg_weak_fail=True,oppset=True; rank opp_rvol; list yday_mover; ret5=-19.4; leftover $726.67",
+        "shares": 55,
+        "ticker": "BHVN"
+      },
+      "CPRT": {
+        "close_px": 31.040000915527344,
+        "cost": 2.0952936976184584,
+        "entry_date": "2026-09-11",
+        "entry_px": 32.0099983215332,
+        "fee_in": 2.0952936976184584,
+        "last_px": 31.549999237060547,
+        "notional": 704.2199630737305,
+        "peak_px": 30.6299991607666,
+        "reason": "Clock-B #4 \u2229 Theme Radar T\u22121 oppset; gate clk_neg_weak_fail=True,oppset=True; rank opp_rvol; list earn_react; \ud83d\udd35; ret5=-8.4; leftover $726.67",
+        "shares": 22,
+        "ticker": "CPRT"
+      },
+      "LPTH": {
+        "close_px": 9.289999961853027,
+        "cost": 2.263566849073645,
+        "entry_date": "2026-09-11",
+        "entry_px": 9.369999885559082,
+        "fee_in": 2.263566849073645,
+        "last_px": 9.140000343322754,
+        "notional": 721.4899911880493,
+        "peak_px": 8.850000381469727,
+        "reason": "Clock-B #4 \u2229 Theme Radar T\u22121 oppset; gate clk_neg_weak_fail=True,oppset=True; rank opp_rvol; list earn_react; \ud83d\udd35; ret5=+0.4; leftover $726.67",
+        "shares": 77,
+        "ticker": "LPTH"
+      },
+      "REAX": {
+        "close_px": 19.270000457763672,
+        "cost": 2.1468312323060754,
+        "entry_date": "2026-09-11",
+        "entry_px": 18.559999465942383,
+        "fee_in": 2.1468312323060754,
+        "last_px": 19.700000762939453,
+        "notional": 723.8399791717529,
+        "peak_px": 18.559999465942383,
+        "reason": "Clock-B #4 \u2229 Theme Radar T\u22121 oppset; gate clk_neg_weak_fail=True,oppset=True; rank opp_rvol; list yday_mover; ret5=+0.7; leftover $726.67",
+        "shares": 39,
+        "ticker": "REAX"
+      },
+      "TGB": {
+        "close_px": 7.980000019073486,
+        "cost": 2.304675343594486,
+        "entry_date": "2026-09-11",
+        "entry_px": 8.020000457763672,
+        "fee_in": 2.304675343594486,
+        "last_px": 7.900000095367432,
+        "notional": 721.8000411987305,
+        "peak_px": 7.690000057220459,
+        "reason": "Clock-B #4 \u2229 Theme Radar T\u22121 oppset; gate clk_neg_weak_fail=True,oppset=True; rank opp_rvol; list yday_mover; ret5=-4.5; leftover $726.67",
+        "shares": 90,
+        "ticker": "TGB"
+      },
+      "TYRA": {
+        "close_px": 25.43000030517578,
+        "cost": 2.1194219171184385,
+        "entry_date": "2026-09-11",
+        "entry_px": 23.6299991607666,
+        "fee_in": 2.1194219171184385,
+        "last_px": 24.709999084472656,
+        "notional": 708.899974822998,
+        "peak_px": 23.200000762939453,
+        "reason": "Clock-B #4 \u2229 Theme Radar T\u22121 oppset; gate clk_neg_weak_fail=True,oppset=True; rank opp_rvol; list yday_gainer; ret5=-5.3; leftover $726.67",
+        "shares": 30,
+        "ticker": "TYRA"
+      }
+    },
+    "yday_equity": 10103.2
+  }
+}

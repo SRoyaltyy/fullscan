@@ -1,0 +1,93 @@
+{
+  "buys": [],
+  "cash": 9975.6,
+  "date": "2026-09-02",
+  "equity": 9975.6,
+  "fees": 32.8721,
+  "fills": [
+    {
+      "fees": 2.107,
+      "pnl": -7.76,
+      "price": 15.97,
+      "shares": 39,
+      "side": "COVER",
+      "ticker": "BHVN"
+    },
+    {
+      "fees": 2.107,
+      "pnl": -3.47,
+      "price": 15.75,
+      "shares": 39,
+      "side": "COVER",
+      "ticker": "GENB"
+    },
+    {
+      "fees": 7.7063,
+      "pnl": 25.98,
+      "price": 0.933,
+      "shares": 625,
+      "side": "COVER",
+      "ticker": "OPTU"
+    },
+    {
+      "fees": 2.554,
+      "pnl": -29.61,
+      "price": 3.45,
+      "shares": 188,
+      "side": "COVER",
+      "ticker": "PYXS"
+    },
+    {
+      "fees": 2.194,
+      "pnl": 47.93,
+      "price": 8.38,
+      "shares": 68,
+      "side": "COVER",
+      "ticker": "QFIN"
+    },
+    {
+      "fees": 11.8128,
+      "pnl": -66.31,
+      "price": 0.39,
+      "shares": 1712,
+      "side": "COVER",
+      "ticker": "SAFX"
+    },
+    {
+      "fees": 2.338,
+      "pnl": 35.88,
+      "price": 5.03,
+      "shares": 116,
+      "side": "COVER",
+      "ticker": "XPOF"
+    },
+    {
+      "fees": 2.053,
+      "pnl": -27.03,
+      "price": 30.0,
+      "shares": 21,
+      "side": "COVER",
+      "ticker": "ZYME"
+    }
+  ],
+  "holdings": [],
+  "mean": -0.6099,
+  "n_trades_today": 8,
+  "recipe": "short_clk_neg_weak_fail_h3",
+  "sells": [
+    "BHVN",
+    "GENB",
+    "OPTU",
+    "PYXS",
+    "QFIN",
+    "SAFX",
+    "XPOF",
+    "ZYME"
+  ],
+  "state": {
+    "after": "2026-09-02",
+    "cash": 9975.6,
+    "pos": {},
+    "yday_equity": 9975.6
+  }
+}

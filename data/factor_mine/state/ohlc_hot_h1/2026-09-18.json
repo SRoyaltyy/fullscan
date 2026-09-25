@@ -1,0 +1,270 @@
+{
+  "buys": [
+    "DELL",
+    "BNC",
+    "SATL",
+    "DNA",
+    "SMTC",
+    "LTRX",
+    "CTKB"
+  ],
+  "cash": 187.0,
+  "date": "2026-09-18",
+  "equity": 9856.77,
+  "fees": 37.363,
+  "fills": [
+    {
+      "fees": 2.151,
+      "pnl": 4.65,
+      "price": 26.14,
+      "shares": 47,
+      "side": "SELL",
+      "ticker": "ARQT"
+    },
+    {
+      "fees": 2.1094,
+      "pnl": 86.22,
+      "price": 39.5,
+      "shares": 33,
+      "side": "SELL",
+      "ticker": "FPS"
+    },
+    {
+      "fees": 2.025,
+      "pnl": 72.37,
+      "price": 249.13,
+      "shares": 5,
+      "side": "SELL",
+      "ticker": "ILMN"
+    },
+    {
+      "fees": 2.3768,
+      "pnl": -20.19,
+      "price": 10.12,
+      "shares": 119,
+      "side": "SELL",
+      "ticker": "IOVA"
+    },
+    {
+      "fees": 2.034,
+      "pnl": 40.91,
+      "price": 146.5,
+      "shares": 8,
+      "side": "SELL",
+      "ticker": "RVTY"
+    },
+    {
+      "fees": 6.6867,
+      "pnl": -69.49,
+      "price": 2.29,
+      "shares": 511,
+      "side": "SELL",
+      "ticker": "SABR"
+    },
+    {
+      "fees": 2.0341,
+      "pnl": 48.83,
+      "price": 158.04,
+      "shares": 8,
+      "side": "SELL",
+      "ticker": "TWST"
+    },
+    {
+      "fees": 1.996,
+      "pnl": null,
+      "price": 593.15,
+      "shares": 2,
+      "side": "BUY",
+      "ticker": "DELL"
+    },
+    {
+      "fees": 2.7348,
+      "pnl": null,
+      "price": 5.83,
+      "shares": 212,
+      "side": "BUY",
+      "ticker": "BNC"
+    },
+    {
+      "fees": 2.9025,
+      "pnl": null,
+      "price": 5.485,
+      "shares": 225,
+      "side": "BUY",
+      "ticker": "SATL"
+    },
+    {
+      "fees": 2.461,
+      "pnl": null,
+      "price": 7.83,
+      "shares": 157,
+      "side": "BUY",
+      "ticker": "DNA"
+    },
+    {
+      "fees": 2.008,
+      "pnl": null,
+      "price": 182.33,
+      "shares": 6,
+      "side": "BUY",
+      "ticker": "SMTC"
+    },
+    {
+      "fees": 2.709,
+      "pnl": null,
+      "price": 5.89,
+      "shares": 210,
+      "side": "BUY",
+      "ticker": "LTRX"
+    },
+    {
+      "fees": 3.1347,
+      "pnl": null,
+      "price": 5.09,
+      "shares": 243,
+      "side": "BUY",
+      "ticker": "CTKB"
+    }
+  ],
+  "holdings": [
+    "BNC",
+    "CTKB",
+    "DELL",
+    "DNA",
+    "LTRX",
+    "PGEN",
+    "SATL",
+    "SMTC"
+  ],
+  "mean": -0.2157,
+  "n_trades_today": 14,
+  "recipe": "ohlc_hot_h1",
+  "sells": [
+    "ARQT",
+    "FPS",
+    "ILMN",
+    "IOVA",
+    "RVTY",
+    "SABR",
+    "TWST"
+  ],
+  "state": {
+    "after": "2026-09-18",
+    "cash": 187.0,
+    "pos": {
+      "BNC": {
+        "close_px": 5.980000019073486,
+        "cost": 1238.6947838256835,
+        "entry_date": "2026-09-18",
+        "entry_px": 5.829999923706055,
+        "fee_in": 2.7348,
+        "last_px": 5.829999923706055,
+        "min_hold": 1,
+        "notional": 1235.9599838256836,
+        "peak_px": 5.829999923706055,
+        "reason": "baseline list, no extra gate; list probable,yday_gainer,yday_mover,ohlc_hot; \ud83d\udd35; ret5=+8.6; leftover $1236.91",
+        "shares": 212,
+        "ticker": "BNC"
+      },
+      "CTKB": {
+        "close_px": 5.300000190734863,
+        "cost": 1240.0047370788575,
+        "entry_date": "2026-09-18",
+        "entry_px": 5.090000152587891,
+        "fee_in": 3.1347,
+        "last_px": 5.090000152587891,
+        "min_hold": 1,
+        "notional": 1236.8700370788574,
+        "peak_px": 5.090000152587891,
+        "reason": "baseline list, no extra gate; list ohlc_hot; \ud83d\udd35; ret5=+15.0; leftover $1236.91",
+        "shares": 243,
+        "ticker": "CTKB"
+      },
+      "DELL": {
+        "close_px": 568.0599975585938,
+        "cost": 1188.296048828125,
+        "entry_date": "2026-09-18",
+        "entry_px": 593.1500244140625,
+        "fee_in": 1.996,
+        "last_px": 593.1500244140625,
+        "min_hold": 1,
+        "notional": 1186.300048828125,
+        "peak_px": 593.1500244140625,
+        "reason": "baseline list, no extra gate; list flatten,ohlc_hot; ret5=+16.1; leftover $1236.91",
+        "shares": 2,
+        "ticker": "DELL"
+      },
+      "DNA": {
+        "close_px": 7.880000114440918,
+        "cost": 1231.7709880218506,
+        "entry_date": "2026-09-18",
+        "entry_px": 7.829999923706055,
+        "fee_in": 2.461,
+        "last_px": 7.829999923706055,
+        "min_hold": 1,
+        "notional": 1229.3099880218506,
+        "peak_px": 7.829999923706055,
+        "reason": "baseline list, no extra gate; list ohlc_hot; \ud83d\udd35; ret5=+15.6; leftover $1236.91",
+        "shares": 157,
+        "ticker": "DNA"
+      },
+      "LTRX": {
+        "close_px": 5.849999904632568,
+        "cost": 1239.6089719619752,
+        "entry_date": "2026-09-18",
+        "entry_px": 5.889999866485596,
+        "fee_in": 2.709,
+        "last_px": 5.889999866485596,
+        "min_hold": 1,
+        "notional": 1236.899971961975,
+        "peak_px": 5.889999866485596,
+        "reason": "baseline list, no extra gate; list ohlc_hot; \ud83d\udd35; ret5=+15.0; leftover $1236.91",
+        "shares": 210,
+        "ticker": "LTRX"
+      },
+      "PGEN": {
+        "close_px": 7.78000020980835,
+        "cost": 1224.4630245666503,
+        "entry_date": "2026-09-17",
+        "entry_px": 7.590000152587891,
+        "fee_in": 2.473,
+        "last_px": 7.980000019073486,
+        "min_hold": 1,
+        "notional": 1221.9900245666504,
+        "peak_px": 7.980000019073486,
+        "reason": "baseline list, no extra gate; list flatten,ohlc_hot; ret5=+9.4; leftover $1227.21",
+        "shares": 161,
+        "ticker": "PGEN"
+      },
+      "SATL": {
+        "close_px": 5.110000133514404,
+        "cost": 1237.0275300407409,
+        "entry_date": "2026-09-18",
+        "entry_px": 5.485000133514404,
+        "fee_in": 2.9025,
+        "last_px": 5.485000133514404,
+        "min_hold": 1,
+        "notional": 1234.125030040741,
+        "peak_px": 5.485000133514404,
+        "reason": "baseline list, no extra gate; list ohlc_hot; \ud83d\udd35; ret5=+17.2; leftover $1236.91",
+        "shares": 225,
+        "ticker": "SATL"
+      },
+      "SMTC": {
+        "close_px": 185.0,
+        "cost": 1095.9880109863282,
+        "entry_date": "2026-09-18",
+        "entry_px": 182.3300018310547,
+        "fee_in": 2.008,
+        "last_px": 182.3300018310547,
+        "min_hold": 1,
+        "notional": 1093.9800109863281,
+        "peak_px": 182.3300018310547,
+        "reason": "baseline list, no extra gate; list ohlc_hot; ret5=+12.0; leftover $1236.91",
+        "shares": 6,
+        "ticker": "SMTC"
+      }
+    },
+    "yday_equity": 9856.77
+  }
+}

@@ -1,0 +1,215 @@
+{
+  "buys": [
+    "SEDG",
+    "URBN",
+    "ANF",
+    "BHVN",
+    "BZ",
+    "CAPR",
+    "SMTC",
+    "ERAS"
+  ],
+  "cash": 321.34,
+  "date": "2026-08-28",
+  "equity": 9730.4,
+  "fees": 17.138,
+  "fills": [
+    {
+      "fees": 2.101,
+      "pnl": null,
+      "price": 32.9,
+      "shares": 37,
+      "side": "BUY",
+      "ticker": "SEDG"
+    },
+    {
+      "fees": 2.035,
+      "pnl": null,
+      "price": 79.42,
+      "shares": 15,
+      "side": "BUY",
+      "ticker": "URBN"
+    },
+    {
+      "fees": 2.014,
+      "pnl": null,
+      "price": 146.07,
+      "shares": 8,
+      "side": "BUY",
+      "ticker": "ANF"
+    },
+    {
+      "fees": 2.224,
+      "pnl": null,
+      "price": 15.88,
+      "shares": 78,
+      "side": "BUY",
+      "ticker": "BHVN"
+    },
+    {
+      "fees": 2.194,
+      "pnl": null,
+      "price": 18.15,
+      "shares": 68,
+      "side": "BUY",
+      "ticker": "BZ"
+    },
+    {
+      "fees": 2.374,
+      "pnl": null,
+      "price": 9.73,
+      "shares": 128,
+      "side": "BUY",
+      "ticker": "CAPR"
+    },
+    {
+      "fees": 2.014,
+      "pnl": null,
+      "price": 141.76,
+      "shares": 8,
+      "side": "BUY",
+      "ticker": "SMTC"
+    },
+    {
+      "fees": 2.182,
+      "pnl": null,
+      "price": 19.25,
+      "shares": 64,
+      "side": "BUY",
+      "ticker": "ERAS"
+    }
+  ],
+  "holdings": [
+    "ANF",
+    "BHVN",
+    "BZ",
+    "CAPR",
+    "ERAS",
+    "SEDG",
+    "SMTC",
+    "URBN"
+  ],
+  "mean": -2.696,
+  "n_trades_today": 8,
+  "recipe": "union_vol_g_h1",
+  "sells": [],
+  "state": {
+    "after": "2026-08-28",
+    "cash": 321.34,
+    "pos": {
+      "ANF": {
+        "close_px": 148.4199981689453,
+        "cost": 1170.57405859375,
+        "entry_date": "2026-08-28",
+        "entry_px": 146.07000732421875,
+        "fee_in": 2.014,
+        "last_px": 146.07000732421875,
+        "min_hold": 1,
+        "notional": 1168.56005859375,
+        "peak_px": 146.07000732421875,
+        "reason": "union \u2229 vol_g, no \ud83d\udea8; gate vol=good; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+38.8; leftover $1250.00",
+        "shares": 8,
+        "ticker": "ANF"
+      },
+      "BHVN": {
+        "close_px": 15.40999984741211,
+        "cost": 1240.8640089263915,
+        "entry_date": "2026-08-28",
+        "entry_px": 15.880000114440918,
+        "fee_in": 2.224,
+        "last_px": 15.880000114440918,
+        "min_hold": 1,
+        "notional": 1238.6400089263916,
+        "peak_px": 15.880000114440918,
+        "reason": "union \u2229 vol_g, no \ud83d\udea8; gate vol=good; list yday_gainer,yday_mover; ret5=+19.4; leftover $1250.00",
+        "shares": 78,
+        "ticker": "BHVN"
+      },
+      "BZ": {
+        "close_px": 17.799999237060547,
+        "cost": 1236.3939740600586,
+        "entry_date": "2026-08-28",
+        "entry_px": 18.149999618530273,
+        "fee_in": 2.194,
+        "last_px": 18.149999618530273,
+        "min_hold": 1,
+        "notional": 1234.1999740600586,
+        "peak_px": 18.149999618530273,
+        "reason": "union \u2229 vol_g, no \ud83d\udea8; gate vol=good; list yday_gainer,yday_mover; ret5=+14.1; leftover $1250.00",
+        "shares": 68,
+        "ticker": "BZ"
+      },
+      "CAPR": {
+        "close_px": 9.59000015258789,
+        "cost": 1247.81394140625,
+        "entry_date": "2026-08-28",
+        "entry_px": 9.729999542236328,
+        "fee_in": 2.374,
+        "last_px": 9.729999542236328,
+        "min_hold": 1,
+        "notional": 1245.43994140625,
+        "peak_px": 9.729999542236328,
+        "reason": "union \u2229 vol_g, no \ud83d\udea8; gate vol=good; list yday_gainer,yday_mover; ret5=+47.1; leftover $1250.00",
+        "shares": 128,
+        "ticker": "CAPR"
+      },
+      "ERAS": {
+        "close_px": 18.030000686645508,
+        "cost": 1234.182,
+        "entry_date": "2026-08-28",
+        "entry_px": 19.25,
+        "fee_in": 2.182,
+        "last_px": 19.25,
+        "min_hold": 1,
+        "notional": 1232.0,
+        "peak_px": 19.25,
+        "reason": "union \u2229 vol_g, no \ud83d\udea8; gate vol=good; list yday_gainer; ret5=+14.1; leftover $1250.00",
+        "shares": 64,
+        "ticker": "ERAS"
+      },
+      "SEDG": {
+        "close_px": 31.40999984741211,
+        "cost": 1219.4010564575196,
+        "entry_date": "2026-08-28",
+        "entry_px": 32.900001525878906,
+        "fee_in": 2.101,
+        "last_px": 32.900001525878906,
+        "min_hold": 1,
+        "notional": 1217.3000564575195,
+        "peak_px": 32.900001525878906,
+        "reason": "union \u2229 vol_g, no \ud83d\udea8; gate vol=good; list probable,yday_gainer,yday_mover; \ud83d\udd35; ret5=+8.4; leftover $1250.00",
+        "shares": 37,
+        "ticker": "SEDG"
+      },
+      "SMTC": {
+        "close_px": 131.1699981689453,
+        "cost": 1136.0939560546874,
+        "entry_date": "2026-08-28",
+        "entry_px": 141.75999450683594,
+        "fee_in": 2.014,
+        "last_px": 141.75999450683594,
+        "min_hold": 1,
+        "notional": 1134.0799560546875,
+        "peak_px": 141.75999450683594,
+        "reason": "union \u2229 vol_g, no \ud83d\udea8; gate vol=good; list yday_gainer,yday_mover,mover_buy; \ud83d\udd35; \u26aa; ret5=+14.1; leftover $1250.00",
+        "shares": 8,
+        "ticker": "SMTC"
+      },
+      "URBN": {
+        "close_px": 81.08999633789062,
+        "cost": 1193.3349725341798,
+        "entry_date": "2026-08-28",
+        "entry_px": 79.41999816894531,
+        "fee_in": 2.035,
+        "last_px": 79.41999816894531,
+        "min_hold": 1,
+        "notional": 1191.2999725341797,
+        "peak_px": 79.41999816894531,
+        "reason": "union \u2229 vol_g, no \ud83d\udea8; gate vol=good; list probable,yday_gainer,yday_mover; \ud83d\udd35; ret5=+8.5; leftover $1250.00",
+        "shares": 15,
+        "ticker": "URBN"
+      }
+    },
+    "yday_equity": 9730.4
+  }
+}

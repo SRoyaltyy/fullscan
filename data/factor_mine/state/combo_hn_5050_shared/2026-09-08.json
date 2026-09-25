@@ -1,0 +1,111 @@
+{
+  "buys": [],
+  "cash": 9999.9,
+  "date": "2026-09-08",
+  "equity": 9999.9,
+  "fees": 33.5087,
+  "fills": [
+    {
+      "fees": 2.1542,
+      "pnl": 56.19,
+      "price": 26.44,
+      "shares": 48,
+      "side": "SELL",
+      "ticker": "ASST"
+    },
+    {
+      "fees": 5.5108,
+      "pnl": -10.94,
+      "price": 1.94,
+      "shares": 421,
+      "side": "SELL",
+      "ticker": "BAK"
+    },
+    {
+      "fees": 2.019,
+      "pnl": 88.8,
+      "price": 267.76,
+      "shares": 3,
+      "side": "SELL",
+      "ticker": "BE"
+    },
+    {
+      "fees": 2.019,
+      "pnl": -32.94,
+      "price": 253.72,
+      "shares": 3,
+      "side": "SELL",
+      "ticker": "CRM"
+    },
+    {
+      "fees": 2.7539,
+      "pnl": -1.26,
+      "price": 5.81,
+      "shares": 210,
+      "side": "SELL",
+      "ticker": "DFDV"
+    },
+    {
+      "fees": 2.157,
+      "pnl": 12.37,
+      "price": 16.74,
+      "shares": 49,
+      "side": "SELL",
+      "ticker": "FRNM"
+    },
+    {
+      "fees": 10.7898,
+      "pnl": 48.69,
+      "price": 1.565,
+      "shares": 825,
+      "side": "SELL",
+      "ticker": "GPRO"
+    },
+    {
+      "fees": 2.04,
+      "pnl": 41.89,
+      "price": 125.07,
+      "shares": 10,
+      "side": "SELL",
+      "ticker": "HOOD"
+    },
+    {
+      "fees": 2.04,
+      "pnl": 27.84,
+      "price": 78.84,
+      "shares": 10,
+      "side": "SELL",
+      "ticker": "MRX"
+    },
+    {
+      "fees": 2.025,
+      "pnl": -2.68,
+      "price": 137.62,
+      "shares": 5,
+      "side": "SELL",
+      "ticker": "MSTR"
+    }
+  ],
+  "holdings": [],
+  "mean": -1.1019,
+  "n_trades_today": 10,
+  "recipe": "combo_hn_5050_shared",
+  "sells": [
+    "ASST",
+    "BAK",
+    "BE",
+    "CRM",
+    "DFDV",
+    "FRNM",
+    "GPRO",
+    "HOOD",
+    "MRX",
+    "MSTR"
+  ],
+  "state": {
+    "after": "2026-09-08",
+    "cash": 9999.9,
+    "pos": {},
+    "yday_equity": 9999.9
+  }
+}

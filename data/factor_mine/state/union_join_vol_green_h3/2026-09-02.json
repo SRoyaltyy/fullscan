@@ -1,0 +1,57 @@
+{
+  "buys": [],
+  "cash": 9346.62,
+  "date": "2026-09-02",
+  "equity": 9346.62,
+  "fees": 9.1689,
+  "fills": [
+    {
+      "fees": 2.07,
+      "pnl": -113.25,
+      "price": 139.65,
+      "shares": 17,
+      "side": "SELL",
+      "ticker": "ANF"
+    },
+    {
+      "fees": 2.3275,
+      "pnl": -279.34,
+      "price": 21.97,
+      "shares": 101,
+      "side": "SELL",
+      "ticker": "GAP"
+    },
+    {
+      "fees": 2.3478,
+      "pnl": -122.36,
+      "price": 22.2,
+      "shares": 107,
+      "side": "SELL",
+      "ticker": "NCNO"
+    },
+    {
+      "fees": 2.4236,
+      "pnl": -138.43,
+      "price": 17.98,
+      "shares": 131,
+      "side": "SELL",
+      "ticker": "TH"
+    }
+  ],
+  "holdings": [],
+  "mean": -0.5554,
+  "n_trades_today": 4,
+  "recipe": "union_join_vol_green_h3",
+  "sells": [
+    "ANF",
+    "GAP",
+    "NCNO",
+    "TH"
+  ],
+  "state": {
+    "after": "2026-09-02",
+    "cash": 9346.62,
+    "pos": {},
+    "yday_equity": 9346.62
+  }
+}

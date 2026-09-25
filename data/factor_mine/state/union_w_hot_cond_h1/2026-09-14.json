@@ -1,0 +1,107 @@
+{
+  "buys": [],
+  "cash": 7511.19,
+  "date": "2026-09-14",
+  "equity": 10158.61,
+  "fees": 18.5281,
+  "fills": [
+    {
+      "fees": 2.076,
+      "pnl": -7.65,
+      "price": 54.75,
+      "shares": 22,
+      "side": "SELL",
+      "ticker": "ASO"
+    },
+    {
+      "fees": 3.3421,
+      "pnl": 23.97,
+      "price": 5.03,
+      "shares": 255,
+      "side": "SELL",
+      "ticker": "BNC"
+    },
+    {
+      "fees": 6.0861,
+      "pnl": 34.42,
+      "price": 2.8,
+      "shares": 465,
+      "side": "SELL",
+      "ticker": "INDP"
+    },
+    {
+      "fees": 2.052,
+      "pnl": 20.98,
+      "price": 86.06,
+      "shares": 14,
+      "side": "SELL",
+      "ticker": "SWKS"
+    },
+    {
+      "fees": 2.611,
+      "pnl": -22.55,
+      "price": 6.4,
+      "shares": 193,
+      "side": "SELL",
+      "ticker": "VISN"
+    },
+    {
+      "fees": 2.3609,
+      "pnl": -79.93,
+      "price": 10.29,
+      "shares": 114,
+      "side": "SELL",
+      "ticker": "WLTH"
+    }
+  ],
+  "holdings": [
+    "CMRC",
+    "QRVO"
+  ],
+  "mean": -0.5711,
+  "n_trades_today": 6,
+  "recipe": "union_w_hot_cond_h1",
+  "sells": [
+    "ASO",
+    "BNC",
+    "INDP",
+    "SWKS",
+    "VISN",
+    "WLTH"
+  ],
+  "state": {
+    "after": "2026-09-14",
+    "cash": 7511.19,
+    "pos": {
+      "CMRC": {
+        "close_px": 3.640000104904175,
+        "cost": 1260.3029458908081,
+        "entry_date": "2026-09-11",
+        "entry_px": 3.130000114440918,
+        "fee_in": 5.1729,
+        "last_px": 3.509999990463257,
+        "min_hold": 1,
+        "notional": 1255.130045890808,
+        "peak_px": 3.509999990463257,
+        "reason": "rank by w_hot_cond; rank w_hot_cond; list yday_gainer,yday_mover; ret5=+22.7; leftover $1255.68",
+        "shares": 401,
+        "ticker": "CMRC"
+      },
+      "QRVO": {
+        "close_px": 107.9800033569336,
+        "cost": 1243.2079899291991,
+        "entry_date": "2026-09-11",
+        "entry_px": 112.83499908447266,
+        "fee_in": 2.023,
+        "last_px": 114.11000061035156,
+        "min_hold": 1,
+        "notional": 1241.1849899291992,
+        "peak_px": 114.11000061035156,
+        "reason": "rank by w_hot_cond; rank w_hot_cond; list yday_gainer,ohlc_hot; \ud83d\udd35; ret5=+11.9; leftover $1255.68",
+        "shares": 11,
+        "ticker": "QRVO"
+      }
+    },
+    "yday_equity": 10158.61
+  }
+}

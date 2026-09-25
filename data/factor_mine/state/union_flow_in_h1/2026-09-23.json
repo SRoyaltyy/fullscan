@@ -1,0 +1,57 @@
+{
+  "buys": [
+    "BB"
+  ],
+  "cash": 4.33,
+  "date": "2026-09-23",
+  "equity": 10051.95,
+  "fees": 18.385,
+  "fills": [
+    {
+      "fees": 2.9179,
+      "pnl": 443.47,
+      "price": 47.57,
+      "shares": 217,
+      "side": "SELL",
+      "ticker": "CBRL"
+    },
+    {
+      "fees": 15.4671,
+      "pnl": null,
+      "price": 8.6,
+      "shares": 1199,
+      "side": "BUY",
+      "ticker": "BB"
+    }
+  ],
+  "holdings": [
+    "BB"
+  ],
+  "mean": 1.7343,
+  "n_trades_today": 2,
+  "recipe": "union_flow_in_h1",
+  "sells": [
+    "CBRL"
+  ],
+  "state": {
+    "after": "2026-09-23",
+    "cash": 4.33,
+    "pos": {
+      "BB": {
+        "close_px": 8.380000114440918,
+        "cost": 10326.867557382202,
+        "entry_date": "2026-09-23",
+        "entry_px": 8.600000381469727,
+        "fee_in": 15.4671,
+        "last_px": 8.600000381469727,
+        "min_hold": 1,
+        "notional": 10311.400457382202,
+        "peak_px": 8.600000381469727,
+        "reason": "union \u2229 flow_in, no \ud83d\udea8; gate flow_in=True; list overnight; \ud83d\udd35; \u26aa; ret5=+10.5; leftover $10331.20",
+        "shares": 1199,
+        "ticker": "BB"
+      }
+    },
+    "yday_equity": 10051.95
+  }
+}

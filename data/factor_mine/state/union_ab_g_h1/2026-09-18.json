@@ -1,0 +1,288 @@
+{
+  "buys": [
+    "RBRK",
+    "GNRC",
+    "VICR",
+    "ECO",
+    "FIVN",
+    "BNC",
+    "DDD",
+    "RANI"
+  ],
+  "cash": 308.66,
+  "date": "2026-09-18",
+  "equity": 9246.06,
+  "fees": 54.2363,
+  "fills": [
+    {
+      "fees": 2.142,
+      "pnl": 4.1,
+      "price": 26.14,
+      "shares": 44,
+      "side": "SELL",
+      "ticker": "ARQT"
+    },
+    {
+      "fees": 2.058,
+      "pnl": 24.86,
+      "price": 69.72,
+      "shares": 16,
+      "side": "SELL",
+      "ticker": "AXTI"
+    },
+    {
+      "fees": 2.2849,
+      "pnl": 27.86,
+      "price": 13.0,
+      "shares": 90,
+      "side": "SELL",
+      "ticker": "EROC"
+    },
+    {
+      "fees": 2.3514,
+      "pnl": -19.1,
+      "price": 10.12,
+      "shares": 111,
+      "side": "SELL",
+      "ticker": "IOVA"
+    },
+    {
+      "fees": 2.4749,
+      "pnl": 53.59,
+      "price": 7.98,
+      "shares": 150,
+      "side": "SELL",
+      "ticker": "PGEN"
+    },
+    {
+      "fees": 6.2425,
+      "pnl": -64.87,
+      "price": 2.29,
+      "shares": 477,
+      "side": "SELL",
+      "ticker": "SABR"
+    },
+    {
+      "fees": 2.028,
+      "pnl": 64.84,
+      "price": 182.33,
+      "shares": 6,
+      "side": "SELL",
+      "ticker": "SMTC"
+    },
+    {
+      "fees": 2.031,
+      "pnl": 42.23,
+      "price": 158.04,
+      "shares": 7,
+      "side": "SELL",
+      "ticker": "TWST"
+    },
+    {
+      "fees": 2.02,
+      "pnl": null,
+      "price": 108.55,
+      "shares": 10,
+      "side": "BUY",
+      "ticker": "RBRK"
+    },
+    {
+      "fees": 2.005,
+      "pnl": null,
+      "price": 209.52,
+      "shares": 5,
+      "side": "BUY",
+      "ticker": "GNRC"
+    },
+    {
+      "fees": 2.005,
+      "pnl": null,
+      "price": 219.62,
+      "shares": 5,
+      "side": "BUY",
+      "ticker": "VICR"
+    },
+    {
+      "fees": 2.029,
+      "pnl": null,
+      "price": 85.0,
+      "shares": 13,
+      "side": "BUY",
+      "ticker": "ECO"
+    },
+    {
+      "fees": 2.089,
+      "pnl": null,
+      "price": 34.44,
+      "shares": 33,
+      "side": "BUY",
+      "ticker": "FIVN"
+    },
+    {
+      "fees": 2.587,
+      "pnl": null,
+      "price": 5.83,
+      "shares": 199,
+      "side": "BUY",
+      "ticker": "BNC"
+    },
+    {
+      "fees": 4.1796,
+      "pnl": null,
+      "price": 3.58,
+      "shares": 324,
+      "side": "BUY",
+      "ticker": "DDD"
+    },
+    {
+      "fees": 15.709,
+      "pnl": null,
+      "price": 0.85,
+      "shares": 1366,
+      "side": "BUY",
+      "ticker": "RANI"
+    }
+  ],
+  "holdings": [
+    "BNC",
+    "DDD",
+    "ECO",
+    "FIVN",
+    "GNRC",
+    "RANI",
+    "RBRK",
+    "VICR"
+  ],
+  "mean": 0.1211,
+  "n_trades_today": 16,
+  "recipe": "union_ab_g_h1",
+  "sells": [
+    "ARQT",
+    "AXTI",
+    "EROC",
+    "IOVA",
+    "PGEN",
+    "SABR",
+    "SMTC",
+    "TWST"
+  ],
+  "state": {
+    "after": "2026-09-18",
+    "cash": 308.66,
+    "pos": {
+      "BNC": {
+        "close_px": 5.980000019073486,
+        "cost": 1162.7569848175049,
+        "entry_date": "2026-09-18",
+        "entry_px": 5.829999923706055,
+        "fee_in": 2.587,
+        "last_px": 5.829999923706055,
+        "min_hold": 1,
+        "notional": 1160.1699848175049,
+        "peak_px": 5.829999923706055,
+        "reason": "union \u2229 ab_g, no \ud83d\udea8; gate ab=good; list probable,yday_gainer,yday_mover,ohlc_hot; \ud83d\udd35; ret5=+8.6; leftover $1161.90",
+        "shares": 199,
+        "ticker": "BNC"
+      },
+      "DDD": {
+        "close_px": 3.630000114440918,
+        "cost": 1164.0995752807617,
+        "entry_date": "2026-09-18",
+        "entry_px": 3.5799999237060547,
+        "fee_in": 4.1796,
+        "last_px": 3.5799999237060547,
+        "min_hold": 1,
+        "notional": 1159.9199752807617,
+        "peak_px": 3.5799999237060547,
+        "reason": "union \u2229 ab_g, no \ud83d\udea8; gate ab=good; list probable,yday_gainer; \ud83d\udd35; ret5=+8.3; leftover $1161.90",
+        "shares": 324,
+        "ticker": "DDD"
+      },
+      "ECO": {
+        "close_px": 84.94999694824219,
+        "cost": 1107.029,
+        "entry_date": "2026-09-18",
+        "entry_px": 85.0,
+        "fee_in": 2.029,
+        "last_px": 85.0,
+        "min_hold": 1,
+        "notional": 1105.0,
+        "peak_px": 85.0,
+        "reason": "union \u2229 ab_g, no \ud83d\udea8; gate ab=good; list flatten; \ud83d\udd35; \u26aa; ret5=+18.3; leftover $1161.90",
+        "shares": 13,
+        "ticker": "ECO"
+      },
+      "FIVN": {
+        "close_px": 32.470001220703125,
+        "cost": 1138.6089546813964,
+        "entry_date": "2026-09-18",
+        "entry_px": 34.439998626708984,
+        "fee_in": 2.089,
+        "last_px": 34.439998626708984,
+        "min_hold": 1,
+        "notional": 1136.5199546813965,
+        "peak_px": 34.439998626708984,
+        "reason": "union \u2229 ab_g, no \ud83d\udea8; gate ab=good; list flatten; \ud83d\udd35; \u26aa; ret5=+14.0; leftover $1161.90",
+        "shares": 33,
+        "ticker": "FIVN"
+      },
+      "GNRC": {
+        "close_px": 207.44000244140625,
+        "cost": 1049.6050213623048,
+        "entry_date": "2026-09-18",
+        "entry_px": 209.52000427246094,
+        "fee_in": 2.005,
+        "last_px": 209.52000427246094,
+        "min_hold": 1,
+        "notional": 1047.6000213623047,
+        "peak_px": 209.52000427246094,
+        "reason": "union \u2229 ab_g, no \ud83d\udea8; gate ab=good; list flatten,yday_gainer,yday_mover; \ud83d\udd35; ret5=+14.1; leftover $1161.90",
+        "shares": 5,
+        "ticker": "GNRC"
+      },
+      "RANI": {
+        "close_px": 0.8619999885559082,
+        "cost": 1176.809032567978,
+        "entry_date": "2026-09-18",
+        "entry_px": 0.8500000238418579,
+        "fee_in": 15.709,
+        "last_px": 0.8500000238418579,
+        "min_hold": 1,
+        "notional": 1161.100032567978,
+        "peak_px": 0.8500000238418579,
+        "reason": "union \u2229 ab_g, no \ud83d\udea8; gate ab=good; list probable,yday_gainer; ret5=+3.6; leftover $1161.90",
+        "shares": 1366,
+        "ticker": "RANI"
+      },
+      "RBRK": {
+        "close_px": 106.70999908447266,
+        "cost": 1087.520030517578,
+        "entry_date": "2026-09-18",
+        "entry_px": 108.55000305175781,
+        "fee_in": 2.02,
+        "last_px": 108.55000305175781,
+        "min_hold": 1,
+        "notional": 1085.5000305175781,
+        "peak_px": 108.55000305175781,
+        "reason": "union \u2229 ab_g, no \ud83d\udea8; gate ab=good; list flatten; \u26aa; ret5=+21.3; leftover $1161.90",
+        "shares": 10,
+        "ticker": "RBRK"
+      },
+      "VICR": {
+        "close_px": 222.72000122070312,
+        "cost": 1100.1049755859376,
+        "entry_date": "2026-09-18",
+        "entry_px": 219.6199951171875,
+        "fee_in": 2.005,
+        "last_px": 219.6199951171875,
+        "min_hold": 1,
+        "notional": 1098.0999755859375,
+        "peak_px": 219.6199951171875,
+        "reason": "union \u2229 ab_g, no \ud83d\udea8; gate ab=good; list flatten,yday_gainer,yday_mover; \ud83d\udd35; ret5=+21.5; leftover $1161.90",
+        "shares": 5,
+        "ticker": "VICR"
+      }
+    },
+    "yday_equity": 9246.06
+  }
+}

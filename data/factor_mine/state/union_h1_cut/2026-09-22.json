@@ -1,0 +1,288 @@
+{
+  "buys": [
+    "PACS",
+    "MKC",
+    "EL",
+    "USFD",
+    "DLO",
+    "TDC",
+    "FJET",
+    "DEFT"
+  ],
+  "cash": 151.15,
+  "date": "2026-09-22",
+  "equity": 9133.89,
+  "fees": 56.7437,
+  "fills": [
+    {
+      "fees": 2.031,
+      "pnl": 32.43,
+      "price": 163.08,
+      "shares": 7,
+      "side": "SELL",
+      "ticker": "A"
+    },
+    {
+      "fees": 2.2786,
+      "pnl": -50.73,
+      "price": 12.95,
+      "shares": 88,
+      "side": "SELL",
+      "ticker": "BTDR"
+    },
+    {
+      "fees": 3.9037,
+      "pnl": -153.77,
+      "price": 3.51,
+      "shares": 298,
+      "side": "SELL",
+      "ticker": "CYPH"
+    },
+    {
+      "fees": 2.049,
+      "pnl": -0.31,
+      "price": 89.12,
+      "shares": 13,
+      "side": "SELL",
+      "ticker": "DXCM"
+    },
+    {
+      "fees": 2.019,
+      "pnl": -27.36,
+      "price": 378.42,
+      "shares": 3,
+      "side": "SELL",
+      "ticker": "HUM"
+    },
+    {
+      "fees": 2.3609,
+      "pnl": -33.19,
+      "price": 10.18,
+      "shares": 114,
+      "side": "SELL",
+      "ticker": "IOVA"
+    },
+    {
+      "fees": 2.2786,
+      "pnl": -31.81,
+      "price": 13.16,
+      "shares": 88,
+      "side": "SELL",
+      "ticker": "MGTX"
+    },
+    {
+      "fees": 2.4812,
+      "pnl": -35.33,
+      "price": 7.64,
+      "shares": 152,
+      "side": "SELL",
+      "ticker": "PGEN"
+    },
+    {
+      "fees": 2.071,
+      "pnl": null,
+      "price": 41.93,
+      "shares": 27,
+      "side": "BUY",
+      "ticker": "PACS"
+    },
+    {
+      "fees": 2.059,
+      "pnl": null,
+      "price": 49.57,
+      "shares": 23,
+      "side": "BUY",
+      "ticker": "MKC"
+    },
+    {
+      "fees": 2.023,
+      "pnl": null,
+      "price": 98.02,
+      "shares": 11,
+      "side": "BUY",
+      "ticker": "EL"
+    },
+    {
+      "fees": 2.026,
+      "pnl": null,
+      "price": 94.08,
+      "shares": 12,
+      "side": "BUY",
+      "ticker": "USFD"
+    },
+    {
+      "fees": 2.227,
+      "pnl": null,
+      "price": 14.5,
+      "shares": 79,
+      "side": "BUY",
+      "ticker": "DLO"
+    },
+    {
+      "fees": 2.104,
+      "pnl": null,
+      "price": 29.78,
+      "shares": 38,
+      "side": "BUY",
+      "ticker": "TDC"
+    },
+    {
+      "fees": 7.3788,
+      "pnl": null,
+      "price": 2.02,
+      "shares": 572,
+      "side": "BUY",
+      "ticker": "FJET"
+    },
+    {
+      "fees": 17.4529,
+      "pnl": null,
+      "price": 0.59,
+      "shares": 1961,
+      "side": "BUY",
+      "ticker": "DEFT"
+    }
+  ],
+  "holdings": [
+    "DEFT",
+    "DLO",
+    "EL",
+    "FJET",
+    "MKC",
+    "PACS",
+    "TDC",
+    "USFD"
+  ],
+  "mean": -1.3317,
+  "n_trades_today": 16,
+  "recipe": "union_h1_cut",
+  "sells": [
+    "A",
+    "BTDR",
+    "CYPH",
+    "DXCM",
+    "HUM",
+    "IOVA",
+    "MGTX",
+    "PGEN"
+  ],
+  "state": {
+    "after": "2026-09-22",
+    "cash": 151.15,
+    "pos": {
+      "DEFT": {
+        "close_px": 0.58,
+        "cost": 1174.4429,
+        "entry_date": "2026-09-22",
+        "entry_px": 0.59,
+        "fee_in": 17.4529,
+        "last_px": 0.59,
+        "min_hold": 1,
+        "notional": 1156.99,
+        "peak_px": 0.59,
+        "reason": "after min-hold, cut \u22123% losers; list probable,yday_gainer,yday_mover; ret5=-1.7; leftover $1157.18",
+        "shares": 1961,
+        "ticker": "DEFT"
+      },
+      "DLO": {
+        "close_px": 14.26,
+        "cost": 1147.727,
+        "entry_date": "2026-09-22",
+        "entry_px": 14.5,
+        "fee_in": 2.227,
+        "last_px": 14.5,
+        "min_hold": 1,
+        "notional": 1145.5,
+        "peak_px": 14.5,
+        "reason": "after min-hold, cut \u22123% losers; list flatten; ret5=-3.6; leftover $1157.18",
+        "shares": 79,
+        "ticker": "DLO"
+      },
+      "EL": {
+        "close_px": 100.29,
+        "cost": 1080.243,
+        "entry_date": "2026-09-22",
+        "entry_px": 98.02,
+        "fee_in": 2.023,
+        "last_px": 98.02,
+        "min_hold": 1,
+        "notional": 1078.22,
+        "peak_px": 98.02,
+        "reason": "after min-hold, cut \u22123% losers; list flatten; ret5=-1.9; leftover $1157.18",
+        "shares": 11,
+        "ticker": "EL"
+      },
+      "FJET": {
+        "close_px": 1.94,
+        "cost": 1162.8188,
+        "entry_date": "2026-09-22",
+        "entry_px": 2.02,
+        "fee_in": 7.3788,
+        "last_px": 2.02,
+        "min_hold": 1,
+        "notional": 1155.44,
+        "peak_px": 2.02,
+        "reason": "after min-hold, cut \u22123% losers; list probable,yday_gainer,yday_mover; ret5=+0.5; leftover $1157.18",
+        "shares": 572,
+        "ticker": "FJET"
+      },
+      "MKC": {
+        "close_px": 49.42,
+        "cost": 1142.1689999999999,
+        "entry_date": "2026-09-22",
+        "entry_px": 49.57,
+        "fee_in": 2.059,
+        "last_px": 49.57,
+        "min_hold": 1,
+        "notional": 1140.11,
+        "peak_px": 49.57,
+        "reason": "after min-hold, cut \u22123% losers; list flatten; ret5=-3.0; leftover $1157.18",
+        "shares": 23,
+        "ticker": "MKC"
+      },
+      "PACS": {
+        "close_px": 41.53,
+        "cost": 1134.1809999999998,
+        "entry_date": "2026-09-22",
+        "entry_px": 41.93,
+        "fee_in": 2.071,
+        "last_px": 41.93,
+        "min_hold": 1,
+        "notional": 1132.11,
+        "peak_px": 41.93,
+        "reason": "after min-hold, cut \u22123% losers; list flatten; ret5=-5.6; leftover $1157.18",
+        "shares": 27,
+        "ticker": "PACS"
+      },
+      "TDC": {
+        "close_px": 29.41,
+        "cost": 1133.7440000000001,
+        "entry_date": "2026-09-22",
+        "entry_px": 29.78,
+        "fee_in": 2.104,
+        "last_px": 29.78,
+        "min_hold": 1,
+        "notional": 1131.64,
+        "peak_px": 29.78,
+        "reason": "after min-hold, cut \u22123% losers; list flatten; ret5=-0.0; leftover $1157.18",
+        "shares": 38,
+        "ticker": "TDC"
+      },
+      "USFD": {
+        "close_px": 94.2,
+        "cost": 1130.986,
+        "entry_date": "2026-09-22",
+        "entry_px": 94.08,
+        "fee_in": 2.026,
+        "last_px": 94.08,
+        "min_hold": 1,
+        "notional": 1128.96,
+        "peak_px": 94.08,
+        "reason": "after min-hold, cut \u22123% losers; list flatten; ret5=-0.6; leftover $1157.18",
+        "shares": 12,
+        "ticker": "USFD"
+      }
+    },
+    "yday_equity": 9133.89
+  }
+}

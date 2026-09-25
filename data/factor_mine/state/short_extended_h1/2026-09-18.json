@@ -1,0 +1,262 @@
+{
+  "buys": [
+    "RBRK",
+    "DELL",
+    "VICR",
+    "ECO",
+    "SDGR",
+    "CYPH",
+    "LVWR"
+  ],
+  "cash": 14706.27,
+  "date": "2026-09-18",
+  "equity": 9261.51,
+  "fees": 46.5164,
+  "fills": [
+    {
+      "fees": 2.095,
+      "pnl": 36.37,
+      "price": 21.3,
+      "shares": 35,
+      "side": "COVER",
+      "ticker": "BBNX"
+    },
+    {
+      "fees": 2.146,
+      "pnl": -2.25,
+      "price": 14.97,
+      "shares": 52,
+      "side": "COVER",
+      "ticker": "CPRI"
+    },
+    {
+      "fees": 2.6316,
+      "pnl": -27.77,
+      "price": 3.97,
+      "shares": 204,
+      "side": "COVER",
+      "ticker": "EMAT"
+    },
+    {
+      "fees": 6.8757,
+      "pnl": -99.16,
+      "price": 1.96,
+      "shares": 533,
+      "side": "COVER",
+      "ticker": "HLP"
+    },
+    {
+      "fees": 2.218,
+      "pnl": 5.4,
+      "price": 10.12,
+      "shares": 76,
+      "side": "COVER",
+      "ticker": "IOVA"
+    },
+    {
+      "fees": 9.5073,
+      "pnl": -56.02,
+      "price": 1.12,
+      "shares": 737,
+      "side": "COVER",
+      "ticker": "IQ"
+    },
+    {
+      "fees": 2.005,
+      "pnl": 1.5,
+      "price": 146.5,
+      "shares": 5,
+      "side": "COVER",
+      "ticker": "RVTY"
+    },
+    {
+      "fees": 2.045843836118097,
+      "pnl": null,
+      "price": 108.55,
+      "shares": 6,
+      "side": "SHORT",
+      "ticker": "RBRK"
+    },
+    {
+      "fees": 2.029250685600385,
+      "pnl": null,
+      "price": 593.15,
+      "shares": 1,
+      "side": "SHORT",
+      "ticker": "DELL"
+    },
+    {
+      "fees": 2.0370509585027827,
+      "pnl": null,
+      "price": 219.62,
+      "shares": 3,
+      "side": "SHORT",
+      "ticker": "VICR"
+    },
+    {
+      "fees": 2.047301369863014,
+      "pnl": null,
+      "price": 85.0,
+      "shares": 7,
+      "side": "SHORT",
+      "ticker": "ECO"
+    },
+    {
+      "fees": 2.0936723285831818,
+      "pnl": null,
+      "price": 29.32,
+      "shares": 22,
+      "side": "SHORT",
+      "ticker": "SDGR"
+    },
+    {
+      "fees": 2.902793151202267,
+      "pnl": null,
+      "price": 3.035,
+      "shares": 220,
+      "side": "SHORT",
+      "ticker": "CYPH"
+    },
+    {
+      "fees": 5.881888219295136,
+      "pnl": null,
+      "price": 1.49,
+      "shares": 448,
+      "side": "SHORT",
+      "ticker": "LVWR"
+    }
+  ],
+  "holdings": [
+    "CYPH",
+    "DELL",
+    "ECO",
+    "INDP",
+    "LVWR",
+    "RBRK",
+    "SDGR",
+    "VICR"
+  ],
+  "mean": -0.9438,
+  "n_trades_today": 14,
+  "recipe": "short_extended_h1",
+  "sells": [
+    "BBNX",
+    "CPRI",
+    "EMAT",
+    "HLP",
+    "IOVA",
+    "IQ",
+    "RVTY"
+  ],
+  "state": {
+    "after": "2026-09-18",
+    "cash": 14706.27,
+    "pos": {
+      "CYPH": {
+        "close_px": 3.5999999046325684,
+        "cost": 2.902793151202267,
+        "entry_date": "2026-09-18",
+        "entry_px": 3.0350000858306885,
+        "fee_in": 2.902793151202267,
+        "last_px": 3.0350000858306885,
+        "notional": 667.7000188827515,
+        "peak_px": 3.0350000858306885,
+        "reason": "ret_5>15; gate ret_5_min=15.0; list yday_gainer,yday_mover; \ud83d\udd35; \u26aa; ret5=+39.5; leftover $668.94",
+        "shares": 220,
+        "ticker": "CYPH"
+      },
+      "DELL": {
+        "close_px": 568.0599975585938,
+        "cost": 2.029250685600385,
+        "entry_date": "2026-09-18",
+        "entry_px": 593.1500244140625,
+        "fee_in": 2.029250685600385,
+        "last_px": 593.1500244140625,
+        "notional": 593.1500244140625,
+        "peak_px": 593.1500244140625,
+        "reason": "ret_5>15; gate ret_5_min=15.0; list flatten,ohlc_hot; ret5=+16.1; leftover $668.94",
+        "shares": 1,
+        "ticker": "DELL"
+      },
+      "ECO": {
+        "close_px": 84.94999694824219,
+        "cost": 2.047301369863014,
+        "entry_date": "2026-09-18",
+        "entry_px": 85.0,
+        "fee_in": 2.047301369863014,
+        "last_px": 85.0,
+        "notional": 595.0,
+        "peak_px": 85.0,
+        "reason": "ret_5>15; gate ret_5_min=15.0; list flatten; \ud83d\udd35; \u26aa; ret5=+18.3; leftover $668.94",
+        "shares": 7,
+        "ticker": "ECO"
+      },
+      "INDP": {
+        "close_px": 3.549999952316284,
+        "cost": 3.0190397263265636,
+        "entry_date": "2026-09-11",
+        "entry_px": 2.700000047683716,
+        "fee_in": 3.0190397263265636,
+        "last_px": 3.8499999046325684,
+        "notional": 618.3000109195709,
+        "peak_px": 2.700000047683716,
+        "reason": "ret_5>15; gate ret_5_min=15.0; list yday_gainer,yday_mover; ret5=+120.7; leftover $619.86",
+        "shares": 229,
+        "ticker": "INDP"
+      },
+      "LVWR": {
+        "close_px": 1.6299999952316284,
+        "cost": 5.881888219295136,
+        "entry_date": "2026-09-18",
+        "entry_px": 1.4900000095367432,
+        "fee_in": 5.881888219295136,
+        "last_px": 1.4900000095367432,
+        "notional": 667.5200042724609,
+        "peak_px": 1.4900000095367432,
+        "reason": "ret_5>15; gate ret_5_min=15.0; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+25.7; leftover $668.94",
+        "shares": 448,
+        "ticker": "LVWR"
+      },
+      "RBRK": {
+        "close_px": 106.70999908447266,
+        "cost": 2.045843836118097,
+        "entry_date": "2026-09-18",
+        "entry_px": 108.55000305175781,
+        "fee_in": 2.045843836118097,
+        "last_px": 108.55000305175781,
+        "notional": 651.3000183105469,
+        "peak_px": 108.55000305175781,
+        "reason": "ret_5>15; gate ret_5_min=15.0; list flatten; \u26aa; ret5=+21.3; leftover $668.94",
+        "shares": 6,
+        "ticker": "RBRK"
+      },
+      "SDGR": {
+        "close_px": 29.020000457763672,
+        "cost": 2.0936723285831818,
+        "entry_date": "2026-09-18",
+        "entry_px": 29.31999969482422,
+        "fee_in": 2.0936723285831818,
+        "last_px": 29.31999969482422,
+        "notional": 645.0399932861328,
+        "peak_px": 29.31999969482422,
+        "reason": "ret_5>15; gate ret_5_min=15.0; list yday_gainer,yday_mover; \ud83d\udd35; \u26aa; ret5=+60.9; leftover $668.94",
+        "shares": 22,
+        "ticker": "SDGR"
+      },
+      "VICR": {
+        "close_px": 222.72000122070312,
+        "cost": 2.0370509585027827,
+        "entry_date": "2026-09-18",
+        "entry_px": 219.6199951171875,
+        "fee_in": 2.0370509585027827,
+        "last_px": 219.6199951171875,
+        "notional": 658.8599853515625,
+        "peak_px": 219.6199951171875,
+        "reason": "ret_5>15; gate ret_5_min=15.0; list flatten,yday_gainer,yday_mover; \ud83d\udd35; ret5=+21.5; leftover $668.94",
+        "shares": 3,
+        "ticker": "VICR"
+      }
+    },
+    "yday_equity": 9261.51
+  }
+}

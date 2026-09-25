@@ -1,0 +1,173 @@
+{
+  "buys": [],
+  "cash": -496.2,
+  "date": "2026-09-24",
+  "equity": 9623.58,
+  "fees": 12.5926,
+  "fills": [
+    {
+      "fees": 2.064,
+      "pnl": -24.09,
+      "price": 33.82,
+      "shares": 18,
+      "side": "SELL",
+      "ticker": "AMN"
+    },
+    {
+      "fees": 2.016,
+      "pnl": 35.87,
+      "price": 253.79,
+      "shares": 2,
+      "side": "SELL",
+      "ticker": "ILMN"
+    },
+    {
+      "fees": 2.1995,
+      "pnl": 5.07,
+      "price": 10.4,
+      "shares": 63,
+      "side": "SELL",
+      "ticker": "IOVA"
+    },
+    {
+      "fees": 2.2691,
+      "pnl": -23.21,
+      "price": 7.37,
+      "shares": 85,
+      "side": "SELL",
+      "ticker": "PGEN"
+    },
+    {
+      "fees": 2.022,
+      "pnl": -27.3,
+      "price": 141.79,
+      "shares": 4,
+      "side": "SELL",
+      "ticker": "RVTY"
+    },
+    {
+      "fees": 2.022,
+      "pnl": 21.14,
+      "price": 157.72,
+      "shares": 4,
+      "side": "SELL",
+      "ticker": "TWST"
+    }
+  ],
+  "holdings": [
+    "DELL",
+    "ECO",
+    "FIVN",
+    "GNRC",
+    "RBRK",
+    "VICR"
+  ],
+  "mean": -1.9004,
+  "n_trades_today": 6,
+  "recipe": "combo_sf_5050_shared",
+  "sells": [
+    "AMN",
+    "ILMN",
+    "IOVA",
+    "PGEN",
+    "RVTY",
+    "TWST"
+  ],
+  "state": {
+    "after": "2026-09-24",
+    "cash": -496.2,
+    "pos": {
+      "DELL": {
+        "close_px": 536.02001953125,
+        "cost": 1188.296048828125,
+        "entry_date": "2026-09-18",
+        "entry_px": 593.1500244140625,
+        "fee_in": 1.996,
+        "last_px": 535.969970703125,
+        "notional": 1186.300048828125,
+        "owner": "flatten_h5",
+        "peak_px": 593.1500244140625,
+        "reason": "baseline list, no extra gate; list flatten,ohlc_hot; wish-list (live io HOLD \u2014 not a ticket); ret5=+16.1; combo leftover $1774.33; owner flatten_h5",
+        "shares": 2,
+        "side": "long",
+        "ticker": "DELL"
+      },
+      "ECO": {
+        "close_px": 78.22000122070312,
+        "cost": 1702.05,
+        "entry_date": "2026-09-18",
+        "entry_px": 85.0,
+        "fee_in": 2.05,
+        "last_px": 76.8949966430664,
+        "notional": 1700.0,
+        "owner": "flatten_h5",
+        "peak_px": 85.0,
+        "reason": "baseline list, no extra gate; list flatten; wish-list (live io HOLD \u2014 not a ticket); \ud83d\udd35; \u26aa; ret5=+18.3; combo leftover $1774.33; owner flatten_h5",
+        "shares": 20,
+        "side": "long",
+        "ticker": "ECO"
+      },
+      "FIVN": {
+        "close_px": 36.65999984741211,
+        "cost": 1758.5829299621582,
+        "entry_date": "2026-09-18",
+        "entry_px": 34.439998626708984,
+        "fee_in": 2.143,
+        "last_px": 37.5099983215332,
+        "notional": 1756.4399299621582,
+        "owner": "flatten_h5",
+        "peak_px": 38.904998779296875,
+        "reason": "baseline list, no extra gate; list flatten; wish-list (live io HOLD \u2014 not a ticket); \ud83d\udd35; \u26aa; ret5=+14.0; combo leftover $1774.33; owner flatten_h5",
+        "shares": 51,
+        "side": "long",
+        "ticker": "FIVN"
+      },
+      "GNRC": {
+        "close_px": 198.0500030517578,
+        "cost": 1678.1740341796874,
+        "entry_date": "2026-09-18",
+        "entry_px": 209.52000427246094,
+        "fee_in": 2.014,
+        "last_px": 195.10000610351562,
+        "notional": 1676.1600341796875,
+        "owner": "flatten_h5",
+        "peak_px": 210.0,
+        "reason": "baseline list, no extra gate; list flatten,yday_gainer,yday_mover; wish-list (live io HOLD \u2014 not a ticket); \ud83d\udd35; ret5=+14.1; combo leftover $1774.33; owner flatten_h5",
+        "shares": 8,
+        "side": "long",
+        "ticker": "GNRC"
+      },
+      "RBRK": {
+        "close_px": 113.80000305175781,
+        "cost": 1738.838048828125,
+        "entry_date": "2026-09-18",
+        "entry_px": 108.55000305175781,
+        "fee_in": 2.038,
+        "last_px": 114.51000213623047,
+        "notional": 1736.800048828125,
+        "owner": "flatten_h5",
+        "peak_px": 114.51000213623047,
+        "reason": "baseline list, no extra gate; list flatten; wish-list (live io HOLD \u2014 not a ticket); \u26aa; ret5=+21.3; combo leftover $1774.33; owner flatten_h5",
+        "shares": 16,
+        "side": "long",
+        "ticker": "RBRK"
+      },
+      "VICR": {
+        "close_px": 276.05999755859375,
+        "cost": 1758.9739609375,
+        "entry_date": "2026-09-18",
+        "entry_px": 219.6199951171875,
+        "fee_in": 2.014,
+        "last_px": 274.45001220703125,
+        "notional": 1756.9599609375,
+        "owner": "flatten_h5",
+        "peak_px": 274.45001220703125,
+        "reason": "baseline list, no extra gate; list flatten,yday_gainer,yday_mover; wish-list (live io HOLD \u2014 not a ticket); \ud83d\udd35; ret5=+21.5; combo leftover $1774.33; owner flatten_h5",
+        "shares": 8,
+        "side": "long",
+        "ticker": "VICR"
+      }
+    },
+    "yday_equity": 9623.58
+  }
+}

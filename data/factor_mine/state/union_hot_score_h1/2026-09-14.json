@@ -1,0 +1,107 @@
+{
+  "buys": [],
+  "cash": 7505.04,
+  "date": "2026-09-14",
+  "equity": 10156.61,
+  "fees": 19.7377,
+  "fills": [
+    {
+      "fees": 3.0285,
+      "pnl": 37.88,
+      "price": 5.57,
+      "shares": 231,
+      "side": "SELL",
+      "ticker": "ANGX"
+    },
+    {
+      "fees": 2.076,
+      "pnl": -7.65,
+      "price": 54.75,
+      "shares": 22,
+      "side": "SELL",
+      "ticker": "ASO"
+    },
+    {
+      "fees": 3.329,
+      "pnl": 23.87,
+      "price": 5.03,
+      "shares": 254,
+      "side": "SELL",
+      "ticker": "BNC"
+    },
+    {
+      "fees": 6.0468,
+      "pnl": 34.19,
+      "price": 2.8,
+      "shares": 462,
+      "side": "SELL",
+      "ticker": "INDP"
+    },
+    {
+      "fees": 2.6495,
+      "pnl": -33.54,
+      "price": 6.02,
+      "shares": 202,
+      "side": "SELL",
+      "ticker": "IRD"
+    },
+    {
+      "fees": 2.6079,
+      "pnl": -22.45,
+      "price": 6.4,
+      "shares": 192,
+      "side": "SELL",
+      "ticker": "VISN"
+    }
+  ],
+  "holdings": [
+    "CMRC",
+    "GPRO"
+  ],
+  "mean": 0.7383,
+  "n_trades_today": 6,
+  "recipe": "union_hot_score_h1",
+  "sells": [
+    "ANGX",
+    "ASO",
+    "BNC",
+    "INDP",
+    "IRD",
+    "VISN"
+  ],
+  "state": {
+    "after": "2026-09-14",
+    "cash": 7505.04,
+    "pos": {
+      "CMRC": {
+        "close_px": 3.640000104904175,
+        "cost": 1250.8742455474853,
+        "entry_date": "2026-09-11",
+        "entry_px": 3.130000114440918,
+        "fee_in": 5.1342,
+        "last_px": 3.509999990463257,
+        "min_hold": 1,
+        "notional": 1245.7400455474854,
+        "peak_px": 3.509999990463257,
+        "reason": "rank by hot_score; rank hot_score; list yday_gainer,yday_mover; ret5=+22.7; leftover $1247.81",
+        "shares": 398,
+        "ticker": "CMRC"
+      },
+      "GPRO": {
+        "close_px": 1.350000023841858,
+        "cost": 1258.8938787569045,
+        "entry_date": "2026-09-11",
+        "entry_px": 1.399999976158142,
+        "fee_in": 11.4939,
+        "last_px": 1.3700000047683716,
+        "min_hold": 1,
+        "notional": 1247.3999787569046,
+        "peak_px": 1.399999976158142,
+        "reason": "rank by hot_score; rank hot_score; list ohlc_hot; ret5=+0.7; leftover $1247.81",
+        "shares": 891,
+        "ticker": "GPRO"
+      }
+    },
+    "yday_equity": 10156.61
+  }
+}

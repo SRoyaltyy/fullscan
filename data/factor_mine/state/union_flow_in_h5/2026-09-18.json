@@ -1,0 +1,51 @@
+{
+  "buys": [],
+  "cash": 97.18,
+  "date": "2026-09-18",
+  "equity": 8892.74,
+  "fees": 0,
+  "fills": [],
+  "holdings": [
+    "LEN",
+    "TCOM"
+  ],
+  "mean": -1.6327,
+  "n_trades_today": 0,
+  "recipe": "union_flow_in_h5",
+  "sells": [],
+  "state": {
+    "after": "2026-09-18",
+    "cash": 97.18,
+    "pos": {
+      "LEN": {
+        "close_px": 76.43000030517578,
+        "cost": 4517.437846191407,
+        "entry_date": "2026-09-16",
+        "entry_px": 80.62999725341797,
+        "fee_in": 2.158,
+        "last_px": 78.25,
+        "min_hold": 5,
+        "notional": 4515.279846191406,
+        "peak_px": 81.0,
+        "reason": "union \u2229 flow_in hold 5, no \ud83d\udea8; gate flow_in=True; list overnight; ret5=-0.4; leftover $4580.09",
+        "shares": 56,
+        "ticker": "LEN"
+      },
+      "TCOM": {
+        "close_px": 40.68000030517578,
+        "cost": 4545.553033874512,
+        "entry_date": "2026-09-16",
+        "entry_px": 40.93000030517578,
+        "fee_in": 2.323,
+        "last_px": 40.61000061035156,
+        "min_hold": 5,
+        "notional": 4543.230033874512,
+        "peak_px": 40.93000030517578,
+        "reason": "union \u2229 flow_in hold 5, no \ud83d\udea8; gate flow_in=True; list earn_react; ret5=-3.1; leftover $4580.09",
+        "shares": 111,
+        "ticker": "TCOM"
+      }
+    },
+    "yday_equity": 8892.74
+  }
+}

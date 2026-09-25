@@ -1,0 +1,71 @@
+{
+  "buys": [
+    "JKS",
+    "ULTA"
+  ],
+  "cash": 128.16,
+  "date": "2026-08-28",
+  "equity": 9836.08,
+  "fees": 6.8287,
+  "fills": [
+    {
+      "fees": 4.8117,
+      "pnl": null,
+      "price": 13.37,
+      "shares": 373,
+      "side": "BUY",
+      "ticker": "JKS"
+    },
+    {
+      "fees": 2.017,
+      "pnl": null,
+      "price": 542.0,
+      "shares": 9,
+      "side": "BUY",
+      "ticker": "ULTA"
+    }
+  ],
+  "holdings": [
+    "JKS",
+    "ULTA"
+  ],
+  "mean": -1.6392,
+  "n_trades_today": 2,
+  "recipe": "union_flow_in_h5",
+  "sells": [],
+  "state": {
+    "after": "2026-08-28",
+    "cash": 128.16,
+    "pos": {
+      "JKS": {
+        "close_px": 13.539999961853027,
+        "cost": 4991.821657313538,
+        "entry_date": "2026-08-28",
+        "entry_px": 13.369999885559082,
+        "fee_in": 4.8117,
+        "last_px": 13.369999885559082,
+        "min_hold": 5,
+        "notional": 4987.009957313538,
+        "peak_px": 13.369999885559082,
+        "reason": "union \u2229 flow_in hold 5, no \ud83d\udea8; gate flow_in=True; list yday_mover; ret5=-14.9; leftover $5000.00",
+        "shares": 373,
+        "ticker": "JKS"
+      },
+      "ULTA": {
+        "close_px": 517.5,
+        "cost": 4880.017,
+        "entry_date": "2026-08-28",
+        "entry_px": 542.0,
+        "fee_in": 2.017,
+        "last_px": 542.0,
+        "min_hold": 5,
+        "notional": 4878.0,
+        "peak_px": 542.0,
+        "reason": "union \u2229 flow_in hold 5, no \ud83d\udea8; gate flow_in=True; list earn_react; ret5=+4.8; leftover $5000.00",
+        "shares": 9,
+        "ticker": "ULTA"
+      }
+    },
+    "yday_equity": 9836.08
+  }
+}

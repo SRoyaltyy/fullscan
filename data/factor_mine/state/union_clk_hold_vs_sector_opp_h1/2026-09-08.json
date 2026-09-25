@@ -1,0 +1,57 @@
+{
+  "buys": [],
+  "cash": 10109.87,
+  "date": "2026-09-08",
+  "equity": 10109.87,
+  "fees": 9.796,
+  "fills": [
+    {
+      "fees": 2.0514,
+      "pnl": 305.33,
+      "price": 267.76,
+      "shares": 10,
+      "side": "SELL",
+      "ticker": "BE"
+    },
+    {
+      "fees": 2.0913,
+      "pnl": 54.17,
+      "price": 100.58,
+      "shares": 24,
+      "side": "SELL",
+      "ticker": "LULU"
+    },
+    {
+      "fees": 2.4722,
+      "pnl": 63.72,
+      "price": 17.07,
+      "shares": 146,
+      "side": "SELL",
+      "ticker": "MIR"
+    },
+    {
+      "fees": 3.1811,
+      "pnl": -37.76,
+      "price": 9.9,
+      "shares": 242,
+      "side": "SELL",
+      "ticker": "SCZM"
+    }
+  ],
+  "holdings": [],
+  "mean": 1.4973,
+  "n_trades_today": 4,
+  "recipe": "union_clk_hold_vs_sector_opp_h1",
+  "sells": [
+    "BE",
+    "LULU",
+    "MIR",
+    "SCZM"
+  ],
+  "state": {
+    "after": "2026-09-08",
+    "cash": 10109.87,
+    "pos": {},
+    "yday_equity": 10109.87
+  }
+}

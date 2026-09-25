@@ -1,0 +1,290 @@
+{
+  "buys": [
+    "FEAM",
+    "GLND",
+    "VICR",
+    "VKTX",
+    "HALO",
+    "BAND"
+  ],
+  "cash": 17478.46,
+  "date": "2026-09-23",
+  "equity": 10071.26,
+  "fees": 56.3991,
+  "fills": [
+    {
+      "fees": 2.0396,
+      "pnl": 82.54,
+      "price": 331.78,
+      "shares": 7,
+      "side": "SELL",
+      "ticker": "ARM"
+    },
+    {
+      "fees": 2.089,
+      "pnl": 36.56,
+      "price": 108.52,
+      "shares": 23,
+      "side": "SELL",
+      "ticker": "GRAL"
+    },
+    {
+      "fees": 10.4649,
+      "pnl": 642.4,
+      "price": 3.93,
+      "shares": 799,
+      "side": "SELL",
+      "ticker": "INDP"
+    },
+    {
+      "fees": 4.4873,
+      "pnl": -145.7,
+      "price": 6.83,
+      "shares": 342,
+      "side": "SELL",
+      "ticker": "NUAI"
+    },
+    {
+      "fees": 13.803,
+      "pnl": null,
+      "price": 2.92,
+      "shares": 1070,
+      "side": "BUY",
+      "ticker": "FEAM"
+    },
+    {
+      "fees": 14.9253,
+      "pnl": null,
+      "price": 2.7,
+      "shares": 1157,
+      "side": "BUY",
+      "ticker": "GLND"
+    },
+    {
+      "fees": 2.023,
+      "pnl": null,
+      "price": 266.5,
+      "shares": 11,
+      "side": "BUY",
+      "ticker": "VICR"
+    },
+    {
+      "fees": 2.212,
+      "pnl": null,
+      "price": 41.76,
+      "shares": 74,
+      "side": "BUY",
+      "ticker": "VKTX"
+    },
+    {
+      "fees": 2.142727396424176,
+      "pnl": null,
+      "price": 116.85,
+      "shares": 20,
+      "side": "SHORT",
+      "ticker": "HALO"
+    },
+    {
+      "fees": 2.212251230945326,
+      "pnl": null,
+      "price": 58.01,
+      "shares": 42,
+      "side": "SHORT",
+      "ticker": "BAND"
+    }
+  ],
+  "holdings": [
+    "AEHL",
+    "AMD",
+    "BAND",
+    "FEAM",
+    "FIVN",
+    "GLND",
+    "HALO",
+    "PAYX",
+    "USFD",
+    "VICR",
+    "VKTX"
+  ],
+  "mean": 2.3028,
+  "n_trades_today": 10,
+  "recipe": "combo_sh_5050_shared",
+  "sells": [
+    "ARM",
+    "GRAL",
+    "INDP",
+    "NUAI"
+  ],
+  "state": {
+    "after": "2026-09-23",
+    "cash": 17478.46,
+    "pos": {
+      "AEHL": {
+        "close_px": 8.229999542236328,
+        "cost": 4.234637536234398,
+        "entry_date": "2026-09-21",
+        "entry_px": 8.260000228881836,
+        "fee_in": 4.234637536234398,
+        "last_px": 7.619999885559082,
+        "notional": 2618.420072555542,
+        "owner": "short_news_r_h3",
+        "peak_px": 7.619999885559082,
+        "reason": "news\ud83d\udd34; gate news=bad; list yday_mover; ret5=+7.7; combo leftover $2620.88; owner short_news_r_h3",
+        "shares": 317,
+        "side": "short",
+        "ticker": "AEHL"
+      },
+      "AMD": {
+        "close_px": 614.6099853515625,
+        "cost": 2.0946868498501714,
+        "entry_date": "2026-09-21",
+        "entry_px": 583.8800048828125,
+        "fee_in": 2.0946868498501714,
+        "last_px": 621.5,
+        "notional": 2335.52001953125,
+        "owner": "short_news_r_h3",
+        "peak_px": 583.8800048828125,
+        "reason": "news\ud83d\udd34; gate news=bad; list ohlc_hot; ret5=+8.5; combo leftover $2620.88; owner short_news_r_h3",
+        "shares": 4,
+        "side": "short",
+        "ticker": "AMD"
+      },
+      "BAND": {
+        "close_px": 59.130001068115234,
+        "cost": 2.212251230945326,
+        "entry_date": "2026-09-23",
+        "entry_px": 58.0099983215332,
+        "fee_in": 2.212251230945326,
+        "last_px": 58.0099983215332,
+        "notional": 2436.4199295043945,
+        "owner": "short_news_r_h3",
+        "peak_px": 58.0099983215332,
+        "reason": "news\ud83d\udd34; gate news=bad; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+16.6; combo leftover $2448.37; owner short_news_r_h3",
+        "shares": 42,
+        "side": "short",
+        "ticker": "BAND"
+      },
+      "FEAM": {
+        "close_px": 2.640000104904175,
+        "cost": 3138.2030816345214,
+        "entry_date": "2026-09-23",
+        "entry_px": 2.9200000762939453,
+        "fee_in": 13.803,
+        "last_px": 2.9200000762939453,
+        "notional": 3124.4000816345215,
+        "owner": "union_hot_n4_h1",
+        "peak_px": 2.9200000762939453,
+        "reason": "top 4 by hot; rank hot_score; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+133.3; combo leftover $3126.55; owner union_hot_n4_h1",
+        "shares": 1070,
+        "side": "long",
+        "ticker": "FEAM"
+      },
+      "FIVN": {
+        "close_px": 37.68000030517578,
+        "cost": 2.647734240931681,
+        "entry_date": "2026-09-18",
+        "entry_px": 34.439998626708984,
+        "fee_in": 2.647734240931681,
+        "last_px": 38.904998779296875,
+        "notional": 5165.999794006348,
+        "owner": "short_news_r_h3",
+        "peak_px": 33.0,
+        "reason": "news\ud83d\udd34; gate news=bad; list flatten; \ud83d\udd35; \u26aa; ret5=+14.0; combo leftover $5171.08; owner short_news_r_h3",
+        "shares": 150,
+        "side": "short",
+        "ticker": "FIVN"
+      },
+      "GLND": {
+        "close_px": 2.9100000858306885,
+        "cost": 3138.825355170059,
+        "entry_date": "2026-09-23",
+        "entry_px": 2.700000047683716,
+        "fee_in": 14.9253,
+        "last_px": 2.700000047683716,
+        "notional": 3123.900055170059,
+        "owner": "union_hot_n4_h1",
+        "peak_px": 2.700000047683716,
+        "reason": "top 4 by hot; rank hot_score; list yday_mover; \ud83d\udd35; ret5=+109.2; combo leftover $3126.55; owner union_hot_n4_h1",
+        "shares": 1157,
+        "side": "long",
+        "ticker": "GLND"
+      },
+      "HALO": {
+        "close_px": 112.44000244140625,
+        "cost": 2.142727396424176,
+        "entry_date": "2026-09-23",
+        "entry_px": 116.8499984741211,
+        "fee_in": 2.142727396424176,
+        "last_px": 116.8499984741211,
+        "notional": 2336.999969482422,
+        "owner": "short_news_r_h3",
+        "peak_px": 116.8499984741211,
+        "reason": "news\ud83d\udd34; gate news=bad; list flatten; \ud83d\udd35; \u26aa; ret5=+8.4; combo leftover $2448.37; owner short_news_r_h3",
+        "shares": 20,
+        "side": "short",
+        "ticker": "HALO"
+      },
+      "PAYX": {
+        "close_px": 104.48999786376953,
+        "cost": 2.1419027397260275,
+        "entry_date": "2026-09-22",
+        "entry_px": 115.71,
+        "fee_in": 2.1419027397260275,
+        "last_px": 109.66999816894531,
+        "notional": 2314.2,
+        "owner": "short_news_r_h3",
+        "peak_px": 109.66999816894531,
+        "reason": "news\ud83d\udd34; gate news=bad; list overnight; ret5=-3.0; combo leftover $2349.25; owner short_news_r_h3",
+        "shares": 20,
+        "side": "short",
+        "ticker": "PAYX"
+      },
+      "USFD": {
+        "close_px": 93.93000030517578,
+        "cost": 2.1519608219178084,
+        "entry_date": "2026-09-22",
+        "entry_px": 94.08,
+        "fee_in": 2.1519608219178084,
+        "last_px": 93.97000122070312,
+        "notional": 2257.92,
+        "owner": "short_news_r_h3",
+        "peak_px": 93.97000122070312,
+        "reason": "news\ud83d\udd34; gate news=bad; list flatten; ret5=-0.6; combo leftover $2349.25; owner short_news_r_h3",
+        "shares": 24,
+        "side": "short",
+        "ticker": "USFD"
+      },
+      "VICR": {
+        "close_px": 283.1600036621094,
+        "cost": 2933.523,
+        "entry_date": "2026-09-23",
+        "entry_px": 266.5,
+        "fee_in": 2.023,
+        "last_px": 266.5,
+        "notional": 2931.5,
+        "owner": "union_hot_n4_h1",
+        "peak_px": 266.5,
+        "reason": "top 4 by hot; rank hot_score; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+45.9; combo leftover $3126.55; owner union_hot_n4_h1",
+        "shares": 11,
+        "side": "long",
+        "ticker": "VICR"
+      },
+      "VKTX": {
+        "close_px": 41.650001525878906,
+        "cost": 3092.451875793457,
+        "entry_date": "2026-09-23",
+        "entry_px": 41.7599983215332,
+        "fee_in": 2.212,
+        "last_px": 41.7599983215332,
+        "notional": 3090.239875793457,
+        "owner": "union_hot_n4_h1",
+        "peak_px": 41.7599983215332,
+        "reason": "top 4 by hot; rank hot_score; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+36.4; combo leftover $3126.55; owner union_hot_n4_h1",
+        "shares": 74,
+        "side": "long",
+        "ticker": "VKTX"
+      }
+    },
+    "yday_equity": 10071.26
+  }
+}

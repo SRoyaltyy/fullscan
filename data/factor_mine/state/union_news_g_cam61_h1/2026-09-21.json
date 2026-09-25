@@ -1,0 +1,84 @@
+{
+  "buys": [
+    "ISRG"
+  ],
+  "cash": 205.29,
+  "date": "2026-09-21",
+  "equity": 8639.94,
+  "fees": 11.3332,
+  "fills": [
+    {
+      "fees": 2.3308,
+      "pnl": -22.31,
+      "price": 13.9,
+      "shares": 104,
+      "side": "SELL",
+      "ticker": "BHVN"
+    },
+    {
+      "fees": 2.025,
+      "pnl": -80.83,
+      "price": 231.62,
+      "shares": 5,
+      "side": "SELL",
+      "ticker": "CRWD"
+    },
+    {
+      "fees": 2.6094,
+      "pnl": 116.95,
+      "price": 22.78,
+      "shares": 185,
+      "side": "SELL",
+      "ticker": "GME"
+    },
+    {
+      "fees": 2.315,
+      "pnl": -25.39,
+      "price": 14.58,
+      "shares": 99,
+      "side": "SELL",
+      "ticker": "RARE"
+    },
+    {
+      "fees": 2.053,
+      "pnl": null,
+      "price": 393.89,
+      "shares": 21,
+      "side": "BUY",
+      "ticker": "ISRG"
+    }
+  ],
+  "holdings": [
+    "ISRG"
+  ],
+  "mean": 2.1691,
+  "n_trades_today": 5,
+  "recipe": "union_news_g_cam61_h1",
+  "sells": [
+    "BHVN",
+    "CRWD",
+    "GME",
+    "RARE"
+  ],
+  "state": {
+    "after": "2026-09-21",
+    "cash": 205.29,
+    "pos": {
+      "ISRG": {
+        "close_px": 401.6499938964844,
+        "cost": 8273.743307617187,
+        "entry_date": "2026-09-21",
+        "entry_px": 393.8900146484375,
+        "fee_in": 2.053,
+        "last_px": 393.8900146484375,
+        "min_hold": 1,
+        "notional": 8271.690307617188,
+        "peak_px": 393.8900146484375,
+        "reason": "merged news\ud83d\udfe2 and cameras +6 \u2212\u22641; gate news=good,n_pos_min=6,cam_bad_max=1; rank cond; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+6.6; leftover $8479.03",
+        "shares": 21,
+        "ticker": "ISRG"
+      }
+    },
+    "yday_equity": 8639.94
+  }
+}

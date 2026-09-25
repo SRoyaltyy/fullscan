@@ -1,0 +1,133 @@
+{
+  "buys": [],
+  "cash": 14723.32,
+  "date": "2026-09-15",
+  "equity": 9835.42,
+  "fees": 0,
+  "fills": [],
+  "holdings": [
+    "AXGN",
+    "BHVN",
+    "CRDL",
+    "LDI",
+    "REAX",
+    "RWT",
+    "TGB",
+    "TYRA"
+  ],
+  "mean": 0.994,
+  "n_trades_today": 0,
+  "recipe": "short_clk_neg_weak_fail_h3",
+  "sells": [],
+  "state": {
+    "after": "2026-09-15",
+    "cash": 14723.32,
+    "pos": {
+      "AXGN": {
+        "close_px": 44.970001220703125,
+        "cost": 2.0682936984545566,
+        "entry_date": "2026-09-11",
+        "entry_px": 42.47999954223633,
+        "fee_in": 2.0682936984545566,
+        "last_px": 43.849998474121094,
+        "notional": 594.7199935913086,
+        "peak_px": 41.54999923706055,
+        "reason": "Clock-B #4 neg catalyst + weakness + failed recovery; gate clk_neg_weak_fail=True; list yday_mover; ret5=-11.1; leftover $616.19",
+        "shares": 14,
+        "ticker": "AXGN"
+      },
+      "BHVN": {
+        "close_px": 12.34000015258789,
+        "cost": 2.167778355820538,
+        "entry_date": "2026-09-11",
+        "entry_px": 13.029999732971191,
+        "fee_in": 2.167778355820538,
+        "last_px": 12.569999694824219,
+        "notional": 612.409987449646,
+        "peak_px": 12.520000457763672,
+        "reason": "Clock-B #4 neg catalyst + weakness + failed recovery; gate clk_neg_weak_fail=True; list yday_mover; ret5=-19.4; leftover $616.19",
+        "shares": 47,
+        "ticker": "BHVN"
+      },
+      "CRDL": {
+        "close_px": 1.850000023841858,
+        "cost": 3.9858517805844134,
+        "entry_date": "2026-09-11",
+        "entry_px": 2.0299999713897705,
+        "fee_in": 3.9858517805844134,
+        "last_px": 1.9600000381469727,
+        "notional": 615.0899913311005,
+        "peak_px": 1.9600000381469727,
+        "reason": "Clock-B #4 neg catalyst + weakness + failed recovery; gate clk_neg_weak_fail=True; list yday_mover; ret5=-8.3; leftover $616.19",
+        "shares": 303,
+        "ticker": "CRDL"
+      },
+      "LDI": {
+        "close_px": 0.7319999933242798,
+        "cost": 8.47306027444552,
+        "entry_date": "2026-09-11",
+        "entry_px": 0.8500000238418579,
+        "fee_in": 8.47306027444552,
+        "last_px": 0.8199999928474426,
+        "notional": 615.4000172615051,
+        "peak_px": 0.8199999928474426,
+        "reason": "Clock-B #4 neg catalyst + weakness + failed recovery; gate clk_neg_weak_fail=True; list yday_gainer; \ud83d\udd35; ret5=-11.5; leftover $616.19",
+        "shares": 724,
+        "ticker": "LDI"
+      },
+      "REAX": {
+        "close_px": 19.270000457763672,
+        "cost": 2.125780273489756,
+        "entry_date": "2026-09-11",
+        "entry_px": 18.559999465942383,
+        "fee_in": 2.125780273489756,
+        "last_px": 19.700000762939453,
+        "notional": 612.4799823760986,
+        "peak_px": 18.559999465942383,
+        "reason": "Clock-B #4 neg catalyst + weakness + failed recovery; gate clk_neg_weak_fail=True; list yday_mover; ret5=+0.7; leftover $616.19",
+        "shares": 33,
+        "ticker": "REAX"
+      },
+      "RWT": {
+        "close_px": 3.9100000858306885,
+        "cost": 2.570976712237319,
+        "entry_date": "2026-09-11",
+        "entry_px": 3.5199999809265137,
+        "fee_in": 2.570976712237319,
+        "last_px": 3.799999952316284,
+        "notional": 615.9999966621399,
+        "peak_px": 3.5199999809265137,
+        "reason": "Clock-B #4 neg catalyst + weakness + failed recovery; gate clk_neg_weak_fail=True; list yday_mover; \ud83d\udd35; ret5=-19.0; leftover $616.19",
+        "shares": 175,
+        "ticker": "RWT"
+      },
+      "TGB": {
+        "close_px": 7.980000019073486,
+        "cost": 2.2572991790353436,
+        "entry_date": "2026-09-11",
+        "entry_px": 8.020000457763672,
+        "fee_in": 2.2572991790353436,
+        "last_px": 7.900000095367432,
+        "notional": 609.5200347900391,
+        "peak_px": 7.690000057220459,
+        "reason": "Clock-B #4 neg catalyst + weakness + failed recovery; gate clk_neg_weak_fail=True; list yday_mover; ret5=-4.5; leftover $616.19",
+        "shares": 76,
+        "ticker": "TGB"
+      },
+      "TYRA": {
+        "close_px": 25.43000030517578,
+        "cost": 2.104832328169313,
+        "entry_date": "2026-09-11",
+        "entry_px": 23.6299991607666,
+        "fee_in": 2.104832328169313,
+        "last_px": 24.709999084472656,
+        "notional": 614.3799781799316,
+        "peak_px": 23.200000762939453,
+        "reason": "Clock-B #4 neg catalyst + weakness + failed recovery; gate clk_neg_weak_fail=True; list yday_gainer; ret5=-5.3; leftover $616.19",
+        "shares": 26,
+        "ticker": "TYRA"
+      }
+    },
+    "yday_equity": 9835.42
+  }
+}

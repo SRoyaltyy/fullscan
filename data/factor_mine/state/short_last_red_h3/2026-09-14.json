@@ -1,0 +1,133 @@
+{
+  "buys": [],
+  "cash": 15417.19,
+  "date": "2026-09-14",
+  "equity": 10470.58,
+  "fees": 0,
+  "fills": [],
+  "holdings": [
+    "AEO",
+    "AUPH",
+    "BHVN",
+    "NAVN",
+    "NVT",
+    "ORCL",
+    "OVID",
+    "SLBT"
+  ],
+  "mean": 0.255,
+  "n_trades_today": 0,
+  "recipe": "short_last_red_h3",
+  "sells": [],
+  "state": {
+    "after": "2026-09-14",
+    "cash": 15417.19,
+    "pos": {
+      "AEO": {
+        "close_px": 15.430000305175781,
+        "cost": 2.159732602785711,
+        "entry_date": "2026-09-11",
+        "entry_px": 14.710000038146973,
+        "fee_in": 2.159732602785711,
+        "last_px": 14.850000381469727,
+        "notional": 647.2400016784668,
+        "peak_px": 14.710000038146973,
+        "reason": "last bar red; gate last_red=True; list yday_mover; ret5=-14.6; leftover $651.51",
+        "shares": 44,
+        "ticker": "AEO"
+      },
+      "AUPH": {
+        "close_px": 16.40999984741211,
+        "cost": 2.147841096642899,
+        "entry_date": "2026-09-11",
+        "entry_px": 16.280000686645508,
+        "fee_in": 2.147841096642899,
+        "last_px": 16.030000686645508,
+        "notional": 651.2000274658203,
+        "peak_px": 16.030000686645508,
+        "reason": "last bar red; gate last_red=True; list flatten; ret5=-0.1; leftover $651.51",
+        "shares": 40,
+        "ticker": "AUPH"
+      },
+      "BHVN": {
+        "close_px": 12.640000343322754,
+        "cost": 2.1778493147027005,
+        "entry_date": "2026-09-11",
+        "entry_px": 13.029999732971191,
+        "fee_in": 2.1778493147027005,
+        "last_px": 12.520000457763672,
+        "notional": 651.4999866485596,
+        "peak_px": 12.520000457763672,
+        "reason": "last bar red; gate last_red=True; list yday_mover; ret5=-19.4; leftover $651.51",
+        "shares": 50,
+        "ticker": "BHVN"
+      },
+      "NAVN": {
+        "close_px": 21.3700008392334,
+        "cost": 2.1205043840800246,
+        "entry_date": "2026-09-11",
+        "entry_px": 20.610000610351562,
+        "fee_in": 2.1205043840800246,
+        "last_px": 21.100000381469727,
+        "notional": 638.9100189208984,
+        "peak_px": 20.610000610351562,
+        "reason": "last bar red; gate last_red=True; list yday_mover; ret5=-26.9; leftover $651.51",
+        "shares": 31,
+        "ticker": "NAVN"
+      },
+      "NVT": {
+        "close_px": 146.63999938964844,
+        "cost": 2.0392909587703336,
+        "entry_date": "2026-09-11",
+        "entry_px": 157.77999877929688,
+        "fee_in": 2.0392909587703336,
+        "last_px": 150.0,
+        "notional": 631.1199951171875,
+        "peak_px": 150.0,
+        "reason": "last bar red; gate last_red=True; list flatten; \ud83d\udd35; ret5=+2.0; leftover $651.51",
+        "shares": 4,
+        "ticker": "NVT"
+      },
+      "ORCL": {
+        "close_px": 144.7899932861328,
+        "cost": 2.0325147939185575,
+        "entry_date": "2026-09-11",
+        "entry_px": 164.42999267578125,
+        "fee_in": 2.0325147939185575,
+        "last_px": 141.4199981689453,
+        "notional": 493.28997802734375,
+        "peak_px": 141.4199981689453,
+        "reason": "last bar red; gate last_red=True; list flatten,earn_react; \ud83d\udd35; \u26aa; ret5=-0.7; leftover $651.51",
+        "shares": 3,
+        "ticker": "ORCL"
+      },
+      "OVID": {
+        "close_px": 2.740000009536743,
+        "cost": 3.1375010960147804,
+        "entry_date": "2026-09-11",
+        "entry_px": 2.7300000190734863,
+        "fee_in": 3.1375010960147804,
+        "last_px": 2.755000114440918,
+        "notional": 649.7400045394897,
+        "peak_px": 2.7300000190734863,
+        "reason": "last bar red; gate last_red=True; list flatten; ret5=-5.4; leftover $651.51",
+        "shares": 238,
+        "ticker": "OVID"
+      },
+      "SLBT": {
+        "close_px": 2.069999933242798,
+        "cost": 4.091307944474155,
+        "entry_date": "2026-09-11",
+        "entry_px": 2.0899999141693115,
+        "fee_in": 4.091307944474155,
+        "last_px": 2.0199999809265137,
+        "notional": 649.9899733066559,
+        "peak_px": 2.0199999809265137,
+        "reason": "last bar red; gate last_red=True; list yday_mover; ret5=-33.3; leftover $651.51",
+        "shares": 311,
+        "ticker": "SLBT"
+      }
+    },
+    "yday_equity": 10470.58
+  }
+}

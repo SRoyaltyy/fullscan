@@ -1,0 +1,105 @@
+{
+  "buys": [],
+  "cash": 11126.42,
+  "date": "2026-09-14",
+  "equity": 9864.32,
+  "fees": 13.188,
+  "fills": [
+    {
+      "fees": 2.335,
+      "pnl": -26.57,
+      "price": 5.57,
+      "shares": 115,
+      "side": "COVER",
+      "ticker": "ANGX"
+    },
+    {
+      "fees": 2.023,
+      "pnl": -2.32,
+      "price": 54.75,
+      "shares": 11,
+      "side": "COVER",
+      "ticker": "ASO"
+    },
+    {
+      "fees": 2.368,
+      "pnl": -19.9,
+      "price": 5.03,
+      "shares": 126,
+      "side": "COVER",
+      "ticker": "BNC"
+    },
+    {
+      "fees": 2.293,
+      "pnl": 9.51,
+      "price": 6.02,
+      "shares": 101,
+      "side": "COVER",
+      "ticker": "IRD"
+    },
+    {
+      "fees": 2.011,
+      "pnl": -16.59,
+      "price": 86.06,
+      "shares": 7,
+      "side": "COVER",
+      "ticker": "SWKS"
+    },
+    {
+      "fees": 2.158,
+      "pnl": 32.61,
+      "price": 10.29,
+      "shares": 56,
+      "side": "COVER",
+      "ticker": "WLTH"
+    }
+  ],
+  "holdings": [
+    "INDP",
+    "QRVO"
+  ],
+  "mean": -0.6838,
+  "n_trades_today": 6,
+  "recipe": "short_rsi_ob_h1",
+  "sells": [
+    "ANGX",
+    "ASO",
+    "BNC",
+    "IRD",
+    "SWKS",
+    "WLTH"
+  ],
+  "state": {
+    "after": "2026-09-14",
+    "cash": 11126.42,
+    "pos": {
+      "INDP": {
+        "close_px": 3.140000104904175,
+        "cost": 3.03221369893061,
+        "entry_date": "2026-09-11",
+        "entry_px": 2.700000047683716,
+        "fee_in": 3.03221369893061,
+        "last_px": 2.799999952316284,
+        "notional": 621.0000109672546,
+        "peak_px": 2.700000047683716,
+        "reason": "RSI overbought; gate rsi_ob=True; list yday_gainer,yday_mover; ret5=+120.7; leftover $623.10",
+        "shares": 230,
+        "ticker": "INDP"
+      },
+      "QRVO": {
+        "close_px": 107.9800033569336,
+        "cost": 2.0404568491896535,
+        "entry_date": "2026-09-11",
+        "entry_px": 112.83499908447266,
+        "fee_in": 2.0404568491896535,
+        "last_px": 114.11000061035156,
+        "notional": 564.1749954223633,
+        "peak_px": 112.83499908447266,
+        "reason": "RSI overbought; gate rsi_ob=True; list yday_gainer,ohlc_hot; \ud83d\udd35; ret5=+11.9; leftover $623.10",
+        "shares": 5,
+        "ticker": "QRVO"
+      }
+    },
+    "yday_equity": 9864.32
+  }
+}

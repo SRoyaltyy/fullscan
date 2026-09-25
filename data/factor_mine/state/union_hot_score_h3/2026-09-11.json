@@ -1,0 +1,206 @@
+{
+  "buys": [
+    "INDP",
+    "BNC",
+    "VISN",
+    "GPRO",
+    "CMRC",
+    "ASO",
+    "ANGX"
+  ],
+  "cash": 10.57,
+  "date": "2026-09-11",
+  "equity": 9651.08,
+  "fees": 30.6587,
+  "fills": [
+    {
+      "fees": 5.3922,
+      "pnl": null,
+      "price": 2.7,
+      "shares": 418,
+      "side": "BUY",
+      "ticker": "INDP"
+    },
+    {
+      "fees": 2.967,
+      "pnl": null,
+      "price": 4.91,
+      "shares": 230,
+      "side": "BUY",
+      "ticker": "BNC"
+    },
+    {
+      "fees": 2.512,
+      "pnl": null,
+      "price": 6.49,
+      "shares": 174,
+      "side": "BUY",
+      "ticker": "VISN"
+    },
+    {
+      "fees": 10.3974,
+      "pnl": null,
+      "price": 1.4,
+      "shares": 806,
+      "side": "BUY",
+      "ticker": "GPRO"
+    },
+    {
+      "fees": 4.644,
+      "pnl": null,
+      "price": 3.13,
+      "shares": 360,
+      "side": "BUY",
+      "ticker": "CMRC"
+    },
+    {
+      "fees": 2.05,
+      "pnl": null,
+      "price": 54.91,
+      "shares": 20,
+      "side": "BUY",
+      "ticker": "ASO"
+    },
+    {
+      "fees": 2.6961,
+      "pnl": null,
+      "price": 5.38,
+      "shares": 209,
+      "side": "BUY",
+      "ticker": "ANGX"
+    }
+  ],
+  "holdings": [
+    "ANGX",
+    "ASO",
+    "BNC",
+    "CMRC",
+    "GPRO",
+    "INDP",
+    "IRD",
+    "VISN"
+  ],
+  "mean": 1.1102,
+  "n_trades_today": 7,
+  "recipe": "union_hot_score_h3",
+  "sells": [],
+  "state": {
+    "after": "2026-09-11",
+    "cash": 10.57,
+    "pos": {
+      "ANGX": {
+        "close_px": 5.449999809265137,
+        "cost": 1127.1161239181517,
+        "entry_date": "2026-09-11",
+        "entry_px": 5.380000114440918,
+        "fee_in": 2.6961,
+        "last_px": 5.380000114440918,
+        "min_hold": 3,
+        "notional": 1124.4200239181519,
+        "peak_px": 5.380000114440918,
+        "reason": "rank by hot_score; rank hot_score; list yday_gainer; \ud83d\udd35; ret5=+19.8; leftover $1129.46",
+        "shares": 209,
+        "ticker": "ANGX"
+      },
+      "ASO": {
+        "close_px": 55.36000061035156,
+        "cost": 1100.2499969482421,
+        "entry_date": "2026-09-11",
+        "entry_px": 54.90999984741211,
+        "fee_in": 2.05,
+        "last_px": 54.90999984741211,
+        "min_hold": 3,
+        "notional": 1098.1999969482422,
+        "peak_px": 54.90999984741211,
+        "reason": "rank by hot_score; rank hot_score; list yday_gainer; \ud83d\udd35; ret5=+24.1; leftover $1129.46",
+        "shares": 20,
+        "ticker": "ASO"
+      },
+      "BNC": {
+        "close_px": 4.800000190734863,
+        "cost": 1132.2669649047853,
+        "entry_date": "2026-09-11",
+        "entry_px": 4.909999847412109,
+        "fee_in": 2.967,
+        "last_px": 4.909999847412109,
+        "min_hold": 3,
+        "notional": 1129.2999649047852,
+        "peak_px": 4.909999847412109,
+        "reason": "rank by hot_score; rank hot_score; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+76.3; leftover $1129.46",
+        "shares": 230,
+        "ticker": "BNC"
+      },
+      "CMRC": {
+        "close_px": 3.505000114440918,
+        "cost": 1131.4440411987305,
+        "entry_date": "2026-09-11",
+        "entry_px": 3.130000114440918,
+        "fee_in": 4.644,
+        "last_px": 3.130000114440918,
+        "min_hold": 3,
+        "notional": 1126.8000411987305,
+        "peak_px": 3.130000114440918,
+        "reason": "rank by hot_score; rank hot_score; list yday_gainer,yday_mover; ret5=+22.7; leftover $1129.46",
+        "shares": 360,
+        "ticker": "CMRC"
+      },
+      "GPRO": {
+        "close_px": 1.3799999952316284,
+        "cost": 1138.7973807834626,
+        "entry_date": "2026-09-11",
+        "entry_px": 1.399999976158142,
+        "fee_in": 10.3974,
+        "last_px": 1.399999976158142,
+        "min_hold": 3,
+        "notional": 1128.3999807834625,
+        "peak_px": 1.399999976158142,
+        "reason": "rank by hot_score; rank hot_score; list ohlc_hot; ret5=+0.7; leftover $1129.46",
+        "shares": 806,
+        "ticker": "GPRO"
+      },
+      "INDP": {
+        "close_px": 2.7699999809265137,
+        "cost": 1133.9922199317932,
+        "entry_date": "2026-09-11",
+        "entry_px": 2.700000047683716,
+        "fee_in": 5.3922,
+        "last_px": 2.700000047683716,
+        "min_hold": 3,
+        "notional": 1128.6000199317932,
+        "peak_px": 2.700000047683716,
+        "reason": "rank by hot_score; rank hot_score; list yday_gainer,yday_mover; ret5=+120.7; leftover $1129.46",
+        "shares": 418,
+        "ticker": "INDP"
+      },
+      "IRD": {
+        "close_px": 6.039999961853027,
+        "cost": 1226.5830566482543,
+        "entry_date": "2026-09-04",
+        "entry_px": 4.53000020980835,
+        "fee_in": 3.483,
+        "last_px": 6.159999847412109,
+        "min_hold": 3,
+        "notional": 1223.1000566482544,
+        "peak_px": 6.159999847412109,
+        "reason": "rank by hot_score; rank hot_score; list yday_gainer,yday_mover; \ud83d\udd35; \u26aa; ret5=+19.5; leftover $1225.23",
+        "shares": 270,
+        "ticker": "IRD"
+      },
+      "VISN": {
+        "close_px": 6.480000019073486,
+        "cost": 1131.7719601745605,
+        "entry_date": "2026-09-11",
+        "entry_px": 6.489999771118164,
+        "fee_in": 2.512,
+        "last_px": 6.489999771118164,
+        "min_hold": 3,
+        "notional": 1129.2599601745605,
+        "peak_px": 6.489999771118164,
+        "reason": "rank by hot_score; rank hot_score; list ohlc_hot; \ud83d\udd35; ret5=+0.5; leftover $1129.46",
+        "shares": 174,
+        "ticker": "VISN"
+      }
+    },
+    "yday_equity": 9651.08
+  }
+}

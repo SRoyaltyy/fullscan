@@ -1,0 +1,99 @@
+{
+  "buys": [
+    "SMTC",
+    "GME"
+  ],
+  "cash": 22.06,
+  "date": "2026-09-17",
+  "equity": 8511.07,
+  "fees": 11.4275,
+  "fills": [
+    {
+      "fees": 2.2466,
+      "pnl": 33.28,
+      "price": 37.64,
+      "shares": 74,
+      "side": "SELL",
+      "ticker": "DBX"
+    },
+    {
+      "fees": 2.2292,
+      "pnl": -171.41,
+      "price": 37.57,
+      "shares": 69,
+      "side": "SELL",
+      "ticker": "SM"
+    },
+    {
+      "fees": 2.3447,
+      "pnl": 20.55,
+      "price": 26.51,
+      "shares": 105,
+      "side": "SELL",
+      "ticker": "WAY"
+    },
+    {
+      "fees": 2.062,
+      "pnl": null,
+      "price": 170.85,
+      "shares": 24,
+      "side": "BUY",
+      "ticker": "SMTC"
+    },
+    {
+      "fees": 2.545,
+      "pnl": null,
+      "price": 22.12,
+      "shares": 185,
+      "side": "BUY",
+      "ticker": "GME"
+    }
+  ],
+  "holdings": [
+    "GME",
+    "SMTC"
+  ],
+  "mean": 2.7584,
+  "n_trades_today": 5,
+  "recipe": "union_news_g_cam61_h1",
+  "sells": [
+    "DBX",
+    "SM",
+    "WAY"
+  ],
+  "state": {
+    "after": "2026-09-17",
+    "cash": 22.06,
+    "pos": {
+      "GME": {
+        "close_px": 22.770000457763672,
+        "cost": 4094.745155258179,
+        "entry_date": "2026-09-17",
+        "entry_px": 22.1200008392334,
+        "fee_in": 2.545,
+        "last_px": 22.1200008392334,
+        "min_hold": 1,
+        "notional": 4092.2001552581787,
+        "peak_px": 22.1200008392334,
+        "reason": "merged news\ud83d\udfe2 and cameras +6 \u2212\u22641; gate news=good,n_pos_min=6,cam_bad_max=1; rank cond; list ohlc_hot; \ud83d\udd35; ret5=+10.5; leftover $4109.63",
+        "shares": 185,
+        "ticker": "GME"
+      },
+      "SMTC": {
+        "close_px": 178.19000244140625,
+        "cost": 4102.462146484375,
+        "entry_date": "2026-09-17",
+        "entry_px": 170.85000610351562,
+        "fee_in": 2.062,
+        "last_px": 170.85000610351562,
+        "min_hold": 1,
+        "notional": 4100.400146484375,
+        "peak_px": 170.85000610351562,
+        "reason": "merged news\ud83d\udfe2 and cameras +6 \u2212\u22641; gate news=good,n_pos_min=6,cam_bad_max=1; rank cond; list probable,yday_gainer,yday_mover; \ud83d\udd35; ret5=+2.2; leftover $4109.63",
+        "shares": 24,
+        "ticker": "SMTC"
+      }
+    },
+    "yday_equity": 8511.07
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "buys": [
+    "GFR"
+  ],
+  "cash": 15144.66,
+  "date": "2026-09-16",
+  "equity": 10348.55,
+  "fees": 21.9813,
+  "fills": [
+    {
+      "fees": 10.0878,
+      "pnl": -317.56,
+      "price": 3.75,
+      "shares": 782,
+      "side": "COVER",
+      "ticker": "MYGN"
+    },
+    {
+      "fees": 2.059,
+      "pnl": -127.15,
+      "price": 118.18,
+      "shares": 23,
+      "side": "COVER",
+      "ticker": "QRVO"
+    },
+    {
+      "fees": 9.83448410804435,
+      "pnl": null,
+      "price": 6.83,
+      "shares": 739,
+      "side": "SHORT",
+      "ticker": "GFR"
+    }
+  ],
+  "holdings": [
+    "GFR"
+  ],
+  "mean": 3.2751,
+  "n_trades_today": 3,
+  "recipe": "short_news_r_macd_h3",
+  "sells": [
+    "MYGN",
+    "QRVO"
+  ],
+  "state": {
+    "after": "2026-09-16",
+    "cash": 15144.66,
+    "pos": {
+      "GFR": {
+        "close_px": 6.489999771118164,
+        "cost": 9.83448410804435,
+        "entry_date": "2026-09-16",
+        "entry_px": 6.829999923706055,
+        "fee_in": 9.83448410804435,
+        "last_px": 6.829999923706055,
+        "notional": 5047.369943618774,
+        "peak_px": 6.829999923706055,
+        "reason": "short news\ud83d\udd34 \u2229 prior MACD histogram > 0; gate news=bad,macd_up=True; list ohlc_hot; ret5=+11.2; leftover $5053.56",
+        "shares": 739,
+        "ticker": "GFR"
+      }
+    },
+    "yday_equity": 10348.55
+  }
+}

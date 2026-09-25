@@ -1,0 +1,215 @@
+{
+  "buys": [
+    "SANM",
+    "COHU",
+    "BAK",
+    "APPS",
+    "FUBO",
+    "RDDT",
+    "VIST",
+    "BAND"
+  ],
+  "cash": 419.26,
+  "date": "2026-09-11",
+  "equity": 9867.74,
+  "fees": 22.1944,
+  "fills": [
+    {
+      "fees": 2.005,
+      "pnl": null,
+      "price": 206.84,
+      "shares": 5,
+      "side": "BUY",
+      "ticker": "SANM"
+    },
+    {
+      "fees": 2.053,
+      "pnl": null,
+      "price": 56.09,
+      "shares": 21,
+      "side": "BUY",
+      "ticker": "COHU"
+    },
+    {
+      "fees": 7.4304,
+      "pnl": null,
+      "price": 2.12,
+      "shares": 576,
+      "side": "BUY",
+      "ticker": "BAK"
+    },
+    {
+      "fees": 2.296,
+      "pnl": null,
+      "price": 11.88,
+      "shares": 102,
+      "side": "BUY",
+      "ticker": "APPS"
+    },
+    {
+      "fees": 2.305,
+      "pnl": null,
+      "price": 11.55,
+      "shares": 105,
+      "side": "BUY",
+      "ticker": "FUBO"
+    },
+    {
+      "fees": 2.011,
+      "pnl": null,
+      "price": 157.55,
+      "shares": 7,
+      "side": "BUY",
+      "ticker": "RDDT"
+    },
+    {
+      "fees": 2.035,
+      "pnl": null,
+      "price": 77.33,
+      "shares": 15,
+      "side": "BUY",
+      "ticker": "VIST"
+    },
+    {
+      "fees": 2.059,
+      "pnl": null,
+      "price": 52.55,
+      "shares": 23,
+      "side": "BUY",
+      "ticker": "BAND"
+    }
+  ],
+  "holdings": [
+    "APPS",
+    "BAK",
+    "BAND",
+    "COHU",
+    "FUBO",
+    "RDDT",
+    "SANM",
+    "VIST"
+  ],
+  "mean": 0.994,
+  "n_trades_today": 8,
+  "recipe": "union_last_green_h1",
+  "sells": [],
+  "state": {
+    "after": "2026-09-11",
+    "cash": 419.26,
+    "pos": {
+      "APPS": {
+        "close_px": 11.8100004196167,
+        "cost": 1214.0560116729737,
+        "entry_date": "2026-09-11",
+        "entry_px": 11.880000114440918,
+        "fee_in": 2.296,
+        "last_px": 11.880000114440918,
+        "min_hold": 1,
+        "notional": 1211.7600116729736,
+        "peak_px": 11.880000114440918,
+        "reason": "union \u2229 last_green, no \ud83d\udea8; gate last_green=True; list probable,yday_gainer; ret5=+8.5; leftover $1221.33",
+        "shares": 102,
+        "ticker": "APPS"
+      },
+      "BAK": {
+        "close_px": 2.0799999237060547,
+        "cost": 1228.5503340820312,
+        "entry_date": "2026-09-11",
+        "entry_px": 2.119999885559082,
+        "fee_in": 7.4304,
+        "last_px": 2.119999885559082,
+        "min_hold": 1,
+        "notional": 1221.1199340820312,
+        "peak_px": 2.119999885559082,
+        "reason": "union \u2229 last_green, no \ud83d\udea8; gate last_green=True; list probable,yday_gainer,ohlc_hot; \ud83d\udd35; ret5=+8.8; leftover $1221.33",
+        "shares": 576,
+        "ticker": "BAK"
+      },
+      "BAND": {
+        "close_px": 56.869998931884766,
+        "cost": 1210.7089824523925,
+        "entry_date": "2026-09-11",
+        "entry_px": 52.54999923706055,
+        "fee_in": 2.059,
+        "last_px": 52.54999923706055,
+        "min_hold": 1,
+        "notional": 1208.6499824523926,
+        "peak_px": 52.54999923706055,
+        "reason": "union \u2229 last_green, no \ud83d\udea8; gate last_green=True; list probable,yday_gainer; \ud83d\udd35; \u26aa; ret5=+9.6; leftover $1221.33",
+        "shares": 23,
+        "ticker": "BAND"
+      },
+      "COHU": {
+        "close_px": 57.08000183105469,
+        "cost": 1179.9430032043458,
+        "entry_date": "2026-09-11",
+        "entry_px": 56.09000015258789,
+        "fee_in": 2.053,
+        "last_px": 56.09000015258789,
+        "min_hold": 1,
+        "notional": 1177.8900032043457,
+        "peak_px": 56.09000015258789,
+        "reason": "union \u2229 last_green, no \ud83d\udea8; gate last_green=True; list flatten; \ud83d\udd35; \u26aa; ret5=+19.0; leftover $1221.33",
+        "shares": 21,
+        "ticker": "COHU"
+      },
+      "FUBO": {
+        "close_px": 11.529999732971191,
+        "cost": 1215.0550200271607,
+        "entry_date": "2026-09-11",
+        "entry_px": 11.550000190734863,
+        "fee_in": 2.305,
+        "last_px": 11.550000190734863,
+        "min_hold": 1,
+        "notional": 1212.7500200271606,
+        "peak_px": 11.550000190734863,
+        "reason": "union \u2229 last_green, no \ud83d\udea8; gate last_green=True; list probable,yday_gainer; ret5=-1.6; leftover $1221.33",
+        "shares": 105,
+        "ticker": "FUBO"
+      },
+      "RDDT": {
+        "close_px": 157.77000427246094,
+        "cost": 1104.8610213623047,
+        "entry_date": "2026-09-11",
+        "entry_px": 157.5500030517578,
+        "fee_in": 2.011,
+        "last_px": 157.5500030517578,
+        "min_hold": 1,
+        "notional": 1102.8500213623047,
+        "peak_px": 157.5500030517578,
+        "reason": "union \u2229 last_green, no \ud83d\udea8; gate last_green=True; list probable,yday_gainer; ret5=-0.4; leftover $1221.33",
+        "shares": 7,
+        "ticker": "RDDT"
+      },
+      "SANM": {
+        "close_px": 216.0,
+        "cost": 1036.2049816894532,
+        "entry_date": "2026-09-11",
+        "entry_px": 206.83999633789062,
+        "fee_in": 2.005,
+        "last_px": 206.83999633789062,
+        "min_hold": 1,
+        "notional": 1034.1999816894531,
+        "peak_px": 206.83999633789062,
+        "reason": "union \u2229 last_green, no \ud83d\udea8; gate last_green=True; list flatten; ret5=+3.9; leftover $1221.33",
+        "shares": 5,
+        "ticker": "SANM"
+      },
+      "VIST": {
+        "close_px": 76.2699966430664,
+        "cost": 1161.9850274658204,
+        "entry_date": "2026-09-11",
+        "entry_px": 77.33000183105469,
+        "fee_in": 2.035,
+        "last_px": 77.33000183105469,
+        "min_hold": 1,
+        "notional": 1159.9500274658203,
+        "peak_px": 77.33000183105469,
+        "reason": "union \u2229 last_green, no \ud83d\udea8; gate last_green=True; list probable,yday_gainer; ret5=+5.8; leftover $1221.33",
+        "shares": 15,
+        "ticker": "VIST"
+      }
+    },
+    "yday_equity": 9867.74
+  }
+}

@@ -1,0 +1,215 @@
+{
+  "buys": [
+    "VIST",
+    "INTR",
+    "INDP",
+    "CMRC",
+    "WLTH",
+    "DBI",
+    "BNC",
+    "SWKS"
+  ],
+  "cash": 64.23,
+  "date": "2026-09-11",
+  "equity": 9751.81,
+  "fees": 25.6338,
+  "fills": [
+    {
+      "fees": 2.035,
+      "pnl": null,
+      "price": 77.33,
+      "shares": 15,
+      "side": "BUY",
+      "ticker": "VIST"
+    },
+    {
+      "fees": 2.6961,
+      "pnl": null,
+      "price": 5.78,
+      "shares": 209,
+      "side": "BUY",
+      "ticker": "INTR"
+    },
+    {
+      "fees": 5.7663,
+      "pnl": null,
+      "price": 2.7,
+      "shares": 447,
+      "side": "BUY",
+      "ticker": "INDP"
+    },
+    {
+      "fees": 4.9794,
+      "pnl": null,
+      "price": 3.13,
+      "shares": 386,
+      "side": "BUY",
+      "ticker": "CMRC"
+    },
+    {
+      "fees": 2.32,
+      "pnl": null,
+      "price": 10.95,
+      "shares": 110,
+      "side": "BUY",
+      "ticker": "WLTH"
+    },
+    {
+      "fees": 2.6316,
+      "pnl": null,
+      "price": 5.91,
+      "shares": 204,
+      "side": "BUY",
+      "ticker": "DBI"
+    },
+    {
+      "fees": 3.1734,
+      "pnl": null,
+      "price": 4.91,
+      "shares": 246,
+      "side": "BUY",
+      "ticker": "BNC"
+    },
+    {
+      "fees": 2.032,
+      "pnl": null,
+      "price": 84.27,
+      "shares": 14,
+      "side": "BUY",
+      "ticker": "SWKS"
+    }
+  ],
+  "holdings": [
+    "BNC",
+    "CMRC",
+    "DBI",
+    "INDP",
+    "INTR",
+    "SWKS",
+    "VIST",
+    "WLTH"
+  ],
+  "mean": 0.8388,
+  "n_trades_today": 8,
+  "recipe": "union_vol_green_h1",
+  "sells": [],
+  "state": {
+    "after": "2026-09-11",
+    "cash": 64.23,
+    "pos": {
+      "BNC": {
+        "close_px": 4.800000190734863,
+        "cost": 1211.0333624633788,
+        "entry_date": "2026-09-11",
+        "entry_px": 4.909999847412109,
+        "fee_in": 3.1734,
+        "last_px": 4.909999847412109,
+        "min_hold": 1,
+        "notional": 1207.859962463379,
+        "peak_px": 4.909999847412109,
+        "reason": "combo gate; gate vol=good,last_green=True; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+76.3; leftover $1208.84",
+        "shares": 246,
+        "ticker": "BNC"
+      },
+      "CMRC": {
+        "close_px": 3.505000114440918,
+        "cost": 1213.1594441741943,
+        "entry_date": "2026-09-11",
+        "entry_px": 3.130000114440918,
+        "fee_in": 4.9794,
+        "last_px": 3.130000114440918,
+        "min_hold": 1,
+        "notional": 1208.1800441741943,
+        "peak_px": 3.130000114440918,
+        "reason": "combo gate; gate vol=good,last_green=True; list yday_gainer,yday_mover; ret5=+22.7; leftover $1208.84",
+        "shares": 386,
+        "ticker": "CMRC"
+      },
+      "DBI": {
+        "close_px": 5.880000114440918,
+        "cost": 1208.2715688720702,
+        "entry_date": "2026-09-11",
+        "entry_px": 5.909999847412109,
+        "fee_in": 2.6316,
+        "last_px": 5.909999847412109,
+        "min_hold": 1,
+        "notional": 1205.6399688720703,
+        "peak_px": 5.909999847412109,
+        "reason": "combo gate; gate vol=good,last_green=True; list yday_gainer,yday_mover; ret5=+16.3; leftover $1208.84",
+        "shares": 204,
+        "ticker": "DBI"
+      },
+      "INDP": {
+        "close_px": 2.7699999809265137,
+        "cost": 1212.666321314621,
+        "entry_date": "2026-09-11",
+        "entry_px": 2.700000047683716,
+        "fee_in": 5.7663,
+        "last_px": 2.700000047683716,
+        "min_hold": 1,
+        "notional": 1206.900021314621,
+        "peak_px": 2.700000047683716,
+        "reason": "combo gate; gate vol=good,last_green=True; list yday_gainer,yday_mover; ret5=+120.7; leftover $1208.84",
+        "shares": 447,
+        "ticker": "INDP"
+      },
+      "INTR": {
+        "close_px": 5.710000038146973,
+        "cost": 1210.716143849945,
+        "entry_date": "2026-09-11",
+        "entry_px": 5.78000020980835,
+        "fee_in": 2.6961,
+        "last_px": 5.78000020980835,
+        "min_hold": 1,
+        "notional": 1208.020043849945,
+        "peak_px": 5.78000020980835,
+        "reason": "combo gate; gate vol=good,last_green=True; list probable,yday_gainer; \ud83d\udd35; ret5=-0.3; leftover $1208.84",
+        "shares": 209,
+        "ticker": "INTR"
+      },
+      "SWKS": {
+        "close_px": 88.3499984741211,
+        "cost": 1181.8119530029296,
+        "entry_date": "2026-09-11",
+        "entry_px": 84.2699966430664,
+        "fee_in": 2.032,
+        "last_px": 84.2699966430664,
+        "min_hold": 1,
+        "notional": 1179.7799530029297,
+        "peak_px": 84.2699966430664,
+        "reason": "combo gate; gate vol=good,last_green=True; list yday_gainer,ohlc_hot; \u26aa; ret5=+17.5; leftover $1208.84",
+        "shares": 14,
+        "ticker": "SWKS"
+      },
+      "VIST": {
+        "close_px": 76.2699966430664,
+        "cost": 1161.9850274658204,
+        "entry_date": "2026-09-11",
+        "entry_px": 77.33000183105469,
+        "fee_in": 2.035,
+        "last_px": 77.33000183105469,
+        "min_hold": 1,
+        "notional": 1159.9500274658203,
+        "peak_px": 77.33000183105469,
+        "reason": "combo gate; gate vol=good,last_green=True; list probable,yday_gainer; ret5=+5.8; leftover $1208.84",
+        "shares": 15,
+        "ticker": "VIST"
+      },
+      "WLTH": {
+        "close_px": 10.380000114440918,
+        "cost": 1206.819979019165,
+        "entry_date": "2026-09-11",
+        "entry_px": 10.949999809265137,
+        "fee_in": 2.32,
+        "last_px": 10.949999809265137,
+        "min_hold": 1,
+        "notional": 1204.499979019165,
+        "peak_px": 10.949999809265137,
+        "reason": "combo gate; gate vol=good,last_green=True; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+16.6; leftover $1208.84",
+        "shares": 110,
+        "ticker": "WLTH"
+      }
+    },
+    "yday_equity": 9751.81
+  }
+}

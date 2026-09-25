@@ -1,0 +1,73 @@
+{
+  "buys": [],
+  "cash": 4809.0,
+  "date": "2026-09-24",
+  "equity": 12499.09,
+  "fees": 13.9693,
+  "fills": [
+    {
+      "fees": 11.7651,
+      "pnl": -302.05,
+      "price": 2.61,
+      "shares": 899,
+      "side": "SELL",
+      "ticker": "FEAM"
+    },
+    {
+      "fees": 2.2042,
+      "pnl": -359.95,
+      "price": 36.025,
+      "shares": 62,
+      "side": "SELL",
+      "ticker": "VKTX"
+    }
+  ],
+  "holdings": [
+    "GLND",
+    "VICR"
+  ],
+  "mean": 18.1549,
+  "n_trades_today": 2,
+  "recipe": "combo_oh_5050_shared",
+  "sells": [
+    "FEAM",
+    "VKTX"
+  ],
+  "state": {
+    "after": "2026-09-24",
+    "cash": 4809.0,
+    "pos": {
+      "GLND": {
+        "close_px": 5.349999904632568,
+        "cost": 2639.6517463962555,
+        "entry_date": "2026-09-23",
+        "entry_px": 2.700000047683716,
+        "fee_in": 12.5517,
+        "last_px": 3.2200000286102295,
+        "notional": 2627.1000463962555,
+        "owner": "union_hot_n4_holdup",
+        "peak_px": 3.2200000286102295,
+        "reason": "hot4; S>0 lots stay through the next 09:30 so the overnight gap is in the book; rank hot_score; list yday_mover; \ud83d\udd35; ret5=+109.2; combo leftover $2627.79; owner union_hot_n4_holdup",
+        "shares": 973,
+        "side": "long",
+        "ticker": "GLND"
+      },
+      "VICR": {
+        "close_px": 276.05999755859375,
+        "cost": 2400.517,
+        "entry_date": "2026-09-23",
+        "entry_px": 266.5,
+        "fee_in": 2.017,
+        "last_px": 274.45001220703125,
+        "notional": 2398.5,
+        "owner": "union_hot_n4_holdup",
+        "peak_px": 274.45001220703125,
+        "reason": "hot4; S>0 lots stay through the next 09:30 so the overnight gap is in the book; rank hot_score; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+45.9; combo leftover $2627.79; owner union_hot_n4_holdup",
+        "shares": 9,
+        "side": "long",
+        "ticker": "VICR"
+      }
+    },
+    "yday_equity": 12499.09
+  }
+}

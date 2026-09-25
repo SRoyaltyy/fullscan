@@ -1,0 +1,166 @@
+{
+  "buys": [],
+  "cash": 19323.89,
+  "date": "2026-09-21",
+  "equity": 9572.33,
+  "fees": 11.714,
+  "fills": [
+    {
+      "fees": 2.152,
+      "pnl": -193.35,
+      "price": 22.11,
+      "shares": 54,
+      "side": "COVER",
+      "ticker": "BBNX"
+    },
+    {
+      "fees": 2.482,
+      "pnl": -344.51,
+      "price": 8.22,
+      "shares": 164,
+      "side": "COVER",
+      "ticker": "FWDI"
+    },
+    {
+      "fees": 2.224,
+      "pnl": -45.06,
+      "price": 13.41,
+      "shares": 78,
+      "side": "COVER",
+      "ticker": "HQ"
+    },
+    {
+      "fees": 2.431,
+      "pnl": 21.54,
+      "price": 6.68,
+      "shares": 147,
+      "side": "COVER",
+      "ticker": "PLAY"
+    },
+    {
+      "fees": 2.425,
+      "pnl": 132.84,
+      "price": 6.0,
+      "shares": 145,
+      "side": "COVER",
+      "ticker": "SION"
+    }
+  ],
+  "holdings": [
+    "BRUN",
+    "BTGO",
+    "BULL",
+    "FLNC",
+    "FTAI",
+    "LEN",
+    "RCAT"
+  ],
+  "mean": -2.2509,
+  "n_trades_today": 5,
+  "recipe": "short_clk_neg_weak_fail_opp_h3",
+  "sells": [
+    "BBNX",
+    "FWDI",
+    "HQ",
+    "PLAY",
+    "SION"
+  ],
+  "state": {
+    "after": "2026-09-21",
+    "cash": 19323.89,
+    "pos": {
+      "BRUN": {
+        "close_px": 17.170000076293945,
+        "cost": 2.185174520388041,
+        "entry_date": "2026-09-17",
+        "entry_px": 15.869999885559082,
+        "fee_in": 2.185174520388041,
+        "last_px": 17.600000381469727,
+        "notional": 809.3699941635132,
+        "peak_px": 15.869999885559082,
+        "reason": "Clock-B #4 \u2229 Theme Radar T\u22121 oppset; gate clk_neg_weak_fail=True,oppset=True; rank opp_rvol; list probable,yday_gainer,yday_mover; ret5=-12.7; leftover $810.59",
+        "shares": 51,
+        "ticker": "BRUN"
+      },
+      "BTGO": {
+        "close_px": 7.860000133514404,
+        "cost": 2.411506301177038,
+        "entry_date": "2026-09-17",
+        "entry_px": 6.559999942779541,
+        "fee_in": 2.411506301177038,
+        "last_px": 7.849999904632568,
+        "notional": 806.8799929618835,
+        "peak_px": 6.559999942779541,
+        "reason": "Clock-B #4 \u2229 Theme Radar T\u22121 oppset; gate clk_neg_weak_fail=True,oppset=True; rank opp_rvol; list yday_mover; ret5=-14.6; leftover $810.59",
+        "shares": 123,
+        "ticker": "BTGO"
+      },
+      "BULL": {
+        "close_px": 8.25,
+        "cost": 2.3417986296091993,
+        "entry_date": "2026-09-17",
+        "entry_px": 7.949999809265137,
+        "fee_in": 2.3417986296091993,
+        "last_px": 8.569999694824219,
+        "notional": 802.9499807357788,
+        "peak_px": 7.849999904632568,
+        "reason": "Clock-B #4 \u2229 Theme Radar T\u22121 oppset; gate clk_neg_weak_fail=True,oppset=True; rank opp_rvol; list yday_mover; \ud83d\udd35; \u26aa; ret5=-18.4; leftover $810.59",
+        "shares": 101,
+        "ticker": "BULL"
+      },
+      "FLNC": {
+        "close_px": 7.389999866485596,
+        "cost": 8.599652737029611,
+        "entry_date": "2026-09-18",
+        "entry_px": 7.534999847412109,
+        "fee_in": 8.599652737029611,
+        "last_px": 7.360000133514404,
+        "notional": 4860.074901580811,
+        "peak_px": 7.360000133514404,
+        "reason": "Clock-B #4 \u2229 Theme Radar T\u22121 oppset; gate clk_neg_weak_fail=True,oppset=True; rank opp_rvol; list yday_mover; \ud83d\udd35; ret5=-20.9; leftover $4866.44",
+        "shares": 645,
+        "ticker": "FLNC"
+      },
+      "FTAI": {
+        "close_px": 192.74000549316406,
+        "cost": 2.043534246575342,
+        "entry_date": "2026-09-17",
+        "entry_px": 196.5,
+        "fee_in": 2.043534246575342,
+        "last_px": 193.60000610351562,
+        "notional": 786.0,
+        "peak_px": 193.60000610351562,
+        "reason": "Clock-B #4 \u2229 Theme Radar T\u22121 oppset; gate clk_neg_weak_fail=True,oppset=True; rank opp_rvol; list yday_gainer; \ud83d\udd35; ret5=+2.5; leftover $810.59",
+        "shares": 4,
+        "ticker": "FTAI"
+      },
+      "LEN": {
+        "close_px": 78.08000183105469,
+        "cost": 2.0621917808219177,
+        "entry_date": "2026-09-17",
+        "entry_px": 81.0,
+        "fee_in": 2.0621917808219177,
+        "last_px": 76.9800033569336,
+        "notional": 810.0,
+        "peak_px": 76.9800033569336,
+        "reason": "Clock-B #4 \u2229 Theme Radar T\u22121 oppset; gate clk_neg_weak_fail=True,oppset=True; rank opp_rvol; list earn_react; \ud83d\udd35; ret5=-3.0; leftover $810.59",
+        "shares": 10,
+        "ticker": "LEN"
+      },
+      "RCAT": {
+        "close_px": 6.949999809265137,
+        "cost": 2.367183698573178,
+        "entry_date": "2026-09-17",
+        "entry_px": 7.394999980926514,
+        "fee_in": 2.367183698573178,
+        "last_px": 6.900000095367432,
+        "notional": 806.05499792099,
+        "peak_px": 6.900000095367432,
+        "reason": "Clock-B #4 \u2229 Theme Radar T\u22121 oppset; gate clk_neg_weak_fail=True,oppset=True; rank opp_rvol; list yday_mover; ret5=-12.7; leftover $810.59",
+        "shares": 109,
+        "ticker": "RCAT"
+      }
+    },
+    "yday_equity": 9572.33
+  }
+}

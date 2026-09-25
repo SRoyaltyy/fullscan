@@ -1,0 +1,93 @@
+{
+  "buys": [],
+  "cash": 9805.29,
+  "date": "2026-08-31",
+  "equity": 9805.29,
+  "fees": 20.4808,
+  "fills": [
+    {
+      "fees": 2.184,
+      "pnl": -9.57,
+      "price": 14.54,
+      "shares": 58,
+      "side": "SELL",
+      "ticker": "CRK"
+    },
+    {
+      "fees": 2.172,
+      "pnl": -70.2,
+      "price": 14.44,
+      "shares": 54,
+      "side": "SELL",
+      "ticker": "GRRR"
+    },
+    {
+      "fees": 2.115,
+      "pnl": -13.66,
+      "price": 23.68,
+      "shares": 35,
+      "side": "SELL",
+      "ticker": "MOS"
+    },
+    {
+      "fees": 3.381,
+      "pnl": -37.67,
+      "price": 3.2,
+      "shares": 258,
+      "side": "SELL",
+      "ticker": "PYXS"
+    },
+    {
+      "fees": 2.3227,
+      "pnl": 20.1,
+      "price": 42.0,
+      "shares": 95,
+      "side": "SELL",
+      "ticker": "RRC"
+    },
+    {
+      "fees": 2.088,
+      "pnl": -49.66,
+      "price": 31.15,
+      "shares": 26,
+      "side": "SELL",
+      "ticker": "SEDG"
+    },
+    {
+      "fees": 4.1781,
+      "pnl": -40.19,
+      "price": 2.58,
+      "shares": 319,
+      "side": "SELL",
+      "ticker": "SLI"
+    },
+    {
+      "fees": 2.04,
+      "pnl": 6.14,
+      "price": 80.44,
+      "shares": 10,
+      "side": "SELL",
+      "ticker": "URBN"
+    }
+  ],
+  "holdings": [],
+  "mean": 0.3922,
+  "n_trades_today": 8,
+  "recipe": "union_h1_topheavy",
+  "sells": [
+    "CRK",
+    "GRRR",
+    "MOS",
+    "PYXS",
+    "RRC",
+    "SEDG",
+    "SLI",
+    "URBN"
+  ],
+  "state": {
+    "after": "2026-08-31",
+    "cash": 9805.29,
+    "pos": {},
+    "yday_equity": 9805.29
+  }
+}

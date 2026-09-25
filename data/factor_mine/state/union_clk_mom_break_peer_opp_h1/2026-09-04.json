@@ -1,0 +1,215 @@
+{
+  "buys": [
+    "LULU",
+    "DELL",
+    "MRX",
+    "MSTR",
+    "KYIV",
+    "GWRE",
+    "BLSH",
+    "ZETA"
+  ],
+  "cash": 454.29,
+  "date": "2026-09-04",
+  "equity": 9860.85,
+  "fees": 16.526,
+  "fills": [
+    {
+      "fees": 2.026,
+      "pnl": null,
+      "price": 98.15,
+      "shares": 12,
+      "side": "BUY",
+      "ticker": "LULU"
+    },
+    {
+      "fees": 1.996,
+      "pnl": null,
+      "price": 513.78,
+      "shares": 2,
+      "side": "BUY",
+      "ticker": "DELL"
+    },
+    {
+      "fees": 2.038,
+      "pnl": null,
+      "price": 75.65,
+      "shares": 16,
+      "side": "BUY",
+      "ticker": "MRX"
+    },
+    {
+      "fees": 2.014,
+      "pnl": null,
+      "price": 137.35,
+      "shares": 8,
+      "side": "BUY",
+      "ticker": "MSTR"
+    },
+    {
+      "fees": 2.245,
+      "pnl": null,
+      "price": 14.24,
+      "shares": 85,
+      "side": "BUY",
+      "ticker": "KYIV"
+    },
+    {
+      "fees": 2.011,
+      "pnl": null,
+      "price": 167.55,
+      "shares": 7,
+      "side": "BUY",
+      "ticker": "GWRE"
+    },
+    {
+      "fees": 2.095,
+      "pnl": null,
+      "price": 34.69,
+      "shares": 35,
+      "side": "BUY",
+      "ticker": "BLSH"
+    },
+    {
+      "fees": 2.101,
+      "pnl": null,
+      "price": 32.65,
+      "shares": 37,
+      "side": "BUY",
+      "ticker": "ZETA"
+    }
+  ],
+  "holdings": [
+    "BLSH",
+    "DELL",
+    "GWRE",
+    "KYIV",
+    "LULU",
+    "MRX",
+    "MSTR",
+    "ZETA"
+  ],
+  "mean": 0.7152,
+  "n_trades_today": 8,
+  "recipe": "union_clk_mom_break_peer_opp_h1",
+  "sells": [],
+  "state": {
+    "after": "2026-09-04",
+    "cash": 454.29,
+    "pos": {
+      "BLSH": {
+        "close_px": 36.0,
+        "cost": 1216.2449519348145,
+        "entry_date": "2026-09-04",
+        "entry_px": 34.689998626708984,
+        "fee_in": 2.095,
+        "last_px": 34.689998626708984,
+        "min_hold": 1,
+        "notional": 1214.1499519348145,
+        "peak_px": 34.689998626708984,
+        "reason": "Clock-B #1 \u2229 Theme Radar T\u22121 oppset; gate clk_mom_break_peer=True,oppset=True; rank opp_rvol; list ohlc_hot; \ud83d\udd35; ret5=+7.9; leftover $1223.85",
+        "shares": 35,
+        "ticker": "BLSH"
+      },
+      "DELL": {
+        "close_px": 524.1400146484375,
+        "cost": 1029.55605859375,
+        "entry_date": "2026-09-04",
+        "entry_px": 513.780029296875,
+        "fee_in": 1.996,
+        "last_px": 513.780029296875,
+        "min_hold": 1,
+        "notional": 1027.56005859375,
+        "peak_px": 513.780029296875,
+        "reason": "Clock-B #1 \u2229 Theme Radar T\u22121 oppset; gate clk_mom_break_peer=True,oppset=True; rank opp_rvol; list probable,yday_gainer,yday_mover,ohlc_hot,mover_buy; \ud83d\udd35; \u26aa; ret5=+9.3; leftover $1223.85",
+        "shares": 2,
+        "ticker": "DELL"
+      },
+      "GWRE": {
+        "close_px": 162.4199981689453,
+        "cost": 1174.8610213623047,
+        "entry_date": "2026-09-04",
+        "entry_px": 167.5500030517578,
+        "fee_in": 2.011,
+        "last_px": 167.5500030517578,
+        "min_hold": 1,
+        "notional": 1172.8500213623047,
+        "peak_px": 167.5500030517578,
+        "reason": "Clock-B #1 \u2229 Theme Radar T\u22121 oppset; gate clk_mom_break_peer=True,oppset=True; rank opp_rvol; list earn_react; ret5=+0.9; leftover $1223.85",
+        "shares": 7,
+        "ticker": "GWRE"
+      },
+      "KYIV": {
+        "close_px": 14.109999656677246,
+        "cost": 1212.6449805450438,
+        "entry_date": "2026-09-04",
+        "entry_px": 14.239999771118164,
+        "fee_in": 2.245,
+        "last_px": 14.239999771118164,
+        "min_hold": 1,
+        "notional": 1210.399980545044,
+        "peak_px": 14.239999771118164,
+        "reason": "Clock-B #1 \u2229 Theme Radar T\u22121 oppset; gate clk_mom_break_peer=True,oppset=True; rank opp_rvol; list ohlc_hot; \u26aa; ret5=+5.2; leftover $1223.85",
+        "shares": 85,
+        "ticker": "KYIV"
+      },
+      "LULU": {
+        "close_px": 100.61000061035156,
+        "cost": 1179.826018310547,
+        "entry_date": "2026-09-04",
+        "entry_px": 98.1500015258789,
+        "fee_in": 2.026,
+        "last_px": 98.1500015258789,
+        "min_hold": 1,
+        "notional": 1177.8000183105469,
+        "peak_px": 98.1500015258789,
+        "reason": "Clock-B #1 \u2229 Theme Radar T\u22121 oppset; gate clk_mom_break_peer=True,oppset=True; rank opp_rvol; list earn_react; ret5=+5.9; leftover $1223.85",
+        "shares": 12,
+        "ticker": "LULU"
+      },
+      "MRX": {
+        "close_px": 78.2699966430664,
+        "cost": 1212.4380244140625,
+        "entry_date": "2026-09-04",
+        "entry_px": 75.6500015258789,
+        "fee_in": 2.038,
+        "last_px": 75.6500015258789,
+        "min_hold": 1,
+        "notional": 1210.4000244140625,
+        "peak_px": 75.6500015258789,
+        "reason": "Clock-B #1 \u2229 Theme Radar T\u22121 oppset; gate clk_mom_break_peer=True,oppset=True; rank opp_rvol; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+6.0; leftover $1223.85",
+        "shares": 16,
+        "ticker": "MRX"
+      },
+      "MSTR": {
+        "close_px": 142.8000030517578,
+        "cost": 1100.814048828125,
+        "entry_date": "2026-09-04",
+        "entry_px": 137.35000610351562,
+        "fee_in": 2.014,
+        "last_px": 137.35000610351562,
+        "min_hold": 1,
+        "notional": 1098.800048828125,
+        "peak_px": 137.35000610351562,
+        "reason": "Clock-B #1 \u2229 Theme Radar T\u22121 oppset; gate clk_mom_break_peer=True,oppset=True; rank opp_rvol; list ohlc_hot; ret5=+5.4; leftover $1223.85",
+        "shares": 8,
+        "ticker": "MSTR"
+      },
+      "ZETA": {
+        "close_px": 31.350000381469727,
+        "cost": 1210.1510564575196,
+        "entry_date": "2026-09-04",
+        "entry_px": 32.650001525878906,
+        "fee_in": 2.101,
+        "last_px": 32.650001525878906,
+        "min_hold": 1,
+        "notional": 1208.0500564575195,
+        "peak_px": 32.650001525878906,
+        "reason": "Clock-B #1 \u2229 Theme Radar T\u22121 oppset; gate clk_mom_break_peer=True,oppset=True; rank opp_rvol; list ohlc_hot; ret5=+8.1; leftover $1223.85",
+        "shares": 37,
+        "ticker": "ZETA"
+      }
+    },
+    "yday_equity": 9860.85
+  }
+}

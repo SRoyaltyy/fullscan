@@ -1,0 +1,95 @@
+{
+  "buys": [],
+  "cash": 7735.93,
+  "date": "2026-09-14",
+  "equity": 10171.33,
+  "fees": 11.1956,
+  "fills": [
+    {
+      "fees": 2.0454,
+      "pnl": -72.55,
+      "price": 255.75,
+      "shares": 9,
+      "side": "SELL",
+      "ticker": "CRM"
+    },
+    {
+      "fees": 2.0292,
+      "pnl": 95.13,
+      "price": 538.57,
+      "shares": 4,
+      "side": "SELL",
+      "ticker": "DELL"
+    },
+    {
+      "fees": 7.121,
+      "pnl": 794.94,
+      "price": 6.02,
+      "shares": 543,
+      "side": "SELL",
+      "ticker": "IRD"
+    }
+  ],
+  "holdings": [
+    "BAND",
+    "PAYP",
+    "SWKS"
+  ],
+  "mean": -2.5988,
+  "n_trades_today": 3,
+  "recipe": "union_white_both_n4_h5_s12",
+  "sells": [
+    "CRM",
+    "DELL",
+    "IRD"
+  ],
+  "state": {
+    "after": "2026-09-14",
+    "cash": 7735.93,
+    "pos": {
+      "BAND": {
+        "close_px": 48.970001220703125,
+        "cost": 842.8379877929688,
+        "entry_date": "2026-09-11",
+        "entry_px": 52.54999923706055,
+        "fee_in": 2.038,
+        "last_px": 56.900001525878906,
+        "min_hold": 5,
+        "notional": 840.7999877929688,
+        "peak_px": 56.900001525878906,
+        "reason": "both+top4 hold5, stop \u221212% at 09:30 even inside hold; gate cam_bad_max=0,yday_and_catalyst=True; rank list; list probable,yday_gainer; \ud83d\udd35; \u26aa; ret5=+9.6; leftover $851.24",
+        "shares": 16,
+        "ticker": "BAND"
+      },
+      "PAYP": {
+        "close_px": 18.68000030517578,
+        "cost": 843.9279649047852,
+        "entry_date": "2026-09-11",
+        "entry_px": 18.299999237060547,
+        "fee_in": 2.128,
+        "last_px": 18.280000686645508,
+        "min_hold": 5,
+        "notional": 841.7999649047852,
+        "peak_px": 18.299999237060547,
+        "reason": "both+top4 hold5, stop \u221212% at 09:30 even inside hold; gate cam_bad_max=0,yday_and_catalyst=True; rank list; list ohlc_hot; \u26aa; ret5=+7.7; leftover $851.24",
+        "shares": 46,
+        "ticker": "PAYP"
+      },
+      "SWKS": {
+        "close_px": 79.26000213623047,
+        "cost": 844.719966430664,
+        "entry_date": "2026-09-11",
+        "entry_px": 84.2699966430664,
+        "fee_in": 2.02,
+        "last_px": 86.05999755859375,
+        "min_hold": 5,
+        "notional": 842.6999664306641,
+        "peak_px": 86.05999755859375,
+        "reason": "both+top4 hold5, stop \u221212% at 09:30 even inside hold; gate cam_bad_max=0,yday_and_catalyst=True; rank list; list yday_gainer,ohlc_hot; \u26aa; ret5=+17.5; leftover $851.24",
+        "shares": 10,
+        "ticker": "SWKS"
+      }
+    },
+    "yday_equity": 10171.33
+  }
+}

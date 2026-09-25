@@ -1,0 +1,46 @@
+{
+  "buys": [],
+  "cash": 10582.41,
+  "date": "2026-09-15",
+  "equity": 9745.21,
+  "fees": 2.005,
+  "fills": [
+    {
+      "fees": 2.005,
+      "pnl": 18.13,
+      "price": 108.4,
+      "shares": 5,
+      "side": "COVER",
+      "ticker": "QRVO"
+    }
+  ],
+  "holdings": [
+    "INDP"
+  ],
+  "mean": -1.2075,
+  "n_trades_today": 1,
+  "recipe": "short_rsi_ob_h1",
+  "sells": [
+    "QRVO"
+  ],
+  "state": {
+    "after": "2026-09-15",
+    "cash": 10582.41,
+    "pos": {
+      "INDP": {
+        "close_px": 3.640000104904175,
+        "cost": 3.03221369893061,
+        "entry_date": "2026-09-11",
+        "entry_px": 2.700000047683716,
+        "fee_in": 3.03221369893061,
+        "last_px": 3.4000000953674316,
+        "notional": 621.0000109672546,
+        "peak_px": 2.700000047683716,
+        "reason": "RSI overbought; gate rsi_ob=True; list yday_gainer,yday_mover; ret5=+120.7; leftover $623.10",
+        "shares": 230,
+        "ticker": "INDP"
+      }
+    },
+    "yday_equity": 9745.21
+  }
+}

@@ -1,0 +1,210 @@
+{
+  "buys": [
+    "PGEN",
+    "XENE",
+    "SION",
+    "KDK",
+    "ABVX",
+    "MLKN",
+    "THO"
+  ],
+  "cash": 78.46,
+  "date": "2026-09-21",
+  "equity": 8725.54,
+  "fees": 22.8414,
+  "fills": [
+    {
+      "fees": 2.4393,
+      "pnl": -193.46,
+      "price": 33.0,
+      "shares": 131,
+      "side": "SELL",
+      "ticker": "FIVN"
+    },
+    {
+      "fees": 2.0983,
+      "pnl": 5.93,
+      "price": 210.0,
+      "shares": 21,
+      "side": "SELL",
+      "ticker": "GNRC"
+    },
+    {
+      "fees": 2.473,
+      "pnl": null,
+      "price": 7.84,
+      "shares": 161,
+      "side": "BUY",
+      "ticker": "PGEN"
+    },
+    {
+      "fees": 2.083,
+      "pnl": null,
+      "price": 40.0,
+      "shares": 31,
+      "side": "BUY",
+      "ticker": "XENE"
+    },
+    {
+      "fees": 2.7219,
+      "pnl": null,
+      "price": 6.0,
+      "shares": 211,
+      "side": "BUY",
+      "ticker": "SION"
+    },
+    {
+      "fees": 4.7859,
+      "pnl": null,
+      "price": 3.42,
+      "shares": 371,
+      "side": "BUY",
+      "ticker": "KDK"
+    },
+    {
+      "fees": 2.026,
+      "pnl": null,
+      "price": 105.72,
+      "shares": 12,
+      "side": "BUY",
+      "ticker": "ABVX"
+    },
+    {
+      "fees": 2.17,
+      "pnl": null,
+      "price": 20.85,
+      "shares": 60,
+      "side": "BUY",
+      "ticker": "MLKN"
+    },
+    {
+      "fees": 2.044,
+      "pnl": null,
+      "price": 68.39,
+      "shares": 18,
+      "side": "BUY",
+      "ticker": "THO"
+    }
+  ],
+  "holdings": [
+    "ABVX",
+    "KDK",
+    "MLKN",
+    "PGEN",
+    "SION",
+    "THO",
+    "XENE"
+  ],
+  "mean": -0.4596,
+  "n_trades_today": 9,
+  "recipe": "union_last_red_h1",
+  "sells": [
+    "FIVN",
+    "GNRC"
+  ],
+  "state": {
+    "after": "2026-09-21",
+    "cash": 78.46,
+    "pos": {
+      "ABVX": {
+        "close_px": 103.44999694824219,
+        "cost": 1270.6660146484376,
+        "entry_date": "2026-09-21",
+        "entry_px": 105.72000122070312,
+        "fee_in": 2.026,
+        "last_px": 105.72000122070312,
+        "min_hold": 1,
+        "notional": 1268.6400146484375,
+        "peak_px": 105.72000122070312,
+        "reason": "union \u2229 last_red, no \ud83d\udea8; gate last_red=True; list overnight; ret5=-11.5; leftover $1269.21",
+        "shares": 12,
+        "ticker": "ABVX"
+      },
+      "KDK": {
+        "close_px": 3.2699999809265137,
+        "cost": 1273.6059283050538,
+        "entry_date": "2026-09-21",
+        "entry_px": 3.4200000762939453,
+        "fee_in": 4.7859,
+        "last_px": 3.4200000762939453,
+        "min_hold": 1,
+        "notional": 1268.8200283050537,
+        "peak_px": 3.4200000762939453,
+        "reason": "union \u2229 last_red, no \ud83d\udea8; gate last_red=True; list yday_mover; ret5=-12.3; leftover $1269.21",
+        "shares": 371,
+        "ticker": "KDK"
+      },
+      "MLKN": {
+        "close_px": 20.31999969482422,
+        "cost": 1253.1700228881837,
+        "entry_date": "2026-09-21",
+        "entry_px": 20.850000381469727,
+        "fee_in": 2.17,
+        "last_px": 20.850000381469727,
+        "min_hold": 1,
+        "notional": 1251.0000228881836,
+        "peak_px": 20.850000381469727,
+        "reason": "union \u2229 last_red, no \ud83d\udea8; gate last_red=True; list overnight; ret5=-2.5; leftover $1269.21",
+        "shares": 60,
+        "ticker": "MLKN"
+      },
+      "PGEN": {
+        "close_px": 7.699999809265137,
+        "cost": 1264.7130245666503,
+        "entry_date": "2026-09-21",
+        "entry_px": 7.840000152587891,
+        "fee_in": 2.473,
+        "last_px": 7.840000152587891,
+        "min_hold": 1,
+        "notional": 1262.2400245666504,
+        "peak_px": 7.840000152587891,
+        "reason": "union \u2229 last_red, no \ud83d\udea8; gate last_red=True; list flatten; \u26aa; ret5=+13.6; leftover $1269.21",
+        "shares": 161,
+        "ticker": "PGEN"
+      },
+      "SION": {
+        "close_px": 6.0,
+        "cost": 1268.7219,
+        "entry_date": "2026-09-21",
+        "entry_px": 6.0,
+        "fee_in": 2.7219,
+        "last_px": 6.0,
+        "min_hold": 1,
+        "notional": 1266.0,
+        "peak_px": 6.0,
+        "reason": "union \u2229 last_red, no \ud83d\udea8; gate last_red=True; list yday_mover; \ud83d\udd35; ret5=-24.1; leftover $1269.21",
+        "shares": 211,
+        "ticker": "SION"
+      },
+      "THO": {
+        "close_px": 69.94000244140625,
+        "cost": 1233.063989013672,
+        "entry_date": "2026-09-21",
+        "entry_px": 68.38999938964844,
+        "fee_in": 2.044,
+        "last_px": 68.38999938964844,
+        "min_hold": 1,
+        "notional": 1231.0199890136719,
+        "peak_px": 68.38999938964844,
+        "reason": "union \u2229 last_red, no \ud83d\udea8; gate last_red=True; list overnight; ret5=-7.0; leftover $1269.21",
+        "shares": 18,
+        "ticker": "THO"
+      },
+      "XENE": {
+        "close_px": 38.9900016784668,
+        "cost": 1242.083,
+        "entry_date": "2026-09-21",
+        "entry_px": 40.0,
+        "fee_in": 2.083,
+        "last_px": 40.0,
+        "min_hold": 1,
+        "notional": 1240.0,
+        "peak_px": 40.0,
+        "reason": "union \u2229 last_red, no \ud83d\udea8; gate last_red=True; list yday_mover; \ud83d\udd35; ret5=-32.2; leftover $1269.21",
+        "shares": 31,
+        "ticker": "XENE"
+      }
+    },
+    "yday_equity": 8725.54
+  }
+}

@@ -1,0 +1,252 @@
+{
+  "buys": [
+    "FEAM",
+    "TJGC",
+    "USDE",
+    "GEMI",
+    "ABTC",
+    "FWDI"
+  ],
+  "cash": 13.13,
+  "date": "2026-09-21",
+  "equity": 10472.98,
+  "fees": 36.7868,
+  "fills": [
+    {
+      "fees": 2.8727,
+      "pnl": 122.42,
+      "price": 6.415,
+      "shares": 219,
+      "side": "SELL",
+      "ticker": "BNC"
+    },
+    {
+      "fees": 4.5308,
+      "pnl": -47.05,
+      "price": 3.55,
+      "shares": 346,
+      "side": "SELL",
+      "ticker": "INDP"
+    },
+    {
+      "fees": 4.2566,
+      "pnl": -21.45,
+      "price": 3.9,
+      "shares": 325,
+      "side": "SELL",
+      "ticker": "RXT"
+    },
+    {
+      "fees": 2.1391,
+      "pnl": 0.47,
+      "price": 29.43,
+      "shares": 43,
+      "side": "SELL",
+      "ticker": "SDGR"
+    },
+    {
+      "fees": 2.055,
+      "pnl": -38.89,
+      "price": 79.08,
+      "shares": 15,
+      "side": "SELL",
+      "ticker": "TEM"
+    },
+    {
+      "fees": 2.025,
+      "pnl": 49.12,
+      "price": 230.25,
+      "shares": 5,
+      "side": "SELL",
+      "ticker": "VICR"
+    },
+    {
+      "fees": 6.7209,
+      "pnl": null,
+      "price": 2.47,
+      "shares": 521,
+      "side": "BUY",
+      "ticker": "FEAM"
+    },
+    {
+      "fees": 2.218,
+      "pnl": null,
+      "price": 16.91,
+      "shares": 76,
+      "side": "BUY",
+      "ticker": "TJGC"
+    },
+    {
+      "fees": 2.284,
+      "pnl": null,
+      "price": 13.05,
+      "shares": 98,
+      "side": "BUY",
+      "ticker": "USDE"
+    },
+    {
+      "fees": 2.8767,
+      "pnl": null,
+      "price": 5.755,
+      "shares": 223,
+      "side": "BUY",
+      "ticker": "GEMI"
+    },
+    {
+      "fees": 2.35,
+      "pnl": null,
+      "price": 10.71,
+      "shares": 120,
+      "side": "BUY",
+      "ticker": "ABTC"
+    },
+    {
+      "fees": 2.458,
+      "pnl": null,
+      "price": 8.22,
+      "shares": 156,
+      "side": "BUY",
+      "ticker": "FWDI"
+    }
+  ],
+  "holdings": [
+    "ABTC",
+    "CYPH",
+    "FEAM",
+    "FWDI",
+    "GEMI",
+    "LVWR",
+    "TJGC",
+    "USDE"
+  ],
+  "mean": 0.018,
+  "n_trades_today": 12,
+  "recipe": "union_hot_score_h1",
+  "sells": [
+    "BNC",
+    "INDP",
+    "RXT",
+    "SDGR",
+    "TEM",
+    "VICR"
+  ],
+  "state": {
+    "after": "2026-09-21",
+    "cash": 13.13,
+    "pos": {
+      "ABTC": {
+        "close_px": 10.300000190734863,
+        "cost": 1287.5500045776366,
+        "entry_date": "2026-09-21",
+        "entry_px": 10.710000038146973,
+        "fee_in": 2.35,
+        "last_px": 10.710000038146973,
+        "min_hold": 1,
+        "notional": 1285.2000045776367,
+        "peak_px": 10.710000038146973,
+        "reason": "rank by hot_score; rank hot_score; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+21.4; leftover $1288.98",
+        "shares": 120,
+        "ticker": "ABTC"
+      },
+      "CYPH": {
+        "close_px": 3.4000000953674316,
+        "cost": 1286.2138362205505,
+        "entry_date": "2026-09-18",
+        "entry_px": 3.0350000858306885,
+        "fee_in": 5.4438,
+        "last_px": 4.0,
+        "min_hold": 1,
+        "notional": 1280.7700362205505,
+        "peak_px": 4.0,
+        "reason": "rank by hot_score; rank hot_score; list yday_gainer,yday_mover; \ud83d\udd35; \u26aa; ret5=+39.5; leftover $1282.45",
+        "shares": 422,
+        "ticker": "CYPH"
+      },
+      "FEAM": {
+        "close_px": 2.4800000190734863,
+        "cost": 1293.5909149059296,
+        "entry_date": "2026-09-21",
+        "entry_px": 2.4700000286102295,
+        "fee_in": 6.7209,
+        "last_px": 2.4700000286102295,
+        "min_hold": 1,
+        "notional": 1286.8700149059296,
+        "peak_px": 2.4700000286102295,
+        "reason": "rank by hot_score; rank hot_score; list yday_gainer,yday_mover; ret5=+73.6; leftover $1288.98",
+        "shares": 521,
+        "ticker": "FEAM"
+      },
+      "FWDI": {
+        "close_px": 8.170000076293945,
+        "cost": 1284.7780416564942,
+        "entry_date": "2026-09-21",
+        "entry_px": 8.220000267028809,
+        "fee_in": 2.458,
+        "last_px": 8.220000267028809,
+        "min_hold": 1,
+        "notional": 1282.3200416564941,
+        "peak_px": 8.220000267028809,
+        "reason": "rank by hot_score; rank hot_score; list yday_gainer,yday_mover,ohlc_hot; \ud83d\udd35; ret5=+17.6; leftover $1288.98",
+        "shares": 156,
+        "ticker": "FWDI"
+      },
+      "GEMI": {
+        "close_px": 5.989999771118164,
+        "cost": 1286.2417255203247,
+        "entry_date": "2026-09-21",
+        "entry_px": 5.755000114440918,
+        "fee_in": 2.8767,
+        "last_px": 5.755000114440918,
+        "min_hold": 1,
+        "notional": 1283.3650255203247,
+        "peak_px": 5.755000114440918,
+        "reason": "rank by hot_score; rank hot_score; list yday_gainer,yday_mover; ret5=+30.3; leftover $1288.98",
+        "shares": 223,
+        "ticker": "GEMI"
+      },
+      "LVWR": {
+        "close_px": 1.5299999713897705,
+        "cost": 1292.4940082015992,
+        "entry_date": "2026-09-18",
+        "entry_px": 1.4900000095367432,
+        "fee_in": 11.094,
+        "last_px": 1.649999976158142,
+        "min_hold": 1,
+        "notional": 1281.4000082015991,
+        "peak_px": 1.649999976158142,
+        "reason": "rank by hot_score; rank hot_score; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+25.7; leftover $1282.45",
+        "shares": 860,
+        "ticker": "LVWR"
+      },
+      "TJGC": {
+        "close_px": 17.579999923706055,
+        "cost": 1287.3779884033204,
+        "entry_date": "2026-09-21",
+        "entry_px": 16.90999984741211,
+        "fee_in": 2.218,
+        "last_px": 16.90999984741211,
+        "min_hold": 1,
+        "notional": 1285.1599884033203,
+        "peak_px": 16.90999984741211,
+        "reason": "rank by hot_score; rank hot_score; list yday_gainer,yday_mover; ret5=+50.5; leftover $1288.98",
+        "shares": 76,
+        "ticker": "TJGC"
+      },
+      "USDE": {
+        "close_px": 12.600000381469727,
+        "cost": 1281.1840186920167,
+        "entry_date": "2026-09-21",
+        "entry_px": 13.050000190734863,
+        "fee_in": 2.284,
+        "last_px": 13.050000190734863,
+        "min_hold": 1,
+        "notional": 1278.9000186920166,
+        "peak_px": 13.050000190734863,
+        "reason": "rank by hot_score; rank hot_score; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+40.4; leftover $1288.98",
+        "shares": 98,
+        "ticker": "USDE"
+      }
+    },
+    "yday_equity": 10472.98
+  }
+}

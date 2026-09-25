@@ -1,0 +1,255 @@
+{
+  "buys": [
+    "APPS",
+    "ARHS",
+    "HELP",
+    "NN",
+    "BTQ",
+    "NTSK",
+    "ANAB"
+  ],
+  "cash": 53.5,
+  "date": "2026-09-22",
+  "equity": 9021.4,
+  "fees": 52.7119,
+  "fills": [
+    {
+      "fees": 2.031,
+      "pnl": 32.43,
+      "price": 163.08,
+      "shares": 7,
+      "side": "SELL",
+      "ticker": "A"
+    },
+    {
+      "fees": 8.32,
+      "pnl": -35.6,
+      "price": 1.795,
+      "shares": 636,
+      "side": "SELL",
+      "ticker": "BTBT"
+    },
+    {
+      "fees": 2.2723,
+      "pnl": -49.67,
+      "price": 12.95,
+      "shares": 86,
+      "side": "SELL",
+      "ticker": "BTDR"
+    },
+    {
+      "fees": 2.2723,
+      "pnl": -31.18,
+      "price": 13.16,
+      "shares": 86,
+      "side": "SELL",
+      "ticker": "MGTX"
+    },
+    {
+      "fees": 13.664,
+      "pnl": -89.84,
+      "price": 1.05,
+      "shares": 1045,
+      "side": "SELL",
+      "ticker": "ORBS"
+    },
+    {
+      "fees": 2.3673,
+      "pnl": -13.99,
+      "price": 9.91,
+      "shares": 116,
+      "side": "SELL",
+      "ticker": "SBET"
+    },
+    {
+      "fees": 2.3609,
+      "pnl": 31.22,
+      "price": 10.45,
+      "shares": 114,
+      "side": "SELL",
+      "ticker": "SGML"
+    },
+    {
+      "fees": 2.308,
+      "pnl": null,
+      "price": 12.24,
+      "shares": 106,
+      "side": "BUY",
+      "ticker": "APPS"
+    },
+    {
+      "fees": 2.428,
+      "pnl": null,
+      "price": 8.9,
+      "shares": 146,
+      "side": "BUY",
+      "ticker": "ARHS"
+    },
+    {
+      "fees": 2.269,
+      "pnl": null,
+      "price": 14.01,
+      "shares": 93,
+      "side": "BUY",
+      "ticker": "HELP"
+    },
+    {
+      "fees": 2.236,
+      "pnl": null,
+      "price": 15.76,
+      "shares": 82,
+      "side": "BUY",
+      "ticker": "NN"
+    },
+    {
+      "fees": 5.9211,
+      "pnl": null,
+      "price": 2.84,
+      "shares": 459,
+      "side": "BUY",
+      "ticker": "BTQ"
+    },
+    {
+      "fees": 2.203,
+      "pnl": null,
+      "price": 18.23,
+      "shares": 71,
+      "side": "BUY",
+      "ticker": "NTSK"
+    },
+    {
+      "fees": 2.059,
+      "pnl": null,
+      "price": 55.07,
+      "shares": 23,
+      "side": "BUY",
+      "ticker": "ANAB"
+    }
+  ],
+  "holdings": [
+    "ANAB",
+    "APPS",
+    "ARHS",
+    "BTQ",
+    "HELP",
+    "NN",
+    "NTSK"
+  ],
+  "mean": -1.5967,
+  "n_trades_today": 14,
+  "recipe": "union_coil_off_h1",
+  "sells": [
+    "A",
+    "BTBT",
+    "BTDR",
+    "MGTX",
+    "ORBS",
+    "SBET",
+    "SGML"
+  ],
+  "state": {
+    "after": "2026-09-22",
+    "cash": 53.5,
+    "pos": {
+      "ANAB": {
+        "close_px": 53.92,
+        "cost": 1268.6689999999999,
+        "entry_date": "2026-09-22",
+        "entry_px": 55.07,
+        "fee_in": 2.059,
+        "last_px": 55.07,
+        "min_hold": 1,
+        "notional": 1266.61,
+        "peak_px": 55.07,
+        "reason": "union \u2229 coil_off, no \ud83d\udea8; gate ret_5_min=0.0,ret_5_max=10.0,rvol_min=0.7,rvol_max=2.2; list earn_react; ret5=+1.5; leftover $1304.22",
+        "shares": 23,
+        "ticker": "ANAB"
+      },
+      "APPS": {
+        "close_px": 12.19,
+        "cost": 1299.748,
+        "entry_date": "2026-09-22",
+        "entry_px": 12.24,
+        "fee_in": 2.308,
+        "last_px": 12.24,
+        "min_hold": 1,
+        "notional": 1297.44,
+        "peak_px": 12.24,
+        "reason": "union \u2229 coil_off, no \ud83d\udea8; gate ret_5_min=0.0,ret_5_max=10.0,rvol_min=0.7,rvol_max=2.2; list probable,yday_gainer; ret5=+2.7; leftover $1304.22",
+        "shares": 106,
+        "ticker": "APPS"
+      },
+      "ARHS": {
+        "close_px": 9.29,
+        "cost": 1301.8280000000002,
+        "entry_date": "2026-09-22",
+        "entry_px": 8.9,
+        "fee_in": 2.428,
+        "last_px": 8.9,
+        "min_hold": 1,
+        "notional": 1299.4,
+        "peak_px": 8.9,
+        "reason": "union \u2229 coil_off, no \ud83d\udea8; gate ret_5_min=0.0,ret_5_max=10.0,rvol_min=0.7,rvol_max=2.2; list probable; \ud83d\udd35; ret5=+7.5; leftover $1304.22",
+        "shares": 146,
+        "ticker": "ARHS"
+      },
+      "BTQ": {
+        "close_px": 2.680000066757202,
+        "cost": 1309.481060603714,
+        "entry_date": "2026-09-22",
+        "entry_px": 2.8399999141693115,
+        "fee_in": 5.9211,
+        "last_px": 2.8399999141693115,
+        "min_hold": 1,
+        "notional": 1303.559960603714,
+        "peak_px": 2.8399999141693115,
+        "reason": "union \u2229 coil_off, no \ud83d\udea8; gate ret_5_min=0.0,ret_5_max=10.0,rvol_min=0.7,rvol_max=2.2; list probable; ret5=+1.4; leftover $1304.22",
+        "shares": 459,
+        "ticker": "BTQ"
+      },
+      "HELP": {
+        "close_px": 13.71,
+        "cost": 1305.199,
+        "entry_date": "2026-09-22",
+        "entry_px": 14.01,
+        "fee_in": 2.269,
+        "last_px": 14.01,
+        "min_hold": 1,
+        "notional": 1302.93,
+        "peak_px": 14.01,
+        "reason": "union \u2229 coil_off, no \ud83d\udea8; gate ret_5_min=0.0,ret_5_max=10.0,rvol_min=0.7,rvol_max=2.2; list probable; ret5=+0.4; leftover $1304.22",
+        "shares": 93,
+        "ticker": "HELP"
+      },
+      "NN": {
+        "close_px": 15.33,
+        "cost": 1294.556,
+        "entry_date": "2026-09-22",
+        "entry_px": 15.76,
+        "fee_in": 2.236,
+        "last_px": 15.76,
+        "min_hold": 1,
+        "notional": 1292.32,
+        "peak_px": 15.76,
+        "reason": "union \u2229 coil_off, no \ud83d\udea8; gate ret_5_min=0.0,ret_5_max=10.0,rvol_min=0.7,rvol_max=2.2; list probable; ret5=+0.8; leftover $1304.22",
+        "shares": 82,
+        "ticker": "NN"
+      },
+      "NTSK": {
+        "close_px": 18.55,
+        "cost": 1296.533,
+        "entry_date": "2026-09-22",
+        "entry_px": 18.23,
+        "fee_in": 2.203,
+        "last_px": 18.23,
+        "min_hold": 1,
+        "notional": 1294.33,
+        "peak_px": 18.23,
+        "reason": "union \u2229 coil_off, no \ud83d\udea8; gate ret_5_min=0.0,ret_5_max=10.0,rvol_min=0.7,rvol_max=2.2; list ohlc_hot; ret5=+8.2; leftover $1304.22",
+        "shares": 71,
+        "ticker": "NTSK"
+      }
+    },
+    "yday_equity": 9021.4
+  }
+}

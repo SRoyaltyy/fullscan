@@ -1,0 +1,93 @@
+{
+  "buys": [],
+  "cash": 9547.55,
+  "date": "2026-09-21",
+  "equity": 9547.55,
+  "fees": 18.0657,
+  "fills": [
+    {
+      "fees": 2.3367,
+      "pnl": 198.35,
+      "price": 13.125,
+      "shares": 106,
+      "side": "SELL",
+      "ticker": "ALMU"
+    },
+    {
+      "fees": 2.148,
+      "pnl": -21.76,
+      "price": 25.57,
+      "shares": 46,
+      "side": "SELL",
+      "ticker": "ARQT"
+    },
+    {
+      "fees": 2.4939,
+      "pnl": -32.25,
+      "price": 7.36,
+      "shares": 156,
+      "side": "SELL",
+      "ticker": "FLNC"
+    },
+    {
+      "fees": 2.025,
+      "pnl": -1.63,
+      "price": 210.0,
+      "shares": 5,
+      "side": "SELL",
+      "ticker": "GNRC"
+    },
+    {
+      "fees": 2.63,
+      "pnl": 8.71,
+      "price": 5.96,
+      "shares": 199,
+      "side": "SELL",
+      "ticker": "LTRX"
+    },
+    {
+      "fees": 2.2501,
+      "pnl": -21.07,
+      "price": 14.58,
+      "shares": 79,
+      "side": "SELL",
+      "ticker": "RARE"
+    },
+    {
+      "fees": 2.13,
+      "pnl": 0.16,
+      "price": 29.43,
+      "shares": 40,
+      "side": "SELL",
+      "ticker": "SDGR"
+    },
+    {
+      "fees": 2.052,
+      "pnl": -36.56,
+      "price": 79.08,
+      "shares": 14,
+      "side": "SELL",
+      "ticker": "TEM"
+    }
+  ],
+  "holdings": [],
+  "mean": 1.2008,
+  "n_trades_today": 8,
+  "recipe": "oppset_h1",
+  "sells": [
+    "ALMU",
+    "ARQT",
+    "FLNC",
+    "GNRC",
+    "LTRX",
+    "RARE",
+    "SDGR",
+    "TEM"
+  ],
+  "state": {
+    "after": "2026-09-21",
+    "cash": 9547.55,
+    "pos": {},
+    "yday_equity": 9547.55
+  }
+}

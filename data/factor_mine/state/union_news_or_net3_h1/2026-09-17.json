@@ -1,0 +1,165 @@
+{
+  "buys": [
+    "SMTC",
+    "GME",
+    "JBHT",
+    "LITE"
+  ],
+  "cash": 530.28,
+  "date": "2026-09-17",
+  "equity": 8513.33,
+  "fees": 18.9033,
+  "fills": [
+    {
+      "fees": 2.0515,
+      "pnl": -43.34,
+      "price": 120.07,
+      "shares": 13,
+      "side": "SELL",
+      "ticker": "CRUS"
+    },
+    {
+      "fees": 2.1519,
+      "pnl": 19.18,
+      "price": 37.64,
+      "shares": 46,
+      "side": "SELL",
+      "ticker": "DBX"
+    },
+    {
+      "fees": 2.0407,
+      "pnl": 6.56,
+      "price": 190.35,
+      "shares": 9,
+      "side": "SELL",
+      "ticker": "QCOM"
+    },
+    {
+      "fees": 2.1386,
+      "pnl": -105.89,
+      "price": 37.57,
+      "shares": 42,
+      "side": "SELL",
+      "ticker": "SM"
+    },
+    {
+      "fees": 2.2096,
+      "pnl": 11.21,
+      "price": 26.51,
+      "shares": 65,
+      "side": "SELL",
+      "ticker": "WAY"
+    },
+    {
+      "fees": 2.026,
+      "pnl": null,
+      "price": 170.85,
+      "shares": 12,
+      "side": "BUY",
+      "ticker": "SMTC"
+    },
+    {
+      "fees": 2.275,
+      "pnl": null,
+      "price": 22.12,
+      "shares": 95,
+      "side": "BUY",
+      "ticker": "GME"
+    },
+    {
+      "fees": 2.014,
+      "pnl": null,
+      "price": 238.6,
+      "shares": 8,
+      "side": "BUY",
+      "ticker": "JBHT"
+    },
+    {
+      "fees": 1.996,
+      "pnl": null,
+      "price": 934.88,
+      "shares": 2,
+      "side": "BUY",
+      "ticker": "LITE"
+    }
+  ],
+  "holdings": [
+    "GME",
+    "JBHT",
+    "LITE",
+    "SMTC"
+  ],
+  "mean": 0.8997,
+  "n_trades_today": 9,
+  "recipe": "union_news_or_net3_h1",
+  "sells": [
+    "CRUS",
+    "DBX",
+    "QCOM",
+    "SM",
+    "WAY"
+  ],
+  "state": {
+    "after": "2026-09-17",
+    "cash": 530.28,
+    "pos": {
+      "GME": {
+        "close_px": 22.770000457763672,
+        "cost": 2103.675079727173,
+        "entry_date": "2026-09-17",
+        "entry_px": 22.1200008392334,
+        "fee_in": 2.275,
+        "last_px": 22.1200008392334,
+        "min_hold": 1,
+        "notional": 2101.400079727173,
+        "peak_px": 22.1200008392334,
+        "reason": "packet\ud83d\udfe2 OR headline\ud83d\udfe2 and camera net \u2265 3; gate news_or_headline=True,cam_net_min=3; rank cond; list ohlc_hot; \ud83d\udd35; ret5=+10.5; leftover $2117.19",
+        "shares": 95,
+        "ticker": "GME"
+      },
+      "JBHT": {
+        "close_px": 236.8000030517578,
+        "cost": 1910.814048828125,
+        "entry_date": "2026-09-17",
+        "entry_px": 238.60000610351562,
+        "fee_in": 2.014,
+        "last_px": 238.60000610351562,
+        "min_hold": 1,
+        "notional": 1908.800048828125,
+        "peak_px": 238.60000610351562,
+        "reason": "packet\ud83d\udfe2 OR headline\ud83d\udfe2 and camera net \u2265 3; gate news_or_headline=True,cam_net_min=3; rank cond; list yday_mover; ret5=-11.6; leftover $2117.19",
+        "shares": 8,
+        "ticker": "JBHT"
+      },
+      "LITE": {
+        "close_px": 893.6099853515625,
+        "cost": 1871.756009765625,
+        "entry_date": "2026-09-17",
+        "entry_px": 934.8800048828125,
+        "fee_in": 1.996,
+        "last_px": 934.8800048828125,
+        "min_hold": 1,
+        "notional": 1869.760009765625,
+        "peak_px": 934.8800048828125,
+        "reason": "packet\ud83d\udfe2 OR headline\ud83d\udfe2 and camera net \u2265 3; gate news_or_headline=True,cam_net_min=3; rank cond; list yday_gainer; \ud83d\udd35; ret5=-7.0; leftover $2117.19",
+        "shares": 2,
+        "ticker": "LITE"
+      },
+      "SMTC": {
+        "close_px": 178.19000244140625,
+        "cost": 2052.2260732421873,
+        "entry_date": "2026-09-17",
+        "entry_px": 170.85000610351562,
+        "fee_in": 2.026,
+        "last_px": 170.85000610351562,
+        "min_hold": 1,
+        "notional": 2050.2000732421875,
+        "peak_px": 170.85000610351562,
+        "reason": "packet\ud83d\udfe2 OR headline\ud83d\udfe2 and camera net \u2265 3; gate news_or_headline=True,cam_net_min=3; rank cond; list probable,yday_gainer,yday_mover; \ud83d\udd35; ret5=+2.2; leftover $2117.19",
+        "shares": 12,
+        "ticker": "SMTC"
+      }
+    },
+    "yday_equity": 8513.33
+  }
+}

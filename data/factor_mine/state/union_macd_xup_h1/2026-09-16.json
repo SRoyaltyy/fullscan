@@ -1,0 +1,215 @@
+{
+  "buys": [
+    "HLP",
+    "FTRE",
+    "SDGR",
+    "RVTY",
+    "TENB",
+    "MRCY",
+    "CRWD",
+    "RBRK"
+  ],
+  "cash": 187.78,
+  "date": "2026-09-16",
+  "equity": 10453.64,
+  "fees": 23.6005,
+  "fills": [
+    {
+      "fees": 9.0945,
+      "pnl": null,
+      "price": 1.8,
+      "shares": 705,
+      "side": "BUY",
+      "ticker": "HLP"
+    },
+    {
+      "fees": 2.182,
+      "pnl": null,
+      "price": 19.75,
+      "shares": 64,
+      "side": "BUY",
+      "ticker": "FTRE"
+    },
+    {
+      "fees": 2.152,
+      "pnl": null,
+      "price": 23.29,
+      "shares": 54,
+      "side": "BUY",
+      "ticker": "SDGR"
+    },
+    {
+      "fees": 2.017,
+      "pnl": null,
+      "price": 140.88,
+      "shares": 9,
+      "side": "BUY",
+      "ticker": "RVTY"
+    },
+    {
+      "fees": 2.092,
+      "pnl": null,
+      "price": 36.86,
+      "shares": 34,
+      "side": "BUY",
+      "ticker": "TENB"
+    },
+    {
+      "fees": 2.032,
+      "pnl": null,
+      "price": 87.52,
+      "shares": 14,
+      "side": "BUY",
+      "ticker": "MRCY"
+    },
+    {
+      "fees": 2.005,
+      "pnl": null,
+      "price": 236.92,
+      "shares": 5,
+      "side": "BUY",
+      "ticker": "CRWD"
+    },
+    {
+      "fees": 2.026,
+      "pnl": null,
+      "price": 101.97,
+      "shares": 12,
+      "side": "BUY",
+      "ticker": "RBRK"
+    }
+  ],
+  "holdings": [
+    "CRWD",
+    "FTRE",
+    "HLP",
+    "MRCY",
+    "RBRK",
+    "RVTY",
+    "SDGR",
+    "TENB"
+  ],
+  "mean": 2.9234,
+  "n_trades_today": 8,
+  "recipe": "union_macd_xup_h1",
+  "sells": [],
+  "state": {
+    "after": "2026-09-16",
+    "cash": 187.78,
+    "pos": {
+      "CRWD": {
+        "close_px": 241.36000061035156,
+        "cost": 1186.6049908447267,
+        "entry_date": "2026-09-16",
+        "entry_px": 236.9199981689453,
+        "fee_in": 2.005,
+        "last_px": 236.9199981689453,
+        "min_hold": 1,
+        "notional": 1184.5999908447266,
+        "peak_px": 236.9199981689453,
+        "reason": "union \u2229 macd_xup, no \ud83d\udea8; gate macd_cross_up=True; list ohlc_hot; \u26aa; ret5=+15.5; leftover $1269.59",
+        "shares": 5,
+        "ticker": "CRWD"
+      },
+      "FTRE": {
+        "close_px": 19.969999313354492,
+        "cost": 1266.182,
+        "entry_date": "2026-09-16",
+        "entry_px": 19.75,
+        "fee_in": 2.182,
+        "last_px": 19.75,
+        "min_hold": 1,
+        "notional": 1264.0,
+        "peak_px": 19.75,
+        "reason": "union \u2229 macd_xup, no \ud83d\udea8; gate macd_cross_up=True; list yday_gainer,yday_mover,ohlc_hot; \ud83d\udd35; ret5=+15.7; leftover $1269.59",
+        "shares": 64,
+        "ticker": "FTRE"
+      },
+      "HLP": {
+        "close_px": 2.069999933242798,
+        "cost": 1278.0944663829803,
+        "entry_date": "2026-09-16",
+        "entry_px": 1.7999999523162842,
+        "fee_in": 9.0945,
+        "last_px": 1.7999999523162842,
+        "min_hold": 1,
+        "notional": 1268.9999663829803,
+        "peak_px": 1.7999999523162842,
+        "reason": "union \u2229 macd_xup, no \ud83d\udea8; gate macd_cross_up=True; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+30.5; leftover $1269.59",
+        "shares": 705,
+        "ticker": "HLP"
+      },
+      "MRCY": {
+        "close_px": 87.25,
+        "cost": 1227.3119530029296,
+        "entry_date": "2026-09-16",
+        "entry_px": 87.5199966430664,
+        "fee_in": 2.032,
+        "last_px": 87.5199966430664,
+        "min_hold": 1,
+        "notional": 1225.2799530029297,
+        "peak_px": 87.5199966430664,
+        "reason": "union \u2229 macd_xup, no \ud83d\udea8; gate macd_cross_up=True; list yday_gainer; \ud83d\udd35; ret5=+4.3; leftover $1269.59",
+        "shares": 14,
+        "ticker": "MRCY"
+      },
+      "RBRK": {
+        "close_px": 104.9800033569336,
+        "cost": 1225.6660146484376,
+        "entry_date": "2026-09-16",
+        "entry_px": 101.97000122070312,
+        "fee_in": 2.026,
+        "last_px": 101.97000122070312,
+        "min_hold": 1,
+        "notional": 1223.6400146484375,
+        "peak_px": 101.97000122070312,
+        "reason": "union \u2229 macd_xup, no \ud83d\udea8; gate macd_cross_up=True; list ohlc_hot; \ud83d\udd35; ret5=+13.0; leftover $1269.59",
+        "shares": 12,
+        "ticker": "RBRK"
+      },
+      "RVTY": {
+        "close_px": 145.72999572753906,
+        "cost": 1269.9370439453126,
+        "entry_date": "2026-09-16",
+        "entry_px": 140.8800048828125,
+        "fee_in": 2.017,
+        "last_px": 140.8800048828125,
+        "min_hold": 1,
+        "notional": 1267.9200439453125,
+        "peak_px": 140.8800048828125,
+        "reason": "union \u2229 macd_xup, no \ud83d\udea8; gate macd_cross_up=True; list yday_gainer,ohlc_hot; \ud83d\udd35; \u26aa; ret5=+10.3; leftover $1269.59",
+        "shares": 9,
+        "ticker": "RVTY"
+      },
+      "SDGR": {
+        "close_px": 23.93000030517578,
+        "cost": 1259.8120494384766,
+        "entry_date": "2026-09-16",
+        "entry_px": 23.290000915527344,
+        "fee_in": 2.152,
+        "last_px": 23.290000915527344,
+        "min_hold": 1,
+        "notional": 1257.6600494384766,
+        "peak_px": 23.290000915527344,
+        "reason": "union \u2229 macd_xup, no \ud83d\udea8; gate macd_cross_up=True; list yday_gainer; \ud83d\udd35; \u26aa; ret5=+16.1; leftover $1269.59",
+        "shares": 54,
+        "ticker": "SDGR"
+      },
+      "TENB": {
+        "close_px": 36.369998931884766,
+        "cost": 1255.3320207519532,
+        "entry_date": "2026-09-16",
+        "entry_px": 36.86000061035156,
+        "fee_in": 2.092,
+        "last_px": 36.86000061035156,
+        "min_hold": 1,
+        "notional": 1253.2400207519531,
+        "peak_px": 36.86000061035156,
+        "reason": "union \u2229 macd_xup, no \ud83d\udea8; gate macd_cross_up=True; list yday_gainer,ohlc_hot; \ud83d\udd35; ret5=+13.0; leftover $1269.59",
+        "shares": 34,
+        "ticker": "TENB"
+      }
+    },
+    "yday_equity": 10453.64
+  }
+}

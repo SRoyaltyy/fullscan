@@ -1,0 +1,93 @@
+{
+  "buys": [],
+  "cash": 9195.59,
+  "date": "2026-09-24",
+  "equity": 9195.59,
+  "fees": 17.1613,
+  "fills": [
+    {
+      "fees": 2.031,
+      "pnl": -22.17,
+      "price": 163.95,
+      "shares": 7,
+      "side": "SELL",
+      "ticker": "A"
+    },
+    {
+      "fees": 2.3863,
+      "pnl": -21.82,
+      "price": 9.67,
+      "shares": 122,
+      "side": "SELL",
+      "ticker": "ADMA"
+    },
+    {
+      "fees": 2.139,
+      "pnl": -71.77,
+      "price": 26.22,
+      "shares": 43,
+      "side": "SELL",
+      "ticker": "ARQT"
+    },
+    {
+      "fees": 2.04,
+      "pnl": -51.26,
+      "price": 112.13,
+      "shares": 10,
+      "side": "SELL",
+      "ticker": "HALO"
+    },
+    {
+      "fees": 2.136,
+      "pnl": 0.79,
+      "price": 28.42,
+      "shares": 42,
+      "side": "SELL",
+      "ticker": "MAZE"
+    },
+    {
+      "fees": 2.184,
+      "pnl": -11.89,
+      "price": 20.52,
+      "shares": 58,
+      "side": "SELL",
+      "ticker": "OMER"
+    },
+    {
+      "fees": 2.151,
+      "pnl": -70.55,
+      "price": 23.99,
+      "shares": 47,
+      "side": "SELL",
+      "ticker": "TNGX"
+    },
+    {
+      "fees": 2.094,
+      "pnl": -164.75,
+      "price": 36.025,
+      "shares": 28,
+      "side": "SELL",
+      "ticker": "VKTX"
+    }
+  ],
+  "holdings": [],
+  "mean": -2.3201,
+  "n_trades_today": 8,
+  "recipe": "union_break10_h1",
+  "sells": [
+    "A",
+    "ADMA",
+    "ARQT",
+    "HALO",
+    "MAZE",
+    "OMER",
+    "TNGX",
+    "VKTX"
+  ],
+  "state": {
+    "after": "2026-09-24",
+    "cash": 9195.59,
+    "pos": {},
+    "yday_equity": 9195.59
+  }
+}

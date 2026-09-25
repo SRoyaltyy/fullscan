@@ -1,0 +1,288 @@
+{
+  "buys": [
+    "ARQT",
+    "SABR",
+    "PGEN",
+    "QTRX",
+    "SFL",
+    "LPG",
+    "AIB",
+    "SMTC"
+  ],
+  "cash": 83.87,
+  "date": "2026-09-17",
+  "equity": 10055.58,
+  "fees": 50.6797,
+  "fills": [
+    {
+      "fees": 2.1484,
+      "pnl": 48.16,
+      "price": 28.23,
+      "shares": 46,
+      "side": "SELL",
+      "ticker": "ADPT"
+    },
+    {
+      "fees": 2.013,
+      "pnl": -1.48,
+      "price": 682.44,
+      "shares": 1,
+      "side": "SELL",
+      "ticker": "META"
+    },
+    {
+      "fees": 2.019,
+      "pnl": -3.06,
+      "price": 350.5,
+      "shares": 3,
+      "side": "SELL",
+      "ticker": "NTRA"
+    },
+    {
+      "fees": 2.028,
+      "pnl": 3.04,
+      "price": 190.35,
+      "shares": 6,
+      "side": "SELL",
+      "ticker": "QCOM"
+    },
+    {
+      "fees": 2.058,
+      "pnl": -14.98,
+      "price": 76.44,
+      "shares": 16,
+      "side": "SELL",
+      "ticker": "RDNT"
+    },
+    {
+      "fees": 2.103,
+      "pnl": -79.21,
+      "price": 37.57,
+      "shares": 31,
+      "side": "SELL",
+      "ticker": "SM"
+    },
+    {
+      "fees": 2.2216,
+      "pnl": -52.02,
+      "price": 17.19,
+      "shares": 70,
+      "side": "SELL",
+      "ticker": "TALO"
+    },
+    {
+      "fees": 2.019,
+      "pnl": 5.25,
+      "price": 366.2,
+      "shares": 3,
+      "side": "SELL",
+      "ticker": "WST"
+    },
+    {
+      "fees": 2.131,
+      "pnl": null,
+      "price": 25.95,
+      "shares": 47,
+      "side": "BUY",
+      "ticker": "ARQT"
+    },
+    {
+      "fees": 6.6822,
+      "pnl": null,
+      "price": 2.4,
+      "shares": 518,
+      "side": "BUY",
+      "ticker": "SABR"
+    },
+    {
+      "fees": 2.482,
+      "pnl": null,
+      "price": 7.59,
+      "shares": 164,
+      "side": "BUY",
+      "ticker": "PGEN"
+    },
+    {
+      "fees": 5.4567,
+      "pnl": null,
+      "price": 2.94,
+      "shares": 423,
+      "side": "BUY",
+      "ticker": "QTRX"
+    },
+    {
+      "fees": 2.263,
+      "pnl": null,
+      "price": 13.55,
+      "shares": 91,
+      "side": "BUY",
+      "ticker": "SFL"
+    },
+    {
+      "fees": 2.053,
+      "pnl": null,
+      "price": 57.93,
+      "shares": 21,
+      "side": "BUY",
+      "ticker": "LPG"
+    },
+    {
+      "fees": 10.9908,
+      "pnl": null,
+      "price": 1.46,
+      "shares": 852,
+      "side": "BUY",
+      "ticker": "AIB"
+    },
+    {
+      "fees": 2.011,
+      "pnl": null,
+      "price": 170.85,
+      "shares": 7,
+      "side": "BUY",
+      "ticker": "SMTC"
+    }
+  ],
+  "holdings": [
+    "AIB",
+    "ARQT",
+    "LPG",
+    "PGEN",
+    "QTRX",
+    "SABR",
+    "SFL",
+    "SMTC"
+  ],
+  "mean": 1.5401,
+  "n_trades_today": 16,
+  "recipe": "union_clk_mom_break_peer_h1",
+  "sells": [
+    "ADPT",
+    "META",
+    "NTRA",
+    "QCOM",
+    "RDNT",
+    "SM",
+    "TALO",
+    "WST"
+  ],
+  "state": {
+    "after": "2026-09-17",
+    "cash": 83.87,
+    "pos": {
+      "AIB": {
+        "close_px": 1.399999976158142,
+        "cost": 1254.9108325012207,
+        "entry_date": "2026-09-17",
+        "entry_px": 1.4600000381469727,
+        "fee_in": 10.9908,
+        "last_px": 1.4600000381469727,
+        "min_hold": 1,
+        "notional": 1243.9200325012207,
+        "peak_px": 1.4600000381469727,
+        "reason": "Clock-B #1 mom+breakout+peer/sector (research; not KEEP); gate clk_mom_break_peer=True; rank hot_score; list probable,yday_gainer; \ud83d\udd35; ret5=+4.4; leftover $1244.83",
+        "shares": 852,
+        "ticker": "AIB"
+      },
+      "ARQT": {
+        "close_px": 26.459999084472656,
+        "cost": 1221.7810358581544,
+        "entry_date": "2026-09-17",
+        "entry_px": 25.950000762939453,
+        "fee_in": 2.131,
+        "last_px": 25.950000762939453,
+        "min_hold": 1,
+        "notional": 1219.6500358581543,
+        "peak_px": 25.950000762939453,
+        "reason": "Clock-B #1 mom+breakout+peer/sector (research; not KEEP); gate clk_mom_break_peer=True; rank hot_score; list probable,yday_gainer,yday_mover,ohlc_hot; ret5=+9.6; leftover $1244.83",
+        "shares": 47,
+        "ticker": "ARQT"
+      },
+      "LPG": {
+        "close_px": 58.310001373291016,
+        "cost": 1218.5830064086915,
+        "entry_date": "2026-09-17",
+        "entry_px": 57.93000030517578,
+        "fee_in": 2.053,
+        "last_px": 57.93000030517578,
+        "min_hold": 1,
+        "notional": 1216.5300064086914,
+        "peak_px": 57.93000030517578,
+        "reason": "Clock-B #1 mom+breakout+peer/sector (research; not KEEP); gate clk_mom_break_peer=True; rank hot_score; list ohlc_hot; ret5=+7.9; leftover $1244.83",
+        "shares": 21,
+        "ticker": "LPG"
+      },
+      "PGEN": {
+        "close_px": 7.869999885559082,
+        "cost": 1247.242025024414,
+        "entry_date": "2026-09-17",
+        "entry_px": 7.590000152587891,
+        "fee_in": 2.482,
+        "last_px": 7.590000152587891,
+        "min_hold": 1,
+        "notional": 1244.760025024414,
+        "peak_px": 7.590000152587891,
+        "reason": "Clock-B #1 mom+breakout+peer/sector (research; not KEEP); gate clk_mom_break_peer=True; rank hot_score; list flatten,ohlc_hot; ret5=+9.4; leftover $1244.83",
+        "shares": 164,
+        "ticker": "PGEN"
+      },
+      "QTRX": {
+        "close_px": 3.119999885559082,
+        "cost": 1249.076724204254,
+        "entry_date": "2026-09-17",
+        "entry_px": 2.940000057220459,
+        "fee_in": 5.4567,
+        "last_px": 2.940000057220459,
+        "min_hold": 1,
+        "notional": 1243.6200242042542,
+        "peak_px": 2.940000057220459,
+        "reason": "Clock-B #1 mom+breakout+peer/sector (research; not KEEP); gate clk_mom_break_peer=True; rank hot_score; list yday_gainer,ohlc_hot; ret5=+9.8; leftover $1244.83",
+        "shares": 423,
+        "ticker": "QTRX"
+      },
+      "SABR": {
+        "close_px": 2.319999933242798,
+        "cost": 1249.8822494003296,
+        "entry_date": "2026-09-17",
+        "entry_px": 2.4000000953674316,
+        "fee_in": 6.6822,
+        "last_px": 2.4000000953674316,
+        "min_hold": 1,
+        "notional": 1243.2000494003296,
+        "peak_px": 2.4000000953674316,
+        "reason": "Clock-B #1 mom+breakout+peer/sector (research; not KEEP); gate clk_mom_break_peer=True; rank hot_score; list probable,yday_gainer,yday_mover,ohlc_hot; \ud83d\udd35; \u26aa; ret5=+8.4; leftover $1244.83",
+        "shares": 518,
+        "ticker": "SABR"
+      },
+      "SFL": {
+        "close_px": 13.75,
+        "cost": 1235.3130173568725,
+        "entry_date": "2026-09-17",
+        "entry_px": 13.550000190734863,
+        "fee_in": 2.263,
+        "last_px": 13.550000190734863,
+        "min_hold": 1,
+        "notional": 1233.0500173568726,
+        "peak_px": 13.550000190734863,
+        "reason": "Clock-B #1 mom+breakout+peer/sector (research; not KEEP); gate clk_mom_break_peer=True; rank hot_score; list ohlc_hot; ret5=+7.8; leftover $1244.83",
+        "shares": 91,
+        "ticker": "SFL"
+      },
+      "SMTC": {
+        "close_px": 178.19000244140625,
+        "cost": 1197.9610427246093,
+        "entry_date": "2026-09-17",
+        "entry_px": 170.85000610351562,
+        "fee_in": 2.011,
+        "last_px": 170.85000610351562,
+        "min_hold": 1,
+        "notional": 1195.9500427246094,
+        "peak_px": 170.85000610351562,
+        "reason": "Clock-B #1 mom+breakout+peer/sector (research; not KEEP); gate clk_mom_break_peer=True; rank hot_score; list probable,yday_gainer,yday_mover; \ud83d\udd35; ret5=+2.2; leftover $1244.83",
+        "shares": 7,
+        "ticker": "SMTC"
+      }
+    },
+    "yday_equity": 10055.58
+  }
+}

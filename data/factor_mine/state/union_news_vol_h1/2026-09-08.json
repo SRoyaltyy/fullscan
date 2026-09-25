@@ -1,0 +1,39 @@
+{
+  "buys": [],
+  "cash": 9645.62,
+  "date": "2026-09-08",
+  "equity": 9645.62,
+  "fees": 36.2703,
+  "fills": [
+    {
+      "fees": 32.4291,
+      "pnl": -64.41,
+      "price": 1.94,
+      "shares": 2479,
+      "side": "SELL",
+      "ticker": "BAK"
+    },
+    {
+      "fees": 3.8412,
+      "pnl": 91.34,
+      "price": 16.74,
+      "shares": 291,
+      "side": "SELL",
+      "ticker": "FRNM"
+    }
+  ],
+  "holdings": [],
+  "mean": 2.2561,
+  "n_trades_today": 2,
+  "recipe": "union_news_vol_h1",
+  "sells": [
+    "BAK",
+    "FRNM"
+  ],
+  "state": {
+    "after": "2026-09-08",
+    "cash": 9645.62,
+    "pos": {},
+    "yday_equity": 9645.62
+  }
+}

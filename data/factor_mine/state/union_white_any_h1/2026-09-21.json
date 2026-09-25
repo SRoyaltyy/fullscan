@@ -1,0 +1,270 @@
+{
+  "buys": [
+    "A",
+    "DXCM",
+    "PGEN",
+    "IOVA",
+    "MGTX",
+    "NEO",
+    "ISRG"
+  ],
+  "cash": 401.36,
+  "date": "2026-09-21",
+  "equity": 8996.93,
+  "fees": 31.5326,
+  "fills": [
+    {
+      "fees": 2.049,
+      "pnl": -32.29,
+      "price": 82.83,
+      "shares": 13,
+      "side": "SELL",
+      "ticker": "ECO"
+    },
+    {
+      "fees": 2.109,
+      "pnl": -51.72,
+      "price": 33.0,
+      "shares": 33,
+      "side": "SELL",
+      "ticker": "FIVN"
+    },
+    {
+      "fees": 2.2406,
+      "pnl": -20.42,
+      "price": 14.58,
+      "shares": 76,
+      "side": "SELL",
+      "ticker": "RARE"
+    },
+    {
+      "fees": 2.04,
+      "pnl": -13.86,
+      "price": 107.57,
+      "shares": 10,
+      "side": "SELL",
+      "ticker": "RBRK"
+    },
+    {
+      "fees": 3.773,
+      "pnl": -19.01,
+      "price": 3.9,
+      "shares": 288,
+      "side": "SELL",
+      "ticker": "RXT"
+    },
+    {
+      "fees": 2.124,
+      "pnl": -0.05,
+      "price": 29.43,
+      "shares": 38,
+      "side": "SELL",
+      "ticker": "SDGR"
+    },
+    {
+      "fees": 2.049,
+      "pnl": -34.24,
+      "price": 79.08,
+      "shares": 13,
+      "side": "SELL",
+      "ticker": "TEM"
+    },
+    {
+      "fees": 2.011,
+      "pnl": null,
+      "price": 157.87,
+      "shares": 7,
+      "side": "BUY",
+      "ticker": "A"
+    },
+    {
+      "fees": 2.026,
+      "pnl": null,
+      "price": 88.83,
+      "shares": 12,
+      "side": "BUY",
+      "ticker": "DXCM"
+    },
+    {
+      "fees": 2.416,
+      "pnl": null,
+      "price": 7.84,
+      "shares": 142,
+      "side": "BUY",
+      "ticker": "PGEN"
+    },
+    {
+      "fees": 2.308,
+      "pnl": null,
+      "price": 10.43,
+      "shares": 106,
+      "side": "BUY",
+      "ticker": "IOVA"
+    },
+    {
+      "fees": 2.236,
+      "pnl": null,
+      "price": 13.47,
+      "shares": 82,
+      "side": "BUY",
+      "ticker": "MGTX"
+    },
+    {
+      "fees": 2.155,
+      "pnl": null,
+      "price": 19.92,
+      "shares": 55,
+      "side": "BUY",
+      "ticker": "NEO"
+    },
+    {
+      "fees": 1.996,
+      "pnl": null,
+      "price": 393.89,
+      "shares": 2,
+      "side": "BUY",
+      "ticker": "ISRG"
+    }
+  ],
+  "holdings": [
+    "A",
+    "CYPH",
+    "DXCM",
+    "IOVA",
+    "ISRG",
+    "MGTX",
+    "NEO",
+    "PGEN"
+  ],
+  "mean": -1.0932,
+  "n_trades_today": 14,
+  "recipe": "union_white_any_h1",
+  "sells": [
+    "ECO",
+    "FIVN",
+    "RARE",
+    "RBRK",
+    "RXT",
+    "SDGR",
+    "TEM"
+  ],
+  "state": {
+    "after": "2026-09-21",
+    "cash": 401.36,
+    "pos": {
+      "A": {
+        "close_px": 161.94000244140625,
+        "cost": 1107.1009658203125,
+        "entry_date": "2026-09-21",
+        "entry_px": 157.8699951171875,
+        "fee_in": 2.011,
+        "last_px": 157.8699951171875,
+        "min_hold": 1,
+        "notional": 1105.0899658203125,
+        "peak_px": 157.8699951171875,
+        "reason": "\u22120 red + (yday up or major catalyst), then Score; gate cam_bad_max=0,yday_or_catalyst=True; rank list; list flatten; \ud83d\udd35; \u26aa; ret5=+6.5; leftover $1113.48",
+        "shares": 7,
+        "ticker": "A"
+      },
+      "CYPH": {
+        "close_px": 3.4000000953674316,
+        "cost": 1142.9625321865083,
+        "entry_date": "2026-09-18",
+        "entry_px": 3.0350000858306885,
+        "fee_in": 4.8375,
+        "last_px": 4.0,
+        "min_hold": 1,
+        "notional": 1138.1250321865082,
+        "peak_px": 4.0,
+        "reason": "\u22120 red + (yday up or major catalyst), then Score; gate cam_bad_max=0,yday_or_catalyst=True; rank list; list yday_gainer,yday_mover; \ud83d\udd35; \u26aa; ret5=+39.5; leftover $1138.61",
+        "shares": 375,
+        "ticker": "CYPH"
+      },
+      "DXCM": {
+        "close_px": 89.16999816894531,
+        "cost": 1067.9860219726563,
+        "entry_date": "2026-09-21",
+        "entry_px": 88.83000183105469,
+        "fee_in": 2.026,
+        "last_px": 88.83000183105469,
+        "min_hold": 1,
+        "notional": 1065.9600219726562,
+        "peak_px": 88.83000183105469,
+        "reason": "\u22120 red + (yday up or major catalyst), then Score; gate cam_bad_max=0,yday_or_catalyst=True; rank list; list flatten; \ud83d\udd35; \u26aa; ret5=+7.6; leftover $1113.48",
+        "shares": 12,
+        "ticker": "DXCM"
+      },
+      "IOVA": {
+        "close_px": 10.1899995803833,
+        "cost": 1107.8880323486328,
+        "entry_date": "2026-09-21",
+        "entry_px": 10.430000305175781,
+        "fee_in": 2.308,
+        "last_px": 10.430000305175781,
+        "min_hold": 1,
+        "notional": 1105.5800323486328,
+        "peak_px": 10.430000305175781,
+        "reason": "\u22120 red + (yday up or major catalyst), then Score; gate cam_bad_max=0,yday_or_catalyst=True; rank list; list flatten; \u26aa; ret5=+19.2; leftover $1113.48",
+        "shares": 106,
+        "ticker": "IOVA"
+      },
+      "ISRG": {
+        "close_px": 401.6499938964844,
+        "cost": 789.776029296875,
+        "entry_date": "2026-09-21",
+        "entry_px": 393.8900146484375,
+        "fee_in": 1.996,
+        "last_px": 393.8900146484375,
+        "min_hold": 1,
+        "notional": 787.780029296875,
+        "peak_px": 393.8900146484375,
+        "reason": "\u22120 red + (yday up or major catalyst), then Score; gate cam_bad_max=0,yday_or_catalyst=True; rank list; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+6.6; leftover $1113.48",
+        "shares": 2,
+        "ticker": "ISRG"
+      },
+      "MGTX": {
+        "close_px": 13.079999923706055,
+        "cost": 1106.7760218963624,
+        "entry_date": "2026-09-21",
+        "entry_px": 13.470000267028809,
+        "fee_in": 2.236,
+        "last_px": 13.470000267028809,
+        "min_hold": 1,
+        "notional": 1104.5400218963623,
+        "peak_px": 13.470000267028809,
+        "reason": "\u22120 red + (yday up or major catalyst), then Score; gate cam_bad_max=0,yday_or_catalyst=True; rank list; list flatten; \ud83d\udd35; \u26aa; ret5=+3.6; leftover $1113.48",
+        "shares": 82,
+        "ticker": "MGTX"
+      },
+      "NEO": {
+        "close_px": 19.40999984741211,
+        "cost": 1097.755004196167,
+        "entry_date": "2026-09-21",
+        "entry_px": 19.920000076293945,
+        "fee_in": 2.155,
+        "last_px": 19.920000076293945,
+        "min_hold": 1,
+        "notional": 1095.600004196167,
+        "peak_px": 19.920000076293945,
+        "reason": "\u22120 red + (yday up or major catalyst), then Score; gate cam_bad_max=0,yday_or_catalyst=True; rank list; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+15.0; leftover $1113.48",
+        "shares": 55,
+        "ticker": "NEO"
+      },
+      "PGEN": {
+        "close_px": 7.699999809265137,
+        "cost": 1115.6960216674804,
+        "entry_date": "2026-09-21",
+        "entry_px": 7.840000152587891,
+        "fee_in": 2.416,
+        "last_px": 7.840000152587891,
+        "min_hold": 1,
+        "notional": 1113.2800216674805,
+        "peak_px": 7.840000152587891,
+        "reason": "\u22120 red + (yday up or major catalyst), then Score; gate cam_bad_max=0,yday_or_catalyst=True; rank list; list flatten; \u26aa; ret5=+13.6; leftover $1113.48",
+        "shares": 142,
+        "ticker": "PGEN"
+      }
+    },
+    "yday_equity": 8996.93
+  }
+}

@@ -1,0 +1,187 @@
+{
+  "buys": [],
+  "cash": 5111.56,
+  "date": "2026-09-08",
+  "equity": 9911.74,
+  "fees": 17.9241,
+  "fills": [
+    {
+      "fees": 2.1574,
+      "pnl": 57.45,
+      "price": 26.44,
+      "shares": 49,
+      "side": "SELL",
+      "ticker": "ASST"
+    },
+    {
+      "fees": 2.7931,
+      "pnl": -1.28,
+      "price": 5.81,
+      "shares": 213,
+      "side": "SELL",
+      "ticker": "DFDV"
+    },
+    {
+      "fees": 10.9336,
+      "pnl": 49.34,
+      "price": 1.565,
+      "shares": 836,
+      "side": "SELL",
+      "ticker": "GPRO"
+    },
+    {
+      "fees": 2.04,
+      "pnl": 41.89,
+      "price": 125.07,
+      "shares": 10,
+      "side": "SELL",
+      "ticker": "HOOD"
+    }
+  ],
+  "holdings": [
+    "ALEC",
+    "ATRC",
+    "BHC",
+    "BMEA",
+    "CABA",
+    "OABI",
+    "OPK",
+    "VIR"
+  ],
+  "mean": -2.409,
+  "n_trades_today": 4,
+  "recipe": "combo_hf_5050_shared",
+  "sells": [
+    "ASST",
+    "DFDV",
+    "GPRO",
+    "HOOD"
+  ],
+  "state": {
+    "after": "2026-09-08",
+    "cash": 5111.56,
+    "pos": {
+      "ALEC": {
+        "close_px": 2.4700000286102295,
+        "cost": 625.6262952888488,
+        "entry_date": "2026-09-04",
+        "entry_px": 2.5199999809265137,
+        "fee_in": 3.1863,
+        "last_px": 2.380000114440918,
+        "notional": 622.4399952888489,
+        "owner": "flatten_h5",
+        "peak_px": 2.5199999809265137,
+        "reason": "baseline list, no extra gate; list flatten,probable,yday_gainer,yday_mover,mover_buy; live flatten mover; \ud83d\udd35; \u26aa; ret5=+5.0; combo leftover $622.81; owner flatten_h5",
+        "shares": 247,
+        "side": "long",
+        "ticker": "ALEC"
+      },
+      "ATRC": {
+        "close_px": 53.72999954223633,
+        "cost": 574.3529865722656,
+        "entry_date": "2026-09-04",
+        "entry_px": 52.029998779296875,
+        "fee_in": 2.023,
+        "last_px": 54.310001373291016,
+        "notional": 572.3299865722656,
+        "owner": "flatten_h5",
+        "peak_px": 54.310001373291016,
+        "reason": "baseline list, no extra gate; list flatten,mover_buy; live flatten mover; \ud83d\udd35; \u26aa; ret5=+6.5; combo leftover $622.81; owner flatten_h5",
+        "shares": 11,
+        "side": "long",
+        "ticker": "ATRC"
+      },
+      "BHC": {
+        "close_px": 6.429999828338623,
+        "cost": 619.5860035095214,
+        "entry_date": "2026-09-04",
+        "entry_px": 6.710000038146973,
+        "fee_in": 2.266,
+        "last_px": 6.570000171661377,
+        "notional": 617.3200035095215,
+        "owner": "flatten_h5",
+        "peak_px": 6.710000038146973,
+        "reason": "baseline list, no extra gate; list flatten,mover_buy; live flatten mover; \ud83d\udd35; \u26aa; ret5=+7.3; combo leftover $622.81; owner flatten_h5",
+        "shares": 92,
+        "side": "long",
+        "ticker": "BHC"
+      },
+      "BMEA": {
+        "close_px": 1.9299999475479126,
+        "cost": 625.5182922037125,
+        "entry_date": "2026-09-04",
+        "entry_px": 1.899999976158142,
+        "fee_in": 4.2183,
+        "last_px": 2.0,
+        "notional": 621.2999922037125,
+        "owner": "flatten_h5",
+        "peak_px": 2.0,
+        "reason": "baseline list, no extra gate; list flatten,mover_buy; live flatten mover; \ud83d\udd35; \u26aa; ret5=+13.7; combo leftover $622.81; owner flatten_h5",
+        "shares": 327,
+        "side": "long",
+        "ticker": "BMEA"
+      },
+      "CABA": {
+        "close_px": 3.2699999809265137,
+        "cost": 625.330006866455,
+        "entry_date": "2026-09-04",
+        "entry_px": 3.4600000381469727,
+        "fee_in": 2.53,
+        "last_px": 3.430000066757202,
+        "notional": 622.8000068664551,
+        "owner": "flatten_h5",
+        "peak_px": 3.4600000381469727,
+        "reason": "baseline list, no extra gate; list flatten,mover_buy; live flatten mover; \ud83d\udd35; \u26aa; ret5=+3.0; combo leftover $622.81; owner flatten_h5",
+        "shares": 180,
+        "side": "long",
+        "ticker": "CABA"
+      },
+      "OABI": {
+        "close_px": 4.239999771118164,
+        "cost": 623.7800272750854,
+        "entry_date": "2026-09-04",
+        "entry_px": 4.78000020980835,
+        "fee_in": 2.38,
+        "last_px": 4.300000190734863,
+        "notional": 621.4000272750854,
+        "owner": "flatten_h5",
+        "peak_px": 4.78000020980835,
+        "reason": "baseline list, no extra gate; list flatten,probable,yday_gainer,yday_mover,mover_buy; live flatten mover; \ud83d\udd35; \u26aa; ret5=+3.0; combo leftover $622.81; owner flatten_h5",
+        "shares": 130,
+        "side": "long",
+        "ticker": "OABI"
+      },
+      "OPK": {
+        "close_px": 1.590000033378601,
+        "cost": 626.733913051033,
+        "entry_date": "2026-09-04",
+        "entry_px": 1.590000033378601,
+        "fee_in": 5.0439,
+        "last_px": 1.6299999952316284,
+        "notional": 621.690013051033,
+        "owner": "flatten_h5",
+        "peak_px": 1.6299999952316284,
+        "reason": "baseline list, no extra gate; list flatten,yday_gainer,mover_buy; live flatten mover; \ud83d\udd35; \u26aa; ret5=+7.3; combo leftover $622.81; owner flatten_h5",
+        "shares": 391,
+        "side": "long",
+        "ticker": "OPK"
+      },
+      "VIR": {
+        "close_px": 11.180000305175781,
+        "cost": 624.2050230789184,
+        "entry_date": "2026-09-04",
+        "entry_px": 11.3100004196167,
+        "fee_in": 2.155,
+        "last_px": 11.220000267028809,
+        "notional": 622.0500230789185,
+        "owner": "flatten_h5",
+        "peak_px": 11.3100004196167,
+        "reason": "baseline list, no extra gate; list flatten,mover_buy; live flatten mover; \ud83d\udd35; \u26aa; ret5=+1.2; combo leftover $622.81; owner flatten_h5",
+        "shares": 55,
+        "side": "long",
+        "ticker": "VIR"
+      }
+    },
+    "yday_equity": 9911.74
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "buys": [],
+  "cash": 8764.03,
+  "date": "2026-09-22",
+  "equity": 8764.03,
+  "fees": 2.1307,
+  "fills": [
+    {
+      "fees": 2.1307,
+      "pnl": 187.13,
+      "price": 403.0,
+      "shares": 21,
+      "side": "SELL",
+      "ticker": "ISRG"
+    }
+  ],
+  "holdings": [],
+  "mean": 0.3001,
+  "n_trades_today": 1,
+  "recipe": "union_news_g_cam71_n2_h1",
+  "sells": [
+    "ISRG"
+  ],
+  "state": {
+    "after": "2026-09-22",
+    "cash": 8764.03,
+    "pos": {},
+    "yday_equity": 8764.03
+  }
+}

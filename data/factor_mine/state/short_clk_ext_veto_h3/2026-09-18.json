@@ -1,0 +1,77 @@
+{
+  "buys": [],
+  "cash": 20348.94,
+  "date": "2026-09-18",
+  "equity": 10021.53,
+  "fees": 0,
+  "fills": [],
+  "holdings": [
+    "CVI",
+    "HAFN",
+    "INDP",
+    "TRMD"
+  ],
+  "mean": 4.0541,
+  "n_trades_today": 0,
+  "recipe": "short_clk_ext_veto_h3",
+  "sells": [],
+  "state": {
+    "after": "2026-09-18",
+    "cash": 20348.94,
+    "pos": {
+      "CVI": {
+        "close_px": 53.689998626708984,
+        "cost": 2.159605206445145,
+        "entry_date": "2026-09-17",
+        "entry_px": 51.880001068115234,
+        "fee_in": 2.159605206445145,
+        "last_px": 54.099998474121094,
+        "notional": 1712.0400352478027,
+        "peak_px": 51.880001068115234,
+        "reason": "Clock-B #5 extreme ext + fade/fail-break as a short; gate clk_ext_veto=True; list ohlc_hot; ret5=+11.1; leftover $1763.66",
+        "shares": 33,
+        "ticker": "CVI"
+      },
+      "HAFN": {
+        "close_px": 10.119999885559082,
+        "cost": 2.621982191780822,
+        "entry_date": "2026-09-17",
+        "entry_px": 9.75,
+        "fee_in": 2.621982191780822,
+        "last_px": 9.850000381469727,
+        "notional": 1755.0,
+        "peak_px": 9.75,
+        "reason": "Clock-B #5 extreme ext + fade/fail-break as a short; gate clk_ext_veto=True; list ohlc_hot; ret5=+6.0; leftover $1763.66",
+        "shares": 180,
+        "ticker": "HAFN"
+      },
+      "INDP": {
+        "close_px": 3.549999952316284,
+        "cost": 18.209878085436888,
+        "entry_date": "2026-09-16",
+        "entry_px": 3.6600000858306885,
+        "fee_in": 18.209878085436888,
+        "last_px": 3.8499999046325684,
+        "notional": 5050.80011844635,
+        "peak_px": 3.299999952316284,
+        "reason": "Clock-B #5 extreme ext + fade/fail-break as a short; gate clk_ext_veto=True; list yday_gainer,yday_mover; ret5=+96.8; leftover $5051.67",
+        "shares": 1380,
+        "ticker": "INDP"
+      },
+      "TRMD": {
+        "close_px": 38.22999954223633,
+        "cost": 2.2060263019718533,
+        "entry_date": "2026-09-17",
+        "entry_px": 36.52000045776367,
+        "fee_in": 2.2060263019718533,
+        "last_px": 37.709999084472656,
+        "notional": 1752.9600219726562,
+        "peak_px": 36.52000045776367,
+        "reason": "Clock-B #5 extreme ext + fade/fail-break as a short; gate clk_ext_veto=True; list ohlc_hot; ret5=+3.2; leftover $1763.66",
+        "shares": 48,
+        "ticker": "TRMD"
+      }
+    },
+    "yday_equity": 10021.53
+  }
+}

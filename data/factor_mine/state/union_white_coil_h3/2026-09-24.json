@@ -1,0 +1,131 @@
+{
+  "buys": [],
+  "cash": 7074.54,
+  "date": "2026-09-24",
+  "equity": 7865.69,
+  "fees": 5.4895,
+  "fills": [
+    {
+      "fees": 2.0949,
+      "pnl": 129.61,
+      "price": 163.95,
+      "shares": 22,
+      "side": "SELL",
+      "ticker": "A"
+    },
+    {
+      "fees": 3.3946,
+      "pnl": -535.62,
+      "price": 11.42,
+      "shares": 258,
+      "side": "SELL",
+      "ticker": "MGTX"
+    }
+  ],
+  "holdings": [
+    "DXCM",
+    "FTRE",
+    "NTSK",
+    "PAYX",
+    "SAIL",
+    "TTAN"
+  ],
+  "mean": -1.4817,
+  "n_trades_today": 2,
+  "recipe": "union_white_coil_h3",
+  "sells": [
+    "A",
+    "MGTX"
+  ],
+  "state": {
+    "after": "2026-09-24",
+    "cash": 7074.54,
+    "pos": {
+      "DXCM": {
+        "close_px": 87.47000122070312,
+        "cost": 90.398,
+        "entry_date": "2026-09-23",
+        "entry_px": 89.5,
+        "fee_in": 0.898,
+        "last_px": 87.68000030517578,
+        "min_hold": 3,
+        "notional": 89.5,
+        "peak_px": 89.5,
+        "reason": "combo gate; gate zero_red=True,ret_5_max=10.0,rvol_max=2.2; list flatten; \ud83d\udd35; \u26aa; ret5=+3.6; leftover $167.26",
+        "shares": 1,
+        "ticker": "DXCM"
+      },
+      "FTRE": {
+        "close_px": 20.020000457763672,
+        "cost": 163.644,
+        "entry_date": "2026-09-23",
+        "entry_px": 20.25,
+        "fee_in": 1.644,
+        "last_px": 19.399999618530273,
+        "min_hold": 3,
+        "notional": 162.0,
+        "peak_px": 20.25,
+        "reason": "combo gate; gate zero_red=True,ret_5_max=10.0,rvol_max=2.2; list flatten; \ud83d\udd35; \u26aa; ret5=+3.5; leftover $167.26",
+        "shares": 8,
+        "ticker": "FTRE"
+      },
+      "NTSK": {
+        "close_px": 18.56999969482422,
+        "cost": 168.87380686645508,
+        "entry_date": "2026-09-23",
+        "entry_px": 18.575000762939453,
+        "fee_in": 1.6988,
+        "last_px": 18.389999389648438,
+        "min_hold": 3,
+        "notional": 167.17500686645508,
+        "peak_px": 18.575000762939453,
+        "reason": "combo gate; gate zero_red=True,ret_5_max=10.0,rvol_max=2.2; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+6.2; leftover $167.26",
+        "shares": 9,
+        "ticker": "NTSK"
+      },
+      "PAYX": {
+        "close_px": 101.58999633789062,
+        "cost": 110.76969816894531,
+        "entry_date": "2026-09-23",
+        "entry_px": 109.66999816894531,
+        "fee_in": 1.0997,
+        "last_px": 105.48999786376953,
+        "min_hold": 3,
+        "notional": 109.66999816894531,
+        "peak_px": 109.66999816894531,
+        "reason": "combo gate; gate zero_red=True,ret_5_max=10.0,rvol_max=2.2; list earn_react; \ud83d\udd35; \u26aa; ret5=-3.2; leftover $167.26",
+        "shares": 1,
+        "ticker": "PAYX"
+      },
+      "SAIL": {
+        "close_px": 22.1200008392334,
+        "cost": 152.09670160217286,
+        "entry_date": "2026-09-23",
+        "entry_px": 21.510000228881836,
+        "fee_in": 1.5267,
+        "last_px": 21.40999984741211,
+        "min_hold": 3,
+        "notional": 150.57000160217285,
+        "peak_px": 21.510000228881836,
+        "reason": "combo gate; gate zero_red=True,ret_5_max=10.0,rvol_max=2.2; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+7.0; leftover $167.26",
+        "shares": 7,
+        "ticker": "SAIL"
+      },
+      "TTAN": {
+        "close_px": 59.97999954223633,
+        "cost": 125.56919969482422,
+        "entry_date": "2026-09-23",
+        "entry_px": 62.15999984741211,
+        "fee_in": 1.2492,
+        "last_px": 61.779998779296875,
+        "min_hold": 3,
+        "notional": 124.31999969482422,
+        "peak_px": 62.15999984741211,
+        "reason": "combo gate; gate zero_red=True,ret_5_max=10.0,rvol_max=2.2; list probable; \ud83d\udd35; \u26aa; ret5=+5.1; leftover $167.26",
+        "shares": 2,
+        "ticker": "TTAN"
+      }
+    },
+    "yday_equity": 7865.69
+  }
+}

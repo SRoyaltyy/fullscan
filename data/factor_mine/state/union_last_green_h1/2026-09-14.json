@@ -1,0 +1,93 @@
+{
+  "buys": [],
+  "cash": 9704.44,
+  "date": "2026-09-14",
+  "equity": 9704.44,
+  "fees": 22.4548,
+  "fills": [
+    {
+      "fees": 2.3229,
+      "pnl": -17.88,
+      "price": 11.75,
+      "shares": 102,
+      "side": "SELL",
+      "ticker": "APPS"
+    },
+    {
+      "fees": 7.536,
+      "pnl": -55.29,
+      "price": 2.05,
+      "shares": 576,
+      "side": "SELL",
+      "ticker": "BAK"
+    },
+    {
+      "fees": 2.0795,
+      "pnl": 95.91,
+      "price": 56.9,
+      "shares": 23,
+      "side": "SELL",
+      "ticker": "BAND"
+    },
+    {
+      "fees": 2.073,
+      "pnl": -85.19,
+      "price": 52.23,
+      "shares": 21,
+      "side": "SELL",
+      "ticker": "COHU"
+    },
+    {
+      "fees": 2.3324,
+      "pnl": -3.59,
+      "price": 11.56,
+      "shares": 105,
+      "side": "SELL",
+      "ticker": "FUBO"
+    },
+    {
+      "fees": 2.031,
+      "pnl": 13.11,
+      "price": 160.0,
+      "shares": 7,
+      "side": "SELL",
+      "ticker": "RDDT"
+    },
+    {
+      "fees": 2.025,
+      "pnl": -5.73,
+      "price": 206.5,
+      "shares": 5,
+      "side": "SELL",
+      "ticker": "SANM"
+    },
+    {
+      "fees": 2.055,
+      "pnl": -7.54,
+      "price": 77.1,
+      "shares": 15,
+      "side": "SELL",
+      "ticker": "VIST"
+    }
+  ],
+  "holdings": [],
+  "mean": -1.6549,
+  "n_trades_today": 8,
+  "recipe": "union_last_green_h1",
+  "sells": [
+    "APPS",
+    "BAK",
+    "BAND",
+    "COHU",
+    "FUBO",
+    "RDDT",
+    "SANM",
+    "VIST"
+  ],
+  "state": {
+    "after": "2026-09-14",
+    "cash": 9704.44,
+    "pos": {},
+    "yday_equity": 9704.44
+  }
+}

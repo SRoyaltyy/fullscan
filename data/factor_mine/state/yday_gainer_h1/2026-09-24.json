@@ -1,0 +1,93 @@
+{
+  "buys": [],
+  "cash": 8879.06,
+  "date": "2026-09-24",
+  "equity": 8879.06,
+  "fees": 34.1555,
+  "fills": [
+    {
+      "fees": 2.124,
+      "pnl": -15.63,
+      "price": 30.02,
+      "shares": 38,
+      "side": "SELL",
+      "ticker": "CNXC"
+    },
+    {
+      "fees": 3.8775,
+      "pnl": -55.06,
+      "price": 3.77,
+      "shares": 296,
+      "side": "SELL",
+      "ticker": "INDP"
+    },
+    {
+      "fees": 2.133,
+      "pnl": 0.67,
+      "price": 28.42,
+      "shares": 41,
+      "side": "SELL",
+      "ticker": "MAZE"
+    },
+    {
+      "fees": 16.1084,
+      "pnl": -65.62,
+      "price": 0.746,
+      "shares": 1515,
+      "side": "SELL",
+      "ticker": "NMRA"
+    },
+    {
+      "fees": 2.178,
+      "pnl": -11.62,
+      "price": 20.52,
+      "shares": 56,
+      "side": "SELL",
+      "ticker": "OMER"
+    },
+    {
+      "fees": 3.4986,
+      "pnl": -60.34,
+      "price": 4.15,
+      "shares": 267,
+      "side": "SELL",
+      "ticker": "TLYS"
+    },
+    {
+      "fees": 2.145,
+      "pnl": -67.72,
+      "price": 23.99,
+      "shares": 45,
+      "side": "SELL",
+      "ticker": "TNGX"
+    },
+    {
+      "fees": 2.091,
+      "pnl": -159.01,
+      "price": 36.025,
+      "shares": 27,
+      "side": "SELL",
+      "ticker": "VKTX"
+    }
+  ],
+  "holdings": [],
+  "mean": -2.0376,
+  "n_trades_today": 8,
+  "recipe": "yday_gainer_h1",
+  "sells": [
+    "CNXC",
+    "INDP",
+    "MAZE",
+    "NMRA",
+    "OMER",
+    "TLYS",
+    "TNGX",
+    "VKTX"
+  ],
+  "state": {
+    "after": "2026-09-24",
+    "cash": 8879.06,
+    "pos": {},
+    "yday_equity": 8879.06
+  }
+}

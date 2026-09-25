@@ -1,0 +1,119 @@
+{
+  "buys": [
+    "DBX",
+    "WAY",
+    "CRUS",
+    "SION"
+  ],
+  "cash": 52.47,
+  "date": "2026-09-16",
+  "equity": 9510.61,
+  "fees": 10.9008,
+  "fills": [
+    {
+      "fees": 2.182,
+      "pnl": null,
+      "price": 37.13,
+      "shares": 64,
+      "side": "BUY",
+      "ticker": "DBX"
+    },
+    {
+      "fees": 2.26,
+      "pnl": null,
+      "price": 26.27,
+      "shares": 90,
+      "side": "BUY",
+      "ticker": "WAY"
+    },
+    {
+      "fees": 2.047,
+      "pnl": null,
+      "price": 123.09,
+      "shares": 19,
+      "side": "BUY",
+      "ticker": "CRUS"
+    },
+    {
+      "fees": 4.4118,
+      "pnl": null,
+      "price": 6.95,
+      "shares": 342,
+      "side": "BUY",
+      "ticker": "SION"
+    }
+  ],
+  "holdings": [
+    "CRUS",
+    "DBX",
+    "SION",
+    "WAY"
+  ],
+  "mean": -0.0944,
+  "n_trades_today": 4,
+  "recipe": "union_news_head_h1",
+  "sells": [],
+  "state": {
+    "after": "2026-09-16",
+    "cash": 52.47,
+    "pos": {
+      "CRUS": {
+        "close_px": 118.0,
+        "cost": 2340.756930419922,
+        "entry_date": "2026-09-16",
+        "entry_px": 123.08999633789062,
+        "fee_in": 2.047,
+        "last_px": 123.08999633789062,
+        "min_hold": 1,
+        "notional": 2338.709930419922,
+        "peak_px": 123.08999633789062,
+        "reason": "prior-export headline\ud83d\udfe2 only; gate headline=good; rank cond; list ohlc_hot; \ud83d\udd35; ret5=+10.3; leftover $2379.90",
+        "shares": 19,
+        "ticker": "CRUS"
+      },
+      "DBX": {
+        "close_px": 37.7400016784668,
+        "cost": 2378.502068359375,
+        "entry_date": "2026-09-16",
+        "entry_px": 37.130001068115234,
+        "fee_in": 2.182,
+        "last_px": 37.130001068115234,
+        "min_hold": 1,
+        "notional": 2376.320068359375,
+        "peak_px": 37.130001068115234,
+        "reason": "prior-export headline\ud83d\udfe2 only; gate headline=good; rank cond; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+11.3; leftover $2379.90",
+        "shares": 64,
+        "ticker": "DBX"
+      },
+      "SION": {
+        "close_px": 7.039999961853027,
+        "cost": 2381.3117347686766,
+        "entry_date": "2026-09-16",
+        "entry_px": 6.949999809265137,
+        "fee_in": 4.4118,
+        "last_px": 6.949999809265137,
+        "min_hold": 1,
+        "notional": 2376.8999347686768,
+        "peak_px": 6.949999809265137,
+        "reason": "prior-export headline\ud83d\udfe2 only; gate headline=good; rank cond; list yday_mover; ret5=-5.8; leftover $2379.90",
+        "shares": 342,
+        "ticker": "SION"
+      },
+      "WAY": {
+        "close_px": 26.59000015258789,
+        "cost": 2366.5600411987307,
+        "entry_date": "2026-09-16",
+        "entry_px": 26.270000457763672,
+        "fee_in": 2.26,
+        "last_px": 26.270000457763672,
+        "min_hold": 1,
+        "notional": 2364.3000411987305,
+        "peak_px": 26.270000457763672,
+        "reason": "prior-export headline\ud83d\udfe2 only; gate headline=good; rank cond; list yday_gainer,ohlc_hot; \ud83d\udd35; \u26aa; ret5=+10.0; leftover $2379.90",
+        "shares": 90,
+        "ticker": "WAY"
+      }
+    },
+    "yday_equity": 9510.61
+  }
+}

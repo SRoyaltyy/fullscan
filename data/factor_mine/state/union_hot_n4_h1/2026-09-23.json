@@ -1,0 +1,156 @@
+{
+  "buys": [
+    "FEAM",
+    "GLND",
+    "VICR",
+    "VKTX"
+  ],
+  "cash": 243.03,
+  "date": "2026-09-23",
+  "equity": 10578.56,
+  "fees": 47.4095,
+  "fills": [
+    {
+      "fees": 2.0396,
+      "pnl": 82.54,
+      "price": 331.78,
+      "shares": 7,
+      "side": "SELL",
+      "ticker": "ARM"
+    },
+    {
+      "fees": 2.089,
+      "pnl": 36.56,
+      "price": 108.52,
+      "shares": 23,
+      "side": "SELL",
+      "ticker": "GRAL"
+    },
+    {
+      "fees": 10.4518,
+      "pnl": 641.59,
+      "price": 3.93,
+      "shares": 798,
+      "side": "SELL",
+      "ticker": "INDP"
+    },
+    {
+      "fees": 4.4873,
+      "pnl": -145.7,
+      "price": 6.83,
+      "shares": 342,
+      "side": "SELL",
+      "ticker": "NUAI"
+    },
+    {
+      "fees": 11.5971,
+      "pnl": null,
+      "price": 2.92,
+      "shares": 899,
+      "side": "BUY",
+      "ticker": "FEAM"
+    },
+    {
+      "fees": 12.5517,
+      "pnl": null,
+      "price": 2.7,
+      "shares": 973,
+      "side": "BUY",
+      "ticker": "GLND"
+    },
+    {
+      "fees": 2.017,
+      "pnl": null,
+      "price": 266.5,
+      "shares": 9,
+      "side": "BUY",
+      "ticker": "VICR"
+    },
+    {
+      "fees": 2.176,
+      "pnl": null,
+      "price": 41.76,
+      "shares": 62,
+      "side": "BUY",
+      "ticker": "VKTX"
+    }
+  ],
+  "holdings": [
+    "FEAM",
+    "GLND",
+    "VICR",
+    "VKTX"
+  ],
+  "mean": -0.5555,
+  "n_trades_today": 8,
+  "recipe": "union_hot_n4_h1",
+  "sells": [
+    "ARM",
+    "GRAL",
+    "INDP",
+    "NUAI"
+  ],
+  "state": {
+    "after": "2026-09-23",
+    "cash": 243.03,
+    "pos": {
+      "FEAM": {
+        "close_px": 2.640000104904175,
+        "cost": 2636.677168588257,
+        "entry_date": "2026-09-23",
+        "entry_px": 2.9200000762939453,
+        "fee_in": 11.5971,
+        "last_px": 2.9200000762939453,
+        "min_hold": 1,
+        "notional": 2625.080068588257,
+        "peak_px": 2.9200000762939453,
+        "reason": "top 4 by hot; rank hot_score; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+133.3; leftover $2627.79",
+        "shares": 899,
+        "ticker": "FEAM"
+      },
+      "GLND": {
+        "close_px": 2.9100000858306885,
+        "cost": 2639.6517463962555,
+        "entry_date": "2026-09-23",
+        "entry_px": 2.700000047683716,
+        "fee_in": 12.5517,
+        "last_px": 2.700000047683716,
+        "min_hold": 1,
+        "notional": 2627.1000463962555,
+        "peak_px": 2.700000047683716,
+        "reason": "top 4 by hot; rank hot_score; list yday_mover; \ud83d\udd35; ret5=+109.2; leftover $2627.79",
+        "shares": 973,
+        "ticker": "GLND"
+      },
+      "VICR": {
+        "close_px": 283.1600036621094,
+        "cost": 2400.517,
+        "entry_date": "2026-09-23",
+        "entry_px": 266.5,
+        "fee_in": 2.017,
+        "last_px": 266.5,
+        "min_hold": 1,
+        "notional": 2398.5,
+        "peak_px": 266.5,
+        "reason": "top 4 by hot; rank hot_score; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+45.9; leftover $2627.79",
+        "shares": 9,
+        "ticker": "VICR"
+      },
+      "VKTX": {
+        "close_px": 41.650001525878906,
+        "cost": 2591.2958959350585,
+        "entry_date": "2026-09-23",
+        "entry_px": 41.7599983215332,
+        "fee_in": 2.176,
+        "last_px": 41.7599983215332,
+        "min_hold": 1,
+        "notional": 2589.1198959350586,
+        "peak_px": 41.7599983215332,
+        "reason": "top 4 by hot; rank hot_score; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+36.4; leftover $2627.79",
+        "shares": 62,
+        "ticker": "VKTX"
+      }
+    },
+    "yday_equity": 10578.56
+  }
+}

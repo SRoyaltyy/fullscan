@@ -1,0 +1,119 @@
+{
+  "buys": [
+    "DBX",
+    "WAY",
+    "SM",
+    "CRUS"
+  ],
+  "cash": 29.46,
+  "date": "2026-09-16",
+  "equity": 8837.29,
+  "fees": 8.644,
+  "fills": [
+    {
+      "fees": 2.488,
+      "pnl": null,
+      "price": 37.13,
+      "shares": 166,
+      "side": "BUY",
+      "ticker": "DBX"
+    },
+    {
+      "fees": 2.089,
+      "pnl": null,
+      "price": 26.27,
+      "shares": 33,
+      "side": "BUY",
+      "ticker": "WAY"
+    },
+    {
+      "fees": 2.056,
+      "pnl": null,
+      "price": 39.99,
+      "shares": 22,
+      "side": "BUY",
+      "ticker": "SM"
+    },
+    {
+      "fees": 2.011,
+      "pnl": null,
+      "price": 123.09,
+      "shares": 7,
+      "side": "BUY",
+      "ticker": "CRUS"
+    }
+  ],
+  "holdings": [
+    "CRUS",
+    "DBX",
+    "SM",
+    "WAY"
+  ],
+  "mean": 0.3098,
+  "n_trades_today": 4,
+  "recipe": "union_news_g_conv_h1",
+  "sells": [],
+  "state": {
+    "after": "2026-09-16",
+    "cash": 29.46,
+    "pos": {
+      "CRUS": {
+        "close_px": 118.0,
+        "cost": 863.6409743652343,
+        "entry_date": "2026-09-16",
+        "entry_px": 123.08999633789062,
+        "fee_in": 2.011,
+        "last_px": 123.08999633789062,
+        "min_hold": 1,
+        "notional": 861.6299743652344,
+        "peak_px": 123.08999633789062,
+        "reason": "merged news\ud83d\udfe2 rank cameras; 70% leftover if #1 net \u2265 5; gate news=good; rank cond; list ohlc_hot; \ud83d\udd35; ret5=+10.3; leftover $881.00",
+        "shares": 7,
+        "ticker": "CRUS"
+      },
+      "DBX": {
+        "close_px": 37.7400016784668,
+        "cost": 6166.068177307129,
+        "entry_date": "2026-09-16",
+        "entry_px": 37.130001068115234,
+        "fee_in": 2.488,
+        "last_px": 37.130001068115234,
+        "min_hold": 1,
+        "notional": 6163.580177307129,
+        "peak_px": 37.130001068115234,
+        "reason": "merged news\ud83d\udfe2 rank cameras; 70% leftover if #1 net \u2265 5; gate news=good; rank cond; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+11.3; leftover $6167.00",
+        "shares": 166,
+        "ticker": "DBX"
+      },
+      "SM": {
+        "close_px": 38.15999984741211,
+        "cost": 881.8360369262696,
+        "entry_date": "2026-09-16",
+        "entry_px": 39.9900016784668,
+        "fee_in": 2.056,
+        "last_px": 39.9900016784668,
+        "min_hold": 1,
+        "notional": 879.7800369262695,
+        "peak_px": 39.9900016784668,
+        "reason": "merged news\ud83d\udfe2 rank cameras; 70% leftover if #1 net \u2265 5; gate news=good; rank cond; list ohlc_hot; \ud83d\udd35; ret5=+9.3; leftover $881.00",
+        "shares": 22,
+        "ticker": "SM"
+      },
+      "WAY": {
+        "close_px": 26.59000015258789,
+        "cost": 868.9990151062012,
+        "entry_date": "2026-09-16",
+        "entry_px": 26.270000457763672,
+        "fee_in": 2.089,
+        "last_px": 26.270000457763672,
+        "min_hold": 1,
+        "notional": 866.9100151062012,
+        "peak_px": 26.270000457763672,
+        "reason": "merged news\ud83d\udfe2 rank cameras; 70% leftover if #1 net \u2265 5; gate news=good; rank cond; list yday_gainer,ohlc_hot; \ud83d\udd35; \u26aa; ret5=+10.0; leftover $881.00",
+        "shares": 33,
+        "ticker": "WAY"
+      }
+    },
+    "yday_equity": 8837.29
+  }
+}

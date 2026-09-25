@@ -1,0 +1,39 @@
+{
+  "buys": [],
+  "cash": 11063.67,
+  "date": "2026-09-22",
+  "equity": 11063.67,
+  "fees": 4.746,
+  "fills": [
+    {
+      "fees": 2.1507,
+      "pnl": 178.1,
+      "price": 163.08,
+      "shares": 35,
+      "side": "SELL",
+      "ticker": "A"
+    },
+    {
+      "fees": 2.5953,
+      "pnl": -421.64,
+      "price": 29.3,
+      "shares": 178,
+      "side": "SELL",
+      "ticker": "ASST"
+    }
+  ],
+  "holdings": [],
+  "mean": -1.3217,
+  "n_trades_today": 2,
+  "recipe": "union_clk_nr7_mom_h1",
+  "sells": [
+    "A",
+    "ASST"
+  ],
+  "state": {
+    "after": "2026-09-22",
+    "cash": 11063.67,
+    "pos": {},
+    "yday_equity": 11063.67
+  }
+}

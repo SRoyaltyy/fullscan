@@ -1,0 +1,279 @@
+{
+  "buys": [
+    "PACS",
+    "DLO",
+    "DEFT",
+    "MX",
+    "AEHL",
+    "INDP",
+    "FWDI",
+    "UPXI"
+  ],
+  "cash": 0.56,
+  "date": "2026-09-22",
+  "equity": 9103.47,
+  "fees": 64.5636,
+  "fills": [
+    {
+      "fees": 2.046,
+      "pnl": -39.83,
+      "price": 102.74,
+      "shares": 12,
+      "side": "SELL",
+      "ticker": "ABVX"
+    },
+    {
+      "fees": 4.8575,
+      "pnl": -57.87,
+      "price": 3.29,
+      "shares": 371,
+      "side": "SELL",
+      "ticker": "KDK"
+    },
+    {
+      "fees": 2.19,
+      "pnl": -15.76,
+      "price": 20.66,
+      "shares": 60,
+      "side": "SELL",
+      "ticker": "MLKN"
+    },
+    {
+      "fees": 2.5097,
+      "pnl": -37.18,
+      "price": 7.64,
+      "shares": 161,
+      "side": "SELL",
+      "ticker": "PGEN"
+    },
+    {
+      "fees": 2.767,
+      "pnl": -7.6,
+      "price": 5.99,
+      "shares": 211,
+      "side": "SELL",
+      "ticker": "SION"
+    },
+    {
+      "fees": 2.0644,
+      "pnl": 70.41,
+      "price": 72.53,
+      "shares": 18,
+      "side": "SELL",
+      "ticker": "THO"
+    },
+    {
+      "fees": 2.103,
+      "pnl": -11.63,
+      "price": 39.76,
+      "shares": 31,
+      "side": "SELL",
+      "ticker": "XENE"
+    },
+    {
+      "fees": 2.068,
+      "pnl": null,
+      "price": 41.93,
+      "shares": 26,
+      "side": "BUY",
+      "ticker": "PACS"
+    },
+    {
+      "fees": 2.215,
+      "pnl": null,
+      "price": 14.5,
+      "shares": 75,
+      "side": "BUY",
+      "ticker": "DLO"
+    },
+    {
+      "fees": 16.5629,
+      "pnl": null,
+      "price": 0.59,
+      "shares": 1861,
+      "side": "BUY",
+      "ticker": "DEFT"
+    },
+    {
+      "fees": 4.4505,
+      "pnl": null,
+      "price": 3.18,
+      "shares": 345,
+      "side": "BUY",
+      "ticker": "MX"
+    },
+    {
+      "fees": 2.419,
+      "pnl": null,
+      "price": 7.63,
+      "shares": 143,
+      "side": "BUY",
+      "ticker": "AEHL"
+    },
+    {
+      "fees": 4.5666,
+      "pnl": null,
+      "price": 3.1,
+      "shares": 354,
+      "side": "BUY",
+      "ticker": "INDP"
+    },
+    {
+      "fees": 2.392,
+      "pnl": null,
+      "price": 8.17,
+      "shares": 134,
+      "side": "BUY",
+      "ticker": "FWDI"
+    },
+    {
+      "fees": 11.352,
+      "pnl": null,
+      "price": 1.23,
+      "shares": 880,
+      "side": "BUY",
+      "ticker": "UPXI"
+    }
+  ],
+  "holdings": [
+    "AEHL",
+    "DEFT",
+    "DLO",
+    "FWDI",
+    "INDP",
+    "MX",
+    "PACS",
+    "UPXI"
+  ],
+  "mean": 4.3313,
+  "n_trades_today": 15,
+  "recipe": "union_last_red_h1",
+  "sells": [
+    "ABVX",
+    "KDK",
+    "MLKN",
+    "PGEN",
+    "SION",
+    "THO",
+    "XENE"
+  ],
+  "state": {
+    "after": "2026-09-22",
+    "cash": 0.56,
+    "pos": {
+      "AEHL": {
+        "close_px": 7.73,
+        "cost": 1093.509,
+        "entry_date": "2026-09-22",
+        "entry_px": 7.63,
+        "fee_in": 2.419,
+        "last_px": 7.63,
+        "min_hold": 1,
+        "notional": 1091.09,
+        "peak_px": 7.63,
+        "reason": "union \u2229 last_red, no \ud83d\udea8; gate last_red=True; list yday_mover; ret5=+14.0; leftover $1098.13",
+        "shares": 143,
+        "ticker": "AEHL"
+      },
+      "DEFT": {
+        "close_px": 0.58,
+        "cost": 1114.5529,
+        "entry_date": "2026-09-22",
+        "entry_px": 0.59,
+        "fee_in": 16.5629,
+        "last_px": 0.59,
+        "min_hold": 1,
+        "notional": 1097.99,
+        "peak_px": 0.59,
+        "reason": "union \u2229 last_red, no \ud83d\udea8; gate last_red=True; list probable,yday_gainer,yday_mover; ret5=-1.7; leftover $1098.13",
+        "shares": 1861,
+        "ticker": "DEFT"
+      },
+      "DLO": {
+        "close_px": 14.26,
+        "cost": 1089.715,
+        "entry_date": "2026-09-22",
+        "entry_px": 14.5,
+        "fee_in": 2.215,
+        "last_px": 14.5,
+        "min_hold": 1,
+        "notional": 1087.5,
+        "peak_px": 14.5,
+        "reason": "union \u2229 last_red, no \ud83d\udea8; gate last_red=True; list flatten; ret5=-3.6; leftover $1098.13",
+        "shares": 75,
+        "ticker": "DLO"
+      },
+      "FWDI": {
+        "close_px": 8.6,
+        "cost": 1097.172,
+        "entry_date": "2026-09-22",
+        "entry_px": 8.17,
+        "fee_in": 2.392,
+        "last_px": 8.17,
+        "min_hold": 1,
+        "notional": 1094.78,
+        "peak_px": 8.17,
+        "reason": "union \u2229 last_red, no \ud83d\udea8; gate last_red=True; list ohlc_hot; ret5=+17.6; leftover $1098.13",
+        "shares": 134,
+        "ticker": "FWDI"
+      },
+      "INDP": {
+        "close_px": 3.990000009536743,
+        "cost": 1101.9665662399293,
+        "entry_date": "2026-09-22",
+        "entry_px": 3.0999999046325684,
+        "fee_in": 4.5666,
+        "last_px": 3.0999999046325684,
+        "min_hold": 1,
+        "notional": 1097.3999662399292,
+        "peak_px": 3.0999999046325684,
+        "reason": "union \u2229 last_red, no \ud83d\udea8; gate last_red=True; list ohlc_hot; ret5=-1.6; leftover $1098.13",
+        "shares": 354,
+        "ticker": "INDP"
+      },
+      "MX": {
+        "close_px": 3.200000047683716,
+        "cost": 1101.5505230312347,
+        "entry_date": "2026-09-22",
+        "entry_px": 3.180000066757202,
+        "fee_in": 4.4505,
+        "last_px": 3.180000066757202,
+        "min_hold": 1,
+        "notional": 1097.1000230312347,
+        "peak_px": 3.180000066757202,
+        "reason": "union \u2229 last_red, no \ud83d\udea8; gate last_red=True; list yday_gainer,yday_mover; ret5=+11.1; leftover $1098.13",
+        "shares": 345,
+        "ticker": "MX"
+      },
+      "PACS": {
+        "close_px": 41.53,
+        "cost": 1092.248,
+        "entry_date": "2026-09-22",
+        "entry_px": 41.93,
+        "fee_in": 2.068,
+        "last_px": 41.93,
+        "min_hold": 1,
+        "notional": 1090.18,
+        "peak_px": 41.93,
+        "reason": "union \u2229 last_red, no \ud83d\udea8; gate last_red=True; list flatten; ret5=-5.6; leftover $1098.13",
+        "shares": 26,
+        "ticker": "PACS"
+      },
+      "UPXI": {
+        "close_px": 1.25,
+        "cost": 1093.752016784668,
+        "entry_date": "2026-09-22",
+        "entry_px": 1.2300000190734863,
+        "fee_in": 11.352,
+        "last_px": 1.2300000190734863,
+        "min_hold": 1,
+        "notional": 1082.400016784668,
+        "peak_px": 1.2300000190734863,
+        "reason": "union \u2229 last_red, no \ud83d\udea8; gate last_red=True; list ohlc_hot; ret5=+14.5; leftover $1098.13",
+        "shares": 880,
+        "ticker": "UPXI"
+      }
+    },
+    "yday_equity": 9103.47
+  }
+}

@@ -1,0 +1,129 @@
+{
+  "buys": [],
+  "cash": 9703.5,
+  "date": "2026-09-08",
+  "equity": 9703.5,
+  "fees": 35.0288,
+  "fills": [
+    {
+      "fees": 2.037,
+      "pnl": 1.8,
+      "price": 63.83,
+      "shares": 9,
+      "side": "SELL",
+      "ticker": "AMBA"
+    },
+    {
+      "fees": 2.2185,
+      "pnl": -5.11,
+      "price": 8.73,
+      "shares": 69,
+      "side": "SELL",
+      "ticker": "ASAN"
+    },
+    {
+      "fees": 2.1606,
+      "pnl": 58.7,
+      "price": 26.44,
+      "shares": 50,
+      "side": "SELL",
+      "ticker": "ASST"
+    },
+    {
+      "fees": 2.8979,
+      "pnl": -1.33,
+      "price": 5.81,
+      "shares": 221,
+      "side": "SELL",
+      "ticker": "DFDV"
+    },
+    {
+      "fees": 2.034,
+      "pnl": -15.81,
+      "price": 67.05,
+      "shares": 8,
+      "side": "SELL",
+      "ticker": "DOCU"
+    },
+    {
+      "fees": 11.2998,
+      "pnl": 50.99,
+      "price": 1.565,
+      "shares": 864,
+      "side": "SELL",
+      "ticker": "GPRO"
+    },
+    {
+      "fees": 2.019,
+      "pnl": -25.11,
+      "price": 160.52,
+      "shares": 3,
+      "side": "SELL",
+      "ticker": "GWRE"
+    },
+    {
+      "fees": 2.04,
+      "pnl": 41.89,
+      "price": 125.07,
+      "shares": 10,
+      "side": "SELL",
+      "ticker": "HOOD"
+    },
+    {
+      "fees": 2.049,
+      "pnl": -73.5,
+      "price": 39.56,
+      "shares": 13,
+      "side": "SELL",
+      "ticker": "IOT"
+    },
+    {
+      "fees": 2.028,
+      "pnl": 10.54,
+      "price": 100.58,
+      "shares": 6,
+      "side": "SELL",
+      "ticker": "LULU"
+    },
+    {
+      "fees": 2.124,
+      "pnl": -23.23,
+      "price": 15.2,
+      "shares": 38,
+      "side": "SELL",
+      "ticker": "MAMA"
+    },
+    {
+      "fees": 2.121,
+      "pnl": -44.18,
+      "price": 15.16,
+      "shares": 37,
+      "side": "SELL",
+      "ticker": "PATH"
+    }
+  ],
+  "holdings": [],
+  "mean": -1.9409,
+  "n_trades_today": 12,
+  "recipe": "combo_he1_5050_shared",
+  "sells": [
+    "AMBA",
+    "ASAN",
+    "ASST",
+    "DFDV",
+    "DOCU",
+    "GPRO",
+    "GWRE",
+    "HOOD",
+    "IOT",
+    "LULU",
+    "MAMA",
+    "PATH"
+  ],
+  "state": {
+    "after": "2026-09-08",
+    "cash": 9703.5,
+    "pos": {},
+    "yday_equity": 9703.5
+  }
+}

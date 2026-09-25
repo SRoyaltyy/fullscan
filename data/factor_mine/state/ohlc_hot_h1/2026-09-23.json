@@ -1,0 +1,270 @@
+{
+  "buys": [
+    "MAZE",
+    "SGRY",
+    "MNRO",
+    "VERI",
+    "BAND",
+    "TWLO",
+    "GME"
+  ],
+  "cash": 133.64,
+  "date": "2026-09-23",
+  "equity": 9845.81,
+  "fees": 45.754,
+  "fills": [
+    {
+      "fees": 2.1931,
+      "pnl": -22.67,
+      "price": 19.7,
+      "shares": 61,
+      "side": "SELL",
+      "ticker": "AMRX"
+    },
+    {
+      "fees": 2.106,
+      "pnl": 52.93,
+      "price": 38.905,
+      "shares": 32,
+      "side": "SELL",
+      "ticker": "FIVN"
+    },
+    {
+      "fees": 2.139,
+      "pnl": -95.42,
+      "price": 25.9,
+      "shares": 43,
+      "side": "SELL",
+      "ticker": "FSLY"
+    },
+    {
+      "fees": 2.4844,
+      "pnl": -7.99,
+      "price": 8.2,
+      "shares": 153,
+      "side": "SELL",
+      "ticker": "FWDI"
+    },
+    {
+      "fees": 7.3792,
+      "pnl": 7.91,
+      "price": 2.2,
+      "shares": 564,
+      "side": "SELL",
+      "ticker": "GCTS"
+    },
+    {
+      "fees": 2.175,
+      "pnl": -40.08,
+      "price": 21.29,
+      "shares": 55,
+      "side": "SELL",
+      "ticker": "GRPN"
+    },
+    {
+      "fees": 2.5351,
+      "pnl": -25.31,
+      "price": 7.06,
+      "shares": 169,
+      "side": "SELL",
+      "ticker": "VNET"
+    },
+    {
+      "fees": 2.116,
+      "pnl": null,
+      "price": 28.3,
+      "shares": 42,
+      "side": "BUY",
+      "ticker": "MAZE"
+    },
+    {
+      "fees": 2.218,
+      "pnl": null,
+      "price": 15.72,
+      "shares": 76,
+      "side": "BUY",
+      "ticker": "SGRY"
+    },
+    {
+      "fees": 2.245,
+      "pnl": null,
+      "price": 14.14,
+      "shares": 85,
+      "side": "BUY",
+      "ticker": "MNRO"
+    },
+    {
+      "fees": 11.9712,
+      "pnl": null,
+      "price": 1.3,
+      "shares": 928,
+      "side": "BUY",
+      "ticker": "VERI"
+    },
+    {
+      "fees": 2.05,
+      "pnl": null,
+      "price": 58.01,
+      "shares": 20,
+      "side": "BUY",
+      "ticker": "BAND"
+    },
+    {
+      "fees": 2.002,
+      "pnl": null,
+      "price": 285.0,
+      "shares": 4,
+      "side": "BUY",
+      "ticker": "TWLO"
+    },
+    {
+      "fees": 2.14,
+      "pnl": null,
+      "price": 23.94,
+      "shares": 50,
+      "side": "BUY",
+      "ticker": "GME"
+    }
+  ],
+  "holdings": [
+    "BAND",
+    "GME",
+    "INDP",
+    "MAZE",
+    "MNRO",
+    "SGRY",
+    "TWLO",
+    "VERI"
+  ],
+  "mean": -2.5121,
+  "n_trades_today": 14,
+  "recipe": "ohlc_hot_h1",
+  "sells": [
+    "AMRX",
+    "FIVN",
+    "FSLY",
+    "FWDI",
+    "GCTS",
+    "GRPN",
+    "VNET"
+  ],
+  "state": {
+    "after": "2026-09-23",
+    "cash": 133.64,
+    "pos": {
+      "BAND": {
+        "close_px": 59.130001068115234,
+        "cost": 1162.249966430664,
+        "entry_date": "2026-09-23",
+        "entry_px": 58.0099983215332,
+        "fee_in": 2.05,
+        "last_px": 58.0099983215332,
+        "min_hold": 1,
+        "notional": 1160.199966430664,
+        "peak_px": 58.0099983215332,
+        "reason": "baseline list, no extra gate; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+16.6; leftover $1206.74",
+        "shares": 20,
+        "ticker": "BAND"
+      },
+      "GME": {
+        "close_px": 24.200000762939453,
+        "cost": 1199.140026702881,
+        "entry_date": "2026-09-23",
+        "entry_px": 23.940000534057617,
+        "fee_in": 2.14,
+        "last_px": 23.940000534057617,
+        "min_hold": 1,
+        "notional": 1197.0000267028809,
+        "peak_px": 23.940000534057617,
+        "reason": "baseline list, no extra gate; list ohlc_hot; \ud83d\udd35; ret5=+12.1; leftover $1206.74",
+        "shares": 50,
+        "ticker": "GME"
+      },
+      "INDP": {
+        "close_px": 3.7699999809265137,
+        "cost": 1223.3696625205994,
+        "entry_date": "2026-09-22",
+        "entry_px": 3.0999999046325684,
+        "fee_in": 5.0697,
+        "last_px": 3.930000066757202,
+        "min_hold": 1,
+        "notional": 1218.2999625205994,
+        "peak_px": 3.930000066757202,
+        "reason": "baseline list, no extra gate; list ohlc_hot; ret5=-1.6; leftover $1220.16",
+        "shares": 393,
+        "ticker": "INDP"
+      },
+      "MAZE": {
+        "close_px": 28.09000015258789,
+        "cost": 1190.715967956543,
+        "entry_date": "2026-09-23",
+        "entry_px": 28.299999237060547,
+        "fee_in": 2.116,
+        "last_px": 28.299999237060547,
+        "min_hold": 1,
+        "notional": 1188.599967956543,
+        "peak_px": 28.299999237060547,
+        "reason": "baseline list, no extra gate; list yday_gainer,yday_mover,ohlc_hot; \ud83d\udd35; ret5=+17.1; leftover $1206.74",
+        "shares": 42,
+        "ticker": "MAZE"
+      },
+      "MNRO": {
+        "close_px": 14.020000457763672,
+        "cost": 1204.145029182434,
+        "entry_date": "2026-09-23",
+        "entry_px": 14.140000343322754,
+        "fee_in": 2.245,
+        "last_px": 14.140000343322754,
+        "min_hold": 1,
+        "notional": 1201.900029182434,
+        "peak_px": 14.140000343322754,
+        "reason": "baseline list, no extra gate; list yday_gainer,ohlc_hot; \ud83d\udd35; ret5=+14.1; leftover $1206.74",
+        "shares": 85,
+        "ticker": "MNRO"
+      },
+      "SGRY": {
+        "close_px": 14.5600004196167,
+        "cost": 1196.9380202941895,
+        "entry_date": "2026-09-23",
+        "entry_px": 15.720000267028809,
+        "fee_in": 2.218,
+        "last_px": 15.720000267028809,
+        "min_hold": 1,
+        "notional": 1194.7200202941895,
+        "peak_px": 15.720000267028809,
+        "reason": "baseline list, no extra gate; list yday_gainer,yday_mover,ohlc_hot; \ud83d\udd35; ret5=+15.8; leftover $1206.74",
+        "shares": 76,
+        "ticker": "SGRY"
+      },
+      "TWLO": {
+        "close_px": 290.70001220703125,
+        "cost": 1142.002,
+        "entry_date": "2026-09-23",
+        "entry_px": 285.0,
+        "fee_in": 2.002,
+        "last_px": 285.0,
+        "min_hold": 1,
+        "notional": 1140.0,
+        "peak_px": 285.0,
+        "reason": "baseline list, no extra gate; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+17.5; leftover $1206.74",
+        "shares": 4,
+        "ticker": "TWLO"
+      },
+      "VERI": {
+        "close_px": 1.2899999618530273,
+        "cost": 1218.3711557495117,
+        "entry_date": "2026-09-23",
+        "entry_px": 1.2999999523162842,
+        "fee_in": 11.9712,
+        "last_px": 1.2999999523162842,
+        "min_hold": 1,
+        "notional": 1206.3999557495117,
+        "peak_px": 1.2999999523162842,
+        "reason": "baseline list, no extra gate; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+15.3; leftover $1206.74",
+        "shares": 928,
+        "ticker": "VERI"
+      }
+    },
+    "yday_equity": 9845.81
+  }
+}

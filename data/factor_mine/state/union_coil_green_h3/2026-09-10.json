@@ -1,0 +1,101 @@
+{
+  "buys": [],
+  "cash": 7862.91,
+  "date": "2026-09-10",
+  "equity": 9117.15,
+  "fees": 16.4861,
+  "fills": [
+    {
+      "fees": 2.112,
+      "pnl": -36.27,
+      "price": 33.747,
+      "shares": 34,
+      "side": "SELL",
+      "ticker": "BLSH"
+    },
+    {
+      "fees": 2.046,
+      "pnl": -99.83,
+      "price": 90.0,
+      "shares": 12,
+      "side": "SELL",
+      "ticker": "CRCL"
+    },
+    {
+      "fees": 2.022,
+      "pnl": -76.06,
+      "price": 245.35,
+      "shares": 4,
+      "side": "SELL",
+      "ticker": "CRM"
+    },
+    {
+      "fees": 2.172,
+      "pnl": -21.06,
+      "price": 21.53,
+      "shares": 54,
+      "side": "SELL",
+      "ticker": "ETD"
+    },
+    {
+      "fees": 3.9821,
+      "pnl": -126.46,
+      "price": 3.56,
+      "shares": 304,
+      "side": "SELL",
+      "ticker": "GORO"
+    },
+    {
+      "fees": 2.034,
+      "pnl": -75.33,
+      "price": 128.44,
+      "shares": 8,
+      "side": "SELL",
+      "ticker": "MSTR"
+    },
+    {
+      "fees": 2.118,
+      "pnl": -108.62,
+      "price": 29.75,
+      "shares": 36,
+      "side": "SELL",
+      "ticker": "ZETA"
+    }
+  ],
+  "holdings": [
+    "HAFN"
+  ],
+  "mean": -1.3752,
+  "n_trades_today": 7,
+  "recipe": "union_coil_green_h3",
+  "sells": [
+    "BLSH",
+    "CRCL",
+    "CRM",
+    "ETD",
+    "GORO",
+    "MSTR",
+    "ZETA"
+  ],
+  "state": {
+    "after": "2026-09-10",
+    "cash": 7862.91,
+    "pos": {
+      "HAFN": {
+        "close_px": 9.359999656677246,
+        "cost": 1200.3519437713624,
+        "entry_date": "2026-09-04",
+        "entry_px": 8.9399995803833,
+        "fee_in": 2.392,
+        "last_px": 9.079999923706055,
+        "min_hold": 3,
+        "notional": 1197.9599437713623,
+        "peak_px": 9.079999923706055,
+        "reason": "combo gate; gate last_green=True,ret_5_min=0.0,ret_5_max=10.0,rvol_min=0.7,rvol_max=2.2; list ohlc_hot; ret5=+7.7; leftover $1200.86",
+        "shares": 134,
+        "ticker": "HAFN"
+      }
+    },
+    "yday_equity": 9117.15
+  }
+}

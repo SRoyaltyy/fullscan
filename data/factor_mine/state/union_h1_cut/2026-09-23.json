@@ -1,0 +1,288 @@
+{
+  "buys": [
+    "DXCM",
+    "A",
+    "HALO",
+    "ARQT",
+    "PGEN",
+    "ADMA",
+    "FTRE",
+    "OMER"
+  ],
+  "cash": 315.11,
+  "date": "2026-09-23",
+  "equity": 8840.19,
+  "fees": 54.8392,
+  "fills": [
+    {
+      "fees": 17.4943,
+      "pnl": -64.36,
+      "price": 0.575,
+      "shares": 1961,
+      "side": "SELL",
+      "ticker": "DEFT"
+    },
+    {
+      "fees": 2.2501,
+      "pnl": -23.44,
+      "price": 14.26,
+      "shares": 79,
+      "side": "SELL",
+      "ticker": "DLO"
+    },
+    {
+      "fees": 2.043,
+      "pnl": 18.37,
+      "price": 100.06,
+      "shares": 11,
+      "side": "SELL",
+      "ticker": "EL"
+    },
+    {
+      "fees": 7.4838,
+      "pnl": -37.74,
+      "price": 1.98,
+      "shares": 572,
+      "side": "SELL",
+      "ticker": "FJET"
+    },
+    {
+      "fees": 2.079,
+      "pnl": -6.21,
+      "price": 49.48,
+      "shares": 23,
+      "side": "SELL",
+      "ticker": "MKC"
+    },
+    {
+      "fees": 2.091,
+      "pnl": -20.63,
+      "price": 41.32,
+      "shares": 27,
+      "side": "SELL",
+      "ticker": "PACS"
+    },
+    {
+      "fees": 2.124,
+      "pnl": -14.49,
+      "price": 29.51,
+      "shares": 38,
+      "side": "SELL",
+      "ticker": "TDC"
+    },
+    {
+      "fees": 2.046,
+      "pnl": -5.39,
+      "price": 93.97,
+      "shares": 12,
+      "side": "SELL",
+      "ticker": "USFD"
+    },
+    {
+      "fees": 2.026,
+      "pnl": null,
+      "price": 89.5,
+      "shares": 12,
+      "side": "BUY",
+      "ticker": "DXCM"
+    },
+    {
+      "fees": 2.008,
+      "pnl": null,
+      "price": 166.54,
+      "shares": 6,
+      "side": "BUY",
+      "ticker": "A"
+    },
+    {
+      "fees": 2.017,
+      "pnl": null,
+      "price": 116.85,
+      "shares": 9,
+      "side": "BUY",
+      "ticker": "HALO"
+    },
+    {
+      "fees": 2.11,
+      "pnl": null,
+      "price": 27.79,
+      "shares": 40,
+      "side": "BUY",
+      "ticker": "ARQT"
+    },
+    {
+      "fees": 2.419,
+      "pnl": null,
+      "price": 7.95,
+      "shares": 143,
+      "side": "BUY",
+      "ticker": "PGEN"
+    },
+    {
+      "fees": 2.335,
+      "pnl": null,
+      "price": 9.81,
+      "shares": 115,
+      "side": "BUY",
+      "ticker": "ADMA"
+    },
+    {
+      "fees": 2.158,
+      "pnl": null,
+      "price": 20.25,
+      "shares": 56,
+      "side": "BUY",
+      "ticker": "FTRE"
+    },
+    {
+      "fees": 2.155,
+      "pnl": null,
+      "price": 20.65,
+      "shares": 55,
+      "side": "BUY",
+      "ticker": "OMER"
+    }
+  ],
+  "holdings": [
+    "A",
+    "ADMA",
+    "ARQT",
+    "DXCM",
+    "FTRE",
+    "HALO",
+    "OMER",
+    "PGEN"
+  ],
+  "mean": -3.2155,
+  "n_trades_today": 16,
+  "recipe": "union_h1_cut",
+  "sells": [
+    "DEFT",
+    "DLO",
+    "EL",
+    "FJET",
+    "MKC",
+    "PACS",
+    "TDC",
+    "USFD"
+  ],
+  "state": {
+    "after": "2026-09-23",
+    "cash": 315.11,
+    "pos": {
+      "A": {
+        "close_px": 165.32000732421875,
+        "cost": 1001.2479597167969,
+        "entry_date": "2026-09-23",
+        "entry_px": 166.5399932861328,
+        "fee_in": 2.008,
+        "last_px": 166.5399932861328,
+        "min_hold": 1,
+        "notional": 999.2399597167969,
+        "peak_px": 166.5399932861328,
+        "reason": "after min-hold, cut \u22123% losers; list flatten; \ud83d\udd35; \u26aa; ret5=+11.3; leftover $1137.95",
+        "shares": 6,
+        "ticker": "A"
+      },
+      "ADMA": {
+        "close_px": 9.699999809265137,
+        "cost": 1130.4850482559204,
+        "entry_date": "2026-09-23",
+        "entry_px": 9.8100004196167,
+        "fee_in": 2.335,
+        "last_px": 9.8100004196167,
+        "min_hold": 1,
+        "notional": 1128.1500482559204,
+        "peak_px": 9.8100004196167,
+        "reason": "after min-hold, cut \u22123% losers; list flatten; \ud83d\udd35; \u26aa; ret5=+13.9; leftover $1137.95",
+        "shares": 115,
+        "ticker": "ADMA"
+      },
+      "ARQT": {
+        "close_px": 26.3799991607666,
+        "cost": 1113.7100366210936,
+        "entry_date": "2026-09-23",
+        "entry_px": 27.790000915527344,
+        "fee_in": 2.11,
+        "last_px": 27.790000915527344,
+        "min_hold": 1,
+        "notional": 1111.6000366210938,
+        "peak_px": 27.790000915527344,
+        "reason": "after min-hold, cut \u22123% losers; list flatten; \ud83d\udd35; \u26aa; ret5=+18.2; leftover $1137.95",
+        "shares": 40,
+        "ticker": "ARQT"
+      },
+      "DXCM": {
+        "close_px": 87.7300033569336,
+        "cost": 1076.026,
+        "entry_date": "2026-09-23",
+        "entry_px": 89.5,
+        "fee_in": 2.026,
+        "last_px": 89.5,
+        "min_hold": 1,
+        "notional": 1074.0,
+        "peak_px": 89.5,
+        "reason": "after min-hold, cut \u22123% losers; list flatten; \ud83d\udd35; \u26aa; ret5=+3.6; leftover $1137.95",
+        "shares": 12,
+        "ticker": "DXCM"
+      },
+      "FTRE": {
+        "close_px": 19.520000457763672,
+        "cost": 1136.158,
+        "entry_date": "2026-09-23",
+        "entry_px": 20.25,
+        "fee_in": 2.158,
+        "last_px": 20.25,
+        "min_hold": 1,
+        "notional": 1134.0,
+        "peak_px": 20.25,
+        "reason": "after min-hold, cut \u22123% losers; list flatten; \ud83d\udd35; \u26aa; ret5=+3.5; leftover $1137.95",
+        "shares": 56,
+        "ticker": "FTRE"
+      },
+      "HALO": {
+        "close_px": 112.44000244140625,
+        "cost": 1053.66698626709,
+        "entry_date": "2026-09-23",
+        "entry_px": 116.8499984741211,
+        "fee_in": 2.017,
+        "last_px": 116.8499984741211,
+        "min_hold": 1,
+        "notional": 1051.6499862670898,
+        "peak_px": 116.8499984741211,
+        "reason": "after min-hold, cut \u22123% losers; list flatten; \ud83d\udd35; \u26aa; ret5=+8.4; leftover $1137.95",
+        "shares": 9,
+        "ticker": "HALO"
+      },
+      "OMER": {
+        "close_px": 20.739999771118164,
+        "cost": 1137.904979019165,
+        "entry_date": "2026-09-23",
+        "entry_px": 20.649999618530273,
+        "fee_in": 2.155,
+        "last_px": 20.649999618530273,
+        "min_hold": 1,
+        "notional": 1135.749979019165,
+        "peak_px": 20.649999618530273,
+        "reason": "after min-hold, cut \u22123% losers; list flatten,yday_gainer,yday_mover; \ud83d\udd35; \u26aa; ret5=+22.6; leftover $1137.95",
+        "shares": 55,
+        "ticker": "OMER"
+      },
+      "PGEN": {
+        "close_px": 7.440000057220459,
+        "cost": 1139.2689727249146,
+        "entry_date": "2026-09-23",
+        "entry_px": 7.949999809265137,
+        "fee_in": 2.419,
+        "last_px": 7.949999809265137,
+        "min_hold": 1,
+        "notional": 1136.8499727249146,
+        "peak_px": 7.949999809265137,
+        "reason": "after min-hold, cut \u22123% losers; list flatten; \ud83d\udd35; \u26aa; ret5=+12.7; leftover $1137.95",
+        "shares": 143,
+        "ticker": "PGEN"
+      }
+    },
+    "yday_equity": 8840.19
+  }
+}

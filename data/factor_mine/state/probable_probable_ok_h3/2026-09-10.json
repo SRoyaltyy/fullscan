@@ -1,0 +1,30 @@
+{
+  "buys": [],
+  "cash": 8550.25,
+  "date": "2026-09-10",
+  "equity": 8550.25,
+  "fees": 2.1151,
+  "fills": [
+    {
+      "fees": 2.1151,
+      "pnl": 156.65,
+      "price": 523.83,
+      "shares": 16,
+      "side": "SELL",
+      "ticker": "DELL"
+    }
+  ],
+  "holdings": [],
+  "mean": -2.116,
+  "n_trades_today": 1,
+  "recipe": "probable_probable_ok_h3",
+  "sells": [
+    "DELL"
+  ],
+  "state": {
+    "after": "2026-09-10",
+    "cash": 8550.25,
+    "pos": {},
+    "yday_equity": 8550.25
+  }
+}

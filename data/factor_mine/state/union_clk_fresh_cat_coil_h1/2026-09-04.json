@@ -1,0 +1,215 @@
+{
+  "buys": [
+    "CABA",
+    "ALEC",
+    "ATRC",
+    "BHC",
+    "HRMY",
+    "RVTY",
+    "VIR",
+    "PIPR"
+  ],
+  "cash": 122.37,
+  "date": "2026-09-04",
+  "equity": 9666.94,
+  "fees": 23.7648,
+  "fills": [
+    {
+      "fees": 4.5279,
+      "pnl": null,
+      "price": 3.46,
+      "shares": 351,
+      "side": "BUY",
+      "ticker": "CABA"
+    },
+    {
+      "fees": 6.2049,
+      "pnl": null,
+      "price": 2.52,
+      "shares": 481,
+      "side": "BUY",
+      "ticker": "ALEC"
+    },
+    {
+      "fees": 2.059,
+      "pnl": null,
+      "price": 52.03,
+      "shares": 23,
+      "side": "BUY",
+      "ticker": "ATRC"
+    },
+    {
+      "fees": 2.533,
+      "pnl": null,
+      "price": 6.71,
+      "shares": 181,
+      "side": "BUY",
+      "ticker": "BHC"
+    },
+    {
+      "fees": 2.077,
+      "pnl": null,
+      "price": 41.5,
+      "shares": 29,
+      "side": "BUY",
+      "ticker": "HRMY"
+    },
+    {
+      "fees": 2.017,
+      "pnl": null,
+      "price": 130.03,
+      "shares": 9,
+      "side": "BUY",
+      "ticker": "RVTY"
+    },
+    {
+      "fees": 2.311,
+      "pnl": null,
+      "price": 11.31,
+      "shares": 107,
+      "side": "BUY",
+      "ticker": "VIR"
+    },
+    {
+      "fees": 2.035,
+      "pnl": null,
+      "price": 76.55,
+      "shares": 15,
+      "side": "BUY",
+      "ticker": "PIPR"
+    }
+  ],
+  "holdings": [
+    "ALEC",
+    "ATRC",
+    "BHC",
+    "CABA",
+    "HRMY",
+    "PIPR",
+    "RVTY",
+    "VIR"
+  ],
+  "mean": -0.506,
+  "n_trades_today": 8,
+  "recipe": "union_clk_fresh_cat_coil_h1",
+  "sells": [],
+  "state": {
+    "after": "2026-09-04",
+    "cash": 122.37,
+    "pos": {
+      "ALEC": {
+        "close_px": 2.4600000381469727,
+        "cost": 1218.324890825653,
+        "entry_date": "2026-09-04",
+        "entry_px": 2.5199999809265137,
+        "fee_in": 6.2049,
+        "last_px": 2.5199999809265137,
+        "min_hold": 1,
+        "notional": 1212.119990825653,
+        "peak_px": 2.5199999809265137,
+        "reason": "Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list flatten,probable,yday_gainer,yday_mover,mover_buy; \ud83d\udd35; \u26aa; ret5=+5.0; leftover $1214.51",
+        "shares": 481,
+        "ticker": "ALEC"
+      },
+      "ATRC": {
+        "close_px": 51.52000045776367,
+        "cost": 1198.748971923828,
+        "entry_date": "2026-09-04",
+        "entry_px": 52.029998779296875,
+        "fee_in": 2.059,
+        "last_px": 52.029998779296875,
+        "min_hold": 1,
+        "notional": 1196.6899719238281,
+        "peak_px": 52.029998779296875,
+        "reason": "Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list flatten,mover_buy; \ud83d\udd35; \u26aa; ret5=+6.5; leftover $1214.51",
+        "shares": 23,
+        "ticker": "ATRC"
+      },
+      "BHC": {
+        "close_px": 6.559999942779541,
+        "cost": 1217.043006904602,
+        "entry_date": "2026-09-04",
+        "entry_px": 6.710000038146973,
+        "fee_in": 2.533,
+        "last_px": 6.710000038146973,
+        "min_hold": 1,
+        "notional": 1214.510006904602,
+        "peak_px": 6.710000038146973,
+        "reason": "Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list flatten,mover_buy; \ud83d\udd35; \u26aa; ret5=+7.3; leftover $1214.51",
+        "shares": 181,
+        "ticker": "BHC"
+      },
+      "CABA": {
+        "close_px": 3.4700000286102295,
+        "cost": 1218.9879133895874,
+        "entry_date": "2026-09-04",
+        "entry_px": 3.4600000381469727,
+        "fee_in": 4.5279,
+        "last_px": 3.4600000381469727,
+        "min_hold": 1,
+        "notional": 1214.4600133895874,
+        "peak_px": 3.4600000381469727,
+        "reason": "Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list flatten,mover_buy; \ud83d\udd35; \u26aa; ret5=+3.0; leftover $1214.51",
+        "shares": 351,
+        "ticker": "CABA"
+      },
+      "HRMY": {
+        "close_px": 42.25,
+        "cost": 1205.577,
+        "entry_date": "2026-09-04",
+        "entry_px": 41.5,
+        "fee_in": 2.077,
+        "last_px": 41.5,
+        "min_hold": 1,
+        "notional": 1203.5,
+        "peak_px": 41.5,
+        "reason": "Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list flatten,mover_buy; \ud83d\udd35; \u26aa; ret5=+5.0; leftover $1214.51",
+        "shares": 29,
+        "ticker": "HRMY"
+      },
+      "PIPR": {
+        "close_px": 77.04000091552734,
+        "cost": 1150.2850457763673,
+        "entry_date": "2026-09-04",
+        "entry_px": 76.55000305175781,
+        "fee_in": 2.035,
+        "last_px": 76.55000305175781,
+        "min_hold": 1,
+        "notional": 1148.2500457763672,
+        "peak_px": 76.55000305175781,
+        "reason": "Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list mover_buy; \ud83d\udd35; \u26aa; ret5=+4.4; leftover $1214.51",
+        "shares": 15,
+        "ticker": "PIPR"
+      },
+      "RVTY": {
+        "close_px": 130.22000122070312,
+        "cost": 1172.286989013672,
+        "entry_date": "2026-09-04",
+        "entry_px": 130.02999877929688,
+        "fee_in": 2.017,
+        "last_px": 130.02999877929688,
+        "min_hold": 1,
+        "notional": 1170.2699890136719,
+        "peak_px": 130.02999877929688,
+        "reason": "Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list mover_buy; \u26aa; ret5=+0.7; leftover $1214.51",
+        "shares": 9,
+        "ticker": "RVTY"
+      },
+      "VIR": {
+        "close_px": 11.385000228881836,
+        "cost": 1212.4810448989867,
+        "entry_date": "2026-09-04",
+        "entry_px": 11.3100004196167,
+        "fee_in": 2.311,
+        "last_px": 11.3100004196167,
+        "min_hold": 1,
+        "notional": 1210.1700448989868,
+        "peak_px": 11.3100004196167,
+        "reason": "Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list flatten,mover_buy; \ud83d\udd35; \u26aa; ret5=+1.2; leftover $1214.51",
+        "shares": 107,
+        "ticker": "VIR"
+      }
+    },
+    "yday_equity": 9666.94
+  }
+}

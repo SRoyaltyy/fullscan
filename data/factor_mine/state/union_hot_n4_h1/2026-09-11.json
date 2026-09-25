@@ -1,0 +1,119 @@
+{
+  "buys": [
+    "INDP",
+    "BNC",
+    "VISN",
+    "GPRO"
+  ],
+  "cash": 0.84,
+  "date": "2026-09-11",
+  "equity": 10115.89,
+  "fees": 47.0205,
+  "fills": [
+    {
+      "fees": 12.1647,
+      "pnl": null,
+      "price": 2.7,
+      "shares": 943,
+      "side": "BUY",
+      "ticker": "INDP"
+    },
+    {
+      "fees": 6.6951,
+      "pnl": null,
+      "price": 4.91,
+      "shares": 519,
+      "side": "BUY",
+      "ticker": "BNC"
+    },
+    {
+      "fees": 5.0568,
+      "pnl": null,
+      "price": 6.49,
+      "shares": 392,
+      "side": "BUY",
+      "ticker": "VISN"
+    },
+    {
+      "fees": 23.1039,
+      "pnl": null,
+      "price": 1.4,
+      "shares": 1791,
+      "side": "BUY",
+      "ticker": "GPRO"
+    }
+  ],
+  "holdings": [
+    "BNC",
+    "GPRO",
+    "INDP",
+    "VISN"
+  ],
+  "mean": -0.7636,
+  "n_trades_today": 4,
+  "recipe": "union_hot_n4_h1",
+  "sells": [],
+  "state": {
+    "after": "2026-09-11",
+    "cash": 0.84,
+    "pos": {
+      "BNC": {
+        "close_px": 4.800000190734863,
+        "cost": 2554.9850208068847,
+        "entry_date": "2026-09-11",
+        "entry_px": 4.909999847412109,
+        "fee_in": 6.6951,
+        "last_px": 4.909999847412109,
+        "min_hold": 1,
+        "notional": 2548.2899208068848,
+        "peak_px": 4.909999847412109,
+        "reason": "top 4 by hot; rank hot_score; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+76.3; leftover $2548.43",
+        "shares": 519,
+        "ticker": "BNC"
+      },
+      "GPRO": {
+        "close_px": 1.3799999952316284,
+        "cost": 2530.5038572992325,
+        "entry_date": "2026-09-11",
+        "entry_px": 1.399999976158142,
+        "fee_in": 23.1039,
+        "last_px": 1.399999976158142,
+        "min_hold": 1,
+        "notional": 2507.3999572992325,
+        "peak_px": 1.399999976158142,
+        "reason": "top 4 by hot; rank hot_score; list ohlc_hot; ret5=+0.7; leftover $2548.43",
+        "shares": 1791,
+        "ticker": "GPRO"
+      },
+      "INDP": {
+        "close_px": 2.7699999809265137,
+        "cost": 2558.264744965744,
+        "entry_date": "2026-09-11",
+        "entry_px": 2.700000047683716,
+        "fee_in": 12.1647,
+        "last_px": 2.700000047683716,
+        "min_hold": 1,
+        "notional": 2546.100044965744,
+        "peak_px": 2.700000047683716,
+        "reason": "top 4 by hot; rank hot_score; list yday_gainer,yday_mover; ret5=+120.7; leftover $2548.43",
+        "shares": 943,
+        "ticker": "INDP"
+      },
+      "VISN": {
+        "close_px": 6.480000019073486,
+        "cost": 2549.13671027832,
+        "entry_date": "2026-09-11",
+        "entry_px": 6.489999771118164,
+        "fee_in": 5.0568,
+        "last_px": 6.489999771118164,
+        "min_hold": 1,
+        "notional": 2544.0799102783203,
+        "peak_px": 6.489999771118164,
+        "reason": "top 4 by hot; rank hot_score; list ohlc_hot; \ud83d\udd35; ret5=+0.5; leftover $2548.43",
+        "shares": 392,
+        "ticker": "VISN"
+      }
+    },
+    "yday_equity": 10115.89
+  }
+}

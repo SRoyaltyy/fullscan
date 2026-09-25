@@ -1,0 +1,93 @@
+{
+  "buys": [],
+  "cash": 9915.35,
+  "date": "2026-09-08",
+  "equity": 9915.35,
+  "fees": 19.0297,
+  "fills": [
+    {
+      "fees": 2.1151,
+      "pnl": 38.14,
+      "price": 35.9,
+      "shares": 35,
+      "side": "SELL",
+      "ticker": "BLSH"
+    },
+    {
+      "fees": 2.016,
+      "pnl": 10.73,
+      "price": 521.15,
+      "shares": 2,
+      "side": "SELL",
+      "ticker": "DELL"
+    },
+    {
+      "fees": 2.178,
+      "pnl": 13.02,
+      "price": 22.15,
+      "shares": 56,
+      "side": "SELL",
+      "ticker": "ETD"
+    },
+    {
+      "fees": 4.0738,
+      "pnl": 47.89,
+      "price": 4.13,
+      "shares": 311,
+      "side": "SELL",
+      "ticker": "GORO"
+    },
+    {
+      "fees": 2.4337,
+      "pnl": -22.64,
+      "price": 8.81,
+      "shares": 137,
+      "side": "SELL",
+      "ticker": "HAFN"
+    },
+    {
+      "fees": 2.0581,
+      "pnl": 46.94,
+      "price": 78.84,
+      "shares": 16,
+      "side": "SELL",
+      "ticker": "MRX"
+    },
+    {
+      "fees": 2.034,
+      "pnl": -1.89,
+      "price": 137.62,
+      "shares": 8,
+      "side": "SELL",
+      "ticker": "MSTR"
+    },
+    {
+      "fees": 2.121,
+      "pnl": -62.31,
+      "price": 31.08,
+      "shares": 37,
+      "side": "SELL",
+      "ticker": "ZETA"
+    }
+  ],
+  "holdings": [],
+  "mean": -1.5124,
+  "n_trades_today": 8,
+  "recipe": "union_clk_mom_break_peer_h1",
+  "sells": [
+    "BLSH",
+    "DELL",
+    "ETD",
+    "GORO",
+    "HAFN",
+    "MRX",
+    "MSTR",
+    "ZETA"
+  ],
+  "state": {
+    "after": "2026-09-08",
+    "cash": 9915.35,
+    "pos": {},
+    "yday_equity": 9915.35
+  }
+}

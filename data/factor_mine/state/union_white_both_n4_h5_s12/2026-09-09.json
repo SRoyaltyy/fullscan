@@ -1,0 +1,81 @@
+{
+  "buys": [],
+  "cash": 483.54,
+  "date": "2026-09-09",
+  "equity": 10034.85,
+  "fees": 0,
+  "fills": [],
+  "holdings": [
+    "CRM",
+    "DELL",
+    "IRD",
+    "LENZ"
+  ],
+  "mean": 5.6411,
+  "n_trades_today": 0,
+  "recipe": "union_white_both_n4_h5_s12",
+  "sells": [],
+  "state": {
+    "after": "2026-09-09",
+    "cash": 483.54,
+    "pos": {
+      "CRM": {
+        "close_px": 244.16000366210938,
+        "cost": 2372.2568681640623,
+        "entry_date": "2026-09-04",
+        "entry_px": 263.3599853515625,
+        "fee_in": 2.017,
+        "last_px": 249.77999877929688,
+        "min_hold": 5,
+        "notional": 2370.2398681640625,
+        "peak_px": 263.3599853515625,
+        "reason": "both+top4 hold5, stop \u221212% at 09:30 even inside hold; gate cam_bad_max=0,yday_and_catalyst=True; rank list; list flatten,mover_buy; \ud83d\udd35; \u26aa; ret5=+4.9; leftover $2461.56",
+        "shares": 9,
+        "ticker": "CRM"
+      },
+      "DELL": {
+        "close_px": 535.25,
+        "cost": 2057.1221171875,
+        "entry_date": "2026-09-04",
+        "entry_px": 513.780029296875,
+        "fee_in": 2.002,
+        "last_px": 538.469970703125,
+        "min_hold": 5,
+        "notional": 2055.1201171875,
+        "peak_px": 538.469970703125,
+        "reason": "both+top4 hold5, stop \u221212% at 09:30 even inside hold; gate cam_bad_max=0,yday_and_catalyst=True; rank list; list probable,yday_gainer,yday_mover,ohlc_hot,mover_buy; \ud83d\udd35; \u26aa; ret5=+9.3; leftover $2461.56",
+        "shares": 4,
+        "ticker": "DELL"
+      },
+      "IRD": {
+        "close_px": 5.730000019073486,
+        "cost": 2466.794813925934,
+        "entry_date": "2026-09-04",
+        "entry_px": 4.53000020980835,
+        "fee_in": 7.0047,
+        "last_px": 5.309999942779541,
+        "min_hold": 5,
+        "notional": 2459.790113925934,
+        "peak_px": 5.309999942779541,
+        "reason": "both+top4 hold5, stop \u221212% at 09:30 even inside hold; gate cam_bad_max=0,yday_and_catalyst=True; rank list; list yday_gainer,yday_mover; \ud83d\udd35; \u26aa; ret5=+19.5; leftover $2461.56",
+        "shares": 543,
+        "ticker": "IRD"
+      },
+      "LENZ": {
+        "close_px": 4.909999847412109,
+        "cost": 2466.5212,
+        "entry_date": "2026-09-04",
+        "entry_px": 5.75,
+        "fee_in": 5.5212,
+        "last_px": 5.309999942779541,
+        "min_hold": 5,
+        "notional": 2461.0,
+        "peak_px": 5.949999809265137,
+        "reason": "both+top4 hold5, stop \u221212% at 09:30 even inside hold; gate cam_bad_max=0,yday_and_catalyst=True; rank list; list yday_gainer; \ud83d\udd35; \u26aa; ret5=+21.2; leftover $2461.56",
+        "shares": 428,
+        "ticker": "LENZ"
+      }
+    },
+    "yday_equity": 10034.85
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "buys": [],
+  "cash": 7532.5,
+  "date": "2026-09-24",
+  "equity": 9475.62,
+  "fees": 45.1876,
+  "fills": [
+    {
+      "fees": 18.1094,
+      "pnl": -105.23,
+      "price": 1.17,
+      "shares": 1385,
+      "side": "SELL",
+      "ticker": "CMPX"
+    },
+    {
+      "fees": 3.1458,
+      "pnl": -80.64,
+      "price": 2.61,
+      "shares": 240,
+      "side": "SELL",
+      "ticker": "FEAM"
+    },
+    {
+      "fees": 2.7825,
+      "pnl": -128.48,
+      "price": 7.37,
+      "shares": 212,
+      "side": "SELL",
+      "ticker": "PGEN"
+    },
+    {
+      "fees": 2.3411,
+      "pnl": -148.03,
+      "price": 14.38,
+      "shares": 107,
+      "side": "SELL",
+      "ticker": "SGRY"
+    },
+    {
+      "fees": 16.7508,
+      "pnl": -46.09,
+      "price": 1.29,
+      "shares": 1281,
+      "side": "SELL",
+      "ticker": "VERI"
+    },
+    {
+      "fees": 2.058,
+      "pnl": -95.86,
+      "price": 36.025,
+      "shares": 16,
+      "side": "SELL",
+      "ticker": "VKTX"
+    }
+  ],
+  "holdings": [
+    "GLND",
+    "VICR"
+  ],
+  "mean": 4.9127,
+  "n_trades_today": 6,
+  "recipe": "combo_hn_3070_shared",
+  "sells": [
+    "CMPX",
+    "FEAM",
+    "PGEN",
+    "SGRY",
+    "VERI",
+    "VKTX"
+  ],
+  "state": {
+    "after": "2026-09-24",
+    "cash": 7532.5,
+    "pos": {
+      "GLND": {
+        "close_px": 5.349999904632568,
+        "cost": 705.3540123977662,
+        "entry_date": "2026-09-23",
+        "entry_px": 2.700000047683716,
+        "fee_in": 3.354,
+        "last_px": 3.2200000286102295,
+        "notional": 702.0000123977661,
+        "owner": "union_hot_n4_h1",
+        "peak_px": 3.2200000286102295,
+        "reason": "top 4 by hot; rank hot_score; list yday_mover; \ud83d\udd35; ret5=+109.2; combo leftover $703.29; owner union_hot_n4_h1",
+        "shares": 260,
+        "side": "long",
+        "ticker": "GLND"
+      },
+      "VICR": {
+        "close_px": 276.05999755859375,
+        "cost": 534.996,
+        "entry_date": "2026-09-23",
+        "entry_px": 266.5,
+        "fee_in": 1.996,
+        "last_px": 274.45001220703125,
+        "notional": 533.0,
+        "owner": "union_hot_n4_h1",
+        "peak_px": 274.45001220703125,
+        "reason": "top 4 by hot; rank hot_score; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+45.9; combo leftover $703.29; owner union_hot_n4_h1",
+        "shares": 2,
+        "side": "long",
+        "ticker": "VICR"
+      }
+    },
+    "yday_equity": 9475.62
+  }
+}

@@ -1,0 +1,278 @@
+{
+  "buys": [
+    "ABVX",
+    "ANAB",
+    "MLKN",
+    "THO",
+    "GRAL",
+    "NUAI",
+    "ARM",
+    "INDP"
+  ],
+  "cash": 245.44,
+  "date": "2026-09-22",
+  "equity": 9508.32,
+  "fees": 54.7115,
+  "fills": [
+    {
+      "fees": 2.169,
+      "pnl": 113.34,
+      "price": 13.43,
+      "shares": 53,
+      "side": "SELL",
+      "ticker": "ALMU"
+    },
+    {
+      "fees": 8.066,
+      "pnl": -317.85,
+      "price": 3.51,
+      "shares": 616,
+      "side": "SELL",
+      "ticker": "CYPH"
+    },
+    {
+      "fees": 13.0596,
+      "pnl": -25.93,
+      "price": 2.47,
+      "shares": 998,
+      "side": "SELL",
+      "ticker": "FEAM"
+    },
+    {
+      "fees": 2.031,
+      "pnl": -4.04,
+      "price": 81.0,
+      "shares": 7,
+      "side": "SELL",
+      "ticker": "LEN"
+    },
+    {
+      "fees": 7.1832,
+      "pnl": -8.78,
+      "price": 1.5,
+      "shares": 549,
+      "side": "SELL",
+      "ticker": "LVWR"
+    },
+    {
+      "fees": 2.4662,
+      "pnl": 91.59,
+      "price": 17.58,
+      "shares": 144,
+      "side": "SELL",
+      "ticker": "TJGC"
+    },
+    {
+      "fees": 2.023,
+      "pnl": null,
+      "price": 102.74,
+      "shares": 11,
+      "side": "BUY",
+      "ticker": "ABVX"
+    },
+    {
+      "fees": 2.05,
+      "pnl": null,
+      "price": 55.07,
+      "shares": 20,
+      "side": "BUY",
+      "ticker": "ANAB"
+    },
+    {
+      "fees": 2.155,
+      "pnl": null,
+      "price": 20.66,
+      "shares": 55,
+      "side": "BUY",
+      "ticker": "MLKN"
+    },
+    {
+      "fees": 2.035,
+      "pnl": null,
+      "price": 72.53,
+      "shares": 15,
+      "side": "BUY",
+      "ticker": "THO"
+    },
+    {
+      "fees": 2.023,
+      "pnl": null,
+      "price": 106.75,
+      "shares": 11,
+      "side": "BUY",
+      "ticker": "GRAL"
+    },
+    {
+      "fees": 2.485,
+      "pnl": null,
+      "price": 7.23,
+      "shares": 165,
+      "side": "BUY",
+      "ticker": "NUAI"
+    },
+    {
+      "fees": 1.999,
+      "pnl": null,
+      "price": 319.41,
+      "shares": 3,
+      "side": "BUY",
+      "ticker": "ARM"
+    },
+    {
+      "fees": 4.9665,
+      "pnl": null,
+      "price": 3.1,
+      "shares": 385,
+      "side": "BUY",
+      "ticker": "INDP"
+    }
+  ],
+  "holdings": [
+    "ABVX",
+    "ANAB",
+    "ARM",
+    "GRAL",
+    "INDP",
+    "MLKN",
+    "NUAI",
+    "THO"
+  ],
+  "mean": 3.0974,
+  "n_trades_today": 14,
+  "recipe": "combo_her_5050_shared",
+  "sells": [
+    "ALMU",
+    "CYPH",
+    "FEAM",
+    "LEN",
+    "LVWR",
+    "TJGC"
+  ],
+  "state": {
+    "after": "2026-09-22",
+    "cash": 245.44,
+    "pos": {
+      "ABVX": {
+        "close_px": 98.29,
+        "cost": 1132.1629999999998,
+        "entry_date": "2026-09-22",
+        "entry_px": 102.74,
+        "fee_in": 2.023,
+        "last_px": 102.74,
+        "notional": 1130.1399999999999,
+        "owner": "union_earn_react_h3",
+        "peak_px": 102.74,
+        "reason": "union \u2229 earn_react, no \ud83d\udea8; gate earn_react=True; list earn_react; ret5=-8.9; combo leftover $1154.99; owner union_earn_react_h3",
+        "shares": 11,
+        "side": "long",
+        "ticker": "ABVX"
+      },
+      "ANAB": {
+        "close_px": 53.92,
+        "cost": 1103.45,
+        "entry_date": "2026-09-22",
+        "entry_px": 55.07,
+        "fee_in": 2.05,
+        "last_px": 55.07,
+        "notional": 1101.4,
+        "owner": "union_earn_react_h3",
+        "peak_px": 55.07,
+        "reason": "union \u2229 earn_react, no \ud83d\udea8; gate earn_react=True; list earn_react; ret5=+1.5; combo leftover $1154.99; owner union_earn_react_h3",
+        "shares": 20,
+        "side": "long",
+        "ticker": "ANAB"
+      },
+      "ARM": {
+        "close_px": 333.20001220703125,
+        "cost": 960.2290109863281,
+        "entry_date": "2026-09-22",
+        "entry_px": 319.4100036621094,
+        "fee_in": 1.999,
+        "last_px": 319.4100036621094,
+        "notional": 958.2300109863281,
+        "owner": "union_hot_n4_h1",
+        "peak_px": 319.4100036621094,
+        "reason": "top 4 by hot; rank hot_score; list yday_gainer,yday_mover; ret5=+35.1; combo leftover $1193.96; owner union_hot_n4_h1",
+        "shares": 3,
+        "side": "long",
+        "ticker": "ARM"
+      },
+      "GRAL": {
+        "close_px": 108.52,
+        "cost": 1176.273,
+        "entry_date": "2026-09-22",
+        "entry_px": 106.75,
+        "fee_in": 2.023,
+        "last_px": 106.75,
+        "notional": 1174.25,
+        "owner": "union_hot_n4_h1",
+        "peak_px": 106.75,
+        "reason": "top 4 by hot; rank hot_score; list yday_gainer,yday_mover; ret5=+42.9; combo leftover $1193.96; owner union_hot_n4_h1",
+        "shares": 11,
+        "side": "long",
+        "ticker": "GRAL"
+      },
+      "INDP": {
+        "close_px": 3.990000009536743,
+        "cost": 1198.4664632835388,
+        "entry_date": "2026-09-22",
+        "entry_px": 3.0999999046325684,
+        "fee_in": 4.9665,
+        "last_px": 3.0999999046325684,
+        "notional": 1193.4999632835388,
+        "owner": "union_hot_n4_h1",
+        "peak_px": 3.0999999046325684,
+        "reason": "top 4 by hot; rank hot_score; list ohlc_hot; ret5=-1.6; combo leftover $1193.96; owner union_hot_n4_h1",
+        "shares": 385,
+        "side": "long",
+        "ticker": "INDP"
+      },
+      "MLKN": {
+        "close_px": 20.29,
+        "cost": 1138.455,
+        "entry_date": "2026-09-22",
+        "entry_px": 20.66,
+        "fee_in": 2.155,
+        "last_px": 20.66,
+        "notional": 1136.3,
+        "owner": "union_earn_react_h3",
+        "peak_px": 20.66,
+        "reason": "union \u2229 earn_react, no \ud83d\udea8; gate earn_react=True; list earn_react; ret5=-4.4; combo leftover $1154.99; owner union_earn_react_h3",
+        "shares": 55,
+        "side": "long",
+        "ticker": "MLKN"
+      },
+      "NUAI": {
+        "close_px": 6.974999904632568,
+        "cost": 1195.4350031471251,
+        "entry_date": "2026-09-22",
+        "entry_px": 7.230000019073486,
+        "fee_in": 2.485,
+        "last_px": 7.230000019073486,
+        "notional": 1192.9500031471252,
+        "owner": "union_hot_n4_h1",
+        "peak_px": 7.230000019073486,
+        "reason": "top 4 by hot; rank hot_score; list yday_gainer,yday_mover; ret5=+36.6; combo leftover $1193.96; owner union_hot_n4_h1",
+        "shares": 165,
+        "side": "long",
+        "ticker": "NUAI"
+      },
+      "THO": {
+        "close_px": 73.8,
+        "cost": 1089.9850000000001,
+        "entry_date": "2026-09-22",
+        "entry_px": 72.53,
+        "fee_in": 2.035,
+        "last_px": 72.53,
+        "notional": 1087.95,
+        "owner": "union_earn_react_h3",
+        "peak_px": 72.53,
+        "reason": "union \u2229 earn_react, no \ud83d\udea8; gate earn_react=True; list earn_react; ret5=-4.8; combo leftover $1154.99; owner union_earn_react_h3",
+        "shares": 15,
+        "side": "long",
+        "ticker": "THO"
+      }
+    },
+    "yday_equity": 9508.32
+  }
+}

@@ -1,0 +1,246 @@
+{
+  "buys": [
+    "A",
+    "HUM",
+    "DXCM",
+    "PGEN",
+    "IOVA",
+    "MGTX",
+    "CYPH"
+  ],
+  "cash": 342.15,
+  "date": "2026-09-21",
+  "equity": 9027.86,
+  "fees": 29.8293,
+  "fills": [
+    {
+      "fees": 2.016,
+      "pnl": -16.77,
+      "price": 586.77,
+      "shares": 2,
+      "side": "SELL",
+      "ticker": "DELL"
+    },
+    {
+      "fees": 2.0659,
+      "pnl": -43.17,
+      "price": 82.83,
+      "shares": 18,
+      "side": "SELL",
+      "ticker": "ECO"
+    },
+    {
+      "fees": 2.1469,
+      "pnl": -69.07,
+      "price": 33.0,
+      "shares": 45,
+      "side": "SELL",
+      "ticker": "FIVN"
+    },
+    {
+      "fees": 2.0328,
+      "pnl": -0.68,
+      "price": 210.0,
+      "shares": 7,
+      "side": "SELL",
+      "ticker": "GNRC"
+    },
+    {
+      "fees": 2.054,
+      "pnl": -17.81,
+      "price": 107.57,
+      "shares": 14,
+      "side": "SELL",
+      "ticker": "RBRK"
+    },
+    {
+      "fees": 2.0339,
+      "pnl": 70.37,
+      "price": 230.25,
+      "shares": 7,
+      "side": "SELL",
+      "ticker": "VICR"
+    },
+    {
+      "fees": 2.014,
+      "pnl": null,
+      "price": 157.87,
+      "shares": 8,
+      "side": "BUY",
+      "ticker": "A"
+    },
+    {
+      "fees": 1.999,
+      "pnl": null,
+      "price": 386.2,
+      "shares": 3,
+      "side": "BUY",
+      "ticker": "HUM"
+    },
+    {
+      "fees": 2.032,
+      "pnl": null,
+      "price": 88.83,
+      "shares": 14,
+      "side": "BUY",
+      "ticker": "DXCM"
+    },
+    {
+      "fees": 2.497,
+      "pnl": null,
+      "price": 7.84,
+      "shares": 169,
+      "side": "BUY",
+      "ticker": "PGEN"
+    },
+    {
+      "fees": 2.371,
+      "pnl": null,
+      "price": 10.43,
+      "shares": 127,
+      "side": "BUY",
+      "ticker": "IOVA"
+    },
+    {
+      "fees": 2.284,
+      "pnl": null,
+      "price": 13.47,
+      "shares": 98,
+      "side": "BUY",
+      "ticker": "MGTX"
+    },
+    {
+      "fees": 4.2828,
+      "pnl": null,
+      "price": 4.0,
+      "shares": 332,
+      "side": "BUY",
+      "ticker": "CYPH"
+    }
+  ],
+  "holdings": [
+    "A",
+    "CYPH",
+    "DXCM",
+    "HUM",
+    "IOVA",
+    "MGTX",
+    "PGEN"
+  ],
+  "mean": -2.1795,
+  "n_trades_today": 13,
+  "recipe": "flatten_h1",
+  "sells": [
+    "DELL",
+    "ECO",
+    "FIVN",
+    "GNRC",
+    "RBRK",
+    "VICR"
+  ],
+  "state": {
+    "after": "2026-09-21",
+    "cash": 342.15,
+    "pos": {
+      "A": {
+        "close_px": 161.94000244140625,
+        "cost": 1264.9739609375,
+        "entry_date": "2026-09-21",
+        "entry_px": 157.8699951171875,
+        "fee_in": 2.014,
+        "last_px": 157.8699951171875,
+        "min_hold": 1,
+        "notional": 1262.9599609375,
+        "peak_px": 157.8699951171875,
+        "reason": "baseline list, no extra gate; list flatten; wish-list (live io HOLD \u2014 not a ticket); \ud83d\udd35; \u26aa; ret5=+6.5; leftover $1331.78",
+        "shares": 8,
+        "ticker": "A"
+      },
+      "CYPH": {
+        "close_px": 3.4000000953674316,
+        "cost": 1332.2828,
+        "entry_date": "2026-09-21",
+        "entry_px": 4.0,
+        "fee_in": 4.2828,
+        "last_px": 4.0,
+        "min_hold": 1,
+        "notional": 1328.0,
+        "peak_px": 4.0,
+        "reason": "baseline list, no extra gate; list flatten,yday_gainer,yday_mover; wish-list (live io HOLD \u2014 not a ticket); \ud83d\udd35; \u26aa; ret5=+58.9; leftover $1331.78",
+        "shares": 332,
+        "ticker": "CYPH"
+      },
+      "DXCM": {
+        "close_px": 89.16999816894531,
+        "cost": 1245.6520256347656,
+        "entry_date": "2026-09-21",
+        "entry_px": 88.83000183105469,
+        "fee_in": 2.032,
+        "last_px": 88.83000183105469,
+        "min_hold": 1,
+        "notional": 1243.6200256347656,
+        "peak_px": 88.83000183105469,
+        "reason": "baseline list, no extra gate; list flatten; wish-list (live io HOLD \u2014 not a ticket); \ud83d\udd35; \u26aa; ret5=+7.6; leftover $1331.78",
+        "shares": 14,
+        "ticker": "DXCM"
+      },
+      "HUM": {
+        "close_px": 378.5799865722656,
+        "cost": 1160.5990366210938,
+        "entry_date": "2026-09-21",
+        "entry_px": 386.20001220703125,
+        "fee_in": 1.999,
+        "last_px": 386.20001220703125,
+        "min_hold": 1,
+        "notional": 1158.6000366210938,
+        "peak_px": 386.20001220703125,
+        "reason": "baseline list, no extra gate; list flatten; wish-list (live io HOLD \u2014 not a ticket); \ud83d\udd35; ret5=-5.8; leftover $1331.78",
+        "shares": 3,
+        "ticker": "HUM"
+      },
+      "IOVA": {
+        "close_px": 10.1899995803833,
+        "cost": 1326.9810387573243,
+        "entry_date": "2026-09-21",
+        "entry_px": 10.430000305175781,
+        "fee_in": 2.371,
+        "last_px": 10.430000305175781,
+        "min_hold": 1,
+        "notional": 1324.6100387573242,
+        "peak_px": 10.430000305175781,
+        "reason": "baseline list, no extra gate; list flatten; wish-list (live io HOLD \u2014 not a ticket); \u26aa; ret5=+19.2; leftover $1331.78",
+        "shares": 127,
+        "ticker": "IOVA"
+      },
+      "MGTX": {
+        "close_px": 13.079999923706055,
+        "cost": 1322.3440261688233,
+        "entry_date": "2026-09-21",
+        "entry_px": 13.470000267028809,
+        "fee_in": 2.284,
+        "last_px": 13.470000267028809,
+        "min_hold": 1,
+        "notional": 1320.0600261688232,
+        "peak_px": 13.470000267028809,
+        "reason": "baseline list, no extra gate; list flatten; wish-list (live io HOLD \u2014 not a ticket); \ud83d\udd35; \u26aa; ret5=+3.6; leftover $1331.78",
+        "shares": 98,
+        "ticker": "MGTX"
+      },
+      "PGEN": {
+        "close_px": 7.699999809265137,
+        "cost": 1327.4570257873536,
+        "entry_date": "2026-09-21",
+        "entry_px": 7.840000152587891,
+        "fee_in": 2.497,
+        "last_px": 7.840000152587891,
+        "min_hold": 1,
+        "notional": 1324.9600257873535,
+        "peak_px": 7.840000152587891,
+        "reason": "baseline list, no extra gate; list flatten; wish-list (live io HOLD \u2014 not a ticket); \u26aa; ret5=+13.6; leftover $1331.78",
+        "shares": 169,
+        "ticker": "PGEN"
+      }
+    },
+    "yday_equity": 9027.86
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "buys": [
+    "CRWD"
+  ],
+  "cash": 147.62,
+  "date": "2026-09-18",
+  "equity": 7990.07,
+  "fees": 2.089,
+  "fills": [
+    {
+      "fees": 2.089,
+      "pnl": null,
+      "price": 246.98,
+      "shares": 33,
+      "side": "BUY",
+      "ticker": "CRWD"
+    }
+  ],
+  "holdings": [
+    "CRWD"
+  ],
+  "mean": -3.7347,
+  "n_trades_today": 1,
+  "recipe": "union_news_g_cam91_n1_h1",
+  "sells": [],
+  "state": {
+    "after": "2026-09-18",
+    "cash": 147.62,
+    "pos": {
+      "CRWD": {
+        "close_px": 237.64999389648438,
+        "cost": 8152.428859008789,
+        "entry_date": "2026-09-18",
+        "entry_px": 246.97999572753906,
+        "fee_in": 2.089,
+        "last_px": 246.97999572753906,
+        "min_hold": 1,
+        "notional": 8150.339859008789,
+        "peak_px": 246.97999572753906,
+        "reason": "all leftover on the rare news\ud83d\udfe2 +9 \u2212\u22641 name (KILL example); gate news=good,n_pos_min=9,cam_bad_max=1; rank cond; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+17.6; leftover $8300.05",
+        "shares": 33,
+        "ticker": "CRWD"
+      }
+    },
+    "yday_equity": 7990.07
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "buys": [],
+  "cash": 8371.29,
+  "date": "2026-08-31",
+  "equity": 9634.35,
+  "fees": 19.188,
+  "fills": [
+    {
+      "fees": 2.049,
+      "pnl": -76.49,
+      "price": 87.04,
+      "shares": 13,
+      "side": "SELL",
+      "ticker": "CRCL"
+    },
+    {
+      "fees": 2.169,
+      "pnl": -38.24,
+      "price": 22.66,
+      "shares": 53,
+      "side": "SELL",
+      "ticker": "NCNO"
+    },
+    {
+      "fees": 2.2153,
+      "pnl": -44.53,
+      "price": 17.77,
+      "shares": 68,
+      "side": "SELL",
+      "ticker": "NEO"
+    },
+    {
+      "fees": 2.4559,
+      "pnl": -63.92,
+      "price": 8.24,
+      "shares": 144,
+      "side": "SELL",
+      "ticker": "SBET"
+    },
+    {
+      "fees": 6.0988,
+      "pnl": -58.71,
+      "price": 2.58,
+      "shares": 466,
+      "side": "SELL",
+      "ticker": "SLI"
+    },
+    {
+      "fees": 2.016,
+      "pnl": -51.81,
+      "price": 437.95,
+      "shares": 2,
+      "side": "SELL",
+      "ticker": "SNPS"
+    },
+    {
+      "fees": 2.184,
+      "pnl": -58.29,
+      "price": 20.56,
+      "shares": 58,
+      "side": "SELL",
+      "ticker": "SRPT"
+    }
+  ],
+  "holdings": [
+    "MRNA"
+  ],
+  "mean": -0.4428,
+  "n_trades_today": 7,
+  "recipe": "ohlc_hot_h1",
+  "sells": [
+    "CRCL",
+    "NCNO",
+    "NEO",
+    "SBET",
+    "SLI",
+    "SNPS",
+    "SRPT"
+  ],
+  "state": {
+    "after": "2026-08-31",
+    "cash": 8371.29,
+    "pos": {
+      "MRNA": {
+        "close_px": 140.33999633789062,
+        "cost": 1236.7270219726563,
+        "entry_date": "2026-08-28",
+        "entry_px": 137.19000244140625,
+        "fee_in": 2.017,
+        "last_px": 134.10000610351562,
+        "min_hold": 1,
+        "notional": 1234.7100219726562,
+        "peak_px": 137.19000244140625,
+        "reason": "baseline list, no extra gate; list ohlc_hot; ret5=+7.1; leftover $1250.00",
+        "shares": 9,
+        "ticker": "MRNA"
+      }
+    },
+    "yday_equity": 9634.35
+  }
+}

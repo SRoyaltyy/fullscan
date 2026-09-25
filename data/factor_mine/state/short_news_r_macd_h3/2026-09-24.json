@@ -1,0 +1,74 @@
+{
+  "buys": [],
+  "cash": 23148.72,
+  "date": "2026-09-24",
+  "equity": 9822.85,
+  "fees": 2.002,
+  "fills": [
+    {
+      "fees": 2.002,
+      "pnl": -69.66,
+      "price": 600.27,
+      "shares": 4,
+      "side": "COVER",
+      "ticker": "AMD"
+    }
+  ],
+  "holdings": [
+    "AEHL",
+    "BAND",
+    "FIVN"
+  ],
+  "mean": -2.5981,
+  "n_trades_today": 1,
+  "recipe": "short_news_r_macd_h3",
+  "sells": [
+    "AMD"
+  ],
+  "state": {
+    "after": "2026-09-24",
+    "cash": 23148.72,
+    "pos": {
+      "AEHL": {
+        "close_px": 8.960000038146973,
+        "cost": 4.141053426601462,
+        "entry_date": "2026-09-21",
+        "entry_px": 8.260000228881836,
+        "fee_in": 4.141053426601462,
+        "last_px": 8.210000038146973,
+        "notional": 2560.600070953369,
+        "peak_px": 7.619999885559082,
+        "reason": "short news\ud83d\udd34 \u2229 prior MACD histogram > 0; gate news=bad,macd_up=True; list yday_mover; ret5=+7.7; leftover $2565.92",
+        "shares": 310,
+        "ticker": "AEHL"
+      },
+      "BAND": {
+        "close_px": 61.83000183105469,
+        "cost": 2.444070406958175,
+        "entry_date": "2026-09-23",
+        "entry_px": 58.0099983215332,
+        "fee_in": 2.444070406958175,
+        "last_px": 58.0,
+        "notional": 5046.869853973389,
+        "peak_px": 58.0,
+        "reason": "short news\ud83d\udd34 \u2229 prior MACD histogram > 0; gate news=bad,macd_up=True; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+16.6; leftover $5086.78",
+        "shares": 87,
+        "ticker": "BAND"
+      },
+      "FIVN": {
+        "close_px": 36.65999984741211,
+        "cost": 2.6216950684931506,
+        "entry_date": "2026-09-22",
+        "entry_px": 37.12,
+        "fee_in": 2.6216950684931506,
+        "last_px": 37.5099983215332,
+        "notional": 5233.92,
+        "peak_px": 37.12,
+        "reason": "short news\ud83d\udd34 \u2229 prior MACD histogram > 0; gate news=bad,macd_up=True; list yday_gainer,ohlc_hot; ret5=+16.6; leftover $5242.25",
+        "shares": 141,
+        "ticker": "FIVN"
+      }
+    },
+    "yday_equity": 9822.85
+  }
+}

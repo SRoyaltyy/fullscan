@@ -1,0 +1,30 @@
+{
+  "buys": [],
+  "cash": 9490.56,
+  "date": "2026-09-17",
+  "equity": 9490.56,
+  "fees": 2.4362,
+  "fills": [
+    {
+      "fees": 2.4362,
+      "pnl": 38.51,
+      "price": 81.0,
+      "shares": 117,
+      "side": "SELL",
+      "ticker": "LEN"
+    }
+  ],
+  "holdings": [],
+  "mean": 3.3366,
+  "n_trades_today": 1,
+  "recipe": "union_clk_flow_coil_h1",
+  "sells": [
+    "LEN"
+  ],
+  "state": {
+    "after": "2026-09-17",
+    "cash": 9490.56,
+    "pos": {},
+    "yday_equity": 9490.56
+  }
+}

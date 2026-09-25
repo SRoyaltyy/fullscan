@@ -1,0 +1,138 @@
+{
+  "buys": [],
+  "cash": 8467.63,
+  "date": "2026-08-31",
+  "equity": 9730.69,
+  "fees": 23.5539,
+  "fills": [
+    {
+      "fees": 2.016,
+      "pnl": -10.91,
+      "price": 257.71,
+      "shares": 2,
+      "side": "SELL",
+      "ticker": "ADSK"
+    },
+    {
+      "fees": 2.034,
+      "pnl": 11.63,
+      "price": 148.03,
+      "shares": 8,
+      "side": "SELL",
+      "ticker": "ANF"
+    },
+    {
+      "fees": 2.133,
+      "pnl": -9.58,
+      "price": 14.88,
+      "shares": 41,
+      "side": "SELL",
+      "ticker": "BBAR"
+    },
+    {
+      "fees": 2.4179,
+      "pnl": -35.16,
+      "price": 9.5,
+      "shares": 132,
+      "side": "SELL",
+      "ticker": "CAPR"
+    },
+    {
+      "fees": 2.028,
+      "pnl": -39.38,
+      "price": 98.0,
+      "shares": 6,
+      "side": "SELL",
+      "ticker": "ESTC"
+    },
+    {
+      "fees": 2.5097,
+      "pnl": -83.87,
+      "price": 3.39,
+      "shares": 161,
+      "side": "SELL",
+      "ticker": "FINV"
+    },
+    {
+      "fees": 2.052,
+      "pnl": 2.22,
+      "price": 44.85,
+      "shares": 14,
+      "side": "SELL",
+      "ticker": "FRO"
+    },
+    {
+      "fees": 2.085,
+      "pnl": -46.9,
+      "price": 22.98,
+      "shares": 25,
+      "side": "SELL",
+      "ticker": "GAP"
+    },
+    {
+      "fees": 2.2343,
+      "pnl": 8.87,
+      "price": 8.53,
+      "shares": 74,
+      "side": "SELL",
+      "ticker": "HAFN"
+    },
+    {
+      "fees": 2.028,
+      "pnl": -40.76,
+      "price": 92.83,
+      "shares": 6,
+      "side": "SELL",
+      "ticker": "RBRK"
+    },
+    {
+      "fees": 2.016,
+      "pnl": -51.81,
+      "price": 437.95,
+      "shares": 2,
+      "side": "SELL",
+      "ticker": "SNPS"
+    }
+  ],
+  "holdings": [
+    "MRNA"
+  ],
+  "mean": -0.2973,
+  "n_trades_today": 11,
+  "recipe": "combo_he1_5050_shared",
+  "sells": [
+    "ADSK",
+    "ANF",
+    "BBAR",
+    "CAPR",
+    "ESTC",
+    "FINV",
+    "FRO",
+    "GAP",
+    "HAFN",
+    "RBRK",
+    "SNPS"
+  ],
+  "state": {
+    "after": "2026-08-31",
+    "cash": 8467.63,
+    "pos": {
+      "MRNA": {
+        "close_px": 140.33999633789062,
+        "cost": 1236.7270219726563,
+        "entry_date": "2026-08-28",
+        "entry_px": 137.19000244140625,
+        "fee_in": 2.017,
+        "last_px": 134.10000610351562,
+        "notional": 1234.7100219726562,
+        "owner": "union_hot_n4_h1",
+        "peak_px": 137.19000244140625,
+        "reason": "top 4 by hot; rank hot_score; list ohlc_hot; ret5=+7.1; combo leftover $1286.72; owner union_hot_n4_h1",
+        "shares": 9,
+        "side": "long",
+        "ticker": "MRNA"
+      }
+    },
+    "yday_equity": 9730.69
+  }
+}

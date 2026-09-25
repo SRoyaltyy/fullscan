@@ -4,6 +4,18 @@ Window `2026-08-13` → `2026-09-24`. Each D-dated packet is the last git commit
 
 Yahoo `auto_adjust=False` daily bars are the only price source and are used as stored (split-adjusted, dividends not applied). A Finviz or Stooq disagreement is a warning and does not hold the day. raw.csv fills a name only when Yahoo has no print at all, and that name is tagged single_source. A name with no print or too few earlier bars is dropped. The day locks unless nobody is rankable.
 
+## Sequential day-by-day
+
+No. The #336 rebuild was not a saved close per recipe.
+
+`rebuild` loops the sessions and calls `build_ledger`. That loads `latest_ledger_before` and passes the saved cash and holdings into `simulate_book` as `resume`, so the ledger row for day N only fills day N. The state sat inside `ledgers/{D}.json.gz`, one file for every recipe. The call still received every landed session's rows. The published HOT4, holdup, flat 15bp, ex-GLND, RANDOM4, and IWM figures did not read that state. `score_recipe` calls `simulate_book` once on the full panel and the full bar frame (`_full_bars`). `net_returns_15bp` does the same for every start.
+
+That one-pass path is superseded. Each recipe now closes into `data/factor_mine/state/<recipe>/<date>.json`. The next session loads only that file, that morning's snapshot, and bars dated on or before that session. A written state file is not rewritten. The walk does not rewrite ledgers. These recipes do not read an Excel workbook. The morning inputs are the frozen snapshot.
+
+Re-stepping the 08-13 chain reproduces the headline totals. HOT4 futubull is 24.991% ($12,499.09). Holdup futubull is 52.196% ($15,219.62). Flat 15bp, ex-GLND, the 15-day pit calendar, the split-fee compounds, RANDOM4 means, and IWM match the tables below. Three cells move by 0.001 when those windows are stepped one session at a time. Those are the figures to use: holdup timing-clean flat 15bp 58.393; RANDOM4 flat 15bp without GLND from 2026-08-13, p5 -20.643; the same book from 2026-09-21, p95 0.315.
+
+`python3 -m src.test_factor_mine_sequential` passed. Restarting from a saved day is byte-identical. A later bar and a later snapshot file do not change earlier days. A second, different write is refused. Ledgers stay byte-identical.
+
 - pit_rebuilt: 15
 - incomplete_pit: 15
 - held: 0
@@ -109,8 +121,8 @@ IWM tape: Yahoo auto_adjust=False, fetched in memory. Not written to data/factor
 | `random4` | futubull | without GLND | 2026-09-21 | -6.672 | -12.967 | -6.602 | -0.506 | 24 |
 | `random4` | flat_15bp | with GLND | 2026-08-13 | -6.817 | -20.038 | -6.546 | 5.464 | 72 |
 | `random4` | flat_15bp | with GLND | 2026-09-21 | -5.49 | -11.887 | -5.635 | 1.773 | 24 |
-| `random4` | flat_15bp | without GLND | 2026-08-13 | -7.14 | -20.644 | -6.857 | 4.858 | 72 |
-| `random4` | flat_15bp | without GLND | 2026-09-21 | -5.737 | -11.952 | -5.713 | 0.316 | 24 |
+| `random4` | flat_15bp | without GLND | 2026-08-13 | -7.14 | -20.643 | -6.857 | 4.858 | 72 |
+| `random4` | flat_15bp | without GLND | 2026-09-21 | -5.737 | -11.952 | -5.713 | 0.315 | 24 |
 | `iwm` | futubull | buy-and-hold | 2026-08-13 | -7.183 |  |  |  | 1 |
 | `iwm` | futubull | buy-and-hold | 2026-09-21 | -1.588 |  |  |  | 1 |
 | `iwm` | flat_15bp | buy-and-hold | 2026-08-13 | -7.235 |  |  |  | 1 |
@@ -451,7 +463,7 @@ On the earliest start, `combo_se_5050_split` has 95 orders across 12 days (media
 | `union_h5_trail` | false | false | 30 | 63 | -7.374 | -6.212 | 15 | 63 | -1.628 | -0.420 |  |  |  |  |
 | `union_hot_n12_h1` | false | false | 30 | 193 | 3.835 | 8.420 | 15 | 180 | 5.443 | 9.800 |  |  |  |  |
 | `union_hot_n4_h1` | false | false | 30 | 62 | 24.991 | 29.536 | 15 | 57 | 28.623 | 32.974 |  |  |  |  |
-| `union_hot_n4_holdup` | false | false | 30 | 53 | 52.196 | 55.918 | 15 | 45 | 55.026 | 58.392 |  |  |  |  |
+| `union_hot_n4_holdup` | false | false | 30 | 53 | 52.196 | 55.918 | 15 | 45 | 55.026 | 58.393 |  |  |  |  |
 | `union_hot_score_h1` | false | false | 30 | 130 | 11.788 | 15.765 | 15 | 121 | 13.746 | 17.508 |  |  |  |  |
 | `union_hot_score_h3` | false | false | 30 | 95 | 13.807 | 15.881 | 15 | 87 | 19.999 | 22.025 |  |  |  |  |
 | `union_join_g_h1` | false | false | 30 | 144 | -10.258 | -7.443 | 15 | 136 | -9.502 | -7.006 |  |  |  |  |

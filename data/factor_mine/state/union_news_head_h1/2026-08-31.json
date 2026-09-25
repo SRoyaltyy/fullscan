@@ -1,0 +1,101 @@
+{
+  "buys": [],
+  "cash": 8488.54,
+  "date": "2026-08-31",
+  "equity": 9692.34,
+  "fees": 16.8251,
+  "fills": [
+    {
+      "fees": 2.2091,
+      "pnl": 28.6,
+      "price": 19.25,
+      "shares": 66,
+      "side": "SELL",
+      "ticker": "BBWI"
+    },
+    {
+      "fees": 2.4052,
+      "pnl": -34.22,
+      "price": 9.5,
+      "shares": 128,
+      "side": "SELL",
+      "ticker": "CAPR"
+    },
+    {
+      "fees": 2.2026,
+      "pnl": -92.7,
+      "price": 17.87,
+      "shares": 64,
+      "side": "SELL",
+      "ticker": "ERAS"
+    },
+    {
+      "fees": 2.4591,
+      "pnl": -17.93,
+      "price": 8.52,
+      "shares": 145,
+      "side": "SELL",
+      "ticker": "OPTX"
+    },
+    {
+      "fees": 2.121,
+      "pnl": -68.97,
+      "price": 31.15,
+      "shares": 37,
+      "side": "SELL",
+      "ticker": "SEDG"
+    },
+    {
+      "fees": 2.034,
+      "pnl": -79.73,
+      "price": 132.3,
+      "shares": 8,
+      "side": "SELL",
+      "ticker": "SMTC"
+    },
+    {
+      "fees": 3.3941,
+      "pnl": -9.33,
+      "price": 4.81,
+      "shares": 259,
+      "side": "SELL",
+      "ticker": "TLS"
+    }
+  ],
+  "holdings": [
+    "TH"
+  ],
+  "mean": -0.3491,
+  "n_trades_today": 7,
+  "recipe": "union_news_head_h1",
+  "sells": [
+    "BBWI",
+    "CAPR",
+    "ERAS",
+    "OPTX",
+    "SEDG",
+    "SMTC",
+    "TLS"
+  ],
+  "state": {
+    "after": "2026-08-31",
+    "cash": 8488.54,
+    "pos": {
+      "TH": {
+        "close_px": 18.520000457763672,
+        "cost": 1237.185,
+        "entry_date": "2026-08-28",
+        "entry_px": 19.0,
+        "fee_in": 2.185,
+        "last_px": 18.125,
+        "min_hold": 1,
+        "notional": 1235.0,
+        "peak_px": 19.0,
+        "reason": "prior-export headline\ud83d\udfe2 only; gate headline=good; rank cond; list ohlc_hot; ret5=+7.5; leftover $1250.00",
+        "shares": 65,
+        "ticker": "TH"
+      }
+    },
+    "yday_equity": 9692.34
+  }
+}

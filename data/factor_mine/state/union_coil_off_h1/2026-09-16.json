@@ -1,0 +1,215 @@
+{
+  "buys": [
+    "IQV",
+    "AVAH",
+    "BLFS",
+    "TEM",
+    "RIG",
+    "VAL",
+    "MRCY",
+    "QLYS"
+  ],
+  "cash": 276.52,
+  "date": "2026-09-16",
+  "equity": 9142.54,
+  "fees": 17.003,
+  "fills": [
+    {
+      "fees": 2.002,
+      "pnl": null,
+      "price": 270.89,
+      "shares": 4,
+      "side": "BUY",
+      "ticker": "IQV"
+    },
+    {
+      "fees": 2.233,
+      "pnl": null,
+      "price": 14.31,
+      "shares": 81,
+      "side": "BUY",
+      "ticker": "AVAH"
+    },
+    {
+      "fees": 2.083,
+      "pnl": null,
+      "price": 36.46,
+      "shares": 31,
+      "side": "BUY",
+      "ticker": "BLFS"
+    },
+    {
+      "fees": 2.038,
+      "pnl": null,
+      "price": 68.79,
+      "shares": 16,
+      "side": "BUY",
+      "ticker": "TEM"
+    },
+    {
+      "fees": 2.581,
+      "pnl": null,
+      "price": 5.87,
+      "shares": 197,
+      "side": "BUY",
+      "ticker": "RIG"
+    },
+    {
+      "fees": 2.029,
+      "pnl": null,
+      "price": 87.4,
+      "shares": 13,
+      "side": "BUY",
+      "ticker": "VAL"
+    },
+    {
+      "fees": 2.029,
+      "pnl": null,
+      "price": 87.52,
+      "shares": 13,
+      "side": "BUY",
+      "ticker": "MRCY"
+    },
+    {
+      "fees": 2.008,
+      "pnl": null,
+      "price": 179.6,
+      "shares": 6,
+      "side": "BUY",
+      "ticker": "QLYS"
+    }
+  ],
+  "holdings": [
+    "AVAH",
+    "BLFS",
+    "IQV",
+    "MRCY",
+    "QLYS",
+    "RIG",
+    "TEM",
+    "VAL"
+  ],
+  "mean": -1.4286,
+  "n_trades_today": 8,
+  "recipe": "union_coil_off_h1",
+  "sells": [],
+  "state": {
+    "after": "2026-09-16",
+    "cash": 276.52,
+    "pos": {
+      "AVAH": {
+        "close_px": 14.260000228881836,
+        "cost": 1161.3430339889526,
+        "entry_date": "2026-09-16",
+        "entry_px": 14.3100004196167,
+        "fee_in": 2.233,
+        "last_px": 14.3100004196167,
+        "min_hold": 1,
+        "notional": 1159.1100339889526,
+        "peak_px": 14.3100004196167,
+        "reason": "union \u2229 coil_off, no \ud83d\udea8; gate ret_5_min=0.0,ret_5_max=10.0,rvol_min=0.7,rvol_max=2.2; list flatten; \u26aa; ret5=+4.8; leftover $1159.38",
+        "shares": 81,
+        "ticker": "AVAH"
+      },
+      "BLFS": {
+        "close_px": 36.11000061035156,
+        "cost": 1132.3429716186524,
+        "entry_date": "2026-09-16",
+        "entry_px": 36.459999084472656,
+        "fee_in": 2.083,
+        "last_px": 36.459999084472656,
+        "min_hold": 1,
+        "notional": 1130.2599716186523,
+        "peak_px": 36.459999084472656,
+        "reason": "union \u2229 coil_off, no \ud83d\udea8; gate ret_5_min=0.0,ret_5_max=10.0,rvol_min=0.7,rvol_max=2.2; list flatten; \ud83d\udd35; \u26aa; ret5=+2.9; leftover $1159.38",
+        "shares": 31,
+        "ticker": "BLFS"
+      },
+      "IQV": {
+        "close_px": 268.82000732421875,
+        "cost": 1085.56205859375,
+        "entry_date": "2026-09-16",
+        "entry_px": 270.8900146484375,
+        "fee_in": 2.002,
+        "last_px": 270.8900146484375,
+        "min_hold": 1,
+        "notional": 1083.56005859375,
+        "peak_px": 270.8900146484375,
+        "reason": "union \u2229 coil_off, no \ud83d\udea8; gate ret_5_min=0.0,ret_5_max=10.0,rvol_min=0.7,rvol_max=2.2; list flatten; \u26aa; ret5=+4.0; leftover $1159.38",
+        "shares": 4,
+        "ticker": "IQV"
+      },
+      "MRCY": {
+        "close_px": 87.25,
+        "cost": 1139.7889563598633,
+        "entry_date": "2026-09-16",
+        "entry_px": 87.5199966430664,
+        "fee_in": 2.029,
+        "last_px": 87.5199966430664,
+        "min_hold": 1,
+        "notional": 1137.7599563598633,
+        "peak_px": 87.5199966430664,
+        "reason": "union \u2229 coil_off, no \ud83d\udea8; gate ret_5_min=0.0,ret_5_max=10.0,rvol_min=0.7,rvol_max=2.2; list yday_gainer; \ud83d\udd35; ret5=+4.3; leftover $1159.38",
+        "shares": 13,
+        "ticker": "MRCY"
+      },
+      "QLYS": {
+        "close_px": 183.05999755859375,
+        "cost": 1079.6080366210938,
+        "entry_date": "2026-09-16",
+        "entry_px": 179.60000610351562,
+        "fee_in": 2.008,
+        "last_px": 179.60000610351562,
+        "min_hold": 1,
+        "notional": 1077.6000366210938,
+        "peak_px": 179.60000610351562,
+        "reason": "union \u2229 coil_off, no \ud83d\udea8; gate ret_5_min=0.0,ret_5_max=10.0,rvol_min=0.7,rvol_max=2.2; list yday_gainer; \ud83d\udd35; ret5=+8.8; leftover $1159.38",
+        "shares": 6,
+        "ticker": "QLYS"
+      },
+      "RIG": {
+        "close_px": 5.539999961853027,
+        "cost": 1158.970977455139,
+        "entry_date": "2026-09-16",
+        "entry_px": 5.869999885559082,
+        "fee_in": 2.581,
+        "last_px": 5.869999885559082,
+        "min_hold": 1,
+        "notional": 1156.3899774551392,
+        "peak_px": 5.869999885559082,
+        "reason": "union \u2229 coil_off, no \ud83d\udea8; gate ret_5_min=0.0,ret_5_max=10.0,rvol_min=0.7,rvol_max=2.2; list probable,yday_gainer; \ud83d\udd35; ret5=+3.1; leftover $1159.38",
+        "shares": 197,
+        "ticker": "RIG"
+      },
+      "TEM": {
+        "close_px": 69.97000122070312,
+        "cost": 1102.6780146484375,
+        "entry_date": "2026-09-16",
+        "entry_px": 68.79000091552734,
+        "fee_in": 2.038,
+        "last_px": 68.79000091552734,
+        "min_hold": 1,
+        "notional": 1100.6400146484375,
+        "peak_px": 68.79000091552734,
+        "reason": "union \u2229 coil_off, no \ud83d\udea8; gate ret_5_min=0.0,ret_5_max=10.0,rvol_min=0.7,rvol_max=2.2; list probable,yday_gainer; \ud83d\udd35; \u26aa; ret5=+7.1; leftover $1159.38",
+        "shares": 16,
+        "ticker": "TEM"
+      },
+      "VAL": {
+        "close_px": 82.5199966430664,
+        "cost": 1138.2290198364258,
+        "entry_date": "2026-09-16",
+        "entry_px": 87.4000015258789,
+        "fee_in": 2.029,
+        "last_px": 87.4000015258789,
+        "min_hold": 1,
+        "notional": 1136.2000198364258,
+        "peak_px": 87.4000015258789,
+        "reason": "union \u2229 coil_off, no \ud83d\udea8; gate ret_5_min=0.0,ret_5_max=10.0,rvol_min=0.7,rvol_max=2.2; list probable,yday_gainer; \ud83d\udd35; ret5=+3.2; leftover $1159.38",
+        "shares": 13,
+        "ticker": "VAL"
+      }
+    },
+    "yday_equity": 9142.54
+  }
+}

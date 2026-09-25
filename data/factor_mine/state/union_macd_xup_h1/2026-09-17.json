@@ -1,0 +1,192 @@
+{
+  "buys": [
+    "IOVA",
+    "SABR",
+    "BBNX",
+    "BRKR"
+  ],
+  "cash": 10.52,
+  "date": "2026-09-17",
+  "equity": 10216.06,
+  "fees": 45.6501,
+  "fills": [
+    {
+      "fees": 2.025,
+      "pnl": -8.43,
+      "price": 236.04,
+      "shares": 5,
+      "side": "SELL",
+      "ticker": "CRWD"
+    },
+    {
+      "fees": 2.203,
+      "pnl": 31.45,
+      "price": 20.31,
+      "shares": 64,
+      "side": "SELL",
+      "ticker": "FTRE"
+    },
+    {
+      "fees": 9.2234,
+      "pnl": 193.18,
+      "price": 2.1,
+      "shares": 705,
+      "side": "SELL",
+      "ticker": "HLP"
+    },
+    {
+      "fees": 2.052,
+      "pnl": 20.42,
+      "price": 89.27,
+      "shares": 14,
+      "side": "SELL",
+      "ticker": "MRCY"
+    },
+    {
+      "fees": 2.046,
+      "pnl": 3.01,
+      "price": 102.56,
+      "shares": 12,
+      "side": "SELL",
+      "ticker": "RBRK"
+    },
+    {
+      "fees": 2.0376,
+      "pnl": 56.52,
+      "price": 147.61,
+      "shares": 9,
+      "side": "SELL",
+      "ticker": "RVTY"
+    },
+    {
+      "fees": 2.1724,
+      "pnl": 38.88,
+      "price": 24.09,
+      "shares": 54,
+      "side": "SELL",
+      "ticker": "SDGR"
+    },
+    {
+      "fees": 2.112,
+      "pnl": -37.18,
+      "price": 35.89,
+      "shares": 34,
+      "side": "SELL",
+      "ticker": "TENB"
+    },
+    {
+      "fees": 3.2766,
+      "pnl": null,
+      "price": 10.25,
+      "shares": 254,
+      "side": "BUY",
+      "ticker": "IOVA"
+    },
+    {
+      "fees": 14.0481,
+      "pnl": null,
+      "price": 2.4,
+      "shares": 1089,
+      "side": "BUY",
+      "ticker": "SABR"
+    },
+    {
+      "fees": 2.338,
+      "pnl": null,
+      "price": 22.46,
+      "shares": 116,
+      "side": "BUY",
+      "ticker": "BBNX"
+    },
+    {
+      "fees": 2.116,
+      "pnl": null,
+      "price": 61.9,
+      "shares": 42,
+      "side": "BUY",
+      "ticker": "BRKR"
+    }
+  ],
+  "holdings": [
+    "BBNX",
+    "BRKR",
+    "IOVA",
+    "SABR"
+  ],
+  "mean": -2.2727,
+  "n_trades_today": 12,
+  "recipe": "union_macd_xup_h1",
+  "sells": [
+    "CRWD",
+    "FTRE",
+    "HLP",
+    "MRCY",
+    "RBRK",
+    "RVTY",
+    "SDGR",
+    "TENB"
+  ],
+  "state": {
+    "after": "2026-09-17",
+    "cash": 10.52,
+    "pos": {
+      "BBNX": {
+        "close_px": 21.43000030517578,
+        "cost": 2607.6978937988283,
+        "entry_date": "2026-09-17",
+        "entry_px": 22.459999084472656,
+        "fee_in": 2.338,
+        "last_px": 22.459999084472656,
+        "min_hold": 1,
+        "notional": 2605.359893798828,
+        "peak_px": 22.459999084472656,
+        "reason": "union \u2229 macd_xup, no \ud83d\udea8; gate macd_cross_up=True; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+27.3; leftover $2613.64",
+        "shares": 116,
+        "ticker": "BBNX"
+      },
+      "BRKR": {
+        "close_px": 63.04999923706055,
+        "cost": 2601.916064086914,
+        "entry_date": "2026-09-17",
+        "entry_px": 61.900001525878906,
+        "fee_in": 2.116,
+        "last_px": 61.900001525878906,
+        "min_hold": 1,
+        "notional": 2599.800064086914,
+        "peak_px": 61.900001525878906,
+        "reason": "union \u2229 macd_xup, no \ud83d\udea8; gate macd_cross_up=True; list yday_gainer,ohlc_hot; \ud83d\udd35; ret5=+11.5; leftover $2613.64",
+        "shares": 42,
+        "ticker": "BRKR"
+      },
+      "IOVA": {
+        "close_px": 10.020000457763672,
+        "cost": 2606.7766,
+        "entry_date": "2026-09-17",
+        "entry_px": 10.25,
+        "fee_in": 3.2766,
+        "last_px": 10.25,
+        "min_hold": 1,
+        "notional": 2603.5,
+        "peak_px": 10.25,
+        "reason": "union \u2229 macd_xup, no \ud83d\udea8; gate macd_cross_up=True; list flatten,ohlc_hot; ret5=+17.1; leftover $2613.64",
+        "shares": 254,
+        "ticker": "IOVA"
+      },
+      "SABR": {
+        "close_px": 2.319999933242798,
+        "cost": 2627.648203855133,
+        "entry_date": "2026-09-17",
+        "entry_px": 2.4000000953674316,
+        "fee_in": 14.0481,
+        "last_px": 2.4000000953674316,
+        "min_hold": 1,
+        "notional": 2613.600103855133,
+        "peak_px": 2.4000000953674316,
+        "reason": "union \u2229 macd_xup, no \ud83d\udea8; gate macd_cross_up=True; list probable,yday_gainer,yday_mover,ohlc_hot; \ud83d\udd35; \u26aa; ret5=+8.4; leftover $2613.64",
+        "shares": 1089,
+        "ticker": "SABR"
+      }
+    },
+    "yday_equity": 10216.06
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "buys": [],
+  "cash": 41.35,
+  "date": "2026-09-01",
+  "equity": 10162.35,
+  "fees": 0,
+  "fills": [],
+  "holdings": [
+    "CRK",
+    "MOS",
+    "RRC",
+    "SLI"
+  ],
+  "mean": 2.412,
+  "n_trades_today": 0,
+  "recipe": "flatten_h3_topheavy",
+  "sells": [],
+  "state": {
+    "after": "2026-09-01",
+    "cash": 41.35,
+    "pos": {
+      "CRK": {
+        "close_px": 16.020000457763672,
+        "cost": 1992.0780155639648,
+        "entry_date": "2026-08-28",
+        "entry_px": 14.630000114440918,
+        "fee_in": 2.398,
+        "last_px": 15.819999694824219,
+        "min_hold": 3,
+        "notional": 1989.6800155639648,
+        "peak_px": 15.819999694824219,
+        "reason": "40% to #1, rest split; list flatten; wish-list (live io HOLD \u2014 not a ticket); ret5=+5.8; leftover $2000.00",
+        "shares": 136,
+        "ticker": "CRK"
+      },
+      "MOS": {
+        "close_px": 24.780000686645508,
+        "cost": 1990.0890633239746,
+        "entry_date": "2026-08-28",
+        "entry_px": 23.950000762939453,
+        "fee_in": 2.239,
+        "last_px": 23.940000534057617,
+        "min_hold": 3,
+        "notional": 1987.8500633239746,
+        "peak_px": 23.950000762939453,
+        "reason": "40% to #1, rest split; list flatten; wish-list (live io HOLD \u2014 not a ticket); ret5=+1.8; leftover $2000.00",
+        "shares": 83,
+        "ticker": "MOS"
+      },
+      "RRC": {
+        "close_px": 42.400001525878906,
+        "cost": 3967.575159454346,
+        "entry_date": "2026-08-28",
+        "entry_px": 41.7400016784668,
+        "fee_in": 2.275,
+        "last_px": 41.939998626708984,
+        "min_hold": 3,
+        "notional": 3965.3001594543457,
+        "peak_px": 42.0,
+        "reason": "40% to #1, rest split; list flatten; wish-list (live io HOLD \u2014 not a ticket); ret5=+2.4; leftover $4000.00",
+        "shares": 95,
+        "ticker": "RRC"
+      },
+      "SLI": {
+        "close_px": 2.490000009536743,
+        "cost": 2008.9034498008727,
+        "entry_date": "2026-08-28",
+        "entry_px": 2.680000066757202,
+        "fee_in": 9.6234,
+        "last_px": 2.6700000762939453,
+        "min_hold": 3,
+        "notional": 1999.2800498008728,
+        "peak_px": 2.680000066757202,
+        "reason": "40% to #1, rest split; list flatten,ohlc_hot; wish-list (live io HOLD \u2014 not a ticket); ret5=+16.3; leftover $2000.00",
+        "shares": 746,
+        "ticker": "SLI"
+      }
+    },
+    "yday_equity": 10162.35
+  }
+}

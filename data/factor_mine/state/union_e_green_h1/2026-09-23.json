@@ -1,0 +1,57 @@
+{
+  "buys": [
+    "CTAS"
+  ],
+  "cash": 124.54,
+  "date": "2026-09-23",
+  "equity": 9531.07,
+  "fees": 4.6353,
+  "fills": [
+    {
+      "fees": 2.4983,
+      "pnl": -157.22,
+      "price": 71.41,
+      "shares": 136,
+      "side": "SELL",
+      "ticker": "THO"
+    },
+    {
+      "fees": 2.137,
+      "pnl": null,
+      "price": 196.78,
+      "shares": 49,
+      "side": "BUY",
+      "ticker": "CTAS"
+    }
+  ],
+  "holdings": [
+    "CTAS"
+  ],
+  "mean": -5.5996,
+  "n_trades_today": 2,
+  "recipe": "union_e_green_h1",
+  "sells": [
+    "THO"
+  ],
+  "state": {
+    "after": "2026-09-23",
+    "cash": 124.54,
+    "pos": {
+      "CTAS": {
+        "close_px": 191.97000122070312,
+        "cost": 9644.356940185548,
+        "entry_date": "2026-09-23",
+        "entry_px": 196.77999877929688,
+        "fee_in": 2.137,
+        "last_px": 196.77999877929688,
+        "min_hold": 1,
+        "notional": 9642.219940185547,
+        "peak_px": 196.77999877929688,
+        "reason": "combo gate; gate earn_react=True,last_green=True; list earn_react; \ud83d\udd35; \u26aa; ret5=-0.1; leftover $9768.89",
+        "shares": 49,
+        "ticker": "CTAS"
+      }
+    },
+    "yday_equity": 9531.07
+  }
+}

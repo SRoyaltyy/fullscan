@@ -1,0 +1,252 @@
+{
+  "buys": [
+    "BBNX",
+    "JBHT",
+    "TRMD",
+    "ALMU",
+    "ARQT",
+    "AMRX"
+  ],
+  "cash": 28.87,
+  "date": "2026-09-17",
+  "equity": 9455.57,
+  "fees": 26.5771,
+  "fills": [
+    {
+      "fees": 2.151,
+      "pnl": -0.52,
+      "price": 24.96,
+      "shares": 47,
+      "side": "SELL",
+      "ticker": "DMRA"
+    },
+    {
+      "fees": 2.5446,
+      "pnl": -65.25,
+      "price": 6.48,
+      "shares": 172,
+      "side": "SELL",
+      "ticker": "GFR"
+    },
+    {
+      "fees": 2.2881,
+      "pnl": 56.42,
+      "price": 13.56,
+      "shares": 91,
+      "side": "SELL",
+      "ticker": "HQ"
+    },
+    {
+      "fees": 2.5414,
+      "pnl": 12.06,
+      "price": 6.96,
+      "shares": 171,
+      "side": "SELL",
+      "ticker": "PLAY"
+    },
+    {
+      "fees": 2.034,
+      "pnl": 49.79,
+      "price": 147.61,
+      "shares": 8,
+      "side": "SELL",
+      "ticker": "RVTY"
+    },
+    {
+      "fees": 2.16,
+      "pnl": 35.7,
+      "price": 24.09,
+      "shares": 50,
+      "side": "SELL",
+      "ticker": "SDGR"
+    },
+    {
+      "fees": 2.149,
+      "pnl": null,
+      "price": 22.46,
+      "shares": 53,
+      "side": "BUY",
+      "ticker": "BBNX"
+    },
+    {
+      "fees": 2.005,
+      "pnl": null,
+      "price": 238.6,
+      "shares": 5,
+      "side": "BUY",
+      "ticker": "JBHT"
+    },
+    {
+      "fees": 2.086,
+      "pnl": null,
+      "price": 36.52,
+      "shares": 32,
+      "side": "BUY",
+      "ticker": "TRMD"
+    },
+    {
+      "fees": 2.308,
+      "pnl": null,
+      "price": 11.21,
+      "shares": 106,
+      "side": "BUY",
+      "ticker": "ALMU"
+    },
+    {
+      "fees": 2.128,
+      "pnl": null,
+      "price": 25.95,
+      "shares": 46,
+      "side": "BUY",
+      "ticker": "ARQT"
+    },
+    {
+      "fees": 2.182,
+      "pnl": null,
+      "price": 18.56,
+      "shares": 64,
+      "side": "BUY",
+      "ticker": "AMRX"
+    }
+  ],
+  "holdings": [
+    "ALHC",
+    "ALMU",
+    "AMRX",
+    "ARQT",
+    "BBNX",
+    "FPS",
+    "JBHT",
+    "TRMD"
+  ],
+  "mean": 1.3352,
+  "n_trades_today": 12,
+  "recipe": "oppset_h1",
+  "sells": [
+    "DMRA",
+    "GFR",
+    "HQ",
+    "PLAY",
+    "RVTY",
+    "SDGR"
+  ],
+  "state": {
+    "after": "2026-09-17",
+    "cash": 28.87,
+    "pos": {
+      "ALHC": {
+        "close_px": 8.699999809265137,
+        "cost": 1176.5320217437745,
+        "entry_date": "2026-09-16",
+        "entry_px": 10.300000190734863,
+        "fee_in": 2.332,
+        "last_px": 8.579999923706055,
+        "min_hold": 1,
+        "notional": 1174.2000217437744,
+        "peak_px": 10.300000190734863,
+        "reason": "Theme Radar Clock-B oppset universe (flagged T\u22121 names; research; not KEEP); gate oppset=True; rank opp_rvol; list yday_mover; ret5=-23.0; leftover $1176.73",
+        "shares": 114,
+        "ticker": "ALHC"
+      },
+      "ALMU": {
+        "close_px": 11.545000076293945,
+        "cost": 1190.568004043579,
+        "entry_date": "2026-09-17",
+        "entry_px": 11.210000038146973,
+        "fee_in": 2.308,
+        "last_px": 11.210000038146973,
+        "min_hold": 1,
+        "notional": 1188.260004043579,
+        "peak_px": 11.210000038146973,
+        "reason": "Theme Radar Clock-B oppset universe (flagged T\u22121 names; research; not KEEP); gate oppset=True; rank opp_rvol; list earn_react; ret5=+1.0; leftover $1193.93",
+        "shares": 106,
+        "ticker": "ALMU"
+      },
+      "AMRX": {
+        "close_px": 18.280000686645508,
+        "cost": 1190.0219658203125,
+        "entry_date": "2026-09-17",
+        "entry_px": 18.559999465942383,
+        "fee_in": 2.182,
+        "last_px": 18.559999465942383,
+        "min_hold": 1,
+        "notional": 1187.8399658203125,
+        "peak_px": 18.559999465942383,
+        "reason": "Theme Radar Clock-B oppset universe (flagged T\u22121 names; research; not KEEP); gate oppset=True; rank opp_rvol; list yday_gainer; \ud83d\udd35; ret5=+4.8; leftover $1193.93",
+        "shares": 64,
+        "ticker": "AMRX"
+      },
+      "ARQT": {
+        "close_px": 26.459999084472656,
+        "cost": 1195.8280350952148,
+        "entry_date": "2026-09-17",
+        "entry_px": 25.950000762939453,
+        "fee_in": 2.128,
+        "last_px": 25.950000762939453,
+        "min_hold": 1,
+        "notional": 1193.7000350952148,
+        "peak_px": 25.950000762939453,
+        "reason": "Theme Radar Clock-B oppset universe (flagged T\u22121 names; research; not KEEP); gate oppset=True; rank opp_rvol; list probable,yday_gainer,yday_mover,ohlc_hot; ret5=+9.6; leftover $1193.93",
+        "shares": 46,
+        "ticker": "ARQT"
+      },
+      "BBNX": {
+        "close_px": 21.43000030517578,
+        "cost": 1192.5289514770507,
+        "entry_date": "2026-09-17",
+        "entry_px": 22.459999084472656,
+        "fee_in": 2.149,
+        "last_px": 22.459999084472656,
+        "min_hold": 1,
+        "notional": 1190.3799514770508,
+        "peak_px": 22.459999084472656,
+        "reason": "Theme Radar Clock-B oppset universe (flagged T\u22121 names; research; not KEEP); gate oppset=True; rank opp_rvol; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+27.3; leftover $1193.93",
+        "shares": 53,
+        "ticker": "BBNX"
+      },
+      "FPS": {
+        "close_px": 38.060001373291016,
+        "cost": 1161.9949786376953,
+        "entry_date": "2026-09-16",
+        "entry_px": 33.13999938964844,
+        "fee_in": 2.095,
+        "last_px": 36.7599983215332,
+        "min_hold": 1,
+        "notional": 1159.8999786376953,
+        "peak_px": 36.7599983215332,
+        "reason": "Theme Radar Clock-B oppset universe (flagged T\u22121 names; research; not KEEP); gate oppset=True; rank opp_rvol; list yday_gainer; \ud83d\udd35; ret5=-2.9; leftover $1176.73",
+        "shares": 35,
+        "ticker": "FPS"
+      },
+      "JBHT": {
+        "close_px": 236.8000030517578,
+        "cost": 1195.0050305175782,
+        "entry_date": "2026-09-17",
+        "entry_px": 238.60000610351562,
+        "fee_in": 2.005,
+        "last_px": 238.60000610351562,
+        "min_hold": 1,
+        "notional": 1193.0000305175781,
+        "peak_px": 238.60000610351562,
+        "reason": "Theme Radar Clock-B oppset universe (flagged T\u22121 names; research; not KEEP); gate oppset=True; rank opp_rvol; list yday_mover; ret5=-11.6; leftover $1193.93",
+        "shares": 5,
+        "ticker": "JBHT"
+      },
+      "TRMD": {
+        "close_px": 36.630001068115234,
+        "cost": 1170.7260146484375,
+        "entry_date": "2026-09-17",
+        "entry_px": 36.52000045776367,
+        "fee_in": 2.086,
+        "last_px": 36.52000045776367,
+        "min_hold": 1,
+        "notional": 1168.6400146484375,
+        "peak_px": 36.52000045776367,
+        "reason": "Theme Radar Clock-B oppset universe (flagged T\u22121 names; research; not KEEP); gate oppset=True; rank opp_rvol; list ohlc_hot; ret5=+3.2; leftover $1193.93",
+        "shares": 32,
+        "ticker": "TRMD"
+      }
+    },
+    "yday_equity": 9455.57
+  }
+}

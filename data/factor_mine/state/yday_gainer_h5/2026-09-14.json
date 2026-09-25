@@ -1,0 +1,176 @@
+{
+  "buys": [],
+  "cash": 7977.29,
+  "date": "2026-09-14",
+  "equity": 9157.34,
+  "fees": 30.6653,
+  "fills": [
+    {
+      "fees": 6.2425,
+      "pnl": -188.89,
+      "price": 2.15,
+      "shares": 477,
+      "side": "SELL",
+      "ticker": "ALEC"
+    },
+    {
+      "fees": 2.3799,
+      "pnl": -112.73,
+      "price": 9.12,
+      "shares": 120,
+      "side": "SELL",
+      "ticker": "CCOI"
+    },
+    {
+      "fees": 4.4789,
+      "pnl": 76.61,
+      "price": 3.77,
+      "shares": 342,
+      "side": "SELL",
+      "ticker": "EOSE"
+    },
+    {
+      "fees": 2.2374,
+      "pnl": -96.7,
+      "price": 14.67,
+      "shares": 75,
+      "side": "SELL",
+      "ticker": "HQ"
+    },
+    {
+      "fees": 2.136,
+      "pnl": 1.63,
+      "price": 28.14,
+      "shares": 42,
+      "side": "SELL",
+      "ticker": "MLYS"
+    },
+    {
+      "fees": 3.2896,
+      "pnl": -169.68,
+      "price": 4.13,
+      "shares": 251,
+      "side": "SELL",
+      "ticker": "OABI"
+    },
+    {
+      "fees": 9.901,
+      "pnl": -19.67,
+      "price": 1.59,
+      "shares": 757,
+      "side": "SELL",
+      "ticker": "OPK"
+    }
+  ],
+  "holdings": [
+    "APPS",
+    "BAK",
+    "DELL",
+    "FUBO",
+    "INTR",
+    "PAGS"
+  ],
+  "mean": -2.0683,
+  "n_trades_today": 7,
+  "recipe": "yday_gainer_h5",
+  "sells": [
+    "ALEC",
+    "CCOI",
+    "EOSE",
+    "HQ",
+    "MLYS",
+    "OABI",
+    "OPK"
+  ],
+  "state": {
+    "after": "2026-09-14",
+    "cash": 7977.29,
+    "pos": {
+      "APPS": {
+        "close_px": 11.729999542236328,
+        "cost": 24.003600228881837,
+        "entry_date": "2026-09-11",
+        "entry_px": 11.880000114440918,
+        "fee_in": 0.2436,
+        "last_px": 11.75,
+        "min_hold": 5,
+        "notional": 23.760000228881836,
+        "peak_px": 11.880000114440918,
+        "reason": "baseline list, no extra gate; list probable,yday_gainer; ret5=+8.5; leftover $23.88",
+        "shares": 2,
+        "ticker": "APPS"
+      },
+      "BAK": {
+        "close_px": 2.009999990463257,
+        "cost": 23.586198741149904,
+        "entry_date": "2026-09-11",
+        "entry_px": 2.119999885559082,
+        "fee_in": 0.2662,
+        "last_px": 2.049999952316284,
+        "min_hold": 5,
+        "notional": 23.319998741149902,
+        "peak_px": 2.119999885559082,
+        "reason": "baseline list, no extra gate; list probable,yday_gainer,ohlc_hot; \ud83d\udd35; ret5=+8.8; leftover $23.88",
+        "shares": 11,
+        "ticker": "BAK"
+      },
+      "DELL": {
+        "close_px": 534.280029296875,
+        "cost": 1029.55605859375,
+        "entry_date": "2026-09-04",
+        "entry_px": 513.780029296875,
+        "fee_in": 1.996,
+        "last_px": 538.5700073242188,
+        "min_hold": 5,
+        "notional": 1027.56005859375,
+        "peak_px": 538.5700073242188,
+        "reason": "baseline list, no extra gate; list probable,yday_gainer,yday_mover,ohlc_hot,mover_buy; \ud83d\udd35; \u26aa; ret5=+9.3; leftover $1203.87",
+        "shares": 2,
+        "ticker": "DELL"
+      },
+      "FUBO": {
+        "close_px": 11.869999885559082,
+        "cost": 23.337000381469725,
+        "entry_date": "2026-09-11",
+        "entry_px": 11.550000190734863,
+        "fee_in": 0.237,
+        "last_px": 11.5600004196167,
+        "min_hold": 5,
+        "notional": 23.100000381469727,
+        "peak_px": 11.5600004196167,
+        "reason": "baseline list, no extra gate; list probable,yday_gainer; ret5=-1.6; leftover $23.88",
+        "shares": 2,
+        "ticker": "FUBO"
+      },
+      "INTR": {
+        "close_px": 5.579999923706055,
+        "cost": 23.3632008392334,
+        "entry_date": "2026-09-11",
+        "entry_px": 5.78000020980835,
+        "fee_in": 0.2432,
+        "last_px": 5.489999771118164,
+        "min_hold": 5,
+        "notional": 23.1200008392334,
+        "peak_px": 5.78000020980835,
+        "reason": "baseline list, no extra gate; list probable,yday_gainer; \ud83d\udd35; ret5=-0.3; leftover $23.88",
+        "shares": 4,
+        "ticker": "INTR"
+      },
+      "PAGS": {
+        "close_px": 9.930000305175781,
+        "cost": 20.428199313354494,
+        "entry_date": "2026-09-11",
+        "entry_px": 10.109999656677246,
+        "fee_in": 0.2082,
+        "last_px": 10.0,
+        "min_hold": 5,
+        "notional": 20.219999313354492,
+        "peak_px": 10.109999656677246,
+        "reason": "baseline list, no extra gate; list probable,yday_gainer; \u26aa; ret5=+1.7; leftover $23.88",
+        "shares": 2,
+        "ticker": "PAGS"
+      }
+    },
+    "yday_equity": 9157.34
+  }
+}

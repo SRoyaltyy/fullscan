@@ -1,0 +1,185 @@
+{
+  "buys": [
+    "GME",
+    "TNDM",
+    "BAK"
+  ],
+  "cash": 159.91,
+  "date": "2026-09-17",
+  "equity": 8538.89,
+  "fees": 1.0814,
+  "fills": [
+    {
+      "fees": 0.2242,
+      "pnl": null,
+      "price": 22.12,
+      "shares": 1,
+      "side": "BUY",
+      "ticker": "GME"
+    },
+    {
+      "fees": 0.3604,
+      "pnl": null,
+      "price": 17.72,
+      "shares": 2,
+      "side": "BUY",
+      "ticker": "TNDM"
+    },
+    {
+      "fees": 0.4968,
+      "pnl": null,
+      "price": 1.77,
+      "shares": 24,
+      "side": "BUY",
+      "ticker": "BAK"
+    }
+  ],
+  "holdings": [
+    "BAK",
+    "CRUS",
+    "DBX",
+    "GME",
+    "QCOM",
+    "SION",
+    "SM",
+    "TNDM",
+    "WAY"
+  ],
+  "mean": 0.3545,
+  "n_trades_today": 3,
+  "recipe": "union_news_g_cond_h3",
+  "sells": [],
+  "state": {
+    "after": "2026-09-17",
+    "cash": 159.91,
+    "pos": {
+      "BAK": {
+        "close_px": 1.7899999618530273,
+        "cost": 42.97679954223633,
+        "entry_date": "2026-09-17",
+        "entry_px": 1.7699999809265137,
+        "fee_in": 0.4968,
+        "last_px": 1.7699999809265137,
+        "min_hold": 3,
+        "notional": 42.47999954223633,
+        "peak_px": 1.7699999809265137,
+        "reason": "merged news\ud83d\udfe2, rank +G\u2212R; gate news=good; rank cond; list yday_mover; ret5=-10.2; leftover $43.50",
+        "shares": 24,
+        "ticker": "BAK"
+      },
+      "CRUS": {
+        "close_px": 120.37000274658203,
+        "cost": 1356.0129597167968,
+        "entry_date": "2026-09-16",
+        "entry_px": 123.08999633789062,
+        "fee_in": 2.023,
+        "last_px": 120.06999969482422,
+        "min_hold": 3,
+        "notional": 1353.9899597167969,
+        "peak_px": 123.08999633789062,
+        "reason": "merged news\ud83d\udfe2, rank +G\u2212R; gate news=good; rank cond; list ohlc_hot; \ud83d\udd35; ret5=+10.3; leftover $1435.52",
+        "shares": 11,
+        "ticker": "CRUS"
+      },
+      "DBX": {
+        "close_px": 37.61000061035156,
+        "cost": 1413.044040588379,
+        "entry_date": "2026-09-16",
+        "entry_px": 37.130001068115234,
+        "fee_in": 2.104,
+        "last_px": 37.63999938964844,
+        "min_hold": 3,
+        "notional": 1410.940040588379,
+        "peak_px": 37.63999938964844,
+        "reason": "merged news\ud83d\udfe2, rank +G\u2212R; gate news=good; rank cond; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+11.3; leftover $1435.52",
+        "shares": 38,
+        "ticker": "DBX"
+      },
+      "GME": {
+        "close_px": 22.770000457763672,
+        "cost": 22.344200839233398,
+        "entry_date": "2026-09-17",
+        "entry_px": 22.1200008392334,
+        "fee_in": 0.2242,
+        "last_px": 22.1200008392334,
+        "min_hold": 3,
+        "notional": 22.1200008392334,
+        "peak_px": 22.1200008392334,
+        "reason": "merged news\ud83d\udfe2, rank +G\u2212R; gate news=good; rank cond; list ohlc_hot; \ud83d\udd35; ret5=+10.5; leftover $43.50",
+        "shares": 1,
+        "ticker": "GME"
+      },
+      "QCOM": {
+        "close_px": 188.7100067138672,
+        "cost": 1326.2009871826172,
+        "entry_date": "2026-09-16",
+        "entry_px": 189.1699981689453,
+        "fee_in": 2.011,
+        "last_px": 190.35000610351562,
+        "min_hold": 3,
+        "notional": 1324.1899871826172,
+        "peak_px": 190.35000610351562,
+        "reason": "merged news\ud83d\udfe2, rank +G\u2212R; gate news=good; rank cond; list ohlc_hot; \ud83d\udd35; ret5=+7.9; leftover $1435.52",
+        "shares": 7,
+        "ticker": "QCOM"
+      },
+      "SION": {
+        "close_px": 7.179999828338623,
+        "cost": 1434.3573607086182,
+        "entry_date": "2026-09-16",
+        "entry_px": 6.949999809265137,
+        "fee_in": 2.6574,
+        "last_px": 7.269999980926514,
+        "min_hold": 3,
+        "notional": 1431.6999607086182,
+        "peak_px": 7.269999980926514,
+        "reason": "merged news\ud83d\udfe2, rank +G\u2212R; gate news=good; rank cond; list yday_mover; ret5=-5.8; leftover $1435.52",
+        "shares": 206,
+        "ticker": "SION"
+      },
+      "SM": {
+        "close_px": 36.970001220703125,
+        "cost": 1401.745058746338,
+        "entry_date": "2026-09-16",
+        "entry_px": 39.9900016784668,
+        "fee_in": 2.095,
+        "last_px": 37.56999969482422,
+        "min_hold": 3,
+        "notional": 1399.650058746338,
+        "peak_px": 39.9900016784668,
+        "reason": "merged news\ud83d\udfe2, rank +G\u2212R; gate news=good; rank cond; list ohlc_hot; \ud83d\udd35; ret5=+9.3; leftover $1435.52",
+        "shares": 35,
+        "ticker": "SM"
+      },
+      "TNDM": {
+        "close_px": 17.229999542236328,
+        "cost": 35.80039862670898,
+        "entry_date": "2026-09-17",
+        "entry_px": 17.719999313354492,
+        "fee_in": 0.3604,
+        "last_px": 17.719999313354492,
+        "min_hold": 3,
+        "notional": 35.439998626708984,
+        "peak_px": 17.719999313354492,
+        "reason": "merged news\ud83d\udfe2, rank +G\u2212R; gate news=good; rank cond; list yday_gainer; ret5=-8.3; leftover $43.50",
+        "shares": 2,
+        "ticker": "TNDM"
+      },
+      "WAY": {
+        "close_px": 26.510000228881836,
+        "cost": 1420.7320247192383,
+        "entry_date": "2026-09-16",
+        "entry_px": 26.270000457763672,
+        "fee_in": 2.152,
+        "last_px": 26.510000228881836,
+        "min_hold": 3,
+        "notional": 1418.5800247192383,
+        "peak_px": 26.510000228881836,
+        "reason": "merged news\ud83d\udfe2, rank +G\u2212R; gate news=good; rank cond; list yday_gainer,ohlc_hot; \ud83d\udd35; \u26aa; ret5=+10.0; leftover $1435.52",
+        "shares": 54,
+        "ticker": "WAY"
+      }
+    },
+    "yday_equity": 8538.89
+  }
+}

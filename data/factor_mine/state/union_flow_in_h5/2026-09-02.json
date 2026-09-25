@@ -1,0 +1,51 @@
+{
+  "buys": [],
+  "cash": 128.16,
+  "date": "2026-09-02",
+  "equity": 9741.4,
+  "fees": 0,
+  "fills": [],
+  "holdings": [
+    "JKS",
+    "ULTA"
+  ],
+  "mean": 0.6036,
+  "n_trades_today": 0,
+  "recipe": "union_flow_in_h5",
+  "sells": [],
+  "state": {
+    "after": "2026-09-02",
+    "cash": 128.16,
+    "pos": {
+      "JKS": {
+        "close_px": 12.460000038146973,
+        "cost": 4991.821657313538,
+        "entry_date": "2026-08-28",
+        "entry_px": 13.369999885559082,
+        "fee_in": 4.8117,
+        "last_px": 12.449999809265137,
+        "min_hold": 5,
+        "notional": 4987.009957313538,
+        "peak_px": 13.539999961853027,
+        "reason": "union \u2229 flow_in hold 5, no \ud83d\udea8; gate flow_in=True; list yday_mover; ret5=-14.9; leftover $5000.00",
+        "shares": 373,
+        "ticker": "JKS"
+      },
+      "ULTA": {
+        "close_px": 551.739990234375,
+        "cost": 4880.017,
+        "entry_date": "2026-08-28",
+        "entry_px": 542.0,
+        "fee_in": 2.017,
+        "last_px": 545.6799926757812,
+        "min_hold": 5,
+        "notional": 4878.0,
+        "peak_px": 545.6799926757812,
+        "reason": "union \u2229 flow_in hold 5, no \ud83d\udea8; gate flow_in=True; list earn_react; ret5=+4.8; leftover $5000.00",
+        "shares": 9,
+        "ticker": "ULTA"
+      }
+    },
+    "yday_equity": 9741.4
+  }
+}

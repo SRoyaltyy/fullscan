@@ -1,0 +1,215 @@
+{
+  "buys": [
+    "CAPR",
+    "ANF",
+    "MEI",
+    "LVWR",
+    "VYX",
+    "BHVN",
+    "SNPS",
+    "ADCT"
+  ],
+  "cash": 398.58,
+  "date": "2026-08-28",
+  "equity": 9866.73,
+  "fees": 39.3285,
+  "fills": [
+    {
+      "fees": 2.374,
+      "pnl": null,
+      "price": 9.73,
+      "shares": 128,
+      "side": "BUY",
+      "ticker": "CAPR"
+    },
+    {
+      "fees": 2.014,
+      "pnl": null,
+      "price": 146.07,
+      "shares": 8,
+      "side": "BUY",
+      "ticker": "ANF"
+    },
+    {
+      "fees": 2.2,
+      "pnl": null,
+      "price": 17.78,
+      "shares": 70,
+      "side": "BUY",
+      "ticker": "MEI"
+    },
+    {
+      "fees": 11.5971,
+      "pnl": null,
+      "price": 1.39,
+      "shares": 899,
+      "side": "BUY",
+      "ticker": "LVWR"
+    },
+    {
+      "fees": 2.398,
+      "pnl": null,
+      "price": 9.13,
+      "shares": 136,
+      "side": "BUY",
+      "ticker": "VYX"
+    },
+    {
+      "fees": 2.224,
+      "pnl": null,
+      "price": 15.88,
+      "shares": 78,
+      "side": "BUY",
+      "ticker": "BHVN"
+    },
+    {
+      "fees": 1.996,
+      "pnl": null,
+      "price": 461.85,
+      "shares": 2,
+      "side": "BUY",
+      "ticker": "SNPS"
+    },
+    {
+      "fees": 14.5254,
+      "pnl": null,
+      "price": 1.11,
+      "shares": 1126,
+      "side": "BUY",
+      "ticker": "ADCT"
+    }
+  ],
+  "holdings": [
+    "ADCT",
+    "ANF",
+    "BHVN",
+    "CAPR",
+    "LVWR",
+    "MEI",
+    "SNPS",
+    "VYX"
+  ],
+  "mean": -1.3327,
+  "n_trades_today": 8,
+  "recipe": "union_ret_5_h1",
+  "sells": [],
+  "state": {
+    "after": "2026-08-28",
+    "cash": 398.58,
+    "pos": {
+      "ADCT": {
+        "close_px": 1.1399999856948853,
+        "cost": 1264.3854161075592,
+        "entry_date": "2026-08-28",
+        "entry_px": 1.1100000143051147,
+        "fee_in": 14.5254,
+        "last_px": 1.1100000143051147,
+        "min_hold": 1,
+        "notional": 1249.8600161075592,
+        "peak_px": 1.1100000143051147,
+        "reason": "rank by ret_5; rank ret_5; list ohlc_hot; ret5=+16.7; leftover $1250.00",
+        "shares": 1126,
+        "ticker": "ADCT"
+      },
+      "ANF": {
+        "close_px": 148.4199981689453,
+        "cost": 1170.57405859375,
+        "entry_date": "2026-08-28",
+        "entry_px": 146.07000732421875,
+        "fee_in": 2.014,
+        "last_px": 146.07000732421875,
+        "min_hold": 1,
+        "notional": 1168.56005859375,
+        "peak_px": 146.07000732421875,
+        "reason": "rank by ret_5; rank ret_5; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+38.8; leftover $1250.00",
+        "shares": 8,
+        "ticker": "ANF"
+      },
+      "BHVN": {
+        "close_px": 15.40999984741211,
+        "cost": 1240.8640089263915,
+        "entry_date": "2026-08-28",
+        "entry_px": 15.880000114440918,
+        "fee_in": 2.224,
+        "last_px": 15.880000114440918,
+        "min_hold": 1,
+        "notional": 1238.6400089263916,
+        "peak_px": 15.880000114440918,
+        "reason": "rank by ret_5; rank ret_5; list yday_gainer,yday_mover; ret5=+19.4; leftover $1250.00",
+        "shares": 78,
+        "ticker": "BHVN"
+      },
+      "CAPR": {
+        "close_px": 9.59000015258789,
+        "cost": 1247.81394140625,
+        "entry_date": "2026-08-28",
+        "entry_px": 9.729999542236328,
+        "fee_in": 2.374,
+        "last_px": 9.729999542236328,
+        "min_hold": 1,
+        "notional": 1245.43994140625,
+        "peak_px": 9.729999542236328,
+        "reason": "rank by ret_5; rank ret_5; list yday_gainer,yday_mover; ret5=+47.1; leftover $1250.00",
+        "shares": 128,
+        "ticker": "CAPR"
+      },
+      "LVWR": {
+        "close_px": 1.350000023841858,
+        "cost": 1261.2070871397018,
+        "entry_date": "2026-08-28",
+        "entry_px": 1.3899999856948853,
+        "fee_in": 11.5971,
+        "last_px": 1.3899999856948853,
+        "min_hold": 1,
+        "notional": 1249.6099871397018,
+        "peak_px": 1.3899999856948853,
+        "reason": "rank by ret_5; rank ret_5; list yday_gainer,yday_mover; ret5=+20.4; leftover $1250.00",
+        "shares": 899,
+        "ticker": "LVWR"
+      },
+      "MEI": {
+        "close_px": 18.209999084472656,
+        "cost": 1246.8000480651856,
+        "entry_date": "2026-08-28",
+        "entry_px": 17.780000686645508,
+        "fee_in": 2.2,
+        "last_px": 17.780000686645508,
+        "min_hold": 1,
+        "notional": 1244.6000480651855,
+        "peak_px": 17.780000686645508,
+        "reason": "rank by ret_5; rank ret_5; list mover_buy; \ud83d\udd35; \u26aa; ret5=+22.9; leftover $1250.00",
+        "shares": 70,
+        "ticker": "MEI"
+      },
+      "SNPS": {
+        "close_px": 442.6099853515625,
+        "cost": 925.6960122070312,
+        "entry_date": "2026-08-28",
+        "entry_px": 461.8500061035156,
+        "fee_in": 1.996,
+        "last_px": 461.8500061035156,
+        "min_hold": 1,
+        "notional": 923.7000122070312,
+        "peak_px": 461.8500061035156,
+        "reason": "rank by ret_5; rank ret_5; list ohlc_hot; ret5=+16.8; leftover $1250.00",
+        "shares": 2,
+        "ticker": "SNPS"
+      },
+      "VYX": {
+        "close_px": 8.779999732971191,
+        "cost": 1244.0780155639648,
+        "entry_date": "2026-08-28",
+        "entry_px": 9.130000114440918,
+        "fee_in": 2.398,
+        "last_px": 9.130000114440918,
+        "min_hold": 1,
+        "notional": 1241.6800155639648,
+        "peak_px": 9.130000114440918,
+        "reason": "rank by ret_5; rank ret_5; list yday_gainer; \ud83d\udd35; ret5=+20.0; leftover $1250.00",
+        "shares": 136,
+        "ticker": "VYX"
+      }
+    },
+    "yday_equity": 9866.73
+  }
+}

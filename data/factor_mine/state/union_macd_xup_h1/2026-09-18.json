@@ -1,0 +1,252 @@
+{
+  "buys": [
+    "GNRC",
+    "CYPH",
+    "LVWR",
+    "TEM",
+    "PGEN",
+    "SATL",
+    "LTRX",
+    "CROX"
+  ],
+  "cash": 88.48,
+  "date": "2026-09-18",
+  "equity": 10309.68,
+  "fees": 52.8433,
+  "fills": [
+    {
+      "fees": 2.377,
+      "pnl": -139.27,
+      "price": 21.3,
+      "shares": 116,
+      "side": "SELL",
+      "ticker": "BBNX"
+    },
+    {
+      "fees": 2.1473,
+      "pnl": 57.48,
+      "price": 63.37,
+      "shares": 42,
+      "side": "SELL",
+      "ticker": "BRKR"
+    },
+    {
+      "fees": 3.3393,
+      "pnl": -39.64,
+      "price": 10.12,
+      "shares": 254,
+      "side": "SELL",
+      "ticker": "IOVA"
+    },
+    {
+      "fees": 14.2488,
+      "pnl": -148.09,
+      "price": 2.29,
+      "shares": 1089,
+      "side": "SELL",
+      "ticker": "SABR"
+    },
+    {
+      "fees": 2.008,
+      "pnl": null,
+      "price": 209.52,
+      "shares": 6,
+      "side": "BUY",
+      "ticker": "GNRC"
+    },
+    {
+      "fees": 5.4051,
+      "pnl": null,
+      "price": 3.035,
+      "shares": 419,
+      "side": "BUY",
+      "ticker": "CYPH"
+    },
+    {
+      "fees": 11.0166,
+      "pnl": null,
+      "price": 1.49,
+      "shares": 854,
+      "side": "BUY",
+      "ticker": "LVWR"
+    },
+    {
+      "fees": 2.035,
+      "pnl": null,
+      "price": 81.4,
+      "shares": 15,
+      "side": "BUY",
+      "ticker": "TEM"
+    },
+    {
+      "fees": 2.467,
+      "pnl": null,
+      "price": 7.98,
+      "shares": 159,
+      "side": "BUY",
+      "ticker": "PGEN"
+    },
+    {
+      "fees": 2.9928,
+      "pnl": null,
+      "price": 5.485,
+      "shares": 232,
+      "side": "BUY",
+      "ticker": "SATL"
+    },
+    {
+      "fees": 2.7864,
+      "pnl": null,
+      "price": 5.89,
+      "shares": 216,
+      "side": "BUY",
+      "ticker": "LTRX"
+    },
+    {
+      "fees": 2.02,
+      "pnl": null,
+      "price": 123.0,
+      "shares": 10,
+      "side": "BUY",
+      "ticker": "CROX"
+    }
+  ],
+  "holdings": [
+    "CROX",
+    "CYPH",
+    "GNRC",
+    "LTRX",
+    "LVWR",
+    "PGEN",
+    "SATL",
+    "TEM"
+  ],
+  "mean": 0.9164,
+  "n_trades_today": 12,
+  "recipe": "union_macd_xup_h1",
+  "sells": [
+    "BBNX",
+    "BRKR",
+    "IOVA",
+    "SABR"
+  ],
+  "state": {
+    "after": "2026-09-18",
+    "cash": 88.48,
+    "pos": {
+      "CROX": {
+        "close_px": 122.23999786376953,
+        "cost": 1232.02,
+        "entry_date": "2026-09-18",
+        "entry_px": 123.0,
+        "fee_in": 2.02,
+        "last_px": 123.0,
+        "min_hold": 1,
+        "notional": 1230.0,
+        "peak_px": 123.0,
+        "reason": "union \u2229 macd_xup, no \ud83d\udea8; gate macd_cross_up=True; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+13.0; leftover $1273.13",
+        "shares": 10,
+        "ticker": "CROX"
+      },
+      "CYPH": {
+        "close_px": 3.5999999046325684,
+        "cost": 1277.0701359630584,
+        "entry_date": "2026-09-18",
+        "entry_px": 3.0350000858306885,
+        "fee_in": 5.4051,
+        "last_px": 3.0350000858306885,
+        "min_hold": 1,
+        "notional": 1271.6650359630585,
+        "peak_px": 3.0350000858306885,
+        "reason": "union \u2229 macd_xup, no \ud83d\udea8; gate macd_cross_up=True; list yday_gainer,yday_mover; \ud83d\udd35; \u26aa; ret5=+39.5; leftover $1273.13",
+        "shares": 419,
+        "ticker": "CYPH"
+      },
+      "GNRC": {
+        "close_px": 207.44000244140625,
+        "cost": 1259.1280256347657,
+        "entry_date": "2026-09-18",
+        "entry_px": 209.52000427246094,
+        "fee_in": 2.008,
+        "last_px": 209.52000427246094,
+        "min_hold": 1,
+        "notional": 1257.1200256347656,
+        "peak_px": 209.52000427246094,
+        "reason": "union \u2229 macd_xup, no \ud83d\udea8; gate macd_cross_up=True; list flatten,yday_gainer,yday_mover; \ud83d\udd35; ret5=+14.1; leftover $1273.13",
+        "shares": 6,
+        "ticker": "GNRC"
+      },
+      "LTRX": {
+        "close_px": 5.849999904632568,
+        "cost": 1275.0263711608886,
+        "entry_date": "2026-09-18",
+        "entry_px": 5.889999866485596,
+        "fee_in": 2.7864,
+        "last_px": 5.889999866485596,
+        "min_hold": 1,
+        "notional": 1272.2399711608887,
+        "peak_px": 5.889999866485596,
+        "reason": "union \u2229 macd_xup, no \ud83d\udea8; gate macd_cross_up=True; list ohlc_hot; \ud83d\udd35; ret5=+15.0; leftover $1273.13",
+        "shares": 216,
+        "ticker": "LTRX"
+      },
+      "LVWR": {
+        "close_px": 1.6299999952316284,
+        "cost": 1283.4766081443786,
+        "entry_date": "2026-09-18",
+        "entry_px": 1.4900000095367432,
+        "fee_in": 11.0166,
+        "last_px": 1.4900000095367432,
+        "min_hold": 1,
+        "notional": 1272.4600081443787,
+        "peak_px": 1.4900000095367432,
+        "reason": "union \u2229 macd_xup, no \ud83d\udea8; gate macd_cross_up=True; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+25.7; leftover $1273.13",
+        "shares": 854,
+        "ticker": "LVWR"
+      },
+      "PGEN": {
+        "close_px": 7.78000020980835,
+        "cost": 1271.2870030326844,
+        "entry_date": "2026-09-18",
+        "entry_px": 7.980000019073486,
+        "fee_in": 2.467,
+        "last_px": 7.980000019073486,
+        "min_hold": 1,
+        "notional": 1268.8200030326843,
+        "peak_px": 7.980000019073486,
+        "reason": "union \u2229 macd_xup, no \ud83d\udea8; gate macd_cross_up=True; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+17.8; leftover $1273.13",
+        "shares": 159,
+        "ticker": "PGEN"
+      },
+      "SATL": {
+        "close_px": 5.110000133514404,
+        "cost": 1275.5128309753418,
+        "entry_date": "2026-09-18",
+        "entry_px": 5.485000133514404,
+        "fee_in": 2.9928,
+        "last_px": 5.485000133514404,
+        "min_hold": 1,
+        "notional": 1272.5200309753418,
+        "peak_px": 5.485000133514404,
+        "reason": "union \u2229 macd_xup, no \ud83d\udea8; gate macd_cross_up=True; list ohlc_hot; \ud83d\udd35; ret5=+17.2; leftover $1273.13",
+        "shares": 232,
+        "ticker": "SATL"
+      },
+      "TEM": {
+        "close_px": 77.83999633789062,
+        "cost": 1223.0350228881837,
+        "entry_date": "2026-09-18",
+        "entry_px": 81.4000015258789,
+        "fee_in": 2.035,
+        "last_px": 81.4000015258789,
+        "min_hold": 1,
+        "notional": 1221.0000228881836,
+        "peak_px": 81.4000015258789,
+        "reason": "union \u2229 macd_xup, no \ud83d\udea8; gate macd_cross_up=True; list yday_gainer,yday_mover; \ud83d\udd35; \u26aa; ret5=+36.8; leftover $1273.13",
+        "shares": 15,
+        "ticker": "TEM"
+      }
+    },
+    "yday_equity": 10309.68
+  }
+}

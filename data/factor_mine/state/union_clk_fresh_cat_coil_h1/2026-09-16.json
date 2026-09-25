@@ -1,0 +1,225 @@
+{
+  "buys": [
+    "AVAH",
+    "ILMN",
+    "QLYS",
+    "SM",
+    "BLFS",
+    "IQV",
+    "TEM",
+    "WST"
+  ],
+  "cash": 521.74,
+  "date": "2026-09-16",
+  "equity": 9561.29,
+  "fees": 18.5425,
+  "fills": [
+    {
+      "fees": 2.0855,
+      "pnl": 107.6,
+      "price": 52.52,
+      "shares": 25,
+      "side": "SELL",
+      "ticker": "FRO"
+    },
+    {
+      "fees": 2.239,
+      "pnl": null,
+      "price": 14.31,
+      "shares": 83,
+      "side": "BUY",
+      "ticker": "AVAH"
+    },
+    {
+      "fees": 2.005,
+      "pnl": null,
+      "price": 224.49,
+      "shares": 5,
+      "side": "BUY",
+      "ticker": "ILMN"
+    },
+    {
+      "fees": 2.008,
+      "pnl": null,
+      "price": 179.6,
+      "shares": 6,
+      "side": "BUY",
+      "ticker": "QLYS"
+    },
+    {
+      "fees": 2.077,
+      "pnl": null,
+      "price": 39.99,
+      "shares": 29,
+      "side": "BUY",
+      "ticker": "SM"
+    },
+    {
+      "fees": 2.086,
+      "pnl": null,
+      "price": 36.46,
+      "shares": 32,
+      "side": "BUY",
+      "ticker": "BLFS"
+    },
+    {
+      "fees": 2.002,
+      "pnl": null,
+      "price": 270.89,
+      "shares": 4,
+      "side": "BUY",
+      "ticker": "IQV"
+    },
+    {
+      "fees": 2.041,
+      "pnl": null,
+      "price": 68.79,
+      "shares": 17,
+      "side": "BUY",
+      "ticker": "TEM"
+    },
+    {
+      "fees": 1.999,
+      "pnl": null,
+      "price": 363.11,
+      "shares": 3,
+      "side": "BUY",
+      "ticker": "WST"
+    }
+  ],
+  "holdings": [
+    "AVAH",
+    "BLFS",
+    "ILMN",
+    "IQV",
+    "QLYS",
+    "SM",
+    "TEM",
+    "WST"
+  ],
+  "mean": -0.1282,
+  "n_trades_today": 9,
+  "recipe": "union_clk_fresh_cat_coil_h1",
+  "sells": [
+    "FRO"
+  ],
+  "state": {
+    "after": "2026-09-16",
+    "cash": 521.74,
+    "pos": {
+      "AVAH": {
+        "close_px": 14.260000228881836,
+        "cost": 1189.969034828186,
+        "entry_date": "2026-09-16",
+        "entry_px": 14.3100004196167,
+        "fee_in": 2.239,
+        "last_px": 14.3100004196167,
+        "min_hold": 1,
+        "notional": 1187.730034828186,
+        "peak_px": 14.3100004196167,
+        "reason": "Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list flatten; \u26aa; ret5=+4.8; leftover $1199.34",
+        "shares": 83,
+        "ticker": "AVAH"
+      },
+      "BLFS": {
+        "close_px": 36.11000061035156,
+        "cost": 1168.805970703125,
+        "entry_date": "2026-09-16",
+        "entry_px": 36.459999084472656,
+        "fee_in": 2.086,
+        "last_px": 36.459999084472656,
+        "min_hold": 1,
+        "notional": 1166.719970703125,
+        "peak_px": 36.459999084472656,
+        "reason": "Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list flatten; \ud83d\udd35; \u26aa; ret5=+2.9; leftover $1199.34",
+        "shares": 32,
+        "ticker": "BLFS"
+      },
+      "ILMN": {
+        "close_px": 228.92999267578125,
+        "cost": 1124.4550274658204,
+        "entry_date": "2026-09-16",
+        "entry_px": 224.49000549316406,
+        "fee_in": 2.005,
+        "last_px": 224.49000549316406,
+        "min_hold": 1,
+        "notional": 1122.4500274658203,
+        "peak_px": 224.49000549316406,
+        "reason": "Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list yday_gainer; \ud83d\udd35; \u26aa; ret5=+5.3; leftover $1199.34",
+        "shares": 5,
+        "ticker": "ILMN"
+      },
+      "IQV": {
+        "close_px": 268.82000732421875,
+        "cost": 1085.56205859375,
+        "entry_date": "2026-09-16",
+        "entry_px": 270.8900146484375,
+        "fee_in": 2.002,
+        "last_px": 270.8900146484375,
+        "min_hold": 1,
+        "notional": 1083.56005859375,
+        "peak_px": 270.8900146484375,
+        "reason": "Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list flatten; \u26aa; ret5=+4.0; leftover $1199.34",
+        "shares": 4,
+        "ticker": "IQV"
+      },
+      "QLYS": {
+        "close_px": 183.05999755859375,
+        "cost": 1079.6080366210938,
+        "entry_date": "2026-09-16",
+        "entry_px": 179.60000610351562,
+        "fee_in": 2.008,
+        "last_px": 179.60000610351562,
+        "min_hold": 1,
+        "notional": 1077.6000366210938,
+        "peak_px": 179.60000610351562,
+        "reason": "Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list yday_gainer; \ud83d\udd35; ret5=+8.8; leftover $1199.34",
+        "shares": 6,
+        "ticker": "QLYS"
+      },
+      "SM": {
+        "close_px": 38.15999984741211,
+        "cost": 1161.787048675537,
+        "entry_date": "2026-09-16",
+        "entry_px": 39.9900016784668,
+        "fee_in": 2.077,
+        "last_px": 39.9900016784668,
+        "min_hold": 1,
+        "notional": 1159.710048675537,
+        "peak_px": 39.9900016784668,
+        "reason": "Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list ohlc_hot; \ud83d\udd35; ret5=+9.3; leftover $1199.34",
+        "shares": 29,
+        "ticker": "SM"
+      },
+      "TEM": {
+        "close_px": 69.97000122070312,
+        "cost": 1171.4710155639648,
+        "entry_date": "2026-09-16",
+        "entry_px": 68.79000091552734,
+        "fee_in": 2.041,
+        "last_px": 68.79000091552734,
+        "min_hold": 1,
+        "notional": 1169.4300155639648,
+        "peak_px": 68.79000091552734,
+        "reason": "Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list probable,yday_gainer; \ud83d\udd35; \u26aa; ret5=+7.1; leftover $1199.34",
+        "shares": 17,
+        "ticker": "TEM"
+      },
+      "WST": {
+        "close_px": 362.010009765625,
+        "cost": 1091.3289560546875,
+        "entry_date": "2026-09-16",
+        "entry_px": 363.1099853515625,
+        "fee_in": 1.999,
+        "last_px": 363.1099853515625,
+        "min_hold": 1,
+        "notional": 1089.3299560546875,
+        "peak_px": 363.1099853515625,
+        "reason": "Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list ohlc_hot; \u26aa; ret5=+8.1; leftover $1199.34",
+        "shares": 3,
+        "ticker": "WST"
+      }
+    },
+    "yday_equity": 9561.29
+  }
+}

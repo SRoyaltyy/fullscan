@@ -1,0 +1,215 @@
+{
+  "buys": [
+    "CABA",
+    "ALEC",
+    "BHC",
+    "BMEA",
+    "OABI",
+    "OPK",
+    "VIR",
+    "ATRC"
+  ],
+  "cash": 0.95,
+  "date": "2026-09-04",
+  "equity": 9658.37,
+  "fees": 39.1014,
+  "fills": [
+    {
+      "fees": 4.5408,
+      "pnl": null,
+      "price": 3.46,
+      "shares": 352,
+      "side": "BUY",
+      "ticker": "CABA"
+    },
+    {
+      "fees": 6.2307,
+      "pnl": null,
+      "price": 2.52,
+      "shares": 483,
+      "side": "BUY",
+      "ticker": "ALEC"
+    },
+    {
+      "fees": 2.533,
+      "pnl": null,
+      "price": 6.71,
+      "shares": 181,
+      "side": "BUY",
+      "ticker": "BHC"
+    },
+    {
+      "fees": 8.2689,
+      "pnl": null,
+      "price": 1.9,
+      "shares": 641,
+      "side": "BUY",
+      "ticker": "BMEA"
+    },
+    {
+      "fees": 3.2766,
+      "pnl": null,
+      "price": 4.78,
+      "shares": 254,
+      "side": "BUY",
+      "ticker": "OABI"
+    },
+    {
+      "fees": 9.8814,
+      "pnl": null,
+      "price": 1.59,
+      "shares": 766,
+      "side": "BUY",
+      "ticker": "OPK"
+    },
+    {
+      "fees": 2.311,
+      "pnl": null,
+      "price": 11.31,
+      "shares": 107,
+      "side": "BUY",
+      "ticker": "VIR"
+    },
+    {
+      "fees": 2.059,
+      "pnl": null,
+      "price": 52.03,
+      "shares": 23,
+      "side": "BUY",
+      "ticker": "ATRC"
+    }
+  ],
+  "holdings": [
+    "ALEC",
+    "ATRC",
+    "BHC",
+    "BMEA",
+    "CABA",
+    "OABI",
+    "OPK",
+    "VIR"
+  ],
+  "mean": -0.9038,
+  "n_trades_today": 8,
+  "recipe": "union_ab_g_h3",
+  "sells": [],
+  "state": {
+    "after": "2026-09-04",
+    "cash": 0.95,
+    "pos": {
+      "ALEC": {
+        "close_px": 2.4600000381469727,
+        "cost": 1223.3906907875062,
+        "entry_date": "2026-09-04",
+        "entry_px": 2.5199999809265137,
+        "fee_in": 6.2307,
+        "last_px": 2.5199999809265137,
+        "min_hold": 3,
+        "notional": 1217.159990787506,
+        "peak_px": 2.5199999809265137,
+        "reason": "union \u2229 ab_g, no \ud83d\udea8; gate ab=good; list flatten,probable,yday_gainer,yday_mover,mover_buy; \ud83d\udd35; \u26aa; ret5=+5.0; leftover $1218.31",
+        "shares": 483,
+        "ticker": "ALEC"
+      },
+      "ATRC": {
+        "close_px": 51.52000045776367,
+        "cost": 1198.748971923828,
+        "entry_date": "2026-09-04",
+        "entry_px": 52.029998779296875,
+        "fee_in": 2.059,
+        "last_px": 52.029998779296875,
+        "min_hold": 3,
+        "notional": 1196.6899719238281,
+        "peak_px": 52.029998779296875,
+        "reason": "union \u2229 ab_g, no \ud83d\udea8; gate ab=good; list flatten,mover_buy; \ud83d\udd35; \u26aa; ret5=+6.5; leftover $1218.31",
+        "shares": 23,
+        "ticker": "ATRC"
+      },
+      "BHC": {
+        "close_px": 6.559999942779541,
+        "cost": 1217.043006904602,
+        "entry_date": "2026-09-04",
+        "entry_px": 6.710000038146973,
+        "fee_in": 2.533,
+        "last_px": 6.710000038146973,
+        "min_hold": 3,
+        "notional": 1214.510006904602,
+        "peak_px": 6.710000038146973,
+        "reason": "union \u2229 ab_g, no \ud83d\udea8; gate ab=good; list flatten,mover_buy; \ud83d\udd35; \u26aa; ret5=+7.3; leftover $1218.31",
+        "shares": 181,
+        "ticker": "BHC"
+      },
+      "BMEA": {
+        "close_px": 2.0299999713897705,
+        "cost": 1226.168884717369,
+        "entry_date": "2026-09-04",
+        "entry_px": 1.899999976158142,
+        "fee_in": 8.2689,
+        "last_px": 1.899999976158142,
+        "min_hold": 3,
+        "notional": 1217.899984717369,
+        "peak_px": 1.899999976158142,
+        "reason": "union \u2229 ab_g, no \ud83d\udea8; gate ab=good; list flatten,mover_buy; \ud83d\udd35; \u26aa; ret5=+13.7; leftover $1218.31",
+        "shares": 641,
+        "ticker": "BMEA"
+      },
+      "CABA": {
+        "close_px": 3.4700000286102295,
+        "cost": 1222.4608134277344,
+        "entry_date": "2026-09-04",
+        "entry_px": 3.4600000381469727,
+        "fee_in": 4.5408,
+        "last_px": 3.4600000381469727,
+        "min_hold": 3,
+        "notional": 1217.9200134277344,
+        "peak_px": 3.4600000381469727,
+        "reason": "union \u2229 ab_g, no \ud83d\udea8; gate ab=good; list flatten,mover_buy; \ud83d\udd35; \u26aa; ret5=+3.0; leftover $1218.31",
+        "shares": 352,
+        "ticker": "CABA"
+      },
+      "OABI": {
+        "close_px": 4.329999923706055,
+        "cost": 1217.3966532913207,
+        "entry_date": "2026-09-04",
+        "entry_px": 4.78000020980835,
+        "fee_in": 3.2766,
+        "last_px": 4.78000020980835,
+        "min_hold": 3,
+        "notional": 1214.1200532913208,
+        "peak_px": 4.78000020980835,
+        "reason": "union \u2229 ab_g, no \ud83d\udea8; gate ab=good; list flatten,probable,yday_gainer,yday_mover,mover_buy; \ud83d\udd35; \u26aa; ret5=+3.0; leftover $1218.31",
+        "shares": 254,
+        "ticker": "OABI"
+      },
+      "OPK": {
+        "close_px": 1.6399999856948853,
+        "cost": 1227.8214255680084,
+        "entry_date": "2026-09-04",
+        "entry_px": 1.590000033378601,
+        "fee_in": 9.8814,
+        "last_px": 1.590000033378601,
+        "min_hold": 3,
+        "notional": 1217.9400255680084,
+        "peak_px": 1.590000033378601,
+        "reason": "union \u2229 ab_g, no \ud83d\udea8; gate ab=good; list flatten,yday_gainer,mover_buy; \ud83d\udd35; \u26aa; ret5=+7.3; leftover $1218.31",
+        "shares": 766,
+        "ticker": "OPK"
+      },
+      "VIR": {
+        "close_px": 11.385000228881836,
+        "cost": 1212.4810448989867,
+        "entry_date": "2026-09-04",
+        "entry_px": 11.3100004196167,
+        "fee_in": 2.311,
+        "last_px": 11.3100004196167,
+        "min_hold": 3,
+        "notional": 1210.1700448989868,
+        "peak_px": 11.3100004196167,
+        "reason": "union \u2229 ab_g, no \ud83d\udea8; gate ab=good; list flatten,mover_buy; \ud83d\udd35; \u26aa; ret5=+1.2; leftover $1218.31",
+        "shares": 107,
+        "ticker": "VIR"
+      }
+    },
+    "yday_equity": 9658.37
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "buys": [],
+  "cash": 8794.82,
+  "date": "2026-09-10",
+  "equity": 8794.82,
+  "fees": 45.235,
+  "fills": [
+    {
+      "fees": 10.0614,
+      "pnl": -250.68,
+      "price": 2.22,
+      "shares": 769,
+      "side": "SELL",
+      "ticker": "ALEC"
+    },
+    {
+      "fees": 2.022,
+      "pnl": -2.9,
+      "price": 52.31,
+      "shares": 4,
+      "side": "SELL",
+      "ticker": "ATRC"
+    },
+    {
+      "fees": 3.2394,
+      "pnl": -154.63,
+      "price": 6.11,
+      "shares": 247,
+      "side": "SELL",
+      "ticker": "BHC"
+    },
+    {
+      "fees": 9.5227,
+      "pnl": -69.87,
+      "price": 1.83,
+      "shares": 728,
+      "side": "SELL",
+      "ticker": "BMEA"
+    },
+    {
+      "fees": 8.3768,
+      "pnl": -407.03,
+      "price": 2.85,
+      "shares": 640,
+      "side": "SELL",
+      "ticker": "CABA"
+    },
+    {
+      "fees": 3.0282,
+      "pnl": -204.21,
+      "price": 3.922,
+      "shares": 231,
+      "side": "SELL",
+      "ticker": "OABI"
+    },
+    {
+      "fees": 6.8305,
+      "pnl": -44.88,
+      "price": 1.53,
+      "shares": 522,
+      "side": "SELL",
+      "ticker": "OPK"
+    },
+    {
+      "fees": 2.154,
+      "pnl": -39.81,
+      "price": 10.57,
+      "shares": 48,
+      "side": "SELL",
+      "ticker": "VIR"
+    }
+  ],
+  "holdings": [],
+  "mean": -2.076,
+  "n_trades_today": 8,
+  "recipe": "union_h3_rankw",
+  "sells": [
+    "ALEC",
+    "ATRC",
+    "BHC",
+    "BMEA",
+    "CABA",
+    "OABI",
+    "OPK",
+    "VIR"
+  ],
+  "state": {
+    "after": "2026-09-10",
+    "cash": 8794.82,
+    "pos": {},
+    "yday_equity": 8794.82
+  }
+}

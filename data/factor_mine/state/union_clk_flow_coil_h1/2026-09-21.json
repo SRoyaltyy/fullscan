@@ -1,0 +1,71 @@
+{
+  "buys": [
+    "A",
+    "HUM"
+  ],
+  "cash": 115.95,
+  "date": "2026-09-21",
+  "equity": 9517.11,
+  "fees": 4.106,
+  "fills": [
+    {
+      "fees": 2.08,
+      "pnl": null,
+      "price": 157.87,
+      "shares": 30,
+      "side": "BUY",
+      "ticker": "A"
+    },
+    {
+      "fees": 2.026,
+      "pnl": null,
+      "price": 386.2,
+      "shares": 12,
+      "side": "BUY",
+      "ticker": "HUM"
+    }
+  ],
+  "holdings": [
+    "A",
+    "HUM"
+  ],
+  "mean": 0.2798,
+  "n_trades_today": 2,
+  "recipe": "union_clk_flow_coil_h1",
+  "sells": [],
+  "state": {
+    "after": "2026-09-21",
+    "cash": 115.95,
+    "pos": {
+      "A": {
+        "close_px": 161.94000244140625,
+        "cost": 4738.179853515625,
+        "entry_date": "2026-09-21",
+        "entry_px": 157.8699951171875,
+        "fee_in": 2.08,
+        "last_px": 157.8699951171875,
+        "min_hold": 1,
+        "notional": 4736.099853515625,
+        "peak_px": 157.8699951171875,
+        "reason": "Clock-B #8 flow-in + green + not extended; gate clk_flow_coil=True; rank cond; list flatten; \ud83d\udd35; \u26aa; ret5=+6.5; leftover $4745.28",
+        "shares": 30,
+        "ticker": "A"
+      },
+      "HUM": {
+        "close_px": 378.5799865722656,
+        "cost": 4636.426146484375,
+        "entry_date": "2026-09-21",
+        "entry_px": 386.20001220703125,
+        "fee_in": 2.026,
+        "last_px": 386.20001220703125,
+        "min_hold": 1,
+        "notional": 4634.400146484375,
+        "peak_px": 386.20001220703125,
+        "reason": "Clock-B #8 flow-in + green + not extended; gate clk_flow_coil=True; rank cond; list flatten; \ud83d\udd35; ret5=-5.8; leftover $4745.28",
+        "shares": 12,
+        "ticker": "HUM"
+      }
+    },
+    "yday_equity": 9517.11
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "buys": [],
+  "cash": 10386.73,
+  "date": "2026-09-24",
+  "equity": 9860.05,
+  "fees": 14.9565,
+  "fills": [
+    {
+      "fees": 1.999,
+      "pnl": 3.74,
+      "price": 163.95,
+      "shares": 3,
+      "side": "COVER",
+      "ticker": "A"
+    },
+    {
+      "fees": 2.185,
+      "pnl": 36.54,
+      "price": 8.5,
+      "shares": 65,
+      "side": "COVER",
+      "ticker": "DNA"
+    },
+    {
+      "fees": 2.6445,
+      "pnl": 58.2,
+      "price": 2.61,
+      "shares": 205,
+      "side": "COVER",
+      "ticker": "FEAM"
+    },
+    {
+      "fees": 2.005,
+      "pnl": 19.55,
+      "price": 112.13,
+      "shares": 5,
+      "side": "COVER",
+      "ticker": "HALO"
+    },
+    {
+      "fees": 2.014,
+      "pnl": -1.26,
+      "price": 70.49,
+      "shares": 8,
+      "side": "COVER",
+      "ticker": "INOD"
+    },
+    {
+      "fees": 2.077,
+      "pnl": -0.42,
+      "price": 20.52,
+      "shares": 29,
+      "side": "COVER",
+      "ticker": "OMER"
+    },
+    {
+      "fees": 2.032,
+      "pnl": 76.19,
+      "price": 36.025,
+      "shares": 14,
+      "side": "COVER",
+      "ticker": "VKTX"
+    }
+  ],
+  "holdings": [
+    "SVIA"
+  ],
+  "mean": 1.1125,
+  "n_trades_today": 7,
+  "recipe": "short_rsi_ob_h1",
+  "sells": [
+    "A",
+    "DNA",
+    "FEAM",
+    "HALO",
+    "INOD",
+    "OMER",
+    "VKTX"
+  ],
+  "state": {
+    "after": "2026-09-24",
+    "cash": 10386.73,
+    "pos": {
+      "SVIA": {
+        "close_px": 3.9600000381469727,
+        "cost": 2.4374608210838002,
+        "entry_date": "2026-09-23",
+        "entry_px": 4.489999771118164,
+        "fee_in": 2.4374608210838002,
+        "last_px": 3.924999952316284,
+        "notional": 597.1699695587158,
+        "peak_px": 3.924999952316284,
+        "reason": "RSI overbought; gate rsi_ob=True; list yday_gainer,yday_mover; ret5=+26.4; leftover $599.97",
+        "shares": 133,
+        "ticker": "SVIA"
+      }
+    },
+    "yday_equity": 9860.05
+  }
+}

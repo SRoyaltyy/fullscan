@@ -1,0 +1,39 @@
+{
+  "buys": [],
+  "cash": 10023.39,
+  "date": "2026-09-02",
+  "equity": 10023.39,
+  "fees": 4.154,
+  "fills": [
+    {
+      "fees": 2.146,
+      "pnl": 172.44,
+      "price": 26.78,
+      "shares": 52,
+      "side": "COVER",
+      "ticker": "FIG"
+    },
+    {
+      "fees": 2.008,
+      "pnl": 95.1,
+      "price": 235.71,
+      "shares": 6,
+      "side": "COVER",
+      "ticker": "SIMO"
+    }
+  ],
+  "holdings": [],
+  "mean": 0.2754,
+  "n_trades_today": 2,
+  "recipe": "combo_sj_3070_shared",
+  "sells": [
+    "FIG",
+    "SIMO"
+  ],
+  "state": {
+    "after": "2026-09-02",
+    "cash": 10023.39,
+    "pos": {},
+    "yday_equity": 10023.39
+  }
+}

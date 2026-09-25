@@ -1,0 +1,48 @@
+{
+  "buys": [],
+  "cash": 9369.88,
+  "date": "2026-09-10",
+  "equity": 9369.88,
+  "fees": 6.2183,
+  "fills": [
+    {
+      "fees": 2.0661,
+      "pnl": 306.45,
+      "price": 260.708,
+      "shares": 13,
+      "side": "SELL",
+      "ticker": "BE"
+    },
+    {
+      "fees": 2.0596,
+      "pnl": -220.21,
+      "price": 245.35,
+      "shares": 12,
+      "side": "SELL",
+      "ticker": "CRM"
+    },
+    {
+      "fees": 2.0926,
+      "pnl": -209.08,
+      "price": 128.44,
+      "shares": 23,
+      "side": "SELL",
+      "ticker": "MSTR"
+    }
+  ],
+  "holdings": [],
+  "mean": -2.1037,
+  "n_trades_today": 3,
+  "recipe": "union_news_pack_h3",
+  "sells": [
+    "BE",
+    "CRM",
+    "MSTR"
+  ],
+  "state": {
+    "after": "2026-09-10",
+    "cash": 9369.88,
+    "pos": {},
+    "yday_equity": 9369.88
+  }
+}

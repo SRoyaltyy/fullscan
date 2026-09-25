@@ -1,0 +1,93 @@
+{
+  "buys": [],
+  "cash": 8684.76,
+  "date": "2026-09-24",
+  "equity": 8684.76,
+  "fees": 17.6444,
+  "fills": [
+    {
+      "fees": 2.028,
+      "pnl": -19.58,
+      "price": 163.95,
+      "shares": 6,
+      "side": "SELL",
+      "ticker": "A"
+    },
+    {
+      "fees": 2.3641,
+      "pnl": -20.8,
+      "price": 9.67,
+      "shares": 115,
+      "side": "SELL",
+      "ticker": "ADMA"
+    },
+    {
+      "fees": 2.3609,
+      "pnl": -93.61,
+      "price": 9.12,
+      "shares": 114,
+      "side": "SELL",
+      "ticker": "BFLY"
+    },
+    {
+      "fees": 2.046,
+      "pnl": -25.91,
+      "price": 87.68,
+      "shares": 12,
+      "side": "SELL",
+      "ticker": "DXCM"
+    },
+    {
+      "fees": 2.037,
+      "pnl": -46.53,
+      "price": 112.13,
+      "shares": 9,
+      "side": "SELL",
+      "ticker": "HALO"
+    },
+    {
+      "fees": 2.3863,
+      "pnl": -97.46,
+      "price": 8.5,
+      "shares": 122,
+      "side": "SELL",
+      "ticker": "IBRX"
+    },
+    {
+      "fees": 2.2501,
+      "pnl": -62.15,
+      "price": 13.48,
+      "shares": 79,
+      "side": "SELL",
+      "ticker": "NEOG"
+    },
+    {
+      "fees": 2.172,
+      "pnl": -11.34,
+      "price": 20.52,
+      "shares": 54,
+      "side": "SELL",
+      "ticker": "OMER"
+    }
+  ],
+  "holdings": [],
+  "mean": -0.8751,
+  "n_trades_today": 8,
+  "recipe": "union_white_yday_h1",
+  "sells": [
+    "A",
+    "ADMA",
+    "BFLY",
+    "DXCM",
+    "HALO",
+    "IBRX",
+    "NEOG",
+    "OMER"
+  ],
+  "state": {
+    "after": "2026-09-24",
+    "cash": 8684.76,
+    "pos": {},
+    "yday_equity": 8684.76
+  }
+}

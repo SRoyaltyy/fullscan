@@ -1,0 +1,93 @@
+{
+  "buys": [],
+  "cash": 9348.61,
+  "date": "2026-09-24",
+  "equity": 9348.61,
+  "fees": 35.9225,
+  "fills": [
+    {
+      "fees": 2.13,
+      "pnl": -16.24,
+      "price": 30.02,
+      "shares": 40,
+      "side": "SELL",
+      "ticker": "CNXC"
+    },
+    {
+      "fees": 2.9107,
+      "pnl": -23.53,
+      "price": 5.37,
+      "shares": 222,
+      "side": "SELL",
+      "ticker": "GT"
+    },
+    {
+      "fees": 2.175,
+      "pnl": -50.53,
+      "price": 20.93,
+      "shares": 55,
+      "side": "SELL",
+      "ticker": "HYMC"
+    },
+    {
+      "fees": 4.0343,
+      "pnl": -57.29,
+      "price": 3.77,
+      "shares": 308,
+      "side": "SELL",
+      "ticker": "INDP"
+    },
+    {
+      "fees": 16.7991,
+      "pnl": -68.43,
+      "price": 0.746,
+      "shares": 1580,
+      "side": "SELL",
+      "ticker": "NMRA"
+    },
+    {
+      "fees": 3.6554,
+      "pnl": -63.05,
+      "price": 4.15,
+      "shares": 279,
+      "side": "SELL",
+      "ticker": "TLYS"
+    },
+    {
+      "fees": 2.151,
+      "pnl": -70.55,
+      "price": 23.99,
+      "shares": 47,
+      "side": "SELL",
+      "ticker": "TNGX"
+    },
+    {
+      "fees": 2.067,
+      "pnl": -11.33,
+      "price": 61.78,
+      "shares": 19,
+      "side": "SELL",
+      "ticker": "TTAN"
+    }
+  ],
+  "holdings": [],
+  "mean": -0.4778,
+  "n_trades_today": 8,
+  "recipe": "probable_h1",
+  "sells": [
+    "CNXC",
+    "GT",
+    "HYMC",
+    "INDP",
+    "NMRA",
+    "TLYS",
+    "TNGX",
+    "TTAN"
+  ],
+  "state": {
+    "after": "2026-09-24",
+    "cash": 9348.61,
+    "pos": {},
+    "yday_equity": 9348.61
+  }
+}

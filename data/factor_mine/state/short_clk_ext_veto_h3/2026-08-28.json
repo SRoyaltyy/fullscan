@@ -1,0 +1,138 @@
+{
+  "buys": [
+    "CAPR",
+    "CRDL",
+    "SBET",
+    "EL",
+    "FSM"
+  ],
+  "cash": 14922.45,
+  "date": "2026-08-28",
+  "equity": 10185.84,
+  "fees": 15.4501,
+  "fills": [
+    {
+      "fees": 2.3500906836522772,
+      "pnl": null,
+      "price": 9.73,
+      "shares": 102,
+      "side": "SHORT",
+      "ticker": "CAPR"
+    },
+    {
+      "fees": 6.3743726019794,
+      "pnl": null,
+      "price": 2.06,
+      "shares": 485,
+      "side": "SHORT",
+      "ticker": "CRDL"
+    },
+    {
+      "fees": 2.3913534234556435,
+      "pnl": null,
+      "price": 8.65,
+      "shares": 115,
+      "side": "SHORT",
+      "ticker": "SBET"
+    },
+    {
+      "fees": 2.063381095363669,
+      "pnl": null,
+      "price": 106.99,
+      "shares": 9,
+      "side": "SHORT",
+      "ticker": "EL"
+    },
+    {
+      "fees": 2.270887123609569,
+      "pnl": null,
+      "price": 12.84,
+      "shares": 77,
+      "side": "SHORT",
+      "ticker": "FSM"
+    }
+  ],
+  "holdings": [
+    "CAPR",
+    "CRDL",
+    "EL",
+    "FSM",
+    "SBET"
+  ],
+  "mean": 1.8584,
+  "n_trades_today": 5,
+  "recipe": "short_clk_ext_veto_h3",
+  "sells": [],
+  "state": {
+    "after": "2026-08-28",
+    "cash": 14922.45,
+    "pos": {
+      "CAPR": {
+        "close_px": 9.59000015258789,
+        "cost": 2.3500906836522772,
+        "entry_date": "2026-08-28",
+        "entry_px": 9.729999542236328,
+        "fee_in": 2.3500906836522772,
+        "last_px": 9.729999542236328,
+        "notional": 992.4599533081055,
+        "peak_px": 9.729999542236328,
+        "reason": "Clock-B #5 extreme ext + fade/fail-break as a short; gate clk_ext_veto=True; list yday_gainer,yday_mover; ret5=+47.1; leftover $1000.00",
+        "shares": 102,
+        "ticker": "CAPR"
+      },
+      "CRDL": {
+        "close_px": 1.940000057220459,
+        "cost": 6.3743726019794,
+        "entry_date": "2026-08-28",
+        "entry_px": 2.059999942779541,
+        "fee_in": 6.3743726019794,
+        "last_px": 2.059999942779541,
+        "notional": 999.0999722480774,
+        "peak_px": 2.059999942779541,
+        "reason": "Clock-B #5 extreme ext + fade/fail-break as a short; gate clk_ext_veto=True; list yday_gainer; ret5=+9.3; leftover $1000.00",
+        "shares": 485,
+        "ticker": "CRDL"
+      },
+      "EL": {
+        "close_px": 103.38999938964844,
+        "cost": 2.063381095363669,
+        "entry_date": "2026-08-28",
+        "entry_px": 106.98999786376953,
+        "fee_in": 2.063381095363669,
+        "last_px": 106.98999786376953,
+        "notional": 962.9099807739258,
+        "peak_px": 106.98999786376953,
+        "reason": "Clock-B #5 extreme ext + fade/fail-break as a short; gate clk_ext_veto=True; list ohlc_hot; ret5=+10.5; leftover $1000.00",
+        "shares": 9,
+        "ticker": "EL"
+      },
+      "FSM": {
+        "close_px": 12.260000228881836,
+        "cost": 2.270887123609569,
+        "entry_date": "2026-08-28",
+        "entry_px": 12.84000015258789,
+        "fee_in": 2.270887123609569,
+        "last_px": 12.84000015258789,
+        "notional": 988.6800117492676,
+        "peak_px": 12.84000015258789,
+        "reason": "Clock-B #5 extreme ext + fade/fail-break as a short; gate clk_ext_veto=True; list ohlc_hot; ret5=+7.6; leftover $1000.00",
+        "shares": 77,
+        "ticker": "FSM"
+      },
+      "SBET": {
+        "close_px": 8.199999809265137,
+        "cost": 2.3913534234556435,
+        "entry_date": "2026-08-28",
+        "entry_px": 8.649999618530273,
+        "fee_in": 2.3913534234556435,
+        "last_px": 8.649999618530273,
+        "notional": 994.7499561309814,
+        "peak_px": 8.649999618530273,
+        "reason": "Clock-B #5 extreme ext + fade/fail-break as a short; gate clk_ext_veto=True; list ohlc_hot; ret5=+17.0; leftover $1000.00",
+        "shares": 115,
+        "ticker": "SBET"
+      }
+    },
+    "yday_equity": 10185.84
+  }
+}

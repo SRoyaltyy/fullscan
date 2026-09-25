@@ -1,0 +1,30 @@
+{
+  "buys": [],
+  "cash": 10084.16,
+  "date": "2026-09-24",
+  "equity": 10084.16,
+  "fees": 15.7469,
+  "fills": [
+    {
+      "fees": 15.7469,
+      "pnl": -247.03,
+      "price": 8.42,
+      "shares": 1199,
+      "side": "SELL",
+      "ticker": "BB"
+    }
+  ],
+  "holdings": [],
+  "mean": 0.3204,
+  "n_trades_today": 1,
+  "recipe": "union_flow_in_h1",
+  "sells": [
+    "BB"
+  ],
+  "state": {
+    "after": "2026-09-24",
+    "cash": 10084.16,
+    "pos": {},
+    "yday_equity": 10084.16
+  }
+}

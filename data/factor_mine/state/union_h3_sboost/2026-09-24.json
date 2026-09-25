@@ -1,0 +1,248 @@
+{
+  "buys": [],
+  "cash": 7806.96,
+  "date": "2026-09-24",
+  "equity": 8053.01,
+  "fees": 33.7137,
+  "fills": [
+    {
+      "fees": 2.025,
+      "pnl": 26.37,
+      "price": 163.95,
+      "shares": 5,
+      "side": "SELL",
+      "ticker": "A"
+    },
+    {
+      "fees": 6.0334,
+      "pnl": -60.39,
+      "price": 1.72,
+      "shares": 461,
+      "side": "SELL",
+      "ticker": "BTBT"
+    },
+    {
+      "fees": 2.1963,
+      "pnl": -79.7,
+      "price": 12.26,
+      "shares": 62,
+      "side": "SELL",
+      "ticker": "BTDR"
+    },
+    {
+      "fees": 2.7539,
+      "pnl": -131.46,
+      "price": 3.4,
+      "shares": 210,
+      "side": "SELL",
+      "ticker": "CYPH"
+    },
+    {
+      "fees": 2.037,
+      "pnl": -14.4,
+      "price": 87.68,
+      "shares": 9,
+      "side": "SELL",
+      "ticker": "DXCM"
+    },
+    {
+      "fees": 2.016,
+      "pnl": -27.33,
+      "price": 374.54,
+      "shares": 2,
+      "side": "SELL",
+      "ticker": "HUM"
+    },
+    {
+      "fees": 2.1963,
+      "pnl": -131.47,
+      "price": 11.42,
+      "shares": 62,
+      "side": "SELL",
+      "ticker": "MGTX"
+    },
+    {
+      "fees": 9.9271,
+      "pnl": -65.26,
+      "price": 1.05,
+      "shares": 759,
+      "side": "SELL",
+      "ticker": "ORBS"
+    },
+    {
+      "fees": 2.2659,
+      "pnl": -20.47,
+      "price": 9.8,
+      "shares": 84,
+      "side": "SELL",
+      "ticker": "SBET"
+    },
+    {
+      "fees": 2.2628,
+      "pnl": -24.84,
+      "price": 9.89,
+      "shares": 83,
+      "side": "SELL",
+      "ticker": "SGML"
+    }
+  ],
+  "holdings": [
+    "ADMA",
+    "ARQT",
+    "DEFT",
+    "DLO",
+    "FJET",
+    "FTRE",
+    "OMER",
+    "PGEN",
+    "TDC"
+  ],
+  "mean": -1.9782,
+  "n_trades_today": 10,
+  "recipe": "union_h3_sboost",
+  "sells": [
+    "A",
+    "BTBT",
+    "BTDR",
+    "CYPH",
+    "DXCM",
+    "HUM",
+    "MGTX",
+    "ORBS",
+    "SBET",
+    "SGML"
+  ],
+  "state": {
+    "after": "2026-09-24",
+    "cash": 7806.96,
+    "pos": {
+      "ADMA": {
+        "close_px": 9.520000457763672,
+        "cost": 29.733301258850098,
+        "entry_date": "2026-09-23",
+        "entry_px": 9.8100004196167,
+        "fee_in": 0.3033,
+        "last_px": 9.670000076293945,
+        "min_hold": 3,
+        "notional": 29.430001258850098,
+        "peak_px": 9.8100004196167,
+        "reason": "S\u2265+5: sizeup + more names; list flatten; \ud83d\udd35; \u26aa; ret5=+13.9; leftover $32.98",
+        "shares": 3,
+        "ticker": "ADMA"
+      },
+      "ARQT": {
+        "close_px": 26.270000457763672,
+        "cost": 28.070900915527343,
+        "entry_date": "2026-09-23",
+        "entry_px": 27.790000915527344,
+        "fee_in": 0.2809,
+        "last_px": 26.219999313354492,
+        "min_hold": 3,
+        "notional": 27.790000915527344,
+        "peak_px": 27.790000915527344,
+        "reason": "S\u2265+5: sizeup + more names; list flatten; \ud83d\udd35; \u26aa; ret5=+18.2; leftover $32.98",
+        "shares": 1,
+        "ticker": "ARQT"
+      },
+      "DEFT": {
+        "close_px": 0.5320000052452087,
+        "cost": 36.5329,
+        "entry_date": "2026-09-22",
+        "entry_px": 0.59,
+        "fee_in": 0.5429,
+        "last_px": 0.5199999809265137,
+        "min_hold": 3,
+        "notional": 35.989999999999995,
+        "peak_px": 0.59,
+        "reason": "S\u2265+5: sizeup + more names; list probable,yday_gainer,yday_mover; ret5=-1.7; leftover $36.19",
+        "shares": 61,
+        "ticker": "DEFT"
+      },
+      "DLO": {
+        "close_px": 13.880000114440918,
+        "cost": 29.296,
+        "entry_date": "2026-09-22",
+        "entry_px": 14.5,
+        "fee_in": 0.296,
+        "last_px": 14.0600004196167,
+        "min_hold": 3,
+        "notional": 29.0,
+        "peak_px": 14.5,
+        "reason": "S\u2265+5: sizeup + more names; list flatten; ret5=-3.6; leftover $36.19",
+        "shares": 2,
+        "ticker": "DLO"
+      },
+      "FJET": {
+        "close_px": 1.7999999523162842,
+        "cost": 34.7344,
+        "entry_date": "2026-09-22",
+        "entry_px": 2.02,
+        "fee_in": 0.3944,
+        "last_px": 1.9199999570846558,
+        "min_hold": 3,
+        "notional": 34.34,
+        "peak_px": 2.02,
+        "reason": "S\u2265+5: sizeup + more names; list probable,yday_gainer,yday_mover; ret5=+0.5; leftover $36.19",
+        "shares": 17,
+        "ticker": "FJET"
+      },
+      "FTRE": {
+        "close_px": 20.020000457763672,
+        "cost": 20.4555,
+        "entry_date": "2026-09-23",
+        "entry_px": 20.25,
+        "fee_in": 0.2055,
+        "last_px": 19.399999618530273,
+        "min_hold": 3,
+        "notional": 20.25,
+        "peak_px": 20.25,
+        "reason": "S\u2265+5: sizeup + more names; list flatten; \ud83d\udd35; \u26aa; ret5=+3.5; leftover $32.98",
+        "shares": 1,
+        "ticker": "FTRE"
+      },
+      "OMER": {
+        "close_px": 20.1299991607666,
+        "cost": 20.859499618530272,
+        "entry_date": "2026-09-23",
+        "entry_px": 20.649999618530273,
+        "fee_in": 0.2095,
+        "last_px": 20.520000457763672,
+        "min_hold": 3,
+        "notional": 20.649999618530273,
+        "peak_px": 20.649999618530273,
+        "reason": "S\u2265+5: sizeup + more names; list flatten,yday_gainer,yday_mover; \ud83d\udd35; \u26aa; ret5=+22.6; leftover $32.98",
+        "shares": 1,
+        "ticker": "OMER"
+      },
+      "PGEN": {
+        "close_px": 7.699999809265137,
+        "cost": 32.129999237060545,
+        "entry_date": "2026-09-23",
+        "entry_px": 7.949999809265137,
+        "fee_in": 0.33,
+        "last_px": 7.369999885559082,
+        "min_hold": 3,
+        "notional": 31.799999237060547,
+        "peak_px": 7.949999809265137,
+        "reason": "S\u2265+5: sizeup + more names; list flatten; \ud83d\udd35; \u26aa; ret5=+12.7; leftover $32.98",
+        "shares": 4,
+        "ticker": "PGEN"
+      },
+      "TDC": {
+        "close_px": 29.459999084472656,
+        "cost": 30.0808,
+        "entry_date": "2026-09-22",
+        "entry_px": 29.78,
+        "fee_in": 0.3008,
+        "last_px": 29.209999084472656,
+        "min_hold": 3,
+        "notional": 29.78,
+        "peak_px": 29.78,
+        "reason": "S\u2265+5: sizeup + more names; list flatten; ret5=-0.0; leftover $36.19",
+        "shares": 1,
+        "ticker": "TDC"
+      }
+    },
+    "yday_equity": 8053.01
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "buys": [
+    "ALMU",
+    "LEN"
+  ],
+  "cash": 2.35,
+  "date": "2026-09-16",
+  "equity": 8795.55,
+  "fees": 6.3892,
+  "fills": [
+    {
+      "fees": 4.2312,
+      "pnl": null,
+      "price": 13.75,
+      "shares": 328,
+      "side": "BUY",
+      "ticker": "ALMU"
+    },
+    {
+      "fees": 2.158,
+      "pnl": null,
+      "price": 80.63,
+      "shares": 56,
+      "side": "BUY",
+      "ticker": "LEN"
+    }
+  ],
+  "holdings": [
+    "ALMU",
+    "LEN"
+  ],
+  "mean": -2.6397,
+  "n_trades_today": 2,
+  "recipe": "union_overnight_h3",
+  "sells": [],
+  "state": {
+    "after": "2026-09-16",
+    "cash": 2.35,
+    "pos": {
+      "ALMU": {
+        "close_px": 13.430000305175781,
+        "cost": 4514.2312,
+        "entry_date": "2026-09-16",
+        "entry_px": 13.75,
+        "fee_in": 4.2312,
+        "last_px": 13.75,
+        "min_hold": 3,
+        "notional": 4510.0,
+        "peak_px": 13.75,
+        "reason": "union \u2229 overnight, no \ud83d\udea8; gate overnight=True; list overnight; \ud83d\udd35; ret5=-1.4; leftover $4517.01",
+        "shares": 328,
+        "ticker": "ALMU"
+      },
+      "LEN": {
+        "close_px": 78.36000061035156,
+        "cost": 4517.437846191407,
+        "entry_date": "2026-09-16",
+        "entry_px": 80.62999725341797,
+        "fee_in": 2.158,
+        "last_px": 80.62999725341797,
+        "min_hold": 3,
+        "notional": 4515.279846191406,
+        "peak_px": 80.62999725341797,
+        "reason": "union \u2229 overnight, no \ud83d\udea8; gate overnight=True; list overnight; ret5=-0.4; leftover $4517.01",
+        "shares": 56,
+        "ticker": "LEN"
+      }
+    },
+    "yday_equity": 8795.55
+  }
+}

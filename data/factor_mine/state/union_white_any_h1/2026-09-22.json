@@ -1,0 +1,93 @@
+{
+  "buys": [],
+  "cash": 9017.87,
+  "date": "2026-09-22",
+  "equity": 9017.87,
+  "fees": 20.2231,
+  "fills": [
+    {
+      "fees": 2.031,
+      "pnl": 32.43,
+      "price": 163.08,
+      "shares": 7,
+      "side": "SELL",
+      "ticker": "A"
+    },
+    {
+      "fees": 4.9103,
+      "pnl": 168.38,
+      "price": 3.51,
+      "shares": 375,
+      "side": "SELL",
+      "ticker": "CYPH"
+    },
+    {
+      "fees": 2.046,
+      "pnl": -0.59,
+      "price": 89.12,
+      "shares": 12,
+      "side": "SELL",
+      "ticker": "DXCM"
+    },
+    {
+      "fees": 2.3356,
+      "pnl": -31.14,
+      "price": 10.18,
+      "shares": 106,
+      "side": "SELL",
+      "ticker": "IOVA"
+    },
+    {
+      "fees": 2.016,
+      "pnl": 14.21,
+      "price": 403.0,
+      "shares": 2,
+      "side": "SELL",
+      "ticker": "ISRG"
+    },
+    {
+      "fees": 2.2596,
+      "pnl": -29.92,
+      "price": 13.16,
+      "shares": 82,
+      "side": "SELL",
+      "ticker": "MGTX"
+    },
+    {
+      "fees": 2.175,
+      "pnl": -39.53,
+      "price": 19.28,
+      "shares": 55,
+      "side": "SELL",
+      "ticker": "NEO"
+    },
+    {
+      "fees": 2.4496,
+      "pnl": -33.27,
+      "price": 7.64,
+      "shares": 142,
+      "side": "SELL",
+      "ticker": "PGEN"
+    }
+  ],
+  "holdings": [],
+  "mean": 0.2327,
+  "n_trades_today": 8,
+  "recipe": "union_white_any_h1",
+  "sells": [
+    "A",
+    "CYPH",
+    "DXCM",
+    "IOVA",
+    "ISRG",
+    "MGTX",
+    "NEO",
+    "PGEN"
+  ],
+  "state": {
+    "after": "2026-09-22",
+    "cash": 9017.87,
+    "pos": {},
+    "yday_equity": 9017.87
+  }
+}

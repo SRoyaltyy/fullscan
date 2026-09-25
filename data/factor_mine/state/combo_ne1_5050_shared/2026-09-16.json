@@ -1,0 +1,223 @@
+{
+  "buys": [
+    "FPS",
+    "TCOM",
+    "WAY",
+    "SION",
+    "CRUS",
+    "DBX",
+    "SM",
+    "QCOM"
+  ],
+  "cash": 104.96,
+  "date": "2026-09-16",
+  "equity": 9297.53,
+  "fees": 16.868,
+  "fills": [
+    {
+      "fees": 2.197,
+      "pnl": null,
+      "price": 33.14,
+      "shares": 69,
+      "side": "BUY",
+      "ticker": "FPS"
+    },
+    {
+      "fees": 2.158,
+      "pnl": null,
+      "price": 40.93,
+      "shares": 56,
+      "side": "BUY",
+      "ticker": "TCOM"
+    },
+    {
+      "fees": 2.077,
+      "pnl": null,
+      "price": 26.27,
+      "shares": 29,
+      "side": "BUY",
+      "ticker": "WAY"
+    },
+    {
+      "fees": 2.326,
+      "pnl": null,
+      "price": 6.95,
+      "shares": 112,
+      "side": "BUY",
+      "ticker": "SION"
+    },
+    {
+      "fees": 2.008,
+      "pnl": null,
+      "price": 123.09,
+      "shares": 6,
+      "side": "BUY",
+      "ticker": "CRUS"
+    },
+    {
+      "fees": 2.053,
+      "pnl": null,
+      "price": 37.13,
+      "shares": 21,
+      "side": "BUY",
+      "ticker": "DBX"
+    },
+    {
+      "fees": 2.047,
+      "pnl": null,
+      "price": 39.99,
+      "shares": 19,
+      "side": "BUY",
+      "ticker": "SM"
+    },
+    {
+      "fees": 2.002,
+      "pnl": null,
+      "price": 189.17,
+      "shares": 4,
+      "side": "BUY",
+      "ticker": "QCOM"
+    }
+  ],
+  "holdings": [
+    "CRUS",
+    "DBX",
+    "FPS",
+    "QCOM",
+    "SION",
+    "SM",
+    "TCOM",
+    "WAY"
+  ],
+  "mean": 0.2369,
+  "n_trades_today": 8,
+  "recipe": "combo_ne1_5050_shared",
+  "sells": [],
+  "state": {
+    "after": "2026-09-16",
+    "cash": 104.96,
+    "pos": {
+      "CRUS": {
+        "close_px": 118.0,
+        "cost": 740.5479780273438,
+        "entry_date": "2026-09-16",
+        "entry_px": 123.08999633789062,
+        "fee_in": 2.008,
+        "last_px": 123.08999633789062,
+        "notional": 738.5399780273438,
+        "owner": "union_news_g_h1",
+        "peak_px": 123.08999633789062,
+        "reason": "union \u2229 news_g, no \ud83d\udea8; gate news=good; list ohlc_hot; \ud83d\udd35; ret5=+10.3; combo leftover $782.08; owner union_news_g_h1",
+        "shares": 6,
+        "side": "long",
+        "ticker": "CRUS"
+      },
+      "DBX": {
+        "close_px": 37.7400016784668,
+        "cost": 781.7830224304199,
+        "entry_date": "2026-09-16",
+        "entry_px": 37.130001068115234,
+        "fee_in": 2.053,
+        "last_px": 37.130001068115234,
+        "notional": 779.7300224304199,
+        "owner": "union_news_g_h1",
+        "peak_px": 37.130001068115234,
+        "reason": "union \u2229 news_g, no \ud83d\udea8; gate news=good; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+11.3; combo leftover $782.08; owner union_news_g_h1",
+        "shares": 21,
+        "side": "long",
+        "ticker": "DBX"
+      },
+      "FPS": {
+        "close_px": 34.84000015258789,
+        "cost": 2288.8569578857423,
+        "entry_date": "2026-09-16",
+        "entry_px": 33.13999938964844,
+        "fee_in": 2.197,
+        "last_px": 33.13999938964844,
+        "notional": 2286.659957885742,
+        "owner": "union_e_fresh_h1",
+        "peak_px": 33.13999938964844,
+        "reason": "union \u2229 e_fresh, no \ud83d\udea8; gate days_since_E_max=1,flag_E_min=0; list yday_gainer; \ud83d\udd35; ret5=-2.9; combo leftover $2318.89; owner union_e_fresh_h1",
+        "shares": 69,
+        "side": "long",
+        "ticker": "FPS"
+      },
+      "QCOM": {
+        "close_px": 184.83999633789062,
+        "cost": 758.6819926757812,
+        "entry_date": "2026-09-16",
+        "entry_px": 189.1699981689453,
+        "fee_in": 2.002,
+        "last_px": 189.1699981689453,
+        "notional": 756.6799926757812,
+        "owner": "union_news_g_h1",
+        "peak_px": 189.1699981689453,
+        "reason": "union \u2229 news_g, no \ud83d\udea8; gate news=good; list ohlc_hot; \ud83d\udd35; ret5=+7.9; combo leftover $782.08; owner union_news_g_h1",
+        "shares": 4,
+        "side": "long",
+        "ticker": "QCOM"
+      },
+      "SION": {
+        "close_px": 7.039999961853027,
+        "cost": 780.7259786376953,
+        "entry_date": "2026-09-16",
+        "entry_px": 6.949999809265137,
+        "fee_in": 2.326,
+        "last_px": 6.949999809265137,
+        "notional": 778.3999786376953,
+        "owner": "union_news_g_h1",
+        "peak_px": 6.949999809265137,
+        "reason": "union \u2229 news_g, no \ud83d\udea8; gate news=good; list yday_mover; ret5=-5.8; combo leftover $782.08; owner union_news_g_h1",
+        "shares": 112,
+        "side": "long",
+        "ticker": "SION"
+      },
+      "SM": {
+        "close_px": 38.15999984741211,
+        "cost": 761.8570318908692,
+        "entry_date": "2026-09-16",
+        "entry_px": 39.9900016784668,
+        "fee_in": 2.047,
+        "last_px": 39.9900016784668,
+        "notional": 759.8100318908691,
+        "owner": "union_news_g_h1",
+        "peak_px": 39.9900016784668,
+        "reason": "union \u2229 news_g, no \ud83d\udea8; gate news=good; list ohlc_hot; \ud83d\udd35; ret5=+9.3; combo leftover $782.08; owner union_news_g_h1",
+        "shares": 19,
+        "side": "long",
+        "ticker": "SM"
+      },
+      "TCOM": {
+        "close_px": 40.43000030517578,
+        "cost": 2294.2380170898437,
+        "entry_date": "2026-09-16",
+        "entry_px": 40.93000030517578,
+        "fee_in": 2.158,
+        "last_px": 40.93000030517578,
+        "notional": 2292.0800170898438,
+        "owner": "union_e_fresh_h1",
+        "peak_px": 40.93000030517578,
+        "reason": "union \u2229 e_fresh, no \ud83d\udea8; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=-3.1; combo leftover $2318.89; owner union_e_fresh_h1",
+        "shares": 56,
+        "side": "long",
+        "ticker": "TCOM"
+      },
+      "WAY": {
+        "close_px": 26.59000015258789,
+        "cost": 763.9070132751465,
+        "entry_date": "2026-09-16",
+        "entry_px": 26.270000457763672,
+        "fee_in": 2.077,
+        "last_px": 26.270000457763672,
+        "notional": 761.8300132751465,
+        "owner": "union_news_g_h1",
+        "peak_px": 26.270000457763672,
+        "reason": "union \u2229 news_g, no \ud83d\udea8; gate news=good; list yday_gainer,ohlc_hot; \ud83d\udd35; \u26aa; ret5=+10.0; combo leftover $782.08; owner union_news_g_h1",
+        "shares": 29,
+        "side": "long",
+        "ticker": "WAY"
+      }
+    },
+    "yday_equity": 9297.53
+  }
+}

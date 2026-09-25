@@ -1,0 +1,89 @@
+{
+  "buys": [],
+  "cash": 9310.89,
+  "date": "2026-09-24",
+  "equity": 9531.19,
+  "fees": 9.8047,
+  "fills": [
+    {
+      "fees": 2.0647,
+      "pnl": 87.1,
+      "price": 163.95,
+      "shares": 15,
+      "side": "SELL",
+      "ticker": "A"
+    },
+    {
+      "fees": 2.0999,
+      "pnl": -35.22,
+      "price": 87.68,
+      "shares": 27,
+      "side": "SELL",
+      "ticker": "DXCM"
+    },
+    {
+      "fees": 3.0638,
+      "pnl": -13.06,
+      "price": 10.4,
+      "shares": 233,
+      "side": "SELL",
+      "ticker": "IOVA"
+    },
+    {
+      "fees": 2.5763,
+      "pnl": -374.11,
+      "price": 11.42,
+      "shares": 180,
+      "side": "SELL",
+      "ticker": "MGTX"
+    }
+  ],
+  "holdings": [
+    "ARQT",
+    "HALO"
+  ],
+  "mean": -0.4162,
+  "n_trades_today": 4,
+  "recipe": "union_white_both_n4_h3",
+  "sells": [
+    "A",
+    "DXCM",
+    "IOVA",
+    "MGTX"
+  ],
+  "state": {
+    "after": "2026-09-24",
+    "cash": 9310.89,
+    "pos": {
+      "ARQT": {
+        "close_px": 26.270000457763672,
+        "cost": 112.28360366210937,
+        "entry_date": "2026-09-23",
+        "entry_px": 27.790000915527344,
+        "fee_in": 1.1236,
+        "last_px": 26.219999313354492,
+        "min_hold": 3,
+        "notional": 111.16000366210938,
+        "peak_px": 27.790000915527344,
+        "reason": "\u22120 red + yday up AND catalyst, top 4 by Score; gate cam_bad_max=0,yday_and_catalyst=True; rank list; list flatten; \ud83d\udd35; \u26aa; ret5=+18.2; leftover $122.79",
+        "shares": 4,
+        "ticker": "ARQT"
+      },
+      "HALO": {
+        "close_px": 115.22000122070312,
+        "cost": 118.02149847412109,
+        "entry_date": "2026-09-23",
+        "entry_px": 116.8499984741211,
+        "fee_in": 1.1715,
+        "last_px": 112.12999725341797,
+        "min_hold": 3,
+        "notional": 116.8499984741211,
+        "peak_px": 116.8499984741211,
+        "reason": "\u22120 red + yday up AND catalyst, top 4 by Score; gate cam_bad_max=0,yday_and_catalyst=True; rank list; list flatten; \ud83d\udd35; \u26aa; ret5=+8.4; leftover $122.79",
+        "shares": 1,
+        "ticker": "HALO"
+      }
+    },
+    "yday_equity": 9531.19
+  }
+}

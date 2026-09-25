@@ -1,0 +1,93 @@
+{
+  "buys": [],
+  "cash": 8787.47,
+  "date": "2026-09-24",
+  "equity": 8787.47,
+  "fees": 18.8968,
+  "fills": [
+    {
+      "fees": 2.028,
+      "pnl": -19.58,
+      "price": 163.95,
+      "shares": 6,
+      "side": "SELL",
+      "ticker": "A"
+    },
+    {
+      "fees": 2.133,
+      "pnl": -68.62,
+      "price": 26.22,
+      "shares": 41,
+      "side": "SELL",
+      "ticker": "ARQT"
+    },
+    {
+      "fees": 2.121,
+      "pnl": -15.32,
+      "price": 30.02,
+      "shares": 37,
+      "side": "SELL",
+      "ticker": "CNXC"
+    },
+    {
+      "fees": 2.046,
+      "pnl": -25.91,
+      "price": 87.68,
+      "shares": 12,
+      "side": "SELL",
+      "ticker": "DXCM"
+    },
+    {
+      "fees": 3.7991,
+      "pnl": -53.94,
+      "price": 3.77,
+      "shares": 290,
+      "side": "SELL",
+      "ticker": "INDP"
+    },
+    {
+      "fees": 2.175,
+      "pnl": -11.48,
+      "price": 20.52,
+      "shares": 55,
+      "side": "SELL",
+      "ticker": "OMER"
+    },
+    {
+      "fees": 2.4527,
+      "pnl": -87.81,
+      "price": 7.37,
+      "shares": 143,
+      "side": "SELL",
+      "ticker": "PGEN"
+    },
+    {
+      "fees": 2.142,
+      "pnl": -66.3,
+      "price": 23.99,
+      "shares": 44,
+      "side": "SELL",
+      "ticker": "TNGX"
+    }
+  ],
+  "holdings": [],
+  "mean": -0.9431,
+  "n_trades_today": 8,
+  "recipe": "union_candle_h1",
+  "sells": [
+    "A",
+    "ARQT",
+    "CNXC",
+    "DXCM",
+    "INDP",
+    "OMER",
+    "PGEN",
+    "TNGX"
+  ],
+  "state": {
+    "after": "2026-09-24",
+    "cash": 8787.47,
+    "pos": {},
+    "yday_equity": 8787.47
+  }
+}

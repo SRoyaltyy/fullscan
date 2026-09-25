@@ -1,0 +1,120 @@
+{
+  "buys": [],
+  "cash": 9198.54,
+  "date": "2026-09-10",
+  "equity": 9198.54,
+  "fees": 27.4082,
+  "fills": [
+    {
+      "fees": 2.055,
+      "pnl": 59.81,
+      "price": 67.44,
+      "shares": 15,
+      "side": "SELL",
+      "ticker": "AMBA"
+    },
+    {
+      "fees": 2.3483,
+      "pnl": -57.47,
+      "price": 8.26,
+      "shares": 110,
+      "side": "SELL",
+      "ticker": "ASAN"
+    },
+    {
+      "fees": 2.052,
+      "pnl": -58.96,
+      "price": 64.6,
+      "shares": 14,
+      "side": "SELL",
+      "ticker": "DOCU"
+    },
+    {
+      "fees": 2.461,
+      "pnl": 43.69,
+      "price": 4.36,
+      "shares": 157,
+      "side": "COVER",
+      "ticker": "GSM"
+    },
+    {
+      "fees": 2.025,
+      "pnl": -129.63,
+      "price": 142.43,
+      "shares": 5,
+      "side": "SELL",
+      "ticker": "GWRE"
+    },
+    {
+      "fees": 2.073,
+      "pnl": -144.3,
+      "price": 38.225,
+      "shares": 21,
+      "side": "SELL",
+      "ticker": "IOT"
+    },
+    {
+      "fees": 2.037,
+      "pnl": 0.99,
+      "price": 98.71,
+      "shares": 9,
+      "side": "SELL",
+      "ticker": "LULU"
+    },
+    {
+      "fees": 2.1931,
+      "pnl": -31.21,
+      "price": 15.26,
+      "shares": 61,
+      "side": "SELL",
+      "ticker": "MAMA"
+    },
+    {
+      "fees": 5.9598,
+      "pnl": 15.69,
+      "price": 1.53,
+      "shares": 462,
+      "side": "COVER",
+      "ticker": "OPK"
+    },
+    {
+      "fees": 2.187,
+      "pnl": -164.24,
+      "price": 13.53,
+      "shares": 59,
+      "side": "SELL",
+      "ticker": "PATH"
+    },
+    {
+      "fees": 2.017,
+      "pnl": -6.23,
+      "price": 76.79,
+      "shares": 9,
+      "side": "COVER",
+      "ticker": "PIPR"
+    }
+  ],
+  "holdings": [],
+  "mean": -0.3893,
+  "n_trades_today": 11,
+  "recipe": "combo_es_8020_shared",
+  "sells": [
+    "AMBA",
+    "ASAN",
+    "DOCU",
+    "GSM",
+    "GWRE",
+    "IOT",
+    "LULU",
+    "MAMA",
+    "OPK",
+    "PATH",
+    "PIPR"
+  ],
+  "state": {
+    "after": "2026-09-10",
+    "cash": 9198.54,
+    "pos": {},
+    "yday_equity": 9198.54
+  }
+}

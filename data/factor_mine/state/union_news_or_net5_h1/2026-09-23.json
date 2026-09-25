@@ -1,0 +1,95 @@
+{
+  "buys": [
+    "PGEN",
+    "SGRY",
+    "VERI"
+  ],
+  "cash": 1.12,
+  "date": "2026-09-23",
+  "equity": 8214.64,
+  "fees": 35.7049,
+  "fills": [
+    {
+      "fees": 4.6827,
+      "pnl": null,
+      "price": 7.95,
+      "shares": 363,
+      "side": "BUY",
+      "ticker": "PGEN"
+    },
+    {
+      "fees": 2.539,
+      "pnl": null,
+      "price": 15.72,
+      "shares": 183,
+      "side": "BUY",
+      "ticker": "SGRY"
+    },
+    {
+      "fees": 28.4832,
+      "pnl": null,
+      "price": 1.3,
+      "shares": 2208,
+      "side": "BUY",
+      "ticker": "VERI"
+    }
+  ],
+  "holdings": [
+    "PGEN",
+    "SGRY",
+    "VERI"
+  ],
+  "mean": -5.2503,
+  "n_trades_today": 3,
+  "recipe": "union_news_or_net5_h1",
+  "sells": [],
+  "state": {
+    "after": "2026-09-23",
+    "cash": 1.12,
+    "pos": {
+      "PGEN": {
+        "close_px": 7.440000057220459,
+        "cost": 2890.5326307632445,
+        "entry_date": "2026-09-23",
+        "entry_px": 7.949999809265137,
+        "fee_in": 4.6827,
+        "last_px": 7.949999809265137,
+        "min_hold": 1,
+        "notional": 2885.8499307632446,
+        "peak_px": 7.949999809265137,
+        "reason": "packet\ud83d\udfe2 OR headline\ud83d\udfe2 and camera net \u2265 5; gate news_or_headline=True,cam_net_min=5; rank cond; list flatten; \ud83d\udd35; \u26aa; ret5=+12.7; leftover $2889.94",
+        "shares": 363,
+        "ticker": "PGEN"
+      },
+      "SGRY": {
+        "close_px": 14.5600004196167,
+        "cost": 2879.299048866272,
+        "entry_date": "2026-09-23",
+        "entry_px": 15.720000267028809,
+        "fee_in": 2.539,
+        "last_px": 15.720000267028809,
+        "min_hold": 1,
+        "notional": 2876.760048866272,
+        "peak_px": 15.720000267028809,
+        "reason": "packet\ud83d\udfe2 OR headline\ud83d\udfe2 and camera net \u2265 5; gate news_or_headline=True,cam_net_min=5; rank cond; list yday_gainer,yday_mover,ohlc_hot; \ud83d\udd35; ret5=+15.8; leftover $2889.94",
+        "shares": 183,
+        "ticker": "SGRY"
+      },
+      "VERI": {
+        "close_px": 1.2899999618530273,
+        "cost": 2898.8830947143556,
+        "entry_date": "2026-09-23",
+        "entry_px": 1.2999999523162842,
+        "fee_in": 28.4832,
+        "last_px": 1.2999999523162842,
+        "min_hold": 1,
+        "notional": 2870.3998947143555,
+        "peak_px": 1.2999999523162842,
+        "reason": "packet\ud83d\udfe2 OR headline\ud83d\udfe2 and camera net \u2265 5; gate news_or_headline=True,cam_net_min=5; rank cond; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+15.3; leftover $2889.94",
+        "shares": 2208,
+        "ticker": "VERI"
+      }
+    },
+    "yday_equity": 8214.64
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "buys": [],
+  "cash": 20790.31,
+  "date": "2026-09-24",
+  "equity": 9142.38,
+  "fees": 4.418,
+  "fills": [
+    {
+      "fees": 2.002,
+      "pnl": -69.66,
+      "price": 600.27,
+      "shares": 4,
+      "side": "COVER",
+      "ticker": "AMD"
+    },
+    {
+      "fees": 2.416,
+      "pnl": -440.97,
+      "price": 37.51,
+      "shares": 142,
+      "side": "COVER",
+      "ticker": "FIVN"
+    }
+  ],
+  "holdings": [
+    "AEHL",
+    "BAND",
+    "HALO",
+    "PAYX",
+    "USFD"
+  ],
+  "mean": -2.5354,
+  "n_trades_today": 2,
+  "recipe": "short_news_head_h3",
+  "sells": [
+    "AMD",
+    "FIVN"
+  ],
+  "state": {
+    "after": "2026-09-24",
+    "cash": 20790.31,
+    "pos": {
+      "AEHL": {
+        "close_px": 8.960000038146973,
+        "cost": 3.9808378100878574,
+        "entry_date": "2026-09-21",
+        "entry_px": 8.260000228881836,
+        "fee_in": 3.9808378100878574,
+        "last_px": 8.210000038146973,
+        "notional": 2461.480068206787,
+        "peak_px": 7.619999885559082,
+        "reason": "short prior-export headline\ud83d\udd34; gate headline=bad; list yday_mover; ret5=+7.7; leftover $2461.90",
+        "shares": 298,
+        "ticker": "AEHL"
+      },
+      "BAND": {
+        "close_px": 61.83000183105469,
+        "cost": 2.1970832858778024,
+        "entry_date": "2026-09-23",
+        "entry_px": 58.0099983215332,
+        "fee_in": 2.1970832858778024,
+        "last_px": 58.0,
+        "notional": 2262.389934539795,
+        "peak_px": 58.0,
+        "reason": "short prior-export headline\ud83d\udd34; gate headline=bad; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+16.6; leftover $2305.03",
+        "shares": 39,
+        "ticker": "BAND"
+      },
+      "HALO": {
+        "close_px": 115.22000122070312,
+        "cost": 2.135626026602967,
+        "entry_date": "2026-09-23",
+        "entry_px": 116.8499984741211,
+        "fee_in": 2.135626026602967,
+        "last_px": 112.12999725341797,
+        "notional": 2220.149971008301,
+        "peak_px": 112.12999725341797,
+        "reason": "short prior-export headline\ud83d\udd34; gate headline=bad; list flatten; \ud83d\udd35; \u26aa; ret5=+8.4; leftover $2305.03",
+        "shares": 19,
+        "ticker": "HALO"
+      },
+      "PAYX": {
+        "close_px": 101.58999633789062,
+        "cost": 2.1419027397260275,
+        "entry_date": "2026-09-22",
+        "entry_px": 115.71,
+        "fee_in": 2.1419027397260275,
+        "last_px": 105.48999786376953,
+        "notional": 2314.2,
+        "peak_px": 105.48999786376953,
+        "reason": "short prior-export headline\ud83d\udd34; gate headline=bad; list overnight; ret5=-3.0; leftover $2352.77",
+        "shares": 20,
+        "ticker": "PAYX"
+      },
+      "USFD": {
+        "close_px": 93.81999969482422,
+        "cost": 2.1582383561643836,
+        "entry_date": "2026-09-22",
+        "entry_px": 94.08,
+        "fee_in": 2.1582383561643836,
+        "last_px": 94.20999908447266,
+        "notional": 2352.0,
+        "peak_px": 93.97000122070312,
+        "reason": "short prior-export headline\ud83d\udd34; gate headline=bad; list flatten; ret5=-0.6; leftover $2352.77",
+        "shares": 25,
+        "ticker": "USFD"
+      }
+    },
+    "yday_equity": 9142.38
+  }
+}

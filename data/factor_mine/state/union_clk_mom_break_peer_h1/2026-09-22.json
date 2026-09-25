@@ -1,0 +1,120 @@
+{
+  "buys": [
+    "APPS"
+  ],
+  "cash": 12.07,
+  "date": "2026-09-22",
+  "equity": 9812.83,
+  "fees": 29.8748,
+  "fills": [
+    {
+      "fees": 2.127,
+      "pnl": -95.49,
+      "price": 29.3,
+      "shares": 39,
+      "side": "SELL",
+      "ticker": "ASST"
+    },
+    {
+      "fees": 2.2628,
+      "pnl": -55.55,
+      "price": 14.5,
+      "shares": 83,
+      "side": "SELL",
+      "ticker": "CLSK"
+    },
+    {
+      "fees": 2.052,
+      "pnl": -0.02,
+      "price": 89.12,
+      "shares": 14,
+      "side": "SELL",
+      "ticker": "DXCM"
+    },
+    {
+      "fees": 2.019,
+      "pnl": 23.31,
+      "price": 403.0,
+      "shares": 3,
+      "side": "SELL",
+      "ticker": "ISRG"
+    },
+    {
+      "fees": 2.055,
+      "pnl": -20.74,
+      "price": 82.42,
+      "shares": 15,
+      "side": "SELL",
+      "ticker": "MXL"
+    },
+    {
+      "fees": 2.4402,
+      "pnl": 6.27,
+      "price": 9.08,
+      "shares": 139,
+      "side": "SELL",
+      "ticker": "QUBT"
+    },
+    {
+      "fees": 4.3871,
+      "pnl": -82.41,
+      "price": 3.53,
+      "shares": 335,
+      "side": "SELL",
+      "ticker": "SHMD"
+    },
+    {
+      "fees": 2.1601,
+      "pnl": 12.2,
+      "price": 25.26,
+      "shares": 50,
+      "side": "SELL",
+      "ticker": "UMC"
+    },
+    {
+      "fees": 10.3716,
+      "pnl": null,
+      "price": 12.24,
+      "shares": 804,
+      "side": "BUY",
+      "ticker": "APPS"
+    }
+  ],
+  "holdings": [
+    "APPS"
+  ],
+  "mean": -1.7392,
+  "n_trades_today": 9,
+  "recipe": "union_clk_mom_break_peer_h1",
+  "sells": [
+    "ASST",
+    "CLSK",
+    "DXCM",
+    "ISRG",
+    "MXL",
+    "QUBT",
+    "SHMD",
+    "UMC"
+  ],
+  "state": {
+    "after": "2026-09-22",
+    "cash": 12.07,
+    "pos": {
+      "APPS": {
+        "close_px": 12.19,
+        "cost": 9851.331600000001,
+        "entry_date": "2026-09-22",
+        "entry_px": 12.24,
+        "fee_in": 10.3716,
+        "last_px": 12.24,
+        "min_hold": 1,
+        "notional": 9840.960000000001,
+        "peak_px": 12.24,
+        "reason": "Clock-B #1 mom+breakout+peer/sector (research; not KEEP); gate clk_mom_break_peer=True; rank hot_score; list probable,yday_gainer; ret5=+2.7; leftover $9863.40",
+        "shares": 804,
+        "ticker": "APPS"
+      }
+    },
+    "yday_equity": 9812.83
+  }
+}

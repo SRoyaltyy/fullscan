@@ -1,0 +1,287 @@
+{
+  "buys": [
+    "ABVX",
+    "ANAB",
+    "MLKN",
+    "THO",
+    "IVVD",
+    "GRAL",
+    "MRNA",
+    "DGXX"
+  ],
+  "cash": 213.63,
+  "date": "2026-09-22",
+  "equity": 9031.13,
+  "fees": 51.9244,
+  "fills": [
+    {
+      "fees": 8.0197,
+      "pnl": -52.71,
+      "price": 2.09,
+      "shares": 613,
+      "side": "SELL",
+      "ticker": "AMTX"
+    },
+    {
+      "fees": 2.1604,
+      "pnl": -4.3,
+      "price": 25.95,
+      "shares": 50,
+      "side": "SELL",
+      "ticker": "GLXY"
+    },
+    {
+      "fees": 2.019,
+      "pnl": 23.31,
+      "price": 403.0,
+      "shares": 3,
+      "side": "SELL",
+      "ticker": "ISRG"
+    },
+    {
+      "fees": 2.2976,
+      "pnl": -80.71,
+      "price": 13.13,
+      "shares": 94,
+      "side": "SELL",
+      "ticker": "MARA"
+    },
+    {
+      "fees": 2.8719,
+      "pnl": -7.89,
+      "price": 5.99,
+      "shares": 219,
+      "side": "SELL",
+      "ticker": "SION"
+    },
+    {
+      "fees": 2.028,
+      "pnl": -101.12,
+      "price": 174.12,
+      "shares": 6,
+      "side": "SELL",
+      "ticker": "SMTC"
+    },
+    {
+      "fees": 2.025,
+      "pnl": 49.92,
+      "price": 241.04,
+      "shares": 5,
+      "side": "SELL",
+      "ticker": "VICR"
+    },
+    {
+      "fees": 2.023,
+      "pnl": null,
+      "price": 102.74,
+      "shares": 11,
+      "side": "BUY",
+      "ticker": "ABVX"
+    },
+    {
+      "fees": 2.05,
+      "pnl": null,
+      "price": 55.07,
+      "shares": 20,
+      "side": "BUY",
+      "ticker": "ANAB"
+    },
+    {
+      "fees": 2.152,
+      "pnl": null,
+      "price": 20.66,
+      "shares": 54,
+      "side": "BUY",
+      "ticker": "MLKN"
+    },
+    {
+      "fees": 2.035,
+      "pnl": null,
+      "price": 72.53,
+      "shares": 15,
+      "side": "BUY",
+      "ticker": "THO"
+    },
+    {
+      "fees": 14.7447,
+      "pnl": null,
+      "price": 1.01,
+      "shares": 1143,
+      "side": "BUY",
+      "ticker": "IVVD"
+    },
+    {
+      "fees": 2.02,
+      "pnl": null,
+      "price": 106.75,
+      "shares": 10,
+      "side": "BUY",
+      "ticker": "GRAL"
+    },
+    {
+      "fees": 2.008,
+      "pnl": null,
+      "price": 168.5,
+      "shares": 6,
+      "side": "BUY",
+      "ticker": "MRNA"
+    },
+    {
+      "fees": 3.4701,
+      "pnl": null,
+      "price": 4.28,
+      "shares": 269,
+      "side": "BUY",
+      "ticker": "DGXX"
+    }
+  ],
+  "holdings": [
+    "ABVX",
+    "ANAB",
+    "DGXX",
+    "GRAL",
+    "IVVD",
+    "MLKN",
+    "MRNA",
+    "THO"
+  ],
+  "mean": -0.0646,
+  "n_trades_today": 15,
+  "recipe": "combo_ne1_5050_shared",
+  "sells": [
+    "AMTX",
+    "GLXY",
+    "ISRG",
+    "MARA",
+    "SION",
+    "SMTC",
+    "VICR"
+  ],
+  "state": {
+    "after": "2026-09-22",
+    "cash": 213.63,
+    "pos": {
+      "ABVX": {
+        "close_px": 98.29,
+        "cost": 1132.1629999999998,
+        "entry_date": "2026-09-22",
+        "entry_px": 102.74,
+        "fee_in": 2.023,
+        "last_px": 102.74,
+        "notional": 1130.1399999999999,
+        "owner": "union_e_fresh_h1",
+        "peak_px": 102.74,
+        "reason": "union \u2229 e_fresh, no \ud83d\udea8; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=-8.9; combo leftover $1132.94; owner union_e_fresh_h1",
+        "shares": 11,
+        "side": "long",
+        "ticker": "ABVX"
+      },
+      "ANAB": {
+        "close_px": 53.92,
+        "cost": 1103.45,
+        "entry_date": "2026-09-22",
+        "entry_px": 55.07,
+        "fee_in": 2.05,
+        "last_px": 55.07,
+        "notional": 1101.4,
+        "owner": "union_e_fresh_h1",
+        "peak_px": 55.07,
+        "reason": "union \u2229 e_fresh, no \ud83d\udea8; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=+1.5; combo leftover $1132.94; owner union_e_fresh_h1",
+        "shares": 20,
+        "side": "long",
+        "ticker": "ANAB"
+      },
+      "DGXX": {
+        "close_px": 4.36,
+        "cost": 1154.7901000000002,
+        "entry_date": "2026-09-22",
+        "entry_px": 4.28,
+        "fee_in": 3.4701,
+        "last_px": 4.28,
+        "notional": 1151.3200000000002,
+        "owner": "union_news_g_h1",
+        "peak_px": 4.28,
+        "reason": "union \u2229 news_g, no \ud83d\udea8; gate news=good; list ohlc_hot; ret5=+16.9; combo leftover $1155.03; owner union_news_g_h1",
+        "shares": 269,
+        "side": "long",
+        "ticker": "DGXX"
+      },
+      "GRAL": {
+        "close_px": 108.52,
+        "cost": 1069.52,
+        "entry_date": "2026-09-22",
+        "entry_px": 106.75,
+        "fee_in": 2.02,
+        "last_px": 106.75,
+        "notional": 1067.5,
+        "owner": "union_news_g_h1",
+        "peak_px": 106.75,
+        "reason": "union \u2229 news_g, no \ud83d\udea8; gate news=good; list yday_gainer,yday_mover; ret5=+42.9; combo leftover $1155.03; owner union_news_g_h1",
+        "shares": 10,
+        "side": "long",
+        "ticker": "GRAL"
+      },
+      "IVVD": {
+        "close_px": 0.9639999866485596,
+        "cost": 1169.1746890995025,
+        "entry_date": "2026-09-22",
+        "entry_px": 1.0099999904632568,
+        "fee_in": 14.7447,
+        "last_px": 1.0099999904632568,
+        "notional": 1154.4299890995026,
+        "owner": "union_news_g_h1",
+        "peak_px": 1.0099999904632568,
+        "reason": "union \u2229 news_g, no \ud83d\udea8; gate news=good; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+14.3; combo leftover $1155.03; owner union_news_g_h1",
+        "shares": 1143,
+        "side": "long",
+        "ticker": "IVVD"
+      },
+      "MLKN": {
+        "close_px": 20.29,
+        "cost": 1117.7920000000001,
+        "entry_date": "2026-09-22",
+        "entry_px": 20.66,
+        "fee_in": 2.152,
+        "last_px": 20.66,
+        "notional": 1115.64,
+        "owner": "union_e_fresh_h1",
+        "peak_px": 20.66,
+        "reason": "union \u2229 e_fresh, no \ud83d\udea8; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=-4.4; combo leftover $1132.94; owner union_e_fresh_h1",
+        "shares": 54,
+        "side": "long",
+        "ticker": "MLKN"
+      },
+      "MRNA": {
+        "close_px": 182.55999755859375,
+        "cost": 1013.008,
+        "entry_date": "2026-09-22",
+        "entry_px": 168.5,
+        "fee_in": 2.008,
+        "last_px": 168.5,
+        "notional": 1011.0,
+        "owner": "union_news_g_h1",
+        "peak_px": 168.5,
+        "reason": "union \u2229 news_g, no \ud83d\udea8; gate news=good; list ohlc_hot; ret5=+17.9; combo leftover $1155.03; owner union_news_g_h1",
+        "shares": 6,
+        "side": "long",
+        "ticker": "MRNA"
+      },
+      "THO": {
+        "close_px": 73.8,
+        "cost": 1089.9850000000001,
+        "entry_date": "2026-09-22",
+        "entry_px": 72.53,
+        "fee_in": 2.035,
+        "last_px": 72.53,
+        "notional": 1087.95,
+        "owner": "union_e_fresh_h1",
+        "peak_px": 72.53,
+        "reason": "union \u2229 e_fresh, no \ud83d\udea8; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=-4.8; combo leftover $1132.94; owner union_e_fresh_h1",
+        "shares": 15,
+        "side": "long",
+        "ticker": "THO"
+      }
+    },
+    "yday_equity": 9031.13
+  }
+}

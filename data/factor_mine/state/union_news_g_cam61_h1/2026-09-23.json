@@ -1,0 +1,71 @@
+{
+  "buys": [
+    "PGEN",
+    "SGRY"
+  ],
+  "cash": 15.56,
+  "date": "2026-09-23",
+  "equity": 8059.81,
+  "fees": 10.5651,
+  "fills": [
+    {
+      "fees": 7.0305,
+      "pnl": null,
+      "price": 7.95,
+      "shares": 545,
+      "side": "BUY",
+      "ticker": "PGEN"
+    },
+    {
+      "fees": 3.5346,
+      "pnl": null,
+      "price": 15.72,
+      "shares": 274,
+      "side": "BUY",
+      "ticker": "SGRY"
+    }
+  ],
+  "holdings": [
+    "PGEN",
+    "SGRY"
+  ],
+  "mean": -6.9968,
+  "n_trades_today": 2,
+  "recipe": "union_news_g_cam61_h1",
+  "sells": [],
+  "state": {
+    "after": "2026-09-23",
+    "cash": 15.56,
+    "pos": {
+      "PGEN": {
+        "close_px": 7.440000057220459,
+        "cost": 4339.780396049499,
+        "entry_date": "2026-09-23",
+        "entry_px": 7.949999809265137,
+        "fee_in": 7.0305,
+        "last_px": 7.949999809265137,
+        "min_hold": 1,
+        "notional": 4332.7498960494995,
+        "peak_px": 7.949999809265137,
+        "reason": "merged news\ud83d\udfe2 and cameras +6 \u2212\u22641; gate news=good,n_pos_min=6,cam_bad_max=1; rank cond; list flatten; \ud83d\udd35; \u26aa; ret5=+12.7; leftover $4333.08",
+        "shares": 545,
+        "ticker": "PGEN"
+      },
+      "SGRY": {
+        "close_px": 14.5600004196167,
+        "cost": 4310.8146731658935,
+        "entry_date": "2026-09-23",
+        "entry_px": 15.720000267028809,
+        "fee_in": 3.5346,
+        "last_px": 15.720000267028809,
+        "min_hold": 1,
+        "notional": 4307.280073165894,
+        "peak_px": 15.720000267028809,
+        "reason": "merged news\ud83d\udfe2 and cameras +6 \u2212\u22641; gate news=good,n_pos_min=6,cam_bad_max=1; rank cond; list yday_gainer,yday_mover,ohlc_hot; \ud83d\udd35; ret5=+15.8; leftover $4333.08",
+        "shares": 274,
+        "ticker": "SGRY"
+      }
+    },
+    "yday_equity": 8059.81
+  }
+}

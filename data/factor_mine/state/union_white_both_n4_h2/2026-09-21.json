@@ -1,0 +1,131 @@
+{
+  "buys": [
+    "IOVA",
+    "MGTX"
+  ],
+  "cash": 86.86,
+  "date": "2026-09-21",
+  "equity": 9950.3,
+  "fees": 0.5973,
+  "fills": [
+    {
+      "fees": 0.3219,
+      "pnl": null,
+      "price": 10.43,
+      "shares": 3,
+      "side": "BUY",
+      "ticker": "IOVA"
+    },
+    {
+      "fees": 0.2754,
+      "pnl": null,
+      "price": 13.47,
+      "shares": 2,
+      "side": "BUY",
+      "ticker": "MGTX"
+    }
+  ],
+  "holdings": [
+    "ECO",
+    "FIVN",
+    "IOVA",
+    "MGTX",
+    "RARE",
+    "RBRK"
+  ],
+  "mean": 4.3122,
+  "n_trades_today": 2,
+  "recipe": "union_white_both_n4_h2",
+  "sells": [],
+  "state": {
+    "after": "2026-09-21",
+    "cash": 86.86,
+    "pos": {
+      "ECO": {
+        "close_px": 82.62999725341797,
+        "cost": 2382.074,
+        "entry_date": "2026-09-18",
+        "entry_px": 85.0,
+        "fee_in": 2.074,
+        "last_px": 82.83000183105469,
+        "min_hold": 2,
+        "notional": 2380.0,
+        "peak_px": 85.0,
+        "reason": "\u22120 red + yday up AND catalyst, top 4 by Score; gate cam_bad_max=0,yday_and_catalyst=True; rank list; list flatten; \ud83d\udd35; \u26aa; ret5=+18.3; leftover $2443.44",
+        "shares": 28,
+        "ticker": "ECO"
+      },
+      "FIVN": {
+        "close_px": 37.0099983215332,
+        "cost": 2412.9999038696287,
+        "entry_date": "2026-09-18",
+        "entry_px": 34.439998626708984,
+        "fee_in": 2.2,
+        "last_px": 33.0,
+        "min_hold": 2,
+        "notional": 2410.799903869629,
+        "peak_px": 34.439998626708984,
+        "reason": "\u22120 red + yday up AND catalyst, top 4 by Score; gate cam_bad_max=0,yday_and_catalyst=True; rank list; list flatten; \ud83d\udd35; \u26aa; ret5=+14.0; leftover $2443.44",
+        "shares": 70,
+        "ticker": "FIVN"
+      },
+      "IOVA": {
+        "close_px": 10.1899995803833,
+        "cost": 31.611900915527343,
+        "entry_date": "2026-09-21",
+        "entry_px": 10.430000305175781,
+        "fee_in": 0.3219,
+        "last_px": 10.430000305175781,
+        "min_hold": 2,
+        "notional": 31.290000915527344,
+        "peak_px": 10.430000305175781,
+        "reason": "\u22120 red + yday up AND catalyst, top 4 by Score; gate cam_bad_max=0,yday_and_catalyst=True; rank list; list flatten; \u26aa; ret5=+19.2; leftover $36.42",
+        "shares": 3,
+        "ticker": "IOVA"
+      },
+      "MGTX": {
+        "close_px": 13.079999923706055,
+        "cost": 27.21540053405762,
+        "entry_date": "2026-09-21",
+        "entry_px": 13.470000267028809,
+        "fee_in": 0.2754,
+        "last_px": 13.470000267028809,
+        "min_hold": 2,
+        "notional": 26.940000534057617,
+        "peak_px": 13.470000267028809,
+        "reason": "\u22120 red + yday up AND catalyst, top 4 by Score; gate cam_bad_max=0,yday_and_catalyst=True; rank list; list flatten; \ud83d\udd35; \u26aa; ret5=+3.6; leftover $36.42",
+        "shares": 2,
+        "ticker": "MGTX"
+      },
+      "RARE": {
+        "close_px": 14.649999618530273,
+        "cost": 2442.8349937057496,
+        "entry_date": "2026-09-18",
+        "entry_px": 14.789999961853027,
+        "fee_in": 2.485,
+        "last_px": 14.579999923706055,
+        "min_hold": 2,
+        "notional": 2440.3499937057495,
+        "peak_px": 14.789999961853027,
+        "reason": "\u22120 red + yday up AND catalyst, top 4 by Score; gate cam_bad_max=0,yday_and_catalyst=True; rank list; list probable,yday_gainer; \ud83d\udd35; \u26aa; ret5=+0.7; leftover $2443.44",
+        "shares": 165,
+        "ticker": "RARE"
+      },
+      "RBRK": {
+        "close_px": 112.95999908447266,
+        "cost": 2390.156067138672,
+        "entry_date": "2026-09-18",
+        "entry_px": 108.55000305175781,
+        "fee_in": 2.056,
+        "last_px": 107.56999969482422,
+        "min_hold": 2,
+        "notional": 2388.100067138672,
+        "peak_px": 108.55000305175781,
+        "reason": "\u22120 red + yday up AND catalyst, top 4 by Score; gate cam_bad_max=0,yday_and_catalyst=True; rank list; list flatten; \u26aa; ret5=+21.3; leftover $2443.44",
+        "shares": 22,
+        "ticker": "RBRK"
+      }
+    },
+    "yday_equity": 9950.3
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "buys": [
+    "FLNC"
+  ],
+  "cash": 25.09,
+  "date": "2026-09-18",
+  "equity": 8646.47,
+  "fees": 0.0783,
+  "fills": [
+    {
+      "fees": 0.0783,
+      "pnl": null,
+      "price": 7.535,
+      "shares": 1,
+      "side": "BUY",
+      "ticker": "FLNC"
+    }
+  ],
+  "holdings": [
+    "CRUS",
+    "FLNC",
+    "WAY"
+  ],
+  "mean": -2.2579,
+  "n_trades_today": 1,
+  "recipe": "union_news_vol_h3",
+  "sells": [],
+  "state": {
+    "after": "2026-09-18",
+    "cash": 25.09,
+    "pos": {
+      "CRUS": {
+        "close_px": 118.81999969482422,
+        "cost": 4433.3378681640625,
+        "entry_date": "2026-09-16",
+        "entry_px": 123.08999633789062,
+        "fee_in": 2.098,
+        "last_px": 120.83999633789062,
+        "min_hold": 3,
+        "notional": 4431.2398681640625,
+        "peak_px": 123.08999633789062,
+        "reason": "combo gate; gate news=good,vol=good; list ohlc_hot; \ud83d\udd35; ret5=+10.3; leftover $4454.08",
+        "shares": 36,
+        "ticker": "CRUS"
+      },
+      "FLNC": {
+        "close_px": 7.320000171661377,
+        "cost": 7.613299847412109,
+        "entry_date": "2026-09-18",
+        "entry_px": 7.534999847412109,
+        "fee_in": 0.0783,
+        "last_px": 7.534999847412109,
+        "min_hold": 3,
+        "notional": 7.534999847412109,
+        "peak_px": 7.534999847412109,
+        "reason": "combo gate; gate news=good,vol=good; list yday_mover; \ud83d\udd35; ret5=-20.9; leftover $10.90",
+        "shares": 1,
+        "ticker": "FLNC"
+      },
+      "WAY": {
+        "close_px": 25.65999984741211,
+        "cost": 4442.127077362061,
+        "entry_date": "2026-09-16",
+        "entry_px": 26.270000457763672,
+        "fee_in": 2.497,
+        "last_px": 26.950000762939453,
+        "min_hold": 3,
+        "notional": 4439.630077362061,
+        "peak_px": 26.950000762939453,
+        "reason": "combo gate; gate news=good,vol=good; list yday_gainer,ohlc_hot; \ud83d\udd35; \u26aa; ret5=+10.0; leftover $4454.08",
+        "shares": 169,
+        "ticker": "WAY"
+      }
+    },
+    "yday_equity": 8646.47
+  }
+}

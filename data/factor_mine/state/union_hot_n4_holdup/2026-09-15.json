@@ -1,0 +1,65 @@
+{
+  "buys": [],
+  "cash": 7679.42,
+  "date": "2026-09-15",
+  "equity": 11159.26,
+  "fees": 35.8364,
+  "fills": [
+    {
+      "fees": 6.8942,
+      "pnl": 91.52,
+      "price": 5.11,
+      "shares": 526,
+      "side": "SELL",
+      "ticker": "BNC"
+    },
+    {
+      "fees": 23.7212,
+      "pnl": -146.89,
+      "price": 1.345,
+      "shares": 1814,
+      "side": "SELL",
+      "ticker": "GPRO"
+    },
+    {
+      "fees": 5.221,
+      "pnl": -6.38,
+      "price": 6.5,
+      "shares": 398,
+      "side": "SELL",
+      "ticker": "VISN"
+    }
+  ],
+  "holdings": [
+    "INDP"
+  ],
+  "mean": 3.3609,
+  "n_trades_today": 3,
+  "recipe": "union_hot_n4_holdup",
+  "sells": [
+    "BNC",
+    "GPRO",
+    "VISN"
+  ],
+  "state": {
+    "after": "2026-09-15",
+    "cash": 7679.42,
+    "pos": {
+      "INDP": {
+        "close_px": 3.640000104904175,
+        "cost": 2593.532445585632,
+        "entry_date": "2026-09-11",
+        "entry_px": 2.700000047683716,
+        "fee_in": 12.3324,
+        "last_px": 3.4000000953674316,
+        "min_hold": 2,
+        "notional": 2581.2000455856323,
+        "peak_px": 3.4000000953674316,
+        "reason": "hot4; S>0 lots stay through the next 09:30 so the overnight gap is in the book; rank hot_score; list yday_gainer,yday_mover; ret5=+120.7; leftover $2583.68",
+        "shares": 956,
+        "ticker": "INDP"
+      }
+    },
+    "yday_equity": 11159.26
+  }
+}

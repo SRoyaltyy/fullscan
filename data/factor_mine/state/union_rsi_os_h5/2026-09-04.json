@@ -1,0 +1,123 @@
+{
+  "buys": [
+    "SION",
+    "AIIO",
+    "SWBI"
+  ],
+  "cash": 6.71,
+  "date": "2026-09-04",
+  "equity": 8872.32,
+  "fees": 70.4775,
+  "fills": [
+    {
+      "fees": 2.0537,
+      "pnl": -103.47,
+      "price": 296.4,
+      "shares": 10,
+      "side": "SELL",
+      "ticker": "DY"
+    },
+    {
+      "fees": 33.766,
+      "pnl": -938.47,
+      "price": 0.858,
+      "shares": 2873,
+      "side": "SELL",
+      "ticker": "LX"
+    },
+    {
+      "fees": 4.7814,
+      "pnl": -173.28,
+      "price": 8.7,
+      "shares": 364,
+      "side": "SELL",
+      "ticker": "QFIN"
+    },
+    {
+      "fees": 5.6502,
+      "pnl": null,
+      "price": 6.68,
+      "shares": 438,
+      "side": "BUY",
+      "ticker": "SION"
+    },
+    {
+      "fees": 21.5817,
+      "pnl": null,
+      "price": 1.75,
+      "shares": 1673,
+      "side": "BUY",
+      "ticker": "AIIO"
+    },
+    {
+      "fees": 2.6445,
+      "pnl": null,
+      "price": 14.12,
+      "shares": 205,
+      "side": "BUY",
+      "ticker": "SWBI"
+    }
+  ],
+  "holdings": [
+    "AIIO",
+    "SION",
+    "SWBI"
+  ],
+  "mean": 0.7415,
+  "n_trades_today": 6,
+  "recipe": "union_rsi_os_h5",
+  "sells": [
+    "DY",
+    "LX",
+    "QFIN"
+  ],
+  "state": {
+    "after": "2026-09-04",
+    "cash": 6.71,
+    "pos": {
+      "AIIO": {
+        "close_px": 1.840000033378601,
+        "cost": 2949.3317,
+        "entry_date": "2026-09-04",
+        "entry_px": 1.75,
+        "fee_in": 21.5817,
+        "last_px": 1.75,
+        "min_hold": 5,
+        "notional": 2927.75,
+        "peak_px": 1.75,
+        "reason": "union \u2229 rsi_os hold 5, no \ud83d\udea8; gate rsi_os=True; list yday_mover; \ud83d\udd35; ret5=-24.6; leftover $2928.26",
+        "shares": 1673,
+        "ticker": "AIIO"
+      },
+      "SION": {
+        "close_px": 7.179999828338623,
+        "cost": 2931.490124812317,
+        "entry_date": "2026-09-04",
+        "entry_px": 6.679999828338623,
+        "fee_in": 5.6502,
+        "last_px": 6.679999828338623,
+        "min_hold": 5,
+        "notional": 2925.839924812317,
+        "peak_px": 6.679999828338623,
+        "reason": "union \u2229 rsi_os hold 5, no \ud83d\udea8; gate rsi_os=True; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+11.4; leftover $2928.26",
+        "shares": 438,
+        "ticker": "SION"
+      },
+      "SWBI": {
+        "close_px": 12.890000343322754,
+        "cost": 2897.2444765396117,
+        "entry_date": "2026-09-04",
+        "entry_px": 14.119999885559082,
+        "fee_in": 2.6445,
+        "last_px": 14.119999885559082,
+        "min_hold": 5,
+        "notional": 2894.599976539612,
+        "peak_px": 14.119999885559082,
+        "reason": "union \u2229 rsi_os hold 5, no \ud83d\udea8; gate rsi_os=True; list earn_react; ret5=-6.1; leftover $2928.26",
+        "shares": 205,
+        "ticker": "SWBI"
+      }
+    },
+    "yday_equity": 8872.32
+  }
+}

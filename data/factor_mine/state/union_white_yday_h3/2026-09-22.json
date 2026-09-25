@@ -1,0 +1,152 @@
+{
+  "buys": [],
+  "cash": 1119.5,
+  "date": "2026-09-22",
+  "equity": 9283.73,
+  "fees": 3.577,
+  "fills": [
+    {
+      "fees": 3.577,
+      "pnl": -7.1,
+      "price": 2.4,
+      "shares": 273,
+      "side": "SELL",
+      "ticker": "SABR"
+    }
+  ],
+  "holdings": [
+    "A",
+    "ABSI",
+    "CYPH",
+    "DXCM",
+    "IOVA",
+    "ISRG",
+    "MGTX",
+    "NEO"
+  ],
+  "mean": 2.1851,
+  "n_trades_today": 1,
+  "recipe": "union_white_yday_h3",
+  "sells": [
+    "SABR"
+  ],
+  "state": {
+    "after": "2026-09-22",
+    "cash": 1119.5,
+    "pos": {
+      "A": {
+        "close_px": 167.26,
+        "cost": 949.227970703125,
+        "entry_date": "2026-09-21",
+        "entry_px": 157.8699951171875,
+        "fee_in": 2.008,
+        "last_px": 163.08,
+        "min_hold": 3,
+        "notional": 947.219970703125,
+        "peak_px": 163.08,
+        "reason": "union looker hold 3: 0 red + yesterday up; gate zero_red=True,yday_up=True; rank cond; list flatten; \ud83d\udd35; \u26aa; ret5=+6.5; leftover $1086.98",
+        "shares": 6,
+        "ticker": "A"
+      },
+      "ABSI": {
+        "close_px": 10.71,
+        "cost": 1088.7940453186036,
+        "entry_date": "2026-09-21",
+        "entry_px": 10.0600004196167,
+        "fee_in": 2.314,
+        "last_px": 10.0,
+        "min_hold": 3,
+        "notional": 1086.4800453186035,
+        "peak_px": 10.0600004196167,
+        "reason": "union looker hold 3: 0 red + yesterday up; gate zero_red=True,yday_up=True; rank cond; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+17.5; leftover $1086.98",
+        "shares": 108,
+        "ticker": "ABSI"
+      },
+      "CYPH": {
+        "close_px": 3.7300000190734863,
+        "cost": 1087.4959,
+        "entry_date": "2026-09-21",
+        "entry_px": 4.0,
+        "fee_in": 3.4959,
+        "last_px": 3.509999990463257,
+        "min_hold": 3,
+        "notional": 1084.0,
+        "peak_px": 4.0,
+        "reason": "union looker hold 3: 0 red + yesterday up; gate zero_red=True,yday_up=True; rank cond; list flatten,yday_gainer,yday_mover; \ud83d\udd35; \u26aa; ret5=+58.9; leftover $1086.98",
+        "shares": 271,
+        "ticker": "CYPH"
+      },
+      "DXCM": {
+        "close_px": 89.53,
+        "cost": 1067.9860219726563,
+        "entry_date": "2026-09-21",
+        "entry_px": 88.83000183105469,
+        "fee_in": 2.026,
+        "last_px": 89.12,
+        "min_hold": 3,
+        "notional": 1065.9600219726562,
+        "peak_px": 89.12,
+        "reason": "union looker hold 3: 0 red + yesterday up; gate zero_red=True,yday_up=True; rank cond; list flatten; \ud83d\udd35; \u26aa; ret5=+7.6; leftover $1086.98",
+        "shares": 12,
+        "ticker": "DXCM"
+      },
+      "IOVA": {
+        "close_px": 10.640000343322754,
+        "cost": 1087.0220317382812,
+        "entry_date": "2026-09-21",
+        "entry_px": 10.430000305175781,
+        "fee_in": 2.302,
+        "last_px": 10.180000305175781,
+        "min_hold": 3,
+        "notional": 1084.7200317382812,
+        "peak_px": 10.430000305175781,
+        "reason": "union looker hold 3: 0 red + yesterday up; gate zero_red=True,yday_up=True; rank cond; list flatten; \u26aa; ret5=+19.2; leftover $1086.98",
+        "shares": 104,
+        "ticker": "IOVA"
+      },
+      "ISRG": {
+        "close_px": 402.09,
+        "cost": 789.776029296875,
+        "entry_date": "2026-09-21",
+        "entry_px": 393.8900146484375,
+        "fee_in": 1.996,
+        "last_px": 403.0,
+        "min_hold": 3,
+        "notional": 787.780029296875,
+        "peak_px": 403.0,
+        "reason": "union looker hold 3: 0 red + yesterday up; gate zero_red=True,yday_up=True; rank cond; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+6.6; leftover $1086.98",
+        "shares": 2,
+        "ticker": "ISRG"
+      },
+      "MGTX": {
+        "close_px": 12.35,
+        "cost": 1079.8300213623047,
+        "entry_date": "2026-09-21",
+        "entry_px": 13.470000267028809,
+        "fee_in": 2.23,
+        "last_px": 13.16,
+        "min_hold": 3,
+        "notional": 1077.6000213623047,
+        "peak_px": 13.470000267028809,
+        "reason": "union looker hold 3: 0 red + yesterday up; gate zero_red=True,yday_up=True; rank cond; list flatten; \ud83d\udd35; \u26aa; ret5=+3.6; leftover $1086.98",
+        "shares": 80,
+        "ticker": "MGTX"
+      },
+      "NEO": {
+        "close_px": 18.89,
+        "cost": 1077.832004119873,
+        "entry_date": "2026-09-21",
+        "entry_px": 19.920000076293945,
+        "fee_in": 2.152,
+        "last_px": 19.28,
+        "min_hold": 3,
+        "notional": 1075.680004119873,
+        "peak_px": 19.920000076293945,
+        "reason": "union looker hold 3: 0 red + yesterday up; gate zero_red=True,yday_up=True; rank cond; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+15.0; leftover $1086.98",
+        "shares": 54,
+        "ticker": "NEO"
+      }
+    },
+    "yday_equity": 9283.73
+  }
+}

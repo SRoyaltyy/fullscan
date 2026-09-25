@@ -1,0 +1,223 @@
+{
+  "buys": [
+    "INDP",
+    "BNC",
+    "VISN",
+    "GPRO",
+    "QRVO",
+    "MYGN",
+    "RWT",
+    "CRDL"
+  ],
+  "cash": 6142.67,
+  "date": "2026-09-11",
+  "equity": 10432.22,
+  "fees": 47.3656,
+  "fills": [
+    {
+      "fees": 8.7978,
+      "pnl": null,
+      "price": 2.7,
+      "shares": 682,
+      "side": "BUY",
+      "ticker": "INDP"
+    },
+    {
+      "fees": 4.8375,
+      "pnl": null,
+      "price": 4.91,
+      "shares": 375,
+      "side": "BUY",
+      "ticker": "BNC"
+    },
+    {
+      "fees": 3.6507,
+      "pnl": null,
+      "price": 6.49,
+      "shares": 283,
+      "side": "BUY",
+      "ticker": "VISN"
+    },
+    {
+      "fees": 16.9764,
+      "pnl": null,
+      "price": 1.4,
+      "shares": 1316,
+      "side": "BUY",
+      "ticker": "GPRO"
+    },
+    {
+      "fees": 2.0465482190275845,
+      "pnl": null,
+      "price": 112.835,
+      "shares": 6,
+      "side": "SHORT",
+      "ticker": "QRVO"
+    },
+    {
+      "fees": 3.0627202732451977,
+      "pnl": null,
+      "price": 3.37,
+      "shares": 232,
+      "side": "SHORT",
+      "ticker": "MYGN"
+    },
+    {
+      "fees": 2.932109314952484,
+      "pnl": null,
+      "price": 3.52,
+      "shares": 222,
+      "side": "SHORT",
+      "ticker": "RWT"
+    },
+    {
+      "fees": 5.0618123284653445,
+      "pnl": null,
+      "price": 2.03,
+      "shares": 385,
+      "side": "SHORT",
+      "ticker": "CRDL"
+    }
+  ],
+  "holdings": [
+    "BNC",
+    "CRDL",
+    "GPRO",
+    "INDP",
+    "MYGN",
+    "QRVO",
+    "RWT",
+    "VISN"
+  ],
+  "mean": -0.9278,
+  "n_trades_today": 8,
+  "recipe": "combo_sh_3070_shared",
+  "sells": [],
+  "state": {
+    "after": "2026-09-11",
+    "cash": 6142.67,
+    "pos": {
+      "BNC": {
+        "close_px": 4.800000190734863,
+        "cost": 1846.087442779541,
+        "entry_date": "2026-09-11",
+        "entry_px": 4.909999847412109,
+        "fee_in": 4.8375,
+        "last_px": 4.909999847412109,
+        "notional": 1841.249942779541,
+        "owner": "union_hot_n4_h1",
+        "peak_px": 4.909999847412109,
+        "reason": "top 4 by hot; rank hot_score; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+76.3; combo leftover $1842.74; owner union_hot_n4_h1",
+        "shares": 375,
+        "side": "long",
+        "ticker": "BNC"
+      },
+      "CRDL": {
+        "close_px": 1.9950000047683716,
+        "cost": 5.0618123284653445,
+        "entry_date": "2026-09-11",
+        "entry_px": 2.0299999713897705,
+        "fee_in": 5.0618123284653445,
+        "last_px": 2.0299999713897705,
+        "notional": 781.5499889850616,
+        "owner": "short_news_r_h3",
+        "peak_px": 2.0299999713897705,
+        "reason": "news\ud83d\udd34; gate news=bad; list yday_mover; ret5=-8.3; combo leftover $783.48; owner short_news_r_h3",
+        "shares": 385,
+        "side": "short",
+        "ticker": "CRDL"
+      },
+      "GPRO": {
+        "close_px": 1.3799999952316284,
+        "cost": 1859.376368624115,
+        "entry_date": "2026-09-11",
+        "entry_px": 1.399999976158142,
+        "fee_in": 16.9764,
+        "last_px": 1.399999976158142,
+        "notional": 1842.399968624115,
+        "owner": "union_hot_n4_h1",
+        "peak_px": 1.399999976158142,
+        "reason": "top 4 by hot; rank hot_score; list ohlc_hot; ret5=+0.7; combo leftover $1842.74; owner union_hot_n4_h1",
+        "shares": 1316,
+        "side": "long",
+        "ticker": "GPRO"
+      },
+      "INDP": {
+        "close_px": 2.7699999809265137,
+        "cost": 1850.1978325202942,
+        "entry_date": "2026-09-11",
+        "entry_px": 2.700000047683716,
+        "fee_in": 8.7978,
+        "last_px": 2.700000047683716,
+        "notional": 1841.4000325202942,
+        "owner": "union_hot_n4_h1",
+        "peak_px": 2.700000047683716,
+        "reason": "top 4 by hot; rank hot_score; list yday_gainer,yday_mover; ret5=+120.7; combo leftover $1842.74; owner union_hot_n4_h1",
+        "shares": 682,
+        "side": "long",
+        "ticker": "INDP"
+      },
+      "MYGN": {
+        "close_px": 3.4200000762939453,
+        "cost": 3.0627202732451977,
+        "entry_date": "2026-09-11",
+        "entry_px": 3.369999885559082,
+        "fee_in": 3.0627202732451977,
+        "last_px": 3.369999885559082,
+        "notional": 781.839973449707,
+        "owner": "short_news_r_h3",
+        "peak_px": 3.369999885559082,
+        "reason": "news\ud83d\udd34; gate news=bad; list yday_gainer,ohlc_hot; ret5=+4.0; combo leftover $783.48; owner short_news_r_h3",
+        "shares": 232,
+        "side": "short",
+        "ticker": "MYGN"
+      },
+      "QRVO": {
+        "close_px": 116.6500015258789,
+        "cost": 2.0465482190275845,
+        "entry_date": "2026-09-11",
+        "entry_px": 112.83499908447266,
+        "fee_in": 2.0465482190275845,
+        "last_px": 112.83499908447266,
+        "notional": 677.0099945068359,
+        "owner": "short_news_r_h3",
+        "peak_px": 112.83499908447266,
+        "reason": "news\ud83d\udd34; gate news=bad; list yday_gainer,ohlc_hot; \ud83d\udd35; ret5=+11.9; combo leftover $783.48; owner short_news_r_h3",
+        "shares": 6,
+        "side": "short",
+        "ticker": "QRVO"
+      },
+      "RWT": {
+        "close_px": 3.549999952316284,
+        "cost": 2.932109314952484,
+        "entry_date": "2026-09-11",
+        "entry_px": 3.5199999809265137,
+        "fee_in": 2.932109314952484,
+        "last_px": 3.5199999809265137,
+        "notional": 781.439995765686,
+        "owner": "short_news_r_h3",
+        "peak_px": 3.5199999809265137,
+        "reason": "news\ud83d\udd34; gate news=bad; list yday_mover; \ud83d\udd35; ret5=-19.0; combo leftover $783.48; owner short_news_r_h3",
+        "shares": 222,
+        "side": "short",
+        "ticker": "RWT"
+      },
+      "VISN": {
+        "close_px": 6.480000019073486,
+        "cost": 1840.3206352264403,
+        "entry_date": "2026-09-11",
+        "entry_px": 6.489999771118164,
+        "fee_in": 3.6507,
+        "last_px": 6.489999771118164,
+        "notional": 1836.6699352264404,
+        "owner": "union_hot_n4_h1",
+        "peak_px": 6.489999771118164,
+        "reason": "top 4 by hot; rank hot_score; list ohlc_hot; \ud83d\udd35; ret5=+0.5; combo leftover $1842.74; owner union_hot_n4_h1",
+        "shares": 283,
+        "side": "long",
+        "ticker": "VISN"
+      }
+    },
+    "yday_equity": 10432.22
+  }
+}

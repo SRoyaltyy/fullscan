@@ -1,0 +1,270 @@
+{
+  "buys": [
+    "SDGR",
+    "TEM",
+    "VITL",
+    "PGEN",
+    "CRWD",
+    "NAT",
+    "UMC"
+  ],
+  "cash": 161.07,
+  "date": "2026-09-18",
+  "equity": 10272.03,
+  "fees": 52.5187,
+  "fills": [
+    {
+      "fees": 3.1853,
+      "pnl": 0.97,
+      "price": 5.3,
+      "shares": 243,
+      "side": "SELL",
+      "ticker": "ANGI"
+    },
+    {
+      "fees": 2.181,
+      "pnl": -70.46,
+      "price": 21.3,
+      "shares": 57,
+      "side": "SELL",
+      "ticker": "BBNX"
+    },
+    {
+      "fees": 2.1846,
+      "pnl": 40.89,
+      "price": 22.9,
+      "shares": 58,
+      "side": "SELL",
+      "ticker": "GME"
+    },
+    {
+      "fees": 9.2749,
+      "pnl": 95.02,
+      "price": 1.96,
+      "shares": 709,
+      "side": "SELL",
+      "ticker": "HLP"
+    },
+    {
+      "fees": 2.3959,
+      "pnl": -21.01,
+      "price": 10.12,
+      "shares": 125,
+      "side": "SELL",
+      "ticker": "IOVA"
+    },
+    {
+      "fees": 15.6769,
+      "pnl": 28.81,
+      "price": 1.12,
+      "shares": 1199,
+      "side": "SELL",
+      "ticker": "IQ"
+    },
+    {
+      "fees": 2.0341,
+      "pnl": 48.83,
+      "price": 158.04,
+      "shares": 8,
+      "side": "SELL",
+      "ticker": "TWST"
+    },
+    {
+      "fees": 2.122,
+      "pnl": null,
+      "price": 29.32,
+      "shares": 44,
+      "side": "BUY",
+      "ticker": "SDGR"
+    },
+    {
+      "fees": 2.035,
+      "pnl": null,
+      "price": 81.4,
+      "shares": 15,
+      "side": "BUY",
+      "ticker": "TEM"
+    },
+    {
+      "fees": 2.332,
+      "pnl": null,
+      "price": 11.38,
+      "shares": 114,
+      "side": "BUY",
+      "ticker": "VITL"
+    },
+    {
+      "fees": 2.479,
+      "pnl": null,
+      "price": 7.98,
+      "shares": 163,
+      "side": "BUY",
+      "ticker": "PGEN"
+    },
+    {
+      "fees": 2.005,
+      "pnl": null,
+      "price": 246.98,
+      "shares": 5,
+      "side": "BUY",
+      "ticker": "CRWD"
+    },
+    {
+      "fees": 2.464,
+      "pnl": null,
+      "price": 8.2,
+      "shares": 158,
+      "side": "BUY",
+      "ticker": "NAT"
+    },
+    {
+      "fees": 2.149,
+      "pnl": null,
+      "price": 24.45,
+      "shares": 53,
+      "side": "BUY",
+      "ticker": "UMC"
+    }
+  ],
+  "holdings": [
+    "CRWD",
+    "INDP",
+    "NAT",
+    "PGEN",
+    "SDGR",
+    "TEM",
+    "UMC",
+    "VITL"
+  ],
+  "mean": -2.1973,
+  "n_trades_today": 14,
+  "recipe": "union_w_hot_candle_h1",
+  "sells": [
+    "ANGI",
+    "BBNX",
+    "GME",
+    "HLP",
+    "IOVA",
+    "IQ",
+    "TWST"
+  ],
+  "state": {
+    "after": "2026-09-18",
+    "cash": 161.07,
+    "pos": {
+      "CRWD": {
+        "close_px": 237.64999389648438,
+        "cost": 1236.9049786376954,
+        "entry_date": "2026-09-18",
+        "entry_px": 246.97999572753906,
+        "fee_in": 2.005,
+        "last_px": 246.97999572753906,
+        "min_hold": 1,
+        "notional": 1234.8999786376953,
+        "peak_px": 246.97999572753906,
+        "reason": "rank by w_hot_candle; rank w_hot_candle; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+17.6; leftover $1301.74",
+        "shares": 5,
+        "ticker": "CRWD"
+      },
+      "INDP": {
+        "close_px": 3.549999952316284,
+        "cost": 1278.1692298690796,
+        "entry_date": "2026-09-16",
+        "entry_px": 3.6600000858306885,
+        "fee_in": 4.4892,
+        "last_px": 3.8499999046325684,
+        "min_hold": 1,
+        "notional": 1273.6800298690796,
+        "peak_px": 3.8499999046325684,
+        "reason": "rank by w_hot_candle; rank w_hot_candle; list yday_gainer,yday_mover; ret5=+96.8; leftover $1276.71",
+        "shares": 348,
+        "ticker": "INDP"
+      },
+      "NAT": {
+        "close_px": 8.25,
+        "cost": 1298.0639698638915,
+        "entry_date": "2026-09-18",
+        "entry_px": 8.199999809265137,
+        "fee_in": 2.464,
+        "last_px": 8.199999809265137,
+        "min_hold": 1,
+        "notional": 1295.5999698638916,
+        "peak_px": 8.199999809265137,
+        "reason": "rank by w_hot_candle; rank w_hot_candle; list ohlc_hot; \ud83d\udd35; ret5=+13.0; leftover $1301.74",
+        "shares": 158,
+        "ticker": "NAT"
+      },
+      "PGEN": {
+        "close_px": 7.78000020980835,
+        "cost": 1303.2190031089783,
+        "entry_date": "2026-09-18",
+        "entry_px": 7.980000019073486,
+        "fee_in": 2.479,
+        "last_px": 7.980000019073486,
+        "min_hold": 1,
+        "notional": 1300.7400031089783,
+        "peak_px": 7.980000019073486,
+        "reason": "rank by w_hot_candle; rank w_hot_candle; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+17.8; leftover $1301.74",
+        "shares": 163,
+        "ticker": "PGEN"
+      },
+      "SDGR": {
+        "close_px": 29.020000457763672,
+        "cost": 1292.2019865722657,
+        "entry_date": "2026-09-18",
+        "entry_px": 29.31999969482422,
+        "fee_in": 2.122,
+        "last_px": 29.31999969482422,
+        "min_hold": 1,
+        "notional": 1290.0799865722656,
+        "peak_px": 29.31999969482422,
+        "reason": "rank by w_hot_candle; rank w_hot_candle; list yday_gainer,yday_mover; \ud83d\udd35; \u26aa; ret5=+60.9; leftover $1301.74",
+        "shares": 44,
+        "ticker": "SDGR"
+      },
+      "TEM": {
+        "close_px": 77.83999633789062,
+        "cost": 1223.0350228881837,
+        "entry_date": "2026-09-18",
+        "entry_px": 81.4000015258789,
+        "fee_in": 2.035,
+        "last_px": 81.4000015258789,
+        "min_hold": 1,
+        "notional": 1221.0000228881836,
+        "peak_px": 81.4000015258789,
+        "reason": "rank by w_hot_candle; rank w_hot_candle; list yday_gainer,yday_mover; \ud83d\udd35; \u26aa; ret5=+36.8; leftover $1301.74",
+        "shares": 15,
+        "ticker": "TEM"
+      },
+      "UMC": {
+        "close_px": 24.610000610351562,
+        "cost": 1297.999040435791,
+        "entry_date": "2026-09-18",
+        "entry_px": 24.450000762939453,
+        "fee_in": 2.149,
+        "last_px": 24.450000762939453,
+        "min_hold": 1,
+        "notional": 1295.850040435791,
+        "peak_px": 24.450000762939453,
+        "reason": "rank by w_hot_candle; rank w_hot_candle; list ohlc_hot; ret5=+10.6; leftover $1301.74",
+        "shares": 53,
+        "ticker": "UMC"
+      },
+      "VITL": {
+        "close_px": 11.989999771118164,
+        "cost": 1299.6520130462648,
+        "entry_date": "2026-09-18",
+        "entry_px": 11.380000114440918,
+        "fee_in": 2.332,
+        "last_px": 11.380000114440918,
+        "min_hold": 1,
+        "notional": 1297.3200130462646,
+        "peak_px": 11.380000114440918,
+        "reason": "rank by w_hot_candle; rank w_hot_candle; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+19.5; leftover $1301.74",
+        "shares": 114,
+        "ticker": "VITL"
+      }
+    },
+    "yday_equity": 10272.03
+  }
+}

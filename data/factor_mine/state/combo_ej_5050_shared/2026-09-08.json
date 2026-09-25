@@ -1,0 +1,223 @@
+{
+  "buys": [],
+  "cash": 5041.89,
+  "date": "2026-09-08",
+  "equity": 9399.65,
+  "fees": 16.9311,
+  "fills": [
+    {
+      "fees": 2.3103,
+      "pnl": 11.09,
+      "price": 6.48,
+      "shares": 98,
+      "side": "SELL",
+      "ticker": "AHCO"
+    },
+    {
+      "fees": 2.082,
+      "pnl": 26.1,
+      "price": 26.44,
+      "shares": 24,
+      "side": "SELL",
+      "ticker": "ASST"
+    },
+    {
+      "fees": 2.013,
+      "pnl": 3.36,
+      "price": 521.15,
+      "shares": 1,
+      "side": "SELL",
+      "ticker": "DELL"
+    },
+    {
+      "fees": 2.3388,
+      "pnl": -2.51,
+      "price": 5.81,
+      "shares": 107,
+      "side": "SELL",
+      "ticker": "DFDV"
+    },
+    {
+      "fees": 2.013,
+      "pnl": -21.6,
+      "price": 360.75,
+      "shares": 1,
+      "side": "SELL",
+      "ticker": "MDB"
+    },
+    {
+      "fees": 2.085,
+      "pnl": 3.48,
+      "price": 24.67,
+      "shares": 25,
+      "side": "SELL",
+      "ticker": "SLDE"
+    },
+    {
+      "fees": 2.031,
+      "pnl": 44.75,
+      "price": 89.67,
+      "shares": 7,
+      "side": "SELL",
+      "ticker": "TARS"
+    },
+    {
+      "fees": 2.058,
+      "pnl": 0.86,
+      "price": 37.75,
+      "shares": 16,
+      "side": "SELL",
+      "ticker": "TDS"
+    }
+  ],
+  "holdings": [
+    "AMBA",
+    "ASAN",
+    "DOCU",
+    "GWRE",
+    "IOT",
+    "LULU",
+    "MAMA",
+    "PATH"
+  ],
+  "mean": -1.4371,
+  "n_trades_today": 8,
+  "recipe": "combo_ej_5050_shared",
+  "sells": [
+    "AHCO",
+    "ASST",
+    "DELL",
+    "DFDV",
+    "MDB",
+    "SLDE",
+    "TARS",
+    "TDS"
+  ],
+  "state": {
+    "after": "2026-09-08",
+    "cash": 5041.89,
+    "pos": {
+      "AMBA": {
+        "close_px": 63.47999954223633,
+        "cost": 570.6370027465821,
+        "entry_date": "2026-09-04",
+        "entry_px": 63.18000030517578,
+        "fee_in": 2.017,
+        "last_px": 63.83000183105469,
+        "notional": 568.620002746582,
+        "owner": "union_e_fresh_h3",
+        "peak_px": 63.83000183105469,
+        "reason": "union \u2229 e_fresh, no \ud83d\udea8; gate days_since_E_max=1,flag_E_min=0; list earn_react; \ud83d\udd35; ret5=-10.9; combo leftover $596.54; owner union_e_fresh_h3",
+        "shares": 9,
+        "side": "long",
+        "ticker": "AMBA"
+      },
+      "ASAN": {
+        "close_px": 8.789999961853027,
+        "cost": 596.5139844360351,
+        "entry_date": "2026-09-04",
+        "entry_px": 8.739999771118164,
+        "fee_in": 2.194,
+        "last_px": 8.729999542236328,
+        "notional": 594.3199844360352,
+        "owner": "union_e_fresh_h3",
+        "peak_px": 8.739999771118164,
+        "reason": "union \u2229 e_fresh, no \ud83d\udea8; gate days_since_E_max=1,flag_E_min=0; list earn_react; \ud83d\udd35; ret5=-0.8; combo leftover $596.54; owner union_e_fresh_h3",
+        "shares": 68,
+        "side": "long",
+        "ticker": "ASAN"
+      },
+      "DOCU": {
+        "close_px": 65.08000183105469,
+        "cost": 550.1739731445313,
+        "entry_date": "2026-09-04",
+        "entry_px": 68.5199966430664,
+        "fee_in": 2.014,
+        "last_px": 67.05000305175781,
+        "notional": 548.1599731445312,
+        "owner": "union_e_fresh_h3",
+        "peak_px": 68.5199966430664,
+        "reason": "union \u2229 e_fresh, no \ud83d\udea8; gate days_since_E_max=1,flag_E_min=0; list earn_react; \ud83d\udd35; ret5=+3.4; combo leftover $596.54; owner union_e_fresh_h3",
+        "shares": 8,
+        "side": "long",
+        "ticker": "DOCU"
+      },
+      "GWRE": {
+        "close_px": 149.7100067138672,
+        "cost": 504.64900915527346,
+        "entry_date": "2026-09-04",
+        "entry_px": 167.5500030517578,
+        "fee_in": 1.999,
+        "last_px": 160.52000427246094,
+        "notional": 502.65000915527344,
+        "owner": "union_e_fresh_h3",
+        "peak_px": 167.5500030517578,
+        "reason": "union \u2229 e_fresh, no \ud83d\udea8; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=+0.9; combo leftover $596.54; owner union_e_fresh_h3",
+        "shares": 3,
+        "side": "long",
+        "ticker": "GWRE"
+      },
+      "IOT": {
+        "close_px": 40.150001525878906,
+        "cost": 585.7290198364258,
+        "entry_date": "2026-09-04",
+        "entry_px": 44.900001525878906,
+        "fee_in": 2.029,
+        "last_px": 39.560001373291016,
+        "notional": 583.7000198364258,
+        "owner": "union_e_fresh_h3",
+        "peak_px": 44.900001525878906,
+        "reason": "union \u2229 e_fresh, no \ud83d\udea8; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=-7.5; combo leftover $596.54; owner union_e_fresh_h3",
+        "shares": 13,
+        "side": "long",
+        "ticker": "IOT"
+      },
+      "LULU": {
+        "close_px": 103.19000244140625,
+        "cost": 590.9080091552735,
+        "entry_date": "2026-09-04",
+        "entry_px": 98.1500015258789,
+        "fee_in": 2.008,
+        "last_px": 100.58000183105469,
+        "notional": 588.9000091552734,
+        "owner": "union_e_fresh_h3",
+        "peak_px": 100.58000183105469,
+        "reason": "union \u2229 e_fresh, no \ud83d\udea8; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=+5.9; combo leftover $596.54; owner union_e_fresh_h3",
+        "shares": 6,
+        "side": "long",
+        "ticker": "LULU"
+      },
+      "MAMA": {
+        "close_px": 15.5,
+        "cost": 583.0009929428101,
+        "entry_date": "2026-09-04",
+        "entry_px": 15.699999809265137,
+        "fee_in": 2.101,
+        "last_px": 15.199999809265137,
+        "notional": 580.8999929428101,
+        "owner": "union_e_fresh_h3",
+        "peak_px": 15.699999809265137,
+        "reason": "union \u2229 e_fresh, no \ud83d\udea8; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=-0.4; combo leftover $596.54; owner union_e_fresh_h3",
+        "shares": 37,
+        "side": "long",
+        "ticker": "MAMA"
+      },
+      "PATH": {
+        "close_px": 14.010000228881836,
+        "cost": 586.7379917602539,
+        "entry_date": "2026-09-04",
+        "entry_px": 16.239999771118164,
+        "fee_in": 2.098,
+        "last_px": 15.15999984741211,
+        "notional": 584.6399917602539,
+        "owner": "union_e_fresh_h3",
+        "peak_px": 16.239999771118164,
+        "reason": "union \u2229 e_fresh, no \ud83d\udea8; gate days_since_E_max=1,flag_E_min=0; list earn_react; \ud83d\udd35; ret5=-0.6; combo leftover $596.54; owner union_e_fresh_h3",
+        "shares": 36,
+        "side": "long",
+        "ticker": "PATH"
+      }
+    },
+    "yday_equity": 9399.65
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "buys": [],
+  "cash": 9034.02,
+  "date": "2026-09-10",
+  "equity": 9034.02,
+  "fees": 4.6534,
+  "fills": [
+    {
+      "fees": 2.3179,
+      "pnl": 266.82,
+      "price": 49.74,
+      "shares": 92,
+      "side": "SELL",
+      "ticker": "ABM"
+    },
+    {
+      "fees": 2.3355,
+      "pnl": 102.2,
+      "price": 44.89,
+      "shares": 98,
+      "side": "SELL",
+      "ticker": "UNFI"
+    }
+  ],
+  "holdings": [],
+  "mean": 0.2529,
+  "n_trades_today": 2,
+  "recipe": "union_overnight_h3",
+  "sells": [
+    "ABM",
+    "UNFI"
+  ],
+  "state": {
+    "after": "2026-09-10",
+    "cash": 9034.02,
+    "pos": {},
+    "yday_equity": 9034.02
+  }
+}

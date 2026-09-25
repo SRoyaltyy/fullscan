@@ -1,0 +1,198 @@
+{
+  "buys": [
+    "CAPR",
+    "MRNA",
+    "ANF",
+    "SNPS",
+    "NCNO",
+    "TH",
+    "GAP"
+  ],
+  "cash": 11.01,
+  "date": "2026-08-28",
+  "equity": 9799.54,
+  "fees": 15.106,
+  "fills": [
+    {
+      "fees": 2.374,
+      "pnl": null,
+      "price": 9.73,
+      "shares": 128,
+      "side": "BUY",
+      "ticker": "CAPR"
+    },
+    {
+      "fees": 2.017,
+      "pnl": null,
+      "price": 137.19,
+      "shares": 9,
+      "side": "BUY",
+      "ticker": "MRNA"
+    },
+    {
+      "fees": 2.014,
+      "pnl": null,
+      "price": 146.07,
+      "shares": 8,
+      "side": "BUY",
+      "ticker": "ANF"
+    },
+    {
+      "fees": 1.996,
+      "pnl": null,
+      "price": 461.85,
+      "shares": 2,
+      "side": "BUY",
+      "ticker": "SNPS"
+    },
+    {
+      "fees": 2.221,
+      "pnl": null,
+      "price": 23.3,
+      "shares": 77,
+      "side": "BUY",
+      "ticker": "NCNO"
+    },
+    {
+      "fees": 2.275,
+      "pnl": null,
+      "price": 19.0,
+      "shares": 95,
+      "side": "BUY",
+      "ticker": "TH"
+    },
+    {
+      "fees": 2.209,
+      "pnl": null,
+      "price": 24.69,
+      "shares": 73,
+      "side": "BUY",
+      "ticker": "GAP"
+    }
+  ],
+  "holdings": [
+    "ANF",
+    "CAPR",
+    "GAP",
+    "MRNA",
+    "NCNO",
+    "SNPS",
+    "TH"
+  ],
+  "mean": -2.0046,
+  "n_trades_today": 7,
+  "recipe": "combo_hj_5050_shared",
+  "sells": [],
+  "state": {
+    "after": "2026-08-28",
+    "cash": 11.01,
+    "pos": {
+      "ANF": {
+        "close_px": 148.4199981689453,
+        "cost": 1170.57405859375,
+        "entry_date": "2026-08-28",
+        "entry_px": 146.07000732421875,
+        "fee_in": 2.014,
+        "last_px": 146.07000732421875,
+        "notional": 1168.56005859375,
+        "owner": "union_hot_n4_h1",
+        "peak_px": 146.07000732421875,
+        "reason": "top 4 by hot; rank hot_score; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+38.8; combo leftover $1250.00; owner union_hot_n4_h1",
+        "shares": 8,
+        "side": "long",
+        "ticker": "ANF"
+      },
+      "CAPR": {
+        "close_px": 9.59000015258789,
+        "cost": 1247.81394140625,
+        "entry_date": "2026-08-28",
+        "entry_px": 9.729999542236328,
+        "fee_in": 2.374,
+        "last_px": 9.729999542236328,
+        "notional": 1245.43994140625,
+        "owner": "union_hot_n4_h1",
+        "peak_px": 9.729999542236328,
+        "reason": "top 4 by hot; rank hot_score; list yday_gainer,yday_mover; ret5=+47.1; combo leftover $1250.00; owner union_hot_n4_h1",
+        "shares": 128,
+        "side": "long",
+        "ticker": "CAPR"
+      },
+      "GAP": {
+        "close_px": 23.479999542236328,
+        "cost": 1804.5790389862061,
+        "entry_date": "2026-08-28",
+        "entry_px": 24.690000534057617,
+        "fee_in": 2.209,
+        "last_px": 24.690000534057617,
+        "notional": 1802.370038986206,
+        "owner": "union_join_vol_green_h1",
+        "peak_px": 24.690000534057617,
+        "reason": "combo gate; gate join=good,vol=good,last_green=True; list earn_react; ret5=+5.8; combo leftover $1806.40; owner union_join_vol_green_h1",
+        "shares": 73,
+        "side": "long",
+        "ticker": "GAP"
+      },
+      "MRNA": {
+        "close_px": 137.99000549316406,
+        "cost": 1236.7270219726563,
+        "entry_date": "2026-08-28",
+        "entry_px": 137.19000244140625,
+        "fee_in": 2.017,
+        "last_px": 137.19000244140625,
+        "notional": 1234.7100219726562,
+        "owner": "union_hot_n4_h1",
+        "peak_px": 137.19000244140625,
+        "reason": "top 4 by hot; rank hot_score; list ohlc_hot; ret5=+7.1; combo leftover $1250.00; owner union_hot_n4_h1",
+        "shares": 9,
+        "side": "long",
+        "ticker": "MRNA"
+      },
+      "NCNO": {
+        "close_px": 22.989999771118164,
+        "cost": 1796.320941253662,
+        "entry_date": "2026-08-28",
+        "entry_px": 23.299999237060547,
+        "fee_in": 2.221,
+        "last_px": 23.299999237060547,
+        "notional": 1794.099941253662,
+        "owner": "union_join_vol_green_h1",
+        "peak_px": 23.299999237060547,
+        "reason": "combo gate; gate join=good,vol=good,last_green=True; list ohlc_hot; \ud83d\udd35; ret5=+14.5; combo leftover $1806.40; owner union_join_vol_green_h1",
+        "shares": 77,
+        "side": "long",
+        "ticker": "NCNO"
+      },
+      "SNPS": {
+        "close_px": 442.6099853515625,
+        "cost": 925.6960122070312,
+        "entry_date": "2026-08-28",
+        "entry_px": 461.8500061035156,
+        "fee_in": 1.996,
+        "last_px": 461.8500061035156,
+        "notional": 923.7000122070312,
+        "owner": "union_hot_n4_h1",
+        "peak_px": 461.8500061035156,
+        "reason": "top 4 by hot; rank hot_score; list ohlc_hot; ret5=+16.8; combo leftover $1250.00; owner union_hot_n4_h1",
+        "shares": 2,
+        "side": "long",
+        "ticker": "SNPS"
+      },
+      "TH": {
+        "close_px": 18.549999237060547,
+        "cost": 1807.275,
+        "entry_date": "2026-08-28",
+        "entry_px": 19.0,
+        "fee_in": 2.275,
+        "last_px": 19.0,
+        "notional": 1805.0,
+        "owner": "union_join_vol_green_h1",
+        "peak_px": 19.0,
+        "reason": "combo gate; gate join=good,vol=good,last_green=True; list ohlc_hot; ret5=+7.5; combo leftover $1806.40; owner union_join_vol_green_h1",
+        "shares": 95,
+        "side": "long",
+        "ticker": "TH"
+      }
+    },
+    "yday_equity": 9799.54
+  }
+}

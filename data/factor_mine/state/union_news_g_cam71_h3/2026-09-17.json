@@ -1,0 +1,66 @@
+{
+  "buys": [],
+  "cash": 17.47,
+  "date": "2026-09-17",
+  "equity": 7550.11,
+  "fees": 0,
+  "fills": [],
+  "holdings": [
+    "DBX",
+    "SM",
+    "WAY"
+  ],
+  "mean": -1.2154,
+  "n_trades_today": 0,
+  "recipe": "union_news_g_cam71_h3",
+  "sells": [],
+  "state": {
+    "after": "2026-09-17",
+    "cash": 17.47,
+    "pos": {
+      "DBX": {
+        "close_px": 37.61000061035156,
+        "cost": 2564.1670736999513,
+        "entry_date": "2026-09-16",
+        "entry_px": 37.130001068115234,
+        "fee_in": 2.197,
+        "last_px": 37.63999938964844,
+        "min_hold": 3,
+        "notional": 2561.970073699951,
+        "peak_px": 37.63999938964844,
+        "reason": "merged news\ud83d\udfe2 and cameras +7 \u2212\u22641; gate news=good,n_pos_min=7,cam_bad_max=1; rank cond; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+11.3; leftover $2564.55",
+        "shares": 69,
+        "ticker": "DBX"
+      },
+      "SM": {
+        "close_px": 36.970001220703125,
+        "cost": 2561.542107421875,
+        "entry_date": "2026-09-16",
+        "entry_px": 39.9900016784668,
+        "fee_in": 2.182,
+        "last_px": 37.56999969482422,
+        "min_hold": 3,
+        "notional": 2559.360107421875,
+        "peak_px": 39.9900016784668,
+        "reason": "merged news\ud83d\udfe2 and cameras +7 \u2212\u22641; gate news=good,n_pos_min=7,cam_bad_max=1; rank cond; list ohlc_hot; \ud83d\udd35; ret5=+9.3; leftover $2564.55",
+        "shares": 64,
+        "ticker": "SM"
+      },
+      "WAY": {
+        "close_px": 26.510000228881836,
+        "cost": 2550.471044403076,
+        "entry_date": "2026-09-16",
+        "entry_px": 26.270000457763672,
+        "fee_in": 2.281,
+        "last_px": 26.510000228881836,
+        "min_hold": 3,
+        "notional": 2548.190044403076,
+        "peak_px": 26.510000228881836,
+        "reason": "merged news\ud83d\udfe2 and cameras +7 \u2212\u22641; gate news=good,n_pos_min=7,cam_bad_max=1; rank cond; list yday_gainer,ohlc_hot; \ud83d\udd35; \u26aa; ret5=+10.0; leftover $2564.55",
+        "shares": 97,
+        "ticker": "WAY"
+      }
+    },
+    "yday_equity": 7550.11
+  }
+}

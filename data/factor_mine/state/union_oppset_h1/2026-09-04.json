@@ -1,0 +1,215 @@
+{
+  "buys": [
+    "LULU",
+    "ASST",
+    "PL",
+    "RSKD",
+    "ZS",
+    "IOT",
+    "DELL",
+    "MRX"
+  ],
+  "cash": 355.73,
+  "date": "2026-09-04",
+  "equity": 9729.1,
+  "fees": 16.979,
+  "fills": [
+    {
+      "fees": 2.026,
+      "pnl": null,
+      "price": 98.15,
+      "shares": 12,
+      "side": "BUY",
+      "ticker": "LULU"
+    },
+    {
+      "fees": 2.134,
+      "pnl": null,
+      "price": 25.18,
+      "shares": 48,
+      "side": "BUY",
+      "ticker": "ASST"
+    },
+    {
+      "fees": 2.176,
+      "pnl": null,
+      "price": 19.64,
+      "shares": 62,
+      "side": "BUY",
+      "ticker": "PL"
+    },
+    {
+      "fees": 2.527,
+      "pnl": null,
+      "price": 6.84,
+      "shares": 179,
+      "side": "BUY",
+      "ticker": "RSKD"
+    },
+    {
+      "fees": 2.011,
+      "pnl": null,
+      "price": 166.15,
+      "shares": 7,
+      "side": "BUY",
+      "ticker": "ZS"
+    },
+    {
+      "fees": 2.071,
+      "pnl": null,
+      "price": 44.9,
+      "shares": 27,
+      "side": "BUY",
+      "ticker": "IOT"
+    },
+    {
+      "fees": 1.996,
+      "pnl": null,
+      "price": 513.78,
+      "shares": 2,
+      "side": "BUY",
+      "ticker": "DELL"
+    },
+    {
+      "fees": 2.038,
+      "pnl": null,
+      "price": 75.65,
+      "shares": 16,
+      "side": "BUY",
+      "ticker": "MRX"
+    }
+  ],
+  "holdings": [
+    "ASST",
+    "DELL",
+    "IOT",
+    "LULU",
+    "MRX",
+    "PL",
+    "RSKD",
+    "ZS"
+  ],
+  "mean": -0.8701,
+  "n_trades_today": 8,
+  "recipe": "union_oppset_h1",
+  "sells": [],
+  "state": {
+    "after": "2026-09-04",
+    "cash": 355.73,
+    "pos": {
+      "ASST": {
+        "close_px": 27.139999389648438,
+        "cost": 1210.7740146484375,
+        "entry_date": "2026-09-04",
+        "entry_px": 25.18000030517578,
+        "fee_in": 2.134,
+        "last_px": 25.18000030517578,
+        "min_hold": 1,
+        "notional": 1208.6400146484375,
+        "peak_px": 25.18000030517578,
+        "reason": "Theme Radar Clock-B oppset \u2229 union, rank T\u22121 rvol (research; not KEEP); gate oppset=True; rank opp_rvol; list ohlc_hot; \ud83d\udd35; ret5=+16.0; leftover $1226.81",
+        "shares": 48,
+        "ticker": "ASST"
+      },
+      "DELL": {
+        "close_px": 524.1400146484375,
+        "cost": 1029.55605859375,
+        "entry_date": "2026-09-04",
+        "entry_px": 513.780029296875,
+        "fee_in": 1.996,
+        "last_px": 513.780029296875,
+        "min_hold": 1,
+        "notional": 1027.56005859375,
+        "peak_px": 513.780029296875,
+        "reason": "Theme Radar Clock-B oppset \u2229 union, rank T\u22121 rvol (research; not KEEP); gate oppset=True; rank opp_rvol; list probable,yday_gainer,yday_mover,ohlc_hot,mover_buy; \ud83d\udd35; \u26aa; ret5=+9.3; leftover $1226.81",
+        "shares": 2,
+        "ticker": "DELL"
+      },
+      "IOT": {
+        "close_px": 40.20000076293945,
+        "cost": 1214.3710411987304,
+        "entry_date": "2026-09-04",
+        "entry_px": 44.900001525878906,
+        "fee_in": 2.071,
+        "last_px": 44.900001525878906,
+        "min_hold": 1,
+        "notional": 1212.3000411987305,
+        "peak_px": 44.900001525878906,
+        "reason": "Theme Radar Clock-B oppset \u2229 union, rank T\u22121 rvol (research; not KEEP); gate oppset=True; rank opp_rvol; list earn_react; ret5=-7.5; leftover $1226.81",
+        "shares": 27,
+        "ticker": "IOT"
+      },
+      "LULU": {
+        "close_px": 100.61000061035156,
+        "cost": 1179.826018310547,
+        "entry_date": "2026-09-04",
+        "entry_px": 98.1500015258789,
+        "fee_in": 2.026,
+        "last_px": 98.1500015258789,
+        "min_hold": 1,
+        "notional": 1177.8000183105469,
+        "peak_px": 98.1500015258789,
+        "reason": "Theme Radar Clock-B oppset \u2229 union, rank T\u22121 rvol (research; not KEEP); gate oppset=True; rank opp_rvol; list earn_react; ret5=+5.9; leftover $1226.81",
+        "shares": 12,
+        "ticker": "LULU"
+      },
+      "MRX": {
+        "close_px": 78.2699966430664,
+        "cost": 1212.4380244140625,
+        "entry_date": "2026-09-04",
+        "entry_px": 75.6500015258789,
+        "fee_in": 2.038,
+        "last_px": 75.6500015258789,
+        "min_hold": 1,
+        "notional": 1210.4000244140625,
+        "peak_px": 75.6500015258789,
+        "reason": "Theme Radar Clock-B oppset \u2229 union, rank T\u22121 rvol (research; not KEEP); gate oppset=True; rank opp_rvol; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+6.0; leftover $1226.81",
+        "shares": 16,
+        "ticker": "MRX"
+      },
+      "PL": {
+        "close_px": 18.1200008392334,
+        "cost": 1219.855962158203,
+        "entry_date": "2026-09-04",
+        "entry_px": 19.639999389648438,
+        "fee_in": 2.176,
+        "last_px": 19.639999389648438,
+        "min_hold": 1,
+        "notional": 1217.6799621582031,
+        "peak_px": 19.639999389648438,
+        "reason": "Theme Radar Clock-B oppset \u2229 union, rank T\u22121 rvol (research; not KEEP); gate oppset=True; rank opp_rvol; list earn_react; ret5=-13.3; leftover $1226.81",
+        "shares": 62,
+        "ticker": "PL"
+      },
+      "RSKD": {
+        "close_px": 6.510000228881836,
+        "cost": 1226.8870273132325,
+        "entry_date": "2026-09-04",
+        "entry_px": 6.840000152587891,
+        "fee_in": 2.527,
+        "last_px": 6.840000152587891,
+        "min_hold": 1,
+        "notional": 1224.3600273132324,
+        "peak_px": 6.840000152587891,
+        "reason": "Theme Radar Clock-B oppset \u2229 union, rank T\u22121 rvol (research; not KEEP); gate oppset=True; rank opp_rvol; list ohlc_hot; ret5=+13.2; leftover $1226.81",
+        "shares": 179,
+        "ticker": "RSKD"
+      },
+      "ZS": {
+        "close_px": 169.8000030517578,
+        "cost": 1165.0609572753906,
+        "entry_date": "2026-09-04",
+        "entry_px": 166.14999389648438,
+        "fee_in": 2.011,
+        "last_px": 166.14999389648438,
+        "min_hold": 1,
+        "notional": 1163.0499572753906,
+        "peak_px": 166.14999389648438,
+        "reason": "Theme Radar Clock-B oppset \u2229 union, rank T\u22121 rvol (research; not KEEP); gate oppset=True; rank opp_rvol; list earn_react; ret5=-5.1; leftover $1226.81",
+        "shares": 7,
+        "ticker": "ZS"
+      }
+    },
+    "yday_equity": 9729.1
+  }
+}

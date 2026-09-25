@@ -1,0 +1,30 @@
+{
+  "buys": [],
+  "cash": 11036.8,
+  "date": "2026-09-10",
+  "equity": 11036.8,
+  "fees": 19.609,
+  "fills": [
+    {
+      "fees": 19.609,
+      "pnl": 1036.8,
+      "price": 7.4,
+      "shares": 1494,
+      "side": "SELL",
+      "ticker": "SION"
+    }
+  ],
+  "holdings": [],
+  "mean": -1.2449,
+  "n_trades_today": 1,
+  "recipe": "union_rsi_os_macd_h3",
+  "sells": [
+    "SION"
+  ],
+  "state": {
+    "after": "2026-09-10",
+    "cash": 11036.8,
+    "pos": {},
+    "yday_equity": 11036.8
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "buys": [],
+  "cash": 9343.84,
+  "date": "2026-09-15",
+  "equity": 9418.33,
+  "fees": 0,
+  "fills": [],
+  "holdings": [
+    "AMTX"
+  ],
+  "mean": -0.0166,
+  "n_trades_today": 0,
+  "recipe": "union_news_g_h5",
+  "sells": [],
+  "state": {
+    "after": "2026-09-15",
+    "cash": 9343.84,
+    "pos": {
+      "AMTX": {
+        "close_px": 1.909999966621399,
+        "cost": 80.47259851226806,
+        "entry_date": "2026-09-11",
+        "entry_px": 2.0399999618530273,
+        "fee_in": 0.9126,
+        "last_px": 1.9299999475479126,
+        "min_hold": 5,
+        "notional": 79.55999851226807,
+        "peak_px": 2.0399999618530273,
+        "reason": "union \u2229 news_g hold 5, no \ud83d\udea8; gate news=good; list yday_gainer,yday_mover,ohlc_hot; \ud83d\udd35; ret5=+10.9; leftover $80.09",
+        "shares": 39,
+        "ticker": "AMTX"
+      }
+    },
+    "yday_equity": 9418.33
+  }
+}

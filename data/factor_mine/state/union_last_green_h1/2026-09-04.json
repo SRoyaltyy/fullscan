@@ -1,0 +1,215 @@
+{
+  "buys": [
+    "CRM",
+    "DELL",
+    "SLBT",
+    "TARS",
+    "FCEL",
+    "MDB",
+    "ASST",
+    "DFDV"
+  ],
+  "cash": 511.46,
+  "date": "2026-09-04",
+  "equity": 9885.45,
+  "fees": 20.1192,
+  "fills": [
+    {
+      "fees": 2.002,
+      "pnl": null,
+      "price": 263.36,
+      "shares": 4,
+      "side": "BUY",
+      "ticker": "CRM"
+    },
+    {
+      "fees": 1.996,
+      "pnl": null,
+      "price": 513.78,
+      "shares": 2,
+      "side": "BUY",
+      "ticker": "DELL"
+    },
+    {
+      "fees": 4.9923,
+      "pnl": null,
+      "price": 3.15,
+      "shares": 387,
+      "side": "BUY",
+      "ticker": "SLBT"
+    },
+    {
+      "fees": 2.032,
+      "pnl": null,
+      "price": 82.7,
+      "shares": 14,
+      "side": "BUY",
+      "ticker": "TARS"
+    },
+    {
+      "fees": 2.242,
+      "pnl": null,
+      "price": 14.52,
+      "shares": 84,
+      "side": "BUY",
+      "ticker": "FCEL"
+    },
+    {
+      "fees": 1.999,
+      "pnl": null,
+      "price": 378.34,
+      "shares": 3,
+      "side": "BUY",
+      "ticker": "MDB"
+    },
+    {
+      "fees": 2.134,
+      "pnl": null,
+      "price": 25.18,
+      "shares": 48,
+      "side": "BUY",
+      "ticker": "ASST"
+    },
+    {
+      "fees": 2.7219,
+      "pnl": null,
+      "price": 5.79,
+      "shares": 211,
+      "side": "BUY",
+      "ticker": "DFDV"
+    }
+  ],
+  "holdings": [
+    "ASST",
+    "CRM",
+    "DELL",
+    "DFDV",
+    "FCEL",
+    "MDB",
+    "SLBT",
+    "TARS"
+  ],
+  "mean": 1.1355,
+  "n_trades_today": 8,
+  "recipe": "union_last_green_h1",
+  "sells": [],
+  "state": {
+    "after": "2026-09-04",
+    "cash": 511.46,
+    "pos": {
+      "ASST": {
+        "close_px": 27.139999389648438,
+        "cost": 1210.7740146484375,
+        "entry_date": "2026-09-04",
+        "entry_px": 25.18000030517578,
+        "fee_in": 2.134,
+        "last_px": 25.18000030517578,
+        "min_hold": 1,
+        "notional": 1208.6400146484375,
+        "peak_px": 25.18000030517578,
+        "reason": "union \u2229 last_green, no \ud83d\udea8; gate last_green=True; list ohlc_hot; \ud83d\udd35; ret5=+16.0; leftover $1221.81",
+        "shares": 48,
+        "ticker": "ASST"
+      },
+      "CRM": {
+        "close_px": 259.2300109863281,
+        "cost": 1055.44194140625,
+        "entry_date": "2026-09-04",
+        "entry_px": 263.3599853515625,
+        "fee_in": 2.002,
+        "last_px": 263.3599853515625,
+        "min_hold": 1,
+        "notional": 1053.43994140625,
+        "peak_px": 263.3599853515625,
+        "reason": "union \u2229 last_green, no \ud83d\udea8; gate last_green=True; list flatten,mover_buy; \ud83d\udd35; \u26aa; ret5=+4.9; leftover $1221.81",
+        "shares": 4,
+        "ticker": "CRM"
+      },
+      "DELL": {
+        "close_px": 524.1400146484375,
+        "cost": 1029.55605859375,
+        "entry_date": "2026-09-04",
+        "entry_px": 513.780029296875,
+        "fee_in": 1.996,
+        "last_px": 513.780029296875,
+        "min_hold": 1,
+        "notional": 1027.56005859375,
+        "peak_px": 513.780029296875,
+        "reason": "union \u2229 last_green, no \ud83d\udea8; gate last_green=True; list probable,yday_gainer,yday_mover,ohlc_hot,mover_buy; \ud83d\udd35; \u26aa; ret5=+9.3; leftover $1221.81",
+        "shares": 2,
+        "ticker": "DELL"
+      },
+      "DFDV": {
+        "close_px": 5.869999885559082,
+        "cost": 1224.4118919509888,
+        "entry_date": "2026-09-04",
+        "entry_px": 5.789999961853027,
+        "fee_in": 2.7219,
+        "last_px": 5.789999961853027,
+        "min_hold": 1,
+        "notional": 1221.6899919509888,
+        "peak_px": 5.789999961853027,
+        "reason": "union \u2229 last_green, no \ud83d\udea8; gate last_green=True; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+15.2; leftover $1221.81",
+        "shares": 211,
+        "ticker": "DFDV"
+      },
+      "FCEL": {
+        "close_px": 14.949999809265137,
+        "cost": 1221.9220384521484,
+        "entry_date": "2026-09-04",
+        "entry_px": 14.520000457763672,
+        "fee_in": 2.242,
+        "last_px": 14.520000457763672,
+        "min_hold": 1,
+        "notional": 1219.6800384521484,
+        "peak_px": 14.520000457763672,
+        "reason": "union \u2229 last_green, no \ud83d\udea8; gate last_green=True; list yday_mover; ret5=-24.1; leftover $1221.81",
+        "shares": 84,
+        "ticker": "FCEL"
+      },
+      "MDB": {
+        "close_px": 368.739990234375,
+        "cost": 1137.018989013672,
+        "entry_date": "2026-09-04",
+        "entry_px": 378.3399963378906,
+        "fee_in": 1.999,
+        "last_px": 378.3399963378906,
+        "min_hold": 1,
+        "notional": 1135.0199890136719,
+        "peak_px": 378.3399963378906,
+        "reason": "union \u2229 last_green, no \ud83d\udea8; gate last_green=True; list yday_mover; ret5=-12.7; leftover $1221.81",
+        "shares": 3,
+        "ticker": "MDB"
+      },
+      "SLBT": {
+        "close_px": 2.880000114440918,
+        "cost": 1224.042336907196,
+        "entry_date": "2026-09-04",
+        "entry_px": 3.1500000953674316,
+        "fee_in": 4.9923,
+        "last_px": 3.1500000953674316,
+        "min_hold": 1,
+        "notional": 1219.050036907196,
+        "peak_px": 3.1500000953674316,
+        "reason": "union \u2229 last_green, no \ud83d\udea8; gate last_green=True; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+19.3; leftover $1221.81",
+        "shares": 387,
+        "ticker": "SLBT"
+      },
+      "TARS": {
+        "close_px": 90.77999877929688,
+        "cost": 1159.8319572753906,
+        "entry_date": "2026-09-04",
+        "entry_px": 82.69999694824219,
+        "fee_in": 2.032,
+        "last_px": 82.69999694824219,
+        "min_hold": 1,
+        "notional": 1157.7999572753906,
+        "peak_px": 82.69999694824219,
+        "reason": "union \u2229 last_green, no \ud83d\udea8; gate last_green=True; list yday_gainer,ohlc_hot; \ud83d\udd35; \u26aa; ret5=+15.7; leftover $1221.81",
+        "shares": 14,
+        "ticker": "TARS"
+      }
+    },
+    "yday_equity": 9885.45
+  }
+}

@@ -1,0 +1,234 @@
+{
+  "buys": [
+    "RBRK",
+    "ECO",
+    "FIVN",
+    "RARE",
+    "SDGR",
+    "CYPH",
+    "TEM",
+    "RXT"
+  ],
+  "cash": 191.57,
+  "date": "2026-09-18",
+  "equity": 9096.37,
+  "fees": 54.5376,
+  "fills": [
+    {
+      "fees": 7.746,
+      "pnl": -74.36,
+      "price": 7.85,
+      "shares": 590,
+      "side": "SELL",
+      "ticker": "BULL"
+    },
+    {
+      "fees": 25.7499,
+      "pnl": -267.62,
+      "price": 2.29,
+      "shares": 1968,
+      "side": "SELL",
+      "ticker": "SABR"
+    },
+    {
+      "fees": 2.02,
+      "pnl": null,
+      "price": 108.55,
+      "shares": 10,
+      "side": "BUY",
+      "ticker": "RBRK"
+    },
+    {
+      "fees": 2.029,
+      "pnl": null,
+      "price": 85.0,
+      "shares": 13,
+      "side": "BUY",
+      "ticker": "ECO"
+    },
+    {
+      "fees": 2.089,
+      "pnl": null,
+      "price": 34.44,
+      "shares": 33,
+      "side": "BUY",
+      "ticker": "FIVN"
+    },
+    {
+      "fees": 2.218,
+      "pnl": null,
+      "price": 14.79,
+      "shares": 76,
+      "side": "BUY",
+      "ticker": "RARE"
+    },
+    {
+      "fees": 2.104,
+      "pnl": null,
+      "price": 29.32,
+      "shares": 38,
+      "side": "BUY",
+      "ticker": "SDGR"
+    },
+    {
+      "fees": 4.8375,
+      "pnl": null,
+      "price": 3.035,
+      "shares": 375,
+      "side": "BUY",
+      "ticker": "CYPH"
+    },
+    {
+      "fees": 2.029,
+      "pnl": null,
+      "price": 81.4,
+      "shares": 13,
+      "side": "BUY",
+      "ticker": "TEM"
+    },
+    {
+      "fees": 3.7152,
+      "pnl": null,
+      "price": 3.94,
+      "shares": 288,
+      "side": "BUY",
+      "ticker": "RXT"
+    }
+  ],
+  "holdings": [
+    "CYPH",
+    "ECO",
+    "FIVN",
+    "RARE",
+    "RBRK",
+    "RXT",
+    "SDGR",
+    "TEM"
+  ],
+  "mean": -0.2461,
+  "n_trades_today": 10,
+  "recipe": "union_white_any_h1",
+  "sells": [
+    "BULL",
+    "SABR"
+  ],
+  "state": {
+    "after": "2026-09-18",
+    "cash": 191.57,
+    "pos": {
+      "CYPH": {
+        "close_px": 3.5999999046325684,
+        "cost": 1142.9625321865083,
+        "entry_date": "2026-09-18",
+        "entry_px": 3.0350000858306885,
+        "fee_in": 4.8375,
+        "last_px": 3.0350000858306885,
+        "min_hold": 1,
+        "notional": 1138.1250321865082,
+        "peak_px": 3.0350000858306885,
+        "reason": "\u22120 red + (yday up or major catalyst), then Score; gate cam_bad_max=0,yday_or_catalyst=True; rank list; list yday_gainer,yday_mover; \ud83d\udd35; \u26aa; ret5=+39.5; leftover $1138.61",
+        "shares": 375,
+        "ticker": "CYPH"
+      },
+      "ECO": {
+        "close_px": 84.94999694824219,
+        "cost": 1107.029,
+        "entry_date": "2026-09-18",
+        "entry_px": 85.0,
+        "fee_in": 2.029,
+        "last_px": 85.0,
+        "min_hold": 1,
+        "notional": 1105.0,
+        "peak_px": 85.0,
+        "reason": "\u22120 red + (yday up or major catalyst), then Score; gate cam_bad_max=0,yday_or_catalyst=True; rank list; list flatten; \ud83d\udd35; \u26aa; ret5=+18.3; leftover $1138.61",
+        "shares": 13,
+        "ticker": "ECO"
+      },
+      "FIVN": {
+        "close_px": 32.470001220703125,
+        "cost": 1138.6089546813964,
+        "entry_date": "2026-09-18",
+        "entry_px": 34.439998626708984,
+        "fee_in": 2.089,
+        "last_px": 34.439998626708984,
+        "min_hold": 1,
+        "notional": 1136.5199546813965,
+        "peak_px": 34.439998626708984,
+        "reason": "\u22120 red + (yday up or major catalyst), then Score; gate cam_bad_max=0,yday_or_catalyst=True; rank list; list flatten; \ud83d\udd35; \u26aa; ret5=+14.0; leftover $1138.61",
+        "shares": 33,
+        "ticker": "FIVN"
+      },
+      "RARE": {
+        "close_px": 14.510000228881836,
+        "cost": 1126.2579971008302,
+        "entry_date": "2026-09-18",
+        "entry_px": 14.789999961853027,
+        "fee_in": 2.218,
+        "last_px": 14.789999961853027,
+        "min_hold": 1,
+        "notional": 1124.03999710083,
+        "peak_px": 14.789999961853027,
+        "reason": "\u22120 red + (yday up or major catalyst), then Score; gate cam_bad_max=0,yday_or_catalyst=True; rank list; list probable,yday_gainer; \ud83d\udd35; \u26aa; ret5=+0.7; leftover $1138.61",
+        "shares": 76,
+        "ticker": "RARE"
+      },
+      "RBRK": {
+        "close_px": 106.70999908447266,
+        "cost": 1087.520030517578,
+        "entry_date": "2026-09-18",
+        "entry_px": 108.55000305175781,
+        "fee_in": 2.02,
+        "last_px": 108.55000305175781,
+        "min_hold": 1,
+        "notional": 1085.5000305175781,
+        "peak_px": 108.55000305175781,
+        "reason": "\u22120 red + (yday up or major catalyst), then Score; gate cam_bad_max=0,yday_or_catalyst=True; rank list; list flatten; \u26aa; ret5=+21.3; leftover $1138.61",
+        "shares": 10,
+        "ticker": "RBRK"
+      },
+      "RXT": {
+        "close_px": 3.799999952316284,
+        "cost": 1138.4352164794923,
+        "entry_date": "2026-09-18",
+        "entry_px": 3.940000057220459,
+        "fee_in": 3.7152,
+        "last_px": 3.940000057220459,
+        "min_hold": 1,
+        "notional": 1134.7200164794922,
+        "peak_px": 3.940000057220459,
+        "reason": "\u22120 red + (yday up or major catalyst), then Score; gate cam_bad_max=0,yday_or_catalyst=True; rank list; list yday_gainer; \ud83d\udd35; \u26aa; ret5=+25.2; leftover $1138.61",
+        "shares": 288,
+        "ticker": "RXT"
+      },
+      "SDGR": {
+        "close_px": 29.020000457763672,
+        "cost": 1116.2639884033204,
+        "entry_date": "2026-09-18",
+        "entry_px": 29.31999969482422,
+        "fee_in": 2.104,
+        "last_px": 29.31999969482422,
+        "min_hold": 1,
+        "notional": 1114.1599884033203,
+        "peak_px": 29.31999969482422,
+        "reason": "\u22120 red + (yday up or major catalyst), then Score; gate cam_bad_max=0,yday_or_catalyst=True; rank list; list yday_gainer,yday_mover; \ud83d\udd35; \u26aa; ret5=+60.9; leftover $1138.61",
+        "shares": 38,
+        "ticker": "SDGR"
+      },
+      "TEM": {
+        "close_px": 77.83999633789062,
+        "cost": 1060.2290198364258,
+        "entry_date": "2026-09-18",
+        "entry_px": 81.4000015258789,
+        "fee_in": 2.029,
+        "last_px": 81.4000015258789,
+        "min_hold": 1,
+        "notional": 1058.2000198364258,
+        "peak_px": 81.4000015258789,
+        "reason": "\u22120 red + (yday up or major catalyst), then Score; gate cam_bad_max=0,yday_or_catalyst=True; rank list; list yday_gainer,yday_mover; \ud83d\udd35; \u26aa; ret5=+36.8; leftover $1138.61",
+        "shares": 13,
+        "ticker": "TEM"
+      }
+    },
+    "yday_equity": 9096.37
+  }
+}

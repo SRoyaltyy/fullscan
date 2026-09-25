@@ -1,0 +1,262 @@
+{
+  "buys": [
+    "CYPH",
+    "MRLN",
+    "PALI",
+    "BAK",
+    "JBHT",
+    "INDP",
+    "BTGO"
+  ],
+  "cash": 15669.3,
+  "date": "2026-09-17",
+  "equity": 9907.53,
+  "fees": 64.7351,
+  "fills": [
+    {
+      "fees": 2.122,
+      "pnl": -5.16,
+      "price": 14.33,
+      "shares": 44,
+      "side": "COVER",
+      "ticker": "AVAH"
+    },
+    {
+      "fees": 18.612,
+      "pnl": -77.11,
+      "price": 0.17,
+      "shares": 3960,
+      "side": "COVER",
+      "ticker": "DVLT"
+    },
+    {
+      "fees": 8.1,
+      "pnl": 31.17,
+      "price": 0.78,
+      "shares": 750,
+      "side": "COVER",
+      "ticker": "NMRA"
+    },
+    {
+      "fees": 2.266,
+      "pnl": -13.77,
+      "price": 6.96,
+      "shares": 92,
+      "side": "COVER",
+      "ticker": "PLAY"
+    },
+    {
+      "fees": 2.263,
+      "pnl": -33.69,
+      "price": 7.27,
+      "shares": 91,
+      "side": "COVER",
+      "ticker": "SION"
+    },
+    {
+      "fees": 2.062,
+      "pnl": -9.92,
+      "price": 26.51,
+      "shares": 24,
+      "side": "COVER",
+      "ticker": "WAY"
+    },
+    {
+      "fees": 3.483,
+      "pnl": -9.74,
+      "price": 2.35,
+      "shares": 270,
+      "side": "COVER",
+      "ticker": "ZSQR"
+    },
+    {
+      "fees": 3.5575876708801477,
+      "pnl": null,
+      "price": 2.675,
+      "shares": 270,
+      "side": "SHORT",
+      "ticker": "CYPH"
+    },
+    {
+      "fees": 4.184776986135195,
+      "pnl": null,
+      "price": 2.27,
+      "shares": 318,
+      "side": "SHORT",
+      "ticker": "MRLN"
+    },
+    {
+      "fees": 5.426101369863013,
+      "pnl": null,
+      "price": 1.75,
+      "shares": 413,
+      "side": "SHORT",
+      "ticker": "PALI"
+    },
+    {
+      "fees": 5.360685205266248,
+      "pnl": null,
+      "price": 1.77,
+      "shares": 408,
+      "side": "SHORT",
+      "ticker": "BAK"
+    },
+    {
+      "fees": 2.0386109594057684,
+      "pnl": null,
+      "price": 238.6,
+      "shares": 3,
+      "side": "SHORT",
+      "ticker": "JBHT"
+    },
+    {
+      "fees": 2.891299999713898,
+      "pnl": null,
+      "price": 3.3,
+      "shares": 219,
+      "side": "SHORT",
+      "ticker": "INDP"
+    },
+    {
+      "fees": 2.3680698628412533,
+      "pnl": null,
+      "price": 6.56,
+      "shares": 110,
+      "side": "SHORT",
+      "ticker": "BTGO"
+    }
+  ],
+  "holdings": [
+    "ALHC",
+    "BAK",
+    "BTGO",
+    "CYPH",
+    "INDP",
+    "JBHT",
+    "MRLN",
+    "PALI"
+  ],
+  "mean": -2.5497,
+  "n_trades_today": 14,
+  "recipe": "short_last_red_h1",
+  "sells": [
+    "AVAH",
+    "DVLT",
+    "NMRA",
+    "PLAY",
+    "SION",
+    "WAY",
+    "ZSQR"
+  ],
+  "state": {
+    "after": "2026-09-17",
+    "cash": 15669.3,
+    "pos": {
+      "ALHC": {
+        "close_px": 8.699999809265137,
+        "cost": 2.2103136989488994,
+        "entry_date": "2026-09-16",
+        "entry_px": 10.300000190734863,
+        "fee_in": 2.2103136989488994,
+        "last_px": 8.579999923706055,
+        "notional": 628.3000116348267,
+        "peak_px": 8.579999923706055,
+        "reason": "last bar red; gate last_red=True; list yday_mover; ret5=-23.0; leftover $633.63",
+        "shares": 61,
+        "ticker": "ALHC"
+      },
+      "BAK": {
+        "close_px": 1.7899999618530273,
+        "cost": 5.360685205266248,
+        "entry_date": "2026-09-17",
+        "entry_px": 1.7699999809265137,
+        "fee_in": 5.360685205266248,
+        "last_px": 1.7699999809265137,
+        "notional": 722.1599922180176,
+        "peak_px": 1.7699999809265137,
+        "reason": "last bar red; gate last_red=True; list yday_mover; ret5=-10.2; leftover $723.05",
+        "shares": 408,
+        "ticker": "BAK"
+      },
+      "BTGO": {
+        "close_px": 6.760000228881836,
+        "cost": 2.3680698628412533,
+        "entry_date": "2026-09-17",
+        "entry_px": 6.559999942779541,
+        "fee_in": 2.3680698628412533,
+        "last_px": 6.559999942779541,
+        "notional": 721.5999937057495,
+        "peak_px": 6.559999942779541,
+        "reason": "last bar red; gate last_red=True; list yday_mover; ret5=-14.6; leftover $723.05",
+        "shares": 110,
+        "ticker": "BTGO"
+      },
+      "CYPH": {
+        "close_px": 3.069999933242798,
+        "cost": 3.5575876708801477,
+        "entry_date": "2026-09-17",
+        "entry_px": 2.674999952316284,
+        "fee_in": 3.5575876708801477,
+        "last_px": 2.674999952316284,
+        "notional": 722.2499871253967,
+        "peak_px": 2.674999952316284,
+        "reason": "last bar red; gate last_red=True; list yday_gainer; \ud83d\udd35; ret5=-0.4; leftover $723.05",
+        "shares": 270,
+        "ticker": "CYPH"
+      },
+      "INDP": {
+        "close_px": 3.930000066757202,
+        "cost": 2.891299999713898,
+        "entry_date": "2026-09-17",
+        "entry_px": 3.299999952316284,
+        "fee_in": 2.891299999713898,
+        "last_px": 3.299999952316284,
+        "notional": 722.6999895572662,
+        "peak_px": 3.299999952316284,
+        "reason": "last bar red; gate last_red=True; list yday_mover; ret5=+54.3; leftover $723.05",
+        "shares": 219,
+        "ticker": "INDP"
+      },
+      "JBHT": {
+        "close_px": 236.8000030517578,
+        "cost": 2.0386109594057684,
+        "entry_date": "2026-09-17",
+        "entry_px": 238.60000610351562,
+        "fee_in": 2.0386109594057684,
+        "last_px": 238.60000610351562,
+        "notional": 715.8000183105469,
+        "peak_px": 238.60000610351562,
+        "reason": "last bar red; gate last_red=True; list yday_mover; ret5=-11.6; leftover $723.05",
+        "shares": 3,
+        "ticker": "JBHT"
+      },
+      "MRLN": {
+        "close_px": 2.059999942779541,
+        "cost": 4.184776986135195,
+        "entry_date": "2026-09-17",
+        "entry_px": 2.2699999809265137,
+        "fee_in": 4.184776986135195,
+        "last_px": 2.2699999809265137,
+        "notional": 721.8599939346313,
+        "peak_px": 2.2699999809265137,
+        "reason": "last bar red; gate last_red=True; list yday_mover; \ud83d\udd35; ret5=-29.6; leftover $723.05",
+        "shares": 318,
+        "ticker": "MRLN"
+      },
+      "PALI": {
+        "close_px": 1.7000000476837158,
+        "cost": 5.426101369863013,
+        "entry_date": "2026-09-17",
+        "entry_px": 1.75,
+        "fee_in": 5.426101369863013,
+        "last_px": 1.75,
+        "notional": 722.75,
+        "peak_px": 1.75,
+        "reason": "last bar red; gate last_red=True; list yday_mover; ret5=-17.6; leftover $723.05",
+        "shares": 413,
+        "ticker": "PALI"
+      }
+    },
+    "yday_equity": 9907.53
+  }
+}

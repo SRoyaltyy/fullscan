@@ -1,0 +1,19 @@
+{
+  "buys": [],
+  "cash": 8747.83,
+  "date": "2026-09-15",
+  "equity": 8747.83,
+  "fees": 0,
+  "fills": [],
+  "holdings": [],
+  "mean": 0.0,
+  "n_trades_today": 0,
+  "recipe": "flatten_h5_rankw",
+  "sells": [],
+  "state": {
+    "after": "2026-09-15",
+    "cash": 8747.83,
+    "pos": {},
+    "yday_equity": 8747.83
+  }
+}

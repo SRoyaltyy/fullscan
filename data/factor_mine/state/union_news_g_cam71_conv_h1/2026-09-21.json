@@ -1,0 +1,75 @@
+{
+  "buys": [
+    "ISRG"
+  ],
+  "cash": 178.06,
+  "date": "2026-09-21",
+  "equity": 8612.71,
+  "fees": 8.6443,
+  "fills": [
+    {
+      "fees": 2.1213,
+      "pnl": -388.19,
+      "price": 231.62,
+      "shares": 25,
+      "side": "SELL",
+      "ticker": "CRWD"
+    },
+    {
+      "fees": 2.1846,
+      "pnl": -11.31,
+      "price": 22.78,
+      "shares": 58,
+      "side": "SELL",
+      "ticker": "GME"
+    },
+    {
+      "fees": 2.2854,
+      "pnl": -23.45,
+      "price": 14.58,
+      "shares": 90,
+      "side": "SELL",
+      "ticker": "RARE"
+    },
+    {
+      "fees": 2.053,
+      "pnl": null,
+      "price": 393.89,
+      "shares": 21,
+      "side": "BUY",
+      "ticker": "ISRG"
+    }
+  ],
+  "holdings": [
+    "ISRG"
+  ],
+  "mean": 0.2093,
+  "n_trades_today": 4,
+  "recipe": "union_news_g_cam71_conv_h1",
+  "sells": [
+    "CRWD",
+    "GME",
+    "RARE"
+  ],
+  "state": {
+    "after": "2026-09-21",
+    "cash": 178.06,
+    "pos": {
+      "ISRG": {
+        "close_px": 401.6499938964844,
+        "cost": 8273.743307617187,
+        "entry_date": "2026-09-21",
+        "entry_px": 393.8900146484375,
+        "fee_in": 2.053,
+        "last_px": 393.8900146484375,
+        "min_hold": 1,
+        "notional": 8271.690307617188,
+        "peak_px": 393.8900146484375,
+        "reason": "news\ud83d\udfe2 +7 \u2212\u22641; 70% leftover if #1 net \u2265 5; gate news=good,n_pos_min=7,cam_bad_max=1; rank cond; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+6.6; leftover $8451.80",
+        "shares": 21,
+        "ticker": "ISRG"
+      }
+    },
+    "yday_equity": 8612.71
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "buys": [
+    "EU"
+  ],
+  "cash": 1.76,
+  "date": "2026-09-23",
+  "equity": 9714.18,
+  "fees": 121.4728,
+  "fills": [
+    {
+      "fees": 2.3134,
+      "pnl": -4.6,
+      "price": 12.24,
+      "shares": 99,
+      "side": "SELL",
+      "ticker": "APPS"
+    },
+    {
+      "fees": 2.163,
+      "pnl": -15.02,
+      "price": 23.3,
+      "shares": 51,
+      "side": "SELL",
+      "ticker": "ARQQ"
+    },
+    {
+      "fees": 2.106,
+      "pnl": 52.93,
+      "price": 38.905,
+      "shares": 32,
+      "side": "SELL",
+      "ticker": "FIVN"
+    },
+    {
+      "fees": 2.139,
+      "pnl": -95.42,
+      "price": 25.9,
+      "shares": 43,
+      "side": "SELL",
+      "ticker": "FSLY"
+    },
+    {
+      "fees": 2.115,
+      "pnl": -25.21,
+      "price": 33.4,
+      "shares": 35,
+      "side": "SELL",
+      "ticker": "GDS"
+    },
+    {
+      "fees": 2.04,
+      "pnl": -16.96,
+      "price": 112.46,
+      "shares": 10,
+      "side": "SELL",
+      "ticker": "RBRK"
+    },
+    {
+      "fees": 3.8775,
+      "pnl": -16.58,
+      "price": 4.07,
+      "shares": 296,
+      "side": "SELL",
+      "ticker": "RXT"
+    },
+    {
+      "fees": 2.022,
+      "pnl": 49.58,
+      "price": 285.0,
+      "shares": 4,
+      "side": "SELL",
+      "ticker": "TWLO"
+    },
+    {
+      "fees": 102.6969,
+      "pnl": null,
+      "price": 1.2,
+      "shares": 7961,
+      "side": "BUY",
+      "ticker": "EU"
+    }
+  ],
+  "holdings": [
+    "EU"
+  ],
+  "mean": 0.3528,
+  "n_trades_today": 9,
+  "recipe": "union_clk_hold_vs_sector_h1",
+  "sells": [
+    "APPS",
+    "ARQQ",
+    "FIVN",
+    "FSLY",
+    "GDS",
+    "RBRK",
+    "RXT",
+    "TWLO"
+  ],
+  "state": {
+    "after": "2026-09-23",
+    "cash": 1.76,
+    "pos": {
+      "EU": {
+        "close_px": 1.2200000286102295,
+        "cost": 9655.897279610062,
+        "entry_date": "2026-09-23",
+        "entry_px": 1.2000000476837158,
+        "fee_in": 102.6969,
+        "last_px": 1.2000000476837158,
+        "min_hold": 1,
+        "notional": 9553.200379610062,
+        "peak_px": 1.2000000476837158,
+        "reason": "Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+30.1; leftover $9657.65",
+        "shares": 7961,
+        "ticker": "EU"
+      }
+    },
+    "yday_equity": 9714.18
+  }
+}

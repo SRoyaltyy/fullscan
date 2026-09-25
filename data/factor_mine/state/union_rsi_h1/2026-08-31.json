@@ -1,0 +1,101 @@
+{
+  "buys": [],
+  "cash": 8358.78,
+  "date": "2026-08-31",
+  "equity": 9511.17,
+  "fees": 17.501,
+  "fills": [
+    {
+      "fees": 2.2628,
+      "pnl": -15.29,
+      "price": 14.88,
+      "shares": 83,
+      "side": "SELL",
+      "ticker": "BBAR"
+    },
+    {
+      "fees": 2.022,
+      "pnl": -37.34,
+      "price": 298.01,
+      "shares": 4,
+      "side": "SELL",
+      "ticker": "DY"
+    },
+    {
+      "fees": 4.2173,
+      "pnl": -166.15,
+      "price": 3.39,
+      "shares": 322,
+      "side": "SELL",
+      "ticker": "FINV"
+    },
+    {
+      "fees": 2.2945,
+      "pnl": 11.25,
+      "price": 13.54,
+      "shares": 93,
+      "side": "SELL",
+      "ticker": "JKS"
+    },
+    {
+      "fees": 2.2248,
+      "pnl": -66.55,
+      "price": 16.685,
+      "shares": 71,
+      "side": "SELL",
+      "ticker": "QBTS"
+    },
+    {
+      "fees": 2.4306,
+      "pnl": -66.03,
+      "price": 8.7,
+      "shares": 136,
+      "side": "SELL",
+      "ticker": "QFIN"
+    },
+    {
+      "fees": 2.049,
+      "pnl": -37.88,
+      "price": 89.15,
+      "shares": 13,
+      "side": "SELL",
+      "ticker": "SYRE"
+    }
+  ],
+  "holdings": [
+    "LX"
+  ],
+  "mean": -1.4656,
+  "n_trades_today": 7,
+  "recipe": "union_rsi_h1",
+  "sells": [
+    "BBAR",
+    "DY",
+    "FINV",
+    "JKS",
+    "QBTS",
+    "QFIN",
+    "SYRE"
+  ],
+  "state": {
+    "after": "2026-08-31",
+    "cash": 8358.78,
+    "pos": {
+      "LX": {
+        "close_px": 1.0700000524520874,
+        "cost": 1263.2132640512466,
+        "entry_date": "2026-08-28",
+        "entry_px": 1.159999966621399,
+        "fee_in": 13.8933,
+        "last_px": 1.0099999904632568,
+        "min_hold": 1,
+        "notional": 1249.3199640512466,
+        "peak_px": 1.159999966621399,
+        "reason": "rank by rsi; rank rsi; list overnight; ret5=-13.8; leftover $1250.00",
+        "shares": 1077,
+        "ticker": "LX"
+      }
+    },
+    "yday_equity": 9511.17
+  }
+}

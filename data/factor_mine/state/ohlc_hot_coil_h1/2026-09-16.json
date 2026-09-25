@@ -1,0 +1,167 @@
+{
+  "buys": [
+    "INSW",
+    "META",
+    "WST",
+    "NTRA",
+    "SM",
+    "QCOM"
+  ],
+  "cash": 830.72,
+  "date": "2026-09-16",
+  "equity": 9652.56,
+  "fees": 12.159,
+  "fills": [
+    {
+      "fees": 2.035,
+      "pnl": null,
+      "price": 108.0,
+      "shares": 15,
+      "side": "BUY",
+      "ticker": "INSW"
+    },
+    {
+      "fees": 1.996,
+      "pnl": null,
+      "price": 679.91,
+      "shares": 2,
+      "side": "BUY",
+      "ticker": "META"
+    },
+    {
+      "fees": 2.002,
+      "pnl": null,
+      "price": 363.11,
+      "shares": 4,
+      "side": "BUY",
+      "ticker": "WST"
+    },
+    {
+      "fees": 2.002,
+      "pnl": null,
+      "price": 350.18,
+      "shares": 4,
+      "side": "BUY",
+      "ticker": "NTRA"
+    },
+    {
+      "fees": 2.11,
+      "pnl": null,
+      "price": 39.99,
+      "shares": 40,
+      "side": "BUY",
+      "ticker": "SM"
+    },
+    {
+      "fees": 2.014,
+      "pnl": null,
+      "price": 189.17,
+      "shares": 8,
+      "side": "BUY",
+      "ticker": "QCOM"
+    }
+  ],
+  "holdings": [
+    "INSW",
+    "META",
+    "NTRA",
+    "QCOM",
+    "SM",
+    "WST"
+  ],
+  "mean": -1.392,
+  "n_trades_today": 6,
+  "recipe": "ohlc_hot_coil_h1",
+  "sells": [],
+  "state": {
+    "after": "2026-09-16",
+    "cash": 830.72,
+    "pos": {
+      "INSW": {
+        "close_px": 109.37999725341797,
+        "cost": 1622.035,
+        "entry_date": "2026-09-16",
+        "entry_px": 108.0,
+        "fee_in": 2.035,
+        "last_px": 108.0,
+        "min_hold": 1,
+        "notional": 1620.0,
+        "peak_px": 108.0,
+        "reason": "hot list \u2229 not exploded; gate ret_5_min=0.0,ret_5_max=10.0,rvol_max=2.2; list ohlc_hot; \ud83d\udd35; ret5=+9.2; leftover $1631.47",
+        "shares": 15,
+        "ticker": "INSW"
+      },
+      "META": {
+        "close_px": 673.3099975585938,
+        "cost": 1361.8159462890626,
+        "entry_date": "2026-09-16",
+        "entry_px": 679.9099731445312,
+        "fee_in": 1.996,
+        "last_px": 679.9099731445312,
+        "min_hold": 1,
+        "notional": 1359.8199462890625,
+        "peak_px": 679.9099731445312,
+        "reason": "hot list \u2229 not exploded; gate ret_5_min=0.0,ret_5_max=10.0,rvol_max=2.2; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+9.3; leftover $1631.47",
+        "shares": 2,
+        "ticker": "META"
+      },
+      "NTRA": {
+        "close_px": 345.3399963378906,
+        "cost": 1402.721970703125,
+        "entry_date": "2026-09-16",
+        "entry_px": 350.17999267578125,
+        "fee_in": 2.002,
+        "last_px": 350.17999267578125,
+        "min_hold": 1,
+        "notional": 1400.719970703125,
+        "peak_px": 350.17999267578125,
+        "reason": "hot list \u2229 not exploded; gate ret_5_min=0.0,ret_5_max=10.0,rvol_max=2.2; list ohlc_hot; \u26aa; ret5=+8.2; leftover $1631.47",
+        "shares": 4,
+        "ticker": "NTRA"
+      },
+      "QCOM": {
+        "close_px": 184.83999633789062,
+        "cost": 1515.3739853515624,
+        "entry_date": "2026-09-16",
+        "entry_px": 189.1699981689453,
+        "fee_in": 2.014,
+        "last_px": 189.1699981689453,
+        "min_hold": 1,
+        "notional": 1513.3599853515625,
+        "peak_px": 189.1699981689453,
+        "reason": "hot list \u2229 not exploded; gate ret_5_min=0.0,ret_5_max=10.0,rvol_max=2.2; list ohlc_hot; \ud83d\udd35; ret5=+7.9; leftover $1631.47",
+        "shares": 8,
+        "ticker": "QCOM"
+      },
+      "SM": {
+        "close_px": 38.15999984741211,
+        "cost": 1601.7100671386718,
+        "entry_date": "2026-09-16",
+        "entry_px": 39.9900016784668,
+        "fee_in": 2.11,
+        "last_px": 39.9900016784668,
+        "min_hold": 1,
+        "notional": 1599.6000671386719,
+        "peak_px": 39.9900016784668,
+        "reason": "hot list \u2229 not exploded; gate ret_5_min=0.0,ret_5_max=10.0,rvol_max=2.2; list ohlc_hot; \ud83d\udd35; ret5=+9.3; leftover $1631.47",
+        "shares": 40,
+        "ticker": "SM"
+      },
+      "WST": {
+        "close_px": 362.010009765625,
+        "cost": 1454.44194140625,
+        "entry_date": "2026-09-16",
+        "entry_px": 363.1099853515625,
+        "fee_in": 2.002,
+        "last_px": 363.1099853515625,
+        "min_hold": 1,
+        "notional": 1452.43994140625,
+        "peak_px": 363.1099853515625,
+        "reason": "hot list \u2229 not exploded; gate ret_5_min=0.0,ret_5_max=10.0,rvol_max=2.2; list ohlc_hot; \u26aa; ret5=+8.1; leftover $1631.47",
+        "shares": 4,
+        "ticker": "WST"
+      }
+    },
+    "yday_equity": 9652.56
+  }
+}

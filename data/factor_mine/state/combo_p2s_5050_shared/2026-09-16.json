@@ -1,0 +1,160 @@
+{
+  "buys": [
+    "SM",
+    "QCOM",
+    "BBNX",
+    "GFR"
+  ],
+  "cash": 10275.76,
+  "date": "2026-09-16",
+  "equity": 9652.0,
+  "fees": 32.1258,
+  "fills": [
+    {
+      "fees": 8.4624,
+      "pnl": 101.0,
+      "price": 1.85,
+      "shares": 656,
+      "side": "COVER",
+      "ticker": "CRDL"
+    },
+    {
+      "fees": 5.0955,
+      "pnl": -160.4,
+      "price": 3.75,
+      "shares": 395,
+      "side": "COVER",
+      "ticker": "MYGN"
+    },
+    {
+      "fees": 2.023,
+      "pnl": -62.9,
+      "price": 118.18,
+      "shares": 11,
+      "side": "COVER",
+      "ticker": "QRVO"
+    },
+    {
+      "fees": 4.8762,
+      "pnl": -183.74,
+      "price": 3.98,
+      "shares": 378,
+      "side": "COVER",
+      "ticker": "RWT"
+    },
+    {
+      "fees": 2.179,
+      "pnl": null,
+      "price": 39.99,
+      "shares": 63,
+      "side": "BUY",
+      "ticker": "SM"
+    },
+    {
+      "fees": 2.029,
+      "pnl": null,
+      "price": 189.17,
+      "shares": 13,
+      "side": "BUY",
+      "ticker": "QCOM"
+    },
+    {
+      "fees": 2.5101413721372,
+      "pnl": null,
+      "price": 18.61,
+      "shares": 136,
+      "side": "SHORT",
+      "ticker": "BBNX"
+    },
+    {
+      "fees": 4.950509862236127,
+      "pnl": null,
+      "price": 6.83,
+      "shares": 372,
+      "side": "SHORT",
+      "ticker": "GFR"
+    }
+  ],
+  "holdings": [
+    "BBNX",
+    "GFR",
+    "QCOM",
+    "SM"
+  ],
+  "mean": -5.2907,
+  "n_trades_today": 8,
+  "recipe": "combo_p2s_5050_shared",
+  "sells": [
+    "CRDL",
+    "MYGN",
+    "QRVO",
+    "RWT"
+  ],
+  "state": {
+    "after": "2026-09-16",
+    "cash": 10275.76,
+    "pos": {
+      "BBNX": {
+        "close_px": 22.18000030517578,
+        "cost": 2.5101413721372,
+        "entry_date": "2026-09-16",
+        "entry_px": 18.610000610351562,
+        "fee_in": 2.5101413721372,
+        "last_px": 18.610000610351562,
+        "notional": 2530.9600830078125,
+        "owner": "short_news_r_h3",
+        "peak_px": 18.610000610351562,
+        "reason": "news\ud83d\udd34; gate news=bad; list probable,yday_gainer,yday_mover; ret5=-0.5; combo leftover $2547.52; owner short_news_r_h3",
+        "shares": 136,
+        "side": "short",
+        "ticker": "BBNX"
+      },
+      "GFR": {
+        "close_px": 6.489999771118164,
+        "cost": 4.950509862236127,
+        "entry_date": "2026-09-16",
+        "entry_px": 6.829999923706055,
+        "fee_in": 4.950509862236127,
+        "last_px": 6.829999923706055,
+        "notional": 2540.7599716186523,
+        "owner": "short_news_r_h3",
+        "peak_px": 6.829999923706055,
+        "reason": "news\ud83d\udd34; gate news=bad; list ohlc_hot; ret5=+11.2; combo leftover $2547.52; owner short_news_r_h3",
+        "shares": 372,
+        "side": "short",
+        "ticker": "GFR"
+      },
+      "QCOM": {
+        "close_px": 184.83999633789062,
+        "cost": 2461.238976196289,
+        "entry_date": "2026-09-16",
+        "entry_px": 189.1699981689453,
+        "fee_in": 2.029,
+        "last_px": 189.1699981689453,
+        "notional": 2459.209976196289,
+        "owner": "union_news_pack_net2_h1",
+        "peak_px": 189.1699981689453,
+        "reason": "packet\ud83d\udfe2 and camera net \u2265 2; gate news_box=good,cam_net_min=2; rank cond; list ohlc_hot; \ud83d\udd35; ret5=+7.9; combo leftover $2548.57; owner union_news_pack_net2_h1",
+        "shares": 13,
+        "side": "long",
+        "ticker": "QCOM"
+      },
+      "SM": {
+        "close_px": 38.15999984741211,
+        "cost": 2521.5491057434083,
+        "entry_date": "2026-09-16",
+        "entry_px": 39.9900016784668,
+        "fee_in": 2.179,
+        "last_px": 39.9900016784668,
+        "notional": 2519.370105743408,
+        "owner": "union_news_pack_net2_h1",
+        "peak_px": 39.9900016784668,
+        "reason": "packet\ud83d\udfe2 and camera net \u2265 2; gate news_box=good,cam_net_min=2; rank cond; list ohlc_hot; \ud83d\udd35; ret5=+9.3; combo leftover $2548.57; owner union_news_pack_net2_h1",
+        "shares": 63,
+        "side": "long",
+        "ticker": "SM"
+      }
+    },
+    "yday_equity": 9652.0
+  }
+}

@@ -1,0 +1,119 @@
+{
+  "buys": [
+    "LULU",
+    "MIR",
+    "BE",
+    "SCZM"
+  ],
+  "cash": 140.13,
+  "date": "2026-09-04",
+  "equity": 9960.73,
+  "fees": 9.6318,
+  "fills": [
+    {
+      "fees": 2.062,
+      "pnl": null,
+      "price": 98.15,
+      "shares": 24,
+      "side": "BUY",
+      "ticker": "LULU"
+    },
+    {
+      "fees": 2.428,
+      "pnl": null,
+      "price": 16.6,
+      "shares": 146,
+      "side": "BUY",
+      "ticker": "MIR"
+    },
+    {
+      "fees": 2.02,
+      "pnl": null,
+      "price": 236.82,
+      "shares": 10,
+      "side": "BUY",
+      "ticker": "BE"
+    },
+    {
+      "fees": 3.1218,
+      "pnl": null,
+      "price": 10.03,
+      "shares": 242,
+      "side": "BUY",
+      "ticker": "SCZM"
+    }
+  ],
+  "holdings": [
+    "BE",
+    "LULU",
+    "MIR",
+    "SCZM"
+  ],
+  "mean": 2.4301,
+  "n_trades_today": 4,
+  "recipe": "union_clk_hold_vs_sector_opp_h1",
+  "sells": [],
+  "state": {
+    "after": "2026-09-04",
+    "cash": 140.13,
+    "pos": {
+      "BE": {
+        "close_px": 252.8699951171875,
+        "cost": 2370.2200732421875,
+        "entry_date": "2026-09-04",
+        "entry_px": 236.82000732421875,
+        "fee_in": 2.02,
+        "last_px": 236.82000732421875,
+        "min_hold": 1,
+        "notional": 2368.2000732421875,
+        "peak_px": 236.82000732421875,
+        "reason": "Clock-B #6 \u2229 Theme Radar T\u22121 oppset; gate clk_hold_vs_sector=True,oppset=True; rank opp_rvol; list ohlc_hot; ret5=+8.1; leftover $2431.11",
+        "shares": 10,
+        "ticker": "BE"
+      },
+      "LULU": {
+        "close_px": 100.61000061035156,
+        "cost": 2357.6620366210936,
+        "entry_date": "2026-09-04",
+        "entry_px": 98.1500015258789,
+        "fee_in": 2.062,
+        "last_px": 98.1500015258789,
+        "min_hold": 1,
+        "notional": 2355.6000366210938,
+        "peak_px": 98.1500015258789,
+        "reason": "Clock-B #6 \u2229 Theme Radar T\u22121 oppset; gate clk_hold_vs_sector=True,oppset=True; rank opp_rvol; list earn_react; ret5=+5.9; leftover $2431.11",
+        "shares": 24,
+        "ticker": "LULU"
+      },
+      "MIR": {
+        "close_px": 16.93000030517578,
+        "cost": 2426.02805569458,
+        "entry_date": "2026-09-04",
+        "entry_px": 16.600000381469727,
+        "fee_in": 2.428,
+        "last_px": 16.600000381469727,
+        "min_hold": 1,
+        "notional": 2423.60005569458,
+        "peak_px": 16.600000381469727,
+        "reason": "Clock-B #6 \u2229 Theme Radar T\u22121 oppset; gate clk_hold_vs_sector=True,oppset=True; rank opp_rvol; list ohlc_hot; ret5=+12.9; leftover $2431.11",
+        "shares": 146,
+        "ticker": "MIR"
+      },
+      "SCZM": {
+        "close_px": 9.9399995803833,
+        "cost": 2430.381735379028,
+        "entry_date": "2026-09-04",
+        "entry_px": 10.029999732971191,
+        "fee_in": 3.1218,
+        "last_px": 10.029999732971191,
+        "min_hold": 1,
+        "notional": 2427.2599353790283,
+        "peak_px": 10.029999732971191,
+        "reason": "Clock-B #6 \u2229 Theme Radar T\u22121 oppset; gate clk_hold_vs_sector=True,oppset=True; rank opp_rvol; list yday_gainer; ret5=+4.0; leftover $2431.11",
+        "shares": 242,
+        "ticker": "SCZM"
+      }
+    },
+    "yday_equity": 9960.73
+  }
+}

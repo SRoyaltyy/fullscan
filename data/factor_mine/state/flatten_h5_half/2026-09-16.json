@@ -1,0 +1,209 @@
+{
+  "buys": [
+    "IQV",
+    "RDNT",
+    "AVAH",
+    "BLFS"
+  ],
+  "cash": 3753.46,
+  "date": "2026-09-16",
+  "equity": 9308.84,
+  "fees": 8.26,
+  "fills": [
+    {
+      "fees": 1.999,
+      "pnl": null,
+      "price": 270.89,
+      "shares": 3,
+      "side": "BUY",
+      "ticker": "IQV"
+    },
+    {
+      "fees": 2.023,
+      "pnl": null,
+      "price": 77.12,
+      "shares": 11,
+      "side": "BUY",
+      "ticker": "RDNT"
+    },
+    {
+      "fees": 2.176,
+      "pnl": null,
+      "price": 14.31,
+      "shares": 62,
+      "side": "BUY",
+      "ticker": "AVAH"
+    },
+    {
+      "fees": 2.062,
+      "pnl": null,
+      "price": 36.46,
+      "shares": 24,
+      "side": "BUY",
+      "ticker": "BLFS"
+    }
+  ],
+  "holdings": [
+    "AUPH",
+    "AVAH",
+    "BLFS",
+    "COHU",
+    "IQV",
+    "NVT",
+    "ORCL",
+    "OVID",
+    "RDNT",
+    "SANM"
+  ],
+  "mean": -0.0142,
+  "n_trades_today": 4,
+  "recipe": "flatten_h5_half",
+  "sells": [],
+  "state": {
+    "after": "2026-09-16",
+    "cash": 3753.46,
+    "pos": {
+      "AUPH": {
+        "close_px": 16.959999084472656,
+        "cost": 409.0650171661377,
+        "entry_date": "2026-09-11",
+        "entry_px": 16.280000686645508,
+        "fee_in": 2.065,
+        "last_px": 16.15999984741211,
+        "min_hold": 5,
+        "notional": 407.0000171661377,
+        "peak_px": 16.350000381469727,
+        "reason": "deploy half leftover; list flatten; wish-list (live io HOLD \u2014 not a ticket); ret5=-0.1; leftover $418.40",
+        "shares": 25,
+        "ticker": "AUPH"
+      },
+      "AVAH": {
+        "close_px": 14.260000228881836,
+        "cost": 889.3960260162354,
+        "entry_date": "2026-09-16",
+        "entry_px": 14.3100004196167,
+        "fee_in": 2.176,
+        "last_px": 14.3100004196167,
+        "min_hold": 5,
+        "notional": 887.2200260162354,
+        "peak_px": 14.3100004196167,
+        "reason": "deploy half leftover; list flatten; wish-list (live io HOLD \u2014 not a ticket); \u26aa; ret5=+4.8; leftover $898.12",
+        "shares": 62,
+        "ticker": "AVAH"
+      },
+      "BLFS": {
+        "close_px": 36.11000061035156,
+        "cost": 877.1019780273438,
+        "entry_date": "2026-09-16",
+        "entry_px": 36.459999084472656,
+        "fee_in": 2.062,
+        "last_px": 36.459999084472656,
+        "min_hold": 5,
+        "notional": 875.0399780273438,
+        "peak_px": 36.459999084472656,
+        "reason": "deploy half leftover; list flatten; wish-list (live io HOLD \u2014 not a ticket); \ud83d\udd35; \u26aa; ret5=+2.9; leftover $898.12",
+        "shares": 24,
+        "ticker": "BLFS"
+      },
+      "COHU": {
+        "close_px": 51.060001373291016,
+        "cost": 394.64100106811526,
+        "entry_date": "2026-09-11",
+        "entry_px": 56.09000015258789,
+        "fee_in": 2.011,
+        "last_px": 51.290000915527344,
+        "min_hold": 5,
+        "notional": 392.63000106811523,
+        "peak_px": 56.09000015258789,
+        "reason": "deploy half leftover; list flatten; wish-list (live io HOLD \u2014 not a ticket); \ud83d\udd35; \u26aa; ret5=+19.0; leftover $418.40",
+        "shares": 7,
+        "ticker": "COHU"
+      },
+      "IQV": {
+        "close_px": 268.82000732421875,
+        "cost": 814.6690439453125,
+        "entry_date": "2026-09-16",
+        "entry_px": 270.8900146484375,
+        "fee_in": 1.999,
+        "last_px": 270.8900146484375,
+        "min_hold": 5,
+        "notional": 812.6700439453125,
+        "peak_px": 270.8900146484375,
+        "reason": "deploy half leftover; list flatten; wish-list (live io HOLD \u2014 not a ticket); \u26aa; ret5=+4.0; leftover $898.12",
+        "shares": 3,
+        "ticker": "IQV"
+      },
+      "NVT": {
+        "close_px": 147.64999389648438,
+        "cost": 317.55599755859373,
+        "entry_date": "2026-09-11",
+        "entry_px": 157.77999877929688,
+        "fee_in": 1.996,
+        "last_px": 147.7899932861328,
+        "min_hold": 5,
+        "notional": 315.55999755859375,
+        "peak_px": 157.77999877929688,
+        "reason": "deploy half leftover; list flatten; wish-list (live io HOLD \u2014 not a ticket); \ud83d\udd35; ret5=+2.0; leftover $418.40",
+        "shares": 2,
+        "ticker": "NVT"
+      },
+      "ORCL": {
+        "close_px": 143.16000366210938,
+        "cost": 330.8559853515625,
+        "entry_date": "2026-09-11",
+        "entry_px": 164.42999267578125,
+        "fee_in": 1.996,
+        "last_px": 140.02999877929688,
+        "min_hold": 5,
+        "notional": 328.8599853515625,
+        "peak_px": 164.42999267578125,
+        "reason": "deploy half leftover; list flatten,earn_react; wish-list (live io HOLD \u2014 not a ticket); \ud83d\udd35; \u26aa; ret5=-0.7; leftover $418.40",
+        "shares": 2,
+        "ticker": "ORCL"
+      },
+      "OVID": {
+        "close_px": 2.680000066757202,
+        "cost": 420.1390029182434,
+        "entry_date": "2026-09-11",
+        "entry_px": 2.7300000190734863,
+        "fee_in": 2.449,
+        "last_px": 2.7200000286102295,
+        "min_hold": 5,
+        "notional": 417.6900029182434,
+        "peak_px": 2.755000114440918,
+        "reason": "deploy half leftover; list flatten; wish-list (live io HOLD \u2014 not a ticket); ret5=-5.4; leftover $418.40",
+        "shares": 153,
+        "ticker": "OVID"
+      },
+      "RDNT": {
+        "close_px": 75.77999877929688,
+        "cost": 850.3430302124024,
+        "entry_date": "2026-09-16",
+        "entry_px": 77.12000274658203,
+        "fee_in": 2.023,
+        "last_px": 77.12000274658203,
+        "min_hold": 5,
+        "notional": 848.3200302124023,
+        "peak_px": 77.12000274658203,
+        "reason": "deploy half leftover; list flatten; wish-list (live io HOLD \u2014 not a ticket); \u26aa; ret5=+7.2; leftover $898.12",
+        "shares": 11,
+        "ticker": "RDNT"
+      },
+      "SANM": {
+        "close_px": 195.75,
+        "cost": 415.67599267578123,
+        "entry_date": "2026-09-11",
+        "entry_px": 206.83999633789062,
+        "fee_in": 1.996,
+        "last_px": 194.83999633789062,
+        "min_hold": 5,
+        "notional": 413.67999267578125,
+        "peak_px": 206.83999633789062,
+        "reason": "deploy half leftover; list flatten; wish-list (live io HOLD \u2014 not a ticket); ret5=+3.9; leftover $418.40",
+        "shares": 2,
+        "ticker": "SANM"
+      }
+    },
+    "yday_equity": 9308.84
+  }
+}

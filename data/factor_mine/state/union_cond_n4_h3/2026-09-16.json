@@ -1,0 +1,156 @@
+{
+  "buys": [
+    "CRWD",
+    "DBX",
+    "OKTA",
+    "WAY"
+  ],
+  "cash": 209.41,
+  "date": "2026-09-16",
+  "equity": 8359.33,
+  "fees": 16.7649,
+  "fills": [
+    {
+      "fees": 2.1356,
+      "pnl": -162.25,
+      "price": 48.6,
+      "shares": 40,
+      "side": "SELL",
+      "ticker": "BAND"
+    },
+    {
+      "fees": 2.0494,
+      "pnl": -296.88,
+      "price": 140.03,
+      "shares": 12,
+      "side": "SELL",
+      "ticker": "ORCL"
+    },
+    {
+      "fees": 2.071,
+      "pnl": 92.1,
+      "price": 118.18,
+      "shares": 18,
+      "side": "SELL",
+      "ticker": "QRVO"
+    },
+    {
+      "fees": 2.0929,
+      "pnl": 123.59,
+      "price": 89.38,
+      "shares": 25,
+      "side": "SELL",
+      "ticker": "SWKS"
+    },
+    {
+      "fees": 2.014,
+      "pnl": null,
+      "price": 236.92,
+      "shares": 8,
+      "side": "BUY",
+      "ticker": "CRWD"
+    },
+    {
+      "fees": 2.155,
+      "pnl": null,
+      "price": 37.13,
+      "shares": 55,
+      "side": "BUY",
+      "ticker": "DBX"
+    },
+    {
+      "fees": 2.023,
+      "pnl": null,
+      "price": 186.52,
+      "shares": 11,
+      "side": "BUY",
+      "ticker": "OKTA"
+    },
+    {
+      "fees": 2.224,
+      "pnl": null,
+      "price": 26.27,
+      "shares": 78,
+      "side": "BUY",
+      "ticker": "WAY"
+    }
+  ],
+  "holdings": [
+    "CRWD",
+    "DBX",
+    "OKTA",
+    "WAY"
+  ],
+  "mean": 0.2216,
+  "n_trades_today": 8,
+  "recipe": "union_cond_n4_h3",
+  "sells": [
+    "BAND",
+    "ORCL",
+    "QRVO",
+    "SWKS"
+  ],
+  "state": {
+    "after": "2026-09-16",
+    "cash": 209.41,
+    "pos": {
+      "CRWD": {
+        "close_px": 241.36000061035156,
+        "cost": 1897.3739853515624,
+        "entry_date": "2026-09-16",
+        "entry_px": 236.9199981689453,
+        "fee_in": 2.014,
+        "last_px": 236.9199981689453,
+        "min_hold": 3,
+        "notional": 1895.3599853515625,
+        "peak_px": 236.9199981689453,
+        "reason": "top 4 by cond; rank cond; list ohlc_hot; \u26aa; ret5=+15.5; leftover $2064.03",
+        "shares": 8,
+        "ticker": "CRWD"
+      },
+      "DBX": {
+        "close_px": 37.7400016784668,
+        "cost": 2044.3050587463379,
+        "entry_date": "2026-09-16",
+        "entry_px": 37.130001068115234,
+        "fee_in": 2.155,
+        "last_px": 37.130001068115234,
+        "min_hold": 3,
+        "notional": 2042.150058746338,
+        "peak_px": 37.130001068115234,
+        "reason": "top 4 by cond; rank cond; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+11.3; leftover $2064.03",
+        "shares": 55,
+        "ticker": "DBX"
+      },
+      "OKTA": {
+        "close_px": 188.1199951171875,
+        "cost": 2053.7430469970705,
+        "entry_date": "2026-09-16",
+        "entry_px": 186.52000427246094,
+        "fee_in": 2.023,
+        "last_px": 186.52000427246094,
+        "min_hold": 3,
+        "notional": 2051.7200469970703,
+        "peak_px": 186.52000427246094,
+        "reason": "top 4 by cond; rank cond; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+13.6; leftover $2064.03",
+        "shares": 11,
+        "ticker": "OKTA"
+      },
+      "WAY": {
+        "close_px": 26.59000015258789,
+        "cost": 2051.2840357055666,
+        "entry_date": "2026-09-16",
+        "entry_px": 26.270000457763672,
+        "fee_in": 2.224,
+        "last_px": 26.270000457763672,
+        "min_hold": 3,
+        "notional": 2049.0600357055664,
+        "peak_px": 26.270000457763672,
+        "reason": "top 4 by cond; rank cond; list yday_gainer,ohlc_hot; \ud83d\udd35; \u26aa; ret5=+10.0; leftover $2064.03",
+        "shares": 78,
+        "ticker": "WAY"
+      }
+    },
+    "yday_equity": 8359.33
+  }
+}

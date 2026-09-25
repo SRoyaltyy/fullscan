@@ -1,0 +1,93 @@
+{
+  "buys": [],
+  "cash": 9072.31,
+  "date": "2026-09-14",
+  "equity": 9072.31,
+  "fees": 23.6589,
+  "fills": [
+    {
+      "fees": 7.2878,
+      "pnl": -53.46,
+      "price": 2.05,
+      "shares": 557,
+      "side": "SELL",
+      "ticker": "BAK"
+    },
+    {
+      "fees": 2.076,
+      "pnl": 91.57,
+      "price": 56.9,
+      "shares": 22,
+      "side": "SELL",
+      "ticker": "BAND"
+    },
+    {
+      "fees": 3.1458,
+      "pnl": 22.56,
+      "price": 5.03,
+      "shares": 240,
+      "side": "SELL",
+      "ticker": "BNC"
+    },
+    {
+      "fees": 2.073,
+      "pnl": -85.19,
+      "price": 52.23,
+      "shares": 21,
+      "side": "SELL",
+      "ticker": "COHU"
+    },
+    {
+      "fees": 2.6755,
+      "pnl": -64.47,
+      "price": 5.49,
+      "shares": 204,
+      "side": "SELL",
+      "ticker": "INTR"
+    },
+    {
+      "fees": 2.031,
+      "pnl": -58.5,
+      "price": 150.0,
+      "shares": 7,
+      "side": "SELL",
+      "ticker": "NVT"
+    },
+    {
+      "fees": 2.031,
+      "pnl": -165.11,
+      "price": 141.42,
+      "shares": 7,
+      "side": "SELL",
+      "ticker": "ORCL"
+    },
+    {
+      "fees": 2.3388,
+      "pnl": -75.27,
+      "price": 10.29,
+      "shares": 107,
+      "side": "SELL",
+      "ticker": "WLTH"
+    }
+  ],
+  "holdings": [],
+  "mean": -3.0929,
+  "n_trades_today": 8,
+  "recipe": "union_blue_h1",
+  "sells": [
+    "BAK",
+    "BAND",
+    "BNC",
+    "COHU",
+    "INTR",
+    "NVT",
+    "ORCL",
+    "WLTH"
+  ],
+  "state": {
+    "after": "2026-09-14",
+    "cash": 9072.31,
+    "pos": {},
+    "yday_equity": 9072.31
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "buys": [
+    "KEYS",
+    "SMTC"
+  ],
+  "cash": 149.02,
+  "date": "2026-08-28",
+  "equity": 9497.8,
+  "fees": 4.142,
+  "fills": [
+    {
+      "fees": 2.026,
+      "pnl": null,
+      "price": 324.41,
+      "shares": 12,
+      "side": "BUY",
+      "ticker": "KEYS"
+    },
+    {
+      "fees": 2.116,
+      "pnl": null,
+      "price": 141.76,
+      "shares": 42,
+      "side": "BUY",
+      "ticker": "SMTC"
+    }
+  ],
+  "holdings": [
+    "KEYS",
+    "SMTC"
+  ],
+  "mean": -5.022,
+  "n_trades_today": 2,
+  "recipe": "union_news_g_cam71_n2_h1",
+  "sells": [],
+  "state": {
+    "after": "2026-08-28",
+    "cash": 149.02,
+    "pos": {
+      "KEYS": {
+        "close_px": 319.9700012207031,
+        "cost": 3894.9460439453123,
+        "entry_date": "2026-08-28",
+        "entry_px": 324.4100036621094,
+        "fee_in": 2.026,
+        "last_px": 324.4100036621094,
+        "min_hold": 1,
+        "notional": 3892.9200439453125,
+        "peak_px": 324.4100036621094,
+        "reason": "topheavy leftover on news\ud83d\udfe2 +7 \u2212\u22641; gate news=good,n_pos_min=7,cam_bad_max=1; rank cond; list mover_buy; \ud83d\udd35; \u26aa; ret5=+2.9; leftover $4000.00",
+        "shares": 12,
+        "ticker": "KEYS"
+      },
+      "SMTC": {
+        "close_px": 131.1699981689453,
+        "cost": 5956.035769287109,
+        "entry_date": "2026-08-28",
+        "entry_px": 141.75999450683594,
+        "fee_in": 2.116,
+        "last_px": 141.75999450683594,
+        "min_hold": 1,
+        "notional": 5953.919769287109,
+        "peak_px": 141.75999450683594,
+        "reason": "topheavy leftover on news\ud83d\udfe2 +7 \u2212\u22641; gate news=good,n_pos_min=7,cam_bad_max=1; rank cond; list yday_gainer,yday_mover,mover_buy; \ud83d\udd35; \u26aa; ret5=+14.1; leftover $6000.00",
+        "shares": 42,
+        "ticker": "SMTC"
+      }
+    },
+    "yday_equity": 9497.8
+  }
+}

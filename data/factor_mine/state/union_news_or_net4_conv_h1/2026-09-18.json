@@ -1,0 +1,129 @@
+{
+  "buys": [
+    "CRWD",
+    "RARE",
+    "BHVN"
+  ],
+  "cash": 86.87,
+  "date": "2026-09-18",
+  "equity": 8537.72,
+  "fees": 10.6776,
+  "fills": [
+    {
+      "fees": 2.025,
+      "pnl": -13.03,
+      "price": 236.8,
+      "shares": 5,
+      "side": "SELL",
+      "ticker": "JBHT"
+    },
+    {
+      "fees": 2.1516,
+      "pnl": 386.08,
+      "price": 182.33,
+      "shares": 34,
+      "side": "SELL",
+      "ticker": "SMTC"
+    },
+    {
+      "fees": 2.053,
+      "pnl": null,
+      "price": 246.98,
+      "shares": 21,
+      "side": "BUY",
+      "ticker": "CRWD"
+    },
+    {
+      "fees": 2.218,
+      "pnl": null,
+      "price": 14.79,
+      "shares": 76,
+      "side": "BUY",
+      "ticker": "RARE"
+    },
+    {
+      "fees": 2.23,
+      "pnl": null,
+      "price": 14.07,
+      "shares": 80,
+      "side": "BUY",
+      "ticker": "BHVN"
+    }
+  ],
+  "holdings": [
+    "BHVN",
+    "CRWD",
+    "GME",
+    "RARE"
+  ],
+  "mean": -1.5045,
+  "n_trades_today": 5,
+  "recipe": "union_news_or_net4_conv_h1",
+  "sells": [
+    "JBHT",
+    "SMTC"
+  ],
+  "state": {
+    "after": "2026-09-18",
+    "cash": 86.87,
+    "pos": {
+      "BHVN": {
+        "close_px": 13.619999885559082,
+        "cost": 1127.8299755859375,
+        "entry_date": "2026-09-18",
+        "entry_px": 14.069999694824219,
+        "fee_in": 2.23,
+        "last_px": 14.069999694824219,
+        "min_hold": 1,
+        "notional": 1125.5999755859375,
+        "peak_px": 14.069999694824219,
+        "reason": "OR news + net\u22654; 70% leftover if #1 net \u2265 5; gate news_or_headline=True,cam_net_min=4; rank cond; list probable,yday_gainer,yday_mover; \ud83d\udd35; ret5=+8.6; leftover $1129.44",
+        "shares": 80,
+        "ticker": "BHVN"
+      },
+      "CRWD": {
+        "close_px": 237.64999389648438,
+        "cost": 5188.63291027832,
+        "entry_date": "2026-09-18",
+        "entry_px": 246.97999572753906,
+        "fee_in": 2.053,
+        "last_px": 246.97999572753906,
+        "min_hold": 1,
+        "notional": 5186.57991027832,
+        "peak_px": 246.97999572753906,
+        "reason": "OR news + net\u22654; 70% leftover if #1 net \u2265 5; gate news_or_headline=True,cam_net_min=4; rank cond; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+17.6; leftover $5270.72",
+        "shares": 21,
+        "ticker": "CRWD"
+      },
+      "GME": {
+        "close_px": 22.639999389648438,
+        "cost": 1240.8780469970702,
+        "entry_date": "2026-09-17",
+        "entry_px": 22.1200008392334,
+        "fee_in": 2.158,
+        "last_px": 22.899999618530273,
+        "min_hold": 1,
+        "notional": 1238.7200469970703,
+        "peak_px": 22.899999618530273,
+        "reason": "OR news + net\u22654; 70% leftover if #1 net \u2265 5; gate news_or_headline=True,cam_net_min=4; rank cond; list ohlc_hot; \ud83d\udd35; ret5=+10.5; leftover $1259.61",
+        "shares": 56,
+        "ticker": "GME"
+      },
+      "RARE": {
+        "close_px": 14.510000228881836,
+        "cost": 1126.2579971008302,
+        "entry_date": "2026-09-18",
+        "entry_px": 14.789999961853027,
+        "fee_in": 2.218,
+        "last_px": 14.789999961853027,
+        "min_hold": 1,
+        "notional": 1124.03999710083,
+        "peak_px": 14.789999961853027,
+        "reason": "OR news + net\u22654; 70% leftover if #1 net \u2265 5; gate news_or_headline=True,cam_net_min=4; rank cond; list probable,yday_gainer; \ud83d\udd35; \u26aa; ret5=+0.7; leftover $1129.44",
+        "shares": 76,
+        "ticker": "RARE"
+      }
+    },
+    "yday_equity": 8537.72
+  }
+}

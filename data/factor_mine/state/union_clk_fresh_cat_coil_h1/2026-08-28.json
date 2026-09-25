@@ -1,0 +1,191 @@
+{
+  "buys": [
+    "KEYS",
+    "CIEN",
+    "AVT",
+    "CGNX",
+    "COHR",
+    "LSCC",
+    "MTSI"
+  ],
+  "cash": 1972.3,
+  "date": "2026-08-28",
+  "equity": 9690.34,
+  "fees": 14.098,
+  "fills": [
+    {
+      "fees": 1.999,
+      "pnl": null,
+      "price": 324.41,
+      "shares": 3,
+      "side": "BUY",
+      "ticker": "KEYS"
+    },
+    {
+      "fees": 1.999,
+      "pnl": null,
+      "price": 400.42,
+      "shares": 3,
+      "side": "BUY",
+      "ticker": "CIEN"
+    },
+    {
+      "fees": 2.029,
+      "pnl": null,
+      "price": 91.49,
+      "shares": 13,
+      "side": "BUY",
+      "ticker": "AVT"
+    },
+    {
+      "fees": 2.047,
+      "pnl": null,
+      "price": 62.82,
+      "shares": 19,
+      "side": "BUY",
+      "ticker": "CGNX"
+    },
+    {
+      "fees": 2.002,
+      "pnl": null,
+      "price": 289.44,
+      "shares": 4,
+      "side": "BUY",
+      "ticker": "COHR"
+    },
+    {
+      "fees": 2.02,
+      "pnl": null,
+      "price": 119.76,
+      "shares": 10,
+      "side": "BUY",
+      "ticker": "LSCC"
+    },
+    {
+      "fees": 2.002,
+      "pnl": null,
+      "price": 275.2,
+      "shares": 4,
+      "side": "BUY",
+      "ticker": "MTSI"
+    }
+  ],
+  "holdings": [
+    "AVT",
+    "CGNX",
+    "CIEN",
+    "COHR",
+    "KEYS",
+    "LSCC",
+    "MTSI"
+  ],
+  "mean": -3.0966,
+  "n_trades_today": 7,
+  "recipe": "union_clk_fresh_cat_coil_h1",
+  "sells": [],
+  "state": {
+    "after": "2026-08-28",
+    "cash": 1972.3,
+    "pos": {
+      "AVT": {
+        "close_px": 88.62999725341797,
+        "cost": 1191.398972229004,
+        "entry_date": "2026-08-28",
+        "entry_px": 91.48999786376953,
+        "fee_in": 2.029,
+        "last_px": 91.48999786376953,
+        "min_hold": 1,
+        "notional": 1189.369972229004,
+        "peak_px": 91.48999786376953,
+        "reason": "Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list mover_buy; \ud83d\udd35; \u26aa; ret5=+5.3; leftover $1250.00",
+        "shares": 13,
+        "ticker": "AVT"
+      },
+      "CGNX": {
+        "close_px": 60.459999084472656,
+        "cost": 1195.6269942016602,
+        "entry_date": "2026-08-28",
+        "entry_px": 62.81999969482422,
+        "fee_in": 2.047,
+        "last_px": 62.81999969482422,
+        "min_hold": 1,
+        "notional": 1193.5799942016602,
+        "peak_px": 62.81999969482422,
+        "reason": "Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list mover_buy; \ud83d\udd35; \u26aa; ret5=+5.4; leftover $1250.00",
+        "shares": 19,
+        "ticker": "CGNX"
+      },
+      "CIEN": {
+        "close_px": 378.44000244140625,
+        "cost": 1203.2590402832031,
+        "entry_date": "2026-08-28",
+        "entry_px": 400.4200134277344,
+        "fee_in": 1.999,
+        "last_px": 400.4200134277344,
+        "min_hold": 1,
+        "notional": 1201.2600402832031,
+        "peak_px": 400.4200134277344,
+        "reason": "Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list mover_buy; \ud83d\udd35; ret5=+1.9; leftover $1250.00",
+        "shares": 3,
+        "ticker": "CIEN"
+      },
+      "COHR": {
+        "close_px": 279.20001220703125,
+        "cost": 1159.762009765625,
+        "entry_date": "2026-08-28",
+        "entry_px": 289.44000244140625,
+        "fee_in": 2.002,
+        "last_px": 289.44000244140625,
+        "min_hold": 1,
+        "notional": 1157.760009765625,
+        "peak_px": 289.44000244140625,
+        "reason": "Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list mover_buy; \ud83d\udd35; \u26aa; ret5=+1.8; leftover $1250.00",
+        "shares": 4,
+        "ticker": "COHR"
+      },
+      "KEYS": {
+        "close_px": 319.9700012207031,
+        "cost": 975.2290109863281,
+        "entry_date": "2026-08-28",
+        "entry_px": 324.4100036621094,
+        "fee_in": 1.999,
+        "last_px": 324.4100036621094,
+        "min_hold": 1,
+        "notional": 973.2300109863281,
+        "peak_px": 324.4100036621094,
+        "reason": "Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list mover_buy; \ud83d\udd35; \u26aa; ret5=+2.9; leftover $1250.00",
+        "shares": 3,
+        "ticker": "KEYS"
+      },
+      "LSCC": {
+        "close_px": 114.4000015258789,
+        "cost": 1199.6200213623047,
+        "entry_date": "2026-08-28",
+        "entry_px": 119.76000213623047,
+        "fee_in": 2.02,
+        "last_px": 119.76000213623047,
+        "min_hold": 1,
+        "notional": 1197.6000213623047,
+        "peak_px": 119.76000213623047,
+        "reason": "Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list mover_buy; \ud83d\udd35; \u26aa; ret5=+2.5; leftover $1250.00",
+        "shares": 10,
+        "ticker": "LSCC"
+      },
+      "MTSI": {
+        "close_px": 265.2699890136719,
+        "cost": 1102.802048828125,
+        "entry_date": "2026-08-28",
+        "entry_px": 275.20001220703125,
+        "fee_in": 2.002,
+        "last_px": 275.20001220703125,
+        "min_hold": 1,
+        "notional": 1100.800048828125,
+        "peak_px": 275.20001220703125,
+        "reason": "Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list mover_buy; \ud83d\udd35; \u26aa; ret5=+4.1; leftover $1250.00",
+        "shares": 4,
+        "ticker": "MTSI"
+      }
+    },
+    "yday_equity": 9690.34
+  }
+}

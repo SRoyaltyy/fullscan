@@ -1,0 +1,156 @@
+{
+  "buys": [
+    "GRAL",
+    "MRNA",
+    "IVVD",
+    "DGXX"
+  ],
+  "cash": 87.55,
+  "date": "2026-09-22",
+  "equity": 9236.15,
+  "fees": 38.5843,
+  "fills": [
+    {
+      "fees": 2.016,
+      "pnl": 14.21,
+      "price": 403.0,
+      "shares": 2,
+      "side": "SELL",
+      "ticker": "ISRG"
+    },
+    {
+      "fees": 2.4654,
+      "pnl": -6.37,
+      "price": 5.99,
+      "shares": 147,
+      "side": "SELL",
+      "ticker": "SION"
+    },
+    {
+      "fees": 2.022,
+      "pnl": -68.74,
+      "price": 174.12,
+      "shares": 4,
+      "side": "SELL",
+      "ticker": "SMTC"
+    },
+    {
+      "fees": 2.1281,
+      "pnl": 276.34,
+      "price": 241.04,
+      "shares": 26,
+      "side": "SELL",
+      "ticker": "VICR"
+    },
+    {
+      "fees": 2.089,
+      "pnl": null,
+      "price": 106.75,
+      "shares": 33,
+      "side": "BUY",
+      "ticker": "GRAL"
+    },
+    {
+      "fees": 2.038,
+      "pnl": null,
+      "price": 168.5,
+      "shares": 16,
+      "side": "BUY",
+      "ticker": "MRNA"
+    },
+    {
+      "fees": 23.1039,
+      "pnl": null,
+      "price": 1.01,
+      "shares": 1791,
+      "side": "BUY",
+      "ticker": "IVVD"
+    },
+    {
+      "fees": 2.7219,
+      "pnl": null,
+      "price": 4.28,
+      "shares": 211,
+      "side": "BUY",
+      "ticker": "DGXX"
+    }
+  ],
+  "holdings": [
+    "DGXX",
+    "GRAL",
+    "IVVD",
+    "MRNA"
+  ],
+  "mean": 7.1106,
+  "n_trades_today": 8,
+  "recipe": "union_news_g_conv_h1",
+  "sells": [
+    "ISRG",
+    "SION",
+    "SMTC",
+    "VICR"
+  ],
+  "state": {
+    "after": "2026-09-22",
+    "cash": 87.55,
+    "pos": {
+      "DGXX": {
+        "close_px": 4.36,
+        "cost": 905.8019,
+        "entry_date": "2026-09-22",
+        "entry_px": 4.28,
+        "fee_in": 2.7219,
+        "last_px": 4.28,
+        "min_hold": 1,
+        "notional": 903.08,
+        "peak_px": 4.28,
+        "reason": "merged news\ud83d\udfe2 rank cameras; 70% leftover if #1 net \u2265 5; gate news=good; rank cond; list ohlc_hot; ret5=+16.9; leftover $904.82",
+        "shares": 211,
+        "ticker": "DGXX"
+      },
+      "GRAL": {
+        "close_px": 108.52,
+        "cost": 3524.839,
+        "entry_date": "2026-09-22",
+        "entry_px": 106.75,
+        "fee_in": 2.089,
+        "last_px": 106.75,
+        "min_hold": 1,
+        "notional": 3522.75,
+        "peak_px": 106.75,
+        "reason": "merged news\ud83d\udfe2 rank cameras; 70% leftover if #1 net \u2265 5; gate news=good; rank cond; list yday_gainer,yday_mover; ret5=+42.9; leftover $3619.30",
+        "shares": 33,
+        "ticker": "GRAL"
+      },
+      "IVVD": {
+        "close_px": 0.9639999866485596,
+        "cost": 1832.013882919693,
+        "entry_date": "2026-09-22",
+        "entry_px": 1.0099999904632568,
+        "fee_in": 23.1039,
+        "last_px": 1.0099999904632568,
+        "min_hold": 1,
+        "notional": 1808.909982919693,
+        "peak_px": 1.0099999904632568,
+        "reason": "merged news\ud83d\udfe2 rank cameras; 70% leftover if #1 net \u2265 5; gate news=good; rank cond; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+14.3; leftover $1809.65",
+        "shares": 1791,
+        "ticker": "IVVD"
+      },
+      "MRNA": {
+        "close_px": 182.55999755859375,
+        "cost": 2698.038,
+        "entry_date": "2026-09-22",
+        "entry_px": 168.5,
+        "fee_in": 2.038,
+        "last_px": 168.5,
+        "min_hold": 1,
+        "notional": 2696.0,
+        "peak_px": 168.5,
+        "reason": "merged news\ud83d\udfe2 rank cameras; 70% leftover if #1 net \u2265 5; gate news=good; rank cond; list ohlc_hot; ret5=+17.9; leftover $2714.47",
+        "shares": 16,
+        "ticker": "MRNA"
+      }
+    },
+    "yday_equity": 9236.15
+  }
+}

@@ -1,0 +1,191 @@
+{
+  "buys": [
+    "ORCL",
+    "ADBE",
+    "CPRT",
+    "DSGX",
+    "KR",
+    "LPTH",
+    "RH"
+  ],
+  "cash": 219.54,
+  "date": "2026-09-11",
+  "equity": 8671.24,
+  "fees": 14.62,
+  "fills": [
+    {
+      "fees": 2.011,
+      "pnl": null,
+      "price": 164.43,
+      "shares": 7,
+      "side": "BUY",
+      "ticker": "ORCL"
+    },
+    {
+      "fees": 2.005,
+      "pnl": null,
+      "price": 242.17,
+      "shares": 5,
+      "side": "BUY",
+      "ticker": "ADBE"
+    },
+    {
+      "fees": 2.104,
+      "pnl": null,
+      "price": 32.01,
+      "shares": 38,
+      "side": "BUY",
+      "ticker": "CPRT"
+    },
+    {
+      "fees": 2.041,
+      "pnl": null,
+      "price": 71.71,
+      "shares": 17,
+      "side": "BUY",
+      "ticker": "DSGX"
+    },
+    {
+      "fees": 2.056,
+      "pnl": null,
+      "price": 56.02,
+      "shares": 22,
+      "side": "BUY",
+      "ticker": "KR"
+    },
+    {
+      "fees": 2.386,
+      "pnl": null,
+      "price": 9.37,
+      "shares": 132,
+      "side": "BUY",
+      "ticker": "LPTH"
+    },
+    {
+      "fees": 2.017,
+      "pnl": null,
+      "price": 135.71,
+      "shares": 9,
+      "side": "BUY",
+      "ticker": "RH"
+    }
+  ],
+  "holdings": [
+    "ADBE",
+    "CPRT",
+    "DSGX",
+    "KR",
+    "LPTH",
+    "ORCL",
+    "RH"
+  ],
+  "mean": -0.5836,
+  "n_trades_today": 7,
+  "recipe": "union_earn_react_h3",
+  "sells": [],
+  "state": {
+    "after": "2026-09-11",
+    "cash": 219.54,
+    "pos": {
+      "ADBE": {
+        "close_px": 252.22999572753906,
+        "cost": 1212.8549908447267,
+        "entry_date": "2026-09-11",
+        "entry_px": 242.1699981689453,
+        "fee_in": 2.005,
+        "last_px": 242.1699981689453,
+        "min_hold": 3,
+        "notional": 1210.8499908447266,
+        "peak_px": 242.1699981689453,
+        "reason": "union \u2229 earn_react, no \ud83d\udea8; gate earn_react=True; list earn_react; \ud83d\udd35; ret5=-12.9; leftover $1246.02",
+        "shares": 5,
+        "ticker": "ADBE"
+      },
+      "CPRT": {
+        "close_px": 29.950000762939453,
+        "cost": 1218.4839362182618,
+        "entry_date": "2026-09-11",
+        "entry_px": 32.0099983215332,
+        "fee_in": 2.104,
+        "last_px": 32.0099983215332,
+        "min_hold": 3,
+        "notional": 1216.3799362182617,
+        "peak_px": 32.0099983215332,
+        "reason": "union \u2229 earn_react, no \ud83d\udea8; gate earn_react=True; list earn_react; \ud83d\udd35; ret5=-8.4; leftover $1246.02",
+        "shares": 38,
+        "ticker": "CPRT"
+      },
+      "DSGX": {
+        "close_px": 76.04000091552734,
+        "cost": 1221.110984436035,
+        "entry_date": "2026-09-11",
+        "entry_px": 71.70999908447266,
+        "fee_in": 2.041,
+        "last_px": 71.70999908447266,
+        "min_hold": 3,
+        "notional": 1219.0699844360352,
+        "peak_px": 71.70999908447266,
+        "reason": "union \u2229 earn_react, no \ud83d\udea8; gate earn_react=True; list earn_react; ret5=-11.7; leftover $1246.02",
+        "shares": 17,
+        "ticker": "DSGX"
+      },
+      "KR": {
+        "close_px": 58.4900016784668,
+        "cost": 1234.4960100708008,
+        "entry_date": "2026-09-11",
+        "entry_px": 56.02000045776367,
+        "fee_in": 2.056,
+        "last_px": 56.02000045776367,
+        "min_hold": 3,
+        "notional": 1232.4400100708008,
+        "peak_px": 56.02000045776367,
+        "reason": "union \u2229 earn_react, no \ud83d\udea8; gate earn_react=True; list earn_react; ret5=-2.7; leftover $1246.02",
+        "shares": 22,
+        "ticker": "KR"
+      },
+      "LPTH": {
+        "close_px": 9.199999809265137,
+        "cost": 1239.2259848937988,
+        "entry_date": "2026-09-11",
+        "entry_px": 9.369999885559082,
+        "fee_in": 2.386,
+        "last_px": 9.369999885559082,
+        "min_hold": 3,
+        "notional": 1236.8399848937988,
+        "peak_px": 9.369999885559082,
+        "reason": "union \u2229 earn_react, no \ud83d\udea8; gate earn_react=True; list earn_react; \ud83d\udd35; ret5=+0.4; leftover $1246.02",
+        "shares": 132,
+        "ticker": "LPTH"
+      },
+      "ORCL": {
+        "close_px": 150.27999877929688,
+        "cost": 1153.0209487304687,
+        "entry_date": "2026-09-11",
+        "entry_px": 164.42999267578125,
+        "fee_in": 2.011,
+        "last_px": 164.42999267578125,
+        "min_hold": 3,
+        "notional": 1151.0099487304688,
+        "peak_px": 164.42999267578125,
+        "reason": "union \u2229 earn_react, no \ud83d\udea8; gate earn_react=True; list flatten,earn_react; \ud83d\udd35; \u26aa; ret5=-0.7; leftover $1246.02",
+        "shares": 7,
+        "ticker": "ORCL"
+      },
+      "RH": {
+        "close_px": 134.07000732421875,
+        "cost": 1223.4070604248047,
+        "entry_date": "2026-09-11",
+        "entry_px": 135.7100067138672,
+        "fee_in": 2.017,
+        "last_px": 135.7100067138672,
+        "min_hold": 3,
+        "notional": 1221.3900604248047,
+        "peak_px": 135.7100067138672,
+        "reason": "union \u2229 earn_react, no \ud83d\udea8; gate earn_react=True; list earn_react; ret5=-8.6; leftover $1246.02",
+        "shares": 9,
+        "ticker": "RH"
+      }
+    },
+    "yday_equity": 8671.24
+  }
+}

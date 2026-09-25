@@ -1,0 +1,215 @@
+{
+  "buys": [
+    "META",
+    "FFIV",
+    "QCOM",
+    "APH",
+    "OKTA",
+    "WST",
+    "CRUS",
+    "SWKS"
+  ],
+  "cash": 1358.72,
+  "date": "2026-09-16",
+  "equity": 9536.57,
+  "fees": 16.085,
+  "fills": [
+    {
+      "fees": 1.993,
+      "pnl": null,
+      "price": 679.91,
+      "shares": 1,
+      "side": "BUY",
+      "ticker": "META"
+    },
+    {
+      "fees": 1.996,
+      "pnl": null,
+      "price": 430.12,
+      "shares": 2,
+      "side": "BUY",
+      "ticker": "FFIV"
+    },
+    {
+      "fees": 2.008,
+      "pnl": null,
+      "price": 189.17,
+      "shares": 6,
+      "side": "BUY",
+      "ticker": "QCOM"
+    },
+    {
+      "fees": 2.035,
+      "pnl": null,
+      "price": 79.02,
+      "shares": 15,
+      "side": "BUY",
+      "ticker": "APH"
+    },
+    {
+      "fees": 2.008,
+      "pnl": null,
+      "price": 186.52,
+      "shares": 6,
+      "side": "BUY",
+      "ticker": "OKTA"
+    },
+    {
+      "fees": 1.999,
+      "pnl": null,
+      "price": 363.11,
+      "shares": 3,
+      "side": "BUY",
+      "ticker": "WST"
+    },
+    {
+      "fees": 2.017,
+      "pnl": null,
+      "price": 123.09,
+      "shares": 9,
+      "side": "BUY",
+      "ticker": "CRUS"
+    },
+    {
+      "fees": 2.029,
+      "pnl": null,
+      "price": 89.38,
+      "shares": 13,
+      "side": "BUY",
+      "ticker": "SWKS"
+    }
+  ],
+  "holdings": [
+    "APH",
+    "CRUS",
+    "FFIV",
+    "META",
+    "OKTA",
+    "QCOM",
+    "SWKS",
+    "WST"
+  ],
+  "mean": -1.8212,
+  "n_trades_today": 8,
+  "recipe": "union_macd_hist_h1",
+  "sells": [],
+  "state": {
+    "after": "2026-09-16",
+    "cash": 1358.72,
+    "pos": {
+      "APH": {
+        "close_px": 77.26000213623047,
+        "cost": 1187.3349496459962,
+        "entry_date": "2026-09-16",
+        "entry_px": 79.0199966430664,
+        "fee_in": 2.035,
+        "last_px": 79.0199966430664,
+        "min_hold": 1,
+        "notional": 1185.299949645996,
+        "peak_px": 79.0199966430664,
+        "reason": "rank by macd_hist; rank macd_hist; list ohlc_hot; ret5=-5.0; leftover $1214.18",
+        "shares": 15,
+        "ticker": "APH"
+      },
+      "CRUS": {
+        "close_px": 118.0,
+        "cost": 1109.8269670410157,
+        "entry_date": "2026-09-16",
+        "entry_px": 123.08999633789062,
+        "fee_in": 2.017,
+        "last_px": 123.08999633789062,
+        "min_hold": 1,
+        "notional": 1107.8099670410156,
+        "peak_px": 123.08999633789062,
+        "reason": "rank by macd_hist; rank macd_hist; list ohlc_hot; \ud83d\udd35; ret5=+10.3; leftover $1214.18",
+        "shares": 9,
+        "ticker": "CRUS"
+      },
+      "FFIV": {
+        "close_px": 423.5899963378906,
+        "cost": 862.235990234375,
+        "entry_date": "2026-09-16",
+        "entry_px": 430.1199951171875,
+        "fee_in": 1.996,
+        "last_px": 430.1199951171875,
+        "min_hold": 1,
+        "notional": 860.239990234375,
+        "peak_px": 430.1199951171875,
+        "reason": "rank by macd_hist; rank macd_hist; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+10.6; leftover $1214.18",
+        "shares": 2,
+        "ticker": "FFIV"
+      },
+      "META": {
+        "close_px": 673.3099975585938,
+        "cost": 681.9029731445313,
+        "entry_date": "2026-09-16",
+        "entry_px": 679.9099731445312,
+        "fee_in": 1.993,
+        "last_px": 679.9099731445312,
+        "min_hold": 1,
+        "notional": 679.9099731445312,
+        "peak_px": 679.9099731445312,
+        "reason": "rank by macd_hist; rank macd_hist; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+9.3; leftover $1214.18",
+        "shares": 1,
+        "ticker": "META"
+      },
+      "OKTA": {
+        "close_px": 188.1199951171875,
+        "cost": 1121.1280256347657,
+        "entry_date": "2026-09-16",
+        "entry_px": 186.52000427246094,
+        "fee_in": 2.008,
+        "last_px": 186.52000427246094,
+        "min_hold": 1,
+        "notional": 1119.1200256347656,
+        "peak_px": 186.52000427246094,
+        "reason": "rank by macd_hist; rank macd_hist; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+13.6; leftover $1214.18",
+        "shares": 6,
+        "ticker": "OKTA"
+      },
+      "QCOM": {
+        "close_px": 184.83999633789062,
+        "cost": 1137.027989013672,
+        "entry_date": "2026-09-16",
+        "entry_px": 189.1699981689453,
+        "fee_in": 2.008,
+        "last_px": 189.1699981689453,
+        "min_hold": 1,
+        "notional": 1135.0199890136719,
+        "peak_px": 189.1699981689453,
+        "reason": "rank by macd_hist; rank macd_hist; list ohlc_hot; \ud83d\udd35; ret5=+7.9; leftover $1214.18",
+        "shares": 6,
+        "ticker": "QCOM"
+      },
+      "SWKS": {
+        "close_px": 85.58999633789062,
+        "cost": 1163.9689642944336,
+        "entry_date": "2026-09-16",
+        "entry_px": 89.37999725341797,
+        "fee_in": 2.029,
+        "last_px": 89.37999725341797,
+        "min_hold": 1,
+        "notional": 1161.9399642944336,
+        "peak_px": 89.37999725341797,
+        "reason": "rank by macd_hist; rank macd_hist; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+19.4; leftover $1214.18",
+        "shares": 13,
+        "ticker": "SWKS"
+      },
+      "WST": {
+        "close_px": 362.010009765625,
+        "cost": 1091.3289560546875,
+        "entry_date": "2026-09-16",
+        "entry_px": 363.1099853515625,
+        "fee_in": 1.999,
+        "last_px": 363.1099853515625,
+        "min_hold": 1,
+        "notional": 1089.3299560546875,
+        "peak_px": 363.1099853515625,
+        "reason": "rank by macd_hist; rank macd_hist; list ohlc_hot; \u26aa; ret5=+8.1; leftover $1214.18",
+        "shares": 3,
+        "ticker": "WST"
+      }
+    },
+    "yday_equity": 9536.57
+  }
+}

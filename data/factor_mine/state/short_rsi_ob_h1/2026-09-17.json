@@ -1,0 +1,226 @@
+{
+  "buys": [
+    "IOVA",
+    "ADPT",
+    "FRO",
+    "CVI",
+    "NAT"
+  ],
+  "cash": 16544.78,
+  "date": "2026-09-17",
+  "equity": 9490.63,
+  "fees": 21.3334,
+  "fills": [
+    {
+      "fees": 2.134,
+      "pnl": -5.27,
+      "price": 14.33,
+      "shares": 48,
+      "side": "COVER",
+      "ticker": "AVAH"
+    },
+    {
+      "fees": 2.062,
+      "pnl": -14.6,
+      "price": 28.595,
+      "shares": 24,
+      "side": "COVER",
+      "ticker": "CAI"
+    },
+    {
+      "fees": 2.005,
+      "pnl": 12.35,
+      "price": 114.9,
+      "shares": 5,
+      "side": "COVER",
+      "ticker": "QRVO"
+    },
+    {
+      "fees": 2.077,
+      "pnl": -27.39,
+      "price": 24.09,
+      "shares": 29,
+      "side": "COVER",
+      "ticker": "SDGR"
+    },
+    {
+      "fees": 2.011,
+      "pnl": 14.28,
+      "price": 86.76,
+      "shares": 7,
+      "side": "COVER",
+      "ticker": "SWKS"
+    },
+    {
+      "fees": 2.323997260273973,
+      "pnl": null,
+      "price": 10.25,
+      "shares": 94,
+      "side": "SHORT",
+      "ticker": "IOVA"
+    },
+    {
+      "fees": 2.1382964379297547,
+      "pnl": null,
+      "price": 28.23,
+      "shares": 34,
+      "side": "SHORT",
+      "ticker": "ADPT"
+    },
+    {
+      "fees": 2.0862950691327655,
+      "pnl": null,
+      "price": 54.31,
+      "shares": 17,
+      "side": "SHORT",
+      "ticker": "FRO"
+    },
+    {
+      "fees": 2.0895846580609883,
+      "pnl": null,
+      "price": 51.88,
+      "shares": 18,
+      "side": "SHORT",
+      "ticker": "CVI"
+    },
+    {
+      "fees": 2.406267124792648,
+      "pnl": null,
+      "price": 8.02,
+      "shares": 120,
+      "side": "SHORT",
+      "ticker": "NAT"
+    }
+  ],
+  "holdings": [
+    "ADPT",
+    "CVI",
+    "FRO",
+    "HLP",
+    "INDP",
+    "IOVA",
+    "NAT",
+    "RVTY"
+  ],
+  "mean": -2.4914,
+  "n_trades_today": 10,
+  "recipe": "short_rsi_ob_h1",
+  "sells": [
+    "AVAH",
+    "CAI",
+    "QRVO",
+    "SDGR",
+    "SWKS"
+  ],
+  "state": {
+    "after": "2026-09-17",
+    "cash": 16544.78,
+    "pos": {
+      "ADPT": {
+        "close_px": 28.549999237060547,
+        "cost": 2.1382964379297547,
+        "entry_date": "2026-09-17",
+        "entry_px": 28.229999542236328,
+        "fee_in": 2.1382964379297547,
+        "last_px": 28.229999542236328,
+        "notional": 959.8199844360352,
+        "peak_px": 28.229999542236328,
+        "reason": "RSI overbought; gate rsi_ob=True; list ohlc_hot; ret5=+13.3; leftover $965.30",
+        "shares": 34,
+        "ticker": "ADPT"
+      },
+      "CVI": {
+        "close_px": 54.13999938964844,
+        "cost": 2.0895846580609883,
+        "entry_date": "2026-09-17",
+        "entry_px": 51.880001068115234,
+        "fee_in": 2.0895846580609883,
+        "last_px": 51.880001068115234,
+        "notional": 933.8400192260742,
+        "peak_px": 51.880001068115234,
+        "reason": "RSI overbought; gate rsi_ob=True; list ohlc_hot; ret5=+11.1; leftover $965.30",
+        "shares": 18,
+        "ticker": "CVI"
+      },
+      "FRO": {
+        "close_px": 54.029998779296875,
+        "cost": 2.0862950691327655,
+        "entry_date": "2026-09-17",
+        "entry_px": 54.310001373291016,
+        "fee_in": 2.0862950691327655,
+        "last_px": 54.310001373291016,
+        "notional": 923.2700233459473,
+        "peak_px": 54.310001373291016,
+        "reason": "RSI overbought; gate rsi_ob=True; list ohlc_hot; ret5=+13.7; leftover $965.30",
+        "shares": 17,
+        "ticker": "FRO"
+      },
+      "HLP": {
+        "close_px": 2.0199999809265137,
+        "cost": 5.072535615934084,
+        "entry_date": "2026-09-16",
+        "entry_px": 1.7999999523162842,
+        "fee_in": 5.072535615934084,
+        "last_px": 2.0999999046325684,
+        "notional": 694.7999815940857,
+        "peak_px": 1.7999999523162842,
+        "reason": "RSI overbought; gate rsi_ob=True; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+30.5; leftover $695.76",
+        "shares": 386,
+        "ticker": "HLP"
+      },
+      "INDP": {
+        "close_px": 3.930000066757202,
+        "cost": 3.03221369893061,
+        "entry_date": "2026-09-11",
+        "entry_px": 2.700000047683716,
+        "fee_in": 3.03221369893061,
+        "last_px": 3.299999952316284,
+        "notional": 621.0000109672546,
+        "peak_px": 2.700000047683716,
+        "reason": "RSI overbought; gate rsi_ob=True; list yday_gainer,yday_mover; ret5=+120.7; leftover $623.10",
+        "shares": 230,
+        "ticker": "INDP"
+      },
+      "IOVA": {
+        "close_px": 10.020000457763672,
+        "cost": 2.323997260273973,
+        "entry_date": "2026-09-17",
+        "entry_px": 10.25,
+        "fee_in": 2.323997260273973,
+        "last_px": 10.25,
+        "notional": 963.5,
+        "peak_px": 10.25,
+        "reason": "RSI overbought; gate rsi_ob=True; list flatten,ohlc_hot; ret5=+17.1; leftover $965.30",
+        "shares": 94,
+        "ticker": "IOVA"
+      },
+      "NAT": {
+        "close_px": 8.149999618530273,
+        "cost": 2.406267124792648,
+        "entry_date": "2026-09-17",
+        "entry_px": 8.020000457763672,
+        "fee_in": 2.406267124792648,
+        "last_px": 8.020000457763672,
+        "notional": 962.4000549316406,
+        "peak_px": 8.020000457763672,
+        "reason": "RSI overbought; gate rsi_ob=True; list ohlc_hot; ret5=+14.2; leftover $965.30",
+        "shares": 120,
+        "ticker": "NAT"
+      },
+      "RVTY": {
+        "close_px": 146.72999572753906,
+        "cost": 2.0374389046446915,
+        "entry_date": "2026-09-16",
+        "entry_px": 140.8800048828125,
+        "fee_in": 2.0374389046446915,
+        "last_px": 147.61000061035156,
+        "notional": 563.52001953125,
+        "peak_px": 140.8800048828125,
+        "reason": "RSI overbought; gate rsi_ob=True; list yday_gainer,ohlc_hot; \ud83d\udd35; \u26aa; ret5=+10.3; leftover $695.76",
+        "shares": 4,
+        "ticker": "RVTY"
+      }
+    },
+    "yday_equity": 9490.63
+  }
+}

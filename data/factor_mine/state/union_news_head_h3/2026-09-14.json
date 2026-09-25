@@ -1,0 +1,96 @@
+{
+  "buys": [],
+  "cash": 276.41,
+  "date": "2026-09-14",
+  "equity": 9007.77,
+  "fees": 0,
+  "fills": [],
+  "holdings": [
+    "ADBE",
+    "AMTX",
+    "BAK",
+    "ORCL",
+    "RH"
+  ],
+  "mean": -0.8958,
+  "n_trades_today": 0,
+  "recipe": "union_news_head_h3",
+  "sells": [],
+  "state": {
+    "after": "2026-09-14",
+    "cash": 276.41,
+    "pos": {
+      "ADBE": {
+        "close_px": 265.6000061035156,
+        "cost": 1697.2009871826172,
+        "entry_date": "2026-09-11",
+        "entry_px": 242.1699981689453,
+        "fee_in": 2.011,
+        "last_px": 261.510009765625,
+        "min_hold": 3,
+        "notional": 1695.1899871826172,
+        "peak_px": 261.510009765625,
+        "reason": "prior-export headline\ud83d\udfe2 only; gate headline=good; rank cond; list earn_react; \ud83d\udd35; ret5=-12.9; leftover $1857.44",
+        "shares": 7,
+        "ticker": "ADBE"
+      },
+      "AMTX": {
+        "close_px": 1.9500000476837158,
+        "cost": 1868.138965286255,
+        "entry_date": "2026-09-11",
+        "entry_px": 2.0399999618530273,
+        "fee_in": 11.739,
+        "last_px": 2.009999990463257,
+        "min_hold": 3,
+        "notional": 1856.3999652862549,
+        "peak_px": 2.0399999618530273,
+        "reason": "prior-export headline\ud83d\udfe2 only; gate headline=good; rank cond; list yday_gainer,yday_mover,ohlc_hot; \ud83d\udd35; ret5=+10.9; leftover $1857.44",
+        "shares": 910,
+        "ticker": "AMTX"
+      },
+      "BAK": {
+        "close_px": 2.009999990463257,
+        "cost": 1868.420299749756,
+        "entry_date": "2026-09-11",
+        "entry_px": 2.119999885559082,
+        "fee_in": 11.3004,
+        "last_px": 2.049999952316284,
+        "min_hold": 3,
+        "notional": 1857.1198997497559,
+        "peak_px": 2.119999885559082,
+        "reason": "prior-export headline\ud83d\udfe2 only; gate headline=good; rank cond; list probable,yday_gainer,ohlc_hot; \ud83d\udd35; ret5=+8.8; leftover $1857.44",
+        "shares": 876,
+        "ticker": "BAK"
+      },
+      "ORCL": {
+        "close_px": 144.7899932861328,
+        "cost": 1810.7529194335937,
+        "entry_date": "2026-09-11",
+        "entry_px": 164.42999267578125,
+        "fee_in": 2.023,
+        "last_px": 141.4199981689453,
+        "min_hold": 3,
+        "notional": 1808.7299194335938,
+        "peak_px": 164.42999267578125,
+        "reason": "prior-export headline\ud83d\udfe2 only; gate headline=good; rank cond; list flatten,earn_react; \ud83d\udd35; \u26aa; ret5=-0.7; leftover $1857.44",
+        "shares": 11,
+        "ticker": "ORCL"
+      },
+      "RH": {
+        "close_px": 134.1699981689453,
+        "cost": 1766.2590872802734,
+        "entry_date": "2026-09-11",
+        "entry_px": 135.7100067138672,
+        "fee_in": 2.029,
+        "last_px": 131.39999389648438,
+        "min_hold": 3,
+        "notional": 1764.2300872802734,
+        "peak_px": 135.7100067138672,
+        "reason": "prior-export headline\ud83d\udfe2 only; gate headline=good; rank cond; list earn_react; ret5=-8.6; leftover $1857.44",
+        "shares": 13,
+        "ticker": "RH"
+      }
+    },
+    "yday_equity": 9007.77
+  }
+}

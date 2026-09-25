@@ -1,0 +1,48 @@
+{
+  "buys": [],
+  "cash": 9678.12,
+  "date": "2026-08-31",
+  "equity": 9678.12,
+  "fees": 6.1763,
+  "fills": [
+    {
+      "fees": 2.0241,
+      "pnl": -91.95,
+      "price": 378.44,
+      "shares": 4,
+      "side": "SELL",
+      "ticker": "CIEN"
+    },
+    {
+      "fees": 2.067,
+      "pnl": -27.13,
+      "price": 322.49,
+      "shares": 12,
+      "side": "SELL",
+      "ticker": "KEYS"
+    },
+    {
+      "fees": 2.0852,
+      "pnl": -202.8,
+      "price": 132.3,
+      "shares": 21,
+      "side": "SELL",
+      "ticker": "SMTC"
+    }
+  ],
+  "holdings": [],
+  "mean": 0.4962,
+  "n_trades_today": 3,
+  "recipe": "union_news_or_net4_rw_h1",
+  "sells": [
+    "CIEN",
+    "KEYS",
+    "SMTC"
+  ],
+  "state": {
+    "after": "2026-08-31",
+    "cash": 9678.12,
+    "pos": {},
+    "yday_equity": 9678.12
+  }
+}

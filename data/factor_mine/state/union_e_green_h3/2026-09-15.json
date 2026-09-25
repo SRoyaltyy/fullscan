@@ -1,0 +1,36 @@
+{
+  "buys": [],
+  "cash": 51.97,
+  "date": "2026-09-15",
+  "equity": 9762.97,
+  "fees": 0,
+  "fills": [],
+  "holdings": [
+    "KR"
+  ],
+  "mean": 2.188,
+  "n_trades_today": 0,
+  "recipe": "union_e_green_h3",
+  "sells": [],
+  "state": {
+    "after": "2026-09-15",
+    "cash": 51.97,
+    "pos": {
+      "KR": {
+        "close_px": 62.25,
+        "cost": 8741.578071411133,
+        "entry_date": "2026-09-11",
+        "entry_px": 56.02000045776367,
+        "fee_in": 2.458,
+        "last_px": 60.77000045776367,
+        "min_hold": 3,
+        "notional": 8739.120071411133,
+        "peak_px": 60.77000045776367,
+        "reason": "combo gate; gate earn_react=True,last_green=True; list earn_react; ret5=-2.7; leftover $8793.55",
+        "shares": 156,
+        "ticker": "KR"
+      }
+    },
+    "yday_equity": 9762.97
+  }
+}
