@@ -16,6 +16,8 @@ Re-stepping the 08-13 chain reproduces the headline totals. HOT4 futubull is 24.
 
 `python3 -m src.test_factor_mine_sequential` passed. Restarting from a saved day is byte-identical. A later bar and a later snapshot file do not change earlier days. A second, different write is refused. Ledgers stay byte-identical.
 
+A stop is filled before a take when the same session bar trades through both. A gap through the stop fills at the 09:30 open. A later print through the stop fills at the stop price. That name is not bought again on the bar. New state rows name the fill price and the fill rule. The 10,170 frozen state files are not rewritten, so the headline totals above stay the saved chain. HOT4 has no stop, and its 2026-09-22 through 2026-09-24 orders are those saved fills, with the price on each row, in `03_scoreboard/factor_mine/union_hot_n4_h1_orders_2026-09-22_2026-09-25.csv`. 2026-09-25 has no frozen snapshot and is marked not_locked.
+
 - pit_rebuilt: 15
 - incomplete_pit: 15
 - held: 0

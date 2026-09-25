@@ -8,6 +8,12 @@ snapshot or a later bar. A file that is already there is left as it is.
 The #336 ledger loop resumed cash from the previous ledger, then
 ``score_recipe`` walked the whole panel in one ``simulate_book`` call.
 This module is the book those headlines come from.
+
+A stop that the same bar also trades through a take-profit fills at
+the stop, before any same-bar rebuy. Each buy and sell on a new state
+file names its fill price. Frozen state files are not rewritten.
+HOT4 orders for 2026-09-22 through 2026-09-25 are written from those
+files; a date with no file is ``not_locked``.
 """
 from __future__ import annotations
 
@@ -20,6 +26,18 @@ from . import factor_mine_freeze as fmf
 ROOT = fm.ROOT
 STATE_DIR = ROOT / "data" / "factor_mine" / "state"
 FILL_SIDES = ("BUY", "SHORT", "SELL", "COVER")
+HOT4_RECIPE = "union_hot_n4_h1"
+HOT4_ORDER_DATES = (
+    "2026-09-22", "2026-09-23", "2026-09-24", "2026-09-25",
+)
+HOT4_ORDERS_CSV = (
+    ROOT / "03_scoreboard" / "factor_mine"
+    / "union_hot_n4_h1_orders_2026-09-22_2026-09-25.csv"
+)
+ORDER_FIELDS = (
+    "date", "recipe", "side", "ticker", "shares", "price",
+    "fees", "pnl", "fill_rule", "status",
+)
 
 
 def state_path(recipe: str, date: str, root: Path | None = None) -> Path:
@@ -159,6 +177,24 @@ def one_day_panel(date: str, rows: list[dict], calendar: list[str]) -> dict:
     }
 
 
+def order_ticker(item) -> str:
+    """Ticker from a saved buy/sell. Older state files stored a bare string."""
+    if isinstance(item, dict):
+        return str(item.get("ticker") or "")
+    return str(item or "")
+
+
+def order_row(trade: dict) -> dict:
+    """One fill with its price written on the row."""
+    return {
+        "ticker": trade.get("ticker"),
+        "side": trade.get("side"),
+        "shares": trade.get("shares"),
+        "price": trade.get("price"),
+        "fill_rule": trade.get("fill_rule") or "open",
+    }
+
+
 def _fills(trades: list[dict]) -> list[dict]:
     out = []
     for trade in trades:
@@ -171,22 +207,32 @@ def _fills(trades: list[dict]) -> list[dict]:
             "price": trade.get("price"),
             "fees": trade.get("fees"),
             "pnl": trade.get("pnl"),
+            "fill_rule": trade.get("fill_rule") or "open",
         })
     return out
 
 
 def record_from_book(name: str, date: str, book: dict) -> dict:
     decision = fmf.decision_from_book(book, date)
-    fills = _fills(decision.get("trades") or [])
+    day_trades = decision.get("trades") or []
+    fills = _fills(day_trades)
     fees = round(sum(float(t.get("fees") or 0) for t in fills), 4)
     state = decision.get("state") or {}
     daily = decision.get("daily") or {}
     pos = state.get("pos") or {}
+    buys = [
+        order_row(t) for t in day_trades
+        if t.get("side") in ("BUY", "SHORT") and t.get("ticker")
+    ]
+    sells = [
+        order_row(t) for t in day_trades
+        if t.get("side") in ("SELL", "COVER") and t.get("ticker")
+    ]
     return {
         "recipe": name,
         "date": date,
-        "buys": [t.get("ticker") for t in (decision.get("buys") or []) if t.get("ticker")],
-        "sells": [t.get("ticker") for t in (decision.get("sells") or []) if t.get("ticker")],
+        "buys": buys,
+        "sells": sells,
         "fills": fills,
         "fees": fees,
         "cash": state.get("cash"),
@@ -317,6 +363,62 @@ def compound(records: list[dict]) -> float | None:
     if equity is None:
         return None
     return round(100.0 * (float(equity) / float(fm.CAPITAL) - 1.0), 3)
+
+
+def hot4_order_rows(dates: tuple[str, ...] | list[str] | None = None,
+                   root: Path | None = None) -> list[dict]:
+    """HOT4 fills for each date. A date with no state file is not locked.
+
+    Reads saved state. Does not resimulate and does not rewrite a day.
+    """
+    rows = []
+    for date in list(dates or HOT4_ORDER_DATES):
+        doc = read_state(HOT4_RECIPE, date, root)
+        if doc is None:
+            rows.append({
+                "date": date, "recipe": HOT4_RECIPE, "side": "", "ticker": "",
+                "shares": "", "price": "", "fees": "", "pnl": "",
+                "fill_rule": "", "status": "not_locked",
+            })
+            continue
+        fills = list(doc.get("fills") or [])
+        if not fills:
+            rows.append({
+                "date": date, "recipe": HOT4_RECIPE, "side": "", "ticker": "",
+                "shares": "", "price": "", "fees": "", "pnl": "",
+                "fill_rule": "", "status": "flat",
+            })
+            continue
+        for fill in fills:
+            rows.append({
+                "date": date,
+                "recipe": HOT4_RECIPE,
+                "side": fill.get("side") or "",
+                "ticker": fill.get("ticker") or "",
+                "shares": fill.get("shares"),
+                "price": fill.get("price"),
+                "fees": fill.get("fees"),
+                "pnl": fill.get("pnl"),
+                "fill_rule": fill.get("fill_rule") or "open",
+                "status": "locked",
+            })
+    return rows
+
+
+def write_hot4_orders(path: Path | None = None,
+                      root: Path | None = None) -> Path:
+    """Write the HOT4 orders CSV. Existing state files stay as they are."""
+    import csv
+
+    dest = Path(path or HOT4_ORDERS_CSV)
+    dest.parent.mkdir(parents=True, exist_ok=True)
+    rows = hot4_order_rows(root=root)
+    with dest.open("w", newline="", encoding="utf-8") as handle:
+        writer = csv.DictWriter(handle, fieldnames=list(ORDER_FIELDS), lineterminator="\n")
+        writer.writeheader()
+        for row in rows:
+            writer.writerow({key: row.get(key, "") for key in ORDER_FIELDS})
+    return dest
 
 
 def chain_records(recipe: str, dates: list[str], root: Path | None = None) -> list[dict]:

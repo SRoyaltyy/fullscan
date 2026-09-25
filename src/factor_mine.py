@@ -1084,7 +1084,11 @@ def explain_recipe(rec: dict) -> dict:
     if stop and stop > 0:
         sell_bits.append(
             f"Stop-loss: sell at the next 09:30 if that open is {100 * stop:g}% "
-            "worse than our fill, even inside the minimum hold."
+            "worse than our fill, even inside the minimum hold. "
+            "A gap through the stop fills at that open. If the open is still "
+            "safe and the same bar trades through the stop, the fill is the "
+            "stop price. If that bar also trades through a take-profit, the "
+            "stop fills first. The stopped name is not bought again on that bar."
         )
     if not exit_when and not (take and take > 0) and not (stop and stop > 0):
         sell_bits.append("No extra panic button — only the hold timer and the sell rule below.")
