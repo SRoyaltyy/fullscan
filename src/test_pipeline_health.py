@@ -1,9 +1,13 @@
 """Unit tests for pipeline health date math and heal routing."""
 from __future__ import annotations
 
+import json
+import tempfile
 from datetime import datetime
+from pathlib import Path
 from zoneinfo import ZoneInfo
 
+import src.pipeline_health as ph
 from src.pipeline_health import (
     HUMAN_STEPS,
     GROK_WORKFLOWS,
@@ -16,6 +20,7 @@ from src.pipeline_health import (
     _next_weekday,
     _prev_weekday,
     _should_heal,
+    _stale_note,
     _workflow_for_step,
     oauth_verdict,
     packet_dates,
@@ -184,6 +189,104 @@ def test_oauth_verdict():
     assert (st, req) == ("FAIL", True)
     st, req, _ = oauth_verdict(None, True)
     assert st == "WARN"
+
+
+def _captain_baseline(target: str, source_heat_date: str) -> dict:
+    return {
+        "date": target,
+        "source_heat_date": source_heat_date,
+        "phase": "postclose_baseline",
+        "cards": [{"i": i} for i in range(20)],
+        "coverage": 0.95,
+    }
+
+
+def _with_root(root: Path):
+    class _Swap:
+        def __enter__(self):
+            self._old = ph.ROOT
+            ph.ROOT = root
+            return root
+
+        def __exit__(self, *_exc):
+            ph.ROOT = self._old
+    return _Swap()
+
+
+def test_postclose_baseline_wants_source_heat_date_not_target():
+    # Run 36078434802: 2026-09-25_research_baseline.json is a real
+    # post-close baseline. date is the target session; source_heat_date
+    # is the completed session (2026-09-24). Comparing that field to the
+    # target false-FAILed.
+    source, target = "2026-09-24", "2026-09-25"
+    note = _stale_note(
+        _captain_baseline(target, source), target,
+        {"source_heat_date": source})
+    assert note == ""
+    wrong = _stale_note(
+        _captain_baseline(target, target), target,
+        {"source_heat_date": source})
+    assert "source_heat_date=2026-09-25" in wrong
+    assert "want 2026-09-24" in wrong
+    # filename/date field still has to be the target session
+    slipped = _stale_note(
+        {"date": source, "source_heat_date": source}, target,
+        {"source_heat_date": source})
+    assert "date=2026-09-24" in slipped
+    assert "want 2026-09-25" in slipped
+
+    with tempfile.TemporaryDirectory() as d:
+        root = Path(d)
+        heat = root / "01_daily" / "map_heat"
+        heat.mkdir(parents=True)
+        (root / "01_daily" / "_transcripts").mkdir()
+        (heat / f"{target}_research_baseline.json").write_text(
+            json.dumps(_captain_baseline(target, source)), encoding="utf-8")
+        # Night pack clones today's heat onto tomorrow's filename.
+        (heat / f"{target}_map_heat.json").write_text(
+            json.dumps({"date": source, "phase": "postclose"}),
+            encoding="utf-8")
+        with _with_root(root):
+            report = Report(job="postclose", date=source,
+                            source_date=source, target_date=target)
+            ph.check_postclose(report, source, target)
+        by = {c.step: c for c in report.checks}
+        assert by["postclose.baseline_json"].status == "OK", by["postclose.baseline_json"].detail
+        assert by["postclose.map_heat_json"].status == "OK", by["postclose.map_heat_json"].detail
+
+        (heat / f"{target}_research_baseline.json").write_text(
+            json.dumps(_captain_baseline(target, target)), encoding="utf-8")
+        (heat / f"{target}_map_heat.json").write_text(
+            json.dumps({"date": "2026-09-01", "phase": "postclose"}),
+            encoding="utf-8")
+        with _with_root(root):
+            report = Report(job="postclose", date=source,
+                            source_date=source, target_date=target)
+            ph.check_postclose(report, source, target)
+        by = {c.step: c for c in report.checks}
+        assert by["postclose.baseline_json"].status == "FAIL"
+        assert "source_heat_date=2026-09-25" in by["postclose.baseline_json"].detail
+        assert "want 2026-09-24" in by["postclose.baseline_json"].detail
+        assert by["postclose.map_heat_json"].status == "FAIL"
+        assert "date=2026-09-01" in by["postclose.map_heat_json"].detail
+        assert "want 2026-09-24" in by["postclose.map_heat_json"].detail
+
+
+def test_preopen_baseline_source_heat_date_is_prior_session():
+    session = "2026-09-25"  # file date; heat came from 2026-09-24
+    with tempfile.TemporaryDirectory() as d:
+        root = Path(d)
+        heat = root / "01_daily" / "map_heat"
+        heat.mkdir(parents=True)
+        (heat / f"{session}_research_baseline.json").write_text(
+            json.dumps(_captain_baseline(session, "2026-09-24")),
+            encoding="utf-8")
+        with _with_root(root):
+            report = Report(job="preopen", date=session,
+                            source_date="2026-09-24", target_date=session)
+            ph.check_preopen(report, session)
+        base = next(c for c in report.checks if c.step == "preopen.in_baseline")
+        assert base.status == "OK", base.detail
 
 
 def test_reauth_payload_fail_is_needs_reauth():

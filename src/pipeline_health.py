@@ -376,14 +376,27 @@ def _payload_dates(data: dict) -> list[tuple[str, str]]:
     return out
 
 
-def _stale_note(data: dict, expected: str) -> str:
-    bad = []
+def _stale_note(data: dict, expected: str,
+                key_expected: dict[str, str] | None = None) -> str:
+    """Flag ISO date fields that are not the date this artifact should carry.
+
+    key_expected overrides one field. Post-close captain baseline keeps
+    ``date`` = target session and ``source_heat_date`` = the completed
+    session the cards were researched from.
+    """
+    bad: list[tuple[str, str, str]] = []
     for k, v in _payload_dates(data):
-        if v and v != expected and re.match(r"\d{4}-\d{2}-\d{2}$", v):
-            bad.append(f"{k}={v}")
+        want = (key_expected or {}).get(k, expected)
+        if v and want and v != want and re.match(r"\d{4}-\d{2}-\d{2}$", v):
+            bad.append((k, v, want))
     if not bad:
         return ""
-    return "PASS-OVER from " + ", ".join(bad) + f" (want {expected})"
+    shown = ", ".join(f"{k}={v}" for k, v, _ in bad)
+    wants = {w for _, _, w in bad}
+    if len(wants) == 1:
+        return "PASS-OVER from " + shown + f" (want {next(iter(wants))})"
+    detail = ", ".join(f"{k}={v} (want {w})" for k, v, w in bad)
+    return "PASS-OVER from " + detail
 
 
 def _timeoutish(text: str) -> bool:
@@ -396,7 +409,8 @@ def _deepseekish(text: str) -> bool:
 
 
 def artifact(report: Report, *, step: str, name: str, group: str, path: Path,
-             required: bool, expected_date: str, qc=None) -> None:
+             required: bool, expected_date: str, qc=None,
+             key_expected: dict[str, str] | None = None) -> None:
     if not path.exists():
         _add(report, step=step, name=name, group=group,
              status="FAIL" if required else "WARN", required=required,
@@ -421,7 +435,7 @@ def artifact(report: Report, *, step: str, name: str, group: str, path: Path,
             _add(report, step=step, name=name, group=group, status="FAIL",
                  required=required, detail="GARBLED JSON", path=str(path))
             return
-        stale = _stale_note(data, expected_date)
+        stale = _stale_note(data, expected_date, key_expected)
         if stale:
             _add(report, step=step, name=name, group=group, status="FAIL",
                  required=required, detail=stale, path=str(path))
@@ -1051,20 +1065,26 @@ def check_postclose(report: Report, source: str, target: str) -> None:
           flush=True)
     heat = ROOT / "01_daily" / "map_heat"
     tr = ROOT / "01_daily" / "_transcripts"
+    # Night pack clones {source}_map_heat.json onto the target filename
+    # without rewriting date. The payload date is the completed session.
     artifact(report, step="postclose.map_heat_json",
              name=f"{target}_map_heat.json (industry groups + captains)",
              group="postclose", path=heat / f"{target}_map_heat.json",
-             required=True, expected_date=target)
+             required=True, expected_date=source)
     # Tape is the 05:40 GH overlay — empty tape here is not a post-close FAIL.
     artifact(report, step="postclose.map_heat_md",
              name=f"{target}_map_heat.md", group="postclose",
              path=heat / f"{target}_map_heat.md", required=False,
              expected_date=target)
     base = heat / f"{target}_research_baseline.json"
+    # date is the next session (filename). source_heat_date is the
+    # completed session the cards were built from — not the target.
     artifact(report, step="postclose.baseline_json",
              name=f"{target}_research_baseline.json (captain cards)",
              group="postclose", path=base, required=True,
-             expected_date=target, qc=output_qc.qc_map_heat_baseline)
+             expected_date=target,
+             key_expected={"source_heat_date": source},
+             qc=output_qc.qc_map_heat_baseline)
     artifact(report, step="postclose.baseline_md",
              name=f"{target}_research_baseline.md", group="postclose",
              path=heat / f"{target}_research_baseline.md", required=True,
@@ -1122,7 +1142,9 @@ def check_preopen(report: Report, date: str) -> None:
     artifact(report, step="preopen.in_baseline",
              name="INPUT: last-night captain baseline",
              group="preopen", path=heat / f"{date}_research_baseline.json",
-             required=True, expected_date=date, qc=output_qc.qc_map_heat_baseline)
+             required=True, expected_date=date,
+             key_expected={"source_heat_date": _prev_weekday(date)},
+             qc=output_qc.qc_map_heat_baseline)
 
     artifact(report, step="preopen.news_parse_json",
              name="News parse JSON", group="preopen",
