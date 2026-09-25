@@ -28,10 +28,6 @@ ROOT = Path(__file__).resolve().parent.parent
 SNAP_DIR = ROOT / "data" / "factor_mine" / "snapshots"
 PRICE_DIR = ROOT / "data" / "factor_mine" / "prices"
 MANIFEST_PATH = ROOT / "data" / "factor_mine" / "freeze_manifest.json"
-# A day is held only when this share of candidates has no print or too
-# few earlier bars. Equality at 10% still lands; the gapped names are
-# excluded either way.
-UNRANKABLE_MAX_SHARE = 0.10
 
 
 class HoldDay(Exception):
@@ -52,6 +48,15 @@ class HoldDay(Exception):
 
 class FrozenHistory(Exception):
     """A frozen snapshot or price pin already exists and was not restated."""
+
+
+class SkipDay(Exception):
+    """No rankable names. Do not lock D."""
+
+    def __init__(self, date: str, reason: str):
+        self.date = str(date)
+        self.reason = reason
+        super().__init__(f"skip {self.date}: {reason}")
 
 
 def canonical_bytes(obj) -> bytes:
@@ -235,20 +240,13 @@ def completeness_gaps(ticker: str, date: str) -> list[str]:
     return gaps
 
 
-def unrankable_holds(n_bad: int, n_names: int) -> bool:
-    """True when the day must be held: empty universe, or share strictly above 10%."""
-    if n_names <= 0:
-        return True
-    return (n_bad / n_names) > UNRANKABLE_MAX_SHARE
-
-
 def ensure_candidate_bars(date: str, tickers: list[str]) -> list[dict]:
     """Fetch Yahoo bars for every candidate.
 
-    A name with no print or too few earlier bars is unrankable and
-    returned so the caller can exclude it. The day is held when that
-    share is above :data:`UNRANKABLE_MAX_SHARE`, the universe is empty,
-    the fetch fails wholesale, or the tape is dividend-adjusted.
+    A name with no print or too few earlier bars is dropped and
+    returned. Missing data does not hold the day. An empty universe
+    skips the day. A wholesale fetch failure and dividend-adjusted
+    bars still refuse to lock.
     """
     from . import price_store as ps
 
@@ -260,10 +258,7 @@ def ensure_candidate_bars(date: str, tickers: list[str]) -> list[dict]:
             gaps=[{"ticker": t, "missing": ["adjusted bars"]} for t in names],
         )
     if not names:
-        raise HoldDay(
-            date, [], "no candidates — refusing to freeze an empty day",
-            status="held_incomplete",
-        )
+        raise SkipDay(date, "no rankable names — skipping day")
     try:
         ps.ensure_through(date, tickers=names, strict=True)
     except (Exception, SystemExit) as e:
@@ -281,13 +276,6 @@ def ensure_candidate_bars(date: str, tickers: list[str]) -> list[dict]:
                 "missing": missing,
                 "reason": "; ".join(missing),
             })
-    if unrankable_holds(len(gaps), len(names)):
-        raise HoldDay(
-            date, [g["ticker"] for g in gaps],
-            "unrankable share above 10% — refusing to freeze the day",
-            status="held_incomplete",
-            gaps=gaps,
-        )
     return gaps
 
 
@@ -478,8 +466,30 @@ def code_sha() -> str:
     return (out.stdout or "").strip()
 
 
+def frozen_dropped(date: str) -> list[dict] | None:
+    """Dropped names already locked on this day.
+
+    None when D has no snapshot yet. A present list, including an empty
+    one, is authoritative: a later Yahoo print does not put a name back.
+    """
+    snap = read_json(snapshot_path(date))
+    if not isinstance(snap, dict) or "dropped" not in snap:
+        return None
+    out = []
+    for gap in snap.get("dropped") or []:
+        if not isinstance(gap, dict) or not gap.get("ticker"):
+            continue
+        missing = list(gap.get("missing") or [])
+        out.append({
+            "ticker": gap.get("ticker"),
+            "missing": missing,
+            "reason": gap.get("reason") or "; ".join(str(m) for m in missing),
+        })
+    return out
+
+
 def make_snapshot(date: str, rows: list[dict], prior: str | None,
-                  prices_sha: str | None, unrankable: list | None = None) -> dict:
+                  prices_sha: str | None, dropped: list | None = None) -> dict:
     from . import price_store as ps
 
     if ps.AUTO_ADJUST:
@@ -498,12 +508,12 @@ def make_snapshot(date: str, rows: list[dict], prior: str | None,
         r.get("date") or "", int(r.get("src_rank") or 0), r.get("ticker") or "",
     ))
     logged = []
-    for gap in unrankable or []:
+    for gap in dropped or []:
         missing = list(gap.get("missing") or [])
         logged.append({
             "ticker": gap.get("ticker"),
             "missing": missing,
-            "reason": gap.get("reason") or "; ".join(missing),
+            "reason": gap.get("reason") or "; ".join(str(m) for m in missing),
         })
     logged.sort(key=lambda r: r.get("ticker") or "")
     return {
@@ -516,8 +526,8 @@ def make_snapshot(date: str, rows: list[dict], prior: str | None,
         "heat": heat,
         "prices_sha256": prices_sha,
         "n_rows": len(frozen_rows),
-        "n_unrankable": len(logged),
-        "unrankable": logged,
+        "n_dropped": len(logged),
+        "dropped": logged,
         "rows": frozen_rows,
     }
 
@@ -693,6 +703,9 @@ def append_land(from_date: str, target: str, *, write: bool = False,
             continue
         try:
             extra = fm.build_panel(date, date, fail_closed=True)
+        except SkipDay as e:
+            print(f"[factor-mine] {e}", flush=True)
+            continue
         except HoldDay as e:
             print(f"[factor-mine] {e}", flush=True)
             break
@@ -710,7 +723,7 @@ def append_land(from_date: str, target: str, *, write: bool = False,
             pinned = read_json(price_path(date)) or pinned
         snap = make_snapshot(
             date, rows, prior, prices_sha,
-            unrankable=extra.get("unrankable") or [],
+            dropped=extra.get("dropped") or [],
         )
         try:
             write_snapshot(date, snap, restate=date in restate_set)

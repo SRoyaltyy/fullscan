@@ -2097,18 +2097,25 @@ def build_panel(from_date: str = START, to_date: str | None = None,
         # Prior export only. Same-day Finviz is never a feature.
         prior_df = ga.load_finviz(prior_export) if prior_export else None
         plan = fla.flatten_day_targets(date)
-        unrankable: list[dict] = []
+        dropped_rows: list[dict] = []
         universe: list[str] = []
+        frozen: list[dict] | None = None
         if fail_closed:
             # Bars for every candidate before membership or hot_score.
-            # A gapped name is unrankable and left off the panel. The day
-            # is held only when that share is above 10%.
+            # A gapped name is dropped. The day still locks. A rerun
+            # keeps the frozen dropped list even if Yahoo later fills it.
             from . import factor_mine_freeze as fmf
             universe = fmf.ranking_universe(
                 date, lookback, plan, movers.get("by_date") or {})
-            found = fmf.ensure_candidate_bars(date, universe) or []
-            unrankable.extend(found)
-        dropped = {g.get("ticker") for g in unrankable}
+            frozen = fmf.frozen_dropped(date)
+            if frozen is None:
+                found = fmf.ensure_candidate_bars(date, universe) or []
+                dropped_rows.extend(found)
+            else:
+                dropped_rows.extend(frozen)
+                print(f"[factor-mine] {date} frozen dropped n={len(frozen)}",
+                      flush=True)
+        dropped = {g.get("ticker") for g in dropped_rows}
         buckets = _candidates(date, lookback, plan, movers.get("by_date") or {})
         reasons: dict[str, list[str]] = {}
         order: list[str] = []
@@ -2133,7 +2140,7 @@ def build_panel(from_date: str = START, to_date: str | None = None,
             rec = _attach_row(
                 date, t, reasons[t], i, sess, prev_sess, prior_export, prior_df,
             )
-            if fail_closed:
+            if fail_closed and frozen is None:
                 from . import factor_mine_freeze as fmf
                 problem = fmf.row_price_problem(t, date)
                 if problem:
@@ -2144,29 +2151,27 @@ def build_panel(from_date: str = START, to_date: str | None = None,
                     })
                     continue
             day_rows.append(rec)
-        if fail_closed and late:
+        if fail_closed and frozen is None:
             from . import factor_mine_freeze as fmf
-            bad = {g.get("ticker") for g in unrankable} | {g.get("ticker") for g in late}
-            denom = set(universe) | set(order)
-            if fmf.unrankable_holds(len(bad), len(denom)):
-                reason = "; ".join(
-                    g.get("reason") or "; ".join(g.get("missing") or [])
-                    for g in late
-                ) or "unrankable share above 10% — refusing to freeze the day"
-                raise fmf.HoldDay(
-                    date, sorted(t for t in bad if t), reason,
-                    status="held_incomplete",
-                    gaps=list(unrankable) + late,
+            dropped_rows.extend(late)
+            bad = {g.get("ticker") for g in dropped_rows}
+            rankable = [t for t in universe if t not in bad]
+            if not rankable and not day_rows:
+                detail = "; ".join(
+                    g.get("reason") or "" for g in dropped_rows if g.get("reason")
                 )
-            unrankable.extend(late)
-        for gap in unrankable:
+                reason = "no rankable names — skipping day"
+                if detail:
+                    reason = f"{reason}: {detail}"
+                raise fmf.SkipDay(date, reason)
+        for gap in dropped_rows:
             item = dict(gap)
             item["date"] = date
             excluded.append(item)
         by_date[date] = day_rows
         rows.extend(day_rows)
-        if unrankable:
-            print(f"[factor-mine] {date} unrankable {len(unrankable)} excluded",
+        if dropped_rows:
+            print(f"[factor-mine] {date} dropped {len(dropped_rows)}",
                   flush=True)
         print(f"[factor-mine] panel {date} names={len(day_rows)} "
               f"total={len(rows)}", flush=True)
@@ -2181,7 +2186,7 @@ def build_panel(from_date: str = START, to_date: str | None = None,
         "lookback": PANEL_LOOKBACK,
         "rows": rows,
         "by_date": by_date,
-        "unrankable": excluded,
+        "dropped": excluded,
     }
 
 
