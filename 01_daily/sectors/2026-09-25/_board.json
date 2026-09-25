@@ -1,6 +1,7 @@
 {
   "date": "2026-09-25",
-  "generated_at": "2026-09-25T06:10:02.659487-04:00",
+  "generated_at": "2026-09-25T16:44:46.170503-04:00",
+  "summary": "",
   "sectors": [
     {
       "sector": "Basic Materials",
@@ -11,19 +12,22 @@
       "confidence_score": 0.455,
       "multiplier": 0.85,
       "divergence_flagged": true,
-      "actual_pct_change": null,
-      "actual_direction": null,
-      "direction_hit": null,
-      "magnitude_hit": null,
+      "actual_pct_change": 0.24154374224563124,
+      "actual_direction": "up",
+      "direction_hit": false,
+      "magnitude_hit": true,
       "has_predict_md": true,
-      "has_outcome_md": false,
+      "has_outcome_md": true,
       "components": {
         "S0_SHARED_MACRO": -0.5,
         "S1_SECTOR_FACTORS": 0.0,
         "S2_BREADTH": -0.5,
         "S3_FLOWS_POSITIONING": -0.5,
         "S4_ETF_TAPE": 0.0
-      }
+      },
+      "status": "OK",
+      "provider": "",
+      "fallback_reason": ""
     },
     {
       "sector": "Communication Services",
@@ -34,19 +38,22 @@
       "confidence_score": 0.415,
       "multiplier": 0.85,
       "divergence_flagged": true,
-      "actual_pct_change": null,
-      "actual_direction": null,
-      "direction_hit": null,
-      "magnitude_hit": null,
+      "actual_pct_change": -0.9035869800856022,
+      "actual_direction": "down",
+      "direction_hit": false,
+      "magnitude_hit": false,
       "has_predict_md": true,
-      "has_outcome_md": false,
+      "has_outcome_md": true,
       "components": {
         "S0_SHARED_MACRO": -1.0,
         "S1_SECTOR_FACTORS": -1.0,
         "S2_BREADTH": -1.0,
         "S3_FLOWS_POSITIONING": -1.0,
         "S4_ETF_TAPE": 0.0
-      }
+      },
+      "status": "OK",
+      "provider": "",
+      "fallback_reason": ""
     },
     {
       "sector": "Consumer Cyclical",
@@ -57,19 +64,22 @@
       "confidence_score": 0.528,
       "multiplier": 0.9,
       "divergence_flagged": true,
-      "actual_pct_change": null,
-      "actual_direction": null,
-      "direction_hit": null,
-      "magnitude_hit": null,
+      "actual_pct_change": 0.21754701272065358,
+      "actual_direction": "up",
+      "direction_hit": false,
+      "magnitude_hit": false,
       "has_predict_md": true,
-      "has_outcome_md": false,
+      "has_outcome_md": true,
       "components": {
         "S0_SHARED_MACRO": -1.0,
         "S1_SECTOR_FACTORS": -1.0,
         "S2_BREADTH": -1.0,
         "S3_FLOWS_POSITIONING": 0.0,
         "S4_ETF_TAPE": -1.0
-      }
+      },
+      "status": "OK",
+      "provider": "",
+      "fallback_reason": ""
     },
     {
       "sector": "Consumer Defensive",
@@ -80,19 +90,22 @@
       "confidence_score": 0.519,
       "multiplier": 0.8,
       "divergence_flagged": true,
-      "actual_pct_change": null,
-      "actual_direction": null,
-      "direction_hit": null,
-      "magnitude_hit": null,
+      "actual_pct_change": 0.4406372384317514,
+      "actual_direction": "up",
+      "direction_hit": true,
+      "magnitude_hit": true,
       "has_predict_md": true,
-      "has_outcome_md": false,
+      "has_outcome_md": true,
       "components": {
         "S0_SHARED_MACRO": 1.0,
         "S1_SECTOR_FACTORS": 0.5,
         "S2_BREADTH": 0.0,
         "S3_FLOWS_POSITIONING": -0.5,
         "S4_ETF_TAPE": 0.0
-      }
+      },
+      "status": "OK",
+      "provider": "",
+      "fallback_reason": ""
     },
     {
       "sector": "Energy",
@@ -103,19 +116,22 @@
       "confidence_score": 0.65,
       "multiplier": 0.85,
       "divergence_flagged": false,
-      "actual_pct_change": null,
-      "actual_direction": null,
-      "direction_hit": null,
-      "magnitude_hit": null,
+      "actual_pct_change": -0.8945648118909411,
+      "actual_direction": "down",
+      "direction_hit": true,
+      "magnitude_hit": true,
       "has_predict_md": true,
-      "has_outcome_md": false,
+      "has_outcome_md": true,
       "components": {
         "S0_SHARED_MACRO": -0.5,
         "S1_SECTOR_FACTORS": -1.0,
         "S2_BREADTH": -1.0,
         "S3_FLOWS_POSITIONING": 0.0,
         "S4_ETF_TAPE": -1.0
-      }
+      },
+      "status": "OK",
+      "provider": "",
+      "fallback_reason": ""
     },
     {
       "sector": "Financial",
@@ -126,19 +142,22 @@
       "confidence_score": 0.403,
       "multiplier": 0.9,
       "divergence_flagged": true,
-      "actual_pct_change": null,
-      "actual_direction": null,
-      "direction_hit": null,
-      "magnitude_hit": null,
+      "actual_pct_change": 0.5684969378886295,
+      "actual_direction": "up",
+      "direction_hit": false,
+      "magnitude_hit": false,
       "has_predict_md": true,
-      "has_outcome_md": false,
+      "has_outcome_md": true,
       "components": {
         "S0_SHARED_MACRO": -0.5,
         "S1_SECTOR_FACTORS": -0.5,
         "S2_BREADTH": 0.0,
         "S3_FLOWS_POSITIONING": 0.0,
         "S4_ETF_TAPE": 0.0
-      }
+      },
+      "status": "OK",
+      "provider": "",
+      "fallback_reason": ""
     },
     {
       "sector": "Healthcare",
@@ -149,19 +168,22 @@
       "confidence_score": 0.537,
       "multiplier": 0.8,
       "divergence_flagged": false,
-      "actual_pct_change": null,
-      "actual_direction": null,
-      "direction_hit": null,
-      "magnitude_hit": null,
+      "actual_pct_change": 0.4886100282054606,
+      "actual_direction": "up",
+      "direction_hit": true,
+      "magnitude_hit": true,
       "has_predict_md": true,
-      "has_outcome_md": false,
+      "has_outcome_md": true,
       "components": {
         "S0_SHARED_MACRO": 0.0,
         "S1_SECTOR_FACTORS": 0.0,
         "S2_BREADTH": 0.0,
         "S3_FLOWS_POSITIONING": 0.0,
         "S4_ETF_TAPE": 0.5
-      }
+      },
+      "status": "OK",
+      "provider": "",
+      "fallback_reason": ""
     },
     {
       "sector": "Industrials",
@@ -172,19 +194,22 @@
       "confidence_score": 0.65,
       "multiplier": 0.9,
       "divergence_flagged": false,
-      "actual_pct_change": null,
-      "actual_direction": null,
-      "direction_hit": null,
-      "magnitude_hit": null,
+      "actual_pct_change": 0.9476934356297928,
+      "actual_direction": "up",
+      "direction_hit": false,
+      "magnitude_hit": true,
       "has_predict_md": true,
-      "has_outcome_md": false,
+      "has_outcome_md": true,
       "components": {
         "S0_SHARED_MACRO": -1.0,
         "S1_SECTOR_FACTORS": -1.0,
         "S2_BREADTH": -1.0,
         "S3_FLOWS_POSITIONING": -1.0,
         "S4_ETF_TAPE": -1.0
-      }
+      },
+      "status": "OK",
+      "provider": "",
+      "fallback_reason": ""
     },
     {
       "sector": "Real Estate",
@@ -195,19 +220,22 @@
       "confidence_score": 0.585,
       "multiplier": 0.85,
       "divergence_flagged": true,
-      "actual_pct_change": null,
-      "actual_direction": null,
-      "direction_hit": null,
-      "magnitude_hit": null,
+      "actual_pct_change": -0.2160867930148136,
+      "actual_direction": "down",
+      "direction_hit": true,
+      "magnitude_hit": false,
       "has_predict_md": true,
-      "has_outcome_md": false,
+      "has_outcome_md": true,
       "components": {
         "S0_SHARED_MACRO": -1.0,
         "S1_SECTOR_FACTORS": -3.0,
         "S2_BREADTH": -1.0,
         "S3_FLOWS_POSITIONING": -0.5,
         "S4_ETF_TAPE": -1.0
-      }
+      },
+      "status": "OK",
+      "provider": "",
+      "fallback_reason": ""
     },
     {
       "sector": "Technology",
@@ -218,19 +246,22 @@
       "confidence_score": 0.514,
       "multiplier": 0.85,
       "divergence_flagged": true,
-      "actual_pct_change": null,
-      "actual_direction": null,
-      "direction_hit": null,
-      "magnitude_hit": null,
+      "actual_pct_change": 0.8011902340932187,
+      "actual_direction": "up",
+      "direction_hit": false,
+      "magnitude_hit": false,
       "has_predict_md": true,
-      "has_outcome_md": false,
+      "has_outcome_md": true,
       "components": {
         "S0_SHARED_MACRO": -1.0,
         "S1_SECTOR_FACTORS": 0.0,
         "S2_BREADTH": 0.0,
         "S3_FLOWS_POSITIONING": 0.0,
         "S4_ETF_TAPE": 1.0
-      }
+      },
+      "status": "OK",
+      "provider": "",
+      "fallback_reason": ""
     },
     {
       "sector": "Utilities",
@@ -241,19 +272,22 @@
       "confidence_score": 0.53,
       "multiplier": 0.9,
       "divergence_flagged": true,
-      "actual_pct_change": null,
-      "actual_direction": null,
-      "direction_hit": null,
-      "magnitude_hit": null,
+      "actual_pct_change": 0.3810917399787561,
+      "actual_direction": "up",
+      "direction_hit": false,
+      "magnitude_hit": true,
       "has_predict_md": true,
-      "has_outcome_md": false,
+      "has_outcome_md": true,
       "components": {
         "S0_SHARED_MACRO": -1.0,
         "S1_SECTOR_FACTORS": -1.0,
         "S2_BREADTH": -1.0,
         "S3_FLOWS_POSITIONING": -0.5,
         "S4_ETF_TAPE": -1.0
-      }
+      },
+      "status": "OK",
+      "provider": "",
+      "fallback_reason": ""
     }
   ]
 }

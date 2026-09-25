@@ -1,13 +1,13 @@
 {
-  "updated": "2026-09-24T19:15:33.163245-04:00",
+  "updated": "2026-09-25T16:45:08.746597-04:00",
   "window_n": 15,
-  "direction_acc": 0.5333333333333333,
+  "direction_acc": 0.6,
   "notes": [],
   "threshold_deltas": {},
   "sector_notes": [
     "sector:Basic Materials weak (33%): review sector taxonomy weights / search templates.",
     "sector:Communication Services weak (20%): review sector taxonomy weights / search templates.",
-    "sector:Healthcare weak (27%): review sector taxonomy weights / search templates.",
-    "sector:Technology weak (33%): review sector taxonomy weights / search templates."
+    "sector:Healthcare weak (33%): review sector taxonomy weights / search templates.",
+    "sector:Technology weak (27%): review sector taxonomy weights / search templates."
   ]
 }
