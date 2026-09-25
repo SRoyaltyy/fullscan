@@ -123,6 +123,16 @@ def publish(date: str, *, write: bool = True, extras: bool = True) -> dict:
             out["wrote"].extend(str(p.relative_to(ROOT)) for p in paths)
             out["n_strategies"] = payload_st.get("n")
             out["n_strategies_ok"] = payload_st.get("n_ok")
+            lock = getattr(st.write, "last_lock", None) or {}
+            if lock.get("status") == "draft":
+                out["ticket_lock"] = "draft"
+                out["ticket_lock_reason"] = lock.get("reason")
+                print(
+                    f"[live-boards] WARN: dated tickets locked; "
+                    f"evening body in {lock.get('draft')}. "
+                    "Publication still complete.",
+                    flush=True,
+                )
         except Exception as e:  # noqa: BLE001
             out["strategy_error"] = str(e)
             print(f"[live-boards] WARN: strategy tickets: {e}", flush=True)

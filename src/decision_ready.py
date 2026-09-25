@@ -5,6 +5,11 @@ Webull HOT4 uses the Factor Mine cash-start recipe (``pick_day`` on the
 session panel) for buys and continuous-book list-drop sells, not the
 oppset_union + Clock-B morning scan. This module does not size Webull
 or flatten_robust lots.
+
+A locked dated ticket file stays untouched. When the evening body is in
+``<date>_strategy_tickets_draft.json``, that publication is complete and
+``publish`` returns 0. A modified locked file, a failed draft write, or
+a real strategy error still refuses a success status.
 """
 from __future__ import annotations
 import argparse
@@ -152,7 +157,21 @@ def publish(date):
     stock_book.write_report(df, meta, top_n=int(meta.get('top_n') or 25))
     out = publish_live_boards.publish(date, write=True, extras=False)
     path = ROOT / 'data/day_board' / f'{date}_strategy_tickets.json'
-    payload = json.loads(path.read_text()) if path.exists() else {}
+    draft = ROOT / 'data/day_board' / f'{date}_strategy_tickets_draft.json'
+    locked_draft = out.get('ticket_lock') == 'draft'
+    if locked_draft:
+        if not draft.is_file():
+            raise RuntimeError(
+                'dated tickets locked and the draft write failed; '
+                'refusing a success status')
+        draft_text = draft.read_text()
+        if path.is_file() and path.read_text() == draft_text:
+            raise RuntimeError(
+                'locked dated ticket file was modified; '
+                'refusing a success status')
+        payload = json.loads(draft_text)
+    else:
+        payload = json.loads(path.read_text()) if path.exists() else {}
     proof = payload.get('decision_readiness') or {}
     hot = (payload.get('strategies') or {}).get('union_hot_n4_h1') or {}
     after = apply_main_gate(evaluate(date))
@@ -162,6 +181,12 @@ def publish(date):
     if (out.get('error') or out.get('strategy_error') or not proof.get('ready') or
             not after['ready'] or not fresh or hot.get('status') not in ('ok', 'sit')):
         raise RuntimeError('decision publication incomplete; refusing a success status')
+    if locked_draft:
+        print(
+            '[decision] WARN: dated tickets locked; evening body is in '
+            f'{draft.name}. Publication complete.',
+            flush=True,
+        )
     from .book_suggestions import refresh_factor_live_poller
     refresh_factor_live_poller()
     return 0

@@ -25,9 +25,11 @@ publish_live_boards still writes a strip — except the clock assert.
 ``data/day_board/<date>_strategy_tickets.json`` is the send-time
 record. Once that date's paper send is journaled
 (``data/paper_open/<date>_submit.json``) or that session's 09:30 ET
-has arrived, a later write that would change the dated file fails.
-The evening body goes to the undated copies and
-``<date>_strategy_tickets_draft.json`` instead.
+has arrived, the dated file stays as it is. The evening body goes to
+the undated copies and ``<date>_strategy_tickets_draft.json``. That
+draft is the expected path: a warning, and the publish exits 0. The
+job still fails if a locked dated file is actually modified, or if
+the draft write fails.
 """
 from __future__ import annotations
 
@@ -1173,14 +1175,12 @@ def write(date: str, payload: dict | None = None, now: datetime | None = None) -
     dated = DAY / f"{date}_strategy_tickets.json"
     reason = dated_tickets_lock_reason(date, now) if dated.is_file() else None
     refuse = False
+    frozen = b""
+    write.last_lock = None
     if reason:
-        have = dated.read_text(encoding="utf-8")
-        if have != text:
+        frozen = dated.read_bytes()
+        if frozen.decode("utf-8") != text:
             refuse = True
-            print(
-                f"[strategy-tickets] REFUSE rewrite {dated.name} ({reason})",
-                flush=True,
-            )
     draft = dated_tickets_draft(date)
     paths = [
         DAY / "strategy_tickets.json",
@@ -1252,6 +1252,34 @@ def write(date: str, payload: dict | None = None, now: datetime | None = None) -
             for k, v in (payload.get("strategies") or {}).items()
         },
     }
+    if refuse:
+        if not dated.is_file() or dated.read_bytes() != frozen:
+            raise DatedTicketsLocked(
+                f"locked dated file {dated.name} was modified ({reason}). "
+                "Job failed."
+            )
+        draft_body = draft.read_text(encoding="utf-8") if draft.is_file() else ""
+        if draft_body != text:
+            raise DatedTicketsLocked(
+                f"draft write failed for {draft.name} ({reason}). Job failed."
+            )
+        slim["ticket_lock"] = {
+            "dated": dated.name,
+            "draft": draft.name,
+            "reason": reason,
+            "dated_unchanged": True,
+        }
+        write.last_lock = {
+            "status": "draft",
+            "reason": reason,
+            "draft": draft.name,
+            "dated": dated.name,
+        }
+        print(
+            f"[strategy-tickets] WARN: {dated.name} locked ({reason}). "
+            f"Evening body is in {draft.name}. Dated file unchanged.",
+            flush=True,
+        )
     slim_path = DAY / "today_strategies.json"
     slim_path.write_text(json.dumps(slim, indent=2), encoding="utf-8")
     wrote.append(slim_path)
@@ -1269,11 +1297,6 @@ def write(date: str, payload: dict | None = None, now: datetime | None = None) -
         f"errors={payload.get('errors') or []}",
         flush=True,
     )
-    if refuse:
-        raise DatedTicketsLocked(
-            f"refuse rewrite {dated.name} ({reason}). "
-            f"Evening body is in {draft.name}. Job failed."
-        )
     return wrote
 
 
