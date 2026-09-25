@@ -4,9 +4,9 @@
   "source_date": "2026-09-24",
   "target_date": "2026-09-25",
   "book_date": "2026-09-24",
-  "generated_at": "2026-09-24T20:38:24.124597-04:00",
-  "ok": false,
-  "n_fail": 2,
+  "generated_at": "2026-09-24T20:47:07.625536-04:00",
+  "ok": true,
+  "n_fail": 0,
   "n_warn": 8,
   "round": 1,
   "fix_actions": null,
@@ -204,9 +204,9 @@
       "step": "postclose.map_heat_json",
       "name": "2026-09-25_map_heat.json (industry groups + captains)",
       "group": "postclose",
-      "status": "FAIL",
+      "status": "OK",
       "required": true,
-      "detail": "PASS-OVER from date=2026-09-24 (want 2026-09-25)",
+      "detail": "phase=morning_overlay 270739 bytes",
       "path": "/home/gha/actions-runner/_work/fullscan/fullscan/01_daily/map_heat/2026-09-25_map_heat.json"
     },
     {
@@ -222,9 +222,9 @@
       "step": "postclose.baseline_json",
       "name": "2026-09-25_research_baseline.json (captain cards)",
       "group": "postclose",
-      "status": "FAIL",
+      "status": "OK",
       "required": true,
-      "detail": "PASS-OVER from source_heat_date=2026-09-24 (want 2026-09-25)",
+      "detail": "phase=postclose_baseline 382752 bytes",
       "path": "/home/gha/actions-runner/_work/fullscan/fullscan/01_daily/map_heat/2026-09-25_research_baseline.json"
     },
     {
