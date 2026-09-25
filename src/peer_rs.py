@@ -22,6 +22,7 @@ import numpy as np
 import pandas as pd
 
 from . import config
+from .past_write import refuse_past_overwrite
 
 ROOT = Path(__file__).resolve().parent.parent
 CORR_PATH = ROOT / "data" / "peers" / "correlations.csv"
@@ -117,6 +118,7 @@ def _load_correlations() -> dict[str, list[str]]:
 
 
 def run(date: str | None = None) -> Path:
+    requested = date
     date, export_path = _resolve_export(date)
     corr = _load_correlations()
 
@@ -200,6 +202,12 @@ def run(date: str | None = None) -> Path:
 
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     path = OUT_DIR / f"{date}_peer_rs.csv"
+    run_date = requested or date
+    if refuse_past_overwrite(path, run_date):
+        raise SystemExit(
+            f"[peer_rs] REFUSE past-date write {path.name} "
+            f"(file date < run date {run_date})"
+        )
     out.to_csv(path, index=False)
 
     ranked = out.dropna(subset=["rs_week"]).sort_values("rs_week", ascending=False)

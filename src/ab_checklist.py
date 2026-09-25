@@ -190,8 +190,32 @@ def _five_day_tape(df: pd.DataFrame) -> dict:
     return t
 
 
+def _apply_past_write_guard(t: str) -> str:
+    """Do not let a later run rewrite an earlier day's checklist files."""
+    needle = (
+        '    csv_path = OUT_DIR / f"{asof}_ab_checklist.csv"\n'
+        "    out.to_csv(csv_path, index=False)\n"
+    )
+    guard = (
+        '    csv_path = OUT_DIR / f"{asof}_ab_checklist.csv"\n'
+        "    from src.past_write import refuse_past_overwrite\n"
+        "    _run_date = date or asof\n"
+        "    if refuse_past_overwrite(csv_path, _run_date):\n"
+        "        raise SystemExit(\n"
+        '            f"[ab] REFUSE past-date write {csv_path.name} "\n'
+        '            f"(file date < run date {_run_date})"\n'
+        "        )\n"
+        "    out.to_csv(csv_path, index=False)\n"
+    )
+    if "refuse_past_overwrite" in t:
+        return t
+    if needle not in t:
+        raise RuntimeError("ab_checklist write anchor missing for past-date guard")
+    return t.replace(needle, guard, 1)
+
+
 # Rewrite relative imports so this works under python -m src.*
-_src = _apply_a15(_fetch_good())
+_src = _apply_past_write_guard(_apply_a15(_fetch_good()))
 _src = _src.replace("from . import config", "from src import config")
 _src = _src.replace("from . import price_store as ps", "from src import price_store as ps")
 
