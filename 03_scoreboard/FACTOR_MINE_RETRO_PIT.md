@@ -2,48 +2,75 @@
 
 Window `2026-08-13` → `2026-09-24`. Each D-dated packet is the last git commit at or before D 09:30 ET. A named input that exists only in a later commit is withheld.
 
-- pit_rebuilt: 11
-- incomplete_pit: 5
-- held: 14
+Yahoo `auto_adjust=False` daily bars are the only price source and are used as stored (split-adjusted, dividends not applied). A Finviz or Stooq disagreement is a warning and does not hold the day. raw.csv fills a name only when Yahoo has no print at all, and that name is tagged single_source. A name with no print or too few earlier bars is dropped. The day locks unless nobody is rankable.
 
-## Held days
+- pit_rebuilt: 15
+- incomplete_pit: 15
+- held: 0
+- skipped: 0
 
-A day is held when more than 10% of its candidates are unrankable, or when a Yahoo print disagrees with the external open or close beyond PRICE_CHECK. An unrankable name under that line is left off the ranking and is not scored. A raw.csv bar Yahoo did not have is single_source. The book is empty and the ledger recipes are empty. The return is not 0.
+## Held and skipped days
 
-- `2026-08-14` price cross-check missing: (none); cross-check gaps: 10; unrankable 2.3%
-- `2026-08-17` price cross-check missing: (none); cross-check gaps: 10; unrankable 2.2%
-- `2026-08-18` price cross-check missing: EQR; cross-check gaps: 10; unrankable 2.0%
-- `2026-08-19` price cross-check missing: (none); cross-check gaps: 8; unrankable 2.0%
-- `2026-08-20` price cross-check missing: (none); cross-check gaps: 8; unrankable 2.0%
-- `2026-08-21` price cross-check missing: (none); cross-check gaps: 8; unrankable 1.8%
-- `2026-08-24` price cross-check missing: (none); cross-check gaps: 6; unrankable 1.9%
-- `2026-08-25` price cross-check missing: (none); cross-check gaps: 4; unrankable 1.9%
-- `2026-08-26` price cross-check missing: (none); cross-check gaps: 2; unrankable 1.5%
-- `2026-08-28` price cross-check missing: (none); cross-check gaps: 4; unrankable 1.8%
-- `2026-08-31` price cross-check missing: (none); cross-check gaps: 4; unrankable 1.6%
-- `2026-09-01` price cross-check missing: (none); cross-check gaps: 2; unrankable 1.0%
-- `2026-09-02` price cross-check missing: (none); cross-check gaps: 2; unrankable 1.2%
-- `2026-09-23` price cross-check missing: (none); cross-check gaps: 2; unrankable 0.8%
+A day is not held because a print is missing or because Yahoo disagrees with Finviz or Stooq. The only skip is zero rankable names. A held row here is a ledger failure, not a price gap.
 
-## raw.csv versus Yahoo raw
+- (none)
 
-Compared on names that have both a Yahoo raw print and a commit-guarded raw.csv print. The Yahoo download is not stored.
-- open: n=90944 median abs=4.5776366874861196e-07 max abs=86.07000030517577 median pct=2.0956405864409692e-08 max pct=1.0000000854485105
-- close: n=90944 median abs=4.5776367230132564e-07 max abs=85.43500244140625 median pct=2.1201175251523378e-08 max pct=1.000000089768588
+## Dropped names
+
+- `2026-08-13` dropped 0
+- `2026-08-14` dropped 61 / 0.022838
+- `2026-08-17` dropped 58 / 0.02178
+- `2026-08-18` dropped 52 / 0.019556
+- `2026-08-19` dropped 54 / 0.020293
+- `2026-08-20` dropped 54 / 0.020293
+- `2026-08-21` dropped 49 / 0.018407
+- `2026-08-24` dropped 50 / 0.018762
+- `2026-08-25` dropped 50 / 0.018797
+- `2026-08-26` dropped 32 / 0.015296
+- `2026-08-27` dropped 32 / 0.015296
+- `2026-08-28` dropped 47 / 0.017689
+- `2026-08-31` dropped 43 / 0.016214
+- `2026-09-01` dropped 15 / 0.009585
+- `2026-09-02` dropped 21 / 0.011986
+- `2026-09-03` dropped 38 / 0.014378
+- `2026-09-04` dropped 35 / 0.013268
+- `2026-09-08` dropped 32 / 0.012158
+- `2026-09-09` dropped 12 / 0.006973
+- `2026-09-10` dropped 26 / 0.009912
+- `2026-09-11` dropped 26 / 0.009927
+- `2026-09-14` dropped 24 / 0.009167
+- `2026-09-15` dropped 23 / 0.008785
+- `2026-09-16` dropped 22 / 0.00841
+- `2026-09-17` dropped 22 / 0.0084
+- `2026-09-18` dropped 21 / 0.008021
+- `2026-09-21` dropped 20 / 0.007637
+- `2026-09-22` dropped 22 / 0.008362
+- `2026-09-23` dropped 22 / 0.008349
+- `2026-09-24` dropped 21 / 0.007988
 
 ## Incomplete days
 
 These days are carried (no new ranking). The later file is not used.
 
 - `2026-08-13` withheld: judge
+- `2026-08-14` withheld: judge
+- `2026-08-17` withheld: judge
+- `2026-08-18` withheld: export, join, weather, judge
+- `2026-08-19` withheld: export, join, weather, judge
+- `2026-08-20` withheld: export, join, weather, judge
+- `2026-08-21` withheld: export, join, weather, events
+- `2026-08-25` withheld: digest, predict, actions, judge, events
+- `2026-08-26` withheld: join, catalyst, weather
 - `2026-08-27` withheld: catalyst, events
+- `2026-09-01` withheld: baseline
+- `2026-09-02` withheld: join, weather
 - `2026-09-03` withheld: join, weather
 - `2026-09-08` withheld: predict, actions, events, research
 - `2026-09-09` withheld: predict
 
 ## pit_rebuilt
 
-`2026-09-04`, `2026-09-10`, `2026-09-11`, `2026-09-14`, `2026-09-15`, `2026-09-16`, `2026-09-17`, `2026-09-18`, `2026-09-21`, `2026-09-22`, `2026-09-24`
+`2026-08-24`, `2026-08-28`, `2026-08-31`, `2026-09-04`, `2026-09-10`, `2026-09-11`, `2026-09-14`, `2026-09-15`, `2026-09-16`, `2026-09-17`, `2026-09-18`, `2026-09-21`, `2026-09-22`, `2026-09-23`, `2026-09-24`
 
 ## HOT4 and holdup
 
@@ -51,20 +78,20 @@ Total return on the frozen history. `union_hot_n4_holdup` days before `2026-09-2
 
 | recipe | fee | universe | window | return % | trades |
 | --- | --- | --- | --- | ---: | ---: |
-| `union_hot_n4_h1` | futubull | with GLND | 2026-08-13 | 6.235 | 48 |
-| `union_hot_n4_h1` | futubull | without GLND | 2026-08-13 | 6.235 | 48 |
-| `union_hot_n4_h1` | flat_15bp | with GLND | 2026-08-13 | 9.895 | 48 |
-| `union_hot_n4_h1` | flat_15bp | without GLND | 2026-08-13 | 9.895 | 48 |
-| `union_hot_n4_holdup` | futubull | with GLND | 2026-08-13 | 24.708 | 42 |
-| `union_hot_n4_holdup` | futubull | with GLND | 2026-09-21 | -1.013 | 8 |
-| `union_hot_n4_holdup` | futubull | without GLND | 2026-08-13 | 24.708 | 42 |
-| `union_hot_n4_holdup` | futubull | without GLND | 2026-09-21 | -1.013 | 8 |
-| `union_hot_n4_holdup` | flat_15bp | with GLND | 2026-08-13 | 27.487 | 42 |
-| `union_hot_n4_holdup` | flat_15bp | with GLND | 2026-09-21 | -0.342 | 8 |
-| `union_hot_n4_holdup` | flat_15bp | without GLND | 2026-08-13 | 27.487 | 42 |
-| `union_hot_n4_holdup` | flat_15bp | without GLND | 2026-09-21 | -0.342 | 8 |
+| `union_hot_n4_h1` | futubull | with GLND | 2026-08-13 | 24.991 | 62 |
+| `union_hot_n4_h1` | futubull | without GLND | 2026-08-13 | -4.125 | 63 |
+| `union_hot_n4_h1` | flat_15bp | with GLND | 2026-08-13 | 29.536 | 62 |
+| `union_hot_n4_h1` | flat_15bp | without GLND | 2026-08-13 | -0.553 | 63 |
+| `union_hot_n4_holdup` | futubull | with GLND | 2026-08-13 | 52.196 | 53 |
+| `union_hot_n4_holdup` | futubull | with GLND | 2026-09-21 | 16.444 | 11 |
+| `union_hot_n4_holdup` | futubull | without GLND | 2026-08-13 | 15.832 | 53 |
+| `union_hot_n4_holdup` | futubull | without GLND | 2026-09-21 | -8.983 | 11 |
+| `union_hot_n4_holdup` | flat_15bp | with GLND | 2026-08-13 | 55.918 | 53 |
+| `union_hot_n4_holdup` | flat_15bp | with GLND | 2026-09-21 | 17.404 | 11 |
+| `union_hot_n4_holdup` | flat_15bp | without GLND | 2026-08-13 | 18.574 | 53 |
+| `union_hot_n4_holdup` | flat_15bp | without GLND | 2026-09-21 | -8.274 | 11 |
 
-Prices: `data/factor_mine/retro_prices/ohlc.parquet` (Yahoo `auto_adjust=False`, raw prints, locked, first bar wins). Split and dividend factors: `data/factor_mine/retro_prices/actions.parquet` (dated, keep-first). Indicators apply only events with ex-date before D. The live `data/prices` tape was not rewritten.
+Prices: `data/factor_mine/retro_prices/ohlc.parquet` (Yahoo `auto_adjust=False` split-adjusted bars, used as stored, locked, first bar wins). Split and dividend factors: `data/factor_mine/retro_prices/actions.parquet` (dated, keep-first). Indicators apply only events with ex-date before D. The live `data/prices` tape was not rewritten.
 
 ## Baselines
 
@@ -76,14 +103,14 @@ IWM tape: Yahoo auto_adjust=False, fetched in memory. Not written to data/factor
 
 | baseline | fee | universe | window | mean % | p5 | p50 | p95 | trades |
 | --- | --- | --- | --- | ---: | ---: | ---: | ---: | ---: |
-| `random4` | futubull | with GLND | 2026-08-13 | -2.377 | -16.637 | -2.207 | 9.537 | 56 |
-| `random4` | futubull | with GLND | 2026-09-21 | -2.43 | -6.799 | -2.666 | 3.066 | 16 |
-| `random4` | futubull | without GLND | 2026-08-13 | -2.125 | -16.151 | -1.639 | 10.445 | 56 |
-| `random4` | futubull | without GLND | 2026-09-21 | -2.215 | -6.548 | -2.486 | 3.114 | 16 |
-| `random4` | flat_15bp | with GLND | 2026-08-13 | -0.238 | -14.145 | -0.115 | 11.518 | 56 |
-| `random4` | flat_15bp | with GLND | 2026-09-21 | -1.795 | -5.936 | -2.087 | 3.63 | 16 |
-| `random4` | flat_15bp | without GLND | 2026-08-13 | 0.015 | -13.667 | 0.281 | 12.473 | 56 |
-| `random4` | flat_15bp | without GLND | 2026-09-21 | -1.585 | -5.828 | -1.902 | 3.731 | 16 |
+| `random4` | futubull | with GLND | 2026-08-13 | -9.487 | -22.907 | -9.17 | 2.757 | 72 |
+| `random4` | futubull | with GLND | 2026-09-21 | -6.432 | -12.959 | -6.534 | 0.564 | 24 |
+| `random4` | futubull | without GLND | 2026-08-13 | -9.776 | -23.492 | -9.399 | 2.445 | 72 |
+| `random4` | futubull | without GLND | 2026-09-21 | -6.672 | -12.967 | -6.602 | -0.506 | 24 |
+| `random4` | flat_15bp | with GLND | 2026-08-13 | -6.817 | -20.038 | -6.546 | 5.464 | 72 |
+| `random4` | flat_15bp | with GLND | 2026-09-21 | -5.49 | -11.887 | -5.635 | 1.773 | 24 |
+| `random4` | flat_15bp | without GLND | 2026-08-13 | -7.14 | -20.644 | -6.857 | 4.858 | 72 |
+| `random4` | flat_15bp | without GLND | 2026-09-21 | -5.737 | -11.952 | -5.713 | 0.316 | 24 |
 | `iwm` | futubull | buy-and-hold | 2026-08-13 | -7.183 |  |  |  | 1 |
 | `iwm` | futubull | buy-and-hold | 2026-09-21 | -1.588 |  |  |  | 1 |
 | `iwm` | flat_15bp | buy-and-hold | 2026-08-13 | -7.235 |  |  |  | 1 |
