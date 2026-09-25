@@ -3,7 +3,8 @@
   "generated_at": "2026-09-25T06:09:59.108939-04:00",
   "all_ok": false,
   "qc_all_ok": true,
-  "book_ok": false,
+  "book_ok": true,
+  "book_ok_restamp": "2026-09-25 08:15 ET manual narrow restamp (no LLM rerun): stock book exists on main (data/stock_book/2026-09-25_stock_book.json + green.json, landed 39b0bf9ac4; skip_if_good stock_book_all SKIP=pass in run 36126554738). Only book_ok changed; all_ok/grok_ok untouched.",
   "grok_ok": false,
   "grok_fails": [
     {
