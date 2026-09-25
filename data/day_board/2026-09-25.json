@@ -1,10 +1,9 @@
 {
   "date": "2026-09-25",
-  "generated_at": "2026-09-25T04:39:20.222295-04:00",
+  "generated_at": "2026-09-25T04:44:02.860338-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
-    "MISSING General predict MD `01_daily/general/2026-09-25_predict.md` \u2014 missing",
     "MISSING Sector board JSON `01_daily/sectors/2026-09-25/_board.json` \u2014 missing"
   ],
   "counts": {
@@ -180,7 +179,7 @@
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 4,
+      "n_req_ok": 5,
       "n_req": 20,
       "n_opt_ok": 2,
       "n_opt": 3,
@@ -323,11 +322,16 @@
           "name": "General predict MD",
           "path": "01_daily/general/2026-09-25_predict.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 16284,
+          "said": "UP 2.706",
+          "bullets": [
+            "bad: 1w 10Y +10bp at 5.11 handle",
+            "bad: Williams year-end hike 'reasonable'",
+            "bad: leftover Hormuz Brent ~$107",
+            "good: NQ +0.51% vs cash"
+          ]
         },
         {
           "key": "board",
@@ -347,12 +351,12 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 7271,
-          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 14 fail",
+          "size": 7268,
+          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 13 fail",
           "bullets": [
-            "general_predict:missing",
             "finviz_market_digest:missing",
             "map_heat_research:missing",
+            "sector_predict:missing",
             "sector_predict:missing"
           ]
         },
@@ -500,8 +504,13 @@
           "bullets": []
         }
       ],
-      "said": "news news_mode: on \u00b7 400 raw / 81 usable \u00b7 US 10-Year Treasury Yield Tops 5.2%, Fueling Bets on Another Fed Rate Hike - blo",
+      "said": "general UP  2.706 \u00b7 news news_mode: on \u00b7 400 raw / 81 usable \u00b7 US 10-Year Treasury Yield Tops 5.2%, Fueling Bets on Another Fed Rate Hike - blo",
       "bullets": [
+        "bad: 1w 10Y +10bp at 5.11 handle",
+        "bad: Williams year-end hike 'reasonable'",
+        "bad: leftover Hormuz Brent ~$107",
+        "good: NQ +0.51% vs cash",
+        "good: oil offered (BZ -6.92% / CL -1.34%)",
         "US 10-Year Treasury Yield Tops 5.2%, Fueling Bets on Another Fed Rate Hike - bloomingbit",
         "Treasury yields surge as Hardika Singh warns of Federal Reserve rate hike risks - Fox Business",
         "Will the Nasdaq Fall After the First Interest Rate Hike in 3 Years? History Offers a Strikingly Clear Answer. - The Motley Fool",
@@ -678,11 +687,16 @@
           "name": "General predict MD",
           "path": "01_daily/general/2026-09-25_predict.md",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 16284,
+          "said": "UP 2.706",
+          "bullets": [
+            "bad: 1w 10Y +10bp at 5.11 handle",
+            "bad: Williams year-end hike 'reasonable'",
+            "bad: leftover Hormuz Brent ~$107",
+            "good: NQ +0.51% vs cash"
+          ]
         },
         {
           "key": "in_board",
@@ -925,7 +939,18 @@
     "buy_1d": [],
     "sell_1d": [],
     "flatten": {},
-    "general": {},
+    "general": {
+      "said": "UP  2.706",
+      "bullets": [
+        "bad: 1w 10Y +10bp at 5.11 handle",
+        "bad: Williams year-end hike 'reasonable'",
+        "bad: leftover Hormuz Brent ~$107",
+        "good: NQ +0.51% vs cash",
+        "good: oil offered (BZ -6.92% / CL -1.34%)"
+      ],
+      "score": "2.706",
+      "direction": "up"
+    },
     "sectors": {},
     "news": {
       "said": "news_mode: on \u00b7 400 raw / 81 usable \u00b7 US 10-Year Treasury Yield Tops 5.2%, Fueling Bets on Another Fed Rate Hike - blo",
@@ -1414,6 +1439,24 @@
         }
       ],
       "preview": "# News Judge \u2014 2026-09-25 \u00b7 keys: risk_tilt, macros, sector_tilts, tickers, b1_inject, date"
+    },
+    {
+      "key": "general_predict",
+      "title": "General market predict",
+      "date": "2026-09-25",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-25T04:44:02.099120-04:00",
+      "files": [
+        {
+          "path": "01_daily/general/2026-09-25_predict.md",
+          "ok": true,
+          "reason": "",
+          "size": 16284,
+          "preview": "# Premarket Prediction \u2014 2026-09-25\n- news_mode: **on**\n> ## \ud83d\udccb SNAPSHOT (human-readable)\n>\n> **Prediction: UP \ud83d\udcc8 \u2014 MILD** | total score 2.706 (uncertainty multiplier \u00d71.0) | confidence 0.608\n>\n> **Good news vs bad news:** good +0.75 pts vs bad -2.0 pts \u2192 bad news outweighs good\n>\n> **Good news driving this:**\n> - NQ +0.51% vs cash\n> - oil offered (BZ -6.92% / CL -1.34%)\n> - Europe partial +0.49%\n> - XLK +0.53% PM\n> - Trump-Xi truce T+1 (Nov 10 cliff removed)\n>\n> **Bad news driving this:**\n> - 1w 10Y +10bp at 5.11 handle\n> - Williams year-end hike 'reasonable'\n> - leftover Hormuz Brent ~$107\n> - Hang Seng/Shanghai red T+1\n> - housing/mortgage transmission of the backup\n>\n> **market uncertainty: **elevated** | VIX 15.54 | policy-uncertainty index 99.37 (1d -17.5)**\n>\n> **Factor scoreboard** (score \u00d7 weight = contribution):\n> - \u26aa Asia overnight session: +0.0 \u00d7 2.0 = +0.0\n> - \u26aa Europe session"
+        }
+      ],
+      "preview": "# Premarket Prediction \u2014 2026-09-25\n- news_mode: **on**\n> ## \ud83d\udccb SNAPSHOT (human-readable)\n>\n> **Prediction: UP \ud83d\udcc8 \u2014 MILD** | total score 2.706 (uncertainty multiplier \u00d71.0) | confidence 0.608\n>\n> **Good news vs bad news:** good +0.75 pts vs bad -2.0 pts \u2192 bad news outweighs good\n>\n> **Good news driving this:**\n> - NQ +0.51% vs cash\n> - oil offered (BZ -6.92% / CL -1.34%)\n> - Europe partial +0.49%\n> - XLK +0.53% PM\n> - Trump-Xi truce T+1 (Nov 10 cliff removed)\n>\n> **Bad news driving this:**\n> - 1w 10Y +10bp at 5.11 handle\n> - Williams year-end hike 'reasonable'\n> - leftover Hormuz Brent ~$107\n> - Hang Seng/Shanghai red T+1\n> - housing/mortgage transmission of the backup\n>\n> **market uncertainty: **elevated** | VIX 15.54 | policy-uncertainty index 99.37 (1d -17.5)**\n>\n> **Factor scoreboard** (score \u00d7 weight = contribution):\n> - \u26aa Asia overnight session: +0.0 \u00d7 2.0 = +0.0\n> - \u26aa Europe session"
     }
   ],
   "href": {
