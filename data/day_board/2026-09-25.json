@@ -1,6 +1,6 @@
 {
   "date": "2026-09-25",
-  "generated_at": "2026-09-25T06:02:55.439931-04:00",
+  "generated_at": "2026-09-25T06:03:19.095925-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -177,7 +177,7 @@
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 18,
+      "n_req_ok": 19,
       "n_req": 20,
       "n_opt_ok": 3,
       "n_opt": 3,
@@ -343,8 +343,8 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 6788,
-          "said": "2 up / 4 down / 3 flat",
+          "size": 6958,
+          "said": "2 up / 4 down / 4 flat",
           "bullets": [
             "XLB FLAT +1.4",
             "XLC FLAT -0.4",
@@ -359,11 +359,10 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=True",
-          "size": 7201,
-          "said": "all_ok=True \u00b7 sectors 9/11 \u00b7 3 fail",
+          "size": 7195,
+          "said": "all_ok=True \u00b7 sectors 10/11 \u00b7 2 fail",
           "bullets": [
             "finviz_market_digest:missing",
-            "sector_predict:missing",
             "sector_predict:missing"
           ]
         },
@@ -513,11 +512,13 @@
           "name": "Sector predict \u2014 technology",
           "path": "01_daily/sectors/2026-09-25/technology_predict.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 15104,
+          "said": "FLAT flat 2.841",
+          "bullets": [
+            "- news_mode: **on"
+          ]
         },
         {
           "key": "sector_utilities",
@@ -531,7 +532,7 @@
           "bullets": []
         }
       ],
-      "said": "general UP  2.706 \u00b7 sectors 2 up / 4 down / 3 flat \u00b7 news news_mode: on \u00b7 400 raw / 81 usable \u00b7 US 10-Year Treasury Yield Tops 5.2%, Fueling Bets on Another Fed Rate Hike - blo",
+      "said": "general UP  2.706 \u00b7 sectors 2 up / 4 down / 4 flat \u00b7 news news_mode: on \u00b7 400 raw / 81 usable \u00b7 US 10-Year Treasury Yield Tops 5.2%, Fueling Bets on Another Fed Rate Hike - blo",
       "bullets": [
         "bad: 1w 10Y +10bp at 5.11 handle",
         "bad: Williams year-end hike 'reasonable'",
@@ -738,8 +739,8 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 6788,
-          "said": "2 up / 4 down / 3 flat",
+          "size": 6958,
+          "said": "2 up / 4 down / 4 flat",
           "bullets": [
             "XLB FLAT +1.4",
             "XLC FLAT -0.4",
@@ -990,7 +991,7 @@
       "direction": "up"
     },
     "sectors": {
-      "said": "2 up / 4 down / 3 flat",
+      "said": "2 up / 4 down / 4 flat",
       "bullets": [
         "XLB FLAT +1.4",
         "XLC FLAT -0.4",
@@ -1001,7 +1002,7 @@
         "XLV UP +0.9",
         "XLI DOWN -6.0",
         "XLRE DOWN -4.6",
-        "XLK missing",
+        "XLK FLAT +2.8",
         "XLU missing"
       ]
     },
@@ -1738,70 +1739,70 @@
     },
     {
       "key": "sector_one",
-      "title": "Sector predict Real Estate (9/11)",
+      "title": "Sector predict Technology (10/11)",
       "date": "2026-09-25",
       "ok": true,
       "pushed": true,
-      "at": "2026-09-25T06:02:54.670282-04:00",
+      "at": "2026-09-25T06:03:18.436377-04:00",
       "files": [
         {
-          "path": "01_daily/sectors/2026-09-25/real_estate_predict.md",
+          "path": "01_daily/sectors/2026-09-25/technology_predict.md",
           "ok": true,
           "reason": "",
-          "size": 20816,
-          "preview": "# Sector Prediction \u2014 Real Estate \u2014 2026-09-25\n- news_mode: **on**\n- ETF: **XLRE**\n- rubric: `00_grounding/sectors/real_estate.md`\n- predicted_direction: **down**\n- predicted_magnitude_band: **mild**\n- total_score: **-4.619** (mult 0.85)\n- regime: risk_off\n- divergence_flagged: **True**\n- engine: v2 \u00b7 tape_anchor **0.705** (ES +0.28%, ZN -0.03%) \u00b7 index_carry **0.676** (general 2.706) \u00b7 llm_overlay **-6.0** (raw -11.794)"
+          "size": 15104,
+          "preview": "# Sector Prediction \u2014 Technology \u2014 2026-09-25\n- news_mode: **on**\n- ETF: **XLK**\n- rubric: `00_grounding/sectors/technology.md`\n- predicted_direction: **flat**\n- predicted_magnitude_band: **flat**\n- total_score: **2.841** (mult 0.85)\n- regime: mixed\n- divergence_flagged: **True**\n- engine: v2 \u00b7 tape_anchor **4.29** (NQ +0.57%, ES +0.28%, PM:XLK +0.79%) \u00b7 index_carry **0.676** (general 2.706) \u00b7 llm_overlay **-2.125** (raw -2.125)"
         },
         {
-          "path": "01_daily/sectors/2026-09-25/real_estate_predict_trace.md",
+          "path": "01_daily/sectors/2026-09-25/technology_predict_trace.md",
           "ok": true,
           "reason": "",
-          "size": 8745,
-          "preview": "# Reasoning trace \u2014 SECTOR PREDICT Real Estate 2026-09-25\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (155,226 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Research.** The model wanted to know: *\"10 year Treasury yield 5.2% spike September 25 2026 futures\"* \u2192 got 6 results (via gnews_rss)\n- investingLive Asia-Pacific market news: Iran offers seven-day Hormuz dea - investingLive (https://news.google.com/rss/articles/CBMipgFBVV95cUxORVo4UGNybnNfTmRMZWRma1FFMkVFOTJnUGZTNUI4TUVETUZWd2J1UXRrbHNnYTM3OElxR0JzWFpieFFhVEstWU5wS21VNU1qdS1IQUZvT3o5SG91TS1ablFOMFBXTjd0c1A5SC1NcUN6dmZMa0xZem1hTGZxUXJHRGlWUlJISWlxLUNZaDFweXBwdnAyV3ZHU0N6TFc4MGQtaHduOXV3?oc=5)\n- U.S. Stock Market Trends (September 25): Oracle Falls 3.3% Due to Data Center Power Delays; 10-Year U.S. Treasury Yield\u2026 -"
+          "size": 386,
+          "preview": "# Reasoning trace \u2014 SECTOR PREDICT Technology 2026-09-25\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (152,024 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Done researching.** The model stopped searching and wrote its full analysis (13,143 characters)."
         },
         {
-          "path": "01_daily/_transcripts/2026-09-25_sector_real_estate_predict.json",
+          "path": "01_daily/_transcripts/2026-09-25_sector_technology_predict.json",
           "ok": true,
           "reason": "",
-          "size": 200218,
+          "size": 169371,
           "preview": "keys: model, messages"
         },
         {
           "path": "01_daily/2026-09-25_preopen_qc.json",
           "ok": true,
           "reason": "",
-          "size": 7201,
+          "size": 7195,
           "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok"
         },
         {
           "path": "01_daily/sectors/2026-09-25/_qc.json",
           "ok": true,
           "reason": "",
-          "size": 1222,
+          "size": 1219,
           "preview": "keys: date, n_ok, n_total, sectors"
         },
         {
           "path": "01_daily/sectors/2026-09-25/_BOARD.md",
           "ok": true,
           "reason": "",
-          "size": 1925,
-          "preview": "# Sector Board \u2014 2026-09-25\nGenerated: **2026-09-25T06:02:54.653821-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.)."
+          "size": 1928,
+          "preview": "# Sector Board \u2014 2026-09-25\nGenerated: **2026-09-25T06:03:18.421963-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.)."
         },
         {
           "path": "01_daily/sectors/2026-09-25/_board.json",
           "ok": true,
           "reason": "",
-          "size": 6788,
+          "size": 6958,
           "preview": "keys: date, generated_at, sectors"
         },
         {
           "path": "03_scoreboard/scoreboard.json",
           "ok": true,
           "reason": "",
-          "size": 911285,
+          "size": 912363,
           "preview": "keys: runs"
         }
       ],
-      "preview": "# Sector Prediction \u2014 Real Estate \u2014 2026-09-25\n- news_mode: **on**\n- ETF: **XLRE**\n- rubric: `00_grounding/sectors/real_estate.md`\n- predicted_direction: **down**\n- predicted_magnitude_band: **mild**\n- total_score: **-4.619** (mult 0.85)\n- regime: risk_off\n- divergence_flagged: **True**\n- engine: v2 \u00b7 tape_anchor **0.705** (ES +0.28%, ZN -0.03%) \u00b7 index_carry **0.676** (general 2.706) \u00b7 llm_overlay **-6.0** (raw -11.794) \u00b7 # Reasoning trace \u2014 SECTOR PREDICT Real Estate 2026-09-25\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (155,226 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Research.** The model wanted to know: *\"10 year Treasury yield 5.2% spike September 25 2026 futures\"* \u2192 got 6 results (via gnews_rss)\n- investingLive Asia-Pacific market news: Iran offers seven-day Hormuz dea - investingLive (https://news.google.com/rss/articles/CBMipgFBVV95cUxORVo4UGNybnNfTmRMZWRma1FFMkVFOTJnUGZTNUI4TUVETUZWd2J1UXRrbHNnYTM3OElxR0JzWFpieFFhVEstWU5wS21VNU1qdS1IQUZvT3o5SG91TS1ablFOMFBXTjd0c1A5SC1NcUN6dmZMa0xZem1hTGZxUXJHRGlWUlJISWlxLUNZaDFweXBwdnAyV3ZHU0N6TFc4MGQtaHduOXV3?oc="
+      "preview": "# Sector Prediction \u2014 Technology \u2014 2026-09-25\n- news_mode: **on**\n- ETF: **XLK**\n- rubric: `00_grounding/sectors/technology.md`\n- predicted_direction: **flat**\n- predicted_magnitude_band: **flat**\n- total_score: **2.841** (mult 0.85)\n- regime: mixed\n- divergence_flagged: **True**\n- engine: v2 \u00b7 tape_anchor **4.29** (NQ +0.57%, ES +0.28%, PM:XLK +0.79%) \u00b7 index_carry **0.676** (general 2.706) \u00b7 llm_overlay **-2.125** (raw -2.125) \u00b7 # Reasoning trace \u2014 SECTOR PREDICT Technology 2026-09-25\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (152,024 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Done researching.** The model stopped searching and wrote its full analysis (13,143 characters). \u00b7 keys: model, messages \u00b7 keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok \u00b7 keys: date, n_ok, n_total, sectors \u00b7 # Sector Board \u2014 2026-09-25\nGenerated: **2026-09-25T06:03:18.421963-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.). \u00b7 keys: date, generated_at, sectors \u00b7 ke"
     }
   ],
   "href": {
