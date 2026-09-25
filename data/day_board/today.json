@@ -1,6 +1,6 @@
 {
   "date": "2026-09-25",
-  "generated_at": "2026-09-25T05:07:15.842990-04:00",
+  "generated_at": "2026-09-25T05:09:54.042969-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -41,31 +41,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "events",
-      "title": "Event scanner (primary)",
-      "date": "2026-09-25",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-25T04:36:27.994691-04:00",
-      "files": [
-        {
-          "path": "01_daily/events/2026-09-25_events.json",
-          "ok": true,
-          "reason": "",
-          "size": 33560,
-          "preview": "32 events \u00b7 Hormuz tanker war; Brent ~$106, commercial transits still a fraction o | China Mid-Autumn / Golden Week travel surge begins | Trump\u2013Xi White House summit; trade truce extended to Jan 10 | US\u2013Iran UNGA shuttle talks on reopening Hormuz | 80 countries demand urgent Hormuz reopening at UNGA | Trump\u2013Zelenskyy UNGA push for Ukraine energy/Black Sea truce"
-        },
-        {
-          "path": "01_daily/events/2026-09-25_events.md",
-          "ok": true,
-          "reason": "",
-          "size": 19810,
-          "preview": "# Event Scan \u2014 2026-09-25\n- events tracked: **32** (via openclaw)\n- uncertainty: **elevated**\n- summary: The Sept 24 Trump\u2013Xi pageant extended the trade truce to Jan 10 and removed the Nov 10 cliff, but it did not de-risk the market: Hormuz is still barely open (Brent ~$106, single-digit daily transits), UNGA diplomacy produced no deal, and futures have lifted October 28 hike odds to roughly two-thirds. This window's live catalysts are Canada Section 338 bans (Sept 29), labor/PCE week (Sept 29\u2013Oct 2), China PMI into Golden Week (Sept 30), Micron (Sept 30), and the Oct 4 OPEC+ meeting \u2014 not a US shutdown, which is already funded through Dec 11."
-        }
-      ],
-      "preview": "32 events \u00b7 Hormuz tanker war; Brent ~$106, commercial transits still a fraction o | China Mid-Autumn / Golden Week travel surge begins | Trump\u2013Xi White House summit; trade truce extended to Jan 10 | US\u2013Iran UNGA shuttle talks on reopening Hormuz | 80 countries demand urgent Hormuz reopening at UNGA | Trump\u2013Zelenskyy UNGA push for Ukraine energy/Black Sea truce \u00b7 # Event Scan \u2014 2026-09-25\n- events tracked: **32** (via openclaw)\n- uncertainty: **elevated**\n- summary: The Sept 24 Trump\u2013Xi pageant extended the trade truce to Jan 10 and removed the Nov 10 cliff, but it did not de-risk the market: Hormuz is still barely open (Brent ~$106, single-digit daily transits), UNGA diplomacy produced no deal, and futures have lifted October 28 hike odds to roughly two-thirds. This window's live catalysts are Canada Section 338 bans (Sept 29), labor/PCE week (Sept 29\u2013Oct 2), China PMI into Golden Week (Sept 30), Micron (Sept 30), and the Oct 4 OPEC+ meeting \u2014 not a US shutdown, which is already funded through Dec 11."
-    },
     {
       "key": "news_actions",
       "title": "News actions",
@@ -226,6 +201,38 @@
         }
       ],
       "preview": "keys: date, generated_at, max_n, routing, grok, deepseek_fallback, gemini, n_targets, n_ok, targets, dossiers \u00b7 # CATALYST DAILY \u2014 2026-09-25\n0/8 dossiers \u00b7 max=8 \u00b7 routing=Grok \u2192 DeepSeek"
+    },
+    {
+      "key": "status",
+      "title": "Pre-open status packet",
+      "date": "2026-09-25",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-25T05:09:52.959520-04:00",
+      "files": [
+        {
+          "path": "01_daily/2026-09-25_preopen_qc.json",
+          "ok": true,
+          "reason": "",
+          "size": 7265,
+          "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok"
+        },
+        {
+          "path": "01_daily/2026-09-25_preopen_status.json",
+          "ok": true,
+          "reason": "",
+          "size": 8144,
+          "preview": "keys: date, generated_at, all_ok, qc_all_ok, book_ok, grok_ok, grok_fails, missing_required, attempts, github_runs, qc, news_mode"
+        },
+        {
+          "path": "01_daily/2026-09-25_preopen_status.md",
+          "ok": true,
+          "reason": "",
+          "size": 590,
+          "preview": "# Pre-open ALL status \u2014 2026-09-25\nall_ok=False  qc_all_ok=False  book_ok=False  grok_ok=False  news_mode=on  missing=['sector_predict']\nPredictive modules + stock book (must land before 09:30 ET).\nOutcome / learn / tonight's captain research = Post-Close ALL.\n- Weather / regime: exit 0\n- News parse: exit 0\n- Event scanner (primary): exit 0\n- Event catcher (gap hunt, no carry): exit 0\n- News actions: exit 0\n- News judge: exit 0\n- General market predict: exit 0\n- Per-sector predict (all 11): exit 1\n- Map heat morning delta refresh: exit 0\n- Catalyst dossiers (after book): exit 0"
+        }
+      ],
+      "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok \u00b7 keys: date, generated_at, all_ok, qc_all_ok, book_ok, grok_ok, grok_fails, missing_required, attempts, github_runs, qc, news_mode \u00b7 # Pre-open ALL status \u2014 2026-09-25\nall_ok=False  qc_all_ok=False  book_ok=False  grok_ok=False  news_mode=on  missing=['sector_predict']\nPredictive modules + stock book (must land before 09:30 ET).\nOutcome / learn / tonight's captain research = Post-Close ALL.\n- Weather / regime: exit 0\n- News parse: exit 0\n- Event scanner (primary): exit 0\n- Event catcher (gap hunt, no carry): exit 0\n- News actions: exit 0\n- News judge: exit 0\n- General market predict: exit 0\n- Per-sector predict (all 11): exit 1\n- Map heat morning delta refresh: exit 0\n- Catalyst dossiers (after book): exit 0"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
