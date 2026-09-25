@@ -2191,6 +2191,49 @@ def test_unpriced_held_keeps_its_slot_and_exits_on_the_first_bar() -> None:
     assert pool["pos"] == {}
 
 
+def test_morning_picks_ignore_the_post_close_ticket(tmp_path: Path) -> None:
+    """09:30 picks come from the send-time file, not the post-close copy."""
+    from src import factor_mine_send_inputs as fsi
+
+    day = "2026-09-25"
+    later = "2026-09-28"
+    board = tmp_path / "data" / "day_board"
+    board.mkdir(parents=True)
+    mine = tmp_path / "data" / "factor_mine"
+    send = mine / "send_inputs"
+    send.mkdir(parents=True)
+    (board / f"{day}_strategy_tickets.json").write_text(json.dumps({
+        "date": day,
+        "strategies": {"excel_all": {"buy": [{"ticker": "AAA"}]}},
+    }), encoding="utf-8")
+    (mine / "strategy_tickets.json").write_text(json.dumps({
+        "date": day,
+        "generated_at": "2026-09-25T16:49:21-04:00",
+        "strategies": {"excel_all": {"buy": ["WTS", "WOR"]}},
+    }), encoding="utf-8")
+    (board / f"{later}_strategy_tickets.json").write_text(json.dumps({
+        "date": later,
+        "strategies": {"hot4": {"buy": ["BBB"]}},
+    }), encoding="utf-8")
+    (send / f"{later}.json").write_text(json.dumps({
+        "date": later,
+        "picks": {"union_hot_n4_h1": ["GLND"]},
+    }), encoding="utf-8")
+    old_root, old_dir = fmf.ROOT, fsi.DIR
+    fmf.ROOT = tmp_path
+    fsi.DIR = send
+    try:
+        assert fmf.morning_pick_tickers(day) == {"AAA"}
+        (mine / "strategy_tickets.json").write_text(json.dumps({
+            "date": later,
+            "strategies": {"excel_all": {"buy": ["WTS"]}},
+        }), encoding="utf-8")
+        assert fmf.morning_pick_tickers(later) == {"BBB", "GLND"}
+    finally:
+        fmf.ROOT = old_root
+        fsi.DIR = old_dir
+
+
 def test_held_names_are_fetched_even_when_they_are_not_candidates() -> None:
     """The day's Yahoo fetch includes carried names that are not candidates.
 
@@ -2317,6 +2360,8 @@ if __name__ == "__main__":
     test_finviz_stooq_disagreement_does_not_hold_the_day()
     test_missing_yahoo_bars_drop_and_the_day_locks()
     test_unpriced_held_keeps_its_slot_and_exits_on_the_first_bar()
+    with tempfile.TemporaryDirectory() as raw:
+        test_morning_picks_ignore_the_post_close_ticket(Path(raw))
     test_held_names_are_fetched_even_when_they_are_not_candidates()
     test_completeness_gate_lists_every_hole_and_refuses_adjusted_bars()
     test_one_gapped_name_is_dropped_and_the_rerun_matches()

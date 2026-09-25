@@ -1071,6 +1071,28 @@ def test_oos_append_failure_does_not_fail_the_lock(tmp_path: Path) -> None:
     assert fmf.MANIFEST_PATH.read_bytes() == manifest
 
 
+def test_logged_append_must_be_committed() -> None:
+    """A logged append with no ledger or sha256 on the branch fails the job."""
+    day = "2026-09-25"
+    log = f"[factor-mine] land-closed: {day} already frozen — no rewrite\n"
+    log += f"[oos0914] nightly: appended {day}\n"
+    paths = oos.append_commit_paths(day)
+    assert f"data/factor_mine/oos0914/ledgers/{day}.json" in paths
+    assert f"data/factor_mine/oos0914/ledgers/{day}.json.sha256" in paths
+    assert any(f"/state/" in path and path.endswith(f"{day}.json") for path in paths)
+    try:
+        oos.assert_logged_append_committed(log, [])
+    except SystemExit as exc:
+        assert "nothing was committed" in str(exc)
+        assert f"{day}.json.sha256" in str(exc)
+    else:
+        raise AssertionError("missing commit did not fail")
+    assert oos.assert_logged_append_committed(log, paths) == [day]
+    assert oos.assert_logged_append_committed(
+        "[oos0914] nightly: through 2026-09-24 already locked\n", [],
+    ) == []
+
+
 def test_oos_bar_load_includes_a_carried_name(tmp_path: Path) -> None:
     """A name held into the day is loaded even when it is not a snapshot row."""
     day = "2026-09-15"
@@ -1151,6 +1173,7 @@ def main() -> None:
         test_rule_17_freeze_before_test_score(root / "r17")
         test_theme_train_does_not_open_future_snapshot(root / "theme")
         test_oos_append_failure_does_not_fail_the_lock(root / "append_fail")
+        test_logged_append_must_be_committed()
         test_oos_bar_load_includes_a_carried_name(root / "held_bars")
     assert fmf.MANIFEST_PATH.read_bytes() == manifest
     print("oos0914 tests passed")

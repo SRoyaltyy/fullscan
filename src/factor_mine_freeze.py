@@ -516,7 +516,13 @@ def _names_from_ticket_rows(rows) -> set[str]:
 
 
 def morning_pick_tickers(date: str) -> set[str]:
-    """Buys already chosen at 09:30: send inputs and the locked ticket file."""
+    """Buys already chosen at 09:30.
+
+    The send-time file is ``data/day_board/<date>_strategy_tickets.json``.
+    From 2026-09-28 the frozen send set is
+    ``data/factor_mine/send_inputs/<date>.json``. The post-close copy
+    ``data/factor_mine/strategy_tickets.json`` is not a morning pick.
+    """
     day = str(date or "")[:10]
     out: set[str] = set()
     from . import factor_mine_send_inputs as fsi
@@ -525,16 +531,8 @@ def morning_pick_tickers(date: str) -> set[str]:
         doc = fsi.load(day) or {}
         for picks in (doc.get("picks") or {}).values():
             out |= _names_from_ticket_rows(picks)
-    paths = [
-        ROOT / "data" / "day_board" / f"{day}_strategy_tickets.json",
-        ROOT / "data" / "factor_mine" / "strategy_tickets.json",
-    ]
-    for path in paths:
-        doc = read_json(path)
-        if not isinstance(doc, dict):
-            continue
-        if str(doc.get("date") or "")[:10] != day:
-            continue
+    doc = read_json(ROOT / "data" / "day_board" / f"{day}_strategy_tickets.json")
+    if isinstance(doc, dict) and str(doc.get("date") or "")[:10] == day:
         for rec in (doc.get("strategies") or {}).values():
             if isinstance(rec, dict):
                 out |= _names_from_ticket_rows(rec.get("buy"))
