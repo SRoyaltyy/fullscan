@@ -131,23 +131,86 @@ def test_missing_bars_hold_the_day_and_do_not_write_hot_zero() -> None:
     with tempfile.TemporaryDirectory() as d:
         old = _use(Path(d))
         try:
-            def _no_bars(ticker, date, n=1):
-                return []
-
-            with mock.patch.object(fmf, "ensure_candidate_bars", wraps=None):
-                pass
             with mock.patch("src.price_store.ensure_through", return_value=None), \
-                    mock.patch("src.ohlc_ripper.prior_bars", side_effect=_no_bars):
+                    mock.patch.object(fmf, "_raw_bars", return_value=[]), \
+                    mock.patch.object(tl, "_official_ohlc",
+                                      return_value={"open": None, "close": None}):
                 try:
-                    fmf.ensure_candidate_bars("2026-09-25", ["AAA", "BBB"])
+                    fmf.ensure_candidate_bars("2026-09-25", ["BBB", "AAA"])
                     held = False
+                    err = None
                 except fmf.HoldDay as e:
                     held = True
-                    assert "AAA" in e.missing or e.missing
-            assert held
+                    err = e
+            assert held and err is not None
+            assert err.status == "held_incomplete"
+            assert err.missing == ["AAA", "BBB"]
+            assert {g["ticker"] for g in err.gaps} == {"AAA", "BBB"}
             assert not fmf.snapshot_path("2026-09-25").exists()
         finally:
             _restore(old)
+
+
+def _bars(n: int, close: float = 10.0) -> list[dict]:
+    out = []
+    for i in range(n):
+        day = f"2026-07-{i+1:02d}" if i < 28 else f"2026-08-{i-27:02d}"
+        out.append({
+            "date": day, "open": close, "high": close, "low": close,
+            "close": close, "volume": 100.0,
+        })
+    return out
+
+
+def test_completeness_gate_lists_every_hole_and_refuses_adjusted_bars() -> None:
+    need = 35
+    full = _bars(need)
+    short = _bars(4)
+
+    def raw(ticker):
+        return {"AAA": full, "BBB": short, "CCC": full}.get(ticker, [])
+
+    def official(ticker, date, bars=None):
+        if ticker == "CCC":
+            return {"open": None, "high": None, "low": None, "close": None}
+        return {"open": 10.0, "high": 11.0, "low": 9.0, "close": 10.5}
+
+    with mock.patch("src.price_store.ensure_through", return_value=None), \
+            mock.patch.object(fmf, "_raw_bars", side_effect=raw), \
+            mock.patch.object(tl, "_official_ohlc", side_effect=official):
+        try:
+            fmf.ensure_candidate_bars("2026-09-25", ["AAA", "BBB", "CCC"])
+            held = False
+            err = None
+        except fmf.HoldDay as e:
+            held = True
+            err = e
+    assert held and err is not None
+    assert err.status == "held_incomplete"
+    by = {g["ticker"]: g["missing"] for g in err.gaps}
+    assert "AAA" not in by
+    assert any(item.startswith("indicator bars") for item in by["BBB"])
+    assert "missing 09:30 open" in by["CCC"]
+    from src import price_store as ps
+    old = ps.AUTO_ADJUST
+    ps.AUTO_ADJUST = True
+    try:
+        try:
+            fmf.ensure_candidate_bars("2026-09-25", ["AAA"])
+            adjusted = False
+        except fmf.HoldDay as e:
+            adjusted = True
+            assert e.status == "held_incomplete"
+            assert "adjusted" in e.reason
+        assert adjusted
+        try:
+            fmf.make_snapshot("2026-09-25", [], None, None)
+            snapped = False
+        except fmf.HoldDay:
+            snapped = True
+        assert snapped
+    finally:
+        ps.AUTO_ADJUST = old
 
 
 def test_build_panel_fetches_bars_before_candidates() -> None:
@@ -799,6 +862,8 @@ def test_replay_twice_is_byte_identical() -> None:
         assert first[key] == second[key], key
     snap = json.loads(first["snapshot"])
     assert snap["code_sha"] == "determinism-test"
+    assert snap["tape"] == "raw"
+    assert snap["auto_adjust"] is False
     ledger = json.loads(gzip.decompress(first["ledger"]))
     assert ledger["code_sha"] == "determinism-test"
 
@@ -898,6 +963,7 @@ if __name__ == "__main__":
     test_snapshot_is_write_once_and_restate_logs_previous_hash()
     test_guard_fails_when_an_earlier_hash_changes()
     test_missing_bars_hold_the_day_and_do_not_write_hot_zero()
+    test_completeness_gate_lists_every_hole_and_refuses_adjusted_bars()
     test_build_panel_fetches_bars_before_candidates()
     test_build_panel_refuses_unresolved_hot_score()
     test_morning_map_heat_is_not_replaced_by_postclose()

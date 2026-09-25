@@ -51,14 +51,17 @@ _FILL_KEYS = (
 
 
 class HoldDay(Exception):
-    """Do not land D. Missing bars would have been written as hot_score 0."""
+    """Do not land D. A hole would have been written as hot_score 0."""
 
-    def __init__(self, date: str, missing: list[str] | None, reason: str):
+    def __init__(self, date: str, missing: list[str] | None, reason: str, *,
+                 status: str = "held_incomplete", gaps: list | None = None):
         self.date = str(date)
         self.missing = [str(t) for t in (missing or [])][:80]
         self.reason = reason
+        self.status = status or "held_incomplete"
+        self.gaps = list(gaps or [])
         super().__init__(
-            f"hold {self.date}: {reason}; "
+            f"hold {self.date}: {self.status}: {reason}; "
             f"n={len(missing or [])} sample={self.missing[:12]}"
         )
 
@@ -248,37 +251,86 @@ def ranking_universe(date: str, cal: list[str], plan: dict,
     return sorted(names)
 
 
-def ensure_candidate_bars(date: str, tickers: list[str]) -> None:
-    """Fetch bars for every candidate. Missing bars hold D."""
+def _raw_bars(ticker: str) -> list[dict]:
+    """Stored prints for one ticker, oldest first. Not split-adjusted."""
+    from . import candle_factor as cf
+
+    return list(cf._ticker_bars().get(str(ticker or "").strip().upper()) or [])
+
+
+def completeness_gaps(ticker: str, date: str) -> list[str]:
+    """Holes that would lock D with a missing open, close, or indicator.
+
+    The 09:30 open has to be the stored raw print. A Finviz fallback does
+    not fill it. Indicator history is the MACD window: every one of those
+    prior bars needs a close.
+    """
     from . import ohlc_ripper as ohlc
     from . import price_store as ps
 
-    names = [t for t in tickers if t]
+    if ps.AUTO_ADJUST:
+        return ["adjusted bars"]
+    d = str(date or "")[:10]
+    t = str(ticker or "").strip().upper()
+    gaps: list[str] = []
+    if tl._official_ohlc(t, d).get("open") is None:
+        gaps.append("missing 09:30 open")
+    priors = [b for b in _raw_bars(t) if str(b.get("date") or "") < d]
+    need = int(ohlc.MIN_INDICATOR_BARS)
+    if not priors or priors[-1].get("close") is None:
+        gaps.append("missing prior close")
+    if len(priors) < need:
+        gaps.append(f"indicator bars {len(priors)}/{need}")
+    else:
+        window = priors[-need:]
+        if any(b.get("close") is None for b in window):
+            gaps.append("missing prior close")
+    return gaps
+
+
+def ensure_candidate_bars(date: str, tickers: list[str]) -> None:
+    """Fetch raw bars for every candidate. Any hole holds D."""
+    from . import price_store as ps
+
+    names = sorted({str(t).strip().upper() for t in tickers if t})
+    if ps.AUTO_ADJUST:
+        raise HoldDay(
+            date, names, "refusing to lock adjusted bars",
+            status="held_incomplete",
+            gaps=[{"ticker": t, "missing": ["adjusted bars"]} for t in names],
+        )
     if not names:
-        raise HoldDay(date, [], "no candidates — refusing to freeze an empty day")
+        raise HoldDay(
+            date, [], "no candidates — refusing to freeze an empty day",
+            status="held_incomplete",
+        )
     try:
         ps.ensure_through(date, tickers=names, strict=True)
     except (Exception, SystemExit) as e:
-        raise HoldDay(date, names, f"price fetch failed: {e}") from e
-    reset_price_memory()
-    missing = [t for t in names if not ohlc.prior_bars(t, date, n=1)]
-    if missing:
         raise HoldDay(
-            date, missing,
-            "no prior bars after fetch — refusing to write hot_score 0",
+            date, names, f"price fetch failed: {e}",
+            status="held_incomplete",
+        ) from e
+    reset_price_memory()
+    gaps = []
+    for t in names:
+        missing = completeness_gaps(t, date)
+        if missing:
+            gaps.append({"ticker": t, "missing": missing})
+    if gaps:
+        raise HoldDay(
+            date, [g["ticker"] for g in gaps],
+            "held_incomplete — refusing to write hot_score 0",
+            status="held_incomplete",
+            gaps=gaps,
         )
 
 
 def row_price_problem(ticker: str, date: str) -> str | None:
     """None when this row can be frozen. Otherwise it would be hot=0 or no open."""
-    from . import ohlc_ripper as ohlc
-
-    feat = ohlc.features(ticker, date)
-    if not feat.get("ok"):
-        return "hot_score unresolved"
-    bar = tl.session_bar(ticker, date) or {}
-    if bar.get("open") is None:
-        return "missing 09:30 open"
+    gaps = completeness_gaps(ticker, date)
+    if gaps:
+        return "; ".join(gaps)
     return None
 
 
@@ -342,7 +394,12 @@ def pin_prices(date: str, tickers: list[str]) -> dict:
             "low": sess.get("low"),
             "close": sess.get("close"),
         }
-    return {"date": date, "names": names}
+    return {
+        "date": date,
+        "tape": "raw",
+        "auto_adjust": False,
+        "names": names,
+    }
 
 
 def bars_from_panel(panel: dict) -> dict:
@@ -490,6 +547,13 @@ def apply_frozen_snapshots(panel: dict) -> dict:
 
 def make_snapshot(date: str, rows: list[dict], prior: str | None,
                   prices_sha: str | None) -> dict:
+    from . import price_store as ps
+
+    if ps.AUTO_ADJUST:
+        raise HoldDay(
+            date, [], "refusing to lock adjusted bars",
+            status="held_incomplete",
+        )
     heat = heat_record(date, prior)
     frozen_rows = []
     for row in rows:
@@ -505,6 +569,8 @@ def make_snapshot(date: str, rows: list[dict], prior: str | None,
         "asof": "09:30_et",
         "open_clock": "09:30 ET",
         "code_sha": code_sha(),
+        "tape": "raw",
+        "auto_adjust": False,
         "heat": heat,
         "prices_sha256": prices_sha,
         "n_rows": len(frozen_rows),

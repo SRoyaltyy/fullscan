@@ -39,6 +39,8 @@ _ACTION_CACHE: dict[str, list[dict]] | None = None
 _PENDING_ACTIONS: list[pd.DataFrame] = []
 
 CHUNK = 80
+# The locked tape is the printed session. Adjusted history is never stored.
+AUTO_ADJUST = False
 
 
 def _universe_tickers() -> list[str]:
@@ -131,13 +133,16 @@ def _yf_download(tickers: list[str], start: str, end: str, *,
     if not tickers:
         return pd.DataFrame()
     start, end = _yf_bound(start), _yf_bound(end)
+    if AUTO_ADJUST:
+        raise RuntimeError(
+            "price store refuses adjusted bars; auto_adjust stays false")
     try:
         # Printed regular-session Open/High/Low/Close — not split-adjusted
         # history and not a live last-trade. Factor-mine 09:30 / 16:00
         # marks must match the tape the user can look up.
         raw = yf.download(
             tickers=tickers, start=start, end=end, group_by="ticker",
-            auto_adjust=False, actions=True, threads=True, progress=False,
+            auto_adjust=AUTO_ADJUST, actions=True, threads=True, progress=False,
         )
     except Exception as e:
         print(f"[price_store] download failed ({len(tickers)}): {e}")
