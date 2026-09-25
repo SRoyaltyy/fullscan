@@ -1,6 +1,6 @@
 {
   "date": "2026-09-25",
-  "generated_at": "2026-09-25T04:25:41.064952-04:00",
+  "generated_at": "2026-09-25T04:25:46.914089-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -15,38 +15,6 @@
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "finviz_digest",
-      "title": "Finviz digest",
-      "date": "2026-09-25",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-25T04:18:54.827919-04:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-09-25_finviz_digest.json",
-          "ok": true,
-          "reason": "",
-          "size": 86969,
-          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample"
-        },
-        {
-          "path": "01_daily/news/2026-09-25_finviz_digest.md",
-          "ok": true,
-          "reason": "",
-          "size": 11820,
-          "preview": "# Finviz Daily Digest \u2014 2026-09-25\n_Generated 2026-09-25T04:18:54.712152-04:00 \u00b7 export=data/exports/finviz_2026-09-24.csv \u00b7 ticker digests=5881 \u00b7 high-signal=2100_"
-        },
-        {
-          "path": "data/finviz/latest.csv",
-          "ok": true,
-          "reason": "",
-          "size": 11465996,
-          "preview": "11673 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
-        }
-      ],
-      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-09-25\n_Generated 2026-09-25T04:18:54.712152-04:00 \u00b7 export=data/exports/finviz_2026-09-24.csv \u00b7 ticker digests=5881 \u00b7 high-signal=2100_ \u00b7 11673 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
-    },
     {
       "key": "finviz_market_digest",
       "title": "Finviz homepage market digest",
@@ -228,6 +196,31 @@
         }
       ],
       "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-09-25\n_Generated 2026-09-25T04:19:14.530844-04:00 \u00b7 export=data/exports/finviz_2026-09-25.csv \u00b7 ticker digests=5881 \u00b7 high-signal=2098_"
+    },
+    {
+      "key": "map_heat",
+      "title": "Map heat tables",
+      "date": "2026-09-25",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-25T04:25:46.486383-04:00",
+      "files": [
+        {
+          "path": "01_daily/map_heat/2026-09-25_map_heat.json",
+          "ok": true,
+          "reason": "",
+          "size": 269682,
+          "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape"
+        },
+        {
+          "path": "01_daily/map_heat/2026-09-25_map_heat.md",
+          "ok": true,
+          "reason": "",
+          "size": 17201,
+          "preview": "# MAP HEAT \u2014 2026-09-25\nExport `finviz_2026-09-25.csv` \u00b7 11616 names \u00b7 generated 2026-09-25T04:20:36.576875-04:00"
+        }
+      ],
+      "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-09-25\nExport `finviz_2026-09-25.csv` \u00b7 11616 names \u00b7 generated 2026-09-25T04:20:36.576875-04:00"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
