@@ -2132,10 +2132,14 @@ def test_unpriced_held_keeps_its_slot_and_exits_on_the_first_bar() -> None:
     assert fmf.unpriced_held_tickers(
         gap_day, gaps, held=set(), picked={"NEXT"},
     ) == []
-    snap = fmf.make_snapshot(
-        gap_day, by[gap_day], "2026-09-24", "prices",
-        dropped=gaps, unpriced_held=["MISS"],
-    )
+    with mock.patch.object(fmf, "heat_record", return_value={
+                "vintage": "2026-09-24", "phase": "morning_overlay",
+                "board_date": gap_day, "source": None, "sha256": "abc",
+            }), mock.patch.object(fmf, "code_sha", return_value="unpriced"):
+        snap = fmf.make_snapshot(
+            gap_day, by[gap_day], "2026-09-24", "prices",
+            dropped=gaps, unpriced_held=["MISS"],
+        )
     assert snap["unpriced_held"] == ["MISS"]
     assert snap["dropped_missing_bars"] == ["MISS"]
     assert [item["ticker"] for item in snap["rows"]] == ["MISS", "NEXT"]
