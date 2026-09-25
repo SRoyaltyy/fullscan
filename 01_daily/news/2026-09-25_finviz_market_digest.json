@@ -1,0 +1,67 @@
+{
+  "date": "2026-09-25",
+  "generated_at": "2026-09-25T04:19:22.590699-04:00",
+  "timezone": "America/New_York",
+  "source": "live",
+  "source_url": "https://elite.finviz.com/",
+  "archive_snapshot_ts": null,
+  "archive_snapshot_at": null,
+  "archive_url": null,
+  "clock_legal": true,
+  "clock_same_morning": true,
+  "clock_use": "same_morning",
+  "clock_legal_for": "2026-09-25",
+  "clock_rule": "Live: Generated must be before 09:30 ET on this date or leave missing. Wayback: capture before 09:30 ET that day is legal for that morning's Pre-Open. Afternoon Wayback is legal for the NEXT session open only (prior-day close recap), marked by clock_legal_for. Gaps stay gaps. Capture only — not tape_anchor / predict / #210.",
+  "kind": "finviz_homepage_market_digest",
+  "represents": "Finviz homepage market-day prose. Same-morning Pre-Open when Generated is before 09:30 ET; afternoon Wayback is a prior-day close recap legal for the next session only. Not quote-page ticker blurbs.",
+  "error": null,
+  "headline": "US equity futures point to a slightly higher open as traders await durable goods and Michigan sentiment data with oil softer and global markets mixed",
+  "raw_text": "- S&P 500 futures (@ES) rise 0.11%, Dow Jones futures (@YM) rise 0.10%, Nasdaq 100 futures (@NQ) rise 0.33%, and Russell 2000 futures (@ER2) rise 0.15%, indicating a slightly higher US open\n- Germany’s DAX (@DY) gains 0.59% in early European trading, while Asian markets saw the Nikkei 225 (@NKD) up 1.30% and the Hang Seng slightly lower\n- WTI crude oil futures (@CL) decline, with WTI down 1.10%\n- Small-cap name TBN (TBN) is among companies reporting earnings before the bell\n- Key US economic releases today are durable goods orders at 8:30 AM ET and the final University of Michigan consumer sentiment reading at 10:00 AM ET",
+  "raw_summary_md": "- **S&P 500 futures** ([@ES](https://finviz.com/futures_charts?t=ES)) rise **0.11%**, **Dow Jones futures** ([@YM](https://finviz.com/futures_charts?t=YM)) rise **0.10%**, **Nasdaq 100 futures** ([@NQ](https://finviz.com/futures_charts?t=NQ)) rise **0.33%**, and **Russell 2000 futures** ([@ER2](https://finviz.com/futures_charts?t=ER2)) rise **0.15%**, indicating a **slightly higher US open**\n- **Germany’s DAX** ([@DY](https://finviz.com/futures_charts?t=DY)) gains **0.59%** in early European trading, while Asian markets saw the **Nikkei 225** ([@NKD](https://finviz.com/futures_charts?t=NKD)) up **1.30%** and the **Hang Seng slightly lower**\n- **WTI crude oil futures** ([@CL](https://finviz.com/futures_charts?t=CL)) decline, with **WTI down 1.10%**\n- **Small-cap name TBN** ([TBN](https://finviz.com/quote?t=TBN)) is among companies **reporting earnings before the bell**\n- **Key US economic releases today** are **durable goods orders at 8:30 AM ET** and the **final University of Michigan consumer sentiment reading at 10:00 AM ET**",
+  "index_moves": [],
+  "oil": null,
+  "cpi": null,
+  "fed_odds": null,
+  "named_tickers": [
+    "TBN"
+  ],
+  "named_leaders": [
+    "TBN"
+  ],
+  "calendar": [
+    "Key US economic releases today are durable goods orders at 8:30 AM ET and the final University of Michigan consumer sentiment reading at 10:00 AM ET"
+  ],
+  "prior_close": {
+    "spx": null,
+    "nasdaq": null,
+    "dow": null
+  },
+  "cpi_fed": {
+    "cpi": null,
+    "fed_odds": null
+  },
+  "next_session_calendar": {
+    "housing": false,
+    "retail": false,
+    "fed": false,
+    "bullets": [],
+    "text": ""
+  },
+  "earnings_slate": {
+    "tickers": [
+      "TBN"
+    ],
+    "text": "Small-cap name TBN (TBN) is among companies reporting earnings before the bell"
+  },
+  "geo_grain": {
+    "geo": false,
+    "grain": false,
+    "flags": [],
+    "text": ""
+  },
+  "finviz_id": 294263,
+  "finviz_ticker": "$MARKET",
+  "finviz_published_at": "2026-09-25T04:06:13.793",
+  "finviz_source": "market_summary",
+  "finviz_sentiment": "good"
+}

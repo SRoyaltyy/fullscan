@@ -383,9 +383,7 @@ def recipe_created_on(name: str, rec: dict | None = None) -> str:
     if members:
         # Ignore this row's own created_on while dating members, or a
         # combo stamped at the book origin would hide a later member.
-        member_on = max(
-            recipe_created_on(m, {}) for m in members
-        )
+        member_on = max(recipe_created_on(m, {}) for m in members)
         return max(explicit, member_on) if explicit else member_on
     if explicit:
         return explicit
@@ -3423,8 +3421,14 @@ def write_scoreboard(payload: dict, out_json: Path | None = None) -> dict:
     """Write slim index + gzip shards. Never keeps books/starts/daily in the index.
 
     Returns the slim document that was written (manifest + summaries).
+    A destination that already has locked days refuses a rewrite of those
+    picks, fills, or P&L. A recipe name that was not on the board may
+    land once.
     """
     dest_json = Path(out_json or OUT_JSON)
+    if dest_json.is_file():
+        from . import factor_mine_rules as fmr
+        fmr.assert_scoreboard_append(load_scoreboard(dest_json), payload)
     dest_json.parent.mkdir(parents=True, exist_ok=True)
     dest_shards = shards_dir(dest_json)
     dest_shards.mkdir(parents=True, exist_ok=True)
@@ -3514,11 +3518,14 @@ def write_outputs(payload: dict, stats: list[dict] | None = None,
         item["created_on"] = recipe_created_on(item.get("name") or "", item)
         recipes_stamped.append(item)
     if recipes_stamped:
-        payload = dict(payload)
         payload["recipes"] = recipes_stamped
         for stat in payload.get("stats") or []:
             if isinstance(stat, dict) and stat.get("name"):
                 stat["created_on"] = recipe_created_on(stat["name"], stat)
+    from . import factor_mine_freeze as fmf
+    meta = fmf.freeze_meta()
+    if meta.get("first_frozen"):
+        payload["freeze"] = meta
     dest = paths or publish_paths()
     dest_json = Path(dest["json"])
     dest_md = Path(dest["md"])
@@ -3529,6 +3536,10 @@ def write_outputs(payload: dict, stats: list[dict] | None = None,
     dest_dash.mkdir(parents=True, exist_ok=True)
     dest_md.parent.mkdir(parents=True, exist_ok=True)
     write_scoreboard(payload, dest_json)
+    live_json = ROOT / "03_scoreboard" / "factor_mine.json"
+    if dest_json.resolve() == live_json.resolve():
+        from . import factor_mine_rules as fmr
+        fmr.publish_rule_pages(payload)
     starts = {
         "generated_at": payload.get("generated_at"),
         "rows": [
@@ -3578,8 +3589,8 @@ def write_outputs(payload: dict, stats: list[dict] | None = None,
     })
     if late:
         lines += [
-            "Sessions before a recipe's creation date are **in-sample** "
-            "(the rule was not in the book yet). "
+            "Sessions before a recipe's creation date are **designed_after** "
+            "(the rule was not in the book yet) and stay out of the real total. "
             "Holdup, overnight-mega, and Clock-B start `2026-09-21`. "
             "White-horizon and the stop brackets start `2026-09-14`.",
             "",
@@ -4303,6 +4314,8 @@ def land_closed(from_date: str = START, write: bool = False,
     print(f"[factor-mine] land-closed → {target} recipes={len(recs)} "
           f"(append frozen day)", flush=True)
     from . import factor_mine_freeze as fmf
+    # append_land freezes the new session and writes the board. A second
+    # run() would rescore locked days.
     return fmf.append_land(
         from_date, target, write=write, restate=sorted(restate_set),
         recipes=recs, payload=payload,

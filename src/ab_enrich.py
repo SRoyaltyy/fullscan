@@ -27,6 +27,7 @@ import pandas as pd
 
 from . import config
 from . import peer_rs
+from .past_write import refuse_past_overwrite
 
 ROOT = Path(__file__).resolve().parent.parent
 EXPORT_DIR = ROOT / "data" / "exports"
@@ -271,6 +272,7 @@ def _stub_from_export(ticker: str, export: pd.DataFrame) -> pd.DataFrame:
 
 
 def run(date: str | None = None, ticker: str | None = None) -> Path:
+    requested = date
     print("[ab_enrich] correlations search paths:")
     for line in _corr_paths_status():
         print(f"  {line}")
@@ -439,6 +441,13 @@ def run(date: str | None = None, ticker: str | None = None) -> Path:
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     suffix = f"_{ticker.upper()}" if ticker else ""
     out_csv = OUT_DIR / f"{date}_ab_checklist_enriched{suffix}.csv"
+    md = OUT_DIR / f"{date}_ab_checklist_enriched{suffix}.md"
+    run_date = requested or date
+    if refuse_past_overwrite(out_csv, run_date) or refuse_past_overwrite(md, run_date):
+        raise SystemExit(
+            f"[ab_enrich] REFUSE past-date write {out_csv.name} "
+            f"(file date < run date {run_date})"
+        )
     m_sorted = m.sort_values("score_enriched", ascending=False)
     m_sorted.to_csv(out_csv, index=False)
 
@@ -479,7 +488,6 @@ def run(date: str | None = None, ticker: str | None = None) -> Path:
             f"{str(r.get('sector_dir') or '—')} | {r.get('context_label')} |"
         )
 
-    md = OUT_DIR / f"{date}_ab_checklist_enriched{suffix}.md"
     md.write_text("\n".join(lines), encoding="utf-8")
     print(f"[ab_enrich] wrote {out_csv.name} rows={len(m):,}")
     print(f"[ab_enrich] wrote {md.name}")

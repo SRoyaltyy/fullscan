@@ -7,6 +7,7 @@ from __future__ import annotations
 import gzip
 import json
 from datetime import datetime, timedelta
+from unittest import mock
 
 from src import factor_mine as fm
 from src import morning_scan as ms
@@ -20,45 +21,87 @@ CASH_START = {
 CLOCK_B_PREPARE = ["DELL", "GME", "UMC", "VSTS"]
 
 
-def _cash_start_bought() -> dict[str, list[str]]:
-    path = ROOT / "03_scoreboard" / "factor_mine" / "shards" / "starts.json.gz"
-    with gzip.open(path, "rt", encoding="utf-8") as handle:
-        starts = json.load(handle)
-    out: dict[str, list[str]] = {}
-    for row in starts[st.HOT4_WIRE]:
-        out[str(row.get("start") or "")[:10]] = list(row.get("bought") or [])
-    return out
+def _cash_row(date: str, ticker: str, hot: float, **extra) -> dict:
+    row = {
+        "date": date,
+        "ticker": ticker,
+        "sources": ["yday_gainer", "yday_mover"],
+        "ohlc_hot_score": hot,
+        "alarm": False,
+        "boxes": {},
+    }
+    row.update(extra)
+    return row
+
+
+def _cash_start_panel() -> dict:
+    """Pinned 09-21 / 09-22 book. Not data/factor_mine/panel.json.
+
+    The nightly remine rewrites that file (09-22 INDP became CRML).
+    The wire tests keep this list.
+    """
+    by_date = {
+        "2026-09-21": [
+            _cash_row("2026-09-21", "FEAM", 10.9),
+            _cash_row("2026-09-21", "TJGC", 8.8),
+            _cash_row("2026-09-21", "LVWR", 7.8),
+            _cash_row("2026-09-21", "SECZ", 7.3),
+            _cash_row("2026-09-21", "NOPE", 1.0, sources=["ohlc_hot"]),
+            _cash_row(
+                "2026-09-21", "GME", 0.1,
+                sources=["ohlc_hot"], erd_days_since_E=0, erd_flag_E=1,
+            ),
+        ],
+        "2026-09-22": [
+            _cash_row("2026-09-22", "SECZ", 10.0),
+            _cash_row("2026-09-22", "GRAL", 9.0),
+            _cash_row("2026-09-22", "NUAI", 8.0),
+            _cash_row("2026-09-22", "INDP", 7.0),
+            # e_fresh so Clock-B ranks DELL first; hot_score leaves it out of top 4.
+            _cash_row(
+                "2026-09-22", "DELL", 0.2,
+                sources=["ohlc_hot"], erd_days_since_E=0, erd_flag_E=1,
+            ),
+        ],
+    }
+    rows = [r for day in by_date.values() for r in day]
+    return {
+        "to_date": "2026-09-22",
+        "session_dates": ["2026-09-21", "2026-09-22"],
+        "by_date": by_date,
+        "rows": rows,
+    }
 
 
 def test_published_hot4_matches_cash_start() -> None:
-    """09-21 / 09-22 ticket emission equals cash-start bought, not Clock-B."""
-    bought = _cash_start_bought()
-    raw = json.loads((st.PANEL).read_text(encoding="utf-8"))
-    panel = fm.rehydrate_panel(raw)
+    """09-21 / 09-22 ticket emission equals the frozen cash-start, not Clock-B."""
+    panel = _cash_start_panel()
     rec = next(r for r in fm.build_recipes() if r["name"] == st.HOT4_WIRE)
-    for date, want in CASH_START.items():
-        assert bought[date] == want, bought[date]
-        emitted = st.recipe_strats(date)
-        hot = next(r for r in emitted if r["name"] == st.HOT4_WIRE)
-        got = [b["ticker"] for b in hot["buy"]]
-        assert got == want, (date, got)
-        assert hot.get("methodology") == st.HOT4_WIRE_METHODOLOGY
-        assert hot.get("picker") == "pick_day"
-        assert hot.get("status") == "ok"
-        clock_b = [
-            r["ticker"] for r in ms.pick_morning(ms.aisle_rows(date, panel["by_date"][date]), rec)
-        ]
-        assert clock_b != want
-        assert got != clock_b
-        st.assert_hot4_wire(date, hot["buy"], panel=panel)
+    with mock.patch.object(st, "_load_json", return_value=panel):
+        for date, want in CASH_START.items():
+            emitted = st.recipe_strats(date)
+            hot = next(r for r in emitted if r["name"] == st.HOT4_WIRE)
+            got = [b["ticker"] for b in hot["buy"]]
+            assert got == want, (date, got)
+            assert hot.get("methodology") == st.HOT4_WIRE_METHODOLOGY
+            assert hot.get("picker") == "pick_day"
+            assert hot.get("status") == "ok"
+            clock_b = [
+                r["ticker"] for r in ms.pick_morning(panel["by_date"][date], rec)
+            ]
+            assert clock_b != want
+            assert got != clock_b
+            st.assert_hot4_wire(date, hot["buy"], panel=panel)
 
 
 def test_gate_refuses_clock_b_prepare_list() -> None:
+    panel = _cash_start_panel()
     with_raise = False
     try:
         st.assert_hot4_wire(
             "2026-09-21",
             [{"ticker": t, "side": "long"} for t in CLOCK_B_PREPARE],
+            panel=panel,
         )
     except ValueError as exc:
         with_raise = True
@@ -70,9 +113,11 @@ def test_gate_refuses_clock_b_prepare_list() -> None:
 
 
 def test_gate_accepts_cash_start_list() -> None:
+    """Cash-start names come from the frozen book, not the nightly panel."""
+    panel = _cash_start_panel()
     for date, want in CASH_START.items():
         got = st.assert_hot4_wire(
-            date, [{"ticker": t, "side": "long"} for t in want])
+            date, [{"ticker": t, "side": "long"} for t in want], panel=panel)
         assert got == want
 
 
@@ -161,27 +206,22 @@ def _cash_book_days() -> dict[str, dict]:
 
 
 def test_published_sells_match_cash_book() -> None:
-    """Every continuous-book exit, including 09-22 FEAM/TJGC/LVWR, is the wire."""
+    """09-22 list-drop exits are the frozen book, not the nightly shard."""
+    panel = _cash_start_panel()
+    sold_0922 = ["FEAM", "TJGC", "LVWR"]
+    assert st.hot4_recipe_tickers("2026-09-21", panel=panel) == CASH_START["2026-09-21"]
+    assert st.hot4_recipe_sells("2026-09-22", panel=panel) == sold_0922
     book = _cash_book_days()
-    raw = json.loads((st.PANEL).read_text(encoding="utf-8"))
-    panel = fm.rehydrate_panel(raw)
-    for date, day in book.items():
-        want = list(day.get("sold") or [])
-        assert st.hot4_recipe_sells(date, panel=panel) == want, (date, want)
-    assert book["2026-09-21"]["bought"] == ["FEAM", "TJGC", "LVWR", "SECZ"]
-    assert book["2026-09-22"]["sold"] == ["FEAM", "TJGC", "LVWR"]
     assert book["2026-08-18"]["hard_red"] is True
     assert book["2026-08-18"]["bought"] == []
-    emitted = {}
-    for date in ("2026-09-22", "2026-08-18"):
-        hot = next(r for r in st.recipe_strats(date) if r["name"] == st.HOT4_WIRE)
-        emitted[date] = hot
-        got = [s["ticker"] for s in hot["sell"]]
-        assert got == list(book[date]["sold"]), (date, got)
-        assert all(s.get("side") == "long" for s in hot["sell"])
-        assert all(s.get("src") == "list-drop" for s in hot["sell"])
-        st.assert_hot4_wire(date, hot["buy"], sells=hot["sell"], panel=panel)
-    sit = emitted["2026-08-18"]
+    with mock.patch.object(st, "_load_json", return_value=panel):
+        hot = next(r for r in st.recipe_strats("2026-09-22") if r["name"] == st.HOT4_WIRE)
+    got = [s["ticker"] for s in hot["sell"]]
+    assert got == sold_0922
+    assert all(s.get("side") == "long" for s in hot["sell"])
+    assert all(s.get("src") == "list-drop" for s in hot["sell"])
+    st.assert_hot4_wire("2026-09-22", hot["buy"], sells=hot["sell"], panel=panel)
+    sit = next(r for r in st.recipe_strats("2026-08-18") if r["name"] == st.HOT4_WIRE)
     assert sit.get("sit") is True
     assert sit.get("status") == "sit"
     assert [s["ticker"] for s in sit["sell"]] == ["XHG", "STDN", "HTFL"]
@@ -222,12 +262,14 @@ def test_min_hold_blocks_list_drop_and_never_sells_unheld() -> None:
 
 
 def test_gate_refuses_divergent_sells() -> None:
+    panel = _cash_start_panel()
     with_raise = False
     try:
         st.assert_hot4_wire(
             "2026-09-22",
             [{"ticker": t, "side": "long"} for t in CASH_START["2026-09-22"]],
             sells=[{"ticker": t, "side": "long"} for t in ("DELL", "GME", "UMC")],
+            panel=panel,
         )
     except ValueError as exc:
         with_raise = True
@@ -240,6 +282,7 @@ def test_gate_refuses_divergent_sells() -> None:
         "2026-09-22",
         [{"ticker": t, "side": "long"} for t in CASH_START["2026-09-22"]],
         sells=[{"ticker": t, "side": "long"} for t in accepted],
+        panel=panel,
     )
 
 
@@ -256,7 +299,8 @@ def test_clock_b_aisle_cannot_change_hot4_sells() -> None:
             "last_green": True,
         }]
 
-    with mock.patch.object(ms, "aisle_rows", side_effect=widen):
+    with mock.patch.object(st, "_load_json", return_value=_cash_start_panel()), \
+            mock.patch.object(ms, "aisle_rows", side_effect=widen):
         emitted = st.recipe_strats("2026-09-22")
     hot = next(r for r in emitted if r["name"] == st.HOT4_WIRE)
     assert [s["ticker"] for s in hot["sell"]] == ["FEAM", "TJGC", "LVWR"]

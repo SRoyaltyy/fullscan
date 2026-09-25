@@ -1,0 +1,55 @@
+{
+  "date": "2026-09-25",
+  "generated_at": "2026-09-25T05:09:40.388377-04:00",
+  "ok": false,
+  "fails": [
+    {
+      "path": "01_daily/sectors/2026-09-25/basic_materials_predict.md",
+      "reason": "missing"
+    },
+    {
+      "path": "01_daily/sectors/2026-09-25/communication_services_predict.md",
+      "reason": "missing"
+    },
+    {
+      "path": "01_daily/sectors/2026-09-25/consumer_cyclical_predict.md",
+      "reason": "missing"
+    },
+    {
+      "path": "01_daily/sectors/2026-09-25/consumer_defensive_predict.md",
+      "reason": "missing"
+    },
+    {
+      "path": "01_daily/sectors/2026-09-25/energy_predict.md",
+      "reason": "missing"
+    },
+    {
+      "path": "01_daily/sectors/2026-09-25/financial_predict.md",
+      "reason": "missing"
+    },
+    {
+      "path": "01_daily/sectors/2026-09-25/healthcare_predict.md",
+      "reason": "missing"
+    },
+    {
+      "path": "01_daily/sectors/2026-09-25/industrials_predict.md",
+      "reason": "missing"
+    },
+    {
+      "path": "01_daily/sectors/2026-09-25/real_estate_predict.md",
+      "reason": "missing"
+    },
+    {
+      "path": "01_daily/sectors/2026-09-25/technology_predict.md",
+      "reason": "missing"
+    },
+    {
+      "path": "01_daily/sectors/2026-09-25/utilities_predict.md",
+      "reason": "missing"
+    }
+  ],
+  "notes": "Core general/events/news-judge/parse/finviz/map-heat are same-day usable (UP/mild, scan_date 2026-09-25 with 17 new events, live tape). All 11 sector predicts are absent (0/11, below the 8/11 floor); research reused last-night captain cards after a failed morning evidence QC and is noted only.",
+  "prompt_chars": 121403,
+  "reply_chars": 1283,
+  "reviewer": "grok-4.6-text"
+}

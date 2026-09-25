@@ -1,0 +1,267 @@
+{
+  "ticker": "RIG",
+  "analysis_date": "2026-09-25",
+  "current_price": "5.49",
+  "net_signal": "Bullish",
+  "conviction": 30,
+  "catalyst_stack": "From April 3 through August 20, 2026, Transocean stacked major floater awards\u2014about $1 billion of V\u00e5r Energi/Petrobras backlog, a 1,156-day Petrobras Corcovado extension, a $1 billion-plus Equinor package, and a ~$300 million ONGC letter of award\u2014lifting reported backlog toward $6.7 billion. Q2 results on August 5 beat on non-GAAP EPS ($0.03) and revenue ($966 million) with $170 million of net income and $212 million of free cash flow, after a May 4 Q1 print that beat on revenue but missed adjusted EPS at -$0.03 versus $0.07 consensus. The Valaris path is the swing factor: a DOJ second request on May 4 and a mid-August report that compliance was still uncertified were followed on September 21 by a deal-spread squeeze on talk the $5.8 billion all-stock deal clears early with no divestitures. Offsets are the May 22 authority to issue up to 240.8 million additional shares (100 million into treasury) and Barclays cutting its target to $7 from $8 on August 12 while staying Overweight.",
+  "key_assumption": "DOJ clears the Valaris purchase without remedies and the $6.7B-plus backlog converts at current dayrates without a utilization or oil-price shock.",
+  "catalyst_grid": [
+    {
+      "taxonomy": "Contract win/expansion",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 8,
+      "adjusted_weight": 10,
+      "event_ids": [
+        0,
+        1,
+        2,
+        3,
+        8,
+        9,
+        12,
+        15
+      ],
+      "event_date": "2026-06-30",
+      "evidence_excerpt": "Transocean has secured a drilling agreement with Equinor valued at more than $1 billion in contract backlog",
+      "source_urls": [
+        "https://worldoil.com/news/2026/6/30/transocean-lands-seven-year-1-billion-equinor-rig-deal/",
+        "https://www.sec.gov/Archives/edgar/data/1451505/000110465926079622/tm2619480d1_ex99-1.htm"
+      ],
+      "confidence": 94
+    },
+    {
+      "taxonomy": "Earnings beat",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 7,
+      "event_ids": [
+        11
+      ],
+      "event_date": "2026-08-05",
+      "evidence_excerpt": "Transocean Non-GAAP EPS of $0.03 beats by $0.02, revenue of $966M beats by $3.12M",
+      "source_urls": [
+        "https://seekingalpha.com/news/4626856-transocean-non-gaap-eps-of-0_03-beats-by-0_02-revenue-of-966m-beats-by-3_12m",
+        "https://www.bairdmaritime.com/offshore/drilling-production/transocean-reports-170m-q2-profit-as-backlog-reaches-67b"
+      ],
+      "confidence": 93
+    },
+    {
+      "taxonomy": "Regulatory approval",
+      "type": "positive",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 7,
+      "event_ids": [
+        16
+      ],
+      "event_date": "2026-09-21",
+      "evidence_excerpt": "the U.S. Dept. of Justice is expected to clear the deal early with no divestitures",
+      "source_urls": [
+        "https://seekingalpha.com/news/4644928-valaris-transocean-deal-spread-narrows-on-report-doj-to-clear-tranasction-early"
+      ],
+      "confidence": 85
+    },
+    {
+      "taxonomy": "Analyst upgrade/PT increase",
+      "type": "positive",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 6,
+      "event_ids": [
+        6
+      ],
+      "event_date": "2026-05-07",
+      "evidence_excerpt": "Barclays analyst Eddie Kim upgraded Transocean Ltd. (NYSE: RIG) to Overweight from Equal Weight and raised the price target to $8 from $6.",
+      "source_urls": [
+        "https://www.tipranks.com/news/the-fly/transocean-upgraded-to-overweight-from-equal-weight-at-barclays-thefly-news",
+        "https://www.sahmcapital.com/news/content/barclays-upgrades-transocean-to-overweight-raises-price-target-to-8-2026-05-07"
+      ],
+      "confidence": 84
+    },
+    {
+      "taxonomy": "Short squeeze potential",
+      "type": "positive",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 3,
+      "event_ids": [
+        9,
+        11,
+        15,
+        16
+      ],
+      "event_date": "2026-09-25",
+      "evidence_excerpt": "Short float 26.18% and 6.24 days-to-cover, with contract wins, a Q2 beat, and a Valaris clearance report clustering as coverable catalysts.",
+      "source_urls": [
+        "https://seekingalpha.com/news/4626856-transocean-non-gaap-eps-of-0_03-beats-by-0_02-revenue-of-966m-beats-by-3_12m",
+        "https://seekingalpha.com/news/4644928-valaris-transocean-deal-spread-narrows-on-report-doj-to-clear-tranasction-early"
+      ],
+      "confidence": 85
+    },
+    {
+      "taxonomy": "Earnings miss",
+      "type": "negative",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 7,
+      "event_ids": [
+        4
+      ],
+      "event_date": "2026-05-04",
+      "evidence_excerpt": "Q1 2026 adjusted EPS of -$0.03 missed $0.07 consensus; revenue was $1.08 billion (beat) and adjusted EBITDA was $440 million.",
+      "source_urls": [
+        "https://www.marketbeat.com/earnings/reports/2026-5-4-transocean-ltd-stock/",
+        "https://seekingalpha.com/article/4898757-transocean-ltd-rig-q1-2026-earnings-call-transcript"
+      ],
+      "confidence": 90
+    },
+    {
+      "taxonomy": "Dilutive offering",
+      "type": "negative",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 6,
+      "event_ids": [
+        7
+      ],
+      "event_date": "2026-05-22",
+      "evidence_excerpt": "authorizing the board to issue up to 240,801,936 additional shares",
+      "source_urls": [
+        "https://www.tipranks.com/news/company-announcements/transocean-shareholders-approve-major-share-increase-and-governance-changes",
+        "https://www.stocktitan.net/sec-filings/RIG/8-k-transocean-ltd-reports-material-event-70ddbe4d7d29.html"
+      ],
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Adverse litigation/antitrust",
+      "type": "negative",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 6,
+      "event_ids": [
+        5,
+        13
+      ],
+      "event_date": "2026-08-12",
+      "evidence_excerpt": "Transocean hasn't certified compliance with the Dept. of Justice's second request over its planned $5.8 billion purchase of Valaris",
+      "source_urls": [
+        "https://seekingalpha.com/news/4631635-transocean-hasnt-certified-compliance-with-doj-over-valaris-deal---ctfn",
+        "https://seekingalpha.com/article/4898757-transocean-ltd-rig-q1-2026-earnings-call-transcript"
+      ],
+      "confidence": 86
+    },
+    {
+      "taxonomy": "Analyst downgrade/PT cut",
+      "type": "negative",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 5,
+      "event_ids": [
+        14
+      ],
+      "event_date": "2026-08-12",
+      "evidence_excerpt": "Barclays maintained Overweight but lowered PT from $8 to $7.",
+      "source_urls": [
+        "https://www.pricetargets.com/NYSE/RIG/",
+        "https://www.benzinga.com/quote/RIG/price-targets"
+      ],
+      "confidence": 72
+    },
+    {
+      "taxonomy": "Contract win/expansion",
+      "type": "positive",
+      "event_date": "2026-09-17",
+      "evidence_excerpt": "Transocean has been awarded a two-well contract by an undisclosed operator for the Deepwater Conqueror drillship in Equatorial Guinea.",
+      "source_urls": [
+        "https://www.offshore-energy.biz/transoceans-2016-built-drillship-wins-multimillion-dollar-job-in-equatorial-guinea/",
+        "https://www.oedigital.com/news/543080-transocean-drillship-gets-80m-equatorial-guinea-job"
+      ],
+      "status": "HIT",
+      "base_weight": 8,
+      "adjusted_weight": 10,
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Regulatory approval",
+      "type": "positive",
+      "event_date": "2026-06-29",
+      "evidence_excerpt": "Offshore oil drillers Transocean and Valaris received approval for their deal from the Committee on Foreign Investment in the United States on June 29",
+      "source_urls": [
+        "https://www.mlex.com/mlex/articles/2496100/transocean-valaris-received-cfius-approval-entered-timing-agreement-with-us-doj"
+      ],
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 7,
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Analyst upgrade/PT increase",
+      "type": "positive",
+      "event_date": "2026-08-07",
+      "evidence_excerpt": "8/7/2026 Fearnley Fonds Upgrade Hold \u279d Strong-Buy",
+      "source_urls": [
+        "https://www.pricetargets.com/NYSE/RIG/"
+      ],
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 6,
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Adverse litigation/antitrust",
+      "type": "negative",
+      "event_date": "2026-05-04",
+      "evidence_excerpt": "Transocean and Valaris received a request for additional information from the US Department of Justice on May 4",
+      "source_urls": [
+        "https://www.mlex.com/mlex/articles/2473552/transocean-valaris-received-second-request-from-us-doj-on-may-4"
+      ],
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 6,
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Insider selling",
+      "type": "negative",
+      "event_date": "2026-05-21",
+      "evidence_excerpt": "The most recent sale was by Brady Long who sold 81,741 shares on May 21, 2026.",
+      "source_urls": [
+        "https://altindex.com/ticker/rig/insider-transactions"
+      ],
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 5,
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Analyst downgrade/PT cut",
+      "type": "negative",
+      "event_date": "2026-07-08",
+      "evidence_excerpt": "7/8/2026 Susquehanna Lower Target Positive \u279d Positive $8.00 \u279d $7.00",
+      "source_urls": [
+        "https://www.pricetargets.com/NYSE/RIG/"
+      ],
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 5,
+      "confidence": 80
+    }
+  ],
+  "grok_verdict": "Bullish",
+  "search_backend": "grok_native",
+  "generated_at": "2026-09-25",
+  "cutoff_date": null,
+  "role": "override_captain"
+}

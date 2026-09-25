@@ -13,24 +13,24 @@ The published cash books fill at the official 09:30 open. That is the **ideal / 
 
 Grade is **1 share, Futubull fees, open → same-day close**. After-fee P&L is always shown versus the ideal-open baseline. A fat ideal Book% that dies under slip is still a KILL for the realistic column. North star ~2%/day after fees is context — this sim is meant to stress fantasy paper fills that assumed the signal-day close.
 
-Window `2026-08-13 → 2026-09-24` (30 sessions). KEEP bar: **≥30 filled fires** and **>55% after-fee hit rate**.
+Window `2026-08-13 → 2026-09-25` (31 sessions). KEEP bar: **≥30 filled fires** and **>55% after-fee hit rate**.
 
 ## KEEP / KILL vs ideal open
 
 | Sleeve | Reality | Intended | Filled | Miss | After-fee win | After-fee $ | vs ideal $ | Verdict |
 |---|---|---:|---:|---:|---:|---:|---:|---|
-| `combo_sh_macd_5050_shared` | ideal | 184 | 141 | 43 | 31.9% | -93.56 | — | **KILL** |
-| `combo_sh_macd_5050_shared` | market | 184 | 141 | 43 | 15.6% | -154.14 | $-60.58 | **KILL** |
-| `combo_sh_macd_5050_shared` | limit_open | 184 | 131 | 53 | 28.2% | -100.17 | $-6.61 | **KILL** |
-| `combo_sh_macd_5050_shared` | limit_prior | 184 | 117 | 67 | 30.8% | -71.17 | $+22.39 | **KILL** |
-| `union_hot_n4_h1` | ideal | 120 | 88 | 32 | 33.0% | -37.23 | — | **KILL** |
-| `union_hot_n4_h1` | market | 120 | 88 | 32 | 17.1% | -79.40 | $-42.17 | **KILL** |
-| `union_hot_n4_h1` | limit_open | 120 | 82 | 38 | 28.1% | -44.02 | $-6.79 | **KILL** |
-| `union_hot_n4_h1` | limit_prior | 120 | 74 | 46 | 32.4% | -29.85 | $+7.38 | **KILL** |
-| `flatten_would` | ideal | 185 | 140 | 45 | 22.1% | -122.07 | — | **KILL** |
-| `flatten_would` | market | 185 | 140 | 45 | 10.7% | -191.19 | $-69.12 | **KILL** |
-| `flatten_would` | limit_open | 185 | 134 | 51 | 21.6% | -125.91 | $-3.84 | **KILL** |
-| `flatten_would` | limit_prior | 185 | 102 | 83 | 22.6% | -44.33 | $+77.74 | **KILL** |
+| `combo_sh_macd_5050_shared` | ideal | 191 | 141 | 50 | 31.9% | -93.56 | — | **KILL** |
+| `combo_sh_macd_5050_shared` | market | 191 | 141 | 50 | 15.6% | -154.14 | $-60.58 | **KILL** |
+| `combo_sh_macd_5050_shared` | limit_open | 191 | 131 | 60 | 28.2% | -100.17 | $-6.61 | **KILL** |
+| `combo_sh_macd_5050_shared` | limit_prior | 191 | 117 | 74 | 30.8% | -71.17 | $+22.39 | **KILL** |
+| `union_hot_n4_h1` | ideal | 124 | 88 | 36 | 33.0% | -37.23 | — | **KILL** |
+| `union_hot_n4_h1` | market | 124 | 88 | 36 | 17.1% | -79.40 | $-42.17 | **KILL** |
+| `union_hot_n4_h1` | limit_open | 124 | 82 | 42 | 28.1% | -44.02 | $-6.79 | **KILL** |
+| `union_hot_n4_h1` | limit_prior | 124 | 74 | 50 | 32.4% | -29.85 | $+7.38 | **KILL** |
+| `flatten_would` | ideal | 190 | 140 | 50 | 22.1% | -122.07 | — | **KILL** |
+| `flatten_would` | market | 190 | 140 | 50 | 10.7% | -191.19 | $-69.12 | **KILL** |
+| `flatten_would` | limit_open | 190 | 134 | 56 | 21.6% | -125.91 | $-3.84 | **KILL** |
+| `flatten_would` | limit_prior | 190 | 102 | 88 | 22.6% | -44.33 | $+77.74 | **KILL** |
 
 ### Why, in plain language
 

@@ -36,6 +36,52 @@ def test_dispatch_for_upstream_input_but_not_own_publication():
         assert dispatch.call_count == 1
 
 
+def test_ready_false_when_hashed_peer_rs_never_landed_on_main():
+    proof = {
+        'ready': True,
+        'fingerprint': 'abc',
+        'inputs': {'data/peers/2026-09-25_peer_rs.csv': 'deadbeef'},
+        'blockers': [],
+    }
+    with patch.object(dr, 'blob_sha256_on_main', return_value=False):
+        gated = dr.apply_main_gate(dict(proof))
+    assert gated['ready'] is False
+    assert gated['main_missing'] == ['data/peers/2026-09-25_peer_rs.csv']
+    assert any(b['reason'] == 'not_on_main' for b in gated['blockers'])
+
+    from . import strategy_tickets as st
+
+    def _proof():
+        return {
+            'ready': True,
+            'fingerprint': 'abc',
+            'inputs': {'data/peers/2026-09-25_peer_rs.csv': 'deadbeef'},
+            'blockers': [],
+        }
+
+    with patch.object(dr, 'evaluate', side_effect=lambda _date: _proof()), \
+         patch.object(dr, 'blob_sha256_on_main', return_value=False), \
+         patch.object(st, 'stock_book_strats', return_value=[]), \
+         patch.object(st, 'excel_strats', return_value=[]), \
+         patch.object(st, 'flatten_strat', return_value={'name':'flat','family':'flatten'}), \
+         patch.object(st, 'recipe_strats', return_value=[]), \
+         patch.object(st, 'stamp_live_quotes', side_effect=lambda p, d: p), \
+         patch.object(st, 'attach_hard_red_research', side_effect=lambda p, d: p):
+        payload = st.build('2026-09-25')
+    assert payload['decision_readiness']['ready'] is False
+    assert 'data/peers/2026-09-25_peer_rs.csv' in payload['decision_readiness']['main_missing']
+
+    matched = dict(proof)
+    with patch.object(dr, 'blob_sha256_on_main', return_value='deadbeef'):
+        assert dr.apply_main_gate(matched)['ready'] is True
+
+
+def test_peer_rs_is_a_land_path():
+    from . import land_file
+    paths = land_file.step_paths('2026-09-25', 'peer_rs')
+    assert any(p.name == '2026-09-25_peer_rs.csv' for p in paths)
+
+
 def test_input_change_during_build_invalidates_decision():
     from . import strategy_tickets as st
     before = {'ready': True, 'fingerprint': 'before'}

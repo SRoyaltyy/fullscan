@@ -51,6 +51,8 @@ USABLE_SEARCH_BACKENDS = {
     "deepseek_fallback",
     "routed_search",
 }
+# Same bar as already_good(). Fewer usable dossiers is not a clean morning.
+CATALYST_MIN_OK = 2
 
 
 def usable_dossier(row: dict) -> bool:
@@ -222,6 +224,33 @@ def select_targets(date: str, max_n: int = DEFAULT_MAX,
     return picked
 
 
+def dossier_status(n_ok: int, n_targets: int) -> str:
+    """OK only at CATALYST_MIN_OK. 0 usable is FAIL. A thin book is DEGRADED."""
+    if n_targets <= 0:
+        return "OK"
+    if n_ok >= CATALYST_MIN_OK:
+        return "OK"
+    if n_ok <= 0:
+        return "FAIL"
+    return "DEGRADED"
+
+
+def exit_code(payload: dict) -> int:
+    """3 = degraded, 4 = fail. Dry-select and an empty target list stay 0."""
+    if payload.get("dry_select"):
+        return 0
+    n_targets = int(payload.get("n_targets") or 0)
+    if n_targets <= 0:
+        return 0
+    status = str(payload.get("status") or dossier_status(
+        int(payload.get("n_ok") or 0), n_targets))
+    if status == "FAIL":
+        return 4
+    if status == "DEGRADED":
+        return 3
+    return 0
+
+
 def already_good(date: str) -> bool:
     js = OUT_DIR / f"{date}_dossiers.json"
     if not js.exists():
@@ -229,7 +258,7 @@ def already_good(date: str) -> bool:
     data = _load_json(js)
     rows = data.get("dossiers") or []
     ok = [r for r in rows if usable_dossier(r)]
-    return len(ok) >= 2
+    return len(ok) >= CATALYST_MIN_OK
 
 
 def load_dossiers(date: str) -> list[dict]:
@@ -360,7 +389,15 @@ def render(payload: dict) -> str:
                 f"  - {h.get('type')} {h.get('taxonomy')} "
                 f"{h.get('event_date')}: {str(h.get('headline') or '')[:90]}"
             )
-    lines += ["", "CATALYST_DAILY_OK", ""]
+    n_ok = int(payload.get("n_ok") or 0)
+    n_targets = int(payload.get("n_targets") or 0)
+    status = str(payload.get("status") or dossier_status(n_ok, n_targets))
+    if status == "OK":
+        lines += ["", "CATALYST_DAILY_OK", ""]
+    elif status == "DEGRADED":
+        lines += ["", f"CATALYST_DAILY_DEGRADED {n_ok}/{n_targets}", ""]
+    else:
+        lines += ["", f"CATALYST_DAILY_FAIL {n_ok}/{n_targets}", ""]
     return "\n".join(lines)
 
 
@@ -554,17 +591,20 @@ def run(date: str | None = None, max_n: int = DEFAULT_MAX, force: bool = False,
             "max_n": max_n, "routing": "Grok → DeepSeek",
             "grok": True, "deepseek_fallback": not config.grok_only(),
             "gemini": False, "n_targets": len(targets),
-            "n_ok": 0, "targets": targets, "dossiers": [], "dry_select": True,
+            "n_ok": 0, "status": dossier_status(0, len(targets)),
+            "targets": targets, "dossiers": [], "dry_select": True,
         }
         write_payload(payload)
         return payload
     def _payload(rows: list[dict]) -> dict:
+        n_ok_rows = sum(1 for d in rows if usable_dossier(d))
         return {
             "date": date, "generated_at": datetime.now(ET).isoformat(),
             "max_n": max_n, "routing": "Grok → DeepSeek",
             "grok": True, "deepseek_fallback": not config.grok_only(),
             "gemini": False, "n_targets": len(targets),
-            "n_ok": sum(1 for d in rows if usable_dossier(d)),
+            "n_ok": n_ok_rows,
+            "status": dossier_status(n_ok_rows, len(targets)),
             "targets": targets, "dossiers": list(rows),
         }
 
@@ -584,6 +624,11 @@ def run(date: str | None = None, max_n: int = DEFAULT_MAX, force: bool = False,
     apply_to_actions(date, dossiers)
     if n_ok == 0 and targets:
         print("[catalyst_daily] WARN: zero usable dossiers — actions unchanged")
+    code = exit_code(payload)
+    if code:
+        print(f"[catalyst_daily] status={payload.get('status')} "
+              f"{payload.get('n_ok')}/{payload.get('n_targets')} exit {code}")
+        raise SystemExit(code)
     return payload
 
 

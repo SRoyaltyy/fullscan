@@ -1,0 +1,339 @@
+{
+  "date": "2026-09-25",
+  "generated_at": "2026-09-25T06:09:59.108939-04:00",
+  "all_ok": false,
+  "qc_all_ok": true,
+  "book_ok": true,
+  "book_ok_restamp": "2026-09-25 08:15 ET manual narrow restamp (no LLM rerun): stock book exists on main (data/stock_book/2026-09-25_stock_book.json + green.json, landed 39b0bf9ac4; skip_if_good stock_book_all SKIP=pass in run 36126554738). Only book_ok changed; all_ok/grok_ok untouched.",
+  "grok_ok": false,
+  "grok_fails": [
+    {
+      "path": "01_daily/sectors/2026-09-25/basic_materials_predict.md",
+      "reason": "missing"
+    },
+    {
+      "path": "01_daily/sectors/2026-09-25/communication_services_predict.md",
+      "reason": "missing"
+    },
+    {
+      "path": "01_daily/sectors/2026-09-25/consumer_cyclical_predict.md",
+      "reason": "missing"
+    },
+    {
+      "path": "01_daily/sectors/2026-09-25/consumer_defensive_predict.md",
+      "reason": "missing"
+    },
+    {
+      "path": "01_daily/sectors/2026-09-25/energy_predict.md",
+      "reason": "missing"
+    },
+    {
+      "path": "01_daily/sectors/2026-09-25/financial_predict.md",
+      "reason": "missing"
+    },
+    {
+      "path": "01_daily/sectors/2026-09-25/healthcare_predict.md",
+      "reason": "missing"
+    },
+    {
+      "path": "01_daily/sectors/2026-09-25/industrials_predict.md",
+      "reason": "missing"
+    },
+    {
+      "path": "01_daily/sectors/2026-09-25/real_estate_predict.md",
+      "reason": "missing"
+    },
+    {
+      "path": "01_daily/sectors/2026-09-25/technology_predict.md",
+      "reason": "missing"
+    },
+    {
+      "path": "01_daily/sectors/2026-09-25/utilities_predict.md",
+      "reason": "missing"
+    }
+  ],
+  "missing_required": [],
+  "attempts": [
+    {
+      "key": "weather",
+      "title": "Weather / regime",
+      "returncode": 0
+    },
+    {
+      "key": "news_parse",
+      "title": "News parse",
+      "returncode": 0
+    },
+    {
+      "key": "events",
+      "title": "Event scanner (primary)",
+      "returncode": 0
+    },
+    {
+      "key": "events_catcher",
+      "title": "Event catcher (gap hunt, no carry)",
+      "returncode": 0
+    },
+    {
+      "key": "news_actions",
+      "title": "News actions",
+      "returncode": 0
+    },
+    {
+      "key": "news_judge",
+      "title": "News judge",
+      "returncode": 0
+    },
+    {
+      "key": "general_predict",
+      "title": "General market predict",
+      "returncode": 0
+    },
+    {
+      "key": "sector_predict",
+      "title": "Per-sector predict (all 11)",
+      "returncode": 1
+    },
+    {
+      "key": "map_heat_research",
+      "title": "Map heat morning delta refresh",
+      "returncode": 0
+    },
+    {
+      "key": "catalyst",
+      "title": "Catalyst dossiers (after book)",
+      "returncode": 0
+    }
+  ],
+  "github_runs": [
+    {
+      "workflow": "preopen_all.yml",
+      "n_today": 1,
+      "latest": {
+        "id": 36112063800,
+        "status": "in_progress",
+        "conclusion": null,
+        "event": "workflow_dispatch",
+        "html_url": "https://github.com/SRoyaltyy/fullscan/actions/runs/36112063800"
+      }
+    },
+    {
+      "workflow": "finviz_preopen_scrape.yml",
+      "n_today": 1,
+      "latest": {
+        "id": 36112053618,
+        "status": "completed",
+        "conclusion": "success",
+        "event": "workflow_dispatch",
+        "html_url": "https://github.com/SRoyaltyy/fullscan/actions/runs/36112053618"
+      }
+    },
+    {
+      "workflow": "finviz_digest.yml",
+      "n_today": 0,
+      "latest": null
+    },
+    {
+      "workflow": "events_daily.yml",
+      "n_today": 0,
+      "latest": null
+    },
+    {
+      "workflow": "news_parse.yml",
+      "n_today": 0,
+      "latest": null
+    },
+    {
+      "workflow": "news_judge.yml",
+      "n_today": 0,
+      "latest": null
+    },
+    {
+      "workflow": "news_actions.yml",
+      "n_today": 0,
+      "latest": null
+    },
+    {
+      "workflow": "catalyst_daily.yml",
+      "n_today": 0,
+      "latest": null
+    },
+    {
+      "workflow": "daily_pipeline.yml",
+      "n_today": 0,
+      "latest": null
+    },
+    {
+      "workflow": "sector_daily.yml",
+      "n_today": 0,
+      "latest": null
+    },
+    {
+      "workflow": "map_heat_postclose.yml",
+      "n_today": 0,
+      "latest": null
+    }
+  ],
+  "qc": {
+    "sector_n_ok": 11,
+    "sector_n_total": 11,
+    "items": [
+      {
+        "kind": "general_predict",
+        "ok": true,
+        "reason": "",
+        "path": "01_daily/general/2026-09-25_predict.md",
+        "size": 16284
+      },
+      {
+        "kind": "events",
+        "ok": true,
+        "reason": "",
+        "path": "01_daily/events/2026-09-25_events.json",
+        "size": 33560
+      },
+      {
+        "kind": "news_judge",
+        "ok": true,
+        "reason": "",
+        "path": "01_daily/news/2026-09-25_judge.md",
+        "size": 11536
+      },
+      {
+        "kind": "news_parse",
+        "ok": true,
+        "reason": "",
+        "path": "01_daily/news/2026-09-25_parsed.json",
+        "size": 378491
+      },
+      {
+        "kind": "news_actions",
+        "ok": true,
+        "reason": "",
+        "path": "01_daily/news/2026-09-25_actions.json",
+        "size": 41126
+      },
+      {
+        "kind": "finviz_digest",
+        "ok": true,
+        "reason": "",
+        "path": "01_daily/news/2026-09-25_finviz_digest.json",
+        "size": 97598
+      },
+      {
+        "kind": "finviz_market_digest",
+        "ok": true,
+        "reason": "",
+        "path": "01_daily/news/2026-09-25_finviz_market_digest.json",
+        "size": 3904
+      },
+      {
+        "kind": "finviz_market_digest",
+        "ok": false,
+        "reason": "missing",
+        "path": "01_daily/news/2026-09-25_finviz_market_digest_close.json",
+        "size": 0
+      },
+      {
+        "kind": "map_heat",
+        "ok": true,
+        "reason": "",
+        "path": "01_daily/map_heat/2026-09-25_map_heat.json",
+        "size": 269682
+      },
+      {
+        "kind": "map_heat_baseline",
+        "ok": true,
+        "reason": "",
+        "path": "01_daily/map_heat/2026-09-25_research_baseline.json",
+        "size": 382752
+      },
+      {
+        "kind": "map_heat_research",
+        "ok": true,
+        "reason": "",
+        "path": "01_daily/map_heat/2026-09-25_research.md",
+        "size": 44670
+      },
+      {
+        "kind": "sector_predict",
+        "ok": true,
+        "reason": "",
+        "path": "01_daily/sectors/2026-09-25/basic_materials_predict.md",
+        "size": 17356
+      },
+      {
+        "kind": "sector_predict",
+        "ok": true,
+        "reason": "",
+        "path": "01_daily/sectors/2026-09-25/communication_services_predict.md",
+        "size": 21174
+      },
+      {
+        "kind": "sector_predict",
+        "ok": true,
+        "reason": "",
+        "path": "01_daily/sectors/2026-09-25/consumer_cyclical_predict.md",
+        "size": 23876
+      },
+      {
+        "kind": "sector_predict",
+        "ok": true,
+        "reason": "",
+        "path": "01_daily/sectors/2026-09-25/consumer_defensive_predict.md",
+        "size": 22049
+      },
+      {
+        "kind": "sector_predict",
+        "ok": true,
+        "reason": "",
+        "path": "01_daily/sectors/2026-09-25/energy_predict.md",
+        "size": 16030
+      },
+      {
+        "kind": "sector_predict",
+        "ok": true,
+        "reason": "",
+        "path": "01_daily/sectors/2026-09-25/financial_predict.md",
+        "size": 18500
+      },
+      {
+        "kind": "sector_predict",
+        "ok": true,
+        "reason": "",
+        "path": "01_daily/sectors/2026-09-25/healthcare_predict.md",
+        "size": 14842
+      },
+      {
+        "kind": "sector_predict",
+        "ok": true,
+        "reason": "",
+        "path": "01_daily/sectors/2026-09-25/industrials_predict.md",
+        "size": 20348
+      },
+      {
+        "kind": "sector_predict",
+        "ok": true,
+        "reason": "",
+        "path": "01_daily/sectors/2026-09-25/real_estate_predict.md",
+        "size": 20816
+      },
+      {
+        "kind": "sector_predict",
+        "ok": true,
+        "reason": "",
+        "path": "01_daily/sectors/2026-09-25/technology_predict.md",
+        "size": 15104
+      },
+      {
+        "kind": "sector_predict",
+        "ok": true,
+        "reason": "",
+        "path": "01_daily/sectors/2026-09-25/utilities_predict.md",
+        "size": 16305
+      }
+    ]
+  },
+  "news_mode": "on",
+  "news_mode_reason": ""
+}

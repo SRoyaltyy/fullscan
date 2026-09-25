@@ -103,6 +103,87 @@ def apply_llm_backend(name: str | None = None) -> str:
     return chosen
 
 
+# DeepSeek may write a sector essay only when SuperGrok remaining is known
+# and at least this full. Unknown remaining is not a license to fall back.
+SUPERGROK_FALLBACK_MIN_PCT = 80.0
+
+
+def _as_remaining_pct(value: object) -> float | None:
+    try:
+        num = float(value)  # type: ignore[arg-type]
+    except (TypeError, ValueError):
+        return None
+    if 1.0 < num <= 100.0:
+        return num
+    if 0.0 <= num <= 1.0:
+        return num * 100.0
+    return None
+
+
+def _walk_remaining(node: object, depth: int = 0) -> float | None:
+    if depth > 4:
+        return None
+    if isinstance(node, dict):
+        for key, val in node.items():
+            name = str(key).lower()
+            if any(tok in name for tok in ("remaining", "percent", "pct", "supergrok")):
+                pct = _as_remaining_pct(val)
+                if pct is not None:
+                    return pct
+            found = _walk_remaining(val, depth + 1)
+            if found is not None:
+                return found
+    elif isinstance(node, list) and depth < 3:
+        for item in node[:8]:
+            found = _walk_remaining(item, depth + 1)
+            if found is not None:
+                return found
+    return None
+
+
+def _remaining_from_gateway(url: str) -> tuple[float | None, str]:
+    """OpenClaw usage/limits. None means the quota is unknown."""
+    import urllib.request
+    headers = {"Accept": "application/json"}
+    if OPENCLAW_TOKEN:
+        headers["Authorization"] = f"Bearer {OPENCLAW_TOKEN}"
+    for path in ("/v1/usage", "/v1/limits", "/usage", "/api/usage"):
+        req = urllib.request.Request(url + path, headers=headers)
+        try:
+            with urllib.request.urlopen(req, timeout=5) as resp:
+                raw = resp.read().decode("utf-8", "replace")
+            data = json.loads(raw) if raw else {}
+        except Exception:
+            continue
+        pct = _walk_remaining(data)
+        if pct is not None:
+            return pct, "gateway"
+    return None, "unknown"
+
+
+def supergrok_remaining() -> tuple[float | None, str]:
+    """(percent remaining, source). None means unknown — do not assume headroom.
+
+    ``SUPERGROK_REMAINING_PCT`` wins. Otherwise the OpenClaw gateway
+    usage/limits endpoint. A missing endpoint is unknown, not zero and not 100.
+    """
+    raw = (os.environ.get("SUPERGROK_REMAINING_PCT") or "").strip()
+    if raw:
+        try:
+            return float(raw), "env"
+        except ValueError:
+            return None, "env"
+    url = (OPENCLAW_GATEWAY_URL or "").rstrip("/")
+    if not url:
+        return None, "unknown"
+    cached = getattr(supergrok_remaining, "_gateway", None)
+    if isinstance(cached, tuple) and len(cached) == 2:
+        return cached  # type: ignore[return-value]
+    found = _remaining_from_gateway(url)
+    setattr(supergrok_remaining, "_gateway", found)
+    return found
+
+
 def grok_only() -> bool:
     """True when DeepSeek must not run analysis.
 

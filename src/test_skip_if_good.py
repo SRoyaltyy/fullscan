@@ -475,6 +475,167 @@ def test_thin_pile_fallback_is_legit_only_when_graded_and_core_fired() -> None:
         assert skip_if_good.green_pile_fallback_is_legit(green) is False
 
 
+def test_preopen_pass_prior_not_forced_is_noop() -> None:
+    date = "2026-09-25"
+    with tempfile.TemporaryDirectory() as tmp:
+        root = Path(tmp)
+        daily = root / "01_daily"
+        daily.mkdir()
+        (daily / f"{date}_preopen_status.json").write_text(json.dumps({
+            "generated_at": "2026-09-25T09:40:00-04:00",
+            "run_id": "111",
+            "runner": "ecs",
+        }), encoding="utf-8")
+        with mock.patch.object(skip_if_good, "ROOT", root), \
+                mock.patch.object(skip_if_good, "_git_show_main", return_value=None), \
+                mock.patch.object(skip_if_good, "other_preopen_running", return_value=None), \
+                mock.patch.dict(os.environ, {"GITHUB_RUN_ID": "222"}, clear=False):
+            assert skip_if_good.check_preopen_pass(date) is True
+            assert skip_if_good.check_preopen_pass(date, force=True) is False
+
+
+def test_stock_book_requires_todays_peer_rs() -> None:
+    """Yesterday's peer_rs.csv must not let today's book skip."""
+    date = "2026-09-25"
+    with tempfile.TemporaryDirectory() as tmp:
+        root = Path(tmp)
+        book = root / "data" / "stock_book"
+        book.mkdir(parents=True)
+        (book / f"{date}_stock_book.json").write_text("x" * 300, encoding="utf-8")
+        (book / f"{date}_green.json").write_text("x" * 80, encoding="utf-8")
+        join = root / "data" / "join"
+        join.mkdir(parents=True)
+        (join / f"{date}_ranked.csv").write_text("x" * 6_000, encoding="utf-8")
+        peers = root / "data" / "peers"
+        peers.mkdir(parents=True)
+        (peers / "2026-09-24_peer_rs.csv").write_text("x" * 6_000, encoding="utf-8")
+        with mock.patch.object(skip_if_good, "ROOT", root), \
+                mock.patch.object(skip_if_good, "book_files_are_degraded", return_value=False), \
+                mock.patch.object(skip_if_good, "book_missing_same_day_essays", return_value=False), \
+                mock.patch.object(skip_if_good, "book_1d_has_dead_relvol", return_value=False), \
+                mock.patch.object(skip_if_good, "book_1d_breaks_all_green", return_value=False), \
+                mock.patch.object(skip_if_good, "check_label_weather", return_value=True), \
+                mock.patch.object(skip_if_good, "check_ab_checklist", return_value=True):
+            assert skip_if_good.check_stock_book_all(date) is False
+            thin = peers / f"{date}_peer_rs.csv"
+            thin.write_text("Ticker\n", encoding="utf-8")
+            assert skip_if_good.check_stock_book_all(date) is False
+            thin.write_text("x" * 6_000, encoding="utf-8")
+            assert skip_if_good.check_stock_book_all(date) is True
+
+
+def test_past_write_refuses_older_peer_and_ab_files() -> None:
+    """A later run must not replace an earlier peer RS or AB checklist."""
+    from src.past_write import refuse_past_overwrite
+    run_date = "2026-09-25"
+    with tempfile.TemporaryDirectory() as tmp:
+        root = Path(tmp)
+        peer = root / "data" / "peers" / "2026-09-24_peer_rs.csv"
+        peer.parent.mkdir(parents=True)
+        peer.write_text("KEEP-PEER", encoding="utf-8")
+        ab_dir = root / "data" / "ab_checklist"
+        ab_dir.mkdir()
+        kept = {}
+        for name in (
+            "2026-09-24_ab_checklist.csv",
+            "2026-09-24_ab_checklist_enriched.csv",
+            "2026-09-24_ab_checklist.md",
+            "2026-09-24_ab_checklist.json",
+        ):
+            p = ab_dir / name
+            p.write_text("KEEP-" + name, encoding="utf-8")
+            kept[p] = p.read_text(encoding="utf-8")
+        assert refuse_past_overwrite(peer, run_date) is True
+        assert peer.read_text(encoding="utf-8") == "KEEP-PEER"
+        for p, text in kept.items():
+            assert refuse_past_overwrite(p, run_date) is True
+            assert p.read_text(encoding="utf-8") == text
+        same = root / "data" / "peers" / "2026-09-25_peer_rs.csv"
+        same.write_text("TODAY", encoding="utf-8")
+        assert refuse_past_overwrite(same, run_date) is False
+        assert refuse_past_overwrite(ab_dir / "2026-09-25_ab_checklist.csv", run_date) is False
+        other = root / "data" / "exports" / "finviz_2026-09-24.csv"
+        other.parent.mkdir()
+        other.write_text("EXPORT", encoding="utf-8")
+        assert refuse_past_overwrite(other, run_date) is False
+        # Missing past file is still refused — do not create it under the old date.
+        missing = root / "data" / "peers" / "2026-09-23_peer_rs.csv"
+        assert refuse_past_overwrite(missing, run_date) is True
+        assert not missing.exists()
+
+
+def test_peer_rs_run_does_not_overwrite_earlier_file() -> None:
+    from src import peer_rs
+    run_date = "2026-09-25"
+    with tempfile.TemporaryDirectory() as tmp:
+        root = Path(tmp)
+        export = root / "finviz_2026-09-24.csv"
+        export.write_text(
+            "Ticker,Performance (Week),Performance (Month),Performance (Quarter),Change\n"
+            "AAA,1%,2%,3%,0.5%\nBBB,0%,0%,0%,0%\n",
+            encoding="utf-8",
+        )
+        peers = root / "data" / "peers"
+        peers.mkdir(parents=True)
+        kept = peers / "2026-09-24_peer_rs.csv"
+        kept.write_text("KEEP-PEER", encoding="utf-8")
+        daily = root / "01_daily"
+        daily.mkdir()
+        with mock.patch.object(peer_rs, "OUT_DIR", peers), \
+                mock.patch.object(peer_rs, "DAILY", daily), \
+                mock.patch.object(peer_rs, "_load_correlations", return_value={"AAA": ["BBB"]}), \
+                mock.patch.object(peer_rs, "_resolve_export", return_value=("2026-09-24", export)):
+            try:
+                peer_rs.run(run_date)
+            except SystemExit as exc:
+                text = str(exc)
+            else:
+                raise AssertionError("past-date peer_rs write must be refused")
+        assert "REFUSE" in text
+        assert kept.read_text(encoding="utf-8") == "KEEP-PEER"
+        assert not (daily / "2026-09-24_peer_rs.md").exists()
+
+
+def test_peer_rs_refuses_older_export_relabel() -> None:
+    from src import peer_rs
+    date = "2026-09-25"
+    with tempfile.TemporaryDirectory() as tmp:
+        exports = Path(tmp)
+        older = exports / "finviz_2026-09-24.csv"
+        older.write_text("Ticker\nAAA\n", encoding="utf-8")
+        with mock.patch.object(peer_rs, "EXPORT_DIR", exports):
+            try:
+                peer_rs._resolve_export(date)
+            except SystemExit as exc:
+                text = str(exc)
+            else:
+                raise AssertionError("older export must not be relabeled as today")
+            assert "FAIL" in text
+            assert date in text
+            assert "relabel" in text
+            assert "finviz_2026-09-24.csv" in text
+            exact = exports / f"finviz_{date}.csv"
+            exact.write_text("Ticker\nBBB\n", encoding="utf-8")
+            got_date, got_path = peer_rs._resolve_export(date)
+            assert got_date == date
+            assert got_path == exact
+            labeled, path = peer_rs._resolve_export(None)
+            assert labeled == date
+            assert path == exact
+
+
+def test_preopen_pass_no_prior_runs() -> None:
+    date = "2026-09-25"
+    with tempfile.TemporaryDirectory() as tmp:
+        root = Path(tmp)
+        (root / "01_daily").mkdir()
+        with mock.patch.object(skip_if_good, "ROOT", root), \
+                mock.patch.object(skip_if_good, "_git_show_main", return_value=None), \
+                mock.patch.object(skip_if_good, "other_preopen_running", return_value=None), \
+                mock.patch.dict(os.environ, {"GITHUB_RUN_ID": "222"}, clear=False):
+            assert skip_if_good.check_preopen_pass(date) is False
+
+
 if __name__ == "__main__":
     test_thin_pile_fallback_is_legit_only_when_graded_and_core_fired()
     test_skip_constants_match_pile_and_avoid_pandas()
@@ -501,4 +662,10 @@ if __name__ == "__main__":
     test_sidecar_running_false_without_github_env()
     test_postclose_all_cli_yields_to_sidecar_only_for_all_workflow()
     test_degraded_book_is_not_good()
+    test_preopen_pass_prior_not_forced_is_noop()
+    test_stock_book_requires_todays_peer_rs()
+    test_past_write_refuses_older_peer_and_ab_files()
+    test_peer_rs_run_does_not_overwrite_earlier_file()
+    test_peer_rs_refuses_older_export_relabel()
+    test_preopen_pass_no_prior_runs()
     print("ok")

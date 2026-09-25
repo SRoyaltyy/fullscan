@@ -2512,21 +2512,29 @@ def append_land(from_date: str, target: str, *, write: bool = False,
     panel = apply_frozen_snapshots(fm.rehydrate_panel(panel or {}))
     have = set(landed_dates(panel))
     # Closed sessions strictly after the published board, plus restatements.
+    # A date already listed as a pending start is not frozen until its
+    # snapshot exists. 2026-09-25 can sit on the dates list before the
+    # 16:25 ET lock.
     published_dates = set(payload.get("dates") or [])
+    snaps = set((load_manifest().get("snapshots") or {}))
     want = fm.panel_lookback_calendar(from_date, target)
     new_dates = [
         d for d in want
         if d >= from_date and d <= target and (d not in have or d in restate_set)
         and (d not in published_dates or d in restate_set)
     ]
-    # A date on the panel but not yet frozen still gets a snapshot when it
-    # is the new session. Dates already published stay reconstructed.
-    if target not in published_dates and target not in new_dates and target >= from_date:
-        if target <= (want[-1] if want else target):
-            new_dates.append(target)
+    # A pending start is already on the dates list and has no snapshot.
+    # The 16:25 ET land still freezes that session once it has closed.
+    if (
+        target >= from_date
+        and target not in snaps
+        and target not in new_dates
+        and (not want or target <= want[-1])
+    ):
+        new_dates.append(target)
     new_dates = sorted(set(new_dates))
-    if not new_dates and target in published_dates and target not in restate_set:
-        print(f"[factor-mine] freeze: {target} already published — no rewrite",
+    if not new_dates and target in snaps and target not in restate_set:
+        print(f"[factor-mine] freeze: {target} already frozen — no rewrite",
               flush=True)
         return label_payload(payload)
 
@@ -2595,6 +2603,12 @@ def append_land(from_date: str, target: str, *, write: bool = False,
         print(f"[factor-mine] appended frozen session {date}", flush=True)
 
     payload = label_payload(payload)
+    payload["_frozen_dates"] = frozen_dates
+    if write:
+        from . import factor_mine_rules as fmr
+        recs = list(recipes or []) or list((payload or {}).get("recipes") or [])
+        if recs:
+            fmr.lock_recipe_rules(recs, write=True)
     if write and frozen_dates:
         write_panel_file(panel)
         fm.write_outputs(payload, stats=payload.get("stats") or [], books=payload.get("books"))

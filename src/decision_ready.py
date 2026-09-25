@@ -11,6 +11,7 @@ import argparse
 import hashlib
 import json
 import os
+import subprocess
 from pathlib import Path
 import urllib.request
 from datetime import datetime
@@ -18,6 +19,76 @@ from zoneinfo import ZoneInfo
 
 ROOT = Path(__file__).resolve().parent.parent
 ET = ZoneInfo('America/New_York')
+
+
+def _require_main_proof() -> bool:
+    flag = (os.environ.get("FULLSCAN_REQUIRE_MAIN") or "").strip().lower()
+    if flag in ("1", "true", "yes", "on"):
+        return True
+    return (os.environ.get("GITHUB_ACTIONS") or "").strip().lower() == "true"
+
+
+def blob_sha256_on_main(rel: str) -> str | bool | None:
+    """SHA-256 of ``origin/main:<rel>``.
+
+    False — ref exists and the path does not.
+    None — git cannot answer (no repo, no origin/main).
+    """
+    rel = str(rel or "").replace("\\", "/").lstrip("/")
+    if not rel:
+        return None
+    try:
+        ref = subprocess.run(
+            ["git", "rev-parse", "--verify", "origin/main"],
+            cwd=str(ROOT), capture_output=True, timeout=15, check=False,
+        )
+    except (OSError, subprocess.TimeoutExpired):
+        return None
+    if ref.returncode != 0:
+        return None
+    try:
+        show = subprocess.run(
+            ["git", "show", f"origin/main:{rel}"],
+            cwd=str(ROOT), capture_output=True, timeout=20, check=False,
+        )
+    except (OSError, subprocess.TimeoutExpired):
+        return None
+    if show.returncode != 0:
+        err = (show.stderr or b"").decode("utf-8", "replace").lower()
+        if "does not exist" in err or "exists on disk" in err:
+            return False
+        return None
+    return hashlib.sha256(show.stdout).hexdigest()
+
+
+def apply_main_gate(proof: dict) -> dict:
+    """ready=true only when every hashed input is that same blob on main.
+
+    A local ``data/peers/<date>_peer_rs.csv`` that never landed must not
+    stamp the morning tickets ready.
+    """
+    if not isinstance(proof, dict):
+        return proof
+    inputs = proof.get("inputs") or {}
+    if not isinstance(inputs, dict) or not inputs:
+        return proof
+    blockers = list(proof.get("blockers") or [])
+    extra = []
+    for rel, digest in inputs.items():
+        on_main = blob_sha256_on_main(str(rel))
+        if on_main is None:
+            if _require_main_proof():
+                extra.append({"path": rel, "reason": "not_on_main"})
+            continue
+        if on_main is False or on_main != digest:
+            extra.append({"path": rel, "reason": "not_on_main"})
+    if not extra:
+        return proof
+    out = dict(proof)
+    out["ready"] = False
+    out["blockers"] = blockers + extra
+    out["main_missing"] = [row["path"] for row in extra]
+    return out
 
 
 def evaluate(date):
@@ -72,7 +143,7 @@ def notify_changed(paths):
 def publish(date):
     from . import stock_book, publish_live_boards
     started = datetime.now(ET)
-    before = evaluate(date)
+    before = apply_main_gate(evaluate(date))
     if not before['ready']:
         print(json.dumps(before), flush=True)
         return 3
@@ -84,7 +155,7 @@ def publish(date):
     payload = json.loads(path.read_text()) if path.exists() else {}
     proof = payload.get('decision_readiness') or {}
     hot = (payload.get('strategies') or {}).get('union_hot_n4_h1') or {}
-    after = evaluate(date)
+    after = apply_main_gate(evaluate(date))
     completed = datetime.fromisoformat(proof.get('completed_at') or '1970-01-01T00:00:00+00:00')
     fresh = (completed.tzinfo is not None and completed >= started and
              proof.get('fingerprint') == before['fingerprint'] == after['fingerprint'])

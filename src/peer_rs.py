@@ -22,6 +22,7 @@ import numpy as np
 import pandas as pd
 
 from . import config
+from .past_write import refuse_past_overwrite
 
 ROOT = Path(__file__).resolve().parent.parent
 CORR_PATH = ROOT / "data" / "peers" / "correlations.csv"
@@ -48,20 +49,26 @@ def _pct(x) -> float:
 
 
 def _resolve_export(date: str | None) -> tuple[str, Path]:
+    """Return (session date, export path).
+
+    A requested date must have ``finviz_<date>.csv``. An older tape is not
+    reused under today's name — that stamped yesterday's export as today.
+    """
     files = sorted(EXPORT_DIR.glob("finviz_*.csv"))
     if not files:
         raise SystemExit("[peer_rs] no data/exports/finviz_*.csv — run Finviz export first")
     if date is None:
         path = files[-1]
         return path.stem.replace("finviz_", ""), path
-    path = EXPORT_DIR / f"finviz_{date}.csv"
-    if not path.exists():
-        older = [f for f in files if f.stem.replace("finviz_", "") <= date]
-        if not older:
-            raise SystemExit(f"[peer_rs] no finviz export for {date}")
-        path = older[-1]
-        date = path.stem.replace("finviz_", "")
-    return date, path
+    want = EXPORT_DIR / f"finviz_{date}.csv"
+    if not want.is_file():
+        older = [f.name for f in files if f.stem.replace("finviz_", "") < date]
+        newest = older[-1] if older else "none"
+        raise SystemExit(
+            f"[peer_rs] FAIL no finviz export for {date} "
+            f"(refusing to relabel an older export; newest older={newest})"
+        )
+    return date, want
 
 
 def _load_correlations() -> dict[str, list[str]]:
@@ -111,6 +118,7 @@ def _load_correlations() -> dict[str, list[str]]:
 
 
 def run(date: str | None = None) -> Path:
+    requested = date
     date, export_path = _resolve_export(date)
     corr = _load_correlations()
 
@@ -194,6 +202,12 @@ def run(date: str | None = None) -> Path:
 
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     path = OUT_DIR / f"{date}_peer_rs.csv"
+    run_date = requested or date
+    if refuse_past_overwrite(path, run_date):
+        raise SystemExit(
+            f"[peer_rs] REFUSE past-date write {path.name} "
+            f"(file date < run date {run_date})"
+        )
     out.to_csv(path, index=False)
 
     ranked = out.dropna(subset=["rs_week"]).sort_values("rs_week", ascending=False)

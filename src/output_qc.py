@@ -549,6 +549,49 @@ def _events_payload(date_str: str) -> tuple[str, dict | None]:
     return path, _read_json(path)
 
 
+def qc_catalyst(path: str | Path) -> QCResult:
+    """Fail unless the dossier packet is honestly OK.
+
+    A file still lands for audit. Callers record ok=False with
+    ``catalyst_fail n_ok=0/8`` (or catalyst_degraded) on the day board.
+    Legacy packets with no status field pass only when usable dossiers
+    meet the minimum and the markdown still carries CATALYST_DAILY_OK.
+    """
+    p = Path(path)
+    if p.suffix.lower() == ".md":
+        js = p.with_suffix(".json")
+        md = p
+    else:
+        js = p
+        md = p.with_suffix(".md")
+    data = _read_json(js) if js.exists() else None
+    if not isinstance(data, dict):
+        return _fail("catalyst", str(path), "catalyst_fail unreadable", empty=True)
+    try:
+        from .catalyst_daily import CATALYST_MIN_OK, usable_dossier
+    except Exception:  # noqa: BLE001
+        CATALYST_MIN_OK = 2
+
+        def usable_dossier(row: dict) -> bool:
+            return bool(isinstance(row, dict) and row.get("net_signal")
+                        and not row.get("error"))
+
+    rows = [r for r in (data.get("dossiers") or []) if isinstance(r, dict)]
+    n_ok = sum(1 for r in rows if usable_dossier(r))
+    n_targets = int(data.get("n_targets") or len(rows) or 0)
+    status = data.get("status")
+    md_text = _read(md) if md.exists() else ""
+    sentinel = "CATALYST_DAILY_OK" in md_text
+    status_bad = status is not None and str(status) != "OK"
+    if status_bad or n_ok < CATALYST_MIN_OK or not sentinel:
+        label = "catalyst_fail" if (n_ok <= 0 or str(status) == "FAIL") else "catalyst_degraded"
+        return _fail(
+            "catalyst", str(path), f"{label} n_ok={n_ok}/{n_targets}",
+            md_text or json.dumps(data),
+        )
+    return _ok("catalyst", str(path), md_text or json.dumps(data))
+
+
 def qc_events_date(date_str: str) -> QCResult:
     path, data = _events_payload(date_str)
     if not os.path.exists(path):
@@ -675,6 +718,7 @@ def preopen_report(date_str: str) -> dict:
         sector_rows.append({"sector": sector, "ok": r.ok,
                             "reason": r.reason, "size": r.size})
     n_ok = sum(1 for r in sector_rows if r["ok"])
+    sector_rows = _merge_sector_llm(date_str, sector_rows)
 
     report = {
         "date": date_str,
@@ -697,6 +741,28 @@ def preopen_report(date_str: str) -> dict:
     return report
 
 
+def _merge_sector_llm(date_str: str, sector_rows: list[dict]) -> list[dict]:
+    """Keep provider/status from the sector-predict sidecar across QC rewrites."""
+    path = os.path.join(config.DAILY_SECTORS, date_str, "_llm.json")
+    data = _read_json(path)
+    by = {}
+    if isinstance(data, dict):
+        for row in data.get("sectors") or []:
+            if isinstance(row, dict) and row.get("sector"):
+                by[str(row["sector"])] = row
+    merged = []
+    for row in sector_rows:
+        extra = by.get(row.get("sector")) or {}
+        out = dict(row)
+        for key in ("status", "provider", "fallback_reason"):
+            if extra.get(key):
+                out[key] = extra[key]
+        if "status" not in out:
+            out["status"] = "OK" if out.get("ok") else "FAIL"
+        merged.append(out)
+    return merged
+
+
 def write_preopen_report(date_str: str) -> str:
     report = preopen_report(date_str)
     os.makedirs("01_daily", exist_ok=True)
@@ -706,12 +772,18 @@ def write_preopen_report(date_str: str) -> str:
     sec_dir = os.path.join(config.DAILY_SECTORS, date_str)
     if os.path.isdir(sec_dir):
         sidecar = os.path.join(sec_dir, "_qc.json")
+        sectors = report.get("sectors") or []
+        summary = ""
+        llm = _read_json(os.path.join(sec_dir, "_llm.json"))
+        if isinstance(llm, dict):
+            summary = str(llm.get("summary") or "")
         with open(sidecar, "w", encoding="utf-8") as fh:
             json.dump({
                 "date": date_str,
                 "n_ok": report["sector_n_ok"],
                 "n_total": report["sector_n_total"],
-                "sectors": report["sectors"],
+                "summary": summary,
+                "sectors": sectors,
             }, fh, indent=2)
     return path
 
