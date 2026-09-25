@@ -21,7 +21,11 @@ Largest swing that also rewrote a past day: `union_e_green_h3` on 2026-09-10 10:
 
 ## Determinism
 
-The double rebuild from the locked snapshots has not been recorded.
+**PASS.** Two rebuilds of 30 locked sessions. Ledger bytes matched. daily_returns.csv bytes matched (51043811 bytes, then 51043811 bytes).
+
+Inputs were the locked daily snapshots and the retro price store. Flat 15bp cells were copied from the locked `data/factor_mine/daily_returns.csv` so the check is the Futubull ledger rebuild. `write_report` was not called. The frozen ledger files were left in place.
+
+Frozen ledgers, the freeze manifest, the locked CSV, and `FACTOR_MINE_RETRO_PIT.md` were unchanged on disk.
 
 The forward append log ships on the rules pull request from main after #335 merges. That nightly step appends the new day's buys and sells here and fails the job when an earlier day changed.
 
