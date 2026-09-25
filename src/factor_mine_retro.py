@@ -1167,6 +1167,11 @@ def _splice_baselines_json(original: str, payload: dict) -> str:
 
 
 DAILY_RETURNS_CSV = ROOT / "data" / "factor_mine" / "daily_returns.csv"
+DAILY_RETURN_FIELDS = (
+    "recipe", "recipe_created_date", "start_date", "D",
+    "net_ret_futubull", "net_ret_15bp", "day_status", "source_shas",
+)
+DAY_STATUSES = ("locked", "pit_rebuilt", "incomplete_pit", "held")
 
 
 def daily_return_pct(daily: dict | None) -> float | None:
@@ -1191,33 +1196,212 @@ def daily_return_pct(daily: dict | None) -> float | None:
     return round(100.0 * (equity / base - 1.0), 4)
 
 
+def format_net(value) -> str:
+    """Four-decimal percent. A missing return is empty, never 0."""
+    if value is None or value == "":
+        return ""
+    try:
+        number = float(value)
+    except (TypeError, ValueError):
+        return ""
+    if number != number:  # NaN
+        return ""
+    return f"{number:.4f}"
+
+
+def ledger_day_status(ledger: dict | None) -> str:
+    """``locked``, ``pit_rebuilt``, ``incomplete_pit``, or ``held``."""
+    if not ledger or not (ledger.get("recipes") or {}):
+        return "held"
+    label = str(ledger.get("label") or "")
+    if label in ("pit_rebuilt", "incomplete_pit", "locked"):
+        return label
+    if label in ("held", "held_incomplete", "held_review"):
+        return "held"
+    if ledger.get("origin") == "frozen":
+        return "locked"
+    return "held"
+
+
+def load_recipe_catalog() -> dict[str, str]:
+    """All 339 recipes → creation date. Missing file is an empty map."""
+    path = fmf.CREATED_PATH
+    if not path.is_file():
+        return {}
+    try:
+        doc = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return {}
+    if not isinstance(doc, dict):
+        return {}
+    return {str(name): str(created)[:10] for name, created in doc.items()}
+
+
+def format_source_shas(day: str, commits: dict | None) -> str:
+    """Named-input commits for D, 12-char sha, sorted by input key.
+
+    A null commit is ``key=``. An empty map is an empty cell.
+    """
+    if not commits:
+        return ""
+    day = str(day or "")[:10]
+
+    def key_for(path: str) -> str:
+        for key, rel in NAMED_INPUTS.items():
+            if path == rel.format(d=day):
+                return key
+        return Path(path).name
+
+    parts = []
+    for path in sorted(commits, key=lambda item: (key_for(item), item)):
+        sha = str(commits.get(path) or "")
+        parts.append(f"{key_for(path)}={sha[:12]}")
+    return ",".join(parts)
+
+
+def _source_commits(day: str, manifest: dict | None = None) -> dict:
+    man = manifest if manifest is not None else fmf.load_manifest()
+    meta = (man.get("snapshots") or {}).get(str(day)[:10]) or {}
+    commits = meta.get("source_commits") or {}
+    return commits if isinstance(commits, dict) else {}
+
+
+def net_returns_15bp(dates: list[str], names: list[str] | None = None) -> dict:
+    """Session percent under flat 15bp for each recipe, start, and day.
+
+    Same books as the frozen futubull ledgers, with the per-side fee
+    swapped. Nothing is written back to a ledger or snapshot. A failed
+    recipe is absent from the map so its cells stay empty.
+    """
+    from . import factor_mine_book as fmb
+    from . import factor_mine_combo as fmc
+    from . import paper_trade as pt
+
+    days = [str(d)[:10] for d in dates]
+    panel = assemble_panel(days)
+    bars = _full_bars(panel)
+    regime = fmb.load_regime()
+    by_name = {r.get("name"): r for r in retro_recipes() if r.get("name")}
+    wanted = list(names) if names is not None else sorted(by_name)
+    fees = fm.pt_fees()
+    out: dict[tuple[str, str, str], float | None] = {}
+    orig = pt.order_fees
+    pt.order_fees = flat_15bp_order_fees
+    try:
+        for i, name in enumerate(wanted):
+            rec = by_name.get(name)
+            if rec is None:
+                continue
+            members = [by_name[m] for m in (rec.get("members") or []) if m in by_name]
+            if rec.get("members") and len(members) != len(rec.get("members") or []):
+                print(f"[retro] 15bp skip {name}: missing member", flush=True)
+                continue
+            try:
+                for start in days:
+                    if rec.get("members"):
+                        pool = rec.get("pool") or "shared"
+                        weights = list(rec.get("weights") or [1] * len(members))
+                        if pool == "split":
+                            book = fmc.simulate_split(
+                                panel, members, weights, start=start,
+                                bars=bars, fees=fees, regime=regime, name=name,
+                            )
+                        else:
+                            book = fmc.simulate_shared(
+                                panel, members, weights, start=start,
+                                bars=bars, fees=fees, regime=regime,
+                                net=rec.get("net") or "priority", name=name,
+                            )
+                    else:
+                        book = fmb.simulate_book(
+                            panel, rec, start=start, bars=bars, fees=fees,
+                            regime=regime,
+                        )
+                    for row in book.get("daily") or []:
+                        stamp = str(row.get("date") or "")[:10]
+                        if stamp < start:
+                            continue
+                        out[(name, start, stamp)] = daily_return_pct(row)
+            except Exception as e:  # noqa: BLE001
+                print(f"[retro] 15bp failed {name}: {e}", flush=True)
+            if (i + 1) % 20 == 0 or i + 1 == len(wanted):
+                print(f"[retro] 15bp {i + 1}/{len(wanted)}", flush=True)
+    finally:
+        pt.order_fees = orig
+    return out
+
+
 def write_daily_returns(path: Path | None = None,
-                        dates: list[str] | None = None) -> int:
-    """CSV columns: recipe, start_date, D, ret. One ledger file at a time."""
+                        dates: list[str] | None = None,
+                        *,
+                        catalog: dict | None = None,
+                        flat_returns: dict | None = None,
+                        manifest: dict | None = None) -> int:
+    """One row per recipe × start_date × day, including held days.
+
+    Columns: recipe, recipe_created_date, start_date, D,
+    net_ret_futubull, net_ret_15bp, day_status, source_shas.
+    A held or missing day has empty returns. A real flat session is 0.
+    Ledgers are reduced one file at a time.
+    """
     import csv
 
     dest = Path(path or DAILY_RETURNS_CSV)
     dest.parent.mkdir(parents=True, exist_ok=True)
-    days = list(dates) if dates is not None else fmf._ledger_dates()
+    if dates is not None:
+        days = [str(d)[:10] for d in dates]
+    else:
+        days = sorted(set(SESSIONS) | set(fmf._ledger_dates()))
+    book = catalog if catalog is not None else load_recipe_catalog()
+    names = sorted(book)
+    flat = flat_returns if flat_returns is not None else net_returns_15bp(days, names)
+    fut: dict[tuple[str, str, str], float | None] = {}
+    present: set[tuple[str, str, str]] = set()
+    status_of: dict[str, str] = {}
+    shas_of: dict[str, str] = {}
+    for day in days:
+        ledger = fmf.read_ledger(day)
+        status_of[day] = ledger_day_status(ledger)
+        shas_of[day] = format_source_shas(day, _source_commits(day, manifest))
+        recipes = (ledger or {}).get("recipes") or {}
+        for name in names:
+            starts = (recipes.get(name) or {}).get("starts") or {}
+            for start, block in starts.items():
+                daily = (block or {}).get("daily") if isinstance(block, dict) else None
+                if not isinstance(daily, dict) or daily.get("equity") is None:
+                    continue
+                present.add((name, str(start)[:10], day))
+                fut[(name, str(start)[:10], day)] = daily_return_pct(daily)
+        del ledger
     n = 0
+    held = 0
     with dest.open("w", newline="", encoding="utf-8") as handle:
         writer = csv.writer(handle)
-        writer.writerow(["recipe", "start_date", "D", "ret"])
-        for date in days:
-            ledger = fmf.read_ledger(date)
-            if not ledger:
-                continue
-            recipes = ledger.get("recipes") or {}
-            for name in sorted(recipes):
-                starts = (recipes[name] or {}).get("starts") or {}
-                for start in sorted(starts):
-                    ret = daily_return_pct((starts[start] or {}).get("daily"))
-                    if ret is None:
+        writer.writerow(list(DAILY_RETURN_FIELDS))
+        for name in names:
+            created = str(book.get(name) or "")[:10]
+            for start in days:
+                for day in days:
+                    if day < start:
                         continue
-                    writer.writerow([name, start, date, f"{ret:.4f}"])
+                    key = (name, start, day)
+                    missing = status_of.get(day) == "held" or key not in present
+                    if missing:
+                        writer.writerow([
+                            name, created, start, day, "", "", "held",
+                            shas_of.get(day) or "",
+                        ])
+                        held += 1
+                    else:
+                        writer.writerow([
+                            name, created, start, day,
+                            format_net(fut.get(key)),
+                            format_net(flat.get(key)),
+                            status_of.get(day) or "held",
+                            shas_of.get(day) or "",
+                        ])
                     n += 1
-            del ledger
-    print(f"[retro] daily returns {n} rows {dest}", flush=True)
+    print(f"[retro] daily returns {n} rows held={held} {dest}", flush=True)
     return n
 
 
@@ -1258,8 +1442,10 @@ def publish_baselines(*, draws: int = RANDOM4_DRAWS) -> dict:
             "committer timestamp (`commits?path=data/snapshots/{D}.raw.csv`). "
             "There is no lower bound; the snapshot workflow starts after the "
             "close. From 2026-09-24 a present scrape_ts must also be before "
-            "that next open. A missing raw export, a commit at or after the "
-            "next open, a late scrape_ts, or a hash mismatch uses Stooq. From "
+            "that next open. The stamp is the slim `{D}.csv` scrape_ts column, "
+            "or `scrape_ts_utc` in theme-radar `manifest.json`. It is not read "
+            "from raw.csv. A missing raw export, a commit at or after the next "
+            "open, a late scrape_ts, or a hash mismatch uses Stooq. From "
             "2026-09-25 the slim `{D}.csv` Open column is the next file "
             "(`finviz_snapshot`) under the same upper bound. `current.csv` is "
             "not a source. Webull paper fills stay a third check. On this "
@@ -1267,8 +1453,11 @@ def publish_baselines(*, draws: int = RANDOM4_DRAWS) -> dict:
             "2026-08-27 has no raw export, so it uses Stooq. The log is "
             "`data/factor_mine/open_source_log.csv` (source, commit sha, "
             "commit time). Per-recipe session returns for the shuffle test "
-            "are `data/factor_mine/daily_returns.csv` "
-            "(recipe, start_date, D, ret as percent versus the prior close equity)."
+            "are `data/factor_mine/daily_returns.csv` (recipe, "
+            "recipe_created_date, start_date, D, net_ret_futubull, "
+            "net_ret_15bp, day_status, source_shas). One row per recipe, "
+            "start date, and day. A held or missing day is `held` with empty "
+            "returns, never 0."
         ),
     }
     write_baselines(payload)

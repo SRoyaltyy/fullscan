@@ -1441,6 +1441,31 @@ def test_raw_open_uses_latest_commit_before_the_next_open() -> None:
                 assert no_stamp["opens"]["AAA"] == 10.0
                 assert no_stamp["scrape_ts"] is None
                 assert no_stamp["commit_time"] == "2026-09-24T13:30:00+00:00"
+                (root / f"{early}.raw.csv").write_text(
+                    "Ticker,Open,scrape_ts\nAAA,10.0,2026-09-25T14:00:00+00:00\n",
+                    encoding="utf-8")
+                ignored = fmf.day_open_tape(early)
+                assert ignored["source"] == "finviz_raw"
+                assert ignored["scrape_ts"] is None
+                (root / "manifest.json").write_text(json.dumps({
+                    "runs": [{
+                        "date": early,
+                        "scrape_ts_utc": "2026-09-24T20:00:00+00:00",
+                    }],
+                }), encoding="utf-8")
+                from_manifest = fmf.day_open_tape(early)
+                assert from_manifest["source"] == "finviz_raw"
+                assert from_manifest["scrape_ts"] == "2026-09-24T20:00:00+00:00"
+                (root / "manifest.json").write_text(json.dumps({
+                    "runs": [{
+                        "date": early,
+                        "scrape_ts_utc": "2026-09-25T14:00:00+00:00",
+                    }],
+                }), encoding="utf-8")
+                late_manifest = fmf.day_open_tape(early)
+                assert late_manifest["source"] == "stooq"
+                assert late_manifest["scrape_ts"] == "2026-09-25T14:00:00+00:00"
+                assert "scrape_ts" in late_manifest["note"]
                 absent = fmf.day_open_tape(missing_day)
                 assert absent["source"] == "stooq"
                 assert absent["note"] == "no raw export"
@@ -1462,6 +1487,7 @@ def test_raw_open_uses_latest_commit_before_the_next_open() -> None:
                 assert accepted["source"] == "finviz_raw"
                 assert accepted["opens"]["AAA"] == 10.0
                 assert accepted["commit_sha"] == raw_sha
+                assert accepted["scrape_ts"] == "2026-09-24T20:00:00+00:00"
                 fmf.write_open_source_row(early, accepted, path=root / "log.csv")
                 logged = (root / "log.csv").read_text(encoding="utf-8").splitlines()
                 assert logged[0] == "date,source,commit_sha,commit_time,scrape_ts,note"

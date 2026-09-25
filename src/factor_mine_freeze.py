@@ -56,14 +56,18 @@ GUARD_SLOTS = ("snapshots", "ledgers", "lineups", "candidates")
 # git commit of that file is before the next session's 09:30 ET. The
 # lower bound is the after-close workflow, not a second clock check.
 # From 2026-09-24 a present scrape_ts must also be before that next
-# open. From SNAPSHOT_OPEN_FROM the slim ``{D}.csv`` Open column is
-# next. A missing export, a late commit, or a late scrape uses Stooq.
+# open. That stamp is the slim ``{D}.csv`` column, or ``scrape_ts_utc``
+# in theme-radar ``manifest.json``. It is not read from raw.csv.
+# From SNAPSHOT_OPEN_FROM the slim ``{D}.csv`` Open column is next.
+# A missing export, a late commit, or a late scrape uses Stooq.
 # ``current.csv`` is never a source.
 PRICE_CHECK = {
     "close": {"pct": 0.005, "abs": 0.02},
     "open": {"pct": 0.01, "abs": 0.02},
 }
 SNAPSHOT_OPEN_FROM = "2026-09-25"
+# scrape_ts exists on the slim snapshot and in manifest.json from this day.
+SCRAPE_TS_FROM = "2026-09-24"
 OPEN_SOURCE_LOG = ROOT / "data" / "factor_mine" / "open_source_log.csv"
 LAST_OPEN_SOURCE: dict[str, dict] = {}
 THEME_RADAR_SNAPSHOT_URL = (
@@ -78,6 +82,10 @@ THEME_RADAR_HASHES_URL = (
     "https://raw.githubusercontent.com/SRoyaltyy/theme-radar/"
     "main/data/snapshots/HASHES.json"
 )
+THEME_RADAR_MANIFEST_URL = (
+    "https://raw.githubusercontent.com/SRoyaltyy/theme-radar/"
+    "main/data/snapshots/manifest.json"
+)
 THEME_RADAR_COMMITS_URL = (
     "https://api.github.com/repos/SRoyaltyy/theme-radar/commits"
 )
@@ -90,6 +98,7 @@ PAPER_OPEN_DIR = ROOT / "data" / "paper_open"
 THEME_RADAR_SNAP_DIR: Path | None = None
 _COMMIT_CACHE: dict[str, dict | None] = {}
 _HASHES_DOC: dict | None = None
+_RADAR_MANIFEST: dict | None = None
 # Morning files only. Flatten books and mover buys are prior-night
 # outputs and are not a reason a name is on this list.
 MORNING_SOURCES = (
@@ -668,7 +677,10 @@ def parse_finviz_opens(text: str) -> dict[str, float]:
 
 
 def first_scrape_ts(text: str) -> str | None:
-    """First non-empty ``scrape_ts`` cell. Absent on snapshots before 2026-09-24."""
+    """First non-empty ``scrape_ts`` cell on a slim snapshot.
+
+    Absent before 2026-09-24. The raw export is not a scrape_ts source.
+    """
     import csv
     import io
 
@@ -680,6 +692,55 @@ def first_scrape_ts(text: str) -> str | None:
         if stamp:
             return stamp
     return None
+
+
+def theme_radar_manifest() -> dict | None:
+    """theme-radar ``data/snapshots/manifest.json``.
+
+    A test snap dir reads a local ``manifest.json`` and does not use the
+    network cache. ``current`` is not a manifest.
+    """
+    global _RADAR_MANIFEST
+    if THEME_RADAR_SNAP_DIR is not None:
+        path = Path(THEME_RADAR_SNAP_DIR) / "manifest.json"
+        if not path.is_file():
+            return None
+        try:
+            doc = json.loads(path.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError):
+            return None
+        return doc if isinstance(doc, dict) else None
+    if _RADAR_MANIFEST is not None:
+        return _RADAR_MANIFEST
+    raw = _fetch_url(THEME_RADAR_MANIFEST_URL)
+    if not raw:
+        return None
+    try:
+        doc = json.loads(raw.decode("utf-8"))
+    except (UnicodeDecodeError, json.JSONDecodeError):
+        return None
+    if not isinstance(doc, dict):
+        return None
+    _RADAR_MANIFEST = doc
+    return doc
+
+
+def manifest_scrape_ts(date: str) -> str | None:
+    """Latest ``scrape_ts_utc`` for D in theme-radar ``manifest.json`` runs."""
+    doc = theme_radar_manifest()
+    if not doc:
+        return None
+    day = str(date or "")[:10]
+    found = None
+    for run in doc.get("runs") or []:
+        if not isinstance(run, dict):
+            continue
+        if str(run.get("date") or "")[:10] != day:
+            continue
+        stamp = str(run.get("scrape_ts_utc") or "").strip()
+        if stamp:
+            found = stamp
+    return found
 
 
 def _next_session_date(date: str) -> str:
@@ -761,28 +822,6 @@ def _slim_text(date: str) -> str:
     return raw.decode("utf-8", errors="replace")
 
 
-def _raw_header_text(date: str) -> str:
-    """First slice of ``{D}.raw.csv``. Enough to see whether scrape_ts exists."""
-    name = _dated_raw_name(date)
-    if not name:
-        return ""
-    roots = [Path(THEME_RADAR_SNAP_DIR)] if THEME_RADAR_SNAP_DIR is not None else _theme_radar_roots()
-    for root in roots:
-        path = root / name
-        if path.is_file() and "current" not in path.name:
-            try:
-                with path.open("rb") as handle:
-                    return handle.read(65536).decode("utf-8", errors="replace")
-            except OSError:
-                return ""
-    if THEME_RADAR_SNAP_DIR is not None:
-        return ""
-    chunk = _fetch_prefix(THEME_RADAR_RAW_URL.format(date=str(date)[:10]), 65536)
-    if not chunk:
-        return ""
-    return chunk.decode("utf-8", errors="replace")
-
-
 def theme_radar_raw_opens(date: str) -> dict[str, float]:
     """Finviz Open from ``{D}.raw.csv``. A bad hash is an empty map."""
     raw = _theme_radar_raw_bytes(date)
@@ -814,11 +853,17 @@ def _open_decision(
 
 
 def _session_scrape_ts(day: str, slim: str) -> str | None:
-    """scrape_ts from the slim snapshot, else the raw header. Absent before 09-24."""
+    """scrape_ts for D, from 2026-09-24 on.
+
+    The slim ``{D}.csv`` column wins. Otherwise ``scrape_ts_utc`` on that
+    date's manifest run. raw.csv is not a scrape_ts source.
+    """
     stamp = first_scrape_ts(slim) if slim else None
     if stamp:
         return stamp
-    return first_scrape_ts(_raw_header_text(day))
+    if str(day or "")[:10] < SCRAPE_TS_FROM:
+        return None
+    return manifest_scrape_ts(day)
 
 
 def _slim_open_or_stooq(
@@ -874,10 +919,11 @@ def day_open_tape(date: str) -> dict:
     """Which open file is allowed for D.
 
     ``{D}.raw.csv`` Finviz Open is primary when the latest git commit of
-    that path is before the next session's 09:30 ET. A scrape_ts, present
-    from 2026-09-24, must clear the same upper bound. From 2026-09-25 the
-    slim snapshot Open is next. 2026-08-27 has no raw export, so that day
-    is Stooq, as is any late commit or late scrape.
+    that path is before the next session's 09:30 ET. From 2026-09-24 a
+    scrape_ts on the slim snapshot, or ``scrape_ts_utc`` in manifest.json,
+    must clear the same upper bound. It is not read from raw.csv. From
+    2026-09-25 the slim snapshot Open is next. 2026-08-27 has no raw
+    export, so that day is Stooq, as is any late commit or late scrape.
     """
     day = str(date or "")[:10]
     raw_commit = theme_radar_latest_commit(f"data/snapshots/{day}.raw.csv") or {}
@@ -1026,24 +1072,6 @@ def _fetch_github(url: str) -> bytes | None:
         req = urllib.request.Request(url, headers=headers)
         with urllib.request.urlopen(req, timeout=20) as resp:
             return resp.read()
-    except Exception:
-        return None
-
-
-def _fetch_prefix(url: str, n: int = 65536) -> bytes | None:
-    """First ``n`` bytes. Used to see a raw header without the whole export."""
-    import urllib.request
-
-    try:
-        req = urllib.request.Request(
-            url,
-            headers={
-                "User-Agent": "fullscan-factor-mine",
-                "Range": f"bytes=0-{max(int(n), 1) - 1}",
-            },
-        )
-        with urllib.request.urlopen(req, timeout=20) as resp:
-            return resp.read(n)
     except Exception:
         return None
 

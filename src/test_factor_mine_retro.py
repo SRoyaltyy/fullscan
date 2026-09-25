@@ -155,14 +155,17 @@ def test_daily_return_is_the_session_not_the_resumed_mean() -> None:
 
 
 def test_daily_returns_csv_lists_each_start_book() -> None:
+    """Every catalog recipe and every start/day, with held cells blank."""
     import csv
 
     ledgers = {
         "2026-09-23": {
+            "label": "pit_rebuilt",
+            "origin": "frozen",
             "recipes": {
                 "union_hot_n4_h1": {
                     "starts": {
-                        "2026-08-13": {"daily": {
+                        "2026-09-23": {"daily": {
                             "equity": 10100, "yday_equity": 10000, "mean": 1.0,
                         }},
                     },
@@ -170,13 +173,15 @@ def test_daily_returns_csv_lists_each_start_book() -> None:
             },
         },
         "2026-09-24": {
+            "label": "incomplete_pit",
+            "origin": "frozen",
             "recipes": {
                 "union_hot_n4_h1": {
                     "starts": {
-                        "2026-08-13": {"daily": {
-                            "equity": 10200, "yday_equity": 10100, "mean": 2.0,
+                        "2026-09-23": {"daily": {
+                            "equity": 10100, "yday_equity": 10100, "mean": 1.0,
                         }},
-                        "2026-09-21": {"daily": {
+                        "2026-09-24": {"daily": {
                             "equity": 9900, "yday_equity": 10000, "mean": -1.0,
                         }},
                     },
@@ -188,20 +193,64 @@ def test_daily_returns_csv_lists_each_start_book() -> None:
     def read(date):
         return ledgers.get(date)
 
+    catalog = {
+        "other_recipe": "2026-09-21",
+        "union_hot_n4_h1": "2026-08-13",
+    }
+    flat = {
+        ("union_hot_n4_h1", "2026-09-23", "2026-09-23"): 1.25,
+        ("union_hot_n4_h1", "2026-09-23", "2026-09-24"): 0.0,
+        ("union_hot_n4_h1", "2026-09-24", "2026-09-24"): -0.5,
+        ("other_recipe", "2026-09-24", "2026-09-24"): 0.0,
+    }
+    manifest = {"snapshots": {
+        "2026-09-23": {"source_commits": {
+            "01_daily/news/2026-09-23_finviz_digest.json": "abc123def4567890",
+        }},
+        "2026-09-24": {"source_commits": {
+            "data/join/2026-09-24_ranked.csv": "fff000111222333444",
+        }},
+    }}
     with tempfile.TemporaryDirectory() as d:
         dest = Path(d) / "daily_returns.csv"
         import unittest.mock as mock
         with mock.patch.object(retro.fmf, "read_ledger", side_effect=read):
-            n = retro.write_daily_returns(dest, ["2026-09-23", "2026-09-24"])
-        assert n == 3
+            n = retro.write_daily_returns(
+                dest, ["2026-09-23", "2026-09-24"],
+                catalog=catalog, flat_returns=flat, manifest=manifest,
+            )
+        assert n == 6
         with dest.open(newline="", encoding="utf-8") as handle:
             rows = list(csv.DictReader(handle))
-    assert [r["D"] for r in rows] == ["2026-09-23", "2026-09-24", "2026-09-24"]
-    assert rows[0]["recipe"] == "union_hot_n4_h1"
-    assert rows[0]["start_date"] == "2026-08-13"
-    assert rows[0]["ret"] == "1.0000"
-    assert rows[2]["start_date"] == "2026-09-21"
-    assert rows[2]["ret"] == "-1.0000"
+    assert list(rows[0].keys()) == list(retro.DAILY_RETURN_FIELDS)
+    assert [r["recipe"] for r in rows] == ["other_recipe"] * 3 + ["union_hot_n4_h1"] * 3
+    assert rows[0]["day_status"] == "held"
+    assert rows[0]["net_ret_futubull"] == ""
+    assert rows[0]["net_ret_15bp"] == ""
+    assert rows[0]["net_ret_futubull"] != "0"
+    assert rows[0]["source_shas"] == "digest=abc123def456"
+    held_flat = rows[2]
+    assert held_flat["recipe"] == "other_recipe"
+    assert held_flat["D"] == "2026-09-24"
+    assert held_flat["day_status"] == "held"
+    assert held_flat["net_ret_15bp"] == ""
+    filled = rows[3]
+    assert filled["recipe"] == "union_hot_n4_h1"
+    assert filled["recipe_created_date"] == "2026-08-13"
+    assert filled["start_date"] == "2026-09-23"
+    assert filled["D"] == "2026-09-23"
+    assert filled["net_ret_futubull"] == "1.0000"
+    assert filled["net_ret_15bp"] == "1.2500"
+    assert filled["day_status"] == "pit_rebuilt"
+    flat_day = rows[4]
+    assert flat_day["D"] == "2026-09-24"
+    assert flat_day["net_ret_futubull"] == "0.0000"
+    assert flat_day["net_ret_15bp"] == "0.0000"
+    assert flat_day["day_status"] == "incomplete_pit"
+    assert flat_day["source_shas"] == "join=fff000111222"
+    assert rows[5]["net_ret_futubull"] == "-1.0000"
+    assert rows[5]["day_status"] == "incomplete_pit"
+    assert "0" not in (rows[0]["net_ret_futubull"], rows[0]["net_ret_15bp"])
 
 
 def test_baselines_section_keeps_the_hot4_table() -> None:
