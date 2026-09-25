@@ -1,6 +1,6 @@
 {
   "date": "2026-09-25",
-  "generated_at": "2026-09-25T05:54:11.669603-04:00",
+  "generated_at": "2026-09-25T05:58:58.003897-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -25,7 +25,7 @@
     "direction": "up"
   },
   "sectors": {
-    "said": "2 up / 2 down / 3 flat",
+    "said": "2 up / 3 down / 3 flat",
     "bullets": [
       "XLB FLAT +1.4",
       "XLC FLAT -0.4",
@@ -34,7 +34,7 @@
       "XLE DOWN -9.6",
       "XLF FLAT -0.1",
       "XLV UP +0.9",
-      "XLI missing",
+      "XLI DOWN -6.0",
       "XLRE missing",
       "XLK missing",
       "XLU missing"
@@ -225,70 +225,70 @@
     },
     {
       "key": "sector_one",
-      "title": "Sector predict Healthcare (7/11)",
+      "title": "Sector predict Industrials (8/11)",
       "date": "2026-09-25",
       "ok": true,
       "pushed": true,
-      "at": "2026-09-25T05:54:11.032573-04:00",
+      "at": "2026-09-25T05:58:57.382829-04:00",
       "files": [
         {
-          "path": "01_daily/sectors/2026-09-25/healthcare_predict.md",
+          "path": "01_daily/sectors/2026-09-25/industrials_predict.md",
           "ok": true,
           "reason": "",
-          "size": 14842,
-          "preview": "# Sector Prediction \u2014 Healthcare \u2014 2026-09-25\n- news_mode: **on**\n- ETF: **XLV**\n- rubric: `00_grounding/sectors/healthcare.md`\n- predicted_direction: **up**\n- predicted_magnitude_band: **mild**\n- total_score: **0.936** (mult 0.8)\n- regime: mixed\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **0.26** (ES +0.28%, PM:XLV -0.01%) \u00b7 index_carry **0.676** (general 2.706) \u00b7 llm_overlay **0.0** (raw 0.0)"
+          "size": 20348,
+          "preview": "# Sector Prediction \u2014 Industrials \u2014 2026-09-25\n- news_mode: **on**\n- ETF: **XLI**\n- rubric: `00_grounding/sectors/industrials.md`\n- predicted_direction: **down**\n- predicted_magnitude_band: **mild**\n- total_score: **-5.994** (mult 0.9)\n- regime: risk_off\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **-1.045** (ES +0.28%, ER2 +0.08%, HG +0.66%, PM:XLI -0.38%) \u00b7 index_carry **0.676** (general 2.706) \u00b7 llm_overlay **-5.625** (raw -5.625)"
         },
         {
-          "path": "01_daily/sectors/2026-09-25/healthcare_predict_trace.md",
+          "path": "01_daily/sectors/2026-09-25/industrials_predict_trace.md",
           "ok": true,
           "reason": "",
-          "size": 393,
-          "preview": "# Reasoning trace \u2014 SECTOR PREDICT Healthcare 2026-09-25 retry1\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (145,991 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Done researching.** The model stopped searching and wrote its full analysis (13,077 characters)."
+          "size": 394,
+          "preview": "# Reasoning trace \u2014 SECTOR PREDICT Industrials 2026-09-25 retry1\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (159,501 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Done researching.** The model stopped searching and wrote its full analysis (18,275 characters)."
         },
         {
-          "path": "01_daily/_transcripts/2026-09-25_sector_healthcare_predict.json",
+          "path": "01_daily/_transcripts/2026-09-25_sector_industrials_predict.json",
           "ok": true,
           "reason": "",
-          "size": 163094,
+          "size": 182118,
           "preview": "keys: model, messages"
         },
         {
           "path": "01_daily/2026-09-25_preopen_qc.json",
           "ok": true,
           "reason": "",
-          "size": 7216,
+          "size": 7208,
           "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok"
         },
         {
           "path": "01_daily/sectors/2026-09-25/_qc.json",
           "ok": true,
           "reason": "",
-          "size": 1230,
+          "size": 1226,
           "preview": "keys: date, n_ok, n_total, sectors"
         },
         {
           "path": "01_daily/sectors/2026-09-25/_BOARD.md",
           "ok": true,
           "reason": "",
-          "size": 1802,
-          "preview": "# Sector Board \u2014 2026-09-25\nGenerated: **2026-09-25T05:54:11.018004-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.)."
+          "size": 1863,
+          "preview": "# Sector Board \u2014 2026-09-25\nGenerated: **2026-09-25T05:58:57.366231-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.)."
         },
         {
           "path": "01_daily/sectors/2026-09-25/_board.json",
           "ok": true,
           "reason": "",
-          "size": 6439,
+          "size": 6613,
           "preview": "keys: date, generated_at, sectors"
         },
         {
           "path": "03_scoreboard/scoreboard.json",
           "ok": true,
           "reason": "",
-          "size": 909111,
+          "size": 910198,
           "preview": "keys: runs"
         }
       ],
-      "preview": "# Sector Prediction \u2014 Healthcare \u2014 2026-09-25\n- news_mode: **on**\n- ETF: **XLV**\n- rubric: `00_grounding/sectors/healthcare.md`\n- predicted_direction: **up**\n- predicted_magnitude_band: **mild**\n- total_score: **0.936** (mult 0.8)\n- regime: mixed\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **0.26** (ES +0.28%, PM:XLV -0.01%) \u00b7 index_carry **0.676** (general 2.706) \u00b7 llm_overlay **0.0** (raw 0.0) \u00b7 # Reasoning trace \u2014 SECTOR PREDICT Healthcare 2026-09-25 retry1\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (145,991 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Done researching.** The model stopped searching and wrote its full analysis (13,077 characters). \u00b7 keys: model, messages \u00b7 keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok \u00b7 keys: date, n_ok, n_total, sectors \u00b7 # Sector Board \u2014 2026-09-25\nGenerated: **2026-09-25T05:54:11.018004-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.). \u00b7 keys: date, generated_at, sectors \u00b7 keys: runs"
+      "preview": "# Sector Prediction \u2014 Industrials \u2014 2026-09-25\n- news_mode: **on**\n- ETF: **XLI**\n- rubric: `00_grounding/sectors/industrials.md`\n- predicted_direction: **down**\n- predicted_magnitude_band: **mild**\n- total_score: **-5.994** (mult 0.9)\n- regime: risk_off\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **-1.045** (ES +0.28%, ER2 +0.08%, HG +0.66%, PM:XLI -0.38%) \u00b7 index_carry **0.676** (general 2.706) \u00b7 llm_overlay **-5.625** (raw -5.625) \u00b7 # Reasoning trace \u2014 SECTOR PREDICT Industrials 2026-09-25 retry1\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (159,501 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Done researching.** The model stopped searching and wrote its full analysis (18,275 characters). \u00b7 keys: model, messages \u00b7 keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok \u00b7 keys: date, n_ok, n_total, sectors \u00b7 # Sector Board \u2014 2026-09-25\nGenerated: **2026-09-25T05:58:57.366231-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.). \u00b7 keys: date"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
