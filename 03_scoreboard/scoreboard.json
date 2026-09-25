@@ -21797,6 +21797,18 @@
           "predicted_direction": "flat",
           "predicted_magnitude_band": "mild",
           "confidence": 0.45
+        },
+        "HORIZON_2W": {
+          "label": "2w",
+          "target_date": "2026-09-25",
+          "actual_pct": 1.13,
+          "actual_direction": "up",
+          "actual_magnitude_band": "mild",
+          "direction_hit": false,
+          "magnitude_hit": true,
+          "predicted_direction": "down",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.4
         }
       },
       "lesson_schema_ok": true
@@ -25036,6 +25048,18 @@
           "predicted_direction": "up",
           "predicted_magnitude_band": "mild",
           "confidence": 0.55
+        },
+        "HORIZON_1W": {
+          "label": "1w",
+          "target_date": "2026-09-25",
+          "actual_pct": 1.21,
+          "actual_direction": "up",
+          "actual_magnitude_band": "mild",
+          "direction_hit": false,
+          "magnitude_hit": true,
+          "predicted_direction": "flat",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.5
         }
       },
       "lesson_schema_ok": true
@@ -26254,7 +26278,20 @@
       "knowable_at_9am": "partially",
       "attribution_contested": "yes",
       "outlier_watch": "Dow reversal-down vs NDX never-red; energy sold the oil dip; SPX ignored the UNGA oil see-saw that NBC treated as the day’s news",
-      "horizon_grades": {},
+      "horizon_grades": {
+        "HORIZON_3D": {
+          "label": "3d",
+          "target_date": "2026-09-25",
+          "actual_pct": -0.27,
+          "actual_direction": "flat",
+          "actual_magnitude_band": "flat",
+          "direction_hit": true,
+          "magnitude_hit": false,
+          "predicted_direction": "flat",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.52
+        }
+      },
       "lesson_schema_ok": true
     },
     {
@@ -27921,7 +27958,7 @@
           "status": "hit"
         }
       ],
-      "reflection_lesson_ref": null,
+      "reflection_lesson_ref": "02_lessons/candidate/2026-09-25_lesson.md",
       "sources_used": [
         {
           "url": "https://apnews.com/article/stocks-markets-oil-bond-us-b3b7a2b6a065f88e7a92fb58379d55dd",
@@ -28014,7 +28051,9 @@
       "key_interaction": "Offsetting/masking — the oil-and-yield relief (positive) roughly cancelled the still-live 5.2% 10Y and unresolved Hormuz war (negative), so the calm +0.51% close understates how close the tape remained to the prior three sessions' yield-driven selloff",
       "knowable_at_9am": "partially — oil was already offered and the phased-deal report was dated 09-24, so the direction was foreseeable; the magnitude of the equity response and the cyclical-over-tech leadership were not",
       "attribution_contested": "yes — AP/WSJ lead with oil relief, Bloomberg/CNN lead with bond-market stabilization, Yahoo frames equities as shrugging off the selloff",
-      "outlier_watch": "NDX (+0.48%) lagged the Dow (+0.93%) despite the premarket tape showing NQ leadership, and HY spreads widened (2.73→2.80) even as equities rallied — credit did not confirm the risk-on"
+      "outlier_watch": "NDX (+0.48%) lagged the Dow (+0.93%) despite the premarket tape showing NQ leadership, and HY spreads widened (2.73→2.80) even as equities rallied — credit did not confirm the risk-on",
+      "horizon_grades": {},
+      "lesson_schema_ok": true
     },
     {
       "date": "2026-09-25",
