@@ -4,6 +4,9 @@ Layout
 ------
 data/prices/
   ohlc.parquet     long table: date, ticker, open, high, low, close, volume
+                   raw prints (auto_adjust=False). A stored bar is never replaced.
+  actions.parquet  dated split/dividend factors: date, ticker, dividend, split, close
+                   keep-first. Indicators apply only events with ex-date before D.
   meta.json        {last_date, n_rows, n_tickers, updated}
 
 CLI
@@ -29,10 +32,15 @@ ROOT = Path(__file__).resolve().parent.parent
 EXPORT_DIR = ROOT / "data" / "exports"
 PRICE_DIR = ROOT / "data" / "prices"
 STORE_PATH = PRICE_DIR / "ohlc.parquet"
+ACTIONS_PATH = PRICE_DIR / "actions.parquet"
 META_PATH = PRICE_DIR / "meta.json"
 ET = ZoneInfo(config.TZ)
+_ACTION_CACHE: dict[str, list[dict]] | None = None
+_PENDING_ACTIONS: list[pd.DataFrame] = []
 
 CHUNK = 80
+# The locked tape is the printed session. Adjusted history is never stored.
+AUTO_ADJUST = False
 
 
 def _universe_tickers() -> list[str]:
@@ -75,7 +83,9 @@ def _save_store(df: pd.DataFrame) -> None:
     df = df.copy()
     df["date"] = pd.to_datetime(df["date"]).dt.normalize()
     df["ticker"] = df["ticker"].astype(str).str.upper()
-    df = df.drop_duplicates(subset=["date", "ticker"], keep="last")
+    # A stored bar is the print we already decided from. A later Yahoo
+    # download must not replace it. New (date, ticker) rows still append.
+    df = df.drop_duplicates(subset=["date", "ticker"], keep="first")
     df = df.sort_values(["ticker", "date"]).reset_index(drop=True)
     df.to_parquet(STORE_PATH, index=False)
     meta = {
@@ -89,6 +99,7 @@ def _save_store(df: pd.DataFrame) -> None:
     print(
         f"[price_store] saved {meta['n_rows']:,} rows / {meta['n_tickers']:,} tickers "
         f"[{meta['first_date']} → {meta['last_date']}]")
+    _flush_actions()
 
 
 def status() -> None:
@@ -113,7 +124,8 @@ def _yf_bound(raw) -> str:
 yahoo_day = _yf_bound
 
 
-def _yf_download(tickers: list[str], start: str, end: str) -> pd.DataFrame:
+def _yf_download(tickers: list[str], start: str, end: str, *,
+                strict: bool = False) -> pd.DataFrame:
     try:
         import yfinance as yf
     except ImportError as e:
@@ -121,20 +133,41 @@ def _yf_download(tickers: list[str], start: str, end: str) -> pd.DataFrame:
     if not tickers:
         return pd.DataFrame()
     start, end = _yf_bound(start), _yf_bound(end)
+    if AUTO_ADJUST:
+        raise RuntimeError(
+            "price store refuses adjusted bars; auto_adjust stays false")
     try:
-        # Printed regular-session Open/High/Low/Close — not split-adjusted
-        # history and not a live last-trade. Factor-mine 09:30 / 16:00
-        # marks must match the tape the user can look up.
+        # Yahoo daily bars with auto_adjust=False: split-adjusted, dividends
+        # not applied. That is the tape Factor Mine locks. auto_adjust=True
+        # (dividend-adjusted) is refused above. Not a live last-trade.
         raw = yf.download(
             tickers=tickers, start=start, end=end, group_by="ticker",
-            auto_adjust=False, actions=False, threads=True, progress=False,
+            auto_adjust=AUTO_ADJUST, actions=True, threads=True, progress=False,
         )
     except Exception as e:
         print(f"[price_store] download failed ({len(tickers)}): {e}")
+        if strict:
+            raise RuntimeError(
+                f"price download failed for {len(tickers)} names: {e}") from e
         return pd.DataFrame()
     if raw is None or raw.empty:
+        if strict:
+            raise RuntimeError(
+                f"price download returned no bars for {len(tickers)} names "
+                f"({start} → {end})")
         return pd.DataFrame()
-    return _flatten_yf(raw, tickers)
+    ohlc = _flatten_yf(raw, tickers)
+    try:
+        actions = _flatten_actions(raw, tickers)
+    except Exception as e:
+        print(f"[price_store] adjustment extract failed: {e}")
+        if strict:
+            raise RuntimeError(
+                f"adjustment factor extract failed for {len(tickers)} names: {e}"
+            ) from e
+        actions = pd.DataFrame()
+    _PENDING_ACTIONS.append(actions)
+    return ohlc
 
 
 def _flatten_yf(raw: pd.DataFrame, tickers: list[str]) -> pd.DataFrame:
@@ -207,6 +240,219 @@ def _flatten_yf(raw: pd.DataFrame, tickers: list[str]) -> pd.DataFrame:
     return pd.concat(rows, ignore_index=True)
 
 
+def _symbol_frames(raw: pd.DataFrame, tickers: list[str]):
+    """Yield (symbol, single-ticker frame) for either yfinance column layout."""
+    if raw is None or raw.empty:
+        return
+    if not isinstance(raw.columns, pd.MultiIndex):
+        if len(tickers) == 1:
+            yield tickers[0], raw
+        return
+    levels0 = set(raw.columns.get_level_values(0))
+    levels1 = set(raw.columns.get_level_values(1)) if raw.columns.nlevels > 1 else set()
+    ticker_set = {str(t).upper() for t in tickers}
+    if ticker_set & {str(x).upper() for x in levels0}:
+        for sym in tickers:
+            if sym not in levels0:
+                continue
+            try:
+                yield sym, raw[sym]
+            except Exception:
+                continue
+    elif ticker_set & {str(x).upper() for x in levels1}:
+        for sym in tickers:
+            try:
+                yield sym, raw.xs(sym, axis=1, level=1, drop_level=True)
+            except Exception:
+                continue
+    elif len(tickers) == 1:
+        yield tickers[0], raw
+
+
+def _action_rows(df: pd.DataFrame, sym: str) -> pd.DataFrame:
+    """One row per ex-date that has a dividend or a non-trivial split."""
+    empty = pd.DataFrame(columns=["date", "ticker", "dividend", "split", "close"])
+    if df is None or df.empty:
+        return empty
+    part = df.dropna(how="all").copy()
+    if part.empty:
+        return empty
+    if isinstance(part.columns, pd.MultiIndex):
+        part.columns = [
+            str(c[-1] if c[-1] not in ("", None) else c[0]) for c in part.columns
+        ]
+    lower = {str(c).strip().lower(): c for c in part.columns}
+
+    def find(*names: str):
+        for name in names:
+            if name in lower:
+                return lower[name]
+        return None
+
+    div_c = find("dividends", "dividend")
+    spl_c = find("stock splits", "stock split", "splits", "split")
+    close_c = find("close")
+    if div_c is None and spl_c is None:
+        return empty
+    part = part.reset_index()
+    date_col = "Date" if "Date" in part.columns else part.columns[0]
+    out = pd.DataFrame({
+        "date": pd.to_datetime(part[date_col], errors="coerce"),
+        "ticker": str(sym).upper(),
+        "dividend": pd.to_numeric(part[div_c], errors="coerce") if div_c is not None else 0.0,
+        "split": pd.to_numeric(part[spl_c], errors="coerce") if spl_c is not None else 0.0,
+        "close": pd.to_numeric(part[close_c], errors="coerce") if close_c is not None else None,
+    })
+    out = out.dropna(subset=["date"])
+    div = out["dividend"].fillna(0.0)
+    spl = out["split"].fillna(0.0)
+    keep = (div > 0) | ((spl > 0) & ((spl - 1.0).abs() > 1e-12))
+    return out.loc[keep].reset_index(drop=True)
+
+
+def _flatten_actions(raw: pd.DataFrame, tickers: list[str]) -> pd.DataFrame:
+    rows = []
+    for sym, frame in _symbol_frames(raw, tickers):
+        part = _action_rows(frame, sym)
+        if len(part):
+            rows.append(part)
+    if not rows:
+        return pd.DataFrame(columns=["date", "ticker", "dividend", "split", "close"])
+    return pd.concat(rows, ignore_index=True)
+
+
+def _load_actions() -> pd.DataFrame:
+    cols = ["date", "ticker", "dividend", "split", "close"]
+    if not ACTIONS_PATH.exists():
+        return pd.DataFrame(columns=cols)
+    df = pd.read_parquet(ACTIONS_PATH)
+    for col in cols:
+        if col not in df.columns:
+            df[col] = None
+    df["date"] = pd.to_datetime(df["date"]).dt.normalize()
+    df["ticker"] = df["ticker"].astype(str).str.upper()
+    return df[cols]
+
+
+def _save_actions(df: pd.DataFrame) -> None:
+    """Keep the first stored factor for each (date, ticker). New events append."""
+    if df is None or not len(df):
+        return
+    PRICE_DIR.mkdir(parents=True, exist_ok=True)
+    existing = _load_actions()
+    frames = [existing] if len(existing) else []
+    frames.append(df)
+    out = pd.concat(frames, ignore_index=True)
+    out["date"] = pd.to_datetime(out["date"]).dt.normalize()
+    out["ticker"] = out["ticker"].astype(str).str.upper()
+    out["dividend"] = pd.to_numeric(out["dividend"], errors="coerce").fillna(0.0)
+    out["split"] = pd.to_numeric(out["split"], errors="coerce").fillna(0.0)
+    out["close"] = pd.to_numeric(out["close"], errors="coerce")
+    out = out.drop_duplicates(subset=["date", "ticker"], keep="first")
+    out = out.sort_values(["ticker", "date"]).reset_index(drop=True)
+    out.to_parquet(ACTIONS_PATH, index=False)
+    reset_action_cache()
+    print(f"[price_store] actions {len(out):,} events", flush=True)
+
+
+def _flush_actions() -> None:
+    global _PENDING_ACTIONS
+    frames = [f for f in _PENDING_ACTIONS if f is not None and len(f)]
+    _PENDING_ACTIONS = []
+    if not frames:
+        return
+    _save_actions(pd.concat(frames, ignore_index=True))
+
+
+def reset_action_cache() -> None:
+    global _ACTION_CACHE
+    _ACTION_CACHE = None
+
+
+def _events_for(ticker: str) -> list[dict]:
+    """Split/dividend events for one ticker, oldest first."""
+    global _ACTION_CACHE
+    if _ACTION_CACHE is None:
+        cache: dict[str, list[dict]] = {}
+        df = _load_actions()
+        if len(df):
+            ordered = df.sort_values(["ticker", "date"])
+            for rec in ordered.itertuples(index=False):
+                day = str(rec.date)[:10]
+                try:
+                    dividend = float(rec.dividend or 0)
+                except (TypeError, ValueError):
+                    dividend = 0.0
+                try:
+                    split = float(rec.split or 0)
+                except (TypeError, ValueError):
+                    split = 0.0
+                try:
+                    close = float(rec.close) if rec.close == rec.close else 0.0
+                except (TypeError, ValueError):
+                    close = 0.0
+                cache.setdefault(str(rec.ticker).upper(), []).append({
+                    "date": day,
+                    "dividend": dividend,
+                    "split": split,
+                    "close": close,
+                })
+        _ACTION_CACHE = cache
+    return list(_ACTION_CACHE.get(str(ticker or "").upper(), []))
+
+
+def adjust_bars_asof(bars: list[dict], asof: str,
+                     ticker: str | None = None) -> list[dict]:
+    """Adjust OHLC using only split/dividend events with ex-date strictly before ``asof``.
+
+    The stored tape stays raw. A bar on an ex-date keeps its raw print.
+    Older bars are scaled by every later event that is still before ``asof``.
+    A missing actions file leaves every bar unchanged.
+    """
+    copied = [dict(b) for b in (bars or [])]
+    asof = str(asof or "")[:10]
+    if not copied or len(asof) != 10:
+        return copied
+    tick = str(ticker or copied[0].get("ticker") or "").strip().upper()
+    if not tick:
+        return copied
+    events = [e for e in _events_for(tick) if e["date"] < asof]
+    if not events:
+        return copied
+    out = []
+    for bar in copied:
+        bdate = str(bar.get("date") or "")[:10]
+        factor = 1.0
+        vol_factor = 1.0
+        for ev in events:
+            if ev["date"] <= bdate:
+                continue
+            split = float(ev.get("split") or 0)
+            if split > 0 and abs(split - 1.0) > 1e-12:
+                factor /= split
+                vol_factor *= split
+            dividend = float(ev.get("dividend") or 0)
+            close = float(ev.get("close") or 0)
+            if dividend > 0 and close > dividend:
+                factor *= (close - dividend) / close
+        item = dict(bar)
+        for key in ("open", "high", "low", "close"):
+            val = item.get(key)
+            if val is None:
+                continue
+            try:
+                item[key] = float(val) * factor
+            except (TypeError, ValueError):
+                continue
+        if item.get("volume") is not None and vol_factor != 1.0:
+            try:
+                item["volume"] = float(item["volume"]) * vol_factor
+            except (TypeError, ValueError):
+                pass
+        out.append(item)
+    return out
+
+
 def bootstrap(days: int = 400, tickers: list[str] | None = None, resume: bool = True) -> None:
     names = tickers or _universe_tickers()
     end = datetime.now(ET).date() + timedelta(days=1)
@@ -264,7 +510,8 @@ def update(lookback_days: int = 7) -> None:
     _save_store(pd.concat(frames, ignore_index=True))
 
 
-def fill_range(start: str, end: str, tickers: list[str] | None = None) -> None:
+def fill_range(start: str, end: str, tickers: list[str] | None = None,
+               *, strict: bool = False) -> None:
     """Download official regular-session bars for every universe name in [start, end].
 
     ``update()`` keys off the store's max date, so a handful of seeded
@@ -283,13 +530,20 @@ def fill_range(start: str, end: str, tickers: list[str] | None = None) -> None:
         batch = names[i : i + CHUNK]
         print(f"[price_store] fill chunk {i//CHUNK+1}/{n_chunks} ({batch[0]}…{batch[-1]})")
         try:
-            part = _yf_download(batch, start, end)
+            part = _yf_download(batch, start, end, strict=False)
             if not len(part):
                 time.sleep(6)
-                part = _yf_download(batch, start, end)
+                part = _yf_download(batch, start, end, strict=strict)
         except Exception as e:
             print(f"[price_store] fill chunk failed: {e}")
-            part = pd.DataFrame()
+            if not strict:
+                part = pd.DataFrame()
+            else:
+                time.sleep(6)
+                part = _yf_download(batch, start, end, strict=True)
+        if strict and not len(part):
+            raise RuntimeError(
+                f"price fill returned no bars for {batch[0]}…{batch[-1]}")
         if len(part):
             frames.append(part)
             if (i // CHUNK) % 8 == 7:
@@ -301,7 +555,8 @@ def fill_range(start: str, end: str, tickers: list[str] | None = None) -> None:
 
 
 def ensure_through(end: str | None = None,
-                   tickers: list[str] | None = None) -> None:
+                   tickers: list[str] | None = None,
+                   *, strict: bool = False) -> None:
     """Fill official regular-session bars through the last closed session.
 
     Prefer the names we actually mark. A full-universe yahoo walk dies on
@@ -316,6 +571,7 @@ def ensure_through(end: str | None = None,
     if target_s > closed:
         target_s = closed
     want = sorted({str(t).upper() for t in (tickers or []) if t})
+    requested = list(want)
     n_on = 0
     have = set()
     if len(existing):
@@ -338,7 +594,19 @@ def ensure_through(end: str | None = None,
           f"(have {n_on} bars; fetch {len(want) if want else 'universe'})")
     start = (datetime.strptime(target_s, "%Y-%m-%d").date() - timedelta(days=21)).isoformat()
     stop = (datetime.strptime(target_s, "%Y-%m-%d").date() + timedelta(days=1)).isoformat()
-    fill_range(start, stop, want or None)
+    fill_range(start, stop, want or None, strict=strict)
+    if strict and requested:
+        stored = _load_store()
+        have_now: set[str] = set()
+        if len(stored):
+            on_now = stored[stored["date"] == pd.Timestamp(target_s)]
+            if len(on_now):
+                have_now = {str(t).upper() for t in on_now["ticker"].tolist()}
+        missing = [t for t in requested if t not in have_now]
+        if missing:
+            raise RuntimeError(
+                f"price store missing {target_s} bars for {len(missing)} "
+                f"names sample={missing[:12]}")
 
 
 def candle_bias(ohlc: pd.DataFrame, lookback: int = 10) -> dict:

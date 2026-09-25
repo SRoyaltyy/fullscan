@@ -1474,7 +1474,7 @@ def test_repair_aux_replaces_starved_day() -> None:
     assert any("yday_gainer" in (r.get("sources") or []) for r in out["rows"])
 
 
-def test_land_closed_remines_when_aux_starved() -> None:
+def test_land_closed_keeps_starved_history() -> None:
     import tempfile
     from pathlib import Path
     from unittest import mock
@@ -1519,8 +1519,8 @@ def test_land_closed_remines_when_aux_starved() -> None:
                     mock.patch.object(fm, "run",
                                       return_value={"n_rows": 80}) as run:
                 out = fm.land_closed("2026-08-13", write=False)
-            run.assert_called_once()
-            assert out["n_rows"] == 80
+            run.assert_not_called()
+            assert out["to_date"] == "2026-09-16"
 
             panel_path.write_text(json.dumps(healthy_panel), encoding="utf-8")
             with mock.patch.object(fm, "last_closed_session",
@@ -1532,6 +1532,56 @@ def test_land_closed_remines_when_aux_starved() -> None:
             assert skipped["to_date"] == "2026-09-16"
         finally:
             fm.PANEL_PATH, fm.OUT_JSON = orig
+
+
+def test_second_land_on_locked_day_changes_no_file() -> None:
+    """A queued second --write --land-closed exits 0 and rewrites nothing."""
+    import tempfile
+    from pathlib import Path
+    from unittest import mock
+
+    date = "2026-09-16"
+    payload = {
+        "from_date": "2026-08-13",
+        "to_date": date,
+        "dates": [date],
+        "daily": {"demo": [{"date": date}]},
+        "mornings": {date: {"s": 1.0}},
+        "recipes": [{"name": "union_h1", "universe": "union", "hold": 1}],
+        "n_recipes": 1,
+        "n_rows": 1,
+        "n_sessions": 1,
+    }
+    with tempfile.TemporaryDirectory() as d:
+        tmp = Path(d)
+        panel_path = tmp / "panel.json"
+        out_path = tmp / "out.json"
+        snap = tmp / "snapshots" / f"{date}.json"
+        snap.parent.mkdir()
+        panel = {
+            "from_date": "2026-08-13",
+            "to_date": date,
+            "lookback": fm.PANEL_LOOKBACK,
+            "session_dates": [date],
+            "rows": [{"date": date, "ticker": "AAA"}],
+        }
+        panel_path.write_text(json.dumps(panel), encoding="utf-8")
+        out_path.write_text(json.dumps(payload), encoding="utf-8")
+        snap.write_text(json.dumps({"date": date, "locked": True}), encoding="utf-8")
+        before = {p: p.read_bytes() for p in (panel_path, out_path, snap)}
+        orig = (fm.PANEL_PATH, fm.OUT_JSON)
+        fm.PANEL_PATH = panel_path
+        fm.OUT_JSON = out_path
+        try:
+            with mock.patch.object(fm, "last_closed_session", return_value=date):
+                rc = fm.main([
+                    "--from-date", "2026-08-13", "--write", "--land-closed",
+                ])
+        finally:
+            fm.PANEL_PATH, fm.OUT_JSON = orig
+        assert rc == 0
+        for path, raw in before.items():
+            assert path.read_bytes() == raw, path.name
 
 
 def test_yahoo_day_strips_iso_time() -> None:
@@ -1601,9 +1651,19 @@ def test_factor_mine_workflow_lands_after_close() -> None:
     assert 'cron: "25 20 * * 1-5"' in yml
     assert 'cron: "0 12 * * 6"' in yml
     assert "data/factor_mine/panel.json" in yml
+    assert "data/factor_mine/snapshots/" in yml
+    assert "data/factor_mine/prices/" in yml
+    assert "data/prices/ohlc.parquet" in yml
+    assert "data/prices/actions.parquet" in yml
+    assert "data/prices/meta.json" in yml
+    assert "assert_history_unchanged" in yml
+    assert "--restate" in yml
     assert "Stock Book ALL (one-shot)" in yml
     assert "assert_publish_budget" in yml
     assert "03_scoreboard/factor_mine/" in yml
+    # A 16:40 dispatch must queue behind the 16:25 lock, not cancel it.
+    assert "cancel-in-progress: false" in yml
+    assert "cancel-in-progress: ${{ github.event_name == 'workflow_dispatch' }}" not in yml
 
 
 def test_session_calendar_includes_completed_predict_day() -> None:
@@ -2796,7 +2856,8 @@ if __name__ == "__main__":
     test_candidates_one_day_cal_still_hits_prior_export()
     test_aux_starved_dates_ignores_first_session()
     test_repair_aux_replaces_starved_day()
-    test_land_closed_remines_when_aux_starved()
+    test_land_closed_keeps_starved_history()
+    test_second_land_on_locked_day_changes_no_file()
     test_yahoo_day_strips_iso_time()
     test_simulate_split_indexes_daily_by_date()
     test_factor_mine_workflow_lands_after_close()

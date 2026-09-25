@@ -118,6 +118,10 @@ on:
         required: false
         default: false
         type: boolean
+      restate:
+        description: "Rewrite one frozen session YYYY-MM-DD (logged). Empty keeps history append-only."
+        required: false
+        default: ""
       oppset_union:
         description: "Add Theme Radar Clock-B oppset top-30 as panel source (FULLSCAN_OPPSET_UNION=1)"
         required: false
@@ -130,7 +134,7 @@ permissions:
 
 concurrency:
   group: factor-strategy-mine
-  cancel-in-progress: ${{ github.event_name == 'workflow_dispatch' }}
+  cancel-in-progress: false
 
 env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -152,6 +156,8 @@ jobs:
           python -m src.test_clock_b_tells
           python -m src.test_oppset_clock_b
           python -m src.test_factor_mine
+          python -m src.test_factor_mine_freeze
+          python -m src.test_price_actions
       - name: Mine recipes (cash book)
         env:
           FROM_DATE: ${{ inputs.from_date }}
@@ -170,6 +176,7 @@ jobs:
           AUTO: ${{ inputs.auto_tweak }}
           REBUILD: ${{ inputs.rebuild_panel }}
           LAND_CLOSED: ${{ inputs.land_closed }}
+          RESTATE: ${{ inputs.restate }}
           OPPSET_UNION: ${{ inputs.oppset_union }}
           FULLSCAN_OPPSET_UNION: ${{ (inputs.oppset_union == true || inputs.oppset_union == 'true') && '1' || '' }}
         run: |
@@ -188,6 +195,7 @@ jobs:
             ARGS=(--from-date "${FROM_DATE:-2026-08-13}" --write --land-closed)
             [ -n "${TO_DATE:-}" ] && ARGS+=(--to-date "$TO_DATE")
             [ "${REBUILD:-false}" = "true" ] && ARGS+=(--rebuild-panel)
+            [ -n "${RESTATE:-}" ] && ARGS+=(--restate "$RESTATE")
             python -m src.factor_mine "${ARGS[@]}"
           else
             ARGS=(--from-date "${FROM_DATE:-2026-08-13}" --write
@@ -199,6 +207,7 @@ jobs:
                   --s-boost "${S_BOOST:-auto}")
             [ -n "${TO_DATE:-}" ] && ARGS+=(--to-date "$TO_DATE")
             [ "${REBUILD:-false}" = "true" ] && ARGS+=(--rebuild-panel)
+            [ -n "${RESTATE:-}" ] && ARGS+=(--restate "$RESTATE")
             [ "${AUTO:-true}" = "false" ] && ARGS+=(--no-auto-tweak)
             python -m src.factor_mine "${ARGS[@]}"
           fi
@@ -209,6 +218,8 @@ jobs:
           python - <<'PY'
           from pathlib import Path
           from src.factor_mine import COMMIT_SOFT_LIMIT, assert_publish_budget, load_scoreboard
+          from src.factor_mine_freeze import assert_history_unchanged
+          assert_history_unchanged()
           checked = assert_publish_budget()
           pack = load_scoreboard()
           print(
@@ -217,7 +228,7 @@ jobs:
               "books", len(pack.get("books") or {}),
               "files", len(checked),
           )
-          roots = [Path("03_scoreboard"), Path("dashboard/factor-mine"), Path("data/factor_mine")]
+          roots = [Path("03_scoreboard"), Path("dashboard/factor-mine"), Path("data/factor_mine"), Path("data/prices")]
           bad = []
           for root in roots:
               if not root.exists():
@@ -240,6 +251,12 @@ jobs:
             01_daily/factor_mine_action.md \
             data/factor_mine/start_dates.json \
             data/factor_mine/panel.json \
+            data/factor_mine/freeze_manifest.json \
+            data/factor_mine/snapshots/ \
+            data/factor_mine/prices/ \
+            data/prices/ohlc.parquet \
+            data/prices/actions.parquet \
+            data/prices/meta.json \
             dashboard/factor-mine/
         env:
           FROM_DATE: ${{ inputs.from_date }}

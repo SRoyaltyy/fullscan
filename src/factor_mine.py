@@ -2063,7 +2063,8 @@ def stamp_overnight_on_panel(panel: dict, *, write: bool = False) -> dict:
     return panel
 
 
-def build_panel(from_date: str = START, to_date: str | None = None) -> dict:
+def build_panel(from_date: str = START, to_date: str | None = None,
+                *, fail_closed: bool = False) -> dict:
     """Leak-free candidate rows for every *closed* session in the window.
 
     An empty ``to_date`` used to walk the whole stock-book calendar,
@@ -2089,12 +2090,32 @@ def build_panel(from_date: str = START, to_date: str | None = None) -> dict:
               if cal else {"by_date": {}})
     rows: list[dict] = []
     by_date: dict[str, list[dict]] = {}
+    excluded: list[dict] = []
     for date in cal:
         prior_sess = gc.prior_session(lookback, date)
         prior_export = gc.knowable_export_date(lookback, date)
         # Prior export only. Same-day Finviz is never a feature.
         prior_df = ga.load_finviz(prior_export) if prior_export else None
         plan = fla.flatten_day_targets(date)
+        dropped_rows: list[dict] = []
+        universe: list[str] = []
+        frozen: list[dict] | None = None
+        if fail_closed:
+            # Bars for every candidate before membership or hot_score.
+            # A gapped name is dropped. The day still locks. A rerun
+            # keeps the frozen dropped list even if Yahoo later fills it.
+            from . import factor_mine_freeze as fmf
+            universe = fmf.ranking_universe(
+                date, lookback, plan, movers.get("by_date") or {})
+            frozen = fmf.frozen_dropped(date)
+            if frozen is None:
+                found = fmf.ensure_candidate_bars(date, universe) or []
+                dropped_rows.extend(found)
+            else:
+                dropped_rows.extend(frozen)
+                print(f"[factor-mine] {date} frozen dropped n={len(frozen)}",
+                      flush=True)
+        dropped = {g.get("ticker") for g in dropped_rows}
         buckets = _candidates(date, lookback, plan, movers.get("by_date") or {})
         reasons: dict[str, list[str]] = {}
         order: list[str] = []
@@ -2110,15 +2131,48 @@ def build_panel(from_date: str = START, to_date: str | None = None) -> dict:
         sess = sess_map.get(date)
         prev_sess = sess_map.get(prior_sess) if prior_sess else None
         day_rows = []
+        late: list[dict] = []
         for i, t in enumerate(order):
             if sess is None:
+                continue
+            if t in dropped:
                 continue
             rec = _attach_row(
                 date, t, reasons[t], i, sess, prev_sess, prior_export, prior_df,
             )
+            if fail_closed and frozen is None:
+                from . import factor_mine_freeze as fmf
+                problem = fmf.row_price_problem(t, date)
+                if problem:
+                    late.append({
+                        "ticker": t,
+                        "missing": [problem],
+                        "reason": problem,
+                    })
+                    continue
             day_rows.append(rec)
+        if fail_closed and frozen is None:
+            from . import factor_mine_freeze as fmf
+            dropped_rows.extend(late)
+            bad = {g.get("ticker") for g in dropped_rows}
+            rankable = [t for t in universe if t not in bad]
+            if not rankable and not day_rows:
+                detail = "; ".join(
+                    g.get("reason") or "" for g in dropped_rows if g.get("reason")
+                )
+                reason = "no rankable names — skipping day"
+                if detail:
+                    reason = f"{reason}: {detail}"
+                raise fmf.SkipDay(date, reason)
+        for gap in dropped_rows:
+            item = dict(gap)
+            item["date"] = date
+            excluded.append(item)
         by_date[date] = day_rows
         rows.extend(day_rows)
+        if dropped_rows:
+            print(f"[factor-mine] {date} dropped {len(dropped_rows)}",
+                  flush=True)
         print(f"[factor-mine] panel {date} names={len(day_rows)} "
               f"total={len(rows)}", flush=True)
     return {
@@ -2132,6 +2186,7 @@ def build_panel(from_date: str = START, to_date: str | None = None) -> dict:
         "lookback": PANEL_LOOKBACK,
         "rows": rows,
         "by_date": by_date,
+        "dropped": excluded,
     }
 
 
@@ -2296,18 +2351,55 @@ def maybe_repair_aux_starved(panel: dict) -> dict:
 
 
 def load_or_build_panel(from_date: str = START, to_date: str | None = None,
-                        rebuild: bool = False) -> dict:
-    if not rebuild and PANEL_PATH.exists():
+                        rebuild: bool = False, *,
+                        fail_closed: bool = False,
+                        restate: list[str] | None = None) -> dict:
+    """Load the saved panel and append sessions that are not on it yet.
+
+    Already-landed dates are not rebuilt. ``--restate D`` rebuilds that
+    day. ``rebuild=True`` is the same append unless a restate date is
+    named — a full rewrite would change frozen history.
+    """
+    from . import factor_mine_freeze as fmf
+
+    restate_set = {str(d)[:10] for d in (restate or []) if d}
+    if rebuild and not restate_set:
+        print("[factor-mine] rebuild-panel does not rewrite landed days; "
+              "appending only. Use --restate D to correct one session.",
+              flush=True)
+    if not PANEL_PATH.exists():
+        return build_panel(from_date, to_date, fail_closed=fail_closed)
+    try:
         raw = json.loads(PANEL_PATH.read_text(encoding="utf-8"))
-        if panel_is_current(raw, from_date, to_date):
-            raw = maybe_repair_aux_starved(rehydrate_panel(raw))
-            print(f"[factor-mine] loaded panel {PANEL_PATH} "
-                  f"rows={raw.get('n_rows')} → {raw.get('to_date')}", flush=True)
-            return rehydrate_panel(raw)
-        print(f"[factor-mine] panel stale "
-              f"{raw.get('to_date')} != live {live_panel_end(from_date, to_date)} "
-              f"— rebuilding so leftover lots get a mark", flush=True)
-    return build_panel(from_date, to_date)
+    except (OSError, json.JSONDecodeError):
+        return build_panel(from_date, to_date, fail_closed=fail_closed)
+    raw = fmf.apply_frozen_snapshots(rehydrate_panel(raw))
+    if restate_set:
+        for date in sorted(restate_set):
+            extra = build_panel(date, date, fail_closed=fail_closed)
+            raw = merge_panel_days(raw, extra)
+    end = live_panel_end(from_date, to_date)
+    want = [d for d in panel_lookback_calendar(from_date, to_date)
+            if d >= from_date and (not end or d <= end)]
+    have = set(raw.get("session_dates") or [])
+    for date in want:
+        if date in have and date not in restate_set:
+            continue
+        if date in restate_set:
+            continue
+        try:
+            extra = build_panel(date, date, fail_closed=fail_closed)
+        except fmf.HoldDay as e:
+            print(f"[factor-mine] {e}", flush=True)
+            break
+        raw = merge_panel_days(raw, extra)
+        have.add(date)
+    print(f"[factor-mine] loaded panel {PANEL_PATH} "
+          f"rows={raw.get('n_rows')} → {raw.get('to_date')} "
+          f"(landed dates kept)", flush=True)
+    if to_date:
+        return slice_panel(raw, from_date, to_date)
+    return raw
 
 
 def _tapes(cal: list[str]) -> dict:
@@ -2553,34 +2645,15 @@ def run(from_date: str = START, to_date: str | None = None,
         combo_specs: list[dict] | None = None) -> dict:
     from . import factor_mine_book as fmb
     recipes = list(recipes or build_recipes())
-    end = to_date or live_panel_end(from_date, to_date)
-    if write or persist_panel or rebuild_panel:
-        try:
-            from . import price_store as ps
-            held = _held_tickers_from_disk()
-            # Official bars *before* the panel walk so 09:30 / 16:00
-            # exist on the new session. Held lots first — a full-universe
-            # yahoo walk used to die on junk tickers.
-            ps.ensure_through(end, tickers=sorted(held) or None)
-            tl.reset_price_caches()
-        except (Exception, SystemExit) as e:
-            print(f"[factor-mine] price ensure skipped: {e}", flush=True)
+    # New sessions fetch the ranking universe inside build_panel
+    # (fail_closed) before membership. Last night's held names are not
+    # the candidate set — that feedback made ohlc_hot alternate.
+    # A fetch failure raises. It is not swallowed into hot_score 0.
     panel = (panel if panel is not None
-             else load_or_build_panel(from_date, to_date, rebuild=rebuild_panel))
+             else load_or_build_panel(
+                 from_date, to_date, rebuild=rebuild_panel,
+                 fail_closed=bool(write or persist_panel or rebuild_panel)))
     attach_tape_flow(panel)
-    if write or persist_panel or rebuild_panel:
-        try:
-            from . import price_store as ps
-            names = {str(r.get("ticker") or "").upper()
-                     for r in (panel.get("rows") or []) if r.get("ticker")}
-            held = _held_tickers_from_disk()
-            need = sorted(names | held)
-            if need:
-                ps.ensure_through(end or panel.get("to_date"), tickers=need)
-                tl.reset_price_caches()
-            panel = refresh_panel_marks(panel)
-        except (Exception, SystemExit) as e:
-            print(f"[factor-mine] price ensure skipped: {e}", flush=True)
     if persist_panel:
         PANEL_PATH.parent.mkdir(parents=True, exist_ok=True)
         slim = {k: v for k, v in panel.items() if k != "by_date"}
@@ -2713,29 +2786,6 @@ def run(from_date: str = START, to_date: str | None = None,
             books=books if (paths or {}).get("write_actions", True) else None,
             paths=paths)
     return payload
-
-
-def _held_tickers_from_disk() -> set[str]:
-    """Names still on a mined book — they need a mark even if today's list is empty."""
-    out: set[str] = set()
-    if not OUT_JSON.is_file():
-        return out
-    doc = load_scoreboard()
-    if not doc:
-        return out
-    for bk in (doc.get("books") or {}).values():
-        for t in (bk or {}).get("trades") or []:
-            if t.get("ticker"):
-                out.add(_tick(t["ticker"]))
-            for n in t.get("overnight") or t.get("open_held") or []:
-                name = n.get("ticker") if isinstance(n, dict) else str(n).split("×")[0]
-                if name:
-                    out.add(_tick(name))
-        for d in (bk or {}).get("daily") or []:
-            for m in (d.get("marks") or d.get("overnight") or []):
-                if isinstance(m, dict) and m.get("ticker"):
-                    out.add(_tick(m["ticker"]))
-    return {t for t in out if t}
 
 
 def _bought_tickers(books: dict | None, starts: dict | None = None) -> set[str]:
@@ -3247,6 +3297,11 @@ def write_outputs(payload: dict, stats: list[dict] | None = None,
                   paths: dict | None = None,
                   always=None, keep_names: set[str] | None = None,
                   pin_long_led: bool = True) -> None:
+    from . import factor_mine_freeze as fmf
+    meta = fmf.freeze_meta()
+    if meta.get("first_frozen"):
+        payload = dict(payload)
+        payload["freeze"] = meta
     dest = paths or publish_paths()
     dest_json = Path(dest["json"])
     dest_md = Path(dest["md"])
@@ -3289,6 +3344,8 @@ def write_outputs(payload: dict, stats: list[dict] | None = None,
         "`flatten_live_*` = only when the live flatten gate fires. "
         "Research only — does not change live `flatten_robust`.",
         "",
+    ]
+    lines += [
         "Scoreboard files: slim `factor_mine.json` (stats / recipes / "
         "series) plus gzip shards in `factor_mine/shards/` "
         "(`books`, `starts`, `daily`, `probe`, `sim`). One file used "
@@ -3835,7 +3892,18 @@ def extend_pack_through(date: str, *, write: bool = False) -> dict:
     starts get ``date`` as pending so Pages is not yesterday's pack.
     """
     closed = last_closed_session(START)
-    extra = build_panel(date, date)
+    try:
+        extra = build_panel(date, date, fail_closed=True)
+    except Exception as e:
+        from . import factor_mine_freeze as fmf
+        if not isinstance(e, fmf.HoldDay):
+            raise
+        print(f"[factor-mine] extend held: {e}", flush=True)
+        if OUT_JSON.is_file():
+            payload = load_scoreboard()
+            if payload:
+                return payload
+        return {}
     raw: dict = {}
     if PANEL_PATH.is_file():
         try:
@@ -3940,16 +4008,16 @@ def refresh_panel_window(from_date: str, to_date: str | None = None,
 
 def land_closed(from_date: str = START, write: bool = False,
                 rebuild_panel: bool = False,
-                to_date: str | None = None) -> dict:
+                to_date: str | None = None,
+                restate: list[str] | None = None) -> dict:
     """Roll the existing recipe set through the last closed session.
 
     Does not rediscover the cartesian grid. Morning Pre-Open / Stock Book
     triggers become a no-op once yesterday is already on the board;
     post-close / 16:25 ET schedule lands today.
 
-    A payload that already covers ``target`` still remines when the
-    cached panel is flatten-only (aux list builders silent after a
-    one-day lookback). That is how 2026-09-16→18 starved.
+    A payload that already covers ``target`` is not remined. Flatten-only
+    history stays as published. ``--restate D`` is the logged correction.
 
     An explicit ``to_date`` past last_closed extends the pack with a
     pending start (no mid-day close mark) so Pages shows today's session.
@@ -3962,17 +4030,21 @@ def land_closed(from_date: str = START, write: bool = False,
     payload = {}
     if OUT_JSON.is_file():
         payload = load_scoreboard()
-    if not rebuild_panel and payload_covers_session(payload, target):
-        if not panel_aux_needs_repair():
-            print(f"[factor-mine] land-closed: {target} already on the board — skip",
-                  flush=True)
-            return payload
-        print(
-            f"[factor-mine] land-closed: {target} already on the board but "
-            "aux panel is flatten-only — remine so union feeds land",
-            flush=True,
-        )
-    recs = existing_single_recipes(payload)
+    restate_set = {str(d)[:10] for d in (restate or []) if d}
+    if payload_covers_session(payload, target) and target not in restate_set:
+        if panel_aux_needs_repair():
+            print(
+                f"[factor-mine] land-closed: {target} aux panel is flatten-only — "
+                "history stays byte-identical. Pass --restate D to correct a day.",
+                flush=True,
+            )
+        print(f"[factor-mine] land-closed: {target} already on the board — skip",
+              flush=True)
+        return payload
+    if rebuild_panel and not restate_set:
+        print("[factor-mine] land-closed: --rebuild-panel does not rewrite "
+              "landed days; appending the new session only.", flush=True)
+    recs = list(payload.get("recipes") or []) or existing_single_recipes(payload)
     if not recs:
         from . import factor_mine_book as fmb
         recs = fmb.recipes_from_action(auto_tweak=False)
@@ -3983,13 +4055,23 @@ def land_closed(from_date: str = START, write: bool = False,
             flush=True,
         )
         return extend_pack_through(target, write=write)
-    print(f"[factor-mine] land-closed → {target} recipes={len(recs)}",
-          flush=True)
-    return run(
-        from_date, target, write=write, recipes=recs,
-        rebuild_panel=rebuild_panel, persist_panel=write,
-        book=True, combos=True,
+    print(f"[factor-mine] land-closed → {target} recipes={len(recs)} "
+          f"(append frozen day)", flush=True)
+    from . import factor_mine_freeze as fmf
+    frozen = fmf.append_land(
+        from_date, target, write=write, restate=sorted(restate_set),
+        recipes=recs, payload=payload,
     )
+    landed = list(frozen.pop("_frozen_dates", []) or [])
+    if write and landed:
+        # Inputs for the new session are frozen. The published books still
+        # come from the existing mine.
+        return run(
+            from_date, target, write=True, recipes=recs,
+            rebuild_panel=False, persist_panel=False,
+            book=True, combos=True,
+        )
+    return frozen
 
 
 def sweep_white_horizon(panel: dict, *, bars=None, fees=None,
@@ -4148,6 +4230,8 @@ def main(argv=None) -> int:
     ap.add_argument("--sweep-bracket", action="store_true",
                     help="cash-book sweep: take-profit / stop-loss on top of hold")
     ap.add_argument("--rebuild-panel", action="store_true")
+    ap.add_argument("--restate", action="append", default=[], metavar="YYYY-MM-DD",
+                    help="rewrite one frozen session and log the previous sha256")
     ap.add_argument("--refresh-window", action="store_true",
                     help="rebuild --from-date..--to-date panel rows with lookback")
     ap.add_argument("--stamp-overnight", action="store_true",
@@ -4271,11 +4355,16 @@ def main(argv=None) -> int:
               f"added={(panel.get('overnight_stamp') or {}).get('added')} "
               f"to={panel.get('to_date')}")
         return 0
+    if args.restate and not args.land_closed:
+        print("[factor-mine] --restate uses the append-only land path",
+              flush=True)
+        args.land_closed = True
     if args.land_closed:
         payload = land_closed(
             args.from_date, write=args.write,
             rebuild_panel=args.rebuild_panel,
             to_date=args.to_date or None,
+            restate=list(args.restate or []),
         )
     else:
         recipes = fmb.recipes_from_action(
