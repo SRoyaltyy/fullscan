@@ -2,12 +2,15 @@
 
 Rules for this mine: [IRONCLAD_RULES.md](../IRONCLAD_RULES.md).
 
+The frozen rules are logged experiments, not keepers. `keep_bar_met` is false. 12 train fires against the 30-fire bar. Excel's luck test p=0.87.
+
 `oos0914_break10_h2_sx` made +0.28% on the 9 locked test sessions (2026-09-14 through 2026-09-24) after fees, versus random picks -6.87% and IWM -1.44%. Without its best stock (SDGR) that test window was -3.04%. `oos0914_rvol_lg_h1_sx` made -7.57% on the 9 locked test sessions (2026-09-14 through 2026-09-24) after fees, versus random picks -6.87% and IWM -1.44%. Without its best stock (CYPH) that test window was -9.19%. `oos0914_break10_h1_sx` made -15.35% on the 9 locked test sessions (2026-09-14 through 2026-09-24) after fees, versus random picks -6.87% and IWM -1.44%. Without its best stock (HLP) that test window was -16.68%. `oos0914_zero_candle_h2_sx` made +3.87% on the 9 locked test sessions (2026-09-14 through 2026-09-24) after fees, versus random picks -6.87% and IWM -1.44%. Without its best stock (WGS) that test window was +1.33%.
 
 ## Train
 
 Train sessions: 2026-08-13 through 2026-09-11 (21 days). RANDOM4 mean -2.79% (seed 20260813, 1000 draws). IWM buy-and-hold -3.02%. Best-of-37 null +4.66% (the random-book percentile a search of this size should expect to win).
 War room rules were seen on 2026-09-14 through 2026-09-25. Their clean record starts 2026-09-28. The train numbers are the pre-registered selection window.
+Each train row's daily path keeps the Futubull return in `ret_pct`. `ret_pct_flat_15bp` is those same picks and fills priced with a flat 15 bp fee (7.5 bp per side) instead.
 
 | rule | after fees | start-day win rate | fires | win rate | asymmetric | best stock | without best stock | pass |
 | --- | ---: | ---: | ---: | ---: | ---: | --- | ---: | --- |
@@ -51,63 +54,71 @@ War room rules were seen on 2026-09-14 through 2026-09-25. Their clean record st
 
 ## Test days
 
-Each day uses that morning's frozen 09:30 snapshot and the prior close (cash, holdings, fees). A missing print is left on the snapshot's dropped list. The day still locks. Fills: buy at the open; a stop fills at the level, or at the open if the open gaps through it; if the same bar also hits a take-profit, the stop fills first.
+Each day uses that morning's frozen 09:30 snapshot and the prior close (cash, holdings, fees). A missing print is left on the snapshot's dropped list. The day still locks. Fills: buy at the open; a stop fills at the level, or at the open if the open gaps through it; if the same bar also hits a take-profit, the stop fills first. The flat 15bp column prices those same fills at 7.5 bp per side.
 
 ### `oos0914_break10_h2_sx`
 
-| date | buys | sells | fees | cash | equity | day |
-| --- | --- | --- | ---: | ---: | ---: | ---: |
-| 2026-09-14 | — | — | 0 | 10000.0 | 10000.0 | +0.00% |
-| 2026-09-15 | — | — | 0 | 10000.0 | 10000.0 | +0.00% |
-| 2026-09-16 | INDP,HLP,SDGR,CAI | — | 31.2809 | 0.43 | 10109.01 | +1.09% |
-| 2026-09-17 | — | — | 0 | 0.43 | 11445.02 | +13.22% |
-| 2026-09-18 | INDP,SDGR,TEM,LVWR | CAI,HLP,INDP,SDGR | 69.4955 | 0.0 | 10979.12 | -4.07% |
-| 2026-09-21 | — | — | 0 | 0.0 | 10581.54 | -3.62% |
-| 2026-09-22 | GRAL,NUAI,ARM,ARQQ | INDP,LVWR,SDGR,TEM | 49.3574 | 127.57 | 10480.04 | -0.96% |
-| 2026-09-23 | FEAM,SVIA | — | 0.6573 | 66.28 | 10418.17 | -0.59% |
-| 2026-09-24 | — | ARM,ARQQ,GRAL,NUAI | 11.2467 | 9972.65 | 10028.12 | -3.74% |
+Logged experiment, not a keeper. `keep_bar_met` is false.
+
+| date | buys | sells | fees | cash | equity | day | flat 15bp |
+| --- | --- | --- | ---: | ---: | ---: | ---: | ---: |
+| 2026-09-14 | — | — | 0 | 10000.0 | 10000.0 | +0.00% | +0.00% |
+| 2026-09-15 | — | — | 0 | 10000.0 | 10000.0 | +0.00% | +0.00% |
+| 2026-09-16 | INDP,HLP,SDGR,CAI | — | 31.2809 | 0.43 | 10109.01 | +1.09% | +1.33% |
+| 2026-09-17 | — | — | 0 | 0.43 | 11445.02 | +13.22% | +13.19% |
+| 2026-09-18 | INDP,SDGR,TEM,LVWR | CAI,HLP,INDP,SDGR | 69.4955 | 0.0 | 10979.12 | -4.07% | -3.60% |
+| 2026-09-21 | — | — | 0 | 0.0 | 10581.54 | -3.62% | -3.60% |
+| 2026-09-22 | GRAL,NUAI,ARM,ARQQ | INDP,LVWR,SDGR,TEM | 49.3574 | 127.57 | 10480.04 | -0.96% | -0.64% |
+| 2026-09-23 | FEAM,SVIA | — | 0.6573 | 66.28 | 10418.17 | -0.59% | -0.58% |
+| 2026-09-24 | — | ARM,ARQQ,GRAL,NUAI | 11.2467 | 9972.65 | 10028.12 | -3.74% | -3.67% |
 
 ### `oos0914_rvol_lg_h1_sx`
 
-| date | buys | sells | fees | cash | equity | day |
-| --- | --- | --- | ---: | ---: | ---: | ---: |
-| 2026-09-14 | — | — | 0 | 10000.0 | 10000.0 | +0.00% |
-| 2026-09-15 | — | — | 0 | 10000.0 | 10000.0 | +0.00% |
-| 2026-09-16 | HLP,SDGR,CAI,SWKS | — | 24.5412 | 93.69 | 10320.77 | +3.21% |
-| 2026-09-17 | HLP,BBNX,IQ,ARQT | CAI,HLP,SDGR,SWKS | 76.9133 | 7.76 | 10273.95 | -0.45% |
-| 2026-09-18 | SDGR,TEM,LVWR,CYPH | ARQT,BBNX,HLP,IQ | 89.7761 | 2.77 | 10684.59 | +4.00% |
-| 2026-09-21 | FEAM,CYPH,LVWR,USDE | CYPH,LVWR,SDGR,TEM | 85.3223 | 3.07 | 10340.7 | -3.22% |
-| 2026-09-22 | GRAL,NUAI,ARM,IVVD | CYPH,FEAM,LVWR,USDE | 90.3268 | 36.85 | 10289.4 | -0.50% |
-| 2026-09-23 | VKTX,SVIA,BFLY,INOD | ARM,GRAL,IVVD,NUAI | 56.288 | 77.45 | 9728.25 | -5.45% |
-| 2026-09-24 | — | BFLY,INOD,SVIA,VKTX | 15.0856 | 9243.36 | 9243.36 | -4.98% |
+Logged experiment, not a keeper. `keep_bar_met` is false.
+
+| date | buys | sells | fees | cash | equity | day | flat 15bp |
+| --- | --- | --- | ---: | ---: | ---: | ---: | ---: |
+| 2026-09-14 | — | — | 0 | 10000.0 | 10000.0 | +0.00% | +0.00% |
+| 2026-09-15 | — | — | 0 | 10000.0 | 10000.0 | +0.00% | +0.00% |
+| 2026-09-16 | HLP,SDGR,CAI,SWKS | — | 24.5412 | 93.69 | 10320.77 | +3.21% | +3.38% |
+| 2026-09-17 | HLP,BBNX,IQ,ARQT | CAI,HLP,SDGR,SWKS | 76.9133 | 7.76 | 10273.95 | -0.45% | +0.14% |
+| 2026-09-18 | SDGR,TEM,LVWR,CYPH | ARQT,BBNX,HLP,IQ | 89.7761 | 2.77 | 10684.59 | +4.00% | +4.69% |
+| 2026-09-21 | FEAM,CYPH,LVWR,USDE | CYPH,LVWR,SDGR,TEM | 85.3223 | 3.07 | 10340.7 | -3.22% | -2.54% |
+| 2026-09-22 | GRAL,NUAI,ARM,IVVD | CYPH,FEAM,LVWR,USDE | 90.3268 | 36.85 | 10289.4 | -0.50% | +0.22% |
+| 2026-09-23 | VKTX,SVIA,BFLY,INOD | ARM,GRAL,IVVD,NUAI | 56.288 | 77.45 | 9728.25 | -5.45% | -4.91% |
+| 2026-09-24 | — | BFLY,INOD,SVIA,VKTX | 15.0856 | 9243.36 | 9243.36 | -4.98% | -4.74% |
 
 ### `oos0914_break10_h1_sx`
 
-| date | buys | sells | fees | cash | equity | day |
-| --- | --- | --- | ---: | ---: | ---: | ---: |
-| 2026-09-14 | — | — | 0 | 10000.0 | 10000.0 | +0.00% |
-| 2026-09-15 | — | — | 0 | 10000.0 | 10000.0 | +0.00% |
-| 2026-09-16 | INDP,HLP,SDGR,CAI | — | 31.2809 | 0.43 | 10109.01 | +1.09% |
-| 2026-09-17 | HLP,BBNX,IQ,IOVA | CAI,HLP,INDP,SDGR | 83.7847 | 4.76 | 9980.63 | -1.27% |
-| 2026-09-18 | INDP,SDGR,TEM,LVWR | BBNX,HLP,IOVA,IQ | 86.8533 | 20.11 | 9786.33 | -1.95% |
-| 2026-09-21 | FEAM,CYPH,TJGC,LVWR | INDP,LVWR,SDGR,TEM | 76.8282 | 0.46 | 9374.8 | -4.21% |
-| 2026-09-22 | GRAL,NUAI,ARM,ARQQ | CYPH,FEAM,LVWR,TJGC | 53.4028 | 194.51 | 9339.71 | -0.37% |
-| 2026-09-23 | FEAM,VICR,VKTX,SVIA | ARM,ARQQ,GRAL,NUAI | 31.7874 | 202.44 | 8943.42 | -4.24% |
-| 2026-09-24 | — | FEAM,SVIA,VICR,VKTX | 21.4111 | 8464.79 | 8464.79 | -5.35% |
+Logged experiment, not a keeper. `keep_bar_met` is false.
+
+| date | buys | sells | fees | cash | equity | day | flat 15bp |
+| --- | --- | --- | ---: | ---: | ---: | ---: | ---: |
+| 2026-09-14 | — | — | 0 | 10000.0 | 10000.0 | +0.00% | +0.00% |
+| 2026-09-15 | — | — | 0 | 10000.0 | 10000.0 | +0.00% | +0.00% |
+| 2026-09-16 | INDP,HLP,SDGR,CAI | — | 31.2809 | 0.43 | 10109.01 | +1.09% | +1.33% |
+| 2026-09-17 | HLP,BBNX,IQ,IOVA | CAI,HLP,INDP,SDGR | 83.7847 | 4.76 | 9980.63 | -1.27% | -0.59% |
+| 2026-09-18 | INDP,SDGR,TEM,LVWR | BBNX,HLP,IOVA,IQ | 86.8533 | 20.11 | 9786.33 | -1.95% | -1.21% |
+| 2026-09-21 | FEAM,CYPH,TJGC,LVWR | INDP,LVWR,SDGR,TEM | 76.8282 | 0.46 | 9374.8 | -4.21% | -3.51% |
+| 2026-09-22 | GRAL,NUAI,ARM,ARQQ | CYPH,FEAM,LVWR,TJGC | 53.4028 | 194.51 | 9339.71 | -0.37% | +0.05% |
+| 2026-09-23 | FEAM,VICR,VKTX,SVIA | ARM,ARQQ,GRAL,NUAI | 31.7874 | 202.44 | 8943.42 | -4.24% | -3.94% |
+| 2026-09-24 | — | FEAM,SVIA,VICR,VKTX | 21.4111 | 8464.79 | 8464.79 | -5.35% | -5.02% |
 
 ### `oos0914_zero_candle_h2_sx`
 
-| date | buys | sells | fees | cash | equity | day |
-| --- | --- | --- | ---: | ---: | ---: | ---: |
-| 2026-09-14 | — | — | 0 | 10000.0 | 10000.0 | +0.00% |
-| 2026-09-15 | — | — | 0 | 10000.0 | 10000.0 | +0.00% |
-| 2026-09-16 | CAI,BLFS,ADPT,WGS | — | 8.782 | 91.6 | 10108.12 | +1.08% |
-| 2026-09-17 | SABR | — | 0.999 | 1.8 | 10669.7 | +5.56% |
-| 2026-09-18 | CRWD,NEO,SDGR,TEM | ADPT,BLFS,CAI,WGS | 17.6633 | 200.95 | 10342.94 | -3.06% |
-| 2026-09-21 | IOVA | SABR | 1.611 | 220.38 | 10506.05 | +1.58% |
-| 2026-09-22 | — | CRWD,NEO,SDGR,TEM | 8.8841 | 10396.53 | 10460.37 | -0.43% |
-| 2026-09-23 | A,DXCM,NICE,NTSK | IOVA | 9.2574 | 158.23 | 10373.38 | -0.83% |
-| 2026-09-24 | — | — | 0 | 158.23 | 10387.12 | +0.13% |
+Logged experiment, not a keeper. `keep_bar_met` is false.
+
+| date | buys | sells | fees | cash | equity | day | flat 15bp |
+| --- | --- | --- | ---: | ---: | ---: | ---: | ---: |
+| 2026-09-14 | — | — | 0 | 10000.0 | 10000.0 | +0.00% | +0.00% |
+| 2026-09-15 | — | — | 0 | 10000.0 | 10000.0 | +0.00% | +0.00% |
+| 2026-09-16 | CAI,BLFS,ADPT,WGS | — | 8.782 | 91.6 | 10108.12 | +1.08% | +1.09% |
+| 2026-09-17 | SABR | — | 0.999 | 1.8 | 10669.7 | +5.56% | +5.56% |
+| 2026-09-18 | CRWD,NEO,SDGR,TEM | ADPT,BLFS,CAI,WGS | 17.6633 | 200.95 | 10342.94 | -3.06% | -3.04% |
+| 2026-09-21 | IOVA | SABR | 1.611 | 220.38 | 10506.05 | +1.58% | +1.59% |
+| 2026-09-22 | — | CRWD,NEO,SDGR,TEM | 8.8841 | 10396.53 | 10460.37 | -0.43% | -0.42% |
+| 2026-09-23 | A,DXCM,NICE,NTSK | IOVA | 9.2574 | 158.23 | 10373.38 | -0.83% | -0.82% |
+| 2026-09-24 | — | — | 0 | 158.23 | 10387.12 | +0.13% | +0.13% |
 
 ## Baselines
 

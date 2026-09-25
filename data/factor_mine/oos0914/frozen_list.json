@@ -188,87 +188,108 @@
       "daily": [
         {
           "date": "2026-08-13",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-14",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-17",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-18",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-19",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-20",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-21",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-24",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-25",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-26",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-27",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-28",
-          "ret_pct": -1.7486
+          "ret_pct": -1.7486,
+          "ret_pct_flat_15bp": -1.7251
         },
         {
           "date": "2026-08-31",
-          "ret_pct": -0.9935
+          "ret_pct": -0.9935,
+          "ret_pct_flat_15bp": -0.9657
         },
         {
           "date": "2026-09-01",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-09-02",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-09-03",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-09-04",
-          "ret_pct": 2.3537
+          "ret_pct": 2.3537,
+          "ret_pct_flat_15bp": 2.403
         },
         {
           "date": "2026-09-08",
-          "ret_pct": 0.1814
+          "ret_pct": 0.1814,
+          "ret_pct_flat_15bp": 0.2305
         },
         {
           "date": "2026-09-09",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-09-10",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-09-11",
-          "ret_pct": -0.6837
+          "ret_pct": -0.6837,
+          "ret_pct_flat_15bp": -0.3242
         }
       ],
       "provenance": {
@@ -294,87 +315,108 @@
       "daily": [
         {
           "date": "2026-08-13",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-14",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-17",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-18",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-19",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-20",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-21",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-24",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-25",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-26",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-27",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-28",
-          "ret_pct": -1.7486
+          "ret_pct": -1.7486,
+          "ret_pct_flat_15bp": -1.7251
         },
         {
           "date": "2026-08-31",
-          "ret_pct": -0.0432
+          "ret_pct": -0.0432,
+          "ret_pct_flat_15bp": -0.0431
         },
         {
           "date": "2026-09-01",
-          "ret_pct": 1.198
+          "ret_pct": 1.198,
+          "ret_pct_flat_15bp": 1.2236
         },
         {
           "date": "2026-09-02",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-09-03",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-09-04",
-          "ret_pct": 2.3464
+          "ret_pct": 2.3464,
+          "ret_pct_flat_15bp": 2.3949
         },
         {
           "date": "2026-09-08",
-          "ret_pct": -0.8876
+          "ret_pct": -0.8876,
+          "ret_pct_flat_15bp": -0.8867
         },
         {
           "date": "2026-09-09",
-          "ret_pct": 1.4556
+          "ret_pct": 1.4556,
+          "ret_pct_flat_15bp": 1.5028
         },
         {
           "date": "2026-09-10",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-09-11",
-          "ret_pct": -0.6835
+          "ret_pct": -0.6835,
+          "ret_pct_flat_15bp": -0.3239
         }
       ],
       "provenance": {
@@ -400,87 +442,108 @@
       "daily": [
         {
           "date": "2026-08-13",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-14",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-17",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-18",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-19",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-20",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-21",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-24",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-25",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-26",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-27",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-28",
-          "ret_pct": -2.3372
+          "ret_pct": -2.3372,
+          "ret_pct_flat_15bp": -1.9724
         },
         {
           "date": "2026-08-31",
-          "ret_pct": -5.4525
+          "ret_pct": -5.4525,
+          "ret_pct_flat_15bp": -5.0486
         },
         {
           "date": "2026-09-01",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-09-02",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-09-03",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-09-04",
-          "ret_pct": 0.963
+          "ret_pct": 0.963,
+          "ret_pct_flat_15bp": 1.2184
         },
         {
           "date": "2026-09-08",
-          "ret_pct": -2.0376
+          "ret_pct": -2.0376,
+          "ret_pct_flat_15bp": -1.751
         },
         {
           "date": "2026-09-09",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-09-10",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-09-11",
-          "ret_pct": 0.3198
+          "ret_pct": 0.3198,
+          "ret_pct_flat_15bp": 0.412
         }
       ],
       "provenance": {
@@ -506,87 +569,108 @@
       "daily": [
         {
           "date": "2026-08-13",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-14",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-17",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-18",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-19",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-20",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-21",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-24",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-25",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-26",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-27",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-28",
-          "ret_pct": -2.3372
+          "ret_pct": -2.3372,
+          "ret_pct_flat_15bp": -1.9724
         },
         {
           "date": "2026-08-31",
-          "ret_pct": -4.0782
+          "ret_pct": -4.0782,
+          "ret_pct_flat_15bp": -4.063
         },
         {
           "date": "2026-09-01",
-          "ret_pct": -2.5717
+          "ret_pct": -2.5717,
+          "ret_pct_flat_15bp": -2.161
         },
         {
           "date": "2026-09-02",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-09-03",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-09-04",
-          "ret_pct": 0.9473
+          "ret_pct": 0.9473,
+          "ret_pct_flat_15bp": 1.2026
         },
         {
           "date": "2026-09-08",
-          "ret_pct": 3.4558
+          "ret_pct": 3.4558,
+          "ret_pct_flat_15bp": 3.4193
         },
         {
           "date": "2026-09-09",
-          "ret_pct": -1.0851
+          "ret_pct": -1.0851,
+          "ret_pct_flat_15bp": -0.8207
         },
         {
           "date": "2026-09-10",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-09-11",
-          "ret_pct": 0.3205
+          "ret_pct": 0.3205,
+          "ret_pct_flat_15bp": 0.4114
         }
       ],
       "provenance": {
@@ -612,87 +696,108 @@
       "daily": [
         {
           "date": "2026-08-13",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-14",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-17",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-18",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-19",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-20",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-21",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-24",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-25",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-26",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-27",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-28",
-          "ret_pct": -1.8027
+          "ret_pct": -1.8027,
+          "ret_pct_flat_15bp": -1.7882
         },
         {
           "date": "2026-08-31",
-          "ret_pct": -1.1378
+          "ret_pct": -1.1378,
+          "ret_pct_flat_15bp": -1.1194
         },
         {
           "date": "2026-09-01",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-09-02",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-09-03",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-09-04",
-          "ret_pct": 3.7034
+          "ret_pct": 3.7034,
+          "ret_pct_flat_15bp": 3.8092
         },
         {
           "date": "2026-09-08",
-          "ret_pct": -0.6293
+          "ret_pct": -0.6293,
+          "ret_pct_flat_15bp": -0.525
         },
         {
           "date": "2026-09-09",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-09-10",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-09-11",
-          "ret_pct": 3.0623
+          "ret_pct": 3.0623,
+          "ret_pct_flat_15bp": 3.2757
         }
       ],
       "provenance": {
@@ -704,7 +809,9 @@
         "last_rule_change_at": "2026-09-14T04:03:35Z",
         "designed_after": false,
         "note": "No shipped recipe has require rvol_min 1.5. The matcher dates to 2026-09-05 (last line touch a714ba9c0 on 2026-09-10). FLOW_RVOL=1.5 landed at 00:03 ET on 2026-09-14. The exact pair was written into this list on 2026-09-25 and was not relabelled, because both ingredients predate 09:30 ET."
-      }
+      },
+      "keep_bar_met": false,
+      "keep_bar_note": "12 train fires against the 30-fire bar. Excel's luck test p=0.87."
     },
     {
       "id": "rvol_lg_h2_sx",
@@ -718,87 +825,108 @@
       "daily": [
         {
           "date": "2026-08-13",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-14",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-17",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-18",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-19",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-20",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-21",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-24",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-25",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-26",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-27",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-28",
-          "ret_pct": -1.8027
+          "ret_pct": -1.8027,
+          "ret_pct_flat_15bp": -1.7882
         },
         {
           "date": "2026-08-31",
-          "ret_pct": -1.0713
+          "ret_pct": -1.0713,
+          "ret_pct_flat_15bp": -1.0712
         },
         {
           "date": "2026-09-01",
-          "ret_pct": -1.3816
+          "ret_pct": -1.3816,
+          "ret_pct_flat_15bp": -1.362
         },
         {
           "date": "2026-09-02",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-09-03",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-09-04",
-          "ret_pct": 3.6955
+          "ret_pct": 3.6955,
+          "ret_pct_flat_15bp": 3.8024
         },
         {
           "date": "2026-09-08",
-          "ret_pct": -2.2853
+          "ret_pct": -2.2853,
+          "ret_pct_flat_15bp": -2.2822
         },
         {
           "date": "2026-09-09",
-          "ret_pct": 1.8753
+          "ret_pct": 1.8753,
+          "ret_pct_flat_15bp": 1.9795
         },
         {
           "date": "2026-09-10",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-09-11",
-          "ret_pct": 3.0571
+          "ret_pct": 3.0571,
+          "ret_pct_flat_15bp": 3.2707
         }
       ],
       "provenance": {
@@ -824,87 +952,108 @@
       "daily": [
         {
           "date": "2026-08-13",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-14",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-17",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-18",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-19",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-20",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-21",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-24",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-25",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-26",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-27",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-28",
-          "ret_pct": -0.3856
+          "ret_pct": -0.3856,
+          "ret_pct_flat_15bp": -0.1508
         },
         {
           "date": "2026-08-31",
-          "ret_pct": -1.5999
+          "ret_pct": -1.5999,
+          "ret_pct_flat_15bp": -1.3554
         },
         {
           "date": "2026-09-01",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-09-02",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-09-03",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-09-04",
-          "ret_pct": 4.1961
+          "ret_pct": 4.1961,
+          "ret_pct_flat_15bp": 4.4242
         },
         {
           "date": "2026-09-08",
-          "ret_pct": -1.6584
+          "ret_pct": -1.6584,
+          "ret_pct_flat_15bp": -1.4065
         },
         {
           "date": "2026-09-09",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-09-10",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-09-11",
-          "ret_pct": -0.4552
+          "ret_pct": -0.4552,
+          "ret_pct_flat_15bp": -0.2689
         }
       ],
       "provenance": {
@@ -930,87 +1079,108 @@
       "daily": [
         {
           "date": "2026-08-13",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-14",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-17",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-18",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-19",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-20",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-21",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-24",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-25",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-26",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-27",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-28",
-          "ret_pct": -0.3856
+          "ret_pct": -0.3856,
+          "ret_pct_flat_15bp": -0.1508
         },
         {
           "date": "2026-08-31",
-          "ret_pct": -2.4073
+          "ret_pct": -2.4073,
+          "ret_pct_flat_15bp": -2.4016
         },
         {
           "date": "2026-09-01",
-          "ret_pct": 0.6219
+          "ret_pct": 0.6219,
+          "ret_pct_flat_15bp": 0.8672
         },
         {
           "date": "2026-09-02",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-09-03",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-09-04",
-          "ret_pct": 4.1981
+          "ret_pct": 4.1981,
+          "ret_pct_flat_15bp": 4.4263
         },
         {
           "date": "2026-09-08",
-          "ret_pct": -7.3421
+          "ret_pct": -7.3421,
+          "ret_pct_flat_15bp": -7.2906
         },
         {
           "date": "2026-09-09",
-          "ret_pct": -0.6847
+          "ret_pct": -0.6847,
+          "ret_pct_flat_15bp": -0.4152
         },
         {
           "date": "2026-09-10",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-09-11",
-          "ret_pct": -0.4561
+          "ret_pct": -0.4561,
+          "ret_pct_flat_15bp": -0.2681
         }
       ],
       "provenance": {
@@ -1036,87 +1206,108 @@
       "daily": [
         {
           "date": "2026-08-13",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-14",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-17",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-18",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-19",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-20",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-21",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-24",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-25",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-26",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-27",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-28",
-          "ret_pct": -2.4276
+          "ret_pct": -2.4276,
+          "ret_pct_flat_15bp": -2.444
         },
         {
           "date": "2026-08-31",
-          "ret_pct": -1.6184
+          "ret_pct": -1.6184,
+          "ret_pct_flat_15bp": -1.6311
         },
         {
           "date": "2026-09-01",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-09-02",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-09-03",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-09-04",
-          "ret_pct": -3.3644
+          "ret_pct": -3.3644,
+          "ret_pct_flat_15bp": -3.3654
         },
         {
           "date": "2026-09-08",
-          "ret_pct": -0.7109
+          "ret_pct": -0.7109,
+          "ret_pct_flat_15bp": -0.7067
         },
         {
           "date": "2026-09-09",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-09-10",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-09-11",
-          "ret_pct": -2.6977
+          "ret_pct": -2.6977,
+          "ret_pct_flat_15bp": -2.2954
         }
       ],
       "provenance": {
@@ -1142,87 +1333,108 @@
       "daily": [
         {
           "date": "2026-08-13",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-14",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-17",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-18",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-19",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-20",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-21",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-24",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-25",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-26",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-27",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-28",
-          "ret_pct": -2.4276
+          "ret_pct": -2.4276,
+          "ret_pct_flat_15bp": -2.444
         },
         {
           "date": "2026-08-31",
-          "ret_pct": 0.0412
+          "ret_pct": 0.0412,
+          "ret_pct_flat_15bp": 0.0412
         },
         {
           "date": "2026-09-01",
-          "ret_pct": -3.2079
+          "ret_pct": -3.2079,
+          "ret_pct_flat_15bp": -3.2197
         },
         {
           "date": "2026-09-02",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-09-03",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-09-04",
-          "ret_pct": -3.3861
+          "ret_pct": -3.3861,
+          "ret_pct_flat_15bp": -3.3868
         },
         {
           "date": "2026-09-08",
-          "ret_pct": 5.4944
+          "ret_pct": 5.4944,
+          "ret_pct_flat_15bp": 5.496
         },
         {
           "date": "2026-09-09",
-          "ret_pct": 0.17
+          "ret_pct": 0.17,
+          "ret_pct_flat_15bp": 0.17
         },
         {
           "date": "2026-09-10",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-09-11",
-          "ret_pct": -2.7045
+          "ret_pct": -2.7045,
+          "ret_pct_flat_15bp": -2.3042
         }
       ],
       "provenance": {
@@ -1248,87 +1460,108 @@
       "daily": [
         {
           "date": "2026-08-13",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-14",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-17",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-18",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-19",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-20",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-21",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-24",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-25",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-26",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-27",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-28",
-          "ret_pct": -2.5732
+          "ret_pct": -2.5732,
+          "ret_pct_flat_15bp": -2.5462
         },
         {
           "date": "2026-08-31",
-          "ret_pct": -1.3285
+          "ret_pct": -1.3285,
+          "ret_pct_flat_15bp": -1.2958
         },
         {
           "date": "2026-09-01",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-09-02",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-09-03",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-09-04",
-          "ret_pct": 2.3428
+          "ret_pct": 2.3428,
+          "ret_pct_flat_15bp": 2.3933
         },
         {
           "date": "2026-09-08",
-          "ret_pct": 0.1557
+          "ret_pct": 0.1557,
+          "ret_pct_flat_15bp": 0.2062
         },
         {
           "date": "2026-09-09",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-09-10",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-09-11",
-          "ret_pct": 3.8647
+          "ret_pct": 3.8647,
+          "ret_pct_flat_15bp": 4.0873
         }
       ],
       "provenance": {
@@ -1340,7 +1573,9 @@
         "last_rule_change_at": "2026-09-10T13:10:03Z",
         "designed_after": false,
         "note": "break_10 plus no alarm, rank hot_score."
-      }
+      },
+      "keep_bar_met": false,
+      "keep_bar_note": "12 train fires against the 30-fire bar. Excel's luck test p=0.87."
     },
     {
       "id": "break10_h2_sx",
@@ -1354,87 +1589,108 @@
       "daily": [
         {
           "date": "2026-08-13",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-14",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-17",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-18",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-19",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-20",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-21",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-24",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-25",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-26",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-27",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-28",
-          "ret_pct": -2.5732
+          "ret_pct": -2.5732,
+          "ret_pct_flat_15bp": -2.5462
         },
         {
           "date": "2026-08-31",
-          "ret_pct": 0.6928
+          "ret_pct": 0.6928,
+          "ret_pct_flat_15bp": 0.6926
         },
         {
           "date": "2026-09-01",
-          "ret_pct": 1.0499
+          "ret_pct": 1.0499,
+          "ret_pct_flat_15bp": 1.0794
         },
         {
           "date": "2026-09-02",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-09-03",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-09-04",
-          "ret_pct": 2.3517
+          "ret_pct": 2.3517,
+          "ret_pct_flat_15bp": 2.4
         },
         {
           "date": "2026-09-08",
-          "ret_pct": -0.891
+          "ret_pct": -0.891,
+          "ret_pct_flat_15bp": -0.89
         },
         {
           "date": "2026-09-09",
-          "ret_pct": 1.4591
+          "ret_pct": 1.4591,
+          "ret_pct_flat_15bp": 1.5062
         },
         {
           "date": "2026-09-10",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-09-11",
-          "ret_pct": 3.864
+          "ret_pct": 3.864,
+          "ret_pct_flat_15bp": 4.086
         }
       ],
       "provenance": {
@@ -1446,7 +1702,9 @@
         "last_rule_change_at": "2026-09-10T13:10:03Z",
         "designed_after": false,
         "note": "break_10 plus no alarm, rank hot_score."
-      }
+      },
+      "keep_bar_met": false,
+      "keep_bar_note": "12 train fires against the 30-fire bar. Excel's luck test p=0.87."
     },
     {
       "id": "macd_x_h1_sx",
@@ -1460,87 +1718,108 @@
       "daily": [
         {
           "date": "2026-08-13",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-14",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-17",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-18",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-19",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-20",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-21",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-24",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-25",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-26",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-27",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-28",
-          "ret_pct": -2.3048
+          "ret_pct": -2.3048,
+          "ret_pct_flat_15bp": -2.2927
         },
         {
           "date": "2026-08-31",
-          "ret_pct": -0.6271
+          "ret_pct": -0.6271,
+          "ret_pct_flat_15bp": -0.6112
         },
         {
           "date": "2026-09-01",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-09-02",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-09-03",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-09-04",
-          "ret_pct": 2.789
+          "ret_pct": 2.789,
+          "ret_pct_flat_15bp": 2.8716
         },
         {
           "date": "2026-09-08",
-          "ret_pct": 0.0562
+          "ret_pct": 0.0562,
+          "ret_pct_flat_15bp": 0.1372
         },
         {
           "date": "2026-09-09",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-09-10",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-09-11",
-          "ret_pct": 0.717
+          "ret_pct": 0.717,
+          "ret_pct_flat_15bp": 0.7623
         }
       ],
       "provenance": {
@@ -1566,87 +1845,108 @@
       "daily": [
         {
           "date": "2026-08-13",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-14",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-17",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-18",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-19",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-20",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-21",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-24",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-25",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-26",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-27",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-28",
-          "ret_pct": -2.3048
+          "ret_pct": -2.3048,
+          "ret_pct_flat_15bp": -2.2927
         },
         {
           "date": "2026-08-31",
-          "ret_pct": 0.3706
+          "ret_pct": 0.3706,
+          "ret_pct_flat_15bp": 0.3706
         },
         {
           "date": "2026-09-01",
-          "ret_pct": -1.8423
+          "ret_pct": -1.8423,
+          "ret_pct_flat_15bp": -1.8257
         },
         {
           "date": "2026-09-02",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-09-03",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-09-04",
-          "ret_pct": 2.8118
+          "ret_pct": 2.8118,
+          "ret_pct_flat_15bp": 2.8951
         },
         {
           "date": "2026-09-08",
-          "ret_pct": 2.9158
+          "ret_pct": 2.9158,
+          "ret_pct_flat_15bp": 2.9126
         },
         {
           "date": "2026-09-09",
-          "ret_pct": -0.8401
+          "ret_pct": -0.8401,
+          "ret_pct_flat_15bp": -0.7614
         },
         {
           "date": "2026-09-10",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-09-11",
-          "ret_pct": 0.736
+          "ret_pct": 0.736,
+          "ret_pct_flat_15bp": 0.7808
         }
       ],
       "provenance": {
@@ -1672,87 +1972,108 @@
       "daily": [
         {
           "date": "2026-08-13",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-14",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-17",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-18",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-19",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-20",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-21",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-24",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-25",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-26",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-27",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-28",
-          "ret_pct": -4.4304
+          "ret_pct": -4.4304,
+          "ret_pct_flat_15bp": -4.4831
         },
         {
           "date": "2026-08-31",
-          "ret_pct": 0.6558
+          "ret_pct": 0.6558,
+          "ret_pct_flat_15bp": 0.6048
         },
         {
           "date": "2026-09-01",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-09-02",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-09-03",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-09-04",
-          "ret_pct": 2.9821
+          "ret_pct": 2.9821,
+          "ret_pct_flat_15bp": 3.0545
         },
         {
           "date": "2026-09-08",
-          "ret_pct": -4.5874
+          "ret_pct": -4.5874,
+          "ret_pct_flat_15bp": -4.5182
         },
         {
           "date": "2026-09-09",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-09-10",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-09-11",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         }
       ],
       "provenance": {
@@ -1778,87 +2099,108 @@
       "daily": [
         {
           "date": "2026-08-13",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-14",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-17",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-18",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-19",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-20",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-21",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-24",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-25",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-26",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-27",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-28",
-          "ret_pct": -4.4304
+          "ret_pct": -4.4304,
+          "ret_pct_flat_15bp": -4.4831
         },
         {
           "date": "2026-08-31",
-          "ret_pct": 3.6916
+          "ret_pct": 3.6916,
+          "ret_pct_flat_15bp": 3.6936
         },
         {
           "date": "2026-09-01",
-          "ret_pct": -1.7035
+          "ret_pct": -1.7035,
+          "ret_pct_flat_15bp": -1.7548
         },
         {
           "date": "2026-09-02",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-09-03",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-09-04",
-          "ret_pct": 2.9834
+          "ret_pct": 2.9834,
+          "ret_pct_flat_15bp": 3.0558
         },
         {
           "date": "2026-09-08",
-          "ret_pct": -2.8199
+          "ret_pct": -2.8199,
+          "ret_pct_flat_15bp": -2.8209
         },
         {
           "date": "2026-09-09",
-          "ret_pct": 0.2998
+          "ret_pct": 0.2998,
+          "ret_pct_flat_15bp": 0.3713
         },
         {
           "date": "2026-09-10",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-09-11",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         }
       ],
       "provenance": {
@@ -1884,87 +2226,108 @@
       "daily": [
         {
           "date": "2026-08-13",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-14",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-17",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-18",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-19",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-20",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-21",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-24",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-25",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-26",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-27",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-28",
-          "ret_pct": -3.886
+          "ret_pct": -3.886,
+          "ret_pct_flat_15bp": -3.8757
         },
         {
           "date": "2026-08-31",
-          "ret_pct": 0.5101
+          "ret_pct": 0.5101,
+          "ret_pct_flat_15bp": 0.5245
         },
         {
           "date": "2026-09-01",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-09-02",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-09-03",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-09-04",
-          "ret_pct": 2.2445
+          "ret_pct": 2.2445,
+          "ret_pct_flat_15bp": 2.2605
         },
         {
           "date": "2026-09-08",
-          "ret_pct": -0.3968
+          "ret_pct": -0.3968,
+          "ret_pct_flat_15bp": -0.3806
         },
         {
           "date": "2026-09-09",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-09-10",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-09-11",
-          "ret_pct": 3.3527
+          "ret_pct": 3.3527,
+          "ret_pct_flat_15bp": 3.3752
         }
       ],
       "provenance": {
@@ -1990,87 +2353,108 @@
       "daily": [
         {
           "date": "2026-08-13",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-14",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-17",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-18",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-19",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-20",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-21",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-24",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-25",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-26",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-27",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-28",
-          "ret_pct": -3.886
+          "ret_pct": -3.886,
+          "ret_pct_flat_15bp": -3.8757
         },
         {
           "date": "2026-08-31",
-          "ret_pct": 0.9796
+          "ret_pct": 0.9796,
+          "ret_pct_flat_15bp": 0.9795
         },
         {
           "date": "2026-09-01",
-          "ret_pct": -1.8791
+          "ret_pct": -1.8791,
+          "ret_pct_flat_15bp": -1.8636
         },
         {
           "date": "2026-09-02",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-09-03",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-09-04",
-          "ret_pct": 2.194
+          "ret_pct": 2.194,
+          "ret_pct_flat_15bp": 2.2111
         },
         {
           "date": "2026-09-08",
-          "ret_pct": -2.0356
+          "ret_pct": -2.0356,
+          "ret_pct_flat_15bp": -2.0348
         },
         {
           "date": "2026-09-09",
-          "ret_pct": -0.1487
+          "ret_pct": -0.1487,
+          "ret_pct_flat_15bp": -0.1298
         },
         {
           "date": "2026-09-10",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-09-11",
-          "ret_pct": 3.3707
+          "ret_pct": 3.3707,
+          "ret_pct_flat_15bp": 3.3948
         }
       ],
       "provenance": {
@@ -2096,87 +2480,108 @@
       "daily": [
         {
           "date": "2026-08-13",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-14",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-17",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-18",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-19",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-20",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-21",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-24",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-25",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-26",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-27",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-28",
-          "ret_pct": -1.7563
+          "ret_pct": -1.7563,
+          "ret_pct_flat_15bp": -1.7431
         },
         {
           "date": "2026-08-31",
-          "ret_pct": 0.1071
+          "ret_pct": 0.1071,
+          "ret_pct_flat_15bp": 0.123
         },
         {
           "date": "2026-09-01",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-09-02",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-09-03",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-09-04",
-          "ret_pct": 2.7251
+          "ret_pct": 2.7251,
+          "ret_pct_flat_15bp": 2.7738
         },
         {
           "date": "2026-09-08",
-          "ret_pct": -0.1101
+          "ret_pct": -0.1101,
+          "ret_pct_flat_15bp": -0.062
         },
         {
           "date": "2026-09-09",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-09-10",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-09-11",
-          "ret_pct": 1.7352
+          "ret_pct": 1.7352,
+          "ret_pct_flat_15bp": 1.7564
         }
       ],
       "provenance": {
@@ -2202,87 +2607,108 @@
       "daily": [
         {
           "date": "2026-08-13",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-14",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-17",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-18",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-19",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-20",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-21",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-24",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-25",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-26",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-27",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-28",
-          "ret_pct": -1.7563
+          "ret_pct": -1.7563,
+          "ret_pct_flat_15bp": -1.7431
         },
         {
           "date": "2026-08-31",
-          "ret_pct": 0.7525
+          "ret_pct": 0.7525,
+          "ret_pct_flat_15bp": 0.7524
         },
         {
           "date": "2026-09-01",
-          "ret_pct": -1.5309
+          "ret_pct": -1.5309,
+          "ret_pct_flat_15bp": -1.5142
         },
         {
           "date": "2026-09-02",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-09-03",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-09-04",
-          "ret_pct": 2.748
+          "ret_pct": 2.748,
+          "ret_pct_flat_15bp": 2.7969
         },
         {
           "date": "2026-09-08",
-          "ret_pct": -0.9356
+          "ret_pct": -0.9356,
+          "ret_pct_flat_15bp": -0.9349
         },
         {
           "date": "2026-09-09",
-          "ret_pct": -0.0065
+          "ret_pct": -0.0065,
+          "ret_pct_flat_15bp": 0.0428
         },
         {
           "date": "2026-09-10",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-09-11",
-          "ret_pct": 1.7624
+          "ret_pct": 1.7624,
+          "ret_pct_flat_15bp": 1.7839
         }
       ],
       "provenance": {
@@ -2294,7 +2720,9 @@
         "last_rule_change_at": "2026-09-10T13:10:03Z",
         "designed_after": false,
         "note": "24ebb9b7c mentions zero_red only by adding flow_in_white. The zero_red test itself was not changed."
-      }
+      },
+      "keep_bar_met": false,
+      "keep_bar_note": "12 train fires against the 30-fire bar. Excel's luck test p=0.87."
     },
     {
       "id": "ridge_px",
@@ -2308,87 +2736,108 @@
       "daily": [
         {
           "date": "2026-08-13",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-14",
-          "ret_pct": -0.4921
+          "ret_pct": -0.4921,
+          "ret_pct_flat_15bp": -0.3121
         },
         {
           "date": "2026-08-17",
-          "ret_pct": -0.3187
+          "ret_pct": -0.3187,
+          "ret_pct_flat_15bp": -0.2045
         },
         {
           "date": "2026-08-18",
-          "ret_pct": -0.7285
+          "ret_pct": -0.7285,
+          "ret_pct_flat_15bp": -0.2846
         },
         {
           "date": "2026-08-19",
-          "ret_pct": -0.5877
+          "ret_pct": -0.5877,
+          "ret_pct_flat_15bp": -0.1327
         },
         {
           "date": "2026-08-20",
-          "ret_pct": -0.1191
+          "ret_pct": -0.1191,
+          "ret_pct_flat_15bp": 0.1739
         },
         {
           "date": "2026-08-21",
-          "ret_pct": -0.1045
+          "ret_pct": -0.1045,
+          "ret_pct_flat_15bp": 0.0062
         },
         {
           "date": "2026-08-24",
-          "ret_pct": -0.7628
+          "ret_pct": -0.7628,
+          "ret_pct_flat_15bp": -0.4026
         },
         {
           "date": "2026-08-25",
-          "ret_pct": 0.366
+          "ret_pct": 0.366,
+          "ret_pct_flat_15bp": 0.4579
         },
         {
           "date": "2026-08-26",
-          "ret_pct": -1.6577
+          "ret_pct": -1.6577,
+          "ret_pct_flat_15bp": -1.2242
         },
         {
           "date": "2026-08-27",
-          "ret_pct": 0.0957
+          "ret_pct": 0.0957,
+          "ret_pct_flat_15bp": 0.2187
         },
         {
           "date": "2026-08-28",
-          "ret_pct": -1.2269
+          "ret_pct": -1.2269,
+          "ret_pct_flat_15bp": -0.851
         },
         {
           "date": "2026-08-31",
-          "ret_pct": -0.0758
+          "ret_pct": -0.0758,
+          "ret_pct_flat_15bp": 0.0597
         },
         {
           "date": "2026-09-01",
-          "ret_pct": -0.6186
+          "ret_pct": -0.6186,
+          "ret_pct_flat_15bp": -0.4266
         },
         {
           "date": "2026-09-02",
-          "ret_pct": -0.4521
+          "ret_pct": -0.4521,
+          "ret_pct_flat_15bp": 0.1775
         },
         {
           "date": "2026-09-03",
-          "ret_pct": -2.2598
+          "ret_pct": -2.2598,
+          "ret_pct_flat_15bp": -1.5799
         },
         {
           "date": "2026-09-04",
-          "ret_pct": -0.0509
+          "ret_pct": -0.0509,
+          "ret_pct_flat_15bp": 0.0629
         },
         {
           "date": "2026-09-08",
-          "ret_pct": -0.4027
+          "ret_pct": -0.4027,
+          "ret_pct_flat_15bp": -0.2758
         },
         {
           "date": "2026-09-09",
-          "ret_pct": 0.8074
+          "ret_pct": 0.8074,
+          "ret_pct_flat_15bp": 1.3917
         },
         {
           "date": "2026-09-10",
-          "ret_pct": -1.8096
+          "ret_pct": -1.8096,
+          "ret_pct_flat_15bp": -1.5888
         },
         {
           "date": "2026-09-11",
-          "ret_pct": -2.0193
+          "ret_pct": -2.0193,
+          "ret_pct_flat_15bp": -1.6587
         }
       ],
       "clean_from": "2026-09-28"
@@ -2405,87 +2854,108 @@
       "daily": [
         {
           "date": "2026-08-13",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-14",
-          "ret_pct": -3.8002
+          "ret_pct": -3.8002,
+          "ret_pct_flat_15bp": -2.5004
         },
         {
           "date": "2026-08-17",
-          "ret_pct": -6.8798
+          "ret_pct": -6.8798,
+          "ret_pct_flat_15bp": -6.0582
         },
         {
           "date": "2026-08-18",
-          "ret_pct": 7.942
+          "ret_pct": 7.942,
+          "ret_pct_flat_15bp": 8.4681
         },
         {
           "date": "2026-08-19",
-          "ret_pct": 4.1825
+          "ret_pct": 4.1825,
+          "ret_pct_flat_15bp": 4.7418
         },
         {
           "date": "2026-08-20",
-          "ret_pct": -0.795
+          "ret_pct": -0.795,
+          "ret_pct_flat_15bp": -0.0047
         },
         {
           "date": "2026-08-21",
-          "ret_pct": -0.9268
+          "ret_pct": -0.9268,
+          "ret_pct_flat_15bp": -0.3547
         },
         {
           "date": "2026-08-24",
-          "ret_pct": -4.0437
+          "ret_pct": -4.0437,
+          "ret_pct_flat_15bp": -2.0089
         },
         {
           "date": "2026-08-25",
-          "ret_pct": 0.6235
+          "ret_pct": 0.6235,
+          "ret_pct_flat_15bp": 1.2419
         },
         {
           "date": "2026-08-26",
-          "ret_pct": -0.4329
+          "ret_pct": -0.4329,
+          "ret_pct_flat_15bp": 0.0567
         },
         {
           "date": "2026-08-27",
-          "ret_pct": -0.0125
+          "ret_pct": -0.0125,
+          "ret_pct_flat_15bp": 0.6465
         },
         {
           "date": "2026-08-28",
-          "ret_pct": -2.2153
+          "ret_pct": -2.2153,
+          "ret_pct_flat_15bp": -1.3143
         },
         {
           "date": "2026-08-31",
-          "ret_pct": 6.5677
+          "ret_pct": 6.5677,
+          "ret_pct_flat_15bp": 7.1544
         },
         {
           "date": "2026-09-01",
-          "ret_pct": -2.4963
+          "ret_pct": -2.4963,
+          "ret_pct_flat_15bp": -2.0657
         },
         {
           "date": "2026-09-02",
-          "ret_pct": -19.1641
+          "ret_pct": -19.1641,
+          "ret_pct_flat_15bp": -16.8154
         },
         {
           "date": "2026-09-03",
-          "ret_pct": -13.9357
+          "ret_pct": -13.9357,
+          "ret_pct_flat_15bp": -11.6788
         },
         {
           "date": "2026-09-04",
-          "ret_pct": -2.2894
+          "ret_pct": -2.2894,
+          "ret_pct_flat_15bp": -1.0906
         },
         {
           "date": "2026-09-08",
-          "ret_pct": -1.063
+          "ret_pct": -1.063,
+          "ret_pct_flat_15bp": 0.0429
         },
         {
           "date": "2026-09-09",
-          "ret_pct": -9.8273
+          "ret_pct": -9.8273,
+          "ret_pct_flat_15bp": -6.8155
         },
         {
           "date": "2026-09-10",
-          "ret_pct": -1.2404
+          "ret_pct": -1.2404,
+          "ret_pct_flat_15bp": -0.659
         },
         {
           "date": "2026-09-11",
-          "ret_pct": -0.8424
+          "ret_pct": -0.8424,
+          "ret_pct_flat_15bp": 0.6315
         }
       ],
       "clean_from": "2026-09-28"
@@ -2502,87 +2972,108 @@
       "daily": [
         {
           "date": "2026-08-13",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-14",
-          "ret_pct": -7.6068
+          "ret_pct": -7.6068,
+          "ret_pct_flat_15bp": -6.8634
         },
         {
           "date": "2026-08-17",
-          "ret_pct": -1.8398
+          "ret_pct": -1.8398,
+          "ret_pct_flat_15bp": -1.7378
         },
         {
           "date": "2026-08-18",
-          "ret_pct": -0.8362
+          "ret_pct": -0.8362,
+          "ret_pct_flat_15bp": -0.2291
         },
         {
           "date": "2026-08-19",
-          "ret_pct": -6.3836
+          "ret_pct": -6.3836,
+          "ret_pct_flat_15bp": -4.8376
         },
         {
           "date": "2026-08-20",
-          "ret_pct": -3.713
+          "ret_pct": -3.713,
+          "ret_pct_flat_15bp": -2.8439
         },
         {
           "date": "2026-08-21",
-          "ret_pct": -1.2121
+          "ret_pct": -1.2121,
+          "ret_pct_flat_15bp": 0.2461
         },
         {
           "date": "2026-08-24",
-          "ret_pct": -7.7396
+          "ret_pct": -7.7396,
+          "ret_pct_flat_15bp": -6.1783
         },
         {
           "date": "2026-08-25",
-          "ret_pct": -1.5765
+          "ret_pct": -1.5765,
+          "ret_pct_flat_15bp": -1.1357
         },
         {
           "date": "2026-08-26",
-          "ret_pct": -0.3576
+          "ret_pct": -0.3576,
+          "ret_pct_flat_15bp": -0.0736
         },
         {
           "date": "2026-08-27",
-          "ret_pct": -0.9332
+          "ret_pct": -0.9332,
+          "ret_pct_flat_15bp": -0.3194
         },
         {
           "date": "2026-08-28",
-          "ret_pct": -3.4389
+          "ret_pct": -3.4389,
+          "ret_pct_flat_15bp": -2.4654
         },
         {
           "date": "2026-08-31",
-          "ret_pct": 1.11
+          "ret_pct": 1.11,
+          "ret_pct_flat_15bp": 1.1269
         },
         {
           "date": "2026-09-01",
-          "ret_pct": -4.5123
+          "ret_pct": -4.5123,
+          "ret_pct_flat_15bp": -2.9477
         },
         {
           "date": "2026-09-02",
-          "ret_pct": -1.1436
+          "ret_pct": -1.1436,
+          "ret_pct_flat_15bp": -0.4438
         },
         {
           "date": "2026-09-03",
-          "ret_pct": -1.9177
+          "ret_pct": -1.9177,
+          "ret_pct_flat_15bp": -1.3135
         },
         {
           "date": "2026-09-04",
-          "ret_pct": -1.6719
+          "ret_pct": -1.6719,
+          "ret_pct_flat_15bp": -0.4731
         },
         {
           "date": "2026-09-08",
-          "ret_pct": -3.9869
+          "ret_pct": -3.9869,
+          "ret_pct_flat_15bp": -3.0519
         },
         {
           "date": "2026-09-09",
-          "ret_pct": -7.1864
+          "ret_pct": -7.1864,
+          "ret_pct_flat_15bp": -5.5977
         },
         {
           "date": "2026-09-10",
-          "ret_pct": -1.5465
+          "ret_pct": -1.5465,
+          "ret_pct_flat_15bp": -0.8446
         },
         {
           "date": "2026-09-11",
-          "ret_pct": 0.4922
+          "ret_pct": 0.4922,
+          "ret_pct_flat_15bp": 1.1956
         }
       ],
       "clean_from": "2026-09-28"
@@ -2599,87 +3090,108 @@
       "daily": [
         {
           "date": "2026-08-13",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-14",
-          "ret_pct": -0.2725
+          "ret_pct": -0.2725,
+          "ret_pct_flat_15bp": -0.1482
         },
         {
           "date": "2026-08-17",
-          "ret_pct": -2.0294
+          "ret_pct": -2.0294,
+          "ret_pct_flat_15bp": -1.4508
         },
         {
           "date": "2026-08-18",
-          "ret_pct": -0.9999
+          "ret_pct": -0.9999,
+          "ret_pct_flat_15bp": -0.4916
         },
         {
           "date": "2026-08-19",
-          "ret_pct": -4.0699
+          "ret_pct": -4.0699,
+          "ret_pct_flat_15bp": -2.9972
         },
         {
           "date": "2026-08-20",
-          "ret_pct": -0.7216
+          "ret_pct": -0.7216,
+          "ret_pct_flat_15bp": -0.3494
         },
         {
           "date": "2026-08-21",
-          "ret_pct": -0.6943
+          "ret_pct": -0.6943,
+          "ret_pct_flat_15bp": -0.0392
         },
         {
           "date": "2026-08-24",
-          "ret_pct": -2.7166
+          "ret_pct": -2.7166,
+          "ret_pct_flat_15bp": -1.6593
         },
         {
           "date": "2026-08-25",
-          "ret_pct": -1.1195
+          "ret_pct": -1.1195,
+          "ret_pct_flat_15bp": -0.9283
         },
         {
           "date": "2026-08-26",
-          "ret_pct": -0.7953
+          "ret_pct": -0.7953,
+          "ret_pct_flat_15bp": -0.5077
         },
         {
           "date": "2026-08-27",
-          "ret_pct": -0.1116
+          "ret_pct": -0.1116,
+          "ret_pct_flat_15bp": -0.0329
         },
         {
           "date": "2026-08-28",
-          "ret_pct": -1.1384
+          "ret_pct": -1.1384,
+          "ret_pct_flat_15bp": -0.7712
         },
         {
           "date": "2026-08-31",
-          "ret_pct": -0.7617
+          "ret_pct": -0.7617,
+          "ret_pct_flat_15bp": -0.2549
         },
         {
           "date": "2026-09-01",
-          "ret_pct": -3.5367
+          "ret_pct": -3.5367,
+          "ret_pct_flat_15bp": -2.5621
         },
         {
           "date": "2026-09-02",
-          "ret_pct": -1.0571
+          "ret_pct": -1.0571,
+          "ret_pct_flat_15bp": 0.0996
         },
         {
           "date": "2026-09-03",
-          "ret_pct": 0.2183
+          "ret_pct": 0.2183,
+          "ret_pct_flat_15bp": 0.6302
         },
         {
           "date": "2026-09-04",
-          "ret_pct": -0.2894
+          "ret_pct": -0.2894,
+          "ret_pct_flat_15bp": 0.551
         },
         {
           "date": "2026-09-08",
-          "ret_pct": -1.2442
+          "ret_pct": -1.2442,
+          "ret_pct_flat_15bp": -0.8791
         },
         {
           "date": "2026-09-09",
-          "ret_pct": -1.7349
+          "ret_pct": -1.7349,
+          "ret_pct_flat_15bp": -0.9354
         },
         {
           "date": "2026-09-10",
-          "ret_pct": -3.7128
+          "ret_pct": -3.7128,
+          "ret_pct_flat_15bp": -2.5186
         },
         {
           "date": "2026-09-11",
-          "ret_pct": 1.7499
+          "ret_pct": 1.7499,
+          "ret_pct_flat_15bp": 1.858
         }
       ],
       "clean_from": "2026-09-28"
@@ -2696,87 +3208,108 @@
       "daily": [
         {
           "date": "2026-08-13",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-14",
-          "ret_pct": -0.4921
+          "ret_pct": -0.4921,
+          "ret_pct_flat_15bp": -0.3121
         },
         {
           "date": "2026-08-17",
-          "ret_pct": -0.3187
+          "ret_pct": -0.3187,
+          "ret_pct_flat_15bp": -0.2045
         },
         {
           "date": "2026-08-18",
-          "ret_pct": -0.7285
+          "ret_pct": -0.7285,
+          "ret_pct_flat_15bp": -0.2846
         },
         {
           "date": "2026-08-19",
-          "ret_pct": -0.5877
+          "ret_pct": -0.5877,
+          "ret_pct_flat_15bp": -0.1327
         },
         {
           "date": "2026-08-20",
-          "ret_pct": -0.1191
+          "ret_pct": -0.1191,
+          "ret_pct_flat_15bp": 0.1739
         },
         {
           "date": "2026-08-21",
-          "ret_pct": -0.1045
+          "ret_pct": -0.1045,
+          "ret_pct_flat_15bp": 0.0062
         },
         {
           "date": "2026-08-24",
-          "ret_pct": -0.7628
+          "ret_pct": -0.7628,
+          "ret_pct_flat_15bp": -0.4026
         },
         {
           "date": "2026-08-25",
-          "ret_pct": 0.366
+          "ret_pct": 0.366,
+          "ret_pct_flat_15bp": 0.4579
         },
         {
           "date": "2026-08-26",
-          "ret_pct": -1.6577
+          "ret_pct": -1.6577,
+          "ret_pct_flat_15bp": -1.2242
         },
         {
           "date": "2026-08-27",
-          "ret_pct": 0.0957
+          "ret_pct": 0.0957,
+          "ret_pct_flat_15bp": 0.2187
         },
         {
           "date": "2026-08-28",
-          "ret_pct": -1.2269
+          "ret_pct": -1.2269,
+          "ret_pct_flat_15bp": -0.851
         },
         {
           "date": "2026-08-31",
-          "ret_pct": -0.0758
+          "ret_pct": -0.0758,
+          "ret_pct_flat_15bp": 0.0597
         },
         {
           "date": "2026-09-01",
-          "ret_pct": -0.6186
+          "ret_pct": -0.6186,
+          "ret_pct_flat_15bp": -0.4266
         },
         {
           "date": "2026-09-02",
-          "ret_pct": -0.4521
+          "ret_pct": -0.4521,
+          "ret_pct_flat_15bp": 0.1775
         },
         {
           "date": "2026-09-03",
-          "ret_pct": -2.2598
+          "ret_pct": -2.2598,
+          "ret_pct_flat_15bp": -1.5799
         },
         {
           "date": "2026-09-04",
-          "ret_pct": -0.0509
+          "ret_pct": -0.0509,
+          "ret_pct_flat_15bp": 0.0629
         },
         {
           "date": "2026-09-08",
-          "ret_pct": -0.4027
+          "ret_pct": -0.4027,
+          "ret_pct_flat_15bp": -0.2758
         },
         {
           "date": "2026-09-09",
-          "ret_pct": 0.8074
+          "ret_pct": 0.8074,
+          "ret_pct_flat_15bp": 1.3917
         },
         {
           "date": "2026-09-10",
-          "ret_pct": -1.8096
+          "ret_pct": -1.8096,
+          "ret_pct_flat_15bp": -1.5888
         },
         {
           "date": "2026-09-11",
-          "ret_pct": -2.0193
+          "ret_pct": -2.0193,
+          "ret_pct_flat_15bp": -1.6587
         }
       ],
       "clean_from": "2026-09-28"
@@ -2793,87 +3326,108 @@
       "daily": [
         {
           "date": "2026-08-13",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-14",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-17",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-18",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-19",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-20",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-21",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-24",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-25",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-26",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-27",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-28",
-          "ret_pct": -1.2266
+          "ret_pct": -1.2266,
+          "ret_pct_flat_15bp": -1.19
         },
         {
           "date": "2026-08-31",
-          "ret_pct": 1.5967
+          "ret_pct": 1.5967,
+          "ret_pct_flat_15bp": 1.5961
         },
         {
           "date": "2026-09-01",
-          "ret_pct": 0.9648
+          "ret_pct": 0.9648,
+          "ret_pct_flat_15bp": 0.9645
         },
         {
           "date": "2026-09-02",
-          "ret_pct": -1.0421
+          "ret_pct": -1.0421,
+          "ret_pct_flat_15bp": -1.0041
         },
         {
           "date": "2026-09-03",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-09-04",
-          "ret_pct": 6.0043
+          "ret_pct": 6.0043,
+          "ret_pct_flat_15bp": 6.2422
         },
         {
           "date": "2026-09-08",
-          "ret_pct": -4.2939
+          "ret_pct": -4.2939,
+          "ret_pct_flat_15bp": -4.2811
         },
         {
           "date": "2026-09-09",
-          "ret_pct": -3.8641
+          "ret_pct": -3.8641,
+          "ret_pct_flat_15bp": -3.852
         },
         {
           "date": "2026-09-10",
-          "ret_pct": -3.2477
+          "ret_pct": -3.2477,
+          "ret_pct_flat_15bp": -2.9809
         },
         {
           "date": "2026-09-11",
-          "ret_pct": -0.6834
+          "ret_pct": -0.6834,
+          "ret_pct_flat_15bp": -0.3224
         }
       ],
       "clean_from": "2026-09-28"
@@ -2890,87 +3444,108 @@
       "daily": [
         {
           "date": "2026-08-13",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-14",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-17",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-18",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-19",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-20",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-21",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-24",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-25",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-26",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-27",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-28",
-          "ret_pct": -1.2266
+          "ret_pct": -1.2266,
+          "ret_pct_flat_15bp": -1.19
         },
         {
           "date": "2026-08-31",
-          "ret_pct": 1.5967
+          "ret_pct": 1.5967,
+          "ret_pct_flat_15bp": 1.5961
         },
         {
           "date": "2026-09-01",
-          "ret_pct": 0.9648
+          "ret_pct": 0.9648,
+          "ret_pct_flat_15bp": 0.9645
         },
         {
           "date": "2026-09-02",
-          "ret_pct": -1.0421
+          "ret_pct": -1.0421,
+          "ret_pct_flat_15bp": -1.0041
         },
         {
           "date": "2026-09-03",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-09-04",
-          "ret_pct": 6.0043
+          "ret_pct": 6.0043,
+          "ret_pct_flat_15bp": 6.2422
         },
         {
           "date": "2026-09-08",
-          "ret_pct": -4.2939
+          "ret_pct": -4.2939,
+          "ret_pct_flat_15bp": -4.2811
         },
         {
           "date": "2026-09-09",
-          "ret_pct": -3.8641
+          "ret_pct": -3.8641,
+          "ret_pct_flat_15bp": -3.852
         },
         {
           "date": "2026-09-10",
-          "ret_pct": -3.2477
+          "ret_pct": -3.2477,
+          "ret_pct_flat_15bp": -2.9809
         },
         {
           "date": "2026-09-11",
-          "ret_pct": -0.6834
+          "ret_pct": -0.6834,
+          "ret_pct_flat_15bp": -0.3224
         }
       ],
       "clean_from": "2026-09-28"
@@ -2987,87 +3562,108 @@
       "daily": [
         {
           "date": "2026-08-13",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-14",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-17",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-18",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-19",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-20",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-21",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-24",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-25",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-26",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-27",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-28",
-          "ret_pct": -1.2266
+          "ret_pct": -1.2266,
+          "ret_pct_flat_15bp": -1.19
         },
         {
           "date": "2026-08-31",
-          "ret_pct": 1.5967
+          "ret_pct": 1.5967,
+          "ret_pct_flat_15bp": 1.5961
         },
         {
           "date": "2026-09-01",
-          "ret_pct": 0.9648
+          "ret_pct": 0.9648,
+          "ret_pct_flat_15bp": 0.9645
         },
         {
           "date": "2026-09-02",
-          "ret_pct": -1.0421
+          "ret_pct": -1.0421,
+          "ret_pct_flat_15bp": -1.0041
         },
         {
           "date": "2026-09-03",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-09-04",
-          "ret_pct": 6.0043
+          "ret_pct": 6.0043,
+          "ret_pct_flat_15bp": 6.2422
         },
         {
           "date": "2026-09-08",
-          "ret_pct": -4.2939
+          "ret_pct": -4.2939,
+          "ret_pct_flat_15bp": -4.2811
         },
         {
           "date": "2026-09-09",
-          "ret_pct": -3.8641
+          "ret_pct": -3.8641,
+          "ret_pct_flat_15bp": -3.852
         },
         {
           "date": "2026-09-10",
-          "ret_pct": -3.2477
+          "ret_pct": -3.2477,
+          "ret_pct_flat_15bp": -2.9809
         },
         {
           "date": "2026-09-11",
-          "ret_pct": -0.6834
+          "ret_pct": -0.6834,
+          "ret_pct_flat_15bp": -0.3224
         }
       ],
       "clean_from": "2026-09-28"
@@ -3084,87 +3680,108 @@
       "daily": [
         {
           "date": "2026-08-13",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-14",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-17",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-18",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-19",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-20",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-21",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-24",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-25",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-26",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-27",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-28",
-          "ret_pct": -1.2266
+          "ret_pct": -1.2266,
+          "ret_pct_flat_15bp": -1.19
         },
         {
           "date": "2026-08-31",
-          "ret_pct": 1.5967
+          "ret_pct": 1.5967,
+          "ret_pct_flat_15bp": 1.5961
         },
         {
           "date": "2026-09-01",
-          "ret_pct": 0.9648
+          "ret_pct": 0.9648,
+          "ret_pct_flat_15bp": 0.9645
         },
         {
           "date": "2026-09-02",
-          "ret_pct": -1.0421
+          "ret_pct": -1.0421,
+          "ret_pct_flat_15bp": -1.0041
         },
         {
           "date": "2026-09-03",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-09-04",
-          "ret_pct": 6.0043
+          "ret_pct": 6.0043,
+          "ret_pct_flat_15bp": 6.2422
         },
         {
           "date": "2026-09-08",
-          "ret_pct": -4.2939
+          "ret_pct": -4.2939,
+          "ret_pct_flat_15bp": -4.2811
         },
         {
           "date": "2026-09-09",
-          "ret_pct": -3.8641
+          "ret_pct": -3.8641,
+          "ret_pct_flat_15bp": -3.852
         },
         {
           "date": "2026-09-10",
-          "ret_pct": -3.2477
+          "ret_pct": -3.2477,
+          "ret_pct_flat_15bp": -2.9809
         },
         {
           "date": "2026-09-11",
-          "ret_pct": -0.6834
+          "ret_pct": -0.6834,
+          "ret_pct_flat_15bp": -0.3224
         }
       ],
       "clean_from": "2026-09-28"
@@ -3181,87 +3798,108 @@
       "daily": [
         {
           "date": "2026-08-13",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-14",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-17",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-18",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-19",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-20",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-21",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-24",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-25",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-26",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-27",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-28",
-          "ret_pct": -1.2266
+          "ret_pct": -1.2266,
+          "ret_pct_flat_15bp": -1.19
         },
         {
           "date": "2026-08-31",
-          "ret_pct": 1.5967
+          "ret_pct": 1.5967,
+          "ret_pct_flat_15bp": 1.5961
         },
         {
           "date": "2026-09-01",
-          "ret_pct": 0.9648
+          "ret_pct": 0.9648,
+          "ret_pct_flat_15bp": 0.9645
         },
         {
           "date": "2026-09-02",
-          "ret_pct": -1.0421
+          "ret_pct": -1.0421,
+          "ret_pct_flat_15bp": -1.0041
         },
         {
           "date": "2026-09-03",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-09-04",
-          "ret_pct": 6.0043
+          "ret_pct": 6.0043,
+          "ret_pct_flat_15bp": 6.2422
         },
         {
           "date": "2026-09-08",
-          "ret_pct": -4.2939
+          "ret_pct": -4.2939,
+          "ret_pct_flat_15bp": -4.2811
         },
         {
           "date": "2026-09-09",
-          "ret_pct": -3.8641
+          "ret_pct": -3.8641,
+          "ret_pct_flat_15bp": -3.852
         },
         {
           "date": "2026-09-10",
-          "ret_pct": -3.2477
+          "ret_pct": -3.2477,
+          "ret_pct_flat_15bp": -2.9809
         },
         {
           "date": "2026-09-11",
-          "ret_pct": -0.6834
+          "ret_pct": -0.6834,
+          "ret_pct_flat_15bp": -0.3224
         }
       ],
       "clean_from": "2026-09-28"
@@ -3278,87 +3916,108 @@
       "daily": [
         {
           "date": "2026-08-13",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-14",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-17",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-18",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-19",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-20",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-21",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-24",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-25",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-26",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-27",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-28",
-          "ret_pct": -1.2266
+          "ret_pct": -1.2266,
+          "ret_pct_flat_15bp": -1.19
         },
         {
           "date": "2026-08-31",
-          "ret_pct": 1.5967
+          "ret_pct": 1.5967,
+          "ret_pct_flat_15bp": 1.5961
         },
         {
           "date": "2026-09-01",
-          "ret_pct": 0.9648
+          "ret_pct": 0.9648,
+          "ret_pct_flat_15bp": 0.9645
         },
         {
           "date": "2026-09-02",
-          "ret_pct": -1.0421
+          "ret_pct": -1.0421,
+          "ret_pct_flat_15bp": -1.0041
         },
         {
           "date": "2026-09-03",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-09-04",
-          "ret_pct": 6.0043
+          "ret_pct": 6.0043,
+          "ret_pct_flat_15bp": 6.2422
         },
         {
           "date": "2026-09-08",
-          "ret_pct": -4.2939
+          "ret_pct": -4.2939,
+          "ret_pct_flat_15bp": -4.2811
         },
         {
           "date": "2026-09-09",
-          "ret_pct": -3.8641
+          "ret_pct": -3.8641,
+          "ret_pct_flat_15bp": -3.852
         },
         {
           "date": "2026-09-10",
-          "ret_pct": -3.2477
+          "ret_pct": -3.2477,
+          "ret_pct_flat_15bp": -2.9809
         },
         {
           "date": "2026-09-11",
-          "ret_pct": -0.6834
+          "ret_pct": -0.6834,
+          "ret_pct_flat_15bp": -0.3224
         }
       ],
       "clean_from": "2026-09-28"
@@ -3375,87 +4034,108 @@
       "daily": [
         {
           "date": "2026-08-13",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-14",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-17",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-18",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-19",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-20",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-21",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-24",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-25",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-26",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-27",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-28",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-31",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-09-01",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-09-02",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-09-03",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-09-04",
-          "ret_pct": 7.6097
+          "ret_pct": 7.6097,
+          "ret_pct_flat_15bp": 7.9229
         },
         {
           "date": "2026-09-08",
-          "ret_pct": -4.4671
+          "ret_pct": -4.4671,
+          "ret_pct_flat_15bp": -4.4541
         },
         {
           "date": "2026-09-09",
-          "ret_pct": -4.5293
+          "ret_pct": -4.5293,
+          "ret_pct_flat_15bp": -4.5155
         },
         {
           "date": "2026-09-10",
-          "ret_pct": -3.5586
+          "ret_pct": -3.5586,
+          "ret_pct_flat_15bp": -3.2199
         },
         {
           "date": "2026-09-11",
-          "ret_pct": -0.6835
+          "ret_pct": -0.6835,
+          "ret_pct_flat_15bp": -0.3223
         }
       ],
       "clean_from": "2026-09-28"
@@ -3472,87 +4152,108 @@
       "daily": [
         {
           "date": "2026-08-13",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-14",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-17",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-18",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-19",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-20",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-21",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-24",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-25",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-26",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-27",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-28",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-31",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-09-01",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-09-02",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-09-03",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-09-04",
-          "ret_pct": 6.0111
+          "ret_pct": 6.0111,
+          "ret_pct_flat_15bp": 6.2537
         },
         {
           "date": "2026-09-08",
-          "ret_pct": -4.2968
+          "ret_pct": -4.2968,
+          "ret_pct_flat_15bp": -4.287
         },
         {
           "date": "2026-09-09",
-          "ret_pct": 1.2232
+          "ret_pct": 1.2232,
+          "ret_pct_flat_15bp": 1.4609
         },
         {
           "date": "2026-09-10",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-09-11",
-          "ret_pct": -0.6837
+          "ret_pct": -0.6837,
+          "ret_pct_flat_15bp": -0.3232
         }
       ],
       "clean_from": "2026-09-28"
@@ -3569,87 +4270,108 @@
       "daily": [
         {
           "date": "2026-08-13",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-14",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-17",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-18",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-19",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-20",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-21",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-24",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-25",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-26",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-27",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-28",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-31",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-09-01",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-09-02",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-09-03",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-09-04",
-          "ret_pct": 6.0111
+          "ret_pct": 6.0111,
+          "ret_pct_flat_15bp": 6.2537
         },
         {
           "date": "2026-09-08",
-          "ret_pct": -4.2968
+          "ret_pct": -4.2968,
+          "ret_pct_flat_15bp": -4.287
         },
         {
           "date": "2026-09-09",
-          "ret_pct": -3.8671
+          "ret_pct": -3.8671,
+          "ret_pct_flat_15bp": -3.8579
         },
         {
           "date": "2026-09-10",
-          "ret_pct": -3.2515
+          "ret_pct": -3.2515,
+          "ret_pct_flat_15bp": -2.9868
         },
         {
           "date": "2026-09-11",
-          "ret_pct": -0.6844
+          "ret_pct": -0.6844,
+          "ret_pct_flat_15bp": -0.3236
         }
       ],
       "clean_from": "2026-09-28"
@@ -3666,87 +4388,108 @@
       "daily": [
         {
           "date": "2026-08-13",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-14",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-17",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-18",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-19",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-20",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-21",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-24",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-25",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-26",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-27",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-28",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-31",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-09-01",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-09-02",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-09-03",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-09-04",
-          "ret_pct": 6.0111
+          "ret_pct": 6.0111,
+          "ret_pct_flat_15bp": 6.2537
         },
         {
           "date": "2026-09-08",
-          "ret_pct": -4.2968
+          "ret_pct": -4.2968,
+          "ret_pct_flat_15bp": -4.287
         },
         {
           "date": "2026-09-09",
-          "ret_pct": 1.2232
+          "ret_pct": 1.2232,
+          "ret_pct_flat_15bp": 1.4609
         },
         {
           "date": "2026-09-10",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-09-11",
-          "ret_pct": -0.6837
+          "ret_pct": -0.6837,
+          "ret_pct_flat_15bp": -0.3232
         }
       ],
       "clean_from": "2026-09-28"
@@ -3763,87 +4506,108 @@
       "daily": [
         {
           "date": "2026-08-13",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-14",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-17",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-18",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-19",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-20",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-21",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-24",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-25",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-26",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-27",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-28",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-31",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-09-01",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-09-02",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-09-03",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-09-04",
-          "ret_pct": 6.0111
+          "ret_pct": 6.0111,
+          "ret_pct_flat_15bp": 6.2537
         },
         {
           "date": "2026-09-08",
-          "ret_pct": -4.2968
+          "ret_pct": -4.2968,
+          "ret_pct_flat_15bp": -4.287
         },
         {
           "date": "2026-09-09",
-          "ret_pct": 1.2232
+          "ret_pct": 1.2232,
+          "ret_pct_flat_15bp": 1.4609
         },
         {
           "date": "2026-09-10",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-09-11",
-          "ret_pct": -0.6837
+          "ret_pct": -0.6837,
+          "ret_pct_flat_15bp": -0.3232
         }
       ],
       "clean_from": "2026-09-28"
@@ -3860,87 +4624,108 @@
       "daily": [
         {
           "date": "2026-08-13",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-14",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-17",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-18",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-19",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-20",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-21",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-24",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-25",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-26",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-27",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-28",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-08-31",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-09-01",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-09-02",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-09-03",
-          "ret_pct": 0.0
+          "ret_pct": 0.0,
+          "ret_pct_flat_15bp": 0.0
         },
         {
           "date": "2026-09-04",
-          "ret_pct": 6.0111
+          "ret_pct": 6.0111,
+          "ret_pct_flat_15bp": 6.2537
         },
         {
           "date": "2026-09-08",
-          "ret_pct": -4.2968
+          "ret_pct": -4.2968,
+          "ret_pct_flat_15bp": -4.287
         },
         {
           "date": "2026-09-09",
-          "ret_pct": -3.8671
+          "ret_pct": -3.8671,
+          "ret_pct_flat_15bp": -3.8579
         },
         {
           "date": "2026-09-10",
-          "ret_pct": -3.2515
+          "ret_pct": -3.2515,
+          "ret_pct_flat_15bp": -2.9868
         },
         {
           "date": "2026-09-11",
-          "ret_pct": -0.6844
+          "ret_pct": -0.6844,
+          "ret_pct_flat_15bp": -0.3236
         }
       ],
       "clean_from": "2026-09-28"

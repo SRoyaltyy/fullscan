@@ -910,6 +910,108 @@ def test_theme_train_does_not_open_future_snapshot(tmp_path: Path) -> None:
     assert top == {"T4"}
 
 
+def test_flat_15bp_view_keeps_the_fills() -> None:
+    """Flat 15bp is a fee view. The recorded fills do not move."""
+    futu = 1.0
+    rows = [{
+        "equity": 9999.0,
+        "mean": -0.01,
+        "buys": [{"ticker": "AAA", "side": "BUY", "shares": 100, "price": 10.0}],
+        "sells": [],
+        "fills": [{
+            "ticker": "AAA", "side": "BUY", "shares": 100, "price": 10.0, "fees": futu,
+        }],
+    }]
+    fills = json.loads(json.dumps(rows[0]["fills"]))
+    got = oos.flat_15bp_means(rows)
+    assert rows[0]["fills"] == fills
+    assert rows[0]["mean"] == -0.01
+    # 7.5 bp of 1000 is 0.75, which is 0.25 cheaper than the Futubull fee.
+    assert got == [-0.0075]
+    assert oos.flat_15bp_means([{"equity": 10000.0, "fills": []}]) == [0.0]
+
+
+def test_logged_experiments_not_keepers() -> None:
+    text = oos.render_scoreboard(
+        {
+            "n_candidates": 37,
+            "random4": {
+                "mean": -1.0, "seed": 20260813, "draws": 1000,
+                "best_of_n_null": 1.0, "n_candidates": 37, "p5": -2.0, "p95": 2.0,
+            },
+            "iwm": {"after_fees_return": -0.5},
+            "train": {"sessions": ["2026-08-13"]},
+            "rows": [{
+                "id": "break10_h2_sx",
+                "after_fees_return": 1.0,
+                "start_day_win_rate": 1.0,
+                "fires": 12,
+                "win_rate": 0.5,
+                "asymmetric_payoff": 1.0,
+                "best_stock": "AAA",
+                "without_best_stock_return": 0.2,
+                "pass": True,
+                "keep_bar_met": False,
+                "daily": [{"date": "2026-08-13", "ret_pct": 0.0, "ret_pct_flat_15bp": 0.0}],
+            }],
+        },
+        {
+            "sessions": ["2026-09-14"],
+            "rules": [{
+                "name": "oos0914_break10_h2_sx",
+                "keep_bar_met": False,
+                "keep_bar_note": oos.KEEP_BAR_NOTE,
+                "after_fees_return": 0.28,
+                "best_stock": "SDGR",
+                "without_best_stock_return": -3.04,
+                "days": [{
+                    "date": "2026-09-14", "buys": [], "sells": [],
+                    "fees": 0, "cash": 10000.0, "equity": 10000.0,
+                    "mean": 0.0, "mean_flat_15bp": 0.0,
+                }],
+            }],
+            "baselines": _judge_test()["baselines"],
+        },
+    )
+    assert "logged experiments, not keepers" in text
+    assert "keep_bar_met" in text
+    assert "12 train fires against the 30-fire bar" in text
+    assert "p=0.87" in text
+    assert "Logged experiment, not a keeper" in text
+    assert "flat 15bp" in text
+    assert "ret_pct_flat_15bp" in text
+    doc = json.loads(oos.FROZEN_PATH.read_text(encoding="utf-8"))
+    assert [rec["name"] for rec in doc["recipes"]] == [
+        "oos0914_break10_h2_sx",
+        "oos0914_rvol_lg_h1_sx",
+        "oos0914_break10_h1_sx",
+        "oos0914_zero_candle_h2_sx",
+    ]
+    for rec in doc["recipes"]:
+        assert rec["keep_bar_met"] is False
+        assert fmr.recipe_fingerprint(rec) == doc["fingerprints"][rec["name"]]
+    train = json.loads(oos.TRAIN_REPORT.read_text(encoding="utf-8"))
+    assert len(train["rows"]) == 37
+    for row in train["rows"]:
+        assert row["daily"]
+        assert all("ret_pct" in day and "ret_pct_flat_15bp" in day for day in row["daily"])
+    pinned = {
+        "oos0914_break10_h2_sx": "d4a1d4d853a7f296b1b30778bd55c571bd28dc97eb513d4a908721dd909b3237",
+        "oos0914_rvol_lg_h1_sx": "cf8a5668b664d6737acabe292d0c2a2572533acda6b9d63bff916380046c4b67",
+        "oos0914_break10_h1_sx": "a2a8b4eb1f90a3761c6a86f734cb3d66c8e1a2a7f2fde6bbf25a4c889379a859",
+        "oos0914_zero_candle_h2_sx": "dc551f2b899846179d8040877c84663dc0c2735798760f7ad051985eeb1d95c5",
+    }
+    assert doc["fingerprints"] == pinned
+    ledger = json.loads((oos.LEDGER_DIR / "2026-09-24.json").read_text(encoding="utf-8"))
+    slot = ledger["recipes"]["oos0914_break10_h2_sx"]
+    assert slot["mean"] == -3.7439
+    assert "mean_flat_15bp" in slot
+    assert slot["sells"][0]["ticker"] == "ARM"
+    raw = (oos.LEDGER_DIR / "2026-09-24.json").read_bytes()
+    side = (oos.LEDGER_DIR / "2026-09-24.json.sha256").read_text(encoding="utf-8").strip()
+    assert hashlib.sha256(raw).hexdigest() == side
+
+
 def test_oos_append_failure_does_not_fail_the_lock(tmp_path: Path) -> None:
     """A research-track error must not change the nightly lock's exit code."""
     import logging
@@ -981,6 +1083,8 @@ def main() -> None:
     test_rule_19_baselines()
     test_rule_20_without_best_stock()
     test_rule_21_keep_bar_reported()
+    test_flat_15bp_view_keeps_the_fills()
+    test_logged_experiments_not_keepers()
     test_rule_22_untestable_out_of_rankings()
     test_rule_23_no_real_money_yet()
     with tempfile.TemporaryDirectory() as raw:

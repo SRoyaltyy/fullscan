@@ -22,7 +22,8 @@
           "fees": 0,
           "cash": 10000.0,
           "equity": 10000.0,
-          "mean": 0.0
+          "mean": 0.0,
+          "mean_flat_15bp": 0.0
         },
         {
           "date": "2026-09-15",
@@ -31,7 +32,8 @@
           "fees": 0,
           "cash": 10000.0,
           "equity": 10000.0,
-          "mean": 0.0
+          "mean": 0.0,
+          "mean_flat_15bp": 0.0
         },
         {
           "date": "2026-09-16",
@@ -69,7 +71,8 @@
           "fees": 31.2809,
           "cash": 0.43,
           "equity": 10109.01,
-          "mean": 1.0901
+          "mean": 1.0901,
+          "mean_flat_15bp": 1.3281
         },
         {
           "date": "2026-09-17",
@@ -78,7 +81,8 @@
           "fees": 0,
           "cash": 0.43,
           "equity": 11445.02,
-          "mean": 13.216
+          "mean": 13.216,
+          "mean_flat_15bp": 13.185
         },
         {
           "date": "2026-09-18",
@@ -145,7 +149,8 @@
           "fees": 69.4955,
           "cash": 0.0,
           "equity": 10979.12,
-          "mean": -4.0708
+          "mean": -4.0708,
+          "mean_flat_15bp": -3.6018
         },
         {
           "date": "2026-09-21",
@@ -154,7 +159,8 @@
           "fees": 0,
           "cash": 0.0,
           "equity": 10581.54,
-          "mean": -3.6212
+          "mean": -3.6212,
+          "mean_flat_15bp": -3.5961
         },
         {
           "date": "2026-09-22",
@@ -221,7 +227,8 @@
           "fees": 49.3574,
           "cash": 127.57,
           "equity": 10480.04,
-          "mean": -0.9592
+          "mean": -0.9592,
+          "mean_flat_15bp": -0.6361
         },
         {
           "date": "2026-09-23",
@@ -245,7 +252,8 @@
           "fees": 0.6573,
           "cash": 66.28,
           "equity": 10418.17,
-          "mean": -0.5904
+          "mean": -0.5904,
+          "mean_flat_15bp": -0.5784
         },
         {
           "date": "2026-09-24",
@@ -283,13 +291,16 @@
           "fees": 11.2467,
           "cash": 9972.65,
           "equity": 10028.12,
-          "mean": -3.7439
+          "mean": -3.7439,
+          "mean_flat_15bp": -3.6683
         }
       ],
       "after_fees_return": 0.281,
       "start_day_win_rate": 0.3333,
       "best_stock": "SDGR",
-      "without_best_stock_return": -3.035
+      "without_best_stock_return": -3.035,
+      "keep_bar_met": false,
+      "keep_bar_note": "12 train fires against the 30-fire bar. Excel's luck test p=0.87."
     },
     {
       "name": "oos0914_rvol_lg_h1_sx",
@@ -302,7 +313,8 @@
           "fees": 0,
           "cash": 10000.0,
           "equity": 10000.0,
-          "mean": 0.0
+          "mean": 0.0,
+          "mean_flat_15bp": 0.0
         },
         {
           "date": "2026-09-15",
@@ -311,7 +323,8 @@
           "fees": 0,
           "cash": 10000.0,
           "equity": 10000.0,
-          "mean": 0.0
+          "mean": 0.0,
+          "mean_flat_15bp": 0.0
         },
         {
           "date": "2026-09-16",
@@ -349,7 +362,8 @@
           "fees": 24.5412,
           "cash": 93.69,
           "equity": 10320.77,
-          "mean": 3.2077
+          "mean": 3.2077,
+          "mean_flat_15bp": 3.379
         },
         {
           "date": "2026-09-17",
@@ -416,7 +430,8 @@
           "fees": 76.9133,
           "cash": 7.76,
           "equity": 10273.95,
-          "mean": -0.4536
+          "mean": -0.4536,
+          "mean_flat_15bp": 0.1408
         },
         {
           "date": "2026-09-18",
@@ -483,7 +498,8 @@
           "fees": 89.7761,
           "cash": 2.77,
           "equity": 10684.59,
-          "mean": 3.9969
+          "mean": 3.9969,
+          "mean_flat_15bp": 4.6867
         },
         {
           "date": "2026-09-21",
@@ -550,7 +566,8 @@
           "fees": 85.3223,
           "cash": 3.07,
           "equity": 10340.7,
-          "mean": -3.2186
+          "mean": -3.2186,
+          "mean_flat_15bp": -2.5392
         },
         {
           "date": "2026-09-22",
@@ -617,7 +634,8 @@
           "fees": 90.3268,
           "cash": 36.85,
           "equity": 10289.4,
-          "mean": -0.4961
+          "mean": -0.4961,
+          "mean_flat_15bp": 0.2222
         },
         {
           "date": "2026-09-23",
@@ -684,7 +702,8 @@
           "fees": 56.288,
           "cash": 77.45,
           "equity": 9728.25,
-          "mean": -5.4537
+          "mean": -5.4537,
+          "mean_flat_15bp": -4.9124
         },
         {
           "date": "2026-09-24",
@@ -722,13 +741,16 @@
           "fees": 15.0856,
           "cash": 9243.36,
           "equity": 9243.36,
-          "mean": -4.9843
+          "mean": -4.9843,
+          "mean_flat_15bp": -4.7357
         }
       ],
       "after_fees_return": -7.566,
       "start_day_win_rate": 0.0,
       "best_stock": "CYPH",
-      "without_best_stock_return": -9.186
+      "without_best_stock_return": -9.186,
+      "keep_bar_met": false,
+      "keep_bar_note": "12 train fires against the 30-fire bar. Excel's luck test p=0.87."
     },
     {
       "name": "oos0914_break10_h1_sx",
@@ -741,7 +763,8 @@
           "fees": 0,
           "cash": 10000.0,
           "equity": 10000.0,
-          "mean": 0.0
+          "mean": 0.0,
+          "mean_flat_15bp": 0.0
         },
         {
           "date": "2026-09-15",
@@ -750,7 +773,8 @@
           "fees": 0,
           "cash": 10000.0,
           "equity": 10000.0,
-          "mean": 0.0
+          "mean": 0.0,
+          "mean_flat_15bp": 0.0
         },
         {
           "date": "2026-09-16",
@@ -788,7 +812,8 @@
           "fees": 31.2809,
           "cash": 0.43,
           "equity": 10109.01,
-          "mean": 1.0901
+          "mean": 1.0901,
+          "mean_flat_15bp": 1.3281
         },
         {
           "date": "2026-09-17",
@@ -855,7 +880,8 @@
           "fees": 83.7847,
           "cash": 4.76,
           "equity": 9980.63,
-          "mean": -1.27
+          "mean": -1.27,
+          "mean_flat_15bp": -0.5914
         },
         {
           "date": "2026-09-18",
@@ -922,7 +948,8 @@
           "fees": 86.8533,
           "cash": 20.11,
           "equity": 9786.33,
-          "mean": -1.9468
+          "mean": -1.9468,
+          "mean_flat_15bp": -1.2143
         },
         {
           "date": "2026-09-21",
@@ -989,7 +1016,8 @@
           "fees": 76.8282,
           "cash": 0.46,
           "equity": 9374.8,
-          "mean": -4.2052
+          "mean": -4.2052,
+          "mean_flat_15bp": -3.512
         },
         {
           "date": "2026-09-22",
@@ -1056,7 +1084,8 @@
           "fees": 53.4028,
           "cash": 194.51,
           "equity": 9339.71,
-          "mean": -0.3743
+          "mean": -0.3743,
+          "mean_flat_15bp": 0.046
         },
         {
           "date": "2026-09-23",
@@ -1123,7 +1152,8 @@
           "fees": 31.7874,
           "cash": 202.44,
           "equity": 8943.42,
-          "mean": -4.2431
+          "mean": -4.2431,
+          "mean_flat_15bp": -3.9367
         },
         {
           "date": "2026-09-24",
@@ -1161,13 +1191,16 @@
           "fees": 21.4111,
           "cash": 8464.79,
           "equity": 8464.79,
-          "mean": -5.3518
+          "mean": -5.3518,
+          "mean_flat_15bp": -5.0224
         }
       ],
       "after_fees_return": -15.352,
       "start_day_win_rate": 0.0,
       "best_stock": "HLP",
-      "without_best_stock_return": -16.676
+      "without_best_stock_return": -16.676,
+      "keep_bar_met": false,
+      "keep_bar_note": "12 train fires against the 30-fire bar. Excel's luck test p=0.87."
     },
     {
       "name": "oos0914_zero_candle_h2_sx",
@@ -1180,7 +1213,8 @@
           "fees": 0,
           "cash": 10000.0,
           "equity": 10000.0,
-          "mean": 0.0
+          "mean": 0.0,
+          "mean_flat_15bp": 0.0
         },
         {
           "date": "2026-09-15",
@@ -1189,7 +1223,8 @@
           "fees": 0,
           "cash": 10000.0,
           "equity": 10000.0,
-          "mean": 0.0
+          "mean": 0.0,
+          "mean_flat_15bp": 0.0
         },
         {
           "date": "2026-09-16",
@@ -1227,7 +1262,8 @@
           "fees": 8.782,
           "cash": 91.6,
           "equity": 10108.12,
-          "mean": 1.0812
+          "mean": 1.0812,
+          "mean_flat_15bp": 1.0948
         },
         {
           "date": "2026-09-17",
@@ -1244,7 +1280,8 @@
           "fees": 0.999,
           "cash": 1.8,
           "equity": 10669.7,
-          "mean": 5.5557
+          "mean": 5.5557,
+          "mean_flat_15bp": 5.5642
         },
         {
           "date": "2026-09-18",
@@ -1311,7 +1348,8 @@
           "fees": 17.6633,
           "cash": 200.95,
           "equity": 10342.94,
-          "mean": -3.0625
+          "mean": -3.0625,
+          "mean_flat_15bp": -3.0425
         },
         {
           "date": "2026-09-21",
@@ -1336,7 +1374,8 @@
           "fees": 1.611,
           "cash": 220.38,
           "equity": 10506.05,
-          "mean": 1.577
+          "mean": 1.577,
+          "mean_flat_15bp": 1.5909
         },
         {
           "date": "2026-09-22",
@@ -1374,7 +1413,8 @@
           "fees": 8.8841,
           "cash": 10396.53,
           "equity": 10460.37,
-          "mean": -0.4348
+          "mean": -0.4348,
+          "mean_flat_15bp": -0.4227
         },
         {
           "date": "2026-09-23",
@@ -1420,7 +1460,8 @@
           "fees": 9.2574,
           "cash": 158.23,
           "equity": 10373.38,
-          "mean": -0.8316
+          "mean": -0.8316,
+          "mean_flat_15bp": -0.8168
         },
         {
           "date": "2026-09-24",
@@ -1429,13 +1470,16 @@
           "fees": 0,
           "cash": 158.23,
           "equity": 10387.12,
-          "mean": 0.1325
+          "mean": 0.1325,
+          "mean_flat_15bp": 0.1323
         }
       ],
       "after_fees_return": 3.871,
       "start_day_win_rate": 0.6667,
       "best_stock": "WGS",
-      "without_best_stock_return": 1.33
+      "without_best_stock_return": 1.33,
+      "keep_bar_met": false,
+      "keep_bar_note": "12 train fires against the 30-fire bar. Excel's luck test p=0.87."
     }
   ],
   "baselines": {

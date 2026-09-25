@@ -566,6 +566,63 @@ def score_iwm(dates, bars, *, flat_15bp: bool = False) -> dict:
     }
 
 
+KEEP_BAR_NOTE = (
+    "12 train fires against the 30-fire bar. Excel's luck test p=0.87."
+)
+
+
+def _orders_for_fee_view(row: dict) -> list[dict]:
+    """Recorded orders, used only to reprice fees. Shares and prices stay."""
+    for key in ("fills", "trades"):
+        orders = [item for item in (row.get(key) or []) if isinstance(item, dict)]
+        if orders and any("fees" in item for item in orders):
+            return orders
+    orders = []
+    for key in ("buys", "sells"):
+        for item in row.get(key) or []:
+            if isinstance(item, dict):
+                orders.append(item)
+    return orders
+
+
+def _flat_order_fee(shares, price) -> float:
+    try:
+        shares_n = float(shares)
+        price_n = float(price)
+    except (TypeError, ValueError):
+        return 0.0
+    if shares_n <= 0 or price_n <= 0:
+        return 0.0
+    return round(shares_n * price_n * (FLAT_RT / 2.0), 4)
+
+
+def flat_15bp_means(rows: list[dict], *, capital: float | None = None) -> list:
+    """Daily percent return of the same fills under a flat 15 bp fee.
+
+    Futubull fees are already in ``equity``. This view charges 7.5 bp per
+    side instead and does not change picks, shares, or prices.
+    """
+    prev = float(fm.CAPITAL if capital is None else capital)
+    cum = 0.0
+    out = []
+    for row in rows or []:
+        delta = 0.0
+        for order in _orders_for_fee_view(row):
+            futu = float(order.get("fees") or 0.0)
+            delta += _flat_order_fee(order.get("shares"), order.get("price")) - futu
+        cum += delta
+        equity = row.get("equity")
+        if equity is None or prev <= 0:
+            out.append(None)
+            if equity is not None:
+                prev = float(equity) - cum
+            continue
+        adj = float(equity) - cum
+        out.append(round(100.0 * (adj / prev - 1.0), 4))
+        prev = adj
+    return out
+
+
 def _with_extra_fee(fn):
     """Run ``fn`` while each order also pays 7.5 bp (15 bp round trip)."""
     from . import paper_trade as pt
@@ -647,8 +704,12 @@ def mine() -> dict:
             "family": cand.get("family"),
             "created_on": cand.get("created_on"),
             "daily": [
-                {"date": item.get("date"), "ret_pct": item.get("mean")}
-                for item in series
+                {
+                    "date": item.get("date"),
+                    "ret_pct": item.get("mean"),
+                    "ret_pct_flat_15bp": flat,
+                }
+                for item, flat in zip(series, flat_15bp_means(series))
             ],
             "after_fees_return": ret,
             "start_day_win_rate": start,
@@ -796,12 +857,19 @@ def freeze() -> dict:
         write_frozen_list(report, [])
         return payload
     by_id = {r["id"]: r for r in expand_candidates()}
+    rows_by_id = {row["id"]: row for row in (report.get("rows") or [])}
     recipes = []
     for name in chosen:
         study = by_id.get(name)
         if study is None:
             raise SystemExit(f"frozen id {name} is not in the preregister")
-        recipes.append(_frozen_recipe(study))
+        rec = _frozen_recipe(study)
+        row = rows_by_id.get(name) or {}
+        if "keep_bar" in row or "keep_bar_met" in row:
+            rec["keep_bar_met"] = bool(row.get("keep_bar_met", row.get("keep_bar")))
+        if row.get("keep_bar_note"):
+            rec["keep_bar_note"] = row["keep_bar_note"]
+        recipes.append(rec)
     fmr.lock_recipe_rules(recipes, write=True, locked_on=DESIGNED_AFTER)
     payload = {
         "designed_after": DESIGNED_AFTER,
@@ -842,6 +910,12 @@ def write_frozen_list(report: dict, selected: list[dict]) -> dict:
             row["provenance"] = study["provenance"]
         if study.get("clean_from"):
             row["clean_from"] = study["clean_from"]
+        if rec["name"] in chosen and (
+            train.get("keep_bar_met") is not None or train.get("keep_bar") is not None
+        ):
+            row["keep_bar_met"] = bool(train.get("keep_bar_met", train.get("keep_bar")))
+        if rec["name"] in chosen and train.get("keep_bar_note"):
+            row["keep_bar_note"] = train["keep_bar_note"]
         candidates.append(row)
     prereg = load_preregister()
     payload = {
@@ -949,6 +1023,27 @@ def write_oos_ledger(date: str, doc: dict, path: Path | None = None) -> Path:
     return dest
 
 
+def _flat_mean_through(name: str, date: str, root: Path) -> float | None:
+    """Flat-15bp day return through ``date``, from saved state fills."""
+    folder = Path(root) / name
+    stamps = []
+    if folder.is_dir():
+        stamps = sorted(
+            path.stem for path in folder.glob("*.json")
+            if len(path.stem) == 10 and path.stem <= str(date)[:10]
+        )
+    series = []
+    for stamp in stamps:
+        doc = seq.read_state(name, stamp, root)
+        if doc:
+            series.append(doc)
+    if not series:
+        doc = seq.read_state(name, date, root)
+        series = [doc] if doc else []
+    means = flat_15bp_means(series)
+    return None if not means else means[-1]
+
+
 def _ledger_doc(date: str, recipes: list[dict], root: Path,
                 snap: dict) -> dict:
     slots = {}
@@ -964,6 +1059,7 @@ def _ledger_doc(date: str, recipes: list[dict], root: Path,
             "cash": state.get("cash"),
             "fees": state.get("fees"),
             "holdings": state.get("holdings") or [],
+            "mean_flat_15bp": _flat_mean_through(name, date, root),
         }
     return {
         "date": date,
@@ -1109,6 +1205,18 @@ def render_scoreboard(train: dict, test: dict | None) -> str:
         sessions = (test or {}).get("sessions") or []
         if sessions:
             span = f"{sessions[0]} through {sessions[-1]}"
+        logged = [rule for rule in frozen if rule.get("keep_bar_met") is False]
+        if logged:
+            note = next(
+                (rule.get("keep_bar_note") for rule in logged if rule.get("keep_bar_note")),
+                "",
+            )
+            lines.append(
+                "The frozen rules are logged experiments, not keepers. "
+                "`keep_bar_met` is false."
+                + (f" {note}" if note else "")
+            )
+            lines.append("")
         bits = []
         for rule in frozen:
             if rule.get("clean_from") and rule.get("after_fees_return") is None:
@@ -1152,6 +1260,16 @@ def render_scoreboard(train: dict, test: dict | None) -> str:
             "Their clean record starts 2026-09-28. The train numbers are the "
             "pre-registered selection window."
         )
+    if any(
+        day.get("ret_pct_flat_15bp") is not None
+        for row in (train.get("rows") or [])
+        for day in (row.get("daily") or [])
+    ):
+        lines.append(
+            "Each train row's daily path keeps the Futubull return in "
+            "`ret_pct`. `ret_pct_flat_15bp` is those same picks and fills "
+            "priced with a flat 15 bp fee (7.5 bp per side) instead."
+        )
     lines += [
         "",
         "| rule | after fees | start-day win rate | fires | win rate | asymmetric | best stock | without best stock | pass |",
@@ -1186,15 +1304,18 @@ def render_scoreboard(train: dict, test: dict | None) -> str:
         "close (cash, holdings, fees). A missing print is left on the snapshot's "
         "dropped list. The day still locks. Fills: buy at the open; a stop "
         "fills at the level, or at the open if the open gaps through it; "
-        "if the same bar also hits a take-profit, the stop fills first."
+        "if the same bar also hits a take-profit, the stop fills first. "
+        "The flat 15bp column prices those same fills at 7.5 bp per side."
     )
     lines.append("")
     for rule in frozen:
+        lines += [f"### `{rule['name']}`", ""]
+        if rule.get("keep_bar_met") is False:
+            lines.append("Logged experiment, not a keeper. `keep_bar_met` is false.")
+            lines.append("")
         lines += [
-            f"### `{rule['name']}`",
-            "",
-            "| date | buys | sells | fees | cash | equity | day |",
-            "| --- | --- | --- | ---: | ---: | ---: | ---: |",
+            "| date | buys | sells | fees | cash | equity | day | flat 15bp |",
+            "| --- | --- | --- | ---: | ---: | ---: | ---: | ---: |",
         ]
         for day in rule.get("days") or []:
             buys = ",".join(_tick(x) for x in (day.get("buys") or [])) or "—"
@@ -1202,7 +1323,7 @@ def render_scoreboard(train: dict, test: dict | None) -> str:
             lines.append(
                 f"| {day.get('date')} | {buys} | {sells} | "
                 f"{day.get('fees')} | {day.get('cash')} | {day.get('equity')} | "
-                f"{_pct(day.get('mean'))} |"
+                f"{_pct(day.get('mean'))} | {_pct(day.get('mean_flat_15bp'))} |"
             )
         lines.append("")
         if rule.get("clean_from"):
@@ -1417,6 +1538,7 @@ def _rule_report(rec: dict, dates: list[str], root: Path) -> dict:
     clean = str(rec.get("clean_from") or "")[:10]
     peeked = [row for row in series if clean and str(row.get("date"))[:10] < clean]
     real = [row for row in series if not clean or str(row.get("date"))[:10] >= clean]
+    flat_means = flat_15bp_means(series)
     report = {
         "name": rec["name"],
         "family": _family(rec),
@@ -1429,10 +1551,15 @@ def _rule_report(rec: dict, dates: list[str], root: Path) -> dict:
                 "cash": row.get("cash"),
                 "equity": row.get("equity"),
                 "mean": row.get("mean"),
+                "mean_flat_15bp": flat,
             }
-            for row in series
+            for row, flat in zip(series, flat_means)
         ],
     }
+    if "keep_bar_met" in rec:
+        report["keep_bar_met"] = bool(rec["keep_bar_met"])
+    if rec.get("keep_bar_note"):
+        report["keep_bar_note"] = rec["keep_bar_note"]
     if not clean:
         dropped = _without_best(rec, dates, root)
         report["after_fees_return"] = compound_return(series)
@@ -1607,6 +1734,194 @@ def append_nightly(*, through: str = "", write: bool = False) -> dict:
         _write_test(dates, recipes)
     print(f"[oos0914] nightly: appended {nxt}", flush=True)
     return {"appended": nxt}
+
+
+def _same_number(left, right) -> bool:
+    if left is None and right is None:
+        return True
+    if left is None or right is None:
+        return False
+    return abs(float(left) - float(right)) <= 1e-9
+
+
+def load_train_history() -> dict[str, list]:
+    """Replay train books in memory. Does not write a report or state."""
+    doc = load_preregister()
+    recipes = study_recipes(doc)
+    dates = sorted(load_snapshot_dir(SNAP_DIR, start=TRAIN_START, end=TRAIN_END))
+    snaps = load_snapshot_dir(SNAP_DIR, start=TRAIN_START, end=TRAIN_END)
+    tickers = {"IWM"}
+    for _date, snap in snaps.items():
+        for row in snapshot_rows(snap, _date):
+            if row.get("ticker"):
+                tickers.add(str(row["ticker"]).upper())
+    bars = load_session_bars(
+        LIVE_OHLC, dates, tickers, max_date=TRAIN_END, allow_test=False,
+    )
+    print(f"[oos0914] fee view train days={len(dates)} names={len(tickers)}", flush=True)
+    history = _score_named(dates, recipes, snaps, bars)
+    cands = expand_candidates(doc)
+    excel_ids = [c["id"] for c in cands if c.get("family") == "excel"]
+    theme = [c for c in cands if c.get("family") == "theme_radar_skip"]
+    if excel_ids:
+        from .factor_mine_oos0914_excel import load_fit, score_dates as excel_score
+        history.update(excel_score(dates, allow_test=False, fit=load_fit()))
+    if theme:
+        history.update(_score_theme(dates, theme, snaps, bars, allow_test=False))
+    return history
+
+
+def apply_report_view() -> None:
+    """Add the flat-15bp daily view and stamp the four frozen rules.
+
+    Picks, fills, Futubull returns, and fingerprints stay as they are.
+    """
+    manifest = fmf.MANIFEST_PATH.read_bytes()
+    fit_bytes = (OUT_DIR / "excel_fit.pkl").read_bytes()
+    state_bytes = {
+        str(path.relative_to(STATE_ROOT)): path.read_bytes()
+        for path in sorted(STATE_ROOT.glob("*/*.json"))
+    }
+    frozen = json.loads(FROZEN_PATH.read_text(encoding="utf-8"))
+    fingerprints = {
+        rec["name"]: fmr.recipe_fingerprint(rec) for rec in frozen["recipes"]
+    }
+    for name, digest in fingerprints.items():
+        if digest != (frozen.get("fingerprints") or {}).get(name):
+            raise SystemExit(f"fingerprint drift before the view {name}")
+    ledger_paths = sorted(LEDGER_DIR.glob("*.json"))
+    prior_sigs = {}
+    prior_ledger = {}
+    for path in ledger_paths:
+        doc = json.loads(path.read_text(encoding="utf-8"))
+        prior_ledger[path.name] = json.loads(json.dumps(doc))
+        prior_sigs[path.name] = {
+            name: fmr._ledger_signature(slot)
+            for name, slot in (doc.get("recipes") or {}).items()
+        }
+    history = load_train_history()
+    train = json.loads(TRAIN_REPORT.read_text(encoding="utf-8"))
+    if len(train.get("rows") or []) != 37:
+        raise SystemExit(f"expected 37 train rows, have {len(train.get('rows') or [])}")
+    bare = {_bare_id(name) for name in fingerprints}
+    for row in train["rows"]:
+        series = history.get(row["id"]) or []
+        flats = flat_15bp_means(series)
+        daily = row.get("daily") or []
+        if len(flats) != len(daily):
+            raise SystemExit(f"{row['id']} daily length {len(daily)} != {len(flats)}")
+        for point, flat, item in zip(daily, flats, series):
+            if not _same_number(point.get("ret_pct"), item.get("mean")):
+                raise SystemExit(
+                    f"{row['id']} {point.get('date')} futubull "
+                    f"{point.get('ret_pct')} != replay {item.get('mean')}"
+                )
+            point["ret_pct_flat_15bp"] = flat
+        if row["id"] in bare:
+            if int(row.get("fires") or 0) != 12:
+                raise SystemExit(f"{row['id']} fires {row.get('fires')} != 12")
+            row["keep_bar_met"] = False
+            row["keep_bar_note"] = KEEP_BAR_NOTE
+    TRAIN_REPORT.write_text(json.dumps(train, indent=2) + "\n", encoding="utf-8")
+    by_train = {row["id"]: row for row in train["rows"]}
+    frozen_list = json.loads(FROZEN_LIST.read_text(encoding="utf-8"))
+    if len(frozen_list.get("candidates") or []) != 37:
+        raise SystemExit("frozen list is not 37")
+    for cand in frozen_list["candidates"]:
+        src = by_train.get(cand["id"]) or {}
+        old_daily = cand.get("daily") or []
+        new_daily = src.get("daily") or []
+        if len(old_daily) != len(new_daily):
+            raise SystemExit(f"frozen list daily length {cand['id']}")
+        for old, new in zip(old_daily, new_daily):
+            if old.get("date") != new.get("date") or not _same_number(old.get("ret_pct"), new.get("ret_pct")):
+                raise SystemExit(f"frozen list futubull daily changed {cand['id']}")
+        cand["daily"] = new_daily
+        if cand.get("sha256") != fingerprints.get(cand.get("name")) and cand["name"] in fingerprints:
+            raise SystemExit(f"frozen list fingerprint {cand['name']}")
+        if cand["id"] in bare:
+            cand["keep_bar_met"] = False
+            cand["keep_bar_note"] = KEEP_BAR_NOTE
+    FROZEN_LIST.write_text(json.dumps(frozen_list, indent=2) + "\n", encoding="utf-8")
+    for rec in frozen["recipes"]:
+        if fmr.recipe_fingerprint(rec) != fingerprints[rec["name"]]:
+            raise SystemExit(f"fingerprint moved {rec['name']}")
+        rec["keep_bar_met"] = False
+        rec["keep_bar_note"] = KEEP_BAR_NOTE
+        if fmr.recipe_fingerprint(rec) != fingerprints[rec["name"]]:
+            raise SystemExit(f"keep stamp changed fingerprint {rec['name']}")
+    FROZEN_PATH.write_text(json.dumps(frozen, indent=2) + "\n", encoding="utf-8")
+    recipes = frozen_recipes()
+    for path in ledger_paths:
+        doc = prior_ledger[path.name]
+        date = str(doc.get("date") or path.stem)[:10]
+        for name, slot in (doc.get("recipes") or {}).items():
+            view = _flat_mean_through(name, date, STATE_ROOT)
+            chain = []
+            for earlier in ledger_paths:
+                if earlier.name > path.name:
+                    break
+                earlier_doc = prior_ledger[earlier.name]
+                earlier_slot = (earlier_doc.get("recipes") or {}).get(name) or {}
+                chain.append({
+                    "equity": earlier_slot.get("equity"),
+                    "trades": earlier_slot.get("trades") or [],
+                    "buys": earlier_slot.get("buys") or [],
+                    "sells": earlier_slot.get("sells") or [],
+                })
+            from_ledger = flat_15bp_means(chain)[-1]
+            if not _same_number(view, from_ledger):
+                raise SystemExit(
+                    f"flat view {name} {date} state {view} != ledger {from_ledger}"
+                )
+            slot["mean_flat_15bp"] = view
+        raw = fmr._canonical(doc)
+        path.write_bytes(raw)
+        path.with_name(path.name + ".sha256").write_text(
+            hashlib.sha256(raw).hexdigest() + "\n", encoding="utf-8",
+        )
+        got = {
+            name: fmr._ledger_signature(slot)
+            for name, slot in (doc.get("recipes") or {}).items()
+        }
+        if got != prior_sigs[path.name]:
+            raise SystemExit(f"ledger signature changed {path.name}")
+        snap = (load_snapshot_dir(
+            SNAP_DIR, start=date, end=date, cutoff="9999-99-99",
+        ).get(date) or {})
+        proposed = _ledger_doc(date, recipes, STATE_ROOT, snap)
+        if fmr._canonical(proposed) != raw:
+            raise SystemExit(f"ledger rebuild drifted {date}")
+    test = json.loads(TEST_REPORT.read_text(encoding="utf-8"))
+    by_rec = {rec["name"]: rec for rec in recipes}
+    for rule in test.get("rules") or []:
+        series = _chain(rule["name"], test.get("sessions") or [], STATE_ROOT)
+        flats = flat_15bp_means(series)
+        days = rule.get("days") or []
+        if len(flats) != len(days):
+            raise SystemExit(f"test days {rule['name']}")
+        for day, flat, row in zip(days, flats, series):
+            if str(day.get("date"))[:10] != str(row.get("date"))[:10]:
+                raise SystemExit(f"test day order {rule['name']}")
+            if not _same_number(day.get("mean"), row.get("mean")):
+                raise SystemExit(f"test futubull mean changed {rule['name']}")
+            day["mean_flat_15bp"] = flat
+        rec = by_rec[rule["name"]]
+        rule["keep_bar_met"] = False
+        rule["keep_bar_note"] = rec.get("keep_bar_note")
+    TEST_REPORT.write_text(json.dumps(test, indent=2) + "\n", encoding="utf-8")
+    SCOREBOARD.write_text(render_scoreboard(train, test), encoding="utf-8")
+    if fmf.MANIFEST_PATH.read_bytes() != manifest:
+        raise SystemExit("freeze manifest changed")
+    if (OUT_DIR / "excel_fit.pkl").read_bytes() != fit_bytes:
+        raise SystemExit("excel fit changed")
+    now_state = {
+        str(path.relative_to(STATE_ROOT)): path.read_bytes()
+        for path in sorted(STATE_ROOT.glob("*/*.json"))
+    }
+    if now_state != state_bytes:
+        raise SystemExit("state files changed")
+    print("[oos0914] report view written", flush=True)
 
 
 def main(argv=None) -> int:

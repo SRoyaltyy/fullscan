@@ -24,7 +24,9 @@
       "note": "OOS-0914 frozen rule. designed_after 2026-09-14.",
       "created_on": "2026-09-14",
       "author": "oos",
-      "family": "own"
+      "family": "own",
+      "keep_bar_met": false,
+      "keep_bar_note": "12 train fires against the 30-fire bar. Excel's luck test p=0.87."
     },
     {
       "name": "oos0914_rvol_lg_h1_sx",
@@ -50,7 +52,9 @@
       "note": "OOS-0914 frozen rule. designed_after 2026-09-14.",
       "created_on": "2026-09-14",
       "author": "oos",
-      "family": "own"
+      "family": "own",
+      "keep_bar_met": false,
+      "keep_bar_note": "12 train fires against the 30-fire bar. Excel's luck test p=0.87."
     },
     {
       "name": "oos0914_break10_h1_sx",
@@ -75,7 +79,9 @@
       "note": "OOS-0914 frozen rule. designed_after 2026-09-14.",
       "created_on": "2026-09-14",
       "author": "oos",
-      "family": "own"
+      "family": "own",
+      "keep_bar_met": false,
+      "keep_bar_note": "12 train fires against the 30-fire bar. Excel's luck test p=0.87."
     },
     {
       "name": "oos0914_zero_candle_h2_sx",
@@ -101,7 +107,9 @@
       "note": "OOS-0914 frozen rule. designed_after 2026-09-14.",
       "created_on": "2026-09-14",
       "author": "oos",
-      "family": "own"
+      "family": "own",
+      "keep_bar_met": false,
+      "keep_bar_note": "12 train fires against the 30-fire bar. Excel's luck test p=0.87."
     }
   ],
   "fingerprints": {
