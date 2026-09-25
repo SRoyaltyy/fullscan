@@ -2,7 +2,7 @@
   "ok": false,
   "n_fail": 2,
   "grok_busy": true,
-  "updated_at": "2026-09-23T04:14:32.374340-04:00",
+  "updated_at": "2026-09-25T04:18:04.221111-04:00",
   "source": "runtime_status",
   "doors": [
     {
@@ -83,7 +83,7 @@
       "group": "classroom",
       "status": "WARN",
       "required": false,
-      "detail": "401 in last packet 2026-09-18_pipeline_health.json, 2026-09-23_map_heat.json \u2014 not live",
+      "detail": "401 in last packet 2026-09-18_pipeline_health.json, 2026-09-23_preopen_status.json \u2014 not live",
       "action": "none"
     },
     {
@@ -155,7 +155,7 @@
       "group": "postclose",
       "status": "FAIL",
       "required": true,
-      "detail": "2026-09-22_map_heat.json: EMPTY TAPE; 403 in 2026-09-15_pipeline_health.json, 2026-09-16_pipeline_health.json",
+      "detail": "2026-09-24_map_heat.json: EMPTY TAPE; 403 in 2026-09-21_pipeline_health.json",
       "action": "none"
     },
     {
@@ -164,7 +164,7 @@
       "group": "postclose",
       "status": "WARN",
       "required": false,
-      "detail": "history \u2014 401 in 2026-09-18_pipeline_health.json, 2026-09-23_map_heat.json; DeepSeek fallback in 2026-09-23_map_postclose_captains_utilities.json, 2026-09-22_map_postclose_captains",
+      "detail": "history \u2014 401 in 2026-09-18_pipeline_health.json, 2026-09-23_preopen_status.json; 1800/timeout in 2026-09-23_pipeline_health.json; DeepSeek fallback in 2026-09-25_map_postclose_cap",
       "action": "none"
     }
   ],
