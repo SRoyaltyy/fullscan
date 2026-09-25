@@ -4614,6 +4614,20 @@ def main(argv=None) -> int:
             to_date=args.to_date or None,
             restate=list(args.restate or []),
         )
+        # Research track only. A failure here must not fail the nightly
+        # lock (HOT4 / holdup already written above).
+        try:
+            from . import factor_mine_oos0914 as oos0914
+            oos0914.append_nightly(
+                through=str((payload or {}).get("to_date") or args.to_date or "")[:10],
+                write=bool(args.write),
+            )
+        except Exception:
+            import logging
+            import traceback
+            logging.getLogger(__name__).warning(
+                "OOS0914_APPEND_FAILED\n%s", traceback.format_exc(),
+            )
     else:
         recipes = fmb.recipes_from_action(
             universe=args.universe, hold=args.hold, gate=args.gate,

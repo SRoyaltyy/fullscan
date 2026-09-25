@@ -1,0 +1,212 @@
+{
+  "buys": [
+    {
+      "fill_rule": "open",
+      "price": 106.75,
+      "shares": 24,
+      "side": "BUY",
+      "ticker": "GRAL"
+    },
+    {
+      "fill_rule": "open",
+      "price": 7.23,
+      "shares": 362,
+      "side": "BUY",
+      "ticker": "NUAI"
+    },
+    {
+      "fill_rule": "open",
+      "price": 319.41,
+      "shares": 8,
+      "side": "BUY",
+      "ticker": "ARM"
+    },
+    {
+      "fill_rule": "open",
+      "price": 23.51,
+      "shares": 111,
+      "side": "BUY",
+      "ticker": "ARQQ"
+    }
+  ],
+  "cash": 127.57,
+  "date": "2026-09-22",
+  "equity": 10480.04,
+  "fees": 49.3574,
+  "fills": [
+    {
+      "fees": 9.4516,
+      "fill_rule": "open",
+      "pnl": -560.27,
+      "price": 3.1,
+      "shares": 722,
+      "side": "SELL",
+      "ticker": "INDP"
+    },
+    {
+      "fees": 24.4035,
+      "fill_rule": "open",
+      "pnl": -29.81,
+      "price": 1.5,
+      "shares": 1866,
+      "side": "SELL",
+      "ticker": "LVWR"
+    },
+    {
+      "fees": 2.3103,
+      "fill_rule": "open",
+      "pnl": 71.56,
+      "price": 30.13,
+      "shares": 94,
+      "side": "SELL",
+      "ticker": "SDGR"
+    },
+    {
+      "fees": 2.1232,
+      "fill_rule": "open",
+      "pnl": -120.16,
+      "price": 77.99,
+      "shares": 34,
+      "side": "SELL",
+      "ticker": "TEM"
+    },
+    {
+      "fees": 2.062,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 106.75,
+      "shares": 24,
+      "side": "BUY",
+      "ticker": "GRAL"
+    },
+    {
+      "fees": 4.6698,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 7.23,
+      "shares": 362,
+      "side": "BUY",
+      "ticker": "NUAI"
+    },
+    {
+      "fees": 2.014,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 319.41,
+      "shares": 8,
+      "side": "BUY",
+      "ticker": "ARM"
+    },
+    {
+      "fees": 2.323,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 23.51,
+      "shares": 111,
+      "side": "BUY",
+      "ticker": "ARQQ"
+    }
+  ],
+  "holdings": [
+    "ARM",
+    "ARQQ",
+    "GRAL",
+    "NUAI"
+  ],
+  "mean": -0.9592,
+  "n_trades_today": 8,
+  "recipe": "oos0914_break10_h2_sx",
+  "sells": [
+    {
+      "fill_rule": "open",
+      "price": 3.1,
+      "shares": 722,
+      "side": "SELL",
+      "ticker": "INDP"
+    },
+    {
+      "fill_rule": "open",
+      "price": 1.5,
+      "shares": 1866,
+      "side": "SELL",
+      "ticker": "LVWR"
+    },
+    {
+      "fill_rule": "open",
+      "price": 30.13,
+      "shares": 94,
+      "side": "SELL",
+      "ticker": "SDGR"
+    },
+    {
+      "fill_rule": "open",
+      "price": 77.99,
+      "shares": 34,
+      "side": "SELL",
+      "ticker": "TEM"
+    }
+  ],
+  "state": {
+    "after": "2026-09-22",
+    "cash": 127.57,
+    "pos": {
+      "ARM": {
+        "close_px": 333.20001220703125,
+        "cost": 2557.294029296875,
+        "entry_date": "2026-09-22",
+        "entry_px": 319.4100036621094,
+        "fee_in": 2.014,
+        "last_px": 319.4100036621094,
+        "min_hold": 2,
+        "notional": 2555.280029296875,
+        "peak_px": 319.4100036621094,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate break_10=True; rank hot_score; list yday_gainer,yday_mover; ret5=+35.1; leftover $2620.70",
+        "shares": 8,
+        "ticker": "ARM"
+      },
+      "ARQQ": {
+        "close_px": 23.04,
+        "cost": 2611.933,
+        "entry_date": "2026-09-22",
+        "entry_px": 23.51,
+        "fee_in": 2.323,
+        "last_px": 23.51,
+        "min_hold": 2,
+        "notional": 2609.61,
+        "peak_px": 23.51,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate break_10=True; rank hot_score; list yday_gainer,yday_mover; ret5=+44.4; leftover $2620.70",
+        "shares": 111,
+        "ticker": "ARQQ"
+      },
+      "GRAL": {
+        "close_px": 108.52,
+        "cost": 2564.062,
+        "entry_date": "2026-09-22",
+        "entry_px": 106.75,
+        "fee_in": 2.062,
+        "last_px": 106.75,
+        "min_hold": 2,
+        "notional": 2562.0,
+        "peak_px": 106.75,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate break_10=True; rank hot_score; list yday_gainer,yday_mover; ret5=+42.9; leftover $2620.70",
+        "shares": 24,
+        "ticker": "GRAL"
+      },
+      "NUAI": {
+        "close_px": 6.974999904632568,
+        "cost": 2621.929806904602,
+        "entry_date": "2026-09-22",
+        "entry_px": 7.230000019073486,
+        "fee_in": 4.6698,
+        "last_px": 7.230000019073486,
+        "min_hold": 2,
+        "notional": 2617.260006904602,
+        "peak_px": 7.230000019073486,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate break_10=True; rank hot_score; list yday_gainer,yday_mover; ret5=+36.6; leftover $2620.70",
+        "shares": 362,
+        "ticker": "NUAI"
+      }
+    },
+    "yday_equity": 10480.04
+  }
+}

@@ -1,0 +1,212 @@
+{
+  "buys": [
+    {
+      "fill_rule": "open",
+      "price": 2.1,
+      "shares": 1240,
+      "side": "BUY",
+      "ticker": "HLP"
+    },
+    {
+      "fill_rule": "open",
+      "price": 22.46,
+      "shares": 115,
+      "side": "BUY",
+      "ticker": "BBNX"
+    },
+    {
+      "fill_rule": "open",
+      "price": 1.07,
+      "shares": 2434,
+      "side": "BUY",
+      "ticker": "IQ"
+    },
+    {
+      "fill_rule": "open",
+      "price": 25.95,
+      "shares": 99,
+      "side": "BUY",
+      "ticker": "ARQT"
+    }
+  ],
+  "cash": 7.76,
+  "date": "2026-09-17",
+  "equity": 10273.95,
+  "fees": 76.9133,
+  "fills": [
+    {
+      "fees": 2.2887,
+      "fill_rule": "open",
+      "pnl": 33.74,
+      "price": 28.595,
+      "shares": 88,
+      "side": "SELL",
+      "ticker": "CAI"
+    },
+    {
+      "fees": 18.1589,
+      "fill_rule": "open",
+      "pnl": 380.34,
+      "price": 2.1,
+      "shares": 1388,
+      "side": "SELL",
+      "ticker": "HLP"
+    },
+    {
+      "fees": 2.3494,
+      "fill_rule": "open",
+      "pnl": 80.94,
+      "price": 24.09,
+      "shares": 107,
+      "side": "SELL",
+      "ticker": "SDGR"
+    },
+    {
+      "fees": 2.0997,
+      "fill_rule": "open",
+      "pnl": -74.91,
+      "price": 86.76,
+      "shares": 27,
+      "side": "SELL",
+      "ticker": "SWKS"
+    },
+    {
+      "fees": 15.996,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 2.1,
+      "shares": 1240,
+      "side": "BUY",
+      "ticker": "HLP"
+    },
+    {
+      "fees": 2.335,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 22.46,
+      "shares": 115,
+      "side": "BUY",
+      "ticker": "BBNX"
+    },
+    {
+      "fees": 31.3986,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 1.07,
+      "shares": 2434,
+      "side": "BUY",
+      "ticker": "IQ"
+    },
+    {
+      "fees": 2.287,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 25.95,
+      "shares": 99,
+      "side": "BUY",
+      "ticker": "ARQT"
+    }
+  ],
+  "holdings": [
+    "ARQT",
+    "BBNX",
+    "HLP",
+    "IQ"
+  ],
+  "mean": -0.4536,
+  "n_trades_today": 8,
+  "recipe": "oos0914_rvol_lg_h1_sx",
+  "sells": [
+    {
+      "fill_rule": "open",
+      "price": 28.595,
+      "shares": 88,
+      "side": "SELL",
+      "ticker": "CAI"
+    },
+    {
+      "fill_rule": "open",
+      "price": 2.1,
+      "shares": 1388,
+      "side": "SELL",
+      "ticker": "HLP"
+    },
+    {
+      "fill_rule": "open",
+      "price": 24.09,
+      "shares": 107,
+      "side": "SELL",
+      "ticker": "SDGR"
+    },
+    {
+      "fill_rule": "open",
+      "price": 86.76,
+      "shares": 27,
+      "side": "SELL",
+      "ticker": "SWKS"
+    }
+  ],
+  "state": {
+    "after": "2026-09-17",
+    "cash": 7.76,
+    "pos": {
+      "ARQT": {
+        "close_px": 26.459999084472656,
+        "cost": 2571.3370755310057,
+        "entry_date": "2026-09-17",
+        "entry_px": 25.950000762939453,
+        "fee_in": 2.287,
+        "last_px": 25.950000762939453,
+        "min_hold": 1,
+        "notional": 2569.050075531006,
+        "peak_px": 25.950000762939453,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate last_green=True,rvol_min=1.5; rank hot_score; list probable,yday_gainer,yday_mover,ohlc_hot; ret5=+9.6; leftover $2605.03",
+        "shares": 99,
+        "ticker": "ARQT"
+      },
+      "BBNX": {
+        "close_px": 21.43000030517578,
+        "cost": 2585.2348947143555,
+        "entry_date": "2026-09-17",
+        "entry_px": 22.459999084472656,
+        "fee_in": 2.335,
+        "last_px": 22.459999084472656,
+        "min_hold": 1,
+        "notional": 2582.8998947143555,
+        "peak_px": 22.459999084472656,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate last_green=True,rvol_min=1.5; rank hot_score; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+27.3; leftover $2605.03",
+        "shares": 115,
+        "ticker": "BBNX"
+      },
+      "HLP": {
+        "close_px": 2.0199999809265137,
+        "cost": 2619.995881744385,
+        "entry_date": "2026-09-17",
+        "entry_px": 2.0999999046325684,
+        "fee_in": 15.996,
+        "last_px": 2.0999999046325684,
+        "min_hold": 1,
+        "notional": 2603.9998817443848,
+        "peak_px": 2.0999999046325684,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate last_green=True,rvol_min=1.5; rank hot_score; list yday_gainer,yday_mover; ret5=+60.5; leftover $2605.03",
+        "shares": 1240,
+        "ticker": "HLP"
+      },
+      "IQ": {
+        "close_px": 1.100000023841858,
+        "cost": 2635.7787276683807,
+        "entry_date": "2026-09-17",
+        "entry_px": 1.0700000524520874,
+        "fee_in": 31.3986,
+        "last_px": 1.0700000524520874,
+        "min_hold": 1,
+        "notional": 2604.3801276683807,
+        "peak_px": 1.0700000524520874,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate last_green=True,rvol_min=1.5; rank hot_score; list yday_gainer,ohlc_hot; \ud83d\udd35; ret5=+15.8; leftover $2605.03",
+        "shares": 2434,
+        "ticker": "IQ"
+      }
+    },
+    "yday_equity": 10273.95
+  }
+}

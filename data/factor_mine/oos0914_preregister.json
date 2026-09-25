@@ -1,0 +1,568 @@
+{
+  "track": "OOS-0914",
+  "designed_after": "2026-09-14",
+  "knowable_before": "2026-09-14T09:30:00-04:00",
+  "train_sessions": {
+    "start": "2026-08-13",
+    "end": "2026-09-11"
+  },
+  "price_history_end": "2026-09-11",
+  "cutoff": "2026-09-14",
+  "max_candidates": 50,
+  "note": "Committed before any train score. Mining must not open a file whose name date is on or after cutoff, and must not read a price store whose last bar is on or after cutoff.",
+  "book": {
+    "capital": 10000,
+    "whole_shares": true,
+    "fees": "futubull",
+    "same_bar": "stop_first",
+    "fills": "buy at the 09:30 open; stop fills at the stop or at the open on a gap (stop before take on the same bar); a finished hold sells at the next session open; the close is the mark",
+    "sell": "time",
+    "size": "leftover",
+    "side": "long",
+    "universe": "union",
+    "top_n": 4,
+    "hard_red": false
+  },
+  "selection": {
+    "rank": [
+      "after_fees_return_desc",
+      "start_day_win_rate_desc",
+      "name_asc"
+    ],
+    "max_freeze": 5,
+    "name_prefix": "oos0914_",
+    "pass": {
+      "after_fees_return_gt": 0,
+      "start_day_win_rate_gt": 0,
+      "without_best_stock_return_gt": 0,
+      "beat_random4_mean": true,
+      "beat_iwm": true
+    },
+    "start_day_win_rate": "Share of train sessions S where compounding after-fee equity from S through the last train session is strictly up. A flat session is not a win.",
+    "without_best_stock": "Rerun on the same train sessions with the ticker of highest attributed P&L removed. That rerun's after-fee return must be above zero. Ties break toward the earlier ticker symbol.",
+    "random4": {
+      "n": 4,
+      "draws": 1000,
+      "seed": 20260813,
+      "hold": 1,
+      "universe": "that morning's frozen snapshot rows",
+      "fees_train": "futubull"
+    },
+    "iwm": {
+      "mode": "buy_and_hold",
+      "fees_train": "futubull"
+    },
+    "test_baseline_fees": "futubull_plus_flat_15bp",
+    "flat_bp_round_trip": 15
+  },
+  "grid": {
+    "holds": [
+      1,
+      2
+    ],
+    "stop_pcts": [
+      null
+    ]
+  },
+  "bases": [
+    {
+      "id": "lg_hot",
+      "require": {
+        "last_green": true
+      },
+      "forbid": {
+        "alarm": true
+      },
+      "rank": "hot_score"
+    },
+    {
+      "id": "rsi_os",
+      "require": {
+        "rsi_os": true
+      },
+      "forbid": {},
+      "rank": "rsi"
+    },
+    {
+      "id": "rvol_lg",
+      "require": {
+        "last_green": true,
+        "rvol_min": 1.5
+      },
+      "forbid": {
+        "alarm": true
+      },
+      "rank": "hot_score"
+    },
+    {
+      "id": "ret5_up",
+      "require": {
+        "ret_5_min": 0
+      },
+      "forbid": {
+        "alarm": true
+      },
+      "rank": "ret_5"
+    },
+    {
+      "id": "pullback",
+      "require": {
+        "last_green": true,
+        "ret_5_max": -3
+      },
+      "forbid": {
+        "alarm": true
+      },
+      "rank": "hot_score"
+    },
+    {
+      "id": "break10",
+      "require": {
+        "break_10": true
+      },
+      "forbid": {
+        "alarm": true
+      },
+      "rank": "hot_score"
+    },
+    {
+      "id": "macd_x",
+      "require": {
+        "macd_cross_up": true
+      },
+      "forbid": {},
+      "rank": "macd_hist"
+    },
+    {
+      "id": "flow_lg",
+      "require": {
+        "flow_in": true,
+        "last_green": true
+      },
+      "forbid": {
+        "alarm": true
+      },
+      "rank": "hot_score"
+    },
+    {
+      "id": "yday_white",
+      "require": {
+        "yday_up": true,
+        "cam_bad_max": 0
+      },
+      "forbid": {
+        "alarm": true
+      },
+      "rank": "cond"
+    },
+    {
+      "id": "zero_candle",
+      "require": {
+        "zero_red": true,
+        "last_green": true
+      },
+      "forbid": {
+        "alarm": true
+      },
+      "rank": "candle_score"
+    }
+  ],
+  "trim": {
+    "decided": "2026-09-25",
+    "before_mining": true,
+    "reason": "40 own candidates plus 17 War room candidates is 57, which breaks the 50 cap. Drop every 8% stop variant. 10 gates times holds 1 and 2 leaves 20 of ours. 20 plus 17 is 37. The cap stays 50. Nothing else in the own grid changes. The luck test N is 37.",
+    "dropped": "every own candidate whose stop is 8%",
+    "own_remaining": 20,
+    "war_room": 17,
+    "total": 37,
+    "luck_test_n": 37,
+    "cap": 50
+  },
+  "war_room_files": {
+    "excel": {
+      "path": "data/factor_mine/oos0914_candidates_excel.md",
+      "sha256": "9061cd8d78a70e7bdcb75650918a7cae9d045711d1d4bcf57f427291828902a8"
+    },
+    "theme_radar": {
+      "path": "data/factor_mine/oos0914_candidates_theme_radar.md",
+      "sha256": "932d7e2a422545495d6ef6e0f9e6f657851fdc21266942ae0c64d2b4a77b1200"
+    }
+  },
+  "excel": {
+    "author": "excel",
+    "created_on": "2026-09-28",
+    "designed_after_through": "2026-09-25",
+    "clean_from": "2026-09-28",
+    "seed": 7,
+    "top_n": 4,
+    "hold": 1,
+    "exit": "close",
+    "size": "equal",
+    "fees": "futubull",
+    "target": "open_to_close_minus_0.0015",
+    "tie_break": "ticker_asc",
+    "zscore_cap": 5,
+    "features": [
+      "ret1",
+      "ret5",
+      "ret20",
+      "gap1",
+      "range1",
+      "relvol",
+      "log_relvol",
+      "atr14_pct",
+      "dist_hi20",
+      "dist_lo20",
+      "log_price",
+      "log_dolvol",
+      "ret1_x_log_relvol"
+    ],
+    "train_universe": {
+      "ret1_abs_min": 0.05,
+      "relvol_min": 2.0,
+      "min_prev_close": 1.0,
+      "min_avg_dollar_vol": 1000000
+    },
+    "live_universe": "data/factor_mine/candidates/<date>.json",
+    "models": [
+      {
+        "id": "ridge_px",
+        "model": "ridge",
+        "alphas": [
+          0.1,
+          1,
+          10,
+          100,
+          1000
+        ]
+      },
+      {
+        "id": "logit_px",
+        "model": "logit",
+        "C": [
+          0.01,
+          0.1,
+          1,
+          10
+        ],
+        "positive_above": 0.01
+      },
+      {
+        "id": "gbm_px",
+        "model": "gbm",
+        "max_depth": 3,
+        "max_iter": 300,
+        "learning_rate": 0.05,
+        "min_samples_leaf": 200
+      },
+      {
+        "id": "ens_px",
+        "model": "ensemble",
+        "members": [
+          "ridge_px",
+          "gbm_px"
+        ]
+      },
+      {
+        "id": "ridge_px_exmega",
+        "model": "ridge_exmega",
+        "parent": "ridge_px",
+        "ret1_abs_max": 0.4
+      }
+    ]
+  },
+  "theme_radar_skip": {
+    "author": "theme_radar",
+    "created_on": "2026-09-28",
+    "designed_after_through": "2026-09-25",
+    "clean_from": "2026-09-28",
+    "role": "skip gate on long picks",
+    "parent": {
+      "universe": "union",
+      "rank": "hot_score",
+      "top_n": 4,
+      "sell": "time",
+      "size": "leftover"
+    },
+    "no_backfill": true,
+    "since_first": "2026-08-06",
+    "top_bin": "qcut_5",
+    "earn_values": [
+      "today",
+      "tomorrow",
+      "this_week"
+    ],
+    "rules": [
+      {
+        "id": "tr01_fpe_top_earn_h3",
+        "field": "Forward P/E",
+        "lag": "level",
+        "op": "top_quintile",
+        "earn": true,
+        "er": false,
+        "hammer": false,
+        "hold": 3
+      },
+      {
+        "id": "tr02_dfpe_t3_top_earn_h3",
+        "field": "Forward P/E",
+        "lag": "T-3",
+        "op": "top_quintile",
+        "earn": true,
+        "er": false,
+        "hammer": false,
+        "hold": 3
+      },
+      {
+        "id": "tr03_dfpe_t2_top_earn_h3",
+        "field": "Forward P/E",
+        "lag": "T-2",
+        "op": "top_quintile",
+        "earn": true,
+        "er": false,
+        "hammer": false,
+        "hold": 3
+      },
+      {
+        "id": "tr04_dfpe_t3_pos_earn_h3",
+        "field": "Forward P/E",
+        "lag": "T-3",
+        "op": "positive",
+        "earn": true,
+        "er": false,
+        "hammer": false,
+        "hold": 3
+      },
+      {
+        "id": "tr05_dmcap_t3_top_earn_h3",
+        "field": "Market Cap",
+        "lag": "T-3",
+        "op": "top_quintile",
+        "earn": true,
+        "er": false,
+        "hammer": false,
+        "hold": 3
+      },
+      {
+        "id": "tr06_dfpe_first_top_earn_h3",
+        "field": "Forward P/E",
+        "lag": "since_first",
+        "op": "top_quintile",
+        "earn": true,
+        "er": false,
+        "hammer": false,
+        "hold": 3
+      },
+      {
+        "id": "tr07_drecom_t3_down_er_h3",
+        "field": "Analyst Recom",
+        "lag": "T-3",
+        "op": "negative",
+        "earn": false,
+        "er": true,
+        "hammer": false,
+        "hold": 3
+      },
+      {
+        "id": "tr08_dfpe_t1_top_hammer_h2",
+        "field": "Forward P/E",
+        "lag": "T-1",
+        "op": "top_quintile",
+        "earn": false,
+        "er": false,
+        "hammer": true,
+        "hold": 2
+      },
+      {
+        "id": "tr09_dfpe_t1_top_hammer_h3",
+        "field": "Forward P/E",
+        "lag": "T-1",
+        "op": "top_quintile",
+        "earn": false,
+        "er": false,
+        "hammer": true,
+        "hold": 3
+      },
+      {
+        "id": "tr10_dfpe_t2_pos_hammer_h2",
+        "field": "Forward P/E",
+        "lag": "T-2",
+        "op": "positive",
+        "earn": false,
+        "er": false,
+        "hammer": true,
+        "hold": 2
+      },
+      {
+        "id": "tr11_dfpe_first_top_hammer_h2",
+        "field": "Forward P/E",
+        "lag": "since_first",
+        "op": "top_quintile",
+        "earn": false,
+        "er": false,
+        "hammer": true,
+        "hold": 2
+      },
+      {
+        "id": "tr12_dfpe_first_top_hammer_h3",
+        "field": "Forward P/E",
+        "lag": "since_first",
+        "op": "top_quintile",
+        "earn": false,
+        "er": false,
+        "hammer": true,
+        "hold": 3
+      }
+    ]
+  },
+  "theme_radar_short_research": {
+    "in_candidate_count": false,
+    "in_freeze_ranking": false,
+    "entry": "T+1 close",
+    "cover": "close h sessions later",
+    "costs": "15bp round trip plus 0.3 percent borrow",
+    "borrow": 0.003,
+    "flat_bp_round_trip": 15,
+    "note": "Same 12 gates, scored only as research. Not part of the 37."
+  },
+  "own_provenance": {
+    "cutoff": "2026-09-14T09:30:00-04:00",
+    "method": "git log --follow and pickaxe (-S) on src/factor_mine.py and src/ohlc_ripper.py. Label designed_after only when the Factor Mine recipe or gate this candidate derives from was first created or last changed after that cutoff. Hold 2 is the white-horizon hold set. Nothing in the gates, holds, or stops was retuned.",
+    "relabelled": [],
+    "holdup_not_in_list": {
+      "recipe": "union_hot_n4_holdup",
+      "first_commit": "3032fdcdd",
+      "first_at": "2026-09-19T11:20:36Z",
+      "note": "Holdup was built after the cutoff, so it would be designed_after for 2026-09-14 through 2026-09-25. It is not one of these 20."
+    },
+    "bases": [
+      {
+        "id": "lg_hot",
+        "derives_from": "union_last_green_h1 and union_last_green_h3, ranked like union_hot_score",
+        "first_commit": "8e8c36a71",
+        "first_at": "2026-09-05T07:50:04Z",
+        "last_rule_change_commit": "a714ba9c0",
+        "last_rule_change_at": "2026-09-10T13:10:03Z",
+        "designed_after": false,
+        "note": "last_green plus no alarm, rank hot_score. Both the recipe line and the matcher predate the cutoff."
+      },
+      {
+        "id": "rsi_os",
+        "derives_from": "union_rsi_os_h1 and union_rsi_os_h3",
+        "first_commit": "24ebb9b7c",
+        "first_at": "2026-09-14T04:03:35Z",
+        "last_rule_change_commit": "24ebb9b7c",
+        "last_rule_change_at": "2026-09-14T04:03:35Z",
+        "designed_after": false,
+        "note": "Added at 00:03 ET on 2026-09-14, before the 09:30 ET cutoff."
+      },
+      {
+        "id": "rvol_lg",
+        "derives_from": "union_last_green plus the rvol_min matcher (coil_off). The 1.5 floor is FLOW_RVOL.",
+        "first_commit": "8e8c36a71",
+        "first_at": "2026-09-05T07:50:04Z",
+        "last_rule_change_commit": "24ebb9b7c",
+        "last_rule_change_at": "2026-09-14T04:03:35Z",
+        "designed_after": false,
+        "note": "No shipped recipe has require rvol_min 1.5. The matcher dates to 2026-09-05 (last line touch a714ba9c0 on 2026-09-10). FLOW_RVOL=1.5 landed at 00:03 ET on 2026-09-14. The exact pair was written into this list on 2026-09-25 and was not relabelled, because both ingredients predate 09:30 ET."
+      },
+      {
+        "id": "ret5_up",
+        "derives_from": "ret_5 rank (union_ret_5) with ret_5_min 0, the same floor as coil_off",
+        "first_commit": "8e8c36a71",
+        "first_at": "2026-09-05T07:50:04Z",
+        "last_rule_change_commit": "a714ba9c0",
+        "last_rule_change_at": "2026-09-10T13:10:03Z",
+        "designed_after": false,
+        "note": "Rank and ret_5_min matcher both predate the cutoff."
+      },
+      {
+        "id": "pullback",
+        "derives_from": "union_last_green plus the ret_5_max matcher",
+        "first_commit": "8e8c36a71",
+        "first_at": "2026-09-05T07:50:04Z",
+        "last_rule_change_commit": "a714ba9c0",
+        "last_rule_change_at": "2026-09-10T13:10:03Z",
+        "designed_after": false,
+        "note": "Shipped books use ret_5_max 10, not -3. The matcher predates the cutoff. The -3 bound was written into this list on 2026-09-25 and was not relabelled, because the gate it derives from was not created or changed after 09:30 ET."
+      },
+      {
+        "id": "break10",
+        "derives_from": "union_break10_h1 and union_break10_h3",
+        "first_commit": "8e8c36a71",
+        "first_at": "2026-09-05T07:50:04Z",
+        "last_rule_change_commit": "a714ba9c0",
+        "last_rule_change_at": "2026-09-10T13:10:03Z",
+        "designed_after": false,
+        "note": "break_10 plus no alarm, rank hot_score."
+      },
+      {
+        "id": "macd_x",
+        "derives_from": "union_macd_xup_h1 and union_macd_xup_h3",
+        "first_commit": "24ebb9b7c",
+        "first_at": "2026-09-14T04:03:35Z",
+        "last_rule_change_commit": "24ebb9b7c",
+        "last_rule_change_at": "2026-09-14T04:03:35Z",
+        "designed_after": false,
+        "note": "MACD 12/26/9 was already the rule at 00:03 ET on 2026-09-14. Commit 5f13a4415 on 2026-09-25 only named those same numbers; it is not a rule change."
+      },
+      {
+        "id": "flow_lg",
+        "derives_from": "union_flow_in_h1 plus last_green",
+        "first_commit": "24ebb9b7c",
+        "first_at": "2026-09-14T04:03:35Z",
+        "last_rule_change_commit": "24ebb9b7c",
+        "last_rule_change_at": "2026-09-14T04:03:35Z",
+        "designed_after": false,
+        "note": "flow_in is prior rel vol at least 1.5 and a small prior day. Added at 00:03 ET on 2026-09-14. The shipped cousin union_flow_in_white pairs flow with zero_red, not last_green."
+      },
+      {
+        "id": "yday_white",
+        "derives_from": "sweep_white_horizon pool yday: cam_bad_max 0 and yday_up, rank cond",
+        "first_commit": "eb60d4094",
+        "first_at": "2026-09-13T12:08:20Z",
+        "last_rule_change_commit": "eb60d4094",
+        "last_rule_change_at": "2026-09-13T12:08:20Z",
+        "designed_after": false,
+        "note": "yday_up itself landed in 75ae2ee4f at 2026-09-13T11:08:54Z. union_white_yday_h1 is the nearby book (zero_red plus yday_up), not this require."
+      },
+      {
+        "id": "zero_candle",
+        "derives_from": "union white (zero_red) plus last_green, ranked like union_candle_score",
+        "first_commit": "8e8c36a71",
+        "first_at": "2026-09-05T07:50:04Z",
+        "last_rule_change_commit": "a714ba9c0",
+        "last_rule_change_at": "2026-09-10T13:10:03Z",
+        "designed_after": false,
+        "note": "24ebb9b7c mentions zero_red only by adding flow_in_white. The zero_red test itself was not changed."
+      }
+    ]
+  },
+  "theme_radar_search": {
+    "note": "Theme Radar's 12 were the survivors of a larger search on 2026-08-13 through 2026-09-11. Excel will report their luck test using that larger count. This list's luck-test N stays 37.",
+    "tries_floor": 8264,
+    "finviz_one_factor": 4832,
+    "fullscan_gate_join_rules_1_to_6": 2808,
+    "excel_letter_join_rules_7_to_12": 624,
+    "count_is_a_floor": true,
+    "wider_brackets": [
+      9192,
+      14195
+    ],
+    "selection_note": "Grid winners were hand-picked into the joins after seeing results, using a 1-week hold, while the final rules use 2- or 3-day holds.",
+    "files_not_in_git": [
+      {
+        "name": "results_pass1_pass2.json",
+        "sha256": "1e23a661db7e484b48d8918f3f86097c626f3bf42e045d7ffaaccd2e2727635e"
+      },
+      {
+        "name": "gates2 results_full.json",
+        "sha256": "2586d290158ad1060be3af4be9cb539b956c5e9a0852d139deecb5c7e905096d"
+      },
+      {
+        "name": "excel-join results_full.json",
+        "sha256": "6d44b4e359f6f460bbf5db1af39429eef01588f4926bdf7db1804dbd8f63f329"
+      }
+    ]
+  }
+}

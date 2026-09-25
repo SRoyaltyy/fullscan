@@ -1,0 +1,2191 @@
+{
+  "sessions": [
+    "2026-09-14",
+    "2026-09-15",
+    "2026-09-16",
+    "2026-09-17",
+    "2026-09-18",
+    "2026-09-21",
+    "2026-09-22",
+    "2026-09-23",
+    "2026-09-24"
+  ],
+  "rules": [
+    {
+      "name": "oos0914_break10_h2_sx",
+      "family": "own",
+      "days": [
+        {
+          "date": "2026-09-14",
+          "buys": [],
+          "sells": [],
+          "fees": 0,
+          "cash": 10000.0,
+          "equity": 10000.0,
+          "mean": 0.0,
+          "mean_flat_15bp": 0.0
+        },
+        {
+          "date": "2026-09-15",
+          "buys": [],
+          "sells": [],
+          "fees": 0,
+          "cash": 10000.0,
+          "equity": 10000.0,
+          "mean": 0.0,
+          "mean_flat_15bp": 0.0
+        },
+        {
+          "date": "2026-09-16",
+          "buys": [
+            {
+              "fill_rule": "open",
+              "price": 3.66,
+              "shares": 683,
+              "side": "BUY",
+              "ticker": "INDP"
+            },
+            {
+              "fill_rule": "open",
+              "price": 1.8,
+              "shares": 1388,
+              "side": "BUY",
+              "ticker": "HLP"
+            },
+            {
+              "fill_rule": "open",
+              "price": 23.29,
+              "shares": 107,
+              "side": "BUY",
+              "ticker": "SDGR"
+            },
+            {
+              "fill_rule": "open",
+              "price": 28.16,
+              "shares": 88,
+              "side": "BUY",
+              "ticker": "CAI"
+            }
+          ],
+          "sells": [],
+          "fees": 31.2809,
+          "cash": 0.43,
+          "equity": 10109.01,
+          "mean": 1.0901,
+          "mean_flat_15bp": 1.3281
+        },
+        {
+          "date": "2026-09-17",
+          "buys": [],
+          "sells": [],
+          "fees": 0,
+          "cash": 0.43,
+          "equity": 11445.02,
+          "mean": 13.216,
+          "mean_flat_15bp": 13.185
+        },
+        {
+          "date": "2026-09-18",
+          "buys": [
+            {
+              "fill_rule": "open",
+              "price": 3.85,
+              "shares": 722,
+              "side": "BUY",
+              "ticker": "INDP"
+            },
+            {
+              "fill_rule": "open",
+              "price": 29.32,
+              "shares": 94,
+              "side": "BUY",
+              "ticker": "SDGR"
+            },
+            {
+              "fill_rule": "open",
+              "price": 81.4,
+              "shares": 34,
+              "side": "BUY",
+              "ticker": "TEM"
+            },
+            {
+              "fill_rule": "open",
+              "price": 1.49,
+              "shares": 1866,
+              "side": "BUY",
+              "ticker": "LVWR"
+            }
+          ],
+          "sells": [
+            {
+              "fill_rule": "open",
+              "price": 30.29,
+              "shares": 88,
+              "side": "SELL",
+              "ticker": "CAI"
+            },
+            {
+              "fill_rule": "open",
+              "price": 1.96,
+              "shares": 1388,
+              "side": "SELL",
+              "ticker": "HLP"
+            },
+            {
+              "fill_rule": "open",
+              "price": 3.85,
+              "shares": 683,
+              "side": "SELL",
+              "ticker": "INDP"
+            },
+            {
+              "fill_rule": "open",
+              "price": 29.32,
+              "shares": 107,
+              "side": "SELL",
+              "ticker": "SDGR"
+            }
+          ],
+          "fees": 69.4955,
+          "cash": 0.0,
+          "equity": 10979.12,
+          "mean": -4.0708,
+          "mean_flat_15bp": -3.6018
+        },
+        {
+          "date": "2026-09-21",
+          "buys": [],
+          "sells": [],
+          "fees": 0,
+          "cash": 0.0,
+          "equity": 10581.54,
+          "mean": -3.6212,
+          "mean_flat_15bp": -3.5961
+        },
+        {
+          "date": "2026-09-22",
+          "buys": [
+            {
+              "fill_rule": "open",
+              "price": 106.75,
+              "shares": 24,
+              "side": "BUY",
+              "ticker": "GRAL"
+            },
+            {
+              "fill_rule": "open",
+              "price": 7.23,
+              "shares": 362,
+              "side": "BUY",
+              "ticker": "NUAI"
+            },
+            {
+              "fill_rule": "open",
+              "price": 319.41,
+              "shares": 8,
+              "side": "BUY",
+              "ticker": "ARM"
+            },
+            {
+              "fill_rule": "open",
+              "price": 23.51,
+              "shares": 111,
+              "side": "BUY",
+              "ticker": "ARQQ"
+            }
+          ],
+          "sells": [
+            {
+              "fill_rule": "open",
+              "price": 3.1,
+              "shares": 722,
+              "side": "SELL",
+              "ticker": "INDP"
+            },
+            {
+              "fill_rule": "open",
+              "price": 1.5,
+              "shares": 1866,
+              "side": "SELL",
+              "ticker": "LVWR"
+            },
+            {
+              "fill_rule": "open",
+              "price": 30.13,
+              "shares": 94,
+              "side": "SELL",
+              "ticker": "SDGR"
+            },
+            {
+              "fill_rule": "open",
+              "price": 77.99,
+              "shares": 34,
+              "side": "SELL",
+              "ticker": "TEM"
+            }
+          ],
+          "fees": 49.3574,
+          "cash": 127.57,
+          "equity": 10480.04,
+          "mean": -0.9592,
+          "mean_flat_15bp": -0.6361
+        },
+        {
+          "date": "2026-09-23",
+          "buys": [
+            {
+              "fill_rule": "open",
+              "price": 2.92,
+              "shares": 10,
+              "side": "BUY",
+              "ticker": "FEAM"
+            },
+            {
+              "fill_rule": "open",
+              "price": 4.49,
+              "shares": 7,
+              "side": "BUY",
+              "ticker": "SVIA"
+            }
+          ],
+          "sells": [],
+          "fees": 0.6573,
+          "cash": 66.28,
+          "equity": 10418.17,
+          "mean": -0.5904,
+          "mean_flat_15bp": -0.5784
+        },
+        {
+          "date": "2026-09-24",
+          "buys": [],
+          "sells": [
+            {
+              "fill_rule": "open",
+              "price": 319.23,
+              "shares": 8,
+              "side": "SELL",
+              "ticker": "ARM"
+            },
+            {
+              "fill_rule": "open",
+              "price": 21.94,
+              "shares": 111,
+              "side": "SELL",
+              "ticker": "ARQQ"
+            },
+            {
+              "fill_rule": "open",
+              "price": 105.5,
+              "shares": 24,
+              "side": "SELL",
+              "ticker": "GRAL"
+            },
+            {
+              "fill_rule": "open",
+              "price": 6.62,
+              "shares": 362,
+              "side": "SELL",
+              "ticker": "NUAI"
+            }
+          ],
+          "fees": 11.2467,
+          "cash": 9972.65,
+          "equity": 10028.12,
+          "mean": -3.7439,
+          "mean_flat_15bp": -3.6683
+        }
+      ],
+      "after_fees_return": 0.281,
+      "start_day_win_rate": 0.3333,
+      "best_stock": "SDGR",
+      "without_best_stock_return": -3.035,
+      "keep_bar_met": false,
+      "keep_bar_note": "12 train fires against the 30-fire bar. Excel's luck test p=0.87."
+    },
+    {
+      "name": "oos0914_rvol_lg_h1_sx",
+      "family": "own",
+      "days": [
+        {
+          "date": "2026-09-14",
+          "buys": [],
+          "sells": [],
+          "fees": 0,
+          "cash": 10000.0,
+          "equity": 10000.0,
+          "mean": 0.0,
+          "mean_flat_15bp": 0.0
+        },
+        {
+          "date": "2026-09-15",
+          "buys": [],
+          "sells": [],
+          "fees": 0,
+          "cash": 10000.0,
+          "equity": 10000.0,
+          "mean": 0.0,
+          "mean_flat_15bp": 0.0
+        },
+        {
+          "date": "2026-09-16",
+          "buys": [
+            {
+              "fill_rule": "open",
+              "price": 1.8,
+              "shares": 1388,
+              "side": "BUY",
+              "ticker": "HLP"
+            },
+            {
+              "fill_rule": "open",
+              "price": 23.29,
+              "shares": 107,
+              "side": "BUY",
+              "ticker": "SDGR"
+            },
+            {
+              "fill_rule": "open",
+              "price": 28.16,
+              "shares": 88,
+              "side": "BUY",
+              "ticker": "CAI"
+            },
+            {
+              "fill_rule": "open",
+              "price": 89.38,
+              "shares": 27,
+              "side": "BUY",
+              "ticker": "SWKS"
+            }
+          ],
+          "sells": [],
+          "fees": 24.5412,
+          "cash": 93.69,
+          "equity": 10320.77,
+          "mean": 3.2077,
+          "mean_flat_15bp": 3.379
+        },
+        {
+          "date": "2026-09-17",
+          "buys": [
+            {
+              "fill_rule": "open",
+              "price": 2.1,
+              "shares": 1240,
+              "side": "BUY",
+              "ticker": "HLP"
+            },
+            {
+              "fill_rule": "open",
+              "price": 22.46,
+              "shares": 115,
+              "side": "BUY",
+              "ticker": "BBNX"
+            },
+            {
+              "fill_rule": "open",
+              "price": 1.07,
+              "shares": 2434,
+              "side": "BUY",
+              "ticker": "IQ"
+            },
+            {
+              "fill_rule": "open",
+              "price": 25.95,
+              "shares": 99,
+              "side": "BUY",
+              "ticker": "ARQT"
+            }
+          ],
+          "sells": [
+            {
+              "fill_rule": "open",
+              "price": 28.595,
+              "shares": 88,
+              "side": "SELL",
+              "ticker": "CAI"
+            },
+            {
+              "fill_rule": "open",
+              "price": 2.1,
+              "shares": 1388,
+              "side": "SELL",
+              "ticker": "HLP"
+            },
+            {
+              "fill_rule": "open",
+              "price": 24.09,
+              "shares": 107,
+              "side": "SELL",
+              "ticker": "SDGR"
+            },
+            {
+              "fill_rule": "open",
+              "price": 86.76,
+              "shares": 27,
+              "side": "SELL",
+              "ticker": "SWKS"
+            }
+          ],
+          "fees": 76.9133,
+          "cash": 7.76,
+          "equity": 10273.95,
+          "mean": -0.4536,
+          "mean_flat_15bp": 0.1408
+        },
+        {
+          "date": "2026-09-18",
+          "buys": [
+            {
+              "fill_rule": "open",
+              "price": 29.32,
+              "shares": 86,
+              "side": "BUY",
+              "ticker": "SDGR"
+            },
+            {
+              "fill_rule": "open",
+              "price": 81.4,
+              "shares": 31,
+              "side": "BUY",
+              "ticker": "TEM"
+            },
+            {
+              "fill_rule": "open",
+              "price": 1.49,
+              "shares": 1702,
+              "side": "BUY",
+              "ticker": "LVWR"
+            },
+            {
+              "fill_rule": "open",
+              "price": 3.035,
+              "shares": 833,
+              "side": "BUY",
+              "ticker": "CYPH"
+            }
+          ],
+          "sells": [
+            {
+              "fill_rule": "open",
+              "price": 26.14,
+              "shares": 99,
+              "side": "SELL",
+              "ticker": "ARQT"
+            },
+            {
+              "fill_rule": "open",
+              "price": 21.3,
+              "shares": 115,
+              "side": "SELL",
+              "ticker": "BBNX"
+            },
+            {
+              "fill_rule": "open",
+              "price": 1.96,
+              "shares": 1240,
+              "side": "SELL",
+              "ticker": "HLP"
+            },
+            {
+              "fill_rule": "open",
+              "price": 1.12,
+              "shares": 2434,
+              "side": "SELL",
+              "ticker": "IQ"
+            }
+          ],
+          "fees": 89.7761,
+          "cash": 2.77,
+          "equity": 10684.59,
+          "mean": 3.9969,
+          "mean_flat_15bp": 4.6867
+        },
+        {
+          "date": "2026-09-21",
+          "buys": [
+            {
+              "fill_rule": "open",
+              "price": 2.47,
+              "shares": 1122,
+              "side": "BUY",
+              "ticker": "FEAM"
+            },
+            {
+              "fill_rule": "open",
+              "price": 4.0,
+              "shares": 692,
+              "side": "BUY",
+              "ticker": "CYPH"
+            },
+            {
+              "fill_rule": "open",
+              "price": 1.65,
+              "shares": 1679,
+              "side": "BUY",
+              "ticker": "LVWR"
+            },
+            {
+              "fill_rule": "open",
+              "price": 13.05,
+              "shares": 209,
+              "side": "BUY",
+              "ticker": "USDE"
+            }
+          ],
+          "sells": [
+            {
+              "fill_rule": "open",
+              "price": 4.0,
+              "shares": 833,
+              "side": "SELL",
+              "ticker": "CYPH"
+            },
+            {
+              "fill_rule": "open",
+              "price": 1.65,
+              "shares": 1702,
+              "side": "SELL",
+              "ticker": "LVWR"
+            },
+            {
+              "fill_rule": "open",
+              "price": 29.43,
+              "shares": 86,
+              "side": "SELL",
+              "ticker": "SDGR"
+            },
+            {
+              "fill_rule": "open",
+              "price": 79.08,
+              "shares": 31,
+              "side": "SELL",
+              "ticker": "TEM"
+            }
+          ],
+          "fees": 85.3223,
+          "cash": 3.07,
+          "equity": 10340.7,
+          "mean": -3.2186,
+          "mean_flat_15bp": -2.5392
+        },
+        {
+          "date": "2026-09-22",
+          "buys": [
+            {
+              "fill_rule": "open",
+              "price": 106.75,
+              "shares": 24,
+              "side": "BUY",
+              "ticker": "GRAL"
+            },
+            {
+              "fill_rule": "open",
+              "price": 7.23,
+              "shares": 359,
+              "side": "BUY",
+              "ticker": "NUAI"
+            },
+            {
+              "fill_rule": "open",
+              "price": 319.41,
+              "shares": 8,
+              "side": "BUY",
+              "ticker": "ARM"
+            },
+            {
+              "fill_rule": "open",
+              "price": 1.01,
+              "shares": 2571,
+              "side": "BUY",
+              "ticker": "IVVD"
+            }
+          ],
+          "sells": [
+            {
+              "fill_rule": "open",
+              "price": 3.51,
+              "shares": 692,
+              "side": "SELL",
+              "ticker": "CYPH"
+            },
+            {
+              "fill_rule": "open",
+              "price": 2.47,
+              "shares": 1122,
+              "side": "SELL",
+              "ticker": "FEAM"
+            },
+            {
+              "fill_rule": "open",
+              "price": 1.5,
+              "shares": 1679,
+              "side": "SELL",
+              "ticker": "LVWR"
+            },
+            {
+              "fill_rule": "open",
+              "price": 12.99,
+              "shares": 209,
+              "side": "SELL",
+              "ticker": "USDE"
+            }
+          ],
+          "fees": 90.3268,
+          "cash": 36.85,
+          "equity": 10289.4,
+          "mean": -0.4961,
+          "mean_flat_15bp": 0.2222
+        },
+        {
+          "date": "2026-09-23",
+          "buys": [
+            {
+              "fill_rule": "open",
+              "price": 41.76,
+              "shares": 60,
+              "side": "BUY",
+              "ticker": "VKTX"
+            },
+            {
+              "fill_rule": "open",
+              "price": 4.49,
+              "shares": 565,
+              "side": "BUY",
+              "ticker": "SVIA"
+            },
+            {
+              "fill_rule": "open",
+              "price": 9.9,
+              "shares": 256,
+              "side": "BUY",
+              "ticker": "BFLY"
+            },
+            {
+              "fill_rule": "open",
+              "price": 70.84,
+              "shares": 35,
+              "side": "BUY",
+              "ticker": "INOD"
+            }
+          ],
+          "sells": [
+            {
+              "fill_rule": "open",
+              "price": 331.78,
+              "shares": 8,
+              "side": "SELL",
+              "ticker": "ARM"
+            },
+            {
+              "fill_rule": "open",
+              "price": 108.52,
+              "shares": 24,
+              "side": "SELL",
+              "ticker": "GRAL"
+            },
+            {
+              "fill_rule": "open",
+              "price": 0.95,
+              "shares": 2571,
+              "side": "SELL",
+              "ticker": "IVVD"
+            },
+            {
+              "fill_rule": "open",
+              "price": 6.83,
+              "shares": 359,
+              "side": "SELL",
+              "ticker": "NUAI"
+            }
+          ],
+          "fees": 56.288,
+          "cash": 77.45,
+          "equity": 9728.25,
+          "mean": -5.4537,
+          "mean_flat_15bp": -4.9124
+        },
+        {
+          "date": "2026-09-24",
+          "buys": [],
+          "sells": [
+            {
+              "fill_rule": "open",
+              "price": 9.12,
+              "shares": 256,
+              "side": "SELL",
+              "ticker": "BFLY"
+            },
+            {
+              "fill_rule": "open",
+              "price": 70.49,
+              "shares": 35,
+              "side": "SELL",
+              "ticker": "INOD"
+            },
+            {
+              "fill_rule": "open",
+              "price": 3.925,
+              "shares": 565,
+              "side": "SELL",
+              "ticker": "SVIA"
+            },
+            {
+              "fill_rule": "open",
+              "price": 36.025,
+              "shares": 60,
+              "side": "SELL",
+              "ticker": "VKTX"
+            }
+          ],
+          "fees": 15.0856,
+          "cash": 9243.36,
+          "equity": 9243.36,
+          "mean": -4.9843,
+          "mean_flat_15bp": -4.7357
+        }
+      ],
+      "after_fees_return": -7.566,
+      "start_day_win_rate": 0.0,
+      "best_stock": "CYPH",
+      "without_best_stock_return": -9.186,
+      "keep_bar_met": false,
+      "keep_bar_note": "12 train fires against the 30-fire bar. Excel's luck test p=0.87."
+    },
+    {
+      "name": "oos0914_break10_h1_sx",
+      "family": "own",
+      "days": [
+        {
+          "date": "2026-09-14",
+          "buys": [],
+          "sells": [],
+          "fees": 0,
+          "cash": 10000.0,
+          "equity": 10000.0,
+          "mean": 0.0,
+          "mean_flat_15bp": 0.0
+        },
+        {
+          "date": "2026-09-15",
+          "buys": [],
+          "sells": [],
+          "fees": 0,
+          "cash": 10000.0,
+          "equity": 10000.0,
+          "mean": 0.0,
+          "mean_flat_15bp": 0.0
+        },
+        {
+          "date": "2026-09-16",
+          "buys": [
+            {
+              "fill_rule": "open",
+              "price": 3.66,
+              "shares": 683,
+              "side": "BUY",
+              "ticker": "INDP"
+            },
+            {
+              "fill_rule": "open",
+              "price": 1.8,
+              "shares": 1388,
+              "side": "BUY",
+              "ticker": "HLP"
+            },
+            {
+              "fill_rule": "open",
+              "price": 23.29,
+              "shares": 107,
+              "side": "BUY",
+              "ticker": "SDGR"
+            },
+            {
+              "fill_rule": "open",
+              "price": 28.16,
+              "shares": 88,
+              "side": "BUY",
+              "ticker": "CAI"
+            }
+          ],
+          "sells": [],
+          "fees": 31.2809,
+          "cash": 0.43,
+          "equity": 10109.01,
+          "mean": 1.0901,
+          "mean_flat_15bp": 1.3281
+        },
+        {
+          "date": "2026-09-17",
+          "buys": [
+            {
+              "fill_rule": "open",
+              "price": 2.1,
+              "shares": 1218,
+              "side": "BUY",
+              "ticker": "HLP"
+            },
+            {
+              "fill_rule": "open",
+              "price": 22.46,
+              "shares": 113,
+              "side": "BUY",
+              "ticker": "BBNX"
+            },
+            {
+              "fill_rule": "open",
+              "price": 1.07,
+              "shares": 2390,
+              "side": "BUY",
+              "ticker": "IQ"
+            },
+            {
+              "fill_rule": "open",
+              "price": 10.25,
+              "shares": 246,
+              "side": "BUY",
+              "ticker": "IOVA"
+            }
+          ],
+          "sells": [
+            {
+              "fill_rule": "open",
+              "price": 28.595,
+              "shares": 88,
+              "side": "SELL",
+              "ticker": "CAI"
+            },
+            {
+              "fill_rule": "open",
+              "price": 2.1,
+              "shares": 1388,
+              "side": "SELL",
+              "ticker": "HLP"
+            },
+            {
+              "fill_rule": "open",
+              "price": 3.3,
+              "shares": 683,
+              "side": "SELL",
+              "ticker": "INDP"
+            },
+            {
+              "fill_rule": "open",
+              "price": 24.09,
+              "shares": 107,
+              "side": "SELL",
+              "ticker": "SDGR"
+            }
+          ],
+          "fees": 83.7847,
+          "cash": 4.76,
+          "equity": 9980.63,
+          "mean": -1.27,
+          "mean_flat_15bp": -0.5914
+        },
+        {
+          "date": "2026-09-18",
+          "buys": [
+            {
+              "fill_rule": "open",
+              "price": 3.85,
+              "shares": 643,
+              "side": "BUY",
+              "ticker": "INDP"
+            },
+            {
+              "fill_rule": "open",
+              "price": 29.32,
+              "shares": 84,
+              "side": "BUY",
+              "ticker": "SDGR"
+            },
+            {
+              "fill_rule": "open",
+              "price": 81.4,
+              "shares": 30,
+              "side": "BUY",
+              "ticker": "TEM"
+            },
+            {
+              "fill_rule": "open",
+              "price": 1.49,
+              "shares": 1663,
+              "side": "BUY",
+              "ticker": "LVWR"
+            }
+          ],
+          "sells": [
+            {
+              "fill_rule": "open",
+              "price": 21.3,
+              "shares": 113,
+              "side": "SELL",
+              "ticker": "BBNX"
+            },
+            {
+              "fill_rule": "open",
+              "price": 1.96,
+              "shares": 1218,
+              "side": "SELL",
+              "ticker": "HLP"
+            },
+            {
+              "fill_rule": "open",
+              "price": 10.12,
+              "shares": 246,
+              "side": "SELL",
+              "ticker": "IOVA"
+            },
+            {
+              "fill_rule": "open",
+              "price": 1.12,
+              "shares": 2390,
+              "side": "SELL",
+              "ticker": "IQ"
+            }
+          ],
+          "fees": 86.8533,
+          "cash": 20.11,
+          "equity": 9786.33,
+          "mean": -1.9468,
+          "mean_flat_15bp": -1.2143
+        },
+        {
+          "date": "2026-09-21",
+          "buys": [
+            {
+              "fill_rule": "open",
+              "price": 2.47,
+              "shares": 997,
+              "side": "BUY",
+              "ticker": "FEAM"
+            },
+            {
+              "fill_rule": "open",
+              "price": 4.0,
+              "shares": 616,
+              "side": "BUY",
+              "ticker": "CYPH"
+            },
+            {
+              "fill_rule": "open",
+              "price": 16.91,
+              "shares": 145,
+              "side": "BUY",
+              "ticker": "TJGC"
+            },
+            {
+              "fill_rule": "open",
+              "price": 1.65,
+              "shares": 1476,
+              "side": "BUY",
+              "ticker": "LVWR"
+            }
+          ],
+          "sells": [
+            {
+              "fill_rule": "open",
+              "price": 3.55,
+              "shares": 643,
+              "side": "SELL",
+              "ticker": "INDP"
+            },
+            {
+              "fill_rule": "open",
+              "price": 1.65,
+              "shares": 1663,
+              "side": "SELL",
+              "ticker": "LVWR"
+            },
+            {
+              "fill_rule": "open",
+              "price": 29.43,
+              "shares": 84,
+              "side": "SELL",
+              "ticker": "SDGR"
+            },
+            {
+              "fill_rule": "open",
+              "price": 79.08,
+              "shares": 30,
+              "side": "SELL",
+              "ticker": "TEM"
+            }
+          ],
+          "fees": 76.8282,
+          "cash": 0.46,
+          "equity": 9374.8,
+          "mean": -4.2052,
+          "mean_flat_15bp": -3.512
+        },
+        {
+          "date": "2026-09-22",
+          "buys": [
+            {
+              "fill_rule": "open",
+              "price": 106.75,
+              "shares": 21,
+              "side": "BUY",
+              "ticker": "GRAL"
+            },
+            {
+              "fill_rule": "open",
+              "price": 7.23,
+              "shares": 323,
+              "side": "BUY",
+              "ticker": "NUAI"
+            },
+            {
+              "fill_rule": "open",
+              "price": 319.41,
+              "shares": 7,
+              "side": "BUY",
+              "ticker": "ARM"
+            },
+            {
+              "fill_rule": "open",
+              "price": 23.51,
+              "shares": 99,
+              "side": "BUY",
+              "ticker": "ARQQ"
+            }
+          ],
+          "sells": [
+            {
+              "fill_rule": "open",
+              "price": 3.51,
+              "shares": 616,
+              "side": "SELL",
+              "ticker": "CYPH"
+            },
+            {
+              "fill_rule": "open",
+              "price": 2.47,
+              "shares": 997,
+              "side": "SELL",
+              "ticker": "FEAM"
+            },
+            {
+              "fill_rule": "open",
+              "price": 1.5,
+              "shares": 1476,
+              "side": "SELL",
+              "ticker": "LVWR"
+            },
+            {
+              "fill_rule": "open",
+              "price": 17.58,
+              "shares": 145,
+              "side": "SELL",
+              "ticker": "TJGC"
+            }
+          ],
+          "fees": 53.4028,
+          "cash": 194.51,
+          "equity": 9339.71,
+          "mean": -0.3743,
+          "mean_flat_15bp": 0.046
+        },
+        {
+          "date": "2026-09-23",
+          "buys": [
+            {
+              "fill_rule": "open",
+              "price": 2.92,
+              "shares": 796,
+              "side": "BUY",
+              "ticker": "FEAM"
+            },
+            {
+              "fill_rule": "open",
+              "price": 266.5,
+              "shares": 8,
+              "side": "BUY",
+              "ticker": "VICR"
+            },
+            {
+              "fill_rule": "open",
+              "price": 41.76,
+              "shares": 55,
+              "side": "BUY",
+              "ticker": "VKTX"
+            },
+            {
+              "fill_rule": "open",
+              "price": 4.49,
+              "shares": 517,
+              "side": "BUY",
+              "ticker": "SVIA"
+            }
+          ],
+          "sells": [
+            {
+              "fill_rule": "open",
+              "price": 331.78,
+              "shares": 7,
+              "side": "SELL",
+              "ticker": "ARM"
+            },
+            {
+              "fill_rule": "open",
+              "price": 23.3,
+              "shares": 99,
+              "side": "SELL",
+              "ticker": "ARQQ"
+            },
+            {
+              "fill_rule": "open",
+              "price": 108.52,
+              "shares": 21,
+              "side": "SELL",
+              "ticker": "GRAL"
+            },
+            {
+              "fill_rule": "open",
+              "price": 6.83,
+              "shares": 323,
+              "side": "SELL",
+              "ticker": "NUAI"
+            }
+          ],
+          "fees": 31.7874,
+          "cash": 202.44,
+          "equity": 8943.42,
+          "mean": -4.2431,
+          "mean_flat_15bp": -3.9367
+        },
+        {
+          "date": "2026-09-24",
+          "buys": [],
+          "sells": [
+            {
+              "fill_rule": "open",
+              "price": 2.61,
+              "shares": 796,
+              "side": "SELL",
+              "ticker": "FEAM"
+            },
+            {
+              "fill_rule": "open",
+              "price": 3.925,
+              "shares": 517,
+              "side": "SELL",
+              "ticker": "SVIA"
+            },
+            {
+              "fill_rule": "open",
+              "price": 274.45,
+              "shares": 8,
+              "side": "SELL",
+              "ticker": "VICR"
+            },
+            {
+              "fill_rule": "open",
+              "price": 36.025,
+              "shares": 55,
+              "side": "SELL",
+              "ticker": "VKTX"
+            }
+          ],
+          "fees": 21.4111,
+          "cash": 8464.79,
+          "equity": 8464.79,
+          "mean": -5.3518,
+          "mean_flat_15bp": -5.0224
+        }
+      ],
+      "after_fees_return": -15.352,
+      "start_day_win_rate": 0.0,
+      "best_stock": "HLP",
+      "without_best_stock_return": -16.676,
+      "keep_bar_met": false,
+      "keep_bar_note": "12 train fires against the 30-fire bar. Excel's luck test p=0.87."
+    },
+    {
+      "name": "oos0914_zero_candle_h2_sx",
+      "family": "own",
+      "days": [
+        {
+          "date": "2026-09-14",
+          "buys": [],
+          "sells": [],
+          "fees": 0,
+          "cash": 10000.0,
+          "equity": 10000.0,
+          "mean": 0.0,
+          "mean_flat_15bp": 0.0
+        },
+        {
+          "date": "2026-09-15",
+          "buys": [],
+          "sells": [],
+          "fees": 0,
+          "cash": 10000.0,
+          "equity": 10000.0,
+          "mean": 0.0,
+          "mean_flat_15bp": 0.0
+        },
+        {
+          "date": "2026-09-16",
+          "buys": [
+            {
+              "fill_rule": "open",
+              "price": 28.16,
+              "shares": 88,
+              "side": "BUY",
+              "ticker": "CAI"
+            },
+            {
+              "fill_rule": "open",
+              "price": 36.46,
+              "shares": 68,
+              "side": "BUY",
+              "ticker": "BLFS"
+            },
+            {
+              "fill_rule": "open",
+              "price": 27.09,
+              "shares": 92,
+              "side": "BUY",
+              "ticker": "ADPT"
+            },
+            {
+              "fill_rule": "open",
+              "price": 94.23,
+              "shares": 26,
+              "side": "BUY",
+              "ticker": "WGS"
+            }
+          ],
+          "sells": [],
+          "fees": 8.782,
+          "cash": 91.6,
+          "equity": 10108.12,
+          "mean": 1.0812,
+          "mean_flat_15bp": 1.0948
+        },
+        {
+          "date": "2026-09-17",
+          "buys": [
+            {
+              "fill_rule": "open",
+              "price": 2.4,
+              "shares": 37,
+              "side": "BUY",
+              "ticker": "SABR"
+            }
+          ],
+          "sells": [],
+          "fees": 0.999,
+          "cash": 1.8,
+          "equity": 10669.7,
+          "mean": 5.5557,
+          "mean_flat_15bp": 5.5642
+        },
+        {
+          "date": "2026-09-18",
+          "buys": [
+            {
+              "fill_rule": "open",
+              "price": 246.98,
+              "shares": 10,
+              "side": "BUY",
+              "ticker": "CRWD"
+            },
+            {
+              "fill_rule": "open",
+              "price": 19.91,
+              "shares": 131,
+              "side": "BUY",
+              "ticker": "NEO"
+            },
+            {
+              "fill_rule": "open",
+              "price": 29.32,
+              "shares": 89,
+              "side": "BUY",
+              "ticker": "SDGR"
+            },
+            {
+              "fill_rule": "open",
+              "price": 81.4,
+              "shares": 32,
+              "side": "BUY",
+              "ticker": "TEM"
+            }
+          ],
+          "sells": [
+            {
+              "fill_rule": "open",
+              "price": 28.55,
+              "shares": 92,
+              "side": "SELL",
+              "ticker": "ADPT"
+            },
+            {
+              "fill_rule": "open",
+              "price": 36.73,
+              "shares": 68,
+              "side": "SELL",
+              "ticker": "BLFS"
+            },
+            {
+              "fill_rule": "open",
+              "price": 30.29,
+              "shares": 88,
+              "side": "SELL",
+              "ticker": "CAI"
+            },
+            {
+              "fill_rule": "open",
+              "price": 104.59,
+              "shares": 26,
+              "side": "SELL",
+              "ticker": "WGS"
+            }
+          ],
+          "fees": 17.6633,
+          "cash": 200.95,
+          "equity": 10342.94,
+          "mean": -3.0625,
+          "mean_flat_15bp": -3.0425
+        },
+        {
+          "date": "2026-09-21",
+          "buys": [
+            {
+              "fill_rule": "open",
+              "price": 10.43,
+              "shares": 6,
+              "side": "BUY",
+              "ticker": "IOVA"
+            }
+          ],
+          "sells": [
+            {
+              "fill_rule": "open",
+              "price": 2.26,
+              "shares": 37,
+              "side": "SELL",
+              "ticker": "SABR"
+            }
+          ],
+          "fees": 1.611,
+          "cash": 220.38,
+          "equity": 10506.05,
+          "mean": 1.577,
+          "mean_flat_15bp": 1.5909
+        },
+        {
+          "date": "2026-09-22",
+          "buys": [],
+          "sells": [
+            {
+              "fill_rule": "open",
+              "price": 248.21,
+              "shares": 10,
+              "side": "SELL",
+              "ticker": "CRWD"
+            },
+            {
+              "fill_rule": "open",
+              "price": 19.28,
+              "shares": 131,
+              "side": "SELL",
+              "ticker": "NEO"
+            },
+            {
+              "fill_rule": "open",
+              "price": 30.13,
+              "shares": 89,
+              "side": "SELL",
+              "ticker": "SDGR"
+            },
+            {
+              "fill_rule": "open",
+              "price": 77.99,
+              "shares": 32,
+              "side": "SELL",
+              "ticker": "TEM"
+            }
+          ],
+          "fees": 8.8841,
+          "cash": 10396.53,
+          "equity": 10460.37,
+          "mean": -0.4348,
+          "mean_flat_15bp": -0.4227
+        },
+        {
+          "date": "2026-09-23",
+          "buys": [
+            {
+              "fill_rule": "open",
+              "price": 166.54,
+              "shares": 15,
+              "side": "BUY",
+              "ticker": "A"
+            },
+            {
+              "fill_rule": "open",
+              "price": 89.5,
+              "shares": 29,
+              "side": "BUY",
+              "ticker": "DXCM"
+            },
+            {
+              "fill_rule": "open",
+              "price": 118.14,
+              "shares": 22,
+              "side": "BUY",
+              "ticker": "NICE"
+            },
+            {
+              "fill_rule": "open",
+              "price": 18.575,
+              "shares": 140,
+              "side": "BUY",
+              "ticker": "NTSK"
+            }
+          ],
+          "sells": [
+            {
+              "fill_rule": "open",
+              "price": 10.69,
+              "shares": 6,
+              "side": "SELL",
+              "ticker": "IOVA"
+            }
+          ],
+          "fees": 9.2574,
+          "cash": 158.23,
+          "equity": 10373.38,
+          "mean": -0.8316,
+          "mean_flat_15bp": -0.8168
+        },
+        {
+          "date": "2026-09-24",
+          "buys": [],
+          "sells": [],
+          "fees": 0,
+          "cash": 158.23,
+          "equity": 10387.12,
+          "mean": 0.1325,
+          "mean_flat_15bp": 0.1323
+        }
+      ],
+      "after_fees_return": 3.871,
+      "start_day_win_rate": 0.6667,
+      "best_stock": "WGS",
+      "without_best_stock_return": 1.33,
+      "keep_bar_met": false,
+      "keep_bar_note": "12 train fires against the 30-fire bar. Excel's luck test p=0.87."
+    }
+  ],
+  "baselines": {
+    "random4": {
+      "futubull": {
+        "draws": 1000,
+        "seed": 20260813,
+        "n": 4,
+        "mean": -6.048,
+        "p5": -19.491,
+        "p50": -6.047,
+        "p95": 5.854,
+        "best_of_n_null": 8.683,
+        "n_candidates": 37,
+        "min": -32.983,
+        "max": 37.802,
+        "fee": "futubull"
+      },
+      "futubull_plus_15bp": {
+        "draws": 1000,
+        "seed": 20260813,
+        "n": 4,
+        "mean": -6.874,
+        "p5": -20.194,
+        "p50": -6.879,
+        "p95": 4.954,
+        "best_of_n_null": 7.774,
+        "n_candidates": 37,
+        "min": -33.615,
+        "max": 36.719,
+        "fee": "futubull"
+      }
+    },
+    "iwm": {
+      "futubull": {
+        "after_fees_return": -1.41,
+        "final_equity": 9858.95,
+        "fee": "futubull"
+      },
+      "futubull_plus_15bp": {
+        "after_fees_return": -1.444,
+        "final_equity": 9855.64,
+        "fee": "futubull"
+      }
+    }
+  },
+  "research_shorts": [
+    {
+      "id": "tr01_fpe_top_earn_h3",
+      "fires": 10,
+      "after_fees_return": -56.74,
+      "daily": [
+        {
+          "date": "2026-09-14",
+          "ret_pct": 0.0,
+          "equity": 10000.0
+        },
+        {
+          "date": "2026-09-15",
+          "ret_pct": -0.375,
+          "equity": 9962.5038
+        },
+        {
+          "date": "2026-09-16",
+          "ret_pct": -1.2231,
+          "equity": 9840.6481
+        },
+        {
+          "date": "2026-09-17",
+          "ret_pct": -3.8932,
+          "equity": 9457.5302
+        },
+        {
+          "date": "2026-09-18",
+          "ret_pct": -7.1417,
+          "equity": 8782.1027
+        },
+        {
+          "date": "2026-09-21",
+          "ret_pct": -2.8846,
+          "equity": 8528.7711
+        },
+        {
+          "date": "2026-09-22",
+          "ret_pct": -9.8669,
+          "equity": 7687.2469
+        },
+        {
+          "date": "2026-09-23",
+          "ret_pct": -7.6777,
+          "equity": 7097.0458
+        },
+        {
+          "date": "2026-09-24",
+          "ret_pct": -39.0447,
+          "equity": 4326.0275
+        }
+      ],
+      "costs": "15bp round trip plus 0.3 percent borrow",
+      "research": true,
+      "designed_after": true
+    },
+    {
+      "id": "tr02_dfpe_t3_top_earn_h3",
+      "fires": 15,
+      "after_fees_return": 7.032,
+      "daily": [
+        {
+          "date": "2026-09-14",
+          "ret_pct": 0.0,
+          "equity": 10000.0
+        },
+        {
+          "date": "2026-09-15",
+          "ret_pct": -0.3729,
+          "equity": 9962.7052
+        },
+        {
+          "date": "2026-09-16",
+          "ret_pct": -1.445,
+          "equity": 9818.7488
+        },
+        {
+          "date": "2026-09-17",
+          "ret_pct": -0.4422,
+          "equity": 9775.3288
+        },
+        {
+          "date": "2026-09-18",
+          "ret_pct": 4.7935,
+          "equity": 10243.9083
+        },
+        {
+          "date": "2026-09-21",
+          "ret_pct": -2.2255,
+          "equity": 10015.9272
+        },
+        {
+          "date": "2026-09-22",
+          "ret_pct": 0.2837,
+          "equity": 10044.3388
+        },
+        {
+          "date": "2026-09-23",
+          "ret_pct": -1.8249,
+          "equity": 9861.0387
+        },
+        {
+          "date": "2026-09-24",
+          "ret_pct": 8.5402,
+          "equity": 10703.1925
+        }
+      ],
+      "costs": "15bp round trip plus 0.3 percent borrow",
+      "research": true,
+      "designed_after": true
+    },
+    {
+      "id": "tr03_dfpe_t2_top_earn_h3",
+      "fires": 13,
+      "after_fees_return": 11.211,
+      "daily": [
+        {
+          "date": "2026-09-14",
+          "ret_pct": 0.0,
+          "equity": 10000.0
+        },
+        {
+          "date": "2026-09-15",
+          "ret_pct": -0.3736,
+          "equity": 9962.6385
+        },
+        {
+          "date": "2026-09-16",
+          "ret_pct": -2.6464,
+          "equity": 9698.9837
+        },
+        {
+          "date": "2026-09-17",
+          "ret_pct": 0.5567,
+          "equity": 9752.9741
+        },
+        {
+          "date": "2026-09-18",
+          "ret_pct": 4.6795,
+          "equity": 10209.3625
+        },
+        {
+          "date": "2026-09-21",
+          "ret_pct": 2.8217,
+          "equity": 10497.4384
+        },
+        {
+          "date": "2026-09-22",
+          "ret_pct": -0.9036,
+          "equity": 10402.5862
+        },
+        {
+          "date": "2026-09-23",
+          "ret_pct": -3.9357,
+          "equity": 9993.174
+        },
+        {
+          "date": "2026-09-24",
+          "ret_pct": 11.2867,
+          "equity": 11121.0718
+        }
+      ],
+      "costs": "15bp round trip plus 0.3 percent borrow",
+      "research": true,
+      "designed_after": true
+    },
+    {
+      "id": "tr04_dfpe_t3_pos_earn_h3",
+      "fires": 32,
+      "after_fees_return": 0.757,
+      "daily": [
+        {
+          "date": "2026-09-14",
+          "ret_pct": 0.0,
+          "equity": 10000.0
+        },
+        {
+          "date": "2026-09-15",
+          "ret_pct": -0.3729,
+          "equity": 9962.7052
+        },
+        {
+          "date": "2026-09-16",
+          "ret_pct": -1.4448,
+          "equity": 9818.7665
+        },
+        {
+          "date": "2026-09-17",
+          "ret_pct": 0.1751,
+          "equity": 9835.9566
+        },
+        {
+          "date": "2026-09-18",
+          "ret_pct": 2.6782,
+          "equity": 10099.3862
+        },
+        {
+          "date": "2026-09-21",
+          "ret_pct": 0.0182,
+          "equity": 10101.2254
+        },
+        {
+          "date": "2026-09-22",
+          "ret_pct": -1.1366,
+          "equity": 9986.4099
+        },
+        {
+          "date": "2026-09-23",
+          "ret_pct": -0.3455,
+          "equity": 9951.9117
+        },
+        {
+          "date": "2026-09-24",
+          "ret_pct": 1.2438,
+          "equity": 10075.6926
+        }
+      ],
+      "costs": "15bp round trip plus 0.3 percent borrow",
+      "research": true,
+      "designed_after": true
+    },
+    {
+      "id": "tr05_dmcap_t3_top_earn_h3",
+      "fires": 31,
+      "after_fees_return": -22.534,
+      "daily": [
+        {
+          "date": "2026-09-14",
+          "ret_pct": 0.0,
+          "equity": 10000.0
+        },
+        {
+          "date": "2026-09-15",
+          "ret_pct": 0.0,
+          "equity": 10000.0
+        },
+        {
+          "date": "2026-09-16",
+          "ret_pct": -0.3698,
+          "equity": 9963.0211
+        },
+        {
+          "date": "2026-09-17",
+          "ret_pct": -1.3169,
+          "equity": 9831.8211
+        },
+        {
+          "date": "2026-09-18",
+          "ret_pct": -0.226,
+          "equity": 9809.5981
+        },
+        {
+          "date": "2026-09-21",
+          "ret_pct": -12.3556,
+          "equity": 8597.5642
+        },
+        {
+          "date": "2026-09-22",
+          "ret_pct": -5.4742,
+          "equity": 8126.9134
+        },
+        {
+          "date": "2026-09-23",
+          "ret_pct": -4.467,
+          "equity": 7763.8836
+        },
+        {
+          "date": "2026-09-24",
+          "ret_pct": -0.2225,
+          "equity": 7746.6083
+        }
+      ],
+      "costs": "15bp round trip plus 0.3 percent borrow",
+      "research": true,
+      "designed_after": true
+    },
+    {
+      "id": "tr06_dfpe_first_top_earn_h3",
+      "fires": 5,
+      "after_fees_return": 5.878,
+      "daily": [
+        {
+          "date": "2026-09-14",
+          "ret_pct": 0.0,
+          "equity": 10000.0
+        },
+        {
+          "date": "2026-09-15",
+          "ret_pct": -0.3749,
+          "equity": 9962.5084
+        },
+        {
+          "date": "2026-09-16",
+          "ret_pct": -4.2527,
+          "equity": 9538.8286
+        },
+        {
+          "date": "2026-09-17",
+          "ret_pct": -0.2768,
+          "equity": 9512.4284
+        },
+        {
+          "date": "2026-09-18",
+          "ret_pct": 0.3839,
+          "equity": 9548.9461
+        },
+        {
+          "date": "2026-09-21",
+          "ret_pct": 0.0,
+          "equity": 9548.9461
+        },
+        {
+          "date": "2026-09-22",
+          "ret_pct": -0.3671,
+          "equity": 9513.894
+        },
+        {
+          "date": "2026-09-23",
+          "ret_pct": -2.3178,
+          "equity": 9293.3797
+        },
+        {
+          "date": "2026-09-24",
+          "ret_pct": 13.9283,
+          "equity": 10587.79
+        }
+      ],
+      "costs": "15bp round trip plus 0.3 percent borrow",
+      "research": true,
+      "designed_after": true
+    },
+    {
+      "id": "tr07_drecom_t3_down_er_h3",
+      "fires": 0,
+      "after_fees_return": 0.0,
+      "daily": [
+        {
+          "date": "2026-09-14",
+          "ret_pct": 0.0,
+          "equity": 10000.0
+        },
+        {
+          "date": "2026-09-15",
+          "ret_pct": 0.0,
+          "equity": 10000.0
+        },
+        {
+          "date": "2026-09-16",
+          "ret_pct": 0.0,
+          "equity": 10000.0
+        },
+        {
+          "date": "2026-09-17",
+          "ret_pct": 0.0,
+          "equity": 10000.0
+        },
+        {
+          "date": "2026-09-18",
+          "ret_pct": 0.0,
+          "equity": 10000.0
+        },
+        {
+          "date": "2026-09-21",
+          "ret_pct": 0.0,
+          "equity": 10000.0
+        },
+        {
+          "date": "2026-09-22",
+          "ret_pct": 0.0,
+          "equity": 10000.0
+        },
+        {
+          "date": "2026-09-23",
+          "ret_pct": 0.0,
+          "equity": 10000.0
+        },
+        {
+          "date": "2026-09-24",
+          "ret_pct": 0.0,
+          "equity": 10000.0
+        }
+      ],
+      "costs": "15bp round trip plus 0.3 percent borrow",
+      "research": true,
+      "designed_after": true
+    },
+    {
+      "id": "tr08_dfpe_t1_top_hammer_h2",
+      "fires": 0,
+      "after_fees_return": 0.0,
+      "daily": [
+        {
+          "date": "2026-09-14",
+          "ret_pct": 0.0,
+          "equity": 10000.0
+        },
+        {
+          "date": "2026-09-15",
+          "ret_pct": 0.0,
+          "equity": 10000.0
+        },
+        {
+          "date": "2026-09-16",
+          "ret_pct": 0.0,
+          "equity": 10000.0
+        },
+        {
+          "date": "2026-09-17",
+          "ret_pct": 0.0,
+          "equity": 10000.0
+        },
+        {
+          "date": "2026-09-18",
+          "ret_pct": 0.0,
+          "equity": 10000.0
+        },
+        {
+          "date": "2026-09-21",
+          "ret_pct": 0.0,
+          "equity": 10000.0
+        },
+        {
+          "date": "2026-09-22",
+          "ret_pct": 0.0,
+          "equity": 10000.0
+        },
+        {
+          "date": "2026-09-23",
+          "ret_pct": 0.0,
+          "equity": 10000.0
+        },
+        {
+          "date": "2026-09-24",
+          "ret_pct": 0.0,
+          "equity": 10000.0
+        }
+      ],
+      "costs": "15bp round trip plus 0.3 percent borrow",
+      "research": true,
+      "designed_after": true
+    },
+    {
+      "id": "tr09_dfpe_t1_top_hammer_h3",
+      "fires": 0,
+      "after_fees_return": 0.0,
+      "daily": [
+        {
+          "date": "2026-09-14",
+          "ret_pct": 0.0,
+          "equity": 10000.0
+        },
+        {
+          "date": "2026-09-15",
+          "ret_pct": 0.0,
+          "equity": 10000.0
+        },
+        {
+          "date": "2026-09-16",
+          "ret_pct": 0.0,
+          "equity": 10000.0
+        },
+        {
+          "date": "2026-09-17",
+          "ret_pct": 0.0,
+          "equity": 10000.0
+        },
+        {
+          "date": "2026-09-18",
+          "ret_pct": 0.0,
+          "equity": 10000.0
+        },
+        {
+          "date": "2026-09-21",
+          "ret_pct": 0.0,
+          "equity": 10000.0
+        },
+        {
+          "date": "2026-09-22",
+          "ret_pct": 0.0,
+          "equity": 10000.0
+        },
+        {
+          "date": "2026-09-23",
+          "ret_pct": 0.0,
+          "equity": 10000.0
+        },
+        {
+          "date": "2026-09-24",
+          "ret_pct": 0.0,
+          "equity": 10000.0
+        }
+      ],
+      "costs": "15bp round trip plus 0.3 percent borrow",
+      "research": true,
+      "designed_after": true
+    },
+    {
+      "id": "tr10_dfpe_t2_pos_hammer_h2",
+      "fires": 0,
+      "after_fees_return": 0.0,
+      "daily": [
+        {
+          "date": "2026-09-14",
+          "ret_pct": 0.0,
+          "equity": 10000.0
+        },
+        {
+          "date": "2026-09-15",
+          "ret_pct": 0.0,
+          "equity": 10000.0
+        },
+        {
+          "date": "2026-09-16",
+          "ret_pct": 0.0,
+          "equity": 10000.0
+        },
+        {
+          "date": "2026-09-17",
+          "ret_pct": 0.0,
+          "equity": 10000.0
+        },
+        {
+          "date": "2026-09-18",
+          "ret_pct": 0.0,
+          "equity": 10000.0
+        },
+        {
+          "date": "2026-09-21",
+          "ret_pct": 0.0,
+          "equity": 10000.0
+        },
+        {
+          "date": "2026-09-22",
+          "ret_pct": 0.0,
+          "equity": 10000.0
+        },
+        {
+          "date": "2026-09-23",
+          "ret_pct": 0.0,
+          "equity": 10000.0
+        },
+        {
+          "date": "2026-09-24",
+          "ret_pct": 0.0,
+          "equity": 10000.0
+        }
+      ],
+      "costs": "15bp round trip plus 0.3 percent borrow",
+      "research": true,
+      "designed_after": true
+    },
+    {
+      "id": "tr11_dfpe_first_top_hammer_h2",
+      "fires": 0,
+      "after_fees_return": 0.0,
+      "daily": [
+        {
+          "date": "2026-09-14",
+          "ret_pct": 0.0,
+          "equity": 10000.0
+        },
+        {
+          "date": "2026-09-15",
+          "ret_pct": 0.0,
+          "equity": 10000.0
+        },
+        {
+          "date": "2026-09-16",
+          "ret_pct": 0.0,
+          "equity": 10000.0
+        },
+        {
+          "date": "2026-09-17",
+          "ret_pct": 0.0,
+          "equity": 10000.0
+        },
+        {
+          "date": "2026-09-18",
+          "ret_pct": 0.0,
+          "equity": 10000.0
+        },
+        {
+          "date": "2026-09-21",
+          "ret_pct": 0.0,
+          "equity": 10000.0
+        },
+        {
+          "date": "2026-09-22",
+          "ret_pct": 0.0,
+          "equity": 10000.0
+        },
+        {
+          "date": "2026-09-23",
+          "ret_pct": 0.0,
+          "equity": 10000.0
+        },
+        {
+          "date": "2026-09-24",
+          "ret_pct": 0.0,
+          "equity": 10000.0
+        }
+      ],
+      "costs": "15bp round trip plus 0.3 percent borrow",
+      "research": true,
+      "designed_after": true
+    },
+    {
+      "id": "tr12_dfpe_first_top_hammer_h3",
+      "fires": 0,
+      "after_fees_return": 0.0,
+      "daily": [
+        {
+          "date": "2026-09-14",
+          "ret_pct": 0.0,
+          "equity": 10000.0
+        },
+        {
+          "date": "2026-09-15",
+          "ret_pct": 0.0,
+          "equity": 10000.0
+        },
+        {
+          "date": "2026-09-16",
+          "ret_pct": 0.0,
+          "equity": 10000.0
+        },
+        {
+          "date": "2026-09-17",
+          "ret_pct": 0.0,
+          "equity": 10000.0
+        },
+        {
+          "date": "2026-09-18",
+          "ret_pct": 0.0,
+          "equity": 10000.0
+        },
+        {
+          "date": "2026-09-21",
+          "ret_pct": 0.0,
+          "equity": 10000.0
+        },
+        {
+          "date": "2026-09-22",
+          "ret_pct": 0.0,
+          "equity": 10000.0
+        },
+        {
+          "date": "2026-09-23",
+          "ret_pct": 0.0,
+          "equity": 10000.0
+        },
+        {
+          "date": "2026-09-24",
+          "ret_pct": 0.0,
+          "equity": 10000.0
+        }
+      ],
+      "costs": "15bp round trip plus 0.3 percent borrow",
+      "research": true,
+      "designed_after": true
+    }
+  ]
+}

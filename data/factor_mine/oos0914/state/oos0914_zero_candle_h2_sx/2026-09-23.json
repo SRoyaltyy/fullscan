@@ -1,0 +1,164 @@
+{
+  "buys": [
+    {
+      "fill_rule": "open",
+      "price": 166.54,
+      "shares": 15,
+      "side": "BUY",
+      "ticker": "A"
+    },
+    {
+      "fill_rule": "open",
+      "price": 89.5,
+      "shares": 29,
+      "side": "BUY",
+      "ticker": "DXCM"
+    },
+    {
+      "fill_rule": "open",
+      "price": 118.14,
+      "shares": 22,
+      "side": "BUY",
+      "ticker": "NICE"
+    },
+    {
+      "fill_rule": "open",
+      "price": 18.575,
+      "shares": 140,
+      "side": "BUY",
+      "ticker": "NTSK"
+    }
+  ],
+  "cash": 158.23,
+  "date": "2026-09-23",
+  "equity": 10373.38,
+  "fees": 9.2574,
+  "fills": [
+    {
+      "fees": 0.6794,
+      "fill_rule": "open",
+      "pnl": 0.24,
+      "price": 10.69,
+      "shares": 6,
+      "side": "SELL",
+      "ticker": "IOVA"
+    },
+    {
+      "fees": 2.035,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 166.54,
+      "shares": 15,
+      "side": "BUY",
+      "ticker": "A"
+    },
+    {
+      "fees": 2.077,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 89.5,
+      "shares": 29,
+      "side": "BUY",
+      "ticker": "DXCM"
+    },
+    {
+      "fees": 2.056,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 118.14,
+      "shares": 22,
+      "side": "BUY",
+      "ticker": "NICE"
+    },
+    {
+      "fees": 2.41,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 18.575,
+      "shares": 140,
+      "side": "BUY",
+      "ticker": "NTSK"
+    }
+  ],
+  "holdings": [
+    "A",
+    "DXCM",
+    "NICE",
+    "NTSK"
+  ],
+  "mean": -0.8316,
+  "n_trades_today": 5,
+  "recipe": "oos0914_zero_candle_h2_sx",
+  "sells": [
+    {
+      "fill_rule": "open",
+      "price": 10.69,
+      "shares": 6,
+      "side": "SELL",
+      "ticker": "IOVA"
+    }
+  ],
+  "state": {
+    "after": "2026-09-23",
+    "cash": 158.23,
+    "pos": {
+      "A": {
+        "close_px": 165.32000732421875,
+        "cost": 2500.134899291992,
+        "entry_date": "2026-09-23",
+        "entry_px": 166.5399932861328,
+        "fee_in": 2.035,
+        "last_px": 166.5399932861328,
+        "min_hold": 2,
+        "notional": 2498.099899291992,
+        "peak_px": 166.5399932861328,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate zero_red=True,last_green=True; rank candle_score; list flatten; \ud83d\udd35; \u26aa; ret5=+11.3; leftover $2615.00",
+        "shares": 15,
+        "ticker": "A"
+      },
+      "DXCM": {
+        "close_px": 87.7300033569336,
+        "cost": 2597.577,
+        "entry_date": "2026-09-23",
+        "entry_px": 89.5,
+        "fee_in": 2.077,
+        "last_px": 89.5,
+        "min_hold": 2,
+        "notional": 2595.5,
+        "peak_px": 89.5,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate zero_red=True,last_green=True; rank candle_score; list flatten; \ud83d\udd35; \u26aa; ret5=+3.6; leftover $2615.00",
+        "shares": 29,
+        "ticker": "DXCM"
+      },
+      "NICE": {
+        "close_px": 117.79000091552734,
+        "cost": 2601.1359865722657,
+        "entry_date": "2026-09-23",
+        "entry_px": 118.13999938964844,
+        "fee_in": 2.056,
+        "last_px": 118.13999938964844,
+        "min_hold": 2,
+        "notional": 2599.0799865722656,
+        "peak_px": 118.13999938964844,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate zero_red=True,last_green=True; rank candle_score; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+13.8; leftover $2615.00",
+        "shares": 22,
+        "ticker": "NICE"
+      },
+      "NTSK": {
+        "close_px": 18.56999969482422,
+        "cost": 2602.9101068115233,
+        "entry_date": "2026-09-23",
+        "entry_px": 18.575000762939453,
+        "fee_in": 2.41,
+        "last_px": 18.575000762939453,
+        "min_hold": 2,
+        "notional": 2600.5001068115234,
+        "peak_px": 18.575000762939453,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate zero_red=True,last_green=True; rank candle_score; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+6.2; leftover $2615.00",
+        "shares": 140,
+        "ticker": "NTSK"
+      }
+    },
+    "yday_equity": 10373.38
+  }
+}
