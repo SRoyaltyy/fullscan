@@ -1,6 +1,6 @@
 {
   "date": "2026-09-25",
-  "generated_at": "2026-09-25T06:10:08.697286-04:00",
+  "generated_at": "2026-09-25T06:10:23.966496-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -579,18 +579,18 @@
           "path": "01_daily/weather/2026-09-25_weather.json",
           "role": "required",
           "status": "OK",
-          "reason": "sectors=11 bytes=9728 vix=falling yields=rising",
-          "size": 9728,
-          "said": "favorable 1 \u00b7 hostile 4 \u00b7 neutral 6",
+          "reason": "sectors=11 bytes=9835 vix=falling yields=rising",
+          "size": 9835,
+          "said": "favorable 1 \u00b7 hostile 5 \u00b7 neutral 5",
           "bullets": [
-            "hostile: Communication Services, Energy, Real Estate, Utilities",
+            "hostile: Consumer Cyclical, Energy, Industrials, Real Estate, Utilities",
             "events bull 1 / bear 0"
           ]
         }
       ],
-      "said": "favorable 1 \u00b7 hostile 4 \u00b7 neutral 6",
+      "said": "favorable 1 \u00b7 hostile 5 \u00b7 neutral 5",
       "bullets": [
-        "hostile: Communication Services, Energy, Real Estate, Utilities",
+        "hostile: Consumer Cyclical, Energy, Industrials, Real Estate, Utilities",
         "events bull 1 / bear 0"
       ]
     },
@@ -801,11 +801,11 @@
           "path": "01_daily/weather/2026-09-25_weather.json",
           "role": "input",
           "status": "OK",
-          "reason": "sectors=11 bytes=9728 vix=falling yields=rising",
-          "size": 9728,
-          "said": "favorable 1 \u00b7 hostile 4 \u00b7 neutral 6",
+          "reason": "sectors=11 bytes=9835 vix=falling yields=rising",
+          "size": 9835,
+          "said": "favorable 1 \u00b7 hostile 5 \u00b7 neutral 5",
           "bullets": [
-            "hostile: Communication Services, Energy, Real Estate, Utilities",
+            "hostile: Consumer Cyclical, Energy, Industrials, Real Estate, Utilities",
             "events bull 1 / bear 0"
           ]
         },
@@ -829,10 +829,10 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=5898",
-          "size": 2261007,
+          "size": 2253009,
           "said": "202 rows",
           "bullets": [
-            "FORM, NTCT, DOCU, NVDA, NICE, SKHY, P, DFIN"
+            "FORM, DOCU, NTCT, NVDA, NICE, SKHY, DFIN, P"
           ]
         },
         {
@@ -907,7 +907,7 @@
       ],
       "said": "202 rows",
       "bullets": [
-        "FORM, NTCT, DOCU, NVDA, NICE"
+        "FORM, DOCU, NTCT, NVDA, NICE"
       ]
     },
     {
@@ -1019,9 +1019,9 @@
       ]
     },
     "weather": {
-      "said": "favorable 1 \u00b7 hostile 4 \u00b7 neutral 6",
+      "said": "favorable 1 \u00b7 hostile 5 \u00b7 neutral 5",
       "bullets": [
-        "hostile: Communication Services, Energy, Real Estate, Utilities",
+        "hostile: Consumer Cyclical, Energy, Industrials, Real Estate, Utilities",
         "events bull 1 / bear 0"
       ]
     }
@@ -1865,6 +1865,31 @@
         }
       ],
       "preview": "keys: date, phase, passthrough, source_baseline_generated_at, generated_at, n_targets, n_cards, n_refreshed, evidence_errors, morning_refresh_errors, cards, size_gate \u00b7 # MAP HEAT RESEARCH \u2014 2026-09-25\n142 captain cards \u00b7 size_gate=True set by pre-open refresh"
+    },
+    {
+      "key": "weather",
+      "title": "Weather / regime",
+      "date": "2026-09-25",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-25T06:10:23.333257-04:00",
+      "files": [
+        {
+          "path": "01_daily/weather/2026-09-25_weather.json",
+          "ok": true,
+          "reason": "",
+          "size": 9835,
+          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': 1.377, 'dir': 'flat', 'conf': 0.455, 'source': 'llm'}, Communication Services={'score': -0.386, 'dir': 'flat', 'conf': 0.415, 'source': 'llm'}, Consumer Cyclical={'score': -3.2, 'dir': 'down', 'conf': 0.528, 'source': 'llm'}, Consumer Defensive={'score': 2.978, 'dir': 'up', 'conf': 0.519, 'source': 'llm'}, Energy={'score': -9.556, 'dir': 'down', 'conf': 0.65, 'source': 'llm'}, Financial={'score': -0.085, 'dir': 'flat', 'conf': 0.403, 'source': 'llm'}, Healthcare={'score': 0.936, 'dir': 'up', 'conf': 0.537, 'source': 'llm'}, Industrials={'score': -5.994, 'dir': 'down', 'conf': 0.65, 'source': 'llm'}"
+        },
+        {
+          "path": "01_daily/weather/2026-09-25_weather.md",
+          "ok": true,
+          "reason": "",
+          "size": 5491,
+          "preview": "# Weather report \u2014 2026-09-25\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+        }
+      ],
+      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': 1.377, 'dir': 'flat', 'conf': 0.455, 'source': 'llm'}, Communication Services={'score': -0.386, 'dir': 'flat', 'conf': 0.415, 'source': 'llm'}, Consumer Cyclical={'score': -3.2, 'dir': 'down', 'conf': 0.528, 'source': 'llm'}, Consumer Defensive={'score': 2.978, 'dir': 'up', 'conf': 0.519, 'source': 'llm'}, Energy={'score': -9.556, 'dir': 'down', 'conf': 0.65, 'source': 'llm'}, Financial={'score': -0.085, 'dir': 'flat', 'conf': 0.403, 'source': 'llm'}, Healthcare={'score': 0.936, 'dir': 'up', 'conf': 0.537, 'source': 'llm'}, Industrials={'score': -5.994, 'dir': 'down', 'conf': 0.65, 'source': 'llm'} \u00b7 # Weather report \u2014 2026-09-25\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
     }
   ],
   "href": {
