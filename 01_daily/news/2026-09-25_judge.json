@@ -1,0 +1,17 @@
+{
+ "risk_tilt": "off",
+ "macros": [
+  "hawkish",
+  "hawkish",
+  "bearish",
+  "hawkish",
+  "hawkish",
+  "bearish"
+ ],
+ "sector_tilts": {
+  "Technology": "bullish"
+ },
+ "tickers": {},
+ "b1_inject": "NEWS_JUDGE: n=8 rescued=1\nMACRO yields: [hawkish] 10Y >5.2%, futures ease, gold \u22123% (session/1d-1w)\nMACRO fed: [hawkish] Williams year-end hike \u2018reasonable\u2019; officials not done (session/1d-1w)\nMACRO housing: [bearish] 30y surge, 8% mortgage risk, affordability 21y low (XHB/KRE)\nSECTOR semis: [bullish] ASML 2027 EUV nearly sold out on AI demand (SMH/SOXX)\nSECTOR tech_hw: [bearish] APH \u22126.5% Fabrinet miss + yields (AI hardware basket)\nSECTOR ai_power: [bullish] Oracle 2.4GW Bloom Jupiter still on (BE/AI power)\nSECTOR comm_eq: [bullish] CIEN PT jump on AI optical (comms equipment)\nINTERACTION: one hawkish-yields cluster + AI capex bid = duration tech mixed; do not double-count ASML/CIEN vs 10Y\nWATCH: no kinetic oil; AMGN Phase 3 is single-name not XLV",
+ "date": "2026-09-25"
+}
