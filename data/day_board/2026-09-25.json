@@ -1,6 +1,6 @@
 {
   "date": "2026-09-25",
-  "generated_at": "2026-09-25T04:28:13.558300-04:00",
+  "generated_at": "2026-09-25T04:28:36.168848-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -182,7 +182,7 @@
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 1,
+      "n_req_ok": 2,
       "n_req": 20,
       "n_opt_ok": 1,
       "n_opt": 3,
@@ -240,11 +240,16 @@
           "name": "News parse JSON",
           "path": "01_daily/news/2026-09-25_parsed.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 378491,
+          "said": "news_mode: on \u00b7 400 raw / 81 usable \u00b7 US 10-Year Treasury Yield Tops 5.2%, Fueling Bets on Another Fed Rate Hike - blo",
+          "bullets": [
+            "US 10-Year Treasury Yield Tops 5.2%, Fueling Bets on Another Fed Rate Hike - bloomingbit",
+            "Treasury yields surge as Hardika Singh warns of Federal Reserve rate hike risks - Fox Business",
+            "Will the Nasdaq Fall After the First Interest Rate Hike in 3 Years? History Offers a Strikingly Clear Answer. - The Motley Fool",
+            "South African rand softens as markets absorb central bank rate hike - Reuters"
+          ]
         },
         {
           "key": "events",
@@ -330,13 +335,13 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 7282,
-          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 18 fail",
+          "size": 7280,
+          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 17 fail",
           "bullets": [
             "general_predict:missing",
             "events:missing",
             "news_judge:missing",
-            "news_parse:missing"
+            "news_actions:missing"
           ]
         },
         {
@@ -483,8 +488,13 @@
           "bullets": []
         }
       ],
-      "said": "",
-      "bullets": []
+      "said": "news news_mode: on \u00b7 400 raw / 81 usable \u00b7 US 10-Year Treasury Yield Tops 5.2%, Fueling Bets on Another Fed Rate Hike - blo",
+      "bullets": [
+        "US 10-Year Treasury Yield Tops 5.2%, Fueling Bets on Another Fed Rate Hike - bloomingbit",
+        "Treasury yields surge as Hardika Singh warns of Federal Reserve rate hike risks - Fox Business",
+        "Will the Nasdaq Fall After the First Interest Rate Hike in 3 Years? History Offers a Strikingly Clear Answer. - The Motley Fool",
+        "South African rand softens as markets absorb central bank rate hike - Reuters"
+      ]
     },
     {
       "key": "weather",
@@ -882,7 +892,17 @@
     "flatten": {},
     "general": {},
     "sectors": {},
-    "news": {},
+    "news": {
+      "said": "news_mode: on \u00b7 400 raw / 81 usable \u00b7 US 10-Year Treasury Yield Tops 5.2%, Fueling Bets on Another Fed Rate Hike - blo",
+      "bullets": [
+        "US 10-Year Treasury Yield Tops 5.2%, Fueling Bets on Another Fed Rate Hike - bloomingbit",
+        "Treasury yields surge as Hardika Singh warns of Federal Reserve rate hike risks - Fox Business",
+        "Will the Nasdaq Fall After the First Interest Rate Hike in 3 Years? History Offers a Strikingly Clear Answer. - The Motley Fool",
+        "South African rand softens as markets absorb central bank rate hike - Reuters",
+        "On the eve of the midterm elections, the Federal Reserve may initiate its second interest rate hike. - Moomoo",
+        "Fed's Williams says it is reasonable to see another US rate hike this year - Reuters"
+      ]
+    },
     "weather": {
       "said": "favorable 2 \u00b7 hostile 6 \u00b7 neutral 3",
       "bullets": [
@@ -1259,6 +1279,31 @@
         }
       ],
       "preview": "11673 rows \u00b7 Ticker,score,score_source,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month, \u00b7 HOOD, PDEX, FORM, NVT, KOPN"
+    },
+    {
+      "key": "news_parse",
+      "title": "News parse",
+      "date": "2026-09-25",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-25T04:28:35.476720-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-09-25_parsed.json",
+          "ok": true,
+          "reason": "",
+          "size": 378491,
+          "preview": "raw=400 usable=81 single=20 \u00b7 US 10-Year Treasury Yield Tops 5.2%, Fueling Bets on Another Fed Rate Hike - blo | Treasury yields surge as Hardika Singh warns of Federal Reserve rate hike risks  | Will the Nasdaq Fall After the First Interest Rate Hike in 3 Years? History Offe | South African rand softens as markets absorb central bank rate hike - Reuters | On the eve of the midterm elections, the Federal Reserve may initiate its second"
+        },
+        {
+          "path": "01_daily/news/2026-09-25_parsed.md",
+          "ok": true,
+          "reason": "",
+          "size": 6944,
+          "preview": "# News Parse v2 \u2014 2026-09-25T04:28:35.389863-04:00\nWindow\u224848h | news_mode=on | raw=400 | usable=81 | single_name=20 | noise_dropped=299\nusable polarity={'+': 6, '-': 17, 'mixed': 2, 'neutral': 56}"
+        }
+      ],
+      "preview": "raw=400 usable=81 single=20 \u00b7 US 10-Year Treasury Yield Tops 5.2%, Fueling Bets on Another Fed Rate Hike - blo | Treasury yields surge as Hardika Singh warns of Federal Reserve rate hike risks  | Will the Nasdaq Fall After the First Interest Rate Hike in 3 Years? History Offe | South African rand softens as markets absorb central bank rate hike - Reuters | On the eve of the midterm elections, the Federal Reserve may initiate its second \u00b7 # News Parse v2 \u2014 2026-09-25T04:28:35.389863-04:00\nWindow\u224848h | news_mode=on | raw=400 | usable=81 | single_name=20 | noise_dropped=299\nusable polarity={'+': 6, '-': 17, 'mixed': 2, 'neutral': 56}"
     }
   ],
   "href": {
