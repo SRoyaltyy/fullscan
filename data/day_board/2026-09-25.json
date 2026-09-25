@@ -1,6 +1,6 @@
 {
   "date": "2026-09-25",
-  "generated_at": "2026-09-25T04:19:01.716900-04:00",
+  "generated_at": "2026-09-25T04:19:14.928500-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -91,7 +91,7 @@
       "inputs_ready": true,
       "n_req_ok": 1,
       "n_req": 1,
-      "n_opt_ok": 3,
+      "n_opt_ok": 1,
       "n_opt": 5,
       "files": [
         {
@@ -101,8 +101,8 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 86969,
-          "said": "5881 tickers \u00b7 2100 signals \u00b7 top AJG, AME, AMGN, AMX, AON, APH, ARGX, ASML",
+          "size": 97598,
+          "said": "5881 tickers \u00b7 2098 signals \u00b7 top AJG, AME, AMGN, AMX, AON, APH, ARGX, ASML",
           "bullets": [
             "Arthur J. Gallagher & Co. Acquires Innovise Business Consultants",
             "AMETEK Completes Acquisition of Indicor Instrumentation",
@@ -116,10 +116,10 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 11795,
+          "size": 11865,
           "said": "Finviz Daily Digest \u2014 2026-09-25",
           "bullets": [
-            "_Generated 2026-09-25T04:18:54.712152-04:00 \u00b7 export=data/exports/finviz_2026-09-24.csv \u00b7 ticker digests=5881 \u00b7 high-signal=2100_",
+            "_Generated 2026-09-25T04:19:14.530844-04:00 \u00b7 export=data/exports/finviz_2026-09-25.csv \u00b7 ticker digests=5881 \u00b7 high-signal=2098_",
             "Major indices (live quote page)"
           ]
         },
@@ -128,10 +128,10 @@
           "name": "Homepage warm-up JSON (*_finviz_market_digest)",
           "path": "01_daily/news/2026-09-25_finviz_market_digest.json",
           "role": "optional",
-          "status": "OK",
-          "reason": "",
-          "size": 3904,
-          "said": "US equity futures point to a slightly higher open as traders await durable goods and Michigan sentiment data with oil softer and global markets mixed \u00b7 leaders TBN \u00b7 good",
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
           "bullets": []
         },
         {
@@ -139,14 +139,11 @@
           "name": "Homepage warm-up MD (*_finviz_market_digest)",
           "path": "01_daily/news/2026-09-25_finviz_market_digest.md",
           "role": "optional",
-          "status": "OK",
-          "reason": "",
-          "size": 1939,
-          "said": "Finviz homepage market digest \u2014 2026-09-25",
-          "bullets": [
-            "Generated:** 2026-09-25T04:19:01.510585-04:00 (America/New_York)",
-            "Source:** `live`"
-          ]
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "market_digest_close_json",
@@ -171,7 +168,7 @@
           "bullets": []
         }
       ],
-      "said": "5881 tickers \u00b7 2100 signals \u00b7 top AJG, AME, AMGN, AMX, AON, APH, ARGX, ASML",
+      "said": "5881 tickers \u00b7 2098 signals \u00b7 top AJG, AME, AMGN, AMX, AON, APH, ARGX, ASML",
       "bullets": [
         "Arthur J. Gallagher & Co. Acquires Innovise Business Consultants",
         "AMETEK Completes Acquisition of Indicor Instrumentation",
@@ -186,7 +183,7 @@
       "inputs_ready": false,
       "n_req_ok": 2,
       "n_req": 20,
-      "n_opt_ok": 1,
+      "n_opt_ok": 0,
       "n_opt": 3,
       "files": [
         {
@@ -196,8 +193,8 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 86969,
-          "said": "5881 tickers \u00b7 2100 signals \u00b7 top AJG, AME, AMGN, AMX, AON, APH, ARGX, ASML",
+          "size": 97598,
+          "said": "5881 tickers \u00b7 2098 signals \u00b7 top AJG, AME, AMGN, AMX, AON, APH, ARGX, ASML",
           "bullets": [
             "Arthur J. Gallagher & Co. Acquires Innovise Business Consultants",
             "AMETEK Completes Acquisition of Indicor Instrumentation",
@@ -209,10 +206,10 @@
           "name": "Homepage warm-up JSON (*_finviz_market_digest)",
           "path": "01_daily/news/2026-09-25_finviz_market_digest.json",
           "role": "optional",
-          "status": "OK",
-          "reason": "",
-          "size": 3904,
-          "said": "US equity futures point to a slightly higher open as traders await durable goods and Michigan sentiment data with oil softer and global markets mixed \u00b7 leaders TBN \u00b7 good",
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
           "bullets": []
         },
         {
@@ -508,8 +505,8 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 86969,
-          "said": "5881 tickers \u00b7 2100 signals \u00b7 top AJG, AME, AMGN, AMX, AON, APH, ARGX, ASML",
+          "size": 97598,
+          "said": "5881 tickers \u00b7 2098 signals \u00b7 top AJG, AME, AMGN, AMX, AON, APH, ARGX, ASML",
           "bullets": [
             "Arthur J. Gallagher & Co. Acquires Innovise Business Consultants",
             "AMETEK Completes Acquisition of Indicor Instrumentation",
@@ -597,8 +594,8 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 86969,
-          "said": "5881 tickers \u00b7 2100 signals \u00b7 top AJG, AME, AMGN, AMX, AON, APH, ARGX, ASML",
+          "size": 97598,
+          "said": "5881 tickers \u00b7 2098 signals \u00b7 top AJG, AME, AMGN, AMX, AON, APH, ARGX, ASML",
           "bullets": [
             "Arthur J. Gallagher & Co. Acquires Innovise Business Consultants",
             "AMETEK Completes Acquisition of Indicor Instrumentation",
@@ -671,8 +668,8 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 86969,
-          "said": "5881 tickers \u00b7 2100 signals \u00b7 top AJG, AME, AMGN, AMX, AON, APH, ARGX, ASML",
+          "size": 97598,
+          "said": "5881 tickers \u00b7 2098 signals \u00b7 top AJG, AME, AMGN, AMX, AON, APH, ARGX, ASML",
           "bullets": [
             "Arthur J. Gallagher & Co. Acquires Innovise Business Consultants",
             "AMETEK Completes Acquisition of Indicor Instrumentation",
@@ -952,6 +949,45 @@
         }
       ],
       "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest \u2014 2026-09-25\n**Generated:** 2026-09-25T04:19:01.510585-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US equity futures point to a slightly higher open as traders await durable goods and Michigan sentiment data with oil softer and global markets mixed\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** TBN\n**Next session:** housing no \u00b7 retail no \u00b7 Fed no\n**Earnings slate:** TBN\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-09-25\n**Clock use:** `same_morning`"
+    },
+    {
+      "key": "finviz_digest",
+      "title": "Finviz digest",
+      "date": "2026-09-25",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-25T04:19:14.702044-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-09-25_finviz_digest.json",
+          "ok": true,
+          "reason": "",
+          "size": 97598,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
+        },
+        {
+          "path": "01_daily/news/2026-09-25_finviz_digest.md",
+          "ok": true,
+          "reason": "",
+          "size": 11895,
+          "preview": "# Finviz Daily Digest \u2014 2026-09-25\n_Generated 2026-09-25T04:19:14.530844-04:00 \u00b7 export=data/exports/finviz_2026-09-25.csv \u00b7 ticker digests=5881 \u00b7 high-signal=2098_"
+        },
+        {
+          "path": "data/exports/finviz_2026-09-25.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11012993,
+          "preview": "11680 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC"
+        },
+        {
+          "path": "data/finviz/latest.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11465996,
+          "preview": "11673 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+        }
+      ],
+      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-09-25\n_Generated 2026-09-25T04:19:14.530844-04:00 \u00b7 export=data/exports/finviz_2026-09-25.csv \u00b7 ticker digests=5881 \u00b7 high-signal=2098_ \u00b7 11680 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC \u00b7 11673 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
     }
   ],
   "href": {
