@@ -1,6 +1,6 @@
 {
   "date": "2026-09-25",
-  "generated_at": "2026-09-25T10:03:23.125703-04:00",
+  "generated_at": "2026-09-25T10:07:00.464478-04:00",
   "overall": "OK",
   "ranker_ready": true,
   "blockers": [],
@@ -2593,13 +2593,13 @@
       "date": "2026-09-25",
       "ok": true,
       "pushed": true,
-      "at": "2026-09-25T10:03:22.531916-04:00",
+      "at": "2026-09-25T10:06:59.715269-04:00",
       "files": [
         {
           "path": "data/day_board/today.json",
           "ok": true,
           "reason": "",
-          "size": 39270,
+          "size": 42108,
           "preview": "2026-09-25 BUY SONO, OMER, PDFS, FIVN, VCYT, REGN, OLLI, CCC \u00b7 SELL ARE, AESI, KGS, ACDC, BXMT, UUUU, HP, PUMP"
         },
         {
@@ -2613,14 +2613,14 @@
           "path": "data/day_board/2026-09-25.json",
           "ok": true,
           "reason": "",
-          "size": 129293,
+          "size": 134781,
           "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href"
         },
         {
           "path": "data/day_board/2026-09-25_tickets.json",
           "ok": true,
           "reason": "",
-          "size": 92668,
+          "size": 98156,
           "preview": "2026-09-25 BUY SONO, OMER, PDFS, FIVN, VCYT, REGN, OLLI, CCC \u00b7 SELL ARE, AESI, KGS, ACDC, BXMT, UUUU, HP, PUMP"
         },
         {
@@ -2655,7 +2655,7 @@
           "path": "dashboard/factor-mine/today.json",
           "ok": true,
           "reason": "",
-          "size": 92668,
+          "size": 98156,
           "preview": "2026-09-25 BUY SONO, OMER, PDFS, FIVN, VCYT, REGN, OLLI, CCC \u00b7 SELL ARE, AESI, KGS, ACDC, BXMT, UUUU, HP, PUMP"
         },
         {
