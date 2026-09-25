@@ -12,6 +12,10 @@ A landed session is frozen once:
   under the publish size budget. The manifest hash is the gzip bytes.
 * ``data/factor_mine/lineups/{D}.json`` — recipes shown on the dashboard
   for D, each with its creation date. Write-once.
+* ``data/factor_mine/candidates/{D}.json`` — morning candidate list,
+  count, and the source plus rank that put each name on the list.
+  Built from D's locked morning files. Prior-night holdings are not
+  an input. Write-once, and the same list is embedded in the snapshot.
 * ``data/factor_mine/recipe_created_on.json`` — creation date of every
   recipe. New names can be appended. An existing date cannot change.
 * ``data/factor_mine/freeze_manifest.json`` — sha256 of each file
@@ -31,7 +35,7 @@ import json
 import math
 import os
 import subprocess
-from datetime import datetime
+from datetime import datetime, timedelta
 from pathlib import Path
 
 from . import ticker_lookback as tl
@@ -42,7 +46,23 @@ LEDGER_DIR = ROOT / "data" / "factor_mine" / "ledgers"
 PRICE_DIR = ROOT / "data" / "factor_mine" / "prices"
 MANIFEST_PATH = ROOT / "data" / "factor_mine" / "freeze_manifest.json"
 LINEUP_DIR = ROOT / "data" / "factor_mine" / "lineups"
+CANDIDATE_DIR = ROOT / "data" / "factor_mine" / "candidates"
 CREATED_PATH = ROOT / "data" / "factor_mine" / "recipe_created_on.json"
+GUARD_SLOTS = ("snapshots", "ledgers", "lineups", "candidates")
+# Second source may differ by $0.02 or 0.5%, whichever is wider.
+CLOSE_TOL_ABS = 0.02
+CLOSE_TOL_PCT = 0.005
+# Morning files only. Flatten books and mover buys are prior-night
+# outputs and are not a reason a name is on this list.
+MORNING_SOURCES = (
+    "liquid_tape",
+    "yday_gainer",
+    "yday_mover",
+    "earn_react",
+    "overnight",
+    "overnight_mega",
+    "oppset",
+)
 
 _FILL_KEYS = (
     "date", "ticker", "side", "shares", "price", "fees", "pnl",
@@ -171,6 +191,10 @@ def lineup_path(date: str) -> Path:
     return LINEUP_DIR / f"{date}.json"
 
 
+def candidate_path(date: str) -> Path:
+    return CANDIDATE_DIR / f"{date}.json"
+
+
 def slot_path(slot: str, date: str) -> Path:
     if slot == "ledgers":
         return ledger_path(date)
@@ -178,6 +202,8 @@ def slot_path(slot: str, date: str) -> Path:
         return lineup_path(date)
     if slot == "prices":
         return price_path(date)
+    if slot == "candidates":
+        return candidate_path(date)
     return snapshot_path(date)
 
 
@@ -332,6 +358,267 @@ def row_price_problem(ticker: str, date: str) -> str | None:
     if gaps:
         return "; ".join(gaps)
     return None
+
+
+def prices_agree(ours, ref) -> bool:
+    """True when two prints are inside $0.02 or 0.5% of the reference."""
+    if ours is None or ref is None:
+        return False
+    try:
+        a, b = float(ours), float(ref)
+    except (TypeError, ValueError):
+        return False
+    if not math.isfinite(a) or not math.isfinite(b):
+        return False
+    limit = max(CLOSE_TOL_ABS, CLOSE_TOL_PCT * abs(b))
+    # Prices are cent prints. A binary 0.02 is slightly over 0.02.
+    return abs(a - b) <= limit + 1e-8
+
+
+def _parse_et(stamp: str) -> datetime | None:
+    text = str(stamp or "").strip()
+    if not text:
+        return None
+    try:
+        when = datetime.fromisoformat(text.replace("Z", "+00:00"))
+    except ValueError:
+        return None
+    if when.tzinfo is None:
+        when = when.replace(tzinfo=tl.ET)
+    return when.astimezone(tl.ET)
+
+
+def export_is_postclose(session: str) -> bool:
+    """True when ``finviz_{session}.csv`` was saved at or after 16:00 ET.
+
+    The window ends at the next calendar 09:30. A morning scrape, or a
+    missing ``.scraped_at``, is not that session's close. Price in a
+    morning file is a last trade, not the 16:00 print.
+    """
+    from . import finviz_digest as fd
+
+    day = str(session or "")[:10]
+    try:
+        start = datetime.strptime(day, "%Y-%m-%d")
+    except ValueError:
+        return False
+    when = _parse_et(fd.read_export_scraped_at(
+        tl.EXPORT_DIR / f"finviz_{day}.csv"))
+    if when is None:
+        return False
+    close = start.replace(hour=16, minute=0, tzinfo=tl.ET)
+    nxt_open = (start + timedelta(days=1)).replace(
+        hour=9, minute=30, tzinfo=tl.ET)
+    return close <= when < nxt_open
+
+
+def prior_session(date: str) -> str | None:
+    from . import gainer_capture as gc
+
+    return gc.prior_session(gc.lookback_calendar(None), str(date or "")[:10])
+
+
+def finviz_close_reference(ticker: str, prior: str | None,
+                           decision: str) -> dict:
+    """Second source for ``prior``'s close.
+
+    Post-close ``finviz_{prior}.csv`` Price (and Open/High/Low when the
+    file was scraped at or after 16:00 ET). Otherwise the next session
+    export's Prev Close. Same-file Price from a morning scrape is not
+    the close, and a later file's Price is not this session's close.
+    """
+    t = str(ticker or "").strip().upper()
+    p = str(prior or "")[:10]
+    d = str(decision or "")[:10]
+    empty = {"source": None, "asof": None, "fields": {}}
+    if not t or not p:
+        return empty
+    if export_is_postclose(p):
+        bar = tl._finviz_bar(t, p)
+        fields = {}
+        if bar.get("close") is not None:
+            fields["close"] = bar.get("close")
+        for key in ("open", "high", "low"):
+            if bar.get(key) is not None:
+                fields[key] = bar.get(key)
+        if "close" not in fields:
+            return empty
+        return {
+            "source": f"finviz_{p}.csv Price",
+            "asof": "postclose",
+            "fields": fields,
+        }
+    if not d:
+        return empty
+    prev = tl._finviz_bar(t, d).get("prev_close")
+    if prev is None:
+        return empty
+    return {
+        "source": f"finviz_{d}.csv Prev Close",
+        "asof": "morning_prev_close",
+        "fields": {"close": prev},
+    }
+
+
+def _prior_bar(ticker: str, date: str) -> dict:
+    d = str(date or "")[:10]
+    priors = [b for b in _raw_bars(ticker) if str(b.get("date") or "") < d]
+    return dict(priors[-1]) if priors else {}
+
+
+def close_cross_check(date: str, tickers: list[str]) -> list[dict]:
+    """Disagreements and missing second sources. Empty means the tape agrees."""
+    prior = prior_session(date)
+    gaps = []
+    names = sorted({str(t).strip().upper() for t in tickers if t})
+    for t in names:
+        ref = finviz_close_reference(t, prior, date)
+        source = ref.get("source")
+        if not source or ref.get("fields", {}).get("close") is None:
+            gaps.append({
+                "ticker": t,
+                "missing": ["missing finviz prior close"],
+                "prior": prior,
+            })
+            continue
+        bar = _prior_bar(t, date)
+        got = str(bar.get("date") or "")[:10]
+        if prior and got != prior:
+            gaps.append({
+                "ticker": t,
+                "field": "prior_date",
+                "ours": got or None,
+                "finviz": prior,
+                "source": source,
+            })
+        for field, theirs in (ref.get("fields") or {}).items():
+            ours = bar.get(field)
+            if ours is None or not prices_agree(ours, theirs):
+                gaps.append({
+                    "ticker": t,
+                    "field": field,
+                    "ours": ours,
+                    "finviz": theirs,
+                    "source": source,
+                })
+    return gaps
+
+
+def _ranked_names(rows: list, *, score=None) -> list[str]:
+    """Source order, with equal scores broken by ticker."""
+    from . import factor_mine as fm
+
+    items = []
+    seen: set[str] = set()
+    for i, raw in enumerate(rows or []):
+        if isinstance(raw, dict):
+            tick = fm._tick(raw.get("ticker"))
+            value = raw.get("change_pct") if score is None else score(raw)
+        else:
+            tick = fm._tick(raw)
+            value = None
+        if not tick or tick in seen:
+            continue
+        seen.add(tick)
+        try:
+            number = None if value is None else float(value)
+        except (TypeError, ValueError):
+            number = None
+        items.append((number, tick, i))
+    if score is not None or any(item[0] is not None for item in items):
+        items.sort(key=lambda item: (
+            -(item[0] if item[0] is not None else -1e18),
+            item[1],
+            item[2],
+        ))
+    return [tick for _, tick, _ in items]
+
+
+def candidate_provenance(date: str, cal: list[str] | None = None) -> dict:
+    """Who was a candidate on D, and why, from morning files only.
+
+    Flatten plan tickers and mover-buy holdings are prior-night outputs.
+    They are not a source on this list.
+    """
+    from . import gainer_asof as ga
+    from . import gainer_capture as gc
+    from . import oppset_clock_b as opp
+
+    day = str(date or "")[:10]
+    look = gc.lookback_calendar(list(cal or []))
+    prior = gc.knowable_export_date(look, day)
+    nxt = gc.next_session(look, day)
+    buckets: dict[str, list[str]] = {name: [] for name in MORNING_SOURCES}
+    if prior:
+        frame = ga.load_finviz(prior)
+        buckets["liquid_tape"] = _ranked_names(ga._liquid_tape(
+            frame, top_n=0, min_change=0.0, liquid=True,
+            min_mcap_m=None, side="up", skip_change=True,
+        ))
+        buckets["yday_gainer"] = _ranked_names(
+            gc.yesterday_gainers(prior, top_n=25))
+        buckets["yday_mover"] = _ranked_names(
+            gc.yesterday_movers(prior, top_n=20))
+        buckets["earn_react"] = _ranked_names(gc.earnings_reaction(prior, day))
+    buckets["overnight"] = _ranked_names(
+        gc.overnight_scheduled(prior, day, nxt))
+    buckets["overnight_mega"] = _ranked_names(gc.overnight_scheduled(
+        prior, day, nxt, min_mcap_m=gc.OVERNIGHT_MEGA_MCAP_M,
+    ))
+    if opp.union_enabled():
+        buckets["oppset"] = _ranked_names(opp.flagged_tickers(day, top_n=30))
+    by_ticker: dict[str, list[dict]] = {}
+    for source in MORNING_SOURCES:
+        for rank, tick in enumerate(buckets.get(source) or [], start=1):
+            by_ticker.setdefault(tick, []).append(
+                {"source": source, "rank": rank})
+    names = [
+        {"ticker": tick, "sources": by_ticker[tick]}
+        for tick in sorted(by_ticker)
+    ]
+    return {
+        "date": day,
+        "code_sha": code_sha(),
+        "prior_export": prior,
+        "n": len(names),
+        "excluded": ["flatten", "mover_buy"],
+        "names": names,
+    }
+
+
+def _review_hold(date: str, gaps: list[dict]) -> None:
+    tickers = sorted({str(g.get("ticker") or "") for g in gaps if g.get("ticker")})
+    bits = []
+    for gap in gaps[:12]:
+        if gap.get("missing"):
+            bits.append(f"{gap.get('ticker')}: {', '.join(gap['missing'])}")
+        else:
+            bits.append(
+                f"{gap.get('ticker')} {gap.get('field')} "
+                f"ours={gap.get('ours')} finviz={gap.get('finviz')} "
+                f"({gap.get('source')})"
+            )
+    raise HoldDay(
+        date, tickers,
+        "finviz cross-check: " + "; ".join(bits),
+        status="held_review",
+        gaps=gaps,
+    )
+
+
+def prepare_lock(date: str) -> dict:
+    """Candidate log plus the Finviz close cross-check. No files written."""
+    doc = candidate_provenance(date)
+    gaps = close_cross_check(
+        date, [row["ticker"] for row in doc.get("names") or []])
+    if gaps:
+        _review_hold(date, gaps)
+    return doc
+
+
+def write_candidates(date: str, doc: dict, *, restate: bool = False) -> str:
+    return _write_frozen(
+        candidate_path(date), doc, "candidates", date, restate=restate)
 
 
 def pin_morning_if_overlay(date: str) -> Path | None:
@@ -546,7 +833,8 @@ def apply_frozen_snapshots(panel: dict) -> dict:
 
 
 def make_snapshot(date: str, rows: list[dict], prior: str | None,
-                  prices_sha: str | None) -> dict:
+                  prices_sha: str | None,
+                  candidates: dict | None = None) -> dict:
     from . import price_store as ps
 
     if ps.AUTO_ADJUST:
@@ -564,7 +852,7 @@ def make_snapshot(date: str, rows: list[dict], prior: str | None,
     frozen_rows.sort(key=lambda r: (
         r.get("date") or "", int(r.get("src_rank") or 0), r.get("ticker") or "",
     ))
-    return {
+    snap = {
         "date": date,
         "asof": "09:30_et",
         "open_clock": "09:30 ET",
@@ -576,6 +864,14 @@ def make_snapshot(date: str, rows: list[dict], prior: str | None,
         "n_rows": len(frozen_rows),
         "rows": frozen_rows,
     }
+    if candidates is not None:
+        snap["candidates"] = {
+            "n": candidates.get("n"),
+            "prior_export": candidates.get("prior_export"),
+            "excluded": list(candidates.get("excluded") or []),
+            "names": list(candidates.get("names") or []),
+        }
+    return snap
 
 
 def freeze_meta() -> dict:
@@ -632,11 +928,11 @@ def committed_manifest() -> dict:
 
 def guard_manifest(old: dict | None, new: dict | None,
                    restate: list[str] | None = None) -> None:
-    """Fail if any earlier snapshot or ledger hash changed."""
+    """Fail if any earlier snapshot, ledger, lineup, or candidate hash changed."""
     old = old or {}
     new = new or {}
     allow = {str(d)[:10] for d in (restate or []) if d}
-    for slot in ("snapshots", "ledgers", "lineups"):
+    for slot in GUARD_SLOTS:
         for date, meta in (old.get(slot) or {}).items():
             if date in allow:
                 print(f"[factor-mine] restate allowed {slot} {date}", flush=True)
@@ -649,7 +945,7 @@ def guard_manifest(old: dict | None, new: dict | None,
                     f"frozen {slot} {date} hash changed {prev} -> {got}. "
                     f"Pass --restate {date} to log a correction."
                 )
-    for slot in ("snapshots", "ledgers", "lineups"):
+    for slot in GUARD_SLOTS:
         for date, meta in (new.get(slot) or {}).items():
             path = slot_path(slot, date)
             if not path.is_file():
@@ -1305,6 +1601,11 @@ def append_land(from_date: str, target: str, *, write: bool = False,
         except HoldDay as e:
             print(f"[factor-mine] {e}", flush=True)
             break
+        try:
+            candidates = prepare_lock(date)
+        except HoldDay as e:
+            print(f"[factor-mine] {e}", flush=True)
+            break
         panel = fm.merge_panel_days(panel, extra)
         rows = [
             r for r in (panel.get("rows") or []) if r.get("date") == date
@@ -1312,12 +1613,17 @@ def append_land(from_date: str, target: str, *, write: bool = False,
         prior = _prior(list(panel.get("session_dates") or []), date)
         pinned = pin_prices(date, [r.get("ticker") for r in rows])
         try:
+            write_candidates(date, candidates, restate=date in restate_set)
+        except FrozenHistory as e:
+            print(f"[factor-mine] {e}", flush=True)
+            candidates = read_json(candidate_path(date)) or candidates
+        try:
             prices_sha = write_price_pin(date, pinned, restate=date in restate_set)
         except FrozenHistory as e:
             print(f"[factor-mine] {e}", flush=True)
             prices_sha = (load_manifest().get("prices") or {}).get(date, {}).get("sha256")
             pinned = read_json(price_path(date)) or pinned
-        snap = make_snapshot(date, rows, prior, prices_sha)
+        snap = make_snapshot(date, rows, prior, prices_sha, candidates)
         try:
             write_snapshot(date, snap, restate=date in restate_set)
         except FrozenHistory as e:

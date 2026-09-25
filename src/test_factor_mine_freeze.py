@@ -19,25 +19,25 @@ from src import ticker_lookback as tl
 def _redirect(tmp: Path):
     return (
         fmf.SNAP_DIR, fmf.LEDGER_DIR, fmf.PRICE_DIR, fmf.MANIFEST_PATH,
-        fmf.LINEUP_DIR,
+        fmf.LINEUP_DIR, fmf.CANDIDATE_DIR,
     ), (
         tmp / "snapshots", tmp / "ledgers", tmp / "prices",
-        tmp / "freeze_manifest.json", tmp / "lineups",
+        tmp / "freeze_manifest.json", tmp / "lineups", tmp / "candidates",
     )
 
 
 def _use(tmp: Path):
     old, new = _redirect(tmp)
     (fmf.SNAP_DIR, fmf.LEDGER_DIR, fmf.PRICE_DIR, fmf.MANIFEST_PATH,
-     fmf.LINEUP_DIR) = new
-    for p in (new[0], new[1], new[2], new[4]):
+     fmf.LINEUP_DIR, fmf.CANDIDATE_DIR) = new
+    for p in (new[0], new[1], new[2], new[4], new[5]):
         p.mkdir(parents=True, exist_ok=True)
     return old
 
 
 def _restore(old) -> None:
     (fmf.SNAP_DIR, fmf.LEDGER_DIR, fmf.PRICE_DIR, fmf.MANIFEST_PATH,
-     fmf.LINEUP_DIR) = old
+     fmf.LINEUP_DIR, fmf.CANDIDATE_DIR) = old
 
 
 def test_snapshot_is_write_once_and_restate_logs_previous_hash() -> None:
@@ -462,6 +462,16 @@ def test_reconstructed_label_and_append_does_not_rebuild_old_rows() -> None:
                     mock.patch.object(fm, "panel_lookback_calendar",
                                       return_value=["2026-09-24", "2026-09-25"]), \
                     mock.patch.object(fm, "session_has_closed", return_value=True), \
+                    mock.patch.object(fmf, "prepare_lock", return_value={
+                        "date": "2026-09-25",
+                        "n": 1,
+                        "prior_export": "2026-09-24",
+                        "excluded": ["flatten", "mover_buy"],
+                        "names": [{
+                            "ticker": "NEW",
+                            "sources": [{"source": "yday_gainer", "rank": 1}],
+                        }],
+                    }), \
                     mock.patch.object(fmf, "pin_prices", return_value={
                         "date": "2026-09-25",
                         "names": {"NEW": {"prior": [], "open": 8.0, "close": 9.0}},
@@ -524,6 +534,10 @@ def test_reconstructed_label_and_append_does_not_rebuild_old_rows() -> None:
                        for r in saved["rows"])
             assert fmf.snapshot_path("2026-09-25").is_file()
             assert fmf.ledger_path("2026-09-25").is_file()
+            assert fmf.candidate_path("2026-09-25").is_file()
+            frozen = json.loads(fmf.snapshot_path("2026-09-25").read_text(encoding="utf-8"))
+            assert frozen["candidates"]["n"] == 1
+            assert frozen["candidates"]["names"][0]["ticker"] == "NEW"
             assert out["freeze"]["first_frozen"] == "2026-09-25"
             assert "2026-09-24" in out["reconstructed_dates"]
             assert "2026-09-25" not in out["reconstructed_dates"]
@@ -956,6 +970,271 @@ def test_recipe_creation_date_cannot_move() -> None:
         )
 
 
+def _csv(path: Path, rows: list[dict]) -> None:
+    cols = ["Ticker", "Open", "High", "Low", "Price", "Prev Close"]
+    lines = [",".join(cols)]
+    for row in rows:
+        lines.append(",".join(str(row.get(c, "")) for c in cols))
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text("\n".join(lines) + "\n", encoding="utf-8")
+
+
+def _with_exports(tmp: Path):
+    """Point Finviz reads at ``tmp`` and drop the process-wide bar cache."""
+    old = tl.EXPORT_DIR
+    tl.EXPORT_DIR = tmp
+    tl._FINVIZ_BARS.clear()
+    return old
+
+
+def test_finviz_close_cross_check_tolerance_and_scrape_clock() -> None:
+    """Prior close must match a post-close Price or the next Prev Close.
+
+    A morning Price is a last trade. It does not stand in for the close.
+    """
+    prior = "2026-09-24"
+    day = "2026-09-25"
+
+    def bars(ticker):
+        book = {
+            "AAA": {"date": prior, "open": 9.0, "high": 11.0, "low": 8.5, "close": 10.0},
+            "BBB": {"date": prior, "open": 1.0, "high": 1.2, "low": 0.9, "close": 1.0},
+            "CCC": {"date": prior, "open": 100.0, "high": 101.0, "low": 99.0, "close": 100.40},
+            "DDD": {"date": prior, "open": 100.0, "high": 101.0, "low": 99.0, "close": 100.60},
+        }
+        row = book.get(ticker)
+        return [row] if row else []
+
+    with tempfile.TemporaryDirectory() as d:
+        root = Path(d)
+        _csv(root / f"finviz_{prior}.csv", [{
+            "Ticker": "AAA", "Open": 9, "High": 11, "Low": 8.5, "Price": 50,
+            "Prev Close": 1,
+        }])
+        _csv(root / f"finviz_{day}.csv", [
+            {"Ticker": "AAA", "Open": 10, "High": 12, "Low": 9, "Price": 50,
+             "Prev Close": 10.02},
+            {"Ticker": "BBB", "Open": 1, "High": 1, "Low": 1, "Price": 9,
+             "Prev Close": 1.02},
+            {"Ticker": "CCC", "Open": 1, "High": 1, "Low": 1, "Price": 1,
+             "Prev Close": 100.00},
+            {"Ticker": "DDD", "Open": 1, "High": 1, "Low": 1, "Price": 1,
+             "Prev Close": 100.00},
+        ])
+        old_export = _with_exports(root)
+        try:
+            with mock.patch.object(fmf, "prior_session", return_value=prior), \
+                    mock.patch.object(fmf, "_raw_bars", side_effect=bars):
+                assert fmf.close_cross_check(day, ["AAA", "BBB", "CCC"]) == []
+                missing = fmf.close_cross_check(day, ["EEE"])
+                gaps = fmf.close_cross_check(day, ["DDD"])
+            assert missing[0]["missing"] == ["missing finviz prior close"]
+            assert missing[0]["ticker"] == "EEE"
+            assert len(gaps) == 1
+            assert gaps[0]["ticker"] == "DDD"
+            assert gaps[0]["field"] == "close"
+            assert gaps[0]["source"] == f"finviz_{day}.csv Prev Close"
+            # Post-close Price is the close. The morning Prev Close is not.
+            (root / f"finviz_{prior}.scraped_at").write_text(
+                "2026-09-24T16:05:00-04:00\n", encoding="utf-8")
+            tl._FINVIZ_BARS.clear()
+            _csv(root / f"finviz_{prior}.csv", [{
+                "Ticker": "AAA", "Open": 9.0, "High": 11.0, "Low": 8.5,
+                "Price": 10.0, "Prev Close": 1,
+            }])
+            tl._FINVIZ_BARS.clear()
+            with mock.patch.object(fmf, "prior_session", return_value=prior), \
+                    mock.patch.object(fmf, "_raw_bars", side_effect=bars):
+                assert fmf.export_is_postclose(prior)
+                assert fmf.close_cross_check(day, ["AAA"]) == []
+                # A morning stamp does not promote Price into the close.
+                (root / f"finviz_{prior}.scraped_at").write_text(
+                    "2026-09-24T08:00:00-04:00\n", encoding="utf-8")
+                assert not fmf.export_is_postclose(prior)
+                morning = fmf.finviz_close_reference("AAA", prior, day)
+            assert morning["asof"] == "morning_prev_close"
+            assert morning["fields"] == {"close": 10.02}
+            assert "Price" not in morning["source"] or "Prev Close" in morning["source"]
+        finally:
+            tl.EXPORT_DIR = old_export
+            tl._FINVIZ_BARS.clear()
+
+
+def test_cross_check_hold_writes_nothing() -> None:
+    with tempfile.TemporaryDirectory() as d:
+        tmp = Path(d)
+        old = _use(tmp)
+        orig_panel = fm.PANEL_PATH
+        try:
+            fm.PANEL_PATH = tmp / "panel.json"
+
+            def fake_build(date, to_date=None, fail_closed=False):
+                row = {
+                    "date": date, "ticker": "AAA", "sources": ["yday_gainer"],
+                    "src_rank": 0, "open": 10.0, "close": 11.0,
+                    "ohlc_hot_score": 1.0, "boxes": {}, "alarm": False,
+                }
+                return {
+                    "session_dates": [date], "rows": [row],
+                    "by_date": {date: [row]},
+                }
+
+            def disagree(date):
+                raise fmf.HoldDay(
+                    date, ["AAA"],
+                    "finviz cross-check: AAA close ours=10.0 finviz=12.0",
+                    status="held_review",
+                    gaps=[{
+                        "ticker": "AAA", "field": "close",
+                        "ours": 10.0, "finviz": 12.0,
+                        "source": "finviz_2026-09-25.csv Prev Close",
+                    }],
+                )
+
+            with mock.patch.object(fm, "build_panel", side_effect=fake_build), \
+                    mock.patch.object(fm, "panel_lookback_calendar",
+                                      return_value=["2026-09-24", "2026-09-25"]), \
+                    mock.patch.object(fm, "session_has_closed", return_value=True), \
+                    mock.patch.object(fmf, "prepare_lock", side_effect=disagree):
+                out = fmf.append_land(
+                    "2026-09-24", "2026-09-25", write=True, payload={
+                        "dates": [], "recipes": [], "stats": [],
+                    }, panel={"session_dates": [], "rows": []},
+                )
+            assert not fmf.snapshot_path("2026-09-25").exists()
+            assert not fmf.price_path("2026-09-25").exists()
+            assert not fmf.candidate_path("2026-09-25").exists()
+            assert "2026-09-25" not in (out.get("dates") or [])
+        finally:
+            fm.PANEL_PATH = orig_panel
+            _restore(old)
+
+
+def test_candidate_log_uses_morning_files_only() -> None:
+    from src import flatten_lookback_action as fla
+    from src import gainer_asof as ga
+    from src import gainer_capture as gc
+    from src import oppset_clock_b as opp
+
+    def refuse(*_a, **_k):
+        raise AssertionError("prior-night holdings are not a candidate source")
+
+    def overnight(*_a, **kwargs):
+        if kwargs.get("min_mcap_m"):
+            return ["DDD"]
+        return []
+
+    with mock.patch.object(gc, "lookback_calendar",
+                           side_effect=lambda c: ["2026-09-24", "2026-09-25"]), \
+            mock.patch.object(gc, "knowable_export_date", return_value="2026-09-24"), \
+            mock.patch.object(gc, "next_session", return_value="2026-09-28"), \
+            mock.patch.object(ga, "load_finviz", return_value=object()), \
+            mock.patch.object(ga, "_liquid_tape", return_value=[
+                {"ticker": "BBB", "change_pct": 1.0},
+                {"ticker": "AAA", "change_pct": 4.0},
+                {"ticker": "AAA", "change_pct": 4.0},
+            ]), \
+            mock.patch.object(gc, "yesterday_gainers", return_value=["BBB", "AAA"]), \
+            mock.patch.object(gc, "yesterday_movers", return_value=[]), \
+            mock.patch.object(gc, "earnings_reaction", return_value=["CCC"]), \
+            mock.patch.object(gc, "overnight_scheduled", side_effect=overnight), \
+            mock.patch.object(opp, "union_enabled", return_value=True), \
+            mock.patch.object(opp, "flagged_tickers", return_value=["CCC", "AAA"]), \
+            mock.patch.object(fla, "flatten_day_targets", side_effect=refuse), \
+            mock.patch.object(fla, "collect_mover_buys", side_effect=refuse), \
+            mock.patch.object(fmf, "code_sha", return_value="prov-test"):
+        doc = fmf.candidate_provenance("2026-09-25")
+    assert doc["n"] == 4
+    assert doc["prior_export"] == "2026-09-24"
+    assert doc["excluded"] == ["flatten", "mover_buy"]
+    by = {row["ticker"]: row["sources"] for row in doc["names"]}
+    assert [row["ticker"] for row in doc["names"]] == ["AAA", "BBB", "CCC", "DDD"]
+    assert {"source": "liquid_tape", "rank": 1} in by["AAA"]
+    assert {"source": "yday_gainer", "rank": 2} in by["AAA"]
+    assert {"source": "oppset", "rank": 2} in by["AAA"]
+    assert {"source": "liquid_tape", "rank": 2} in by["BBB"]
+    assert {"source": "earn_react", "rank": 1} in by["CCC"]
+    assert {"source": "overnight_mega", "rank": 1} in by["DDD"]
+    blob = json.dumps(doc)
+    assert "flatten" not in blob or "excluded" in blob
+    assert "mover_buy" not in blob or "excluded" in blob
+    for row in doc["names"]:
+        assert all(s["source"] != "flatten" for s in row["sources"])
+        assert all(s["source"] != "mover_buy" for s in row["sources"])
+    with tempfile.TemporaryDirectory() as d:
+        old = _use(Path(d))
+        try:
+            digest = fmf.write_candidates("2026-09-25", doc, restate=False)
+            man = fmf.load_manifest()
+            assert man["candidates"]["2026-09-25"]["sha256"] == digest
+            fmf.guard_manifest(man, man, restate=[])
+            path = fmf.candidate_path("2026-09-25")
+            raw = bytearray(path.read_bytes())
+            raw[-1] ^= 0xFF
+            path.write_bytes(bytes(raw))
+            try:
+                fmf.guard_manifest(man, man, restate=[])
+                caught = False
+            except SystemExit as e:
+                caught = True
+                assert "candidates" in str(e)
+            assert caught
+        finally:
+            _restore(old)
+
+
+def test_overlapping_postclose_field_is_listed() -> None:
+    prior = "2026-09-24"
+    day = "2026-09-25"
+    with tempfile.TemporaryDirectory() as d:
+        root = Path(d)
+        _csv(root / f"finviz_{prior}.csv", [{
+            "Ticker": "AAA", "Open": 9.0, "High": 12.0, "Low": 8.5,
+            "Price": 10.0, "Prev Close": 1,
+        }])
+        (root / f"finviz_{prior}.scraped_at").write_text(
+            "2026-09-24T20:30:00-04:00\n", encoding="utf-8")
+        _csv(root / f"finviz_{day}.csv", [{
+            "Ticker": "AAA", "Price": 99, "Prev Close": 1,
+        }])
+        old_export = _with_exports(root)
+        try:
+            with mock.patch.object(fmf, "prior_session", return_value=prior), \
+                    mock.patch.object(fmf, "_raw_bars", return_value=[{
+                        "date": prior, "open": 9.0, "high": 11.0,
+                        "low": 8.5, "close": 10.0,
+                    }]):
+                gaps = fmf.close_cross_check(day, ["AAA"])
+            assert len(gaps) == 1
+            assert gaps[0]["field"] == "high"
+            assert gaps[0]["finviz"] == 12.0
+            assert gaps[0]["source"].endswith("Price")
+            with mock.patch.object(fmf, "candidate_provenance", return_value={
+                "date": day, "n": 1, "prior_export": prior,
+                "excluded": ["flatten", "mover_buy"],
+                "names": [{"ticker": "AAA", "sources": [
+                    {"source": "liquid_tape", "rank": 1}]}],
+            }), mock.patch.object(fmf, "prior_session", return_value=prior), \
+                    mock.patch.object(fmf, "_raw_bars", return_value=[{
+                        "date": prior, "open": 9.0, "high": 11.0,
+                        "low": 8.5, "close": 10.0,
+                    }]):
+                try:
+                    fmf.prepare_lock(day)
+                    held = False
+                    err = None
+                except fmf.HoldDay as e:
+                    held = True
+                    err = e
+            assert held and err is not None
+            assert err.status == "held_review"
+            assert err.missing == ["AAA"]
+            assert err.gaps[0]["field"] == "high"
+        finally:
+            tl.EXPORT_DIR = old_export
+            tl._FINVIZ_BARS.clear()
+
+
 if __name__ == "__main__":
     if os.environ.get("PYTHONHASHSEED") != "0":
         os.environ["PYTHONHASHSEED"] = "0"
@@ -981,4 +1260,8 @@ if __name__ == "__main__":
     test_corrupt_frozen_input_fails_the_hash_guard()
     test_lineup_is_append_only_and_prune_keeps_it()
     test_recipe_creation_date_cannot_move()
+    test_finviz_close_cross_check_tolerance_and_scrape_clock()
+    test_cross_check_hold_writes_nothing()
+    test_candidate_log_uses_morning_files_only()
+    test_overlapping_postclose_field_is_listed()
     print("factor-mine freeze tests passed")
