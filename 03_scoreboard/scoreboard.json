@@ -27907,6 +27907,43 @@
       "engine": "v2",
       "anchor_score": 2.206,
       "overlay_score": 0.5
+    },
+    {
+      "date": "2026-09-25",
+      "topic": "sector:Basic Materials",
+      "predicted_direction": "flat",
+      "predicted_magnitude_band": "flat",
+      "confidence_score": 0.455,
+      "total_score": 1.377,
+      "multiplier": 0.85,
+      "components": {
+        "S0_SHARED_MACRO": -0.5,
+        "S1_SECTOR_FACTORS": 0.0,
+        "S2_BREADTH": -0.5,
+        "S3_FLOWS_POSITIONING": -0.5,
+        "S4_ETF_TAPE": 0.0
+      },
+      "leading_sum": -2.0,
+      "actual_open": null,
+      "actual_close": null,
+      "actual_pct_change": null,
+      "actual_direction": null,
+      "actual_magnitude_band": null,
+      "direction_hit": null,
+      "magnitude_hit": null,
+      "divergence_flagged": true,
+      "divergence_verdict": null,
+      "per_factor_breakdown": [],
+      "reflection_lesson_ref": null,
+      "sources_used": [],
+      "horizon_calls": {},
+      "sector": "Basic Materials",
+      "etf": "XLB",
+      "rubric": "00_grounding/sectors/basic_materials.md",
+      "engine": "v2",
+      "anchor_score": 2.772,
+      "overlay_score": -2.072,
+      "index_carry": 0.676
     }
   ]
 }
