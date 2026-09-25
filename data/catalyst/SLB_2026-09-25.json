@@ -1,0 +1,299 @@
+{
+  "ticker": "SLB",
+  "analysis_date": "2026-09-25",
+  "current_price": "52.0",
+  "net_signal": "Strong Bullish",
+  "conviction": 75,
+  "catalyst_stack": "On 2026-09-24 SLB won four Aramco integrated well-construction contracts covering more than 450 wells, with additional awards from Equinor (2026-09-16) and OQEP in Oman (2026-09-25). The data-center pivot accelerated via the 2026-08-31 agreement to buy Kelvion for about $4.1 billion, the 2026-07-14 Liberty Energy modular-power alliance, and the 2026-08-27 Shreveport expansion to 3.1 million square feet and 1.3 GW shipped. Q2 2026 on 2026-07-24 printed $8.97 billion revenue and $0.55 adjusted EPS with a Q4 revenue guide above $10 billion, while 2026-09-01 closed the S&P Global upstream-software purchase and 2026-06-12 brought a Fifth Circuit FLSA win. Offsets are CEO 10b5-1 sales on 2026-05-27 and 2026-09-01, $2 billion of senior notes settled 2026-05-07, and modest PT cuts from BMO, Capital One, and Raymond James against UBS at $75.",
+  "key_assumption": "Kelvion closes in H1 2027 on stated terms and Aramco/international activity converts to revenue without a renewed Middle East volume shock or a large-deal financing/antitrust setback.",
+  "catalyst_grid": [
+    {
+      "taxonomy": "Successful acquisition/synergy realization",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 7,
+      "adjusted_weight": 8,
+      "event_ids": [
+        6,
+        20
+      ],
+      "event_date": "2026-09-01",
+      "evidence_excerpt": "NEW YORK, Sept. 1, 2026 /PRNewswire/ -- S&P Global (NYSE: SPGI) today announced the completion of the divestment",
+      "source_urls": [
+        "https://www.morningstar.com/news/pr-newswire/20260901ny37567/sp-global-completes-divestiture-of-upstream-energy-software-portfolio-to-slb",
+        "https://finance.yahoo.com/energy/articles/p-global-completes-divestiture-upstream-160000788.html"
+      ],
+      "confidence": 95
+    },
+    {
+      "taxonomy": "Earnings beat (revenue, EBITDA, EPS)",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 8,
+      "adjusted_weight": 7,
+      "event_ids": [
+        14
+      ],
+      "event_date": "2026-07-24",
+      "evidence_excerpt": "Revenue: $8.97 billion, up 3% sequentially and 5% year-over-year.",
+      "source_urls": [
+        "https://www.reuters.com/business/energy/top-us-oilfield-services-firm-slb-beats-quarterly-profit-estimates-2026-07-24/",
+        "https://www.businesswire.com/news/home/20260722694386/en/SLB-Announces-Second-Quarter-2026-Results"
+      ],
+      "confidence": 95
+    },
+    {
+      "taxonomy": "Earnings guidance raise",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 7,
+      "adjusted_weight": 7,
+      "event_ids": [
+        14
+      ],
+      "event_date": "2026-07-24",
+      "evidence_excerpt": "Guided to 3\u20134% sequential Q3 revenue growth and Q4 revenue above $10 billion.",
+      "source_urls": [
+        "https://www.reuters.com/business/energy/top-us-oilfield-services-firm-slb-beats-quarterly-profit-estimates-2026-07-24/",
+        "https://investorcenter.slb.com/static-files/b5738fb2-b121-489f-b699-0238f706e554"
+      ],
+      "confidence": 95
+    },
+    {
+      "taxonomy": "Capacity expansion announced (new factory, satellite constellation)",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 6,
+      "adjusted_weight": 7,
+      "event_ids": [
+        10
+      ],
+      "event_date": "2026-08-27",
+      "evidence_excerpt": "SLB has grown its footprint to 3.1 million square feet and its workforce to nearly 1,800 employees.",
+      "source_urls": [
+        "https://www.slb.com/newsroom/features/2026/2026-0827-slb-shreveport-data-center"
+      ],
+      "confidence": 90
+    },
+    {
+      "taxonomy": "Contract win/expansion",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 8,
+      "adjusted_weight": 6,
+      "event_ids": [
+        0,
+        1,
+        2
+      ],
+      "event_date": "2026-09-24",
+      "evidence_excerpt": "SLB will manage end-to-end well construction services, delivering more than 450 wells over the three-year term",
+      "source_urls": [
+        "https://www.slb.com/newsroom/press-release/2026/pr-2026-0924-slb-aramco",
+        "https://www.worldoil.com/news/2026/9/24/slb-to-deliver-more-than-450-wells-for-aramco-under-three-year-contracts/"
+      ],
+      "confidence": 95
+    },
+    {
+      "taxonomy": "Product launch/FDA approval/regulatory greenlight",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 9,
+      "adjusted_weight": 6,
+      "event_ids": [
+        11
+      ],
+      "event_date": "2026-08-24",
+      "evidence_excerpt": "SLB (Schlumberger) launched the ExaCT electrical downhole coiled tubing (CT) control system on August 24, 2026.",
+      "source_urls": [
+        "https://www.slb.com/newsroom/press-release/2026/slb-launches-exact-electrical-downhole-ct-control-system",
+        "https://www.stocktitan.net/news/SLB/slb-launches-exa-ct-electrical-downhole-ct-control-rd1lk7j44pew.html"
+      ],
+      "confidence": 92
+    },
+    {
+      "taxonomy": "Favorable court ruling/patent grant",
+      "type": "positive",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 8,
+      "adjusted_weight": 6,
+      "event_ids": [
+        17
+      ],
+      "event_date": "2026-06-12",
+      "evidence_excerpt": "The Fifth Circuit held that a hybrid compensation plan combining a fixed biweekly salary with variable day-rate pay satisfied the FLSA.",
+      "source_urls": [
+        "https://www.ca5.uscourts.gov/opinions/pub/25/25-50594-CV0.pdf",
+        "https://news.bloomberglaw.com/daily-labor-report/schlumberger-beats-drillers-bid-to-undo-overtime-loss-on-appeal"
+      ],
+      "confidence": 90
+    },
+    {
+      "taxonomy": "Strategic partnership/alliance",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 6,
+      "adjusted_weight": 5,
+      "event_ids": [
+        15,
+        18,
+        19,
+        26
+      ],
+      "event_date": "2026-07-14",
+      "evidence_excerpt": "SLB (formerly Schlumberger) and Liberty Energy Inc. announced a strategic alliance to deliver modular infrastructure and integrated power generation",
+      "source_urls": [
+        "https://libertyenergy.com/slb-liberty-energy-to-form-strategic-alliance-for-data-center-infrastructure-and-power/",
+        "https://www.reuters.com/business/energy/slb-partners-with-liberty-energy-supply-modular-parts-power-data-centers-2026-07-14/"
+      ],
+      "confidence": 93
+    },
+    {
+      "taxonomy": "Strategic pivot/rebranding to high-growth area",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 5,
+      "event_ids": [
+        9
+      ],
+      "event_date": "2026-08-31",
+      "evidence_excerpt": "SLB agreed to acquire Kelvion ... valued at approximately $4.1 billion ($3.4 billion cash + assumption of ~$700 million debt)",
+      "source_urls": [
+        "https://www.reuters.com/business/energy/slb-acquire-kelvion-34-billion-2026-08-31/",
+        "https://www.bloomberg.com/news/articles/2026-08-31/slb-to-buy-data-center-cooling-firm-kelvion-for-3-4-billion"
+      ],
+      "confidence": 95
+    },
+    {
+      "taxonomy": "Analyst upgrade/PT increase",
+      "type": "positive",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 4,
+      "event_ids": [
+        3,
+        4,
+        13
+      ],
+      "event_date": "2026-09-14",
+      "evidence_excerpt": "UBS analyst Josh Silverstein raised the price target on SLB (Schlumberger) to $75 from $72 while maintaining a Buy rating.",
+      "source_urls": [
+        "https://www.tipranks.com/news/the-fly/slb-price-target-raised-to-75-from-72-at-ubs-thefly-news",
+        "https://www.benzinga.com/quote/SLB/price-targets"
+      ],
+      "confidence": 88
+    },
+    {
+      "taxonomy": "Insider selling (especially by CEO/CFO, or clustered sales)",
+      "type": "negative",
+      "category": "internal",
+      "status": "MISS",
+      "base_weight": 7,
+      "adjusted_weight": 0,
+      "event_ids": [
+        7,
+        21
+      ],
+      "event_date": "2026-09-01",
+      "evidence_excerpt": "Olivier Le Peuch ... sold 35,000 shares of SLB common stock at $60.00 per share for a total of $2,100,000.",
+      "source_urls": [
+        "https://www.secform4.com/insider-trading/1497824.htm",
+        "https://www.stocktitan.net/sec-filings/SLB/form-4.html"
+      ],
+      "confidence": 0
+    },
+    {
+      "taxonomy": "Analyst downgrade/price target cut",
+      "type": "negative",
+      "category": "external",
+      "status": "MISS",
+      "base_weight": 5,
+      "adjusted_weight": 0,
+      "event_ids": [
+        8,
+        12,
+        16
+      ],
+      "event_date": "2026-09-01",
+      "evidence_excerpt": "BMO Capital: Sep 1, 2026 \u2014 Cut PT to $62 from $63, maintained Buy/Outperform.",
+      "source_urls": [
+        "https://stockanalysis.com/stocks/slb/forecast/"
+      ],
+      "confidence": 0
+    },
+    {
+      "taxonomy": "Accumulation of debt/retention or deepening of toxic assets/failed divestiture",
+      "type": "negative",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 6,
+      "adjusted_weight": 5,
+      "event_ids": [
+        22,
+        23
+      ],
+      "event_date": "2026-05-07",
+      "evidence_excerpt": "SLB (Schlumberger / SLB Limited) issued $2 billion in senior notes on May 7, 2026 (settlement date)",
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/87347/000119312526201211/d85569d424b3.htm",
+        "https://www.tradingview.com/news/tradingview:88071fcfd94b9:0-slb-prices-2-0bn-of-guaranteed-senior-notes-across-2031-2033-and-2036-maturities/"
+      ],
+      "confidence": 92
+    },
+    {
+      "taxonomy": "Earnings miss (revenue, EBITDA, EPS)",
+      "type": "negative",
+      "event_date": "2026-04-24",
+      "evidence_excerpt": "GAAP EPS of $0.50 decreased 14% year on year",
+      "source_urls": [
+        "https://www.nasdaq.com/press-release/slb-announces-first-quarter-2026-results-2026-04-24"
+      ],
+      "status": "HIT",
+      "base_weight": 8,
+      "adjusted_weight": 8,
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Geopolitical/operational disruption",
+      "type": "negative",
+      "event_date": "2026-04-24",
+      "evidence_excerpt": "It was a challenging start to the year as widespread disruptions in the Middle East impacted our business",
+      "source_urls": [
+        "https://www.nasdaq.com/press-release/slb-announces-first-quarter-2026-results-2026-04-24"
+      ],
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 5,
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Geopolitical/operational disruption",
+      "type": "negative",
+      "event_date": "2026-07-24",
+      "evidence_excerpt": "reflecting a 13 per cent decline in the Middle East partially offset by a 17 per cent increase in Asia",
+      "source_urls": [
+        "https://smbtech.au/news/slb-reports-second-quarter-revenue-of-8-97-billion-as-international-growth-offsets-middle-east-disruptions/"
+      ],
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 5,
+      "confidence": 80
+    }
+  ],
+  "grok_verdict": "Bullish",
+  "search_backend": "grok_native",
+  "generated_at": "2026-09-25",
+  "cutoff_date": null,
+  "role": "override_captain"
+}

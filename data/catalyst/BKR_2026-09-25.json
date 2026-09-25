@@ -1,0 +1,230 @@
+{
+  "ticker": "BKR",
+  "analysis_date": "2026-09-25",
+  "current_price": "58.55",
+  "net_signal": "Strong Bullish",
+  "conviction": 76,
+  "catalyst_stack": "On 16 Jul 2026 Baker Hughes closed Chart Industries after 10 Jul 2026 conditional EU antitrust clearance, adding a third segment and targeting $325 million of annualized cost synergies. Operations stayed ahead of the Street with the 23 Apr 2026 Q1 and 27 Jul 2026 Q2 beats (Q2 adjusted EPS $0.64, record $10.501 billion orders) and a 9 Sep 2026 FY2026 guide raise to $28.5-$30.3 billion revenue and $4.875-$5.475 billion adjusted EBITDA to include Chart. Commercial follow-through included 26 May-24 Jun 2026 U.S. geothermal partnerships (Helmerich & Payne; Mantle Reach up to 500 MW), the 11 Aug 2026 Kuwait Oil Company Ahmadi Innovation Valley award, 13 Sep 2026 Venture Global LNG orders, and the 13 Apr 2026 $1.45 billion Waygate sale to Hexagon. The offset is 15-22 Jun 2026 Rule 10b5-1 selling by the CFO and CEO plus scattered PT cuts (Barclays 16 Jul, Wall Street Zen 5 Aug, UBS 10 Sep) against a still-higher $72.27 mean target and later raises (RBC $76 on 25 Aug).",
+  "key_assumption": "Chart\u2019s $325 million synergy target is executable, the September FY2026 raise is not just deal math with no organic IET/OFSE backing, and June C-suite 10b5-1 sales are planned liquidity rather than a cycle top.",
+  "catalyst_grid": [
+    {
+      "taxonomy": "Successful acquisition/synergy realization",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 7,
+      "adjusted_weight": 9,
+      "event_ids": [
+        9
+      ],
+      "event_date": "2026-07-16",
+      "evidence_excerpt": "today announced the successful completion of its acquisition of Chart Industries, Inc.",
+      "source_urls": [
+        "https://seekingalpha.com/pr/20585484-baker-hughes-completes-acquisition-of-chart-industries",
+        "https://www.tipranks.com/news/company-announcements/baker-hughes-completes-strategic-acquisition-of-chart-industries"
+      ],
+      "confidence": 95
+    },
+    {
+      "taxonomy": "Earnings guidance raise",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 7,
+      "adjusted_weight": 7,
+      "event_ids": [
+        17
+      ],
+      "event_date": "2026-09-09",
+      "evidence_excerpt": "raised its financial guidance for the full year on Wednesday after factoring in a boost from its recent acquisition of Chart Industries.",
+      "source_urls": [
+        "https://seekingalpha.com/news/4641160-baker-hughes-hikes-guidance-for-2026-revenue-ebitda-to-reflect-chart-industries-deal",
+        "https://www.reuters.com/business/energy/baker-hughes-raises-annual-forecasts-after-chart-acquisition-2026-09-09/"
+      ],
+      "confidence": 93
+    },
+    {
+      "taxonomy": "Earnings beat (revenue, EBITDA, EPS)",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 8,
+      "adjusted_weight": 7,
+      "event_ids": [
+        2,
+        11
+      ],
+      "event_date": "2026-07-27",
+      "evidence_excerpt": "The company reported $0.64 earnings per share (EPS) for the quarter, beating the consensus estimate of $0.51 by $0.13.",
+      "source_urls": [
+        "https://s21.q4cdn.com/548121662/files/doc_earnings/2026/q2/earnings-result/Q2-2026-Earnings-Release.pdf",
+        "https://s21.q4cdn.com/548121662/files/doc_earnings/2026/q2/presentation/Second-Quarter-2026_Earnings-Conference-Call-Presentation.pdf"
+      ],
+      "confidence": 91
+    },
+    {
+      "taxonomy": "Contract win/expansion",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 8,
+      "adjusted_weight": 7,
+      "event_ids": [
+        15,
+        19
+      ],
+      "event_date": "2026-09-13",
+      "evidence_excerpt": "On September 13, 2026, Baker Hughes announced two major orders from Venture Global LNG tied to the Plaquemines LNG facility",
+      "source_urls": [
+        "https://investors.bakerhughes.com/news/press-releases/news-details/2026/Baker-Hughes-and-Venture-Global-Advance-Next-Phase-of-U-S--Gas-Infrastructure-Growth/default.aspx",
+        "https://www.offshore-energy.biz/baker-hughes-enlisted-to-power-next-wave-of-venture-globals-lng-expansion/"
+      ],
+      "confidence": 88
+    },
+    {
+      "taxonomy": "Regulatory approval (FDA, FCC, FTC clearance)",
+      "type": "positive",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 9,
+      "adjusted_weight": 7,
+      "event_ids": [
+        8
+      ],
+      "event_date": "2026-07-10",
+      "evidence_excerpt": "On July 10, 2026, the European Commission granted conditional EU antitrust approval for Baker Hughes\u2019 $13.6 billion acquisition of Chart Industries.",
+      "source_urls": [
+        "https://www.reuters.com/legal/litigation/baker-hughes-wins-conditional-eu-nod-136-billion-chart-deal-2026-07-10/",
+        "https://antitrust-intelligence.com/eu-clears-baker-hughes-chart-deal/"
+      ],
+      "confidence": 90
+    },
+    {
+      "taxonomy": "Deleveraging/sale of toxic assets/spin-off of loss-making unit",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 6,
+      "event_ids": [
+        1
+      ],
+      "event_date": "2026-04-13",
+      "evidence_excerpt": "Agreed to sell to Hexagon AB for ~$1.45 billion cash (announced April 2026)",
+      "source_urls": [
+        "https://www.reuters.com/business/energy/baker-hughes-sells-waygate-unit-hexagon-about-145-billion-2026-04-13/",
+        "https://www.stocktitan.net/sec-filings/BKR/10-q-baker-hughes-co-quarterly-earnings-report-2e09bbebf207.html"
+      ],
+      "confidence": 86
+    },
+    {
+      "taxonomy": "Strategic partnership/alliance",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 6,
+      "adjusted_weight": 5,
+      "event_ids": [
+        3,
+        7
+      ],
+      "event_date": "2026-06-24",
+      "evidence_excerpt": "the partnership targets up to 500 MW of capacity over five years.",
+      "source_urls": [
+        "https://www.reuters.com/legal/litigation/baker-hughes-mantle-reach-sign-deal-500-mw-geothermal-power-north-america-2026-06-24/"
+      ],
+      "confidence": 87
+    },
+    {
+      "taxonomy": "Analyst upgrade/PT increase",
+      "type": "positive",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 4,
+      "event_ids": [
+        0,
+        12,
+        14,
+        16,
+        20
+      ],
+      "event_date": "2026-08-25",
+      "evidence_excerpt": "Royal Bank Of Canada boosted their price objective on Baker Hughes from $71.00 to $76.00 and gave the company an \"outperform\" rating",
+      "source_urls": [
+        "https://www.pricetargets.com/NASDAQ/BKR/"
+      ],
+      "confidence": 85
+    },
+    {
+      "taxonomy": "Insider selling (especially by CEO/CFO, or clustered sales)",
+      "type": "negative",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 7,
+      "adjusted_weight": 7,
+      "event_ids": [
+        4,
+        5
+      ],
+      "event_date": "2026-06-22",
+      "evidence_excerpt": "The stock was sold at an average price of $58.43, for a total value of $10,599,844.73.",
+      "source_urls": [
+        "https://www.stocktitan.net/sec-filings/BKR/form-4-baker-hughes-co-insider-trading-activity-8acd77f9be68.html"
+      ],
+      "confidence": 88
+    },
+    {
+      "taxonomy": "Analyst downgrade/price target cut",
+      "type": "negative",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 5,
+      "event_ids": [
+        10,
+        13,
+        18
+      ],
+      "event_date": "2026-07-16",
+      "evidence_excerpt": "Barclays dropped their price target on Baker Hughes from $74.00 to $72.00 and set an \"equal weight\" rating",
+      "source_urls": [
+        "https://www.benzinga.com/quote/BKR/price-targets"
+      ],
+      "confidence": 82
+    },
+    {
+      "taxonomy": "workforce reductions",
+      "type": "negative",
+      "event_date": "2026-07-09",
+      "evidence_excerpt": "Baker Hughes, a major oilfield services corporation, is laying off 174 employees as it closes its Emmott Road facility in northwest Houston",
+      "source_urls": [
+        "https://www.houstonpublicmedia.org/articles/news/energy-environment/2026/07/09/556695/baker-hughes-to-layoff-174-workers-at-northwest-houston-plant/",
+        "https://www.click2houston.com/news/local/2026/07/09/baker-hughes-to-close-houston-facility-lay-off-174-employees/"
+      ],
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 5,
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Contract win/expansion",
+      "type": "positive",
+      "event_date": "2026-07-27",
+      "evidence_excerpt": "Baker Hughes has secured a major order from Venture Global LNG to supply liquefaction technology for the CP2 LNG expansion project in Louisiana",
+      "source_urls": [
+        "https://worldoil.com/news/2026/7/27/baker-hughes-wins-major-technology-order-for-venture-global-s-cp2-lng-expansion/",
+        "https://investors.bakerhughes.com/news/press-releases/news-details/2026/Baker-Hughes-Secures-Major-LNG-Technology-Order-for-Venture-Globals-CP2-LNG-Expansion/default.aspx"
+      ],
+      "status": "HIT",
+      "base_weight": 8,
+      "adjusted_weight": 7,
+      "confidence": 80
+    }
+  ],
+  "grok_verdict": "Bearish",
+  "search_backend": "grok_native",
+  "generated_at": "2026-09-25",
+  "cutoff_date": null,
+  "role": "override_captain"
+}
