@@ -366,6 +366,38 @@ def attach_tape_flow(panel: dict) -> dict:
     return panel
 
 
+def recipe_created_on(name: str, rec: dict | None = None) -> str:
+    """First session this definition existed.
+
+    Holdup, overnight-mega, and Clock-B landed 2026-09-19 (Saturday), so
+    the book can use them from 2026-09-21. White-horizon and the stop
+    brackets landed 2026-09-13 (Sunday), so they start 2026-09-14.
+    Earlier grid recipes start with the dashboard book.
+    """
+    rec = rec or {}
+    explicit = str(rec.get("created_on") or "")[:10]
+    if len(explicit) != 10:
+        explicit = ""
+    name = str(name or rec.get("name") or "")
+    members = [str(m) for m in (rec.get("members") or []) if m]
+    if members:
+        # Ignore this row's own created_on while dating members, or a
+        # combo stamped at the book origin would hide a later member.
+        member_on = max(recipe_created_on(m, {}) for m in members)
+        return max(explicit, member_on) if explicit else member_on
+    if explicit:
+        return explicit
+    if rec.get("s_boost") == "holdup" or "holdup" in name:
+        return "2026-09-21"
+    if rec.get("universe") == "overnight_mega" or name.startswith("overnight_mega"):
+        return "2026-09-21"
+    if "clk_" in name:
+        return "2026-09-21"
+    if "white_" in name or name.endswith("_s8") or name.endswith("_s12"):
+        return "2026-09-14"
+    return START
+
+
 def make_recipe(name: str, *, universe: str = "union", hold: int = 1,
                 side: str = "long", top_n: int = TOP_N_DEFAULT,
                 require: dict | None = None, forbid: dict | None = None,
@@ -3217,8 +3249,14 @@ def write_scoreboard(payload: dict, out_json: Path | None = None) -> dict:
     """Write slim index + gzip shards. Never keeps books/starts/daily in the index.
 
     Returns the slim document that was written (manifest + summaries).
+    A destination that already has locked days refuses a rewrite of those
+    picks, fills, or P&L. A recipe name that was not on the board may
+    land once.
     """
     dest_json = Path(out_json or OUT_JSON)
+    if dest_json.is_file():
+        from . import factor_mine_rules as fmr
+        fmr.assert_scoreboard_append(load_scoreboard(dest_json), payload)
     dest_json.parent.mkdir(parents=True, exist_ok=True)
     dest_shards = shards_dir(dest_json)
     dest_shards.mkdir(parents=True, exist_ok=True)
@@ -3312,6 +3350,9 @@ def write_outputs(payload: dict, stats: list[dict] | None = None,
     dest_dash.mkdir(parents=True, exist_ok=True)
     dest_md.parent.mkdir(parents=True, exist_ok=True)
     write_scoreboard(payload, dest_json)
+    if dest_json.resolve() == OUT_JSON.resolve():
+        from . import factor_mine_rules as fmr
+        fmr.publish_rule_pages(payload)
     starts = {
         "generated_at": payload.get("generated_at"),
         "rows": [

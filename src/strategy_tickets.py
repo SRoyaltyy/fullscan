@@ -21,6 +21,10 @@ factor-mine sleeves may still scan the KEEP aisle
 Live Elite Overview Price is stamped on every buy/sell row after
 09:30 (`elite_live_px`). Soft-fail every source so
 publish_live_boards still writes a strip — except the clock assert.
+
+``data/day_board/<date>_strategy_tickets.json`` is the send-time
+record. Once that session's 09:30 ET has arrived, a later run does
+not replace it. Undated live copies may still refresh.
 """
 from __future__ import annotations
 
@@ -1097,17 +1101,51 @@ def build(date: str) -> dict:
     return payload
 
 
-def write(date: str, payload: dict | None = None) -> list[Path]:
+def tickets_open_cutoff(date: str) -> datetime:
+    """This session's 09:30 ET. A later write is an evening rewrite."""
+    year, month, day = (int(part) for part in str(date).split("-"))
+    return datetime(year, month, day, 9, 30, tzinfo=ET)
+
+
+def dated_tickets_locked(date: str, now: datetime | None = None) -> bool:
+    """True once this session's 09:30 ET has arrived.
+
+    The dated file is the send-time record. Runs after the open may
+    refresh the undated live copies. They may not replace
+    ``data/day_board/<date>_strategy_tickets.json``.
+    """
+    clock = now or datetime.now(ET)
+    if clock.tzinfo is None:
+        clock = clock.replace(tzinfo=ET)
+    else:
+        clock = clock.astimezone(ET)
+    return clock >= tickets_open_cutoff(date)
+
+
+def write(date: str, payload: dict | None = None, now: datetime | None = None) -> list[Path]:
     payload = payload or build(date)
     assert_session_look(payload, date)
     text = json.dumps(payload, indent=2)
+    dated = DAY / f"{date}_strategy_tickets.json"
+    skip_dated = False
+    if dated.is_file() and dated_tickets_locked(date, now):
+        have = dated.read_text(encoding="utf-8")
+        if have != text:
+            skip_dated = True
+            print(
+                f"[strategy-tickets] REFUSE rewrite {dated.name} "
+                f"after {date} 09:30 ET",
+                flush=True,
+            )
     paths = [
         DAY / "strategy_tickets.json",
-        DAY / f"{date}_strategy_tickets.json",
+        dated,
         FM_DIR / "strategy_tickets.json",
         DASH_FM / "strategy_tickets.json",
         DASH_FM / "today_strategies.json",
     ]
+    if skip_dated:
+        paths = [p for p in paths if p != dated]
     wrote = []
     for p in paths:
         p.parent.mkdir(parents=True, exist_ok=True)
