@@ -1,6 +1,6 @@
 {
   "date": "2026-09-25",
-  "generated_at": "2026-09-25T04:53:40.375893-04:00",
+  "generated_at": "2026-09-25T05:01:49.208040-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -177,7 +177,7 @@
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 5,
+      "n_req_ok": 7,
       "n_req": 20,
       "n_opt_ok": 3,
       "n_opt": 3,
@@ -282,22 +282,27 @@
           "name": "Morning refresh JSON",
           "path": "01_daily/map_heat/2026-09-25_research.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "cards=142",
+          "size": 401762,
+          "said": "morning_refresh \u00b7 142 cards \u00b7 refreshed 0 \u00b7 passthrough \u00b7 HEAT=128 SPLIT=8 OVERRIDE=6 \u00b7 err coverage:0/25<required:20",
+          "bullets": [
+            "Morning delta refresh failed captain-evidence QC (coverage:0/25<required:20). Using last night's post-close captain cards so the book still has heat. Overnight tape/news was not re-scored."
+          ]
         },
         {
           "key": "research_md",
           "name": "Morning refresh MD",
           "path": "01_daily/map_heat/2026-09-25_research.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 44670,
+          "said": "MAP HEAT RESEARCH \u2014 2026-09-25",
+          "bullets": [
+            "142 captain cards \u00b7 size_gate=True set by pre-open refresh",
+            "CAPTAIN CARDS"
+          ]
         },
         {
           "key": "actions",
@@ -1499,6 +1504,31 @@
         }
       ],
       "preview": "keys: date, generated_at, sectors"
+    },
+    {
+      "key": "map_heat_research",
+      "title": "Map heat morning delta refresh",
+      "date": "2026-09-25",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-25T05:01:47.620359-04:00",
+      "files": [
+        {
+          "path": "01_daily/map_heat/2026-09-25_research.json",
+          "ok": true,
+          "reason": "",
+          "size": 44670,
+          "preview": "keys: date, phase, passthrough, source_baseline_generated_at, generated_at, n_targets, n_cards, n_refreshed, evidence_errors, morning_refresh_errors, cards, size_gate"
+        },
+        {
+          "path": "01_daily/map_heat/2026-09-25_research.md",
+          "ok": true,
+          "reason": "",
+          "size": 44670,
+          "preview": "# MAP HEAT RESEARCH \u2014 2026-09-25\n142 captain cards \u00b7 size_gate=True set by pre-open refresh"
+        }
+      ],
+      "preview": "keys: date, phase, passthrough, source_baseline_generated_at, generated_at, n_targets, n_cards, n_refreshed, evidence_errors, morning_refresh_errors, cards, size_gate \u00b7 # MAP HEAT RESEARCH \u2014 2026-09-25\n142 captain cards \u00b7 size_gate=True set by pre-open refresh"
     }
   ],
   "href": {
