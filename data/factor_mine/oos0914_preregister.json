@@ -1,0 +1,64 @@
+{
+  "track": "OOS-0914",
+  "designed_after": "2026-09-14",
+  "knowable_before": "2026-09-14T09:30:00-04:00",
+  "train_sessions": {"start": "2026-08-13", "end": "2026-09-11"},
+  "price_history_end": "2026-09-11",
+  "cutoff": "2026-09-14",
+  "max_candidates": 50,
+  "note": "Committed before any train score. Mining must not open a file whose name date is on or after cutoff, and must not read a price store whose last bar is on or after cutoff.",
+  "book": {
+    "capital": 10000,
+    "whole_shares": true,
+    "fees": "futubull",
+    "same_bar": "stop_first",
+    "fills": "buy at the 09:30 open; stop fills at the stop or at the open on a gap (stop before take on the same bar); a finished hold sells at the next session open; the close is the mark",
+    "sell": "time",
+    "size": "leftover",
+    "side": "long",
+    "universe": "union",
+    "top_n": 4,
+    "hard_red": false
+  },
+  "selection": {
+    "rank": ["after_fees_return_desc", "start_day_win_rate_desc", "name_asc"],
+    "max_freeze": 5,
+    "name_prefix": "oos0914_",
+    "pass": {
+      "after_fees_return_gt": 0,
+      "start_day_win_rate_gt": 0,
+      "without_best_stock_return_gt": 0,
+      "beat_random4_mean": true,
+      "beat_iwm": true
+    },
+    "start_day_win_rate": "Share of train sessions S where compounding after-fee equity from S through the last train session is strictly up. A flat session is not a win.",
+    "without_best_stock": "Rerun on the same train sessions with the ticker of highest attributed P&L removed. That rerun's after-fee return must be above zero. Ties break toward the earlier ticker symbol.",
+    "random4": {
+      "n": 4,
+      "draws": 1000,
+      "seed": 20260813,
+      "hold": 1,
+      "universe": "that morning's frozen snapshot rows",
+      "fees_train": "futubull"
+    },
+    "iwm": {"mode": "buy_and_hold", "fees_train": "futubull"},
+    "test_baseline_fees": "futubull_plus_flat_15bp",
+    "flat_bp_round_trip": 15
+  },
+  "grid": {
+    "holds": [1, 2],
+    "stop_pcts": [null, 0.08]
+  },
+  "bases": [
+    {"id": "lg_hot", "require": {"last_green": true}, "forbid": {"alarm": true}, "rank": "hot_score"},
+    {"id": "rsi_os", "require": {"rsi_os": true}, "forbid": {}, "rank": "rsi"},
+    {"id": "rvol_lg", "require": {"last_green": true, "rvol_min": 1.5}, "forbid": {"alarm": true}, "rank": "hot_score"},
+    {"id": "ret5_up", "require": {"ret_5_min": 0}, "forbid": {"alarm": true}, "rank": "ret_5"},
+    {"id": "pullback", "require": {"last_green": true, "ret_5_max": -3}, "forbid": {"alarm": true}, "rank": "hot_score"},
+    {"id": "break10", "require": {"break_10": true}, "forbid": {"alarm": true}, "rank": "hot_score"},
+    {"id": "macd_x", "require": {"macd_cross_up": true}, "forbid": {}, "rank": "macd_hist"},
+    {"id": "flow_lg", "require": {"flow_in": true, "last_green": true}, "forbid": {"alarm": true}, "rank": "hot_score"},
+    {"id": "yday_white", "require": {"yday_up": true, "cam_bad_max": 0}, "forbid": {"alarm": true}, "rank": "cond"},
+    {"id": "zero_candle", "require": {"zero_red": true, "last_green": true}, "forbid": {"alarm": true}, "rank": "candle_score"}
+  ]
+}

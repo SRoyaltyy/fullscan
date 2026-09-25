@@ -1,0 +1,1021 @@
+"""Out-of-sample strategy mine OOS-0914.
+
+Train uses only sessions 2026-08-13..2026-09-11 and a price store whose
+last bar is on or before 2026-09-11. A file named on or after 2026-09-14
+is not opened. Chosen rules are frozen as ``oos0914_*`` and then walked
+one locked session at a time by ``factor_mine_sequential``.
+
+Research only. This module does not send orders and does not rewrite
+HOT4, holdup, flatten_robust, or the live factor-mine books.
+"""
+from __future__ import annotations
+
+import json
+import random
+from pathlib import Path
+
+from . import factor_mine as fm
+from . import factor_mine_freeze as fmf
+from . import factor_mine_rules as fmr
+from . import factor_mine_retro as retro
+from . import factor_mine_sequential as seq
+
+ROOT = fm.ROOT
+PREREG_PATH = ROOT / "data" / "factor_mine" / "oos0914_preregister.json"
+OUT_DIR = ROOT / "data" / "factor_mine" / "oos0914"
+TRAIN_REPORT = OUT_DIR / "train_report.json"
+FROZEN_PATH = OUT_DIR / "frozen_rules.json"
+TEST_REPORT = OUT_DIR / "test_report.json"
+STATE_ROOT = OUT_DIR / "state"
+LEDGER_DIR = OUT_DIR / "ledgers"
+SCOREBOARD = ROOT / "03_scoreboard" / "FACTOR_MINE_OOS0914.md"
+LIVE_OHLC = ROOT / "data" / "prices" / "ohlc.parquet"
+LIVE_META = ROOT / "data" / "prices" / "meta.json"
+RETRO_OHLC = retro.RETRO_STORE
+RETRO_META = retro.RETRO_META
+SNAP_DIR = fmf.SNAP_DIR
+
+CUTOFF = "2026-09-14"
+TRAIN_START = "2026-08-13"
+TRAIN_END = "2026-09-11"
+TEST_START = "2026-09-14"
+DESIGNED_AFTER = "2026-09-14"
+FLAT_RT = 0.0015
+
+
+class FutureLeak(RuntimeError):
+    """A train read tried to touch a bar or file on or after the cutoff."""
+
+
+def file_date(path: Path) -> str | None:
+    stem = path.stem[:10]
+    if len(stem) == 10 and stem[4] == "-" and stem[7] == "-":
+        return stem
+    return None
+
+
+def load_preregister(path: Path | None = None) -> dict:
+    src = Path(path or PREREG_PATH)
+    return json.loads(src.read_text(encoding="utf-8"))
+
+
+def expand_candidates(doc: dict | None = None) -> list[dict]:
+    """The preregistered grid. Order is bases, then holds, then stops."""
+    doc = doc if doc is not None else load_preregister()
+    grid = doc.get("grid") or {}
+    book = doc.get("book") or {}
+    holds = [int(h) for h in (grid.get("holds") or [])]
+    stops = list(grid.get("stop_pcts") or [])
+    cap = int(doc.get("max_candidates") or 50)
+    out = []
+    for base in doc.get("bases") or []:
+        bid = str(base.get("id") or "")
+        for hold in holds:
+            for stop in stops:
+                tag = "sx" if stop is None else f"s{int(round(100 * float(stop)))}"
+                out.append({
+                    "id": f"{bid}_h{hold}_{tag}",
+                    "universe": book.get("universe") or "union",
+                    "hold": hold,
+                    "side": book.get("side") or "long",
+                    "top_n": int(book.get("top_n") or 4),
+                    "require": dict(base.get("require") or {}),
+                    "forbid": dict(base.get("forbid") or {}),
+                    "rank": base.get("rank"),
+                    "exit_when": {},
+                    "size": book.get("size") or "leftover",
+                    "sell": book.get("sell") or "time",
+                    "s_boost": "none",
+                    "day_cap": 1.0,
+                    "take_pct": None,
+                    "stop_pct": None if stop is None else float(stop),
+                })
+    if len(out) > cap:
+        raise RuntimeError(f"preregister expands to {len(out)} candidates; cap is {cap}")
+    return out
+
+
+def study_recipes(doc: dict | None = None) -> list[dict]:
+    recipes = []
+    for cand in expand_candidates(doc):
+        recipes.append(fm.make_recipe(
+            cand["id"],
+            universe=cand["universe"],
+            hold=cand["hold"],
+            side=cand["side"],
+            top_n=cand["top_n"],
+            require=cand["require"],
+            forbid=cand["forbid"],
+            rank=cand["rank"],
+            exit_when=cand["exit_when"],
+            size=cand["size"],
+            sell=cand["sell"],
+            take_pct=cand["take_pct"],
+            stop_pct=cand["stop_pct"],
+            note="OOS-0914 study id; not a frozen rule",
+        ))
+    return recipes
+
+
+def _read_text(path: Path) -> str:
+    return path.read_text(encoding="utf-8")
+
+
+def load_snapshot_dir(folder: Path, *, start: str, end: str,
+                      cutoff: str = CUTOFF, read_text=None) -> dict[str, dict]:
+    """Open snapshot files inside ``[start, end]`` only.
+
+    A filename on or after ``cutoff``, or outside the window, is not opened.
+    """
+    reader = read_text or _read_text
+    folder = Path(folder)
+    found: dict[str, dict] = {}
+    if not folder.is_dir():
+        return found
+    for path in sorted(folder.glob("*.json")):
+        date = file_date(path)
+        if not date:
+            continue
+        if date >= cutoff or date < start or date > end:
+            continue
+        doc = json.loads(reader(path))
+        if str(doc.get("date") or date)[:10] >= cutoff:
+            raise FutureLeak(f"{path.name} body is dated on or after {cutoff}")
+        found[date] = doc
+    return found
+
+
+def snapshot_rows(doc: dict, date: str) -> list[dict]:
+    """09:30 rows for one day. ``e_pol`` is stamped so the walk does not rescan."""
+    rows = []
+    for row in doc.get("rows") or []:
+        if str(row.get("date") or date)[:10] != date:
+            continue
+        item = dict(row)
+        item["date"] = date
+        if "e_pol" not in item:
+            item["e_pol"] = False
+        rows.append(item)
+    return rows
+
+
+def _meta_end(meta_path: Path) -> str:
+    if not meta_path.is_file():
+        return ""
+    try:
+        doc = json.loads(meta_path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return ""
+    return str(doc.get("last_date") or doc.get("end") or "")[:10]
+
+
+def load_session_bars(path: Path, dates: list[str], tickers: set[str], *,
+                      max_date: str, allow_test: bool = False) -> dict:
+    """OHLC for ``dates`` only.
+
+    Train (``allow_test`` false) refuses a store whose meta ends on or
+    after the cutoff, and refuses any loaded bar on or after the cutoff.
+    Sibling files whose names are dated on or after the cutoff are not opened.
+    """
+    path = Path(path)
+    want = [str(d)[:10] for d in dates]
+    if not allow_test:
+        if max_date >= CUTOFF or any(d >= CUTOFF for d in want):
+            raise FutureLeak(
+                f"train bars cannot include {max_date}; cutoff is {CUTOFF}"
+            )
+        ended = _meta_end(path.parent / "meta.json")
+        if ended and ended >= CUTOFF:
+            raise FutureLeak(
+                f"{path} meta ends {ended}; train will not open it"
+            )
+    for sib in path.parent.iterdir() if path.parent.is_dir() else []:
+        sib_date = file_date(sib)
+        if sib_date and sib_date >= CUTOFF and sib != path:
+            continue
+    if not path.is_file():
+        return {}
+    import pandas as pd
+
+    frame = pd.read_parquet(
+        path, columns=["date", "ticker", "open", "high", "low", "close"],
+    )
+    frame["date"] = pd.to_datetime(frame["date"]).dt.strftime("%Y-%m-%d")
+    frame["ticker"] = frame["ticker"].astype(str).str.upper()
+    if not allow_test:
+        leaked = frame["date"] >= CUTOFF
+        if bool(leaked.any()):
+            raise FutureLeak(f"{path.name} contains bars on or after {CUTOFF}")
+    keep_dates = {d for d in want if d <= max_date and (allow_test or d < CUTOFF)}
+    names = {str(t).upper() for t in tickers if t}
+    day = frame[frame["date"].isin(keep_dates) & frame["ticker"].isin(names)]
+    bars: dict = {}
+    for rec in day.itertuples(index=False):
+        ticker = str(getattr(rec, "ticker", "") or "").upper()
+        stamp = str(getattr(rec, "date", ""))[:10]
+        if not ticker or not stamp or stamp > max_date:
+            continue
+        if not allow_test and stamp >= CUTOFF:
+            raise FutureLeak(stamp)
+        bars[(ticker, stamp)] = {
+            "open": getattr(rec, "open", None),
+            "high": getattr(rec, "high", None),
+            "low": getattr(rec, "low", None),
+            "close": getattr(rec, "close", None),
+        }
+    return bars
+
+
+def _pct(value) -> str:
+    if value is None:
+        return "n/a"
+    return f"{float(value):+.2f}%"
+
+
+def _rate(value) -> str:
+    if value is None:
+        return "n/a"
+    return f"{100.0 * float(value):.1f}%"
+
+
+def compound_return(records: list[dict]) -> float | None:
+    return seq.compound(records)
+
+
+def start_day_win_rate(records: list[dict]) -> float | None:
+    """Fraction of start sessions whose remaining after-fee path is up."""
+    means = []
+    for row in records:
+        mean = row.get("mean")
+        if mean is None:
+            means.append(0.0)
+        else:
+            means.append(float(mean))
+    if not means:
+        return None
+    wins = 0
+    for i in range(len(means)):
+        acc = 1.0
+        for mean in means[i:]:
+            acc *= 1.0 + mean / 100.0
+        if acc > 1.0:
+            wins += 1
+    return round(wins / len(means), 4)
+
+
+def attributed_pnl(records: list[dict]) -> dict[str, float]:
+    pnl: dict[str, float] = {}
+    for row in records:
+        for fill in row.get("fills") or []:
+            if fill.get("pnl") is None or not fill.get("ticker"):
+                continue
+            ticker = str(fill["ticker"]).upper()
+            pnl[ticker] = pnl.get(ticker, 0.0) + float(fill["pnl"])
+    if records:
+        pos = ((records[-1].get("state") or {}).get("pos") or {})
+        for ticker, lot in pos.items():
+            if not isinstance(lot, dict):
+                continue
+            try:
+                shares = float(lot.get("shares") or 0)
+                mark = lot.get("close_px")
+                if mark is None:
+                    mark = lot.get("last_px")
+                cost = float(lot.get("cost") or 0)
+                if mark is None:
+                    continue
+                extra = shares * float(mark) - cost
+            except (TypeError, ValueError):
+                continue
+            name = str(ticker).upper()
+            pnl[name] = pnl.get(name, 0.0) + extra
+    return pnl
+
+
+def best_ticker(records: list[dict]) -> str | None:
+    pnl = attributed_pnl(records)
+    if not pnl:
+        return None
+    ranked = sorted(pnl.items(), key=lambda item: (-item[1], item[0]))
+    return ranked[0][0]
+
+
+def _walk(dates, recipes, rows_for, bars, *, root: Path | None,
+          persist: bool, exclude: str | None = None,
+          fees=None) -> dict[str, list]:
+    history: dict[str, list] = {}
+    store = dict(bars)
+
+    def bars_for(date: str):
+        return {
+            key: bar for key, bar in store.items()
+            if str(key[1])[:10] == date
+        }
+
+    seq.walk(
+        list(dates), recipes, rows_for=rows_for, bars_for=bars_for,
+        root=root, persist=persist, fees=fees if fees is not None else fm.pt_fees(),
+        regime={}, exclude=exclude, history=history,
+    )
+    return history
+
+
+def _passes(row: dict, random_mean: float, iwm_ret: float) -> bool:
+    ret = row.get("after_fees_return")
+    start = row.get("start_day_win_rate")
+    dropped = row.get("without_best_stock_return")
+    if ret is None or start is None or dropped is None:
+        return False
+    if float(ret) <= 0 or float(start) <= 0 or float(dropped) <= 0:
+        return False
+    if float(ret) <= float(random_mean) or float(ret) <= float(iwm_ret):
+        return False
+    return True
+
+
+def _score_named(dates, recipes, snaps, bars) -> dict[str, list]:
+    by_date = snaps
+
+    def rows_for(date: str):
+        return snapshot_rows(by_date.get(date) or {}, date)
+
+    return _walk(dates, recipes, rows_for, bars, root=None, persist=False)
+
+
+def score_random4(dates, snaps, bars, *, flat_15bp: bool = False) -> dict:
+    """1000 draws, seed 20260813, four names from that morning's rows."""
+    pools = {}
+    for date in dates:
+        pools[date] = sorted({
+            str(r.get("ticker") or "").upper()
+            for r in snapshot_rows(snaps.get(date) or {}, date)
+            if r.get("ticker")
+        })
+    rec = retro.random4_recipe()
+    fees = fm.pt_fees()
+    rets = []
+    for i in range(retro.RANDOM4_DRAWS):
+        picks = retro.random4_draw(pools, i)
+        panel = retro.panel_from_picks(list(dates), picks)
+        scored = retro.score_panel(
+            panel, rec, bars, flat_15bp=flat_15bp, fees=fees, regime={},
+        )
+        rets.append(float(scored.get("total_ret_pct") or 0.0))
+    rets_sorted = sorted(rets)
+    n = len(expand_candidates())
+    # Expected best of N looks at the N/(N+1) quantile of the null.
+    null = retro.linear_percentile(rets, 100.0 * n / (n + 1))
+    return {
+        "draws": retro.RANDOM4_DRAWS,
+        "seed": retro.RANDOM4_SEED,
+        "n": retro.RANDOM4_N,
+        "mean": retro._mean3(rets),
+        "p5": retro.linear_percentile(rets, 5),
+        "p50": retro.linear_percentile(rets, 50),
+        "p95": retro.linear_percentile(rets, 95),
+        "best_of_n_null": null,
+        "n_candidates": n,
+        "min": round(rets_sorted[0], 3) if rets_sorted else None,
+        "max": round(rets_sorted[-1], 3) if rets_sorted else None,
+        "fee": "flat_15bp" if flat_15bp else "futubull",
+    }
+
+
+def score_iwm(dates, bars, *, flat_15bp: bool = False) -> dict:
+    rec = retro.iwm_recipe()
+    picks = {d: ["IWM"] for d in dates}
+    panel = retro.panel_from_picks(list(dates), picks)
+    scored = retro.score_panel(
+        panel, rec, bars, flat_15bp=flat_15bp, fees=fm.pt_fees(), regime={},
+    )
+    return {
+        "after_fees_return": scored.get("total_ret_pct"),
+        "final_equity": scored.get("final_equity"),
+        "fee": "flat_15bp" if flat_15bp else "futubull",
+    }
+
+
+def _with_extra_fee(fn):
+    """Run ``fn`` while each order also pays 7.5 bp (15 bp round trip)."""
+    from . import paper_trade as pt
+    orig = pt.order_fees
+
+    def wrapped(shares, price, side, fees):
+        base = orig(shares, price, side, fees)
+        extra = 0.0
+        if shares and price and shares > 0 and price > 0:
+            extra = round(float(shares) * float(price) * (FLAT_RT / 2.0), 4)
+        return round(float(base) + extra, 4)
+
+    pt.order_fees = wrapped
+    try:
+        return fn()
+    finally:
+        pt.order_fees = orig
+
+
+def mine() -> dict:
+    """Score the preregistered family on the train window only."""
+    doc = load_preregister()
+    if str(doc.get("cutoff") or "") != CUTOFF:
+        raise FutureLeak("preregister cutoff is not 2026-09-14")
+    recipes = study_recipes(doc)
+    dates = [
+        d for d in sorted(load_snapshot_dir(
+            SNAP_DIR, start=TRAIN_START, end=TRAIN_END,
+        ))
+    ]
+    snaps = load_snapshot_dir(SNAP_DIR, start=TRAIN_START, end=TRAIN_END)
+    tickers = {"IWM"}
+    for date, snap in snaps.items():
+        for row in snapshot_rows(snap, date):
+            if row.get("ticker"):
+                tickers.add(str(row["ticker"]).upper())
+    bars = load_session_bars(
+        LIVE_OHLC, dates, tickers, max_date=TRAIN_END, allow_test=False,
+    )
+    print(f"[oos0914] train days={len(dates)} names={len(tickers)} "
+          f"candidates={len(recipes)}", flush=True)
+    history = _score_named(dates, recipes, snaps, bars)
+    random4 = score_random4(dates, snaps, bars, flat_15bp=False)
+    iwm = score_iwm(dates, bars, flat_15bp=False)
+    rows = []
+    for rec in recipes:
+        name = rec["name"]
+        series = history.get(name) or []
+        ret = compound_return(series)
+        start = start_day_win_rate(series)
+        winner = best_ticker(series)
+        without = ret
+        if winner:
+            again = _score_named(
+                dates, [rec], _without(snaps, winner), bars,
+            )
+            without = compound_return(again.get(name) or [])
+        row = {
+            "id": name,
+            "after_fees_return": ret,
+            "start_day_win_rate": start,
+            "best_stock": winner,
+            "without_best_stock_return": without,
+            "hold": rec["hold"],
+            "stop_pct": rec.get("stop_pct"),
+            "rank": rec.get("rank"),
+            "require": rec.get("require") or {},
+            "forbid": rec.get("forbid") or {},
+            "n_days": len(series),
+            "final_equity": None if not series else series[-1].get("equity"),
+        }
+        row["pass"] = _passes(row, random4["mean"], iwm["after_fees_return"])
+        rows.append(row)
+        print(
+            f"[oos0914] {name} ret={ret} start={start} "
+            f"without={without} pass={row['pass']}",
+            flush=True,
+        )
+    passed = [r for r in rows if r["pass"]]
+    passed.sort(key=lambda r: (
+        -(r["after_fees_return"] or -1e9),
+        -(r["start_day_win_rate"] or -1e9),
+        r["id"],
+    ))
+    report = {
+        "track": "OOS-0914",
+        "cutoff": CUTOFF,
+        "train": {"start": TRAIN_START, "end": TRAIN_END, "sessions": dates},
+        "n_candidates": len(rows),
+        "random4": random4,
+        "iwm": iwm,
+        "rows": rows,
+        "passed": [r["id"] for r in passed],
+        "freeze": [r["id"] for r in passed[:5]],
+    }
+    OUT_DIR.mkdir(parents=True, exist_ok=True)
+    TRAIN_REPORT.write_text(json.dumps(report, indent=2), encoding="utf-8")
+    print(f"[oos0914] passed={report['passed']} freeze={report['freeze']}", flush=True)
+    return report
+
+
+def _without(snaps: dict, ticker: str) -> dict:
+    ban = str(ticker).upper()
+    out = {}
+    for date, doc in snaps.items():
+        nxt = dict(doc)
+        nxt["rows"] = [
+            r for r in (doc.get("rows") or [])
+            if str(r.get("ticker") or "").upper() != ban
+        ]
+        out[date] = nxt
+    return out
+
+
+def _frozen_recipe(study: dict) -> dict:
+    rec = fm.make_recipe(
+        f"oos0914_{study['id']}",
+        universe=study.get("universe") or "union",
+        hold=int(study["hold"]),
+        side="long",
+        top_n=int(study.get("top_n") or 4),
+        require=study.get("require") or {},
+        forbid=study.get("forbid") or {},
+        rank=study.get("rank"),
+        size=study.get("size") or "leftover",
+        sell=study.get("sell") or "time",
+        take_pct=study.get("take_pct"),
+        stop_pct=study.get("stop_pct"),
+        note="OOS-0914 frozen rule. designed_after 2026-09-14.",
+    )
+    rec["created_on"] = DESIGNED_AFTER
+    return rec
+
+
+def freeze() -> dict:
+    """Fingerprint the top passers. Does not score the test window."""
+    if not TRAIN_REPORT.is_file():
+        raise SystemExit("train report missing; run mine before freeze")
+    report = json.loads(TRAIN_REPORT.read_text(encoding="utf-8"))
+    chosen = list(report.get("freeze") or [])
+    if not chosen:
+        print("[oos0914] no candidate passed; freezing nothing", flush=True)
+        payload = {"designed_after": DESIGNED_AFTER, "recipes": []}
+        OUT_DIR.mkdir(parents=True, exist_ok=True)
+        FROZEN_PATH.write_text(json.dumps(payload, indent=2), encoding="utf-8")
+        return payload
+    by_id = {r["id"]: r for r in expand_candidates()}
+    recipes = []
+    for name in chosen:
+        study = by_id.get(name)
+        if study is None:
+            raise SystemExit(f"frozen id {name} is not in the preregister")
+        recipes.append(_frozen_recipe(study))
+    fmr.lock_recipe_rules(recipes, write=True, locked_on=DESIGNED_AFTER)
+    payload = {
+        "designed_after": DESIGNED_AFTER,
+        "recipes": recipes,
+        "fingerprints": {
+            rec["name"]: fmr.recipe_fingerprint(rec) for rec in recipes
+        },
+    }
+    FROZEN_PATH.write_text(json.dumps(payload, indent=2), encoding="utf-8")
+    print(f"[oos0914] froze {[r['name'] for r in recipes]}", flush=True)
+    return payload
+
+
+def frozen_recipes() -> list[dict]:
+    if not FROZEN_PATH.is_file():
+        return []
+    doc = json.loads(FROZEN_PATH.read_text(encoding="utf-8"))
+    return list(doc.get("recipes") or [])
+
+
+def test_dates(through: str | None = None) -> list[str]:
+    """Locked sessions from the cutoff through the last closed day."""
+    closed = through or fm.last_closed_session(TEST_START) or TRAIN_END
+    dates = []
+    if not SNAP_DIR.is_dir():
+        return dates
+    for path in sorted(SNAP_DIR.glob("*.json")):
+        date = file_date(path)
+        if not date:
+            continue
+        if date < TEST_START or date > closed:
+            continue
+        dates.append(date)
+    return dates
+
+
+def _bars_for_window(dates: list[str], tickers: set[str], *,
+                     allow_test: bool) -> dict:
+    if not dates:
+        return {}
+    path = RETRO_OHLC if allow_test else LIVE_OHLC
+    return load_session_bars(
+        path, dates, tickers, max_date=dates[-1], allow_test=allow_test,
+    )
+
+
+def _ensure_iwm(dates: list[str], bars: dict, *, allow_test: bool) -> dict:
+    missing = [d for d in dates if ("IWM", d) not in bars]
+    if not missing:
+        return bars
+    if not allow_test:
+        raise FutureLeak(f"IWM missing on train sessions {missing[:6]}")
+    import pandas as pd
+    import yfinance as yf
+
+    end = pd.Timestamp(dates[-1]) + pd.Timedelta(days=1)
+    raw = yf.download(
+        "IWM", start=dates[0], end=str(end.date()),
+        auto_adjust=False, actions=False, progress=False, threads=False,
+    )
+    parsed = retro._iwm_frame(raw)
+    for date in dates:
+        bar = parsed.get(("IWM", date))
+        if bar:
+            bars[("IWM", date)] = bar
+    return bars
+
+
+def write_oos_ledger(date: str, doc: dict, path: Path | None = None) -> Path:
+    """One locked test day. #338 refuses a changed fill; bytes never change."""
+    dest = Path(path or (LEDGER_DIR / f"{date}.json"))
+    payload = dict(doc)
+    payload["date"] = str(date)[:10]
+    raw = fmr._canonical(payload)
+    if dest.is_file():
+        prior = json.loads(dest.read_text(encoding="utf-8"))
+        fmr.assert_ledger_append(prior, payload)
+        if dest.read_bytes() != raw:
+            raise fmr.AppendDrift(
+                f"ledger rewrite {date}: locked day bytes would change"
+            )
+        return dest
+    dest.parent.mkdir(parents=True, exist_ok=True)
+    dest.write_bytes(raw)
+    return dest
+
+
+def _ledger_doc(date: str, recipes: list[dict], root: Path,
+                snap: dict) -> dict:
+    slots = {}
+    for rec in recipes:
+        name = rec["name"]
+        state = seq.read_state(name, date, root) or {}
+        slots[name] = {
+            "buys": state.get("buys") or [],
+            "sells": state.get("sells") or [],
+            "trades": state.get("fills") or [],
+            "equity": state.get("equity"),
+            "mean": state.get("mean"),
+            "cash": state.get("cash"),
+            "fees": state.get("fees"),
+            "holdings": state.get("holdings") or [],
+        }
+    return {
+        "date": date,
+        "asof": "16:00_et_lock",
+        "dropped": list(snap.get("dropped") or []),
+        "recipes": slots,
+    }
+
+
+def _rows_for_factory(snaps: dict):
+    def rows_for(date: str):
+        if date >= CUTOFF and date not in snaps:
+            # Test days are loaded one file at a time by the caller.
+            doc = snaps.get(date)
+            if doc is None:
+                return []
+        return snapshot_rows(snaps.get(date) or {}, date)
+    return rows_for
+
+
+def walk_test(dates: list[str], recipes: list[dict], *,
+              root: Path | None = None) -> None:
+    """Sequential lock. Existing state files are not recomputed."""
+    root = Path(root or STATE_ROOT)
+    if not recipes or not dates:
+        return
+    # Load each snapshot by its own name. Later filenames are not opened
+    # until their own turn; this call opens only ``dates``.
+    snaps = {}
+    tickers = set()
+    for date in dates:
+        doc = (load_snapshot_dir(
+            SNAP_DIR, start=date, end=date, cutoff="9999-99-99",
+        ).get(date) or {})
+        snaps[date] = doc
+        for row in snapshot_rows(doc, date):
+            if row.get("ticker"):
+                tickers.add(str(row["ticker"]).upper())
+    bars = _bars_for_window(dates, tickers, allow_test=True)
+    fees = fm.pt_fees()
+
+    def rows_for(date: str):
+        return snapshot_rows(snaps.get(date) or {}, date)
+
+    _walk(dates, recipes, rows_for, bars, root=root, persist=True, fees=fees)
+    for date in dates:
+        write_oos_ledger(date, _ledger_doc(date, recipes, root, snaps.get(date) or {}))
+
+
+def _chain(name: str, dates: list[str], root: Path) -> list[dict]:
+    return seq.chain_records(name, dates, root)
+
+
+def _drop_best_test(name: str, dates: list[str], rec: dict, root: Path) -> dict:
+    series = _chain(name, dates, root)
+    winner = best_ticker(series)
+    if not winner:
+        return {"best_stock": None, "after_fees_return": compound_return(series)}
+    snaps = load_snapshot_dir(
+        SNAP_DIR, start=dates[0], end=dates[-1], cutoff="9999-99-99",
+    )
+    tickers = {winner}
+    for date, doc in snaps.items():
+        for row in snapshot_rows(doc, date):
+            if row.get("ticker"):
+                tickers.add(str(row["ticker"]).upper())
+    bars = _bars_for_window(dates, tickers, allow_test=True)
+    alt = _score_named(dates, [rec], _without(snaps, winner), bars)
+    return {
+        "best_stock": winner,
+        "after_fees_return": compound_return(alt.get(name) or []),
+    }
+
+
+def _baselines(dates: list[str]) -> dict:
+    snaps = load_snapshot_dir(
+        SNAP_DIR, start=dates[0], end=dates[-1], cutoff="9999-99-99",
+    )
+    tickers = {"IWM"}
+    for date, doc in snaps.items():
+        for row in snapshot_rows(doc, date):
+            if row.get("ticker"):
+                tickers.add(str(row["ticker"]).upper())
+    bars = _bars_for_window(dates, tickers, allow_test=True)
+    bars = _ensure_iwm(dates, bars, allow_test=True)
+
+    def both(kind: str):
+        if kind == "random4":
+            futu = score_random4(dates, snaps, bars, flat_15bp=False)
+            plus = _with_extra_fee(lambda: score_random4(dates, snaps, bars, flat_15bp=False))
+            # The extra-fee monkeypatch wraps order_fees, so score_random4's
+            # flat_15bp flag stays off and Futubull is charged underneath.
+            return {"futubull": futu, "futubull_plus_15bp": plus}
+        futu = score_iwm(dates, bars, flat_15bp=False)
+        plus = _with_extra_fee(lambda: score_iwm(dates, bars, flat_15bp=False))
+        return {"futubull": futu, "futubull_plus_15bp": plus}
+
+    return {"random4": both("random4"), "iwm": both("iwm")}
+
+
+def render_scoreboard(train: dict, test: dict | None) -> str:
+    """Plain language first, then the tables."""
+    lines = ["# Factor Mine OOS-0914", ""]
+    frozen = list((test or {}).get("rules") or [])
+    if not frozen:
+        lines.append(
+            "No candidate passed the train filter. "
+            f"The family was {train.get('n_candidates')} rules, written down "
+            "before the mine. A rule had to make money after Futubull fees, "
+            "have a positive start-day win rate, stay positive after its best "
+            "stock was removed, and beat both the average of 1,000 random "
+            "four-name books and an IWM buy-and-hold on the train window "
+            f"({TRAIN_START} through {TRAIN_END}). None did. Nothing was frozen, "
+            "and the test window was not scored."
+        )
+    else:
+        base = (test or {}).get("baselines") or {}
+        r4 = ((base.get("random4") or {}).get("futubull_plus_15bp") or {}).get("mean")
+        iwm = ((base.get("iwm") or {}).get("futubull_plus_15bp") or {}).get("after_fees_return")
+        n_days = len((test or {}).get("sessions") or [])
+        span = ""
+        sessions = (test or {}).get("sessions") or []
+        if sessions:
+            span = f"{sessions[0]} through {sessions[-1]}"
+        bits = []
+        for rule in frozen:
+            bits.append(
+                f"`{rule['name']}` made {_pct(rule.get('after_fees_return'))} "
+                f"on the {n_days} locked test sessions ({span}) after fees, "
+                f"versus random picks {_pct(r4)} and IWM {_pct(iwm)}. "
+                f"Without its best stock ({rule.get('best_stock') or 'none'}) "
+                f"that test window was {_pct(rule.get('without_best_stock_return'))}."
+            )
+        lines.append(" ".join(bits))
+    lines += ["", "## Train", ""]
+    r4t = train.get("random4") or {}
+    iwmt = train.get("iwm") or {}
+    lines.append(
+        f"Train sessions: {TRAIN_START} through {TRAIN_END} "
+        f"({len((train.get('train') or {}).get('sessions') or [])} days). "
+        f"RANDOM4 mean {_pct(r4t.get('mean'))} "
+        f"(seed {r4t.get('seed')}, {r4t.get('draws')} draws). "
+        f"IWM buy-and-hold {_pct(iwmt.get('after_fees_return'))}. "
+        f"Best-of-{r4t.get('n_candidates')} null {_pct(r4t.get('best_of_n_null'))} "
+        "(the random-book percentile a search of this size should expect to win)."
+    )
+    lines += [
+        "",
+        "| rule | after fees | start-day win rate | best stock | without best stock | pass |",
+        "| --- | ---: | ---: | --- | ---: | --- |",
+    ]
+    for row in train.get("rows") or []:
+        lines.append(
+            f"| `{row['id']}` | {_pct(row.get('after_fees_return'))} | "
+            f"{_rate(row.get('start_day_win_rate'))} | {row.get('best_stock') or ''} | "
+            f"{_pct(row.get('without_best_stock_return'))} | "
+            f"{'yes' if row.get('pass') else 'no'} |"
+        )
+    if not frozen:
+        lines += [
+            "",
+            "## Test",
+            "",
+            "Not scored. No rule was frozen.",
+            "",
+        ]
+        return "\n".join(lines)
+    lines += ["", "## Test days", ""]
+    sessions = (test or {}).get("sessions") or []
+    lines.append(
+        "Each day uses that morning's frozen 09:30 snapshot and the prior "
+        "close (cash, holdings, fees). A missing print is left on the snapshot's "
+        "dropped list. The day still locks. Fills: buy at the open; a stop "
+        "fills at the level, or at the open if the open gaps through it; "
+        "if the same bar also hits a take-profit, the stop fills first."
+    )
+    lines.append("")
+    for rule in frozen:
+        lines += [
+            f"### `{rule['name']}`",
+            "",
+            "| date | buys | sells | fees | cash | equity | day |",
+            "| --- | --- | --- | ---: | ---: | ---: | ---: |",
+        ]
+        for day in rule.get("days") or []:
+            buys = ",".join(_tick(x) for x in (day.get("buys") or [])) or "—"
+            sells = ",".join(_tick(x) for x in (day.get("sells") or [])) or "—"
+            lines.append(
+                f"| {day.get('date')} | {buys} | {sells} | "
+                f"{day.get('fees')} | {day.get('cash')} | {day.get('equity')} | "
+                f"{_pct(day.get('mean'))} |"
+            )
+        lines.append("")
+    base = (test or {}).get("baselines") or {}
+    lines += [
+        "## Baselines",
+        "",
+        "Same test sessions. RANDOM4 is 1,000 draws of four names from that "
+        "morning's snapshot, seed 20260813. IWM is buy-and-hold. "
+        "The plus-15bp column is the Futubull schedule plus 7.5 bp per side.",
+        "",
+        "| baseline | Futubull | Futubull + 15 bp |",
+        "| --- | ---: | ---: |",
+        f"| RANDOM4 mean | {_pct(((base.get('random4') or {}).get('futubull') or {}).get('mean'))} | "
+        f"{_pct(((base.get('random4') or {}).get('futubull_plus_15bp') or {}).get('mean'))} |",
+        f"| IWM buy-and-hold | {_pct(((base.get('iwm') or {}).get('futubull') or {}).get('after_fees_return'))} | "
+        f"{_pct(((base.get('iwm') or {}).get('futubull_plus_15bp') or {}).get('after_fees_return'))} |",
+        "",
+        "## Luck check",
+        "",
+        f"On the train window the best-of-{r4t.get('n_candidates')} null "
+        f"(RANDOM4) is {_pct(r4t.get('best_of_n_null'))}. "
+        f"RANDOM4 itself averaged {_pct(r4t.get('mean'))} "
+        f"(5th–95th {_pct(r4t.get('p5'))} to {_pct(r4t.get('p95'))}). "
+        "A frozen rule had to clear the RANDOM4 mean and IWM, and stay "
+        "positive with its best stock removed, before it was named.",
+        "",
+    ]
+    return "\n".join(lines)
+
+
+def _tick(item) -> str:
+    if isinstance(item, dict):
+        return str(item.get("ticker") or "")
+    return str(item or "")
+
+
+def score() -> dict:
+    """Walk frozen rules on locked test days. No rules means no test walk."""
+    if not TRAIN_REPORT.is_file():
+        raise SystemExit("train report missing; run mine first")
+    train = json.loads(TRAIN_REPORT.read_text(encoding="utf-8"))
+    recipes = frozen_recipes()
+    if not recipes:
+        text = render_scoreboard(train, None)
+        SCOREBOARD.write_text(text, encoding="utf-8")
+        print("[oos0914] nothing frozen; test not scored", flush=True)
+        return {"rules": []}
+    dates = test_dates()
+    walk_test(dates, recipes)
+    rules = []
+    for rec in recipes:
+        series = _chain(rec["name"], dates, STATE_ROOT)
+        dropped = _drop_best_test(rec["name"], dates, rec, STATE_ROOT)
+        rules.append({
+            "name": rec["name"],
+            "after_fees_return": compound_return(series),
+            "start_day_win_rate": start_day_win_rate(series),
+            "best_stock": dropped.get("best_stock"),
+            "without_best_stock_return": dropped.get("after_fees_return"),
+            "days": [
+                {
+                    "date": row.get("date"),
+                    "buys": row.get("buys") or [],
+                    "sells": row.get("sells") or [],
+                    "fees": row.get("fees"),
+                    "cash": row.get("cash"),
+                    "equity": row.get("equity"),
+                    "mean": row.get("mean"),
+                }
+                for row in series
+            ],
+        })
+    baselines = _baselines(dates)
+    test = {"sessions": dates, "rules": rules, "baselines": baselines}
+    OUT_DIR.mkdir(parents=True, exist_ok=True)
+    TEST_REPORT.write_text(json.dumps(test, indent=2), encoding="utf-8")
+    SCOREBOARD.write_text(render_scoreboard(train, test), encoding="utf-8")
+    for rule in rules:
+        print(
+            f"[oos0914] test {rule['name']} {rule['after_fees_return']}",
+            flush=True,
+        )
+    return test
+
+
+def append_nightly(*, through: str = "", write: bool = False) -> dict:
+    """After the factor-mine land, append the next OOS day if it is locked.
+
+    A day already on disk is not rewritten. No frozen rule means nothing
+    to append. Live HOT4 / holdup state is a different directory.
+    """
+    recipes = frozen_recipes()
+    if not recipes:
+        print("[oos0914] nightly: nothing frozen", flush=True)
+        return {"appended": None}
+    closed = str(through or "")[:10]
+    if len(closed) != 10:
+        closed = fm.last_closed_session(TEST_START) or ""
+    dates = test_dates(closed)
+    if not dates:
+        print("[oos0914] nightly: no locked test session", flush=True)
+        return {"appended": None}
+    have = [
+        d for d in dates
+        if seq.read_state(recipes[0]["name"], d, STATE_ROOT) is not None
+    ]
+    missing = [d for d in dates if d not in have]
+    if not missing:
+        print(f"[oos0914] nightly: through {dates[-1]} already locked", flush=True)
+        return {"appended": None}
+    # One new day. Earlier missing days are a gap; fill only the next one.
+    nxt = missing[0]
+    if not write:
+        print(f"[oos0914] nightly: would append {nxt}", flush=True)
+        return {"appended": None, "pending": nxt}
+    # The calendar includes earlier locked days so day N reads day N-1.
+    # Those state files already match and are not rewritten.
+    walk_test([d for d in dates if d <= nxt], recipes)
+    if TEST_REPORT.is_file() and TRAIN_REPORT.is_file():
+        # Refresh the prose from the locked files. Day files stay put.
+        train = json.loads(TRAIN_REPORT.read_text(encoding="utf-8"))
+        prior = json.loads(TEST_REPORT.read_text(encoding="utf-8"))
+        # Recompute the summary from state rather than trusting the old prose.
+        dates = test_dates(closed)
+        rules = []
+        for rec in recipes:
+            series = _chain(rec["name"], dates, STATE_ROOT)
+            dropped = _drop_best_test(rec["name"], dates, rec, STATE_ROOT)
+            rules.append({
+                "name": rec["name"],
+                "after_fees_return": compound_return(series),
+                "start_day_win_rate": start_day_win_rate(series),
+                "best_stock": dropped.get("best_stock"),
+                "without_best_stock_return": dropped.get("after_fees_return"),
+                "days": [
+                    {
+                        "date": row.get("date"),
+                        "buys": row.get("buys") or [],
+                        "sells": row.get("sells") or [],
+                        "fees": row.get("fees"),
+                        "cash": row.get("cash"),
+                        "equity": row.get("equity"),
+                        "mean": row.get("mean"),
+                    }
+                    for row in series
+                ],
+            })
+        test = {
+            "sessions": dates,
+            "rules": rules,
+            "baselines": prior.get("baselines") or {},
+        }
+        TEST_REPORT.write_text(json.dumps(test, indent=2), encoding="utf-8")
+        SCOREBOARD.write_text(render_scoreboard(train, test), encoding="utf-8")
+    print(f"[oos0914] nightly: appended {nxt}", flush=True)
+    return {"appended": nxt}
+
+
+def main(argv=None) -> int:
+    import argparse
+    parser = argparse.ArgumentParser(description="OOS-0914 strategy mine")
+    parser.add_argument("cmd", choices=("mine", "freeze", "score", "append"))
+    parser.add_argument("--through", default="")
+    parser.add_argument("--write", action="store_true")
+    args = parser.parse_args(argv)
+    if args.cmd == "mine":
+        mine()
+    elif args.cmd == "freeze":
+        freeze()
+    elif args.cmd == "score":
+        score()
+    else:
+        append_nightly(through=args.through, write=args.write or True)
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

@@ -4614,6 +4614,13 @@ def main(argv=None) -> int:
             to_date=args.to_date or None,
             restate=list(args.restate or []),
         )
+        # Research track only. Appends the next OOS-0914 day after this
+        # land. It does not rewrite HOT4, holdup, or flatten_robust.
+        from . import factor_mine_oos0914 as oos0914
+        oos0914.append_nightly(
+            through=str((payload or {}).get("to_date") or args.to_date or "")[:10],
+            write=bool(args.write),
+        )
     else:
         recipes = fmb.recipes_from_action(
             universe=args.universe, hold=args.hold, gate=args.gate,
