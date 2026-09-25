@@ -474,8 +474,13 @@ def check_stock_book_all(date: str) -> bool:
     # Full universe is megabytes. A header-only stub must not skip rebuild.
     if not _exists_gt(ranked, 5_000):
         return _log(False, "stock_book_all", date, "join ranked missing")
+    peer = ROOT / "data" / "peers" / f"{date}_peer_rs.csv"
+    # Same floor as the ranker. A missing or header-only file must not
+    # skip the book — yesterday's RS must not stand in for today.
+    if not _exists_gt(peer, 5_000):
+        return _log(False, "stock_book_all", date, "peer_rs.csv missing")
     return _log(True, "stock_book_all", date,
-                "book + green + weather + join + AB")
+                "book + green + weather + join + AB + peer_rs")
 
 
 def check_ab_checklist(date: str) -> bool:

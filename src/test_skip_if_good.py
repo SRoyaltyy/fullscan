@@ -494,6 +494,64 @@ def test_preopen_pass_prior_not_forced_is_noop() -> None:
             assert skip_if_good.check_preopen_pass(date, force=True) is False
 
 
+def test_stock_book_requires_todays_peer_rs() -> None:
+    """Yesterday's peer_rs.csv must not let today's book skip."""
+    date = "2026-09-25"
+    with tempfile.TemporaryDirectory() as tmp:
+        root = Path(tmp)
+        book = root / "data" / "stock_book"
+        book.mkdir(parents=True)
+        (book / f"{date}_stock_book.json").write_text("x" * 300, encoding="utf-8")
+        (book / f"{date}_green.json").write_text("x" * 80, encoding="utf-8")
+        join = root / "data" / "join"
+        join.mkdir(parents=True)
+        (join / f"{date}_ranked.csv").write_text("x" * 6_000, encoding="utf-8")
+        peers = root / "data" / "peers"
+        peers.mkdir(parents=True)
+        (peers / "2026-09-24_peer_rs.csv").write_text("x" * 6_000, encoding="utf-8")
+        with mock.patch.object(skip_if_good, "ROOT", root), \
+                mock.patch.object(skip_if_good, "book_files_are_degraded", return_value=False), \
+                mock.patch.object(skip_if_good, "book_missing_same_day_essays", return_value=False), \
+                mock.patch.object(skip_if_good, "book_1d_has_dead_relvol", return_value=False), \
+                mock.patch.object(skip_if_good, "book_1d_breaks_all_green", return_value=False), \
+                mock.patch.object(skip_if_good, "check_label_weather", return_value=True), \
+                mock.patch.object(skip_if_good, "check_ab_checklist", return_value=True):
+            assert skip_if_good.check_stock_book_all(date) is False
+            thin = peers / f"{date}_peer_rs.csv"
+            thin.write_text("Ticker\n", encoding="utf-8")
+            assert skip_if_good.check_stock_book_all(date) is False
+            thin.write_text("x" * 6_000, encoding="utf-8")
+            assert skip_if_good.check_stock_book_all(date) is True
+
+
+def test_peer_rs_refuses_older_export_relabel() -> None:
+    from src import peer_rs
+    date = "2026-09-25"
+    with tempfile.TemporaryDirectory() as tmp:
+        exports = Path(tmp)
+        older = exports / "finviz_2026-09-24.csv"
+        older.write_text("Ticker\nAAA\n", encoding="utf-8")
+        with mock.patch.object(peer_rs, "EXPORT_DIR", exports):
+            try:
+                peer_rs._resolve_export(date)
+            except SystemExit as exc:
+                text = str(exc)
+            else:
+                raise AssertionError("older export must not be relabeled as today")
+            assert "FAIL" in text
+            assert date in text
+            assert "relabel" in text
+            assert "finviz_2026-09-24.csv" in text
+            exact = exports / f"finviz_{date}.csv"
+            exact.write_text("Ticker\nBBB\n", encoding="utf-8")
+            got_date, got_path = peer_rs._resolve_export(date)
+            assert got_date == date
+            assert got_path == exact
+            labeled, path = peer_rs._resolve_export(None)
+            assert labeled == date
+            assert path == exact
+
+
 def test_preopen_pass_no_prior_runs() -> None:
     date = "2026-09-25"
     with tempfile.TemporaryDirectory() as tmp:
@@ -533,5 +591,7 @@ if __name__ == "__main__":
     test_postclose_all_cli_yields_to_sidecar_only_for_all_workflow()
     test_degraded_book_is_not_good()
     test_preopen_pass_prior_not_forced_is_noop()
+    test_stock_book_requires_todays_peer_rs()
+    test_peer_rs_refuses_older_export_relabel()
     test_preopen_pass_no_prior_runs()
     print("ok")
