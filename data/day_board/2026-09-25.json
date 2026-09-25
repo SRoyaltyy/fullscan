@@ -1,12 +1,12 @@
 {
   "date": "2026-09-25",
-  "generated_at": "2026-09-25T06:10:29.300324-04:00",
+  "generated_at": "2026-09-25T06:12:06.161306-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
   "counts": {
-    "ok": 5,
-    "partial": 2,
+    "ok": 7,
+    "partial": 0,
     "fail": 1,
     "n": 8
   },
@@ -710,11 +710,11 @@
       "key": "stock_book",
       "name": "Stock Book ALL",
       "yaml": "stock_book_all.yml",
-      "status": "PARTIAL",
+      "status": "OK",
       "inputs_ready": true,
-      "n_req_ok": 1,
+      "n_req_ok": 4,
       "n_req": 4,
-      "n_opt_ok": 1,
+      "n_opt_ok": 3,
       "n_opt": 3,
       "files": [
         {
@@ -840,21 +840,23 @@
           "name": "Peer RS CSV",
           "path": "data/peers/2026-09-25_peer_rs.csv",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "rows=5098",
+          "size": 817957,
+          "said": "495 rows",
+          "bullets": [
+            "A, AA, AACG, AAL, AAME, AAMI, AAOI, AAON"
+          ]
         },
         {
           "key": "book_json",
           "name": "Stock book JSON",
           "path": "data/stock_book/2026-09-25_stock_book.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "horizons=5 names=220",
+          "size": 1566667,
+          "said": "1d BUY OMER, VCYT, SONO, OLLI, ELF, CCC, CNK, REGN \u00b7 SELL ARE, AESI, KGS, ACDC, BXMT, UUUU \u00b7 0.5167999999999999",
           "bullets": []
         },
         {
@@ -862,21 +864,24 @@
           "name": "Stock book MD",
           "path": "01_daily/2026-09-25_stock_book.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 90635,
+          "said": "Stock book \u2014 2026-09-25",
+          "bullets": [
+            "_Generated 2026-09-25T06:10:44.715993-04:00_",
+            "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
+          ]
         },
         {
           "key": "green",
           "name": "Green-pile JSON",
           "path": "data/stock_book/2026-09-25_green.json",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "",
+          "size": 2250,
+          "said": "138 green \u00b7 NTCT, SONO, GDYN, YMM, EXLS, TDC, NTNX, LSCC, TRMB, SPSC",
           "bullets": []
         },
         {
@@ -898,10 +903,10 @@
           "name": "Dashboard HTML",
           "path": "dashboard/index.html",
           "role": "optional",
-          "status": "FAIL",
-          "reason": "session 2026-09-25 not in dashboard dates (last=2026-09-24)",
+          "status": "OK",
+          "reason": "live-book poller + today.json (2026-09-25)",
           "size": 8633235,
-          "said": "session 2026-09-25 not in dashboard dates (last=2026-09-24)",
+          "said": "live-book poller + today.json (2026-09-25)",
           "bullets": []
         }
       ],
@@ -914,9 +919,9 @@
       "key": "publish",
       "name": "Dashboard / .io",
       "yaml": "deploy-dashboard.yml",
-      "status": "PARTIAL",
-      "inputs_ready": false,
-      "n_req_ok": 1,
+      "status": "OK",
+      "inputs_ready": true,
+      "n_req_ok": 2,
       "n_req": 2,
       "n_opt_ok": 0,
       "n_opt": 1,
@@ -926,10 +931,10 @@
           "name": "Stock book JSON",
           "path": "data/stock_book/2026-09-25_stock_book.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "horizons=5 names=220",
+          "size": 1566667,
+          "said": "1d BUY OMER, VCYT, SONO, OLLI, ELF, CCC, CNK, REGN \u00b7 SELL ARE, AESI, KGS, ACDC, BXMT, UUUU \u00b7 0.5167999999999999",
           "bullets": []
         },
         {
@@ -937,10 +942,10 @@
           "name": "Dashboard HTML (repo)",
           "path": "dashboard/index.html",
           "role": "required",
-          "status": "FAIL",
-          "reason": "session 2026-09-25 not in dashboard dates (last=2026-09-24)",
+          "status": "OK",
+          "reason": "live-book poller + today.json (2026-09-25)",
           "size": 8633235,
-          "said": "session 2026-09-25 not in dashboard dates (last=2026-09-24)",
+          "said": "live-book poller + today.json (2026-09-25)",
           "bullets": []
         },
         {
@@ -976,8 +981,130 @@
   "news_mode": "on",
   "news_mode_reason": "",
   "selections": {
-    "buy_1d": [],
-    "sell_1d": [],
+    "buy_1d": [
+      {
+        "ticker": "OMER",
+        "score": 0.7847211159260632
+      },
+      {
+        "ticker": "VCYT",
+        "score": 0.7777581375779099
+      },
+      {
+        "ticker": "SONO",
+        "score": 0.7640985284444071
+      },
+      {
+        "ticker": "OLLI",
+        "score": 0.7241525448590912
+      },
+      {
+        "ticker": "ELF",
+        "score": 0.763646058597208
+      },
+      {
+        "ticker": "CCC",
+        "score": 0.6541536393354281
+      },
+      {
+        "ticker": "CNK",
+        "score": 0.6831512700464306
+      },
+      {
+        "ticker": "REGN",
+        "score": 0.25750996085965333
+      },
+      {
+        "ticker": "PDFS",
+        "score": 0.6738574602843217
+      },
+      {
+        "ticker": "FIVN",
+        "score": 0.6605482803251586
+      },
+      {
+        "ticker": "MRVI",
+        "score": 0.6793243705498433
+      },
+      {
+        "ticker": "TAL",
+        "score": 0.6572899960927052
+      },
+      {
+        "ticker": "PRCH",
+        "score": 0.6453439583455642
+      },
+      {
+        "ticker": "COCO",
+        "score": 0.6509060201736245
+      },
+      {
+        "ticker": "STGW",
+        "score": 0.6071299570893032
+      }
+    ],
+    "sell_1d": [
+      {
+        "ticker": "ARE",
+        "score": -0.6519570347509209
+      },
+      {
+        "ticker": "AESI",
+        "score": -0.5522023994858832
+      },
+      {
+        "ticker": "KGS",
+        "score": -0.4852138692418286
+      },
+      {
+        "ticker": "ACDC",
+        "score": -0.4834840189635238
+      },
+      {
+        "ticker": "BXMT",
+        "score": -0.46474348679158134
+      },
+      {
+        "ticker": "UUUU",
+        "score": -0.44235067799527505
+      },
+      {
+        "ticker": "REAX",
+        "score": -0.43568214767380015
+      },
+      {
+        "ticker": "HP",
+        "score": -0.4072764428458334
+      },
+      {
+        "ticker": "BBY",
+        "score": -0.40301580050904895
+      },
+      {
+        "ticker": "PUMP",
+        "score": -0.4023781603090172
+      },
+      {
+        "ticker": "KREF",
+        "score": -0.38695474357023174
+      },
+      {
+        "ticker": "HE",
+        "score": -0.3803146909356479
+      },
+      {
+        "ticker": "BTU",
+        "score": -0.3667594942774611
+      },
+      {
+        "ticker": "URG",
+        "score": -0.36507630350611864
+      },
+      {
+        "ticker": "NOG",
+        "score": -0.36319626590046594
+      }
+    ],
     "flatten": {},
     "general": {
       "said": "UP  2.706",
@@ -1908,6 +2035,59 @@
         }
       ],
       "preview": "5898 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 FORM, DOCU, NTCT, NVDA, NICE"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-09-25",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-25T06:12:05.451731-04:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-09-25_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1566667,
+          "preview": "1d BUY OMER, VCYT, SONO, OLLI, ELF, CCC, CNK, REGN \u00b7 SELL ARE, AESI, KGS, ACDC, BXMT, UUUU, REAX, HP"
+        },
+        {
+          "path": "data/stock_book/2026-09-25_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 2250,
+          "preview": "green 138 \u00b7 NTCT, SONO, GDYN, YMM, EXLS, TDC, NTNX, LSCC, TRMB, SPSC"
+        },
+        {
+          "path": "data/stock_book/2026-09-25_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2474,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-09-25_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 13809,
+          "preview": "2026-09-25 BUY OMER, VCYT, SONO, OLLI, ELF, CCC, CNK, REGN \u00b7 SELL ARE, AESI, KGS, ACDC, BXMT, UUUU, REAX, HP"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 13809,
+          "preview": "2026-09-25 BUY OMER, VCYT, SONO, OLLI, ELF, CCC, CNK, REGN \u00b7 SELL ARE, AESI, KGS, ACDC, BXMT, UUUU, REAX, HP"
+        },
+        {
+          "path": "01_daily/2026-09-25_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 91800,
+          "preview": "# Stock book \u2014 2026-09-25\n_Generated 2026-09-25T06:10:44.715993-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY OMER, VCYT, SONO, OLLI, ELF, CCC, CNK, REGN \u00b7 SELL ARE, AESI, KGS, ACDC, BXMT, UUUU, REAX, HP \u00b7 green 138 \u00b7 NTCT, SONO, GDYN, YMM, EXLS, TDC, NTNX, LSCC, TRMB, SPSC \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-09-25 BUY OMER, VCYT, SONO, OLLI, ELF, CCC, CNK, REGN \u00b7 SELL ARE, AESI, KGS, ACDC, BXMT, UUUU, REAX, HP \u00b7 2026-09-25 BUY OMER, VCYT, SONO, OLLI, ELF, CCC, CNK, REGN \u00b7 SELL ARE, AESI, KGS, ACDC, BXMT, UUUU, REAX, HP \u00b7 # Stock book \u2014 2026-09-25\n_Generated 2026-09-25T06:10:44.715993-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "href": {

@@ -1,16 +1,138 @@
 {
   "date": "2026-09-25",
-  "generated_at": "2026-09-25T06:10:29.300324-04:00",
+  "generated_at": "2026-09-25T06:12:06.161306-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
-    "ok": 5,
-    "partial": 2,
+    "ok": 7,
+    "partial": 0,
     "fail": 1,
     "n": 8
   },
-  "buy_1d": [],
-  "sell_1d": [],
+  "buy_1d": [
+    {
+      "ticker": "OMER",
+      "score": 0.7847211159260632
+    },
+    {
+      "ticker": "VCYT",
+      "score": 0.7777581375779099
+    },
+    {
+      "ticker": "SONO",
+      "score": 0.7640985284444071
+    },
+    {
+      "ticker": "OLLI",
+      "score": 0.7241525448590912
+    },
+    {
+      "ticker": "ELF",
+      "score": 0.763646058597208
+    },
+    {
+      "ticker": "CCC",
+      "score": 0.6541536393354281
+    },
+    {
+      "ticker": "CNK",
+      "score": 0.6831512700464306
+    },
+    {
+      "ticker": "REGN",
+      "score": 0.25750996085965333
+    },
+    {
+      "ticker": "PDFS",
+      "score": 0.6738574602843217
+    },
+    {
+      "ticker": "FIVN",
+      "score": 0.6605482803251586
+    },
+    {
+      "ticker": "MRVI",
+      "score": 0.6793243705498433
+    },
+    {
+      "ticker": "TAL",
+      "score": 0.6572899960927052
+    },
+    {
+      "ticker": "PRCH",
+      "score": 0.6453439583455642
+    },
+    {
+      "ticker": "COCO",
+      "score": 0.6509060201736245
+    },
+    {
+      "ticker": "STGW",
+      "score": 0.6071299570893032
+    }
+  ],
+  "sell_1d": [
+    {
+      "ticker": "ARE",
+      "score": -0.6519570347509209
+    },
+    {
+      "ticker": "AESI",
+      "score": -0.5522023994858832
+    },
+    {
+      "ticker": "KGS",
+      "score": -0.4852138692418286
+    },
+    {
+      "ticker": "ACDC",
+      "score": -0.4834840189635238
+    },
+    {
+      "ticker": "BXMT",
+      "score": -0.46474348679158134
+    },
+    {
+      "ticker": "UUUU",
+      "score": -0.44235067799527505
+    },
+    {
+      "ticker": "REAX",
+      "score": -0.43568214767380015
+    },
+    {
+      "ticker": "HP",
+      "score": -0.4072764428458334
+    },
+    {
+      "ticker": "BBY",
+      "score": -0.40301580050904895
+    },
+    {
+      "ticker": "PUMP",
+      "score": -0.4023781603090172
+    },
+    {
+      "ticker": "KREF",
+      "score": -0.38695474357023174
+    },
+    {
+      "ticker": "HE",
+      "score": -0.3803146909356479
+    },
+    {
+      "ticker": "BTU",
+      "score": -0.3667594942774611
+    },
+    {
+      "ticker": "URG",
+      "score": -0.36507630350611864
+    },
+    {
+      "ticker": "NOG",
+      "score": -0.36319626590046594
+    }
+  ],
   "flatten": {},
   "general": {
     "said": "UP  2.706",
@@ -41,31 +163,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "map_heat_baseline",
-      "title": "Map heat night baseline",
-      "date": "2026-09-25",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-25T05:37:04.269761-04:00",
-      "files": [
-        {
-          "path": "01_daily/map_heat/2026-09-25_research_baseline.json",
-          "ok": true,
-          "reason": "",
-          "size": 382752,
-          "preview": "keys: date, source_heat_date, phase, generated_at, n_targets, n_cards, coverage, validation_errors, source_calendar_results, source_market_reaction_pct, cards, size_gate"
-        },
-        {
-          "path": "01_daily/map_heat/2026-09-25_research_baseline.md",
-          "ok": true,
-          "reason": "",
-          "size": 44468,
-          "preview": "# MAP HEAT RESEARCH \u2014 2026-09-25\n142 captain cards \u00b7 size_gate=False set by pre-open refresh"
-        }
-      ],
-      "preview": "keys: date, source_heat_date, phase, generated_at, n_targets, n_cards, coverage, validation_errors, source_calendar_results, source_market_reaction_pct, cards, size_gate \u00b7 # MAP HEAT RESEARCH \u2014 2026-09-25\n142 captain cards \u00b7 size_gate=False set by pre-open refresh"
-    },
     {
       "key": "weather",
       "title": "Weather / regime",
@@ -261,6 +358,59 @@
         }
       ],
       "preview": "5898 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 FORM, DOCU, NTCT, NVDA, NICE"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-09-25",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-25T06:12:05.451731-04:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-09-25_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1566667,
+          "preview": "1d BUY OMER, VCYT, SONO, OLLI, ELF, CCC, CNK, REGN \u00b7 SELL ARE, AESI, KGS, ACDC, BXMT, UUUU, REAX, HP"
+        },
+        {
+          "path": "data/stock_book/2026-09-25_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 2250,
+          "preview": "green 138 \u00b7 NTCT, SONO, GDYN, YMM, EXLS, TDC, NTNX, LSCC, TRMB, SPSC"
+        },
+        {
+          "path": "data/stock_book/2026-09-25_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2474,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-09-25_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 13809,
+          "preview": "2026-09-25 BUY OMER, VCYT, SONO, OLLI, ELF, CCC, CNK, REGN \u00b7 SELL ARE, AESI, KGS, ACDC, BXMT, UUUU, REAX, HP"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 13809,
+          "preview": "2026-09-25 BUY OMER, VCYT, SONO, OLLI, ELF, CCC, CNK, REGN \u00b7 SELL ARE, AESI, KGS, ACDC, BXMT, UUUU, REAX, HP"
+        },
+        {
+          "path": "01_daily/2026-09-25_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 91800,
+          "preview": "# Stock book \u2014 2026-09-25\n_Generated 2026-09-25T06:10:44.715993-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY OMER, VCYT, SONO, OLLI, ELF, CCC, CNK, REGN \u00b7 SELL ARE, AESI, KGS, ACDC, BXMT, UUUU, REAX, HP \u00b7 green 138 \u00b7 NTCT, SONO, GDYN, YMM, EXLS, TDC, NTNX, LSCC, TRMB, SPSC \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-09-25 BUY OMER, VCYT, SONO, OLLI, ELF, CCC, CNK, REGN \u00b7 SELL ARE, AESI, KGS, ACDC, BXMT, UUUU, REAX, HP \u00b7 2026-09-25 BUY OMER, VCYT, SONO, OLLI, ELF, CCC, CNK, REGN \u00b7 SELL ARE, AESI, KGS, ACDC, BXMT, UUUU, REAX, HP \u00b7 # Stock book \u2014 2026-09-25\n_Generated 2026-09-25T06:10:44.715993-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
