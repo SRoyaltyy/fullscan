@@ -49,9 +49,25 @@ LINEUP_DIR = ROOT / "data" / "factor_mine" / "lineups"
 CANDIDATE_DIR = ROOT / "data" / "factor_mine" / "candidates"
 CREATED_PATH = ROOT / "data" / "factor_mine" / "recipe_created_on.json"
 GUARD_SLOTS = ("snapshots", "ledgers", "lineups", "candidates")
-# Second source may differ by $0.02 or 0.5%, whichever is wider.
-CLOSE_TOL_ABS = 0.02
-CLOSE_TOL_PCT = 0.005
+# One table so the external daily checker uses these exact numbers.
+# Close (Finviz post-close Price, else theme-radar Price): max(0.5%, $0.02).
+# Open (Finviz Open, else Stooq) and Webull paper fills: max(1%, $0.02).
+PRICE_CHECK = {
+    "close": {"pct": 0.005, "abs": 0.02},
+    "open": {"pct": 0.01, "abs": 0.02},
+}
+THEME_RADAR_SNAPSHOT_URL = (
+    "https://raw.githubusercontent.com/SRoyaltyy/theme-radar/"
+    "main/data/snapshots/{date}.csv"
+)
+THEME_RADAR_HASHES_URL = (
+    "https://raw.githubusercontent.com/SRoyaltyy/theme-radar/"
+    "main/data/snapshots/HASHES.json"
+)
+STOOQ_DAILY_URL = "https://stooq.com/q/d/l/?s={ticker}.us&i=d"
+PAPER_OPEN_DIR = ROOT / "data" / "paper_open"
+# Tests point this at a temp dir. None uses the vendor / slim / remote lookup.
+THEME_RADAR_SNAP_DIR: Path | None = None
 # Morning files only. Flatten books and mover buys are prior-night
 # outputs and are not a reason a name is on this list.
 MORNING_SOURCES = (
@@ -360,8 +376,13 @@ def row_price_problem(ticker: str, date: str) -> str | None:
     return None
 
 
-def prices_agree(ours, ref) -> bool:
-    """True when two prints are inside $0.02 or 0.5% of the reference."""
+def prices_agree(ours, ref, field: str = "close") -> bool:
+    """True when ``ours`` is inside the tolerance for ``field``.
+
+    ``field`` is ``close`` or ``open`` (fills use the open tolerance).
+    The limit is the wider of the percent band and the dollar floor in
+    ``PRICE_CHECK``. A binary remainder on a round cent still agrees.
+    """
     if ours is None or ref is None:
         return False
     try:
@@ -370,8 +391,8 @@ def prices_agree(ours, ref) -> bool:
         return False
     if not math.isfinite(a) or not math.isfinite(b):
         return False
-    limit = max(CLOSE_TOL_ABS, CLOSE_TOL_PCT * abs(b))
-    # Prices are cent prints. A binary 0.02 is slightly over 0.02.
+    spec = PRICE_CHECK["open" if field == "open" else "close"]
+    limit = max(float(spec["abs"]), float(spec["pct"]) * abs(b))
     return abs(a - b) <= limit + 1e-8
 
 
@@ -412,95 +433,287 @@ def export_is_postclose(session: str) -> bool:
     return close <= when < nxt_open
 
 
-def prior_session(date: str) -> str | None:
-    from . import gainer_capture as gc
+def finviz_export_has_open(date: str) -> bool:
+    """True when the dated Elite export's header includes the Open column.
 
-    return gc.prior_session(gc.lookback_calendar(None), str(date or "")[:10])
-
-
-def finviz_close_reference(ticker: str, prior: str | None,
-                           decision: str) -> dict:
-    """Second source for ``prior``'s close.
-
-    Post-close ``finviz_{prior}.csv`` Price (and Open/High/Low when the
-    file was scraped at or after 16:00 ET). Otherwise the next session
-    export's Prev Close. Same-file Price from a morning scrape is not
-    the close, and a later file's Price is not this session's close.
+    The custom view (``v=151``) already asks for Open, High, Low, and
+    Prev Close. A post-close file's Open is that session's 09:30 print.
     """
-    t = str(ticker or "").strip().upper()
-    p = str(prior or "")[:10]
-    d = str(decision or "")[:10]
-    empty = {"source": None, "asof": None, "fields": {}}
-    if not t or not p:
+    day = str(date or "")[:10]
+    path = tl.EXPORT_DIR / f"finviz_{day}.csv"
+    try:
+        header = path.read_text(encoding="utf-8", errors="replace").splitlines()[0]
+    except (OSError, IndexError):
+        return False
+    cols = [c.strip().strip('"') for c in header.split(",")]
+    return "Open" in cols
+
+
+def _dated_snapshot_name(date: str) -> str | None:
+    day = str(date or "")[:10]
+    if len(day) != 10 or not day[0].isdigit():
+        return None
+    name = f"{day}.csv"
+    if name == "current.csv":
+        return None
+    return name
+
+
+def _theme_radar_roots() -> list[Path]:
+    roots = []
+    env = os.environ.get("THEME_RADAR_ROOT", "").strip()
+    if env:
+        base = Path(env)
+        snap = base / "data" / "snapshots"
+        roots.append(snap if snap.is_dir() else base)
+    roots.append(ROOT / "vendor" / "theme-radar" / "data" / "snapshots")
+    roots.append(ROOT / "data" / "theme_radar_snapshots")
+    return roots
+
+
+def _theme_radar_bytes(date: str) -> bytes | None:
+    """Dated snapshot bytes. ``current.csv`` is never a close source."""
+    name = _dated_snapshot_name(date)
+    if not name:
+        return None
+    roots = [Path(THEME_RADAR_SNAP_DIR)] if THEME_RADAR_SNAP_DIR is not None else _theme_radar_roots()
+    for root in roots:
+        path = root / name
+        if path.is_file() and path.name != "current.csv":
+            try:
+                return path.read_bytes()
+            except OSError:
+                return None
+    if THEME_RADAR_SNAP_DIR is not None:
+        return None
+    return _fetch_url(THEME_RADAR_SNAPSHOT_URL.format(date=str(date)[:10]))
+
+
+def _theme_radar_expected_hash(date: str) -> str | None:
+    """sha256 from HASHES.json for the slim dated csv. Empty if unknown."""
+    if THEME_RADAR_SNAP_DIR is not None:
+        return None
+    raw = _fetch_url(THEME_RADAR_HASHES_URL)
+    if not raw:
+        return None
+    try:
+        doc = json.loads(raw.decode("utf-8"))
+    except (UnicodeDecodeError, json.JSONDecodeError):
+        return None
+    files = doc.get("files") if isinstance(doc, dict) else None
+    if not isinstance(files, dict):
+        return None
+    entry = files.get(f"data/snapshots/{str(date)[:10]}.csv") or {}
+    sha = str(entry.get("sha256") or "")
+    return sha or None
+
+
+def parse_theme_radar_prices(text: str) -> dict[str, float]:
+    """Ticker → Price from a theme-radar snapshot. No Open column there."""
+    import csv
+    import io
+
+    out: dict[str, float] = {}
+    reader = csv.DictReader(io.StringIO(text or ""))
+    if not reader.fieldnames or "Ticker" not in reader.fieldnames or "Price" not in reader.fieldnames:
+        return out
+    for row in reader:
+        tick = str(row.get("Ticker") or "").strip().upper()
+        if not tick:
+            continue
+        try:
+            px = float(str(row.get("Price") or "").replace(",", ""))
+        except (TypeError, ValueError):
+            continue
+        if math.isfinite(px):
+            out[tick] = px
+    return out
+
+
+def theme_radar_prices(date: str) -> dict[str, float]:
+    """Close proxy from ``data/snapshots/{D}.csv``. A bad hash is not used."""
+    raw = _theme_radar_bytes(date)
+    if not raw:
+        return {}
+    expect = _theme_radar_expected_hash(date)
+    if expect and sha256_bytes(raw) != expect:
+        return {}
+    return parse_theme_radar_prices(raw.decode("utf-8", errors="replace"))
+
+
+def parse_stooq_bar(text: str, date: str) -> dict:
+    """One daily row from a Stooq CSV. Dates may be YYYY-MM-DD or YYYYMMDD."""
+    import csv
+    import io
+
+    empty = {"open": None, "high": None, "low": None, "close": None}
+    want = str(date or "")[:10]
+    compact = want.replace("-", "")
+    reader = csv.DictReader(io.StringIO(text or ""))
+    if not reader.fieldnames:
         return empty
-    if export_is_postclose(p):
-        bar = tl._finviz_bar(t, p)
-        fields = {}
-        if bar.get("close") is not None:
-            fields["close"] = bar.get("close")
-        for key in ("open", "high", "low"):
-            if bar.get(key) is not None:
-                fields[key] = bar.get(key)
-        if "close" not in fields:
-            return empty
-        return {
-            "source": f"finviz_{p}.csv Price",
-            "asof": "postclose",
-            "fields": fields,
-        }
-    if not d:
-        return empty
-    prev = tl._finviz_bar(t, d).get("prev_close")
-    if prev is None:
-        return empty
+    fields = {name.strip().lower(): name for name in reader.fieldnames if name}
+    for row in reader:
+        stamp = str(row.get(fields.get("date") or "Date") or "").strip()
+        if stamp != want and stamp != compact:
+            continue
+        bar = {}
+        for key in ("open", "high", "low", "close"):
+            raw = row.get(fields.get(key) or key.title())
+            try:
+                val = float(str(raw).replace(",", ""))
+            except (TypeError, ValueError):
+                val = None
+            bar[key] = val if val is not None and math.isfinite(val) else None
+        return bar
+    return empty
+
+
+def _fetch_url(url: str) -> bytes | None:
+    import urllib.request
+
+    try:
+        req = urllib.request.Request(url, headers={"User-Agent": "fullscan-factor-mine"})
+        with urllib.request.urlopen(req, timeout=20) as resp:
+            return resp.read()
+    except Exception:
+        return None
+
+
+def _fetch_stooq(ticker: str) -> str:
+    tick = "".join(ch for ch in str(ticker or "").upper() if ch.isalpha())
+    if not tick:
+        return ""
+    raw = _fetch_url(STOOQ_DAILY_URL.format(ticker=tick.lower()))
+    if not raw:
+        return ""
+    return raw.decode("utf-8", errors="replace")
+
+
+def stooq_bar(ticker: str, date: str) -> dict:
+    """Free daily OHLC. Used when the Elite export has no post-close Open."""
+    return parse_stooq_bar(_fetch_stooq(ticker), date)
+
+
+def paper_fills(date: str) -> dict[str, list[float]]:
+    """Filled Webull paper prints for D. Read-only. Plan prices are not fills."""
+    day = str(date or "")[:10]
+    path = PAPER_OPEN_DIR / f"{day}_status.json"
+    if not path.is_file():
+        alt = PAPER_OPEN_DIR / f"{day}_submit.json"
+        path = alt if alt.is_file() else path
+    if not path.is_file():
+        return {}
+    try:
+        doc = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return {}
+    out: dict[str, list[float]] = {}
+    for row in doc.get("sent") or []:
+        if not isinstance(row, dict):
+            continue
+        status = str(row.get("status") or "").lower()
+        broker = str(row.get("broker_status") or "").upper()
+        if status != "filled" and not broker.startswith("FILLED"):
+            continue
+        px = row.get("avg_fill_px")
+        if px is None or px == "":
+            continue
+        tick = str(row.get("ticker") or "").strip().upper()
+        try:
+            val = float(px)
+        except (TypeError, ValueError):
+            continue
+        if not tick or not math.isfinite(val):
+            continue
+        out.setdefault(tick, []).append(val)
+    return out
+
+
+def _session_print(ticker: str, date: str) -> dict:
+    bar = tl._official_ohlc(ticker, date)
+    return {"open": bar.get("open"), "close": bar.get("close")}
+
+
+def _price_gap(ticker: str, field: str, ours, ref, source: str) -> dict:
     return {
-        "source": f"finviz_{d}.csv Prev Close",
-        "asof": "morning_prev_close",
-        "fields": {"close": prev},
+        "ticker": ticker,
+        "field": field,
+        "ours": ours,
+        "ref": ref,
+        "source": source,
     }
 
 
-def _prior_bar(ticker: str, date: str) -> dict:
-    d = str(date or "")[:10]
-    priors = [b for b in _raw_bars(ticker) if str(b.get("date") or "") < d]
-    return dict(priors[-1]) if priors else {}
+def session_cross_check(date: str, tickers: list[str]) -> list[dict]:
+    """Open and close versus the external sources, then paper fills.
 
-
-def close_cross_check(date: str, tickers: list[str]) -> list[dict]:
-    """Disagreements and missing second sources. Empty means the tape agrees."""
-    prior = prior_session(date)
+    Close order: post-close ``finviz_{D}.csv`` Price, else the dated
+    theme-radar snapshot Price (never ``current.csv``). Open order:
+    that same file's Open column when the export is post-close and the
+    column is present, else the Stooq daily open. A filled Webull paper
+    order is a third check against our 09:30 open.
+    """
+    day = str(date or "")[:10]
+    post = export_is_postclose(day)
+    has_open = finviz_export_has_open(day) if post else False
+    radar: dict[str, float] | None = None
+    stooq: dict[str, dict] = {}
+    fills = paper_fills(day)
     gaps = []
     names = sorted({str(t).strip().upper() for t in tickers if t})
     for t in names:
-        ref = finviz_close_reference(t, prior, date)
-        source = ref.get("source")
-        if not source or ref.get("fields", {}).get("close") is None:
+        ours = _session_print(t, day)
+        close_ref = None
+        close_src = None
+        if post:
+            bar = tl._finviz_bar(t, day)
+            if bar.get("close") is not None:
+                close_ref = bar.get("close")
+                close_src = f"finviz_{day}.csv Price"
+        if close_ref is None:
+            if radar is None:
+                radar = theme_radar_prices(day)
+            if t in radar:
+                close_ref = radar[t]
+                close_src = f"theme-radar snapshots/{day}.csv Price"
+        if close_ref is None:
             gaps.append({
                 "ticker": t,
-                "missing": ["missing finviz prior close"],
-                "prior": prior,
+                "missing": ["missing session close"],
+                "source": close_src or f"theme-radar snapshots/{day}.csv Price",
             })
-            continue
-        bar = _prior_bar(t, date)
-        got = str(bar.get("date") or "")[:10]
-        if prior and got != prior:
+        elif not prices_agree(ours.get("close"), close_ref, "close"):
+            gaps.append(_price_gap(t, "close", ours.get("close"), close_ref, close_src))
+
+        open_ref = None
+        open_src = None
+        if post and has_open:
+            opened = tl._finviz_bar(t, day).get("open")
+            if opened is not None:
+                open_ref = opened
+                open_src = f"finviz_{day}.csv Open"
+        if open_ref is None:
+            if t not in stooq:
+                stooq[t] = stooq_bar(t, day)
+            if stooq[t].get("open") is not None:
+                open_ref = stooq[t]["open"]
+                open_src = f"stooq {t}.us Open"
+        if open_ref is None:
             gaps.append({
                 "ticker": t,
-                "field": "prior_date",
-                "ours": got or None,
-                "finviz": prior,
-                "source": source,
+                "missing": ["missing 09:30 open reference"],
+                "source": open_src or f"stooq {t}.us Open",
             })
-        for field, theirs in (ref.get("fields") or {}).items():
-            ours = bar.get(field)
-            if ours is None or not prices_agree(ours, theirs):
-                gaps.append({
-                    "ticker": t,
-                    "field": field,
-                    "ours": ours,
-                    "finviz": theirs,
-                    "source": source,
-                })
+        elif not prices_agree(ours.get("open"), open_ref, "open"):
+            gaps.append(_price_gap(t, "open", ours.get("open"), open_ref, open_src))
+
+        for px in fills.get(t) or []:
+            if not prices_agree(ours.get("open"), px, "open"):
+                gaps.append(_price_gap(
+                    t, "fill", ours.get("open"), px,
+                    f"webull paper {day}_status.json avg_fill_px",
+                ))
     return gaps
 
 
@@ -595,22 +808,23 @@ def _review_hold(date: str, gaps: list[dict]) -> None:
         else:
             bits.append(
                 f"{gap.get('ticker')} {gap.get('field')} "
-                f"ours={gap.get('ours')} finviz={gap.get('finviz')} "
+                f"ours={gap.get('ours')} ref={gap.get('ref')} "
                 f"({gap.get('source')})"
             )
     raise HoldDay(
         date, tickers,
-        "finviz cross-check: " + "; ".join(bits),
+        "price cross-check: " + "; ".join(bits),
         status="held_review",
         gaps=gaps,
     )
 
 
 def prepare_lock(date: str) -> dict:
-    """Candidate log plus the Finviz close cross-check. No files written."""
+    """Candidate log plus the open/close cross-check. No files written."""
     doc = candidate_provenance(date)
-    gaps = close_cross_check(
-        date, [row["ticker"] for row in doc.get("names") or []])
+    names = [row["ticker"] for row in doc.get("names") or []]
+    traded = list(paper_fills(date))
+    gaps = session_cross_check(date, list(names) + traded)
     if gaps:
         _review_hold(date, gaps)
     return doc

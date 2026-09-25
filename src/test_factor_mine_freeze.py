@@ -987,75 +987,95 @@ def _with_exports(tmp: Path):
     return old
 
 
-def test_finviz_close_cross_check_tolerance_and_scrape_clock() -> None:
-    """Prior close must match a post-close Price or the next Prev Close.
-
-    A morning Price is a last trade. It does not stand in for the close.
-    """
-    prior = "2026-09-24"
-    day = "2026-09-25"
-
-    def bars(ticker):
-        book = {
-            "AAA": {"date": prior, "open": 9.0, "high": 11.0, "low": 8.5, "close": 10.0},
-            "BBB": {"date": prior, "open": 1.0, "high": 1.2, "low": 0.9, "close": 1.0},
-            "CCC": {"date": prior, "open": 100.0, "high": 101.0, "low": 99.0, "close": 100.40},
-            "DDD": {"date": prior, "open": 100.0, "high": 101.0, "low": 99.0, "close": 100.60},
+def _prints(book):
+    def official(ticker, date, bars=None):
+        row = book.get(ticker) or {}
+        return {
+            "open": row.get("open"),
+            "high": row.get("high"),
+            "low": row.get("low"),
+            "close": row.get("close"),
         }
-        row = book.get(ticker)
-        return [row] if row else []
+    return official
 
+
+def test_open_close_cross_check_sources_and_tolerances() -> None:
+    """Post-close Finviz Open and Price, else theme-radar and Stooq.
+
+    Close agrees inside max(0.5%, $0.02). Open agrees inside max(1%, $0.02).
+    A morning Price is not the close. ``current.csv`` is not a source.
+    """
+    assert fmf.PRICE_CHECK["close"] == {"pct": 0.005, "abs": 0.02}
+    assert fmf.PRICE_CHECK["open"] == {"pct": 0.01, "abs": 0.02}
+    day = "2026-09-25"
+    book = {
+        "AAA": {"open": 10.0, "close": 10.0},
+        "BBB": {"open": 1.0, "close": 1.0},
+        "CCC": {"open": 100.0, "close": 100.40},
+        "DDD": {"open": 100.0, "close": 100.60},
+        "FFF": {"open": 10.0, "close": 10.0},
+    }
     with tempfile.TemporaryDirectory() as d:
         root = Path(d)
-        _csv(root / f"finviz_{prior}.csv", [{
-            "Ticker": "AAA", "Open": 9, "High": 11, "Low": 8.5, "Price": 50,
-            "Prev Close": 1,
-        }])
         _csv(root / f"finviz_{day}.csv", [
-            {"Ticker": "AAA", "Open": 10, "High": 12, "Low": 9, "Price": 50,
-             "Prev Close": 10.02},
-            {"Ticker": "BBB", "Open": 1, "High": 1, "Low": 1, "Price": 9,
-             "Prev Close": 1.02},
-            {"Ticker": "CCC", "Open": 1, "High": 1, "Low": 1, "Price": 1,
-             "Prev Close": 100.00},
-            {"Ticker": "DDD", "Open": 1, "High": 1, "Low": 1, "Price": 1,
-             "Prev Close": 100.00},
+            {"Ticker": "AAA", "Open": 10.02, "High": 11, "Low": 9, "Price": 10.02},
+            {"Ticker": "BBB", "Open": 1.02, "High": 1.1, "Low": 0.9, "Price": 1.02},
+            {"Ticker": "CCC", "Open": 100.0, "High": 101, "Low": 99, "Price": 100.00},
+            {"Ticker": "DDD", "Open": 100.0, "High": 101, "Low": 99, "Price": 100.00},
+            {"Ticker": "FFF", "Open": 10.15, "High": 11, "Low": 9, "Price": 10.00},
         ])
+        (root / f"finviz_{day}.scraped_at").write_text(
+            "2026-09-25T16:05:00-04:00\n", encoding="utf-8")
         old_export = _with_exports(root)
+        old_paper = fmf.PAPER_OPEN_DIR
+        fmf.PAPER_OPEN_DIR = root / "no-fills"
         try:
-            with mock.patch.object(fmf, "prior_session", return_value=prior), \
-                    mock.patch.object(fmf, "_raw_bars", side_effect=bars):
-                assert fmf.close_cross_check(day, ["AAA", "BBB", "CCC"]) == []
-                missing = fmf.close_cross_check(day, ["EEE"])
-                gaps = fmf.close_cross_check(day, ["DDD"])
-            assert missing[0]["missing"] == ["missing finviz prior close"]
-            assert missing[0]["ticker"] == "EEE"
-            assert len(gaps) == 1
-            assert gaps[0]["ticker"] == "DDD"
-            assert gaps[0]["field"] == "close"
-            assert gaps[0]["source"] == f"finviz_{day}.csv Prev Close"
-            # Post-close Price is the close. The morning Prev Close is not.
-            (root / f"finviz_{prior}.scraped_at").write_text(
-                "2026-09-24T16:05:00-04:00\n", encoding="utf-8")
+            calls: list[str] = []
+
+            def stooq(ticker, date):
+                calls.append(ticker)
+                return {"open": None, "high": None, "low": None, "close": None}
+
+            def radar(date):
+                calls.append("radar")
+                return {}
+
+            with mock.patch.object(tl, "_official_ohlc", side_effect=_prints(book)), \
+                    mock.patch.object(fmf, "stooq_bar", side_effect=stooq), \
+                    mock.patch.object(fmf, "theme_radar_prices", side_effect=radar):
+                assert fmf.export_is_postclose(day)
+                assert fmf.finviz_export_has_open(day)
+                assert fmf.session_cross_check(day, ["AAA", "BBB", "CCC"]) == []
+                assert calls == []
+                close_gap = fmf.session_cross_check(day, ["DDD"])
+                open_gap = fmf.session_cross_check(day, ["FFF"])
+                missing = fmf.session_cross_check(day, ["EEE"])
+            assert len(close_gap) == 1 and close_gap[0]["field"] == "close"
+            assert close_gap[0]["source"] == f"finviz_{day}.csv Price"
+            assert close_gap[0]["ref"] == 100.0
+            assert len(open_gap) == 1 and open_gap[0]["field"] == "open"
+            assert open_gap[0]["source"] == f"finviz_{day}.csv Open"
+            assert open_gap[0]["ref"] == 10.15
+            assert {item for g in missing for item in g["missing"]} == {
+                "missing session close", "missing 09:30 open reference",
+            }
+            # Morning scrape: Price is not the close. Theme-radar then Stooq.
+            (root / f"finviz_{day}.scraped_at").write_text(
+                "2026-09-25T08:00:00-04:00\n", encoding="utf-8")
             tl._FINVIZ_BARS.clear()
-            _csv(root / f"finviz_{prior}.csv", [{
-                "Ticker": "AAA", "Open": 9.0, "High": 11.0, "Low": 8.5,
-                "Price": 10.0, "Prev Close": 1,
-            }])
-            tl._FINVIZ_BARS.clear()
-            with mock.patch.object(fmf, "prior_session", return_value=prior), \
-                    mock.patch.object(fmf, "_raw_bars", side_effect=bars):
-                assert fmf.export_is_postclose(prior)
-                assert fmf.close_cross_check(day, ["AAA"]) == []
-                # A morning stamp does not promote Price into the close.
-                (root / f"finviz_{prior}.scraped_at").write_text(
-                    "2026-09-24T08:00:00-04:00\n", encoding="utf-8")
-                assert not fmf.export_is_postclose(prior)
-                morning = fmf.finviz_close_reference("AAA", prior, day)
-            assert morning["asof"] == "morning_prev_close"
-            assert morning["fields"] == {"close": 10.02}
-            assert "Price" not in morning["source"] or "Prev Close" in morning["source"]
+            assert not fmf.export_is_postclose(day)
+            with mock.patch.object(tl, "_official_ohlc", side_effect=_prints(book)), \
+                    mock.patch.object(fmf, "theme_radar_prices", return_value={"AAA": 10.0}), \
+                    mock.patch.object(fmf, "stooq_bar", return_value={
+                        "open": 10.0, "high": 11.0, "low": 9.0, "close": 10.0,
+                    }):
+                assert fmf.session_cross_check(day, ["AAA"]) == []
+                with mock.patch.object(fmf, "theme_radar_prices", return_value={"AAA": 12.0}):
+                    held = fmf.session_cross_check(day, ["AAA"])
+            assert any(g.get("field") == "close" and "theme-radar" in g["source"] for g in held)
+            assert all("finviz" not in str(g.get("source")) for g in held if g.get("field") == "close")
         finally:
+            fmf.PAPER_OPEN_DIR = old_paper
             tl.EXPORT_DIR = old_export
             tl._FINVIZ_BARS.clear()
 
@@ -1183,42 +1203,108 @@ def test_candidate_log_uses_morning_files_only() -> None:
             _restore(old)
 
 
-def test_overlapping_postclose_field_is_listed() -> None:
-    prior = "2026-09-24"
+def test_stooq_fills_open_when_the_export_has_no_open_column() -> None:
+    day = "2026-09-25"
+    text = (
+        "Date,Open,High,Low,Close,Volume\n"
+        "20260925,10.10,11,9,10.00,100\n"
+    )
+    assert fmf.parse_stooq_bar(text, day)["open"] == 10.10
+    with tempfile.TemporaryDirectory() as d:
+        root = Path(d)
+        path = root / f"finviz_{day}.csv"
+        path.write_text(
+            "Ticker,Price,Prev Close\nAAA,10.00,9\n", encoding="utf-8")
+        (root / f"finviz_{day}.scraped_at").write_text(
+            "2026-09-25T16:30:00-04:00\n", encoding="utf-8")
+        old_export = _with_exports(root)
+        old_paper = fmf.PAPER_OPEN_DIR
+        fmf.PAPER_OPEN_DIR = root / "empty"
+        try:
+            assert fmf.export_is_postclose(day)
+            assert not fmf.finviz_export_has_open(day)
+            with mock.patch.object(tl, "_official_ohlc", side_effect=_prints({
+                "AAA": {"open": 10.10, "close": 10.0},
+            })), mock.patch.object(fmf, "stooq_bar", return_value={
+                "open": 10.10, "high": 11.0, "low": 9.0, "close": 10.0,
+            }), mock.patch.object(fmf, "theme_radar_prices", side_effect=AssertionError):
+                gaps = fmf.session_cross_check(day, ["AAA"])
+            assert gaps == []
+        finally:
+            fmf.PAPER_OPEN_DIR = old_paper
+            tl.EXPORT_DIR = old_export
+            tl._FINVIZ_BARS.clear()
+
+
+def test_theme_radar_dated_file_rejects_current_and_a_bad_hash() -> None:
+    day = "2026-09-25"
+    body = "Ticker,Price,scrape_ts\nAAA,10.50,2026-09-25 16:30:00\n"
+    parsed = fmf.parse_theme_radar_prices(body)
+    assert parsed == {"AAA": 10.50}
+    with tempfile.TemporaryDirectory() as d:
+        root = Path(d)
+        (root / "current.csv").write_text(
+            "Ticker,Price\nAAA,999\n", encoding="utf-8")
+        (root / f"{day}.csv").write_text(body, encoding="utf-8")
+        old = fmf.THEME_RADAR_SNAP_DIR
+        fmf.THEME_RADAR_SNAP_DIR = root
+        try:
+            assert fmf._dated_snapshot_name("current") is None
+            assert fmf.theme_radar_prices(day) == {"AAA": 10.50}
+            digest = fmf.sha256_bytes(body.encode("utf-8"))
+            with mock.patch.object(fmf, "_theme_radar_expected_hash", return_value="0" * 64):
+                assert fmf.theme_radar_prices(day) == {}
+            with mock.patch.object(fmf, "_theme_radar_expected_hash", return_value=digest):
+                assert fmf.theme_radar_prices(day) == {"AAA": 10.50}
+            (root / f"{day}.csv").unlink()
+            assert fmf.theme_radar_prices(day) == {}
+        finally:
+            fmf.THEME_RADAR_SNAP_DIR = old
+
+
+def test_webull_fill_outside_open_tolerance_holds() -> None:
     day = "2026-09-25"
     with tempfile.TemporaryDirectory() as d:
         root = Path(d)
-        _csv(root / f"finviz_{prior}.csv", [{
-            "Ticker": "AAA", "Open": 9.0, "High": 12.0, "Low": 8.5,
-            "Price": 10.0, "Prev Close": 1,
-        }])
-        (root / f"finviz_{prior}.scraped_at").write_text(
-            "2026-09-24T20:30:00-04:00\n", encoding="utf-8")
         _csv(root / f"finviz_{day}.csv", [{
-            "Ticker": "AAA", "Price": 99, "Prev Close": 1,
+            "Ticker": "AAA", "Open": 10.0, "High": 11, "Low": 9, "Price": 10.5,
         }])
+        (root / f"finviz_{day}.scraped_at").write_text(
+            "2026-09-25T20:10:00-04:00\n", encoding="utf-8")
+        (root / f"{day}_status.json").write_text(json.dumps({
+            "date": day,
+            "sent": [
+                {"ticker": "AAA", "side": "BUY", "status": "filled",
+                 "broker_status": "FILLED", "avg_fill_px": 10.05, "filled_qty": 10},
+                {"ticker": "BBB", "side": "BUY", "status": "working",
+                 "broker_status": "SUBMITTED", "avg_fill_px": None, "filled_qty": 0},
+            ],
+            "card": {"tickets": [{"ticker": "AAA", "status": "plan", "px": 50}]},
+        }), encoding="utf-8")
         old_export = _with_exports(root)
+        old_paper = fmf.PAPER_OPEN_DIR
+        fmf.PAPER_OPEN_DIR = root
         try:
-            with mock.patch.object(fmf, "prior_session", return_value=prior), \
-                    mock.patch.object(fmf, "_raw_bars", return_value=[{
-                        "date": prior, "open": 9.0, "high": 11.0,
-                        "low": 8.5, "close": 10.0,
-                    }]):
-                gaps = fmf.close_cross_check(day, ["AAA"])
-            assert len(gaps) == 1
-            assert gaps[0]["field"] == "high"
-            assert gaps[0]["finviz"] == 12.0
-            assert gaps[0]["source"].endswith("Price")
-            with mock.patch.object(fmf, "candidate_provenance", return_value={
-                "date": day, "n": 1, "prior_export": prior,
+            fills = fmf.paper_fills(day)
+            assert fills == {"AAA": [10.05]}
+            with mock.patch.object(tl, "_official_ohlc", side_effect=_prints({
+                "AAA": {"open": 10.0, "close": 10.5},
+            })), mock.patch.object(fmf, "stooq_bar", side_effect=AssertionError), \
+                    mock.patch.object(fmf, "theme_radar_prices", side_effect=AssertionError):
+                assert fmf.session_cross_check(day, ["AAA"]) == []
+            (root / f"{day}_status.json").write_text(json.dumps({
+                "sent": [{
+                    "ticker": "AAA", "side": "BUY", "status": "filled",
+                    "avg_fill_px": 10.20, "filled_qty": 10,
+                }],
+            }), encoding="utf-8")
+            with mock.patch.object(tl, "_official_ohlc", side_effect=_prints({
+                "AAA": {"open": 10.0, "close": 10.5},
+            })), mock.patch.object(fmf, "candidate_provenance", return_value={
+                "date": day, "n": 1, "names": [{"ticker": "AAA", "sources": []}],
                 "excluded": ["flatten", "mover_buy"],
-                "names": [{"ticker": "AAA", "sources": [
-                    {"source": "liquid_tape", "rank": 1}]}],
-            }), mock.patch.object(fmf, "prior_session", return_value=prior), \
-                    mock.patch.object(fmf, "_raw_bars", return_value=[{
-                        "date": prior, "open": 9.0, "high": 11.0,
-                        "low": 8.5, "close": 10.0,
-                    }]):
+            }), mock.patch.object(fmf, "stooq_bar", side_effect=AssertionError), \
+                    mock.patch.object(fmf, "theme_radar_prices", side_effect=AssertionError):
                 try:
                     fmf.prepare_lock(day)
                     held = False
@@ -1228,9 +1314,12 @@ def test_overlapping_postclose_field_is_listed() -> None:
                     err = e
             assert held and err is not None
             assert err.status == "held_review"
-            assert err.missing == ["AAA"]
-            assert err.gaps[0]["field"] == "high"
+            assert err.gaps[0]["field"] == "fill"
+            assert err.gaps[0]["ref"] == 10.20
+            assert "webull paper" in err.gaps[0]["source"]
+            assert not fmf.snapshot_path(day).exists()
         finally:
+            fmf.PAPER_OPEN_DIR = old_paper
             tl.EXPORT_DIR = old_export
             tl._FINVIZ_BARS.clear()
 
@@ -1260,8 +1349,10 @@ if __name__ == "__main__":
     test_corrupt_frozen_input_fails_the_hash_guard()
     test_lineup_is_append_only_and_prune_keeps_it()
     test_recipe_creation_date_cannot_move()
-    test_finviz_close_cross_check_tolerance_and_scrape_clock()
+    test_open_close_cross_check_sources_and_tolerances()
     test_cross_check_hold_writes_nothing()
     test_candidate_log_uses_morning_files_only()
-    test_overlapping_postclose_field_is_listed()
+    test_stooq_fills_open_when_the_export_has_no_open_column()
+    test_theme_radar_dated_file_rejects_current_and_a_bad_hash()
+    test_webull_fill_outside_open_tolerance_holds()
     print("factor-mine freeze tests passed")
