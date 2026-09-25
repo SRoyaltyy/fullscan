@@ -1606,6 +1606,8 @@ def test_factor_mine_workflow_lands_after_close() -> None:
     assert "data/factor_mine/lineups/" in yml
     assert "data/factor_mine/candidates/" in yml
     assert "data/factor_mine/recipe_created_on.json" in yml
+    assert "data/factor_mine/open_source_log.csv" in yml
+    assert "data/factor_mine/daily_returns.csv" in yml
     assert "data/factor_mine/prices/" in yml
     assert "data/prices/ohlc.parquet" in yml
     assert "data/prices/actions.parquet" in yml

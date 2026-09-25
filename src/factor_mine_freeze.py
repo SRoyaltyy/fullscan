@@ -52,17 +52,25 @@ GUARD_SLOTS = ("snapshots", "ledgers", "lineups", "candidates")
 # One table so the external daily checker uses these exact numbers.
 # Close (Finviz post-close Price, else theme-radar Price): max(0.5%, $0.02).
 # Open and Webull paper fills: max(1%, $0.02).
-# Open source, from SNAPSHOT_OPEN_FROM: theme-radar snapshot Open when the
-# dated file has a value, else post-close Finviz Open, else Stooq.
-# Before that date the open reference is Stooq (08-13..09-24).
+# Open source: theme-radar ``{D}.raw.csv`` Finviz Open when that fetch's
+# scrape_ts is after D 09:30 ET and before the next session's 09:30 ET
+# and the HASHES.json sha256 matches. From SNAPSHOT_OPEN_FROM the slim
+# ``{D}.csv`` Open column is next, under the same guard. A missing or
+# late scrape uses Stooq for that day. ``current.csv`` is never a source.
 PRICE_CHECK = {
     "close": {"pct": 0.005, "abs": 0.02},
     "open": {"pct": 0.01, "abs": 0.02},
 }
 SNAPSHOT_OPEN_FROM = "2026-09-25"
+OPEN_SOURCE_LOG = ROOT / "data" / "factor_mine" / "open_source_log.csv"
+LAST_OPEN_SOURCE: dict[str, dict] = {}
 THEME_RADAR_SNAPSHOT_URL = (
     "https://raw.githubusercontent.com/SRoyaltyy/theme-radar/"
     "main/data/snapshots/{date}.csv"
+)
+THEME_RADAR_RAW_URL = (
+    "https://raw.githubusercontent.com/SRoyaltyy/theme-radar/"
+    "main/data/snapshots/{date}.raw.csv"
 )
 THEME_RADAR_HASHES_URL = (
     "https://raw.githubusercontent.com/SRoyaltyy/theme-radar/"
@@ -578,6 +586,258 @@ def theme_radar_prices(date: str) -> dict[str, dict]:
     return parse_theme_radar_prices(raw.decode("utf-8", errors="replace"))
 
 
+def _dated_raw_name(date: str) -> str | None:
+    """``{D}.raw.csv`` only. ``current.csv`` is not an open source."""
+    day = str(date or "")[:10]
+    if len(day) != 10 or not day[:4].isdigit() or day[4] != "-":
+        return None
+    return f"{day}.raw.csv"
+
+
+def _theme_radar_raw_bytes(date: str) -> bytes | None:
+    name = _dated_raw_name(date)
+    if not name:
+        return None
+    roots = [Path(THEME_RADAR_SNAP_DIR)] if THEME_RADAR_SNAP_DIR is not None else _theme_radar_roots()
+    for root in roots:
+        path = root / name
+        if path.is_file() and "current" not in path.name:
+            try:
+                return path.read_bytes()
+            except OSError:
+                return None
+    if THEME_RADAR_SNAP_DIR is not None:
+        return None
+    return _fetch_url(THEME_RADAR_RAW_URL.format(date=str(date)[:10]))
+
+
+def _theme_radar_raw_expected_hash(date: str) -> str | None:
+    """sha256 of ``data/snapshots/{D}.raw.csv``. Empty when unknown."""
+    if THEME_RADAR_SNAP_DIR is not None:
+        return None
+    raw = _fetch_url(THEME_RADAR_HASHES_URL)
+    if not raw:
+        return None
+    try:
+        doc = json.loads(raw.decode("utf-8"))
+    except (UnicodeDecodeError, json.JSONDecodeError):
+        return None
+    files = doc.get("files") if isinstance(doc, dict) else None
+    if not isinstance(files, dict):
+        return None
+    entry = files.get(f"data/snapshots/{str(date)[:10]}.raw.csv") or {}
+    sha = str(entry.get("sha256") or "")
+    return sha or None
+
+
+def parse_finviz_opens(text: str) -> dict[str, float]:
+    """Ticker → Finviz Open. The column may sit anywhere, including last."""
+    import csv
+    import io
+
+    out: dict[str, float] = {}
+    reader = csv.DictReader(io.StringIO(text or ""))
+    if not reader.fieldnames or "Ticker" not in reader.fieldnames or "Open" not in reader.fieldnames:
+        return out
+    for row in reader:
+        tick = str(row.get("Ticker") or "").strip().upper()
+        if not tick:
+            continue
+        opened = _as_float(row.get("Open"))
+        if opened is not None:
+            out[tick] = opened
+    return out
+
+
+def first_scrape_ts(text: str) -> str | None:
+    """First non-empty ``scrape_ts`` cell. Absent on snapshots before 2026-09-24."""
+    import csv
+    import io
+
+    reader = csv.DictReader(io.StringIO(text or ""))
+    if not reader.fieldnames or "scrape_ts" not in reader.fieldnames:
+        return None
+    for row in reader:
+        stamp = str(row.get("scrape_ts") or "").strip()
+        if stamp:
+            return stamp
+    return None
+
+
+def _next_session_date(date: str) -> str:
+    from .skip_if_good import _next_weekday
+    return _next_weekday(str(date)[:10])
+
+
+def scrape_covers_session(stamp: str | None, session: str) -> bool:
+    """True when ``stamp`` is after D 09:30 ET and before the next session's 09:30.
+
+    A missing stamp does not cover the session. Equality on either open
+    is outside the window, so a scrape at exactly 09:30 is not accepted.
+    """
+    when = _parse_et(stamp or "")
+    if when is None:
+        return False
+    day = str(session or "")[:10]
+    opened = datetime.fromisoformat(f"{day}T09:30:00").replace(tzinfo=tl.ET)
+    if when <= opened:
+        return False
+    nxt = datetime.fromisoformat(
+        f"{_next_session_date(day)}T09:30:00"
+    ).replace(tzinfo=tl.ET)
+    return when < nxt
+
+
+def _scrape_reject_note(stamp: str | None, session: str) -> str:
+    if not stamp:
+        return "missing scrape_ts"
+    when = _parse_et(stamp)
+    if when is None:
+        return "unreadable scrape_ts"
+    day = str(session or "")[:10]
+    opened = datetime.fromisoformat(f"{day}T09:30:00").replace(tzinfo=tl.ET)
+    if when <= opened:
+        return "scrape_ts at or before D 09:30 ET"
+    return "scrape_ts at or after the next session 09:30 ET"
+
+
+def _slim_text(date: str) -> str:
+    raw = _theme_radar_bytes(date)
+    if not raw:
+        return ""
+    expect = _theme_radar_expected_hash(date)
+    if expect and sha256_bytes(raw) != expect:
+        return ""
+    return raw.decode("utf-8", errors="replace")
+
+
+def _raw_header_text(date: str) -> str:
+    """First slice of ``{D}.raw.csv``. Enough to see whether scrape_ts exists."""
+    name = _dated_raw_name(date)
+    if not name:
+        return ""
+    roots = [Path(THEME_RADAR_SNAP_DIR)] if THEME_RADAR_SNAP_DIR is not None else _theme_radar_roots()
+    for root in roots:
+        path = root / name
+        if path.is_file() and "current" not in path.name:
+            try:
+                with path.open("rb") as handle:
+                    return handle.read(65536).decode("utf-8", errors="replace")
+            except OSError:
+                return ""
+    if THEME_RADAR_SNAP_DIR is not None:
+        return ""
+    chunk = _fetch_prefix(THEME_RADAR_RAW_URL.format(date=str(date)[:10]), 65536)
+    if not chunk:
+        return ""
+    return chunk.decode("utf-8", errors="replace")
+
+
+def theme_radar_raw_opens(date: str) -> dict[str, float]:
+    """Finviz Open from ``{D}.raw.csv``. A bad hash is an empty map."""
+    raw = _theme_radar_raw_bytes(date)
+    if not raw:
+        return {}
+    expect = _theme_radar_raw_expected_hash(date)
+    if expect and sha256_bytes(raw) != expect:
+        return {}
+    return parse_finviz_opens(raw.decode("utf-8", errors="replace"))
+
+
+def day_open_tape(date: str) -> dict:
+    """Which open file is allowed for D.
+
+    The raw Finviz export is primary when its scrape_ts (stamped on the
+    paired slim snapshot, or on the raw file when that column exists)
+    sits after D 09:30 ET and before the next session's 09:30. From
+    2026-09-25 the slim snapshot's Open column is the next file under
+    the same guard. Otherwise the day is Stooq.
+    """
+    day = str(date or "")[:10]
+    slim = _slim_text(day)
+    stamp = first_scrape_ts(slim) if slim else None
+    if not stamp:
+        stamp = first_scrape_ts(_raw_header_text(day))
+    if not scrape_covers_session(stamp, day):
+        return {
+            "source": "stooq",
+            "scrape_ts": stamp,
+            "opens": {},
+            "note": _scrape_reject_note(stamp, day),
+        }
+    opens = theme_radar_raw_opens(day)
+    if opens:
+        return {
+            "source": f"theme-radar snapshots/{day}.raw.csv Open",
+            "scrape_ts": stamp,
+            "opens": opens,
+            "note": "scrape_ts inside the session window",
+        }
+    if day >= SNAPSHOT_OPEN_FROM and slim:
+        slim_opens = parse_finviz_opens(slim)
+        if slim_opens:
+            return {
+                "source": f"theme-radar snapshots/{day}.csv Open",
+                "scrape_ts": stamp,
+                "opens": slim_opens,
+                "note": "scrape_ts inside the session window",
+            }
+    return {
+        "source": "stooq",
+        "scrape_ts": stamp,
+        "opens": {},
+        "note": "no Open on the accepted snapshot",
+    }
+
+
+def log_open_sources(dates: list[str], *, path: Path | None = None) -> list[dict]:
+    """Record the open file the guard accepts for each session."""
+    rows = []
+    for date in dates:
+        tape = day_open_tape(date)
+        write_open_source_row(date, tape, path=path)
+        row = {
+            "date": str(date)[:10],
+            "source": tape.get("source"),
+            "scrape_ts": tape.get("scrape_ts") or "",
+            "note": tape.get("note") or "",
+        }
+        rows.append(row)
+        print(f"[factor-mine] open source {row['date']} {row['source']} {row['note']}",
+              flush=True)
+    return rows
+
+
+def write_open_source_row(date: str, row: dict, *, path: Path | None = None) -> None:
+    """One row per session. A later check replaces that date."""
+    import csv
+
+    dest = Path(path or OPEN_SOURCE_LOG)
+    dest.parent.mkdir(parents=True, exist_ok=True)
+    existing: list[dict] = []
+    if dest.is_file():
+        try:
+            with dest.open(newline="", encoding="utf-8") as handle:
+                existing = list(csv.DictReader(handle))
+        except OSError:
+            existing = []
+    day = str(date or "")[:10]
+    kept = [item for item in existing if str(item.get("date") or "") != day]
+    kept.append({
+        "date": day,
+        "source": str(row.get("source") or ""),
+        "scrape_ts": str(row.get("scrape_ts") or ""),
+        "note": str(row.get("note") or ""),
+    })
+    kept.sort(key=lambda item: item.get("date") or "")
+    with dest.open("w", newline="", encoding="utf-8") as handle:
+        writer = csv.DictWriter(
+            handle, fieldnames=["date", "source", "scrape_ts", "note"],
+        )
+        writer.writeheader()
+        writer.writerows(kept)
+
+
 def parse_stooq_bar(text: str, date: str) -> dict:
     """One daily row from a Stooq CSV. Dates may be YYYY-MM-DD or YYYYMMDD."""
     import csv
@@ -613,6 +873,24 @@ def _fetch_url(url: str) -> bytes | None:
         req = urllib.request.Request(url, headers={"User-Agent": "fullscan-factor-mine"})
         with urllib.request.urlopen(req, timeout=20) as resp:
             return resp.read()
+    except Exception:
+        return None
+
+
+def _fetch_prefix(url: str, n: int = 65536) -> bytes | None:
+    """First ``n`` bytes. Used to see a raw header without the whole export."""
+    import urllib.request
+
+    try:
+        req = urllib.request.Request(
+            url,
+            headers={
+                "User-Agent": "fullscan-factor-mine",
+                "Range": f"bytes=0-{max(int(n), 1) - 1}",
+            },
+        )
+        with urllib.request.urlopen(req, timeout=20) as resp:
+            return resp.read(n)
     except Exception:
         return None
 
@@ -686,19 +964,19 @@ def session_cross_check(date: str, tickers: list[str]) -> list[dict]:
     """Open and close versus the external sources, then paper fills.
 
     Close order: post-close ``finviz_{D}.csv`` Price, else the dated
-    theme-radar snapshot Price (never ``current.csv``). Open order from
-    ``SNAPSHOT_OPEN_FROM``: that snapshot's Open when the cell is
-    present, else post-close Finviz Open, else Stooq. Earlier sessions
-    (2026-08-13 through 2026-09-24) use the Stooq daily open. A filled
-    Webull paper order is a third check against our 09:30 open.
+    theme-radar snapshot Price (never ``current.csv``). Open order:
+    ``{D}.raw.csv`` Finviz Open when scrape_ts is inside the session
+    window, else from 2026-09-25 the slim snapshot Open, else Stooq.
+    A filled Webull paper order is a third check against our 09:30 open.
     """
     day = str(date or "")[:10]
     post = export_is_postclose(day)
-    has_open = finviz_export_has_open(day) if post else False
-    use_snapshot_open = day >= SNAPSHOT_OPEN_FROM
     radar: dict | None = None
     stooq: dict[str, dict] = {}
     fills = paper_fills(day)
+    tape = day_open_tape(day)
+    tape_opens = tape.get("opens") or {}
+    used_stooq = False
 
     def radar_map() -> dict:
         nonlocal radar
@@ -732,17 +1010,12 @@ def session_cross_check(date: str, tickers: list[str]) -> list[dict]:
 
         open_ref = None
         open_src = None
-        if use_snapshot_open:
-            opened = radar_quote(radar_map().get(t))[1]
-            if opened is not None:
-                open_ref = opened
-                open_src = f"theme-radar snapshots/{day}.csv Open"
-        if open_ref is None and use_snapshot_open and post and has_open:
-            opened = tl._finviz_bar(t, day).get("open")
-            if opened is not None:
-                open_ref = opened
-                open_src = f"finviz_{day}.csv Open"
+        opened = tape_opens.get(t)
+        if opened is not None:
+            open_ref = opened
+            open_src = tape.get("source")
         if open_ref is None:
+            used_stooq = True
             if t not in stooq:
                 stooq[t] = stooq_bar(t, day)
             if stooq[t].get("open") is not None:
@@ -763,6 +1036,14 @@ def session_cross_check(date: str, tickers: list[str]) -> list[dict]:
                     t, "fill", ours.get("open"), px,
                     f"webull paper {day}_status.json avg_fill_px",
                 ))
+    decision = dict(tape)
+    if tape.get("source") != "stooq" and used_stooq:
+        decision["note"] = (
+            str(tape.get("note") or "") + "; Stooq filled names missing from the file"
+        ).strip("; ")
+    elif tape.get("source") == "stooq" or used_stooq:
+        decision["source"] = "stooq"
+    LAST_OPEN_SOURCE[day] = decision
     return gaps
 
 
@@ -869,11 +1150,18 @@ def _review_hold(date: str, gaps: list[dict]) -> None:
 
 
 def prepare_lock(date: str) -> dict:
-    """Candidate log plus the open/close cross-check. No files written."""
+    """Candidate log plus the open/close cross-check.
+
+    The open-source row is the only file this writes. A mismatch still
+    holds the day before any snapshot, pin, or candidate file.
+    """
     doc = candidate_provenance(date)
     names = [row["ticker"] for row in doc.get("names") or []]
     traded = list(paper_fills(date))
     gaps = session_cross_check(date, list(names) + traded)
+    decision = LAST_OPEN_SOURCE.get(str(date)[:10])
+    if decision:
+        write_open_source_row(date, decision)
     if gaps:
         _review_hold(date, gaps)
     return doc

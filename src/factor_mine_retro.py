@@ -1166,6 +1166,61 @@ def _splice_baselines_json(original: str, payload: dict) -> str:
     return head + ",\n  \"baselines\": " + indented + "\n}\n"
 
 
+DAILY_RETURNS_CSV = ROOT / "data" / "factor_mine" / "daily_returns.csv"
+
+
+def daily_return_pct(daily: dict | None) -> float | None:
+    """Session percent versus yesterday's equity.
+
+    A resumed ledger row stores ``mean`` against the original $10k when
+    that simulation only walked the new day. The shuffle series uses
+    ``equity / yday_equity - 1`` instead.
+    """
+    row = daily or {}
+    equity = row.get("equity")
+    if equity is None:
+        return None
+    prev = row.get("yday_equity")
+    try:
+        equity = float(equity)
+        base = float(prev) if prev not in (None, "") else float(fm.CAPITAL)
+    except (TypeError, ValueError):
+        return None
+    if base == 0:
+        return None
+    return round(100.0 * (equity / base - 1.0), 4)
+
+
+def write_daily_returns(path: Path | None = None,
+                        dates: list[str] | None = None) -> int:
+    """CSV columns: recipe, start_date, D, ret. One ledger file at a time."""
+    import csv
+
+    dest = Path(path or DAILY_RETURNS_CSV)
+    dest.parent.mkdir(parents=True, exist_ok=True)
+    days = list(dates) if dates is not None else fmf._ledger_dates()
+    n = 0
+    with dest.open("w", newline="", encoding="utf-8") as handle:
+        writer = csv.writer(handle)
+        writer.writerow(["recipe", "start_date", "D", "ret"])
+        for date in days:
+            ledger = fmf.read_ledger(date)
+            if not ledger:
+                continue
+            recipes = ledger.get("recipes") or {}
+            for name in sorted(recipes):
+                starts = (recipes[name] or {}).get("starts") or {}
+                for start in sorted(starts):
+                    ret = daily_return_pct((starts[start] or {}).get("daily"))
+                    if ret is None:
+                        continue
+                    writer.writerow([name, start, date, f"{ret:.4f}"])
+                    n += 1
+            del ledger
+    print(f"[retro] daily returns {n} rows {dest}", flush=True)
+    return n
+
+
 def write_baselines(payload: dict) -> None:
     """Append or replace the baselines section. HOT4 rows stay as they are."""
     text = REPORT_MD.read_text(encoding="utf-8") if REPORT_MD.is_file() else ""
@@ -1197,12 +1252,17 @@ def publish_baselines(*, draws: int = RANDOM4_DRAWS) -> dict:
         },
         "iwm": {"tape": tape, "rows": iwm_rows},
         "open_check": (
-            "Open cross-check from 2026-09-25 uses the theme-radar snapshot "
-            "Open column when that dated file has a value (Finviz Open "
-            "appended at the end of the snapshot). Sessions 2026-08-13 "
-            "through 2026-09-24 use the Stooq daily open. On and after "
-            "2026-09-25 the order is snapshot Open, then post-close Finviz "
-            "Open, then Stooq."
+            "Open cross-check uses theme-radar `{D}.raw.csv` Finviz Open when "
+            "that fetch's scrape_ts is after D 09:30 ET and before the next "
+            "session's 09:30 ET, and the sha256 matches HASHES.json. From "
+            "2026-09-25 the slim `{D}.csv` Open column (appended last) is the "
+            "next file under the same guard. A missing or late scrape uses "
+            "Stooq for that day. `current.csv` is not a source. Webull paper "
+            "fills stay a third check. The source used each day is "
+            "`data/factor_mine/open_source_log.csv`. Per-recipe session "
+            "returns for the shuffle test are "
+            "`data/factor_mine/daily_returns.csv` "
+            "(recipe, start_date, D, ret as percent versus the prior close equity)."
         ),
     }
     write_baselines(payload)

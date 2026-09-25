@@ -1,0 +1,31 @@
+date,source,scrape_ts,note
+2026-08-13,stooq,,missing scrape_ts
+2026-08-14,stooq,,missing scrape_ts
+2026-08-17,stooq,,missing scrape_ts
+2026-08-18,stooq,,missing scrape_ts
+2026-08-19,stooq,,missing scrape_ts
+2026-08-20,stooq,,missing scrape_ts
+2026-08-21,stooq,,missing scrape_ts
+2026-08-24,stooq,,missing scrape_ts
+2026-08-25,stooq,,missing scrape_ts
+2026-08-26,stooq,,missing scrape_ts
+2026-08-27,stooq,,missing scrape_ts
+2026-08-28,stooq,,missing scrape_ts
+2026-08-31,stooq,,missing scrape_ts
+2026-09-01,stooq,,missing scrape_ts
+2026-09-02,stooq,,missing scrape_ts
+2026-09-03,stooq,,missing scrape_ts
+2026-09-04,stooq,,missing scrape_ts
+2026-09-08,stooq,,missing scrape_ts
+2026-09-09,stooq,,missing scrape_ts
+2026-09-10,stooq,,missing scrape_ts
+2026-09-11,stooq,,missing scrape_ts
+2026-09-14,stooq,,missing scrape_ts
+2026-09-15,stooq,,missing scrape_ts
+2026-09-16,stooq,,missing scrape_ts
+2026-09-17,stooq,,missing scrape_ts
+2026-09-18,stooq,,missing scrape_ts
+2026-09-21,stooq,,missing scrape_ts
+2026-09-22,stooq,,missing scrape_ts
+2026-09-23,stooq,,missing scrape_ts
+2026-09-24,theme-radar snapshots/2026-09-24.raw.csv Open,2026-09-24T23:22:06+00:00,scrape_ts inside the session window

@@ -1,6 +1,8 @@
 """Point-in-time retro guards. Git history is the clock, not the working tree."""
 from __future__ import annotations
 
+import csv
+import tempfile
 from pathlib import Path
 
 from src import factor_mine_retro as retro
@@ -138,6 +140,70 @@ def test_random4_sells_when_dropped_and_iwm_holds() -> None:
     assert held["total_ret_pct"] > 0
 
 
+def test_daily_return_is_the_session_not_the_resumed_mean() -> None:
+    resumed = {
+        "date": "2026-09-24",
+        "equity": 12346.74,
+        "yday_equity": 10453.53,
+        "mean": 23.4674,
+    }
+    ret = retro.daily_return_pct(resumed)
+    assert ret == 18.1107
+    assert ret != resumed["mean"]
+    assert retro.daily_return_pct({"equity": 11000, "yday_equity": 10000}) == 10.0
+    assert retro.daily_return_pct({"equity": 10050}) == 0.5
+
+
+def test_daily_returns_csv_lists_each_start_book() -> None:
+    import csv
+
+    ledgers = {
+        "2026-09-23": {
+            "recipes": {
+                "union_hot_n4_h1": {
+                    "starts": {
+                        "2026-08-13": {"daily": {
+                            "equity": 10100, "yday_equity": 10000, "mean": 1.0,
+                        }},
+                    },
+                },
+            },
+        },
+        "2026-09-24": {
+            "recipes": {
+                "union_hot_n4_h1": {
+                    "starts": {
+                        "2026-08-13": {"daily": {
+                            "equity": 10200, "yday_equity": 10100, "mean": 2.0,
+                        }},
+                        "2026-09-21": {"daily": {
+                            "equity": 9900, "yday_equity": 10000, "mean": -1.0,
+                        }},
+                    },
+                },
+            },
+        },
+    }
+
+    def read(date):
+        return ledgers.get(date)
+
+    with tempfile.TemporaryDirectory() as d:
+        dest = Path(d) / "daily_returns.csv"
+        import unittest.mock as mock
+        with mock.patch.object(retro.fmf, "read_ledger", side_effect=read):
+            n = retro.write_daily_returns(dest, ["2026-09-23", "2026-09-24"])
+        assert n == 3
+        with dest.open(newline="", encoding="utf-8") as handle:
+            rows = list(csv.DictReader(handle))
+    assert [r["D"] for r in rows] == ["2026-09-23", "2026-09-24", "2026-09-24"]
+    assert rows[0]["recipe"] == "union_hot_n4_h1"
+    assert rows[0]["start_date"] == "2026-08-13"
+    assert rows[0]["ret"] == "1.0000"
+    assert rows[2]["start_date"] == "2026-09-21"
+    assert rows[2]["ret"] == "-1.0000"
+
+
 def test_baselines_section_keeps_the_hot4_table() -> None:
     text = (
         "# title\n\n## HOT4 and holdup\n\n"
@@ -187,6 +253,8 @@ if __name__ == "__main__":
     test_linear_percentile_and_median()
     test_random4_seed_is_stable_and_drops_glnd()
     test_random4_sells_when_dropped_and_iwm_holds()
+    test_daily_return_is_the_session_not_the_resumed_mean()
+    test_daily_returns_csv_lists_each_start_book()
     test_baselines_section_keeps_the_hot4_table()
     test_incomplete_snapshot_carries_no_rows()
     print("factor-mine retro tests passed")
