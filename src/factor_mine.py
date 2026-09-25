@@ -2142,8 +2142,10 @@ def build_panel(from_date: str = START, to_date: str | None = None,
         frozen: list[dict] | None = None
         if fail_closed:
             # Bars for every candidate before membership or hot_score.
-            # A gapped name is dropped. The day still locks. A rerun
-            # keeps the frozen dropped list even if Yahoo later fills it.
+            # Indicator holes leave the row set. A name with no Yahoo bar
+            # is listed in ``dropped_missing_bars`` and is not a new buy,
+            # but it stays in the rows so the 09:30 rank slot is not given
+            # to the next name. A rerun keeps that frozen list.
             from . import factor_mine_freeze as fmf
             universe = fmf.ranking_universe(
                 date, lookback, plan, movers.get("by_date") or {})
@@ -2156,6 +2158,10 @@ def build_panel(from_date: str = START, to_date: str | None = None,
                 print(f"[factor-mine] {date} frozen dropped n={len(frozen)}",
                       flush=True)
         dropped = {g.get("ticker") for g in dropped_rows}
+        missing_bar: set[str] = set()
+        if fail_closed:
+            from . import factor_mine_freeze as fmf
+            missing_bar = set(fmf._dropped_missing_tickers(dropped_rows))
         buckets = _candidates(date, lookback, plan, movers.get("by_date") or {})
         reasons: dict[str, list[str]] = {}
         order: list[str] = []
@@ -2175,12 +2181,18 @@ def build_panel(from_date: str = START, to_date: str | None = None,
         for i, t in enumerate(order):
             if sess is None:
                 continue
-            if t in dropped:
+            # Missing Yahoo bars stay attached. Other gaps (short indicator
+            # history, unresolved hot score) still leave the row set.
+            if t in dropped and t not in missing_bar:
                 continue
             rec = _attach_row(
                 date, t, reasons[t], i, sess, prev_sess, prior_export, prior_df,
             )
-            if fail_closed and frozen is None:
+            if t in missing_bar:
+                rec["missing_yahoo_bar"] = True
+                rec["open"] = None
+                rec["close"] = None
+            elif fail_closed and frozen is None:
                 from . import factor_mine_freeze as fmf
                 problem = fmf.row_price_problem(t, date)
                 if problem:
@@ -2413,12 +2425,12 @@ def load_or_build_panel(from_date: str = START, to_date: str | None = None,
         raw = json.loads(PANEL_PATH.read_text(encoding="utf-8"))
     except (OSError, json.JSONDecodeError):
         return build_panel(from_date, to_date, fail_closed=fail_closed)
-    raw = fmf.apply_frozen_snapshots(rehydrate_panel(raw))
+    end = live_panel_end(from_date, to_date)
+    raw = fmf.apply_frozen_snapshots(rehydrate_panel(raw), through=end)
     if restate_set:
         for date in sorted(restate_set):
             extra = build_panel(date, date, fail_closed=fail_closed)
             raw = merge_panel_days(raw, extra)
-    end = live_panel_end(from_date, to_date)
     want = [d for d in panel_lookback_calendar(from_date, to_date)
             if d >= from_date and (not end or d <= end)]
     have = set(raw.get("session_dates") or [])

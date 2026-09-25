@@ -6,6 +6,7 @@ import json
 import os
 import sys
 import tempfile
+from contextlib import ExitStack
 from pathlib import Path
 from unittest import mock
 
@@ -128,17 +129,39 @@ def test_guard_fails_when_an_earlier_hash_changes() -> None:
 
 
 def test_missing_bars_hold_the_day_and_do_not_write_hot_zero() -> None:
-    """Every candidate gapped means nobody is rankable, so the day is skipped."""
+    """Every name lacking a Yahoo bar is a hard failure, and is not scored."""
     with tempfile.TemporaryDirectory() as d:
         old = _use(Path(d))
         try:
             with mock.patch("src.price_store.ensure_through", return_value=None), \
                     mock.patch.object(fmf, "_raw_bars", return_value=[]), \
                     mock.patch.object(tl, "_official_ohlc",
-                                      return_value={"open": None, "close": None}):
-                gaps = fmf.ensure_candidate_bars("2026-09-25", ["BBB", "AAA"])
-            assert [g["ticker"] for g in gaps] == ["AAA", "BBB"]
-            assert all(g["reason"] for g in gaps)
+                                      return_value={"open": None, "close": None,
+                                                    "high": None, "low": None}):
+                try:
+                    fmf.ensure_candidate_bars("2026-09-25", [])
+                    empty = False
+                except fmf.HoldDay as e:
+                    empty = True
+                    assert e.status == "held_incomplete"
+                    assert "entire universe or panel is missing" in e.reason
+                assert empty
+                try:
+                    fmf.ensure_candidate_bars("2026-09-25", ["BBB", "AAA"])
+                    failed = False
+                except fmf.HoldDay as e:
+                    failed = True
+                    assert e.status == "held_incomplete"
+                    assert "entire universe missing yahoo bars" in e.reason
+                    assert e.missing == ["AAA", "BBB"]
+                assert failed
+
+            gaps = [
+                {"ticker": "AAA", "missing": ["missing 09:30 open"],
+                 "reason": "missing 09:30 open"},
+                {"ticker": "BBB", "missing": ["missing 09:30 open"],
+                 "reason": "missing 09:30 open"},
+            ]
 
             def fake_attach(*_a, **_k):
                 raise AssertionError("a dropped name must not be scored")
@@ -1709,6 +1732,458 @@ def test_excel_signal_pin_is_the_last_commit_before_the_open() -> None:
             _restore(old)
 
 
+def test_finviz_stooq_disagreement_does_not_hold_the_day() -> None:
+    """Finviz/Stooq disagreement is a warning. The lock is not refused."""
+    fmf.LAST_OPEN_SOURCE.clear()
+    gap = {
+        "ticker": "AAA", "field": "close",
+        "ours": 10.0, "ref": 12.0,
+        "source": "finviz_2026-09-25.csv Price",
+    }
+    with mock.patch.object(fmf, "candidate_provenance", return_value={
+                "date": "2026-09-25", "n": 1,
+                "names": [{"ticker": "AAA", "sources": []}],
+                "excluded": ["flatten", "mover_buy"],
+            }), mock.patch.object(fmf, "session_cross_check", return_value=[gap]):
+        doc = fmf.prepare_lock("2026-09-25")
+    assert doc["names"][0]["ticker"] == "AAA"
+
+
+def _aaa_session_bars() -> list[dict]:
+    bars = _bars(40)
+    bars.append({
+        "date": "2026-09-25", "open": 10.0, "high": 11.0, "low": 9.0,
+        "close": 10.5, "volume": 100.0,
+    })
+    return bars
+
+
+def test_missing_yahoo_bars_drop_and_the_day_locks() -> None:
+    """HYAC-U and TBCVU have no Yahoo bar. They are dropped, the day locks,
+    a second run matches, days through 09-24 stay put, and a future file
+    does not change the lock.
+    """
+    from src import factor_mine_sequential as seq
+
+    day = "2026-09-25"
+    history = ["2026-09-22", "2026-09-23", "2026-09-24"]
+    future = "2026-09-28"
+    dropped = ["HYAC-U", "TBCVU"]
+    candidates = {
+        "date": day,
+        "n": 1,
+        "prior_export": "2026-09-24",
+        "excluded": ["flatten", "mover_buy"],
+        "names": [{
+            "ticker": "AAA",
+            "sources": [{"source": "yday_gainer", "rank": 1}],
+        }],
+    }
+    pinned = {
+        "date": day,
+        "tape": "raw",
+        "auto_adjust": False,
+        "names": {"AAA": {"prior": [], "open": 10.0, "close": 10.5}},
+    }
+    ledger = {
+        "date": day,
+        "origin": "frozen",
+        "code_sha": "drop-bars",
+        "recipes": {"union_h1": {"primary": {
+            "buys": [], "sells": [], "skips": [], "trades": [],
+            "daily": {
+                "date": day, "cash": 10000.0, "equity": 10000.0,
+                "yday_equity": 10000.0, "bought": [], "sold": [],
+                "open_cash": 10000.0, "made_money": False,
+            },
+            "state": {"cash": 10000.0, "pos": {}, "after": day},
+        }, "starts": {}}},
+    }
+    fetches = {"n": 0}
+    seen = {}
+
+    def raw(ticker):
+        if str(ticker).upper() == "AAA":
+            return _aaa_session_bars()
+        return []
+
+    def official(ticker, date, bars=None):
+        if str(ticker).upper() == "AAA" and str(date)[:10] == day:
+            return {"open": 10.0, "high": 11.0, "low": 9.0, "close": 10.5}
+        return {"open": None, "high": None, "low": None, "close": None}
+
+    def fake_ensure(*_a, **_k):
+        fetches["n"] += 1
+        return None
+
+    def fake_attach(date, ticker, sources, src_rank, sess, prev, prior, df):
+        missing = ticker in dropped
+        return {
+            "date": date, "ticker": ticker, "sources": list(sources),
+            "src_rank": src_rank,
+            "open": None if missing else 10.0,
+            "close": None if missing else 10.5,
+            "ohlc_hot_score": 9.0 if missing else 1.5,
+            "boxes": {}, "alarm": False,
+        }
+
+    def fake_ledger(panel, payload, recipes, date, bars, fees=None, regime=None):
+        seen["dates"] = list(panel.get("session_dates") or [])
+        seen["tickers"] = sorted({
+            r.get("ticker") for r in (panel.get("rows") or []) if r.get("ticker")
+        })
+        return json.loads(json.dumps(ledger))
+
+    def seed(tmp: Path, *, plant_future: bool) -> dict:
+        state = tmp / "state"
+        for recipe in (seq.HOT4_RECIPE, "union_hot_n4_holdup"):
+            for date in history:
+                seq.write_state(recipe, date, {
+                    "date": date, "cash": 10000.0, "recipe": recipe,
+                }, state)
+        for date in history:
+            fmf.write_snapshot(date, {
+                "date": date,
+                "rows": [{
+                    "date": date, "ticker": "KEEP", "open": 5.0,
+                    "ohlc_hot_score": 1.0,
+                }],
+                "dropped": [],
+                "dropped_missing_bars": [],
+            }, restate=False)
+            fmf.write_ledger(date, {
+                "date": date, "origin": "frozen", "recipes": {},
+            }, restate=False)
+        if plant_future:
+            (fmf.SNAP_DIR / f"{future}.json").write_text(json.dumps({
+                "date": future,
+                "rows": [{"date": future, "ticker": "FUTUREONLY", "open": 1.0}],
+                "dropped_missing_bars": ["FUTUREONLY"],
+            }), encoding="utf-8")
+            (fmf.PRICE_DIR / f"{future}.json").write_text(
+                '{"date":"future"}\n', encoding="utf-8")
+            for recipe in (seq.HOT4_RECIPE, "union_hot_n4_holdup"):
+                seq.write_state(recipe, future, {
+                    "date": future, "cash": 1.0, "recipe": recipe,
+                }, state)
+        files = {}
+        for date in history:
+            files[f"snap:{date}"] = fmf.snapshot_path(date).read_bytes()
+            files[f"ledger:{date}"] = fmf.ledger_path(date).read_bytes()
+        for recipe in (seq.HOT4_RECIPE, "union_hot_n4_holdup"):
+            for date in history + ([future] if plant_future else []):
+                files[f"state:{recipe}:{date}"] = (
+                    seq.state_path(recipe, date, state).read_bytes()
+                )
+        if plant_future:
+            files["future-snap"] = (fmf.SNAP_DIR / f"{future}.json").read_bytes()
+            files["future-price"] = (fmf.PRICE_DIR / f"{future}.json").read_bytes()
+        man = fmf.load_manifest()
+        entries = {
+            "snapshots": {
+                date: json.loads(json.dumps(man["snapshots"][date]))
+                for date in history
+            },
+            "ledgers": {
+                date: json.loads(json.dumps(man["ledgers"][date]))
+                for date in history
+            },
+        }
+        return {"files": files, "manifest": entries, "state": state}
+
+    def run(tmp: Path, *, plant_future: bool) -> dict:
+        old = _use(tmp)
+        old_panel = fm.PANEL_PATH
+        old_state = seq.STATE_DIR
+        seq.STATE_DIR = tmp / "state"
+        fm.PANEL_PATH = tmp / "panel.json"
+        try:
+            frozen = seed(tmp, plant_future=plant_future)
+            payload = {
+                "dates": list(history),
+                "to_date": history[-1],
+                "recipes": [fm.make_recipe("union_h1", hold=1, top_n=1)],
+                "stats": [],
+                "capital": 10000,
+                "mornings": {day: {"s": None, "freeze": "appended"}},
+            }
+            panel = {
+                "from_date": history[0],
+                "to_date": history[-1],
+                "session_dates": list(history),
+                "rows": [{
+                    "date": date, "ticker": "KEEP", "open": 5.0, "src_rank": 0,
+                } for date in history],
+            }
+            patches = [
+                mock.patch("src.price_store.ensure_through", side_effect=fake_ensure),
+                mock.patch.object(fmf, "_raw_bars", side_effect=raw),
+                mock.patch.object(tl, "_official_ohlc", side_effect=official),
+                mock.patch.object(fm, "live_panel_end", return_value=day),
+                mock.patch.object(fm.sm, "load_payload", return_value={}),
+                mock.patch.object(fm.sm, "list_books", return_value=[]),
+                mock.patch.object(fm.sm, "session_calendar",
+                                  return_value=history + [day]),
+                mock.patch.object(fm.gc, "lookback_calendar",
+                                  side_effect=lambda c: list(c)),
+                mock.patch.object(fm, "_session_map",
+                                  return_value=({day: {"date": day}}, [])),
+                mock.patch.object(fm.fla, "collect_mover_buys",
+                                  return_value={"by_date": {}}),
+                mock.patch.object(fm.fla, "flatten_day_targets",
+                                  return_value={"tickers": ["AAA", *dropped]}),
+                mock.patch.object(fmf, "ranking_universe",
+                                  return_value=["AAA", *dropped]),
+                mock.patch.object(fm, "_candidates",
+                                  return_value={"flatten": ["AAA", *dropped]}),
+                mock.patch.object(fm, "_attach_row", side_effect=fake_attach),
+                mock.patch.object(fmf, "row_price_problem", return_value=None),
+                mock.patch.object(fm, "panel_lookback_calendar",
+                                  return_value=history + [day]),
+                mock.patch.object(fm, "session_has_closed", return_value=True),
+                mock.patch.object(fm, "write_outputs"),
+                mock.patch("src.factor_mine_rules.lock_recipe_rules"),
+                mock.patch.object(fmf, "prepare_lock", return_value=candidates),
+                mock.patch.object(fmf, "pin_prices", return_value=pinned),
+                mock.patch.object(fmf, "heat_record", return_value={
+                    "vintage": "2026-09-24", "phase": "morning_overlay",
+                    "board_date": day, "source": None, "sha256": "abc",
+                }),
+                mock.patch.object(fmf, "code_sha", return_value="drop-bars"),
+                mock.patch.object(fmf, "build_ledger", side_effect=fake_ledger),
+            ]
+            stack = ExitStack()
+            for patch in patches:
+                stack.enter_context(patch)
+            with stack:
+                fmf.append_land(
+                    "2026-08-13", day, write=True,
+                    recipes=payload["recipes"], payload=payload, panel=panel,
+                )
+                locked = fmf.snapshot_path(day).read_bytes()
+                digest = fmf.sha256_bytes(locked)
+                ledger_bytes = fmf.ledger_path(day).read_bytes()
+                panel2 = fm.build_panel(day, day, fail_closed=True)
+                snap_doc = json.loads(locked)
+                snap2 = fmf.make_snapshot(
+                    day, panel2["rows"], history[-1], snap_doc["prices_sha256"],
+                    candidates=candidates, dropped=panel2["dropped"],
+                )
+                assert fmf.canonical_bytes(snap2) == locked
+                try:
+                    fmf.write_snapshot(day, snap2, restate=False)
+                    rewrote = True
+                except fmf.FrozenHistory:
+                    rewrote = False
+                fmf.append_land(
+                    "2026-08-13", day, write=True,
+                    recipes=payload["recipes"], payload=dict(payload),
+                    panel=json.loads(json.dumps(panel)),
+                )
+            man = fmf.load_manifest()
+            for date in history:
+                assert man["snapshots"][date] == frozen["manifest"]["snapshots"][date]
+                assert man["ledgers"][date] == frozen["manifest"]["ledgers"][date]
+                assert fmf.snapshot_path(date).read_bytes() == frozen["files"][f"snap:{date}"]
+                assert fmf.ledger_path(date).read_bytes() == frozen["files"][f"ledger:{date}"]
+            for key, blob in frozen["files"].items():
+                if key.startswith("state:"):
+                    _, recipe, date = key.split(":", 2)
+                    assert seq.state_path(recipe, date, frozen["state"]).read_bytes() == blob
+                elif key == "future-snap":
+                    assert (fmf.SNAP_DIR / f"{future}.json").read_bytes() == blob
+                elif key == "future-price":
+                    assert (fmf.PRICE_DIR / f"{future}.json").read_bytes() == blob
+            assert fmf.snapshot_path(day).read_bytes() == locked
+            assert fmf.sha256_bytes(fmf.snapshot_path(day).read_bytes()) == digest
+            assert man["snapshots"][day]["sha256"] == digest
+            assert man["snapshots"][day]["dropped_missing_bars"] == dropped
+            assert man["snapshots"][day]["unpriced_held"] == []
+            assert man["ledgers"][day]["sha256"] == fmf.sha256_bytes(ledger_bytes)
+            return {
+                "snap": locked,
+                "digest": digest,
+                "ledger": ledger_bytes,
+                "seen": json.loads(json.dumps(seen)),
+                "rewrote": rewrote,
+                "snap_doc": snap_doc,
+            }
+        finally:
+            fm.PANEL_PATH = old_panel
+            seq.STATE_DIR = old_state
+            _restore(old)
+
+    fetches["n"] = 0
+    seen.clear()
+    with tempfile.TemporaryDirectory() as a, tempfile.TemporaryDirectory() as b:
+        clean = run(Path(a), plant_future=False)
+        planted = run(Path(b), plant_future=True)
+    assert fetches["n"] == 2
+    assert not clean["rewrote"]
+    assert clean["digest"] == planted["digest"]
+    assert clean["snap"] == planted["snap"]
+    assert clean["ledger"] == planted["ledger"]
+    assert clean["seen"]["tickers"] == planted["seen"]["tickers"]
+    assert clean["seen"]["dates"] == planted["seen"]["dates"]
+    assert future not in clean["seen"]["dates"]
+    assert "FUTUREONLY" not in planted["seen"]["tickers"]
+    # Missing bars stay in the ranking rows. They are not a new buy, and
+    # they are not held, so the snapshot does not mark them unpriced.
+    assert dropped[0] in planted["seen"]["tickers"]
+    assert dropped[1] in planted["seen"]["tickers"]
+    doc = clean["snap_doc"]
+    assert doc["dropped_missing_bars"] == dropped
+    assert doc["unpriced_held"] == []
+    assert [row["ticker"] for row in doc["rows"]] == ["AAA", *dropped]
+    assert doc["rows"][0]["ohlc_hot_score"] == 1.5
+    assert doc["rows"][0]["open"] == 10.0
+    flagged = [row for row in doc["rows"] if row.get("missing_yahoo_bar")]
+    assert [row["ticker"] for row in flagged] == dropped
+    assert all(row.get("open") is None for row in flagged)
+    assert [gap["ticker"] for gap in doc["dropped"]
+            if fmf.MISSING_YAHOO_BARS in (gap.get("missing") or [])] == dropped
+    assert "KEEP" in clean["seen"]["tickers"]
+    assert "AAA" in clean["seen"]["tickers"]
+
+
+def test_unpriced_held_keeps_its_slot_and_exits_on_the_first_bar() -> None:
+    """A missing bar does not promote the next name.
+
+    A carried position stays at its last price, is flagged on the
+    snapshot, and sells at the first later open. A name that only sat
+    in the pick pool is not bought and does not hand its slot over.
+    """
+    from src import factor_mine_book as fmb
+
+    gap_day = "2026-09-25"
+    exit_day = "2026-09-28"
+    dates = [gap_day, exit_day]
+
+    def row(date, ticker, hot, *, missing=False, open_px=None, close_px=None):
+        return {
+            "date": date,
+            "ticker": ticker,
+            "sources": ["union"],
+            "src_rank": 0 if ticker == "MISS" else 1,
+            "boxes": {},
+            "alarm": False,
+            "ohlc_hot_score": hot,
+            "open": open_px,
+            "close": close_px,
+            "missing_yahoo_bar": missing,
+        }
+
+    rows = [
+        row(gap_day, "MISS", 9.0, missing=True),
+        row(gap_day, "NEXT", 1.0, open_px=4.0, close_px=4.2),
+        row(exit_day, "MISS", 9.0, open_px=9.25, close_px=9.4),
+        row(exit_day, "NEXT", 1.0, open_px=4.1, close_px=4.3),
+    ]
+    by = {}
+    for item in rows:
+        by.setdefault(item["date"], []).append(item)
+    panel = {
+        "session_dates": dates,
+        "rows": rows,
+        "by_date": by,
+        "from_date": dates[0],
+        "to_date": dates[-1],
+    }
+    bars = {
+        ("NEXT", gap_day): {"open": 4.0, "close": 4.2},
+        ("NEXT", exit_day): {"open": 4.1, "close": 4.3},
+        ("MISS", exit_day): {"open": 9.25, "close": 9.4},
+    }
+    rec = fm.make_recipe(
+        "union_hot_n1", hold=1, top_n=1, rank="hot_score", sell="list",
+    )
+    regime = {d: {"predict_score": 0.0} for d in dates}
+    resume = {
+        "cash": 8000.0,
+        "yday_equity": 10000.0,
+        "after": "2026-09-24",
+        "pos": {
+            "MISS": {
+                "ticker": "MISS",
+                "shares": 10,
+                "entry_px": 8.0,
+                "entry_date": "2026-09-24",
+                "cost": 80.0,
+                "fee_in": 0.0,
+                "notional": 80.0,
+                "last_px": 8.5,
+                "peak_px": 8.5,
+                "close_px": 8.5,
+                "min_hold": 5,
+            },
+        },
+    }
+    gaps = [{
+        "ticker": "MISS",
+        "missing": [fmf.MISSING_YAHOO_BARS],
+        "reason": fmf.MISSING_YAHOO_BARS,
+    }]
+    assert fmf.unpriced_held_tickers(
+        gap_day, gaps, held={"MISS"}, picked=set(),
+    ) == ["MISS"]
+    assert fmf.unpriced_held_tickers(
+        gap_day, gaps, held=set(), picked={"MISS"},
+    ) == ["MISS"]
+    assert fmf.unpriced_held_tickers(
+        gap_day, gaps, held=set(), picked={"NEXT"},
+    ) == []
+    with mock.patch.object(fmf, "heat_record", return_value={
+                "vintage": "2026-09-24", "phase": "morning_overlay",
+                "board_date": gap_day, "source": None, "sha256": "abc",
+            }), mock.patch.object(fmf, "code_sha", return_value="unpriced"):
+        snap = fmf.make_snapshot(
+            gap_day, by[gap_day], "2026-09-24", "prices",
+            dropped=gaps, unpriced_held=["MISS"],
+        )
+    assert snap["unpriced_held"] == ["MISS"]
+    assert snap["dropped_missing_bars"] == ["MISS"]
+    assert [item["ticker"] for item in snap["rows"]] == ["MISS", "NEXT"]
+
+    with mock.patch.object(fm, "session_has_closed", return_value=True), \
+            mock.patch.object(fm, "ensure_sim_fields", side_effect=lambda p, rec=None: p), \
+            mock.patch.object(fm, "flatten_plan", return_value={"route": "", "flatten_ok": False}):
+        held = fmb.simulate_book(
+            panel, rec, bars=bars, fees=fm.pt_fees(), regime=regime, resume=resume,
+        )
+        pool = fmb.simulate_book(
+            {
+                **panel,
+                "session_dates": [gap_day],
+                "to_date": gap_day,
+                "rows": by[gap_day],
+                "by_date": {gap_day: by[gap_day]},
+            },
+            rec, bars=bars, fees=fm.pt_fees(), regime=regime,
+        )
+
+    gap_buys = [t for t in held["trades"] if t["date"] == gap_day and t["side"] == "BUY"]
+    gap_sells = [t for t in held["trades"] if t["date"] == gap_day and t["side"] == "SELL"]
+    assert gap_buys == []
+    assert gap_sells == []
+    gap_daily = next(d for d in held["daily"] if d["date"] == gap_day)
+    assert gap_daily["bought"] == []
+    assert gap_daily["sold"] == []
+    assert gap_daily["held"] == ["MISS"]
+    # 10 shares stay marked at the last close, 8.50. Cash is untouched.
+    assert gap_daily["cash"] == 8000.0
+    assert gap_daily["equity"] == 8085.0
+    exit_sells = [t for t in held["trades"] if t["date"] == exit_day and t["side"] == "SELL"]
+    assert [t["ticker"] for t in exit_sells] == ["MISS"]
+    assert exit_sells[0]["price"] == 9.25
+    assert exit_sells[0]["fill_rule"] == "unpriced_exit"
+    assert "first bar" in exit_sells[0]["reason"]
+    assert "MISS" not in held["pos"]
+    assert all(t.get("ticker") != "NEXT" for t in held["trades"] if t.get("side") == "BUY")
+    pool_buys = [t for t in pool["trades"] if t.get("side") == "BUY"]
+    assert pool_buys == []
+    assert pool["pos"] == {}
+
+
 if __name__ == "__main__":
     if os.environ.get("PYTHONHASHSEED") != "0":
         os.environ["PYTHONHASHSEED"] = "0"
@@ -1716,6 +2191,9 @@ if __name__ == "__main__":
     test_snapshot_is_write_once_and_restate_logs_previous_hash()
     test_guard_fails_when_an_earlier_hash_changes()
     test_missing_bars_hold_the_day_and_do_not_write_hot_zero()
+    test_finviz_stooq_disagreement_does_not_hold_the_day()
+    test_missing_yahoo_bars_drop_and_the_day_locks()
+    test_unpriced_held_keeps_its_slot_and_exits_on_the_first_bar()
     test_completeness_gate_lists_every_hole_and_refuses_adjusted_bars()
     test_one_gapped_name_is_dropped_and_the_rerun_matches()
     test_build_panel_fetches_bars_before_candidates()

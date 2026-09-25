@@ -70,9 +70,16 @@ PRICE_CHECK = {
 }
 # A candidate missing the hot-score lookback (ohlc.INDICATOR_LOOKBACK
 # prior closes, or the session print) is dropped and is not scored.
-# The day still locks. Zero rankable names skip the day. This constant
-# is not a hold.
+# The day still locks. A name with no Yahoo session bar is removed only
+# from the pool a rule can newly pick from, and listed as
+# ``dropped_missing_bars``. It stays in the 09:30 row set so that slot
+# is not given to the next name. A pick already made at 09:30, or a
+# position carried from the prior day, is not removed: it is marked at
+# its last price, listed as ``unpriced_held``, and sold on the first
+# later session that has a real bar. The lock is refused only when the
+# universe is empty or Yahoo has no bar for every name.
 UNRANKABLE_MAX_SHARE = 0.10
+MISSING_YAHOO_BARS = "missing yahoo bars"
 SNAPSHOT_OPEN_FROM = "2026-09-25"
 # scrape_ts exists on the slim snapshot and in manifest.json from this day.
 SCRAPE_TS_FROM = "2026-09-24"
@@ -381,13 +388,182 @@ def completeness_gaps(ticker: str, date: str) -> list[str]:
     return gaps
 
 
+def yahoo_session_missing(ticker: str, date: str) -> bool:
+    """True when Yahoo has no open or close for this name on ``date``."""
+    d = str(date or "")[:10]
+    t = str(ticker or "").strip().upper()
+    if not t or len(d) != 10:
+        return True
+    for bar in _raw_bars(t):
+        if str(bar.get("date") or "")[:10] != d:
+            continue
+        if bar.get("open") is not None or bar.get("close") is not None:
+            return False
+    official = tl._official_ohlc(t, d)
+    if official.get("open") is not None or official.get("close") is not None:
+        return False
+    return True
+
+
+def _dropped_missing_tickers(gaps: list | None) -> list[str]:
+    """Tickers whose Yahoo session bar was missing, in ticker order."""
+    out = []
+    seen: set[str] = set()
+    for gap in gaps or []:
+        if not isinstance(gap, dict):
+            continue
+        if MISSING_YAHOO_BARS not in (gap.get("missing") or []):
+            continue
+        tick = str(gap.get("ticker") or "").strip().upper()
+        if not tick or tick in seen:
+            continue
+        seen.add(tick)
+        out.append(tick)
+    out.sort()
+    return out
+
+
+def _tickers_from_pos(pos) -> set[str]:
+    out: set[str] = set()
+    if not isinstance(pos, dict):
+        return out
+    for key, lot in pos.items():
+        tick = str(key or "").strip().upper()
+        if not tick:
+            continue
+        shares = 0
+        if isinstance(lot, dict):
+            try:
+                shares = int(float(lot.get("shares") or 0))
+            except (TypeError, ValueError):
+                shares = 0
+        if shares > 0:
+            out.add(tick)
+    return out
+
+
+def _positions_before(folder: Path, date: str) -> set[str]:
+    """Holdings in the latest state file strictly before ``date``."""
+    if not folder.is_dir():
+        return set()
+    day = str(date or "")[:10]
+    found: list[tuple[str, Path]] = []
+    for path in folder.glob("*.json"):
+        stamp = path.name[:10]
+        if len(stamp) == 10 and stamp < day:
+            found.append((stamp, path))
+    if not found:
+        return set()
+    doc = read_json(max(found)[1]) or {}
+    if not isinstance(doc, dict):
+        return set()
+    pos = _tickers_from_pos((doc.get("state") or {}).get("pos"))
+    if pos:
+        return pos
+    out: set[str] = set()
+    for raw in doc.get("holdings") or []:
+        tick = str(raw or "").strip().upper()
+        if tick:
+            out.add(tick)
+    return out
+
+
+def carried_tickers(date: str) -> set[str]:
+    """Names held at the prior lock: ledger, HOT4, holdup, and OOS rules."""
+    out: set[str] = set()
+    led = latest_ledger_before(date)
+    for block in ((led or {}).get("recipes") or {}).values():
+        if not isinstance(block, dict):
+            continue
+        state = ((block.get("primary") or {}).get("state") or {})
+        out |= _tickers_from_pos(state.get("pos"))
+    from . import factor_mine_sequential as seq
+
+    for name in (seq.HOT4_RECIPE, "union_hot_n4_holdup"):
+        out |= _positions_before(Path(seq.STATE_DIR) / name, date)
+    from . import factor_mine_oos0914 as oos
+
+    root = Path(oos.STATE_ROOT)
+    if root.is_dir():
+        for folder in root.iterdir():
+            if folder.is_dir():
+                out |= _positions_before(folder, date)
+    return out
+
+
+def _names_from_ticket_rows(rows) -> set[str]:
+    out: set[str] = set()
+    for row in rows or []:
+        if isinstance(row, str):
+            tick = row.strip().upper()
+        elif isinstance(row, dict):
+            tick = str(row.get("ticker") or "").strip().upper()
+        else:
+            continue
+        if tick:
+            out.add(tick)
+    return out
+
+
+def morning_pick_tickers(date: str) -> set[str]:
+    """Buys already chosen at 09:30: send inputs and the locked ticket file."""
+    day = str(date or "")[:10]
+    out: set[str] = set()
+    from . import factor_mine_send_inputs as fsi
+
+    if fsi.applies(day):
+        doc = fsi.load(day) or {}
+        for picks in (doc.get("picks") or {}).values():
+            out |= _names_from_ticket_rows(picks)
+    paths = [
+        ROOT / "data" / "day_board" / f"{day}_strategy_tickets.json",
+        ROOT / "data" / "factor_mine" / "strategy_tickets.json",
+    ]
+    for path in paths:
+        doc = read_json(path)
+        if not isinstance(doc, dict):
+            continue
+        if str(doc.get("date") or "")[:10] != day:
+            continue
+        for rec in (doc.get("strategies") or {}).values():
+            if isinstance(rec, dict):
+                out |= _names_from_ticket_rows(rec.get("buy"))
+    return out
+
+
+def unpriced_held_tickers(date: str, gaps: list | None, *,
+                          held: set[str] | None = None,
+                          picked: set[str] | None = None) -> list[str]:
+    """Picked or carried names that have no Yahoo bar on ``date``.
+
+    Pass ``held`` or ``picked`` to test the intersection without reading
+    the live books. Otherwise the prior lock and the 09:30 tickets are
+    the protected set. A name outside the gap list counts only when the
+    store already has history for it and that history has no session bar.
+    """
+    missing = set(_dropped_missing_tickers(gaps))
+    if held is None and picked is None:
+        protected = carried_tickers(date) | morning_pick_tickers(date)
+        extra = []
+        for tick in sorted(protected):
+            if tick in missing:
+                continue
+            if _raw_bars(tick) and yahoo_session_missing(tick, date):
+                extra.append(tick)
+        missing.update(extra)
+    else:
+        protected = {str(t).strip().upper() for t in (held or set()) if t}
+        protected |= {str(t).strip().upper() for t in (picked or set()) if t}
+    return sorted(t for t in protected if t in missing)
+
+
 def ensure_candidate_bars(date: str, tickers: list[str]) -> list[dict]:
     """Fetch Yahoo bars for every candidate.
 
-    A name with no print or too few earlier bars is dropped and
-    returned. Missing data does not hold the day. An empty universe
-    skips the day. A wholesale fetch failure and dividend-adjusted
-    bars still refuse to lock.
+    A name with no session bar, or too few earlier bars, is dropped and
+    returned. The day still locks. An empty universe, or a session where
+    every name lacks a Yahoo bar, is a hard failure. A wholesale fetch
+    failure and dividend-adjusted bars still refuse to lock.
     """
     from . import price_store as ps
 
@@ -399,17 +575,45 @@ def ensure_candidate_bars(date: str, tickers: list[str]) -> list[dict]:
             gaps=[{"ticker": t, "missing": ["adjusted bars"]} for t in names],
         )
     if not names:
-        raise SkipDay(date, "no rankable names — skipping day")
+        raise HoldDay(
+            date, [], "entire universe or panel is missing",
+            status="held_incomplete",
+        )
     try:
-        ps.ensure_through(date, tickers=names, strict=True)
+        # Partial misses are dropped below. strict=True used to hold the
+        # whole session when Yahoo had no bar for one name in the batch.
+        ps.ensure_through(date, tickers=names, strict=False)
     except (Exception, SystemExit) as e:
         raise HoldDay(
             date, names, f"price fetch failed: {e}",
             status="held_incomplete",
         ) from e
     reset_price_memory()
+    absent = [t for t in names if yahoo_session_missing(t, date)]
+    if len(absent) == len(names):
+        raise HoldDay(
+            date, absent, "entire universe missing yahoo bars",
+            status="held_incomplete",
+            gaps=[{
+                "ticker": t,
+                "missing": [MISSING_YAHOO_BARS],
+                "reason": MISSING_YAHOO_BARS,
+            } for t in absent],
+        )
+    absent_set = set(absent)
     gaps = []
     for t in names:
+        if t in absent_set:
+            missing = [MISSING_YAHOO_BARS]
+            for item in completeness_gaps(t, date):
+                if item not in missing:
+                    missing.append(item)
+            gaps.append({
+                "ticker": t,
+                "missing": missing,
+                "reason": "; ".join(missing),
+            })
+            continue
         missing = completeness_gaps(t, date)
         if missing:
             gaps.append({
@@ -1503,11 +1707,43 @@ def _review_hold(date: str, gaps: list[dict]) -> None:
     )
 
 
+def _warn_cross_check(date: str, gaps: list[dict]) -> list[dict]:
+    """Log Finviz/Stooq disagreement. Paper-fill gaps still hold the day."""
+    warns = []
+    holds = []
+    for gap in gaps or []:
+        if not isinstance(gap, dict):
+            continue
+        if gap.get("field") == "fill":
+            holds.append(gap)
+        else:
+            warns.append(gap)
+    if warns:
+        bits = []
+        for gap in warns[:12]:
+            if gap.get("missing"):
+                bits.append(
+                    f"{gap.get('ticker')}: {', '.join(gap['missing'])}")
+            else:
+                bits.append(
+                    f"{gap.get('ticker')} {gap.get('field')} "
+                    f"ours={gap.get('ours')} ref={gap.get('ref')} "
+                    f"({gap.get('source')})"
+                )
+        print(
+            f"[factor-mine] price warning {date}: finviz/stooq disagreement "
+            f"n={len(warns)}; " + "; ".join(bits),
+            flush=True,
+        )
+    return holds
+
+
 def prepare_lock(date: str) -> dict:
     """Candidate log plus the open/close cross-check.
 
-    The open-source row is the only file this writes. A mismatch still
-    holds the day before any snapshot, pin, or candidate file.
+    The open-source row is the only file this writes. Finviz/Stooq
+    disagreement is a warning. A Webull paper fill outside the open
+    tolerance still holds the day before any snapshot is written.
     """
     doc = candidate_provenance(date)
     names = [row["ticker"] for row in doc.get("names") or []]
@@ -1516,8 +1752,9 @@ def prepare_lock(date: str) -> dict:
     decision = LAST_OPEN_SOURCE.get(str(date)[:10])
     if decision:
         write_open_source_row(date, decision)
-    if gaps:
-        _review_hold(date, gaps)
+    holds = _warn_cross_check(date, gaps)
+    if holds:
+        _review_hold(date, holds)
     return doc
 
 
@@ -1661,6 +1898,12 @@ def _write_frozen(path: Path, obj: dict, slot: str, date: str, *,
     if slot == "snapshots":
         man[slot][date]["n_rows"] = len(obj.get("rows") or [])
         man[slot][date]["heat_vintage"] = (obj.get("heat") or {}).get("vintage")
+        if "dropped_missing_bars" in obj:
+            man[slot][date]["dropped_missing_bars"] = list(
+                obj.get("dropped_missing_bars") or [])
+        if "unpriced_held" in obj:
+            man[slot][date]["unpriced_held"] = list(
+                obj.get("unpriced_held") or [])
     save_manifest(man)
     print(f"[factor-mine] froze {slot} {date} sha={digest[:12]}", flush=True)
     return digest
@@ -1698,17 +1941,24 @@ def read_json(path: Path) -> dict | None:
         return None
 
 
-def apply_frozen_snapshots(panel: dict) -> dict:
-    """Replace landed dates with their frozen rows. Other dates stay."""
+def apply_frozen_snapshots(panel: dict, *, through: str | None = None) -> dict:
+    """Replace landed dates with their frozen rows. Other dates stay.
+
+    A file dated after ``through`` is not opened. A planted future
+    snapshot cannot change the day being locked.
+    """
     from . import factor_mine as fm
 
     panel = fm.rehydrate_panel(panel)
     if not SNAP_DIR.is_dir():
         return panel
+    cutoff = str(through)[:10] if through else ""
     by_date = dict(panel.get("by_date") or {})
     replaced = False
     for path in sorted(SNAP_DIR.glob("*.json")):
         date = path.stem
+        if cutoff and date > cutoff:
+            continue
         snap = read_json(path) or {}
         rows = list(snap.get("rows") or [])
         if not rows:
@@ -1762,7 +2012,8 @@ def frozen_dropped(date: str) -> list[dict] | None:
 def make_snapshot(date: str, rows: list[dict], prior: str | None,
                   prices_sha: str | None,
                   candidates: dict | None = None,
-                  dropped: list | None = None) -> dict:
+                  dropped: list | None = None,
+                  unpriced_held: list | None = None) -> dict:
     from . import price_store as ps
 
     if ps.AUTO_ADJUST:
@@ -1801,6 +2052,10 @@ def make_snapshot(date: str, rows: list[dict], prior: str | None,
         "n_rows": len(frozen_rows),
         "n_dropped": len(logged),
         "dropped": logged,
+        "dropped_missing_bars": _dropped_missing_tickers(logged),
+        "unpriced_held": sorted({
+            str(t).strip().upper() for t in (unpriced_held or []) if t
+        }),
         "rows": frozen_rows,
     }
     if candidates is not None:
@@ -2538,7 +2793,8 @@ def append_land(from_date: str, target: str, *, write: bool = False,
                 panel = {}
         else:
             panel = {}
-    panel = apply_frozen_snapshots(fm.rehydrate_panel(panel or {}))
+    panel = apply_frozen_snapshots(
+        fm.rehydrate_panel(panel or {}), through=target)
     have = set(landed_dates(panel))
     # Closed sessions strictly after the published board, plus restatements.
     # A date already listed as a pending start is not frozen until its
@@ -2579,6 +2835,11 @@ def append_land(from_date: str, target: str, *, write: bool = False,
             continue
         except HoldDay as e:
             print(f"[factor-mine] {e}", flush=True)
+            if (
+                "entire universe" in (e.reason or "")
+                or "entire panel" in (e.reason or "")
+            ):
+                raise
             break
         try:
             candidates = prepare_lock(date)
@@ -2602,15 +2863,17 @@ def append_land(from_date: str, target: str, *, write: bool = False,
             print(f"[factor-mine] {e}", flush=True)
             prices_sha = (load_manifest().get("prices") or {}).get(date, {}).get("sha256")
             pinned = read_json(price_path(date)) or pinned
+        dropped = list(extra.get("dropped") or [])
         snap = make_snapshot(
             date, rows, prior, prices_sha, candidates,
-            dropped=extra.get("dropped") or [],
+            dropped=dropped,
+            unpriced_held=unpriced_held_tickers(date, dropped),
         )
         try:
             write_snapshot(date, snap, restate=date in restate_set)
         except FrozenHistory as e:
             print(f"[factor-mine] {e}", flush=True)
-        panel = apply_frozen_snapshots(panel)
+        panel = apply_frozen_snapshots(panel, through=date)
         bars = bars_for_decisions(panel, date, pinned)
         recs = list(recipes or payload.get("recipes") or [])
         existing = read_ledger(date)

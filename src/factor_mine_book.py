@@ -183,6 +183,8 @@ def why_sell(ticker: str, held: int, min_hold: int, early: bool,
         if (exit_when or {}).get("news") == "bad":
             return f"exit news🔴 after {held} sess"
         return f"condition exit after {held} sess"
+    if kind == "unpriced":
+        return f"exit unpriced hold on first bar after {held} sess"
     if kind == "time":
         return f"time-stop after {held} sess (min {min_hold})"
     if kind == "take":
@@ -1010,17 +1012,30 @@ def simulate_book(panel: dict, rec: dict, *, bars=None, fees=None,
             early = fm.should_exit(row, rec.get("exit_when"))
             dropped = t not in tset
             px = _px(t, date, "open", bars)
-            if px is not None:
-                if side == "long":
-                    lot["peak_px"] = max(float(lot.get("peak_px") or lot["entry_px"]), px)
-                else:
-                    lot["peak_px"] = min(float(lot.get("peak_px") or lot["entry_px"]), px)
-                lot["last_px"] = px
+            if row.get("missing_yahoo_bar"):
+                px = None
+            # No bar: keep the carried lot at its last price. Do not sell
+            # it, and do not treat the missing print as a reason to exit.
+            # The next session that has a real open sells it then.
+            if px is None:
+                lot["unpriced_held"] = True
+                skips.append({"date": date, "ticker": t, "kind": "no_price",
+                              "reason": "no 09:30 open — carry at last price"})
+                held_names.append(t)
+                continue
+            if side == "long":
+                lot["peak_px"] = max(float(lot.get("peak_px") or lot["entry_px"]), px)
+            else:
+                lot["peak_px"] = min(float(lot.get("peak_px") or lot["entry_px"]), px)
+            lot["last_px"] = px
             lot_min = int(lot.get("min_hold") or min_hold)
-            do_sell, kind = lot_should_sell(
-                lot, held=held, min_hold=lot_min, early=early,
-                dropped=dropped, sell_mode=sell_mode, px=px, side=side,
-                take_pct=rec.get("take_pct"), stop_pct=rec.get("stop_pct"))
+            if lot.get("unpriced_held"):
+                do_sell, kind = True, "unpriced"
+            else:
+                do_sell, kind = lot_should_sell(
+                    lot, held=held, min_hold=lot_min, early=early,
+                    dropped=dropped, sell_mode=sell_mode, px=px, side=side,
+                    take_pct=rec.get("take_pct"), stop_pct=rec.get("stop_pct"))
             if not do_sell:
                 if dropped and held < lot_min:
                     skips.append({
@@ -1029,14 +1044,12 @@ def simulate_book(panel: dict, rec: dict, *, bars=None, fees=None,
                     })
                 held_names.append(t)
                 continue
-            if px is None:
-                skips.append({"date": date, "ticker": t, "kind": "no_price",
-                              "reason": "no 09:30 open — carry"})
-                held_names.append(t)
-                continue
             fill_px = px
             fill_rule = None
-            if kind == "stop":
+            if kind == "unpriced":
+                fill_rule = "unpriced_exit"
+                stopped.add(t)
+            elif kind == "stop":
                 hit = same_bar_stop(
                     lot, fm._bar(t, date, bars), side=side,
                     stop_pct=rec.get("stop_pct"), take_pct=rec.get("take_pct"),
@@ -1110,7 +1123,9 @@ def simulate_book(panel: dict, rec: dict, *, bars=None, fees=None,
                 t = row["ticker"]
                 px = _px(t, date, "open", bars)
                 reason = why_buy(rec, row) + f"; leftover ${per:.2f}"
-                if px is None:
+                # A missing bar occupies its 09:30 slot. It is not a new
+                # buy, and the next ranked name is not pulled in to replace it.
+                if row.get("missing_yahoo_bar") or px is None:
                     skips.append({"date": date, "ticker": t, "kind": "no_price",
                                   "reason": "no 09:30 open"})
                     continue
