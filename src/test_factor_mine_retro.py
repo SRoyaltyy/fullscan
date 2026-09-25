@@ -251,6 +251,69 @@ def test_daily_returns_csv_lists_each_start_book() -> None:
     assert rows[5]["net_ret_futubull"] == "-1.0000"
     assert rows[5]["day_status"] == "incomplete_pit"
     assert "0" not in (rows[0]["net_ret_futubull"], rows[0]["net_ret_15bp"])
+    pit = rows[3]
+    assert pit["timing_clean"] == "true"
+    assert pit["news_clean"] == "false"
+    assert pit["reads_news"] == "false"
+    late = rows[4]
+    assert late["timing_clean"] == "false"
+    assert late["news_clean"] == "false"
+    assert rows[0]["timing_clean"] == "true"
+    assert rows[0]["reads_news"] == "false"
+
+
+def test_news_flags_follow_331_and_recipe_gates() -> None:
+    dates = retro.news_quarantine_dates()
+    assert len(dates) == 18
+    assert "2026-08-31" in dates
+    assert "2026-09-04" in dates
+    assert "2026-09-24" in dates
+    assert "2026-09-09" in dates
+    assert "2026-09-17" in dates
+    assert "2026-09-23" in dates
+    assert "2026-08-24" not in dates
+    assert "2026-08-28" not in dates
+    assert retro.news_clean_day("2026-08-24", dates)
+    assert not retro.news_clean_day("2026-09-17", dates)
+    assert retro.timing_clean_day("pit_rebuilt")
+    assert not retro.timing_clean_day("incomplete_pit")
+    assert retro.recipe_reads_news("union_hot_n4_h1") is False
+    assert retro.recipe_reads_news("union_hot_n4_holdup") is False
+    assert retro.recipe_reads_news("union_news_g_h1") is True
+    assert retro.recipe_reads_news("short_news_r_h3") is True
+    assert retro.recipe_reads_news("union_clk_fresh_cat_coil_h1") is True
+    assert retro.recipe_reads_news("combo_sh_5050_shared") is True
+    rows = [
+        {"recipe": "union_hot_n4_h1", "start_date": "2026-08-13",
+         "D": "2026-08-13", "net_ret_futubull": "10.0000",
+         "net_ret_15bp": "9.0000", "timing_clean": "false",
+         "news_clean": "true", "reads_news": "false"},
+        {"recipe": "union_hot_n4_h1", "start_date": "2026-08-13",
+         "D": "2026-08-24", "net_ret_futubull": "10.0000",
+         "net_ret_15bp": "10.0000", "timing_clean": "true",
+         "news_clean": "true", "reads_news": "false"},
+        {"recipe": "union_news_g_h1", "start_date": "2026-08-13",
+         "D": "2026-08-24", "net_ret_futubull": "-50.0000",
+         "net_ret_15bp": "-50.0000", "timing_clean": "true",
+         "news_clean": "true", "reads_news": "true"},
+        {"recipe": "union_news_g_h1", "start_date": "2026-08-13",
+         "D": "2026-08-31", "net_ret_futubull": "100.0000",
+         "net_ret_15bp": "100.0000", "timing_clean": "true",
+         "news_clean": "false", "reads_news": "true"},
+    ]
+    windows = {r["recipe"]: r for r in retro.recipe_clean_windows(rows)}
+    hot = windows["union_hot_n4_h1"]
+    assert hot["all_n"] == 2
+    assert hot["all_futubull"] == 21.0
+    assert hot["timing_n"] == 1
+    assert hot["timing_futubull"] == 10.0
+    assert hot["clean_n"] is None
+    news = windows["union_news_g_h1"]
+    assert news["reads_news"] is True
+    assert news["all_n"] == 2
+    assert news["timing_n"] == 2
+    assert news["clean_n"] == 1
+    assert news["clean_futubull"] == -50.0
 
 
 def test_baselines_section_keeps_the_hot4_table() -> None:
@@ -763,6 +826,7 @@ if __name__ == "__main__":
     test_random4_sells_when_dropped_and_iwm_holds()
     test_daily_return_is_the_session_not_the_resumed_mean()
     test_daily_returns_csv_lists_each_start_book()
+    test_news_flags_follow_331_and_recipe_gates()
     test_baselines_section_keeps_the_hot4_table()
     test_incomplete_snapshot_carries_no_rows()
     test_held_day_keeps_no_rows()

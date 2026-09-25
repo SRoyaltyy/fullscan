@@ -1681,8 +1681,85 @@ DAILY_RETURNS_CSV = ROOT / "data" / "factor_mine" / "daily_returns.csv"
 DAILY_RETURN_FIELDS = (
     "recipe", "recipe_created_date", "start_date", "D",
     "net_ret_futubull", "net_ret_15bp", "day_status", "source_shas",
+    "timing_clean", "news_clean", "reads_news",
 )
 DAY_STATUSES = ("locked", "pit_rebuilt", "incomplete_pit", "held", "skipped")
+# #331 data/quarantine_sessions.json. Not on main; the file is copied here
+# so news_clean uses that list (18 sessions), not the shorter sketch.
+QUARANTINE_PATH = ROOT / "data" / "quarantine_sessions.json"
+# Gates that read the news packet, the catalyst camera, the judge camera,
+# or the map-heat camera. Alarm / cond / zero-red tallies mix every camera
+# and do not by themselves mark a recipe as a news reader.
+_NEWS_INPUT_KEYS = frozenset({
+    "news", "news_present", "news_box", "headline", "digest",
+    "news_or_headline", "news_and_headline", "news_or_red",
+    "catal", "catal_present", "major_catalyst",
+    "yday_or_catalyst", "yday_and_catalyst",
+    "judge", "heat",
+    "clk_fresh_cat_coil", "clk_earn_guide_react", "clk_neg_weak_fail",
+})
+
+
+def format_bool(flag: bool) -> str:
+    return "true" if flag else "false"
+
+
+def news_quarantine_dates(path: Path | None = None) -> set[str]:
+    """Session dates whose news packet #331 marks stale or undated."""
+    src = path or QUARANTINE_PATH
+    try:
+        data = json.loads(src.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return set()
+    rows = data.get("sessions") if isinstance(data, dict) else data
+    if not isinstance(rows, list):
+        return set()
+    out = set()
+    for row in rows:
+        if isinstance(row, dict) and row.get("date"):
+            out.add(str(row["date"])[:10])
+        elif isinstance(row, str) and len(row) >= 10:
+            out.add(row[:10])
+    return out
+
+
+def timing_clean_day(status: str) -> bool:
+    """True only when every named input was committed before 09:30 ET."""
+    return str(status or "") == "pit_rebuilt"
+
+
+def news_clean_day(day: str, quarantined: set[str] | None = None) -> bool:
+    """False on a #331 quarantine date. Every other session is true."""
+    bad = news_quarantine_dates() if quarantined is None else quarantined
+    return str(day or "")[:10] not in bad
+
+
+def _recipe_gate_keys(rec: dict | None) -> set[str]:
+    rec = rec or {}
+    keys: set[str] = set()
+    for slot in ("require", "forbid", "exit_when"):
+        block = rec.get(slot) or {}
+        if isinstance(block, dict):
+            keys.update(str(k) for k in block)
+    return keys
+
+
+def recipe_reads_news(name: str, by_name: dict | None = None,
+                      seen: set[str] | None = None) -> bool:
+    """True when this recipe, or a combo member, reads news inputs."""
+    if by_name is None:
+        by_name = {r.get("name"): r for r in retro_recipes() if r.get("name")}
+    seen = set() if seen is None else seen
+    if name in seen:
+        return False
+    seen.add(name)
+    rec = by_name.get(name) or {}
+    if _recipe_gate_keys(rec) & _NEWS_INPUT_KEYS:
+        return True
+    for member in rec.get("members") or []:
+        if recipe_reads_news(str(member), by_name, seen):
+            return True
+    return False
 
 
 def daily_return_pct(daily: dict | None) -> float | None:
@@ -1853,9 +1930,12 @@ def write_daily_returns(path: Path | None = None,
     """One row per recipe × start_date × day, including held days.
 
     Columns: recipe, recipe_created_date, start_date, D,
-    net_ret_futubull, net_ret_15bp, day_status, source_shas.
+    net_ret_futubull, net_ret_15bp, day_status, source_shas,
+    timing_clean, news_clean, reads_news.
     A held or missing day has empty returns. A real flat session is 0.
-    Ledgers are reduced one file at a time.
+    timing_clean is the day's label (pit_rebuilt only). news_clean is
+    false on a #331 quarantine date. reads_news is the recipe, repeated
+    on every row. Ledgers are reduced one file at a time.
     """
     import csv
 
@@ -1868,6 +1948,9 @@ def write_daily_returns(path: Path | None = None,
     book = catalog if catalog is not None else load_recipe_catalog()
     names = sorted(book)
     flat = flat_returns if flat_returns is not None else net_returns_15bp(days, names)
+    by_name = {r.get("name"): r for r in retro_recipes() if r.get("name")}
+    reads = {name: recipe_reads_news(name, by_name) for name in names}
+    quarantined = news_quarantine_dates()
     fut: dict[tuple[str, str, str], float | None] = {}
     present: set[tuple[str, str, str]] = set()
     status_of: dict[str, str] = {}
@@ -1899,12 +1982,17 @@ def write_daily_returns(path: Path | None = None,
                         continue
                     key = (name, start, day)
                     status = status_of.get(day) or "held"
+                    flags = [
+                        format_bool(timing_clean_day(status)),
+                        format_bool(news_clean_day(day, quarantined)),
+                        format_bool(reads.get(name, False)),
+                    ]
                     missing = status in ("held", "skipped") or key not in present
                     if missing:
                         cell = status if status in ("held", "skipped") else "held"
                         writer.writerow([
                             name, created, start, day, "", "", cell,
-                            shas_of.get(day) or "",
+                            shas_of.get(day) or "", *flags,
                         ])
                         held += 1
                     else:
@@ -1913,11 +2001,149 @@ def write_daily_returns(path: Path | None = None,
                             format_net(fut.get(key)),
                             format_net(flat.get(key)),
                             status_of.get(day) or "held",
-                            shas_of.get(day) or "",
+                            shas_of.get(day) or "", *flags,
                         ])
                     n += 1
     print(f"[retro] daily returns {n} rows held={held} {dest}", flush=True)
     return n
+
+
+def _compound_pct(values: list[float]) -> float | None:
+    """Chain session percents. An empty window has no return."""
+    if not values:
+        return None
+    equity = 1.0
+    for value in values:
+        equity *= 1.0 + float(value) / 100.0
+    return round(100.0 * (equity - 1.0), 3)
+
+
+def _parse_net(cell: str) -> float | None:
+    text = str(cell or "").strip()
+    if not text:
+        return None
+    try:
+        number = float(text)
+    except ValueError:
+        return None
+    if number != number:
+        return None
+    return number
+
+
+def recipe_clean_windows(rows: list[dict]) -> list[dict]:
+    """One row per recipe: all days, timing_clean days, and both-clean days.
+
+    The book is the earliest ``start_date`` for that recipe. A blank
+    return is left out of the chain and out of ``n``. Both-clean is
+    filled only when ``reads_news`` is true.
+    """
+    by_recipe: dict[str, list[dict]] = {}
+    for row in rows:
+        by_recipe.setdefault(str(row.get("recipe") or ""), []).append(row)
+    out = []
+    for name in sorted(by_recipe):
+        series = by_recipe[name]
+        starts = [str(r.get("start_date") or "")[:10] for r in series if r.get("start_date")]
+        if not starts:
+            continue
+        start = min(starts)
+        book = [r for r in series if str(r.get("start_date") or "")[:10] == start]
+        book.sort(key=lambda r: str(r.get("D") or ""))
+        reads = str((book[0].get("reads_news") if book else "") or "").lower() == "true"
+
+        def chain(pred) -> tuple[int, float | None, float | None]:
+            fut_vals = []
+            flat_vals = []
+            for row in book:
+                if not pred(row):
+                    continue
+                fut = _parse_net(row.get("net_ret_futubull") or "")
+                flat = _parse_net(row.get("net_ret_15bp") or "")
+                if fut is None and flat is None:
+                    continue
+                if fut is not None:
+                    fut_vals.append(fut)
+                if flat is not None:
+                    flat_vals.append(flat)
+            n = max(len(fut_vals), len(flat_vals))
+            return n, _compound_pct(fut_vals), _compound_pct(flat_vals)
+
+        all_n, all_fut, all_flat = chain(lambda _r: True)
+        timing_n, timing_fut, timing_flat = chain(
+            lambda r: str(r.get("timing_clean") or "").lower() == "true")
+        if reads:
+            clean_n, clean_fut, clean_flat = chain(
+                lambda r: str(r.get("timing_clean") or "").lower() == "true"
+                and str(r.get("news_clean") or "").lower() == "true")
+        else:
+            clean_n, clean_fut, clean_flat = None, None, None
+        out.append({
+            "recipe": name,
+            "reads_news": reads,
+            "start": start,
+            "all_n": all_n,
+            "all_futubull": all_fut,
+            "all_15bp": all_flat,
+            "timing_n": timing_n,
+            "timing_futubull": timing_fut,
+            "timing_15bp": timing_flat,
+            "clean_n": clean_n,
+            "clean_futubull": clean_fut,
+            "clean_15bp": clean_flat,
+        })
+    return out
+
+
+def format_window_pct(value: float | None) -> str:
+    if value is None:
+        return ""
+    return f"{value:.3f}"
+
+
+def clean_window_markdown(rows: list[dict]) -> str:
+    """Markdown table of each recipe on the three windows."""
+    windows = recipe_clean_windows(rows)
+    lines = [
+        "## Clean windows",
+        "",
+        "`timing_clean` is true only on `pit_rebuilt` days. "
+        "`news_clean` is false on the 18 sessions in "
+        "`data/quarantine_sessions.json` from #331 "
+        "(stale dated news and undated Finviz headlines). "
+        "`reads_news` is true when the recipe, or a combo member, "
+        "gates on news, a headline, the digest, a catalyst, the judge, "
+        "or map-heat. The both-clean window is filled only for those recipes. "
+        "Each book is the earliest start date. A blank return is omitted. "
+        "Returns are the compounded session percents already in the CSV. "
+        "Days that fail the flag are left out of the chain. The calendar "
+        "is not rebuilt.",
+        "",
+        "| recipe | reads_news | all n | all futubull % | all 15bp % | timing n | timing futubull % | timing 15bp % | both n | both futubull % | both 15bp % |",
+        "| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |",
+    ]
+    for row in windows:
+        both_n = "" if row["clean_n"] is None else str(row["clean_n"])
+        lines.append(
+            f"| `{row['recipe']}` | {format_bool(row['reads_news'])} | "
+            f"{row['all_n']} | {format_window_pct(row['all_futubull'])} | "
+            f"{format_window_pct(row['all_15bp'])} | "
+            f"{row['timing_n']} | {format_window_pct(row['timing_futubull'])} | "
+            f"{format_window_pct(row['timing_15bp'])} | "
+            f"{both_n} | {format_window_pct(row['clean_futubull'])} | "
+            f"{format_window_pct(row['clean_15bp'])} |"
+        )
+    return "\n".join(lines) + "\n"
+
+
+def splice_clean_windows(text: str, section: str) -> str:
+    """Replace an existing clean-window section, or append it."""
+    marker = "## Clean windows"
+    if marker in text:
+        head = text.split(marker, 1)[0].rstrip() + "\n\n"
+        return head + section
+    body = text.rstrip() + "\n\n" if text.strip() else ""
+    return body + section
 
 
 def write_baselines(payload: dict) -> None:
@@ -1970,9 +2196,11 @@ def publish_baselines(*, draws: int = RANDOM4_DRAWS) -> dict:
             "commit time). Per-recipe session returns for the shuffle test "
             "are `data/factor_mine/daily_returns.csv` (recipe, "
             "recipe_created_date, start_date, D, net_ret_futubull, "
-            "net_ret_15bp, day_status, source_shas). One row per recipe, "
-            "start date, and day. A held or missing day is `held` with empty "
-            "returns, never 0."
+            "net_ret_15bp, day_status, source_shas, timing_clean, "
+            "news_clean, reads_news). One row per recipe, start date, and "
+            "day. A held or missing day is `held` with empty returns, never 0. "
+            "timing_clean is true only on pit_rebuilt days. news_clean is "
+            "false on the #331 quarantine dates."
         ),
     }
     write_baselines(payload)
