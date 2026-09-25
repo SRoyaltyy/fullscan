@@ -83,11 +83,11 @@ jobs:
           }
 
           dispatch_preopen_ubuntu() {
-            echo "MISSING morning pack → preopen_all.yml ubuntu/DeepSeek"
+            echo "MISSING morning pack → preopen_all.yml ubuntu (no silent DeepSeek)"
             gh api --method POST "repos/${REPO}/actions/workflows/preopen_all.yml/dispatches" \
               -f ref=main \
               -f "inputs[runner]=ubuntu" \
-              -f "inputs[llm_backend]=deepseek" \
+              -f "inputs[llm_backend]=auto" \
               || true
           }
 

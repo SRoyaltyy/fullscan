@@ -467,9 +467,27 @@ def _packet_step_done(key: str, date: str) -> bool:
     return False
 
 
+def catalyst_attempt_fields(date: str) -> dict:
+    """Status line for preopen_status.json attempts[catalyst]."""
+    from . import catalyst_daily
+    data = catalyst_daily._load_json(
+        catalyst_daily.OUT_DIR / f"{date}_dossiers.json")
+    dossiers = [d for d in (data.get("dossiers") or []) if isinstance(d, dict)]
+    n_targets = int(data.get("n_targets") or len(dossiers) or 0)
+    n_ok = sum(1 for d in dossiers if catalyst_daily.usable_dossier(d))
+    status = str(data.get("status") or catalyst_daily.dossier_status(n_ok, n_targets))
+    n_timeout = sum(
+        1 for d in dossiers
+        if "timeout" in str(d.get("error") or "").lower()
+    )
+    detail = (f"{n_ok}/{n_targets} dossiers "
+              f"(grok timeout x{n_timeout}, deepseek empty)")
+    return {"status": status, "detail": detail}
+
+
 def run(date: str | None = None, force: bool = False,
         with_book: bool = True, llm_backend: str | None = None,
-        bypass_cutoff: bool = False) -> None:
+        bypass_cutoff: bool = False, skip_sectors: bool = False) -> None:
     date = date or _today()
     if bypass_cutoff:
         os.environ["PREOPEN_BYPASS_CUTOFF"] = "1"
@@ -530,6 +548,15 @@ def run(date: str | None = None, force: bool = False,
 
     def step(key: str, title: str, cmd: list[str],
              timeout_s: int | None = None) -> int:
+        if skip_sectors and key == "sector_predict":
+            print("[preopen-all] skip Per-sector predict "
+                  "(--skip-sectors; no silent DeepSeek)")
+            attempts.append({
+                "key": key, "title": title, "cmd": cmd,
+                "returncode": 0, "skipped": True, "status": "DEGRADED",
+                "detail": "skipped: gateway unreachable on this runner",
+            })
+            return 0
         if ((not force) and (not bypass_cutoff) and key in llm_steps
                 and preopen.past_predict_cutoff()):
             print(f"[preopen-all] skip {title} (past 09:25 ET — book still runs)")
@@ -548,7 +575,12 @@ def run(date: str | None = None, force: bool = False,
         if code != 0:
             print(f"[preopen-all] WARN: {title} exited {code}")
         snapshot_persist(date)
-        if code == 0 or _packet_step_done(key, date):
+        # Catalyst FAIL/DEGRADED still lands for audit (ok=False on the board).
+        catalyst_land = (
+            key == "catalyst"
+            and _exists("01_daily", "catalyst", f"{date}_dossiers.json")
+        )
+        if code == 0 or catalyst_land or _packet_step_done(key, date):
             _land(date, key, title)
         return code
 
@@ -842,9 +874,9 @@ def run(date: str | None = None, force: bool = False,
             detail = rows[0].get("reason") if rows and not ok else ""
             detail = detail or ("OK" if ok else "missing")
         elif key == "catalyst":
-            from . import catalyst_daily
-            ok = catalyst_daily.already_good(date)
-            detail = "OK grok_native" if ok else "missing / not grok_native"
+            view = catalyst_attempt_fields(date)
+            ok = view["status"] == "OK"
+            detail = f"{view['status']} {view['detail']}"
         elif key == "finviz_digest":
             rows = by_kind.get("finviz_digest") or []
             ok = bool(rows) and all(r.get("ok") for r in rows)
@@ -884,9 +916,34 @@ def run(date: str | None = None, force: bool = False,
             n = row.get("n_today") or 0
             print(f"    {row['workflow']:<22} n={n} latest={st}")
 
+    attempt_rows = []
+    for a in attempts:
+        row = {"key": a["key"], "title": a["title"], "returncode": a["returncode"]}
+        if a["key"] == "catalyst":
+            view = catalyst_attempt_fields(date)
+            code = a.get("returncode")
+            if code == 4:
+                view["status"] = "FAIL"
+            elif code == 3:
+                view["status"] = "DEGRADED"
+            elif a.get("status") in ("FAIL", "DEGRADED", "OK"):
+                view["status"] = a["status"]
+            row["status"] = view["status"]
+            row["detail"] = a.get("detail") or view["detail"]
+        elif a.get("status"):
+            row["status"] = a["status"]
+            if a.get("detail"):
+                row["detail"] = a["detail"]
+        attempt_rows.append(row)
     status = {
         "date": date,
         "generated_at": datetime.now(ET).isoformat(),
+        "run_id": os.environ.get("GITHUB_RUN_ID") or os.environ.get("PREOPEN_RUN_ID") or "",
+        "runner": (
+            os.environ.get("PREOPEN_RUNNER")
+            or os.environ.get("RUNNER_NAME")
+            or ""
+        ),
         "all_ok": bool(report.get("all_ok")) and not missing_required
                   and bool(grok.get("ok")) and (not with_book or book_ok),
         "qc_all_ok": bool(report.get("all_ok")),
@@ -894,10 +951,7 @@ def run(date: str | None = None, force: bool = False,
         "grok_ok": bool(grok.get("ok")),
         "grok_fails": grok.get("fails") or [],
         "missing_required": missing_required,
-        "attempts": [
-            {"key": a["key"], "title": a["title"], "returncode": a["returncode"]}
-            for a in attempts
-        ],
+        "attempts": attempt_rows,
         "github_runs": gh_runs,
         "qc": {
             "sector_n_ok": report.get("sector_n_ok"),
@@ -966,10 +1020,12 @@ def main() -> None:
     ap.add_argument("--llm-backend", default=None,
                     choices=["auto", "grok", "deepseek"],
                     help="auto=Grok then DeepSeek; grok=Grok only; deepseek=no Grok")
+    ap.add_argument("--skip-sectors", action="store_true",
+                    help="Do not write sector essays (ubuntu cannot reach a loopback gateway)")
     args = ap.parse_args()
     run(date=args.date, force=args.force,
         with_book=not args.no_book, llm_backend=args.llm_backend,
-        bypass_cutoff=args.bypass_cutoff)
+        bypass_cutoff=args.bypass_cutoff, skip_sectors=args.skip_sectors)
 
 
 if __name__ == "__main__":

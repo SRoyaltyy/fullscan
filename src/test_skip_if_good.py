@@ -475,6 +475,37 @@ def test_thin_pile_fallback_is_legit_only_when_graded_and_core_fired() -> None:
         assert skip_if_good.green_pile_fallback_is_legit(green) is False
 
 
+def test_preopen_pass_prior_not_forced_is_noop() -> None:
+    date = "2026-09-25"
+    with tempfile.TemporaryDirectory() as tmp:
+        root = Path(tmp)
+        daily = root / "01_daily"
+        daily.mkdir()
+        (daily / f"{date}_preopen_status.json").write_text(json.dumps({
+            "generated_at": "2026-09-25T09:40:00-04:00",
+            "run_id": "111",
+            "runner": "ecs",
+        }), encoding="utf-8")
+        with mock.patch.object(skip_if_good, "ROOT", root), \
+                mock.patch.object(skip_if_good, "_git_show_main", return_value=None), \
+                mock.patch.object(skip_if_good, "other_preopen_running", return_value=None), \
+                mock.patch.dict(os.environ, {"GITHUB_RUN_ID": "222"}, clear=False):
+            assert skip_if_good.check_preopen_pass(date) is True
+            assert skip_if_good.check_preopen_pass(date, force=True) is False
+
+
+def test_preopen_pass_no_prior_runs() -> None:
+    date = "2026-09-25"
+    with tempfile.TemporaryDirectory() as tmp:
+        root = Path(tmp)
+        (root / "01_daily").mkdir()
+        with mock.patch.object(skip_if_good, "ROOT", root), \
+                mock.patch.object(skip_if_good, "_git_show_main", return_value=None), \
+                mock.patch.object(skip_if_good, "other_preopen_running", return_value=None), \
+                mock.patch.dict(os.environ, {"GITHUB_RUN_ID": "222"}, clear=False):
+            assert skip_if_good.check_preopen_pass(date) is False
+
+
 if __name__ == "__main__":
     test_thin_pile_fallback_is_legit_only_when_graded_and_core_fired()
     test_skip_constants_match_pile_and_avoid_pandas()
@@ -501,4 +532,6 @@ if __name__ == "__main__":
     test_sidecar_running_false_without_github_env()
     test_postclose_all_cli_yields_to_sidecar_only_for_all_workflow()
     test_degraded_book_is_not_good()
+    test_preopen_pass_prior_not_forced_is_noop()
+    test_preopen_pass_no_prior_runs()
     print("ok")

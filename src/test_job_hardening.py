@@ -107,13 +107,12 @@ def test_cancel_in_progress_off_on_grok_jobs() -> None:
         assert "cancel-in-progress: false" in text, name
     book = (WF / "stock_book_all.yml").read_text(encoding="utf-8")
     assert "cancel-in-progress: ${{ github.event_name == 'schedule'" in book
-    # Fix #1: ubuntu Pre-Open must cancel twins. ECS Grok stays uncanceled.
+    # 2026-09-25: ECS and ubuntu share one Pre-Open group and queue.
     pre = (WF / "preopen_all.yml").read_text(encoding="utf-8")
-    assert "&& 'ubuntu' || 'ecs'" in pre
-    group_line = next(ln for ln in pre.splitlines() if ln.strip().startswith("group: preopen-all-"))
+    group_line = next(ln for ln in pre.splitlines() if ln.strip().startswith("group:"))
+    assert group_line.strip() == "group: preopen-all"
     assert "ubuntu-0" not in group_line and "ubuntu-stop" not in group_line
-    assert "&& 'ubuntu' || 'ecs'" in group_line
-    assert "cancel-in-progress: ${{ github.event_name == 'push' || github.event_name == 'schedule' || github.event.inputs.runner == 'ubuntu' }}" in pre
+    assert "cancel-in-progress: false" in pre
 
 
 def test_excel_mine_poke_on_main() -> None:
@@ -940,22 +939,24 @@ def test_incremental_land_and_day_board() -> None:
 
 
 def test_ubuntu_preopen_not_blocked_by_queued_ecs() -> None:
-    """A queued ecs-openclaw job must not block the ubuntu/DeepSeek packet."""
+    """ECS and ubuntu queue on one group. Ubuntu must not silently pick DeepSeek."""
     yml = (WF / "preopen_all.yml").read_text(encoding="utf-8")
-    assert "group: preopen-all-${{" in yml
-    assert "&& 'ubuntu' || 'ecs'" in yml
+    assert "\n  group: preopen-all\n" in yml
+    assert "cancel-in-progress: false" in yml
+    assert "&& 'ubuntu' || 'ecs'" not in yml
     assert "github.event_name == 'push'" in yml
-    assert "&& 'deepseek'" in yml
+    assert "&& 'deepseek'" not in yml
+    assert "github.event.inputs.llm_backend || 'auto'" in yml
+    assert "--job preopen_pass" in yml
+    assert "--skip-sectors" in yml
     assert "'/home/runner'" in yml
     assert "no persist lock dir (ubuntu)" in yml
     assert 'export HOME="${FULLSCAN_HOME:-/home/gha}"' not in yml
     assert "HOME: \"/home/gha\"" not in yml
-    # Fix #1 / #4: group line is stable ubuntu|ecs — no HHMM fork in the
-    # expression. Comments may mention the 2026-09-08 hole.
-    group_line = next(ln for ln in yml.splitlines() if ln.strip().startswith("group: preopen-all-"))
+    group_line = next(ln for ln in yml.splitlines() if ln.strip().startswith("group:"))
     assert "ubuntu-0" not in group_line
     assert "ubuntu-stop" not in group_line
-    assert "&& 'ubuntu' || 'ecs'" in group_line
+    assert group_line.strip() == "group: preopen-all"
     assert "ARGS=(--llm-backend \"$BACKEND\" --force)" not in yml
     assert "--bypass-cutoff" in yml
     assert "if: false" not in yml

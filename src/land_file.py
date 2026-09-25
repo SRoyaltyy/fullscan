@@ -83,6 +83,7 @@ def step_paths(date: str, key: str) -> list[Path]:
         ],
         "universe": [ROOT / "data" / "universe" / f"{date}_membership.csv"],
         "join": [ROOT / "data" / "join" / f"{date}_ranked.csv"],
+        "peer_rs": [ROOT / "data" / "peers" / f"{date}_peer_rs.csv"],
         "ab": [
             ROOT / "data" / "ab_checklist" / f"{date}_ab_checklist.csv",
             ROOT / "data" / "ab_checklist" / f"{date}_ab_checklist_enriched.csv",
@@ -210,6 +211,8 @@ def _qc_one(path: Path, date: str) -> output_qc.QCResult:
         return output_qc.qc_general_predict(path)
     if "events" in rel and name.endswith(".json"):
         return output_qc.qc_events_path(path)
+    if name.endswith("_dossiers.json") or name.endswith("_dossiers.md"):
+        return output_qc.qc_catalyst(path)
     if name.endswith("_weather.json"):
         from . import packet_gates
         ok, reason = packet_gates.weather_ok(
@@ -482,6 +485,12 @@ def _land_one_sector_body(date: str, sector: str) -> dict:
     return rec
 
 
+def _audit_even_if_qc_fails(path: Path) -> bool:
+    """Catalyst dossiers land for audit even when status is not OK."""
+    name = path.name
+    return name.endswith("_dossiers.json") or name.endswith("_dossiers.md")
+
+
 def _land_body(date: str, key: str, title: str,
                extra_paths: list[Path] | None, require_qc: bool,
                commit_msg: str = "") -> dict:
@@ -504,7 +513,7 @@ def _land_body(date: str, key: str, title: str,
             "preview": brief,
         }
         checks.append(row)
-        if qc.ok or (not require_qc and p.exists()):
+        if qc.ok or _audit_even_if_qc_fails(p) or (not require_qc and p.exists()):
             ok_paths.append(p)
         nbytes = p.stat().st_size if p.is_file() else int(qc.size or 0)
         print(f"[land] {key} {rel} ok={qc.ok} {qc.reason or ''} "

@@ -4,18 +4,20 @@ name: Pre-Open ALL (predictive one-shot)
 #   → packet (ECS). The ubuntu ranker does not wait on the ECS box —
 #   a 3h Grok hang must not leave BUY/SELL empty at 09:30.
 # CLOCK: GitHub schedule 09:55 UTC (~05:55 ET EDT) owns the unattended
-# start on ubuntu/DeepSeek. ECS systemd 05:55 is optional Grok extra.
+# start. ECS systemd 05:55 is optional Grok extra.
 # A dead laptop / offline ECS runner must not stall the 09:30 packet.
 # Skip-if-good: each file already quality-ok is not rewritten (no LLM).
 # This file is a poke: a main push that touches it starts the packet
-# (workflow_dispatch is 403 from the cloud agent). Push is ubuntu/DeepSeek
-# so a queued ECS job (offline runner) cannot block the 09:30 packet.
+# (workflow_dispatch is 403 from the cloud agent). Push and schedule
+# land on ubuntu-latest and stay on LLM_BACKEND=auto — they do not
+# silently map the runner to DeepSeek.
 #
-# HARDEN 2026-09-08 (fixes #1 #4 #F):
-#   #1 ONE ubuntu writer: group is always `preopen-all-ubuntu` (never
-#      ubuntu-HHMM). cancel-in-progress is true on that group so a late
-#      poke supersedes the prior ubuntu run. ECS stays on preopen-all-ecs
-#      with cancel-in-progress false (do not kill a 3h Grok call).
+# HARDEN 2026-09-25: one concurrency group `preopen-all` for ECS and
+# ubuntu, cancel-in-progress false, so a twin queues instead of writing
+# a second LLM packet. Twin guard no-ops when today's preopen_status.json
+# already landed (force=true is the only bypass). A completed pass with
+# a missing book is a narrow heal (book/tickets only). Ubuntu with a
+# loopback or unset OpenClaw URL skips sector essays.
 #   #4 Ubuntu late heal after 09:25 ET passes --bypass-cutoff (essays
 #      may run; skip-if-good still honors quality-ok files). Covers
 #      weekday cron, orch ubuntu dispatch, and a yml poke — not ECS.
@@ -85,10 +87,11 @@ permissions:
   pages: write
 
 concurrency:
-  # Stable names only. ubuntu-HHMM forks cannot cancel each other
-  # (2026-09-08: ubuntu-0945 vs ubuntu-0950 vs ubuntu-stop-1108 twins).
-  group: preopen-all-${{ (github.event_name == 'push' || github.event_name == 'schedule' || github.event.inputs.runner == 'ubuntu') && 'ubuntu' || 'ecs' }}
-  cancel-in-progress: ${{ github.event_name == 'push' || github.event_name == 'schedule' || github.event.inputs.runner == 'ubuntu' }}
+  # One group across ECS and ubuntu. A same-day twin queues instead of
+  # writing a second LLM packet in parallel (2026-09-25). cancel-in-progress
+  # stays false so a running Grok pass is not killed by the queued twin.
+  group: preopen-all
+  cancel-in-progress: false
 
 env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -131,11 +134,21 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
+      - name: Twin guard (completed Pre-Open pass already landed)
+        if: github.event.inputs.force != 'true'
+        run: |
+          DATE="${{ github.event.inputs.run_date }}"
+          DATE="${DATE:-$(TZ=America/New_York date +%F)}"
+          git fetch origin main --quiet || true
+          if python3 -m src.skip_if_good --job preopen_pass --date "$DATE"; then
+            echo "skip=yes" >> "$GITHUB_ENV"
+          fi
       - uses: actions/setup-python@v5
+        if: env.skip != 'yes'
         with:
           python-version: "3.12"
       - name: Skip if digest + overlay already on disk
-        if: github.event.inputs.force != 'true'
+        if: env.skip != 'yes' && github.event.inputs.force != 'true'
         run: |
           DATE="${{ github.event.inputs.run_date }}"
           DATE="${DATE:-$(TZ=America/New_York date +%F)}"
@@ -191,9 +204,21 @@ jobs:
             01_daily/news/ 01_daily/map_heat/ data/exports/ \
             data/universe/ data/join/ data/ab_checklist/ data/peers/ \
             data/stock_book/ 01_daily/weather/ || true
+          DATE="${{ github.event.inputs.run_date }}"
+          DATE="${DATE:-$(TZ=America/New_York date +%F)}"
+          git checkout origin/main -- "01_daily/${DATE}_preopen_status.json" || true
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+      - name: Twin guard (completed Pre-Open pass already landed)
+        if: github.event.inputs.force != 'true'
+        run: |
+          DATE="${{ github.event.inputs.run_date }}"
+          DATE="${DATE:-$(TZ=America/New_York date +%F)}"
+          git fetch origin main --quiet || true
+          if python3 -m src.skip_if_good --job preopen_pass --date "$DATE"; then
+            echo "preopen_pass=yes" >> "$GITHUB_ENV"
+          fi
       - name: Skip if book + green already on disk
         run: |
           DATE="${{ github.event.inputs.run_date }}"
@@ -204,6 +229,8 @@ jobs:
           elif python3 -m src.skip_if_good --job stock_book_all --date "$DATE"; then
             echo "Book + green already on disk — no ranker"
             echo "skip=yes" >> "$GITHUB_ENV"
+          elif [ "${preopen_pass:-}" = "yes" ]; then
+            echo "narrow heal: book/tickets only — no sector or catalyst LLM, no rewrite of landed sector/news"
           fi
       - name: Open-pack tickets (even if book already good)
         if: env.skip == 'yes'
@@ -295,6 +322,16 @@ jobs:
           persist-credentials: true
           token: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Twin guard (completed Pre-Open pass already landed)
+        if: env.skip != 'yes' && github.event.inputs.force != 'true'
+        run: |
+          DATE="${{ github.event.inputs.run_date }}"
+          DATE="${DATE:-$(TZ=America/New_York date +%F)}"
+          git fetch origin main --quiet || true
+          if python3 -m src.skip_if_good --job preopen_pass --date "$DATE"; then
+            echo "skip=yes" >> "$GITHUB_ENV"
+          fi
+
       - name: Skip if packet AND stock book already on disk (no LLM)
         if: env.skip != 'yes' && github.event.inputs.force != 'true'
         run: |
@@ -375,7 +412,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           OPENCLAW_TIMEOUT: "10800"
           GROK_ONLY: "0"
-          LLM_BACKEND: ${{ (github.event_name == 'push' || github.event_name == 'schedule' || github.event.inputs.runner == 'ubuntu') && 'deepseek' || github.event.inputs.llm_backend || 'auto' }}
+          LLM_BACKEND: ${{ github.event.inputs.llm_backend || 'auto' }}
           FINVIZ_SKIP_LIVE: "1"
           PREOPEN_LLM_TIMEOUT: "900"
         timeout-minutes: 180
@@ -401,6 +438,19 @@ jobs:
           EVENT="${{ github.event_name }}"
           RUNNER="${{ github.event.inputs.runner }}"
           ARGS=(--llm-backend "$BACKEND")
+          ON_UBUNTU=0
+          if [ "$EVENT" = "push" ] || [ "$EVENT" = "schedule" ] || [ "$RUNNER" = "ubuntu" ]; then
+            ON_UBUNTU=1
+          fi
+          GW="${OPENCLAW_GATEWAY_URL:-}"
+          GW_LOOP=0
+          if [ -z "$GW" ] || printf '%s' "$GW" | grep -Eq '127\.0\.0\.1|localhost|\[::1\]'; then
+            GW_LOOP=1
+          fi
+          if [ "$ON_UBUNTU" = 1 ] && [ "$BACKEND" != "deepseek" ] && [ "$GW_LOOP" = 1 ]; then
+            ARGS+=(--skip-sectors)
+            echo "ubuntu runner: OpenClaw gateway is loopback/unset — skip sector essays (no silent DeepSeek)"
+          fi
           [ -n "$DATE" ] && ARGS+=(--date "$DATE")
           [ "$BOOK" = "false" ] && ARGS+=(--no-book)
           if [ "$FORCE" = "true" ]; then

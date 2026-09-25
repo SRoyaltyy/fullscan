@@ -578,6 +578,139 @@ def check_open_0930(date: str) -> bool:
                 f"paper connected tickets={last.get('n_tickets')}")
 
 
+def _et_day(iso: str) -> str:
+    text = (iso or "").strip()
+    if not text:
+        return ""
+    try:
+        dt = datetime.fromisoformat(text.replace("Z", "+00:00"))
+    except ValueError:
+        return text[:10]
+    if dt.tzinfo is None:
+        dt = dt.replace(tzinfo=ET)
+    return dt.astimezone(ET).date().isoformat()
+
+
+def _git_show_main(rel: str) -> str | None:
+    """Blob of rel on origin/main, if this checkout can see it."""
+    if os.environ.get("SKIP_IF_GOOD_NO_FETCH") == "1":
+        return None
+    import subprocess
+    try:
+        if (os.environ.get("GITHUB_ACTIONS") or "").lower() == "true":
+            subprocess.run(
+                ["git", "fetch", "origin", "main"],
+                cwd=ROOT, capture_output=True, timeout=30, check=False,
+            )
+        proc = subprocess.run(
+            ["git", "show", f"origin/main:{rel}"],
+            cwd=ROOT, capture_output=True, timeout=20, check=False,
+        )
+    except (OSError, subprocess.TimeoutExpired):
+        return None
+    if proc.returncode != 0 or not proc.stdout:
+        return None
+    return proc.stdout.decode("utf-8", "replace")
+
+
+def _load_preopen_status(date: str) -> dict | None:
+    rel = f"01_daily/{date}_preopen_status.json"
+    blob = _git_show_main(rel)
+    if blob:
+        try:
+            data = json.loads(blob)
+            if isinstance(data, dict):
+                return data
+        except json.JSONDecodeError:
+            pass
+    path = ROOT / "01_daily" / f"{date}_preopen_status.json"
+    if not path.is_file():
+        return None
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return None
+    return data if isinstance(data, dict) else None
+
+
+def other_preopen_running(date: str) -> dict | None:
+    """Another Pre-Open ALL run for this date that is still queued or running.
+
+    ``gh run list -w preopen_all.yml --created >=today``. This run's own
+    id is ignored. Offline / no token → None (do not block the only writer).
+    """
+    if os.environ.get("SKIP_IF_GOOD_NO_GH") == "1":
+        return None
+    this = str(os.environ.get("GITHUB_RUN_ID") or "")
+    import subprocess
+    try:
+        proc = subprocess.run(
+            ["gh", "run", "list", "-w", "preopen_all.yml",
+             "--created", f">={date}",
+             "--json", "databaseId,status,conclusion,createdAt",
+             "--limit", "20"],
+            cwd=ROOT, capture_output=True, text=True, timeout=25, check=False,
+        )
+    except (OSError, subprocess.TimeoutExpired):
+        return None
+    if proc.returncode != 0:
+        return None
+    try:
+        rows = json.loads(proc.stdout or "[]")
+    except json.JSONDecodeError:
+        return None
+    active = {"in_progress", "queued", "waiting", "pending", "requested"}
+    if not isinstance(rows, list):
+        return None
+    for row in rows:
+        if not isinstance(row, dict):
+            continue
+        rid = str(row.get("databaseId") or "")
+        if this and rid == this:
+            continue
+        if str(row.get("status") or "") in active:
+            return {"id": rid, "status": row.get("status"),
+                    "createdAt": row.get("createdAt")}
+    return None
+
+
+def check_preopen_pass(date: str, force: bool = False) -> bool:
+    """True = a completed Pre-Open ALL pass already landed today → no-op.
+
+    Evidence is ``01_daily/<date>_preopen_status.json`` with ``generated_at``
+    on that date, written by a different ``run_id``. An in-progress twin
+    also no-ops. ``force=True`` is the only bypass.
+    """
+    if force:
+        print(f"twin guard: force=true — running {date}", flush=True)
+        return _log(False, "preopen_pass", date, "force=true — twin guard bypassed")
+    data = _load_preopen_status(date)
+    this = str(os.environ.get("GITHUB_RUN_ID") or "")
+    if isinstance(data, dict) and _et_day(str(data.get("generated_at") or "")) == date:
+        rid = str(data.get("run_id") or "")
+        same = bool(this) and bool(rid) and this == rid
+        if not same:
+            when = str(data.get("generated_at") or "")
+            who = rid or "?"
+            print(
+                f"twin guard: pass by run {who} at {when} already landed "
+                f"— no-op (use force=true)",
+                flush=True,
+            )
+            return _log(True, "preopen_pass", date,
+                        f"run {who} at {when} runner={data.get('runner') or ''}")
+    other = other_preopen_running(date)
+    if other:
+        oid = other.get("id") or "?"
+        print(
+            f"twin guard: run {oid} already in progress for {date} "
+            f"— no-op (use force=true)",
+            flush=True,
+        )
+        return _log(True, "preopen_pass", date, f"in progress run {oid}")
+    return _log(False, "preopen_pass", date, "no completed pass yet")
+
+
 def check_preopen_full(date: str) -> bool:
     """Morning packet AND today's stock book — one-click pre-open done."""
     if not check_preopen_all(date):
@@ -734,6 +867,7 @@ JOBS = {
     "finviz_preopen_scrape": check_finviz_scrape,
     "preopen_all": check_preopen_all,
     "preopen_full": check_preopen_full,
+    "preopen_pass": check_preopen_pass,
     "map_heat_postclose": check_map_heat_postclose,
     "stock_book_all": check_stock_book_all,
     "strategy_tickets": check_strategy_tickets,
@@ -752,8 +886,13 @@ def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--job", required=True, choices=sorted(JOBS))
     ap.add_argument("--date", default=None)
+    ap.add_argument("--force", action="store_true",
+                    help="preopen_pass only: ignore a completed same-day pass")
     args = ap.parse_args()
     os.chdir(ROOT)
+    if args.job == "preopen_pass":
+        ok = check_preopen_pass(args.date or _today(), force=args.force)
+        raise SystemExit(0 if ok else 1)
     if args.job == "postclose_all" and postclose_all_should_yield_to_sidecar():
         print("[skip_if_good] SKIP job=postclose_all "
               "sidecar already writing last-closed")

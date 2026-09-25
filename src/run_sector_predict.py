@@ -14,6 +14,7 @@ rewrite or re-land a quality-ok essay.
 from __future__ import annotations
 
 import argparse
+import json
 import os
 import re
 from datetime import datetime
@@ -163,7 +164,8 @@ def run_one(sector: str, date_str: str, ch1_md: str,
         if existing.ok:
             print(f"[sector-predict] {sector}: skip, quality-ok already on disk "
                   f"({existing.size} chars)")
-            return {"skipped": True, "quality": "ok", "path": path}
+            return {"skipped": True, "quality": "ok", "status": "OK",
+                    "provider": "", "path": path, "sector": sector}
         if os.path.exists(path):
             print(f"[sector-predict] {sector}: existing file rejected "
                   f"({existing.reason}) — throwing out and rerunning")
@@ -172,7 +174,8 @@ def run_one(sector: str, date_str: str, ch1_md: str,
         preopen.refuse_if_late(f"sector-predict {sector}", force=force)
     except SystemExit as e:
         print(str(e))
-        return {"skipped": True, "reason": "past_cutoff", "path": path}
+        return {"skipped": True, "reason": "past_cutoff", "status": "FAIL",
+                "path": path, "sector": sector}
     rubric = _load_system_prompt(sector)
     etf_ctx = etf_relative_snapshot(sector)
     seeds = search_query_bundle(sector, limit=16)
@@ -214,6 +217,8 @@ def run_one(sector: str, date_str: str, ch1_md: str,
         if attempt and preopen.past_predict_cutoff() and not force:
             print(f"[sector-predict] {sector}: past 09:25 ET, not retrying")
             break
+        stage = (f"SECTOR PREDICT {sector} {date_str}"
+                 + (f" retry{attempt}" if attempt else ""))
         text = deepseek_client.chat(
             [{"role": "system", "content": rubric},
              {"role": "user", "content": user_msg + retry_extra}],
@@ -221,9 +226,21 @@ def run_one(sector: str, date_str: str, ch1_md: str,
             transcript_path=os.path.join(
                 "01_daily/_transcripts", f"{date_str}_sector_{slug}_predict.json"),
             trace_path=os.path.join(out_dir, f"{slug}_predict_trace.md"),
-            stage_label=f"SECTOR PREDICT {sector} {date_str}"
-                        + (f" retry{attempt}" if attempt else ""),
+            stage_label=stage,
         )
+        provider = deepseek_client.last_provider()
+        fallback_reason = deepseek_client.last_fallback_reason()
+        if deepseek_client.last_sector_degraded() or (
+                not (text or "").strip() and provider != "deepseek"):
+            print(f"[sector-predict] {sector}: DEGRADED "
+                  f"provider={provider or 'openclaw'} "
+                  f"fallback_reason={fallback_reason or 'gateway timeout'}")
+            return {
+                "skipped": True, "quality": "degraded", "status": "DEGRADED",
+                "provider": provider or "openclaw",
+                "fallback_reason": fallback_reason,
+                "path": path, "sector": sector,
+            }
         raw_qc = output_qc.qc_text_sector_predict(text or "", path)
         if not raw_qc.ok:
             print(f"[sector-predict] {sector}: attempt {attempt + 1} raw QC "
@@ -251,15 +268,69 @@ def run_one(sector: str, date_str: str, ch1_md: str,
             output_qc.reject(path)
             continue
         _update_scoreboard(sector, date_str, slug, decision, horizon_calls)
+        decision = dict(decision)
+        decision["status"] = "OK"
+        decision["provider"] = provider or "openclaw"
+        decision["fallback_reason"] = fallback_reason
+        decision["sector"] = sector
+        decision["path"] = path
         print(f"[sector-predict] {sector}: {decision['predicted_direction']}/"
               f"{decision['predicted_magnitude_band']} "
-              f"total={decision['total_score']} -> {path}")
+              f"total={decision['total_score']} provider={decision['provider']} "
+              f"-> {path}")
         return decision
     print(f"[sector-predict] {sector}: FAIL-CLOSED after {retries + 1} "
           f"attempt(s) ({getattr(last_qc, 'reason', 'unknown')})")
     output_qc.reject(path)
-    return {"skipped": True, "quality": "fail",
-            "reason": getattr(last_qc, "reason", "qc_failed"), "path": path}
+    return {"skipped": True, "quality": "fail", "status": "FAIL",
+            "provider": deepseek_client.last_provider(),
+            "fallback_reason": deepseek_client.last_fallback_reason(),
+            "reason": getattr(last_qc, "reason", "qc_failed"),
+            "path": path, "sector": sector}
+
+
+def sector_llm_status(text: str, *, degraded: bool, qc_ok: bool) -> str:
+    """OK essay, DEGRADED when Grok missed and DeepSeek was blocked, else FAIL."""
+    if degraded:
+        return "DEGRADED"
+    if not (text or "").strip() or not qc_ok:
+        return "FAIL"
+    return "OK"
+
+
+def _llm_row(sector: str, result: dict) -> dict:
+    status = str(result.get("status") or "")
+    if not status:
+        if result.get("quality") == "degraded":
+            status = "DEGRADED"
+        elif result.get("quality") == "fail" or result.get("reason") == "past_cutoff":
+            status = "FAIL"
+        elif result.get("quality") == "ok" or result.get("predicted_direction"):
+            status = "OK"
+        else:
+            status = "FAIL"
+    return {
+        "sector": sector,
+        "status": status,
+        "provider": str(result.get("provider") or ""),
+        "fallback_reason": str(result.get("fallback_reason") or ""),
+    }
+
+
+def write_sector_llm(date_str: str, rows: list[dict]) -> str:
+    """Per-sector provider/status. Board and _qc.json read this sidecar."""
+    from .sector_board import provider_summary
+    out_dir = os.path.join(config.DAILY_SECTORS, date_str)
+    os.makedirs(out_dir, exist_ok=True)
+    path = os.path.join(out_dir, "_llm.json")
+    payload = {
+        "date": date_str,
+        "summary": provider_summary(rows),
+        "sectors": rows,
+    }
+    with open(path, "w", encoding="utf-8") as fh:
+        json.dump(payload, fh, indent=2)
+    return path
 
 
 def _should_mid_commit(result: dict) -> bool:
@@ -311,7 +382,8 @@ def main() -> None:
             "=== CHANNEL 1: PRE-FETCHED DATA ===\n"
             "(unavailable this run — do not invent precise levels)\n"
         )
-    n_ok = n_skip = n_fail = 0
+    n_ok = n_skip = n_fail = n_degraded = 0
+    llm_rows: list[dict] = []
     for i, sector in enumerate(sectors):
         print(f"\n======== SECTOR PREDICT: {sector} ========\n")
         budget = step_deadline.share(len(sectors) - i, MIN_SECTOR_S,
@@ -321,6 +393,11 @@ def main() -> None:
             print(f"[sector-predict] stop — {rem:.0f}s left in step, "
                   f"{len(sectors) - i} sectors not started (no stubs)")
             n_fail += len(sectors) - i
+            for late in sectors[i:]:
+                llm_rows.append({
+                    "sector": late, "status": "FAIL", "provider": "",
+                    "fallback_reason": "step deadline",
+                })
             break
         if budget is not None:
             print(f"[sector-predict] {sector}: budget {budget:.0f}s "
@@ -328,6 +405,7 @@ def main() -> None:
         with step_deadline.narrowed(budget):
             result = run_one(sector, date_str, ch1_md,
                              retries=args.retries, force=args.force)
+        llm_rows.append(_llm_row(sector, result))
         if _should_mid_commit(result):
             rec = land_file.land_one_sector(date_str, sector)
             print(f"[sector-predict] {sector}: mid-commit "
@@ -339,15 +417,26 @@ def main() -> None:
             n_ok += 1
         elif result.get("reason") == "past_cutoff":
             n_skip += 1
+        elif result.get("quality") == "degraded" or result.get("status") == "DEGRADED":
+            n_degraded += 1
         elif result.get("quality") == "fail" or result.get("skipped"):
             n_fail += 1
         else:
             n_ok += 1
+    if llm_rows:
+        write_sector_llm(date_str, llm_rows)
     report = output_qc.preopen_report(date_str)
     n_ok = report["sector_n_ok"]
     output_qc.write_preopen_report(date_str)
+    summary = ""
+    try:
+        from .sector_board import provider_summary
+        summary = provider_summary(llm_rows)
+    except Exception:  # noqa: BLE001
+        summary = ""
     print(f"\n[sector-predict] QC {n_ok}/{len(FINVIZ_SECTORS)} quality-ok "
-          f"(this-run skip={n_skip} fail={n_fail})")
+          f"(this-run skip={n_skip} fail={n_fail} degraded={n_degraded})"
+          + (f" {summary}" if summary else ""))
     if n_ok == 0:
         raise SystemExit("no quality-ok sector essays on disk")
 

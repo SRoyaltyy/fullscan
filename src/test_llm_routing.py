@@ -33,6 +33,7 @@ def _reset(openclaw_url: str = "", deepseek_key: str = "",
     dc._OPENCLAW_STATE["down"] = False
     dc._OPENCLAW_STATE["reason"] = ""
     dc._OPENCLAW_STATE["timeouts"] = 0
+    dc._OPENCLAW_STATE["last_fail_kind"] = ""
     if grok_only is None:
         os.environ.pop("GROK_ONLY", None)
     else:
