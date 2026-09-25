@@ -1,0 +1,101 @@
+{
+  "buys": [],
+  "cash": 9097.75,
+  "date": "2026-09-14",
+  "equity": 9537.67,
+  "fees": 17.0426,
+  "fills": [
+    {
+      "fees": 2.163,
+      "pnl": -10.94,
+      "price": 11.75,
+      "shares": 51,
+      "side": "SELL",
+      "ticker": "APPS"
+    },
+    {
+      "fees": 2.121,
+      "pnl": -13.47,
+      "price": 16.03,
+      "shares": 37,
+      "side": "SELL",
+      "ticker": "AUPH"
+    },
+    {
+      "fees": 3.7599,
+      "pnl": -27.55,
+      "price": 2.05,
+      "shares": 287,
+      "side": "SELL",
+      "ticker": "BAK"
+    },
+    {
+      "fees": 2.04,
+      "pnl": -42.66,
+      "price": 52.23,
+      "shares": 10,
+      "side": "SELL",
+      "ticker": "COHU"
+    },
+    {
+      "fees": 2.019,
+      "pnl": -73.05,
+      "price": 141.42,
+      "shares": 3,
+      "side": "SELL",
+      "ticker": "ORCL"
+    },
+    {
+      "fees": 2.9237,
+      "pnl": -0.23,
+      "price": 2.755,
+      "shares": 223,
+      "side": "SELL",
+      "ticker": "OVID"
+    },
+    {
+      "fees": 2.016,
+      "pnl": -4.69,
+      "price": 206.5,
+      "shares": 2,
+      "side": "SELL",
+      "ticker": "SANM"
+    }
+  ],
+  "holdings": [
+    "NVT"
+  ],
+  "mean": -1.6307,
+  "n_trades_today": 7,
+  "recipe": "union_h1_half",
+  "sells": [
+    "APPS",
+    "AUPH",
+    "BAK",
+    "COHU",
+    "ORCL",
+    "OVID",
+    "SANM"
+  ],
+  "state": {
+    "after": "2026-09-14",
+    "cash": 9097.75,
+    "pos": {
+      "NVT": {
+        "close_px": 146.63999938964844,
+        "cost": 475.33899633789065,
+        "entry_date": "2026-09-11",
+        "entry_px": 157.77999877929688,
+        "fee_in": 1.999,
+        "last_px": 150.0,
+        "min_hold": 1,
+        "notional": 473.3399963378906,
+        "peak_px": 157.77999877929688,
+        "reason": "deploy half leftover; list flatten; \ud83d\udd35; ret5=+2.0; leftover $609.11",
+        "shares": 3,
+        "ticker": "NVT"
+      }
+    },
+    "yday_equity": 9537.67
+  }
+}

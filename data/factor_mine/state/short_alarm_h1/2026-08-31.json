@@ -1,0 +1,93 @@
+{
+  "buys": [],
+  "cash": 10057.84,
+  "date": "2026-08-31",
+  "equity": 10057.84,
+  "fees": 32.7609,
+  "fills": [
+    {
+      "fees": 2.206,
+      "pnl": 64.31,
+      "price": 7.655,
+      "shares": 72,
+      "side": "COVER",
+      "ticker": "ABTC"
+    },
+    {
+      "fees": 2.053,
+      "pnl": -3.09,
+      "price": 29.67,
+      "shares": 21,
+      "side": "COVER",
+      "ticker": "BTU"
+    },
+    {
+      "fees": 2.008,
+      "pnl": 29.37,
+      "price": 87.04,
+      "shares": 6,
+      "side": "COVER",
+      "ticker": "CRCL"
+    },
+    {
+      "fees": 8.0625,
+      "pnl": -53.76,
+      "price": 1.06,
+      "shares": 625,
+      "side": "COVER",
+      "ticker": "OPTU"
+    },
+    {
+      "fees": 2.554,
+      "pnl": 17.39,
+      "price": 3.2,
+      "shares": 188,
+      "side": "COVER",
+      "ticker": "PYXS"
+    },
+    {
+      "fees": 11.3334,
+      "pnl": -17.89,
+      "price": 0.362,
+      "shares": 1712,
+      "side": "COVER",
+      "ticker": "SAFX"
+    },
+    {
+      "fees": 2.206,
+      "pnl": 25.07,
+      "price": 8.24,
+      "shares": 72,
+      "side": "COVER",
+      "ticker": "SBET"
+    },
+    {
+      "fees": 2.338,
+      "pnl": -3.56,
+      "price": 5.37,
+      "shares": 116,
+      "side": "COVER",
+      "ticker": "XPOF"
+    }
+  ],
+  "holdings": [],
+  "mean": -0.65,
+  "n_trades_today": 8,
+  "recipe": "short_alarm_h1",
+  "sells": [
+    "ABTC",
+    "BTU",
+    "CRCL",
+    "OPTU",
+    "PYXS",
+    "SAFX",
+    "SBET",
+    "XPOF"
+  ],
+  "state": {
+    "after": "2026-08-31",
+    "cash": 10057.84,
+    "pos": {},
+    "yday_equity": 10057.84
+  }
+}

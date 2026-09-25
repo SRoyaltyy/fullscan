@@ -1,0 +1,234 @@
+{
+  "buys": [],
+  "cash": 7194.05,
+  "date": "2026-09-14",
+  "equity": 9193.63,
+  "fees": 36.774,
+  "fills": [
+    {
+      "fees": 4.5178,
+      "pnl": -136.62,
+      "price": 2.15,
+      "shares": 345,
+      "side": "SELL",
+      "ticker": "ALEC"
+    },
+    {
+      "fees": 2.058,
+      "pnl": 40.86,
+      "price": 54.84,
+      "shares": 16,
+      "side": "SELL",
+      "ticker": "ATRC"
+    },
+    {
+      "fees": 2.4084,
+      "pnl": -105.41,
+      "price": 5.93,
+      "shares": 129,
+      "side": "SELL",
+      "ticker": "BHC"
+    },
+    {
+      "fees": 5.9942,
+      "pnl": -96.63,
+      "price": 1.715,
+      "shares": 458,
+      "side": "SELL",
+      "ticker": "BMEA"
+    },
+    {
+      "fees": 2.148,
+      "pnl": 1.24,
+      "price": 5.03,
+      "shares": 46,
+      "side": "SELL",
+      "ticker": "BNC"
+    },
+    {
+      "fees": 3.2896,
+      "pnl": -192.27,
+      "price": 2.72,
+      "shares": 251,
+      "side": "SELL",
+      "ticker": "CABA"
+    },
+    {
+      "fees": 2.2659,
+      "pnl": 3.89,
+      "price": 2.8,
+      "shares": 84,
+      "side": "SELL",
+      "ticker": "INDP"
+    },
+    {
+      "fees": 2.5762,
+      "pnl": -123.41,
+      "price": 4.13,
+      "shares": 182,
+      "side": "SELL",
+      "ticker": "OABI"
+    },
+    {
+      "fees": 7.1571,
+      "pnl": -14.21,
+      "price": 1.59,
+      "shares": 547,
+      "side": "SELL",
+      "ticker": "OPK"
+    },
+    {
+      "fees": 2.2438,
+      "pnl": -49.12,
+      "price": 10.73,
+      "shares": 77,
+      "side": "SELL",
+      "ticker": "VIR"
+    },
+    {
+      "fees": 2.115,
+      "pnl": -7.36,
+      "price": 6.4,
+      "shares": 35,
+      "side": "SELL",
+      "ticker": "VISN"
+    }
+  ],
+  "holdings": [
+    "AUPH",
+    "COHU",
+    "GPRO",
+    "NVT",
+    "ORCL",
+    "OVID",
+    "SANM"
+  ],
+  "mean": -0.9671,
+  "n_trades_today": 11,
+  "recipe": "combo_fh_7030_shared",
+  "sells": [
+    "ALEC",
+    "ATRC",
+    "BHC",
+    "BMEA",
+    "BNC",
+    "CABA",
+    "INDP",
+    "OABI",
+    "OPK",
+    "VIR",
+    "VISN"
+  ],
+  "state": {
+    "after": "2026-09-14",
+    "cash": 7194.05,
+    "pos": {
+      "AUPH": {
+        "close_px": 16.40999984741211,
+        "cost": 343.93301441955566,
+        "entry_date": "2026-09-11",
+        "entry_px": 16.280000686645508,
+        "fee_in": 2.053,
+        "last_px": 16.030000686645508,
+        "notional": 341.88001441955566,
+        "owner": "flatten_h5",
+        "peak_px": 16.280000686645508,
+        "reason": "baseline list, no extra gate; list flatten; wish-list (live io HOLD \u2014 not a ticket); ret5=-0.1; combo leftover $356.22; owner flatten_h5",
+        "shares": 21,
+        "side": "long",
+        "ticker": "AUPH"
+      },
+      "COHU": {
+        "close_px": 49.970001220703125,
+        "cost": 338.5480009155273,
+        "entry_date": "2026-09-11",
+        "entry_px": 56.09000015258789,
+        "fee_in": 2.008,
+        "last_px": 52.22999954223633,
+        "notional": 336.54000091552734,
+        "owner": "flatten_h5",
+        "peak_px": 56.09000015258789,
+        "reason": "baseline list, no extra gate; list flatten; wish-list (live io HOLD \u2014 not a ticket); \ud83d\udd35; \u26aa; ret5=+19.0; combo leftover $356.22; owner flatten_h5",
+        "shares": 6,
+        "side": "long",
+        "ticker": "COHU"
+      },
+      "GPRO": {
+        "close_px": 1.350000023841858,
+        "cost": 230.67899611377717,
+        "entry_date": "2026-09-11",
+        "entry_px": 1.399999976158142,
+        "fee_in": 2.479,
+        "last_px": 1.3700000047683716,
+        "notional": 228.19999611377716,
+        "owner": "union_hot_n4_h1",
+        "peak_px": 1.399999976158142,
+        "reason": "top 4 by hot; rank hot_score; list ohlc_hot; ret5=+0.7; combo leftover $229.07; owner union_hot_n4_h1",
+        "shares": 163,
+        "side": "long",
+        "ticker": "GPRO"
+      },
+      "NVT": {
+        "close_px": 146.63999938964844,
+        "cost": 317.55599755859373,
+        "entry_date": "2026-09-11",
+        "entry_px": 157.77999877929688,
+        "fee_in": 1.996,
+        "last_px": 150.0,
+        "notional": 315.55999755859375,
+        "owner": "flatten_h5",
+        "peak_px": 157.77999877929688,
+        "reason": "baseline list, no extra gate; list flatten; wish-list (live io HOLD \u2014 not a ticket); \ud83d\udd35; ret5=+2.0; combo leftover $356.22; owner flatten_h5",
+        "shares": 2,
+        "side": "long",
+        "ticker": "NVT"
+      },
+      "ORCL": {
+        "close_px": 144.7899932861328,
+        "cost": 330.8559853515625,
+        "entry_date": "2026-09-11",
+        "entry_px": 164.42999267578125,
+        "fee_in": 1.996,
+        "last_px": 141.4199981689453,
+        "notional": 328.8599853515625,
+        "owner": "flatten_h5",
+        "peak_px": 164.42999267578125,
+        "reason": "baseline list, no extra gate; list flatten,earn_react; wish-list (live io HOLD \u2014 not a ticket); \ud83d\udd35; \u26aa; ret5=-0.7; combo leftover $356.22; owner flatten_h5",
+        "shares": 2,
+        "side": "long",
+        "ticker": "ORCL"
+      },
+      "OVID": {
+        "close_px": 2.740000009536743,
+        "cost": 357.2800024795532,
+        "entry_date": "2026-09-11",
+        "entry_px": 2.7300000190734863,
+        "fee_in": 2.38,
+        "last_px": 2.755000114440918,
+        "notional": 354.9000024795532,
+        "owner": "flatten_h5",
+        "peak_px": 2.755000114440918,
+        "reason": "baseline list, no extra gate; list flatten; wish-list (live io HOLD \u2014 not a ticket); ret5=-5.4; combo leftover $356.22; owner flatten_h5",
+        "shares": 130,
+        "side": "long",
+        "ticker": "OVID"
+      },
+      "SANM": {
+        "close_px": 196.0399932861328,
+        "cost": 208.83299633789062,
+        "entry_date": "2026-09-11",
+        "entry_px": 206.83999633789062,
+        "fee_in": 1.993,
+        "last_px": 206.5,
+        "notional": 206.83999633789062,
+        "owner": "flatten_h5",
+        "peak_px": 206.83999633789062,
+        "reason": "baseline list, no extra gate; list flatten; wish-list (live io HOLD \u2014 not a ticket); ret5=+3.9; combo leftover $356.22; owner flatten_h5",
+        "shares": 1,
+        "side": "long",
+        "ticker": "SANM"
+      }
+    },
+    "yday_equity": 9193.63
+  }
+}

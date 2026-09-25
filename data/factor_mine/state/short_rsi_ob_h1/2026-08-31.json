@@ -1,0 +1,93 @@
+{
+  "buys": [],
+  "cash": 10069.3,
+  "date": "2026-08-31",
+  "equity": 10069.3,
+  "fees": 18.6667,
+  "fills": [
+    {
+      "fees": 2.002,
+      "pnl": -11.88,
+      "price": 148.03,
+      "shares": 4,
+      "side": "COVER",
+      "ticker": "ANF"
+    },
+    {
+      "fees": 2.092,
+      "pnl": 11.08,
+      "price": 17.7,
+      "shares": 34,
+      "side": "COVER",
+      "ticker": "BZ"
+    },
+    {
+      "fees": 3.9087,
+      "pnl": 34.53,
+      "price": 1.92,
+      "shares": 303,
+      "side": "COVER",
+      "ticker": "CRDL"
+    },
+    {
+      "fees": 2.227,
+      "pnl": -27.4,
+      "price": 8.17,
+      "shares": 79,
+      "side": "COVER",
+      "ticker": "CXM"
+    },
+    {
+      "fees": 2.005,
+      "pnl": 17.41,
+      "price": 102.7,
+      "shares": 5,
+      "side": "COVER",
+      "ticker": "EL"
+    },
+    {
+      "fees": 2.134,
+      "pnl": 23.54,
+      "price": 12.26,
+      "shares": 48,
+      "side": "COVER",
+      "ticker": "FSM"
+    },
+    {
+      "fees": 2.092,
+      "pnl": -3.03,
+      "price": 18.09,
+      "shares": 34,
+      "side": "COVER",
+      "ticker": "PATH"
+    },
+    {
+      "fees": 2.206,
+      "pnl": 25.07,
+      "price": 8.24,
+      "shares": 72,
+      "side": "COVER",
+      "ticker": "SBET"
+    }
+  ],
+  "holdings": [],
+  "mean": -0.0579,
+  "n_trades_today": 8,
+  "recipe": "short_rsi_ob_h1",
+  "sells": [
+    "ANF",
+    "BZ",
+    "CRDL",
+    "CXM",
+    "EL",
+    "FSM",
+    "PATH",
+    "SBET"
+  ],
+  "state": {
+    "after": "2026-08-31",
+    "cash": 10069.3,
+    "pos": {},
+    "yday_equity": 10069.3
+  }
+}

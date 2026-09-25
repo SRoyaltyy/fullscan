@@ -1,0 +1,288 @@
+{
+  "buys": [
+    "FEAM",
+    "GLND",
+    "AEHL",
+    "VICR",
+    "VKTX",
+    "ORBS",
+    "DNA",
+    "EU"
+  ],
+  "cash": 205.21,
+  "date": "2026-09-23",
+  "equity": 10160.23,
+  "fees": 67.7313,
+  "fills": [
+    {
+      "fees": 3.2504,
+      "pnl": -53.57,
+      "price": 4.89,
+      "shares": 248,
+      "side": "SELL",
+      "ticker": "AIBZ"
+    },
+    {
+      "fees": 2.019,
+      "pnl": 33.09,
+      "price": 331.78,
+      "shares": 3,
+      "side": "SELL",
+      "ticker": "ARM"
+    },
+    {
+      "fees": 2.169,
+      "pnl": -15.45,
+      "price": 23.3,
+      "shares": 53,
+      "side": "SELL",
+      "ticker": "ARQQ"
+    },
+    {
+      "fees": 2.0973,
+      "pnl": 29.47,
+      "price": 44.35,
+      "shares": 29,
+      "side": "SELL",
+      "ticker": "ASX"
+    },
+    {
+      "fees": 2.7939,
+      "pnl": 88.18,
+      "price": 6.36,
+      "shares": 213,
+      "side": "SELL",
+      "ticker": "FOSL"
+    },
+    {
+      "fees": 2.043,
+      "pnl": 15.4,
+      "price": 108.52,
+      "shares": 11,
+      "side": "SELL",
+      "ticker": "GRAL"
+    },
+    {
+      "fees": 2.0313,
+      "pnl": 100.29,
+      "price": 183.405,
+      "shares": 7,
+      "side": "SELL",
+      "ticker": "MRNA"
+    },
+    {
+      "fees": 2.5509,
+      "pnl": -74.66,
+      "price": 6.83,
+      "shares": 174,
+      "side": "SELL",
+      "ticker": "NUAI"
+    },
+    {
+      "fees": 5.6373,
+      "pnl": null,
+      "price": 2.92,
+      "shares": 437,
+      "side": "BUY",
+      "ticker": "FEAM"
+    },
+    {
+      "fees": 6.1017,
+      "pnl": null,
+      "price": 2.7,
+      "shares": 473,
+      "side": "BUY",
+      "ticker": "GLND"
+    },
+    {
+      "fees": 2.491,
+      "pnl": null,
+      "price": 7.62,
+      "shares": 167,
+      "side": "BUY",
+      "ticker": "AEHL"
+    },
+    {
+      "fees": 2.002,
+      "pnl": null,
+      "price": 266.5,
+      "shares": 4,
+      "side": "BUY",
+      "ticker": "VICR"
+    },
+    {
+      "fees": 2.08,
+      "pnl": null,
+      "price": 41.76,
+      "shares": 30,
+      "side": "BUY",
+      "ticker": "VKTX"
+    },
+    {
+      "fees": 14.3319,
+      "pnl": null,
+      "price": 1.15,
+      "shares": 1111,
+      "side": "BUY",
+      "ticker": "ORBS"
+    },
+    {
+      "fees": 2.407,
+      "pnl": null,
+      "price": 9.13,
+      "shares": 139,
+      "side": "BUY",
+      "ticker": "DNA"
+    },
+    {
+      "fees": 13.7256,
+      "pnl": null,
+      "price": 1.2,
+      "shares": 1064,
+      "side": "BUY",
+      "ticker": "EU"
+    }
+  ],
+  "holdings": [
+    "AEHL",
+    "DNA",
+    "EU",
+    "FEAM",
+    "GLND",
+    "ORBS",
+    "VICR",
+    "VKTX"
+  ],
+  "mean": -0.8646,
+  "n_trades_today": 16,
+  "recipe": "union_ret_5_h1",
+  "sells": [
+    "AIBZ",
+    "ARM",
+    "ARQQ",
+    "ASX",
+    "FOSL",
+    "GRAL",
+    "MRNA",
+    "NUAI"
+  ],
+  "state": {
+    "after": "2026-09-23",
+    "cash": 205.21,
+    "pos": {
+      "AEHL": {
+        "close_px": 8.229999542236328,
+        "cost": 1275.0309808883667,
+        "entry_date": "2026-09-23",
+        "entry_px": 7.619999885559082,
+        "fee_in": 2.491,
+        "last_px": 7.619999885559082,
+        "min_hold": 1,
+        "notional": 1272.5399808883667,
+        "peak_px": 7.619999885559082,
+        "reason": "rank by ret_5; rank ret_5; list yday_gainer; ret5=+49.8; leftover $1277.75",
+        "shares": 167,
+        "ticker": "AEHL"
+      },
+      "DNA": {
+        "close_px": 8.579999923706055,
+        "cost": 1271.4770159072875,
+        "entry_date": "2026-09-23",
+        "entry_px": 9.130000114440918,
+        "fee_in": 2.407,
+        "last_px": 9.130000114440918,
+        "min_hold": 1,
+        "notional": 1269.0700159072876,
+        "peak_px": 9.130000114440918,
+        "reason": "rank by ret_5; rank ret_5; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+34.0; leftover $1277.75",
+        "shares": 139,
+        "ticker": "DNA"
+      },
+      "EU": {
+        "close_px": 1.2200000286102295,
+        "cost": 1290.5256507354736,
+        "entry_date": "2026-09-23",
+        "entry_px": 1.2000000476837158,
+        "fee_in": 13.7256,
+        "last_px": 1.2000000476837158,
+        "min_hold": 1,
+        "notional": 1276.8000507354736,
+        "peak_px": 1.2000000476837158,
+        "reason": "rank by ret_5; rank ret_5; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+30.1; leftover $1277.75",
+        "shares": 1064,
+        "ticker": "EU"
+      },
+      "FEAM": {
+        "close_px": 2.640000104904175,
+        "cost": 1281.6773333404542,
+        "entry_date": "2026-09-23",
+        "entry_px": 2.9200000762939453,
+        "fee_in": 5.6373,
+        "last_px": 2.9200000762939453,
+        "min_hold": 1,
+        "notional": 1276.040033340454,
+        "peak_px": 2.9200000762939453,
+        "reason": "rank by ret_5; rank ret_5; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+133.3; leftover $1277.75",
+        "shares": 437,
+        "ticker": "FEAM"
+      },
+      "GLND": {
+        "close_px": 2.9100000858306885,
+        "cost": 1283.2017225543975,
+        "entry_date": "2026-09-23",
+        "entry_px": 2.700000047683716,
+        "fee_in": 6.1017,
+        "last_px": 2.700000047683716,
+        "min_hold": 1,
+        "notional": 1277.1000225543976,
+        "peak_px": 2.700000047683716,
+        "reason": "rank by ret_5; rank ret_5; list yday_mover; \ud83d\udd35; ret5=+109.2; leftover $1277.75",
+        "shares": 473,
+        "ticker": "GLND"
+      },
+      "ORBS": {
+        "close_px": 1.059999942779541,
+        "cost": 1291.9818735116958,
+        "entry_date": "2026-09-23",
+        "entry_px": 1.149999976158142,
+        "fee_in": 14.3319,
+        "last_px": 1.149999976158142,
+        "min_hold": 1,
+        "notional": 1277.6499735116959,
+        "peak_px": 1.149999976158142,
+        "reason": "rank by ret_5; rank ret_5; list yday_gainer; ret5=+36.2; leftover $1277.75",
+        "shares": 1111,
+        "ticker": "ORBS"
+      },
+      "VICR": {
+        "close_px": 283.1600036621094,
+        "cost": 1068.002,
+        "entry_date": "2026-09-23",
+        "entry_px": 266.5,
+        "fee_in": 2.002,
+        "last_px": 266.5,
+        "min_hold": 1,
+        "notional": 1066.0,
+        "peak_px": 266.5,
+        "reason": "rank by ret_5; rank ret_5; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+45.9; leftover $1277.75",
+        "shares": 4,
+        "ticker": "VICR"
+      },
+      "VKTX": {
+        "close_px": 41.650001525878906,
+        "cost": 1254.879949645996,
+        "entry_date": "2026-09-23",
+        "entry_px": 41.7599983215332,
+        "fee_in": 2.08,
+        "last_px": 41.7599983215332,
+        "min_hold": 1,
+        "notional": 1252.799949645996,
+        "peak_px": 41.7599983215332,
+        "reason": "rank by ret_5; rank ret_5; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+36.4; leftover $1277.75",
+        "shares": 30,
+        "ticker": "VKTX"
+      }
+    },
+    "yday_equity": 10160.23
+  }
+}

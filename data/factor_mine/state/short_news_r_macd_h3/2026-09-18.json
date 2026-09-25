@@ -1,0 +1,63 @@
+{
+  "buys": [],
+  "cash": 20279.21,
+  "date": "2026-09-18",
+  "equity": 10164.02,
+  "fees": 0,
+  "fills": [],
+  "holdings": [
+    "BBNX",
+    "GFR",
+    "TRMD"
+  ],
+  "mean": -1.5965,
+  "n_trades_today": 0,
+  "recipe": "short_news_r_macd_h3",
+  "sells": [],
+  "state": {
+    "after": "2026-09-18",
+    "cash": 20279.21,
+    "pos": {
+      "BBNX": {
+        "close_px": 21.889999389648438,
+        "cost": 2.4455643806771055,
+        "entry_date": "2026-09-17",
+        "entry_px": 22.459999084472656,
+        "fee_in": 2.4455643806771055,
+        "last_px": 21.299999237060547,
+        "notional": 2582.8998947143555,
+        "peak_px": 21.299999237060547,
+        "reason": "short news\ud83d\udd34 \u2229 prior MACD histogram > 0; gate news=bad,macd_up=True; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+27.3; leftover $2588.98",
+        "shares": 115,
+        "ticker": "BBNX"
+      },
+      "GFR": {
+        "close_px": 6.659999847412109,
+        "cost": 9.83448410804435,
+        "entry_date": "2026-09-16",
+        "entry_px": 6.829999923706055,
+        "fee_in": 9.83448410804435,
+        "last_px": 6.639999866485596,
+        "notional": 5047.369943618774,
+        "peak_px": 6.480000019073486,
+        "reason": "short news\ud83d\udd34 \u2229 prior MACD histogram > 0; gate news=bad,macd_up=True; list ohlc_hot; ret5=+11.2; leftover $5053.56",
+        "shares": 739,
+        "ticker": "GFR"
+      },
+      "TRMD": {
+        "close_px": 38.22999954223633,
+        "cost": 2.3021383570422866,
+        "entry_date": "2026-09-17",
+        "entry_px": 36.52000045776367,
+        "fee_in": 2.3021383570422866,
+        "last_px": 37.709999084472656,
+        "notional": 2556.400032043457,
+        "peak_px": 36.52000045776367,
+        "reason": "short news\ud83d\udd34 \u2229 prior MACD histogram > 0; gate news=bad,macd_up=True; list ohlc_hot; ret5=+3.2; leftover $2588.98",
+        "shares": 70,
+        "ticker": "TRMD"
+      }
+    },
+    "yday_equity": 10164.02
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "buys": [],
+  "cash": 9818.7,
+  "date": "2026-09-08",
+  "equity": 9818.7,
+  "fees": 19.604,
+  "fills": [
+    {
+      "fees": 2.151,
+      "pnl": 54.94,
+      "price": 26.44,
+      "shares": 47,
+      "side": "SELL",
+      "ticker": "ASST"
+    },
+    {
+      "fees": 2.016,
+      "pnl": 10.73,
+      "price": 521.15,
+      "shares": 2,
+      "side": "SELL",
+      "ticker": "DELL"
+    },
+    {
+      "fees": 2.7147,
+      "pnl": -1.25,
+      "price": 5.81,
+      "shares": 207,
+      "side": "SELL",
+      "ticker": "DFDV"
+    },
+    {
+      "fees": 3.9821,
+      "pnl": 46.82,
+      "price": 4.13,
+      "shares": 304,
+      "side": "SELL",
+      "ticker": "GORO"
+    },
+    {
+      "fees": 2.037,
+      "pnl": 37.3,
+      "price": 125.07,
+      "shares": 9,
+      "side": "SELL",
+      "ticker": "HOOD"
+    },
+    {
+      "fees": 2.5572,
+      "pnl": -71.96,
+      "price": 6.46,
+      "shares": 176,
+      "side": "SELL",
+      "ticker": "RSKD"
+    },
+    {
+      "fees": 2.094,
+      "pnl": 17.11,
+      "price": 43.05,
+      "shares": 28,
+      "side": "SELL",
+      "ticker": "SFBS"
+    },
+    {
+      "fees": 2.052,
+      "pnl": 93.5,
+      "price": 89.67,
+      "shares": 14,
+      "side": "SELL",
+      "ticker": "TARS"
+    }
+  ],
+  "holdings": [],
+  "mean": -0.7773,
+  "n_trades_today": 8,
+  "recipe": "ohlc_hot_h1",
+  "sells": [
+    "ASST",
+    "DELL",
+    "DFDV",
+    "GORO",
+    "HOOD",
+    "RSKD",
+    "SFBS",
+    "TARS"
+  ],
+  "state": {
+    "after": "2026-09-08",
+    "cash": 9818.7,
+    "pos": {},
+    "yday_equity": 9818.7
+  }
+}

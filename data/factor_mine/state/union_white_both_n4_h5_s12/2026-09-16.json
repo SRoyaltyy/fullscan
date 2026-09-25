@@ -1,0 +1,164 @@
+{
+  "buys": [
+    "IQV",
+    "RDNT",
+    "BLFS",
+    "TEM"
+  ],
+  "cash": 44.9,
+  "date": "2026-09-16",
+  "equity": 10144.81,
+  "fees": 8.299,
+  "fills": [
+    {
+      "fees": 2.011,
+      "pnl": null,
+      "price": 270.89,
+      "shares": 7,
+      "side": "BUY",
+      "ticker": "IQV"
+    },
+    {
+      "fees": 2.065,
+      "pnl": null,
+      "price": 77.12,
+      "shares": 25,
+      "side": "BUY",
+      "ticker": "RDNT"
+    },
+    {
+      "fees": 2.149,
+      "pnl": null,
+      "price": 36.46,
+      "shares": 53,
+      "side": "BUY",
+      "ticker": "BLFS"
+    },
+    {
+      "fees": 2.074,
+      "pnl": null,
+      "price": 68.79,
+      "shares": 28,
+      "side": "BUY",
+      "ticker": "TEM"
+    }
+  ],
+  "holdings": [
+    "BAND",
+    "BLFS",
+    "IQV",
+    "PAYP",
+    "RDNT",
+    "SWKS",
+    "TEM"
+  ],
+  "mean": -1.0931,
+  "n_trades_today": 4,
+  "recipe": "union_white_both_n4_h5_s12",
+  "sells": [],
+  "state": {
+    "after": "2026-09-16",
+    "cash": 44.9,
+    "pos": {
+      "BAND": {
+        "close_px": 48.93000030517578,
+        "cost": 842.8379877929688,
+        "entry_date": "2026-09-11",
+        "entry_px": 52.54999923706055,
+        "fee_in": 2.038,
+        "last_px": 48.599998474121094,
+        "min_hold": 5,
+        "notional": 840.7999877929688,
+        "peak_px": 56.900001525878906,
+        "reason": "both+top4 hold5, stop \u221212% at 09:30 even inside hold; gate cam_bad_max=0,yday_and_catalyst=True; rank list; list probable,yday_gainer; \ud83d\udd35; \u26aa; ret5=+9.6; leftover $851.24",
+        "shares": 16,
+        "ticker": "BAND"
+      },
+      "BLFS": {
+        "close_px": 36.11000061035156,
+        "cost": 1934.5289514770507,
+        "entry_date": "2026-09-16",
+        "entry_px": 36.459999084472656,
+        "fee_in": 2.149,
+        "last_px": 36.459999084472656,
+        "min_hold": 5,
+        "notional": 1932.3799514770508,
+        "peak_px": 36.459999084472656,
+        "reason": "both+top4 hold5, stop \u221212% at 09:30 even inside hold; gate cam_bad_max=0,yday_and_catalyst=True; rank list; list flatten; \ud83d\udd35; \u26aa; ret5=+2.9; leftover $1933.98",
+        "shares": 53,
+        "ticker": "BLFS"
+      },
+      "IQV": {
+        "close_px": 268.82000732421875,
+        "cost": 1898.2411025390625,
+        "entry_date": "2026-09-16",
+        "entry_px": 270.8900146484375,
+        "fee_in": 2.011,
+        "last_px": 270.8900146484375,
+        "min_hold": 5,
+        "notional": 1896.2301025390625,
+        "peak_px": 270.8900146484375,
+        "reason": "both+top4 hold5, stop \u221212% at 09:30 even inside hold; gate cam_bad_max=0,yday_and_catalyst=True; rank list; list flatten; \u26aa; ret5=+4.0; leftover $1933.98",
+        "shares": 7,
+        "ticker": "IQV"
+      },
+      "PAYP": {
+        "close_px": 17.649999618530273,
+        "cost": 843.9279649047852,
+        "entry_date": "2026-09-11",
+        "entry_px": 18.299999237060547,
+        "fee_in": 2.128,
+        "last_px": 17.729999542236328,
+        "min_hold": 5,
+        "notional": 841.7999649047852,
+        "peak_px": 18.299999237060547,
+        "reason": "both+top4 hold5, stop \u221212% at 09:30 even inside hold; gate cam_bad_max=0,yday_and_catalyst=True; rank list; list ohlc_hot; \u26aa; ret5=+7.7; leftover $851.24",
+        "shares": 46,
+        "ticker": "PAYP"
+      },
+      "RDNT": {
+        "close_px": 75.77999877929688,
+        "cost": 1930.0650686645508,
+        "entry_date": "2026-09-16",
+        "entry_px": 77.12000274658203,
+        "fee_in": 2.065,
+        "last_px": 77.12000274658203,
+        "min_hold": 5,
+        "notional": 1928.0000686645508,
+        "peak_px": 77.12000274658203,
+        "reason": "both+top4 hold5, stop \u221212% at 09:30 even inside hold; gate cam_bad_max=0,yday_and_catalyst=True; rank list; list flatten; \u26aa; ret5=+7.2; leftover $1933.98",
+        "shares": 25,
+        "ticker": "RDNT"
+      },
+      "SWKS": {
+        "close_px": 85.58999633789062,
+        "cost": 844.719966430664,
+        "entry_date": "2026-09-11",
+        "entry_px": 84.2699966430664,
+        "fee_in": 2.02,
+        "last_px": 89.37999725341797,
+        "min_hold": 5,
+        "notional": 842.6999664306641,
+        "peak_px": 89.37999725341797,
+        "reason": "both+top4 hold5, stop \u221212% at 09:30 even inside hold; gate cam_bad_max=0,yday_and_catalyst=True; rank list; list yday_gainer,ohlc_hot; \u26aa; ret5=+17.5; leftover $851.24",
+        "shares": 10,
+        "ticker": "SWKS"
+      },
+      "TEM": {
+        "close_px": 69.97000122070312,
+        "cost": 1928.1940256347657,
+        "entry_date": "2026-09-16",
+        "entry_px": 68.79000091552734,
+        "fee_in": 2.074,
+        "last_px": 68.79000091552734,
+        "min_hold": 5,
+        "notional": 1926.1200256347656,
+        "peak_px": 68.79000091552734,
+        "reason": "both+top4 hold5, stop \u221212% at 09:30 even inside hold; gate cam_bad_max=0,yday_and_catalyst=True; rank list; list probable,yday_gainer; \ud83d\udd35; \u26aa; ret5=+7.1; leftover $1933.98",
+        "shares": 28,
+        "ticker": "TEM"
+      }
+    },
+    "yday_equity": 10144.81
+  }
+}

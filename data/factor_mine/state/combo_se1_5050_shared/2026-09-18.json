@@ -1,0 +1,131 @@
+{
+  "buys": [
+    "FIVN"
+  ],
+  "cash": 24545.39,
+  "date": "2026-09-18",
+  "equity": 9724.79,
+  "fees": 9.1395,
+  "fills": [
+    {
+      "fees": 4.3688,
+      "pnl": 134.11,
+      "price": 11.64,
+      "shares": 332,
+      "side": "SELL",
+      "ticker": "ALMU"
+    },
+    {
+      "fees": 2.1668,
+      "pnl": -130.79,
+      "price": 78.25,
+      "shares": 46,
+      "side": "SELL",
+      "ticker": "LEN"
+    },
+    {
+      "fees": 2.6038986248695686,
+      "pnl": null,
+      "price": 34.44,
+      "shares": 140,
+      "side": "SHORT",
+      "ticker": "FIVN"
+    }
+  ],
+  "holdings": [
+    "BBNX",
+    "BULL",
+    "FIVN",
+    "GFR",
+    "TRMD"
+  ],
+  "mean": -0.9975,
+  "n_trades_today": 3,
+  "recipe": "combo_se1_5050_shared",
+  "sells": [
+    "ALMU",
+    "LEN"
+  ],
+  "state": {
+    "after": "2026-09-18",
+    "cash": 24545.39,
+    "pos": {
+      "BBNX": {
+        "close_px": 21.889999389648438,
+        "cost": 2.4909920569850974,
+        "entry_date": "2026-09-16",
+        "entry_px": 18.610000610351562,
+        "fee_in": 2.4909920569850974,
+        "last_px": 21.299999237060547,
+        "notional": 2437.9100799560547,
+        "owner": "short_news_r_h3",
+        "peak_px": 18.610000610351562,
+        "reason": "news\ud83d\udd34; gate news=bad; list probable,yday_gainer,yday_mover; ret5=-0.5; combo leftover $2445.72; owner short_news_r_h3",
+        "shares": 131,
+        "side": "short",
+        "ticker": "BBNX"
+      },
+      "BULL": {
+        "close_px": 8.25,
+        "cost": 4.044295888827598,
+        "entry_date": "2026-09-17",
+        "entry_px": 7.949999809265137,
+        "fee_in": 4.044295888827598,
+        "last_px": 7.849999904632568,
+        "notional": 2408.8499422073364,
+        "owner": "short_news_r_h3",
+        "peak_px": 7.849999904632568,
+        "reason": "news\ud83d\udd34; gate news=bad; list yday_mover; \ud83d\udd35; \u26aa; ret5=-18.4; combo leftover $2410.43; owner short_news_r_h3",
+        "shares": 303,
+        "side": "short",
+        "ticker": "BULL"
+      },
+      "FIVN": {
+        "close_px": 32.470001220703125,
+        "cost": 2.6038986248695686,
+        "entry_date": "2026-09-18",
+        "entry_px": 34.439998626708984,
+        "fee_in": 2.6038986248695686,
+        "last_px": 34.439998626708984,
+        "notional": 4821.599807739258,
+        "owner": "short_news_r_h3",
+        "peak_px": 34.439998626708984,
+        "reason": "news\ud83d\udd34; gate news=bad; list flatten; \ud83d\udd35; \u26aa; ret5=+14.0; combo leftover $4845.78; owner short_news_r_h3",
+        "shares": 140,
+        "side": "short",
+        "ticker": "FIVN"
+      },
+      "GFR": {
+        "close_px": 6.659999847412109,
+        "cost": 4.7641901362379935,
+        "entry_date": "2026-09-16",
+        "entry_px": 6.829999923706055,
+        "fee_in": 4.7641901362379935,
+        "last_px": 6.639999866485596,
+        "notional": 2445.1399726867676,
+        "owner": "short_news_r_h3",
+        "peak_px": 6.480000019073486,
+        "reason": "news\ud83d\udd34; gate news=bad; list ohlc_hot; ret5=+11.2; combo leftover $2445.72; owner short_news_r_h3",
+        "shares": 358,
+        "side": "short",
+        "ticker": "GFR"
+      },
+      "TRMD": {
+        "close_px": 38.22999954223633,
+        "cost": 2.284236165211299,
+        "entry_date": "2026-09-17",
+        "entry_px": 36.52000045776367,
+        "fee_in": 2.284236165211299,
+        "last_px": 37.709999084472656,
+        "notional": 2410.3200302124023,
+        "owner": "short_news_r_h3",
+        "peak_px": 36.52000045776367,
+        "reason": "news\ud83d\udd34; gate news=bad; list ohlc_hot; ret5=+3.2; combo leftover $2410.43; owner short_news_r_h3",
+        "shares": 66,
+        "side": "short",
+        "ticker": "TRMD"
+      }
+    },
+    "yday_equity": 9724.79
+  }
+}

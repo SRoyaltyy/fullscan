@@ -1,0 +1,187 @@
+{
+  "buys": [],
+  "cash": 7202.27,
+  "date": "2026-09-08",
+  "equity": 9800.37,
+  "fees": 23.6716,
+  "fills": [
+    {
+      "fees": 2.223,
+      "pnl": 82.52,
+      "price": 26.44,
+      "shares": 69,
+      "side": "SELL",
+      "ticker": "ASST"
+    },
+    {
+      "fees": 3.9469,
+      "pnl": -1.81,
+      "price": 5.81,
+      "shares": 301,
+      "side": "SELL",
+      "ticker": "DFDV"
+    },
+    {
+      "fees": 15.4457,
+      "pnl": 69.7,
+      "price": 1.565,
+      "shares": 1181,
+      "side": "SELL",
+      "ticker": "GPRO"
+    },
+    {
+      "fees": 2.056,
+      "pnl": 60.24,
+      "price": 125.07,
+      "shares": 14,
+      "side": "SELL",
+      "ticker": "HOOD"
+    }
+  ],
+  "holdings": [
+    "AMBA",
+    "ASAN",
+    "DOCU",
+    "GWRE",
+    "IOT",
+    "LULU",
+    "MAMA",
+    "PATH"
+  ],
+  "mean": -2.5725,
+  "n_trades_today": 4,
+  "recipe": "combo_eh_3070_shared",
+  "sells": [
+    "ASST",
+    "DFDV",
+    "GPRO",
+    "HOOD"
+  ],
+  "state": {
+    "after": "2026-09-08",
+    "cash": 7202.27,
+    "pos": {
+      "AMBA": {
+        "close_px": 63.47999954223633,
+        "cost": 317.9050015258789,
+        "entry_date": "2026-09-04",
+        "entry_px": 63.18000030517578,
+        "fee_in": 2.005,
+        "last_px": 63.83000183105469,
+        "notional": 315.9000015258789,
+        "owner": "union_e_fresh_h3",
+        "peak_px": 63.83000183105469,
+        "reason": "union \u2229 e_fresh, no \ud83d\udea8; gate days_since_E_max=1,flag_E_min=0; list earn_react; \ud83d\udd35; ret5=-10.9; combo leftover $364.94; owner union_e_fresh_h3",
+        "shares": 5,
+        "side": "long",
+        "ticker": "AMBA"
+      },
+      "ASAN": {
+        "close_px": 8.789999961853027,
+        "cost": 360.4529906158447,
+        "entry_date": "2026-09-04",
+        "entry_px": 8.739999771118164,
+        "fee_in": 2.113,
+        "last_px": 8.729999542236328,
+        "notional": 358.3399906158447,
+        "owner": "union_e_fresh_h3",
+        "peak_px": 8.739999771118164,
+        "reason": "union \u2229 e_fresh, no \ud83d\udea8; gate days_since_E_max=1,flag_E_min=0; list earn_react; \ud83d\udd35; ret5=-0.8; combo leftover $364.94; owner union_e_fresh_h3",
+        "shares": 41,
+        "side": "long",
+        "ticker": "ASAN"
+      },
+      "DOCU": {
+        "close_px": 65.08000183105469,
+        "cost": 344.604983215332,
+        "entry_date": "2026-09-04",
+        "entry_px": 68.5199966430664,
+        "fee_in": 2.005,
+        "last_px": 67.05000305175781,
+        "notional": 342.59998321533203,
+        "owner": "union_e_fresh_h3",
+        "peak_px": 68.5199966430664,
+        "reason": "union \u2229 e_fresh, no \ud83d\udea8; gate days_since_E_max=1,flag_E_min=0; list earn_react; \ud83d\udd35; ret5=+3.4; combo leftover $364.94; owner union_e_fresh_h3",
+        "shares": 5,
+        "side": "long",
+        "ticker": "DOCU"
+      },
+      "GWRE": {
+        "close_px": 149.7100067138672,
+        "cost": 337.0960061035156,
+        "entry_date": "2026-09-04",
+        "entry_px": 167.5500030517578,
+        "fee_in": 1.996,
+        "last_px": 160.52000427246094,
+        "notional": 335.1000061035156,
+        "owner": "union_e_fresh_h3",
+        "peak_px": 167.5500030517578,
+        "reason": "union \u2229 e_fresh, no \ud83d\udea8; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=+0.9; combo leftover $364.94; owner union_e_fresh_h3",
+        "shares": 2,
+        "side": "long",
+        "ticker": "GWRE"
+      },
+      "IOT": {
+        "close_px": 40.150001525878906,
+        "cost": 361.21401220703126,
+        "entry_date": "2026-09-04",
+        "entry_px": 44.900001525878906,
+        "fee_in": 2.014,
+        "last_px": 39.560001373291016,
+        "notional": 359.20001220703125,
+        "owner": "union_e_fresh_h3",
+        "peak_px": 44.900001525878906,
+        "reason": "union \u2229 e_fresh, no \ud83d\udea8; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=-7.5; combo leftover $364.94; owner union_e_fresh_h3",
+        "shares": 8,
+        "side": "long",
+        "ticker": "IOT"
+      },
+      "LULU": {
+        "close_px": 103.19000244140625,
+        "cost": 296.44900457763674,
+        "entry_date": "2026-09-04",
+        "entry_px": 98.1500015258789,
+        "fee_in": 1.999,
+        "last_px": 100.58000183105469,
+        "notional": 294.4500045776367,
+        "owner": "union_e_fresh_h3",
+        "peak_px": 100.58000183105469,
+        "reason": "union \u2229 e_fresh, no \ud83d\udea8; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=+5.9; combo leftover $364.94; owner union_e_fresh_h3",
+        "shares": 3,
+        "side": "long",
+        "ticker": "LULU"
+      },
+      "MAMA": {
+        "close_px": 15.5,
+        "cost": 363.15899561309817,
+        "entry_date": "2026-09-04",
+        "entry_px": 15.699999809265137,
+        "fee_in": 2.059,
+        "last_px": 15.199999809265137,
+        "notional": 361.09999561309814,
+        "owner": "union_e_fresh_h3",
+        "peak_px": 15.699999809265137,
+        "reason": "union \u2229 e_fresh, no \ud83d\udea8; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=-0.4; combo leftover $364.94; owner union_e_fresh_h3",
+        "shares": 23,
+        "side": "long",
+        "ticker": "MAMA"
+      },
+      "PATH": {
+        "close_px": 14.010000228881836,
+        "cost": 359.3359949645996,
+        "entry_date": "2026-09-04",
+        "entry_px": 16.239999771118164,
+        "fee_in": 2.056,
+        "last_px": 15.15999984741211,
+        "notional": 357.2799949645996,
+        "owner": "union_e_fresh_h3",
+        "peak_px": 16.239999771118164,
+        "reason": "union \u2229 e_fresh, no \ud83d\udea8; gate days_since_E_max=1,flag_E_min=0; list earn_react; \ud83d\udd35; ret5=-0.6; combo leftover $364.94; owner union_e_fresh_h3",
+        "shares": 22,
+        "side": "long",
+        "ticker": "PATH"
+      }
+    },
+    "yday_equity": 9800.37
+  }
+}

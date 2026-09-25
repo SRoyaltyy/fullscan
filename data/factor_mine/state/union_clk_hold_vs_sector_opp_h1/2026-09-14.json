@@ -1,0 +1,101 @@
+{
+  "buys": [],
+  "cash": 8851.23,
+  "date": "2026-09-14",
+  "equity": 10148.43,
+  "fees": 16.0927,
+  "fills": [
+    {
+      "fees": 2.0791,
+      "pnl": -7.82,
+      "price": 54.75,
+      "shares": 23,
+      "side": "SELL",
+      "ticker": "ASO"
+    },
+    {
+      "fees": 2.7931,
+      "pnl": -16.19,
+      "price": 5.86,
+      "shares": 213,
+      "side": "SELL",
+      "ticker": "DBI"
+    },
+    {
+      "fees": 2.4275,
+      "pnl": -0.77,
+      "price": 9.35,
+      "shares": 135,
+      "side": "SELL",
+      "ticker": "HAFN"
+    },
+    {
+      "fees": 2.472,
+      "pnl": 24.89,
+      "price": 8.65,
+      "shares": 149,
+      "side": "SELL",
+      "ticker": "HPK"
+    },
+    {
+      "fees": 2.187,
+      "pnl": -3.17,
+      "price": 21.23,
+      "shares": 59,
+      "side": "SELL",
+      "ticker": "PBR"
+    },
+    {
+      "fees": 2.058,
+      "pnl": -7.78,
+      "price": 77.1,
+      "shares": 16,
+      "side": "SELL",
+      "ticker": "VIST"
+    },
+    {
+      "fees": 2.076,
+      "pnl": 16.77,
+      "price": 56.06,
+      "shares": 22,
+      "side": "SELL",
+      "ticker": "YPF"
+    }
+  ],
+  "holdings": [
+    "GME"
+  ],
+  "mean": 0.4241,
+  "n_trades_today": 7,
+  "recipe": "union_clk_hold_vs_sector_opp_h1",
+  "sells": [
+    "ASO",
+    "DBI",
+    "HAFN",
+    "HPK",
+    "PBR",
+    "VIST",
+    "YPF"
+  ],
+  "state": {
+    "after": "2026-09-14",
+    "cash": 8851.23,
+    "pos": {
+      "GME": {
+        "close_px": 21.6200008392334,
+        "cost": 1264.5700549316407,
+        "entry_date": "2026-09-11",
+        "entry_px": 21.040000915527344,
+        "fee_in": 2.17,
+        "last_px": 21.0,
+        "min_hold": 1,
+        "notional": 1262.4000549316406,
+        "peak_px": 21.040000915527344,
+        "reason": "Clock-B #6 \u2229 Theme Radar T\u22121 oppset; gate clk_hold_vs_sector=True,oppset=True; rank opp_rvol; list ohlc_hot; \ud83d\udd35; ret5=+6.0; leftover $1263.73",
+        "shares": 60,
+        "ticker": "GME"
+      }
+    },
+    "yday_equity": 10148.43
+  }
+}

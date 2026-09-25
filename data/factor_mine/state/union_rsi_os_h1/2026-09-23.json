@@ -1,0 +1,119 @@
+{
+  "buys": [
+    "NMRA",
+    "CMPX",
+    "XNDU",
+    "EVER"
+  ],
+  "cash": 10.18,
+  "date": "2026-09-23",
+  "equity": 7465.56,
+  "fees": 56.2753,
+  "fills": [
+    {
+      "fees": 28.1952,
+      "pnl": null,
+      "price": 0.768,
+      "shares": 2640,
+      "side": "BUY",
+      "ticker": "NMRA"
+    },
+    {
+      "fees": 21.4269,
+      "pnl": null,
+      "price": 1.22,
+      "shares": 1661,
+      "side": "BUY",
+      "ticker": "CMPX"
+    },
+    {
+      "fees": 4.3602,
+      "pnl": null,
+      "price": 5.99,
+      "shares": 338,
+      "side": "BUY",
+      "ticker": "XNDU"
+    },
+    {
+      "fees": 2.293,
+      "pnl": null,
+      "price": 19.46,
+      "shares": 101,
+      "side": "BUY",
+      "ticker": "EVER"
+    }
+  ],
+  "holdings": [
+    "CMPX",
+    "EVER",
+    "NMRA",
+    "XNDU"
+  ],
+  "mean": -7.9517,
+  "n_trades_today": 4,
+  "recipe": "union_rsi_os_h1",
+  "sells": [],
+  "state": {
+    "after": "2026-09-23",
+    "cash": 10.18,
+    "pos": {
+      "CMPX": {
+        "close_px": 1.1699999570846558,
+        "cost": 2047.8469475215911,
+        "entry_date": "2026-09-23",
+        "entry_px": 1.2200000286102295,
+        "fee_in": 21.4269,
+        "last_px": 1.2200000286102295,
+        "min_hold": 1,
+        "notional": 2026.4200475215912,
+        "peak_px": 1.2200000286102295,
+        "reason": "union \u2229 rsi_os, no \ud83d\udea8; gate rsi_os=True; list yday_mover; \ud83d\udd35; ret5=-33.0; leftover $2027.62",
+        "shares": 1661,
+        "ticker": "CMPX"
+      },
+      "EVER": {
+        "close_px": 17.6299991607666,
+        "cost": 1967.7529075317382,
+        "entry_date": "2026-09-23",
+        "entry_px": 19.459999084472656,
+        "fee_in": 2.293,
+        "last_px": 19.459999084472656,
+        "min_hold": 1,
+        "notional": 1965.4599075317383,
+        "peak_px": 19.459999084472656,
+        "reason": "union \u2229 rsi_os, no \ud83d\udea8; gate rsi_os=True; list yday_mover; ret5=-20.1; leftover $2027.62",
+        "shares": 101,
+        "ticker": "EVER"
+      },
+      "NMRA": {
+        "close_px": 0.7310000061988831,
+        "cost": 2055.7152176239015,
+        "entry_date": "2026-09-23",
+        "entry_px": 0.7680000066757202,
+        "fee_in": 28.1952,
+        "last_px": 0.7680000066757202,
+        "min_hold": 1,
+        "notional": 2027.5200176239014,
+        "peak_px": 0.7680000066757202,
+        "reason": "union \u2229 rsi_os, no \ud83d\udea8; gate rsi_os=True; list probable,yday_gainer,yday_mover; \ud83d\udd35; ret5=-6.3; leftover $2027.62",
+        "shares": 2640,
+        "ticker": "NMRA"
+      },
+      "XNDU": {
+        "close_px": 5.329999923706055,
+        "cost": 2028.9801226379395,
+        "entry_date": "2026-09-23",
+        "entry_px": 5.989999771118164,
+        "fee_in": 4.3602,
+        "last_px": 5.989999771118164,
+        "min_hold": 1,
+        "notional": 2024.6199226379395,
+        "peak_px": 5.989999771118164,
+        "reason": "union \u2229 rsi_os, no \ud83d\udea8; gate rsi_os=True; list yday_mover; \ud83d\udd35; ret5=-25.9; leftover $2027.62",
+        "shares": 338,
+        "ticker": "XNDU"
+      }
+    },
+    "yday_equity": 7465.56
+  }
+}

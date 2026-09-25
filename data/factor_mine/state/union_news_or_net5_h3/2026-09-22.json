@@ -1,0 +1,77 @@
+{
+  "buys": [],
+  "cash": 463.35,
+  "date": "2026-09-22",
+  "equity": 7825.58,
+  "fees": 0.258,
+  "fills": [
+    {
+      "fees": 0.258,
+      "pnl": 0.9,
+      "price": 23.5,
+      "shares": 1,
+      "side": "SELL",
+      "ticker": "GME"
+    }
+  ],
+  "holdings": [
+    "ISRG",
+    "SMTC",
+    "VICR"
+  ],
+  "mean": 5.5004,
+  "n_trades_today": 1,
+  "recipe": "union_news_or_net5_h3",
+  "sells": [
+    "GME"
+  ],
+  "state": {
+    "after": "2026-09-22",
+    "cash": 463.35,
+    "pos": {
+      "ISRG": {
+        "close_px": 402.09,
+        "cost": 2365.348087890625,
+        "entry_date": "2026-09-21",
+        "entry_px": 393.8900146484375,
+        "fee_in": 2.008,
+        "last_px": 403.0,
+        "min_hold": 3,
+        "notional": 2363.340087890625,
+        "peak_px": 403.0,
+        "reason": "packet\ud83d\udfe2 OR headline\ud83d\udfe2 and camera net \u2265 5; gate news_or_headline=True,cam_net_min=5; rank cond; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+6.6; leftover $2528.64",
+        "shares": 6,
+        "ticker": "ISRG"
+      },
+      "SMTC": {
+        "close_px": 174.33,
+        "cost": 2475.9290396728516,
+        "entry_date": "2026-09-21",
+        "entry_px": 190.3000030517578,
+        "fee_in": 2.029,
+        "last_px": 174.12,
+        "min_hold": 3,
+        "notional": 2473.9000396728516,
+        "peak_px": 190.3000030517578,
+        "reason": "packet\ud83d\udfe2 OR headline\ud83d\udfe2 and camera net \u2265 5; gate news_or_headline=True,cam_net_min=5; rank cond; list ohlc_hot; ret5=+10.6; leftover $2528.64",
+        "shares": 13,
+        "ticker": "SMTC"
+      },
+      "VICR": {
+        "close_px": 268.34,
+        "cost": 2304.52,
+        "entry_date": "2026-09-21",
+        "entry_px": 230.25,
+        "fee_in": 2.02,
+        "last_px": 241.04,
+        "min_hold": 3,
+        "notional": 2302.5,
+        "peak_px": 241.04,
+        "reason": "packet\ud83d\udfe2 OR headline\ud83d\udfe2 and camera net \u2265 5; gate news_or_headline=True,cam_net_min=5; rank cond; list ohlc_hot; ret5=+12.5; leftover $2528.64",
+        "shares": 10,
+        "ticker": "VICR"
+      }
+    },
+    "yday_equity": 7825.58
+  }
+}

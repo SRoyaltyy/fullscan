@@ -1,0 +1,93 @@
+{
+  "buys": [
+    "FIVN"
+  ],
+  "cash": 20507.37,
+  "date": "2026-09-22",
+  "equity": 10166.34,
+  "fees": 7.1567,
+  "fills": [
+    {
+      "fees": 2.335,
+      "pnl": 27.42,
+      "price": 22.18,
+      "shares": 115,
+      "side": "COVER",
+      "ticker": "BBNX"
+    },
+    {
+      "fees": 2.2,
+      "pnl": 64.1,
+      "price": 35.54,
+      "shares": 70,
+      "side": "COVER",
+      "ticker": "TRMD"
+    },
+    {
+      "fees": 2.6216950684931506,
+      "pnl": null,
+      "price": 37.12,
+      "shares": 141,
+      "side": "SHORT",
+      "ticker": "FIVN"
+    }
+  ],
+  "holdings": [
+    "AEHL",
+    "AMD",
+    "FIVN"
+  ],
+  "mean": -3.8992,
+  "n_trades_today": 3,
+  "recipe": "short_news_r_macd_h3",
+  "sells": [
+    "BBNX",
+    "TRMD"
+  ],
+  "state": {
+    "after": "2026-09-22",
+    "cash": 20507.37,
+    "pos": {
+      "AEHL": {
+        "close_px": 7.73,
+        "cost": 4.141053426601462,
+        "entry_date": "2026-09-21",
+        "entry_px": 8.260000228881836,
+        "fee_in": 4.141053426601462,
+        "last_px": 7.63,
+        "notional": 2560.600070953369,
+        "peak_px": 7.63,
+        "reason": "short news\ud83d\udd34 \u2229 prior MACD histogram > 0; gate news=bad,macd_up=True; list yday_mover; ret5=+7.7; leftover $2565.92",
+        "shares": 310,
+        "ticker": "AEHL"
+      },
+      "AMD": {
+        "close_px": 623.77001953125,
+        "cost": 2.0946868498501714,
+        "entry_date": "2026-09-21",
+        "entry_px": 583.8800048828125,
+        "fee_in": 2.0946868498501714,
+        "last_px": 606.5700073242188,
+        "notional": 2335.52001953125,
+        "peak_px": 583.8800048828125,
+        "reason": "short news\ud83d\udd34 \u2229 prior MACD histogram > 0; gate news=bad,macd_up=True; list ohlc_hot; ret5=+8.5; leftover $2565.92",
+        "shares": 4,
+        "ticker": "AMD"
+      },
+      "FIVN": {
+        "close_px": 38.65,
+        "cost": 2.6216950684931506,
+        "entry_date": "2026-09-22",
+        "entry_px": 37.12,
+        "fee_in": 2.6216950684931506,
+        "last_px": 37.12,
+        "notional": 5233.92,
+        "peak_px": 37.12,
+        "reason": "short news\ud83d\udd34 \u2229 prior MACD histogram > 0; gate news=bad,macd_up=True; list yday_gainer,ohlc_hot; ret5=+16.6; leftover $5242.25",
+        "shares": 141,
+        "ticker": "FIVN"
+      }
+    },
+    "yday_equity": 10166.34
+  }
+}

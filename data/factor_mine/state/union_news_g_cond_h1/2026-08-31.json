@@ -1,0 +1,84 @@
+{
+  "buys": [],
+  "cash": 9709.11,
+  "date": "2026-08-31",
+  "equity": 9709.11,
+  "fees": 15.6341,
+  "fills": [
+    {
+      "fees": 2.022,
+      "pnl": -17.82,
+      "price": 257.71,
+      "shares": 4,
+      "side": "SELL",
+      "ticker": "ADSK"
+    },
+    {
+      "fees": 2.019,
+      "pnl": -69.96,
+      "price": 378.44,
+      "shares": 3,
+      "side": "SELL",
+      "ticker": "CIEN"
+    },
+    {
+      "fees": 2.025,
+      "pnl": -35.31,
+      "price": 233.965,
+      "shares": 5,
+      "side": "SELL",
+      "ticker": "DDOG"
+    },
+    {
+      "fees": 2.019,
+      "pnl": -9.78,
+      "price": 322.49,
+      "shares": 3,
+      "side": "SELL",
+      "ticker": "KEYS"
+    },
+    {
+      "fees": 2.121,
+      "pnl": -68.97,
+      "price": 31.15,
+      "shares": 37,
+      "side": "SELL",
+      "ticker": "SEDG"
+    },
+    {
+      "fees": 2.034,
+      "pnl": -79.73,
+      "price": 132.3,
+      "shares": 8,
+      "side": "SELL",
+      "ticker": "SMTC"
+    },
+    {
+      "fees": 3.3941,
+      "pnl": -9.33,
+      "price": 4.81,
+      "shares": 259,
+      "side": "SELL",
+      "ticker": "TLS"
+    }
+  ],
+  "holdings": [],
+  "mean": -0.3116,
+  "n_trades_today": 7,
+  "recipe": "union_news_g_cond_h1",
+  "sells": [
+    "ADSK",
+    "CIEN",
+    "DDOG",
+    "KEYS",
+    "SEDG",
+    "SMTC",
+    "TLS"
+  ],
+  "state": {
+    "after": "2026-08-31",
+    "cash": 9709.11,
+    "pos": {},
+    "yday_equity": 9709.11
+  }
+}

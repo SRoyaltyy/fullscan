@@ -1,0 +1,140 @@
+{
+  "buys": [
+    "BB",
+    "NEOV",
+    "SFIX"
+  ],
+  "cash": 52.69,
+  "date": "2026-09-23",
+  "equity": 8339.55,
+  "fees": 0.4015,
+  "fills": [
+    {
+      "fees": 0.089,
+      "pnl": null,
+      "price": 8.6,
+      "shares": 1,
+      "side": "BUY",
+      "ticker": "BB"
+    },
+    {
+      "fees": 0.148,
+      "pnl": null,
+      "price": 3.4,
+      "shares": 4,
+      "side": "BUY",
+      "ticker": "NEOV"
+    },
+    {
+      "fees": 0.1645,
+      "pnl": null,
+      "price": 2.99,
+      "shares": 5,
+      "side": "BUY",
+      "ticker": "SFIX"
+    }
+  ],
+  "holdings": [
+    "ABVX",
+    "BB",
+    "MLKN",
+    "NEOV",
+    "SFIX",
+    "THO"
+  ],
+  "mean": -2.4568,
+  "n_trades_today": 3,
+  "recipe": "overnight_h3",
+  "sells": [],
+  "state": {
+    "after": "2026-09-23",
+    "cash": 52.69,
+    "pos": {
+      "ABVX": {
+        "close_px": 94.12999725341797,
+        "cost": 2856.5110329589843,
+        "entry_date": "2026-09-21",
+        "entry_px": 105.72000122070312,
+        "fee_in": 2.071,
+        "last_px": 98.30000305175781,
+        "min_hold": 3,
+        "notional": 2854.4400329589844,
+        "peak_px": 105.72000122070312,
+        "reason": "baseline list, no extra gate; list overnight; ret5=-11.5; leftover $2870.57",
+        "shares": 27,
+        "ticker": "ABVX"
+      },
+      "BB": {
+        "close_px": 8.380000114440918,
+        "cost": 8.689000381469727,
+        "entry_date": "2026-09-23",
+        "entry_px": 8.600000381469727,
+        "fee_in": 0.089,
+        "last_px": 8.600000381469727,
+        "min_hold": 3,
+        "notional": 8.600000381469727,
+        "peak_px": 8.600000381469727,
+        "reason": "baseline list, no extra gate; list overnight; \ud83d\udd35; \u26aa; ret5=+10.5; leftover $15.04",
+        "shares": 1,
+        "ticker": "BB"
+      },
+      "MLKN": {
+        "close_px": 20.040000915527344,
+        "cost": 2858.8510522613524,
+        "entry_date": "2026-09-21",
+        "entry_px": 20.850000381469727,
+        "fee_in": 2.401,
+        "last_px": 19.760000228881836,
+        "min_hold": 3,
+        "notional": 2856.4500522613525,
+        "peak_px": 20.850000381469727,
+        "reason": "baseline list, no extra gate; list overnight; ret5=-2.5; leftover $2870.57",
+        "shares": 137,
+        "ticker": "MLKN"
+      },
+      "NEOV": {
+        "close_px": 3.1700000762939453,
+        "cost": 13.748000381469726,
+        "entry_date": "2026-09-23",
+        "entry_px": 3.4000000953674316,
+        "fee_in": 0.148,
+        "last_px": 3.4000000953674316,
+        "min_hold": 3,
+        "notional": 13.600000381469727,
+        "peak_px": 3.4000000953674316,
+        "reason": "baseline list, no extra gate; list overnight; \ud83d\udd35; ret5=+1.8; leftover $15.04",
+        "shares": 4,
+        "ticker": "NEOV"
+      },
+      "SFIX": {
+        "close_px": 2.819999933242798,
+        "cost": 15.114500047683716,
+        "entry_date": "2026-09-23",
+        "entry_px": 2.990000009536743,
+        "fee_in": 0.1645,
+        "last_px": 2.990000009536743,
+        "min_hold": 3,
+        "notional": 14.950000047683716,
+        "peak_px": 2.990000009536743,
+        "reason": "baseline list, no extra gate; list overnight; ret5=+1.7; leftover $15.04",
+        "shares": 5,
+        "ticker": "SFIX"
+      },
+      "THO": {
+        "close_px": 72.30999755859375,
+        "cost": 2806.1029749755858,
+        "entry_date": "2026-09-21",
+        "entry_px": 68.38999938964844,
+        "fee_in": 2.113,
+        "last_px": 71.41000366210938,
+        "min_hold": 3,
+        "notional": 2803.989974975586,
+        "peak_px": 72.53,
+        "reason": "baseline list, no extra gate; list overnight; ret5=-7.0; leftover $2870.57",
+        "shares": 41,
+        "ticker": "THO"
+      }
+    },
+    "yday_equity": 8339.55
+  }
+}

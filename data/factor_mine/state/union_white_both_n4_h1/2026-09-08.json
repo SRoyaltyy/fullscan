@@ -1,0 +1,57 @@
+{
+  "buys": [],
+  "cash": 9666.82,
+  "date": "2026-09-08",
+  "equity": 9666.82,
+  "fees": 16.5652,
+  "fills": [
+    {
+      "fees": 2.0453,
+      "pnl": -90.82,
+      "price": 253.72,
+      "shares": 9,
+      "side": "SELL",
+      "ticker": "CRM"
+    },
+    {
+      "fees": 2.0287,
+      "pnl": 25.45,
+      "price": 521.15,
+      "shares": 4,
+      "side": "SELL",
+      "ticker": "DELL"
+    },
+    {
+      "fees": 6.9835,
+      "pnl": -13.86,
+      "price": 4.53,
+      "shares": 533,
+      "side": "SELL",
+      "ticker": "IRD"
+    },
+    {
+      "fees": 5.5077,
+      "pnl": 73.07,
+      "price": 5.95,
+      "shares": 420,
+      "side": "SELL",
+      "ticker": "LENZ"
+    }
+  ],
+  "holdings": [],
+  "mean": -1.5976,
+  "n_trades_today": 4,
+  "recipe": "union_white_both_n4_h1",
+  "sells": [
+    "CRM",
+    "DELL",
+    "IRD",
+    "LENZ"
+  ],
+  "state": {
+    "after": "2026-09-08",
+    "cash": 9666.82,
+    "pos": {},
+    "yday_equity": 9666.82
+  }
+}

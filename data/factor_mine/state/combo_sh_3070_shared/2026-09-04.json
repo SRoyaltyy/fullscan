@@ -1,0 +1,198 @@
+{
+  "buys": [
+    "GPRO",
+    "ASST",
+    "DFDV",
+    "HOOD",
+    "OPK",
+    "GSM",
+    "PIPR"
+  ],
+  "cash": 6242.52,
+  "date": "2026-09-04",
+  "equity": 10611.88,
+  "fees": 37.5735,
+  "fills": [
+    {
+      "fees": 15.609,
+      "pnl": null,
+      "price": 1.48,
+      "shares": 1210,
+      "side": "BUY",
+      "ticker": "GPRO"
+    },
+    {
+      "fees": 2.203,
+      "pnl": null,
+      "price": 25.18,
+      "shares": 71,
+      "side": "BUY",
+      "ticker": "ASST"
+    },
+    {
+      "fees": 3.9861,
+      "pnl": null,
+      "price": 5.79,
+      "shares": 309,
+      "side": "BUY",
+      "ticker": "DFDV"
+    },
+    {
+      "fees": 2.032,
+      "pnl": null,
+      "price": 120.475,
+      "shares": 14,
+      "side": "BUY",
+      "ticker": "HOOD"
+    },
+    {
+      "fees": 8.688537808824567,
+      "pnl": null,
+      "price": 1.59,
+      "shares": 662,
+      "side": "SHORT",
+      "ticker": "OPK"
+    },
+    {
+      "fees": 2.978587671703182,
+      "pnl": null,
+      "price": 4.67,
+      "shares": 225,
+      "side": "SHORT",
+      "ticker": "GSM"
+    },
+    {
+      "fees": 2.0762643846485713,
+      "pnl": null,
+      "price": 76.55,
+      "shares": 13,
+      "side": "SHORT",
+      "ticker": "PIPR"
+    }
+  ],
+  "holdings": [
+    "ASST",
+    "DFDV",
+    "GPRO",
+    "GSM",
+    "HOOD",
+    "OPK",
+    "PIPR"
+  ],
+  "mean": 3.6726,
+  "n_trades_today": 7,
+  "recipe": "combo_sh_3070_shared",
+  "sells": [],
+  "state": {
+    "after": "2026-09-04",
+    "cash": 6242.52,
+    "pos": {
+      "ASST": {
+        "close_px": 27.139999389648438,
+        "cost": 1789.9830216674804,
+        "entry_date": "2026-09-04",
+        "entry_px": 25.18000030517578,
+        "fee_in": 2.203,
+        "last_px": 25.18000030517578,
+        "notional": 1787.7800216674805,
+        "owner": "union_hot_n4_h1",
+        "peak_px": 25.18000030517578,
+        "reason": "top 4 by hot; rank hot_score; list ohlc_hot; \ud83d\udd35; ret5=+16.0; combo leftover $1791.29; owner union_hot_n4_h1",
+        "shares": 71,
+        "side": "long",
+        "ticker": "ASST"
+      },
+      "DFDV": {
+        "close_px": 5.869999885559082,
+        "cost": 1793.0960882125855,
+        "entry_date": "2026-09-04",
+        "entry_px": 5.789999961853027,
+        "fee_in": 3.9861,
+        "last_px": 5.789999961853027,
+        "notional": 1789.1099882125854,
+        "owner": "union_hot_n4_h1",
+        "peak_px": 5.789999961853027,
+        "reason": "top 4 by hot; rank hot_score; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+15.2; combo leftover $1791.29; owner union_hot_n4_h1",
+        "shares": 309,
+        "side": "long",
+        "ticker": "DFDV"
+      },
+      "GPRO": {
+        "close_px": 1.7000000476837158,
+        "cost": 1806.4090230789184,
+        "entry_date": "2026-09-04",
+        "entry_px": 1.4800000190734863,
+        "fee_in": 15.609,
+        "last_px": 1.4800000190734863,
+        "notional": 1790.8000230789185,
+        "owner": "union_hot_n4_h1",
+        "peak_px": 1.4800000190734863,
+        "reason": "top 4 by hot; rank hot_score; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+129.8; combo leftover $1791.29; owner union_hot_n4_h1",
+        "shares": 1210,
+        "side": "long",
+        "ticker": "GPRO"
+      },
+      "GSM": {
+        "close_px": 4.670000076293945,
+        "cost": 2.978587671703182,
+        "entry_date": "2026-09-04",
+        "entry_px": 4.670000076293945,
+        "fee_in": 2.978587671703182,
+        "last_px": 4.670000076293945,
+        "notional": 1050.7500171661377,
+        "owner": "short_news_r_h3",
+        "peak_px": 4.670000076293945,
+        "reason": "news\ud83d\udd34; gate news=bad; list yday_gainer; ret5=+11.9; combo leftover $1052.59; owner short_news_r_h3",
+        "shares": 225,
+        "side": "short",
+        "ticker": "GSM"
+      },
+      "HOOD": {
+        "close_px": 122.11000061035156,
+        "cost": 1688.6819786376952,
+        "entry_date": "2026-09-04",
+        "entry_px": 120.4749984741211,
+        "fee_in": 2.032,
+        "last_px": 120.4749984741211,
+        "notional": 1686.6499786376953,
+        "owner": "union_hot_n4_h1",
+        "peak_px": 120.4749984741211,
+        "reason": "top 4 by hot; rank hot_score; list ohlc_hot; \ud83d\udd35; ret5=+13.6; combo leftover $1791.29; owner union_hot_n4_h1",
+        "shares": 14,
+        "side": "long",
+        "ticker": "HOOD"
+      },
+      "OPK": {
+        "close_px": 1.6399999856948853,
+        "cost": 8.688537808824567,
+        "entry_date": "2026-09-04",
+        "entry_px": 1.590000033378601,
+        "fee_in": 8.688537808824567,
+        "last_px": 1.590000033378601,
+        "notional": 1052.580022096634,
+        "owner": "short_news_r_h3",
+        "peak_px": 1.590000033378601,
+        "reason": "news\ud83d\udd34; gate news=bad; list flatten,yday_gainer,mover_buy; \ud83d\udd35; \u26aa; ret5=+7.3; combo leftover $1052.59; owner short_news_r_h3",
+        "shares": 662,
+        "side": "short",
+        "ticker": "OPK"
+      },
+      "PIPR": {
+        "close_px": 77.04000091552734,
+        "cost": 2.0762643846485713,
+        "entry_date": "2026-09-04",
+        "entry_px": 76.55000305175781,
+        "fee_in": 2.0762643846485713,
+        "last_px": 76.55000305175781,
+        "notional": 995.1500396728516,
+        "owner": "short_news_r_h3",
+        "peak_px": 76.55000305175781,
+        "reason": "news\ud83d\udd34; gate news=bad; list mover_buy; \ud83d\udd35; \u26aa; ret5=+4.4; combo leftover $1052.59; owner short_news_r_h3",
+        "shares": 13,
+        "side": "short",
+        "ticker": "PIPR"
+      }
+    },
+    "yday_equity": 10611.88
+  }
+}

@@ -1,0 +1,173 @@
+{
+  "buys": [
+    "ANF",
+    "NCNO",
+    "TH",
+    "GAP",
+    "SIMO",
+    "FIG"
+  ],
+  "cash": 9859.03,
+  "date": "2026-08-28",
+  "equity": 10069.08,
+  "fees": 12.9326,
+  "fills": [
+    {
+      "fees": 2.014,
+      "pnl": null,
+      "price": 146.07,
+      "shares": 8,
+      "side": "BUY",
+      "ticker": "ANF"
+    },
+    {
+      "fees": 2.149,
+      "pnl": null,
+      "price": 23.3,
+      "shares": 53,
+      "side": "BUY",
+      "ticker": "NCNO"
+    },
+    {
+      "fees": 2.185,
+      "pnl": null,
+      "price": 19.0,
+      "shares": 65,
+      "side": "BUY",
+      "ticker": "TH"
+    },
+    {
+      "fees": 2.14,
+      "pnl": null,
+      "price": 24.69,
+      "shares": 50,
+      "side": "BUY",
+      "ticker": "GAP"
+    },
+    {
+      "fees": 2.1073961657380402,
+      "pnl": null,
+      "price": 252.24,
+      "shares": 9,
+      "side": "SHORT",
+      "ticker": "SIMO"
+    },
+    {
+      "fees": 2.3372016445212167,
+      "pnl": null,
+      "price": 30.18,
+      "shares": 82,
+      "side": "SHORT",
+      "ticker": "FIG"
+    }
+  ],
+  "holdings": [
+    "ANF",
+    "FIG",
+    "GAP",
+    "NCNO",
+    "SIMO",
+    "TH"
+  ],
+  "mean": 0.6908,
+  "n_trades_today": 6,
+  "recipe": "combo_sj_5050_shared",
+  "sells": [],
+  "state": {
+    "after": "2026-08-28",
+    "cash": 9859.03,
+    "pos": {
+      "ANF": {
+        "close_px": 148.4199981689453,
+        "cost": 1170.57405859375,
+        "entry_date": "2026-08-28",
+        "entry_px": 146.07000732421875,
+        "fee_in": 2.014,
+        "last_px": 146.07000732421875,
+        "notional": 1168.56005859375,
+        "owner": "union_join_vol_green_h1",
+        "peak_px": 146.07000732421875,
+        "reason": "combo gate; gate join=good,vol=good,last_green=True; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+38.8; combo leftover $1250.00; owner union_join_vol_green_h1",
+        "shares": 8,
+        "side": "long",
+        "ticker": "ANF"
+      },
+      "FIG": {
+        "close_px": 28.81999969482422,
+        "cost": 2.3372016445212167,
+        "entry_date": "2026-08-28",
+        "entry_px": 30.18000030517578,
+        "fee_in": 2.3372016445212167,
+        "last_px": 30.18000030517578,
+        "notional": 2474.760025024414,
+        "owner": "short_news_r_h3",
+        "peak_px": 30.18000030517578,
+        "reason": "news\ud83d\udd34; gate news=bad; list ohlc_hot; ret5=+12.1; combo leftover $2497.88; owner short_news_r_h3",
+        "shares": 82,
+        "side": "short",
+        "ticker": "FIG"
+      },
+      "GAP": {
+        "close_px": 23.479999542236328,
+        "cost": 1236.640026702881,
+        "entry_date": "2026-08-28",
+        "entry_px": 24.690000534057617,
+        "fee_in": 2.14,
+        "last_px": 24.690000534057617,
+        "notional": 1234.5000267028809,
+        "owner": "union_join_vol_green_h1",
+        "peak_px": 24.690000534057617,
+        "reason": "combo gate; gate join=good,vol=good,last_green=True; list earn_react; ret5=+5.8; combo leftover $1250.00; owner union_join_vol_green_h1",
+        "shares": 50,
+        "side": "long",
+        "ticker": "GAP"
+      },
+      "NCNO": {
+        "close_px": 22.989999771118164,
+        "cost": 1237.0489595642089,
+        "entry_date": "2026-08-28",
+        "entry_px": 23.299999237060547,
+        "fee_in": 2.149,
+        "last_px": 23.299999237060547,
+        "notional": 1234.899959564209,
+        "owner": "union_join_vol_green_h1",
+        "peak_px": 23.299999237060547,
+        "reason": "combo gate; gate join=good,vol=good,last_green=True; list ohlc_hot; \ud83d\udd35; ret5=+14.5; combo leftover $1250.00; owner union_join_vol_green_h1",
+        "shares": 53,
+        "side": "long",
+        "ticker": "NCNO"
+      },
+      "SIMO": {
+        "close_px": 245.80999755859375,
+        "cost": 2.1073961657380402,
+        "entry_date": "2026-08-28",
+        "entry_px": 252.24000549316406,
+        "fee_in": 2.1073961657380402,
+        "last_px": 252.24000549316406,
+        "notional": 2270.1600494384766,
+        "owner": "short_news_r_h3",
+        "peak_px": 252.24000549316406,
+        "reason": "news\ud83d\udd34; gate news=bad; list probable,yday_gainer; \u26aa; ret5=+2.2; combo leftover $2497.88; owner short_news_r_h3",
+        "shares": 9,
+        "side": "short",
+        "ticker": "SIMO"
+      },
+      "TH": {
+        "close_px": 18.549999237060547,
+        "cost": 1237.185,
+        "entry_date": "2026-08-28",
+        "entry_px": 19.0,
+        "fee_in": 2.185,
+        "last_px": 19.0,
+        "notional": 1235.0,
+        "owner": "union_join_vol_green_h1",
+        "peak_px": 19.0,
+        "reason": "combo gate; gate join=good,vol=good,last_green=True; list ohlc_hot; ret5=+7.5; combo leftover $1250.00; owner union_join_vol_green_h1",
+        "shares": 65,
+        "side": "long",
+        "ticker": "TH"
+      }
+    },
+    "yday_equity": 10069.08
+  }
+}

@@ -1,0 +1,129 @@
+{
+  "buys": [],
+  "cash": 8511.73,
+  "date": "2026-08-31",
+  "equity": 9774.79,
+  "fees": 21.256,
+  "fills": [
+    {
+      "fees": 2.034,
+      "pnl": 11.63,
+      "price": 148.03,
+      "shares": 8,
+      "side": "SELL",
+      "ticker": "ANF"
+    },
+    {
+      "fees": 2.133,
+      "pnl": 16.25,
+      "price": 19.25,
+      "shares": 41,
+      "side": "SELL",
+      "ticker": "BBWI"
+    },
+    {
+      "fees": 2.4052,
+      "pnl": -34.22,
+      "price": 9.5,
+      "shares": 128,
+      "side": "SELL",
+      "ticker": "CAPR"
+    },
+    {
+      "fees": 2.13,
+      "pnl": -59.44,
+      "price": 17.87,
+      "shares": 40,
+      "side": "SELL",
+      "ticker": "ERAS"
+    },
+    {
+      "fees": 2.2818,
+      "pnl": -12.55,
+      "price": 8.52,
+      "shares": 89,
+      "side": "SELL",
+      "ticker": "OPTX"
+    },
+    {
+      "fees": 2.064,
+      "pnl": 0.57,
+      "price": 42.0,
+      "shares": 18,
+      "side": "SELL",
+      "ticker": "RRC"
+    },
+    {
+      "fees": 2.079,
+      "pnl": -44.39,
+      "price": 31.15,
+      "shares": 23,
+      "side": "SELL",
+      "ticker": "SEDG"
+    },
+    {
+      "fees": 2.025,
+      "pnl": -51.33,
+      "price": 132.3,
+      "shares": 5,
+      "side": "SELL",
+      "ticker": "SMTC"
+    },
+    {
+      "fees": 2.016,
+      "pnl": -51.81,
+      "price": 437.95,
+      "shares": 2,
+      "side": "SELL",
+      "ticker": "SNPS"
+    },
+    {
+      "fees": 2.088,
+      "pnl": -26.26,
+      "price": 28.06,
+      "shares": 26,
+      "side": "SELL",
+      "ticker": "ZYME"
+    }
+  ],
+  "holdings": [
+    "MRNA"
+  ],
+  "mean": -0.2583,
+  "n_trades_today": 10,
+  "recipe": "combo_hn_5050_shared",
+  "sells": [
+    "ANF",
+    "BBWI",
+    "CAPR",
+    "ERAS",
+    "OPTX",
+    "RRC",
+    "SEDG",
+    "SMTC",
+    "SNPS",
+    "ZYME"
+  ],
+  "state": {
+    "after": "2026-08-31",
+    "cash": 8511.73,
+    "pos": {
+      "MRNA": {
+        "close_px": 140.33999633789062,
+        "cost": 1236.7270219726563,
+        "entry_date": "2026-08-28",
+        "entry_px": 137.19000244140625,
+        "fee_in": 2.017,
+        "last_px": 134.10000610351562,
+        "notional": 1234.7100219726562,
+        "owner": "union_hot_n4_h1",
+        "peak_px": 137.19000244140625,
+        "reason": "top 4 by hot; rank hot_score; list ohlc_hot; ret5=+7.1; combo leftover $1250.00; owner union_hot_n4_h1",
+        "shares": 9,
+        "side": "long",
+        "ticker": "MRNA"
+      }
+    },
+    "yday_equity": 9774.79
+  }
+}

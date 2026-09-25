@@ -1,0 +1,165 @@
+{
+  "buys": [
+    "FSLY",
+    "UPXI"
+  ],
+  "cash": 126.91,
+  "date": "2026-09-22",
+  "equity": 8664.05,
+  "fees": 3.7537,
+  "fills": [
+    {
+      "fees": 0.5345,
+      "pnl": 0.92,
+      "price": 8.275,
+      "shares": 6,
+      "side": "SELL",
+      "ticker": "BULL"
+    },
+    {
+      "fees": 0.587,
+      "pnl": -1.15,
+      "price": 2.4,
+      "shares": 21,
+      "side": "SELL",
+      "ticker": "SABR"
+    },
+    {
+      "fees": 1.1328,
+      "pnl": null,
+      "price": 28.02,
+      "shares": 4,
+      "side": "BUY",
+      "ticker": "FSLY"
+    },
+    {
+      "fees": 1.4994,
+      "pnl": null,
+      "price": 1.23,
+      "shares": 98,
+      "side": "BUY",
+      "ticker": "UPXI"
+    }
+  ],
+  "holdings": [
+    "A",
+    "ABSI",
+    "FIVN",
+    "FSLY",
+    "MSTR",
+    "UPXI",
+    "VICR"
+  ],
+  "mean": 7.0999,
+  "n_trades_today": 4,
+  "recipe": "union_cond_n4_h3",
+  "sells": [
+    "BULL",
+    "SABR"
+  ],
+  "state": {
+    "after": "2026-09-22",
+    "cash": 126.91,
+    "pos": {
+      "A": {
+        "close_px": 167.26,
+        "cost": 1896.46594140625,
+        "entry_date": "2026-09-21",
+        "entry_px": 157.8699951171875,
+        "fee_in": 2.026,
+        "last_px": 163.08,
+        "min_hold": 3,
+        "notional": 1894.43994140625,
+        "peak_px": 163.08,
+        "reason": "top 4 by cond; rank cond; list flatten; \ud83d\udd35; \u26aa; ret5=+6.5; leftover $1991.27",
+        "shares": 12,
+        "ticker": "A"
+      },
+      "ABSI": {
+        "close_px": 10.71,
+        "cost": 1984.4010826644896,
+        "entry_date": "2026-09-21",
+        "entry_px": 10.0600004196167,
+        "fee_in": 2.581,
+        "last_px": 10.0,
+        "min_hold": 3,
+        "notional": 1981.8200826644897,
+        "peak_px": 10.0600004196167,
+        "reason": "top 4 by cond; rank cond; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+17.5; leftover $1991.27",
+        "shares": 197,
+        "ticker": "ABSI"
+      },
+      "FIVN": {
+        "close_px": 38.65,
+        "cost": 34.787398626708985,
+        "entry_date": "2026-09-18",
+        "entry_px": 34.439998626708984,
+        "fee_in": 0.3474,
+        "last_px": 37.12,
+        "min_hold": 3,
+        "notional": 34.439998626708984,
+        "peak_px": 37.12,
+        "reason": "top 4 by cond; rank cond; list flatten; \ud83d\udd35; \u26aa; ret5=+14.0; leftover $36.75",
+        "shares": 1,
+        "ticker": "FIVN"
+      },
+      "FSLY": {
+        "close_px": 26.079999923706055,
+        "cost": 113.21280183105469,
+        "entry_date": "2026-09-22",
+        "entry_px": 28.020000457763672,
+        "fee_in": 1.1328,
+        "last_px": 28.020000457763672,
+        "min_hold": 3,
+        "notional": 112.08000183105469,
+        "peak_px": 28.020000457763672,
+        "reason": "top 4 by cond; rank cond; list yday_gainer,yday_mover,ohlc_hot; ret5=+10.3; leftover $120.72",
+        "shares": 4,
+        "ticker": "FSLY"
+      },
+      "MSTR": {
+        "close_px": 167.3300018310547,
+        "cost": 1976.9860219726563,
+        "entry_date": "2026-09-21",
+        "entry_px": 164.5800018310547,
+        "fee_in": 2.026,
+        "last_px": 167.5500030517578,
+        "min_hold": 3,
+        "notional": 1974.9600219726562,
+        "peak_px": 167.5500030517578,
+        "reason": "top 4 by cond; rank cond; list yday_gainer,yday_mover,ohlc_hot; ret5=+17.5; leftover $1991.27",
+        "shares": 12,
+        "ticker": "MSTR"
+      },
+      "UPXI": {
+        "close_px": 1.25,
+        "cost": 122.03940186920165,
+        "entry_date": "2026-09-22",
+        "entry_px": 1.2300000190734863,
+        "fee_in": 1.4994,
+        "last_px": 1.2300000190734863,
+        "min_hold": 3,
+        "notional": 120.54000186920166,
+        "peak_px": 1.2300000190734863,
+        "reason": "top 4 by cond; rank cond; list ohlc_hot; ret5=+14.5; leftover $120.72",
+        "shares": 98,
+        "ticker": "UPXI"
+      },
+      "VICR": {
+        "close_px": 268.34,
+        "cost": 1844.014,
+        "entry_date": "2026-09-21",
+        "entry_px": 230.25,
+        "fee_in": 2.014,
+        "last_px": 241.04,
+        "min_hold": 3,
+        "notional": 1842.0,
+        "peak_px": 241.04,
+        "reason": "top 4 by cond; rank cond; list ohlc_hot; ret5=+12.5; leftover $1991.27",
+        "shares": 8,
+        "ticker": "VICR"
+      }
+    },
+    "yday_equity": 8664.05
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "buys": [],
+  "cash": 9608.86,
+  "date": "2026-09-08",
+  "equity": 9608.86,
+  "fees": 17.1593,
+  "fills": [
+    {
+      "fees": 2.1542,
+      "pnl": 56.19,
+      "price": 26.44,
+      "shares": 48,
+      "side": "SELL",
+      "ticker": "ASST"
+    },
+    {
+      "fees": 2.016,
+      "pnl": 10.73,
+      "price": 521.15,
+      "shares": 2,
+      "side": "SELL",
+      "ticker": "DELL"
+    },
+    {
+      "fees": 2.091,
+      "pnl": -148.34,
+      "price": 39.56,
+      "shares": 27,
+      "side": "SELL",
+      "ticker": "IOT"
+    },
+    {
+      "fees": 2.046,
+      "pnl": 25.09,
+      "price": 100.58,
+      "shares": 12,
+      "side": "SELL",
+      "ticker": "LULU"
+    },
+    {
+      "fees": 2.0581,
+      "pnl": 46.94,
+      "price": 78.84,
+      "shares": 16,
+      "side": "SELL",
+      "ticker": "MRX"
+    },
+    {
+      "fees": 2.1963,
+      "pnl": -115.35,
+      "price": 17.85,
+      "shares": 62,
+      "side": "SELL",
+      "ticker": "PL"
+    },
+    {
+      "fees": 2.5667,
+      "pnl": -73.11,
+      "price": 6.46,
+      "shares": 179,
+      "side": "SELL",
+      "ticker": "RSKD"
+    },
+    {
+      "fees": 2.031,
+      "pnl": -7.79,
+      "price": 165.615,
+      "shares": 7,
+      "side": "SELL",
+      "ticker": "ZS"
+    }
+  ],
+  "holdings": [],
+  "mean": -1.2359,
+  "n_trades_today": 8,
+  "recipe": "union_oppset_h1",
+  "sells": [
+    "ASST",
+    "DELL",
+    "IOT",
+    "LULU",
+    "MRX",
+    "PL",
+    "RSKD",
+    "ZS"
+  ],
+  "state": {
+    "after": "2026-09-08",
+    "cash": 9608.86,
+    "pos": {},
+    "yday_equity": 9608.86
+  }
+}

@@ -1,0 +1,143 @@
+{
+  "buys": [
+    "SEDG",
+    "URBN",
+    "ANF",
+    "SMTC",
+    "NCNO"
+  ],
+  "cash": 165.91,
+  "date": "2026-08-28",
+  "equity": 9797.75,
+  "fees": 10.541,
+  "fills": [
+    {
+      "fees": 2.17,
+      "pnl": null,
+      "price": 32.9,
+      "shares": 60,
+      "side": "BUY",
+      "ticker": "SEDG"
+    },
+    {
+      "fees": 2.065,
+      "pnl": null,
+      "price": 79.42,
+      "shares": 25,
+      "side": "BUY",
+      "ticker": "URBN"
+    },
+    {
+      "fees": 2.029,
+      "pnl": null,
+      "price": 146.07,
+      "shares": 13,
+      "side": "BUY",
+      "ticker": "ANF"
+    },
+    {
+      "fees": 2.032,
+      "pnl": null,
+      "price": 141.76,
+      "shares": 14,
+      "side": "BUY",
+      "ticker": "SMTC"
+    },
+    {
+      "fees": 2.245,
+      "pnl": null,
+      "price": 23.3,
+      "shares": 85,
+      "side": "BUY",
+      "ticker": "NCNO"
+    }
+  ],
+  "holdings": [
+    "ANF",
+    "NCNO",
+    "SEDG",
+    "SMTC",
+    "URBN"
+  ],
+  "mean": -2.0225,
+  "n_trades_today": 5,
+  "recipe": "union_blue_vol_h1",
+  "sells": [],
+  "state": {
+    "after": "2026-08-28",
+    "cash": 165.91,
+    "pos": {
+      "ANF": {
+        "close_px": 148.4199981689453,
+        "cost": 1900.9390952148437,
+        "entry_date": "2026-08-28",
+        "entry_px": 146.07000732421875,
+        "fee_in": 2.029,
+        "last_px": 146.07000732421875,
+        "min_hold": 1,
+        "notional": 1898.9100952148438,
+        "peak_px": 146.07000732421875,
+        "reason": "combo gate; gate vol=good,blue=True; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+38.8; leftover $2000.00",
+        "shares": 13,
+        "ticker": "ANF"
+      },
+      "NCNO": {
+        "close_px": 22.989999771118164,
+        "cost": 1982.7449351501464,
+        "entry_date": "2026-08-28",
+        "entry_px": 23.299999237060547,
+        "fee_in": 2.245,
+        "last_px": 23.299999237060547,
+        "min_hold": 1,
+        "notional": 1980.4999351501465,
+        "peak_px": 23.299999237060547,
+        "reason": "combo gate; gate vol=good,blue=True; list ohlc_hot; \ud83d\udd35; ret5=+14.5; leftover $2000.00",
+        "shares": 85,
+        "ticker": "NCNO"
+      },
+      "SEDG": {
+        "close_px": 31.40999984741211,
+        "cost": 1976.1700915527344,
+        "entry_date": "2026-08-28",
+        "entry_px": 32.900001525878906,
+        "fee_in": 2.17,
+        "last_px": 32.900001525878906,
+        "min_hold": 1,
+        "notional": 1974.0000915527344,
+        "peak_px": 32.900001525878906,
+        "reason": "combo gate; gate vol=good,blue=True; list probable,yday_gainer,yday_mover; \ud83d\udd35; ret5=+8.4; leftover $2000.00",
+        "shares": 60,
+        "ticker": "SEDG"
+      },
+      "SMTC": {
+        "close_px": 131.1699981689453,
+        "cost": 1986.671923095703,
+        "entry_date": "2026-08-28",
+        "entry_px": 141.75999450683594,
+        "fee_in": 2.032,
+        "last_px": 141.75999450683594,
+        "min_hold": 1,
+        "notional": 1984.6399230957031,
+        "peak_px": 141.75999450683594,
+        "reason": "combo gate; gate vol=good,blue=True; list yday_gainer,yday_mover,mover_buy; \ud83d\udd35; \u26aa; ret5=+14.1; leftover $2000.00",
+        "shares": 14,
+        "ticker": "SMTC"
+      },
+      "URBN": {
+        "close_px": 81.08999633789062,
+        "cost": 1987.5649542236329,
+        "entry_date": "2026-08-28",
+        "entry_px": 79.41999816894531,
+        "fee_in": 2.065,
+        "last_px": 79.41999816894531,
+        "min_hold": 1,
+        "notional": 1985.4999542236328,
+        "peak_px": 79.41999816894531,
+        "reason": "combo gate; gate vol=good,blue=True; list probable,yday_gainer,yday_mover; \ud83d\udd35; ret5=+8.5; leftover $2000.00",
+        "shares": 25,
+        "ticker": "URBN"
+      }
+    },
+    "yday_equity": 9797.75
+  }
+}

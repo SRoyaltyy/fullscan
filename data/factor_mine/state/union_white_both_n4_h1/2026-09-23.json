@@ -1,0 +1,119 @@
+{
+  "buys": [
+    "DXCM",
+    "A",
+    "HALO",
+    "ARQT"
+  ],
+  "cash": 170.18,
+  "date": "2026-09-23",
+  "equity": 9536.05,
+  "fees": 8.41,
+  "fills": [
+    {
+      "fees": 2.071,
+      "pnl": null,
+      "price": 89.5,
+      "shares": 27,
+      "side": "BUY",
+      "ticker": "DXCM"
+    },
+    {
+      "fees": 2.032,
+      "pnl": null,
+      "price": 166.54,
+      "shares": 14,
+      "side": "BUY",
+      "ticker": "A"
+    },
+    {
+      "fees": 2.053,
+      "pnl": null,
+      "price": 116.85,
+      "shares": 21,
+      "side": "BUY",
+      "ticker": "HALO"
+    },
+    {
+      "fees": 2.254,
+      "pnl": null,
+      "price": 27.79,
+      "shares": 88,
+      "side": "BUY",
+      "ticker": "ARQT"
+    }
+  ],
+  "holdings": [
+    "A",
+    "ARQT",
+    "DXCM",
+    "HALO"
+  ],
+  "mean": -2.951,
+  "n_trades_today": 4,
+  "recipe": "union_white_both_n4_h1",
+  "sells": [],
+  "state": {
+    "after": "2026-09-23",
+    "cash": 170.18,
+    "pos": {
+      "A": {
+        "close_px": 165.32000732421875,
+        "cost": 2333.5919060058595,
+        "entry_date": "2026-09-23",
+        "entry_px": 166.5399932861328,
+        "fee_in": 2.032,
+        "last_px": 166.5399932861328,
+        "min_hold": 1,
+        "notional": 2331.5599060058594,
+        "peak_px": 166.5399932861328,
+        "reason": "\u22120 red + yday up AND catalyst, top 4 by Score; gate cam_bad_max=0,yday_and_catalyst=True; rank list; list flatten; \ud83d\udd35; \u26aa; ret5=+11.3; leftover $2456.51",
+        "shares": 14,
+        "ticker": "A"
+      },
+      "ARQT": {
+        "close_px": 26.3799991607666,
+        "cost": 2447.774080566406,
+        "entry_date": "2026-09-23",
+        "entry_px": 27.790000915527344,
+        "fee_in": 2.254,
+        "last_px": 27.790000915527344,
+        "min_hold": 1,
+        "notional": 2445.5200805664062,
+        "peak_px": 27.790000915527344,
+        "reason": "\u22120 red + yday up AND catalyst, top 4 by Score; gate cam_bad_max=0,yday_and_catalyst=True; rank list; list flatten; \ud83d\udd35; \u26aa; ret5=+18.2; leftover $2456.51",
+        "shares": 88,
+        "ticker": "ARQT"
+      },
+      "DXCM": {
+        "close_px": 87.7300033569336,
+        "cost": 2418.571,
+        "entry_date": "2026-09-23",
+        "entry_px": 89.5,
+        "fee_in": 2.071,
+        "last_px": 89.5,
+        "min_hold": 1,
+        "notional": 2416.5,
+        "peak_px": 89.5,
+        "reason": "\u22120 red + yday up AND catalyst, top 4 by Score; gate cam_bad_max=0,yday_and_catalyst=True; rank list; list flatten; \ud83d\udd35; \u26aa; ret5=+3.6; leftover $2456.51",
+        "shares": 27,
+        "ticker": "DXCM"
+      },
+      "HALO": {
+        "close_px": 112.44000244140625,
+        "cost": 2455.902967956543,
+        "entry_date": "2026-09-23",
+        "entry_px": 116.8499984741211,
+        "fee_in": 2.053,
+        "last_px": 116.8499984741211,
+        "min_hold": 1,
+        "notional": 2453.849967956543,
+        "peak_px": 116.8499984741211,
+        "reason": "\u22120 red + yday up AND catalyst, top 4 by Score; gate cam_bad_max=0,yday_and_catalyst=True; rank list; list flatten; \ud83d\udd35; \u26aa; ret5=+8.4; leftover $2456.51",
+        "shares": 21,
+        "ticker": "HALO"
+      }
+    },
+    "yday_equity": 9536.05
+  }
+}

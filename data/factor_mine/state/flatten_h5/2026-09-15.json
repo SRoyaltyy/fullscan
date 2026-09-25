@@ -1,0 +1,36 @@
+{
+  "buys": [],
+  "cash": 8974.87,
+  "date": "2026-09-15",
+  "equity": 8977.58,
+  "fees": 0,
+  "fills": [],
+  "holdings": [
+    "OVID"
+  ],
+  "mean": -0.0003,
+  "n_trades_today": 0,
+  "recipe": "flatten_h5",
+  "sells": [],
+  "state": {
+    "after": "2026-09-15",
+    "cash": 8974.87,
+    "pos": {
+      "OVID": {
+        "close_px": 2.7100000381469727,
+        "cost": 2.7603000190734863,
+        "entry_date": "2026-09-11",
+        "entry_px": 2.7300000190734863,
+        "fee_in": 0.0303,
+        "last_px": 2.7300000190734863,
+        "min_hold": 5,
+        "notional": 2.7300000190734863,
+        "peak_px": 2.755000114440918,
+        "reason": "baseline list, no extra gate; list flatten; wish-list (live io HOLD \u2014 not a ticket); ret5=-5.4; leftover $4.06",
+        "shares": 1,
+        "ticker": "OVID"
+      }
+    },
+    "yday_equity": 8977.58
+  }
+}

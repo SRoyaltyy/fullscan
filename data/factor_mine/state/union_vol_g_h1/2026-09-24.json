@@ -1,0 +1,93 @@
+{
+  "buys": [],
+  "cash": 8193.41,
+  "date": "2026-09-24",
+  "equity": 8193.41,
+  "fees": 30.6531,
+  "fills": [
+    {
+      "fees": 2.028,
+      "pnl": -19.58,
+      "price": 163.95,
+      "shares": 6,
+      "side": "SELL",
+      "ticker": "A"
+    },
+    {
+      "fees": 2.043,
+      "pnl": -24.09,
+      "price": 87.68,
+      "shares": 11,
+      "side": "SELL",
+      "ticker": "DXCM"
+    },
+    {
+      "fees": 2.037,
+      "pnl": -46.53,
+      "price": 112.13,
+      "shares": 9,
+      "side": "SELL",
+      "ticker": "HALO"
+    },
+    {
+      "fees": 3.5248,
+      "pnl": -50.03,
+      "price": 3.77,
+      "shares": 269,
+      "side": "SELL",
+      "ticker": "INDP"
+    },
+    {
+      "fees": 14.6633,
+      "pnl": -59.73,
+      "price": 0.746,
+      "shares": 1379,
+      "side": "SELL",
+      "ticker": "NMRA"
+    },
+    {
+      "fees": 2.163,
+      "pnl": -10.94,
+      "price": 20.52,
+      "shares": 51,
+      "side": "SELL",
+      "ticker": "OMER"
+    },
+    {
+      "fees": 2.133,
+      "pnl": -62.06,
+      "price": 23.99,
+      "shares": 41,
+      "side": "SELL",
+      "ticker": "TNGX"
+    },
+    {
+      "fees": 2.061,
+      "pnl": -10.56,
+      "price": 61.78,
+      "shares": 17,
+      "side": "SELL",
+      "ticker": "TTAN"
+    }
+  ],
+  "holdings": [],
+  "mean": -0.5993,
+  "n_trades_today": 8,
+  "recipe": "union_vol_g_h1",
+  "sells": [
+    "A",
+    "DXCM",
+    "HALO",
+    "INDP",
+    "NMRA",
+    "OMER",
+    "TNGX",
+    "TTAN"
+  ],
+  "state": {
+    "after": "2026-09-24",
+    "cash": 8193.41,
+    "pos": {},
+    "yday_equity": 8193.41
+  }
+}

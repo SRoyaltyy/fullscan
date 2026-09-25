@@ -1,0 +1,93 @@
+{
+  "buys": [],
+  "cash": 10024.52,
+  "date": "2026-08-31",
+  "equity": 10024.52,
+  "fees": 26.4184,
+  "fills": [
+    {
+      "fees": 2.089,
+      "pnl": -20.71,
+      "price": 19.25,
+      "shares": 33,
+      "side": "COVER",
+      "ticker": "BBWI"
+    },
+    {
+      "fees": 2.116,
+      "pnl": 7.49,
+      "price": 14.58,
+      "shares": 42,
+      "side": "COVER",
+      "ticker": "CLYM"
+    },
+    {
+      "fees": 1.996,
+      "pnl": 12.63,
+      "price": 298.01,
+      "shares": 2,
+      "side": "COVER",
+      "ticker": "DY"
+    },
+    {
+      "fees": 2.128,
+      "pnl": -12.11,
+      "price": 13.54,
+      "shares": 46,
+      "side": "COVER",
+      "ticker": "JKS"
+    },
+    {
+      "fees": 2.554,
+      "pnl": 17.39,
+      "price": 3.2,
+      "shares": 188,
+      "side": "COVER",
+      "ticker": "PYXS"
+    },
+    {
+      "fees": 2.194,
+      "pnl": 26.17,
+      "price": 8.7,
+      "shares": 68,
+      "side": "COVER",
+      "ticker": "QFIN"
+    },
+    {
+      "fees": 11.3334,
+      "pnl": -17.89,
+      "price": 0.362,
+      "shares": 1712,
+      "side": "COVER",
+      "ticker": "SAFX"
+    },
+    {
+      "fees": 2.008,
+      "pnl": 11.55,
+      "price": 89.15,
+      "shares": 6,
+      "side": "COVER",
+      "ticker": "SYRE"
+    }
+  ],
+  "holdings": [],
+  "mean": -0.2051,
+  "n_trades_today": 8,
+  "recipe": "short_macd_dn_h1",
+  "sells": [
+    "BBWI",
+    "CLYM",
+    "DY",
+    "JKS",
+    "PYXS",
+    "QFIN",
+    "SAFX",
+    "SYRE"
+  ],
+  "state": {
+    "after": "2026-08-31",
+    "cash": 10024.52,
+    "pos": {},
+    "yday_equity": 10024.52
+  }
+}

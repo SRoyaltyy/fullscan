@@ -1,0 +1,215 @@
+{
+  "buys": [
+    "RRC",
+    "CRK",
+    "SLI",
+    "SEDG",
+    "BZ",
+    "CAPR",
+    "LVWR",
+    "VYX"
+  ],
+  "cash": 77.88,
+  "date": "2026-08-28",
+  "equity": 9690.99,
+  "fees": 30.9975,
+  "fills": [
+    {
+      "fees": 2.077,
+      "pnl": null,
+      "price": 41.74,
+      "shares": 29,
+      "side": "BUY",
+      "ticker": "RRC"
+    },
+    {
+      "fees": 2.245,
+      "pnl": null,
+      "price": 14.63,
+      "shares": 85,
+      "side": "BUY",
+      "ticker": "CRK"
+    },
+    {
+      "fees": 6.0114,
+      "pnl": null,
+      "price": 2.68,
+      "shares": 466,
+      "side": "BUY",
+      "ticker": "SLI"
+    },
+    {
+      "fees": 2.101,
+      "pnl": null,
+      "price": 32.9,
+      "shares": 37,
+      "side": "BUY",
+      "ticker": "SEDG"
+    },
+    {
+      "fees": 2.194,
+      "pnl": null,
+      "price": 18.15,
+      "shares": 68,
+      "side": "BUY",
+      "ticker": "BZ"
+    },
+    {
+      "fees": 2.374,
+      "pnl": null,
+      "price": 9.73,
+      "shares": 128,
+      "side": "BUY",
+      "ticker": "CAPR"
+    },
+    {
+      "fees": 11.5971,
+      "pnl": null,
+      "price": 1.39,
+      "shares": 899,
+      "side": "BUY",
+      "ticker": "LVWR"
+    },
+    {
+      "fees": 2.398,
+      "pnl": null,
+      "price": 9.13,
+      "shares": 136,
+      "side": "BUY",
+      "ticker": "VYX"
+    }
+  ],
+  "holdings": [
+    "BZ",
+    "CAPR",
+    "CRK",
+    "LVWR",
+    "RRC",
+    "SEDG",
+    "SLI",
+    "VYX"
+  ],
+  "mean": -3.0901,
+  "n_trades_today": 8,
+  "recipe": "union_candle_h1",
+  "sells": [],
+  "state": {
+    "after": "2026-08-28",
+    "cash": 77.88,
+    "pos": {
+      "BZ": {
+        "close_px": 17.799999237060547,
+        "cost": 1236.3939740600586,
+        "entry_date": "2026-08-28",
+        "entry_px": 18.149999618530273,
+        "fee_in": 2.194,
+        "last_px": 18.149999618530273,
+        "min_hold": 1,
+        "notional": 1234.1999740600586,
+        "peak_px": 18.149999618530273,
+        "reason": "union \u2229 candle, no \ud83d\udea8; gate candle_capture=True; list yday_gainer,yday_mover; ret5=+14.1; leftover $1250.00",
+        "shares": 68,
+        "ticker": "BZ"
+      },
+      "CAPR": {
+        "close_px": 9.59000015258789,
+        "cost": 1247.81394140625,
+        "entry_date": "2026-08-28",
+        "entry_px": 9.729999542236328,
+        "fee_in": 2.374,
+        "last_px": 9.729999542236328,
+        "min_hold": 1,
+        "notional": 1245.43994140625,
+        "peak_px": 9.729999542236328,
+        "reason": "union \u2229 candle, no \ud83d\udea8; gate candle_capture=True; list yday_gainer,yday_mover; ret5=+47.1; leftover $1250.00",
+        "shares": 128,
+        "ticker": "CAPR"
+      },
+      "CRK": {
+        "close_px": 14.289999961853027,
+        "cost": 1245.795009727478,
+        "entry_date": "2026-08-28",
+        "entry_px": 14.630000114440918,
+        "fee_in": 2.245,
+        "last_px": 14.630000114440918,
+        "min_hold": 1,
+        "notional": 1243.550009727478,
+        "peak_px": 14.630000114440918,
+        "reason": "union \u2229 candle, no \ud83d\udea8; gate candle_capture=True; list flatten; ret5=+5.8; leftover $1250.00",
+        "shares": 85,
+        "ticker": "CRK"
+      },
+      "LVWR": {
+        "close_px": 1.350000023841858,
+        "cost": 1261.2070871397018,
+        "entry_date": "2026-08-28",
+        "entry_px": 1.3899999856948853,
+        "fee_in": 11.5971,
+        "last_px": 1.3899999856948853,
+        "min_hold": 1,
+        "notional": 1249.6099871397018,
+        "peak_px": 1.3899999856948853,
+        "reason": "union \u2229 candle, no \ud83d\udea8; gate candle_capture=True; list yday_gainer,yday_mover; ret5=+20.4; leftover $1250.00",
+        "shares": 899,
+        "ticker": "LVWR"
+      },
+      "RRC": {
+        "close_px": 41.459999084472656,
+        "cost": 1212.537048675537,
+        "entry_date": "2026-08-28",
+        "entry_px": 41.7400016784668,
+        "fee_in": 2.077,
+        "last_px": 41.7400016784668,
+        "min_hold": 1,
+        "notional": 1210.460048675537,
+        "peak_px": 41.7400016784668,
+        "reason": "union \u2229 candle, no \ud83d\udea8; gate candle_capture=True; list flatten; ret5=+2.4; leftover $1250.00",
+        "shares": 29,
+        "ticker": "RRC"
+      },
+      "SEDG": {
+        "close_px": 31.40999984741211,
+        "cost": 1219.4010564575196,
+        "entry_date": "2026-08-28",
+        "entry_px": 32.900001525878906,
+        "fee_in": 2.101,
+        "last_px": 32.900001525878906,
+        "min_hold": 1,
+        "notional": 1217.3000564575195,
+        "peak_px": 32.900001525878906,
+        "reason": "union \u2229 candle, no \ud83d\udea8; gate candle_capture=True; list probable,yday_gainer,yday_mover; \ud83d\udd35; ret5=+8.4; leftover $1250.00",
+        "shares": 37,
+        "ticker": "SEDG"
+      },
+      "SLI": {
+        "close_px": 2.549999952316284,
+        "cost": 1254.8914311088563,
+        "entry_date": "2026-08-28",
+        "entry_px": 2.680000066757202,
+        "fee_in": 6.0114,
+        "last_px": 2.680000066757202,
+        "min_hold": 1,
+        "notional": 1248.8800311088562,
+        "peak_px": 2.680000066757202,
+        "reason": "union \u2229 candle, no \ud83d\udea8; gate candle_capture=True; list flatten,ohlc_hot; ret5=+16.3; leftover $1250.00",
+        "shares": 466,
+        "ticker": "SLI"
+      },
+      "VYX": {
+        "close_px": 8.779999732971191,
+        "cost": 1244.0780155639648,
+        "entry_date": "2026-08-28",
+        "entry_px": 9.130000114440918,
+        "fee_in": 2.398,
+        "last_px": 9.130000114440918,
+        "min_hold": 1,
+        "notional": 1241.6800155639648,
+        "peak_px": 9.130000114440918,
+        "reason": "union \u2229 candle, no \ud83d\udea8; gate candle_capture=True; list yday_gainer; \ud83d\udd35; ret5=+20.0; leftover $1250.00",
+        "shares": 136,
+        "ticker": "VYX"
+      }
+    },
+    "yday_equity": 9690.99
+  }
+}

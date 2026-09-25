@@ -1,0 +1,215 @@
+{
+  "buys": [
+    "QTRX",
+    "HLP",
+    "INDP",
+    "SWKS",
+    "FTRE",
+    "SDGR",
+    "FPS",
+    "QRVO"
+  ],
+  "cash": 165.45,
+  "date": "2026-09-16",
+  "equity": 9284.99,
+  "fees": 28.1348,
+  "fills": [
+    {
+      "fees": 5.4438,
+      "pnl": null,
+      "price": 2.72,
+      "shares": 422,
+      "side": "BUY",
+      "ticker": "QTRX"
+    },
+    {
+      "fees": 8.2173,
+      "pnl": null,
+      "price": 1.8,
+      "shares": 637,
+      "side": "BUY",
+      "ticker": "HLP"
+    },
+    {
+      "fees": 4.0377,
+      "pnl": null,
+      "price": 3.66,
+      "shares": 313,
+      "side": "BUY",
+      "ticker": "INDP"
+    },
+    {
+      "fees": 2.026,
+      "pnl": null,
+      "price": 89.38,
+      "shares": 12,
+      "side": "BUY",
+      "ticker": "SWKS"
+    },
+    {
+      "fees": 2.164,
+      "pnl": null,
+      "price": 19.75,
+      "shares": 58,
+      "side": "BUY",
+      "ticker": "FTRE"
+    },
+    {
+      "fees": 2.137,
+      "pnl": null,
+      "price": 23.29,
+      "shares": 49,
+      "side": "BUY",
+      "ticker": "SDGR"
+    },
+    {
+      "fees": 2.092,
+      "pnl": null,
+      "price": 33.14,
+      "shares": 34,
+      "side": "BUY",
+      "ticker": "FPS"
+    },
+    {
+      "fees": 2.017,
+      "pnl": null,
+      "price": 118.18,
+      "shares": 9,
+      "side": "BUY",
+      "ticker": "QRVO"
+    }
+  ],
+  "holdings": [
+    "FPS",
+    "FTRE",
+    "HLP",
+    "INDP",
+    "QRVO",
+    "QTRX",
+    "SDGR",
+    "SWKS"
+  ],
+  "mean": 1.1079,
+  "n_trades_today": 8,
+  "recipe": "union_macd_up_h1",
+  "sells": [],
+  "state": {
+    "after": "2026-09-16",
+    "cash": 165.45,
+    "pos": {
+      "FPS": {
+        "close_px": 34.84000015258789,
+        "cost": 1128.851979248047,
+        "entry_date": "2026-09-16",
+        "entry_px": 33.13999938964844,
+        "fee_in": 2.092,
+        "last_px": 33.13999938964844,
+        "min_hold": 1,
+        "notional": 1126.7599792480469,
+        "peak_px": 33.13999938964844,
+        "reason": "union \u2229 macd_up, no \ud83d\udea8; gate macd_up=True; list yday_gainer; \ud83d\udd35; ret5=-2.9; leftover $1147.91",
+        "shares": 34,
+        "ticker": "FPS"
+      },
+      "FTRE": {
+        "close_px": 19.969999313354492,
+        "cost": 1147.664,
+        "entry_date": "2026-09-16",
+        "entry_px": 19.75,
+        "fee_in": 2.164,
+        "last_px": 19.75,
+        "min_hold": 1,
+        "notional": 1145.5,
+        "peak_px": 19.75,
+        "reason": "union \u2229 macd_up, no \ud83d\udea8; gate macd_up=True; list yday_gainer,yday_mover,ohlc_hot; \ud83d\udd35; ret5=+15.7; leftover $1147.91",
+        "shares": 58,
+        "ticker": "FTRE"
+      },
+      "HLP": {
+        "close_px": 2.069999933242798,
+        "cost": 1154.817269625473,
+        "entry_date": "2026-09-16",
+        "entry_px": 1.7999999523162842,
+        "fee_in": 8.2173,
+        "last_px": 1.7999999523162842,
+        "min_hold": 1,
+        "notional": 1146.599969625473,
+        "peak_px": 1.7999999523162842,
+        "reason": "union \u2229 macd_up, no \ud83d\udea8; gate macd_up=True; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+30.5; leftover $1147.91",
+        "shares": 637,
+        "ticker": "HLP"
+      },
+      "INDP": {
+        "close_px": 3.2100000381469727,
+        "cost": 1149.6177268650056,
+        "entry_date": "2026-09-16",
+        "entry_px": 3.6600000858306885,
+        "fee_in": 4.0377,
+        "last_px": 3.6600000858306885,
+        "min_hold": 1,
+        "notional": 1145.5800268650055,
+        "peak_px": 3.6600000858306885,
+        "reason": "union \u2229 macd_up, no \ud83d\udea8; gate macd_up=True; list yday_gainer,yday_mover; ret5=+96.8; leftover $1147.91",
+        "shares": 313,
+        "ticker": "INDP"
+      },
+      "QRVO": {
+        "close_px": 113.97000122070312,
+        "cost": 1065.637002746582,
+        "entry_date": "2026-09-16",
+        "entry_px": 118.18000030517578,
+        "fee_in": 2.017,
+        "last_px": 118.18000030517578,
+        "min_hold": 1,
+        "notional": 1063.620002746582,
+        "peak_px": 118.18000030517578,
+        "reason": "union \u2229 macd_up, no \ud83d\udea8; gate macd_up=True; list yday_gainer; \ud83d\udd35; ret5=+13.4; leftover $1147.91",
+        "shares": 9,
+        "ticker": "QRVO"
+      },
+      "QTRX": {
+        "close_px": 2.9100000858306885,
+        "cost": 1153.2838120735169,
+        "entry_date": "2026-09-16",
+        "entry_px": 2.7200000286102295,
+        "fee_in": 5.4438,
+        "last_px": 2.7200000286102295,
+        "min_hold": 1,
+        "notional": 1147.8400120735168,
+        "peak_px": 2.7200000286102295,
+        "reason": "union \u2229 macd_up, no \ud83d\udea8; gate macd_up=True; list probable,yday_gainer; ret5=-0.4; leftover $1147.91",
+        "shares": 422,
+        "ticker": "QTRX"
+      },
+      "SDGR": {
+        "close_px": 23.93000030517578,
+        "cost": 1143.3470448608398,
+        "entry_date": "2026-09-16",
+        "entry_px": 23.290000915527344,
+        "fee_in": 2.137,
+        "last_px": 23.290000915527344,
+        "min_hold": 1,
+        "notional": 1141.2100448608398,
+        "peak_px": 23.290000915527344,
+        "reason": "union \u2229 macd_up, no \ud83d\udea8; gate macd_up=True; list yday_gainer; \ud83d\udd35; \u26aa; ret5=+16.1; leftover $1147.91",
+        "shares": 49,
+        "ticker": "SDGR"
+      },
+      "SWKS": {
+        "close_px": 85.58999633789062,
+        "cost": 1074.5859670410157,
+        "entry_date": "2026-09-16",
+        "entry_px": 89.37999725341797,
+        "fee_in": 2.026,
+        "last_px": 89.37999725341797,
+        "min_hold": 1,
+        "notional": 1072.5599670410156,
+        "peak_px": 89.37999725341797,
+        "reason": "union \u2229 macd_up, no \ud83d\udea8; gate macd_up=True; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+19.4; leftover $1147.91",
+        "shares": 12,
+        "ticker": "SWKS"
+      }
+    },
+    "yday_equity": 9284.99
+  }
+}

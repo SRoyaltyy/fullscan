@@ -1,0 +1,57 @@
+{
+  "buys": [
+    "RDNT"
+  ],
+  "cash": 29.49,
+  "date": "2026-09-16",
+  "equity": 7455.93,
+  "fees": 4.5065,
+  "fills": [
+    {
+      "fees": 2.2225,
+      "pnl": -1321.97,
+      "price": 140.03,
+      "shares": 54,
+      "side": "SELL",
+      "ticker": "ORCL"
+    },
+    {
+      "fees": 2.284,
+      "pnl": null,
+      "price": 77.12,
+      "shares": 98,
+      "side": "BUY",
+      "ticker": "RDNT"
+    }
+  ],
+  "holdings": [
+    "RDNT"
+  ],
+  "mean": -2.0122,
+  "n_trades_today": 2,
+  "recipe": "flatten_vol_g_h3",
+  "sells": [
+    "ORCL"
+  ],
+  "state": {
+    "after": "2026-09-16",
+    "cash": 29.49,
+    "pos": {
+      "RDNT": {
+        "close_px": 75.77999877929688,
+        "cost": 7560.044269165039,
+        "entry_date": "2026-09-16",
+        "entry_px": 77.12000274658203,
+        "fee_in": 2.284,
+        "last_px": 77.12000274658203,
+        "min_hold": 3,
+        "notional": 7557.760269165039,
+        "peak_px": 77.12000274658203,
+        "reason": "flatten wish-list \u2229 vol\ud83d\udfe2; gate vol=good; list flatten; wish-list (live io HOLD \u2014 not a ticket); \u26aa; ret5=+7.2; leftover $7589.54",
+        "shares": 98,
+        "ticker": "RDNT"
+      }
+    },
+    "yday_equity": 7455.93
+  }
+}

@@ -1,0 +1,215 @@
+{
+  "buys": [
+    "CAPR",
+    "ANF",
+    "NCNO",
+    "MEI",
+    "VYX",
+    "SMTC",
+    "SNPS",
+    "CXM"
+  ],
+  "cash": 544.39,
+  "date": "2026-08-28",
+  "equity": 9870.38,
+  "fees": 17.609,
+  "fills": [
+    {
+      "fees": 2.374,
+      "pnl": null,
+      "price": 9.73,
+      "shares": 128,
+      "side": "BUY",
+      "ticker": "CAPR"
+    },
+    {
+      "fees": 2.014,
+      "pnl": null,
+      "price": 146.07,
+      "shares": 8,
+      "side": "BUY",
+      "ticker": "ANF"
+    },
+    {
+      "fees": 2.149,
+      "pnl": null,
+      "price": 23.3,
+      "shares": 53,
+      "side": "BUY",
+      "ticker": "NCNO"
+    },
+    {
+      "fees": 2.2,
+      "pnl": null,
+      "price": 17.78,
+      "shares": 70,
+      "side": "BUY",
+      "ticker": "MEI"
+    },
+    {
+      "fees": 2.398,
+      "pnl": null,
+      "price": 9.13,
+      "shares": 136,
+      "side": "BUY",
+      "ticker": "VYX"
+    },
+    {
+      "fees": 2.014,
+      "pnl": null,
+      "price": 141.76,
+      "shares": 8,
+      "side": "BUY",
+      "ticker": "SMTC"
+    },
+    {
+      "fees": 1.996,
+      "pnl": null,
+      "price": 461.85,
+      "shares": 2,
+      "side": "BUY",
+      "ticker": "SNPS"
+    },
+    {
+      "fees": 2.464,
+      "pnl": null,
+      "price": 7.88,
+      "shares": 158,
+      "side": "BUY",
+      "ticker": "CXM"
+    }
+  ],
+  "holdings": [
+    "ANF",
+    "CAPR",
+    "CXM",
+    "MEI",
+    "NCNO",
+    "SMTC",
+    "SNPS",
+    "VYX"
+  ],
+  "mean": -1.2962,
+  "n_trades_today": 8,
+  "recipe": "union_w_hot_cond_h3",
+  "sells": [],
+  "state": {
+    "after": "2026-08-28",
+    "cash": 544.39,
+    "pos": {
+      "ANF": {
+        "close_px": 148.4199981689453,
+        "cost": 1170.57405859375,
+        "entry_date": "2026-08-28",
+        "entry_px": 146.07000732421875,
+        "fee_in": 2.014,
+        "last_px": 146.07000732421875,
+        "min_hold": 3,
+        "notional": 1168.56005859375,
+        "peak_px": 146.07000732421875,
+        "reason": "rank by w_hot_cond; rank w_hot_cond; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+38.8; leftover $1250.00",
+        "shares": 8,
+        "ticker": "ANF"
+      },
+      "CAPR": {
+        "close_px": 9.59000015258789,
+        "cost": 1247.81394140625,
+        "entry_date": "2026-08-28",
+        "entry_px": 9.729999542236328,
+        "fee_in": 2.374,
+        "last_px": 9.729999542236328,
+        "min_hold": 3,
+        "notional": 1245.43994140625,
+        "peak_px": 9.729999542236328,
+        "reason": "rank by w_hot_cond; rank w_hot_cond; list yday_gainer,yday_mover; ret5=+47.1; leftover $1250.00",
+        "shares": 128,
+        "ticker": "CAPR"
+      },
+      "CXM": {
+        "close_px": 8.15999984741211,
+        "cost": 1247.504018081665,
+        "entry_date": "2026-08-28",
+        "entry_px": 7.880000114440918,
+        "fee_in": 2.464,
+        "last_px": 7.880000114440918,
+        "min_hold": 3,
+        "notional": 1245.040018081665,
+        "peak_px": 7.880000114440918,
+        "reason": "rank by w_hot_cond; rank w_hot_cond; list ohlc_hot; \ud83d\udd35; ret5=+10.3; leftover $1250.00",
+        "shares": 158,
+        "ticker": "CXM"
+      },
+      "MEI": {
+        "close_px": 18.209999084472656,
+        "cost": 1246.8000480651856,
+        "entry_date": "2026-08-28",
+        "entry_px": 17.780000686645508,
+        "fee_in": 2.2,
+        "last_px": 17.780000686645508,
+        "min_hold": 3,
+        "notional": 1244.6000480651855,
+        "peak_px": 17.780000686645508,
+        "reason": "rank by w_hot_cond; rank w_hot_cond; list mover_buy; \ud83d\udd35; \u26aa; ret5=+22.9; leftover $1250.00",
+        "shares": 70,
+        "ticker": "MEI"
+      },
+      "NCNO": {
+        "close_px": 22.989999771118164,
+        "cost": 1237.0489595642089,
+        "entry_date": "2026-08-28",
+        "entry_px": 23.299999237060547,
+        "fee_in": 2.149,
+        "last_px": 23.299999237060547,
+        "min_hold": 3,
+        "notional": 1234.899959564209,
+        "peak_px": 23.299999237060547,
+        "reason": "rank by w_hot_cond; rank w_hot_cond; list ohlc_hot; \ud83d\udd35; ret5=+14.5; leftover $1250.00",
+        "shares": 53,
+        "ticker": "NCNO"
+      },
+      "SMTC": {
+        "close_px": 131.1699981689453,
+        "cost": 1136.0939560546874,
+        "entry_date": "2026-08-28",
+        "entry_px": 141.75999450683594,
+        "fee_in": 2.014,
+        "last_px": 141.75999450683594,
+        "min_hold": 3,
+        "notional": 1134.0799560546875,
+        "peak_px": 141.75999450683594,
+        "reason": "rank by w_hot_cond; rank w_hot_cond; list yday_gainer,yday_mover,mover_buy; \ud83d\udd35; \u26aa; ret5=+14.1; leftover $1250.00",
+        "shares": 8,
+        "ticker": "SMTC"
+      },
+      "SNPS": {
+        "close_px": 442.6099853515625,
+        "cost": 925.6960122070312,
+        "entry_date": "2026-08-28",
+        "entry_px": 461.8500061035156,
+        "fee_in": 1.996,
+        "last_px": 461.8500061035156,
+        "min_hold": 3,
+        "notional": 923.7000122070312,
+        "peak_px": 461.8500061035156,
+        "reason": "rank by w_hot_cond; rank w_hot_cond; list ohlc_hot; ret5=+16.8; leftover $1250.00",
+        "shares": 2,
+        "ticker": "SNPS"
+      },
+      "VYX": {
+        "close_px": 8.779999732971191,
+        "cost": 1244.0780155639648,
+        "entry_date": "2026-08-28",
+        "entry_px": 9.130000114440918,
+        "fee_in": 2.398,
+        "last_px": 9.130000114440918,
+        "min_hold": 3,
+        "notional": 1241.6800155639648,
+        "peak_px": 9.130000114440918,
+        "reason": "rank by w_hot_cond; rank w_hot_cond; list yday_gainer; \ud83d\udd35; ret5=+20.0; leftover $1250.00",
+        "shares": 136,
+        "ticker": "VYX"
+      }
+    },
+    "yday_equity": 9870.38
+  }
+}

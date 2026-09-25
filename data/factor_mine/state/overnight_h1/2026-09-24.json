@@ -1,0 +1,75 @@
+{
+  "buys": [],
+  "cash": 7839.54,
+  "date": "2026-09-24",
+  "equity": 7839.54,
+  "fees": 20.6602,
+  "fills": [
+    {
+      "fees": 2.5364,
+      "pnl": -35.45,
+      "price": 8.42,
+      "shares": 169,
+      "side": "SELL",
+      "ticker": "BB"
+    },
+    {
+      "fees": 2.028,
+      "pnl": -41.36,
+      "price": 208.88,
+      "shares": 6,
+      "side": "SELL",
+      "ticker": "DRI"
+    },
+    {
+      "fees": 2.095,
+      "pnl": -38.33,
+      "price": 49.29,
+      "shares": 28,
+      "side": "SELL",
+      "ticker": "FUL"
+    },
+    {
+      "fees": 5.6022,
+      "pnl": -332.12,
+      "price": 2.65,
+      "shares": 428,
+      "side": "SELL",
+      "ticker": "NEOV"
+    },
+    {
+      "fees": 6.3731,
+      "pnl": -343.82,
+      "price": 2.31,
+      "shares": 487,
+      "side": "SELL",
+      "ticker": "SFIX"
+    },
+    {
+      "fees": 2.0255,
+      "pnl": -110.73,
+      "price": 262.12,
+      "shares": 5,
+      "side": "SELL",
+      "ticker": "SNX"
+    }
+  ],
+  "holdings": [],
+  "mean": -7.8551,
+  "n_trades_today": 6,
+  "recipe": "overnight_h1",
+  "sells": [
+    "BB",
+    "DRI",
+    "FUL",
+    "NEOV",
+    "SFIX",
+    "SNX"
+  ],
+  "state": {
+    "after": "2026-09-24",
+    "cash": 7839.54,
+    "pos": {},
+    "yday_equity": 7839.54
+  }
+}

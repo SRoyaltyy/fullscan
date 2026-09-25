@@ -1,0 +1,107 @@
+{
+  "buys": [],
+  "cash": 7610.4,
+  "date": "2026-08-31",
+  "equity": 9752.64,
+  "fees": 12.5632,
+  "fills": [
+    {
+      "fees": 2.034,
+      "pnl": 11.63,
+      "price": 148.03,
+      "shares": 8,
+      "side": "SELL",
+      "ticker": "ANF"
+    },
+    {
+      "fees": 2.4052,
+      "pnl": -34.22,
+      "price": 9.5,
+      "shares": 128,
+      "side": "SELL",
+      "ticker": "CAPR"
+    },
+    {
+      "fees": 2.043,
+      "pnl": -51.26,
+      "price": 102.7,
+      "shares": 11,
+      "side": "SELL",
+      "ticker": "EL"
+    },
+    {
+      "fees": 2.025,
+      "pnl": -48.83,
+      "price": 216.3,
+      "shares": 5,
+      "side": "SELL",
+      "ticker": "MRVL"
+    },
+    {
+      "fees": 2.022,
+      "pnl": -24.78,
+      "price": 247.05,
+      "shares": 4,
+      "side": "SELL",
+      "ticker": "SIMO"
+    },
+    {
+      "fees": 2.034,
+      "pnl": -79.73,
+      "price": 132.3,
+      "shares": 8,
+      "side": "SELL",
+      "ticker": "SMTC"
+    }
+  ],
+  "holdings": [
+    "MRNA",
+    "SNPS"
+  ],
+  "mean": -0.0746,
+  "n_trades_today": 6,
+  "recipe": "union_macd_hist_h1",
+  "sells": [
+    "ANF",
+    "CAPR",
+    "EL",
+    "MRVL",
+    "SIMO",
+    "SMTC"
+  ],
+  "state": {
+    "after": "2026-08-31",
+    "cash": 7610.4,
+    "pos": {
+      "MRNA": {
+        "close_px": 140.33999633789062,
+        "cost": 1236.7270219726563,
+        "entry_date": "2026-08-28",
+        "entry_px": 137.19000244140625,
+        "fee_in": 2.017,
+        "last_px": 134.10000610351562,
+        "min_hold": 1,
+        "notional": 1234.7100219726562,
+        "peak_px": 137.19000244140625,
+        "reason": "rank by macd_hist; rank macd_hist; list ohlc_hot; ret5=+7.1; leftover $1250.00",
+        "shares": 9,
+        "ticker": "MRNA"
+      },
+      "SNPS": {
+        "close_px": 439.5899963378906,
+        "cost": 925.6960122070312,
+        "entry_date": "2026-08-28",
+        "entry_px": 461.8500061035156,
+        "fee_in": 1.996,
+        "last_px": 437.95001220703125,
+        "min_hold": 1,
+        "notional": 923.7000122070312,
+        "peak_px": 461.8500061035156,
+        "reason": "rank by macd_hist; rank macd_hist; list ohlc_hot; ret5=+16.8; leftover $1250.00",
+        "shares": 2,
+        "ticker": "SNPS"
+      }
+    },
+    "yday_equity": 9752.64
+  }
+}

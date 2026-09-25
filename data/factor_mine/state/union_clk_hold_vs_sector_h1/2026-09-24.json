@@ -1,0 +1,30 @@
+{
+  "buys": [],
+  "cash": 9450.87,
+  "date": "2026-09-24",
+  "equity": 9450.87,
+  "fees": 104.0949,
+  "fills": [
+    {
+      "fees": 104.0949,
+      "pnl": -206.79,
+      "price": 1.2,
+      "shares": 7961,
+      "side": "SELL",
+      "ticker": "EU"
+    }
+  ],
+  "holdings": [],
+  "mean": -2.7106,
+  "n_trades_today": 1,
+  "recipe": "union_clk_hold_vs_sector_h1",
+  "sells": [
+    "EU"
+  ],
+  "state": {
+    "after": "2026-09-24",
+    "cash": 9450.87,
+    "pos": {},
+    "yday_equity": 9450.87
+  }
+}

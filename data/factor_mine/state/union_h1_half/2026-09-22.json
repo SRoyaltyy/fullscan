@@ -1,0 +1,288 @@
+{
+  "buys": [
+    "PACS",
+    "MKC",
+    "EL",
+    "USFD",
+    "DLO",
+    "TDC",
+    "FJET",
+    "DEFT"
+  ],
+  "cash": 4801.97,
+  "date": "2026-09-22",
+  "equity": 9474.91,
+  "fees": 42.2963,
+  "fills": [
+    {
+      "fees": 2.019,
+      "pnl": 11.61,
+      "price": 163.08,
+      "shares": 3,
+      "side": "SELL",
+      "ticker": "A"
+    },
+    {
+      "fees": 2.145,
+      "pnl": -27.9,
+      "price": 12.95,
+      "shares": 45,
+      "side": "SELL",
+      "ticker": "BTDR"
+    },
+    {
+      "fees": 2.4781,
+      "pnl": -78.91,
+      "price": 3.51,
+      "shares": 151,
+      "side": "SELL",
+      "ticker": "CYPH"
+    },
+    {
+      "fees": 2.028,
+      "pnl": -2.3,
+      "price": 89.12,
+      "shares": 6,
+      "side": "SELL",
+      "ticker": "DXCM"
+    },
+    {
+      "fees": 2.013,
+      "pnl": -11.79,
+      "price": 378.42,
+      "shares": 1,
+      "side": "SELL",
+      "ticker": "HUM"
+    },
+    {
+      "fees": 2.184,
+      "pnl": -18.85,
+      "price": 10.18,
+      "shares": 58,
+      "side": "SELL",
+      "ticker": "IOVA"
+    },
+    {
+      "fees": 2.145,
+      "pnl": -18.22,
+      "price": 13.16,
+      "shares": 45,
+      "side": "SELL",
+      "ticker": "MGTX"
+    },
+    {
+      "fees": 2.2438,
+      "pnl": -19.86,
+      "price": 7.64,
+      "shares": 77,
+      "side": "SELL",
+      "ticker": "PGEN"
+    },
+    {
+      "fees": 2.032,
+      "pnl": null,
+      "price": 41.93,
+      "shares": 14,
+      "side": "BUY",
+      "ticker": "PACS"
+    },
+    {
+      "fees": 2.026,
+      "pnl": null,
+      "price": 49.57,
+      "shares": 12,
+      "side": "BUY",
+      "ticker": "MKC"
+    },
+    {
+      "fees": 2.008,
+      "pnl": null,
+      "price": 98.02,
+      "shares": 6,
+      "side": "BUY",
+      "ticker": "EL"
+    },
+    {
+      "fees": 2.008,
+      "pnl": null,
+      "price": 94.08,
+      "shares": 6,
+      "side": "BUY",
+      "ticker": "USFD"
+    },
+    {
+      "fees": 2.113,
+      "pnl": null,
+      "price": 14.5,
+      "shares": 41,
+      "side": "BUY",
+      "ticker": "DLO"
+    },
+    {
+      "fees": 2.05,
+      "pnl": null,
+      "price": 29.78,
+      "shares": 20,
+      "side": "BUY",
+      "ticker": "TDC"
+    },
+    {
+      "fees": 3.8055,
+      "pnl": null,
+      "price": 2.02,
+      "shares": 295,
+      "side": "BUY",
+      "ticker": "FJET"
+    },
+    {
+      "fees": 8.9979,
+      "pnl": null,
+      "price": 0.59,
+      "shares": 1011,
+      "side": "BUY",
+      "ticker": "DEFT"
+    }
+  ],
+  "holdings": [
+    "DEFT",
+    "DLO",
+    "EL",
+    "FJET",
+    "MKC",
+    "PACS",
+    "TDC",
+    "USFD"
+  ],
+  "mean": -0.805,
+  "n_trades_today": 16,
+  "recipe": "union_h1_half",
+  "sells": [
+    "A",
+    "BTDR",
+    "CYPH",
+    "DXCM",
+    "HUM",
+    "IOVA",
+    "MGTX",
+    "PGEN"
+  ],
+  "state": {
+    "after": "2026-09-22",
+    "cash": 4801.97,
+    "pos": {
+      "DEFT": {
+        "close_px": 0.58,
+        "cost": 605.4879,
+        "entry_date": "2026-09-22",
+        "entry_px": 0.59,
+        "fee_in": 8.9979,
+        "last_px": 0.59,
+        "min_hold": 1,
+        "notional": 596.49,
+        "peak_px": 0.59,
+        "reason": "deploy half leftover; list probable,yday_gainer,yday_mover; ret5=-1.7; leftover $596.50",
+        "shares": 1011,
+        "ticker": "DEFT"
+      },
+      "DLO": {
+        "close_px": 14.26,
+        "cost": 596.613,
+        "entry_date": "2026-09-22",
+        "entry_px": 14.5,
+        "fee_in": 2.113,
+        "last_px": 14.5,
+        "min_hold": 1,
+        "notional": 594.5,
+        "peak_px": 14.5,
+        "reason": "deploy half leftover; list flatten; ret5=-3.6; leftover $596.50",
+        "shares": 41,
+        "ticker": "DLO"
+      },
+      "EL": {
+        "close_px": 100.29,
+        "cost": 590.128,
+        "entry_date": "2026-09-22",
+        "entry_px": 98.02,
+        "fee_in": 2.008,
+        "last_px": 98.02,
+        "min_hold": 1,
+        "notional": 588.12,
+        "peak_px": 98.02,
+        "reason": "deploy half leftover; list flatten; ret5=-1.9; leftover $596.50",
+        "shares": 6,
+        "ticker": "EL"
+      },
+      "FJET": {
+        "close_px": 1.94,
+        "cost": 599.7055,
+        "entry_date": "2026-09-22",
+        "entry_px": 2.02,
+        "fee_in": 3.8055,
+        "last_px": 2.02,
+        "min_hold": 1,
+        "notional": 595.9,
+        "peak_px": 2.02,
+        "reason": "deploy half leftover; list probable,yday_gainer,yday_mover; ret5=+0.5; leftover $596.50",
+        "shares": 295,
+        "ticker": "FJET"
+      },
+      "MKC": {
+        "close_px": 49.42,
+        "cost": 596.866,
+        "entry_date": "2026-09-22",
+        "entry_px": 49.57,
+        "fee_in": 2.026,
+        "last_px": 49.57,
+        "min_hold": 1,
+        "notional": 594.84,
+        "peak_px": 49.57,
+        "reason": "deploy half leftover; list flatten; ret5=-3.0; leftover $596.50",
+        "shares": 12,
+        "ticker": "MKC"
+      },
+      "PACS": {
+        "close_px": 41.53,
+        "cost": 589.052,
+        "entry_date": "2026-09-22",
+        "entry_px": 41.93,
+        "fee_in": 2.032,
+        "last_px": 41.93,
+        "min_hold": 1,
+        "notional": 587.02,
+        "peak_px": 41.93,
+        "reason": "deploy half leftover; list flatten; ret5=-5.6; leftover $596.50",
+        "shares": 14,
+        "ticker": "PACS"
+      },
+      "TDC": {
+        "close_px": 29.41,
+        "cost": 597.65,
+        "entry_date": "2026-09-22",
+        "entry_px": 29.78,
+        "fee_in": 2.05,
+        "last_px": 29.78,
+        "min_hold": 1,
+        "notional": 595.6,
+        "peak_px": 29.78,
+        "reason": "deploy half leftover; list flatten; ret5=-0.0; leftover $596.50",
+        "shares": 20,
+        "ticker": "TDC"
+      },
+      "USFD": {
+        "close_px": 94.2,
+        "cost": 566.488,
+        "entry_date": "2026-09-22",
+        "entry_px": 94.08,
+        "fee_in": 2.008,
+        "last_px": 94.08,
+        "min_hold": 1,
+        "notional": 564.48,
+        "peak_px": 94.08,
+        "reason": "deploy half leftover; list flatten; ret5=-0.6; leftover $596.50",
+        "shares": 6,
+        "ticker": "USFD"
+      }
+    },
+    "yday_equity": 9474.91
+  }
+}

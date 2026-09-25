@@ -1,0 +1,288 @@
+{
+  "buys": [
+    "PGEN",
+    "ARQT",
+    "SMTC",
+    "SABR",
+    "CYPH",
+    "AMRX",
+    "FTAI",
+    "PALI"
+  ],
+  "cash": 171.51,
+  "date": "2026-09-17",
+  "equity": 9632.73,
+  "fees": 48.9063,
+  "fills": [
+    {
+      "fees": 2.139,
+      "pnl": 44.76,
+      "price": 28.23,
+      "shares": 43,
+      "side": "SELL",
+      "ticker": "ADPT"
+    },
+    {
+      "fees": 2.133,
+      "pnl": 13.59,
+      "price": 28.595,
+      "shares": 41,
+      "side": "SELL",
+      "ticker": "CAI"
+    },
+    {
+      "fees": 2.1153,
+      "pnl": 122.49,
+      "price": 36.76,
+      "shares": 35,
+      "side": "SELL",
+      "ticker": "FPS"
+    },
+    {
+      "fees": 2.055,
+      "pnl": -14.29,
+      "price": 76.44,
+      "shares": 15,
+      "side": "SELL",
+      "ticker": "RDNT"
+    },
+    {
+      "fees": 2.6332,
+      "pnl": -63.22,
+      "price": 5.58,
+      "shares": 200,
+      "side": "SELL",
+      "ticker": "RIG"
+    },
+    {
+      "fees": 2.16,
+      "pnl": 35.7,
+      "price": 24.09,
+      "shares": 50,
+      "side": "SELL",
+      "ticker": "SDGR"
+    },
+    {
+      "fees": 2.049,
+      "pnl": -38.14,
+      "price": 86.76,
+      "shares": 13,
+      "side": "SELL",
+      "ticker": "SWKS"
+    },
+    {
+      "fees": 2.049,
+      "pnl": -58.68,
+      "price": 83.2,
+      "shares": 13,
+      "side": "SELL",
+      "ticker": "VAL"
+    },
+    {
+      "fees": 2.458,
+      "pnl": null,
+      "price": 7.59,
+      "shares": 156,
+      "side": "BUY",
+      "ticker": "PGEN"
+    },
+    {
+      "fees": 2.125,
+      "pnl": null,
+      "price": 25.95,
+      "shares": 45,
+      "side": "BUY",
+      "ticker": "ARQT"
+    },
+    {
+      "fees": 2.008,
+      "pnl": null,
+      "price": 170.85,
+      "shares": 6,
+      "side": "BUY",
+      "ticker": "SMTC"
+    },
+    {
+      "fees": 6.3597,
+      "pnl": null,
+      "price": 2.4,
+      "shares": 493,
+      "side": "BUY",
+      "ticker": "SABR"
+    },
+    {
+      "fees": 5.7018,
+      "pnl": null,
+      "price": 2.675,
+      "shares": 442,
+      "side": "BUY",
+      "ticker": "CYPH"
+    },
+    {
+      "fees": 2.179,
+      "pnl": null,
+      "price": 18.56,
+      "shares": 63,
+      "side": "BUY",
+      "ticker": "AMRX"
+    },
+    {
+      "fees": 2.008,
+      "pnl": null,
+      "price": 196.5,
+      "shares": 6,
+      "side": "BUY",
+      "ticker": "FTAI"
+    },
+    {
+      "fees": 8.7333,
+      "pnl": null,
+      "price": 1.75,
+      "shares": 677,
+      "side": "BUY",
+      "ticker": "PALI"
+    }
+  ],
+  "holdings": [
+    "AMRX",
+    "ARQT",
+    "CYPH",
+    "FTAI",
+    "PALI",
+    "PGEN",
+    "SABR",
+    "SMTC"
+  ],
+  "mean": 3.1466,
+  "n_trades_today": 16,
+  "recipe": "union_vol_ab_h1",
+  "sells": [
+    "ADPT",
+    "CAI",
+    "FPS",
+    "RDNT",
+    "RIG",
+    "SDGR",
+    "SWKS",
+    "VAL"
+  ],
+  "state": {
+    "after": "2026-09-17",
+    "cash": 171.51,
+    "pos": {
+      "AMRX": {
+        "close_px": 18.280000686645508,
+        "cost": 1171.4589663543702,
+        "entry_date": "2026-09-17",
+        "entry_px": 18.559999465942383,
+        "fee_in": 2.179,
+        "last_px": 18.559999465942383,
+        "min_hold": 1,
+        "notional": 1169.2799663543701,
+        "peak_px": 18.559999465942383,
+        "reason": "combo gate; gate vol=good,ab=good; list yday_gainer; \ud83d\udd35; ret5=+4.8; leftover $1184.82",
+        "shares": 63,
+        "ticker": "AMRX"
+      },
+      "ARQT": {
+        "close_px": 26.459999084472656,
+        "cost": 1169.8750343322754,
+        "entry_date": "2026-09-17",
+        "entry_px": 25.950000762939453,
+        "fee_in": 2.125,
+        "last_px": 25.950000762939453,
+        "min_hold": 1,
+        "notional": 1167.7500343322754,
+        "peak_px": 25.950000762939453,
+        "reason": "combo gate; gate vol=good,ab=good; list probable,yday_gainer,yday_mover,ohlc_hot; ret5=+9.6; leftover $1184.82",
+        "shares": 45,
+        "ticker": "ARQT"
+      },
+      "CYPH": {
+        "close_px": 3.069999933242798,
+        "cost": 1188.0517789237977,
+        "entry_date": "2026-09-17",
+        "entry_px": 2.674999952316284,
+        "fee_in": 5.7018,
+        "last_px": 2.674999952316284,
+        "min_hold": 1,
+        "notional": 1182.3499789237976,
+        "peak_px": 2.674999952316284,
+        "reason": "combo gate; gate vol=good,ab=good; list yday_gainer; \ud83d\udd35; ret5=-0.4; leftover $1184.82",
+        "shares": 442,
+        "ticker": "CYPH"
+      },
+      "FTAI": {
+        "close_px": 195.07000732421875,
+        "cost": 1181.008,
+        "entry_date": "2026-09-17",
+        "entry_px": 196.5,
+        "fee_in": 2.008,
+        "last_px": 196.5,
+        "min_hold": 1,
+        "notional": 1179.0,
+        "peak_px": 196.5,
+        "reason": "combo gate; gate vol=good,ab=good; list yday_gainer; \ud83d\udd35; ret5=+2.5; leftover $1184.82",
+        "shares": 6,
+        "ticker": "FTAI"
+      },
+      "PALI": {
+        "close_px": 1.7000000476837158,
+        "cost": 1193.4833,
+        "entry_date": "2026-09-17",
+        "entry_px": 1.75,
+        "fee_in": 8.7333,
+        "last_px": 1.75,
+        "min_hold": 1,
+        "notional": 1184.75,
+        "peak_px": 1.75,
+        "reason": "combo gate; gate vol=good,ab=good; list yday_mover; ret5=-17.6; leftover $1184.82",
+        "shares": 677,
+        "ticker": "PALI"
+      },
+      "PGEN": {
+        "close_px": 7.869999885559082,
+        "cost": 1186.498023803711,
+        "entry_date": "2026-09-17",
+        "entry_px": 7.590000152587891,
+        "fee_in": 2.458,
+        "last_px": 7.590000152587891,
+        "min_hold": 1,
+        "notional": 1184.040023803711,
+        "peak_px": 7.590000152587891,
+        "reason": "combo gate; gate vol=good,ab=good; list flatten,ohlc_hot; ret5=+9.4; leftover $1184.82",
+        "shares": 156,
+        "ticker": "PGEN"
+      },
+      "SABR": {
+        "close_px": 2.319999933242798,
+        "cost": 1189.5597470161438,
+        "entry_date": "2026-09-17",
+        "entry_px": 2.4000000953674316,
+        "fee_in": 6.3597,
+        "last_px": 2.4000000953674316,
+        "min_hold": 1,
+        "notional": 1183.2000470161438,
+        "peak_px": 2.4000000953674316,
+        "reason": "combo gate; gate vol=good,ab=good; list probable,yday_gainer,yday_mover,ohlc_hot; \ud83d\udd35; \u26aa; ret5=+8.4; leftover $1184.82",
+        "shares": 493,
+        "ticker": "SABR"
+      },
+      "SMTC": {
+        "close_px": 178.19000244140625,
+        "cost": 1027.1080366210938,
+        "entry_date": "2026-09-17",
+        "entry_px": 170.85000610351562,
+        "fee_in": 2.008,
+        "last_px": 170.85000610351562,
+        "min_hold": 1,
+        "notional": 1025.1000366210938,
+        "peak_px": 170.85000610351562,
+        "reason": "combo gate; gate vol=good,ab=good; list probable,yday_gainer,yday_mover; \ud83d\udd35; ret5=+2.2; leftover $1184.82",
+        "shares": 6,
+        "ticker": "SMTC"
+      }
+    },
+    "yday_equity": 9632.73
+  }
+}

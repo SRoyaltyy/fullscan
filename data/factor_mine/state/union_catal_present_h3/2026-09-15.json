@@ -1,0 +1,36 @@
+{
+  "buys": [],
+  "cash": 9.65,
+  "date": "2026-09-15",
+  "equity": 9435.89,
+  "fees": 0,
+  "fills": [],
+  "holdings": [
+    "FUBO"
+  ],
+  "mean": -8.08,
+  "n_trades_today": 0,
+  "recipe": "union_catal_present_h3",
+  "sells": [],
+  "state": {
+    "after": "2026-09-15",
+    "cash": 9.65,
+    "pos": {
+      "FUBO": {
+        "close_px": 10.90999984741211,
+        "cost": 9990.345764794922,
+        "entry_date": "2026-09-11",
+        "entry_px": 11.550000190734863,
+        "fee_in": 11.1456,
+        "last_px": 11.699999809265137,
+        "min_hold": 3,
+        "notional": 9979.200164794922,
+        "peak_px": 11.699999809265137,
+        "reason": "union \u2229 catal_present, no \ud83d\udea8; gate catal_present=True; list probable,yday_gainer; ret5=-1.6; leftover $10000.00",
+        "shares": 864,
+        "ticker": "FUBO"
+      }
+    },
+    "yday_equity": 9435.89
+  }
+}

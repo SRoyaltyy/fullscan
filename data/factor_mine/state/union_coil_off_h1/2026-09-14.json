@@ -1,0 +1,101 @@
+{
+  "buys": [],
+  "cash": 8219.23,
+  "date": "2026-09-14",
+  "equity": 9245.71,
+  "fees": 29.0235,
+  "fills": [
+    {
+      "fees": 2.3071,
+      "pnl": -17.2,
+      "price": 11.75,
+      "shares": 97,
+      "side": "SELL",
+      "ticker": "APPS"
+    },
+    {
+      "fees": 7.1702,
+      "pnl": -52.6,
+      "price": 2.05,
+      "shares": 548,
+      "side": "SELL",
+      "ticker": "BAK"
+    },
+    {
+      "fees": 2.076,
+      "pnl": 91.57,
+      "price": 56.9,
+      "shares": 22,
+      "side": "SELL",
+      "ticker": "BAND"
+    },
+    {
+      "fees": 10.8548,
+      "pnl": -46.46,
+      "price": 1.37,
+      "shares": 830,
+      "side": "SELL",
+      "ticker": "GPRO"
+    },
+    {
+      "fees": 2.3641,
+      "pnl": -17.35,
+      "price": 10.0,
+      "shares": 115,
+      "side": "SELL",
+      "ticker": "PAGS"
+    },
+    {
+      "fees": 2.1963,
+      "pnl": 71.89,
+      "price": 19.79,
+      "shares": 62,
+      "side": "SELL",
+      "ticker": "REAX"
+    },
+    {
+      "fees": 2.055,
+      "pnl": -7.54,
+      "price": 77.1,
+      "shares": 15,
+      "side": "SELL",
+      "ticker": "VIST"
+    }
+  ],
+  "holdings": [
+    "NVT"
+  ],
+  "mean": -2.126,
+  "n_trades_today": 7,
+  "recipe": "union_coil_off_h1",
+  "sells": [
+    "APPS",
+    "BAK",
+    "BAND",
+    "GPRO",
+    "PAGS",
+    "REAX",
+    "VIST"
+  ],
+  "state": {
+    "after": "2026-09-14",
+    "cash": 8219.23,
+    "pos": {
+      "NVT": {
+        "close_px": 146.63999938964844,
+        "cost": 1106.470991455078,
+        "entry_date": "2026-09-11",
+        "entry_px": 157.77999877929688,
+        "fee_in": 2.011,
+        "last_px": 150.0,
+        "min_hold": 1,
+        "notional": 1104.4599914550781,
+        "peak_px": 157.77999877929688,
+        "reason": "union \u2229 coil_off, no \ud83d\udea8; gate ret_5_min=0.0,ret_5_max=10.0,rvol_min=0.7,rvol_max=2.2; list flatten; \ud83d\udd35; ret5=+2.0; leftover $1162.92",
+        "shares": 7,
+        "ticker": "NVT"
+      }
+    },
+    "yday_equity": 9245.71
+  }
+}

@@ -1,0 +1,236 @@
+{
+  "buys": [],
+  "cash": 9051.15,
+  "date": "2026-09-24",
+  "equity": 10208.92,
+  "fees": 16.1771,
+  "fills": [
+    {
+      "fees": 2.031,
+      "pnl": 38.52,
+      "price": 163.95,
+      "shares": 7,
+      "side": "SELL",
+      "ticker": "A"
+    },
+    {
+      "fees": 2.2944,
+      "pnl": -117.56,
+      "price": 12.26,
+      "shares": 93,
+      "side": "SELL",
+      "ticker": "BTDR"
+    },
+    {
+      "fees": 2.052,
+      "pnl": -20.18,
+      "price": 87.68,
+      "shares": 14,
+      "side": "SELL",
+      "ticker": "DXCM"
+    },
+    {
+      "fees": 2.8584,
+      "pnl": -43.82,
+      "price": 5.58,
+      "shares": 218,
+      "side": "SELL",
+      "ticker": "GEMI"
+    },
+    {
+      "fees": 2.3989,
+      "pnl": -28.71,
+      "price": 9.8,
+      "shares": 126,
+      "side": "SELL",
+      "ticker": "SBET"
+    },
+    {
+      "fees": 2.2385,
+      "pnl": 522.43,
+      "price": 24.03,
+      "shares": 74,
+      "side": "SELL",
+      "ticker": "TJGC"
+    },
+    {
+      "fees": 2.3039,
+      "pnl": -31.46,
+      "price": 12.77,
+      "shares": 96,
+      "side": "SELL",
+      "ticker": "USDE"
+    }
+  ],
+  "holdings": [
+    "FSLY",
+    "GRPN",
+    "MAZE",
+    "NMRA",
+    "OMER",
+    "THO",
+    "TNGX",
+    "TTAN",
+    "VKTX",
+    "XXI"
+  ],
+  "mean": -0.3816,
+  "n_trades_today": 7,
+  "recipe": "union_join_vol_green_h3",
+  "sells": [
+    "A",
+    "BTDR",
+    "DXCM",
+    "GEMI",
+    "SBET",
+    "TJGC",
+    "USDE"
+  ],
+  "state": {
+    "after": "2026-09-24",
+    "cash": 9051.15,
+    "pos": {
+      "FSLY": {
+        "close_px": 26.68000030517578,
+        "cost": 169.81920274658202,
+        "entry_date": "2026-09-22",
+        "entry_px": 28.020000457763672,
+        "fee_in": 1.6992,
+        "last_px": 27.799999237060547,
+        "min_hold": 3,
+        "notional": 168.12000274658203,
+        "peak_px": 28.020000457763672,
+        "reason": "combo gate; gate join=good,vol=good,last_green=True; list yday_gainer,yday_mover,ohlc_hot; ret5=+10.3; leftover $178.00",
+        "shares": 6,
+        "ticker": "FSLY"
+      },
+      "GRPN": {
+        "close_px": 20.889999389648438,
+        "cost": 177.2992,
+        "entry_date": "2026-09-22",
+        "entry_px": 21.94,
+        "fee_in": 1.7792,
+        "last_px": 19.899999618530273,
+        "min_hold": 3,
+        "notional": 175.52,
+        "peak_px": 21.94,
+        "reason": "combo gate; gate join=good,vol=good,last_green=True; list yday_gainer,yday_mover,ohlc_hot; ret5=+15.4; leftover $178.00",
+        "shares": 8,
+        "ticker": "GRPN"
+      },
+      "MAZE": {
+        "close_px": 26.209999084472656,
+        "cost": 85.75799771118164,
+        "entry_date": "2026-09-23",
+        "entry_px": 28.299999237060547,
+        "fee_in": 0.858,
+        "last_px": 28.420000076293945,
+        "min_hold": 3,
+        "notional": 84.89999771118164,
+        "peak_px": 28.420000076293945,
+        "reason": "combo gate; gate join=good,vol=good,last_green=True; list yday_gainer,yday_mover,ohlc_hot; \ud83d\udd35; ret5=+17.1; leftover $107.57",
+        "shares": 3,
+        "ticker": "MAZE"
+      },
+      "NMRA": {
+        "close_px": 0.703000009059906,
+        "cost": 109.01520093460083,
+        "entry_date": "2026-09-23",
+        "entry_px": 0.7680000066757202,
+        "fee_in": 1.4952,
+        "last_px": 0.7459999918937683,
+        "min_hold": 3,
+        "notional": 107.52000093460083,
+        "peak_px": 0.7680000066757202,
+        "reason": "combo gate; gate join=good,vol=good,last_green=True; list probable,yday_gainer,yday_mover; \ud83d\udd35; ret5=-6.3; leftover $107.57",
+        "shares": 140,
+        "ticker": "NMRA"
+      },
+      "OMER": {
+        "close_px": 20.1299991607666,
+        "cost": 104.29749809265137,
+        "entry_date": "2026-09-23",
+        "entry_px": 20.649999618530273,
+        "fee_in": 1.0475,
+        "last_px": 20.520000457763672,
+        "min_hold": 3,
+        "notional": 103.24999809265137,
+        "peak_px": 20.649999618530273,
+        "reason": "combo gate; gate join=good,vol=good,last_green=True; list flatten,yday_gainer,yday_mover; \ud83d\udd35; \u26aa; ret5=+22.6; leftover $107.57",
+        "shares": 5,
+        "ticker": "OMER"
+      },
+      "THO": {
+        "close_px": 70.93000030517578,
+        "cost": 146.5166,
+        "entry_date": "2026-09-22",
+        "entry_px": 72.53,
+        "fee_in": 1.4566,
+        "last_px": 72.58000183105469,
+        "min_hold": 3,
+        "notional": 145.06,
+        "peak_px": 72.58000183105469,
+        "reason": "combo gate; gate join=good,vol=good,last_green=True; list earn_react; ret5=-4.8; leftover $178.00",
+        "shares": 2,
+        "ticker": "THO"
+      },
+      "TNGX": {
+        "close_px": 24.6299991607666,
+        "cost": 102.6279984741211,
+        "entry_date": "2026-09-23",
+        "entry_px": 25.399999618530273,
+        "fee_in": 1.028,
+        "last_px": 23.989999771118164,
+        "min_hold": 3,
+        "notional": 101.5999984741211,
+        "peak_px": 25.399999618530273,
+        "reason": "combo gate; gate join=good,vol=good,last_green=True; list probable,yday_gainer,yday_mover; \ud83d\udd35; ret5=+6.9; leftover $107.57",
+        "shares": 4,
+        "ticker": "TNGX"
+      },
+      "TTAN": {
+        "close_px": 59.97999954223633,
+        "cost": 62.78459984741211,
+        "entry_date": "2026-09-23",
+        "entry_px": 62.15999984741211,
+        "fee_in": 0.6246,
+        "last_px": 61.779998779296875,
+        "min_hold": 3,
+        "notional": 62.15999984741211,
+        "peak_px": 62.15999984741211,
+        "reason": "combo gate; gate join=good,vol=good,last_green=True; list probable; \ud83d\udd35; \u26aa; ret5=+5.1; leftover $107.57",
+        "shares": 1,
+        "ticker": "TTAN"
+      },
+      "VKTX": {
+        "close_px": 36.75,
+        "cost": 84.3611966430664,
+        "entry_date": "2026-09-23",
+        "entry_px": 41.7599983215332,
+        "fee_in": 0.8412,
+        "last_px": 36.025001525878906,
+        "min_hold": 3,
+        "notional": 83.5199966430664,
+        "peak_px": 41.7599983215332,
+        "reason": "combo gate; gate join=good,vol=good,last_green=True; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+36.4; leftover $107.57",
+        "shares": 2,
+        "ticker": "VKTX"
+      },
+      "XXI": {
+        "close_px": 6.630000114440918,
+        "cost": 179.7903,
+        "entry_date": "2026-09-22",
+        "entry_px": 6.59,
+        "fee_in": 1.8603,
+        "last_px": 6.699999809265137,
+        "min_hold": 3,
+        "notional": 177.93,
+        "peak_px": 6.929999828338623,
+        "reason": "combo gate; gate join=good,vol=good,last_green=True; list yday_gainer; ret5=+14.2; leftover $178.00",
+        "shares": 27,
+        "ticker": "XXI"
+      }
+    },
+    "yday_equity": 10208.92
+  }
+}

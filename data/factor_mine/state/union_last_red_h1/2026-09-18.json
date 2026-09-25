@@ -1,0 +1,144 @@
+{
+  "buys": [
+    "GNRC",
+    "FIVN"
+  ],
+  "cash": 156.02,
+  "date": "2026-09-18",
+  "equity": 8765.83,
+  "fees": 44.7723,
+  "fills": [
+    {
+      "fees": 2.3483,
+      "pnl": -182.87,
+      "price": 8.68,
+      "shares": 110,
+      "side": "SELL",
+      "ticker": "ALHC"
+    },
+    {
+      "fees": 8.3722,
+      "pnl": -16.63,
+      "price": 1.77,
+      "shares": 640,
+      "side": "SELL",
+      "ticker": "BAK"
+    },
+    {
+      "fees": 2.5446,
+      "pnl": 60.31,
+      "price": 6.94,
+      "shares": 172,
+      "side": "SELL",
+      "ticker": "BTGO"
+    },
+    {
+      "fees": 5.5503,
+      "pnl": 141.62,
+      "price": 3.035,
+      "shares": 424,
+      "side": "SELL",
+      "ticker": "CYPH"
+    },
+    {
+      "fees": 4.4922,
+      "pnl": 179.73,
+      "price": 3.85,
+      "shares": 343,
+      "side": "SELL",
+      "ticker": "INDP"
+    },
+    {
+      "fees": 2.022,
+      "pnl": -11.22,
+      "price": 236.8,
+      "shares": 4,
+      "side": "SELL",
+      "ticker": "JBHT"
+    },
+    {
+      "fees": 6.5299,
+      "pnl": -112.77,
+      "price": 2.07,
+      "shares": 499,
+      "side": "SELL",
+      "ticker": "MRLN"
+    },
+    {
+      "fees": 8.4768,
+      "pnl": -62.2,
+      "price": 1.68,
+      "shares": 648,
+      "side": "SELL",
+      "ticker": "PALI"
+    },
+    {
+      "fees": 2.053,
+      "pnl": null,
+      "price": 209.52,
+      "shares": 21,
+      "side": "BUY",
+      "ticker": "GNRC"
+    },
+    {
+      "fees": 2.383,
+      "pnl": null,
+      "price": 34.44,
+      "shares": 131,
+      "side": "BUY",
+      "ticker": "FIVN"
+    }
+  ],
+  "holdings": [
+    "FIVN",
+    "GNRC"
+  ],
+  "mean": -4.1634,
+  "n_trades_today": 10,
+  "recipe": "union_last_red_h1",
+  "sells": [
+    "ALHC",
+    "BAK",
+    "BTGO",
+    "CYPH",
+    "INDP",
+    "JBHT",
+    "MRLN",
+    "PALI"
+  ],
+  "state": {
+    "after": "2026-09-18",
+    "cash": 156.02,
+    "pos": {
+      "FIVN": {
+        "close_px": 32.470001220703125,
+        "cost": 4514.022820098877,
+        "entry_date": "2026-09-18",
+        "entry_px": 34.439998626708984,
+        "fee_in": 2.383,
+        "last_px": 34.439998626708984,
+        "min_hold": 1,
+        "notional": 4511.639820098877,
+        "peak_px": 34.439998626708984,
+        "reason": "union \u2229 last_red, no \ud83d\udea8; gate last_red=True; list flatten; \ud83d\udd35; \u26aa; ret5=+14.0; leftover $4536.01",
+        "shares": 131,
+        "ticker": "FIVN"
+      },
+      "GNRC": {
+        "close_px": 207.44000244140625,
+        "cost": 4401.97308972168,
+        "entry_date": "2026-09-18",
+        "entry_px": 209.52000427246094,
+        "fee_in": 2.053,
+        "last_px": 209.52000427246094,
+        "min_hold": 1,
+        "notional": 4399.92008972168,
+        "peak_px": 209.52000427246094,
+        "reason": "union \u2229 last_red, no \ud83d\udea8; gate last_red=True; list flatten,yday_gainer,yday_mover; \ud83d\udd35; ret5=+14.1; leftover $4536.01",
+        "shares": 21,
+        "ticker": "GNRC"
+      }
+    },
+    "yday_equity": 8765.83
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "buys": [],
+  "cash": 6.48,
+  "date": "2026-09-18",
+  "equity": 7477.82,
+  "fees": 0,
+  "fills": [],
+  "holdings": [
+    "PGEN",
+    "RDNT"
+  ],
+  "mean": -2.283,
+  "n_trades_today": 0,
+  "recipe": "flatten_vol_g_h3",
+  "sells": [],
+  "state": {
+    "after": "2026-09-18",
+    "cash": 6.48,
+    "pos": {
+      "PGEN": {
+        "close_px": 7.78000020980835,
+        "cost": 23.00670045776367,
+        "entry_date": "2026-09-17",
+        "entry_px": 7.590000152587891,
+        "fee_in": 0.2367,
+        "last_px": 7.980000019073486,
+        "min_hold": 3,
+        "notional": 22.770000457763672,
+        "peak_px": 7.980000019073486,
+        "reason": "flatten wish-list \u2229 vol\ud83d\udfe2; gate vol=good; list flatten,ohlc_hot; wish-list (live io HOLD \u2014 not a ticket); ret5=+9.4; leftover $29.49",
+        "shares": 3,
+        "ticker": "PGEN"
+      },
+      "RDNT": {
+        "close_px": 76.0,
+        "cost": 7560.044269165039,
+        "entry_date": "2026-09-16",
+        "entry_px": 77.12000274658203,
+        "fee_in": 2.284,
+        "last_px": 77.66000366210938,
+        "min_hold": 3,
+        "notional": 7557.760269165039,
+        "peak_px": 77.66000366210938,
+        "reason": "flatten wish-list \u2229 vol\ud83d\udfe2; gate vol=good; list flatten; wish-list (live io HOLD \u2014 not a ticket); \u26aa; ret5=+7.2; leftover $7589.54",
+        "shares": 98,
+        "ticker": "RDNT"
+      }
+    },
+    "yday_equity": 7477.82
+  }
+}

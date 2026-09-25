@@ -1,0 +1,36 @@
+{
+  "buys": [],
+  "cash": 120.44,
+  "date": "2026-09-14",
+  "equity": 8373.47,
+  "fees": 0,
+  "fills": [],
+  "holdings": [
+    "ORCL"
+  ],
+  "mean": -3.6025,
+  "n_trades_today": 0,
+  "recipe": "union_news_or_net4_h3",
+  "sells": [],
+  "state": {
+    "after": "2026-09-14",
+    "cash": 120.44,
+    "pos": {
+      "ORCL": {
+        "close_px": 144.7899932861328,
+        "cost": 9374.670582519531,
+        "entry_date": "2026-09-11",
+        "entry_px": 164.42999267578125,
+        "fee_in": 2.161,
+        "last_px": 141.4199981689453,
+        "min_hold": 3,
+        "notional": 9372.509582519531,
+        "peak_px": 164.42999267578125,
+        "reason": "packet\ud83d\udfe2 OR headline\ud83d\udfe2 and camera net \u2265 4; gate news_or_headline=True,cam_net_min=4; rank cond; list flatten,earn_react; \ud83d\udd35; \u26aa; ret5=-0.7; leftover $9495.11",
+        "shares": 57,
+        "ticker": "ORCL"
+      }
+    },
+    "yday_equity": 8373.47
+  }
+}

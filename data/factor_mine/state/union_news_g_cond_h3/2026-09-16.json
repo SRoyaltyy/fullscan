@@ -1,0 +1,213 @@
+{
+  "buys": [
+    "DBX",
+    "WAY",
+    "SM",
+    "CRUS",
+    "QCOM",
+    "SION"
+  ],
+  "cash": 261.03,
+  "date": "2026-09-16",
+  "equity": 8508.73,
+  "fees": 42.7599,
+  "fills": [
+    {
+      "fees": 2.0352,
+      "pnl": 74.14,
+      "price": 253.34,
+      "shares": 7,
+      "side": "SELL",
+      "ticker": "ADBE"
+    },
+    {
+      "fees": 12.0215,
+      "pnl": -161.73,
+      "price": 1.89,
+      "shares": 919,
+      "side": "SELL",
+      "ticker": "AMTX"
+    },
+    {
+      "fees": 11.5634,
+      "pnl": -270.49,
+      "price": 1.84,
+      "shares": 884,
+      "side": "SELL",
+      "ticker": "BAK"
+    },
+    {
+      "fees": 2.0453,
+      "pnl": -272.47,
+      "price": 140.03,
+      "shares": 11,
+      "side": "SELL",
+      "ticker": "ORCL"
+    },
+    {
+      "fees": 2.0521,
+      "pnl": -136.16,
+      "price": 125.55,
+      "shares": 13,
+      "side": "SELL",
+      "ticker": "RH"
+    },
+    {
+      "fees": 2.104,
+      "pnl": null,
+      "price": 37.13,
+      "shares": 38,
+      "side": "BUY",
+      "ticker": "DBX"
+    },
+    {
+      "fees": 2.152,
+      "pnl": null,
+      "price": 26.27,
+      "shares": 54,
+      "side": "BUY",
+      "ticker": "WAY"
+    },
+    {
+      "fees": 2.095,
+      "pnl": null,
+      "price": 39.99,
+      "shares": 35,
+      "side": "BUY",
+      "ticker": "SM"
+    },
+    {
+      "fees": 2.023,
+      "pnl": null,
+      "price": 123.09,
+      "shares": 11,
+      "side": "BUY",
+      "ticker": "CRUS"
+    },
+    {
+      "fees": 2.011,
+      "pnl": null,
+      "price": 189.17,
+      "shares": 7,
+      "side": "BUY",
+      "ticker": "QCOM"
+    },
+    {
+      "fees": 2.6574,
+      "pnl": null,
+      "price": 6.95,
+      "shares": 206,
+      "side": "BUY",
+      "ticker": "SION"
+    }
+  ],
+  "holdings": [
+    "CRUS",
+    "DBX",
+    "QCOM",
+    "SION",
+    "SM",
+    "WAY"
+  ],
+  "mean": -4.5696,
+  "n_trades_today": 11,
+  "recipe": "union_news_g_cond_h3",
+  "sells": [
+    "ADBE",
+    "AMTX",
+    "BAK",
+    "ORCL",
+    "RH"
+  ],
+  "state": {
+    "after": "2026-09-16",
+    "cash": 261.03,
+    "pos": {
+      "CRUS": {
+        "close_px": 118.0,
+        "cost": 1356.0129597167968,
+        "entry_date": "2026-09-16",
+        "entry_px": 123.08999633789062,
+        "fee_in": 2.023,
+        "last_px": 123.08999633789062,
+        "min_hold": 3,
+        "notional": 1353.9899597167969,
+        "peak_px": 123.08999633789062,
+        "reason": "merged news\ud83d\udfe2, rank +G\u2212R; gate news=good; rank cond; list ohlc_hot; \ud83d\udd35; ret5=+10.3; leftover $1435.52",
+        "shares": 11,
+        "ticker": "CRUS"
+      },
+      "DBX": {
+        "close_px": 37.7400016784668,
+        "cost": 1413.044040588379,
+        "entry_date": "2026-09-16",
+        "entry_px": 37.130001068115234,
+        "fee_in": 2.104,
+        "last_px": 37.130001068115234,
+        "min_hold": 3,
+        "notional": 1410.940040588379,
+        "peak_px": 37.130001068115234,
+        "reason": "merged news\ud83d\udfe2, rank +G\u2212R; gate news=good; rank cond; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+11.3; leftover $1435.52",
+        "shares": 38,
+        "ticker": "DBX"
+      },
+      "QCOM": {
+        "close_px": 184.83999633789062,
+        "cost": 1326.2009871826172,
+        "entry_date": "2026-09-16",
+        "entry_px": 189.1699981689453,
+        "fee_in": 2.011,
+        "last_px": 189.1699981689453,
+        "min_hold": 3,
+        "notional": 1324.1899871826172,
+        "peak_px": 189.1699981689453,
+        "reason": "merged news\ud83d\udfe2, rank +G\u2212R; gate news=good; rank cond; list ohlc_hot; \ud83d\udd35; ret5=+7.9; leftover $1435.52",
+        "shares": 7,
+        "ticker": "QCOM"
+      },
+      "SION": {
+        "close_px": 7.039999961853027,
+        "cost": 1434.3573607086182,
+        "entry_date": "2026-09-16",
+        "entry_px": 6.949999809265137,
+        "fee_in": 2.6574,
+        "last_px": 6.949999809265137,
+        "min_hold": 3,
+        "notional": 1431.6999607086182,
+        "peak_px": 6.949999809265137,
+        "reason": "merged news\ud83d\udfe2, rank +G\u2212R; gate news=good; rank cond; list yday_mover; ret5=-5.8; leftover $1435.52",
+        "shares": 206,
+        "ticker": "SION"
+      },
+      "SM": {
+        "close_px": 38.15999984741211,
+        "cost": 1401.745058746338,
+        "entry_date": "2026-09-16",
+        "entry_px": 39.9900016784668,
+        "fee_in": 2.095,
+        "last_px": 39.9900016784668,
+        "min_hold": 3,
+        "notional": 1399.650058746338,
+        "peak_px": 39.9900016784668,
+        "reason": "merged news\ud83d\udfe2, rank +G\u2212R; gate news=good; rank cond; list ohlc_hot; \ud83d\udd35; ret5=+9.3; leftover $1435.52",
+        "shares": 35,
+        "ticker": "SM"
+      },
+      "WAY": {
+        "close_px": 26.59000015258789,
+        "cost": 1420.7320247192383,
+        "entry_date": "2026-09-16",
+        "entry_px": 26.270000457763672,
+        "fee_in": 2.152,
+        "last_px": 26.270000457763672,
+        "min_hold": 3,
+        "notional": 1418.5800247192383,
+        "peak_px": 26.270000457763672,
+        "reason": "merged news\ud83d\udfe2, rank +G\u2212R; gate news=good; rank cond; list yday_gainer,ohlc_hot; \ud83d\udd35; \u26aa; ret5=+10.0; leftover $1435.52",
+        "shares": 54,
+        "ticker": "WAY"
+      }
+    },
+    "yday_equity": 8508.73
+  }
+}

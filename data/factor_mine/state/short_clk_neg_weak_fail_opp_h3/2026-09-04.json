@@ -1,0 +1,69 @@
+{
+  "buys": [
+    "SCZM",
+    "HQ"
+  ],
+  "cash": 15125.25,
+  "date": "2026-09-04",
+  "equity": 10171.83,
+  "fees": 5.9478,
+  "fills": [
+    {
+      "fees": 3.368673422821254,
+      "pnl": null,
+      "price": 10.03,
+      "shares": 251,
+      "side": "SHORT",
+      "ticker": "SCZM"
+    },
+    {
+      "fees": 2.5791273956089804,
+      "pnl": null,
+      "price": 15.9,
+      "shares": 158,
+      "side": "SHORT",
+      "ticker": "HQ"
+    }
+  ],
+  "holdings": [
+    "HQ",
+    "SCZM"
+  ],
+  "mean": 0.6965,
+  "n_trades_today": 2,
+  "recipe": "short_clk_neg_weak_fail_opp_h3",
+  "sells": [],
+  "state": {
+    "after": "2026-09-04",
+    "cash": 15125.25,
+    "pos": {
+      "HQ": {
+        "close_px": 15.5600004196167,
+        "cost": 2.5791273956089804,
+        "entry_date": "2026-09-04",
+        "entry_px": 15.899999618530273,
+        "fee_in": 2.5791273956089804,
+        "last_px": 15.899999618530273,
+        "notional": 2512.199939727783,
+        "peak_px": 15.899999618530273,
+        "reason": "Clock-B #4 \u2229 Theme Radar T\u22121 oppset; gate clk_neg_weak_fail=True,oppset=True; rank opp_rvol; list probable,yday_gainer,yday_mover; ret5=-4.1; leftover $2525.37",
+        "shares": 158,
+        "ticker": "HQ"
+      },
+      "SCZM": {
+        "close_px": 9.9399995803833,
+        "cost": 3.368673422821254,
+        "entry_date": "2026-09-04",
+        "entry_px": 10.029999732971191,
+        "fee_in": 3.368673422821254,
+        "last_px": 10.029999732971191,
+        "notional": 2517.529932975769,
+        "peak_px": 10.029999732971191,
+        "reason": "Clock-B #4 \u2229 Theme Radar T\u22121 oppset; gate clk_neg_weak_fail=True,oppset=True; rank opp_rvol; list yday_gainer; ret5=+4.0; leftover $2525.37",
+        "shares": 251,
+        "ticker": "SCZM"
+      }
+    },
+    "yday_equity": 10171.83
+  }
+}

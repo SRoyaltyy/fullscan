@@ -220,20 +220,79 @@ def lot_open_ret(lot: dict, px: float | None, side: str) -> float | None:
     return (entry - float(px)) / entry
 
 
+def same_bar_stop(lot: dict, bar: dict | None, *, side: str,
+                  stop_pct, take_pct=None) -> tuple[float, str] | None:
+    """Price a resting stop on this session's bar. The stop fills first.
+
+    The 09:30 open is the first print. A gap through the stop fills at
+    that open (``stop_gap_open``): the stop price is not available.
+    When the open is still safe and the bar later trades through the
+    stop, the fill is the stop price (``stop_same_bar``). If that same
+    bar also trades through a take-profit, the stop is the fill
+    (``stop_first_same_bar``). A missing open does not invent a fill.
+    """
+    stop = _frac(stop_pct)
+    if stop is None:
+        return None
+    entry = float((lot or {}).get("entry_px") or 0) or 0.0
+    if entry <= 0:
+        return None
+    bar = bar or {}
+    op = fm._finite(bar.get("open"))
+    if op is None:
+        return None
+    hi = fm._finite(bar.get("high"))
+    lo = fm._finite(bar.get("low"))
+    take = _frac(take_pct)
+    if side == "short":
+        level = entry * (1.0 + stop)
+        gapped = op >= level - 1e-8
+        touched = hi is not None and hi >= level - 1e-8
+        take_level = None if take is None else entry * (1.0 - take)
+        take_hit = False
+        if take_level is not None:
+            if op <= take_level + 1e-8:
+                take_hit = True
+            if lo is not None and lo <= take_level + 1e-8:
+                take_hit = True
+    else:
+        level = entry * (1.0 - stop)
+        gapped = op <= level + 1e-8
+        touched = lo is not None and lo <= level + 1e-8
+        take_level = None if take is None else entry * (1.0 + take)
+        take_hit = False
+        if take_level is not None:
+            if op >= take_level - 1e-8:
+                take_hit = True
+            if hi is not None and hi >= take_level - 1e-8:
+                take_hit = True
+    if not gapped and not touched:
+        return None
+    if gapped:
+        rule = "stop_first_same_bar" if take_hit else "stop_gap_open"
+        return float(op), rule
+    rule = "stop_first_same_bar" if take_hit else "stop_same_bar"
+    return float(level), rule
+
+
 def lot_should_sell(lot: dict, *, held: int, min_hold: int, early: bool,
                     dropped: bool, sell_mode: str, px: float | None,
                     side: str, take_pct=None, stop_pct=None) -> tuple[bool, str]:
-    """Sell only lots we hold. Min-hold blocks list-drop; take/stop may fire inside."""
+    """Sell only lots we hold. Min-hold blocks list-drop; take/stop may fire inside.
+
+    The stop is checked before the take. One open cannot be both; the
+    same-bar high/low path still prefers the stop.
+    """
     if early:
         return True, "early"
     take = _frac(take_pct)
     stop = _frac(stop_pct)
     ret = lot_open_ret(lot, px, side)
     if ret is not None:
-        if take is not None and ret >= take:
-            return True, "take"
         if stop is not None and ret <= -stop:
             return True, "stop"
+        if take is not None and ret >= take:
+            return True, "take"
     if held < min_hold:
         return False, "min_hold"
     mode = sell_mode or "list"
@@ -846,8 +905,14 @@ def recipes_from_action(*, universe="auto", hold="auto", gate="auto",
 
 
 def simulate_book(panel: dict, rec: dict, *, bars=None, fees=None,
-                  regime=None, rules=None, start: str | None = None) -> dict:
-    """Walk one recipe as a $10k paper sleeve. Sell first, then buy."""
+                  regime=None, rules=None, start: str | None = None,
+                  resume: dict | None = None) -> dict:
+    """Walk one recipe as a $10k paper sleeve. Sell first, then buy.
+
+    ``resume`` continues from a frozen end-of-day state. Dates on or
+    before ``resume["after"]`` are not replayed; cash and lots start
+    from that state so a new session can be appended.
+    """
     panel = fm.ensure_sim_fields(panel, rec)
     rules = {**BOOK_RULES, **(rules or {})}
     fees = fees if fees is not None else pt.load_fees()
@@ -874,6 +939,13 @@ def simulate_book(panel: dict, rec: dict, *, bars=None, fees=None,
     sell_mode = rec.get("sell") or "list"
     s_boost = rec.get("s_boost") or "none"
     yday_equity = float(rules["capital"])
+    resume_after = None
+    if resume:
+        cash = float(resume.get("cash", cash))
+        pos = {str(k): dict(v) for k, v in (resume.get("pos") or {}).items()}
+        if resume.get("yday_equity") is not None:
+            yday_equity = float(resume["yday_equity"])
+        resume_after = resume.get("after")
 
     def mark(date: str, which: str) -> float:
         tot = 0.0
@@ -884,6 +956,8 @@ def simulate_book(panel: dict, rec: dict, *, bars=None, fees=None,
         return tot
 
     for date in cal:
+        if resume_after and str(date) <= str(resume_after):
+            continue
         s = morning_s(regime, date)
         hard_red = (rules.get("hard_red_no_new")
                     and s is not None and float(s) <= float(rules["hard_red"]))
@@ -928,6 +1002,7 @@ def simulate_book(panel: dict, rec: dict, *, bars=None, fees=None,
                 f"S={float(s):+.2f} holdup min-hold {max(min_hold, HOLDUP_SESS)}"
             )
 
+        stopped: set[str] = set()
         for t in list(pos):
             lot = pos[t]
             held = date_ix[date] - date_ix.get(lot["entry_date"], date_ix[date])
@@ -959,28 +1034,42 @@ def simulate_book(panel: dict, rec: dict, *, bars=None, fees=None,
                               "reason": "no 09:30 open — carry"})
                 held_names.append(t)
                 continue
+            fill_px = px
+            fill_rule = None
+            if kind == "stop":
+                hit = same_bar_stop(
+                    lot, fm._bar(t, date, bars), side=side,
+                    stop_pct=rec.get("stop_pct"), take_pct=rec.get("take_pct"),
+                )
+                if hit is not None:
+                    fill_px, fill_rule = hit
+                else:
+                    fill_rule = "stop_gap_open"
+                stopped.add(t)
             reason = why_sell(t, held, lot_min, early,
                               rec.get("exit_when"), dropped, kind)
             eq_before = cash + mark(date, "open")
-            fee = pt.order_fees(lot["shares"], px, "sell" if side == "long" else "buy", fees)
+            fee = pt.order_fees(lot["shares"], fill_px, "sell" if side == "long" else "buy", fees)
             if side == "long":
-                proceeds = lot["shares"] * px - fee
+                proceeds = lot["shares"] * fill_px - fee
                 cash += proceeds
                 pnl = proceeds - lot["cost"]
             else:
-                cost_cover = lot["shares"] * px + fee
+                cost_cover = lot["shares"] * fill_px + fee
                 cash -= cost_cover
                 pnl = lot["notional"] - cost_cover - lot.get("fee_in", 0)
             pos.pop(t)
             rec_t = {
                 "date": date, "ticker": t, "side": "SELL" if side == "long" else "COVER",
-                "shares": lot["shares"], "price": round(px, 4), "fees": fee,
+                "shares": lot["shares"], "price": round(fill_px, 4), "fees": fee,
                 "cash_after": round(cash, 2),
                 "pnl": round(pnl, 2),
                 "reason": reason,
                 "held": held,
                 "cameras": camera_stamp(row.get("boxes")),
             }
+            if fill_rule:
+                rec_t["fill_rule"] = fill_rule
             _stamp_equity(rec_t, cash, pos, date, bars, side, rules)
             rec_t["equity_before"] = round(eq_before, 2)
             rec_t["sell_eq_chg"] = round(rec_t["equity_after"] - eq_before, 2)
@@ -989,7 +1078,13 @@ def simulate_book(panel: dict, rec: dict, *, bars=None, fees=None,
             sold.append(rec_t)
             day_why.append(f"SELL {t} ({reason})")
 
-        new = [r for r in chosen if r["ticker"] not in pos]
+        for r in chosen:
+            if r["ticker"] in stopped and r["ticker"] not in pos:
+                skips.append({
+                    "date": date, "ticker": r["ticker"], "kind": "same_bar_stop",
+                    "reason": "stop filled first on this bar — no same-bar rebuy",
+                })
+        new = [r for r in chosen if r["ticker"] not in pos and r["ticker"] not in stopped]
         if hard_red:
             for r in new:
                 skips.append({
@@ -1082,6 +1177,61 @@ def simulate_book(panel: dict, rec: dict, *, bars=None, fees=None,
                 bought.append(rec_t)
                 day_why.append(f"{rec_t['side']} {t} x{shares} @ {px:.2f}")
                 held_names.append(t)
+
+        # Resting stop for the rest of this bar. Cash from this fill is
+        # not recycled into the 09:30 buys above. A gap through the stop
+        # was already filled at the open.
+        for t in list(pos):
+            lot = pos[t]
+            hit = same_bar_stop(
+                lot, fm._bar(t, date, bars), side=side,
+                stop_pct=rec.get("stop_pct"), take_pct=rec.get("take_pct"),
+            )
+            if hit is None:
+                continue
+            fill_px, fill_rule = hit
+            if fill_rule == "stop_gap_open":
+                continue
+            held = date_ix[date] - date_ix.get(lot["entry_date"], date_ix[date])
+            row = row_index.get((date, t)) or {}
+            lot_min = int(lot.get("min_hold") or min_hold)
+            dropped = t not in tset
+            reason = why_sell(
+                t, held, lot_min, False, rec.get("exit_when"), dropped, "stop",
+            )
+            eq_before = cash + mark(date, "open")
+            fee = pt.order_fees(
+                lot["shares"], fill_px, "sell" if side == "long" else "buy", fees,
+            )
+            if side == "long":
+                proceeds = lot["shares"] * fill_px - fee
+                cash += proceeds
+                pnl = proceeds - lot["cost"]
+            else:
+                cost_cover = lot["shares"] * fill_px + fee
+                cash -= cost_cover
+                pnl = lot["notional"] - cost_cover - lot.get("fee_in", 0)
+            pos.pop(t)
+            rec_t = {
+                "date": date, "ticker": t,
+                "side": "SELL" if side == "long" else "COVER",
+                "shares": lot["shares"], "price": round(fill_px, 4), "fees": fee,
+                "cash_after": round(cash, 2),
+                "pnl": round(pnl, 2),
+                "reason": reason,
+                "held": held,
+                "cameras": camera_stamp(row.get("boxes")),
+                "fill_rule": fill_rule,
+            }
+            _stamp_equity(rec_t, cash, pos, date, bars, side, rules)
+            rec_t["equity_before"] = round(eq_before, 2)
+            rec_t["sell_eq_chg"] = round(rec_t["equity_after"] - eq_before, 2)
+            rec_t["vs_yday"] = round(rec_t["equity_after"] - yday_equity, 2)
+            trades.append(rec_t)
+            sold.append(rec_t)
+            day_why.append(f"SELL {t} ({reason})")
+            stopped.add(t)
+
         for t in pos:
             if t not in held_names:
                 held_names.append(t)
@@ -1165,6 +1315,7 @@ def simulate_book(panel: dict, rec: dict, *, bars=None, fees=None,
         "stop_pct": rec.get("stop_pct"),
         "s_boost": s_boost,
         "cash": round(cash, 2),
+        "pos": {t: dict(p) for t, p in pos.items()},
         "n_open": len(pos),
         "open": [
             {"ticker": t, "shares": p["shares"], "entry_date": p["entry_date"],
@@ -1715,6 +1866,25 @@ def write_action_mds(payload: dict, stats: list[dict], books: dict,
     index = [
         f"# Factor mine action — {payload.get('from_date')} → {payload.get('to_date')}",
         "",
+    ]
+    freeze = payload.get("freeze") or {}
+    if freeze.get("first_frozen"):
+        index += [
+            f"Sessions before `{freeze['first_frozen']}` are **reconstructed** "
+            "(rebuilt inputs, not a frozen 09:30 snapshot). From "
+            f"`{freeze['first_frozen']}` each day's inputs and buy/sell "
+            "decisions are append-only.",
+            "",
+        ]
+    if any((r.get("created_on") and str(r.get("created_on")) > str(payload.get("from_date") or ""))
+           for r in (payload.get("recipes") or [])):
+        index += [
+            "Sessions before a recipe's `created_on` are **in-sample**. "
+            "Holdup, overnight-mega, and Clock-B start `2026-09-21`. "
+            "White-horizon and stop brackets start `2026-09-14`.",
+            "",
+        ]
+    index += [
         "Cash-accounted blotters for the leak-free 09:30 recipes. "
         "Each recipe is a **daily cash + holdings state machine**: "
         "morning leftover cash and the lots we actually hold are the only "

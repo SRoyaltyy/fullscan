@@ -1,0 +1,93 @@
+{
+  "buys": [],
+  "cash": 9810.58,
+  "date": "2026-09-24",
+  "equity": 9810.58,
+  "fees": 16.527,
+  "fills": [
+    {
+      "fees": 2.088,
+      "pnl": -22.1,
+      "price": 46.88,
+      "shares": 26,
+      "side": "SELL",
+      "ticker": "CBRL"
+    },
+    {
+      "fees": 2.028,
+      "pnl": -31.16,
+      "price": 192.26,
+      "shares": 6,
+      "side": "SELL",
+      "ticker": "CTAS"
+    },
+    {
+      "fees": 2.049,
+      "pnl": -27.74,
+      "price": 87.68,
+      "shares": 13,
+      "side": "SELL",
+      "ticker": "DXCM"
+    },
+    {
+      "fees": 2.04,
+      "pnl": -51.26,
+      "price": 112.13,
+      "shares": 10,
+      "side": "SELL",
+      "ticker": "HALO"
+    },
+    {
+      "fees": 2.043,
+      "pnl": -50.05,
+      "price": 105.49,
+      "shares": 11,
+      "side": "SELL",
+      "ticker": "PAYX"
+    },
+    {
+      "fees": 2.184,
+      "pnl": -10.15,
+      "price": 21.41,
+      "shares": 58,
+      "side": "SELL",
+      "ticker": "SAIL"
+    },
+    {
+      "fees": 2.07,
+      "pnl": -11.72,
+      "price": 61.78,
+      "shares": 20,
+      "side": "SELL",
+      "ticker": "TTAN"
+    },
+    {
+      "fees": 2.025,
+      "pnl": -1.65,
+      "price": 213.475,
+      "shares": 5,
+      "side": "SELL",
+      "ticker": "ZS"
+    }
+  ],
+  "holdings": [],
+  "mean": -0.2689,
+  "n_trades_today": 8,
+  "recipe": "union_clk_fresh_cat_coil_h1",
+  "sells": [
+    "CBRL",
+    "CTAS",
+    "DXCM",
+    "HALO",
+    "PAYX",
+    "SAIL",
+    "TTAN",
+    "ZS"
+  ],
+  "state": {
+    "after": "2026-09-24",
+    "cash": 9810.58,
+    "pos": {},
+    "yday_equity": 9810.58
+  }
+}

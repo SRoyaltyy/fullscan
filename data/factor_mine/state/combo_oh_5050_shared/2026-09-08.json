@@ -1,0 +1,57 @@
+{
+  "buys": [],
+  "cash": 10193.73,
+  "date": "2026-09-08",
+  "equity": 10193.73,
+  "fees": 31.8411,
+  "fills": [
+    {
+      "fees": 2.321,
+      "pnl": 118.88,
+      "price": 26.44,
+      "shares": 98,
+      "side": "SELL",
+      "ticker": "ASST"
+    },
+    {
+      "fees": 5.599,
+      "pnl": -2.57,
+      "price": 5.81,
+      "shares": 427,
+      "side": "SELL",
+      "ticker": "DFDV"
+    },
+    {
+      "fees": 21.8411,
+      "pnl": 98.57,
+      "price": 1.565,
+      "shares": 1670,
+      "side": "SELL",
+      "ticker": "GPRO"
+    },
+    {
+      "fees": 2.08,
+      "pnl": 87.77,
+      "price": 125.07,
+      "shares": 20,
+      "side": "SELL",
+      "ticker": "HOOD"
+    }
+  ],
+  "holdings": [],
+  "mean": -2.7876,
+  "n_trades_today": 4,
+  "recipe": "combo_oh_5050_shared",
+  "sells": [
+    "ASST",
+    "DFDV",
+    "GPRO",
+    "HOOD"
+  ],
+  "state": {
+    "after": "2026-09-08",
+    "cash": 10193.73,
+    "pos": {},
+    "yday_equity": 10193.73
+  }
+}

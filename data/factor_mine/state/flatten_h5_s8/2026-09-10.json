@@ -1,0 +1,110 @@
+{
+  "buys": [],
+  "cash": 4366.68,
+  "date": "2026-09-10",
+  "equity": 9011.77,
+  "fees": 13.7249,
+  "fills": [
+    {
+      "fees": 6.4385,
+      "pnl": -160.39,
+      "price": 2.22,
+      "shares": 492,
+      "side": "SELL",
+      "ticker": "ALEC"
+    },
+    {
+      "fees": 2.5857,
+      "pnl": -116.13,
+      "price": 6.11,
+      "shares": 185,
+      "side": "SELL",
+      "ticker": "BHC"
+    },
+    {
+      "fees": 4.7007,
+      "pnl": -228.32,
+      "price": 2.85,
+      "shares": 359,
+      "side": "SELL",
+      "ticker": "CABA"
+    }
+  ],
+  "holdings": [
+    "ATRC",
+    "BMEA",
+    "OPK",
+    "VIR"
+  ],
+  "mean": -2.4836,
+  "n_trades_today": 3,
+  "recipe": "flatten_h5_s8",
+  "sells": [
+    "ALEC",
+    "BHC",
+    "CABA"
+  ],
+  "state": {
+    "after": "2026-09-10",
+    "cash": 4366.68,
+    "pos": {
+      "ATRC": {
+        "close_px": 52.959999084472656,
+        "cost": 1198.748971923828,
+        "entry_date": "2026-09-04",
+        "entry_px": 52.029998779296875,
+        "fee_in": 2.059,
+        "last_px": 52.310001373291016,
+        "min_hold": 5,
+        "notional": 1196.6899719238281,
+        "peak_px": 54.310001373291016,
+        "reason": "flatten hold 5, stop \u22128% at 09:30 even inside hold; list flatten,mover_buy; live flatten mover; \ud83d\udd35; \u26aa; ret5=+6.5; leftover $1242.18",
+        "shares": 23,
+        "ticker": "ATRC"
+      },
+      "BMEA": {
+        "close_px": 1.7000000476837158,
+        "cost": 1249.1236844312668,
+        "entry_date": "2026-09-04",
+        "entry_px": 1.899999976158142,
+        "fee_in": 8.4237,
+        "last_px": 1.8300000429153442,
+        "min_hold": 5,
+        "notional": 1240.6999844312668,
+        "peak_px": 2.0,
+        "reason": "flatten hold 5, stop \u22128% at 09:30 even inside hold; list flatten,mover_buy; live flatten mover; \ud83d\udd35; \u26aa; ret5=+13.7; leftover $1242.18",
+        "shares": 653,
+        "ticker": "BMEA"
+      },
+      "OPK": {
+        "close_px": 1.4900000095367432,
+        "cost": 1251.8649260686875,
+        "entry_date": "2026-09-04",
+        "entry_px": 1.590000033378601,
+        "fee_in": 10.0749,
+        "last_px": 1.5299999713897705,
+        "min_hold": 5,
+        "notional": 1241.7900260686874,
+        "peak_px": 1.6299999952316284,
+        "reason": "flatten hold 5, stop \u22128% at 09:30 even inside hold; list flatten,yday_gainer,mover_buy; live flatten mover; \ud83d\udd35; \u26aa; ret5=+7.3; leftover $1242.18",
+        "shares": 781,
+        "ticker": "OPK"
+      },
+      "VIR": {
+        "close_px": 10.579999923706055,
+        "cost": 1235.1070457382202,
+        "entry_date": "2026-09-04",
+        "entry_px": 11.3100004196167,
+        "fee_in": 2.317,
+        "last_px": 10.569999694824219,
+        "min_hold": 5,
+        "notional": 1232.7900457382202,
+        "peak_px": 11.3100004196167,
+        "reason": "flatten hold 5, stop \u22128% at 09:30 even inside hold; list flatten,mover_buy; live flatten mover; \ud83d\udd35; \u26aa; ret5=+1.2; leftover $1242.18",
+        "shares": 109,
+        "ticker": "VIR"
+      }
+    },
+    "yday_equity": 9011.77
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "buys": [
+    "FPS",
+    "TCOM"
+  ],
+  "cash": 28.37,
+  "date": "2026-09-16",
+  "equity": 9324.02,
+  "fees": 4.727,
+  "fills": [
+    {
+      "fees": 2.404,
+      "pnl": null,
+      "price": 33.14,
+      "shares": 138,
+      "side": "BUY",
+      "ticker": "FPS"
+    },
+    {
+      "fees": 2.323,
+      "pnl": null,
+      "price": 40.93,
+      "shares": 111,
+      "side": "BUY",
+      "ticker": "TCOM"
+    }
+  ],
+  "holdings": [
+    "FPS",
+    "TCOM"
+  ],
+  "mean": 1.9058,
+  "n_trades_today": 2,
+  "recipe": "combo_e1er_5050_shared",
+  "sells": [],
+  "state": {
+    "after": "2026-09-16",
+    "cash": 28.37,
+    "pos": {
+      "FPS": {
+        "close_px": 34.84000015258789,
+        "cost": 4575.723915771485,
+        "entry_date": "2026-09-16",
+        "entry_px": 33.13999938964844,
+        "fee_in": 2.404,
+        "last_px": 33.13999938964844,
+        "notional": 4573.319915771484,
+        "owner": "union_e_fresh_h1",
+        "peak_px": 33.13999938964844,
+        "reason": "union \u2229 e_fresh, no \ud83d\udea8; gate days_since_E_max=1,flag_E_min=0; list yday_gainer; \ud83d\udd35; ret5=-2.9; combo leftover $4574.82; owner union_e_fresh_h1",
+        "shares": 138,
+        "side": "long",
+        "ticker": "FPS"
+      },
+      "TCOM": {
+        "close_px": 40.43000030517578,
+        "cost": 4545.553033874512,
+        "entry_date": "2026-09-16",
+        "entry_px": 40.93000030517578,
+        "fee_in": 2.323,
+        "last_px": 40.93000030517578,
+        "notional": 4543.230033874512,
+        "owner": "union_e_fresh_h1",
+        "peak_px": 40.93000030517578,
+        "reason": "union \u2229 e_fresh, no \ud83d\udea8; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=-3.1; combo leftover $4574.82; owner union_e_fresh_h1",
+        "shares": 111,
+        "side": "long",
+        "ticker": "TCOM"
+      }
+    },
+    "yday_equity": 9324.02
+  }
+}

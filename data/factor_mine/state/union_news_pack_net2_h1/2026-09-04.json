@@ -1,0 +1,71 @@
+{
+  "buys": [
+    "CRM",
+    "BE"
+  ],
+  "cash": 281.09,
+  "date": "2026-09-04",
+  "equity": 10004.63,
+  "fees": 4.094,
+  "fills": [
+    {
+      "fees": 2.044,
+      "pnl": null,
+      "price": 263.36,
+      "shares": 18,
+      "side": "BUY",
+      "ticker": "CRM"
+    },
+    {
+      "fees": 2.05,
+      "pnl": null,
+      "price": 236.82,
+      "shares": 20,
+      "side": "BUY",
+      "ticker": "BE"
+    }
+  ],
+  "holdings": [
+    "BE",
+    "CRM"
+  ],
+  "mean": 2.4848,
+  "n_trades_today": 2,
+  "recipe": "union_news_pack_net2_h1",
+  "sells": [],
+  "state": {
+    "after": "2026-09-04",
+    "cash": 281.09,
+    "pos": {
+      "BE": {
+        "close_px": 252.8699951171875,
+        "cost": 4738.450146484375,
+        "entry_date": "2026-09-04",
+        "entry_px": 236.82000732421875,
+        "fee_in": 2.05,
+        "last_px": 236.82000732421875,
+        "min_hold": 1,
+        "notional": 4736.400146484375,
+        "peak_px": 236.82000732421875,
+        "reason": "packet\ud83d\udfe2 and camera net \u2265 2; gate news_box=good,cam_net_min=2; rank cond; list ohlc_hot; ret5=+8.1; leftover $4881.03",
+        "shares": 20,
+        "ticker": "BE"
+      },
+      "CRM": {
+        "close_px": 259.2300109863281,
+        "cost": 4742.523736328125,
+        "entry_date": "2026-09-04",
+        "entry_px": 263.3599853515625,
+        "fee_in": 2.044,
+        "last_px": 263.3599853515625,
+        "min_hold": 1,
+        "notional": 4740.479736328125,
+        "peak_px": 263.3599853515625,
+        "reason": "packet\ud83d\udfe2 and camera net \u2265 2; gate news_box=good,cam_net_min=2; rank cond; list flatten,mover_buy; \ud83d\udd35; \u26aa; ret5=+4.9; leftover $4881.03",
+        "shares": 18,
+        "ticker": "CRM"
+      }
+    },
+    "yday_equity": 10004.63
+  }
+}

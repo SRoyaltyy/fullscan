@@ -1,0 +1,47 @@
+{
+  "buys": [
+    "DELL"
+  ],
+  "cash": 101.65,
+  "date": "2026-09-04",
+  "equity": 10060.31,
+  "fees": 2.047,
+  "fills": [
+    {
+      "fees": 2.047,
+      "pnl": null,
+      "price": 513.78,
+      "shares": 19,
+      "side": "BUY",
+      "ticker": "DELL"
+    }
+  ],
+  "holdings": [
+    "DELL"
+  ],
+  "mean": 1.9745,
+  "n_trades_today": 1,
+  "recipe": "probable_probable_ok_h1",
+  "sells": [],
+  "state": {
+    "after": "2026-09-04",
+    "cash": 101.65,
+    "pos": {
+      "DELL": {
+        "close_px": 524.1400146484375,
+        "cost": 9763.867556640625,
+        "entry_date": "2026-09-04",
+        "entry_px": 513.780029296875,
+        "fee_in": 2.047,
+        "last_px": 513.780029296875,
+        "min_hold": 1,
+        "notional": 9761.820556640625,
+        "peak_px": 513.780029296875,
+        "reason": "combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer,yday_mover,ohlc_hot,mover_buy; \ud83d\udd35; \u26aa; ret5=+9.3; leftover $9865.52",
+        "shares": 19,
+        "ticker": "DELL"
+      }
+    },
+    "yday_equity": 10060.31
+  }
+}

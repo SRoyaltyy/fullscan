@@ -1,0 +1,48 @@
+{
+  "buys": [],
+  "cash": 9833.48,
+  "date": "2026-09-08",
+  "equity": 9833.48,
+  "fees": 26.5569,
+  "fills": [
+    {
+      "fees": 21.7676,
+      "pnl": -43.23,
+      "price": 1.94,
+      "shares": 1664,
+      "side": "SELL",
+      "ticker": "BAK"
+    },
+    {
+      "fees": 2.6368,
+      "pnl": 61.43,
+      "price": 16.74,
+      "shares": 196,
+      "side": "SELL",
+      "ticker": "FRNM"
+    },
+    {
+      "fees": 2.1525,
+      "pnl": 129.71,
+      "price": 78.84,
+      "shares": 42,
+      "side": "SELL",
+      "ticker": "MRX"
+    }
+  ],
+  "holdings": [],
+  "mean": 1.7051,
+  "n_trades_today": 3,
+  "recipe": "union_news_head_h1",
+  "sells": [
+    "BAK",
+    "FRNM",
+    "MRX"
+  ],
+  "state": {
+    "after": "2026-09-08",
+    "cash": 9833.48,
+    "pos": {},
+    "yday_equity": 9833.48
+  }
+}

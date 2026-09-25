@@ -1,0 +1,77 @@
+{
+  "buys": [],
+  "cash": 15211.51,
+  "date": "2026-09-14",
+  "equity": 10194.49,
+  "fees": 0,
+  "fills": [],
+  "holdings": [
+    "CLMT",
+    "CVI",
+    "PBR-A",
+    "UGP"
+  ],
+  "mean": 0.3603,
+  "n_trades_today": 0,
+  "recipe": "short_clk_ext_veto_h3",
+  "sells": [],
+  "state": {
+    "after": "2026-09-14",
+    "cash": 15211.51,
+    "pos": {
+      "CLMT": {
+        "close_px": 56.54999923706055,
+        "cost": 2.1097413695871015,
+        "entry_date": "2026-09-11",
+        "entry_px": 55.97999954223633,
+        "fee_in": 2.1097413695871015,
+        "last_px": 57.459999084472656,
+        "notional": 1231.5599899291992,
+        "peak_px": 55.97999954223633,
+        "reason": "Clock-B #5 extreme ext + fade/fail-break as a short; gate clk_ext_veto=True; list ohlc_hot; \ud83d\udd35; ret5=+5.5; leftover $1275.41",
+        "shares": 22,
+        "ticker": "CLMT"
+      },
+      "CVI": {
+        "close_px": 48.630001068115234,
+        "cost": 2.122548219612853,
+        "entry_date": "2026-09-11",
+        "entry_px": 48.36000061035156,
+        "fee_in": 2.122548219612853,
+        "last_px": 50.25,
+        "notional": 1257.3600158691406,
+        "peak_px": 48.36000061035156,
+        "reason": "Clock-B #5 extreme ext + fade/fail-break as a short; gate clk_ext_veto=True; list ohlc_hot; ret5=+11.5; leftover $1275.41",
+        "shares": 26,
+        "ticker": "CVI"
+      },
+      "PBR-A": {
+        "close_px": 19.06999969482422,
+        "cost": 2.2435189043855015,
+        "entry_date": "2026-09-11",
+        "entry_px": 19.09000015258789,
+        "fee_in": 2.2435189043855015,
+        "last_px": 19.139999389648438,
+        "notional": 1259.9400100708008,
+        "peak_px": 19.09000015258789,
+        "reason": "Clock-B #5 extreme ext + fade/fail-break as a short; gate clk_ext_veto=True; list ohlc_hot; ret5=+3.4; leftover $1275.41",
+        "shares": 66,
+        "ticker": "PBR-A"
+      },
+      "UGP": {
+        "close_px": 7.440000057220459,
+        "cost": 2.56675068580941,
+        "entry_date": "2026-09-11",
+        "entry_px": 7.550000190734863,
+        "fee_in": 2.56675068580941,
+        "last_px": 7.320000171661377,
+        "notional": 1268.400032043457,
+        "peak_px": 7.320000171661377,
+        "reason": "Clock-B #5 extreme ext + fade/fail-break as a short; gate clk_ext_veto=True; list ohlc_hot; ret5=+5.6; leftover $1275.41",
+        "shares": 168,
+        "ticker": "UGP"
+      }
+    },
+    "yday_equity": 10194.49
+  }
+}

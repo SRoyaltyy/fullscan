@@ -1,0 +1,84 @@
+{
+  "buys": [],
+  "cash": 9716.1,
+  "date": "2026-08-31",
+  "equity": 9716.1,
+  "fees": 14.238,
+  "fills": [
+    {
+      "fees": 2.049,
+      "pnl": -31.38,
+      "price": 89.39,
+      "shares": 13,
+      "side": "SELL",
+      "ticker": "AVT"
+    },
+    {
+      "fees": 2.067,
+      "pnl": -48.95,
+      "price": 60.46,
+      "shares": 19,
+      "side": "SELL",
+      "ticker": "CGNX"
+    },
+    {
+      "fees": 2.019,
+      "pnl": -69.96,
+      "price": 378.44,
+      "shares": 3,
+      "side": "SELL",
+      "ticker": "CIEN"
+    },
+    {
+      "fees": 2.022,
+      "pnl": -40.78,
+      "price": 280.25,
+      "shares": 4,
+      "side": "SELL",
+      "ticker": "COHR"
+    },
+    {
+      "fees": 2.019,
+      "pnl": -9.78,
+      "price": 322.49,
+      "shares": 3,
+      "side": "SELL",
+      "ticker": "KEYS"
+    },
+    {
+      "fees": 2.04,
+      "pnl": -46.06,
+      "price": 115.56,
+      "shares": 10,
+      "side": "SELL",
+      "ticker": "LSCC"
+    },
+    {
+      "fees": 2.022,
+      "pnl": -36.98,
+      "price": 266.96,
+      "shares": 4,
+      "side": "SELL",
+      "ticker": "MTSI"
+    }
+  ],
+  "holdings": [],
+  "mean": 0.2658,
+  "n_trades_today": 7,
+  "recipe": "union_clk_fresh_cat_coil_h1",
+  "sells": [
+    "AVT",
+    "CGNX",
+    "CIEN",
+    "COHR",
+    "KEYS",
+    "LSCC",
+    "MTSI"
+  ],
+  "state": {
+    "after": "2026-08-31",
+    "cash": 9716.1,
+    "pos": {},
+    "yday_equity": 9716.1
+  }
+}

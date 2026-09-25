@@ -1,0 +1,288 @@
+{
+  "buys": [
+    "NMRA",
+    "ALHC",
+    "CRBP",
+    "DVLT",
+    "EYPT",
+    "TCOM",
+    "CTMX",
+    "ZSQR"
+  ],
+  "cash": 0.19,
+  "date": "2026-09-16",
+  "equity": 8848.03,
+  "fees": 94.627,
+  "fills": [
+    {
+      "fees": 2.2438,
+      "pnl": 4.01,
+      "price": 14.82,
+      "shares": 77,
+      "side": "SELL",
+      "ticker": "AEO"
+    },
+    {
+      "fees": 2.088,
+      "pnl": 57.98,
+      "price": 44.87,
+      "shares": 26,
+      "side": "SELL",
+      "ticker": "AXGN"
+    },
+    {
+      "fees": 2.07,
+      "pnl": -9.92,
+      "price": 54.37,
+      "shares": 20,
+      "side": "SELL",
+      "ticker": "COO"
+    },
+    {
+      "fees": 2.175,
+      "pnl": 99.62,
+      "price": 22.5,
+      "shares": 55,
+      "side": "SELL",
+      "ticker": "NAVN"
+    },
+    {
+      "fees": 2.034,
+      "pnl": -85.33,
+      "price": 125.55,
+      "shares": 8,
+      "side": "SELL",
+      "ticker": "RH"
+    },
+    {
+      "fees": 4.2175,
+      "pnl": 139.75,
+      "price": 3.98,
+      "shares": 322,
+      "side": "SELL",
+      "ticker": "RWT"
+    },
+    {
+      "fees": 2.4591,
+      "pnl": -126.68,
+      "price": 6.95,
+      "shares": 145,
+      "side": "SELL",
+      "ticker": "SION"
+    },
+    {
+      "fees": 7.1048,
+      "pnl": -111.85,
+      "price": 1.91,
+      "shares": 543,
+      "side": "SELL",
+      "ticker": "SLBT"
+    },
+    {
+      "fees": 15.3525,
+      "pnl": null,
+      "price": 0.844,
+      "shares": 1342,
+      "side": "BUY",
+      "ticker": "NMRA"
+    },
+    {
+      "fees": 2.317,
+      "pnl": null,
+      "price": 10.3,
+      "shares": 109,
+      "side": "BUY",
+      "ticker": "ALHC"
+    },
+    {
+      "fees": 2.485,
+      "pnl": null,
+      "price": 6.86,
+      "shares": 165,
+      "side": "BUY",
+      "ticker": "CRBP"
+    },
+    {
+      "fees": 32.568,
+      "pnl": null,
+      "price": 0.16,
+      "shares": 7080,
+      "side": "BUY",
+      "ticker": "DVLT"
+    },
+    {
+      "fees": 3.9861,
+      "pnl": null,
+      "price": 3.66,
+      "shares": 309,
+      "side": "BUY",
+      "ticker": "EYPT"
+    },
+    {
+      "fees": 2.071,
+      "pnl": null,
+      "price": 40.93,
+      "shares": 27,
+      "side": "BUY",
+      "ticker": "TCOM"
+    },
+    {
+      "fees": 5.3664,
+      "pnl": null,
+      "price": 2.72,
+      "shares": 416,
+      "side": "BUY",
+      "ticker": "CTMX"
+    },
+    {
+      "fees": 6.0888,
+      "pnl": null,
+      "price": 2.34,
+      "shares": 472,
+      "side": "BUY",
+      "ticker": "ZSQR"
+    }
+  ],
+  "holdings": [
+    "ALHC",
+    "CRBP",
+    "CTMX",
+    "DVLT",
+    "EYPT",
+    "NMRA",
+    "TCOM",
+    "ZSQR"
+  ],
+  "mean": -1.9489,
+  "n_trades_today": 16,
+  "recipe": "union_rsi_h3",
+  "sells": [
+    "AEO",
+    "AXGN",
+    "COO",
+    "NAVN",
+    "RH",
+    "RWT",
+    "SION",
+    "SLBT"
+  ],
+  "state": {
+    "after": "2026-09-16",
+    "cash": 0.19,
+    "pos": {
+      "ALHC": {
+        "close_px": 8.710000038146973,
+        "cost": 1125.0170207901,
+        "entry_date": "2026-09-16",
+        "entry_px": 10.300000190734863,
+        "fee_in": 2.317,
+        "last_px": 10.300000190734863,
+        "min_hold": 3,
+        "notional": 1122.7000207901,
+        "peak_px": 10.300000190734863,
+        "reason": "rank by rsi; rank rsi; list yday_mover; ret5=-23.0; leftover $1132.82",
+        "shares": 109,
+        "ticker": "ALHC"
+      },
+      "CRBP": {
+        "close_px": 7.260000228881836,
+        "cost": 1134.3850220298766,
+        "entry_date": "2026-09-16",
+        "entry_px": 6.860000133514404,
+        "fee_in": 2.485,
+        "last_px": 6.860000133514404,
+        "min_hold": 3,
+        "notional": 1131.9000220298767,
+        "peak_px": 6.860000133514404,
+        "reason": "rank by rsi; rank rsi; list yday_mover; ret5=-34.7; leftover $1132.82",
+        "shares": 165,
+        "ticker": "CRBP"
+      },
+      "CTMX": {
+        "close_px": 2.765000104904175,
+        "cost": 1136.8864119018556,
+        "entry_date": "2026-09-16",
+        "entry_px": 2.7200000286102295,
+        "fee_in": 5.3664,
+        "last_px": 2.7200000286102295,
+        "min_hold": 3,
+        "notional": 1131.5200119018555,
+        "peak_px": 2.7200000286102295,
+        "reason": "rank by rsi; rank rsi; list yday_mover; ret5=-26.3; leftover $1132.82",
+        "shares": 416,
+        "ticker": "CTMX"
+      },
+      "DVLT": {
+        "close_px": 0.18000000715255737,
+        "cost": 1165.3679746799469,
+        "entry_date": "2026-09-16",
+        "entry_px": 0.1599999964237213,
+        "fee_in": 32.568,
+        "last_px": 0.1599999964237213,
+        "min_hold": 3,
+        "notional": 1132.799974679947,
+        "peak_px": 0.1599999964237213,
+        "reason": "rank by rsi; rank rsi; list yday_mover; \ud83d\udd35; ret5=-23.8; leftover $1132.82",
+        "shares": 7080,
+        "ticker": "DVLT"
+      },
+      "EYPT": {
+        "close_px": 3.450000047683716,
+        "cost": 1134.9261265216828,
+        "entry_date": "2026-09-16",
+        "entry_px": 3.6600000858306885,
+        "fee_in": 3.9861,
+        "last_px": 3.6600000858306885,
+        "min_hold": 3,
+        "notional": 1130.9400265216827,
+        "peak_px": 3.6600000858306885,
+        "reason": "rank by rsi; rank rsi; list yday_mover; \ud83d\udd35; ret5=-19.7; leftover $1132.82",
+        "shares": 309,
+        "ticker": "EYPT"
+      },
+      "NMRA": {
+        "close_px": 0.7730000019073486,
+        "cost": 1148.0004756832122,
+        "entry_date": "2026-09-16",
+        "entry_px": 0.843999981880188,
+        "fee_in": 15.3525,
+        "last_px": 0.843999981880188,
+        "min_hold": 3,
+        "notional": 1132.6479756832123,
+        "peak_px": 0.843999981880188,
+        "reason": "rank by rsi; rank rsi; list yday_mover; ret5=-33.5; leftover $1132.82",
+        "shares": 1342,
+        "ticker": "NMRA"
+      },
+      "TCOM": {
+        "close_px": 40.43000030517578,
+        "cost": 1107.181008239746,
+        "entry_date": "2026-09-16",
+        "entry_px": 40.93000030517578,
+        "fee_in": 2.071,
+        "last_px": 40.93000030517578,
+        "min_hold": 3,
+        "notional": 1105.110008239746,
+        "peak_px": 40.93000030517578,
+        "reason": "rank by rsi; rank rsi; list earn_react; ret5=-3.1; leftover $1132.82",
+        "shares": 27,
+        "ticker": "TCOM"
+      },
+      "ZSQR": {
+        "close_px": 2.2899999618530273,
+        "cost": 1110.568759487915,
+        "entry_date": "2026-09-16",
+        "entry_px": 2.3399999141693115,
+        "fee_in": 6.0888,
+        "last_px": 2.3399999141693115,
+        "min_hold": 3,
+        "notional": 1104.479959487915,
+        "peak_px": 2.3399999141693115,
+        "reason": "rank by rsi; rank rsi; list yday_mover; \ud83d\udd35; ret5=-25.2; leftover $1132.82",
+        "shares": 472,
+        "ticker": "ZSQR"
+      }
+    },
+    "yday_equity": 8848.03
+  }
+}

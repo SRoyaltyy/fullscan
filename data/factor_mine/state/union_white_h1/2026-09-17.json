@@ -1,0 +1,144 @@
+{
+  "buys": [
+    "SABR",
+    "BULL"
+  ],
+  "cash": 4.15,
+  "date": "2026-09-17",
+  "equity": 9118.81,
+  "fees": 49.9186,
+  "fills": [
+    {
+      "fees": 2.136,
+      "pnl": 43.63,
+      "price": 28.23,
+      "shares": 42,
+      "side": "SELL",
+      "ticker": "ADPT"
+    },
+    {
+      "fees": 2.2564,
+      "pnl": -2.87,
+      "price": 14.33,
+      "shares": 81,
+      "side": "SELL",
+      "ticker": "AVAH"
+    },
+    {
+      "fees": 2.103,
+      "pnl": 2.32,
+      "price": 36.67,
+      "shares": 31,
+      "side": "SELL",
+      "ticker": "BLFS"
+    },
+    {
+      "fees": 2.133,
+      "pnl": 13.59,
+      "price": 28.595,
+      "shares": 41,
+      "side": "SELL",
+      "ticker": "CAI"
+    },
+    {
+      "fees": 2.022,
+      "pnl": 5.02,
+      "price": 273.15,
+      "shares": 4,
+      "side": "SELL",
+      "ticker": "IQV"
+    },
+    {
+      "fees": 2.055,
+      "pnl": -14.29,
+      "price": 76.44,
+      "shares": 15,
+      "side": "SELL",
+      "ticker": "RDNT"
+    },
+    {
+      "fees": 2.157,
+      "pnl": 34.91,
+      "price": 24.09,
+      "shares": 49,
+      "side": "SELL",
+      "ticker": "SDGR"
+    },
+    {
+      "fees": 2.058,
+      "pnl": 58.46,
+      "price": 72.7,
+      "shares": 16,
+      "side": "SELL",
+      "ticker": "TEM"
+    },
+    {
+      "fees": 25.3872,
+      "pnl": null,
+      "price": 2.4,
+      "shares": 1968,
+      "side": "BUY",
+      "ticker": "SABR"
+    },
+    {
+      "fees": 7.611,
+      "pnl": null,
+      "price": 7.95,
+      "shares": 590,
+      "side": "BUY",
+      "ticker": "BULL"
+    }
+  ],
+  "holdings": [
+    "BULL",
+    "SABR"
+  ],
+  "mean": -2.2289,
+  "n_trades_today": 10,
+  "recipe": "union_white_h1",
+  "sells": [
+    "ADPT",
+    "AVAH",
+    "BLFS",
+    "CAI",
+    "IQV",
+    "RDNT",
+    "SDGR",
+    "TEM"
+  ],
+  "state": {
+    "after": "2026-09-17",
+    "cash": 4.15,
+    "pos": {
+      "BULL": {
+        "close_px": 7.710000038146973,
+        "cost": 4698.1108874664305,
+        "entry_date": "2026-09-17",
+        "entry_px": 7.949999809265137,
+        "fee_in": 7.611,
+        "last_px": 7.949999809265137,
+        "min_hold": 1,
+        "notional": 4690.499887466431,
+        "peak_px": 7.949999809265137,
+        "reason": "union \u2229 white, no \ud83d\udea8; gate zero_red=True; list yday_mover; \ud83d\udd35; \u26aa; ret5=-18.4; leftover $4725.42",
+        "shares": 590,
+        "ticker": "BULL"
+      },
+      "SABR": {
+        "close_px": 2.319999933242798,
+        "cost": 4748.587387683106,
+        "entry_date": "2026-09-17",
+        "entry_px": 2.4000000953674316,
+        "fee_in": 25.3872,
+        "last_px": 2.4000000953674316,
+        "min_hold": 1,
+        "notional": 4723.2001876831055,
+        "peak_px": 2.4000000953674316,
+        "reason": "union \u2229 white, no \ud83d\udea8; gate zero_red=True; list probable,yday_gainer,yday_mover,ohlc_hot; \ud83d\udd35; \u26aa; ret5=+8.4; leftover $4725.42",
+        "shares": 1968,
+        "ticker": "SABR"
+      }
+    },
+    "yday_equity": 9118.81
+  }
+}

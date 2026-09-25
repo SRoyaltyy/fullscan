@@ -1,0 +1,120 @@
+{
+  "buys": [
+    "BULL",
+    "TRMD",
+    "LEN"
+  ],
+  "cash": 19989.22,
+  "date": "2026-09-17",
+  "equity": 9861.12,
+  "fees": 7.0158,
+  "fills": [
+    {
+      "fees": 2.709515067432351,
+      "pnl": null,
+      "price": 7.95,
+      "shares": 203,
+      "side": "SHORT",
+      "ticker": "BULL"
+    },
+    {
+      "fees": 2.1889241101408654,
+      "pnl": null,
+      "price": 36.52,
+      "shares": 44,
+      "side": "SHORT",
+      "ticker": "TRMD"
+    },
+    {
+      "fees": 2.1173835616438357,
+      "pnl": null,
+      "price": 81.0,
+      "shares": 20,
+      "side": "SHORT",
+      "ticker": "LEN"
+    }
+  ],
+  "holdings": [
+    "BBNX",
+    "BULL",
+    "GFR",
+    "LEN",
+    "TRMD"
+  ],
+  "mean": 1.037,
+  "n_trades_today": 3,
+  "recipe": "short_news_head_h3",
+  "sells": [],
+  "state": {
+    "after": "2026-09-17",
+    "cash": 19989.22,
+    "pos": {
+      "BBNX": {
+        "close_px": 21.43000030517578,
+        "cost": 2.5063315091067797,
+        "entry_date": "2026-09-16",
+        "entry_px": 18.610000610351562,
+        "fee_in": 2.5063315091067797,
+        "last_px": 22.459999084472656,
+        "notional": 2512.350082397461,
+        "peak_px": 18.610000610351562,
+        "reason": "short prior-export headline\ud83d\udd34; gate headline=bad; list probable,yday_gainer,yday_mover; ret5=-0.5; leftover $2530.87",
+        "shares": 135,
+        "ticker": "BBNX"
+      },
+      "BULL": {
+        "close_px": 7.710000038146973,
+        "cost": 2.709515067432351,
+        "entry_date": "2026-09-17",
+        "entry_px": 7.949999809265137,
+        "fee_in": 2.709515067432351,
+        "last_px": 7.949999809265137,
+        "notional": 1613.8499612808228,
+        "peak_px": 7.949999809265137,
+        "reason": "short prior-export headline\ud83d\udd34; gate headline=bad; list yday_mover; \ud83d\udd35; \u26aa; ret5=-18.4; leftover $1620.97",
+        "shares": 203,
+        "ticker": "BULL"
+      },
+      "GFR": {
+        "close_px": 6.659999847412109,
+        "cost": 4.923835615664965,
+        "entry_date": "2026-09-16",
+        "entry_px": 6.829999923706055,
+        "fee_in": 4.923835615664965,
+        "last_px": 6.480000019073486,
+        "notional": 2527.0999717712402,
+        "peak_px": 6.480000019073486,
+        "reason": "short prior-export headline\ud83d\udd34; gate headline=bad; list ohlc_hot; ret5=+11.2; leftover $2530.87",
+        "shares": 370,
+        "ticker": "GFR"
+      },
+      "LEN": {
+        "close_px": 79.69999694824219,
+        "cost": 2.1173835616438357,
+        "entry_date": "2026-09-17",
+        "entry_px": 81.0,
+        "fee_in": 2.1173835616438357,
+        "last_px": 81.0,
+        "notional": 1620.0,
+        "peak_px": 81.0,
+        "reason": "short prior-export headline\ud83d\udd34; gate headline=bad; list earn_react; \ud83d\udd35; ret5=-3.0; leftover $1620.97",
+        "shares": 20,
+        "ticker": "LEN"
+      },
+      "TRMD": {
+        "close_px": 36.630001068115234,
+        "cost": 2.1889241101408654,
+        "entry_date": "2026-09-17",
+        "entry_px": 36.52000045776367,
+        "fee_in": 2.1889241101408654,
+        "last_px": 36.52000045776367,
+        "notional": 1606.8800201416016,
+        "peak_px": 36.52000045776367,
+        "reason": "short prior-export headline\ud83d\udd34; gate headline=bad; list ohlc_hot; ret5=+3.2; leftover $1620.97",
+        "shares": 44,
+        "ticker": "TRMD"
+      }
+    },
+    "yday_equity": 9861.12
+  }
+}

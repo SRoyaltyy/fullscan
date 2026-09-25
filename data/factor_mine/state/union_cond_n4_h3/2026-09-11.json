@@ -1,0 +1,119 @@
+{
+  "buys": [
+    "ORCL",
+    "SWKS",
+    "QRVO",
+    "BAND"
+  ],
+  "cash": 278.37,
+  "date": "2026-09-11",
+  "equity": 8664.98,
+  "fees": 8.245,
+  "fills": [
+    {
+      "fees": 2.026,
+      "pnl": null,
+      "price": 164.43,
+      "shares": 12,
+      "side": "BUY",
+      "ticker": "ORCL"
+    },
+    {
+      "fees": 2.065,
+      "pnl": null,
+      "price": 84.27,
+      "shares": 25,
+      "side": "BUY",
+      "ticker": "SWKS"
+    },
+    {
+      "fees": 2.044,
+      "pnl": null,
+      "price": 112.835,
+      "shares": 18,
+      "side": "BUY",
+      "ticker": "QRVO"
+    },
+    {
+      "fees": 2.11,
+      "pnl": null,
+      "price": 52.55,
+      "shares": 40,
+      "side": "BUY",
+      "ticker": "BAND"
+    }
+  ],
+  "holdings": [
+    "BAND",
+    "ORCL",
+    "QRVO",
+    "SWKS"
+  ],
+  "mean": 1.9463,
+  "n_trades_today": 4,
+  "recipe": "union_cond_n4_h3",
+  "sells": [],
+  "state": {
+    "after": "2026-09-11",
+    "cash": 278.37,
+    "pos": {
+      "BAND": {
+        "close_px": 56.869998931884766,
+        "cost": 2104.109969482422,
+        "entry_date": "2026-09-11",
+        "entry_px": 52.54999923706055,
+        "fee_in": 2.11,
+        "last_px": 52.54999923706055,
+        "min_hold": 3,
+        "notional": 2101.999969482422,
+        "peak_px": 52.54999923706055,
+        "reason": "top 4 by cond; rank cond; list probable,yday_gainer; \ud83d\udd35; \u26aa; ret5=+9.6; leftover $2124.89",
+        "shares": 40,
+        "ticker": "BAND"
+      },
+      "ORCL": {
+        "close_px": 150.27999877929688,
+        "cost": 1975.185912109375,
+        "entry_date": "2026-09-11",
+        "entry_px": 164.42999267578125,
+        "fee_in": 2.026,
+        "last_px": 164.42999267578125,
+        "min_hold": 3,
+        "notional": 1973.159912109375,
+        "peak_px": 164.42999267578125,
+        "reason": "top 4 by cond; rank cond; list flatten,earn_react; \ud83d\udd35; \u26aa; ret5=-0.7; leftover $2124.89",
+        "shares": 12,
+        "ticker": "ORCL"
+      },
+      "QRVO": {
+        "close_px": 116.6500015258789,
+        "cost": 2033.073983520508,
+        "entry_date": "2026-09-11",
+        "entry_px": 112.83499908447266,
+        "fee_in": 2.044,
+        "last_px": 112.83499908447266,
+        "min_hold": 3,
+        "notional": 2031.0299835205078,
+        "peak_px": 112.83499908447266,
+        "reason": "top 4 by cond; rank cond; list yday_gainer,ohlc_hot; \ud83d\udd35; ret5=+11.9; leftover $2124.89",
+        "shares": 18,
+        "ticker": "QRVO"
+      },
+      "SWKS": {
+        "close_px": 88.3499984741211,
+        "cost": 2108.81491607666,
+        "entry_date": "2026-09-11",
+        "entry_px": 84.2699966430664,
+        "fee_in": 2.065,
+        "last_px": 84.2699966430664,
+        "min_hold": 3,
+        "notional": 2106.74991607666,
+        "peak_px": 84.2699966430664,
+        "reason": "top 4 by cond; rank cond; list yday_gainer,ohlc_hot; \u26aa; ret5=+17.5; leftover $2124.89",
+        "shares": 25,
+        "ticker": "SWKS"
+      }
+    },
+    "yday_equity": 8664.98
+  }
+}

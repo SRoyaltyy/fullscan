@@ -1,0 +1,81 @@
+{
+  "buys": [],
+  "cash": 5.09,
+  "date": "2026-09-09",
+  "equity": 8665.21,
+  "fees": 0,
+  "fills": [],
+  "holdings": [
+    "ALEC",
+    "ATRC",
+    "BHC",
+    "CABA"
+  ],
+  "mean": -6.0621,
+  "n_trades_today": 0,
+  "recipe": "union_cond_n4_h3",
+  "sells": [],
+  "state": {
+    "after": "2026-09-09",
+    "cash": 5.09,
+    "pos": {
+      "ALEC": {
+        "close_px": 2.2699999809265137,
+        "cost": 2373.3272821281435,
+        "entry_date": "2026-09-04",
+        "entry_px": 2.5199999809265137,
+        "fee_in": 12.0873,
+        "last_px": 2.4700000286102295,
+        "min_hold": 3,
+        "notional": 2361.2399821281433,
+        "peak_px": 2.5199999809265137,
+        "reason": "top 4 by cond; rank cond; list flatten,probable,yday_gainer,yday_mover,mover_buy; \ud83d\udd35; \u26aa; ret5=+5.0; leftover $2362.54",
+        "shares": 937,
+        "ticker": "ALEC"
+      },
+      "ATRC": {
+        "close_px": 53.029998779296875,
+        "cost": 2343.4749450683594,
+        "entry_date": "2026-09-04",
+        "entry_px": 52.029998779296875,
+        "fee_in": 2.125,
+        "last_px": 53.15999984741211,
+        "min_hold": 3,
+        "notional": 2341.3499450683594,
+        "peak_px": 54.310001373291016,
+        "reason": "top 4 by cond; rank cond; list flatten,mover_buy; \ud83d\udd35; \u26aa; ret5=+6.5; leftover $2362.54",
+        "shares": 45,
+        "ticker": "ATRC"
+      },
+      "BHC": {
+        "close_px": 6.159999847412109,
+        "cost": 2359.7379133895874,
+        "entry_date": "2026-09-04",
+        "entry_px": 6.710000038146973,
+        "fee_in": 4.5279,
+        "last_px": 6.380000114440918,
+        "min_hold": 3,
+        "notional": 2355.2100133895874,
+        "peak_px": 6.710000038146973,
+        "reason": "top 4 by cond; rank cond; list flatten,mover_buy; \ud83d\udd35; \u26aa; ret5=+7.3; leftover $2362.54",
+        "shares": 351,
+        "ticker": "BHC"
+      },
+      "CABA": {
+        "close_px": 2.9100000858306885,
+        "cost": 2368.517826016235,
+        "entry_date": "2026-09-04",
+        "entry_px": 3.4600000381469727,
+        "fee_in": 8.7978,
+        "last_px": 3.2799999713897705,
+        "min_hold": 3,
+        "notional": 2359.7200260162354,
+        "peak_px": 3.4600000381469727,
+        "reason": "top 4 by cond; rank cond; list flatten,mover_buy; \ud83d\udd35; \u26aa; ret5=+3.0; leftover $2362.54",
+        "shares": 682,
+        "ticker": "CABA"
+      }
+    },
+    "yday_equity": 8665.21
+  }
+}

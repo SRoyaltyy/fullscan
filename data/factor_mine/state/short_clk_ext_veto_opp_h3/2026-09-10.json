@@ -1,0 +1,39 @@
+{
+  "buys": [],
+  "cash": 10142.41,
+  "date": "2026-09-10",
+  "equity": 10142.41,
+  "fees": 4.34,
+  "fills": [
+    {
+      "fees": 2.29,
+      "pnl": -92.69,
+      "price": 26.06,
+      "shares": 100,
+      "side": "COVER",
+      "ticker": "ASST"
+    },
+    {
+      "fees": 2.05,
+      "pnl": 151.5,
+      "price": 112.69,
+      "shares": 20,
+      "side": "COVER",
+      "ticker": "HOOD"
+    }
+  ],
+  "holdings": [],
+  "mean": 1.1011,
+  "n_trades_today": 2,
+  "recipe": "short_clk_ext_veto_opp_h3",
+  "sells": [
+    "ASST",
+    "HOOD"
+  ],
+  "state": {
+    "after": "2026-09-10",
+    "cash": 10142.41,
+    "pos": {},
+    "yday_equity": 10142.41
+  }
+}

@@ -1,0 +1,156 @@
+{
+  "buys": [
+    "PGEN",
+    "SGRY",
+    "CMPX",
+    "VERI"
+  ],
+  "cash": 0.8,
+  "date": "2026-09-23",
+  "equity": 8665.23,
+  "fees": 92.2547,
+  "fills": [
+    {
+      "fees": 6.9694,
+      "pnl": -3.19,
+      "price": 4.3,
+      "shares": 532,
+      "side": "SELL",
+      "ticker": "DGXX"
+    },
+    {
+      "fees": 2.0812,
+      "pnl": 33.04,
+      "price": 108.52,
+      "shares": 21,
+      "side": "SELL",
+      "ticker": "GRAL"
+    },
+    {
+      "fees": 28.5916,
+      "pnl": -193.05,
+      "price": 0.95,
+      "shares": 2256,
+      "side": "SELL",
+      "ticker": "IVVD"
+    },
+    {
+      "fees": 2.0581,
+      "pnl": 189.68,
+      "price": 183.405,
+      "shares": 13,
+      "side": "SELL",
+      "ticker": "MRNA"
+    },
+    {
+      "fees": 3.7023,
+      "pnl": null,
+      "price": 7.95,
+      "shares": 287,
+      "side": "BUY",
+      "ticker": "PGEN"
+    },
+    {
+      "fees": 2.425,
+      "pnl": null,
+      "price": 15.72,
+      "shares": 145,
+      "side": "BUY",
+      "ticker": "SGRY"
+    },
+    {
+      "fees": 24.1617,
+      "pnl": null,
+      "price": 1.22,
+      "shares": 1873,
+      "side": "BUY",
+      "ticker": "CMPX"
+    },
+    {
+      "fees": 22.2654,
+      "pnl": null,
+      "price": 1.3,
+      "shares": 1726,
+      "side": "BUY",
+      "ticker": "VERI"
+    }
+  ],
+  "holdings": [
+    "CMPX",
+    "PGEN",
+    "SGRY",
+    "VERI"
+  ],
+  "mean": -6.1746,
+  "n_trades_today": 8,
+  "recipe": "union_news_g_h1",
+  "sells": [
+    "DGXX",
+    "GRAL",
+    "IVVD",
+    "MRNA"
+  ],
+  "state": {
+    "after": "2026-09-23",
+    "cash": 0.8,
+    "pos": {
+      "CMPX": {
+        "close_px": 1.1699999570846558,
+        "cost": 2309.22175358696,
+        "entry_date": "2026-09-23",
+        "entry_px": 1.2200000286102295,
+        "fee_in": 24.1617,
+        "last_px": 1.2200000286102295,
+        "min_hold": 1,
+        "notional": 2285.06005358696,
+        "peak_px": 1.2200000286102295,
+        "reason": "union \u2229 news_g, no \ud83d\udea8; gate news=good; list yday_mover; \ud83d\udd35; ret5=-33.0; leftover $2285.82",
+        "shares": 1873,
+        "ticker": "CMPX"
+      },
+      "PGEN": {
+        "close_px": 7.440000057220459,
+        "cost": 2285.352245259094,
+        "entry_date": "2026-09-23",
+        "entry_px": 7.949999809265137,
+        "fee_in": 3.7023,
+        "last_px": 7.949999809265137,
+        "min_hold": 1,
+        "notional": 2281.6499452590942,
+        "peak_px": 7.949999809265137,
+        "reason": "union \u2229 news_g, no \ud83d\udea8; gate news=good; list flatten; \ud83d\udd35; \u26aa; ret5=+12.7; leftover $2285.82",
+        "shares": 287,
+        "ticker": "PGEN"
+      },
+      "SGRY": {
+        "close_px": 14.5600004196167,
+        "cost": 2281.8250387191774,
+        "entry_date": "2026-09-23",
+        "entry_px": 15.720000267028809,
+        "fee_in": 2.425,
+        "last_px": 15.720000267028809,
+        "min_hold": 1,
+        "notional": 2279.4000387191772,
+        "peak_px": 15.720000267028809,
+        "reason": "union \u2229 news_g, no \ud83d\udea8; gate news=good; list yday_gainer,yday_mover,ohlc_hot; \ud83d\udd35; ret5=+15.8; leftover $2285.82",
+        "shares": 145,
+        "ticker": "SGRY"
+      },
+      "VERI": {
+        "close_px": 1.2899999618530273,
+        "cost": 2266.0653176979067,
+        "entry_date": "2026-09-23",
+        "entry_px": 1.2999999523162842,
+        "fee_in": 22.2654,
+        "last_px": 1.2999999523162842,
+        "min_hold": 1,
+        "notional": 2243.7999176979065,
+        "peak_px": 1.2999999523162842,
+        "reason": "union \u2229 news_g, no \ud83d\udea8; gate news=good; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+15.3; leftover $2285.82",
+        "shares": 1726,
+        "ticker": "VERI"
+      }
+    },
+    "yday_equity": 8665.23
+  }
+}

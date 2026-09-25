@@ -1,0 +1,66 @@
+{
+  "buys": [],
+  "cash": 229.54,
+  "date": "2026-09-02",
+  "equity": 8670.27,
+  "fees": 0,
+  "fills": [],
+  "holdings": [
+    "DY",
+    "LX",
+    "QFIN"
+  ],
+  "mean": -0.1909,
+  "n_trades_today": 0,
+  "recipe": "union_rsi_os_h5",
+  "sells": [],
+  "state": {
+    "after": "2026-09-02",
+    "cash": 229.54,
+    "pos": {
+      "DY": {
+        "close_px": 296.9800109863281,
+        "cost": 3065.4199633789062,
+        "entry_date": "2026-08-28",
+        "entry_px": 306.3399963378906,
+        "fee_in": 2.02,
+        "last_px": 287.989990234375,
+        "min_hold": 5,
+        "notional": 3063.3999633789062,
+        "peak_px": 306.3399963378906,
+        "reason": "union \u2229 rsi_os hold 5, no \ud83d\udea8; gate rsi_os=True; list yday_mover; ret5=-23.0; leftover $3333.33",
+        "shares": 10,
+        "ticker": "DY"
+      },
+      "LX": {
+        "close_px": 0.8209999799728394,
+        "cost": 3369.7416041032793,
+        "entry_date": "2026-08-28",
+        "entry_px": 1.159999966621399,
+        "fee_in": 37.0617,
+        "last_px": 0.906000018119812,
+        "min_hold": 5,
+        "notional": 3332.679904103279,
+        "peak_px": 1.159999966621399,
+        "reason": "union \u2229 rsi_os hold 5, no \ud83d\udea8; gate rsi_os=True; list overnight; ret5=-13.8; leftover $3333.33",
+        "shares": 2873,
+        "ticker": "LX"
+      },
+      "QFIN": {
+        "close_px": 8.550000190734863,
+        "cost": 3335.2954611450195,
+        "entry_date": "2026-08-28",
+        "entry_px": 9.149999618530273,
+        "fee_in": 4.6956,
+        "last_px": 8.380000114440918,
+        "min_hold": 5,
+        "notional": 3330.5998611450195,
+        "peak_px": 9.149999618530273,
+        "reason": "union \u2229 rsi_os hold 5, no \ud83d\udea8; gate rsi_os=True; list yday_mover; ret5=-19.9; leftover $3333.33",
+        "shares": 364,
+        "ticker": "QFIN"
+      }
+    },
+    "yday_equity": 8670.27
+  }
+}

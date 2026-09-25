@@ -1,0 +1,160 @@
+{
+  "buys": [
+    "SDGR",
+    "TEM",
+    "LVWR"
+  ],
+  "cash": 29.52,
+  "date": "2026-09-18",
+  "equity": 9975.27,
+  "fees": 67.7898,
+  "fills": [
+    {
+      "fees": 2.531,
+      "pnl": 66.36,
+      "price": 11.64,
+      "shares": 166,
+      "side": "SELL",
+      "ticker": "ALMU"
+    },
+    {
+      "fees": 2.2669,
+      "pnl": -100.79,
+      "price": 21.3,
+      "shares": 83,
+      "side": "SELL",
+      "ticker": "BBNX"
+    },
+    {
+      "fees": 8.7909,
+      "pnl": 90.06,
+      "price": 1.96,
+      "shares": 672,
+      "side": "SELL",
+      "ticker": "HLP"
+    },
+    {
+      "fees": 22.5935,
+      "pnl": 41.52,
+      "price": 1.12,
+      "shares": 1728,
+      "side": "SELL",
+      "ticker": "IQ"
+    },
+    {
+      "fees": 2.0834,
+      "pnl": -67.39,
+      "price": 78.25,
+      "shares": 23,
+      "side": "SELL",
+      "ticker": "LEN"
+    },
+    {
+      "fees": 2.287,
+      "pnl": null,
+      "price": 29.32,
+      "shares": 99,
+      "side": "BUY",
+      "ticker": "SDGR"
+    },
+    {
+      "fees": 2.095,
+      "pnl": null,
+      "price": 81.4,
+      "shares": 35,
+      "side": "BUY",
+      "ticker": "TEM"
+    },
+    {
+      "fees": 25.1421,
+      "pnl": null,
+      "price": 1.49,
+      "shares": 1949,
+      "side": "BUY",
+      "ticker": "LVWR"
+    }
+  ],
+  "holdings": [
+    "INDP",
+    "LVWR",
+    "SDGR",
+    "TEM"
+  ],
+  "mean": -1.0785,
+  "n_trades_today": 8,
+  "recipe": "combo_he1_5050_shared",
+  "sells": [
+    "ALMU",
+    "BBNX",
+    "HLP",
+    "IQ",
+    "LEN"
+  ],
+  "state": {
+    "after": "2026-09-18",
+    "cash": 29.52,
+    "pos": {
+      "INDP": {
+        "close_px": 3.549999952316284,
+        "cost": 1212.0570283241273,
+        "entry_date": "2026-09-16",
+        "entry_px": 3.6600000858306885,
+        "fee_in": 4.257,
+        "last_px": 3.8499999046325684,
+        "notional": 1207.8000283241272,
+        "owner": "union_hot_n4_h1",
+        "peak_px": 3.8499999046325684,
+        "reason": "top 4 by hot; rank hot_score; list yday_gainer,yday_mover; ret5=+96.8; combo leftover $1209.60; owner union_hot_n4_h1",
+        "shares": 330,
+        "side": "long",
+        "ticker": "INDP"
+      },
+      "LVWR": {
+        "close_px": 1.6299999952316284,
+        "cost": 2929.1521185871125,
+        "entry_date": "2026-09-18",
+        "entry_px": 1.4900000095367432,
+        "fee_in": 25.1421,
+        "last_px": 1.4900000095367432,
+        "notional": 2904.0100185871124,
+        "owner": "union_hot_n4_h1",
+        "peak_px": 1.4900000095367432,
+        "reason": "top 4 by hot; rank hot_score; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+25.7; combo leftover $2904.91; owner union_hot_n4_h1",
+        "shares": 1949,
+        "side": "long",
+        "ticker": "LVWR"
+      },
+      "SDGR": {
+        "close_px": 29.020000457763672,
+        "cost": 2904.9669697875975,
+        "entry_date": "2026-09-18",
+        "entry_px": 29.31999969482422,
+        "fee_in": 2.287,
+        "last_px": 29.31999969482422,
+        "notional": 2902.6799697875977,
+        "owner": "union_hot_n4_h1",
+        "peak_px": 29.31999969482422,
+        "reason": "top 4 by hot; rank hot_score; list yday_gainer,yday_mover; \ud83d\udd35; \u26aa; ret5=+60.9; combo leftover $2904.91; owner union_hot_n4_h1",
+        "shares": 99,
+        "side": "long",
+        "ticker": "SDGR"
+      },
+      "TEM": {
+        "close_px": 77.83999633789062,
+        "cost": 2851.0950534057615,
+        "entry_date": "2026-09-18",
+        "entry_px": 81.4000015258789,
+        "fee_in": 2.095,
+        "last_px": 81.4000015258789,
+        "notional": 2849.0000534057617,
+        "owner": "union_hot_n4_h1",
+        "peak_px": 81.4000015258789,
+        "reason": "top 4 by hot; rank hot_score; list yday_gainer,yday_mover; \ud83d\udd35; \u26aa; ret5=+36.8; combo leftover $2904.91; owner union_hot_n4_h1",
+        "shares": 35,
+        "side": "long",
+        "ticker": "TEM"
+      }
+    },
+    "yday_equity": 9975.27
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "buys": [],
+  "cash": 7906.21,
+  "date": "2026-09-10",
+  "equity": 9545.11,
+  "fees": 26.8644,
+  "fills": [
+    {
+      "fees": 2.154,
+      "pnl": 37.95,
+      "price": 26.06,
+      "shares": 48,
+      "side": "SELL",
+      "ticker": "ASST"
+    },
+    {
+      "fees": 2.7669,
+      "pnl": -125.76,
+      "price": 5.22,
+      "shares": 211,
+      "side": "SELL",
+      "ticker": "DFDV"
+    },
+    {
+      "fees": 2.2343,
+      "pnl": -60.69,
+      "price": 15.64,
+      "shares": 74,
+      "side": "SELL",
+      "ticker": "FRNM"
+    },
+    {
+      "fees": 4.0605,
+      "pnl": -128.96,
+      "price": 3.56,
+      "shares": 310,
+      "side": "SELL",
+      "ticker": "GORO"
+    },
+    {
+      "fees": 10.8156,
+      "pnl": -112.45,
+      "price": 1.37,
+      "shares": 827,
+      "side": "SELL",
+      "ticker": "GPRO"
+    },
+    {
+      "fees": 2.04,
+      "pnl": -81.91,
+      "price": 112.69,
+      "shares": 10,
+      "side": "SELL",
+      "ticker": "HOOD"
+    },
+    {
+      "fees": 2.7931,
+      "pnl": -197.24,
+      "price": 4.85,
+      "shares": 213,
+      "side": "SELL",
+      "ticker": "LENZ"
+    }
+  ],
+  "holdings": [
+    "IRD"
+  ],
+  "mean": -1.1838,
+  "n_trades_today": 7,
+  "recipe": "union_hot_score_h3",
+  "sells": [
+    "ASST",
+    "DFDV",
+    "FRNM",
+    "GORO",
+    "GPRO",
+    "HOOD",
+    "LENZ"
+  ],
+  "state": {
+    "after": "2026-09-10",
+    "cash": 7906.21,
+    "pos": {
+      "IRD": {
+        "close_px": 6.070000171661377,
+        "cost": 1226.5830566482543,
+        "entry_date": "2026-09-04",
+        "entry_px": 4.53000020980835,
+        "fee_in": 3.483,
+        "last_px": 5.869999885559082,
+        "min_hold": 3,
+        "notional": 1223.1000566482544,
+        "peak_px": 5.869999885559082,
+        "reason": "rank by hot_score; rank hot_score; list yday_gainer,yday_mover; \ud83d\udd35; \u26aa; ret5=+19.5; leftover $1225.23",
+        "shares": 270,
+        "ticker": "IRD"
+      }
+    },
+    "yday_equity": 9545.11
+  }
+}

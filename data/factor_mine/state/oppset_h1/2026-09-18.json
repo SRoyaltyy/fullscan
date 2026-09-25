@@ -1,0 +1,252 @@
+{
+  "buys": [
+    "GNRC",
+    "SDGR",
+    "FLNC",
+    "RARE",
+    "LTRX",
+    "TEM"
+  ],
+  "cash": 177.81,
+  "date": "2026-09-18",
+  "equity": 9434.26,
+  "fees": 26.3986,
+  "fills": [
+    {
+      "fees": 2.3609,
+      "pnl": -189.37,
+      "price": 8.68,
+      "shares": 114,
+      "side": "SELL",
+      "ticker": "ALHC"
+    },
+    {
+      "fees": 2.2026,
+      "pnl": -32.54,
+      "price": 18.12,
+      "shares": 64,
+      "side": "SELL",
+      "ticker": "AMRX"
+    },
+    {
+      "fees": 2.169,
+      "pnl": -65.8,
+      "price": 21.3,
+      "shares": 53,
+      "side": "SELL",
+      "ticker": "BBNX"
+    },
+    {
+      "fees": 2.1161,
+      "pnl": 218.39,
+      "price": 39.5,
+      "shares": 35,
+      "side": "SELL",
+      "ticker": "FPS"
+    },
+    {
+      "fees": 2.025,
+      "pnl": -13.03,
+      "price": 236.8,
+      "shares": 5,
+      "side": "SELL",
+      "ticker": "JBHT"
+    },
+    {
+      "fees": 2.106,
+      "pnl": 33.89,
+      "price": 37.71,
+      "shares": 32,
+      "side": "SELL",
+      "ticker": "TRMD"
+    },
+    {
+      "fees": 2.005,
+      "pnl": null,
+      "price": 209.52,
+      "shares": 5,
+      "side": "BUY",
+      "ticker": "GNRC"
+    },
+    {
+      "fees": 2.11,
+      "pnl": null,
+      "price": 29.32,
+      "shares": 40,
+      "side": "BUY",
+      "ticker": "SDGR"
+    },
+    {
+      "fees": 2.458,
+      "pnl": null,
+      "price": 7.535,
+      "shares": 156,
+      "side": "BUY",
+      "ticker": "FLNC"
+    },
+    {
+      "fees": 2.227,
+      "pnl": null,
+      "price": 14.79,
+      "shares": 79,
+      "side": "BUY",
+      "ticker": "RARE"
+    },
+    {
+      "fees": 2.587,
+      "pnl": null,
+      "price": 5.89,
+      "shares": 199,
+      "side": "BUY",
+      "ticker": "LTRX"
+    },
+    {
+      "fees": 2.032,
+      "pnl": null,
+      "price": 81.4,
+      "shares": 14,
+      "side": "BUY",
+      "ticker": "TEM"
+    }
+  ],
+  "holdings": [
+    "ALMU",
+    "ARQT",
+    "FLNC",
+    "GNRC",
+    "LTRX",
+    "RARE",
+    "SDGR",
+    "TEM"
+  ],
+  "mean": -0.2254,
+  "n_trades_today": 12,
+  "recipe": "oppset_h1",
+  "sells": [
+    "ALHC",
+    "AMRX",
+    "BBNX",
+    "FPS",
+    "JBHT",
+    "TRMD"
+  ],
+  "state": {
+    "after": "2026-09-18",
+    "cash": 177.81,
+    "pos": {
+      "ALMU": {
+        "close_px": 12.725000381469727,
+        "cost": 1190.568004043579,
+        "entry_date": "2026-09-17",
+        "entry_px": 11.210000038146973,
+        "fee_in": 2.308,
+        "last_px": 11.640000343322754,
+        "min_hold": 1,
+        "notional": 1188.260004043579,
+        "peak_px": 11.640000343322754,
+        "reason": "Theme Radar Clock-B oppset universe (flagged T\u22121 names; research; not KEEP); gate oppset=True; rank opp_rvol; list earn_react; ret5=+1.0; leftover $1193.93",
+        "shares": 106,
+        "ticker": "ALMU"
+      },
+      "ARQT": {
+        "close_px": 25.3799991607666,
+        "cost": 1195.8280350952148,
+        "entry_date": "2026-09-17",
+        "entry_px": 25.950000762939453,
+        "fee_in": 2.128,
+        "last_px": 26.139999389648438,
+        "min_hold": 1,
+        "notional": 1193.7000350952148,
+        "peak_px": 26.139999389648438,
+        "reason": "Theme Radar Clock-B oppset universe (flagged T\u22121 names; research; not KEEP); gate oppset=True; rank opp_rvol; list probable,yday_gainer,yday_mover,ohlc_hot; ret5=+9.6; leftover $1193.93",
+        "shares": 46,
+        "ticker": "ARQT"
+      },
+      "FLNC": {
+        "close_px": 7.320000171661377,
+        "cost": 1177.9179761962891,
+        "entry_date": "2026-09-18",
+        "entry_px": 7.534999847412109,
+        "fee_in": 2.458,
+        "last_px": 7.534999847412109,
+        "min_hold": 1,
+        "notional": 1175.459976196289,
+        "peak_px": 7.534999847412109,
+        "reason": "Theme Radar Clock-B oppset universe (flagged T\u22121 names; research; not KEEP); gate oppset=True; rank opp_rvol; list yday_mover; \ud83d\udd35; ret5=-20.9; leftover $1177.87",
+        "shares": 156,
+        "ticker": "FLNC"
+      },
+      "GNRC": {
+        "close_px": 207.44000244140625,
+        "cost": 1049.6050213623048,
+        "entry_date": "2026-09-18",
+        "entry_px": 209.52000427246094,
+        "fee_in": 2.005,
+        "last_px": 209.52000427246094,
+        "min_hold": 1,
+        "notional": 1047.6000213623047,
+        "peak_px": 209.52000427246094,
+        "reason": "Theme Radar Clock-B oppset universe (flagged T\u22121 names; research; not KEEP); gate oppset=True; rank opp_rvol; list flatten,yday_gainer,yday_mover; \ud83d\udd35; ret5=+14.1; leftover $1177.87",
+        "shares": 5,
+        "ticker": "GNRC"
+      },
+      "LTRX": {
+        "close_px": 5.849999904632568,
+        "cost": 1174.6969734306335,
+        "entry_date": "2026-09-18",
+        "entry_px": 5.889999866485596,
+        "fee_in": 2.587,
+        "last_px": 5.889999866485596,
+        "min_hold": 1,
+        "notional": 1172.1099734306335,
+        "peak_px": 5.889999866485596,
+        "reason": "Theme Radar Clock-B oppset universe (flagged T\u22121 names; research; not KEEP); gate oppset=True; rank opp_rvol; list ohlc_hot; \ud83d\udd35; ret5=+15.0; leftover $1177.87",
+        "shares": 199,
+        "ticker": "LTRX"
+      },
+      "RARE": {
+        "close_px": 14.510000228881836,
+        "cost": 1170.6369969863892,
+        "entry_date": "2026-09-18",
+        "entry_px": 14.789999961853027,
+        "fee_in": 2.227,
+        "last_px": 14.789999961853027,
+        "min_hold": 1,
+        "notional": 1168.4099969863892,
+        "peak_px": 14.789999961853027,
+        "reason": "Theme Radar Clock-B oppset universe (flagged T\u22121 names; research; not KEEP); gate oppset=True; rank opp_rvol; list probable,yday_gainer; \ud83d\udd35; \u26aa; ret5=+0.7; leftover $1177.87",
+        "shares": 79,
+        "ticker": "RARE"
+      },
+      "SDGR": {
+        "close_px": 29.020000457763672,
+        "cost": 1174.9099877929686,
+        "entry_date": "2026-09-18",
+        "entry_px": 29.31999969482422,
+        "fee_in": 2.11,
+        "last_px": 29.31999969482422,
+        "min_hold": 1,
+        "notional": 1172.7999877929688,
+        "peak_px": 29.31999969482422,
+        "reason": "Theme Radar Clock-B oppset universe (flagged T\u22121 names; research; not KEEP); gate oppset=True; rank opp_rvol; list yday_gainer,yday_mover; \ud83d\udd35; \u26aa; ret5=+60.9; leftover $1177.87",
+        "shares": 40,
+        "ticker": "SDGR"
+      },
+      "TEM": {
+        "close_px": 77.83999633789062,
+        "cost": 1141.6320213623046,
+        "entry_date": "2026-09-18",
+        "entry_px": 81.4000015258789,
+        "fee_in": 2.032,
+        "last_px": 81.4000015258789,
+        "min_hold": 1,
+        "notional": 1139.6000213623047,
+        "peak_px": 81.4000015258789,
+        "reason": "Theme Radar Clock-B oppset universe (flagged T\u22121 names; research; not KEEP); gate oppset=True; rank opp_rvol; list yday_gainer,yday_mover; \ud83d\udd35; \u26aa; ret5=+36.8; leftover $1177.87",
+        "shares": 14,
+        "ticker": "TEM"
+      }
+    },
+    "yday_equity": 9434.26
+  }
+}

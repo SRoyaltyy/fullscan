@@ -1,0 +1,288 @@
+{
+  "buys": [
+    "ILMN",
+    "TWST",
+    "RVTY",
+    "IOVA",
+    "PGEN",
+    "AMN",
+    "BRUN",
+    "AXTI"
+  ],
+  "cash": 314.27,
+  "date": "2026-09-17",
+  "equity": 9554.57,
+  "fees": 34.6487,
+  "fills": [
+    {
+      "fees": 2.1963,
+      "pnl": 81.19,
+      "price": 19.59,
+      "shares": 62,
+      "side": "SELL",
+      "ticker": "ARQQ"
+    },
+    {
+      "fees": 2.2501,
+      "pnl": -2.9,
+      "price": 14.33,
+      "shares": 79,
+      "side": "SELL",
+      "ticker": "AVAH"
+    },
+    {
+      "fees": 2.1941,
+      "pnl": 230.48,
+      "price": 22.46,
+      "shares": 61,
+      "side": "SELL",
+      "ticker": "BBNX"
+    },
+    {
+      "fees": 2.103,
+      "pnl": 2.32,
+      "price": 36.67,
+      "shares": 31,
+      "side": "SELL",
+      "ticker": "BLFS"
+    },
+    {
+      "fees": 2.022,
+      "pnl": 5.02,
+      "price": 273.15,
+      "shares": 4,
+      "side": "SELL",
+      "ticker": "IQV"
+    },
+    {
+      "fees": 2.052,
+      "pnl": -13.6,
+      "price": 76.44,
+      "shares": 14,
+      "side": "SELL",
+      "ticker": "RDNT"
+    },
+    {
+      "fees": 2.6142,
+      "pnl": -61.45,
+      "price": 5.58,
+      "shares": 194,
+      "side": "SELL",
+      "ticker": "RIG"
+    },
+    {
+      "fees": 2.058,
+      "pnl": 58.46,
+      "price": 72.7,
+      "shares": 16,
+      "side": "SELL",
+      "ticker": "TEM"
+    },
+    {
+      "fees": 2.005,
+      "pnl": null,
+      "price": 233.85,
+      "shares": 5,
+      "side": "BUY",
+      "ticker": "ILMN"
+    },
+    {
+      "fees": 2.011,
+      "pnl": null,
+      "price": 151.43,
+      "shares": 7,
+      "side": "BUY",
+      "ticker": "TWST"
+    },
+    {
+      "fees": 2.011,
+      "pnl": null,
+      "price": 147.61,
+      "shares": 7,
+      "side": "BUY",
+      "ticker": "RVTY"
+    },
+    {
+      "fees": 2.335,
+      "pnl": null,
+      "price": 10.25,
+      "shares": 115,
+      "side": "BUY",
+      "ticker": "IOVA"
+    },
+    {
+      "fees": 2.455,
+      "pnl": null,
+      "price": 7.59,
+      "shares": 155,
+      "side": "BUY",
+      "ticker": "PGEN"
+    },
+    {
+      "fees": 2.089,
+      "pnl": null,
+      "price": 34.93,
+      "shares": 33,
+      "side": "BUY",
+      "ticker": "AMN"
+    },
+    {
+      "fees": 2.212,
+      "pnl": null,
+      "price": 15.87,
+      "shares": 74,
+      "side": "BUY",
+      "ticker": "BRUN"
+    },
+    {
+      "fees": 2.041,
+      "pnl": null,
+      "price": 67.91,
+      "shares": 17,
+      "side": "BUY",
+      "ticker": "AXTI"
+    }
+  ],
+  "holdings": [
+    "AMN",
+    "AXTI",
+    "BRUN",
+    "ILMN",
+    "IOVA",
+    "PGEN",
+    "RVTY",
+    "TWST"
+  ],
+  "mean": 2.8008,
+  "n_trades_today": 16,
+  "recipe": "union_h1",
+  "sells": [
+    "ARQQ",
+    "AVAH",
+    "BBNX",
+    "BLFS",
+    "IQV",
+    "RDNT",
+    "RIG",
+    "TEM"
+  ],
+  "state": {
+    "after": "2026-09-17",
+    "cash": 314.27,
+    "pos": {
+      "AMN": {
+        "close_px": 34.54999923706055,
+        "cost": 1154.7790100708007,
+        "entry_date": "2026-09-17",
+        "entry_px": 34.93000030517578,
+        "fee_in": 2.089,
+        "last_px": 34.93000030517578,
+        "min_hold": 1,
+        "notional": 1152.6900100708008,
+        "peak_px": 34.93000030517578,
+        "reason": "baseline list, no extra gate; list flatten; ret5=+1.6; leftover $1178.84",
+        "shares": 33,
+        "ticker": "AMN"
+      },
+      "AXTI": {
+        "close_px": 67.75,
+        "cost": 1156.5110622558593,
+        "entry_date": "2026-09-17",
+        "entry_px": 67.91000366210938,
+        "fee_in": 2.041,
+        "last_px": 67.91000366210938,
+        "min_hold": 1,
+        "notional": 1154.4700622558594,
+        "peak_px": 67.91000366210938,
+        "reason": "baseline list, no extra gate; list probable,yday_gainer,yday_mover; \ud83d\udd35; ret5=-6.7; leftover $1178.84",
+        "shares": 17,
+        "ticker": "AXTI"
+      },
+      "BRUN": {
+        "close_px": 16.68000030517578,
+        "cost": 1176.591991531372,
+        "entry_date": "2026-09-17",
+        "entry_px": 15.869999885559082,
+        "fee_in": 2.212,
+        "last_px": 15.869999885559082,
+        "min_hold": 1,
+        "notional": 1174.379991531372,
+        "peak_px": 15.869999885559082,
+        "reason": "baseline list, no extra gate; list probable,yday_gainer,yday_mover; ret5=-12.7; leftover $1178.84",
+        "shares": 74,
+        "ticker": "BRUN"
+      },
+      "ILMN": {
+        "close_px": 245.17999267578125,
+        "cost": 1171.2550305175782,
+        "entry_date": "2026-09-17",
+        "entry_px": 233.85000610351562,
+        "fee_in": 2.005,
+        "last_px": 233.85000610351562,
+        "min_hold": 1,
+        "notional": 1169.2500305175781,
+        "peak_px": 233.85000610351562,
+        "reason": "baseline list, no extra gate; list flatten,ohlc_hot; ret5=+11.7; leftover $1178.84",
+        "shares": 5,
+        "ticker": "ILMN"
+      },
+      "IOVA": {
+        "close_px": 10.020000457763672,
+        "cost": 1181.085,
+        "entry_date": "2026-09-17",
+        "entry_px": 10.25,
+        "fee_in": 2.335,
+        "last_px": 10.25,
+        "min_hold": 1,
+        "notional": 1178.75,
+        "peak_px": 10.25,
+        "reason": "baseline list, no extra gate; list flatten,ohlc_hot; ret5=+17.1; leftover $1178.84",
+        "shares": 115,
+        "ticker": "IOVA"
+      },
+      "PGEN": {
+        "close_px": 7.869999885559082,
+        "cost": 1178.905023651123,
+        "entry_date": "2026-09-17",
+        "entry_px": 7.590000152587891,
+        "fee_in": 2.455,
+        "last_px": 7.590000152587891,
+        "min_hold": 1,
+        "notional": 1176.450023651123,
+        "peak_px": 7.590000152587891,
+        "reason": "baseline list, no extra gate; list flatten,ohlc_hot; ret5=+9.4; leftover $1178.84",
+        "shares": 155,
+        "ticker": "PGEN"
+      },
+      "RVTY": {
+        "close_px": 146.72999572753906,
+        "cost": 1035.281004272461,
+        "entry_date": "2026-09-17",
+        "entry_px": 147.61000061035156,
+        "fee_in": 2.011,
+        "last_px": 147.61000061035156,
+        "min_hold": 1,
+        "notional": 1033.270004272461,
+        "peak_px": 147.61000061035156,
+        "reason": "baseline list, no extra gate; list flatten,ohlc_hot; ret5=+17.7; leftover $1178.84",
+        "shares": 7,
+        "ticker": "RVTY"
+      },
+      "TWST": {
+        "close_px": 155.55999755859375,
+        "cost": 1062.0209487304687,
+        "entry_date": "2026-09-17",
+        "entry_px": 151.42999267578125,
+        "fee_in": 2.011,
+        "last_px": 151.42999267578125,
+        "min_hold": 1,
+        "notional": 1060.0099487304688,
+        "peak_px": 151.42999267578125,
+        "reason": "baseline list, no extra gate; list flatten,ohlc_hot; ret5=+14.0; leftover $1178.84",
+        "shares": 7,
+        "ticker": "TWST"
+      }
+    },
+    "yday_equity": 9554.57
+  }
+}

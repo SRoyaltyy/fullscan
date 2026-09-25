@@ -1,0 +1,93 @@
+{
+  "buys": [],
+  "cash": 8980.07,
+  "date": "2026-09-24",
+  "equity": 8980.07,
+  "fees": 17.1196,
+  "fills": [
+    {
+      "fees": 2.0431,
+      "pnl": -29.96,
+      "price": 163.95,
+      "shares": 10,
+      "side": "SELL",
+      "ticker": "A"
+    },
+    {
+      "fees": 2.2501,
+      "pnl": -15.54,
+      "price": 9.67,
+      "shares": 79,
+      "side": "SELL",
+      "ticker": "ADMA"
+    },
+    {
+      "fees": 2.148,
+      "pnl": -76.5,
+      "price": 26.22,
+      "shares": 46,
+      "side": "SELL",
+      "ticker": "ARQT"
+    },
+    {
+      "fees": 2.0851,
+      "pnl": -46.0,
+      "price": 87.68,
+      "shares": 23,
+      "side": "SELL",
+      "ticker": "DXCM"
+    },
+    {
+      "fees": 2.085,
+      "pnl": -25.4,
+      "price": 19.4,
+      "shares": 25,
+      "side": "SELL",
+      "ticker": "FTRE"
+    },
+    {
+      "fees": 2.0507,
+      "pnl": -65.44,
+      "price": 112.13,
+      "shares": 13,
+      "side": "SELL",
+      "ticker": "HALO"
+    },
+    {
+      "fees": 2.046,
+      "pnl": -5.63,
+      "price": 20.52,
+      "shares": 12,
+      "side": "SELL",
+      "ticker": "OMER"
+    },
+    {
+      "fees": 2.4116,
+      "pnl": -80.19,
+      "price": 7.37,
+      "shares": 130,
+      "side": "SELL",
+      "ticker": "PGEN"
+    }
+  ],
+  "holdings": [],
+  "mean": -0.6689,
+  "n_trades_today": 8,
+  "recipe": "union_h1_rankw",
+  "sells": [
+    "A",
+    "ADMA",
+    "ARQT",
+    "DXCM",
+    "FTRE",
+    "HALO",
+    "OMER",
+    "PGEN"
+  ],
+  "state": {
+    "after": "2026-09-24",
+    "cash": 8980.07,
+    "pos": {},
+    "yday_equity": 8980.07
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "buys": [],
+  "cash": 9713.76,
+  "date": "2026-08-31",
+  "equity": 9713.76,
+  "fees": 16.311,
+  "fills": [
+    {
+      "fees": 2.049,
+      "pnl": -31.38,
+      "price": 89.39,
+      "shares": 13,
+      "side": "SELL",
+      "ticker": "AVT"
+    },
+    {
+      "fees": 2.067,
+      "pnl": -48.95,
+      "price": 60.46,
+      "shares": 19,
+      "side": "SELL",
+      "ticker": "CGNX"
+    },
+    {
+      "fees": 2.022,
+      "pnl": -40.78,
+      "price": 280.25,
+      "shares": 4,
+      "side": "SELL",
+      "ticker": "COHR"
+    },
+    {
+      "fees": 2.019,
+      "pnl": -9.78,
+      "price": 322.49,
+      "shares": 3,
+      "side": "SELL",
+      "ticker": "KEYS"
+    },
+    {
+      "fees": 2.04,
+      "pnl": -46.06,
+      "price": 115.56,
+      "shares": 10,
+      "side": "SELL",
+      "ticker": "LSCC"
+    },
+    {
+      "fees": 2.022,
+      "pnl": -36.98,
+      "price": 266.96,
+      "shares": 4,
+      "side": "SELL",
+      "ticker": "MTSI"
+    },
+    {
+      "fees": 2.052,
+      "pnl": -28.44,
+      "price": 83.28,
+      "shares": 14,
+      "side": "SELL",
+      "ticker": "OLED"
+    },
+    {
+      "fees": 2.04,
+      "pnl": -43.86,
+      "price": 118.83,
+      "shares": 10,
+      "side": "SELL",
+      "ticker": "TTMI"
+    }
+  ],
+  "holdings": [],
+  "mean": 0.3066,
+  "n_trades_today": 8,
+  "recipe": "union_white_coil_h1",
+  "sells": [
+    "AVT",
+    "CGNX",
+    "COHR",
+    "KEYS",
+    "LSCC",
+    "MTSI",
+    "OLED",
+    "TTMI"
+  ],
+  "state": {
+    "after": "2026-08-31",
+    "cash": 9713.76,
+    "pos": {},
+    "yday_equity": 9713.76
+  }
+}

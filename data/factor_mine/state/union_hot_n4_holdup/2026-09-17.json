@@ -1,0 +1,107 @@
+{
+  "buys": [
+    "IQ"
+  ],
+  "cash": 11.97,
+  "date": "2026-09-17",
+  "equity": 12732.55,
+  "fees": 0.1507,
+  "fills": [
+    {
+      "fees": 0.1507,
+      "pnl": null,
+      "price": 1.07,
+      "shares": 11,
+      "side": "BUY",
+      "ticker": "IQ"
+    }
+  ],
+  "holdings": [
+    "CAI",
+    "HLP",
+    "INDP",
+    "IQ",
+    "SDGR"
+  ],
+  "mean": 13.8516,
+  "n_trades_today": 1,
+  "recipe": "union_hot_n4_holdup",
+  "sells": [],
+  "state": {
+    "after": "2026-09-17",
+    "cash": 11.97,
+    "pos": {
+      "CAI": {
+        "close_px": 30.920000076293945,
+        "cost": 2536.65998626709,
+        "entry_date": "2026-09-16",
+        "entry_px": 28.15999984741211,
+        "fee_in": 2.26,
+        "last_px": 28.594999313354492,
+        "min_hold": 2,
+        "notional": 2534.39998626709,
+        "peak_px": 28.594999313354492,
+        "reason": "hot4; S>0 lots stay through the next 09:30 so the overnight gap is in the book; rank hot_score; list yday_gainer,ohlc_hot; \u26aa; ret5=+14.8; leftover $2559.81",
+        "shares": 90,
+        "ticker": "CAI"
+      },
+      "HLP": {
+        "close_px": 2.0199999809265137,
+        "cost": 2577.943732193756,
+        "entry_date": "2026-09-16",
+        "entry_px": 1.7999999523162842,
+        "fee_in": 18.3438,
+        "last_px": 2.0999999046325684,
+        "min_hold": 2,
+        "notional": 2559.599932193756,
+        "peak_px": 2.0999999046325684,
+        "reason": "hot4; S>0 lots stay through the next 09:30 so the overnight gap is in the book; rank hot_score; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+30.5; leftover $2559.81",
+        "shares": 1422,
+        "ticker": "HLP"
+      },
+      "INDP": {
+        "close_px": 3.930000066757202,
+        "cost": 2593.532445585632,
+        "entry_date": "2026-09-11",
+        "entry_px": 2.700000047683716,
+        "fee_in": 12.3324,
+        "last_px": 3.299999952316284,
+        "min_hold": 2,
+        "notional": 2581.2000455856323,
+        "peak_px": 3.6600000858306885,
+        "reason": "hot4; S>0 lots stay through the next 09:30 so the overnight gap is in the book; rank hot_score; list yday_gainer,yday_mover; ret5=+120.7; leftover $2583.68",
+        "shares": 956,
+        "ticker": "INDP"
+      },
+      "IQ": {
+        "close_px": 1.100000023841858,
+        "cost": 11.920700576972962,
+        "entry_date": "2026-09-17",
+        "entry_px": 1.0700000524520874,
+        "fee_in": 0.1507,
+        "last_px": 1.0700000524520874,
+        "min_hold": 2,
+        "notional": 11.770000576972961,
+        "peak_px": 1.0700000524520874,
+        "reason": "hot4; S>0 lots stay through the next 09:30 so the overnight gap is in the book; rank hot_score; list yday_gainer,ohlc_hot; \ud83d\udd35; ret5=+15.8; leftover $11.95",
+        "shares": 11,
+        "ticker": "IQ"
+      },
+      "SDGR": {
+        "close_px": 30.239999771118164,
+        "cost": 2540.9270997924805,
+        "entry_date": "2026-09-16",
+        "entry_px": 23.290000915527344,
+        "fee_in": 2.317,
+        "last_px": 24.09000015258789,
+        "min_hold": 2,
+        "notional": 2538.6100997924805,
+        "peak_px": 24.09000015258789,
+        "reason": "hot4; S>0 lots stay through the next 09:30 so the overnight gap is in the book; rank hot_score; list yday_gainer; \ud83d\udd35; \u26aa; ret5=+16.1; leftover $2559.81",
+        "shares": 109,
+        "ticker": "SDGR"
+      }
+    },
+    "yday_equity": 12732.55
+  }
+}

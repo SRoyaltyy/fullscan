@@ -1,0 +1,46 @@
+{
+  "buys": [
+    "QRVO"
+  ],
+  "cash": 15743.91,
+  "date": "2026-09-11",
+  "equity": 10378.01,
+  "fees": 2.3217,
+  "fills": [
+    {
+      "fees": 2.321703012544815,
+      "pnl": null,
+      "price": 112.835,
+      "shares": 46,
+      "side": "SHORT",
+      "ticker": "QRVO"
+    }
+  ],
+  "holdings": [
+    "QRVO"
+  ],
+  "mean": -1.6845,
+  "n_trades_today": 1,
+  "recipe": "short_news_pack_h3",
+  "sells": [],
+  "state": {
+    "after": "2026-09-11",
+    "cash": 15743.91,
+    "pos": {
+      "QRVO": {
+        "close_px": 116.6500015258789,
+        "cost": 2.321703012544815,
+        "entry_date": "2026-09-11",
+        "entry_px": 112.83499908447266,
+        "fee_in": 2.321703012544815,
+        "last_px": 112.83499908447266,
+        "notional": 5190.409957885742,
+        "peak_px": 112.83499908447266,
+        "reason": "short morning packet news\ud83d\udd34; gate news_box=bad; list yday_gainer,ohlc_hot; \ud83d\udd35; ret5=+11.9; leftover $5277.91",
+        "shares": 46,
+        "ticker": "QRVO"
+      }
+    },
+    "yday_equity": 10378.01
+  }
+}

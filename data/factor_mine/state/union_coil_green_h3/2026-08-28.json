@@ -1,0 +1,215 @@
+{
+  "buys": [
+    "CRK",
+    "EQ",
+    "FIGR",
+    "TH",
+    "FSM",
+    "ADSK",
+    "FRO",
+    "HAFN"
+  ],
+  "cash": 235.26,
+  "date": "2026-08-28",
+  "equity": 9790.64,
+  "fees": 21.8662,
+  "fills": [
+    {
+      "fees": 2.245,
+      "pnl": null,
+      "price": 14.63,
+      "shares": 85,
+      "side": "BUY",
+      "ticker": "CRK"
+    },
+    {
+      "fees": 6.5532,
+      "pnl": null,
+      "price": 2.46,
+      "shares": 508,
+      "side": "BUY",
+      "ticker": "EQ"
+    },
+    {
+      "fees": 2.089,
+      "pnl": null,
+      "price": 37.49,
+      "shares": 33,
+      "side": "BUY",
+      "ticker": "FIGR"
+    },
+    {
+      "fees": 2.185,
+      "pnl": null,
+      "price": 19.0,
+      "shares": 65,
+      "side": "BUY",
+      "ticker": "TH"
+    },
+    {
+      "fees": 2.281,
+      "pnl": null,
+      "price": 12.84,
+      "shares": 97,
+      "side": "BUY",
+      "ticker": "FSM"
+    },
+    {
+      "fees": 2.002,
+      "pnl": null,
+      "price": 261.16,
+      "shares": 4,
+      "side": "BUY",
+      "ticker": "ADSK"
+    },
+    {
+      "fees": 2.074,
+      "pnl": null,
+      "price": 44.4,
+      "shares": 28,
+      "side": "BUY",
+      "ticker": "FRO"
+    },
+    {
+      "fees": 2.437,
+      "pnl": null,
+      "price": 8.35,
+      "shares": 149,
+      "side": "BUY",
+      "ticker": "HAFN"
+    }
+  ],
+  "holdings": [
+    "ADSK",
+    "CRK",
+    "EQ",
+    "FIGR",
+    "FRO",
+    "FSM",
+    "HAFN",
+    "TH"
+  ],
+  "mean": -2.0936,
+  "n_trades_today": 8,
+  "recipe": "union_coil_green_h3",
+  "sells": [],
+  "state": {
+    "after": "2026-08-28",
+    "cash": 235.26,
+    "pos": {
+      "ADSK": {
+        "close_px": 260.6600036621094,
+        "cost": 1046.6420146484375,
+        "entry_date": "2026-08-28",
+        "entry_px": 261.1600036621094,
+        "fee_in": 2.002,
+        "last_px": 261.1600036621094,
+        "min_hold": 3,
+        "notional": 1044.6400146484375,
+        "peak_px": 261.1600036621094,
+        "reason": "combo gate; gate last_green=True,ret_5_min=0.0,ret_5_max=10.0,rvol_min=0.7,rvol_max=2.2; list earn_react; ret5=+7.8; leftover $1250.00",
+        "shares": 4,
+        "ticker": "ADSK"
+      },
+      "CRK": {
+        "close_px": 14.289999961853027,
+        "cost": 1245.795009727478,
+        "entry_date": "2026-08-28",
+        "entry_px": 14.630000114440918,
+        "fee_in": 2.245,
+        "last_px": 14.630000114440918,
+        "min_hold": 3,
+        "notional": 1243.550009727478,
+        "peak_px": 14.630000114440918,
+        "reason": "combo gate; gate last_green=True,ret_5_min=0.0,ret_5_max=10.0,rvol_min=0.7,rvol_max=2.2; list flatten; ret5=+5.8; leftover $1250.00",
+        "shares": 85,
+        "ticker": "CRK"
+      },
+      "EQ": {
+        "close_px": 2.390000104904175,
+        "cost": 1256.2332193786622,
+        "entry_date": "2026-08-28",
+        "entry_px": 2.4600000381469727,
+        "fee_in": 6.5532,
+        "last_px": 2.4600000381469727,
+        "min_hold": 3,
+        "notional": 1249.680019378662,
+        "peak_px": 2.4600000381469727,
+        "reason": "combo gate; gate last_green=True,ret_5_min=0.0,ret_5_max=10.0,rvol_min=0.7,rvol_max=2.2; list yday_gainer; ret5=+7.9; leftover $1250.00",
+        "shares": 508,
+        "ticker": "EQ"
+      },
+      "FIGR": {
+        "close_px": 36.04999923706055,
+        "cost": 1239.2590553894042,
+        "entry_date": "2026-08-28",
+        "entry_px": 37.4900016784668,
+        "fee_in": 2.089,
+        "last_px": 37.4900016784668,
+        "min_hold": 3,
+        "notional": 1237.1700553894043,
+        "peak_px": 37.4900016784668,
+        "reason": "combo gate; gate last_green=True,ret_5_min=0.0,ret_5_max=10.0,rvol_min=0.7,rvol_max=2.2; list yday_mover; ret5=+5.4; leftover $1250.00",
+        "shares": 33,
+        "ticker": "FIGR"
+      },
+      "FRO": {
+        "close_px": 44.189998626708984,
+        "cost": 1245.2740427246094,
+        "entry_date": "2026-08-28",
+        "entry_px": 44.400001525878906,
+        "fee_in": 2.074,
+        "last_px": 44.400001525878906,
+        "min_hold": 3,
+        "notional": 1243.2000427246094,
+        "peak_px": 44.400001525878906,
+        "reason": "combo gate; gate last_green=True,ret_5_min=0.0,ret_5_max=10.0,rvol_min=0.7,rvol_max=2.2; list earn_react; ret5=+0.4; leftover $1250.00",
+        "shares": 28,
+        "ticker": "FRO"
+      },
+      "FSM": {
+        "close_px": 12.260000228881836,
+        "cost": 1247.7610148010253,
+        "entry_date": "2026-08-28",
+        "entry_px": 12.84000015258789,
+        "fee_in": 2.281,
+        "last_px": 12.84000015258789,
+        "min_hold": 3,
+        "notional": 1245.4800148010254,
+        "peak_px": 12.84000015258789,
+        "reason": "combo gate; gate last_green=True,ret_5_min=0.0,ret_5_max=10.0,rvol_min=0.7,rvol_max=2.2; list ohlc_hot; ret5=+7.6; leftover $1250.00",
+        "shares": 97,
+        "ticker": "FSM"
+      },
+      "HAFN": {
+        "close_px": 8.470000267028809,
+        "cost": 1246.5870568389892,
+        "entry_date": "2026-08-28",
+        "entry_px": 8.350000381469727,
+        "fee_in": 2.437,
+        "last_px": 8.350000381469727,
+        "min_hold": 3,
+        "notional": 1244.1500568389893,
+        "peak_px": 8.350000381469727,
+        "reason": "combo gate; gate last_green=True,ret_5_min=0.0,ret_5_max=10.0,rvol_min=0.7,rvol_max=2.2; list earn_react; ret5=+5.1; leftover $1250.00",
+        "shares": 149,
+        "ticker": "HAFN"
+      },
+      "TH": {
+        "close_px": 18.549999237060547,
+        "cost": 1237.185,
+        "entry_date": "2026-08-28",
+        "entry_px": 19.0,
+        "fee_in": 2.185,
+        "last_px": 19.0,
+        "min_hold": 3,
+        "notional": 1235.0,
+        "peak_px": 19.0,
+        "reason": "combo gate; gate last_green=True,ret_5_min=0.0,ret_5_max=10.0,rvol_min=0.7,rvol_max=2.2; list ohlc_hot; ret5=+7.5; leftover $1250.00",
+        "shares": 65,
+        "ticker": "TH"
+      }
+    },
+    "yday_equity": 9790.64
+  }
+}

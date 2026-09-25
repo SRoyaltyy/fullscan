@@ -1,0 +1,143 @@
+{
+  "buys": [],
+  "cash": 5661.21,
+  "date": "2026-09-14",
+  "equity": 8886.41,
+  "fees": 25.2028,
+  "fills": [
+    {
+      "fees": 2.0791,
+      "pnl": 60.49,
+      "price": 54.84,
+      "shares": 23,
+      "side": "SELL",
+      "ticker": "ATRC"
+    },
+    {
+      "fees": 8.5421,
+      "pnl": -137.77,
+      "price": 1.715,
+      "shares": 653,
+      "side": "SELL",
+      "ticker": "BMEA"
+    },
+    {
+      "fees": 10.2145,
+      "pnl": -20.29,
+      "price": 1.59,
+      "shares": 781,
+      "side": "SELL",
+      "ticker": "OPK"
+    },
+    {
+      "fees": 2.022,
+      "pnl": -96.06,
+      "price": 141.42,
+      "shares": 4,
+      "side": "SELL",
+      "ticker": "ORCL"
+    },
+    {
+      "fees": 2.3451,
+      "pnl": -67.88,
+      "price": 10.73,
+      "shares": 109,
+      "side": "SELL",
+      "ticker": "VIR"
+    }
+  ],
+  "holdings": [
+    "AUPH",
+    "COHU",
+    "NVT",
+    "OVID",
+    "SANM"
+  ],
+  "mean": -2.4553,
+  "n_trades_today": 5,
+  "recipe": "flatten_h5_s8",
+  "sells": [
+    "ATRC",
+    "BMEA",
+    "OPK",
+    "ORCL",
+    "VIR"
+  ],
+  "state": {
+    "after": "2026-09-14",
+    "cash": 5661.21,
+    "pos": {
+      "AUPH": {
+        "close_px": 16.40999984741211,
+        "cost": 718.4420302124023,
+        "entry_date": "2026-09-11",
+        "entry_px": 16.280000686645508,
+        "fee_in": 2.122,
+        "last_px": 16.030000686645508,
+        "min_hold": 5,
+        "notional": 716.3200302124023,
+        "peak_px": 16.280000686645508,
+        "reason": "flatten hold 5, stop \u22128% at 09:30 even inside hold; list flatten; wish-list (live io HOLD \u2014 not a ticket); ret5=-0.1; leftover $727.78",
+        "shares": 44,
+        "ticker": "AUPH"
+      },
+      "COHU": {
+        "close_px": 49.970001220703125,
+        "cost": 675.1060018310546,
+        "entry_date": "2026-09-11",
+        "entry_px": 56.09000015258789,
+        "fee_in": 2.026,
+        "last_px": 52.22999954223633,
+        "min_hold": 5,
+        "notional": 673.0800018310547,
+        "peak_px": 56.09000015258789,
+        "reason": "flatten hold 5, stop \u22128% at 09:30 even inside hold; list flatten; wish-list (live io HOLD \u2014 not a ticket); \ud83d\udd35; \u26aa; ret5=+19.0; leftover $727.78",
+        "shares": 12,
+        "ticker": "COHU"
+      },
+      "NVT": {
+        "close_px": 146.63999938964844,
+        "cost": 633.1219951171875,
+        "entry_date": "2026-09-11",
+        "entry_px": 157.77999877929688,
+        "fee_in": 2.002,
+        "last_px": 150.0,
+        "min_hold": 5,
+        "notional": 631.1199951171875,
+        "peak_px": 157.77999877929688,
+        "reason": "flatten hold 5, stop \u22128% at 09:30 even inside hold; list flatten; wish-list (live io HOLD \u2014 not a ticket); \ud83d\udd35; ret5=+2.0; leftover $727.78",
+        "shares": 4,
+        "ticker": "NVT"
+      },
+      "OVID": {
+        "close_px": 2.740000009536743,
+        "cost": 729.6114050735474,
+        "entry_date": "2026-09-11",
+        "entry_px": 2.7300000190734863,
+        "fee_in": 3.4314,
+        "last_px": 2.755000114440918,
+        "min_hold": 5,
+        "notional": 726.1800050735474,
+        "peak_px": 2.755000114440918,
+        "reason": "flatten hold 5, stop \u22128% at 09:30 even inside hold; list flatten; wish-list (live io HOLD \u2014 not a ticket); ret5=-5.4; leftover $727.78",
+        "shares": 266,
+        "ticker": "OVID"
+      },
+      "SANM": {
+        "close_px": 196.0399932861328,
+        "cost": 622.5189890136719,
+        "entry_date": "2026-09-11",
+        "entry_px": 206.83999633789062,
+        "fee_in": 1.999,
+        "last_px": 206.5,
+        "min_hold": 5,
+        "notional": 620.5199890136719,
+        "peak_px": 206.83999633789062,
+        "reason": "flatten hold 5, stop \u22128% at 09:30 even inside hold; list flatten; wish-list (live io HOLD \u2014 not a ticket); ret5=+3.9; leftover $727.78",
+        "shares": 3,
+        "ticker": "SANM"
+      }
+    },
+    "yday_equity": 8886.41
+  }
+}

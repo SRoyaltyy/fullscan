@@ -1,0 +1,215 @@
+{
+  "buys": [
+    "DELL",
+    "TARS",
+    "MDB",
+    "ASST",
+    "DFDV",
+    "TDS",
+    "AHCO",
+    "SLDE"
+  ],
+  "cash": 217.99,
+  "date": "2026-09-04",
+  "equity": 9598.1,
+  "fees": 17.509,
+  "fills": [
+    {
+      "fees": 1.996,
+      "pnl": null,
+      "price": 513.78,
+      "shares": 2,
+      "side": "BUY",
+      "ticker": "DELL"
+    },
+    {
+      "fees": 2.032,
+      "pnl": null,
+      "price": 82.7,
+      "shares": 14,
+      "side": "BUY",
+      "ticker": "TARS"
+    },
+    {
+      "fees": 1.999,
+      "pnl": null,
+      "price": 378.34,
+      "shares": 3,
+      "side": "BUY",
+      "ticker": "MDB"
+    },
+    {
+      "fees": 2.128,
+      "pnl": null,
+      "price": 25.18,
+      "shares": 46,
+      "side": "BUY",
+      "ticker": "ASST"
+    },
+    {
+      "fees": 2.598,
+      "pnl": null,
+      "price": 5.79,
+      "shares": 201,
+      "side": "BUY",
+      "ticker": "DFDV"
+    },
+    {
+      "fees": 2.083,
+      "pnl": null,
+      "price": 37.44,
+      "shares": 31,
+      "side": "BUY",
+      "ticker": "TDS"
+    },
+    {
+      "fees": 2.542,
+      "pnl": null,
+      "price": 6.32,
+      "shares": 184,
+      "side": "BUY",
+      "ticker": "AHCO"
+    },
+    {
+      "fees": 2.131,
+      "pnl": null,
+      "price": 24.365,
+      "shares": 47,
+      "side": "BUY",
+      "ticker": "SLDE"
+    }
+  ],
+  "holdings": [
+    "AHCO",
+    "ASST",
+    "DELL",
+    "DFDV",
+    "MDB",
+    "SLDE",
+    "TARS",
+    "TDS"
+  ],
+  "mean": 2.6906,
+  "n_trades_today": 8,
+  "recipe": "union_join_vol_green_h3",
+  "sells": [],
+  "state": {
+    "after": "2026-09-04",
+    "cash": 217.99,
+    "pos": {
+      "AHCO": {
+        "close_px": 6.489999771118164,
+        "cost": 1165.4220315856933,
+        "entry_date": "2026-09-04",
+        "entry_px": 6.320000171661377,
+        "fee_in": 2.542,
+        "last_px": 6.320000171661377,
+        "min_hold": 3,
+        "notional": 1162.8800315856934,
+        "peak_px": 6.320000171661377,
+        "reason": "combo gate; gate join=good,vol=good,last_green=True; list ohlc_hot; \ud83d\udd35; ret5=+10.7; leftover $1168.33",
+        "shares": 184,
+        "ticker": "AHCO"
+      },
+      "ASST": {
+        "close_px": 27.139999389648438,
+        "cost": 1160.4080140380859,
+        "entry_date": "2026-09-04",
+        "entry_px": 25.18000030517578,
+        "fee_in": 2.128,
+        "last_px": 25.18000030517578,
+        "min_hold": 3,
+        "notional": 1158.280014038086,
+        "peak_px": 25.18000030517578,
+        "reason": "combo gate; gate join=good,vol=good,last_green=True; list ohlc_hot; \ud83d\udd35; ret5=+16.0; leftover $1168.33",
+        "shares": 46,
+        "ticker": "ASST"
+      },
+      "DELL": {
+        "close_px": 524.1400146484375,
+        "cost": 1029.55605859375,
+        "entry_date": "2026-09-04",
+        "entry_px": 513.780029296875,
+        "fee_in": 1.996,
+        "last_px": 513.780029296875,
+        "min_hold": 3,
+        "notional": 1027.56005859375,
+        "peak_px": 513.780029296875,
+        "reason": "combo gate; gate join=good,vol=good,last_green=True; list probable,yday_gainer,yday_mover,ohlc_hot,mover_buy; \ud83d\udd35; \u26aa; ret5=+9.3; leftover $1168.33",
+        "shares": 2,
+        "ticker": "DELL"
+      },
+      "DFDV": {
+        "close_px": 5.869999885559082,
+        "cost": 1166.3879923324585,
+        "entry_date": "2026-09-04",
+        "entry_px": 5.789999961853027,
+        "fee_in": 2.598,
+        "last_px": 5.789999961853027,
+        "min_hold": 3,
+        "notional": 1163.7899923324585,
+        "peak_px": 5.789999961853027,
+        "reason": "combo gate; gate join=good,vol=good,last_green=True; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+15.2; leftover $1168.33",
+        "shares": 201,
+        "ticker": "DFDV"
+      },
+      "MDB": {
+        "close_px": 368.739990234375,
+        "cost": 1137.018989013672,
+        "entry_date": "2026-09-04",
+        "entry_px": 378.3399963378906,
+        "fee_in": 1.999,
+        "last_px": 378.3399963378906,
+        "min_hold": 3,
+        "notional": 1135.0199890136719,
+        "peak_px": 378.3399963378906,
+        "reason": "combo gate; gate join=good,vol=good,last_green=True; list yday_mover; ret5=-12.7; leftover $1168.33",
+        "shares": 3,
+        "ticker": "MDB"
+      },
+      "SLDE": {
+        "close_px": 24.670000076293945,
+        "cost": 1147.2859892425538,
+        "entry_date": "2026-09-04",
+        "entry_px": 24.364999771118164,
+        "fee_in": 2.131,
+        "last_px": 24.364999771118164,
+        "min_hold": 3,
+        "notional": 1145.1549892425537,
+        "peak_px": 24.364999771118164,
+        "reason": "combo gate; gate join=good,vol=good,last_green=True; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+5.4; leftover $1168.33",
+        "shares": 47,
+        "ticker": "SLDE"
+      },
+      "TARS": {
+        "close_px": 90.77999877929688,
+        "cost": 1159.8319572753906,
+        "entry_date": "2026-09-04",
+        "entry_px": 82.69999694824219,
+        "fee_in": 2.032,
+        "last_px": 82.69999694824219,
+        "min_hold": 3,
+        "notional": 1157.7999572753906,
+        "peak_px": 82.69999694824219,
+        "reason": "combo gate; gate join=good,vol=good,last_green=True; list yday_gainer,ohlc_hot; \ud83d\udd35; \u26aa; ret5=+15.7; leftover $1168.33",
+        "shares": 14,
+        "ticker": "TARS"
+      },
+      "TDS": {
+        "close_px": 37.83000183105469,
+        "cost": 1162.7229574279786,
+        "entry_date": "2026-09-04",
+        "entry_px": 37.439998626708984,
+        "fee_in": 2.083,
+        "last_px": 37.439998626708984,
+        "min_hold": 3,
+        "notional": 1160.6399574279785,
+        "peak_px": 37.439998626708984,
+        "reason": "combo gate; gate join=good,vol=good,last_green=True; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+14.1; leftover $1168.33",
+        "shares": 31,
+        "ticker": "TDS"
+      }
+    },
+    "yday_equity": 9598.1
+  }
+}

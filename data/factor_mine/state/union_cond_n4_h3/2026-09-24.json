@@ -1,0 +1,104 @@
+{
+  "buys": [],
+  "cash": 8083.09,
+  "date": "2026-09-24",
+  "equity": 8351.52,
+  "fees": 8.7736,
+  "fills": [
+    {
+      "fees": 2.0517,
+      "pnl": 68.88,
+      "price": 163.95,
+      "shares": 12,
+      "side": "SELL",
+      "ticker": "A"
+    },
+    {
+      "fees": 2.6288,
+      "pnl": -105.68,
+      "price": 9.55,
+      "shares": 197,
+      "side": "SELL",
+      "ticker": "ABSI"
+    },
+    {
+      "fees": 2.0515,
+      "pnl": -46.92,
+      "price": 161.01,
+      "shares": 12,
+      "side": "SELL",
+      "ticker": "MSTR"
+    },
+    {
+      "fees": 2.0416,
+      "pnl": 349.54,
+      "price": 274.45,
+      "shares": 8,
+      "side": "SELL",
+      "ticker": "VICR"
+    }
+  ],
+  "holdings": [
+    "BFLY",
+    "FSLY",
+    "UPXI"
+  ],
+  "mean": -1.8616,
+  "n_trades_today": 4,
+  "recipe": "union_cond_n4_h3",
+  "sells": [
+    "A",
+    "ABSI",
+    "MSTR",
+    "VICR"
+  ],
+  "state": {
+    "after": "2026-09-24",
+    "cash": 8083.09,
+    "pos": {
+      "BFLY": {
+        "close_px": 9.40999984741211,
+        "cost": 50.009998092651365,
+        "entry_date": "2026-09-23",
+        "entry_px": 9.899999618530273,
+        "fee_in": 0.51,
+        "last_px": 9.119999885559082,
+        "min_hold": 3,
+        "notional": 49.49999809265137,
+        "peak_px": 9.899999618530273,
+        "reason": "top 4 by cond; rank cond; list yday_gainer,yday_mover; \ud83d\udd35; \u26aa; ret5=+27.3; leftover $55.13",
+        "shares": 5,
+        "ticker": "BFLY"
+      },
+      "FSLY": {
+        "close_px": 26.68000030517578,
+        "cost": 113.21280183105469,
+        "entry_date": "2026-09-22",
+        "entry_px": 28.020000457763672,
+        "fee_in": 1.1328,
+        "last_px": 27.799999237060547,
+        "min_hold": 3,
+        "notional": 112.08000183105469,
+        "peak_px": 28.020000457763672,
+        "reason": "top 4 by cond; rank cond; list yday_gainer,yday_mover,ohlc_hot; ret5=+10.3; leftover $120.72",
+        "shares": 4,
+        "ticker": "FSLY"
+      },
+      "UPXI": {
+        "close_px": 1.1699999570846558,
+        "cost": 122.03940186920165,
+        "entry_date": "2026-09-22",
+        "entry_px": 1.2300000190734863,
+        "fee_in": 1.4994,
+        "last_px": 1.149999976158142,
+        "min_hold": 3,
+        "notional": 120.54000186920166,
+        "peak_px": 1.2300000190734863,
+        "reason": "top 4 by cond; rank cond; list ohlc_hot; ret5=+14.5; leftover $120.72",
+        "shares": 98,
+        "ticker": "UPXI"
+      }
+    },
+    "yday_equity": 8351.52
+  }
+}

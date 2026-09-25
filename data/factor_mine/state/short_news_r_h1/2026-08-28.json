@@ -1,0 +1,69 @@
+{
+  "buys": [
+    "SIMO",
+    "FIG"
+  ],
+  "cash": 14740.48,
+  "date": "2026-08-28",
+  "equity": 10164.95,
+  "fees": 4.4446,
+  "fills": [
+    {
+      "fees": 2.1073961657380402,
+      "pnl": null,
+      "price": 252.24,
+      "shares": 9,
+      "side": "SHORT",
+      "ticker": "SIMO"
+    },
+    {
+      "fees": 2.3372016445212167,
+      "pnl": null,
+      "price": 30.18,
+      "shares": 82,
+      "side": "SHORT",
+      "ticker": "FIG"
+    }
+  ],
+  "holdings": [
+    "FIG",
+    "SIMO"
+  ],
+  "mean": 1.6495,
+  "n_trades_today": 2,
+  "recipe": "short_news_r_h1",
+  "sells": [],
+  "state": {
+    "after": "2026-08-28",
+    "cash": 14740.48,
+    "pos": {
+      "FIG": {
+        "close_px": 28.81999969482422,
+        "cost": 2.3372016445212167,
+        "entry_date": "2026-08-28",
+        "entry_px": 30.18000030517578,
+        "fee_in": 2.3372016445212167,
+        "last_px": 30.18000030517578,
+        "notional": 2474.760025024414,
+        "peak_px": 30.18000030517578,
+        "reason": "news\ud83d\udd34; gate news=bad; list ohlc_hot; ret5=+12.1; leftover $2500.00",
+        "shares": 82,
+        "ticker": "FIG"
+      },
+      "SIMO": {
+        "close_px": 245.80999755859375,
+        "cost": 2.1073961657380402,
+        "entry_date": "2026-08-28",
+        "entry_px": 252.24000549316406,
+        "fee_in": 2.1073961657380402,
+        "last_px": 252.24000549316406,
+        "notional": 2270.1600494384766,
+        "peak_px": 252.24000549316406,
+        "reason": "news\ud83d\udd34; gate news=bad; list probable,yday_gainer; \u26aa; ret5=+2.2; leftover $2500.00",
+        "shares": 9,
+        "ticker": "SIMO"
+      }
+    },
+    "yday_equity": 10164.95
+  }
+}

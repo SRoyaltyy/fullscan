@@ -734,8 +734,8 @@
     const stop = stopPct != null && Number(stopPct) > 0 ? Number(stopPct) : null;
     const ret = lotOpenRet(lot, p, side);
     if (ret != null) {
-      if (take != null && ret >= take) return [true, "take"];
       if (stop != null && ret <= -stop) return [true, "stop"];
+      if (take != null && ret >= take) return [true, "take"];
     }
     if (held < minHold) return [false, "min_hold"];
     const mode = sellMode || "list";

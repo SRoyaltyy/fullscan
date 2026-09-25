@@ -1,0 +1,126 @@
+{
+  "buys": [
+    "MRLN"
+  ],
+  "cash": 0.85,
+  "date": "2026-09-17",
+  "equity": 8182.73,
+  "fees": 115.9686,
+  "fills": [
+    {
+      "fees": 2.5287,
+      "pnl": 61.78,
+      "price": 7.26,
+      "shares": 167,
+      "side": "SELL",
+      "ticker": "CRBP"
+    },
+    {
+      "fees": 5.5239,
+      "pnl": 35.45,
+      "price": 2.83,
+      "shares": 422,
+      "side": "SELL",
+      "ticker": "CTMX"
+    },
+    {
+      "fees": 34.9479,
+      "pnl": 3.82,
+      "price": 0.17,
+      "shares": 7180,
+      "side": "SELL",
+      "ticker": "DVLT"
+    },
+    {
+      "fees": 3.9037,
+      "pnl": -34.57,
+      "price": 3.57,
+      "shares": 298,
+      "side": "SELL",
+      "ticker": "EYPT"
+    },
+    {
+      "fees": 14.9347,
+      "pnl": -117.61,
+      "price": 0.78,
+      "shares": 1361,
+      "side": "SELL",
+      "ticker": "NMRA"
+    },
+    {
+      "fees": 2.5287,
+      "pnl": 11.68,
+      "price": 6.96,
+      "shares": 167,
+      "side": "SELL",
+      "ticker": "PLAY"
+    },
+    {
+      "fees": 6.4123,
+      "pnl": -7.83,
+      "price": 2.35,
+      "shares": 490,
+      "side": "SELL",
+      "ticker": "ZSQR"
+    },
+    {
+      "fees": 45.1887,
+      "pnl": null,
+      "price": 2.27,
+      "shares": 3503,
+      "side": "BUY",
+      "ticker": "MRLN"
+    }
+  ],
+  "holdings": [
+    "ALHC",
+    "MRLN"
+  ],
+  "mean": -8.9637,
+  "n_trades_today": 8,
+  "recipe": "union_rsi_os_h1",
+  "sells": [
+    "CRBP",
+    "CTMX",
+    "DVLT",
+    "EYPT",
+    "NMRA",
+    "PLAY",
+    "ZSQR"
+  ],
+  "state": {
+    "after": "2026-09-17",
+    "cash": 0.85,
+    "pos": {
+      "ALHC": {
+        "close_px": 8.699999809265137,
+        "cost": 1145.62302117157,
+        "entry_date": "2026-09-16",
+        "entry_px": 10.300000190734863,
+        "fee_in": 2.323,
+        "last_px": 8.579999923706055,
+        "min_hold": 1,
+        "notional": 1143.3000211715698,
+        "peak_px": 10.300000190734863,
+        "reason": "union \u2229 rsi_os, no \ud83d\udea8; gate rsi_os=True; list yday_mover; ret5=-23.0; leftover $1148.84",
+        "shares": 111,
+        "ticker": "ALHC"
+      },
+      "MRLN": {
+        "close_px": 2.059999942779541,
+        "cost": 7996.998633185577,
+        "entry_date": "2026-09-17",
+        "entry_px": 2.2699999809265137,
+        "fee_in": 45.1887,
+        "last_px": 2.2699999809265137,
+        "min_hold": 1,
+        "notional": 7951.809933185577,
+        "peak_px": 2.2699999809265137,
+        "reason": "union \u2229 rsi_os, no \ud83d\udea8; gate rsi_os=True; list yday_mover; \ud83d\udd35; ret5=-29.6; leftover $7997.85",
+        "shares": 3503,
+        "ticker": "MRLN"
+      }
+    },
+    "yday_equity": 8182.73
+  }
+}

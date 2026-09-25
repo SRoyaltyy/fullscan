@@ -1,0 +1,288 @@
+{
+  "buys": [
+    "RBRK",
+    "GNRC",
+    "VICR",
+    "DDD",
+    "SDGR",
+    "INDP",
+    "LVWR",
+    "VITL"
+  ],
+  "cash": 382.07,
+  "date": "2026-09-18",
+  "equity": 9994.56,
+  "fees": 60.9307,
+  "fills": [
+    {
+      "fees": 2.151,
+      "pnl": 4.65,
+      "price": 26.14,
+      "shares": 47,
+      "side": "SELL",
+      "ticker": "ARQT"
+    },
+    {
+      "fees": 2.172,
+      "pnl": -66.96,
+      "price": 21.3,
+      "shares": 54,
+      "side": "SELL",
+      "ticker": "BBNX"
+    },
+    {
+      "fees": 4.1782,
+      "pnl": 26.8,
+      "price": 3.97,
+      "shares": 319,
+      "side": "SELL",
+      "ticker": "EMAT"
+    },
+    {
+      "fees": 8.9217,
+      "pnl": 91.4,
+      "price": 1.96,
+      "shares": 682,
+      "side": "SELL",
+      "ticker": "HLP"
+    },
+    {
+      "fees": 2.3799,
+      "pnl": -20.33,
+      "price": 10.12,
+      "shares": 120,
+      "side": "SELL",
+      "ticker": "IOVA"
+    },
+    {
+      "fees": 2.5132,
+      "pnl": 58.19,
+      "price": 7.98,
+      "shares": 162,
+      "side": "SELL",
+      "ticker": "PGEN"
+    },
+    {
+      "fees": 6.7259,
+      "pnl": -69.9,
+      "price": 2.29,
+      "shares": 514,
+      "side": "SELL",
+      "ticker": "SABR"
+    },
+    {
+      "fees": 2.0341,
+      "pnl": 48.83,
+      "price": 158.04,
+      "shares": 8,
+      "side": "SELL",
+      "ticker": "TWST"
+    },
+    {
+      "fees": 2.023,
+      "pnl": null,
+      "price": 108.55,
+      "shares": 11,
+      "side": "BUY",
+      "ticker": "RBRK"
+    },
+    {
+      "fees": 2.005,
+      "pnl": null,
+      "price": 209.52,
+      "shares": 5,
+      "side": "BUY",
+      "ticker": "GNRC"
+    },
+    {
+      "fees": 2.005,
+      "pnl": null,
+      "price": 219.62,
+      "shares": 5,
+      "side": "BUY",
+      "ticker": "VICR"
+    },
+    {
+      "fees": 4.4763,
+      "pnl": null,
+      "price": 3.58,
+      "shares": 347,
+      "side": "BUY",
+      "ticker": "DDD"
+    },
+    {
+      "fees": 2.116,
+      "pnl": null,
+      "price": 29.32,
+      "shares": 42,
+      "side": "BUY",
+      "ticker": "SDGR"
+    },
+    {
+      "fees": 4.1538,
+      "pnl": null,
+      "price": 3.85,
+      "shares": 322,
+      "side": "BUY",
+      "ticker": "INDP"
+    },
+    {
+      "fees": 10.7586,
+      "pnl": null,
+      "price": 1.49,
+      "shares": 834,
+      "side": "BUY",
+      "ticker": "LVWR"
+    },
+    {
+      "fees": 2.317,
+      "pnl": null,
+      "price": 11.38,
+      "shares": 109,
+      "side": "BUY",
+      "ticker": "VITL"
+    }
+  ],
+  "holdings": [
+    "DDD",
+    "GNRC",
+    "INDP",
+    "LVWR",
+    "RBRK",
+    "SDGR",
+    "VICR",
+    "VITL"
+  ],
+  "mean": -0.2929,
+  "n_trades_today": 16,
+  "recipe": "union_break10_h1",
+  "sells": [
+    "ARQT",
+    "BBNX",
+    "EMAT",
+    "HLP",
+    "IOVA",
+    "PGEN",
+    "SABR",
+    "TWST"
+  ],
+  "state": {
+    "after": "2026-09-18",
+    "cash": 382.07,
+    "pos": {
+      "DDD": {
+        "close_px": 3.630000114440918,
+        "cost": 1246.736273526001,
+        "entry_date": "2026-09-18",
+        "entry_px": 3.5799999237060547,
+        "fee_in": 4.4763,
+        "last_px": 3.5799999237060547,
+        "min_hold": 1,
+        "notional": 1242.259973526001,
+        "peak_px": 3.5799999237060547,
+        "reason": "union \u2229 break10, no \ud83d\udea8; gate break_10=True; list probable,yday_gainer; \ud83d\udd35; ret5=+8.3; leftover $1243.52",
+        "shares": 347,
+        "ticker": "DDD"
+      },
+      "GNRC": {
+        "close_px": 207.44000244140625,
+        "cost": 1049.6050213623048,
+        "entry_date": "2026-09-18",
+        "entry_px": 209.52000427246094,
+        "fee_in": 2.005,
+        "last_px": 209.52000427246094,
+        "min_hold": 1,
+        "notional": 1047.6000213623047,
+        "peak_px": 209.52000427246094,
+        "reason": "union \u2229 break10, no \ud83d\udea8; gate break_10=True; list flatten,yday_gainer,yday_mover; \ud83d\udd35; ret5=+14.1; leftover $1243.52",
+        "shares": 5,
+        "ticker": "GNRC"
+      },
+      "INDP": {
+        "close_px": 3.549999952316284,
+        "cost": 1243.853769291687,
+        "entry_date": "2026-09-18",
+        "entry_px": 3.8499999046325684,
+        "fee_in": 4.1538,
+        "last_px": 3.8499999046325684,
+        "min_hold": 1,
+        "notional": 1239.699969291687,
+        "peak_px": 3.8499999046325684,
+        "reason": "union \u2229 break10, no \ud83d\udea8; gate break_10=True; list yday_gainer,yday_mover; ret5=+53.5; leftover $1243.52",
+        "shares": 322,
+        "ticker": "INDP"
+      },
+      "LVWR": {
+        "close_px": 1.6299999952316284,
+        "cost": 1253.4186079536437,
+        "entry_date": "2026-09-18",
+        "entry_px": 1.4900000095367432,
+        "fee_in": 10.7586,
+        "last_px": 1.4900000095367432,
+        "min_hold": 1,
+        "notional": 1242.6600079536438,
+        "peak_px": 1.4900000095367432,
+        "reason": "union \u2229 break10, no \ud83d\udea8; gate break_10=True; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+25.7; leftover $1243.52",
+        "shares": 834,
+        "ticker": "LVWR"
+      },
+      "RBRK": {
+        "close_px": 106.70999908447266,
+        "cost": 1196.0730335693358,
+        "entry_date": "2026-09-18",
+        "entry_px": 108.55000305175781,
+        "fee_in": 2.023,
+        "last_px": 108.55000305175781,
+        "min_hold": 1,
+        "notional": 1194.050033569336,
+        "peak_px": 108.55000305175781,
+        "reason": "union \u2229 break10, no \ud83d\udea8; gate break_10=True; list flatten; \u26aa; ret5=+21.3; leftover $1243.52",
+        "shares": 11,
+        "ticker": "RBRK"
+      },
+      "SDGR": {
+        "close_px": 29.020000457763672,
+        "cost": 1233.5559871826172,
+        "entry_date": "2026-09-18",
+        "entry_px": 29.31999969482422,
+        "fee_in": 2.116,
+        "last_px": 29.31999969482422,
+        "min_hold": 1,
+        "notional": 1231.4399871826172,
+        "peak_px": 29.31999969482422,
+        "reason": "union \u2229 break10, no \ud83d\udea8; gate break_10=True; list yday_gainer,yday_mover; \ud83d\udd35; \u26aa; ret5=+60.9; leftover $1243.52",
+        "shares": 42,
+        "ticker": "SDGR"
+      },
+      "VICR": {
+        "close_px": 222.72000122070312,
+        "cost": 1100.1049755859376,
+        "entry_date": "2026-09-18",
+        "entry_px": 219.6199951171875,
+        "fee_in": 2.005,
+        "last_px": 219.6199951171875,
+        "min_hold": 1,
+        "notional": 1098.0999755859375,
+        "peak_px": 219.6199951171875,
+        "reason": "union \u2229 break10, no \ud83d\udea8; gate break_10=True; list flatten,yday_gainer,yday_mover; \ud83d\udd35; ret5=+21.5; leftover $1243.52",
+        "shares": 5,
+        "ticker": "VICR"
+      },
+      "VITL": {
+        "close_px": 11.989999771118164,
+        "cost": 1242.73701247406,
+        "entry_date": "2026-09-18",
+        "entry_px": 11.380000114440918,
+        "fee_in": 2.317,
+        "last_px": 11.380000114440918,
+        "min_hold": 1,
+        "notional": 1240.42001247406,
+        "peak_px": 11.380000114440918,
+        "reason": "union \u2229 break10, no \ud83d\udea8; gate break_10=True; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+19.5; leftover $1243.52",
+        "shares": 109,
+        "ticker": "VITL"
+      }
+    },
+    "yday_equity": 9994.56
+  }
+}

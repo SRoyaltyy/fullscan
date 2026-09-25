@@ -1,0 +1,36 @@
+{
+  "buys": [],
+  "cash": 10.48,
+  "date": "2026-09-23",
+  "equity": 9815.44,
+  "fees": 0,
+  "fills": [],
+  "holdings": [
+    "NTSK"
+  ],
+  "mean": 0.1077,
+  "n_trades_today": 0,
+  "recipe": "ohlc_hot_coil_h1",
+  "sells": [],
+  "state": {
+    "after": "2026-09-23",
+    "cash": 10.48,
+    "pos": {
+      "NTSK": {
+        "close_px": 18.56999969482422,
+        "cost": 9632.2512,
+        "entry_date": "2026-09-22",
+        "entry_px": 18.23,
+        "fee_in": 6.8112,
+        "last_px": 18.575000762939453,
+        "min_hold": 1,
+        "notional": 9625.44,
+        "peak_px": 18.575000762939453,
+        "reason": "hot list \u2229 not exploded; gate ret_5_min=0.0,ret_5_max=10.0,rvol_max=2.2; list ohlc_hot; ret5=+8.2; leftover $9642.73",
+        "shares": 528,
+        "ticker": "NTSK"
+      }
+    },
+    "yday_equity": 9815.44
+  }
+}

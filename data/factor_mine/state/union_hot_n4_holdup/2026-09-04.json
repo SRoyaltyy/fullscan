@@ -1,0 +1,119 @@
+{
+  "buys": [
+    "GPRO",
+    "ASST",
+    "DFDV",
+    "HOOD"
+  ],
+  "cash": 101.95,
+  "date": "2026-09-04",
+  "equity": 10668.59,
+  "fees": 31.8656,
+  "fills": [
+    {
+      "fees": 21.93,
+      "pnl": null,
+      "price": 1.48,
+      "shares": 1700,
+      "side": "BUY",
+      "ticker": "GPRO"
+    },
+    {
+      "fees": 2.287,
+      "pnl": null,
+      "price": 25.18,
+      "shares": 99,
+      "side": "BUY",
+      "ticker": "ASST"
+    },
+    {
+      "fees": 5.5986,
+      "pnl": null,
+      "price": 5.79,
+      "shares": 434,
+      "side": "BUY",
+      "ticker": "DFDV"
+    },
+    {
+      "fees": 2.05,
+      "pnl": null,
+      "price": 120.475,
+      "shares": 20,
+      "side": "BUY",
+      "ticker": "HOOD"
+    }
+  ],
+  "holdings": [
+    "ASST",
+    "DFDV",
+    "GPRO",
+    "HOOD"
+  ],
+  "mean": 5.9969,
+  "n_trades_today": 4,
+  "recipe": "union_hot_n4_holdup",
+  "sells": [],
+  "state": {
+    "after": "2026-09-04",
+    "cash": 101.95,
+    "pos": {
+      "ASST": {
+        "close_px": 27.139999389648438,
+        "cost": 2495.107030212402,
+        "entry_date": "2026-09-04",
+        "entry_px": 25.18000030517578,
+        "fee_in": 2.287,
+        "last_px": 25.18000030517578,
+        "min_hold": 2,
+        "notional": 2492.8200302124023,
+        "peak_px": 25.18000030517578,
+        "reason": "hot4; S>0 lots stay through the next 09:30 so the overnight gap is in the book; rank hot_score; list ohlc_hot; \ud83d\udd35; ret5=+16.0; leftover $2516.25",
+        "shares": 99,
+        "ticker": "ASST"
+      },
+      "DFDV": {
+        "close_px": 5.869999885559082,
+        "cost": 2518.4585834442137,
+        "entry_date": "2026-09-04",
+        "entry_px": 5.789999961853027,
+        "fee_in": 5.5986,
+        "last_px": 5.789999961853027,
+        "min_hold": 2,
+        "notional": 2512.859983444214,
+        "peak_px": 5.789999961853027,
+        "reason": "hot4; S>0 lots stay through the next 09:30 so the overnight gap is in the book; rank hot_score; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+15.2; leftover $2516.25",
+        "shares": 434,
+        "ticker": "DFDV"
+      },
+      "GPRO": {
+        "close_px": 1.7000000476837158,
+        "cost": 2537.9300324249266,
+        "entry_date": "2026-09-04",
+        "entry_px": 1.4800000190734863,
+        "fee_in": 21.93,
+        "last_px": 1.4800000190734863,
+        "min_hold": 2,
+        "notional": 2516.0000324249268,
+        "peak_px": 1.4800000190734863,
+        "reason": "hot4; S>0 lots stay through the next 09:30 so the overnight gap is in the book; rank hot_score; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+129.8; leftover $2516.25",
+        "shares": 1700,
+        "ticker": "GPRO"
+      },
+      "HOOD": {
+        "close_px": 122.11000061035156,
+        "cost": 2411.549969482422,
+        "entry_date": "2026-09-04",
+        "entry_px": 120.4749984741211,
+        "fee_in": 2.05,
+        "last_px": 120.4749984741211,
+        "min_hold": 2,
+        "notional": 2409.499969482422,
+        "peak_px": 120.4749984741211,
+        "reason": "hot4; S>0 lots stay through the next 09:30 so the overnight gap is in the book; rank hot_score; list ohlc_hot; \ud83d\udd35; ret5=+13.6; leftover $2516.25",
+        "shares": 20,
+        "ticker": "HOOD"
+      }
+    },
+    "yday_equity": 10668.59
+  }
+}

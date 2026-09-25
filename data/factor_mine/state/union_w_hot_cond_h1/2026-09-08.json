@@ -1,0 +1,93 @@
+{
+  "buys": [],
+  "cash": 10045.48,
+  "date": "2026-09-08",
+  "equity": 10045.48,
+  "fees": 28.3442,
+  "fills": [
+    {
+      "fees": 2.1542,
+      "pnl": 56.19,
+      "price": 26.44,
+      "shares": 48,
+      "side": "SELL",
+      "ticker": "ASST"
+    },
+    {
+      "fees": 2.016,
+      "pnl": 10.73,
+      "price": 521.15,
+      "shares": 2,
+      "side": "SELL",
+      "ticker": "DELL"
+    },
+    {
+      "fees": 2.7669,
+      "pnl": -1.27,
+      "price": 5.81,
+      "shares": 211,
+      "side": "SELL",
+      "ticker": "DFDV"
+    },
+    {
+      "fees": 2.2343,
+      "pnl": 20.71,
+      "price": 16.74,
+      "shares": 74,
+      "side": "SELL",
+      "ticker": "FRNM"
+    },
+    {
+      "fees": 10.8029,
+      "pnl": 48.75,
+      "price": 1.565,
+      "shares": 826,
+      "side": "SELL",
+      "ticker": "GPRO"
+    },
+    {
+      "fees": 3.5378,
+      "pnl": -7.02,
+      "price": 4.53,
+      "shares": 270,
+      "side": "SELL",
+      "ticker": "IRD"
+    },
+    {
+      "fees": 2.7801,
+      "pnl": 36.89,
+      "price": 5.95,
+      "shares": 212,
+      "side": "SELL",
+      "ticker": "LENZ"
+    },
+    {
+      "fees": 2.052,
+      "pnl": 93.5,
+      "price": 89.67,
+      "shares": 14,
+      "side": "SELL",
+      "ticker": "TARS"
+    }
+  ],
+  "holdings": [],
+  "mean": -2.1024,
+  "n_trades_today": 8,
+  "recipe": "union_w_hot_cond_h1",
+  "sells": [
+    "ASST",
+    "DELL",
+    "DFDV",
+    "FRNM",
+    "GPRO",
+    "IRD",
+    "LENZ",
+    "TARS"
+  ],
+  "state": {
+    "after": "2026-09-08",
+    "cash": 10045.48,
+    "pos": {},
+    "yday_equity": 10045.48
+  }
+}

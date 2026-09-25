@@ -1,0 +1,262 @@
+{
+  "buys": [
+    "PACS",
+    "DLO",
+    "DEFT",
+    "GLND",
+    "USDE",
+    "MX",
+    "EMAT"
+  ],
+  "cash": 15575.95,
+  "date": "2026-09-22",
+  "equity": 10057.54,
+  "fees": 41.5422,
+  "fills": [
+    {
+      "fees": 2.005,
+      "pnl": 10.86,
+      "price": 102.74,
+      "shares": 5,
+      "side": "COVER",
+      "ticker": "ABVX"
+    },
+    {
+      "fees": 2.536,
+      "pnl": 18.53,
+      "price": 3.29,
+      "shares": 182,
+      "side": "COVER",
+      "ticker": "KDK"
+    },
+    {
+      "fees": 2.077,
+      "pnl": 1.32,
+      "price": 20.66,
+      "shares": 29,
+      "side": "COVER",
+      "ticker": "MLKN"
+    },
+    {
+      "fees": 2.227,
+      "pnl": 11.31,
+      "price": 7.64,
+      "shares": 79,
+      "side": "COVER",
+      "ticker": "PGEN"
+    },
+    {
+      "fees": 2.302,
+      "pnl": -3.61,
+      "price": 5.99,
+      "shares": 104,
+      "side": "COVER",
+      "ticker": "SION"
+    },
+    {
+      "fees": 2.017,
+      "pnl": -41.33,
+      "price": 72.53,
+      "shares": 9,
+      "side": "COVER",
+      "ticker": "THO"
+    },
+    {
+      "fees": 2.035,
+      "pnl": -0.51,
+      "price": 39.76,
+      "shares": 15,
+      "side": "COVER",
+      "ticker": "XENE"
+    },
+    {
+      "fees": 2.0805290410958905,
+      "pnl": null,
+      "price": 41.93,
+      "shares": 17,
+      "side": "SHORT",
+      "ticker": "PACS"
+    },
+    {
+      "fees": 2.1764657534246576,
+      "pnl": null,
+      "price": 14.5,
+      "shares": 49,
+      "side": "SHORT",
+      "ticker": "DLO"
+    },
+    {
+      "fees": 11.035723561643836,
+      "pnl": null,
+      "price": 0.59,
+      "shares": 1214,
+      "side": "SHORT",
+      "ticker": "DEFT"
+    },
+    {
+      "fees": 3.204573151065879,
+      "pnl": null,
+      "price": 2.94,
+      "shares": 243,
+      "side": "SHORT",
+      "ticker": "GLND"
+    },
+    {
+      "fees": 2.194573972257849,
+      "pnl": null,
+      "price": 12.99,
+      "shares": 55,
+      "side": "SHORT",
+      "ticker": "USDE"
+    },
+    {
+      "fees": 2.9694027401375447,
+      "pnl": null,
+      "price": 3.18,
+      "shares": 225,
+      "side": "SHORT",
+      "ticker": "MX"
+    },
+    {
+      "fees": 2.6819769863013696,
+      "pnl": null,
+      "price": 3.52,
+      "shares": 203,
+      "side": "SHORT",
+      "ticker": "EMAT"
+    }
+  ],
+  "holdings": [
+    "AEHL",
+    "DEFT",
+    "DLO",
+    "EMAT",
+    "GLND",
+    "MX",
+    "PACS",
+    "USDE"
+  ],
+  "mean": -0.8036,
+  "n_trades_today": 14,
+  "recipe": "short_last_red_h1",
+  "sells": [
+    "ABVX",
+    "KDK",
+    "MLKN",
+    "PGEN",
+    "SION",
+    "THO",
+    "XENE"
+  ],
+  "state": {
+    "after": "2026-09-22",
+    "cash": 15575.95,
+    "pos": {
+      "AEHL": {
+        "close_px": 7.73,
+        "cost": 2.2543726032100313,
+        "entry_date": "2026-09-21",
+        "entry_px": 8.260000228881836,
+        "fee_in": 2.2543726032100313,
+        "last_px": 7.63,
+        "notional": 619.5000171661377,
+        "peak_px": 7.63,
+        "reason": "last bar red; gate last_red=True; list yday_mover; ret5=+7.7; leftover $624.37",
+        "shares": 75,
+        "ticker": "AEHL"
+      },
+      "DEFT": {
+        "close_px": 0.58,
+        "cost": 11.035723561643836,
+        "entry_date": "2026-09-22",
+        "entry_px": 0.59,
+        "fee_in": 11.035723561643836,
+        "last_px": 0.59,
+        "notional": 716.26,
+        "peak_px": 0.59,
+        "reason": "last bar red; gate last_red=True; list probable,yday_gainer,yday_mover; ret5=-1.7; leftover $716.54",
+        "shares": 1214,
+        "ticker": "DEFT"
+      },
+      "DLO": {
+        "close_px": 14.26,
+        "cost": 2.1764657534246576,
+        "entry_date": "2026-09-22",
+        "entry_px": 14.5,
+        "fee_in": 2.1764657534246576,
+        "last_px": 14.5,
+        "notional": 710.5,
+        "peak_px": 14.5,
+        "reason": "last bar red; gate last_red=True; list flatten; ret5=-3.6; leftover $716.54",
+        "shares": 49,
+        "ticker": "DLO"
+      },
+      "EMAT": {
+        "close_px": 3.72,
+        "cost": 2.6819769863013696,
+        "entry_date": "2026-09-22",
+        "entry_px": 3.52,
+        "fee_in": 2.6819769863013696,
+        "last_px": 3.52,
+        "notional": 714.5600000000001,
+        "peak_px": 3.52,
+        "reason": "last bar red; gate last_red=True; list yday_mover; ret5=+3.0; leftover $716.54",
+        "shares": 203,
+        "ticker": "EMAT"
+      },
+      "GLND": {
+        "close_px": 2.509999990463257,
+        "cost": 3.204573151065879,
+        "entry_date": "2026-09-22",
+        "entry_px": 2.940000057220459,
+        "fee_in": 3.204573151065879,
+        "last_px": 2.940000057220459,
+        "notional": 714.4200139045715,
+        "peak_px": 2.940000057220459,
+        "reason": "last bar red; gate last_red=True; list yday_gainer,yday_mover; ret5=+136.1; leftover $716.54",
+        "shares": 243,
+        "ticker": "GLND"
+      },
+      "MX": {
+        "close_px": 3.200000047683716,
+        "cost": 2.9694027401375447,
+        "entry_date": "2026-09-22",
+        "entry_px": 3.180000066757202,
+        "fee_in": 2.9694027401375447,
+        "last_px": 3.180000066757202,
+        "notional": 715.5000150203705,
+        "peak_px": 3.180000066757202,
+        "reason": "last bar red; gate last_red=True; list yday_gainer,yday_mover; ret5=+11.1; leftover $716.54",
+        "shares": 225,
+        "ticker": "MX"
+      },
+      "PACS": {
+        "close_px": 41.53,
+        "cost": 2.0805290410958905,
+        "entry_date": "2026-09-22",
+        "entry_px": 41.93,
+        "fee_in": 2.0805290410958905,
+        "last_px": 41.93,
+        "notional": 712.81,
+        "peak_px": 41.93,
+        "reason": "last bar red; gate last_red=True; list flatten; ret5=-5.6; leftover $716.54",
+        "shares": 17,
+        "ticker": "PACS"
+      },
+      "USDE": {
+        "close_px": 13.539999961853027,
+        "cost": 2.194573972257849,
+        "entry_date": "2026-09-22",
+        "entry_px": 12.989999771118164,
+        "fee_in": 2.194573972257849,
+        "last_px": 12.989999771118164,
+        "notional": 714.449987411499,
+        "peak_px": 12.989999771118164,
+        "reason": "last bar red; gate last_red=True; list yday_gainer,yday_mover; ret5=+69.4; leftover $716.54",
+        "shares": 55,
+        "ticker": "USDE"
+      }
+    },
+    "yday_equity": 10057.54
+  }
+}

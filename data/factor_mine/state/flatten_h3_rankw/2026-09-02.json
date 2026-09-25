@@ -1,0 +1,57 @@
+{
+  "buys": [],
+  "cash": 10220.78,
+  "date": "2026-09-02",
+  "equity": 10220.78,
+  "fees": 12.1799,
+  "fills": [
+    {
+      "fees": 2.7043,
+      "pnl": 214.0,
+      "price": 15.7,
+      "shares": 205,
+      "side": "SELL",
+      "ticker": "CRK"
+    },
+    {
+      "fees": 2.2692,
+      "pnl": 57.74,
+      "price": 24.7,
+      "shares": 83,
+      "side": "SELL",
+      "ticker": "MOS"
+    },
+    {
+      "fees": 2.3228,
+      "pnl": 29.6,
+      "price": 42.1,
+      "shares": 95,
+      "side": "SELL",
+      "ticker": "RRC"
+    },
+    {
+      "fees": 4.8836,
+      "pnl": -80.57,
+      "price": 2.49,
+      "shares": 373,
+      "side": "SELL",
+      "ticker": "SLI"
+    }
+  ],
+  "holdings": [],
+  "mean": -1.0927,
+  "n_trades_today": 4,
+  "recipe": "flatten_h3_rankw",
+  "sells": [
+    "CRK",
+    "MOS",
+    "RRC",
+    "SLI"
+  ],
+  "state": {
+    "after": "2026-09-02",
+    "cash": 10220.78,
+    "pos": {},
+    "yday_equity": 10220.78
+  }
+}

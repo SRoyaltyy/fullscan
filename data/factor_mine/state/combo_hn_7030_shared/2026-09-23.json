@@ -1,0 +1,287 @@
+{
+  "buys": [
+    "FEAM",
+    "GLND",
+    "VICR",
+    "VKTX",
+    "PGEN",
+    "SGRY",
+    "CMPX",
+    "VERI"
+  ],
+  "cash": 1.04,
+  "date": "2026-09-23",
+  "equity": 9821.48,
+  "fees": 72.3268,
+  "fills": [
+    {
+      "fees": 2.0283,
+      "pnl": 57.82,
+      "price": 331.78,
+      "shares": 5,
+      "side": "SELL",
+      "ticker": "ARM"
+    },
+    {
+      "fees": 3.0544,
+      "pnl": -1.4,
+      "price": 4.3,
+      "shares": 233,
+      "side": "SELL",
+      "ticker": "DGXX"
+    },
+    {
+      "fees": 2.058,
+      "pnl": 22.46,
+      "price": 108.52,
+      "shares": 15,
+      "side": "SELL",
+      "ticker": "GRAL"
+    },
+    {
+      "fees": 7.0464,
+      "pnl": 432.55,
+      "price": 3.93,
+      "shares": 538,
+      "side": "SELL",
+      "ticker": "INDP"
+    },
+    {
+      "fees": 12.524,
+      "pnl": -84.55,
+      "price": 0.95,
+      "shares": 988,
+      "side": "SELL",
+      "ticker": "IVVD"
+    },
+    {
+      "fees": 2.025,
+      "pnl": 70.49,
+      "price": 183.405,
+      "shares": 5,
+      "side": "SELL",
+      "ticker": "MRNA"
+    },
+    {
+      "fees": 3.0309,
+      "pnl": -98.41,
+      "price": 6.83,
+      "shares": 231,
+      "side": "SELL",
+      "ticker": "NUAI"
+    },
+    {
+      "fees": 7.6755,
+      "pnl": null,
+      "price": 2.92,
+      "shares": 595,
+      "side": "BUY",
+      "ticker": "FEAM"
+    },
+    {
+      "fees": 8.3076,
+      "pnl": null,
+      "price": 2.7,
+      "shares": 644,
+      "side": "BUY",
+      "ticker": "GLND"
+    },
+    {
+      "fees": 2.008,
+      "pnl": null,
+      "price": 266.5,
+      "shares": 6,
+      "side": "BUY",
+      "ticker": "VICR"
+    },
+    {
+      "fees": 2.113,
+      "pnl": null,
+      "price": 41.76,
+      "shares": 41,
+      "side": "BUY",
+      "ticker": "VKTX"
+    },
+    {
+      "fees": 2.284,
+      "pnl": null,
+      "price": 7.95,
+      "shares": 98,
+      "side": "BUY",
+      "ticker": "PGEN"
+    },
+    {
+      "fees": 2.137,
+      "pnl": null,
+      "price": 15.72,
+      "shares": 49,
+      "side": "BUY",
+      "ticker": "SGRY"
+    },
+    {
+      "fees": 8.2818,
+      "pnl": null,
+      "price": 1.22,
+      "shares": 642,
+      "side": "BUY",
+      "ticker": "CMPX"
+    },
+    {
+      "fees": 7.7529,
+      "pnl": null,
+      "price": 1.3,
+      "shares": 601,
+      "side": "BUY",
+      "ticker": "VERI"
+    }
+  ],
+  "holdings": [
+    "CMPX",
+    "FEAM",
+    "GLND",
+    "PGEN",
+    "SGRY",
+    "VERI",
+    "VICR",
+    "VKTX"
+  ],
+  "mean": -2.4787,
+  "n_trades_today": 15,
+  "recipe": "combo_hn_7030_shared",
+  "sells": [
+    "ARM",
+    "DGXX",
+    "GRAL",
+    "INDP",
+    "IVVD",
+    "MRNA",
+    "NUAI"
+  ],
+  "state": {
+    "after": "2026-09-23",
+    "cash": 1.04,
+    "pos": {
+      "CMPX": {
+        "close_px": 1.1699999570846558,
+        "cost": 791.5218183677673,
+        "entry_date": "2026-09-23",
+        "entry_px": 1.2200000286102295,
+        "fee_in": 8.2818,
+        "last_px": 1.2200000286102295,
+        "notional": 783.2400183677673,
+        "owner": "union_news_g_h1",
+        "peak_px": 1.2200000286102295,
+        "reason": "union \u2229 news_g, no \ud83d\udea8; gate news=good; list yday_mover; \ud83d\udd35; ret5=-33.0; combo leftover $783.85; owner union_news_g_h1",
+        "shares": 642,
+        "side": "long",
+        "ticker": "CMPX"
+      },
+      "FEAM": {
+        "close_px": 2.640000104904175,
+        "cost": 1745.0755453948975,
+        "entry_date": "2026-09-23",
+        "entry_px": 2.9200000762939453,
+        "fee_in": 7.6755,
+        "last_px": 2.9200000762939453,
+        "notional": 1737.4000453948975,
+        "owner": "union_hot_n4_h1",
+        "peak_px": 2.9200000762939453,
+        "reason": "top 4 by hot; rank hot_score; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+133.3; combo leftover $1740.00; owner union_hot_n4_h1",
+        "shares": 595,
+        "side": "long",
+        "ticker": "FEAM"
+      },
+      "GLND": {
+        "close_px": 2.9100000858306885,
+        "cost": 1747.107630708313,
+        "entry_date": "2026-09-23",
+        "entry_px": 2.700000047683716,
+        "fee_in": 8.3076,
+        "last_px": 2.700000047683716,
+        "notional": 1738.800030708313,
+        "owner": "union_hot_n4_h1",
+        "peak_px": 2.700000047683716,
+        "reason": "top 4 by hot; rank hot_score; list yday_mover; \ud83d\udd35; ret5=+109.2; combo leftover $1740.00; owner union_hot_n4_h1",
+        "shares": 644,
+        "side": "long",
+        "ticker": "GLND"
+      },
+      "PGEN": {
+        "close_px": 7.440000057220459,
+        "cost": 781.3839813079834,
+        "entry_date": "2026-09-23",
+        "entry_px": 7.949999809265137,
+        "fee_in": 2.284,
+        "last_px": 7.949999809265137,
+        "notional": 779.0999813079834,
+        "owner": "union_news_g_h1",
+        "peak_px": 7.949999809265137,
+        "reason": "union \u2229 news_g, no \ud83d\udea8; gate news=good; list flatten; \ud83d\udd35; \u26aa; ret5=+12.7; combo leftover $783.85; owner union_news_g_h1",
+        "shares": 98,
+        "side": "long",
+        "ticker": "PGEN"
+      },
+      "SGRY": {
+        "close_px": 14.5600004196167,
+        "cost": 772.4170130844116,
+        "entry_date": "2026-09-23",
+        "entry_px": 15.720000267028809,
+        "fee_in": 2.137,
+        "last_px": 15.720000267028809,
+        "notional": 770.2800130844116,
+        "owner": "union_news_g_h1",
+        "peak_px": 15.720000267028809,
+        "reason": "union \u2229 news_g, no \ud83d\udea8; gate news=good; list yday_gainer,yday_mover,ohlc_hot; \ud83d\udd35; ret5=+15.8; combo leftover $783.85; owner union_news_g_h1",
+        "shares": 49,
+        "side": "long",
+        "ticker": "SGRY"
+      },
+      "VERI": {
+        "close_px": 1.2899999618530273,
+        "cost": 789.0528713420867,
+        "entry_date": "2026-09-23",
+        "entry_px": 1.2999999523162842,
+        "fee_in": 7.7529,
+        "last_px": 1.2999999523162842,
+        "notional": 781.2999713420868,
+        "owner": "union_news_g_h1",
+        "peak_px": 1.2999999523162842,
+        "reason": "union \u2229 news_g, no \ud83d\udea8; gate news=good; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+15.3; combo leftover $783.85; owner union_news_g_h1",
+        "shares": 601,
+        "side": "long",
+        "ticker": "VERI"
+      },
+      "VICR": {
+        "close_px": 283.1600036621094,
+        "cost": 1601.008,
+        "entry_date": "2026-09-23",
+        "entry_px": 266.5,
+        "fee_in": 2.008,
+        "last_px": 266.5,
+        "notional": 1599.0,
+        "owner": "union_hot_n4_h1",
+        "peak_px": 266.5,
+        "reason": "top 4 by hot; rank hot_score; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+45.9; combo leftover $1740.00; owner union_hot_n4_h1",
+        "shares": 6,
+        "side": "long",
+        "ticker": "VICR"
+      },
+      "VKTX": {
+        "close_px": 41.650001525878906,
+        "cost": 1714.2729311828614,
+        "entry_date": "2026-09-23",
+        "entry_px": 41.7599983215332,
+        "fee_in": 2.113,
+        "last_px": 41.7599983215332,
+        "notional": 1712.1599311828613,
+        "owner": "union_hot_n4_h1",
+        "peak_px": 41.7599983215332,
+        "reason": "top 4 by hot; rank hot_score; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+36.4; combo leftover $1740.00; owner union_hot_n4_h1",
+        "shares": 41,
+        "side": "long",
+        "ticker": "VKTX"
+      }
+    },
+    "yday_equity": 9821.48
+  }
+}

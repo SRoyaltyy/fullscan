@@ -1,0 +1,257 @@
+{
+  "buys": [
+    "TWST",
+    "PGEN",
+    "BRUN",
+    "AXTI",
+    "EROC",
+    "DVLT",
+    "CYPH"
+  ],
+  "cash": 13877.1,
+  "date": "2026-09-17",
+  "equity": 9561.17,
+  "fees": 47.7617,
+  "fills": [
+    {
+      "fees": 2.092,
+      "pnl": -51.14,
+      "price": 19.59,
+      "shares": 34,
+      "side": "COVER",
+      "ticker": "ARQQ"
+    },
+    {
+      "fees": 2.119,
+      "pnl": -5.13,
+      "price": 14.33,
+      "shares": 43,
+      "side": "COVER",
+      "ticker": "AVAH"
+    },
+    {
+      "fees": 2.089,
+      "pnl": -131.26,
+      "price": 22.46,
+      "shares": 33,
+      "side": "COVER",
+      "ticker": "BBNX"
+    },
+    {
+      "fees": 2.041,
+      "pnl": -7.69,
+      "price": 36.67,
+      "shares": 17,
+      "side": "COVER",
+      "ticker": "BLFS"
+    },
+    {
+      "fees": 1.996,
+      "pnl": -8.55,
+      "price": 273.15,
+      "shares": 2,
+      "side": "COVER",
+      "ticker": "IQV"
+    },
+    {
+      "fees": 2.014,
+      "pnl": 1.38,
+      "price": 76.44,
+      "shares": 8,
+      "side": "COVER",
+      "ticker": "RDNT"
+    },
+    {
+      "fees": 2.305,
+      "pnl": 25.8,
+      "price": 5.58,
+      "shares": 105,
+      "side": "COVER",
+      "ticker": "RIG"
+    },
+    {
+      "fees": 2.017,
+      "pnl": -39.26,
+      "price": 72.7,
+      "shares": 9,
+      "side": "COVER",
+      "ticker": "TEM"
+    },
+    {
+      "fees": 2.0385950676904963,
+      "pnl": null,
+      "price": 151.43,
+      "shares": 4,
+      "side": "SHORT",
+      "ticker": "TWST"
+    },
+    {
+      "fees": 2.2699356167727953,
+      "pnl": null,
+      "price": 7.59,
+      "shares": 80,
+      "side": "SHORT",
+      "ticker": "PGEN"
+    },
+    {
+      "fees": 2.140522191661678,
+      "pnl": null,
+      "price": 15.87,
+      "shares": 38,
+      "side": "SHORT",
+      "ticker": "BRUN"
+    },
+    {
+      "fees": 2.048884384364298,
+      "pnl": null,
+      "price": 67.91,
+      "shares": 8,
+      "side": "SHORT",
+      "ticker": "AXTI"
+    },
+    {
+      "fees": 2.1706224662049176,
+      "pnl": null,
+      "price": 12.64,
+      "shares": 48,
+      "side": "SHORT",
+      "ticker": "EROC"
+    },
+    {
+      "fees": 17.42745534264094,
+      "pnl": null,
+      "price": 0.17,
+      "shares": 3576,
+      "side": "SHORT",
+      "ticker": "DVLT"
+    },
+    {
+      "fees": 2.9926363010733095,
+      "pnl": null,
+      "price": 2.675,
+      "shares": 227,
+      "side": "SHORT",
+      "ticker": "CYPH"
+    }
+  ],
+  "holdings": [
+    "AXTI",
+    "BRUN",
+    "CYPH",
+    "DVLT",
+    "EROC",
+    "PGEN",
+    "TWST"
+  ],
+  "mean": -2.7144,
+  "n_trades_today": 15,
+  "recipe": "short_macd_dn_h1",
+  "sells": [
+    "ARQQ",
+    "AVAH",
+    "BBNX",
+    "BLFS",
+    "IQV",
+    "RDNT",
+    "RIG",
+    "TEM"
+  ],
+  "state": {
+    "after": "2026-09-17",
+    "cash": 13877.1,
+    "pos": {
+      "AXTI": {
+        "close_px": 67.75,
+        "cost": 2.048884384364298,
+        "entry_date": "2026-09-17",
+        "entry_px": 67.91000366210938,
+        "fee_in": 2.048884384364298,
+        "last_px": 67.91000366210938,
+        "notional": 543.280029296875,
+        "peak_px": 67.91000366210938,
+        "reason": "MACD histogram < 0; gate macd_down=True; list probable,yday_gainer,yday_mover; \ud83d\udd35; ret5=-6.7; leftover $607.94",
+        "shares": 8,
+        "ticker": "AXTI"
+      },
+      "BRUN": {
+        "close_px": 16.68000030517578,
+        "cost": 2.140522191661678,
+        "entry_date": "2026-09-17",
+        "entry_px": 15.869999885559082,
+        "fee_in": 2.140522191661678,
+        "last_px": 15.869999885559082,
+        "notional": 603.0599956512451,
+        "peak_px": 15.869999885559082,
+        "reason": "MACD histogram < 0; gate macd_down=True; list probable,yday_gainer,yday_mover; ret5=-12.7; leftover $607.94",
+        "shares": 38,
+        "ticker": "BRUN"
+      },
+      "CYPH": {
+        "close_px": 3.069999933242798,
+        "cost": 2.9926363010733095,
+        "entry_date": "2026-09-17",
+        "entry_px": 2.674999952316284,
+        "fee_in": 2.9926363010733095,
+        "last_px": 2.674999952316284,
+        "notional": 607.2249891757965,
+        "peak_px": 2.674999952316284,
+        "reason": "MACD histogram < 0; gate macd_down=True; list yday_gainer; \ud83d\udd35; ret5=-0.4; leftover $607.94",
+        "shares": 227,
+        "ticker": "CYPH"
+      },
+      "DVLT": {
+        "close_px": 0.1599999964237213,
+        "cost": 17.42745534264094,
+        "entry_date": "2026-09-17",
+        "entry_px": 0.17000000178813934,
+        "fee_in": 17.42745534264094,
+        "last_px": 0.17000000178813934,
+        "notional": 607.9200063943863,
+        "peak_px": 0.17000000178813934,
+        "reason": "MACD histogram < 0; gate macd_down=True; list yday_gainer,yday_mover; ret5=-14.3; leftover $607.94",
+        "shares": 3576,
+        "ticker": "DVLT"
+      },
+      "EROC": {
+        "close_px": 12.899999618530273,
+        "cost": 2.1706224662049176,
+        "entry_date": "2026-09-17",
+        "entry_px": 12.640000343322754,
+        "fee_in": 2.1706224662049176,
+        "last_px": 12.640000343322754,
+        "notional": 606.7200164794922,
+        "peak_px": 12.640000343322754,
+        "reason": "MACD histogram < 0; gate macd_down=True; list probable,yday_gainer; ret5=-3.6; leftover $607.94",
+        "shares": 48,
+        "ticker": "EROC"
+      },
+      "PGEN": {
+        "close_px": 7.869999885559082,
+        "cost": 2.2699356167727953,
+        "entry_date": "2026-09-17",
+        "entry_px": 7.590000152587891,
+        "fee_in": 2.2699356167727953,
+        "last_px": 7.590000152587891,
+        "notional": 607.2000122070312,
+        "peak_px": 7.590000152587891,
+        "reason": "MACD histogram < 0; gate macd_down=True; list flatten,ohlc_hot; ret5=+9.4; leftover $607.94",
+        "shares": 80,
+        "ticker": "PGEN"
+      },
+      "TWST": {
+        "close_px": 155.55999755859375,
+        "cost": 2.0385950676904963,
+        "entry_date": "2026-09-17",
+        "entry_px": 151.42999267578125,
+        "fee_in": 2.0385950676904963,
+        "last_px": 151.42999267578125,
+        "notional": 605.719970703125,
+        "peak_px": 151.42999267578125,
+        "reason": "MACD histogram < 0; gate macd_down=True; list flatten,ohlc_hot; ret5=+14.0; leftover $607.94",
+        "shares": 4,
+        "ticker": "TWST"
+      }
+    },
+    "yday_equity": 9561.17
+  }
+}

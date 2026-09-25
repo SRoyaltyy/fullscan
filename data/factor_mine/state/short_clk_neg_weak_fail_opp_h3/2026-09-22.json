@@ -1,0 +1,91 @@
+{
+  "buys": [],
+  "cash": 14278.96,
+  "date": "2026-09-22",
+  "equity": 9589.81,
+  "fees": 13.134,
+  "fills": [
+    {
+      "fees": 2.143,
+      "pnl": -75.73,
+      "price": 17.27,
+      "shares": 51,
+      "side": "COVER",
+      "ticker": "BRUN"
+    },
+    {
+      "fees": 2.359,
+      "pnl": -158.52,
+      "price": 7.81,
+      "shares": 123,
+      "side": "COVER",
+      "ticker": "BTGO"
+    },
+    {
+      "fees": 2.293,
+      "pnl": -37.46,
+      "price": 8.275,
+      "shares": 101,
+      "side": "COVER",
+      "ticker": "BULL"
+    },
+    {
+      "fees": 2.002,
+      "pnl": 2.51,
+      "price": 194.86,
+      "shares": 4,
+      "side": "COVER",
+      "ticker": "FTAI"
+    },
+    {
+      "fees": 2.02,
+      "pnl": -4.08,
+      "price": 81.0,
+      "shares": 10,
+      "side": "COVER",
+      "ticker": "LEN"
+    },
+    {
+      "fees": 2.317,
+      "pnl": 36.19,
+      "price": 7.02,
+      "shares": 109,
+      "side": "COVER",
+      "ticker": "RCAT"
+    }
+  ],
+  "holdings": [
+    "FLNC"
+  ],
+  "mean": 0.1826,
+  "n_trades_today": 6,
+  "recipe": "short_clk_neg_weak_fail_opp_h3",
+  "sells": [
+    "BRUN",
+    "BTGO",
+    "BULL",
+    "FTAI",
+    "LEN",
+    "RCAT"
+  ],
+  "state": {
+    "after": "2026-09-22",
+    "cash": 14278.96,
+    "pos": {
+      "FLNC": {
+        "close_px": 7.269999980926514,
+        "cost": 8.599652737029611,
+        "entry_date": "2026-09-18",
+        "entry_px": 7.534999847412109,
+        "fee_in": 8.599652737029611,
+        "last_px": 7.489999771118164,
+        "notional": 4860.074901580811,
+        "peak_px": 7.360000133514404,
+        "reason": "Clock-B #4 \u2229 Theme Radar T\u22121 oppset; gate clk_neg_weak_fail=True,oppset=True; rank opp_rvol; list yday_mover; \ud83d\udd35; ret5=-20.9; leftover $4866.44",
+        "shares": 645,
+        "ticker": "FLNC"
+      }
+    },
+    "yday_equity": 9589.81
+  }
+}

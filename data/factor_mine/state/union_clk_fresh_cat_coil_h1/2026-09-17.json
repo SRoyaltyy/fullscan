@@ -1,0 +1,288 @@
+{
+  "buys": [
+    "BULL",
+    "SMTC",
+    "AXTI",
+    "CYPH",
+    "PGEN",
+    "SFL",
+    "CRDO",
+    "LITE"
+  ],
+  "cash": 356.06,
+  "date": "2026-09-17",
+  "equity": 9825.67,
+  "fees": 37.6428,
+  "fills": [
+    {
+      "fees": 2.2628,
+      "pnl": -2.84,
+      "price": 14.33,
+      "shares": 83,
+      "side": "SELL",
+      "ticker": "AVAH"
+    },
+    {
+      "fees": 2.106,
+      "pnl": 2.53,
+      "price": 36.67,
+      "shares": 32,
+      "side": "SELL",
+      "ticker": "BLFS"
+    },
+    {
+      "fees": 2.025,
+      "pnl": 42.77,
+      "price": 233.85,
+      "shares": 5,
+      "side": "SELL",
+      "ticker": "ILMN"
+    },
+    {
+      "fees": 2.022,
+      "pnl": 5.02,
+      "price": 273.15,
+      "shares": 4,
+      "side": "SELL",
+      "ticker": "IQV"
+    },
+    {
+      "fees": 2.028,
+      "pnl": 3.28,
+      "price": 180.82,
+      "shares": 6,
+      "side": "SELL",
+      "ticker": "QLYS"
+    },
+    {
+      "fees": 2.097,
+      "pnl": -74.35,
+      "price": 37.57,
+      "shares": 29,
+      "side": "SELL",
+      "ticker": "SM"
+    },
+    {
+      "fees": 2.061,
+      "pnl": 62.37,
+      "price": 72.7,
+      "shares": 17,
+      "side": "SELL",
+      "ticker": "TEM"
+    },
+    {
+      "fees": 2.019,
+      "pnl": 5.25,
+      "price": 366.2,
+      "shares": 3,
+      "side": "SELL",
+      "ticker": "WST"
+    },
+    {
+      "fees": 2.443,
+      "pnl": null,
+      "price": 7.95,
+      "shares": 151,
+      "side": "BUY",
+      "ticker": "BULL"
+    },
+    {
+      "fees": 2.011,
+      "pnl": null,
+      "price": 170.85,
+      "shares": 7,
+      "side": "BUY",
+      "ticker": "SMTC"
+    },
+    {
+      "fees": 2.041,
+      "pnl": null,
+      "price": 67.91,
+      "shares": 17,
+      "side": "BUY",
+      "ticker": "AXTI"
+    },
+    {
+      "fees": 5.805,
+      "pnl": null,
+      "price": 2.675,
+      "shares": 450,
+      "side": "BUY",
+      "ticker": "CYPH"
+    },
+    {
+      "fees": 2.464,
+      "pnl": null,
+      "price": 7.59,
+      "shares": 158,
+      "side": "BUY",
+      "ticker": "PGEN"
+    },
+    {
+      "fees": 2.254,
+      "pnl": null,
+      "price": 13.55,
+      "shares": 88,
+      "side": "BUY",
+      "ticker": "SFL"
+    },
+    {
+      "fees": 2.011,
+      "pnl": null,
+      "price": 168.65,
+      "shares": 7,
+      "side": "BUY",
+      "ticker": "CRDO"
+    },
+    {
+      "fees": 1.993,
+      "pnl": null,
+      "price": 934.88,
+      "shares": 1,
+      "side": "BUY",
+      "ticker": "LITE"
+    }
+  ],
+  "holdings": [
+    "AXTI",
+    "BULL",
+    "CRDO",
+    "CYPH",
+    "LITE",
+    "PGEN",
+    "SFL",
+    "SMTC"
+  ],
+  "mean": 2.7651,
+  "n_trades_today": 16,
+  "recipe": "union_clk_fresh_cat_coil_h1",
+  "sells": [
+    "AVAH",
+    "BLFS",
+    "ILMN",
+    "IQV",
+    "QLYS",
+    "SM",
+    "TEM",
+    "WST"
+  ],
+  "state": {
+    "after": "2026-09-17",
+    "cash": 356.06,
+    "pos": {
+      "AXTI": {
+        "close_px": 67.75,
+        "cost": 1156.5110622558593,
+        "entry_date": "2026-09-17",
+        "entry_px": 67.91000366210938,
+        "fee_in": 2.041,
+        "last_px": 67.91000366210938,
+        "min_hold": 1,
+        "notional": 1154.4700622558594,
+        "peak_px": 67.91000366210938,
+        "reason": "Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list probable,yday_gainer,yday_mover; \ud83d\udd35; ret5=-6.7; leftover $1204.84",
+        "shares": 17,
+        "ticker": "AXTI"
+      },
+      "BULL": {
+        "close_px": 7.710000038146973,
+        "cost": 1202.8929711990356,
+        "entry_date": "2026-09-17",
+        "entry_px": 7.949999809265137,
+        "fee_in": 2.443,
+        "last_px": 7.949999809265137,
+        "min_hold": 1,
+        "notional": 1200.4499711990356,
+        "peak_px": 7.949999809265137,
+        "reason": "Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list yday_mover; \ud83d\udd35; \u26aa; ret5=-18.4; leftover $1204.84",
+        "shares": 151,
+        "ticker": "BULL"
+      },
+      "CRDO": {
+        "close_px": 168.25,
+        "cost": 1182.5609572753906,
+        "entry_date": "2026-09-17",
+        "entry_px": 168.64999389648438,
+        "fee_in": 2.011,
+        "last_px": 168.64999389648438,
+        "min_hold": 1,
+        "notional": 1180.5499572753906,
+        "peak_px": 168.64999389648438,
+        "reason": "Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list yday_gainer; ret5=-3.8; leftover $1204.84",
+        "shares": 7,
+        "ticker": "CRDO"
+      },
+      "CYPH": {
+        "close_px": 3.069999933242798,
+        "cost": 1209.554978542328,
+        "entry_date": "2026-09-17",
+        "entry_px": 2.674999952316284,
+        "fee_in": 5.805,
+        "last_px": 2.674999952316284,
+        "min_hold": 1,
+        "notional": 1203.7499785423279,
+        "peak_px": 2.674999952316284,
+        "reason": "Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list yday_gainer; \ud83d\udd35; ret5=-0.4; leftover $1204.84",
+        "shares": 450,
+        "ticker": "CYPH"
+      },
+      "LITE": {
+        "close_px": 893.6099853515625,
+        "cost": 936.8730048828126,
+        "entry_date": "2026-09-17",
+        "entry_px": 934.8800048828125,
+        "fee_in": 1.993,
+        "last_px": 934.8800048828125,
+        "min_hold": 1,
+        "notional": 934.8800048828125,
+        "peak_px": 934.8800048828125,
+        "reason": "Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list yday_gainer; \ud83d\udd35; ret5=-7.0; leftover $1204.84",
+        "shares": 1,
+        "ticker": "LITE"
+      },
+      "PGEN": {
+        "close_px": 7.869999885559082,
+        "cost": 1201.6840241088867,
+        "entry_date": "2026-09-17",
+        "entry_px": 7.590000152587891,
+        "fee_in": 2.464,
+        "last_px": 7.590000152587891,
+        "min_hold": 1,
+        "notional": 1199.2200241088867,
+        "peak_px": 7.590000152587891,
+        "reason": "Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list flatten,ohlc_hot; ret5=+9.4; leftover $1204.84",
+        "shares": 158,
+        "ticker": "PGEN"
+      },
+      "SFL": {
+        "close_px": 13.75,
+        "cost": 1194.6540167846679,
+        "entry_date": "2026-09-17",
+        "entry_px": 13.550000190734863,
+        "fee_in": 2.254,
+        "last_px": 13.550000190734863,
+        "min_hold": 1,
+        "notional": 1192.400016784668,
+        "peak_px": 13.550000190734863,
+        "reason": "Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list ohlc_hot; ret5=+7.8; leftover $1204.84",
+        "shares": 88,
+        "ticker": "SFL"
+      },
+      "SMTC": {
+        "close_px": 178.19000244140625,
+        "cost": 1197.9610427246093,
+        "entry_date": "2026-09-17",
+        "entry_px": 170.85000610351562,
+        "fee_in": 2.011,
+        "last_px": 170.85000610351562,
+        "min_hold": 1,
+        "notional": 1195.9500427246094,
+        "peak_px": 170.85000610351562,
+        "reason": "Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list probable,yday_gainer,yday_mover; \ud83d\udd35; ret5=+2.2; leftover $1204.84",
+        "shares": 7,
+        "ticker": "SMTC"
+      }
+    },
+    "yday_equity": 9825.67
+  }
+}

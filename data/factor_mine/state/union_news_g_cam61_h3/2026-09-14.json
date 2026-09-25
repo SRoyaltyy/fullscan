@@ -1,0 +1,36 @@
+{
+  "buys": [],
+  "cash": 15.73,
+  "date": "2026-09-14",
+  "equity": 7979.18,
+  "fees": 0,
+  "fills": [],
+  "holdings": [
+    "ORCL"
+  ],
+  "mean": -3.6462,
+  "n_trades_today": 0,
+  "recipe": "union_news_g_cam61_h3",
+  "sells": [],
+  "state": {
+    "after": "2026-09-14",
+    "cash": 15.73,
+    "pos": {
+      "ORCL": {
+        "close_px": 144.7899932861328,
+        "cost": 9045.80459716797,
+        "entry_date": "2026-09-11",
+        "entry_px": 164.42999267578125,
+        "fee_in": 2.155,
+        "last_px": 141.4199981689453,
+        "min_hold": 3,
+        "notional": 9043.649597167969,
+        "peak_px": 164.42999267578125,
+        "reason": "merged news\ud83d\udfe2 and cameras +6 \u2212\u22641; gate news=good,n_pos_min=6,cam_bad_max=1; rank cond; list flatten,earn_react; \ud83d\udd35; \u26aa; ret5=-0.7; leftover $9061.53",
+        "shares": 55,
+        "ticker": "ORCL"
+      }
+    },
+    "yday_equity": 7979.18
+  }
+}

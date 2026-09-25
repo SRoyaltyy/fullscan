@@ -1,0 +1,95 @@
+{
+  "buys": [],
+  "cash": 8266.49,
+  "date": "2026-09-24",
+  "equity": 8295.85,
+  "fees": 6.6935,
+  "fills": [
+    {
+      "fees": 2.1011,
+      "pnl": -348.42,
+      "price": 92.97,
+      "shares": 27,
+      "side": "SELL",
+      "ticker": "ABVX"
+    },
+    {
+      "fees": 2.4456,
+      "pnl": -126.78,
+      "price": 19.96,
+      "shares": 137,
+      "side": "SELL",
+      "ticker": "MLKN"
+    },
+    {
+      "fees": 2.1468,
+      "pnl": 167.53,
+      "price": 72.58,
+      "shares": 41,
+      "side": "SELL",
+      "ticker": "THO"
+    }
+  ],
+  "holdings": [
+    "BB",
+    "NEOV",
+    "SFIX"
+  ],
+  "mean": -0.524,
+  "n_trades_today": 3,
+  "recipe": "union_overnight_h3",
+  "sells": [
+    "ABVX",
+    "MLKN",
+    "THO"
+  ],
+  "state": {
+    "after": "2026-09-24",
+    "cash": 8266.49,
+    "pos": {
+      "BB": {
+        "close_px": 8.729999542236328,
+        "cost": 8.689000381469727,
+        "entry_date": "2026-09-23",
+        "entry_px": 8.600000381469727,
+        "fee_in": 0.089,
+        "last_px": 8.420000076293945,
+        "min_hold": 3,
+        "notional": 8.600000381469727,
+        "peak_px": 8.600000381469727,
+        "reason": "union \u2229 overnight, no \ud83d\udea8; gate overnight=True; list overnight; \ud83d\udd35; \u26aa; ret5=+10.5; leftover $15.04",
+        "shares": 1,
+        "ticker": "BB"
+      },
+      "NEOV": {
+        "close_px": 2.3949999809265137,
+        "cost": 13.748000381469726,
+        "entry_date": "2026-09-23",
+        "entry_px": 3.4000000953674316,
+        "fee_in": 0.148,
+        "last_px": 2.6500000953674316,
+        "min_hold": 3,
+        "notional": 13.600000381469727,
+        "peak_px": 3.4000000953674316,
+        "reason": "union \u2229 overnight, no \ud83d\udea8; gate overnight=True; list overnight; \ud83d\udd35; ret5=+1.8; leftover $15.04",
+        "shares": 4,
+        "ticker": "NEOV"
+      },
+      "SFIX": {
+        "close_px": 2.2100000381469727,
+        "cost": 15.114500047683716,
+        "entry_date": "2026-09-23",
+        "entry_px": 2.990000009536743,
+        "fee_in": 0.1645,
+        "last_px": 2.309999942779541,
+        "min_hold": 3,
+        "notional": 14.950000047683716,
+        "peak_px": 2.990000009536743,
+        "reason": "union \u2229 overnight, no \ud83d\udea8; gate overnight=True; list overnight; ret5=+1.7; leftover $15.04",
+        "shares": 5,
+        "ticker": "SFIX"
+      }
+    },
+    "yday_equity": 8295.85
+  }
+}

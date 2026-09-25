@@ -1,0 +1,81 @@
+{
+  "buys": [],
+  "cash": 272.84,
+  "date": "2026-09-15",
+  "equity": 8306.52,
+  "fees": 0,
+  "fills": [],
+  "holdings": [
+    "ADBE",
+    "AMTX",
+    "BAK",
+    "ORCL"
+  ],
+  "mean": -2.0697,
+  "n_trades_today": 0,
+  "recipe": "union_news_g_conv_h3",
+  "sells": [],
+  "state": {
+    "after": "2026-09-15",
+    "cash": 272.84,
+    "pos": {
+      "ADBE": {
+        "close_px": 257.760009765625,
+        "cost": 728.508994506836,
+        "entry_date": "2026-09-11",
+        "entry_px": 242.1699981689453,
+        "fee_in": 1.999,
+        "last_px": 261.70001220703125,
+        "min_hold": 3,
+        "notional": 726.5099945068359,
+        "peak_px": 261.70001220703125,
+        "reason": "merged news\ud83d\udfe2 rank cameras; 70% leftover if #1 net \u2265 5; gate news=good; rank cond; list earn_react; \ud83d\udd35; ret5=-12.9; leftover $928.24",
+        "shares": 3,
+        "ticker": "ADBE"
+      },
+      "AMTX": {
+        "close_px": 1.909999966621399,
+        "cost": 934.0694826431275,
+        "entry_date": "2026-09-11",
+        "entry_px": 2.0399999618530273,
+        "fee_in": 5.8695,
+        "last_px": 1.9299999475479126,
+        "min_hold": 3,
+        "notional": 928.1999826431274,
+        "peak_px": 2.0399999618530273,
+        "reason": "merged news\ud83d\udfe2 rank cameras; 70% leftover if #1 net \u2265 5; gate news=good; rank cond; list yday_gainer,yday_mover,ohlc_hot; \ud83d\udd35; ret5=+10.9; leftover $928.24",
+        "shares": 455,
+        "ticker": "AMTX"
+      },
+      "BAK": {
+        "close_px": 2.0999999046325684,
+        "cost": 932.0772499893188,
+        "entry_date": "2026-09-11",
+        "entry_px": 2.119999885559082,
+        "fee_in": 5.6373,
+        "last_px": 2.0199999809265137,
+        "min_hold": 3,
+        "notional": 926.4399499893188,
+        "peak_px": 2.119999885559082,
+        "reason": "merged news\ud83d\udfe2 rank cameras; 70% leftover if #1 net \u2265 5; gate news=good; rank cond; list probable,yday_gainer,ohlc_hot; \ud83d\udd35; ret5=+8.8; leftover $928.24",
+        "shares": 437,
+        "ticker": "BAK"
+      },
+      "ORCL": {
+        "close_px": 140.35000610351562,
+        "cost": 6414.876714355469,
+        "entry_date": "2026-09-11",
+        "entry_px": 164.42999267578125,
+        "fee_in": 2.107,
+        "last_px": 143.4600067138672,
+        "min_hold": 3,
+        "notional": 6412.769714355469,
+        "peak_px": 164.42999267578125,
+        "reason": "merged news\ud83d\udfe2 rank cameras; 70% leftover if #1 net \u2265 5; gate news=good; rank cond; list flatten,earn_react; \ud83d\udd35; \u26aa; ret5=-0.7; leftover $6497.66",
+        "shares": 39,
+        "ticker": "ORCL"
+      }
+    },
+    "yday_equity": 8306.52
+  }
+}

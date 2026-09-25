@@ -1,0 +1,149 @@
+{
+  "buys": [],
+  "cash": 6850.27,
+  "date": "2026-09-24",
+  "equity": 10383.5,
+  "fees": 31.8711,
+  "fills": [
+    {
+      "fees": 2.3388,
+      "pnl": 58.48,
+      "price": 8.21,
+      "shares": 107,
+      "side": "SELL",
+      "ticker": "AEHL"
+    },
+    {
+      "fees": 2.2596,
+      "pnl": -68.46,
+      "price": 9.12,
+      "shares": 82,
+      "side": "SELL",
+      "ticker": "BFLY"
+    },
+    {
+      "fees": 2.2818,
+      "pnl": -60.61,
+      "price": 8.5,
+      "shares": 89,
+      "side": "SELL",
+      "ticker": "DNA"
+    },
+    {
+      "fees": 10.8893,
+      "pnl": -104.84,
+      "price": 0.66,
+      "shares": 1114,
+      "side": "SELL",
+      "ticker": "EVTL"
+    },
+    {
+      "fees": 3.6685,
+      "pnl": -94.08,
+      "price": 2.61,
+      "shares": 280,
+      "side": "SELL",
+      "ticker": "FEAM"
+    },
+    {
+      "fees": 2.043,
+      "pnl": -7.92,
+      "price": 70.49,
+      "shares": 11,
+      "side": "SELL",
+      "ticker": "INOD"
+    },
+    {
+      "fees": 2.5762,
+      "pnl": -107.94,
+      "price": 3.925,
+      "shares": 182,
+      "side": "SELL",
+      "ticker": "SVIA"
+    },
+    {
+      "fees": 3.7469,
+      "pnl": -27.46,
+      "price": 2.79,
+      "shares": 286,
+      "side": "SELL",
+      "ticker": "THM"
+    },
+    {
+      "fees": 2.067,
+      "pnl": -113.08,
+      "price": 36.025,
+      "shares": 19,
+      "side": "SELL",
+      "ticker": "VKTX"
+    }
+  ],
+  "holdings": [
+    "GLND",
+    "INDP",
+    "VICR"
+  ],
+  "mean": 5.5976,
+  "n_trades_today": 9,
+  "recipe": "union_hot_n12_h1",
+  "sells": [
+    "AEHL",
+    "BFLY",
+    "DNA",
+    "EVTL",
+    "FEAM",
+    "INOD",
+    "SVIA",
+    "THM",
+    "VKTX"
+  ],
+  "state": {
+    "after": "2026-09-24",
+    "cash": 6850.27,
+    "pos": {
+      "GLND": {
+        "close_px": 5.349999904632568,
+        "cost": 822.0087144481658,
+        "entry_date": "2026-09-23",
+        "entry_px": 2.700000047683716,
+        "fee_in": 3.9087,
+        "last_px": 3.2200000286102295,
+        "min_hold": 1,
+        "notional": 818.1000144481659,
+        "peak_px": 3.2200000286102295,
+        "reason": "top 12 by hot; rank hot_score; list yday_mover; \ud83d\udd35; ret5=+109.2; leftover $818.15",
+        "shares": 303,
+        "ticker": "GLND"
+      },
+      "INDP": {
+        "close_px": 4.0,
+        "cost": 843.595874155426,
+        "entry_date": "2026-09-22",
+        "entry_px": 3.0999999046325684,
+        "fee_in": 3.4959,
+        "last_px": 3.7699999809265137,
+        "min_hold": 1,
+        "notional": 840.099974155426,
+        "peak_px": 3.930000066757202,
+        "reason": "top 12 by hot; rank hot_score; list ohlc_hot; ret5=-1.6; leftover $840.87",
+        "shares": 271,
+        "ticker": "INDP"
+      },
+      "VICR": {
+        "close_px": 276.05999755859375,
+        "cost": 801.499,
+        "entry_date": "2026-09-23",
+        "entry_px": 266.5,
+        "fee_in": 1.999,
+        "last_px": 274.45001220703125,
+        "min_hold": 1,
+        "notional": 799.5,
+        "peak_px": 274.45001220703125,
+        "reason": "top 12 by hot; rank hot_score; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+45.9; leftover $818.15",
+        "shares": 3,
+        "ticker": "VICR"
+      }
+    },
+    "yday_equity": 10383.5
+  }
+}

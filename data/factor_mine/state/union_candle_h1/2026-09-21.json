@@ -1,0 +1,264 @@
+{
+  "buys": [
+    "A",
+    "DXCM",
+    "MGTX",
+    "CYPH",
+    "BTDR",
+    "ORBS",
+    "SBET"
+  ],
+  "cash": 1364.76,
+  "date": "2026-09-21",
+  "equity": 9353.48,
+  "fees": 64.8632,
+  "fills": [
+    {
+      "fees": 2.2691,
+      "pnl": -18.96,
+      "price": 13.9,
+      "shares": 85,
+      "side": "SELL",
+      "ticker": "BHVN"
+    },
+    {
+      "fees": 2.6891,
+      "pnl": 114.59,
+      "price": 6.415,
+      "shares": 205,
+      "side": "SELL",
+      "ticker": "BNC"
+    },
+    {
+      "fees": 4.374,
+      "pnl": 34.74,
+      "price": 3.71,
+      "shares": 334,
+      "side": "SELL",
+      "ticker": "DDD"
+    },
+    {
+      "fees": 2.052,
+      "pnl": -34.46,
+      "price": 82.83,
+      "shares": 14,
+      "side": "SELL",
+      "ticker": "ECO"
+    },
+    {
+      "fees": 3.969,
+      "pnl": -32.12,
+      "price": 3.87,
+      "shares": 303,
+      "side": "SELL",
+      "ticker": "EYPT"
+    },
+    {
+      "fees": 16.6328,
+      "pnl": -13.11,
+      "price": 0.864,
+      "shares": 1408,
+      "side": "SELL",
+      "ticker": "RANI"
+    },
+    {
+      "fees": 2.043,
+      "pnl": -14.85,
+      "price": 107.57,
+      "shares": 11,
+      "side": "SELL",
+      "ticker": "RBRK"
+    },
+    {
+      "fees": 2.025,
+      "pnl": 49.12,
+      "price": 230.25,
+      "shares": 5,
+      "side": "SELL",
+      "ticker": "VICR"
+    },
+    {
+      "fees": 2.011,
+      "pnl": null,
+      "price": 157.87,
+      "shares": 7,
+      "side": "BUY",
+      "ticker": "A"
+    },
+    {
+      "fees": 2.029,
+      "pnl": null,
+      "price": 88.83,
+      "shares": 13,
+      "side": "BUY",
+      "ticker": "DXCM"
+    },
+    {
+      "fees": 2.257,
+      "pnl": null,
+      "price": 13.47,
+      "shares": 89,
+      "side": "BUY",
+      "ticker": "MGTX"
+    },
+    {
+      "fees": 3.8829,
+      "pnl": null,
+      "price": 4.0,
+      "shares": 301,
+      "side": "BUY",
+      "ticker": "CYPH"
+    },
+    {
+      "fees": 2.257,
+      "pnl": null,
+      "price": 13.475,
+      "shares": 89,
+      "side": "BUY",
+      "ticker": "BTDR"
+    },
+    {
+      "fees": 14.0223,
+      "pnl": null,
+      "price": 1.11,
+      "shares": 1087,
+      "side": "BUY",
+      "ticker": "ORBS"
+    },
+    {
+      "fees": 2.35,
+      "pnl": null,
+      "price": 9.99,
+      "shares": 120,
+      "side": "BUY",
+      "ticker": "SBET"
+    }
+  ],
+  "holdings": [
+    "A",
+    "BTDR",
+    "CYPH",
+    "DXCM",
+    "MGTX",
+    "ORBS",
+    "SBET"
+  ],
+  "mean": -1.8622,
+  "n_trades_today": 15,
+  "recipe": "union_candle_h1",
+  "sells": [
+    "BHVN",
+    "BNC",
+    "DDD",
+    "ECO",
+    "EYPT",
+    "RANI",
+    "RBRK",
+    "VICR"
+  ],
+  "state": {
+    "after": "2026-09-21",
+    "cash": 1364.76,
+    "pos": {
+      "A": {
+        "close_px": 161.94000244140625,
+        "cost": 1107.1009658203125,
+        "entry_date": "2026-09-21",
+        "entry_px": 157.8699951171875,
+        "fee_in": 2.011,
+        "last_px": 157.8699951171875,
+        "min_hold": 1,
+        "notional": 1105.0899658203125,
+        "peak_px": 157.8699951171875,
+        "reason": "union \u2229 candle, no \ud83d\udea8; gate candle_capture=True; list flatten; \ud83d\udd35; \u26aa; ret5=+6.5; leftover $1207.62",
+        "shares": 7,
+        "ticker": "A"
+      },
+      "BTDR": {
+        "close_px": 13.140000343322754,
+        "cost": 1201.5320339508057,
+        "entry_date": "2026-09-21",
+        "entry_px": 13.475000381469727,
+        "fee_in": 2.257,
+        "last_px": 13.475000381469727,
+        "min_hold": 1,
+        "notional": 1199.2750339508057,
+        "peak_px": 13.475000381469727,
+        "reason": "union \u2229 candle, no \ud83d\udea8; gate candle_capture=True; list probable,yday_gainer,yday_mover,ohlc_hot; ret5=+8.4; leftover $1207.62",
+        "shares": 89,
+        "ticker": "BTDR"
+      },
+      "CYPH": {
+        "close_px": 3.4000000953674316,
+        "cost": 1207.8829,
+        "entry_date": "2026-09-21",
+        "entry_px": 4.0,
+        "fee_in": 3.8829,
+        "last_px": 4.0,
+        "min_hold": 1,
+        "notional": 1204.0,
+        "peak_px": 4.0,
+        "reason": "union \u2229 candle, no \ud83d\udea8; gate candle_capture=True; list flatten,yday_gainer,yday_mover; \ud83d\udd35; \u26aa; ret5=+58.9; leftover $1207.62",
+        "shares": 301,
+        "ticker": "CYPH"
+      },
+      "DXCM": {
+        "close_px": 89.16999816894531,
+        "cost": 1156.819023803711,
+        "entry_date": "2026-09-21",
+        "entry_px": 88.83000183105469,
+        "fee_in": 2.029,
+        "last_px": 88.83000183105469,
+        "min_hold": 1,
+        "notional": 1154.790023803711,
+        "peak_px": 88.83000183105469,
+        "reason": "union \u2229 candle, no \ud83d\udea8; gate candle_capture=True; list flatten; \ud83d\udd35; \u26aa; ret5=+7.6; leftover $1207.62",
+        "shares": 13,
+        "ticker": "DXCM"
+      },
+      "MGTX": {
+        "close_px": 13.079999923706055,
+        "cost": 1201.087023765564,
+        "entry_date": "2026-09-21",
+        "entry_px": 13.470000267028809,
+        "fee_in": 2.257,
+        "last_px": 13.470000267028809,
+        "min_hold": 1,
+        "notional": 1198.830023765564,
+        "peak_px": 13.470000267028809,
+        "reason": "union \u2229 candle, no \ud83d\udea8; gate candle_capture=True; list flatten; \ud83d\udd35; \u26aa; ret5=+3.6; leftover $1207.62",
+        "shares": 89,
+        "ticker": "MGTX"
+      },
+      "ORBS": {
+        "close_px": 1.0499999523162842,
+        "cost": 1220.5923155496598,
+        "entry_date": "2026-09-21",
+        "entry_px": 1.1100000143051147,
+        "fee_in": 14.0223,
+        "last_px": 1.1100000143051147,
+        "min_hold": 1,
+        "notional": 1206.5700155496597,
+        "peak_px": 1.1100000143051147,
+        "reason": "union \u2229 candle, no \ud83d\udea8; gate candle_capture=True; list probable,yday_gainer,yday_mover; ret5=+6.9; leftover $1207.62",
+        "shares": 1087,
+        "ticker": "ORBS"
+      },
+      "SBET": {
+        "close_px": 9.979999542236328,
+        "cost": 1201.1499725341796,
+        "entry_date": "2026-09-21",
+        "entry_px": 9.989999771118164,
+        "fee_in": 2.35,
+        "last_px": 9.989999771118164,
+        "min_hold": 1,
+        "notional": 1198.7999725341797,
+        "peak_px": 9.989999771118164,
+        "reason": "union \u2229 candle, no \ud83d\udea8; gate candle_capture=True; list probable,yday_gainer; \ud83d\udd35; ret5=+5.3; leftover $1207.62",
+        "shares": 120,
+        "ticker": "SBET"
+      }
+    },
+    "yday_equity": 9353.48
+  }
+}

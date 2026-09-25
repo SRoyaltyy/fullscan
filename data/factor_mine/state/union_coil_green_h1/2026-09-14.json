@@ -1,0 +1,93 @@
+{
+  "buys": [],
+  "cash": 9758.23,
+  "date": "2026-09-14",
+  "equity": 9758.23,
+  "fees": 33.929,
+  "fills": [
+    {
+      "fees": 2.3229,
+      "pnl": -17.88,
+      "price": 11.75,
+      "shares": 102,
+      "side": "SELL",
+      "ticker": "APPS"
+    },
+    {
+      "fees": 7.523,
+      "pnl": -55.19,
+      "price": 2.05,
+      "shares": 575,
+      "side": "SELL",
+      "ticker": "BAK"
+    },
+    {
+      "fees": 2.0795,
+      "pnl": 95.91,
+      "price": 56.9,
+      "shares": 23,
+      "side": "SELL",
+      "ticker": "BAND"
+    },
+    {
+      "fees": 11.3905,
+      "pnl": -48.76,
+      "price": 1.37,
+      "shares": 871,
+      "side": "SELL",
+      "ticker": "GPRO"
+    },
+    {
+      "fees": 2.3799,
+      "pnl": -17.93,
+      "price": 10.0,
+      "shares": 120,
+      "side": "SELL",
+      "ticker": "PAGS"
+    },
+    {
+      "fees": 2.209,
+      "pnl": -5.72,
+      "price": 18.28,
+      "shares": 66,
+      "side": "SELL",
+      "ticker": "PAYP"
+    },
+    {
+      "fees": 2.055,
+      "pnl": -7.54,
+      "price": 77.1,
+      "shares": 15,
+      "side": "SELL",
+      "ticker": "VIST"
+    },
+    {
+      "fees": 3.9692,
+      "pnl": 49.69,
+      "price": 4.21,
+      "shares": 303,
+      "side": "SELL",
+      "ticker": "WTI"
+    }
+  ],
+  "holdings": [],
+  "mean": -0.4914,
+  "n_trades_today": 8,
+  "recipe": "union_coil_green_h1",
+  "sells": [
+    "APPS",
+    "BAK",
+    "BAND",
+    "GPRO",
+    "PAGS",
+    "PAYP",
+    "VIST",
+    "WTI"
+  ],
+  "state": {
+    "after": "2026-09-14",
+    "cash": 9758.23,
+    "pos": {},
+    "yday_equity": 9758.23
+  }
+}

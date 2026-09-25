@@ -1,0 +1,129 @@
+{
+  "buys": [],
+  "cash": 9803.92,
+  "date": "2026-09-08",
+  "equity": 9803.92,
+  "fees": 32.0125,
+  "fills": [
+    {
+      "fees": 2.106,
+      "pnl": 36.13,
+      "price": 26.44,
+      "shares": 32,
+      "side": "SELL",
+      "ticker": "ASST"
+    },
+    {
+      "fees": 2.034,
+      "pnl": 17.31,
+      "price": 100.65,
+      "shares": 8,
+      "side": "SELL",
+      "ticker": "CRCL"
+    },
+    {
+      "fees": 2.013,
+      "pnl": 3.36,
+      "price": 521.15,
+      "shares": 1,
+      "side": "SELL",
+      "ticker": "DELL"
+    },
+    {
+      "fees": 2.4401,
+      "pnl": -2.07,
+      "price": 5.81,
+      "shares": 139,
+      "side": "SELL",
+      "ticker": "DFDV"
+    },
+    {
+      "fees": 2.157,
+      "pnl": 12.37,
+      "price": 16.74,
+      "shares": 49,
+      "side": "SELL",
+      "ticker": "FRNM"
+    },
+    {
+      "fees": 2.6755,
+      "pnl": 31.41,
+      "price": 4.13,
+      "shares": 204,
+      "side": "SELL",
+      "ticker": "GORO"
+    },
+    {
+      "fees": 7.1179,
+      "pnl": 32.1,
+      "price": 1.565,
+      "shares": 544,
+      "side": "SELL",
+      "ticker": "GPRO"
+    },
+    {
+      "fees": 2.028,
+      "pnl": 23.53,
+      "price": 125.07,
+      "shares": 6,
+      "side": "SELL",
+      "ticker": "HOOD"
+    },
+    {
+      "fees": 2.5604,
+      "pnl": -5.08,
+      "price": 4.53,
+      "shares": 177,
+      "side": "SELL",
+      "ticker": "IRD"
+    },
+    {
+      "fees": 2.4432,
+      "pnl": 23.15,
+      "price": 5.95,
+      "shares": 140,
+      "side": "SELL",
+      "ticker": "LENZ"
+    },
+    {
+      "fees": 2.3704,
+      "pnl": -49.17,
+      "price": 6.46,
+      "shares": 117,
+      "side": "SELL",
+      "ticker": "RSKD"
+    },
+    {
+      "fees": 2.067,
+      "pnl": 10.33,
+      "price": 43.05,
+      "shares": 19,
+      "side": "SELL",
+      "ticker": "SFBS"
+    }
+  ],
+  "holdings": [],
+  "mean": -1.4988,
+  "n_trades_today": 12,
+  "recipe": "union_hot_n12_h1",
+  "sells": [
+    "ASST",
+    "CRCL",
+    "DELL",
+    "DFDV",
+    "FRNM",
+    "GORO",
+    "GPRO",
+    "HOOD",
+    "IRD",
+    "LENZ",
+    "RSKD",
+    "SFBS"
+  ],
+  "state": {
+    "after": "2026-09-08",
+    "cash": 9803.92,
+    "pos": {},
+    "yday_equity": 9803.92
+  }
+}

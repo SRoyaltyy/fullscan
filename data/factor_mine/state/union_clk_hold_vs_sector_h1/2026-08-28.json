@@ -1,0 +1,215 @@
+{
+  "buys": [
+    "ANF",
+    "TGB",
+    "TH",
+    "RRC",
+    "FIGR",
+    "GAP",
+    "ABAT",
+    "HAFN"
+  ],
+  "cash": 153.25,
+  "date": "2026-08-28",
+  "equity": 9754.75,
+  "fees": 21.3661,
+  "fills": [
+    {
+      "fees": 2.014,
+      "pnl": null,
+      "price": 146.07,
+      "shares": 8,
+      "side": "BUY",
+      "ticker": "ANF"
+    },
+    {
+      "fees": 2.374,
+      "pnl": null,
+      "price": 9.75,
+      "shares": 128,
+      "side": "BUY",
+      "ticker": "TGB"
+    },
+    {
+      "fees": 2.185,
+      "pnl": null,
+      "price": 19.0,
+      "shares": 65,
+      "side": "BUY",
+      "ticker": "TH"
+    },
+    {
+      "fees": 2.077,
+      "pnl": null,
+      "price": 41.74,
+      "shares": 29,
+      "side": "BUY",
+      "ticker": "RRC"
+    },
+    {
+      "fees": 2.089,
+      "pnl": null,
+      "price": 37.49,
+      "shares": 33,
+      "side": "BUY",
+      "ticker": "FIGR"
+    },
+    {
+      "fees": 2.14,
+      "pnl": null,
+      "price": 24.69,
+      "shares": 50,
+      "side": "BUY",
+      "ticker": "GAP"
+    },
+    {
+      "fees": 6.0501,
+      "pnl": null,
+      "price": 2.66,
+      "shares": 469,
+      "side": "BUY",
+      "ticker": "ABAT"
+    },
+    {
+      "fees": 2.437,
+      "pnl": null,
+      "price": 8.35,
+      "shares": 149,
+      "side": "BUY",
+      "ticker": "HAFN"
+    }
+  ],
+  "holdings": [
+    "ABAT",
+    "ANF",
+    "FIGR",
+    "GAP",
+    "HAFN",
+    "RRC",
+    "TGB",
+    "TH"
+  ],
+  "mean": -2.4525,
+  "n_trades_today": 8,
+  "recipe": "union_clk_hold_vs_sector_h1",
+  "sells": [],
+  "state": {
+    "after": "2026-08-28",
+    "cash": 153.25,
+    "pos": {
+      "ABAT": {
+        "close_px": 2.569999933242798,
+        "cost": 1253.5901402545928,
+        "entry_date": "2026-08-28",
+        "entry_px": 2.6600000858306885,
+        "fee_in": 6.0501,
+        "last_px": 2.6600000858306885,
+        "min_hold": 1,
+        "notional": 1247.540040254593,
+        "peak_px": 2.6600000858306885,
+        "reason": "Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list ohlc_hot; \ud83d\udd35; ret5=+14.8; leftover $1250.00",
+        "shares": 469,
+        "ticker": "ABAT"
+      },
+      "ANF": {
+        "close_px": 148.4199981689453,
+        "cost": 1170.57405859375,
+        "entry_date": "2026-08-28",
+        "entry_px": 146.07000732421875,
+        "fee_in": 2.014,
+        "last_px": 146.07000732421875,
+        "min_hold": 1,
+        "notional": 1168.56005859375,
+        "peak_px": 146.07000732421875,
+        "reason": "Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+38.8; leftover $1250.00",
+        "shares": 8,
+        "ticker": "ANF"
+      },
+      "FIGR": {
+        "close_px": 36.04999923706055,
+        "cost": 1239.2590553894042,
+        "entry_date": "2026-08-28",
+        "entry_px": 37.4900016784668,
+        "fee_in": 2.089,
+        "last_px": 37.4900016784668,
+        "min_hold": 1,
+        "notional": 1237.1700553894043,
+        "peak_px": 37.4900016784668,
+        "reason": "Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list yday_mover; ret5=+5.4; leftover $1250.00",
+        "shares": 33,
+        "ticker": "FIGR"
+      },
+      "GAP": {
+        "close_px": 23.479999542236328,
+        "cost": 1236.640026702881,
+        "entry_date": "2026-08-28",
+        "entry_px": 24.690000534057617,
+        "fee_in": 2.14,
+        "last_px": 24.690000534057617,
+        "min_hold": 1,
+        "notional": 1234.5000267028809,
+        "peak_px": 24.690000534057617,
+        "reason": "Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list earn_react; ret5=+5.8; leftover $1250.00",
+        "shares": 50,
+        "ticker": "GAP"
+      },
+      "HAFN": {
+        "close_px": 8.470000267028809,
+        "cost": 1246.5870568389892,
+        "entry_date": "2026-08-28",
+        "entry_px": 8.350000381469727,
+        "fee_in": 2.437,
+        "last_px": 8.350000381469727,
+        "min_hold": 1,
+        "notional": 1244.1500568389893,
+        "peak_px": 8.350000381469727,
+        "reason": "Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list earn_react; ret5=+5.1; leftover $1250.00",
+        "shares": 149,
+        "ticker": "HAFN"
+      },
+      "RRC": {
+        "close_px": 41.459999084472656,
+        "cost": 1212.537048675537,
+        "entry_date": "2026-08-28",
+        "entry_px": 41.7400016784668,
+        "fee_in": 2.077,
+        "last_px": 41.7400016784668,
+        "min_hold": 1,
+        "notional": 1210.460048675537,
+        "peak_px": 41.7400016784668,
+        "reason": "Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list flatten; ret5=+2.4; leftover $1250.00",
+        "shares": 29,
+        "ticker": "RRC"
+      },
+      "TGB": {
+        "close_px": 9.180000305175781,
+        "cost": 1250.374,
+        "entry_date": "2026-08-28",
+        "entry_px": 9.75,
+        "fee_in": 2.374,
+        "last_px": 9.75,
+        "min_hold": 1,
+        "notional": 1248.0,
+        "peak_px": 9.75,
+        "reason": "Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list ohlc_hot; ret5=+11.4; leftover $1250.00",
+        "shares": 128,
+        "ticker": "TGB"
+      },
+      "TH": {
+        "close_px": 18.549999237060547,
+        "cost": 1237.185,
+        "entry_date": "2026-08-28",
+        "entry_px": 19.0,
+        "fee_in": 2.185,
+        "last_px": 19.0,
+        "min_hold": 1,
+        "notional": 1235.0,
+        "peak_px": 19.0,
+        "reason": "Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list ohlc_hot; ret5=+7.5; leftover $1250.00",
+        "shares": 65,
+        "ticker": "TH"
+      }
+    },
+    "yday_equity": 9754.75
+  }
+}

@@ -1,0 +1,288 @@
+{
+  "buys": [
+    "MXL",
+    "UMC",
+    "DXCM",
+    "ASST",
+    "CLSK",
+    "QUBT",
+    "ISRG",
+    "SHMD"
+  ],
+  "cash": 136.05,
+  "date": "2026-09-21",
+  "equity": 9986.52,
+  "fees": 39.8922,
+  "fills": [
+    {
+      "fees": 2.016,
+      "pnl": 69.01,
+      "price": 583.88,
+      "shares": 2,
+      "side": "SELL",
+      "ticker": "AMD"
+    },
+    {
+      "fees": 2.2818,
+      "pnl": -19.67,
+      "price": 13.9,
+      "shares": 89,
+      "side": "SELL",
+      "ticker": "BHVN"
+    },
+    {
+      "fees": 2.8202,
+      "pnl": 120.18,
+      "price": 6.415,
+      "shares": 215,
+      "side": "SELL",
+      "ticker": "BNC"
+    },
+    {
+      "fees": 4.5835,
+      "pnl": 36.4,
+      "price": 3.71,
+      "shares": 350,
+      "side": "SELL",
+      "ticker": "DDD"
+    },
+    {
+      "fees": 2.088,
+      "pnl": -32.5,
+      "price": 45.7,
+      "shares": 26,
+      "side": "SELL",
+      "ticker": "EWTX"
+    },
+    {
+      "fees": 2.2596,
+      "pnl": -209.5,
+      "price": 12.65,
+      "shares": 82,
+      "side": "SELL",
+      "ticker": "HELP"
+    },
+    {
+      "fees": 2.0433,
+      "pnl": 69.96,
+      "price": 116.53,
+      "shares": 11,
+      "side": "SELL",
+      "ticker": "INTC"
+    },
+    {
+      "fees": 2.5193,
+      "pnl": 6.48,
+      "price": 7.71,
+      "shares": 164,
+      "side": "SELL",
+      "ticker": "SHLS"
+    },
+    {
+      "fees": 2.035,
+      "pnl": null,
+      "price": 83.53,
+      "shares": 15,
+      "side": "BUY",
+      "ticker": "MXL"
+    },
+    {
+      "fees": 2.14,
+      "pnl": null,
+      "price": 24.93,
+      "shares": 50,
+      "side": "BUY",
+      "ticker": "UMC"
+    },
+    {
+      "fees": 2.032,
+      "pnl": null,
+      "price": 88.83,
+      "shares": 14,
+      "side": "BUY",
+      "ticker": "DXCM"
+    },
+    {
+      "fees": 2.107,
+      "pnl": null,
+      "price": 31.64,
+      "shares": 39,
+      "side": "BUY",
+      "ticker": "ASST"
+    },
+    {
+      "fees": 2.239,
+      "pnl": null,
+      "price": 15.115,
+      "shares": 83,
+      "side": "BUY",
+      "ticker": "CLSK"
+    },
+    {
+      "fees": 2.407,
+      "pnl": null,
+      "price": 9.0,
+      "shares": 139,
+      "side": "BUY",
+      "ticker": "QUBT"
+    },
+    {
+      "fees": 1.999,
+      "pnl": null,
+      "price": 393.89,
+      "shares": 3,
+      "side": "BUY",
+      "ticker": "ISRG"
+    },
+    {
+      "fees": 4.3215,
+      "pnl": null,
+      "price": 3.75,
+      "shares": 335,
+      "side": "BUY",
+      "ticker": "SHMD"
+    }
+  ],
+  "holdings": [
+    "ASST",
+    "CLSK",
+    "DXCM",
+    "ISRG",
+    "MXL",
+    "QUBT",
+    "SHMD",
+    "UMC"
+  ],
+  "mean": 2.2815,
+  "n_trades_today": 16,
+  "recipe": "union_clk_mom_break_peer_h1",
+  "sells": [
+    "AMD",
+    "BHVN",
+    "BNC",
+    "DDD",
+    "EWTX",
+    "HELP",
+    "INTC",
+    "SHLS"
+  ],
+  "state": {
+    "after": "2026-09-21",
+    "cash": 136.05,
+    "pos": {
+      "ASST": {
+        "close_px": 30.329999923706055,
+        "cost": 1236.066976196289,
+        "entry_date": "2026-09-21",
+        "entry_px": 31.639999389648438,
+        "fee_in": 2.107,
+        "last_px": 31.639999389648438,
+        "min_hold": 1,
+        "notional": 1233.959976196289,
+        "peak_px": 31.639999389648438,
+        "reason": "Clock-B #1 mom+breakout+peer/sector (research; not KEEP); gate clk_mom_break_peer=True; rank hot_score; list ohlc_hot; \ud83d\udd35; ret5=+8.9; leftover $1259.48",
+        "shares": 39,
+        "ticker": "ASST"
+      },
+      "CLSK": {
+        "close_px": 14.760000228881836,
+        "cost": 1256.7839810028076,
+        "entry_date": "2026-09-21",
+        "entry_px": 15.114999771118164,
+        "fee_in": 2.239,
+        "last_px": 15.114999771118164,
+        "min_hold": 1,
+        "notional": 1254.5449810028076,
+        "peak_px": 15.114999771118164,
+        "reason": "Clock-B #1 mom+breakout+peer/sector (research; not KEEP); gate clk_mom_break_peer=True; rank hot_score; list ohlc_hot; \ud83d\udd35; ret5=+5.9; leftover $1259.48",
+        "shares": 83,
+        "ticker": "CLSK"
+      },
+      "DXCM": {
+        "close_px": 89.16999816894531,
+        "cost": 1245.6520256347656,
+        "entry_date": "2026-09-21",
+        "entry_px": 88.83000183105469,
+        "fee_in": 2.032,
+        "last_px": 88.83000183105469,
+        "min_hold": 1,
+        "notional": 1243.6200256347656,
+        "peak_px": 88.83000183105469,
+        "reason": "Clock-B #1 mom+breakout+peer/sector (research; not KEEP); gate clk_mom_break_peer=True; rank hot_score; list flatten; \ud83d\udd35; \u26aa; ret5=+7.6; leftover $1259.48",
+        "shares": 14,
+        "ticker": "DXCM"
+      },
+      "ISRG": {
+        "close_px": 401.6499938964844,
+        "cost": 1183.6690439453125,
+        "entry_date": "2026-09-21",
+        "entry_px": 393.8900146484375,
+        "fee_in": 1.999,
+        "last_px": 393.8900146484375,
+        "min_hold": 1,
+        "notional": 1181.6700439453125,
+        "peak_px": 393.8900146484375,
+        "reason": "Clock-B #1 mom+breakout+peer/sector (research; not KEEP); gate clk_mom_break_peer=True; rank hot_score; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+6.6; leftover $1259.48",
+        "shares": 3,
+        "ticker": "ISRG"
+      },
+      "MXL": {
+        "close_px": 85.9800033569336,
+        "cost": 1254.9849816894532,
+        "entry_date": "2026-09-21",
+        "entry_px": 83.52999877929688,
+        "fee_in": 2.035,
+        "last_px": 83.52999877929688,
+        "min_hold": 1,
+        "notional": 1252.9499816894531,
+        "peak_px": 83.52999877929688,
+        "reason": "Clock-B #1 mom+breakout+peer/sector (research; not KEEP); gate clk_mom_break_peer=True; rank hot_score; list ohlc_hot; ret5=+8.8; leftover $1259.48",
+        "shares": 15,
+        "ticker": "MXL"
+      },
+      "QUBT": {
+        "close_px": 8.960000038146973,
+        "cost": 1253.407,
+        "entry_date": "2026-09-21",
+        "entry_px": 9.0,
+        "fee_in": 2.407,
+        "last_px": 9.0,
+        "min_hold": 1,
+        "notional": 1251.0,
+        "peak_px": 9.0,
+        "reason": "Clock-B #1 mom+breakout+peer/sector (research; not KEEP); gate clk_mom_break_peer=True; rank hot_score; list ohlc_hot; ret5=+8.9; leftover $1259.48",
+        "shares": 139,
+        "ticker": "QUBT"
+      },
+      "SHMD": {
+        "close_px": 3.5299999713897705,
+        "cost": 1260.5715,
+        "entry_date": "2026-09-21",
+        "entry_px": 3.75,
+        "fee_in": 4.3215,
+        "last_px": 3.75,
+        "min_hold": 1,
+        "notional": 1256.25,
+        "peak_px": 3.75,
+        "reason": "Clock-B #1 mom+breakout+peer/sector (research; not KEEP); gate clk_mom_break_peer=True; rank hot_score; list ohlc_hot; ret5=+9.2; leftover $1259.48",
+        "shares": 335,
+        "ticker": "SHMD"
+      },
+      "UMC": {
+        "close_px": 25.43000030517578,
+        "cost": 1248.6400152587892,
+        "entry_date": "2026-09-21",
+        "entry_px": 24.93000030517578,
+        "fee_in": 2.14,
+        "last_px": 24.93000030517578,
+        "min_hold": 1,
+        "notional": 1246.500015258789,
+        "peak_px": 24.93000030517578,
+        "reason": "Clock-B #1 mom+breakout+peer/sector (research; not KEEP); gate clk_mom_break_peer=True; rank hot_score; list ohlc_hot; ret5=+8.7; leftover $1259.48",
+        "shares": 50,
+        "ticker": "UMC"
+      }
+    },
+    "yday_equity": 9986.52
+  }
+}

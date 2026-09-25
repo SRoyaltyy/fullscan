@@ -1,0 +1,192 @@
+{
+  "buys": [
+    "BHVN",
+    "INTC",
+    "AMD",
+    "SHLS"
+  ],
+  "cash": 387.96,
+  "date": "2026-09-18",
+  "equity": 10121.06,
+  "fees": 28.6605,
+  "fills": [
+    {
+      "fees": 2.064,
+      "pnl": 28.47,
+      "price": 69.72,
+      "shares": 18,
+      "side": "SELL",
+      "ticker": "AXTI"
+    },
+    {
+      "fees": 2.5034,
+      "pnl": -20.87,
+      "price": 7.85,
+      "shares": 159,
+      "side": "SELL",
+      "ticker": "BULL"
+    },
+    {
+      "fees": 2.031,
+      "pnl": 13.18,
+      "price": 171.11,
+      "shares": 7,
+      "side": "SELL",
+      "ticker": "CRDO"
+    },
+    {
+      "fees": 2.317,
+      "pnl": 31.39,
+      "price": 13.0,
+      "shares": 100,
+      "side": "SELL",
+      "ticker": "EROC"
+    },
+    {
+      "fees": 2.013,
+      "pnl": -23.23,
+      "price": 915.66,
+      "shares": 1,
+      "side": "SELL",
+      "ticker": "LITE"
+    },
+    {
+      "fees": 2.2818,
+      "pnl": -120.24,
+      "price": 12.91,
+      "shares": 89,
+      "side": "SELL",
+      "ticker": "MAMA"
+    },
+    {
+      "fees": 2.5294,
+      "pnl": 60.11,
+      "price": 7.98,
+      "shares": 167,
+      "side": "SELL",
+      "ticker": "PGEN"
+    },
+    {
+      "fees": 2.0312,
+      "pnl": 76.32,
+      "price": 182.33,
+      "shares": 7,
+      "side": "SELL",
+      "ticker": "SMTC"
+    },
+    {
+      "fees": 2.533,
+      "pnl": null,
+      "price": 14.07,
+      "shares": 181,
+      "side": "BUY",
+      "ticker": "BHVN"
+    },
+    {
+      "fees": 2.059,
+      "pnl": null,
+      "price": 109.8,
+      "shares": 23,
+      "side": "BUY",
+      "ticker": "INTC"
+    },
+    {
+      "fees": 2.002,
+      "pnl": null,
+      "price": 547.37,
+      "shares": 4,
+      "side": "BUY",
+      "ticker": "AMD"
+    },
+    {
+      "fees": 4.2957,
+      "pnl": null,
+      "price": 7.64,
+      "shares": 333,
+      "side": "BUY",
+      "ticker": "SHLS"
+    }
+  ],
+  "holdings": [
+    "AMD",
+    "BHVN",
+    "INTC",
+    "SHLS"
+  ],
+  "mean": 0.378,
+  "n_trades_today": 12,
+  "recipe": "union_clk_fresh_cat_coil_opp_h1",
+  "sells": [
+    "AXTI",
+    "BULL",
+    "CRDO",
+    "EROC",
+    "LITE",
+    "MAMA",
+    "PGEN",
+    "SMTC"
+  ],
+  "state": {
+    "after": "2026-09-18",
+    "cash": 387.96,
+    "pos": {
+      "AMD": {
+        "close_px": 559.8200073242188,
+        "cost": 2191.48198046875,
+        "entry_date": "2026-09-18",
+        "entry_px": 547.3699951171875,
+        "fee_in": 2.002,
+        "last_px": 547.3699951171875,
+        "min_hold": 1,
+        "notional": 2189.47998046875,
+        "peak_px": 547.3699951171875,
+        "reason": "Clock-B #2 \u2229 Theme Radar T\u22121 oppset; gate clk_fresh_cat_coil=True,oppset=True; rank opp_rvol; list ohlc_hot; ret5=+8.2; leftover $2551.13",
+        "shares": 4,
+        "ticker": "AMD"
+      },
+      "BHVN": {
+        "close_px": 13.619999885559082,
+        "cost": 2549.2029447631835,
+        "entry_date": "2026-09-18",
+        "entry_px": 14.069999694824219,
+        "fee_in": 2.533,
+        "last_px": 14.069999694824219,
+        "min_hold": 1,
+        "notional": 2546.6699447631836,
+        "peak_px": 14.069999694824219,
+        "reason": "Clock-B #2 \u2229 Theme Radar T\u22121 oppset; gate clk_fresh_cat_coil=True,oppset=True; rank opp_rvol; list probable,yday_gainer,yday_mover; \ud83d\udd35; ret5=+8.6; leftover $2551.13",
+        "shares": 181,
+        "ticker": "BHVN"
+      },
+      "INTC": {
+        "close_px": 108.5999984741211,
+        "cost": 2527.45907019043,
+        "entry_date": "2026-09-18",
+        "entry_px": 109.80000305175781,
+        "fee_in": 2.059,
+        "last_px": 109.80000305175781,
+        "min_hold": 1,
+        "notional": 2525.4000701904297,
+        "peak_px": 109.80000305175781,
+        "reason": "Clock-B #2 \u2229 Theme Radar T\u22121 oppset; gate clk_fresh_cat_coil=True,oppset=True; rank opp_rvol; list ohlc_hot; \ud83d\udd35; ret5=+8.5; leftover $2551.13",
+        "shares": 23,
+        "ticker": "INTC"
+      },
+      "SHLS": {
+        "close_px": 7.599999904632568,
+        "cost": 2548.4156555397035,
+        "entry_date": "2026-09-18",
+        "entry_px": 7.639999866485596,
+        "fee_in": 4.2957,
+        "last_px": 7.639999866485596,
+        "min_hold": 1,
+        "notional": 2544.1199555397034,
+        "peak_px": 7.639999866485596,
+        "reason": "Clock-B #2 \u2229 Theme Radar T\u22121 oppset; gate clk_fresh_cat_coil=True,oppset=True; rank opp_rvol; list probable,yday_gainer; \ud83d\udd35; ret5=+7.6; leftover $2551.13",
+        "shares": 333,
+        "ticker": "SHLS"
+      }
+    },
+    "yday_equity": 10121.06
+  }
+}

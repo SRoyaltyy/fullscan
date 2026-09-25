@@ -1,0 +1,280 @@
+{
+  "buys": [
+    "BBNX",
+    "HQ",
+    "PLAY",
+    "DVLT",
+    "SION",
+    "CTMX",
+    "CRBP",
+    "EYPT"
+  ],
+  "cash": 14636.61,
+  "date": "2026-09-16",
+  "equity": 9526.02,
+  "fees": 59.3914,
+  "fills": [
+    {
+      "fees": 2.032,
+      "pnl": -37.56,
+      "price": 44.87,
+      "shares": 14,
+      "side": "COVER",
+      "ticker": "AXGN"
+    },
+    {
+      "fees": 2.131,
+      "pnl": 28.13,
+      "price": 12.34,
+      "shares": 47,
+      "side": "COVER",
+      "ticker": "BHVN"
+    },
+    {
+      "fees": 3.9087,
+      "pnl": 46.65,
+      "price": 1.85,
+      "shares": 303,
+      "side": "COVER",
+      "ticker": "CRDL"
+    },
+    {
+      "fees": 7.4644,
+      "pnl": 70.22,
+      "price": 0.731,
+      "shares": 724,
+      "side": "COVER",
+      "ticker": "LDI"
+    },
+    {
+      "fees": 2.089,
+      "pnl": -19.72,
+      "price": 19.03,
+      "shares": 33,
+      "side": "COVER",
+      "ticker": "REAX"
+    },
+    {
+      "fees": 2.515,
+      "pnl": -85.59,
+      "price": 3.98,
+      "shares": 175,
+      "side": "COVER",
+      "ticker": "RWT"
+    },
+    {
+      "fees": 2.218,
+      "pnl": -4.48,
+      "price": 8.02,
+      "shares": 76,
+      "side": "COVER",
+      "ticker": "TGB"
+    },
+    {
+      "fees": 2.068,
+      "pnl": -54.87,
+      "price": 25.58,
+      "shares": 26,
+      "side": "COVER",
+      "ticker": "TYRA"
+    },
+    {
+      "fees": 2.122315616973459,
+      "pnl": null,
+      "price": 18.61,
+      "shares": 32,
+      "side": "SHORT",
+      "ticker": "BBNX"
+    },
+    {
+      "fees": 2.1675980826338677,
+      "pnl": null,
+      "price": 12.89,
+      "shares": 47,
+      "side": "SHORT",
+      "ticker": "HQ"
+    },
+    {
+      "fees": 2.2985271236132268,
+      "pnl": null,
+      "price": 6.86,
+      "shares": 89,
+      "side": "SHORT",
+      "ticker": "PLAY"
+    },
+    {
+      "fees": 18.270980273597534,
+      "pnl": null,
+      "price": 0.16,
+      "shares": 3828,
+      "side": "SHORT",
+      "ticker": "DVLT"
+    },
+    {
+      "fees": 2.295356163923708,
+      "pnl": null,
+      "price": 6.95,
+      "shares": 88,
+      "side": "SHORT",
+      "ticker": "SION"
+    },
+    {
+      "fees": 2.966567123464036,
+      "pnl": null,
+      "price": 2.72,
+      "shares": 225,
+      "side": "SHORT",
+      "ticker": "CTMX"
+    },
+    {
+      "fees": 2.2985271236132268,
+      "pnl": null,
+      "price": 6.86,
+      "shares": 89,
+      "side": "SHORT",
+      "ticker": "CRBP"
+    },
+    {
+      "fees": 2.5454457538173627,
+      "pnl": null,
+      "price": 3.66,
+      "shares": 167,
+      "side": "SHORT",
+      "ticker": "EYPT"
+    }
+  ],
+  "holdings": [
+    "BBNX",
+    "CRBP",
+    "CTMX",
+    "DVLT",
+    "EYPT",
+    "HQ",
+    "PLAY",
+    "SION"
+  ],
+  "mean": -3.1458,
+  "n_trades_today": 16,
+  "recipe": "short_clk_neg_weak_fail_h3",
+  "sells": [
+    "AXGN",
+    "BHVN",
+    "CRDL",
+    "LDI",
+    "REAX",
+    "RWT",
+    "TGB",
+    "TYRA"
+  ],
+  "state": {
+    "after": "2026-09-16",
+    "cash": 14636.61,
+    "pos": {
+      "BBNX": {
+        "close_px": 22.18000030517578,
+        "cost": 2.122315616973459,
+        "entry_date": "2026-09-16",
+        "entry_px": 18.610000610351562,
+        "fee_in": 2.122315616973459,
+        "last_px": 18.610000610351562,
+        "notional": 595.52001953125,
+        "peak_px": 18.610000610351562,
+        "reason": "Clock-B #4 neg catalyst + weakness + failed recovery; gate clk_neg_weak_fail=True; list probable,yday_gainer,yday_mover; ret5=-0.5; leftover $612.62",
+        "shares": 32,
+        "ticker": "BBNX"
+      },
+      "CRBP": {
+        "close_px": 7.260000228881836,
+        "cost": 2.2985271236132268,
+        "entry_date": "2026-09-16",
+        "entry_px": 6.860000133514404,
+        "fee_in": 2.2985271236132268,
+        "last_px": 6.860000133514404,
+        "notional": 610.540011882782,
+        "peak_px": 6.860000133514404,
+        "reason": "Clock-B #4 neg catalyst + weakness + failed recovery; gate clk_neg_weak_fail=True; list yday_mover; ret5=-34.7; leftover $612.62",
+        "shares": 89,
+        "ticker": "CRBP"
+      },
+      "CTMX": {
+        "close_px": 2.765000104904175,
+        "cost": 2.966567123464036,
+        "entry_date": "2026-09-16",
+        "entry_px": 2.7200000286102295,
+        "fee_in": 2.966567123464036,
+        "last_px": 2.7200000286102295,
+        "notional": 612.0000064373016,
+        "peak_px": 2.7200000286102295,
+        "reason": "Clock-B #4 neg catalyst + weakness + failed recovery; gate clk_neg_weak_fail=True; list yday_mover; ret5=-26.3; leftover $612.62",
+        "shares": 225,
+        "ticker": "CTMX"
+      },
+      "DVLT": {
+        "close_px": 0.18000000715255737,
+        "cost": 18.270980273597534,
+        "entry_date": "2026-09-16",
+        "entry_px": 0.1599999964237213,
+        "fee_in": 18.270980273597534,
+        "last_px": 0.1599999964237213,
+        "notional": 612.4799863100052,
+        "peak_px": 0.1599999964237213,
+        "reason": "Clock-B #4 neg catalyst + weakness + failed recovery; gate clk_neg_weak_fail=True; list yday_mover; \ud83d\udd35; ret5=-23.8; leftover $612.62",
+        "shares": 3828,
+        "ticker": "DVLT"
+      },
+      "EYPT": {
+        "close_px": 3.450000047683716,
+        "cost": 2.5454457538173627,
+        "entry_date": "2026-09-16",
+        "entry_px": 3.6600000858306885,
+        "fee_in": 2.5454457538173627,
+        "last_px": 3.6600000858306885,
+        "notional": 611.220014333725,
+        "peak_px": 3.6600000858306885,
+        "reason": "Clock-B #4 neg catalyst + weakness + failed recovery; gate clk_neg_weak_fail=True; list yday_mover; \ud83d\udd35; ret5=-19.7; leftover $612.62",
+        "shares": 167,
+        "ticker": "EYPT"
+      },
+      "HQ": {
+        "close_px": 13.5600004196167,
+        "cost": 2.1675980826338677,
+        "entry_date": "2026-09-16",
+        "entry_px": 12.890000343322754,
+        "fee_in": 2.1675980826338677,
+        "last_px": 12.890000343322754,
+        "notional": 605.8300161361694,
+        "peak_px": 12.890000343322754,
+        "reason": "Clock-B #4 neg catalyst + weakness + failed recovery; gate clk_neg_weak_fail=True; list yday_gainer,yday_mover; \ud83d\udd35; ret5=-18.2; leftover $612.62",
+        "shares": 47,
+        "ticker": "HQ"
+      },
+      "PLAY": {
+        "close_px": 6.860000133514404,
+        "cost": 2.2985271236132268,
+        "entry_date": "2026-09-16",
+        "entry_px": 6.860000133514404,
+        "fee_in": 2.2985271236132268,
+        "last_px": 6.860000133514404,
+        "notional": 610.540011882782,
+        "peak_px": 6.860000133514404,
+        "reason": "Clock-B #4 neg catalyst + weakness + failed recovery; gate clk_neg_weak_fail=True; list yday_mover; \ud83d\udd35; ret5=-22.4; leftover $612.62",
+        "shares": 89,
+        "ticker": "PLAY"
+      },
+      "SION": {
+        "close_px": 7.039999961853027,
+        "cost": 2.295356163923708,
+        "entry_date": "2026-09-16",
+        "entry_px": 6.949999809265137,
+        "fee_in": 2.295356163923708,
+        "last_px": 6.949999809265137,
+        "notional": 611.599983215332,
+        "peak_px": 6.949999809265137,
+        "reason": "Clock-B #4 neg catalyst + weakness + failed recovery; gate clk_neg_weak_fail=True; list yday_mover; ret5=-5.8; leftover $612.62",
+        "shares": 88,
+        "ticker": "SION"
+      }
+    },
+    "yday_equity": 9526.02
+  }
+}

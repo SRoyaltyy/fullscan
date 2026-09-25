@@ -1,0 +1,264 @@
+{
+  "buys": [
+    "EYPT",
+    "BHVN",
+    "BNC",
+    "DDD",
+    "RANI",
+    "RARE",
+    "SHLS"
+  ],
+  "cash": 2.5,
+  "date": "2026-09-18",
+  "equity": 10135.99,
+  "fees": 71.3431,
+  "fills": [
+    {
+      "fees": 11.3121,
+      "pnl": -65.72,
+      "price": 1.41,
+      "shares": 865,
+      "side": "SELL",
+      "ticker": "AIB"
+    },
+    {
+      "fees": 2.154,
+      "pnl": 4.83,
+      "price": 26.14,
+      "shares": 48,
+      "side": "SELL",
+      "ticker": "ARQT"
+    },
+    {
+      "fees": 2.064,
+      "pnl": 28.47,
+      "price": 69.72,
+      "shares": 18,
+      "side": "SELL",
+      "ticker": "AXTI"
+    },
+    {
+      "fees": 2.2511,
+      "pnl": 119.55,
+      "price": 17.44,
+      "shares": 79,
+      "side": "SELL",
+      "ticker": "BRUN"
+    },
+    {
+      "fees": 2.2216,
+      "pnl": -20.87,
+      "price": 17.8,
+      "shares": 70,
+      "side": "SELL",
+      "ticker": "CIFR"
+    },
+    {
+      "fees": 2.317,
+      "pnl": 31.39,
+      "price": 13.0,
+      "shares": 100,
+      "side": "SELL",
+      "ticker": "EROC"
+    },
+    {
+      "fees": 6.8827,
+      "pnl": -71.53,
+      "price": 2.29,
+      "shares": 526,
+      "side": "SELL",
+      "ticker": "SABR"
+    },
+    {
+      "fees": 2.0312,
+      "pnl": 76.32,
+      "price": 182.33,
+      "shares": 7,
+      "side": "SELL",
+      "ticker": "SMTC"
+    },
+    {
+      "fees": 4.7601,
+      "pnl": null,
+      "price": 3.95,
+      "shares": 369,
+      "side": "BUY",
+      "ticker": "EYPT"
+    },
+    {
+      "fees": 2.299,
+      "pnl": null,
+      "price": 14.07,
+      "shares": 103,
+      "side": "BUY",
+      "ticker": "BHVN"
+    },
+    {
+      "fees": 3.225,
+      "pnl": null,
+      "price": 5.83,
+      "shares": 250,
+      "side": "BUY",
+      "ticker": "BNC"
+    },
+    {
+      "fees": 5.2503,
+      "pnl": null,
+      "price": 3.58,
+      "shares": 407,
+      "side": "BUY",
+      "ticker": "DDD"
+    },
+    {
+      "fees": 19.734,
+      "pnl": null,
+      "price": 0.85,
+      "shares": 1716,
+      "side": "BUY",
+      "ticker": "RANI"
+    },
+    {
+      "fees": 2.284,
+      "pnl": null,
+      "price": 14.79,
+      "shares": 98,
+      "side": "BUY",
+      "ticker": "RARE"
+    },
+    {
+      "fees": 2.557,
+      "pnl": null,
+      "price": 7.64,
+      "shares": 189,
+      "side": "BUY",
+      "ticker": "SHLS"
+    }
+  ],
+  "holdings": [
+    "BHVN",
+    "BNC",
+    "DDD",
+    "EYPT",
+    "RANI",
+    "RARE",
+    "SHLS"
+  ],
+  "mean": 0.6059,
+  "n_trades_today": 15,
+  "recipe": "probable_probable_ok_h1",
+  "sells": [
+    "AIB",
+    "ARQT",
+    "AXTI",
+    "BRUN",
+    "CIFR",
+    "EROC",
+    "SABR",
+    "SMTC"
+  ],
+  "state": {
+    "after": "2026-09-18",
+    "cash": 2.5,
+    "pos": {
+      "BHVN": {
+        "close_px": 13.619999885559082,
+        "cost": 1451.5089685668945,
+        "entry_date": "2026-09-18",
+        "entry_px": 14.069999694824219,
+        "fee_in": 2.299,
+        "last_px": 14.069999694824219,
+        "min_hold": 1,
+        "notional": 1449.2099685668945,
+        "peak_px": 14.069999694824219,
+        "reason": "combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer,yday_mover; \ud83d\udd35; ret5=+8.6; leftover $1459.42",
+        "shares": 103,
+        "ticker": "BHVN"
+      },
+      "BNC": {
+        "close_px": 5.980000019073486,
+        "cost": 1460.7249809265136,
+        "entry_date": "2026-09-18",
+        "entry_px": 5.829999923706055,
+        "fee_in": 3.225,
+        "last_px": 5.829999923706055,
+        "min_hold": 1,
+        "notional": 1457.4999809265137,
+        "peak_px": 5.829999923706055,
+        "reason": "combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer,yday_mover,ohlc_hot; \ud83d\udd35; ret5=+8.6; leftover $1459.42",
+        "shares": 250,
+        "ticker": "BNC"
+      },
+      "DDD": {
+        "close_px": 3.630000114440918,
+        "cost": 1462.3102689483642,
+        "entry_date": "2026-09-18",
+        "entry_px": 3.5799999237060547,
+        "fee_in": 5.2503,
+        "last_px": 3.5799999237060547,
+        "min_hold": 1,
+        "notional": 1457.0599689483643,
+        "peak_px": 3.5799999237060547,
+        "reason": "combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer; \ud83d\udd35; ret5=+8.3; leftover $1459.42",
+        "shares": 407,
+        "ticker": "DDD"
+      },
+      "EYPT": {
+        "close_px": 3.8499999046325684,
+        "cost": 1462.310117595291,
+        "entry_date": "2026-09-18",
+        "entry_px": 3.950000047683716,
+        "fee_in": 4.7601,
+        "last_px": 3.950000047683716,
+        "min_hold": 1,
+        "notional": 1457.5500175952911,
+        "peak_px": 3.950000047683716,
+        "reason": "combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer,yday_mover; \ud83d\udd35; ret5=-6.1; leftover $1459.42",
+        "shares": 369,
+        "ticker": "EYPT"
+      },
+      "RANI": {
+        "close_px": 0.8619999885559082,
+        "cost": 1478.334040912628,
+        "entry_date": "2026-09-18",
+        "entry_px": 0.8500000238418579,
+        "fee_in": 19.734,
+        "last_px": 0.8500000238418579,
+        "min_hold": 1,
+        "notional": 1458.6000409126282,
+        "peak_px": 0.8500000238418579,
+        "reason": "combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer; ret5=+3.6; leftover $1459.42",
+        "shares": 1716,
+        "ticker": "RANI"
+      },
+      "RARE": {
+        "close_px": 14.510000228881836,
+        "cost": 1451.7039962615968,
+        "entry_date": "2026-09-18",
+        "entry_px": 14.789999961853027,
+        "fee_in": 2.284,
+        "last_px": 14.789999961853027,
+        "min_hold": 1,
+        "notional": 1449.4199962615967,
+        "peak_px": 14.789999961853027,
+        "reason": "combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer; \ud83d\udd35; \u26aa; ret5=+0.7; leftover $1459.42",
+        "shares": 98,
+        "ticker": "RARE"
+      },
+      "SHLS": {
+        "close_px": 7.599999904632568,
+        "cost": 1446.5169747657776,
+        "entry_date": "2026-09-18",
+        "entry_px": 7.639999866485596,
+        "fee_in": 2.557,
+        "last_px": 7.639999866485596,
+        "min_hold": 1,
+        "notional": 1443.9599747657776,
+        "peak_px": 7.639999866485596,
+        "reason": "combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer; \ud83d\udd35; ret5=+7.6; leftover $1459.42",
+        "shares": 189,
+        "ticker": "SHLS"
+      }
+    },
+    "yday_equity": 10135.99
+  }
+}

@@ -1,0 +1,246 @@
+{
+  "buys": [
+    "PGEN",
+    "XENE",
+    "KDK",
+    "ABVX",
+    "MLKN",
+    "THO"
+  ],
+  "cash": 163.89,
+  "date": "2026-09-21",
+  "equity": 7640.4,
+  "fees": 73.7917,
+  "fills": [
+    {
+      "fees": 2.3166,
+      "pnl": -201.61,
+      "price": 8.33,
+      "shares": 100,
+      "side": "SELL",
+      "ticker": "ALHC"
+    },
+    {
+      "fees": 2.228,
+      "pnl": -51.95,
+      "price": 13.65,
+      "shares": 72,
+      "side": "SELL",
+      "ticker": "AVAH"
+    },
+    {
+      "fees": 30.9556,
+      "pnl": -60.82,
+      "price": 0.16,
+      "shares": 6493,
+      "side": "SELL",
+      "ticker": "DVLT"
+    },
+    {
+      "fees": 12.9693,
+      "pnl": -158.65,
+      "price": 0.737,
+      "shares": 1230,
+      "side": "SELL",
+      "ticker": "NMRA"
+    },
+    {
+      "fees": 2.4781,
+      "pnl": -32.1,
+      "price": 6.68,
+      "shares": 151,
+      "side": "SELL",
+      "ticker": "PLAY"
+    },
+    {
+      "fees": 2.127,
+      "pnl": -17.1,
+      "price": 25.94,
+      "shares": 39,
+      "side": "SELL",
+      "ticker": "WAY"
+    },
+    {
+      "fees": 5.6806,
+      "pnl": 136.28,
+      "price": 2.68,
+      "shares": 434,
+      "side": "SELL",
+      "ticker": "ZSQR"
+    },
+    {
+      "fees": 2.428,
+      "pnl": null,
+      "price": 7.84,
+      "shares": 146,
+      "side": "BUY",
+      "ticker": "PGEN"
+    },
+    {
+      "fees": 2.074,
+      "pnl": null,
+      "price": 40.0,
+      "shares": 28,
+      "side": "BUY",
+      "ticker": "XENE"
+    },
+    {
+      "fees": 4.3215,
+      "pnl": null,
+      "price": 3.42,
+      "shares": 335,
+      "side": "BUY",
+      "ticker": "KDK"
+    },
+    {
+      "fees": 2.02,
+      "pnl": null,
+      "price": 105.72,
+      "shares": 10,
+      "side": "BUY",
+      "ticker": "ABVX"
+    },
+    {
+      "fees": 2.155,
+      "pnl": null,
+      "price": 20.85,
+      "shares": 55,
+      "side": "BUY",
+      "ticker": "MLKN"
+    },
+    {
+      "fees": 2.038,
+      "pnl": null,
+      "price": 68.39,
+      "shares": 16,
+      "side": "BUY",
+      "ticker": "THO"
+    }
+  ],
+  "holdings": [
+    "ABVX",
+    "KDK",
+    "MLKN",
+    "PGEN",
+    "SION",
+    "THO",
+    "XENE"
+  ],
+  "mean": -1.5511,
+  "n_trades_today": 13,
+  "recipe": "union_last_red_h3",
+  "sells": [
+    "ALHC",
+    "AVAH",
+    "DVLT",
+    "NMRA",
+    "PLAY",
+    "WAY",
+    "ZSQR"
+  ],
+  "state": {
+    "after": "2026-09-21",
+    "cash": 163.89,
+    "pos": {
+      "ABVX": {
+        "close_px": 103.44999694824219,
+        "cost": 1059.2200122070312,
+        "entry_date": "2026-09-21",
+        "entry_px": 105.72000122070312,
+        "fee_in": 2.02,
+        "last_px": 105.72000122070312,
+        "min_hold": 3,
+        "notional": 1057.2000122070312,
+        "peak_px": 105.72000122070312,
+        "reason": "union \u2229 last_red, no \ud83d\udea8; gate last_red=True; list overnight; ret5=-11.5; leftover $1147.91",
+        "shares": 10,
+        "ticker": "ABVX"
+      },
+      "KDK": {
+        "close_px": 3.2699999809265137,
+        "cost": 1150.0215255584717,
+        "entry_date": "2026-09-21",
+        "entry_px": 3.4200000762939453,
+        "fee_in": 4.3215,
+        "last_px": 3.4200000762939453,
+        "min_hold": 3,
+        "notional": 1145.7000255584717,
+        "peak_px": 3.4200000762939453,
+        "reason": "union \u2229 last_red, no \ud83d\udea8; gate last_red=True; list yday_mover; ret5=-12.3; leftover $1147.91",
+        "shares": 335,
+        "ticker": "KDK"
+      },
+      "MLKN": {
+        "close_px": 20.31999969482422,
+        "cost": 1148.905020980835,
+        "entry_date": "2026-09-21",
+        "entry_px": 20.850000381469727,
+        "fee_in": 2.155,
+        "last_px": 20.850000381469727,
+        "min_hold": 3,
+        "notional": 1146.750020980835,
+        "peak_px": 20.850000381469727,
+        "reason": "union \u2229 last_red, no \ud83d\udea8; gate last_red=True; list overnight; ret5=-2.5; leftover $1147.91",
+        "shares": 55,
+        "ticker": "MLKN"
+      },
+      "PGEN": {
+        "close_px": 7.699999809265137,
+        "cost": 1147.0680222778321,
+        "entry_date": "2026-09-21",
+        "entry_px": 7.840000152587891,
+        "fee_in": 2.428,
+        "last_px": 7.840000152587891,
+        "min_hold": 3,
+        "notional": 1144.640022277832,
+        "peak_px": 7.840000152587891,
+        "reason": "union \u2229 last_red, no \ud83d\udea8; gate last_red=True; list flatten; \u26aa; ret5=+13.6; leftover $1147.91",
+        "shares": 146,
+        "ticker": "PGEN"
+      },
+      "SION": {
+        "close_px": 6.0,
+        "cost": 1037.9869715805053,
+        "entry_date": "2026-09-16",
+        "entry_px": 6.949999809265137,
+        "fee_in": 2.437,
+        "last_px": 6.0,
+        "min_hold": 3,
+        "notional": 1035.5499715805054,
+        "peak_px": 7.269999980926514,
+        "reason": "union \u2229 last_red, no \ud83d\udea8; gate last_red=True; list yday_mover; ret5=-5.8; leftover $1038.93",
+        "shares": 149,
+        "ticker": "SION"
+      },
+      "THO": {
+        "close_px": 69.94000244140625,
+        "cost": 1096.277990234375,
+        "entry_date": "2026-09-21",
+        "entry_px": 68.38999938964844,
+        "fee_in": 2.038,
+        "last_px": 68.38999938964844,
+        "min_hold": 3,
+        "notional": 1094.239990234375,
+        "peak_px": 68.38999938964844,
+        "reason": "union \u2229 last_red, no \ud83d\udea8; gate last_red=True; list overnight; ret5=-7.0; leftover $1147.91",
+        "shares": 16,
+        "ticker": "THO"
+      },
+      "XENE": {
+        "close_px": 38.9900016784668,
+        "cost": 1122.074,
+        "entry_date": "2026-09-21",
+        "entry_px": 40.0,
+        "fee_in": 2.074,
+        "last_px": 40.0,
+        "min_hold": 3,
+        "notional": 1120.0,
+        "peak_px": 40.0,
+        "reason": "union \u2229 last_red, no \ud83d\udea8; gate last_red=True; list yday_mover; \ud83d\udd35; ret5=-32.2; leftover $1147.91",
+        "shares": 28,
+        "ticker": "XENE"
+      }
+    },
+    "yday_equity": 7640.4
+  }
+}

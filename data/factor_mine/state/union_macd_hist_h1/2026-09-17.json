@@ -1,0 +1,270 @@
+{
+  "buys": [
+    "BYND",
+    "SMTC",
+    "CVLT",
+    "GME",
+    "INDP",
+    "CPRI",
+    "LPG"
+  ],
+  "cash": 91.64,
+  "date": "2026-09-17",
+  "equity": 9979.04,
+  "fees": 31.6536,
+  "fills": [
+    {
+      "fees": 2.037,
+      "pnl": -31.23,
+      "price": 120.07,
+      "shares": 9,
+      "side": "SELL",
+      "ticker": "CRUS"
+    },
+    {
+      "fees": 2.016,
+      "pnl": -13.13,
+      "price": 425.56,
+      "shares": 2,
+      "side": "SELL",
+      "ticker": "FFIV"
+    },
+    {
+      "fees": 2.013,
+      "pnl": -1.48,
+      "price": 682.44,
+      "shares": 1,
+      "side": "SELL",
+      "ticker": "META"
+    },
+    {
+      "fees": 2.028,
+      "pnl": -25.16,
+      "price": 183.0,
+      "shares": 6,
+      "side": "SELL",
+      "ticker": "OKTA"
+    },
+    {
+      "fees": 2.028,
+      "pnl": 3.04,
+      "price": 190.35,
+      "shares": 6,
+      "side": "SELL",
+      "ticker": "QCOM"
+    },
+    {
+      "fees": 2.049,
+      "pnl": -38.14,
+      "price": 86.76,
+      "shares": 13,
+      "side": "SELL",
+      "ticker": "SWKS"
+    },
+    {
+      "fees": 2.019,
+      "pnl": 5.25,
+      "price": 366.2,
+      "shares": 3,
+      "side": "SELL",
+      "ticker": "WST"
+    },
+    {
+      "fees": 2.311,
+      "pnl": null,
+      "price": 11.19,
+      "shares": 107,
+      "side": "BUY",
+      "ticker": "BYND"
+    },
+    {
+      "fees": 2.011,
+      "pnl": null,
+      "price": 170.85,
+      "shares": 7,
+      "side": "BUY",
+      "ticker": "SMTC"
+    },
+    {
+      "fees": 2.014,
+      "pnl": null,
+      "price": 145.98,
+      "shares": 8,
+      "side": "BUY",
+      "ticker": "CVLT"
+    },
+    {
+      "fees": 2.152,
+      "pnl": null,
+      "price": 22.12,
+      "shares": 54,
+      "side": "BUY",
+      "ticker": "GME"
+    },
+    {
+      "fees": 4.6956,
+      "pnl": null,
+      "price": 3.3,
+      "shares": 364,
+      "side": "BUY",
+      "ticker": "INDP"
+    },
+    {
+      "fees": 2.23,
+      "pnl": null,
+      "price": 15.01,
+      "shares": 80,
+      "side": "BUY",
+      "ticker": "CPRI"
+    },
+    {
+      "fees": 2.05,
+      "pnl": null,
+      "price": 57.93,
+      "shares": 20,
+      "side": "BUY",
+      "ticker": "LPG"
+    }
+  ],
+  "holdings": [
+    "APH",
+    "BYND",
+    "CPRI",
+    "CVLT",
+    "GME",
+    "INDP",
+    "LPG",
+    "SMTC"
+  ],
+  "mean": 4.6397,
+  "n_trades_today": 14,
+  "recipe": "union_macd_hist_h1",
+  "sells": [
+    "CRUS",
+    "FFIV",
+    "META",
+    "OKTA",
+    "QCOM",
+    "SWKS",
+    "WST"
+  ],
+  "state": {
+    "after": "2026-09-17",
+    "cash": 91.64,
+    "pos": {
+      "APH": {
+        "close_px": 78.37000274658203,
+        "cost": 1187.3349496459962,
+        "entry_date": "2026-09-16",
+        "entry_px": 79.0199966430664,
+        "fee_in": 2.035,
+        "last_px": 78.86000061035156,
+        "min_hold": 1,
+        "notional": 1185.299949645996,
+        "peak_px": 79.0199966430664,
+        "reason": "rank by macd_hist; rank macd_hist; list ohlc_hot; ret5=-5.0; leftover $1214.18",
+        "shares": 15,
+        "ticker": "APH"
+      },
+      "BYND": {
+        "close_px": 11.699999809265137,
+        "cost": 1199.640955101013,
+        "entry_date": "2026-09-17",
+        "entry_px": 11.1899995803833,
+        "fee_in": 2.311,
+        "last_px": 11.1899995803833,
+        "min_hold": 1,
+        "notional": 1197.3299551010132,
+        "peak_px": 11.1899995803833,
+        "reason": "rank by macd_hist; rank macd_hist; list yday_gainer; ret5=+0.5; leftover $1203.61",
+        "shares": 107,
+        "ticker": "BYND"
+      },
+      "CPRI": {
+        "close_px": 14.949999809265137,
+        "cost": 1203.030018310547,
+        "entry_date": "2026-09-17",
+        "entry_px": 15.010000228881836,
+        "fee_in": 2.23,
+        "last_px": 15.010000228881836,
+        "min_hold": 1,
+        "notional": 1200.8000183105469,
+        "peak_px": 15.010000228881836,
+        "reason": "rank by macd_hist; rank macd_hist; list ohlc_hot; \ud83d\udd35; ret5=+15.9; leftover $1203.61",
+        "shares": 80,
+        "ticker": "CPRI"
+      },
+      "CVLT": {
+        "close_px": 148.7899932861328,
+        "cost": 1169.8539658203124,
+        "entry_date": "2026-09-17",
+        "entry_px": 145.97999572753906,
+        "fee_in": 2.014,
+        "last_px": 145.97999572753906,
+        "min_hold": 1,
+        "notional": 1167.8399658203125,
+        "peak_px": 145.97999572753906,
+        "reason": "rank by macd_hist; rank macd_hist; list ohlc_hot; ret5=+10.3; leftover $1203.61",
+        "shares": 8,
+        "ticker": "CVLT"
+      },
+      "GME": {
+        "close_px": 22.770000457763672,
+        "cost": 1196.6320453186036,
+        "entry_date": "2026-09-17",
+        "entry_px": 22.1200008392334,
+        "fee_in": 2.152,
+        "last_px": 22.1200008392334,
+        "min_hold": 1,
+        "notional": 1194.4800453186035,
+        "peak_px": 22.1200008392334,
+        "reason": "rank by macd_hist; rank macd_hist; list ohlc_hot; \ud83d\udd35; ret5=+10.5; leftover $1203.61",
+        "shares": 54,
+        "ticker": "GME"
+      },
+      "INDP": {
+        "close_px": 3.930000066757202,
+        "cost": 1205.8955826431275,
+        "entry_date": "2026-09-17",
+        "entry_px": 3.299999952316284,
+        "fee_in": 4.6956,
+        "last_px": 3.299999952316284,
+        "min_hold": 1,
+        "notional": 1201.1999826431274,
+        "peak_px": 3.299999952316284,
+        "reason": "rank by macd_hist; rank macd_hist; list yday_mover; ret5=+54.3; leftover $1203.61",
+        "shares": 364,
+        "ticker": "INDP"
+      },
+      "LPG": {
+        "close_px": 58.310001373291016,
+        "cost": 1160.6500061035156,
+        "entry_date": "2026-09-17",
+        "entry_px": 57.93000030517578,
+        "fee_in": 2.05,
+        "last_px": 57.93000030517578,
+        "min_hold": 1,
+        "notional": 1158.6000061035156,
+        "peak_px": 57.93000030517578,
+        "reason": "rank by macd_hist; rank macd_hist; list ohlc_hot; ret5=+7.9; leftover $1203.61",
+        "shares": 20,
+        "ticker": "LPG"
+      },
+      "SMTC": {
+        "close_px": 178.19000244140625,
+        "cost": 1197.9610427246093,
+        "entry_date": "2026-09-17",
+        "entry_px": 170.85000610351562,
+        "fee_in": 2.011,
+        "last_px": 170.85000610351562,
+        "min_hold": 1,
+        "notional": 1195.9500427246094,
+        "peak_px": 170.85000610351562,
+        "reason": "rank by macd_hist; rank macd_hist; list probable,yday_gainer,yday_mover; \ud83d\udd35; ret5=+2.2; leftover $1203.61",
+        "shares": 7,
+        "ticker": "SMTC"
+      }
+    },
+    "yday_equity": 9979.04
+  }
+}

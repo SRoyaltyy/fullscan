@@ -1,0 +1,92 @@
+{
+  "buys": [
+    "BB"
+  ],
+  "cash": 4.53,
+  "date": "2026-09-23",
+  "equity": 9301.75,
+  "fees": 0.267,
+  "fills": [
+    {
+      "fees": 0.267,
+      "pnl": null,
+      "price": 8.6,
+      "shares": 3,
+      "side": "BUY",
+      "ticker": "BB"
+    }
+  ],
+  "holdings": [
+    "A",
+    "BB",
+    "NEO",
+    "PGEN"
+  ],
+  "mean": -3.2019,
+  "n_trades_today": 1,
+  "recipe": "union_flow_in_white_h3",
+  "sells": [],
+  "state": {
+    "after": "2026-09-23",
+    "cash": 4.53,
+    "pos": {
+      "A": {
+        "close_px": 165.32000732421875,
+        "cost": 3159.44990234375,
+        "entry_date": "2026-09-21",
+        "entry_px": 157.8699951171875,
+        "fee_in": 2.05,
+        "last_px": 166.5399932861328,
+        "min_hold": 3,
+        "notional": 3157.39990234375,
+        "peak_px": 166.5399932861328,
+        "reason": "combo gate; gate flow_in=True,zero_red=True; list flatten; \ud83d\udd35; \u26aa; ret5=+6.5; leftover $3191.95",
+        "shares": 20,
+        "ticker": "A"
+      },
+      "BB": {
+        "close_px": 8.380000114440918,
+        "cost": 26.06700114440918,
+        "entry_date": "2026-09-23",
+        "entry_px": 8.600000381469727,
+        "fee_in": 0.267,
+        "last_px": 8.600000381469727,
+        "min_hold": 3,
+        "notional": 25.80000114440918,
+        "peak_px": 8.600000381469727,
+        "reason": "combo gate; gate flow_in=True,zero_red=True; list overnight; \ud83d\udd35; \u26aa; ret5=+10.5; leftover $30.60",
+        "shares": 3,
+        "ticker": "BB"
+      },
+      "NEO": {
+        "close_px": 18.360000610351562,
+        "cost": 3189.670012207031,
+        "entry_date": "2026-09-21",
+        "entry_px": 19.920000076293945,
+        "fee_in": 2.47,
+        "last_px": 18.690000534057617,
+        "min_hold": 3,
+        "notional": 3187.2000122070312,
+        "peak_px": 19.920000076293945,
+        "reason": "combo gate; gate flow_in=True,zero_red=True; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+15.0; leftover $3191.95",
+        "shares": 160,
+        "ticker": "NEO"
+      },
+      "PGEN": {
+        "close_px": 7.440000057220459,
+        "cost": 3196.1303621032716,
+        "entry_date": "2026-09-21",
+        "entry_px": 7.840000152587891,
+        "fee_in": 5.2503,
+        "last_px": 7.949999809265137,
+        "min_hold": 3,
+        "notional": 3190.8800621032715,
+        "peak_px": 7.949999809265137,
+        "reason": "combo gate; gate flow_in=True,zero_red=True; list flatten; \u26aa; ret5=+13.6; leftover $3191.95",
+        "shares": 407,
+        "ticker": "PGEN"
+      }
+    },
+    "yday_equity": 9301.75
+  }
+}

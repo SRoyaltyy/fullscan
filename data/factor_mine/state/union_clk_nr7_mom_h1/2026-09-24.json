@@ -1,0 +1,75 @@
+{
+  "buys": [],
+  "cash": 10706.96,
+  "date": "2026-09-24",
+  "equity": 10706.96,
+  "fees": 12.5941,
+  "fills": [
+    {
+      "fees": 2.0374,
+      "pnl": -53.81,
+      "price": 208.88,
+      "shares": 8,
+      "side": "SELL",
+      "ticker": "DRI"
+    },
+    {
+      "fees": 2.074,
+      "pnl": -40.52,
+      "price": 87.68,
+      "shares": 20,
+      "side": "SELL",
+      "ticker": "DXCM"
+    },
+    {
+      "fees": 2.2922,
+      "pnl": -81.91,
+      "price": 19.4,
+      "shares": 91,
+      "side": "SELL",
+      "ticker": "FTRE"
+    },
+    {
+      "fees": 2.1222,
+      "pnl": -48.14,
+      "price": 49.29,
+      "shares": 36,
+      "side": "SELL",
+      "ticker": "FUL"
+    },
+    {
+      "fees": 2.0306,
+      "pnl": -132.08,
+      "price": 262.12,
+      "shares": 6,
+      "side": "SELL",
+      "ticker": "SNX"
+    },
+    {
+      "fees": 2.0377,
+      "pnl": -0.25,
+      "price": 213.475,
+      "shares": 8,
+      "side": "SELL",
+      "ticker": "ZS"
+    }
+  ],
+  "holdings": [],
+  "mean": -2.3577,
+  "n_trades_today": 6,
+  "recipe": "union_clk_nr7_mom_h1",
+  "sells": [
+    "DRI",
+    "DXCM",
+    "FTRE",
+    "FUL",
+    "SNX",
+    "ZS"
+  ],
+  "state": {
+    "after": "2026-09-24",
+    "cash": 10706.96,
+    "pos": {},
+    "yday_equity": 10706.96
+  }
+}

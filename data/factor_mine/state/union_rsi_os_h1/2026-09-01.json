@@ -1,0 +1,30 @@
+{
+  "buys": [],
+  "cash": 9233.77,
+  "date": "2026-09-01",
+  "equity": 9233.77,
+  "fees": 37.5618,
+  "fills": [
+    {
+      "fees": 37.5618,
+      "pnl": -505.57,
+      "price": 1.01,
+      "shares": 2873,
+      "side": "SELL",
+      "ticker": "LX"
+    }
+  ],
+  "holdings": [],
+  "mean": -2.2231,
+  "n_trades_today": 1,
+  "recipe": "union_rsi_os_h1",
+  "sells": [
+    "LX"
+  ],
+  "state": {
+    "after": "2026-09-01",
+    "cash": 9233.77,
+    "pos": {},
+    "yday_equity": 9233.77
+  }
+}

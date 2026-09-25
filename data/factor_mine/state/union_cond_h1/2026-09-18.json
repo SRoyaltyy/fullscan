@@ -1,0 +1,288 @@
+{
+  "buys": [
+    "CRWD",
+    "FIVN",
+    "ATRC",
+    "CROX",
+    "ECO",
+    "PGEN",
+    "RBRK",
+    "RXT"
+  ],
+  "cash": 428.6,
+  "date": "2026-09-18",
+  "equity": 9192.85,
+  "fees": 40.0525,
+  "fills": [
+    {
+      "fees": 2.1995,
+      "pnl": -32.1,
+      "price": 18.12,
+      "shares": 63,
+      "side": "SELL",
+      "ticker": "AMRX"
+    },
+    {
+      "fees": 2.145,
+      "pnl": 4.28,
+      "price": 26.14,
+      "shares": 45,
+      "side": "SELL",
+      "ticker": "ARQT"
+    },
+    {
+      "fees": 2.061,
+      "pnl": 26.67,
+      "price": 69.72,
+      "shares": 17,
+      "side": "SELL",
+      "ticker": "AXTI"
+    },
+    {
+      "fees": 2.4686,
+      "pnl": -19.7,
+      "price": 7.85,
+      "shares": 148,
+      "side": "SELL",
+      "ticker": "BULL"
+    },
+    {
+      "fees": 2.2058,
+      "pnl": -19.67,
+      "price": 17.8,
+      "shares": 65,
+      "side": "SELL",
+      "ticker": "CIFR"
+    },
+    {
+      "fees": 2.034,
+      "pnl": 26.43,
+      "price": 149.79,
+      "shares": 8,
+      "side": "SELL",
+      "ticker": "CVLT"
+    },
+    {
+      "fees": 6.4254,
+      "pnl": -66.77,
+      "price": 2.29,
+      "shares": 491,
+      "side": "SELL",
+      "ticker": "SABR"
+    },
+    {
+      "fees": 2.028,
+      "pnl": 64.84,
+      "price": 182.33,
+      "shares": 6,
+      "side": "SELL",
+      "ticker": "SMTC"
+    },
+    {
+      "fees": 2.002,
+      "pnl": null,
+      "price": 246.98,
+      "shares": 4,
+      "side": "BUY",
+      "ticker": "CRWD"
+    },
+    {
+      "fees": 2.092,
+      "pnl": null,
+      "price": 34.44,
+      "shares": 34,
+      "side": "BUY",
+      "ticker": "FIVN"
+    },
+    {
+      "fees": 2.05,
+      "pnl": null,
+      "price": 58.51,
+      "shares": 20,
+      "side": "BUY",
+      "ticker": "ATRC"
+    },
+    {
+      "fees": 2.017,
+      "pnl": null,
+      "price": 123.0,
+      "shares": 9,
+      "side": "BUY",
+      "ticker": "CROX"
+    },
+    {
+      "fees": 2.029,
+      "pnl": null,
+      "price": 85.0,
+      "shares": 13,
+      "side": "BUY",
+      "ticker": "ECO"
+    },
+    {
+      "fees": 2.431,
+      "pnl": null,
+      "price": 7.98,
+      "shares": 147,
+      "side": "BUY",
+      "ticker": "PGEN"
+    },
+    {
+      "fees": 2.02,
+      "pnl": null,
+      "price": 108.55,
+      "shares": 10,
+      "side": "BUY",
+      "ticker": "RBRK"
+    },
+    {
+      "fees": 3.8442,
+      "pnl": null,
+      "price": 3.94,
+      "shares": 298,
+      "side": "BUY",
+      "ticker": "RXT"
+    }
+  ],
+  "holdings": [
+    "ATRC",
+    "CROX",
+    "CRWD",
+    "ECO",
+    "FIVN",
+    "PGEN",
+    "RBRK",
+    "RXT"
+  ],
+  "mean": -1.5615,
+  "n_trades_today": 16,
+  "recipe": "union_cond_h1",
+  "sells": [
+    "AMRX",
+    "ARQT",
+    "AXTI",
+    "BULL",
+    "CIFR",
+    "CVLT",
+    "SABR",
+    "SMTC"
+  ],
+  "state": {
+    "after": "2026-09-18",
+    "cash": 428.6,
+    "pos": {
+      "ATRC": {
+        "close_px": 58.099998474121094,
+        "cost": 1172.249966430664,
+        "entry_date": "2026-09-18",
+        "entry_px": 58.5099983215332,
+        "fee_in": 2.05,
+        "last_px": 58.5099983215332,
+        "min_hold": 1,
+        "notional": 1170.199966430664,
+        "peak_px": 58.5099983215332,
+        "reason": "rank by cond; rank cond; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+11.6; leftover $1177.61",
+        "shares": 20,
+        "ticker": "ATRC"
+      },
+      "CROX": {
+        "close_px": 122.23999786376953,
+        "cost": 1109.017,
+        "entry_date": "2026-09-18",
+        "entry_px": 123.0,
+        "fee_in": 2.017,
+        "last_px": 123.0,
+        "min_hold": 1,
+        "notional": 1107.0,
+        "peak_px": 123.0,
+        "reason": "rank by cond; rank cond; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+13.0; leftover $1177.61",
+        "shares": 9,
+        "ticker": "CROX"
+      },
+      "CRWD": {
+        "close_px": 237.64999389648438,
+        "cost": 989.9219829101562,
+        "entry_date": "2026-09-18",
+        "entry_px": 246.97999572753906,
+        "fee_in": 2.002,
+        "last_px": 246.97999572753906,
+        "min_hold": 1,
+        "notional": 987.9199829101562,
+        "peak_px": 246.97999572753906,
+        "reason": "rank by cond; rank cond; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+17.6; leftover $1177.61",
+        "shares": 4,
+        "ticker": "CRWD"
+      },
+      "ECO": {
+        "close_px": 84.94999694824219,
+        "cost": 1107.029,
+        "entry_date": "2026-09-18",
+        "entry_px": 85.0,
+        "fee_in": 2.029,
+        "last_px": 85.0,
+        "min_hold": 1,
+        "notional": 1105.0,
+        "peak_px": 85.0,
+        "reason": "rank by cond; rank cond; list flatten; \ud83d\udd35; \u26aa; ret5=+18.3; leftover $1177.61",
+        "shares": 13,
+        "ticker": "ECO"
+      },
+      "FIVN": {
+        "close_px": 32.470001220703125,
+        "cost": 1173.0519533081056,
+        "entry_date": "2026-09-18",
+        "entry_px": 34.439998626708984,
+        "fee_in": 2.092,
+        "last_px": 34.439998626708984,
+        "min_hold": 1,
+        "notional": 1170.9599533081055,
+        "peak_px": 34.439998626708984,
+        "reason": "rank by cond; rank cond; list flatten; \ud83d\udd35; \u26aa; ret5=+14.0; leftover $1177.61",
+        "shares": 34,
+        "ticker": "FIVN"
+      },
+      "PGEN": {
+        "close_px": 7.78000020980835,
+        "cost": 1175.4910028038025,
+        "entry_date": "2026-09-18",
+        "entry_px": 7.980000019073486,
+        "fee_in": 2.431,
+        "last_px": 7.980000019073486,
+        "min_hold": 1,
+        "notional": 1173.0600028038025,
+        "peak_px": 7.980000019073486,
+        "reason": "rank by cond; rank cond; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+17.8; leftover $1177.61",
+        "shares": 147,
+        "ticker": "PGEN"
+      },
+      "RBRK": {
+        "close_px": 106.70999908447266,
+        "cost": 1087.520030517578,
+        "entry_date": "2026-09-18",
+        "entry_px": 108.55000305175781,
+        "fee_in": 2.02,
+        "last_px": 108.55000305175781,
+        "min_hold": 1,
+        "notional": 1085.5000305175781,
+        "peak_px": 108.55000305175781,
+        "reason": "rank by cond; rank cond; list flatten; \u26aa; ret5=+21.3; leftover $1177.61",
+        "shares": 10,
+        "ticker": "RBRK"
+      },
+      "RXT": {
+        "close_px": 3.799999952316284,
+        "cost": 1177.9642170516968,
+        "entry_date": "2026-09-18",
+        "entry_px": 3.940000057220459,
+        "fee_in": 3.8442,
+        "last_px": 3.940000057220459,
+        "min_hold": 1,
+        "notional": 1174.1200170516968,
+        "peak_px": 3.940000057220459,
+        "reason": "rank by cond; rank cond; list yday_gainer; \ud83d\udd35; \u26aa; ret5=+25.2; leftover $1177.61",
+        "shares": 298,
+        "ticker": "RXT"
+      }
+    },
+    "yday_equity": 9192.85
+  }
+}

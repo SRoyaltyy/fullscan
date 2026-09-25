@@ -1,0 +1,75 @@
+{
+  "buys": [
+    "ISRG"
+  ],
+  "cash": 240.87,
+  "date": "2026-09-21",
+  "equity": 7470.57,
+  "fees": 8.8007,
+  "fills": [
+    {
+      "fees": 2.2285,
+      "pnl": -58.59,
+      "price": 36.345,
+      "shares": 69,
+      "side": "SELL",
+      "ticker": "DBX"
+    },
+    {
+      "fees": 2.211,
+      "pnl": -265.51,
+      "price": 35.91,
+      "shares": 64,
+      "side": "SELL",
+      "ticker": "SM"
+    },
+    {
+      "fees": 2.3172,
+      "pnl": -36.61,
+      "price": 25.94,
+      "shares": 97,
+      "side": "SELL",
+      "ticker": "WAY"
+    },
+    {
+      "fees": 2.044,
+      "pnl": null,
+      "price": 393.89,
+      "shares": 18,
+      "side": "BUY",
+      "ticker": "ISRG"
+    }
+  ],
+  "holdings": [
+    "ISRG"
+  ],
+  "mean": 1.0945,
+  "n_trades_today": 4,
+  "recipe": "union_news_g_cam71_h3",
+  "sells": [
+    "DBX",
+    "SM",
+    "WAY"
+  ],
+  "state": {
+    "after": "2026-09-21",
+    "cash": 240.87,
+    "pos": {
+      "ISRG": {
+        "close_px": 401.6499938964844,
+        "cost": 7092.064263671875,
+        "entry_date": "2026-09-21",
+        "entry_px": 393.8900146484375,
+        "fee_in": 2.044,
+        "last_px": 393.8900146484375,
+        "min_hold": 3,
+        "notional": 7090.020263671875,
+        "peak_px": 393.8900146484375,
+        "reason": "merged news\ud83d\udfe2 and cameras +7 \u2212\u22641; gate news=good,n_pos_min=7,cam_bad_max=1; rank cond; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+6.6; leftover $7332.94",
+        "shares": 18,
+        "ticker": "ISRG"
+      }
+    },
+    "yday_equity": 7470.57
+  }
+}

@@ -1,0 +1,165 @@
+{
+  "buys": [],
+  "cash": 9443.08,
+  "date": "2026-09-14",
+  "equity": 9443.08,
+  "fees": 34.9506,
+  "fills": [
+    {
+      "fees": 2.016,
+      "pnl": 34.67,
+      "price": 261.51,
+      "shares": 2,
+      "side": "SELL",
+      "ticker": "ADBE"
+    },
+    {
+      "fees": 2.043,
+      "pnl": -5.83,
+      "price": 54.75,
+      "shares": 11,
+      "side": "SELL",
+      "ticker": "ASO"
+    },
+    {
+      "fees": 2.4116,
+      "pnl": 10.81,
+      "price": 5.03,
+      "shares": 130,
+      "side": "SELL",
+      "ticker": "BNC"
+    },
+    {
+      "fees": 2.043,
+      "pnl": -2.75,
+      "price": 54.78,
+      "shares": 11,
+      "side": "SELL",
+      "ticker": "COO"
+    },
+    {
+      "fees": 2.064,
+      "pnl": -28.95,
+      "price": 30.63,
+      "shares": 18,
+      "side": "SELL",
+      "ticker": "CPRT"
+    },
+    {
+      "fees": 2.3198,
+      "pnl": -9.66,
+      "price": 5.86,
+      "shares": 101,
+      "side": "SELL",
+      "ticker": "DBI"
+    },
+    {
+      "fees": 2.034,
+      "pnl": 43.71,
+      "price": 77.68,
+      "shares": 8,
+      "side": "SELL",
+      "ticker": "DSGX"
+    },
+    {
+      "fees": 3.1066,
+      "pnl": 17.54,
+      "price": 2.8,
+      "shares": 237,
+      "side": "SELL",
+      "ticker": "INDP"
+    },
+    {
+      "fees": 2.3261,
+      "pnl": -19.05,
+      "price": 6.02,
+      "shares": 103,
+      "side": "SELL",
+      "ticker": "IRD"
+    },
+    {
+      "fees": 2.04,
+      "pnl": 28.84,
+      "price": 59.31,
+      "shares": 10,
+      "side": "SELL",
+      "ticker": "KR"
+    },
+    {
+      "fees": 2.1995,
+      "pnl": -37.14,
+      "price": 8.85,
+      "shares": 63,
+      "side": "SELL",
+      "ticker": "LPTH"
+    },
+    {
+      "fees": 2.019,
+      "pnl": -73.05,
+      "price": 141.42,
+      "shares": 3,
+      "side": "SELL",
+      "ticker": "ORCL"
+    },
+    {
+      "fees": 2.022,
+      "pnl": -21.26,
+      "price": 131.4,
+      "shares": 4,
+      "side": "SELL",
+      "ticker": "RH"
+    },
+    {
+      "fees": 2.031,
+      "pnl": 8.49,
+      "price": 86.06,
+      "shares": 7,
+      "side": "SELL",
+      "ticker": "SWKS"
+    },
+    {
+      "fees": 2.091,
+      "pnl": -15.77,
+      "price": 23.2,
+      "shares": 27,
+      "side": "SELL",
+      "ticker": "TYRA"
+    },
+    {
+      "fees": 2.184,
+      "pnl": -42.63,
+      "price": 10.29,
+      "shares": 58,
+      "side": "SELL",
+      "ticker": "WLTH"
+    }
+  ],
+  "holdings": [],
+  "mean": 0.0423,
+  "n_trades_today": 16,
+  "recipe": "combo_je1_5050_shared",
+  "sells": [
+    "ADBE",
+    "ASO",
+    "BNC",
+    "COO",
+    "CPRT",
+    "DBI",
+    "DSGX",
+    "INDP",
+    "IRD",
+    "KR",
+    "LPTH",
+    "ORCL",
+    "RH",
+    "SWKS",
+    "TYRA",
+    "WLTH"
+  ],
+  "state": {
+    "after": "2026-09-14",
+    "cash": 9443.08,
+    "pos": {},
+    "yday_equity": 9443.08
+  }
+}

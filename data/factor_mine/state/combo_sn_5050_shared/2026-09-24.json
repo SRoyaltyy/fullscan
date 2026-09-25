@@ -1,0 +1,157 @@
+{
+  "buys": [],
+  "cash": 18651.92,
+  "date": "2026-09-24",
+  "equity": 7820.96,
+  "fees": 71.0197,
+  "fills": [
+    {
+      "fees": 2.002,
+      "pnl": -69.66,
+      "price": 600.27,
+      "shares": 4,
+      "side": "COVER",
+      "ticker": "AMD"
+    },
+    {
+      "fees": 30.5963,
+      "pnl": -177.78,
+      "price": 1.17,
+      "shares": 2340,
+      "side": "SELL",
+      "ticker": "CMPX"
+    },
+    {
+      "fees": 2.41,
+      "pnl": -434.81,
+      "price": 37.51,
+      "shares": 140,
+      "side": "COVER",
+      "ticker": "FIVN"
+    },
+    {
+      "fees": 4.7119,
+      "pnl": -217.56,
+      "price": 7.37,
+      "shares": 359,
+      "side": "SELL",
+      "ticker": "PGEN"
+    },
+    {
+      "fees": 2.5839,
+      "pnl": -247.66,
+      "price": 14.38,
+      "shares": 181,
+      "side": "SELL",
+      "ticker": "SGRY"
+    },
+    {
+      "fees": 28.7156,
+      "pnl": -79.0,
+      "price": 1.29,
+      "shares": 2196,
+      "side": "SELL",
+      "ticker": "VERI"
+    }
+  ],
+  "holdings": [
+    "AEHL",
+    "BAND",
+    "HALO",
+    "PAYX",
+    "USFD"
+  ],
+  "mean": -4.253,
+  "n_trades_today": 6,
+  "recipe": "combo_sn_5050_shared",
+  "sells": [
+    "AMD",
+    "CMPX",
+    "FIVN",
+    "PGEN",
+    "SGRY",
+    "VERI"
+  ],
+  "state": {
+    "after": "2026-09-24",
+    "cash": 18651.92,
+    "pos": {
+      "AEHL": {
+        "close_px": 8.960000038146973,
+        "cost": 3.7937695908219844,
+        "entry_date": "2026-09-21",
+        "entry_px": 8.260000228881836,
+        "fee_in": 3.7937695908219844,
+        "last_px": 8.210000038146973,
+        "notional": 2345.8400650024414,
+        "owner": "short_news_r_h3",
+        "peak_px": 7.619999885559082,
+        "reason": "news\ud83d\udd34; gate news=bad; list yday_mover; ret5=+7.7; combo leftover $2348.80; owner short_news_r_h3",
+        "shares": 284,
+        "side": "short",
+        "ticker": "AEHL"
+      },
+      "BAND": {
+        "close_px": 61.83000183105469,
+        "cost": 2.181915340810279,
+        "entry_date": "2026-09-23",
+        "entry_px": 58.0099983215332,
+        "fee_in": 2.181915340810279,
+        "last_px": 58.0,
+        "notional": 2088.3599395751953,
+        "owner": "short_news_r_h3",
+        "peak_px": 58.0,
+        "reason": "news\ud83d\udd34; gate news=bad; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+16.6; combo leftover $2136.41; owner short_news_r_h3",
+        "shares": 36,
+        "side": "short",
+        "ticker": "BAND"
+      },
+      "HALO": {
+        "close_px": 115.22000122070312,
+        "cost": 2.1284246567817586,
+        "entry_date": "2026-09-23",
+        "entry_px": 116.8499984741211,
+        "fee_in": 2.1284246567817586,
+        "last_px": 112.12999725341797,
+        "notional": 2103.2999725341797,
+        "owner": "short_news_r_h3",
+        "peak_px": 112.12999725341797,
+        "reason": "news\ud83d\udd34; gate news=bad; list flatten; \ud83d\udd35; \u26aa; ret5=+8.4; combo leftover $2136.41; owner short_news_r_h3",
+        "shares": 18,
+        "side": "short",
+        "ticker": "HALO"
+      },
+      "PAYX": {
+        "close_px": 101.58999633789062,
+        "cost": 2.1277624657534244,
+        "entry_date": "2026-09-22",
+        "entry_px": 115.71,
+        "fee_in": 2.1277624657534244,
+        "last_px": 105.48999786376953,
+        "notional": 2082.7799999999997,
+        "owner": "short_news_r_h3",
+        "peak_px": 105.48999786376953,
+        "reason": "news\ud83d\udd34; gate news=bad; list overnight; ret5=-3.0; combo leftover $2186.92; owner short_news_r_h3",
+        "shares": 18,
+        "side": "short",
+        "ticker": "PAYX"
+      },
+      "USFD": {
+        "close_px": 93.81999969482422,
+        "cost": 2.145583287671233,
+        "entry_date": "2026-09-22",
+        "entry_px": 94.08,
+        "fee_in": 2.145583287671233,
+        "last_px": 94.20999908447266,
+        "notional": 2163.84,
+        "owner": "short_news_r_h3",
+        "peak_px": 93.97000122070312,
+        "reason": "news\ud83d\udd34; gate news=bad; list flatten; ret5=-0.6; combo leftover $2186.92; owner short_news_r_h3",
+        "shares": 23,
+        "side": "short",
+        "ticker": "USFD"
+      }
+    },
+    "yday_equity": 7820.96
+  }
+}

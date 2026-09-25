@@ -1,0 +1,57 @@
+{
+  "buys": [],
+  "cash": 8346.5,
+  "date": "2026-09-22",
+  "equity": 8346.5,
+  "fees": 10.7137,
+  "fills": [
+    {
+      "fees": 2.0311,
+      "pnl": 41.51,
+      "price": 403.0,
+      "shares": 5,
+      "side": "SELL",
+      "ticker": "ISRG"
+    },
+    {
+      "fees": 4.5899,
+      "pnl": -12.6,
+      "price": 5.99,
+      "shares": 350,
+      "side": "SELL",
+      "ticker": "SION"
+    },
+    {
+      "fees": 2.0483,
+      "pnl": -182.05,
+      "price": 174.12,
+      "shares": 11,
+      "side": "SELL",
+      "ticker": "SMTC"
+    },
+    {
+      "fees": 2.0444,
+      "pnl": 93.05,
+      "price": 241.04,
+      "shares": 9,
+      "side": "SELL",
+      "ticker": "VICR"
+    }
+  ],
+  "holdings": [],
+  "mean": 1.3484,
+  "n_trades_today": 4,
+  "recipe": "union_news_or_net3_h1",
+  "sells": [
+    "ISRG",
+    "SION",
+    "SMTC",
+    "VICR"
+  ],
+  "state": {
+    "after": "2026-09-22",
+    "cash": 8346.5,
+    "pos": {},
+    "yday_equity": 8346.5
+  }
+}

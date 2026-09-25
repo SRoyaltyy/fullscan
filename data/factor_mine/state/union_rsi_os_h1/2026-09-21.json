@@ -1,0 +1,114 @@
+{
+  "buys": [
+    "XENE",
+    "SION",
+    "THO"
+  ],
+  "cash": 80.8,
+  "date": "2026-09-21",
+  "equity": 7975.86,
+  "fees": 20.7454,
+  "fills": [
+    {
+      "fees": 7.0874,
+      "pnl": -108.55,
+      "price": 7.36,
+      "shares": 540,
+      "side": "SELL",
+      "ticker": "FLNC"
+    },
+    {
+      "fees": 3.6384,
+      "pnl": -65.16,
+      "price": 14.58,
+      "shares": 276,
+      "side": "SELL",
+      "ticker": "RARE"
+    },
+    {
+      "fees": 2.188,
+      "pnl": null,
+      "price": 40.0,
+      "shares": 66,
+      "side": "BUY",
+      "ticker": "XENE"
+    },
+    {
+      "fees": 5.7276,
+      "pnl": null,
+      "price": 6.0,
+      "shares": 444,
+      "side": "BUY",
+      "ticker": "SION"
+    },
+    {
+      "fees": 2.104,
+      "pnl": null,
+      "price": 68.39,
+      "shares": 38,
+      "side": "BUY",
+      "ticker": "THO"
+    }
+  ],
+  "holdings": [
+    "SION",
+    "THO",
+    "XENE"
+  ],
+  "mean": 0.1558,
+  "n_trades_today": 5,
+  "recipe": "union_rsi_os_h1",
+  "sells": [
+    "FLNC",
+    "RARE"
+  ],
+  "state": {
+    "after": "2026-09-21",
+    "cash": 80.8,
+    "pos": {
+      "SION": {
+        "close_px": 6.0,
+        "cost": 2669.7276,
+        "entry_date": "2026-09-21",
+        "entry_px": 6.0,
+        "fee_in": 5.7276,
+        "last_px": 6.0,
+        "min_hold": 1,
+        "notional": 2664.0,
+        "peak_px": 6.0,
+        "reason": "union \u2229 rsi_os, no \ud83d\udea8; gate rsi_os=True; list yday_mover; \ud83d\udd35; ret5=-24.1; leftover $2664.55",
+        "shares": 444,
+        "ticker": "SION"
+      },
+      "THO": {
+        "close_px": 69.94000244140625,
+        "cost": 2600.9239768066404,
+        "entry_date": "2026-09-21",
+        "entry_px": 68.38999938964844,
+        "fee_in": 2.104,
+        "last_px": 68.38999938964844,
+        "min_hold": 1,
+        "notional": 2598.8199768066406,
+        "peak_px": 68.38999938964844,
+        "reason": "union \u2229 rsi_os, no \ud83d\udea8; gate rsi_os=True; list overnight; ret5=-7.0; leftover $2664.55",
+        "shares": 38,
+        "ticker": "THO"
+      },
+      "XENE": {
+        "close_px": 38.9900016784668,
+        "cost": 2642.188,
+        "entry_date": "2026-09-21",
+        "entry_px": 40.0,
+        "fee_in": 2.188,
+        "last_px": 40.0,
+        "min_hold": 1,
+        "notional": 2640.0,
+        "peak_px": 40.0,
+        "reason": "union \u2229 rsi_os, no \ud83d\udea8; gate rsi_os=True; list yday_mover; \ud83d\udd35; ret5=-32.2; leftover $2664.55",
+        "shares": 66,
+        "ticker": "XENE"
+      }
+    },
+    "yday_equity": 7975.86
+  }
+}

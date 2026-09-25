@@ -1,0 +1,288 @@
+{
+  "buys": [
+    "CMPX",
+    "XNDU",
+    "EVER",
+    "GLND",
+    "CBRL",
+    "GIS",
+    "KBH",
+    "PAYX"
+  ],
+  "cash": 62.6,
+  "date": "2026-09-23",
+  "equity": 8664.0,
+  "fees": 76.5286,
+  "fills": [
+    {
+      "fees": 2.4527,
+      "pnl": -6.3,
+      "price": 7.62,
+      "shares": 143,
+      "side": "SELL",
+      "ticker": "AEHL"
+    },
+    {
+      "fees": 16.6027,
+      "pnl": -61.08,
+      "price": 0.575,
+      "shares": 1861,
+      "side": "SELL",
+      "ticker": "DEFT"
+    },
+    {
+      "fees": 2.2374,
+      "pnl": -22.45,
+      "price": 14.26,
+      "shares": 75,
+      "side": "SELL",
+      "ticker": "DLO"
+    },
+    {
+      "fees": 2.4242,
+      "pnl": -0.8,
+      "price": 8.2,
+      "shares": 134,
+      "side": "SELL",
+      "ticker": "FWDI"
+    },
+    {
+      "fees": 4.6365,
+      "pnl": 284.62,
+      "price": 3.93,
+      "shares": 354,
+      "side": "SELL",
+      "ticker": "INDP"
+    },
+    {
+      "fees": 4.5178,
+      "pnl": -5.52,
+      "price": 3.19,
+      "shares": 345,
+      "side": "SELL",
+      "ticker": "MX"
+    },
+    {
+      "fees": 2.088,
+      "pnl": -20.02,
+      "price": 41.32,
+      "shares": 26,
+      "side": "SELL",
+      "ticker": "PACS"
+    },
+    {
+      "fees": 11.5081,
+      "pnl": -22.86,
+      "price": 1.23,
+      "shares": 880,
+      "side": "SELL",
+      "ticker": "UPXI"
+    },
+    {
+      "fees": 11.8035,
+      "pnl": null,
+      "price": 1.22,
+      "shares": 915,
+      "side": "BUY",
+      "ticker": "CMPX"
+    },
+    {
+      "fees": 2.548,
+      "pnl": null,
+      "price": 5.99,
+      "shares": 186,
+      "side": "BUY",
+      "ticker": "XNDU"
+    },
+    {
+      "fees": 2.161,
+      "pnl": null,
+      "price": 19.46,
+      "shares": 57,
+      "side": "BUY",
+      "ticker": "EVER"
+    },
+    {
+      "fees": 5.3277,
+      "pnl": null,
+      "price": 2.7,
+      "shares": 413,
+      "side": "BUY",
+      "ticker": "GLND"
+    },
+    {
+      "fees": 2.059,
+      "pnl": null,
+      "price": 47.57,
+      "shares": 23,
+      "side": "BUY",
+      "ticker": "CBRL"
+    },
+    {
+      "fees": 2.083,
+      "pnl": null,
+      "price": 35.74,
+      "shares": 31,
+      "side": "BUY",
+      "ticker": "GIS"
+    },
+    {
+      "fees": 2.059,
+      "pnl": null,
+      "price": 47.15,
+      "shares": 23,
+      "side": "BUY",
+      "ticker": "KBH"
+    },
+    {
+      "fees": 2.02,
+      "pnl": null,
+      "price": 109.67,
+      "shares": 10,
+      "side": "BUY",
+      "ticker": "PAYX"
+    }
+  ],
+  "holdings": [
+    "CBRL",
+    "CMPX",
+    "EVER",
+    "GIS",
+    "GLND",
+    "KBH",
+    "PAYX",
+    "XNDU"
+  ],
+  "mean": -4.8275,
+  "n_trades_today": 16,
+  "recipe": "union_last_red_h1",
+  "sells": [
+    "AEHL",
+    "DEFT",
+    "DLO",
+    "FWDI",
+    "INDP",
+    "MX",
+    "PACS",
+    "UPXI"
+  ],
+  "state": {
+    "after": "2026-09-23",
+    "cash": 62.6,
+    "pos": {
+      "CBRL": {
+        "close_px": 47.52000045776367,
+        "cost": 1096.168992980957,
+        "entry_date": "2026-09-23",
+        "entry_px": 47.56999969482422,
+        "fee_in": 2.059,
+        "last_px": 47.56999969482422,
+        "min_hold": 1,
+        "notional": 1094.109992980957,
+        "peak_px": 47.56999969482422,
+        "reason": "union \u2229 last_red, no \ud83d\udea8; gate last_red=True; list earn_react; \ud83d\udd35; ret5=+0.7; leftover $1116.33",
+        "shares": 23,
+        "ticker": "CBRL"
+      },
+      "CMPX": {
+        "close_px": 1.1699999570846558,
+        "cost": 1128.10352617836,
+        "entry_date": "2026-09-23",
+        "entry_px": 1.2200000286102295,
+        "fee_in": 11.8035,
+        "last_px": 1.2200000286102295,
+        "min_hold": 1,
+        "notional": 1116.30002617836,
+        "peak_px": 1.2200000286102295,
+        "reason": "union \u2229 last_red, no \ud83d\udea8; gate last_red=True; list yday_mover; \ud83d\udd35; ret5=-33.0; leftover $1116.33",
+        "shares": 915,
+        "ticker": "CMPX"
+      },
+      "EVER": {
+        "close_px": 17.6299991607666,
+        "cost": 1111.3809478149415,
+        "entry_date": "2026-09-23",
+        "entry_px": 19.459999084472656,
+        "fee_in": 2.161,
+        "last_px": 19.459999084472656,
+        "min_hold": 1,
+        "notional": 1109.2199478149414,
+        "peak_px": 19.459999084472656,
+        "reason": "union \u2229 last_red, no \ud83d\udea8; gate last_red=True; list yday_mover; ret5=-20.1; leftover $1116.33",
+        "shares": 57,
+        "ticker": "EVER"
+      },
+      "GIS": {
+        "close_px": 35.81999969482422,
+        "cost": 1110.0230520324708,
+        "entry_date": "2026-09-23",
+        "entry_px": 35.7400016784668,
+        "fee_in": 2.083,
+        "last_px": 35.7400016784668,
+        "min_hold": 1,
+        "notional": 1107.9400520324707,
+        "peak_px": 35.7400016784668,
+        "reason": "union \u2229 last_red, no \ud83d\udea8; gate last_red=True; list earn_react; ret5=-3.1; leftover $1116.33",
+        "shares": 31,
+        "ticker": "GIS"
+      },
+      "GLND": {
+        "close_px": 2.9100000858306885,
+        "cost": 1120.4277196933747,
+        "entry_date": "2026-09-23",
+        "entry_px": 2.700000047683716,
+        "fee_in": 5.3277,
+        "last_px": 2.700000047683716,
+        "min_hold": 1,
+        "notional": 1115.1000196933746,
+        "peak_px": 2.700000047683716,
+        "reason": "union \u2229 last_red, no \ud83d\udea8; gate last_red=True; list yday_mover; \ud83d\udd35; ret5=+109.2; leftover $1116.33",
+        "shares": 413,
+        "ticker": "GLND"
+      },
+      "KBH": {
+        "close_px": 47.150001525878906,
+        "cost": 1086.5090350952148,
+        "entry_date": "2026-09-23",
+        "entry_px": 47.150001525878906,
+        "fee_in": 2.059,
+        "last_px": 47.150001525878906,
+        "min_hold": 1,
+        "notional": 1084.4500350952148,
+        "peak_px": 47.150001525878906,
+        "reason": "union \u2229 last_red, no \ud83d\udea8; gate last_red=True; list earn_react; \ud83d\udd35; ret5=-1.9; leftover $1116.33",
+        "shares": 23,
+        "ticker": "KBH"
+      },
+      "PAYX": {
+        "close_px": 104.48999786376953,
+        "cost": 1098.719981689453,
+        "entry_date": "2026-09-23",
+        "entry_px": 109.66999816894531,
+        "fee_in": 2.02,
+        "last_px": 109.66999816894531,
+        "min_hold": 1,
+        "notional": 1096.6999816894531,
+        "peak_px": 109.66999816894531,
+        "reason": "union \u2229 last_red, no \ud83d\udea8; gate last_red=True; list earn_react; \ud83d\udd35; \u26aa; ret5=-3.2; leftover $1116.33",
+        "shares": 10,
+        "ticker": "PAYX"
+      },
+      "XNDU": {
+        "close_px": 5.329999923706055,
+        "cost": 1116.6879574279785,
+        "entry_date": "2026-09-23",
+        "entry_px": 5.989999771118164,
+        "fee_in": 2.548,
+        "last_px": 5.989999771118164,
+        "min_hold": 1,
+        "notional": 1114.1399574279785,
+        "peak_px": 5.989999771118164,
+        "reason": "union \u2229 last_red, no \ud83d\udea8; gate last_red=True; list yday_mover; \ud83d\udd35; ret5=-25.9; leftover $1116.33",
+        "shares": 186,
+        "ticker": "XNDU"
+      }
+    },
+    "yday_equity": 8664.0
+  }
+}

@@ -1,0 +1,215 @@
+{
+  "buys": [
+    "AUPH",
+    "OVID",
+    "SANM",
+    "ORCL",
+    "NVT",
+    "COHU",
+    "BAK",
+    "APPS"
+  ],
+  "cash": 108.8,
+  "date": "2026-09-11",
+  "equity": 8719.62,
+  "fees": 23.5014,
+  "fills": [
+    {
+      "fees": 2.35,
+      "pnl": null,
+      "price": 16.28,
+      "shares": 120,
+      "side": "BUY",
+      "ticker": "AUPH"
+    },
+    {
+      "fees": 8.0754,
+      "pnl": null,
+      "price": 2.73,
+      "shares": 626,
+      "side": "BUY",
+      "ticker": "OVID"
+    },
+    {
+      "fees": 2.011,
+      "pnl": null,
+      "price": 206.84,
+      "shares": 7,
+      "side": "BUY",
+      "ticker": "SANM"
+    },
+    {
+      "fees": 2.011,
+      "pnl": null,
+      "price": 164.43,
+      "shares": 7,
+      "side": "BUY",
+      "ticker": "ORCL"
+    },
+    {
+      "fees": 2.008,
+      "pnl": null,
+      "price": 157.78,
+      "shares": 6,
+      "side": "BUY",
+      "ticker": "NVT"
+    },
+    {
+      "fees": 2.029,
+      "pnl": null,
+      "price": 56.09,
+      "shares": 13,
+      "side": "BUY",
+      "ticker": "COHU"
+    },
+    {
+      "fees": 2.967,
+      "pnl": null,
+      "price": 2.12,
+      "shares": 230,
+      "side": "BUY",
+      "ticker": "BAK"
+    },
+    {
+      "fees": 2.05,
+      "pnl": null,
+      "price": 11.88,
+      "shares": 20,
+      "side": "BUY",
+      "ticker": "APPS"
+    }
+  ],
+  "holdings": [
+    "APPS",
+    "AUPH",
+    "BAK",
+    "COHU",
+    "NVT",
+    "ORCL",
+    "OVID",
+    "SANM"
+  ],
+  "mean": -0.855,
+  "n_trades_today": 8,
+  "recipe": "union_h3_rankw",
+  "sells": [],
+  "state": {
+    "after": "2026-09-11",
+    "cash": 108.8,
+    "pos": {
+      "APPS": {
+        "close_px": 11.8100004196167,
+        "cost": 239.65000228881837,
+        "entry_date": "2026-09-11",
+        "entry_px": 11.880000114440918,
+        "fee_in": 2.05,
+        "last_px": 11.880000114440918,
+        "min_hold": 3,
+        "notional": 237.60000228881836,
+        "peak_px": 11.880000114440918,
+        "reason": "rank-weighted leftover; list probable,yday_gainer; ret5=+8.5; leftover $244.30",
+        "shares": 20,
+        "ticker": "APPS"
+      },
+      "AUPH": {
+        "close_px": 16.100000381469727,
+        "cost": 1955.9500823974608,
+        "entry_date": "2026-09-11",
+        "entry_px": 16.280000686645508,
+        "fee_in": 2.35,
+        "last_px": 16.280000686645508,
+        "min_hold": 3,
+        "notional": 1953.600082397461,
+        "peak_px": 16.280000686645508,
+        "reason": "rank-weighted leftover; list flatten; ret5=-0.1; leftover $1954.40",
+        "shares": 120,
+        "ticker": "AUPH"
+      },
+      "BAK": {
+        "close_px": 2.0799999237060547,
+        "cost": 490.56697367858885,
+        "entry_date": "2026-09-11",
+        "entry_px": 2.119999885559082,
+        "fee_in": 2.967,
+        "last_px": 2.119999885559082,
+        "min_hold": 3,
+        "notional": 487.59997367858887,
+        "peak_px": 2.119999885559082,
+        "reason": "rank-weighted leftover; list probable,yday_gainer,ohlc_hot; \ud83d\udd35; ret5=+8.8; leftover $488.60",
+        "shares": 230,
+        "ticker": "BAK"
+      },
+      "COHU": {
+        "close_px": 57.08000183105469,
+        "cost": 731.1990019836426,
+        "entry_date": "2026-09-11",
+        "entry_px": 56.09000015258789,
+        "fee_in": 2.029,
+        "last_px": 56.09000015258789,
+        "min_hold": 3,
+        "notional": 729.1700019836426,
+        "peak_px": 56.09000015258789,
+        "reason": "rank-weighted leftover; list flatten; \ud83d\udd35; \u26aa; ret5=+19.0; leftover $732.90",
+        "shares": 13,
+        "ticker": "COHU"
+      },
+      "NVT": {
+        "close_px": 162.3800048828125,
+        "cost": 948.6879926757813,
+        "entry_date": "2026-09-11",
+        "entry_px": 157.77999877929688,
+        "fee_in": 2.008,
+        "last_px": 157.77999877929688,
+        "min_hold": 3,
+        "notional": 946.6799926757812,
+        "peak_px": 157.77999877929688,
+        "reason": "rank-weighted leftover; list flatten; \ud83d\udd35; ret5=+2.0; leftover $977.20",
+        "shares": 6,
+        "ticker": "NVT"
+      },
+      "ORCL": {
+        "close_px": 150.27999877929688,
+        "cost": 1153.0209487304687,
+        "entry_date": "2026-09-11",
+        "entry_px": 164.42999267578125,
+        "fee_in": 2.011,
+        "last_px": 164.42999267578125,
+        "min_hold": 3,
+        "notional": 1151.0099487304688,
+        "peak_px": 164.42999267578125,
+        "reason": "rank-weighted leftover; list flatten,earn_react; \ud83d\udd35; \u26aa; ret5=-0.7; leftover $1221.50",
+        "shares": 7,
+        "ticker": "ORCL"
+      },
+      "OVID": {
+        "close_px": 2.690000057220459,
+        "cost": 1717.0554119400024,
+        "entry_date": "2026-09-11",
+        "entry_px": 2.7300000190734863,
+        "fee_in": 8.0754,
+        "last_px": 2.7300000190734863,
+        "min_hold": 3,
+        "notional": 1708.9800119400024,
+        "peak_px": 2.7300000190734863,
+        "reason": "rank-weighted leftover; list flatten; ret5=-5.4; leftover $1710.10",
+        "shares": 626,
+        "ticker": "OVID"
+      },
+      "SANM": {
+        "close_px": 216.0,
+        "cost": 1449.8909743652343,
+        "entry_date": "2026-09-11",
+        "entry_px": 206.83999633789062,
+        "fee_in": 2.011,
+        "last_px": 206.83999633789062,
+        "min_hold": 3,
+        "notional": 1447.8799743652344,
+        "peak_px": 206.83999633789062,
+        "reason": "rank-weighted leftover; list flatten; ret5=+3.9; leftover $1465.80",
+        "shares": 7,
+        "ticker": "SANM"
+      }
+    },
+    "yday_equity": 8719.62
+  }
+}

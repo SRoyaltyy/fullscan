@@ -1,0 +1,215 @@
+{
+  "buys": [
+    "CRM",
+    "DELL",
+    "MSTR",
+    "BE",
+    "HOOD",
+    "CRCL",
+    "SION",
+    "TARS"
+  ],
+  "cash": 597.1,
+  "date": "2026-09-04",
+  "equity": 10105.25,
+  "fees": 16.628,
+  "fills": [
+    {
+      "fees": 2.002,
+      "pnl": null,
+      "price": 263.36,
+      "shares": 4,
+      "side": "BUY",
+      "ticker": "CRM"
+    },
+    {
+      "fees": 1.996,
+      "pnl": null,
+      "price": 513.78,
+      "shares": 2,
+      "side": "BUY",
+      "ticker": "DELL"
+    },
+    {
+      "fees": 2.014,
+      "pnl": null,
+      "price": 137.35,
+      "shares": 8,
+      "side": "BUY",
+      "ticker": "MSTR"
+    },
+    {
+      "fees": 2.005,
+      "pnl": null,
+      "price": 236.82,
+      "shares": 5,
+      "side": "BUY",
+      "ticker": "BE"
+    },
+    {
+      "fees": 2.02,
+      "pnl": null,
+      "price": 120.475,
+      "shares": 10,
+      "side": "BUY",
+      "ticker": "HOOD"
+    },
+    {
+      "fees": 2.026,
+      "pnl": null,
+      "price": 97.98,
+      "shares": 12,
+      "side": "BUY",
+      "ticker": "CRCL"
+    },
+    {
+      "fees": 2.533,
+      "pnl": null,
+      "price": 6.68,
+      "shares": 181,
+      "side": "BUY",
+      "ticker": "SION"
+    },
+    {
+      "fees": 2.032,
+      "pnl": null,
+      "price": 82.7,
+      "shares": 14,
+      "side": "BUY",
+      "ticker": "TARS"
+    }
+  ],
+  "holdings": [
+    "BE",
+    "CRCL",
+    "CRM",
+    "DELL",
+    "HOOD",
+    "MSTR",
+    "SION",
+    "TARS"
+  ],
+  "mean": 3.9098,
+  "n_trades_today": 8,
+  "recipe": "union_macd_hist_h1",
+  "sells": [],
+  "state": {
+    "after": "2026-09-04",
+    "cash": 597.1,
+    "pos": {
+      "BE": {
+        "close_px": 252.8699951171875,
+        "cost": 1186.1050366210939,
+        "entry_date": "2026-09-04",
+        "entry_px": 236.82000732421875,
+        "fee_in": 2.005,
+        "last_px": 236.82000732421875,
+        "min_hold": 1,
+        "notional": 1184.1000366210938,
+        "peak_px": 236.82000732421875,
+        "reason": "rank by macd_hist; rank macd_hist; list ohlc_hot; ret5=+8.1; leftover $1215.63",
+        "shares": 5,
+        "ticker": "BE"
+      },
+      "CRCL": {
+        "close_px": 102.05000305175781,
+        "cost": 1177.7860402832032,
+        "entry_date": "2026-09-04",
+        "entry_px": 97.9800033569336,
+        "fee_in": 2.026,
+        "last_px": 97.9800033569336,
+        "min_hold": 1,
+        "notional": 1175.7600402832031,
+        "peak_px": 97.9800033569336,
+        "reason": "rank by macd_hist; rank macd_hist; list ohlc_hot; \ud83d\udd35; ret5=+9.5; leftover $1215.63",
+        "shares": 12,
+        "ticker": "CRCL"
+      },
+      "CRM": {
+        "close_px": 259.2300109863281,
+        "cost": 1055.44194140625,
+        "entry_date": "2026-09-04",
+        "entry_px": 263.3599853515625,
+        "fee_in": 2.002,
+        "last_px": 263.3599853515625,
+        "min_hold": 1,
+        "notional": 1053.43994140625,
+        "peak_px": 263.3599853515625,
+        "reason": "rank by macd_hist; rank macd_hist; list flatten,mover_buy; \ud83d\udd35; \u26aa; ret5=+4.9; leftover $1215.63",
+        "shares": 4,
+        "ticker": "CRM"
+      },
+      "DELL": {
+        "close_px": 524.1400146484375,
+        "cost": 1029.55605859375,
+        "entry_date": "2026-09-04",
+        "entry_px": 513.780029296875,
+        "fee_in": 1.996,
+        "last_px": 513.780029296875,
+        "min_hold": 1,
+        "notional": 1027.56005859375,
+        "peak_px": 513.780029296875,
+        "reason": "rank by macd_hist; rank macd_hist; list probable,yday_gainer,yday_mover,ohlc_hot,mover_buy; \ud83d\udd35; \u26aa; ret5=+9.3; leftover $1215.63",
+        "shares": 2,
+        "ticker": "DELL"
+      },
+      "HOOD": {
+        "close_px": 122.11000061035156,
+        "cost": 1206.769984741211,
+        "entry_date": "2026-09-04",
+        "entry_px": 120.4749984741211,
+        "fee_in": 2.02,
+        "last_px": 120.4749984741211,
+        "min_hold": 1,
+        "notional": 1204.749984741211,
+        "peak_px": 120.4749984741211,
+        "reason": "rank by macd_hist; rank macd_hist; list ohlc_hot; \ud83d\udd35; ret5=+13.6; leftover $1215.63",
+        "shares": 10,
+        "ticker": "HOOD"
+      },
+      "MSTR": {
+        "close_px": 142.8000030517578,
+        "cost": 1100.814048828125,
+        "entry_date": "2026-09-04",
+        "entry_px": 137.35000610351562,
+        "fee_in": 2.014,
+        "last_px": 137.35000610351562,
+        "min_hold": 1,
+        "notional": 1098.800048828125,
+        "peak_px": 137.35000610351562,
+        "reason": "rank by macd_hist; rank macd_hist; list ohlc_hot; ret5=+5.4; leftover $1215.63",
+        "shares": 8,
+        "ticker": "MSTR"
+      },
+      "SION": {
+        "close_px": 7.179999828338623,
+        "cost": 1211.6129689292907,
+        "entry_date": "2026-09-04",
+        "entry_px": 6.679999828338623,
+        "fee_in": 2.533,
+        "last_px": 6.679999828338623,
+        "min_hold": 1,
+        "notional": 1209.0799689292908,
+        "peak_px": 6.679999828338623,
+        "reason": "rank by macd_hist; rank macd_hist; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+11.4; leftover $1215.63",
+        "shares": 181,
+        "ticker": "SION"
+      },
+      "TARS": {
+        "close_px": 90.77999877929688,
+        "cost": 1159.8319572753906,
+        "entry_date": "2026-09-04",
+        "entry_px": 82.69999694824219,
+        "fee_in": 2.032,
+        "last_px": 82.69999694824219,
+        "min_hold": 1,
+        "notional": 1157.7999572753906,
+        "peak_px": 82.69999694824219,
+        "reason": "rank by macd_hist; rank macd_hist; list yday_gainer,ohlc_hot; \ud83d\udd35; \u26aa; ret5=+15.7; leftover $1215.63",
+        "shares": 14,
+        "ticker": "TARS"
+      }
+    },
+    "yday_equity": 10105.25
+  }
+}

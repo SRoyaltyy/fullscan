@@ -1,0 +1,314 @@
+{
+  "buys": [
+    "VICR",
+    "ECO",
+    "EYPT",
+    "BHVN",
+    "RARE",
+    "SDGR",
+    "CYPH",
+    "VITL"
+  ],
+  "cash": 143.43,
+  "date": "2026-09-18",
+  "equity": 9791.49,
+  "fees": 44.8225,
+  "fills": [
+    {
+      "fees": 2.8161,
+      "pnl": 86.44,
+      "price": 11.64,
+      "shares": 214,
+      "side": "SELL",
+      "ticker": "ALMU"
+    },
+    {
+      "fees": 2.106,
+      "pnl": -18.27,
+      "price": 18.12,
+      "shares": 32,
+      "side": "SELL",
+      "ticker": "AMRX"
+    },
+    {
+      "fees": 2.079,
+      "pnl": 0.23,
+      "price": 26.14,
+      "shares": 23,
+      "side": "SELL",
+      "ticker": "ARQT"
+    },
+    {
+      "fees": 2.037,
+      "pnl": 9.18,
+      "price": 63.37,
+      "shares": 9,
+      "side": "SELL",
+      "ticker": "BRKR"
+    },
+    {
+      "fees": 2.019,
+      "pnl": -6.87,
+      "price": 195.55,
+      "shares": 3,
+      "side": "SELL",
+      "ticker": "FTAI"
+    },
+    {
+      "fees": 2.1052,
+      "pnl": -83.93,
+      "price": 78.25,
+      "shares": 29,
+      "side": "SELL",
+      "ticker": "LEN"
+    },
+    {
+      "fees": 2.2533,
+      "pnl": 26.72,
+      "price": 7.98,
+      "shares": 80,
+      "side": "SELL",
+      "ticker": "PGEN"
+    },
+    {
+      "fees": 3.3288,
+      "pnl": -34.55,
+      "price": 2.29,
+      "shares": 254,
+      "side": "SELL",
+      "ticker": "SABR"
+    },
+    {
+      "fees": 2.019,
+      "pnl": 30.42,
+      "price": 182.33,
+      "shares": 3,
+      "side": "SELL",
+      "ticker": "SMTC"
+    },
+    {
+      "fees": 2.112,
+      "pnl": -24.26,
+      "price": 17.13,
+      "shares": 34,
+      "side": "SELL",
+      "ticker": "TNDM"
+    },
+    {
+      "fees": 2.005,
+      "pnl": null,
+      "price": 219.62,
+      "shares": 5,
+      "side": "BUY",
+      "ticker": "VICR"
+    },
+    {
+      "fees": 2.032,
+      "pnl": null,
+      "price": 85.0,
+      "shares": 14,
+      "side": "BUY",
+      "ticker": "ECO"
+    },
+    {
+      "fees": 3.9216,
+      "pnl": null,
+      "price": 3.95,
+      "shares": 304,
+      "side": "BUY",
+      "ticker": "EYPT"
+    },
+    {
+      "fees": 2.245,
+      "pnl": null,
+      "price": 14.07,
+      "shares": 85,
+      "side": "BUY",
+      "ticker": "BHVN"
+    },
+    {
+      "fees": 2.233,
+      "pnl": null,
+      "price": 14.79,
+      "shares": 81,
+      "side": "BUY",
+      "ticker": "RARE"
+    },
+    {
+      "fees": 2.11,
+      "pnl": null,
+      "price": 29.32,
+      "shares": 40,
+      "side": "BUY",
+      "ticker": "SDGR"
+    },
+    {
+      "fees": 5.0955,
+      "pnl": null,
+      "price": 3.035,
+      "shares": 395,
+      "side": "BUY",
+      "ticker": "CYPH"
+    },
+    {
+      "fees": 2.305,
+      "pnl": null,
+      "price": 11.38,
+      "shares": 105,
+      "side": "BUY",
+      "ticker": "VITL"
+    }
+  ],
+  "holdings": [
+    "BHVN",
+    "CYPH",
+    "ECO",
+    "EYPT",
+    "RARE",
+    "SDGR",
+    "VICR",
+    "VITL"
+  ],
+  "mean": 1.3895,
+  "n_trades_today": 18,
+  "recipe": "combo_je1_5050_shared",
+  "sells": [
+    "ALMU",
+    "AMRX",
+    "ARQT",
+    "BRKR",
+    "FTAI",
+    "LEN",
+    "PGEN",
+    "SABR",
+    "SMTC",
+    "TNDM"
+  ],
+  "state": {
+    "after": "2026-09-18",
+    "cash": 143.43,
+    "pos": {
+      "BHVN": {
+        "close_px": 13.619999885559082,
+        "cost": 1198.1949740600585,
+        "entry_date": "2026-09-18",
+        "entry_px": 14.069999694824219,
+        "fee_in": 2.245,
+        "last_px": 14.069999694824219,
+        "notional": 1195.9499740600586,
+        "owner": "union_join_vol_green_h1",
+        "peak_px": 14.069999694824219,
+        "reason": "combo gate; gate join=good,vol=good,last_green=True; list probable,yday_gainer,yday_mover; \ud83d\udd35; ret5=+8.6; combo leftover $1201.84; owner union_join_vol_green_h1",
+        "shares": 85,
+        "side": "long",
+        "ticker": "BHVN"
+      },
+      "CYPH": {
+        "close_px": 3.5999999046325684,
+        "cost": 1203.9205339031219,
+        "entry_date": "2026-09-18",
+        "entry_px": 3.0350000858306885,
+        "fee_in": 5.0955,
+        "last_px": 3.0350000858306885,
+        "notional": 1198.825033903122,
+        "owner": "union_join_vol_green_h1",
+        "peak_px": 3.0350000858306885,
+        "reason": "combo gate; gate join=good,vol=good,last_green=True; list yday_gainer,yday_mover; \ud83d\udd35; \u26aa; ret5=+39.5; combo leftover $1201.84; owner union_join_vol_green_h1",
+        "shares": 395,
+        "side": "long",
+        "ticker": "CYPH"
+      },
+      "ECO": {
+        "close_px": 84.94999694824219,
+        "cost": 1192.032,
+        "entry_date": "2026-09-18",
+        "entry_px": 85.0,
+        "fee_in": 2.032,
+        "last_px": 85.0,
+        "notional": 1190.0,
+        "owner": "union_join_vol_green_h1",
+        "peak_px": 85.0,
+        "reason": "combo gate; gate join=good,vol=good,last_green=True; list flatten; \ud83d\udd35; \u26aa; ret5=+18.3; combo leftover $1201.84; owner union_join_vol_green_h1",
+        "shares": 14,
+        "side": "long",
+        "ticker": "ECO"
+      },
+      "EYPT": {
+        "close_px": 3.8499999046325684,
+        "cost": 1204.7216144958495,
+        "entry_date": "2026-09-18",
+        "entry_px": 3.950000047683716,
+        "fee_in": 3.9216,
+        "last_px": 3.950000047683716,
+        "notional": 1200.8000144958496,
+        "owner": "union_join_vol_green_h1",
+        "peak_px": 3.950000047683716,
+        "reason": "combo gate; gate join=good,vol=good,last_green=True; list probable,yday_gainer,yday_mover; \ud83d\udd35; ret5=-6.1; combo leftover $1201.84; owner union_join_vol_green_h1",
+        "shares": 304,
+        "side": "long",
+        "ticker": "EYPT"
+      },
+      "RARE": {
+        "close_px": 14.510000228881836,
+        "cost": 1200.2229969100952,
+        "entry_date": "2026-09-18",
+        "entry_px": 14.789999961853027,
+        "fee_in": 2.233,
+        "last_px": 14.789999961853027,
+        "notional": 1197.9899969100952,
+        "owner": "union_join_vol_green_h1",
+        "peak_px": 14.789999961853027,
+        "reason": "combo gate; gate join=good,vol=good,last_green=True; list probable,yday_gainer; \ud83d\udd35; \u26aa; ret5=+0.7; combo leftover $1201.84; owner union_join_vol_green_h1",
+        "shares": 81,
+        "side": "long",
+        "ticker": "RARE"
+      },
+      "SDGR": {
+        "close_px": 29.020000457763672,
+        "cost": 1174.9099877929686,
+        "entry_date": "2026-09-18",
+        "entry_px": 29.31999969482422,
+        "fee_in": 2.11,
+        "last_px": 29.31999969482422,
+        "notional": 1172.7999877929688,
+        "owner": "union_join_vol_green_h1",
+        "peak_px": 29.31999969482422,
+        "reason": "combo gate; gate join=good,vol=good,last_green=True; list yday_gainer,yday_mover; \ud83d\udd35; \u26aa; ret5=+60.9; combo leftover $1201.84; owner union_join_vol_green_h1",
+        "shares": 40,
+        "side": "long",
+        "ticker": "SDGR"
+      },
+      "VICR": {
+        "close_px": 222.72000122070312,
+        "cost": 1100.1049755859376,
+        "entry_date": "2026-09-18",
+        "entry_px": 219.6199951171875,
+        "fee_in": 2.005,
+        "last_px": 219.6199951171875,
+        "notional": 1098.0999755859375,
+        "owner": "union_join_vol_green_h1",
+        "peak_px": 219.6199951171875,
+        "reason": "combo gate; gate join=good,vol=good,last_green=True; list flatten,yday_gainer,yday_mover; \ud83d\udd35; ret5=+21.5; combo leftover $1201.84; owner union_join_vol_green_h1",
+        "shares": 5,
+        "side": "long",
+        "ticker": "VICR"
+      },
+      "VITL": {
+        "close_px": 11.989999771118164,
+        "cost": 1197.2050120162965,
+        "entry_date": "2026-09-18",
+        "entry_px": 11.380000114440918,
+        "fee_in": 2.305,
+        "last_px": 11.380000114440918,
+        "notional": 1194.9000120162964,
+        "owner": "union_join_vol_green_h1",
+        "peak_px": 11.380000114440918,
+        "reason": "combo gate; gate join=good,vol=good,last_green=True; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+19.5; combo leftover $1201.84; owner union_join_vol_green_h1",
+        "shares": 105,
+        "side": "long",
+        "ticker": "VITL"
+      }
+    },
+    "yday_equity": 9791.49
+  }
+}

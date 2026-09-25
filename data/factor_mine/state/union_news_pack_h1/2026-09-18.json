@@ -1,0 +1,57 @@
+{
+  "buys": [
+    "CRWD"
+  ],
+  "cash": 145.51,
+  "date": "2026-09-18",
+  "equity": 8938.56,
+  "fees": 4.2043,
+  "fills": [
+    {
+      "fees": 2.1033,
+      "pnl": -196.32,
+      "price": 915.66,
+      "shares": 10,
+      "side": "SELL",
+      "ticker": "LITE"
+    },
+    {
+      "fees": 2.101,
+      "pnl": null,
+      "price": 246.98,
+      "shares": 37,
+      "side": "BUY",
+      "ticker": "CRWD"
+    }
+  ],
+  "holdings": [
+    "CRWD"
+  ],
+  "mean": -1.4217,
+  "n_trades_today": 2,
+  "recipe": "union_news_pack_h1",
+  "sells": [
+    "LITE"
+  ],
+  "state": {
+    "after": "2026-09-18",
+    "cash": 145.51,
+    "pos": {
+      "CRWD": {
+        "close_px": 237.64999389648438,
+        "cost": 9140.360841918946,
+        "entry_date": "2026-09-18",
+        "entry_px": 246.97999572753906,
+        "fee_in": 2.101,
+        "last_px": 246.97999572753906,
+        "min_hold": 1,
+        "notional": 9138.259841918945,
+        "peak_px": 246.97999572753906,
+        "reason": "morning packet news\ud83d\udfe2 only (not the merged box); gate news_box=good; rank cond; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+17.6; leftover $9285.87",
+        "shares": 37,
+        "ticker": "CRWD"
+      }
+    },
+    "yday_equity": 8938.56
+  }
+}

@@ -1,0 +1,273 @@
+{
+  "buys": [
+    "RRC",
+    "SEDG",
+    "OPTX",
+    "CAPR",
+    "SMTC",
+    "ERAS",
+    "BBWI",
+    "ZYME",
+    "SIMO",
+    "FIG"
+  ],
+  "cash": 6158.94,
+  "date": "2026-08-28",
+  "equity": 9904.74,
+  "fees": 21.288,
+  "fills": [
+    {
+      "fees": 2.05,
+      "pnl": null,
+      "price": 41.74,
+      "shares": 20,
+      "side": "BUY",
+      "ticker": "RRC"
+    },
+    {
+      "fees": 2.068,
+      "pnl": null,
+      "price": 32.9,
+      "shares": 26,
+      "side": "BUY",
+      "ticker": "SEDG"
+    },
+    {
+      "fees": 2.293,
+      "pnl": null,
+      "price": 8.61,
+      "shares": 101,
+      "side": "BUY",
+      "ticker": "OPTX"
+    },
+    {
+      "fees": 2.257,
+      "pnl": null,
+      "price": 9.73,
+      "shares": 89,
+      "side": "BUY",
+      "ticker": "CAPR"
+    },
+    {
+      "fees": 2.008,
+      "pnl": null,
+      "price": 141.76,
+      "shares": 6,
+      "side": "BUY",
+      "ticker": "SMTC"
+    },
+    {
+      "fees": 2.125,
+      "pnl": null,
+      "price": 19.25,
+      "shares": 45,
+      "side": "BUY",
+      "ticker": "ERAS"
+    },
+    {
+      "fees": 2.128,
+      "pnl": null,
+      "price": 18.75,
+      "shares": 46,
+      "side": "BUY",
+      "ticker": "BBWI"
+    },
+    {
+      "fees": 2.08,
+      "pnl": null,
+      "price": 28.91,
+      "shares": 30,
+      "side": "BUY",
+      "ticker": "ZYME"
+    },
+    {
+      "fees": 2.071564110492027,
+      "pnl": null,
+      "price": 252.24,
+      "shares": 6,
+      "side": "SHORT",
+      "ticker": "SIMO"
+    },
+    {
+      "fees": 2.2074693154949028,
+      "pnl": null,
+      "price": 30.18,
+      "shares": 51,
+      "side": "SHORT",
+      "ticker": "FIG"
+    }
+  ],
+  "holdings": [
+    "BBWI",
+    "CAPR",
+    "ERAS",
+    "FIG",
+    "OPTX",
+    "RRC",
+    "SEDG",
+    "SIMO",
+    "SMTC",
+    "ZYME"
+  ],
+  "mean": -0.9526,
+  "n_trades_today": 10,
+  "recipe": "combo_sn_3070_shared",
+  "sells": [],
+  "state": {
+    "after": "2026-08-28",
+    "cash": 6158.94,
+    "pos": {
+      "BBWI": {
+        "close_px": 19.219999313354492,
+        "cost": 864.628,
+        "entry_date": "2026-08-28",
+        "entry_px": 18.75,
+        "fee_in": 2.128,
+        "last_px": 18.75,
+        "notional": 862.5,
+        "owner": "union_news_g_h1",
+        "peak_px": 18.75,
+        "reason": "union \u2229 news_g, no \ud83d\udea8; gate news=good; list yday_gainer; ret5=-4.1; combo leftover $875.00; owner union_news_g_h1",
+        "shares": 46,
+        "side": "long",
+        "ticker": "BBWI"
+      },
+      "CAPR": {
+        "close_px": 9.59000015258789,
+        "cost": 868.2269592590332,
+        "entry_date": "2026-08-28",
+        "entry_px": 9.729999542236328,
+        "fee_in": 2.257,
+        "last_px": 9.729999542236328,
+        "notional": 865.9699592590332,
+        "owner": "union_news_g_h1",
+        "peak_px": 9.729999542236328,
+        "reason": "union \u2229 news_g, no \ud83d\udea8; gate news=good; list yday_gainer,yday_mover; ret5=+47.1; combo leftover $875.00; owner union_news_g_h1",
+        "shares": 89,
+        "side": "long",
+        "ticker": "CAPR"
+      },
+      "ERAS": {
+        "close_px": 18.030000686645508,
+        "cost": 868.375,
+        "entry_date": "2026-08-28",
+        "entry_px": 19.25,
+        "fee_in": 2.125,
+        "last_px": 19.25,
+        "notional": 866.25,
+        "owner": "union_news_g_h1",
+        "peak_px": 19.25,
+        "reason": "union \u2229 news_g, no \ud83d\udea8; gate news=good; list yday_gainer; ret5=+14.1; combo leftover $875.00; owner union_news_g_h1",
+        "shares": 45,
+        "side": "long",
+        "ticker": "ERAS"
+      },
+      "FIG": {
+        "close_px": 28.81999969482422,
+        "cost": 2.2074693154949028,
+        "entry_date": "2026-08-28",
+        "entry_px": 30.18000030517578,
+        "fee_in": 2.2074693154949028,
+        "last_px": 30.18000030517578,
+        "notional": 1539.1800155639648,
+        "owner": "short_news_r_h3",
+        "peak_px": 30.18000030517578,
+        "reason": "news\ud83d\udd34; gate news=bad; list ohlc_hot; ret5=+12.1; combo leftover $1555.30; owner short_news_r_h3",
+        "shares": 51,
+        "side": "short",
+        "ticker": "FIG"
+      },
+      "OPTX": {
+        "close_px": 8.520000457763672,
+        "cost": 871.9029653244019,
+        "entry_date": "2026-08-28",
+        "entry_px": 8.609999656677246,
+        "fee_in": 2.293,
+        "last_px": 8.609999656677246,
+        "notional": 869.6099653244019,
+        "owner": "union_news_g_h1",
+        "peak_px": 8.609999656677246,
+        "reason": "union \u2229 news_g, no \ud83d\udea8; gate news=good; list probable,yday_gainer; ret5=-0.7; combo leftover $875.00; owner union_news_g_h1",
+        "shares": 101,
+        "side": "long",
+        "ticker": "OPTX"
+      },
+      "RRC": {
+        "close_px": 41.459999084472656,
+        "cost": 836.8500335693359,
+        "entry_date": "2026-08-28",
+        "entry_px": 41.7400016784668,
+        "fee_in": 2.05,
+        "last_px": 41.7400016784668,
+        "notional": 834.8000335693359,
+        "owner": "union_news_g_h1",
+        "peak_px": 41.7400016784668,
+        "reason": "union \u2229 news_g, no \ud83d\udea8; gate news=good; list flatten; ret5=+2.4; combo leftover $875.00; owner union_news_g_h1",
+        "shares": 20,
+        "side": "long",
+        "ticker": "RRC"
+      },
+      "SEDG": {
+        "close_px": 31.40999984741211,
+        "cost": 857.4680396728515,
+        "entry_date": "2026-08-28",
+        "entry_px": 32.900001525878906,
+        "fee_in": 2.068,
+        "last_px": 32.900001525878906,
+        "notional": 855.4000396728516,
+        "owner": "union_news_g_h1",
+        "peak_px": 32.900001525878906,
+        "reason": "union \u2229 news_g, no \ud83d\udea8; gate news=good; list probable,yday_gainer,yday_mover; \ud83d\udd35; ret5=+8.4; combo leftover $875.00; owner union_news_g_h1",
+        "shares": 26,
+        "side": "long",
+        "ticker": "SEDG"
+      },
+      "SIMO": {
+        "close_px": 245.80999755859375,
+        "cost": 2.071564110492027,
+        "entry_date": "2026-08-28",
+        "entry_px": 252.24000549316406,
+        "fee_in": 2.071564110492027,
+        "last_px": 252.24000549316406,
+        "notional": 1513.4400329589844,
+        "owner": "short_news_r_h3",
+        "peak_px": 252.24000549316406,
+        "reason": "news\ud83d\udd34; gate news=bad; list probable,yday_gainer; \u26aa; ret5=+2.2; combo leftover $1555.30; owner short_news_r_h3",
+        "shares": 6,
+        "side": "short",
+        "ticker": "SIMO"
+      },
+      "SMTC": {
+        "close_px": 131.1699981689453,
+        "cost": 852.5679670410157,
+        "entry_date": "2026-08-28",
+        "entry_px": 141.75999450683594,
+        "fee_in": 2.008,
+        "last_px": 141.75999450683594,
+        "notional": 850.5599670410156,
+        "owner": "union_news_g_h1",
+        "peak_px": 141.75999450683594,
+        "reason": "union \u2229 news_g, no \ud83d\udea8; gate news=good; list yday_gainer,yday_mover,mover_buy; \ud83d\udd35; \u26aa; ret5=+14.1; combo leftover $875.00; owner union_news_g_h1",
+        "shares": 6,
+        "side": "long",
+        "ticker": "SMTC"
+      },
+      "ZYME": {
+        "close_px": 28.270000457763672,
+        "cost": 869.3799954223633,
+        "entry_date": "2026-08-28",
+        "entry_px": 28.90999984741211,
+        "fee_in": 2.08,
+        "last_px": 28.90999984741211,
+        "notional": 867.2999954223633,
+        "owner": "union_news_g_h1",
+        "peak_px": 28.90999984741211,
+        "reason": "union \u2229 news_g, no \ud83d\udea8; gate news=good; list yday_gainer; ret5=+9.2; combo leftover $875.00; owner union_news_g_h1",
+        "shares": 30,
+        "side": "long",
+        "ticker": "ZYME"
+      }
+    },
+    "yday_equity": 9904.74
+  }
+}

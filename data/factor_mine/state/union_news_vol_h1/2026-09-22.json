@@ -1,0 +1,126 @@
+{
+  "buys": [
+    "IVVD",
+    "GRAL"
+  ],
+  "cash": 39.96,
+  "date": "2026-09-22",
+  "equity": 8759.8,
+  "fees": 80.3098,
+  "fills": [
+    {
+      "fees": 9.2887,
+      "pnl": -61.05,
+      "price": 2.09,
+      "shares": 710,
+      "side": "SELL",
+      "ticker": "AMTX"
+    },
+    {
+      "fees": 2.019,
+      "pnl": 23.31,
+      "price": 403.0,
+      "shares": 3,
+      "side": "SELL",
+      "ticker": "ISRG"
+    },
+    {
+      "fees": 2.3465,
+      "pnl": -92.95,
+      "price": 13.13,
+      "shares": 109,
+      "side": "SELL",
+      "ticker": "MARA"
+    },
+    {
+      "fees": 3.3309,
+      "pnl": -9.15,
+      "price": 5.99,
+      "shares": 254,
+      "side": "SELL",
+      "ticker": "SION"
+    },
+    {
+      "fees": 2.0351,
+      "pnl": -133.49,
+      "price": 174.12,
+      "shares": 8,
+      "side": "SELL",
+      "ticker": "SMTC"
+    },
+    {
+      "fees": 2.0296,
+      "pnl": 60.7,
+      "price": 241.04,
+      "shares": 6,
+      "side": "SELL",
+      "ticker": "VICR"
+    },
+    {
+      "fees": 57.147,
+      "pnl": null,
+      "price": 1.01,
+      "shares": 4430,
+      "side": "BUY",
+      "ticker": "IVVD"
+    },
+    {
+      "fees": 2.113,
+      "pnl": null,
+      "price": 106.75,
+      "shares": 41,
+      "side": "BUY",
+      "ticker": "GRAL"
+    }
+  ],
+  "holdings": [
+    "GRAL",
+    "IVVD"
+  ],
+  "mean": -1.6781,
+  "n_trades_today": 8,
+  "recipe": "union_news_vol_h1",
+  "sells": [
+    "AMTX",
+    "ISRG",
+    "MARA",
+    "SION",
+    "SMTC",
+    "VICR"
+  ],
+  "state": {
+    "after": "2026-09-22",
+    "cash": 39.96,
+    "pos": {
+      "GRAL": {
+        "close_px": 108.52,
+        "cost": 4378.863,
+        "entry_date": "2026-09-22",
+        "entry_px": 106.75,
+        "fee_in": 2.113,
+        "last_px": 106.75,
+        "min_hold": 1,
+        "notional": 4376.75,
+        "peak_px": 106.75,
+        "reason": "combo gate; gate news=good,vol=good; list yday_gainer,yday_mover; ret5=+42.9; leftover $4475.14",
+        "shares": 41,
+        "ticker": "GRAL"
+      },
+      "IVVD": {
+        "close_px": 0.9639999866485596,
+        "cost": 4531.446957752228,
+        "entry_date": "2026-09-22",
+        "entry_px": 1.0099999904632568,
+        "fee_in": 57.147,
+        "last_px": 1.0099999904632568,
+        "min_hold": 1,
+        "notional": 4474.299957752228,
+        "peak_px": 1.0099999904632568,
+        "reason": "combo gate; gate news=good,vol=good; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+14.3; leftover $4475.14",
+        "shares": 4430,
+        "ticker": "IVVD"
+      }
+    },
+    "yday_equity": 8759.8
+  }
+}

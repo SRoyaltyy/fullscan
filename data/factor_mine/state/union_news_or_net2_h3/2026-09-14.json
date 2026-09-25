@@ -1,0 +1,66 @@
+{
+  "buys": [],
+  "cash": 36.37,
+  "date": "2026-09-14",
+  "equity": 9239.1,
+  "fees": 0,
+  "fills": [],
+  "holdings": [
+    "ADBE",
+    "BAK",
+    "ORCL"
+  ],
+  "mean": -0.3768,
+  "n_trades_today": 0,
+  "recipe": "union_news_or_net2_h3",
+  "sells": [],
+  "state": {
+    "after": "2026-09-14",
+    "cash": 36.37,
+    "pos": {
+      "ADBE": {
+        "close_px": 265.6000061035156,
+        "cost": 3150.238976196289,
+        "entry_date": "2026-09-11",
+        "entry_px": 242.1699981689453,
+        "fee_in": 2.029,
+        "last_px": 261.510009765625,
+        "min_hold": 3,
+        "notional": 3148.209976196289,
+        "peak_px": 261.510009765625,
+        "reason": "packet\ud83d\udfe2 OR headline\ud83d\udfe2 and camera net \u2265 2; gate news_or_headline=True,cam_net_min=2; rank cond; list earn_react; \ud83d\udd35; ret5=-12.9; leftover $3165.04",
+        "shares": 13,
+        "ticker": "ADBE"
+      },
+      "BAK": {
+        "close_px": 2.009999990463257,
+        "cost": 3182.2866292541503,
+        "entry_date": "2026-09-11",
+        "entry_px": 2.119999885559082,
+        "fee_in": 19.2468,
+        "last_px": 2.049999952316284,
+        "min_hold": 3,
+        "notional": 3163.0398292541504,
+        "peak_px": 2.119999885559082,
+        "reason": "packet\ud83d\udfe2 OR headline\ud83d\udfe2 and camera net \u2265 2; gate news_or_headline=True,cam_net_min=2; rank cond; list probable,yday_gainer,ohlc_hot; \ud83d\udd35; ret5=+8.8; leftover $3165.04",
+        "shares": 1492,
+        "ticker": "BAK"
+      },
+      "ORCL": {
+        "close_px": 144.7899932861328,
+        "cost": 3126.216860839844,
+        "entry_date": "2026-09-11",
+        "entry_px": 164.42999267578125,
+        "fee_in": 2.047,
+        "last_px": 141.4199981689453,
+        "min_hold": 3,
+        "notional": 3124.1698608398438,
+        "peak_px": 164.42999267578125,
+        "reason": "packet\ud83d\udfe2 OR headline\ud83d\udfe2 and camera net \u2265 2; gate news_or_headline=True,cam_net_min=2; rank cond; list flatten,earn_react; \ud83d\udd35; \u26aa; ret5=-0.7; leftover $3165.04",
+        "shares": 19,
+        "ticker": "ORCL"
+      }
+    },
+    "yday_equity": 9239.1
+  }
+}

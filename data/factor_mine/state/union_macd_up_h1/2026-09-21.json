@@ -1,0 +1,264 @@
+{
+  "buys": [
+    "A",
+    "PGEN",
+    "IOVA",
+    "CYPH",
+    "BTDR",
+    "BTBT",
+    "TJGC"
+  ],
+  "cash": 1234.08,
+  "date": "2026-09-21",
+  "equity": 9177.08,
+  "fees": 42.5123,
+  "fills": [
+    {
+      "fees": 2.6302,
+      "pnl": 111.2,
+      "price": 6.415,
+      "shares": 199,
+      "side": "SELL",
+      "ticker": "BNC"
+    },
+    {
+      "fees": 2.049,
+      "pnl": -32.29,
+      "price": 82.83,
+      "shares": 13,
+      "side": "SELL",
+      "ticker": "ECO"
+    },
+    {
+      "fees": 3.8514,
+      "pnl": -31.16,
+      "price": 3.87,
+      "shares": 294,
+      "side": "SELL",
+      "ticker": "EYPT"
+    },
+    {
+      "fees": 2.025,
+      "pnl": -1.63,
+      "price": 210.0,
+      "shares": 5,
+      "side": "SELL",
+      "ticker": "GNRC"
+    },
+    {
+      "fees": 2.04,
+      "pnl": -13.86,
+      "price": 107.57,
+      "shares": 10,
+      "side": "SELL",
+      "ticker": "RBRK"
+    },
+    {
+      "fees": 2.127,
+      "pnl": 0.06,
+      "price": 29.43,
+      "shares": 39,
+      "side": "SELL",
+      "ticker": "SDGR"
+    },
+    {
+      "fees": 2.4812,
+      "pnl": 5.71,
+      "price": 7.71,
+      "shares": 152,
+      "side": "SELL",
+      "ticker": "SHLS"
+    },
+    {
+      "fees": 2.025,
+      "pnl": 49.12,
+      "price": 230.25,
+      "shares": 5,
+      "side": "SELL",
+      "ticker": "VICR"
+    },
+    {
+      "fees": 2.011,
+      "pnl": null,
+      "price": 157.87,
+      "shares": 7,
+      "side": "BUY",
+      "ticker": "A"
+    },
+    {
+      "fees": 2.437,
+      "pnl": null,
+      "price": 7.84,
+      "shares": 149,
+      "side": "BUY",
+      "ticker": "PGEN"
+    },
+    {
+      "fees": 2.326,
+      "pnl": null,
+      "price": 10.43,
+      "shares": 112,
+      "side": "BUY",
+      "ticker": "IOVA"
+    },
+    {
+      "fees": 3.7797,
+      "pnl": null,
+      "price": 4.0,
+      "shares": 293,
+      "side": "BUY",
+      "ticker": "CYPH"
+    },
+    {
+      "fees": 2.251,
+      "pnl": null,
+      "price": 13.475,
+      "shares": 87,
+      "side": "BUY",
+      "ticker": "BTDR"
+    },
+    {
+      "fees": 8.2818,
+      "pnl": null,
+      "price": 1.825,
+      "shares": 642,
+      "side": "BUY",
+      "ticker": "BTBT"
+    },
+    {
+      "fees": 2.197,
+      "pnl": null,
+      "price": 16.91,
+      "shares": 69,
+      "side": "BUY",
+      "ticker": "TJGC"
+    }
+  ],
+  "holdings": [
+    "A",
+    "BTBT",
+    "BTDR",
+    "CYPH",
+    "IOVA",
+    "PGEN",
+    "TJGC"
+  ],
+  "mean": -0.7252,
+  "n_trades_today": 15,
+  "recipe": "union_macd_up_h1",
+  "sells": [
+    "BNC",
+    "ECO",
+    "EYPT",
+    "GNRC",
+    "RBRK",
+    "SDGR",
+    "SHLS",
+    "VICR"
+  ],
+  "state": {
+    "after": "2026-09-21",
+    "cash": 1234.08,
+    "pos": {
+      "A": {
+        "close_px": 161.94000244140625,
+        "cost": 1107.1009658203125,
+        "entry_date": "2026-09-21",
+        "entry_px": 157.8699951171875,
+        "fee_in": 2.011,
+        "last_px": 157.8699951171875,
+        "min_hold": 1,
+        "notional": 1105.0899658203125,
+        "peak_px": 157.8699951171875,
+        "reason": "union \u2229 macd_up, no \ud83d\udea8; gate macd_up=True; list flatten; \ud83d\udd35; \u26aa; ret5=+6.5; leftover $1172.69",
+        "shares": 7,
+        "ticker": "A"
+      },
+      "BTBT": {
+        "close_px": 1.8200000524520874,
+        "cost": 1179.9318306129455,
+        "entry_date": "2026-09-21",
+        "entry_px": 1.8250000476837158,
+        "fee_in": 8.2818,
+        "last_px": 1.8250000476837158,
+        "min_hold": 1,
+        "notional": 1171.6500306129456,
+        "peak_px": 1.8250000476837158,
+        "reason": "union \u2229 macd_up, no \ud83d\udea8; gate macd_up=True; list probable,yday_gainer; \ud83d\udd35; ret5=+8.8; leftover $1172.69",
+        "shares": 642,
+        "ticker": "BTBT"
+      },
+      "BTDR": {
+        "close_px": 13.140000343322754,
+        "cost": 1174.5760331878662,
+        "entry_date": "2026-09-21",
+        "entry_px": 13.475000381469727,
+        "fee_in": 2.251,
+        "last_px": 13.475000381469727,
+        "min_hold": 1,
+        "notional": 1172.3250331878662,
+        "peak_px": 13.475000381469727,
+        "reason": "union \u2229 macd_up, no \ud83d\udea8; gate macd_up=True; list probable,yday_gainer,yday_mover,ohlc_hot; ret5=+8.4; leftover $1172.69",
+        "shares": 87,
+        "ticker": "BTDR"
+      },
+      "CYPH": {
+        "close_px": 3.4000000953674316,
+        "cost": 1175.7797,
+        "entry_date": "2026-09-21",
+        "entry_px": 4.0,
+        "fee_in": 3.7797,
+        "last_px": 4.0,
+        "min_hold": 1,
+        "notional": 1172.0,
+        "peak_px": 4.0,
+        "reason": "union \u2229 macd_up, no \ud83d\udea8; gate macd_up=True; list flatten,yday_gainer,yday_mover; \ud83d\udd35; \u26aa; ret5=+58.9; leftover $1172.69",
+        "shares": 293,
+        "ticker": "CYPH"
+      },
+      "IOVA": {
+        "close_px": 10.1899995803833,
+        "cost": 1170.4860341796875,
+        "entry_date": "2026-09-21",
+        "entry_px": 10.430000305175781,
+        "fee_in": 2.326,
+        "last_px": 10.430000305175781,
+        "min_hold": 1,
+        "notional": 1168.1600341796875,
+        "peak_px": 10.430000305175781,
+        "reason": "union \u2229 macd_up, no \ud83d\udea8; gate macd_up=True; list flatten; \u26aa; ret5=+19.2; leftover $1172.69",
+        "shares": 112,
+        "ticker": "IOVA"
+      },
+      "PGEN": {
+        "close_px": 7.699999809265137,
+        "cost": 1170.5970227355956,
+        "entry_date": "2026-09-21",
+        "entry_px": 7.840000152587891,
+        "fee_in": 2.437,
+        "last_px": 7.840000152587891,
+        "min_hold": 1,
+        "notional": 1168.1600227355957,
+        "peak_px": 7.840000152587891,
+        "reason": "union \u2229 macd_up, no \ud83d\udea8; gate macd_up=True; list flatten; \u26aa; ret5=+13.6; leftover $1172.69",
+        "shares": 149,
+        "ticker": "PGEN"
+      },
+      "TJGC": {
+        "close_px": 17.579999923706055,
+        "cost": 1168.9869894714354,
+        "entry_date": "2026-09-21",
+        "entry_px": 16.90999984741211,
+        "fee_in": 2.197,
+        "last_px": 16.90999984741211,
+        "min_hold": 1,
+        "notional": 1166.7899894714355,
+        "peak_px": 16.90999984741211,
+        "reason": "union \u2229 macd_up, no \ud83d\udea8; gate macd_up=True; list yday_gainer,yday_mover; ret5=+50.5; leftover $1172.69",
+        "shares": 69,
+        "ticker": "TJGC"
+      }
+    },
+    "yday_equity": 9177.08
+  }
+}

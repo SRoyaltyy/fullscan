@@ -1,0 +1,65 @@
+{
+  "buys": [],
+  "cash": 7099.38,
+  "date": "2026-09-24",
+  "equity": 7159.77,
+  "fees": 12.3254,
+  "fills": [
+    {
+      "fees": 2.0647,
+      "pnl": 87.1,
+      "price": 163.95,
+      "shares": 15,
+      "side": "SELL",
+      "ticker": "A"
+    },
+    {
+      "fees": 8.1571,
+      "pnl": -389.99,
+      "price": 3.4,
+      "shares": 623,
+      "side": "SELL",
+      "ticker": "CYPH"
+    },
+    {
+      "fees": 2.1036,
+      "pnl": -36.38,
+      "price": 87.68,
+      "shares": 28,
+      "side": "SELL",
+      "ticker": "DXCM"
+    }
+  ],
+  "holdings": [
+    "OMER"
+  ],
+  "mean": -2.2785,
+  "n_trades_today": 3,
+  "recipe": "flatten_vol_g_h3",
+  "sells": [
+    "A",
+    "CYPH",
+    "DXCM"
+  ],
+  "state": {
+    "after": "2026-09-24",
+    "cash": 7099.38,
+    "pos": {
+      "OMER": {
+        "close_px": 20.1299991607666,
+        "cost": 62.57849885559082,
+        "entry_date": "2026-09-23",
+        "entry_px": 20.649999618530273,
+        "fee_in": 0.6285,
+        "last_px": 20.520000457763672,
+        "min_hold": 3,
+        "notional": 61.94999885559082,
+        "peak_px": 20.649999618530273,
+        "reason": "flatten wish-list \u2229 vol\ud83d\udfe2; gate vol=good; list flatten,yday_gainer,yday_mover; wish-list (live io HOLD \u2014 not a ticket); \ud83d\udd35; \u26aa; ret5=+22.6; leftover $70.90",
+        "shares": 3,
+        "ticker": "OMER"
+      }
+    },
+    "yday_equity": 7159.77
+  }
+}

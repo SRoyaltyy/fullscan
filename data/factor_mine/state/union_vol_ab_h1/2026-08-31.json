@@ -1,0 +1,101 @@
+{
+  "buys": [],
+  "cash": 8560.7,
+  "date": "2026-08-31",
+  "equity": 9764.5,
+  "fees": 20.6444,
+  "fills": [
+    {
+      "fees": 2.034,
+      "pnl": 11.63,
+      "price": 148.03,
+      "shares": 8,
+      "side": "SELL",
+      "ticker": "ANF"
+    },
+    {
+      "fees": 2.2091,
+      "pnl": 28.6,
+      "price": 19.25,
+      "shares": 66,
+      "side": "SELL",
+      "ticker": "BBWI"
+    },
+    {
+      "fees": 2.2153,
+      "pnl": -35.01,
+      "price": 17.7,
+      "shares": 68,
+      "side": "SELL",
+      "ticker": "BZ"
+    },
+    {
+      "fees": 7.928,
+      "pnl": -100.59,
+      "price": 1.92,
+      "shares": 606,
+      "side": "SELL",
+      "ticker": "CRDL"
+    },
+    {
+      "fees": 2.169,
+      "pnl": -38.24,
+      "price": 22.66,
+      "shares": 53,
+      "side": "SELL",
+      "ticker": "NCNO"
+    },
+    {
+      "fees": 2.034,
+      "pnl": -79.73,
+      "price": 132.3,
+      "shares": 8,
+      "side": "SELL",
+      "ticker": "SMTC"
+    },
+    {
+      "fees": 2.055,
+      "pnl": 11.21,
+      "price": 80.44,
+      "shares": 15,
+      "side": "SELL",
+      "ticker": "URBN"
+    }
+  ],
+  "holdings": [
+    "TH"
+  ],
+  "mean": -0.6193,
+  "n_trades_today": 7,
+  "recipe": "union_vol_ab_h1",
+  "sells": [
+    "ANF",
+    "BBWI",
+    "BZ",
+    "CRDL",
+    "NCNO",
+    "SMTC",
+    "URBN"
+  ],
+  "state": {
+    "after": "2026-08-31",
+    "cash": 8560.7,
+    "pos": {
+      "TH": {
+        "close_px": 18.520000457763672,
+        "cost": 1237.185,
+        "entry_date": "2026-08-28",
+        "entry_px": 19.0,
+        "fee_in": 2.185,
+        "last_px": 18.125,
+        "min_hold": 1,
+        "notional": 1235.0,
+        "peak_px": 19.0,
+        "reason": "combo gate; gate vol=good,ab=good; list ohlc_hot; ret5=+7.5; leftover $1250.00",
+        "shares": 65,
+        "ticker": "TH"
+      }
+    },
+    "yday_equity": 9764.5
+  }
+}

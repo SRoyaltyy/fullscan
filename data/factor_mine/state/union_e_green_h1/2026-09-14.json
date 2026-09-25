@@ -1,0 +1,30 @@
+{
+  "buys": [],
+  "cash": 9926.11,
+  "date": "2026-09-14",
+  "equity": 9926.11,
+  "fees": 2.598,
+  "fills": [
+    {
+      "fees": 2.598,
+      "pnl": 544.34,
+      "price": 59.31,
+      "shares": 167,
+      "side": "SELL",
+      "ticker": "KR"
+    }
+  ],
+  "holdings": [],
+  "mean": 1.372,
+  "n_trades_today": 1,
+  "recipe": "union_e_green_h1",
+  "sells": [
+    "KR"
+  ],
+  "state": {
+    "after": "2026-09-14",
+    "cash": 9926.11,
+    "pos": {},
+    "yday_equity": 9926.11
+  }
+}

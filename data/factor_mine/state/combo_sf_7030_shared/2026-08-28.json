@@ -1,0 +1,173 @@
+{
+  "buys": [
+    "RRC",
+    "CRK",
+    "MOS",
+    "SLI",
+    "SIMO",
+    "FIG"
+  ],
+  "cash": 11784.73,
+  "date": "2026-08-28",
+  "equity": 10085.86,
+  "fees": 14.3107,
+  "fills": [
+    {
+      "fees": 2.041,
+      "pnl": null,
+      "price": 41.74,
+      "shares": 17,
+      "side": "BUY",
+      "ticker": "RRC"
+    },
+    {
+      "fees": 2.143,
+      "pnl": null,
+      "price": 14.63,
+      "shares": 51,
+      "side": "BUY",
+      "ticker": "CRK"
+    },
+    {
+      "fees": 2.083,
+      "pnl": null,
+      "price": 23.95,
+      "shares": 31,
+      "side": "BUY",
+      "ticker": "MOS"
+    },
+    {
+      "fees": 3.5991,
+      "pnl": null,
+      "price": 2.68,
+      "shares": 279,
+      "side": "BUY",
+      "ticker": "SLI"
+    },
+    {
+      "fees": 2.1073961657380402,
+      "pnl": null,
+      "price": 252.24,
+      "shares": 9,
+      "side": "SHORT",
+      "ticker": "SIMO"
+    },
+    {
+      "fees": 2.3372016445212167,
+      "pnl": null,
+      "price": 30.18,
+      "shares": 82,
+      "side": "SHORT",
+      "ticker": "FIG"
+    }
+  ],
+  "holdings": [
+    "CRK",
+    "FIG",
+    "MOS",
+    "RRC",
+    "SIMO",
+    "SLI"
+  ],
+  "mean": 0.8586,
+  "n_trades_today": 6,
+  "recipe": "combo_sf_7030_shared",
+  "sells": [],
+  "state": {
+    "after": "2026-08-28",
+    "cash": 11784.73,
+    "pos": {
+      "CRK": {
+        "close_px": 14.289999961853027,
+        "cost": 748.2730058364868,
+        "entry_date": "2026-08-28",
+        "entry_px": 14.630000114440918,
+        "fee_in": 2.143,
+        "last_px": 14.630000114440918,
+        "notional": 746.1300058364868,
+        "owner": "flatten_h5",
+        "peak_px": 14.630000114440918,
+        "reason": "baseline list, no extra gate; list flatten; wish-list (live io HOLD \u2014 not a ticket); ret5=+5.8; combo leftover $750.00; owner flatten_h5",
+        "shares": 51,
+        "side": "long",
+        "ticker": "CRK"
+      },
+      "FIG": {
+        "close_px": 28.81999969482422,
+        "cost": 2.3372016445212167,
+        "entry_date": "2026-08-28",
+        "entry_px": 30.18000030517578,
+        "fee_in": 2.3372016445212167,
+        "last_px": 30.18000030517578,
+        "notional": 2474.760025024414,
+        "owner": "short_news_r_h3",
+        "peak_px": 30.18000030517578,
+        "reason": "news\ud83d\udd34; gate news=bad; list ohlc_hot; ret5=+12.1; combo leftover $2497.53; owner short_news_r_h3",
+        "shares": 82,
+        "side": "short",
+        "ticker": "FIG"
+      },
+      "MOS": {
+        "close_px": 23.600000381469727,
+        "cost": 744.533023651123,
+        "entry_date": "2026-08-28",
+        "entry_px": 23.950000762939453,
+        "fee_in": 2.083,
+        "last_px": 23.950000762939453,
+        "notional": 742.450023651123,
+        "owner": "flatten_h5",
+        "peak_px": 23.950000762939453,
+        "reason": "baseline list, no extra gate; list flatten; wish-list (live io HOLD \u2014 not a ticket); ret5=+1.8; combo leftover $750.00; owner flatten_h5",
+        "shares": 31,
+        "side": "long",
+        "ticker": "MOS"
+      },
+      "RRC": {
+        "close_px": 41.459999084472656,
+        "cost": 711.6210285339356,
+        "entry_date": "2026-08-28",
+        "entry_px": 41.7400016784668,
+        "fee_in": 2.041,
+        "last_px": 41.7400016784668,
+        "notional": 709.5800285339355,
+        "owner": "flatten_h5",
+        "peak_px": 41.7400016784668,
+        "reason": "baseline list, no extra gate; list flatten; wish-list (live io HOLD \u2014 not a ticket); ret5=+2.4; combo leftover $750.00; owner flatten_h5",
+        "shares": 17,
+        "side": "long",
+        "ticker": "RRC"
+      },
+      "SIMO": {
+        "close_px": 245.80999755859375,
+        "cost": 2.1073961657380402,
+        "entry_date": "2026-08-28",
+        "entry_px": 252.24000549316406,
+        "fee_in": 2.1073961657380402,
+        "last_px": 252.24000549316406,
+        "notional": 2270.1600494384766,
+        "owner": "short_news_r_h3",
+        "peak_px": 252.24000549316406,
+        "reason": "news\ud83d\udd34; gate news=bad; list probable,yday_gainer; \u26aa; ret5=+2.2; combo leftover $2497.53; owner short_news_r_h3",
+        "shares": 9,
+        "side": "short",
+        "ticker": "SIMO"
+      },
+      "SLI": {
+        "close_px": 2.549999952316284,
+        "cost": 751.3191186252594,
+        "entry_date": "2026-08-28",
+        "entry_px": 2.680000066757202,
+        "fee_in": 3.5991,
+        "last_px": 2.680000066757202,
+        "notional": 747.7200186252594,
+        "owner": "flatten_h5",
+        "peak_px": 2.680000066757202,
+        "reason": "baseline list, no extra gate; list flatten,ohlc_hot; wish-list (live io HOLD \u2014 not a ticket); ret5=+16.3; combo leftover $750.00; owner flatten_h5",
+        "shares": 279,
+        "side": "long",
+        "ticker": "SLI"
+      }
+    },
+    "yday_equity": 10085.86
+  }
+}

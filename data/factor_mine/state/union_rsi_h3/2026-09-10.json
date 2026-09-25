@@ -1,0 +1,93 @@
+{
+  "buys": [],
+  "cash": 9094.95,
+  "date": "2026-09-10",
+  "equity": 9094.95,
+  "fees": 24.0372,
+  "fills": [
+    {
+      "fees": 8.4768,
+      "pnl": 22.04,
+      "price": 1.81,
+      "shares": 648,
+      "side": "SELL",
+      "ticker": "AIIO"
+    },
+    {
+      "fees": 2.031,
+      "pnl": -2.29,
+      "price": 162.35,
+      "shares": 7,
+      "side": "SELL",
+      "ticker": "CRDO"
+    },
+    {
+      "fees": 2.247,
+      "pnl": 116.43,
+      "price": 16.07,
+      "shares": 78,
+      "side": "SELL",
+      "ticker": "FCEL"
+    },
+    {
+      "fees": 2.228,
+      "pnl": -36.11,
+      "price": 15.26,
+      "shares": 72,
+      "side": "SELL",
+      "ticker": "MAMA"
+    },
+    {
+      "fees": 2.181,
+      "pnl": -157.1,
+      "price": 16.96,
+      "shares": 57,
+      "side": "SELL",
+      "ticker": "PL"
+    },
+    {
+      "fees": 2.5351,
+      "pnl": 116.65,
+      "price": 7.4,
+      "shares": 169,
+      "side": "SELL",
+      "ticker": "SION"
+    },
+    {
+      "fees": 2.2533,
+      "pnl": -69.28,
+      "price": 13.31,
+      "shares": 80,
+      "side": "SELL",
+      "ticker": "SWBI"
+    },
+    {
+      "fees": 2.085,
+      "pnl": 23.1,
+      "price": 44.89,
+      "shares": 25,
+      "side": "SELL",
+      "ticker": "UNFI"
+    }
+  ],
+  "holdings": [],
+  "mean": -1.7412,
+  "n_trades_today": 8,
+  "recipe": "union_rsi_h3",
+  "sells": [
+    "AIIO",
+    "CRDO",
+    "FCEL",
+    "MAMA",
+    "PL",
+    "SION",
+    "SWBI",
+    "UNFI"
+  ],
+  "state": {
+    "after": "2026-09-10",
+    "cash": 9094.95,
+    "pos": {},
+    "yday_equity": 9094.95
+  }
+}

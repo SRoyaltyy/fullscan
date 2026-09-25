@@ -1,0 +1,261 @@
+{
+  "buys": [
+    "HLP",
+    "FTRE",
+    "SDGR",
+    "RVTY",
+    "TENB",
+    "MRCY",
+    "CRWD",
+    "RBRK"
+  ],
+  "cash": 411.59,
+  "date": "2026-09-16",
+  "equity": 9270.7,
+  "fees": 36.5313,
+  "fills": [
+    {
+      "fees": 2.4915,
+      "pnl": -94.26,
+      "price": 11.3,
+      "shares": 154,
+      "side": "SELL",
+      "ticker": "APPS"
+    },
+    {
+      "fees": 4.066,
+      "pnl": 97.34,
+      "price": 6.25,
+      "shares": 310,
+      "side": "SELL",
+      "ticker": "DBI"
+    },
+    {
+      "fees": 2.8367,
+      "pnl": -20.74,
+      "price": 8.38,
+      "shares": 216,
+      "side": "SELL",
+      "ticker": "HPK"
+    },
+    {
+      "fees": 2.0932,
+      "pnl": 81.38,
+      "price": 73.17,
+      "shares": 26,
+      "side": "SELL",
+      "ticker": "INSP"
+    },
+    {
+      "fees": 2.5444,
+      "pnl": -211.96,
+      "price": 9.5,
+      "shares": 171,
+      "side": "SELL",
+      "ticker": "XHLD"
+    },
+    {
+      "fees": 8.0625,
+      "pnl": null,
+      "price": 1.8,
+      "shares": 625,
+      "side": "BUY",
+      "ticker": "HLP"
+    },
+    {
+      "fees": 2.161,
+      "pnl": null,
+      "price": 19.75,
+      "shares": 57,
+      "side": "BUY",
+      "ticker": "FTRE"
+    },
+    {
+      "fees": 2.134,
+      "pnl": null,
+      "price": 23.29,
+      "shares": 48,
+      "side": "BUY",
+      "ticker": "SDGR"
+    },
+    {
+      "fees": 2.011,
+      "pnl": null,
+      "price": 140.88,
+      "shares": 7,
+      "side": "BUY",
+      "ticker": "RVTY"
+    },
+    {
+      "fees": 2.08,
+      "pnl": null,
+      "price": 36.86,
+      "shares": 30,
+      "side": "BUY",
+      "ticker": "TENB"
+    },
+    {
+      "fees": 2.026,
+      "pnl": null,
+      "price": 87.52,
+      "shares": 12,
+      "side": "BUY",
+      "ticker": "MRCY"
+    },
+    {
+      "fees": 2.002,
+      "pnl": null,
+      "price": 236.92,
+      "shares": 4,
+      "side": "BUY",
+      "ticker": "CRWD"
+    },
+    {
+      "fees": 2.023,
+      "pnl": null,
+      "price": 101.97,
+      "shares": 11,
+      "side": "BUY",
+      "ticker": "RBRK"
+    }
+  ],
+  "holdings": [
+    "CRWD",
+    "FTRE",
+    "HLP",
+    "MRCY",
+    "RBRK",
+    "RVTY",
+    "SDGR",
+    "TENB"
+  ],
+  "mean": 1.6298,
+  "n_trades_today": 13,
+  "recipe": "union_macd_xup_h3",
+  "sells": [
+    "APPS",
+    "DBI",
+    "HPK",
+    "INSP",
+    "XHLD"
+  ],
+  "state": {
+    "after": "2026-09-16",
+    "cash": 411.59,
+    "pos": {
+      "CRWD": {
+        "close_px": 241.36000061035156,
+        "cost": 949.6819926757812,
+        "entry_date": "2026-09-16",
+        "entry_px": 236.9199981689453,
+        "fee_in": 2.002,
+        "last_px": 236.9199981689453,
+        "min_hold": 3,
+        "notional": 947.6799926757812,
+        "peak_px": 236.9199981689453,
+        "reason": "union \u2229 macd_xup, no \ud83d\udea8; gate macd_cross_up=True; list ohlc_hot; \u26aa; ret5=+15.5; leftover $1126.79",
+        "shares": 4,
+        "ticker": "CRWD"
+      },
+      "FTRE": {
+        "close_px": 19.969999313354492,
+        "cost": 1127.911,
+        "entry_date": "2026-09-16",
+        "entry_px": 19.75,
+        "fee_in": 2.161,
+        "last_px": 19.75,
+        "min_hold": 3,
+        "notional": 1125.75,
+        "peak_px": 19.75,
+        "reason": "union \u2229 macd_xup, no \ud83d\udea8; gate macd_cross_up=True; list yday_gainer,yday_mover,ohlc_hot; \ud83d\udd35; ret5=+15.7; leftover $1126.79",
+        "shares": 57,
+        "ticker": "FTRE"
+      },
+      "HLP": {
+        "close_px": 2.069999933242798,
+        "cost": 1133.0624701976776,
+        "entry_date": "2026-09-16",
+        "entry_px": 1.7999999523162842,
+        "fee_in": 8.0625,
+        "last_px": 1.7999999523162842,
+        "min_hold": 3,
+        "notional": 1124.9999701976776,
+        "peak_px": 1.7999999523162842,
+        "reason": "union \u2229 macd_xup, no \ud83d\udea8; gate macd_cross_up=True; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+30.5; leftover $1126.79",
+        "shares": 625,
+        "ticker": "HLP"
+      },
+      "MRCY": {
+        "close_px": 87.25,
+        "cost": 1052.265959716797,
+        "entry_date": "2026-09-16",
+        "entry_px": 87.5199966430664,
+        "fee_in": 2.026,
+        "last_px": 87.5199966430664,
+        "min_hold": 3,
+        "notional": 1050.2399597167969,
+        "peak_px": 87.5199966430664,
+        "reason": "union \u2229 macd_xup, no \ud83d\udea8; gate macd_cross_up=True; list yday_gainer; \ud83d\udd35; ret5=+4.3; leftover $1126.79",
+        "shares": 12,
+        "ticker": "MRCY"
+      },
+      "RBRK": {
+        "close_px": 104.9800033569336,
+        "cost": 1123.6930134277343,
+        "entry_date": "2026-09-16",
+        "entry_px": 101.97000122070312,
+        "fee_in": 2.023,
+        "last_px": 101.97000122070312,
+        "min_hold": 3,
+        "notional": 1121.6700134277344,
+        "peak_px": 101.97000122070312,
+        "reason": "union \u2229 macd_xup, no \ud83d\udea8; gate macd_cross_up=True; list ohlc_hot; \ud83d\udd35; ret5=+13.0; leftover $1126.79",
+        "shares": 11,
+        "ticker": "RBRK"
+      },
+      "RVTY": {
+        "close_px": 145.72999572753906,
+        "cost": 988.1710341796875,
+        "entry_date": "2026-09-16",
+        "entry_px": 140.8800048828125,
+        "fee_in": 2.011,
+        "last_px": 140.8800048828125,
+        "min_hold": 3,
+        "notional": 986.1600341796875,
+        "peak_px": 140.8800048828125,
+        "reason": "union \u2229 macd_xup, no \ud83d\udea8; gate macd_cross_up=True; list yday_gainer,ohlc_hot; \ud83d\udd35; \u26aa; ret5=+10.3; leftover $1126.79",
+        "shares": 7,
+        "ticker": "RVTY"
+      },
+      "SDGR": {
+        "close_px": 23.93000030517578,
+        "cost": 1120.0540439453125,
+        "entry_date": "2026-09-16",
+        "entry_px": 23.290000915527344,
+        "fee_in": 2.134,
+        "last_px": 23.290000915527344,
+        "min_hold": 3,
+        "notional": 1117.9200439453125,
+        "peak_px": 23.290000915527344,
+        "reason": "union \u2229 macd_xup, no \ud83d\udea8; gate macd_cross_up=True; list yday_gainer; \ud83d\udd35; \u26aa; ret5=+16.1; leftover $1126.79",
+        "shares": 48,
+        "ticker": "SDGR"
+      },
+      "TENB": {
+        "close_px": 36.369998931884766,
+        "cost": 1107.8800183105468,
+        "entry_date": "2026-09-16",
+        "entry_px": 36.86000061035156,
+        "fee_in": 2.08,
+        "last_px": 36.86000061035156,
+        "min_hold": 3,
+        "notional": 1105.8000183105469,
+        "peak_px": 36.86000061035156,
+        "reason": "union \u2229 macd_xup, no \ud83d\udea8; gate macd_cross_up=True; list yday_gainer,ohlc_hot; \ud83d\udd35; ret5=+13.0; leftover $1126.79",
+        "shares": 30,
+        "ticker": "TENB"
+      }
+    },
+    "yday_equity": 9270.7
+  }
+}

@@ -1,0 +1,207 @@
+{
+  "buys": [
+    "MOS",
+    "SEDG",
+    "GRRR",
+    "URBN",
+    "SAFX",
+    "SIMO",
+    "XPOF",
+    "BHVN"
+  ],
+  "cash": 14727.71,
+  "date": "2026-08-28",
+  "equity": 10082.01,
+  "fees": 26.6296,
+  "fills": [
+    {
+      "fees": 2.1050602745160667,
+      "pnl": null,
+      "price": 23.95,
+      "shares": 26,
+      "side": "SHORT",
+      "ticker": "MOS"
+    },
+    {
+      "fees": 2.0802246582867348,
+      "pnl": null,
+      "price": 32.9,
+      "shares": 18,
+      "side": "SHORT",
+      "ticker": "SEDG"
+    },
+    {
+      "fees": 2.1437326025766867,
+      "pnl": null,
+      "price": 15.66,
+      "shares": 39,
+      "side": "SHORT",
+      "ticker": "GRRR"
+    },
+    {
+      "fees": 2.0462312325255514,
+      "pnl": null,
+      "price": 79.42,
+      "shares": 7,
+      "side": "SHORT",
+      "ticker": "URBN"
+    },
+    {
+      "fees": 11.696120000447312,
+      "pnl": null,
+      "price": 0.365,
+      "shares": 1712,
+      "side": "SHORT",
+      "ticker": "SAFX"
+    },
+    {
+      "fees": 2.029821370164009,
+      "pnl": null,
+      "price": 252.24,
+      "shares": 2,
+      "side": "SHORT",
+      "ticker": "SIMO"
+    },
+    {
+      "fees": 2.384398082555484,
+      "pnl": null,
+      "price": 5.38,
+      "shares": 116,
+      "side": "SHORT",
+      "ticker": "XPOF"
+    },
+    {
+      "fees": 2.143967671355156,
+      "pnl": null,
+      "price": 15.88,
+      "shares": 39,
+      "side": "SHORT",
+      "ticker": "BHVN"
+    }
+  ],
+  "holdings": [
+    "BHVN",
+    "GRRR",
+    "MOS",
+    "SAFX",
+    "SEDG",
+    "SIMO",
+    "URBN",
+    "XPOF"
+  ],
+  "mean": 0.8201,
+  "n_trades_today": 8,
+  "recipe": "short_last_red_h3",
+  "sells": [],
+  "state": {
+    "after": "2026-08-28",
+    "cash": 14727.71,
+    "pos": {
+      "BHVN": {
+        "close_px": 15.40999984741211,
+        "cost": 2.143967671355156,
+        "entry_date": "2026-08-28",
+        "entry_px": 15.880000114440918,
+        "fee_in": 2.143967671355156,
+        "last_px": 15.880000114440918,
+        "notional": 619.3200044631958,
+        "peak_px": 15.880000114440918,
+        "reason": "last bar red; gate last_red=True; list yday_gainer,yday_mover; ret5=+19.4; leftover $625.00",
+        "shares": 39,
+        "ticker": "BHVN"
+      },
+      "GRRR": {
+        "close_px": 14.40999984741211,
+        "cost": 2.1437326025766867,
+        "entry_date": "2026-08-28",
+        "entry_px": 15.65999984741211,
+        "fee_in": 2.1437326025766867,
+        "last_px": 15.65999984741211,
+        "notional": 610.7399940490723,
+        "peak_px": 15.65999984741211,
+        "reason": "last bar red; gate last_red=True; list probable,yday_gainer,yday_mover; \ud83d\udd35; ret5=+2.7; leftover $625.00",
+        "shares": 39,
+        "ticker": "GRRR"
+      },
+      "MOS": {
+        "close_px": 23.600000381469727,
+        "cost": 2.1050602745160667,
+        "entry_date": "2026-08-28",
+        "entry_px": 23.950000762939453,
+        "fee_in": 2.1050602745160667,
+        "last_px": 23.950000762939453,
+        "notional": 622.7000198364258,
+        "peak_px": 23.950000762939453,
+        "reason": "last bar red; gate last_red=True; list flatten; ret5=+1.8; leftover $625.00",
+        "shares": 26,
+        "ticker": "MOS"
+      },
+      "SAFX": {
+        "close_px": 0.35899999737739563,
+        "cost": 11.696120000447312,
+        "entry_date": "2026-08-28",
+        "entry_px": 0.36500000953674316,
+        "fee_in": 11.696120000447312,
+        "last_px": 0.36500000953674316,
+        "notional": 624.8800163269043,
+        "peak_px": 0.36500000953674316,
+        "reason": "last bar red; gate last_red=True; list probable,yday_gainer; ret5=+7.6; leftover $625.00",
+        "shares": 1712,
+        "ticker": "SAFX"
+      },
+      "SEDG": {
+        "close_px": 31.40999984741211,
+        "cost": 2.0802246582867348,
+        "entry_date": "2026-08-28",
+        "entry_px": 32.900001525878906,
+        "fee_in": 2.0802246582867348,
+        "last_px": 32.900001525878906,
+        "notional": 592.2000274658203,
+        "peak_px": 32.900001525878906,
+        "reason": "last bar red; gate last_red=True; list probable,yday_gainer,yday_mover; \ud83d\udd35; ret5=+8.4; leftover $625.00",
+        "shares": 18,
+        "ticker": "SEDG"
+      },
+      "SIMO": {
+        "close_px": 245.80999755859375,
+        "cost": 2.029821370164009,
+        "entry_date": "2026-08-28",
+        "entry_px": 252.24000549316406,
+        "fee_in": 2.029821370164009,
+        "last_px": 252.24000549316406,
+        "notional": 504.4800109863281,
+        "peak_px": 252.24000549316406,
+        "reason": "last bar red; gate last_red=True; list probable,yday_gainer; \u26aa; ret5=+2.2; leftover $625.00",
+        "shares": 2,
+        "ticker": "SIMO"
+      },
+      "URBN": {
+        "close_px": 81.08999633789062,
+        "cost": 2.0462312325255514,
+        "entry_date": "2026-08-28",
+        "entry_px": 79.41999816894531,
+        "fee_in": 2.0462312325255514,
+        "last_px": 79.41999816894531,
+        "notional": 555.9399871826172,
+        "peak_px": 79.41999816894531,
+        "reason": "last bar red; gate last_red=True; list probable,yday_gainer,yday_mover; \ud83d\udd35; ret5=+8.5; leftover $625.00",
+        "shares": 7,
+        "ticker": "URBN"
+      },
+      "XPOF": {
+        "close_px": 5.429999828338623,
+        "cost": 2.384398082555484,
+        "entry_date": "2026-08-28",
+        "entry_px": 5.380000114440918,
+        "fee_in": 2.384398082555484,
+        "last_px": 5.380000114440918,
+        "notional": 624.0800132751465,
+        "peak_px": 5.380000114440918,
+        "reason": "last bar red; gate last_red=True; list probable,yday_gainer; ret5=+6.5; leftover $625.00",
+        "shares": 116,
+        "ticker": "XPOF"
+      }
+    },
+    "yday_equity": 10082.01
+  }
+}

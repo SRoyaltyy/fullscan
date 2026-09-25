@@ -1,0 +1,92 @@
+{
+  "buys": [
+    "OMER"
+  ],
+  "cash": 79.22,
+  "date": "2026-09-23",
+  "equity": 7326.71,
+  "fees": 0.6285,
+  "fills": [
+    {
+      "fees": 0.6285,
+      "pnl": null,
+      "price": 20.65,
+      "shares": 3,
+      "side": "BUY",
+      "ticker": "OMER"
+    }
+  ],
+  "holdings": [
+    "A",
+    "CYPH",
+    "DXCM",
+    "OMER"
+  ],
+  "mean": -2.0667,
+  "n_trades_today": 1,
+  "recipe": "flatten_vol_g_h3",
+  "sells": [],
+  "state": {
+    "after": "2026-09-23",
+    "cash": 79.22,
+    "pos": {
+      "A": {
+        "close_px": 165.32000732421875,
+        "cost": 2370.0849267578124,
+        "entry_date": "2026-09-21",
+        "entry_px": 157.8699951171875,
+        "fee_in": 2.035,
+        "last_px": 166.5399932861328,
+        "min_hold": 3,
+        "notional": 2368.0499267578125,
+        "peak_px": 166.5399932861328,
+        "reason": "flatten wish-list \u2229 vol\ud83d\udfe2; gate vol=good; list flatten; wish-list (live io HOLD \u2014 not a ticket); \ud83d\udd35; \u26aa; ret5=+6.5; leftover $2492.86",
+        "shares": 15,
+        "ticker": "A"
+      },
+      "CYPH": {
+        "close_px": 3.609999895095825,
+        "cost": 2500.0367,
+        "entry_date": "2026-09-21",
+        "entry_px": 4.0,
+        "fee_in": 8.0367,
+        "last_px": 3.819999933242798,
+        "min_hold": 3,
+        "notional": 2492.0,
+        "peak_px": 4.0,
+        "reason": "flatten wish-list \u2229 vol\ud83d\udfe2; gate vol=good; list flatten,yday_gainer,yday_mover; wish-list (live io HOLD \u2014 not a ticket); \ud83d\udd35; \u26aa; ret5=+58.9; leftover $2492.86",
+        "shares": 623,
+        "ticker": "CYPH"
+      },
+      "DXCM": {
+        "close_px": 87.7300033569336,
+        "cost": 2489.3140512695313,
+        "entry_date": "2026-09-21",
+        "entry_px": 88.83000183105469,
+        "fee_in": 2.074,
+        "last_px": 89.5,
+        "min_hold": 3,
+        "notional": 2487.2400512695312,
+        "peak_px": 89.5,
+        "reason": "flatten wish-list \u2229 vol\ud83d\udfe2; gate vol=good; list flatten; wish-list (live io HOLD \u2014 not a ticket); \ud83d\udd35; \u26aa; ret5=+7.6; leftover $2492.86",
+        "shares": 28,
+        "ticker": "DXCM"
+      },
+      "OMER": {
+        "close_px": 20.739999771118164,
+        "cost": 62.57849885559082,
+        "entry_date": "2026-09-23",
+        "entry_px": 20.649999618530273,
+        "fee_in": 0.6285,
+        "last_px": 20.649999618530273,
+        "min_hold": 3,
+        "notional": 61.94999885559082,
+        "peak_px": 20.649999618530273,
+        "reason": "flatten wish-list \u2229 vol\ud83d\udfe2; gate vol=good; list flatten,yday_gainer,yday_mover; wish-list (live io HOLD \u2014 not a ticket); \ud83d\udd35; \u26aa; ret5=+22.6; leftover $70.90",
+        "shares": 3,
+        "ticker": "OMER"
+      }
+    },
+    "yday_equity": 7326.71
+  }
+}

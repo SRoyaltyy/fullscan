@@ -1,0 +1,57 @@
+{
+  "buys": [],
+  "cash": 9989.39,
+  "date": "2026-09-08",
+  "equity": 9989.39,
+  "fees": 8.6811,
+  "fills": [
+    {
+      "fees": 2.0514,
+      "pnl": 305.33,
+      "price": 267.76,
+      "shares": 10,
+      "side": "SELL",
+      "ticker": "BE"
+    },
+    {
+      "fees": 2.0453,
+      "pnl": -90.82,
+      "price": 253.72,
+      "shares": 9,
+      "side": "SELL",
+      "ticker": "CRM"
+    },
+    {
+      "fees": 2.4718,
+      "pnl": 44.74,
+      "price": 16.74,
+      "shares": 146,
+      "side": "SELL",
+      "ticker": "FRNM"
+    },
+    {
+      "fees": 2.1126,
+      "pnl": 94.69,
+      "price": 78.84,
+      "shares": 31,
+      "side": "SELL",
+      "ticker": "MRX"
+    }
+  ],
+  "holdings": [],
+  "mean": 1.7425,
+  "n_trades_today": 4,
+  "recipe": "union_news_or_net5_h1",
+  "sells": [
+    "BE",
+    "CRM",
+    "FRNM",
+    "MRX"
+  ],
+  "state": {
+    "after": "2026-09-08",
+    "cash": 9989.39,
+    "pos": {},
+    "yday_equity": 9989.39
+  }
+}

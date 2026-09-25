@@ -1,0 +1,66 @@
+{
+  "buys": [],
+  "cash": 72.76,
+  "date": "2026-09-14",
+  "equity": 9362.48,
+  "fees": 0,
+  "fills": [],
+  "holdings": [
+    "ADBE",
+    "ORCL",
+    "RH"
+  ],
+  "mean": 0.7728,
+  "n_trades_today": 0,
+  "recipe": "union_news_vol_h3",
+  "sells": [],
+  "state": {
+    "after": "2026-09-14",
+    "cash": 72.76,
+    "pos": {
+      "ADBE": {
+        "close_px": 265.6000061035156,
+        "cost": 3150.238976196289,
+        "entry_date": "2026-09-11",
+        "entry_px": 242.1699981689453,
+        "fee_in": 2.029,
+        "last_px": 261.510009765625,
+        "min_hold": 3,
+        "notional": 3148.209976196289,
+        "peak_px": 261.510009765625,
+        "reason": "combo gate; gate news=good,vol=good; list earn_react; \ud83d\udd35; ret5=-12.9; leftover $3157.53",
+        "shares": 13,
+        "ticker": "ADBE"
+      },
+      "ORCL": {
+        "close_px": 144.7899932861328,
+        "cost": 3126.216860839844,
+        "entry_date": "2026-09-11",
+        "entry_px": 164.42999267578125,
+        "fee_in": 2.047,
+        "last_px": 141.4199981689453,
+        "min_hold": 3,
+        "notional": 3124.1698608398438,
+        "peak_px": 164.42999267578125,
+        "reason": "combo gate; gate news=good,vol=good; list flatten,earn_react; \ud83d\udd35; \u26aa; ret5=-0.7; leftover $3157.53",
+        "shares": 19,
+        "ticker": "ORCL"
+      },
+      "RH": {
+        "close_px": 134.1699981689453,
+        "cost": 3123.3891544189455,
+        "entry_date": "2026-09-11",
+        "entry_px": 135.7100067138672,
+        "fee_in": 2.059,
+        "last_px": 131.39999389648438,
+        "min_hold": 3,
+        "notional": 3121.3301544189453,
+        "peak_px": 135.7100067138672,
+        "reason": "combo gate; gate news=good,vol=good; list earn_react; ret5=-8.6; leftover $3157.53",
+        "shares": 23,
+        "ticker": "RH"
+      }
+    },
+    "yday_equity": 9362.48
+  }
+}

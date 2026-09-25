@@ -1,0 +1,142 @@
+{
+  "buys": [
+    "FEAM",
+    "CYPH",
+    "TJGC"
+  ],
+  "cash": 8.26,
+  "date": "2026-09-21",
+  "equity": 9589.71,
+  "fees": 30.5047,
+  "fills": [
+    {
+      "fees": 4.3218,
+      "pnl": -44.88,
+      "price": 3.55,
+      "shares": 330,
+      "side": "SELL",
+      "ticker": "INDP"
+    },
+    {
+      "fees": 2.3267,
+      "pnl": 6.28,
+      "price": 29.43,
+      "shares": 99,
+      "side": "SELL",
+      "ticker": "SDGR"
+    },
+    {
+      "fees": 2.1271,
+      "pnl": -85.42,
+      "price": 79.08,
+      "shares": 35,
+      "side": "SELL",
+      "ticker": "TEM"
+    },
+    {
+      "fees": 11.9583,
+      "pnl": null,
+      "price": 2.47,
+      "shares": 927,
+      "side": "BUY",
+      "ticker": "FEAM"
+    },
+    {
+      "fees": 7.3788,
+      "pnl": null,
+      "price": 4.0,
+      "shares": 572,
+      "side": "BUY",
+      "ticker": "CYPH"
+    },
+    {
+      "fees": 2.392,
+      "pnl": null,
+      "price": 16.91,
+      "shares": 134,
+      "side": "BUY",
+      "ticker": "TJGC"
+    }
+  ],
+  "holdings": [
+    "CYPH",
+    "FEAM",
+    "LVWR",
+    "TJGC"
+  ],
+  "mean": -3.8652,
+  "n_trades_today": 6,
+  "recipe": "combo_he1_5050_shared",
+  "sells": [
+    "INDP",
+    "SDGR",
+    "TEM"
+  ],
+  "state": {
+    "after": "2026-09-21",
+    "cash": 8.26,
+    "pos": {
+      "CYPH": {
+        "close_px": 3.4000000953674316,
+        "cost": 2295.3788,
+        "entry_date": "2026-09-21",
+        "entry_px": 4.0,
+        "fee_in": 7.3788,
+        "last_px": 4.0,
+        "notional": 2288.0,
+        "owner": "union_hot_n4_h1",
+        "peak_px": 4.0,
+        "reason": "top 4 by hot; rank hot_score; list flatten,yday_gainer,yday_mover; \ud83d\udd35; \u26aa; ret5=+58.9; combo leftover $2291.20; owner union_hot_n4_h1",
+        "shares": 572,
+        "side": "long",
+        "ticker": "CYPH"
+      },
+      "FEAM": {
+        "close_px": 2.4800000190734863,
+        "cost": 2301.6483265216825,
+        "entry_date": "2026-09-21",
+        "entry_px": 2.4700000286102295,
+        "fee_in": 11.9583,
+        "last_px": 2.4700000286102295,
+        "notional": 2289.6900265216827,
+        "owner": "union_hot_n4_h1",
+        "peak_px": 2.4700000286102295,
+        "reason": "top 4 by hot; rank hot_score; list yday_gainer,yday_mover; ret5=+73.6; combo leftover $2291.20; owner union_hot_n4_h1",
+        "shares": 927,
+        "side": "long",
+        "ticker": "FEAM"
+      },
+      "LVWR": {
+        "close_px": 1.5299999713897705,
+        "cost": 2929.1521185871125,
+        "entry_date": "2026-09-18",
+        "entry_px": 1.4900000095367432,
+        "fee_in": 25.1421,
+        "last_px": 1.649999976158142,
+        "notional": 2904.0100185871124,
+        "owner": "union_hot_n4_h1",
+        "peak_px": 1.649999976158142,
+        "reason": "top 4 by hot; rank hot_score; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+25.7; combo leftover $2904.91; owner union_hot_n4_h1",
+        "shares": 1949,
+        "side": "long",
+        "ticker": "LVWR"
+      },
+      "TJGC": {
+        "close_px": 17.579999923706055,
+        "cost": 2268.3319795532225,
+        "entry_date": "2026-09-21",
+        "entry_px": 16.90999984741211,
+        "fee_in": 2.392,
+        "last_px": 16.90999984741211,
+        "notional": 2265.9399795532227,
+        "owner": "union_hot_n4_h1",
+        "peak_px": 16.90999984741211,
+        "reason": "top 4 by hot; rank hot_score; list yday_gainer,yday_mover; ret5=+50.5; combo leftover $2291.20; owner union_hot_n4_h1",
+        "shares": 134,
+        "side": "long",
+        "ticker": "TJGC"
+      }
+    },
+    "yday_equity": 9589.71
+  }
+}

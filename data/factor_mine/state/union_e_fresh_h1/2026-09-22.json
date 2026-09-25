@@ -1,0 +1,119 @@
+{
+  "buys": [
+    "ABVX",
+    "ANAB",
+    "MLKN",
+    "THO"
+  ],
+  "cash": 101.06,
+  "date": "2026-09-22",
+  "equity": 9469.33,
+  "fees": 8.605,
+  "fills": [
+    {
+      "fees": 2.059,
+      "pnl": null,
+      "price": 102.74,
+      "shares": 23,
+      "side": "BUY",
+      "ticker": "ABVX"
+    },
+    {
+      "fees": 2.119,
+      "pnl": null,
+      "price": 55.07,
+      "shares": 43,
+      "side": "BUY",
+      "ticker": "ANAB"
+    },
+    {
+      "fees": 2.338,
+      "pnl": null,
+      "price": 20.66,
+      "shares": 116,
+      "side": "BUY",
+      "ticker": "MLKN"
+    },
+    {
+      "fees": 2.089,
+      "pnl": null,
+      "price": 72.53,
+      "shares": 33,
+      "side": "BUY",
+      "ticker": "THO"
+    }
+  ],
+  "holdings": [
+    "ABVX",
+    "ANAB",
+    "MLKN",
+    "THO"
+  ],
+  "mean": -1.6761,
+  "n_trades_today": 4,
+  "recipe": "union_e_fresh_h1",
+  "sells": [],
+  "state": {
+    "after": "2026-09-22",
+    "cash": 101.06,
+    "pos": {
+      "ABVX": {
+        "close_px": 98.29,
+        "cost": 2365.079,
+        "entry_date": "2026-09-22",
+        "entry_px": 102.74,
+        "fee_in": 2.059,
+        "last_px": 102.74,
+        "min_hold": 1,
+        "notional": 2363.02,
+        "peak_px": 102.74,
+        "reason": "union \u2229 e_fresh, no \ud83d\udea8; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=-8.9; leftover $2407.69",
+        "shares": 23,
+        "ticker": "ABVX"
+      },
+      "ANAB": {
+        "close_px": 53.92,
+        "cost": 2370.1290000000004,
+        "entry_date": "2026-09-22",
+        "entry_px": 55.07,
+        "fee_in": 2.119,
+        "last_px": 55.07,
+        "min_hold": 1,
+        "notional": 2368.01,
+        "peak_px": 55.07,
+        "reason": "union \u2229 e_fresh, no \ud83d\udea8; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=+1.5; leftover $2407.69",
+        "shares": 43,
+        "ticker": "ANAB"
+      },
+      "MLKN": {
+        "close_px": 20.29,
+        "cost": 2398.898,
+        "entry_date": "2026-09-22",
+        "entry_px": 20.66,
+        "fee_in": 2.338,
+        "last_px": 20.66,
+        "min_hold": 1,
+        "notional": 2396.56,
+        "peak_px": 20.66,
+        "reason": "union \u2229 e_fresh, no \ud83d\udea8; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=-4.4; leftover $2407.69",
+        "shares": 116,
+        "ticker": "MLKN"
+      },
+      "THO": {
+        "close_px": 73.8,
+        "cost": 2395.579,
+        "entry_date": "2026-09-22",
+        "entry_px": 72.53,
+        "fee_in": 2.089,
+        "last_px": 72.53,
+        "min_hold": 1,
+        "notional": 2393.4900000000002,
+        "peak_px": 72.53,
+        "reason": "union \u2229 e_fresh, no \ud83d\udea8; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=-4.8; leftover $2407.69",
+        "shares": 33,
+        "ticker": "THO"
+      }
+    },
+    "yday_equity": 9469.33
+  }
+}

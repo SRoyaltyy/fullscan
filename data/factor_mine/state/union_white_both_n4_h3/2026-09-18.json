@@ -1,0 +1,131 @@
+{
+  "buys": [
+    "FIVN",
+    "RARE"
+  ],
+  "cash": 159.09,
+  "date": "2026-09-18",
+  "equity": 9815.35,
+  "fees": 1.4493,
+  "fills": [
+    {
+      "fees": 0.6948,
+      "pnl": null,
+      "price": 34.44,
+      "shares": 2,
+      "side": "BUY",
+      "ticker": "FIVN"
+    },
+    {
+      "fees": 0.7545,
+      "pnl": null,
+      "price": 14.79,
+      "shares": 5,
+      "side": "BUY",
+      "ticker": "RARE"
+    }
+  ],
+  "holdings": [
+    "BLFS",
+    "FIVN",
+    "IQV",
+    "RARE",
+    "RDNT",
+    "TEM"
+  ],
+  "mean": -1.8225,
+  "n_trades_today": 2,
+  "recipe": "union_white_both_n4_h3",
+  "sells": [],
+  "state": {
+    "after": "2026-09-18",
+    "cash": 159.09,
+    "pos": {
+      "BLFS": {
+        "close_px": 36.689998626708984,
+        "cost": 2372.0849404907226,
+        "entry_date": "2026-09-16",
+        "entry_px": 36.459999084472656,
+        "fee_in": 2.185,
+        "last_px": 36.72999954223633,
+        "min_hold": 3,
+        "notional": 2369.8999404907227,
+        "peak_px": 36.72999954223633,
+        "reason": "\u22120 red + yday up AND catalyst, top 4 by Score; gate cam_bad_max=0,yday_and_catalyst=True; rank list; list flatten; \ud83d\udd35; \u26aa; ret5=+2.9; leftover $2394.59",
+        "shares": 65,
+        "ticker": "BLFS"
+      },
+      "FIVN": {
+        "close_px": 32.470001220703125,
+        "cost": 69.57479725341797,
+        "entry_date": "2026-09-18",
+        "entry_px": 34.439998626708984,
+        "fee_in": 0.6948,
+        "last_px": 34.439998626708984,
+        "min_hold": 3,
+        "notional": 68.87999725341797,
+        "peak_px": 34.439998626708984,
+        "reason": "\u22120 red + yday up AND catalyst, top 4 by Score; gate cam_bad_max=0,yday_and_catalyst=True; rank list; list flatten; \ud83d\udd35; \u26aa; ret5=+14.0; leftover $75.84",
+        "shares": 2,
+        "ticker": "FIVN"
+      },
+      "IQV": {
+        "close_px": 266.4200134277344,
+        "cost": 2169.1341171875,
+        "entry_date": "2026-09-16",
+        "entry_px": 270.8900146484375,
+        "fee_in": 2.014,
+        "last_px": 269.45001220703125,
+        "min_hold": 3,
+        "notional": 2167.1201171875,
+        "peak_px": 273.1499938964844,
+        "reason": "\u22120 red + yday up AND catalyst, top 4 by Score; gate cam_bad_max=0,yday_and_catalyst=True; rank list; list flatten; \u26aa; ret5=+4.0; leftover $2394.59",
+        "shares": 8,
+        "ticker": "IQV"
+      },
+      "RARE": {
+        "close_px": 14.510000228881836,
+        "cost": 74.70449980926513,
+        "entry_date": "2026-09-18",
+        "entry_px": 14.789999961853027,
+        "fee_in": 0.7545,
+        "last_px": 14.789999961853027,
+        "min_hold": 3,
+        "notional": 73.94999980926514,
+        "peak_px": 14.789999961853027,
+        "reason": "\u22120 red + yday up AND catalyst, top 4 by Score; gate cam_bad_max=0,yday_and_catalyst=True; rank list; list probable,yday_gainer; \ud83d\udd35; \u26aa; ret5=+0.7; leftover $75.84",
+        "shares": 5,
+        "ticker": "RARE"
+      },
+      "RDNT": {
+        "close_px": 76.0,
+        "cost": 2392.803085144043,
+        "entry_date": "2026-09-16",
+        "entry_px": 77.12000274658203,
+        "fee_in": 2.083,
+        "last_px": 77.66000366210938,
+        "min_hold": 3,
+        "notional": 2390.720085144043,
+        "peak_px": 77.66000366210938,
+        "reason": "\u22120 red + yday up AND catalyst, top 4 by Score; gate cam_bad_max=0,yday_and_catalyst=True; rank list; list flatten; \u26aa; ret5=+7.2; leftover $2394.59",
+        "shares": 31,
+        "ticker": "RDNT"
+      },
+      "TEM": {
+        "close_px": 77.83999633789062,
+        "cost": 2340.95203112793,
+        "entry_date": "2026-09-16",
+        "entry_px": 68.79000091552734,
+        "fee_in": 2.092,
+        "last_px": 81.4000015258789,
+        "min_hold": 3,
+        "notional": 2338.8600311279297,
+        "peak_px": 81.4000015258789,
+        "reason": "\u22120 red + yday up AND catalyst, top 4 by Score; gate cam_bad_max=0,yday_and_catalyst=True; rank list; list probable,yday_gainer; \ud83d\udd35; \u26aa; ret5=+7.1; leftover $2394.59",
+        "shares": 34,
+        "ticker": "TEM"
+      }
+    },
+    "yday_equity": 9815.35
+  }
+}

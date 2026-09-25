@@ -1,0 +1,57 @@
+{
+  "buys": [],
+  "cash": 10065.0,
+  "date": "2026-09-01",
+  "equity": 10065.0,
+  "fees": 9.5436,
+  "fills": [
+    {
+      "fees": 2.0703,
+      "pnl": -73.3,
+      "price": 142.0,
+      "shares": 17,
+      "side": "SELL",
+      "ticker": "ANF"
+    },
+    {
+      "fees": 3.367,
+      "pnl": 259.57,
+      "price": 10.77,
+      "shares": 256,
+      "side": "SELL",
+      "ticker": "CAPR"
+    },
+    {
+      "fees": 2.0742,
+      "pnl": 50.96,
+      "price": 140.25,
+      "shares": 18,
+      "side": "SELL",
+      "ticker": "MRNA"
+    },
+    {
+      "fees": 2.0321,
+      "pnl": -172.24,
+      "price": 428.21,
+      "shares": 5,
+      "side": "SELL",
+      "ticker": "SNPS"
+    }
+  ],
+  "holdings": [],
+  "mean": 1.3467,
+  "n_trades_today": 4,
+  "recipe": "union_hot_n4_holdup",
+  "sells": [
+    "ANF",
+    "CAPR",
+    "MRNA",
+    "SNPS"
+  ],
+  "state": {
+    "after": "2026-09-01",
+    "cash": 10065.0,
+    "pos": {},
+    "yday_equity": 10065.0
+  }
+}

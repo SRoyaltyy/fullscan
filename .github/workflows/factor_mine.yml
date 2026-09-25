@@ -138,6 +138,7 @@ concurrency:
 
 env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  PYTHONHASHSEED: "0"
 
 jobs:
   mine:
@@ -158,6 +159,8 @@ jobs:
           python -m src.test_factor_mine
           python -m src.test_factor_mine_freeze
           python -m src.test_factor_mine_rules
+          python -m src.test_factor_mine_dash_pack
+          python -m src.test_factor_mine_gaps
           python -m src.test_price_actions
       - name: Mine recipes (cash book)
         env:
@@ -254,6 +257,12 @@ jobs:
             data/factor_mine/panel.json \
             data/factor_mine/freeze_manifest.json \
             data/factor_mine/snapshots/ \
+            data/factor_mine/ledgers/ \
+            data/factor_mine/lineups/ \
+            data/factor_mine/candidates/ \
+            data/factor_mine/recipe_created_on.json \
+            data/factor_mine/open_source_log.csv \
+            data/factor_mine/daily_returns.csv \
             data/factor_mine/prices/ \
             data/prices/ohlc.parquet \
             data/prices/actions.parquet \

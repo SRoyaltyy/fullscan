@@ -1,0 +1,116 @@
+{
+  "buys": [
+    "USFD",
+    "FIVN",
+    "PAYX"
+  ],
+  "cash": 17122.82,
+  "date": "2026-09-22",
+  "equity": 9906.13,
+  "fees": 8.3988,
+  "fills": [
+    {
+      "fees": 2.002,
+      "pnl": -94.86,
+      "price": 606.57,
+      "shares": 4,
+      "side": "COVER",
+      "ticker": "AMD"
+    },
+    {
+      "fees": 2.107618082191781,
+      "pnl": null,
+      "price": 94.08,
+      "shares": 17,
+      "side": "SHORT",
+      "ticker": "USFD"
+    },
+    {
+      "fees": 2.189847397260274,
+      "pnl": null,
+      "price": 37.12,
+      "shares": 44,
+      "side": "SHORT",
+      "ticker": "FIVN"
+    },
+    {
+      "fees": 2.0993819178082194,
+      "pnl": null,
+      "price": 115.71,
+      "shares": 14,
+      "side": "SHORT",
+      "ticker": "PAYX"
+    }
+  ],
+  "holdings": [
+    "AEHL",
+    "FIVN",
+    "PAYX",
+    "USFD"
+  ],
+  "mean": -2.6306,
+  "n_trades_today": 4,
+  "recipe": "short_news_r_h1",
+  "sells": [
+    "AMD"
+  ],
+  "state": {
+    "after": "2026-09-22",
+    "cash": 17122.82,
+    "pos": {
+      "AEHL": {
+        "close_px": 7.73,
+        "cost": 3.994164111463991,
+        "entry_date": "2026-09-21",
+        "entry_px": 8.260000228881836,
+        "fee_in": 3.994164111463991,
+        "last_px": 7.63,
+        "notional": 2469.740068435669,
+        "peak_px": 7.63,
+        "reason": "news\ud83d\udd34; gate news=bad; list yday_mover; ret5=+7.7; leftover $2476.44",
+        "shares": 299,
+        "ticker": "AEHL"
+      },
+      "FIVN": {
+        "close_px": 38.65,
+        "cost": 2.189847397260274,
+        "entry_date": "2026-09-22",
+        "entry_px": 37.12,
+        "fee_in": 2.189847397260274,
+        "last_px": 37.12,
+        "notional": 1633.28,
+        "peak_px": 37.12,
+        "reason": "news\ud83d\udd34; gate news=bad; list yday_gainer,ohlc_hot; ret5=+16.6; leftover $1665.88",
+        "shares": 44,
+        "ticker": "FIVN"
+      },
+      "PAYX": {
+        "close_px": 114.53,
+        "cost": 2.0993819178082194,
+        "entry_date": "2026-09-22",
+        "entry_px": 115.71,
+        "fee_in": 2.0993819178082194,
+        "last_px": 115.71,
+        "notional": 1619.9399999999998,
+        "peak_px": 115.71,
+        "reason": "news\ud83d\udd34; gate news=bad; list overnight; ret5=-3.0; leftover $1665.88",
+        "shares": 14,
+        "ticker": "PAYX"
+      },
+      "USFD": {
+        "close_px": 94.2,
+        "cost": 2.107618082191781,
+        "entry_date": "2026-09-22",
+        "entry_px": 94.08,
+        "fee_in": 2.107618082191781,
+        "last_px": 94.08,
+        "notional": 1599.36,
+        "peak_px": 94.08,
+        "reason": "news\ud83d\udd34; gate news=bad; list flatten; ret5=-0.6; leftover $1665.88",
+        "shares": 17,
+        "ticker": "USFD"
+      }
+    },
+    "yday_equity": 9906.13
+  }
+}

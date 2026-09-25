@@ -1,0 +1,360 @@
+{
+  "buys": [
+    "USFD",
+    "DLO",
+    "ALOY",
+    "HELP",
+    "NN",
+    "EU",
+    "AEHL"
+  ],
+  "cash": 23580.29,
+  "date": "2026-09-22",
+  "equity": 9528.34,
+  "fees": 38.2895,
+  "fills": [
+    {
+      "fees": 2.116,
+      "pnl": -63.07,
+      "price": 17.27,
+      "shares": 42,
+      "side": "COVER",
+      "ticker": "BRUN"
+    },
+    {
+      "fees": 2.299,
+      "pnl": -133.39,
+      "price": 7.81,
+      "shares": 103,
+      "side": "COVER",
+      "ticker": "BTGO"
+    },
+    {
+      "fees": 2.245,
+      "pnl": -32.16,
+      "price": 8.275,
+      "shares": 85,
+      "side": "COVER",
+      "ticker": "BULL"
+    },
+    {
+      "fees": 1.999,
+      "pnl": 0.89,
+      "price": 194.86,
+      "shares": 3,
+      "side": "COVER",
+      "ticker": "FTAI"
+    },
+    {
+      "fees": 2.014,
+      "pnl": -4.07,
+      "price": 81.0,
+      "shares": 8,
+      "side": "COVER",
+      "ticker": "LEN"
+    },
+    {
+      "fees": 3.8442,
+      "pnl": 111.43,
+      "price": 1.87,
+      "shares": 298,
+      "side": "COVER",
+      "ticker": "MRLN"
+    },
+    {
+      "fees": 2.263,
+      "pnl": 29.56,
+      "price": 7.02,
+      "shares": 91,
+      "side": "COVER",
+      "ticker": "RCAT"
+    },
+    {
+      "fees": 2.0490427397260276,
+      "pnl": null,
+      "price": 94.08,
+      "shares": 7,
+      "side": "SHORT",
+      "ticker": "USFD"
+    },
+    {
+      "fees": 2.16627397260274,
+      "pnl": null,
+      "price": 14.5,
+      "shares": 46,
+      "side": "SHORT",
+      "ticker": "DLO"
+    },
+    {
+      "fees": 2.2465424650009367,
+      "pnl": null,
+      "price": 9.4,
+      "shares": 72,
+      "side": "SHORT",
+      "ticker": "ALOY"
+    },
+    {
+      "fees": 2.172424109589041,
+      "pnl": null,
+      "price": 14.01,
+      "shares": 48,
+      "side": "SHORT",
+      "ticker": "HELP"
+    },
+    {
+      "fees": 2.1575665753424653,
+      "pnl": null,
+      "price": 15.76,
+      "shares": 43,
+      "side": "SHORT",
+      "ticker": "NN"
+    },
+    {
+      "fees": 8.417044383561644,
+      "pnl": null,
+      "price": 1.06,
+      "shares": 642,
+      "side": "SHORT",
+      "ticker": "EU"
+    },
+    {
+      "fees": 2.3004046575342465,
+      "pnl": null,
+      "price": 7.63,
+      "shares": 89,
+      "side": "SHORT",
+      "ticker": "AEHL"
+    }
+  ],
+  "holdings": [
+    "AEHL",
+    "ALOY",
+    "CAN",
+    "COIN",
+    "DFDV",
+    "DLO",
+    "EU",
+    "FLNC",
+    "FWDI",
+    "HELP",
+    "MSTR",
+    "NN",
+    "SBET",
+    "SGML",
+    "USFD"
+  ],
+  "mean": -0.78,
+  "n_trades_today": 14,
+  "recipe": "short_clk_neg_weak_fail_h3",
+  "sells": [
+    "BRUN",
+    "BTGO",
+    "BULL",
+    "FTAI",
+    "LEN",
+    "MRLN",
+    "RCAT"
+  ],
+  "state": {
+    "after": "2026-09-22",
+    "cash": 23580.29,
+    "pos": {
+      "AEHL": {
+        "close_px": 7.73,
+        "cost": 2.3004046575342465,
+        "entry_date": "2026-09-22",
+        "entry_px": 7.63,
+        "fee_in": 2.3004046575342465,
+        "last_px": 7.63,
+        "notional": 679.0699999999999,
+        "peak_px": 7.63,
+        "reason": "Clock-B #4 neg catalyst + weakness + failed recovery; gate clk_neg_weak_fail=True; list yday_mover; ret5=+14.0; leftover $681.35",
+        "shares": 89,
+        "ticker": "AEHL"
+      },
+      "ALOY": {
+        "close_px": 9.029999732971191,
+        "cost": 2.2465424650009367,
+        "entry_date": "2026-09-22",
+        "entry_px": 9.399999618530273,
+        "fee_in": 2.2465424650009367,
+        "last_px": 9.399999618530273,
+        "notional": 676.7999725341797,
+        "peak_px": 9.399999618530273,
+        "reason": "Clock-B #4 neg catalyst + weakness + failed recovery; gate clk_neg_weak_fail=True; list probable,yday_gainer; ret5=+9.5; leftover $681.35",
+        "shares": 72,
+        "ticker": "ALOY"
+      },
+      "CAN": {
+        "close_px": 0.41200000047683716,
+        "cost": 12.046835562210214,
+        "entry_date": "2026-09-21",
+        "entry_px": 0.4180000126361847,
+        "fee_in": 12.046835562210214,
+        "last_px": 0.4050000011920929,
+        "notional": 683.8480206727982,
+        "peak_px": 0.4050000011920929,
+        "reason": "Clock-B #4 neg catalyst + weakness + failed recovery; gate clk_neg_weak_fail=True; list yday_gainer,yday_mover; ret5=+10.7; leftover $684.15",
+        "shares": 1636,
+        "ticker": "CAN"
+      },
+      "COIN": {
+        "close_px": 201.07000732421875,
+        "cost": 2.035864931707513,
+        "entry_date": "2026-09-21",
+        "entry_px": 205.19000244140625,
+        "fee_in": 2.035864931707513,
+        "last_px": 199.39999389648438,
+        "notional": 615.5700073242188,
+        "peak_px": 199.39999389648438,
+        "reason": "Clock-B #4 neg catalyst + weakness + failed recovery; gate clk_neg_weak_fail=True; list yday_gainer,ohlc_hot; \ud83d\udd35; ret5=+10.8; leftover $684.15",
+        "shares": 3,
+        "ticker": "COIN"
+      },
+      "DFDV": {
+        "close_px": 6.28,
+        "cost": 2.351127397918701,
+        "entry_date": "2026-09-21",
+        "entry_px": 6.510000228881836,
+        "fee_in": 2.351127397918701,
+        "last_px": 6.18,
+        "notional": 683.5500240325928,
+        "peak_px": 6.18,
+        "reason": "Clock-B #4 neg catalyst + weakness + failed recovery; gate clk_neg_weak_fail=True; list yday_gainer,yday_mover; ret5=+19.3; leftover $684.15",
+        "shares": 105,
+        "ticker": "DFDV"
+      },
+      "DLO": {
+        "close_px": 14.26,
+        "cost": 2.16627397260274,
+        "entry_date": "2026-09-22",
+        "entry_px": 14.5,
+        "fee_in": 2.16627397260274,
+        "last_px": 14.5,
+        "notional": 667.0,
+        "peak_px": 14.5,
+        "reason": "Clock-B #4 neg catalyst + weakness + failed recovery; gate clk_neg_weak_fail=True; list flatten; ret5=-3.6; leftover $681.35",
+        "shares": 46,
+        "ticker": "DLO"
+      },
+      "EU": {
+        "close_px": 1.21,
+        "cost": 8.417044383561644,
+        "entry_date": "2026-09-22",
+        "entry_px": 1.06,
+        "fee_in": 8.417044383561644,
+        "last_px": 1.06,
+        "notional": 680.52,
+        "peak_px": 1.06,
+        "reason": "Clock-B #4 neg catalyst + weakness + failed recovery; gate clk_neg_weak_fail=True; list yday_gainer,yday_mover; ret5=+12.9; leftover $681.35",
+        "shares": 642,
+        "ticker": "EU"
+      },
+      "FLNC": {
+        "close_px": 7.269999980926514,
+        "cost": 8.399656161749853,
+        "entry_date": "2026-09-18",
+        "entry_px": 7.534999847412109,
+        "fee_in": 8.399656161749853,
+        "last_px": 7.489999771118164,
+        "notional": 4747.049903869629,
+        "peak_px": 7.360000133514404,
+        "reason": "Clock-B #4 neg catalyst + weakness + failed recovery; gate clk_neg_weak_fail=True; list yday_mover; \ud83d\udd35; ret5=-20.9; leftover $4751.56",
+        "shares": 630,
+        "ticker": "FLNC"
+      },
+      "FWDI": {
+        "close_px": 8.6,
+        "cost": 2.2814920554017366,
+        "entry_date": "2026-09-21",
+        "entry_px": 8.220000267028809,
+        "fee_in": 2.2814920554017366,
+        "last_px": 8.17,
+        "notional": 682.2600221633911,
+        "peak_px": 8.17,
+        "reason": "Clock-B #4 neg catalyst + weakness + failed recovery; gate clk_neg_weak_fail=True; list yday_gainer,yday_mover,ohlc_hot; \ud83d\udd35; ret5=+17.6; leftover $684.15",
+        "shares": 83,
+        "ticker": "FWDI"
+      },
+      "HELP": {
+        "close_px": 13.71,
+        "cost": 2.172424109589041,
+        "entry_date": "2026-09-22",
+        "entry_px": 14.01,
+        "fee_in": 2.172424109589041,
+        "last_px": 14.01,
+        "notional": 672.48,
+        "peak_px": 14.01,
+        "reason": "Clock-B #4 neg catalyst + weakness + failed recovery; gate clk_neg_weak_fail=True; list probable; ret5=+0.4; leftover $681.35",
+        "shares": 48,
+        "ticker": "HELP"
+      },
+      "MSTR": {
+        "close_px": 167.3300018310547,
+        "cost": 2.040036164584225,
+        "entry_date": "2026-09-21",
+        "entry_px": 164.5800018310547,
+        "fee_in": 2.040036164584225,
+        "last_px": 167.5500030517578,
+        "notional": 658.3200073242188,
+        "peak_px": 164.5800018310547,
+        "reason": "Clock-B #4 neg catalyst + weakness + failed recovery; gate clk_neg_weak_fail=True; list yday_gainer,yday_mover,ohlc_hot; ret5=+17.5; leftover $684.15",
+        "shares": 4,
+        "ticker": "MSTR"
+      },
+      "NN": {
+        "close_px": 15.33,
+        "cost": 2.1575665753424653,
+        "entry_date": "2026-09-22",
+        "entry_px": 15.76,
+        "fee_in": 2.1575665753424653,
+        "last_px": 15.76,
+        "notional": 677.68,
+        "peak_px": 15.76,
+        "reason": "Clock-B #4 neg catalyst + weakness + failed recovery; gate clk_neg_weak_fail=True; list probable; ret5=+0.8; leftover $681.35",
+        "shares": 43,
+        "ticker": "NN"
+      },
+      "SBET": {
+        "close_px": 10.229999542236328,
+        "cost": 2.233911506422905,
+        "entry_date": "2026-09-21",
+        "entry_px": 9.989999771118164,
+        "fee_in": 2.233911506422905,
+        "last_px": 9.90999984741211,
+        "notional": 679.3199844360352,
+        "peak_px": 9.90999984741211,
+        "reason": "Clock-B #4 neg catalyst + weakness + failed recovery; gate clk_neg_weak_fail=True; list probable,yday_gainer; \ud83d\udd35; ret5=+5.3; leftover $684.15",
+        "shares": 68,
+        "ticker": "SBET"
+      },
+      "SGML": {
+        "close_px": 10.58,
+        "cost": 2.230703973022879,
+        "entry_date": "2026-09-21",
+        "entry_px": 10.135000228881836,
+        "fee_in": 2.230703973022879,
+        "last_px": 10.45,
+        "notional": 679.045015335083,
+        "peak_px": 10.135000228881836,
+        "reason": "Clock-B #4 neg catalyst + weakness + failed recovery; gate clk_neg_weak_fail=True; list probable,yday_gainer; ret5=+4.9; leftover $684.15",
+        "shares": 67,
+        "ticker": "SGML"
+      },
+      "USFD": {
+        "close_px": 94.2,
+        "cost": 2.0490427397260276,
+        "entry_date": "2026-09-22",
+        "entry_px": 94.08,
+        "fee_in": 2.0490427397260276,
+        "last_px": 94.08,
+        "notional": 658.56,
+        "peak_px": 94.08,
+        "reason": "Clock-B #4 neg catalyst + weakness + failed recovery; gate clk_neg_weak_fail=True; list flatten; ret5=-0.6; leftover $681.35",
+        "shares": 7,
+        "ticker": "USFD"
+      }
+    },
+    "yday_equity": 9528.34
+  }
+}

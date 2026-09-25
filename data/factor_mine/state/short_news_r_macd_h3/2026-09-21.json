@@ -1,0 +1,107 @@
+{
+  "buys": [
+    "AEHL",
+    "AMD"
+  ],
+  "cash": 20319.11,
+  "date": "2026-09-21",
+  "equity": 10578.83,
+  "fees": 15.7688,
+  "fills": [
+    {
+      "fees": 9.5331,
+      "pnl": 187.55,
+      "price": 6.55,
+      "shares": 739,
+      "side": "COVER",
+      "ticker": "GFR"
+    },
+    {
+      "fees": 4.141053426601462,
+      "pnl": null,
+      "price": 8.26,
+      "shares": 310,
+      "side": "SHORT",
+      "ticker": "AEHL"
+    },
+    {
+      "fees": 2.0946868498501714,
+      "pnl": null,
+      "price": 583.88,
+      "shares": 4,
+      "side": "SHORT",
+      "ticker": "AMD"
+    }
+  ],
+  "holdings": [
+    "AEHL",
+    "AMD",
+    "BBNX",
+    "TRMD"
+  ],
+  "mean": 4.0812,
+  "n_trades_today": 3,
+  "recipe": "short_news_r_macd_h3",
+  "sells": [
+    "GFR"
+  ],
+  "state": {
+    "after": "2026-09-21",
+    "cash": 20319.11,
+    "pos": {
+      "AEHL": {
+        "close_px": 6.920000076293945,
+        "cost": 4.141053426601462,
+        "entry_date": "2026-09-21",
+        "entry_px": 8.260000228881836,
+        "fee_in": 4.141053426601462,
+        "last_px": 8.260000228881836,
+        "notional": 2560.600070953369,
+        "peak_px": 8.260000228881836,
+        "reason": "short news\ud83d\udd34 \u2229 prior MACD histogram > 0; gate news=bad,macd_up=True; list yday_mover; ret5=+7.7; leftover $2565.92",
+        "shares": 310,
+        "ticker": "AEHL"
+      },
+      "AMD": {
+        "close_px": 615.52001953125,
+        "cost": 2.0946868498501714,
+        "entry_date": "2026-09-21",
+        "entry_px": 583.8800048828125,
+        "fee_in": 2.0946868498501714,
+        "last_px": 583.8800048828125,
+        "notional": 2335.52001953125,
+        "peak_px": 583.8800048828125,
+        "reason": "short news\ud83d\udd34 \u2229 prior MACD histogram > 0; gate news=bad,macd_up=True; list ohlc_hot; ret5=+8.5; leftover $2565.92",
+        "shares": 4,
+        "ticker": "AMD"
+      },
+      "BBNX": {
+        "close_px": 22.040000915527344,
+        "cost": 2.4455643806771055,
+        "entry_date": "2026-09-17",
+        "entry_px": 22.459999084472656,
+        "fee_in": 2.4455643806771055,
+        "last_px": 22.110000610351562,
+        "notional": 2582.8998947143555,
+        "peak_px": 21.299999237060547,
+        "reason": "short news\ud83d\udd34 \u2229 prior MACD histogram > 0; gate news=bad,macd_up=True; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+27.3; leftover $2588.98",
+        "shares": 115,
+        "ticker": "BBNX"
+      },
+      "TRMD": {
+        "close_px": 37.119998931884766,
+        "cost": 2.3021383570422866,
+        "entry_date": "2026-09-17",
+        "entry_px": 36.52000045776367,
+        "fee_in": 2.3021383570422866,
+        "last_px": 37.470001220703125,
+        "notional": 2556.400032043457,
+        "peak_px": 36.52000045776367,
+        "reason": "short news\ud83d\udd34 \u2229 prior MACD histogram > 0; gate news=bad,macd_up=True; list ohlc_hot; ret5=+3.2; leftover $2588.98",
+        "shares": 70,
+        "ticker": "TRMD"
+      }
+    },
+    "yday_equity": 10578.83
+  }
+}

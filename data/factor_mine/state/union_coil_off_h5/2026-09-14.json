@@ -1,0 +1,170 @@
+{
+  "buys": [],
+  "cash": 8783.41,
+  "date": "2026-09-14",
+  "equity": 8871.8,
+  "fees": 25.271,
+  "fills": [
+    {
+      "fees": 6.2817,
+      "pnl": -190.07,
+      "price": 2.15,
+      "shares": 480,
+      "side": "SELL",
+      "ticker": "ALEC"
+    },
+    {
+      "fees": 2.0791,
+      "pnl": 60.49,
+      "price": 54.84,
+      "shares": 23,
+      "side": "SELL",
+      "ticker": "ATRC"
+    },
+    {
+      "fees": 2.5699,
+      "pnl": -145.5,
+      "price": 5.93,
+      "shares": 180,
+      "side": "SELL",
+      "ticker": "BHC"
+    },
+    {
+      "fees": 4.57,
+      "pnl": -267.33,
+      "price": 2.72,
+      "shares": 349,
+      "side": "SELL",
+      "ticker": "CABA"
+    },
+    {
+      "fees": 2.022,
+      "pnl": -34.46,
+      "price": 255.75,
+      "shares": 4,
+      "side": "SELL",
+      "ticker": "CRM"
+    },
+    {
+      "fees": 2.097,
+      "pnl": 8.3,
+      "price": 41.93,
+      "shares": 29,
+      "side": "SELL",
+      "ticker": "HRMY"
+    },
+    {
+      "fees": 3.3157,
+      "pnl": -171.03,
+      "price": 4.13,
+      "shares": 253,
+      "side": "SELL",
+      "ticker": "OABI"
+    },
+    {
+      "fees": 2.3356,
+      "pnl": -66.12,
+      "price": 10.73,
+      "shares": 106,
+      "side": "SELL",
+      "ticker": "VIR"
+    }
+  ],
+  "holdings": [
+    "APPS",
+    "BAK",
+    "GPRO",
+    "PAGS",
+    "REAX"
+  ],
+  "mean": 0.7313,
+  "n_trades_today": 8,
+  "recipe": "union_coil_off_h5",
+  "sells": [
+    "ALEC",
+    "ATRC",
+    "BHC",
+    "CABA",
+    "CRM",
+    "HRMY",
+    "OABI",
+    "VIR"
+  ],
+  "state": {
+    "after": "2026-09-14",
+    "cash": 8783.41,
+    "pos": {
+      "APPS": {
+        "close_px": 11.729999542236328,
+        "cost": 12.001800114440918,
+        "entry_date": "2026-09-11",
+        "entry_px": 11.880000114440918,
+        "fee_in": 0.1218,
+        "last_px": 11.75,
+        "min_hold": 5,
+        "notional": 11.880000114440918,
+        "peak_px": 11.880000114440918,
+        "reason": "union \u2229 coil_off hold 5, no \ud83d\udea8; gate ret_5_min=0.0,ret_5_max=10.0,rvol_min=0.7,rvol_max=2.2; list probable,yday_gainer; ret5=+8.5; leftover $20.97",
+        "shares": 1,
+        "ticker": "APPS"
+      },
+      "BAK": {
+        "close_px": 2.009999990463257,
+        "cost": 19.29779897003174,
+        "entry_date": "2026-09-11",
+        "entry_px": 2.119999885559082,
+        "fee_in": 0.2178,
+        "last_px": 2.049999952316284,
+        "min_hold": 5,
+        "notional": 19.07999897003174,
+        "peak_px": 2.119999885559082,
+        "reason": "union \u2229 coil_off hold 5, no \ud83d\udea8; gate ret_5_min=0.0,ret_5_max=10.0,rvol_min=0.7,rvol_max=2.2; list probable,yday_gainer,ohlc_hot; \ud83d\udd35; ret5=+8.8; leftover $20.97",
+        "shares": 9,
+        "ticker": "BAK"
+      },
+      "GPRO": {
+        "close_px": 1.350000023841858,
+        "cost": 19.83799966621399,
+        "entry_date": "2026-09-11",
+        "entry_px": 1.399999976158142,
+        "fee_in": 0.238,
+        "last_px": 1.3700000047683716,
+        "min_hold": 5,
+        "notional": 19.59999966621399,
+        "peak_px": 1.399999976158142,
+        "reason": "union \u2229 coil_off hold 5, no \ud83d\udea8; gate ret_5_min=0.0,ret_5_max=10.0,rvol_min=0.7,rvol_max=2.2; list ohlc_hot; ret5=+0.7; leftover $20.97",
+        "shares": 14,
+        "ticker": "GPRO"
+      },
+      "PAGS": {
+        "close_px": 9.930000305175781,
+        "cost": 20.428199313354494,
+        "entry_date": "2026-09-11",
+        "entry_px": 10.109999656677246,
+        "fee_in": 0.2082,
+        "last_px": 10.0,
+        "min_hold": 5,
+        "notional": 20.219999313354492,
+        "peak_px": 10.109999656677246,
+        "reason": "union \u2229 coil_off hold 5, no \ud83d\udea8; gate ret_5_min=0.0,ret_5_max=10.0,rvol_min=0.7,rvol_max=2.2; list probable,yday_gainer; \u26aa; ret5=+1.7; leftover $20.97",
+        "shares": 2,
+        "ticker": "PAGS"
+      },
+      "REAX": {
+        "close_px": 19.809999465942383,
+        "cost": 18.748599465942384,
+        "entry_date": "2026-09-11",
+        "entry_px": 18.559999465942383,
+        "fee_in": 0.1886,
+        "last_px": 19.790000915527344,
+        "min_hold": 5,
+        "notional": 18.559999465942383,
+        "peak_px": 19.790000915527344,
+        "reason": "union \u2229 coil_off hold 5, no \ud83d\udea8; gate ret_5_min=0.0,ret_5_max=10.0,rvol_min=0.7,rvol_max=2.2; list yday_mover; ret5=+0.7; leftover $20.97",
+        "shares": 1,
+        "ticker": "REAX"
+      }
+    },
+    "yday_equity": 8871.8
+  }
+}

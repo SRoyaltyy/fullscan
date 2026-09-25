@@ -1,0 +1,90 @@
+{
+  "buys": [
+    "ALMU",
+    "LEN"
+  ],
+  "cash": 28.3,
+  "date": "2026-09-17",
+  "equity": 9683.41,
+  "fees": 12.5462,
+  "fills": [
+    {
+      "fees": 2.4675,
+      "pnl": 494.69,
+      "price": 36.76,
+      "shares": 138,
+      "side": "SELL",
+      "ticker": "FPS"
+    },
+    {
+      "fees": 2.3776,
+      "pnl": -20.24,
+      "price": 40.79,
+      "shares": 111,
+      "side": "SELL",
+      "ticker": "TCOM"
+    },
+    {
+      "fees": 5.5341,
+      "pnl": null,
+      "price": 11.21,
+      "shares": 429,
+      "side": "BUY",
+      "ticker": "ALMU"
+    },
+    {
+      "fees": 2.167,
+      "pnl": null,
+      "price": 81.0,
+      "shares": 59,
+      "side": "BUY",
+      "ticker": "LEN"
+    }
+  ],
+  "holdings": [
+    "ALMU",
+    "LEN"
+  ],
+  "mean": 3.8545,
+  "n_trades_today": 4,
+  "recipe": "union_e_fresh_h1",
+  "sells": [
+    "FPS",
+    "TCOM"
+  ],
+  "state": {
+    "after": "2026-09-17",
+    "cash": 28.3,
+    "pos": {
+      "ALMU": {
+        "close_px": 11.545000076293945,
+        "cost": 4814.624116365051,
+        "entry_date": "2026-09-17",
+        "entry_px": 11.210000038146973,
+        "fee_in": 5.5341,
+        "last_px": 11.210000038146973,
+        "min_hold": 1,
+        "notional": 4809.090016365051,
+        "peak_px": 11.210000038146973,
+        "reason": "union \u2229 e_fresh, no \ud83d\udea8; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=+1.0; leftover $4812.05",
+        "shares": 429,
+        "ticker": "ALMU"
+      },
+      "LEN": {
+        "close_px": 79.69999694824219,
+        "cost": 4781.167,
+        "entry_date": "2026-09-17",
+        "entry_px": 81.0,
+        "fee_in": 2.167,
+        "last_px": 81.0,
+        "min_hold": 1,
+        "notional": 4779.0,
+        "peak_px": 81.0,
+        "reason": "union \u2229 e_fresh, no \ud83d\udea8; gate days_since_E_max=1,flag_E_min=0; list earn_react; \ud83d\udd35; ret5=-3.0; leftover $4812.05",
+        "shares": 59,
+        "ticker": "LEN"
+      }
+    },
+    "yday_equity": 9683.41
+  }
+}

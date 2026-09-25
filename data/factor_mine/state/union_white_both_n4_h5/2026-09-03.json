@@ -1,0 +1,81 @@
+{
+  "buys": [],
+  "cash": 384.61,
+  "date": "2026-09-03",
+  "equity": 9704.69,
+  "fees": 0,
+  "fills": [],
+  "holdings": [
+    "AVT",
+    "KEYS",
+    "SMTC",
+    "TTMI"
+  ],
+  "mean": 0.537,
+  "n_trades_today": 0,
+  "recipe": "union_white_both_n4_h5",
+  "sells": [],
+  "state": {
+    "after": "2026-09-03",
+    "cash": 384.61,
+    "pos": {
+      "AVT": {
+        "close_px": 90.81999969482422,
+        "cost": 2472.3009423217773,
+        "entry_date": "2026-08-28",
+        "entry_px": 91.48999786376953,
+        "fee_in": 2.071,
+        "last_px": 89.0199966430664,
+        "min_hold": 5,
+        "notional": 2470.2299423217773,
+        "peak_px": 91.48999786376953,
+        "reason": "\u22120 red + yday up AND catalyst, top 4 by Score; gate cam_bad_max=0,yday_and_catalyst=True; rank list; list mover_buy; \ud83d\udd35; \u26aa; ret5=+5.3; leftover $2500.00",
+        "shares": 27,
+        "ticker": "AVT"
+      },
+      "KEYS": {
+        "close_px": 322.6199951171875,
+        "cost": 2272.8810256347656,
+        "entry_date": "2026-08-28",
+        "entry_px": 324.4100036621094,
+        "fee_in": 2.011,
+        "last_px": 319.0899963378906,
+        "min_hold": 5,
+        "notional": 2270.8700256347656,
+        "peak_px": 324.4100036621094,
+        "reason": "\u22120 red + yday up AND catalyst, top 4 by Score; gate cam_bad_max=0,yday_and_catalyst=True; rank list; list mover_buy; \ud83d\udd35; \u26aa; ret5=+2.9; leftover $2500.00",
+        "shares": 7,
+        "ticker": "KEYS"
+      },
+      "SMTC": {
+        "close_px": 135.39999389648438,
+        "cost": 2411.960906616211,
+        "entry_date": "2026-08-28",
+        "entry_px": 141.75999450683594,
+        "fee_in": 2.041,
+        "last_px": 133.10000610351562,
+        "min_hold": 5,
+        "notional": 2409.919906616211,
+        "peak_px": 141.75999450683594,
+        "reason": "\u22120 red + yday up AND catalyst, top 4 by Score; gate cam_bad_max=0,yday_and_catalyst=True; rank list; list yday_gainer,yday_mover,mover_buy; \ud83d\udd35; \u26aa; ret5=+14.1; leftover $2500.00",
+        "shares": 17,
+        "ticker": "SMTC"
+      },
+      "TTMI": {
+        "close_px": 115.38999938964844,
+        "cost": 2458.249951171875,
+        "entry_date": "2026-08-28",
+        "entry_px": 122.80999755859375,
+        "fee_in": 2.05,
+        "last_px": 115.20999908447266,
+        "min_hold": 5,
+        "notional": 2456.199951171875,
+        "peak_px": 122.80999755859375,
+        "reason": "\u22120 red + yday up AND catalyst, top 4 by Score; gate cam_bad_max=0,yday_and_catalyst=True; rank list; list yday_gainer,mover_buy; \ud83d\udd35; \u26aa; ret5=+9.0; leftover $2500.00",
+        "shares": 20,
+        "ticker": "TTMI"
+      }
+    },
+    "yday_equity": 9704.69
+  }
+}

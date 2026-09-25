@@ -1,0 +1,36 @@
+{
+  "buys": [],
+  "cash": 3.07,
+  "date": "2026-09-17",
+  "equity": 8934.55,
+  "fees": 0,
+  "fills": [],
+  "holdings": [
+    "RIG"
+  ],
+  "mean": 2.1653,
+  "n_trades_today": 0,
+  "recipe": "union_catal_present_h3",
+  "sells": [],
+  "state": {
+    "after": "2026-09-17",
+    "cash": 3.07,
+    "pos": {
+      "RIG": {
+        "close_px": 5.659999847412109,
+        "cost": 9283.216019412232,
+        "entry_date": "2026-09-16",
+        "entry_px": 5.869999885559082,
+        "fee_in": 20.3562,
+        "last_px": 5.579999923706055,
+        "min_hold": 3,
+        "notional": 9262.859819412231,
+        "peak_px": 5.869999885559082,
+        "reason": "union \u2229 catal_present, no \ud83d\udea8; gate catal_present=True; list probable,yday_gainer; \ud83d\udd35; ret5=+3.1; leftover $9286.29",
+        "shares": 1578,
+        "ticker": "RIG"
+      }
+    },
+    "yday_equity": 8934.55
+  }
+}

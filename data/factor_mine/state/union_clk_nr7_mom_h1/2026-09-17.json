@@ -1,0 +1,47 @@
+{
+  "buys": [
+    "BNC"
+  ],
+  "cash": 5.0,
+  "date": "2026-09-17",
+  "equity": 10536.07,
+  "fees": 25.0647,
+  "fills": [
+    {
+      "fees": 25.0647,
+      "pnl": null,
+      "price": 5.03,
+      "shares": 1943,
+      "side": "BUY",
+      "ticker": "BNC"
+    }
+  ],
+  "holdings": [
+    "BNC"
+  ],
+  "mean": 7.4741,
+  "n_trades_today": 1,
+  "recipe": "union_clk_nr7_mom_h1",
+  "sells": [],
+  "state": {
+    "after": "2026-09-17",
+    "cash": 5.0,
+    "pos": {
+      "BNC": {
+        "close_px": 5.420000076293945,
+        "cost": 9798.355107657624,
+        "entry_date": "2026-09-17",
+        "entry_px": 5.03000020980835,
+        "fee_in": 25.0647,
+        "last_px": 5.03000020980835,
+        "min_hold": 1,
+        "notional": 9773.290407657623,
+        "peak_px": 5.03000020980835,
+        "reason": "Clock-B #10 NR7 + moderate momentum; gate clk_nr7_mom=True; rank hot_score; list ohlc_hot; ret5=+7.4; leftover $9803.36",
+        "shares": 1943,
+        "ticker": "BNC"
+      }
+    },
+    "yday_equity": 10536.07
+  }
+}

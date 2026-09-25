@@ -1,0 +1,66 @@
+{
+  "buys": [],
+  "cash": 9559.84,
+  "date": "2026-09-14",
+  "equity": 9559.84,
+  "fees": 31.0425,
+  "fills": [
+    {
+      "fees": 2.0407,
+      "pnl": 150.67,
+      "price": 261.51,
+      "shares": 8,
+      "side": "SELL",
+      "ticker": "ADBE"
+    },
+    {
+      "fees": 12.6896,
+      "pnl": -54.3,
+      "price": 2.01,
+      "shares": 970,
+      "side": "SELL",
+      "ticker": "AMTX"
+    },
+    {
+      "fees": 12.2059,
+      "pnl": -89.55,
+      "price": 2.05,
+      "shares": 933,
+      "side": "SELL",
+      "ticker": "BAK"
+    },
+    {
+      "fees": 2.0496,
+      "pnl": -280.2,
+      "price": 141.42,
+      "shares": 12,
+      "side": "SELL",
+      "ticker": "ORCL"
+    },
+    {
+      "fees": 2.0567,
+      "pnl": -64.43,
+      "price": 131.4,
+      "shares": 14,
+      "side": "SELL",
+      "ticker": "RH"
+    }
+  ],
+  "holdings": [],
+  "mean": -1.3262,
+  "n_trades_today": 5,
+  "recipe": "union_news_g_cond_h1",
+  "sells": [
+    "ADBE",
+    "AMTX",
+    "BAK",
+    "ORCL",
+    "RH"
+  ],
+  "state": {
+    "after": "2026-09-14",
+    "cash": 9559.84,
+    "pos": {},
+    "yday_equity": 9559.84
+  }
+}

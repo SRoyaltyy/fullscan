@@ -1,0 +1,215 @@
+{
+  "buys": [
+    "FPS",
+    "GFR",
+    "FRO",
+    "TALO",
+    "VAL",
+    "RIG",
+    "MRCY",
+    "KRMN"
+  ],
+  "cash": 122.29,
+  "date": "2026-09-16",
+  "equity": 9941.24,
+  "fees": 17.8375,
+  "fills": [
+    {
+      "fees": 2.104,
+      "pnl": null,
+      "price": 33.14,
+      "shares": 38,
+      "side": "BUY",
+      "ticker": "FPS"
+    },
+    {
+      "fees": 2.545,
+      "pnl": null,
+      "price": 6.83,
+      "shares": 185,
+      "side": "BUY",
+      "ticker": "GFR"
+    },
+    {
+      "fees": 2.062,
+      "pnl": null,
+      "price": 52.52,
+      "shares": 24,
+      "side": "BUY",
+      "ticker": "FRO"
+    },
+    {
+      "fees": 2.2,
+      "pnl": null,
+      "price": 17.87,
+      "shares": 70,
+      "side": "BUY",
+      "ticker": "TALO"
+    },
+    {
+      "fees": 2.032,
+      "pnl": null,
+      "price": 87.4,
+      "shares": 14,
+      "side": "BUY",
+      "ticker": "VAL"
+    },
+    {
+      "fees": 2.7735,
+      "pnl": null,
+      "price": 5.87,
+      "shares": 215,
+      "side": "BUY",
+      "ticker": "RIG"
+    },
+    {
+      "fees": 2.032,
+      "pnl": null,
+      "price": 87.52,
+      "shares": 14,
+      "side": "BUY",
+      "ticker": "MRCY"
+    },
+    {
+      "fees": 2.089,
+      "pnl": null,
+      "price": 38.01,
+      "shares": 33,
+      "side": "BUY",
+      "ticker": "KRMN"
+    }
+  ],
+  "holdings": [
+    "FPS",
+    "FRO",
+    "GFR",
+    "KRMN",
+    "MRCY",
+    "RIG",
+    "TALO",
+    "VAL"
+  ],
+  "mean": -1.9567,
+  "n_trades_today": 8,
+  "recipe": "union_clk_hold_vs_sector_opp_h1",
+  "sells": [],
+  "state": {
+    "after": "2026-09-16",
+    "cash": 122.29,
+    "pos": {
+      "FPS": {
+        "close_px": 34.84000015258789,
+        "cost": 1261.4239768066407,
+        "entry_date": "2026-09-16",
+        "entry_px": 33.13999938964844,
+        "fee_in": 2.104,
+        "last_px": 33.13999938964844,
+        "min_hold": 1,
+        "notional": 1259.3199768066406,
+        "peak_px": 33.13999938964844,
+        "reason": "Clock-B #6 \u2229 Theme Radar T\u22121 oppset; gate clk_hold_vs_sector=True,oppset=True; rank opp_rvol; list yday_gainer; \ud83d\udd35; ret5=-2.9; leftover $1267.45",
+        "shares": 38,
+        "ticker": "FPS"
+      },
+      "FRO": {
+        "close_px": 53.66999816894531,
+        "cost": 1262.542010986328,
+        "entry_date": "2026-09-16",
+        "entry_px": 52.52000045776367,
+        "fee_in": 2.062,
+        "last_px": 52.52000045776367,
+        "min_hold": 1,
+        "notional": 1260.4800109863281,
+        "peak_px": 52.52000045776367,
+        "reason": "Clock-B #6 \u2229 Theme Radar T\u22121 oppset; gate clk_hold_vs_sector=True,oppset=True; rank opp_rvol; list ohlc_hot; \ud83d\udd35; ret5=+10.7; leftover $1267.45",
+        "shares": 24,
+        "ticker": "FRO"
+      },
+      "GFR": {
+        "close_px": 6.489999771118164,
+        "cost": 1266.0949858856202,
+        "entry_date": "2026-09-16",
+        "entry_px": 6.829999923706055,
+        "fee_in": 2.545,
+        "last_px": 6.829999923706055,
+        "min_hold": 1,
+        "notional": 1263.5499858856201,
+        "peak_px": 6.829999923706055,
+        "reason": "Clock-B #6 \u2229 Theme Radar T\u22121 oppset; gate clk_hold_vs_sector=True,oppset=True; rank opp_rvol; list ohlc_hot; ret5=+11.2; leftover $1267.45",
+        "shares": 185,
+        "ticker": "GFR"
+      },
+      "KRMN": {
+        "close_px": 36.939998626708984,
+        "cost": 1256.4189446105956,
+        "entry_date": "2026-09-16",
+        "entry_px": 38.0099983215332,
+        "fee_in": 2.089,
+        "last_px": 38.0099983215332,
+        "min_hold": 1,
+        "notional": 1254.3299446105957,
+        "peak_px": 38.0099983215332,
+        "reason": "Clock-B #6 \u2229 Theme Radar T\u22121 oppset; gate clk_hold_vs_sector=True,oppset=True; rank opp_rvol; list probable,yday_gainer; \ud83d\udd35; ret5=-5.6; leftover $1267.45",
+        "shares": 33,
+        "ticker": "KRMN"
+      },
+      "MRCY": {
+        "close_px": 87.25,
+        "cost": 1227.3119530029296,
+        "entry_date": "2026-09-16",
+        "entry_px": 87.5199966430664,
+        "fee_in": 2.032,
+        "last_px": 87.5199966430664,
+        "min_hold": 1,
+        "notional": 1225.2799530029297,
+        "peak_px": 87.5199966430664,
+        "reason": "Clock-B #6 \u2229 Theme Radar T\u22121 oppset; gate clk_hold_vs_sector=True,oppset=True; rank opp_rvol; list yday_gainer; \ud83d\udd35; ret5=+4.3; leftover $1267.45",
+        "shares": 14,
+        "ticker": "MRCY"
+      },
+      "RIG": {
+        "close_px": 5.539999961853027,
+        "cost": 1264.8234753952026,
+        "entry_date": "2026-09-16",
+        "entry_px": 5.869999885559082,
+        "fee_in": 2.7735,
+        "last_px": 5.869999885559082,
+        "min_hold": 1,
+        "notional": 1262.0499753952026,
+        "peak_px": 5.869999885559082,
+        "reason": "Clock-B #6 \u2229 Theme Radar T\u22121 oppset; gate clk_hold_vs_sector=True,oppset=True; rank opp_rvol; list probable,yday_gainer; \ud83d\udd35; ret5=+3.1; leftover $1267.45",
+        "shares": 215,
+        "ticker": "RIG"
+      },
+      "TALO": {
+        "close_px": 17.420000076293945,
+        "cost": 1253.100058746338,
+        "entry_date": "2026-09-16",
+        "entry_px": 17.8700008392334,
+        "fee_in": 2.2,
+        "last_px": 17.8700008392334,
+        "min_hold": 1,
+        "notional": 1250.900058746338,
+        "peak_px": 17.8700008392334,
+        "reason": "Clock-B #6 \u2229 Theme Radar T\u22121 oppset; gate clk_hold_vs_sector=True,oppset=True; rank opp_rvol; list ohlc_hot; \ud83d\udd35; ret5=+6.8; leftover $1267.45",
+        "shares": 70,
+        "ticker": "TALO"
+      },
+      "VAL": {
+        "close_px": 82.5199966430664,
+        "cost": 1225.6320213623046,
+        "entry_date": "2026-09-16",
+        "entry_px": 87.4000015258789,
+        "fee_in": 2.032,
+        "last_px": 87.4000015258789,
+        "min_hold": 1,
+        "notional": 1223.6000213623047,
+        "peak_px": 87.4000015258789,
+        "reason": "Clock-B #6 \u2229 Theme Radar T\u22121 oppset; gate clk_hold_vs_sector=True,oppset=True; rank opp_rvol; list probable,yday_gainer; \ud83d\udd35; ret5=+3.2; leftover $1267.45",
+        "shares": 14,
+        "ticker": "VAL"
+      }
+    },
+    "yday_equity": 9941.24
+  }
+}

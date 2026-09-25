@@ -1,0 +1,288 @@
+{
+  "buys": [
+    "FLNC",
+    "RARE",
+    "EYPT",
+    "DCX",
+    "ALMU",
+    "XE",
+    "BHVN",
+    "TLSA"
+  ],
+  "cash": 0.91,
+  "date": "2026-09-18",
+  "equity": 7920.26,
+  "fees": 110.6412,
+  "fills": [
+    {
+      "fees": 2.3546,
+      "pnl": -186.12,
+      "price": 8.68,
+      "shares": 112,
+      "side": "SELL",
+      "ticker": "ALHC"
+    },
+    {
+      "fees": 2.028,
+      "pnl": 10.72,
+      "price": 171.11,
+      "shares": 6,
+      "side": "SELL",
+      "ticker": "CRDO"
+    },
+    {
+      "fees": 35.2788,
+      "pnl": 3.86,
+      "price": 0.17,
+      "shares": 7248,
+      "side": "SELL",
+      "ticker": "DVLT"
+    },
+    {
+      "fees": 2.022,
+      "pnl": -11.22,
+      "price": 236.8,
+      "shares": 4,
+      "side": "SELL",
+      "ticker": "JBHT"
+    },
+    {
+      "fees": 6.5822,
+      "pnl": -113.67,
+      "price": 2.07,
+      "shares": 503,
+      "side": "SELL",
+      "ticker": "MRLN"
+    },
+    {
+      "fees": 8.529,
+      "pnl": -62.58,
+      "price": 1.68,
+      "shares": 652,
+      "side": "SELL",
+      "ticker": "PALI"
+    },
+    {
+      "fees": 2.4876,
+      "pnl": -38.05,
+      "price": 7.18,
+      "shares": 154,
+      "side": "SELL",
+      "ticker": "RCAT"
+    },
+    {
+      "fees": 2.2026,
+      "pnl": -42.14,
+      "price": 17.13,
+      "shares": 64,
+      "side": "SELL",
+      "ticker": "TNDM"
+    },
+    {
+      "fees": 2.425,
+      "pnl": null,
+      "price": 7.535,
+      "shares": 145,
+      "side": "BUY",
+      "ticker": "FLNC"
+    },
+    {
+      "fees": 2.212,
+      "pnl": null,
+      "price": 14.79,
+      "shares": 74,
+      "side": "BUY",
+      "ticker": "RARE"
+    },
+    {
+      "fees": 3.5733,
+      "pnl": null,
+      "price": 3.95,
+      "shares": 277,
+      "side": "BUY",
+      "ticker": "EYPT"
+    },
+    {
+      "fees": 20.2413,
+      "pnl": null,
+      "price": 0.354,
+      "shares": 3095,
+      "side": "BUY",
+      "ticker": "DCX"
+    },
+    {
+      "fees": 2.272,
+      "pnl": null,
+      "price": 11.64,
+      "shares": 94,
+      "side": "BUY",
+      "ticker": "ALMU"
+    },
+    {
+      "fees": 2.191,
+      "pnl": null,
+      "price": 16.28,
+      "shares": 67,
+      "side": "BUY",
+      "ticker": "XE"
+    },
+    {
+      "fees": 2.221,
+      "pnl": null,
+      "price": 14.07,
+      "shares": 77,
+      "side": "BUY",
+      "ticker": "BHVN"
+    },
+    {
+      "fees": 14.0208,
+      "pnl": null,
+      "price": 0.97,
+      "shares": 1104,
+      "side": "BUY",
+      "ticker": "TLSA"
+    }
+  ],
+  "holdings": [
+    "ALMU",
+    "BHVN",
+    "DCX",
+    "EYPT",
+    "FLNC",
+    "RARE",
+    "TLSA",
+    "XE"
+  ],
+  "mean": -9.3945,
+  "n_trades_today": 16,
+  "recipe": "union_rsi_h1",
+  "sells": [
+    "ALHC",
+    "CRDO",
+    "DVLT",
+    "JBHT",
+    "MRLN",
+    "PALI",
+    "RCAT",
+    "TNDM"
+  ],
+  "state": {
+    "after": "2026-09-18",
+    "cash": 0.91,
+    "pos": {
+      "ALMU": {
+        "close_px": 12.725000381469727,
+        "cost": 1096.4320322723388,
+        "entry_date": "2026-09-18",
+        "entry_px": 11.640000343322754,
+        "fee_in": 2.272,
+        "last_px": 11.640000343322754,
+        "min_hold": 1,
+        "notional": 1094.1600322723389,
+        "peak_px": 11.640000343322754,
+        "reason": "rank by rsi; rank rsi; list yday_mover; \ud83d\udd35; ret5=-12.8; leftover $1095.76",
+        "shares": 94,
+        "ticker": "ALMU"
+      },
+      "BHVN": {
+        "close_px": 13.619999885559082,
+        "cost": 1085.6109765014648,
+        "entry_date": "2026-09-18",
+        "entry_px": 14.069999694824219,
+        "fee_in": 2.221,
+        "last_px": 14.069999694824219,
+        "min_hold": 1,
+        "notional": 1083.3899765014648,
+        "peak_px": 14.069999694824219,
+        "reason": "rank by rsi; rank rsi; list probable,yday_gainer,yday_mover; \ud83d\udd35; ret5=+8.6; leftover $1095.76",
+        "shares": 77,
+        "ticker": "BHVN"
+      },
+      "DCX": {
+        "close_px": 0.13300000131130219,
+        "cost": 1115.8713066411494,
+        "entry_date": "2026-09-18",
+        "entry_px": 0.3540000021457672,
+        "fee_in": 20.2413,
+        "last_px": 0.3540000021457672,
+        "min_hold": 1,
+        "notional": 1095.6300066411495,
+        "peak_px": 0.3540000021457672,
+        "reason": "rank by rsi; rank rsi; list yday_gainer,yday_mover; \ud83d\udd35; ret5=-19.7; leftover $1095.76",
+        "shares": 3095,
+        "ticker": "DCX"
+      },
+      "EYPT": {
+        "close_px": 3.8499999046325684,
+        "cost": 1097.7233132083893,
+        "entry_date": "2026-09-18",
+        "entry_px": 3.950000047683716,
+        "fee_in": 3.5733,
+        "last_px": 3.950000047683716,
+        "min_hold": 1,
+        "notional": 1094.1500132083893,
+        "peak_px": 3.950000047683716,
+        "reason": "rank by rsi; rank rsi; list probable,yday_gainer,yday_mover; \ud83d\udd35; ret5=-6.1; leftover $1095.76",
+        "shares": 277,
+        "ticker": "EYPT"
+      },
+      "FLNC": {
+        "close_px": 7.320000171661377,
+        "cost": 1094.9999778747558,
+        "entry_date": "2026-09-18",
+        "entry_px": 7.534999847412109,
+        "fee_in": 2.425,
+        "last_px": 7.534999847412109,
+        "min_hold": 1,
+        "notional": 1092.5749778747559,
+        "peak_px": 7.534999847412109,
+        "reason": "rank by rsi; rank rsi; list yday_mover; \ud83d\udd35; ret5=-20.9; leftover $1095.76",
+        "shares": 145,
+        "ticker": "FLNC"
+      },
+      "RARE": {
+        "close_px": 14.510000228881836,
+        "cost": 1096.671997177124,
+        "entry_date": "2026-09-18",
+        "entry_px": 14.789999961853027,
+        "fee_in": 2.212,
+        "last_px": 14.789999961853027,
+        "min_hold": 1,
+        "notional": 1094.459997177124,
+        "peak_px": 14.789999961853027,
+        "reason": "rank by rsi; rank rsi; list probable,yday_gainer; \ud83d\udd35; \u26aa; ret5=+0.7; leftover $1095.76",
+        "shares": 74,
+        "ticker": "RARE"
+      },
+      "TLSA": {
+        "close_px": 0.9100000262260437,
+        "cost": 1084.9008315856934,
+        "entry_date": "2026-09-18",
+        "entry_px": 0.9700000286102295,
+        "fee_in": 14.0208,
+        "last_px": 0.9700000286102295,
+        "min_hold": 1,
+        "notional": 1070.8800315856934,
+        "peak_px": 0.9700000286102295,
+        "reason": "rank by rsi; rank rsi; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+1.0; leftover $1095.76",
+        "shares": 1104,
+        "ticker": "TLSA"
+      },
+      "XE": {
+        "close_px": 15.770000457763672,
+        "cost": 1092.951046005249,
+        "entry_date": "2026-09-18",
+        "entry_px": 16.280000686645508,
+        "fee_in": 2.191,
+        "last_px": 16.280000686645508,
+        "min_hold": 1,
+        "notional": 1090.760046005249,
+        "peak_px": 16.280000686645508,
+        "reason": "rank by rsi; rank rsi; list yday_gainer; \ud83d\udd35; ret5=+3.1; leftover $1095.76",
+        "shares": 67,
+        "ticker": "XE"
+      }
+    },
+    "yday_equity": 7920.26
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "buys": [],
+  "cash": 0.57,
+  "date": "2026-09-14",
+  "equity": 10796.4,
+  "fees": 0,
+  "fills": [],
+  "holdings": [
+    "BNC",
+    "GPRO",
+    "INDP",
+    "VISN"
+  ],
+  "mean": 5.2707,
+  "n_trades_today": 0,
+  "recipe": "union_hot_n4_holdup",
+  "sells": [],
+  "state": {
+    "after": "2026-09-14",
+    "cash": 0.57,
+    "pos": {
+      "BNC": {
+        "close_px": 5.269999980926514,
+        "cost": 2589.4453197387697,
+        "entry_date": "2026-09-11",
+        "entry_px": 4.909999847412109,
+        "fee_in": 6.7854,
+        "last_px": 5.03000020980835,
+        "min_hold": 2,
+        "notional": 2582.6599197387695,
+        "peak_px": 5.03000020980835,
+        "reason": "hot4; S>0 lots stay through the next 09:30 so the overnight gap is in the book; rank hot_score; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+76.3; leftover $2583.68",
+        "shares": 526,
+        "ticker": "BNC"
+      },
+      "GPRO": {
+        "close_px": 1.350000023841858,
+        "cost": 2563.0005567508697,
+        "entry_date": "2026-09-11",
+        "entry_px": 1.399999976158142,
+        "fee_in": 23.4006,
+        "last_px": 1.3700000047683716,
+        "min_hold": 2,
+        "notional": 2539.5999567508698,
+        "peak_px": 1.399999976158142,
+        "reason": "hot4; S>0 lots stay through the next 09:30 so the overnight gap is in the book; rank hot_score; list ohlc_hot; ret5=+0.7; leftover $2583.68",
+        "shares": 1814,
+        "ticker": "GPRO"
+      },
+      "INDP": {
+        "close_px": 3.140000104904175,
+        "cost": 2593.532445585632,
+        "entry_date": "2026-09-11",
+        "entry_px": 2.700000047683716,
+        "fee_in": 12.3324,
+        "last_px": 2.799999952316284,
+        "min_hold": 2,
+        "notional": 2581.2000455856323,
+        "peak_px": 2.799999952316284,
+        "reason": "hot4; S>0 lots stay through the next 09:30 so the overnight gap is in the book; rank hot_score; list yday_gainer,yday_mover; ret5=+120.7; leftover $2583.68",
+        "shares": 956,
+        "ticker": "INDP"
+      },
+      "VISN": {
+        "close_px": 6.465000152587891,
+        "cost": 2588.1541089050293,
+        "entry_date": "2026-09-11",
+        "entry_px": 6.489999771118164,
+        "fee_in": 5.1342,
+        "last_px": 6.400000095367432,
+        "min_hold": 2,
+        "notional": 2583.0199089050293,
+        "peak_px": 6.489999771118164,
+        "reason": "hot4; S>0 lots stay through the next 09:30 so the overnight gap is in the book; rank hot_score; list ohlc_hot; \ud83d\udd35; ret5=+0.5; leftover $2583.68",
+        "shares": 398,
+        "ticker": "VISN"
+      }
+    },
+    "yday_equity": 10796.4
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "buys": [],
+  "cash": 237.87,
+  "date": "2026-08-31",
+  "equity": 9931.26,
+  "fees": 0,
+  "fills": [],
+  "holdings": [
+    "ANF",
+    "CAPR",
+    "MRNA",
+    "SNPS"
+  ],
+  "mean": 0.185,
+  "n_trades_today": 0,
+  "recipe": "union_hot_n4_holdup",
+  "sells": [],
+  "state": {
+    "after": "2026-08-31",
+    "cash": 237.87,
+    "pos": {
+      "ANF": {
+        "close_px": 143.0800018310547,
+        "cost": 2485.231124511719,
+        "entry_date": "2026-08-28",
+        "entry_px": 146.07000732421875,
+        "fee_in": 2.041,
+        "last_px": 148.02999877929688,
+        "min_hold": 2,
+        "notional": 2483.1901245117188,
+        "peak_px": 148.02999877929688,
+        "reason": "hot4; S>0 lots stay through the next 09:30 so the overnight gap is in the book; rank hot_score; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+38.8; leftover $2500.00",
+        "shares": 17,
+        "ticker": "ANF"
+      },
+      "CAPR": {
+        "close_px": 9.90999984741211,
+        "cost": 2494.1822828125,
+        "entry_date": "2026-08-28",
+        "entry_px": 9.729999542236328,
+        "fee_in": 3.3024,
+        "last_px": 9.5,
+        "min_hold": 2,
+        "notional": 2490.8798828125,
+        "peak_px": 9.729999542236328,
+        "reason": "hot4; S>0 lots stay through the next 09:30 so the overnight gap is in the book; rank hot_score; list yday_gainer,yday_mover; ret5=+47.1; leftover $2500.00",
+        "shares": 256,
+        "ticker": "CAPR"
+      },
+      "MRNA": {
+        "close_px": 140.33999633789062,
+        "cost": 2471.4640439453124,
+        "entry_date": "2026-08-28",
+        "entry_px": 137.19000244140625,
+        "fee_in": 2.044,
+        "last_px": 134.10000610351562,
+        "min_hold": 2,
+        "notional": 2469.4200439453125,
+        "peak_px": 137.19000244140625,
+        "reason": "hot4; S>0 lots stay through the next 09:30 so the overnight gap is in the book; rank hot_score; list ohlc_hot; ret5=+7.1; leftover $2500.00",
+        "shares": 18,
+        "ticker": "MRNA"
+      },
+      "SNPS": {
+        "close_px": 439.5899963378906,
+        "cost": 2311.2550305175782,
+        "entry_date": "2026-08-28",
+        "entry_px": 461.8500061035156,
+        "fee_in": 2.005,
+        "last_px": 437.95001220703125,
+        "min_hold": 2,
+        "notional": 2309.250030517578,
+        "peak_px": 461.8500061035156,
+        "reason": "hot4; S>0 lots stay through the next 09:30 so the overnight gap is in the book; rank hot_score; list ohlc_hot; ret5=+16.8; leftover $2500.00",
+        "shares": 5,
+        "ticker": "SNPS"
+      }
+    },
+    "yday_equity": 9931.26
+  }
+}

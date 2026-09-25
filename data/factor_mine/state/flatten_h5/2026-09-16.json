@@ -1,0 +1,134 @@
+{
+  "buys": [
+    "IQV",
+    "RDNT",
+    "AVAH",
+    "BLFS"
+  ],
+  "cash": 106.13,
+  "date": "2026-09-16",
+  "equity": 8884.26,
+  "fees": 8.722,
+  "fills": [
+    {
+      "fees": 2.014,
+      "pnl": null,
+      "price": 270.89,
+      "shares": 8,
+      "side": "BUY",
+      "ticker": "IQV"
+    },
+    {
+      "fees": 2.077,
+      "pnl": null,
+      "price": 77.12,
+      "shares": 29,
+      "side": "BUY",
+      "ticker": "RDNT"
+    },
+    {
+      "fees": 2.458,
+      "pnl": null,
+      "price": 14.31,
+      "shares": 156,
+      "side": "BUY",
+      "ticker": "AVAH"
+    },
+    {
+      "fees": 2.173,
+      "pnl": null,
+      "price": 36.46,
+      "shares": 61,
+      "side": "BUY",
+      "ticker": "BLFS"
+    }
+  ],
+  "holdings": [
+    "AVAH",
+    "BLFS",
+    "IQV",
+    "OVID",
+    "RDNT"
+  ],
+  "mean": -1.0395,
+  "n_trades_today": 4,
+  "recipe": "flatten_h5",
+  "sells": [],
+  "state": {
+    "after": "2026-09-16",
+    "cash": 106.13,
+    "pos": {
+      "AVAH": {
+        "close_px": 14.260000228881836,
+        "cost": 2234.818065460205,
+        "entry_date": "2026-09-16",
+        "entry_px": 14.3100004196167,
+        "fee_in": 2.458,
+        "last_px": 14.3100004196167,
+        "min_hold": 5,
+        "notional": 2232.360065460205,
+        "peak_px": 14.3100004196167,
+        "reason": "baseline list, no extra gate; list flatten; wish-list (live io HOLD \u2014 not a ticket); \u26aa; ret5=+4.8; leftover $2243.72",
+        "shares": 156,
+        "ticker": "AVAH"
+      },
+      "BLFS": {
+        "close_px": 36.11000061035156,
+        "cost": 2226.232944152832,
+        "entry_date": "2026-09-16",
+        "entry_px": 36.459999084472656,
+        "fee_in": 2.173,
+        "last_px": 36.459999084472656,
+        "min_hold": 5,
+        "notional": 2224.059944152832,
+        "peak_px": 36.459999084472656,
+        "reason": "baseline list, no extra gate; list flatten; wish-list (live io HOLD \u2014 not a ticket); \ud83d\udd35; \u26aa; ret5=+2.9; leftover $2243.72",
+        "shares": 61,
+        "ticker": "BLFS"
+      },
+      "IQV": {
+        "close_px": 268.82000732421875,
+        "cost": 2169.1341171875,
+        "entry_date": "2026-09-16",
+        "entry_px": 270.8900146484375,
+        "fee_in": 2.014,
+        "last_px": 270.8900146484375,
+        "min_hold": 5,
+        "notional": 2167.1201171875,
+        "peak_px": 270.8900146484375,
+        "reason": "baseline list, no extra gate; list flatten; wish-list (live io HOLD \u2014 not a ticket); \u26aa; ret5=+4.0; leftover $2243.72",
+        "shares": 8,
+        "ticker": "IQV"
+      },
+      "OVID": {
+        "close_px": 2.680000066757202,
+        "cost": 2.7603000190734863,
+        "entry_date": "2026-09-11",
+        "entry_px": 2.7300000190734863,
+        "fee_in": 0.0303,
+        "last_px": 2.7200000286102295,
+        "min_hold": 5,
+        "notional": 2.7300000190734863,
+        "peak_px": 2.755000114440918,
+        "reason": "baseline list, no extra gate; list flatten; wish-list (live io HOLD \u2014 not a ticket); ret5=-5.4; leftover $4.06",
+        "shares": 1,
+        "ticker": "OVID"
+      },
+      "RDNT": {
+        "close_px": 75.77999877929688,
+        "cost": 2238.557079650879,
+        "entry_date": "2026-09-16",
+        "entry_px": 77.12000274658203,
+        "fee_in": 2.077,
+        "last_px": 77.12000274658203,
+        "min_hold": 5,
+        "notional": 2236.480079650879,
+        "peak_px": 77.12000274658203,
+        "reason": "baseline list, no extra gate; list flatten; wish-list (live io HOLD \u2014 not a ticket); \u26aa; ret5=+7.2; leftover $2243.72",
+        "shares": 29,
+        "ticker": "RDNT"
+      }
+    },
+    "yday_equity": 8884.26
+  }
+}

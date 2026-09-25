@@ -1,0 +1,93 @@
+{
+  "buys": [],
+  "cash": 9502.14,
+  "date": "2026-09-24",
+  "equity": 9502.14,
+  "fees": 19.4695,
+  "fills": [
+    {
+      "fees": 2.13,
+      "pnl": -16.24,
+      "price": 30.02,
+      "shares": 40,
+      "side": "SELL",
+      "ticker": "CNXC"
+    },
+    {
+      "fees": 2.049,
+      "pnl": -27.74,
+      "price": 87.68,
+      "shares": 13,
+      "side": "SELL",
+      "ticker": "DXCM"
+    },
+    {
+      "fees": 2.9498,
+      "pnl": -23.85,
+      "price": 5.37,
+      "shares": 225,
+      "side": "SELL",
+      "ticker": "GT"
+    },
+    {
+      "fees": 2.04,
+      "pnl": -51.26,
+      "price": 112.13,
+      "shares": 10,
+      "side": "SELL",
+      "ticker": "HALO"
+    },
+    {
+      "fees": 4.0997,
+      "pnl": -58.22,
+      "price": 3.77,
+      "shares": 313,
+      "side": "SELL",
+      "ticker": "INDP"
+    },
+    {
+      "fees": 2.022,
+      "pnl": -89.38,
+      "price": 262.12,
+      "shares": 4,
+      "side": "SELL",
+      "ticker": "SNX"
+    },
+    {
+      "fees": 2.154,
+      "pnl": -71.97,
+      "price": 23.99,
+      "shares": 48,
+      "side": "SELL",
+      "ticker": "TNGX"
+    },
+    {
+      "fees": 2.025,
+      "pnl": -1.65,
+      "price": 213.475,
+      "shares": 5,
+      "side": "SELL",
+      "ticker": "ZS"
+    }
+  ],
+  "holdings": [],
+  "mean": -1.5959,
+  "n_trades_today": 8,
+  "recipe": "union_clk_mom_break_peer_h1",
+  "sells": [
+    "CNXC",
+    "DXCM",
+    "GT",
+    "HALO",
+    "INDP",
+    "SNX",
+    "TNGX",
+    "ZS"
+  ],
+  "state": {
+    "after": "2026-09-24",
+    "cash": 9502.14,
+    "pos": {},
+    "yday_equity": 9502.14
+  }
+}

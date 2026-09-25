@@ -1,0 +1,101 @@
+{
+  "buys": [],
+  "cash": 6537.96,
+  "date": "2026-09-24",
+  "equity": 7487.96,
+  "fees": 34.7573,
+  "fills": [
+    {
+      "fees": 2.076,
+      "pnl": 26.23,
+      "price": 46.88,
+      "shares": 22,
+      "side": "SELL",
+      "ticker": "CBRL"
+    },
+    {
+      "fees": 10.4105,
+      "pnl": -60.48,
+      "price": 1.17,
+      "shares": 796,
+      "side": "SELL",
+      "ticker": "CMPX"
+    },
+    {
+      "fees": 2.157,
+      "pnl": -93.96,
+      "price": 17.63,
+      "shares": 49,
+      "side": "SELL",
+      "ticker": "EVER"
+    },
+    {
+      "fees": 2.094,
+      "pnl": -4.17,
+      "price": 35.96,
+      "shares": 28,
+      "side": "SELL",
+      "ticker": "GIS"
+    },
+    {
+      "fees": 13.4519,
+      "pnl": -54.79,
+      "price": 0.746,
+      "shares": 1265,
+      "side": "SELL",
+      "ticker": "NMRA"
+    },
+    {
+      "fees": 2.055,
+      "pnl": -9.79,
+      "price": 61.78,
+      "shares": 15,
+      "side": "SELL",
+      "ticker": "TTAN"
+    },
+    {
+      "fees": 2.5129,
+      "pnl": -145.93,
+      "price": 5.12,
+      "shares": 162,
+      "side": "SELL",
+      "ticker": "XNDU"
+    }
+  ],
+  "holdings": [
+    "FUL"
+  ],
+  "mean": -0.8213,
+  "n_trades_today": 7,
+  "recipe": "union_rsi_h1",
+  "sells": [
+    "CBRL",
+    "CMPX",
+    "EVER",
+    "GIS",
+    "NMRA",
+    "TTAN",
+    "XNDU"
+  ],
+  "state": {
+    "after": "2026-09-24",
+    "cash": 6537.96,
+    "pos": {
+      "FUL": {
+        "close_px": 50.0,
+        "cost": 961.7369681091309,
+        "entry_date": "2026-09-23",
+        "entry_px": 50.5099983215332,
+        "fee_in": 2.047,
+        "last_px": 49.290000915527344,
+        "min_hold": 1,
+        "notional": 959.6899681091309,
+        "peak_px": 50.5099983215332,
+        "reason": "rank by rsi; rank rsi; list overnight; \ud83d\udd35; ret5=+0.4; leftover $971.76",
+        "shares": 19,
+        "ticker": "FUL"
+      }
+    },
+    "yday_equity": 7487.96
+  }
+}

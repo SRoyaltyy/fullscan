@@ -1,0 +1,69 @@
+{
+  "buys": [
+    "QRVO",
+    "MYGN"
+  ],
+  "cash": 15769.91,
+  "date": "2026-09-11",
+  "equity": 10412.52,
+  "fees": 12.4718,
+  "fills": [
+    {
+      "fees": 2.1609015062724075,
+      "pnl": null,
+      "price": 112.835,
+      "shares": 23,
+      "side": "SHORT",
+      "ticker": "QRVO"
+    },
+    {
+      "fees": 10.310901093438552,
+      "pnl": null,
+      "price": 3.37,
+      "shares": 782,
+      "side": "SHORT",
+      "ticker": "MYGN"
+    }
+  ],
+  "holdings": [
+    "MYGN",
+    "QRVO"
+  ],
+  "mean": -1.3203,
+  "n_trades_today": 2,
+  "recipe": "short_news_r_macd_h3",
+  "sells": [],
+  "state": {
+    "after": "2026-09-11",
+    "cash": 15769.91,
+    "pos": {
+      "MYGN": {
+        "close_px": 3.4200000762939453,
+        "cost": 10.310901093438552,
+        "entry_date": "2026-09-11",
+        "entry_px": 3.369999885559082,
+        "fee_in": 10.310901093438552,
+        "last_px": 3.369999885559082,
+        "notional": 2635.339910507202,
+        "peak_px": 3.369999885559082,
+        "reason": "short news\ud83d\udd34 \u2229 prior MACD histogram > 0; gate news=bad,macd_up=True; list yday_gainer,ohlc_hot; ret5=+4.0; leftover $2637.96",
+        "shares": 782,
+        "ticker": "MYGN"
+      },
+      "QRVO": {
+        "close_px": 116.6500015258789,
+        "cost": 2.1609015062724075,
+        "entry_date": "2026-09-11",
+        "entry_px": 112.83499908447266,
+        "fee_in": 2.1609015062724075,
+        "last_px": 112.83499908447266,
+        "notional": 2595.204978942871,
+        "peak_px": 112.83499908447266,
+        "reason": "short news\ud83d\udd34 \u2229 prior MACD histogram > 0; gate news=bad,macd_up=True; list yday_gainer,ohlc_hot; \ud83d\udd35; ret5=+11.9; leftover $2637.96",
+        "shares": 23,
+        "ticker": "QRVO"
+      }
+    },
+    "yday_equity": 10412.52
+  }
+}

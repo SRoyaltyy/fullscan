@@ -1,0 +1,111 @@
+{
+  "buys": [
+    "NTSK"
+  ],
+  "cash": 10.48,
+  "date": "2026-09-22",
+  "equity": 9804.88,
+  "fees": 25.3021,
+  "fills": [
+    {
+      "fees": 2.1455,
+      "pnl": -109.57,
+      "price": 29.3,
+      "shares": 45,
+      "side": "SELL",
+      "ticker": "ASST"
+    },
+    {
+      "fees": 2.3366,
+      "pnl": -60.29,
+      "price": 12.95,
+      "shares": 106,
+      "side": "SELL",
+      "ticker": "BTDR"
+    },
+    {
+      "fees": 2.3018,
+      "pnl": -63.0,
+      "price": 14.5,
+      "shares": 95,
+      "side": "SELL",
+      "ticker": "CLSK"
+    },
+    {
+      "fees": 2.0622,
+      "pnl": -22.97,
+      "price": 82.42,
+      "shares": 17,
+      "side": "SELL",
+      "ticker": "MXL"
+    },
+    {
+      "fees": 2.5049,
+      "pnl": 7.75,
+      "price": 9.08,
+      "shares": 159,
+      "side": "SELL",
+      "ticker": "QUBT"
+    },
+    {
+      "fees": 5.0151,
+      "pnl": -94.22,
+      "price": 3.53,
+      "shares": 383,
+      "side": "SELL",
+      "ticker": "SHMD"
+    },
+    {
+      "fees": 2.1248,
+      "pnl": -77.57,
+      "price": 35.54,
+      "shares": 38,
+      "side": "SELL",
+      "ticker": "TRMD"
+    },
+    {
+      "fees": 6.8112,
+      "pnl": null,
+      "price": 18.23,
+      "shares": 528,
+      "side": "BUY",
+      "ticker": "NTSK"
+    }
+  ],
+  "holdings": [
+    "NTSK"
+  ],
+  "mean": -0.4974,
+  "n_trades_today": 8,
+  "recipe": "ohlc_hot_coil_h1",
+  "sells": [
+    "ASST",
+    "BTDR",
+    "CLSK",
+    "MXL",
+    "QUBT",
+    "SHMD",
+    "TRMD"
+  ],
+  "state": {
+    "after": "2026-09-22",
+    "cash": 10.48,
+    "pos": {
+      "NTSK": {
+        "close_px": 18.55,
+        "cost": 9632.2512,
+        "entry_date": "2026-09-22",
+        "entry_px": 18.23,
+        "fee_in": 6.8112,
+        "last_px": 18.23,
+        "min_hold": 1,
+        "notional": 9625.44,
+        "peak_px": 18.23,
+        "reason": "hot list \u2229 not exploded; gate ret_5_min=0.0,ret_5_max=10.0,rvol_max=2.2; list ohlc_hot; ret5=+8.2; leftover $9642.73",
+        "shares": 528,
+        "ticker": "NTSK"
+      }
+    },
+    "yday_equity": 9804.88
+  }
+}

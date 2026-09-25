@@ -1,0 +1,251 @@
+{
+  "buys": [],
+  "cash": 7794.75,
+  "date": "2026-09-24",
+  "equity": 9223.78,
+  "fees": 16.8483,
+  "fills": [
+    {
+      "fees": 2.028,
+      "pnl": 32.44,
+      "price": 163.95,
+      "shares": 6,
+      "side": "SELL",
+      "ticker": "A"
+    },
+    {
+      "fees": 2.2564,
+      "pnl": -102.9,
+      "price": 12.26,
+      "shares": 81,
+      "side": "SELL",
+      "ticker": "BTDR"
+    },
+    {
+      "fees": 3.6162,
+      "pnl": -172.78,
+      "price": 3.4,
+      "shares": 276,
+      "side": "SELL",
+      "ticker": "CYPH"
+    },
+    {
+      "fees": 2.046,
+      "pnl": -17.87,
+      "price": 87.68,
+      "shares": 12,
+      "side": "SELL",
+      "ticker": "DXCM"
+    },
+    {
+      "fees": 2.3483,
+      "pnl": -25.57,
+      "price": 9.8,
+      "shares": 110,
+      "side": "SELL",
+      "ticker": "SBET"
+    },
+    {
+      "fees": 2.3451,
+      "pnl": -31.37,
+      "price": 9.89,
+      "shares": 109,
+      "side": "SELL",
+      "ticker": "SGML"
+    },
+    {
+      "fees": 2.2083,
+      "pnl": 458.41,
+      "price": 24.03,
+      "shares": 65,
+      "side": "SELL",
+      "ticker": "TJGC"
+    }
+  ],
+  "holdings": [
+    "DEFT",
+    "EU",
+    "GRAL",
+    "HELP",
+    "INDP",
+    "IVVD",
+    "MX",
+    "NMRA",
+    "NUAI",
+    "OMER",
+    "TNGX"
+  ],
+  "mean": -0.6797,
+  "n_trades_today": 7,
+  "recipe": "union_vol_g_h3",
+  "sells": [
+    "A",
+    "BTDR",
+    "CYPH",
+    "DXCM",
+    "SBET",
+    "SGML",
+    "TJGC"
+  ],
+  "state": {
+    "after": "2026-09-24",
+    "cash": 7794.75,
+    "pos": {
+      "DEFT": {
+        "close_px": 0.5320000052452087,
+        "cost": 201.23039999999997,
+        "entry_date": "2026-09-22",
+        "entry_px": 0.59,
+        "fee_in": 2.9904,
+        "last_px": 0.5199999809265137,
+        "min_hold": 3,
+        "notional": 198.23999999999998,
+        "peak_px": 0.59,
+        "reason": "union \u2229 vol_g, no \ud83d\udea8; gate vol=good; list probable,yday_gainer,yday_mover; ret5=-1.7; leftover $198.79",
+        "shares": 336,
+        "ticker": "DEFT"
+      },
+      "EU": {
+        "close_px": 1.2200000286102295,
+        "cost": 200.7621,
+        "entry_date": "2026-09-22",
+        "entry_px": 1.06,
+        "fee_in": 2.5421,
+        "last_px": 1.2000000476837158,
+        "min_hold": 3,
+        "notional": 198.22,
+        "peak_px": 1.2000000476837158,
+        "reason": "union \u2229 vol_g, no \ud83d\udea8; gate vol=good; list yday_gainer,yday_mover; ret5=+12.9; leftover $198.79",
+        "shares": 187,
+        "ticker": "EU"
+      },
+      "GRAL": {
+        "close_px": 125.20999908447266,
+        "cost": 107.8205,
+        "entry_date": "2026-09-22",
+        "entry_px": 106.75,
+        "fee_in": 1.0705,
+        "last_px": 105.5,
+        "min_hold": 3,
+        "notional": 106.75,
+        "peak_px": 108.5199966430664,
+        "reason": "union \u2229 vol_g, no \ud83d\udea8; gate vol=good; list yday_gainer,yday_mover; ret5=+42.9; leftover $198.79",
+        "shares": 1,
+        "ticker": "GRAL"
+      },
+      "HELP": {
+        "close_px": 12.59000015258789,
+        "cost": 198.14339999999999,
+        "entry_date": "2026-09-22",
+        "entry_px": 14.01,
+        "fee_in": 2.0034,
+        "last_px": 12.800000190734863,
+        "min_hold": 3,
+        "notional": 196.14,
+        "peak_px": 14.01,
+        "reason": "union \u2229 vol_g, no \ud83d\udea8; gate vol=good; list probable; ret5=+0.4; leftover $198.79",
+        "shares": 14,
+        "ticker": "HELP"
+      },
+      "INDP": {
+        "close_px": 4.0,
+        "cost": 47.66760080108642,
+        "entry_date": "2026-09-23",
+        "entry_px": 3.930000066757202,
+        "fee_in": 0.5076,
+        "last_px": 3.7699999809265137,
+        "min_hold": 3,
+        "notional": 47.160000801086426,
+        "peak_px": 3.930000066757202,
+        "reason": "union \u2229 vol_g, no \ud83d\udea8; gate vol=good; list probable,yday_gainer,yday_mover,ohlc_hot; \ud83d\udd35; ret5=+9.6; leftover $48.40",
+        "shares": 12,
+        "ticker": "INDP"
+      },
+      "IVVD": {
+        "close_px": 0.9129999876022339,
+        "cost": 200.52759813079834,
+        "entry_date": "2026-09-22",
+        "entry_px": 1.0099999904632568,
+        "fee_in": 2.5676,
+        "last_px": 0.949999988079071,
+        "min_hold": 3,
+        "notional": 197.95999813079834,
+        "peak_px": 1.0099999904632568,
+        "reason": "union \u2229 vol_g, no \ud83d\udea8; gate vol=good; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+14.3; leftover $198.79",
+        "shares": 196,
+        "ticker": "IVVD"
+      },
+      "MX": {
+        "close_px": 3.180000066757202,
+        "cost": 199.31760413894654,
+        "entry_date": "2026-09-22",
+        "entry_px": 3.180000066757202,
+        "fee_in": 2.1576,
+        "last_px": 3.1700000762939453,
+        "min_hold": 3,
+        "notional": 197.16000413894653,
+        "peak_px": 3.190000057220459,
+        "reason": "union \u2229 vol_g, no \ud83d\udea8; gate vol=good; list yday_gainer,yday_mover; ret5=+11.1; leftover $198.79",
+        "shares": 62,
+        "ticker": "MX"
+      },
+      "NMRA": {
+        "close_px": 0.703000009059906,
+        "cost": 49.056800420570376,
+        "entry_date": "2026-09-23",
+        "entry_px": 0.7680000066757202,
+        "fee_in": 0.6728,
+        "last_px": 0.7459999918937683,
+        "min_hold": 3,
+        "notional": 48.38400042057037,
+        "peak_px": 0.7680000066757202,
+        "reason": "union \u2229 vol_g, no \ud83d\udea8; gate vol=good; list probable,yday_gainer,yday_mover; \ud83d\udd35; ret5=-6.3; leftover $48.40",
+        "shares": 63,
+        "ticker": "NMRA"
+      },
+      "NUAI": {
+        "close_px": 6.940000057220459,
+        "cost": 197.24310051498412,
+        "entry_date": "2026-09-22",
+        "entry_px": 7.230000019073486,
+        "fee_in": 2.0331,
+        "last_px": 6.619999885559082,
+        "min_hold": 3,
+        "notional": 195.21000051498413,
+        "peak_px": 7.230000019073486,
+        "reason": "union \u2229 vol_g, no \ud83d\udea8; gate vol=good; list yday_gainer,yday_mover; ret5=+36.6; leftover $198.79",
+        "shares": 27,
+        "ticker": "NUAI"
+      },
+      "OMER": {
+        "close_px": 20.1299991607666,
+        "cost": 41.718999237060544,
+        "entry_date": "2026-09-23",
+        "entry_px": 20.649999618530273,
+        "fee_in": 0.419,
+        "last_px": 20.520000457763672,
+        "min_hold": 3,
+        "notional": 41.29999923706055,
+        "peak_px": 20.649999618530273,
+        "reason": "union \u2229 vol_g, no \ud83d\udea8; gate vol=good; list flatten,yday_gainer,yday_mover; \ud83d\udd35; \u26aa; ret5=+22.6; leftover $48.40",
+        "shares": 2,
+        "ticker": "OMER"
+      },
+      "TNGX": {
+        "close_px": 24.6299991607666,
+        "cost": 25.656999618530275,
+        "entry_date": "2026-09-23",
+        "entry_px": 25.399999618530273,
+        "fee_in": 0.257,
+        "last_px": 23.989999771118164,
+        "min_hold": 3,
+        "notional": 25.399999618530273,
+        "peak_px": 25.399999618530273,
+        "reason": "union \u2229 vol_g, no \ud83d\udea8; gate vol=good; list probable,yday_gainer,yday_mover; \ud83d\udd35; ret5=+6.9; leftover $48.40",
+        "shares": 1,
+        "ticker": "TNGX"
+      }
+    },
+    "yday_equity": 9223.78
+  }
+}

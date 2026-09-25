@@ -1,0 +1,200 @@
+{
+  "buys": [
+    "BAND",
+    "HALO"
+  ],
+  "cash": 14348.52,
+  "date": "2026-09-23",
+  "equity": 9265.19,
+  "fees": 4.163,
+  "fills": [
+    {
+      "fees": 2.0971969854276478,
+      "pnl": null,
+      "price": 58.01,
+      "shares": 19,
+      "side": "SHORT",
+      "ticker": "BAND"
+    },
+    {
+      "fees": 2.065812328390879,
+      "pnl": null,
+      "price": 116.85,
+      "shares": 9,
+      "side": "SHORT",
+      "ticker": "HALO"
+    }
+  ],
+  "holdings": [],
+  "mean": -0.2041,
+  "n_trades_today": 2,
+  "recipe": "combo_se_5050_split",
+  "sells": [],
+  "state": {
+    "after": "2026-09-23",
+    "cash": 14348.52,
+    "members": [
+      {
+        "cash": 14201.48,
+        "pos": {
+          "AEHL": {
+            "close_px": 8.229999542236328,
+            "cost": 2.5088452064200624,
+            "entry_date": "2026-09-21",
+            "entry_px": 8.260000228881836,
+            "fee_in": 2.5088452064200624,
+            "last_px": 7.619999885559082,
+            "notional": 1239.0000343322754,
+            "peak_px": 7.619999885559082,
+            "reason": "news\ud83d\udd34; gate news=bad; list yday_mover; ret5=+7.7; leftover $1241.43",
+            "shares": 150,
+            "ticker": "AEHL"
+          },
+          "AMD": {
+            "close_px": 614.6099853515625,
+            "cost": 2.0479934249250857,
+            "entry_date": "2026-09-21",
+            "entry_px": 583.8800048828125,
+            "fee_in": 2.0479934249250857,
+            "last_px": 621.5,
+            "notional": 1167.760009765625,
+            "peak_px": 583.8800048828125,
+            "reason": "news\ud83d\udd34; gate news=bad; list ohlc_hot; ret5=+8.5; leftover $1241.43",
+            "shares": 2,
+            "ticker": "AMD"
+          },
+          "BAND": {
+            "close_px": 59.130001068115234,
+            "cost": 2.0971969854276478,
+            "entry_date": "2026-09-23",
+            "entry_px": 58.0099983215332,
+            "fee_in": 2.0971969854276478,
+            "last_px": 58.0099983215332,
+            "notional": 1102.1899681091309,
+            "peak_px": 58.0099983215332,
+            "reason": "news\ud83d\udd34; gate news=bad; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+16.6; leftover $1160.08",
+            "shares": 19,
+            "ticker": "BAND"
+          },
+          "FIVN": {
+            "close_px": 37.68000030517578,
+            "cost": 2.3057364356472068,
+            "entry_date": "2026-09-18",
+            "entry_px": 34.439998626708984,
+            "fee_in": 2.3057364356472068,
+            "last_px": 38.904998779296875,
+            "notional": 2479.679901123047,
+            "peak_px": 33.0,
+            "reason": "news\ud83d\udd34; gate news=bad; list flatten; \ud83d\udd35; \u26aa; ret5=+14.0; leftover $2481.40",
+            "shares": 72,
+            "ticker": "FIVN"
+          },
+          "HALO": {
+            "close_px": 112.44000244140625,
+            "cost": 2.065812328390879,
+            "entry_date": "2026-09-23",
+            "entry_px": 116.8499984741211,
+            "fee_in": 2.065812328390879,
+            "last_px": 116.8499984741211,
+            "notional": 1051.6499862670898,
+            "peak_px": 116.8499984741211,
+            "reason": "news\ud83d\udd34; gate news=bad; list flatten; \ud83d\udd35; \u26aa; ret5=+8.4; leftover $1160.08",
+            "shares": 9,
+            "ticker": "HALO"
+          },
+          "PAYX": {
+            "close_px": 104.48999786376953,
+            "cost": 2.0717013698630136,
+            "entry_date": "2026-09-22",
+            "entry_px": 115.71,
+            "fee_in": 2.0717013698630136,
+            "last_px": 109.66999816894531,
+            "notional": 1157.1,
+            "peak_px": 109.66999816894531,
+            "reason": "news\ud83d\udd34; gate news=bad; list overnight; ret5=-3.0; leftover $1184.90",
+            "shares": 10,
+            "ticker": "PAYX"
+          },
+          "USFD": {
+            "close_px": 93.93000030517578,
+            "cost": 2.0769304109589037,
+            "entry_date": "2026-09-22",
+            "entry_px": 94.08,
+            "fee_in": 2.0769304109589037,
+            "last_px": 93.97000122070312,
+            "notional": 1128.96,
+            "peak_px": 93.97000122070312,
+            "reason": "news\ud83d\udd34; gate news=bad; list flatten; ret5=-0.6; leftover $1184.90",
+            "shares": 12,
+            "ticker": "USFD"
+          }
+        },
+        "yday_equity": 4717.31
+      },
+      {
+        "cash": 147.04,
+        "pos": {
+          "ABVX": {
+            "close_px": 94.12999725341797,
+            "cost": 1132.1629999999998,
+            "entry_date": "2026-09-22",
+            "entry_px": 102.74,
+            "fee_in": 2.023,
+            "last_px": 98.30000305175781,
+            "min_hold": 3,
+            "notional": 1130.1399999999999,
+            "peak_px": 102.74,
+            "reason": "union \u2229 e_fresh, no \ud83d\udea8; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=-8.9; leftover $1195.01",
+            "shares": 11,
+            "ticker": "ABVX"
+          },
+          "ANAB": {
+            "close_px": 50.77000045776367,
+            "cost": 1158.5230000000001,
+            "entry_date": "2026-09-22",
+            "entry_px": 55.07,
+            "fee_in": 2.053,
+            "last_px": 53.54999923706055,
+            "min_hold": 3,
+            "notional": 1156.47,
+            "peak_px": 55.07,
+            "reason": "union \u2229 e_fresh, no \ud83d\udea8; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=+1.5; leftover $1195.01",
+            "shares": 21,
+            "ticker": "ANAB"
+          },
+          "MLKN": {
+            "close_px": 20.040000915527344,
+            "cost": 1179.7810000000002,
+            "entry_date": "2026-09-22",
+            "entry_px": 20.66,
+            "fee_in": 2.161,
+            "last_px": 19.760000228881836,
+            "min_hold": 3,
+            "notional": 1177.6200000000001,
+            "peak_px": 20.66,
+            "reason": "union \u2229 e_fresh, no \ud83d\udea8; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=-4.4; leftover $1195.01",
+            "shares": 57,
+            "ticker": "MLKN"
+          },
+          "THO": {
+            "close_px": 72.30999755859375,
+            "cost": 1162.518,
+            "entry_date": "2026-09-22",
+            "entry_px": 72.53,
+            "fee_in": 2.038,
+            "last_px": 71.41000366210938,
+            "min_hold": 3,
+            "notional": 1160.48,
+            "peak_px": 72.53,
+            "reason": "union \u2229 e_fresh, no \ud83d\udea8; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=-4.8; leftover $1195.01",
+            "shares": 16,
+            "ticker": "THO"
+          }
+        },
+        "yday_equity": 4547.88
+      }
+    ],
+    "pos": {},
+    "yday_equity": 9265.19
+  }
+}

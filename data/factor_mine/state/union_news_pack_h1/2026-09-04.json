@@ -1,0 +1,95 @@
+{
+  "buys": [
+    "CRM",
+    "BE",
+    "MSTR"
+  ],
+  "cash": 381.75,
+  "date": "2026-09-04",
+  "equity": 10064.22,
+  "fees": 6.114,
+  "fills": [
+    {
+      "fees": 2.026,
+      "pnl": null,
+      "price": 263.36,
+      "shares": 12,
+      "side": "BUY",
+      "ticker": "CRM"
+    },
+    {
+      "fees": 2.029,
+      "pnl": null,
+      "price": 236.82,
+      "shares": 13,
+      "side": "BUY",
+      "ticker": "BE"
+    },
+    {
+      "fees": 2.059,
+      "pnl": null,
+      "price": 137.35,
+      "shares": 23,
+      "side": "BUY",
+      "ticker": "MSTR"
+    }
+  ],
+  "holdings": [
+    "BE",
+    "CRM",
+    "MSTR"
+  ],
+  "mean": 2.8442,
+  "n_trades_today": 3,
+  "recipe": "union_news_pack_h1",
+  "sells": [],
+  "state": {
+    "after": "2026-09-04",
+    "cash": 381.75,
+    "pos": {
+      "BE": {
+        "close_px": 252.8699951171875,
+        "cost": 3080.6890952148437,
+        "entry_date": "2026-09-04",
+        "entry_px": 236.82000732421875,
+        "fee_in": 2.029,
+        "last_px": 236.82000732421875,
+        "min_hold": 1,
+        "notional": 3078.6600952148438,
+        "peak_px": 236.82000732421875,
+        "reason": "morning packet news\ud83d\udfe2 only (not the merged box); gate news_box=good; rank cond; list ohlc_hot; ret5=+8.1; leftover $3261.96",
+        "shares": 13,
+        "ticker": "BE"
+      },
+      "CRM": {
+        "close_px": 259.2300109863281,
+        "cost": 3162.34582421875,
+        "entry_date": "2026-09-04",
+        "entry_px": 263.3599853515625,
+        "fee_in": 2.026,
+        "last_px": 263.3599853515625,
+        "min_hold": 1,
+        "notional": 3160.31982421875,
+        "peak_px": 263.3599853515625,
+        "reason": "morning packet news\ud83d\udfe2 only (not the merged box); gate news_box=good; rank cond; list flatten,mover_buy; \ud83d\udd35; \u26aa; ret5=+4.9; leftover $3261.96",
+        "shares": 12,
+        "ticker": "CRM"
+      },
+      "MSTR": {
+        "close_px": 142.8000030517578,
+        "cost": 3161.1091403808596,
+        "entry_date": "2026-09-04",
+        "entry_px": 137.35000610351562,
+        "fee_in": 2.059,
+        "last_px": 137.35000610351562,
+        "min_hold": 1,
+        "notional": 3159.0501403808594,
+        "peak_px": 137.35000610351562,
+        "reason": "morning packet news\ud83d\udfe2 only (not the merged box); gate news_box=good; rank cond; list ohlc_hot; ret5=+5.4; leftover $3261.96",
+        "shares": 23,
+        "ticker": "MSTR"
+      }
+    },
+    "yday_equity": 10064.22
+  }
+}

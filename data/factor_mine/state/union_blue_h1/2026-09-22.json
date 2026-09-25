@@ -1,0 +1,144 @@
+{
+  "buys": [
+    "ARHS",
+    "IVVD"
+  ],
+  "cash": 1.21,
+  "date": "2026-09-22",
+  "equity": 8958.63,
+  "fees": 88.3027,
+  "fills": [
+    {
+      "fees": 2.031,
+      "pnl": 32.43,
+      "price": 163.08,
+      "shares": 7,
+      "side": "SELL",
+      "ticker": "A"
+    },
+    {
+      "fees": 8.2808,
+      "pnl": -35.44,
+      "price": 1.795,
+      "shares": 633,
+      "side": "SELL",
+      "ticker": "BTBT"
+    },
+    {
+      "fees": 3.773,
+      "pnl": -148.61,
+      "price": 3.51,
+      "shares": 288,
+      "side": "SELL",
+      "ticker": "CYPH"
+    },
+    {
+      "fees": 2.049,
+      "pnl": -0.31,
+      "price": 89.12,
+      "shares": 13,
+      "side": "SELL",
+      "ticker": "DXCM"
+    },
+    {
+      "fees": 2.142,
+      "pnl": -4.26,
+      "price": 25.95,
+      "shares": 44,
+      "side": "SELL",
+      "ticker": "GLXY"
+    },
+    {
+      "fees": 2.016,
+      "pnl": -19.57,
+      "price": 378.42,
+      "shares": 2,
+      "side": "SELL",
+      "ticker": "HUM"
+    },
+    {
+      "fees": 2.2691,
+      "pnl": -30.86,
+      "price": 13.16,
+      "shares": 85,
+      "side": "SELL",
+      "ticker": "MGTX"
+    },
+    {
+      "fees": 2.3641,
+      "pnl": -13.9,
+      "price": 9.91,
+      "shares": 115,
+      "side": "SELL",
+      "ticker": "SBET"
+    },
+    {
+      "fees": 6.5403,
+      "pnl": null,
+      "price": 8.9,
+      "shares": 507,
+      "side": "BUY",
+      "ticker": "ARHS"
+    },
+    {
+      "fees": 56.8374,
+      "pnl": null,
+      "price": 1.01,
+      "shares": 4406,
+      "side": "BUY",
+      "ticker": "IVVD"
+    }
+  ],
+  "holdings": [
+    "ARHS",
+    "IVVD"
+  ],
+  "mean": -0.8512,
+  "n_trades_today": 10,
+  "recipe": "union_blue_h1",
+  "sells": [
+    "A",
+    "BTBT",
+    "CYPH",
+    "DXCM",
+    "GLXY",
+    "HUM",
+    "MGTX",
+    "SBET"
+  ],
+  "state": {
+    "after": "2026-09-22",
+    "cash": 1.21,
+    "pos": {
+      "ARHS": {
+        "close_px": 9.29,
+        "cost": 4518.8403,
+        "entry_date": "2026-09-22",
+        "entry_px": 8.9,
+        "fee_in": 6.5403,
+        "last_px": 8.9,
+        "min_hold": 1,
+        "notional": 4512.3,
+        "peak_px": 8.9,
+        "reason": "union \u2229 blue, no \ud83d\udea8; gate blue=True; list probable; \ud83d\udd35; ret5=+7.5; leftover $4513.47",
+        "shares": 507,
+        "ticker": "ARHS"
+      },
+      "IVVD": {
+        "close_px": 0.9639999866485596,
+        "cost": 4506.89735798111,
+        "entry_date": "2026-09-22",
+        "entry_px": 1.0099999904632568,
+        "fee_in": 56.8374,
+        "last_px": 1.0099999904632568,
+        "min_hold": 1,
+        "notional": 4450.05995798111,
+        "peak_px": 1.0099999904632568,
+        "reason": "union \u2229 blue, no \ud83d\udea8; gate blue=True; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+14.3; leftover $4513.47",
+        "shares": 4406,
+        "ticker": "IVVD"
+      }
+    },
+    "yday_equity": 8958.63
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "buys": [],
+  "cash": 9510.19,
+  "date": "2026-09-02",
+  "equity": 9510.19,
+  "fees": 22.8256,
+  "fills": [
+    {
+      "fees": 2.022,
+      "pnl": -61.86,
+      "price": 246.7,
+      "shares": 4,
+      "side": "SELL",
+      "ticker": "ADSK"
+    },
+    {
+      "fees": 2.2343,
+      "pnl": -4.45,
+      "price": 15.01,
+      "shares": 74,
+      "side": "SELL",
+      "ticker": "BBAR"
+    },
+    {
+      "fees": 2.04,
+      "pnl": -122.96,
+      "price": 92.0,
+      "shares": 10,
+      "side": "SELL",
+      "ticker": "ESTC"
+    },
+    {
+      "fees": 2.05,
+      "pnl": 63.86,
+      "price": 26.78,
+      "shares": 20,
+      "side": "COVER",
+      "ticker": "FIG"
+    },
+    {
+      "fees": 3.7861,
+      "pnl": -169.35,
+      "price": 3.32,
+      "shares": 289,
+      "side": "SELL",
+      "ticker": "FINV"
+    },
+    {
+      "fees": 2.085,
+      "pnl": -9.9,
+      "price": 44.17,
+      "shares": 25,
+      "side": "SELL",
+      "ticker": "FRO"
+    },
+    {
+      "fees": 2.145,
+      "pnl": -126.67,
+      "price": 21.97,
+      "shares": 45,
+      "side": "SELL",
+      "ticker": "GAP"
+    },
+    {
+      "fees": 2.4242,
+      "pnl": 26.0,
+      "price": 8.58,
+      "shares": 134,
+      "side": "SELL",
+      "ticker": "HAFN"
+    },
+    {
+      "fees": 2.043,
+      "pnl": -113.52,
+      "price": 89.0,
+      "shares": 11,
+      "side": "SELL",
+      "ticker": "RBRK"
+    },
+    {
+      "fees": 1.996,
+      "pnl": 29.03,
+      "price": 235.71,
+      "shares": 2,
+      "side": "COVER",
+      "ticker": "SIMO"
+    }
+  ],
+  "holdings": [],
+  "mean": -0.2753,
+  "n_trades_today": 10,
+  "recipe": "combo_es_9010_shared",
+  "sells": [
+    "ADSK",
+    "BBAR",
+    "ESTC",
+    "FIG",
+    "FINV",
+    "FRO",
+    "GAP",
+    "HAFN",
+    "RBRK",
+    "SIMO"
+  ],
+  "state": {
+    "after": "2026-09-02",
+    "cash": 9510.19,
+    "pos": {},
+    "yday_equity": 9510.19
+  }
+}

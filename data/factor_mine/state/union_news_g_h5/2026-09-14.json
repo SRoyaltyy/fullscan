@@ -1,0 +1,92 @@
+{
+  "buys": [],
+  "cash": 9343.84,
+  "date": "2026-09-14",
+  "equity": 9419.89,
+  "fees": 21.3369,
+  "fills": [
+    {
+      "fees": 10.8453,
+      "pnl": 69.65,
+      "price": 2.05,
+      "shares": 829,
+      "side": "SELL",
+      "ticker": "BAK"
+    },
+    {
+      "fees": 2.0303,
+      "pnl": 113.41,
+      "price": 256.395,
+      "shares": 6,
+      "side": "SELL",
+      "ticker": "BE"
+    },
+    {
+      "fees": 2.0303,
+      "pnl": -49.7,
+      "price": 255.75,
+      "shares": 6,
+      "side": "SELL",
+      "ticker": "CRM"
+    },
+    {
+      "fees": 2.3115,
+      "pnl": -202.56,
+      "price": 14.38,
+      "shares": 98,
+      "side": "SELL",
+      "ticker": "FRNM"
+    },
+    {
+      "fees": 2.075,
+      "pnl": -88.97,
+      "price": 71.61,
+      "shares": 21,
+      "side": "SELL",
+      "ticker": "MRX"
+    },
+    {
+      "fees": 2.0445,
+      "pnl": -75.02,
+      "price": 130.9,
+      "shares": 11,
+      "side": "SELL",
+      "ticker": "MSTR"
+    }
+  ],
+  "holdings": [
+    "AMTX"
+  ],
+  "mean": -1.5209,
+  "n_trades_today": 6,
+  "recipe": "union_news_g_h5",
+  "sells": [
+    "BAK",
+    "BE",
+    "CRM",
+    "FRNM",
+    "MRX",
+    "MSTR"
+  ],
+  "state": {
+    "after": "2026-09-14",
+    "cash": 9343.84,
+    "pos": {
+      "AMTX": {
+        "close_px": 1.9500000476837158,
+        "cost": 80.47259851226806,
+        "entry_date": "2026-09-11",
+        "entry_px": 2.0399999618530273,
+        "fee_in": 0.9126,
+        "last_px": 2.009999990463257,
+        "min_hold": 5,
+        "notional": 79.55999851226807,
+        "peak_px": 2.0399999618530273,
+        "reason": "union \u2229 news_g hold 5, no \ud83d\udea8; gate news=good; list yday_gainer,yday_mover,ohlc_hot; \ud83d\udd35; ret5=+10.9; leftover $80.09",
+        "shares": 39,
+        "ticker": "AMTX"
+      }
+    },
+    "yday_equity": 9419.89
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "buys": [],
+  "cash": 8741.98,
+  "date": "2026-09-14",
+  "equity": 10004.98,
+  "fees": 22.3923,
+  "fills": [
+    {
+      "fees": 7.6405,
+      "pnl": -56.05,
+      "price": 2.05,
+      "shares": 584,
+      "side": "SELL",
+      "ticker": "BAK"
+    },
+    {
+      "fees": 2.184,
+      "pnl": -6.67,
+      "price": 21.0,
+      "shares": 58,
+      "side": "SELL",
+      "ticker": "GME"
+    },
+    {
+      "fees": 2.061,
+      "pnl": 34.32,
+      "price": 72.14,
+      "shares": 17,
+      "side": "SELL",
+      "ticker": "INSP"
+    },
+    {
+      "fees": 2.2121,
+      "pnl": -5.74,
+      "price": 18.28,
+      "shares": 67,
+      "side": "SELL",
+      "ticker": "PAYP"
+    },
+    {
+      "fees": 2.184,
+      "pnl": -3.19,
+      "price": 21.23,
+      "shares": 58,
+      "side": "SELL",
+      "ticker": "PBR"
+    },
+    {
+      "fees": 4.0347,
+      "pnl": 50.51,
+      "price": 4.21,
+      "shares": 308,
+      "side": "SELL",
+      "ticker": "WTI"
+    },
+    {
+      "fees": 2.076,
+      "pnl": 16.77,
+      "price": 56.06,
+      "shares": 22,
+      "side": "SELL",
+      "ticker": "YPF"
+    }
+  ],
+  "holdings": [
+    "FRO"
+  ],
+  "mean": 0.0189,
+  "n_trades_today": 7,
+  "recipe": "union_clk_mom_break_peer_h1",
+  "sells": [
+    "BAK",
+    "GME",
+    "INSP",
+    "PAYP",
+    "PBR",
+    "WTI",
+    "YPF"
+  ],
+  "state": {
+    "after": "2026-09-14",
+    "cash": 8741.98,
+    "pos": {
+      "FRO": {
+        "close_px": 50.52000045776367,
+        "cost": 1203.3149809265137,
+        "entry_date": "2026-09-11",
+        "entry_px": 48.04999923706055,
+        "fee_in": 2.065,
+        "last_px": 50.25,
+        "min_hold": 1,
+        "notional": 1201.2499809265137,
+        "peak_px": 50.25,
+        "reason": "Clock-B #1 mom+breakout+peer/sector (research; not KEEP); gate clk_mom_break_peer=True; rank hot_score; list ohlc_hot; ret5=+6.6; leftover $1239.42",
+        "shares": 25,
+        "ticker": "FRO"
+      }
+    },
+    "yday_equity": 10004.98
+  }
+}

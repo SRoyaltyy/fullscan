@@ -1,0 +1,83 @@
+{
+  "buys": [
+    "INDP"
+  ],
+  "cash": 15135.93,
+  "date": "2026-09-16",
+  "equity": 10706.13,
+  "fees": 27.0159,
+  "fills": [
+    {
+      "fees": 2.056,
+      "pnl": -16.27,
+      "price": 56.53,
+      "shares": 22,
+      "side": "COVER",
+      "ticker": "CLMT"
+    },
+    {
+      "fees": 2.068,
+      "pnl": -74.13,
+      "price": 51.05,
+      "shares": 26,
+      "side": "COVER",
+      "ticker": "CVI"
+    },
+    {
+      "fees": 2.188,
+      "pnl": -19.61,
+      "price": 19.32,
+      "shares": 66,
+      "side": "COVER",
+      "ticker": "PBR-A"
+    },
+    {
+      "fees": 2.494,
+      "pnl": 10.06,
+      "price": 7.46,
+      "shares": 168,
+      "side": "COVER",
+      "ticker": "UGP"
+    },
+    {
+      "fees": 18.209878085436888,
+      "pnl": null,
+      "price": 3.66,
+      "shares": 1380,
+      "side": "SHORT",
+      "ticker": "INDP"
+    }
+  ],
+  "holdings": [
+    "INDP"
+  ],
+  "mean": 6.5557,
+  "n_trades_today": 5,
+  "recipe": "short_clk_ext_veto_h3",
+  "sells": [
+    "CLMT",
+    "CVI",
+    "PBR-A",
+    "UGP"
+  ],
+  "state": {
+    "after": "2026-09-16",
+    "cash": 15135.93,
+    "pos": {
+      "INDP": {
+        "close_px": 3.2100000381469727,
+        "cost": 18.209878085436888,
+        "entry_date": "2026-09-16",
+        "entry_px": 3.6600000858306885,
+        "fee_in": 18.209878085436888,
+        "last_px": 3.6600000858306885,
+        "notional": 5050.80011844635,
+        "peak_px": 3.6600000858306885,
+        "reason": "Clock-B #5 extreme ext + fade/fail-break as a short; gate clk_ext_veto=True; list yday_gainer,yday_mover; ret5=+96.8; leftover $5051.67",
+        "shares": 1380,
+        "ticker": "INDP"
+      }
+    },
+    "yday_equity": 10706.13
+  }
+}

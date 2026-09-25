@@ -1,0 +1,191 @@
+{
+  "buys": [
+    "SABR",
+    "BULL"
+  ],
+  "cash": 1.19,
+  "date": "2026-09-17",
+  "equity": 9388.38,
+  "fees": 1.2255,
+  "fills": [
+    {
+      "fees": 0.648,
+      "pnl": null,
+      "price": 2.4,
+      "shares": 24,
+      "side": "BUY",
+      "ticker": "SABR"
+    },
+    {
+      "fees": 0.5775,
+      "pnl": null,
+      "price": 7.95,
+      "shares": 7,
+      "side": "BUY",
+      "ticker": "BULL"
+    }
+  ],
+  "holdings": [
+    "ADPT",
+    "AVAH",
+    "BLFS",
+    "BULL",
+    "CAI",
+    "IQV",
+    "RDNT",
+    "SABR",
+    "SDGR",
+    "TEM"
+  ],
+  "mean": 7.027,
+  "n_trades_today": 2,
+  "recipe": "union_white_h5",
+  "sells": [],
+  "state": {
+    "after": "2026-09-17",
+    "cash": 1.19,
+    "pos": {
+      "ADPT": {
+        "close_px": 28.549999237060547,
+        "cost": 1085.7100061035155,
+        "entry_date": "2026-09-16",
+        "entry_px": 27.09000015258789,
+        "fee_in": 2.11,
+        "last_px": 28.229999542236328,
+        "min_hold": 5,
+        "notional": 1083.6000061035156,
+        "peak_px": 28.229999542236328,
+        "reason": "union \u2229 white hold 5, no \ud83d\udea8; gate zero_red=True; list probable,yday_gainer,ohlc_hot; \ud83d\udd35; \u26aa; ret5=+9.6; leftover $1094.64",
+        "shares": 40,
+        "ticker": "ADPT"
+      },
+      "AVAH": {
+        "close_px": 13.970000267028809,
+        "cost": 1089.7780318908692,
+        "entry_date": "2026-09-16",
+        "entry_px": 14.3100004196167,
+        "fee_in": 2.218,
+        "last_px": 14.329999923706055,
+        "min_hold": 5,
+        "notional": 1087.5600318908691,
+        "peak_px": 14.329999923706055,
+        "reason": "union \u2229 white hold 5, no \ud83d\udea8; gate zero_red=True; list flatten; \u26aa; ret5=+4.8; leftover $1094.64",
+        "shares": 76,
+        "ticker": "AVAH"
+      },
+      "BLFS": {
+        "close_px": 36.849998474121094,
+        "cost": 1095.8799725341796,
+        "entry_date": "2026-09-16",
+        "entry_px": 36.459999084472656,
+        "fee_in": 2.08,
+        "last_px": 36.66999816894531,
+        "min_hold": 5,
+        "notional": 1093.7999725341797,
+        "peak_px": 36.66999816894531,
+        "reason": "union \u2229 white hold 5, no \ud83d\udea8; gate zero_red=True; list flatten; \ud83d\udd35; \u26aa; ret5=+2.9; leftover $1094.64",
+        "shares": 30,
+        "ticker": "BLFS"
+      },
+      "BULL": {
+        "close_px": 7.710000038146973,
+        "cost": 56.22749866485596,
+        "entry_date": "2026-09-17",
+        "entry_px": 7.949999809265137,
+        "fee_in": 0.5775,
+        "last_px": 7.949999809265137,
+        "min_hold": 5,
+        "notional": 55.64999866485596,
+        "peak_px": 7.949999809265137,
+        "reason": "union \u2229 white hold 5, no \ud83d\udea8; gate zero_red=True; list yday_mover; \ud83d\udd35; \u26aa; ret5=-18.4; leftover $57.84",
+        "shares": 7,
+        "ticker": "BULL"
+      },
+      "CAI": {
+        "close_px": 30.920000076293945,
+        "cost": 1072.1839942016602,
+        "entry_date": "2026-09-16",
+        "entry_px": 28.15999984741211,
+        "fee_in": 2.104,
+        "last_px": 28.594999313354492,
+        "min_hold": 5,
+        "notional": 1070.0799942016602,
+        "peak_px": 28.594999313354492,
+        "reason": "union \u2229 white hold 5, no \ud83d\udea8; gate zero_red=True; list yday_gainer,ohlc_hot; \u26aa; ret5=+14.8; leftover $1094.64",
+        "shares": 38,
+        "ticker": "CAI"
+      },
+      "IQV": {
+        "close_px": 269.44000244140625,
+        "cost": 1085.56205859375,
+        "entry_date": "2026-09-16",
+        "entry_px": 270.8900146484375,
+        "fee_in": 2.002,
+        "last_px": 273.1499938964844,
+        "min_hold": 5,
+        "notional": 1083.56005859375,
+        "peak_px": 273.1499938964844,
+        "reason": "union \u2229 white hold 5, no \ud83d\udea8; gate zero_red=True; list flatten; \u26aa; ret5=+4.0; leftover $1094.64",
+        "shares": 4,
+        "ticker": "IQV"
+      },
+      "RDNT": {
+        "close_px": 77.77999877929688,
+        "cost": 1081.7120384521484,
+        "entry_date": "2026-09-16",
+        "entry_px": 77.12000274658203,
+        "fee_in": 2.032,
+        "last_px": 76.44000244140625,
+        "min_hold": 5,
+        "notional": 1079.6800384521484,
+        "peak_px": 77.12000274658203,
+        "reason": "union \u2229 white hold 5, no \ud83d\udea8; gate zero_red=True; list flatten; \u26aa; ret5=+7.2; leftover $1094.64",
+        "shares": 14,
+        "ticker": "RDNT"
+      },
+      "SABR": {
+        "close_px": 2.319999933242798,
+        "cost": 58.24800228881836,
+        "entry_date": "2026-09-17",
+        "entry_px": 2.4000000953674316,
+        "fee_in": 0.648,
+        "last_px": 2.4000000953674316,
+        "min_hold": 5,
+        "notional": 57.60000228881836,
+        "peak_px": 2.4000000953674316,
+        "reason": "union \u2229 white hold 5, no \ud83d\udea8; gate zero_red=True; list probable,yday_gainer,yday_mover,ohlc_hot; \ud83d\udd35; \u26aa; ret5=+8.4; leftover $57.84",
+        "shares": 24,
+        "ticker": "SABR"
+      },
+      "SDGR": {
+        "close_px": 30.239999771118164,
+        "cost": 1096.7610430297852,
+        "entry_date": "2026-09-16",
+        "entry_px": 23.290000915527344,
+        "fee_in": 2.131,
+        "last_px": 24.09000015258789,
+        "min_hold": 5,
+        "notional": 1094.6300430297852,
+        "peak_px": 24.09000015258789,
+        "reason": "union \u2229 white hold 5, no \ud83d\udea8; gate zero_red=True; list yday_gainer; \ud83d\udd35; \u26aa; ret5=+16.1; leftover $1094.64",
+        "shares": 47,
+        "ticker": "SDGR"
+      },
+      "TEM": {
+        "close_px": 80.36000061035156,
+        "cost": 1033.8850137329102,
+        "entry_date": "2026-09-16",
+        "entry_px": 68.79000091552734,
+        "fee_in": 2.035,
+        "last_px": 72.69999694824219,
+        "min_hold": 5,
+        "notional": 1031.8500137329102,
+        "peak_px": 72.69999694824219,
+        "reason": "union \u2229 white hold 5, no \ud83d\udea8; gate zero_red=True; list probable,yday_gainer; \ud83d\udd35; \u26aa; ret5=+7.1; leftover $1094.64",
+        "shares": 15,
+        "ticker": "TEM"
+      }
+    },
+    "yday_equity": 9388.38
+  }
+}

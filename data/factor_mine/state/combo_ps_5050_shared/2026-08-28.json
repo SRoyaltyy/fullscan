@@ -1,0 +1,198 @@
+{
+  "buys": [
+    "KEYS",
+    "CIEN",
+    "DDOG",
+    "ADSK",
+    "RRC",
+    "SIMO",
+    "FIG"
+  ],
+  "cash": 10983.58,
+  "date": "2026-08-28",
+  "equity": 10085.53,
+  "fees": 14.4816,
+  "fills": [
+    {
+      "fees": 1.996,
+      "pnl": null,
+      "price": 324.41,
+      "shares": 2,
+      "side": "BUY",
+      "ticker": "KEYS"
+    },
+    {
+      "fees": 1.996,
+      "pnl": null,
+      "price": 400.42,
+      "shares": 2,
+      "side": "BUY",
+      "ticker": "CIEN"
+    },
+    {
+      "fees": 1.999,
+      "pnl": null,
+      "price": 240.22,
+      "shares": 3,
+      "side": "BUY",
+      "ticker": "DDOG"
+    },
+    {
+      "fees": 1.999,
+      "pnl": null,
+      "price": 261.16,
+      "shares": 3,
+      "side": "BUY",
+      "ticker": "ADSK"
+    },
+    {
+      "fees": 2.047,
+      "pnl": null,
+      "price": 41.74,
+      "shares": 19,
+      "side": "BUY",
+      "ticker": "RRC"
+    },
+    {
+      "fees": 2.1073961657380402,
+      "pnl": null,
+      "price": 252.24,
+      "shares": 9,
+      "side": "SHORT",
+      "ticker": "SIMO"
+    },
+    {
+      "fees": 2.3372016445212167,
+      "pnl": null,
+      "price": 30.18,
+      "shares": 82,
+      "side": "SHORT",
+      "ticker": "FIG"
+    }
+  ],
+  "holdings": [
+    "ADSK",
+    "CIEN",
+    "DDOG",
+    "FIG",
+    "KEYS",
+    "RRC",
+    "SIMO"
+  ],
+  "mean": 0.8553,
+  "n_trades_today": 7,
+  "recipe": "combo_ps_5050_shared",
+  "sells": [],
+  "state": {
+    "after": "2026-08-28",
+    "cash": 10983.58,
+    "pos": {
+      "ADSK": {
+        "close_px": 260.6600036621094,
+        "cost": 785.4790109863281,
+        "entry_date": "2026-08-28",
+        "entry_px": 261.1600036621094,
+        "fee_in": 1.999,
+        "last_px": 261.1600036621094,
+        "notional": 783.4800109863281,
+        "owner": "union_news_pack_h1",
+        "peak_px": 261.1600036621094,
+        "reason": "morning packet news\ud83d\udfe2 only (not the merged box); gate news_box=good; rank cond; list earn_react; ret5=+7.8; combo leftover $833.33; owner union_news_pack_h1",
+        "shares": 3,
+        "side": "long",
+        "ticker": "ADSK"
+      },
+      "CIEN": {
+        "close_px": 378.44000244140625,
+        "cost": 802.8360268554687,
+        "entry_date": "2026-08-28",
+        "entry_px": 400.4200134277344,
+        "fee_in": 1.996,
+        "last_px": 400.4200134277344,
+        "notional": 800.8400268554688,
+        "owner": "union_news_pack_h1",
+        "peak_px": 400.4200134277344,
+        "reason": "morning packet news\ud83d\udfe2 only (not the merged box); gate news_box=good; rank cond; list mover_buy; \ud83d\udd35; ret5=+1.9; combo leftover $833.33; owner union_news_pack_h1",
+        "shares": 2,
+        "side": "long",
+        "ticker": "CIEN"
+      },
+      "DDOG": {
+        "close_px": 236.97999572753906,
+        "cost": 722.6590036621094,
+        "entry_date": "2026-08-28",
+        "entry_px": 240.22000122070312,
+        "fee_in": 1.999,
+        "last_px": 240.22000122070312,
+        "notional": 720.6600036621094,
+        "owner": "union_news_pack_h1",
+        "peak_px": 240.22000122070312,
+        "reason": "morning packet news\ud83d\udfe2 only (not the merged box); gate news_box=good; rank cond; list mover_buy; \ud83d\udd35; ret5=+4.5; combo leftover $833.33; owner union_news_pack_h1",
+        "shares": 3,
+        "side": "long",
+        "ticker": "DDOG"
+      },
+      "FIG": {
+        "close_px": 28.81999969482422,
+        "cost": 2.3372016445212167,
+        "entry_date": "2026-08-28",
+        "entry_px": 30.18000030517578,
+        "fee_in": 2.3372016445212167,
+        "last_px": 30.18000030517578,
+        "notional": 2474.760025024414,
+        "owner": "short_news_r_h3",
+        "peak_px": 30.18000030517578,
+        "reason": "news\ud83d\udd34; gate news=bad; list ohlc_hot; ret5=+12.1; combo leftover $2497.49; owner short_news_r_h3",
+        "shares": 82,
+        "side": "short",
+        "ticker": "FIG"
+      },
+      "KEYS": {
+        "close_px": 319.9700012207031,
+        "cost": 650.8160073242187,
+        "entry_date": "2026-08-28",
+        "entry_px": 324.4100036621094,
+        "fee_in": 1.996,
+        "last_px": 324.4100036621094,
+        "notional": 648.8200073242188,
+        "owner": "union_news_pack_h1",
+        "peak_px": 324.4100036621094,
+        "reason": "morning packet news\ud83d\udfe2 only (not the merged box); gate news_box=good; rank cond; list mover_buy; \ud83d\udd35; \u26aa; ret5=+2.9; combo leftover $833.33; owner union_news_pack_h1",
+        "shares": 2,
+        "side": "long",
+        "ticker": "KEYS"
+      },
+      "RRC": {
+        "close_px": 41.459999084472656,
+        "cost": 795.1070318908692,
+        "entry_date": "2026-08-28",
+        "entry_px": 41.7400016784668,
+        "fee_in": 2.047,
+        "last_px": 41.7400016784668,
+        "notional": 793.0600318908691,
+        "owner": "union_news_pack_h1",
+        "peak_px": 41.7400016784668,
+        "reason": "morning packet news\ud83d\udfe2 only (not the merged box); gate news_box=good; rank cond; list flatten; ret5=+2.4; combo leftover $833.33; owner union_news_pack_h1",
+        "shares": 19,
+        "side": "long",
+        "ticker": "RRC"
+      },
+      "SIMO": {
+        "close_px": 245.80999755859375,
+        "cost": 2.1073961657380402,
+        "entry_date": "2026-08-28",
+        "entry_px": 252.24000549316406,
+        "fee_in": 2.1073961657380402,
+        "last_px": 252.24000549316406,
+        "notional": 2270.1600494384766,
+        "owner": "short_news_r_h3",
+        "peak_px": 252.24000549316406,
+        "reason": "news\ud83d\udd34; gate news=bad; list probable,yday_gainer; \u26aa; ret5=+2.2; combo leftover $2497.49; owner short_news_r_h3",
+        "shares": 9,
+        "side": "short",
+        "ticker": "SIMO"
+      }
+    },
+    "yday_equity": 10085.53
+  }
+}

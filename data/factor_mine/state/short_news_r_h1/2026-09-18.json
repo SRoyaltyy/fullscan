@@ -1,0 +1,83 @@
+{
+  "buys": [
+    "FIVN"
+  ],
+  "cash": 14528.16,
+  "date": "2026-09-18",
+  "equity": 9982.36,
+  "fees": 11.7489,
+  "fills": [
+    {
+      "fees": 2.389,
+      "pnl": -362.66,
+      "price": 21.3,
+      "shares": 133,
+      "side": "COVER",
+      "ticker": "BBNX"
+    },
+    {
+      "fees": 2.59,
+      "pnl": 14.73,
+      "price": 7.85,
+      "shares": 200,
+      "side": "COVER",
+      "ticker": "BULL"
+    },
+    {
+      "fees": 2.047,
+      "pnl": 48.09,
+      "price": 78.25,
+      "shares": 19,
+      "side": "COVER",
+      "ticker": "LEN"
+    },
+    {
+      "fees": 2.119,
+      "pnl": -55.47,
+      "price": 37.71,
+      "shares": 43,
+      "side": "COVER",
+      "ticker": "TRMD"
+    },
+    {
+      "fees": 2.6038986248695686,
+      "pnl": null,
+      "price": 34.44,
+      "shares": 140,
+      "side": "SHORT",
+      "ticker": "FIVN"
+    }
+  ],
+  "holdings": [
+    "FIVN"
+  ],
+  "mean": 2.4051,
+  "n_trades_today": 5,
+  "recipe": "short_news_r_h1",
+  "sells": [
+    "BBNX",
+    "BULL",
+    "LEN",
+    "TRMD"
+  ],
+  "state": {
+    "after": "2026-09-18",
+    "cash": 14528.16,
+    "pos": {
+      "FIVN": {
+        "close_px": 32.470001220703125,
+        "cost": 2.6038986248695686,
+        "entry_date": "2026-09-18",
+        "entry_px": 34.439998626708984,
+        "fee_in": 2.6038986248695686,
+        "last_px": 34.439998626708984,
+        "notional": 4821.599807739258,
+        "peak_px": 34.439998626708984,
+        "reason": "news\ud83d\udd34; gate news=bad; list flatten; \ud83d\udd35; \u26aa; ret5=+14.0; leftover $4854.58",
+        "shares": 140,
+        "ticker": "FIVN"
+      }
+    },
+    "yday_equity": 9982.36
+  }
+}

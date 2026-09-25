@@ -1,0 +1,35 @@
+{
+  "buys": [],
+  "cash": 14790.33,
+  "date": "2026-09-01",
+  "equity": 10280.68,
+  "fees": 0,
+  "fills": [],
+  "holdings": [
+    "SIMO"
+  ],
+  "mean": 1.7852,
+  "n_trades_today": 0,
+  "recipe": "short_news_head_h3",
+  "sells": [],
+  "state": {
+    "after": "2026-09-01",
+    "cash": 14790.33,
+    "pos": {
+      "SIMO": {
+        "close_px": 237.35000610351562,
+        "cost": 2.2266030165580855,
+        "entry_date": "2026-08-28",
+        "entry_px": 252.24000549316406,
+        "fee_in": 2.2266030165580855,
+        "last_px": 240.08999633789062,
+        "notional": 4792.560104370117,
+        "peak_px": 240.08999633789062,
+        "reason": "short prior-export headline\ud83d\udd34; gate headline=bad; list probable,yday_gainer; \u26aa; ret5=+2.2; leftover $5000.00",
+        "shares": 19,
+        "ticker": "SIMO"
+      }
+    },
+    "yday_equity": 10280.68
+  }
+}

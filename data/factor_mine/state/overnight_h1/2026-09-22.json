@@ -1,0 +1,171 @@
+{
+  "buys": [
+    "CBRL",
+    "CTAS",
+    "GIS",
+    "KBH",
+    "PAYX"
+  ],
+  "cash": 323.39,
+  "date": "2026-09-22",
+  "equity": 8797.68,
+  "fees": 17.095,
+  "fills": [
+    {
+      "fees": 2.1032,
+      "pnl": -84.63,
+      "price": 102.74,
+      "shares": 27,
+      "side": "SELL",
+      "ticker": "ABVX"
+    },
+    {
+      "fees": 2.4564,
+      "pnl": -31.47,
+      "price": 20.66,
+      "shares": 140,
+      "side": "SELL",
+      "ticker": "MLKN"
+    },
+    {
+      "fees": 2.1504,
+      "pnl": 169.61,
+      "price": 72.53,
+      "shares": 42,
+      "side": "SELL",
+      "ticker": "THO"
+    },
+    {
+      "fees": 2.104,
+      "pnl": null,
+      "price": 45.5,
+      "shares": 38,
+      "side": "BUY",
+      "ticker": "CBRL"
+    },
+    {
+      "fees": 2.014,
+      "pnl": null,
+      "price": 197.05,
+      "shares": 8,
+      "side": "BUY",
+      "ticker": "CTAS"
+    },
+    {
+      "fees": 2.137,
+      "pnl": null,
+      "price": 35.96,
+      "shares": 49,
+      "side": "BUY",
+      "ticker": "GIS"
+    },
+    {
+      "fees": 2.095,
+      "pnl": null,
+      "price": 49.39,
+      "shares": 35,
+      "side": "BUY",
+      "ticker": "KBH"
+    },
+    {
+      "fees": 2.035,
+      "pnl": null,
+      "price": 115.71,
+      "shares": 15,
+      "side": "BUY",
+      "ticker": "PAYX"
+    }
+  ],
+  "holdings": [
+    "CBRL",
+    "CTAS",
+    "GIS",
+    "KBH",
+    "PAYX"
+  ],
+  "mean": 0.7175,
+  "n_trades_today": 8,
+  "recipe": "overnight_h1",
+  "sells": [
+    "ABVX",
+    "MLKN",
+    "THO"
+  ],
+  "state": {
+    "after": "2026-09-22",
+    "cash": 323.39,
+    "pos": {
+      "CBRL": {
+        "close_px": 45.48,
+        "cost": 1731.104,
+        "entry_date": "2026-09-22",
+        "entry_px": 45.5,
+        "fee_in": 2.104,
+        "last_px": 45.5,
+        "min_hold": 1,
+        "notional": 1729.0,
+        "peak_px": 45.5,
+        "reason": "baseline list, no extra gate; list overnight; ret5=-11.2; leftover $1773.10",
+        "shares": 38,
+        "ticker": "CBRL"
+      },
+      "CTAS": {
+        "close_px": 198.8,
+        "cost": 1578.414,
+        "entry_date": "2026-09-22",
+        "entry_px": 197.05,
+        "fee_in": 2.014,
+        "last_px": 197.05,
+        "min_hold": 1,
+        "notional": 1576.4,
+        "peak_px": 197.05,
+        "reason": "baseline list, no extra gate; list overnight,overnight_mega; ret5=-2.0; leftover $1773.10",
+        "shares": 8,
+        "ticker": "CTAS"
+      },
+      "GIS": {
+        "close_px": 35.45000076293945,
+        "cost": 1764.17695513916,
+        "entry_date": "2026-09-22",
+        "entry_px": 35.959999084472656,
+        "fee_in": 2.137,
+        "last_px": 35.959999084472656,
+        "min_hold": 1,
+        "notional": 1762.0399551391602,
+        "peak_px": 35.959999084472656,
+        "reason": "baseline list, no extra gate; list overnight; ret5=-2.9; leftover $1773.10",
+        "shares": 49,
+        "ticker": "GIS"
+      },
+      "KBH": {
+        "close_px": 48.59000015258789,
+        "cost": 1730.7449786376953,
+        "entry_date": "2026-09-22",
+        "entry_px": 49.38999938964844,
+        "fee_in": 2.095,
+        "last_px": 49.38999938964844,
+        "min_hold": 1,
+        "notional": 1728.6499786376953,
+        "peak_px": 49.38999938964844,
+        "reason": "baseline list, no extra gate; list overnight; ret5=-3.4; leftover $1773.10",
+        "shares": 35,
+        "ticker": "KBH"
+      },
+      "PAYX": {
+        "close_px": 114.53,
+        "cost": 1737.685,
+        "entry_date": "2026-09-22",
+        "entry_px": 115.71,
+        "fee_in": 2.035,
+        "last_px": 115.71,
+        "min_hold": 1,
+        "notional": 1735.6499999999999,
+        "peak_px": 115.71,
+        "reason": "baseline list, no extra gate; list overnight; ret5=-3.0; leftover $1773.10",
+        "shares": 15,
+        "ticker": "PAYX"
+      }
+    },
+    "yday_equity": 8797.68
+  }
+}

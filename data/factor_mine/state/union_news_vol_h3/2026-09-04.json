@@ -1,0 +1,71 @@
+{
+  "buys": [
+    "BAK",
+    "FRNM"
+  ],
+  "cash": 5.56,
+  "date": "2026-09-04",
+  "equity": 9505.61,
+  "fees": 36.0039,
+  "fills": [
+    {
+      "fees": 32.2242,
+      "pnl": null,
+      "price": 1.94,
+      "shares": 2498,
+      "side": "BUY",
+      "ticker": "BAK"
+    },
+    {
+      "fees": 3.7797,
+      "pnl": null,
+      "price": 16.4,
+      "shares": 293,
+      "side": "BUY",
+      "ticker": "FRNM"
+    }
+  ],
+  "holdings": [
+    "BAK",
+    "FRNM"
+  ],
+  "mean": -1.932,
+  "n_trades_today": 2,
+  "recipe": "union_news_vol_h3",
+  "sells": [],
+  "state": {
+    "after": "2026-09-04",
+    "cash": 5.56,
+    "pos": {
+      "BAK": {
+        "close_px": 1.8899999856948853,
+        "cost": 4878.344342936706,
+        "entry_date": "2026-09-04",
+        "entry_px": 1.940000057220459,
+        "fee_in": 32.2242,
+        "last_px": 1.940000057220459,
+        "min_hold": 3,
+        "notional": 4846.1201429367065,
+        "peak_px": 1.940000057220459,
+        "reason": "combo gate; gate news=good,vol=good; list yday_gainer,yday_mover; ret5=+18.3; leftover $4846.44",
+        "shares": 2498,
+        "ticker": "BAK"
+      },
+      "FRNM": {
+        "close_px": 16.309999465942383,
+        "cost": 4808.97958822937,
+        "entry_date": "2026-09-04",
+        "entry_px": 16.399999618530273,
+        "fee_in": 3.7797,
+        "last_px": 16.399999618530273,
+        "min_hold": 3,
+        "notional": 4805.19988822937,
+        "peak_px": 16.399999618530273,
+        "reason": "combo gate; gate news=good,vol=good; list mover_buy; \ud83d\udd35; \u26aa; ret5=+21.2; leftover $4846.44",
+        "shares": 293,
+        "ticker": "FRNM"
+      }
+    },
+    "yday_equity": 9505.61
+  }
+}

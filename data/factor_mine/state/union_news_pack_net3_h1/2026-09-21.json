@@ -1,0 +1,30 @@
+{
+  "buys": [],
+  "cash": 7834.29,
+  "date": "2026-09-21",
+  "equity": 7834.29,
+  "fees": 2.1601,
+  "fills": [
+    {
+      "fees": 2.1601,
+      "pnl": -511.13,
+      "price": 231.62,
+      "shares": 33,
+      "side": "SELL",
+      "ticker": "CRWD"
+    }
+  ],
+  "holdings": [],
+  "mean": -2.5033,
+  "n_trades_today": 1,
+  "recipe": "union_news_pack_net3_h1",
+  "sells": [
+    "CRWD"
+  ],
+  "state": {
+    "after": "2026-09-21",
+    "cash": 7834.29,
+    "pos": {},
+    "yday_equity": 7834.29
+  }
+}

@@ -1,0 +1,143 @@
+{
+  "buys": [
+    "CRM",
+    "FRNM",
+    "MRX",
+    "BE",
+    "BAK"
+  ],
+  "cash": 85.69,
+  "date": "2026-09-04",
+  "equity": 9631.73,
+  "fees": 21.1216,
+  "fills": [
+    {
+      "fees": 2.011,
+      "pnl": null,
+      "price": 263.36,
+      "shares": 7,
+      "side": "BUY",
+      "ticker": "CRM"
+    },
+    {
+      "fees": 2.338,
+      "pnl": null,
+      "price": 16.4,
+      "shares": 116,
+      "side": "BUY",
+      "ticker": "FRNM"
+    },
+    {
+      "fees": 2.065,
+      "pnl": null,
+      "price": 75.65,
+      "shares": 25,
+      "side": "BUY",
+      "ticker": "MRX"
+    },
+    {
+      "fees": 2.014,
+      "pnl": null,
+      "price": 236.82,
+      "shares": 8,
+      "side": "BUY",
+      "ticker": "BE"
+    },
+    {
+      "fees": 12.6936,
+      "pnl": null,
+      "price": 1.94,
+      "shares": 984,
+      "side": "BUY",
+      "ticker": "BAK"
+    }
+  ],
+  "holdings": [
+    "BAK",
+    "BE",
+    "CRM",
+    "FRNM",
+    "MRX"
+  ],
+  "mean": 0.8822,
+  "n_trades_today": 5,
+  "recipe": "union_news_or_net3_h3",
+  "sells": [],
+  "state": {
+    "after": "2026-09-04",
+    "cash": 85.69,
+    "pos": {
+      "BAK": {
+        "close_px": 1.8899999856948853,
+        "cost": 1921.6536563049317,
+        "entry_date": "2026-09-04",
+        "entry_px": 1.940000057220459,
+        "fee_in": 12.6936,
+        "last_px": 1.940000057220459,
+        "min_hold": 3,
+        "notional": 1908.9600563049316,
+        "peak_px": 1.940000057220459,
+        "reason": "packet\ud83d\udfe2 OR headline\ud83d\udfe2 and camera net \u2265 3; gate news_or_headline=True,cam_net_min=3; rank cond; list yday_gainer,yday_mover; ret5=+18.3; leftover $1909.50",
+        "shares": 984,
+        "ticker": "BAK"
+      },
+      "BE": {
+        "close_px": 252.8699951171875,
+        "cost": 1896.57405859375,
+        "entry_date": "2026-09-04",
+        "entry_px": 236.82000732421875,
+        "fee_in": 2.014,
+        "last_px": 236.82000732421875,
+        "min_hold": 3,
+        "notional": 1894.56005859375,
+        "peak_px": 236.82000732421875,
+        "reason": "packet\ud83d\udfe2 OR headline\ud83d\udfe2 and camera net \u2265 3; gate news_or_headline=True,cam_net_min=3; rank cond; list ohlc_hot; ret5=+8.1; leftover $1909.50",
+        "shares": 8,
+        "ticker": "BE"
+      },
+      "CRM": {
+        "close_px": 259.2300109863281,
+        "cost": 1845.5308974609375,
+        "entry_date": "2026-09-04",
+        "entry_px": 263.3599853515625,
+        "fee_in": 2.011,
+        "last_px": 263.3599853515625,
+        "min_hold": 3,
+        "notional": 1843.5198974609375,
+        "peak_px": 263.3599853515625,
+        "reason": "packet\ud83d\udfe2 OR headline\ud83d\udfe2 and camera net \u2265 3; gate news_or_headline=True,cam_net_min=3; rank cond; list flatten,mover_buy; \ud83d\udd35; \u26aa; ret5=+4.9; leftover $1909.50",
+        "shares": 7,
+        "ticker": "CRM"
+      },
+      "FRNM": {
+        "close_px": 16.309999465942383,
+        "cost": 1904.7379557495117,
+        "entry_date": "2026-09-04",
+        "entry_px": 16.399999618530273,
+        "fee_in": 2.338,
+        "last_px": 16.399999618530273,
+        "min_hold": 3,
+        "notional": 1902.3999557495117,
+        "peak_px": 16.399999618530273,
+        "reason": "packet\ud83d\udfe2 OR headline\ud83d\udfe2 and camera net \u2265 3; gate news_or_headline=True,cam_net_min=3; rank cond; list mover_buy; \ud83d\udd35; \u26aa; ret5=+21.2; leftover $1909.50",
+        "shares": 116,
+        "ticker": "FRNM"
+      },
+      "MRX": {
+        "close_px": 78.2699966430664,
+        "cost": 1893.3150381469727,
+        "entry_date": "2026-09-04",
+        "entry_px": 75.6500015258789,
+        "fee_in": 2.065,
+        "last_px": 75.6500015258789,
+        "min_hold": 3,
+        "notional": 1891.2500381469727,
+        "peak_px": 75.6500015258789,
+        "reason": "packet\ud83d\udfe2 OR headline\ud83d\udfe2 and camera net \u2265 3; gate news_or_headline=True,cam_net_min=3; rank cond; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+6.0; leftover $1909.50",
+        "shares": 25,
+        "ticker": "MRX"
+      }
+    },
+    "yday_equity": 9631.73
+  }
+}

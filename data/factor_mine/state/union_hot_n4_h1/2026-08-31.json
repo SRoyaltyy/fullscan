@@ -1,0 +1,65 @@
+{
+  "buys": [],
+  "cash": 7368.66,
+  "date": "2026-08-31",
+  "equity": 9894.78,
+  "fees": 7.468,
+  "fills": [
+    {
+      "fees": 2.0711,
+      "pnl": 29.21,
+      "price": 148.03,
+      "shares": 17,
+      "side": "SELL",
+      "ticker": "ANF"
+    },
+    {
+      "fees": 3.3644,
+      "pnl": -65.55,
+      "price": 9.5,
+      "shares": 256,
+      "side": "SELL",
+      "ticker": "CAPR"
+    },
+    {
+      "fees": 2.0325,
+      "pnl": -123.54,
+      "price": 437.95,
+      "shares": 5,
+      "side": "SELL",
+      "ticker": "SNPS"
+    }
+  ],
+  "holdings": [
+    "MRNA"
+  ],
+  "mean": -0.183,
+  "n_trades_today": 3,
+  "recipe": "union_hot_n4_h1",
+  "sells": [
+    "ANF",
+    "CAPR",
+    "SNPS"
+  ],
+  "state": {
+    "after": "2026-08-31",
+    "cash": 7368.66,
+    "pos": {
+      "MRNA": {
+        "close_px": 140.33999633789062,
+        "cost": 2471.4640439453124,
+        "entry_date": "2026-08-28",
+        "entry_px": 137.19000244140625,
+        "fee_in": 2.044,
+        "last_px": 134.10000610351562,
+        "min_hold": 1,
+        "notional": 2469.4200439453125,
+        "peak_px": 137.19000244140625,
+        "reason": "top 4 by hot; rank hot_score; list ohlc_hot; ret5=+7.1; leftover $2500.00",
+        "shares": 18,
+        "ticker": "MRNA"
+      }
+    },
+    "yday_equity": 9894.78
+  }
+}

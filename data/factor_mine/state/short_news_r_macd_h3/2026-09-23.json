@@ -1,0 +1,88 @@
+{
+  "buys": [
+    "BAND"
+  ],
+  "cash": 25551.8,
+  "date": "2026-09-23",
+  "equity": 10084.87,
+  "fees": 2.4441,
+  "fills": [
+    {
+      "fees": 2.444070406958175,
+      "pnl": null,
+      "price": 58.01,
+      "shares": 87,
+      "side": "SHORT",
+      "ticker": "BAND"
+    }
+  ],
+  "holdings": [
+    "AEHL",
+    "AMD",
+    "BAND",
+    "FIVN"
+  ],
+  "mean": -0.8014,
+  "n_trades_today": 1,
+  "recipe": "short_news_r_macd_h3",
+  "sells": [],
+  "state": {
+    "after": "2026-09-23",
+    "cash": 25551.8,
+    "pos": {
+      "AEHL": {
+        "close_px": 8.229999542236328,
+        "cost": 4.141053426601462,
+        "entry_date": "2026-09-21",
+        "entry_px": 8.260000228881836,
+        "fee_in": 4.141053426601462,
+        "last_px": 7.619999885559082,
+        "notional": 2560.600070953369,
+        "peak_px": 7.619999885559082,
+        "reason": "short news\ud83d\udd34 \u2229 prior MACD histogram > 0; gate news=bad,macd_up=True; list yday_mover; ret5=+7.7; leftover $2565.92",
+        "shares": 310,
+        "ticker": "AEHL"
+      },
+      "AMD": {
+        "close_px": 614.6099853515625,
+        "cost": 2.0946868498501714,
+        "entry_date": "2026-09-21",
+        "entry_px": 583.8800048828125,
+        "fee_in": 2.0946868498501714,
+        "last_px": 621.5,
+        "notional": 2335.52001953125,
+        "peak_px": 583.8800048828125,
+        "reason": "short news\ud83d\udd34 \u2229 prior MACD histogram > 0; gate news=bad,macd_up=True; list ohlc_hot; ret5=+8.5; leftover $2565.92",
+        "shares": 4,
+        "ticker": "AMD"
+      },
+      "BAND": {
+        "close_px": 59.130001068115234,
+        "cost": 2.444070406958175,
+        "entry_date": "2026-09-23",
+        "entry_px": 58.0099983215332,
+        "fee_in": 2.444070406958175,
+        "last_px": 58.0099983215332,
+        "notional": 5046.869853973389,
+        "peak_px": 58.0099983215332,
+        "reason": "short news\ud83d\udd34 \u2229 prior MACD histogram > 0; gate news=bad,macd_up=True; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+16.6; leftover $5086.78",
+        "shares": 87,
+        "ticker": "BAND"
+      },
+      "FIVN": {
+        "close_px": 37.68000030517578,
+        "cost": 2.6216950684931506,
+        "entry_date": "2026-09-22",
+        "entry_px": 37.12,
+        "fee_in": 2.6216950684931506,
+        "last_px": 38.904998779296875,
+        "notional": 5233.92,
+        "peak_px": 37.12,
+        "reason": "short news\ud83d\udd34 \u2229 prior MACD histogram > 0; gate news=bad,macd_up=True; list yday_gainer,ohlc_hot; ret5=+16.6; leftover $5242.25",
+        "shares": 141,
+        "ticker": "FIVN"
+      }
+    },
+    "yday_equity": 10084.87
+  }
+}

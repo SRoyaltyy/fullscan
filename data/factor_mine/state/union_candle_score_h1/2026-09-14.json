@@ -1,0 +1,93 @@
+{
+  "buys": [],
+  "cash": 10025.16,
+  "date": "2026-09-14",
+  "equity": 10025.16,
+  "fees": 25.1461,
+  "fills": [
+    {
+      "fees": 3.0154,
+      "pnl": 37.72,
+      "price": 5.57,
+      "shares": 230,
+      "side": "SELL",
+      "ticker": "ANGX"
+    },
+    {
+      "fees": 3.4072,
+      "pnl": 11.44,
+      "price": 4.82,
+      "shares": 260,
+      "side": "SELL",
+      "ticker": "CLOV"
+    },
+    {
+      "fees": 5.1722,
+      "pnl": 139.83,
+      "price": 3.51,
+      "shares": 395,
+      "side": "SELL",
+      "ticker": "CMRC"
+    },
+    {
+      "fees": 2.076,
+      "pnl": -89.05,
+      "price": 52.23,
+      "shares": 22,
+      "side": "SELL",
+      "ticker": "COHU"
+    },
+    {
+      "fees": 2.4179,
+      "pnl": -0.84,
+      "price": 9.35,
+      "shares": 132,
+      "side": "SELL",
+      "ticker": "HAFN"
+    },
+    {
+      "fees": 4.8053,
+      "pnl": 12.48,
+      "price": 3.43,
+      "shares": 367,
+      "side": "SELL",
+      "ticker": "MYGN"
+    },
+    {
+      "fees": 2.2121,
+      "pnl": -5.74,
+      "price": 18.28,
+      "shares": 67,
+      "side": "SELL",
+      "ticker": "PAYP"
+    },
+    {
+      "fees": 2.04,
+      "pnl": 8.69,
+      "price": 114.11,
+      "shares": 10,
+      "side": "SELL",
+      "ticker": "QRVO"
+    }
+  ],
+  "holdings": [],
+  "mean": -1.3709,
+  "n_trades_today": 8,
+  "recipe": "union_candle_score_h1",
+  "sells": [
+    "ANGX",
+    "CLOV",
+    "CMRC",
+    "COHU",
+    "HAFN",
+    "MYGN",
+    "PAYP",
+    "QRVO"
+  ],
+  "state": {
+    "after": "2026-09-14",
+    "cash": 10025.16,
+    "pos": {},
+    "yday_equity": 10025.16
+  }
+}

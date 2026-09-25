@@ -259,7 +259,8 @@ jobs:
         with:
           name: finviz-all-${{ env.DATE }}
           path: |
-            01_daily/news/${{ env.DATE }}_finviz_digest.*
+            01_daily/news/${{ env.DATE }}_finviz_digest.* \
+            01_daily/news/${{ env.DATE }}_finviz_digest_preopen.json
             01_daily/news/${{ env.DATE }}_finviz_all.md
             01_daily/news/latest_finviz_digest.md
             01_daily/map_heat/${{ env.DATE }}_map_heat.*

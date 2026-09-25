@@ -1,0 +1,111 @@
+{
+  "buys": [
+    "TCOM"
+  ],
+  "cash": 35.63,
+  "date": "2026-09-16",
+  "equity": 8566.36,
+  "fees": 17.4954,
+  "fills": [
+    {
+      "fees": 2.0251,
+      "pnl": 51.82,
+      "price": 253.34,
+      "shares": 5,
+      "side": "SELL",
+      "ticker": "ADBE"
+    },
+    {
+      "fees": 2.124,
+      "pnl": -58.95,
+      "price": 30.57,
+      "shares": 38,
+      "side": "SELL",
+      "ticker": "CPRT"
+    },
+    {
+      "fees": 2.0616,
+      "pnl": 104.87,
+      "price": 78.12,
+      "shares": 17,
+      "side": "SELL",
+      "ticker": "DSGX"
+    },
+    {
+      "fees": 2.0769,
+      "pnl": 125.89,
+      "price": 61.93,
+      "shares": 22,
+      "side": "SELL",
+      "ticker": "KR"
+    },
+    {
+      "fees": 2.4179,
+      "pnl": -0.84,
+      "price": 9.4,
+      "shares": 132,
+      "side": "SELL",
+      "ticker": "LPTH"
+    },
+    {
+      "fees": 2.031,
+      "pnl": -174.84,
+      "price": 140.03,
+      "shares": 7,
+      "side": "SELL",
+      "ticker": "ORCL"
+    },
+    {
+      "fees": 2.037,
+      "pnl": -95.49,
+      "price": 125.55,
+      "shares": 9,
+      "side": "SELL",
+      "ticker": "RH"
+    },
+    {
+      "fees": 2.7219,
+      "pnl": null,
+      "price": 40.93,
+      "shares": 211,
+      "side": "BUY",
+      "ticker": "TCOM"
+    }
+  ],
+  "holdings": [
+    "TCOM"
+  ],
+  "mean": -2.052,
+  "n_trades_today": 8,
+  "recipe": "union_earn_react_h3",
+  "sells": [
+    "ADBE",
+    "CPRT",
+    "DSGX",
+    "KR",
+    "LPTH",
+    "ORCL",
+    "RH"
+  ],
+  "state": {
+    "after": "2026-09-16",
+    "cash": 35.63,
+    "pos": {
+      "TCOM": {
+        "close_px": 40.43000030517578,
+        "cost": 8638.95196439209,
+        "entry_date": "2026-09-16",
+        "entry_px": 40.93000030517578,
+        "fee_in": 2.7219,
+        "last_px": 40.93000030517578,
+        "min_hold": 3,
+        "notional": 8636.23006439209,
+        "peak_px": 40.93000030517578,
+        "reason": "union \u2229 earn_react, no \ud83d\udea8; gate earn_react=True; list earn_react; ret5=-3.1; leftover $8674.59",
+        "shares": 211,
+        "ticker": "TCOM"
+      }
+    },
+    "yday_equity": 8566.36
+  }
+}

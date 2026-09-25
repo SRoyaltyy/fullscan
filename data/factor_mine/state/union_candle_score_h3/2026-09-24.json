@@ -1,0 +1,230 @@
+{
+  "buys": [],
+  "cash": 8488.52,
+  "date": "2026-09-24",
+  "equity": 9162.43,
+  "fees": 16.9672,
+  "fills": [
+    {
+      "fees": 2.031,
+      "pnl": 38.52,
+      "price": 163.95,
+      "shares": 7,
+      "side": "SELL",
+      "ticker": "A"
+    },
+    {
+      "fees": 2.046,
+      "pnl": -17.87,
+      "price": 87.68,
+      "shares": 12,
+      "side": "SELL",
+      "ticker": "DXCM"
+    },
+    {
+      "fees": 2.016,
+      "pnl": 1.67,
+      "price": 396.73,
+      "shares": 2,
+      "side": "SELL",
+      "ticker": "ISRG"
+    },
+    {
+      "fees": 2.049,
+      "pnl": -22.15,
+      "price": 82.14,
+      "shares": 13,
+      "side": "SELL",
+      "ticker": "MXL"
+    },
+    {
+      "fees": 2.172,
+      "pnl": -61.02,
+      "price": 20.11,
+      "shares": 54,
+      "side": "SELL",
+      "ticker": "PRAA"
+    },
+    {
+      "fees": 2.4052,
+      "pnl": -22.7,
+      "price": 8.86,
+      "shares": 128,
+      "side": "SELL",
+      "ticker": "QUBT"
+    },
+    {
+      "fees": 2.1,
+      "pnl": -100.48,
+      "price": 34.26,
+      "shares": 30,
+      "side": "SELL",
+      "ticker": "TRMD"
+    },
+    {
+      "fees": 2.148,
+      "pnl": -42.0,
+      "price": 24.11,
+      "shares": 46,
+      "side": "SELL",
+      "ticker": "UMC"
+    }
+  ],
+  "holdings": [
+    "DGXX",
+    "GLBE",
+    "GRPN",
+    "NEOG",
+    "NTSK",
+    "OPTU",
+    "RXRX",
+    "SVIA",
+    "XXI"
+  ],
+  "mean": -1.1878,
+  "n_trades_today": 8,
+  "recipe": "union_candle_score_h3",
+  "sells": [
+    "A",
+    "DXCM",
+    "ISRG",
+    "MXL",
+    "PRAA",
+    "QUBT",
+    "TRMD",
+    "UMC"
+  ],
+  "state": {
+    "after": "2026-09-24",
+    "cash": 8488.52,
+    "pos": {
+      "DGXX": {
+        "close_px": 4.53000020980835,
+        "cost": 95.16760000000001,
+        "entry_date": "2026-09-22",
+        "entry_px": 4.28,
+        "fee_in": 1.0076,
+        "last_px": 4.139999866485596,
+        "min_hold": 3,
+        "notional": 94.16000000000001,
+        "peak_px": 4.300000190734863,
+        "reason": "rank by candle_score; rank candle_score; list ohlc_hot; ret5=+16.9; leftover $96.02",
+        "shares": 22,
+        "ticker": "DGXX"
+      },
+      "GLBE": {
+        "close_px": 40.880001068115234,
+        "cost": 41.96849923706055,
+        "entry_date": "2026-09-23",
+        "entry_px": 41.54999923706055,
+        "fee_in": 0.4185,
+        "last_px": 41.2400016784668,
+        "min_hold": 3,
+        "notional": 41.54999923706055,
+        "peak_px": 41.54999923706055,
+        "reason": "rank by candle_score; rank candle_score; list ohlc_hot; \ud83d\udd35; ret5=+13.9; leftover $42.69",
+        "shares": 1,
+        "ticker": "GLBE"
+      },
+      "GRPN": {
+        "close_px": 20.889999389648438,
+        "cost": 88.6496,
+        "entry_date": "2026-09-22",
+        "entry_px": 21.94,
+        "fee_in": 0.8896,
+        "last_px": 19.899999618530273,
+        "min_hold": 3,
+        "notional": 87.76,
+        "peak_px": 21.94,
+        "reason": "rank by candle_score; rank candle_score; list yday_gainer,yday_mover,ohlc_hot; ret5=+15.4; leftover $96.02",
+        "shares": 4,
+        "ticker": "GRPN"
+      },
+      "NEOG": {
+        "close_px": 13.65999984741211,
+        "cost": 96.24369999999999,
+        "entry_date": "2026-09-22",
+        "entry_px": 13.61,
+        "fee_in": 0.9737,
+        "last_px": 13.479999542236328,
+        "min_hold": 3,
+        "notional": 95.27,
+        "peak_px": 14.210000038146973,
+        "reason": "rank by candle_score; rank candle_score; list ohlc_hot; ret5=+13.9; leftover $96.02",
+        "shares": 7,
+        "ticker": "NEOG"
+      },
+      "NTSK": {
+        "close_px": 18.56999969482422,
+        "cost": 92.07650000000001,
+        "entry_date": "2026-09-22",
+        "entry_px": 18.23,
+        "fee_in": 0.9265,
+        "last_px": 18.389999389648438,
+        "min_hold": 3,
+        "notional": 91.15,
+        "peak_px": 18.575000762939453,
+        "reason": "rank by candle_score; rank candle_score; list ohlc_hot; ret5=+8.2; leftover $96.02",
+        "shares": 5,
+        "ticker": "NTSK"
+      },
+      "OPTU": {
+        "close_px": 1.0399999618530273,
+        "cost": 43.09960018119812,
+        "entry_date": "2026-09-23",
+        "entry_px": 1.1200000047683716,
+        "fee_in": 0.5396,
+        "last_px": 1.0,
+        "min_hold": 3,
+        "notional": 42.56000018119812,
+        "peak_px": 1.1200000047683716,
+        "reason": "rank by candle_score; rank candle_score; list ohlc_hot; ret5=+14.1; leftover $42.69",
+        "shares": 38,
+        "ticker": "OPTU"
+      },
+      "RXRX": {
+        "close_px": 3.890000104904175,
+        "cost": 97.032,
+        "entry_date": "2026-09-22",
+        "entry_px": 4.0,
+        "fee_in": 1.032,
+        "last_px": 3.6500000953674316,
+        "min_hold": 3,
+        "notional": 96.0,
+        "peak_px": 4.03000020980835,
+        "reason": "rank by candle_score; rank candle_score; list ohlc_hot; ret5=+16.4; leftover $96.02",
+        "shares": 24,
+        "ticker": "RXRX"
+      },
+      "SVIA": {
+        "close_px": 3.9600000381469727,
+        "cost": 40.84109794006348,
+        "entry_date": "2026-09-23",
+        "entry_px": 4.489999771118164,
+        "fee_in": 0.4311,
+        "last_px": 3.924999952316284,
+        "min_hold": 3,
+        "notional": 40.40999794006348,
+        "peak_px": 4.489999771118164,
+        "reason": "rank by candle_score; rank candle_score; list yday_gainer,yday_mover; ret5=+26.4; leftover $42.69",
+        "shares": 9,
+        "ticker": "SVIA"
+      },
+      "XXI": {
+        "close_px": 6.630000114440918,
+        "cost": 93.2246,
+        "entry_date": "2026-09-22",
+        "entry_px": 6.59,
+        "fee_in": 0.9646,
+        "last_px": 6.699999809265137,
+        "min_hold": 3,
+        "notional": 92.25999999999999,
+        "peak_px": 6.929999828338623,
+        "reason": "rank by candle_score; rank candle_score; list yday_gainer; ret5=+14.2; leftover $96.02",
+        "shares": 14,
+        "ticker": "XXI"
+      }
+    },
+    "yday_equity": 9162.43
+  }
+}

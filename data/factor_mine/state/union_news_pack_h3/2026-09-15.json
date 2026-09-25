@@ -1,0 +1,51 @@
+{
+  "buys": [],
+  "cash": 160.49,
+  "date": "2026-09-15",
+  "equity": 8987.73,
+  "fees": 0,
+  "fills": [],
+  "holdings": [
+    "ADBE",
+    "ORCL"
+  ],
+  "mean": -2.9509,
+  "n_trades_today": 0,
+  "recipe": "union_news_pack_h3",
+  "sells": [],
+  "state": {
+    "after": "2026-09-15",
+    "cash": 160.49,
+    "pos": {
+      "ADBE": {
+        "close_px": 257.760009765625,
+        "cost": 4603.2769652099605,
+        "entry_date": "2026-09-11",
+        "entry_px": 242.1699981689453,
+        "fee_in": 2.047,
+        "last_px": 261.70001220703125,
+        "min_hold": 3,
+        "notional": 4601.229965209961,
+        "peak_px": 261.70001220703125,
+        "reason": "morning packet news\ud83d\udfe2 only (not the merged box); gate news_box=good; rank cond; list earn_react; \ud83d\udd35; ret5=-12.9; leftover $4684.94",
+        "shares": 19,
+        "ticker": "ADBE"
+      },
+      "ORCL": {
+        "close_px": 140.35000610351562,
+        "cost": 4606.113794921875,
+        "entry_date": "2026-09-11",
+        "entry_px": 164.42999267578125,
+        "fee_in": 2.074,
+        "last_px": 143.4600067138672,
+        "min_hold": 3,
+        "notional": 4604.039794921875,
+        "peak_px": 164.42999267578125,
+        "reason": "morning packet news\ud83d\udfe2 only (not the merged box); gate news_box=good; rank cond; list flatten,earn_react; \ud83d\udd35; \u26aa; ret5=-0.7; leftover $4684.94",
+        "shares": 28,
+        "ticker": "ORCL"
+      }
+    },
+    "yday_equity": 8987.73
+  }
+}

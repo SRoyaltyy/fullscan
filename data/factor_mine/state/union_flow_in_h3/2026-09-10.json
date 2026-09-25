@@ -1,0 +1,84 @@
+{
+  "buys": [],
+  "cash": 9288.47,
+  "date": "2026-09-10",
+  "equity": 9288.47,
+  "fees": 27.1111,
+  "fills": [
+    {
+      "fees": 13.8994,
+      "pnl": -123.28,
+      "price": 1.21,
+      "shares": 1063,
+      "side": "SELL",
+      "ticker": "ADCT"
+    },
+    {
+      "fees": 2.0889,
+      "pnl": 3.12,
+      "price": 52.31,
+      "shares": 26,
+      "side": "SELL",
+      "ticker": "ATRC"
+    },
+    {
+      "fees": 2.0344,
+      "pnl": -2.05,
+      "price": 162.35,
+      "shares": 8,
+      "side": "SELL",
+      "ticker": "CRDO"
+    },
+    {
+      "fees": 2.0703,
+      "pnl": -82.52,
+      "price": 64.6,
+      "shares": 20,
+      "side": "SELL",
+      "ticker": "DOCU"
+    },
+    {
+      "fees": 2.4888,
+      "pnl": 16.62,
+      "price": 9.08,
+      "shares": 154,
+      "side": "SELL",
+      "ticker": "HAFN"
+    },
+    {
+      "fees": 2.3071,
+      "pnl": -138.45,
+      "price": 12.79,
+      "shares": 97,
+      "side": "SELL",
+      "ticker": "WNC"
+    },
+    {
+      "fees": 2.2222,
+      "pnl": -61.12,
+      "price": 18.86,
+      "shares": 70,
+      "side": "SELL",
+      "ticker": "XP"
+    }
+  ],
+  "holdings": [],
+  "mean": -1.5194,
+  "n_trades_today": 7,
+  "recipe": "union_flow_in_h3",
+  "sells": [
+    "ADCT",
+    "ATRC",
+    "CRDO",
+    "DOCU",
+    "HAFN",
+    "WNC",
+    "XP"
+  ],
+  "state": {
+    "after": "2026-09-10",
+    "cash": 9288.47,
+    "pos": {},
+    "yday_equity": 9288.47
+  }
+}

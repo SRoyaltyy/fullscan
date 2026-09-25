@@ -1,0 +1,270 @@
+{
+  "buys": [
+    "GRPN",
+    "FSLY",
+    "FIVN",
+    "INDP",
+    "AMRX",
+    "VNET",
+    "GCTS"
+  ],
+  "cash": 48.36,
+  "date": "2026-09-22",
+  "equity": 10099.52,
+  "fees": 40.1415,
+  "fills": [
+    {
+      "fees": 2.2944,
+      "pnl": -53.39,
+      "price": 12.95,
+      "shares": 93,
+      "side": "SELL",
+      "ticker": "BTDR"
+    },
+    {
+      "fees": 2.028,
+      "pnl": -38.78,
+      "price": 199.4,
+      "shares": 6,
+      "side": "SELL",
+      "ticker": "COIN"
+    },
+    {
+      "fees": 2.13,
+      "pnl": -42.24,
+      "price": 30.5,
+      "shares": 40,
+      "side": "SELL",
+      "ticker": "FTK"
+    },
+    {
+      "fees": 3.9429,
+      "pnl": -60.5,
+      "price": 4.0,
+      "shares": 301,
+      "side": "SELL",
+      "ticker": "KEEL"
+    },
+    {
+      "fees": 2.2849,
+      "pnl": -77.44,
+      "price": 13.13,
+      "shares": 90,
+      "side": "SELL",
+      "ticker": "MARA"
+    },
+    {
+      "fees": 2.031,
+      "pnl": 16.75,
+      "price": 167.55,
+      "shares": 7,
+      "side": "SELL",
+      "ticker": "MSTR"
+    },
+    {
+      "fees": 2.055,
+      "pnl": -20.74,
+      "price": 82.42,
+      "shares": 15,
+      "side": "SELL",
+      "ticker": "MXL"
+    },
+    {
+      "fees": 2.155,
+      "pnl": null,
+      "price": 21.94,
+      "shares": 55,
+      "side": "BUY",
+      "ticker": "GRPN"
+    },
+    {
+      "fees": 2.119,
+      "pnl": null,
+      "price": 28.02,
+      "shares": 43,
+      "side": "BUY",
+      "ticker": "FSLY"
+    },
+    {
+      "fees": 2.086,
+      "pnl": null,
+      "price": 37.12,
+      "shares": 32,
+      "side": "BUY",
+      "ticker": "FIVN"
+    },
+    {
+      "fees": 5.0697,
+      "pnl": null,
+      "price": 3.1,
+      "shares": 393,
+      "side": "BUY",
+      "ticker": "INDP"
+    },
+    {
+      "fees": 2.173,
+      "pnl": null,
+      "price": 20.0,
+      "shares": 61,
+      "side": "BUY",
+      "ticker": "AMRX"
+    },
+    {
+      "fees": 2.497,
+      "pnl": null,
+      "price": 7.18,
+      "shares": 169,
+      "side": "BUY",
+      "ticker": "VNET"
+    },
+    {
+      "fees": 7.2756,
+      "pnl": null,
+      "price": 2.16,
+      "shares": 564,
+      "side": "BUY",
+      "ticker": "GCTS"
+    }
+  ],
+  "holdings": [
+    "AMRX",
+    "FIVN",
+    "FSLY",
+    "FWDI",
+    "GCTS",
+    "GRPN",
+    "INDP",
+    "VNET"
+  ],
+  "mean": 1.6206,
+  "n_trades_today": 14,
+  "recipe": "ohlc_hot_h1",
+  "sells": [
+    "BTDR",
+    "COIN",
+    "FTK",
+    "KEEL",
+    "MARA",
+    "MSTR",
+    "MXL"
+  ],
+  "state": {
+    "after": "2026-09-22",
+    "cash": 48.36,
+    "pos": {
+      "AMRX": {
+        "close_px": 19.5,
+        "cost": 1222.173,
+        "entry_date": "2026-09-22",
+        "entry_px": 20.0,
+        "fee_in": 2.173,
+        "last_px": 20.0,
+        "min_hold": 1,
+        "notional": 1220.0,
+        "peak_px": 20.0,
+        "reason": "baseline list, no extra gate; list ohlc_hot; ret5=+17.1; leftover $1220.16",
+        "shares": 61,
+        "ticker": "AMRX"
+      },
+      "FIVN": {
+        "close_px": 38.65,
+        "cost": 1189.926,
+        "entry_date": "2026-09-22",
+        "entry_px": 37.12,
+        "fee_in": 2.086,
+        "last_px": 37.12,
+        "min_hold": 1,
+        "notional": 1187.84,
+        "peak_px": 37.12,
+        "reason": "baseline list, no extra gate; list yday_gainer,ohlc_hot; ret5=+16.6; leftover $1220.16",
+        "shares": 32,
+        "ticker": "FIVN"
+      },
+      "FSLY": {
+        "close_px": 26.079999923706055,
+        "cost": 1206.9790196838378,
+        "entry_date": "2026-09-22",
+        "entry_px": 28.020000457763672,
+        "fee_in": 2.119,
+        "last_px": 28.020000457763672,
+        "min_hold": 1,
+        "notional": 1204.860019683838,
+        "peak_px": 28.020000457763672,
+        "reason": "baseline list, no extra gate; list yday_gainer,yday_mover,ohlc_hot; ret5=+10.3; leftover $1220.16",
+        "shares": 43,
+        "ticker": "FSLY"
+      },
+      "FWDI": {
+        "close_px": 8.6,
+        "cost": 1260.1090408554078,
+        "entry_date": "2026-09-21",
+        "entry_px": 8.220000267028809,
+        "fee_in": 2.449,
+        "last_px": 8.17,
+        "min_hold": 1,
+        "notional": 1257.6600408554077,
+        "peak_px": 8.220000267028809,
+        "reason": "baseline list, no extra gate; list yday_gainer,yday_mover,ohlc_hot; \ud83d\udd35; ret5=+17.6; leftover $1259.69",
+        "shares": 153,
+        "ticker": "FWDI"
+      },
+      "GCTS": {
+        "close_px": 2.2,
+        "cost": 1225.5156,
+        "entry_date": "2026-09-22",
+        "entry_px": 2.16,
+        "fee_in": 7.2756,
+        "last_px": 2.16,
+        "min_hold": 1,
+        "notional": 1218.24,
+        "peak_px": 2.16,
+        "reason": "baseline list, no extra gate; list ohlc_hot; ret5=+17.1; leftover $1220.16",
+        "shares": 564,
+        "ticker": "GCTS"
+      },
+      "GRPN": {
+        "close_px": 21.28,
+        "cost": 1208.855,
+        "entry_date": "2026-09-22",
+        "entry_px": 21.94,
+        "fee_in": 2.155,
+        "last_px": 21.94,
+        "min_hold": 1,
+        "notional": 1206.7,
+        "peak_px": 21.94,
+        "reason": "baseline list, no extra gate; list yday_gainer,yday_mover,ohlc_hot; ret5=+15.4; leftover $1220.16",
+        "shares": 55,
+        "ticker": "GRPN"
+      },
+      "INDP": {
+        "close_px": 3.990000009536743,
+        "cost": 1223.3696625205994,
+        "entry_date": "2026-09-22",
+        "entry_px": 3.0999999046325684,
+        "fee_in": 5.0697,
+        "last_px": 3.0999999046325684,
+        "min_hold": 1,
+        "notional": 1218.2999625205994,
+        "peak_px": 3.0999999046325684,
+        "reason": "baseline list, no extra gate; list ohlc_hot; ret5=-1.6; leftover $1220.16",
+        "shares": 393,
+        "ticker": "INDP"
+      },
+      "VNET": {
+        "close_px": 7.15,
+        "cost": 1215.917,
+        "entry_date": "2026-09-22",
+        "entry_px": 7.18,
+        "fee_in": 2.497,
+        "last_px": 7.18,
+        "min_hold": 1,
+        "notional": 1213.4199999999998,
+        "peak_px": 7.18,
+        "reason": "baseline list, no extra gate; list ohlc_hot; ret5=+17.5; leftover $1220.16",
+        "shares": 169,
+        "ticker": "VNET"
+      }
+    },
+    "yday_equity": 10099.52
+  }
+}

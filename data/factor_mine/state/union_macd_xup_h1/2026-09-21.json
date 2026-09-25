@@ -1,0 +1,240 @@
+{
+  "buys": [
+    "BTDR",
+    "BTBT",
+    "TJGC",
+    "GEMI",
+    "AMTX",
+    "ABSI"
+  ],
+  "cash": 1504.31,
+  "date": "2026-09-21",
+  "equity": 10518.54,
+  "fees": 61.2145,
+  "fills": [
+    {
+      "fees": 2.04,
+      "pnl": -11.66,
+      "price": 122.24,
+      "shares": 10,
+      "side": "SELL",
+      "ticker": "CROX"
+    },
+    {
+      "fees": 5.4881,
+      "pnl": 393.44,
+      "price": 4.0,
+      "shares": 419,
+      "side": "SELL",
+      "ticker": "CYPH"
+    },
+    {
+      "fees": 2.0281,
+      "pnl": -1.16,
+      "price": 210.0,
+      "shares": 6,
+      "side": "SELL",
+      "ticker": "GNRC"
+    },
+    {
+      "fees": 2.8326,
+      "pnl": 9.5,
+      "price": 5.96,
+      "shares": 216,
+      "side": "SELL",
+      "ticker": "LTRX"
+    },
+    {
+      "fees": 11.1696,
+      "pnl": 114.45,
+      "price": 1.65,
+      "shares": 854,
+      "side": "SELL",
+      "ticker": "LVWR"
+    },
+    {
+      "fees": 2.5034,
+      "pnl": -27.23,
+      "price": 7.84,
+      "shares": 159,
+      "side": "SELL",
+      "ticker": "PGEN"
+    },
+    {
+      "fees": 3.0413,
+      "pnl": -76.79,
+      "price": 5.18,
+      "shares": 232,
+      "side": "SELL",
+      "ticker": "SATL"
+    },
+    {
+      "fees": 2.055,
+      "pnl": -38.89,
+      "price": 79.08,
+      "shares": 15,
+      "side": "SELL",
+      "ticker": "TEM"
+    },
+    {
+      "fees": 2.323,
+      "pnl": null,
+      "price": 13.475,
+      "shares": 111,
+      "side": "BUY",
+      "ticker": "BTDR"
+    },
+    {
+      "fees": 10.6425,
+      "pnl": null,
+      "price": 1.825,
+      "shares": 825,
+      "side": "BUY",
+      "ticker": "BTBT"
+    },
+    {
+      "fees": 2.257,
+      "pnl": null,
+      "price": 16.91,
+      "shares": 89,
+      "side": "BUY",
+      "ticker": "TJGC"
+    },
+    {
+      "fees": 3.3669,
+      "pnl": null,
+      "price": 5.755,
+      "shares": 261,
+      "side": "BUY",
+      "ticker": "GEMI"
+    },
+    {
+      "fees": 9.03,
+      "pnl": null,
+      "price": 2.15,
+      "shares": 700,
+      "side": "BUY",
+      "ticker": "AMTX"
+    },
+    {
+      "fees": 2.437,
+      "pnl": null,
+      "price": 10.06,
+      "shares": 149,
+      "side": "BUY",
+      "ticker": "ABSI"
+    }
+  ],
+  "holdings": [
+    "ABSI",
+    "AMTX",
+    "BTBT",
+    "BTDR",
+    "GEMI",
+    "TJGC"
+  ],
+  "mean": 2.0259,
+  "n_trades_today": 14,
+  "recipe": "union_macd_xup_h1",
+  "sells": [
+    "CROX",
+    "CYPH",
+    "GNRC",
+    "LTRX",
+    "LVWR",
+    "PGEN",
+    "SATL",
+    "TEM"
+  ],
+  "state": {
+    "after": "2026-09-21",
+    "cash": 1504.31,
+    "pos": {
+      "ABSI": {
+        "close_px": 9.819999694824219,
+        "cost": 1501.377062522888,
+        "entry_date": "2026-09-21",
+        "entry_px": 10.0600004196167,
+        "fee_in": 2.437,
+        "last_px": 10.0600004196167,
+        "min_hold": 1,
+        "notional": 1498.9400625228882,
+        "peak_px": 10.0600004196167,
+        "reason": "union \u2229 macd_xup, no \ud83d\udea8; gate macd_cross_up=True; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+17.5; leftover $1506.67",
+        "shares": 149,
+        "ticker": "ABSI"
+      },
+      "AMTX": {
+        "close_px": 2.0899999141693115,
+        "cost": 1514.0300667572021,
+        "entry_date": "2026-09-21",
+        "entry_px": 2.1500000953674316,
+        "fee_in": 9.03,
+        "last_px": 2.1500000953674316,
+        "min_hold": 1,
+        "notional": 1505.0000667572021,
+        "peak_px": 2.1500000953674316,
+        "reason": "union \u2229 macd_xup, no \ud83d\udea8; gate macd_cross_up=True; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+7.5; leftover $1506.67",
+        "shares": 700,
+        "ticker": "AMTX"
+      },
+      "BTBT": {
+        "close_px": 1.8200000524520874,
+        "cost": 1516.2675393390655,
+        "entry_date": "2026-09-21",
+        "entry_px": 1.8250000476837158,
+        "fee_in": 10.6425,
+        "last_px": 1.8250000476837158,
+        "min_hold": 1,
+        "notional": 1505.6250393390656,
+        "peak_px": 1.8250000476837158,
+        "reason": "union \u2229 macd_xup, no \ud83d\udea8; gate macd_cross_up=True; list probable,yday_gainer; \ud83d\udd35; ret5=+8.8; leftover $1506.67",
+        "shares": 825,
+        "ticker": "BTBT"
+      },
+      "BTDR": {
+        "close_px": 13.140000343322754,
+        "cost": 1498.0480423431397,
+        "entry_date": "2026-09-21",
+        "entry_px": 13.475000381469727,
+        "fee_in": 2.323,
+        "last_px": 13.475000381469727,
+        "min_hold": 1,
+        "notional": 1495.7250423431396,
+        "peak_px": 13.475000381469727,
+        "reason": "union \u2229 macd_xup, no \ud83d\udea8; gate macd_cross_up=True; list probable,yday_gainer,yday_mover,ohlc_hot; ret5=+8.4; leftover $1506.67",
+        "shares": 111,
+        "ticker": "BTDR"
+      },
+      "GEMI": {
+        "close_px": 5.989999771118164,
+        "cost": 1505.4219298690796,
+        "entry_date": "2026-09-21",
+        "entry_px": 5.755000114440918,
+        "fee_in": 3.3669,
+        "last_px": 5.755000114440918,
+        "min_hold": 1,
+        "notional": 1502.0550298690796,
+        "peak_px": 5.755000114440918,
+        "reason": "union \u2229 macd_xup, no \ud83d\udea8; gate macd_cross_up=True; list yday_gainer,yday_mover; ret5=+30.3; leftover $1506.67",
+        "shares": 261,
+        "ticker": "GEMI"
+      },
+      "TJGC": {
+        "close_px": 17.579999923706055,
+        "cost": 1507.2469864196778,
+        "entry_date": "2026-09-21",
+        "entry_px": 16.90999984741211,
+        "fee_in": 2.257,
+        "last_px": 16.90999984741211,
+        "min_hold": 1,
+        "notional": 1504.9899864196777,
+        "peak_px": 16.90999984741211,
+        "reason": "union \u2229 macd_xup, no \ud83d\udea8; gate macd_cross_up=True; list yday_gainer,yday_mover; ret5=+50.5; leftover $1506.67",
+        "shares": 89,
+        "ticker": "TJGC"
+      }
+    },
+    "yday_equity": 10518.54
+  }
+}

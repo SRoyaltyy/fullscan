@@ -1,0 +1,93 @@
+{
+  "buys": [],
+  "cash": 9433.66,
+  "date": "2026-09-10",
+  "equity": 9433.66,
+  "fees": 28.67,
+  "fills": [
+    {
+      "fees": 8.333,
+      "pnl": -61.14,
+      "price": 1.83,
+      "shares": 637,
+      "side": "SELL",
+      "ticker": "BMEA"
+    },
+    {
+      "fees": 2.3799,
+      "pnl": -103.13,
+      "price": 9.2,
+      "shares": 120,
+      "side": "SELL",
+      "ticker": "CCOI"
+    },
+    {
+      "fees": 2.022,
+      "pnl": -76.06,
+      "price": 245.35,
+      "shares": 4,
+      "side": "SELL",
+      "ticker": "CRM"
+    },
+    {
+      "fees": 2.2944,
+      "pnl": -86.4,
+      "price": 12.07,
+      "shares": 93,
+      "side": "SELL",
+      "ticker": "FMC"
+    },
+    {
+      "fees": 2.097,
+      "pnl": -11.13,
+      "price": 41.26,
+      "shares": 29,
+      "side": "SELL",
+      "ticker": "HRMY"
+    },
+    {
+      "fees": 3.5012,
+      "pnl": 350.83,
+      "price": 5.87,
+      "shares": 267,
+      "side": "SELL",
+      "ticker": "IRD"
+    },
+    {
+      "fees": 5.0273,
+      "pnl": -228.86,
+      "price": 2.58,
+      "shares": 384,
+      "side": "SELL",
+      "ticker": "SLBT"
+    },
+    {
+      "fees": 3.0152,
+      "pnl": -40.48,
+      "price": 5.1,
+      "shares": 230,
+      "side": "SELL",
+      "ticker": "UAMY"
+    }
+  ],
+  "holdings": [],
+  "mean": -1.0738,
+  "n_trades_today": 8,
+  "recipe": "union_candle_h3",
+  "sells": [
+    "BMEA",
+    "CCOI",
+    "CRM",
+    "FMC",
+    "HRMY",
+    "IRD",
+    "SLBT",
+    "UAMY"
+  ],
+  "state": {
+    "after": "2026-09-10",
+    "cash": 9433.66,
+    "pos": {},
+    "yday_equity": 9433.66
+  }
+}

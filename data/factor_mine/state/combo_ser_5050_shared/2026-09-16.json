@@ -1,0 +1,198 @@
+{
+  "buys": [
+    "TCOM",
+    "BBNX",
+    "GFR"
+  ],
+  "cash": 9505.06,
+  "date": "2026-09-16",
+  "equity": 9119.56,
+  "fees": 42.9493,
+  "fills": [
+    {
+      "fees": 2.016,
+      "pnl": 18.33,
+      "price": 253.34,
+      "shares": 2,
+      "side": "SELL",
+      "ticker": "ADBE"
+    },
+    {
+      "fees": 2.073,
+      "pnl": -34.37,
+      "price": 30.57,
+      "shares": 21,
+      "side": "SELL",
+      "ticker": "CPRT"
+    },
+    {
+      "fees": 7.8174,
+      "pnl": 93.3,
+      "price": 1.85,
+      "shares": 606,
+      "side": "COVER",
+      "ticker": "CRDL"
+    },
+    {
+      "fees": 2.037,
+      "pnl": 53.64,
+      "price": 78.12,
+      "shares": 9,
+      "side": "SELL",
+      "ticker": "DSGX"
+    },
+    {
+      "fees": 2.046,
+      "pnl": 66.85,
+      "price": 61.93,
+      "shares": 12,
+      "side": "SELL",
+      "ticker": "KR"
+    },
+    {
+      "fees": 2.2374,
+      "pnl": -2.2,
+      "price": 9.4,
+      "shares": 75,
+      "side": "SELL",
+      "ticker": "LPTH"
+    },
+    {
+      "fees": 4.7085,
+      "pnl": -148.22,
+      "price": 3.75,
+      "shares": 365,
+      "side": "COVER",
+      "ticker": "MYGN"
+    },
+    {
+      "fees": 2.022,
+      "pnl": -101.62,
+      "price": 140.03,
+      "shares": 4,
+      "side": "SELL",
+      "ticker": "ORCL"
+    },
+    {
+      "fees": 2.02,
+      "pnl": -57.54,
+      "price": 118.18,
+      "shares": 10,
+      "side": "COVER",
+      "ticker": "QRVO"
+    },
+    {
+      "fees": 2.025,
+      "pnl": -54.83,
+      "price": 125.55,
+      "shares": 5,
+      "side": "SELL",
+      "ticker": "RH"
+    },
+    {
+      "fees": 4.5021,
+      "pnl": -169.65,
+      "price": 3.98,
+      "shares": 349,
+      "side": "COVER",
+      "ticker": "RWT"
+    },
+    {
+      "fees": 2.338,
+      "pnl": null,
+      "price": 40.93,
+      "shares": 116,
+      "side": "BUY",
+      "ticker": "TCOM"
+    },
+    {
+      "fees": 2.475752604863415,
+      "pnl": null,
+      "price": 18.61,
+      "shares": 127,
+      "side": "SHORT",
+      "ticker": "BBNX"
+    },
+    {
+      "fees": 4.631118903382184,
+      "pnl": null,
+      "price": 6.83,
+      "shares": 348,
+      "side": "SHORT",
+      "ticker": "GFR"
+    }
+  ],
+  "holdings": [
+    "BBNX",
+    "GFR",
+    "TCOM"
+  ],
+  "mean": -4.6139,
+  "n_trades_today": 14,
+  "recipe": "combo_ser_5050_shared",
+  "sells": [
+    "ADBE",
+    "CPRT",
+    "CRDL",
+    "DSGX",
+    "KR",
+    "LPTH",
+    "MYGN",
+    "ORCL",
+    "QRVO",
+    "RH",
+    "RWT"
+  ],
+  "state": {
+    "after": "2026-09-16",
+    "cash": 9505.06,
+    "pos": {
+      "BBNX": {
+        "close_px": 22.18000030517578,
+        "cost": 2.475752604863415,
+        "entry_date": "2026-09-16",
+        "entry_px": 18.610000610351562,
+        "fee_in": 2.475752604863415,
+        "last_px": 18.610000610351562,
+        "notional": 2363.4700775146484,
+        "owner": "short_news_r_h3",
+        "peak_px": 18.610000610351562,
+        "reason": "news\ud83d\udd34; gate news=bad; list probable,yday_gainer,yday_mover; ret5=-0.5; combo leftover $2379.93; owner short_news_r_h3",
+        "shares": 127,
+        "side": "short",
+        "ticker": "BBNX"
+      },
+      "GFR": {
+        "close_px": 6.489999771118164,
+        "cost": 4.631118903382184,
+        "entry_date": "2026-09-16",
+        "entry_px": 6.829999923706055,
+        "fee_in": 4.631118903382184,
+        "last_px": 6.829999923706055,
+        "notional": 2376.839973449707,
+        "owner": "short_news_r_h3",
+        "peak_px": 6.829999923706055,
+        "reason": "news\ud83d\udd34; gate news=bad; list ohlc_hot; ret5=+11.2; combo leftover $2379.93; owner short_news_r_h3",
+        "shares": 348,
+        "side": "short",
+        "ticker": "GFR"
+      },
+      "TCOM": {
+        "close_px": 40.43000030517578,
+        "cost": 4750.21803540039,
+        "entry_date": "2026-09-16",
+        "entry_px": 40.93000030517578,
+        "fee_in": 2.338,
+        "last_px": 40.93000030517578,
+        "notional": 4747.880035400391,
+        "owner": "union_earn_react_h3",
+        "peak_px": 40.93000030517578,
+        "reason": "union \u2229 earn_react, no \ud83d\udea8; gate earn_react=True; list earn_react; ret5=-3.1; combo leftover $4761.04; owner union_earn_react_h3",
+        "shares": 116,
+        "side": "long",
+        "ticker": "TCOM"
+      }
+    },
+    "yday_equity": 9119.56
+  }
+}

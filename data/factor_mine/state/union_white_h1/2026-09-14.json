@@ -1,0 +1,75 @@
+{
+  "buys": [],
+  "cash": 9310.08,
+  "date": "2026-09-14",
+  "equity": 9310.08,
+  "fees": 13.0743,
+  "fills": [
+    {
+      "fees": 2.1037,
+      "pnl": 126.32,
+      "price": 56.9,
+      "shares": 30,
+      "side": "SELL",
+      "ticker": "BAND"
+    },
+    {
+      "fees": 2.0957,
+      "pnl": -112.25,
+      "price": 52.23,
+      "shares": 28,
+      "side": "SELL",
+      "ticker": "COHU"
+    },
+    {
+      "fees": 2.0372,
+      "pnl": -211.14,
+      "price": 141.42,
+      "shares": 9,
+      "side": "SELL",
+      "ticker": "ORCL"
+    },
+    {
+      "fees": 2.4964,
+      "pnl": -22.11,
+      "price": 10.0,
+      "shares": 156,
+      "side": "SELL",
+      "ticker": "PAGS"
+    },
+    {
+      "fees": 2.2749,
+      "pnl": -6.24,
+      "price": 18.28,
+      "shares": 86,
+      "side": "SELL",
+      "ticker": "PAYP"
+    },
+    {
+      "fees": 2.0664,
+      "pnl": 28.11,
+      "price": 86.06,
+      "shares": 18,
+      "side": "SELL",
+      "ticker": "SWKS"
+    }
+  ],
+  "holdings": [],
+  "mean": -3.1446,
+  "n_trades_today": 6,
+  "recipe": "union_white_h1",
+  "sells": [
+    "BAND",
+    "COHU",
+    "ORCL",
+    "PAGS",
+    "PAYP",
+    "SWKS"
+  ],
+  "state": {
+    "after": "2026-09-14",
+    "cash": 9310.08,
+    "pos": {},
+    "yday_equity": 9310.08
+  }
+}

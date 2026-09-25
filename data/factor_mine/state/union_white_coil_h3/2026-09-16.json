@@ -1,0 +1,243 @@
+{
+  "buys": [
+    "IQV",
+    "AVAH",
+    "BLFS",
+    "TEM",
+    "ILMN",
+    "META",
+    "WST",
+    "NTRA"
+  ],
+  "cash": 1337.57,
+  "date": "2026-09-16",
+  "equity": 8114.77,
+  "fees": 24.7295,
+  "fills": [
+    {
+      "fees": 2.183,
+      "pnl": -217.64,
+      "price": 48.6,
+      "shares": 54,
+      "side": "SELL",
+      "ticker": "BAND"
+    },
+    {
+      "fees": 3.7452,
+      "pnl": -212.62,
+      "price": 9.39,
+      "shares": 285,
+      "side": "SELL",
+      "ticker": "PAGS"
+    },
+    {
+      "fees": 2.5093,
+      "pnl": -94.46,
+      "price": 17.73,
+      "shares": 157,
+      "side": "SELL",
+      "ticker": "PAYP"
+    },
+    {
+      "fees": 1.999,
+      "pnl": null,
+      "price": 270.89,
+      "shares": 3,
+      "side": "BUY",
+      "ticker": "IQV"
+    },
+    {
+      "fees": 2.203,
+      "pnl": null,
+      "price": 14.31,
+      "shares": 71,
+      "side": "BUY",
+      "ticker": "AVAH"
+    },
+    {
+      "fees": 2.071,
+      "pnl": null,
+      "price": 36.46,
+      "shares": 27,
+      "side": "BUY",
+      "ticker": "BLFS"
+    },
+    {
+      "fees": 2.032,
+      "pnl": null,
+      "price": 68.79,
+      "shares": 14,
+      "side": "BUY",
+      "ticker": "TEM"
+    },
+    {
+      "fees": 2.002,
+      "pnl": null,
+      "price": 224.49,
+      "shares": 4,
+      "side": "BUY",
+      "ticker": "ILMN"
+    },
+    {
+      "fees": 1.993,
+      "pnl": null,
+      "price": 679.91,
+      "shares": 1,
+      "side": "BUY",
+      "ticker": "META"
+    },
+    {
+      "fees": 1.996,
+      "pnl": null,
+      "price": 363.11,
+      "shares": 2,
+      "side": "BUY",
+      "ticker": "WST"
+    },
+    {
+      "fees": 1.996,
+      "pnl": null,
+      "price": 350.18,
+      "shares": 2,
+      "side": "BUY",
+      "ticker": "NTRA"
+    }
+  ],
+  "holdings": [
+    "AVAH",
+    "BLFS",
+    "ILMN",
+    "IQV",
+    "META",
+    "NTRA",
+    "TEM",
+    "WST"
+  ],
+  "mean": -2.2612,
+  "n_trades_today": 11,
+  "recipe": "union_white_coil_h3",
+  "sells": [
+    "BAND",
+    "PAGS",
+    "PAYP"
+  ],
+  "state": {
+    "after": "2026-09-16",
+    "cash": 1337.57,
+    "pos": {
+      "AVAH": {
+        "close_px": 14.260000228881836,
+        "cost": 1018.2130297927856,
+        "entry_date": "2026-09-16",
+        "entry_px": 14.3100004196167,
+        "fee_in": 2.203,
+        "last_px": 14.3100004196167,
+        "min_hold": 3,
+        "notional": 1016.0100297927856,
+        "peak_px": 14.3100004196167,
+        "reason": "combo gate; gate zero_red=True,ret_5_max=10.0,rvol_max=2.2; list flatten; \u26aa; ret5=+4.8; leftover $1016.81",
+        "shares": 71,
+        "ticker": "AVAH"
+      },
+      "BLFS": {
+        "close_px": 36.11000061035156,
+        "cost": 986.4909752807617,
+        "entry_date": "2026-09-16",
+        "entry_px": 36.459999084472656,
+        "fee_in": 2.071,
+        "last_px": 36.459999084472656,
+        "min_hold": 3,
+        "notional": 984.4199752807617,
+        "peak_px": 36.459999084472656,
+        "reason": "combo gate; gate zero_red=True,ret_5_max=10.0,rvol_max=2.2; list flatten; \ud83d\udd35; \u26aa; ret5=+2.9; leftover $1016.81",
+        "shares": 27,
+        "ticker": "BLFS"
+      },
+      "ILMN": {
+        "close_px": 228.92999267578125,
+        "cost": 899.9620219726562,
+        "entry_date": "2026-09-16",
+        "entry_px": 224.49000549316406,
+        "fee_in": 2.002,
+        "last_px": 224.49000549316406,
+        "min_hold": 3,
+        "notional": 897.9600219726562,
+        "peak_px": 224.49000549316406,
+        "reason": "combo gate; gate zero_red=True,ret_5_max=10.0,rvol_max=2.2; list yday_gainer; \ud83d\udd35; \u26aa; ret5=+5.3; leftover $1016.81",
+        "shares": 4,
+        "ticker": "ILMN"
+      },
+      "IQV": {
+        "close_px": 268.82000732421875,
+        "cost": 814.6690439453125,
+        "entry_date": "2026-09-16",
+        "entry_px": 270.8900146484375,
+        "fee_in": 1.999,
+        "last_px": 270.8900146484375,
+        "min_hold": 3,
+        "notional": 812.6700439453125,
+        "peak_px": 270.8900146484375,
+        "reason": "combo gate; gate zero_red=True,ret_5_max=10.0,rvol_max=2.2; list flatten; \u26aa; ret5=+4.0; leftover $1016.81",
+        "shares": 3,
+        "ticker": "IQV"
+      },
+      "META": {
+        "close_px": 673.3099975585938,
+        "cost": 681.9029731445313,
+        "entry_date": "2026-09-16",
+        "entry_px": 679.9099731445312,
+        "fee_in": 1.993,
+        "last_px": 679.9099731445312,
+        "min_hold": 3,
+        "notional": 679.9099731445312,
+        "peak_px": 679.9099731445312,
+        "reason": "combo gate; gate zero_red=True,ret_5_max=10.0,rvol_max=2.2; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+9.3; leftover $1016.81",
+        "shares": 1,
+        "ticker": "META"
+      },
+      "NTRA": {
+        "close_px": 345.3399963378906,
+        "cost": 702.3559853515625,
+        "entry_date": "2026-09-16",
+        "entry_px": 350.17999267578125,
+        "fee_in": 1.996,
+        "last_px": 350.17999267578125,
+        "min_hold": 3,
+        "notional": 700.3599853515625,
+        "peak_px": 350.17999267578125,
+        "reason": "combo gate; gate zero_red=True,ret_5_max=10.0,rvol_max=2.2; list ohlc_hot; \u26aa; ret5=+8.2; leftover $1016.81",
+        "shares": 2,
+        "ticker": "NTRA"
+      },
+      "TEM": {
+        "close_px": 69.97000122070312,
+        "cost": 965.0920128173829,
+        "entry_date": "2026-09-16",
+        "entry_px": 68.79000091552734,
+        "fee_in": 2.032,
+        "last_px": 68.79000091552734,
+        "min_hold": 3,
+        "notional": 963.0600128173828,
+        "peak_px": 68.79000091552734,
+        "reason": "combo gate; gate zero_red=True,ret_5_max=10.0,rvol_max=2.2; list probable,yday_gainer; \ud83d\udd35; \u26aa; ret5=+7.1; leftover $1016.81",
+        "shares": 14,
+        "ticker": "TEM"
+      },
+      "WST": {
+        "close_px": 362.010009765625,
+        "cost": 728.215970703125,
+        "entry_date": "2026-09-16",
+        "entry_px": 363.1099853515625,
+        "fee_in": 1.996,
+        "last_px": 363.1099853515625,
+        "min_hold": 3,
+        "notional": 726.219970703125,
+        "peak_px": 363.1099853515625,
+        "reason": "combo gate; gate zero_red=True,ret_5_max=10.0,rvol_max=2.2; list ohlc_hot; \u26aa; ret5=+8.1; leftover $1016.81",
+        "shares": 2,
+        "ticker": "WST"
+      }
+    },
+    "yday_equity": 8114.77
+  }
+}

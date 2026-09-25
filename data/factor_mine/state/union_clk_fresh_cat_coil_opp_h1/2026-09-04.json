@@ -1,0 +1,215 @@
+{
+  "buys": [
+    "ASAN",
+    "MSTR",
+    "CRCL",
+    "DOCU",
+    "GWRE",
+    "BLSH",
+    "ZETA",
+    "BE"
+  ],
+  "cash": 294.75,
+  "date": "2026-09-04",
+  "equity": 9870.55,
+  "fees": 16.7,
+  "fills": [
+    {
+      "fees": 2.407,
+      "pnl": null,
+      "price": 8.74,
+      "shares": 139,
+      "side": "BUY",
+      "ticker": "ASAN"
+    },
+    {
+      "fees": 2.014,
+      "pnl": null,
+      "price": 137.35,
+      "shares": 8,
+      "side": "BUY",
+      "ticker": "MSTR"
+    },
+    {
+      "fees": 2.026,
+      "pnl": null,
+      "price": 97.98,
+      "shares": 12,
+      "side": "BUY",
+      "ticker": "CRCL"
+    },
+    {
+      "fees": 2.041,
+      "pnl": null,
+      "price": 68.52,
+      "shares": 17,
+      "side": "BUY",
+      "ticker": "DOCU"
+    },
+    {
+      "fees": 2.011,
+      "pnl": null,
+      "price": 167.55,
+      "shares": 7,
+      "side": "BUY",
+      "ticker": "GWRE"
+    },
+    {
+      "fees": 2.095,
+      "pnl": null,
+      "price": 34.69,
+      "shares": 35,
+      "side": "BUY",
+      "ticker": "BLSH"
+    },
+    {
+      "fees": 2.101,
+      "pnl": null,
+      "price": 32.65,
+      "shares": 37,
+      "side": "BUY",
+      "ticker": "ZETA"
+    },
+    {
+      "fees": 2.005,
+      "pnl": null,
+      "price": 236.82,
+      "shares": 5,
+      "side": "BUY",
+      "ticker": "BE"
+    }
+  ],
+  "holdings": [
+    "ASAN",
+    "BE",
+    "BLSH",
+    "CRCL",
+    "DOCU",
+    "GWRE",
+    "MSTR",
+    "ZETA"
+  ],
+  "mean": 1.2898,
+  "n_trades_today": 8,
+  "recipe": "union_clk_fresh_cat_coil_opp_h1",
+  "sells": [],
+  "state": {
+    "after": "2026-09-04",
+    "cash": 294.75,
+    "pos": {
+      "ASAN": {
+        "close_px": 8.8100004196167,
+        "cost": 1217.2669681854247,
+        "entry_date": "2026-09-04",
+        "entry_px": 8.739999771118164,
+        "fee_in": 2.407,
+        "last_px": 8.739999771118164,
+        "min_hold": 1,
+        "notional": 1214.8599681854248,
+        "peak_px": 8.739999771118164,
+        "reason": "Clock-B #2 \u2229 Theme Radar T\u22121 oppset; gate clk_fresh_cat_coil=True,oppset=True; rank opp_rvol; list earn_react; \ud83d\udd35; ret5=-0.8; leftover $1218.11",
+        "shares": 139,
+        "ticker": "ASAN"
+      },
+      "BE": {
+        "close_px": 252.8699951171875,
+        "cost": 1186.1050366210939,
+        "entry_date": "2026-09-04",
+        "entry_px": 236.82000732421875,
+        "fee_in": 2.005,
+        "last_px": 236.82000732421875,
+        "min_hold": 1,
+        "notional": 1184.1000366210938,
+        "peak_px": 236.82000732421875,
+        "reason": "Clock-B #2 \u2229 Theme Radar T\u22121 oppset; gate clk_fresh_cat_coil=True,oppset=True; rank opp_rvol; list ohlc_hot; ret5=+8.1; leftover $1218.11",
+        "shares": 5,
+        "ticker": "BE"
+      },
+      "BLSH": {
+        "close_px": 36.0,
+        "cost": 1216.2449519348145,
+        "entry_date": "2026-09-04",
+        "entry_px": 34.689998626708984,
+        "fee_in": 2.095,
+        "last_px": 34.689998626708984,
+        "min_hold": 1,
+        "notional": 1214.1499519348145,
+        "peak_px": 34.689998626708984,
+        "reason": "Clock-B #2 \u2229 Theme Radar T\u22121 oppset; gate clk_fresh_cat_coil=True,oppset=True; rank opp_rvol; list ohlc_hot; \ud83d\udd35; ret5=+7.9; leftover $1218.11",
+        "shares": 35,
+        "ticker": "BLSH"
+      },
+      "CRCL": {
+        "close_px": 102.05000305175781,
+        "cost": 1177.7860402832032,
+        "entry_date": "2026-09-04",
+        "entry_px": 97.9800033569336,
+        "fee_in": 2.026,
+        "last_px": 97.9800033569336,
+        "min_hold": 1,
+        "notional": 1175.7600402832031,
+        "peak_px": 97.9800033569336,
+        "reason": "Clock-B #2 \u2229 Theme Radar T\u22121 oppset; gate clk_fresh_cat_coil=True,oppset=True; rank opp_rvol; list ohlc_hot; \ud83d\udd35; ret5=+9.5; leftover $1218.11",
+        "shares": 12,
+        "ticker": "CRCL"
+      },
+      "DOCU": {
+        "close_px": 68.41000366210938,
+        "cost": 1166.8809429321288,
+        "entry_date": "2026-09-04",
+        "entry_px": 68.5199966430664,
+        "fee_in": 2.041,
+        "last_px": 68.5199966430664,
+        "min_hold": 1,
+        "notional": 1164.839942932129,
+        "peak_px": 68.5199966430664,
+        "reason": "Clock-B #2 \u2229 Theme Radar T\u22121 oppset; gate clk_fresh_cat_coil=True,oppset=True; rank opp_rvol; list earn_react; \ud83d\udd35; ret5=+3.4; leftover $1218.11",
+        "shares": 17,
+        "ticker": "DOCU"
+      },
+      "GWRE": {
+        "close_px": 162.4199981689453,
+        "cost": 1174.8610213623047,
+        "entry_date": "2026-09-04",
+        "entry_px": 167.5500030517578,
+        "fee_in": 2.011,
+        "last_px": 167.5500030517578,
+        "min_hold": 1,
+        "notional": 1172.8500213623047,
+        "peak_px": 167.5500030517578,
+        "reason": "Clock-B #2 \u2229 Theme Radar T\u22121 oppset; gate clk_fresh_cat_coil=True,oppset=True; rank opp_rvol; list earn_react; ret5=+0.9; leftover $1218.11",
+        "shares": 7,
+        "ticker": "GWRE"
+      },
+      "MSTR": {
+        "close_px": 142.8000030517578,
+        "cost": 1100.814048828125,
+        "entry_date": "2026-09-04",
+        "entry_px": 137.35000610351562,
+        "fee_in": 2.014,
+        "last_px": 137.35000610351562,
+        "min_hold": 1,
+        "notional": 1098.800048828125,
+        "peak_px": 137.35000610351562,
+        "reason": "Clock-B #2 \u2229 Theme Radar T\u22121 oppset; gate clk_fresh_cat_coil=True,oppset=True; rank opp_rvol; list ohlc_hot; ret5=+5.4; leftover $1218.11",
+        "shares": 8,
+        "ticker": "MSTR"
+      },
+      "ZETA": {
+        "close_px": 31.350000381469727,
+        "cost": 1210.1510564575196,
+        "entry_date": "2026-09-04",
+        "entry_px": 32.650001525878906,
+        "fee_in": 2.101,
+        "last_px": 32.650001525878906,
+        "min_hold": 1,
+        "notional": 1208.0500564575195,
+        "peak_px": 32.650001525878906,
+        "reason": "Clock-B #2 \u2229 Theme Radar T\u22121 oppset; gate clk_fresh_cat_coil=True,oppset=True; rank opp_rvol; list ohlc_hot; ret5=+8.1; leftover $1218.11",
+        "shares": 37,
+        "ticker": "ZETA"
+      }
+    },
+    "yday_equity": 9870.55
+  }
+}

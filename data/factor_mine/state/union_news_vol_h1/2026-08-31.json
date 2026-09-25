@@ -1,0 +1,92 @@
+{
+  "buys": [],
+  "cash": 8237.17,
+  "date": "2026-08-31",
+  "equity": 9626.17,
+  "fees": 13.2788,
+  "fills": [
+    {
+      "fees": 2.2423,
+      "pnl": 33.54,
+      "price": 19.25,
+      "shares": 76,
+      "side": "SELL",
+      "ticker": "BBWI"
+    },
+    {
+      "fees": 2.4633,
+      "pnl": -38.47,
+      "price": 9.5,
+      "shares": 146,
+      "side": "SELL",
+      "ticker": "CAPR"
+    },
+    {
+      "fees": 2.2349,
+      "pnl": -106.57,
+      "price": 17.87,
+      "shares": 74,
+      "side": "SELL",
+      "ticker": "ERAS"
+    },
+    {
+      "fees": 2.1397,
+      "pnl": -79.51,
+      "price": 31.15,
+      "shares": 43,
+      "side": "SELL",
+      "ticker": "SEDG"
+    },
+    {
+      "fees": 2.0406,
+      "pnl": -98.66,
+      "price": 132.3,
+      "shares": 10,
+      "side": "SELL",
+      "ticker": "SMTC"
+    },
+    {
+      "fees": 2.158,
+      "pnl": -45.95,
+      "price": 28.06,
+      "shares": 49,
+      "side": "SELL",
+      "ticker": "ZYME"
+    }
+  ],
+  "holdings": [
+    "TH"
+  ],
+  "mean": -0.5003,
+  "n_trades_today": 6,
+  "recipe": "union_news_vol_h1",
+  "sells": [
+    "BBWI",
+    "CAPR",
+    "ERAS",
+    "SEDG",
+    "SMTC",
+    "ZYME"
+  ],
+  "state": {
+    "after": "2026-08-31",
+    "cash": 8237.17,
+    "pos": {
+      "TH": {
+        "close_px": 18.520000457763672,
+        "cost": 1427.215,
+        "entry_date": "2026-08-28",
+        "entry_px": 19.0,
+        "fee_in": 2.215,
+        "last_px": 18.125,
+        "min_hold": 1,
+        "notional": 1425.0,
+        "peak_px": 19.0,
+        "reason": "combo gate; gate news=good,vol=good; list ohlc_hot; ret5=+7.5; leftover $1428.57",
+        "shares": 75,
+        "ticker": "TH"
+      }
+    },
+    "yday_equity": 9626.17
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "buys": [
+    "MRNA",
+    "TH",
+    "FSM"
+  ],
+  "cash": 48.96,
+  "date": "2026-08-28",
+  "equity": 9782.31,
+  "fees": 7.9181,
+  "fills": [
+    {
+      "fees": 2.062,
+      "pnl": null,
+      "price": 137.19,
+      "shares": 24,
+      "side": "BUY",
+      "ticker": "MRNA"
+    },
+    {
+      "fees": 2.515,
+      "pnl": null,
+      "price": 19.0,
+      "shares": 175,
+      "side": "BUY",
+      "ticker": "TH"
+    },
+    {
+      "fees": 3.3411,
+      "pnl": null,
+      "price": 12.84,
+      "shares": 259,
+      "side": "BUY",
+      "ticker": "FSM"
+    }
+  ],
+  "holdings": [
+    "FSM",
+    "MRNA",
+    "TH"
+  ],
+  "mean": -2.1769,
+  "n_trades_today": 3,
+  "recipe": "ohlc_hot_coil_h1",
+  "sells": [],
+  "state": {
+    "after": "2026-08-28",
+    "cash": 48.96,
+    "pos": {
+      "FSM": {
+        "close_px": 12.260000228881836,
+        "cost": 3328.9011395202638,
+        "entry_date": "2026-08-28",
+        "entry_px": 12.84000015258789,
+        "fee_in": 3.3411,
+        "last_px": 12.84000015258789,
+        "min_hold": 1,
+        "notional": 3325.5600395202637,
+        "peak_px": 12.84000015258789,
+        "reason": "hot list \u2229 not exploded; gate ret_5_min=0.0,ret_5_max=10.0,rvol_max=2.2; list ohlc_hot; ret5=+7.6; leftover $3333.33",
+        "shares": 259,
+        "ticker": "FSM"
+      },
+      "MRNA": {
+        "close_px": 137.99000549316406,
+        "cost": 3294.62205859375,
+        "entry_date": "2026-08-28",
+        "entry_px": 137.19000244140625,
+        "fee_in": 2.062,
+        "last_px": 137.19000244140625,
+        "min_hold": 1,
+        "notional": 3292.56005859375,
+        "peak_px": 137.19000244140625,
+        "reason": "hot list \u2229 not exploded; gate ret_5_min=0.0,ret_5_max=10.0,rvol_max=2.2; list ohlc_hot; ret5=+7.1; leftover $3333.33",
+        "shares": 24,
+        "ticker": "MRNA"
+      },
+      "TH": {
+        "close_px": 18.549999237060547,
+        "cost": 3327.515,
+        "entry_date": "2026-08-28",
+        "entry_px": 19.0,
+        "fee_in": 2.515,
+        "last_px": 19.0,
+        "min_hold": 1,
+        "notional": 3325.0,
+        "peak_px": 19.0,
+        "reason": "hot list \u2229 not exploded; gate ret_5_min=0.0,ret_5_max=10.0,rvol_max=2.2; list ohlc_hot; ret5=+7.5; leftover $3333.33",
+        "shares": 175,
+        "ticker": "TH"
+      }
+    },
+    "yday_equity": 9782.31
+  }
+}

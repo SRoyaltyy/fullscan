@@ -1,0 +1,288 @@
+{
+  "buys": [
+    "BHVN",
+    "DDD",
+    "RANI",
+    "SHLS",
+    "XE",
+    "HELP",
+    "INTC",
+    "AMD"
+  ],
+  "cash": 178.14,
+  "date": "2026-09-18",
+  "equity": 9591.34,
+  "fees": 68.5721,
+  "fills": [
+    {
+      "fees": 10.9332,
+      "pnl": -63.52,
+      "price": 1.41,
+      "shares": 836,
+      "side": "SELL",
+      "ticker": "AIB"
+    },
+    {
+      "fees": 2.3453,
+      "pnl": 51.47,
+      "price": 11.705,
+      "shares": 109,
+      "side": "SELL",
+      "ticker": "BYND"
+    },
+    {
+      "fees": 2.028,
+      "pnl": -9.74,
+      "price": 195.55,
+      "shares": 6,
+      "side": "SELL",
+      "ticker": "FTAI"
+    },
+    {
+      "fees": 2.5068,
+      "pnl": 57.42,
+      "price": 7.98,
+      "shares": 160,
+      "side": "SELL",
+      "ticker": "PGEN"
+    },
+    {
+      "fees": 5.4327,
+      "pnl": 63.91,
+      "price": 3.12,
+      "shares": 415,
+      "side": "SELL",
+      "ticker": "QTRX"
+    },
+    {
+      "fees": 6.6475,
+      "pnl": -69.08,
+      "price": 2.29,
+      "shares": 508,
+      "side": "SELL",
+      "ticker": "SABR"
+    },
+    {
+      "fees": 2.2849,
+      "pnl": 12.56,
+      "price": 13.74,
+      "shares": 90,
+      "side": "SELL",
+      "ticker": "SFL"
+    },
+    {
+      "fees": 2.0312,
+      "pnl": 76.32,
+      "price": 182.33,
+      "shares": 7,
+      "side": "SELL",
+      "ticker": "SMTC"
+    },
+    {
+      "fees": 2.251,
+      "pnl": null,
+      "price": 14.07,
+      "shares": 87,
+      "side": "BUY",
+      "ticker": "BHVN"
+    },
+    {
+      "fees": 4.4505,
+      "pnl": null,
+      "price": 3.58,
+      "shares": 345,
+      "side": "BUY",
+      "ticker": "DDD"
+    },
+    {
+      "fees": 16.721,
+      "pnl": null,
+      "price": 0.85,
+      "shares": 1454,
+      "side": "BUY",
+      "ticker": "RANI"
+    },
+    {
+      "fees": 2.473,
+      "pnl": null,
+      "price": 7.64,
+      "shares": 161,
+      "side": "BUY",
+      "ticker": "SHLS"
+    },
+    {
+      "fees": 2.215,
+      "pnl": null,
+      "price": 16.28,
+      "shares": 75,
+      "side": "BUY",
+      "ticker": "XE"
+    },
+    {
+      "fees": 2.233,
+      "pnl": null,
+      "price": 15.15,
+      "shares": 81,
+      "side": "BUY",
+      "ticker": "HELP"
+    },
+    {
+      "fees": 2.023,
+      "pnl": null,
+      "price": 109.8,
+      "shares": 11,
+      "side": "BUY",
+      "ticker": "INTC"
+    },
+    {
+      "fees": 1.996,
+      "pnl": null,
+      "price": 547.37,
+      "shares": 2,
+      "side": "BUY",
+      "ticker": "AMD"
+    }
+  ],
+  "holdings": [
+    "AMD",
+    "BHVN",
+    "DDD",
+    "HELP",
+    "INTC",
+    "RANI",
+    "SHLS",
+    "XE"
+  ],
+  "mean": -2.9247,
+  "n_trades_today": 16,
+  "recipe": "union_coil_green_h1",
+  "sells": [
+    "AIB",
+    "BYND",
+    "FTAI",
+    "PGEN",
+    "QTRX",
+    "SABR",
+    "SFL",
+    "SMTC"
+  ],
+  "state": {
+    "after": "2026-09-18",
+    "cash": 178.14,
+    "pos": {
+      "AMD": {
+        "close_px": 559.8200073242188,
+        "cost": 1096.735990234375,
+        "entry_date": "2026-09-18",
+        "entry_px": 547.3699951171875,
+        "fee_in": 1.996,
+        "last_px": 547.3699951171875,
+        "min_hold": 1,
+        "notional": 1094.739990234375,
+        "peak_px": 547.3699951171875,
+        "reason": "combo gate; gate last_green=True,ret_5_min=0.0,ret_5_max=10.0,rvol_min=0.7,rvol_max=2.2; list ohlc_hot; ret5=+8.2; leftover $1236.04",
+        "shares": 2,
+        "ticker": "AMD"
+      },
+      "BHVN": {
+        "close_px": 13.619999885559082,
+        "cost": 1226.340973449707,
+        "entry_date": "2026-09-18",
+        "entry_px": 14.069999694824219,
+        "fee_in": 2.251,
+        "last_px": 14.069999694824219,
+        "min_hold": 1,
+        "notional": 1224.089973449707,
+        "peak_px": 14.069999694824219,
+        "reason": "combo gate; gate last_green=True,ret_5_min=0.0,ret_5_max=10.0,rvol_min=0.7,rvol_max=2.2; list probable,yday_gainer,yday_mover; \ud83d\udd35; ret5=+8.6; leftover $1236.04",
+        "shares": 87,
+        "ticker": "BHVN"
+      },
+      "DDD": {
+        "close_px": 3.630000114440918,
+        "cost": 1239.5504736785888,
+        "entry_date": "2026-09-18",
+        "entry_px": 3.5799999237060547,
+        "fee_in": 4.4505,
+        "last_px": 3.5799999237060547,
+        "min_hold": 1,
+        "notional": 1235.0999736785889,
+        "peak_px": 3.5799999237060547,
+        "reason": "combo gate; gate last_green=True,ret_5_min=0.0,ret_5_max=10.0,rvol_min=0.7,rvol_max=2.2; list probable,yday_gainer; \ud83d\udd35; ret5=+8.3; leftover $1236.04",
+        "shares": 345,
+        "ticker": "DDD"
+      },
+      "HELP": {
+        "close_px": 12.369999885559082,
+        "cost": 1229.382969100952,
+        "entry_date": "2026-09-18",
+        "entry_px": 15.149999618530273,
+        "fee_in": 2.233,
+        "last_px": 15.149999618530273,
+        "min_hold": 1,
+        "notional": 1227.1499691009521,
+        "peak_px": 15.149999618530273,
+        "reason": "combo gate; gate last_green=True,ret_5_min=0.0,ret_5_max=10.0,rvol_min=0.7,rvol_max=2.2; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+9.2; leftover $1236.04",
+        "shares": 81,
+        "ticker": "HELP"
+      },
+      "INTC": {
+        "close_px": 108.5999984741211,
+        "cost": 1209.8230335693358,
+        "entry_date": "2026-09-18",
+        "entry_px": 109.80000305175781,
+        "fee_in": 2.023,
+        "last_px": 109.80000305175781,
+        "min_hold": 1,
+        "notional": 1207.800033569336,
+        "peak_px": 109.80000305175781,
+        "reason": "combo gate; gate last_green=True,ret_5_min=0.0,ret_5_max=10.0,rvol_min=0.7,rvol_max=2.2; list ohlc_hot; \ud83d\udd35; ret5=+8.5; leftover $1236.04",
+        "shares": 11,
+        "ticker": "INTC"
+      },
+      "RANI": {
+        "close_px": 0.8619999885559082,
+        "cost": 1252.6210346660614,
+        "entry_date": "2026-09-18",
+        "entry_px": 0.8500000238418579,
+        "fee_in": 16.721,
+        "last_px": 0.8500000238418579,
+        "min_hold": 1,
+        "notional": 1235.9000346660614,
+        "peak_px": 0.8500000238418579,
+        "reason": "combo gate; gate last_green=True,ret_5_min=0.0,ret_5_max=10.0,rvol_min=0.7,rvol_max=2.2; list probable,yday_gainer; ret5=+3.6; leftover $1236.04",
+        "shares": 1454,
+        "ticker": "RANI"
+      },
+      "SHLS": {
+        "close_px": 7.599999904632568,
+        "cost": 1232.5129785041809,
+        "entry_date": "2026-09-18",
+        "entry_px": 7.639999866485596,
+        "fee_in": 2.473,
+        "last_px": 7.639999866485596,
+        "min_hold": 1,
+        "notional": 1230.039978504181,
+        "peak_px": 7.639999866485596,
+        "reason": "combo gate; gate last_green=True,ret_5_min=0.0,ret_5_max=10.0,rvol_min=0.7,rvol_max=2.2; list probable,yday_gainer; \ud83d\udd35; ret5=+7.6; leftover $1236.04",
+        "shares": 161,
+        "ticker": "SHLS"
+      },
+      "XE": {
+        "close_px": 15.770000457763672,
+        "cost": 1223.215051498413,
+        "entry_date": "2026-09-18",
+        "entry_px": 16.280000686645508,
+        "fee_in": 2.215,
+        "last_px": 16.280000686645508,
+        "min_hold": 1,
+        "notional": 1221.000051498413,
+        "peak_px": 16.280000686645508,
+        "reason": "combo gate; gate last_green=True,ret_5_min=0.0,ret_5_max=10.0,rvol_min=0.7,rvol_max=2.2; list yday_gainer; \ud83d\udd35; ret5=+3.1; leftover $1236.04",
+        "shares": 75,
+        "ticker": "XE"
+      }
+    },
+    "yday_equity": 9591.34
+  }
+}

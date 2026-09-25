@@ -1,0 +1,288 @@
+{
+  "buys": [
+    "DXCM",
+    "A",
+    "OMER",
+    "INDP",
+    "TNGX",
+    "NMRA",
+    "TTAN",
+    "VKTX"
+  ],
+  "cash": 143.38,
+  "date": "2026-09-23",
+  "equity": 8448.74,
+  "fees": 71.9942,
+  "fills": [
+    {
+      "fees": 2.8192,
+      "pnl": -46.44,
+      "price": 4.89,
+      "shares": 215,
+      "side": "SELL",
+      "ticker": "AIBZ"
+    },
+    {
+      "fees": 2.019,
+      "pnl": 33.09,
+      "price": 331.78,
+      "shares": 3,
+      "side": "SELL",
+      "ticker": "ARM"
+    },
+    {
+      "fees": 13.5072,
+      "pnl": 117.79,
+      "price": 1.2,
+      "shares": 1033,
+      "side": "SELL",
+      "ticker": "EU"
+    },
+    {
+      "fees": 2.04,
+      "pnl": 13.64,
+      "price": 108.52,
+      "shares": 10,
+      "side": "SELL",
+      "ticker": "GRAL"
+    },
+    {
+      "fees": 2.157,
+      "pnl": -36.14,
+      "price": 21.29,
+      "shares": 49,
+      "side": "SELL",
+      "ticker": "GRPN"
+    },
+    {
+      "fees": 2.2469,
+      "pnl": -36.45,
+      "price": 13.6,
+      "shares": 78,
+      "side": "SELL",
+      "ticker": "HELP"
+    },
+    {
+      "fees": 13.7399,
+      "pnl": -92.76,
+      "price": 0.95,
+      "shares": 1084,
+      "side": "SELL",
+      "ticker": "IVVD"
+    },
+    {
+      "fees": 2.4781,
+      "pnl": -65.32,
+      "price": 6.83,
+      "shares": 151,
+      "side": "SELL",
+      "ticker": "NUAI"
+    },
+    {
+      "fees": 2.026,
+      "pnl": null,
+      "price": 89.5,
+      "shares": 12,
+      "side": "BUY",
+      "ticker": "DXCM"
+    },
+    {
+      "fees": 2.008,
+      "pnl": null,
+      "price": 166.54,
+      "shares": 6,
+      "side": "BUY",
+      "ticker": "A"
+    },
+    {
+      "fees": 2.146,
+      "pnl": null,
+      "price": 20.65,
+      "shares": 52,
+      "side": "BUY",
+      "ticker": "OMER"
+    },
+    {
+      "fees": 3.5475,
+      "pnl": null,
+      "price": 3.93,
+      "shares": 275,
+      "side": "BUY",
+      "ticker": "INDP"
+    },
+    {
+      "fees": 2.116,
+      "pnl": null,
+      "price": 25.4,
+      "shares": 42,
+      "side": "BUY",
+      "ticker": "TNGX"
+    },
+    {
+      "fees": 15.0374,
+      "pnl": null,
+      "price": 0.768,
+      "shares": 1408,
+      "side": "BUY",
+      "ticker": "NMRA"
+    },
+    {
+      "fees": 2.041,
+      "pnl": null,
+      "price": 62.16,
+      "shares": 17,
+      "side": "BUY",
+      "ticker": "TTAN"
+    },
+    {
+      "fees": 2.065,
+      "pnl": null,
+      "price": 41.76,
+      "shares": 25,
+      "side": "BUY",
+      "ticker": "VKTX"
+    }
+  ],
+  "holdings": [
+    "A",
+    "DXCM",
+    "INDP",
+    "NMRA",
+    "OMER",
+    "TNGX",
+    "TTAN",
+    "VKTX"
+  ],
+  "mean": -3.1056,
+  "n_trades_today": 16,
+  "recipe": "union_vol_green_h1",
+  "sells": [
+    "AIBZ",
+    "ARM",
+    "EU",
+    "GRAL",
+    "GRPN",
+    "HELP",
+    "IVVD",
+    "NUAI"
+  ],
+  "state": {
+    "after": "2026-09-23",
+    "cash": 143.38,
+    "pos": {
+      "A": {
+        "close_px": 165.32000732421875,
+        "cost": 1001.2479597167969,
+        "entry_date": "2026-09-23",
+        "entry_px": 166.5399932861328,
+        "fee_in": 2.008,
+        "last_px": 166.5399932861328,
+        "min_hold": 1,
+        "notional": 999.2399597167969,
+        "peak_px": 166.5399932861328,
+        "reason": "combo gate; gate vol=good,last_green=True; list flatten; \ud83d\udd35; \u26aa; ret5=+11.3; leftover $1081.38",
+        "shares": 6,
+        "ticker": "A"
+      },
+      "DXCM": {
+        "close_px": 87.7300033569336,
+        "cost": 1076.026,
+        "entry_date": "2026-09-23",
+        "entry_px": 89.5,
+        "fee_in": 2.026,
+        "last_px": 89.5,
+        "min_hold": 1,
+        "notional": 1074.0,
+        "peak_px": 89.5,
+        "reason": "combo gate; gate vol=good,last_green=True; list flatten; \ud83d\udd35; \u26aa; ret5=+3.6; leftover $1081.38",
+        "shares": 12,
+        "ticker": "DXCM"
+      },
+      "INDP": {
+        "close_px": 3.7699999809265137,
+        "cost": 1084.2975183582305,
+        "entry_date": "2026-09-23",
+        "entry_px": 3.930000066757202,
+        "fee_in": 3.5475,
+        "last_px": 3.930000066757202,
+        "min_hold": 1,
+        "notional": 1080.7500183582306,
+        "peak_px": 3.930000066757202,
+        "reason": "combo gate; gate vol=good,last_green=True; list probable,yday_gainer,yday_mover,ohlc_hot; \ud83d\udd35; ret5=+9.6; leftover $1081.38",
+        "shares": 275,
+        "ticker": "INDP"
+      },
+      "NMRA": {
+        "close_px": 0.7310000061988831,
+        "cost": 1096.381409399414,
+        "entry_date": "2026-09-23",
+        "entry_px": 0.7680000066757202,
+        "fee_in": 15.0374,
+        "last_px": 0.7680000066757202,
+        "min_hold": 1,
+        "notional": 1081.344009399414,
+        "peak_px": 0.7680000066757202,
+        "reason": "combo gate; gate vol=good,last_green=True; list probable,yday_gainer,yday_mover; \ud83d\udd35; ret5=-6.3; leftover $1081.38",
+        "shares": 1408,
+        "ticker": "NMRA"
+      },
+      "OMER": {
+        "close_px": 20.739999771118164,
+        "cost": 1075.9459801635742,
+        "entry_date": "2026-09-23",
+        "entry_px": 20.649999618530273,
+        "fee_in": 2.146,
+        "last_px": 20.649999618530273,
+        "min_hold": 1,
+        "notional": 1073.7999801635742,
+        "peak_px": 20.649999618530273,
+        "reason": "combo gate; gate vol=good,last_green=True; list flatten,yday_gainer,yday_mover; \ud83d\udd35; \u26aa; ret5=+22.6; leftover $1081.38",
+        "shares": 52,
+        "ticker": "OMER"
+      },
+      "TNGX": {
+        "close_px": 24.450000762939453,
+        "cost": 1068.9159839782715,
+        "entry_date": "2026-09-23",
+        "entry_px": 25.399999618530273,
+        "fee_in": 2.116,
+        "last_px": 25.399999618530273,
+        "min_hold": 1,
+        "notional": 1066.7999839782715,
+        "peak_px": 25.399999618530273,
+        "reason": "combo gate; gate vol=good,last_green=True; list probable,yday_gainer,yday_mover; \ud83d\udd35; ret5=+6.9; leftover $1081.38",
+        "shares": 42,
+        "ticker": "TNGX"
+      },
+      "TTAN": {
+        "close_px": 61.650001525878906,
+        "cost": 1058.7609974060058,
+        "entry_date": "2026-09-23",
+        "entry_px": 62.15999984741211,
+        "fee_in": 2.041,
+        "last_px": 62.15999984741211,
+        "min_hold": 1,
+        "notional": 1056.7199974060059,
+        "peak_px": 62.15999984741211,
+        "reason": "combo gate; gate vol=good,last_green=True; list probable; \ud83d\udd35; \u26aa; ret5=+5.1; leftover $1081.38",
+        "shares": 17,
+        "ticker": "TTAN"
+      },
+      "VKTX": {
+        "close_px": 41.650001525878906,
+        "cost": 1046.0649580383301,
+        "entry_date": "2026-09-23",
+        "entry_px": 41.7599983215332,
+        "fee_in": 2.065,
+        "last_px": 41.7599983215332,
+        "min_hold": 1,
+        "notional": 1043.99995803833,
+        "peak_px": 41.7599983215332,
+        "reason": "combo gate; gate vol=good,last_green=True; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+36.4; leftover $1081.38",
+        "shares": 25,
+        "ticker": "VKTX"
+      }
+    },
+    "yday_equity": 8448.74
+  }
+}

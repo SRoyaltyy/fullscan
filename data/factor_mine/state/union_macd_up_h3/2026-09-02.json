@@ -1,0 +1,93 @@
+{
+  "buys": [],
+  "cash": 9779.89,
+  "date": "2026-09-02",
+  "equity": 9779.89,
+  "fees": 21.08,
+  "fills": [
+    {
+      "fees": 2.2698,
+      "pnl": 86.44,
+      "price": 15.7,
+      "shares": 85,
+      "side": "SELL",
+      "ticker": "CRK"
+    },
+    {
+      "fees": 2.2501,
+      "pnl": -141.94,
+      "price": 13.92,
+      "shares": 79,
+      "side": "SELL",
+      "ticker": "GRRR"
+    },
+    {
+      "fees": 2.1663,
+      "pnl": 34.69,
+      "price": 24.7,
+      "shares": 52,
+      "side": "SELL",
+      "ticker": "MOS"
+    },
+    {
+      "fees": 2.097,
+      "pnl": 6.27,
+      "price": 42.1,
+      "shares": 29,
+      "side": "SELL",
+      "ticker": "RRC"
+    },
+    {
+      "fees": 2.121,
+      "pnl": -21.98,
+      "price": 32.42,
+      "shares": 37,
+      "side": "SELL",
+      "ticker": "SEDG"
+    },
+    {
+      "fees": 2.022,
+      "pnl": -70.14,
+      "price": 235.71,
+      "shares": 4,
+      "side": "SELL",
+      "ticker": "SIMO"
+    },
+    {
+      "fees": 6.0988,
+      "pnl": -100.65,
+      "price": 2.49,
+      "shares": 466,
+      "side": "SELL",
+      "ticker": "SLI"
+    },
+    {
+      "fees": 2.055,
+      "pnl": -12.79,
+      "price": 78.84,
+      "shares": 15,
+      "side": "SELL",
+      "ticker": "URBN"
+    }
+  ],
+  "holdings": [],
+  "mean": -0.9166,
+  "n_trades_today": 8,
+  "recipe": "union_macd_up_h3",
+  "sells": [
+    "CRK",
+    "GRRR",
+    "MOS",
+    "RRC",
+    "SEDG",
+    "SIMO",
+    "SLI",
+    "URBN"
+  ],
+  "state": {
+    "after": "2026-09-02",
+    "cash": 9779.89,
+    "pos": {},
+    "yday_equity": 9779.89
+  }
+}

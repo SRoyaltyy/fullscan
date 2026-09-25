@@ -1,0 +1,111 @@
+{
+  "buys": [],
+  "cash": 92.38,
+  "date": "2026-09-22",
+  "equity": 9876.09,
+  "fees": 0,
+  "fills": [],
+  "holdings": [
+    "A",
+    "DXCM",
+    "FIVN",
+    "IOVA",
+    "MGTX",
+    "RARE"
+  ],
+  "mean": 0.7249,
+  "n_trades_today": 0,
+  "recipe": "union_white_both_n4_h3",
+  "sells": [],
+  "state": {
+    "after": "2026-09-22",
+    "cash": 92.38,
+    "pos": {
+      "A": {
+        "close_px": 167.26,
+        "cost": 2370.0849267578124,
+        "entry_date": "2026-09-21",
+        "entry_px": 157.8699951171875,
+        "fee_in": 2.035,
+        "last_px": 163.08,
+        "min_hold": 3,
+        "notional": 2368.0499267578125,
+        "peak_px": 163.08,
+        "reason": "\u22120 red + yday up AND catalyst, top 4 by Score; gate cam_bad_max=0,yday_and_catalyst=True; rank list; list flatten; \ud83d\udd35; \u26aa; ret5=+6.5; leftover $2430.82",
+        "shares": 15,
+        "ticker": "A"
+      },
+      "DXCM": {
+        "close_px": 89.53,
+        "cost": 2400.4810494384765,
+        "entry_date": "2026-09-21",
+        "entry_px": 88.83000183105469,
+        "fee_in": 2.071,
+        "last_px": 89.12,
+        "min_hold": 3,
+        "notional": 2398.4100494384766,
+        "peak_px": 89.12,
+        "reason": "\u22120 red + yday up AND catalyst, top 4 by Score; gate cam_bad_max=0,yday_and_catalyst=True; rank list; list flatten; \ud83d\udd35; \u26aa; ret5=+7.6; leftover $2430.82",
+        "shares": 27,
+        "ticker": "DXCM"
+      },
+      "FIVN": {
+        "close_px": 38.65,
+        "cost": 69.57479725341797,
+        "entry_date": "2026-09-18",
+        "entry_px": 34.439998626708984,
+        "fee_in": 0.6948,
+        "last_px": 37.12,
+        "min_hold": 3,
+        "notional": 68.87999725341797,
+        "peak_px": 37.12,
+        "reason": "\u22120 red + yday up AND catalyst, top 4 by Score; gate cam_bad_max=0,yday_and_catalyst=True; rank list; list flatten; \ud83d\udd35; \u26aa; ret5=+14.0; leftover $75.84",
+        "shares": 2,
+        "ticker": "FIVN"
+      },
+      "IOVA": {
+        "close_px": 10.640000343322754,
+        "cost": 2433.195771105957,
+        "entry_date": "2026-09-21",
+        "entry_px": 10.430000305175781,
+        "fee_in": 3.0057,
+        "last_px": 10.180000305175781,
+        "min_hold": 3,
+        "notional": 2430.190071105957,
+        "peak_px": 10.430000305175781,
+        "reason": "\u22120 red + yday up AND catalyst, top 4 by Score; gate cam_bad_max=0,yday_and_catalyst=True; rank list; list flatten; \u26aa; ret5=+19.2; leftover $2430.82",
+        "shares": 233,
+        "ticker": "IOVA"
+      },
+      "MGTX": {
+        "close_px": 12.35,
+        "cost": 2427.1300480651857,
+        "entry_date": "2026-09-21",
+        "entry_px": 13.470000267028809,
+        "fee_in": 2.53,
+        "last_px": 13.16,
+        "min_hold": 3,
+        "notional": 2424.6000480651855,
+        "peak_px": 13.470000267028809,
+        "reason": "\u22120 red + yday up AND catalyst, top 4 by Score; gate cam_bad_max=0,yday_and_catalyst=True; rank list; list flatten; \ud83d\udd35; \u26aa; ret5=+3.6; leftover $2430.82",
+        "shares": 180,
+        "ticker": "MGTX"
+      },
+      "RARE": {
+        "close_px": 15.614999771118164,
+        "cost": 74.70449980926513,
+        "entry_date": "2026-09-18",
+        "entry_px": 14.789999961853027,
+        "fee_in": 0.7545,
+        "last_px": 14.779999732971191,
+        "min_hold": 3,
+        "notional": 73.94999980926514,
+        "peak_px": 14.789999961853027,
+        "reason": "\u22120 red + yday up AND catalyst, top 4 by Score; gate cam_bad_max=0,yday_and_catalyst=True; rank list; list probable,yday_gainer; \ud83d\udd35; \u26aa; ret5=+0.7; leftover $75.84",
+        "shares": 5,
+        "ticker": "RARE"
+      }
+    },
+    "yday_equity": 9876.09
+  }
+}

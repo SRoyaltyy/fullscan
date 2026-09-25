@@ -1,0 +1,93 @@
+{
+  "buys": [],
+  "cash": 9996.57,
+  "date": "2026-09-23",
+  "equity": 9996.57,
+  "fees": 20.4068,
+  "fills": [
+    {
+      "fees": 2.188,
+      "pnl": 28.59,
+      "price": 8.9,
+      "shares": 66,
+      "side": "COVER",
+      "ticker": "ALOY"
+    },
+    {
+      "fees": 2.014,
+      "pnl": -18.22,
+      "price": 78.41,
+      "shares": 8,
+      "side": "COVER",
+      "ticker": "AXTI"
+    },
+    {
+      "fees": 2.194,
+      "pnl": 44.53,
+      "price": 8.39,
+      "shares": 68,
+      "side": "COVER",
+      "ticker": "CRML"
+    },
+    {
+      "fees": 3.9603,
+      "pnl": 4.28,
+      "price": 1.98,
+      "shares": 307,
+      "side": "COVER",
+      "ticker": "FJET"
+    },
+    {
+      "fees": 2.7219,
+      "pnl": 45.13,
+      "price": 2.7,
+      "shares": 211,
+      "side": "COVER",
+      "ticker": "GLND"
+    },
+    {
+      "fees": 2.131,
+      "pnl": -15.11,
+      "price": 13.22,
+      "shares": 47,
+      "side": "COVER",
+      "ticker": "USDE"
+    },
+    {
+      "fees": 3.0186,
+      "pnl": -24.82,
+      "price": 2.73,
+      "shares": 234,
+      "side": "COVER",
+      "ticker": "VGZ"
+    },
+    {
+      "fees": 2.179,
+      "pnl": -4.4,
+      "price": 9.79,
+      "shares": 63,
+      "side": "COVER",
+      "ticker": "YSS"
+    }
+  ],
+  "holdings": [],
+  "mean": -0.1528,
+  "n_trades_today": 8,
+  "recipe": "short_alarm_h1",
+  "sells": [
+    "ALOY",
+    "AXTI",
+    "CRML",
+    "FJET",
+    "GLND",
+    "USDE",
+    "VGZ",
+    "YSS"
+  ],
+  "state": {
+    "after": "2026-09-23",
+    "cash": 9996.57,
+    "pos": {},
+    "yday_equity": 9996.57
+  }
+}

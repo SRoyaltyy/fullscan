@@ -1,0 +1,139 @@
+{
+  "buys": [
+    "HALO",
+    "BAND"
+  ],
+  "cash": 28791.84,
+  "date": "2026-09-23",
+  "equity": 9490.64,
+  "fees": 4.3378,
+  "fills": [
+    {
+      "fees": 2.135626026602967,
+      "pnl": null,
+      "price": 116.85,
+      "shares": 19,
+      "side": "SHORT",
+      "ticker": "HALO"
+    },
+    {
+      "fees": 2.20217260090031,
+      "pnl": null,
+      "price": 58.01,
+      "shares": 40,
+      "side": "SHORT",
+      "ticker": "BAND"
+    }
+  ],
+  "holdings": [
+    "AEHL",
+    "AMD",
+    "BAND",
+    "FIVN",
+    "HALO",
+    "PAYX",
+    "USFD"
+  ],
+  "mean": 2.9061,
+  "n_trades_today": 2,
+  "recipe": "short_news_r_h3",
+  "sells": [],
+  "state": {
+    "after": "2026-09-23",
+    "cash": 28791.84,
+    "pos": {
+      "AEHL": {
+        "close_px": 8.229999542236328,
+        "cost": 4.020916714216258,
+        "entry_date": "2026-09-21",
+        "entry_px": 8.260000228881836,
+        "fee_in": 4.020916714216258,
+        "last_px": 7.619999885559082,
+        "notional": 2486.2600688934326,
+        "peak_px": 7.619999885559082,
+        "reason": "news\ud83d\udd34; gate news=bad; list yday_mover; ret5=+7.7; leftover $2491.90",
+        "shares": 301,
+        "ticker": "AEHL"
+      },
+      "AMD": {
+        "close_px": 614.6099853515625,
+        "cost": 2.0946868498501714,
+        "entry_date": "2026-09-21",
+        "entry_px": 583.8800048828125,
+        "fee_in": 2.0946868498501714,
+        "last_px": 621.5,
+        "notional": 2335.52001953125,
+        "peak_px": 583.8800048828125,
+        "reason": "news\ud83d\udd34; gate news=bad; list ohlc_hot; ret5=+8.5; leftover $2491.90",
+        "shares": 4,
+        "ticker": "AMD"
+      },
+      "BAND": {
+        "close_px": 59.130001068115234,
+        "cost": 2.20217260090031,
+        "entry_date": "2026-09-23",
+        "entry_px": 58.0099983215332,
+        "fee_in": 2.20217260090031,
+        "last_px": 58.0099983215332,
+        "notional": 2320.399932861328,
+        "peak_px": 58.0099983215332,
+        "reason": "news\ud83d\udd34; gate news=bad; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+16.6; leftover $2332.76",
+        "shares": 40,
+        "ticker": "BAND"
+      },
+      "FIVN": {
+        "close_px": 37.68000030517578,
+        "cost": 2.6214728712944133,
+        "entry_date": "2026-09-18",
+        "entry_px": 34.439998626708984,
+        "fee_in": 2.6214728712944133,
+        "last_px": 38.904998779296875,
+        "notional": 4959.359802246094,
+        "peak_px": 33.0,
+        "reason": "news\ud83d\udd34; gate news=bad; list flatten; \ud83d\udd35; \u26aa; ret5=+14.0; leftover $4979.84",
+        "shares": 144,
+        "ticker": "FIVN"
+      },
+      "HALO": {
+        "close_px": 112.44000244140625,
+        "cost": 2.135626026602967,
+        "entry_date": "2026-09-23",
+        "entry_px": 116.8499984741211,
+        "fee_in": 2.135626026602967,
+        "last_px": 116.8499984741211,
+        "notional": 2220.149971008301,
+        "peak_px": 116.8499984741211,
+        "reason": "news\ud83d\udd34; gate news=bad; list flatten; \ud83d\udd35; \u26aa; ret5=+8.4; leftover $2332.76",
+        "shares": 19,
+        "ticker": "HALO"
+      },
+      "PAYX": {
+        "close_px": 104.48999786376953,
+        "cost": 2.1419027397260275,
+        "entry_date": "2026-09-22",
+        "entry_px": 115.71,
+        "fee_in": 2.1419027397260275,
+        "last_px": 109.66999816894531,
+        "notional": 2314.2,
+        "peak_px": 109.66999816894531,
+        "reason": "news\ud83d\udd34; gate news=bad; list overnight; ret5=-3.0; leftover $2381.39",
+        "shares": 20,
+        "ticker": "PAYX"
+      },
+      "USFD": {
+        "close_px": 93.93000030517578,
+        "cost": 2.1582383561643836,
+        "entry_date": "2026-09-22",
+        "entry_px": 94.08,
+        "fee_in": 2.1582383561643836,
+        "last_px": 93.97000122070312,
+        "notional": 2352.0,
+        "peak_px": 93.97000122070312,
+        "reason": "news\ud83d\udd34; gate news=bad; list flatten; ret5=-0.6; leftover $2381.39",
+        "shares": 25,
+        "ticker": "USFD"
+      }
+    },
+    "yday_equity": 9490.64
+  }
+}

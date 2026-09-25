@@ -1,0 +1,93 @@
+{
+  "buys": [],
+  "cash": 9081.52,
+  "date": "2026-09-02",
+  "equity": 9081.52,
+  "fees": 30.6783,
+  "fills": [
+    {
+      "fees": 2.2628,
+      "pnl": -4.5,
+      "price": 15.01,
+      "shares": 83,
+      "side": "SELL",
+      "ticker": "BBAR"
+    },
+    {
+      "fees": 2.022,
+      "pnl": -77.42,
+      "price": 287.99,
+      "shares": 4,
+      "side": "SELL",
+      "ticker": "DY"
+    },
+    {
+      "fees": 4.2173,
+      "pnl": -188.69,
+      "price": 3.32,
+      "shares": 322,
+      "side": "SELL",
+      "ticker": "FINV"
+    },
+    {
+      "fees": 2.2944,
+      "pnl": -90.12,
+      "price": 12.45,
+      "shares": 93,
+      "side": "SELL",
+      "ticker": "JKS"
+    },
+    {
+      "fees": 13.1774,
+      "pnl": -300.63,
+      "price": 0.906,
+      "shares": 1077,
+      "side": "SELL",
+      "ticker": "LX"
+    },
+    {
+      "fees": 2.2248,
+      "pnl": -95.38,
+      "price": 16.279,
+      "shares": 71,
+      "side": "SELL",
+      "ticker": "QBTS"
+    },
+    {
+      "fees": 2.4306,
+      "pnl": -109.55,
+      "price": 8.38,
+      "shares": 136,
+      "side": "SELL",
+      "ticker": "QFIN"
+    },
+    {
+      "fees": 2.049,
+      "pnl": -52.18,
+      "price": 88.05,
+      "shares": 13,
+      "side": "SELL",
+      "ticker": "SYRE"
+    }
+  ],
+  "holdings": [],
+  "mean": -0.3812,
+  "n_trades_today": 8,
+  "recipe": "union_rsi_h3",
+  "sells": [
+    "BBAR",
+    "DY",
+    "FINV",
+    "JKS",
+    "LX",
+    "QBTS",
+    "QFIN",
+    "SYRE"
+  ],
+  "state": {
+    "after": "2026-09-02",
+    "cash": 9081.52,
+    "pos": {},
+    "yday_equity": 9081.52
+  }
+}

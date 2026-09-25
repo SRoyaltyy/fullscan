@@ -1,0 +1,119 @@
+{
+  "buys": [
+    "RRC",
+    "CRK",
+    "MOS",
+    "SLI"
+  ],
+  "cash": 41.35,
+  "date": "2026-08-28",
+  "equity": 9784.59,
+  "fees": 16.5354,
+  "fills": [
+    {
+      "fees": 2.275,
+      "pnl": null,
+      "price": 41.74,
+      "shares": 95,
+      "side": "BUY",
+      "ticker": "RRC"
+    },
+    {
+      "fees": 2.398,
+      "pnl": null,
+      "price": 14.63,
+      "shares": 136,
+      "side": "BUY",
+      "ticker": "CRK"
+    },
+    {
+      "fees": 2.239,
+      "pnl": null,
+      "price": 23.95,
+      "shares": 83,
+      "side": "BUY",
+      "ticker": "MOS"
+    },
+    {
+      "fees": 9.6234,
+      "pnl": null,
+      "price": 2.68,
+      "shares": 746,
+      "side": "BUY",
+      "ticker": "SLI"
+    }
+  ],
+  "holdings": [
+    "CRK",
+    "MOS",
+    "RRC",
+    "SLI"
+  ],
+  "mean": -2.1541,
+  "n_trades_today": 4,
+  "recipe": "flatten_h3_topheavy",
+  "sells": [],
+  "state": {
+    "after": "2026-08-28",
+    "cash": 41.35,
+    "pos": {
+      "CRK": {
+        "close_px": 14.289999961853027,
+        "cost": 1992.0780155639648,
+        "entry_date": "2026-08-28",
+        "entry_px": 14.630000114440918,
+        "fee_in": 2.398,
+        "last_px": 14.630000114440918,
+        "min_hold": 3,
+        "notional": 1989.6800155639648,
+        "peak_px": 14.630000114440918,
+        "reason": "40% to #1, rest split; list flatten; wish-list (live io HOLD \u2014 not a ticket); ret5=+5.8; leftover $2000.00",
+        "shares": 136,
+        "ticker": "CRK"
+      },
+      "MOS": {
+        "close_px": 23.600000381469727,
+        "cost": 1990.0890633239746,
+        "entry_date": "2026-08-28",
+        "entry_px": 23.950000762939453,
+        "fee_in": 2.239,
+        "last_px": 23.950000762939453,
+        "min_hold": 3,
+        "notional": 1987.8500633239746,
+        "peak_px": 23.950000762939453,
+        "reason": "40% to #1, rest split; list flatten; wish-list (live io HOLD \u2014 not a ticket); ret5=+1.8; leftover $2000.00",
+        "shares": 83,
+        "ticker": "MOS"
+      },
+      "RRC": {
+        "close_px": 41.459999084472656,
+        "cost": 3967.575159454346,
+        "entry_date": "2026-08-28",
+        "entry_px": 41.7400016784668,
+        "fee_in": 2.275,
+        "last_px": 41.7400016784668,
+        "min_hold": 3,
+        "notional": 3965.3001594543457,
+        "peak_px": 41.7400016784668,
+        "reason": "40% to #1, rest split; list flatten; wish-list (live io HOLD \u2014 not a ticket); ret5=+2.4; leftover $4000.00",
+        "shares": 95,
+        "ticker": "RRC"
+      },
+      "SLI": {
+        "close_px": 2.549999952316284,
+        "cost": 2008.9034498008727,
+        "entry_date": "2026-08-28",
+        "entry_px": 2.680000066757202,
+        "fee_in": 9.6234,
+        "last_px": 2.680000066757202,
+        "min_hold": 3,
+        "notional": 1999.2800498008728,
+        "peak_px": 2.680000066757202,
+        "reason": "40% to #1, rest split; list flatten,ohlc_hot; wish-list (live io HOLD \u2014 not a ticket); ret5=+16.3; leftover $2000.00",
+        "shares": 746,
+        "ticker": "SLI"
+      }
+    },
+    "yday_equity": 9784.59
+  }
+}

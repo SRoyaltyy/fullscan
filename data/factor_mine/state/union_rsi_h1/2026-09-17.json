@@ -1,0 +1,252 @@
+{
+  "buys": [
+    "MRLN",
+    "JBHT",
+    "RCAT",
+    "PALI",
+    "CRDO",
+    "TNDM"
+  ],
+  "cash": 310.77,
+  "date": "2026-09-17",
+  "equity": 8741.48,
+  "fees": 59.1813,
+  "fills": [
+    {
+      "fees": 2.5351,
+      "pnl": 62.57,
+      "price": 7.26,
+      "shares": 169,
+      "side": "SELL",
+      "ticker": "CRBP"
+    },
+    {
+      "fees": 5.5761,
+      "pnl": 35.79,
+      "price": 2.83,
+      "shares": 426,
+      "side": "SELL",
+      "ticker": "CTMX"
+    },
+    {
+      "fees": 4.1389,
+      "pnl": -36.66,
+      "price": 3.57,
+      "shares": 316,
+      "side": "SELL",
+      "ticker": "EYPT"
+    },
+    {
+      "fees": 15.0773,
+      "pnl": -118.73,
+      "price": 0.78,
+      "shares": 1374,
+      "side": "SELL",
+      "ticker": "NMRA"
+    },
+    {
+      "fees": 2.094,
+      "pnl": -8.09,
+      "price": 40.79,
+      "shares": 28,
+      "side": "SELL",
+      "ticker": "TCOM"
+    },
+    {
+      "fees": 6.2164,
+      "pnl": -7.59,
+      "price": 2.35,
+      "shares": 475,
+      "side": "SELL",
+      "ticker": "ZSQR"
+    },
+    {
+      "fees": 6.4887,
+      "pnl": null,
+      "price": 2.27,
+      "shares": 503,
+      "side": "BUY",
+      "ticker": "MRLN"
+    },
+    {
+      "fees": 2.002,
+      "pnl": null,
+      "price": 238.6,
+      "shares": 4,
+      "side": "BUY",
+      "ticker": "JBHT"
+    },
+    {
+      "fees": 2.452,
+      "pnl": null,
+      "price": 7.395,
+      "shares": 154,
+      "side": "BUY",
+      "ticker": "RCAT"
+    },
+    {
+      "fees": 8.4108,
+      "pnl": null,
+      "price": 1.75,
+      "shares": 652,
+      "side": "BUY",
+      "ticker": "PALI"
+    },
+    {
+      "fees": 2.008,
+      "pnl": null,
+      "price": 168.65,
+      "shares": 6,
+      "side": "BUY",
+      "ticker": "CRDO"
+    },
+    {
+      "fees": 2.182,
+      "pnl": null,
+      "price": 17.72,
+      "shares": 64,
+      "side": "BUY",
+      "ticker": "TNDM"
+    }
+  ],
+  "holdings": [
+    "ALHC",
+    "CRDO",
+    "DVLT",
+    "JBHT",
+    "MRLN",
+    "PALI",
+    "RCAT",
+    "TNDM"
+  ],
+  "mean": -3.4978,
+  "n_trades_today": 12,
+  "recipe": "union_rsi_h1",
+  "sells": [
+    "CRBP",
+    "CTMX",
+    "EYPT",
+    "NMRA",
+    "TCOM",
+    "ZSQR"
+  ],
+  "state": {
+    "after": "2026-09-17",
+    "cash": 310.77,
+    "pos": {
+      "ALHC": {
+        "close_px": 8.699999809265137,
+        "cost": 1155.9260213623047,
+        "entry_date": "2026-09-16",
+        "entry_px": 10.300000190734863,
+        "fee_in": 2.326,
+        "last_px": 8.579999923706055,
+        "min_hold": 1,
+        "notional": 1153.6000213623047,
+        "peak_px": 10.300000190734863,
+        "reason": "rank by rsi; rank rsi; list yday_mover; ret5=-23.0; leftover $1159.75",
+        "shares": 112,
+        "ticker": "ALHC"
+      },
+      "CRDO": {
+        "close_px": 168.25,
+        "cost": 1013.9079633789063,
+        "entry_date": "2026-09-17",
+        "entry_px": 168.64999389648438,
+        "fee_in": 2.008,
+        "last_px": 168.64999389648438,
+        "min_hold": 1,
+        "notional": 1011.8999633789062,
+        "peak_px": 168.64999389648438,
+        "reason": "rank by rsi; rank rsi; list yday_gainer; ret5=-3.8; leftover $1142.72",
+        "shares": 6,
+        "ticker": "CRDO"
+      },
+      "DVLT": {
+        "close_px": 0.1599999964237213,
+        "cost": 1193.020774079132,
+        "entry_date": "2026-09-16",
+        "entry_px": 0.1599999964237213,
+        "fee_in": 33.3408,
+        "last_px": 0.17000000178813934,
+        "min_hold": 1,
+        "notional": 1159.679974079132,
+        "peak_px": 0.17000000178813934,
+        "reason": "rank by rsi; rank rsi; list yday_mover; \ud83d\udd35; ret5=-23.8; leftover $1159.75",
+        "shares": 7248,
+        "ticker": "DVLT"
+      },
+      "JBHT": {
+        "close_px": 236.8000030517578,
+        "cost": 956.4020244140625,
+        "entry_date": "2026-09-17",
+        "entry_px": 238.60000610351562,
+        "fee_in": 2.002,
+        "last_px": 238.60000610351562,
+        "min_hold": 1,
+        "notional": 954.4000244140625,
+        "peak_px": 238.60000610351562,
+        "reason": "rank by rsi; rank rsi; list yday_mover; ret5=-11.6; leftover $1142.72",
+        "shares": 4,
+        "ticker": "JBHT"
+      },
+      "MRLN": {
+        "close_px": 2.059999942779541,
+        "cost": 1148.2986904060365,
+        "entry_date": "2026-09-17",
+        "entry_px": 2.2699999809265137,
+        "fee_in": 6.4887,
+        "last_px": 2.2699999809265137,
+        "min_hold": 1,
+        "notional": 1141.8099904060364,
+        "peak_px": 2.2699999809265137,
+        "reason": "rank by rsi; rank rsi; list yday_mover; \ud83d\udd35; ret5=-29.6; leftover $1142.72",
+        "shares": 503,
+        "ticker": "MRLN"
+      },
+      "PALI": {
+        "close_px": 1.7000000476837158,
+        "cost": 1149.4108,
+        "entry_date": "2026-09-17",
+        "entry_px": 1.75,
+        "fee_in": 8.4108,
+        "last_px": 1.75,
+        "min_hold": 1,
+        "notional": 1141.0,
+        "peak_px": 1.75,
+        "reason": "rank by rsi; rank rsi; list yday_mover; ret5=-17.6; leftover $1142.72",
+        "shares": 652,
+        "ticker": "PALI"
+      },
+      "RCAT": {
+        "close_px": 7.09499979019165,
+        "cost": 1141.281997062683,
+        "entry_date": "2026-09-17",
+        "entry_px": 7.394999980926514,
+        "fee_in": 2.452,
+        "last_px": 7.394999980926514,
+        "min_hold": 1,
+        "notional": 1138.829997062683,
+        "peak_px": 7.394999980926514,
+        "reason": "rank by rsi; rank rsi; list yday_mover; ret5=-12.7; leftover $1142.72",
+        "shares": 154,
+        "ticker": "RCAT"
+      },
+      "TNDM": {
+        "close_px": 17.229999542236328,
+        "cost": 1136.2619560546875,
+        "entry_date": "2026-09-17",
+        "entry_px": 17.719999313354492,
+        "fee_in": 2.182,
+        "last_px": 17.719999313354492,
+        "min_hold": 1,
+        "notional": 1134.0799560546875,
+        "peak_px": 17.719999313354492,
+        "reason": "rank by rsi; rank rsi; list yday_gainer; ret5=-8.3; leftover $1142.72",
+        "shares": 64,
+        "ticker": "TNDM"
+      }
+    },
+    "yday_equity": 8741.48
+  }
+}

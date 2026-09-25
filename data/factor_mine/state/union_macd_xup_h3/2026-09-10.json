@@ -1,0 +1,66 @@
+{
+  "buys": [],
+  "cash": 9162.56,
+  "date": "2026-09-10",
+  "equity": 9162.56,
+  "fees": 18.1477,
+  "fills": [
+    {
+      "fees": 2.0216,
+      "pnl": 26.13,
+      "price": 523.83,
+      "shares": 3,
+      "side": "SELL",
+      "ticker": "DELL"
+    },
+    {
+      "fees": 6.8239,
+      "pnl": 218.3,
+      "price": 3.965,
+      "shares": 521,
+      "side": "SELL",
+      "ticker": "EOSE"
+    },
+    {
+      "fees": 5.1486,
+      "pnl": -132.05,
+      "price": 4.36,
+      "shares": 393,
+      "side": "SELL",
+      "ticker": "GSM"
+    },
+    {
+      "fees": 2.0682,
+      "pnl": 5.97,
+      "price": 98.71,
+      "shares": 18,
+      "side": "SELL",
+      "ticker": "LULU"
+    },
+    {
+      "fees": 2.0854,
+      "pnl": -132.55,
+      "price": 70.0,
+      "shares": 24,
+      "side": "SELL",
+      "ticker": "RNG"
+    }
+  ],
+  "holdings": [],
+  "mean": -2.2345,
+  "n_trades_today": 5,
+  "recipe": "union_macd_xup_h3",
+  "sells": [
+    "DELL",
+    "EOSE",
+    "GSM",
+    "LULU",
+    "RNG"
+  ],
+  "state": {
+    "after": "2026-09-10",
+    "cash": 9162.56,
+    "pos": {},
+    "yday_equity": 9162.56
+  }
+}

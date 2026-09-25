@@ -1,0 +1,215 @@
+{
+  "buys": [
+    "VAL",
+    "RIG",
+    "ILMN",
+    "QLYS",
+    "BBNX",
+    "TEM",
+    "KRMN",
+    "SION"
+  ],
+  "cash": 368.88,
+  "date": "2026-09-16",
+  "equity": 10012.1,
+  "fees": 17.59,
+  "fills": [
+    {
+      "fees": 2.032,
+      "pnl": null,
+      "price": 87.4,
+      "shares": 14,
+      "side": "BUY",
+      "ticker": "VAL"
+    },
+    {
+      "fees": 2.709,
+      "pnl": null,
+      "price": 5.87,
+      "shares": 210,
+      "side": "BUY",
+      "ticker": "RIG"
+    },
+    {
+      "fees": 2.005,
+      "pnl": null,
+      "price": 224.49,
+      "shares": 5,
+      "side": "BUY",
+      "ticker": "ILMN"
+    },
+    {
+      "fees": 2.008,
+      "pnl": null,
+      "price": 179.6,
+      "shares": 6,
+      "side": "BUY",
+      "ticker": "QLYS"
+    },
+    {
+      "fees": 2.188,
+      "pnl": null,
+      "price": 18.61,
+      "shares": 66,
+      "side": "BUY",
+      "ticker": "BBNX"
+    },
+    {
+      "fees": 2.041,
+      "pnl": null,
+      "price": 68.79,
+      "shares": 17,
+      "side": "BUY",
+      "ticker": "TEM"
+    },
+    {
+      "fees": 2.086,
+      "pnl": null,
+      "price": 38.01,
+      "shares": 32,
+      "side": "BUY",
+      "ticker": "KRMN"
+    },
+    {
+      "fees": 2.521,
+      "pnl": null,
+      "price": 6.95,
+      "shares": 177,
+      "side": "BUY",
+      "ticker": "SION"
+    }
+  ],
+  "holdings": [
+    "BBNX",
+    "ILMN",
+    "KRMN",
+    "QLYS",
+    "RIG",
+    "SION",
+    "TEM",
+    "VAL"
+  ],
+  "mean": 1.2655,
+  "n_trades_today": 8,
+  "recipe": "union_clk_fresh_cat_coil_opp_h1",
+  "sells": [],
+  "state": {
+    "after": "2026-09-16",
+    "cash": 368.88,
+    "pos": {
+      "BBNX": {
+        "close_px": 22.18000030517578,
+        "cost": 1230.4480402832032,
+        "entry_date": "2026-09-16",
+        "entry_px": 18.610000610351562,
+        "fee_in": 2.188,
+        "last_px": 18.610000610351562,
+        "min_hold": 1,
+        "notional": 1228.2600402832031,
+        "peak_px": 18.610000610351562,
+        "reason": "Clock-B #2 \u2229 Theme Radar T\u22121 oppset; gate clk_fresh_cat_coil=True,oppset=True; rank opp_rvol; list probable,yday_gainer,yday_mover; ret5=-0.5; leftover $1235.87",
+        "shares": 66,
+        "ticker": "BBNX"
+      },
+      "ILMN": {
+        "close_px": 228.92999267578125,
+        "cost": 1124.4550274658204,
+        "entry_date": "2026-09-16",
+        "entry_px": 224.49000549316406,
+        "fee_in": 2.005,
+        "last_px": 224.49000549316406,
+        "min_hold": 1,
+        "notional": 1122.4500274658203,
+        "peak_px": 224.49000549316406,
+        "reason": "Clock-B #2 \u2229 Theme Radar T\u22121 oppset; gate clk_fresh_cat_coil=True,oppset=True; rank opp_rvol; list yday_gainer; \ud83d\udd35; \u26aa; ret5=+5.3; leftover $1235.87",
+        "shares": 5,
+        "ticker": "ILMN"
+      },
+      "KRMN": {
+        "close_px": 36.939998626708984,
+        "cost": 1218.4059462890625,
+        "entry_date": "2026-09-16",
+        "entry_px": 38.0099983215332,
+        "fee_in": 2.086,
+        "last_px": 38.0099983215332,
+        "min_hold": 1,
+        "notional": 1216.3199462890625,
+        "peak_px": 38.0099983215332,
+        "reason": "Clock-B #2 \u2229 Theme Radar T\u22121 oppset; gate clk_fresh_cat_coil=True,oppset=True; rank opp_rvol; list probable,yday_gainer; \ud83d\udd35; ret5=-5.6; leftover $1235.87",
+        "shares": 32,
+        "ticker": "KRMN"
+      },
+      "QLYS": {
+        "close_px": 183.05999755859375,
+        "cost": 1079.6080366210938,
+        "entry_date": "2026-09-16",
+        "entry_px": 179.60000610351562,
+        "fee_in": 2.008,
+        "last_px": 179.60000610351562,
+        "min_hold": 1,
+        "notional": 1077.6000366210938,
+        "peak_px": 179.60000610351562,
+        "reason": "Clock-B #2 \u2229 Theme Radar T\u22121 oppset; gate clk_fresh_cat_coil=True,oppset=True; rank opp_rvol; list yday_gainer; \ud83d\udd35; ret5=+8.8; leftover $1235.87",
+        "shares": 6,
+        "ticker": "QLYS"
+      },
+      "RIG": {
+        "close_px": 5.539999961853027,
+        "cost": 1235.4089759674073,
+        "entry_date": "2026-09-16",
+        "entry_px": 5.869999885559082,
+        "fee_in": 2.709,
+        "last_px": 5.869999885559082,
+        "min_hold": 1,
+        "notional": 1232.6999759674072,
+        "peak_px": 5.869999885559082,
+        "reason": "Clock-B #2 \u2229 Theme Radar T\u22121 oppset; gate clk_fresh_cat_coil=True,oppset=True; rank opp_rvol; list probable,yday_gainer; \ud83d\udd35; ret5=+3.1; leftover $1235.87",
+        "shares": 210,
+        "ticker": "RIG"
+      },
+      "SION": {
+        "close_px": 7.039999961853027,
+        "cost": 1232.6709662399292,
+        "entry_date": "2026-09-16",
+        "entry_px": 6.949999809265137,
+        "fee_in": 2.521,
+        "last_px": 6.949999809265137,
+        "min_hold": 1,
+        "notional": 1230.1499662399292,
+        "peak_px": 6.949999809265137,
+        "reason": "Clock-B #2 \u2229 Theme Radar T\u22121 oppset; gate clk_fresh_cat_coil=True,oppset=True; rank opp_rvol; list yday_mover; ret5=-5.8; leftover $1235.87",
+        "shares": 177,
+        "ticker": "SION"
+      },
+      "TEM": {
+        "close_px": 69.97000122070312,
+        "cost": 1171.4710155639648,
+        "entry_date": "2026-09-16",
+        "entry_px": 68.79000091552734,
+        "fee_in": 2.041,
+        "last_px": 68.79000091552734,
+        "min_hold": 1,
+        "notional": 1169.4300155639648,
+        "peak_px": 68.79000091552734,
+        "reason": "Clock-B #2 \u2229 Theme Radar T\u22121 oppset; gate clk_fresh_cat_coil=True,oppset=True; rank opp_rvol; list probable,yday_gainer; \ud83d\udd35; \u26aa; ret5=+7.1; leftover $1235.87",
+        "shares": 17,
+        "ticker": "TEM"
+      },
+      "VAL": {
+        "close_px": 82.5199966430664,
+        "cost": 1225.6320213623046,
+        "entry_date": "2026-09-16",
+        "entry_px": 87.4000015258789,
+        "fee_in": 2.032,
+        "last_px": 87.4000015258789,
+        "min_hold": 1,
+        "notional": 1223.6000213623047,
+        "peak_px": 87.4000015258789,
+        "reason": "Clock-B #2 \u2229 Theme Radar T\u22121 oppset; gate clk_fresh_cat_coil=True,oppset=True; rank opp_rvol; list probable,yday_gainer; \ud83d\udd35; ret5=+3.2; leftover $1235.87",
+        "shares": 14,
+        "ticker": "VAL"
+      }
+    },
+    "yday_equity": 10012.1
+  }
+}

@@ -1,0 +1,119 @@
+{
+  "buys": [
+    "GPRO",
+    "ASST",
+    "DFDV",
+    "HOOD"
+  ],
+  "cash": 38.63,
+  "date": "2026-09-04",
+  "equity": 10486.04,
+  "fees": 31.3853,
+  "fills": [
+    {
+      "fees": 21.543,
+      "pnl": null,
+      "price": 1.48,
+      "shares": 1670,
+      "side": "BUY",
+      "ticker": "GPRO"
+    },
+    {
+      "fees": 2.284,
+      "pnl": null,
+      "price": 25.18,
+      "shares": 98,
+      "side": "BUY",
+      "ticker": "ASST"
+    },
+    {
+      "fees": 5.5083,
+      "pnl": null,
+      "price": 5.79,
+      "shares": 427,
+      "side": "BUY",
+      "ticker": "DFDV"
+    },
+    {
+      "fees": 2.05,
+      "pnl": null,
+      "price": 120.475,
+      "shares": 20,
+      "side": "BUY",
+      "ticker": "HOOD"
+    }
+  ],
+  "holdings": [
+    "ASST",
+    "DFDV",
+    "GPRO",
+    "HOOD"
+  ],
+  "mean": 6.015,
+  "n_trades_today": 4,
+  "recipe": "union_hot_n4_h1",
+  "sells": [],
+  "state": {
+    "after": "2026-09-04",
+    "cash": 38.63,
+    "pos": {
+      "ASST": {
+        "close_px": 27.139999389648438,
+        "cost": 2469.9240299072267,
+        "entry_date": "2026-09-04",
+        "entry_px": 25.18000030517578,
+        "fee_in": 2.284,
+        "last_px": 25.18000030517578,
+        "min_hold": 1,
+        "notional": 2467.6400299072266,
+        "peak_px": 25.18000030517578,
+        "reason": "top 4 by hot; rank hot_score; list ohlc_hot; \ud83d\udd35; ret5=+16.0; leftover $2472.77",
+        "shares": 98,
+        "ticker": "ASST"
+      },
+      "DFDV": {
+        "close_px": 5.869999885559082,
+        "cost": 2477.8382837112426,
+        "entry_date": "2026-09-04",
+        "entry_px": 5.789999961853027,
+        "fee_in": 5.5083,
+        "last_px": 5.789999961853027,
+        "min_hold": 1,
+        "notional": 2472.3299837112427,
+        "peak_px": 5.789999961853027,
+        "reason": "top 4 by hot; rank hot_score; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+15.2; leftover $2472.77",
+        "shares": 427,
+        "ticker": "DFDV"
+      },
+      "GPRO": {
+        "close_px": 1.7000000476837158,
+        "cost": 2493.1430318527223,
+        "entry_date": "2026-09-04",
+        "entry_px": 1.4800000190734863,
+        "fee_in": 21.543,
+        "last_px": 1.4800000190734863,
+        "min_hold": 1,
+        "notional": 2471.600031852722,
+        "peak_px": 1.4800000190734863,
+        "reason": "top 4 by hot; rank hot_score; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+129.8; leftover $2472.77",
+        "shares": 1670,
+        "ticker": "GPRO"
+      },
+      "HOOD": {
+        "close_px": 122.11000061035156,
+        "cost": 2411.549969482422,
+        "entry_date": "2026-09-04",
+        "entry_px": 120.4749984741211,
+        "fee_in": 2.05,
+        "last_px": 120.4749984741211,
+        "min_hold": 1,
+        "notional": 2409.499969482422,
+        "peak_px": 120.4749984741211,
+        "reason": "top 4 by hot; rank hot_score; list ohlc_hot; \ud83d\udd35; ret5=+13.6; leftover $2472.77",
+        "shares": 20,
+        "ticker": "HOOD"
+      }
+    },
+    "yday_equity": 10486.04
+  }
+}

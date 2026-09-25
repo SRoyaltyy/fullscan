@@ -1,0 +1,114 @@
+{
+  "buys": [
+    "SMTC",
+    "TNDM",
+    "JBHT"
+  ],
+  "cash": 241.37,
+  "date": "2026-09-17",
+  "equity": 9288.41,
+  "fees": 11.3164,
+  "fills": [
+    {
+      "fees": 2.1465,
+      "pnl": -115.99,
+      "price": 120.07,
+      "shares": 37,
+      "side": "SELL",
+      "ticker": "CRUS"
+    },
+    {
+      "fees": 2.5879,
+      "pnl": 37.37,
+      "price": 26.51,
+      "shares": 177,
+      "side": "SELL",
+      "ticker": "WAY"
+    },
+    {
+      "fees": 2.044,
+      "pnl": null,
+      "price": 170.85,
+      "shares": 18,
+      "side": "BUY",
+      "ticker": "SMTC"
+    },
+    {
+      "fees": 2.512,
+      "pnl": null,
+      "price": 17.72,
+      "shares": 174,
+      "side": "BUY",
+      "ticker": "TNDM"
+    },
+    {
+      "fees": 2.026,
+      "pnl": null,
+      "price": 238.6,
+      "shares": 12,
+      "side": "BUY",
+      "ticker": "JBHT"
+    }
+  ],
+  "holdings": [
+    "JBHT",
+    "SMTC",
+    "TNDM"
+  ],
+  "mean": 0.829,
+  "n_trades_today": 5,
+  "recipe": "union_news_vol_h1",
+  "sells": [
+    "CRUS",
+    "WAY"
+  ],
+  "state": {
+    "after": "2026-09-17",
+    "cash": 241.37,
+    "pos": {
+      "JBHT": {
+        "close_px": 236.8000030517578,
+        "cost": 2865.2260732421873,
+        "entry_date": "2026-09-17",
+        "entry_px": 238.60000610351562,
+        "fee_in": 2.026,
+        "last_px": 238.60000610351562,
+        "min_hold": 1,
+        "notional": 2863.2000732421875,
+        "peak_px": 238.60000610351562,
+        "reason": "combo gate; gate news=good,vol=good; list yday_mover; ret5=-11.6; leftover $3089.91",
+        "shares": 12,
+        "ticker": "JBHT"
+      },
+      "SMTC": {
+        "close_px": 178.19000244140625,
+        "cost": 3077.344109863281,
+        "entry_date": "2026-09-17",
+        "entry_px": 170.85000610351562,
+        "fee_in": 2.044,
+        "last_px": 170.85000610351562,
+        "min_hold": 1,
+        "notional": 3075.3001098632812,
+        "peak_px": 170.85000610351562,
+        "reason": "combo gate; gate news=good,vol=good; list probable,yday_gainer,yday_mover; \ud83d\udd35; ret5=+2.2; leftover $3089.91",
+        "shares": 18,
+        "ticker": "SMTC"
+      },
+      "TNDM": {
+        "close_px": 17.229999542236328,
+        "cost": 3085.791880523682,
+        "entry_date": "2026-09-17",
+        "entry_px": 17.719999313354492,
+        "fee_in": 2.512,
+        "last_px": 17.719999313354492,
+        "min_hold": 1,
+        "notional": 3083.2798805236816,
+        "peak_px": 17.719999313354492,
+        "reason": "combo gate; gate news=good,vol=good; list yday_gainer; ret5=-8.3; leftover $3089.91",
+        "shares": 174,
+        "ticker": "TNDM"
+      }
+    },
+    "yday_equity": 9288.41
+  }
+}

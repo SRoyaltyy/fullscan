@@ -1,0 +1,215 @@
+{
+  "buys": [
+    "DBI",
+    "VIST",
+    "YPF",
+    "ASO",
+    "HAFN",
+    "PBR",
+    "GME",
+    "HPK"
+  ],
+  "cash": 89.3,
+  "date": "2026-09-11",
+  "equity": 10105.57,
+  "fees": 18.0697,
+  "fills": [
+    {
+      "fees": 2.7477,
+      "pnl": null,
+      "price": 5.91,
+      "shares": 213,
+      "side": "BUY",
+      "ticker": "DBI"
+    },
+    {
+      "fees": 2.038,
+      "pnl": null,
+      "price": 77.33,
+      "shares": 16,
+      "side": "BUY",
+      "ticker": "VIST"
+    },
+    {
+      "fees": 2.056,
+      "pnl": null,
+      "price": 55.11,
+      "shares": 22,
+      "side": "BUY",
+      "ticker": "YPF"
+    },
+    {
+      "fees": 2.059,
+      "pnl": null,
+      "price": 54.91,
+      "shares": 23,
+      "side": "BUY",
+      "ticker": "ASO"
+    },
+    {
+      "fees": 2.395,
+      "pnl": null,
+      "price": 9.32,
+      "shares": 135,
+      "side": "BUY",
+      "ticker": "HAFN"
+    },
+    {
+      "fees": 2.167,
+      "pnl": null,
+      "price": 21.21,
+      "shares": 59,
+      "side": "BUY",
+      "ticker": "PBR"
+    },
+    {
+      "fees": 2.17,
+      "pnl": null,
+      "price": 21.04,
+      "shares": 60,
+      "side": "BUY",
+      "ticker": "GME"
+    },
+    {
+      "fees": 2.437,
+      "pnl": null,
+      "price": 8.45,
+      "shares": 149,
+      "side": "BUY",
+      "ticker": "HPK"
+    }
+  ],
+  "holdings": [
+    "ASO",
+    "DBI",
+    "GME",
+    "HAFN",
+    "HPK",
+    "PBR",
+    "VIST",
+    "YPF"
+  ],
+  "mean": -0.0425,
+  "n_trades_today": 8,
+  "recipe": "union_clk_hold_vs_sector_opp_h1",
+  "sells": [],
+  "state": {
+    "after": "2026-09-11",
+    "cash": 89.3,
+    "pos": {
+      "ASO": {
+        "close_px": 55.36000061035156,
+        "cost": 1264.9889964904785,
+        "entry_date": "2026-09-11",
+        "entry_px": 54.90999984741211,
+        "fee_in": 2.059,
+        "last_px": 54.90999984741211,
+        "min_hold": 1,
+        "notional": 1262.9299964904785,
+        "peak_px": 54.90999984741211,
+        "reason": "Clock-B #6 \u2229 Theme Radar T\u22121 oppset; gate clk_hold_vs_sector=True,oppset=True; rank opp_rvol; list yday_gainer; \ud83d\udd35; ret5=+24.1; leftover $1263.73",
+        "shares": 23,
+        "ticker": "ASO"
+      },
+      "DBI": {
+        "close_px": 5.880000114440918,
+        "cost": 1261.5776674987792,
+        "entry_date": "2026-09-11",
+        "entry_px": 5.909999847412109,
+        "fee_in": 2.7477,
+        "last_px": 5.909999847412109,
+        "min_hold": 1,
+        "notional": 1258.8299674987793,
+        "peak_px": 5.909999847412109,
+        "reason": "Clock-B #6 \u2229 Theme Radar T\u22121 oppset; gate clk_hold_vs_sector=True,oppset=True; rank opp_rvol; list yday_gainer,yday_mover; ret5=+16.3; leftover $1263.73",
+        "shares": 213,
+        "ticker": "DBI"
+      },
+      "GME": {
+        "close_px": 21.149999618530273,
+        "cost": 1264.5700549316407,
+        "entry_date": "2026-09-11",
+        "entry_px": 21.040000915527344,
+        "fee_in": 2.17,
+        "last_px": 21.040000915527344,
+        "min_hold": 1,
+        "notional": 1262.4000549316406,
+        "peak_px": 21.040000915527344,
+        "reason": "Clock-B #6 \u2229 Theme Radar T\u22121 oppset; gate clk_hold_vs_sector=True,oppset=True; rank opp_rvol; list ohlc_hot; \ud83d\udd35; ret5=+6.0; leftover $1263.73",
+        "shares": 60,
+        "ticker": "GME"
+      },
+      "HAFN": {
+        "close_px": 9.380000114440918,
+        "cost": 1260.5949588012695,
+        "entry_date": "2026-09-11",
+        "entry_px": 9.319999694824219,
+        "fee_in": 2.395,
+        "last_px": 9.319999694824219,
+        "min_hold": 1,
+        "notional": 1258.1999588012695,
+        "peak_px": 9.319999694824219,
+        "reason": "Clock-B #6 \u2229 Theme Radar T\u22121 oppset; gate clk_hold_vs_sector=True,oppset=True; rank opp_rvol; list ohlc_hot; ret5=+11.0; leftover $1263.73",
+        "shares": 135,
+        "ticker": "HAFN"
+      },
+      "HPK": {
+        "close_px": 8.470000267028809,
+        "cost": 1261.4869715805053,
+        "entry_date": "2026-09-11",
+        "entry_px": 8.449999809265137,
+        "fee_in": 2.437,
+        "last_px": 8.449999809265137,
+        "min_hold": 1,
+        "notional": 1259.0499715805054,
+        "peak_px": 8.449999809265137,
+        "reason": "Clock-B #6 \u2229 Theme Radar T\u22121 oppset; gate clk_hold_vs_sector=True,oppset=True; rank opp_rvol; list ohlc_hot; ret5=+3.5; leftover $1263.73",
+        "shares": 149,
+        "ticker": "HPK"
+      },
+      "PBR": {
+        "close_px": 21.200000762939453,
+        "cost": 1253.5569459838866,
+        "entry_date": "2026-09-11",
+        "entry_px": 21.209999084472656,
+        "fee_in": 2.167,
+        "last_px": 21.209999084472656,
+        "min_hold": 1,
+        "notional": 1251.3899459838867,
+        "peak_px": 21.209999084472656,
+        "reason": "Clock-B #6 \u2229 Theme Radar T\u22121 oppset; gate clk_hold_vs_sector=True,oppset=True; rank opp_rvol; list ohlc_hot; ret5=+4.2; leftover $1263.73",
+        "shares": 59,
+        "ticker": "PBR"
+      },
+      "VIST": {
+        "close_px": 76.2699966430664,
+        "cost": 1239.318029296875,
+        "entry_date": "2026-09-11",
+        "entry_px": 77.33000183105469,
+        "fee_in": 2.038,
+        "last_px": 77.33000183105469,
+        "min_hold": 1,
+        "notional": 1237.280029296875,
+        "peak_px": 77.33000183105469,
+        "reason": "Clock-B #6 \u2229 Theme Radar T\u22121 oppset; gate clk_hold_vs_sector=True,oppset=True; rank opp_rvol; list probable,yday_gainer; ret5=+5.8; leftover $1263.73",
+        "shares": 16,
+        "ticker": "VIST"
+      },
+      "YPF": {
+        "close_px": 55.54999923706055,
+        "cost": 1214.4760134277344,
+        "entry_date": "2026-09-11",
+        "entry_px": 55.11000061035156,
+        "fee_in": 2.056,
+        "last_px": 55.11000061035156,
+        "min_hold": 1,
+        "notional": 1212.4200134277344,
+        "peak_px": 55.11000061035156,
+        "reason": "Clock-B #6 \u2229 Theme Radar T\u22121 oppset; gate clk_hold_vs_sector=True,oppset=True; rank opp_rvol; list ohlc_hot; ret5=+7.0; leftover $1263.73",
+        "shares": 22,
+        "ticker": "YPF"
+      }
+    },
+    "yday_equity": 10105.57
+  }
+}

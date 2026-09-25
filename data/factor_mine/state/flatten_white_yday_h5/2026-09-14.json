@@ -1,0 +1,30 @@
+{
+  "buys": [],
+  "cash": 9714.14,
+  "date": "2026-09-14",
+  "equity": 9714.14,
+  "fees": 2.1867,
+  "fills": [
+    {
+      "fees": 2.1867,
+      "pnl": -285.86,
+      "price": 255.75,
+      "shares": 37,
+      "side": "SELL",
+      "ticker": "CRM"
+    }
+  ],
+  "holdings": [],
+  "mean": 3.131,
+  "n_trades_today": 1,
+  "recipe": "flatten_white_yday_h5",
+  "sells": [
+    "CRM"
+  ],
+  "state": {
+    "after": "2026-09-14",
+    "cash": 9714.14,
+    "pos": {},
+    "yday_equity": 9714.14
+  }
+}

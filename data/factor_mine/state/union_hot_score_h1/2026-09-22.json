@@ -1,0 +1,288 @@
+{
+  "buys": [
+    "GRAL",
+    "NUAI",
+    "ARM",
+    "INDP",
+    "ARQQ",
+    "IVVD",
+    "AMRX",
+    "VNET"
+  ],
+  "cash": 75.54,
+  "date": "2026-09-22",
+  "equity": 10749.06,
+  "fees": 71.5916,
+  "fills": [
+    {
+      "fees": 2.3799,
+      "pnl": -57.53,
+      "price": 10.27,
+      "shares": 120,
+      "side": "SELL",
+      "ticker": "ABTC"
+    },
+    {
+      "fees": 5.5257,
+      "pnl": 189.48,
+      "price": 3.51,
+      "shares": 422,
+      "side": "SELL",
+      "ticker": "CYPH"
+    },
+    {
+      "fees": 6.8177,
+      "pnl": -13.54,
+      "price": 2.47,
+      "shares": 521,
+      "side": "SELL",
+      "ticker": "FEAM"
+    },
+    {
+      "fees": 2.4941,
+      "pnl": -12.75,
+      "price": 8.17,
+      "shares": 156,
+      "side": "SELL",
+      "ticker": "FWDI"
+    },
+    {
+      "fees": 2.9245,
+      "pnl": 61.1,
+      "price": 6.055,
+      "shares": 223,
+      "side": "SELL",
+      "ticker": "GEMI"
+    },
+    {
+      "fees": 11.2471,
+      "pnl": -13.74,
+      "price": 1.5,
+      "shares": 860,
+      "side": "SELL",
+      "ticker": "LVWR"
+    },
+    {
+      "fees": 2.2413,
+      "pnl": 46.46,
+      "price": 17.58,
+      "shares": 76,
+      "side": "SELL",
+      "ticker": "TJGC"
+    },
+    {
+      "fees": 2.3105,
+      "pnl": -10.47,
+      "price": 12.99,
+      "shares": 98,
+      "side": "SELL",
+      "ticker": "USDE"
+    },
+    {
+      "fees": 2.026,
+      "pnl": null,
+      "price": 106.75,
+      "shares": 12,
+      "side": "BUY",
+      "ticker": "GRAL"
+    },
+    {
+      "fees": 2.533,
+      "pnl": null,
+      "price": 7.23,
+      "shares": 181,
+      "side": "BUY",
+      "ticker": "NUAI"
+    },
+    {
+      "fees": 2.002,
+      "pnl": null,
+      "price": 319.41,
+      "shares": 4,
+      "side": "BUY",
+      "ticker": "ARM"
+    },
+    {
+      "fees": 5.4567,
+      "pnl": null,
+      "price": 3.1,
+      "shares": 423,
+      "side": "BUY",
+      "ticker": "INDP"
+    },
+    {
+      "fees": 2.155,
+      "pnl": null,
+      "price": 23.51,
+      "shares": 55,
+      "side": "BUY",
+      "ticker": "ARQQ"
+    },
+    {
+      "fees": 16.7571,
+      "pnl": null,
+      "price": 1.01,
+      "shares": 1299,
+      "side": "BUY",
+      "ticker": "IVVD"
+    },
+    {
+      "fees": 2.185,
+      "pnl": null,
+      "price": 20.0,
+      "shares": 65,
+      "side": "BUY",
+      "ticker": "AMRX"
+    },
+    {
+      "fees": 2.536,
+      "pnl": null,
+      "price": 7.18,
+      "shares": 182,
+      "side": "BUY",
+      "ticker": "VNET"
+    }
+  ],
+  "holdings": [
+    "AMRX",
+    "ARM",
+    "ARQQ",
+    "GRAL",
+    "INDP",
+    "IVVD",
+    "NUAI",
+    "VNET"
+  ],
+  "mean": 2.6361,
+  "n_trades_today": 16,
+  "recipe": "union_hot_score_h1",
+  "sells": [
+    "ABTC",
+    "CYPH",
+    "FEAM",
+    "FWDI",
+    "GEMI",
+    "LVWR",
+    "TJGC",
+    "USDE"
+  ],
+  "state": {
+    "after": "2026-09-22",
+    "cash": 75.54,
+    "pos": {
+      "AMRX": {
+        "close_px": 19.5,
+        "cost": 1302.185,
+        "entry_date": "2026-09-22",
+        "entry_px": 20.0,
+        "fee_in": 2.185,
+        "last_px": 20.0,
+        "min_hold": 1,
+        "notional": 1300.0,
+        "peak_px": 20.0,
+        "reason": "rank by hot_score; rank hot_score; list ohlc_hot; ret5=+17.1; leftover $1312.70",
+        "shares": 65,
+        "ticker": "AMRX"
+      },
+      "ARM": {
+        "close_px": 333.20001220703125,
+        "cost": 1279.6420146484375,
+        "entry_date": "2026-09-22",
+        "entry_px": 319.4100036621094,
+        "fee_in": 2.002,
+        "last_px": 319.4100036621094,
+        "min_hold": 1,
+        "notional": 1277.6400146484375,
+        "peak_px": 319.4100036621094,
+        "reason": "rank by hot_score; rank hot_score; list yday_gainer,yday_mover; ret5=+35.1; leftover $1312.70",
+        "shares": 4,
+        "ticker": "ARM"
+      },
+      "ARQQ": {
+        "close_px": 23.04,
+        "cost": 1295.2050000000002,
+        "entry_date": "2026-09-22",
+        "entry_px": 23.51,
+        "fee_in": 2.155,
+        "last_px": 23.51,
+        "min_hold": 1,
+        "notional": 1293.0500000000002,
+        "peak_px": 23.51,
+        "reason": "rank by hot_score; rank hot_score; list yday_gainer,yday_mover; ret5=+44.4; leftover $1312.70",
+        "shares": 55,
+        "ticker": "ARQQ"
+      },
+      "GRAL": {
+        "close_px": 108.52,
+        "cost": 1283.026,
+        "entry_date": "2026-09-22",
+        "entry_px": 106.75,
+        "fee_in": 2.026,
+        "last_px": 106.75,
+        "min_hold": 1,
+        "notional": 1281.0,
+        "peak_px": 106.75,
+        "reason": "rank by hot_score; rank hot_score; list yday_gainer,yday_mover; ret5=+42.9; leftover $1312.70",
+        "shares": 12,
+        "ticker": "GRAL"
+      },
+      "INDP": {
+        "close_px": 3.990000009536743,
+        "cost": 1316.7566596595764,
+        "entry_date": "2026-09-22",
+        "entry_px": 3.0999999046325684,
+        "fee_in": 5.4567,
+        "last_px": 3.0999999046325684,
+        "min_hold": 1,
+        "notional": 1311.2999596595764,
+        "peak_px": 3.0999999046325684,
+        "reason": "rank by hot_score; rank hot_score; list ohlc_hot; ret5=-1.6; leftover $1312.70",
+        "shares": 423,
+        "ticker": "INDP"
+      },
+      "IVVD": {
+        "close_px": 0.9639999866485596,
+        "cost": 1328.7470876117707,
+        "entry_date": "2026-09-22",
+        "entry_px": 1.0099999904632568,
+        "fee_in": 16.7571,
+        "last_px": 1.0099999904632568,
+        "min_hold": 1,
+        "notional": 1311.9899876117706,
+        "peak_px": 1.0099999904632568,
+        "reason": "rank by hot_score; rank hot_score; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+14.3; leftover $1312.70",
+        "shares": 1299,
+        "ticker": "IVVD"
+      },
+      "NUAI": {
+        "close_px": 6.974999904632568,
+        "cost": 1311.163003452301,
+        "entry_date": "2026-09-22",
+        "entry_px": 7.230000019073486,
+        "fee_in": 2.533,
+        "last_px": 7.230000019073486,
+        "min_hold": 1,
+        "notional": 1308.630003452301,
+        "peak_px": 7.230000019073486,
+        "reason": "rank by hot_score; rank hot_score; list yday_gainer,yday_mover; ret5=+36.6; leftover $1312.70",
+        "shares": 181,
+        "ticker": "NUAI"
+      },
+      "VNET": {
+        "close_px": 7.15,
+        "cost": 1309.296,
+        "entry_date": "2026-09-22",
+        "entry_px": 7.18,
+        "fee_in": 2.536,
+        "last_px": 7.18,
+        "min_hold": 1,
+        "notional": 1306.76,
+        "peak_px": 7.18,
+        "reason": "rank by hot_score; rank hot_score; list ohlc_hot; ret5=+17.5; leftover $1312.70",
+        "shares": 182,
+        "ticker": "VNET"
+      }
+    },
+    "yday_equity": 10749.06
+  }
+}

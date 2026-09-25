@@ -1,0 +1,133 @@
+{
+  "buys": [],
+  "cash": 14928.28,
+  "date": "2026-09-01",
+  "equity": 10036.81,
+  "fees": 0,
+  "fills": [],
+  "holdings": [
+    "BHVN",
+    "GENB",
+    "OPTU",
+    "PYXS",
+    "QFIN",
+    "SAFX",
+    "XPOF",
+    "ZYME"
+  ],
+  "mean": -0.3475,
+  "n_trades_today": 0,
+  "recipe": "short_clk_neg_weak_fail_h3",
+  "sells": [],
+  "state": {
+    "after": "2026-09-01",
+    "cash": 14928.28,
+    "pos": {
+      "BHVN": {
+        "close_px": 15.739999771118164,
+        "cost": 2.143967671355156,
+        "entry_date": "2026-08-28",
+        "entry_px": 15.880000114440918,
+        "fee_in": 2.143967671355156,
+        "last_px": 15.390000343322754,
+        "notional": 619.3200044631958,
+        "peak_px": 15.390000343322754,
+        "reason": "Clock-B #4 neg catalyst + weakness + failed recovery; gate clk_neg_weak_fail=True; list yday_gainer,yday_mover; ret5=+19.4; leftover $625.00",
+        "shares": 39,
+        "ticker": "BHVN"
+      },
+      "GENB": {
+        "close_px": 15.789999961853027,
+        "cost": 2.1438501374754186,
+        "entry_date": "2026-08-28",
+        "entry_px": 15.770000457763672,
+        "fee_in": 2.1438501374754186,
+        "last_px": 15.119999885559082,
+        "notional": 615.0300178527832,
+        "peak_px": 15.119999885559082,
+        "reason": "Clock-B #4 neg catalyst + weakness + failed recovery; gate clk_neg_weak_fail=True; list yday_mover; ret5=-1.4; leftover $625.00",
+        "shares": 39,
+        "ticker": "GENB"
+      },
+      "OPTU": {
+        "close_px": 0.9409999847412109,
+        "cost": 8.193323287671232,
+        "entry_date": "2026-08-28",
+        "entry_px": 1.0,
+        "fee_in": 8.193323287671232,
+        "last_px": 0.9850000143051147,
+        "notional": 625.0,
+        "peak_px": 0.9850000143051147,
+        "reason": "Clock-B #4 neg catalyst + weakness + failed recovery; gate clk_neg_weak_fail=True; list yday_gainer; ret5=+16.8; leftover $625.00",
+        "shares": 625,
+        "ticker": "OPTU"
+      },
+      "PYXS": {
+        "close_px": 3.440000057220459,
+        "cost": 2.6123002736287577,
+        "entry_date": "2026-08-28",
+        "entry_px": 3.319999933242798,
+        "fee_in": 2.6123002736287577,
+        "last_px": 3.240000009536743,
+        "notional": 624.159987449646,
+        "peak_px": 3.200000047683716,
+        "reason": "Clock-B #4 neg catalyst + weakness + failed recovery; gate clk_neg_weak_fail=True; list probable,yday_gainer; ret5=+6.4; leftover $625.00",
+        "shares": 188,
+        "ticker": "PYXS"
+      },
+      "QFIN": {
+        "close_px": 8.380000114440918,
+        "cost": 2.2323465746317823,
+        "entry_date": "2026-08-28",
+        "entry_px": 9.149999618530273,
+        "fee_in": 2.2323465746317823,
+        "last_px": 8.649999618530273,
+        "notional": 622.1999740600586,
+        "peak_px": 8.649999618530273,
+        "reason": "Clock-B #4 neg catalyst + weakness + failed recovery; gate clk_neg_weak_fail=True; list yday_mover; ret5=-19.9; leftover $625.00",
+        "shares": 68,
+        "ticker": "QFIN"
+      },
+      "SAFX": {
+        "close_px": 0.3799999952316284,
+        "cost": 11.696120000447312,
+        "entry_date": "2026-08-28",
+        "entry_px": 0.36500000953674316,
+        "fee_in": 11.696120000447312,
+        "last_px": 0.36500000953674316,
+        "notional": 624.8800163269043,
+        "peak_px": 0.3619999885559082,
+        "reason": "Clock-B #4 neg catalyst + weakness + failed recovery; gate clk_neg_weak_fail=True; list probable,yday_gainer; ret5=+7.6; leftover $625.00",
+        "shares": 1712,
+        "ticker": "SAFX"
+      },
+      "XPOF": {
+        "close_px": 5.03000020980835,
+        "cost": 2.384398082555484,
+        "entry_date": "2026-08-28",
+        "entry_px": 5.380000114440918,
+        "fee_in": 2.384398082555484,
+        "last_px": 5.389999866485596,
+        "notional": 624.0800132751465,
+        "peak_px": 5.369999885559082,
+        "reason": "Clock-B #4 neg catalyst + weakness + failed recovery; gate clk_neg_weak_fail=True; list probable,yday_gainer; ret5=+6.5; leftover $625.00",
+        "shares": 116,
+        "ticker": "XPOF"
+      },
+      "ZYME": {
+        "close_px": 29.670000076293945,
+        "cost": 2.089633150597141,
+        "entry_date": "2026-08-28",
+        "entry_px": 28.90999984741211,
+        "fee_in": 2.089633150597141,
+        "last_px": 29.31999969482422,
+        "notional": 607.1099967956543,
+        "peak_px": 28.059999465942383,
+        "reason": "Clock-B #4 neg catalyst + weakness + failed recovery; gate clk_neg_weak_fail=True; list yday_gainer; ret5=+9.2; leftover $625.00",
+        "shares": 21,
+        "ticker": "ZYME"
+      }
+    },
+    "yday_equity": 10036.81
+  }
+}

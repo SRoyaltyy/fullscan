@@ -1,0 +1,66 @@
+{
+  "buys": [],
+  "cash": 88.57,
+  "date": "2026-09-08",
+  "equity": 9821.83,
+  "fees": 0,
+  "fills": [],
+  "holdings": [
+    "BE",
+    "CRM",
+    "MSTR"
+  ],
+  "mean": 0.5198,
+  "n_trades_today": 0,
+  "recipe": "union_news_pack_h3",
+  "sells": [],
+  "state": {
+    "after": "2026-09-08",
+    "cash": 88.57,
+    "pos": {
+      "BE": {
+        "close_px": 277.2200012207031,
+        "cost": 3080.6890952148437,
+        "entry_date": "2026-09-04",
+        "entry_px": 236.82000732421875,
+        "fee_in": 2.029,
+        "last_px": 267.760009765625,
+        "min_hold": 3,
+        "notional": 3078.6600952148438,
+        "peak_px": 267.760009765625,
+        "reason": "morning packet news\ud83d\udfe2 only (not the merged box); gate news_box=good; rank cond; list ohlc_hot; ret5=+8.1; leftover $3164.24",
+        "shares": 13,
+        "ticker": "BE"
+      },
+      "CRM": {
+        "close_px": 249.1199951171875,
+        "cost": 3162.34582421875,
+        "entry_date": "2026-09-04",
+        "entry_px": 263.3599853515625,
+        "fee_in": 2.026,
+        "last_px": 253.72000122070312,
+        "min_hold": 3,
+        "notional": 3160.31982421875,
+        "peak_px": 263.3599853515625,
+        "reason": "morning packet news\ud83d\udfe2 only (not the merged box); gate news_box=good; rank cond; list flatten,mover_buy; \ud83d\udd35; \u26aa; ret5=+4.9; leftover $3164.24",
+        "shares": 12,
+        "ticker": "CRM"
+      },
+      "MSTR": {
+        "close_px": 136.52000427246094,
+        "cost": 3161.1091403808596,
+        "entry_date": "2026-09-04",
+        "entry_px": 137.35000610351562,
+        "fee_in": 2.059,
+        "last_px": 137.6199951171875,
+        "min_hold": 3,
+        "notional": 3159.0501403808594,
+        "peak_px": 137.6199951171875,
+        "reason": "morning packet news\ud83d\udfe2 only (not the merged box); gate news_box=good; rank cond; list ohlc_hot; ret5=+5.4; leftover $3164.24",
+        "shares": 23,
+        "ticker": "MSTR"
+      }
+    },
+    "yday_equity": 9821.83
+  }
+}

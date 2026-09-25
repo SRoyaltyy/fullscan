@@ -1,0 +1,36 @@
+{
+  "buys": [],
+  "cash": 262.37,
+  "date": "2026-09-22",
+  "equity": 7499.99,
+  "fees": 0,
+  "fills": [],
+  "holdings": [
+    "ISRG"
+  ],
+  "mean": 0.1057,
+  "n_trades_today": 0,
+  "recipe": "union_news_g_cam61_h3",
+  "sells": [],
+  "state": {
+    "after": "2026-09-22",
+    "cash": 262.37,
+    "pos": {
+      "ISRG": {
+        "close_px": 402.09,
+        "cost": 7092.064263671875,
+        "entry_date": "2026-09-21",
+        "entry_px": 393.8900146484375,
+        "fee_in": 2.044,
+        "last_px": 403.0,
+        "min_hold": 3,
+        "notional": 7090.020263671875,
+        "peak_px": 403.0,
+        "reason": "merged news\ud83d\udfe2 and cameras +6 \u2212\u22641; gate news=good,n_pos_min=6,cam_bad_max=1; rank cond; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+6.6; leftover $7354.44",
+        "shares": 18,
+        "ticker": "ISRG"
+      }
+    },
+    "yday_equity": 7499.99
+  }
+}

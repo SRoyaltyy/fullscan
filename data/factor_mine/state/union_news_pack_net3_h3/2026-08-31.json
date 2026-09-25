@@ -1,0 +1,96 @@
+{
+  "buys": [],
+  "cash": 1385.92,
+  "date": "2026-08-31",
+  "equity": 9827.12,
+  "fees": 0,
+  "fills": [],
+  "holdings": [
+    "ADSK",
+    "CIEN",
+    "DDOG",
+    "KEYS",
+    "MPWR"
+  ],
+  "mean": 0.3154,
+  "n_trades_today": 0,
+  "recipe": "union_news_pack_net3_h3",
+  "sells": [],
+  "state": {
+    "after": "2026-08-31",
+    "cash": 1385.92,
+    "pos": {
+      "ADSK": {
+        "close_px": 258.5299987792969,
+        "cost": 1830.1310256347656,
+        "entry_date": "2026-08-28",
+        "entry_px": 261.1600036621094,
+        "fee_in": 2.011,
+        "last_px": 257.7099914550781,
+        "min_hold": 3,
+        "notional": 1828.1200256347656,
+        "peak_px": 261.1600036621094,
+        "reason": "packet\ud83d\udfe2 and camera net \u2265 3; gate news_box=good,cam_net_min=3; rank cond; list earn_react; ret5=+7.8; leftover $2000.00",
+        "shares": 7,
+        "ticker": "ADSK"
+      },
+      "CIEN": {
+        "close_px": 382.79998779296875,
+        "cost": 1603.6820537109375,
+        "entry_date": "2026-08-28",
+        "entry_px": 400.4200134277344,
+        "fee_in": 2.002,
+        "last_px": 378.44000244140625,
+        "min_hold": 3,
+        "notional": 1601.6800537109375,
+        "peak_px": 400.4200134277344,
+        "reason": "packet\ud83d\udfe2 and camera net \u2265 3; gate news_box=good,cam_net_min=3; rank cond; list mover_buy; \ud83d\udd35; ret5=+1.9; leftover $2000.00",
+        "shares": 4,
+        "ticker": "CIEN"
+      },
+      "DDOG": {
+        "close_px": 237.0399932861328,
+        "cost": 1923.774009765625,
+        "entry_date": "2026-08-28",
+        "entry_px": 240.22000122070312,
+        "fee_in": 2.014,
+        "last_px": 233.96499633789062,
+        "min_hold": 3,
+        "notional": 1921.760009765625,
+        "peak_px": 240.22000122070312,
+        "reason": "packet\ud83d\udfe2 and camera net \u2265 3; gate news_box=good,cam_net_min=3; rank cond; list mover_buy; \ud83d\udd35; ret5=+4.5; leftover $2000.00",
+        "shares": 8,
+        "ticker": "DDOG"
+      },
+      "KEYS": {
+        "close_px": 322.70001220703125,
+        "cost": 1948.4680219726563,
+        "entry_date": "2026-08-28",
+        "entry_px": 324.4100036621094,
+        "fee_in": 2.008,
+        "last_px": 322.489990234375,
+        "min_hold": 3,
+        "notional": 1946.4600219726562,
+        "peak_px": 324.4100036621094,
+        "reason": "packet\ud83d\udfe2 and camera net \u2265 3; gate news_box=good,cam_net_min=3; rank cond; list mover_buy; \ud83d\udd35; \u26aa; ret5=+2.9; leftover $2000.00",
+        "shares": 6,
+        "ticker": "KEYS"
+      },
+      "MPWR": {
+        "close_px": 1267.77001953125,
+        "cost": 1308.023029296875,
+        "entry_date": "2026-08-28",
+        "entry_px": 1306.030029296875,
+        "fee_in": 1.993,
+        "last_px": 1261.9000244140625,
+        "min_hold": 3,
+        "notional": 1306.030029296875,
+        "peak_px": 1306.030029296875,
+        "reason": "packet\ud83d\udfe2 and camera net \u2265 3; gate news_box=good,cam_net_min=3; rank cond; list mover_buy; \ud83d\udd35; ret5=+0.0; leftover $2000.00",
+        "shares": 1,
+        "ticker": "MPWR"
+      }
+    },
+    "yday_equity": 9827.12
+  }
+}

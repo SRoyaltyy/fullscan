@@ -1,0 +1,288 @@
+{
+  "buys": [
+    "DXCM",
+    "ADMA",
+    "VKTX",
+    "MAZE",
+    "SGRY",
+    "THM",
+    "SHOP",
+    "FDMT"
+  ],
+  "cash": 226.43,
+  "date": "2026-09-23",
+  "equity": 10038.85,
+  "fees": 60.8538,
+  "fills": [
+    {
+      "fees": 3.3811,
+      "pnl": -55.73,
+      "price": 4.89,
+      "shares": 258,
+      "side": "SELL",
+      "ticker": "AIBZ"
+    },
+    {
+      "fees": 2.3392,
+      "pnl": -4.65,
+      "price": 12.24,
+      "shares": 107,
+      "side": "SELL",
+      "ticker": "APPS"
+    },
+    {
+      "fees": 2.1753,
+      "pnl": -15.88,
+      "price": 23.3,
+      "shares": 55,
+      "side": "SELL",
+      "ticker": "ARQQ"
+    },
+    {
+      "fees": 6.0338,
+      "pnl": -30.42,
+      "price": 2.8,
+      "shares": 461,
+      "side": "SELL",
+      "ticker": "BTQ"
+    },
+    {
+      "fees": 2.1159,
+      "pnl": 58.26,
+      "price": 38.905,
+      "shares": 35,
+      "side": "SELL",
+      "ticker": "FIVN"
+    },
+    {
+      "fees": 2.0464,
+      "pnl": 17.17,
+      "price": 108.52,
+      "shares": 12,
+      "side": "SELL",
+      "ticker": "GRAL"
+    },
+    {
+      "fees": 16.4505,
+      "pnl": -111.07,
+      "price": 0.95,
+      "shares": 1298,
+      "side": "SELL",
+      "ticker": "IVVD"
+    },
+    {
+      "fees": 5.3937,
+      "pnl": -6.59,
+      "price": 3.19,
+      "shares": 412,
+      "side": "SELL",
+      "ticker": "MX"
+    },
+    {
+      "fees": 2.032,
+      "pnl": null,
+      "price": 89.5,
+      "shares": 14,
+      "side": "BUY",
+      "ticker": "DXCM"
+    },
+    {
+      "fees": 2.383,
+      "pnl": null,
+      "price": 9.81,
+      "shares": 131,
+      "side": "BUY",
+      "ticker": "ADMA"
+    },
+    {
+      "fees": 2.08,
+      "pnl": null,
+      "price": 41.76,
+      "shares": 30,
+      "side": "BUY",
+      "ticker": "VKTX"
+    },
+    {
+      "fees": 2.125,
+      "pnl": null,
+      "price": 28.3,
+      "shares": 45,
+      "side": "BUY",
+      "ticker": "MAZE"
+    },
+    {
+      "fees": 2.236,
+      "pnl": null,
+      "price": 15.72,
+      "shares": 82,
+      "side": "BUY",
+      "ticker": "SGRY"
+    },
+    {
+      "fees": 5.8179,
+      "pnl": null,
+      "price": 2.86,
+      "shares": 451,
+      "side": "BUY",
+      "ticker": "THM"
+    },
+    {
+      "fees": 2.014,
+      "pnl": null,
+      "price": 146.62,
+      "shares": 8,
+      "side": "BUY",
+      "ticker": "SHOP"
+    },
+    {
+      "fees": 2.23,
+      "pnl": null,
+      "price": 15.97,
+      "shares": 80,
+      "side": "BUY",
+      "ticker": "FDMT"
+    }
+  ],
+  "holdings": [
+    "ADMA",
+    "DXCM",
+    "FDMT",
+    "MAZE",
+    "SGRY",
+    "SHOP",
+    "THM",
+    "VKTX"
+  ],
+  "mean": -2.3539,
+  "n_trades_today": 16,
+  "recipe": "union_macd_xup_h1",
+  "sells": [
+    "AIBZ",
+    "APPS",
+    "ARQQ",
+    "BTQ",
+    "FIVN",
+    "GRAL",
+    "IVVD",
+    "MX"
+  ],
+  "state": {
+    "after": "2026-09-23",
+    "cash": 226.43,
+    "pos": {
+      "ADMA": {
+        "close_px": 9.699999809265137,
+        "cost": 1287.4930549697876,
+        "entry_date": "2026-09-23",
+        "entry_px": 9.8100004196167,
+        "fee_in": 2.383,
+        "last_px": 9.8100004196167,
+        "min_hold": 1,
+        "notional": 1285.1100549697876,
+        "peak_px": 9.8100004196167,
+        "reason": "union \u2229 macd_xup, no \ud83d\udea8; gate macd_cross_up=True; list flatten; \ud83d\udd35; \u26aa; ret5=+13.9; leftover $1292.65",
+        "shares": 131,
+        "ticker": "ADMA"
+      },
+      "DXCM": {
+        "close_px": 87.7300033569336,
+        "cost": 1255.032,
+        "entry_date": "2026-09-23",
+        "entry_px": 89.5,
+        "fee_in": 2.032,
+        "last_px": 89.5,
+        "min_hold": 1,
+        "notional": 1253.0,
+        "peak_px": 89.5,
+        "reason": "union \u2229 macd_xup, no \ud83d\udea8; gate macd_cross_up=True; list flatten; \ud83d\udd35; \u26aa; ret5=+3.6; leftover $1292.65",
+        "shares": 14,
+        "ticker": "DXCM"
+      },
+      "FDMT": {
+        "close_px": 15.0,
+        "cost": 1279.8300213623047,
+        "entry_date": "2026-09-23",
+        "entry_px": 15.970000267028809,
+        "fee_in": 2.23,
+        "last_px": 15.970000267028809,
+        "min_hold": 1,
+        "notional": 1277.6000213623047,
+        "peak_px": 15.970000267028809,
+        "reason": "union \u2229 macd_xup, no \ud83d\udea8; gate macd_cross_up=True; list ohlc_hot; \ud83d\udd35; ret5=+16.5; leftover $1292.65",
+        "shares": 80,
+        "ticker": "FDMT"
+      },
+      "MAZE": {
+        "close_px": 28.09000015258789,
+        "cost": 1275.6249656677246,
+        "entry_date": "2026-09-23",
+        "entry_px": 28.299999237060547,
+        "fee_in": 2.125,
+        "last_px": 28.299999237060547,
+        "min_hold": 1,
+        "notional": 1273.4999656677246,
+        "peak_px": 28.299999237060547,
+        "reason": "union \u2229 macd_xup, no \ud83d\udea8; gate macd_cross_up=True; list yday_gainer,yday_mover,ohlc_hot; \ud83d\udd35; ret5=+17.1; leftover $1292.65",
+        "shares": 45,
+        "ticker": "MAZE"
+      },
+      "SGRY": {
+        "close_px": 14.5600004196167,
+        "cost": 1291.2760218963624,
+        "entry_date": "2026-09-23",
+        "entry_px": 15.720000267028809,
+        "fee_in": 2.236,
+        "last_px": 15.720000267028809,
+        "min_hold": 1,
+        "notional": 1289.0400218963623,
+        "peak_px": 15.720000267028809,
+        "reason": "union \u2229 macd_xup, no \ud83d\udea8; gate macd_cross_up=True; list yday_gainer,yday_mover,ohlc_hot; \ud83d\udd35; ret5=+15.8; leftover $1292.65",
+        "shares": 82,
+        "ticker": "SGRY"
+      },
+      "SHOP": {
+        "close_px": 142.33999633789062,
+        "cost": 1174.9739609375,
+        "entry_date": "2026-09-23",
+        "entry_px": 146.6199951171875,
+        "fee_in": 2.014,
+        "last_px": 146.6199951171875,
+        "min_hold": 1,
+        "notional": 1172.9599609375,
+        "peak_px": 146.6199951171875,
+        "reason": "union \u2229 macd_xup, no \ud83d\udea8; gate macd_cross_up=True; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+13.8; leftover $1292.65",
+        "shares": 8,
+        "ticker": "SHOP"
+      },
+      "THM": {
+        "close_px": 2.809999942779541,
+        "cost": 1295.6778526882172,
+        "entry_date": "2026-09-23",
+        "entry_px": 2.859999895095825,
+        "fee_in": 5.8179,
+        "last_px": 2.859999895095825,
+        "min_hold": 1,
+        "notional": 1289.8599526882172,
+        "peak_px": 2.859999895095825,
+        "reason": "union \u2229 macd_xup, no \ud83d\udea8; gate macd_cross_up=True; list yday_gainer; ret5=+25.5; leftover $1292.65",
+        "shares": 451,
+        "ticker": "THM"
+      },
+      "VKTX": {
+        "close_px": 41.650001525878906,
+        "cost": 1254.879949645996,
+        "entry_date": "2026-09-23",
+        "entry_px": 41.7599983215332,
+        "fee_in": 2.08,
+        "last_px": 41.7599983215332,
+        "min_hold": 1,
+        "notional": 1252.799949645996,
+        "peak_px": 41.7599983215332,
+        "reason": "union \u2229 macd_xup, no \ud83d\udea8; gate macd_cross_up=True; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+36.4; leftover $1292.65",
+        "shares": 30,
+        "ticker": "VKTX"
+      }
+    },
+    "yday_equity": 10038.85
+  }
+}

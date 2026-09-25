@@ -1,0 +1,207 @@
+{
+  "buys": [
+    "QFIN",
+    "BHVN",
+    "GENB",
+    "JKS",
+    "ZYME",
+    "QBTS",
+    "MNRO",
+    "IREN"
+  ],
+  "cash": 14897.44,
+  "date": "2026-08-28",
+  "equity": 10073.82,
+  "fees": 17.1579,
+  "fills": [
+    {
+      "fees": 2.2323465746317823,
+      "pnl": null,
+      "price": 9.15,
+      "shares": 68,
+      "side": "SHORT",
+      "ticker": "QFIN"
+    },
+    {
+      "fees": 2.143967671355156,
+      "pnl": null,
+      "price": 15.88,
+      "shares": 39,
+      "side": "SHORT",
+      "ticker": "BHVN"
+    },
+    {
+      "fees": 2.1438501374754186,
+      "pnl": null,
+      "price": 15.77,
+      "shares": 39,
+      "side": "SHORT",
+      "ticker": "GENB"
+    },
+    {
+      "fees": 2.1648498628694717,
+      "pnl": null,
+      "price": 13.37,
+      "shares": 46,
+      "side": "SHORT",
+      "ticker": "JKS"
+    },
+    {
+      "fees": 2.089633150597141,
+      "pnl": null,
+      "price": 28.91,
+      "shares": 21,
+      "side": "SHORT",
+      "ticker": "ZYME"
+    },
+    {
+      "fees": 2.1318383556522735,
+      "pnl": null,
+      "price": 17.56,
+      "shares": 35,
+      "side": "SHORT",
+      "ticker": "QBTS"
+    },
+    {
+      "fees": 2.1769589042663577,
+      "pnl": null,
+      "price": 12.38,
+      "shares": 50,
+      "side": "SHORT",
+      "ticker": "MNRO"
+    },
+    {
+      "fees": 2.0745019180088824,
+      "pnl": null,
+      "price": 37.645,
+      "shares": 16,
+      "side": "SHORT",
+      "ticker": "IREN"
+    }
+  ],
+  "holdings": [
+    "BHVN",
+    "GENB",
+    "IREN",
+    "JKS",
+    "MNRO",
+    "QBTS",
+    "QFIN",
+    "ZYME"
+  ],
+  "mean": 0.7382,
+  "n_trades_today": 8,
+  "recipe": "short_clk_neg_weak_fail_opp_h3",
+  "sells": [],
+  "state": {
+    "after": "2026-08-28",
+    "cash": 14897.44,
+    "pos": {
+      "BHVN": {
+        "close_px": 15.40999984741211,
+        "cost": 2.143967671355156,
+        "entry_date": "2026-08-28",
+        "entry_px": 15.880000114440918,
+        "fee_in": 2.143967671355156,
+        "last_px": 15.880000114440918,
+        "notional": 619.3200044631958,
+        "peak_px": 15.880000114440918,
+        "reason": "Clock-B #4 \u2229 Theme Radar T\u22121 oppset; gate clk_neg_weak_fail=True,oppset=True; rank opp_rvol; list yday_gainer,yday_mover; ret5=+19.4; leftover $625.00",
+        "shares": 39,
+        "ticker": "BHVN"
+      },
+      "GENB": {
+        "close_px": 15.329999923706055,
+        "cost": 2.1438501374754186,
+        "entry_date": "2026-08-28",
+        "entry_px": 15.770000457763672,
+        "fee_in": 2.1438501374754186,
+        "last_px": 15.770000457763672,
+        "notional": 615.0300178527832,
+        "peak_px": 15.770000457763672,
+        "reason": "Clock-B #4 \u2229 Theme Radar T\u22121 oppset; gate clk_neg_weak_fail=True,oppset=True; rank opp_rvol; list yday_mover; ret5=-1.4; leftover $625.00",
+        "shares": 39,
+        "ticker": "GENB"
+      },
+      "IREN": {
+        "close_px": 35.45000076293945,
+        "cost": 2.0745019180088824,
+        "entry_date": "2026-08-28",
+        "entry_px": 37.64500045776367,
+        "fee_in": 2.0745019180088824,
+        "last_px": 37.64500045776367,
+        "notional": 602.3200073242188,
+        "peak_px": 37.64500045776367,
+        "reason": "Clock-B #4 \u2229 Theme Radar T\u22121 oppset; gate clk_neg_weak_fail=True,oppset=True; rank opp_rvol; list earn_react; ret5=-4.9; leftover $625.00",
+        "shares": 16,
+        "ticker": "IREN"
+      },
+      "JKS": {
+        "close_px": 13.539999961853027,
+        "cost": 2.1648498628694717,
+        "entry_date": "2026-08-28",
+        "entry_px": 13.369999885559082,
+        "fee_in": 2.1648498628694717,
+        "last_px": 13.369999885559082,
+        "notional": 615.0199947357178,
+        "peak_px": 13.369999885559082,
+        "reason": "Clock-B #4 \u2229 Theme Radar T\u22121 oppset; gate clk_neg_weak_fail=True,oppset=True; rank opp_rvol; list yday_mover; ret5=-14.9; leftover $625.00",
+        "shares": 46,
+        "ticker": "JKS"
+      },
+      "MNRO": {
+        "close_px": 12.960000038146973,
+        "cost": 2.1769589042663577,
+        "entry_date": "2026-08-28",
+        "entry_px": 12.380000114440918,
+        "fee_in": 2.1769589042663577,
+        "last_px": 12.380000114440918,
+        "notional": 619.0000057220459,
+        "peak_px": 12.380000114440918,
+        "reason": "Clock-B #4 \u2229 Theme Radar T\u22121 oppset; gate clk_neg_weak_fail=True,oppset=True; rank opp_rvol; list yday_mover; ret5=+4.5; leftover $625.00",
+        "shares": 50,
+        "ticker": "MNRO"
+      },
+      "QBTS": {
+        "close_px": 16.989999771118164,
+        "cost": 2.1318383556522735,
+        "entry_date": "2026-08-28",
+        "entry_px": 17.559999465942383,
+        "fee_in": 2.1318383556522735,
+        "last_px": 17.559999465942383,
+        "notional": 614.5999813079834,
+        "peak_px": 17.559999465942383,
+        "reason": "Clock-B #4 \u2229 Theme Radar T\u22121 oppset; gate clk_neg_weak_fail=True,oppset=True; rank opp_rvol; list yday_mover; ret5=-4.8; leftover $625.00",
+        "shares": 35,
+        "ticker": "QBTS"
+      },
+      "QFIN": {
+        "close_px": 8.800000190734863,
+        "cost": 2.2323465746317823,
+        "entry_date": "2026-08-28",
+        "entry_px": 9.149999618530273,
+        "fee_in": 2.2323465746317823,
+        "last_px": 9.149999618530273,
+        "notional": 622.1999740600586,
+        "peak_px": 9.149999618530273,
+        "reason": "Clock-B #4 \u2229 Theme Radar T\u22121 oppset; gate clk_neg_weak_fail=True,oppset=True; rank opp_rvol; list yday_mover; ret5=-19.9; leftover $625.00",
+        "shares": 68,
+        "ticker": "QFIN"
+      },
+      "ZYME": {
+        "close_px": 28.270000457763672,
+        "cost": 2.089633150597141,
+        "entry_date": "2026-08-28",
+        "entry_px": 28.90999984741211,
+        "fee_in": 2.089633150597141,
+        "last_px": 28.90999984741211,
+        "notional": 607.1099967956543,
+        "peak_px": 28.90999984741211,
+        "reason": "Clock-B #4 \u2229 Theme Radar T\u22121 oppset; gate clk_neg_weak_fail=True,oppset=True; rank opp_rvol; list yday_gainer; ret5=+9.2; leftover $625.00",
+        "shares": 21,
+        "ticker": "ZYME"
+      }
+    },
+    "yday_equity": 10073.82
+  }
+}

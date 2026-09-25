@@ -1,0 +1,264 @@
+{
+  "buys": [
+    "A",
+    "MGTX",
+    "BTDR",
+    "ORBS",
+    "SBET",
+    "BTBT",
+    "SGML"
+  ],
+  "cash": 1196.05,
+  "date": "2026-09-21",
+  "equity": 9167.78,
+  "fees": 66.6314,
+  "fills": [
+    {
+      "fees": 2.016,
+      "pnl": 69.01,
+      "price": 583.88,
+      "shares": 2,
+      "side": "SELL",
+      "ticker": "AMD"
+    },
+    {
+      "fees": 2.2628,
+      "pnl": -18.61,
+      "price": 13.9,
+      "shares": 83,
+      "side": "SELL",
+      "ticker": "BHVN"
+    },
+    {
+      "fees": 4.2695,
+      "pnl": 33.91,
+      "price": 3.71,
+      "shares": 326,
+      "side": "SELL",
+      "ticker": "DDD"
+    },
+    {
+      "fees": 2.2438,
+      "pnl": -196.96,
+      "price": 12.65,
+      "shares": 77,
+      "side": "SELL",
+      "ticker": "HELP"
+    },
+    {
+      "fees": 2.04,
+      "pnl": 63.24,
+      "price": 116.53,
+      "shares": 10,
+      "side": "SELL",
+      "ticker": "INTC"
+    },
+    {
+      "fees": 16.2314,
+      "pnl": -12.8,
+      "price": 0.864,
+      "shares": 1374,
+      "side": "SELL",
+      "ticker": "RANI"
+    },
+    {
+      "fees": 2.4812,
+      "pnl": 5.71,
+      "price": 7.71,
+      "shares": 152,
+      "side": "SELL",
+      "ticker": "SHLS"
+    },
+    {
+      "fees": 2.2248,
+      "pnl": -1.59,
+      "price": 16.32,
+      "shares": 71,
+      "side": "SELL",
+      "ticker": "XE"
+    },
+    {
+      "fees": 2.011,
+      "pnl": null,
+      "price": 157.87,
+      "shares": 7,
+      "side": "BUY",
+      "ticker": "A"
+    },
+    {
+      "fees": 2.248,
+      "pnl": null,
+      "price": 13.47,
+      "shares": 86,
+      "side": "BUY",
+      "ticker": "MGTX"
+    },
+    {
+      "fees": 2.248,
+      "pnl": null,
+      "price": 13.475,
+      "shares": 86,
+      "side": "BUY",
+      "ticker": "BTDR"
+    },
+    {
+      "fees": 13.4805,
+      "pnl": null,
+      "price": 1.11,
+      "shares": 1045,
+      "side": "BUY",
+      "ticker": "ORBS"
+    },
+    {
+      "fees": 2.338,
+      "pnl": null,
+      "price": 9.99,
+      "shares": 116,
+      "side": "BUY",
+      "ticker": "SBET"
+    },
+    {
+      "fees": 8.2044,
+      "pnl": null,
+      "price": 1.825,
+      "shares": 636,
+      "side": "BUY",
+      "ticker": "BTBT"
+    },
+    {
+      "fees": 2.332,
+      "pnl": null,
+      "price": 10.135,
+      "shares": 114,
+      "side": "BUY",
+      "ticker": "SGML"
+    }
+  ],
+  "holdings": [
+    "A",
+    "BTBT",
+    "BTDR",
+    "MGTX",
+    "ORBS",
+    "SBET",
+    "SGML"
+  ],
+  "mean": 1.1549,
+  "n_trades_today": 15,
+  "recipe": "union_coil_off_h1",
+  "sells": [
+    "AMD",
+    "BHVN",
+    "DDD",
+    "HELP",
+    "INTC",
+    "RANI",
+    "SHLS",
+    "XE"
+  ],
+  "state": {
+    "after": "2026-09-21",
+    "cash": 1196.05,
+    "pos": {
+      "A": {
+        "close_px": 161.94000244140625,
+        "cost": 1107.1009658203125,
+        "entry_date": "2026-09-21",
+        "entry_px": 157.8699951171875,
+        "fee_in": 2.011,
+        "last_px": 157.8699951171875,
+        "min_hold": 1,
+        "notional": 1105.0899658203125,
+        "peak_px": 157.8699951171875,
+        "reason": "union \u2229 coil_off, no \ud83d\udea8; gate ret_5_min=0.0,ret_5_max=10.0,rvol_min=0.7,rvol_max=2.2; list flatten; \ud83d\udd35; \u26aa; ret5=+6.5; leftover $1160.77",
+        "shares": 7,
+        "ticker": "A"
+      },
+      "BTBT": {
+        "close_px": 1.8200000524520874,
+        "cost": 1168.9044303268433,
+        "entry_date": "2026-09-21",
+        "entry_px": 1.8250000476837158,
+        "fee_in": 8.2044,
+        "last_px": 1.8250000476837158,
+        "min_hold": 1,
+        "notional": 1160.7000303268433,
+        "peak_px": 1.8250000476837158,
+        "reason": "union \u2229 coil_off, no \ud83d\udea8; gate ret_5_min=0.0,ret_5_max=10.0,rvol_min=0.7,rvol_max=2.2; list probable,yday_gainer; \ud83d\udd35; ret5=+8.8; leftover $1160.77",
+        "shares": 636,
+        "ticker": "BTBT"
+      },
+      "BTDR": {
+        "close_px": 13.140000343322754,
+        "cost": 1161.0980328063965,
+        "entry_date": "2026-09-21",
+        "entry_px": 13.475000381469727,
+        "fee_in": 2.248,
+        "last_px": 13.475000381469727,
+        "min_hold": 1,
+        "notional": 1158.8500328063965,
+        "peak_px": 13.475000381469727,
+        "reason": "union \u2229 coil_off, no \ud83d\udea8; gate ret_5_min=0.0,ret_5_max=10.0,rvol_min=0.7,rvol_max=2.2; list probable,yday_gainer,yday_mover,ohlc_hot; ret5=+8.4; leftover $1160.77",
+        "shares": 86,
+        "ticker": "BTDR"
+      },
+      "MGTX": {
+        "close_px": 13.079999923706055,
+        "cost": 1160.6680229644776,
+        "entry_date": "2026-09-21",
+        "entry_px": 13.470000267028809,
+        "fee_in": 2.248,
+        "last_px": 13.470000267028809,
+        "min_hold": 1,
+        "notional": 1158.4200229644775,
+        "peak_px": 13.470000267028809,
+        "reason": "union \u2229 coil_off, no \ud83d\udea8; gate ret_5_min=0.0,ret_5_max=10.0,rvol_min=0.7,rvol_max=2.2; list flatten; \ud83d\udd35; \u26aa; ret5=+3.6; leftover $1160.77",
+        "shares": 86,
+        "ticker": "MGTX"
+      },
+      "ORBS": {
+        "close_px": 1.0499999523162842,
+        "cost": 1173.4305149488448,
+        "entry_date": "2026-09-21",
+        "entry_px": 1.1100000143051147,
+        "fee_in": 13.4805,
+        "last_px": 1.1100000143051147,
+        "min_hold": 1,
+        "notional": 1159.950014948845,
+        "peak_px": 1.1100000143051147,
+        "reason": "union \u2229 coil_off, no \ud83d\udea8; gate ret_5_min=0.0,ret_5_max=10.0,rvol_min=0.7,rvol_max=2.2; list probable,yday_gainer,yday_mover; ret5=+6.9; leftover $1160.77",
+        "shares": 1045,
+        "ticker": "ORBS"
+      },
+      "SBET": {
+        "close_px": 9.979999542236328,
+        "cost": 1161.177973449707,
+        "entry_date": "2026-09-21",
+        "entry_px": 9.989999771118164,
+        "fee_in": 2.338,
+        "last_px": 9.989999771118164,
+        "min_hold": 1,
+        "notional": 1158.839973449707,
+        "peak_px": 9.989999771118164,
+        "reason": "union \u2229 coil_off, no \ud83d\udea8; gate ret_5_min=0.0,ret_5_max=10.0,rvol_min=0.7,rvol_max=2.2; list probable,yday_gainer; \ud83d\udd35; ret5=+5.3; leftover $1160.77",
+        "shares": 116,
+        "ticker": "SBET"
+      },
+      "SGML": {
+        "close_px": 10.270000457763672,
+        "cost": 1157.7220260925294,
+        "entry_date": "2026-09-21",
+        "entry_px": 10.135000228881836,
+        "fee_in": 2.332,
+        "last_px": 10.135000228881836,
+        "min_hold": 1,
+        "notional": 1155.3900260925293,
+        "peak_px": 10.135000228881836,
+        "reason": "union \u2229 coil_off, no \ud83d\udea8; gate ret_5_min=0.0,ret_5_max=10.0,rvol_min=0.7,rvol_max=2.2; list probable,yday_gainer; ret5=+4.9; leftover $1160.77",
+        "shares": 114,
+        "ticker": "SGML"
+      }
+    },
+    "yday_equity": 9167.78
+  }
+}

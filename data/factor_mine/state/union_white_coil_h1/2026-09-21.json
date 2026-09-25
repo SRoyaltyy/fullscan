@@ -1,0 +1,90 @@
+{
+  "buys": [
+    "A",
+    "MGTX"
+  ],
+  "cash": 76.25,
+  "date": "2026-09-21",
+  "equity": 8328.41,
+  "fees": 12.393,
+  "fills": [
+    {
+      "fees": 2.3361,
+      "pnl": -111.44,
+      "price": 45.7,
+      "shares": 98,
+      "side": "SELL",
+      "ticker": "EWTX"
+    },
+    {
+      "fees": 4.0028,
+      "pnl": -767.92,
+      "price": 12.65,
+      "shares": 304,
+      "side": "SELL",
+      "ticker": "HELP"
+    },
+    {
+      "fees": 2.068,
+      "pnl": null,
+      "price": 157.87,
+      "shares": 26,
+      "side": "BUY",
+      "ticker": "A"
+    },
+    {
+      "fees": 3.9861,
+      "pnl": null,
+      "price": 13.47,
+      "shares": 309,
+      "side": "BUY",
+      "ticker": "MGTX"
+    }
+  ],
+  "holdings": [
+    "A",
+    "MGTX"
+  ],
+  "mean": 1.1573,
+  "n_trades_today": 4,
+  "recipe": "union_white_coil_h1",
+  "sells": [
+    "EWTX",
+    "HELP"
+  ],
+  "state": {
+    "after": "2026-09-21",
+    "cash": 76.25,
+    "pos": {
+      "A": {
+        "close_px": 161.94000244140625,
+        "cost": 4106.687873046875,
+        "entry_date": "2026-09-21",
+        "entry_px": 157.8699951171875,
+        "fee_in": 2.068,
+        "last_px": 157.8699951171875,
+        "min_hold": 1,
+        "notional": 4104.619873046875,
+        "peak_px": 157.8699951171875,
+        "reason": "combo gate; gate zero_red=True,ret_5_max=10.0,rvol_max=2.2; list flatten; \ud83d\udd35; \u26aa; ret5=+6.5; leftover $4174.58",
+        "shares": 26,
+        "ticker": "A"
+      },
+      "MGTX": {
+        "close_px": 13.079999923706055,
+        "cost": 4166.216182511902,
+        "entry_date": "2026-09-21",
+        "entry_px": 13.470000267028809,
+        "fee_in": 3.9861,
+        "last_px": 13.470000267028809,
+        "min_hold": 1,
+        "notional": 4162.230082511902,
+        "peak_px": 13.470000267028809,
+        "reason": "combo gate; gate zero_red=True,ret_5_max=10.0,rvol_max=2.2; list flatten; \ud83d\udd35; \u26aa; ret5=+3.6; leftover $4174.58",
+        "shares": 309,
+        "ticker": "MGTX"
+      }
+    },
+    "yday_equity": 8328.41
+  }
+}

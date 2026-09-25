@@ -1,0 +1,111 @@
+{
+  "buys": [],
+  "cash": 197.43,
+  "date": "2026-09-15",
+  "equity": 8476.38,
+  "fees": 0,
+  "fills": [],
+  "holdings": [
+    "AUPH",
+    "COHU",
+    "NVT",
+    "ORCL",
+    "OVID",
+    "SANM"
+  ],
+  "mean": -1.3066,
+  "n_trades_today": 0,
+  "recipe": "flatten_h3_time",
+  "sells": [],
+  "state": {
+    "after": "2026-09-15",
+    "cash": 197.43,
+    "pos": {
+      "AUPH": {
+        "close_px": 16.1299991607666,
+        "cost": 1516.3090638580322,
+        "entry_date": "2026-09-11",
+        "entry_px": 16.280000686645508,
+        "fee_in": 2.269,
+        "last_px": 16.350000381469727,
+        "min_hold": 3,
+        "notional": 1514.0400638580322,
+        "peak_px": 16.350000381469727,
+        "reason": "sell at min-hold even if still listed; list flatten; wish-list (live io HOLD \u2014 not a ticket); ret5=-0.1; leftover $1517.73",
+        "shares": 93,
+        "ticker": "AUPH"
+      },
+      "COHU": {
+        "close_px": 49.970001220703125,
+        "cost": 1516.501004119873,
+        "entry_date": "2026-09-11",
+        "entry_px": 56.09000015258789,
+        "fee_in": 2.071,
+        "last_px": 51.06999969482422,
+        "min_hold": 3,
+        "notional": 1514.430004119873,
+        "peak_px": 56.09000015258789,
+        "reason": "sell at min-hold even if still listed; list flatten; wish-list (live io HOLD \u2014 not a ticket); \ud83d\udd35; \u26aa; ret5=+19.0; leftover $1517.73",
+        "shares": 27,
+        "ticker": "COHU"
+      },
+      "NVT": {
+        "close_px": 146.8000030517578,
+        "cost": 1422.036989013672,
+        "entry_date": "2026-09-11",
+        "entry_px": 157.77999877929688,
+        "fee_in": 2.017,
+        "last_px": 151.1199951171875,
+        "min_hold": 3,
+        "notional": 1420.0199890136719,
+        "peak_px": 157.77999877929688,
+        "reason": "sell at min-hold even if still listed; list flatten; wish-list (live io HOLD \u2014 not a ticket); \ud83d\udd35; ret5=+2.0; leftover $1517.73",
+        "shares": 9,
+        "ticker": "NVT"
+      },
+      "ORCL": {
+        "close_px": 140.35000610351562,
+        "cost": 1481.8869340820313,
+        "entry_date": "2026-09-11",
+        "entry_px": 164.42999267578125,
+        "fee_in": 2.017,
+        "last_px": 143.4600067138672,
+        "min_hold": 3,
+        "notional": 1479.8699340820312,
+        "peak_px": 164.42999267578125,
+        "reason": "sell at min-hold even if still listed; list flatten,earn_react; wish-list (live io HOLD \u2014 not a ticket); \ud83d\udd35; \u26aa; ret5=-0.7; leftover $1517.73",
+        "shares": 9,
+        "ticker": "ORCL"
+      },
+      "OVID": {
+        "close_px": 2.7100000381469727,
+        "cost": 1522.309510585785,
+        "entry_date": "2026-09-11",
+        "entry_px": 2.7300000190734863,
+        "fee_in": 7.1595,
+        "last_px": 2.7300000190734863,
+        "min_hold": 3,
+        "notional": 1515.150010585785,
+        "peak_px": 2.755000114440918,
+        "reason": "sell at min-hold even if still listed; list flatten; wish-list (live io HOLD \u2014 not a ticket); ret5=-5.4; leftover $1517.73",
+        "shares": 555,
+        "ticker": "OVID"
+      },
+      "SANM": {
+        "close_px": 191.61000061035156,
+        "cost": 1449.8909743652343,
+        "entry_date": "2026-09-11",
+        "entry_px": 206.83999633789062,
+        "fee_in": 2.011,
+        "last_px": 198.32000732421875,
+        "min_hold": 3,
+        "notional": 1447.8799743652344,
+        "peak_px": 206.83999633789062,
+        "reason": "sell at min-hold even if still listed; list flatten; wish-list (live io HOLD \u2014 not a ticket); ret5=+3.9; leftover $1517.73",
+        "shares": 7,
+        "ticker": "SANM"
+      }
+    },
+    "yday_equity": 8476.38
+  }
+}

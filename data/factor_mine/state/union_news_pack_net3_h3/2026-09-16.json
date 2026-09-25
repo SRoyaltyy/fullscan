@@ -1,0 +1,81 @@
+{
+  "buys": [
+    "SM",
+    "QCOM"
+  ],
+  "cash": 124.44,
+  "date": "2026-09-16",
+  "equity": 7860.24,
+  "fees": 6.585,
+  "fills": [
+    {
+      "fees": 2.239,
+      "pnl": -1419.6,
+      "price": 140.03,
+      "shares": 58,
+      "side": "SELL",
+      "ticker": "ORCL"
+    },
+    {
+      "fees": 2.293,
+      "pnl": null,
+      "price": 39.99,
+      "shares": 101,
+      "side": "BUY",
+      "ticker": "SM"
+    },
+    {
+      "fees": 2.053,
+      "pnl": null,
+      "price": 189.17,
+      "shares": 21,
+      "side": "BUY",
+      "ticker": "QCOM"
+    }
+  ],
+  "holdings": [
+    "QCOM",
+    "SM"
+  ],
+  "mean": -3.6871,
+  "n_trades_today": 3,
+  "recipe": "union_news_pack_net3_h3",
+  "sells": [
+    "ORCL"
+  ],
+  "state": {
+    "after": "2026-09-16",
+    "cash": 124.44,
+    "pos": {
+      "QCOM": {
+        "close_px": 184.83999633789062,
+        "cost": 3974.6229615478514,
+        "entry_date": "2026-09-16",
+        "entry_px": 189.1699981689453,
+        "fee_in": 2.053,
+        "last_px": 189.1699981689453,
+        "min_hold": 3,
+        "notional": 3972.5699615478516,
+        "peak_px": 189.1699981689453,
+        "reason": "packet\ud83d\udfe2 and camera net \u2265 3; gate news_box=good,cam_net_min=3; rank cond; list ohlc_hot; \ud83d\udd35; ret5=+7.9; leftover $4070.18",
+        "shares": 21,
+        "ticker": "QCOM"
+      },
+      "SM": {
+        "close_px": 38.15999984741211,
+        "cost": 4041.2831695251466,
+        "entry_date": "2026-09-16",
+        "entry_px": 39.9900016784668,
+        "fee_in": 2.293,
+        "last_px": 39.9900016784668,
+        "min_hold": 3,
+        "notional": 4038.9901695251465,
+        "peak_px": 39.9900016784668,
+        "reason": "packet\ud83d\udfe2 and camera net \u2265 3; gate news_box=good,cam_net_min=3; rank cond; list ohlc_hot; \ud83d\udd35; ret5=+9.3; leftover $4070.18",
+        "shares": 101,
+        "ticker": "SM"
+      }
+    },
+    "yday_equity": 7860.24
+  }
+}

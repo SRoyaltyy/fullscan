@@ -1,0 +1,207 @@
+{
+  "buys": [
+    "PYXS",
+    "SAFX",
+    "XPOF",
+    "BHVN",
+    "OPTU",
+    "ZYME",
+    "GENB",
+    "QFIN"
+  ],
+  "cash": 14928.28,
+  "date": "2026-08-28",
+  "equity": 10048.13,
+  "fees": 33.4959,
+  "fills": [
+    {
+      "fees": 2.6123002736287577,
+      "pnl": null,
+      "price": 3.32,
+      "shares": 188,
+      "side": "SHORT",
+      "ticker": "PYXS"
+    },
+    {
+      "fees": 11.696120000447312,
+      "pnl": null,
+      "price": 0.365,
+      "shares": 1712,
+      "side": "SHORT",
+      "ticker": "SAFX"
+    },
+    {
+      "fees": 2.384398082555484,
+      "pnl": null,
+      "price": 5.38,
+      "shares": 116,
+      "side": "SHORT",
+      "ticker": "XPOF"
+    },
+    {
+      "fees": 2.143967671355156,
+      "pnl": null,
+      "price": 15.88,
+      "shares": 39,
+      "side": "SHORT",
+      "ticker": "BHVN"
+    },
+    {
+      "fees": 8.193323287671232,
+      "pnl": null,
+      "price": 1.0,
+      "shares": 625,
+      "side": "SHORT",
+      "ticker": "OPTU"
+    },
+    {
+      "fees": 2.089633150597141,
+      "pnl": null,
+      "price": 28.91,
+      "shares": 21,
+      "side": "SHORT",
+      "ticker": "ZYME"
+    },
+    {
+      "fees": 2.1438501374754186,
+      "pnl": null,
+      "price": 15.77,
+      "shares": 39,
+      "side": "SHORT",
+      "ticker": "GENB"
+    },
+    {
+      "fees": 2.2323465746317823,
+      "pnl": null,
+      "price": 9.15,
+      "shares": 68,
+      "side": "SHORT",
+      "ticker": "QFIN"
+    }
+  ],
+  "holdings": [
+    "BHVN",
+    "GENB",
+    "OPTU",
+    "PYXS",
+    "QFIN",
+    "SAFX",
+    "XPOF",
+    "ZYME"
+  ],
+  "mean": 0.4813,
+  "n_trades_today": 8,
+  "recipe": "short_clk_neg_weak_fail_h3",
+  "sells": [],
+  "state": {
+    "after": "2026-08-28",
+    "cash": 14928.28,
+    "pos": {
+      "BHVN": {
+        "close_px": 15.40999984741211,
+        "cost": 2.143967671355156,
+        "entry_date": "2026-08-28",
+        "entry_px": 15.880000114440918,
+        "fee_in": 2.143967671355156,
+        "last_px": 15.880000114440918,
+        "notional": 619.3200044631958,
+        "peak_px": 15.880000114440918,
+        "reason": "Clock-B #4 neg catalyst + weakness + failed recovery; gate clk_neg_weak_fail=True; list yday_gainer,yday_mover; ret5=+19.4; leftover $625.00",
+        "shares": 39,
+        "ticker": "BHVN"
+      },
+      "GENB": {
+        "close_px": 15.329999923706055,
+        "cost": 2.1438501374754186,
+        "entry_date": "2026-08-28",
+        "entry_px": 15.770000457763672,
+        "fee_in": 2.1438501374754186,
+        "last_px": 15.770000457763672,
+        "notional": 615.0300178527832,
+        "peak_px": 15.770000457763672,
+        "reason": "Clock-B #4 neg catalyst + weakness + failed recovery; gate clk_neg_weak_fail=True; list yday_mover; ret5=-1.4; leftover $625.00",
+        "shares": 39,
+        "ticker": "GENB"
+      },
+      "OPTU": {
+        "close_px": 1.0199999809265137,
+        "cost": 8.193323287671232,
+        "entry_date": "2026-08-28",
+        "entry_px": 1.0,
+        "fee_in": 8.193323287671232,
+        "last_px": 1.0,
+        "notional": 625.0,
+        "peak_px": 1.0,
+        "reason": "Clock-B #4 neg catalyst + weakness + failed recovery; gate clk_neg_weak_fail=True; list yday_gainer; ret5=+16.8; leftover $625.00",
+        "shares": 625,
+        "ticker": "OPTU"
+      },
+      "PYXS": {
+        "close_px": 3.2300000190734863,
+        "cost": 2.6123002736287577,
+        "entry_date": "2026-08-28",
+        "entry_px": 3.319999933242798,
+        "fee_in": 2.6123002736287577,
+        "last_px": 3.319999933242798,
+        "notional": 624.159987449646,
+        "peak_px": 3.319999933242798,
+        "reason": "Clock-B #4 neg catalyst + weakness + failed recovery; gate clk_neg_weak_fail=True; list probable,yday_gainer; ret5=+6.4; leftover $625.00",
+        "shares": 188,
+        "ticker": "PYXS"
+      },
+      "QFIN": {
+        "close_px": 8.800000190734863,
+        "cost": 2.2323465746317823,
+        "entry_date": "2026-08-28",
+        "entry_px": 9.149999618530273,
+        "fee_in": 2.2323465746317823,
+        "last_px": 9.149999618530273,
+        "notional": 622.1999740600586,
+        "peak_px": 9.149999618530273,
+        "reason": "Clock-B #4 neg catalyst + weakness + failed recovery; gate clk_neg_weak_fail=True; list yday_mover; ret5=-19.9; leftover $625.00",
+        "shares": 68,
+        "ticker": "QFIN"
+      },
+      "SAFX": {
+        "close_px": 0.35899999737739563,
+        "cost": 11.696120000447312,
+        "entry_date": "2026-08-28",
+        "entry_px": 0.36500000953674316,
+        "fee_in": 11.696120000447312,
+        "last_px": 0.36500000953674316,
+        "notional": 624.8800163269043,
+        "peak_px": 0.36500000953674316,
+        "reason": "Clock-B #4 neg catalyst + weakness + failed recovery; gate clk_neg_weak_fail=True; list probable,yday_gainer; ret5=+7.6; leftover $625.00",
+        "shares": 1712,
+        "ticker": "SAFX"
+      },
+      "XPOF": {
+        "close_px": 5.429999828338623,
+        "cost": 2.384398082555484,
+        "entry_date": "2026-08-28",
+        "entry_px": 5.380000114440918,
+        "fee_in": 2.384398082555484,
+        "last_px": 5.380000114440918,
+        "notional": 624.0800132751465,
+        "peak_px": 5.380000114440918,
+        "reason": "Clock-B #4 neg catalyst + weakness + failed recovery; gate clk_neg_weak_fail=True; list probable,yday_gainer; ret5=+6.5; leftover $625.00",
+        "shares": 116,
+        "ticker": "XPOF"
+      },
+      "ZYME": {
+        "close_px": 28.270000457763672,
+        "cost": 2.089633150597141,
+        "entry_date": "2026-08-28",
+        "entry_px": 28.90999984741211,
+        "fee_in": 2.089633150597141,
+        "last_px": 28.90999984741211,
+        "notional": 607.1099967956543,
+        "peak_px": 28.90999984741211,
+        "reason": "Clock-B #4 neg catalyst + weakness + failed recovery; gate clk_neg_weak_fail=True; list yday_gainer; ret5=+9.2; leftover $625.00",
+        "shares": 21,
+        "ticker": "ZYME"
+      }
+    },
+    "yday_equity": 10048.13
+  }
+}

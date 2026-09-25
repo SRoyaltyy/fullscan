@@ -1,0 +1,81 @@
+{
+  "buys": [
+    "HELP",
+    "EWTX"
+  ],
+  "cash": 31.29,
+  "date": "2026-09-18",
+  "equity": 8233.13,
+  "fees": 59.2233,
+  "fills": [
+    {
+      "fees": 53.0177,
+      "pnl": -551.01,
+      "price": 2.29,
+      "shares": 4052,
+      "side": "SELL",
+      "ticker": "SABR"
+    },
+    {
+      "fees": 3.9216,
+      "pnl": null,
+      "price": 15.15,
+      "shares": 304,
+      "side": "BUY",
+      "ticker": "HELP"
+    },
+    {
+      "fees": 2.284,
+      "pnl": null,
+      "price": 46.79,
+      "shares": 98,
+      "side": "BUY",
+      "ticker": "EWTX"
+    }
+  ],
+  "holdings": [
+    "EWTX",
+    "HELP"
+  ],
+  "mean": -12.4423,
+  "n_trades_today": 3,
+  "recipe": "union_white_coil_h1",
+  "sells": [
+    "SABR"
+  ],
+  "state": {
+    "after": "2026-09-18",
+    "cash": 31.29,
+    "pos": {
+      "EWTX": {
+        "close_px": 45.31999969482422,
+        "cost": 4587.704089721679,
+        "entry_date": "2026-09-18",
+        "entry_px": 46.790000915527344,
+        "fee_in": 2.284,
+        "last_px": 46.790000915527344,
+        "min_hold": 1,
+        "notional": 4585.42008972168,
+        "peak_px": 46.790000915527344,
+        "reason": "combo gate; gate zero_red=True,ret_5_max=10.0,rvol_max=2.2; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+9.4; leftover $4614.26",
+        "shares": 98,
+        "ticker": "EWTX"
+      },
+      "HELP": {
+        "close_px": 12.369999885559082,
+        "cost": 4609.521484033203,
+        "entry_date": "2026-09-18",
+        "entry_px": 15.149999618530273,
+        "fee_in": 3.9216,
+        "last_px": 15.149999618530273,
+        "min_hold": 1,
+        "notional": 4605.599884033203,
+        "peak_px": 15.149999618530273,
+        "reason": "combo gate; gate zero_red=True,ret_5_max=10.0,rvol_max=2.2; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+9.2; leftover $4614.26",
+        "shares": 304,
+        "ticker": "HELP"
+      }
+    },
+    "yday_equity": 8233.13
+  }
+}

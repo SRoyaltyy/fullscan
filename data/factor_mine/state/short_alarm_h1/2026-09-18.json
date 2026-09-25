@@ -1,0 +1,142 @@
+{
+  "buys": [
+    "DELL",
+    "SMTC"
+  ],
+  "cash": 14684.27,
+  "date": "2026-09-18",
+  "equity": 10007.03,
+  "fees": 20.6279,
+  "fills": [
+    {
+      "fees": 2.056,
+      "pnl": -11.19,
+      "price": 28.55,
+      "shares": 22,
+      "side": "COVER",
+      "ticker": "ADPT"
+    },
+    {
+      "fees": 2.041,
+      "pnl": 2.85,
+      "price": 34.52,
+      "shares": 17,
+      "side": "COVER",
+      "ticker": "AMN"
+    },
+    {
+      "fees": 2.026,
+      "pnl": -30.73,
+      "price": 54.1,
+      "shares": 12,
+      "side": "COVER",
+      "ticker": "CVI"
+    },
+    {
+      "fees": 2.041,
+      "pnl": -50.7,
+      "price": 39.5,
+      "shares": 17,
+      "side": "COVER",
+      "ticker": "FPS"
+    },
+    {
+      "fees": 2.023,
+      "pnl": 30.24,
+      "price": 51.19,
+      "shares": 11,
+      "side": "COVER",
+      "ticker": "FRO"
+    },
+    {
+      "fees": 1.996,
+      "pnl": -34.58,
+      "price": 249.13,
+      "shares": 2,
+      "side": "COVER",
+      "ticker": "ILMN"
+    },
+    {
+      "fees": 2.224,
+      "pnl": -18.53,
+      "price": 8.2,
+      "shares": 78,
+      "side": "COVER",
+      "ticker": "NAT"
+    },
+    {
+      "fees": 2.002,
+      "pnl": 0.4,
+      "price": 146.5,
+      "shares": 4,
+      "side": "COVER",
+      "ticker": "RVTY"
+    },
+    {
+      "fees": 2.096002742401541,
+      "pnl": null,
+      "price": 593.15,
+      "shares": 4,
+      "side": "SHORT",
+      "ticker": "DELL"
+    },
+    {
+      "fees": 2.1229394527069507,
+      "pnl": null,
+      "price": 182.33,
+      "shares": 13,
+      "side": "SHORT",
+      "ticker": "SMTC"
+    }
+  ],
+  "holdings": [
+    "DELL",
+    "SMTC"
+  ],
+  "mean": 0.4204,
+  "n_trades_today": 10,
+  "recipe": "short_alarm_h1",
+  "sells": [
+    "ADPT",
+    "AMN",
+    "CVI",
+    "FPS",
+    "FRO",
+    "ILMN",
+    "NAT",
+    "RVTY"
+  ],
+  "state": {
+    "after": "2026-09-18",
+    "cash": 14684.27,
+    "pos": {
+      "DELL": {
+        "close_px": 568.0599975585938,
+        "cost": 2.096002742401541,
+        "entry_date": "2026-09-18",
+        "entry_px": 593.1500244140625,
+        "fee_in": 2.096002742401541,
+        "last_px": 593.1500244140625,
+        "notional": 2372.60009765625,
+        "peak_px": 593.1500244140625,
+        "reason": "alarm; gate alarm=True; list flatten,ohlc_hot; ret5=+16.1; leftover $2486.40",
+        "shares": 4,
+        "ticker": "DELL"
+      },
+      "SMTC": {
+        "close_px": 185.0,
+        "cost": 2.1229394527069507,
+        "entry_date": "2026-09-18",
+        "entry_px": 182.3300018310547,
+        "fee_in": 2.1229394527069507,
+        "last_px": 182.3300018310547,
+        "notional": 2370.290023803711,
+        "peak_px": 182.3300018310547,
+        "reason": "alarm; gate alarm=True; list ohlc_hot; ret5=+12.0; leftover $2486.40",
+        "shares": 13,
+        "ticker": "SMTC"
+      }
+    },
+    "yday_equity": 10007.03
+  }
+}

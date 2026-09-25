@@ -1,0 +1,39 @@
+{
+  "buys": [],
+  "cash": 8812.0,
+  "date": "2026-09-17",
+  "equity": 8812.0,
+  "fees": 6.8497,
+  "fills": [
+    {
+      "fees": 4.6308,
+      "pnl": -903.25,
+      "price": 11.21,
+      "shares": 352,
+      "side": "SELL",
+      "ticker": "ALMU"
+    },
+    {
+      "fees": 2.2189,
+      "pnl": 17.81,
+      "price": 81.0,
+      "shares": 60,
+      "side": "SELL",
+      "ticker": "LEN"
+    }
+  ],
+  "holdings": [],
+  "mean": -6.6712,
+  "n_trades_today": 2,
+  "recipe": "overnight_h1",
+  "sells": [
+    "ALMU",
+    "LEN"
+  ],
+  "state": {
+    "after": "2026-09-17",
+    "cash": 8812.0,
+    "pos": {},
+    "yday_equity": 8812.0
+  }
+}

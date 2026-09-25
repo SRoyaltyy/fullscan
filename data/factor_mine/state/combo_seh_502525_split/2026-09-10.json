@@ -1,0 +1,137 @@
+{
+  "buys": [],
+  "cash": 9945.6,
+  "date": "2026-09-10",
+  "equity": 9945.6,
+  "fees": 27.3391,
+  "fills": [
+    {
+      "fees": 2.545,
+      "pnl": 52.2,
+      "price": 4.36,
+      "shares": 185,
+      "side": "COVER",
+      "ticker": "GSM"
+    },
+    {
+      "fees": 7.0176,
+      "pnl": 18.48,
+      "price": 1.53,
+      "shares": 544,
+      "side": "COVER",
+      "ticker": "OPK"
+    },
+    {
+      "fees": 2.023,
+      "pnl": -6.73,
+      "price": 76.79,
+      "shares": 11,
+      "side": "COVER",
+      "ticker": "PIPR"
+    },
+    {
+      "fees": 2.022,
+      "pnl": 13.02,
+      "price": 67.44,
+      "shares": 4,
+      "side": "SELL",
+      "ticker": "AMBA"
+    },
+    {
+      "fees": 2.109,
+      "pnl": -20.04,
+      "price": 8.26,
+      "shares": 33,
+      "side": "SELL",
+      "ticker": "ASAN"
+    },
+    {
+      "fees": 2.022,
+      "pnl": -19.7,
+      "price": 64.6,
+      "shares": 4,
+      "side": "SELL",
+      "ticker": "DOCU"
+    },
+    {
+      "fees": 1.4473,
+      "pnl": -28.25,
+      "price": 142.43,
+      "shares": 1,
+      "side": "SELL",
+      "ticker": "GWRE"
+    },
+    {
+      "fees": 2.028,
+      "pnl": -44.09,
+      "price": 38.225,
+      "shares": 6,
+      "side": "SELL",
+      "ticker": "IOT"
+    },
+    {
+      "fees": 2.0002,
+      "pnl": -2.85,
+      "price": 98.71,
+      "shares": 2,
+      "side": "SELL",
+      "ticker": "LULU"
+    },
+    {
+      "fees": 2.064,
+      "pnl": -12.03,
+      "price": 15.26,
+      "shares": 18,
+      "side": "SELL",
+      "ticker": "MAMA"
+    },
+    {
+      "fees": 2.061,
+      "pnl": -50.17,
+      "price": 13.53,
+      "shares": 17,
+      "side": "SELL",
+      "ticker": "PATH"
+    }
+  ],
+  "holdings": [],
+  "mean": -0.0513,
+  "n_trades_today": 11,
+  "recipe": "combo_seh_502525_split",
+  "sells": [
+    "GSM",
+    "OPK",
+    "PIPR",
+    "AMBA",
+    "ASAN",
+    "DOCU",
+    "GWRE",
+    "IOT",
+    "LULU",
+    "MAMA",
+    "PATH"
+  ],
+  "state": {
+    "after": "2026-09-10",
+    "cash": 9945.6,
+    "members": [
+      {
+        "cash": 5261.12,
+        "pos": {},
+        "yday_equity": 5261.12
+      },
+      {
+        "cash": 2152.4,
+        "pos": {},
+        "yday_equity": 2152.4
+      },
+      {
+        "cash": 2532.08,
+        "pos": {},
+        "yday_equity": 2532.08
+      }
+    ],
+    "pos": {},
+    "yday_equity": 9945.6
+  }
+}

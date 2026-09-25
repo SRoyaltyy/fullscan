@@ -1,0 +1,101 @@
+{
+  "buys": [],
+  "cash": 8127.44,
+  "date": "2026-09-14",
+  "equity": 9153.92,
+  "fees": 20.1689,
+  "fills": [
+    {
+      "fees": 2.3166,
+      "pnl": -17.61,
+      "price": 11.75,
+      "shares": 100,
+      "side": "SELL",
+      "ticker": "APPS"
+    },
+    {
+      "fees": 7.3662,
+      "pnl": -54.04,
+      "price": 2.05,
+      "shares": 563,
+      "side": "SELL",
+      "ticker": "BAK"
+    },
+    {
+      "fees": 2.073,
+      "pnl": -85.19,
+      "price": 52.23,
+      "shares": 21,
+      "side": "SELL",
+      "ticker": "COHU"
+    },
+    {
+      "fees": 2.3261,
+      "pnl": -3.6,
+      "price": 11.56,
+      "shares": 103,
+      "side": "SELL",
+      "ticker": "FUBO"
+    },
+    {
+      "fees": 2.031,
+      "pnl": -165.11,
+      "price": 141.42,
+      "shares": 7,
+      "side": "SELL",
+      "ticker": "ORCL"
+    },
+    {
+      "fees": 2.031,
+      "pnl": 13.11,
+      "price": 160.0,
+      "shares": 7,
+      "side": "SELL",
+      "ticker": "RDDT"
+    },
+    {
+      "fees": 2.025,
+      "pnl": -5.73,
+      "price": 206.5,
+      "shares": 5,
+      "side": "SELL",
+      "ticker": "SANM"
+    }
+  ],
+  "holdings": [
+    "NVT"
+  ],
+  "mean": -3.6412,
+  "n_trades_today": 7,
+  "recipe": "union_macd_up_h1",
+  "sells": [
+    "APPS",
+    "BAK",
+    "COHU",
+    "FUBO",
+    "ORCL",
+    "RDDT",
+    "SANM"
+  ],
+  "state": {
+    "after": "2026-09-14",
+    "cash": 8127.44,
+    "pos": {
+      "NVT": {
+        "close_px": 146.63999938964844,
+        "cost": 1106.470991455078,
+        "entry_date": "2026-09-11",
+        "entry_px": 157.77999877929688,
+        "fee_in": 2.011,
+        "last_px": 150.0,
+        "min_hold": 1,
+        "notional": 1104.4599914550781,
+        "peak_px": 157.77999877929688,
+        "reason": "union \u2229 macd_up, no \ud83d\udea8; gate macd_up=True; list flatten; \ud83d\udd35; ret5=+2.0; leftover $1194.01",
+        "shares": 7,
+        "ticker": "NVT"
+      }
+    },
+    "yday_equity": 9153.92
+  }
+}

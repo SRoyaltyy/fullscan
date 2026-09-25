@@ -1,0 +1,95 @@
+{
+  "buys": [
+    "ABVX",
+    "MLKN",
+    "THO"
+  ],
+  "cash": 159.58,
+  "date": "2026-09-21",
+  "equity": 8735.01,
+  "fees": 6.597,
+  "fills": [
+    {
+      "fees": 2.071,
+      "pnl": null,
+      "price": 105.72,
+      "shares": 27,
+      "side": "BUY",
+      "ticker": "ABVX"
+    },
+    {
+      "fees": 2.41,
+      "pnl": null,
+      "price": 20.85,
+      "shares": 140,
+      "side": "BUY",
+      "ticker": "MLKN"
+    },
+    {
+      "fees": 2.116,
+      "pnl": null,
+      "price": 68.39,
+      "shares": 42,
+      "side": "BUY",
+      "ticker": "THO"
+    }
+  ],
+  "holdings": [
+    "ABVX",
+    "MLKN",
+    "THO"
+  ],
+  "mean": -0.8737,
+  "n_trades_today": 3,
+  "recipe": "overnight_h1",
+  "sells": [],
+  "state": {
+    "after": "2026-09-21",
+    "cash": 159.58,
+    "pos": {
+      "ABVX": {
+        "close_px": 103.44999694824219,
+        "cost": 2856.5110329589843,
+        "entry_date": "2026-09-21",
+        "entry_px": 105.72000122070312,
+        "fee_in": 2.071,
+        "last_px": 105.72000122070312,
+        "min_hold": 1,
+        "notional": 2854.4400329589844,
+        "peak_px": 105.72000122070312,
+        "reason": "baseline list, no extra gate; list overnight; ret5=-11.5; leftover $2937.33",
+        "shares": 27,
+        "ticker": "ABVX"
+      },
+      "MLKN": {
+        "close_px": 20.31999969482422,
+        "cost": 2921.4100534057616,
+        "entry_date": "2026-09-21",
+        "entry_px": 20.850000381469727,
+        "fee_in": 2.41,
+        "last_px": 20.850000381469727,
+        "min_hold": 1,
+        "notional": 2919.0000534057617,
+        "peak_px": 20.850000381469727,
+        "reason": "baseline list, no extra gate; list overnight; ret5=-2.5; leftover $2937.33",
+        "shares": 140,
+        "ticker": "MLKN"
+      },
+      "THO": {
+        "close_px": 69.94000244140625,
+        "cost": 2874.4959743652344,
+        "entry_date": "2026-09-21",
+        "entry_px": 68.38999938964844,
+        "fee_in": 2.116,
+        "last_px": 68.38999938964844,
+        "min_hold": 1,
+        "notional": 2872.3799743652344,
+        "peak_px": 68.38999938964844,
+        "reason": "baseline list, no extra gate; list overnight; ret5=-7.0; leftover $2937.33",
+        "shares": 42,
+        "ticker": "THO"
+      }
+    },
+    "yday_equity": 8735.01
+  }
+}

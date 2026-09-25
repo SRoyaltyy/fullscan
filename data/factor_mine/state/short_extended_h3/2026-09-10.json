@@ -1,0 +1,100 @@
+{
+  "buys": [],
+  "cash": 11078.26,
+  "date": "2026-09-10",
+  "equity": 10228.46,
+  "fees": 20.9172,
+  "fills": [
+    {
+      "fees": 2.065,
+      "pnl": -26.17,
+      "price": 26.06,
+      "shares": 25,
+      "side": "COVER",
+      "ticker": "ASST"
+    },
+    {
+      "fees": 4.2312,
+      "pnl": -18.38,
+      "price": 1.97,
+      "shares": 328,
+      "side": "COVER",
+      "ticker": "BAK"
+    },
+    {
+      "fees": 2.137,
+      "pnl": 38.81,
+      "price": 12.07,
+      "shares": 49,
+      "side": "COVER",
+      "ticker": "FMC"
+    },
+    {
+      "fees": 5.547,
+      "pnl": 36.11,
+      "price": 1.37,
+      "shares": 430,
+      "side": "COVER",
+      "ticker": "GPRO"
+    },
+    {
+      "fees": 2.32,
+      "pnl": 94.31,
+      "price": 4.85,
+      "shares": 110,
+      "side": "COVER",
+      "ticker": "LENZ"
+    },
+    {
+      "fees": 2.606,
+      "pnl": 109.87,
+      "price": 2.58,
+      "shares": 202,
+      "side": "COVER",
+      "ticker": "SLBT"
+    },
+    {
+      "fees": 2.011,
+      "pnl": 8.6,
+      "price": 80.892,
+      "shares": 7,
+      "side": "COVER",
+      "ticker": "TARS"
+    }
+  ],
+  "holdings": [
+    "IRD"
+  ],
+  "mean": 0.031,
+  "n_trades_today": 7,
+  "recipe": "short_extended_h3",
+  "sells": [
+    "ASST",
+    "BAK",
+    "FMC",
+    "GPRO",
+    "LENZ",
+    "SLBT",
+    "TARS"
+  ],
+  "state": {
+    "after": "2026-09-10",
+    "cash": 11078.26,
+    "pos": {
+      "IRD": {
+        "close_px": 6.070000171661377,
+        "cost": 2.4605753432704978,
+        "entry_date": "2026-09-04",
+        "entry_px": 4.53000020980835,
+        "fee_in": 2.4605753432704978,
+        "last_px": 5.869999885559082,
+        "notional": 634.200029373169,
+        "peak_px": 4.53000020980835,
+        "reason": "ret_5>15; gate ret_5_min=15.0; list yday_gainer,yday_mover; \ud83d\udd35; \u26aa; ret5=+19.5; leftover $637.71",
+        "shares": 140,
+        "ticker": "IRD"
+      }
+    },
+    "yday_equity": 10228.46
+  }
+}

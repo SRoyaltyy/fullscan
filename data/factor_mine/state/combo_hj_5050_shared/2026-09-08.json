@@ -1,0 +1,111 @@
+{
+  "buys": [],
+  "cash": 9870.05,
+  "date": "2026-09-08",
+  "equity": 9870.05,
+  "fees": 30.2572,
+  "fills": [
+    {
+      "fees": 2.4021,
+      "pnl": 15.55,
+      "price": 6.48,
+      "shares": 127,
+      "side": "SELL",
+      "ticker": "AHCO"
+    },
+    {
+      "fees": 2.1542,
+      "pnl": 56.19,
+      "price": 26.44,
+      "shares": 48,
+      "side": "SELL",
+      "ticker": "ASST"
+    },
+    {
+      "fees": 2.013,
+      "pnl": 3.36,
+      "price": 521.15,
+      "shares": 1,
+      "side": "SELL",
+      "ticker": "DELL"
+    },
+    {
+      "fees": 2.7277,
+      "pnl": -1.25,
+      "price": 5.81,
+      "shares": 208,
+      "side": "SELL",
+      "ticker": "DFDV"
+    },
+    {
+      "fees": 10.6852,
+      "pnl": 48.22,
+      "price": 1.565,
+      "shares": 817,
+      "side": "SELL",
+      "ticker": "GPRO"
+    },
+    {
+      "fees": 2.04,
+      "pnl": 41.89,
+      "price": 125.07,
+      "shares": 10,
+      "side": "SELL",
+      "ticker": "HOOD"
+    },
+    {
+      "fees": 2.016,
+      "pnl": -39.19,
+      "price": 360.75,
+      "shares": 2,
+      "side": "SELL",
+      "ticker": "MDB"
+    },
+    {
+      "fees": 2.109,
+      "pnl": 5.87,
+      "price": 24.67,
+      "shares": 33,
+      "side": "SELL",
+      "ticker": "SLDE"
+    },
+    {
+      "fees": 2.037,
+      "pnl": 58.68,
+      "price": 89.67,
+      "shares": 9,
+      "side": "SELL",
+      "ticker": "TARS"
+    },
+    {
+      "fees": 2.073,
+      "pnl": 2.38,
+      "price": 37.75,
+      "shares": 21,
+      "side": "SELL",
+      "ticker": "TDS"
+    }
+  ],
+  "holdings": [],
+  "mean": -1.8783,
+  "n_trades_today": 10,
+  "recipe": "combo_hj_5050_shared",
+  "sells": [
+    "AHCO",
+    "ASST",
+    "DELL",
+    "DFDV",
+    "GPRO",
+    "HOOD",
+    "MDB",
+    "SLDE",
+    "TARS",
+    "TDS"
+  ],
+  "state": {
+    "after": "2026-09-08",
+    "cash": 9870.05,
+    "pos": {},
+    "yday_equity": 9870.05
+  }
+}

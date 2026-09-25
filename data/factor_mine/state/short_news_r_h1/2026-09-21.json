@@ -1,0 +1,79 @@
+{
+  "buys": [
+    "AEHL",
+    "AMD"
+  ],
+  "cash": 14704.92,
+  "date": "2026-09-21",
+  "equity": 10173.76,
+  "fees": 8.4989,
+  "fills": [
+    {
+      "fees": 2.41,
+      "pnl": 196.59,
+      "price": 33.0,
+      "shares": 140,
+      "side": "COVER",
+      "ticker": "FIVN"
+    },
+    {
+      "fees": 3.994164111463991,
+      "pnl": null,
+      "price": 8.26,
+      "shares": 299,
+      "side": "SHORT",
+      "ticker": "AEHL"
+    },
+    {
+      "fees": 2.0946868498501714,
+      "pnl": null,
+      "price": 583.88,
+      "shares": 4,
+      "side": "SHORT",
+      "ticker": "AMD"
+    }
+  ],
+  "holdings": [
+    "AEHL",
+    "AMD"
+  ],
+  "mean": 1.9174,
+  "n_trades_today": 3,
+  "recipe": "short_news_r_h1",
+  "sells": [
+    "FIVN"
+  ],
+  "state": {
+    "after": "2026-09-21",
+    "cash": 14704.92,
+    "pos": {
+      "AEHL": {
+        "close_px": 6.920000076293945,
+        "cost": 3.994164111463991,
+        "entry_date": "2026-09-21",
+        "entry_px": 8.260000228881836,
+        "fee_in": 3.994164111463991,
+        "last_px": 8.260000228881836,
+        "notional": 2469.740068435669,
+        "peak_px": 8.260000228881836,
+        "reason": "news\ud83d\udd34; gate news=bad; list yday_mover; ret5=+7.7; leftover $2476.44",
+        "shares": 299,
+        "ticker": "AEHL"
+      },
+      "AMD": {
+        "close_px": 615.52001953125,
+        "cost": 2.0946868498501714,
+        "entry_date": "2026-09-21",
+        "entry_px": 583.8800048828125,
+        "fee_in": 2.0946868498501714,
+        "last_px": 583.8800048828125,
+        "notional": 2335.52001953125,
+        "peak_px": 583.8800048828125,
+        "reason": "news\ud83d\udd34; gate news=bad; list ohlc_hot; ret5=+8.5; leftover $2476.44",
+        "shares": 4,
+        "ticker": "AMD"
+      }
+    },
+    "yday_equity": 10173.76
+  }
+}

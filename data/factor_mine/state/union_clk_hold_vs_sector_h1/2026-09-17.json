@@ -1,0 +1,192 @@
+{
+  "buys": [
+    "SFL",
+    "FTAI",
+    "EROC",
+    "LPG"
+  ],
+  "cash": 172.71,
+  "date": "2026-09-17",
+  "equity": 10007.22,
+  "fees": 27.1958,
+  "fills": [
+    {
+      "fees": 2.082,
+      "pnl": 15.78,
+      "price": 51.88,
+      "shares": 24,
+      "side": "SELL",
+      "ticker": "CVI"
+    },
+    {
+      "fees": 2.1219,
+      "pnl": 129.72,
+      "price": 36.76,
+      "shares": 37,
+      "side": "SELL",
+      "ticker": "FPS"
+    },
+    {
+      "fees": 2.079,
+      "pnl": 37.03,
+      "price": 54.31,
+      "shares": 23,
+      "side": "SELL",
+      "ticker": "FRO"
+    },
+    {
+      "fees": 2.5004,
+      "pnl": 17.16,
+      "price": 8.02,
+      "shares": 158,
+      "side": "SELL",
+      "ticker": "NAT"
+    },
+    {
+      "fees": 2.78,
+      "pnl": -66.99,
+      "price": 5.58,
+      "shares": 212,
+      "side": "SELL",
+      "ticker": "RIG"
+    },
+    {
+      "fees": 2.103,
+      "pnl": -79.21,
+      "price": 37.57,
+      "shares": 31,
+      "side": "SELL",
+      "ticker": "SM"
+    },
+    {
+      "fees": 2.2185,
+      "pnl": -51.34,
+      "price": 17.19,
+      "shares": 69,
+      "side": "SELL",
+      "ticker": "TALO"
+    },
+    {
+      "fees": 2.052,
+      "pnl": -62.88,
+      "price": 83.2,
+      "shares": 14,
+      "side": "SELL",
+      "ticker": "VAL"
+    },
+    {
+      "fees": 2.539,
+      "pnl": null,
+      "price": 13.55,
+      "shares": 183,
+      "side": "BUY",
+      "ticker": "SFL"
+    },
+    {
+      "fees": 2.026,
+      "pnl": null,
+      "price": 196.5,
+      "shares": 12,
+      "side": "BUY",
+      "ticker": "FTAI"
+    },
+    {
+      "fees": 2.578,
+      "pnl": null,
+      "price": 12.64,
+      "shares": 196,
+      "side": "BUY",
+      "ticker": "EROC"
+    },
+    {
+      "fees": 2.116,
+      "pnl": null,
+      "price": 57.93,
+      "shares": 42,
+      "side": "BUY",
+      "ticker": "LPG"
+    }
+  ],
+  "holdings": [
+    "EROC",
+    "FTAI",
+    "LPG",
+    "SFL"
+  ],
+  "mean": 1.0647,
+  "n_trades_today": 12,
+  "recipe": "union_clk_hold_vs_sector_h1",
+  "sells": [
+    "CVI",
+    "FPS",
+    "FRO",
+    "NAT",
+    "RIG",
+    "SM",
+    "TALO",
+    "VAL"
+  ],
+  "state": {
+    "after": "2026-09-17",
+    "cash": 172.71,
+    "pos": {
+      "EROC": {
+        "close_px": 12.899999618530273,
+        "cost": 2480.0180672912597,
+        "entry_date": "2026-09-17",
+        "entry_px": 12.640000343322754,
+        "fee_in": 2.578,
+        "last_px": 12.640000343322754,
+        "min_hold": 1,
+        "notional": 2477.4400672912598,
+        "peak_px": 12.640000343322754,
+        "reason": "Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list probable,yday_gainer; ret5=-3.6; leftover $2482.53",
+        "shares": 196,
+        "ticker": "EROC"
+      },
+      "FTAI": {
+        "close_px": 195.07000732421875,
+        "cost": 2360.026,
+        "entry_date": "2026-09-17",
+        "entry_px": 196.5,
+        "fee_in": 2.026,
+        "last_px": 196.5,
+        "min_hold": 1,
+        "notional": 2358.0,
+        "peak_px": 196.5,
+        "reason": "Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list yday_gainer; \ud83d\udd35; ret5=+2.5; leftover $2482.53",
+        "shares": 12,
+        "ticker": "FTAI"
+      },
+      "LPG": {
+        "close_px": 58.310001373291016,
+        "cost": 2435.176012817383,
+        "entry_date": "2026-09-17",
+        "entry_px": 57.93000030517578,
+        "fee_in": 2.116,
+        "last_px": 57.93000030517578,
+        "min_hold": 1,
+        "notional": 2433.060012817383,
+        "peak_px": 57.93000030517578,
+        "reason": "Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list ohlc_hot; ret5=+7.9; leftover $2482.53",
+        "shares": 42,
+        "ticker": "LPG"
+      },
+      "SFL": {
+        "close_px": 13.75,
+        "cost": 2482.18903490448,
+        "entry_date": "2026-09-17",
+        "entry_px": 13.550000190734863,
+        "fee_in": 2.539,
+        "last_px": 13.550000190734863,
+        "min_hold": 1,
+        "notional": 2479.65003490448,
+        "peak_px": 13.550000190734863,
+        "reason": "Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list ohlc_hot; ret5=+7.8; leftover $2482.53",
+        "shares": 183,
+        "ticker": "SFL"
+      }
+    },
+    "yday_equity": 10007.22
+  }
+}

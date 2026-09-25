@@ -1,0 +1,215 @@
+{
+  "buys": [
+    "SLI",
+    "CAPR",
+    "VYX",
+    "SNPS",
+    "SRPT",
+    "NEO",
+    "NCNO",
+    "DJT"
+  ],
+  "cash": 344.68,
+  "date": "2026-08-28",
+  "equity": 9728.83,
+  "fees": 21.6604,
+  "fills": [
+    {
+      "fees": 6.0114,
+      "pnl": null,
+      "price": 2.68,
+      "shares": 466,
+      "side": "BUY",
+      "ticker": "SLI"
+    },
+    {
+      "fees": 2.374,
+      "pnl": null,
+      "price": 9.73,
+      "shares": 128,
+      "side": "BUY",
+      "ticker": "CAPR"
+    },
+    {
+      "fees": 2.398,
+      "pnl": null,
+      "price": 9.13,
+      "shares": 136,
+      "side": "BUY",
+      "ticker": "VYX"
+    },
+    {
+      "fees": 1.996,
+      "pnl": null,
+      "price": 461.85,
+      "shares": 2,
+      "side": "BUY",
+      "ticker": "SNPS"
+    },
+    {
+      "fees": 2.164,
+      "pnl": null,
+      "price": 21.49,
+      "shares": 58,
+      "side": "BUY",
+      "ticker": "SRPT"
+    },
+    {
+      "fees": 2.194,
+      "pnl": null,
+      "price": 18.36,
+      "shares": 68,
+      "side": "BUY",
+      "ticker": "NEO"
+    },
+    {
+      "fees": 2.149,
+      "pnl": null,
+      "price": 23.3,
+      "shares": 53,
+      "side": "BUY",
+      "ticker": "NCNO"
+    },
+    {
+      "fees": 2.374,
+      "pnl": null,
+      "price": 9.72,
+      "shares": 128,
+      "side": "BUY",
+      "ticker": "DJT"
+    }
+  ],
+  "holdings": [
+    "CAPR",
+    "DJT",
+    "NCNO",
+    "NEO",
+    "SLI",
+    "SNPS",
+    "SRPT",
+    "VYX"
+  ],
+  "mean": -2.7117,
+  "n_trades_today": 8,
+  "recipe": "union_break10_h1",
+  "sells": [],
+  "state": {
+    "after": "2026-08-28",
+    "cash": 344.68,
+    "pos": {
+      "CAPR": {
+        "close_px": 9.59000015258789,
+        "cost": 1247.81394140625,
+        "entry_date": "2026-08-28",
+        "entry_px": 9.729999542236328,
+        "fee_in": 2.374,
+        "last_px": 9.729999542236328,
+        "min_hold": 1,
+        "notional": 1245.43994140625,
+        "peak_px": 9.729999542236328,
+        "reason": "union \u2229 break10, no \ud83d\udea8; gate break_10=True; list yday_gainer,yday_mover; ret5=+47.1; leftover $1250.00",
+        "shares": 128,
+        "ticker": "CAPR"
+      },
+      "DJT": {
+        "close_px": 9.635000228881836,
+        "cost": 1246.5340341796875,
+        "entry_date": "2026-08-28",
+        "entry_px": 9.720000267028809,
+        "fee_in": 2.374,
+        "last_px": 9.720000267028809,
+        "min_hold": 1,
+        "notional": 1244.1600341796875,
+        "peak_px": 9.720000267028809,
+        "reason": "union \u2229 break10, no \ud83d\udea8; gate break_10=True; list ohlc_hot; ret5=+14.8; leftover $1250.00",
+        "shares": 128,
+        "ticker": "DJT"
+      },
+      "NCNO": {
+        "close_px": 22.989999771118164,
+        "cost": 1237.0489595642089,
+        "entry_date": "2026-08-28",
+        "entry_px": 23.299999237060547,
+        "fee_in": 2.149,
+        "last_px": 23.299999237060547,
+        "min_hold": 1,
+        "notional": 1234.899959564209,
+        "peak_px": 23.299999237060547,
+        "reason": "union \u2229 break10, no \ud83d\udea8; gate break_10=True; list ohlc_hot; \ud83d\udd35; ret5=+14.5; leftover $1250.00",
+        "shares": 53,
+        "ticker": "NCNO"
+      },
+      "NEO": {
+        "close_px": 18.049999237060547,
+        "cost": 1250.6740415039062,
+        "entry_date": "2026-08-28",
+        "entry_px": 18.360000610351562,
+        "fee_in": 2.194,
+        "last_px": 18.360000610351562,
+        "min_hold": 1,
+        "notional": 1248.4800415039062,
+        "peak_px": 18.360000610351562,
+        "reason": "union \u2229 break10, no \ud83d\udea8; gate break_10=True; list ohlc_hot; ret5=+12.8; leftover $1250.00",
+        "shares": 68,
+        "ticker": "NEO"
+      },
+      "SLI": {
+        "close_px": 2.549999952316284,
+        "cost": 1254.8914311088563,
+        "entry_date": "2026-08-28",
+        "entry_px": 2.680000066757202,
+        "fee_in": 6.0114,
+        "last_px": 2.680000066757202,
+        "min_hold": 1,
+        "notional": 1248.8800311088562,
+        "peak_px": 2.680000066757202,
+        "reason": "union \u2229 break10, no \ud83d\udea8; gate break_10=True; list flatten,ohlc_hot; ret5=+16.3; leftover $1250.00",
+        "shares": 466,
+        "ticker": "SLI"
+      },
+      "SNPS": {
+        "close_px": 442.6099853515625,
+        "cost": 925.6960122070312,
+        "entry_date": "2026-08-28",
+        "entry_px": 461.8500061035156,
+        "fee_in": 1.996,
+        "last_px": 461.8500061035156,
+        "min_hold": 1,
+        "notional": 923.7000122070312,
+        "peak_px": 461.8500061035156,
+        "reason": "union \u2229 break10, no \ud83d\udea8; gate break_10=True; list ohlc_hot; ret5=+16.8; leftover $1250.00",
+        "shares": 2,
+        "ticker": "SNPS"
+      },
+      "SRPT": {
+        "close_px": 20.860000610351562,
+        "cost": 1248.5839867248535,
+        "entry_date": "2026-08-28",
+        "entry_px": 21.489999771118164,
+        "fee_in": 2.164,
+        "last_px": 21.489999771118164,
+        "min_hold": 1,
+        "notional": 1246.4199867248535,
+        "peak_px": 21.489999771118164,
+        "reason": "union \u2229 break10, no \ud83d\udea8; gate break_10=True; list ohlc_hot; ret5=+12.3; leftover $1250.00",
+        "shares": 58,
+        "ticker": "SRPT"
+      },
+      "VYX": {
+        "close_px": 8.779999732971191,
+        "cost": 1244.0780155639648,
+        "entry_date": "2026-08-28",
+        "entry_px": 9.130000114440918,
+        "fee_in": 2.398,
+        "last_px": 9.130000114440918,
+        "min_hold": 1,
+        "notional": 1241.6800155639648,
+        "peak_px": 9.130000114440918,
+        "reason": "union \u2229 break10, no \ud83d\udea8; gate break_10=True; list yday_gainer; \ud83d\udd35; ret5=+20.0; leftover $1250.00",
+        "shares": 136,
+        "ticker": "VYX"
+      }
+    },
+    "yday_equity": 9728.83
+  }
+}

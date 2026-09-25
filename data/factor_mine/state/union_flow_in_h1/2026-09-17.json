@@ -1,0 +1,39 @@
+{
+  "buys": [],
+  "cash": 9976.34,
+  "date": "2026-09-17",
+  "equity": 9976.34,
+  "fees": 4.6353,
+  "fills": [
+    {
+      "fees": 2.2227,
+      "pnl": 18.17,
+      "price": 81.0,
+      "shares": 61,
+      "side": "SELL",
+      "ticker": "LEN"
+    },
+    {
+      "fees": 2.4126,
+      "pnl": -21.71,
+      "price": 40.79,
+      "shares": 121,
+      "side": "SELL",
+      "ticker": "TCOM"
+    }
+  ],
+  "holdings": [],
+  "mean": 2.0453,
+  "n_trades_today": 2,
+  "recipe": "union_flow_in_h1",
+  "sells": [
+    "LEN",
+    "TCOM"
+  ],
+  "state": {
+    "after": "2026-09-17",
+    "cash": 9976.34,
+    "pos": {},
+    "yday_equity": 9976.34
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "buys": [],
+  "cash": 9827.6,
+  "date": "2026-09-21",
+  "equity": 9827.6,
+  "fees": 0,
+  "fills": [],
+  "holdings": [],
+  "mean": 0.0,
+  "n_trades_today": 0,
+  "recipe": "flatten_live_h1_trail",
+  "sells": [],
+  "state": {
+    "after": "2026-09-21",
+    "cash": 9827.6,
+    "pos": {},
+    "yday_equity": 9827.6
+  }
+}

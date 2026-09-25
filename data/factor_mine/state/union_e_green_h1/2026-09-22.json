@@ -1,0 +1,47 @@
+{
+  "buys": [
+    "THO"
+  ],
+  "cash": 59.63,
+  "date": "2026-09-22",
+  "equity": 10096.43,
+  "fees": 2.398,
+  "fills": [
+    {
+      "fees": 2.398,
+      "pnl": null,
+      "price": 72.53,
+      "shares": 136,
+      "side": "BUY",
+      "ticker": "THO"
+    }
+  ],
+  "holdings": [
+    "THO"
+  ],
+  "mean": 1.7159,
+  "n_trades_today": 1,
+  "recipe": "union_e_green_h1",
+  "sells": [],
+  "state": {
+    "after": "2026-09-22",
+    "cash": 59.63,
+    "pos": {
+      "THO": {
+        "close_px": 73.8,
+        "cost": 9866.478,
+        "entry_date": "2026-09-22",
+        "entry_px": 72.53,
+        "fee_in": 2.398,
+        "last_px": 72.53,
+        "min_hold": 1,
+        "notional": 9864.08,
+        "peak_px": 72.53,
+        "reason": "combo gate; gate earn_react=True,last_green=True; list earn_react; ret5=-4.8; leftover $9926.11",
+        "shares": 136,
+        "ticker": "THO"
+      }
+    },
+    "yday_equity": 10096.43
+  }
+}

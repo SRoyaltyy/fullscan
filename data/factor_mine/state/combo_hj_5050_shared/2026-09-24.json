@@ -1,0 +1,136 @@
+{
+  "buys": [],
+  "cash": 7247.19,
+  "date": "2026-09-24",
+  "equity": 10833.83,
+  "fees": 30.3784,
+  "fills": [
+    {
+      "fees": 2.022,
+      "pnl": -14.38,
+      "price": 163.95,
+      "shares": 4,
+      "side": "SELL",
+      "ticker": "A"
+    },
+    {
+      "fees": 2.034,
+      "pnl": -18.61,
+      "price": 87.68,
+      "shares": 8,
+      "side": "SELL",
+      "ticker": "DXCM"
+    },
+    {
+      "fees": 5.6153,
+      "pnl": -144.14,
+      "price": 2.61,
+      "shares": 429,
+      "side": "SELL",
+      "ticker": "FEAM"
+    },
+    {
+      "fees": 2.088,
+      "pnl": -1.04,
+      "price": 28.42,
+      "shares": 26,
+      "side": "SELL",
+      "ticker": "MAZE"
+    },
+    {
+      "fees": 10.2641,
+      "pnl": -41.8,
+      "price": 0.746,
+      "shares": 965,
+      "side": "SELL",
+      "ticker": "NMRA"
+    },
+    {
+      "fees": 2.115,
+      "pnl": -8.76,
+      "price": 20.52,
+      "shares": 35,
+      "side": "SELL",
+      "ticker": "OMER"
+    },
+    {
+      "fees": 2.097,
+      "pnl": -45.06,
+      "price": 23.99,
+      "shares": 29,
+      "side": "SELL",
+      "ticker": "TNGX"
+    },
+    {
+      "fees": 2.043,
+      "pnl": -8.25,
+      "price": 61.78,
+      "shares": 11,
+      "side": "SELL",
+      "ticker": "TTAN"
+    },
+    {
+      "fees": 2.1,
+      "pnl": -176.23,
+      "price": 36.025,
+      "shares": 30,
+      "side": "SELL",
+      "ticker": "VKTX"
+    }
+  ],
+  "holdings": [
+    "GLND",
+    "VICR"
+  ],
+  "mean": 8.9429,
+  "n_trades_today": 9,
+  "recipe": "combo_hj_5050_shared",
+  "sells": [
+    "A",
+    "DXCM",
+    "FEAM",
+    "MAZE",
+    "NMRA",
+    "OMER",
+    "TNGX",
+    "TTAN",
+    "VKTX"
+  ],
+  "state": {
+    "after": "2026-09-24",
+    "cash": 7247.19,
+    "pos": {
+      "GLND": {
+        "close_px": 5.349999904632568,
+        "cost": 1258.7856221252441,
+        "entry_date": "2026-09-23",
+        "entry_px": 2.700000047683716,
+        "fee_in": 5.9856,
+        "last_px": 3.2200000286102295,
+        "notional": 1252.8000221252441,
+        "owner": "union_hot_n4_h1",
+        "peak_px": 3.2200000286102295,
+        "reason": "top 4 by hot; rank hot_score; list yday_mover; \ud83d\udd35; ret5=+109.2; combo leftover $1254.03; owner union_hot_n4_h1",
+        "shares": 464,
+        "side": "long",
+        "ticker": "GLND"
+      },
+      "VICR": {
+        "close_px": 276.05999755859375,
+        "cost": 1068.002,
+        "entry_date": "2026-09-23",
+        "entry_px": 266.5,
+        "fee_in": 2.002,
+        "last_px": 274.45001220703125,
+        "notional": 1066.0,
+        "owner": "union_hot_n4_h1",
+        "peak_px": 274.45001220703125,
+        "reason": "top 4 by hot; rank hot_score; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+45.9; combo leftover $1254.03; owner union_hot_n4_h1",
+        "shares": 4,
+        "side": "long",
+        "ticker": "VICR"
+      }
+    },
+    "yday_equity": 10833.83
+  }
+}

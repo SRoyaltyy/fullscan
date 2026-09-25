@@ -1,0 +1,198 @@
+{
+  "buys": [
+    "APPS",
+    "ARHS",
+    "HELP",
+    "NN",
+    "BTQ"
+  ],
+  "cash": 0.61,
+  "date": "2026-09-22",
+  "equity": 9952.03,
+  "fees": 56.6634,
+  "fills": [
+    {
+      "fees": 10.5428,
+      "pnl": -45.12,
+      "price": 1.795,
+      "shares": 806,
+      "side": "SELL",
+      "ticker": "BTBT"
+    },
+    {
+      "fees": 2.3464,
+      "pnl": -61.89,
+      "price": 12.95,
+      "shares": 109,
+      "side": "SELL",
+      "ticker": "BTDR"
+    },
+    {
+      "fees": 2.1796,
+      "pnl": -4.34,
+      "price": 25.95,
+      "shares": 56,
+      "side": "SELL",
+      "ticker": "GLXY"
+    },
+    {
+      "fees": 17.3367,
+      "pnl": -114.0,
+      "price": 1.05,
+      "shares": 1326,
+      "side": "SELL",
+      "ticker": "ORBS"
+    },
+    {
+      "fees": 2.4671,
+      "pnl": -16.66,
+      "price": 9.91,
+      "shares": 147,
+      "side": "SELL",
+      "ticker": "SBET"
+    },
+    {
+      "fees": 2.4612,
+      "pnl": 40.79,
+      "price": 10.45,
+      "shares": 145,
+      "side": "SELL",
+      "ticker": "SGML"
+    },
+    {
+      "fees": 2.485,
+      "pnl": null,
+      "price": 12.24,
+      "shares": 165,
+      "side": "BUY",
+      "ticker": "APPS"
+    },
+    {
+      "fees": 2.9283,
+      "pnl": null,
+      "price": 8.9,
+      "shares": 227,
+      "side": "BUY",
+      "ticker": "ARHS"
+    },
+    {
+      "fees": 2.422,
+      "pnl": null,
+      "price": 14.01,
+      "shares": 144,
+      "side": "BUY",
+      "ticker": "HELP"
+    },
+    {
+      "fees": 2.374,
+      "pnl": null,
+      "price": 15.76,
+      "shares": 128,
+      "side": "BUY",
+      "ticker": "NN"
+    },
+    {
+      "fees": 9.1203,
+      "pnl": null,
+      "price": 2.84,
+      "shares": 707,
+      "side": "BUY",
+      "ticker": "BTQ"
+    }
+  ],
+  "holdings": [
+    "APPS",
+    "ARHS",
+    "BTQ",
+    "HELP",
+    "NN"
+  ],
+  "mean": -2.1581,
+  "n_trades_today": 11,
+  "recipe": "probable_probable_ok_h1",
+  "sells": [
+    "BTBT",
+    "BTDR",
+    "GLXY",
+    "ORBS",
+    "SBET",
+    "SGML"
+  ],
+  "state": {
+    "after": "2026-09-22",
+    "cash": 0.61,
+    "pos": {
+      "APPS": {
+        "close_px": 12.19,
+        "cost": 2022.085,
+        "entry_date": "2026-09-22",
+        "entry_px": 12.24,
+        "fee_in": 2.485,
+        "last_px": 12.24,
+        "min_hold": 1,
+        "notional": 2019.6000000000001,
+        "peak_px": 12.24,
+        "reason": "combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer; ret5=+2.7; leftover $2020.49",
+        "shares": 165,
+        "ticker": "APPS"
+      },
+      "ARHS": {
+        "close_px": 9.29,
+        "cost": 2023.2283000000002,
+        "entry_date": "2026-09-22",
+        "entry_px": 8.9,
+        "fee_in": 2.9283,
+        "last_px": 8.9,
+        "min_hold": 1,
+        "notional": 2020.3000000000002,
+        "peak_px": 8.9,
+        "reason": "combo gate; gate last_green=True,ret_5_max=10.0; list probable; \ud83d\udd35; ret5=+7.5; leftover $2020.49",
+        "shares": 227,
+        "ticker": "ARHS"
+      },
+      "BTQ": {
+        "close_px": 2.680000066757202,
+        "cost": 2017.0002393177033,
+        "entry_date": "2026-09-22",
+        "entry_px": 2.8399999141693115,
+        "fee_in": 9.1203,
+        "last_px": 2.8399999141693115,
+        "min_hold": 1,
+        "notional": 2007.8799393177032,
+        "peak_px": 2.8399999141693115,
+        "reason": "combo gate; gate last_green=True,ret_5_max=10.0; list probable; ret5=+1.4; leftover $2020.49",
+        "shares": 707,
+        "ticker": "BTQ"
+      },
+      "HELP": {
+        "close_px": 13.71,
+        "cost": 2019.862,
+        "entry_date": "2026-09-22",
+        "entry_px": 14.01,
+        "fee_in": 2.422,
+        "last_px": 14.01,
+        "min_hold": 1,
+        "notional": 2017.44,
+        "peak_px": 14.01,
+        "reason": "combo gate; gate last_green=True,ret_5_max=10.0; list probable; ret5=+0.4; leftover $2020.49",
+        "shares": 144,
+        "ticker": "HELP"
+      },
+      "NN": {
+        "close_px": 15.33,
+        "cost": 2019.654,
+        "entry_date": "2026-09-22",
+        "entry_px": 15.76,
+        "fee_in": 2.374,
+        "last_px": 15.76,
+        "min_hold": 1,
+        "notional": 2017.28,
+        "peak_px": 15.76,
+        "reason": "combo gate; gate last_green=True,ret_5_max=10.0; list probable; ret5=+0.8; leftover $2020.49",
+        "shares": 128,
+        "ticker": "NN"
+      }
+    },
+    "yday_equity": 9952.03
+  }
+}

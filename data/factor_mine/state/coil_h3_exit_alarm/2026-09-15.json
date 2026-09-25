@@ -1,0 +1,111 @@
+{
+  "buys": [],
+  "cash": 2566.8,
+  "date": "2026-09-15",
+  "equity": 8674.31,
+  "fees": 0,
+  "fills": [],
+  "holdings": [
+    "APPS",
+    "BAK",
+    "NVT",
+    "PAGS",
+    "SANM",
+    "VIST"
+  ],
+  "mean": -0.1501,
+  "n_trades_today": 0,
+  "recipe": "coil_h3_exit_alarm",
+  "sells": [],
+  "state": {
+    "after": "2026-09-15",
+    "cash": 2566.8,
+    "pos": {
+      "APPS": {
+        "close_px": 11.380000114440918,
+        "cost": 1095.2260105285645,
+        "entry_date": "2026-09-11",
+        "entry_px": 11.880000114440918,
+        "fee_in": 2.266,
+        "last_px": 11.510000228881836,
+        "min_hold": 3,
+        "notional": 1092.9600105285645,
+        "peak_px": 11.880000114440918,
+        "reason": "coil, exit on \ud83d\udea8; gate ret_5_min=0.0,ret_5_max=10.0,rvol_max=2.2; list probable,yday_gainer; ret5=+8.5; leftover $1097.17",
+        "shares": 92,
+        "ticker": "APPS"
+      },
+      "BAK": {
+        "close_px": 2.0999999046325684,
+        "cost": 1102.7092408340454,
+        "entry_date": "2026-09-11",
+        "entry_px": 2.119999885559082,
+        "fee_in": 6.6693,
+        "last_px": 2.0199999809265137,
+        "min_hold": 3,
+        "notional": 1096.0399408340454,
+        "peak_px": 2.119999885559082,
+        "reason": "coil, exit on \ud83d\udea8; gate ret_5_min=0.0,ret_5_max=10.0,rvol_max=2.2; list probable,yday_gainer,ohlc_hot; \ud83d\udd35; ret5=+8.8; leftover $1097.17",
+        "shares": 517,
+        "ticker": "BAK"
+      },
+      "NVT": {
+        "close_px": 146.8000030517578,
+        "cost": 948.6879926757813,
+        "entry_date": "2026-09-11",
+        "entry_px": 157.77999877929688,
+        "fee_in": 2.008,
+        "last_px": 151.1199951171875,
+        "min_hold": 3,
+        "notional": 946.6799926757812,
+        "peak_px": 157.77999877929688,
+        "reason": "coil, exit on \ud83d\udea8; gate ret_5_min=0.0,ret_5_max=10.0,rvol_max=2.2; list flatten; \ud83d\udd35; ret5=+2.0; leftover $1097.17",
+        "shares": 6,
+        "ticker": "NVT"
+      },
+      "PAGS": {
+        "close_px": 9.619999885559082,
+        "cost": 1094.1939629211427,
+        "entry_date": "2026-09-11",
+        "entry_px": 10.109999656677246,
+        "fee_in": 2.314,
+        "last_px": 9.9399995803833,
+        "min_hold": 3,
+        "notional": 1091.8799629211426,
+        "peak_px": 10.109999656677246,
+        "reason": "coil, exit on \ud83d\udea8; gate ret_5_min=0.0,ret_5_max=10.0,rvol_max=2.2; list probable,yday_gainer; \u26aa; ret5=+1.7; leftover $1097.17",
+        "shares": 108,
+        "ticker": "PAGS"
+      },
+      "SANM": {
+        "close_px": 191.61000061035156,
+        "cost": 1036.2049816894532,
+        "entry_date": "2026-09-11",
+        "entry_px": 206.83999633789062,
+        "fee_in": 2.005,
+        "last_px": 198.32000732421875,
+        "min_hold": 3,
+        "notional": 1034.1999816894531,
+        "peak_px": 206.83999633789062,
+        "reason": "coil, exit on \ud83d\udea8; gate ret_5_min=0.0,ret_5_max=10.0,rvol_max=2.2; list flatten; ret5=+3.9; leftover $1097.17",
+        "shares": 5,
+        "ticker": "SANM"
+      },
+      "VIST": {
+        "close_px": 78.36000061035156,
+        "cost": 1084.6520256347656,
+        "entry_date": "2026-09-11",
+        "entry_px": 77.33000183105469,
+        "fee_in": 2.032,
+        "last_px": 76.73999786376953,
+        "min_hold": 3,
+        "notional": 1082.6200256347656,
+        "peak_px": 77.33000183105469,
+        "reason": "coil, exit on \ud83d\udea8; gate ret_5_min=0.0,ret_5_max=10.0,rvol_max=2.2; list probable,yday_gainer; ret5=+5.8; leftover $1097.17",
+        "shares": 14,
+        "ticker": "VIST"
+      }
+    },
+    "yday_equity": 8674.31
+  }
+}

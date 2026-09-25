@@ -1,0 +1,191 @@
+{
+  "buys": [
+    "KEYS",
+    "SMTC",
+    "CIEN",
+    "MPWR",
+    "DDOG",
+    "ADSK",
+    "SEDG"
+  ],
+  "cash": 841.73,
+  "date": "2026-08-28",
+  "equity": 9663.72,
+  "fees": 14.143,
+  "fills": [
+    {
+      "fees": 2.002,
+      "pnl": null,
+      "price": 324.41,
+      "shares": 4,
+      "side": "BUY",
+      "ticker": "KEYS"
+    },
+    {
+      "fees": 2.02,
+      "pnl": null,
+      "price": 141.76,
+      "shares": 10,
+      "side": "BUY",
+      "ticker": "SMTC"
+    },
+    {
+      "fees": 1.999,
+      "pnl": null,
+      "price": 400.42,
+      "shares": 3,
+      "side": "BUY",
+      "ticker": "CIEN"
+    },
+    {
+      "fees": 1.993,
+      "pnl": null,
+      "price": 1306.03,
+      "shares": 1,
+      "side": "BUY",
+      "ticker": "MPWR"
+    },
+    {
+      "fees": 2.005,
+      "pnl": null,
+      "price": 240.22,
+      "shares": 5,
+      "side": "BUY",
+      "ticker": "DDOG"
+    },
+    {
+      "fees": 2.005,
+      "pnl": null,
+      "price": 261.16,
+      "shares": 5,
+      "side": "BUY",
+      "ticker": "ADSK"
+    },
+    {
+      "fees": 2.119,
+      "pnl": null,
+      "price": 32.9,
+      "shares": 43,
+      "side": "BUY",
+      "ticker": "SEDG"
+    }
+  ],
+  "holdings": [
+    "ADSK",
+    "CIEN",
+    "DDOG",
+    "KEYS",
+    "MPWR",
+    "SEDG",
+    "SMTC"
+  ],
+  "mean": -3.3628,
+  "n_trades_today": 7,
+  "recipe": "union_news_or_net5_h1",
+  "sells": [],
+  "state": {
+    "after": "2026-08-28",
+    "cash": 841.73,
+    "pos": {
+      "ADSK": {
+        "close_px": 260.6600036621094,
+        "cost": 1307.805018310547,
+        "entry_date": "2026-08-28",
+        "entry_px": 261.1600036621094,
+        "fee_in": 2.005,
+        "last_px": 261.1600036621094,
+        "min_hold": 1,
+        "notional": 1305.8000183105469,
+        "peak_px": 261.1600036621094,
+        "reason": "packet\ud83d\udfe2 OR headline\ud83d\udfe2 and camera net \u2265 5; gate news_or_headline=True,cam_net_min=5; rank cond; list earn_react; ret5=+7.8; leftover $1428.57",
+        "shares": 5,
+        "ticker": "ADSK"
+      },
+      "CIEN": {
+        "close_px": 378.44000244140625,
+        "cost": 1203.2590402832031,
+        "entry_date": "2026-08-28",
+        "entry_px": 400.4200134277344,
+        "fee_in": 1.999,
+        "last_px": 400.4200134277344,
+        "min_hold": 1,
+        "notional": 1201.2600402832031,
+        "peak_px": 400.4200134277344,
+        "reason": "packet\ud83d\udfe2 OR headline\ud83d\udfe2 and camera net \u2265 5; gate news_or_headline=True,cam_net_min=5; rank cond; list mover_buy; \ud83d\udd35; ret5=+1.9; leftover $1428.57",
+        "shares": 3,
+        "ticker": "CIEN"
+      },
+      "DDOG": {
+        "close_px": 236.97999572753906,
+        "cost": 1203.1050061035157,
+        "entry_date": "2026-08-28",
+        "entry_px": 240.22000122070312,
+        "fee_in": 2.005,
+        "last_px": 240.22000122070312,
+        "min_hold": 1,
+        "notional": 1201.1000061035156,
+        "peak_px": 240.22000122070312,
+        "reason": "packet\ud83d\udfe2 OR headline\ud83d\udfe2 and camera net \u2265 5; gate news_or_headline=True,cam_net_min=5; rank cond; list mover_buy; \ud83d\udd35; ret5=+4.5; leftover $1428.57",
+        "shares": 5,
+        "ticker": "DDOG"
+      },
+      "KEYS": {
+        "close_px": 319.9700012207031,
+        "cost": 1299.6420146484375,
+        "entry_date": "2026-08-28",
+        "entry_px": 324.4100036621094,
+        "fee_in": 2.002,
+        "last_px": 324.4100036621094,
+        "min_hold": 1,
+        "notional": 1297.6400146484375,
+        "peak_px": 324.4100036621094,
+        "reason": "packet\ud83d\udfe2 OR headline\ud83d\udfe2 and camera net \u2265 5; gate news_or_headline=True,cam_net_min=5; rank cond; list mover_buy; \ud83d\udd35; \u26aa; ret5=+2.9; leftover $1428.57",
+        "shares": 4,
+        "ticker": "KEYS"
+      },
+      "MPWR": {
+        "close_px": 1256.260009765625,
+        "cost": 1308.023029296875,
+        "entry_date": "2026-08-28",
+        "entry_px": 1306.030029296875,
+        "fee_in": 1.993,
+        "last_px": 1306.030029296875,
+        "min_hold": 1,
+        "notional": 1306.030029296875,
+        "peak_px": 1306.030029296875,
+        "reason": "packet\ud83d\udfe2 OR headline\ud83d\udfe2 and camera net \u2265 5; gate news_or_headline=True,cam_net_min=5; rank cond; list mover_buy; \ud83d\udd35; ret5=+0.0; leftover $1428.57",
+        "shares": 1,
+        "ticker": "MPWR"
+      },
+      "SEDG": {
+        "close_px": 31.40999984741211,
+        "cost": 1416.8190656127929,
+        "entry_date": "2026-08-28",
+        "entry_px": 32.900001525878906,
+        "fee_in": 2.119,
+        "last_px": 32.900001525878906,
+        "min_hold": 1,
+        "notional": 1414.700065612793,
+        "peak_px": 32.900001525878906,
+        "reason": "packet\ud83d\udfe2 OR headline\ud83d\udfe2 and camera net \u2265 5; gate news_or_headline=True,cam_net_min=5; rank cond; list probable,yday_gainer,yday_mover; \ud83d\udd35; ret5=+8.4; leftover $1428.57",
+        "shares": 43,
+        "ticker": "SEDG"
+      },
+      "SMTC": {
+        "close_px": 131.1699981689453,
+        "cost": 1419.6199450683594,
+        "entry_date": "2026-08-28",
+        "entry_px": 141.75999450683594,
+        "fee_in": 2.02,
+        "last_px": 141.75999450683594,
+        "min_hold": 1,
+        "notional": 1417.5999450683594,
+        "peak_px": 141.75999450683594,
+        "reason": "packet\ud83d\udfe2 OR headline\ud83d\udfe2 and camera net \u2265 5; gate news_or_headline=True,cam_net_min=5; rank cond; list yday_gainer,yday_mover,mover_buy; \ud83d\udd35; \u26aa; ret5=+14.1; leftover $1428.57",
+        "shares": 10,
+        "ticker": "SMTC"
+      }
+    },
+    "yday_equity": 9663.72
+  }
+}

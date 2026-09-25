@@ -1,0 +1,215 @@
+{
+  "buys": [
+    "IQV",
+    "AVAH",
+    "BLFS",
+    "TEM",
+    "ILMN",
+    "META",
+    "WST",
+    "NTRA"
+  ],
+  "cash": 1051.94,
+  "date": "2026-09-16",
+  "equity": 9646.19,
+  "fees": 16.37,
+  "fills": [
+    {
+      "fees": 2.002,
+      "pnl": null,
+      "price": 270.89,
+      "shares": 4,
+      "side": "BUY",
+      "ticker": "IQV"
+    },
+    {
+      "fees": 2.242,
+      "pnl": null,
+      "price": 14.31,
+      "shares": 84,
+      "side": "BUY",
+      "ticker": "AVAH"
+    },
+    {
+      "fees": 2.089,
+      "pnl": null,
+      "price": 36.46,
+      "shares": 33,
+      "side": "BUY",
+      "ticker": "BLFS"
+    },
+    {
+      "fees": 2.041,
+      "pnl": null,
+      "price": 68.79,
+      "shares": 17,
+      "side": "BUY",
+      "ticker": "TEM"
+    },
+    {
+      "fees": 2.005,
+      "pnl": null,
+      "price": 224.49,
+      "shares": 5,
+      "side": "BUY",
+      "ticker": "ILMN"
+    },
+    {
+      "fees": 1.993,
+      "pnl": null,
+      "price": 679.91,
+      "shares": 1,
+      "side": "BUY",
+      "ticker": "META"
+    },
+    {
+      "fees": 1.999,
+      "pnl": null,
+      "price": 363.11,
+      "shares": 3,
+      "side": "BUY",
+      "ticker": "WST"
+    },
+    {
+      "fees": 1.999,
+      "pnl": null,
+      "price": 350.18,
+      "shares": 3,
+      "side": "BUY",
+      "ticker": "NTRA"
+    }
+  ],
+  "holdings": [
+    "AVAH",
+    "BLFS",
+    "ILMN",
+    "IQV",
+    "META",
+    "NTRA",
+    "TEM",
+    "WST"
+  ],
+  "mean": -0.2333,
+  "n_trades_today": 8,
+  "recipe": "union_white_coil_h1",
+  "sells": [],
+  "state": {
+    "after": "2026-09-16",
+    "cash": 1051.94,
+    "pos": {
+      "AVAH": {
+        "close_px": 14.260000228881836,
+        "cost": 1204.2820352478027,
+        "entry_date": "2026-09-16",
+        "entry_px": 14.3100004196167,
+        "fee_in": 2.242,
+        "last_px": 14.3100004196167,
+        "min_hold": 1,
+        "notional": 1202.0400352478027,
+        "peak_px": 14.3100004196167,
+        "reason": "combo gate; gate zero_red=True,ret_5_max=10.0,rvol_max=2.2; list flatten; \u26aa; ret5=+4.8; leftover $1208.59",
+        "shares": 84,
+        "ticker": "AVAH"
+      },
+      "BLFS": {
+        "close_px": 36.11000061035156,
+        "cost": 1205.2689697875976,
+        "entry_date": "2026-09-16",
+        "entry_px": 36.459999084472656,
+        "fee_in": 2.089,
+        "last_px": 36.459999084472656,
+        "min_hold": 1,
+        "notional": 1203.1799697875977,
+        "peak_px": 36.459999084472656,
+        "reason": "combo gate; gate zero_red=True,ret_5_max=10.0,rvol_max=2.2; list flatten; \ud83d\udd35; \u26aa; ret5=+2.9; leftover $1208.59",
+        "shares": 33,
+        "ticker": "BLFS"
+      },
+      "ILMN": {
+        "close_px": 228.92999267578125,
+        "cost": 1124.4550274658204,
+        "entry_date": "2026-09-16",
+        "entry_px": 224.49000549316406,
+        "fee_in": 2.005,
+        "last_px": 224.49000549316406,
+        "min_hold": 1,
+        "notional": 1122.4500274658203,
+        "peak_px": 224.49000549316406,
+        "reason": "combo gate; gate zero_red=True,ret_5_max=10.0,rvol_max=2.2; list yday_gainer; \ud83d\udd35; \u26aa; ret5=+5.3; leftover $1208.59",
+        "shares": 5,
+        "ticker": "ILMN"
+      },
+      "IQV": {
+        "close_px": 268.82000732421875,
+        "cost": 1085.56205859375,
+        "entry_date": "2026-09-16",
+        "entry_px": 270.8900146484375,
+        "fee_in": 2.002,
+        "last_px": 270.8900146484375,
+        "min_hold": 1,
+        "notional": 1083.56005859375,
+        "peak_px": 270.8900146484375,
+        "reason": "combo gate; gate zero_red=True,ret_5_max=10.0,rvol_max=2.2; list flatten; \u26aa; ret5=+4.0; leftover $1208.59",
+        "shares": 4,
+        "ticker": "IQV"
+      },
+      "META": {
+        "close_px": 673.3099975585938,
+        "cost": 681.9029731445313,
+        "entry_date": "2026-09-16",
+        "entry_px": 679.9099731445312,
+        "fee_in": 1.993,
+        "last_px": 679.9099731445312,
+        "min_hold": 1,
+        "notional": 679.9099731445312,
+        "peak_px": 679.9099731445312,
+        "reason": "combo gate; gate zero_red=True,ret_5_max=10.0,rvol_max=2.2; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+9.3; leftover $1208.59",
+        "shares": 1,
+        "ticker": "META"
+      },
+      "NTRA": {
+        "close_px": 345.3399963378906,
+        "cost": 1052.5389780273438,
+        "entry_date": "2026-09-16",
+        "entry_px": 350.17999267578125,
+        "fee_in": 1.999,
+        "last_px": 350.17999267578125,
+        "min_hold": 1,
+        "notional": 1050.5399780273438,
+        "peak_px": 350.17999267578125,
+        "reason": "combo gate; gate zero_red=True,ret_5_max=10.0,rvol_max=2.2; list ohlc_hot; \u26aa; ret5=+8.2; leftover $1208.59",
+        "shares": 3,
+        "ticker": "NTRA"
+      },
+      "TEM": {
+        "close_px": 69.97000122070312,
+        "cost": 1171.4710155639648,
+        "entry_date": "2026-09-16",
+        "entry_px": 68.79000091552734,
+        "fee_in": 2.041,
+        "last_px": 68.79000091552734,
+        "min_hold": 1,
+        "notional": 1169.4300155639648,
+        "peak_px": 68.79000091552734,
+        "reason": "combo gate; gate zero_red=True,ret_5_max=10.0,rvol_max=2.2; list probable,yday_gainer; \ud83d\udd35; \u26aa; ret5=+7.1; leftover $1208.59",
+        "shares": 17,
+        "ticker": "TEM"
+      },
+      "WST": {
+        "close_px": 362.010009765625,
+        "cost": 1091.3289560546875,
+        "entry_date": "2026-09-16",
+        "entry_px": 363.1099853515625,
+        "fee_in": 1.999,
+        "last_px": 363.1099853515625,
+        "min_hold": 1,
+        "notional": 1089.3299560546875,
+        "peak_px": 363.1099853515625,
+        "reason": "combo gate; gate zero_red=True,ret_5_max=10.0,rvol_max=2.2; list ohlc_hot; \u26aa; ret5=+8.1; leftover $1208.59",
+        "shares": 3,
+        "ticker": "WST"
+      }
+    },
+    "yday_equity": 9646.19
+  }
+}

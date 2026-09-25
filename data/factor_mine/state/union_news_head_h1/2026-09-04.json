@@ -1,0 +1,95 @@
+{
+  "buys": [
+    "FRNM",
+    "MRX",
+    "BAK"
+  ],
+  "cash": 39.56,
+  "date": "2026-09-04",
+  "equity": 9668.62,
+  "fees": 26.1596,
+  "fills": [
+    {
+      "fees": 2.578,
+      "pnl": null,
+      "price": 16.4,
+      "shares": 196,
+      "side": "BUY",
+      "ticker": "FRNM"
+    },
+    {
+      "fees": 2.116,
+      "pnl": null,
+      "price": 75.65,
+      "shares": 42,
+      "side": "BUY",
+      "ticker": "MRX"
+    },
+    {
+      "fees": 21.4656,
+      "pnl": null,
+      "price": 1.94,
+      "shares": 1664,
+      "side": "BUY",
+      "ticker": "BAK"
+    }
+  ],
+  "holdings": [
+    "BAK",
+    "FRNM",
+    "MRX"
+  ],
+  "mean": -0.1751,
+  "n_trades_today": 3,
+  "recipe": "union_news_head_h1",
+  "sells": [],
+  "state": {
+    "after": "2026-09-04",
+    "cash": 39.56,
+    "pos": {
+      "BAK": {
+        "close_px": 1.8899999856948853,
+        "cost": 3249.6256952148437,
+        "entry_date": "2026-09-04",
+        "entry_px": 1.940000057220459,
+        "fee_in": 21.4656,
+        "last_px": 1.940000057220459,
+        "min_hold": 1,
+        "notional": 3228.1600952148438,
+        "peak_px": 1.940000057220459,
+        "reason": "prior-export headline\ud83d\udfe2 only; gate headline=good; rank cond; list yday_gainer,yday_mover; ret5=+18.3; leftover $3228.53",
+        "shares": 1664,
+        "ticker": "BAK"
+      },
+      "FRNM": {
+        "close_px": 16.309999465942383,
+        "cost": 3216.9779252319336,
+        "entry_date": "2026-09-04",
+        "entry_px": 16.399999618530273,
+        "fee_in": 2.578,
+        "last_px": 16.399999618530273,
+        "min_hold": 1,
+        "notional": 3214.3999252319336,
+        "peak_px": 16.399999618530273,
+        "reason": "prior-export headline\ud83d\udfe2 only; gate headline=good; rank cond; list mover_buy; \ud83d\udd35; \u26aa; ret5=+21.2; leftover $3228.53",
+        "shares": 196,
+        "ticker": "FRNM"
+      },
+      "MRX": {
+        "close_px": 78.2699966430664,
+        "cost": 3179.416064086914,
+        "entry_date": "2026-09-04",
+        "entry_px": 75.6500015258789,
+        "fee_in": 2.116,
+        "last_px": 75.6500015258789,
+        "min_hold": 1,
+        "notional": 3177.300064086914,
+        "peak_px": 75.6500015258789,
+        "reason": "prior-export headline\ud83d\udfe2 only; gate headline=good; rank cond; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+6.0; leftover $3228.53",
+        "shares": 42,
+        "ticker": "MRX"
+      }
+    },
+    "yday_equity": 9668.62
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "buys": [],
+  "cash": 9610.16,
+  "date": "2026-08-31",
+  "equity": 9610.16,
+  "fees": 15.4056,
+  "fills": [
+    {
+      "fees": 2.0377,
+      "pnl": 13.59,
+      "price": 148.03,
+      "shares": 9,
+      "side": "SELL",
+      "ticker": "ANF"
+    },
+    {
+      "fees": 2.4633,
+      "pnl": -38.47,
+      "price": 9.5,
+      "shares": 146,
+      "side": "SELL",
+      "ticker": "CAPR"
+    },
+    {
+      "fees": 2.2349,
+      "pnl": -106.57,
+      "price": 17.87,
+      "shares": 74,
+      "side": "SELL",
+      "ticker": "ERAS"
+    },
+    {
+      "fees": 2.1815,
+      "pnl": -101.81,
+      "price": 22.98,
+      "shares": 57,
+      "side": "SELL",
+      "ticker": "GAP"
+    },
+    {
+      "fees": 2.1942,
+      "pnl": -43.41,
+      "price": 22.66,
+      "shares": 61,
+      "side": "SELL",
+      "ticker": "NCNO"
+    },
+    {
+      "fees": 2.0557,
+      "pnl": -43.09,
+      "price": 89.15,
+      "shares": 15,
+      "side": "SELL",
+      "ticker": "SYRE"
+    },
+    {
+      "fees": 2.2383,
+      "pnl": -70.08,
+      "price": 18.125,
+      "shares": 75,
+      "side": "SELL",
+      "ticker": "TH"
+    }
+  ],
+  "holdings": [],
+  "mean": -1.4616,
+  "n_trades_today": 7,
+  "recipe": "union_vol_green_h1",
+  "sells": [
+    "ANF",
+    "CAPR",
+    "ERAS",
+    "GAP",
+    "NCNO",
+    "SYRE",
+    "TH"
+  ],
+  "state": {
+    "after": "2026-08-31",
+    "cash": 9610.16,
+    "pos": {},
+    "yday_equity": 9610.16
+  }
+}

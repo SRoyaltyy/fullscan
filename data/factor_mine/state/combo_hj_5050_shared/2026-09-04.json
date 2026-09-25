@@ -1,0 +1,273 @@
+{
+  "buys": [
+    "GPRO",
+    "ASST",
+    "DFDV",
+    "HOOD",
+    "DELL",
+    "TARS",
+    "MDB",
+    "TDS",
+    "AHCO",
+    "SLDE"
+  ],
+  "cash": 413.9,
+  "date": "2026-09-04",
+  "equity": 10058.99,
+  "fees": 29.8955,
+  "fills": [
+    {
+      "fees": 10.5393,
+      "pnl": null,
+      "price": 1.48,
+      "shares": 817,
+      "side": "BUY",
+      "ticker": "GPRO"
+    },
+    {
+      "fees": 2.134,
+      "pnl": null,
+      "price": 25.18,
+      "shares": 48,
+      "side": "BUY",
+      "ticker": "ASST"
+    },
+    {
+      "fees": 2.6832,
+      "pnl": null,
+      "price": 5.79,
+      "shares": 208,
+      "side": "BUY",
+      "ticker": "DFDV"
+    },
+    {
+      "fees": 2.02,
+      "pnl": null,
+      "price": 120.475,
+      "shares": 10,
+      "side": "BUY",
+      "ticker": "HOOD"
+    },
+    {
+      "fees": 1.993,
+      "pnl": null,
+      "price": 513.78,
+      "shares": 1,
+      "side": "BUY",
+      "ticker": "DELL"
+    },
+    {
+      "fees": 2.017,
+      "pnl": null,
+      "price": 82.7,
+      "shares": 9,
+      "side": "BUY",
+      "ticker": "TARS"
+    },
+    {
+      "fees": 1.996,
+      "pnl": null,
+      "price": 378.34,
+      "shares": 2,
+      "side": "BUY",
+      "ticker": "MDB"
+    },
+    {
+      "fees": 2.053,
+      "pnl": null,
+      "price": 37.44,
+      "shares": 21,
+      "side": "BUY",
+      "ticker": "TDS"
+    },
+    {
+      "fees": 2.371,
+      "pnl": null,
+      "price": 6.32,
+      "shares": 127,
+      "side": "BUY",
+      "ticker": "AHCO"
+    },
+    {
+      "fees": 2.089,
+      "pnl": null,
+      "price": 24.365,
+      "shares": 33,
+      "side": "BUY",
+      "ticker": "SLDE"
+    }
+  ],
+  "holdings": [
+    "AHCO",
+    "ASST",
+    "DELL",
+    "DFDV",
+    "GPRO",
+    "HOOD",
+    "MDB",
+    "SLDE",
+    "TARS",
+    "TDS"
+  ],
+  "mean": 3.9329,
+  "n_trades_today": 10,
+  "recipe": "combo_hj_5050_shared",
+  "sells": [],
+  "state": {
+    "after": "2026-09-04",
+    "cash": 413.9,
+    "pos": {
+      "AHCO": {
+        "close_px": 6.489999771118164,
+        "cost": 805.0110218009949,
+        "entry_date": "2026-09-04",
+        "entry_px": 6.320000171661377,
+        "fee_in": 2.371,
+        "last_px": 6.320000171661377,
+        "notional": 802.6400218009949,
+        "owner": "union_join_vol_green_h1",
+        "peak_px": 6.320000171661377,
+        "reason": "combo gate; gate join=good,vol=good,last_green=True; list ohlc_hot; \ud83d\udd35; ret5=+10.7; combo leftover $805.68; owner union_join_vol_green_h1",
+        "shares": 127,
+        "side": "long",
+        "ticker": "AHCO"
+      },
+      "ASST": {
+        "close_px": 27.139999389648438,
+        "cost": 1210.7740146484375,
+        "entry_date": "2026-09-04",
+        "entry_px": 25.18000030517578,
+        "fee_in": 2.134,
+        "last_px": 25.18000030517578,
+        "notional": 1208.6400146484375,
+        "owner": "union_hot_n4_h1",
+        "peak_px": 25.18000030517578,
+        "reason": "top 4 by hot; rank hot_score; list ohlc_hot; \ud83d\udd35; ret5=+16.0; combo leftover $1209.79; owner union_hot_n4_h1",
+        "shares": 48,
+        "side": "long",
+        "ticker": "ASST"
+      },
+      "DELL": {
+        "close_px": 524.1400146484375,
+        "cost": 515.773029296875,
+        "entry_date": "2026-09-04",
+        "entry_px": 513.780029296875,
+        "fee_in": 1.993,
+        "last_px": 513.780029296875,
+        "notional": 513.780029296875,
+        "owner": "union_join_vol_green_h1",
+        "peak_px": 513.780029296875,
+        "reason": "combo gate; gate join=good,vol=good,last_green=True; list probable,yday_gainer,yday_mover,ohlc_hot,mover_buy; \ud83d\udd35; \u26aa; ret5=+9.3; combo leftover $805.68; owner union_join_vol_green_h1",
+        "shares": 1,
+        "side": "long",
+        "ticker": "DELL"
+      },
+      "DFDV": {
+        "close_px": 5.869999885559082,
+        "cost": 1207.0031920654296,
+        "entry_date": "2026-09-04",
+        "entry_px": 5.789999961853027,
+        "fee_in": 2.6832,
+        "last_px": 5.789999961853027,
+        "notional": 1204.3199920654297,
+        "owner": "union_hot_n4_h1",
+        "peak_px": 5.789999961853027,
+        "reason": "top 4 by hot; rank hot_score; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+15.2; combo leftover $1209.79; owner union_hot_n4_h1",
+        "shares": 208,
+        "side": "long",
+        "ticker": "DFDV"
+      },
+      "GPRO": {
+        "close_px": 1.7000000476837158,
+        "cost": 1219.6993155830382,
+        "entry_date": "2026-09-04",
+        "entry_px": 1.4800000190734863,
+        "fee_in": 10.5393,
+        "last_px": 1.4800000190734863,
+        "notional": 1209.1600155830383,
+        "owner": "union_hot_n4_h1",
+        "peak_px": 1.4800000190734863,
+        "reason": "top 4 by hot; rank hot_score; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+129.8; combo leftover $1209.79; owner union_hot_n4_h1",
+        "shares": 817,
+        "side": "long",
+        "ticker": "GPRO"
+      },
+      "HOOD": {
+        "close_px": 122.11000061035156,
+        "cost": 1206.769984741211,
+        "entry_date": "2026-09-04",
+        "entry_px": 120.4749984741211,
+        "fee_in": 2.02,
+        "last_px": 120.4749984741211,
+        "notional": 1204.749984741211,
+        "owner": "union_hot_n4_h1",
+        "peak_px": 120.4749984741211,
+        "reason": "top 4 by hot; rank hot_score; list ohlc_hot; \ud83d\udd35; ret5=+13.6; combo leftover $1209.79; owner union_hot_n4_h1",
+        "shares": 10,
+        "side": "long",
+        "ticker": "HOOD"
+      },
+      "MDB": {
+        "close_px": 368.739990234375,
+        "cost": 758.6759926757812,
+        "entry_date": "2026-09-04",
+        "entry_px": 378.3399963378906,
+        "fee_in": 1.996,
+        "last_px": 378.3399963378906,
+        "notional": 756.6799926757812,
+        "owner": "union_join_vol_green_h1",
+        "peak_px": 378.3399963378906,
+        "reason": "combo gate; gate join=good,vol=good,last_green=True; list yday_mover; ret5=-12.7; combo leftover $805.68; owner union_join_vol_green_h1",
+        "shares": 2,
+        "side": "long",
+        "ticker": "MDB"
+      },
+      "SLDE": {
+        "close_px": 24.670000076293945,
+        "cost": 806.1339924468995,
+        "entry_date": "2026-09-04",
+        "entry_px": 24.364999771118164,
+        "fee_in": 2.089,
+        "last_px": 24.364999771118164,
+        "notional": 804.0449924468994,
+        "owner": "union_join_vol_green_h1",
+        "peak_px": 24.364999771118164,
+        "reason": "combo gate; gate join=good,vol=good,last_green=True; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+5.4; combo leftover $805.68; owner union_join_vol_green_h1",
+        "shares": 33,
+        "side": "long",
+        "ticker": "SLDE"
+      },
+      "TARS": {
+        "close_px": 90.77999877929688,
+        "cost": 746.3169725341797,
+        "entry_date": "2026-09-04",
+        "entry_px": 82.69999694824219,
+        "fee_in": 2.017,
+        "last_px": 82.69999694824219,
+        "notional": 744.2999725341797,
+        "owner": "union_join_vol_green_h1",
+        "peak_px": 82.69999694824219,
+        "reason": "combo gate; gate join=good,vol=good,last_green=True; list yday_gainer,ohlc_hot; \ud83d\udd35; \u26aa; ret5=+15.7; combo leftover $805.68; owner union_join_vol_green_h1",
+        "shares": 9,
+        "side": "long",
+        "ticker": "TARS"
+      },
+      "TDS": {
+        "close_px": 37.83000183105469,
+        "cost": 788.2929711608887,
+        "entry_date": "2026-09-04",
+        "entry_px": 37.439998626708984,
+        "fee_in": 2.053,
+        "last_px": 37.439998626708984,
+        "notional": 786.2399711608887,
+        "owner": "union_join_vol_green_h1",
+        "peak_px": 37.439998626708984,
+        "reason": "combo gate; gate join=good,vol=good,last_green=True; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+14.1; combo leftover $805.68; owner union_join_vol_green_h1",
+        "shares": 21,
+        "side": "long",
+        "ticker": "TDS"
+      }
+    },
+    "yday_equity": 10058.99
+  }
+}

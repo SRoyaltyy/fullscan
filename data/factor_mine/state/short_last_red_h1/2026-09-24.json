@@ -1,0 +1,93 @@
+{
+  "buys": [],
+  "cash": 10098.41,
+  "date": "2026-09-24",
+  "equity": 10098.41,
+  "fees": 23.28,
+  "fills": [
+    {
+      "fees": 2.035,
+      "pnl": 6.24,
+      "price": 46.88,
+      "shares": 15,
+      "side": "COVER",
+      "ticker": "CBRL"
+    },
+    {
+      "fees": 7.5723,
+      "pnl": 14.08,
+      "price": 1.17,
+      "shares": 587,
+      "side": "COVER",
+      "ticker": "CMPX"
+    },
+    {
+      "fees": 2.098,
+      "pnl": 61.64,
+      "price": 17.63,
+      "shares": 36,
+      "side": "COVER",
+      "ticker": "EVER"
+    },
+    {
+      "fees": 2.05,
+      "pnl": -8.54,
+      "price": 35.96,
+      "shares": 20,
+      "side": "COVER",
+      "ticker": "GIS"
+    },
+    {
+      "fees": 3.1347,
+      "pnl": -74.38,
+      "price": 3.22,
+      "shares": 243,
+      "side": "COVER",
+      "ticker": "GLND"
+    },
+    {
+      "fees": 2.035,
+      "pnl": -3.96,
+      "price": 47.14,
+      "shares": 15,
+      "side": "COVER",
+      "ticker": "KBH"
+    },
+    {
+      "fees": 2.008,
+      "pnl": 21.03,
+      "price": 105.49,
+      "shares": 6,
+      "side": "COVER",
+      "ticker": "PAYX"
+    },
+    {
+      "fees": 2.347,
+      "pnl": 98.79,
+      "price": 5.12,
+      "shares": 119,
+      "side": "COVER",
+      "ticker": "XNDU"
+    }
+  ],
+  "holdings": [],
+  "mean": -0.7145,
+  "n_trades_today": 8,
+  "recipe": "short_last_red_h1",
+  "sells": [
+    "CBRL",
+    "CMPX",
+    "EVER",
+    "GIS",
+    "GLND",
+    "KBH",
+    "PAYX",
+    "XNDU"
+  ],
+  "state": {
+    "after": "2026-09-24",
+    "cash": 10098.41,
+    "pos": {},
+    "yday_equity": 10098.41
+  }
+}

@@ -1,0 +1,161 @@
+{
+  "buys": [
+    "CYPH",
+    "IOVA"
+  ],
+  "cash": 39.09,
+  "date": "2026-09-21",
+  "equity": 9582.69,
+  "fees": 0.1933,
+  "fills": [
+    {
+      "fees": 0.086,
+      "pnl": null,
+      "price": 4.0,
+      "shares": 2,
+      "side": "BUY",
+      "ticker": "CYPH"
+    },
+    {
+      "fees": 0.1073,
+      "pnl": null,
+      "price": 10.43,
+      "shares": 1,
+      "side": "BUY",
+      "ticker": "IOVA"
+    }
+  ],
+  "holdings": [
+    "BLFS",
+    "CYPH",
+    "ECO",
+    "FIVN",
+    "IOVA",
+    "IQV",
+    "RBRK",
+    "RDNT"
+  ],
+  "mean": -0.4098,
+  "n_trades_today": 2,
+  "recipe": "flatten_white_yday_h5",
+  "sells": [],
+  "state": {
+    "after": "2026-09-21",
+    "cash": 39.09,
+    "pos": {
+      "BLFS": {
+        "close_px": 37.18000030517578,
+        "cost": 3210.7339194335937,
+        "entry_date": "2026-09-16",
+        "entry_px": 36.459999084472656,
+        "fee_in": 2.254,
+        "last_px": 36.70000076293945,
+        "min_hold": 5,
+        "notional": 3208.4799194335938,
+        "peak_px": 36.72999954223633,
+        "reason": "flatten looker: 0 red + yesterday up; gate zero_red=True,yday_up=True; rank cond; list flatten; wish-list (live io HOLD \u2014 not a ticket); \ud83d\udd35; \u26aa; ret5=+2.9; leftover $3238.05",
+        "shares": 88,
+        "ticker": "BLFS"
+      },
+      "CYPH": {
+        "close_px": 3.4000000953674316,
+        "cost": 8.086,
+        "entry_date": "2026-09-21",
+        "entry_px": 4.0,
+        "fee_in": 0.086,
+        "last_px": 4.0,
+        "min_hold": 5,
+        "notional": 8.0,
+        "peak_px": 4.0,
+        "reason": "flatten looker: 0 red + yesterday up; gate zero_red=True,yday_up=True; rank cond; list flatten,yday_gainer,yday_mover; wish-list (live io HOLD \u2014 not a ticket); \ud83d\udd35; \u26aa; ret5=+58.9; leftover $11.54",
+        "shares": 2,
+        "ticker": "CYPH"
+      },
+      "ECO": {
+        "close_px": 82.62999725341797,
+        "cost": 85.853,
+        "entry_date": "2026-09-18",
+        "entry_px": 85.0,
+        "fee_in": 0.853,
+        "last_px": 82.83000183105469,
+        "min_hold": 5,
+        "notional": 85.0,
+        "peak_px": 85.0,
+        "reason": "flatten looker: 0 red + yesterday up; gate zero_red=True,yday_up=True; rank cond; list flatten; wish-list (live io HOLD \u2014 not a ticket); \ud83d\udd35; \u26aa; ret5=+18.3; leftover $119.19",
+        "shares": 1,
+        "ticker": "ECO"
+      },
+      "FIVN": {
+        "close_px": 37.0099983215332,
+        "cost": 104.36219588012695,
+        "entry_date": "2026-09-18",
+        "entry_px": 34.439998626708984,
+        "fee_in": 1.0422,
+        "last_px": 33.0,
+        "min_hold": 5,
+        "notional": 103.31999588012695,
+        "peak_px": 34.439998626708984,
+        "reason": "flatten looker: 0 red + yesterday up; gate zero_red=True,yday_up=True; rank cond; list flatten; wish-list (live io HOLD \u2014 not a ticket); \ud83d\udd35; \u26aa; ret5=+14.0; leftover $119.19",
+        "shares": 3,
+        "ticker": "FIVN"
+      },
+      "IOVA": {
+        "close_px": 10.1899995803833,
+        "cost": 10.537300305175782,
+        "entry_date": "2026-09-21",
+        "entry_px": 10.430000305175781,
+        "fee_in": 0.1073,
+        "last_px": 10.430000305175781,
+        "min_hold": 5,
+        "notional": 10.430000305175781,
+        "peak_px": 10.430000305175781,
+        "reason": "flatten looker: 0 red + yesterday up; gate zero_red=True,yday_up=True; rank cond; list flatten; wish-list (live io HOLD \u2014 not a ticket); \u26aa; ret5=+19.2; leftover $11.54",
+        "shares": 1,
+        "ticker": "IOVA"
+      },
+      "IQV": {
+        "close_px": 269.8800048828125,
+        "cost": 2981.8131611328126,
+        "entry_date": "2026-09-16",
+        "entry_px": 270.8900146484375,
+        "fee_in": 2.023,
+        "last_px": 266.760009765625,
+        "min_hold": 5,
+        "notional": 2979.7901611328125,
+        "peak_px": 273.1499938964844,
+        "reason": "flatten looker: 0 red + yesterday up; gate zero_red=True,yday_up=True; rank cond; list flatten; wish-list (live io HOLD \u2014 not a ticket); \u26aa; ret5=+4.0; leftover $3238.05",
+        "shares": 11,
+        "ticker": "IQV"
+      },
+      "RBRK": {
+        "close_px": 112.95999908447266,
+        "cost": 109.63850305175781,
+        "entry_date": "2026-09-18",
+        "entry_px": 108.55000305175781,
+        "fee_in": 1.0885,
+        "last_px": 107.56999969482422,
+        "min_hold": 5,
+        "notional": 108.55000305175781,
+        "peak_px": 108.55000305175781,
+        "reason": "flatten looker: 0 red + yesterday up; gate zero_red=True,yday_up=True; rank cond; list flatten; wish-list (live io HOLD \u2014 not a ticket); \u26aa; ret5=+21.3; leftover $119.19",
+        "shares": 1,
+        "ticker": "RBRK"
+      },
+      "RDNT": {
+        "close_px": 72.66999816894531,
+        "cost": 3164.033112609863,
+        "entry_date": "2026-09-16",
+        "entry_px": 77.12000274658203,
+        "fee_in": 2.113,
+        "last_px": 76.2699966430664,
+        "min_hold": 5,
+        "notional": 3161.9201126098633,
+        "peak_px": 77.66000366210938,
+        "reason": "flatten looker: 0 red + yesterday up; gate zero_red=True,yday_up=True; rank cond; list flatten; wish-list (live io HOLD \u2014 not a ticket); \u26aa; ret5=+7.2; leftover $3238.05",
+        "shares": 41,
+        "ticker": "RDNT"
+      }
+    },
+    "yday_equity": 9582.69
+  }
+}

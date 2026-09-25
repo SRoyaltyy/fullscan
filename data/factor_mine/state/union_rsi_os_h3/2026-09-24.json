@@ -1,0 +1,95 @@
+{
+  "buys": [],
+  "cash": 8942.88,
+  "date": "2026-09-24",
+  "equity": 8983.3,
+  "fees": 11.2215,
+  "fills": [
+    {
+      "fees": 6.8041,
+      "pnl": -273.0,
+      "price": 5.5,
+      "shares": 519,
+      "side": "SELL",
+      "ticker": "SION"
+    },
+    {
+      "fees": 2.1611,
+      "pnl": 184.26,
+      "price": 72.58,
+      "shares": 45,
+      "side": "SELL",
+      "ticker": "THO"
+    },
+    {
+      "fees": 2.2563,
+      "pnl": -273.98,
+      "price": 36.5,
+      "shares": 77,
+      "side": "SELL",
+      "ticker": "XENE"
+    }
+  ],
+  "holdings": [
+    "CMPX",
+    "NMRA",
+    "XNDU"
+  ],
+  "mean": -0.1157,
+  "n_trades_today": 3,
+  "recipe": "union_rsi_os_h3",
+  "sells": [
+    "SION",
+    "THO",
+    "XENE"
+  ],
+  "state": {
+    "after": "2026-09-24",
+    "cash": 8942.88,
+    "pos": {
+      "CMPX": {
+        "close_px": 1.1349999904632568,
+        "cost": 16.057600371932985,
+        "entry_date": "2026-09-23",
+        "entry_px": 1.2200000286102295,
+        "fee_in": 0.1976,
+        "last_px": 1.1699999570846558,
+        "min_hold": 3,
+        "notional": 15.860000371932983,
+        "peak_px": 1.2200000286102295,
+        "reason": "union \u2229 rsi_os, no \ud83d\udea8; gate rsi_os=True; list yday_mover; \ud83d\udd35; ret5=-33.0; leftover $17.07",
+        "shares": 13,
+        "ticker": "CMPX"
+      },
+      "NMRA": {
+        "close_px": 0.703000009059906,
+        "cost": 17.131000146865844,
+        "entry_date": "2026-09-23",
+        "entry_px": 0.7680000066757202,
+        "fee_in": 0.235,
+        "last_px": 0.7459999918937683,
+        "min_hold": 3,
+        "notional": 16.896000146865845,
+        "peak_px": 0.7680000066757202,
+        "reason": "union \u2229 rsi_os, no \ud83d\udea8; gate rsi_os=True; list probable,yday_gainer,yday_mover; \ud83d\udd35; ret5=-6.3; leftover $17.07",
+        "shares": 22,
+        "ticker": "NMRA"
+      },
+      "XNDU": {
+        "close_px": 5.099999904632568,
+        "cost": 12.105799542236328,
+        "entry_date": "2026-09-23",
+        "entry_px": 5.989999771118164,
+        "fee_in": 0.1258,
+        "last_px": 5.119999885559082,
+        "min_hold": 3,
+        "notional": 11.979999542236328,
+        "peak_px": 5.989999771118164,
+        "reason": "union \u2229 rsi_os, no \ud83d\udea8; gate rsi_os=True; list yday_mover; \ud83d\udd35; ret5=-25.9; leftover $17.07",
+        "shares": 2,
+        "ticker": "XNDU"
+      }
+    },
+    "yday_equity": 8983.3
+  }
+}

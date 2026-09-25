@@ -1,0 +1,225 @@
+{
+  "buys": [
+    "BAK",
+    "APPS",
+    "PAGS",
+    "INDP",
+    "CMRC",
+    "WLTH",
+    "DBI",
+    "AMTX"
+  ],
+  "cash": 1.97,
+  "date": "2026-09-11",
+  "equity": 9607.29,
+  "fees": 38.4451,
+  "fills": [
+    {
+      "fees": 3.4493,
+      "pnl": 421.85,
+      "price": 6.16,
+      "shares": 263,
+      "side": "SELL",
+      "ticker": "IRD"
+    },
+    {
+      "fees": 7.2756,
+      "pnl": null,
+      "price": 2.12,
+      "shares": 564,
+      "side": "BUY",
+      "ticker": "BAK"
+    },
+    {
+      "fees": 2.29,
+      "pnl": null,
+      "price": 11.88,
+      "shares": 100,
+      "side": "BUY",
+      "ticker": "APPS"
+    },
+    {
+      "fees": 2.344,
+      "pnl": null,
+      "price": 10.11,
+      "shares": 118,
+      "side": "BUY",
+      "ticker": "PAGS"
+    },
+    {
+      "fees": 5.7147,
+      "pnl": null,
+      "price": 2.7,
+      "shares": 443,
+      "side": "BUY",
+      "ticker": "INDP"
+    },
+    {
+      "fees": 4.9278,
+      "pnl": null,
+      "price": 3.13,
+      "shares": 382,
+      "side": "BUY",
+      "ticker": "CMRC"
+    },
+    {
+      "fees": 2.317,
+      "pnl": null,
+      "price": 10.95,
+      "shares": 109,
+      "side": "BUY",
+      "ticker": "WLTH"
+    },
+    {
+      "fees": 2.606,
+      "pnl": null,
+      "price": 5.91,
+      "shares": 202,
+      "side": "BUY",
+      "ticker": "DBI"
+    },
+    {
+      "fees": 7.5207,
+      "pnl": null,
+      "price": 2.04,
+      "shares": 583,
+      "side": "BUY",
+      "ticker": "AMTX"
+    }
+  ],
+  "holdings": [
+    "AMTX",
+    "APPS",
+    "BAK",
+    "CMRC",
+    "DBI",
+    "INDP",
+    "PAGS",
+    "WLTH"
+  ],
+  "mean": 0.4751,
+  "n_trades_today": 9,
+  "recipe": "union_break10_h3",
+  "sells": [
+    "IRD"
+  ],
+  "state": {
+    "after": "2026-09-11",
+    "cash": 1.97,
+    "pos": {
+      "AMTX": {
+        "close_px": 2.009999990463257,
+        "cost": 1196.840677760315,
+        "entry_date": "2026-09-11",
+        "entry_px": 2.0399999618530273,
+        "fee_in": 7.5207,
+        "last_px": 2.0399999618530273,
+        "min_hold": 3,
+        "notional": 1189.319977760315,
+        "peak_px": 2.0399999618530273,
+        "reason": "union \u2229 break10, no \ud83d\udea8; gate break_10=True; list yday_gainer,yday_mover,ohlc_hot; \ud83d\udd35; ret5=+10.9; leftover $1197.76",
+        "shares": 583,
+        "ticker": "AMTX"
+      },
+      "APPS": {
+        "close_px": 11.8100004196167,
+        "cost": 1190.2900114440918,
+        "entry_date": "2026-09-11",
+        "entry_px": 11.880000114440918,
+        "fee_in": 2.29,
+        "last_px": 11.880000114440918,
+        "min_hold": 3,
+        "notional": 1188.0000114440918,
+        "peak_px": 11.880000114440918,
+        "reason": "union \u2229 break10, no \ud83d\udea8; gate break_10=True; list probable,yday_gainer; ret5=+8.5; leftover $1197.76",
+        "shares": 100,
+        "ticker": "APPS"
+      },
+      "BAK": {
+        "close_px": 2.0799999237060547,
+        "cost": 1202.9555354553222,
+        "entry_date": "2026-09-11",
+        "entry_px": 2.119999885559082,
+        "fee_in": 7.2756,
+        "last_px": 2.119999885559082,
+        "min_hold": 3,
+        "notional": 1195.6799354553223,
+        "peak_px": 2.119999885559082,
+        "reason": "union \u2229 break10, no \ud83d\udea8; gate break_10=True; list probable,yday_gainer,ohlc_hot; \ud83d\udd35; ret5=+8.8; leftover $1197.76",
+        "shares": 564,
+        "ticker": "BAK"
+      },
+      "CMRC": {
+        "close_px": 3.505000114440918,
+        "cost": 1200.5878437164306,
+        "entry_date": "2026-09-11",
+        "entry_px": 3.130000114440918,
+        "fee_in": 4.9278,
+        "last_px": 3.130000114440918,
+        "min_hold": 3,
+        "notional": 1195.6600437164307,
+        "peak_px": 3.130000114440918,
+        "reason": "union \u2229 break10, no \ud83d\udea8; gate break_10=True; list yday_gainer,yday_mover; ret5=+22.7; leftover $1197.76",
+        "shares": 382,
+        "ticker": "CMRC"
+      },
+      "DBI": {
+        "close_px": 5.880000114440918,
+        "cost": 1196.425969177246,
+        "entry_date": "2026-09-11",
+        "entry_px": 5.909999847412109,
+        "fee_in": 2.606,
+        "last_px": 5.909999847412109,
+        "min_hold": 3,
+        "notional": 1193.819969177246,
+        "peak_px": 5.909999847412109,
+        "reason": "union \u2229 break10, no \ud83d\udea8; gate break_10=True; list yday_gainer,yday_mover; ret5=+16.3; leftover $1197.76",
+        "shares": 202,
+        "ticker": "DBI"
+      },
+      "INDP": {
+        "close_px": 2.7699999809265137,
+        "cost": 1201.814721123886,
+        "entry_date": "2026-09-11",
+        "entry_px": 2.700000047683716,
+        "fee_in": 5.7147,
+        "last_px": 2.700000047683716,
+        "min_hold": 3,
+        "notional": 1196.100021123886,
+        "peak_px": 2.700000047683716,
+        "reason": "union \u2229 break10, no \ud83d\udea8; gate break_10=True; list yday_gainer,yday_mover; ret5=+120.7; leftover $1197.76",
+        "shares": 443,
+        "ticker": "INDP"
+      },
+      "PAGS": {
+        "close_px": 10.119999885559082,
+        "cost": 1195.323959487915,
+        "entry_date": "2026-09-11",
+        "entry_px": 10.109999656677246,
+        "fee_in": 2.344,
+        "last_px": 10.109999656677246,
+        "min_hold": 3,
+        "notional": 1192.979959487915,
+        "peak_px": 10.109999656677246,
+        "reason": "union \u2229 break10, no \ud83d\udea8; gate break_10=True; list probable,yday_gainer; \u26aa; ret5=+1.7; leftover $1197.76",
+        "shares": 118,
+        "ticker": "PAGS"
+      },
+      "WLTH": {
+        "close_px": 10.380000114440918,
+        "cost": 1195.8669792099,
+        "entry_date": "2026-09-11",
+        "entry_px": 10.949999809265137,
+        "fee_in": 2.317,
+        "last_px": 10.949999809265137,
+        "min_hold": 3,
+        "notional": 1193.5499792099,
+        "peak_px": 10.949999809265137,
+        "reason": "union \u2229 break10, no \ud83d\udea8; gate break_10=True; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+16.6; leftover $1197.76",
+        "shares": 109,
+        "ticker": "WLTH"
+      }
+    },
+    "yday_equity": 9607.29
+  }
+}

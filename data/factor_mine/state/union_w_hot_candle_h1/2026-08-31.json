@@ -1,0 +1,101 @@
+{
+  "buys": [],
+  "cash": 8427.89,
+  "date": "2026-08-31",
+  "equity": 9690.95,
+  "fees": 15.4301,
+  "fills": [
+    {
+      "fees": 2.034,
+      "pnl": 11.63,
+      "price": 148.03,
+      "shares": 8,
+      "side": "SELL",
+      "ticker": "ANF"
+    },
+    {
+      "fees": 2.4052,
+      "pnl": -34.22,
+      "price": 9.5,
+      "shares": 128,
+      "side": "SELL",
+      "ticker": "CAPR"
+    },
+    {
+      "fees": 2.043,
+      "pnl": -51.26,
+      "price": 102.7,
+      "shares": 11,
+      "side": "SELL",
+      "ticker": "EL"
+    },
+    {
+      "fees": 2.133,
+      "pnl": -110.03,
+      "price": 27.6,
+      "shares": 41,
+      "side": "SELL",
+      "ticker": "FIG"
+    },
+    {
+      "fees": 2.169,
+      "pnl": -38.24,
+      "price": 22.66,
+      "shares": 53,
+      "side": "SELL",
+      "ticker": "NCNO"
+    },
+    {
+      "fees": 2.2153,
+      "pnl": -44.53,
+      "price": 17.77,
+      "shares": 68,
+      "side": "SELL",
+      "ticker": "NEO"
+    },
+    {
+      "fees": 2.4306,
+      "pnl": -68.75,
+      "price": 8.66,
+      "shares": 136,
+      "side": "SELL",
+      "ticker": "VYX"
+    }
+  ],
+  "holdings": [
+    "MRNA"
+  ],
+  "mean": -1.2169,
+  "n_trades_today": 7,
+  "recipe": "union_w_hot_candle_h1",
+  "sells": [
+    "ANF",
+    "CAPR",
+    "EL",
+    "FIG",
+    "NCNO",
+    "NEO",
+    "VYX"
+  ],
+  "state": {
+    "after": "2026-08-31",
+    "cash": 8427.89,
+    "pos": {
+      "MRNA": {
+        "close_px": 140.33999633789062,
+        "cost": 1236.7270219726563,
+        "entry_date": "2026-08-28",
+        "entry_px": 137.19000244140625,
+        "fee_in": 2.017,
+        "last_px": 134.10000610351562,
+        "min_hold": 1,
+        "notional": 1234.7100219726562,
+        "peak_px": 137.19000244140625,
+        "reason": "rank by w_hot_candle; rank w_hot_candle; list ohlc_hot; ret5=+7.1; leftover $1250.00",
+        "shares": 9,
+        "ticker": "MRNA"
+      }
+    },
+    "yday_equity": 9690.95
+  }
+}

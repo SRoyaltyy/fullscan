@@ -1,0 +1,215 @@
+{
+  "buys": [
+    "BBNX",
+    "ARQQ",
+    "TEM",
+    "RIG",
+    "QTRX",
+    "VAL",
+    "KRMN",
+    "ADPT"
+  ],
+  "cash": 118.96,
+  "date": "2026-09-16",
+  "equity": 9739.9,
+  "fees": 20.8793,
+  "fills": [
+    {
+      "fees": 2.179,
+      "pnl": null,
+      "price": 18.61,
+      "shares": 63,
+      "side": "BUY",
+      "ticker": "BBNX"
+    },
+    {
+      "fees": 2.185,
+      "pnl": null,
+      "price": 18.21,
+      "shares": 65,
+      "side": "BUY",
+      "ticker": "ARQQ"
+    },
+    {
+      "fees": 2.041,
+      "pnl": null,
+      "price": 68.79,
+      "shares": 17,
+      "side": "BUY",
+      "ticker": "TEM"
+    },
+    {
+      "fees": 2.606,
+      "pnl": null,
+      "price": 5.87,
+      "shares": 202,
+      "side": "BUY",
+      "ticker": "RIG"
+    },
+    {
+      "fees": 5.6373,
+      "pnl": null,
+      "price": 2.72,
+      "shares": 437,
+      "side": "BUY",
+      "ticker": "QTRX"
+    },
+    {
+      "fees": 2.029,
+      "pnl": null,
+      "price": 87.4,
+      "shares": 13,
+      "side": "BUY",
+      "ticker": "VAL"
+    },
+    {
+      "fees": 2.083,
+      "pnl": null,
+      "price": 38.01,
+      "shares": 31,
+      "side": "BUY",
+      "ticker": "KRMN"
+    },
+    {
+      "fees": 2.119,
+      "pnl": null,
+      "price": 27.09,
+      "shares": 43,
+      "side": "BUY",
+      "ticker": "ADPT"
+    }
+  ],
+  "holdings": [
+    "ADPT",
+    "ARQQ",
+    "BBNX",
+    "KRMN",
+    "QTRX",
+    "RIG",
+    "TEM",
+    "VAL"
+  ],
+  "mean": 2.3194,
+  "n_trades_today": 8,
+  "recipe": "probable_h1",
+  "sells": [],
+  "state": {
+    "after": "2026-09-16",
+    "cash": 118.96,
+    "pos": {
+      "ADPT": {
+        "close_px": 27.670000076293945,
+        "cost": 1166.9890065612792,
+        "entry_date": "2026-09-16",
+        "entry_px": 27.09000015258789,
+        "fee_in": 2.119,
+        "last_px": 27.09000015258789,
+        "min_hold": 1,
+        "notional": 1164.8700065612793,
+        "peak_px": 27.09000015258789,
+        "reason": "baseline list, no extra gate; list probable,yday_gainer,ohlc_hot; \ud83d\udd35; \u26aa; ret5=+9.6; leftover $1189.89",
+        "shares": 43,
+        "ticker": "ADPT"
+      },
+      "ARQQ": {
+        "close_px": 19.010000228881836,
+        "cost": 1185.8349404907226,
+        "entry_date": "2026-09-16",
+        "entry_px": 18.209999084472656,
+        "fee_in": 2.185,
+        "last_px": 18.209999084472656,
+        "min_hold": 1,
+        "notional": 1183.6499404907227,
+        "peak_px": 18.209999084472656,
+        "reason": "baseline list, no extra gate; list probable,yday_gainer; \ud83d\udd35; ret5=-19.1; leftover $1189.89",
+        "shares": 65,
+        "ticker": "ARQQ"
+      },
+      "BBNX": {
+        "close_px": 22.18000030517578,
+        "cost": 1174.6090384521485,
+        "entry_date": "2026-09-16",
+        "entry_px": 18.610000610351562,
+        "fee_in": 2.179,
+        "last_px": 18.610000610351562,
+        "min_hold": 1,
+        "notional": 1172.4300384521484,
+        "peak_px": 18.610000610351562,
+        "reason": "baseline list, no extra gate; list probable,yday_gainer,yday_mover; ret5=-0.5; leftover $1189.89",
+        "shares": 63,
+        "ticker": "BBNX"
+      },
+      "KRMN": {
+        "close_px": 36.939998626708984,
+        "cost": 1180.3929479675294,
+        "entry_date": "2026-09-16",
+        "entry_px": 38.0099983215332,
+        "fee_in": 2.083,
+        "last_px": 38.0099983215332,
+        "min_hold": 1,
+        "notional": 1178.3099479675293,
+        "peak_px": 38.0099983215332,
+        "reason": "baseline list, no extra gate; list probable,yday_gainer; \ud83d\udd35; ret5=-5.6; leftover $1189.89",
+        "shares": 31,
+        "ticker": "KRMN"
+      },
+      "QTRX": {
+        "close_px": 2.9100000858306885,
+        "cost": 1194.2773125026704,
+        "entry_date": "2026-09-16",
+        "entry_px": 2.7200000286102295,
+        "fee_in": 5.6373,
+        "last_px": 2.7200000286102295,
+        "min_hold": 1,
+        "notional": 1188.6400125026703,
+        "peak_px": 2.7200000286102295,
+        "reason": "baseline list, no extra gate; list probable,yday_gainer; ret5=-0.4; leftover $1189.89",
+        "shares": 437,
+        "ticker": "QTRX"
+      },
+      "RIG": {
+        "close_px": 5.539999961853027,
+        "cost": 1188.3459768829346,
+        "entry_date": "2026-09-16",
+        "entry_px": 5.869999885559082,
+        "fee_in": 2.606,
+        "last_px": 5.869999885559082,
+        "min_hold": 1,
+        "notional": 1185.7399768829346,
+        "peak_px": 5.869999885559082,
+        "reason": "baseline list, no extra gate; list probable,yday_gainer; \ud83d\udd35; ret5=+3.1; leftover $1189.89",
+        "shares": 202,
+        "ticker": "RIG"
+      },
+      "TEM": {
+        "close_px": 69.97000122070312,
+        "cost": 1171.4710155639648,
+        "entry_date": "2026-09-16",
+        "entry_px": 68.79000091552734,
+        "fee_in": 2.041,
+        "last_px": 68.79000091552734,
+        "min_hold": 1,
+        "notional": 1169.4300155639648,
+        "peak_px": 68.79000091552734,
+        "reason": "baseline list, no extra gate; list probable,yday_gainer; \ud83d\udd35; \u26aa; ret5=+7.1; leftover $1189.89",
+        "shares": 17,
+        "ticker": "TEM"
+      },
+      "VAL": {
+        "close_px": 82.5199966430664,
+        "cost": 1138.2290198364258,
+        "entry_date": "2026-09-16",
+        "entry_px": 87.4000015258789,
+        "fee_in": 2.029,
+        "last_px": 87.4000015258789,
+        "min_hold": 1,
+        "notional": 1136.2000198364258,
+        "peak_px": 87.4000015258789,
+        "reason": "baseline list, no extra gate; list probable,yday_gainer; \ud83d\udd35; ret5=+3.2; leftover $1189.89",
+        "shares": 13,
+        "ticker": "VAL"
+      }
+    },
+    "yday_equity": 9739.9
+  }
+}

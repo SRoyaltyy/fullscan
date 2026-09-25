@@ -1,0 +1,92 @@
+{
+  "buys": [
+    "CBRL"
+  ],
+  "cash": 35.38,
+  "date": "2026-09-22",
+  "equity": 9282.35,
+  "fees": 0.458,
+  "fills": [
+    {
+      "fees": 0.458,
+      "pnl": null,
+      "price": 45.5,
+      "shares": 1,
+      "side": "BUY",
+      "ticker": "CBRL"
+    }
+  ],
+  "holdings": [
+    "CBRL",
+    "LEN",
+    "PGEN",
+    "TCOM"
+  ],
+  "mean": 3.3512,
+  "n_trades_today": 1,
+  "recipe": "union_flow_in_h5",
+  "sells": [],
+  "state": {
+    "after": "2026-09-22",
+    "cash": 35.38,
+    "pos": {
+      "CBRL": {
+        "close_px": 45.48,
+        "cost": 45.958,
+        "entry_date": "2026-09-22",
+        "entry_px": 45.5,
+        "fee_in": 0.458,
+        "last_px": 45.5,
+        "min_hold": 5,
+        "notional": 45.5,
+        "peak_px": 45.5,
+        "reason": "union \u2229 flow_in hold 5, no \ud83d\udea8; gate flow_in=True; list overnight; ret5=-11.2; leftover $81.34",
+        "shares": 1,
+        "ticker": "CBRL"
+      },
+      "LEN": {
+        "close_px": 83.06,
+        "cost": 4517.437846191407,
+        "entry_date": "2026-09-16",
+        "entry_px": 80.62999725341797,
+        "fee_in": 2.158,
+        "last_px": 81.0,
+        "min_hold": 5,
+        "notional": 4515.279846191406,
+        "peak_px": 81.0,
+        "reason": "union \u2229 flow_in hold 5, no \ud83d\udea8; gate flow_in=True; list overnight; ret5=-0.4; leftover $4580.09",
+        "shares": 56,
+        "ticker": "LEN"
+      },
+      "PGEN": {
+        "close_px": 7.89,
+        "cost": 15.842800305175782,
+        "entry_date": "2026-09-21",
+        "entry_px": 7.840000152587891,
+        "fee_in": 0.1628,
+        "last_px": 7.64,
+        "min_hold": 5,
+        "notional": 15.680000305175781,
+        "peak_px": 7.840000152587891,
+        "reason": "union \u2229 flow_in hold 5, no \ud83d\udea8; gate flow_in=True; list flatten; \u26aa; ret5=+13.6; leftover $19.44",
+        "shares": 2,
+        "ticker": "PGEN"
+      },
+      "TCOM": {
+        "close_px": 40.85,
+        "cost": 4545.553033874512,
+        "entry_date": "2026-09-16",
+        "entry_px": 40.93000030517578,
+        "fee_in": 2.323,
+        "last_px": 41.06,
+        "min_hold": 5,
+        "notional": 4543.230033874512,
+        "peak_px": 41.06,
+        "reason": "union \u2229 flow_in hold 5, no \ud83d\udea8; gate flow_in=True; list earn_react; ret5=-3.1; leftover $4580.09",
+        "shares": 111,
+        "ticker": "TCOM"
+      }
+    },
+    "yday_equity": 9282.35
+  }
+}

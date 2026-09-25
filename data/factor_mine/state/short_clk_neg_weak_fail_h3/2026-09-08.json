@@ -1,0 +1,105 @@
+{
+  "buys": [],
+  "cash": 14929.08,
+  "date": "2026-09-08",
+  "equity": 9581.06,
+  "fees": 0,
+  "fills": [],
+  "holdings": [
+    "EOSE",
+    "FCEL",
+    "GSM",
+    "HQ",
+    "SCZM",
+    "UAMY"
+  ],
+  "mean": -3.0668,
+  "n_trades_today": 0,
+  "recipe": "short_clk_neg_weak_fail_h3",
+  "sells": [],
+  "state": {
+    "after": "2026-09-08",
+    "cash": 14929.08,
+    "pos": {
+      "EOSE": {
+        "close_px": 4.300000190734863,
+        "cost": 3.11635945193147,
+        "entry_date": "2026-09-04",
+        "entry_px": 3.5199999809265137,
+        "fee_in": 3.11635945193147,
+        "last_px": 3.990000009536743,
+        "notional": 830.7199954986572,
+        "peak_px": 3.5199999809265137,
+        "reason": "Clock-B #4 neg catalyst + weakness + failed recovery; gate clk_neg_weak_fail=True; list probable,yday_gainer,yday_mover; \ud83d\udd35; ret5=+2.3; leftover $831.30",
+        "shares": 236,
+        "ticker": "EOSE"
+      },
+      "FCEL": {
+        "close_px": 17.760000228881836,
+        "cost": 2.2036750692080145,
+        "entry_date": "2026-09-04",
+        "entry_px": 14.520000457763672,
+        "fee_in": 2.2036750692080145,
+        "last_px": 15.180000305175781,
+        "notional": 827.6400260925293,
+        "peak_px": 14.520000457763672,
+        "reason": "Clock-B #4 neg catalyst + weakness + failed recovery; gate clk_neg_weak_fail=True; list yday_mover; ret5=-24.1; leftover $831.30",
+        "shares": 57,
+        "ticker": "FCEL"
+      },
+      "GSM": {
+        "close_px": 4.519999980926514,
+        "cost": 2.586274246947406,
+        "entry_date": "2026-09-04",
+        "entry_px": 4.670000076293945,
+        "fee_in": 2.586274246947406,
+        "last_px": 4.75,
+        "notional": 831.2600135803223,
+        "peak_px": 4.670000076293945,
+        "reason": "Clock-B #4 neg catalyst + weakness + failed recovery; gate clk_neg_weak_fail=True; list yday_gainer; ret5=+11.9; leftover $831.30",
+        "shares": 178,
+        "ticker": "GSM"
+      },
+      "HQ": {
+        "close_px": 16.139999389648438,
+        "cost": 2.188652054251057,
+        "entry_date": "2026-09-04",
+        "entry_px": 15.899999618530273,
+        "fee_in": 2.188652054251057,
+        "last_px": 15.399999618530273,
+        "notional": 826.7999801635742,
+        "peak_px": 15.399999618530273,
+        "reason": "Clock-B #4 neg catalyst + weakness + failed recovery; gate clk_neg_weak_fail=True; list probable,yday_gainer,yday_mover; ret5=-4.1; leftover $831.30",
+        "shares": 52,
+        "ticker": "HQ"
+      },
+      "SCZM": {
+        "close_px": 9.970000267028809,
+        "cost": 2.282133150085031,
+        "entry_date": "2026-09-04",
+        "entry_px": 10.029999732971191,
+        "fee_in": 2.282133150085031,
+        "last_px": 9.899999618530273,
+        "notional": 822.4599781036377,
+        "peak_px": 9.899999618530273,
+        "reason": "Clock-B #4 neg catalyst + weakness + failed recovery; gate clk_neg_weak_fail=True; list yday_gainer; ret5=+4.0; leftover $831.30",
+        "shares": 82,
+        "ticker": "SCZM"
+      },
+      "UAMY": {
+        "close_px": 5.440000057220459,
+        "cost": 2.5229260273972605,
+        "entry_date": "2026-09-04",
+        "entry_px": 5.25,
+        "fee_in": 2.5229260273972605,
+        "last_px": 5.28000020980835,
+        "notional": 829.5,
+        "peak_px": 5.25,
+        "reason": "Clock-B #4 neg catalyst + weakness + failed recovery; gate clk_neg_weak_fail=True; list probable,yday_gainer,yday_mover; ret5=-0.4; leftover $831.30",
+        "shares": 158,
+        "ticker": "UAMY"
+      }
+    },
+    "yday_equity": 9581.06
+  }
+}

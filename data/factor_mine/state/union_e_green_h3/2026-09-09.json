@@ -1,0 +1,81 @@
+{
+  "buys": [],
+  "cash": 93.86,
+  "date": "2026-09-09",
+  "equity": 8842.67,
+  "fees": 0,
+  "fills": [],
+  "holdings": [
+    "GWRE",
+    "IOT",
+    "LULU",
+    "MAMA"
+  ],
+  "mean": -3.3621,
+  "n_trades_today": 0,
+  "recipe": "union_e_green_h3",
+  "sells": [],
+  "state": {
+    "after": "2026-09-09",
+    "cash": 93.86,
+    "pos": {
+      "GWRE": {
+        "close_px": 142.24000549316406,
+        "cost": 2347.7320427246095,
+        "entry_date": "2026-09-04",
+        "entry_px": 167.5500030517578,
+        "fee_in": 2.032,
+        "last_px": 147.85000610351562,
+        "min_hold": 3,
+        "notional": 2345.7000427246094,
+        "peak_px": 167.5500030517578,
+        "reason": "combo gate; gate earn_react=True,last_green=True; list earn_react; ret5=+0.9; leftover $2392.49",
+        "shares": 14,
+        "ticker": "GWRE"
+      },
+      "IOT": {
+        "close_px": 38.650001525878906,
+        "cost": 2381.849080871582,
+        "entry_date": "2026-09-04",
+        "entry_px": 44.900001525878906,
+        "fee_in": 2.149,
+        "last_px": 39.599998474121094,
+        "min_hold": 3,
+        "notional": 2379.700080871582,
+        "peak_px": 44.900001525878906,
+        "reason": "combo gate; gate earn_react=True,last_green=True; list earn_react; ret5=-7.5; leftover $2392.49",
+        "shares": 53,
+        "ticker": "IOT"
+      },
+      "LULU": {
+        "close_px": 99.72000122070312,
+        "cost": 2357.6620366210936,
+        "entry_date": "2026-09-04",
+        "entry_px": 98.1500015258789,
+        "fee_in": 2.062,
+        "last_px": 101.9000015258789,
+        "min_hold": 3,
+        "notional": 2355.6000366210938,
+        "peak_px": 101.9000015258789,
+        "reason": "combo gate; gate earn_react=True,last_green=True; list earn_react; ret5=+5.9; leftover $2392.49",
+        "shares": 24,
+        "ticker": "LULU"
+      },
+      "MAMA": {
+        "close_px": 15.234999656677246,
+        "cost": 2388.8459710083007,
+        "entry_date": "2026-09-04",
+        "entry_px": 15.699999809265137,
+        "fee_in": 2.446,
+        "last_px": 15.3100004196167,
+        "min_hold": 3,
+        "notional": 2386.399971008301,
+        "peak_px": 15.699999809265137,
+        "reason": "combo gate; gate earn_react=True,last_green=True; list earn_react; ret5=-0.4; leftover $2392.49",
+        "shares": 152,
+        "ticker": "MAMA"
+      }
+    },
+    "yday_equity": 8842.67
+  }
+}

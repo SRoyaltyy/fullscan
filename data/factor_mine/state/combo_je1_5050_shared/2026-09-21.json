@@ -1,0 +1,278 @@
+{
+  "buys": [
+    "A",
+    "DXCM",
+    "BTDR",
+    "SBET",
+    "TJGC",
+    "USDE",
+    "GEMI"
+  ],
+  "cash": 146.66,
+  "date": "2026-09-21",
+  "equity": 9802.81,
+  "fees": 32.8464,
+  "fills": [
+    {
+      "fees": 2.2691,
+      "pnl": -18.96,
+      "price": 13.9,
+      "shares": 85,
+      "side": "SELL",
+      "ticker": "BHVN"
+    },
+    {
+      "fees": 2.052,
+      "pnl": -34.46,
+      "price": 82.83,
+      "shares": 14,
+      "side": "SELL",
+      "ticker": "ECO"
+    },
+    {
+      "fees": 3.9821,
+      "pnl": -32.22,
+      "price": 3.87,
+      "shares": 304,
+      "side": "SELL",
+      "ticker": "EYPT"
+    },
+    {
+      "fees": 2.2564,
+      "pnl": -21.5,
+      "price": 14.58,
+      "shares": 81,
+      "side": "SELL",
+      "ticker": "RARE"
+    },
+    {
+      "fees": 2.13,
+      "pnl": 0.16,
+      "price": 29.43,
+      "shares": 40,
+      "side": "SELL",
+      "ticker": "SDGR"
+    },
+    {
+      "fees": 2.025,
+      "pnl": 49.12,
+      "price": 230.25,
+      "shares": 5,
+      "side": "SELL",
+      "ticker": "VICR"
+    },
+    {
+      "fees": 2.3326,
+      "pnl": 65.71,
+      "price": 12.05,
+      "shares": 105,
+      "side": "SELL",
+      "ticker": "VITL"
+    },
+    {
+      "fees": 2.011,
+      "pnl": null,
+      "price": 157.87,
+      "shares": 7,
+      "side": "BUY",
+      "ticker": "A"
+    },
+    {
+      "fees": 2.029,
+      "pnl": null,
+      "price": 88.83,
+      "shares": 13,
+      "side": "BUY",
+      "ticker": "DXCM"
+    },
+    {
+      "fees": 2.257,
+      "pnl": null,
+      "price": 13.475,
+      "shares": 89,
+      "side": "BUY",
+      "ticker": "BTDR"
+    },
+    {
+      "fees": 2.35,
+      "pnl": null,
+      "price": 9.99,
+      "shares": 120,
+      "side": "BUY",
+      "ticker": "SBET"
+    },
+    {
+      "fees": 2.203,
+      "pnl": null,
+      "price": 16.91,
+      "shares": 71,
+      "side": "BUY",
+      "ticker": "TJGC"
+    },
+    {
+      "fees": 2.266,
+      "pnl": null,
+      "price": 13.05,
+      "shares": 92,
+      "side": "BUY",
+      "ticker": "USDE"
+    },
+    {
+      "fees": 2.6832,
+      "pnl": null,
+      "price": 5.755,
+      "shares": 208,
+      "side": "BUY",
+      "ticker": "GEMI"
+    }
+  ],
+  "holdings": [
+    "A",
+    "BTDR",
+    "CYPH",
+    "DXCM",
+    "GEMI",
+    "SBET",
+    "TJGC",
+    "USDE"
+  ],
+  "mean": 0.1156,
+  "n_trades_today": 14,
+  "recipe": "combo_je1_5050_shared",
+  "sells": [
+    "BHVN",
+    "ECO",
+    "EYPT",
+    "RARE",
+    "SDGR",
+    "VICR",
+    "VITL"
+  ],
+  "state": {
+    "after": "2026-09-21",
+    "cash": 146.66,
+    "pos": {
+      "A": {
+        "close_px": 161.94000244140625,
+        "cost": 1107.1009658203125,
+        "entry_date": "2026-09-21",
+        "entry_px": 157.8699951171875,
+        "fee_in": 2.011,
+        "last_px": 157.8699951171875,
+        "notional": 1105.0899658203125,
+        "owner": "union_join_vol_green_h1",
+        "peak_px": 157.8699951171875,
+        "reason": "combo gate; gate join=good,vol=good,last_green=True; list flatten; \ud83d\udd35; \u26aa; ret5=+6.5; combo leftover $1202.67; owner union_join_vol_green_h1",
+        "shares": 7,
+        "side": "long",
+        "ticker": "A"
+      },
+      "BTDR": {
+        "close_px": 13.140000343322754,
+        "cost": 1201.5320339508057,
+        "entry_date": "2026-09-21",
+        "entry_px": 13.475000381469727,
+        "fee_in": 2.257,
+        "last_px": 13.475000381469727,
+        "notional": 1199.2750339508057,
+        "owner": "union_join_vol_green_h1",
+        "peak_px": 13.475000381469727,
+        "reason": "combo gate; gate join=good,vol=good,last_green=True; list probable,yday_gainer,yday_mover,ohlc_hot; ret5=+8.4; combo leftover $1202.67; owner union_join_vol_green_h1",
+        "shares": 89,
+        "side": "long",
+        "ticker": "BTDR"
+      },
+      "CYPH": {
+        "close_px": 3.4000000953674316,
+        "cost": 1203.9205339031219,
+        "entry_date": "2026-09-18",
+        "entry_px": 3.0350000858306885,
+        "fee_in": 5.0955,
+        "last_px": 4.0,
+        "notional": 1198.825033903122,
+        "owner": "union_join_vol_green_h1",
+        "peak_px": 4.0,
+        "reason": "combo gate; gate join=good,vol=good,last_green=True; list yday_gainer,yday_mover; \ud83d\udd35; \u26aa; ret5=+39.5; combo leftover $1201.84; owner union_join_vol_green_h1",
+        "shares": 395,
+        "side": "long",
+        "ticker": "CYPH"
+      },
+      "DXCM": {
+        "close_px": 89.16999816894531,
+        "cost": 1156.819023803711,
+        "entry_date": "2026-09-21",
+        "entry_px": 88.83000183105469,
+        "fee_in": 2.029,
+        "last_px": 88.83000183105469,
+        "notional": 1154.790023803711,
+        "owner": "union_join_vol_green_h1",
+        "peak_px": 88.83000183105469,
+        "reason": "combo gate; gate join=good,vol=good,last_green=True; list flatten; \ud83d\udd35; \u26aa; ret5=+7.6; combo leftover $1202.67; owner union_join_vol_green_h1",
+        "shares": 13,
+        "side": "long",
+        "ticker": "DXCM"
+      },
+      "GEMI": {
+        "close_px": 5.989999771118164,
+        "cost": 1199.7232238037109,
+        "entry_date": "2026-09-21",
+        "entry_px": 5.755000114440918,
+        "fee_in": 2.6832,
+        "last_px": 5.755000114440918,
+        "notional": 1197.040023803711,
+        "owner": "union_join_vol_green_h1",
+        "peak_px": 5.755000114440918,
+        "reason": "combo gate; gate join=good,vol=good,last_green=True; list yday_gainer,yday_mover; ret5=+30.3; combo leftover $1202.67; owner union_join_vol_green_h1",
+        "shares": 208,
+        "side": "long",
+        "ticker": "GEMI"
+      },
+      "SBET": {
+        "close_px": 9.979999542236328,
+        "cost": 1201.1499725341796,
+        "entry_date": "2026-09-21",
+        "entry_px": 9.989999771118164,
+        "fee_in": 2.35,
+        "last_px": 9.989999771118164,
+        "notional": 1198.7999725341797,
+        "owner": "union_join_vol_green_h1",
+        "peak_px": 9.989999771118164,
+        "reason": "combo gate; gate join=good,vol=good,last_green=True; list probable,yday_gainer; \ud83d\udd35; ret5=+5.3; combo leftover $1202.67; owner union_join_vol_green_h1",
+        "shares": 120,
+        "side": "long",
+        "ticker": "SBET"
+      },
+      "TJGC": {
+        "close_px": 17.579999923706055,
+        "cost": 1202.8129891662597,
+        "entry_date": "2026-09-21",
+        "entry_px": 16.90999984741211,
+        "fee_in": 2.203,
+        "last_px": 16.90999984741211,
+        "notional": 1200.6099891662598,
+        "owner": "union_join_vol_green_h1",
+        "peak_px": 16.90999984741211,
+        "reason": "combo gate; gate join=good,vol=good,last_green=True; list yday_gainer,yday_mover; ret5=+50.5; combo leftover $1202.67; owner union_join_vol_green_h1",
+        "shares": 71,
+        "side": "long",
+        "ticker": "TJGC"
+      },
+      "USDE": {
+        "close_px": 12.600000381469727,
+        "cost": 1202.8660175476075,
+        "entry_date": "2026-09-21",
+        "entry_px": 13.050000190734863,
+        "fee_in": 2.266,
+        "last_px": 13.050000190734863,
+        "notional": 1200.6000175476074,
+        "owner": "union_join_vol_green_h1",
+        "peak_px": 13.050000190734863,
+        "reason": "combo gate; gate join=good,vol=good,last_green=True; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+40.4; combo leftover $1202.67; owner union_join_vol_green_h1",
+        "shares": 92,
+        "side": "long",
+        "ticker": "USDE"
+      }
+    },
+    "yday_equity": 9802.81
+  }
+}

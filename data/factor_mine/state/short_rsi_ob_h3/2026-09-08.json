@@ -1,0 +1,133 @@
+{
+  "buys": [],
+  "cash": 15025.57,
+  "date": "2026-09-08",
+  "equity": 10180.17,
+  "fees": 0,
+  "fills": [],
+  "holdings": [
+    "ATRC",
+    "BMEA",
+    "CRM",
+    "FMC",
+    "GPRO",
+    "HRMY",
+    "OABI",
+    "OPK"
+  ],
+  "mean": 1.7367,
+  "n_trades_today": 0,
+  "recipe": "short_rsi_ob_h3",
+  "sells": [],
+  "state": {
+    "after": "2026-09-08",
+    "cash": 15025.57,
+    "pos": {
+      "ATRC": {
+        "close_px": 53.72999954223633,
+        "cost": 2.06310575302333,
+        "entry_date": "2026-09-04",
+        "entry_px": 52.029998779296875,
+        "fee_in": 2.06310575302333,
+        "last_px": 54.310001373291016,
+        "notional": 624.3599853515625,
+        "peak_px": 52.029998779296875,
+        "reason": "RSI overbought; gate rsi_ob=True; list flatten,mover_buy; \ud83d\udd35; \u26aa; ret5=+6.5; leftover $633.00",
+        "shares": 12,
+        "ticker": "ATRC"
+      },
+      "BMEA": {
+        "close_px": 1.9299999475479126,
+        "cost": 4.378334246357826,
+        "entry_date": "2026-09-04",
+        "entry_px": 1.899999976158142,
+        "fee_in": 4.378334246357826,
+        "last_px": 2.0,
+        "notional": 632.6999920606613,
+        "peak_px": 1.899999976158142,
+        "reason": "RSI overbought; gate rsi_ob=True; list flatten,mover_buy; \ud83d\udd35; \u26aa; ret5=+13.7; leftover $633.00",
+        "shares": 333,
+        "ticker": "BMEA"
+      },
+      "CRM": {
+        "close_px": 249.1199951171875,
+        "cost": 2.0304306841288526,
+        "entry_date": "2026-09-04",
+        "entry_px": 263.3599853515625,
+        "fee_in": 2.0304306841288526,
+        "last_px": 253.72000122070312,
+        "notional": 526.719970703125,
+        "peak_px": 253.72000122070312,
+        "reason": "RSI overbought; gate rsi_ob=True; list flatten,mover_buy; \ud83d\udd35; \u26aa; ret5=+4.9; leftover $633.00",
+        "shares": 2,
+        "ticker": "CRM"
+      },
+      "FMC": {
+        "close_px": 12.8100004196167,
+        "cost": 2.171030136735472,
+        "entry_date": "2026-09-04",
+        "entry_px": 12.949999809265137,
+        "fee_in": 2.171030136735472,
+        "last_px": 13.109999656677246,
+        "notional": 621.5999908447266,
+        "peak_px": 12.949999809265137,
+        "reason": "RSI overbought; gate rsi_ob=True; list yday_gainer,yday_mover; ret5=+21.8; leftover $633.00",
+        "shares": 48,
+        "ticker": "FMC"
+      },
+      "GPRO": {
+        "close_px": 1.4550000429153442,
+        "cost": 5.606513972825874,
+        "entry_date": "2026-09-04",
+        "entry_px": 1.4800000190734863,
+        "fee_in": 5.606513972825874,
+        "last_px": 1.565000057220459,
+        "notional": 631.9600081443787,
+        "peak_px": 1.4800000190734863,
+        "reason": "RSI overbought; gate rsi_ob=True; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+129.8; leftover $633.00",
+        "shares": 427,
+        "ticker": "GPRO"
+      },
+      "HRMY": {
+        "close_px": 42.06999969482422,
+        "cost": 2.072054794520548,
+        "entry_date": "2026-09-04",
+        "entry_px": 41.5,
+        "fee_in": 2.072054794520548,
+        "last_px": 42.20000076293945,
+        "notional": 622.5,
+        "peak_px": 41.5,
+        "reason": "RSI overbought; gate rsi_ob=True; list flatten,mover_buy; \ud83d\udd35; \u26aa; ret5=+5.0; leftover $633.00",
+        "shares": 15,
+        "ticker": "HRMY"
+      },
+      "OABI": {
+        "close_px": 4.239999771118164,
+        "cost": 2.435186576101225,
+        "entry_date": "2026-09-04",
+        "entry_px": 4.78000020980835,
+        "fee_in": 2.435186576101225,
+        "last_px": 4.300000190734863,
+        "notional": 630.9600276947021,
+        "peak_px": 4.300000190734863,
+        "reason": "RSI overbought; gate rsi_ob=True; list flatten,probable,yday_gainer,yday_mover,mover_buy; \ud83d\udd35; \u26aa; ret5=+3.0; leftover $633.00",
+        "shares": 132,
+        "ticker": "OABI"
+      },
+      "OPK": {
+        "close_px": 1.590000033378601,
+        "cost": 5.2276375346105395,
+        "entry_date": "2026-09-04",
+        "entry_px": 1.590000033378601,
+        "fee_in": 5.2276375346105395,
+        "last_px": 1.6299999952316284,
+        "notional": 632.8200132846832,
+        "peak_px": 1.590000033378601,
+        "reason": "RSI overbought; gate rsi_ob=True; list flatten,yday_gainer,mover_buy; \ud83d\udd35; \u26aa; ret5=+7.3; leftover $633.00",
+        "shares": 398,
+        "ticker": "OPK"
+      }
+    },
+    "yday_equity": 10180.17
+  }
+}

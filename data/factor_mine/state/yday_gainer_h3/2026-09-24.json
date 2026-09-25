@@ -1,0 +1,251 @@
+{
+  "buys": [],
+  "cash": 7459.58,
+  "date": "2026-09-24",
+  "equity": 8664.51,
+  "fees": 34.42,
+  "fills": [
+    {
+      "fees": 8.1632,
+      "pnl": -81.73,
+      "price": 1.72,
+      "shares": 624,
+      "side": "SELL",
+      "ticker": "BTBT"
+    },
+    {
+      "fees": 2.2659,
+      "pnl": -106.57,
+      "price": 12.26,
+      "shares": 84,
+      "side": "SELL",
+      "ticker": "BTDR"
+    },
+    {
+      "fees": 3.7207,
+      "pnl": -177.78,
+      "price": 3.4,
+      "shares": 284,
+      "side": "SELL",
+      "ticker": "CYPH"
+    },
+    {
+      "fees": 2.139,
+      "pnl": -45.32,
+      "price": 24.995,
+      "shares": 43,
+      "side": "SELL",
+      "ticker": "GLXY"
+    },
+    {
+      "fees": 13.4157,
+      "pnl": -88.21,
+      "price": 1.05,
+      "shares": 1026,
+      "side": "SELL",
+      "ticker": "ORBS"
+    },
+    {
+      "fees": 2.3609,
+      "pnl": -26.35,
+      "price": 9.8,
+      "shares": 114,
+      "side": "SELL",
+      "ticker": "SBET"
+    },
+    {
+      "fees": 2.3546,
+      "pnl": -32.12,
+      "price": 9.89,
+      "shares": 112,
+      "side": "SELL",
+      "ticker": "SGML"
+    }
+  ],
+  "holdings": [
+    "ALOY",
+    "APPS",
+    "CRML",
+    "DEFT",
+    "FJET",
+    "GLND",
+    "GRAL",
+    "INDP",
+    "IVVD",
+    "NMRA",
+    "TLYS"
+  ],
+  "mean": -0.8475,
+  "n_trades_today": 7,
+  "recipe": "yday_gainer_h3",
+  "sells": [
+    "BTBT",
+    "BTDR",
+    "CYPH",
+    "GLXY",
+    "ORBS",
+    "SBET",
+    "SGML"
+  ],
+  "state": {
+    "after": "2026-09-24",
+    "cash": 7459.58,
+    "pos": {
+      "ALOY": {
+        "close_px": 8.520000457763672,
+        "cost": 142.4549942779541,
+        "entry_date": "2026-09-22",
+        "entry_px": 9.399999618530273,
+        "fee_in": 1.455,
+        "last_px": 8.380000114440918,
+        "min_hold": 3,
+        "notional": 140.9999942779541,
+        "peak_px": 9.399999618530273,
+        "reason": "baseline list, no extra gate; list probable,yday_gainer; ret5=+9.5; leftover $148.46",
+        "shares": 15,
+        "ticker": "ALOY"
+      },
+      "APPS": {
+        "close_px": 10.880000114440918,
+        "cost": 148.38479999999998,
+        "entry_date": "2026-09-22",
+        "entry_px": 12.24,
+        "fee_in": 1.5048,
+        "last_px": 11.329999923706055,
+        "min_hold": 3,
+        "notional": 146.88,
+        "peak_px": 12.24,
+        "reason": "baseline list, no extra gate; list probable,yday_gainer; ret5=+2.7; leftover $148.46",
+        "shares": 12,
+        "ticker": "APPS"
+      },
+      "CRML": {
+        "close_px": 8.170000076293945,
+        "cost": 147.26559450683592,
+        "entry_date": "2026-09-22",
+        "entry_px": 9.109999656677246,
+        "fee_in": 1.5056,
+        "last_px": 7.860000133514404,
+        "min_hold": 3,
+        "notional": 145.75999450683594,
+        "peak_px": 9.109999656677246,
+        "reason": "baseline list, no extra gate; list yday_gainer,yday_mover; ret5=+44.4; leftover $148.46",
+        "shares": 16,
+        "ticker": "CRML"
+      },
+      "DEFT": {
+        "close_px": 0.5320000052452087,
+        "cost": 150.3239,
+        "entry_date": "2026-09-22",
+        "entry_px": 0.59,
+        "fee_in": 2.2339,
+        "last_px": 0.5199999809265137,
+        "min_hold": 3,
+        "notional": 148.09,
+        "peak_px": 0.59,
+        "reason": "baseline list, no extra gate; list probable,yday_gainer,yday_mover; ret5=-1.7; leftover $148.46",
+        "shares": 251,
+        "ticker": "DEFT"
+      },
+      "FJET": {
+        "close_px": 1.7999999523162842,
+        "cost": 149.1536,
+        "entry_date": "2026-09-22",
+        "entry_px": 2.02,
+        "fee_in": 1.6936,
+        "last_px": 1.9199999570846558,
+        "min_hold": 3,
+        "notional": 147.46,
+        "peak_px": 2.02,
+        "reason": "baseline list, no extra gate; list probable,yday_gainer,yday_mover; ret5=+0.5; leftover $148.46",
+        "shares": 73,
+        "ticker": "FJET"
+      },
+      "GLND": {
+        "close_px": 5.349999904632568,
+        "cost": 148.62000286102295,
+        "entry_date": "2026-09-22",
+        "entry_px": 2.940000057220459,
+        "fee_in": 1.62,
+        "last_px": 3.2200000286102295,
+        "min_hold": 3,
+        "notional": 147.00000286102295,
+        "peak_px": 3.2200000286102295,
+        "reason": "baseline list, no extra gate; list yday_gainer,yday_mover; ret5=+136.1; leftover $148.46",
+        "shares": 50,
+        "ticker": "GLND"
+      },
+      "GRAL": {
+        "close_px": 125.20999908447266,
+        "cost": 107.8205,
+        "entry_date": "2026-09-22",
+        "entry_px": 106.75,
+        "fee_in": 1.0705,
+        "last_px": 105.5,
+        "min_hold": 3,
+        "notional": 106.75,
+        "peak_px": 108.5199966430664,
+        "reason": "baseline list, no extra gate; list yday_gainer,yday_mover; ret5=+42.9; leftover $148.46",
+        "shares": 1,
+        "ticker": "GRAL"
+      },
+      "INDP": {
+        "close_px": 4.0,
+        "cost": 7.944600133514404,
+        "entry_date": "2026-09-23",
+        "entry_px": 3.930000066757202,
+        "fee_in": 0.0846,
+        "last_px": 3.7699999809265137,
+        "min_hold": 3,
+        "notional": 7.860000133514404,
+        "peak_px": 3.930000066757202,
+        "reason": "baseline list, no extra gate; list probable,yday_gainer,yday_mover,ohlc_hot; \ud83d\udd35; ret5=+9.6; leftover $9.30",
+        "shares": 2,
+        "ticker": "INDP"
+      },
+      "IVVD": {
+        "close_px": 0.9129999876022339,
+        "cost": 149.3725986076355,
+        "entry_date": "2026-09-22",
+        "entry_px": 1.0099999904632568,
+        "fee_in": 1.9126,
+        "last_px": 0.949999988079071,
+        "min_hold": 3,
+        "notional": 147.4599986076355,
+        "peak_px": 1.0099999904632568,
+        "reason": "baseline list, no extra gate; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+14.3; leftover $148.46",
+        "shares": 146,
+        "ticker": "IVVD"
+      },
+      "NMRA": {
+        "close_px": 0.703000009059906,
+        "cost": 9.344200080108642,
+        "entry_date": "2026-09-23",
+        "entry_px": 0.7680000066757202,
+        "fee_in": 0.1282,
+        "last_px": 0.7459999918937683,
+        "min_hold": 3,
+        "notional": 9.216000080108643,
+        "peak_px": 0.7680000066757202,
+        "reason": "baseline list, no extra gate; list probable,yday_gainer,yday_mover; \ud83d\udd35; ret5=-6.3; leftover $9.30",
+        "shares": 12,
+        "ticker": "NMRA"
+      },
+      "TLYS": {
+        "close_px": 4.239999771118164,
+        "cost": 8.792999809265137,
+        "entry_date": "2026-09-23",
+        "entry_px": 4.349999904632568,
+        "fee_in": 0.093,
+        "last_px": 4.150000095367432,
+        "min_hold": 3,
+        "notional": 8.699999809265137,
+        "peak_px": 4.349999904632568,
+        "reason": "baseline list, no extra gate; list probable,yday_gainer; ret5=-9.6; leftover $9.30",
+        "shares": 2,
+        "ticker": "TLYS"
+      }
+    },
+    "yday_equity": 8664.51
+  }
+}

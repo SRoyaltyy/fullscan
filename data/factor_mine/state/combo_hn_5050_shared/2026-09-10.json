@@ -1,0 +1,19 @@
+{
+  "buys": [],
+  "cash": 9999.9,
+  "date": "2026-09-10",
+  "equity": 9999.9,
+  "fees": 0,
+  "fills": [],
+  "holdings": [],
+  "mean": 0.0,
+  "n_trades_today": 0,
+  "recipe": "combo_hn_5050_shared",
+  "sells": [],
+  "state": {
+    "after": "2026-09-10",
+    "cash": 9999.9,
+    "pos": {},
+    "yday_equity": 9999.9
+  }
+}

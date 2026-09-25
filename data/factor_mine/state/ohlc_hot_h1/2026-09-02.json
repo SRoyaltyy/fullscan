@@ -1,0 +1,19 @@
+{
+  "buys": [],
+  "cash": 9631.5,
+  "date": "2026-09-02",
+  "equity": 9631.5,
+  "fees": 0,
+  "fills": [],
+  "holdings": [],
+  "mean": 0.0,
+  "n_trades_today": 0,
+  "recipe": "ohlc_hot_h1",
+  "sells": [],
+  "state": {
+    "after": "2026-09-02",
+    "cash": 9631.5,
+    "pos": {},
+    "yday_equity": 9631.5
+  }
+}

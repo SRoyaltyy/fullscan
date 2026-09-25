@@ -1,0 +1,310 @@
+{
+  "buys": [
+    "RDNT",
+    "RIG",
+    "VAL",
+    "ADPT",
+    "SWKS",
+    "SDGR",
+    "FPS",
+    "CAI",
+    "BBNX",
+    "GFR"
+  ],
+  "cash": 10107.14,
+  "date": "2026-09-16",
+  "equity": 9665.41,
+  "fees": 44.0279,
+  "fills": [
+    {
+      "fees": 8.2689,
+      "pnl": 98.69,
+      "price": 1.85,
+      "shares": 641,
+      "side": "COVER",
+      "ticker": "CRDL"
+    },
+    {
+      "fees": 4.9794,
+      "pnl": -156.75,
+      "price": 3.75,
+      "shares": 386,
+      "side": "COVER",
+      "ticker": "MYGN"
+    },
+    {
+      "fees": 2.023,
+      "pnl": -62.9,
+      "price": 118.18,
+      "shares": 11,
+      "side": "COVER",
+      "ticker": "QRVO"
+    },
+    {
+      "fees": 4.773,
+      "pnl": -179.85,
+      "price": 3.98,
+      "shares": 370,
+      "side": "COVER",
+      "ticker": "RWT"
+    },
+    {
+      "fees": 2.014,
+      "pnl": null,
+      "price": 77.12,
+      "shares": 8,
+      "side": "BUY",
+      "ticker": "RDNT"
+    },
+    {
+      "fees": 2.311,
+      "pnl": null,
+      "price": 5.87,
+      "shares": 107,
+      "side": "BUY",
+      "ticker": "RIG"
+    },
+    {
+      "fees": 2.011,
+      "pnl": null,
+      "price": 87.4,
+      "shares": 7,
+      "side": "BUY",
+      "ticker": "VAL"
+    },
+    {
+      "fees": 2.059,
+      "pnl": null,
+      "price": 27.09,
+      "shares": 23,
+      "side": "BUY",
+      "ticker": "ADPT"
+    },
+    {
+      "fees": 2.011,
+      "pnl": null,
+      "price": 89.38,
+      "shares": 7,
+      "side": "BUY",
+      "ticker": "SWKS"
+    },
+    {
+      "fees": 2.071,
+      "pnl": null,
+      "price": 23.29,
+      "shares": 27,
+      "side": "BUY",
+      "ticker": "SDGR"
+    },
+    {
+      "fees": 2.047,
+      "pnl": null,
+      "price": 33.14,
+      "shares": 19,
+      "side": "BUY",
+      "ticker": "FPS"
+    },
+    {
+      "fees": 2.056,
+      "pnl": null,
+      "price": 28.16,
+      "shares": 22,
+      "side": "BUY",
+      "ticker": "CAI"
+    },
+    {
+      "fees": 2.5063315091067797,
+      "pnl": null,
+      "price": 18.61,
+      "shares": 135,
+      "side": "SHORT",
+      "ticker": "BBNX"
+    },
+    {
+      "fees": 4.897261369093804,
+      "pnl": null,
+      "price": 6.83,
+      "shares": 368,
+      "side": "SHORT",
+      "ticker": "GFR"
+    }
+  ],
+  "holdings": [
+    "ADPT",
+    "BBNX",
+    "CAI",
+    "FPS",
+    "GFR",
+    "RDNT",
+    "RIG",
+    "SDGR",
+    "SWKS",
+    "VAL"
+  ],
+  "mean": -4.1701,
+  "n_trades_today": 14,
+  "recipe": "combo_sj_5050_shared",
+  "sells": [
+    "CRDL",
+    "MYGN",
+    "QRVO",
+    "RWT"
+  ],
+  "state": {
+    "after": "2026-09-16",
+    "cash": 10107.14,
+    "pos": {
+      "ADPT": {
+        "close_px": 27.670000076293945,
+        "cost": 625.1290035095215,
+        "entry_date": "2026-09-16",
+        "entry_px": 27.09000015258789,
+        "fee_in": 2.059,
+        "last_px": 27.09000015258789,
+        "notional": 623.0700035095215,
+        "owner": "union_join_vol_green_h1",
+        "peak_px": 27.09000015258789,
+        "reason": "combo gate; gate join=good,vol=good,last_green=True; list probable,yday_gainer,ohlc_hot; \ud83d\udd35; \u26aa; ret5=+9.6; combo leftover $630.56; owner union_join_vol_green_h1",
+        "shares": 23,
+        "side": "long",
+        "ticker": "ADPT"
+      },
+      "BBNX": {
+        "close_px": 22.18000030517578,
+        "cost": 2.5063315091067797,
+        "entry_date": "2026-09-16",
+        "entry_px": 18.610000610351562,
+        "fee_in": 2.5063315091067797,
+        "last_px": 18.610000610351562,
+        "notional": 2512.350082397461,
+        "owner": "short_news_r_h3",
+        "peak_px": 18.610000610351562,
+        "reason": "news\ud83d\udd34; gate news=bad; list probable,yday_gainer,yday_mover; ret5=-0.5; combo leftover $2518.09; owner short_news_r_h3",
+        "shares": 135,
+        "side": "short",
+        "ticker": "BBNX"
+      },
+      "CAI": {
+        "close_px": 28.209999084472656,
+        "cost": 621.5759966430664,
+        "entry_date": "2026-09-16",
+        "entry_px": 28.15999984741211,
+        "fee_in": 2.056,
+        "last_px": 28.15999984741211,
+        "notional": 619.5199966430664,
+        "owner": "union_join_vol_green_h1",
+        "peak_px": 28.15999984741211,
+        "reason": "combo gate; gate join=good,vol=good,last_green=True; list yday_gainer,ohlc_hot; \u26aa; ret5=+14.8; combo leftover $630.56; owner union_join_vol_green_h1",
+        "shares": 22,
+        "side": "long",
+        "ticker": "CAI"
+      },
+      "FPS": {
+        "close_px": 34.84000015258789,
+        "cost": 631.7069884033203,
+        "entry_date": "2026-09-16",
+        "entry_px": 33.13999938964844,
+        "fee_in": 2.047,
+        "last_px": 33.13999938964844,
+        "notional": 629.6599884033203,
+        "owner": "union_join_vol_green_h1",
+        "peak_px": 33.13999938964844,
+        "reason": "combo gate; gate join=good,vol=good,last_green=True; list yday_gainer; \ud83d\udd35; ret5=-2.9; combo leftover $630.56; owner union_join_vol_green_h1",
+        "shares": 19,
+        "side": "long",
+        "ticker": "FPS"
+      },
+      "GFR": {
+        "close_px": 6.489999771118164,
+        "cost": 4.897261369093804,
+        "entry_date": "2026-09-16",
+        "entry_px": 6.829999923706055,
+        "fee_in": 4.897261369093804,
+        "last_px": 6.829999923706055,
+        "notional": 2513.439971923828,
+        "owner": "short_news_r_h3",
+        "peak_px": 6.829999923706055,
+        "reason": "news\ud83d\udd34; gate news=bad; list ohlc_hot; ret5=+11.2; combo leftover $2518.09; owner short_news_r_h3",
+        "shares": 368,
+        "side": "short",
+        "ticker": "GFR"
+      },
+      "RDNT": {
+        "close_px": 75.77999877929688,
+        "cost": 618.9740219726563,
+        "entry_date": "2026-09-16",
+        "entry_px": 77.12000274658203,
+        "fee_in": 2.014,
+        "last_px": 77.12000274658203,
+        "notional": 616.9600219726562,
+        "owner": "union_join_vol_green_h1",
+        "peak_px": 77.12000274658203,
+        "reason": "combo gate; gate join=good,vol=good,last_green=True; list flatten; \u26aa; ret5=+7.2; combo leftover $630.56; owner union_join_vol_green_h1",
+        "shares": 8,
+        "side": "long",
+        "ticker": "RDNT"
+      },
+      "RIG": {
+        "close_px": 5.539999961853027,
+        "cost": 630.4009877548218,
+        "entry_date": "2026-09-16",
+        "entry_px": 5.869999885559082,
+        "fee_in": 2.311,
+        "last_px": 5.869999885559082,
+        "notional": 628.0899877548218,
+        "owner": "union_join_vol_green_h1",
+        "peak_px": 5.869999885559082,
+        "reason": "combo gate; gate join=good,vol=good,last_green=True; list probable,yday_gainer; \ud83d\udd35; ret5=+3.1; combo leftover $630.56; owner union_join_vol_green_h1",
+        "shares": 107,
+        "side": "long",
+        "ticker": "RIG"
+      },
+      "SDGR": {
+        "close_px": 23.93000030517578,
+        "cost": 630.9010247192383,
+        "entry_date": "2026-09-16",
+        "entry_px": 23.290000915527344,
+        "fee_in": 2.071,
+        "last_px": 23.290000915527344,
+        "notional": 628.8300247192383,
+        "owner": "union_join_vol_green_h1",
+        "peak_px": 23.290000915527344,
+        "reason": "combo gate; gate join=good,vol=good,last_green=True; list yday_gainer; \ud83d\udd35; \u26aa; ret5=+16.1; combo leftover $630.56; owner union_join_vol_green_h1",
+        "shares": 27,
+        "side": "long",
+        "ticker": "SDGR"
+      },
+      "SWKS": {
+        "close_px": 85.58999633789062,
+        "cost": 627.6709807739257,
+        "entry_date": "2026-09-16",
+        "entry_px": 89.37999725341797,
+        "fee_in": 2.011,
+        "last_px": 89.37999725341797,
+        "notional": 625.6599807739258,
+        "owner": "union_join_vol_green_h1",
+        "peak_px": 89.37999725341797,
+        "reason": "combo gate; gate join=good,vol=good,last_green=True; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+19.4; combo leftover $630.56; owner union_join_vol_green_h1",
+        "shares": 7,
+        "side": "long",
+        "ticker": "SWKS"
+      },
+      "VAL": {
+        "close_px": 82.5199966430664,
+        "cost": 613.8110106811523,
+        "entry_date": "2026-09-16",
+        "entry_px": 87.4000015258789,
+        "fee_in": 2.011,
+        "last_px": 87.4000015258789,
+        "notional": 611.8000106811523,
+        "owner": "union_join_vol_green_h1",
+        "peak_px": 87.4000015258789,
+        "reason": "combo gate; gate join=good,vol=good,last_green=True; list probable,yday_gainer; \ud83d\udd35; ret5=+3.2; combo leftover $630.56; owner union_join_vol_green_h1",
+        "shares": 7,
+        "side": "long",
+        "ticker": "VAL"
+      }
+    },
+    "yday_equity": 9665.41
+  }
+}

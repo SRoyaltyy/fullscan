@@ -1,0 +1,93 @@
+{
+  "buys": [],
+  "cash": 9571.89,
+  "date": "2026-09-10",
+  "equity": 9571.89,
+  "fees": 16.8092,
+  "fills": [
+    {
+      "fees": 2.0254,
+      "pnl": 115.41,
+      "price": 260.708,
+      "shares": 5,
+      "side": "SELL",
+      "ticker": "BE"
+    },
+    {
+      "fees": 2.046,
+      "pnl": -99.83,
+      "price": 90.0,
+      "shares": 12,
+      "side": "SELL",
+      "ticker": "CRCL"
+    },
+    {
+      "fees": 2.022,
+      "pnl": -76.06,
+      "price": 245.35,
+      "shares": 4,
+      "side": "SELL",
+      "ticker": "CRM"
+    },
+    {
+      "fees": 2.016,
+      "pnl": 16.09,
+      "price": 523.83,
+      "shares": 2,
+      "side": "SELL",
+      "ticker": "DELL"
+    },
+    {
+      "fees": 2.04,
+      "pnl": -81.91,
+      "price": 112.69,
+      "shares": 10,
+      "side": "SELL",
+      "ticker": "HOOD"
+    },
+    {
+      "fees": 2.034,
+      "pnl": -75.33,
+      "price": 128.44,
+      "shares": 8,
+      "side": "SELL",
+      "ticker": "MSTR"
+    },
+    {
+      "fees": 2.5738,
+      "pnl": 125.21,
+      "price": 7.4,
+      "shares": 181,
+      "side": "SELL",
+      "ticker": "SION"
+    },
+    {
+      "fees": 2.052,
+      "pnl": -29.4,
+      "price": 80.892,
+      "shares": 14,
+      "side": "SELL",
+      "ticker": "TARS"
+    }
+  ],
+  "holdings": [],
+  "mean": -2.1906,
+  "n_trades_today": 8,
+  "recipe": "union_macd_hist_h3",
+  "sells": [
+    "BE",
+    "CRCL",
+    "CRM",
+    "DELL",
+    "HOOD",
+    "MSTR",
+    "SION",
+    "TARS"
+  ],
+  "state": {
+    "after": "2026-09-10",
+    "cash": 9571.89,
+    "pos": {},
+    "yday_equity": 9571.89
+  }
+}

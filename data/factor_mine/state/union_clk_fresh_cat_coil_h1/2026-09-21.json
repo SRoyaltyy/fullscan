@@ -1,0 +1,198 @@
+{
+  "buys": [
+    "A",
+    "MXL",
+    "MGTX",
+    "HUM",
+    "GLXY"
+  ],
+  "cash": 1972.79,
+  "date": "2026-09-21",
+  "equity": 10155.66,
+  "fees": 48.9393,
+  "fills": [
+    {
+      "fees": 2.023,
+      "pnl": 105.51,
+      "price": 583.88,
+      "shares": 3,
+      "side": "SELL",
+      "ticker": "AMD"
+    },
+    {
+      "fees": 2.3734,
+      "pnl": -24.6,
+      "price": 13.9,
+      "shares": 117,
+      "side": "SELL",
+      "ticker": "BHVN"
+    },
+    {
+      "fees": 6.0502,
+      "pnl": 48.05,
+      "price": 3.71,
+      "shares": 462,
+      "side": "SELL",
+      "ticker": "DDD"
+    },
+    {
+      "fees": 2.059,
+      "pnl": 96.86,
+      "price": 116.53,
+      "shares": 15,
+      "side": "SELL",
+      "ticker": "INTC"
+    },
+    {
+      "fees": 22.9761,
+      "pnl": -18.11,
+      "price": 0.864,
+      "shares": 1945,
+      "side": "SELL",
+      "ticker": "RANI"
+    },
+    {
+      "fees": 2.8356,
+      "pnl": 9.5,
+      "price": 7.71,
+      "shares": 216,
+      "side": "SELL",
+      "ticker": "SHLS"
+    },
+    {
+      "fees": 2.02,
+      "pnl": null,
+      "price": 157.87,
+      "shares": 10,
+      "side": "BUY",
+      "ticker": "A"
+    },
+    {
+      "fees": 2.05,
+      "pnl": null,
+      "price": 83.53,
+      "shares": 20,
+      "side": "BUY",
+      "ticker": "MXL"
+    },
+    {
+      "fees": 2.365,
+      "pnl": null,
+      "price": 13.47,
+      "shares": 125,
+      "side": "BUY",
+      "ticker": "MGTX"
+    },
+    {
+      "fees": 2.002,
+      "pnl": null,
+      "price": 386.2,
+      "shares": 4,
+      "side": "BUY",
+      "ticker": "HUM"
+    },
+    {
+      "fees": 2.185,
+      "pnl": null,
+      "price": 25.95,
+      "shares": 65,
+      "side": "BUY",
+      "ticker": "GLXY"
+    }
+  ],
+  "holdings": [
+    "A",
+    "GLXY",
+    "HUM",
+    "MGTX",
+    "MXL"
+  ],
+  "mean": 2.6049,
+  "n_trades_today": 11,
+  "recipe": "union_clk_fresh_cat_coil_h1",
+  "sells": [
+    "AMD",
+    "BHVN",
+    "DDD",
+    "INTC",
+    "RANI",
+    "SHLS"
+  ],
+  "state": {
+    "after": "2026-09-21",
+    "cash": 1972.79,
+    "pos": {
+      "A": {
+        "close_px": 161.94000244140625,
+        "cost": 1580.719951171875,
+        "entry_date": "2026-09-21",
+        "entry_px": 157.8699951171875,
+        "fee_in": 2.02,
+        "last_px": 157.8699951171875,
+        "min_hold": 1,
+        "notional": 1578.699951171875,
+        "peak_px": 157.8699951171875,
+        "reason": "Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list flatten; \ud83d\udd35; \u26aa; ret5=+6.5; leftover $1691.34",
+        "shares": 10,
+        "ticker": "A"
+      },
+      "GLXY": {
+        "close_px": 26.06999969482422,
+        "cost": 1688.9350495910644,
+        "entry_date": "2026-09-21",
+        "entry_px": 25.950000762939453,
+        "fee_in": 2.185,
+        "last_px": 25.950000762939453,
+        "min_hold": 1,
+        "notional": 1686.7500495910645,
+        "peak_px": 25.950000762939453,
+        "reason": "Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list probable,yday_gainer; \ud83d\udd35; ret5=+1.2; leftover $1691.34",
+        "shares": 65,
+        "ticker": "GLXY"
+      },
+      "HUM": {
+        "close_px": 378.5799865722656,
+        "cost": 1546.802048828125,
+        "entry_date": "2026-09-21",
+        "entry_px": 386.20001220703125,
+        "fee_in": 2.002,
+        "last_px": 386.20001220703125,
+        "min_hold": 1,
+        "notional": 1544.800048828125,
+        "peak_px": 386.20001220703125,
+        "reason": "Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list flatten; \ud83d\udd35; ret5=-5.8; leftover $1691.34",
+        "shares": 4,
+        "ticker": "HUM"
+      },
+      "MGTX": {
+        "close_px": 13.079999923706055,
+        "cost": 1686.115033378601,
+        "entry_date": "2026-09-21",
+        "entry_px": 13.470000267028809,
+        "fee_in": 2.365,
+        "last_px": 13.470000267028809,
+        "min_hold": 1,
+        "notional": 1683.750033378601,
+        "peak_px": 13.470000267028809,
+        "reason": "Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list flatten; \ud83d\udd35; \u26aa; ret5=+3.6; leftover $1691.34",
+        "shares": 125,
+        "ticker": "MGTX"
+      },
+      "MXL": {
+        "close_px": 85.9800033569336,
+        "cost": 1672.6499755859375,
+        "entry_date": "2026-09-21",
+        "entry_px": 83.52999877929688,
+        "fee_in": 2.05,
+        "last_px": 83.52999877929688,
+        "min_hold": 1,
+        "notional": 1670.5999755859375,
+        "peak_px": 83.52999877929688,
+        "reason": "Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list ohlc_hot; ret5=+8.8; leftover $1691.34",
+        "shares": 20,
+        "ticker": "MXL"
+      }
+    },
+    "yday_equity": 10155.66
+  }
+}

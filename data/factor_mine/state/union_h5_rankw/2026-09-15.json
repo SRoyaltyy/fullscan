@@ -1,0 +1,51 @@
+{
+  "buys": [],
+  "cash": 8575.53,
+  "date": "2026-09-15",
+  "equity": 8583.05,
+  "fees": 0,
+  "fills": [],
+  "holdings": [
+    "BAK",
+    "OVID"
+  ],
+  "mean": 0.0003,
+  "n_trades_today": 0,
+  "recipe": "union_h5_rankw",
+  "sells": [],
+  "state": {
+    "after": "2026-09-15",
+    "cash": 8575.53,
+    "pos": {
+      "BAK": {
+        "close_px": 2.0999999046325684,
+        "cost": 2.144199885559082,
+        "entry_date": "2026-09-11",
+        "entry_px": 2.119999885559082,
+        "fee_in": 0.0242,
+        "last_px": 2.0199999809265137,
+        "min_hold": 5,
+        "notional": 2.119999885559082,
+        "peak_px": 2.119999885559082,
+        "reason": "rank-weighted leftover; list probable,yday_gainer,ohlc_hot; \ud83d\udd35; ret5=+8.8; leftover $2.18",
+        "shares": 1,
+        "ticker": "BAK"
+      },
+      "OVID": {
+        "close_px": 2.7100000381469727,
+        "cost": 5.520600038146973,
+        "entry_date": "2026-09-11",
+        "entry_px": 2.7300000190734863,
+        "fee_in": 0.0606,
+        "last_px": 2.7300000190734863,
+        "min_hold": 5,
+        "notional": 5.460000038146973,
+        "peak_px": 2.755000114440918,
+        "reason": "rank-weighted leftover; list flatten; ret5=-5.4; leftover $7.62",
+        "shares": 2,
+        "ticker": "OVID"
+      }
+    },
+    "yday_equity": 8583.05
+  }
+}

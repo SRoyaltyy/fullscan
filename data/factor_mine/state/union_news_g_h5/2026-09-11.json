@@ -1,0 +1,137 @@
+{
+  "buys": [
+    "AMTX"
+  ],
+  "cash": 239.91,
+  "date": "2026-09-11",
+  "equity": 9565.37,
+  "fees": 0.9126,
+  "fills": [
+    {
+      "fees": 0.9126,
+      "pnl": null,
+      "price": 2.04,
+      "shares": 39,
+      "side": "BUY",
+      "ticker": "AMTX"
+    }
+  ],
+  "holdings": [
+    "AMTX",
+    "BAK",
+    "BE",
+    "CRM",
+    "FRNM",
+    "MRX",
+    "MSTR"
+  ],
+  "mean": 0.7095,
+  "n_trades_today": 1,
+  "recipe": "union_news_g_h5",
+  "sells": [],
+  "state": {
+    "after": "2026-09-11",
+    "cash": 239.91,
+    "pos": {
+      "AMTX": {
+        "close_px": 2.009999990463257,
+        "cost": 80.47259851226806,
+        "entry_date": "2026-09-11",
+        "entry_px": 2.0399999618530273,
+        "fee_in": 0.9126,
+        "last_px": 2.0399999618530273,
+        "min_hold": 5,
+        "notional": 79.55999851226807,
+        "peak_px": 2.0399999618530273,
+        "reason": "union \u2229 news_g hold 5, no \ud83d\udea8; gate news=good; list yday_gainer,yday_mover,ohlc_hot; \ud83d\udd35; ret5=+10.9; leftover $80.09",
+        "shares": 39,
+        "ticker": "AMTX"
+      },
+      "BAK": {
+        "close_px": 2.0799999237060547,
+        "cost": 1618.9541474357604,
+        "entry_date": "2026-09-04",
+        "entry_px": 1.940000057220459,
+        "fee_in": 10.6941,
+        "last_px": 2.119999885559082,
+        "min_hold": 5,
+        "notional": 1608.2600474357605,
+        "peak_px": 2.119999885559082,
+        "reason": "union \u2229 news_g hold 5, no \ud83d\udea8; gate news=good; list yday_gainer,yday_mover; ret5=+18.3; leftover $1609.58",
+        "shares": 829,
+        "ticker": "BAK"
+      },
+      "BE": {
+        "close_px": 275.75,
+        "cost": 1422.9280439453125,
+        "entry_date": "2026-09-04",
+        "entry_px": 236.82000732421875,
+        "fee_in": 2.008,
+        "last_px": 268.5150146484375,
+        "min_hold": 5,
+        "notional": 1420.9200439453125,
+        "peak_px": 272.989990234375,
+        "reason": "union \u2229 news_g hold 5, no \ud83d\udea8; gate news=good; list ohlc_hot; ret5=+8.1; leftover $1609.58",
+        "shares": 6,
+        "ticker": "BE"
+      },
+      "CRM": {
+        "close_px": 247.72000122070312,
+        "cost": 1582.167912109375,
+        "entry_date": "2026-09-04",
+        "entry_px": 263.3599853515625,
+        "fee_in": 2.008,
+        "last_px": 242.02000427246094,
+        "min_hold": 5,
+        "notional": 1580.159912109375,
+        "peak_px": 263.3599853515625,
+        "reason": "union \u2229 news_g hold 5, no \ud83d\udea8; gate news=good; list flatten,mover_buy; \ud83d\udd35; \u26aa; ret5=+4.9; leftover $1609.58",
+        "shares": 6,
+        "ticker": "CRM"
+      },
+      "FRNM": {
+        "close_px": 14.369999885559082,
+        "cost": 1609.483962615967,
+        "entry_date": "2026-09-04",
+        "entry_px": 16.399999618530273,
+        "fee_in": 2.284,
+        "last_px": 14.850000381469727,
+        "min_hold": 5,
+        "notional": 1607.1999626159668,
+        "peak_px": 16.739999771118164,
+        "reason": "union \u2229 news_g hold 5, no \ud83d\udea8; gate news=good; list mover_buy; \ud83d\udd35; \u26aa; ret5=+21.2; leftover $1609.58",
+        "shares": 98,
+        "ticker": "FRNM"
+      },
+      "MRX": {
+        "close_px": 73.0,
+        "cost": 1590.7030320434571,
+        "entry_date": "2026-09-04",
+        "entry_px": 75.6500015258789,
+        "fee_in": 2.053,
+        "last_px": 75.08999633789062,
+        "min_hold": 5,
+        "notional": 1588.650032043457,
+        "peak_px": 78.83999633789062,
+        "reason": "union \u2229 news_g hold 5, no \ud83d\udea8; gate news=good; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+6.0; leftover $1609.58",
+        "shares": 21,
+        "ticker": "MRX"
+      },
+      "MSTR": {
+        "close_px": 130.97000122070312,
+        "cost": 1512.8730671386718,
+        "entry_date": "2026-09-04",
+        "entry_px": 137.35000610351562,
+        "fee_in": 2.023,
+        "last_px": 130.6699981689453,
+        "min_hold": 5,
+        "notional": 1510.8500671386719,
+        "peak_px": 141.82000732421875,
+        "reason": "union \u2229 news_g hold 5, no \ud83d\udea8; gate news=good; list ohlc_hot; ret5=+5.4; leftover $1609.58",
+        "shares": 11,
+        "ticker": "MSTR"
+      }
+    },
+    "yday_equity": 9565.37
+  }
+}

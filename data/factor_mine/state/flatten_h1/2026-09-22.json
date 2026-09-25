@@ -1,0 +1,231 @@
+{
+  "buys": [
+    "PACS",
+    "MKC",
+    "EL",
+    "USFD",
+    "DLO",
+    "TDC"
+  ],
+  "cash": 111.13,
+  "date": "2026-09-22",
+  "equity": 9012.37,
+  "fees": 30.3917,
+  "fills": [
+    {
+      "fees": 2.0344,
+      "pnl": 37.63,
+      "price": 163.08,
+      "shares": 8,
+      "side": "SELL",
+      "ticker": "A"
+    },
+    {
+      "fees": 4.3479,
+      "pnl": -171.31,
+      "price": 3.51,
+      "shares": 332,
+      "side": "SELL",
+      "ticker": "CYPH"
+    },
+    {
+      "fees": 2.052,
+      "pnl": -0.02,
+      "price": 89.12,
+      "shares": 14,
+      "side": "SELL",
+      "ticker": "DXCM"
+    },
+    {
+      "fees": 2.019,
+      "pnl": -27.36,
+      "price": 378.42,
+      "shares": 3,
+      "side": "SELL",
+      "ticker": "HUM"
+    },
+    {
+      "fees": 2.4024,
+      "pnl": -36.52,
+      "price": 10.18,
+      "shares": 127,
+      "side": "SELL",
+      "ticker": "IOVA"
+    },
+    {
+      "fees": 2.3106,
+      "pnl": -34.97,
+      "price": 13.16,
+      "shares": 98,
+      "side": "SELL",
+      "ticker": "MGTX"
+    },
+    {
+      "fees": 2.5354,
+      "pnl": -38.83,
+      "price": 7.64,
+      "shares": 169,
+      "side": "SELL",
+      "ticker": "PGEN"
+    },
+    {
+      "fees": 2.095,
+      "pnl": null,
+      "price": 41.93,
+      "shares": 35,
+      "side": "BUY",
+      "ticker": "PACS"
+    },
+    {
+      "fees": 2.08,
+      "pnl": null,
+      "price": 49.57,
+      "shares": 30,
+      "side": "BUY",
+      "ticker": "MKC"
+    },
+    {
+      "fees": 2.035,
+      "pnl": null,
+      "price": 98.02,
+      "shares": 15,
+      "side": "BUY",
+      "ticker": "EL"
+    },
+    {
+      "fees": 2.038,
+      "pnl": null,
+      "price": 94.08,
+      "shares": 16,
+      "side": "BUY",
+      "ticker": "USFD"
+    },
+    {
+      "fees": 2.302,
+      "pnl": null,
+      "price": 14.5,
+      "shares": 104,
+      "side": "BUY",
+      "ticker": "DLO"
+    },
+    {
+      "fees": 2.14,
+      "pnl": null,
+      "price": 29.78,
+      "shares": 50,
+      "side": "BUY",
+      "ticker": "TDC"
+    }
+  ],
+  "holdings": [
+    "DLO",
+    "EL",
+    "MKC",
+    "PACS",
+    "TDC",
+    "USFD"
+  ],
+  "mean": -0.1716,
+  "n_trades_today": 13,
+  "recipe": "flatten_h1",
+  "sells": [
+    "A",
+    "CYPH",
+    "DXCM",
+    "HUM",
+    "IOVA",
+    "MGTX",
+    "PGEN"
+  ],
+  "state": {
+    "after": "2026-09-22",
+    "cash": 111.13,
+    "pos": {
+      "DLO": {
+        "close_px": 14.26,
+        "cost": 1510.302,
+        "entry_date": "2026-09-22",
+        "entry_px": 14.5,
+        "fee_in": 2.302,
+        "last_px": 14.5,
+        "min_hold": 1,
+        "notional": 1508.0,
+        "peak_px": 14.5,
+        "reason": "baseline list, no extra gate; list flatten; wish-list (live io HOLD \u2014 not a ticket); ret5=-3.6; leftover $1508.51",
+        "shares": 104,
+        "ticker": "DLO"
+      },
+      "EL": {
+        "close_px": 100.29,
+        "cost": 1472.335,
+        "entry_date": "2026-09-22",
+        "entry_px": 98.02,
+        "fee_in": 2.035,
+        "last_px": 98.02,
+        "min_hold": 1,
+        "notional": 1470.3,
+        "peak_px": 98.02,
+        "reason": "baseline list, no extra gate; list flatten; wish-list (live io HOLD \u2014 not a ticket); ret5=-1.9; leftover $1508.51",
+        "shares": 15,
+        "ticker": "EL"
+      },
+      "MKC": {
+        "close_px": 49.42,
+        "cost": 1489.1799999999998,
+        "entry_date": "2026-09-22",
+        "entry_px": 49.57,
+        "fee_in": 2.08,
+        "last_px": 49.57,
+        "min_hold": 1,
+        "notional": 1487.1,
+        "peak_px": 49.57,
+        "reason": "baseline list, no extra gate; list flatten; wish-list (live io HOLD \u2014 not a ticket); ret5=-3.0; leftover $1508.51",
+        "shares": 30,
+        "ticker": "MKC"
+      },
+      "PACS": {
+        "close_px": 41.53,
+        "cost": 1469.645,
+        "entry_date": "2026-09-22",
+        "entry_px": 41.93,
+        "fee_in": 2.095,
+        "last_px": 41.93,
+        "min_hold": 1,
+        "notional": 1467.55,
+        "peak_px": 41.93,
+        "reason": "baseline list, no extra gate; list flatten; wish-list (live io HOLD \u2014 not a ticket); ret5=-5.6; leftover $1508.51",
+        "shares": 35,
+        "ticker": "PACS"
+      },
+      "TDC": {
+        "close_px": 29.41,
+        "cost": 1491.14,
+        "entry_date": "2026-09-22",
+        "entry_px": 29.78,
+        "fee_in": 2.14,
+        "last_px": 29.78,
+        "min_hold": 1,
+        "notional": 1489.0,
+        "peak_px": 29.78,
+        "reason": "baseline list, no extra gate; list flatten; wish-list (live io HOLD \u2014 not a ticket); ret5=-0.0; leftover $1508.51",
+        "shares": 50,
+        "ticker": "TDC"
+      },
+      "USFD": {
+        "close_px": 94.2,
+        "cost": 1507.318,
+        "entry_date": "2026-09-22",
+        "entry_px": 94.08,
+        "fee_in": 2.038,
+        "last_px": 94.08,
+        "min_hold": 1,
+        "notional": 1505.28,
+        "peak_px": 94.08,
+        "reason": "baseline list, no extra gate; list flatten; wish-list (live io HOLD \u2014 not a ticket); ret5=-0.6; leftover $1508.51",
+        "shares": 16,
+        "ticker": "USFD"
+      }
+    },
+    "yday_equity": 9012.37
+  }
+}

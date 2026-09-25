@@ -1,0 +1,84 @@
+{
+  "buys": [],
+  "cash": 9964.85,
+  "date": "2026-09-21",
+  "equity": 9964.85,
+  "fees": 16.7746,
+  "fills": [
+    {
+      "fees": 2.016,
+      "pnl": 69.01,
+      "price": 583.88,
+      "shares": 2,
+      "side": "SELL",
+      "ticker": "AMD"
+    },
+    {
+      "fees": 2.321,
+      "pnl": -21.78,
+      "price": 13.9,
+      "shares": 101,
+      "side": "SELL",
+      "ticker": "BHVN"
+    },
+    {
+      "fees": 3.2006,
+      "pnl": 136.39,
+      "price": 6.415,
+      "shares": 244,
+      "side": "SELL",
+      "ticker": "BNC"
+    },
+    {
+      "fees": 2.2944,
+      "pnl": -237.06,
+      "price": 12.65,
+      "shares": 93,
+      "side": "SELL",
+      "ticker": "HELP"
+    },
+    {
+      "fees": 2.0472,
+      "pnl": 76.69,
+      "price": 116.53,
+      "shares": 12,
+      "side": "SELL",
+      "ticker": "INTC"
+    },
+    {
+      "fees": 2.3051,
+      "pnl": -24.74,
+      "price": 14.58,
+      "shares": 96,
+      "side": "SELL",
+      "ticker": "RARE"
+    },
+    {
+      "fees": 2.5903,
+      "pnl": 7.88,
+      "price": 7.71,
+      "shares": 186,
+      "side": "SELL",
+      "ticker": "SHLS"
+    }
+  ],
+  "holdings": [],
+  "mean": 3.2552,
+  "n_trades_today": 7,
+  "recipe": "union_clk_mom_break_peer_opp_h1",
+  "sells": [
+    "AMD",
+    "BHVN",
+    "BNC",
+    "HELP",
+    "INTC",
+    "RARE",
+    "SHLS"
+  ],
+  "state": {
+    "after": "2026-09-21",
+    "cash": 9964.85,
+    "pos": {},
+    "yday_equity": 9964.85
+  }
+}

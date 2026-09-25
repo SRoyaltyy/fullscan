@@ -1,0 +1,81 @@
+{
+  "buys": [],
+  "cash": 89.18,
+  "date": "2026-09-14",
+  "equity": 9322.53,
+  "fees": 0,
+  "fills": [],
+  "holdings": [
+    "BAND",
+    "PAGS",
+    "PAYP",
+    "SWKS"
+  ],
+  "mean": -6.284,
+  "n_trades_today": 0,
+  "recipe": "union_white_yday_h3",
+  "sells": [],
+  "state": {
+    "after": "2026-09-14",
+    "cash": 89.18,
+    "pos": {
+      "BAND": {
+        "close_px": 48.970001220703125,
+        "cost": 2366.8749656677246,
+        "entry_date": "2026-09-11",
+        "entry_px": 52.54999923706055,
+        "fee_in": 2.125,
+        "last_px": 56.900001525878906,
+        "min_hold": 3,
+        "notional": 2364.7499656677246,
+        "peak_px": 56.900001525878906,
+        "reason": "union looker hold 3: 0 red + yesterday up; gate zero_red=True,yday_up=True; rank cond; list probable,yday_gainer; \ud83d\udd35; \u26aa; ret5=+9.6; leftover $2406.66",
+        "shares": 45,
+        "ticker": "BAND"
+      },
+      "PAGS": {
+        "close_px": 9.930000305175781,
+        "cost": 2409.2501182891847,
+        "entry_date": "2026-09-11",
+        "entry_px": 10.109999656677246,
+        "fee_in": 3.0702,
+        "last_px": 10.0,
+        "min_hold": 3,
+        "notional": 2406.1799182891846,
+        "peak_px": 10.109999656677246,
+        "reason": "union looker hold 3: 0 red + yesterday up; gate zero_red=True,yday_up=True; rank cond; list probable,yday_gainer; \u26aa; ret5=+1.7; leftover $2406.66",
+        "shares": 238,
+        "ticker": "PAGS"
+      },
+      "PAYP": {
+        "close_px": 18.68000030517578,
+        "cost": 2399.6829000549315,
+        "entry_date": "2026-09-11",
+        "entry_px": 18.299999237060547,
+        "fee_in": 2.383,
+        "last_px": 18.280000686645508,
+        "min_hold": 3,
+        "notional": 2397.2999000549316,
+        "peak_px": 18.299999237060547,
+        "reason": "union looker hold 3: 0 red + yesterday up; gate zero_red=True,yday_up=True; rank cond; list ohlc_hot; \u26aa; ret5=+7.7; leftover $2406.66",
+        "shares": 131,
+        "ticker": "PAYP"
+      },
+      "SWKS": {
+        "close_px": 79.26000213623047,
+        "cost": 2361.6339060058594,
+        "entry_date": "2026-09-11",
+        "entry_px": 84.2699966430664,
+        "fee_in": 2.074,
+        "last_px": 86.05999755859375,
+        "min_hold": 3,
+        "notional": 2359.5599060058594,
+        "peak_px": 86.05999755859375,
+        "reason": "union looker hold 3: 0 red + yesterday up; gate zero_red=True,yday_up=True; rank cond; list yday_gainer,ohlc_hot; \u26aa; ret5=+17.5; leftover $2406.66",
+        "shares": 28,
+        "ticker": "SWKS"
+      }
+    },
+    "yday_equity": 9322.53
+  }
+}

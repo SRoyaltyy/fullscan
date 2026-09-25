@@ -1,0 +1,92 @@
+{
+  "buys": [
+    "MYGN",
+    "RWT",
+    "CRDL"
+  ],
+  "cash": 15634.14,
+  "date": "2026-09-11",
+  "equity": 10406.01,
+  "fees": 24.5789,
+  "fills": [
+    {
+      "fees": 6.803641642217767,
+      "pnl": null,
+      "price": 3.37,
+      "shares": 516,
+      "side": "SHORT",
+      "ticker": "MYGN"
+    },
+    {
+      "fees": 6.51614054768706,
+      "pnl": null,
+      "price": 3.52,
+      "shares": 494,
+      "side": "SHORT",
+      "ticker": "RWT"
+    },
+    {
+      "fees": 11.25916328699948,
+      "pnl": null,
+      "price": 2.03,
+      "shares": 857,
+      "side": "SHORT",
+      "ticker": "CRDL"
+    }
+  ],
+  "holdings": [
+    "CRDL",
+    "MYGN",
+    "RWT"
+  ],
+  "mean": -0.3371,
+  "n_trades_today": 3,
+  "recipe": "short_news_head_h3",
+  "sells": [],
+  "state": {
+    "after": "2026-09-11",
+    "cash": 15634.14,
+    "pos": {
+      "CRDL": {
+        "close_px": 1.9950000047683716,
+        "cost": 11.25916328699948,
+        "entry_date": "2026-09-11",
+        "entry_px": 2.0299999713897705,
+        "fee_in": 11.25916328699948,
+        "last_px": 2.0299999713897705,
+        "notional": 1739.7099754810333,
+        "peak_px": 2.0299999713897705,
+        "reason": "short prior-export headline\ud83d\udd34; gate headline=bad; list yday_mover; ret5=-8.3; leftover $1740.20",
+        "shares": 857,
+        "ticker": "CRDL"
+      },
+      "MYGN": {
+        "close_px": 3.4200000762939453,
+        "cost": 6.803641642217767,
+        "entry_date": "2026-09-11",
+        "entry_px": 3.369999885559082,
+        "fee_in": 6.803641642217767,
+        "last_px": 3.369999885559082,
+        "notional": 1738.9199409484863,
+        "peak_px": 3.369999885559082,
+        "reason": "short prior-export headline\ud83d\udd34; gate headline=bad; list yday_gainer,ohlc_hot; ret5=+4.0; leftover $1740.20",
+        "shares": 516,
+        "ticker": "MYGN"
+      },
+      "RWT": {
+        "close_px": 3.549999952316284,
+        "cost": 6.51614054768706,
+        "entry_date": "2026-09-11",
+        "entry_px": 3.5199999809265137,
+        "fee_in": 6.51614054768706,
+        "last_px": 3.5199999809265137,
+        "notional": 1738.8799905776978,
+        "peak_px": 3.5199999809265137,
+        "reason": "short prior-export headline\ud83d\udd34; gate headline=bad; list yday_mover; \ud83d\udd35; ret5=-19.0; leftover $1740.20",
+        "shares": 494,
+        "ticker": "RWT"
+      }
+    },
+    "yday_equity": 10406.01
+  }
+}

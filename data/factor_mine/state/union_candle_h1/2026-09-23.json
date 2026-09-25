@@ -1,0 +1,288 @@
+{
+  "buys": [
+    "DXCM",
+    "A",
+    "ARQT",
+    "PGEN",
+    "OMER",
+    "INDP",
+    "TNGX",
+    "CNXC"
+  ],
+  "cash": 253.38,
+  "date": "2026-09-23",
+  "equity": 8871.13,
+  "fees": 49.1091,
+  "fills": [
+    {
+      "fees": 3.0021,
+      "pnl": -49.47,
+      "price": 4.89,
+      "shares": 229,
+      "side": "SELL",
+      "ticker": "AIBZ"
+    },
+    {
+      "fees": 2.3008,
+      "pnl": -4.58,
+      "price": 12.24,
+      "shares": 95,
+      "side": "SELL",
+      "ticker": "APPS"
+    },
+    {
+      "fees": 2.019,
+      "pnl": 33.09,
+      "price": 331.78,
+      "shares": 3,
+      "side": "SELL",
+      "ticker": "ARM"
+    },
+    {
+      "fees": 2.043,
+      "pnl": 18.37,
+      "price": 100.06,
+      "shares": 11,
+      "side": "SELL",
+      "ticker": "EL"
+    },
+    {
+      "fees": 2.133,
+      "pnl": -91.17,
+      "price": 25.9,
+      "shares": 41,
+      "side": "SELL",
+      "ticker": "FSLY"
+    },
+    {
+      "fees": 2.04,
+      "pnl": 13.64,
+      "price": 108.52,
+      "shares": 10,
+      "side": "SELL",
+      "ticker": "GRAL"
+    },
+    {
+      "fees": 14.6519,
+      "pnl": -98.92,
+      "price": 0.95,
+      "shares": 1156,
+      "side": "SELL",
+      "ticker": "IVVD"
+    },
+    {
+      "fees": 2.2343,
+      "pnl": -31.09,
+      "price": 15.4,
+      "shares": 74,
+      "side": "SELL",
+      "ticker": "NN"
+    },
+    {
+      "fees": 2.026,
+      "pnl": null,
+      "price": 89.5,
+      "shares": 12,
+      "side": "BUY",
+      "ticker": "DXCM"
+    },
+    {
+      "fees": 2.008,
+      "pnl": null,
+      "price": 166.54,
+      "shares": 6,
+      "side": "BUY",
+      "ticker": "A"
+    },
+    {
+      "fees": 2.113,
+      "pnl": null,
+      "price": 27.79,
+      "shares": 41,
+      "side": "BUY",
+      "ticker": "ARQT"
+    },
+    {
+      "fees": 2.419,
+      "pnl": null,
+      "price": 7.95,
+      "shares": 143,
+      "side": "BUY",
+      "ticker": "PGEN"
+    },
+    {
+      "fees": 2.155,
+      "pnl": null,
+      "price": 20.65,
+      "shares": 55,
+      "side": "BUY",
+      "ticker": "OMER"
+    },
+    {
+      "fees": 3.741,
+      "pnl": null,
+      "price": 3.93,
+      "shares": 290,
+      "side": "BUY",
+      "ticker": "INDP"
+    },
+    {
+      "fees": 2.122,
+      "pnl": null,
+      "price": 25.4,
+      "shares": 44,
+      "side": "BUY",
+      "ticker": "TNGX"
+    },
+    {
+      "fees": 2.101,
+      "pnl": null,
+      "price": 30.32,
+      "shares": 37,
+      "side": "BUY",
+      "ticker": "CNXC"
+    }
+  ],
+  "holdings": [
+    "A",
+    "ARQT",
+    "CNXC",
+    "DXCM",
+    "INDP",
+    "OMER",
+    "PGEN",
+    "TNGX"
+  ],
+  "mean": -3.0789,
+  "n_trades_today": 16,
+  "recipe": "union_candle_h1",
+  "sells": [
+    "AIBZ",
+    "APPS",
+    "ARM",
+    "EL",
+    "FSLY",
+    "GRAL",
+    "IVVD",
+    "NN"
+  ],
+  "state": {
+    "after": "2026-09-23",
+    "cash": 253.38,
+    "pos": {
+      "A": {
+        "close_px": 165.32000732421875,
+        "cost": 1001.2479597167969,
+        "entry_date": "2026-09-23",
+        "entry_px": 166.5399932861328,
+        "fee_in": 2.008,
+        "last_px": 166.5399932861328,
+        "min_hold": 1,
+        "notional": 999.2399597167969,
+        "peak_px": 166.5399932861328,
+        "reason": "union \u2229 candle, no \ud83d\udea8; gate candle_capture=True; list flatten; \ud83d\udd35; \u26aa; ret5=+11.3; leftover $1142.05",
+        "shares": 6,
+        "ticker": "A"
+      },
+      "ARQT": {
+        "close_px": 26.3799991607666,
+        "cost": 1141.5030375366212,
+        "entry_date": "2026-09-23",
+        "entry_px": 27.790000915527344,
+        "fee_in": 2.113,
+        "last_px": 27.790000915527344,
+        "min_hold": 1,
+        "notional": 1139.390037536621,
+        "peak_px": 27.790000915527344,
+        "reason": "union \u2229 candle, no \ud83d\udea8; gate candle_capture=True; list flatten; \ud83d\udd35; \u26aa; ret5=+18.2; leftover $1142.05",
+        "shares": 41,
+        "ticker": "ARQT"
+      },
+      "CNXC": {
+        "close_px": 30.209999084472656,
+        "cost": 1123.9409887084962,
+        "entry_date": "2026-09-23",
+        "entry_px": 30.31999969482422,
+        "fee_in": 2.101,
+        "last_px": 30.31999969482422,
+        "min_hold": 1,
+        "notional": 1121.839988708496,
+        "peak_px": 30.31999969482422,
+        "reason": "union \u2229 candle, no \ud83d\udea8; gate candle_capture=True; list probable,yday_gainer; ret5=+4.5; leftover $1142.05",
+        "shares": 37,
+        "ticker": "CNXC"
+      },
+      "DXCM": {
+        "close_px": 87.7300033569336,
+        "cost": 1076.026,
+        "entry_date": "2026-09-23",
+        "entry_px": 89.5,
+        "fee_in": 2.026,
+        "last_px": 89.5,
+        "min_hold": 1,
+        "notional": 1074.0,
+        "peak_px": 89.5,
+        "reason": "union \u2229 candle, no \ud83d\udea8; gate candle_capture=True; list flatten; \ud83d\udd35; \u26aa; ret5=+3.6; leftover $1142.05",
+        "shares": 12,
+        "ticker": "DXCM"
+      },
+      "INDP": {
+        "close_px": 3.7699999809265137,
+        "cost": 1143.4410193595886,
+        "entry_date": "2026-09-23",
+        "entry_px": 3.930000066757202,
+        "fee_in": 3.741,
+        "last_px": 3.930000066757202,
+        "min_hold": 1,
+        "notional": 1139.7000193595886,
+        "peak_px": 3.930000066757202,
+        "reason": "union \u2229 candle, no \ud83d\udea8; gate candle_capture=True; list probable,yday_gainer,yday_mover,ohlc_hot; \ud83d\udd35; ret5=+9.6; leftover $1142.05",
+        "shares": 290,
+        "ticker": "INDP"
+      },
+      "OMER": {
+        "close_px": 20.739999771118164,
+        "cost": 1137.904979019165,
+        "entry_date": "2026-09-23",
+        "entry_px": 20.649999618530273,
+        "fee_in": 2.155,
+        "last_px": 20.649999618530273,
+        "min_hold": 1,
+        "notional": 1135.749979019165,
+        "peak_px": 20.649999618530273,
+        "reason": "union \u2229 candle, no \ud83d\udea8; gate candle_capture=True; list flatten,yday_gainer,yday_mover; \ud83d\udd35; \u26aa; ret5=+22.6; leftover $1142.05",
+        "shares": 55,
+        "ticker": "OMER"
+      },
+      "PGEN": {
+        "close_px": 7.440000057220459,
+        "cost": 1139.2689727249146,
+        "entry_date": "2026-09-23",
+        "entry_px": 7.949999809265137,
+        "fee_in": 2.419,
+        "last_px": 7.949999809265137,
+        "min_hold": 1,
+        "notional": 1136.8499727249146,
+        "peak_px": 7.949999809265137,
+        "reason": "union \u2229 candle, no \ud83d\udea8; gate candle_capture=True; list flatten; \ud83d\udd35; \u26aa; ret5=+12.7; leftover $1142.05",
+        "shares": 143,
+        "ticker": "PGEN"
+      },
+      "TNGX": {
+        "close_px": 24.450000762939453,
+        "cost": 1119.721983215332,
+        "entry_date": "2026-09-23",
+        "entry_px": 25.399999618530273,
+        "fee_in": 2.122,
+        "last_px": 25.399999618530273,
+        "min_hold": 1,
+        "notional": 1117.599983215332,
+        "peak_px": 25.399999618530273,
+        "reason": "union \u2229 candle, no \ud83d\udea8; gate candle_capture=True; list probable,yday_gainer,yday_mover; \ud83d\udd35; ret5=+6.9; leftover $1142.05",
+        "shares": 44,
+        "ticker": "TNGX"
+      }
+    },
+    "yday_equity": 8871.13
+  }
+}

@@ -1,0 +1,333 @@
+{
+  "buys": [
+    "ARQQ",
+    "NUAI",
+    "FSLY",
+    "FIVN",
+    "INDP"
+  ],
+  "cash": 190.88,
+  "date": "2026-09-22",
+  "equity": 10821.73,
+  "fees": 4.1126,
+  "fills": [
+    {
+      "fees": 0.282,
+      "pnl": -0.59,
+      "price": 25.9,
+      "shares": 1,
+      "side": "SELL",
+      "ticker": "ARQT"
+    },
+    {
+      "fees": 0.2448,
+      "pnl": -0.75,
+      "price": 22.18,
+      "shares": 1,
+      "side": "SELL",
+      "ticker": "BBNX"
+    },
+    {
+      "fees": 0.3248,
+      "pnl": -0.77,
+      "price": 14.94,
+      "shares": 2,
+      "side": "SELL",
+      "ticker": "CPRI"
+    },
+    {
+      "fees": 0.396,
+      "pnl": -1.58,
+      "price": 2.05,
+      "shares": 16,
+      "side": "SELL",
+      "ticker": "HLP"
+    },
+    {
+      "fees": 0.3376,
+      "pnl": -0.45,
+      "price": 7.64,
+      "shares": 4,
+      "side": "SELL",
+      "ticker": "PGEN"
+    },
+    {
+      "fees": 0.398,
+      "pnl": -0.78,
+      "price": 2.4,
+      "shares": 14,
+      "side": "SELL",
+      "ticker": "SABR"
+    },
+    {
+      "fees": 0.4762,
+      "pnl": null,
+      "price": 23.51,
+      "shares": 2,
+      "side": "BUY",
+      "ticker": "ARQQ"
+    },
+    {
+      "fees": 0.4518,
+      "pnl": null,
+      "price": 7.23,
+      "shares": 6,
+      "side": "BUY",
+      "ticker": "NUAI"
+    },
+    {
+      "fees": 0.2832,
+      "pnl": null,
+      "price": 28.02,
+      "shares": 1,
+      "side": "BUY",
+      "ticker": "FSLY"
+    },
+    {
+      "fees": 0.3742,
+      "pnl": null,
+      "price": 37.12,
+      "shares": 1,
+      "side": "BUY",
+      "ticker": "FIVN"
+    },
+    {
+      "fees": 0.544,
+      "pnl": null,
+      "price": 3.1,
+      "shares": 16,
+      "side": "BUY",
+      "ticker": "INDP"
+    }
+  ],
+  "holdings": [
+    "ARQQ",
+    "CYPH",
+    "DXCM",
+    "FEAM",
+    "FIVN",
+    "FSLY",
+    "INDP",
+    "MSTR",
+    "NEO",
+    "NUAI",
+    "RXT",
+    "TJGC",
+    "USDE",
+    "VICR"
+  ],
+  "mean": 5.3703,
+  "n_trades_today": 11,
+  "recipe": "union_w_hot_cond_h3",
+  "sells": [
+    "ARQT",
+    "BBNX",
+    "CPRI",
+    "HLP",
+    "PGEN",
+    "SABR"
+  ],
+  "state": {
+    "after": "2026-09-22",
+    "cash": 190.88,
+    "pos": {
+      "ARQQ": {
+        "close_px": 23.04,
+        "cost": 47.4962,
+        "entry_date": "2026-09-22",
+        "entry_px": 23.51,
+        "fee_in": 0.4762,
+        "last_px": 23.51,
+        "min_hold": 3,
+        "notional": 47.02,
+        "peak_px": 23.51,
+        "reason": "rank by w_hot_cond; rank w_hot_cond; list yday_gainer,yday_mover; ret5=+44.4; leftover $49.77",
+        "shares": 2,
+        "ticker": "ARQQ"
+      },
+      "CYPH": {
+        "close_px": 3.7300000190734863,
+        "cost": 12.273400343322754,
+        "entry_date": "2026-09-18",
+        "entry_px": 3.0350000858306885,
+        "fee_in": 0.1334,
+        "last_px": 3.509999990463257,
+        "min_hold": 3,
+        "notional": 12.140000343322754,
+        "peak_px": 4.0,
+        "reason": "rank by w_hot_cond; rank w_hot_cond; list yday_gainer,yday_mover; \ud83d\udd35; \u26aa; ret5=+39.5; leftover $12.47",
+        "shares": 4,
+        "ticker": "CYPH"
+      },
+      "DXCM": {
+        "close_px": 89.53,
+        "cost": 1423.318029296875,
+        "entry_date": "2026-09-21",
+        "entry_px": 88.83000183105469,
+        "fee_in": 2.038,
+        "last_px": 89.12,
+        "min_hold": 3,
+        "notional": 1421.280029296875,
+        "peak_px": 89.12,
+        "reason": "rank by w_hot_cond; rank w_hot_cond; list flatten; \ud83d\udd35; \u26aa; ret5=+7.6; leftover $1445.29",
+        "shares": 16,
+        "ticker": "DXCM"
+      },
+      "FEAM": {
+        "close_px": 2.94,
+        "cost": 1452.4965167369842,
+        "entry_date": "2026-09-21",
+        "entry_px": 2.4700000286102295,
+        "fee_in": 7.5465,
+        "last_px": 2.47,
+        "min_hold": 3,
+        "notional": 1444.9500167369843,
+        "peak_px": 2.4700000286102295,
+        "reason": "rank by w_hot_cond; rank w_hot_cond; list yday_gainer,yday_mover; ret5=+73.6; leftover $1445.29",
+        "shares": 585,
+        "ticker": "FEAM"
+      },
+      "FIVN": {
+        "close_px": 38.65,
+        "cost": 37.4942,
+        "entry_date": "2026-09-22",
+        "entry_px": 37.12,
+        "fee_in": 0.3742,
+        "last_px": 37.12,
+        "min_hold": 3,
+        "notional": 37.12,
+        "peak_px": 37.12,
+        "reason": "rank by w_hot_cond; rank w_hot_cond; list yday_gainer,ohlc_hot; ret5=+16.6; leftover $49.77",
+        "shares": 1,
+        "ticker": "FIVN"
+      },
+      "FSLY": {
+        "close_px": 26.079999923706055,
+        "cost": 28.303200457763673,
+        "entry_date": "2026-09-22",
+        "entry_px": 28.020000457763672,
+        "fee_in": 0.2832,
+        "last_px": 28.020000457763672,
+        "min_hold": 3,
+        "notional": 28.020000457763672,
+        "peak_px": 28.020000457763672,
+        "reason": "rank by w_hot_cond; rank w_hot_cond; list yday_gainer,yday_mover,ohlc_hot; ret5=+10.3; leftover $49.77",
+        "shares": 1,
+        "ticker": "FSLY"
+      },
+      "INDP": {
+        "close_px": 3.990000009536743,
+        "cost": 50.14399847412109,
+        "entry_date": "2026-09-22",
+        "entry_px": 3.0999999046325684,
+        "fee_in": 0.544,
+        "last_px": 3.0999999046325684,
+        "min_hold": 3,
+        "notional": 49.599998474121094,
+        "peak_px": 3.0999999046325684,
+        "reason": "rank by w_hot_cond; rank w_hot_cond; list ohlc_hot; ret5=-1.6; leftover $49.77",
+        "shares": 16,
+        "ticker": "INDP"
+      },
+      "MSTR": {
+        "close_px": 167.3300018310547,
+        "cost": 1318.6540146484374,
+        "entry_date": "2026-09-21",
+        "entry_px": 164.5800018310547,
+        "fee_in": 2.014,
+        "last_px": 167.5500030517578,
+        "min_hold": 3,
+        "notional": 1316.6400146484375,
+        "peak_px": 167.5500030517578,
+        "reason": "rank by w_hot_cond; rank w_hot_cond; list yday_gainer,yday_mover,ohlc_hot; ret5=+17.5; leftover $1445.29",
+        "shares": 8,
+        "ticker": "MSTR"
+      },
+      "NEO": {
+        "close_px": 18.89,
+        "cost": 1436.446005493164,
+        "entry_date": "2026-09-21",
+        "entry_px": 19.920000076293945,
+        "fee_in": 2.206,
+        "last_px": 19.28,
+        "min_hold": 3,
+        "notional": 1434.240005493164,
+        "peak_px": 19.920000076293945,
+        "reason": "rank by w_hot_cond; rank w_hot_cond; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+15.0; leftover $1445.29",
+        "shares": 72,
+        "ticker": "NEO"
+      },
+      "NUAI": {
+        "close_px": 6.974999904632568,
+        "cost": 43.83180011444092,
+        "entry_date": "2026-09-22",
+        "entry_px": 7.230000019073486,
+        "fee_in": 0.4518,
+        "last_px": 7.230000019073486,
+        "min_hold": 3,
+        "notional": 43.38000011444092,
+        "peak_px": 7.230000019073486,
+        "reason": "rank by w_hot_cond; rank w_hot_cond; list yday_gainer,yday_mover; ret5=+36.6; leftover $49.77",
+        "shares": 6,
+        "ticker": "NUAI"
+      },
+      "RXT": {
+        "close_px": 4.13,
+        "cost": 11.947200171661377,
+        "entry_date": "2026-09-18",
+        "entry_px": 3.940000057220459,
+        "fee_in": 0.1272,
+        "last_px": 4.1,
+        "min_hold": 3,
+        "notional": 11.820000171661377,
+        "peak_px": 4.1,
+        "reason": "rank by w_hot_cond; rank w_hot_cond; list yday_gainer; \ud83d\udd35; \u26aa; ret5=+25.2; leftover $12.47",
+        "shares": 3,
+        "ticker": "RXT"
+      },
+      "TJGC": {
+        "close_px": 16.9,
+        "cost": 1439.5949870300292,
+        "entry_date": "2026-09-21",
+        "entry_px": 16.90999984741211,
+        "fee_in": 2.245,
+        "last_px": 17.58,
+        "min_hold": 3,
+        "notional": 1437.3499870300293,
+        "peak_px": 17.58,
+        "reason": "rank by w_hot_cond; rank w_hot_cond; list yday_gainer,yday_mover; ret5=+50.5; leftover $1445.29",
+        "shares": 85,
+        "ticker": "TJGC"
+      },
+      "USDE": {
+        "close_px": 13.539999961853027,
+        "cost": 1437.820020980835,
+        "entry_date": "2026-09-21",
+        "entry_px": 13.050000190734863,
+        "fee_in": 2.32,
+        "last_px": 12.989999771118164,
+        "min_hold": 3,
+        "notional": 1435.500020980835,
+        "peak_px": 13.050000190734863,
+        "reason": "rank by w_hot_cond; rank w_hot_cond; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+40.4; leftover $1445.29",
+        "shares": 110,
+        "ticker": "USDE"
+      },
+      "VICR": {
+        "close_px": 268.34,
+        "cost": 1383.508,
+        "entry_date": "2026-09-21",
+        "entry_px": 230.25,
+        "fee_in": 2.008,
+        "last_px": 241.04,
+        "min_hold": 3,
+        "notional": 1381.5,
+        "peak_px": 241.04,
+        "reason": "rank by w_hot_cond; rank w_hot_cond; list ohlc_hot; ret5=+12.5; leftover $1445.29",
+        "shares": 6,
+        "ticker": "VICR"
+      }
+    },
+    "yday_equity": 10821.73
+  }
+}

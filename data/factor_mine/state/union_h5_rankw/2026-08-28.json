@@ -1,0 +1,215 @@
+{
+  "buys": [
+    "RRC",
+    "CRK",
+    "MOS",
+    "SLI",
+    "SEDG",
+    "GRRR",
+    "URBN",
+    "PYXS"
+  ],
+  "cash": 126.17,
+  "date": "2026-08-28",
+  "equity": 9714.02,
+  "fees": 21.8992,
+  "fills": [
+    {
+      "fees": 2.149,
+      "pnl": null,
+      "price": 41.74,
+      "shares": 53,
+      "side": "BUY",
+      "ticker": "RRC"
+    },
+    {
+      "fees": 2.386,
+      "pnl": null,
+      "price": 14.63,
+      "shares": 132,
+      "side": "BUY",
+      "ticker": "CRK"
+    },
+    {
+      "fees": 2.197,
+      "pnl": null,
+      "price": 23.95,
+      "shares": 69,
+      "side": "BUY",
+      "ticker": "MOS"
+    },
+    {
+      "fees": 6.6822,
+      "pnl": null,
+      "price": 2.68,
+      "shares": 518,
+      "side": "BUY",
+      "ticker": "SLI"
+    },
+    {
+      "fees": 2.089,
+      "pnl": null,
+      "price": 32.9,
+      "shares": 33,
+      "side": "BUY",
+      "ticker": "SEDG"
+    },
+    {
+      "fees": 2.149,
+      "pnl": null,
+      "price": 15.66,
+      "shares": 53,
+      "side": "BUY",
+      "ticker": "GRRR"
+    },
+    {
+      "fees": 2.008,
+      "pnl": null,
+      "price": 79.42,
+      "shares": 6,
+      "side": "BUY",
+      "ticker": "URBN"
+    },
+    {
+      "fees": 2.239,
+      "pnl": null,
+      "price": 3.32,
+      "shares": 83,
+      "side": "BUY",
+      "ticker": "PYXS"
+    }
+  ],
+  "holdings": [
+    "CRK",
+    "GRRR",
+    "MOS",
+    "PYXS",
+    "RRC",
+    "SEDG",
+    "SLI",
+    "URBN"
+  ],
+  "mean": -2.8598,
+  "n_trades_today": 8,
+  "recipe": "union_h5_rankw",
+  "sells": [],
+  "state": {
+    "after": "2026-08-28",
+    "cash": 126.17,
+    "pos": {
+      "CRK": {
+        "close_px": 14.289999961853027,
+        "cost": 1933.5460151062011,
+        "entry_date": "2026-08-28",
+        "entry_px": 14.630000114440918,
+        "fee_in": 2.386,
+        "last_px": 14.630000114440918,
+        "min_hold": 5,
+        "notional": 1931.1600151062012,
+        "peak_px": 14.630000114440918,
+        "reason": "rank-weighted leftover; list flatten; ret5=+5.8; leftover $1944.44",
+        "shares": 132,
+        "ticker": "CRK"
+      },
+      "GRRR": {
+        "close_px": 14.40999984741211,
+        "cost": 832.1289919128418,
+        "entry_date": "2026-08-28",
+        "entry_px": 15.65999984741211,
+        "fee_in": 2.149,
+        "last_px": 15.65999984741211,
+        "min_hold": 5,
+        "notional": 829.9799919128418,
+        "peak_px": 15.65999984741211,
+        "reason": "rank-weighted leftover; list probable,yday_gainer,yday_mover; \ud83d\udd35; ret5=+2.7; leftover $833.33",
+        "shares": 53,
+        "ticker": "GRRR"
+      },
+      "MOS": {
+        "close_px": 23.600000381469727,
+        "cost": 1654.7470526428222,
+        "entry_date": "2026-08-28",
+        "entry_px": 23.950000762939453,
+        "fee_in": 2.197,
+        "last_px": 23.950000762939453,
+        "min_hold": 5,
+        "notional": 1652.5500526428223,
+        "peak_px": 23.950000762939453,
+        "reason": "rank-weighted leftover; list flatten; ret5=+1.8; leftover $1666.67",
+        "shares": 69,
+        "ticker": "MOS"
+      },
+      "PYXS": {
+        "close_px": 3.2300000190734863,
+        "cost": 277.7989944591522,
+        "entry_date": "2026-08-28",
+        "entry_px": 3.319999933242798,
+        "fee_in": 2.239,
+        "last_px": 3.319999933242798,
+        "min_hold": 5,
+        "notional": 275.5599944591522,
+        "peak_px": 3.319999933242798,
+        "reason": "rank-weighted leftover; list probable,yday_gainer; ret5=+6.4; leftover $277.78",
+        "shares": 83,
+        "ticker": "PYXS"
+      },
+      "RRC": {
+        "close_px": 41.459999084472656,
+        "cost": 2214.36908895874,
+        "entry_date": "2026-08-28",
+        "entry_px": 41.7400016784668,
+        "fee_in": 2.149,
+        "last_px": 41.7400016784668,
+        "min_hold": 5,
+        "notional": 2212.2200889587402,
+        "peak_px": 41.7400016784668,
+        "reason": "rank-weighted leftover; list flatten; ret5=+2.4; leftover $2222.22",
+        "shares": 53,
+        "ticker": "RRC"
+      },
+      "SEDG": {
+        "close_px": 31.40999984741211,
+        "cost": 1087.7890503540038,
+        "entry_date": "2026-08-28",
+        "entry_px": 32.900001525878906,
+        "fee_in": 2.089,
+        "last_px": 32.900001525878906,
+        "min_hold": 5,
+        "notional": 1085.700050354004,
+        "peak_px": 32.900001525878906,
+        "reason": "rank-weighted leftover; list probable,yday_gainer,yday_mover; \ud83d\udd35; ret5=+8.4; leftover $1111.11",
+        "shares": 33,
+        "ticker": "SEDG"
+      },
+      "SLI": {
+        "close_px": 2.549999952316284,
+        "cost": 1394.9222345802307,
+        "entry_date": "2026-08-28",
+        "entry_px": 2.680000066757202,
+        "fee_in": 6.6822,
+        "last_px": 2.680000066757202,
+        "min_hold": 5,
+        "notional": 1388.2400345802307,
+        "peak_px": 2.680000066757202,
+        "reason": "rank-weighted leftover; list flatten,ohlc_hot; ret5=+16.3; leftover $1388.89",
+        "shares": 518,
+        "ticker": "SLI"
+      },
+      "URBN": {
+        "close_px": 81.08999633789062,
+        "cost": 478.52798901367186,
+        "entry_date": "2026-08-28",
+        "entry_px": 79.41999816894531,
+        "fee_in": 2.008,
+        "last_px": 79.41999816894531,
+        "min_hold": 5,
+        "notional": 476.5199890136719,
+        "peak_px": 79.41999816894531,
+        "reason": "rank-weighted leftover; list probable,yday_gainer,yday_mover; \ud83d\udd35; ret5=+8.5; leftover $555.56",
+        "shares": 6,
+        "ticker": "URBN"
+      }
+    },
+    "yday_equity": 9714.02
+  }
+}

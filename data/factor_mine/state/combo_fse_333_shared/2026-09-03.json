@@ -1,0 +1,85 @@
+{
+  "buys": [],
+  "cash": 6662.82,
+  "date": "2026-09-03",
+  "equity": 10049.5,
+  "fees": 0,
+  "fills": [],
+  "holdings": [
+    "CRK",
+    "MOS",
+    "RRC",
+    "SLI"
+  ],
+  "mean": -0.3979,
+  "n_trades_today": 0,
+  "recipe": "combo_fse_333_shared",
+  "sells": [],
+  "state": {
+    "after": "2026-09-03",
+    "cash": 6662.82,
+    "pos": {
+      "CRK": {
+        "close_px": 14.949999809265137,
+        "cost": 850.7040066375732,
+        "entry_date": "2026-08-28",
+        "entry_px": 14.630000114440918,
+        "fee_in": 2.164,
+        "last_px": 15.449999809265137,
+        "notional": 848.5400066375732,
+        "owner": "flatten_h5",
+        "peak_px": 15.819999694824219,
+        "reason": "baseline list, no extra gate; list flatten; wish-list (live io HOLD \u2014 not a ticket); ret5=+5.8; combo leftover $860.84; owner flatten_h5",
+        "shares": 58,
+        "side": "long",
+        "ticker": "CRK"
+      },
+      "MOS": {
+        "close_px": 25.489999771118164,
+        "cost": 840.3450267028809,
+        "entry_date": "2026-08-28",
+        "entry_px": 23.950000762939453,
+        "fee_in": 2.095,
+        "last_px": 26.1200008392334,
+        "notional": 838.2500267028809,
+        "owner": "flatten_h5",
+        "peak_px": 26.1200008392334,
+        "reason": "baseline list, no extra gate; list flatten; wish-list (live io HOLD \u2014 not a ticket); ret5=+1.8; combo leftover $860.84; owner flatten_h5",
+        "shares": 35,
+        "side": "long",
+        "ticker": "MOS"
+      },
+      "RRC": {
+        "close_px": 42.369998931884766,
+        "cost": 836.8500335693359,
+        "entry_date": "2026-08-28",
+        "entry_px": 41.7400016784668,
+        "fee_in": 2.05,
+        "last_px": 42.43000030517578,
+        "notional": 834.8000335693359,
+        "owner": "flatten_h5",
+        "peak_px": 42.43000030517578,
+        "reason": "baseline list, no extra gate; list flatten; wish-list (live io HOLD \u2014 not a ticket); ret5=+2.4; combo leftover $860.84; owner flatten_h5",
+        "shares": 20,
+        "side": "long",
+        "ticker": "RRC"
+      },
+      "SLI": {
+        "close_px": 2.430000066757202,
+        "cost": 864.4209214290619,
+        "entry_date": "2026-08-28",
+        "entry_px": 2.680000066757202,
+        "fee_in": 4.1409,
+        "last_px": 2.490000009536743,
+        "notional": 860.2800214290619,
+        "owner": "flatten_h5",
+        "peak_px": 2.680000066757202,
+        "reason": "baseline list, no extra gate; list flatten,ohlc_hot; wish-list (live io HOLD \u2014 not a ticket); ret5=+16.3; combo leftover $860.84; owner flatten_h5",
+        "shares": 321,
+        "side": "long",
+        "ticker": "SLI"
+      }
+    },
+    "yday_equity": 10049.5
+  }
+}

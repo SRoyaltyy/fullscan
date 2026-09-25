@@ -1,0 +1,119 @@
+{
+  "buys": [
+    "INDP",
+    "HLP",
+    "SDGR",
+    "CAI"
+  ],
+  "cash": 10.56,
+  "date": "2026-09-16",
+  "equity": 10232.15,
+  "fees": 31.6094,
+  "fills": [
+    {
+      "fees": 8.9139,
+      "pnl": null,
+      "price": 3.66,
+      "shares": 691,
+      "side": "BUY",
+      "ticker": "INDP"
+    },
+    {
+      "fees": 18.1245,
+      "pnl": null,
+      "price": 1.8,
+      "shares": 1405,
+      "side": "BUY",
+      "ticker": "HLP"
+    },
+    {
+      "fees": 2.314,
+      "pnl": null,
+      "price": 23.29,
+      "shares": 108,
+      "side": "BUY",
+      "ticker": "SDGR"
+    },
+    {
+      "fees": 2.257,
+      "pnl": null,
+      "price": 28.16,
+      "shares": 89,
+      "side": "BUY",
+      "ticker": "CAI"
+    }
+  ],
+  "holdings": [
+    "CAI",
+    "HLP",
+    "INDP",
+    "SDGR"
+  ],
+  "mean": 1.0903,
+  "n_trades_today": 4,
+  "recipe": "union_hot_n4_h1",
+  "sells": [],
+  "state": {
+    "after": "2026-09-16",
+    "cash": 10.56,
+    "pos": {
+      "CAI": {
+        "close_px": 28.209999084472656,
+        "cost": 2508.496986419678,
+        "entry_date": "2026-09-16",
+        "entry_px": 28.15999984741211,
+        "fee_in": 2.257,
+        "last_px": 28.15999984741211,
+        "min_hold": 1,
+        "notional": 2506.2399864196777,
+        "peak_px": 28.15999984741211,
+        "reason": "top 4 by hot; rank hot_score; list yday_gainer,ohlc_hot; \u26aa; ret5=+14.8; leftover $2530.45",
+        "shares": 89,
+        "ticker": "CAI"
+      },
+      "HLP": {
+        "close_px": 2.069999933242798,
+        "cost": 2547.124433004379,
+        "entry_date": "2026-09-16",
+        "entry_px": 1.7999999523162842,
+        "fee_in": 18.1245,
+        "last_px": 1.7999999523162842,
+        "min_hold": 1,
+        "notional": 2528.9999330043793,
+        "peak_px": 1.7999999523162842,
+        "reason": "top 4 by hot; rank hot_score; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+30.5; leftover $2530.45",
+        "shares": 1405,
+        "ticker": "HLP"
+      },
+      "INDP": {
+        "close_px": 3.2100000381469727,
+        "cost": 2537.9739593090057,
+        "entry_date": "2026-09-16",
+        "entry_px": 3.6600000858306885,
+        "fee_in": 8.9139,
+        "last_px": 3.6600000858306885,
+        "min_hold": 1,
+        "notional": 2529.0600593090057,
+        "peak_px": 3.6600000858306885,
+        "reason": "top 4 by hot; rank hot_score; list yday_gainer,yday_mover; ret5=+96.8; leftover $2530.45",
+        "shares": 691,
+        "ticker": "INDP"
+      },
+      "SDGR": {
+        "close_px": 23.93000030517578,
+        "cost": 2517.634098876953,
+        "entry_date": "2026-09-16",
+        "entry_px": 23.290000915527344,
+        "fee_in": 2.314,
+        "last_px": 23.290000915527344,
+        "min_hold": 1,
+        "notional": 2515.320098876953,
+        "peak_px": 23.290000915527344,
+        "reason": "top 4 by hot; rank hot_score; list yday_gainer; \ud83d\udd35; \u26aa; ret5=+16.1; leftover $2530.45",
+        "shares": 108,
+        "ticker": "SDGR"
+      }
+    },
+    "yday_equity": 10232.15
+  }
+}

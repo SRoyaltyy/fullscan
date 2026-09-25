@@ -1,0 +1,215 @@
+{
+  "buys": [
+    "VIST",
+    "YPF",
+    "PBR",
+    "GME",
+    "HPK",
+    "PAYP",
+    "INSP",
+    "NAT"
+  ],
+  "cash": 127.17,
+  "date": "2026-09-11",
+  "equity": 9875.0,
+  "fees": 17.567,
+  "fills": [
+    {
+      "fees": 2.035,
+      "pnl": null,
+      "price": 77.33,
+      "shares": 15,
+      "side": "BUY",
+      "ticker": "VIST"
+    },
+    {
+      "fees": 2.056,
+      "pnl": null,
+      "price": 55.11,
+      "shares": 22,
+      "side": "BUY",
+      "ticker": "YPF"
+    },
+    {
+      "fees": 2.161,
+      "pnl": null,
+      "price": 21.21,
+      "shares": 57,
+      "side": "BUY",
+      "ticker": "PBR"
+    },
+    {
+      "fees": 2.164,
+      "pnl": null,
+      "price": 21.04,
+      "shares": 58,
+      "side": "BUY",
+      "ticker": "GME"
+    },
+    {
+      "fees": 2.422,
+      "pnl": null,
+      "price": 8.45,
+      "shares": 144,
+      "side": "BUY",
+      "ticker": "HPK"
+    },
+    {
+      "fees": 2.188,
+      "pnl": null,
+      "price": 18.3,
+      "shares": 66,
+      "side": "BUY",
+      "ticker": "PAYP"
+    },
+    {
+      "fees": 2.041,
+      "pnl": null,
+      "price": 69.88,
+      "shares": 17,
+      "side": "BUY",
+      "ticker": "INSP"
+    },
+    {
+      "fees": 2.5,
+      "pnl": null,
+      "price": 7.19,
+      "shares": 170,
+      "side": "BUY",
+      "ticker": "NAT"
+    }
+  ],
+  "holdings": [
+    "GME",
+    "HPK",
+    "INSP",
+    "NAT",
+    "PAYP",
+    "PBR",
+    "VIST",
+    "YPF"
+  ],
+  "mean": 0.9584,
+  "n_trades_today": 8,
+  "recipe": "union_clk_mom_break_peer_opp_h1",
+  "sells": [],
+  "state": {
+    "after": "2026-09-11",
+    "cash": 127.17,
+    "pos": {
+      "GME": {
+        "close_px": 21.149999618530273,
+        "cost": 1222.484053100586,
+        "entry_date": "2026-09-11",
+        "entry_px": 21.040000915527344,
+        "fee_in": 2.164,
+        "last_px": 21.040000915527344,
+        "min_hold": 1,
+        "notional": 1220.320053100586,
+        "peak_px": 21.040000915527344,
+        "reason": "Clock-B #1 \u2229 Theme Radar T\u22121 oppset; gate clk_mom_break_peer=True,oppset=True; rank opp_rvol; list ohlc_hot; \ud83d\udd35; ret5=+6.0; leftover $1222.66",
+        "shares": 58,
+        "ticker": "GME"
+      },
+      "HPK": {
+        "close_px": 8.470000267028809,
+        "cost": 1219.2219725341797,
+        "entry_date": "2026-09-11",
+        "entry_px": 8.449999809265137,
+        "fee_in": 2.422,
+        "last_px": 8.449999809265137,
+        "min_hold": 1,
+        "notional": 1216.7999725341797,
+        "peak_px": 8.449999809265137,
+        "reason": "Clock-B #1 \u2229 Theme Radar T\u22121 oppset; gate clk_mom_break_peer=True,oppset=True; rank opp_rvol; list ohlc_hot; ret5=+3.5; leftover $1222.66",
+        "shares": 144,
+        "ticker": "HPK"
+      },
+      "INSP": {
+        "close_px": 73.0,
+        "cost": 1190.0009533081054,
+        "entry_date": "2026-09-11",
+        "entry_px": 69.87999725341797,
+        "fee_in": 2.041,
+        "last_px": 69.87999725341797,
+        "min_hold": 1,
+        "notional": 1187.9599533081055,
+        "peak_px": 69.87999725341797,
+        "reason": "Clock-B #1 \u2229 Theme Radar T\u22121 oppset; gate clk_mom_break_peer=True,oppset=True; rank opp_rvol; list ohlc_hot; ret5=+9.6; leftover $1222.66",
+        "shares": 17,
+        "ticker": "INSP"
+      },
+      "NAT": {
+        "close_px": 7.460000038146973,
+        "cost": 1224.800009727478,
+        "entry_date": "2026-09-11",
+        "entry_px": 7.190000057220459,
+        "fee_in": 2.5,
+        "last_px": 7.190000057220459,
+        "min_hold": 1,
+        "notional": 1222.300009727478,
+        "peak_px": 7.190000057220459,
+        "reason": "Clock-B #1 \u2229 Theme Radar T\u22121 oppset; gate clk_mom_break_peer=True,oppset=True; rank opp_rvol; list ohlc_hot; ret5=+5.5; leftover $1222.66",
+        "shares": 170,
+        "ticker": "NAT"
+      },
+      "PAYP": {
+        "close_px": 18.450000762939453,
+        "cost": 1209.9879496459962,
+        "entry_date": "2026-09-11",
+        "entry_px": 18.299999237060547,
+        "fee_in": 2.188,
+        "last_px": 18.299999237060547,
+        "min_hold": 1,
+        "notional": 1207.799949645996,
+        "peak_px": 18.299999237060547,
+        "reason": "Clock-B #1 \u2229 Theme Radar T\u22121 oppset; gate clk_mom_break_peer=True,oppset=True; rank opp_rvol; list ohlc_hot; \u26aa; ret5=+7.7; leftover $1222.66",
+        "shares": 66,
+        "ticker": "PAYP"
+      },
+      "PBR": {
+        "close_px": 21.200000762939453,
+        "cost": 1211.1309478149415,
+        "entry_date": "2026-09-11",
+        "entry_px": 21.209999084472656,
+        "fee_in": 2.161,
+        "last_px": 21.209999084472656,
+        "min_hold": 1,
+        "notional": 1208.9699478149414,
+        "peak_px": 21.209999084472656,
+        "reason": "Clock-B #1 \u2229 Theme Radar T\u22121 oppset; gate clk_mom_break_peer=True,oppset=True; rank opp_rvol; list ohlc_hot; ret5=+4.2; leftover $1222.66",
+        "shares": 57,
+        "ticker": "PBR"
+      },
+      "VIST": {
+        "close_px": 76.2699966430664,
+        "cost": 1161.9850274658204,
+        "entry_date": "2026-09-11",
+        "entry_px": 77.33000183105469,
+        "fee_in": 2.035,
+        "last_px": 77.33000183105469,
+        "min_hold": 1,
+        "notional": 1159.9500274658203,
+        "peak_px": 77.33000183105469,
+        "reason": "Clock-B #1 \u2229 Theme Radar T\u22121 oppset; gate clk_mom_break_peer=True,oppset=True; rank opp_rvol; list probable,yday_gainer; ret5=+5.8; leftover $1222.66",
+        "shares": 15,
+        "ticker": "VIST"
+      },
+      "YPF": {
+        "close_px": 55.54999923706055,
+        "cost": 1214.4760134277344,
+        "entry_date": "2026-09-11",
+        "entry_px": 55.11000061035156,
+        "fee_in": 2.056,
+        "last_px": 55.11000061035156,
+        "min_hold": 1,
+        "notional": 1212.4200134277344,
+        "peak_px": 55.11000061035156,
+        "reason": "Clock-B #1 \u2229 Theme Radar T\u22121 oppset; gate clk_mom_break_peer=True,oppset=True; rank opp_rvol; list ohlc_hot; ret5=+7.0; leftover $1222.66",
+        "shares": 22,
+        "ticker": "YPF"
+      }
+    },
+    "yday_equity": 9875.0
+  }
+}

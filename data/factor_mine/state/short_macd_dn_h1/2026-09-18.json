@@ -1,0 +1,271 @@
+{
+  "buys": [
+    "FIVN",
+    "BHVN",
+    "DDD",
+    "RANI",
+    "RARE",
+    "DCX",
+    "TLSA",
+    "ABSI"
+  ],
+  "cash": 14074.26,
+  "date": "2026-09-18",
+  "equity": 9823.51,
+  "fees": 68.4771,
+  "fills": [
+    {
+      "fees": 2.014,
+      "pnl": -18.54,
+      "price": 69.72,
+      "shares": 8,
+      "side": "COVER",
+      "ticker": "AXTI"
+    },
+    {
+      "fees": 2.104,
+      "pnl": -63.9,
+      "price": 17.44,
+      "shares": 38,
+      "side": "COVER",
+      "ticker": "BRUN"
+    },
+    {
+      "fees": 2.9283,
+      "pnl": -87.64,
+      "price": 3.035,
+      "shares": 227,
+      "side": "COVER",
+      "ticker": "CYPH"
+    },
+    {
+      "fees": 16.8072,
+      "pnl": -34.23,
+      "price": 0.17,
+      "shares": 3576,
+      "side": "COVER",
+      "ticker": "DVLT"
+    },
+    {
+      "fees": 2.134,
+      "pnl": -21.58,
+      "price": 13.0,
+      "shares": 48,
+      "side": "COVER",
+      "ticker": "EROC"
+    },
+    {
+      "fees": 2.23,
+      "pnl": -35.7,
+      "price": 7.98,
+      "shares": 80,
+      "side": "COVER",
+      "ticker": "PGEN"
+    },
+    {
+      "fees": 2.002,
+      "pnl": -30.48,
+      "price": 158.04,
+      "shares": 4,
+      "side": "COVER",
+      "ticker": "TWST"
+    },
+    {
+      "fees": 2.0770405473055904,
+      "pnl": null,
+      "price": 34.44,
+      "shares": 17,
+      "side": "SHORT",
+      "ticker": "FIVN"
+    },
+    {
+      "fees": 2.1488046571914463,
+      "pnl": null,
+      "price": 14.07,
+      "shares": 41,
+      "side": "SHORT",
+      "ticker": "BHVN"
+    },
+    {
+      "fees": 2.5352854791092545,
+      "pnl": null,
+      "price": 3.58,
+      "shares": 164,
+      "side": "SHORT",
+      "ticker": "DDD"
+    },
+    {
+      "fees": 8.110638356617052,
+      "pnl": null,
+      "price": 0.85,
+      "shares": 693,
+      "side": "SHORT",
+      "ticker": "RANI"
+    },
+    {
+      "fees": 2.14280301365787,
+      "pnl": null,
+      "price": 14.79,
+      "shares": 39,
+      "side": "SHORT",
+      "ticker": "RARE"
+    },
+    {
+      "fees": 11.191648219275963,
+      "pnl": null,
+      "price": 0.354,
+      "shares": 1665,
+      "side": "SHORT",
+      "ticker": "DCX"
+    },
+    {
+      "fees": 7.835831233352504,
+      "pnl": null,
+      "price": 0.97,
+      "shares": 607,
+      "side": "SHORT",
+      "ticker": "TLSA"
+    },
+    {
+      "fees": 2.2155002747627153,
+      "pnl": null,
+      "price": 9.27,
+      "shares": 63,
+      "side": "SHORT",
+      "ticker": "ABSI"
+    }
+  ],
+  "holdings": [
+    "ABSI",
+    "BHVN",
+    "DCX",
+    "DDD",
+    "FIVN",
+    "RANI",
+    "RARE",
+    "TLSA"
+  ],
+  "mean": 2.7438,
+  "n_trades_today": 15,
+  "recipe": "short_macd_dn_h1",
+  "sells": [
+    "AXTI",
+    "BRUN",
+    "CYPH",
+    "DVLT",
+    "EROC",
+    "PGEN",
+    "TWST"
+  ],
+  "state": {
+    "after": "2026-09-18",
+    "cash": 14074.26,
+    "pos": {
+      "ABSI": {
+        "close_px": 9.649999618530273,
+        "cost": 2.2155002747627153,
+        "entry_date": "2026-09-18",
+        "entry_px": 9.270000457763672,
+        "fee_in": 2.2155002747627153,
+        "last_px": 9.270000457763672,
+        "notional": 584.0100288391113,
+        "peak_px": 9.270000457763672,
+        "reason": "MACD histogram < 0; gate macd_down=True; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+12.5; leftover $589.69",
+        "shares": 63,
+        "ticker": "ABSI"
+      },
+      "BHVN": {
+        "close_px": 13.619999885559082,
+        "cost": 2.1488046571914463,
+        "entry_date": "2026-09-18",
+        "entry_px": 14.069999694824219,
+        "fee_in": 2.1488046571914463,
+        "last_px": 14.069999694824219,
+        "notional": 576.869987487793,
+        "peak_px": 14.069999694824219,
+        "reason": "MACD histogram < 0; gate macd_down=True; list probable,yday_gainer,yday_mover; \ud83d\udd35; ret5=+8.6; leftover $589.69",
+        "shares": 41,
+        "ticker": "BHVN"
+      },
+      "DCX": {
+        "close_px": 0.13300000131130219,
+        "cost": 11.191648219275963,
+        "entry_date": "2026-09-18",
+        "entry_px": 0.3540000021457672,
+        "fee_in": 11.191648219275963,
+        "last_px": 0.3540000021457672,
+        "notional": 589.4100035727024,
+        "peak_px": 0.3540000021457672,
+        "reason": "MACD histogram < 0; gate macd_down=True; list yday_gainer,yday_mover; \ud83d\udd35; ret5=-19.7; leftover $589.69",
+        "shares": 1665,
+        "ticker": "DCX"
+      },
+      "DDD": {
+        "close_px": 3.630000114440918,
+        "cost": 2.5352854791092545,
+        "entry_date": "2026-09-18",
+        "entry_px": 3.5799999237060547,
+        "fee_in": 2.5352854791092545,
+        "last_px": 3.5799999237060547,
+        "notional": 587.119987487793,
+        "peak_px": 3.5799999237060547,
+        "reason": "MACD histogram < 0; gate macd_down=True; list probable,yday_gainer; \ud83d\udd35; ret5=+8.3; leftover $589.69",
+        "shares": 164,
+        "ticker": "DDD"
+      },
+      "FIVN": {
+        "close_px": 32.470001220703125,
+        "cost": 2.0770405473055904,
+        "entry_date": "2026-09-18",
+        "entry_px": 34.439998626708984,
+        "fee_in": 2.0770405473055904,
+        "last_px": 34.439998626708984,
+        "notional": 585.4799766540527,
+        "peak_px": 34.439998626708984,
+        "reason": "MACD histogram < 0; gate macd_down=True; list flatten; \ud83d\udd35; \u26aa; ret5=+14.0; leftover $589.69",
+        "shares": 17,
+        "ticker": "FIVN"
+      },
+      "RANI": {
+        "close_px": 0.8619999885559082,
+        "cost": 8.110638356617052,
+        "entry_date": "2026-09-18",
+        "entry_px": 0.8500000238418579,
+        "fee_in": 8.110638356617052,
+        "last_px": 0.8500000238418579,
+        "notional": 589.0500165224075,
+        "peak_px": 0.8500000238418579,
+        "reason": "MACD histogram < 0; gate macd_down=True; list probable,yday_gainer; ret5=+3.6; leftover $589.69",
+        "shares": 693,
+        "ticker": "RANI"
+      },
+      "RARE": {
+        "close_px": 14.510000228881836,
+        "cost": 2.14280301365787,
+        "entry_date": "2026-09-18",
+        "entry_px": 14.789999961853027,
+        "fee_in": 2.14280301365787,
+        "last_px": 14.789999961853027,
+        "notional": 576.8099985122681,
+        "peak_px": 14.789999961853027,
+        "reason": "MACD histogram < 0; gate macd_down=True; list probable,yday_gainer; \ud83d\udd35; \u26aa; ret5=+0.7; leftover $589.69",
+        "shares": 39,
+        "ticker": "RARE"
+      },
+      "TLSA": {
+        "close_px": 0.9100000262260437,
+        "cost": 7.835831233352504,
+        "entry_date": "2026-09-18",
+        "entry_px": 0.9700000286102295,
+        "fee_in": 7.835831233352504,
+        "last_px": 0.9700000286102295,
+        "notional": 588.7900173664093,
+        "peak_px": 0.9700000286102295,
+        "reason": "MACD histogram < 0; gate macd_down=True; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+1.0; leftover $589.69",
+        "shares": 607,
+        "ticker": "TLSA"
+      }
+    },
+    "yday_equity": 9823.51
+  }
+}

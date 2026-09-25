@@ -1,0 +1,48 @@
+{
+  "buys": [],
+  "cash": 10663.94,
+  "date": "2026-09-10",
+  "equity": 10663.94,
+  "fees": 20.7481,
+  "fills": [
+    {
+      "fees": 4.7472,
+      "pnl": 104.46,
+      "price": 4.36,
+      "shares": 368,
+      "side": "COVER",
+      "ticker": "GSM"
+    },
+    {
+      "fees": 13.9449,
+      "pnl": 36.73,
+      "price": 1.53,
+      "shares": 1081,
+      "side": "COVER",
+      "ticker": "OPK"
+    },
+    {
+      "fees": 2.056,
+      "pnl": -9.46,
+      "price": 76.79,
+      "shares": 22,
+      "side": "COVER",
+      "ticker": "PIPR"
+    }
+  ],
+  "holdings": [],
+  "mean": 0.392,
+  "n_trades_today": 3,
+  "recipe": "combo_p2s_5050_shared",
+  "sells": [
+    "GSM",
+    "OPK",
+    "PIPR"
+  ],
+  "state": {
+    "after": "2026-09-10",
+    "cash": 10663.94,
+    "pos": {},
+    "yday_equity": 10663.94
+  }
+}

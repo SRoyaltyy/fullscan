@@ -784,6 +784,29 @@ def session_md_ok(date: str) -> bool:
         return False
 
 
+def _freeze_morning_overlay(date: str, payload: dict) -> Path | None:
+    """Write ``{date}_map_heat_morning.json`` once.
+
+    Post-close rebuilds ``{date}_map_heat.json``. The morning file stays
+    so a later board cannot replace the 09:30 heat input.
+    """
+    phase = str(payload.get("phase") or "")
+    if phase != "morning_overlay" and not payload.get("overlay_at"):
+        return None
+    if phase and phase != "morning_overlay":
+        return None
+    if not (payload.get("tape") or []):
+        return None
+    dest = OUT_DIR / f"{date}_map_heat_morning.json"
+    if dest.is_file():
+        print(f"[map_heat] morning overlay already frozen {dest.name}")
+        return dest
+    dest.write_text(
+        json.dumps(payload, indent=2, default=str), encoding="utf-8")
+    print(f"[map_heat] froze morning overlay {dest}")
+    return dest
+
+
 def write(date: str, payload: dict) -> tuple[Path, Path]:
     """Write json + md together. Morning overlay must not ship a stale md."""
     if (str(payload.get("phase") or "") == "morning_overlay"
@@ -803,6 +826,7 @@ def write(date: str, payload: dict) -> tuple[Path, Path]:
     md_path.write_text(text, encoding="utf-8")
     # industries list is large; keep full json for the bot, compact md for humans
     js_path.write_text(json.dumps(payload, indent=2, default=str), encoding="utf-8")
+    _freeze_morning_overlay(date, payload)
     latest = OUT_DIR / "latest_map_heat.md"
     latest.write_text(text, encoding="utf-8")
     print(f"[map_heat] wrote {md_path}")

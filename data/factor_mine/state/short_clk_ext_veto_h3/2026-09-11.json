@@ -1,0 +1,115 @@
+{
+  "buys": [
+    "CVI",
+    "CLMT",
+    "UGP",
+    "PBR-A"
+  ],
+  "cash": 15211.51,
+  "date": "2026-09-11",
+  "equity": 10157.89,
+  "fees": 9.0426,
+  "fills": [
+    {
+      "fees": 2.122548219612853,
+      "pnl": null,
+      "price": 48.36,
+      "shares": 26,
+      "side": "SHORT",
+      "ticker": "CVI"
+    },
+    {
+      "fees": 2.1097413695871015,
+      "pnl": null,
+      "price": 55.98,
+      "shares": 22,
+      "side": "SHORT",
+      "ticker": "CLMT"
+    },
+    {
+      "fees": 2.56675068580941,
+      "pnl": null,
+      "price": 7.55,
+      "shares": 168,
+      "side": "SHORT",
+      "ticker": "UGP"
+    },
+    {
+      "fees": 2.2435189043855015,
+      "pnl": null,
+      "price": 19.09,
+      "shares": 66,
+      "side": "SHORT",
+      "ticker": "PBR-A"
+    }
+  ],
+  "holdings": [
+    "CLMT",
+    "CVI",
+    "PBR-A",
+    "UGP"
+  ],
+  "mean": -0.445,
+  "n_trades_today": 4,
+  "recipe": "short_clk_ext_veto_h3",
+  "sells": [],
+  "state": {
+    "after": "2026-09-11",
+    "cash": 15211.51,
+    "pos": {
+      "CLMT": {
+        "close_px": 56.79999923706055,
+        "cost": 2.1097413695871015,
+        "entry_date": "2026-09-11",
+        "entry_px": 55.97999954223633,
+        "fee_in": 2.1097413695871015,
+        "last_px": 55.97999954223633,
+        "notional": 1231.5599899291992,
+        "peak_px": 55.97999954223633,
+        "reason": "Clock-B #5 extreme ext + fade/fail-break as a short; gate clk_ext_veto=True; list ohlc_hot; \ud83d\udd35; ret5=+5.5; leftover $1275.41",
+        "shares": 22,
+        "ticker": "CLMT"
+      },
+      "CVI": {
+        "close_px": 49.65999984741211,
+        "cost": 2.122548219612853,
+        "entry_date": "2026-09-11",
+        "entry_px": 48.36000061035156,
+        "fee_in": 2.122548219612853,
+        "last_px": 48.36000061035156,
+        "notional": 1257.3600158691406,
+        "peak_px": 48.36000061035156,
+        "reason": "Clock-B #5 extreme ext + fade/fail-break as a short; gate clk_ext_veto=True; list ohlc_hot; ret5=+11.5; leftover $1275.41",
+        "shares": 26,
+        "ticker": "CVI"
+      },
+      "PBR-A": {
+        "close_px": 19.110000610351562,
+        "cost": 2.2435189043855015,
+        "entry_date": "2026-09-11",
+        "entry_px": 19.09000015258789,
+        "fee_in": 2.2435189043855015,
+        "last_px": 19.09000015258789,
+        "notional": 1259.9400100708008,
+        "peak_px": 19.09000015258789,
+        "reason": "Clock-B #5 extreme ext + fade/fail-break as a short; gate clk_ext_veto=True; list ohlc_hot; ret5=+3.4; leftover $1275.41",
+        "shares": 66,
+        "ticker": "PBR-A"
+      },
+      "UGP": {
+        "close_px": 7.449999809265137,
+        "cost": 2.56675068580941,
+        "entry_date": "2026-09-11",
+        "entry_px": 7.550000190734863,
+        "fee_in": 2.56675068580941,
+        "last_px": 7.550000190734863,
+        "notional": 1268.400032043457,
+        "peak_px": 7.550000190734863,
+        "reason": "Clock-B #5 extreme ext + fade/fail-break as a short; gate clk_ext_veto=True; list ohlc_hot; ret5=+5.6; leftover $1275.41",
+        "shares": 168,
+        "ticker": "UGP"
+      }
+    },
+    "yday_equity": 10157.89
+  }
+}

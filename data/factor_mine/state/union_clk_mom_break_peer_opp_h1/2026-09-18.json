@@ -1,0 +1,237 @@
+{
+  "buys": [
+    "RARE",
+    "BHVN",
+    "HELP",
+    "INTC",
+    "AMD",
+    "SHLS",
+    "BNC"
+  ],
+  "cash": 436.15,
+  "date": "2026-09-18",
+  "equity": 9650.7,
+  "fees": 28.616,
+  "fills": [
+    {
+      "fees": 2.3377,
+      "pnl": -50.84,
+      "price": 18.12,
+      "shares": 105,
+      "side": "SELL",
+      "ticker": "AMRX"
+    },
+    {
+      "fees": 2.2431,
+      "pnl": 9.79,
+      "price": 26.14,
+      "shares": 75,
+      "side": "SELL",
+      "ticker": "ARQT"
+    },
+    {
+      "fees": 2.0411,
+      "pnl": -12.61,
+      "price": 195.55,
+      "shares": 9,
+      "side": "SELL",
+      "ticker": "FTAI"
+    },
+    {
+      "fees": 3.3875,
+      "pnl": 93.9,
+      "price": 7.98,
+      "shares": 258,
+      "side": "SELL",
+      "ticker": "PGEN"
+    },
+    {
+      "fees": 2.049,
+      "pnl": 122.21,
+      "price": 182.33,
+      "shares": 11,
+      "side": "SELL",
+      "ticker": "SMTC"
+    },
+    {
+      "fees": 2.278,
+      "pnl": null,
+      "price": 14.79,
+      "shares": 96,
+      "side": "BUY",
+      "ticker": "RARE"
+    },
+    {
+      "fees": 2.293,
+      "pnl": null,
+      "price": 14.07,
+      "shares": 101,
+      "side": "BUY",
+      "ticker": "BHVN"
+    },
+    {
+      "fees": 2.269,
+      "pnl": null,
+      "price": 15.15,
+      "shares": 93,
+      "side": "BUY",
+      "ticker": "HELP"
+    },
+    {
+      "fees": 2.026,
+      "pnl": null,
+      "price": 109.8,
+      "shares": 12,
+      "side": "BUY",
+      "ticker": "INTC"
+    },
+    {
+      "fees": 1.996,
+      "pnl": null,
+      "price": 547.37,
+      "shares": 2,
+      "side": "BUY",
+      "ticker": "AMD"
+    },
+    {
+      "fees": 2.548,
+      "pnl": null,
+      "price": 7.64,
+      "shares": 186,
+      "side": "BUY",
+      "ticker": "SHLS"
+    },
+    {
+      "fees": 3.1476,
+      "pnl": null,
+      "price": 5.83,
+      "shares": 244,
+      "side": "BUY",
+      "ticker": "BNC"
+    }
+  ],
+  "holdings": [
+    "AMD",
+    "BHVN",
+    "BNC",
+    "HELP",
+    "INTC",
+    "RARE",
+    "SHLS"
+  ],
+  "mean": -2.8429,
+  "n_trades_today": 12,
+  "recipe": "union_clk_mom_break_peer_opp_h1",
+  "sells": [
+    "AMRX",
+    "ARQT",
+    "FTAI",
+    "PGEN",
+    "SMTC"
+  ],
+  "state": {
+    "after": "2026-09-18",
+    "cash": 436.15,
+    "pos": {
+      "AMD": {
+        "close_px": 559.8200073242188,
+        "cost": 1096.735990234375,
+        "entry_date": "2026-09-18",
+        "entry_px": 547.3699951171875,
+        "fee_in": 1.996,
+        "last_px": 547.3699951171875,
+        "min_hold": 1,
+        "notional": 1094.739990234375,
+        "peak_px": 547.3699951171875,
+        "reason": "Clock-B #1 \u2229 Theme Radar T\u22121 oppset; gate clk_mom_break_peer=True,oppset=True; rank opp_rvol; list ohlc_hot; ret5=+8.2; leftover $1422.64",
+        "shares": 2,
+        "ticker": "AMD"
+      },
+      "BHVN": {
+        "close_px": 13.619999885559082,
+        "cost": 1423.362969177246,
+        "entry_date": "2026-09-18",
+        "entry_px": 14.069999694824219,
+        "fee_in": 2.293,
+        "last_px": 14.069999694824219,
+        "min_hold": 1,
+        "notional": 1421.069969177246,
+        "peak_px": 14.069999694824219,
+        "reason": "Clock-B #1 \u2229 Theme Radar T\u22121 oppset; gate clk_mom_break_peer=True,oppset=True; rank opp_rvol; list probable,yday_gainer,yday_mover; \ud83d\udd35; ret5=+8.6; leftover $1422.64",
+        "shares": 101,
+        "ticker": "BHVN"
+      },
+      "BNC": {
+        "close_px": 5.980000019073486,
+        "cost": 1425.6675813842774,
+        "entry_date": "2026-09-18",
+        "entry_px": 5.829999923706055,
+        "fee_in": 3.1476,
+        "last_px": 5.829999923706055,
+        "min_hold": 1,
+        "notional": 1422.5199813842773,
+        "peak_px": 5.829999923706055,
+        "reason": "Clock-B #1 \u2229 Theme Radar T\u22121 oppset; gate clk_mom_break_peer=True,oppset=True; rank opp_rvol; list probable,yday_gainer,yday_mover,ohlc_hot; \ud83d\udd35; ret5=+8.6; leftover $1422.64",
+        "shares": 244,
+        "ticker": "BNC"
+      },
+      "HELP": {
+        "close_px": 12.369999885559082,
+        "cost": 1411.2189645233154,
+        "entry_date": "2026-09-18",
+        "entry_px": 15.149999618530273,
+        "fee_in": 2.269,
+        "last_px": 15.149999618530273,
+        "min_hold": 1,
+        "notional": 1408.9499645233154,
+        "peak_px": 15.149999618530273,
+        "reason": "Clock-B #1 \u2229 Theme Radar T\u22121 oppset; gate clk_mom_break_peer=True,oppset=True; rank opp_rvol; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+9.2; leftover $1422.64",
+        "shares": 93,
+        "ticker": "HELP"
+      },
+      "INTC": {
+        "close_px": 108.5999984741211,
+        "cost": 1319.6260366210938,
+        "entry_date": "2026-09-18",
+        "entry_px": 109.80000305175781,
+        "fee_in": 2.026,
+        "last_px": 109.80000305175781,
+        "min_hold": 1,
+        "notional": 1317.6000366210938,
+        "peak_px": 109.80000305175781,
+        "reason": "Clock-B #1 \u2229 Theme Radar T\u22121 oppset; gate clk_mom_break_peer=True,oppset=True; rank opp_rvol; list ohlc_hot; \ud83d\udd35; ret5=+8.5; leftover $1422.64",
+        "shares": 12,
+        "ticker": "INTC"
+      },
+      "RARE": {
+        "close_px": 14.510000228881836,
+        "cost": 1422.1179963378906,
+        "entry_date": "2026-09-18",
+        "entry_px": 14.789999961853027,
+        "fee_in": 2.278,
+        "last_px": 14.789999961853027,
+        "min_hold": 1,
+        "notional": 1419.8399963378906,
+        "peak_px": 14.789999961853027,
+        "reason": "Clock-B #1 \u2229 Theme Radar T\u22121 oppset; gate clk_mom_break_peer=True,oppset=True; rank opp_rvol; list probable,yday_gainer; \ud83d\udd35; \u26aa; ret5=+0.7; leftover $1422.64",
+        "shares": 96,
+        "ticker": "RARE"
+      },
+      "SHLS": {
+        "close_px": 7.599999904632568,
+        "cost": 1423.5879751663208,
+        "entry_date": "2026-09-18",
+        "entry_px": 7.639999866485596,
+        "fee_in": 2.548,
+        "last_px": 7.639999866485596,
+        "min_hold": 1,
+        "notional": 1421.0399751663208,
+        "peak_px": 7.639999866485596,
+        "reason": "Clock-B #1 \u2229 Theme Radar T\u22121 oppset; gate clk_mom_break_peer=True,oppset=True; rank opp_rvol; list probable,yday_gainer; \ud83d\udd35; ret5=+7.6; leftover $1422.64",
+        "shares": 186,
+        "ticker": "SHLS"
+      }
+    },
+    "yday_equity": 9650.7
+  }
+}

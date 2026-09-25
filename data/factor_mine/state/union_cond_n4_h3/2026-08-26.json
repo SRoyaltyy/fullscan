@@ -1,0 +1,19 @@
+{
+  "buys": [],
+  "cash": 10000.0,
+  "date": "2026-08-26",
+  "equity": 10000.0,
+  "fees": 0,
+  "fills": [],
+  "holdings": [],
+  "mean": 0.0,
+  "n_trades_today": 0,
+  "recipe": "union_cond_n4_h3",
+  "sells": [],
+  "state": {
+    "after": "2026-08-26",
+    "cash": 10000.0,
+    "pos": {},
+    "yday_equity": 10000.0
+  }
+}

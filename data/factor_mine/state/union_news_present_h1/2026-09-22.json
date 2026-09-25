@@ -1,0 +1,288 @@
+{
+  "buys": [
+    "PACS",
+    "MKC",
+    "EL",
+    "USFD",
+    "DLO",
+    "TDC",
+    "DEFT",
+    "APPS"
+  ],
+  "cash": 213.97,
+  "date": "2026-09-22",
+  "equity": 9303.83,
+  "fees": 51.9487,
+  "fills": [
+    {
+      "fees": 2.031,
+      "pnl": 32.43,
+      "price": 163.08,
+      "shares": 7,
+      "side": "SELL",
+      "ticker": "A"
+    },
+    {
+      "fees": 2.2818,
+      "pnl": -51.26,
+      "price": 12.95,
+      "shares": 89,
+      "side": "SELL",
+      "ticker": "BTDR"
+    },
+    {
+      "fees": 3.9559,
+      "pnl": -155.83,
+      "price": 3.51,
+      "shares": 302,
+      "side": "SELL",
+      "ticker": "CYPH"
+    },
+    {
+      "fees": 2.049,
+      "pnl": -0.31,
+      "price": 89.12,
+      "shares": 13,
+      "side": "SELL",
+      "ticker": "DXCM"
+    },
+    {
+      "fees": 2.019,
+      "pnl": -27.36,
+      "price": 378.42,
+      "shares": 3,
+      "side": "SELL",
+      "ticker": "HUM"
+    },
+    {
+      "fees": 2.3673,
+      "pnl": -33.71,
+      "price": 10.18,
+      "shares": 116,
+      "side": "SELL",
+      "ticker": "IOVA"
+    },
+    {
+      "fees": 2.2818,
+      "pnl": -32.13,
+      "price": 13.16,
+      "shares": 89,
+      "side": "SELL",
+      "ticker": "MGTX"
+    },
+    {
+      "fees": 2.4876,
+      "pnl": -35.74,
+      "price": 7.64,
+      "shares": 154,
+      "side": "SELL",
+      "ticker": "PGEN"
+    },
+    {
+      "fees": 2.071,
+      "pnl": null,
+      "price": 41.93,
+      "shares": 27,
+      "side": "BUY",
+      "ticker": "PACS"
+    },
+    {
+      "fees": 2.059,
+      "pnl": null,
+      "price": 49.57,
+      "shares": 23,
+      "side": "BUY",
+      "ticker": "MKC"
+    },
+    {
+      "fees": 2.023,
+      "pnl": null,
+      "price": 98.02,
+      "shares": 11,
+      "side": "BUY",
+      "ticker": "EL"
+    },
+    {
+      "fees": 2.026,
+      "pnl": null,
+      "price": 94.08,
+      "shares": 12,
+      "side": "BUY",
+      "ticker": "USFD"
+    },
+    {
+      "fees": 2.23,
+      "pnl": null,
+      "price": 14.5,
+      "shares": 80,
+      "side": "BUY",
+      "ticker": "DLO"
+    },
+    {
+      "fees": 2.107,
+      "pnl": null,
+      "price": 29.78,
+      "shares": 39,
+      "side": "BUY",
+      "ticker": "TDC"
+    },
+    {
+      "fees": 17.6843,
+      "pnl": null,
+      "price": 0.59,
+      "shares": 1987,
+      "side": "BUY",
+      "ticker": "DEFT"
+    },
+    {
+      "fees": 2.275,
+      "pnl": null,
+      "price": 12.24,
+      "shares": 95,
+      "side": "BUY",
+      "ticker": "APPS"
+    }
+  ],
+  "holdings": [
+    "APPS",
+    "DEFT",
+    "DLO",
+    "EL",
+    "MKC",
+    "PACS",
+    "TDC",
+    "USFD"
+  ],
+  "mean": -0.8331,
+  "n_trades_today": 16,
+  "recipe": "union_news_present_h1",
+  "sells": [
+    "A",
+    "BTDR",
+    "CYPH",
+    "DXCM",
+    "HUM",
+    "IOVA",
+    "MGTX",
+    "PGEN"
+  ],
+  "state": {
+    "after": "2026-09-22",
+    "cash": 213.97,
+    "pos": {
+      "APPS": {
+        "close_px": 12.19,
+        "cost": 1165.075,
+        "entry_date": "2026-09-22",
+        "entry_px": 12.24,
+        "fee_in": 2.275,
+        "last_px": 12.24,
+        "min_hold": 1,
+        "notional": 1162.8,
+        "peak_px": 12.24,
+        "reason": "union \u2229 news_present, no \ud83d\udea8; gate news_present=True; list probable,yday_gainer; ret5=+2.7; leftover $1172.80",
+        "shares": 95,
+        "ticker": "APPS"
+      },
+      "DEFT": {
+        "close_px": 0.58,
+        "cost": 1190.0142999999998,
+        "entry_date": "2026-09-22",
+        "entry_px": 0.59,
+        "fee_in": 17.6843,
+        "last_px": 0.59,
+        "min_hold": 1,
+        "notional": 1172.33,
+        "peak_px": 0.59,
+        "reason": "union \u2229 news_present, no \ud83d\udea8; gate news_present=True; list probable,yday_gainer,yday_mover; ret5=-1.7; leftover $1172.80",
+        "shares": 1987,
+        "ticker": "DEFT"
+      },
+      "DLO": {
+        "close_px": 14.26,
+        "cost": 1162.23,
+        "entry_date": "2026-09-22",
+        "entry_px": 14.5,
+        "fee_in": 2.23,
+        "last_px": 14.5,
+        "min_hold": 1,
+        "notional": 1160.0,
+        "peak_px": 14.5,
+        "reason": "union \u2229 news_present, no \ud83d\udea8; gate news_present=True; list flatten; ret5=-3.6; leftover $1172.80",
+        "shares": 80,
+        "ticker": "DLO"
+      },
+      "EL": {
+        "close_px": 100.29,
+        "cost": 1080.243,
+        "entry_date": "2026-09-22",
+        "entry_px": 98.02,
+        "fee_in": 2.023,
+        "last_px": 98.02,
+        "min_hold": 1,
+        "notional": 1078.22,
+        "peak_px": 98.02,
+        "reason": "union \u2229 news_present, no \ud83d\udea8; gate news_present=True; list flatten; ret5=-1.9; leftover $1172.80",
+        "shares": 11,
+        "ticker": "EL"
+      },
+      "MKC": {
+        "close_px": 49.42,
+        "cost": 1142.1689999999999,
+        "entry_date": "2026-09-22",
+        "entry_px": 49.57,
+        "fee_in": 2.059,
+        "last_px": 49.57,
+        "min_hold": 1,
+        "notional": 1140.11,
+        "peak_px": 49.57,
+        "reason": "union \u2229 news_present, no \ud83d\udea8; gate news_present=True; list flatten; ret5=-3.0; leftover $1172.80",
+        "shares": 23,
+        "ticker": "MKC"
+      },
+      "PACS": {
+        "close_px": 41.53,
+        "cost": 1134.1809999999998,
+        "entry_date": "2026-09-22",
+        "entry_px": 41.93,
+        "fee_in": 2.071,
+        "last_px": 41.93,
+        "min_hold": 1,
+        "notional": 1132.11,
+        "peak_px": 41.93,
+        "reason": "union \u2229 news_present, no \ud83d\udea8; gate news_present=True; list flatten; ret5=-5.6; leftover $1172.80",
+        "shares": 27,
+        "ticker": "PACS"
+      },
+      "TDC": {
+        "close_px": 29.41,
+        "cost": 1163.527,
+        "entry_date": "2026-09-22",
+        "entry_px": 29.78,
+        "fee_in": 2.107,
+        "last_px": 29.78,
+        "min_hold": 1,
+        "notional": 1161.42,
+        "peak_px": 29.78,
+        "reason": "union \u2229 news_present, no \ud83d\udea8; gate news_present=True; list flatten; ret5=-0.0; leftover $1172.80",
+        "shares": 39,
+        "ticker": "TDC"
+      },
+      "USFD": {
+        "close_px": 94.2,
+        "cost": 1130.986,
+        "entry_date": "2026-09-22",
+        "entry_px": 94.08,
+        "fee_in": 2.026,
+        "last_px": 94.08,
+        "min_hold": 1,
+        "notional": 1128.96,
+        "peak_px": 94.08,
+        "reason": "union \u2229 news_present, no \ud83d\udea8; gate news_present=True; list flatten; ret5=-0.6; leftover $1172.80",
+        "shares": 12,
+        "ticker": "USFD"
+      }
+    },
+    "yday_equity": 9303.83
+  }
+}

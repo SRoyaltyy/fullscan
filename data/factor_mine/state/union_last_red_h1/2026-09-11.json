@@ -1,0 +1,215 @@
+{
+  "buys": [
+    "AUPH",
+    "OVID",
+    "ORCL",
+    "NVT",
+    "NAVN",
+    "SLBT",
+    "BHVN",
+    "AEO"
+  ],
+  "cash": 117.42,
+  "date": "2026-09-11",
+  "equity": 9334.86,
+  "fees": 25.7403,
+  "fills": [
+    {
+      "fees": 2.206,
+      "pnl": null,
+      "price": 16.28,
+      "shares": 72,
+      "side": "BUY",
+      "ticker": "AUPH"
+    },
+    {
+      "fees": 5.5728,
+      "pnl": null,
+      "price": 2.73,
+      "shares": 432,
+      "side": "BUY",
+      "ticker": "OVID"
+    },
+    {
+      "fees": 2.011,
+      "pnl": null,
+      "price": 164.43,
+      "shares": 7,
+      "side": "BUY",
+      "ticker": "ORCL"
+    },
+    {
+      "fees": 2.011,
+      "pnl": null,
+      "price": 157.78,
+      "shares": 7,
+      "side": "BUY",
+      "ticker": "NVT"
+    },
+    {
+      "fees": 2.161,
+      "pnl": null,
+      "price": 20.61,
+      "shares": 57,
+      "side": "BUY",
+      "ticker": "NAVN"
+    },
+    {
+      "fees": 7.2885,
+      "pnl": null,
+      "price": 2.09,
+      "shares": 565,
+      "side": "BUY",
+      "ticker": "SLBT"
+    },
+    {
+      "fees": 2.26,
+      "pnl": null,
+      "price": 13.03,
+      "shares": 90,
+      "side": "BUY",
+      "ticker": "BHVN"
+    },
+    {
+      "fees": 2.23,
+      "pnl": null,
+      "price": 14.71,
+      "shares": 80,
+      "side": "BUY",
+      "ticker": "AEO"
+    }
+  ],
+  "holdings": [
+    "AEO",
+    "AUPH",
+    "BHVN",
+    "NAVN",
+    "NVT",
+    "ORCL",
+    "OVID",
+    "SLBT"
+  ],
+  "mean": -1.2735,
+  "n_trades_today": 8,
+  "recipe": "union_last_red_h1",
+  "sells": [],
+  "state": {
+    "after": "2026-09-11",
+    "cash": 117.42,
+    "pos": {
+      "AEO": {
+        "close_px": 15.020000457763672,
+        "cost": 1179.0300030517578,
+        "entry_date": "2026-09-11",
+        "entry_px": 14.710000038146973,
+        "fee_in": 2.23,
+        "last_px": 14.710000038146973,
+        "min_hold": 1,
+        "notional": 1176.8000030517578,
+        "peak_px": 14.710000038146973,
+        "reason": "union \u2229 last_red, no \ud83d\udea8; gate last_red=True; list yday_mover; ret5=-14.6; leftover $1181.91",
+        "shares": 80,
+        "ticker": "AEO"
+      },
+      "AUPH": {
+        "close_px": 16.100000381469727,
+        "cost": 1174.3660494384765,
+        "entry_date": "2026-09-11",
+        "entry_px": 16.280000686645508,
+        "fee_in": 2.206,
+        "last_px": 16.280000686645508,
+        "min_hold": 1,
+        "notional": 1172.1600494384766,
+        "peak_px": 16.280000686645508,
+        "reason": "union \u2229 last_red, no \ud83d\udea8; gate last_red=True; list flatten; ret5=-0.1; leftover $1181.91",
+        "shares": 72,
+        "ticker": "AUPH"
+      },
+      "BHVN": {
+        "close_px": 12.710000038146973,
+        "cost": 1174.9599759674072,
+        "entry_date": "2026-09-11",
+        "entry_px": 13.029999732971191,
+        "fee_in": 2.26,
+        "last_px": 13.029999732971191,
+        "min_hold": 1,
+        "notional": 1172.6999759674072,
+        "peak_px": 13.029999732971191,
+        "reason": "union \u2229 last_red, no \ud83d\udea8; gate last_red=True; list yday_mover; ret5=-19.4; leftover $1181.91",
+        "shares": 90,
+        "ticker": "BHVN"
+      },
+      "NAVN": {
+        "close_px": 21.020000457763672,
+        "cost": 1176.9310347900391,
+        "entry_date": "2026-09-11",
+        "entry_px": 20.610000610351562,
+        "fee_in": 2.161,
+        "last_px": 20.610000610351562,
+        "min_hold": 1,
+        "notional": 1174.770034790039,
+        "peak_px": 20.610000610351562,
+        "reason": "union \u2229 last_red, no \ud83d\udea8; gate last_red=True; list yday_mover; ret5=-26.9; leftover $1181.91",
+        "shares": 57,
+        "ticker": "NAVN"
+      },
+      "NVT": {
+        "close_px": 162.3800048828125,
+        "cost": 1106.470991455078,
+        "entry_date": "2026-09-11",
+        "entry_px": 157.77999877929688,
+        "fee_in": 2.011,
+        "last_px": 157.77999877929688,
+        "min_hold": 1,
+        "notional": 1104.4599914550781,
+        "peak_px": 157.77999877929688,
+        "reason": "union \u2229 last_red, no \ud83d\udea8; gate last_red=True; list flatten; \ud83d\udd35; ret5=+2.0; leftover $1181.91",
+        "shares": 7,
+        "ticker": "NVT"
+      },
+      "ORCL": {
+        "close_px": 150.27999877929688,
+        "cost": 1153.0209487304687,
+        "entry_date": "2026-09-11",
+        "entry_px": 164.42999267578125,
+        "fee_in": 2.011,
+        "last_px": 164.42999267578125,
+        "min_hold": 1,
+        "notional": 1151.0099487304688,
+        "peak_px": 164.42999267578125,
+        "reason": "union \u2229 last_red, no \ud83d\udea8; gate last_red=True; list flatten,earn_react; \ud83d\udd35; \u26aa; ret5=-0.7; leftover $1181.91",
+        "shares": 7,
+        "ticker": "ORCL"
+      },
+      "OVID": {
+        "close_px": 2.690000057220459,
+        "cost": 1184.932808239746,
+        "entry_date": "2026-09-11",
+        "entry_px": 2.7300000190734863,
+        "fee_in": 5.5728,
+        "last_px": 2.7300000190734863,
+        "min_hold": 1,
+        "notional": 1179.360008239746,
+        "peak_px": 2.7300000190734863,
+        "reason": "union \u2229 last_red, no \ud83d\udea8; gate last_red=True; list flatten; ret5=-5.4; leftover $1181.91",
+        "shares": 432,
+        "ticker": "OVID"
+      },
+      "SLBT": {
+        "close_px": 2.059999942779541,
+        "cost": 1188.1384515056611,
+        "entry_date": "2026-09-11",
+        "entry_px": 2.0899999141693115,
+        "fee_in": 7.2885,
+        "last_px": 2.0899999141693115,
+        "min_hold": 1,
+        "notional": 1180.849951505661,
+        "peak_px": 2.0899999141693115,
+        "reason": "union \u2229 last_red, no \ud83d\udea8; gate last_red=True; list yday_mover; ret5=-33.3; leftover $1181.91",
+        "shares": 565,
+        "ticker": "SLBT"
+      }
+    },
+    "yday_equity": 9334.86
+  }
+}

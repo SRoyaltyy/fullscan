@@ -1,0 +1,93 @@
+{
+  "buys": [
+    "CBRL"
+  ],
+  "cash": 11.43,
+  "date": "2026-09-22",
+  "equity": 9880.59,
+  "fees": 14.7968,
+  "fills": [
+    {
+      "fees": 2.0517,
+      "pnl": 58.44,
+      "price": 163.08,
+      "shares": 12,
+      "side": "SELL",
+      "ticker": "A"
+    },
+    {
+      "fees": 2.0301,
+      "pnl": -42.94,
+      "price": 378.42,
+      "shares": 5,
+      "side": "SELL",
+      "ticker": "HUM"
+    },
+    {
+      "fees": 2.322,
+      "pnl": -68.61,
+      "price": 19.28,
+      "shares": 100,
+      "side": "SELL",
+      "ticker": "NEO"
+    },
+    {
+      "fees": 3.3343,
+      "pnl": -57.41,
+      "price": 7.64,
+      "shares": 254,
+      "side": "SELL",
+      "ticker": "PGEN"
+    },
+    {
+      "fees": 2.2594,
+      "pnl": 21.91,
+      "price": 25.26,
+      "shares": 80,
+      "side": "SELL",
+      "ticker": "UMC"
+    },
+    {
+      "fees": 2.7993,
+      "pnl": null,
+      "price": 45.5,
+      "shares": 217,
+      "side": "BUY",
+      "ticker": "CBRL"
+    }
+  ],
+  "holdings": [
+    "CBRL"
+  ],
+  "mean": -0.4845,
+  "n_trades_today": 6,
+  "recipe": "union_flow_in_h1",
+  "sells": [
+    "A",
+    "HUM",
+    "NEO",
+    "PGEN",
+    "UMC"
+  ],
+  "state": {
+    "after": "2026-09-22",
+    "cash": 11.43,
+    "pos": {
+      "CBRL": {
+        "close_px": 45.48,
+        "cost": 9876.2993,
+        "entry_date": "2026-09-22",
+        "entry_px": 45.5,
+        "fee_in": 2.7993,
+        "last_px": 45.5,
+        "min_hold": 1,
+        "notional": 9873.5,
+        "peak_px": 45.5,
+        "reason": "union \u2229 flow_in, no \ud83d\udea8; gate flow_in=True; list overnight; ret5=-11.2; leftover $9887.73",
+        "shares": 217,
+        "ticker": "CBRL"
+      }
+    },
+    "yday_equity": 9880.59
+  }
+}

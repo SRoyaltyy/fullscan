@@ -1,0 +1,93 @@
+{
+  "buys": [],
+  "cash": 10141.01,
+  "date": "2026-09-10",
+  "equity": 10141.01,
+  "fees": 19.7422,
+  "fills": [
+    {
+      "fees": 4.6182,
+      "pnl": -30.8,
+      "price": 1.81,
+      "shares": 358,
+      "side": "COVER",
+      "ticker": "AIIO"
+    },
+    {
+      "fees": 2.017,
+      "pnl": 20.23,
+      "price": 60.7,
+      "shares": 9,
+      "side": "COVER",
+      "ticker": "ASTS"
+    },
+    {
+      "fees": 2.269,
+      "pnl": 51.22,
+      "price": 6.11,
+      "shares": 93,
+      "side": "COVER",
+      "ticker": "BHC"
+    },
+    {
+      "fees": 1.999,
+      "pnl": -4.78,
+      "price": 162.35,
+      "shares": 3,
+      "side": "COVER",
+      "ticker": "CRDO"
+    },
+    {
+      "fees": 2.107,
+      "pnl": 10.18,
+      "price": 15.53,
+      "shares": 39,
+      "side": "COVER",
+      "ticker": "HQ"
+    },
+    {
+      "fees": 2.209,
+      "pnl": 33.5,
+      "price": 8.07,
+      "shares": 73,
+      "side": "COVER",
+      "ticker": "PLAY"
+    },
+    {
+      "fees": 2.176,
+      "pnl": 1.81,
+      "price": 9.93,
+      "shares": 62,
+      "side": "COVER",
+      "ticker": "SCZM"
+    },
+    {
+      "fees": 2.347,
+      "pnl": 13.11,
+      "price": 5.1,
+      "shares": 119,
+      "side": "COVER",
+      "ticker": "UAMY"
+    }
+  ],
+  "holdings": [],
+  "mean": 1.2057,
+  "n_trades_today": 8,
+  "recipe": "short_macd_dn_h3",
+  "sells": [
+    "AIIO",
+    "ASTS",
+    "BHC",
+    "CRDO",
+    "HQ",
+    "PLAY",
+    "SCZM",
+    "UAMY"
+  ],
+  "state": {
+    "after": "2026-09-10",
+    "cash": 10141.01,
+    "pos": {},
+    "yday_equity": 10141.01
+  }
+}

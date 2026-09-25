@@ -1,0 +1,194 @@
+{
+  "buys": [
+    "BHVN",
+    "RARE",
+    "FLNC",
+    "CRWD"
+  ],
+  "cash": 210.67,
+  "date": "2026-09-18",
+  "equity": 9228.37,
+  "fees": 27.5376,
+  "fills": [
+    {
+      "fees": 2.7766,
+      "pnl": 85.23,
+      "price": 11.64,
+      "shares": 211,
+      "side": "SELL",
+      "ticker": "ALMU"
+    },
+    {
+      "fees": 5.8636,
+      "pnl": -11.64,
+      "price": 1.77,
+      "shares": 448,
+      "side": "SELL",
+      "ticker": "BAK"
+    },
+    {
+      "fees": 2.019,
+      "pnl": -9.42,
+      "price": 236.8,
+      "shares": 3,
+      "side": "SELL",
+      "ticker": "JBHT"
+    },
+    {
+      "fees": 2.1052,
+      "pnl": -83.93,
+      "price": 78.25,
+      "shares": 29,
+      "side": "SELL",
+      "ticker": "LEN"
+    },
+    {
+      "fees": 2.022,
+      "pnl": 41.9,
+      "price": 182.33,
+      "shares": 4,
+      "side": "SELL",
+      "ticker": "SMTC"
+    },
+    {
+      "fees": 2.142,
+      "pnl": -30.22,
+      "price": 17.13,
+      "shares": 44,
+      "side": "SELL",
+      "ticker": "TNDM"
+    },
+    {
+      "fees": 2.452,
+      "pnl": null,
+      "price": 14.07,
+      "shares": 154,
+      "side": "BUY",
+      "ticker": "BHVN"
+    },
+    {
+      "fees": 2.428,
+      "pnl": null,
+      "price": 14.79,
+      "shares": 146,
+      "side": "BUY",
+      "ticker": "RARE"
+    },
+    {
+      "fees": 3.7152,
+      "pnl": null,
+      "price": 7.535,
+      "shares": 288,
+      "side": "BUY",
+      "ticker": "FLNC"
+    },
+    {
+      "fees": 2.014,
+      "pnl": null,
+      "price": 246.98,
+      "shares": 8,
+      "side": "BUY",
+      "ticker": "CRWD"
+    }
+  ],
+  "holdings": [
+    "BHVN",
+    "CRWD",
+    "FLNC",
+    "GME",
+    "RARE"
+  ],
+  "mean": -3.1244,
+  "n_trades_today": 10,
+  "recipe": "combo_ne1_5050_shared",
+  "sells": [
+    "ALMU",
+    "BAK",
+    "JBHT",
+    "LEN",
+    "SMTC",
+    "TNDM"
+  ],
+  "state": {
+    "after": "2026-09-18",
+    "cash": 210.67,
+    "pos": {
+      "BHVN": {
+        "close_px": 13.619999885559082,
+        "cost": 2169.23195300293,
+        "entry_date": "2026-09-18",
+        "entry_px": 14.069999694824219,
+        "fee_in": 2.452,
+        "last_px": 14.069999694824219,
+        "notional": 2166.7799530029297,
+        "owner": "union_news_g_h1",
+        "peak_px": 14.069999694824219,
+        "reason": "union \u2229 news_g, no \ud83d\udea8; gate news=good; list probable,yday_gainer,yday_mover; \ud83d\udd35; ret5=+8.6; combo leftover $2173.33; owner union_news_g_h1",
+        "shares": 154,
+        "side": "long",
+        "ticker": "BHVN"
+      },
+      "CRWD": {
+        "close_px": 237.64999389648438,
+        "cost": 1977.8539658203124,
+        "entry_date": "2026-09-18",
+        "entry_px": 246.97999572753906,
+        "fee_in": 2.014,
+        "last_px": 246.97999572753906,
+        "notional": 1975.8399658203125,
+        "owner": "union_news_g_h1",
+        "peak_px": 246.97999572753906,
+        "reason": "union \u2229 news_g, no \ud83d\udea8; gate news=good; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+17.6; combo leftover $2173.33; owner union_news_g_h1",
+        "shares": 8,
+        "side": "long",
+        "ticker": "CRWD"
+      },
+      "FLNC": {
+        "close_px": 7.320000171661377,
+        "cost": 2173.7951560546876,
+        "entry_date": "2026-09-18",
+        "entry_px": 7.534999847412109,
+        "fee_in": 3.7152,
+        "last_px": 7.534999847412109,
+        "notional": 2170.0799560546875,
+        "owner": "union_news_g_h1",
+        "peak_px": 7.534999847412109,
+        "reason": "union \u2229 news_g, no \ud83d\udea8; gate news=good; list yday_mover; \ud83d\udd35; ret5=-20.9; combo leftover $2173.33; owner union_news_g_h1",
+        "shares": 288,
+        "side": "long",
+        "ticker": "FLNC"
+      },
+      "GME": {
+        "close_px": 22.639999389648438,
+        "cost": 776.295029373169,
+        "entry_date": "2026-09-17",
+        "entry_px": 22.1200008392334,
+        "fee_in": 2.095,
+        "last_px": 22.899999618530273,
+        "notional": 774.200029373169,
+        "owner": "union_news_g_h1",
+        "peak_px": 22.899999618530273,
+        "reason": "union \u2229 news_g, no \ud83d\udea8; gate news=good; list ohlc_hot; \ud83d\udd35; ret5=+10.5; combo leftover $793.10; owner union_news_g_h1",
+        "shares": 35,
+        "side": "long",
+        "ticker": "GME"
+      },
+      "RARE": {
+        "close_px": 14.510000228881836,
+        "cost": 2161.767994430542,
+        "entry_date": "2026-09-18",
+        "entry_px": 14.789999961853027,
+        "fee_in": 2.428,
+        "last_px": 14.789999961853027,
+        "notional": 2159.339994430542,
+        "owner": "union_news_g_h1",
+        "peak_px": 14.789999961853027,
+        "reason": "union \u2229 news_g, no \ud83d\udea8; gate news=good; list probable,yday_gainer; \ud83d\udd35; \u26aa; ret5=+0.7; combo leftover $2173.33; owner union_news_g_h1",
+        "shares": 146,
+        "side": "long",
+        "ticker": "RARE"
+      }
+    },
+    "yday_equity": 9228.37
+  }
+}

@@ -1,0 +1,261 @@
+{
+  "buys": [
+    "INDP",
+    "TNGX",
+    "NMRA",
+    "CNXC",
+    "TLYS",
+    "HYMC",
+    "GT",
+    "TTAN"
+  ],
+  "cash": 13.75,
+  "date": "2026-09-23",
+  "equity": 9698.65,
+  "fees": 56.2891,
+  "fills": [
+    {
+      "fees": 2.5285,
+      "pnl": -5.01,
+      "price": 12.24,
+      "shares": 165,
+      "side": "SELL",
+      "ticker": "APPS"
+    },
+    {
+      "fees": 2.9829,
+      "pnl": 89.43,
+      "price": 9.32,
+      "shares": 227,
+      "side": "SELL",
+      "ticker": "ARHS"
+    },
+    {
+      "fees": 9.2535,
+      "pnl": -46.65,
+      "price": 2.8,
+      "shares": 707,
+      "side": "SELL",
+      "ticker": "BTQ"
+    },
+    {
+      "fees": 2.4616,
+      "pnl": -63.92,
+      "price": 13.6,
+      "shares": 144,
+      "side": "SELL",
+      "ticker": "HELP"
+    },
+    {
+      "fees": 2.411,
+      "pnl": -50.87,
+      "price": 15.4,
+      "shares": 128,
+      "side": "SELL",
+      "ticker": "NN"
+    },
+    {
+      "fees": 4.1022,
+      "pnl": null,
+      "price": 3.93,
+      "shares": 318,
+      "side": "BUY",
+      "ticker": "INDP"
+    },
+    {
+      "fees": 2.137,
+      "pnl": null,
+      "price": 25.4,
+      "shares": 49,
+      "side": "BUY",
+      "ticker": "TNGX"
+    },
+    {
+      "fees": 17.4191,
+      "pnl": null,
+      "price": 0.768,
+      "shares": 1631,
+      "side": "BUY",
+      "ticker": "NMRA"
+    },
+    {
+      "fees": 2.113,
+      "pnl": null,
+      "price": 30.32,
+      "shares": 41,
+      "side": "BUY",
+      "ticker": "CNXC"
+    },
+    {
+      "fees": 3.7152,
+      "pnl": null,
+      "price": 4.35,
+      "shares": 288,
+      "side": "BUY",
+      "ticker": "TLYS"
+    },
+    {
+      "fees": 2.161,
+      "pnl": null,
+      "price": 21.77,
+      "shares": 57,
+      "side": "BUY",
+      "ticker": "HYMC"
+    },
+    {
+      "fees": 2.9541,
+      "pnl": null,
+      "price": 5.45,
+      "shares": 229,
+      "side": "BUY",
+      "ticker": "GT"
+    },
+    {
+      "fees": 2.05,
+      "pnl": null,
+      "price": 62.16,
+      "shares": 20,
+      "side": "BUY",
+      "ticker": "TTAN"
+    }
+  ],
+  "holdings": [
+    "CNXC",
+    "GT",
+    "HYMC",
+    "INDP",
+    "NMRA",
+    "TLYS",
+    "TNGX",
+    "TTAN"
+  ],
+  "mean": -2.546,
+  "n_trades_today": 13,
+  "recipe": "probable_probable_ok_h1",
+  "sells": [
+    "APPS",
+    "ARHS",
+    "BTQ",
+    "HELP",
+    "NN"
+  ],
+  "state": {
+    "after": "2026-09-23",
+    "cash": 13.75,
+    "pos": {
+      "CNXC": {
+        "close_px": 30.209999084472656,
+        "cost": 1245.232987487793,
+        "entry_date": "2026-09-23",
+        "entry_px": 30.31999969482422,
+        "fee_in": 2.113,
+        "last_px": 30.31999969482422,
+        "min_hold": 1,
+        "notional": 1243.119987487793,
+        "peak_px": 30.31999969482422,
+        "reason": "combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer; ret5=+4.5; leftover $1253.18",
+        "shares": 41,
+        "ticker": "CNXC"
+      },
+      "GT": {
+        "close_px": 5.340000152587891,
+        "cost": 1251.0040563217162,
+        "entry_date": "2026-09-23",
+        "entry_px": 5.449999809265137,
+        "fee_in": 2.9541,
+        "last_px": 5.449999809265137,
+        "min_hold": 1,
+        "notional": 1248.0499563217163,
+        "peak_px": 5.449999809265137,
+        "reason": "combo gate; gate last_green=True,ret_5_max=10.0; list probable; \ud83d\udd35; ret5=+4.6; leftover $1253.18",
+        "shares": 229,
+        "ticker": "GT"
+      },
+      "HYMC": {
+        "close_px": 21.260000228881836,
+        "cost": 1243.0510260925294,
+        "entry_date": "2026-09-23",
+        "entry_px": 21.770000457763672,
+        "fee_in": 2.161,
+        "last_px": 21.770000457763672,
+        "min_hold": 1,
+        "notional": 1240.8900260925293,
+        "peak_px": 21.770000457763672,
+        "reason": "combo gate; gate last_green=True,ret_5_max=10.0; list probable; ret5=+9.6; leftover $1253.18",
+        "shares": 57,
+        "ticker": "HYMC"
+      },
+      "INDP": {
+        "close_px": 3.7699999809265137,
+        "cost": 1253.8422212287903,
+        "entry_date": "2026-09-23",
+        "entry_px": 3.930000066757202,
+        "fee_in": 4.1022,
+        "last_px": 3.930000066757202,
+        "min_hold": 1,
+        "notional": 1249.7400212287903,
+        "peak_px": 3.930000066757202,
+        "reason": "combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer,yday_mover,ohlc_hot; \ud83d\udd35; ret5=+9.6; leftover $1253.18",
+        "shares": 318,
+        "ticker": "INDP"
+      },
+      "NMRA": {
+        "close_px": 0.7310000061988831,
+        "cost": 1270.0271108880997,
+        "entry_date": "2026-09-23",
+        "entry_px": 0.7680000066757202,
+        "fee_in": 17.4191,
+        "last_px": 0.7680000066757202,
+        "min_hold": 1,
+        "notional": 1252.6080108880997,
+        "peak_px": 0.7680000066757202,
+        "reason": "combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer,yday_mover; \ud83d\udd35; ret5=-6.3; leftover $1253.18",
+        "shares": 1631,
+        "ticker": "NMRA"
+      },
+      "TLYS": {
+        "close_px": 4.130000114440918,
+        "cost": 1256.5151725341798,
+        "entry_date": "2026-09-23",
+        "entry_px": 4.349999904632568,
+        "fee_in": 3.7152,
+        "last_px": 4.349999904632568,
+        "min_hold": 1,
+        "notional": 1252.7999725341797,
+        "peak_px": 4.349999904632568,
+        "reason": "combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer; ret5=-9.6; leftover $1253.18",
+        "shares": 288,
+        "ticker": "TLYS"
+      },
+      "TNGX": {
+        "close_px": 24.450000762939453,
+        "cost": 1246.7369813079833,
+        "entry_date": "2026-09-23",
+        "entry_px": 25.399999618530273,
+        "fee_in": 2.137,
+        "last_px": 25.399999618530273,
+        "min_hold": 1,
+        "notional": 1244.5999813079834,
+        "peak_px": 25.399999618530273,
+        "reason": "combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer,yday_mover; \ud83d\udd35; ret5=+6.9; leftover $1253.18",
+        "shares": 49,
+        "ticker": "TNGX"
+      },
+      "TTAN": {
+        "close_px": 61.650001525878906,
+        "cost": 1245.2499969482421,
+        "entry_date": "2026-09-23",
+        "entry_px": 62.15999984741211,
+        "fee_in": 2.05,
+        "last_px": 62.15999984741211,
+        "min_hold": 1,
+        "notional": 1243.1999969482422,
+        "peak_px": 62.15999984741211,
+        "reason": "combo gate; gate last_green=True,ret_5_max=10.0; list probable; \ud83d\udd35; \u26aa; ret5=+5.1; leftover $1253.18",
+        "shares": 20,
+        "ticker": "TTAN"
+      }
+    },
+    "yday_equity": 9698.65
+  }
+}

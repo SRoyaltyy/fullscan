@@ -1,0 +1,114 @@
+{
+  "buys": [
+    "FLNC",
+    "PURR",
+    "ARE"
+  ],
+  "cash": 43.2,
+  "date": "2026-09-18",
+  "equity": 9933.95,
+  "fees": 18.4883,
+  "fills": [
+    {
+      "fees": 5.2417,
+      "pnl": 132.9,
+      "price": 13.0,
+      "shares": 398,
+      "side": "SELL",
+      "ticker": "EROC"
+    },
+    {
+      "fees": 2.1141,
+      "pnl": -27.93,
+      "price": 195.55,
+      "shares": 25,
+      "side": "SELL",
+      "ticker": "FTAI"
+    },
+    {
+      "fees": 5.805,
+      "pnl": null,
+      "price": 7.535,
+      "shares": 450,
+      "side": "BUY",
+      "ticker": "FLNC"
+    },
+    {
+      "fees": 3.1605,
+      "pnl": null,
+      "price": 13.82,
+      "shares": 245,
+      "side": "BUY",
+      "ticker": "PURR"
+    },
+    {
+      "fees": 2.167,
+      "pnl": null,
+      "price": 56.7,
+      "shares": 59,
+      "side": "BUY",
+      "ticker": "ARE"
+    }
+  ],
+  "holdings": [
+    "ARE",
+    "FLNC",
+    "PURR"
+  ],
+  "mean": -1.9531,
+  "n_trades_today": 5,
+  "recipe": "union_clk_hold_vs_sector_opp_h1",
+  "sells": [
+    "EROC",
+    "FTAI"
+  ],
+  "state": {
+    "after": "2026-09-18",
+    "cash": 43.2,
+    "pos": {
+      "ARE": {
+        "close_px": 53.29999923706055,
+        "cost": 3347.4670450134277,
+        "entry_date": "2026-09-18",
+        "entry_px": 56.70000076293945,
+        "fee_in": 2.167,
+        "last_px": 56.70000076293945,
+        "min_hold": 1,
+        "notional": 3345.3000450134277,
+        "peak_px": 56.70000076293945,
+        "reason": "Clock-B #6 \u2229 Theme Radar T\u22121 oppset; gate clk_hold_vs_sector=True,oppset=True; rank opp_rvol; list ohlc_hot; ret5=+13.7; leftover $3392.09",
+        "shares": 59,
+        "ticker": "ARE"
+      },
+      "FLNC": {
+        "close_px": 7.320000171661377,
+        "cost": 3396.554931335449,
+        "entry_date": "2026-09-18",
+        "entry_px": 7.534999847412109,
+        "fee_in": 5.805,
+        "last_px": 7.534999847412109,
+        "min_hold": 1,
+        "notional": 3390.749931335449,
+        "peak_px": 7.534999847412109,
+        "reason": "Clock-B #6 \u2229 Theme Radar T\u22121 oppset; gate clk_hold_vs_sector=True,oppset=True; rank opp_rvol; list yday_mover; \ud83d\udd35; ret5=-20.9; leftover $3392.09",
+        "shares": 450,
+        "ticker": "FLNC"
+      },
+      "PURR": {
+        "close_px": 14.09000015258789,
+        "cost": 3389.0604252319336,
+        "entry_date": "2026-09-18",
+        "entry_px": 13.819999694824219,
+        "fee_in": 3.1605,
+        "last_px": 13.819999694824219,
+        "min_hold": 1,
+        "notional": 3385.8999252319336,
+        "peak_px": 13.819999694824219,
+        "reason": "Clock-B #6 \u2229 Theme Radar T\u22121 oppset; gate clk_hold_vs_sector=True,oppset=True; rank opp_rvol; list yday_gainer; ret5=+16.5; leftover $3392.09",
+        "shares": 245,
+        "ticker": "PURR"
+      }
+    },
+    "yday_equity": 9933.95
+  }
+}

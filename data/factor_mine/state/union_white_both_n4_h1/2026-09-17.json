@@ -1,0 +1,57 @@
+{
+  "buys": [],
+  "cash": 10119.66,
+  "date": "2026-09-17",
+  "equity": 10119.66,
+  "fees": 8.5164,
+  "fills": [
+    {
+      "fees": 2.2252,
+      "pnl": 9.86,
+      "price": 36.67,
+      "shares": 68,
+      "side": "SELL",
+      "ticker": "BLFS"
+    },
+    {
+      "fees": 2.0467,
+      "pnl": 16.28,
+      "price": 273.15,
+      "shares": 9,
+      "side": "SELL",
+      "ticker": "IQV"
+    },
+    {
+      "fees": 2.1156,
+      "pnl": -25.96,
+      "price": 76.44,
+      "shares": 32,
+      "side": "SELL",
+      "ticker": "RDNT"
+    },
+    {
+      "fees": 2.1289,
+      "pnl": 136.53,
+      "price": 72.7,
+      "shares": 36,
+      "side": "SELL",
+      "ticker": "TEM"
+    }
+  ],
+  "holdings": [],
+  "mean": 1.8922,
+  "n_trades_today": 4,
+  "recipe": "union_white_both_n4_h1",
+  "sells": [
+    "BLFS",
+    "IQV",
+    "RDNT",
+    "TEM"
+  ],
+  "state": {
+    "after": "2026-09-17",
+    "cash": 10119.66,
+    "pos": {},
+    "yday_equity": 10119.66
+  }
+}

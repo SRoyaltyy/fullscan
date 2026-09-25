@@ -1,0 +1,107 @@
+{
+  "buys": [],
+  "cash": 7507.55,
+  "date": "2026-09-24",
+  "equity": 11201.19,
+  "fees": 17.0818,
+  "fills": [
+    {
+      "fees": 2.4179,
+      "pnl": -107.76,
+      "price": 9.12,
+      "shares": 132,
+      "side": "SELL",
+      "ticker": "BFLY"
+    },
+    {
+      "fees": 5.8505,
+      "pnl": -150.19,
+      "price": 2.61,
+      "shares": 447,
+      "side": "SELL",
+      "ticker": "FEAM"
+    },
+    {
+      "fees": 2.4464,
+      "pnl": -112.02,
+      "price": 8.5,
+      "shares": 141,
+      "side": "SELL",
+      "ticker": "IBRX"
+    },
+    {
+      "fees": 2.0642,
+      "pnl": -10.41,
+      "price": 70.49,
+      "shares": 18,
+      "side": "SELL",
+      "ticker": "INOD"
+    },
+    {
+      "fees": 2.1998,
+      "pnl": -12.57,
+      "price": 20.52,
+      "shares": 63,
+      "side": "SELL",
+      "ticker": "OMER"
+    },
+    {
+      "fees": 2.103,
+      "pnl": -181.97,
+      "price": 36.025,
+      "shares": 31,
+      "side": "SELL",
+      "ticker": "VKTX"
+    }
+  ],
+  "holdings": [
+    "GLND",
+    "VICR"
+  ],
+  "mean": 8.5045,
+  "n_trades_today": 6,
+  "recipe": "union_w_hot_cond_h1",
+  "sells": [
+    "BFLY",
+    "FEAM",
+    "IBRX",
+    "INOD",
+    "OMER",
+    "VKTX"
+  ],
+  "state": {
+    "after": "2026-09-24",
+    "cash": 7507.55,
+    "pos": {
+      "GLND": {
+        "close_px": 5.349999904632568,
+        "cost": 1313.0436230789185,
+        "entry_date": "2026-09-23",
+        "entry_px": 2.700000047683716,
+        "fee_in": 6.2436,
+        "last_px": 3.2200000286102295,
+        "min_hold": 1,
+        "notional": 1306.8000230789185,
+        "peak_px": 3.2200000286102295,
+        "reason": "rank by w_hot_cond; rank w_hot_cond; list yday_mover; \ud83d\udd35; ret5=+109.2; leftover $1307.94",
+        "shares": 484,
+        "ticker": "GLND"
+      },
+      "VICR": {
+        "close_px": 276.05999755859375,
+        "cost": 1068.002,
+        "entry_date": "2026-09-23",
+        "entry_px": 266.5,
+        "fee_in": 2.002,
+        "last_px": 274.45001220703125,
+        "min_hold": 1,
+        "notional": 1066.0,
+        "peak_px": 274.45001220703125,
+        "reason": "rank by w_hot_cond; rank w_hot_cond; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+45.9; leftover $1307.94",
+        "shares": 4,
+        "ticker": "VICR"
+      }
+    },
+    "yday_equity": 11201.19
+  }
+}

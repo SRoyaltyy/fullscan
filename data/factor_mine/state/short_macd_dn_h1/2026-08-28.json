@@ -1,0 +1,207 @@
+{
+  "buys": [
+    "PYXS",
+    "SAFX",
+    "BBWI",
+    "QFIN",
+    "SYRE",
+    "JKS",
+    "DY",
+    "CLYM"
+  ],
+  "cash": 14865.25,
+  "date": "2026-08-28",
+  "equity": 10045.12,
+  "fees": 27.0605,
+  "fills": [
+    {
+      "fees": 2.6123002736287577,
+      "pnl": null,
+      "price": 3.32,
+      "shares": 188,
+      "side": "SHORT",
+      "ticker": "PYXS"
+    },
+    {
+      "fees": 11.696120000447312,
+      "pnl": null,
+      "price": 0.365,
+      "shares": 1712,
+      "side": "SHORT",
+      "ticker": "SAFX"
+    },
+    {
+      "fees": 2.1259520547945203,
+      "pnl": null,
+      "price": 18.75,
+      "shares": 33,
+      "side": "SHORT",
+      "ticker": "BBWI"
+    },
+    {
+      "fees": 2.2323465746317823,
+      "pnl": null,
+      "price": 9.15,
+      "shares": 68,
+      "side": "SHORT",
+      "ticker": "QFIN"
+    },
+    {
+      "fees": 2.043082191780822,
+      "pnl": null,
+      "price": 91.75,
+      "shares": 6,
+      "side": "SHORT",
+      "ticker": "SYRE"
+    },
+    {
+      "fees": 2.1648498628694717,
+      "pnl": null,
+      "price": 13.37,
+      "shares": 46,
+      "side": "SHORT",
+      "ticker": "JKS"
+    },
+    {
+      "fees": 2.032785753223994,
+      "pnl": null,
+      "price": 306.34,
+      "shares": 2,
+      "side": "SHORT",
+      "ticker": "DY"
+    },
+    {
+      "fees": 2.1530991776871358,
+      "pnl": null,
+      "price": 14.86,
+      "shares": 42,
+      "side": "SHORT",
+      "ticker": "CLYM"
+    }
+  ],
+  "holdings": [
+    "BBWI",
+    "CLYM",
+    "DY",
+    "JKS",
+    "PYXS",
+    "QFIN",
+    "SAFX",
+    "SYRE"
+  ],
+  "mean": 0.4512,
+  "n_trades_today": 8,
+  "recipe": "short_macd_dn_h1",
+  "sells": [],
+  "state": {
+    "after": "2026-08-28",
+    "cash": 14865.25,
+    "pos": {
+      "BBWI": {
+        "close_px": 19.219999313354492,
+        "cost": 2.1259520547945203,
+        "entry_date": "2026-08-28",
+        "entry_px": 18.75,
+        "fee_in": 2.1259520547945203,
+        "last_px": 18.75,
+        "notional": 618.75,
+        "peak_px": 18.75,
+        "reason": "MACD histogram < 0; gate macd_down=True; list yday_gainer; ret5=-4.1; leftover $625.00",
+        "shares": 33,
+        "ticker": "BBWI"
+      },
+      "CLYM": {
+        "close_px": 14.569999694824219,
+        "cost": 2.1530991776871358,
+        "entry_date": "2026-08-28",
+        "entry_px": 14.859999656677246,
+        "fee_in": 2.1530991776871358,
+        "last_px": 14.859999656677246,
+        "notional": 624.1199855804443,
+        "peak_px": 14.859999656677246,
+        "reason": "MACD histogram < 0; gate macd_down=True; list yday_mover; ret5=-11.5; leftover $625.00",
+        "shares": 42,
+        "ticker": "CLYM"
+      },
+      "DY": {
+        "close_px": 294.3399963378906,
+        "cost": 2.032785753223994,
+        "entry_date": "2026-08-28",
+        "entry_px": 306.3399963378906,
+        "fee_in": 2.032785753223994,
+        "last_px": 306.3399963378906,
+        "notional": 612.6799926757812,
+        "peak_px": 306.3399963378906,
+        "reason": "MACD histogram < 0; gate macd_down=True; list yday_mover; ret5=-23.0; leftover $625.00",
+        "shares": 2,
+        "ticker": "DY"
+      },
+      "JKS": {
+        "close_px": 13.539999961853027,
+        "cost": 2.1648498628694717,
+        "entry_date": "2026-08-28",
+        "entry_px": 13.369999885559082,
+        "fee_in": 2.1648498628694717,
+        "last_px": 13.369999885559082,
+        "notional": 615.0199947357178,
+        "peak_px": 13.369999885559082,
+        "reason": "MACD histogram < 0; gate macd_down=True; list yday_mover; ret5=-14.9; leftover $625.00",
+        "shares": 46,
+        "ticker": "JKS"
+      },
+      "PYXS": {
+        "close_px": 3.2300000190734863,
+        "cost": 2.6123002736287577,
+        "entry_date": "2026-08-28",
+        "entry_px": 3.319999933242798,
+        "fee_in": 2.6123002736287577,
+        "last_px": 3.319999933242798,
+        "notional": 624.159987449646,
+        "peak_px": 3.319999933242798,
+        "reason": "MACD histogram < 0; gate macd_down=True; list probable,yday_gainer; ret5=+6.4; leftover $625.00",
+        "shares": 188,
+        "ticker": "PYXS"
+      },
+      "QFIN": {
+        "close_px": 8.800000190734863,
+        "cost": 2.2323465746317823,
+        "entry_date": "2026-08-28",
+        "entry_px": 9.149999618530273,
+        "fee_in": 2.2323465746317823,
+        "last_px": 9.149999618530273,
+        "notional": 622.1999740600586,
+        "peak_px": 9.149999618530273,
+        "reason": "MACD histogram < 0; gate macd_down=True; list yday_mover; ret5=-19.9; leftover $625.00",
+        "shares": 68,
+        "ticker": "QFIN"
+      },
+      "SAFX": {
+        "close_px": 0.35899999737739563,
+        "cost": 11.696120000447312,
+        "entry_date": "2026-08-28",
+        "entry_px": 0.36500000953674316,
+        "fee_in": 11.696120000447312,
+        "last_px": 0.36500000953674316,
+        "notional": 624.8800163269043,
+        "peak_px": 0.36500000953674316,
+        "reason": "MACD histogram < 0; gate macd_down=True; list probable,yday_gainer; ret5=+7.6; leftover $625.00",
+        "shares": 1712,
+        "ticker": "SAFX"
+      },
+      "SYRE": {
+        "close_px": 90.36000061035156,
+        "cost": 2.043082191780822,
+        "entry_date": "2026-08-28",
+        "entry_px": 91.75,
+        "fee_in": 2.043082191780822,
+        "last_px": 91.75,
+        "notional": 550.5,
+        "peak_px": 91.75,
+        "reason": "MACD histogram < 0; gate macd_down=True; list yday_mover; ret5=-13.2; leftover $625.00",
+        "shares": 6,
+        "ticker": "SYRE"
+      }
+    },
+    "yday_equity": 10045.12
+  }
+}

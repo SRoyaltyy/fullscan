@@ -1,0 +1,218 @@
+{
+  "buys": [],
+  "cash": 5103.87,
+  "date": "2026-09-24",
+  "equity": 9038.39,
+  "fees": 10.872,
+  "fills": [
+    {
+      "fees": 2.2818,
+      "pnl": -94.43,
+      "price": 9.7,
+      "shares": 89,
+      "side": "SELL",
+      "ticker": "ABTC"
+    },
+    {
+      "fees": 2.031,
+      "pnl": 23.82,
+      "price": 126.98,
+      "shares": 7,
+      "side": "SELL",
+      "ticker": "FORM"
+    },
+    {
+      "fees": 2.016,
+      "pnl": 1.67,
+      "price": 396.73,
+      "shares": 2,
+      "side": "SELL",
+      "ticker": "ISRG"
+    },
+    {
+      "fees": 2.043,
+      "pnl": -19.36,
+      "price": 82.14,
+      "shares": 11,
+      "side": "SELL",
+      "ticker": "MXL"
+    },
+    {
+      "fees": 2.5002,
+      "pnl": -83.96,
+      "price": 5.5,
+      "shares": 158,
+      "side": "SELL",
+      "ticker": "SION"
+    }
+  ],
+  "holdings": [
+    "AEHL",
+    "AIP",
+    "ARM",
+    "BLLN",
+    "GRAL",
+    "MANE",
+    "PENG",
+    "RBRK",
+    "TWLO",
+    "VICR"
+  ],
+  "mean": -0.4941,
+  "n_trades_today": 5,
+  "recipe": "union_macd_hist_h3",
+  "sells": [
+    "ABTC",
+    "FORM",
+    "ISRG",
+    "MXL",
+    "SION"
+  ],
+  "state": {
+    "after": "2026-09-24",
+    "cash": 5103.87,
+    "pos": {
+      "AEHL": {
+        "close_px": 8.960000038146973,
+        "cost": 414.17199999999997,
+        "entry_date": "2026-09-22",
+        "entry_px": 7.63,
+        "fee_in": 2.152,
+        "last_px": 8.210000038146973,
+        "min_hold": 3,
+        "notional": 412.02,
+        "peak_px": 8.210000038146973,
+        "reason": "rank by macd_hist; rank macd_hist; list yday_mover; ret5=+14.0; leftover $412.51",
+        "shares": 54,
+        "ticker": "AEHL"
+      },
+      "AIP": {
+        "close_px": 24.190000534057617,
+        "cost": 407.49100000000004,
+        "entry_date": "2026-09-22",
+        "entry_px": 23.85,
+        "fee_in": 2.041,
+        "last_px": 23.6299991607666,
+        "min_hold": 3,
+        "notional": 405.45000000000005,
+        "peak_px": 24.639999389648438,
+        "reason": "rank by macd_hist; rank macd_hist; list ohlc_hot; ret5=+17.2; leftover $412.51",
+        "shares": 17,
+        "ticker": "AIP"
+      },
+      "ARM": {
+        "close_px": 306.3399963378906,
+        "cost": 321.40300366210937,
+        "entry_date": "2026-09-22",
+        "entry_px": 319.4100036621094,
+        "fee_in": 1.993,
+        "last_px": 319.2300109863281,
+        "min_hold": 3,
+        "notional": 319.4100036621094,
+        "peak_px": 331.7799987792969,
+        "reason": "rank by macd_hist; rank macd_hist; list yday_gainer,yday_mover; ret5=+35.1; leftover $412.51",
+        "shares": 1,
+        "ticker": "ARM"
+      },
+      "BLLN": {
+        "close_px": 124.9000015258789,
+        "cost": 117.163,
+        "entry_date": "2026-09-23",
+        "entry_px": 116.0,
+        "fee_in": 1.163,
+        "last_px": 112.33000183105469,
+        "min_hold": 3,
+        "notional": 116.0,
+        "peak_px": 116.0,
+        "reason": "rank by macd_hist; rank macd_hist; list yday_gainer; \ud83d\udd35; \u26aa; ret5=+11.3; leftover $206.61",
+        "shares": 1,
+        "ticker": "BLLN"
+      },
+      "GRAL": {
+        "close_px": 125.20999908447266,
+        "cost": 322.249,
+        "entry_date": "2026-09-22",
+        "entry_px": 106.75,
+        "fee_in": 1.999,
+        "last_px": 105.5,
+        "min_hold": 3,
+        "notional": 320.25,
+        "peak_px": 108.5199966430664,
+        "reason": "rank by macd_hist; rank macd_hist; list yday_gainer,yday_mover; ret5=+42.9; leftover $412.51",
+        "shares": 3,
+        "ticker": "GRAL"
+      },
+      "MANE": {
+        "close_px": 115.72000122070312,
+        "cost": 119.29410061035156,
+        "entry_date": "2026-09-23",
+        "entry_px": 118.11000061035156,
+        "fee_in": 1.1841,
+        "last_px": 115.29000091552734,
+        "min_hold": 3,
+        "notional": 118.11000061035156,
+        "peak_px": 118.11000061035156,
+        "reason": "rank by macd_hist; rank macd_hist; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+13.7; leftover $206.61",
+        "shares": 1,
+        "ticker": "MANE"
+      },
+      "PENG": {
+        "close_px": 53.08000183105469,
+        "cost": 384.281,
+        "entry_date": "2026-09-22",
+        "entry_px": 54.61,
+        "fee_in": 2.011,
+        "last_px": 52.459999084472656,
+        "min_hold": 3,
+        "notional": 382.27,
+        "peak_px": 55.86000061035156,
+        "reason": "rank by macd_hist; rank macd_hist; list ohlc_hot; ret5=+17.9; leftover $412.51",
+        "shares": 7,
+        "ticker": "PENG"
+      },
+      "RBRK": {
+        "close_px": 113.80000305175781,
+        "cost": 343.249,
+        "entry_date": "2026-09-22",
+        "entry_px": 113.75,
+        "fee_in": 1.999,
+        "last_px": 114.51000213623047,
+        "min_hold": 3,
+        "notional": 341.25,
+        "peak_px": 114.51000213623047,
+        "reason": "rank by macd_hist; rank macd_hist; list ohlc_hot; ret5=+12.7; leftover $412.51",
+        "shares": 3,
+        "ticker": "RBRK"
+      },
+      "TWLO": {
+        "close_px": 299.6600036621094,
+        "cost": 273.593,
+        "entry_date": "2026-09-22",
+        "entry_px": 271.6,
+        "fee_in": 1.993,
+        "last_px": 286.5,
+        "min_hold": 3,
+        "notional": 271.6,
+        "peak_px": 286.5,
+        "reason": "rank by macd_hist; rank macd_hist; list ohlc_hot; ret5=+14.7; leftover $412.51",
+        "shares": 1,
+        "ticker": "TWLO"
+      },
+      "VICR": {
+        "close_px": 276.05999755859375,
+        "cost": 923.002,
+        "entry_date": "2026-09-21",
+        "entry_px": 230.25,
+        "fee_in": 2.002,
+        "last_px": 274.45001220703125,
+        "min_hold": 3,
+        "notional": 921.0,
+        "peak_px": 274.45001220703125,
+        "reason": "rank by macd_hist; rank macd_hist; list ohlc_hot; ret5=+12.5; leftover $953.22",
+        "shares": 4,
+        "ticker": "VICR"
+      }
+    },
+    "yday_equity": 9038.39
+  }
+}

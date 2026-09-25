@@ -1,0 +1,95 @@
+{
+  "buys": [
+    "DBX",
+    "WAY",
+    "SM"
+  ],
+  "cash": 52.35,
+  "date": "2026-09-16",
+  "equity": 8372.48,
+  "fees": 6.672,
+  "fills": [
+    {
+      "fees": 2.458,
+      "pnl": null,
+      "price": 37.13,
+      "shares": 156,
+      "side": "BUY",
+      "ticker": "DBX"
+    },
+    {
+      "fees": 2.131,
+      "pnl": null,
+      "price": 26.27,
+      "shares": 47,
+      "side": "BUY",
+      "ticker": "WAY"
+    },
+    {
+      "fees": 2.083,
+      "pnl": null,
+      "price": 39.99,
+      "shares": 31,
+      "side": "BUY",
+      "ticker": "SM"
+    }
+  ],
+  "holdings": [
+    "DBX",
+    "SM",
+    "WAY"
+  ],
+  "mean": 0.5621,
+  "n_trades_today": 3,
+  "recipe": "union_news_g_cam71_conv_h1",
+  "sells": [],
+  "state": {
+    "after": "2026-09-16",
+    "cash": 52.35,
+    "pos": {
+      "DBX": {
+        "close_px": 37.7400016784668,
+        "cost": 5794.738166625976,
+        "entry_date": "2026-09-16",
+        "entry_px": 37.130001068115234,
+        "fee_in": 2.458,
+        "last_px": 37.130001068115234,
+        "min_hold": 1,
+        "notional": 5792.280166625977,
+        "peak_px": 37.130001068115234,
+        "reason": "news\ud83d\udfe2 +7 \u2212\u22641; 70% leftover if #1 net \u2265 5; gate news=good,n_pos_min=7,cam_bad_max=1; rank cond; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+11.3; leftover $5827.98",
+        "shares": 156,
+        "ticker": "DBX"
+      },
+      "SM": {
+        "close_px": 38.15999984741211,
+        "cost": 1241.7730520324708,
+        "entry_date": "2026-09-16",
+        "entry_px": 39.9900016784668,
+        "fee_in": 2.083,
+        "last_px": 39.9900016784668,
+        "min_hold": 1,
+        "notional": 1239.6900520324707,
+        "peak_px": 39.9900016784668,
+        "reason": "news\ud83d\udfe2 +7 \u2212\u22641; 70% leftover if #1 net \u2265 5; gate news=good,n_pos_min=7,cam_bad_max=1; rank cond; list ohlc_hot; \ud83d\udd35; ret5=+9.3; leftover $1248.85",
+        "shares": 31,
+        "ticker": "SM"
+      },
+      "WAY": {
+        "close_px": 26.59000015258789,
+        "cost": 1236.8210215148927,
+        "entry_date": "2026-09-16",
+        "entry_px": 26.270000457763672,
+        "fee_in": 2.131,
+        "last_px": 26.270000457763672,
+        "min_hold": 1,
+        "notional": 1234.6900215148926,
+        "peak_px": 26.270000457763672,
+        "reason": "news\ud83d\udfe2 +7 \u2212\u22641; 70% leftover if #1 net \u2265 5; gate news=good,n_pos_min=7,cam_bad_max=1; rank cond; list yday_gainer,ohlc_hot; \ud83d\udd35; \u26aa; ret5=+10.0; leftover $1248.85",
+        "shares": 47,
+        "ticker": "WAY"
+      }
+    },
+    "yday_equity": 8372.48
+  }
+}

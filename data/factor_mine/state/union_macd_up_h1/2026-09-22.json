@@ -1,0 +1,279 @@
+{
+  "buys": [
+    "TDC",
+    "APPS",
+    "BTQ",
+    "IVVD",
+    "GRAL",
+    "NUAI",
+    "ARM",
+    "ARQQ"
+  ],
+  "cash": 266.77,
+  "date": "2026-09-22",
+  "equity": 8979.4,
+  "fees": 56.3665,
+  "fills": [
+    {
+      "fees": 2.031,
+      "pnl": 32.43,
+      "price": 163.08,
+      "shares": 7,
+      "side": "SELL",
+      "ticker": "A"
+    },
+    {
+      "fees": 8.3984,
+      "pnl": -35.94,
+      "price": 1.795,
+      "shares": 642,
+      "side": "SELL",
+      "ticker": "BTBT"
+    },
+    {
+      "fees": 2.2754,
+      "pnl": -50.2,
+      "price": 12.95,
+      "shares": 87,
+      "side": "SELL",
+      "ticker": "BTDR"
+    },
+    {
+      "fees": 3.8383,
+      "pnl": -151.19,
+      "price": 3.51,
+      "shares": 293,
+      "side": "SELL",
+      "ticker": "CYPH"
+    },
+    {
+      "fees": 2.3546,
+      "pnl": -32.68,
+      "price": 10.18,
+      "shares": 112,
+      "side": "SELL",
+      "ticker": "IOVA"
+    },
+    {
+      "fees": 2.4717,
+      "pnl": -34.71,
+      "price": 7.64,
+      "shares": 149,
+      "side": "SELL",
+      "ticker": "PGEN"
+    },
+    {
+      "fees": 2.2185,
+      "pnl": 41.81,
+      "price": 17.58,
+      "shares": 69,
+      "side": "SELL",
+      "ticker": "TJGC"
+    },
+    {
+      "fees": 2.104,
+      "pnl": null,
+      "price": 29.78,
+      "shares": 38,
+      "side": "BUY",
+      "ticker": "TDC"
+    },
+    {
+      "fees": 2.269,
+      "pnl": null,
+      "price": 12.24,
+      "shares": 93,
+      "side": "BUY",
+      "ticker": "APPS"
+    },
+    {
+      "fees": 5.1858,
+      "pnl": null,
+      "price": 2.84,
+      "shares": 402,
+      "side": "BUY",
+      "ticker": "BTQ"
+    },
+    {
+      "fees": 14.6028,
+      "pnl": null,
+      "price": 1.01,
+      "shares": 1132,
+      "side": "BUY",
+      "ticker": "IVVD"
+    },
+    {
+      "fees": 2.02,
+      "pnl": null,
+      "price": 106.75,
+      "shares": 10,
+      "side": "BUY",
+      "ticker": "GRAL"
+    },
+    {
+      "fees": 2.464,
+      "pnl": null,
+      "price": 7.23,
+      "shares": 158,
+      "side": "BUY",
+      "ticker": "NUAI"
+    },
+    {
+      "fees": 1.999,
+      "pnl": null,
+      "price": 319.41,
+      "shares": 3,
+      "side": "BUY",
+      "ticker": "ARM"
+    },
+    {
+      "fees": 2.134,
+      "pnl": null,
+      "price": 23.51,
+      "shares": 48,
+      "side": "BUY",
+      "ticker": "ARQQ"
+    }
+  ],
+  "holdings": [
+    "APPS",
+    "ARM",
+    "ARQQ",
+    "BTQ",
+    "GRAL",
+    "IVVD",
+    "NUAI",
+    "TDC"
+  ],
+  "mean": -2.1541,
+  "n_trades_today": 15,
+  "recipe": "union_macd_up_h1",
+  "sells": [
+    "A",
+    "BTBT",
+    "BTDR",
+    "CYPH",
+    "IOVA",
+    "PGEN",
+    "TJGC"
+  ],
+  "state": {
+    "after": "2026-09-22",
+    "cash": 266.77,
+    "pos": {
+      "APPS": {
+        "close_px": 12.19,
+        "cost": 1140.589,
+        "entry_date": "2026-09-22",
+        "entry_px": 12.24,
+        "fee_in": 2.269,
+        "last_px": 12.24,
+        "min_hold": 1,
+        "notional": 1138.32,
+        "peak_px": 12.24,
+        "reason": "union \u2229 macd_up, no \ud83d\udea8; gate macd_up=True; list probable,yday_gainer; ret5=+2.7; leftover $1143.88",
+        "shares": 93,
+        "ticker": "APPS"
+      },
+      "ARM": {
+        "close_px": 333.20001220703125,
+        "cost": 960.2290109863281,
+        "entry_date": "2026-09-22",
+        "entry_px": 319.4100036621094,
+        "fee_in": 1.999,
+        "last_px": 319.4100036621094,
+        "min_hold": 1,
+        "notional": 958.2300109863281,
+        "peak_px": 319.4100036621094,
+        "reason": "union \u2229 macd_up, no \ud83d\udea8; gate macd_up=True; list yday_gainer,yday_mover; ret5=+35.1; leftover $1143.88",
+        "shares": 3,
+        "ticker": "ARM"
+      },
+      "ARQQ": {
+        "close_px": 23.04,
+        "cost": 1130.614,
+        "entry_date": "2026-09-22",
+        "entry_px": 23.51,
+        "fee_in": 2.134,
+        "last_px": 23.51,
+        "min_hold": 1,
+        "notional": 1128.48,
+        "peak_px": 23.51,
+        "reason": "union \u2229 macd_up, no \ud83d\udea8; gate macd_up=True; list yday_gainer,yday_mover; ret5=+44.4; leftover $1143.88",
+        "shares": 48,
+        "ticker": "ARQQ"
+      },
+      "BTQ": {
+        "close_px": 2.680000066757202,
+        "cost": 1146.8657654960632,
+        "entry_date": "2026-09-22",
+        "entry_px": 2.8399999141693115,
+        "fee_in": 5.1858,
+        "last_px": 2.8399999141693115,
+        "min_hold": 1,
+        "notional": 1141.6799654960632,
+        "peak_px": 2.8399999141693115,
+        "reason": "union \u2229 macd_up, no \ud83d\udea8; gate macd_up=True; list probable; ret5=+1.4; leftover $1143.88",
+        "shares": 402,
+        "ticker": "BTQ"
+      },
+      "GRAL": {
+        "close_px": 108.52,
+        "cost": 1069.52,
+        "entry_date": "2026-09-22",
+        "entry_px": 106.75,
+        "fee_in": 2.02,
+        "last_px": 106.75,
+        "min_hold": 1,
+        "notional": 1067.5,
+        "peak_px": 106.75,
+        "reason": "union \u2229 macd_up, no \ud83d\udea8; gate macd_up=True; list yday_gainer,yday_mover; ret5=+42.9; leftover $1143.88",
+        "shares": 10,
+        "ticker": "GRAL"
+      },
+      "IVVD": {
+        "close_px": 0.9639999866485596,
+        "cost": 1157.9227892044066,
+        "entry_date": "2026-09-22",
+        "entry_px": 1.0099999904632568,
+        "fee_in": 14.6028,
+        "last_px": 1.0099999904632568,
+        "min_hold": 1,
+        "notional": 1143.3199892044067,
+        "peak_px": 1.0099999904632568,
+        "reason": "union \u2229 macd_up, no \ud83d\udea8; gate macd_up=True; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+14.3; leftover $1143.88",
+        "shares": 1132,
+        "ticker": "IVVD"
+      },
+      "NUAI": {
+        "close_px": 6.974999904632568,
+        "cost": 1144.8040030136108,
+        "entry_date": "2026-09-22",
+        "entry_px": 7.230000019073486,
+        "fee_in": 2.464,
+        "last_px": 7.230000019073486,
+        "min_hold": 1,
+        "notional": 1142.3400030136108,
+        "peak_px": 7.230000019073486,
+        "reason": "union \u2229 macd_up, no \ud83d\udea8; gate macd_up=True; list yday_gainer,yday_mover; ret5=+36.6; leftover $1143.88",
+        "shares": 158,
+        "ticker": "NUAI"
+      },
+      "TDC": {
+        "close_px": 29.41,
+        "cost": 1133.7440000000001,
+        "entry_date": "2026-09-22",
+        "entry_px": 29.78,
+        "fee_in": 2.104,
+        "last_px": 29.78,
+        "min_hold": 1,
+        "notional": 1131.64,
+        "peak_px": 29.78,
+        "reason": "union \u2229 macd_up, no \ud83d\udea8; gate macd_up=True; list flatten; ret5=-0.0; leftover $1143.88",
+        "shares": 38,
+        "ticker": "TDC"
+      }
+    },
+    "yday_equity": 8979.4
+  }
+}

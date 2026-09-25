@@ -1,0 +1,147 @@
+{
+  "buys": [],
+  "cash": 9522.64,
+  "date": "2026-09-08",
+  "equity": 9522.64,
+  "fees": 32.5377,
+  "fills": [
+    {
+      "fees": 2.037,
+      "pnl": 1.8,
+      "price": 63.83,
+      "shares": 9,
+      "side": "SELL",
+      "ticker": "AMBA"
+    },
+    {
+      "fees": 2.2153,
+      "pnl": -5.09,
+      "price": 8.73,
+      "shares": 68,
+      "side": "SELL",
+      "ticker": "ASAN"
+    },
+    {
+      "fees": 5.6414,
+      "pnl": -11.2,
+      "price": 1.94,
+      "shares": 431,
+      "side": "SELL",
+      "ticker": "BAK"
+    },
+    {
+      "fees": 2.019,
+      "pnl": 88.8,
+      "price": 267.76,
+      "shares": 3,
+      "side": "SELL",
+      "ticker": "BE"
+    },
+    {
+      "fees": 2.019,
+      "pnl": -32.94,
+      "price": 253.72,
+      "shares": 3,
+      "side": "SELL",
+      "ticker": "CRM"
+    },
+    {
+      "fees": 2.034,
+      "pnl": -15.81,
+      "price": 67.05,
+      "shares": 8,
+      "side": "SELL",
+      "ticker": "DOCU"
+    },
+    {
+      "fees": 2.163,
+      "pnl": 13.03,
+      "price": 16.74,
+      "shares": 51,
+      "side": "SELL",
+      "ticker": "FRNM"
+    },
+    {
+      "fees": 2.019,
+      "pnl": -25.11,
+      "price": 160.52,
+      "shares": 3,
+      "side": "SELL",
+      "ticker": "GWRE"
+    },
+    {
+      "fees": 2.049,
+      "pnl": -73.5,
+      "price": 39.56,
+      "shares": 13,
+      "side": "SELL",
+      "ticker": "IOT"
+    },
+    {
+      "fees": 2.028,
+      "pnl": 10.54,
+      "price": 100.58,
+      "shares": 6,
+      "side": "SELL",
+      "ticker": "LULU"
+    },
+    {
+      "fees": 2.124,
+      "pnl": -23.23,
+      "price": 15.2,
+      "shares": 38,
+      "side": "SELL",
+      "ticker": "MAMA"
+    },
+    {
+      "fees": 2.043,
+      "pnl": 31.02,
+      "price": 78.84,
+      "shares": 11,
+      "side": "SELL",
+      "ticker": "MRX"
+    },
+    {
+      "fees": 2.028,
+      "pnl": -2.42,
+      "price": 137.62,
+      "shares": 6,
+      "side": "SELL",
+      "ticker": "MSTR"
+    },
+    {
+      "fees": 2.118,
+      "pnl": -43.1,
+      "price": 15.16,
+      "shares": 36,
+      "side": "SELL",
+      "ticker": "PATH"
+    }
+  ],
+  "holdings": [],
+  "mean": -0.0771,
+  "n_trades_today": 14,
+  "recipe": "combo_ne1_5050_shared",
+  "sells": [
+    "AMBA",
+    "ASAN",
+    "BAK",
+    "BE",
+    "CRM",
+    "DOCU",
+    "FRNM",
+    "GWRE",
+    "IOT",
+    "LULU",
+    "MAMA",
+    "MRX",
+    "MSTR",
+    "PATH"
+  ],
+  "state": {
+    "after": "2026-09-08",
+    "cash": 9522.64,
+    "pos": {},
+    "yday_equity": 9522.64
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "buys": [],
+  "cash": 9621.74,
+  "date": "2026-08-31",
+  "equity": 9621.74,
+  "fees": 26.8326,
+  "fills": [
+    {
+      "fees": 2.2469,
+      "pnl": -37.23,
+      "price": 15.46,
+      "shares": 78,
+      "side": "SELL",
+      "ticker": "BHVN"
+    },
+    {
+      "fees": 2.2153,
+      "pnl": -35.01,
+      "price": 17.7,
+      "shares": 68,
+      "side": "SELL",
+      "ticker": "BZ"
+    },
+    {
+      "fees": 2.2501,
+      "pnl": -100.86,
+      "price": 14.44,
+      "shares": 79,
+      "side": "SELL",
+      "ticker": "GRRR"
+    },
+    {
+      "fees": 11.7563,
+      "pnl": -104.26,
+      "price": 1.3,
+      "shares": 899,
+      "side": "SELL",
+      "ticker": "LVWR"
+    },
+    {
+      "fees": 2.166,
+      "pnl": -18.35,
+      "price": 23.68,
+      "shares": 52,
+      "side": "SELL",
+      "ticker": "MOS"
+    },
+    {
+      "fees": 2.121,
+      "pnl": -68.97,
+      "price": 31.15,
+      "shares": 37,
+      "side": "SELL",
+      "ticker": "SEDG"
+    },
+    {
+      "fees": 2.022,
+      "pnl": -24.78,
+      "price": 247.05,
+      "shares": 4,
+      "side": "SELL",
+      "ticker": "SIMO"
+    },
+    {
+      "fees": 2.055,
+      "pnl": 11.21,
+      "price": 80.44,
+      "shares": 15,
+      "side": "SELL",
+      "ticker": "URBN"
+    }
+  ],
+  "holdings": [],
+  "mean": -0.8508,
+  "n_trades_today": 8,
+  "recipe": "union_last_red_h1",
+  "sells": [
+    "BHVN",
+    "BZ",
+    "GRRR",
+    "LVWR",
+    "MOS",
+    "SEDG",
+    "SIMO",
+    "URBN"
+  ],
+  "state": {
+    "after": "2026-08-31",
+    "cash": 9621.74,
+    "pos": {},
+    "yday_equity": 9621.74
+  }
+}

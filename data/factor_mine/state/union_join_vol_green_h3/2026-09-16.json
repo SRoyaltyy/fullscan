@@ -1,0 +1,270 @@
+{
+  "buys": [
+    "RDNT",
+    "RIG",
+    "VAL",
+    "ADPT",
+    "SDGR",
+    "FPS",
+    "CAI"
+  ],
+  "cash": 130.19,
+  "date": "2026-09-16",
+  "equity": 9328.18,
+  "fees": 34.8729,
+  "fills": [
+    {
+      "fees": 2.07,
+      "pnl": -88.52,
+      "price": 50.69,
+      "shares": 20,
+      "side": "SELL",
+      "ticker": "ASO"
+    },
+    {
+      "fees": 3.0282,
+      "pnl": -38.35,
+      "price": 4.77,
+      "shares": 231,
+      "side": "SELL",
+      "ticker": "BNC"
+    },
+    {
+      "fees": 2.07,
+      "pnl": -9.92,
+      "price": 54.37,
+      "shares": 20,
+      "side": "SELL",
+      "ticker": "COO"
+    },
+    {
+      "fees": 5.5131,
+      "pnl": 393.22,
+      "price": 3.66,
+      "shares": 421,
+      "side": "SELL",
+      "ticker": "INDP"
+    },
+    {
+      "fees": 2.5825,
+      "pnl": -71.36,
+      "price": 5.8,
+      "shares": 184,
+      "side": "SELL",
+      "ticker": "IRD"
+    },
+    {
+      "fees": 2.154,
+      "pnl": 89.31,
+      "price": 25.58,
+      "shares": 48,
+      "side": "SELL",
+      "ticker": "TYRA"
+    },
+    {
+      "fees": 2.3261,
+      "pnl": -18.02,
+      "price": 10.82,
+      "shares": 103,
+      "side": "SELL",
+      "ticker": "WLTH"
+    },
+    {
+      "fees": 2.035,
+      "pnl": null,
+      "price": 77.12,
+      "shares": 15,
+      "side": "BUY",
+      "ticker": "RDNT"
+    },
+    {
+      "fees": 2.598,
+      "pnl": null,
+      "price": 5.87,
+      "shares": 201,
+      "side": "BUY",
+      "ticker": "RIG"
+    },
+    {
+      "fees": 2.029,
+      "pnl": null,
+      "price": 87.4,
+      "shares": 13,
+      "side": "BUY",
+      "ticker": "VAL"
+    },
+    {
+      "fees": 2.119,
+      "pnl": null,
+      "price": 27.09,
+      "shares": 43,
+      "side": "BUY",
+      "ticker": "ADPT"
+    },
+    {
+      "fees": 2.14,
+      "pnl": null,
+      "price": 23.29,
+      "shares": 50,
+      "side": "BUY",
+      "ticker": "SDGR"
+    },
+    {
+      "fees": 2.095,
+      "pnl": null,
+      "price": 33.14,
+      "shares": 35,
+      "side": "BUY",
+      "ticker": "FPS"
+    },
+    {
+      "fees": 2.113,
+      "pnl": null,
+      "price": 28.16,
+      "shares": 41,
+      "side": "BUY",
+      "ticker": "CAI"
+    }
+  ],
+  "holdings": [
+    "ADPT",
+    "CAI",
+    "FPS",
+    "RDNT",
+    "RIG",
+    "SDGR",
+    "SWKS",
+    "VAL"
+  ],
+  "mean": -1.2923,
+  "n_trades_today": 14,
+  "recipe": "union_join_vol_green_h3",
+  "sells": [
+    "ASO",
+    "BNC",
+    "COO",
+    "INDP",
+    "IRD",
+    "TYRA",
+    "WLTH"
+  ],
+  "state": {
+    "after": "2026-09-16",
+    "cash": 130.19,
+    "pos": {
+      "ADPT": {
+        "close_px": 27.670000076293945,
+        "cost": 1166.9890065612792,
+        "entry_date": "2026-09-16",
+        "entry_px": 27.09000015258789,
+        "fee_in": 2.119,
+        "last_px": 27.09000015258789,
+        "min_hold": 3,
+        "notional": 1164.8700065612793,
+        "peak_px": 27.09000015258789,
+        "reason": "combo gate; gate join=good,vol=good,last_green=True; list probable,yday_gainer,ohlc_hot; \ud83d\udd35; \u26aa; ret5=+9.6; leftover $1180.29",
+        "shares": 43,
+        "ticker": "ADPT"
+      },
+      "CAI": {
+        "close_px": 28.209999084472656,
+        "cost": 1156.6729937438965,
+        "entry_date": "2026-09-16",
+        "entry_px": 28.15999984741211,
+        "fee_in": 2.113,
+        "last_px": 28.15999984741211,
+        "min_hold": 3,
+        "notional": 1154.5599937438965,
+        "peak_px": 28.15999984741211,
+        "reason": "combo gate; gate join=good,vol=good,last_green=True; list yday_gainer,ohlc_hot; \u26aa; ret5=+14.8; leftover $1180.29",
+        "shares": 41,
+        "ticker": "CAI"
+      },
+      "FPS": {
+        "close_px": 34.84000015258789,
+        "cost": 1161.9949786376953,
+        "entry_date": "2026-09-16",
+        "entry_px": 33.13999938964844,
+        "fee_in": 2.095,
+        "last_px": 33.13999938964844,
+        "min_hold": 3,
+        "notional": 1159.8999786376953,
+        "peak_px": 33.13999938964844,
+        "reason": "combo gate; gate join=good,vol=good,last_green=True; list yday_gainer; \ud83d\udd35; ret5=-2.9; leftover $1180.29",
+        "shares": 35,
+        "ticker": "FPS"
+      },
+      "RDNT": {
+        "close_px": 75.77999877929688,
+        "cost": 1158.8350411987306,
+        "entry_date": "2026-09-16",
+        "entry_px": 77.12000274658203,
+        "fee_in": 2.035,
+        "last_px": 77.12000274658203,
+        "min_hold": 3,
+        "notional": 1156.8000411987305,
+        "peak_px": 77.12000274658203,
+        "reason": "combo gate; gate join=good,vol=good,last_green=True; list flatten; \u26aa; ret5=+7.2; leftover $1180.29",
+        "shares": 15,
+        "ticker": "RDNT"
+      },
+      "RIG": {
+        "close_px": 5.539999961853027,
+        "cost": 1182.4679769973754,
+        "entry_date": "2026-09-16",
+        "entry_px": 5.869999885559082,
+        "fee_in": 2.598,
+        "last_px": 5.869999885559082,
+        "min_hold": 3,
+        "notional": 1179.8699769973755,
+        "peak_px": 5.869999885559082,
+        "reason": "combo gate; gate join=good,vol=good,last_green=True; list probable,yday_gainer; \ud83d\udd35; ret5=+3.1; leftover $1180.29",
+        "shares": 201,
+        "ticker": "RIG"
+      },
+      "SDGR": {
+        "close_px": 23.93000030517578,
+        "cost": 1166.6400457763673,
+        "entry_date": "2026-09-16",
+        "entry_px": 23.290000915527344,
+        "fee_in": 2.14,
+        "last_px": 23.290000915527344,
+        "min_hold": 3,
+        "notional": 1164.5000457763672,
+        "peak_px": 23.290000915527344,
+        "reason": "combo gate; gate join=good,vol=good,last_green=True; list yday_gainer; \ud83d\udd35; \u26aa; ret5=+16.1; leftover $1180.29",
+        "shares": 50,
+        "ticker": "SDGR"
+      },
+      "SWKS": {
+        "close_px": 85.58999633789062,
+        "cost": 1097.5389563598633,
+        "entry_date": "2026-09-11",
+        "entry_px": 84.2699966430664,
+        "fee_in": 2.029,
+        "last_px": 89.37999725341797,
+        "min_hold": 3,
+        "notional": 1095.5099563598633,
+        "peak_px": 89.37999725341797,
+        "reason": "combo gate; gate join=good,vol=good,last_green=True; list yday_gainer,ohlc_hot; \u26aa; ret5=+17.5; leftover $1137.90",
+        "shares": 13,
+        "ticker": "SWKS"
+      },
+      "VAL": {
+        "close_px": 82.5199966430664,
+        "cost": 1138.2290198364258,
+        "entry_date": "2026-09-16",
+        "entry_px": 87.4000015258789,
+        "fee_in": 2.029,
+        "last_px": 87.4000015258789,
+        "min_hold": 3,
+        "notional": 1136.2000198364258,
+        "peak_px": 87.4000015258789,
+        "reason": "combo gate; gate join=good,vol=good,last_green=True; list probable,yday_gainer; \ud83d\udd35; ret5=+3.2; leftover $1180.29",
+        "shares": 13,
+        "ticker": "VAL"
+      }
+    },
+    "yday_equity": 9328.18
+  }
+}

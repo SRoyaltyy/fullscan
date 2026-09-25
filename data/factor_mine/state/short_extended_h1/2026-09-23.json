@@ -1,0 +1,280 @@
+{
+  "buys": [
+    "ARQT",
+    "OMER",
+    "VKTX",
+    "MAZE",
+    "BFLY",
+    "VICR",
+    "FEAM",
+    "DNA"
+  ],
+  "cash": 13680.76,
+  "date": "2026-09-23",
+  "equity": 9329.39,
+  "fees": 36.151,
+  "fills": [
+    {
+      "fees": 1.996,
+      "pnl": -28.77,
+      "price": 331.78,
+      "shares": 2,
+      "side": "COVER",
+      "ticker": "ARM"
+    },
+    {
+      "fees": 2.071,
+      "pnl": 1.49,
+      "price": 23.3,
+      "shares": 27,
+      "side": "COVER",
+      "ticker": "ARQQ"
+    },
+    {
+      "fees": 2.203,
+      "pnl": 46.67,
+      "price": 8.39,
+      "shares": 71,
+      "side": "COVER",
+      "ticker": "CRML"
+    },
+    {
+      "fees": 2.8638,
+      "pnl": 47.49,
+      "price": 2.7,
+      "shares": 222,
+      "side": "COVER",
+      "ticker": "GLND"
+    },
+    {
+      "fees": 2.008,
+      "pnl": -14.67,
+      "price": 108.52,
+      "shares": 6,
+      "side": "COVER",
+      "ticker": "GRAL"
+    },
+    {
+      "fees": 2.26,
+      "pnl": 31.44,
+      "price": 6.83,
+      "shares": 90,
+      "side": "COVER",
+      "ticker": "NUAI"
+    },
+    {
+      "fees": 2.137,
+      "pnl": -12.64,
+      "price": 13.22,
+      "shares": 49,
+      "side": "COVER",
+      "ticker": "USDE"
+    },
+    {
+      "fees": 3.1863,
+      "pnl": -26.2,
+      "price": 2.73,
+      "shares": 247,
+      "side": "COVER",
+      "ticker": "VGZ"
+    },
+    {
+      "fees": 2.0852273977619324,
+      "pnl": null,
+      "price": 27.79,
+      "shares": 20,
+      "side": "SHORT",
+      "ticker": "ARQT"
+    },
+    {
+      "fees": 2.1062753421835705,
+      "pnl": null,
+      "price": 20.65,
+      "shares": 27,
+      "side": "SHORT",
+      "ticker": "OMER"
+    },
+    {
+      "fees": 2.0638734240597243,
+      "pnl": null,
+      "price": 41.76,
+      "shares": 13,
+      "side": "SHORT",
+      "ticker": "VKTX"
+    },
+    {
+      "fees": 2.0855068488970194,
+      "pnl": null,
+      "price": 28.3,
+      "shares": 20,
+      "side": "SHORT",
+      "ticker": "MAZE"
+    },
+    {
+      "fees": 2.199731506243144,
+      "pnl": null,
+      "price": 9.9,
+      "shares": 58,
+      "side": "SHORT",
+      "ticker": "BFLY"
+    },
+    {
+      "fees": 2.0306027397260276,
+      "pnl": null,
+      "price": 266.5,
+      "shares": 2,
+      "side": "SHORT",
+      "ticker": "VICR"
+    },
+    {
+      "fees": 2.6394600004117783,
+      "pnl": null,
+      "price": 2.92,
+      "shares": 197,
+      "side": "SHORT",
+      "ticker": "FEAM"
+    },
+    {
+      "fees": 2.2152586303345143,
+      "pnl": null,
+      "price": 9.13,
+      "shares": 63,
+      "side": "SHORT",
+      "ticker": "DNA"
+    }
+  ],
+  "holdings": [
+    "ARQT",
+    "BFLY",
+    "DNA",
+    "FEAM",
+    "MAZE",
+    "OMER",
+    "VICR",
+    "VKTX"
+  ],
+  "mean": 1.1667,
+  "n_trades_today": 16,
+  "recipe": "short_extended_h1",
+  "sells": [
+    "ARM",
+    "ARQQ",
+    "CRML",
+    "GLND",
+    "GRAL",
+    "NUAI",
+    "USDE",
+    "VGZ"
+  ],
+  "state": {
+    "after": "2026-09-23",
+    "cash": 13680.76,
+    "pos": {
+      "ARQT": {
+        "close_px": 26.3799991607666,
+        "cost": 2.0852273977619324,
+        "entry_date": "2026-09-23",
+        "entry_px": 27.790000915527344,
+        "fee_in": 2.0852273977619324,
+        "last_px": 27.790000915527344,
+        "notional": 555.8000183105469,
+        "peak_px": 27.790000915527344,
+        "reason": "ret_5>15; gate ret_5_min=15.0; list flatten; \ud83d\udd35; \u26aa; ret5=+18.2; leftover $576.15",
+        "shares": 20,
+        "ticker": "ARQT"
+      },
+      "BFLY": {
+        "close_px": 9.199999809265137,
+        "cost": 2.199731506243144,
+        "entry_date": "2026-09-23",
+        "entry_px": 9.899999618530273,
+        "fee_in": 2.199731506243144,
+        "last_px": 9.899999618530273,
+        "notional": 574.1999778747559,
+        "peak_px": 9.899999618530273,
+        "reason": "ret_5>15; gate ret_5_min=15.0; list yday_gainer,yday_mover; \ud83d\udd35; \u26aa; ret5=+27.3; leftover $576.15",
+        "shares": 58,
+        "ticker": "BFLY"
+      },
+      "DNA": {
+        "close_px": 8.579999923706055,
+        "cost": 2.2152586303345143,
+        "entry_date": "2026-09-23",
+        "entry_px": 9.130000114440918,
+        "fee_in": 2.2152586303345143,
+        "last_px": 9.130000114440918,
+        "notional": 575.1900072097778,
+        "peak_px": 9.130000114440918,
+        "reason": "ret_5>15; gate ret_5_min=15.0; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+34.0; leftover $576.15",
+        "shares": 63,
+        "ticker": "DNA"
+      },
+      "FEAM": {
+        "close_px": 2.640000104904175,
+        "cost": 2.6394600004117783,
+        "entry_date": "2026-09-23",
+        "entry_px": 2.9200000762939453,
+        "fee_in": 2.6394600004117783,
+        "last_px": 2.9200000762939453,
+        "notional": 575.2400150299072,
+        "peak_px": 2.9200000762939453,
+        "reason": "ret_5>15; gate ret_5_min=15.0; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+133.3; leftover $576.15",
+        "shares": 197,
+        "ticker": "FEAM"
+      },
+      "MAZE": {
+        "close_px": 28.09000015258789,
+        "cost": 2.0855068488970194,
+        "entry_date": "2026-09-23",
+        "entry_px": 28.299999237060547,
+        "fee_in": 2.0855068488970194,
+        "last_px": 28.299999237060547,
+        "notional": 565.9999847412109,
+        "peak_px": 28.299999237060547,
+        "reason": "ret_5>15; gate ret_5_min=15.0; list yday_gainer,yday_mover,ohlc_hot; \ud83d\udd35; ret5=+17.1; leftover $576.15",
+        "shares": 20,
+        "ticker": "MAZE"
+      },
+      "OMER": {
+        "close_px": 20.739999771118164,
+        "cost": 2.1062753421835705,
+        "entry_date": "2026-09-23",
+        "entry_px": 20.649999618530273,
+        "fee_in": 2.1062753421835705,
+        "last_px": 20.649999618530273,
+        "notional": 557.5499897003174,
+        "peak_px": 20.649999618530273,
+        "reason": "ret_5>15; gate ret_5_min=15.0; list flatten,yday_gainer,yday_mover; \ud83d\udd35; \u26aa; ret5=+22.6; leftover $576.15",
+        "shares": 27,
+        "ticker": "OMER"
+      },
+      "VICR": {
+        "close_px": 283.1600036621094,
+        "cost": 2.0306027397260276,
+        "entry_date": "2026-09-23",
+        "entry_px": 266.5,
+        "fee_in": 2.0306027397260276,
+        "last_px": 266.5,
+        "notional": 533.0,
+        "peak_px": 266.5,
+        "reason": "ret_5>15; gate ret_5_min=15.0; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+45.9; leftover $576.15",
+        "shares": 2,
+        "ticker": "VICR"
+      },
+      "VKTX": {
+        "close_px": 41.650001525878906,
+        "cost": 2.0638734240597243,
+        "entry_date": "2026-09-23",
+        "entry_px": 41.7599983215332,
+        "fee_in": 2.0638734240597243,
+        "last_px": 41.7599983215332,
+        "notional": 542.8799781799316,
+        "peak_px": 41.7599983215332,
+        "reason": "ret_5>15; gate ret_5_min=15.0; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+36.4; leftover $576.15",
+        "shares": 13,
+        "ticker": "VKTX"
+      }
+    },
+    "yday_equity": 9329.39
+  }
+}

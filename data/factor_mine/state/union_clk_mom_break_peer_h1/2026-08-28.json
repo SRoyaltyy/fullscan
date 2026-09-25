@@ -1,0 +1,215 @@
+{
+  "buys": [
+    "TH",
+    "TLS",
+    "RBRK",
+    "ADSK",
+    "PD",
+    "S",
+    "ULTA",
+    "HAFN"
+  ],
+  "cash": 448.03,
+  "date": "2026-08-28",
+  "equity": 9913.83,
+  "fees": 18.4261,
+  "fills": [
+    {
+      "fees": 2.185,
+      "pnl": null,
+      "price": 19.0,
+      "shares": 65,
+      "side": "BUY",
+      "ticker": "TH"
+    },
+    {
+      "fees": 3.3411,
+      "pnl": null,
+      "price": 4.82,
+      "shares": 259,
+      "side": "BUY",
+      "ticker": "TLS"
+    },
+    {
+      "fees": 2.026,
+      "pnl": null,
+      "price": 98.95,
+      "shares": 12,
+      "side": "BUY",
+      "ticker": "RBRK"
+    },
+    {
+      "fees": 2.002,
+      "pnl": null,
+      "price": 261.16,
+      "shares": 4,
+      "side": "BUY",
+      "ticker": "ADSK"
+    },
+    {
+      "fees": 2.275,
+      "pnl": null,
+      "price": 13.09,
+      "shares": 95,
+      "side": "BUY",
+      "ticker": "PD"
+    },
+    {
+      "fees": 2.164,
+      "pnl": null,
+      "price": 21.49,
+      "shares": 58,
+      "side": "BUY",
+      "ticker": "S"
+    },
+    {
+      "fees": 1.996,
+      "pnl": null,
+      "price": 542.0,
+      "shares": 2,
+      "side": "BUY",
+      "ticker": "ULTA"
+    },
+    {
+      "fees": 2.437,
+      "pnl": null,
+      "price": 8.35,
+      "shares": 149,
+      "side": "BUY",
+      "ticker": "HAFN"
+    }
+  ],
+  "holdings": [
+    "ADSK",
+    "HAFN",
+    "PD",
+    "RBRK",
+    "S",
+    "TH",
+    "TLS",
+    "ULTA"
+  ],
+  "mean": -0.8617,
+  "n_trades_today": 8,
+  "recipe": "union_clk_mom_break_peer_h1",
+  "sells": [],
+  "state": {
+    "after": "2026-08-28",
+    "cash": 448.03,
+    "pos": {
+      "ADSK": {
+        "close_px": 260.6600036621094,
+        "cost": 1046.6420146484375,
+        "entry_date": "2026-08-28",
+        "entry_px": 261.1600036621094,
+        "fee_in": 2.002,
+        "last_px": 261.1600036621094,
+        "min_hold": 1,
+        "notional": 1044.6400146484375,
+        "peak_px": 261.1600036621094,
+        "reason": "Clock-B #1 mom+breakout+peer/sector (research; not KEEP); gate clk_mom_break_peer=True; rank hot_score; list earn_react; ret5=+7.8; leftover $1250.00",
+        "shares": 4,
+        "ticker": "ADSK"
+      },
+      "HAFN": {
+        "close_px": 8.470000267028809,
+        "cost": 1246.5870568389892,
+        "entry_date": "2026-08-28",
+        "entry_px": 8.350000381469727,
+        "fee_in": 2.437,
+        "last_px": 8.350000381469727,
+        "min_hold": 1,
+        "notional": 1244.1500568389893,
+        "peak_px": 8.350000381469727,
+        "reason": "Clock-B #1 mom+breakout+peer/sector (research; not KEEP); gate clk_mom_break_peer=True; rank hot_score; list earn_react; ret5=+5.1; leftover $1250.00",
+        "shares": 149,
+        "ticker": "HAFN"
+      },
+      "PD": {
+        "close_px": 13.829999923706055,
+        "cost": 1245.8250144958497,
+        "entry_date": "2026-08-28",
+        "entry_px": 13.09000015258789,
+        "fee_in": 2.275,
+        "last_px": 13.09000015258789,
+        "min_hold": 1,
+        "notional": 1243.5500144958496,
+        "peak_px": 13.09000015258789,
+        "reason": "Clock-B #1 mom+breakout+peer/sector (research; not KEEP); gate clk_mom_break_peer=True; rank hot_score; list earn_react; ret5=+4.2; leftover $1250.00",
+        "shares": 95,
+        "ticker": "PD"
+      },
+      "RBRK": {
+        "close_px": 93.05000305175781,
+        "cost": 1189.4259633789063,
+        "entry_date": "2026-08-28",
+        "entry_px": 98.94999694824219,
+        "fee_in": 2.026,
+        "last_px": 98.94999694824219,
+        "min_hold": 1,
+        "notional": 1187.3999633789062,
+        "peak_px": 98.94999694824219,
+        "reason": "Clock-B #1 mom+breakout+peer/sector (research; not KEEP); gate clk_mom_break_peer=True; rank hot_score; list ohlc_hot,earn_react; ret5=+9.7; leftover $1250.00",
+        "shares": 12,
+        "ticker": "RBRK"
+      },
+      "S": {
+        "close_px": 21.540000915527344,
+        "cost": 1248.5839867248535,
+        "entry_date": "2026-08-28",
+        "entry_px": 21.489999771118164,
+        "fee_in": 2.164,
+        "last_px": 21.489999771118164,
+        "min_hold": 1,
+        "notional": 1246.4199867248535,
+        "peak_px": 21.489999771118164,
+        "reason": "Clock-B #1 mom+breakout+peer/sector (research; not KEEP); gate clk_mom_break_peer=True; rank hot_score; list earn_react; ret5=+8.5; leftover $1250.00",
+        "shares": 58,
+        "ticker": "S"
+      },
+      "TH": {
+        "close_px": 18.549999237060547,
+        "cost": 1237.185,
+        "entry_date": "2026-08-28",
+        "entry_px": 19.0,
+        "fee_in": 2.185,
+        "last_px": 19.0,
+        "min_hold": 1,
+        "notional": 1235.0,
+        "peak_px": 19.0,
+        "reason": "Clock-B #1 mom+breakout+peer/sector (research; not KEEP); gate clk_mom_break_peer=True; rank hot_score; list ohlc_hot; ret5=+7.5; leftover $1250.00",
+        "shares": 65,
+        "ticker": "TH"
+      },
+      "TLS": {
+        "close_px": 4.789999961853027,
+        "cost": 1251.7211444602967,
+        "entry_date": "2026-08-28",
+        "entry_px": 4.820000171661377,
+        "fee_in": 3.3411,
+        "last_px": 4.820000171661377,
+        "min_hold": 1,
+        "notional": 1248.3800444602966,
+        "peak_px": 4.820000171661377,
+        "reason": "Clock-B #1 mom+breakout+peer/sector (research; not KEEP); gate clk_mom_break_peer=True; rank hot_score; list ohlc_hot; \ud83d\udd35; ret5=+8.8; leftover $1250.00",
+        "shares": 259,
+        "ticker": "TLS"
+      },
+      "ULTA": {
+        "close_px": 517.5,
+        "cost": 1085.996,
+        "entry_date": "2026-08-28",
+        "entry_px": 542.0,
+        "fee_in": 1.996,
+        "last_px": 542.0,
+        "min_hold": 1,
+        "notional": 1084.0,
+        "peak_px": 542.0,
+        "reason": "Clock-B #1 mom+breakout+peer/sector (research; not KEEP); gate clk_mom_break_peer=True; rank hot_score; list earn_react; ret5=+4.8; leftover $1250.00",
+        "shares": 2,
+        "ticker": "ULTA"
+      }
+    },
+    "yday_equity": 9913.83
+  }
+}

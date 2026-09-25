@@ -1,0 +1,39 @@
+{
+  "buys": [],
+  "cash": 10173.38,
+  "date": "2026-09-10",
+  "equity": 10173.38,
+  "fees": 5.7019,
+  "fills": [
+    {
+      "fees": 2.464,
+      "pnl": 53.42,
+      "price": 15.53,
+      "shares": 158,
+      "side": "COVER",
+      "ticker": "HQ"
+    },
+    {
+      "fees": 3.2379,
+      "pnl": 18.49,
+      "price": 9.93,
+      "shares": 251,
+      "side": "COVER",
+      "ticker": "SCZM"
+    }
+  ],
+  "holdings": [],
+  "mean": 2.0577,
+  "n_trades_today": 2,
+  "recipe": "short_clk_neg_weak_fail_opp_h3",
+  "sells": [
+    "HQ",
+    "SCZM"
+  ],
+  "state": {
+    "after": "2026-09-10",
+    "cash": 10173.38,
+    "pos": {},
+    "yday_equity": 10173.38
+  }
+}

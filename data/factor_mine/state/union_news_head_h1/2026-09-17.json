@@ -1,0 +1,180 @@
+{
+  "buys": [
+    "SMTC",
+    "GME",
+    "JBHT",
+    "TNDM",
+    "BAK"
+  ],
+  "cash": 56.65,
+  "date": "2026-09-17",
+  "equity": 9672.35,
+  "fees": 33.6652,
+  "fills": [
+    {
+      "fees": 2.0753,
+      "pnl": -61.5,
+      "price": 120.07,
+      "shares": 19,
+      "side": "SELL",
+      "ticker": "CRUS"
+    },
+    {
+      "fees": 2.2119,
+      "pnl": 28.25,
+      "price": 37.64,
+      "shares": 64,
+      "side": "SELL",
+      "ticker": "DBX"
+    },
+    {
+      "fees": 4.4885,
+      "pnl": 100.54,
+      "price": 7.27,
+      "shares": 342,
+      "side": "SELL",
+      "ticker": "SION"
+    },
+    {
+      "fees": 2.294,
+      "pnl": 17.05,
+      "price": 26.51,
+      "shares": 90,
+      "side": "SELL",
+      "ticker": "WAY"
+    },
+    {
+      "fees": 2.023,
+      "pnl": null,
+      "price": 170.85,
+      "shares": 11,
+      "side": "BUY",
+      "ticker": "SMTC"
+    },
+    {
+      "fees": 2.248,
+      "pnl": null,
+      "price": 22.12,
+      "shares": 86,
+      "side": "BUY",
+      "ticker": "GME"
+    },
+    {
+      "fees": 2.014,
+      "pnl": null,
+      "price": 238.6,
+      "shares": 8,
+      "side": "BUY",
+      "ticker": "JBHT"
+    },
+    {
+      "fees": 2.314,
+      "pnl": null,
+      "price": 17.72,
+      "shares": 108,
+      "side": "BUY",
+      "ticker": "TNDM"
+    },
+    {
+      "fees": 13.9965,
+      "pnl": null,
+      "price": 1.77,
+      "shares": 1085,
+      "side": "BUY",
+      "ticker": "BAK"
+    }
+  ],
+  "holdings": [
+    "BAK",
+    "GME",
+    "JBHT",
+    "SMTC",
+    "TNDM"
+  ],
+  "mean": 1.7006,
+  "n_trades_today": 9,
+  "recipe": "union_news_head_h1",
+  "sells": [
+    "CRUS",
+    "DBX",
+    "SION",
+    "WAY"
+  ],
+  "state": {
+    "after": "2026-09-17",
+    "cash": 56.65,
+    "pos": {
+      "BAK": {
+        "close_px": 1.7899999618530273,
+        "cost": 1934.4464793052673,
+        "entry_date": "2026-09-17",
+        "entry_px": 1.7699999809265137,
+        "fee_in": 13.9965,
+        "last_px": 1.7699999809265137,
+        "min_hold": 1,
+        "notional": 1920.4499793052673,
+        "peak_px": 1.7699999809265137,
+        "reason": "prior-export headline\ud83d\udfe2 only; gate headline=good; rank cond; list yday_mover; ret5=-10.2; leftover $1920.79",
+        "shares": 1085,
+        "ticker": "BAK"
+      },
+      "GME": {
+        "close_px": 22.770000457763672,
+        "cost": 1904.5680721740723,
+        "entry_date": "2026-09-17",
+        "entry_px": 22.1200008392334,
+        "fee_in": 2.248,
+        "last_px": 22.1200008392334,
+        "min_hold": 1,
+        "notional": 1902.3200721740723,
+        "peak_px": 22.1200008392334,
+        "reason": "prior-export headline\ud83d\udfe2 only; gate headline=good; rank cond; list ohlc_hot; \ud83d\udd35; ret5=+10.5; leftover $1920.79",
+        "shares": 86,
+        "ticker": "GME"
+      },
+      "JBHT": {
+        "close_px": 236.8000030517578,
+        "cost": 1910.814048828125,
+        "entry_date": "2026-09-17",
+        "entry_px": 238.60000610351562,
+        "fee_in": 2.014,
+        "last_px": 238.60000610351562,
+        "min_hold": 1,
+        "notional": 1908.800048828125,
+        "peak_px": 238.60000610351562,
+        "reason": "prior-export headline\ud83d\udfe2 only; gate headline=good; rank cond; list yday_mover; ret5=-11.6; leftover $1920.79",
+        "shares": 8,
+        "ticker": "JBHT"
+      },
+      "SMTC": {
+        "close_px": 178.19000244140625,
+        "cost": 1881.3730671386718,
+        "entry_date": "2026-09-17",
+        "entry_px": 170.85000610351562,
+        "fee_in": 2.023,
+        "last_px": 170.85000610351562,
+        "min_hold": 1,
+        "notional": 1879.3500671386719,
+        "peak_px": 170.85000610351562,
+        "reason": "prior-export headline\ud83d\udfe2 only; gate headline=good; rank cond; list probable,yday_gainer,yday_mover; \ud83d\udd35; ret5=+2.2; leftover $1920.79",
+        "shares": 11,
+        "ticker": "SMTC"
+      },
+      "TNDM": {
+        "close_px": 17.229999542236328,
+        "cost": 1916.0739258422852,
+        "entry_date": "2026-09-17",
+        "entry_px": 17.719999313354492,
+        "fee_in": 2.314,
+        "last_px": 17.719999313354492,
+        "min_hold": 1,
+        "notional": 1913.7599258422852,
+        "peak_px": 17.719999313354492,
+        "reason": "prior-export headline\ud83d\udfe2 only; gate headline=good; rank cond; list yday_gainer; ret5=-8.3; leftover $1920.79",
+        "shares": 108,
+        "ticker": "TNDM"
+      }
+    },
+    "yday_equity": 9672.35
+  }
+}

@@ -1,0 +1,183 @@
+{
+  "buys": [
+    "IVVD",
+    "GRAL",
+    "MRNA",
+    "DGXX"
+  ],
+  "cash": 88.98,
+  "date": "2026-09-22",
+  "equity": 9235.48,
+  "fees": 61.5538,
+  "fills": [
+    {
+      "fees": 8.072,
+      "pnl": -53.05,
+      "price": 2.09,
+      "shares": 617,
+      "side": "SELL",
+      "ticker": "AMTX"
+    },
+    {
+      "fees": 2.1636,
+      "pnl": -4.31,
+      "price": 25.95,
+      "shares": 51,
+      "side": "SELL",
+      "ticker": "GLXY"
+    },
+    {
+      "fees": 2.019,
+      "pnl": 23.31,
+      "price": 403.0,
+      "shares": 3,
+      "side": "SELL",
+      "ticker": "ISRG"
+    },
+    {
+      "fees": 2.3008,
+      "pnl": -81.53,
+      "price": 13.13,
+      "shares": 95,
+      "side": "SELL",
+      "ticker": "MARA"
+    },
+    {
+      "fees": 2.8982,
+      "pnl": -7.96,
+      "price": 5.99,
+      "shares": 221,
+      "side": "SELL",
+      "ticker": "SION"
+    },
+    {
+      "fees": 2.028,
+      "pnl": -101.12,
+      "price": 174.12,
+      "shares": 6,
+      "side": "SELL",
+      "ticker": "SMTC"
+    },
+    {
+      "fees": 2.025,
+      "pnl": 49.92,
+      "price": 241.04,
+      "shares": 5,
+      "side": "SELL",
+      "ticker": "VICR"
+    },
+    {
+      "fees": 29.1024,
+      "pnl": null,
+      "price": 1.01,
+      "shares": 2256,
+      "side": "BUY",
+      "ticker": "IVVD"
+    },
+    {
+      "fees": 2.053,
+      "pnl": null,
+      "price": 106.75,
+      "shares": 21,
+      "side": "BUY",
+      "ticker": "GRAL"
+    },
+    {
+      "fees": 2.029,
+      "pnl": null,
+      "price": 168.5,
+      "shares": 13,
+      "side": "BUY",
+      "ticker": "MRNA"
+    },
+    {
+      "fees": 6.8628,
+      "pnl": null,
+      "price": 4.28,
+      "shares": 532,
+      "side": "BUY",
+      "ticker": "DGXX"
+    }
+  ],
+  "holdings": [
+    "DGXX",
+    "GRAL",
+    "IVVD",
+    "MRNA"
+  ],
+  "mean": 1.5934,
+  "n_trades_today": 11,
+  "recipe": "union_news_g_h1",
+  "sells": [
+    "AMTX",
+    "GLXY",
+    "ISRG",
+    "MARA",
+    "SION",
+    "SMTC",
+    "VICR"
+  ],
+  "state": {
+    "after": "2026-09-22",
+    "cash": 88.98,
+    "pos": {
+      "DGXX": {
+        "close_px": 4.36,
+        "cost": 2283.8228,
+        "entry_date": "2026-09-22",
+        "entry_px": 4.28,
+        "fee_in": 6.8628,
+        "last_px": 4.28,
+        "min_hold": 1,
+        "notional": 2276.96,
+        "peak_px": 4.28,
+        "reason": "union \u2229 news_g, no \ud83d\udea8; gate news=good; list ohlc_hot; ret5=+16.9; leftover $2279.20",
+        "shares": 532,
+        "ticker": "DGXX"
+      },
+      "GRAL": {
+        "close_px": 108.52,
+        "cost": 2243.803,
+        "entry_date": "2026-09-22",
+        "entry_px": 106.75,
+        "fee_in": 2.053,
+        "last_px": 106.75,
+        "min_hold": 1,
+        "notional": 2241.75,
+        "peak_px": 106.75,
+        "reason": "union \u2229 news_g, no \ud83d\udea8; gate news=good; list yday_gainer,yday_mover; ret5=+42.9; leftover $2279.20",
+        "shares": 21,
+        "ticker": "GRAL"
+      },
+      "IVVD": {
+        "close_px": 0.9639999866485596,
+        "cost": 2307.6623784851076,
+        "entry_date": "2026-09-22",
+        "entry_px": 1.0099999904632568,
+        "fee_in": 29.1024,
+        "last_px": 1.0099999904632568,
+        "min_hold": 1,
+        "notional": 2278.5599784851074,
+        "peak_px": 1.0099999904632568,
+        "reason": "union \u2229 news_g, no \ud83d\udea8; gate news=good; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+14.3; leftover $2279.20",
+        "shares": 2256,
+        "ticker": "IVVD"
+      },
+      "MRNA": {
+        "close_px": 182.55999755859375,
+        "cost": 2192.529,
+        "entry_date": "2026-09-22",
+        "entry_px": 168.5,
+        "fee_in": 2.029,
+        "last_px": 168.5,
+        "min_hold": 1,
+        "notional": 2190.5,
+        "peak_px": 168.5,
+        "reason": "union \u2229 news_g, no \ud83d\udea8; gate news=good; list ohlc_hot; ret5=+17.9; leftover $2279.20",
+        "shares": 13,
+        "ticker": "MRNA"
+      }
+    },
+    "yday_equity": 9235.48
+  }
+}

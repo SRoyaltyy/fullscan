@@ -1,0 +1,237 @@
+{
+  "buys": [
+    "BTDR",
+    "MXL",
+    "TRMD",
+    "ASST",
+    "CLSK",
+    "QUBT",
+    "SHMD"
+  ],
+  "cash": 45.15,
+  "date": "2026-09-21",
+  "equity": 9853.89,
+  "fees": 31.1377,
+  "fills": [
+    {
+      "fees": 2.023,
+      "pnl": 105.51,
+      "price": 583.88,
+      "shares": 3,
+      "side": "SELL",
+      "ticker": "AMD"
+    },
+    {
+      "fees": 4.2107,
+      "pnl": 436.23,
+      "price": 6.415,
+      "shares": 321,
+      "side": "SELL",
+      "ticker": "BNC"
+    },
+    {
+      "fees": 2.1447,
+      "pnl": -51.13,
+      "price": 45.7,
+      "shares": 43,
+      "side": "SELL",
+      "ticker": "EWTX"
+    },
+    {
+      "fees": 2.4278,
+      "pnl": -339.82,
+      "price": 12.65,
+      "shares": 134,
+      "side": "SELL",
+      "ticker": "HELP"
+    },
+    {
+      "fees": 2.0708,
+      "pnl": 117.03,
+      "price": 116.53,
+      "shares": 18,
+      "side": "SELL",
+      "ticker": "INTC"
+    },
+    {
+      "fees": 2.308,
+      "pnl": null,
+      "price": 13.475,
+      "shares": 106,
+      "side": "BUY",
+      "ticker": "BTDR"
+    },
+    {
+      "fees": 2.041,
+      "pnl": null,
+      "price": 83.53,
+      "shares": 17,
+      "side": "BUY",
+      "ticker": "MXL"
+    },
+    {
+      "fees": 2.104,
+      "pnl": null,
+      "price": 37.47,
+      "shares": 38,
+      "side": "BUY",
+      "ticker": "TRMD"
+    },
+    {
+      "fees": 2.125,
+      "pnl": null,
+      "price": 31.64,
+      "shares": 45,
+      "side": "BUY",
+      "ticker": "ASST"
+    },
+    {
+      "fees": 2.275,
+      "pnl": null,
+      "price": 15.115,
+      "shares": 95,
+      "side": "BUY",
+      "ticker": "CLSK"
+    },
+    {
+      "fees": 2.467,
+      "pnl": null,
+      "price": 9.0,
+      "shares": 159,
+      "side": "BUY",
+      "ticker": "QUBT"
+    },
+    {
+      "fees": 4.9407,
+      "pnl": null,
+      "price": 3.75,
+      "shares": 383,
+      "side": "BUY",
+      "ticker": "SHMD"
+    }
+  ],
+  "holdings": [
+    "ASST",
+    "BTDR",
+    "CLSK",
+    "MXL",
+    "QUBT",
+    "SHMD",
+    "TRMD"
+  ],
+  "mean": 1.9325,
+  "n_trades_today": 12,
+  "recipe": "ohlc_hot_coil_h1",
+  "sells": [
+    "AMD",
+    "BNC",
+    "EWTX",
+    "HELP",
+    "INTC"
+  ],
+  "state": {
+    "after": "2026-09-21",
+    "cash": 45.15,
+    "pos": {
+      "ASST": {
+        "close_px": 30.329999923706055,
+        "cost": 1425.9249725341797,
+        "entry_date": "2026-09-21",
+        "entry_px": 31.639999389648438,
+        "fee_in": 2.125,
+        "last_px": 31.639999389648438,
+        "min_hold": 1,
+        "notional": 1423.7999725341797,
+        "peak_px": 31.639999389648438,
+        "reason": "hot list \u2229 not exploded; gate ret_5_min=0.0,ret_5_max=10.0,rvol_max=2.2; list ohlc_hot; \ud83d\udd35; ret5=+8.9; leftover $1437.52",
+        "shares": 45,
+        "ticker": "ASST"
+      },
+      "BTDR": {
+        "close_px": 13.140000343322754,
+        "cost": 1430.658040435791,
+        "entry_date": "2026-09-21",
+        "entry_px": 13.475000381469727,
+        "fee_in": 2.308,
+        "last_px": 13.475000381469727,
+        "min_hold": 1,
+        "notional": 1428.350040435791,
+        "peak_px": 13.475000381469727,
+        "reason": "hot list \u2229 not exploded; gate ret_5_min=0.0,ret_5_max=10.0,rvol_max=2.2; list probable,yday_gainer,yday_mover,ohlc_hot; ret5=+8.4; leftover $1437.52",
+        "shares": 106,
+        "ticker": "BTDR"
+      },
+      "CLSK": {
+        "close_px": 14.760000228881836,
+        "cost": 1438.1999782562257,
+        "entry_date": "2026-09-21",
+        "entry_px": 15.114999771118164,
+        "fee_in": 2.275,
+        "last_px": 15.114999771118164,
+        "min_hold": 1,
+        "notional": 1435.9249782562256,
+        "peak_px": 15.114999771118164,
+        "reason": "hot list \u2229 not exploded; gate ret_5_min=0.0,ret_5_max=10.0,rvol_max=2.2; list ohlc_hot; \ud83d\udd35; ret5=+5.9; leftover $1437.52",
+        "shares": 95,
+        "ticker": "CLSK"
+      },
+      "MXL": {
+        "close_px": 85.9800033569336,
+        "cost": 1422.0509792480468,
+        "entry_date": "2026-09-21",
+        "entry_px": 83.52999877929688,
+        "fee_in": 2.041,
+        "last_px": 83.52999877929688,
+        "min_hold": 1,
+        "notional": 1420.0099792480469,
+        "peak_px": 83.52999877929688,
+        "reason": "hot list \u2229 not exploded; gate ret_5_min=0.0,ret_5_max=10.0,rvol_max=2.2; list ohlc_hot; ret5=+8.8; leftover $1437.52",
+        "shares": 17,
+        "ticker": "MXL"
+      },
+      "QUBT": {
+        "close_px": 8.960000038146973,
+        "cost": 1433.467,
+        "entry_date": "2026-09-21",
+        "entry_px": 9.0,
+        "fee_in": 2.467,
+        "last_px": 9.0,
+        "min_hold": 1,
+        "notional": 1431.0,
+        "peak_px": 9.0,
+        "reason": "hot list \u2229 not exploded; gate ret_5_min=0.0,ret_5_max=10.0,rvol_max=2.2; list ohlc_hot; ret5=+8.9; leftover $1437.52",
+        "shares": 159,
+        "ticker": "QUBT"
+      },
+      "SHMD": {
+        "close_px": 3.5299999713897705,
+        "cost": 1441.1907,
+        "entry_date": "2026-09-21",
+        "entry_px": 3.75,
+        "fee_in": 4.9407,
+        "last_px": 3.75,
+        "min_hold": 1,
+        "notional": 1436.25,
+        "peak_px": 3.75,
+        "reason": "hot list \u2229 not exploded; gate ret_5_min=0.0,ret_5_max=10.0,rvol_max=2.2; list ohlc_hot; ret5=+9.2; leftover $1437.52",
+        "shares": 383,
+        "ticker": "SHMD"
+      },
+      "TRMD": {
+        "close_px": 37.119998931884766,
+        "cost": 1425.9640463867188,
+        "entry_date": "2026-09-21",
+        "entry_px": 37.470001220703125,
+        "fee_in": 2.104,
+        "last_px": 37.470001220703125,
+        "min_hold": 1,
+        "notional": 1423.8600463867188,
+        "peak_px": 37.470001220703125,
+        "reason": "hot list \u2229 not exploded; gate ret_5_min=0.0,ret_5_max=10.0,rvol_max=2.2; list ohlc_hot; \ud83d\udd35; ret5=+9.0; leftover $1437.52",
+        "shares": 38,
+        "ticker": "TRMD"
+      }
+    },
+    "yday_equity": 9853.89
+  }
+}

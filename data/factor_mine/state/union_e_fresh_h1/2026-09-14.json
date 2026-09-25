@@ -1,0 +1,93 @@
+{
+  "buys": [],
+  "cash": 9149.65,
+  "date": "2026-09-14",
+  "equity": 9149.65,
+  "fees": 17.3398,
+  "fills": [
+    {
+      "fees": 2.022,
+      "pnl": 73.34,
+      "price": 261.51,
+      "shares": 4,
+      "side": "SELL",
+      "ticker": "ADBE"
+    },
+    {
+      "fees": 2.118,
+      "pnl": -53.9,
+      "price": 30.63,
+      "shares": 36,
+      "side": "SELL",
+      "ticker": "CPRT"
+    },
+    {
+      "fees": 2.6174,
+      "pnl": -14.94,
+      "price": 5.86,
+      "shares": 195,
+      "side": "SELL",
+      "ticker": "DBI"
+    },
+    {
+      "fees": 2.058,
+      "pnl": 91.42,
+      "price": 77.68,
+      "shares": 16,
+      "side": "SELL",
+      "ticker": "DSGX"
+    },
+    {
+      "fees": 2.07,
+      "pnl": 61.68,
+      "price": 59.31,
+      "shares": 20,
+      "side": "SELL",
+      "ticker": "KR"
+    },
+    {
+      "fees": 2.3894,
+      "pnl": -68.71,
+      "price": 8.85,
+      "shares": 123,
+      "side": "SELL",
+      "ticker": "LPTH"
+    },
+    {
+      "fees": 2.031,
+      "pnl": -165.11,
+      "price": 141.42,
+      "shares": 7,
+      "side": "SELL",
+      "ticker": "ORCL"
+    },
+    {
+      "fees": 2.034,
+      "pnl": -38.53,
+      "price": 131.4,
+      "shares": 8,
+      "side": "SELL",
+      "ticker": "RH"
+    }
+  ],
+  "holdings": [],
+  "mean": -0.4724,
+  "n_trades_today": 8,
+  "recipe": "union_e_fresh_h1",
+  "sells": [
+    "ADBE",
+    "CPRT",
+    "DBI",
+    "DSGX",
+    "KR",
+    "LPTH",
+    "ORCL",
+    "RH"
+  ],
+  "state": {
+    "after": "2026-09-14",
+    "cash": 9149.65,
+    "pos": {},
+    "yday_equity": 9149.65
+  }
+}

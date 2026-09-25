@@ -1,0 +1,56 @@
+{
+  "buys": [],
+  "cash": 8283.81,
+  "date": "2026-09-15",
+  "equity": 9573.56,
+  "fees": 4.056,
+  "fills": [
+    {
+      "fees": 2.031,
+      "pnl": -50.66,
+      "price": 151.12,
+      "shares": 7,
+      "side": "SELL",
+      "ticker": "NVT"
+    },
+    {
+      "fees": 2.025,
+      "pnl": -46.63,
+      "price": 198.32,
+      "shares": 5,
+      "side": "SELL",
+      "ticker": "SANM"
+    }
+  ],
+  "holdings": [
+    "FRO"
+  ],
+  "mean": 0.6884,
+  "n_trades_today": 2,
+  "recipe": "union_clk_fresh_cat_coil_h1",
+  "sells": [
+    "NVT",
+    "SANM"
+  ],
+  "state": {
+    "after": "2026-09-15",
+    "cash": 8283.81,
+    "pos": {
+      "FRO": {
+        "close_px": 51.59000015258789,
+        "cost": 1203.3149809265137,
+        "entry_date": "2026-09-11",
+        "entry_px": 48.04999923706055,
+        "fee_in": 2.065,
+        "last_px": 51.209999084472656,
+        "min_hold": 1,
+        "notional": 1201.2499809265137,
+        "peak_px": 51.209999084472656,
+        "reason": "Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list ohlc_hot; ret5=+6.6; leftover $1201.97",
+        "shares": 25,
+        "ticker": "FRO"
+      }
+    },
+    "yday_equity": 9573.56
+  }
+}

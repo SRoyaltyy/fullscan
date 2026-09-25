@@ -1,0 +1,234 @@
+{
+  "buys": [
+    "MKC",
+    "CBRL",
+    "USFD",
+    "KBH",
+    "GIS"
+  ],
+  "cash": 137.79,
+  "date": "2026-09-22",
+  "equity": 7924.88,
+  "fees": 23.0445,
+  "fills": [
+    {
+      "fees": 2.016,
+      "pnl": -19.57,
+      "price": 378.42,
+      "shares": 2,
+      "side": "SELL",
+      "ticker": "HUM"
+    },
+    {
+      "fees": 3.8514,
+      "pnl": -45.86,
+      "price": 3.29,
+      "shares": 294,
+      "side": "SELL",
+      "ticker": "KDK"
+    },
+    {
+      "fees": 2.3134,
+      "pnl": 26.58,
+      "price": 10.45,
+      "shares": 99,
+      "side": "SELL",
+      "ticker": "SGML"
+    },
+    {
+      "fees": 2.5287,
+      "pnl": -6.69,
+      "price": 5.99,
+      "shares": 167,
+      "side": "SELL",
+      "ticker": "SION"
+    },
+    {
+      "fees": 2.085,
+      "pnl": -10.15,
+      "price": 39.76,
+      "shares": 25,
+      "side": "SELL",
+      "ticker": "XENE"
+    },
+    {
+      "fees": 2.05,
+      "pnl": null,
+      "price": 49.57,
+      "shares": 20,
+      "side": "BUY",
+      "ticker": "MKC"
+    },
+    {
+      "fees": 2.056,
+      "pnl": null,
+      "price": 45.5,
+      "shares": 22,
+      "side": "BUY",
+      "ticker": "CBRL"
+    },
+    {
+      "fees": 2.02,
+      "pnl": null,
+      "price": 94.08,
+      "shares": 10,
+      "side": "BUY",
+      "ticker": "USFD"
+    },
+    {
+      "fees": 2.05,
+      "pnl": null,
+      "price": 49.39,
+      "shares": 20,
+      "side": "BUY",
+      "ticker": "KBH"
+    },
+    {
+      "fees": 2.074,
+      "pnl": null,
+      "price": 35.96,
+      "shares": 28,
+      "side": "BUY",
+      "ticker": "GIS"
+    }
+  ],
+  "holdings": [
+    "ABVX",
+    "CBRL",
+    "GIS",
+    "KBH",
+    "MKC",
+    "MLKN",
+    "THO",
+    "USFD"
+  ],
+  "mean": -0.1064,
+  "n_trades_today": 10,
+  "recipe": "union_rsi_h1",
+  "sells": [
+    "HUM",
+    "KDK",
+    "SGML",
+    "SION",
+    "XENE"
+  ],
+  "state": {
+    "after": "2026-09-22",
+    "cash": 137.79,
+    "pos": {
+      "ABVX": {
+        "close_px": 98.29,
+        "cost": 953.4970109863282,
+        "entry_date": "2026-09-21",
+        "entry_px": 105.72000122070312,
+        "fee_in": 2.017,
+        "last_px": 102.74,
+        "min_hold": 1,
+        "notional": 951.4800109863281,
+        "peak_px": 105.72000122070312,
+        "reason": "rank by rsi; rank rsi; list overnight; ret5=-11.5; leftover $1005.94",
+        "shares": 9,
+        "ticker": "ABVX"
+      },
+      "CBRL": {
+        "close_px": 45.48,
+        "cost": 1003.056,
+        "entry_date": "2026-09-22",
+        "entry_px": 45.5,
+        "fee_in": 2.056,
+        "last_px": 45.5,
+        "min_hold": 1,
+        "notional": 1001.0,
+        "peak_px": 45.5,
+        "reason": "rank by rsi; rank rsi; list overnight; ret5=-11.2; leftover $1015.18",
+        "shares": 22,
+        "ticker": "CBRL"
+      },
+      "GIS": {
+        "close_px": 35.45000076293945,
+        "cost": 1008.9539743652343,
+        "entry_date": "2026-09-22",
+        "entry_px": 35.959999084472656,
+        "fee_in": 2.074,
+        "last_px": 35.959999084472656,
+        "min_hold": 1,
+        "notional": 1006.8799743652344,
+        "peak_px": 35.959999084472656,
+        "reason": "rank by rsi; rank rsi; list overnight; ret5=-2.9; leftover $1015.18",
+        "shares": 28,
+        "ticker": "GIS"
+      },
+      "KBH": {
+        "close_px": 48.59000015258789,
+        "cost": 989.8499877929687,
+        "entry_date": "2026-09-22",
+        "entry_px": 49.38999938964844,
+        "fee_in": 2.05,
+        "last_px": 49.38999938964844,
+        "min_hold": 1,
+        "notional": 987.7999877929688,
+        "peak_px": 49.38999938964844,
+        "reason": "rank by rsi; rank rsi; list overnight; ret5=-3.4; leftover $1015.18",
+        "shares": 20,
+        "ticker": "KBH"
+      },
+      "MKC": {
+        "close_px": 49.42,
+        "cost": 993.4499999999999,
+        "entry_date": "2026-09-22",
+        "entry_px": 49.57,
+        "fee_in": 2.05,
+        "last_px": 49.57,
+        "min_hold": 1,
+        "notional": 991.4,
+        "peak_px": 49.57,
+        "reason": "rank by rsi; rank rsi; list flatten; ret5=-3.0; leftover $1015.18",
+        "shares": 20,
+        "ticker": "MKC"
+      },
+      "MLKN": {
+        "close_px": 20.29,
+        "cost": 1002.9340183105469,
+        "entry_date": "2026-09-21",
+        "entry_px": 20.850000381469727,
+        "fee_in": 2.134,
+        "last_px": 20.66,
+        "min_hold": 1,
+        "notional": 1000.8000183105469,
+        "peak_px": 20.850000381469727,
+        "reason": "rank by rsi; rank rsi; list overnight; ret5=-2.5; leftover $1005.94",
+        "shares": 48,
+        "ticker": "MLKN"
+      },
+      "THO": {
+        "close_px": 73.8,
+        "cost": 959.4919914550782,
+        "entry_date": "2026-09-21",
+        "entry_px": 68.38999938964844,
+        "fee_in": 2.032,
+        "last_px": 72.53,
+        "min_hold": 1,
+        "notional": 957.4599914550781,
+        "peak_px": 72.53,
+        "reason": "rank by rsi; rank rsi; list overnight; ret5=-7.0; leftover $1005.94",
+        "shares": 14,
+        "ticker": "THO"
+      },
+      "USFD": {
+        "close_px": 94.2,
+        "cost": 942.8199999999999,
+        "entry_date": "2026-09-22",
+        "entry_px": 94.08,
+        "fee_in": 2.02,
+        "last_px": 94.08,
+        "min_hold": 1,
+        "notional": 940.8,
+        "peak_px": 94.08,
+        "reason": "rank by rsi; rank rsi; list flatten; ret5=-0.6; leftover $1015.18",
+        "shares": 10,
+        "ticker": "USFD"
+      }
+    },
+    "yday_equity": 7924.88
+  }
+}

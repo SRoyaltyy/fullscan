@@ -1,0 +1,47 @@
+{
+  "buys": [
+    "HAFN"
+  ],
+  "cash": 4.22,
+  "date": "2026-09-04",
+  "equity": 9906.5,
+  "fees": 13.8546,
+  "fills": [
+    {
+      "fees": 13.8546,
+      "pnl": null,
+      "price": 8.94,
+      "shares": 1074,
+      "side": "BUY",
+      "ticker": "HAFN"
+    }
+  ],
+  "holdings": [
+    "HAFN"
+  ],
+  "mean": 2.9821,
+  "n_trades_today": 1,
+  "recipe": "union_clk_flow_coil_h1",
+  "sells": [],
+  "state": {
+    "after": "2026-09-04",
+    "cash": 4.22,
+    "pos": {
+      "HAFN": {
+        "close_px": 9.220000267028809,
+        "cost": 9615.414149331666,
+        "entry_date": "2026-09-04",
+        "entry_px": 8.9399995803833,
+        "fee_in": 13.8546,
+        "last_px": 8.9399995803833,
+        "min_hold": 1,
+        "notional": 9601.559549331665,
+        "peak_px": 8.9399995803833,
+        "reason": "Clock-B #8 flow-in + green + not extended; gate clk_flow_coil=True; rank cond; list ohlc_hot; ret5=+7.7; leftover $9619.63",
+        "shares": 1074,
+        "ticker": "HAFN"
+      }
+    },
+    "yday_equity": 9906.5
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "buys": [],
+  "cash": 9015.01,
+  "date": "2026-09-10",
+  "equity": 9015.01,
+  "fees": 18.1339,
+  "fills": [
+    {
+      "fees": 2.5889,
+      "pnl": -111.16,
+      "price": 5.75,
+      "shares": 186,
+      "side": "SELL",
+      "ticker": "AHCO"
+    },
+    {
+      "fees": 2.148,
+      "pnl": 36.2,
+      "price": 26.06,
+      "shares": 46,
+      "side": "SELL",
+      "ticker": "ASST"
+    },
+    {
+      "fees": 2.016,
+      "pnl": 16.09,
+      "price": 523.83,
+      "shares": 2,
+      "side": "SELL",
+      "ticker": "DELL"
+    },
+    {
+      "fees": 2.6624,
+      "pnl": -120.99,
+      "price": 5.22,
+      "shares": 203,
+      "side": "SELL",
+      "ticker": "DFDV"
+    },
+    {
+      "fees": 2.019,
+      "pnl": -57.78,
+      "price": 360.42,
+      "shares": 3,
+      "side": "SELL",
+      "ticker": "MDB"
+    },
+    {
+      "fees": 2.5446,
+      "pnl": -163.29,
+      "price": 5.92,
+      "shares": 172,
+      "side": "SELL",
+      "ticker": "RSKD"
+    },
+    {
+      "fees": 2.052,
+      "pnl": -29.4,
+      "price": 80.892,
+      "shares": 14,
+      "side": "SELL",
+      "ticker": "TARS"
+    },
+    {
+      "fees": 2.103,
+      "pnl": 6.97,
+      "price": 37.8,
+      "shares": 31,
+      "side": "SELL",
+      "ticker": "TDS"
+    }
+  ],
+  "holdings": [],
+  "mean": -1.403,
+  "n_trades_today": 8,
+  "recipe": "union_vol_green_h3",
+  "sells": [
+    "AHCO",
+    "ASST",
+    "DELL",
+    "DFDV",
+    "MDB",
+    "RSKD",
+    "TARS",
+    "TDS"
+  ],
+  "state": {
+    "after": "2026-09-10",
+    "cash": 9015.01,
+    "pos": {},
+    "yday_equity": 9015.01
+  }
+}

@@ -1,0 +1,225 @@
+{
+  "buys": [
+    "INDP",
+    "ZS",
+    "TNGX",
+    "SNX",
+    "HALO",
+    "CNXC",
+    "DXCM",
+    "GT"
+  ],
+  "cash": 404.03,
+  "date": "2026-09-23",
+  "equity": 9656.24,
+  "fees": 29.824,
+  "fills": [
+    {
+      "fees": 10.5838,
+      "pnl": -20.96,
+      "price": 12.24,
+      "shares": 804,
+      "side": "SELL",
+      "ticker": "APPS"
+    },
+    {
+      "fees": 4.0377,
+      "pnl": null,
+      "price": 3.93,
+      "shares": 313,
+      "side": "BUY",
+      "ticker": "INDP"
+    },
+    {
+      "fees": 2.005,
+      "pnl": null,
+      "price": 213.0,
+      "shares": 5,
+      "side": "BUY",
+      "ticker": "ZS"
+    },
+    {
+      "fees": 2.134,
+      "pnl": null,
+      "price": 25.4,
+      "shares": 48,
+      "side": "BUY",
+      "ticker": "TNGX"
+    },
+    {
+      "fees": 2.002,
+      "pnl": null,
+      "price": 283.46,
+      "shares": 4,
+      "side": "BUY",
+      "ticker": "SNX"
+    },
+    {
+      "fees": 2.02,
+      "pnl": null,
+      "price": 116.85,
+      "shares": 10,
+      "side": "BUY",
+      "ticker": "HALO"
+    },
+    {
+      "fees": 2.11,
+      "pnl": null,
+      "price": 30.32,
+      "shares": 40,
+      "side": "BUY",
+      "ticker": "CNXC"
+    },
+    {
+      "fees": 2.029,
+      "pnl": null,
+      "price": 89.5,
+      "shares": 13,
+      "side": "BUY",
+      "ticker": "DXCM"
+    },
+    {
+      "fees": 2.9025,
+      "pnl": null,
+      "price": 5.45,
+      "shares": 225,
+      "side": "BUY",
+      "ticker": "GT"
+    }
+  ],
+  "holdings": [
+    "CNXC",
+    "DXCM",
+    "GT",
+    "HALO",
+    "INDP",
+    "SNX",
+    "TNGX",
+    "ZS"
+  ],
+  "mean": -1.5958,
+  "n_trades_today": 9,
+  "recipe": "union_clk_mom_break_peer_h1",
+  "sells": [
+    "APPS"
+  ],
+  "state": {
+    "after": "2026-09-23",
+    "cash": 404.03,
+    "pos": {
+      "CNXC": {
+        "close_px": 30.209999084472656,
+        "cost": 1214.9099877929686,
+        "entry_date": "2026-09-23",
+        "entry_px": 30.31999969482422,
+        "fee_in": 2.11,
+        "last_px": 30.31999969482422,
+        "min_hold": 1,
+        "notional": 1212.7999877929688,
+        "peak_px": 30.31999969482422,
+        "reason": "Clock-B #1 mom+breakout+peer/sector (research; not KEEP); gate clk_mom_break_peer=True; rank hot_score; list probable,yday_gainer; ret5=+4.5; leftover $1230.31",
+        "shares": 40,
+        "ticker": "CNXC"
+      },
+      "DXCM": {
+        "close_px": 87.7300033569336,
+        "cost": 1165.529,
+        "entry_date": "2026-09-23",
+        "entry_px": 89.5,
+        "fee_in": 2.029,
+        "last_px": 89.5,
+        "min_hold": 1,
+        "notional": 1163.5,
+        "peak_px": 89.5,
+        "reason": "Clock-B #1 mom+breakout+peer/sector (research; not KEEP); gate clk_mom_break_peer=True; rank hot_score; list flatten; \ud83d\udd35; \u26aa; ret5=+3.6; leftover $1230.31",
+        "shares": 13,
+        "ticker": "DXCM"
+      },
+      "GT": {
+        "close_px": 5.340000152587891,
+        "cost": 1229.1524570846557,
+        "entry_date": "2026-09-23",
+        "entry_px": 5.449999809265137,
+        "fee_in": 2.9025,
+        "last_px": 5.449999809265137,
+        "min_hold": 1,
+        "notional": 1226.2499570846558,
+        "peak_px": 5.449999809265137,
+        "reason": "Clock-B #1 mom+breakout+peer/sector (research; not KEEP); gate clk_mom_break_peer=True; rank hot_score; list probable; \ud83d\udd35; ret5=+4.6; leftover $1230.31",
+        "shares": 225,
+        "ticker": "GT"
+      },
+      "HALO": {
+        "close_px": 112.44000244140625,
+        "cost": 1170.519984741211,
+        "entry_date": "2026-09-23",
+        "entry_px": 116.8499984741211,
+        "fee_in": 2.02,
+        "last_px": 116.8499984741211,
+        "min_hold": 1,
+        "notional": 1168.499984741211,
+        "peak_px": 116.8499984741211,
+        "reason": "Clock-B #1 mom+breakout+peer/sector (research; not KEEP); gate clk_mom_break_peer=True; rank hot_score; list flatten; \ud83d\udd35; \u26aa; ret5=+8.4; leftover $1230.31",
+        "shares": 10,
+        "ticker": "HALO"
+      },
+      "INDP": {
+        "close_px": 3.7699999809265137,
+        "cost": 1234.1277208950044,
+        "entry_date": "2026-09-23",
+        "entry_px": 3.930000066757202,
+        "fee_in": 4.0377,
+        "last_px": 3.930000066757202,
+        "min_hold": 1,
+        "notional": 1230.0900208950043,
+        "peak_px": 3.930000066757202,
+        "reason": "Clock-B #1 mom+breakout+peer/sector (research; not KEEP); gate clk_mom_break_peer=True; rank hot_score; list probable,yday_gainer,yday_mover,ohlc_hot; \ud83d\udd35; ret5=+9.6; leftover $1230.31",
+        "shares": 313,
+        "ticker": "INDP"
+      },
+      "SNX": {
+        "close_px": 287.8900146484375,
+        "cost": 1135.8419658203125,
+        "entry_date": "2026-09-23",
+        "entry_px": 283.4599914550781,
+        "fee_in": 2.002,
+        "last_px": 283.4599914550781,
+        "min_hold": 1,
+        "notional": 1133.8399658203125,
+        "peak_px": 283.4599914550781,
+        "reason": "Clock-B #1 mom+breakout+peer/sector (research; not KEEP); gate clk_mom_break_peer=True; rank hot_score; list overnight; ret5=+7.9; leftover $1230.31",
+        "shares": 4,
+        "ticker": "SNX"
+      },
+      "TNGX": {
+        "close_px": 24.450000762939453,
+        "cost": 1221.3339816894531,
+        "entry_date": "2026-09-23",
+        "entry_px": 25.399999618530273,
+        "fee_in": 2.134,
+        "last_px": 25.399999618530273,
+        "min_hold": 1,
+        "notional": 1219.1999816894531,
+        "peak_px": 25.399999618530273,
+        "reason": "Clock-B #1 mom+breakout+peer/sector (research; not KEEP); gate clk_mom_break_peer=True; rank hot_score; list probable,yday_gainer,yday_mover; \ud83d\udd35; ret5=+6.9; leftover $1230.31",
+        "shares": 48,
+        "ticker": "TNGX"
+      },
+      "ZS": {
+        "close_px": 214.4499969482422,
+        "cost": 1067.005,
+        "entry_date": "2026-09-23",
+        "entry_px": 213.0,
+        "fee_in": 2.005,
+        "last_px": 213.0,
+        "min_hold": 1,
+        "notional": 1065.0,
+        "peak_px": 213.0,
+        "reason": "Clock-B #1 mom+breakout+peer/sector (research; not KEEP); gate clk_mom_break_peer=True; rank hot_score; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+8.4; leftover $1230.31",
+        "shares": 5,
+        "ticker": "ZS"
+      }
+    },
+    "yday_equity": 9656.24
+  }
+}

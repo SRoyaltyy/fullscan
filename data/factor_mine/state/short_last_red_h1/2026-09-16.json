@@ -1,0 +1,207 @@
+{
+  "buys": [
+    "AVAH",
+    "WAY",
+    "ALHC",
+    "PLAY",
+    "DVLT",
+    "NMRA",
+    "SION",
+    "ZSQR"
+  ],
+  "cash": 15146.27,
+  "date": "2026-09-16",
+  "equity": 10166.75,
+  "fees": 42.2706,
+  "fills": [
+    {
+      "fees": 2.1592504114647433,
+      "pnl": null,
+      "price": 14.31,
+      "shares": 44,
+      "side": "SHORT",
+      "ticker": "AVAH"
+    },
+    {
+      "fees": 2.0992734249585294,
+      "pnl": null,
+      "price": 26.27,
+      "shares": 24,
+      "side": "SHORT",
+      "ticker": "WAY"
+    },
+    {
+      "fees": 2.2103136989488994,
+      "pnl": null,
+      "price": 10.3,
+      "shares": 61,
+      "side": "SHORT",
+      "ticker": "ALHC"
+    },
+    {
+      "fees": 2.308590959240639,
+      "pnl": null,
+      "price": 6.86,
+      "shares": 92,
+      "side": "SHORT",
+      "ticker": "PLAY"
+    },
+    {
+      "fees": 18.900758903721588,
+      "pnl": null,
+      "price": 0.16,
+      "shares": 3960,
+      "side": "SHORT",
+      "ticker": "DVLT"
+    },
+    {
+      "fees": 8.7318424653811,
+      "pnl": null,
+      "price": 0.844,
+      "shares": 750,
+      "side": "SHORT",
+      "ticker": "NMRA"
+    },
+    {
+      "fees": 2.305427396784743,
+      "pnl": null,
+      "price": 6.95,
+      "shares": 91,
+      "side": "SHORT",
+      "ticker": "SION"
+    },
+    {
+      "fees": 3.5551095884061836,
+      "pnl": null,
+      "price": 2.34,
+      "shares": 270,
+      "side": "SHORT",
+      "ticker": "ZSQR"
+    }
+  ],
+  "holdings": [
+    "ALHC",
+    "AVAH",
+    "DVLT",
+    "NMRA",
+    "PLAY",
+    "SION",
+    "WAY",
+    "ZSQR"
+  ],
+  "mean": 0.2821,
+  "n_trades_today": 8,
+  "recipe": "short_last_red_h1",
+  "sells": [],
+  "state": {
+    "after": "2026-09-16",
+    "cash": 15146.27,
+    "pos": {
+      "ALHC": {
+        "close_px": 8.710000038146973,
+        "cost": 2.2103136989488994,
+        "entry_date": "2026-09-16",
+        "entry_px": 10.300000190734863,
+        "fee_in": 2.2103136989488994,
+        "last_px": 10.300000190734863,
+        "notional": 628.3000116348267,
+        "peak_px": 10.300000190734863,
+        "reason": "last bar red; gate last_red=True; list yday_mover; ret5=-23.0; leftover $633.63",
+        "shares": 61,
+        "ticker": "ALHC"
+      },
+      "AVAH": {
+        "close_px": 14.260000228881836,
+        "cost": 2.1592504114647433,
+        "entry_date": "2026-09-16",
+        "entry_px": 14.3100004196167,
+        "fee_in": 2.1592504114647433,
+        "last_px": 14.3100004196167,
+        "notional": 629.6400184631348,
+        "peak_px": 14.3100004196167,
+        "reason": "last bar red; gate last_red=True; list flatten; \u26aa; ret5=+4.8; leftover $633.63",
+        "shares": 44,
+        "ticker": "AVAH"
+      },
+      "DVLT": {
+        "close_px": 0.18000000715255737,
+        "cost": 18.900758903721588,
+        "entry_date": "2026-09-16",
+        "entry_px": 0.1599999964237213,
+        "fee_in": 18.900758903721588,
+        "last_px": 0.1599999964237213,
+        "notional": 633.5999858379364,
+        "peak_px": 0.1599999964237213,
+        "reason": "last bar red; gate last_red=True; list yday_mover; \ud83d\udd35; ret5=-23.8; leftover $633.63",
+        "shares": 3960,
+        "ticker": "DVLT"
+      },
+      "NMRA": {
+        "close_px": 0.7730000019073486,
+        "cost": 8.7318424653811,
+        "entry_date": "2026-09-16",
+        "entry_px": 0.843999981880188,
+        "fee_in": 8.7318424653811,
+        "last_px": 0.843999981880188,
+        "notional": 632.999986410141,
+        "peak_px": 0.843999981880188,
+        "reason": "last bar red; gate last_red=True; list yday_mover; ret5=-33.5; leftover $633.63",
+        "shares": 750,
+        "ticker": "NMRA"
+      },
+      "PLAY": {
+        "close_px": 6.860000133514404,
+        "cost": 2.308590959240639,
+        "entry_date": "2026-09-16",
+        "entry_px": 6.860000133514404,
+        "fee_in": 2.308590959240639,
+        "last_px": 6.860000133514404,
+        "notional": 631.1200122833252,
+        "peak_px": 6.860000133514404,
+        "reason": "last bar red; gate last_red=True; list yday_mover; \ud83d\udd35; ret5=-22.4; leftover $633.63",
+        "shares": 92,
+        "ticker": "PLAY"
+      },
+      "SION": {
+        "close_px": 7.039999961853027,
+        "cost": 2.305427396784743,
+        "entry_date": "2026-09-16",
+        "entry_px": 6.949999809265137,
+        "fee_in": 2.305427396784743,
+        "last_px": 6.949999809265137,
+        "notional": 632.4499826431274,
+        "peak_px": 6.949999809265137,
+        "reason": "last bar red; gate last_red=True; list yday_mover; ret5=-5.8; leftover $633.63",
+        "shares": 91,
+        "ticker": "SION"
+      },
+      "WAY": {
+        "close_px": 26.59000015258789,
+        "cost": 2.0992734249585294,
+        "entry_date": "2026-09-16",
+        "entry_px": 26.270000457763672,
+        "fee_in": 2.0992734249585294,
+        "last_px": 26.270000457763672,
+        "notional": 630.4800109863281,
+        "peak_px": 26.270000457763672,
+        "reason": "last bar red; gate last_red=True; list yday_gainer,ohlc_hot; \ud83d\udd35; \u26aa; ret5=+10.0; leftover $633.63",
+        "shares": 24,
+        "ticker": "WAY"
+      },
+      "ZSQR": {
+        "close_px": 2.2899999618530273,
+        "cost": 3.5551095884061836,
+        "entry_date": "2026-09-16",
+        "entry_px": 2.3399999141693115,
+        "fee_in": 3.5551095884061836,
+        "last_px": 2.3399999141693115,
+        "notional": 631.7999768257141,
+        "peak_px": 2.3399999141693115,
+        "reason": "last bar red; gate last_red=True; list yday_mover; \ud83d\udd35; ret5=-25.2; leftover $633.63",
+        "shares": 270,
+        "ticker": "ZSQR"
+      }
+    },
+    "yday_equity": 10166.75
+  }
+}

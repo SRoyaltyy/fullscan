@@ -1,0 +1,129 @@
+{
+  "buys": [],
+  "cash": 9652.69,
+  "date": "2026-08-31",
+  "equity": 9652.69,
+  "fees": 25.4499,
+  "fills": [
+    {
+      "fees": 2.034,
+      "pnl": 11.63,
+      "price": 148.03,
+      "shares": 8,
+      "side": "SELL",
+      "ticker": "ANF"
+    },
+    {
+      "fees": 2.112,
+      "pnl": 12.8,
+      "price": 19.25,
+      "shares": 34,
+      "side": "SELL",
+      "ticker": "BBWI"
+    },
+    {
+      "fees": 2.2058,
+      "pnl": -19.34,
+      "price": 9.5,
+      "shares": 65,
+      "side": "SELL",
+      "ticker": "CAPR"
+    },
+    {
+      "fees": 2.109,
+      "pnl": -49.74,
+      "price": 17.87,
+      "shares": 33,
+      "side": "SELL",
+      "ticker": "ERAS"
+    },
+    {
+      "fees": 2.16,
+      "pnl": -89.8,
+      "price": 22.98,
+      "shares": 50,
+      "side": "SELL",
+      "ticker": "GAP"
+    },
+    {
+      "fees": 2.169,
+      "pnl": -38.24,
+      "price": 22.66,
+      "shares": 53,
+      "side": "SELL",
+      "ticker": "NCNO"
+    },
+    {
+      "fees": 2.2343,
+      "pnl": -11.11,
+      "price": 8.52,
+      "shares": 74,
+      "side": "SELL",
+      "ticker": "OPTX"
+    },
+    {
+      "fees": 2.055,
+      "pnl": -0.19,
+      "price": 42.0,
+      "shares": 15,
+      "side": "SELL",
+      "ticker": "RRC"
+    },
+    {
+      "fees": 2.067,
+      "pnl": -37.36,
+      "price": 31.15,
+      "shares": 19,
+      "side": "SELL",
+      "ticker": "SEDG"
+    },
+    {
+      "fees": 2.022,
+      "pnl": -41.86,
+      "price": 132.3,
+      "shares": 4,
+      "side": "SELL",
+      "ticker": "SMTC"
+    },
+    {
+      "fees": 2.2058,
+      "pnl": -61.27,
+      "price": 18.125,
+      "shares": 65,
+      "side": "SELL",
+      "ticker": "TH"
+    },
+    {
+      "fees": 2.076,
+      "pnl": -22.83,
+      "price": 28.06,
+      "shares": 22,
+      "side": "SELL",
+      "ticker": "ZYME"
+    }
+  ],
+  "holdings": [],
+  "mean": -1.0835,
+  "n_trades_today": 12,
+  "recipe": "combo_nj_5050_shared",
+  "sells": [
+    "ANF",
+    "BBWI",
+    "CAPR",
+    "ERAS",
+    "GAP",
+    "NCNO",
+    "OPTX",
+    "RRC",
+    "SEDG",
+    "SMTC",
+    "TH",
+    "ZYME"
+  ],
+  "state": {
+    "after": "2026-08-31",
+    "cash": 9652.69,
+    "pos": {},
+    "yday_equity": 9652.69
+  }
+}

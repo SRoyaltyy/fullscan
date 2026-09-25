@@ -1,0 +1,36 @@
+{
+  "buys": [],
+  "cash": 175.37,
+  "date": "2026-09-23",
+  "equity": 9170.09,
+  "fees": 0,
+  "fills": [],
+  "holdings": [
+    "HUM"
+  ],
+  "mean": 0.7329,
+  "n_trades_today": 0,
+  "recipe": "union_clk_insider_cash_stab_h3",
+  "sells": [],
+  "state": {
+    "after": "2026-09-23",
+    "cash": 175.37,
+    "pos": {
+      "HUM": {
+        "close_px": 374.7799987792969,
+        "cost": 9270.86229296875,
+        "entry_date": "2026-09-21",
+        "entry_px": 386.20001220703125,
+        "fee_in": 2.062,
+        "last_px": 370.0,
+        "min_hold": 3,
+        "notional": 9268.80029296875,
+        "peak_px": 386.20001220703125,
+        "reason": "Clock-B #7 insider/Form-4 + inst Tx + stabilize (if data); gate clk_insider_cash_stab=True; rank cond; list flatten; \ud83d\udd35; ret5=-5.8; leftover $9446.23",
+        "shares": 24,
+        "ticker": "HUM"
+      }
+    },
+    "yday_equity": 9170.09
+  }
+}

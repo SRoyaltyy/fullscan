@@ -1,0 +1,308 @@
+{
+  "buys": [
+    "FEAM",
+    "CYPH",
+    "TJGC",
+    "AEHL",
+    "AMD"
+  ],
+  "cash": 11408.38,
+  "date": "2026-09-21",
+  "equity": 9800.75,
+  "fees": 43.7374,
+  "fills": [
+    {
+      "fees": 2.251,
+      "pnl": -309.07,
+      "price": 22.11,
+      "shares": 87,
+      "side": "COVER",
+      "ticker": "BBNX"
+    },
+    {
+      "fees": 2.1627,
+      "pnl": 333.31,
+      "price": 40.03,
+      "shares": 49,
+      "side": "SELL",
+      "ticker": "FPS"
+    },
+    {
+      "fees": 3.0702,
+      "pnl": 60.4,
+      "price": 6.55,
+      "shares": 238,
+      "side": "COVER",
+      "ticker": "GFR"
+    },
+    {
+      "fees": 2.9237,
+      "pnl": -30.33,
+      "price": 3.55,
+      "shares": 223,
+      "side": "SELL",
+      "ticker": "INDP"
+    },
+    {
+      "fees": 2.1682,
+      "pnl": 1.41,
+      "price": 29.43,
+      "shares": 52,
+      "side": "SELL",
+      "ticker": "SDGR"
+    },
+    {
+      "fees": 2.1298,
+      "pnl": -1.51,
+      "price": 41.0,
+      "shares": 39,
+      "side": "SELL",
+      "ticker": "TCOM"
+    },
+    {
+      "fees": 2.0654,
+      "pnl": -45.87,
+      "price": 79.08,
+      "shares": 18,
+      "side": "SELL",
+      "ticker": "TEM"
+    },
+    {
+      "fees": 11.352,
+      "pnl": null,
+      "price": 2.47,
+      "shares": 880,
+      "side": "BUY",
+      "ticker": "FEAM"
+    },
+    {
+      "fees": 7.0047,
+      "pnl": null,
+      "price": 4.0,
+      "shares": 543,
+      "side": "BUY",
+      "ticker": "CYPH"
+    },
+    {
+      "fees": 2.374,
+      "pnl": null,
+      "price": 16.91,
+      "shares": 128,
+      "side": "BUY",
+      "ticker": "TJGC"
+    },
+    {
+      "fees": 4.141053426601462,
+      "pnl": null,
+      "price": 8.26,
+      "shares": 310,
+      "side": "SHORT",
+      "ticker": "AEHL"
+    },
+    {
+      "fees": 2.0946868498501714,
+      "pnl": null,
+      "price": 583.88,
+      "shares": 4,
+      "side": "SHORT",
+      "ticker": "AMD"
+    }
+  ],
+  "holdings": [
+    "AEHL",
+    "ALMU",
+    "AMD",
+    "BULL",
+    "CYPH",
+    "FEAM",
+    "FIVN",
+    "LEN",
+    "LVWR",
+    "TJGC",
+    "TRMD"
+  ],
+  "mean": -4.2065,
+  "n_trades_today": 12,
+  "recipe": "combo_seh_333_shared",
+  "sells": [
+    "BBNX",
+    "FPS",
+    "GFR",
+    "INDP",
+    "SDGR",
+    "TCOM",
+    "TEM"
+  ],
+  "state": {
+    "after": "2026-09-21",
+    "cash": 11408.38,
+    "pos": {
+      "AEHL": {
+        "close_px": 6.920000076293945,
+        "cost": 4.141053426601462,
+        "entry_date": "2026-09-21",
+        "entry_px": 8.260000228881836,
+        "fee_in": 4.141053426601462,
+        "last_px": 8.260000228881836,
+        "notional": 2560.600070953369,
+        "owner": "short_news_r_h3",
+        "peak_px": 8.260000228881836,
+        "reason": "news\ud83d\udd34; gate news=bad; list yday_mover; ret5=+7.7; combo leftover $2566.44; owner short_news_r_h3",
+        "shares": 310,
+        "side": "short",
+        "ticker": "AEHL"
+      },
+      "ALMU": {
+        "close_px": 13.609999656677246,
+        "cost": 1358.7630046157838,
+        "entry_date": "2026-09-17",
+        "entry_px": 11.210000038146973,
+        "fee_in": 2.353,
+        "last_px": 13.125,
+        "notional": 1356.4100046157837,
+        "owner": "union_e_fresh_h3",
+        "peak_px": 13.125,
+        "reason": "union \u2229 e_fresh, no \ud83d\udea8; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=+1.0; combo leftover $1361.64; owner union_e_fresh_h3",
+        "shares": 121,
+        "side": "long",
+        "ticker": "ALMU"
+      },
+      "AMD": {
+        "close_px": 615.52001953125,
+        "cost": 2.0946868498501714,
+        "entry_date": "2026-09-21",
+        "entry_px": 583.8800048828125,
+        "fee_in": 2.0946868498501714,
+        "last_px": 583.8800048828125,
+        "notional": 2335.52001953125,
+        "owner": "short_news_r_h3",
+        "peak_px": 583.8800048828125,
+        "reason": "news\ud83d\udd34; gate news=bad; list ohlc_hot; ret5=+8.5; combo leftover $2566.44; owner short_news_r_h3",
+        "shares": 4,
+        "side": "short",
+        "ticker": "AMD"
+      },
+      "BULL": {
+        "close_px": 8.25,
+        "cost": 2.579545204585872,
+        "entry_date": "2026-09-17",
+        "entry_px": 7.949999809265137,
+        "fee_in": 2.579545204585872,
+        "last_px": 8.569999694824219,
+        "notional": 1359.4499673843384,
+        "owner": "short_news_r_h3",
+        "peak_px": 7.849999904632568,
+        "reason": "news\ud83d\udd34; gate news=bad; list yday_mover; \ud83d\udd35; \u26aa; ret5=-18.4; combo leftover $1361.73; owner short_news_r_h3",
+        "shares": 171,
+        "side": "short",
+        "ticker": "BULL"
+      },
+      "CYPH": {
+        "close_px": 3.4000000953674316,
+        "cost": 2179.0047,
+        "entry_date": "2026-09-21",
+        "entry_px": 4.0,
+        "fee_in": 7.0047,
+        "last_px": 4.0,
+        "notional": 2172.0,
+        "owner": "union_hot_n4_h1",
+        "peak_px": 4.0,
+        "reason": "top 4 by hot; rank hot_score; list flatten,yday_gainer,yday_mover; \ud83d\udd35; \u26aa; ret5=+58.9; combo leftover $2174.88; owner union_hot_n4_h1",
+        "shares": 543,
+        "side": "long",
+        "ticker": "CYPH"
+      },
+      "FEAM": {
+        "close_px": 2.4800000190734863,
+        "cost": 2184.952025177002,
+        "entry_date": "2026-09-21",
+        "entry_px": 2.4700000286102295,
+        "fee_in": 11.352,
+        "last_px": 2.4700000286102295,
+        "notional": 2173.600025177002,
+        "owner": "union_hot_n4_h1",
+        "peak_px": 2.4700000286102295,
+        "reason": "top 4 by hot; rank hot_score; list yday_gainer,yday_mover; ret5=+73.6; combo leftover $2174.88; owner union_hot_n4_h1",
+        "shares": 880,
+        "side": "long",
+        "ticker": "FEAM"
+      },
+      "FIVN": {
+        "close_px": 37.0099983215332,
+        "cost": 2.5776372552323017,
+        "entry_date": "2026-09-18",
+        "entry_px": 34.439998626708984,
+        "fee_in": 2.5776372552323017,
+        "last_px": 33.0,
+        "notional": 4614.959815979004,
+        "owner": "short_news_r_h3",
+        "peak_px": 33.0,
+        "reason": "news\ud83d\udd34; gate news=bad; list flatten; \ud83d\udd35; \u26aa; ret5=+14.0; combo leftover $4630.24; owner short_news_r_h3",
+        "shares": 134,
+        "side": "short",
+        "ticker": "FIVN"
+      },
+      "LEN": {
+        "close_px": 78.08000183105469,
+        "cost": 1298.038,
+        "entry_date": "2026-09-17",
+        "entry_px": 81.0,
+        "fee_in": 2.038,
+        "last_px": 76.9800033569336,
+        "notional": 1296.0,
+        "owner": "union_e_fresh_h3",
+        "peak_px": 81.0,
+        "reason": "union \u2229 e_fresh, no \ud83d\udea8; gate days_since_E_max=1,flag_E_min=0; list earn_react; \ud83d\udd35; ret5=-3.0; combo leftover $1361.64; owner union_e_fresh_h3",
+        "shares": 16,
+        "side": "long",
+        "ticker": "LEN"
+      },
+      "LVWR": {
+        "close_px": 1.5299999713897705,
+        "cost": 1540.4725097751618,
+        "entry_date": "2026-09-18",
+        "entry_px": 1.4900000095367432,
+        "fee_in": 13.2225,
+        "last_px": 1.649999976158142,
+        "notional": 1527.2500097751617,
+        "owner": "union_hot_n4_h1",
+        "peak_px": 1.649999976158142,
+        "reason": "top 4 by hot; rank hot_score; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+25.7; combo leftover $1527.46; owner union_hot_n4_h1",
+        "shares": 1025,
+        "side": "long",
+        "ticker": "LVWR"
+      },
+      "TJGC": {
+        "close_px": 17.579999923706055,
+        "cost": 2166.85398046875,
+        "entry_date": "2026-09-21",
+        "entry_px": 16.90999984741211,
+        "fee_in": 2.374,
+        "last_px": 16.90999984741211,
+        "notional": 2164.47998046875,
+        "owner": "union_hot_n4_h1",
+        "peak_px": 16.90999984741211,
+        "reason": "top 4 by hot; rank hot_score; list yday_gainer,yday_mover; ret5=+50.5; combo leftover $2174.88; owner union_hot_n4_h1",
+        "shares": 128,
+        "side": "long",
+        "ticker": "TJGC"
+      },
+      "TRMD": {
+        "close_px": 37.119998931884766,
+        "cost": 2.158820274436637,
+        "entry_date": "2026-09-17",
+        "entry_px": 36.52000045776367,
+        "fee_in": 2.158820274436637,
+        "last_px": 37.470001220703125,
+        "notional": 1351.2400169372559,
+        "owner": "short_news_r_h3",
+        "peak_px": 36.52000045776367,
+        "reason": "news\ud83d\udd34; gate news=bad; list ohlc_hot; ret5=+3.2; combo leftover $1361.73; owner short_news_r_h3",
+        "shares": 37,
+        "side": "short",
+        "ticker": "TRMD"
+      }
+    },
+    "yday_equity": 9800.75
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "buys": [],
+  "cash": 9802.41,
+  "date": "2026-09-09",
+  "equity": 9802.41,
+  "fees": 0,
+  "fills": [],
+  "holdings": [],
+  "mean": 0.0,
+  "n_trades_today": 0,
+  "recipe": "combo_nj_5050_shared",
+  "sells": [],
+  "state": {
+    "after": "2026-09-09",
+    "cash": 9802.41,
+    "pos": {},
+    "yday_equity": 9802.41
+  }
+}

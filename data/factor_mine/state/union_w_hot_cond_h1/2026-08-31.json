@@ -1,0 +1,101 @@
+{
+  "buys": [],
+  "cash": 8512.86,
+  "date": "2026-08-31",
+  "equity": 9810.04,
+  "fees": 15.3106,
+  "fills": [
+    {
+      "fees": 2.034,
+      "pnl": 11.63,
+      "price": 148.03,
+      "shares": 8,
+      "side": "SELL",
+      "ticker": "ANF"
+    },
+    {
+      "fees": 2.4052,
+      "pnl": -34.22,
+      "price": 9.5,
+      "shares": 128,
+      "side": "SELL",
+      "ticker": "CAPR"
+    },
+    {
+      "fees": 2.2218,
+      "pnl": 21.48,
+      "price": 18.15,
+      "shares": 70,
+      "side": "SELL",
+      "ticker": "MEI"
+    },
+    {
+      "fees": 2.169,
+      "pnl": -38.24,
+      "price": 22.66,
+      "shares": 53,
+      "side": "SELL",
+      "ticker": "NCNO"
+    },
+    {
+      "fees": 2.034,
+      "pnl": -79.73,
+      "price": 132.3,
+      "shares": 8,
+      "side": "SELL",
+      "ticker": "SMTC"
+    },
+    {
+      "fees": 2.016,
+      "pnl": -51.81,
+      "price": 437.95,
+      "shares": 2,
+      "side": "SELL",
+      "ticker": "SNPS"
+    },
+    {
+      "fees": 2.4306,
+      "pnl": -68.75,
+      "price": 8.66,
+      "shares": 136,
+      "side": "SELL",
+      "ticker": "VYX"
+    }
+  ],
+  "holdings": [
+    "CXM"
+  ],
+  "mean": -0.6113,
+  "n_trades_today": 7,
+  "recipe": "union_w_hot_cond_h1",
+  "sells": [
+    "ANF",
+    "CAPR",
+    "MEI",
+    "NCNO",
+    "SMTC",
+    "SNPS",
+    "VYX"
+  ],
+  "state": {
+    "after": "2026-08-31",
+    "cash": 8512.86,
+    "pos": {
+      "CXM": {
+        "close_px": 8.210000038146973,
+        "cost": 1247.504018081665,
+        "entry_date": "2026-08-28",
+        "entry_px": 7.880000114440918,
+        "fee_in": 2.464,
+        "last_px": 8.170000076293945,
+        "min_hold": 1,
+        "notional": 1245.040018081665,
+        "peak_px": 8.170000076293945,
+        "reason": "rank by w_hot_cond; rank w_hot_cond; list ohlc_hot; \ud83d\udd35; ret5=+10.3; leftover $1250.00",
+        "shares": 158,
+        "ticker": "CXM"
+      }
+    },
+    "yday_equity": 9810.04
+  }
+}

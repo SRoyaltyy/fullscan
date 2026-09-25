@@ -1,0 +1,130 @@
+{
+  "buys": [],
+  "cash": 3299.6,
+  "date": "2026-08-31",
+  "equity": 9911.53,
+  "fees": 6.4552,
+  "fills": [
+    {
+      "fees": 2.034,
+      "pnl": 11.63,
+      "price": 148.03,
+      "shares": 8,
+      "side": "SELL",
+      "ticker": "ANF"
+    },
+    {
+      "fees": 2.4052,
+      "pnl": -34.22,
+      "price": 9.5,
+      "shares": 128,
+      "side": "SELL",
+      "ticker": "CAPR"
+    },
+    {
+      "fees": 2.016,
+      "pnl": -51.81,
+      "price": 437.95,
+      "shares": 2,
+      "side": "SELL",
+      "ticker": "SNPS"
+    }
+  ],
+  "holdings": [
+    "CRK",
+    "MOS",
+    "MRNA",
+    "RRC",
+    "SLI"
+  ],
+  "mean": 0.9045,
+  "n_trades_today": 3,
+  "recipe": "combo_hf_5050_shared",
+  "sells": [
+    "ANF",
+    "CAPR",
+    "SNPS"
+  ],
+  "state": {
+    "after": "2026-08-31",
+    "cash": 3299.6,
+    "pos": {
+      "CRK": {
+        "close_px": 14.430000305175781,
+        "cost": 1348.2260105285645,
+        "entry_date": "2026-08-28",
+        "entry_px": 14.630000114440918,
+        "fee_in": 2.266,
+        "last_px": 14.539999961853027,
+        "notional": 1345.9600105285645,
+        "owner": "flatten_h5",
+        "peak_px": 14.630000114440918,
+        "reason": "baseline list, no extra gate; list flatten; wish-list (live io HOLD \u2014 not a ticket); ret5=+5.8; combo leftover $1354.80; owner flatten_h5",
+        "shares": 92,
+        "side": "long",
+        "ticker": "CRK"
+      },
+      "MOS": {
+        "close_px": 24.1200008392334,
+        "cost": 1343.3580427246093,
+        "entry_date": "2026-08-28",
+        "entry_px": 23.950000762939453,
+        "fee_in": 2.158,
+        "last_px": 23.68000030517578,
+        "notional": 1341.2000427246094,
+        "owner": "flatten_h5",
+        "peak_px": 23.950000762939453,
+        "reason": "baseline list, no extra gate; list flatten; wish-list (live io HOLD \u2014 not a ticket); ret5=+1.8; combo leftover $1354.80; owner flatten_h5",
+        "shares": 56,
+        "side": "long",
+        "ticker": "MOS"
+      },
+      "MRNA": {
+        "close_px": 140.33999633789062,
+        "cost": 1236.7270219726563,
+        "entry_date": "2026-08-28",
+        "entry_px": 137.19000244140625,
+        "fee_in": 2.017,
+        "last_px": 134.10000610351562,
+        "notional": 1234.7100219726562,
+        "owner": "union_hot_n4_h1",
+        "peak_px": 137.19000244140625,
+        "reason": "top 4 by hot; rank hot_score; list ohlc_hot; ret5=+7.1; combo leftover $1250.00; owner union_hot_n4_h1",
+        "shares": 9,
+        "side": "long",
+        "ticker": "MRNA"
+      },
+      "RRC": {
+        "close_px": 41.31999969482422,
+        "cost": 1337.7660537109375,
+        "entry_date": "2026-08-28",
+        "entry_px": 41.7400016784668,
+        "fee_in": 2.086,
+        "last_px": 42.0,
+        "notional": 1335.6800537109375,
+        "owner": "flatten_h5",
+        "peak_px": 42.0,
+        "reason": "baseline list, no extra gate; list flatten; wish-list (live io HOLD \u2014 not a ticket); ret5=+2.4; combo leftover $1354.80; owner flatten_h5",
+        "shares": 32,
+        "side": "long",
+        "ticker": "RRC"
+      },
+      "SLI": {
+        "close_px": 2.6700000762939453,
+        "cost": 1359.914533712387,
+        "entry_date": "2026-08-28",
+        "entry_px": 2.680000066757202,
+        "fee_in": 6.5145,
+        "last_px": 2.5799999237060547,
+        "notional": 1353.400033712387,
+        "owner": "flatten_h5",
+        "peak_px": 2.680000066757202,
+        "reason": "baseline list, no extra gate; list flatten,ohlc_hot; wish-list (live io HOLD \u2014 not a ticket); ret5=+16.3; combo leftover $1354.80; owner flatten_h5",
+        "shares": 505,
+        "side": "long",
+        "ticker": "SLI"
+      }
+    },
+    "yday_equity": 9911.53
+  }
+}

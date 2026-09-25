@@ -1,0 +1,36 @@
+{
+  "buys": [],
+  "cash": 8741.98,
+  "date": "2026-09-15",
+  "equity": 10031.73,
+  "fees": 0,
+  "fills": [],
+  "holdings": [
+    "FRO"
+  ],
+  "mean": 0.2674,
+  "n_trades_today": 0,
+  "recipe": "union_clk_mom_break_peer_h1",
+  "sells": [],
+  "state": {
+    "after": "2026-09-15",
+    "cash": 8741.98,
+    "pos": {
+      "FRO": {
+        "close_px": 51.59000015258789,
+        "cost": 1203.3149809265137,
+        "entry_date": "2026-09-11",
+        "entry_px": 48.04999923706055,
+        "fee_in": 2.065,
+        "last_px": 51.209999084472656,
+        "min_hold": 1,
+        "notional": 1201.2499809265137,
+        "peak_px": 51.209999084472656,
+        "reason": "Clock-B #1 mom+breakout+peer/sector (research; not KEEP); gate clk_mom_break_peer=True; rank hot_score; list ohlc_hot; ret5=+6.6; leftover $1239.42",
+        "shares": 25,
+        "ticker": "FRO"
+      }
+    },
+    "yday_equity": 10031.73
+  }
+}

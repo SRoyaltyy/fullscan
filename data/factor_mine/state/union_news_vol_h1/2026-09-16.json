@@ -1,0 +1,71 @@
+{
+  "buys": [
+    "WAY",
+    "CRUS"
+  ],
+  "cash": 139.61,
+  "date": "2026-09-16",
+  "equity": 9212.04,
+  "fees": 4.622,
+  "fills": [
+    {
+      "fees": 2.521,
+      "pnl": null,
+      "price": 26.27,
+      "shares": 177,
+      "side": "BUY",
+      "ticker": "WAY"
+    },
+    {
+      "fees": 2.101,
+      "pnl": null,
+      "price": 123.09,
+      "shares": 37,
+      "side": "BUY",
+      "ticker": "CRUS"
+    }
+  ],
+  "holdings": [
+    "CRUS",
+    "WAY"
+  ],
+  "mean": -1.4581,
+  "n_trades_today": 2,
+  "recipe": "union_news_vol_h1",
+  "sells": [],
+  "state": {
+    "after": "2026-09-16",
+    "cash": 139.61,
+    "pos": {
+      "CRUS": {
+        "close_px": 118.0,
+        "cost": 4556.430864501953,
+        "entry_date": "2026-09-16",
+        "entry_px": 123.08999633789062,
+        "fee_in": 2.101,
+        "last_px": 123.08999633789062,
+        "min_hold": 1,
+        "notional": 4554.329864501953,
+        "peak_px": 123.08999633789062,
+        "reason": "combo gate; gate news=good,vol=good; list ohlc_hot; \ud83d\udd35; ret5=+10.3; leftover $4674.18",
+        "shares": 37,
+        "ticker": "CRUS"
+      },
+      "WAY": {
+        "close_px": 26.59000015258789,
+        "cost": 4652.31108102417,
+        "entry_date": "2026-09-16",
+        "entry_px": 26.270000457763672,
+        "fee_in": 2.521,
+        "last_px": 26.270000457763672,
+        "min_hold": 1,
+        "notional": 4649.79008102417,
+        "peak_px": 26.270000457763672,
+        "reason": "combo gate; gate news=good,vol=good; list yday_gainer,ohlc_hot; \ud83d\udd35; \u26aa; ret5=+10.0; leftover $4674.18",
+        "shares": 177,
+        "ticker": "WAY"
+      }
+    },
+    "yday_equity": 9212.04
+  }
+}

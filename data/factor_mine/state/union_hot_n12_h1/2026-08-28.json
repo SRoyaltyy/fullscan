@@ -1,0 +1,311 @@
+{
+  "buys": [
+    "CAPR",
+    "MRNA",
+    "ANF",
+    "SNPS",
+    "SRPT",
+    "NEO",
+    "VYX",
+    "NCNO",
+    "DJT",
+    "FROG",
+    "SLI",
+    "CHRS"
+  ],
+  "cash": 517.42,
+  "date": "2026-08-28",
+  "equity": 9762.51,
+  "fees": 32.5006,
+  "fills": [
+    {
+      "fees": 2.245,
+      "pnl": null,
+      "price": 9.73,
+      "shares": 85,
+      "side": "BUY",
+      "ticker": "CAPR"
+    },
+    {
+      "fees": 2.008,
+      "pnl": null,
+      "price": 137.19,
+      "shares": 6,
+      "side": "BUY",
+      "ticker": "MRNA"
+    },
+    {
+      "fees": 2.005,
+      "pnl": null,
+      "price": 146.07,
+      "shares": 5,
+      "side": "BUY",
+      "ticker": "ANF"
+    },
+    {
+      "fees": 1.993,
+      "pnl": null,
+      "price": 461.85,
+      "shares": 1,
+      "side": "BUY",
+      "ticker": "SNPS"
+    },
+    {
+      "fees": 2.104,
+      "pnl": null,
+      "price": 21.49,
+      "shares": 38,
+      "side": "BUY",
+      "ticker": "SRPT"
+    },
+    {
+      "fees": 2.125,
+      "pnl": null,
+      "price": 18.36,
+      "shares": 45,
+      "side": "BUY",
+      "ticker": "NEO"
+    },
+    {
+      "fees": 2.263,
+      "pnl": null,
+      "price": 9.13,
+      "shares": 91,
+      "side": "BUY",
+      "ticker": "VYX"
+    },
+    {
+      "fees": 2.095,
+      "pnl": null,
+      "price": 23.3,
+      "shares": 35,
+      "side": "BUY",
+      "ticker": "NCNO"
+    },
+    {
+      "fees": 2.245,
+      "pnl": null,
+      "price": 9.72,
+      "shares": 85,
+      "side": "BUY",
+      "ticker": "DJT"
+    },
+    {
+      "fees": 2.014,
+      "pnl": null,
+      "price": 103.655,
+      "shares": 8,
+      "side": "BUY",
+      "ticker": "FROG"
+    },
+    {
+      "fees": 3.999,
+      "pnl": null,
+      "price": 2.68,
+      "shares": 310,
+      "side": "BUY",
+      "ticker": "SLI"
+    },
+    {
+      "fees": 7.4046,
+      "pnl": null,
+      "price": 1.45,
+      "shares": 574,
+      "side": "BUY",
+      "ticker": "CHRS"
+    }
+  ],
+  "holdings": [
+    "ANF",
+    "CAPR",
+    "CHRS",
+    "DJT",
+    "FROG",
+    "MRNA",
+    "NCNO",
+    "NEO",
+    "SLI",
+    "SNPS",
+    "SRPT",
+    "VYX"
+  ],
+  "mean": -2.3749,
+  "n_trades_today": 12,
+  "recipe": "union_hot_n12_h1",
+  "sells": [],
+  "state": {
+    "after": "2026-08-28",
+    "cash": 517.42,
+    "pos": {
+      "ANF": {
+        "close_px": 148.4199981689453,
+        "cost": 732.3550366210937,
+        "entry_date": "2026-08-28",
+        "entry_px": 146.07000732421875,
+        "fee_in": 2.005,
+        "last_px": 146.07000732421875,
+        "min_hold": 1,
+        "notional": 730.3500366210938,
+        "peak_px": 146.07000732421875,
+        "reason": "top 12 by hot; rank hot_score; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+38.8; leftover $833.33",
+        "shares": 5,
+        "ticker": "ANF"
+      },
+      "CAPR": {
+        "close_px": 9.59000015258789,
+        "cost": 829.2949610900879,
+        "entry_date": "2026-08-28",
+        "entry_px": 9.729999542236328,
+        "fee_in": 2.245,
+        "last_px": 9.729999542236328,
+        "min_hold": 1,
+        "notional": 827.0499610900879,
+        "peak_px": 9.729999542236328,
+        "reason": "top 12 by hot; rank hot_score; list yday_gainer,yday_mover; ret5=+47.1; leftover $833.33",
+        "shares": 85,
+        "ticker": "CAPR"
+      },
+      "CHRS": {
+        "close_px": 1.409999966621399,
+        "cost": 839.7046273704528,
+        "entry_date": "2026-08-28",
+        "entry_px": 1.4500000476837158,
+        "fee_in": 7.4046,
+        "last_px": 1.4500000476837158,
+        "min_hold": 1,
+        "notional": 832.3000273704529,
+        "peak_px": 1.4500000476837158,
+        "reason": "top 12 by hot; rank hot_score; list ohlc_hot; ret5=+10.6; leftover $833.33",
+        "shares": 574,
+        "ticker": "CHRS"
+      },
+      "DJT": {
+        "close_px": 9.635000228881836,
+        "cost": 828.4450226974487,
+        "entry_date": "2026-08-28",
+        "entry_px": 9.720000267028809,
+        "fee_in": 2.245,
+        "last_px": 9.720000267028809,
+        "min_hold": 1,
+        "notional": 826.2000226974487,
+        "peak_px": 9.720000267028809,
+        "reason": "top 12 by hot; rank hot_score; list ohlc_hot; ret5=+14.8; leftover $833.33",
+        "shares": 85,
+        "ticker": "DJT"
+      },
+      "FROG": {
+        "close_px": 98.73999786376953,
+        "cost": 831.253990234375,
+        "entry_date": "2026-08-28",
+        "entry_px": 103.65499877929688,
+        "fee_in": 2.014,
+        "last_px": 103.65499877929688,
+        "min_hold": 1,
+        "notional": 829.239990234375,
+        "peak_px": 103.65499877929688,
+        "reason": "top 12 by hot; rank hot_score; list ohlc_hot; \ud83d\udd35; ret5=+15.9; leftover $833.33",
+        "shares": 8,
+        "ticker": "FROG"
+      },
+      "MRNA": {
+        "close_px": 137.99000549316406,
+        "cost": 825.1480146484375,
+        "entry_date": "2026-08-28",
+        "entry_px": 137.19000244140625,
+        "fee_in": 2.008,
+        "last_px": 137.19000244140625,
+        "min_hold": 1,
+        "notional": 823.1400146484375,
+        "peak_px": 137.19000244140625,
+        "reason": "top 12 by hot; rank hot_score; list ohlc_hot; ret5=+7.1; leftover $833.33",
+        "shares": 6,
+        "ticker": "MRNA"
+      },
+      "NCNO": {
+        "close_px": 22.989999771118164,
+        "cost": 817.5949732971192,
+        "entry_date": "2026-08-28",
+        "entry_px": 23.299999237060547,
+        "fee_in": 2.095,
+        "last_px": 23.299999237060547,
+        "min_hold": 1,
+        "notional": 815.4999732971191,
+        "peak_px": 23.299999237060547,
+        "reason": "top 12 by hot; rank hot_score; list ohlc_hot; \ud83d\udd35; ret5=+14.5; leftover $833.33",
+        "shares": 35,
+        "ticker": "NCNO"
+      },
+      "NEO": {
+        "close_px": 18.049999237060547,
+        "cost": 828.3250274658203,
+        "entry_date": "2026-08-28",
+        "entry_px": 18.360000610351562,
+        "fee_in": 2.125,
+        "last_px": 18.360000610351562,
+        "min_hold": 1,
+        "notional": 826.2000274658203,
+        "peak_px": 18.360000610351562,
+        "reason": "top 12 by hot; rank hot_score; list ohlc_hot; ret5=+12.8; leftover $833.33",
+        "shares": 45,
+        "ticker": "NEO"
+      },
+      "SLI": {
+        "close_px": 2.549999952316284,
+        "cost": 834.7990206947327,
+        "entry_date": "2026-08-28",
+        "entry_px": 2.680000066757202,
+        "fee_in": 3.999,
+        "last_px": 2.680000066757202,
+        "min_hold": 1,
+        "notional": 830.8000206947327,
+        "peak_px": 2.680000066757202,
+        "reason": "top 12 by hot; rank hot_score; list flatten,ohlc_hot; ret5=+16.3; leftover $833.33",
+        "shares": 310,
+        "ticker": "SLI"
+      },
+      "SNPS": {
+        "close_px": 442.6099853515625,
+        "cost": 463.8430061035156,
+        "entry_date": "2026-08-28",
+        "entry_px": 461.8500061035156,
+        "fee_in": 1.993,
+        "last_px": 461.8500061035156,
+        "min_hold": 1,
+        "notional": 461.8500061035156,
+        "peak_px": 461.8500061035156,
+        "reason": "top 12 by hot; rank hot_score; list ohlc_hot; ret5=+16.8; leftover $833.33",
+        "shares": 1,
+        "ticker": "SNPS"
+      },
+      "SRPT": {
+        "close_px": 20.860000610351562,
+        "cost": 818.7239913024903,
+        "entry_date": "2026-08-28",
+        "entry_px": 21.489999771118164,
+        "fee_in": 2.104,
+        "last_px": 21.489999771118164,
+        "min_hold": 1,
+        "notional": 816.6199913024902,
+        "peak_px": 21.489999771118164,
+        "reason": "top 12 by hot; rank hot_score; list ohlc_hot; ret5=+12.3; leftover $833.33",
+        "shares": 38,
+        "ticker": "SRPT"
+      },
+      "VYX": {
+        "close_px": 8.779999732971191,
+        "cost": 833.0930104141236,
+        "entry_date": "2026-08-28",
+        "entry_px": 9.130000114440918,
+        "fee_in": 2.263,
+        "last_px": 9.130000114440918,
+        "min_hold": 1,
+        "notional": 830.8300104141235,
+        "peak_px": 9.130000114440918,
+        "reason": "top 12 by hot; rank hot_score; list yday_gainer; \ud83d\udd35; ret5=+20.0; leftover $833.33",
+        "shares": 91,
+        "ticker": "VYX"
+      }
+    },
+    "yday_equity": 9762.51
+  }
+}

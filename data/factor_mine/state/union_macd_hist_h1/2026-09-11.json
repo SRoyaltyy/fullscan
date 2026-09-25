@@ -1,0 +1,215 @@
+{
+  "buys": [
+    "APH",
+    "SANM",
+    "SION",
+    "SWKS",
+    "QRVO",
+    "ASO",
+    "ORCL",
+    "COHU"
+  ],
+  "cash": 319.44,
+  "date": "2026-09-11",
+  "equity": 10183.78,
+  "fees": 16.694,
+  "fills": [
+    {
+      "fees": 2.035,
+      "pnl": null,
+      "price": 82.42,
+      "shares": 15,
+      "side": "BUY",
+      "ticker": "APH"
+    },
+    {
+      "fees": 2.008,
+      "pnl": null,
+      "price": 206.84,
+      "shares": 6,
+      "side": "BUY",
+      "ticker": "SANM"
+    },
+    {
+      "fees": 2.473,
+      "pnl": null,
+      "price": 7.79,
+      "shares": 161,
+      "side": "BUY",
+      "ticker": "SION"
+    },
+    {
+      "fees": 2.032,
+      "pnl": null,
+      "price": 84.27,
+      "shares": 14,
+      "side": "BUY",
+      "ticker": "SWKS"
+    },
+    {
+      "fees": 2.023,
+      "pnl": null,
+      "price": 112.835,
+      "shares": 11,
+      "side": "BUY",
+      "ticker": "QRVO"
+    },
+    {
+      "fees": 2.056,
+      "pnl": null,
+      "price": 54.91,
+      "shares": 22,
+      "side": "BUY",
+      "ticker": "ASO"
+    },
+    {
+      "fees": 2.011,
+      "pnl": null,
+      "price": 164.43,
+      "shares": 7,
+      "side": "BUY",
+      "ticker": "ORCL"
+    },
+    {
+      "fees": 2.056,
+      "pnl": null,
+      "price": 56.09,
+      "shares": 22,
+      "side": "BUY",
+      "ticker": "COHU"
+    }
+  ],
+  "holdings": [
+    "APH",
+    "ASO",
+    "COHU",
+    "ORCL",
+    "QRVO",
+    "SANM",
+    "SION",
+    "SWKS"
+  ],
+  "mean": 1.0131,
+  "n_trades_today": 8,
+  "recipe": "union_macd_hist_h1",
+  "sells": [],
+  "state": {
+    "after": "2026-09-11",
+    "cash": 319.44,
+    "pos": {
+      "APH": {
+        "close_px": 83.91999816894531,
+        "cost": 1238.3349725341798,
+        "entry_date": "2026-09-11",
+        "entry_px": 82.41999816894531,
+        "fee_in": 2.035,
+        "last_px": 82.41999816894531,
+        "min_hold": 1,
+        "notional": 1236.2999725341797,
+        "peak_px": 82.41999816894531,
+        "reason": "rank by macd_hist; rank macd_hist; list ohlc_hot; \ud83d\udd35; ret5=-2.2; leftover $1260.20",
+        "shares": 15,
+        "ticker": "APH"
+      },
+      "ASO": {
+        "close_px": 55.36000061035156,
+        "cost": 1210.0759966430664,
+        "entry_date": "2026-09-11",
+        "entry_px": 54.90999984741211,
+        "fee_in": 2.056,
+        "last_px": 54.90999984741211,
+        "min_hold": 1,
+        "notional": 1208.0199966430664,
+        "peak_px": 54.90999984741211,
+        "reason": "rank by macd_hist; rank macd_hist; list yday_gainer; \ud83d\udd35; ret5=+24.1; leftover $1260.20",
+        "shares": 22,
+        "ticker": "ASO"
+      },
+      "COHU": {
+        "close_px": 57.08000183105469,
+        "cost": 1236.0360033569336,
+        "entry_date": "2026-09-11",
+        "entry_px": 56.09000015258789,
+        "fee_in": 2.056,
+        "last_px": 56.09000015258789,
+        "min_hold": 1,
+        "notional": 1233.9800033569336,
+        "peak_px": 56.09000015258789,
+        "reason": "rank by macd_hist; rank macd_hist; list flatten; \ud83d\udd35; \u26aa; ret5=+19.0; leftover $1260.20",
+        "shares": 22,
+        "ticker": "COHU"
+      },
+      "ORCL": {
+        "close_px": 150.27999877929688,
+        "cost": 1153.0209487304687,
+        "entry_date": "2026-09-11",
+        "entry_px": 164.42999267578125,
+        "fee_in": 2.011,
+        "last_px": 164.42999267578125,
+        "min_hold": 1,
+        "notional": 1151.0099487304688,
+        "peak_px": 164.42999267578125,
+        "reason": "rank by macd_hist; rank macd_hist; list flatten,earn_react; \ud83d\udd35; \u26aa; ret5=-0.7; leftover $1260.20",
+        "shares": 7,
+        "ticker": "ORCL"
+      },
+      "QRVO": {
+        "close_px": 116.6500015258789,
+        "cost": 1243.2079899291991,
+        "entry_date": "2026-09-11",
+        "entry_px": 112.83499908447266,
+        "fee_in": 2.023,
+        "last_px": 112.83499908447266,
+        "min_hold": 1,
+        "notional": 1241.1849899291992,
+        "peak_px": 112.83499908447266,
+        "reason": "rank by macd_hist; rank macd_hist; list yday_gainer,ohlc_hot; \ud83d\udd35; ret5=+11.9; leftover $1260.20",
+        "shares": 11,
+        "ticker": "QRVO"
+      },
+      "SANM": {
+        "close_px": 216.0,
+        "cost": 1243.0479780273438,
+        "entry_date": "2026-09-11",
+        "entry_px": 206.83999633789062,
+        "fee_in": 2.008,
+        "last_px": 206.83999633789062,
+        "min_hold": 1,
+        "notional": 1241.0399780273438,
+        "peak_px": 206.83999633789062,
+        "reason": "rank by macd_hist; rank macd_hist; list flatten; ret5=+3.9; leftover $1260.20",
+        "shares": 6,
+        "ticker": "SANM"
+      },
+      "SION": {
+        "close_px": 7.849999904632568,
+        "cost": 1256.6629938583374,
+        "entry_date": "2026-09-11",
+        "entry_px": 7.789999961853027,
+        "fee_in": 2.473,
+        "last_px": 7.789999961853027,
+        "min_hold": 1,
+        "notional": 1254.1899938583374,
+        "peak_px": 7.789999961853027,
+        "reason": "rank by macd_hist; rank macd_hist; list ohlc_hot; ret5=+12.9; leftover $1260.20",
+        "shares": 161,
+        "ticker": "SION"
+      },
+      "SWKS": {
+        "close_px": 88.3499984741211,
+        "cost": 1181.8119530029296,
+        "entry_date": "2026-09-11",
+        "entry_px": 84.2699966430664,
+        "fee_in": 2.032,
+        "last_px": 84.2699966430664,
+        "min_hold": 1,
+        "notional": 1179.7799530029297,
+        "peak_px": 84.2699966430664,
+        "reason": "rank by macd_hist; rank macd_hist; list yday_gainer,ohlc_hot; \u26aa; ret5=+17.5; leftover $1260.20",
+        "shares": 14,
+        "ticker": "SWKS"
+      }
+    },
+    "yday_equity": 10183.78
+  }
+}

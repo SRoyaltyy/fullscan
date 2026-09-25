@@ -1,0 +1,64 @@
+{
+  "buys": [],
+  "cash": 12424.33,
+  "date": "2026-09-24",
+  "equity": 9745.29,
+  "fees": 6.294,
+  "fills": [
+    {
+      "fees": 2.119,
+      "pnl": -3.91,
+      "price": 58.0,
+      "shares": 43,
+      "side": "COVER",
+      "ticker": "BAND"
+    },
+    {
+      "fees": 2.122,
+      "pnl": -21.47,
+      "price": 37.51,
+      "shares": 44,
+      "side": "COVER",
+      "ticker": "FIVN"
+    },
+    {
+      "fees": 2.053,
+      "pnl": 94.92,
+      "price": 112.13,
+      "shares": 21,
+      "side": "COVER",
+      "ticker": "HALO"
+    }
+  ],
+  "holdings": [
+    "AEHL"
+  ],
+  "mean": -1.635,
+  "n_trades_today": 3,
+  "recipe": "short_news_r_h1",
+  "sells": [
+    "BAND",
+    "FIVN",
+    "HALO"
+  ],
+  "state": {
+    "after": "2026-09-24",
+    "cash": 12424.33,
+    "pos": {
+      "AEHL": {
+        "close_px": 8.960000038146973,
+        "cost": 3.994164111463991,
+        "entry_date": "2026-09-21",
+        "entry_px": 8.260000228881836,
+        "fee_in": 3.994164111463991,
+        "last_px": 8.210000038146973,
+        "notional": 2469.740068435669,
+        "peak_px": 7.619999885559082,
+        "reason": "news\ud83d\udd34; gate news=bad; list yday_mover; ret5=+7.7; leftover $2476.44",
+        "shares": 299,
+        "ticker": "AEHL"
+      }
+    },
+    "yday_equity": 9745.29
+  }
+}

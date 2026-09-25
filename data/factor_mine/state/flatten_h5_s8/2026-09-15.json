@@ -1,0 +1,92 @@
+{
+  "buys": [],
+  "cash": 6272.0,
+  "date": "2026-09-15",
+  "equity": 8864.61,
+  "fees": 2.046,
+  "fills": [
+    {
+      "fees": 2.046,
+      "pnl": -64.31,
+      "price": 51.07,
+      "shares": 12,
+      "side": "SELL",
+      "ticker": "COHU"
+    }
+  ],
+  "holdings": [
+    "AUPH",
+    "NVT",
+    "OVID",
+    "SANM"
+  ],
+  "mean": -0.2453,
+  "n_trades_today": 1,
+  "recipe": "flatten_h5_s8",
+  "sells": [
+    "COHU"
+  ],
+  "state": {
+    "after": "2026-09-15",
+    "cash": 6272.0,
+    "pos": {
+      "AUPH": {
+        "close_px": 16.1299991607666,
+        "cost": 718.4420302124023,
+        "entry_date": "2026-09-11",
+        "entry_px": 16.280000686645508,
+        "fee_in": 2.122,
+        "last_px": 16.350000381469727,
+        "min_hold": 5,
+        "notional": 716.3200302124023,
+        "peak_px": 16.350000381469727,
+        "reason": "flatten hold 5, stop \u22128% at 09:30 even inside hold; list flatten; wish-list (live io HOLD \u2014 not a ticket); ret5=-0.1; leftover $727.78",
+        "shares": 44,
+        "ticker": "AUPH"
+      },
+      "NVT": {
+        "close_px": 146.8000030517578,
+        "cost": 633.1219951171875,
+        "entry_date": "2026-09-11",
+        "entry_px": 157.77999877929688,
+        "fee_in": 2.002,
+        "last_px": 151.1199951171875,
+        "min_hold": 5,
+        "notional": 631.1199951171875,
+        "peak_px": 157.77999877929688,
+        "reason": "flatten hold 5, stop \u22128% at 09:30 even inside hold; list flatten; wish-list (live io HOLD \u2014 not a ticket); \ud83d\udd35; ret5=+2.0; leftover $727.78",
+        "shares": 4,
+        "ticker": "NVT"
+      },
+      "OVID": {
+        "close_px": 2.7100000381469727,
+        "cost": 729.6114050735474,
+        "entry_date": "2026-09-11",
+        "entry_px": 2.7300000190734863,
+        "fee_in": 3.4314,
+        "last_px": 2.7300000190734863,
+        "min_hold": 5,
+        "notional": 726.1800050735474,
+        "peak_px": 2.755000114440918,
+        "reason": "flatten hold 5, stop \u22128% at 09:30 even inside hold; list flatten; wish-list (live io HOLD \u2014 not a ticket); ret5=-5.4; leftover $727.78",
+        "shares": 266,
+        "ticker": "OVID"
+      },
+      "SANM": {
+        "close_px": 191.61000061035156,
+        "cost": 622.5189890136719,
+        "entry_date": "2026-09-11",
+        "entry_px": 206.83999633789062,
+        "fee_in": 1.999,
+        "last_px": 198.32000732421875,
+        "min_hold": 5,
+        "notional": 620.5199890136719,
+        "peak_px": 206.83999633789062,
+        "reason": "flatten hold 5, stop \u22128% at 09:30 even inside hold; list flatten; wish-list (live io HOLD \u2014 not a ticket); ret5=+3.9; leftover $727.78",
+        "shares": 3,
+        "ticker": "SANM"
+      }
+    },
+    "yday_equity": 8864.61
+  }
+}

@@ -1,0 +1,143 @@
+{
+  "buys": [
+    "A",
+    "HUM",
+    "PGEN",
+    "NEO",
+    "UMC"
+  ],
+  "cash": 161.31,
+  "date": "2026-09-21",
+  "equity": 9928.69,
+  "fees": 11.8276,
+  "fills": [
+    {
+      "fees": 2.026,
+      "pnl": null,
+      "price": 157.87,
+      "shares": 12,
+      "side": "BUY",
+      "ticker": "A"
+    },
+    {
+      "fees": 2.005,
+      "pnl": null,
+      "price": 386.2,
+      "shares": 5,
+      "side": "BUY",
+      "ticker": "HUM"
+    },
+    {
+      "fees": 3.2766,
+      "pnl": null,
+      "price": 7.84,
+      "shares": 254,
+      "side": "BUY",
+      "ticker": "PGEN"
+    },
+    {
+      "fees": 2.29,
+      "pnl": null,
+      "price": 19.92,
+      "shares": 100,
+      "side": "BUY",
+      "ticker": "NEO"
+    },
+    {
+      "fees": 2.23,
+      "pnl": null,
+      "price": 24.93,
+      "shares": 80,
+      "side": "BUY",
+      "ticker": "UMC"
+    }
+  ],
+  "holdings": [
+    "A",
+    "HUM",
+    "NEO",
+    "PGEN",
+    "UMC"
+  ],
+  "mean": -0.4776,
+  "n_trades_today": 5,
+  "recipe": "union_flow_in_h1",
+  "sells": [],
+  "state": {
+    "after": "2026-09-21",
+    "cash": 161.31,
+    "pos": {
+      "A": {
+        "close_px": 161.94000244140625,
+        "cost": 1896.46594140625,
+        "entry_date": "2026-09-21",
+        "entry_px": 157.8699951171875,
+        "fee_in": 2.026,
+        "last_px": 157.8699951171875,
+        "min_hold": 1,
+        "notional": 1894.43994140625,
+        "peak_px": 157.8699951171875,
+        "reason": "union \u2229 flow_in, no \ud83d\udea8; gate flow_in=True; list flatten; \ud83d\udd35; \u26aa; ret5=+6.5; leftover $1995.27",
+        "shares": 12,
+        "ticker": "A"
+      },
+      "HUM": {
+        "close_px": 378.5799865722656,
+        "cost": 1933.0050610351564,
+        "entry_date": "2026-09-21",
+        "entry_px": 386.20001220703125,
+        "fee_in": 2.005,
+        "last_px": 386.20001220703125,
+        "min_hold": 1,
+        "notional": 1931.0000610351562,
+        "peak_px": 386.20001220703125,
+        "reason": "union \u2229 flow_in, no \ud83d\udea8; gate flow_in=True; list flatten; \ud83d\udd35; ret5=-5.8; leftover $1995.27",
+        "shares": 5,
+        "ticker": "HUM"
+      },
+      "NEO": {
+        "close_px": 19.40999984741211,
+        "cost": 1994.2900076293945,
+        "entry_date": "2026-09-21",
+        "entry_px": 19.920000076293945,
+        "fee_in": 2.29,
+        "last_px": 19.920000076293945,
+        "min_hold": 1,
+        "notional": 1992.0000076293945,
+        "peak_px": 19.920000076293945,
+        "reason": "union \u2229 flow_in, no \ud83d\udea8; gate flow_in=True; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+15.0; leftover $1995.27",
+        "shares": 100,
+        "ticker": "NEO"
+      },
+      "PGEN": {
+        "close_px": 7.699999809265137,
+        "cost": 1994.6366387573241,
+        "entry_date": "2026-09-21",
+        "entry_px": 7.840000152587891,
+        "fee_in": 3.2766,
+        "last_px": 7.840000152587891,
+        "min_hold": 1,
+        "notional": 1991.3600387573242,
+        "peak_px": 7.840000152587891,
+        "reason": "union \u2229 flow_in, no \ud83d\udea8; gate flow_in=True; list flatten; \u26aa; ret5=+13.6; leftover $1995.27",
+        "shares": 254,
+        "ticker": "PGEN"
+      },
+      "UMC": {
+        "close_px": 25.43000030517578,
+        "cost": 1996.6300244140625,
+        "entry_date": "2026-09-21",
+        "entry_px": 24.93000030517578,
+        "fee_in": 2.23,
+        "last_px": 24.93000030517578,
+        "min_hold": 1,
+        "notional": 1994.4000244140625,
+        "peak_px": 24.93000030517578,
+        "reason": "union \u2229 flow_in, no \ud83d\udea8; gate flow_in=True; list ohlc_hot; ret5=+8.7; leftover $1995.27",
+        "shares": 80,
+        "ticker": "UMC"
+      }
+    },
+    "yday_equity": 9928.69
+  }
+}

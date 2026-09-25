@@ -1,0 +1,132 @@
+{
+  "buys": [
+    "SMTC",
+    "GME",
+    "JBHT"
+  ],
+  "cash": 150.55,
+  "date": "2026-09-17",
+  "equity": 8668.13,
+  "fees": 14.9938,
+  "fills": [
+    {
+      "fees": 2.028,
+      "pnl": -22.16,
+      "price": 120.07,
+      "shares": 6,
+      "side": "SELL",
+      "ticker": "CRUS"
+    },
+    {
+      "fees": 2.5378,
+      "pnl": 75.58,
+      "price": 37.64,
+      "shares": 158,
+      "side": "SELL",
+      "ticker": "DBX"
+    },
+    {
+      "fees": 2.07,
+      "pnl": -52.52,
+      "price": 37.57,
+      "shares": 20,
+      "side": "SELL",
+      "ticker": "SM"
+    },
+    {
+      "fees": 2.103,
+      "pnl": 3.25,
+      "price": 26.51,
+      "shares": 31,
+      "side": "SELL",
+      "ticker": "WAY"
+    },
+    {
+      "fees": 2.092,
+      "pnl": null,
+      "price": 170.85,
+      "shares": 34,
+      "side": "BUY",
+      "ticker": "SMTC"
+    },
+    {
+      "fees": 2.158,
+      "pnl": null,
+      "price": 22.12,
+      "shares": 56,
+      "side": "BUY",
+      "ticker": "GME"
+    },
+    {
+      "fees": 2.005,
+      "pnl": null,
+      "price": 238.6,
+      "shares": 5,
+      "side": "BUY",
+      "ticker": "JBHT"
+    }
+  ],
+  "holdings": [
+    "GME",
+    "JBHT",
+    "SMTC"
+  ],
+  "mean": 2.9001,
+  "n_trades_today": 7,
+  "recipe": "union_news_or_net4_conv_h1",
+  "sells": [
+    "CRUS",
+    "DBX",
+    "SM",
+    "WAY"
+  ],
+  "state": {
+    "after": "2026-09-17",
+    "cash": 150.55,
+    "pos": {
+      "GME": {
+        "close_px": 22.770000457763672,
+        "cost": 1240.8780469970702,
+        "entry_date": "2026-09-17",
+        "entry_px": 22.1200008392334,
+        "fee_in": 2.158,
+        "last_px": 22.1200008392334,
+        "min_hold": 1,
+        "notional": 1238.7200469970703,
+        "peak_px": 22.1200008392334,
+        "reason": "OR news + net\u22654; 70% leftover if #1 net \u2265 5; gate news_or_headline=True,cam_net_min=4; rank cond; list ohlc_hot; \ud83d\udd35; ret5=+10.5; leftover $1259.61",
+        "shares": 56,
+        "ticker": "GME"
+      },
+      "JBHT": {
+        "close_px": 236.8000030517578,
+        "cost": 1195.0050305175782,
+        "entry_date": "2026-09-17",
+        "entry_px": 238.60000610351562,
+        "fee_in": 2.005,
+        "last_px": 238.60000610351562,
+        "min_hold": 1,
+        "notional": 1193.0000305175781,
+        "peak_px": 238.60000610351562,
+        "reason": "OR news + net\u22654; 70% leftover if #1 net \u2265 5; gate news_or_headline=True,cam_net_min=4; rank cond; list yday_mover; ret5=-11.6; leftover $1259.61",
+        "shares": 5,
+        "ticker": "JBHT"
+      },
+      "SMTC": {
+        "close_px": 178.19000244140625,
+        "cost": 5810.992207519531,
+        "entry_date": "2026-09-17",
+        "entry_px": 170.85000610351562,
+        "fee_in": 2.092,
+        "last_px": 170.85000610351562,
+        "min_hold": 1,
+        "notional": 5808.900207519531,
+        "peak_px": 170.85000610351562,
+        "reason": "OR news + net\u22654; 70% leftover if #1 net \u2265 5; gate news_or_headline=True,cam_net_min=4; rank cond; list probable,yday_gainer,yday_mover; \ud83d\udd35; ret5=+2.2; leftover $5878.19",
+        "shares": 34,
+        "ticker": "SMTC"
+      }
+    },
+    "yday_equity": 8668.13
+  }
+}

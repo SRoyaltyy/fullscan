@@ -1,0 +1,81 @@
+{
+  "buys": [],
+  "cash": 291.41,
+  "date": "2026-09-09",
+  "equity": 9310.42,
+  "fees": 0,
+  "fills": [],
+  "holdings": [
+    "BE",
+    "CRM",
+    "FRNM",
+    "MRX"
+  ],
+  "mean": -1.9153,
+  "n_trades_today": 0,
+  "recipe": "union_news_g_conv_h3",
+  "sells": [],
+  "state": {
+    "after": "2026-09-09",
+    "cash": 291.41,
+    "pos": {
+      "BE": {
+        "close_px": 269.2799987792969,
+        "cost": 949.282029296875,
+        "entry_date": "2026-09-04",
+        "entry_px": 236.82000732421875,
+        "fee_in": 2.002,
+        "last_px": 272.989990234375,
+        "min_hold": 3,
+        "notional": 947.280029296875,
+        "peak_px": 272.989990234375,
+        "reason": "merged news\ud83d\udfe2 rank cameras; 70% leftover if #1 net \u2265 5; gate news=good; rank cond; list ohlc_hot; ret5=+8.1; leftover $970.64",
+        "shares": 4,
+        "ticker": "BE"
+      },
+      "CRM": {
+        "close_px": 244.16000366210938,
+        "cost": 6586.064633789062,
+        "entry_date": "2026-09-04",
+        "entry_px": 263.3599853515625,
+        "fee_in": 2.065,
+        "last_px": 249.77999877929688,
+        "min_hold": 3,
+        "notional": 6583.9996337890625,
+        "peak_px": 263.3599853515625,
+        "reason": "merged news\ud83d\udfe2 rank cameras; 70% leftover if #1 net \u2265 5; gate news=good; rank cond; list flatten,mover_buy; \ud83d\udd35; \u26aa; ret5=+4.9; leftover $6794.44",
+        "shares": 25,
+        "ticker": "CRM"
+      },
+      "FRNM": {
+        "close_px": 15.75,
+        "cost": 969.7669774932862,
+        "entry_date": "2026-09-04",
+        "entry_px": 16.399999618530273,
+        "fee_in": 2.167,
+        "last_px": 15.960000038146973,
+        "min_hold": 3,
+        "notional": 967.5999774932861,
+        "peak_px": 16.739999771118164,
+        "reason": "merged news\ud83d\udfe2 rank cameras; 70% leftover if #1 net \u2265 5; gate news=good; rank cond; list mover_buy; \ud83d\udd35; \u26aa; ret5=+21.2; leftover $970.64",
+        "shares": 59,
+        "ticker": "FRNM"
+      },
+      "MRX": {
+        "close_px": 75.72000122070312,
+        "cost": 909.8260183105468,
+        "entry_date": "2026-09-04",
+        "entry_px": 75.6500015258789,
+        "fee_in": 2.026,
+        "last_px": 76.5999984741211,
+        "min_hold": 3,
+        "notional": 907.8000183105469,
+        "peak_px": 78.83999633789062,
+        "reason": "merged news\ud83d\udfe2 rank cameras; 70% leftover if #1 net \u2265 5; gate news=good; rank cond; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+6.0; leftover $970.64",
+        "shares": 12,
+        "ticker": "MRX"
+      }
+    },
+    "yday_equity": 9310.42
+  }
+}

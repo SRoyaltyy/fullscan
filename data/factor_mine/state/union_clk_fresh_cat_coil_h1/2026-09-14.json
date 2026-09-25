@@ -1,0 +1,113 @@
+{
+  "buys": [],
+  "cash": 6238.43,
+  "date": "2026-09-14",
+  "equity": 9508.11,
+  "fees": 15.2227,
+  "fills": [
+    {
+      "fees": 2.052,
+      "pnl": -21.16,
+      "price": 81.2,
+      "shares": 14,
+      "side": "SELL",
+      "ticker": "APH"
+    },
+    {
+      "fees": 2.3198,
+      "pnl": -17.74,
+      "price": 11.75,
+      "shares": 101,
+      "side": "SELL",
+      "ticker": "APPS"
+    },
+    {
+      "fees": 2.076,
+      "pnl": 91.57,
+      "price": 56.9,
+      "shares": 22,
+      "side": "SELL",
+      "ticker": "BAND"
+    },
+    {
+      "fees": 6.5691,
+      "pnl": -78.3,
+      "price": 2.26,
+      "shares": 502,
+      "side": "SELL",
+      "ticker": "CYPH"
+    },
+    {
+      "fees": 2.2058,
+      "pnl": -5.69,
+      "price": 18.28,
+      "shares": 65,
+      "side": "SELL",
+      "ticker": "PAYP"
+    }
+  ],
+  "holdings": [
+    "FRO",
+    "NVT",
+    "SANM"
+  ],
+  "mean": -2.5569,
+  "n_trades_today": 5,
+  "recipe": "union_clk_fresh_cat_coil_h1",
+  "sells": [
+    "APH",
+    "APPS",
+    "BAND",
+    "CYPH",
+    "PAYP"
+  ],
+  "state": {
+    "after": "2026-09-14",
+    "cash": 6238.43,
+    "pos": {
+      "FRO": {
+        "close_px": 50.52000045776367,
+        "cost": 1203.3149809265137,
+        "entry_date": "2026-09-11",
+        "entry_px": 48.04999923706055,
+        "fee_in": 2.065,
+        "last_px": 50.25,
+        "min_hold": 1,
+        "notional": 1201.2499809265137,
+        "peak_px": 50.25,
+        "reason": "Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list ohlc_hot; ret5=+6.6; leftover $1201.97",
+        "shares": 25,
+        "ticker": "FRO"
+      },
+      "NVT": {
+        "close_px": 146.63999938964844,
+        "cost": 1106.470991455078,
+        "entry_date": "2026-09-11",
+        "entry_px": 157.77999877929688,
+        "fee_in": 2.011,
+        "last_px": 150.0,
+        "min_hold": 1,
+        "notional": 1104.4599914550781,
+        "peak_px": 157.77999877929688,
+        "reason": "Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list flatten; \ud83d\udd35; ret5=+2.0; leftover $1201.97",
+        "shares": 7,
+        "ticker": "NVT"
+      },
+      "SANM": {
+        "close_px": 196.0399932861328,
+        "cost": 1036.2049816894532,
+        "entry_date": "2026-09-11",
+        "entry_px": 206.83999633789062,
+        "fee_in": 2.005,
+        "last_px": 206.5,
+        "min_hold": 1,
+        "notional": 1034.1999816894531,
+        "peak_px": 206.83999633789062,
+        "reason": "Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list flatten; ret5=+3.9; leftover $1201.97",
+        "shares": 5,
+        "ticker": "SANM"
+      }
+    },
+    "yday_equity": 9508.11
+  }
+}

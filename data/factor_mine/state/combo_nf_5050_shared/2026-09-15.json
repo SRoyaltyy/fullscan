@@ -1,0 +1,101 @@
+{
+  "buys": [],
+  "cash": 6766.6,
+  "date": "2026-09-15",
+  "equity": 9116.95,
+  "fees": 0,
+  "fills": [],
+  "holdings": [
+    "AUPH",
+    "COHU",
+    "NVT",
+    "OVID",
+    "SANM"
+  ],
+  "mean": -0.2587,
+  "n_trades_today": 0,
+  "recipe": "combo_nf_5050_shared",
+  "sells": [],
+  "state": {
+    "after": "2026-09-15",
+    "cash": 6766.6,
+    "pos": {
+      "AUPH": {
+        "close_px": 16.1299991607666,
+        "cost": 539.3290226593018,
+        "entry_date": "2026-09-11",
+        "entry_px": 16.280000686645508,
+        "fee_in": 2.089,
+        "last_px": 16.350000381469727,
+        "notional": 537.2400226593018,
+        "owner": "flatten_h5",
+        "peak_px": 16.350000381469727,
+        "reason": "baseline list, no extra gate; list flatten; wish-list (live io HOLD \u2014 not a ticket); ret5=-0.1; combo leftover $550.13; owner flatten_h5",
+        "shares": 33,
+        "side": "long",
+        "ticker": "AUPH"
+      },
+      "COHU": {
+        "close_px": 49.970001220703125,
+        "cost": 506.827001373291,
+        "entry_date": "2026-09-11",
+        "entry_px": 56.09000015258789,
+        "fee_in": 2.017,
+        "last_px": 51.06999969482422,
+        "notional": 504.810001373291,
+        "owner": "flatten_h5",
+        "peak_px": 56.09000015258789,
+        "reason": "baseline list, no extra gate; list flatten; wish-list (live io HOLD \u2014 not a ticket); \ud83d\udd35; \u26aa; ret5=+19.0; combo leftover $550.13; owner flatten_h5",
+        "shares": 9,
+        "side": "long",
+        "ticker": "COHU"
+      },
+      "NVT": {
+        "close_px": 146.8000030517578,
+        "cost": 475.33899633789065,
+        "entry_date": "2026-09-11",
+        "entry_px": 157.77999877929688,
+        "fee_in": 1.999,
+        "last_px": 151.1199951171875,
+        "notional": 473.3399963378906,
+        "owner": "flatten_h5",
+        "peak_px": 157.77999877929688,
+        "reason": "baseline list, no extra gate; list flatten; wish-list (live io HOLD \u2014 not a ticket); \ud83d\udd35; ret5=+2.0; combo leftover $550.13; owner flatten_h5",
+        "shares": 3,
+        "side": "long",
+        "ticker": "NVT"
+      },
+      "OVID": {
+        "close_px": 2.7100000381469727,
+        "cost": 551.3280038337707,
+        "entry_date": "2026-09-11",
+        "entry_px": 2.7300000190734863,
+        "fee_in": 2.598,
+        "last_px": 2.7300000190734863,
+        "notional": 548.7300038337708,
+        "owner": "flatten_h5",
+        "peak_px": 2.755000114440918,
+        "reason": "baseline list, no extra gate; list flatten; wish-list (live io HOLD \u2014 not a ticket); ret5=-5.4; combo leftover $550.13; owner flatten_h5",
+        "shares": 201,
+        "side": "long",
+        "ticker": "OVID"
+      },
+      "SANM": {
+        "close_px": 191.61000061035156,
+        "cost": 415.67599267578123,
+        "entry_date": "2026-09-11",
+        "entry_px": 206.83999633789062,
+        "fee_in": 1.996,
+        "last_px": 198.32000732421875,
+        "notional": 413.67999267578125,
+        "owner": "flatten_h5",
+        "peak_px": 206.83999633789062,
+        "reason": "baseline list, no extra gate; list flatten; wish-list (live io HOLD \u2014 not a ticket); ret5=+3.9; combo leftover $550.13; owner flatten_h5",
+        "shares": 2,
+        "side": "long",
+        "ticker": "SANM"
+      }
+    },
+    "yday_equity": 9116.95
+  }
+}

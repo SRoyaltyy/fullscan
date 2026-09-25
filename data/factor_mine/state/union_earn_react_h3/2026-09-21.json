@@ -1,0 +1,47 @@
+{
+  "buys": [],
+  "cash": 8672.47,
+  "date": "2026-09-21",
+  "equity": 8686.08,
+  "fees": 2.8261,
+  "fills": [
+    {
+      "fees": 2.8261,
+      "pnl": 9.22,
+      "price": 41.0,
+      "shares": 211,
+      "side": "SELL",
+      "ticker": "TCOM"
+    }
+  ],
+  "holdings": [
+    "ALMU"
+  ],
+  "mean": 0.7606,
+  "n_trades_today": 1,
+  "recipe": "union_earn_react_h3",
+  "sells": [
+    "TCOM"
+  ],
+  "state": {
+    "after": "2026-09-21",
+    "cash": 8672.47,
+    "pos": {
+      "ALMU": {
+        "close_px": 13.609999656677246,
+        "cost": 11.325100038146973,
+        "entry_date": "2026-09-17",
+        "entry_px": 11.210000038146973,
+        "fee_in": 0.1151,
+        "last_px": 13.125,
+        "min_hold": 3,
+        "notional": 11.210000038146973,
+        "peak_px": 13.125,
+        "reason": "union \u2229 earn_react, no \ud83d\udea8; gate earn_react=True; list earn_react; ret5=+1.0; leftover $17.82",
+        "shares": 1,
+        "ticker": "ALMU"
+      }
+    },
+    "yday_equity": 8686.08
+  }
+}

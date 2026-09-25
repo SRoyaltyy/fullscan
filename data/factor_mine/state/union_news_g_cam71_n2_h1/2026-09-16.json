@@ -1,0 +1,71 @@
+{
+  "buys": [
+    "DBX",
+    "WAY"
+  ],
+  "cash": 18.34,
+  "date": "2026-09-16",
+  "equity": 8311.79,
+  "fees": 4.805,
+  "fills": [
+    {
+      "fees": 2.254,
+      "pnl": null,
+      "price": 37.13,
+      "shares": 88,
+      "side": "BUY",
+      "ticker": "DBX"
+    },
+    {
+      "fees": 2.551,
+      "pnl": null,
+      "price": 26.27,
+      "shares": 187,
+      "side": "BUY",
+      "ticker": "WAY"
+    }
+  ],
+  "holdings": [
+    "DBX",
+    "WAY"
+  ],
+  "mean": 1.3252,
+  "n_trades_today": 2,
+  "recipe": "union_news_g_cam71_n2_h1",
+  "sells": [],
+  "state": {
+    "after": "2026-09-16",
+    "cash": 18.34,
+    "pos": {
+      "DBX": {
+        "close_px": 37.7400016784668,
+        "cost": 3269.6940939941405,
+        "entry_date": "2026-09-16",
+        "entry_px": 37.130001068115234,
+        "fee_in": 2.254,
+        "last_px": 37.130001068115234,
+        "min_hold": 1,
+        "notional": 3267.4400939941406,
+        "peak_px": 37.130001068115234,
+        "reason": "topheavy leftover on news\ud83d\udfe2 +7 \u2212\u22641; gate news=good,n_pos_min=7,cam_bad_max=1; rank cond; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+11.3; leftover $3281.23",
+        "shares": 88,
+        "ticker": "DBX"
+      },
+      "WAY": {
+        "close_px": 26.59000015258789,
+        "cost": 4915.041085601807,
+        "entry_date": "2026-09-16",
+        "entry_px": 26.270000457763672,
+        "fee_in": 2.551,
+        "last_px": 26.270000457763672,
+        "min_hold": 1,
+        "notional": 4912.490085601807,
+        "peak_px": 26.270000457763672,
+        "reason": "topheavy leftover on news\ud83d\udfe2 +7 \u2212\u22641; gate news=good,n_pos_min=7,cam_bad_max=1; rank cond; list yday_gainer,ohlc_hot; \ud83d\udd35; \u26aa; ret5=+10.0; leftover $4921.85",
+        "shares": 187,
+        "ticker": "WAY"
+      }
+    },
+    "yday_equity": 8311.79
+  }
+}

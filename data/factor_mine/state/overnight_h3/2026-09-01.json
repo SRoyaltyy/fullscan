@@ -1,0 +1,51 @@
+{
+  "buys": [],
+  "cash": 23.22,
+  "date": "2026-09-01",
+  "equity": 8642.28,
+  "fees": 0,
+  "fills": [],
+  "holdings": [
+    "LX",
+    "SAIC"
+  ],
+  "mean": -9.0983,
+  "n_trades_today": 0,
+  "recipe": "overnight_h3",
+  "sells": [],
+  "state": {
+    "after": "2026-09-01",
+    "cash": 23.22,
+    "pos": {
+      "LX": {
+        "close_px": 0.8820000290870667,
+        "cost": 5055.1988561382295,
+        "entry_date": "2026-08-28",
+        "entry_px": 1.159999966621399,
+        "fee_in": 55.599,
+        "last_px": 1.0099999904632568,
+        "min_hold": 3,
+        "notional": 4999.599856138229,
+        "peak_px": 1.159999966621399,
+        "reason": "baseline list, no extra gate; list overnight; ret5=-13.8; leftover $5000.00",
+        "shares": 4310,
+        "ticker": "LX"
+      },
+      "SAIC": {
+        "close_px": 126.77999877929688,
+        "cost": 4921.584255126953,
+        "entry_date": "2026-08-28",
+        "entry_px": 129.4600067138672,
+        "fee_in": 2.104,
+        "last_px": 127.01000213623047,
+        "min_hold": 3,
+        "notional": 4919.480255126953,
+        "peak_px": 140.38999938964844,
+        "reason": "baseline list, no extra gate; list overnight; ret5=+2.1; leftover $5000.00",
+        "shares": 38,
+        "ticker": "SAIC"
+      }
+    },
+    "yday_equity": 8642.28
+  }
+}

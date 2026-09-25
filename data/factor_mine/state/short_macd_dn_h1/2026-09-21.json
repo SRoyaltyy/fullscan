@@ -1,0 +1,280 @@
+{
+  "buys": [
+    "HUM",
+    "DXCM",
+    "MGTX",
+    "ORBS",
+    "SBET",
+    "SGML",
+    "GLXY",
+    "USDE"
+  ],
+  "cash": 14183.85,
+  "date": "2026-09-21",
+  "equity": 9738.54,
+  "fees": 55.8996,
+  "fills": [
+    {
+      "fees": 2.179,
+      "pnl": -54.16,
+      "price": 10.06,
+      "shares": 63,
+      "side": "COVER",
+      "ticker": "ABSI"
+    },
+    {
+      "fees": 2.113,
+      "pnl": 2.71,
+      "price": 13.9,
+      "shares": 41,
+      "side": "COVER",
+      "ticker": "BHVN"
+    },
+    {
+      "fees": 7.3427,
+      "pnl": 336.11,
+      "price": 0.141,
+      "shares": 1665,
+      "side": "COVER",
+      "ticker": "DCX"
+    },
+    {
+      "fees": 2.482,
+      "pnl": -26.34,
+      "price": 3.71,
+      "shares": 164,
+      "side": "COVER",
+      "ticker": "DDD"
+    },
+    {
+      "fees": 2.041,
+      "pnl": 20.36,
+      "price": 33.0,
+      "shares": 17,
+      "side": "COVER",
+      "ticker": "FIVN"
+    },
+    {
+      "fees": 8.0665,
+      "pnl": -25.88,
+      "price": 0.864,
+      "shares": 693,
+      "side": "COVER",
+      "ticker": "RANI"
+    },
+    {
+      "fees": 2.107,
+      "pnl": 3.94,
+      "price": 14.58,
+      "shares": 39,
+      "side": "COVER",
+      "ticker": "RARE"
+    },
+    {
+      "fees": 7.5268,
+      "pnl": 2.85,
+      "price": 0.94,
+      "shares": 607,
+      "side": "COVER",
+      "ticker": "TLSA"
+    },
+    {
+      "fees": 2.023580822252247,
+      "pnl": null,
+      "price": 386.2,
+      "shares": 1,
+      "side": "SHORT",
+      "ticker": "HUM"
+    },
+    {
+      "fees": 2.042602192081817,
+      "pnl": null,
+      "price": 88.83,
+      "shares": 6,
+      "side": "SHORT",
+      "ticker": "DXCM"
+    },
+    {
+      "fees": 2.1582378085410756,
+      "pnl": null,
+      "price": 13.47,
+      "shares": 44,
+      "side": "SHORT",
+      "ticker": "MGTX"
+    },
+    {
+      "fees": 7.147573972816337,
+      "pnl": null,
+      "price": 1.11,
+      "shares": 545,
+      "side": "SHORT",
+      "ticker": "ORBS"
+    },
+    {
+      "fees": 2.206421917431975,
+      "pnl": null,
+      "price": 9.99,
+      "shares": 60,
+      "side": "SHORT",
+      "ticker": "SBET"
+    },
+    {
+      "fees": 2.203382603109699,
+      "pnl": null,
+      "price": 10.135,
+      "shares": 59,
+      "side": "SHORT",
+      "ticker": "SGML"
+    },
+    {
+      "fees": 2.095352055275277,
+      "pnl": null,
+      "price": 25.95,
+      "shares": 23,
+      "side": "SHORT",
+      "ticker": "GLXY"
+    },
+    {
+      "fees": 2.164446575582844,
+      "pnl": null,
+      "price": 13.05,
+      "shares": 46,
+      "side": "SHORT",
+      "ticker": "USDE"
+    }
+  ],
+  "holdings": [
+    "DXCM",
+    "GLXY",
+    "HUM",
+    "MGTX",
+    "ORBS",
+    "SBET",
+    "SGML",
+    "USDE"
+  ],
+  "mean": -0.865,
+  "n_trades_today": 16,
+  "recipe": "short_macd_dn_h1",
+  "sells": [
+    "ABSI",
+    "BHVN",
+    "DCX",
+    "DDD",
+    "FIVN",
+    "RANI",
+    "RARE",
+    "TLSA"
+  ],
+  "state": {
+    "after": "2026-09-21",
+    "cash": 14183.85,
+    "pos": {
+      "DXCM": {
+        "close_px": 89.16999816894531,
+        "cost": 2.042602192081817,
+        "entry_date": "2026-09-21",
+        "entry_px": 88.83000183105469,
+        "fee_in": 2.042602192081817,
+        "last_px": 88.83000183105469,
+        "notional": 532.9800109863281,
+        "peak_px": 88.83000183105469,
+        "reason": "MACD histogram < 0; gate macd_down=True; list flatten; \ud83d\udd35; \u26aa; ret5=+7.6; leftover $605.91",
+        "shares": 6,
+        "ticker": "DXCM"
+      },
+      "GLXY": {
+        "close_px": 26.06999969482422,
+        "cost": 2.095352055275277,
+        "entry_date": "2026-09-21",
+        "entry_px": 25.950000762939453,
+        "fee_in": 2.095352055275277,
+        "last_px": 25.950000762939453,
+        "notional": 596.8500175476074,
+        "peak_px": 25.950000762939453,
+        "reason": "MACD histogram < 0; gate macd_down=True; list probable,yday_gainer; \ud83d\udd35; ret5=+1.2; leftover $605.91",
+        "shares": 23,
+        "ticker": "GLXY"
+      },
+      "HUM": {
+        "close_px": 378.5799865722656,
+        "cost": 2.023580822252247,
+        "entry_date": "2026-09-21",
+        "entry_px": 386.20001220703125,
+        "fee_in": 2.023580822252247,
+        "last_px": 386.20001220703125,
+        "notional": 386.20001220703125,
+        "peak_px": 386.20001220703125,
+        "reason": "MACD histogram < 0; gate macd_down=True; list flatten; \ud83d\udd35; ret5=-5.8; leftover $605.91",
+        "shares": 1,
+        "ticker": "HUM"
+      },
+      "MGTX": {
+        "close_px": 13.079999923706055,
+        "cost": 2.1582378085410756,
+        "entry_date": "2026-09-21",
+        "entry_px": 13.470000267028809,
+        "fee_in": 2.1582378085410756,
+        "last_px": 13.470000267028809,
+        "notional": 592.6800117492676,
+        "peak_px": 13.470000267028809,
+        "reason": "MACD histogram < 0; gate macd_down=True; list flatten; \ud83d\udd35; \u26aa; ret5=+3.6; leftover $605.91",
+        "shares": 44,
+        "ticker": "MGTX"
+      },
+      "ORBS": {
+        "close_px": 1.0499999523162842,
+        "cost": 7.147573972816337,
+        "entry_date": "2026-09-21",
+        "entry_px": 1.1100000143051147,
+        "fee_in": 7.147573972816337,
+        "last_px": 1.1100000143051147,
+        "notional": 604.9500077962875,
+        "peak_px": 1.1100000143051147,
+        "reason": "MACD histogram < 0; gate macd_down=True; list probable,yday_gainer,yday_mover; ret5=+6.9; leftover $605.91",
+        "shares": 545,
+        "ticker": "ORBS"
+      },
+      "SBET": {
+        "close_px": 9.979999542236328,
+        "cost": 2.206421917431975,
+        "entry_date": "2026-09-21",
+        "entry_px": 9.989999771118164,
+        "fee_in": 2.206421917431975,
+        "last_px": 9.989999771118164,
+        "notional": 599.3999862670898,
+        "peak_px": 9.989999771118164,
+        "reason": "MACD histogram < 0; gate macd_down=True; list probable,yday_gainer; \ud83d\udd35; ret5=+5.3; leftover $605.91",
+        "shares": 60,
+        "ticker": "SBET"
+      },
+      "SGML": {
+        "close_px": 10.270000457763672,
+        "cost": 2.203382603109699,
+        "entry_date": "2026-09-21",
+        "entry_px": 10.135000228881836,
+        "fee_in": 2.203382603109699,
+        "last_px": 10.135000228881836,
+        "notional": 597.9650135040283,
+        "peak_px": 10.135000228881836,
+        "reason": "MACD histogram < 0; gate macd_down=True; list probable,yday_gainer; ret5=+4.9; leftover $605.91",
+        "shares": 59,
+        "ticker": "SGML"
+      },
+      "USDE": {
+        "close_px": 12.600000381469727,
+        "cost": 2.164446575582844,
+        "entry_date": "2026-09-21",
+        "entry_px": 13.050000190734863,
+        "fee_in": 2.164446575582844,
+        "last_px": 13.050000190734863,
+        "notional": 600.3000087738037,
+        "peak_px": 13.050000190734863,
+        "reason": "MACD histogram < 0; gate macd_down=True; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+40.4; leftover $605.91",
+        "shares": 46,
+        "ticker": "USDE"
+      }
+    },
+    "yday_equity": 9738.54
+  }
+}

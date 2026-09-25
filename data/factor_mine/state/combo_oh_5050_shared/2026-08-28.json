@@ -1,0 +1,123 @@
+{
+  "buys": [
+    "CAPR",
+    "MRNA",
+    "ANF",
+    "SNPS"
+  ],
+  "cash": 237.87,
+  "date": "2026-08-28",
+  "equity": 9912.92,
+  "fees": 9.3924,
+  "fills": [
+    {
+      "fees": 3.3024,
+      "pnl": null,
+      "price": 9.73,
+      "shares": 256,
+      "side": "BUY",
+      "ticker": "CAPR"
+    },
+    {
+      "fees": 2.044,
+      "pnl": null,
+      "price": 137.19,
+      "shares": 18,
+      "side": "BUY",
+      "ticker": "MRNA"
+    },
+    {
+      "fees": 2.041,
+      "pnl": null,
+      "price": 146.07,
+      "shares": 17,
+      "side": "BUY",
+      "ticker": "ANF"
+    },
+    {
+      "fees": 2.005,
+      "pnl": null,
+      "price": 461.85,
+      "shares": 5,
+      "side": "BUY",
+      "ticker": "SNPS"
+    }
+  ],
+  "holdings": [
+    "ANF",
+    "CAPR",
+    "MRNA",
+    "SNPS"
+  ],
+  "mean": -0.8708,
+  "n_trades_today": 4,
+  "recipe": "combo_oh_5050_shared",
+  "sells": [],
+  "state": {
+    "after": "2026-08-28",
+    "cash": 237.87,
+    "pos": {
+      "ANF": {
+        "close_px": 148.4199981689453,
+        "cost": 2485.231124511719,
+        "entry_date": "2026-08-28",
+        "entry_px": 146.07000732421875,
+        "fee_in": 2.041,
+        "last_px": 146.07000732421875,
+        "notional": 2483.1901245117188,
+        "owner": "union_hot_n4_holdup",
+        "peak_px": 146.07000732421875,
+        "reason": "hot4; S>0 lots stay through the next 09:30 so the overnight gap is in the book; rank hot_score; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+38.8; combo leftover $2500.00; owner union_hot_n4_holdup",
+        "shares": 17,
+        "side": "long",
+        "ticker": "ANF"
+      },
+      "CAPR": {
+        "close_px": 9.59000015258789,
+        "cost": 2494.1822828125,
+        "entry_date": "2026-08-28",
+        "entry_px": 9.729999542236328,
+        "fee_in": 3.3024,
+        "last_px": 9.729999542236328,
+        "notional": 2490.8798828125,
+        "owner": "union_hot_n4_holdup",
+        "peak_px": 9.729999542236328,
+        "reason": "hot4; S>0 lots stay through the next 09:30 so the overnight gap is in the book; rank hot_score; list yday_gainer,yday_mover; ret5=+47.1; combo leftover $2500.00; owner union_hot_n4_holdup",
+        "shares": 256,
+        "side": "long",
+        "ticker": "CAPR"
+      },
+      "MRNA": {
+        "close_px": 137.99000549316406,
+        "cost": 2471.4640439453124,
+        "entry_date": "2026-08-28",
+        "entry_px": 137.19000244140625,
+        "fee_in": 2.044,
+        "last_px": 137.19000244140625,
+        "notional": 2469.4200439453125,
+        "owner": "union_hot_n4_holdup",
+        "peak_px": 137.19000244140625,
+        "reason": "hot4; S>0 lots stay through the next 09:30 so the overnight gap is in the book; rank hot_score; list ohlc_hot; ret5=+7.1; combo leftover $2500.00; owner union_hot_n4_holdup",
+        "shares": 18,
+        "side": "long",
+        "ticker": "MRNA"
+      },
+      "SNPS": {
+        "close_px": 442.6099853515625,
+        "cost": 2311.2550305175782,
+        "entry_date": "2026-08-28",
+        "entry_px": 461.8500061035156,
+        "fee_in": 2.005,
+        "last_px": 461.8500061035156,
+        "notional": 2309.250030517578,
+        "owner": "union_hot_n4_holdup",
+        "peak_px": 461.8500061035156,
+        "reason": "hot4; S>0 lots stay through the next 09:30 so the overnight gap is in the book; rank hot_score; list ohlc_hot; ret5=+16.8; combo leftover $2500.00; owner union_hot_n4_holdup",
+        "shares": 5,
+        "side": "long",
+        "ticker": "SNPS"
+      }
+    },
+    "yday_equity": 9912.92
+  }
+}

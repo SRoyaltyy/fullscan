@@ -1,0 +1,165 @@
+{
+  "buys": [
+    "GLND",
+    "VICR",
+    "VKTX"
+  ],
+  "cash": 114.96,
+  "date": "2026-09-23",
+  "equity": 12736.6,
+  "fees": 42.01,
+  "fills": [
+    {
+      "fees": 2.0226,
+      "pnl": 45.46,
+      "price": 331.78,
+      "shares": 4,
+      "side": "SELL",
+      "ticker": "ARM"
+    },
+    {
+      "fees": 7.2424,
+      "pnl": -113.92,
+      "price": 3.82,
+      "shares": 553,
+      "side": "SELL",
+      "ticker": "CYPH"
+    },
+    {
+      "fees": 2.0464,
+      "pnl": 17.17,
+      "price": 108.52,
+      "shares": 12,
+      "side": "SELL",
+      "ticker": "GRAL"
+    },
+    {
+      "fees": 5.6188,
+      "pnl": 344.92,
+      "price": 3.93,
+      "shares": 429,
+      "side": "SELL",
+      "ticker": "INDP"
+    },
+    {
+      "fees": 2.5826,
+      "pnl": -78.72,
+      "price": 6.83,
+      "shares": 184,
+      "side": "SELL",
+      "ticker": "NUAI"
+    },
+    {
+      "fees": 2.4159,
+      "pnl": -3.5,
+      "price": 16.92,
+      "shares": 129,
+      "side": "SELL",
+      "ticker": "TJGC"
+    },
+    {
+      "fees": 15.8283,
+      "pnl": null,
+      "price": 2.7,
+      "shares": 1227,
+      "side": "BUY",
+      "ticker": "GLND"
+    },
+    {
+      "fees": 2.026,
+      "pnl": null,
+      "price": 266.5,
+      "shares": 12,
+      "side": "BUY",
+      "ticker": "VICR"
+    },
+    {
+      "fees": 2.227,
+      "pnl": null,
+      "price": 41.76,
+      "shares": 79,
+      "side": "BUY",
+      "ticker": "VKTX"
+    }
+  ],
+  "holdings": [
+    "FEAM",
+    "GLND",
+    "VICR",
+    "VKTX"
+  ],
+  "mean": 1.0524,
+  "n_trades_today": 9,
+  "recipe": "union_hot_n4_holdup",
+  "sells": [
+    "ARM",
+    "CYPH",
+    "GRAL",
+    "INDP",
+    "NUAI",
+    "TJGC"
+  ],
+  "state": {
+    "after": "2026-09-23",
+    "cash": 114.96,
+    "pos": {
+      "FEAM": {
+        "close_px": 2.640000104904175,
+        "cost": 2222.1955256061556,
+        "entry_date": "2026-09-21",
+        "entry_px": 2.4700000286102295,
+        "fee_in": 11.5455,
+        "last_px": 2.9200000762939453,
+        "min_hold": 2,
+        "notional": 2210.6500256061554,
+        "peak_px": 2.9200000762939453,
+        "reason": "hot4; S>0 lots stay through the next 09:30 so the overnight gap is in the book; rank hot_score; list yday_gainer,yday_mover; ret5=+73.6; leftover $2212.63",
+        "shares": 895,
+        "ticker": "FEAM"
+      },
+      "GLND": {
+        "close_px": 2.9100000858306885,
+        "cost": 3328.7283585079194,
+        "entry_date": "2026-09-23",
+        "entry_px": 2.700000047683716,
+        "fee_in": 15.8283,
+        "last_px": 2.700000047683716,
+        "min_hold": 2,
+        "notional": 3312.9000585079193,
+        "peak_px": 2.700000047683716,
+        "reason": "hot4; S>0 lots stay through the next 09:30 so the overnight gap is in the book; rank hot_score; list yday_mover; \ud83d\udd35; ret5=+109.2; leftover $3314.99",
+        "shares": 1227,
+        "ticker": "GLND"
+      },
+      "VICR": {
+        "close_px": 283.1600036621094,
+        "cost": 3200.026,
+        "entry_date": "2026-09-23",
+        "entry_px": 266.5,
+        "fee_in": 2.026,
+        "last_px": 266.5,
+        "min_hold": 2,
+        "notional": 3198.0,
+        "peak_px": 266.5,
+        "reason": "hot4; S>0 lots stay through the next 09:30 so the overnight gap is in the book; rank hot_score; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+45.9; leftover $3314.99",
+        "shares": 12,
+        "ticker": "VICR"
+      },
+      "VKTX": {
+        "close_px": 41.650001525878906,
+        "cost": 3301.266867401123,
+        "entry_date": "2026-09-23",
+        "entry_px": 41.7599983215332,
+        "fee_in": 2.227,
+        "last_px": 41.7599983215332,
+        "min_hold": 2,
+        "notional": 3299.039867401123,
+        "peak_px": 41.7599983215332,
+        "reason": "hot4; S>0 lots stay through the next 09:30 so the overnight gap is in the book; rank hot_score; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+36.4; leftover $3314.99",
+        "shares": 79,
+        "ticker": "VKTX"
+      }
+    },
+    "yday_equity": 12736.6
+  }
+}

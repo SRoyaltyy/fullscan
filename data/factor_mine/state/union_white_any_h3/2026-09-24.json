@@ -1,0 +1,170 @@
+{
+  "buys": [],
+  "cash": 7454.62,
+  "date": "2026-09-24",
+  "equity": 8039.58,
+  "fees": 18.5705,
+  "fills": [
+    {
+      "fees": 2.028,
+      "pnl": 32.44,
+      "price": 163.95,
+      "shares": 6,
+      "side": "SELL",
+      "ticker": "A"
+    },
+    {
+      "fees": 3.3549,
+      "pnl": -160.26,
+      "price": 3.4,
+      "shares": 256,
+      "side": "SELL",
+      "ticker": "CYPH"
+    },
+    {
+      "fees": 2.043,
+      "pnl": -16.72,
+      "price": 87.68,
+      "shares": 11,
+      "side": "SELL",
+      "ticker": "DXCM"
+    },
+    {
+      "fees": 2.3103,
+      "pnl": -7.53,
+      "price": 10.4,
+      "shares": 98,
+      "side": "SELL",
+      "ticker": "IOVA"
+    },
+    {
+      "fees": 2.016,
+      "pnl": 1.67,
+      "price": 396.73,
+      "shares": 2,
+      "side": "SELL",
+      "ticker": "ISRG"
+    },
+    {
+      "fees": 2.2406,
+      "pnl": -160.26,
+      "price": 11.42,
+      "shares": 76,
+      "side": "SELL",
+      "ticker": "MGTX"
+    },
+    {
+      "fees": 2.163,
+      "pnl": -78.26,
+      "price": 18.47,
+      "shares": 51,
+      "side": "SELL",
+      "ticker": "NEO"
+    },
+    {
+      "fees": 2.4147,
+      "pnl": -66.37,
+      "price": 7.37,
+      "shares": 131,
+      "side": "SELL",
+      "ticker": "PGEN"
+    }
+  ],
+  "holdings": [
+    "ADMA",
+    "ARQT",
+    "FTRE",
+    "HALO",
+    "OMER"
+  ],
+  "mean": -1.1431,
+  "n_trades_today": 8,
+  "recipe": "union_white_any_h3",
+  "sells": [
+    "A",
+    "CYPH",
+    "DXCM",
+    "IOVA",
+    "ISRG",
+    "MGTX",
+    "NEO",
+    "PGEN"
+  ],
+  "state": {
+    "after": "2026-09-24",
+    "cash": 7454.62,
+    "pos": {
+      "ADMA": {
+        "close_px": 9.520000457763672,
+        "cost": 128.8443054550171,
+        "entry_date": "2026-09-23",
+        "entry_px": 9.8100004196167,
+        "fee_in": 1.3143,
+        "last_px": 9.670000076293945,
+        "min_hold": 3,
+        "notional": 127.53000545501709,
+        "peak_px": 9.8100004196167,
+        "reason": "\u22120 red + (yday up or major catalyst), then Score; gate cam_bad_max=0,yday_or_catalyst=True; rank list; list flatten; \ud83d\udd35; \u26aa; ret5=+13.9; leftover $134.73",
+        "shares": 13,
+        "ticker": "ADMA"
+      },
+      "ARQT": {
+        "close_px": 26.270000457763672,
+        "cost": 112.28360366210937,
+        "entry_date": "2026-09-23",
+        "entry_px": 27.790000915527344,
+        "fee_in": 1.1236,
+        "last_px": 26.219999313354492,
+        "min_hold": 3,
+        "notional": 111.16000366210938,
+        "peak_px": 27.790000915527344,
+        "reason": "\u22120 red + (yday up or major catalyst), then Score; gate cam_bad_max=0,yday_or_catalyst=True; rank list; list flatten; \ud83d\udd35; \u26aa; ret5=+18.2; leftover $134.73",
+        "shares": 4,
+        "ticker": "ARQT"
+      },
+      "FTRE": {
+        "close_px": 20.020000457763672,
+        "cost": 122.733,
+        "entry_date": "2026-09-23",
+        "entry_px": 20.25,
+        "fee_in": 1.233,
+        "last_px": 19.399999618530273,
+        "min_hold": 3,
+        "notional": 121.5,
+        "peak_px": 20.25,
+        "reason": "\u22120 red + (yday up or major catalyst), then Score; gate cam_bad_max=0,yday_or_catalyst=True; rank list; list flatten; \ud83d\udd35; \u26aa; ret5=+3.5; leftover $134.73",
+        "shares": 6,
+        "ticker": "FTRE"
+      },
+      "HALO": {
+        "close_px": 115.22000122070312,
+        "cost": 118.02149847412109,
+        "entry_date": "2026-09-23",
+        "entry_px": 116.8499984741211,
+        "fee_in": 1.1715,
+        "last_px": 112.12999725341797,
+        "min_hold": 3,
+        "notional": 116.8499984741211,
+        "peak_px": 116.8499984741211,
+        "reason": "\u22120 red + (yday up or major catalyst), then Score; gate cam_bad_max=0,yday_or_catalyst=True; rank list; list flatten; \ud83d\udd35; \u26aa; ret5=+8.4; leftover $134.73",
+        "shares": 1,
+        "ticker": "HALO"
+      },
+      "OMER": {
+        "close_px": 20.1299991607666,
+        "cost": 125.15699771118165,
+        "entry_date": "2026-09-23",
+        "entry_px": 20.649999618530273,
+        "fee_in": 1.257,
+        "last_px": 20.520000457763672,
+        "min_hold": 3,
+        "notional": 123.89999771118164,
+        "peak_px": 20.649999618530273,
+        "reason": "\u22120 red + (yday up or major catalyst), then Score; gate cam_bad_max=0,yday_or_catalyst=True; rank list; list flatten,yday_gainer,yday_mover; \ud83d\udd35; \u26aa; ret5=+22.6; leftover $134.73",
+        "shares": 6,
+        "ticker": "OMER"
+      }
+    },
+    "yday_equity": 8039.58
+  }
+}

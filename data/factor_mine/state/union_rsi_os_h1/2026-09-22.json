@@ -1,0 +1,48 @@
+{
+  "buys": [],
+  "cash": 8110.48,
+  "date": "2026-09-22",
+  "equity": 8110.48,
+  "fees": 10.1785,
+  "fills": [
+    {
+      "fees": 5.8226,
+      "pnl": -15.99,
+      "price": 5.99,
+      "shares": 444,
+      "side": "SELL",
+      "ticker": "SION"
+    },
+    {
+      "fees": 2.136,
+      "pnl": 153.08,
+      "price": 72.53,
+      "shares": 38,
+      "side": "SELL",
+      "ticker": "THO"
+    },
+    {
+      "fees": 2.2199,
+      "pnl": -20.25,
+      "price": 39.76,
+      "shares": 66,
+      "side": "SELL",
+      "ticker": "XENE"
+    }
+  ],
+  "holdings": [],
+  "mean": 1.6878,
+  "n_trades_today": 3,
+  "recipe": "union_rsi_os_h1",
+  "sells": [
+    "SION",
+    "THO",
+    "XENE"
+  ],
+  "state": {
+    "after": "2026-09-22",
+    "cash": 8110.48,
+    "pos": {},
+    "yday_equity": 8110.48
+  }
+}

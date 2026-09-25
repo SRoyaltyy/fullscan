@@ -1,0 +1,156 @@
+{
+  "buys": [
+    "VICR",
+    "ISRG",
+    "SMTC",
+    "SION"
+  ],
+  "cash": 284.17,
+  "date": "2026-09-21",
+  "equity": 8234.45,
+  "fees": 17.247,
+  "fills": [
+    {
+      "fees": 2.2533,
+      "pnl": -18.08,
+      "price": 13.9,
+      "shares": 80,
+      "side": "SELL",
+      "ticker": "BHVN"
+    },
+    {
+      "fees": 2.1019,
+      "pnl": -326.71,
+      "price": 231.62,
+      "shares": 21,
+      "side": "SELL",
+      "ticker": "CRWD"
+    },
+    {
+      "fees": 2.1782,
+      "pnl": 32.62,
+      "price": 22.78,
+      "shares": 56,
+      "side": "SELL",
+      "ticker": "GME"
+    },
+    {
+      "fees": 2.2406,
+      "pnl": -20.42,
+      "price": 14.58,
+      "shares": 76,
+      "side": "SELL",
+      "ticker": "RARE"
+    },
+    {
+      "fees": 2.065,
+      "pnl": null,
+      "price": 230.25,
+      "shares": 25,
+      "side": "BUY",
+      "ticker": "VICR"
+    },
+    {
+      "fees": 1.996,
+      "pnl": null,
+      "price": 393.89,
+      "shares": 2,
+      "side": "BUY",
+      "ticker": "ISRG"
+    },
+    {
+      "fees": 2.002,
+      "pnl": null,
+      "price": 190.3,
+      "shares": 4,
+      "side": "BUY",
+      "ticker": "SMTC"
+    },
+    {
+      "fees": 2.41,
+      "pnl": null,
+      "price": 6.0,
+      "shares": 140,
+      "side": "BUY",
+      "ticker": "SION"
+    }
+  ],
+  "holdings": [
+    "ISRG",
+    "SION",
+    "SMTC",
+    "VICR"
+  ],
+  "mean": -3.5521,
+  "n_trades_today": 8,
+  "recipe": "union_news_or_net4_conv_h1",
+  "sells": [
+    "BHVN",
+    "CRWD",
+    "GME",
+    "RARE"
+  ],
+  "state": {
+    "after": "2026-09-21",
+    "cash": 284.17,
+    "pos": {
+      "ISRG": {
+        "close_px": 401.6499938964844,
+        "cost": 789.776029296875,
+        "entry_date": "2026-09-21",
+        "entry_px": 393.8900146484375,
+        "fee_in": 1.996,
+        "last_px": 393.8900146484375,
+        "min_hold": 1,
+        "notional": 787.780029296875,
+        "peak_px": 393.8900146484375,
+        "reason": "OR news + net\u22654; 70% leftover if #1 net \u2265 5; gate news_or_headline=True,cam_net_min=4; rank cond; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+6.6; leftover $843.79",
+        "shares": 2,
+        "ticker": "ISRG"
+      },
+      "SION": {
+        "close_px": 6.0,
+        "cost": 842.41,
+        "entry_date": "2026-09-21",
+        "entry_px": 6.0,
+        "fee_in": 2.41,
+        "last_px": 6.0,
+        "min_hold": 1,
+        "notional": 840.0,
+        "peak_px": 6.0,
+        "reason": "OR news + net\u22654; 70% leftover if #1 net \u2265 5; gate news_or_headline=True,cam_net_min=4; rank cond; list yday_mover; \ud83d\udd35; ret5=-24.1; leftover $843.79",
+        "shares": 140,
+        "ticker": "SION"
+      },
+      "SMTC": {
+        "close_px": 177.3699951171875,
+        "cost": 763.2020122070312,
+        "entry_date": "2026-09-21",
+        "entry_px": 190.3000030517578,
+        "fee_in": 2.002,
+        "last_px": 190.3000030517578,
+        "min_hold": 1,
+        "notional": 761.2000122070312,
+        "peak_px": 190.3000030517578,
+        "reason": "OR news + net\u22654; 70% leftover if #1 net \u2265 5; gate news_or_headline=True,cam_net_min=4; rank cond; list ohlc_hot; ret5=+10.6; leftover $843.79",
+        "shares": 4,
+        "ticker": "SMTC"
+      },
+      "VICR": {
+        "close_px": 223.89999389648438,
+        "cost": 5758.315,
+        "entry_date": "2026-09-21",
+        "entry_px": 230.25,
+        "fee_in": 2.065,
+        "last_px": 230.25,
+        "min_hold": 1,
+        "notional": 5756.25,
+        "peak_px": 230.25,
+        "reason": "OR news + net\u22654; 70% leftover if #1 net \u2265 5; gate news_or_headline=True,cam_net_min=4; rank cond; list ohlc_hot; ret5=+12.5; leftover $5906.51",
+        "shares": 25,
+        "ticker": "VICR"
+      }
+    },
+    "yday_equity": 8234.45
+  }
+}

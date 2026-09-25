@@ -1,0 +1,66 @@
+{
+  "buys": [],
+  "cash": 1388.17,
+  "date": "2026-09-01",
+  "equity": 9739.39,
+  "fees": 0,
+  "fills": [],
+  "holdings": [
+    "CIEN",
+    "KEYS",
+    "SMTC"
+  ],
+  "mean": -1.2351,
+  "n_trades_today": 0,
+  "recipe": "union_news_g_conv_h3",
+  "sells": [],
+  "state": {
+    "after": "2026-09-01",
+    "cash": 1388.17,
+    "pos": {
+      "CIEN": {
+        "close_px": 360.3299865722656,
+        "cost": 802.8360268554687,
+        "entry_date": "2026-08-28",
+        "entry_px": 400.4200134277344,
+        "fee_in": 1.996,
+        "last_px": 376.8900146484375,
+        "min_hold": 3,
+        "notional": 800.8400268554688,
+        "peak_px": 400.4200134277344,
+        "reason": "merged news\ud83d\udfe2 rank cameras; 70% leftover if #1 net \u2265 5; gate news=good; rank cond; list mover_buy; \ud83d\udd35; ret5=+1.9; leftover $1000.00",
+        "shares": 2,
+        "ticker": "CIEN"
+      },
+      "KEYS": {
+        "close_px": 319.2699890136719,
+        "cost": 6814.663076904297,
+        "entry_date": "2026-08-28",
+        "entry_px": 324.4100036621094,
+        "fee_in": 2.053,
+        "last_px": 321.4700012207031,
+        "min_hold": 3,
+        "notional": 6812.610076904297,
+        "peak_px": 324.4100036621094,
+        "reason": "merged news\ud83d\udfe2 rank cameras; 70% leftover if #1 net \u2265 5; gate news=good; rank cond; list mover_buy; \ud83d\udd35; \u26aa; ret5=+2.9; leftover $7000.00",
+        "shares": 21,
+        "ticker": "KEYS"
+      },
+      "SMTC": {
+        "close_px": 132.27000427246094,
+        "cost": 994.3309615478515,
+        "entry_date": "2026-08-28",
+        "entry_px": 141.75999450683594,
+        "fee_in": 2.011,
+        "last_px": 127.62999725341797,
+        "min_hold": 3,
+        "notional": 992.3199615478516,
+        "peak_px": 141.75999450683594,
+        "reason": "merged news\ud83d\udfe2 rank cameras; 70% leftover if #1 net \u2265 5; gate news=good; rank cond; list yday_gainer,yday_mover,mover_buy; \ud83d\udd35; \u26aa; ret5=+14.1; leftover $1000.00",
+        "shares": 7,
+        "ticker": "SMTC"
+      }
+    },
+    "yday_equity": 9739.39
+  }
+}

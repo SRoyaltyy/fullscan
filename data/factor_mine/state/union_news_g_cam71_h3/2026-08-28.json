@@ -1,0 +1,143 @@
+{
+  "buys": [
+    "KEYS",
+    "SMTC",
+    "CIEN",
+    "MPWR",
+    "DDOG"
+  ],
+  "cash": 1229.38,
+  "date": "2026-08-28",
+  "equity": 9651.44,
+  "fees": 10.049,
+  "fills": [
+    {
+      "fees": 2.008,
+      "pnl": null,
+      "price": 324.41,
+      "shares": 6,
+      "side": "BUY",
+      "ticker": "KEYS"
+    },
+    {
+      "fees": 2.032,
+      "pnl": null,
+      "price": 141.76,
+      "shares": 14,
+      "side": "BUY",
+      "ticker": "SMTC"
+    },
+    {
+      "fees": 2.002,
+      "pnl": null,
+      "price": 400.42,
+      "shares": 4,
+      "side": "BUY",
+      "ticker": "CIEN"
+    },
+    {
+      "fees": 1.993,
+      "pnl": null,
+      "price": 1306.03,
+      "shares": 1,
+      "side": "BUY",
+      "ticker": "MPWR"
+    },
+    {
+      "fees": 2.014,
+      "pnl": null,
+      "price": 240.22,
+      "shares": 8,
+      "side": "BUY",
+      "ticker": "DDOG"
+    }
+  ],
+  "holdings": [
+    "CIEN",
+    "DDOG",
+    "KEYS",
+    "MPWR",
+    "SMTC"
+  ],
+  "mean": -3.4856,
+  "n_trades_today": 5,
+  "recipe": "union_news_g_cam71_h3",
+  "sells": [],
+  "state": {
+    "after": "2026-08-28",
+    "cash": 1229.38,
+    "pos": {
+      "CIEN": {
+        "close_px": 378.44000244140625,
+        "cost": 1603.6820537109375,
+        "entry_date": "2026-08-28",
+        "entry_px": 400.4200134277344,
+        "fee_in": 2.002,
+        "last_px": 400.4200134277344,
+        "min_hold": 3,
+        "notional": 1601.6800537109375,
+        "peak_px": 400.4200134277344,
+        "reason": "merged news\ud83d\udfe2 and cameras +7 \u2212\u22641; gate news=good,n_pos_min=7,cam_bad_max=1; rank cond; list mover_buy; \ud83d\udd35; ret5=+1.9; leftover $2000.00",
+        "shares": 4,
+        "ticker": "CIEN"
+      },
+      "DDOG": {
+        "close_px": 236.97999572753906,
+        "cost": 1923.774009765625,
+        "entry_date": "2026-08-28",
+        "entry_px": 240.22000122070312,
+        "fee_in": 2.014,
+        "last_px": 240.22000122070312,
+        "min_hold": 3,
+        "notional": 1921.760009765625,
+        "peak_px": 240.22000122070312,
+        "reason": "merged news\ud83d\udfe2 and cameras +7 \u2212\u22641; gate news=good,n_pos_min=7,cam_bad_max=1; rank cond; list mover_buy; \ud83d\udd35; ret5=+4.5; leftover $2000.00",
+        "shares": 8,
+        "ticker": "DDOG"
+      },
+      "KEYS": {
+        "close_px": 319.9700012207031,
+        "cost": 1948.4680219726563,
+        "entry_date": "2026-08-28",
+        "entry_px": 324.4100036621094,
+        "fee_in": 2.008,
+        "last_px": 324.4100036621094,
+        "min_hold": 3,
+        "notional": 1946.4600219726562,
+        "peak_px": 324.4100036621094,
+        "reason": "merged news\ud83d\udfe2 and cameras +7 \u2212\u22641; gate news=good,n_pos_min=7,cam_bad_max=1; rank cond; list mover_buy; \ud83d\udd35; \u26aa; ret5=+2.9; leftover $2000.00",
+        "shares": 6,
+        "ticker": "KEYS"
+      },
+      "MPWR": {
+        "close_px": 1256.260009765625,
+        "cost": 1308.023029296875,
+        "entry_date": "2026-08-28",
+        "entry_px": 1306.030029296875,
+        "fee_in": 1.993,
+        "last_px": 1306.030029296875,
+        "min_hold": 3,
+        "notional": 1306.030029296875,
+        "peak_px": 1306.030029296875,
+        "reason": "merged news\ud83d\udfe2 and cameras +7 \u2212\u22641; gate news=good,n_pos_min=7,cam_bad_max=1; rank cond; list mover_buy; \ud83d\udd35; ret5=+0.0; leftover $2000.00",
+        "shares": 1,
+        "ticker": "MPWR"
+      },
+      "SMTC": {
+        "close_px": 131.1699981689453,
+        "cost": 1986.671923095703,
+        "entry_date": "2026-08-28",
+        "entry_px": 141.75999450683594,
+        "fee_in": 2.032,
+        "last_px": 141.75999450683594,
+        "min_hold": 3,
+        "notional": 1984.6399230957031,
+        "peak_px": 141.75999450683594,
+        "reason": "merged news\ud83d\udfe2 and cameras +7 \u2212\u22641; gate news=good,n_pos_min=7,cam_bad_max=1; rank cond; list yday_gainer,yday_mover,mover_buy; \ud83d\udd35; \u26aa; ret5=+14.1; leftover $2000.00",
+        "shares": 14,
+        "ticker": "SMTC"
+      }
+    },
+    "yday_equity": 9651.44
+  }
+}

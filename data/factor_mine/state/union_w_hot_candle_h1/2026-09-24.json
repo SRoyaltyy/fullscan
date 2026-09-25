@@ -1,0 +1,107 @@
+{
+  "buys": [],
+  "cash": 7177.04,
+  "date": "2026-09-24",
+  "equity": 10769.03,
+  "fees": 28.8092,
+  "fills": [
+    {
+      "fees": 2.3989,
+      "pnl": -103.05,
+      "price": 9.12,
+      "shares": 126,
+      "side": "SELL",
+      "ticker": "BFLY"
+    },
+    {
+      "fees": 2.4337,
+      "pnl": -91.14,
+      "price": 8.5,
+      "shares": 137,
+      "side": "SELL",
+      "ticker": "DNA"
+    },
+    {
+      "fees": 5.6284,
+      "pnl": -144.48,
+      "price": 2.61,
+      "shares": 430,
+      "side": "SELL",
+      "ticker": "FEAM"
+    },
+    {
+      "fees": 2.061,
+      "pnl": -10.05,
+      "price": 70.49,
+      "shares": 17,
+      "side": "SELL",
+      "ticker": "INOD"
+    },
+    {
+      "fees": 3.6554,
+      "pnl": -164.89,
+      "price": 3.925,
+      "shares": 279,
+      "side": "SELL",
+      "ticker": "SVIA"
+    },
+    {
+      "fees": 12.6318,
+      "pnl": -34.75,
+      "price": 1.29,
+      "shares": 966,
+      "side": "SELL",
+      "ticker": "VERI"
+    }
+  ],
+  "holdings": [
+    "GLND",
+    "VICR"
+  ],
+  "mean": 10.1086,
+  "n_trades_today": 6,
+  "recipe": "union_w_hot_candle_h1",
+  "sells": [
+    "BFLY",
+    "DNA",
+    "FEAM",
+    "INOD",
+    "SVIA",
+    "VERI"
+  ],
+  "state": {
+    "after": "2026-09-24",
+    "cash": 7177.04,
+    "pos": {
+      "GLND": {
+        "close_px": 5.349999904632568,
+        "cost": 1261.4985221729278,
+        "entry_date": "2026-09-23",
+        "entry_px": 2.700000047683716,
+        "fee_in": 5.9985,
+        "last_px": 3.2200000286102295,
+        "min_hold": 1,
+        "notional": 1255.5000221729279,
+        "peak_px": 3.2200000286102295,
+        "reason": "rank by w_hot_candle; rank w_hot_candle; list yday_mover; \ud83d\udd35; ret5=+109.2; leftover $1256.86",
+        "shares": 465,
+        "ticker": "GLND"
+      },
+      "VICR": {
+        "close_px": 276.05999755859375,
+        "cost": 1068.002,
+        "entry_date": "2026-09-23",
+        "entry_px": 266.5,
+        "fee_in": 2.002,
+        "last_px": 274.45001220703125,
+        "min_hold": 1,
+        "notional": 1066.0,
+        "peak_px": 274.45001220703125,
+        "reason": "rank by w_hot_candle; rank w_hot_candle; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+45.9; leftover $1256.86",
+        "shares": 4,
+        "ticker": "VICR"
+      }
+    },
+    "yday_equity": 10769.03
+  }
+}

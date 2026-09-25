@@ -1,0 +1,210 @@
+{
+  "buys": [
+    "INDP",
+    "HLP",
+    "SDGR",
+    "CAI",
+    "BBNX",
+    "GFR"
+  ],
+  "cash": 10295.89,
+  "date": "2026-09-16",
+  "equity": 9990.38,
+  "fees": 45.9327,
+  "fills": [
+    {
+      "fees": 8.4237,
+      "pnl": 100.54,
+      "price": 1.85,
+      "shares": 653,
+      "side": "COVER",
+      "ticker": "CRDL"
+    },
+    {
+      "fees": 5.0697,
+      "pnl": -159.59,
+      "price": 3.75,
+      "shares": 393,
+      "side": "COVER",
+      "ticker": "MYGN"
+    },
+    {
+      "fees": 2.023,
+      "pnl": -62.9,
+      "price": 118.18,
+      "shares": 11,
+      "side": "COVER",
+      "ticker": "QRVO"
+    },
+    {
+      "fees": 4.8504,
+      "pnl": -182.77,
+      "price": 3.98,
+      "shares": 376,
+      "side": "COVER",
+      "ticker": "RWT"
+    },
+    {
+      "fees": 4.5408,
+      "pnl": null,
+      "price": 3.66,
+      "shares": 352,
+      "side": "BUY",
+      "ticker": "INDP"
+    },
+    {
+      "fees": 9.2235,
+      "pnl": null,
+      "price": 1.8,
+      "shares": 715,
+      "side": "BUY",
+      "ticker": "HLP"
+    },
+    {
+      "fees": 2.155,
+      "pnl": null,
+      "price": 23.29,
+      "shares": 55,
+      "side": "BUY",
+      "ticker": "SDGR"
+    },
+    {
+      "fees": 2.125,
+      "pnl": null,
+      "price": 28.16,
+      "shares": 45,
+      "side": "BUY",
+      "ticker": "CAI"
+    },
+    {
+      "fees": 2.517861098198041,
+      "pnl": null,
+      "price": 18.61,
+      "shares": 138,
+      "side": "SHORT",
+      "ticker": "BBNX"
+    },
+    {
+      "fees": 5.0037583553784515,
+      "pnl": null,
+      "price": 6.83,
+      "shares": 376,
+      "side": "SHORT",
+      "ticker": "GFR"
+    }
+  ],
+  "holdings": [
+    "BBNX",
+    "CAI",
+    "GFR",
+    "HLP",
+    "INDP",
+    "SDGR"
+  ],
+  "mean": -3.0585,
+  "n_trades_today": 10,
+  "recipe": "combo_sh_5050_shared",
+  "sells": [
+    "CRDL",
+    "MYGN",
+    "QRVO",
+    "RWT"
+  ],
+  "state": {
+    "after": "2026-09-16",
+    "cash": 10295.89,
+    "pos": {
+      "BBNX": {
+        "close_px": 22.18000030517578,
+        "cost": 2.517861098198041,
+        "entry_date": "2026-09-16",
+        "entry_px": 18.610000610351562,
+        "fee_in": 2.517861098198041,
+        "last_px": 18.610000610351562,
+        "notional": 2568.1800842285156,
+        "owner": "short_news_r_h3",
+        "peak_px": 18.610000610351562,
+        "reason": "news\ud83d\udd34; gate news=bad; list probable,yday_gainer,yday_mover; ret5=-0.5; combo leftover $2572.65; owner short_news_r_h3",
+        "shares": 138,
+        "side": "short",
+        "ticker": "BBNX"
+      },
+      "CAI": {
+        "close_px": 28.209999084472656,
+        "cost": 1269.324993133545,
+        "entry_date": "2026-09-16",
+        "entry_px": 28.15999984741211,
+        "fee_in": 2.125,
+        "last_px": 28.15999984741211,
+        "notional": 1267.199993133545,
+        "owner": "union_hot_n4_h1",
+        "peak_px": 28.15999984741211,
+        "reason": "top 4 by hot; rank hot_score; list yday_gainer,ohlc_hot; \u26aa; ret5=+14.8; combo leftover $1288.58; owner union_hot_n4_h1",
+        "shares": 45,
+        "side": "long",
+        "ticker": "CAI"
+      },
+      "GFR": {
+        "close_px": 6.489999771118164,
+        "cost": 5.0037583553784515,
+        "entry_date": "2026-09-16",
+        "entry_px": 6.829999923706055,
+        "fee_in": 5.0037583553784515,
+        "last_px": 6.829999923706055,
+        "notional": 2568.0799713134766,
+        "owner": "short_news_r_h3",
+        "peak_px": 6.829999923706055,
+        "reason": "news\ud83d\udd34; gate news=bad; list ohlc_hot; ret5=+11.2; combo leftover $2572.65; owner short_news_r_h3",
+        "shares": 376,
+        "side": "short",
+        "ticker": "GFR"
+      },
+      "HLP": {
+        "close_px": 2.069999933242798,
+        "cost": 1296.2234659061432,
+        "entry_date": "2026-09-16",
+        "entry_px": 1.7999999523162842,
+        "fee_in": 9.2235,
+        "last_px": 1.7999999523162842,
+        "notional": 1286.9999659061432,
+        "owner": "union_hot_n4_h1",
+        "peak_px": 1.7999999523162842,
+        "reason": "top 4 by hot; rank hot_score; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+30.5; combo leftover $1288.58; owner union_hot_n4_h1",
+        "shares": 715,
+        "side": "long",
+        "ticker": "HLP"
+      },
+      "INDP": {
+        "close_px": 3.2100000381469727,
+        "cost": 1292.8608302124023,
+        "entry_date": "2026-09-16",
+        "entry_px": 3.6600000858306885,
+        "fee_in": 4.5408,
+        "last_px": 3.6600000858306885,
+        "notional": 1288.3200302124023,
+        "owner": "union_hot_n4_h1",
+        "peak_px": 3.6600000858306885,
+        "reason": "top 4 by hot; rank hot_score; list yday_gainer,yday_mover; ret5=+96.8; combo leftover $1288.58; owner union_hot_n4_h1",
+        "shares": 352,
+        "side": "long",
+        "ticker": "INDP"
+      },
+      "SDGR": {
+        "close_px": 23.93000030517578,
+        "cost": 1283.1050503540039,
+        "entry_date": "2026-09-16",
+        "entry_px": 23.290000915527344,
+        "fee_in": 2.155,
+        "last_px": 23.290000915527344,
+        "notional": 1280.950050354004,
+        "owner": "union_hot_n4_h1",
+        "peak_px": 23.290000915527344,
+        "reason": "top 4 by hot; rank hot_score; list yday_gainer; \ud83d\udd35; \u26aa; ret5=+16.1; combo leftover $1288.58; owner union_hot_n4_h1",
+        "shares": 55,
+        "side": "long",
+        "ticker": "SDGR"
+      }
+    },
+    "yday_equity": 9990.38
+  }
+}

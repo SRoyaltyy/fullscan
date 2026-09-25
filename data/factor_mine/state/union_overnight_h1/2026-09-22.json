@@ -1,0 +1,147 @@
+{
+  "buys": [
+    "CBRL",
+    "GIS",
+    "KBH",
+    "PAYX"
+  ],
+  "cash": 107.82,
+  "date": "2026-09-22",
+  "equity": 8767.34,
+  "fees": 15.186,
+  "fills": [
+    {
+      "fees": 2.1032,
+      "pnl": -84.63,
+      "price": 102.74,
+      "shares": 27,
+      "side": "SELL",
+      "ticker": "ABVX"
+    },
+    {
+      "fees": 2.4564,
+      "pnl": -31.47,
+      "price": 20.66,
+      "shares": 140,
+      "side": "SELL",
+      "ticker": "MLKN"
+    },
+    {
+      "fees": 2.1504,
+      "pnl": 169.61,
+      "price": 72.53,
+      "shares": 42,
+      "side": "SELL",
+      "ticker": "THO"
+    },
+    {
+      "fees": 2.134,
+      "pnl": null,
+      "price": 45.5,
+      "shares": 48,
+      "side": "BUY",
+      "ticker": "CBRL"
+    },
+    {
+      "fees": 2.173,
+      "pnl": null,
+      "price": 35.96,
+      "shares": 61,
+      "side": "BUY",
+      "ticker": "GIS"
+    },
+    {
+      "fees": 2.122,
+      "pnl": null,
+      "price": 49.39,
+      "shares": 44,
+      "side": "BUY",
+      "ticker": "KBH"
+    },
+    {
+      "fees": 2.047,
+      "pnl": null,
+      "price": 115.71,
+      "shares": 19,
+      "side": "BUY",
+      "ticker": "PAYX"
+    }
+  ],
+  "holdings": [
+    "CBRL",
+    "GIS",
+    "KBH",
+    "PAYX"
+  ],
+  "mean": 0.3701,
+  "n_trades_today": 7,
+  "recipe": "union_overnight_h1",
+  "sells": [
+    "ABVX",
+    "MLKN",
+    "THO"
+  ],
+  "state": {
+    "after": "2026-09-22",
+    "cash": 107.82,
+    "pos": {
+      "CBRL": {
+        "close_px": 45.48,
+        "cost": 2186.134,
+        "entry_date": "2026-09-22",
+        "entry_px": 45.5,
+        "fee_in": 2.134,
+        "last_px": 45.5,
+        "min_hold": 1,
+        "notional": 2184.0,
+        "peak_px": 45.5,
+        "reason": "union \u2229 overnight, no \ud83d\udea8; gate overnight=True; list overnight; ret5=-11.2; leftover $2216.38",
+        "shares": 48,
+        "ticker": "CBRL"
+      },
+      "GIS": {
+        "close_px": 35.45000076293945,
+        "cost": 2195.732944152832,
+        "entry_date": "2026-09-22",
+        "entry_px": 35.959999084472656,
+        "fee_in": 2.173,
+        "last_px": 35.959999084472656,
+        "min_hold": 1,
+        "notional": 2193.559944152832,
+        "peak_px": 35.959999084472656,
+        "reason": "union \u2229 overnight, no \ud83d\udea8; gate overnight=True; list overnight; ret5=-2.9; leftover $2216.38",
+        "shares": 61,
+        "ticker": "GIS"
+      },
+      "KBH": {
+        "close_px": 48.59000015258789,
+        "cost": 2175.281973144531,
+        "entry_date": "2026-09-22",
+        "entry_px": 49.38999938964844,
+        "fee_in": 2.122,
+        "last_px": 49.38999938964844,
+        "min_hold": 1,
+        "notional": 2173.1599731445312,
+        "peak_px": 49.38999938964844,
+        "reason": "union \u2229 overnight, no \ud83d\udea8; gate overnight=True; list overnight; ret5=-3.4; leftover $2216.38",
+        "shares": 44,
+        "ticker": "KBH"
+      },
+      "PAYX": {
+        "close_px": 114.53,
+        "cost": 2200.537,
+        "entry_date": "2026-09-22",
+        "entry_px": 115.71,
+        "fee_in": 2.047,
+        "last_px": 115.71,
+        "min_hold": 1,
+        "notional": 2198.49,
+        "peak_px": 115.71,
+        "reason": "union \u2229 overnight, no \ud83d\udea8; gate overnight=True; list overnight; ret5=-3.0; leftover $2216.38",
+        "shares": 19,
+        "ticker": "PAYX"
+      }
+    },
+    "yday_equity": 8767.34
+  }
+}

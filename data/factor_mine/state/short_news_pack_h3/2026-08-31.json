@@ -1,0 +1,35 @@
+{
+  "buys": [],
+  "cash": 14977.01,
+  "date": "2026-08-31",
+  "equity": 10441.16,
+  "fees": 0,
+  "fills": [],
+  "holdings": [
+    "FIG"
+  ],
+  "mean": 2.1469,
+  "n_trades_today": 0,
+  "recipe": "short_news_pack_h3",
+  "sells": [],
+  "state": {
+    "after": "2026-08-31",
+    "cash": 14977.01,
+    "pos": {
+      "FIG": {
+        "close_px": 27.489999771118164,
+        "cost": 2.688630138365863,
+        "entry_date": "2026-08-28",
+        "entry_px": 30.18000030517578,
+        "fee_in": 2.688630138365863,
+        "last_px": 27.600000381469727,
+        "notional": 4979.700050354004,
+        "peak_px": 27.600000381469727,
+        "reason": "short morning packet news\ud83d\udd34; gate news_box=bad; list ohlc_hot; ret5=+12.1; leftover $5000.00",
+        "shares": 165,
+        "ticker": "FIG"
+      }
+    },
+    "yday_equity": 10441.16
+  }
+}

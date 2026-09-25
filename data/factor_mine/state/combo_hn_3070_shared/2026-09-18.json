@@ -1,0 +1,303 @@
+{
+  "buys": [
+    "SDGR",
+    "TEM",
+    "LVWR",
+    "BHVN",
+    "RARE",
+    "FLNC",
+    "CRWD"
+  ],
+  "cash": 175.51,
+  "date": "2026-09-18",
+  "equity": 9496.67,
+  "fees": 57.8629,
+  "fills": [
+    {
+      "fees": 7.0656,
+      "pnl": -14.03,
+      "price": 1.77,
+      "shares": 540,
+      "side": "SELL",
+      "ticker": "BAK"
+    },
+    {
+      "fees": 2.172,
+      "pnl": -66.96,
+      "price": 21.3,
+      "shares": 54,
+      "side": "SELL",
+      "ticker": "BBNX"
+    },
+    {
+      "fees": 5.2625,
+      "pnl": 53.87,
+      "price": 1.96,
+      "shares": 402,
+      "side": "SELL",
+      "ticker": "HLP"
+    },
+    {
+      "fees": 15.0362,
+      "pnl": 27.63,
+      "price": 1.12,
+      "shares": 1150,
+      "side": "SELL",
+      "ticker": "IQ"
+    },
+    {
+      "fees": 2.022,
+      "pnl": -11.22,
+      "price": 236.8,
+      "shares": 4,
+      "side": "SELL",
+      "ticker": "JBHT"
+    },
+    {
+      "fees": 2.013,
+      "pnl": -23.23,
+      "price": 915.66,
+      "shares": 1,
+      "side": "SELL",
+      "ticker": "LITE"
+    },
+    {
+      "fees": 2.025,
+      "pnl": 53.37,
+      "price": 182.33,
+      "shares": 5,
+      "side": "SELL",
+      "ticker": "SMTC"
+    },
+    {
+      "fees": 2.172,
+      "pnl": -36.18,
+      "price": 17.13,
+      "shares": 54,
+      "side": "SELL",
+      "ticker": "TNDM"
+    },
+    {
+      "fees": 2.071,
+      "pnl": null,
+      "price": 29.32,
+      "shares": 27,
+      "side": "BUY",
+      "ticker": "SDGR"
+    },
+    {
+      "fees": 2.017,
+      "pnl": null,
+      "price": 81.4,
+      "shares": 9,
+      "side": "BUY",
+      "ticker": "TEM"
+    },
+    {
+      "fees": 6.8886,
+      "pnl": null,
+      "price": 1.49,
+      "shares": 534,
+      "side": "BUY",
+      "ticker": "LVWR"
+    },
+    {
+      "fees": 2.29,
+      "pnl": null,
+      "price": 14.07,
+      "shares": 100,
+      "side": "BUY",
+      "ticker": "BHVN"
+    },
+    {
+      "fees": 2.275,
+      "pnl": null,
+      "price": 14.79,
+      "shares": 95,
+      "side": "BUY",
+      "ticker": "RARE"
+    },
+    {
+      "fees": 2.548,
+      "pnl": null,
+      "price": 7.535,
+      "shares": 186,
+      "side": "BUY",
+      "ticker": "FLNC"
+    },
+    {
+      "fees": 2.005,
+      "pnl": null,
+      "price": 246.98,
+      "shares": 5,
+      "side": "BUY",
+      "ticker": "CRWD"
+    }
+  ],
+  "holdings": [
+    "BHVN",
+    "CRWD",
+    "FLNC",
+    "GME",
+    "INDP",
+    "LVWR",
+    "RARE",
+    "SDGR",
+    "TEM"
+  ],
+  "mean": -2.504,
+  "n_trades_today": 15,
+  "recipe": "combo_hn_3070_shared",
+  "sells": [
+    "BAK",
+    "BBNX",
+    "HLP",
+    "IQ",
+    "JBHT",
+    "LITE",
+    "SMTC",
+    "TNDM"
+  ],
+  "state": {
+    "after": "2026-09-18",
+    "cash": 175.51,
+    "pos": {
+      "BHVN": {
+        "close_px": 13.619999885559082,
+        "cost": 1409.2899694824218,
+        "entry_date": "2026-09-18",
+        "entry_px": 14.069999694824219,
+        "fee_in": 2.29,
+        "last_px": 14.069999694824219,
+        "notional": 1406.9999694824219,
+        "owner": "union_news_g_h1",
+        "peak_px": 14.069999694824219,
+        "reason": "union \u2229 news_g, no \ud83d\udea8; gate news=good; list probable,yday_gainer,yday_mover; \ud83d\udd35; ret5=+8.6; combo leftover $1408.27; owner union_news_g_h1",
+        "shares": 100,
+        "side": "long",
+        "ticker": "BHVN"
+      },
+      "CRWD": {
+        "close_px": 237.64999389648438,
+        "cost": 1236.9049786376954,
+        "entry_date": "2026-09-18",
+        "entry_px": 246.97999572753906,
+        "fee_in": 2.005,
+        "last_px": 246.97999572753906,
+        "notional": 1234.8999786376953,
+        "owner": "union_news_g_h1",
+        "peak_px": 246.97999572753906,
+        "reason": "union \u2229 news_g, no \ud83d\udea8; gate news=good; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+17.6; combo leftover $1408.27; owner union_news_g_h1",
+        "shares": 5,
+        "side": "long",
+        "ticker": "CRWD"
+      },
+      "FLNC": {
+        "close_px": 7.320000171661377,
+        "cost": 1404.0579716186523,
+        "entry_date": "2026-09-18",
+        "entry_px": 7.534999847412109,
+        "fee_in": 2.548,
+        "last_px": 7.534999847412109,
+        "notional": 1401.5099716186523,
+        "owner": "union_news_g_h1",
+        "peak_px": 7.534999847412109,
+        "reason": "union \u2229 news_g, no \ud83d\udea8; gate news=good; list yday_mover; \ud83d\udd35; ret5=-20.9; combo leftover $1408.27; owner union_news_g_h1",
+        "shares": 186,
+        "side": "long",
+        "ticker": "FLNC"
+      },
+      "GME": {
+        "close_px": 22.639999389648438,
+        "cost": 953.2790360870362,
+        "entry_date": "2026-09-17",
+        "entry_px": 22.1200008392334,
+        "fee_in": 2.119,
+        "last_px": 22.899999618530273,
+        "notional": 951.1600360870361,
+        "owner": "union_news_g_h1",
+        "peak_px": 22.899999618530273,
+        "reason": "union \u2229 news_g, no \ud83d\udea8; gate news=good; list ohlc_hot; \ud83d\udd35; ret5=+10.5; combo leftover $957.48; owner union_news_g_h1",
+        "shares": 43,
+        "side": "long",
+        "ticker": "GME"
+      },
+      "INDP": {
+        "close_px": 3.549999952316284,
+        "cost": 727.2640169944763,
+        "entry_date": "2026-09-16",
+        "entry_px": 3.6600000858306885,
+        "fee_in": 2.584,
+        "last_px": 3.8499999046325684,
+        "notional": 724.6800169944763,
+        "owner": "union_hot_n4_h1",
+        "peak_px": 3.8499999046325684,
+        "reason": "top 4 by hot; rank hot_score; list yday_gainer,yday_mover; ret5=+96.8; combo leftover $725.34; owner union_hot_n4_h1",
+        "shares": 198,
+        "side": "long",
+        "ticker": "INDP"
+      },
+      "LVWR": {
+        "close_px": 1.6299999952316284,
+        "cost": 802.5486050926208,
+        "entry_date": "2026-09-18",
+        "entry_px": 1.4900000095367432,
+        "fee_in": 6.8886,
+        "last_px": 1.4900000095367432,
+        "notional": 795.6600050926208,
+        "owner": "union_hot_n4_h1",
+        "peak_px": 1.4900000095367432,
+        "reason": "top 4 by hot; rank hot_score; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+25.7; combo leftover $796.40; owner union_hot_n4_h1",
+        "shares": 534,
+        "side": "long",
+        "ticker": "LVWR"
+      },
+      "RARE": {
+        "close_px": 14.510000228881836,
+        "cost": 1407.3249963760377,
+        "entry_date": "2026-09-18",
+        "entry_px": 14.789999961853027,
+        "fee_in": 2.275,
+        "last_px": 14.789999961853027,
+        "notional": 1405.0499963760376,
+        "owner": "union_news_g_h1",
+        "peak_px": 14.789999961853027,
+        "reason": "union \u2229 news_g, no \ud83d\udea8; gate news=good; list probable,yday_gainer; \ud83d\udd35; \u26aa; ret5=+0.7; combo leftover $1408.27; owner union_news_g_h1",
+        "shares": 95,
+        "side": "long",
+        "ticker": "RARE"
+      },
+      "SDGR": {
+        "close_px": 29.020000457763672,
+        "cost": 793.7109917602539,
+        "entry_date": "2026-09-18",
+        "entry_px": 29.31999969482422,
+        "fee_in": 2.071,
+        "last_px": 29.31999969482422,
+        "notional": 791.6399917602539,
+        "owner": "union_hot_n4_h1",
+        "peak_px": 29.31999969482422,
+        "reason": "top 4 by hot; rank hot_score; list yday_gainer,yday_mover; \ud83d\udd35; \u26aa; ret5=+60.9; combo leftover $796.40; owner union_hot_n4_h1",
+        "shares": 27,
+        "side": "long",
+        "ticker": "SDGR"
+      },
+      "TEM": {
+        "close_px": 77.83999633789062,
+        "cost": 734.6170137329102,
+        "entry_date": "2026-09-18",
+        "entry_px": 81.4000015258789,
+        "fee_in": 2.017,
+        "last_px": 81.4000015258789,
+        "notional": 732.6000137329102,
+        "owner": "union_hot_n4_h1",
+        "peak_px": 81.4000015258789,
+        "reason": "top 4 by hot; rank hot_score; list yday_gainer,yday_mover; \ud83d\udd35; \u26aa; ret5=+36.8; combo leftover $796.40; owner union_hot_n4_h1",
+        "shares": 9,
+        "side": "long",
+        "ticker": "TEM"
+      }
+    },
+    "yday_equity": 9496.67
+  }
+}

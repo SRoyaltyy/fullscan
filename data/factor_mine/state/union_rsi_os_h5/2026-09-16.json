@@ -1,0 +1,215 @@
+{
+  "buys": [
+    "ALHC",
+    "PLAY",
+    "DVLT",
+    "NMRA",
+    "ZSQR",
+    "CTMX",
+    "CRBP",
+    "EYPT"
+  ],
+  "cash": 1.36,
+  "date": "2026-09-16",
+  "equity": 8691.19,
+  "fees": 69.3815,
+  "fills": [
+    {
+      "fees": 2.311,
+      "pnl": null,
+      "price": 10.3,
+      "shares": 107,
+      "side": "BUY",
+      "ticker": "ALHC"
+    },
+    {
+      "fees": 2.473,
+      "pnl": null,
+      "price": 6.86,
+      "shares": 161,
+      "side": "BUY",
+      "ticker": "PLAY"
+    },
+    {
+      "fees": 31.9378,
+      "pnl": null,
+      "price": 0.16,
+      "shares": 6943,
+      "side": "BUY",
+      "ticker": "DVLT"
+    },
+    {
+      "fees": 15.055,
+      "pnl": null,
+      "price": 0.844,
+      "shares": 1316,
+      "side": "BUY",
+      "ticker": "NMRA"
+    },
+    {
+      "fees": 6.1146,
+      "pnl": null,
+      "price": 2.34,
+      "shares": 474,
+      "side": "BUY",
+      "ticker": "ZSQR"
+    },
+    {
+      "fees": 5.2632,
+      "pnl": null,
+      "price": 2.72,
+      "shares": 408,
+      "side": "BUY",
+      "ticker": "CTMX"
+    },
+    {
+      "fees": 2.473,
+      "pnl": null,
+      "price": 6.86,
+      "shares": 161,
+      "side": "BUY",
+      "ticker": "CRBP"
+    },
+    {
+      "fees": 3.7539,
+      "pnl": null,
+      "price": 3.66,
+      "shares": 291,
+      "side": "BUY",
+      "ticker": "EYPT"
+    }
+  ],
+  "holdings": [
+    "ALHC",
+    "CRBP",
+    "CTMX",
+    "DVLT",
+    "EYPT",
+    "NMRA",
+    "PLAY",
+    "ZSQR"
+  ],
+  "mean": -2.207,
+  "n_trades_today": 8,
+  "recipe": "union_rsi_os_h5",
+  "sells": [],
+  "state": {
+    "after": "2026-09-16",
+    "cash": 1.36,
+    "pos": {
+      "ALHC": {
+        "close_px": 8.710000038146973,
+        "cost": 1104.4110204086303,
+        "entry_date": "2026-09-16",
+        "entry_px": 10.300000190734863,
+        "fee_in": 2.311,
+        "last_px": 10.300000190734863,
+        "min_hold": 5,
+        "notional": 1102.1000204086304,
+        "peak_px": 10.300000190734863,
+        "reason": "union \u2229 rsi_os hold 5, no \ud83d\udea8; gate rsi_os=True; list yday_mover; ret5=-23.0; leftover $1110.92",
+        "shares": 107,
+        "ticker": "ALHC"
+      },
+      "CRBP": {
+        "close_px": 7.260000228881836,
+        "cost": 1106.933021495819,
+        "entry_date": "2026-09-16",
+        "entry_px": 6.860000133514404,
+        "fee_in": 2.473,
+        "last_px": 6.860000133514404,
+        "min_hold": 5,
+        "notional": 1104.460021495819,
+        "peak_px": 6.860000133514404,
+        "reason": "union \u2229 rsi_os hold 5, no \ud83d\udea8; gate rsi_os=True; list yday_mover; ret5=-34.7; leftover $1110.92",
+        "shares": 161,
+        "ticker": "CRBP"
+      },
+      "CTMX": {
+        "close_px": 2.765000104904175,
+        "cost": 1115.0232116729737,
+        "entry_date": "2026-09-16",
+        "entry_px": 2.7200000286102295,
+        "fee_in": 5.2632,
+        "last_px": 2.7200000286102295,
+        "min_hold": 5,
+        "notional": 1109.7600116729736,
+        "peak_px": 2.7200000286102295,
+        "reason": "union \u2229 rsi_os hold 5, no \ud83d\udea8; gate rsi_os=True; list yday_mover; ret5=-26.3; leftover $1110.92",
+        "shares": 408,
+        "ticker": "CTMX"
+      },
+      "DVLT": {
+        "close_px": 0.18000000715255737,
+        "cost": 1142.817775169897,
+        "entry_date": "2026-09-16",
+        "entry_px": 0.1599999964237213,
+        "fee_in": 31.9378,
+        "last_px": 0.1599999964237213,
+        "min_hold": 5,
+        "notional": 1110.879975169897,
+        "peak_px": 0.1599999964237213,
+        "reason": "union \u2229 rsi_os hold 5, no \ud83d\udea8; gate rsi_os=True; list yday_mover; \ud83d\udd35; ret5=-23.8; leftover $1110.92",
+        "shares": 6943,
+        "ticker": "DVLT"
+      },
+      "EYPT": {
+        "close_px": 3.450000047683716,
+        "cost": 1068.8139249767303,
+        "entry_date": "2026-09-16",
+        "entry_px": 3.6600000858306885,
+        "fee_in": 3.7539,
+        "last_px": 3.6600000858306885,
+        "min_hold": 5,
+        "notional": 1065.0600249767303,
+        "peak_px": 3.6600000858306885,
+        "reason": "union \u2229 rsi_os hold 5, no \ud83d\udea8; gate rsi_os=True; list yday_mover; \ud83d\udd35; ret5=-19.7; leftover $1110.92",
+        "shares": 291,
+        "ticker": "EYPT"
+      },
+      "NMRA": {
+        "close_px": 0.7730000019073486,
+        "cost": 1125.7589761543275,
+        "entry_date": "2026-09-16",
+        "entry_px": 0.843999981880188,
+        "fee_in": 15.055,
+        "last_px": 0.843999981880188,
+        "min_hold": 5,
+        "notional": 1110.7039761543274,
+        "peak_px": 0.843999981880188,
+        "reason": "union \u2229 rsi_os hold 5, no \ud83d\udea8; gate rsi_os=True; list yday_mover; ret5=-33.5; leftover $1110.92",
+        "shares": 1316,
+        "ticker": "NMRA"
+      },
+      "PLAY": {
+        "close_px": 6.860000133514404,
+        "cost": 1106.933021495819,
+        "entry_date": "2026-09-16",
+        "entry_px": 6.860000133514404,
+        "fee_in": 2.473,
+        "last_px": 6.860000133514404,
+        "min_hold": 5,
+        "notional": 1104.460021495819,
+        "peak_px": 6.860000133514404,
+        "reason": "union \u2229 rsi_os hold 5, no \ud83d\udea8; gate rsi_os=True; list yday_mover; \ud83d\udd35; ret5=-22.4; leftover $1110.92",
+        "shares": 161,
+        "ticker": "PLAY"
+      },
+      "ZSQR": {
+        "close_px": 2.2899999618530273,
+        "cost": 1115.2745593162538,
+        "entry_date": "2026-09-16",
+        "entry_px": 2.3399999141693115,
+        "fee_in": 6.1146,
+        "last_px": 2.3399999141693115,
+        "min_hold": 5,
+        "notional": 1109.1599593162537,
+        "peak_px": 2.3399999141693115,
+        "reason": "union \u2229 rsi_os hold 5, no \ud83d\udea8; gate rsi_os=True; list yday_mover; \ud83d\udd35; ret5=-25.2; leftover $1110.92",
+        "shares": 474,
+        "ticker": "ZSQR"
+      }
+    },
+    "yday_equity": 8691.19
+  }
+}

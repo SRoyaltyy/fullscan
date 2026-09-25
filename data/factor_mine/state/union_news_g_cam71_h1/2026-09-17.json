@@ -1,0 +1,75 @@
+{
+  "buys": [
+    "SMTC"
+  ],
+  "cash": 43.33,
+  "date": "2026-09-17",
+  "equity": 8596.45,
+  "fees": 8.9613,
+  "fills": [
+    {
+      "fees": 2.25,
+      "pnl": 33.78,
+      "price": 37.64,
+      "shares": 75,
+      "side": "SELL",
+      "ticker": "DBX"
+    },
+    {
+      "fees": 2.2292,
+      "pnl": -171.41,
+      "price": 37.57,
+      "shares": 69,
+      "side": "SELL",
+      "ticker": "SM"
+    },
+    {
+      "fees": 2.3481,
+      "pnl": 20.78,
+      "price": 26.51,
+      "shares": 106,
+      "side": "SELL",
+      "ticker": "WAY"
+    },
+    {
+      "fees": 2.134,
+      "pnl": null,
+      "price": 170.85,
+      "shares": 48,
+      "side": "BUY",
+      "ticker": "SMTC"
+    }
+  ],
+  "holdings": [
+    "SMTC"
+  ],
+  "mean": 3.4498,
+  "n_trades_today": 4,
+  "recipe": "union_news_g_cam71_h1",
+  "sells": [
+    "DBX",
+    "SM",
+    "WAY"
+  ],
+  "state": {
+    "after": "2026-09-17",
+    "cash": 43.33,
+    "pos": {
+      "SMTC": {
+        "close_px": 178.19000244140625,
+        "cost": 8202.93429296875,
+        "entry_date": "2026-09-17",
+        "entry_px": 170.85000610351562,
+        "fee_in": 2.134,
+        "last_px": 170.85000610351562,
+        "min_hold": 1,
+        "notional": 8200.80029296875,
+        "peak_px": 170.85000610351562,
+        "reason": "merged news\ud83d\udfe2 and cameras +7 \u2212\u22641; gate news=good,n_pos_min=7,cam_bad_max=1; rank cond; list probable,yday_gainer,yday_mover; \ud83d\udd35; ret5=+2.2; leftover $8246.26",
+        "shares": 48,
+        "ticker": "SMTC"
+      }
+    },
+    "yday_equity": 8596.45
+  }
+}

@@ -1,0 +1,167 @@
+{
+  "buys": [
+    "SABR"
+  ],
+  "cash": 0.5,
+  "date": "2026-09-17",
+  "equity": 9542.16,
+  "fees": 3.5217,
+  "fills": [
+    {
+      "fees": 3.5217,
+      "pnl": null,
+      "price": 2.4,
+      "shares": 273,
+      "side": "BUY",
+      "ticker": "SABR"
+    }
+  ],
+  "holdings": [
+    "ADPT",
+    "CRWD",
+    "DBX",
+    "DOCU",
+    "FFIV",
+    "ILMN",
+    "OKTA",
+    "SABR",
+    "WAY"
+  ],
+  "mean": 1.4981,
+  "n_trades_today": 1,
+  "recipe": "union_white_yday_h3",
+  "sells": [],
+  "state": {
+    "after": "2026-09-17",
+    "cash": 0.5,
+    "pos": {
+      "ADPT": {
+        "close_px": 28.549999237060547,
+        "cost": 1166.9890065612792,
+        "entry_date": "2026-09-16",
+        "entry_px": 27.09000015258789,
+        "fee_in": 2.119,
+        "last_px": 28.229999542236328,
+        "min_hold": 3,
+        "notional": 1164.8700065612793,
+        "peak_px": 28.229999542236328,
+        "reason": "union looker hold 3: 0 red + yesterday up; gate zero_red=True,yday_up=True; rank cond; list probable,yday_gainer,ohlc_hot; \ud83d\udd35; \u26aa; ret5=+9.6; leftover $1165.81",
+        "shares": 43,
+        "ticker": "ADPT"
+      },
+      "CRWD": {
+        "close_px": 245.6999969482422,
+        "cost": 949.6819926757812,
+        "entry_date": "2026-09-16",
+        "entry_px": 236.9199981689453,
+        "fee_in": 2.002,
+        "last_px": 236.0399932861328,
+        "min_hold": 3,
+        "notional": 947.6799926757812,
+        "peak_px": 236.9199981689453,
+        "reason": "union looker hold 3: 0 red + yesterday up; gate zero_red=True,yday_up=True; rank cond; list ohlc_hot; \u26aa; ret5=+15.5; leftover $1165.81",
+        "shares": 4,
+        "ticker": "CRWD"
+      },
+      "DBX": {
+        "close_px": 37.61000061035156,
+        "cost": 1153.1130331115723,
+        "entry_date": "2026-09-16",
+        "entry_px": 37.130001068115234,
+        "fee_in": 2.083,
+        "last_px": 37.63999938964844,
+        "min_hold": 3,
+        "notional": 1151.0300331115723,
+        "peak_px": 37.63999938964844,
+        "reason": "union looker hold 3: 0 red + yesterday up; gate zero_red=True,yday_up=True; rank cond; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+11.3; leftover $1165.81",
+        "shares": 31,
+        "ticker": "DBX"
+      },
+      "DOCU": {
+        "close_px": 70.63999938964844,
+        "cost": 1131.6379755859375,
+        "entry_date": "2026-09-16",
+        "entry_px": 70.5999984741211,
+        "fee_in": 2.038,
+        "last_px": 69.16000366210938,
+        "min_hold": 3,
+        "notional": 1129.5999755859375,
+        "peak_px": 70.5999984741211,
+        "reason": "union looker hold 3: 0 red + yesterday up; gate zero_red=True,yday_up=True; rank cond; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+10.4; leftover $1165.81",
+        "shares": 16,
+        "ticker": "DOCU"
+      },
+      "FFIV": {
+        "close_px": 434.6199951171875,
+        "cost": 862.235990234375,
+        "entry_date": "2026-09-16",
+        "entry_px": 430.1199951171875,
+        "fee_in": 1.996,
+        "last_px": 425.55999755859375,
+        "min_hold": 3,
+        "notional": 860.239990234375,
+        "peak_px": 430.1199951171875,
+        "reason": "union looker hold 3: 0 red + yesterday up; gate zero_red=True,yday_up=True; rank cond; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+10.6; leftover $1165.81",
+        "shares": 2,
+        "ticker": "FFIV"
+      },
+      "ILMN": {
+        "close_px": 245.17999267578125,
+        "cost": 1124.4550274658204,
+        "entry_date": "2026-09-16",
+        "entry_px": 224.49000549316406,
+        "fee_in": 2.005,
+        "last_px": 233.85000610351562,
+        "min_hold": 3,
+        "notional": 1122.4500274658203,
+        "peak_px": 233.85000610351562,
+        "reason": "union looker hold 3: 0 red + yesterday up; gate zero_red=True,yday_up=True; rank cond; list yday_gainer; \ud83d\udd35; \u26aa; ret5=+5.3; leftover $1165.81",
+        "shares": 5,
+        "ticker": "ILMN"
+      },
+      "OKTA": {
+        "close_px": 190.02000427246094,
+        "cost": 1121.1280256347657,
+        "entry_date": "2026-09-16",
+        "entry_px": 186.52000427246094,
+        "fee_in": 2.008,
+        "last_px": 183.0,
+        "min_hold": 3,
+        "notional": 1119.1200256347656,
+        "peak_px": 186.52000427246094,
+        "reason": "union looker hold 3: 0 red + yesterday up; gate zero_red=True,yday_up=True; rank cond; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+13.6; leftover $1165.81",
+        "shares": 6,
+        "ticker": "OKTA"
+      },
+      "SABR": {
+        "close_px": 2.319999933242798,
+        "cost": 658.7217260353088,
+        "entry_date": "2026-09-17",
+        "entry_px": 2.4000000953674316,
+        "fee_in": 3.5217,
+        "last_px": 2.4000000953674316,
+        "min_hold": 3,
+        "notional": 655.2000260353088,
+        "peak_px": 2.4000000953674316,
+        "reason": "union looker hold 3: 0 red + yesterday up; gate zero_red=True,yday_up=True; rank cond; list probable,yday_gainer,yday_mover,ohlc_hot; \ud83d\udd35; \u26aa; ret5=+8.4; leftover $659.22",
+        "shares": 273,
+        "ticker": "SABR"
+      },
+      "WAY": {
+        "close_px": 26.510000228881836,
+        "cost": 1158.0020201416016,
+        "entry_date": "2026-09-16",
+        "entry_px": 26.270000457763672,
+        "fee_in": 2.122,
+        "last_px": 26.510000228881836,
+        "min_hold": 3,
+        "notional": 1155.8800201416016,
+        "peak_px": 26.510000228881836,
+        "reason": "union looker hold 3: 0 red + yesterday up; gate zero_red=True,yday_up=True; rank cond; list yday_gainer,ohlc_hot; \ud83d\udd35; \u26aa; ret5=+10.0; leftover $1165.81",
+        "shares": 44,
+        "ticker": "WAY"
+      }
+    },
+    "yday_equity": 9542.16
+  }
+}

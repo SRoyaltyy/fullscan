@@ -1,0 +1,262 @@
+{
+  "buys": [
+    "FJET",
+    "ALOY",
+    "GLND",
+    "CRML",
+    "USDE",
+    "VGZ",
+    "YSS",
+    "AXTI"
+  ],
+  "cash": 14856.67,
+  "date": "2026-09-22",
+  "equity": 10011.87,
+  "fees": 33.6368,
+  "fills": [
+    {
+      "fees": 2.287,
+      "pnl": 57.75,
+      "price": 7.63,
+      "shares": 99,
+      "side": "COVER",
+      "ticker": "AEHL"
+    },
+    {
+      "fees": 2.176,
+      "pnl": -23.3,
+      "price": 13.43,
+      "shares": 62,
+      "side": "COVER",
+      "ticker": "ALMU"
+    },
+    {
+      "fees": 1.993,
+      "pnl": -26.71,
+      "price": 606.57,
+      "shares": 1,
+      "side": "COVER",
+      "ticker": "AMD"
+    },
+    {
+      "fees": 2.038,
+      "pnl": 23.56,
+      "price": 48.1,
+      "shares": 16,
+      "side": "COVER",
+      "ticker": "FRO"
+    },
+    {
+      "fees": 2.242,
+      "pnl": 33.27,
+      "price": 9.3,
+      "shares": 84,
+      "side": "COVER",
+      "ticker": "HAFN"
+    },
+    {
+      "fees": 2.101,
+      "pnl": 12.78,
+      "price": 21.19,
+      "shares": 37,
+      "side": "COVER",
+      "ticker": "TH"
+    },
+    {
+      "fees": 4.038290136986301,
+      "pnl": null,
+      "price": 2.02,
+      "shares": 307,
+      "side": "SHORT",
+      "ticker": "FJET"
+    },
+    {
+      "fees": 2.225997259584192,
+      "pnl": null,
+      "price": 9.4,
+      "shares": 66,
+      "side": "SHORT",
+      "ticker": "ALOY"
+    },
+    {
+      "fees": 2.7838956167691378,
+      "pnl": null,
+      "price": 2.94,
+      "shares": 211,
+      "side": "SHORT",
+      "ticker": "GLND"
+    },
+    {
+      "fees": 2.2322720541549055,
+      "pnl": null,
+      "price": 9.11,
+      "shares": 68,
+      "side": "SHORT",
+      "ticker": "CRML"
+    },
+    {
+      "fees": 2.167726849020344,
+      "pnl": null,
+      "price": 12.99,
+      "shares": 47,
+      "side": "SHORT",
+      "ticker": "USDE"
+    },
+    {
+      "fees": 3.0843890417072872,
+      "pnl": null,
+      "price": 2.65,
+      "shares": 234,
+      "side": "SHORT",
+      "ticker": "VGZ"
+    },
+    {
+      "fees": 2.216397808219178,
+      "pnl": null,
+      "price": 9.79,
+      "shares": 63,
+      "side": "SHORT",
+      "ticker": "YSS"
+    },
+    {
+      "fees": 2.0507978080854024,
+      "pnl": null,
+      "price": 76.64,
+      "shares": 8,
+      "side": "SHORT",
+      "ticker": "AXTI"
+    }
+  ],
+  "holdings": [
+    "ALOY",
+    "AXTI",
+    "CRML",
+    "FJET",
+    "GLND",
+    "USDE",
+    "VGZ",
+    "YSS"
+  ],
+  "mean": 0.779,
+  "n_trades_today": 14,
+  "recipe": "short_alarm_h1",
+  "sells": [
+    "AEHL",
+    "ALMU",
+    "AMD",
+    "FRO",
+    "HAFN",
+    "TH"
+  ],
+  "state": {
+    "after": "2026-09-22",
+    "cash": 14856.67,
+    "pos": {
+      "ALOY": {
+        "close_px": 9.029999732971191,
+        "cost": 2.225997259584192,
+        "entry_date": "2026-09-22",
+        "entry_px": 9.399999618530273,
+        "fee_in": 2.225997259584192,
+        "last_px": 9.399999618530273,
+        "notional": 620.399974822998,
+        "peak_px": 9.399999618530273,
+        "reason": "alarm; gate alarm=True; list probable,yday_gainer; ret5=+9.5; leftover $621.04",
+        "shares": 66,
+        "ticker": "ALOY"
+      },
+      "AXTI": {
+        "close_px": 77.79000091552734,
+        "cost": 2.0507978080854024,
+        "entry_date": "2026-09-22",
+        "entry_px": 76.63999938964844,
+        "fee_in": 2.0507978080854024,
+        "last_px": 76.63999938964844,
+        "notional": 613.1199951171875,
+        "peak_px": 76.63999938964844,
+        "reason": "alarm; gate alarm=True; list yday_gainer; ret5=+40.1; leftover $621.04",
+        "shares": 8,
+        "ticker": "AXTI"
+      },
+      "CRML": {
+        "close_px": 8.539999961853027,
+        "cost": 2.2322720541549055,
+        "entry_date": "2026-09-22",
+        "entry_px": 9.109999656677246,
+        "fee_in": 2.2322720541549055,
+        "last_px": 9.109999656677246,
+        "notional": 619.4799766540527,
+        "peak_px": 9.109999656677246,
+        "reason": "alarm; gate alarm=True; list yday_gainer,yday_mover; ret5=+44.4; leftover $621.04",
+        "shares": 68,
+        "ticker": "CRML"
+      },
+      "FJET": {
+        "close_px": 1.94,
+        "cost": 4.038290136986301,
+        "entry_date": "2026-09-22",
+        "entry_px": 2.02,
+        "fee_in": 4.038290136986301,
+        "last_px": 2.02,
+        "notional": 620.14,
+        "peak_px": 2.02,
+        "reason": "alarm; gate alarm=True; list probable,yday_gainer,yday_mover; ret5=+0.5; leftover $621.04",
+        "shares": 307,
+        "ticker": "FJET"
+      },
+      "GLND": {
+        "close_px": 2.509999990463257,
+        "cost": 2.7838956167691378,
+        "entry_date": "2026-09-22",
+        "entry_px": 2.940000057220459,
+        "fee_in": 2.7838956167691378,
+        "last_px": 2.940000057220459,
+        "notional": 620.3400120735168,
+        "peak_px": 2.940000057220459,
+        "reason": "alarm; gate alarm=True; list yday_gainer,yday_mover; ret5=+136.1; leftover $621.04",
+        "shares": 211,
+        "ticker": "GLND"
+      },
+      "USDE": {
+        "close_px": 13.539999961853027,
+        "cost": 2.167726849020344,
+        "entry_date": "2026-09-22",
+        "entry_px": 12.989999771118164,
+        "fee_in": 2.167726849020344,
+        "last_px": 12.989999771118164,
+        "notional": 610.5299892425537,
+        "peak_px": 12.989999771118164,
+        "reason": "alarm; gate alarm=True; list yday_gainer,yday_mover; ret5=+69.4; leftover $621.04",
+        "shares": 47,
+        "ticker": "USDE"
+      },
+      "VGZ": {
+        "close_px": 2.819999933242798,
+        "cost": 3.0843890417072872,
+        "entry_date": "2026-09-22",
+        "entry_px": 2.6500000953674316,
+        "fee_in": 3.0843890417072872,
+        "last_px": 2.6500000953674316,
+        "notional": 620.100022315979,
+        "peak_px": 2.6500000953674316,
+        "reason": "alarm; gate alarm=True; list yday_gainer,yday_mover; ret5=+26.3; leftover $621.04",
+        "shares": 234,
+        "ticker": "VGZ"
+      },
+      "YSS": {
+        "close_px": 9.91,
+        "cost": 2.216397808219178,
+        "entry_date": "2026-09-22",
+        "entry_px": 9.79,
+        "fee_in": 2.216397808219178,
+        "last_px": 9.79,
+        "notional": 616.77,
+        "peak_px": 9.79,
+        "reason": "alarm; gate alarm=True; list yday_gainer; ret5=+26.6; leftover $621.04",
+        "shares": 63,
+        "ticker": "YSS"
+      }
+    },
+    "yday_equity": 10011.87
+  }
+}

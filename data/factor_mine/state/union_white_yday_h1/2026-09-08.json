@@ -1,0 +1,93 @@
+{
+  "buys": [],
+  "cash": 9842.91,
+  "date": "2026-09-08",
+  "equity": 9842.91,
+  "fees": 18.764,
+  "fills": [
+    {
+      "fees": 2.022,
+      "pnl": -42.58,
+      "price": 253.72,
+      "shares": 4,
+      "side": "SELL",
+      "ticker": "CRM"
+    },
+    {
+      "fees": 2.016,
+      "pnl": 10.73,
+      "price": 521.15,
+      "shares": 2,
+      "side": "SELL",
+      "ticker": "DELL"
+    },
+    {
+      "fees": 2.2343,
+      "pnl": 20.71,
+      "price": 16.74,
+      "shares": 74,
+      "side": "SELL",
+      "ticker": "FRNM"
+    },
+    {
+      "fees": 3.5117,
+      "pnl": -6.97,
+      "price": 4.53,
+      "shares": 268,
+      "side": "SELL",
+      "ticker": "IRD"
+    },
+    {
+      "fees": 2.767,
+      "pnl": 36.71,
+      "price": 5.95,
+      "shares": 211,
+      "side": "SELL",
+      "ticker": "LENZ"
+    },
+    {
+      "fees": 2.055,
+      "pnl": -2.74,
+      "price": 76.64,
+      "shares": 15,
+      "side": "SELL",
+      "ticker": "PIPR"
+    },
+    {
+      "fees": 2.052,
+      "pnl": 93.5,
+      "price": 89.67,
+      "shares": 14,
+      "side": "SELL",
+      "ticker": "TARS"
+    },
+    {
+      "fees": 2.106,
+      "pnl": 5.73,
+      "price": 37.75,
+      "shares": 32,
+      "side": "SELL",
+      "ticker": "TDS"
+    }
+  ],
+  "holdings": [],
+  "mean": -0.7931,
+  "n_trades_today": 8,
+  "recipe": "union_white_yday_h1",
+  "sells": [
+    "CRM",
+    "DELL",
+    "FRNM",
+    "IRD",
+    "LENZ",
+    "PIPR",
+    "TARS",
+    "TDS"
+  ],
+  "state": {
+    "after": "2026-09-08",
+    "cash": 9842.91,
+    "pos": {},
+    "yday_equity": 9842.91
+  }
+}

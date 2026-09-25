@@ -1,0 +1,81 @@
+{
+  "buys": [],
+  "cash": 31.99,
+  "date": "2026-08-31",
+  "equity": 9561.98,
+  "fees": 0,
+  "fills": [],
+  "holdings": [
+    "ANF",
+    "GAP",
+    "NCNO",
+    "TH"
+  ],
+  "mean": -2.5937,
+  "n_trades_today": 0,
+  "recipe": "union_join_vol_green_h3",
+  "sells": [],
+  "state": {
+    "after": "2026-08-31",
+    "cash": 31.99,
+    "pos": {
+      "ANF": {
+        "close_px": 143.0800018310547,
+        "cost": 2485.231124511719,
+        "entry_date": "2026-08-28",
+        "entry_px": 146.07000732421875,
+        "fee_in": 2.041,
+        "last_px": 148.02999877929688,
+        "min_hold": 3,
+        "notional": 2483.1901245117188,
+        "peak_px": 148.02999877929688,
+        "reason": "combo gate; gate join=good,vol=good,last_green=True; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+38.8; leftover $2500.00",
+        "shares": 17,
+        "ticker": "ANF"
+      },
+      "GAP": {
+        "close_px": 22.309999465942383,
+        "cost": 2495.9830539398195,
+        "entry_date": "2026-08-28",
+        "entry_px": 24.690000534057617,
+        "fee_in": 2.293,
+        "last_px": 22.979999542236328,
+        "min_hold": 3,
+        "notional": 2493.6900539398193,
+        "peak_px": 24.690000534057617,
+        "reason": "combo gate; gate join=good,vol=good,last_green=True; list earn_react; ret5=+5.8; leftover $2500.00",
+        "shares": 101,
+        "ticker": "GAP"
+      },
+      "NCNO": {
+        "close_px": 22.600000381469727,
+        "cost": 2495.4109183654787,
+        "entry_date": "2026-08-28",
+        "entry_px": 23.299999237060547,
+        "fee_in": 2.311,
+        "last_px": 22.65999984741211,
+        "min_hold": 3,
+        "notional": 2493.0999183654785,
+        "peak_px": 23.299999237060547,
+        "reason": "combo gate; gate join=good,vol=good,last_green=True; list ohlc_hot; \ud83d\udd35; ret5=+14.5; leftover $2500.00",
+        "shares": 107,
+        "ticker": "NCNO"
+      },
+      "TH": {
+        "close_px": 18.520000457763672,
+        "cost": 2491.383,
+        "entry_date": "2026-08-28",
+        "entry_px": 19.0,
+        "fee_in": 2.383,
+        "last_px": 18.125,
+        "min_hold": 3,
+        "notional": 2489.0,
+        "peak_px": 19.0,
+        "reason": "combo gate; gate join=good,vol=good,last_green=True; list ohlc_hot; ret5=+7.5; leftover $2500.00",
+        "shares": 131,
+        "ticker": "TH"
+      }
+    },
+    "yday_equity": 9561.98
+  }
+}

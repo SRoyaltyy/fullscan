@@ -1,0 +1,95 @@
+{
+  "buys": [
+    "ORCL",
+    "ADBE",
+    "BAK"
+  ],
+  "cash": 36.37,
+  "date": "2026-09-11",
+  "equity": 9274.04,
+  "fees": 23.3228,
+  "fills": [
+    {
+      "fees": 2.047,
+      "pnl": null,
+      "price": 164.43,
+      "shares": 19,
+      "side": "BUY",
+      "ticker": "ORCL"
+    },
+    {
+      "fees": 2.029,
+      "pnl": null,
+      "price": 242.17,
+      "shares": 13,
+      "side": "BUY",
+      "ticker": "ADBE"
+    },
+    {
+      "fees": 19.2468,
+      "pnl": null,
+      "price": 2.12,
+      "shares": 1492,
+      "side": "BUY",
+      "ticker": "BAK"
+    }
+  ],
+  "holdings": [
+    "ADBE",
+    "BAK",
+    "ORCL"
+  ],
+  "mean": -2.3283,
+  "n_trades_today": 3,
+  "recipe": "union_news_or_net2_h3",
+  "sells": [],
+  "state": {
+    "after": "2026-09-11",
+    "cash": 36.37,
+    "pos": {
+      "ADBE": {
+        "close_px": 252.22999572753906,
+        "cost": 3150.238976196289,
+        "entry_date": "2026-09-11",
+        "entry_px": 242.1699981689453,
+        "fee_in": 2.029,
+        "last_px": 242.1699981689453,
+        "min_hold": 3,
+        "notional": 3148.209976196289,
+        "peak_px": 242.1699981689453,
+        "reason": "packet\ud83d\udfe2 OR headline\ud83d\udfe2 and camera net \u2265 2; gate news_or_headline=True,cam_net_min=2; rank cond; list earn_react; \ud83d\udd35; ret5=-12.9; leftover $3165.04",
+        "shares": 13,
+        "ticker": "ADBE"
+      },
+      "BAK": {
+        "close_px": 2.0799999237060547,
+        "cost": 3182.2866292541503,
+        "entry_date": "2026-09-11",
+        "entry_px": 2.119999885559082,
+        "fee_in": 19.2468,
+        "last_px": 2.119999885559082,
+        "min_hold": 3,
+        "notional": 3163.0398292541504,
+        "peak_px": 2.119999885559082,
+        "reason": "packet\ud83d\udfe2 OR headline\ud83d\udfe2 and camera net \u2265 2; gate news_or_headline=True,cam_net_min=2; rank cond; list probable,yday_gainer,ohlc_hot; \ud83d\udd35; ret5=+8.8; leftover $3165.04",
+        "shares": 1492,
+        "ticker": "BAK"
+      },
+      "ORCL": {
+        "close_px": 150.27999877929688,
+        "cost": 3126.216860839844,
+        "entry_date": "2026-09-11",
+        "entry_px": 164.42999267578125,
+        "fee_in": 2.047,
+        "last_px": 164.42999267578125,
+        "min_hold": 3,
+        "notional": 3124.1698608398438,
+        "peak_px": 164.42999267578125,
+        "reason": "packet\ud83d\udfe2 OR headline\ud83d\udfe2 and camera net \u2265 2; gate news_or_headline=True,cam_net_min=2; rank cond; list flatten,earn_react; \ud83d\udd35; \u26aa; ret5=-0.7; leftover $3165.04",
+        "shares": 19,
+        "ticker": "ORCL"
+      }
+    },
+    "yday_equity": 9274.04
+  }
+}

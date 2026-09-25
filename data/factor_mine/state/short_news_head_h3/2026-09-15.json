@@ -1,0 +1,63 @@
+{
+  "buys": [],
+  "cash": 15634.14,
+  "date": "2026-09-15",
+  "equity": 10115.07,
+  "fees": 0,
+  "fills": [],
+  "holdings": [
+    "CRDL",
+    "MYGN",
+    "RWT"
+  ],
+  "mean": 0.3375,
+  "n_trades_today": 0,
+  "recipe": "short_news_head_h3",
+  "sells": [],
+  "state": {
+    "after": "2026-09-15",
+    "cash": 15634.14,
+    "pos": {
+      "CRDL": {
+        "close_px": 1.850000023841858,
+        "cost": 11.25916328699948,
+        "entry_date": "2026-09-11",
+        "entry_px": 2.0299999713897705,
+        "fee_in": 11.25916328699948,
+        "last_px": 1.9600000381469727,
+        "notional": 1739.7099754810333,
+        "peak_px": 1.9600000381469727,
+        "reason": "short prior-export headline\ud83d\udd34; gate headline=bad; list yday_mover; ret5=-8.3; leftover $1740.20",
+        "shares": 857,
+        "ticker": "CRDL"
+      },
+      "MYGN": {
+        "close_px": 3.880000114440918,
+        "cost": 6.803641642217767,
+        "entry_date": "2026-09-11",
+        "entry_px": 3.369999885559082,
+        "fee_in": 6.803641642217767,
+        "last_px": 3.799999952316284,
+        "notional": 1738.9199409484863,
+        "peak_px": 3.369999885559082,
+        "reason": "short prior-export headline\ud83d\udd34; gate headline=bad; list yday_gainer,ohlc_hot; ret5=+4.0; leftover $1740.20",
+        "shares": 516,
+        "ticker": "MYGN"
+      },
+      "RWT": {
+        "close_px": 3.9100000858306885,
+        "cost": 6.51614054768706,
+        "entry_date": "2026-09-11",
+        "entry_px": 3.5199999809265137,
+        "fee_in": 6.51614054768706,
+        "last_px": 3.799999952316284,
+        "notional": 1738.8799905776978,
+        "peak_px": 3.5199999809265137,
+        "reason": "short prior-export headline\ud83d\udd34; gate headline=bad; list yday_mover; \ud83d\udd35; ret5=-19.0; leftover $1740.20",
+        "shares": 494,
+        "ticker": "RWT"
+      }
+    },
+    "yday_equity": 10115.07
+  }
+}

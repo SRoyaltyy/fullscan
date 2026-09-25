@@ -1,0 +1,215 @@
+{
+  "buys": [
+    "AMBA",
+    "ASAN",
+    "DOCU",
+    "GWRE",
+    "IOT",
+    "LULU",
+    "MAMA",
+    "PATH"
+  ],
+  "cash": 175.76,
+  "date": "2026-09-04",
+  "equity": 9328.21,
+  "fees": 17.018,
+  "fills": [
+    {
+      "fees": 2.044,
+      "pnl": null,
+      "price": 63.18,
+      "shares": 18,
+      "side": "BUY",
+      "ticker": "AMBA"
+    },
+    {
+      "fees": 2.401,
+      "pnl": null,
+      "price": 8.74,
+      "shares": 137,
+      "side": "BUY",
+      "ticker": "ASAN"
+    },
+    {
+      "fees": 2.041,
+      "pnl": null,
+      "price": 68.52,
+      "shares": 17,
+      "side": "BUY",
+      "ticker": "DOCU"
+    },
+    {
+      "fees": 2.011,
+      "pnl": null,
+      "price": 167.55,
+      "shares": 7,
+      "side": "BUY",
+      "ticker": "GWRE"
+    },
+    {
+      "fees": 2.068,
+      "pnl": null,
+      "price": 44.9,
+      "shares": 26,
+      "side": "BUY",
+      "ticker": "IOT"
+    },
+    {
+      "fees": 2.026,
+      "pnl": null,
+      "price": 98.15,
+      "shares": 12,
+      "side": "BUY",
+      "ticker": "LULU"
+    },
+    {
+      "fees": 2.218,
+      "pnl": null,
+      "price": 15.7,
+      "shares": 76,
+      "side": "BUY",
+      "ticker": "MAMA"
+    },
+    {
+      "fees": 2.209,
+      "pnl": null,
+      "price": 16.24,
+      "shares": 73,
+      "side": "BUY",
+      "ticker": "PATH"
+    }
+  ],
+  "holdings": [
+    "AMBA",
+    "ASAN",
+    "DOCU",
+    "GWRE",
+    "IOT",
+    "LULU",
+    "MAMA",
+    "PATH"
+  ],
+  "mean": -2.7198,
+  "n_trades_today": 8,
+  "recipe": "union_earn_react_h1",
+  "sells": [],
+  "state": {
+    "after": "2026-09-04",
+    "cash": 175.76,
+    "pos": {
+      "AMBA": {
+        "close_px": 62.88999938964844,
+        "cost": 1139.2840054931642,
+        "entry_date": "2026-09-04",
+        "entry_px": 63.18000030517578,
+        "fee_in": 2.044,
+        "last_px": 63.18000030517578,
+        "min_hold": 1,
+        "notional": 1137.240005493164,
+        "peak_px": 63.18000030517578,
+        "reason": "union \u2229 earn_react, no \ud83d\udea8; gate earn_react=True; list earn_react; \ud83d\udd35; ret5=-10.9; leftover $1198.63",
+        "shares": 18,
+        "ticker": "AMBA"
+      },
+      "ASAN": {
+        "close_px": 8.8100004196167,
+        "cost": 1199.7809686431885,
+        "entry_date": "2026-09-04",
+        "entry_px": 8.739999771118164,
+        "fee_in": 2.401,
+        "last_px": 8.739999771118164,
+        "min_hold": 1,
+        "notional": 1197.3799686431885,
+        "peak_px": 8.739999771118164,
+        "reason": "union \u2229 earn_react, no \ud83d\udea8; gate earn_react=True; list earn_react; \ud83d\udd35; ret5=-0.8; leftover $1198.63",
+        "shares": 137,
+        "ticker": "ASAN"
+      },
+      "DOCU": {
+        "close_px": 68.41000366210938,
+        "cost": 1166.8809429321288,
+        "entry_date": "2026-09-04",
+        "entry_px": 68.5199966430664,
+        "fee_in": 2.041,
+        "last_px": 68.5199966430664,
+        "min_hold": 1,
+        "notional": 1164.839942932129,
+        "peak_px": 68.5199966430664,
+        "reason": "union \u2229 earn_react, no \ud83d\udea8; gate earn_react=True; list earn_react; \ud83d\udd35; ret5=+3.4; leftover $1198.63",
+        "shares": 17,
+        "ticker": "DOCU"
+      },
+      "GWRE": {
+        "close_px": 162.4199981689453,
+        "cost": 1174.8610213623047,
+        "entry_date": "2026-09-04",
+        "entry_px": 167.5500030517578,
+        "fee_in": 2.011,
+        "last_px": 167.5500030517578,
+        "min_hold": 1,
+        "notional": 1172.8500213623047,
+        "peak_px": 167.5500030517578,
+        "reason": "union \u2229 earn_react, no \ud83d\udea8; gate earn_react=True; list earn_react; ret5=+0.9; leftover $1198.63",
+        "shares": 7,
+        "ticker": "GWRE"
+      },
+      "IOT": {
+        "close_px": 40.20000076293945,
+        "cost": 1169.4680396728515,
+        "entry_date": "2026-09-04",
+        "entry_px": 44.900001525878906,
+        "fee_in": 2.068,
+        "last_px": 44.900001525878906,
+        "min_hold": 1,
+        "notional": 1167.4000396728516,
+        "peak_px": 44.900001525878906,
+        "reason": "union \u2229 earn_react, no \ud83d\udea8; gate earn_react=True; list earn_react; ret5=-7.5; leftover $1198.63",
+        "shares": 26,
+        "ticker": "IOT"
+      },
+      "LULU": {
+        "close_px": 100.61000061035156,
+        "cost": 1179.826018310547,
+        "entry_date": "2026-09-04",
+        "entry_px": 98.1500015258789,
+        "fee_in": 2.026,
+        "last_px": 98.1500015258789,
+        "min_hold": 1,
+        "notional": 1177.8000183105469,
+        "peak_px": 98.1500015258789,
+        "reason": "union \u2229 earn_react, no \ud83d\udea8; gate earn_react=True; list earn_react; ret5=+5.9; leftover $1198.63",
+        "shares": 12,
+        "ticker": "LULU"
+      },
+      "MAMA": {
+        "close_px": 15.15999984741211,
+        "cost": 1195.4179855041505,
+        "entry_date": "2026-09-04",
+        "entry_px": 15.699999809265137,
+        "fee_in": 2.218,
+        "last_px": 15.699999809265137,
+        "min_hold": 1,
+        "notional": 1193.1999855041504,
+        "peak_px": 15.699999809265137,
+        "reason": "union \u2229 earn_react, no \ud83d\udea8; gate earn_react=True; list earn_react; ret5=-0.4; leftover $1198.63",
+        "shares": 76,
+        "ticker": "MAMA"
+      },
+      "PATH": {
+        "close_px": 15.1899995803833,
+        "cost": 1187.728983291626,
+        "entry_date": "2026-09-04",
+        "entry_px": 16.239999771118164,
+        "fee_in": 2.209,
+        "last_px": 16.239999771118164,
+        "min_hold": 1,
+        "notional": 1185.519983291626,
+        "peak_px": 16.239999771118164,
+        "reason": "union \u2229 earn_react, no \ud83d\udea8; gate earn_react=True; list earn_react; \ud83d\udd35; ret5=-0.6; leftover $1198.63",
+        "shares": 73,
+        "ticker": "PATH"
+      }
+    },
+    "yday_equity": 9328.21
+  }
+}

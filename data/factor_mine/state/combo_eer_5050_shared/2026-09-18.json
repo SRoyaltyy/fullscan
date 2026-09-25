@@ -1,0 +1,69 @@
+{
+  "buys": [],
+  "cash": 23.05,
+  "date": "2026-09-18",
+  "equity": 9527.22,
+  "fees": 0,
+  "fills": [],
+  "holdings": [
+    "ALMU",
+    "FPS",
+    "TCOM"
+  ],
+  "mean": 2.3314,
+  "n_trades_today": 0,
+  "recipe": "combo_eer_5050_shared",
+  "sells": [],
+  "state": {
+    "after": "2026-09-18",
+    "cash": 23.05,
+    "pos": {
+      "ALMU": {
+        "close_px": 12.725000381469727,
+        "cost": 22.650200076293945,
+        "entry_date": "2026-09-17",
+        "entry_px": 11.210000038146973,
+        "fee_in": 0.2302,
+        "last_px": 11.640000343322754,
+        "notional": 22.420000076293945,
+        "owner": "union_e_fresh_h3",
+        "peak_px": 11.640000343322754,
+        "reason": "union \u2229 e_fresh, no \ud83d\udea8; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=+1.0; combo leftover $22.85; owner union_e_fresh_h3",
+        "shares": 2,
+        "side": "long",
+        "ticker": "ALMU"
+      },
+      "FPS": {
+        "close_px": 39.439998626708984,
+        "cost": 4343.722920043945,
+        "entry_date": "2026-09-16",
+        "entry_px": 33.13999938964844,
+        "fee_in": 2.383,
+        "last_px": 39.5,
+        "notional": 4341.339920043945,
+        "owner": "union_e_fresh_h3",
+        "peak_px": 39.5,
+        "reason": "union \u2229 e_fresh, no \ud83d\udea8; gate days_since_E_max=1,flag_E_min=0; list yday_gainer; \ud83d\udd35; ret5=-2.9; combo leftover $4365.16; owner union_e_fresh_h3",
+        "shares": 131,
+        "side": "long",
+        "ticker": "FPS"
+      },
+      "TCOM": {
+        "close_px": 40.68000030517578,
+        "cost": 4340.888032348633,
+        "entry_date": "2026-09-16",
+        "entry_px": 40.93000030517578,
+        "fee_in": 2.308,
+        "last_px": 40.61000061035156,
+        "notional": 4338.580032348633,
+        "owner": "union_e_fresh_h3",
+        "peak_px": 40.93000030517578,
+        "reason": "union \u2229 e_fresh, no \ud83d\udea8; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=-3.1; combo leftover $4365.16; owner union_e_fresh_h3",
+        "shares": 106,
+        "side": "long",
+        "ticker": "TCOM"
+      }
+    },
+    "yday_equity": 9527.22
+  }
+}

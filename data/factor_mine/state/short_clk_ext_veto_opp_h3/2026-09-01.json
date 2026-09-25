@@ -1,0 +1,49 @@
+{
+  "buys": [],
+  "cash": 14983.43,
+  "date": "2026-09-01",
+  "equity": 10065.52,
+  "fees": 0,
+  "fills": [],
+  "holdings": [
+    "CAPR",
+    "SBET"
+  ],
+  "mean": 1.1366,
+  "n_trades_today": 0,
+  "recipe": "short_clk_ext_veto_opp_h3",
+  "sells": [],
+  "state": {
+    "after": "2026-09-01",
+    "cash": 14983.43,
+    "pos": {
+      "CAPR": {
+        "close_px": 10.010000228881836,
+        "cost": 3.433043284460616,
+        "entry_date": "2026-08-28",
+        "entry_px": 9.729999542236328,
+        "fee_in": 3.433043284460616,
+        "last_px": 10.770000457763672,
+        "notional": 2490.8798828125,
+        "peak_px": 9.5,
+        "reason": "Clock-B #5 \u2229 Theme Radar T\u22121 oppset; gate clk_ext_veto=True,oppset=True; rank opp_rvol; list yday_gainer,yday_mover; ret5=+47.1; leftover $2500.00",
+        "shares": 256,
+        "ticker": "CAPR"
+      },
+      "SBET": {
+        "close_px": 8.149999618530273,
+        "cost": 3.8645890380754864,
+        "entry_date": "2026-08-28",
+        "entry_px": 8.649999618530273,
+        "fee_in": 3.8645890380754864,
+        "last_px": 8.289999961853027,
+        "notional": 2499.849889755249,
+        "peak_px": 8.239999771118164,
+        "reason": "Clock-B #5 \u2229 Theme Radar T\u22121 oppset; gate clk_ext_veto=True,oppset=True; rank opp_rvol; list ohlc_hot; ret5=+17.0; leftover $2500.00",
+        "shares": 289,
+        "ticker": "SBET"
+      }
+    },
+    "yday_equity": 10065.52
+  }
+}

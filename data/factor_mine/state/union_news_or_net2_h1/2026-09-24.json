@@ -1,0 +1,48 @@
+{
+  "buys": [],
+  "cash": 8648.84,
+  "date": "2026-09-24",
+  "equity": 8648.84,
+  "fees": 38.4255,
+  "fills": [
+    {
+      "fees": 5.0794,
+      "pnl": -234.53,
+      "price": 7.37,
+      "shares": 387,
+      "side": "SELL",
+      "ticker": "PGEN"
+    },
+    {
+      "fees": 2.6298,
+      "pnl": -266.5,
+      "price": 14.38,
+      "shares": 195,
+      "side": "SELL",
+      "ticker": "SGRY"
+    },
+    {
+      "fees": 30.7163,
+      "pnl": -84.51,
+      "price": 1.29,
+      "shares": 2349,
+      "side": "SELL",
+      "ticker": "VERI"
+    }
+  ],
+  "holdings": [],
+  "mean": -1.15,
+  "n_trades_today": 3,
+  "recipe": "union_news_or_net2_h1",
+  "sells": [
+    "PGEN",
+    "SGRY",
+    "VERI"
+  ],
+  "state": {
+    "after": "2026-09-24",
+    "cash": 8648.84,
+    "pos": {},
+    "yday_equity": 8648.84
+  }
+}

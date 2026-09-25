@@ -1,0 +1,77 @@
+{
+  "buys": [],
+  "cash": 2439.2,
+  "date": "2026-09-24",
+  "equity": 15219.62,
+  "fees": 11.7128,
+  "fills": [
+    {
+      "fees": 11.7128,
+      "pnl": 102.04,
+      "price": 2.61,
+      "shares": 895,
+      "side": "SELL",
+      "ticker": "FEAM"
+    }
+  ],
+  "holdings": [
+    "GLND",
+    "VICR",
+    "VKTX"
+  ],
+  "mean": 19.4952,
+  "n_trades_today": 1,
+  "recipe": "union_hot_n4_holdup",
+  "sells": [
+    "FEAM"
+  ],
+  "state": {
+    "after": "2026-09-24",
+    "cash": 2439.2,
+    "pos": {
+      "GLND": {
+        "close_px": 5.349999904632568,
+        "cost": 3328.7283585079194,
+        "entry_date": "2026-09-23",
+        "entry_px": 2.700000047683716,
+        "fee_in": 15.8283,
+        "last_px": 3.2200000286102295,
+        "min_hold": 2,
+        "notional": 3312.9000585079193,
+        "peak_px": 3.2200000286102295,
+        "reason": "hot4; S>0 lots stay through the next 09:30 so the overnight gap is in the book; rank hot_score; list yday_mover; \ud83d\udd35; ret5=+109.2; leftover $3314.99",
+        "shares": 1227,
+        "ticker": "GLND"
+      },
+      "VICR": {
+        "close_px": 276.05999755859375,
+        "cost": 3200.026,
+        "entry_date": "2026-09-23",
+        "entry_px": 266.5,
+        "fee_in": 2.026,
+        "last_px": 274.45001220703125,
+        "min_hold": 2,
+        "notional": 3198.0,
+        "peak_px": 274.45001220703125,
+        "reason": "hot4; S>0 lots stay through the next 09:30 so the overnight gap is in the book; rank hot_score; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+45.9; leftover $3314.99",
+        "shares": 12,
+        "ticker": "VICR"
+      },
+      "VKTX": {
+        "close_px": 36.75,
+        "cost": 3301.266867401123,
+        "entry_date": "2026-09-23",
+        "entry_px": 41.7599983215332,
+        "fee_in": 2.227,
+        "last_px": 36.025001525878906,
+        "min_hold": 2,
+        "notional": 3299.039867401123,
+        "peak_px": 41.7599983215332,
+        "reason": "hot4; S>0 lots stay through the next 09:30 so the overnight gap is in the book; rank hot_score; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+36.4; leftover $3314.99",
+        "shares": 79,
+        "ticker": "VKTX"
+      }
+    },
+    "yday_equity": 15219.62
+  }
+}

@@ -1,0 +1,288 @@
+{
+  "buys": [
+    "CRM",
+    "DELL",
+    "SLBT",
+    "TARS",
+    "FCEL",
+    "MDB",
+    "ASST",
+    "DFDV"
+  ],
+  "cash": 411.68,
+  "date": "2026-09-04",
+  "equity": 9676.24,
+  "fees": 46.384,
+  "fills": [
+    {
+      "fees": 2.034,
+      "pnl": -13.49,
+      "price": 144.89,
+      "shares": 8,
+      "side": "SELL",
+      "ticker": "ANF"
+    },
+    {
+      "fees": 2.4052,
+      "pnl": -47.02,
+      "price": 9.4,
+      "shares": 128,
+      "side": "SELL",
+      "ticker": "CAPR"
+    },
+    {
+      "fees": 2.2693,
+      "pnl": 26.94,
+      "price": 15.0,
+      "shares": 85,
+      "side": "SELL",
+      "ticker": "CRK"
+    },
+    {
+      "fees": 6.6475,
+      "pnl": -135.12,
+      "price": 2.22,
+      "shares": 508,
+      "side": "SELL",
+      "ticker": "EQ"
+    },
+    {
+      "fees": 2.4591,
+      "pnl": -123.78,
+      "price": 7.79,
+      "shares": 145,
+      "side": "SELL",
+      "ticker": "OPTX"
+    },
+    {
+      "fees": 2.097,
+      "pnl": 13.81,
+      "price": 42.36,
+      "shares": 29,
+      "side": "SELL",
+      "ticker": "RRC"
+    },
+    {
+      "fees": 6.0988,
+      "pnl": -128.61,
+      "price": 2.43,
+      "shares": 466,
+      "side": "SELL",
+      "ticker": "SLI"
+    },
+    {
+      "fees": 2.4306,
+      "pnl": -26.59,
+      "price": 8.97,
+      "shares": 136,
+      "side": "SELL",
+      "ticker": "VYX"
+    },
+    {
+      "fees": 2.002,
+      "pnl": null,
+      "price": 263.36,
+      "shares": 4,
+      "side": "BUY",
+      "ticker": "CRM"
+    },
+    {
+      "fees": 1.996,
+      "pnl": null,
+      "price": 513.78,
+      "shares": 2,
+      "side": "BUY",
+      "ticker": "DELL"
+    },
+    {
+      "fees": 4.8891,
+      "pnl": null,
+      "price": 3.15,
+      "shares": 379,
+      "side": "BUY",
+      "ticker": "SLBT"
+    },
+    {
+      "fees": 2.032,
+      "pnl": null,
+      "price": 82.7,
+      "shares": 14,
+      "side": "BUY",
+      "ticker": "TARS"
+    },
+    {
+      "fees": 2.236,
+      "pnl": null,
+      "price": 14.52,
+      "shares": 82,
+      "side": "BUY",
+      "ticker": "FCEL"
+    },
+    {
+      "fees": 1.999,
+      "pnl": null,
+      "price": 378.34,
+      "shares": 3,
+      "side": "BUY",
+      "ticker": "MDB"
+    },
+    {
+      "fees": 2.131,
+      "pnl": null,
+      "price": 25.18,
+      "shares": 47,
+      "side": "BUY",
+      "ticker": "ASST"
+    },
+    {
+      "fees": 2.6574,
+      "pnl": null,
+      "price": 5.79,
+      "shares": 206,
+      "side": "BUY",
+      "ticker": "DFDV"
+    }
+  ],
+  "holdings": [
+    "ASST",
+    "CRM",
+    "DELL",
+    "DFDV",
+    "FCEL",
+    "MDB",
+    "SLBT",
+    "TARS"
+  ],
+  "mean": 1.2504,
+  "n_trades_today": 16,
+  "recipe": "union_last_green_h5",
+  "sells": [
+    "ANF",
+    "CAPR",
+    "CRK",
+    "EQ",
+    "OPTX",
+    "RRC",
+    "SLI",
+    "VYX"
+  ],
+  "state": {
+    "after": "2026-09-04",
+    "cash": 411.68,
+    "pos": {
+      "ASST": {
+        "close_px": 27.139999389648438,
+        "cost": 1185.5910143432618,
+        "entry_date": "2026-09-04",
+        "entry_px": 25.18000030517578,
+        "fee_in": 2.131,
+        "last_px": 25.18000030517578,
+        "min_hold": 5,
+        "notional": 1183.4600143432617,
+        "peak_px": 25.18000030517578,
+        "reason": "union \u2229 last_green hold 5, no \ud83d\udea8; gate last_green=True; list ohlc_hot; \ud83d\udd35; ret5=+16.0; leftover $1195.77",
+        "shares": 47,
+        "ticker": "ASST"
+      },
+      "CRM": {
+        "close_px": 259.2300109863281,
+        "cost": 1055.44194140625,
+        "entry_date": "2026-09-04",
+        "entry_px": 263.3599853515625,
+        "fee_in": 2.002,
+        "last_px": 263.3599853515625,
+        "min_hold": 5,
+        "notional": 1053.43994140625,
+        "peak_px": 263.3599853515625,
+        "reason": "union \u2229 last_green hold 5, no \ud83d\udea8; gate last_green=True; list flatten,mover_buy; \ud83d\udd35; \u26aa; ret5=+4.9; leftover $1195.77",
+        "shares": 4,
+        "ticker": "CRM"
+      },
+      "DELL": {
+        "close_px": 524.1400146484375,
+        "cost": 1029.55605859375,
+        "entry_date": "2026-09-04",
+        "entry_px": 513.780029296875,
+        "fee_in": 1.996,
+        "last_px": 513.780029296875,
+        "min_hold": 5,
+        "notional": 1027.56005859375,
+        "peak_px": 513.780029296875,
+        "reason": "union \u2229 last_green hold 5, no \ud83d\udea8; gate last_green=True; list probable,yday_gainer,yday_mover,ohlc_hot,mover_buy; \ud83d\udd35; \u26aa; ret5=+9.3; leftover $1195.77",
+        "shares": 2,
+        "ticker": "DELL"
+      },
+      "DFDV": {
+        "close_px": 5.869999885559082,
+        "cost": 1195.3973921417237,
+        "entry_date": "2026-09-04",
+        "entry_px": 5.789999961853027,
+        "fee_in": 2.6574,
+        "last_px": 5.789999961853027,
+        "min_hold": 5,
+        "notional": 1192.7399921417236,
+        "peak_px": 5.789999961853027,
+        "reason": "union \u2229 last_green hold 5, no \ud83d\udea8; gate last_green=True; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+15.2; leftover $1195.77",
+        "shares": 206,
+        "ticker": "DFDV"
+      },
+      "FCEL": {
+        "close_px": 14.949999809265137,
+        "cost": 1192.8760375366212,
+        "entry_date": "2026-09-04",
+        "entry_px": 14.520000457763672,
+        "fee_in": 2.236,
+        "last_px": 14.520000457763672,
+        "min_hold": 5,
+        "notional": 1190.640037536621,
+        "peak_px": 14.520000457763672,
+        "reason": "union \u2229 last_green hold 5, no \ud83d\udea8; gate last_green=True; list yday_mover; ret5=-24.1; leftover $1195.77",
+        "shares": 82,
+        "ticker": "FCEL"
+      },
+      "MDB": {
+        "close_px": 368.739990234375,
+        "cost": 1137.018989013672,
+        "entry_date": "2026-09-04",
+        "entry_px": 378.3399963378906,
+        "fee_in": 1.999,
+        "last_px": 378.3399963378906,
+        "min_hold": 5,
+        "notional": 1135.0199890136719,
+        "peak_px": 378.3399963378906,
+        "reason": "union \u2229 last_green hold 5, no \ud83d\udea8; gate last_green=True; list yday_mover; ret5=-12.7; leftover $1195.77",
+        "shares": 3,
+        "ticker": "MDB"
+      },
+      "SLBT": {
+        "close_px": 2.880000114440918,
+        "cost": 1198.7391361442567,
+        "entry_date": "2026-09-04",
+        "entry_px": 3.1500000953674316,
+        "fee_in": 4.8891,
+        "last_px": 3.1500000953674316,
+        "min_hold": 5,
+        "notional": 1193.8500361442566,
+        "peak_px": 3.1500000953674316,
+        "reason": "union \u2229 last_green hold 5, no \ud83d\udea8; gate last_green=True; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+19.3; leftover $1195.77",
+        "shares": 379,
+        "ticker": "SLBT"
+      },
+      "TARS": {
+        "close_px": 90.77999877929688,
+        "cost": 1159.8319572753906,
+        "entry_date": "2026-09-04",
+        "entry_px": 82.69999694824219,
+        "fee_in": 2.032,
+        "last_px": 82.69999694824219,
+        "min_hold": 5,
+        "notional": 1157.7999572753906,
+        "peak_px": 82.69999694824219,
+        "reason": "union \u2229 last_green hold 5, no \ud83d\udea8; gate last_green=True; list yday_gainer,ohlc_hot; \ud83d\udd35; \u26aa; ret5=+15.7; leftover $1195.77",
+        "shares": 14,
+        "ticker": "TARS"
+      }
+    },
+    "yday_equity": 9676.24
+  }
+}

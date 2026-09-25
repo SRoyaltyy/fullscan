@@ -1,0 +1,191 @@
+{
+  "buys": [
+    "ANF",
+    "CAPR",
+    "ERAS",
+    "SYRE",
+    "NCNO",
+    "TH",
+    "GAP"
+  ],
+  "cash": 195.17,
+  "date": "2026-08-28",
+  "equity": 9752.71,
+  "fees": 15.241,
+  "fills": [
+    {
+      "fees": 2.017,
+      "pnl": null,
+      "price": 146.07,
+      "shares": 9,
+      "side": "BUY",
+      "ticker": "ANF"
+    },
+    {
+      "fees": 2.428,
+      "pnl": null,
+      "price": 9.73,
+      "shares": 146,
+      "side": "BUY",
+      "ticker": "CAPR"
+    },
+    {
+      "fees": 2.212,
+      "pnl": null,
+      "price": 19.25,
+      "shares": 74,
+      "side": "BUY",
+      "ticker": "ERAS"
+    },
+    {
+      "fees": 2.035,
+      "pnl": null,
+      "price": 91.75,
+      "shares": 15,
+      "side": "BUY",
+      "ticker": "SYRE"
+    },
+    {
+      "fees": 2.173,
+      "pnl": null,
+      "price": 23.3,
+      "shares": 61,
+      "side": "BUY",
+      "ticker": "NCNO"
+    },
+    {
+      "fees": 2.215,
+      "pnl": null,
+      "price": 19.0,
+      "shares": 75,
+      "side": "BUY",
+      "ticker": "TH"
+    },
+    {
+      "fees": 2.161,
+      "pnl": null,
+      "price": 24.69,
+      "shares": 57,
+      "side": "BUY",
+      "ticker": "GAP"
+    }
+  ],
+  "holdings": [
+    "ANF",
+    "CAPR",
+    "ERAS",
+    "GAP",
+    "NCNO",
+    "SYRE",
+    "TH"
+  ],
+  "mean": -2.4729,
+  "n_trades_today": 7,
+  "recipe": "union_vol_green_h3",
+  "sells": [],
+  "state": {
+    "after": "2026-08-28",
+    "cash": 195.17,
+    "pos": {
+      "ANF": {
+        "close_px": 148.4199981689453,
+        "cost": 1316.6470659179688,
+        "entry_date": "2026-08-28",
+        "entry_px": 146.07000732421875,
+        "fee_in": 2.017,
+        "last_px": 146.07000732421875,
+        "min_hold": 3,
+        "notional": 1314.6300659179688,
+        "peak_px": 146.07000732421875,
+        "reason": "combo gate; gate vol=good,last_green=True; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+38.8; leftover $1428.57",
+        "shares": 9,
+        "ticker": "ANF"
+      },
+      "CAPR": {
+        "close_px": 9.59000015258789,
+        "cost": 1423.007933166504,
+        "entry_date": "2026-08-28",
+        "entry_px": 9.729999542236328,
+        "fee_in": 2.428,
+        "last_px": 9.729999542236328,
+        "min_hold": 3,
+        "notional": 1420.579933166504,
+        "peak_px": 9.729999542236328,
+        "reason": "combo gate; gate vol=good,last_green=True; list yday_gainer,yday_mover; ret5=+47.1; leftover $1428.57",
+        "shares": 146,
+        "ticker": "CAPR"
+      },
+      "ERAS": {
+        "close_px": 18.030000686645508,
+        "cost": 1426.712,
+        "entry_date": "2026-08-28",
+        "entry_px": 19.25,
+        "fee_in": 2.212,
+        "last_px": 19.25,
+        "min_hold": 3,
+        "notional": 1424.5,
+        "peak_px": 19.25,
+        "reason": "combo gate; gate vol=good,last_green=True; list yday_gainer; ret5=+14.1; leftover $1428.57",
+        "shares": 74,
+        "ticker": "ERAS"
+      },
+      "GAP": {
+        "close_px": 23.479999542236328,
+        "cost": 1409.4910304412842,
+        "entry_date": "2026-08-28",
+        "entry_px": 24.690000534057617,
+        "fee_in": 2.161,
+        "last_px": 24.690000534057617,
+        "min_hold": 3,
+        "notional": 1407.3300304412842,
+        "peak_px": 24.690000534057617,
+        "reason": "combo gate; gate vol=good,last_green=True; list earn_react; ret5=+5.8; leftover $1428.57",
+        "shares": 57,
+        "ticker": "GAP"
+      },
+      "NCNO": {
+        "close_px": 22.989999771118164,
+        "cost": 1423.4729534606934,
+        "entry_date": "2026-08-28",
+        "entry_px": 23.299999237060547,
+        "fee_in": 2.173,
+        "last_px": 23.299999237060547,
+        "min_hold": 3,
+        "notional": 1421.2999534606934,
+        "peak_px": 23.299999237060547,
+        "reason": "combo gate; gate vol=good,last_green=True; list ohlc_hot; \ud83d\udd35; ret5=+14.5; leftover $1428.57",
+        "shares": 61,
+        "ticker": "NCNO"
+      },
+      "SYRE": {
+        "close_px": 90.36000061035156,
+        "cost": 1378.285,
+        "entry_date": "2026-08-28",
+        "entry_px": 91.75,
+        "fee_in": 2.035,
+        "last_px": 91.75,
+        "min_hold": 3,
+        "notional": 1376.25,
+        "peak_px": 91.75,
+        "reason": "combo gate; gate vol=good,last_green=True; list yday_mover; ret5=-13.2; leftover $1428.57",
+        "shares": 15,
+        "ticker": "SYRE"
+      },
+      "TH": {
+        "close_px": 18.549999237060547,
+        "cost": 1427.215,
+        "entry_date": "2026-08-28",
+        "entry_px": 19.0,
+        "fee_in": 2.215,
+        "last_px": 19.0,
+        "min_hold": 3,
+        "notional": 1425.0,
+        "peak_px": 19.0,
+        "reason": "combo gate; gate vol=good,last_green=True; list ohlc_hot; ret5=+7.5; leftover $1428.57",
+        "shares": 75,
+        "ticker": "TH"
+      }
+    },
+    "yday_equity": 9752.71
+  }
+}

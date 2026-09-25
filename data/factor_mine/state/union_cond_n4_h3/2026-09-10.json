@@ -1,0 +1,57 @@
+{
+  "buys": [],
+  "cash": 8499.55,
+  "date": "2026-09-10",
+  "equity": 8499.55,
+  "fees": 27.9432,
+  "fills": [
+    {
+      "fees": 12.2595,
+      "pnl": -305.45,
+      "price": 2.22,
+      "shares": 937,
+      "side": "SELL",
+      "ticker": "ALEC"
+    },
+    {
+      "fees": 2.1538,
+      "pnl": 8.32,
+      "price": 52.31,
+      "shares": 45,
+      "side": "SELL",
+      "ticker": "ATRC"
+    },
+    {
+      "fees": 4.6033,
+      "pnl": -219.73,
+      "price": 6.11,
+      "shares": 351,
+      "side": "SELL",
+      "ticker": "BHC"
+    },
+    {
+      "fees": 8.9266,
+      "pnl": -433.74,
+      "price": 2.85,
+      "shares": 682,
+      "side": "SELL",
+      "ticker": "CABA"
+    }
+  ],
+  "holdings": [],
+  "mean": -1.9118,
+  "n_trades_today": 4,
+  "recipe": "union_cond_n4_h3",
+  "sells": [
+    "ALEC",
+    "ATRC",
+    "BHC",
+    "CABA"
+  ],
+  "state": {
+    "after": "2026-09-10",
+    "cash": 8499.55,
+    "pos": {},
+    "yday_equity": 8499.55
+  }
+}

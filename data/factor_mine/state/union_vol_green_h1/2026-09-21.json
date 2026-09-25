@@ -1,0 +1,288 @@
+{
+  "buys": [
+    "A",
+    "DXCM",
+    "CYPH",
+    "BTDR",
+    "SBET",
+    "SGML",
+    "TJGC",
+    "USDE"
+  ],
+  "cash": 51.68,
+  "date": "2026-09-21",
+  "equity": 8715.49,
+  "fees": 65.3552,
+  "fills": [
+    {
+      "fees": 2.2723,
+      "pnl": -19.14,
+      "price": 13.9,
+      "shares": 86,
+      "side": "SELL",
+      "ticker": "BHVN"
+    },
+    {
+      "fees": 15.8064,
+      "pnl": -773.66,
+      "price": 0.141,
+      "shares": 3452,
+      "side": "SELL",
+      "ticker": "DCX"
+    },
+    {
+      "fees": 2.052,
+      "pnl": -34.46,
+      "price": 82.83,
+      "shares": 14,
+      "side": "SELL",
+      "ticker": "ECO"
+    },
+    {
+      "fees": 4.0474,
+      "pnl": -32.75,
+      "price": 3.87,
+      "shares": 309,
+      "side": "SELL",
+      "ticker": "EYPT"
+    },
+    {
+      "fees": 2.2596,
+      "pnl": -21.72,
+      "price": 14.58,
+      "shares": 82,
+      "side": "SELL",
+      "ticker": "RARE"
+    },
+    {
+      "fees": 2.133,
+      "pnl": 0.26,
+      "price": 29.43,
+      "shares": 41,
+      "side": "SELL",
+      "ticker": "SDGR"
+    },
+    {
+      "fees": 15.8432,
+      "pnl": -69.65,
+      "price": 0.94,
+      "shares": 1260,
+      "side": "SELL",
+      "ticker": "TLSA"
+    },
+    {
+      "fees": 2.025,
+      "pnl": 49.12,
+      "price": 230.25,
+      "shares": 5,
+      "side": "SELL",
+      "ticker": "VICR"
+    },
+    {
+      "fees": 2.011,
+      "pnl": null,
+      "price": 157.87,
+      "shares": 7,
+      "side": "BUY",
+      "ticker": "A"
+    },
+    {
+      "fees": 2.026,
+      "pnl": null,
+      "price": 88.83,
+      "shares": 12,
+      "side": "BUY",
+      "ticker": "DXCM"
+    },
+    {
+      "fees": 3.5733,
+      "pnl": null,
+      "price": 4.0,
+      "shares": 277,
+      "side": "BUY",
+      "ticker": "CYPH"
+    },
+    {
+      "fees": 2.236,
+      "pnl": null,
+      "price": 13.475,
+      "shares": 82,
+      "side": "BUY",
+      "ticker": "BTDR"
+    },
+    {
+      "fees": 2.323,
+      "pnl": null,
+      "price": 9.99,
+      "shares": 111,
+      "side": "BUY",
+      "ticker": "SBET"
+    },
+    {
+      "fees": 2.317,
+      "pnl": null,
+      "price": 10.135,
+      "shares": 109,
+      "side": "BUY",
+      "ticker": "SGML"
+    },
+    {
+      "fees": 2.185,
+      "pnl": null,
+      "price": 16.91,
+      "shares": 65,
+      "side": "BUY",
+      "ticker": "TJGC"
+    },
+    {
+      "fees": 2.245,
+      "pnl": null,
+      "price": 13.05,
+      "shares": 85,
+      "side": "BUY",
+      "ticker": "USDE"
+    }
+  ],
+  "holdings": [
+    "A",
+    "BTDR",
+    "CYPH",
+    "DXCM",
+    "SBET",
+    "SGML",
+    "TJGC",
+    "USDE"
+  ],
+  "mean": -0.9249,
+  "n_trades_today": 16,
+  "recipe": "union_vol_green_h1",
+  "sells": [
+    "BHVN",
+    "DCX",
+    "ECO",
+    "EYPT",
+    "RARE",
+    "SDGR",
+    "TLSA",
+    "VICR"
+  ],
+  "state": {
+    "after": "2026-09-21",
+    "cash": 51.68,
+    "pos": {
+      "A": {
+        "close_px": 161.94000244140625,
+        "cost": 1107.1009658203125,
+        "entry_date": "2026-09-21",
+        "entry_px": 157.8699951171875,
+        "fee_in": 2.011,
+        "last_px": 157.8699951171875,
+        "min_hold": 1,
+        "notional": 1105.0899658203125,
+        "peak_px": 157.8699951171875,
+        "reason": "combo gate; gate vol=good,last_green=True; list flatten; \ud83d\udd35; \u26aa; ret5=+6.5; leftover $1109.58",
+        "shares": 7,
+        "ticker": "A"
+      },
+      "BTDR": {
+        "close_px": 13.140000343322754,
+        "cost": 1107.1860312805177,
+        "entry_date": "2026-09-21",
+        "entry_px": 13.475000381469727,
+        "fee_in": 2.236,
+        "last_px": 13.475000381469727,
+        "min_hold": 1,
+        "notional": 1104.9500312805176,
+        "peak_px": 13.475000381469727,
+        "reason": "combo gate; gate vol=good,last_green=True; list probable,yday_gainer,yday_mover,ohlc_hot; ret5=+8.4; leftover $1109.58",
+        "shares": 82,
+        "ticker": "BTDR"
+      },
+      "CYPH": {
+        "close_px": 3.4000000953674316,
+        "cost": 1111.5733,
+        "entry_date": "2026-09-21",
+        "entry_px": 4.0,
+        "fee_in": 3.5733,
+        "last_px": 4.0,
+        "min_hold": 1,
+        "notional": 1108.0,
+        "peak_px": 4.0,
+        "reason": "combo gate; gate vol=good,last_green=True; list flatten,yday_gainer,yday_mover; \ud83d\udd35; \u26aa; ret5=+58.9; leftover $1109.58",
+        "shares": 277,
+        "ticker": "CYPH"
+      },
+      "DXCM": {
+        "close_px": 89.16999816894531,
+        "cost": 1067.9860219726563,
+        "entry_date": "2026-09-21",
+        "entry_px": 88.83000183105469,
+        "fee_in": 2.026,
+        "last_px": 88.83000183105469,
+        "min_hold": 1,
+        "notional": 1065.9600219726562,
+        "peak_px": 88.83000183105469,
+        "reason": "combo gate; gate vol=good,last_green=True; list flatten; \ud83d\udd35; \u26aa; ret5=+7.6; leftover $1109.58",
+        "shares": 12,
+        "ticker": "DXCM"
+      },
+      "SBET": {
+        "close_px": 9.979999542236328,
+        "cost": 1111.2129745941163,
+        "entry_date": "2026-09-21",
+        "entry_px": 9.989999771118164,
+        "fee_in": 2.323,
+        "last_px": 9.989999771118164,
+        "min_hold": 1,
+        "notional": 1108.8899745941162,
+        "peak_px": 9.989999771118164,
+        "reason": "combo gate; gate vol=good,last_green=True; list probable,yday_gainer; \ud83d\udd35; ret5=+5.3; leftover $1109.58",
+        "shares": 111,
+        "ticker": "SBET"
+      },
+      "SGML": {
+        "close_px": 10.270000457763672,
+        "cost": 1107.0320249481201,
+        "entry_date": "2026-09-21",
+        "entry_px": 10.135000228881836,
+        "fee_in": 2.317,
+        "last_px": 10.135000228881836,
+        "min_hold": 1,
+        "notional": 1104.7150249481201,
+        "peak_px": 10.135000228881836,
+        "reason": "combo gate; gate vol=good,last_green=True; list probable,yday_gainer; ret5=+4.9; leftover $1109.58",
+        "shares": 109,
+        "ticker": "SGML"
+      },
+      "TJGC": {
+        "close_px": 17.579999923706055,
+        "cost": 1101.334990081787,
+        "entry_date": "2026-09-21",
+        "entry_px": 16.90999984741211,
+        "fee_in": 2.185,
+        "last_px": 16.90999984741211,
+        "min_hold": 1,
+        "notional": 1099.149990081787,
+        "peak_px": 16.90999984741211,
+        "reason": "combo gate; gate vol=good,last_green=True; list yday_gainer,yday_mover; ret5=+50.5; leftover $1109.58",
+        "shares": 65,
+        "ticker": "TJGC"
+      },
+      "USDE": {
+        "close_px": 12.600000381469727,
+        "cost": 1111.4950162124633,
+        "entry_date": "2026-09-21",
+        "entry_px": 13.050000190734863,
+        "fee_in": 2.245,
+        "last_px": 13.050000190734863,
+        "min_hold": 1,
+        "notional": 1109.2500162124634,
+        "peak_px": 13.050000190734863,
+        "reason": "combo gate; gate vol=good,last_green=True; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+40.4; leftover $1109.58",
+        "shares": 85,
+        "ticker": "USDE"
+      }
+    },
+    "yday_equity": 8715.49
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "buys": [],
+  "cash": 9134.42,
+  "date": "2026-09-14",
+  "equity": 9134.42,
+  "fees": 26.056,
+  "fills": [
+    {
+      "fees": 2.2533,
+      "pnl": 6.72,
+      "price": 14.85,
+      "shares": 80,
+      "side": "SELL",
+      "ticker": "AEO"
+    },
+    {
+      "fees": 2.228,
+      "pnl": -22.43,
+      "price": 16.03,
+      "shares": 72,
+      "side": "SELL",
+      "ticker": "AUPH"
+    },
+    {
+      "fees": 2.2849,
+      "pnl": -50.44,
+      "price": 12.52,
+      "shares": 90,
+      "side": "SELL",
+      "ticker": "BHVN"
+    },
+    {
+      "fees": 2.181,
+      "pnl": 23.59,
+      "price": 21.1,
+      "shares": 57,
+      "side": "SELL",
+      "ticker": "NAVN"
+    },
+    {
+      "fees": 2.031,
+      "pnl": -58.5,
+      "price": 150.0,
+      "shares": 7,
+      "side": "SELL",
+      "ticker": "NVT"
+    },
+    {
+      "fees": 2.031,
+      "pnl": -165.11,
+      "price": 141.42,
+      "shares": 7,
+      "side": "SELL",
+      "ticker": "ORCL"
+    },
+    {
+      "fees": 5.6545,
+      "pnl": -0.43,
+      "price": 2.755,
+      "shares": 432,
+      "side": "SELL",
+      "ticker": "OVID"
+    },
+    {
+      "fees": 7.3923,
+      "pnl": -54.23,
+      "price": 2.02,
+      "shares": 565,
+      "side": "SELL",
+      "ticker": "SLBT"
+    }
+  ],
+  "holdings": [],
+  "mean": -2.1472,
+  "n_trades_today": 8,
+  "recipe": "union_last_red_h1",
+  "sells": [
+    "AEO",
+    "AUPH",
+    "BHVN",
+    "NAVN",
+    "NVT",
+    "ORCL",
+    "OVID",
+    "SLBT"
+  ],
+  "state": {
+    "after": "2026-09-14",
+    "cash": 9134.42,
+    "pos": {},
+    "yday_equity": 9134.42
+  }
+}

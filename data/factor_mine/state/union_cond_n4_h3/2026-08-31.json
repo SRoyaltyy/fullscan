@@ -1,0 +1,81 @@
+{
+  "buys": [],
+  "cash": 1602.61,
+  "date": "2026-08-31",
+  "equity": 9686.4,
+  "fees": 0,
+  "fills": [],
+  "holdings": [
+    "CIEN",
+    "KEYS",
+    "MPWR",
+    "SMTC"
+  ],
+  "mean": 0.9085,
+  "n_trades_today": 0,
+  "recipe": "union_cond_n4_h3",
+  "sells": [],
+  "state": {
+    "after": "2026-08-31",
+    "cash": 1602.61,
+    "pos": {
+      "CIEN": {
+        "close_px": 382.79998779296875,
+        "cost": 2404.528080566406,
+        "entry_date": "2026-08-28",
+        "entry_px": 400.4200134277344,
+        "fee_in": 2.008,
+        "last_px": 378.44000244140625,
+        "min_hold": 3,
+        "notional": 2402.5200805664062,
+        "peak_px": 400.4200134277344,
+        "reason": "top 4 by cond; rank cond; list mover_buy; \ud83d\udd35; ret5=+1.9; leftover $2500.00",
+        "shares": 6,
+        "ticker": "CIEN"
+      },
+      "KEYS": {
+        "close_px": 322.70001220703125,
+        "cost": 2272.8810256347656,
+        "entry_date": "2026-08-28",
+        "entry_px": 324.4100036621094,
+        "fee_in": 2.011,
+        "last_px": 322.489990234375,
+        "min_hold": 3,
+        "notional": 2270.8700256347656,
+        "peak_px": 324.4100036621094,
+        "reason": "top 4 by cond; rank cond; list mover_buy; \ud83d\udd35; \u26aa; ret5=+2.9; leftover $2500.00",
+        "shares": 7,
+        "ticker": "KEYS"
+      },
+      "MPWR": {
+        "close_px": 1267.77001953125,
+        "cost": 1308.023029296875,
+        "entry_date": "2026-08-28",
+        "entry_px": 1306.030029296875,
+        "fee_in": 1.993,
+        "last_px": 1261.9000244140625,
+        "min_hold": 3,
+        "notional": 1306.030029296875,
+        "peak_px": 1306.030029296875,
+        "reason": "top 4 by cond; rank cond; list mover_buy; \ud83d\udd35; ret5=+0.0; leftover $2500.00",
+        "shares": 1,
+        "ticker": "MPWR"
+      },
+      "SMTC": {
+        "close_px": 132.9600067138672,
+        "cost": 2411.960906616211,
+        "entry_date": "2026-08-28",
+        "entry_px": 141.75999450683594,
+        "fee_in": 2.041,
+        "last_px": 132.3000030517578,
+        "min_hold": 3,
+        "notional": 2409.919906616211,
+        "peak_px": 141.75999450683594,
+        "reason": "top 4 by cond; rank cond; list yday_gainer,yday_mover,mover_buy; \ud83d\udd35; \u26aa; ret5=+14.1; leftover $2500.00",
+        "shares": 17,
+        "ticker": "SMTC"
+      }
+    },
+    "yday_equity": 9686.4
+  }
+}

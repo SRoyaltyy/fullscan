@@ -1,0 +1,135 @@
+{
+  "buys": [
+    "INDP",
+    "SAIL"
+  ],
+  "cash": 14.76,
+  "date": "2026-09-23",
+  "equity": 8832.49,
+  "fees": 37.2222,
+  "fills": [
+    {
+      "fees": 2.079,
+      "pnl": -39.1,
+      "price": 53.55,
+      "shares": 23,
+      "side": "SELL",
+      "ticker": "ANAB"
+    },
+    {
+      "fees": 2.336,
+      "pnl": -4.64,
+      "price": 12.24,
+      "shares": 106,
+      "side": "SELL",
+      "ticker": "APPS"
+    },
+    {
+      "fees": 2.4631,
+      "pnl": 56.43,
+      "price": 9.32,
+      "shares": 146,
+      "side": "SELL",
+      "ticker": "ARHS"
+    },
+    {
+      "fees": 6.0076,
+      "pnl": -30.29,
+      "price": 2.8,
+      "shares": 459,
+      "side": "SELL",
+      "ticker": "BTQ"
+    },
+    {
+      "fees": 2.2946,
+      "pnl": -42.69,
+      "price": 13.6,
+      "shares": 93,
+      "side": "SELL",
+      "ticker": "HELP"
+    },
+    {
+      "fees": 2.2597,
+      "pnl": -34.02,
+      "price": 15.4,
+      "shares": 82,
+      "side": "SELL",
+      "ticker": "NN"
+    },
+    {
+      "fees": 2.2253,
+      "pnl": 20.07,
+      "price": 18.575,
+      "shares": 71,
+      "side": "SELL",
+      "ticker": "NTSK"
+    },
+    {
+      "fees": 14.8608,
+      "pnl": null,
+      "price": 3.93,
+      "shares": 1152,
+      "side": "BUY",
+      "ticker": "INDP"
+    },
+    {
+      "fees": 2.6961,
+      "pnl": null,
+      "price": 21.51,
+      "shares": 209,
+      "side": "BUY",
+      "ticker": "SAIL"
+    }
+  ],
+  "holdings": [
+    "INDP",
+    "SAIL"
+  ],
+  "mean": -2.094,
+  "n_trades_today": 9,
+  "recipe": "union_coil_off_h1",
+  "sells": [
+    "ANAB",
+    "APPS",
+    "ARHS",
+    "BTQ",
+    "HELP",
+    "NN",
+    "NTSK"
+  ],
+  "state": {
+    "after": "2026-09-23",
+    "cash": 14.76,
+    "pos": {
+      "INDP": {
+        "close_px": 3.7699999809265137,
+        "cost": 4542.220876904297,
+        "entry_date": "2026-09-23",
+        "entry_px": 3.930000066757202,
+        "fee_in": 14.8608,
+        "last_px": 3.930000066757202,
+        "min_hold": 1,
+        "notional": 4527.360076904297,
+        "peak_px": 3.930000066757202,
+        "reason": "union \u2229 coil_off, no \ud83d\udea8; gate ret_5_min=0.0,ret_5_max=10.0,rvol_min=0.7,rvol_max=2.2; list probable,yday_gainer,yday_mover,ohlc_hot; \ud83d\udd35; ret5=+9.6; leftover $4527.63",
+        "shares": 1152,
+        "ticker": "INDP"
+      },
+      "SAIL": {
+        "close_px": 21.40999984741211,
+        "cost": 4498.286147836304,
+        "entry_date": "2026-09-23",
+        "entry_px": 21.510000228881836,
+        "fee_in": 2.6961,
+        "last_px": 21.510000228881836,
+        "min_hold": 1,
+        "notional": 4495.590047836304,
+        "peak_px": 21.510000228881836,
+        "reason": "union \u2229 coil_off, no \ud83d\udea8; gate ret_5_min=0.0,ret_5_max=10.0,rvol_min=0.7,rvol_max=2.2; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+7.0; leftover $4527.63",
+        "shares": 209,
+        "ticker": "SAIL"
+      }
+    },
+    "yday_equity": 8832.49
+  }
+}

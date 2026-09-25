@@ -1,0 +1,71 @@
+{
+  "buys": [
+    "ABM",
+    "UNFI"
+  ],
+  "cash": 63.37,
+  "date": "2026-09-04",
+  "equity": 8697.11,
+  "fees": 4.55,
+  "fills": [
+    {
+      "fees": 2.266,
+      "pnl": null,
+      "price": 46.79,
+      "shares": 92,
+      "side": "BUY",
+      "ticker": "ABM"
+    },
+    {
+      "fees": 2.284,
+      "pnl": null,
+      "price": 43.8,
+      "shares": 98,
+      "side": "BUY",
+      "ticker": "UNFI"
+    }
+  ],
+  "holdings": [
+    "ABM",
+    "UNFI"
+  ],
+  "mean": 0.3706,
+  "n_trades_today": 2,
+  "recipe": "union_overnight_h3",
+  "sells": [],
+  "state": {
+    "after": "2026-09-04",
+    "cash": 63.37,
+    "pos": {
+      "ABM": {
+        "close_px": 47.04999923706055,
+        "cost": 4306.946084228515,
+        "entry_date": "2026-09-04",
+        "entry_px": 46.790000915527344,
+        "fee_in": 2.266,
+        "last_px": 46.790000915527344,
+        "min_hold": 3,
+        "notional": 4304.680084228516,
+        "peak_px": 46.790000915527344,
+        "reason": "union \u2229 overnight, no \ud83d\udea8; gate overnight=True; list overnight; ret5=+0.2; leftover $4332.50",
+        "shares": 92,
+        "ticker": "ABM"
+      },
+      "UNFI": {
+        "close_px": 43.93000030517578,
+        "cost": 4294.683925231933,
+        "entry_date": "2026-09-04",
+        "entry_px": 43.79999923706055,
+        "fee_in": 2.284,
+        "last_px": 43.79999923706055,
+        "min_hold": 3,
+        "notional": 4292.399925231934,
+        "peak_px": 43.79999923706055,
+        "reason": "union \u2229 overnight, no \ud83d\udea8; gate overnight=True; list overnight; ret5=-7.7; leftover $4332.50",
+        "shares": 98,
+        "ticker": "UNFI"
+      }
+    },
+    "yday_equity": 8697.11
+  }
+}

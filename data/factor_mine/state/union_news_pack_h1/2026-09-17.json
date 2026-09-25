@@ -1,0 +1,66 @@
+{
+  "buys": [
+    "LITE"
+  ],
+  "cash": 131.37,
+  "date": "2026-09-17",
+  "equity": 9067.47,
+  "fees": 6.5426,
+  "fills": [
+    {
+      "fees": 2.1131,
+      "pnl": 25.32,
+      "price": 190.35,
+      "shares": 25,
+      "side": "SELL",
+      "ticker": "QCOM"
+    },
+    {
+      "fees": 2.4095,
+      "pnl": -297.58,
+      "price": 37.57,
+      "shares": 121,
+      "side": "SELL",
+      "ticker": "SM"
+    },
+    {
+      "fees": 2.02,
+      "pnl": null,
+      "price": 934.88,
+      "shares": 10,
+      "side": "BUY",
+      "ticker": "LITE"
+    }
+  ],
+  "holdings": [
+    "LITE"
+  ],
+  "mean": -3.7459,
+  "n_trades_today": 3,
+  "recipe": "union_news_pack_h1",
+  "sells": [
+    "QCOM",
+    "SM"
+  ],
+  "state": {
+    "after": "2026-09-17",
+    "cash": 131.37,
+    "pos": {
+      "LITE": {
+        "close_px": 893.6099853515625,
+        "cost": 9350.820048828125,
+        "entry_date": "2026-09-17",
+        "entry_px": 934.8800048828125,
+        "fee_in": 2.02,
+        "last_px": 934.8800048828125,
+        "min_hold": 1,
+        "notional": 9348.800048828125,
+        "peak_px": 934.8800048828125,
+        "reason": "morning packet news\ud83d\udfe2 only (not the merged box); gate news_box=good; rank cond; list yday_gainer; \ud83d\udd35; ret5=-7.0; leftover $9482.19",
+        "shares": 10,
+        "ticker": "LITE"
+      }
+    },
+    "yday_equity": 9067.47
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "buys": [],
+  "cash": 8568.15,
+  "date": "2026-09-14",
+  "equity": 9757.5,
+  "fees": 24.7679,
+  "fills": [
+    {
+      "fees": 2.052,
+      "pnl": -6.32,
+      "price": 54.75,
+      "shares": 14,
+      "side": "SELL",
+      "ticker": "ASO"
+    },
+    {
+      "fees": 3.2897,
+      "pnl": 23.59,
+      "price": 5.03,
+      "shares": 251,
+      "side": "SELL",
+      "ticker": "BNC"
+    },
+    {
+      "fees": 2.052,
+      "pnl": -2.4,
+      "price": 54.78,
+      "shares": 14,
+      "side": "SELL",
+      "ticker": "COO"
+    },
+    {
+      "fees": 5.9683,
+      "pnl": 33.75,
+      "price": 2.8,
+      "shares": 456,
+      "side": "SELL",
+      "ticker": "INDP"
+    },
+    {
+      "fees": 2.4211,
+      "pnl": -23.43,
+      "price": 6.02,
+      "shares": 133,
+      "side": "SELL",
+      "ticker": "IRD"
+    },
+    {
+      "fees": 2.037,
+      "pnl": 12.06,
+      "price": 86.06,
+      "shares": 9,
+      "side": "SELL",
+      "ticker": "SWKS"
+    },
+    {
+      "fees": 2.112,
+      "pnl": -18.82,
+      "price": 23.2,
+      "shares": 34,
+      "side": "SELL",
+      "ticker": "TYRA"
+    },
+    {
+      "fees": 2.6015,
+      "pnl": -22.26,
+      "price": 6.4,
+      "shares": 190,
+      "side": "SELL",
+      "ticker": "VISN"
+    },
+    {
+      "fees": 2.2343,
+      "pnl": -53.29,
+      "price": 10.29,
+      "shares": 74,
+      "side": "SELL",
+      "ticker": "WLTH"
+    }
+  ],
+  "holdings": [
+    "GPRO"
+  ],
+  "mean": 0.19,
+  "n_trades_today": 9,
+  "recipe": "combo_hj_5050_shared",
+  "sells": [
+    "ASO",
+    "BNC",
+    "COO",
+    "INDP",
+    "IRD",
+    "SWKS",
+    "TYRA",
+    "VISN",
+    "WLTH"
+  ],
+  "state": {
+    "after": "2026-09-14",
+    "cash": 8568.15,
+    "pos": {
+      "GPRO": {
+        "close_px": 1.350000023841858,
+        "cost": 1244.7648789953232,
+        "entry_date": "2026-09-11",
+        "entry_px": 1.399999976158142,
+        "fee_in": 11.3649,
+        "last_px": 1.3700000047683716,
+        "notional": 1233.3999789953232,
+        "owner": "union_hot_n4_h1",
+        "peak_px": 1.399999976158142,
+        "reason": "top 4 by hot; rank hot_score; list ohlc_hot; ret5=+0.7; combo leftover $1233.76; owner union_hot_n4_h1",
+        "shares": 881,
+        "side": "long",
+        "ticker": "GPRO"
+      }
+    },
+    "yday_equity": 9757.5
+  }
+}

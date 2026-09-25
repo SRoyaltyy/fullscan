@@ -1,0 +1,271 @@
+{
+  "buys": [
+    "A",
+    "HALO",
+    "OMER",
+    "VKTX",
+    "FEAM",
+    "DNA",
+    "INOD",
+    "SVIA"
+  ],
+  "cash": 14205.09,
+  "date": "2026-09-23",
+  "equity": 9751.56,
+  "fees": 33.8453,
+  "fills": [
+    {
+      "fees": 2.077,
+      "pnl": 4.51,
+      "price": 19.7,
+      "shares": 29,
+      "side": "COVER",
+      "ticker": "AMRX"
+    },
+    {
+      "fees": 2.209,
+      "pnl": -6.65,
+      "price": 8.2,
+      "shares": 73,
+      "side": "COVER",
+      "ticker": "FWDI"
+    },
+    {
+      "fees": 2.6187,
+      "pnl": 43.42,
+      "price": 2.7,
+      "shares": 203,
+      "side": "COVER",
+      "ticker": "GLND"
+    },
+    {
+      "fees": 2.005,
+      "pnl": -12.89,
+      "price": 108.52,
+      "shares": 5,
+      "side": "COVER",
+      "ticker": "GRAL"
+    },
+    {
+      "fees": 2.236,
+      "pnl": 28.29,
+      "price": 6.83,
+      "shares": 82,
+      "side": "COVER",
+      "ticker": "NUAI"
+    },
+    {
+      "fees": 2.128,
+      "pnl": -14.87,
+      "price": 13.22,
+      "shares": 46,
+      "side": "COVER",
+      "ticker": "USDE"
+    },
+    {
+      "fees": 2.9025,
+      "pnl": -23.87,
+      "price": 2.73,
+      "shares": 225,
+      "side": "COVER",
+      "ticker": "VGZ"
+    },
+    {
+      "fees": 2.032688218626258,
+      "pnl": null,
+      "price": 166.54,
+      "shares": 3,
+      "side": "SHORT",
+      "ticker": "A"
+    },
+    {
+      "fees": 2.041006849106044,
+      "pnl": null,
+      "price": 116.85,
+      "shares": 5,
+      "side": "SHORT",
+      "ticker": "HALO"
+    },
+    {
+      "fees": 2.113406849011983,
+      "pnl": null,
+      "price": 20.65,
+      "shares": 29,
+      "side": "SHORT",
+      "ticker": "OMER"
+    },
+    {
+      "fees": 2.06801753360278,
+      "pnl": null,
+      "price": 41.76,
+      "shares": 14,
+      "side": "SHORT",
+      "ticker": "VKTX"
+    },
+    {
+      "fees": 2.7049000004285,
+      "pnl": null,
+      "price": 2.92,
+      "shares": 205,
+      "side": "SHORT",
+      "ticker": "FEAM"
+    },
+    {
+      "fees": 2.222058904313388,
+      "pnl": null,
+      "price": 9.13,
+      "shares": 65,
+      "side": "SHORT",
+      "ticker": "DNA"
+    },
+    {
+      "fees": 2.0495265745398115,
+      "pnl": null,
+      "price": 70.84,
+      "shares": 8,
+      "side": "SHORT",
+      "ticker": "INOD"
+    },
+    {
+      "fees": 2.4374608210838002,
+      "pnl": null,
+      "price": 4.49,
+      "shares": 133,
+      "side": "SHORT",
+      "ticker": "SVIA"
+    }
+  ],
+  "holdings": [
+    "A",
+    "DNA",
+    "FEAM",
+    "HALO",
+    "INOD",
+    "OMER",
+    "SVIA",
+    "VKTX"
+  ],
+  "mean": 1.7489,
+  "n_trades_today": 15,
+  "recipe": "short_rsi_ob_h1",
+  "sells": [
+    "AMRX",
+    "FWDI",
+    "GLND",
+    "GRAL",
+    "NUAI",
+    "USDE",
+    "VGZ"
+  ],
+  "state": {
+    "after": "2026-09-23",
+    "cash": 14205.09,
+    "pos": {
+      "A": {
+        "close_px": 165.32000732421875,
+        "cost": 2.032688218626258,
+        "entry_date": "2026-09-23",
+        "entry_px": 166.5399932861328,
+        "fee_in": 2.032688218626258,
+        "last_px": 166.5399932861328,
+        "notional": 499.61997985839844,
+        "peak_px": 166.5399932861328,
+        "reason": "RSI overbought; gate rsi_ob=True; list flatten; \ud83d\udd35; \u26aa; ret5=+11.3; leftover $599.97",
+        "shares": 3,
+        "ticker": "A"
+      },
+      "DNA": {
+        "close_px": 8.579999923706055,
+        "cost": 2.222058904313388,
+        "entry_date": "2026-09-23",
+        "entry_px": 9.130000114440918,
+        "fee_in": 2.222058904313388,
+        "last_px": 9.130000114440918,
+        "notional": 593.4500074386597,
+        "peak_px": 9.130000114440918,
+        "reason": "RSI overbought; gate rsi_ob=True; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+34.0; leftover $599.97",
+        "shares": 65,
+        "ticker": "DNA"
+      },
+      "FEAM": {
+        "close_px": 2.640000104904175,
+        "cost": 2.7049000004285,
+        "entry_date": "2026-09-23",
+        "entry_px": 2.9200000762939453,
+        "fee_in": 2.7049000004285,
+        "last_px": 2.9200000762939453,
+        "notional": 598.6000156402588,
+        "peak_px": 2.9200000762939453,
+        "reason": "RSI overbought; gate rsi_ob=True; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+133.3; leftover $599.97",
+        "shares": 205,
+        "ticker": "FEAM"
+      },
+      "HALO": {
+        "close_px": 112.44000244140625,
+        "cost": 2.041006849106044,
+        "entry_date": "2026-09-23",
+        "entry_px": 116.8499984741211,
+        "fee_in": 2.041006849106044,
+        "last_px": 116.8499984741211,
+        "notional": 584.2499923706055,
+        "peak_px": 116.8499984741211,
+        "reason": "RSI overbought; gate rsi_ob=True; list flatten; \ud83d\udd35; \u26aa; ret5=+8.4; leftover $599.97",
+        "shares": 5,
+        "ticker": "HALO"
+      },
+      "INOD": {
+        "close_px": 71.98999786376953,
+        "cost": 2.0495265745398115,
+        "entry_date": "2026-09-23",
+        "entry_px": 70.83999633789062,
+        "fee_in": 2.0495265745398115,
+        "last_px": 70.83999633789062,
+        "notional": 566.719970703125,
+        "peak_px": 70.83999633789062,
+        "reason": "RSI overbought; gate rsi_ob=True; list yday_gainer,yday_mover; \ud83d\udd35; \u26aa; ret5=+28.7; leftover $599.97",
+        "shares": 8,
+        "ticker": "INOD"
+      },
+      "OMER": {
+        "close_px": 20.739999771118164,
+        "cost": 2.113406849011983,
+        "entry_date": "2026-09-23",
+        "entry_px": 20.649999618530273,
+        "fee_in": 2.113406849011983,
+        "last_px": 20.649999618530273,
+        "notional": 598.8499889373779,
+        "peak_px": 20.649999618530273,
+        "reason": "RSI overbought; gate rsi_ob=True; list flatten,yday_gainer,yday_mover; \ud83d\udd35; \u26aa; ret5=+22.6; leftover $599.97",
+        "shares": 29,
+        "ticker": "OMER"
+      },
+      "SVIA": {
+        "close_px": 4.03000020980835,
+        "cost": 2.4374608210838002,
+        "entry_date": "2026-09-23",
+        "entry_px": 4.489999771118164,
+        "fee_in": 2.4374608210838002,
+        "last_px": 4.489999771118164,
+        "notional": 597.1699695587158,
+        "peak_px": 4.489999771118164,
+        "reason": "RSI overbought; gate rsi_ob=True; list yday_gainer,yday_mover; ret5=+26.4; leftover $599.97",
+        "shares": 133,
+        "ticker": "SVIA"
+      },
+      "VKTX": {
+        "close_px": 41.650001525878906,
+        "cost": 2.06801753360278,
+        "entry_date": "2026-09-23",
+        "entry_px": 41.7599983215332,
+        "fee_in": 2.06801753360278,
+        "last_px": 41.7599983215332,
+        "notional": 584.6399765014648,
+        "peak_px": 41.7599983215332,
+        "reason": "RSI overbought; gate rsi_ob=True; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+36.4; leftover $599.97",
+        "shares": 14,
+        "ticker": "VKTX"
+      }
+    },
+    "yday_equity": 9751.56
+  }
+}

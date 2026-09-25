@@ -1,0 +1,93 @@
+{
+  "buys": [],
+  "cash": 9231.93,
+  "date": "2026-09-10",
+  "equity": 9231.93,
+  "fees": 25.6229,
+  "fills": [
+    {
+      "fees": 6.1902,
+      "pnl": -154.19,
+      "price": 2.22,
+      "shares": 473,
+      "side": "SELL",
+      "ticker": "ALEC"
+    },
+    {
+      "fees": 2.3768,
+      "pnl": -102.3,
+      "price": 9.2,
+      "shares": 119,
+      "side": "SELL",
+      "ticker": "CCOI"
+    },
+    {
+      "fees": 2.016,
+      "pnl": 16.09,
+      "price": 523.83,
+      "shares": 2,
+      "side": "SELL",
+      "ticker": "DELL"
+    },
+    {
+      "fees": 4.427,
+      "pnl": 141.62,
+      "price": 3.965,
+      "shares": 338,
+      "side": "SELL",
+      "ticker": "EOSE"
+    },
+    {
+      "fees": 2.2374,
+      "pnl": -32.2,
+      "price": 15.53,
+      "shares": 75,
+      "side": "SELL",
+      "ticker": "HQ"
+    },
+    {
+      "fees": 2.1361,
+      "pnl": 81.43,
+      "price": 30.04,
+      "shares": 42,
+      "side": "SELL",
+      "ticker": "MLYS"
+    },
+    {
+      "fees": 3.2634,
+      "pnl": -220.12,
+      "price": 3.922,
+      "shares": 249,
+      "side": "SELL",
+      "ticker": "OABI"
+    },
+    {
+      "fees": 2.976,
+      "pnl": -39.95,
+      "price": 5.1,
+      "shares": 227,
+      "side": "SELL",
+      "ticker": "UAMY"
+    }
+  ],
+  "holdings": [],
+  "mean": -2.9513,
+  "n_trades_today": 8,
+  "recipe": "probable_h3",
+  "sells": [
+    "ALEC",
+    "CCOI",
+    "DELL",
+    "EOSE",
+    "HQ",
+    "MLYS",
+    "OABI",
+    "UAMY"
+  ],
+  "state": {
+    "after": "2026-09-10",
+    "cash": 9231.93,
+    "pos": {},
+    "yday_equity": 9231.93
+  }
+}

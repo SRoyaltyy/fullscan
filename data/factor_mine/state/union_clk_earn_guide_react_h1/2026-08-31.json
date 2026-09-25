@@ -1,0 +1,30 @@
+{
+  "buys": [],
+  "cash": 9864.61,
+  "date": "2026-08-31",
+  "equity": 9864.61,
+  "fees": 2.1923,
+  "fills": [
+    {
+      "fees": 2.1923,
+      "pnl": -135.4,
+      "price": 257.71,
+      "shares": 38,
+      "side": "SELL",
+      "ticker": "ADSK"
+    }
+  ],
+  "holdings": [],
+  "mean": -1.1453,
+  "n_trades_today": 1,
+  "recipe": "union_clk_earn_guide_react_h1",
+  "sells": [
+    "ADSK"
+  ],
+  "state": {
+    "after": "2026-08-31",
+    "cash": 9864.61,
+    "pos": {},
+    "yday_equity": 9864.61
+  }
+}

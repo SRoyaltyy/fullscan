@@ -1,0 +1,156 @@
+{
+  "buys": [
+    "PURR",
+    "NAT",
+    "ARE",
+    "FLNC"
+  ],
+  "cash": 19.88,
+  "date": "2026-09-18",
+  "equity": 9832.2,
+  "fees": 22.2641,
+  "fills": [
+    {
+      "fees": 2.6309,
+      "pnl": 65.35,
+      "price": 13.0,
+      "shares": 196,
+      "side": "SELL",
+      "ticker": "EROC"
+    },
+    {
+      "fees": 2.0548,
+      "pnl": -15.48,
+      "price": 195.55,
+      "shares": 12,
+      "side": "SELL",
+      "ticker": "FTAI"
+    },
+    {
+      "fees": 2.1454,
+      "pnl": -7.62,
+      "price": 57.85,
+      "shares": 42,
+      "side": "SELL",
+      "ticker": "LPG"
+    },
+    {
+      "fees": 2.5895,
+      "pnl": 29.64,
+      "price": 13.74,
+      "shares": 183,
+      "side": "SELL",
+      "ticker": "SFL"
+    },
+    {
+      "fees": 2.53,
+      "pnl": null,
+      "price": 13.82,
+      "shares": 180,
+      "side": "BUY",
+      "ticker": "PURR"
+    },
+    {
+      "fees": 3.9216,
+      "pnl": null,
+      "price": 8.2,
+      "shares": 304,
+      "side": "BUY",
+      "ticker": "NAT"
+    },
+    {
+      "fees": 2.122,
+      "pnl": null,
+      "price": 56.7,
+      "shares": 44,
+      "side": "BUY",
+      "ticker": "ARE"
+    },
+    {
+      "fees": 4.2699,
+      "pnl": null,
+      "price": 7.535,
+      "shares": 331,
+      "side": "BUY",
+      "ticker": "FLNC"
+    }
+  ],
+  "holdings": [
+    "ARE",
+    "FLNC",
+    "NAT",
+    "PURR"
+  ],
+  "mean": -1.7489,
+  "n_trades_today": 8,
+  "recipe": "union_clk_hold_vs_sector_h1",
+  "sells": [
+    "EROC",
+    "FTAI",
+    "LPG",
+    "SFL"
+  ],
+  "state": {
+    "after": "2026-09-18",
+    "cash": 19.88,
+    "pos": {
+      "ARE": {
+        "close_px": 53.29999923706055,
+        "cost": 2496.922033569336,
+        "entry_date": "2026-09-18",
+        "entry_px": 56.70000076293945,
+        "fee_in": 2.122,
+        "last_px": 56.70000076293945,
+        "min_hold": 1,
+        "notional": 2494.800033569336,
+        "peak_px": 56.70000076293945,
+        "reason": "Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list ohlc_hot; ret5=+13.7; leftover $2500.50",
+        "shares": 44,
+        "ticker": "ARE"
+      },
+      "FLNC": {
+        "close_px": 7.320000171661377,
+        "cost": 2498.354849493408,
+        "entry_date": "2026-09-18",
+        "entry_px": 7.534999847412109,
+        "fee_in": 4.2699,
+        "last_px": 7.534999847412109,
+        "min_hold": 1,
+        "notional": 2494.084949493408,
+        "peak_px": 7.534999847412109,
+        "reason": "Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list yday_mover; \ud83d\udd35; ret5=-20.9; leftover $2500.50",
+        "shares": 331,
+        "ticker": "FLNC"
+      },
+      "NAT": {
+        "close_px": 8.25,
+        "cost": 2496.7215420166017,
+        "entry_date": "2026-09-18",
+        "entry_px": 8.199999809265137,
+        "fee_in": 3.9216,
+        "last_px": 8.199999809265137,
+        "min_hold": 1,
+        "notional": 2492.7999420166016,
+        "peak_px": 8.199999809265137,
+        "reason": "Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list ohlc_hot; \ud83d\udd35; ret5=+13.0; leftover $2500.50",
+        "shares": 304,
+        "ticker": "NAT"
+      },
+      "PURR": {
+        "close_px": 14.09000015258789,
+        "cost": 2490.1299450683596,
+        "entry_date": "2026-09-18",
+        "entry_px": 13.819999694824219,
+        "fee_in": 2.53,
+        "last_px": 13.819999694824219,
+        "min_hold": 1,
+        "notional": 2487.5999450683594,
+        "peak_px": 13.819999694824219,
+        "reason": "Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list yday_gainer; ret5=+16.5; leftover $2500.50",
+        "shares": 180,
+        "ticker": "PURR"
+      }
+    },
+    "yday_equity": 9832.2
+  }
+}

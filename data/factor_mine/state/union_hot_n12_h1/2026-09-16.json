@@ -1,0 +1,311 @@
+{
+  "buys": [
+    "INDP",
+    "HLP",
+    "SDGR",
+    "CAI",
+    "TXG",
+    "SWKS",
+    "NAT",
+    "FTRE",
+    "SSL",
+    "CRWD",
+    "FRO",
+    "APH"
+  ],
+  "cash": 255.59,
+  "date": "2026-09-16",
+  "equity": 9809.73,
+  "fees": 29.5792,
+  "fills": [
+    {
+      "fees": 2.8767,
+      "pnl": null,
+      "price": 3.66,
+      "shares": 223,
+      "side": "BUY",
+      "ticker": "INDP"
+    },
+    {
+      "fees": 5.8695,
+      "pnl": null,
+      "price": 1.8,
+      "shares": 455,
+      "side": "BUY",
+      "ticker": "HLP"
+    },
+    {
+      "fees": 2.095,
+      "pnl": null,
+      "price": 23.29,
+      "shares": 35,
+      "side": "BUY",
+      "ticker": "SDGR"
+    },
+    {
+      "fees": 2.077,
+      "pnl": null,
+      "price": 28.16,
+      "shares": 29,
+      "side": "BUY",
+      "ticker": "CAI"
+    },
+    {
+      "fees": 2.02,
+      "pnl": null,
+      "price": 74.5,
+      "shares": 10,
+      "side": "BUY",
+      "ticker": "TXG"
+    },
+    {
+      "fees": 2.017,
+      "pnl": null,
+      "price": 89.38,
+      "shares": 9,
+      "side": "BUY",
+      "ticker": "SWKS"
+    },
+    {
+      "fees": 2.299,
+      "pnl": null,
+      "price": 7.88,
+      "shares": 103,
+      "side": "BUY",
+      "ticker": "NAT"
+    },
+    {
+      "fees": 2.113,
+      "pnl": null,
+      "price": 19.75,
+      "shares": 41,
+      "side": "BUY",
+      "ticker": "FTRE"
+    },
+    {
+      "fees": 2.158,
+      "pnl": null,
+      "price": 14.62,
+      "shares": 56,
+      "side": "BUY",
+      "ticker": "SSL"
+    },
+    {
+      "fees": 1.999,
+      "pnl": null,
+      "price": 236.92,
+      "shares": 3,
+      "side": "BUY",
+      "ticker": "CRWD"
+    },
+    {
+      "fees": 2.035,
+      "pnl": null,
+      "price": 52.52,
+      "shares": 15,
+      "side": "BUY",
+      "ticker": "FRO"
+    },
+    {
+      "fees": 2.02,
+      "pnl": null,
+      "price": 79.02,
+      "shares": 10,
+      "side": "BUY",
+      "ticker": "APH"
+    }
+  ],
+  "holdings": [
+    "APH",
+    "CAI",
+    "CRWD",
+    "FRO",
+    "FTRE",
+    "HLP",
+    "INDP",
+    "NAT",
+    "SDGR",
+    "SSL",
+    "SWKS",
+    "TXG"
+  ],
+  "mean": -0.2106,
+  "n_trades_today": 12,
+  "recipe": "union_hot_n12_h1",
+  "sells": [],
+  "state": {
+    "after": "2026-09-16",
+    "cash": 255.59,
+    "pos": {
+      "APH": {
+        "close_px": 77.26000213623047,
+        "cost": 792.219966430664,
+        "entry_date": "2026-09-16",
+        "entry_px": 79.0199966430664,
+        "fee_in": 2.02,
+        "last_px": 79.0199966430664,
+        "min_hold": 1,
+        "notional": 790.1999664306641,
+        "peak_px": 79.0199966430664,
+        "reason": "top 12 by hot; rank hot_score; list ohlc_hot; ret5=-5.0; leftover $819.20",
+        "shares": 10,
+        "ticker": "APH"
+      },
+      "CAI": {
+        "close_px": 28.209999084472656,
+        "cost": 818.7169955749512,
+        "entry_date": "2026-09-16",
+        "entry_px": 28.15999984741211,
+        "fee_in": 2.077,
+        "last_px": 28.15999984741211,
+        "min_hold": 1,
+        "notional": 816.6399955749512,
+        "peak_px": 28.15999984741211,
+        "reason": "top 12 by hot; rank hot_score; list yday_gainer,ohlc_hot; \u26aa; ret5=+14.8; leftover $819.20",
+        "shares": 29,
+        "ticker": "CAI"
+      },
+      "CRWD": {
+        "close_px": 241.36000061035156,
+        "cost": 712.758994506836,
+        "entry_date": "2026-09-16",
+        "entry_px": 236.9199981689453,
+        "fee_in": 1.999,
+        "last_px": 236.9199981689453,
+        "min_hold": 1,
+        "notional": 710.7599945068359,
+        "peak_px": 236.9199981689453,
+        "reason": "top 12 by hot; rank hot_score; list ohlc_hot; \u26aa; ret5=+15.5; leftover $819.20",
+        "shares": 3,
+        "ticker": "CRWD"
+      },
+      "FRO": {
+        "close_px": 53.66999816894531,
+        "cost": 789.835006866455,
+        "entry_date": "2026-09-16",
+        "entry_px": 52.52000045776367,
+        "fee_in": 2.035,
+        "last_px": 52.52000045776367,
+        "min_hold": 1,
+        "notional": 787.8000068664551,
+        "peak_px": 52.52000045776367,
+        "reason": "top 12 by hot; rank hot_score; list ohlc_hot; \ud83d\udd35; ret5=+10.7; leftover $819.20",
+        "shares": 15,
+        "ticker": "FRO"
+      },
+      "FTRE": {
+        "close_px": 19.969999313354492,
+        "cost": 811.863,
+        "entry_date": "2026-09-16",
+        "entry_px": 19.75,
+        "fee_in": 2.113,
+        "last_px": 19.75,
+        "min_hold": 1,
+        "notional": 809.75,
+        "peak_px": 19.75,
+        "reason": "top 12 by hot; rank hot_score; list yday_gainer,yday_mover,ohlc_hot; \ud83d\udd35; ret5=+15.7; leftover $819.20",
+        "shares": 41,
+        "ticker": "FTRE"
+      },
+      "HLP": {
+        "close_px": 2.069999933242798,
+        "cost": 824.8694783039093,
+        "entry_date": "2026-09-16",
+        "entry_px": 1.7999999523162842,
+        "fee_in": 5.8695,
+        "last_px": 1.7999999523162842,
+        "min_hold": 1,
+        "notional": 818.9999783039093,
+        "peak_px": 1.7999999523162842,
+        "reason": "top 12 by hot; rank hot_score; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+30.5; leftover $819.20",
+        "shares": 455,
+        "ticker": "HLP"
+      },
+      "INDP": {
+        "close_px": 3.2100000381469727,
+        "cost": 819.0567191402436,
+        "entry_date": "2026-09-16",
+        "entry_px": 3.6600000858306885,
+        "fee_in": 2.8767,
+        "last_px": 3.6600000858306885,
+        "min_hold": 1,
+        "notional": 816.1800191402435,
+        "peak_px": 3.6600000858306885,
+        "reason": "top 12 by hot; rank hot_score; list yday_gainer,yday_mover; ret5=+96.8; leftover $819.20",
+        "shares": 223,
+        "ticker": "INDP"
+      },
+      "NAT": {
+        "close_px": 7.989999771118164,
+        "cost": 813.9390117874145,
+        "entry_date": "2026-09-16",
+        "entry_px": 7.880000114440918,
+        "fee_in": 2.299,
+        "last_px": 7.880000114440918,
+        "min_hold": 1,
+        "notional": 811.6400117874146,
+        "peak_px": 7.880000114440918,
+        "reason": "top 12 by hot; rank hot_score; list ohlc_hot; ret5=+14.2; leftover $819.20",
+        "shares": 103,
+        "ticker": "NAT"
+      },
+      "SDGR": {
+        "close_px": 23.93000030517578,
+        "cost": 817.2450320434571,
+        "entry_date": "2026-09-16",
+        "entry_px": 23.290000915527344,
+        "fee_in": 2.095,
+        "last_px": 23.290000915527344,
+        "min_hold": 1,
+        "notional": 815.150032043457,
+        "peak_px": 23.290000915527344,
+        "reason": "top 12 by hot; rank hot_score; list yday_gainer; \ud83d\udd35; \u26aa; ret5=+16.1; leftover $819.20",
+        "shares": 35,
+        "ticker": "SDGR"
+      },
+      "SSL": {
+        "close_px": 14.289999961853027,
+        "cost": 820.8779935913086,
+        "entry_date": "2026-09-16",
+        "entry_px": 14.619999885559082,
+        "fee_in": 2.158,
+        "last_px": 14.619999885559082,
+        "min_hold": 1,
+        "notional": 818.7199935913086,
+        "peak_px": 14.619999885559082,
+        "reason": "top 12 by hot; rank hot_score; list ohlc_hot; \ud83d\udd35; ret5=+13.6; leftover $819.20",
+        "shares": 56,
+        "ticker": "SSL"
+      },
+      "SWKS": {
+        "close_px": 85.58999633789062,
+        "cost": 806.4369752807618,
+        "entry_date": "2026-09-16",
+        "entry_px": 89.37999725341797,
+        "fee_in": 2.017,
+        "last_px": 89.37999725341797,
+        "min_hold": 1,
+        "notional": 804.4199752807617,
+        "peak_px": 89.37999725341797,
+        "reason": "top 12 by hot; rank hot_score; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+19.4; leftover $819.20",
+        "shares": 9,
+        "ticker": "SWKS"
+      },
+      "TXG": {
+        "close_px": 72.68000030517578,
+        "cost": 747.02,
+        "entry_date": "2026-09-16",
+        "entry_px": 74.5,
+        "fee_in": 2.02,
+        "last_px": 74.5,
+        "min_hold": 1,
+        "notional": 745.0,
+        "peak_px": 74.5,
+        "reason": "top 12 by hot; rank hot_score; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+13.4; leftover $819.20",
+        "shares": 10,
+        "ticker": "TXG"
+      }
+    },
+    "yday_equity": 9809.73
+  }
+}

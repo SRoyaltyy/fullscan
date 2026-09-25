@@ -1,0 +1,220 @@
+{
+  "buys": [],
+  "cash": 9235.44,
+  "date": "2026-08-31",
+  "equity": 9995.51,
+  "fees": 6.2376,
+  "fills": [
+    {
+      "fees": 2.022,
+      "pnl": 3.82,
+      "price": 148.03,
+      "shares": 4,
+      "side": "SELL",
+      "ticker": "ANF"
+    },
+    {
+      "fees": 2.2026,
+      "pnl": -19.1,
+      "price": 9.5,
+      "shares": 64,
+      "side": "SELL",
+      "ticker": "CAPR"
+    },
+    {
+      "fees": 2.013,
+      "pnl": -27.91,
+      "price": 437.95,
+      "shares": 1,
+      "side": "SELL",
+      "ticker": "SNPS"
+    }
+  ],
+  "holdings": [],
+  "mean": 0.496,
+  "n_trades_today": 3,
+  "recipe": "combo_seh_502525_split",
+  "sells": [
+    "ANF",
+    "CAPR",
+    "SNPS"
+  ],
+  "state": {
+    "after": "2026-08-31",
+    "cash": 9235.44,
+    "members": [
+      {
+        "cash": 7242.12,
+        "pos": {
+          "FIG": {
+            "close_px": 27.489999771118164,
+            "cost": 2.1669008222606085,
+            "entry_date": "2026-08-28",
+            "entry_px": 30.18000030517578,
+            "fee_in": 2.1669008222606085,
+            "last_px": 27.600000381469727,
+            "notional": 1237.380012512207,
+            "peak_px": 27.600000381469727,
+            "reason": "news\ud83d\udd34; gate news=bad; list ohlc_hot; ret5=+12.1; leftover $1250.00",
+            "shares": 41,
+            "ticker": "FIG"
+          },
+          "SIMO": {
+            "close_px": 246.83999633789062,
+            "cost": 2.049642740328018,
+            "entry_date": "2026-08-28",
+            "entry_px": 252.24000549316406,
+            "fee_in": 2.049642740328018,
+            "last_px": 247.0500030517578,
+            "notional": 1008.9600219726562,
+            "peak_px": 247.0500030517578,
+            "reason": "news\ud83d\udd34; gate news=bad; list probable,yday_gainer; \u26aa; ret5=+2.2; leftover $1250.00",
+            "shares": 4,
+            "ticker": "SIMO"
+          }
+        },
+        "yday_equity": 5127.67
+      },
+      {
+        "cash": 87.28,
+        "pos": {
+          "ADSK": {
+            "close_px": 258.5299987792969,
+            "cost": 263.15300366210937,
+            "entry_date": "2026-08-28",
+            "entry_px": 261.1600036621094,
+            "fee_in": 1.993,
+            "last_px": 257.7099914550781,
+            "min_hold": 3,
+            "notional": 261.1600036621094,
+            "peak_px": 261.1600036621094,
+            "reason": "union \u2229 e_fresh, no \ud83d\udea8; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=+7.8; leftover $312.50",
+            "shares": 1,
+            "ticker": "ADSK"
+          },
+          "BBAR": {
+            "close_px": 15.140000343322754,
+            "cost": 302.25000457763673,
+            "entry_date": "2026-08-28",
+            "entry_px": 15.010000228881836,
+            "fee_in": 2.05,
+            "last_px": 14.880000114440918,
+            "min_hold": 3,
+            "notional": 300.2000045776367,
+            "peak_px": 15.010000228881836,
+            "reason": "union \u2229 e_fresh, no \ud83d\udea8; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=+3.7; leftover $312.50",
+            "shares": 20,
+            "ticker": "BBAR"
+          },
+          "ESTC": {
+            "close_px": 97.55000305175781,
+            "cost": 313.66899816894534,
+            "entry_date": "2026-08-28",
+            "entry_px": 103.88999938964844,
+            "fee_in": 1.999,
+            "last_px": 98.0,
+            "min_hold": 3,
+            "notional": 311.6699981689453,
+            "peak_px": 103.88999938964844,
+            "reason": "union \u2229 e_fresh, no \ud83d\udea8; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=-2.5; leftover $312.50",
+            "shares": 3,
+            "ticker": "ESTC"
+          },
+          "FINV": {
+            "close_px": 3.6700000762939453,
+            "cost": 312.63000915527346,
+            "entry_date": "2026-08-28",
+            "entry_px": 3.880000114440918,
+            "fee_in": 2.23,
+            "last_px": 3.390000104904175,
+            "min_hold": 3,
+            "notional": 310.40000915527344,
+            "peak_px": 3.880000114440918,
+            "reason": "union \u2229 e_fresh, no \ud83d\udea8; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=-8.6; leftover $312.50",
+            "shares": 80,
+            "ticker": "FINV"
+          },
+          "FRO": {
+            "close_px": 43.779998779296875,
+            "cost": 312.81101068115237,
+            "entry_date": "2026-08-28",
+            "entry_px": 44.400001525878906,
+            "fee_in": 2.011,
+            "last_px": 44.849998474121094,
+            "min_hold": 3,
+            "notional": 310.80001068115234,
+            "peak_px": 44.849998474121094,
+            "reason": "union \u2229 e_fresh, no \ud83d\udea8; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=+0.4; leftover $312.50",
+            "shares": 7,
+            "ticker": "FRO"
+          },
+          "GAP": {
+            "close_px": 22.309999465942383,
+            "cost": 298.3060064086914,
+            "entry_date": "2026-08-28",
+            "entry_px": 24.690000534057617,
+            "fee_in": 2.026,
+            "last_px": 22.979999542236328,
+            "min_hold": 3,
+            "notional": 296.2800064086914,
+            "peak_px": 24.690000534057617,
+            "reason": "union \u2229 e_fresh, no \ud83d\udea8; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=+5.8; leftover $312.50",
+            "shares": 12,
+            "ticker": "GAP"
+          },
+          "HAFN": {
+            "close_px": 8.4399995803833,
+            "cost": 311.0510141143799,
+            "entry_date": "2026-08-28",
+            "entry_px": 8.350000381469727,
+            "fee_in": 2.101,
+            "last_px": 8.529999732971191,
+            "min_hold": 3,
+            "notional": 308.9500141143799,
+            "peak_px": 8.529999732971191,
+            "reason": "union \u2229 e_fresh, no \ud83d\udea8; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=+5.1; leftover $312.50",
+            "shares": 37,
+            "ticker": "HAFN"
+          },
+          "RBRK": {
+            "close_px": 93.04000091552734,
+            "cost": 298.8489908447266,
+            "entry_date": "2026-08-28",
+            "entry_px": 98.94999694824219,
+            "fee_in": 1.999,
+            "last_px": 92.83000183105469,
+            "min_hold": 3,
+            "notional": 296.84999084472656,
+            "peak_px": 98.94999694824219,
+            "reason": "union \u2229 e_fresh, no \ud83d\udea8; gate days_since_E_max=1,flag_E_min=0; list ohlc_hot,earn_react; ret5=+9.7; leftover $312.50",
+            "shares": 3,
+            "ticker": "RBRK"
+          }
+        },
+        "yday_equity": 2400.44
+      },
+      {
+        "cash": 1906.04,
+        "pos": {
+          "MRNA": {
+            "close_px": 140.33999633789062,
+            "cost": 550.762009765625,
+            "entry_date": "2026-08-28",
+            "entry_px": 137.19000244140625,
+            "fee_in": 2.002,
+            "last_px": 134.10000610351562,
+            "min_hold": 1,
+            "notional": 548.760009765625,
+            "peak_px": 137.19000244140625,
+            "reason": "top 4 by hot; rank hot_score; list ohlc_hot; ret5=+7.1; leftover $625.00",
+            "shares": 4,
+            "ticker": "MRNA"
+          }
+        },
+        "yday_equity": 2467.4
+      }
+    ],
+    "pos": {},
+    "yday_equity": 9995.51
+  }
+}

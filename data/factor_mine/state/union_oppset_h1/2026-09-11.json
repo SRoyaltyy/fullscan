@@ -1,0 +1,215 @@
+{
+  "buys": [
+    "COO",
+    "AEO",
+    "WLTH",
+    "NAVN",
+    "TSSI",
+    "IRD",
+    "AXGN",
+    "TYRA"
+  ],
+  "cash": 102.3,
+  "date": "2026-09-11",
+  "equity": 9443.04,
+  "fees": 17.942,
+  "fills": [
+    {
+      "fees": 2.053,
+      "pnl": null,
+      "price": 54.66,
+      "shares": 21,
+      "side": "BUY",
+      "ticker": "COO"
+    },
+    {
+      "fees": 2.233,
+      "pnl": null,
+      "price": 14.71,
+      "shares": 81,
+      "side": "BUY",
+      "ticker": "AEO"
+    },
+    {
+      "fees": 2.317,
+      "pnl": null,
+      "price": 10.95,
+      "shares": 109,
+      "side": "BUY",
+      "ticker": "WLTH"
+    },
+    {
+      "fees": 2.164,
+      "pnl": null,
+      "price": 20.61,
+      "shares": 58,
+      "side": "BUY",
+      "ticker": "NAVN"
+    },
+    {
+      "fees": 2.389,
+      "pnl": null,
+      "price": 8.98,
+      "shares": 133,
+      "side": "BUY",
+      "ticker": "TSSI"
+    },
+    {
+      "fees": 2.572,
+      "pnl": null,
+      "price": 6.16,
+      "shares": 194,
+      "side": "BUY",
+      "ticker": "IRD"
+    },
+    {
+      "fees": 2.074,
+      "pnl": null,
+      "price": 42.48,
+      "shares": 28,
+      "side": "BUY",
+      "ticker": "AXGN"
+    },
+    {
+      "fees": 2.14,
+      "pnl": null,
+      "price": 23.63,
+      "shares": 50,
+      "side": "BUY",
+      "ticker": "TYRA"
+    }
+  ],
+  "holdings": [
+    "AEO",
+    "AXGN",
+    "COO",
+    "IRD",
+    "NAVN",
+    "TSSI",
+    "TYRA",
+    "WLTH"
+  ],
+  "mean": -1.7257,
+  "n_trades_today": 8,
+  "recipe": "union_oppset_h1",
+  "sells": [],
+  "state": {
+    "after": "2026-09-11",
+    "cash": 102.3,
+    "pos": {
+      "AEO": {
+        "close_px": 15.020000457763672,
+        "cost": 1193.7430030899047,
+        "entry_date": "2026-09-11",
+        "entry_px": 14.710000038146973,
+        "fee_in": 2.233,
+        "last_px": 14.710000038146973,
+        "min_hold": 1,
+        "notional": 1191.5100030899048,
+        "peak_px": 14.710000038146973,
+        "reason": "Theme Radar Clock-B oppset \u2229 union, rank T\u22121 rvol (research; not KEEP); gate oppset=True; rank opp_rvol; list yday_mover; ret5=-14.6; leftover $1201.11",
+        "shares": 81,
+        "ticker": "AEO"
+      },
+      "AXGN": {
+        "close_px": 42.15999984741211,
+        "cost": 1191.5139871826173,
+        "entry_date": "2026-09-11",
+        "entry_px": 42.47999954223633,
+        "fee_in": 2.074,
+        "last_px": 42.47999954223633,
+        "min_hold": 1,
+        "notional": 1189.4399871826172,
+        "peak_px": 42.47999954223633,
+        "reason": "Theme Radar Clock-B oppset \u2229 union, rank T\u22121 rvol (research; not KEEP); gate oppset=True; rank opp_rvol; list yday_mover; ret5=-11.1; leftover $1201.11",
+        "shares": 28,
+        "ticker": "AXGN"
+      },
+      "COO": {
+        "close_px": 53.90999984741211,
+        "cost": 1149.9129967956544,
+        "entry_date": "2026-09-11",
+        "entry_px": 54.65999984741211,
+        "fee_in": 2.053,
+        "last_px": 54.65999984741211,
+        "min_hold": 1,
+        "notional": 1147.8599967956543,
+        "peak_px": 54.65999984741211,
+        "reason": "Theme Radar Clock-B oppset \u2229 union, rank T\u22121 rvol (research; not KEEP); gate oppset=True; rank opp_rvol; list yday_mover; ret5=-23.3; leftover $1201.11",
+        "shares": 21,
+        "ticker": "COO"
+      },
+      "IRD": {
+        "close_px": 6.039999961853027,
+        "cost": 1197.611970397949,
+        "entry_date": "2026-09-11",
+        "entry_px": 6.159999847412109,
+        "fee_in": 2.572,
+        "last_px": 6.159999847412109,
+        "min_hold": 1,
+        "notional": 1195.0399703979492,
+        "peak_px": 6.159999847412109,
+        "reason": "Theme Radar Clock-B oppset \u2229 union, rank T\u22121 rvol (research; not KEEP); gate oppset=True; rank opp_rvol; list yday_gainer; ret5=+32.0; leftover $1201.11",
+        "shares": 194,
+        "ticker": "IRD"
+      },
+      "NAVN": {
+        "close_px": 21.020000457763672,
+        "cost": 1197.5440354003906,
+        "entry_date": "2026-09-11",
+        "entry_px": 20.610000610351562,
+        "fee_in": 2.164,
+        "last_px": 20.610000610351562,
+        "min_hold": 1,
+        "notional": 1195.3800354003906,
+        "peak_px": 20.610000610351562,
+        "reason": "Theme Radar Clock-B oppset \u2229 union, rank T\u22121 rvol (research; not KEEP); gate oppset=True; rank opp_rvol; list yday_mover; ret5=-26.9; leftover $1201.11",
+        "shares": 58,
+        "ticker": "NAVN"
+      },
+      "TSSI": {
+        "close_px": 8.930000305175781,
+        "cost": 1196.7289391174315,
+        "entry_date": "2026-09-11",
+        "entry_px": 8.979999542236328,
+        "fee_in": 2.389,
+        "last_px": 8.979999542236328,
+        "min_hold": 1,
+        "notional": 1194.3399391174316,
+        "peak_px": 8.979999542236328,
+        "reason": "Theme Radar Clock-B oppset \u2229 union, rank T\u22121 rvol (research; not KEEP); gate oppset=True; rank opp_rvol; list yday_gainer; \ud83d\udd35; ret5=+10.1; leftover $1201.11",
+        "shares": 133,
+        "ticker": "TSSI"
+      },
+      "TYRA": {
+        "close_px": 22.030000686645508,
+        "cost": 1183.6399580383302,
+        "entry_date": "2026-09-11",
+        "entry_px": 23.6299991607666,
+        "fee_in": 2.14,
+        "last_px": 23.6299991607666,
+        "min_hold": 1,
+        "notional": 1181.49995803833,
+        "peak_px": 23.6299991607666,
+        "reason": "Theme Radar Clock-B oppset \u2229 union, rank T\u22121 rvol (research; not KEEP); gate oppset=True; rank opp_rvol; list yday_gainer; ret5=-5.3; leftover $1201.11",
+        "shares": 50,
+        "ticker": "TYRA"
+      },
+      "WLTH": {
+        "close_px": 10.380000114440918,
+        "cost": 1195.8669792099,
+        "entry_date": "2026-09-11",
+        "entry_px": 10.949999809265137,
+        "fee_in": 2.317,
+        "last_px": 10.949999809265137,
+        "min_hold": 1,
+        "notional": 1193.5499792099,
+        "peak_px": 10.949999809265137,
+        "reason": "Theme Radar Clock-B oppset \u2229 union, rank T\u22121 rvol (research; not KEEP); gate oppset=True; rank opp_rvol; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+16.6; leftover $1201.11",
+        "shares": 109,
+        "ticker": "WLTH"
+      }
+    },
+    "yday_equity": 9443.04
+  }
+}

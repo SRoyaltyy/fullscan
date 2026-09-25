@@ -1,0 +1,36 @@
+{
+  "buys": [],
+  "cash": 0.81,
+  "date": "2026-09-08",
+  "equity": 10907.01,
+  "fees": 0,
+  "fills": [],
+  "holdings": [
+    "SION"
+  ],
+  "mean": 1.6712,
+  "n_trades_today": 0,
+  "recipe": "union_rsi_os_macd_h3",
+  "sells": [],
+  "state": {
+    "after": "2026-09-08",
+    "cash": 0.81,
+    "pos": {
+      "SION": {
+        "close_px": 7.300000190734863,
+        "cost": 9999.192343537903,
+        "entry_date": "2026-09-04",
+        "entry_px": 6.679999828338623,
+        "fee_in": 19.2726,
+        "last_px": 7.130000114440918,
+        "min_hold": 3,
+        "notional": 9979.919743537903,
+        "peak_px": 7.130000114440918,
+        "reason": "combo gate; gate rsi_os=True,macd_up=True; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+11.4; leftover $10000.00",
+        "shares": 1494,
+        "ticker": "SION"
+      }
+    },
+    "yday_equity": 10907.01
+  }
+}

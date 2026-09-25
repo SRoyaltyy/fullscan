@@ -1,0 +1,147 @@
+{
+  "buys": [
+    "BFLY"
+  ],
+  "cash": 115.39,
+  "date": "2026-09-23",
+  "equity": 8509.94,
+  "fees": 0.922,
+  "fills": [
+    {
+      "fees": 0.412,
+      "pnl": 3.71,
+      "price": 38.905,
+      "shares": 1,
+      "side": "SELL",
+      "ticker": "FIVN"
+    },
+    {
+      "fees": 0.51,
+      "pnl": null,
+      "price": 9.9,
+      "shares": 5,
+      "side": "BUY",
+      "ticker": "BFLY"
+    }
+  ],
+  "holdings": [
+    "A",
+    "ABSI",
+    "BFLY",
+    "FSLY",
+    "MSTR",
+    "UPXI",
+    "VICR"
+  ],
+  "mean": -1.7787,
+  "n_trades_today": 2,
+  "recipe": "union_cond_n4_h3",
+  "sells": [
+    "FIVN"
+  ],
+  "state": {
+    "after": "2026-09-23",
+    "cash": 115.39,
+    "pos": {
+      "A": {
+        "close_px": 165.32000732421875,
+        "cost": 1896.46594140625,
+        "entry_date": "2026-09-21",
+        "entry_px": 157.8699951171875,
+        "fee_in": 2.026,
+        "last_px": 166.5399932861328,
+        "min_hold": 3,
+        "notional": 1894.43994140625,
+        "peak_px": 166.5399932861328,
+        "reason": "top 4 by cond; rank cond; list flatten; \ud83d\udd35; \u26aa; ret5=+6.5; leftover $1991.27",
+        "shares": 12,
+        "ticker": "A"
+      },
+      "ABSI": {
+        "close_px": 9.744999885559082,
+        "cost": 1984.4010826644896,
+        "entry_date": "2026-09-21",
+        "entry_px": 10.0600004196167,
+        "fee_in": 2.581,
+        "last_px": 10.510000228881836,
+        "min_hold": 3,
+        "notional": 1981.8200826644897,
+        "peak_px": 10.510000228881836,
+        "reason": "top 4 by cond; rank cond; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+17.5; leftover $1991.27",
+        "shares": 197,
+        "ticker": "ABSI"
+      },
+      "BFLY": {
+        "close_px": 9.199999809265137,
+        "cost": 50.009998092651365,
+        "entry_date": "2026-09-23",
+        "entry_px": 9.899999618530273,
+        "fee_in": 0.51,
+        "last_px": 9.899999618530273,
+        "min_hold": 3,
+        "notional": 49.49999809265137,
+        "peak_px": 9.899999618530273,
+        "reason": "top 4 by cond; rank cond; list yday_gainer,yday_mover; \ud83d\udd35; \u26aa; ret5=+27.3; leftover $55.13",
+        "shares": 5,
+        "ticker": "BFLY"
+      },
+      "FSLY": {
+        "close_px": 29.649999618530273,
+        "cost": 113.21280183105469,
+        "entry_date": "2026-09-22",
+        "entry_px": 28.020000457763672,
+        "fee_in": 1.1328,
+        "last_px": 25.899999618530273,
+        "min_hold": 3,
+        "notional": 112.08000183105469,
+        "peak_px": 28.020000457763672,
+        "reason": "top 4 by cond; rank cond; list yday_gainer,yday_mover,ohlc_hot; ret5=+10.3; leftover $120.72",
+        "shares": 4,
+        "ticker": "FSLY"
+      },
+      "MSTR": {
+        "close_px": 162.1999969482422,
+        "cost": 1976.9860219726563,
+        "entry_date": "2026-09-21",
+        "entry_px": 164.5800018310547,
+        "fee_in": 2.026,
+        "last_px": 167.22999572753906,
+        "min_hold": 3,
+        "notional": 1974.9600219726562,
+        "peak_px": 167.5500030517578,
+        "reason": "top 4 by cond; rank cond; list yday_gainer,yday_mover,ohlc_hot; ret5=+17.5; leftover $1991.27",
+        "shares": 12,
+        "ticker": "MSTR"
+      },
+      "UPXI": {
+        "close_px": 1.1699999570846558,
+        "cost": 122.03940186920165,
+        "entry_date": "2026-09-22",
+        "entry_px": 1.2300000190734863,
+        "fee_in": 1.4994,
+        "last_px": 1.2300000190734863,
+        "min_hold": 3,
+        "notional": 120.54000186920166,
+        "peak_px": 1.2300000190734863,
+        "reason": "top 4 by cond; rank cond; list ohlc_hot; ret5=+14.5; leftover $120.72",
+        "shares": 98,
+        "ticker": "UPXI"
+      },
+      "VICR": {
+        "close_px": 283.1600036621094,
+        "cost": 1844.014,
+        "entry_date": "2026-09-21",
+        "entry_px": 230.25,
+        "fee_in": 2.014,
+        "last_px": 266.5,
+        "min_hold": 3,
+        "notional": 1842.0,
+        "peak_px": 266.5,
+        "reason": "top 4 by cond; rank cond; list ohlc_hot; ret5=+12.5; leftover $1991.27",
+        "shares": 8,
+        "ticker": "VICR"
+      }
+    },
+    "yday_equity": 8509.94
+  }
+}

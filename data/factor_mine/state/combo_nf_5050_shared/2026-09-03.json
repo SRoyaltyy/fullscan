@@ -1,0 +1,69 @@
+{
+  "buys": [],
+  "cash": 4691.18,
+  "date": "2026-09-03",
+  "equity": 9807.75,
+  "fees": 0,
+  "fills": [],
+  "holdings": [
+    "CRK",
+    "MOS",
+    "SLI"
+  ],
+  "mean": -0.777,
+  "n_trades_today": 0,
+  "recipe": "combo_nf_5050_shared",
+  "sells": [],
+  "state": {
+    "after": "2026-09-03",
+    "cash": 4691.18,
+    "pos": {
+      "CRK": {
+        "close_px": 14.949999809265137,
+        "cost": 1714.0510133895873,
+        "entry_date": "2026-08-28",
+        "entry_px": 14.630000114440918,
+        "fee_in": 2.341,
+        "last_px": 15.449999809265137,
+        "notional": 1711.7100133895874,
+        "owner": "flatten_h5",
+        "peak_px": 15.819999694824219,
+        "reason": "baseline list, no extra gate; list flatten; wish-list (live io HOLD \u2014 not a ticket); ret5=+5.8; combo leftover $1718.40; owner flatten_h5",
+        "shares": 117,
+        "side": "long",
+        "ticker": "CRK"
+      },
+      "MOS": {
+        "close_px": 25.489999771118164,
+        "cost": 1702.6530541687011,
+        "entry_date": "2026-08-28",
+        "entry_px": 23.950000762939453,
+        "fee_in": 2.203,
+        "last_px": 26.1200008392334,
+        "notional": 1700.4500541687012,
+        "owner": "flatten_h5",
+        "peak_px": 26.1200008392334,
+        "reason": "baseline list, no extra gate; list flatten; wish-list (live io HOLD \u2014 not a ticket); ret5=+1.8; combo leftover $1718.40; owner flatten_h5",
+        "shares": 71,
+        "side": "long",
+        "ticker": "MOS"
+      },
+      "SLI": {
+        "close_px": 2.430000066757202,
+        "cost": 1726.1489427913666,
+        "entry_date": "2026-08-28",
+        "entry_px": 2.680000066757202,
+        "fee_in": 8.2689,
+        "last_px": 2.490000009536743,
+        "notional": 1717.8800427913666,
+        "owner": "flatten_h5",
+        "peak_px": 2.680000066757202,
+        "reason": "baseline list, no extra gate; list flatten,ohlc_hot; wish-list (live io HOLD \u2014 not a ticket); ret5=+16.3; combo leftover $1718.40; owner flatten_h5",
+        "shares": 641,
+        "side": "long",
+        "ticker": "SLI"
+      }
+    },
+    "yday_equity": 9807.75
+  }
+}

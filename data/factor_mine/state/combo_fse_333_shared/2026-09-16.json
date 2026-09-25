@@ -1,0 +1,412 @@
+{
+  "buys": [
+    "FPS",
+    "TCOM",
+    "IQV",
+    "RDNT",
+    "AVAH",
+    "BLFS",
+    "BBNX",
+    "GFR"
+  ],
+  "cash": 5215.93,
+  "date": "2026-09-16",
+  "equity": 9123.67,
+  "fees": 43.4566,
+  "fills": [
+    {
+      "fees": 2.013,
+      "pnl": 7.16,
+      "price": 253.34,
+      "shares": 1,
+      "side": "SELL",
+      "ticker": "ADBE"
+    },
+    {
+      "fees": 2.034,
+      "pnl": -15.57,
+      "price": 30.57,
+      "shares": 8,
+      "side": "SELL",
+      "ticker": "CPRT"
+    },
+    {
+      "fees": 4.0893,
+      "pnl": 48.8,
+      "price": 1.85,
+      "shares": 317,
+      "side": "COVER",
+      "ticker": "CRDL"
+    },
+    {
+      "fees": 2.145,
+      "pnl": 11.03,
+      "price": 6.25,
+      "shares": 45,
+      "side": "SELL",
+      "ticker": "DBI"
+    },
+    {
+      "fees": 2.019,
+      "pnl": 15.21,
+      "price": 78.12,
+      "shares": 3,
+      "side": "SELL",
+      "ticker": "DSGX"
+    },
+    {
+      "fees": 2.022,
+      "pnl": 19.62,
+      "price": 61.93,
+      "shares": 4,
+      "side": "SELL",
+      "ticker": "KR"
+    },
+    {
+      "fees": 2.094,
+      "pnl": -3.33,
+      "price": 9.4,
+      "shares": 28,
+      "side": "SELL",
+      "ticker": "LPTH"
+    },
+    {
+      "fees": 2.563,
+      "pnl": -77.77,
+      "price": 3.75,
+      "shares": 191,
+      "side": "COVER",
+      "ticker": "MYGN"
+    },
+    {
+      "fees": 1.4233,
+      "pnl": -27.47,
+      "price": 140.03,
+      "shares": 1,
+      "side": "SELL",
+      "ticker": "ORCL"
+    },
+    {
+      "fees": 2.005,
+      "pnl": -30.77,
+      "price": 118.18,
+      "shares": 5,
+      "side": "COVER",
+      "ticker": "QRVO"
+    },
+    {
+      "fees": 1.2785,
+      "pnl": -12.8,
+      "price": 125.55,
+      "shares": 1,
+      "side": "SELL",
+      "ticker": "RH"
+    },
+    {
+      "fees": 2.536,
+      "pnl": -88.85,
+      "price": 3.98,
+      "shares": 182,
+      "side": "COVER",
+      "ticker": "RWT"
+    },
+    {
+      "fees": 2.098,
+      "pnl": null,
+      "price": 33.14,
+      "shares": 36,
+      "side": "BUY",
+      "ticker": "FPS"
+    },
+    {
+      "fees": 2.077,
+      "pnl": null,
+      "price": 40.93,
+      "shares": 29,
+      "side": "BUY",
+      "ticker": "TCOM"
+    },
+    {
+      "fees": 1.996,
+      "pnl": null,
+      "price": 270.89,
+      "shares": 2,
+      "side": "BUY",
+      "ticker": "IQV"
+    },
+    {
+      "fees": 2.011,
+      "pnl": null,
+      "price": 77.12,
+      "shares": 7,
+      "side": "BUY",
+      "ticker": "RDNT"
+    },
+    {
+      "fees": 2.116,
+      "pnl": null,
+      "price": 14.31,
+      "shares": 42,
+      "side": "BUY",
+      "ticker": "AVAH"
+    },
+    {
+      "fees": 2.038,
+      "pnl": null,
+      "price": 36.46,
+      "shares": 16,
+      "side": "BUY",
+      "ticker": "BLFS"
+    },
+    {
+      "fees": 2.2576904121294414,
+      "pnl": null,
+      "price": 18.61,
+      "shares": 70,
+      "side": "SHORT",
+      "ticker": "BBNX"
+    },
+    {
+      "fees": 2.640840547545969,
+      "pnl": null,
+      "price": 6.83,
+      "shares": 191,
+      "side": "SHORT",
+      "ticker": "GFR"
+    }
+  ],
+  "holdings": [
+    "AUPH",
+    "AVAH",
+    "BBNX",
+    "BLFS",
+    "COHU",
+    "FPS",
+    "GFR",
+    "IQV",
+    "NVT",
+    "OVID",
+    "RDNT",
+    "SANM",
+    "TCOM"
+  ],
+  "mean": -1.7827,
+  "n_trades_today": 20,
+  "recipe": "combo_fse_333_shared",
+  "sells": [
+    "ADBE",
+    "CPRT",
+    "CRDL",
+    "DBI",
+    "DSGX",
+    "KR",
+    "LPTH",
+    "MYGN",
+    "ORCL",
+    "QRVO",
+    "RH",
+    "RWT"
+  ],
+  "state": {
+    "after": "2026-09-16",
+    "cash": 5215.93,
+    "pos": {
+      "AUPH": {
+        "close_px": 16.959999084472656,
+        "cost": 457.91401922607423,
+        "entry_date": "2026-09-11",
+        "entry_px": 16.280000686645508,
+        "fee_in": 2.074,
+        "last_px": 16.15999984741211,
+        "notional": 455.8400192260742,
+        "owner": "flatten_h5",
+        "peak_px": 16.350000381469727,
+        "reason": "baseline list, no extra gate; list flatten; wish-list (live io HOLD \u2014 not a ticket); ret5=-0.1; combo leftover $468.63; owner flatten_h5",
+        "shares": 28,
+        "side": "long",
+        "ticker": "AUPH"
+      },
+      "AVAH": {
+        "close_px": 14.260000228881836,
+        "cost": 603.1360176239014,
+        "entry_date": "2026-09-16",
+        "entry_px": 14.3100004196167,
+        "fee_in": 2.116,
+        "last_px": 14.3100004196167,
+        "notional": 601.0200176239014,
+        "owner": "flatten_h5",
+        "peak_px": 14.3100004196167,
+        "reason": "baseline list, no extra gate; list flatten; wish-list (live io HOLD \u2014 not a ticket); \u26aa; ret5=+4.8; combo leftover $610.97; owner flatten_h5",
+        "shares": 42,
+        "side": "long",
+        "ticker": "AVAH"
+      },
+      "BBNX": {
+        "close_px": 22.18000030517578,
+        "cost": 2.2576904121294414,
+        "entry_date": "2026-09-16",
+        "entry_px": 18.610000610351562,
+        "fee_in": 2.2576904121294414,
+        "last_px": 18.610000610351562,
+        "notional": 1302.7000427246094,
+        "owner": "short_news_r_h3",
+        "peak_px": 18.610000610351562,
+        "reason": "news\ud83d\udd34; gate news=bad; list probable,yday_gainer,yday_mover; ret5=-0.5; combo leftover $1306.80; owner short_news_r_h3",
+        "shares": 70,
+        "side": "short",
+        "ticker": "BBNX"
+      },
+      "BLFS": {
+        "close_px": 36.11000061035156,
+        "cost": 585.3979853515625,
+        "entry_date": "2026-09-16",
+        "entry_px": 36.459999084472656,
+        "fee_in": 2.038,
+        "last_px": 36.459999084472656,
+        "notional": 583.3599853515625,
+        "owner": "flatten_h5",
+        "peak_px": 36.459999084472656,
+        "reason": "baseline list, no extra gate; list flatten; wish-list (live io HOLD \u2014 not a ticket); \ud83d\udd35; \u26aa; ret5=+2.9; combo leftover $610.97; owner flatten_h5",
+        "shares": 16,
+        "side": "long",
+        "ticker": "BLFS"
+      },
+      "COHU": {
+        "close_px": 51.060001373291016,
+        "cost": 450.73400122070314,
+        "entry_date": "2026-09-11",
+        "entry_px": 56.09000015258789,
+        "fee_in": 2.014,
+        "last_px": 51.290000915527344,
+        "notional": 448.7200012207031,
+        "owner": "flatten_h5",
+        "peak_px": 56.09000015258789,
+        "reason": "baseline list, no extra gate; list flatten; wish-list (live io HOLD \u2014 not a ticket); \ud83d\udd35; \u26aa; ret5=+19.0; combo leftover $468.63; owner flatten_h5",
+        "shares": 8,
+        "side": "long",
+        "ticker": "COHU"
+      },
+      "FPS": {
+        "close_px": 34.84000015258789,
+        "cost": 1195.1379780273437,
+        "entry_date": "2026-09-16",
+        "entry_px": 33.13999938964844,
+        "fee_in": 2.098,
+        "last_px": 33.13999938964844,
+        "notional": 1193.0399780273438,
+        "owner": "union_e_fresh_h3",
+        "peak_px": 33.13999938964844,
+        "reason": "union \u2229 e_fresh, no \ud83d\udea8; gate days_since_E_max=1,flag_E_min=0; list yday_gainer; \ud83d\udd35; ret5=-2.9; combo leftover $1211.99; owner union_e_fresh_h3",
+        "shares": 36,
+        "side": "long",
+        "ticker": "FPS"
+      },
+      "GFR": {
+        "close_px": 6.489999771118164,
+        "cost": 2.640840547545969,
+        "entry_date": "2026-09-16",
+        "entry_px": 6.829999923706055,
+        "fee_in": 2.640840547545969,
+        "last_px": 6.829999923706055,
+        "notional": 1304.5299854278564,
+        "owner": "short_news_r_h3",
+        "peak_px": 6.829999923706055,
+        "reason": "news\ud83d\udd34; gate news=bad; list ohlc_hot; ret5=+11.2; combo leftover $1306.80; owner short_news_r_h3",
+        "shares": 191,
+        "side": "short",
+        "ticker": "GFR"
+      },
+      "IQV": {
+        "close_px": 268.82000732421875,
+        "cost": 543.776029296875,
+        "entry_date": "2026-09-16",
+        "entry_px": 270.8900146484375,
+        "fee_in": 1.996,
+        "last_px": 270.8900146484375,
+        "notional": 541.780029296875,
+        "owner": "flatten_h5",
+        "peak_px": 270.8900146484375,
+        "reason": "baseline list, no extra gate; list flatten; wish-list (live io HOLD \u2014 not a ticket); \u26aa; ret5=+4.0; combo leftover $610.97; owner flatten_h5",
+        "shares": 2,
+        "side": "long",
+        "ticker": "IQV"
+      },
+      "NVT": {
+        "close_px": 147.64999389648438,
+        "cost": 317.55599755859373,
+        "entry_date": "2026-09-11",
+        "entry_px": 157.77999877929688,
+        "fee_in": 1.996,
+        "last_px": 147.7899932861328,
+        "notional": 315.55999755859375,
+        "owner": "flatten_h5",
+        "peak_px": 157.77999877929688,
+        "reason": "baseline list, no extra gate; list flatten; wish-list (live io HOLD \u2014 not a ticket); \ud83d\udd35; ret5=+2.0; combo leftover $468.63; owner flatten_h5",
+        "shares": 2,
+        "side": "long",
+        "ticker": "NVT"
+      },
+      "OVID": {
+        "close_px": 2.680000066757202,
+        "cost": 469.33300326156615,
+        "entry_date": "2026-09-11",
+        "entry_px": 2.7300000190734863,
+        "fee_in": 2.503,
+        "last_px": 2.7200000286102295,
+        "notional": 466.83000326156616,
+        "owner": "flatten_h5",
+        "peak_px": 2.755000114440918,
+        "reason": "baseline list, no extra gate; list flatten; wish-list (live io HOLD \u2014 not a ticket); ret5=-5.4; combo leftover $468.63; owner flatten_h5",
+        "shares": 171,
+        "side": "long",
+        "ticker": "OVID"
+      },
+      "RDNT": {
+        "close_px": 75.77999877929688,
+        "cost": 541.8510192260742,
+        "entry_date": "2026-09-16",
+        "entry_px": 77.12000274658203,
+        "fee_in": 2.011,
+        "last_px": 77.12000274658203,
+        "notional": 539.8400192260742,
+        "owner": "flatten_h5",
+        "peak_px": 77.12000274658203,
+        "reason": "baseline list, no extra gate; list flatten; wish-list (live io HOLD \u2014 not a ticket); \u26aa; ret5=+7.2; combo leftover $610.97; owner flatten_h5",
+        "shares": 7,
+        "side": "long",
+        "ticker": "RDNT"
+      },
+      "SANM": {
+        "close_px": 195.75,
+        "cost": 415.67599267578123,
+        "entry_date": "2026-09-11",
+        "entry_px": 206.83999633789062,
+        "fee_in": 1.996,
+        "last_px": 194.83999633789062,
+        "notional": 413.67999267578125,
+        "owner": "flatten_h5",
+        "peak_px": 206.83999633789062,
+        "reason": "baseline list, no extra gate; list flatten; wish-list (live io HOLD \u2014 not a ticket); ret5=+3.9; combo leftover $468.63; owner flatten_h5",
+        "shares": 2,
+        "side": "long",
+        "ticker": "SANM"
+      },
+      "TCOM": {
+        "close_px": 40.43000030517578,
+        "cost": 1189.0470088500977,
+        "entry_date": "2026-09-16",
+        "entry_px": 40.93000030517578,
+        "fee_in": 2.077,
+        "last_px": 40.93000030517578,
+        "notional": 1186.9700088500977,
+        "owner": "union_e_fresh_h3",
+        "peak_px": 40.93000030517578,
+        "reason": "union \u2229 e_fresh, no \ud83d\udea8; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=-3.1; combo leftover $1211.99; owner union_e_fresh_h3",
+        "shares": 29,
+        "side": "long",
+        "ticker": "TCOM"
+      }
+    },
+    "yday_equity": 9123.67
+  }
+}

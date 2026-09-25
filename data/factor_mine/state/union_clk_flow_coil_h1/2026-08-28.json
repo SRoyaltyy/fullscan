@@ -1,0 +1,47 @@
+{
+  "buys": [
+    "ULTA"
+  ],
+  "cash": 241.96,
+  "date": "2026-08-28",
+  "equity": 9556.96,
+  "fees": 2.044,
+  "fills": [
+    {
+      "fees": 2.044,
+      "pnl": null,
+      "price": 542.0,
+      "shares": 18,
+      "side": "BUY",
+      "ticker": "ULTA"
+    }
+  ],
+  "holdings": [
+    "ULTA"
+  ],
+  "mean": -4.4304,
+  "n_trades_today": 1,
+  "recipe": "union_clk_flow_coil_h1",
+  "sells": [],
+  "state": {
+    "after": "2026-08-28",
+    "cash": 241.96,
+    "pos": {
+      "ULTA": {
+        "close_px": 517.5,
+        "cost": 9758.044,
+        "entry_date": "2026-08-28",
+        "entry_px": 542.0,
+        "fee_in": 2.044,
+        "last_px": 542.0,
+        "min_hold": 1,
+        "notional": 9756.0,
+        "peak_px": 542.0,
+        "reason": "Clock-B #8 flow-in + green + not extended; gate clk_flow_coil=True; rank cond; list earn_react; ret5=+4.8; leftover $10000.00",
+        "shares": 18,
+        "ticker": "ULTA"
+      }
+    },
+    "yday_equity": 9556.96
+  }
+}

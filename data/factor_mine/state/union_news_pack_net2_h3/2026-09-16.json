@@ -1,0 +1,90 @@
+{
+  "buys": [
+    "SM",
+    "QCOM"
+  ],
+  "cash": 182.08,
+  "date": "2026-09-16",
+  "equity": 8745.48,
+  "fees": 8.603,
+  "fills": [
+    {
+      "fees": 2.0955,
+      "pnl": 208.09,
+      "price": 253.34,
+      "shares": 19,
+      "side": "SELL",
+      "ticker": "ADBE"
+    },
+    {
+      "fees": 2.1195,
+      "pnl": -711.8,
+      "price": 140.03,
+      "shares": 29,
+      "side": "SELL",
+      "ticker": "ORCL"
+    },
+    {
+      "fees": 2.329,
+      "pnl": null,
+      "price": 39.99,
+      "shares": 113,
+      "side": "BUY",
+      "ticker": "SM"
+    },
+    {
+      "fees": 2.059,
+      "pnl": null,
+      "price": 189.17,
+      "shares": 23,
+      "side": "BUY",
+      "ticker": "QCOM"
+    }
+  ],
+  "holdings": [
+    "QCOM",
+    "SM"
+  ],
+  "mean": -4.4598,
+  "n_trades_today": 4,
+  "recipe": "union_news_pack_net2_h3",
+  "sells": [
+    "ADBE",
+    "ORCL"
+  ],
+  "state": {
+    "after": "2026-09-16",
+    "cash": 182.08,
+    "pos": {
+      "QCOM": {
+        "close_px": 184.83999633789062,
+        "cost": 4352.968957885742,
+        "entry_date": "2026-09-16",
+        "entry_px": 189.1699981689453,
+        "fee_in": 2.059,
+        "last_px": 189.1699981689453,
+        "min_hold": 3,
+        "notional": 4350.909957885742,
+        "peak_px": 189.1699981689453,
+        "reason": "packet\ud83d\udfe2 and camera net \u2265 2; gate news_box=good,cam_net_min=2; rank cond; list ohlc_hot; \ud83d\udd35; ret5=+7.9; leftover $4528.12",
+        "shares": 23,
+        "ticker": "QCOM"
+      },
+      "SM": {
+        "close_px": 38.15999984741211,
+        "cost": 4521.199189666748,
+        "entry_date": "2026-09-16",
+        "entry_px": 39.9900016784668,
+        "fee_in": 2.329,
+        "last_px": 39.9900016784668,
+        "min_hold": 3,
+        "notional": 4518.870189666748,
+        "peak_px": 39.9900016784668,
+        "reason": "packet\ud83d\udfe2 and camera net \u2265 2; gate news_box=good,cam_net_min=2; rank cond; list ohlc_hot; \ud83d\udd35; ret5=+9.3; leftover $4528.12",
+        "shares": 113,
+        "ticker": "SM"
+      }
+    },
+    "yday_equity": 8745.48
+  }
+}

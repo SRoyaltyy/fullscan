@@ -1,0 +1,149 @@
+{
+  "buys": [
+    "IQV",
+    "RDNT",
+    "AVAH",
+    "BLFS"
+  ],
+  "cash": 207.03,
+  "date": "2026-09-16",
+  "equity": 8530.72,
+  "fees": 8.563,
+  "fills": [
+    {
+      "fees": 2.026,
+      "pnl": null,
+      "price": 270.89,
+      "shares": 12,
+      "side": "BUY",
+      "ticker": "IQV"
+    },
+    {
+      "fees": 2.056,
+      "pnl": null,
+      "price": 77.12,
+      "shares": 22,
+      "side": "BUY",
+      "ticker": "RDNT"
+    },
+    {
+      "fees": 2.35,
+      "pnl": null,
+      "price": 14.31,
+      "shares": 120,
+      "side": "BUY",
+      "ticker": "AVAH"
+    },
+    {
+      "fees": 2.131,
+      "pnl": null,
+      "price": 36.46,
+      "shares": 47,
+      "side": "BUY",
+      "ticker": "BLFS"
+    }
+  ],
+  "holdings": [
+    "AUPH",
+    "AVAH",
+    "BLFS",
+    "IQV",
+    "OVID",
+    "RDNT"
+  ],
+  "mean": -0.9815,
+  "n_trades_today": 4,
+  "recipe": "flatten_h5_topheavy",
+  "sells": [],
+  "state": {
+    "after": "2026-09-16",
+    "cash": 207.03,
+    "pos": {
+      "AUPH": {
+        "close_px": 16.959999084472656,
+        "cost": 16.44580068664551,
+        "entry_date": "2026-09-11",
+        "entry_px": 16.280000686645508,
+        "fee_in": 0.1658,
+        "last_px": 16.15999984741211,
+        "min_hold": 5,
+        "notional": 16.280000686645508,
+        "peak_px": 16.350000381469727,
+        "reason": "40% to #1, rest split; list flatten; wish-list (live io HOLD \u2014 not a ticket); ret5=-0.1; leftover $20.48",
+        "shares": 1,
+        "ticker": "AUPH"
+      },
+      "AVAH": {
+        "close_px": 14.260000228881836,
+        "cost": 1719.5500503540038,
+        "entry_date": "2026-09-16",
+        "entry_px": 14.3100004196167,
+        "fee_in": 2.35,
+        "last_px": 14.3100004196167,
+        "min_hold": 5,
+        "notional": 1717.200050354004,
+        "peak_px": 14.3100004196167,
+        "reason": "40% to #1, rest split; list flatten; wish-list (live io HOLD \u2014 not a ticket); \u26aa; ret5=+4.8; leftover $1718.75",
+        "shares": 120,
+        "ticker": "AVAH"
+      },
+      "BLFS": {
+        "close_px": 36.11000061035156,
+        "cost": 1715.750956970215,
+        "entry_date": "2026-09-16",
+        "entry_px": 36.459999084472656,
+        "fee_in": 2.131,
+        "last_px": 36.459999084472656,
+        "min_hold": 5,
+        "notional": 1713.6199569702148,
+        "peak_px": 36.459999084472656,
+        "reason": "40% to #1, rest split; list flatten; wish-list (live io HOLD \u2014 not a ticket); \ud83d\udd35; \u26aa; ret5=+2.9; leftover $1718.75",
+        "shares": 47,
+        "ticker": "BLFS"
+      },
+      "IQV": {
+        "close_px": 268.82000732421875,
+        "cost": 3252.70617578125,
+        "entry_date": "2026-09-16",
+        "entry_px": 270.8900146484375,
+        "fee_in": 2.026,
+        "last_px": 270.8900146484375,
+        "min_hold": 5,
+        "notional": 3250.68017578125,
+        "peak_px": 270.8900146484375,
+        "reason": "40% to #1, rest split; list flatten; wish-list (live io HOLD \u2014 not a ticket); \u26aa; ret5=+4.0; leftover $3437.49",
+        "shares": 12,
+        "ticker": "IQV"
+      },
+      "OVID": {
+        "close_px": 2.680000066757202,
+        "cost": 5.520600038146973,
+        "entry_date": "2026-09-11",
+        "entry_px": 2.7300000190734863,
+        "fee_in": 0.0606,
+        "last_px": 2.7200000286102295,
+        "min_hold": 5,
+        "notional": 5.460000038146973,
+        "peak_px": 2.755000114440918,
+        "reason": "40% to #1, rest split; list flatten; wish-list (live io HOLD \u2014 not a ticket); ret5=-5.4; leftover $6.15",
+        "shares": 2,
+        "ticker": "OVID"
+      },
+      "RDNT": {
+        "close_px": 75.77999877929688,
+        "cost": 1698.6960604248047,
+        "entry_date": "2026-09-16",
+        "entry_px": 77.12000274658203,
+        "fee_in": 2.056,
+        "last_px": 77.12000274658203,
+        "min_hold": 5,
+        "notional": 1696.6400604248047,
+        "peak_px": 77.12000274658203,
+        "reason": "40% to #1, rest split; list flatten; wish-list (live io HOLD \u2014 not a ticket); \u26aa; ret5=+7.2; leftover $1718.75",
+        "shares": 22,
+        "ticker": "RDNT"
+      }
+    },
+    "yday_equity": 8530.72
+  }
+}

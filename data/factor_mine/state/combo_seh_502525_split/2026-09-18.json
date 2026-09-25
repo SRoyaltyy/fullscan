@@ -1,0 +1,267 @@
+{
+  "buys": [
+    "LVWR",
+    "SDGR",
+    "TEM",
+    "FIVN"
+  ],
+  "cash": 12651.39,
+  "date": "2026-09-18",
+  "equity": 9916.39,
+  "fees": 26.3257,
+  "fills": [
+    {
+      "fees": 5.5599,
+      "pnl": null,
+      "price": 1.49,
+      "shares": 431,
+      "side": "BUY",
+      "ticker": "LVWR"
+    },
+    {
+      "fees": 2.053,
+      "pnl": null,
+      "price": 29.32,
+      "shares": 21,
+      "side": "BUY",
+      "ticker": "SDGR"
+    },
+    {
+      "fees": 2.011,
+      "pnl": null,
+      "price": 81.4,
+      "shares": 7,
+      "side": "BUY",
+      "ticker": "TEM"
+    },
+    {
+      "fees": 2.094,
+      "pnl": -36.65,
+      "price": 21.3,
+      "shares": 28,
+      "side": "SELL",
+      "ticker": "BBNX"
+    },
+    {
+      "fees": 4.557,
+      "pnl": 46.63,
+      "price": 1.96,
+      "shares": 348,
+      "side": "SELL",
+      "ticker": "HLP"
+    },
+    {
+      "fees": 7.7451,
+      "pnl": 14.22,
+      "price": 1.12,
+      "shares": 592,
+      "side": "SELL",
+      "ticker": "IQ"
+    },
+    {
+      "fees": 2.3057364356472068,
+      "pnl": null,
+      "price": 34.44,
+      "shares": 72,
+      "side": "SHORT",
+      "ticker": "FIVN"
+    }
+  ],
+  "holdings": [],
+  "mean": 0.3094,
+  "n_trades_today": 7,
+  "recipe": "combo_seh_502525_split",
+  "sells": [
+    "BBNX",
+    "HLP",
+    "IQ"
+  ],
+  "state": {
+    "after": "2026-09-18",
+    "cash": 12651.39,
+    "members": [
+      {
+        "cash": 12543.06,
+        "pos": {
+          "BBNX": {
+            "close_px": 21.889999389648438,
+            "cost": 2.2500706860686,
+            "entry_date": "2026-09-16",
+            "entry_px": 18.610000610351562,
+            "fee_in": 2.2500706860686,
+            "last_px": 21.299999237060547,
+            "notional": 1265.4800415039062,
+            "peak_px": 18.610000610351562,
+            "reason": "news\ud83d\udd34; gate news=bad; list probable,yday_gainer,yday_mover; ret5=-0.5; leftover $1277.51",
+            "shares": 68,
+            "ticker": "BBNX"
+          },
+          "BULL": {
+            "close_px": 8.25,
+            "cost": 2.345116437823152,
+            "entry_date": "2026-09-17",
+            "entry_px": 7.949999809265137,
+            "fee_in": 2.345116437823152,
+            "last_px": 7.849999904632568,
+            "notional": 810.899980545044,
+            "peak_px": 7.849999904632568,
+            "reason": "news\ud83d\udd34; gate news=bad; list yday_mover; \ud83d\udd35; \u26aa; ret5=-18.4; leftover $818.14",
+            "shares": 102,
+            "ticker": "BULL"
+          },
+          "FIVN": {
+            "close_px": 32.470001220703125,
+            "cost": 2.3057364356472068,
+            "entry_date": "2026-09-18",
+            "entry_px": 34.439998626708984,
+            "fee_in": 2.3057364356472068,
+            "last_px": 34.439998626708984,
+            "notional": 2479.679901123047,
+            "peak_px": 34.439998626708984,
+            "reason": "news\ud83d\udd34; gate news=bad; list flatten; \ud83d\udd35; \u26aa; ret5=+14.0; leftover $2481.40",
+            "shares": 72,
+            "ticker": "FIVN"
+          },
+          "GFR": {
+            "close_px": 6.659999847412109,
+            "cost": 2.6272920544036444,
+            "entry_date": "2026-09-16",
+            "entry_px": 6.829999923706055,
+            "fee_in": 2.6272920544036444,
+            "last_px": 6.639999866485596,
+            "notional": 1277.2099857330322,
+            "peak_px": 6.480000019073486,
+            "reason": "news\ud83d\udd34; gate news=bad; list ohlc_hot; ret5=+11.2; leftover $1277.51",
+            "shares": 187,
+            "ticker": "GFR"
+          },
+          "LEN": {
+            "close_px": 76.43000030517578,
+            "cost": 2.0621917808219177,
+            "entry_date": "2026-09-17",
+            "entry_px": 81.0,
+            "fee_in": 2.0621917808219177,
+            "last_px": 78.25,
+            "notional": 810.0,
+            "peak_px": 78.25,
+            "reason": "news\ud83d\udd34; gate news=bad; list earn_react; \ud83d\udd35; ret5=-3.0; leftover $818.14",
+            "shares": 10,
+            "ticker": "LEN"
+          },
+          "TRMD": {
+            "close_px": 38.22999954223633,
+            "cost": 2.098012055070433,
+            "entry_date": "2026-09-17",
+            "entry_px": 36.52000045776367,
+            "fee_in": 2.098012055070433,
+            "last_px": 37.709999084472656,
+            "notional": 803.4400100708008,
+            "peak_px": 36.52000045776367,
+            "reason": "news\ud83d\udd34; gate news=bad; list ohlc_hot; ret5=+3.2; leftover $818.14",
+            "shares": 22,
+            "ticker": "TRMD"
+          }
+        },
+        "yday_equity": 5024.42
+      },
+      {
+        "cash": 17.45,
+        "pos": {
+          "FPS": {
+            "close_px": 39.439998626708984,
+            "cost": 1062.56598046875,
+            "entry_date": "2026-09-16",
+            "entry_px": 33.13999938964844,
+            "fee_in": 2.086,
+            "last_px": 39.5,
+            "min_hold": 3,
+            "notional": 1060.47998046875,
+            "peak_px": 39.5,
+            "reason": "union \u2229 e_fresh, no \ud83d\udea8; gate days_since_E_max=1,flag_E_min=0; list yday_gainer; \ud83d\udd35; ret5=-2.9; leftover $1073.13",
+            "shares": 32,
+            "ticker": "FPS"
+          },
+          "TCOM": {
+            "close_px": 40.68000030517578,
+            "cost": 1066.2480079345703,
+            "entry_date": "2026-09-16",
+            "entry_px": 40.93000030517578,
+            "fee_in": 2.068,
+            "last_px": 40.61000061035156,
+            "min_hold": 3,
+            "notional": 1064.1800079345703,
+            "peak_px": 40.93000030517578,
+            "reason": "union \u2229 e_fresh, no \ud83d\udea8; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=-3.1; leftover $1073.13",
+            "shares": 26,
+            "ticker": "TCOM"
+          }
+        },
+        "yday_equity": 2337.21
+      },
+      {
+        "cash": 90.88,
+        "pos": {
+          "INDP": {
+            "close_px": 3.549999952316284,
+            "cost": 628.3630146770478,
+            "entry_date": "2026-09-16",
+            "entry_px": 3.6600000858306885,
+            "fee_in": 2.503,
+            "last_px": 3.8499999046325684,
+            "min_hold": 1,
+            "notional": 625.8600146770477,
+            "peak_px": 3.8499999046325684,
+            "reason": "top 4 by hot; rank hot_score; list yday_gainer,yday_mover; ret5=+96.8; leftover $627.57",
+            "shares": 171,
+            "ticker": "INDP"
+          },
+          "LVWR": {
+            "close_px": 1.6299999952316284,
+            "cost": 647.7499041103363,
+            "entry_date": "2026-09-18",
+            "entry_px": 1.4900000095367432,
+            "fee_in": 5.5599,
+            "last_px": 1.4900000095367432,
+            "min_hold": 1,
+            "notional": 642.1900041103363,
+            "peak_px": 1.4900000095367432,
+            "reason": "top 4 by hot; rank hot_score; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+25.7; leftover $642.74",
+            "shares": 431,
+            "ticker": "LVWR"
+          },
+          "SDGR": {
+            "close_px": 29.020000457763672,
+            "cost": 617.7729935913086,
+            "entry_date": "2026-09-18",
+            "entry_px": 29.31999969482422,
+            "fee_in": 2.053,
+            "last_px": 29.31999969482422,
+            "min_hold": 1,
+            "notional": 615.7199935913086,
+            "peak_px": 29.31999969482422,
+            "reason": "top 4 by hot; rank hot_score; list yday_gainer,yday_mover; \ud83d\udd35; \u26aa; ret5=+60.9; leftover $642.74",
+            "shares": 21,
+            "ticker": "SDGR"
+          },
+          "TEM": {
+            "close_px": 77.83999633789062,
+            "cost": 571.8110106811523,
+            "entry_date": "2026-09-18",
+            "entry_px": 81.4000015258789,
+            "fee_in": 2.011,
+            "last_px": 81.4000015258789,
+            "min_hold": 1,
+            "notional": 569.8000106811523,
+            "peak_px": 81.4000015258789,
+            "reason": "top 4 by hot; rank hot_score; list yday_gainer,yday_mover; \ud83d\udd35; \u26aa; ret5=+36.8; leftover $642.74",
+            "shares": 7,
+            "ticker": "TEM"
+          }
+        },
+        "yday_equity": 2554.76
+      }
+    ],
+    "pos": {},
+    "yday_equity": 9916.39
+  }
+}

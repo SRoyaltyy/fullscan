@@ -1,0 +1,86 @@
+{
+  "buys": [
+    "PGEN",
+    "SGRY"
+  ],
+  "cash": 6.81,
+  "date": "2026-09-23",
+  "equity": 7411.73,
+  "fees": 2.6016,
+  "fills": [
+    {
+      "fees": 1.32,
+      "pnl": null,
+      "price": 7.95,
+      "shares": 16,
+      "side": "BUY",
+      "ticker": "PGEN"
+    },
+    {
+      "fees": 1.2816,
+      "pnl": null,
+      "price": 15.72,
+      "shares": 8,
+      "side": "BUY",
+      "ticker": "SGRY"
+    }
+  ],
+  "holdings": [
+    "ISRG",
+    "PGEN",
+    "SGRY"
+  ],
+  "mean": -1.1768,
+  "n_trades_today": 2,
+  "recipe": "union_news_g_cam61_h3",
+  "sells": [],
+  "state": {
+    "after": "2026-09-23",
+    "cash": 6.81,
+    "pos": {
+      "ISRG": {
+        "close_px": 398.29998779296875,
+        "cost": 7092.064263671875,
+        "entry_date": "2026-09-21",
+        "entry_px": 393.8900146484375,
+        "fee_in": 2.044,
+        "last_px": 400.8800048828125,
+        "min_hold": 3,
+        "notional": 7090.020263671875,
+        "peak_px": 403.0,
+        "reason": "merged news\ud83d\udfe2 and cameras +6 \u2212\u22641; gate news=good,n_pos_min=6,cam_bad_max=1; rank cond; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+6.6; leftover $7354.44",
+        "shares": 18,
+        "ticker": "ISRG"
+      },
+      "PGEN": {
+        "close_px": 7.440000057220459,
+        "cost": 128.51999694824218,
+        "entry_date": "2026-09-23",
+        "entry_px": 7.949999809265137,
+        "fee_in": 1.32,
+        "last_px": 7.949999809265137,
+        "min_hold": 3,
+        "notional": 127.19999694824219,
+        "peak_px": 7.949999809265137,
+        "reason": "merged news\ud83d\udfe2 and cameras +6 \u2212\u22641; gate news=good,n_pos_min=6,cam_bad_max=1; rank cond; list flatten; \ud83d\udd35; \u26aa; ret5=+12.7; leftover $131.19",
+        "shares": 16,
+        "ticker": "PGEN"
+      },
+      "SGRY": {
+        "close_px": 14.5600004196167,
+        "cost": 127.04160213623047,
+        "entry_date": "2026-09-23",
+        "entry_px": 15.720000267028809,
+        "fee_in": 1.2816,
+        "last_px": 15.720000267028809,
+        "min_hold": 3,
+        "notional": 125.76000213623047,
+        "peak_px": 15.720000267028809,
+        "reason": "merged news\ud83d\udfe2 and cameras +6 \u2212\u22641; gate news=good,n_pos_min=6,cam_bad_max=1; rank cond; list yday_gainer,yday_mover,ohlc_hot; \ud83d\udd35; ret5=+15.8; leftover $131.19",
+        "shares": 8,
+        "ticker": "SGRY"
+      }
+    },
+    "yday_equity": 7411.73
+  }
+}

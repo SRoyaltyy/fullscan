@@ -1,0 +1,66 @@
+{
+  "buys": [],
+  "cash": 1.06,
+  "date": "2026-09-24",
+  "equity": 9365.75,
+  "fees": 0,
+  "fills": [],
+  "holdings": [
+    "BB",
+    "CBRL",
+    "PGEN"
+  ],
+  "mean": 4.201,
+  "n_trades_today": 0,
+  "recipe": "union_flow_in_h5",
+  "sells": [],
+  "state": {
+    "after": "2026-09-24",
+    "cash": 1.06,
+    "pos": {
+      "BB": {
+        "close_px": 8.729999542236328,
+        "cost": 9172.738906265258,
+        "entry_date": "2026-09-23",
+        "entry_px": 8.600000381469727,
+        "fee_in": 13.7385,
+        "last_px": 8.420000076293945,
+        "min_hold": 5,
+        "notional": 9159.000406265259,
+        "peak_px": 8.600000381469727,
+        "reason": "union \u2229 flow_in hold 5, no \ud83d\udea8; gate flow_in=True; list overnight; \ud83d\udd35; \u26aa; ret5=+10.5; leftover $9173.80",
+        "shares": 1065,
+        "ticker": "BB"
+      },
+      "CBRL": {
+        "close_px": 51.84000015258789,
+        "cost": 45.958,
+        "entry_date": "2026-09-22",
+        "entry_px": 45.5,
+        "fee_in": 0.458,
+        "last_px": 46.880001068115234,
+        "min_hold": 5,
+        "notional": 45.5,
+        "peak_px": 47.56999969482422,
+        "reason": "union \u2229 flow_in hold 5, no \ud83d\udea8; gate flow_in=True; list overnight; ret5=-11.2; leftover $81.34",
+        "shares": 1,
+        "ticker": "CBRL"
+      },
+      "PGEN": {
+        "close_px": 7.699999809265137,
+        "cost": 15.842800305175782,
+        "entry_date": "2026-09-21",
+        "entry_px": 7.840000152587891,
+        "fee_in": 0.1628,
+        "last_px": 7.369999885559082,
+        "min_hold": 5,
+        "notional": 15.680000305175781,
+        "peak_px": 7.949999809265137,
+        "reason": "union \u2229 flow_in hold 5, no \ud83d\udea8; gate flow_in=True; list flatten; \u26aa; ret5=+13.6; leftover $19.44",
+        "shares": 2,
+        "ticker": "PGEN"
+      }
+    },
+    "yday_equity": 9365.75
+  }
+}

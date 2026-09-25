@@ -1,0 +1,120 @@
+{
+  "buys": [
+    "ARHS"
+  ],
+  "cash": 8.61,
+  "date": "2026-09-22",
+  "equity": 8778.37,
+  "fees": 39.1175,
+  "fills": [
+    {
+      "fees": 2.028,
+      "pnl": 27.22,
+      "price": 163.08,
+      "shares": 6,
+      "side": "SELL",
+      "ticker": "A"
+    },
+    {
+      "fees": 6.4907,
+      "pnl": -42.65,
+      "price": 2.09,
+      "shares": 496,
+      "side": "SELL",
+      "ticker": "AMTX"
+    },
+    {
+      "fees": 7.6405,
+      "pnl": -32.69,
+      "price": 1.795,
+      "shares": 584,
+      "side": "SELL",
+      "ticker": "BTBT"
+    },
+    {
+      "fees": 2.046,
+      "pnl": -0.59,
+      "price": 89.12,
+      "shares": 12,
+      "side": "SELL",
+      "ticker": "DXCM"
+    },
+    {
+      "fees": 2.133,
+      "pnl": -4.25,
+      "price": 25.95,
+      "shares": 41,
+      "side": "SELL",
+      "ticker": "GLXY"
+    },
+    {
+      "fees": 2.016,
+      "pnl": -19.57,
+      "price": 378.42,
+      "shares": 2,
+      "side": "SELL",
+      "ticker": "HUM"
+    },
+    {
+      "fees": 2.2501,
+      "pnl": -28.97,
+      "price": 13.16,
+      "shares": 79,
+      "side": "SELL",
+      "ticker": "MGTX"
+    },
+    {
+      "fees": 2.3356,
+      "pnl": -13.12,
+      "price": 9.91,
+      "shares": 106,
+      "side": "SELL",
+      "ticker": "SBET"
+    },
+    {
+      "fees": 12.1776,
+      "pnl": null,
+      "price": 8.9,
+      "shares": 944,
+      "side": "BUY",
+      "ticker": "ARHS"
+    }
+  ],
+  "holdings": [
+    "ARHS"
+  ],
+  "mean": 3.7138,
+  "n_trades_today": 9,
+  "recipe": "union_blue_coil_h1",
+  "sells": [
+    "A",
+    "AMTX",
+    "BTBT",
+    "DXCM",
+    "GLXY",
+    "HUM",
+    "MGTX",
+    "SBET"
+  ],
+  "state": {
+    "after": "2026-09-22",
+    "cash": 8.61,
+    "pos": {
+      "ARHS": {
+        "close_px": 9.29,
+        "cost": 8413.777600000001,
+        "entry_date": "2026-09-22",
+        "entry_px": 8.9,
+        "fee_in": 12.1776,
+        "last_px": 8.9,
+        "min_hold": 1,
+        "notional": 8401.6,
+        "peak_px": 8.9,
+        "reason": "combo gate; gate blue=True,ret_5_max=10.0; list probable; \ud83d\udd35; ret5=+7.5; leftover $8422.39",
+        "shares": 944,
+        "ticker": "ARHS"
+      }
+    },
+    "yday_equity": 8778.37
+  }
+}
