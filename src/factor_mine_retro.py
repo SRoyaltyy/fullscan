@@ -1867,7 +1867,14 @@ def review_day(date: str, info: dict, dest: Path,
             for t in list(names) + traded + [r.get("ticker") for r in rows]
             if t
         })
-        gaps = fmf.session_cross_check(date, check)
+        # A missing session print already holds the day. The Stooq open
+        # tape (2026-08-27) would otherwise fetch every candidate.
+        if missing:
+            gaps = []
+            tape = fmf.day_open_tape(date)
+            fmf.LAST_OPEN_SOURCE[str(date)[:10]] = tape
+        else:
+            gaps = fmf.session_cross_check(date, check)
         decision = fmf.LAST_OPEN_SOURCE.get(str(date)[:10])
         if decision:
             fmf.write_open_source_row(date, decision)
