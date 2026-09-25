@@ -137,9 +137,9 @@ def _yf_download(tickers: list[str], start: str, end: str, *,
         raise RuntimeError(
             "price store refuses adjusted bars; auto_adjust stays false")
     try:
-        # Printed regular-session Open/High/Low/Close — not split-adjusted
-        # history and not a live last-trade. Factor-mine 09:30 / 16:00
-        # marks must match the tape the user can look up.
+        # Yahoo daily bars with auto_adjust=False: split-adjusted, dividends
+        # not applied. That is the tape Factor Mine locks. auto_adjust=True
+        # (dividend-adjusted) is refused above. Not a live last-trade.
         raw = yf.download(
             tickers=tickers, start=start, end=end, group_by="ticker",
             auto_adjust=AUTO_ADJUST, actions=True, threads=True, progress=False,

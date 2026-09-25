@@ -194,6 +194,113 @@ def test_completeness_gate_lists_every_hole_and_refuses_adjusted_bars() -> None:
         ps.AUTO_ADJUST = old
 
 
+def test_minority_gaps_are_excluded_and_wholesale_fetch_still_holds() -> None:
+    """A gap under the 10% share is unrankable, not a hold. A dead fetch still holds."""
+    full = _bars(35)
+    names = [f"N{i:02d}" for i in range(10)] + ["GAP"]
+
+    def raw(ticker):
+        if ticker in {"GAP", "ZZZ"}:
+            return []
+        return full
+
+    def official(ticker, date, bars=None):
+        if ticker in {"GAP", "ZZZ"}:
+            return {"open": None, "high": None, "low": None, "close": None}
+        return {"open": 10.0, "high": 11.0, "low": 9.0, "close": 10.5}
+
+    with mock.patch("src.price_store.ensure_through", return_value=None), \
+            mock.patch.object(fmf, "_raw_bars", side_effect=raw), \
+            mock.patch.object(tl, "_official_ohlc", side_effect=official):
+        gaps = fmf.ensure_candidate_bars("2026-09-25", names)
+        exact = fmf.ensure_candidate_bars(
+            "2026-09-25", [f"N{i:02d}" for i in range(9)] + ["GAP"])
+        try:
+            fmf.ensure_candidate_bars(
+                "2026-09-25", [f"N{i:02d}" for i in range(8)] + ["GAP", "ZZZ"])
+            over = False
+            err = None
+        except fmf.HoldDay as e:
+            over = True
+            err = e
+    assert over and err is not None
+    assert err.status == "held_incomplete"
+    assert {g["ticker"] for g in err.gaps} == {"GAP", "ZZZ"}
+    assert [g["ticker"] for g in gaps] == ["GAP"]
+    assert "missing 09:30 open" in gaps[0]["missing"]
+    assert "indicator bars" in gaps[0]["reason"]
+    assert len(exact) == 1 and exact[0]["ticker"] == "GAP"
+
+    def boom(*_a, **_k):
+        raise RuntimeError("download down")
+
+    with mock.patch("src.price_store.ensure_through", side_effect=boom):
+        try:
+            fmf.ensure_candidate_bars("2026-09-25", ["AAA", "BBB"])
+            fetched = False
+        except fmf.HoldDay as e:
+            fetched = True
+            assert e.status == "held_incomplete"
+            assert "price fetch failed" in e.reason
+    assert fetched
+
+    attached: list[str] = []
+
+    def fake_ensure(date, tickers):
+        assert "GAP" in tickers
+        return [{
+            "ticker": "GAP",
+            "missing": ["missing 09:30 open", "indicator bars 0/35"],
+            "reason": "missing 09:30 open; indicator bars 0/35",
+        }]
+
+    def fake_attach(date, ticker, sources, src_rank, sess, prev, prior, df):
+        attached.append(ticker)
+        return {
+            "date": date, "ticker": ticker, "sources": sources,
+            "src_rank": src_rank, "open": 10.0, "close": 11.0,
+            "ohlc_hot_score": 0.0 if ticker == "GAP" else 1.5,
+        }
+
+    with mock.patch.object(fm, "live_panel_end", return_value="2026-09-25"), \
+            mock.patch.object(fm.sm, "load_payload", return_value={}), \
+            mock.patch.object(fm.sm, "list_books", return_value=[]), \
+            mock.patch.object(fm.sm, "session_calendar",
+                              return_value=["2026-09-24", "2026-09-25"]), \
+            mock.patch.object(fm.gc, "lookback_calendar",
+                              side_effect=lambda c: list(c)), \
+            mock.patch.object(fm, "_session_map",
+                              return_value=({"2026-09-25": {"date": "2026-09-25"}}, [])), \
+            mock.patch.object(fm.fla, "collect_mover_buys",
+                              return_value={"by_date": {}}), \
+            mock.patch.object(fm.fla, "flatten_day_targets",
+                              return_value={"tickers": names}), \
+            mock.patch.object(fmf, "ranking_universe", return_value=list(names)), \
+            mock.patch.object(fmf, "ensure_candidate_bars", side_effect=fake_ensure), \
+            mock.patch.object(fm, "_candidates",
+                              return_value={"flatten": list(names)}), \
+            mock.patch.object(fm, "_attach_row", side_effect=fake_attach), \
+            mock.patch.object(fmf, "row_price_problem", return_value=None), \
+            mock.patch.object(fmf, "heat_record", return_value={
+                "vintage": "2026-09-24", "phase": "morning_overlay",
+                "board_date": "2026-09-25", "source": None, "sha256": "abc",
+            }), mock.patch.object(fmf, "code_sha", return_value="cafebabe"):
+        panel = fm.build_panel("2026-09-25", "2026-09-25", fail_closed=True)
+        snap = fmf.make_snapshot(
+            "2026-09-25", panel["rows"], "2026-09-24", "pricesha",
+            unrankable=panel["unrankable"],
+        )
+    assert "GAP" not in attached
+    assert attached and all(t != "GAP" for t in attached)
+    assert all(r["ticker"] != "GAP" for r in panel["rows"])
+    assert all(r["ohlc_hot_score"] != 0.0 for r in panel["rows"])
+    assert snap["n_unrankable"] == 1
+    assert snap["unrankable"][0]["ticker"] == "GAP"
+    assert "missing 09:30 open" in snap["unrankable"][0]["reason"]
+    assert snap["auto_adjust"] is False
+    assert all(r["ticker"] != "GAP" for r in snap["rows"])
+
+
 def test_build_panel_fetches_bars_before_candidates() -> None:
     order: list[str] = []
 
@@ -608,6 +715,7 @@ if __name__ == "__main__":
     test_guard_fails_when_an_earlier_hash_changes()
     test_missing_bars_hold_the_day_and_do_not_write_hot_zero()
     test_completeness_gate_lists_every_hole_and_refuses_adjusted_bars()
+    test_minority_gaps_are_excluded_and_wholesale_fetch_still_holds()
     test_build_panel_fetches_bars_before_candidates()
     test_build_panel_refuses_unresolved_hot_score()
     test_morning_map_heat_is_not_replaced_by_postclose()
