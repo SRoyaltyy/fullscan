@@ -1,6 +1,6 @@
 {
   "date": "2026-09-25",
-  "generated_at": "2026-09-25T06:09:53.555311-04:00",
+  "generated_at": "2026-09-25T06:09:59.741162-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -41,31 +41,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "finviz",
-      "title": "Finviz universe export",
-      "date": "2026-09-25",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-25T05:03:18.010637-04:00",
-      "files": [
-        {
-          "path": "data/exports/finviz_2026-09-25.csv",
-          "ok": true,
-          "reason": "",
-          "size": 11017615,
-          "preview": "11673 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC"
-        },
-        {
-          "path": "data/finviz/latest.csv",
-          "ok": true,
-          "reason": "",
-          "size": 11465996,
-          "preview": "11673 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
-        }
-      ],
-      "preview": "11673 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC \u00b7 11673 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
-    },
     {
       "key": "catalyst",
       "title": "Catalyst dossiers (after book)",
@@ -289,6 +264,24 @@
         }
       ],
       "preview": "# Sector Prediction \u2014 Utilities \u2014 2026-09-25\n- news_mode: **on**\n- ETF: **XLU**\n- rubric: `00_grounding/sectors/utilities.md`\n- predicted_direction: **down**\n- predicted_magnitude_band: **mild**\n- total_score: **-3.24** (mult 0.9)\n- regime: risk_off\n- divergence_flagged: **True**\n- engine: v2 \u00b7 tape_anchor **1.371** (ES +0.28%, ZN -0.03%, PM:XLU +0.30%) \u00b7 index_carry **0.676** (general 2.706) \u00b7 llm_overlay **-5.288** (raw -5.288) \u00b7 # Reasoning trace \u2014 SECTOR PREDICT Utilities 2026-09-25\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (150,385 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Research.** The model wanted to know: *\"10 year Treasury yield 5.2% September 25 2026 utilities selloff\"* \u2192 \u274c search failed (searxng#1: 404 Client Error: Not Found for url: https://searxng-production-f4dd.up.railway.app/search?q=10+year+Treasury)\n**Step 2 \u2014 Research.** The model wanted to know: *\"XLU utilities ETF September 25 2026 premarket data center power demand\"* \u2192 \u274c search failed (searxng#1: 404 Client Error: Not Found for url: https://searxng-production-f4dd.up.railway.app/sea"
+    },
+    {
+      "key": "sector_predict",
+      "title": "Per-sector predict (all 11)",
+      "date": "2026-09-25",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-25T06:09:59.110098-04:00",
+      "files": [
+        {
+          "path": "01_daily/sectors/2026-09-25",
+          "ok": true,
+          "reason": "",
+          "size": 4096,
+          "preview": "11/11 sector predicts ok: basic_materials, communication_services, consumer_cyclical, consumer_defensive, energy, financial, healthcare, industrials"
+        }
+      ],
+      "preview": "11/11 sector predicts ok: basic_materials, communication_services, consumer_cyclical, consumer_defensive, energy, financial, healthcare, industrials"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"

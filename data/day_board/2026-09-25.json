@@ -1,6 +1,6 @@
 {
   "date": "2026-09-25",
-  "generated_at": "2026-09-25T06:09:53.555311-04:00",
+  "generated_at": "2026-09-25T06:09:59.741162-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -371,9 +371,9 @@
           "path": "01_daily/2026-09-25_preopen_status.json",
           "role": "required",
           "status": "OK",
-          "reason": "all_ok=False missing=['sector_predict']",
-          "size": 8144,
-          "said": "all_ok=False \u00b7 qc=False \u00b7 grok=False \u00b7 book=False \u00b7 missing sector_predict",
+          "reason": "all_ok=False",
+          "size": 8076,
+          "said": "all_ok=False \u00b7 qc=True \u00b7 grok=False \u00b7 book=False",
           "bullets": []
         },
         {
@@ -1804,6 +1804,24 @@
         }
       ],
       "preview": "# Sector Prediction \u2014 Utilities \u2014 2026-09-25\n- news_mode: **on**\n- ETF: **XLU**\n- rubric: `00_grounding/sectors/utilities.md`\n- predicted_direction: **down**\n- predicted_magnitude_band: **mild**\n- total_score: **-3.24** (mult 0.9)\n- regime: risk_off\n- divergence_flagged: **True**\n- engine: v2 \u00b7 tape_anchor **1.371** (ES +0.28%, ZN -0.03%, PM:XLU +0.30%) \u00b7 index_carry **0.676** (general 2.706) \u00b7 llm_overlay **-5.288** (raw -5.288) \u00b7 # Reasoning trace \u2014 SECTOR PREDICT Utilities 2026-09-25\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (150,385 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Research.** The model wanted to know: *\"10 year Treasury yield 5.2% September 25 2026 utilities selloff\"* \u2192 \u274c search failed (searxng#1: 404 Client Error: Not Found for url: https://searxng-production-f4dd.up.railway.app/search?q=10+year+Treasury)\n**Step 2 \u2014 Research.** The model wanted to know: *\"XLU utilities ETF September 25 2026 premarket data center power demand\"* \u2192 \u274c search failed (searxng#1: 404 Client Error: Not Found for url: https://searxng-production-f4dd.up.railway.app/sea"
+    },
+    {
+      "key": "sector_predict",
+      "title": "Per-sector predict (all 11)",
+      "date": "2026-09-25",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-25T06:09:59.110098-04:00",
+      "files": [
+        {
+          "path": "01_daily/sectors/2026-09-25",
+          "ok": true,
+          "reason": "",
+          "size": 4096,
+          "preview": "11/11 sector predicts ok: basic_materials, communication_services, consumer_cyclical, consumer_defensive, energy, financial, healthcare, industrials"
+        }
+      ],
+      "preview": "11/11 sector predicts ok: basic_materials, communication_services, consumer_cyclical, consumer_defensive, energy, financial, healthcare, industrials"
     }
   ],
   "href": {
