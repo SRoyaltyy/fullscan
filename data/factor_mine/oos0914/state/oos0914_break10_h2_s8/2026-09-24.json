@@ -1,0 +1,86 @@
+{
+  "buys": [],
+  "cash": 8799.44,
+  "date": "2026-09-24",
+  "equity": 9627.62,
+  "fees": 6.411,
+  "fills": [
+    {
+      "fees": 2.0333,
+      "fill_rule": "open",
+      "pnl": -5.12,
+      "price": 319.23,
+      "shares": 6,
+      "side": "SELL",
+      "ticker": "ARM"
+    },
+    {
+      "fees": 2.3008,
+      "fill_rule": "open",
+      "pnl": -150.58,
+      "price": 21.94,
+      "shares": 93,
+      "side": "SELL",
+      "ticker": "ARQQ"
+    },
+    {
+      "fees": 2.0769,
+      "fill_rule": "open",
+      "pnl": -29.13,
+      "price": 105.5,
+      "shares": 20,
+      "side": "SELL",
+      "ticker": "GRAL"
+    }
+  ],
+  "holdings": [
+    "VICR"
+  ],
+  "mean": -2.2726,
+  "n_trades_today": 3,
+  "recipe": "oos0914_break10_h2_s8",
+  "sells": [
+    {
+      "fill_rule": "open",
+      "price": 319.23,
+      "shares": 6,
+      "side": "SELL",
+      "ticker": "ARM"
+    },
+    {
+      "fill_rule": "open",
+      "price": 21.94,
+      "shares": 93,
+      "side": "SELL",
+      "ticker": "ARQQ"
+    },
+    {
+      "fill_rule": "open",
+      "price": 105.5,
+      "shares": 20,
+      "side": "SELL",
+      "ticker": "GRAL"
+    }
+  ],
+  "state": {
+    "after": "2026-09-24",
+    "cash": 8799.44,
+    "pos": {
+      "VICR": {
+        "close_px": 276.05999755859375,
+        "cost": 801.499,
+        "entry_date": "2026-09-23",
+        "entry_px": 266.5,
+        "fee_in": 1.999,
+        "last_px": 274.45001220703125,
+        "min_hold": 2,
+        "notional": 799.5,
+        "peak_px": 274.45001220703125,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate break_10=True; rank hot_score; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+45.9; leftover $945.98",
+        "shares": 3,
+        "ticker": "VICR"
+      }
+    },
+    "yday_equity": 9627.62
+  }
+}

@@ -783,6 +783,29 @@ def render_scoreboard(train: dict, test: dict | None) -> str:
                 f"Without its best stock ({rule.get('best_stock') or 'none'}) "
                 f"that test window was {_pct(rule.get('without_best_stock_return'))}."
             )
+        bits.append(
+            "2026-09-25 is not in that total: the session is not closed and "
+            "it has no frozen 09:30 snapshot. The nightly land appends it "
+            "once that snapshot locks."
+        )
+        train_rows = {row["id"]: row for row in (train.get("rows") or [])}
+        r4t_early = train.get("random4") or {}
+        null = r4t_early.get("best_of_n_null")
+        beat_null = []
+        for rule in frozen:
+            study = rule["name"].replace("oos0914_", "", 1)
+            got = (train_rows.get(study) or {}).get("after_fees_return")
+            if got is not None and null is not None and float(got) > float(null):
+                beat_null.append(rule["name"])
+        if beat_null:
+            names = ", ".join(f"`{n}`" for n in beat_null)
+            bits.append(
+                f"On the train window, {names} also cleared the best-of-"
+                f"{r4t_early.get('n_candidates')} random null ({_pct(null)}). "
+                "The other frozen rules cleared the pre-registered bar "
+                "(random average, IWM, and a positive result with the best "
+                "stock removed) and sit below that luck check."
+            )
         lines.append(" ".join(bits))
     lines += ["", "## Train", ""]
     r4t = train.get("random4") or {}

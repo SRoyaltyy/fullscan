@@ -1,0 +1,114 @@
+{
+  "buys": [
+    {
+      "fill_rule": "open",
+      "price": 2.4,
+      "shares": 37,
+      "side": "BUY",
+      "ticker": "SABR"
+    }
+  ],
+  "cash": 1.8,
+  "date": "2026-09-17",
+  "equity": 10669.7,
+  "fees": 0.999,
+  "fills": [
+    {
+      "fees": 0.999,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 2.4,
+      "shares": 37,
+      "side": "BUY",
+      "ticker": "SABR"
+    }
+  ],
+  "holdings": [
+    "ADPT",
+    "BLFS",
+    "CAI",
+    "SABR",
+    "WGS"
+  ],
+  "mean": 5.5557,
+  "n_trades_today": 1,
+  "recipe": "oos0914_zero_candle_h2_s8",
+  "sells": [],
+  "state": {
+    "after": "2026-09-17",
+    "cash": 1.8,
+    "pos": {
+      "ADPT": {
+        "close_px": 28.549999237060547,
+        "cost": 2494.546014038086,
+        "entry_date": "2026-09-16",
+        "entry_px": 27.09000015258789,
+        "fee_in": 2.266,
+        "last_px": 28.229999542236328,
+        "min_hold": 2,
+        "notional": 2492.280014038086,
+        "peak_px": 28.229999542236328,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate zero_red=True,last_green=True; rank candle_score; list probable,yday_gainer,ohlc_hot; \ud83d\udd35; \u26aa; ret5=+9.6; leftover $2500.00",
+        "shares": 92,
+        "ticker": "ADPT"
+      },
+      "BLFS": {
+        "close_px": 36.849998474121094,
+        "cost": 2481.4739377441406,
+        "entry_date": "2026-09-16",
+        "entry_px": 36.459999084472656,
+        "fee_in": 2.194,
+        "last_px": 36.66999816894531,
+        "min_hold": 2,
+        "notional": 2479.2799377441406,
+        "peak_px": 36.66999816894531,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate zero_red=True,last_green=True; rank candle_score; list flatten; \ud83d\udd35; \u26aa; ret5=+2.9; leftover $2500.00",
+        "shares": 68,
+        "ticker": "BLFS"
+      },
+      "CAI": {
+        "close_px": 30.920000076293945,
+        "cost": 2480.3339865722655,
+        "entry_date": "2026-09-16",
+        "entry_px": 28.15999984741211,
+        "fee_in": 2.254,
+        "last_px": 28.594999313354492,
+        "min_hold": 2,
+        "notional": 2478.0799865722656,
+        "peak_px": 28.594999313354492,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate zero_red=True,last_green=True; rank candle_score; list yday_gainer,ohlc_hot; \u26aa; ret5=+14.8; leftover $2500.00",
+        "shares": 88,
+        "ticker": "CAI"
+      },
+      "SABR": {
+        "close_px": 2.319999933242798,
+        "cost": 89.79900352859497,
+        "entry_date": "2026-09-17",
+        "entry_px": 2.4000000953674316,
+        "fee_in": 0.999,
+        "last_px": 2.4000000953674316,
+        "min_hold": 2,
+        "notional": 88.80000352859497,
+        "peak_px": 2.4000000953674316,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate zero_red=True,last_green=True; rank candle_score; list probable,yday_gainer,yday_mover,ohlc_hot; \ud83d\udd35; \u26aa; ret5=+8.4; leftover $91.60",
+        "shares": 37,
+        "ticker": "SABR"
+      },
+      "WGS": {
+        "close_px": 104.94999694824219,
+        "cost": 2452.0480872802736,
+        "entry_date": "2026-09-16",
+        "entry_px": 94.2300033569336,
+        "fee_in": 2.068,
+        "last_px": 99.61000061035156,
+        "min_hold": 2,
+        "notional": 2449.9800872802734,
+        "peak_px": 99.61000061035156,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate zero_red=True,last_green=True; rank candle_score; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+10.2; leftover $2500.00",
+        "shares": 26,
+        "ticker": "WGS"
+      }
+    },
+    "yday_equity": 10669.7
+  }
+}

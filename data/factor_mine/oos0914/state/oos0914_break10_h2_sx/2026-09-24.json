@@ -1,0 +1,117 @@
+{
+  "buys": [],
+  "cash": 9972.65,
+  "date": "2026-09-24",
+  "equity": 10028.12,
+  "fees": 11.2467,
+  "fills": [
+    {
+      "fees": 2.0444,
+      "fill_rule": "open",
+      "pnl": -5.5,
+      "price": 319.23,
+      "shares": 8,
+      "side": "SELL",
+      "ticker": "ARM"
+    },
+    {
+      "fees": 2.3609,
+      "fill_rule": "open",
+      "pnl": -178.95,
+      "price": 21.94,
+      "shares": 111,
+      "side": "SELL",
+      "ticker": "ARQQ"
+    },
+    {
+      "fees": 2.0923,
+      "fill_rule": "open",
+      "pnl": -34.15,
+      "price": 105.5,
+      "shares": 24,
+      "side": "SELL",
+      "ticker": "GRAL"
+    },
+    {
+      "fees": 4.7491,
+      "fill_rule": "open",
+      "pnl": -230.24,
+      "price": 6.62,
+      "shares": 362,
+      "side": "SELL",
+      "ticker": "NUAI"
+    }
+  ],
+  "holdings": [
+    "FEAM",
+    "SVIA"
+  ],
+  "mean": -3.7439,
+  "n_trades_today": 4,
+  "recipe": "oos0914_break10_h2_sx",
+  "sells": [
+    {
+      "fill_rule": "open",
+      "price": 319.23,
+      "shares": 8,
+      "side": "SELL",
+      "ticker": "ARM"
+    },
+    {
+      "fill_rule": "open",
+      "price": 21.94,
+      "shares": 111,
+      "side": "SELL",
+      "ticker": "ARQQ"
+    },
+    {
+      "fill_rule": "open",
+      "price": 105.5,
+      "shares": 24,
+      "side": "SELL",
+      "ticker": "GRAL"
+    },
+    {
+      "fill_rule": "open",
+      "price": 6.62,
+      "shares": 362,
+      "side": "SELL",
+      "ticker": "NUAI"
+    }
+  ],
+  "state": {
+    "after": "2026-09-24",
+    "cash": 9972.65,
+    "pos": {
+      "FEAM": {
+        "close_px": 2.7750000953674316,
+        "cost": 29.522000762939452,
+        "entry_date": "2026-09-23",
+        "entry_px": 2.9200000762939453,
+        "fee_in": 0.322,
+        "last_px": 2.609999895095825,
+        "min_hold": 2,
+        "notional": 29.200000762939453,
+        "peak_px": 2.9200000762939453,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate break_10=True; rank hot_score; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+133.3; leftover $31.89",
+        "shares": 10,
+        "ticker": "FEAM"
+      },
+      "SVIA": {
+        "close_px": 3.9600000381469727,
+        "cost": 31.76529839782715,
+        "entry_date": "2026-09-23",
+        "entry_px": 4.489999771118164,
+        "fee_in": 0.3353,
+        "last_px": 3.924999952316284,
+        "min_hold": 2,
+        "notional": 31.42999839782715,
+        "peak_px": 4.489999771118164,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate break_10=True; rank hot_score; list yday_gainer,yday_mover; ret5=+26.4; leftover $31.89",
+        "shares": 7,
+        "ticker": "SVIA"
+      }
+    },
+    "yday_equity": 10028.12
+  }
+}

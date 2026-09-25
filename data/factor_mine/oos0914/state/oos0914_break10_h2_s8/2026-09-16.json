@@ -1,0 +1,149 @@
+{
+  "buys": [
+    {
+      "fill_rule": "open",
+      "price": 3.66,
+      "shares": 683,
+      "side": "BUY",
+      "ticker": "INDP"
+    },
+    {
+      "fill_rule": "open",
+      "price": 1.8,
+      "shares": 1388,
+      "side": "BUY",
+      "ticker": "HLP"
+    },
+    {
+      "fill_rule": "open",
+      "price": 23.29,
+      "shares": 107,
+      "side": "BUY",
+      "ticker": "SDGR"
+    },
+    {
+      "fill_rule": "open",
+      "price": 28.16,
+      "shares": 88,
+      "side": "BUY",
+      "ticker": "CAI"
+    }
+  ],
+  "cash": 2291.28,
+  "date": "2026-09-16",
+  "equity": 10207.43,
+  "fees": 40.2234,
+  "fills": [
+    {
+      "fees": 8.8107,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 3.66,
+      "shares": 683,
+      "side": "BUY",
+      "ticker": "INDP"
+    },
+    {
+      "fees": 17.9052,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 1.8,
+      "shares": 1388,
+      "side": "BUY",
+      "ticker": "HLP"
+    },
+    {
+      "fees": 2.311,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 23.29,
+      "shares": 107,
+      "side": "BUY",
+      "ticker": "SDGR"
+    },
+    {
+      "fees": 2.254,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 28.16,
+      "shares": 88,
+      "side": "BUY",
+      "ticker": "CAI"
+    },
+    {
+      "fees": 8.9425,
+      "fill_rule": "stop_same_bar",
+      "pnl": -217.74,
+      "price": 3.3672,
+      "shares": 683,
+      "side": "SELL",
+      "ticker": "INDP"
+    }
+  ],
+  "holdings": [
+    "CAI",
+    "HLP",
+    "SDGR"
+  ],
+  "mean": 2.0743,
+  "n_trades_today": 5,
+  "recipe": "oos0914_break10_h2_s8",
+  "sells": [
+    {
+      "fill_rule": "stop_same_bar",
+      "price": 3.3672,
+      "shares": 683,
+      "side": "SELL",
+      "ticker": "INDP"
+    }
+  ],
+  "state": {
+    "after": "2026-09-16",
+    "cash": 2291.28,
+    "pos": {
+      "CAI": {
+        "close_px": 28.209999084472656,
+        "cost": 2480.3339865722655,
+        "entry_date": "2026-09-16",
+        "entry_px": 28.15999984741211,
+        "fee_in": 2.254,
+        "last_px": 28.15999984741211,
+        "min_hold": 2,
+        "notional": 2478.0799865722656,
+        "peak_px": 28.15999984741211,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate break_10=True; rank hot_score; list yday_gainer,ohlc_hot; \u26aa; ret5=+14.8; leftover $2500.00",
+        "shares": 88,
+        "ticker": "CAI"
+      },
+      "HLP": {
+        "close_px": 2.069999933242798,
+        "cost": 2516.3051338150026,
+        "entry_date": "2026-09-16",
+        "entry_px": 1.7999999523162842,
+        "fee_in": 17.9052,
+        "last_px": 1.7999999523162842,
+        "min_hold": 2,
+        "notional": 2498.3999338150024,
+        "peak_px": 1.7999999523162842,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate break_10=True; rank hot_score; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+30.5; leftover $2500.00",
+        "shares": 1388,
+        "ticker": "HLP"
+      },
+      "SDGR": {
+        "close_px": 23.93000030517578,
+        "cost": 2494.341097961426,
+        "entry_date": "2026-09-16",
+        "entry_px": 23.290000915527344,
+        "fee_in": 2.311,
+        "last_px": 23.290000915527344,
+        "min_hold": 2,
+        "notional": 2492.030097961426,
+        "peak_px": 23.290000915527344,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate break_10=True; rank hot_score; list yday_gainer; \ud83d\udd35; \u26aa; ret5=+16.1; leftover $2500.00",
+        "shares": 107,
+        "ticker": "SDGR"
+      }
+    },
+    "yday_equity": 10207.43
+  }
+}

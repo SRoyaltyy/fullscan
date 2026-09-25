@@ -1,0 +1,212 @@
+{
+  "buys": [
+    {
+      "fill_rule": "open",
+      "price": 3.85,
+      "shares": 643,
+      "side": "BUY",
+      "ticker": "INDP"
+    },
+    {
+      "fill_rule": "open",
+      "price": 29.32,
+      "shares": 84,
+      "side": "BUY",
+      "ticker": "SDGR"
+    },
+    {
+      "fill_rule": "open",
+      "price": 81.4,
+      "shares": 30,
+      "side": "BUY",
+      "ticker": "TEM"
+    },
+    {
+      "fill_rule": "open",
+      "price": 1.49,
+      "shares": 1663,
+      "side": "BUY",
+      "ticker": "LVWR"
+    }
+  ],
+  "cash": 20.11,
+  "date": "2026-09-18",
+  "equity": 9786.33,
+  "fees": 86.8533,
+  "fills": [
+    {
+      "fees": 2.367,
+      "fill_rule": "open",
+      "pnl": -135.78,
+      "price": 21.3,
+      "shares": 113,
+      "side": "SELL",
+      "ticker": "BBNX"
+    },
+    {
+      "fees": 15.9335,
+      "fill_rule": "open",
+      "pnl": -202.17,
+      "price": 1.96,
+      "shares": 1218,
+      "side": "SELL",
+      "ticker": "HLP"
+    },
+    {
+      "fees": 3.2342,
+      "fill_rule": "open",
+      "pnl": -38.39,
+      "price": 10.12,
+      "shares": 246,
+      "side": "SELL",
+      "ticker": "IOVA"
+    },
+    {
+      "fees": 31.2492,
+      "fill_rule": "open",
+      "pnl": 57.42,
+      "price": 1.12,
+      "shares": 2390,
+      "side": "SELL",
+      "ticker": "IQ"
+    },
+    {
+      "fees": 8.2947,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 3.85,
+      "shares": 643,
+      "side": "BUY",
+      "ticker": "INDP"
+    },
+    {
+      "fees": 2.242,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 29.32,
+      "shares": 84,
+      "side": "BUY",
+      "ticker": "SDGR"
+    },
+    {
+      "fees": 2.08,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 81.4,
+      "shares": 30,
+      "side": "BUY",
+      "ticker": "TEM"
+    },
+    {
+      "fees": 21.4527,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 1.49,
+      "shares": 1663,
+      "side": "BUY",
+      "ticker": "LVWR"
+    }
+  ],
+  "holdings": [
+    "INDP",
+    "LVWR",
+    "SDGR",
+    "TEM"
+  ],
+  "mean": -1.9468,
+  "n_trades_today": 8,
+  "recipe": "oos0914_break10_h1_sx",
+  "sells": [
+    {
+      "fill_rule": "open",
+      "price": 21.3,
+      "shares": 113,
+      "side": "SELL",
+      "ticker": "BBNX"
+    },
+    {
+      "fill_rule": "open",
+      "price": 1.96,
+      "shares": 1218,
+      "side": "SELL",
+      "ticker": "HLP"
+    },
+    {
+      "fill_rule": "open",
+      "price": 10.12,
+      "shares": 246,
+      "side": "SELL",
+      "ticker": "IOVA"
+    },
+    {
+      "fill_rule": "open",
+      "price": 1.12,
+      "shares": 2390,
+      "side": "SELL",
+      "ticker": "IQ"
+    }
+  ],
+  "state": {
+    "after": "2026-09-18",
+    "cash": 20.11,
+    "pos": {
+      "INDP": {
+        "close_px": 3.549999952316284,
+        "cost": 2483.8446386787414,
+        "entry_date": "2026-09-18",
+        "entry_px": 3.8499999046325684,
+        "fee_in": 8.2947,
+        "last_px": 3.8499999046325684,
+        "min_hold": 1,
+        "notional": 2475.5499386787415,
+        "peak_px": 3.8499999046325684,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate break_10=True; rank hot_score; list yday_gainer,yday_mover; ret5=+53.5; leftover $2478.12",
+        "shares": 643,
+        "ticker": "INDP"
+      },
+      "LVWR": {
+        "close_px": 1.6299999952316284,
+        "cost": 2499.3227158596037,
+        "entry_date": "2026-09-18",
+        "entry_px": 1.4900000095367432,
+        "fee_in": 21.4527,
+        "last_px": 1.4900000095367432,
+        "min_hold": 1,
+        "notional": 2477.870015859604,
+        "peak_px": 1.4900000095367432,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate break_10=True; rank hot_score; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+25.7; leftover $2478.12",
+        "shares": 1663,
+        "ticker": "LVWR"
+      },
+      "SDGR": {
+        "close_px": 29.020000457763672,
+        "cost": 2465.1219743652346,
+        "entry_date": "2026-09-18",
+        "entry_px": 29.31999969482422,
+        "fee_in": 2.242,
+        "last_px": 29.31999969482422,
+        "min_hold": 1,
+        "notional": 2462.8799743652344,
+        "peak_px": 29.31999969482422,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate break_10=True; rank hot_score; list yday_gainer,yday_mover; \ud83d\udd35; \u26aa; ret5=+60.9; leftover $2478.12",
+        "shares": 84,
+        "ticker": "SDGR"
+      },
+      "TEM": {
+        "close_px": 77.83999633789062,
+        "cost": 2444.080045776367,
+        "entry_date": "2026-09-18",
+        "entry_px": 81.4000015258789,
+        "fee_in": 2.08,
+        "last_px": 81.4000015258789,
+        "min_hold": 1,
+        "notional": 2442.000045776367,
+        "peak_px": 81.4000015258789,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate break_10=True; rank hot_score; list yday_gainer,yday_mover; \ud83d\udd35; \u26aa; ret5=+36.8; leftover $2478.12",
+        "shares": 30,
+        "ticker": "TEM"
+      }
+    },
+    "yday_equity": 9786.33
+  }
+}

@@ -1,0 +1,227 @@
+{
+  "buys": [
+    {
+      "fill_rule": "open",
+      "price": 246.98,
+      "shares": 10,
+      "side": "BUY",
+      "ticker": "CRWD"
+    },
+    {
+      "fill_rule": "open",
+      "price": 19.91,
+      "shares": 131,
+      "side": "BUY",
+      "ticker": "NEO"
+    },
+    {
+      "fill_rule": "open",
+      "price": 29.32,
+      "shares": 89,
+      "side": "BUY",
+      "ticker": "SDGR"
+    },
+    {
+      "fill_rule": "open",
+      "price": 81.4,
+      "shares": 32,
+      "side": "BUY",
+      "ticker": "TEM"
+    }
+  ],
+  "cash": 200.95,
+  "date": "2026-09-18",
+  "equity": 10342.94,
+  "fees": 17.6633,
+  "fills": [
+    {
+      "fees": 2.3023,
+      "fill_rule": "open",
+      "pnl": 129.75,
+      "price": 28.55,
+      "shares": 92,
+      "side": "SELL",
+      "ticker": "ADPT"
+    },
+    {
+      "fees": 2.2253,
+      "fill_rule": "open",
+      "pnl": 13.94,
+      "price": 36.73,
+      "shares": 68,
+      "side": "SELL",
+      "ticker": "BLFS"
+    },
+    {
+      "fees": 2.2899,
+      "fill_rule": "open",
+      "pnl": 182.9,
+      "price": 30.29,
+      "shares": 88,
+      "side": "SELL",
+      "ticker": "CAI"
+    },
+    {
+      "fees": 2.0998,
+      "fill_rule": "open",
+      "pnl": 265.19,
+      "price": 104.59,
+      "shares": 26,
+      "side": "SELL",
+      "ticker": "WGS"
+    },
+    {
+      "fees": 2.02,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 246.98,
+      "shares": 10,
+      "side": "BUY",
+      "ticker": "CRWD"
+    },
+    {
+      "fees": 2.383,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 19.91,
+      "shares": 131,
+      "side": "BUY",
+      "ticker": "NEO"
+    },
+    {
+      "fees": 2.257,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 29.32,
+      "shares": 89,
+      "side": "BUY",
+      "ticker": "SDGR"
+    },
+    {
+      "fees": 2.086,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 81.4,
+      "shares": 32,
+      "side": "BUY",
+      "ticker": "TEM"
+    }
+  ],
+  "holdings": [
+    "CRWD",
+    "NEO",
+    "SABR",
+    "SDGR",
+    "TEM"
+  ],
+  "mean": -3.0625,
+  "n_trades_today": 8,
+  "recipe": "oos0914_zero_candle_h2_s8",
+  "sells": [
+    {
+      "fill_rule": "open",
+      "price": 28.55,
+      "shares": 92,
+      "side": "SELL",
+      "ticker": "ADPT"
+    },
+    {
+      "fill_rule": "open",
+      "price": 36.73,
+      "shares": 68,
+      "side": "SELL",
+      "ticker": "BLFS"
+    },
+    {
+      "fill_rule": "open",
+      "price": 30.29,
+      "shares": 88,
+      "side": "SELL",
+      "ticker": "CAI"
+    },
+    {
+      "fill_rule": "open",
+      "price": 104.59,
+      "shares": 26,
+      "side": "SELL",
+      "ticker": "WGS"
+    }
+  ],
+  "state": {
+    "after": "2026-09-18",
+    "cash": 200.95,
+    "pos": {
+      "CRWD": {
+        "close_px": 237.64999389648438,
+        "cost": 2471.8199572753906,
+        "entry_date": "2026-09-18",
+        "entry_px": 246.97999572753906,
+        "fee_in": 2.02,
+        "last_px": 246.97999572753906,
+        "min_hold": 2,
+        "notional": 2469.7999572753906,
+        "peak_px": 246.97999572753906,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate zero_red=True,last_green=True; rank candle_score; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+17.6; leftover $2625.50",
+        "shares": 10,
+        "ticker": "CRWD"
+      },
+      "NEO": {
+        "close_px": 19.90999984741211,
+        "cost": 2610.592980010986,
+        "entry_date": "2026-09-18",
+        "entry_px": 19.90999984741211,
+        "fee_in": 2.383,
+        "last_px": 19.90999984741211,
+        "min_hold": 2,
+        "notional": 2608.2099800109863,
+        "peak_px": 19.90999984741211,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate zero_red=True,last_green=True; rank candle_score; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+12.9; leftover $2625.50",
+        "shares": 131,
+        "ticker": "NEO"
+      },
+      "SABR": {
+        "close_px": 2.259999990463257,
+        "cost": 89.79900352859497,
+        "entry_date": "2026-09-17",
+        "entry_px": 2.4000000953674316,
+        "fee_in": 0.999,
+        "last_px": 2.2899999618530273,
+        "min_hold": 2,
+        "notional": 88.80000352859497,
+        "peak_px": 2.4000000953674316,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate zero_red=True,last_green=True; rank candle_score; list probable,yday_gainer,yday_mover,ohlc_hot; \ud83d\udd35; \u26aa; ret5=+8.4; leftover $91.60",
+        "shares": 37,
+        "ticker": "SABR"
+      },
+      "SDGR": {
+        "close_px": 29.020000457763672,
+        "cost": 2611.7369728393555,
+        "entry_date": "2026-09-18",
+        "entry_px": 29.31999969482422,
+        "fee_in": 2.257,
+        "last_px": 29.31999969482422,
+        "min_hold": 2,
+        "notional": 2609.4799728393555,
+        "peak_px": 29.31999969482422,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate zero_red=True,last_green=True; rank candle_score; list yday_gainer,yday_mover; \ud83d\udd35; \u26aa; ret5=+60.9; leftover $2625.50",
+        "shares": 89,
+        "ticker": "SDGR"
+      },
+      "TEM": {
+        "close_px": 77.83999633789062,
+        "cost": 2606.886048828125,
+        "entry_date": "2026-09-18",
+        "entry_px": 81.4000015258789,
+        "fee_in": 2.086,
+        "last_px": 81.4000015258789,
+        "min_hold": 2,
+        "notional": 2604.800048828125,
+        "peak_px": 81.4000015258789,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate zero_red=True,last_green=True; rank candle_score; list yday_gainer,yday_mover; \ud83d\udd35; \u26aa; ret5=+36.8; leftover $2625.50",
+        "shares": 32,
+        "ticker": "TEM"
+      }
+    },
+    "yday_equity": 10342.94
+  }
+}
