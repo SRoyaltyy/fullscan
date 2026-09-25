@@ -651,6 +651,11 @@ def _map_heat_board(date, prior_date=None):
     D's file is used only when it is a morning_overlay (prior export).
     Same-day postclose boards leak D's tape. Otherwise last prior board.
     """
+    morning = MAP_HEAT_DIR / f"{date}_map_heat_morning.json"
+    if morning.is_file():
+        pinned = _jload(morning) or {}
+        if pinned:
+            return pinned, date
     data = _jload(MAP_HEAT_DIR / f"{date}_map_heat.json") or {}
     if data.get("phase") == "morning_overlay":
         return data, date

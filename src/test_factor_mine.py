@@ -1474,7 +1474,7 @@ def test_repair_aux_replaces_starved_day() -> None:
     assert any("yday_gainer" in (r.get("sources") or []) for r in out["rows"])
 
 
-def test_land_closed_remines_when_aux_starved() -> None:
+def test_land_closed_keeps_starved_history() -> None:
     import tempfile
     from pathlib import Path
     from unittest import mock
@@ -1519,8 +1519,8 @@ def test_land_closed_remines_when_aux_starved() -> None:
                     mock.patch.object(fm, "run",
                                       return_value={"n_rows": 80}) as run:
                 out = fm.land_closed("2026-08-13", write=False)
-            run.assert_called_once()
-            assert out["n_rows"] == 80
+            run.assert_not_called()
+            assert out["to_date"] == "2026-09-16"
 
             panel_path.write_text(json.dumps(healthy_panel), encoding="utf-8")
             with mock.patch.object(fm, "last_closed_session",
@@ -1601,6 +1601,10 @@ def test_factor_mine_workflow_lands_after_close() -> None:
     assert 'cron: "25 20 * * 1-5"' in yml
     assert 'cron: "0 12 * * 6"' in yml
     assert "data/factor_mine/panel.json" in yml
+    assert "data/factor_mine/snapshots/" in yml
+    assert "data/factor_mine/ledgers/" in yml
+    assert "assert_history_unchanged" in yml
+    assert "--restate" in yml
     assert "Stock Book ALL (one-shot)" in yml
     assert "assert_publish_budget" in yml
     assert "03_scoreboard/factor_mine/" in yml
@@ -2796,7 +2800,7 @@ if __name__ == "__main__":
     test_candidates_one_day_cal_still_hits_prior_export()
     test_aux_starved_dates_ignores_first_session()
     test_repair_aux_replaces_starved_day()
-    test_land_closed_remines_when_aux_starved()
+    test_land_closed_keeps_starved_history()
     test_yahoo_day_strips_iso_time()
     test_simulate_split_indexes_daily_by_date()
     test_factor_mine_workflow_lands_after_close()

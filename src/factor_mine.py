@@ -2063,7 +2063,8 @@ def stamp_overnight_on_panel(panel: dict, *, write: bool = False) -> dict:
     return panel
 
 
-def build_panel(from_date: str = START, to_date: str | None = None) -> dict:
+def build_panel(from_date: str = START, to_date: str | None = None,
+                *, fail_closed: bool = False) -> dict:
     """Leak-free candidate rows for every *closed* session in the window.
 
     An empty ``to_date`` used to walk the whole stock-book calendar,
@@ -2095,6 +2096,13 @@ def build_panel(from_date: str = START, to_date: str | None = None) -> dict:
         # Prior export only. Same-day Finviz is never a feature.
         prior_df = ga.load_finviz(prior_export) if prior_export else None
         plan = fla.flatten_day_targets(date)
+        if fail_closed:
+            # Bars for every candidate before membership or hot_score.
+            # A miss holds D; it is not written as hot_score 0.
+            from . import factor_mine_freeze as fmf
+            universe = fmf.ranking_universe(
+                date, lookback, plan, movers.get("by_date") or {})
+            fmf.ensure_candidate_bars(date, universe)
         buckets = _candidates(date, lookback, plan, movers.get("by_date") or {})
         reasons: dict[str, list[str]] = {}
         order: list[str] = []
@@ -2116,6 +2124,11 @@ def build_panel(from_date: str = START, to_date: str | None = None) -> dict:
             rec = _attach_row(
                 date, t, reasons[t], i, sess, prev_sess, prior_export, prior_df,
             )
+            if fail_closed:
+                from . import factor_mine_freeze as fmf
+                problem = fmf.row_price_problem(t, date)
+                if problem:
+                    raise fmf.HoldDay(date, [t], problem)
             day_rows.append(rec)
         by_date[date] = day_rows
         rows.extend(day_rows)
@@ -2296,18 +2309,55 @@ def maybe_repair_aux_starved(panel: dict) -> dict:
 
 
 def load_or_build_panel(from_date: str = START, to_date: str | None = None,
-                        rebuild: bool = False) -> dict:
-    if not rebuild and PANEL_PATH.exists():
+                        rebuild: bool = False, *,
+                        fail_closed: bool = False,
+                        restate: list[str] | None = None) -> dict:
+    """Load the saved panel and append sessions that are not on it yet.
+
+    Already-landed dates are not rebuilt. ``--restate D`` rebuilds that
+    day. ``rebuild=True`` is the same append unless a restate date is
+    named — a full rewrite would change frozen history.
+    """
+    from . import factor_mine_freeze as fmf
+
+    restate_set = {str(d)[:10] for d in (restate or []) if d}
+    if rebuild and not restate_set:
+        print("[factor-mine] rebuild-panel does not rewrite landed days; "
+              "appending only. Use --restate D to correct one session.",
+              flush=True)
+    if not PANEL_PATH.exists():
+        return build_panel(from_date, to_date, fail_closed=fail_closed)
+    try:
         raw = json.loads(PANEL_PATH.read_text(encoding="utf-8"))
-        if panel_is_current(raw, from_date, to_date):
-            raw = maybe_repair_aux_starved(rehydrate_panel(raw))
-            print(f"[factor-mine] loaded panel {PANEL_PATH} "
-                  f"rows={raw.get('n_rows')} → {raw.get('to_date')}", flush=True)
-            return rehydrate_panel(raw)
-        print(f"[factor-mine] panel stale "
-              f"{raw.get('to_date')} != live {live_panel_end(from_date, to_date)} "
-              f"— rebuilding so leftover lots get a mark", flush=True)
-    return build_panel(from_date, to_date)
+    except (OSError, json.JSONDecodeError):
+        return build_panel(from_date, to_date, fail_closed=fail_closed)
+    raw = fmf.apply_frozen_snapshots(rehydrate_panel(raw))
+    if restate_set:
+        for date in sorted(restate_set):
+            extra = build_panel(date, date, fail_closed=fail_closed)
+            raw = merge_panel_days(raw, extra)
+    end = live_panel_end(from_date, to_date)
+    want = [d for d in panel_lookback_calendar(from_date, to_date)
+            if d >= from_date and (not end or d <= end)]
+    have = set(raw.get("session_dates") or [])
+    for date in want:
+        if date in have and date not in restate_set:
+            continue
+        if date in restate_set:
+            continue
+        try:
+            extra = build_panel(date, date, fail_closed=fail_closed)
+        except fmf.HoldDay as e:
+            print(f"[factor-mine] {e}", flush=True)
+            break
+        raw = merge_panel_days(raw, extra)
+        have.add(date)
+    print(f"[factor-mine] loaded panel {PANEL_PATH} "
+          f"rows={raw.get('n_rows')} → {raw.get('to_date')} "
+          f"(landed dates kept)", flush=True)
+    if to_date:
+        return slice_panel(raw, from_date, to_date)
+    return raw
 
 
 def _tapes(cal: list[str]) -> dict:
@@ -3289,6 +3339,17 @@ def write_outputs(payload: dict, stats: list[dict] | None = None,
         "`flatten_live_*` = only when the live flatten gate fires. "
         "Research only — does not change live `flatten_robust`.",
         "",
+    ]
+    freeze = payload.get("freeze") or {}
+    if freeze.get("first_frozen"):
+        lines += [
+            f"Sessions before `{freeze['first_frozen']}` are **reconstructed** "
+            "(rebuilt inputs, not a frozen 09:30 snapshot). From "
+            f"`{freeze['first_frozen']}` each day's inputs and buy/sell "
+            "decisions are append-only.",
+            "",
+        ]
+    lines += [
         "Scoreboard files: slim `factor_mine.json` (stats / recipes / "
         "series) plus gzip shards in `factor_mine/shards/` "
         "(`books`, `starts`, `daily`, `probe`, `sim`). One file used "
@@ -3835,7 +3896,18 @@ def extend_pack_through(date: str, *, write: bool = False) -> dict:
     starts get ``date`` as pending so Pages is not yesterday's pack.
     """
     closed = last_closed_session(START)
-    extra = build_panel(date, date)
+    try:
+        extra = build_panel(date, date, fail_closed=True)
+    except Exception as e:
+        from . import factor_mine_freeze as fmf
+        if not isinstance(e, fmf.HoldDay):
+            raise
+        print(f"[factor-mine] extend held: {e}", flush=True)
+        if OUT_JSON.is_file():
+            payload = load_scoreboard()
+            if payload:
+                return payload
+        return {}
     raw: dict = {}
     if PANEL_PATH.is_file():
         try:
@@ -3940,16 +4012,16 @@ def refresh_panel_window(from_date: str, to_date: str | None = None,
 
 def land_closed(from_date: str = START, write: bool = False,
                 rebuild_panel: bool = False,
-                to_date: str | None = None) -> dict:
+                to_date: str | None = None,
+                restate: list[str] | None = None) -> dict:
     """Roll the existing recipe set through the last closed session.
 
     Does not rediscover the cartesian grid. Morning Pre-Open / Stock Book
     triggers become a no-op once yesterday is already on the board;
     post-close / 16:25 ET schedule lands today.
 
-    A payload that already covers ``target`` still remines when the
-    cached panel is flatten-only (aux list builders silent after a
-    one-day lookback). That is how 2026-09-16→18 starved.
+    A payload that already covers ``target`` is not remined. Flatten-only
+    history stays as published. ``--restate D`` is the logged correction.
 
     An explicit ``to_date`` past last_closed extends the pack with a
     pending start (no mid-day close mark) so Pages shows today's session.
@@ -3962,17 +4034,22 @@ def land_closed(from_date: str = START, write: bool = False,
     payload = {}
     if OUT_JSON.is_file():
         payload = load_scoreboard()
-    if not rebuild_panel and payload_covers_session(payload, target):
-        if not panel_aux_needs_repair():
-            print(f"[factor-mine] land-closed: {target} already on the board — skip",
-                  flush=True)
-            return payload
-        print(
-            f"[factor-mine] land-closed: {target} already on the board but "
-            "aux panel is flatten-only — remine so union feeds land",
-            flush=True,
-        )
-    recs = existing_single_recipes(payload)
+    restate_set = {str(d)[:10] for d in (restate or []) if d}
+    if payload_covers_session(payload, target) and target not in restate_set:
+        if panel_aux_needs_repair():
+            print(
+                f"[factor-mine] land-closed: {target} aux panel is flatten-only — "
+                "history stays byte-identical. Pass --restate D to correct a day.",
+                flush=True,
+            )
+        print(f"[factor-mine] land-closed: {target} already on the board — skip",
+              flush=True)
+        from . import factor_mine_freeze as fmf
+        return fmf.label_payload(payload)
+    if rebuild_panel and not restate_set:
+        print("[factor-mine] land-closed: --rebuild-panel does not rewrite "
+              "landed days; appending the new session only.", flush=True)
+    recs = list(payload.get("recipes") or []) or existing_single_recipes(payload)
     if not recs:
         from . import factor_mine_book as fmb
         recs = fmb.recipes_from_action(auto_tweak=False)
@@ -3983,12 +4060,12 @@ def land_closed(from_date: str = START, write: bool = False,
             flush=True,
         )
         return extend_pack_through(target, write=write)
-    print(f"[factor-mine] land-closed → {target} recipes={len(recs)}",
-          flush=True)
-    return run(
-        from_date, target, write=write, recipes=recs,
-        rebuild_panel=rebuild_panel, persist_panel=write,
-        book=True, combos=True,
+    print(f"[factor-mine] land-closed → {target} recipes={len(recs)} "
+          f"(append frozen day)", flush=True)
+    from . import factor_mine_freeze as fmf
+    return fmf.append_land(
+        from_date, target, write=write, restate=sorted(restate_set),
+        recipes=recs, payload=payload,
     )
 
 
@@ -4148,6 +4225,8 @@ def main(argv=None) -> int:
     ap.add_argument("--sweep-bracket", action="store_true",
                     help="cash-book sweep: take-profit / stop-loss on top of hold")
     ap.add_argument("--rebuild-panel", action="store_true")
+    ap.add_argument("--restate", action="append", default=[], metavar="YYYY-MM-DD",
+                    help="rewrite one frozen session and log the previous sha256")
     ap.add_argument("--refresh-window", action="store_true",
                     help="rebuild --from-date..--to-date panel rows with lookback")
     ap.add_argument("--stamp-overnight", action="store_true",
@@ -4271,11 +4350,16 @@ def main(argv=None) -> int:
               f"added={(panel.get('overnight_stamp') or {}).get('added')} "
               f"to={panel.get('to_date')}")
         return 0
+    if args.restate and not args.land_closed:
+        print("[factor-mine] --restate uses the append-only land path",
+              flush=True)
+        args.land_closed = True
     if args.land_closed:
         payload = land_closed(
             args.from_date, write=args.write,
             rebuild_panel=args.rebuild_panel,
             to_date=args.to_date or None,
+            restate=list(args.restate or []),
         )
     else:
         recipes = fmb.recipes_from_action(

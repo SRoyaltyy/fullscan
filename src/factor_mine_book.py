@@ -846,8 +846,14 @@ def recipes_from_action(*, universe="auto", hold="auto", gate="auto",
 
 
 def simulate_book(panel: dict, rec: dict, *, bars=None, fees=None,
-                  regime=None, rules=None, start: str | None = None) -> dict:
-    """Walk one recipe as a $10k paper sleeve. Sell first, then buy."""
+                  regime=None, rules=None, start: str | None = None,
+                  resume: dict | None = None) -> dict:
+    """Walk one recipe as a $10k paper sleeve. Sell first, then buy.
+
+    ``resume`` continues from a frozen end-of-day state. Dates on or
+    before ``resume["after"]`` are not replayed; cash and lots start
+    from that state so a new session can be appended.
+    """
     panel = fm.ensure_sim_fields(panel, rec)
     rules = {**BOOK_RULES, **(rules or {})}
     fees = fees if fees is not None else pt.load_fees()
@@ -874,6 +880,13 @@ def simulate_book(panel: dict, rec: dict, *, bars=None, fees=None,
     sell_mode = rec.get("sell") or "list"
     s_boost = rec.get("s_boost") or "none"
     yday_equity = float(rules["capital"])
+    resume_after = None
+    if resume:
+        cash = float(resume.get("cash", cash))
+        pos = {str(k): dict(v) for k, v in (resume.get("pos") or {}).items()}
+        if resume.get("yday_equity") is not None:
+            yday_equity = float(resume["yday_equity"])
+        resume_after = resume.get("after")
 
     def mark(date: str, which: str) -> float:
         tot = 0.0
@@ -884,6 +897,8 @@ def simulate_book(panel: dict, rec: dict, *, bars=None, fees=None,
         return tot
 
     for date in cal:
+        if resume_after and str(date) <= str(resume_after):
+            continue
         s = morning_s(regime, date)
         hard_red = (rules.get("hard_red_no_new")
                     and s is not None and float(s) <= float(rules["hard_red"]))
@@ -1165,6 +1180,7 @@ def simulate_book(panel: dict, rec: dict, *, bars=None, fees=None,
         "stop_pct": rec.get("stop_pct"),
         "s_boost": s_boost,
         "cash": round(cash, 2),
+        "pos": {t: dict(p) for t, p in pos.items()},
         "n_open": len(pos),
         "open": [
             {"ticker": t, "shares": p["shares"], "entry_date": p["entry_date"],
@@ -1715,6 +1731,17 @@ def write_action_mds(payload: dict, stats: list[dict], books: dict,
     index = [
         f"# Factor mine action — {payload.get('from_date')} → {payload.get('to_date')}",
         "",
+    ]
+    freeze = payload.get("freeze") or {}
+    if freeze.get("first_frozen"):
+        index += [
+            f"Sessions before `{freeze['first_frozen']}` are **reconstructed** "
+            "(rebuilt inputs, not a frozen 09:30 snapshot). From "
+            f"`{freeze['first_frozen']}` each day's inputs and buy/sell "
+            "decisions are append-only.",
+            "",
+        ]
+    index += [
         "Cash-accounted blotters for the leak-free 09:30 recipes. "
         "Each recipe is a **daily cash + holdings state machine**: "
         "morning leftover cash and the lots we actually hold are the only "

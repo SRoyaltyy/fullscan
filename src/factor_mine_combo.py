@@ -521,7 +521,8 @@ def simulate_shared(panel: dict, recs: list[dict], weights: list[float],
                     *, bars=None, fees=None, regime=None, start=None,
                     net: str = "priority", name: str = "combo",
                     hard_red_mode: str = HARD_RED_SIT,
-                    dip_pct: float | None = None) -> dict:
+                    dip_pct: float | None = None,
+                    resume: dict | None = None) -> dict:
     """One cash pile. Lots remember the owner recipe's hold / sell / side.
 
     ``hard_red_mode`` defaults to live sit. Research-only overrides do
@@ -544,8 +545,17 @@ def simulate_shared(panel: dict, recs: list[dict], weights: list[float],
     date_ix = {d: i for i, d in enumerate(cal)}
     yday_equity = float(CAPITAL)
     rules = dict(fmb.BOOK_RULES)
+    resume_after = None
+    if resume:
+        cash = float(resume.get("cash", cash))
+        pos = {str(k): dict(v) for k, v in (resume.get("pos") or {}).items()}
+        if resume.get("yday_equity") is not None:
+            yday_equity = float(resume["yday_equity"])
+        resume_after = resume.get("after")
 
     for date in cal:
+        if resume_after and str(date) <= str(resume_after):
+            continue
         s = fmb.morning_s(regime, date)
         hard_red = (s is not None and float(s) <= float(HARD_RED))
         sold, bought, held_names = [], [], []
@@ -887,6 +897,7 @@ def simulate_shared(panel: dict, recs: list[dict], weights: list[float],
         "sell": "list",
         "s_boost": "none",
         "cash": round(cash, 2),
+        "pos": {t: dict(p) for t, p in pos.items()},
         "n_open": len(pos),
         "open": [
             {"ticker": t, "shares": p["shares"], "entry_date": p["entry_date"],
@@ -928,16 +939,26 @@ def _daily_on(book: dict, date: str) -> dict | None:
 
 def simulate_split(panel: dict, recs: list[dict], weights: list[float],
                    *, bars=None, fees=None, regime=None, start=None,
-                   name: str = "combo") -> dict:
+                   name: str = "combo", resume: dict | None = None) -> dict:
     """Independent audited books at the weights, then sum equity / cash."""
     ws = _norm_w(weights)
     books = []
-    for rec, w in zip(recs, ws):
+    member_resume = None
+    resume_after = None
+    if isinstance(resume, dict):
+        member_resume = resume.get("members")
+        resume_after = resume.get("after")
+    for i, (rec, w) in enumerate(zip(recs, ws)):
         rules = dict(fmb.BOOK_RULES)
         rules["capital"] = CAPITAL * w
+        one = None
+        if member_resume is not None:
+            one = dict(member_resume[i] or {})
+            if resume_after is not None:
+                one["after"] = resume_after
         books.append(fmb.simulate_book(
             panel, rec, bars=bars, fees=fees, regime=regime,
-            rules=rules, start=start))
+            rules=rules, start=start, resume=one))
     full_cal = [d for d in (panel.get("session_dates") or [])
                 if not start or d >= start]
     last_closed = fm.last_closed_session(
@@ -1097,6 +1118,17 @@ def simulate_split(panel: dict, recs: list[dict], weights: list[float],
             sum(100 * t["pnl"] / max((t.get("price") or 1) * t["shares"], 1)
                 for t in losses) / len(losses), 3),
         "collisions": collisions,
+        "member_states": [
+            {
+                "cash": b.get("cash"),
+                "pos": b.get("pos") or {},
+                "yday_equity": (
+                    (b.get("daily") or [{}])[-1].get("equity")
+                    if b.get("daily") else b.get("final_equity")
+                ),
+            }
+            for b in books
+        ],
         "parts": [{"name": r["name"], "capital": CAPITAL * w,
                    "total_ret_pct": b["total_ret_pct"],
                    "audit_ok": (b.get("audit") or {}).get("ok")}
