@@ -1653,6 +1653,13 @@ def test_factor_mine_workflow_lands_after_close() -> None:
     assert "data/factor_mine/panel.json" in yml
     assert "data/factor_mine/snapshots/" in yml
     assert "data/factor_mine/ledgers/" in yml
+    assert "data/factor_mine/oos0914/ledgers/" in yml
+    assert "data/factor_mine/oos0914/state/" in yml
+    assert "data/factor_mine/oos0914/test_report.json" in yml
+    assert "03_scoreboard/FACTOR_MINE_OOS0914.md" in yml
+    assert "assert_logged_append_committed" in yml
+    assert "oos_only:" in yml
+    assert "src.factor_mine_oos0914 append" in yml
     assert "data/factor_mine/lineups/" in yml
     assert "data/factor_mine/candidates/" in yml
     assert "data/factor_mine/recipe_created_on.json" in yml

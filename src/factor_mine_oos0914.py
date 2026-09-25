@@ -1717,6 +1717,47 @@ def score() -> dict:
     return test
 
 
+def append_commit_paths(date: str) -> list[str]:
+    """Files an OOS append must land: the ledger, its sha256, and state."""
+    day = str(date or "")[:10]
+    paths = [
+        f"data/factor_mine/oos0914/ledgers/{day}.json",
+        f"data/factor_mine/oos0914/ledgers/{day}.json.sha256",
+    ]
+    for rec in frozen_recipes():
+        name = str(rec.get("name") or "")
+        if name:
+            paths.append(f"data/factor_mine/oos0914/state/{name}/{day}.json")
+    return paths
+
+
+def assert_logged_append_committed(log_text: str, committed) -> list[str]:
+    """Fail when the log says a day was appended and that day is not committed.
+
+    ``committed`` is the path list on the branch the publish just pushed.
+    A run that did not append returns an empty list.
+    """
+    import re
+    dates = re.findall(
+        r"\[oos0914\] nightly: appended (\d{4}-\d{2}-\d{2})",
+        log_text or "",
+    )
+    if not dates:
+        return []
+    have = {str(path) for path in committed}
+    missing = []
+    for day in dates:
+        for rel in append_commit_paths(day):
+            if rel not in have:
+                missing.append(rel)
+    if missing:
+        raise SystemExit(
+            "OOS append was logged but nothing was committed:\n"
+            + "\n".join(missing)
+        )
+    return dates
+
+
 def append_nightly(*, through: str = "", write: bool = False) -> dict:
     """After the factor-mine land, append the next OOS day if it is locked.
 

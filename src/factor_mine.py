@@ -4305,7 +4305,7 @@ def land_closed(from_date: str = START, write: bool = False,
                 "history stays byte-identical. Pass --restate D to correct a day.",
                 flush=True,
             )
-        print(f"[factor-mine] land-closed: {target} already on the board — skip",
+        print(f"[factor-mine] land-closed: {target} already frozen — no rewrite",
               flush=True)
         from . import factor_mine_freeze as fmf
         return fmf.label_payload(payload)

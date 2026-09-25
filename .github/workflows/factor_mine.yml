@@ -127,6 +127,11 @@ on:
         required: false
         default: false
         type: boolean
+      oos_only:
+        description: "Append only the OOS-0914 book for to_date (or the last closed session). Factor-mine land is not run."
+        required: false
+        default: false
+        type: boolean
 
 permissions:
   contents: write
@@ -183,12 +188,20 @@ jobs:
           REBUILD: ${{ inputs.rebuild_panel }}
           LAND_CLOSED: ${{ inputs.land_closed }}
           RESTATE: ${{ inputs.restate }}
+          OOS_ONLY: ${{ inputs.oos_only }}
           OPPSET_UNION: ${{ inputs.oppset_union }}
           FULLSCAN_OPPSET_UNION: ${{ (inputs.oppset_union == true || inputs.oppset_union == 'true') && '1' || '' }}
         run: |
           set -euo pipefail
+          LAND_LOG=/tmp/factor_mine_land.log
+          : > "$LAND_LOG"
           # Opt-in remine union. Default off so schedule/workflow_run
           # land-closed stays stamp-only (no 242–451 names/day).
+          # oos_only appends the frozen OOS book and does not land factor-mine.
+          if [ "${OOS_ONLY:-false}" = "true" ]; then
+            python -m src.factor_mine_oos0914 append \
+              --through "${TO_DATE:-}" --write 2>&1 | tee -a "$LAND_LOG"
+          else
           if [ "${OPPSET_UNION:-false}" = "true" ] \
              || [ "${FULLSCAN_OPPSET_UNION:-}" = "1" ] \
              || [ "${FULLSCAN_OPPSET_UNION:-}" = "true" ]; then
@@ -202,7 +215,7 @@ jobs:
             [ -n "${TO_DATE:-}" ] && ARGS+=(--to-date "$TO_DATE")
             [ "${REBUILD:-false}" = "true" ] && ARGS+=(--rebuild-panel)
             [ -n "${RESTATE:-}" ] && ARGS+=(--restate "$RESTATE")
-            python -m src.factor_mine "${ARGS[@]}"
+            python -m src.factor_mine "${ARGS[@]}" 2>&1 | tee -a "$LAND_LOG"
           else
             ARGS=(--from-date "${FROM_DATE:-2026-08-13}" --write
                   --universe "${UNIVERSE:-auto}" --hold "${HOLD:-auto}"
@@ -215,7 +228,8 @@ jobs:
             [ "${REBUILD:-false}" = "true" ] && ARGS+=(--rebuild-panel)
             [ -n "${RESTATE:-}" ] && ARGS+=(--restate "$RESTATE")
             [ "${AUTO:-true}" = "false" ] && ARGS+=(--no-auto-tweak)
-            python -m src.factor_mine "${ARGS[@]}"
+            python -m src.factor_mine "${ARGS[@]}" 2>&1 | tee -a "$LAND_LOG"
+          fi
           fi
           test -s 03_scoreboard/FACTOR_MINE.md
           test -s 03_scoreboard/FACTOR_MINE_ACTION.md
@@ -260,6 +274,10 @@ jobs:
             data/factor_mine/freeze_manifest.json \
             data/factor_mine/snapshots/ \
             data/factor_mine/ledgers/ \
+            data/factor_mine/oos0914/ledgers/ \
+            data/factor_mine/oos0914/state/ \
+            data/factor_mine/oos0914/test_report.json \
+            03_scoreboard/FACTOR_MINE_OOS0914.md \
             data/factor_mine/lineups/ \
             data/factor_mine/candidates/ \
             data/factor_mine/recipe_created_on.json \
@@ -270,6 +288,19 @@ jobs:
             data/prices/actions.parquet \
             data/prices/meta.json \
             dashboard/factor-mine/
+          python - <<'PY'
+          import subprocess
+          from pathlib import Path
+          from src.factor_mine_oos0914 import assert_logged_append_committed
+          log = Path("/tmp/factor_mine_land.log")
+          text = log.read_text(encoding="utf-8") if log.is_file() else ""
+          subprocess.check_call(["git", "fetch", "origin", "main"])
+          listed = subprocess.check_output(
+              ["git", "ls-tree", "-r", "--name-only", "origin/main"],
+              text=True,
+          )
+          assert_logged_append_committed(text, listed.splitlines())
+          PY
         env:
           FROM_DATE: ${{ inputs.from_date }}
       - name: Upload artifact
