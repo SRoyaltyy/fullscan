@@ -6,9 +6,10 @@ A named input that was committed only after the open is withheld. That
 day is ``incomplete_pit`` and the book carries. It is not filled from
 the later file.
 
-The retro price tape is a separate split-adjusted store. Indicators
-keep using bars dated before D. The live unadjusted ``data/prices``
-print tape is not rewritten.
+The retro price tape is a separate raw store (``auto_adjust=False``).
+Split and dividend factors live in ``retro_prices/actions.parquet``.
+Indicators apply only events with an ex-date before D. The live
+``data/prices`` print tape is not rewritten.
 
   python -m src.factor_mine_retro
 """
@@ -34,6 +35,7 @@ from . import ticker_lookback as tl
 ROOT = fm.ROOT
 RETRO_DIR = ROOT / "data" / "factor_mine" / "retro_prices"
 RETRO_STORE = RETRO_DIR / "ohlc.parquet"
+RETRO_ACTIONS = RETRO_DIR / "actions.parquet"
 RETRO_META = RETRO_DIR / "meta.json"
 REPORT_MD = ROOT / "03_scoreboard" / "FACTOR_MINE_RETRO_PIT.md"
 REPORT_JSON = ROOT / "data" / "factor_mine" / "retro_report.json"
@@ -272,6 +274,8 @@ def overlay_inputs(dest: Path):
     from . import weather
 
     dest = Path(dest)
+    from . import price_store as ps
+
     saved = {
         "tl": (
             tl.ROOT, tl.BOOK_DIR, tl.JOIN_DIR, tl.EXPORT_DIR, tl.AB_DIR,
@@ -279,6 +283,7 @@ def overlay_inputs(dest: Path):
             tl.NEWS_DIR, tl.GENERAL_DIR, tl.MAP_HEAT_DIR, tl.WEATHER_DIR,
             tl.PRICE_STORE,
         ),
+        "actions": ps.ACTIONS_PATH,
         "ga": ga.EXPORT_DIR,
         "fe": fe.EXPORT_DIR,
         "sb": (sb.NEWS_DIR, sb.JOIN_DIR),
@@ -303,6 +308,8 @@ def overlay_inputs(dest: Path):
     tl.MAP_HEAT_DIR = dest / "01_daily" / "map_heat"
     tl.WEATHER_DIR = dest / "01_daily" / "weather"
     tl.PRICE_STORE = RETRO_STORE if RETRO_STORE.is_file() else tl.PRICE_STORE
+    ps.ACTIONS_PATH = RETRO_ACTIONS
+    ps.reset_action_cache()
     ga.EXPORT_DIR = tl.EXPORT_DIR
     fe.EXPORT_DIR = tl.EXPORT_DIR
     fe._EXPORT_IDX.clear()
@@ -334,6 +341,8 @@ def overlay_inputs(dest: Path):
          tl.PEER_DIR, tl.UNIVERSE_DIR, tl.QUOTE_DIR, tl.CATALYST_DIR,
          tl.NEWS_DIR, tl.GENERAL_DIR, tl.MAP_HEAT_DIR, tl.WEATHER_DIR,
          tl.PRICE_STORE) = saved["tl"]
+        ps.ACTIONS_PATH = saved["actions"]
+        ps.reset_action_cache()
         ga.EXPORT_DIR = saved["ga"]
         fe.EXPORT_DIR = saved["fe"]
         fe._EXPORT_IDX.clear()
@@ -360,7 +369,9 @@ def _stamp_manifest(date: str, info: dict) -> None:
         "kind": "pit_rebuilt",
         "window": [SESSIONS[0], SESSIONS[-1]],
         "price_store": str(RETRO_STORE.relative_to(ROOT)),
-        "adjusted": True,
+        "actions": str(RETRO_ACTIONS.relative_to(ROOT)),
+        "adjusted": False,
+        "auto_adjust": False,
     }
     fmf.save_manifest(man)
 
@@ -370,24 +381,33 @@ def _price_ok(ticker: str, date: str) -> bool:
 
 
 def build_day_rows(date: str, dest: Path) -> tuple[list[dict], list[str]]:
-    """Panel rows for one pit_rebuilt session. Names without bars are dropped."""
+    """Panel rows for one pit_rebuilt session.
+
+    Names that still fail the price gate stay on the hole list. They
+    are not removed from the row list here; the day is held instead.
+    """
     with overlay_inputs(dest):
-        extra = fm.build_panel(date, date, fail_closed=False)
-    rows = []
-    dropped = []
-    for row in extra.get("rows") or []:
-        if row.get("date") != date:
-            continue
+        rows = _panel_rows(date)
+        holes = _row_holes(date, rows)
+    return rows, holes
+
+
+def _panel_rows(date: str) -> list[dict]:
+    extra = fm.build_panel(date, date, fail_closed=False)
+    return [row for row in (extra.get("rows") or []) if row.get("date") == date]
+
+
+def _row_holes(date: str, rows: list[dict]) -> list[str]:
+    holes = []
+    for row in rows:
         ticker = row.get("ticker")
         if not _price_ok(ticker, date):
-            dropped.append(ticker)
-            continue
-        rows.append(row)
-    return rows, dropped
+            holes.append(ticker)
+    return holes
 
 
 def snapshot_for(date: str, info: dict, rows: list[dict],
-                 prices_sha: str | None) -> dict:
+                 prices_sha: str | None, candidates: dict | None = None) -> dict:
     """Frozen rows plus the git commit of each input.
 
     Does not copy the live map-heat file. The heat vintage is the
@@ -400,7 +420,7 @@ def snapshot_for(date: str, info: dict, rows: list[dict],
     heat_sha = (info.get("sources") or {}).get(
         f"01_daily/map_heat/{date}_map_heat.json")
     frozen_rows = []
-    if info["label"] != "incomplete_pit":
+    if info["label"] not in ("incomplete_pit", "held"):
         for row in rows:
             item = dict(row)
             item["heat_vintage"] = heat_sha
@@ -409,7 +429,7 @@ def snapshot_for(date: str, info: dict, rows: list[dict],
         frozen_rows.sort(key=lambda r: (
             r.get("date") or "", int(r.get("src_rank") or 0), r.get("ticker") or "",
         ))
-    return {
+    snap = {
         "date": date,
         "asof": "09:30_et",
         "open_clock": "09:30 ET",
@@ -424,9 +444,19 @@ def snapshot_for(date: str, info: dict, rows: list[dict],
         "missing_late": list(info.get("missing_late") or []),
         "absent": list(info.get("absent") or []),
         "code_sha": fmf.code_sha(),
+        "tape": "raw",
+        "auto_adjust": False,
         "n_rows": len(frozen_rows),
         "rows": frozen_rows,
     }
+    if candidates is not None:
+        snap["candidates"] = {
+            "n": candidates.get("n"),
+            "prior_export": candidates.get("prior_export"),
+            "excluded": list(candidates.get("excluded") or []),
+            "names": list(candidates.get("names") or []),
+        }
+    return snap
 
 
 def retro_recipes() -> list[dict]:
@@ -488,33 +518,106 @@ def _bars_for(panel: dict, date: str) -> dict:
     return bars
 
 
-def lock_price_meta(df) -> str:
-    """Write the adjusted store once. A second lock with the same bytes is a no-op."""
+def _rel(path: Path) -> str:
+    try:
+        return str(path.relative_to(ROOT))
+    except ValueError:
+        return str(path)
+
+
+def _read_meta() -> dict:
+    if not RETRO_META.is_file():
+        return {}
+    try:
+        meta = json.loads(RETRO_META.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return {}
+    return meta if isinstance(meta, dict) else {}
+
+
+def _is_raw_lock() -> str | None:
+    """Sha of a locked raw store. An adjusted lock is not raw."""
+    meta = _read_meta()
+    if not meta.get("locked") or not RETRO_STORE.is_file():
+        return None
+    if meta.get("auto_adjust") is not False or meta.get("adjusted") is True:
+        return None
+    have = hashlib.sha256(RETRO_STORE.read_bytes()).hexdigest()
+    if have != meta.get("sha256"):
+        return None
+    return have
+
+
+def _normalize_ohlc(df):
     import pandas as pd
-    RETRO_DIR.mkdir(parents=True, exist_ok=True)
     frame = df.copy()
     frame["date"] = pd.to_datetime(frame["date"]).dt.normalize()
     frame["ticker"] = frame["ticker"].astype(str).str.upper()
+    for col in ("open", "high", "low", "close", "volume"):
+        if col not in frame.columns:
+            frame[col] = None
+    frame = frame[["date", "ticker", "open", "high", "low", "close", "volume"]]
+    frame["volume"] = pd.to_numeric(frame["volume"], errors="coerce")
+    frame = frame.dropna(subset=["close"])
     frame = frame.drop_duplicates(subset=["date", "ticker"], keep="first")
-    frame = frame.sort_values(["ticker", "date"]).reset_index(drop=True)
-    if RETRO_STORE.is_file() and RETRO_META.is_file():
-        try:
-            meta = json.loads(RETRO_META.read_text(encoding="utf-8"))
-        except (OSError, json.JSONDecodeError):
-            meta = {}
-        if meta.get("locked"):
-            have = hashlib.sha256(RETRO_STORE.read_bytes()).hexdigest()
-            if have == meta.get("sha256"):
-                print(f"[retro] price store already locked sha={have[:12]}", flush=True)
-                return have
+    return frame.sort_values(["ticker", "date"]).reset_index(drop=True)
+
+
+def write_actions(df) -> None:
+    """Keep-first split/dividend rows in the retro factor table.
+
+    Does not write ``data/prices/actions.parquet``.
+    """
+    import pandas as pd
+    from . import price_store as ps
+
+    cols = ["date", "ticker", "dividend", "split", "close"]
+    RETRO_DIR.mkdir(parents=True, exist_ok=True)
+    frames = []
+    if RETRO_ACTIONS.is_file():
+        frames.append(pd.read_parquet(RETRO_ACTIONS))
+    if df is not None and len(df):
+        frames.append(df)
+    if not frames:
+        pd.DataFrame(columns=cols).to_parquet(RETRO_ACTIONS, index=False)
+        return
+    out = pd.concat(frames, ignore_index=True)
+    for col in cols:
+        if col not in out.columns:
+            out[col] = None
+    out = out[cols]
+    out["date"] = pd.to_datetime(out["date"]).dt.normalize()
+    out["ticker"] = out["ticker"].astype(str).str.upper()
+    out["dividend"] = pd.to_numeric(out["dividend"], errors="coerce").fillna(0.0)
+    out["split"] = pd.to_numeric(out["split"], errors="coerce").fillna(0.0)
+    out["close"] = pd.to_numeric(out["close"], errors="coerce")
+    out = out.drop_duplicates(subset=["date", "ticker"], keep="first")
+    out = out.sort_values(["ticker", "date"]).reset_index(drop=True)
+    out.to_parquet(RETRO_ACTIONS, index=False)
+    ps.reset_action_cache()
+    print(f"[retro] actions {len(out)} events", flush=True)
+
+
+def lock_price_meta(df, actions=None) -> str:
+    """Write raw bars. A matching raw lock is a no-op. Adjusted bytes are replaced."""
+    import pandas as pd
+    RETRO_DIR.mkdir(parents=True, exist_ok=True)
+    frame = _normalize_ohlc(df)
+    if not len(frame):
+        raise RuntimeError("raw price store has no bars")
     frame.to_parquet(RETRO_STORE, index=False)
     raw = RETRO_STORE.read_bytes()
     digest = hashlib.sha256(raw).hexdigest()
+    if actions is not None:
+        write_actions(actions)
+    elif not RETRO_ACTIONS.is_file():
+        write_actions(pd.DataFrame())
     meta = {
         "locked": True,
-        "adjusted": True,
-        "auto_adjust": True,
+        "adjusted": False,
+        "auto_adjust": False,
         "sha256": digest,
+        "actions": _rel(RETRO_ACTIONS) if RETRO_ACTIONS.is_file() else None,
         "start": str(frame["date"].min())[:10],
         "end": str(frame["date"].max())[:10],
         "n_rows": int(len(frame)),
@@ -522,9 +625,25 @@ def lock_price_meta(df) -> str:
         "bytes": len(raw),
     }
     RETRO_META.write_text(json.dumps(meta, indent=2), encoding="utf-8")
-    print(f"[retro] locked adjusted bars sha={digest[:12]} "
+    print(f"[retro] locked raw bars sha={digest[:12]} "
           f"rows={meta['n_rows']} tickers={meta['n_tickers']}", flush=True)
     return digest
+
+
+def merge_raw_bars(ohlc, actions=None) -> str:
+    """Append raw bars. A stored (date, ticker) print is not replaced.
+
+    An adjusted lock is discarded rather than concatenated.
+    """
+    import pandas as pd
+    frames = []
+    if RETRO_STORE.is_file() and _is_raw_lock():
+        frames.append(pd.read_parquet(RETRO_STORE))
+    if ohlc is not None and len(ohlc):
+        frames.append(ohlc)
+    if not frames:
+        raise RuntimeError("raw price merge has no bars")
+    return lock_price_meta(pd.concat(frames, ignore_index=True), actions)
 
 
 def candidate_tickers() -> list[str]:
@@ -556,53 +675,224 @@ def candidate_tickers() -> list[str]:
     return sorted(names)
 
 
-def fetch_adjusted_bars(tickers: list[str] | None = None) -> str:
-    """One split-adjusted download. Stored bars are not replaced."""
+def _store_tickers() -> set[str]:
+    import pandas as pd
+    if not RETRO_STORE.is_file():
+        return set()
+    df = pd.read_parquet(RETRO_STORE, columns=["ticker"])
+    return set(df["ticker"].astype(str).str.upper())
+
+
+def _download_raw(names: list[str], start: str, end: str):
+    """Yahoo raw prints plus the dated factor rows. The live store is not written."""
     import pandas as pd
     import yfinance as yf
+    from . import price_store as ps
 
-    if RETRO_META.is_file():
-        try:
-            meta = json.loads(RETRO_META.read_text(encoding="utf-8"))
-        except (OSError, json.JSONDecodeError):
-            meta = {}
-        if meta.get("locked") and RETRO_STORE.is_file():
-            return str(meta.get("sha256") or "")
-    names = list(tickers or candidate_tickers())
-    end = "2026-09-25"
-    frames = []
-    if RETRO_STORE.is_file():
-        frames.append(pd.read_parquet(RETRO_STORE))
+    ohlc_frames = []
+    action_frames = []
     chunk = 80
+    batches = max(1, (len(names) - 1) // chunk + 1) if names else 1
     for i in range(0, len(names), chunk):
         batch = names[i:i + chunk]
-        print(f"[retro] adjusted fetch {i // chunk + 1}/"
-              f"{(len(names) - 1) // chunk + 1} {batch[0]}…{batch[-1]}",
-              flush=True)
+        print(f"[retro] raw fetch {i // chunk + 1}/{batches} "
+              f"{batch[0]}…{batch[-1]}", flush=True)
         raw = yf.download(
-            tickers=batch, start=PRICE_START, end=end, group_by="ticker",
-            auto_adjust=True, actions=False, threads=True, progress=False,
+            tickers=batch, start=start, end=end, group_by="ticker",
+            auto_adjust=False, actions=True, threads=True, progress=False,
         )
-        part = _flatten_adjusted(raw, batch)
+        part = ps._flatten_yf(raw, batch)
+        acts = ps._flatten_actions(raw, batch)
         if not len(part):
             time.sleep(6)
             raw = yf.download(
-                tickers=batch, start=PRICE_START, end=end, group_by="ticker",
-                auto_adjust=True, actions=False, threads=True, progress=False,
+                tickers=batch, start=start, end=end, group_by="ticker",
+                auto_adjust=False, actions=True, threads=True, progress=False,
             )
-            part = _flatten_adjusted(raw, batch)
+            part = ps._flatten_yf(raw, batch)
+            acts = ps._flatten_actions(raw, batch)
         if len(part):
-            frames.append(part)
+            ohlc_frames.append(part)
+        if acts is not None and len(acts):
+            action_frames.append(acts)
         time.sleep(1.0)
-    if not frames:
-        raise RuntimeError("adjusted price fetch returned no bars")
-    return lock_price_meta(pd.concat(frames, ignore_index=True))
+    ohlc = pd.concat(ohlc_frames, ignore_index=True) if ohlc_frames else pd.DataFrame()
+    actions = (
+        pd.concat(action_frames, ignore_index=True) if action_frames else pd.DataFrame()
+    )
+    return ohlc, actions
 
 
-def _flatten_adjusted(raw, tickers: list[str]):
-    """Reuse the store flattener. Download already applied split adjustment."""
-    from . import price_store as ps
-    return ps._flatten_yf(raw, tickers)
+def fetch_raw_bars(tickers: list[str] | None = None) -> str:
+    """One raw download. A locked raw store is kept. Adjusted bars are replaced."""
+    import pandas as pd
+
+    locked = _is_raw_lock()
+    if locked:
+        print(f"[retro] raw price store already locked sha={locked[:12]}", flush=True)
+        return locked
+    if _read_meta().get("auto_adjust") is True:
+        print("[retro] replacing adjusted price lock with raw bars", flush=True)
+    names = set(tickers or candidate_tickers())
+    names.update(_store_tickers())
+    names.discard("")
+    ordered = sorted(names)
+    end = "2026-09-25"
+    ohlc, actions = _download_raw(ordered, PRICE_START, end)
+    if not len(ohlc):
+        raise RuntimeError("raw price fetch returned no bars")
+    return lock_price_meta(ohlc, actions)
+
+
+def fetch_adjusted_bars(tickers: list[str] | None = None) -> str:
+    """Raw bars only. Adjusted downloads are not stored."""
+    return fetch_raw_bars(tickers)
+
+
+def _missing_session(date: str, tickers: list[str]) -> list[str]:
+    """Tickers with no raw open and close on ``date``."""
+    import pandas as pd
+
+    names = sorted({str(t).strip().upper() for t in tickers if t})
+    if not names:
+        return []
+    if not RETRO_STORE.is_file():
+        return names
+    df = pd.read_parquet(RETRO_STORE, columns=["date", "ticker", "open", "close"])
+    df["date"] = pd.to_datetime(df["date"]).dt.strftime("%Y-%m-%d")
+    df["ticker"] = df["ticker"].astype(str).str.upper()
+    day = df[df["date"] == str(date)[:10]]
+    ok: set[str] = set()
+    for rec in day.itertuples(index=False):
+        opened, closed = rec.open, rec.close
+        if opened != opened or closed != closed:
+            continue
+        if opened is None or closed is None:
+            continue
+        ok.add(str(rec.ticker))
+    return [t for t in names if t not in ok]
+
+
+def _bar_fields(date: str, ticker: str, opened, high, low, closed, volume=None):
+    try:
+        o = float(opened)
+        c = float(closed)
+    except (TypeError, ValueError):
+        return None
+    if o != o or c != c:
+        return None
+    try:
+        h = float(high) if high is not None and high == high else max(o, c)
+    except (TypeError, ValueError):
+        h = max(o, c)
+    try:
+        lo = float(low) if low is not None and low == low else min(o, c)
+    except (TypeError, ValueError):
+        lo = min(o, c)
+    return {
+        "date": str(date)[:10],
+        "ticker": str(ticker).upper(),
+        "open": o,
+        "high": h,
+        "low": lo,
+        "close": c,
+        "volume": volume,
+    }
+
+
+def _radar_raw_quotes(date: str) -> dict:
+    """Open and Price from ``{D}.raw.csv`` when the commit guard accepts it."""
+    tape = fmf.day_open_tape(date)
+    if tape.get("source") != "finviz_raw":
+        return {}
+    raw = fmf._theme_radar_raw_bytes(date)
+    if not raw:
+        return {}
+    return fmf.parse_theme_radar_prices(raw.decode("utf-8", errors="replace"))
+
+
+def parse_stooq_history(text: str) -> list[dict]:
+    """Every Stooq daily bar that has an open and a close."""
+    import csv
+    import io
+
+    reader = csv.DictReader(io.StringIO(text or ""))
+    if not reader.fieldnames:
+        return []
+    fields = {name.strip().lower(): name for name in reader.fieldnames if name}
+    rows = []
+    for row in reader:
+        stamp = str(row.get(fields.get("date") or "Date") or "").strip()
+        if len(stamp) == 8 and stamp.isdigit():
+            stamp = f"{stamp[:4]}-{stamp[4:6]}-{stamp[6:]}"
+        if len(stamp) < 10:
+            continue
+        bar = _bar_fields(
+            stamp[:10],
+            "",
+            row.get(fields.get("open") or "Open"),
+            row.get(fields.get("high") or "High"),
+            row.get(fields.get("low") or "Low"),
+            row.get(fields.get("close") or "Close"),
+            row.get(fields.get("volume") or "Volume"),
+        )
+        if bar:
+            bar.pop("ticker", None)
+            rows.append(bar)
+    return rows
+
+
+def recover_session_bars(date: str, tickers: list[str]) -> list[str]:
+    """Fill missing session prints. Yahoo raw, then raw.csv, then Stooq.
+
+    Returns tickers that still have no open and close on ``date``.
+    A stored bar is not overwritten.
+    """
+    import pandas as pd
+
+    names = sorted({str(t).strip().upper() for t in tickers if t})
+    missing = _missing_session(date, names)
+    if not missing:
+        return []
+    print(f"[retro] {date} yahoo retry {len(missing)}", flush=True)
+    ohlc, actions = _download_raw(missing, PRICE_START, "2026-09-25")
+    if len(ohlc):
+        merge_raw_bars(ohlc, actions if len(actions) else None)
+    missing = _missing_session(date, names)
+    if missing:
+        quotes = _radar_raw_quotes(date)
+        rows = []
+        for ticker in missing:
+            quote = quotes.get(ticker) or {}
+            bar = _bar_fields(
+                date, ticker, quote.get("open"), None, None, quote.get("close"),
+            )
+            if bar:
+                rows.append(bar)
+        if rows:
+            print(f"[retro] {date} raw.csv filled {len(rows)}", flush=True)
+            merge_raw_bars(pd.DataFrame(rows))
+        missing = _missing_session(date, names)
+    if missing:
+        rows = []
+        for ticker in missing:
+            history = parse_stooq_history(fmf._fetch_stooq(ticker))
+            for bar in history:
+                bar["ticker"] = ticker
+                rows.append(bar)
+            time.sleep(0.15)
+        if rows:
+            print(f"[retro] {date} stooq rows {len(rows)}", flush=True)
+            merge_raw_bars(pd.DataFrame(rows))
+        missing = _missing_session(date, names)
+    if missing:
+        print(f"[retro] {date} still missing {len(missing)}: {missing[:12]}", flush=True)
+    return missing
+
+
+def price_gate_fails(missing, holes, gaps) -> bool:
+    """True when a session print is still absent or the cross-check failed."""
+    return bool(missing or holes or gaps)
 
 
 def flat_15bp_order_fees(shares: int, price: float, side: str, fees) -> float:
@@ -1012,7 +1302,7 @@ def _iwm_yahoo(dates: list[str]) -> dict:
 
     raw = yf.download(
         "IWM", start=min(dates), end="2026-09-25",
-        auto_adjust=True, actions=False, progress=False, threads=False,
+        auto_adjust=False, actions=False, progress=False, threads=False,
     )
     return _iwm_frame(raw)
 
@@ -1029,7 +1319,7 @@ def _iwm_stooq(dates: list[str]) -> dict:
 
 
 def fetch_iwm_bars(dates: list[str]) -> tuple[dict, str]:
-    """Adjusted IWM in memory. Neither price store is written."""
+    """Raw IWM in memory. Neither price store is written."""
     try:
         bars = _iwm_yahoo(dates)
         yahoo_days = {d for d in dates if _bar_ok(bars.get(("IWM", d)))}
@@ -1051,7 +1341,7 @@ def fetch_iwm_bars(dates: list[str]) -> tuple[dict, str]:
         raise RuntimeError(f"IWM tape missing {still[:8]}")
     if stooq_days and yahoo_days:
         source = (
-            "Yahoo auto_adjust=True with Stooq iwm.us filling "
+            "Yahoo auto_adjust=False with Stooq iwm.us filling "
             f"{len(stooq_days)} session(s), in memory. "
             "Not written to data/factor_mine/retro_prices or data/prices."
         )
@@ -1062,7 +1352,7 @@ def fetch_iwm_bars(dates: list[str]) -> tuple[dict, str]:
         )
     else:
         source = (
-            "Yahoo auto_adjust=True, fetched in memory. "
+            "Yahoo auto_adjust=False, fetched in memory. "
             "Not written to data/factor_mine/retro_prices or data/prices."
         )
     return bars, source
@@ -1467,6 +1757,7 @@ def publish_baselines(*, draws: int = RANDOM4_DRAWS) -> dict:
 def write_report(classed: list[dict], scores: list[dict]) -> None:
     rebuilt = [c["date"] for c in classed if c["label"] == "pit_rebuilt"]
     incomplete = [c for c in classed if c["label"] == "incomplete_pit"]
+    held = [c for c in classed if c["label"] == "held"]
     lines = [
         "# Factor Mine retroactive point-in-time rebuild",
         "",
@@ -1476,6 +1767,19 @@ def write_report(classed: list[dict], scores: list[dict]) -> None:
         "",
         f"- pit_rebuilt: {len(rebuilt)}",
         f"- incomplete_pit: {len(incomplete)}",
+        f"- held: {len(held)}",
+        "",
+        "## Held days",
+        "",
+        "A missing session print or a failed open/close cross-check holds the day. "
+        "The book is empty and the ledger recipes are empty. The return is not 0.",
+        "",
+    ]
+    for info in held:
+        missing = ", ".join(info.get("missing_prices") or []) or "(none)"
+        n_gaps = info.get("cross_check_n") or 0
+        lines.append(f"- `{info['date']}` missing: {missing}; cross-check gaps: {n_gaps}")
+    lines += [
         "",
         "## Incomplete days",
         "",
@@ -1508,9 +1812,10 @@ def write_report(classed: list[dict], scores: list[dict]) -> None:
     lines += [
         "",
         "Prices: `data/factor_mine/retro_prices/ohlc.parquet` "
-        "(Yahoo `auto_adjust=True`, locked, first bar wins). "
-        "Indicators use bars dated before D. "
-        "The live `data/prices/ohlc.parquet` print tape was not rewritten.",
+        "(Yahoo `auto_adjust=False`, raw prints, locked, first bar wins). "
+        "Split and dividend factors: `data/factor_mine/retro_prices/actions.parquet` "
+        "(dated, keep-first). Indicators apply only events with ex-date before D. "
+        "The live `data/prices` tape was not rewritten.",
         "",
     ]
     REPORT_MD.parent.mkdir(parents=True, exist_ok=True)
@@ -1526,18 +1831,75 @@ def write_report(classed: list[dict], scores: list[dict]) -> None:
     print(f"[retro] wrote {REPORT_MD}", flush=True)
 
 
+def _held_ledger(date: str, reason: str) -> dict:
+    return {
+        "date": date,
+        "origin": "retro_pit",
+        "label": "held",
+        "reason": reason,
+        "recipes": {},
+        "code_sha": fmf.code_sha(),
+    }
+
+
+def review_day(date: str, info: dict, dest: Path,
+               history: dict | None = None) -> tuple[list[dict], dict]:
+    """Provenance, fill missing prints, then cross-check.
+
+    A hole or a cross-check gap marks the day ``held`` and returns no rows.
+    """
+    materialize(date, dest, history)
+    with overlay_inputs(dest):
+        provenance = fmf.candidate_provenance(date, list(SESSIONS))
+        fmf.write_candidates(date, provenance, restate=True)
+        names = [row["ticker"] for row in provenance.get("names") or []]
+    missing = recover_session_bars(date, names)
+    with overlay_inputs(dest):
+        fmf.reset_price_memory()
+        rows: list[dict] = []
+        holes: list[str] = []
+        if info["label"] == "pit_rebuilt":
+            rows = _panel_rows(date)
+            holes = _row_holes(date, rows)
+        traded = list(fmf.paper_fills(date))
+        check = sorted({
+            str(t).strip().upper()
+            for t in list(names) + traded + [r.get("ticker") for r in rows]
+            if t
+        })
+        gaps = fmf.session_cross_check(date, check)
+        decision = fmf.LAST_OPEN_SOURCE.get(str(date)[:10])
+        if decision:
+            fmf.write_open_source_row(date, decision)
+    if price_gate_fails(missing, holes, gaps):
+        info["label"] = "held"
+        info["missing_prices"] = sorted(set(missing) | set(holes))
+        info["cross_check_n"] = len(gaps)
+        info["cross_check"] = list(gaps[:12])
+        print(
+            f"[retro] hold {date} missing={len(info['missing_prices'])} "
+            f"gaps={len(gaps)}",
+            flush=True,
+        )
+        return [], provenance
+    if info["label"] != "pit_rebuilt":
+        print(f"[retro] carry {date}", flush=True)
+        return [], provenance
+    print(f"[retro] built {date} rows={len(rows)}", flush=True)
+    return rows, provenance
+
+
 def rebuild(*, fetch: bool = True) -> dict:
-    """Classify, lock bars, write snapshots and ledgers, score HOT4."""
+    """Classify, lock raw bars, write snapshots and ledgers, score HOT4."""
     history = load_histories()
     classed = [classify_day(d, history) for d in SESSIONS]
     for info in classed:
         late = ",".join(info["missing_late"]) or "-"
         print(f"[retro] {info['date']} {info['label']} late={late}", flush=True)
-    prices_sha = None
-    if fetch:
-        prices_sha = fetch_adjusted_bars()
-    elif RETRO_META.is_file():
-        prices_sha = json.loads(RETRO_META.read_text(encoding="utf-8")).get("sha256")
+    if _is_raw_lock() and not fetch:
+        prices_sha = _read_meta().get("sha256")
+    else:
+        prices_sha = fetch_raw_bars()
     tl.PRICE_STORE = RETRO_STORE
     fmf.reset_price_memory()
     import tempfile
@@ -1547,17 +1909,9 @@ def rebuild(*, fetch: bool = True) -> dict:
     print(f"[retro] recipes={len(recipes)}", flush=True)
     for info in classed:
         date = info["date"]
-        if info["label"] == "pit_rebuilt":
-            materialize(date, work, history)
-            rows, dropped = build_day_rows(date, work)
-            info["dropped_prices"] = dropped
-            print(f"[retro] built {date} rows={len(rows)} dropped={len(dropped)}",
-                  flush=True)
-        else:
-            rows = []
-            print(f"[retro] carry {date}", flush=True)
-        snap = snapshot_for(date, info, rows, prices_sha)
-        fmf.write_snapshot(date, snap, restate=False)
+        rows, provenance = review_day(date, info, work, history)
+        snap = snapshot_for(date, info, rows, prices_sha, provenance)
+        fmf.write_snapshot(date, snap, restate=True)
         _stamp_manifest(date, info)
         panel["by_date"][date] = list(snap.get("rows") or [])
         panel["rows"] = [r for r in panel["rows"] if r.get("date") != date]
@@ -1567,21 +1921,26 @@ def rebuild(*, fetch: bool = True) -> dict:
         landed = [d for d in SESSIONS if d <= date]
         day_panel = assemble_panel(landed)
         bars = _bars_for(day_panel, date)
-        try:
-            ledger = fmf.build_ledger(
-                day_panel, {}, recipes, date, bars,
-            )
-        except fmf.HoldDay as e:
-            print(f"[retro] ledger hold {date}: {e}", flush=True)
-            ledger = {
-                "date": date,
-                "origin": "incomplete_pit",
-                "carry": True,
-                "error": str(e),
-                "recipes": {},
-            }
+        if info["label"] == "held":
+            reason = "missing session print" if info.get("missing_prices") else "price cross-check"
+            if info.get("cross_check_n"):
+                reason = "price cross-check"
+            ledger = _held_ledger(date, reason)
+        else:
+            try:
+                ledger = fmf.build_ledger(
+                    day_panel, {}, recipes, date, bars,
+                )
+            except fmf.HoldDay as e:
+                print(f"[retro] ledger hold {date}: {e}", flush=True)
+                info["label"] = "held"
+                ledger = _held_ledger(date, str(e))
+                snap = snapshot_for(date, info, [], prices_sha, provenance)
+                fmf.write_snapshot(date, snap, restate=True)
+                _stamp_manifest(date, info)
         ledger["label"] = info["label"]
-        fmf.write_ledger(date, ledger, restate=False)
+        ledger["code_sha"] = ledger.get("code_sha") or fmf.code_sha()
+        fmf.write_ledger(date, ledger, restate=True)
     full = assemble_panel(list(SESSIONS))
     scores = []
     for name in ("union_hot_n4_h1", "union_hot_n4_holdup"):

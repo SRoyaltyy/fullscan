@@ -787,8 +787,7 @@ def test_partial_ledger_is_not_frozen() -> None:
             _restore(old)
 
 
-def _mini_panel():
-    date = "2026-08-17"
+def _mini_panel(date: str = "2026-08-17"):
     row = {
         "date": date, "ticker": "AAA", "sources": ["union"],
         "boxes": {"vol": "good"}, "blue": False, "alarm": False,
@@ -813,11 +812,11 @@ def _mini_panel():
     }
 
 
-def _emit_once(root: Path) -> dict[str, bytes]:
+def _emit_once(root: Path, date: str = "2026-08-17") -> dict[str, bytes]:
     from src import factor_mine_book as fmb
     from src import paper_trade as pt
 
-    panel = _mini_panel()
+    panel = _mini_panel(date)
     date = panel["to_date"]
     rec = fm.make_recipe("union_h1", hold=1, top_n=1)
     bars = {("AAA", date): {"open": 10.0, "close": 11.0}}
@@ -847,13 +846,13 @@ def _emit_once(root: Path) -> dict[str, bytes]:
             dest = root / "factor_mine.json"
             fm.write_scoreboard(payload, dest)
         files = {
-            "snapshot": fmf.snapshot_path(date).read_bytes(),
-            "ledger": fmf.ledger_path(date).read_bytes(),
-            "scoreboard": dest.read_bytes(),
+            f"{date}/snapshot": fmf.snapshot_path(date).read_bytes(),
+            f"{date}/ledger": fmf.ledger_path(date).read_bytes(),
+            f"{date}/scoreboard": dest.read_bytes(),
         }
         shard_dir = dest.parent / "factor_mine" / "shards"
         for path in sorted(shard_dir.glob("*.json.gz")):
-            files[path.name] = path.read_bytes()
+            files[f"{date}/shard/{path.name}"] = path.read_bytes()
         return files
     finally:
         _restore(old)
@@ -862,24 +861,37 @@ def _emit_once(root: Path) -> dict[str, bytes]:
 def test_replay_twice_is_byte_identical() -> None:
     """Same commit and the same frozen inputs land the same bytes.
 
+    Every retro session is replayed, not a single sample day.
     ``python -m src.test_factor_mine_freeze`` restarts under
     PYTHONHASHSEED=0. Recipe ranks break ties on ticker and use a
     stable sort.
     """
+    from src.factor_mine_retro import SESSIONS
+
     if __name__ == "__main__":
         assert os.environ.get("PYTHONHASHSEED") == "0"
+
+    def run(root: Path) -> dict[str, bytes]:
+        out: dict[str, bytes] = {}
+        for date in SESSIONS:
+            out.update(_emit_once(root, date))
+        return out
+
     with tempfile.TemporaryDirectory() as a, tempfile.TemporaryDirectory() as b:
-        first = _emit_once(Path(a))
-        second = _emit_once(Path(b))
+        first = run(Path(a))
+        second = run(Path(b))
     assert first.keys() == second.keys()
+    assert len(SESSIONS) == 30
     for key in first:
         assert first[key] == second[key], key
-    snap = json.loads(first["snapshot"])
-    assert snap["code_sha"] == "determinism-test"
-    assert snap["tape"] == "raw"
-    assert snap["auto_adjust"] is False
-    ledger = json.loads(gzip.decompress(first["ledger"]))
-    assert ledger["code_sha"] == "determinism-test"
+    for date in SESSIONS:
+        snap = json.loads(first[f"{date}/snapshot"])
+        assert snap["date"] == date
+        assert snap["code_sha"] == "determinism-test"
+        assert snap["tape"] == "raw"
+        assert snap["auto_adjust"] is False
+        ledger = json.loads(gzip.decompress(first[f"{date}/ledger"]))
+        assert ledger["code_sha"] == "determinism-test"
 
 
 def test_corrupt_frozen_input_fails_the_hash_guard() -> None:

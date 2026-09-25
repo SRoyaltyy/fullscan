@@ -278,6 +278,209 @@ def test_baselines_section_keeps_the_hot4_table() -> None:
     assert '"draws": 1' not in again
 
 
+def _use_retro_store(root: Path):
+    old = (retro.RETRO_DIR, retro.RETRO_STORE, retro.RETRO_META, retro.RETRO_ACTIONS)
+    retro.RETRO_DIR = root
+    retro.RETRO_STORE = root / "ohlc.parquet"
+    retro.RETRO_META = root / "meta.json"
+    retro.RETRO_ACTIONS = root / "actions.parquet"
+    return old
+
+
+def _restore_retro_store(old) -> None:
+    (retro.RETRO_DIR, retro.RETRO_STORE, retro.RETRO_META, retro.RETRO_ACTIONS) = old
+
+
+def test_held_day_keeps_no_rows() -> None:
+    info = {
+        "label": "held",
+        "cutoff": "2026-09-22T09:30:00-04:00",
+        "sources": {},
+        "missing_late": [],
+        "absent": [],
+    }
+    snap = retro.snapshot_for(
+        "2026-09-22", info, [{"ticker": "PACS", "open": 1}], "sha",
+    )
+    assert snap["rows"] == []
+    assert snap["n_rows"] == 0
+    assert snap["label"] == "held"
+    assert snap["tape"] == "raw"
+    assert snap["auto_adjust"] is False
+    assert retro.price_gate_fails(["PACS"], [], [])
+    assert retro.price_gate_fails([], ["PACS"], [])
+    assert retro.price_gate_fails([], [], [{"ticker": "PACS"}])
+    assert retro.price_gate_fails([], [], []) is False
+
+
+def test_raw_lock_replaces_adjusted_and_leaves_the_live_store() -> None:
+    import json
+    import pandas as pd
+    from src import price_store as ps
+
+    live = {
+        path: path.read_bytes() if path.is_file() else None
+        for path in (ps.STORE_PATH, ps.ACTIONS_PATH)
+    }
+    with tempfile.TemporaryDirectory() as d:
+        root = Path(d)
+        old = _use_retro_store(root)
+        download = retro._download_raw
+        try:
+            pd.DataFrame([{
+                "date": "2026-05-01", "ticker": "OLD",
+                "open": 1.0, "high": 1.0, "low": 1.0, "close": 1.0, "volume": 1,
+            }]).to_parquet(retro.RETRO_STORE, index=False)
+            retro.RETRO_META.write_text(json.dumps({
+                "locked": True,
+                "adjusted": True,
+                "auto_adjust": True,
+                "sha256": "abc",
+            }), encoding="utf-8")
+
+            def fake(names, start, end):
+                assert start == retro.PRICE_START
+                assert "AAA" in names
+                ohlc = pd.DataFrame([{
+                    "date": "2026-09-22", "ticker": "AAA",
+                    "open": 10.0, "high": 11.0, "low": 9.0,
+                    "close": 10.5, "volume": 100,
+                }])
+                acts = pd.DataFrame([{
+                    "date": "2026-06-01", "ticker": "AAA",
+                    "dividend": 0.2, "split": 0.0, "close": 10.0,
+                }])
+                return ohlc, acts
+
+            retro._download_raw = fake
+            digest = retro.fetch_raw_bars(["AAA"])
+            meta = json.loads(retro.RETRO_META.read_text(encoding="utf-8"))
+            assert meta["auto_adjust"] is False
+            assert meta["adjusted"] is False
+            assert meta["sha256"] == digest
+            assert retro.RETRO_ACTIONS.is_file()
+            frame = pd.read_parquet(retro.RETRO_STORE)
+            assert list(frame["ticker"]) == ["AAA"]
+            assert "OLD" not in set(frame["ticker"])
+            assert float(frame["close"].iloc[0]) == 10.5
+
+            def boom(names, start, end):
+                raise AssertionError("raw lock must not download again")
+
+            retro._download_raw = boom
+            assert retro.fetch_raw_bars(["AAA"]) == digest
+        finally:
+            retro._download_raw = download
+            _restore_retro_store(old)
+    for path, blob in live.items():
+        now = path.read_bytes() if path.is_file() else None
+        assert now == blob
+
+
+def test_recover_fills_raw_csv_then_stooq_without_touching_live_prices() -> None:
+    import pandas as pd
+    from src import factor_mine_freeze as fmf
+    from src import price_store as ps
+
+    live_actions = ps.ACTIONS_PATH.read_bytes() if ps.ACTIONS_PATH.is_file() else None
+    with tempfile.TemporaryDirectory() as d:
+        old = _use_retro_store(Path(d))
+        download = retro._download_raw
+        radar = retro._radar_raw_quotes
+        fetch_stooq = fmf._fetch_stooq
+        try:
+            retro.lock_price_meta(pd.DataFrame([{
+                "date": "2026-09-21", "ticker": "PACS",
+                "open": 10.0, "high": 10.0, "low": 10.0,
+                "close": 10.0, "volume": 1,
+            }]), pd.DataFrame())
+            retro._download_raw = lambda names, start, end: (
+                pd.DataFrame(), pd.DataFrame(),
+            )
+            retro._radar_raw_quotes = lambda date: {
+                "PACS": {"open": 12.0, "close": 13.0},
+            }
+            stooq_calls: list[str] = []
+
+            def no_stooq(ticker):
+                stooq_calls.append(ticker)
+                return ""
+
+            fmf._fetch_stooq = no_stooq
+            assert retro.recover_session_bars("2026-09-22", ["PACS"]) == []
+            assert stooq_calls == []
+            df = pd.read_parquet(retro.RETRO_STORE)
+            df["date"] = pd.to_datetime(df["date"]).dt.strftime("%Y-%m-%d")
+            prior = df[(df["ticker"] == "PACS") & (df["date"] == "2026-09-21")]
+            assert float(prior["close"].iloc[0]) == 10.0
+            filled = df[(df["ticker"] == "PACS") & (df["date"] == "2026-09-22")]
+            assert float(filled["open"].iloc[0]) == 12.0
+            assert float(filled["close"].iloc[0]) == 13.0
+
+            retro._radar_raw_quotes = lambda date: {}
+
+            def stooq(ticker):
+                stooq_calls.append(ticker)
+                return (
+                    "Date,Open,High,Low,Close,Volume\n"
+                    "2026-09-22,1,2,0.5,1.5,10\n"
+                )
+
+            fmf._fetch_stooq = stooq
+            assert retro.recover_session_bars("2026-09-22", ["ZZZ"]) == []
+            assert stooq_calls == ["ZZZ"]
+            df = pd.read_parquet(retro.RETRO_STORE)
+            df["ticker"] = df["ticker"].astype(str)
+            assert "ZZZ" in set(df["ticker"])
+
+            def empty_stooq(ticker):
+                return ""
+
+            fmf._fetch_stooq = empty_stooq
+            assert retro.recover_session_bars("2026-09-22", ["GONE"]) == ["GONE"]
+        finally:
+            retro._download_raw = download
+            retro._radar_raw_quotes = radar
+            fmf._fetch_stooq = fetch_stooq
+            _restore_retro_store(old)
+    now = ps.ACTIONS_PATH.read_bytes() if ps.ACTIONS_PATH.is_file() else None
+    assert now == live_actions
+
+
+def test_late_raw_csv_is_not_a_session_fill() -> None:
+    from src import factor_mine_freeze as fmf
+
+    with tempfile.TemporaryDirectory() as d:
+        old = _use_retro_store(Path(d))
+        download = retro._download_raw
+        tape = fmf.day_open_tape
+        raw_bytes = fmf._theme_radar_raw_bytes
+        fetch_stooq = fmf._fetch_stooq
+        calls = {"raw": 0}
+        try:
+            retro._download_raw = lambda names, start, end: (
+                __import__("pandas").DataFrame(), __import__("pandas").DataFrame(),
+            )
+            fmf.day_open_tape = lambda date: {"source": "stooq", "opens": {}}
+
+            def raw(date):
+                calls["raw"] += 1
+                return b"Ticker,Price,Open\nPACS,13,12\n"
+
+            fmf._theme_radar_raw_bytes = raw
+            fmf._fetch_stooq = lambda ticker: (
+                "Date,Open,High,Low,Close,Volume\n2026-09-22,1,1,1,1,1\n"
+            )
+            assert retro.recover_session_bars("2026-09-22", ["PACS"]) == []
+            assert calls["raw"] == 0
+        finally:
+            retro._download_raw = download
+            fmf.day_open_tape = tape
+            fmf._theme_radar_raw_bytes = raw_bytes
+            fmf._fetch_stooq = fetch_stooq
+            _restore_retro_store(old)
+
+
 def test_incomplete_snapshot_carries_no_rows() -> None:
     info = {
         "label": "incomplete_pit",
@@ -306,4 +509,8 @@ if __name__ == "__main__":
     test_daily_returns_csv_lists_each_start_book()
     test_baselines_section_keeps_the_hot4_table()
     test_incomplete_snapshot_carries_no_rows()
+    test_held_day_keeps_no_rows()
+    test_raw_lock_replaces_adjusted_and_leaves_the_live_store()
+    test_recover_fills_raw_csv_then_stooq_without_touching_live_prices()
+    test_late_raw_csv_is_not_a_session_fill()
     print("factor-mine retro tests passed")
