@@ -19,7 +19,7 @@
     },
     {
       "date": "2026-08-14",
-      "label": "incomplete_pit",
+      "label": "held",
       "cutoff": "2026-08-14T09:30:00-04:00",
       "missing_late": [
         "judge"
@@ -32,11 +32,85 @@
         "events",
         "research"
       ],
+      "missing_prices": [],
+      "cross_check_n": 10,
+      "cross_check": [
+        {
+          "ticker": "APH",
+          "field": "close",
+          "ours": 83.55500030517578,
+          "ref": 167.11,
+          "source": "theme-radar snapshots/2026-08-14.csv Price"
+        },
+        {
+          "ticker": "APH",
+          "field": "open",
+          "ours": 82.82499694824219,
+          "ref": 165.65,
+          "source": "finviz_raw"
+        },
+        {
+          "ticker": "BRCC",
+          "field": "close",
+          "ours": 8.489999771118164,
+          "ref": 0.85,
+          "source": "theme-radar snapshots/2026-08-14.csv Price"
+        },
+        {
+          "ticker": "BRCC",
+          "field": "open",
+          "ours": 8.489999771118164,
+          "ref": 0.85,
+          "source": "finviz_raw"
+        },
+        {
+          "ticker": "NRDY",
+          "field": "close",
+          "ours": 10.604999542236328,
+          "ref": 0.71,
+          "source": "theme-radar snapshots/2026-08-14.csv Price"
+        },
+        {
+          "ticker": "NRDY",
+          "field": "open",
+          "ours": 10.875,
+          "ref": 0.72,
+          "source": "finviz_raw"
+        },
+        {
+          "ticker": "REAX",
+          "field": "close",
+          "ours": 24.0,
+          "ref": 2.4,
+          "source": "theme-radar snapshots/2026-08-14.csv Price"
+        },
+        {
+          "ticker": "REAX",
+          "field": "open",
+          "ours": 24.100000381469727,
+          "ref": 2.41,
+          "source": "finviz_raw"
+        },
+        {
+          "ticker": "RUSHA",
+          "field": "close",
+          "ours": 54.81999969482422,
+          "ref": 82.23,
+          "source": "theme-radar snapshots/2026-08-14.csv Price"
+        },
+        {
+          "ticker": "RUSHA",
+          "field": "open",
+          "ours": 54.9466667175293,
+          "ref": 82.42,
+          "source": "finviz_raw"
+        }
+      ],
       "n_sources": 5
     },
     {
       "date": "2026-08-17",
-      "label": "incomplete_pit",
+      "label": "held",
       "cutoff": "2026-08-17T09:30:00-04:00",
       "missing_late": [
         "judge"
@@ -49,11 +123,99 @@
         "events",
         "research"
       ],
+      "missing_prices": [],
+      "cross_check_n": 16,
+      "cross_check": [
+        {
+          "ticker": "APH",
+          "field": "close",
+          "ours": 85.43499755859375,
+          "ref": 170.87,
+          "source": "theme-radar snapshots/2026-08-17.csv Price"
+        },
+        {
+          "ticker": "APH",
+          "field": "open",
+          "ours": 83.9749984741211,
+          "ref": 167.95,
+          "source": "finviz_raw"
+        },
+        {
+          "ticker": "BBBY",
+          "missing": [
+            "missing session close"
+          ],
+          "source": "theme-radar snapshots/2026-08-17.csv Price"
+        },
+        {
+          "ticker": "BBBY",
+          "missing": [
+            "missing 09:30 open reference"
+          ],
+          "source": "stooq BBBY.us Open"
+        },
+        {
+          "ticker": "BRCC",
+          "field": "close",
+          "ours": 8.15999984741211,
+          "ref": 0.82,
+          "source": "theme-radar snapshots/2026-08-17.csv Price"
+        },
+        {
+          "ticker": "BRCC",
+          "field": "open",
+          "ours": 8.010000228881836,
+          "ref": 0.8,
+          "source": "finviz_raw"
+        },
+        {
+          "ticker": "EWAVU",
+          "missing": [
+            "missing session close"
+          ],
+          "source": "theme-radar snapshots/2026-08-17.csv Price"
+        },
+        {
+          "ticker": "EWAVU",
+          "missing": [
+            "missing 09:30 open reference"
+          ],
+          "source": "stooq EWAVU.us Open"
+        },
+        {
+          "ticker": "NRDY",
+          "field": "close",
+          "ours": 10.289999961853027,
+          "ref": 0.69,
+          "source": "theme-radar snapshots/2026-08-17.csv Price"
+        },
+        {
+          "ticker": "NRDY",
+          "field": "open",
+          "ours": 10.050000190734863,
+          "ref": 0.67,
+          "source": "finviz_raw"
+        },
+        {
+          "ticker": "REAX",
+          "field": "close",
+          "ours": 24.200000762939453,
+          "ref": 2.42,
+          "source": "theme-radar snapshots/2026-08-17.csv Price"
+        },
+        {
+          "ticker": "REAX",
+          "field": "open",
+          "ours": 23.5,
+          "ref": 2.35,
+          "source": "finviz_raw"
+        }
+      ],
       "n_sources": 5
     },
     {
       "date": "2026-08-18",
-      "label": "incomplete_pit",
+      "label": "held",
       "cutoff": "2026-08-18T09:30:00-04:00",
       "missing_late": [
         "export",
@@ -69,11 +231,16 @@
         "events",
         "research"
       ],
+      "missing_prices": [
+        "EQR"
+      ],
+      "cross_check_n": 0,
+      "cross_check": [],
       "n_sources": 2
     },
     {
       "date": "2026-08-19",
-      "label": "incomplete_pit",
+      "label": "held",
       "cutoff": "2026-08-19T09:30:00-04:00",
       "missing_late": [
         "export",
@@ -89,11 +256,71 @@
         "events",
         "research"
       ],
+      "missing_prices": [],
+      "cross_check_n": 8,
+      "cross_check": [
+        {
+          "ticker": "APH",
+          "field": "close",
+          "ours": 78.0199966430664,
+          "ref": 156.04,
+          "source": "theme-radar snapshots/2026-08-19.csv Price"
+        },
+        {
+          "ticker": "APH",
+          "field": "open",
+          "ours": 81.0,
+          "ref": 162.0,
+          "source": "finviz_raw"
+        },
+        {
+          "ticker": "BRCC",
+          "field": "close",
+          "ours": 8.100000381469727,
+          "ref": 0.81,
+          "source": "theme-radar snapshots/2026-08-19.csv Price"
+        },
+        {
+          "ticker": "BRCC",
+          "field": "open",
+          "ours": 8.25,
+          "ref": 0.82,
+          "source": "finviz_raw"
+        },
+        {
+          "ticker": "REAX",
+          "field": "close",
+          "ours": 27.899999618530273,
+          "ref": 2.79,
+          "source": "theme-radar snapshots/2026-08-19.csv Price"
+        },
+        {
+          "ticker": "REAX",
+          "field": "open",
+          "ours": 26.399999618530273,
+          "ref": 2.64,
+          "source": "finviz_raw"
+        },
+        {
+          "ticker": "RUSHA",
+          "field": "close",
+          "ours": 52.220001220703125,
+          "ref": 78.33,
+          "source": "theme-radar snapshots/2026-08-19.csv Price"
+        },
+        {
+          "ticker": "RUSHA",
+          "field": "open",
+          "ours": 53.61333465576172,
+          "ref": 80.42,
+          "source": "finviz_raw"
+        }
+      ],
       "n_sources": 2
     },
     {
       "date": "2026-08-20",
-      "label": "incomplete_pit",
+      "label": "held",
       "cutoff": "2026-08-20T09:30:00-04:00",
       "missing_late": [
         "export",
@@ -107,11 +334,71 @@
         "baseline",
         "research"
       ],
+      "missing_prices": [],
+      "cross_check_n": 8,
+      "cross_check": [
+        {
+          "ticker": "APH",
+          "field": "close",
+          "ours": 76.55500030517578,
+          "ref": 153.11,
+          "source": "theme-radar snapshots/2026-08-20.csv Price"
+        },
+        {
+          "ticker": "APH",
+          "field": "open",
+          "ours": 77.875,
+          "ref": 155.75,
+          "source": "finviz_raw"
+        },
+        {
+          "ticker": "BRCC",
+          "field": "close",
+          "ours": 8.640000343322754,
+          "ref": 0.86,
+          "source": "theme-radar snapshots/2026-08-20.csv Price"
+        },
+        {
+          "ticker": "BRCC",
+          "field": "open",
+          "ours": 8.199999809265137,
+          "ref": 0.82,
+          "source": "finviz_raw"
+        },
+        {
+          "ticker": "REAX",
+          "field": "close",
+          "ours": 27.5,
+          "ref": 2.75,
+          "source": "theme-radar snapshots/2026-08-20.csv Price"
+        },
+        {
+          "ticker": "REAX",
+          "field": "open",
+          "ours": 27.5,
+          "ref": 2.75,
+          "source": "finviz_raw"
+        },
+        {
+          "ticker": "RUSHA",
+          "field": "close",
+          "ours": 51.40666580200195,
+          "ref": 77.11,
+          "source": "theme-radar snapshots/2026-08-20.csv Price"
+        },
+        {
+          "ticker": "RUSHA",
+          "field": "open",
+          "ours": 51.6533317565918,
+          "ref": 77.48,
+          "source": "finviz_raw"
+        }
+      ],
       "n_sources": 4
     },
     {
       "date": "2026-08-21",
-      "label": "incomplete_pit",
+      "label": "held",
       "cutoff": "2026-08-21T09:30:00-04:00",
       "missing_late": [
         "export",
@@ -125,11 +412,71 @@
         "baseline",
         "research"
       ],
+      "missing_prices": [],
+      "cross_check_n": 8,
+      "cross_check": [
+        {
+          "ticker": "APH",
+          "field": "close",
+          "ours": 78.50499725341797,
+          "ref": 157.01,
+          "source": "theme-radar snapshots/2026-08-21.csv Price"
+        },
+        {
+          "ticker": "APH",
+          "field": "open",
+          "ours": 78.25,
+          "ref": 156.5,
+          "source": "finviz_raw"
+        },
+        {
+          "ticker": "BRCC",
+          "field": "close",
+          "ours": 8.800000190734863,
+          "ref": 0.88,
+          "source": "theme-radar snapshots/2026-08-21.csv Price"
+        },
+        {
+          "ticker": "BRCC",
+          "field": "open",
+          "ours": 8.550000190734863,
+          "ref": 0.86,
+          "source": "finviz_raw"
+        },
+        {
+          "ticker": "REAX",
+          "field": "close",
+          "ours": 26.399999618530273,
+          "ref": 2.64,
+          "source": "theme-radar snapshots/2026-08-21.csv Price"
+        },
+        {
+          "ticker": "REAX",
+          "field": "open",
+          "ours": 26.760000228881836,
+          "ref": 2.68,
+          "source": "finviz_raw"
+        },
+        {
+          "ticker": "RUSHA",
+          "field": "close",
+          "ours": 52.52000045776367,
+          "ref": 78.78,
+          "source": "theme-radar snapshots/2026-08-21.csv Price"
+        },
+        {
+          "ticker": "RUSHA",
+          "field": "open",
+          "ours": 51.633331298828125,
+          "ref": 77.45,
+          "source": "finviz_raw"
+        }
+      ],
       "n_sources": 4
     },
     {
       "date": "2026-08-24",
-      "label": "pit_rebuilt",
+      "label": "held",
       "cutoff": "2026-08-24T09:30:00-04:00",
       "missing_late": [],
       "absent": [
@@ -138,12 +485,57 @@
         "baseline",
         "research"
       ],
-      "dropped_prices": [],
+      "missing_prices": [],
+      "cross_check_n": 6,
+      "cross_check": [
+        {
+          "ticker": "APH",
+          "field": "close",
+          "ours": 77.7750015258789,
+          "ref": 155.55,
+          "source": "theme-radar snapshots/2026-08-24.csv Price"
+        },
+        {
+          "ticker": "APH",
+          "field": "open",
+          "ours": 77.5,
+          "ref": 155.0,
+          "source": "finviz_raw"
+        },
+        {
+          "ticker": "REAX",
+          "field": "close",
+          "ours": 24.0,
+          "ref": 2.4,
+          "source": "theme-radar snapshots/2026-08-24.csv Price"
+        },
+        {
+          "ticker": "REAX",
+          "field": "open",
+          "ours": 26.0,
+          "ref": 2.6,
+          "source": "finviz_raw"
+        },
+        {
+          "ticker": "RUSHA",
+          "field": "close",
+          "ours": 52.48666763305664,
+          "ref": 78.73,
+          "source": "theme-radar snapshots/2026-08-24.csv Price"
+        },
+        {
+          "ticker": "RUSHA",
+          "field": "open",
+          "ours": 52.8466682434082,
+          "ref": 79.27,
+          "source": "finviz_raw"
+        }
+      ],
       "n_sources": 8
     },
     {
       "date": "2026-08-25",
-      "label": "incomplete_pit",
+      "label": "held",
       "cutoff": "2026-08-25T09:30:00-04:00",
       "missing_late": [
         "digest",
@@ -158,11 +550,43 @@
         "baseline",
         "research"
       ],
+      "missing_prices": [],
+      "cross_check_n": 4,
+      "cross_check": [
+        {
+          "ticker": "APH",
+          "field": "close",
+          "ours": 79.38999938964844,
+          "ref": 158.78,
+          "source": "theme-radar snapshots/2026-08-25.csv Price"
+        },
+        {
+          "ticker": "APH",
+          "field": "open",
+          "ours": 79.83000183105469,
+          "ref": 159.66,
+          "source": "finviz_raw"
+        },
+        {
+          "ticker": "RUSHA",
+          "field": "close",
+          "ours": 51.40666580200195,
+          "ref": 77.11,
+          "source": "theme-radar snapshots/2026-08-25.csv Price"
+        },
+        {
+          "ticker": "RUSHA",
+          "field": "open",
+          "ours": 52.61333465576172,
+          "ref": 78.92,
+          "source": "finviz_raw"
+        }
+      ],
       "n_sources": 3
     },
     {
       "date": "2026-08-26",
-      "label": "incomplete_pit",
+      "label": "held",
       "cutoff": "2026-08-26T09:30:00-04:00",
       "missing_late": [
         "join",
@@ -173,11 +597,29 @@
         "export",
         "baseline"
       ],
+      "missing_prices": [],
+      "cross_check_n": 2,
+      "cross_check": [
+        {
+          "ticker": "APH",
+          "field": "close",
+          "ours": 80.66999816894531,
+          "ref": 161.34,
+          "source": "theme-radar snapshots/2026-08-26.csv Price"
+        },
+        {
+          "ticker": "APH",
+          "field": "open",
+          "ours": 79.53500366210938,
+          "ref": 159.07,
+          "source": "finviz_raw"
+        }
+      ],
       "n_sources": 7
     },
     {
       "date": "2026-08-27",
-      "label": "incomplete_pit",
+      "label": "held",
       "cutoff": "2026-08-27T09:30:00-04:00",
       "missing_late": [
         "catalyst",
@@ -188,45 +630,134 @@
         "predict",
         "research"
       ],
+      "missing_prices": [
+        "APGE",
+        "BRR",
+        "DOMO",
+        "TBPH"
+      ],
+      "cross_check_n": 0,
+      "cross_check": [],
       "n_sources": 7
     },
     {
       "date": "2026-08-28",
-      "label": "pit_rebuilt",
+      "label": "held",
       "cutoff": "2026-08-28T09:30:00-04:00",
       "missing_late": [],
       "absent": [
         "baseline"
       ],
-      "dropped_prices": [
-        "ADBT"
+      "missing_prices": [
+        "ADBT",
+        "APMD"
+      ],
+      "cross_check_n": 4,
+      "cross_check": [
+        {
+          "ticker": "APH",
+          "field": "close",
+          "ours": 78.87000274658203,
+          "ref": 157.74,
+          "source": "theme-radar snapshots/2026-08-28.csv Price"
+        },
+        {
+          "ticker": "APH",
+          "field": "open",
+          "ours": 80.625,
+          "ref": 161.25,
+          "source": "finviz_raw"
+        },
+        {
+          "ticker": "RUSHA",
+          "field": "close",
+          "ours": 50.8466682434082,
+          "ref": 76.27,
+          "source": "theme-radar snapshots/2026-08-28.csv Price"
+        },
+        {
+          "ticker": "RUSHA",
+          "field": "open",
+          "ours": 51.38666534423828,
+          "ref": 77.08,
+          "source": "finviz_raw"
+        }
       ],
       "n_sources": 11
     },
     {
       "date": "2026-08-31",
-      "label": "pit_rebuilt",
+      "label": "held",
       "cutoff": "2026-08-31T09:30:00-04:00",
       "missing_late": [],
       "absent": [
         "research"
       ],
-      "dropped_prices": [],
+      "missing_prices": [],
+      "cross_check_n": 4,
+      "cross_check": [
+        {
+          "ticker": "APH",
+          "field": "close",
+          "ours": 79.2750015258789,
+          "ref": 158.55,
+          "source": "theme-radar snapshots/2026-08-31.csv Price"
+        },
+        {
+          "ticker": "APH",
+          "field": "open",
+          "ours": 78.20500183105469,
+          "ref": 156.41,
+          "source": "finviz_raw"
+        },
+        {
+          "ticker": "RUSHA",
+          "field": "close",
+          "ours": 51.220001220703125,
+          "ref": 76.83,
+          "source": "theme-radar snapshots/2026-08-31.csv Price"
+        },
+        {
+          "ticker": "RUSHA",
+          "field": "open",
+          "ours": 50.8466682434082,
+          "ref": 76.27,
+          "source": "finviz_raw"
+        }
+      ],
       "n_sources": 11
     },
     {
       "date": "2026-09-01",
-      "label": "incomplete_pit",
+      "label": "held",
       "cutoff": "2026-09-01T09:30:00-04:00",
       "missing_late": [
         "baseline"
       ],
       "absent": [],
+      "missing_prices": [],
+      "cross_check_n": 2,
+      "cross_check": [
+        {
+          "ticker": "APH",
+          "field": "close",
+          "ours": 81.58999633789062,
+          "ref": 163.18,
+          "source": "theme-radar snapshots/2026-09-01.csv Price"
+        },
+        {
+          "ticker": "APH",
+          "field": "open",
+          "ours": 79.55500030517578,
+          "ref": 159.11,
+          "source": "finviz_raw"
+        }
+      ],
       "n_sources": 11
     },
     {
       "date": "2026-09-02",
-      "label": "incomplete_pit",
+      "label": "held",
       "cutoff": "2026-09-02T09:30:00-04:00",
       "missing_late": [
         "join",
@@ -235,35 +766,61 @@
       "absent": [
         "research"
       ],
+      "missing_prices": [],
+      "cross_check_n": 2,
+      "cross_check": [
+        {
+          "ticker": "APH",
+          "field": "close",
+          "ours": 80.04000091552734,
+          "ref": 160.08,
+          "source": "theme-radar snapshots/2026-09-02.csv Price"
+        },
+        {
+          "ticker": "APH",
+          "field": "open",
+          "ours": 80.02999877929688,
+          "ref": 160.06,
+          "source": "finviz_raw"
+        }
+      ],
       "n_sources": 9
     },
     {
       "date": "2026-09-03",
-      "label": "incomplete_pit",
+      "label": "held",
       "cutoff": "2026-09-03T09:30:00-04:00",
       "missing_late": [
         "join",
         "weather"
       ],
       "absent": [],
+      "missing_prices": [
+        "HLX"
+      ],
+      "cross_check_n": 0,
+      "cross_check": [],
       "n_sources": 10
     },
     {
       "date": "2026-09-04",
-      "label": "pit_rebuilt",
+      "label": "held",
       "cutoff": "2026-09-04T09:30:00-04:00",
       "missing_late": [],
       "absent": [],
-      "dropped_prices": [
-        "SGLD",
+      "missing_prices": [
+        "ATTO",
         "BRR",
-        "DOMO"
+        "DOMO",
+        "SGLD"
       ],
+      "cross_check_n": 0,
+      "cross_check": [],
       "n_sources": 12
     },
     {
       "date": "2026-09-08",
-      "label": "incomplete_pit",
+      "label": "held",
       "cutoff": "2026-09-08T09:30:00-04:00",
       "missing_late": [
         "predict",
@@ -273,6 +830,38 @@
       ],
       "absent": [
         "catalyst"
+      ],
+      "missing_prices": [],
+      "cross_check_n": 4,
+      "cross_check": [
+        {
+          "ticker": "JONEU",
+          "missing": [
+            "missing session close"
+          ],
+          "source": "theme-radar snapshots/2026-09-08.csv Price"
+        },
+        {
+          "ticker": "JONEU",
+          "missing": [
+            "missing 09:30 open reference"
+          ],
+          "source": "stooq JONEU.us Open"
+        },
+        {
+          "ticker": "XTERU",
+          "missing": [
+            "missing session close"
+          ],
+          "source": "theme-radar snapshots/2026-09-08.csv Price"
+        },
+        {
+          "ticker": "XTERU",
+          "missing": [
+            "missing 09:30 open reference"
+          ],
+          "source": "stooq XTERU.us Open"
+        }
       ],
       "n_sources": 7
     },
@@ -290,32 +879,57 @@
     },
     {
       "date": "2026-09-10",
-      "label": "pit_rebuilt",
+      "label": "held",
       "cutoff": "2026-09-10T09:30:00-04:00",
       "missing_late": [],
       "absent": [],
-      "dropped_prices": [
+      "missing_prices": [
+        "JMKE",
+        "REF",
         "TRBG"
       ],
+      "cross_check_n": 0,
+      "cross_check": [],
       "n_sources": 12
     },
     {
       "date": "2026-09-11",
-      "label": "pit_rebuilt",
+      "label": "held",
       "cutoff": "2026-09-11T09:30:00-04:00",
       "missing_late": [],
       "absent": [],
-      "dropped_prices": [],
+      "missing_prices": [
+        "REF"
+      ],
+      "cross_check_n": 0,
+      "cross_check": [],
       "n_sources": 12
     },
     {
       "date": "2026-09-14",
-      "label": "pit_rebuilt",
+      "label": "held",
       "cutoff": "2026-09-14T09:30:00-04:00",
       "missing_late": [],
       "absent": [],
-      "dropped_prices": [
-        "SMR"
+      "missing_prices": [
+        "ADBT"
+      ],
+      "cross_check_n": 2,
+      "cross_check": [
+        {
+          "ticker": "BRTMU",
+          "missing": [
+            "missing session close"
+          ],
+          "source": "theme-radar snapshots/2026-09-14.csv Price"
+        },
+        {
+          "ticker": "BRTMU",
+          "missing": [
+            "missing 09:30 open reference"
+          ],
+          "source": "stooq BRTMU.us Open"
+        }
       ],
       "n_sources": 12
     },
@@ -325,120 +939,170 @@
       "cutoff": "2026-09-15T09:30:00-04:00",
       "missing_late": [],
       "absent": [],
-      "dropped_prices": [],
       "n_sources": 12
     },
     {
       "date": "2026-09-16",
-      "label": "pit_rebuilt",
+      "label": "held",
       "cutoff": "2026-09-16T09:30:00-04:00",
       "missing_late": [],
       "absent": [],
-      "dropped_prices": [
+      "missing_prices": [
+        "BRR",
+        "REF",
         "SWRD"
       ],
+      "cross_check_n": 0,
+      "cross_check": [],
       "n_sources": 12
     },
     {
       "date": "2026-09-17",
-      "label": "pit_rebuilt",
+      "label": "held",
       "cutoff": "2026-09-17T09:30:00-04:00",
       "missing_late": [],
       "absent": [],
-      "dropped_prices": [],
+      "missing_prices": [
+        "BRR"
+      ],
+      "cross_check_n": 0,
+      "cross_check": [],
       "n_sources": 12
     },
     {
       "date": "2026-09-18",
-      "label": "pit_rebuilt",
+      "label": "held",
       "cutoff": "2026-09-18T09:30:00-04:00",
       "missing_late": [],
       "absent": [],
-      "dropped_prices": [],
+      "missing_prices": [
+        "BRR",
+        "SWRD"
+      ],
+      "cross_check_n": 0,
+      "cross_check": [],
       "n_sources": 12
     },
     {
       "date": "2026-09-21",
-      "label": "pit_rebuilt",
+      "label": "held",
       "cutoff": "2026-09-21T09:30:00-04:00",
       "missing_late": [],
       "absent": [],
-      "dropped_prices": [],
+      "missing_prices": [],
+      "cross_check_n": 4,
+      "cross_check": [
+        {
+          "ticker": "CSAN",
+          "field": "close",
+          "ours": 2.9700000286102295,
+          "ref": 2.75,
+          "source": "theme-radar snapshots/2026-09-21.csv Price"
+        },
+        {
+          "ticker": "CSAN",
+          "field": "open",
+          "ours": 2.809999942779541,
+          "ref": 2.75,
+          "source": "finviz_raw"
+        },
+        {
+          "ticker": "DUKU",
+          "missing": [
+            "missing session close"
+          ],
+          "source": "theme-radar snapshots/2026-09-21.csv Price"
+        },
+        {
+          "ticker": "DUKU",
+          "missing": [
+            "missing 09:30 open reference"
+          ],
+          "source": "stooq DUKU.us Open"
+        }
+      ],
       "n_sources": 12
     },
     {
       "date": "2026-09-22",
-      "label": "pit_rebuilt",
+      "label": "held",
       "cutoff": "2026-09-22T09:30:00-04:00",
       "missing_late": [],
       "absent": [],
-      "dropped_prices": [
-        "PACS",
-        "MKC",
-        "EL",
-        "DLO",
-        "TDC",
-        "FJET",
-        "APPS",
-        "ARHS",
-        "HELP",
-        "NN",
-        "GRAL",
-        "EU",
-        "ARQQ",
-        "AIBZ",
-        "GRPN",
-        "YSS",
-        "FIVN",
-        "XXI",
-        "MRAM",
-        "AEHL",
-        "EMAT",
-        "BRVE",
-        "AMRX",
-        "VNET",
-        "GCTS",
-        "FWDI",
-        "RXT",
-        "NRGV",
-        "ASX",
-        "HYLN",
-        "CEVA",
-        "TWLO",
-        "NEOG",
-        "NTSK",
-        "FOSL",
-        "AIP",
-        "GDS",
-        "RBRK",
-        "XERS",
-        "PENG",
-        "ABVX",
-        "ANAB",
-        "MLKN",
-        "THO",
-        "CBRL",
-        "CTAS",
-        "PAYX"
+      "missing_prices": [
+        "BRVE"
+      ],
+      "cross_check_n": 2,
+      "cross_check": [
+        {
+          "ticker": "BRR",
+          "missing": [
+            "missing session close"
+          ],
+          "source": "theme-radar snapshots/2026-09-22.csv Price"
+        },
+        {
+          "ticker": "BRR",
+          "missing": [
+            "missing 09:30 open reference"
+          ],
+          "source": "stooq BRR.us Open"
+        }
       ],
       "n_sources": 12
     },
     {
       "date": "2026-09-23",
-      "label": "pit_rebuilt",
+      "label": "held",
       "cutoff": "2026-09-23T09:30:00-04:00",
       "missing_late": [],
       "absent": [],
-      "dropped_prices": [],
+      "missing_prices": [],
+      "cross_check_n": 2,
+      "cross_check": [
+        {
+          "ticker": "GRAL",
+          "field": "close",
+          "ours": 108.5199966430664,
+          "ref": 109.73,
+          "source": "theme-radar snapshots/2026-09-23.csv Price"
+        },
+        {
+          "ticker": "GRAL",
+          "field": "open",
+          "ours": 108.5199966430664,
+          "ref": 110.0,
+          "source": "finviz_raw"
+        }
+      ],
       "n_sources": 12
     },
     {
       "date": "2026-09-24",
-      "label": "pit_rebuilt",
+      "label": "held",
       "cutoff": "2026-09-24T09:30:00-04:00",
       "missing_late": [],
       "absent": [],
-      "dropped_prices": [],
+      "missing_prices": [
+        "SWRD"
+      ],
+      "cross_check_n": 2,
+      "cross_check": [
+        {
+          "ticker": "DOMO",
+          "missing": [
+            "missing session close"
+          ],
+          "source": "theme-radar snapshots/2026-09-24.csv Price"
+        },
+        {
+          "ticker": "DOMO",
+          "missing": [
+            "missing 09:30 open reference"
+          ],
+          "source": "stooq DOMO.us Open"
+        }
+      ],
       "n_sources": 12
     }
   ],
@@ -450,9 +1114,9 @@
       "start": "2026-08-13",
       "exclude": null,
       "fee": "futubull",
-      "total_ret_pct": 23.467,
-      "final_equity": 12346.73,
-      "n_trades": 61
+      "total_ret_pct": 0.0,
+      "final_equity": 10000.0,
+      "n_trades": 0
     },
     {
       "name": "union_hot_n4_h1",
@@ -461,9 +1125,9 @@
       "start": "2026-08-13",
       "exclude": "GLND",
       "fee": "futubull",
-      "total_ret_pct": -4.133,
-      "final_equity": 9586.71,
-      "n_trades": 62
+      "total_ret_pct": 0.0,
+      "final_equity": 10000.0,
+      "n_trades": 0
     },
     {
       "name": "union_hot_n4_h1",
@@ -472,9 +1136,9 @@
       "start": "2026-08-13",
       "exclude": null,
       "fee": "flat_15bp",
-      "total_ret_pct": 27.53,
-      "final_equity": 12753.0,
-      "n_trades": 61
+      "total_ret_pct": 0.0,
+      "final_equity": 10000.0,
+      "n_trades": 0
     },
     {
       "name": "union_hot_n4_h1",
@@ -483,9 +1147,9 @@
       "start": "2026-08-13",
       "exclude": "GLND",
       "fee": "flat_15bp",
-      "total_ret_pct": -1.031,
-      "final_equity": 9896.93,
-      "n_trades": 62
+      "total_ret_pct": 0.0,
+      "final_equity": 10000.0,
+      "n_trades": 0
     },
     {
       "name": "union_hot_n4_holdup",
@@ -494,9 +1158,9 @@
       "start": "2026-08-13",
       "exclude": null,
       "fee": "futubull",
-      "total_ret_pct": 51.788,
-      "final_equity": 15178.77,
-      "n_trades": 53
+      "total_ret_pct": 0.0,
+      "final_equity": 10000.0,
+      "n_trades": 0
     },
     {
       "name": "union_hot_n4_holdup",
@@ -505,9 +1169,9 @@
       "start": "2026-09-21",
       "exclude": null,
       "fee": "futubull",
-      "total_ret_pct": 12.898,
-      "final_equity": 11289.82,
-      "n_trades": 11
+      "total_ret_pct": 0.0,
+      "final_equity": 10000.0,
+      "n_trades": 0
     },
     {
       "name": "union_hot_n4_holdup",
@@ -516,9 +1180,9 @@
       "start": "2026-08-13",
       "exclude": "GLND",
       "fee": "futubull",
-      "total_ret_pct": 16.667,
-      "final_equity": 11666.7,
-      "n_trades": 53
+      "total_ret_pct": 0.0,
+      "final_equity": 10000.0,
+      "n_trades": 0
     },
     {
       "name": "union_hot_n4_holdup",
@@ -527,9 +1191,9 @@
       "start": "2026-09-21",
       "exclude": "GLND",
       "fee": "futubull",
-      "total_ret_pct": -10.905,
-      "final_equity": 8909.51,
-      "n_trades": 11
+      "total_ret_pct": 0.0,
+      "final_equity": 10000.0,
+      "n_trades": 0
     },
     {
       "name": "union_hot_n4_holdup",
@@ -538,9 +1202,9 @@
       "start": "2026-08-13",
       "exclude": null,
       "fee": "flat_15bp",
-      "total_ret_pct": 55.157,
-      "final_equity": 15515.72,
-      "n_trades": 53
+      "total_ret_pct": 0.0,
+      "final_equity": 10000.0,
+      "n_trades": 0
     },
     {
       "name": "union_hot_n4_holdup",
@@ -549,9 +1213,9 @@
       "start": "2026-09-21",
       "exclude": null,
       "fee": "flat_15bp",
-      "total_ret_pct": 13.882,
-      "final_equity": 11388.2,
-      "n_trades": 11
+      "total_ret_pct": 0.0,
+      "final_equity": 10000.0,
+      "n_trades": 0
     },
     {
       "name": "union_hot_n4_holdup",
@@ -560,9 +1224,9 @@
       "start": "2026-08-13",
       "exclude": "GLND",
       "fee": "flat_15bp",
-      "total_ret_pct": 19.137,
-      "final_equity": 11913.65,
-      "n_trades": 53
+      "total_ret_pct": 0.0,
+      "final_equity": 10000.0,
+      "n_trades": 0
     },
     {
       "name": "union_hot_n4_holdup",
@@ -571,9 +1235,9 @@
       "start": "2026-09-21",
       "exclude": "GLND",
       "fee": "flat_15bp",
-      "total_ret_pct": -10.197,
-      "final_equity": 8980.31,
-      "n_trades": 11
+      "total_ret_pct": 0.0,
+      "final_equity": 10000.0,
+      "n_trades": 0
     }
   ],
   "baselines": {
@@ -590,11 +1254,11 @@
           "start": "2026-08-13",
           "draws": 1000,
           "seed": 20260813,
-          "mean": -7.501,
-          "p5": -21.497,
-          "p50": -7.31,
-          "p95": 6.313,
-          "trades": 70,
+          "mean": 0.0,
+          "p5": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "trades": 0,
           "n_draws": 1000
         },
         {
@@ -605,11 +1269,11 @@
           "start": "2026-09-21",
           "draws": 1000,
           "seed": 20260813,
-          "mean": -6.439,
-          "p5": -12.771,
-          "p50": -6.803,
-          "p95": 0.471,
-          "trades": 22,
+          "mean": 0.0,
+          "p5": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "trades": 0,
           "n_draws": 1000
         },
         {
@@ -620,11 +1284,11 @@
           "start": "2026-08-13",
           "draws": 1000,
           "seed": 20260813,
-          "mean": -7.694,
-          "p5": -22.32,
-          "p50": -7.735,
-          "p95": 6.626,
-          "trades": 70,
+          "mean": 0.0,
+          "p5": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "trades": 0,
           "n_draws": 1000
         },
         {
@@ -635,11 +1299,11 @@
           "start": "2026-09-21",
           "draws": 1000,
           "seed": 20260813,
-          "mean": -6.707,
-          "p5": -13.031,
-          "p50": -6.759,
-          "p95": -0.363,
-          "trades": 22,
+          "mean": 0.0,
+          "p5": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "trades": 0,
           "n_draws": 1000
         },
         {
@@ -650,11 +1314,11 @@
           "start": "2026-08-13",
           "draws": 1000,
           "seed": 20260813,
-          "mean": -4.993,
-          "p5": -18.462,
-          "p50": -4.88,
-          "p95": 9.012,
-          "trades": 70,
+          "mean": 0.0,
+          "p5": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "trades": 0,
           "n_draws": 1000
         },
         {
@@ -665,11 +1329,11 @@
           "start": "2026-09-21",
           "draws": 1000,
           "seed": 20260813,
-          "mean": -5.622,
-          "p5": -11.631,
-          "p50": -5.908,
-          "p95": 1.163,
-          "trades": 22,
+          "mean": 0.0,
+          "p5": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "trades": 0,
           "n_draws": 1000
         },
         {
@@ -680,11 +1344,11 @@
           "start": "2026-08-13",
           "draws": 1000,
           "seed": 20260813,
-          "mean": -5.202,
-          "p5": -19.63,
-          "p50": -5.359,
-          "p95": 9.019,
-          "trades": 70,
+          "mean": 0.0,
+          "p5": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "trades": 0,
           "n_draws": 1000
         },
         {
@@ -695,28 +1359,28 @@
           "start": "2026-09-21",
           "draws": 1000,
           "seed": 20260813,
-          "mean": -5.898,
-          "p5": -11.974,
-          "p50": -5.957,
-          "p95": 0.365,
-          "trades": 22,
+          "mean": 0.0,
+          "p5": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "trades": 0,
           "n_draws": 1000
         }
       ]
     },
     "iwm": {
-      "tape": "Yahoo auto_adjust=True, fetched in memory. Not written to data/factor_mine/retro_prices or data/prices.",
+      "tape": "Yahoo auto_adjust=False, fetched in memory. Not written to data/factor_mine/retro_prices or data/prices.",
       "rows": [
         {
           "name": "iwm",
           "fee": "futubull",
           "universe": "buy-and-hold",
           "start": "2026-08-13",
-          "mean": -6.929,
+          "mean": -7.183,
           "trades": 1,
-          "final_equity": 9307.1,
+          "final_equity": 9281.75,
           "n_open": 1,
-          "tape": "Yahoo auto_adjust=True, fetched in memory. Not written to data/factor_mine/retro_prices or data/prices."
+          "tape": "Yahoo auto_adjust=False, fetched in memory. Not written to data/factor_mine/retro_prices or data/prices."
         },
         {
           "name": "iwm",
@@ -727,18 +1391,18 @@
           "trades": 1,
           "final_equity": 9841.17,
           "n_open": 1,
-          "tape": "Yahoo auto_adjust=True, fetched in memory. Not written to data/factor_mine/retro_prices or data/prices."
+          "tape": "Yahoo auto_adjust=False, fetched in memory. Not written to data/factor_mine/retro_prices or data/prices."
         },
         {
           "name": "iwm",
           "fee": "flat_15bp",
           "universe": "buy-and-hold",
           "start": "2026-08-13",
-          "mean": -6.981,
+          "mean": -7.235,
           "trades": 1,
-          "final_equity": 9301.91,
+          "final_equity": 9276.54,
           "n_open": 1,
-          "tape": "Yahoo auto_adjust=True, fetched in memory. Not written to data/factor_mine/retro_prices or data/prices."
+          "tape": "Yahoo auto_adjust=False, fetched in memory. Not written to data/factor_mine/retro_prices or data/prices."
         },
         {
           "name": "iwm",
@@ -749,7 +1413,7 @@
           "trades": 1,
           "final_equity": 9835.96,
           "n_open": 1,
-          "tape": "Yahoo auto_adjust=True, fetched in memory. Not written to data/factor_mine/retro_prices or data/prices."
+          "tape": "Yahoo auto_adjust=False, fetched in memory. Not written to data/factor_mine/retro_prices or data/prices."
         }
       ]
     },

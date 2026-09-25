@@ -1,7 +1,7 @@
 date,source,commit_sha,commit_time,scrape_ts,note
 2026-08-13,finviz_raw,a56a7f8d52cef158232fdeca25f9cf53f65291ab,2026-08-13T21:24:13Z,,latest raw.csv commit before the next session 09:30 ET
 2026-08-14,finviz_raw,f895079d16ff8d579fcbba5654e4ebcc659bf92a,2026-08-14T20:58:12Z,,latest raw.csv commit before the next session 09:30 ET
-2026-08-17,finviz_raw,72c7283431dd0dc8b0a4e73b3f38473235c8a58e,2026-08-17T20:56:34Z,,latest raw.csv commit before the next session 09:30 ET
+2026-08-17,finviz_raw,72c7283431dd0dc8b0a4e73b3f38473235c8a58e,2026-08-17T20:56:34Z,,latest raw.csv commit before the next session 09:30 ET; Stooq filled names missing from the file
 2026-08-18,finviz_raw,16530295bda23cc14e4953601819d0f5712515b4,2026-08-18T20:52:34Z,,latest raw.csv commit before the next session 09:30 ET
 2026-08-19,finviz_raw,c0ee269eed30f22e10fda1e8fd3c2f2ac4fe797f,2026-08-19T20:56:52Z,,latest raw.csv commit before the next session 09:30 ET
 2026-08-20,finviz_raw,9f6efeb4c66746da92bd0eb6dba78007a5eb3ecf,2026-08-20T20:58:25Z,,latest raw.csv commit before the next session 09:30 ET
@@ -16,16 +16,16 @@ date,source,commit_sha,commit_time,scrape_ts,note
 2026-09-02,finviz_raw,c21d7aaa3de0a9955a7ca393fc190a9e8f564544,2026-09-02T22:47:56Z,,latest raw.csv commit before the next session 09:30 ET
 2026-09-03,finviz_raw,85cd460af8755afd3e5155f094220af1f860cd54,2026-09-03T22:45:46Z,,latest raw.csv commit before the next session 09:30 ET
 2026-09-04,finviz_raw,9561fb79fd582e63c3eccf002cc1ee600e8c04b3,2026-09-04T22:30:10Z,,latest raw.csv commit before the next session 09:30 ET
-2026-09-08,finviz_raw,fceabb131123514c75cd907f6dcb7cc3a7fd8b70,2026-09-08T22:55:52Z,,latest raw.csv commit before the next session 09:30 ET
+2026-09-08,finviz_raw,fceabb131123514c75cd907f6dcb7cc3a7fd8b70,2026-09-08T22:55:52Z,,latest raw.csv commit before the next session 09:30 ET; Stooq filled names missing from the file
 2026-09-09,finviz_raw,15530ddba6757671303b008faa4fc8a44c6c3a63,2026-09-09T22:42:40Z,,latest raw.csv commit before the next session 09:30 ET
 2026-09-10,finviz_raw,3897260ae9b3e435cf46e5a4da84b6450e4ee237,2026-09-10T22:44:38Z,,latest raw.csv commit before the next session 09:30 ET
 2026-09-11,finviz_raw,f92bdcd00ad876275b95db10715f5117cf0b4704,2026-09-11T22:45:28Z,,latest raw.csv commit before the next session 09:30 ET
-2026-09-14,finviz_raw,1d9b4deb7d71a3b865e23ce51e2cccc3195d0cd8,2026-09-14T23:21:47Z,,latest raw.csv commit before the next session 09:30 ET
+2026-09-14,finviz_raw,1d9b4deb7d71a3b865e23ce51e2cccc3195d0cd8,2026-09-14T23:21:47Z,,latest raw.csv commit before the next session 09:30 ET; Stooq filled names missing from the file
 2026-09-15,finviz_raw,7b6140343facf4bb891861fda235bb94003faa7b,2026-09-15T23:06:58Z,,latest raw.csv commit before the next session 09:30 ET
 2026-09-16,finviz_raw,a5603aa8e05fcce93f78dd67b18784a0b4ec36ee,2026-09-16T23:12:37Z,,latest raw.csv commit before the next session 09:30 ET
 2026-09-17,finviz_raw,4f519ef43b9bf44072aa6ee34826c014686692df,2026-09-17T23:00:45Z,,latest raw.csv commit before the next session 09:30 ET
 2026-09-18,finviz_raw,afc389c69884e249990b6c908f245a19671e2e84,2026-09-18T22:46:50Z,,latest raw.csv commit before the next session 09:30 ET
-2026-09-21,finviz_raw,d7e7ef46133e5824f9480278d315795c1fd8ec42,2026-09-21T23:30:50Z,,latest raw.csv commit before the next session 09:30 ET
-2026-09-22,finviz_raw,1fecac14f8bfcd52df7e5d06c06eb2e45423e6d2,2026-09-22T23:12:57Z,,latest raw.csv commit before the next session 09:30 ET
+2026-09-21,finviz_raw,d7e7ef46133e5824f9480278d315795c1fd8ec42,2026-09-21T23:30:50Z,,latest raw.csv commit before the next session 09:30 ET; Stooq filled names missing from the file
+2026-09-22,finviz_raw,1fecac14f8bfcd52df7e5d06c06eb2e45423e6d2,2026-09-22T23:12:57Z,,latest raw.csv commit before the next session 09:30 ET; Stooq filled names missing from the file
 2026-09-23,finviz_raw,59a0d63d0cb2b5e76125c7a7c18d3071ecf47681,2026-09-23T23:05:44Z,,latest raw.csv commit before the next session 09:30 ET
-2026-09-24,finviz_raw,0598886bf6c3f3e470fea9e59ea3b2a056e9a003,2026-09-24T23:22:07Z,2026-09-24T23:22:06+00:00,latest raw.csv commit before the next session 09:30 ET; scrape_ts before the next session 09:30 ET
+2026-09-24,finviz_raw,0598886bf6c3f3e470fea9e59ea3b2a056e9a003,2026-09-24T23:22:07Z,2026-09-24T23:22:06+00:00,latest raw.csv commit before the next session 09:30 ET; scrape_ts before the next session 09:30 ET; Stooq filled names missing from the file
