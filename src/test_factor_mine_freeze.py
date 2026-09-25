@@ -91,9 +91,9 @@ def test_guard_fails_when_an_earlier_hash_changes() -> None:
                 ("2026-09-25", {"k": 3}, "ledgers"),
                 ("2026-09-26", {"k": 4}, "ledgers"),
             ):
-                raw = fmf.canonical_bytes(body)
-                folder = fmf.SNAP_DIR if slot == "snapshots" else fmf.LEDGER_DIR
-                (folder / f"{date}.json").write_bytes(raw)
+                raw = fmf.encode_frozen(slot, body)
+                path = fmf.snapshot_path(date) if slot == "snapshots" else fmf.ledger_path(date)
+                path.write_bytes(raw)
                 new.setdefault(slot, {})[date] = {"sha256": fmf.sha256_bytes(raw)}
             old["snapshots"]["2026-09-25"]["sha256"] = new["snapshots"]["2026-09-25"]["sha256"]
             old["ledgers"]["2026-09-25"]["sha256"] = new["ledgers"]["2026-09-25"]["sha256"]
@@ -113,8 +113,8 @@ def test_guard_fails_when_an_earlier_hash_changes() -> None:
                 mismatched = True
             assert mismatched
             restated = {"k": 99}
-            raw = fmf.canonical_bytes(restated)
-            (fmf.LEDGER_DIR / "2026-09-25.json").write_bytes(raw)
+            raw = fmf.encode_frozen("ledgers", restated)
+            fmf.ledger_path("2026-09-25").write_bytes(raw)
             broken["ledgers"]["2026-09-25"] = {"sha256": fmf.sha256_bytes(raw)}
             fmf.guard_manifest(old, broken, restate=["2026-09-25"])
         finally:
@@ -472,6 +472,7 @@ def test_load_or_build_does_not_rebuild_landed_dates() -> None:
     with tempfile.TemporaryDirectory() as d:
         tmp = Path(d)
         orig = fm.PANEL_PATH
+        old = _use(tmp)
         fm.PANEL_PATH = tmp / "panel.json"
         try:
             fm.PANEL_PATH.write_text(json.dumps({
@@ -502,6 +503,7 @@ def test_load_or_build_does_not_rebuild_landed_dates() -> None:
             assert ("2026-09-25", "NEW") in tickers
         finally:
             fm.PANEL_PATH = orig
+            _restore(old)
 
 
 def test_published_0922_pin_beats_the_postclose_file() -> None:

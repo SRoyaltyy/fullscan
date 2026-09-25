@@ -6,9 +6,10 @@ A landed session is frozen once:
   decide D, including the heat vintage and the 09:30 open
 * ``data/factor_mine/prices/{D}.json`` — prior bars and the session
   open that those inputs were scored from
-* ``data/factor_mine/ledgers/{D}.json`` — buy/sell decisions for every
+* ``data/factor_mine/ledgers/{D}.json.gz`` — buy/sell decisions for every
   recipe and every start-date book, plus the end-of-day state the next
-  session resumes from
+  session resumes from. Gzip of the canonical JSON so a full book stays
+  under the publish size budget. The manifest hash is the gzip bytes.
 * ``data/factor_mine/freeze_manifest.json`` — sha256 of each file
 
 Later runs read those files and append the new day. They do not rebuild
@@ -16,6 +17,7 @@ earlier dates. ``--restate D`` is the logged correction path.
 """
 from __future__ import annotations
 
+import gzip
 import hashlib
 import json
 import math
@@ -60,6 +62,14 @@ def canonical_bytes(obj) -> bytes:
         obj, sort_keys=True, separators=(",", ":"), ensure_ascii=False,
         default=_json_default,
     ).encode("utf-8")
+
+
+def encode_frozen(slot: str, obj) -> bytes:
+    """Bytes written for a frozen slot. Ledgers are gzip (mtime 0)."""
+    raw = canonical_bytes(obj)
+    if slot != "ledgers":
+        return raw
+    return gzip.compress(raw, compresslevel=6, mtime=0)
 
 
 def _json_default(obj):
@@ -122,7 +132,7 @@ def snapshot_path(date: str) -> Path:
 
 
 def ledger_path(date: str) -> Path:
-    return LEDGER_DIR / f"{date}.json"
+    return LEDGER_DIR / f"{date}.json.gz"
 
 
 def price_path(date: str) -> Path:
@@ -326,7 +336,7 @@ def bars_for_decisions(panel: dict, date: str, pinned: dict | None) -> dict:
 
 def _write_frozen(path: Path, obj: dict, slot: str, date: str, *,
                   restate: bool) -> str:
-    raw = canonical_bytes(obj)
+    raw = encode_frozen(slot, obj)
     digest = sha256_bytes(raw)
     man = load_manifest()
     prev = (man.get(slot) or {}).get(date) or {}
@@ -352,11 +362,14 @@ def _write_frozen(path: Path, obj: dict, slot: str, date: str, *,
         )
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_bytes(raw)
-    man.setdefault(slot, {})[date] = {
+    entry = {
         "sha256": digest,
         "written_at": _now(),
         "bytes": len(raw),
     }
+    if slot == "ledgers":
+        entry["encoding"] = "gzip"
+    man.setdefault(slot, {})[date] = entry
     if slot == "snapshots":
         man[slot][date]["n_rows"] = len(obj.get("rows") or [])
         man[slot][date]["heat_vintage"] = (obj.get("heat") or {}).get("vintage")
@@ -370,6 +383,14 @@ def write_snapshot(date: str, snap: dict, *, restate: bool = False) -> str:
 
 
 def write_ledger(date: str, ledger: dict, *, restate: bool = False) -> str:
+    plain = LEDGER_DIR / f"{date}.json"
+    if plain.is_file() and not restate:
+        raise FrozenHistory(
+            f"{plain.name} already frozen "
+            f"(pass --restate {date} to correct it)"
+        )
+    if plain.is_file() and restate:
+        plain.unlink()
     return _write_frozen(ledger_path(date), ledger, "ledgers", date, restate=restate)
 
 
@@ -381,8 +402,11 @@ def read_json(path: Path) -> dict | None:
     if not path.is_file():
         return None
     try:
-        return json.loads(path.read_text(encoding="utf-8"))
-    except (OSError, json.JSONDecodeError):
+        blob = path.read_bytes()
+        if blob[:2] == b"\x1f\x8b":
+            blob = gzip.decompress(blob)
+        return json.loads(blob)
+    except (OSError, json.JSONDecodeError, gzip.BadGzipFile):
         return None
 
 
@@ -519,9 +543,9 @@ def guard_manifest(old: dict | None, new: dict | None,
                     f"frozen {slot} {date} hash changed {prev} -> {got}. "
                     f"Pass --restate {date} to log a correction."
                 )
-    for slot, folder in (("snapshots", SNAP_DIR), ("ledgers", LEDGER_DIR)):
+    for slot in ("snapshots", "ledgers"):
         for date, meta in (new.get(slot) or {}).items():
-            path = folder / f"{date}.json"
+            path = snapshot_path(date) if slot == "snapshots" else ledger_path(date)
             if not path.is_file():
                 raise SystemExit(f"freeze manifest lists {slot} {date} but {path} is missing")
             have = sha256_bytes(path.read_bytes())
@@ -552,14 +576,38 @@ def _prior(cal: list[str], date: str) -> str | None:
 def _ledger_dates() -> list[str]:
     if not LEDGER_DIR.is_dir():
         return []
-    return sorted(p.stem for p in LEDGER_DIR.glob("*.json"))
+    dates = []
+    for path in LEDGER_DIR.iterdir():
+        name = path.name
+        if name.endswith(".json.gz"):
+            dates.append(name[: -len(".json.gz")])
+        elif name.endswith(".json"):
+            dates.append(name[: -len(".json")])
+    return sorted(set(dates))
+
+
+def _ledger_on_disk(date: str) -> Path | None:
+    gz = ledger_path(date)
+    plain = LEDGER_DIR / f"{date}.json"
+    if gz.is_file():
+        return gz
+    if plain.is_file():
+        return plain
+    return None
+
+
+def read_ledger(date: str) -> dict | None:
+    path = _ledger_on_disk(date)
+    if path is None:
+        return None
+    return read_json(path)
 
 
 def latest_ledger_before(date: str) -> dict | None:
     prev = [d for d in _ledger_dates() if d < date]
     if not prev:
         return None
-    return read_json(ledger_path(prev[-1]))
+    return read_ledger(prev[-1])
 
 
 def _saved(ledger: dict | None, recipe: str, key: str) -> dict | None:
@@ -1047,7 +1095,7 @@ def append_land(from_date: str, target: str, *, write: bool = False,
         panel = apply_frozen_snapshots(panel)
         bars = bars_for_decisions(panel, date, pinned)
         recs = list(recipes or payload.get("recipes") or [])
-        existing = read_json(ledger_path(date))
+        existing = read_ledger(date)
         if existing and date not in restate_set:
             ledger = existing
             print(f"[factor-mine] ledger {date} already frozen — splicing",
@@ -1058,7 +1106,7 @@ def append_land(from_date: str, target: str, *, write: bool = False,
                 write_ledger(date, ledger, restate=date in restate_set)
             except FrozenHistory as e:
                 print(f"[factor-mine] {e}", flush=True)
-                ledger = read_json(ledger_path(date)) or ledger
+                ledger = read_ledger(date) or ledger
         payload = splice_payload(
             payload, date, ledger, replace=date in restate_set)
         payload["n_rows"] = panel.get("n_rows")

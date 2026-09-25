@@ -1753,7 +1753,17 @@ def test_union_e_green_h3_aug21_to_aug25_name_marks() -> None:
     from src import paper_trade as pt
     if not fm.PANEL_PATH.is_file():
         return
-    panel = fm.load_or_build_panel("2026-08-13", "2026-09-04")
+    # This check is the published panel tape. Frozen snapshots replace
+    # landed dates inside load_or_build_panel; keep them out of this case.
+    import tempfile
+    from pathlib import Path
+    from src import factor_mine_freeze as fmf
+    saved_snap = fmf.SNAP_DIR
+    fmf.SNAP_DIR = Path(tempfile.mkdtemp())
+    try:
+        panel = fm.load_or_build_panel("2026-08-13", "2026-09-04")
+    finally:
+        fmf.SNAP_DIR = saved_snap
     rec = next(r for r in fm.build_recipes() if r["name"] == "union_e_green_h3")
     book = fmb.simulate_book(
         panel, rec, fees=pt.load_fees(), regime=fmb.load_regime())

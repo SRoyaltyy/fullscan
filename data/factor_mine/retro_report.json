@@ -1,0 +1,579 @@
+{
+  "classed": [
+    {
+      "date": "2026-08-13",
+      "label": "incomplete_pit",
+      "cutoff": "2026-08-13T09:30:00-04:00",
+      "missing_late": [
+        "judge"
+      ],
+      "absent": [
+        "digest",
+        "map_heat",
+        "catalyst",
+        "baseline",
+        "events",
+        "research"
+      ],
+      "n_sources": 5
+    },
+    {
+      "date": "2026-08-14",
+      "label": "incomplete_pit",
+      "cutoff": "2026-08-14T09:30:00-04:00",
+      "missing_late": [
+        "judge"
+      ],
+      "absent": [
+        "digest",
+        "map_heat",
+        "catalyst",
+        "baseline",
+        "events",
+        "research"
+      ],
+      "n_sources": 5
+    },
+    {
+      "date": "2026-08-17",
+      "label": "incomplete_pit",
+      "cutoff": "2026-08-17T09:30:00-04:00",
+      "missing_late": [
+        "judge"
+      ],
+      "absent": [
+        "digest",
+        "map_heat",
+        "catalyst",
+        "baseline",
+        "events",
+        "research"
+      ],
+      "n_sources": 5
+    },
+    {
+      "date": "2026-08-18",
+      "label": "incomplete_pit",
+      "cutoff": "2026-08-18T09:30:00-04:00",
+      "missing_late": [
+        "export",
+        "join",
+        "weather",
+        "judge"
+      ],
+      "absent": [
+        "digest",
+        "map_heat",
+        "catalyst",
+        "baseline",
+        "events",
+        "research"
+      ],
+      "n_sources": 2
+    },
+    {
+      "date": "2026-08-19",
+      "label": "incomplete_pit",
+      "cutoff": "2026-08-19T09:30:00-04:00",
+      "missing_late": [
+        "export",
+        "join",
+        "weather",
+        "judge"
+      ],
+      "absent": [
+        "digest",
+        "map_heat",
+        "catalyst",
+        "baseline",
+        "events",
+        "research"
+      ],
+      "n_sources": 2
+    },
+    {
+      "date": "2026-08-20",
+      "label": "incomplete_pit",
+      "cutoff": "2026-08-20T09:30:00-04:00",
+      "missing_late": [
+        "export",
+        "join",
+        "weather",
+        "judge"
+      ],
+      "absent": [
+        "map_heat",
+        "catalyst",
+        "baseline",
+        "research"
+      ],
+      "n_sources": 4
+    },
+    {
+      "date": "2026-08-21",
+      "label": "incomplete_pit",
+      "cutoff": "2026-08-21T09:30:00-04:00",
+      "missing_late": [
+        "export",
+        "join",
+        "weather",
+        "events"
+      ],
+      "absent": [
+        "map_heat",
+        "catalyst",
+        "baseline",
+        "research"
+      ],
+      "n_sources": 4
+    },
+    {
+      "date": "2026-08-24",
+      "label": "pit_rebuilt",
+      "cutoff": "2026-08-24T09:30:00-04:00",
+      "missing_late": [],
+      "absent": [
+        "map_heat",
+        "catalyst",
+        "baseline",
+        "research"
+      ],
+      "dropped_prices": [],
+      "n_sources": 8
+    },
+    {
+      "date": "2026-08-25",
+      "label": "incomplete_pit",
+      "cutoff": "2026-08-25T09:30:00-04:00",
+      "missing_late": [
+        "digest",
+        "predict",
+        "actions",
+        "judge",
+        "events"
+      ],
+      "absent": [
+        "map_heat",
+        "catalyst",
+        "baseline",
+        "research"
+      ],
+      "n_sources": 3
+    },
+    {
+      "date": "2026-08-26",
+      "label": "incomplete_pit",
+      "cutoff": "2026-08-26T09:30:00-04:00",
+      "missing_late": [
+        "join",
+        "catalyst",
+        "weather"
+      ],
+      "absent": [
+        "export",
+        "baseline"
+      ],
+      "n_sources": 7
+    },
+    {
+      "date": "2026-08-27",
+      "label": "incomplete_pit",
+      "cutoff": "2026-08-27T09:30:00-04:00",
+      "missing_late": [
+        "catalyst",
+        "events"
+      ],
+      "absent": [
+        "baseline",
+        "predict",
+        "research"
+      ],
+      "n_sources": 7
+    },
+    {
+      "date": "2026-08-28",
+      "label": "pit_rebuilt",
+      "cutoff": "2026-08-28T09:30:00-04:00",
+      "missing_late": [],
+      "absent": [
+        "baseline"
+      ],
+      "dropped_prices": [
+        "ADBT"
+      ],
+      "n_sources": 11
+    },
+    {
+      "date": "2026-08-31",
+      "label": "pit_rebuilt",
+      "cutoff": "2026-08-31T09:30:00-04:00",
+      "missing_late": [],
+      "absent": [
+        "research"
+      ],
+      "dropped_prices": [],
+      "n_sources": 11
+    },
+    {
+      "date": "2026-09-01",
+      "label": "incomplete_pit",
+      "cutoff": "2026-09-01T09:30:00-04:00",
+      "missing_late": [
+        "baseline"
+      ],
+      "absent": [],
+      "n_sources": 11
+    },
+    {
+      "date": "2026-09-02",
+      "label": "incomplete_pit",
+      "cutoff": "2026-09-02T09:30:00-04:00",
+      "missing_late": [
+        "join",
+        "weather"
+      ],
+      "absent": [
+        "research"
+      ],
+      "n_sources": 9
+    },
+    {
+      "date": "2026-09-03",
+      "label": "incomplete_pit",
+      "cutoff": "2026-09-03T09:30:00-04:00",
+      "missing_late": [
+        "join",
+        "weather"
+      ],
+      "absent": [],
+      "n_sources": 10
+    },
+    {
+      "date": "2026-09-04",
+      "label": "pit_rebuilt",
+      "cutoff": "2026-09-04T09:30:00-04:00",
+      "missing_late": [],
+      "absent": [],
+      "dropped_prices": [
+        "SGLD",
+        "BRR",
+        "DOMO"
+      ],
+      "n_sources": 12
+    },
+    {
+      "date": "2026-09-08",
+      "label": "incomplete_pit",
+      "cutoff": "2026-09-08T09:30:00-04:00",
+      "missing_late": [
+        "predict",
+        "actions",
+        "events",
+        "research"
+      ],
+      "absent": [
+        "catalyst"
+      ],
+      "n_sources": 7
+    },
+    {
+      "date": "2026-09-09",
+      "label": "incomplete_pit",
+      "cutoff": "2026-09-09T09:30:00-04:00",
+      "missing_late": [
+        "predict"
+      ],
+      "absent": [
+        "catalyst"
+      ],
+      "n_sources": 10
+    },
+    {
+      "date": "2026-09-10",
+      "label": "pit_rebuilt",
+      "cutoff": "2026-09-10T09:30:00-04:00",
+      "missing_late": [],
+      "absent": [],
+      "dropped_prices": [
+        "TRBG"
+      ],
+      "n_sources": 12
+    },
+    {
+      "date": "2026-09-11",
+      "label": "pit_rebuilt",
+      "cutoff": "2026-09-11T09:30:00-04:00",
+      "missing_late": [],
+      "absent": [],
+      "dropped_prices": [],
+      "n_sources": 12
+    },
+    {
+      "date": "2026-09-14",
+      "label": "pit_rebuilt",
+      "cutoff": "2026-09-14T09:30:00-04:00",
+      "missing_late": [],
+      "absent": [],
+      "dropped_prices": [
+        "SMR"
+      ],
+      "n_sources": 12
+    },
+    {
+      "date": "2026-09-15",
+      "label": "pit_rebuilt",
+      "cutoff": "2026-09-15T09:30:00-04:00",
+      "missing_late": [],
+      "absent": [],
+      "dropped_prices": [],
+      "n_sources": 12
+    },
+    {
+      "date": "2026-09-16",
+      "label": "pit_rebuilt",
+      "cutoff": "2026-09-16T09:30:00-04:00",
+      "missing_late": [],
+      "absent": [],
+      "dropped_prices": [
+        "SWRD"
+      ],
+      "n_sources": 12
+    },
+    {
+      "date": "2026-09-17",
+      "label": "pit_rebuilt",
+      "cutoff": "2026-09-17T09:30:00-04:00",
+      "missing_late": [],
+      "absent": [],
+      "dropped_prices": [],
+      "n_sources": 12
+    },
+    {
+      "date": "2026-09-18",
+      "label": "pit_rebuilt",
+      "cutoff": "2026-09-18T09:30:00-04:00",
+      "missing_late": [],
+      "absent": [],
+      "dropped_prices": [],
+      "n_sources": 12
+    },
+    {
+      "date": "2026-09-21",
+      "label": "pit_rebuilt",
+      "cutoff": "2026-09-21T09:30:00-04:00",
+      "missing_late": [],
+      "absent": [],
+      "dropped_prices": [],
+      "n_sources": 12
+    },
+    {
+      "date": "2026-09-22",
+      "label": "pit_rebuilt",
+      "cutoff": "2026-09-22T09:30:00-04:00",
+      "missing_late": [],
+      "absent": [],
+      "dropped_prices": [
+        "PACS",
+        "MKC",
+        "EL",
+        "DLO",
+        "TDC",
+        "FJET",
+        "APPS",
+        "ARHS",
+        "HELP",
+        "NN",
+        "GRAL",
+        "EU",
+        "ARQQ",
+        "AIBZ",
+        "GRPN",
+        "YSS",
+        "FIVN",
+        "XXI",
+        "MRAM",
+        "AEHL",
+        "EMAT",
+        "BRVE",
+        "AMRX",
+        "VNET",
+        "GCTS",
+        "FWDI",
+        "RXT",
+        "NRGV",
+        "ASX",
+        "HYLN",
+        "CEVA",
+        "TWLO",
+        "NEOG",
+        "NTSK",
+        "FOSL",
+        "AIP",
+        "GDS",
+        "RBRK",
+        "XERS",
+        "PENG",
+        "ABVX",
+        "ANAB",
+        "MLKN",
+        "THO",
+        "CBRL",
+        "CTAS",
+        "PAYX"
+      ],
+      "n_sources": 12
+    },
+    {
+      "date": "2026-09-23",
+      "label": "pit_rebuilt",
+      "cutoff": "2026-09-23T09:30:00-04:00",
+      "missing_late": [],
+      "absent": [],
+      "dropped_prices": [],
+      "n_sources": 12
+    },
+    {
+      "date": "2026-09-24",
+      "label": "pit_rebuilt",
+      "cutoff": "2026-09-24T09:30:00-04:00",
+      "missing_late": [],
+      "absent": [],
+      "dropped_prices": [],
+      "n_sources": 12
+    }
+  ],
+  "scores": [
+    {
+      "name": "union_hot_n4_h1",
+      "created_on": "2026-08-13",
+      "in_sample_before": "2026-08-13",
+      "start": "2026-08-13",
+      "exclude": null,
+      "fee": "futubull",
+      "total_ret_pct": 23.467,
+      "final_equity": 12346.73,
+      "n_trades": 61
+    },
+    {
+      "name": "union_hot_n4_h1",
+      "created_on": "2026-08-13",
+      "in_sample_before": "2026-08-13",
+      "start": "2026-08-13",
+      "exclude": "GLND",
+      "fee": "futubull",
+      "total_ret_pct": -4.133,
+      "final_equity": 9586.71,
+      "n_trades": 62
+    },
+    {
+      "name": "union_hot_n4_h1",
+      "created_on": "2026-08-13",
+      "in_sample_before": "2026-08-13",
+      "start": "2026-08-13",
+      "exclude": null,
+      "fee": "flat_15bp",
+      "total_ret_pct": 27.53,
+      "final_equity": 12753.0,
+      "n_trades": 61
+    },
+    {
+      "name": "union_hot_n4_h1",
+      "created_on": "2026-08-13",
+      "in_sample_before": "2026-08-13",
+      "start": "2026-08-13",
+      "exclude": "GLND",
+      "fee": "flat_15bp",
+      "total_ret_pct": -1.031,
+      "final_equity": 9896.93,
+      "n_trades": 62
+    },
+    {
+      "name": "union_hot_n4_holdup",
+      "created_on": "2026-09-21",
+      "in_sample_before": "2026-09-21",
+      "start": "2026-08-13",
+      "exclude": null,
+      "fee": "futubull",
+      "total_ret_pct": 51.788,
+      "final_equity": 15178.77,
+      "n_trades": 53
+    },
+    {
+      "name": "union_hot_n4_holdup",
+      "created_on": "2026-09-21",
+      "in_sample_before": "2026-09-21",
+      "start": "2026-09-21",
+      "exclude": null,
+      "fee": "futubull",
+      "total_ret_pct": 12.898,
+      "final_equity": 11289.82,
+      "n_trades": 11
+    },
+    {
+      "name": "union_hot_n4_holdup",
+      "created_on": "2026-09-21",
+      "in_sample_before": "2026-09-21",
+      "start": "2026-08-13",
+      "exclude": "GLND",
+      "fee": "futubull",
+      "total_ret_pct": 16.667,
+      "final_equity": 11666.7,
+      "n_trades": 53
+    },
+    {
+      "name": "union_hot_n4_holdup",
+      "created_on": "2026-09-21",
+      "in_sample_before": "2026-09-21",
+      "start": "2026-09-21",
+      "exclude": "GLND",
+      "fee": "futubull",
+      "total_ret_pct": -10.905,
+      "final_equity": 8909.51,
+      "n_trades": 11
+    },
+    {
+      "name": "union_hot_n4_holdup",
+      "created_on": "2026-09-21",
+      "in_sample_before": "2026-09-21",
+      "start": "2026-08-13",
+      "exclude": null,
+      "fee": "flat_15bp",
+      "total_ret_pct": 55.157,
+      "final_equity": 15515.72,
+      "n_trades": 53
+    },
+    {
+      "name": "union_hot_n4_holdup",
+      "created_on": "2026-09-21",
+      "in_sample_before": "2026-09-21",
+      "start": "2026-09-21",
+      "exclude": null,
+      "fee": "flat_15bp",
+      "total_ret_pct": 13.882,
+      "final_equity": 11388.2,
+      "n_trades": 11
+    },
+    {
+      "name": "union_hot_n4_holdup",
+      "created_on": "2026-09-21",
+      "in_sample_before": "2026-09-21",
+      "start": "2026-08-13",
+      "exclude": "GLND",
+      "fee": "flat_15bp",
+      "total_ret_pct": 19.137,
+      "final_equity": 11913.65,
+      "n_trades": 53
+    },
+    {
+      "name": "union_hot_n4_holdup",
+      "created_on": "2026-09-21",
+      "in_sample_before": "2026-09-21",
+      "start": "2026-09-21",
+      "exclude": "GLND",
+      "fee": "flat_15bp",
+      "total_ret_pct": -10.197,
+      "final_equity": 8980.31,
+      "n_trades": 11
+    }
+  ]
+}

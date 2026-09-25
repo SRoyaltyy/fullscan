@@ -1,0 +1,56 @@
+# Factor Mine retroactive point-in-time rebuild
+
+Window `2026-08-13` → `2026-09-24`. Each D-dated packet is the last git commit at or before D 09:30 ET. A named input that exists only in a later commit is withheld.
+
+- pit_rebuilt: 15
+- incomplete_pit: 15
+
+## Incomplete days
+
+These days are carried (no new ranking). The later file is not used.
+
+- `2026-08-13` withheld: judge
+- `2026-08-14` withheld: judge
+- `2026-08-17` withheld: judge
+- `2026-08-18` withheld: export, join, weather, judge
+- `2026-08-19` withheld: export, join, weather, judge
+- `2026-08-20` withheld: export, join, weather, judge
+- `2026-08-21` withheld: export, join, weather, events
+- `2026-08-25` withheld: digest, predict, actions, judge, events
+- `2026-08-26` withheld: join, catalyst, weather
+- `2026-08-27` withheld: catalyst, events
+- `2026-09-01` withheld: baseline
+- `2026-09-02` withheld: join, weather
+- `2026-09-03` withheld: join, weather
+- `2026-09-08` withheld: predict, actions, events, research
+- `2026-09-09` withheld: predict
+
+## pit_rebuilt
+
+`2026-08-24`, `2026-08-28`, `2026-08-31`, `2026-09-04`, `2026-09-10`, `2026-09-11`, `2026-09-14`, `2026-09-15`, `2026-09-16`, `2026-09-17`, `2026-09-18`, `2026-09-21`, `2026-09-22`, `2026-09-23`, `2026-09-24`
+
+## HOT4 and holdup
+
+Total return on the frozen history. `union_hot_n4_holdup` days before `2026-09-21` are in-sample. Without GLND drops that ticker from the candidate rows. Flat 15bp is 7.5 bp per side (15 bp round trip), not the Futubull schedule.
+
+| recipe | fee | universe | window | return % | trades |
+| --- | --- | --- | --- | ---: | ---: |
+| `union_hot_n4_h1` | futubull | with GLND | 2026-08-13 | 23.467 | 61 |
+| `union_hot_n4_h1` | futubull | without GLND | 2026-08-13 | -4.133 | 62 |
+| `union_hot_n4_h1` | flat_15bp | with GLND | 2026-08-13 | 27.53 | 61 |
+| `union_hot_n4_h1` | flat_15bp | without GLND | 2026-08-13 | -1.031 | 62 |
+| `union_hot_n4_holdup` | futubull | with GLND | 2026-08-13 | 51.788 | 53 |
+| `union_hot_n4_holdup` | futubull | with GLND | 2026-09-21 | 12.898 | 11 |
+| `union_hot_n4_holdup` | futubull | without GLND | 2026-08-13 | 16.667 | 53 |
+| `union_hot_n4_holdup` | futubull | without GLND | 2026-09-21 | -10.905 | 11 |
+| `union_hot_n4_holdup` | flat_15bp | with GLND | 2026-08-13 | 55.157 | 53 |
+| `union_hot_n4_holdup` | flat_15bp | with GLND | 2026-09-21 | 13.882 | 11 |
+| `union_hot_n4_holdup` | flat_15bp | without GLND | 2026-08-13 | 19.137 | 53 |
+| `union_hot_n4_holdup` | flat_15bp | without GLND | 2026-09-21 | -10.197 | 11 |
+
+Prices: `data/factor_mine/retro_prices/ohlc.parquet` (Yahoo `auto_adjust=True`, locked sha `d54a5f5322ad48d2`, 274,058 rows, 2,792 tickers, 2026-05-01 through 2026-09-24, first bar wins). Indicators use bars dated before D. The live `data/prices/ohlc.parquet` print tape was not rewritten. Marks on this book are split-adjusted opens, not the unadjusted print tape.
+
+Names with no adjusted bar or no session open were dropped from that day's rows. The day still froze. Dropped counts: 2026-08-28 (1), 2026-09-04 (3), 2026-09-10 (1), 2026-09-14 (1), 2026-09-16 (1), 2026-09-22 (47 of 74 candidates). 2026-09-22 is the thin session.
+
+Ledgers are gzip of the canonical decision JSON (`{D}.json.gz`). The manifest sha256 is those gzip bytes.
+

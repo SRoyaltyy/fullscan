@@ -1,0 +1,11 @@
+{
+  "locked": true,
+  "adjusted": true,
+  "auto_adjust": true,
+  "sha256": "d54a5f5322ad48d29eb8ce4d602727ae9fa85ddc061046bd6a8a026563d0f8d9",
+  "start": "2026-05-01",
+  "end": "2026-09-24",
+  "n_rows": 274058,
+  "n_tickers": 2792,
+  "bytes": 6639712
+}
