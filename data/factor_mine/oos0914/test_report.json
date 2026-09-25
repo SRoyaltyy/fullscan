@@ -8,7 +8,8 @@
     "2026-09-21",
     "2026-09-22",
     "2026-09-23",
-    "2026-09-24"
+    "2026-09-24",
+    "2026-09-25"
   ],
   "rules": [
     {
@@ -293,14 +294,24 @@
           "equity": 10028.12,
           "mean": -3.7439,
           "mean_flat_15bp": -3.6683
+        },
+        {
+          "date": "2026-09-25",
+          "buys": [],
+          "sells": [],
+          "fees": 0,
+          "cash": 9972.65,
+          "equity": 10028.12,
+          "mean": 0.0,
+          "mean_flat_15bp": 0.0
         }
       ],
-      "after_fees_return": 0.281,
-      "start_day_win_rate": 0.3333,
-      "best_stock": "SDGR",
-      "without_best_stock_return": -3.035,
       "keep_bar_met": false,
-      "keep_bar_note": "12 train fires against the 30-fire bar. Excel's luck test p=0.87."
+      "keep_bar_note": "12 train fires against the 30-fire bar. Excel's luck test p=0.87.",
+      "after_fees_return": 0.281,
+      "start_day_win_rate": 0.3,
+      "best_stock": "SDGR",
+      "without_best_stock_return": -3.035
     },
     {
       "name": "oos0914_rvol_lg_h1_sx",
@@ -743,14 +754,24 @@
           "equity": 9243.36,
           "mean": -4.9843,
           "mean_flat_15bp": -4.7357
+        },
+        {
+          "date": "2026-09-25",
+          "buys": [],
+          "sells": [],
+          "fees": 0,
+          "cash": 9243.36,
+          "equity": 9243.36,
+          "mean": 0.0,
+          "mean_flat_15bp": 0.0
         }
       ],
+      "keep_bar_met": false,
+      "keep_bar_note": "12 train fires against the 30-fire bar. Excel's luck test p=0.87.",
       "after_fees_return": -7.566,
       "start_day_win_rate": 0.0,
       "best_stock": "CYPH",
-      "without_best_stock_return": -9.186,
-      "keep_bar_met": false,
-      "keep_bar_note": "12 train fires against the 30-fire bar. Excel's luck test p=0.87."
+      "without_best_stock_return": -9.186
     },
     {
       "name": "oos0914_break10_h1_sx",
@@ -1193,14 +1214,24 @@
           "equity": 8464.79,
           "mean": -5.3518,
           "mean_flat_15bp": -5.0224
+        },
+        {
+          "date": "2026-09-25",
+          "buys": [],
+          "sells": [],
+          "fees": 0,
+          "cash": 8464.79,
+          "equity": 8464.79,
+          "mean": 0.0,
+          "mean_flat_15bp": 0.0
         }
       ],
+      "keep_bar_met": false,
+      "keep_bar_note": "12 train fires against the 30-fire bar. Excel's luck test p=0.87.",
       "after_fees_return": -15.352,
       "start_day_win_rate": 0.0,
       "best_stock": "HLP",
-      "without_best_stock_return": -16.676,
-      "keep_bar_met": false,
-      "keep_bar_note": "12 train fires against the 30-fire bar. Excel's luck test p=0.87."
+      "without_best_stock_return": -16.676
     },
     {
       "name": "oos0914_zero_candle_h2_sx",
@@ -1472,14 +1503,24 @@
           "equity": 10387.12,
           "mean": 0.1325,
           "mean_flat_15bp": 0.1323
+        },
+        {
+          "date": "2026-09-25",
+          "buys": [],
+          "sells": [],
+          "fees": 0,
+          "cash": 158.23,
+          "equity": 10387.12,
+          "mean": 0.0,
+          "mean_flat_15bp": 0.0
         }
       ],
-      "after_fees_return": 3.871,
-      "start_day_win_rate": 0.6667,
-      "best_stock": "WGS",
-      "without_best_stock_return": 1.33,
       "keep_bar_met": false,
-      "keep_bar_note": "12 train fires against the 30-fire bar. Excel's luck test p=0.87."
+      "keep_bar_note": "12 train fires against the 30-fire bar. Excel's luck test p=0.87.",
+      "after_fees_return": 3.871,
+      "start_day_win_rate": 0.6,
+      "best_stock": "WGS",
+      "without_best_stock_return": 1.33
     }
   ],
   "baselines": {
@@ -1515,677 +1556,16 @@
     },
     "iwm": {
       "futubull": {
-        "after_fees_return": -1.41,
-        "final_equity": 9858.95,
+        "after_fees_return": -1.302,
+        "final_equity": 9869.8,
         "fee": "futubull"
       },
       "futubull_plus_15bp": {
-        "after_fees_return": -1.444,
-        "final_equity": 9855.64,
+        "after_fees_return": -1.338,
+        "final_equity": 9866.18,
         "fee": "futubull"
       }
     }
   },
-  "research_shorts": [
-    {
-      "id": "tr01_fpe_top_earn_h3",
-      "fires": 10,
-      "after_fees_return": -56.74,
-      "daily": [
-        {
-          "date": "2026-09-14",
-          "ret_pct": 0.0,
-          "equity": 10000.0
-        },
-        {
-          "date": "2026-09-15",
-          "ret_pct": -0.375,
-          "equity": 9962.5038
-        },
-        {
-          "date": "2026-09-16",
-          "ret_pct": -1.2231,
-          "equity": 9840.6481
-        },
-        {
-          "date": "2026-09-17",
-          "ret_pct": -3.8932,
-          "equity": 9457.5302
-        },
-        {
-          "date": "2026-09-18",
-          "ret_pct": -7.1417,
-          "equity": 8782.1027
-        },
-        {
-          "date": "2026-09-21",
-          "ret_pct": -2.8846,
-          "equity": 8528.7711
-        },
-        {
-          "date": "2026-09-22",
-          "ret_pct": -9.8669,
-          "equity": 7687.2469
-        },
-        {
-          "date": "2026-09-23",
-          "ret_pct": -7.6777,
-          "equity": 7097.0458
-        },
-        {
-          "date": "2026-09-24",
-          "ret_pct": -39.0447,
-          "equity": 4326.0275
-        }
-      ],
-      "costs": "15bp round trip plus 0.3 percent borrow",
-      "research": true,
-      "designed_after": true
-    },
-    {
-      "id": "tr02_dfpe_t3_top_earn_h3",
-      "fires": 15,
-      "after_fees_return": 7.032,
-      "daily": [
-        {
-          "date": "2026-09-14",
-          "ret_pct": 0.0,
-          "equity": 10000.0
-        },
-        {
-          "date": "2026-09-15",
-          "ret_pct": -0.3729,
-          "equity": 9962.7052
-        },
-        {
-          "date": "2026-09-16",
-          "ret_pct": -1.445,
-          "equity": 9818.7488
-        },
-        {
-          "date": "2026-09-17",
-          "ret_pct": -0.4422,
-          "equity": 9775.3288
-        },
-        {
-          "date": "2026-09-18",
-          "ret_pct": 4.7935,
-          "equity": 10243.9083
-        },
-        {
-          "date": "2026-09-21",
-          "ret_pct": -2.2255,
-          "equity": 10015.9272
-        },
-        {
-          "date": "2026-09-22",
-          "ret_pct": 0.2837,
-          "equity": 10044.3388
-        },
-        {
-          "date": "2026-09-23",
-          "ret_pct": -1.8249,
-          "equity": 9861.0387
-        },
-        {
-          "date": "2026-09-24",
-          "ret_pct": 8.5402,
-          "equity": 10703.1925
-        }
-      ],
-      "costs": "15bp round trip plus 0.3 percent borrow",
-      "research": true,
-      "designed_after": true
-    },
-    {
-      "id": "tr03_dfpe_t2_top_earn_h3",
-      "fires": 13,
-      "after_fees_return": 11.211,
-      "daily": [
-        {
-          "date": "2026-09-14",
-          "ret_pct": 0.0,
-          "equity": 10000.0
-        },
-        {
-          "date": "2026-09-15",
-          "ret_pct": -0.3736,
-          "equity": 9962.6385
-        },
-        {
-          "date": "2026-09-16",
-          "ret_pct": -2.6464,
-          "equity": 9698.9837
-        },
-        {
-          "date": "2026-09-17",
-          "ret_pct": 0.5567,
-          "equity": 9752.9741
-        },
-        {
-          "date": "2026-09-18",
-          "ret_pct": 4.6795,
-          "equity": 10209.3625
-        },
-        {
-          "date": "2026-09-21",
-          "ret_pct": 2.8217,
-          "equity": 10497.4384
-        },
-        {
-          "date": "2026-09-22",
-          "ret_pct": -0.9036,
-          "equity": 10402.5862
-        },
-        {
-          "date": "2026-09-23",
-          "ret_pct": -3.9357,
-          "equity": 9993.174
-        },
-        {
-          "date": "2026-09-24",
-          "ret_pct": 11.2867,
-          "equity": 11121.0718
-        }
-      ],
-      "costs": "15bp round trip plus 0.3 percent borrow",
-      "research": true,
-      "designed_after": true
-    },
-    {
-      "id": "tr04_dfpe_t3_pos_earn_h3",
-      "fires": 32,
-      "after_fees_return": 0.757,
-      "daily": [
-        {
-          "date": "2026-09-14",
-          "ret_pct": 0.0,
-          "equity": 10000.0
-        },
-        {
-          "date": "2026-09-15",
-          "ret_pct": -0.3729,
-          "equity": 9962.7052
-        },
-        {
-          "date": "2026-09-16",
-          "ret_pct": -1.4448,
-          "equity": 9818.7665
-        },
-        {
-          "date": "2026-09-17",
-          "ret_pct": 0.1751,
-          "equity": 9835.9566
-        },
-        {
-          "date": "2026-09-18",
-          "ret_pct": 2.6782,
-          "equity": 10099.3862
-        },
-        {
-          "date": "2026-09-21",
-          "ret_pct": 0.0182,
-          "equity": 10101.2254
-        },
-        {
-          "date": "2026-09-22",
-          "ret_pct": -1.1366,
-          "equity": 9986.4099
-        },
-        {
-          "date": "2026-09-23",
-          "ret_pct": -0.3455,
-          "equity": 9951.9117
-        },
-        {
-          "date": "2026-09-24",
-          "ret_pct": 1.2438,
-          "equity": 10075.6926
-        }
-      ],
-      "costs": "15bp round trip plus 0.3 percent borrow",
-      "research": true,
-      "designed_after": true
-    },
-    {
-      "id": "tr05_dmcap_t3_top_earn_h3",
-      "fires": 31,
-      "after_fees_return": -22.534,
-      "daily": [
-        {
-          "date": "2026-09-14",
-          "ret_pct": 0.0,
-          "equity": 10000.0
-        },
-        {
-          "date": "2026-09-15",
-          "ret_pct": 0.0,
-          "equity": 10000.0
-        },
-        {
-          "date": "2026-09-16",
-          "ret_pct": -0.3698,
-          "equity": 9963.0211
-        },
-        {
-          "date": "2026-09-17",
-          "ret_pct": -1.3169,
-          "equity": 9831.8211
-        },
-        {
-          "date": "2026-09-18",
-          "ret_pct": -0.226,
-          "equity": 9809.5981
-        },
-        {
-          "date": "2026-09-21",
-          "ret_pct": -12.3556,
-          "equity": 8597.5642
-        },
-        {
-          "date": "2026-09-22",
-          "ret_pct": -5.4742,
-          "equity": 8126.9134
-        },
-        {
-          "date": "2026-09-23",
-          "ret_pct": -4.467,
-          "equity": 7763.8836
-        },
-        {
-          "date": "2026-09-24",
-          "ret_pct": -0.2225,
-          "equity": 7746.6083
-        }
-      ],
-      "costs": "15bp round trip plus 0.3 percent borrow",
-      "research": true,
-      "designed_after": true
-    },
-    {
-      "id": "tr06_dfpe_first_top_earn_h3",
-      "fires": 5,
-      "after_fees_return": 5.878,
-      "daily": [
-        {
-          "date": "2026-09-14",
-          "ret_pct": 0.0,
-          "equity": 10000.0
-        },
-        {
-          "date": "2026-09-15",
-          "ret_pct": -0.3749,
-          "equity": 9962.5084
-        },
-        {
-          "date": "2026-09-16",
-          "ret_pct": -4.2527,
-          "equity": 9538.8286
-        },
-        {
-          "date": "2026-09-17",
-          "ret_pct": -0.2768,
-          "equity": 9512.4284
-        },
-        {
-          "date": "2026-09-18",
-          "ret_pct": 0.3839,
-          "equity": 9548.9461
-        },
-        {
-          "date": "2026-09-21",
-          "ret_pct": 0.0,
-          "equity": 9548.9461
-        },
-        {
-          "date": "2026-09-22",
-          "ret_pct": -0.3671,
-          "equity": 9513.894
-        },
-        {
-          "date": "2026-09-23",
-          "ret_pct": -2.3178,
-          "equity": 9293.3797
-        },
-        {
-          "date": "2026-09-24",
-          "ret_pct": 13.9283,
-          "equity": 10587.79
-        }
-      ],
-      "costs": "15bp round trip plus 0.3 percent borrow",
-      "research": true,
-      "designed_after": true
-    },
-    {
-      "id": "tr07_drecom_t3_down_er_h3",
-      "fires": 0,
-      "after_fees_return": 0.0,
-      "daily": [
-        {
-          "date": "2026-09-14",
-          "ret_pct": 0.0,
-          "equity": 10000.0
-        },
-        {
-          "date": "2026-09-15",
-          "ret_pct": 0.0,
-          "equity": 10000.0
-        },
-        {
-          "date": "2026-09-16",
-          "ret_pct": 0.0,
-          "equity": 10000.0
-        },
-        {
-          "date": "2026-09-17",
-          "ret_pct": 0.0,
-          "equity": 10000.0
-        },
-        {
-          "date": "2026-09-18",
-          "ret_pct": 0.0,
-          "equity": 10000.0
-        },
-        {
-          "date": "2026-09-21",
-          "ret_pct": 0.0,
-          "equity": 10000.0
-        },
-        {
-          "date": "2026-09-22",
-          "ret_pct": 0.0,
-          "equity": 10000.0
-        },
-        {
-          "date": "2026-09-23",
-          "ret_pct": 0.0,
-          "equity": 10000.0
-        },
-        {
-          "date": "2026-09-24",
-          "ret_pct": 0.0,
-          "equity": 10000.0
-        }
-      ],
-      "costs": "15bp round trip plus 0.3 percent borrow",
-      "research": true,
-      "designed_after": true
-    },
-    {
-      "id": "tr08_dfpe_t1_top_hammer_h2",
-      "fires": 0,
-      "after_fees_return": 0.0,
-      "daily": [
-        {
-          "date": "2026-09-14",
-          "ret_pct": 0.0,
-          "equity": 10000.0
-        },
-        {
-          "date": "2026-09-15",
-          "ret_pct": 0.0,
-          "equity": 10000.0
-        },
-        {
-          "date": "2026-09-16",
-          "ret_pct": 0.0,
-          "equity": 10000.0
-        },
-        {
-          "date": "2026-09-17",
-          "ret_pct": 0.0,
-          "equity": 10000.0
-        },
-        {
-          "date": "2026-09-18",
-          "ret_pct": 0.0,
-          "equity": 10000.0
-        },
-        {
-          "date": "2026-09-21",
-          "ret_pct": 0.0,
-          "equity": 10000.0
-        },
-        {
-          "date": "2026-09-22",
-          "ret_pct": 0.0,
-          "equity": 10000.0
-        },
-        {
-          "date": "2026-09-23",
-          "ret_pct": 0.0,
-          "equity": 10000.0
-        },
-        {
-          "date": "2026-09-24",
-          "ret_pct": 0.0,
-          "equity": 10000.0
-        }
-      ],
-      "costs": "15bp round trip plus 0.3 percent borrow",
-      "research": true,
-      "designed_after": true
-    },
-    {
-      "id": "tr09_dfpe_t1_top_hammer_h3",
-      "fires": 0,
-      "after_fees_return": 0.0,
-      "daily": [
-        {
-          "date": "2026-09-14",
-          "ret_pct": 0.0,
-          "equity": 10000.0
-        },
-        {
-          "date": "2026-09-15",
-          "ret_pct": 0.0,
-          "equity": 10000.0
-        },
-        {
-          "date": "2026-09-16",
-          "ret_pct": 0.0,
-          "equity": 10000.0
-        },
-        {
-          "date": "2026-09-17",
-          "ret_pct": 0.0,
-          "equity": 10000.0
-        },
-        {
-          "date": "2026-09-18",
-          "ret_pct": 0.0,
-          "equity": 10000.0
-        },
-        {
-          "date": "2026-09-21",
-          "ret_pct": 0.0,
-          "equity": 10000.0
-        },
-        {
-          "date": "2026-09-22",
-          "ret_pct": 0.0,
-          "equity": 10000.0
-        },
-        {
-          "date": "2026-09-23",
-          "ret_pct": 0.0,
-          "equity": 10000.0
-        },
-        {
-          "date": "2026-09-24",
-          "ret_pct": 0.0,
-          "equity": 10000.0
-        }
-      ],
-      "costs": "15bp round trip plus 0.3 percent borrow",
-      "research": true,
-      "designed_after": true
-    },
-    {
-      "id": "tr10_dfpe_t2_pos_hammer_h2",
-      "fires": 0,
-      "after_fees_return": 0.0,
-      "daily": [
-        {
-          "date": "2026-09-14",
-          "ret_pct": 0.0,
-          "equity": 10000.0
-        },
-        {
-          "date": "2026-09-15",
-          "ret_pct": 0.0,
-          "equity": 10000.0
-        },
-        {
-          "date": "2026-09-16",
-          "ret_pct": 0.0,
-          "equity": 10000.0
-        },
-        {
-          "date": "2026-09-17",
-          "ret_pct": 0.0,
-          "equity": 10000.0
-        },
-        {
-          "date": "2026-09-18",
-          "ret_pct": 0.0,
-          "equity": 10000.0
-        },
-        {
-          "date": "2026-09-21",
-          "ret_pct": 0.0,
-          "equity": 10000.0
-        },
-        {
-          "date": "2026-09-22",
-          "ret_pct": 0.0,
-          "equity": 10000.0
-        },
-        {
-          "date": "2026-09-23",
-          "ret_pct": 0.0,
-          "equity": 10000.0
-        },
-        {
-          "date": "2026-09-24",
-          "ret_pct": 0.0,
-          "equity": 10000.0
-        }
-      ],
-      "costs": "15bp round trip plus 0.3 percent borrow",
-      "research": true,
-      "designed_after": true
-    },
-    {
-      "id": "tr11_dfpe_first_top_hammer_h2",
-      "fires": 0,
-      "after_fees_return": 0.0,
-      "daily": [
-        {
-          "date": "2026-09-14",
-          "ret_pct": 0.0,
-          "equity": 10000.0
-        },
-        {
-          "date": "2026-09-15",
-          "ret_pct": 0.0,
-          "equity": 10000.0
-        },
-        {
-          "date": "2026-09-16",
-          "ret_pct": 0.0,
-          "equity": 10000.0
-        },
-        {
-          "date": "2026-09-17",
-          "ret_pct": 0.0,
-          "equity": 10000.0
-        },
-        {
-          "date": "2026-09-18",
-          "ret_pct": 0.0,
-          "equity": 10000.0
-        },
-        {
-          "date": "2026-09-21",
-          "ret_pct": 0.0,
-          "equity": 10000.0
-        },
-        {
-          "date": "2026-09-22",
-          "ret_pct": 0.0,
-          "equity": 10000.0
-        },
-        {
-          "date": "2026-09-23",
-          "ret_pct": 0.0,
-          "equity": 10000.0
-        },
-        {
-          "date": "2026-09-24",
-          "ret_pct": 0.0,
-          "equity": 10000.0
-        }
-      ],
-      "costs": "15bp round trip plus 0.3 percent borrow",
-      "research": true,
-      "designed_after": true
-    },
-    {
-      "id": "tr12_dfpe_first_top_hammer_h3",
-      "fires": 0,
-      "after_fees_return": 0.0,
-      "daily": [
-        {
-          "date": "2026-09-14",
-          "ret_pct": 0.0,
-          "equity": 10000.0
-        },
-        {
-          "date": "2026-09-15",
-          "ret_pct": 0.0,
-          "equity": 10000.0
-        },
-        {
-          "date": "2026-09-16",
-          "ret_pct": 0.0,
-          "equity": 10000.0
-        },
-        {
-          "date": "2026-09-17",
-          "ret_pct": 0.0,
-          "equity": 10000.0
-        },
-        {
-          "date": "2026-09-18",
-          "ret_pct": 0.0,
-          "equity": 10000.0
-        },
-        {
-          "date": "2026-09-21",
-          "ret_pct": 0.0,
-          "equity": 10000.0
-        },
-        {
-          "date": "2026-09-22",
-          "ret_pct": 0.0,
-          "equity": 10000.0
-        },
-        {
-          "date": "2026-09-23",
-          "ret_pct": 0.0,
-          "equity": 10000.0
-        },
-        {
-          "date": "2026-09-24",
-          "ret_pct": 0.0,
-          "equity": 10000.0
-        }
-      ],
-      "costs": "15bp round trip plus 0.3 percent borrow",
-      "research": true,
-      "designed_after": true
-    }
-  ]
+  "research_shorts": []
 }

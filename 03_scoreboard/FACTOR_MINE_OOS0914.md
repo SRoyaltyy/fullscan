@@ -4,7 +4,7 @@ Rules for this mine: [IRONCLAD_RULES.md](../IRONCLAD_RULES.md).
 
 The frozen rules are logged experiments, not keepers. `keep_bar_met` is false. 12 train fires against the 30-fire bar. Excel's luck test p=0.87.
 
-`oos0914_break10_h2_sx` made +0.28% on the 9 locked test sessions (2026-09-14 through 2026-09-24) after fees, versus random picks -6.87% and IWM -1.44%. Without its best stock (SDGR) that test window was -3.04%. `oos0914_rvol_lg_h1_sx` made -7.57% on the 9 locked test sessions (2026-09-14 through 2026-09-24) after fees, versus random picks -6.87% and IWM -1.44%. Without its best stock (CYPH) that test window was -9.19%. `oos0914_break10_h1_sx` made -15.35% on the 9 locked test sessions (2026-09-14 through 2026-09-24) after fees, versus random picks -6.87% and IWM -1.44%. Without its best stock (HLP) that test window was -16.68%. `oos0914_zero_candle_h2_sx` made +3.87% on the 9 locked test sessions (2026-09-14 through 2026-09-24) after fees, versus random picks -6.87% and IWM -1.44%. Without its best stock (WGS) that test window was +1.33%.
+`oos0914_break10_h2_sx` made +0.28% on the 10 locked test sessions (2026-09-14 through 2026-09-25) after fees, versus random picks -6.87% and IWM -1.34%. Without its best stock (SDGR) that test window was -3.04%. `oos0914_rvol_lg_h1_sx` made -7.57% on the 10 locked test sessions (2026-09-14 through 2026-09-25) after fees, versus random picks -6.87% and IWM -1.34%. Without its best stock (CYPH) that test window was -9.19%. `oos0914_break10_h1_sx` made -15.35% on the 10 locked test sessions (2026-09-14 through 2026-09-25) after fees, versus random picks -6.87% and IWM -1.34%. Without its best stock (HLP) that test window was -16.68%. `oos0914_zero_candle_h2_sx` made +3.87% on the 10 locked test sessions (2026-09-14 through 2026-09-25) after fees, versus random picks -6.87% and IWM -1.34%. Without its best stock (WGS) that test window was +1.33%.
 
 ## Train
 
@@ -71,6 +71,7 @@ Logged experiment, not a keeper. `keep_bar_met` is false.
 | 2026-09-22 | GRAL,NUAI,ARM,ARQQ | INDP,LVWR,SDGR,TEM | 49.3574 | 127.57 | 10480.04 | -0.96% | -0.64% |
 | 2026-09-23 | FEAM,SVIA | — | 0.6573 | 66.28 | 10418.17 | -0.59% | -0.58% |
 | 2026-09-24 | — | ARM,ARQQ,GRAL,NUAI | 11.2467 | 9972.65 | 10028.12 | -3.74% | -3.67% |
+| 2026-09-25 | — | — | 0 | 9972.65 | 10028.12 | +0.00% | +0.00% |
 
 ### `oos0914_rvol_lg_h1_sx`
 
@@ -87,6 +88,7 @@ Logged experiment, not a keeper. `keep_bar_met` is false.
 | 2026-09-22 | GRAL,NUAI,ARM,IVVD | CYPH,FEAM,LVWR,USDE | 90.3268 | 36.85 | 10289.4 | -0.50% | +0.22% |
 | 2026-09-23 | VKTX,SVIA,BFLY,INOD | ARM,GRAL,IVVD,NUAI | 56.288 | 77.45 | 9728.25 | -5.45% | -4.91% |
 | 2026-09-24 | — | BFLY,INOD,SVIA,VKTX | 15.0856 | 9243.36 | 9243.36 | -4.98% | -4.74% |
+| 2026-09-25 | — | — | 0 | 9243.36 | 9243.36 | +0.00% | +0.00% |
 
 ### `oos0914_break10_h1_sx`
 
@@ -103,6 +105,7 @@ Logged experiment, not a keeper. `keep_bar_met` is false.
 | 2026-09-22 | GRAL,NUAI,ARM,ARQQ | CYPH,FEAM,LVWR,TJGC | 53.4028 | 194.51 | 9339.71 | -0.37% | +0.05% |
 | 2026-09-23 | FEAM,VICR,VKTX,SVIA | ARM,ARQQ,GRAL,NUAI | 31.7874 | 202.44 | 8943.42 | -4.24% | -3.94% |
 | 2026-09-24 | — | FEAM,SVIA,VICR,VKTX | 21.4111 | 8464.79 | 8464.79 | -5.35% | -5.02% |
+| 2026-09-25 | — | — | 0 | 8464.79 | 8464.79 | +0.00% | +0.00% |
 
 ### `oos0914_zero_candle_h2_sx`
 
@@ -119,6 +122,7 @@ Logged experiment, not a keeper. `keep_bar_met` is false.
 | 2026-09-22 | — | CRWD,NEO,SDGR,TEM | 8.8841 | 10396.53 | 10460.37 | -0.43% | -0.42% |
 | 2026-09-23 | A,DXCM,NICE,NTSK | IOVA | 9.2574 | 158.23 | 10373.38 | -0.83% | -0.82% |
 | 2026-09-24 | — | — | 0 | 158.23 | 10387.12 | +0.13% | +0.13% |
+| 2026-09-25 | — | — | 0 | 158.23 | 10387.12 | +0.00% | +0.00% |
 
 ## Baselines
 
@@ -127,27 +131,8 @@ Same test sessions. RANDOM4 is 1,000 draws of four names from that morning's sna
 | baseline | Futubull | Futubull + 15 bp |
 | --- | ---: | ---: |
 | RANDOM4 mean | -6.05% | -6.87% |
-| IWM buy-and-hold | -1.41% | -1.44% |
+| IWM buy-and-hold | -1.30% | -1.34% |
 
 ## Luck check
 
 On the train window the best-of-37 null (RANDOM4) is +4.66%. RANDOM4 itself averaged -2.79% (5th–95th -8.60% to +3.48%). A frozen rule had to clear the RANDOM4 mean and IWM, and stay positive with its best stock removed, before it was named.
-
-## Research shorts
-
-Theme Radar's short books are not in the 37 and were not frozen. Each enters at that session's close and covers h sessions later, or stays open and is marked at the last close when the cover falls past this window. Cost is 15 bp round trip plus 0.3 percent borrow. Days before 2026-09-28 are designed_after.
-
-| rule | after fees | fires |
-| --- | ---: | ---: |
-| `tr01_fpe_top_earn_h3` | -56.74% | 10 |
-| `tr02_dfpe_t3_top_earn_h3` | +7.03% | 15 |
-| `tr03_dfpe_t2_top_earn_h3` | +11.21% | 13 |
-| `tr04_dfpe_t3_pos_earn_h3` | +0.76% | 32 |
-| `tr05_dmcap_t3_top_earn_h3` | -22.53% | 31 |
-| `tr06_dfpe_first_top_earn_h3` | +5.88% | 5 |
-| `tr07_drecom_t3_down_er_h3` | +0.00% | 0 |
-| `tr08_dfpe_t1_top_hammer_h2` | +0.00% | 0 |
-| `tr09_dfpe_t1_top_hammer_h3` | +0.00% | 0 |
-| `tr10_dfpe_t2_pos_hammer_h2` | +0.00% | 0 |
-| `tr11_dfpe_first_top_hammer_h2` | +0.00% | 0 |
-| `tr12_dfpe_first_top_hammer_h3` | +0.00% | 0 |
