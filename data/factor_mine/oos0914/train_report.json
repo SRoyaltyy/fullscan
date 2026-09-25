@@ -1,0 +1,832 @@
+{
+  "track": "OOS-0914",
+  "cutoff": "2026-09-14",
+  "train": {
+    "start": "2026-08-13",
+    "end": "2026-09-11",
+    "sessions": [
+      "2026-08-13",
+      "2026-08-14",
+      "2026-08-17",
+      "2026-08-18",
+      "2026-08-19",
+      "2026-08-20",
+      "2026-08-21",
+      "2026-08-24",
+      "2026-08-25",
+      "2026-08-26",
+      "2026-08-27",
+      "2026-08-28",
+      "2026-08-31",
+      "2026-09-01",
+      "2026-09-02",
+      "2026-09-03",
+      "2026-09-04",
+      "2026-09-08",
+      "2026-09-09",
+      "2026-09-10",
+      "2026-09-11"
+    ]
+  },
+  "n_candidates": 40,
+  "random4": {
+    "draws": 1000,
+    "seed": 20260813,
+    "n": 4,
+    "mean": -2.794,
+    "p5": -8.601,
+    "p50": -2.897,
+    "p95": 3.48,
+    "best_of_n_null": 4.887,
+    "n_candidates": 40,
+    "min": -13.289,
+    "max": 8.608,
+    "fee": "futubull"
+  },
+  "iwm": {
+    "after_fees_return": -3.019,
+    "final_equity": 9698.07,
+    "fee": "futubull"
+  },
+  "rows": [
+    {
+      "id": "lg_hot_h1_sx",
+      "after_fees_return": -0.936,
+      "start_day_win_rate": 0.2381,
+      "best_stock": "ASST",
+      "without_best_stock_return": -1.152,
+      "hold": 1,
+      "stop_pct": null,
+      "rank": "hot_score",
+      "require": {
+        "last_green": true
+      },
+      "forbid": {
+        "alarm": true
+      },
+      "n_days": 21,
+      "final_equity": 9906.35,
+      "pass": false
+    },
+    {
+      "id": "lg_hot_h1_s8",
+      "after_fees_return": -3.697,
+      "start_day_win_rate": 0.0,
+      "best_stock": "ASST",
+      "without_best_stock_return": -3.906,
+      "hold": 1,
+      "stop_pct": 0.08,
+      "rank": "hot_score",
+      "require": {
+        "last_green": true
+      },
+      "forbid": {
+        "alarm": true
+      },
+      "n_days": 21,
+      "final_equity": 9630.29,
+      "pass": false
+    },
+    {
+      "id": "lg_hot_h2_sx",
+      "after_fees_return": 1.583,
+      "start_day_win_rate": 0.8571,
+      "best_stock": "ASST",
+      "without_best_stock_return": -1.528,
+      "hold": 2,
+      "stop_pct": null,
+      "rank": "hot_score",
+      "require": {
+        "last_green": true
+      },
+      "forbid": {
+        "alarm": true
+      },
+      "n_days": 21,
+      "final_equity": 10158.31,
+      "pass": false
+    },
+    {
+      "id": "lg_hot_h2_s8",
+      "after_fees_return": -1.249,
+      "start_day_win_rate": 0.0952,
+      "best_stock": "ASST",
+      "without_best_stock_return": -5.947,
+      "hold": 2,
+      "stop_pct": 0.08,
+      "rank": "hot_score",
+      "require": {
+        "last_green": true
+      },
+      "forbid": {
+        "alarm": true
+      },
+      "n_days": 21,
+      "final_equity": 9875.08,
+      "pass": false
+    },
+    {
+      "id": "rsi_os_h1_sx",
+      "after_fees_return": -8.381,
+      "start_day_win_rate": 0.1429,
+      "best_stock": "SION",
+      "without_best_stock_return": -11.784,
+      "hold": 1,
+      "stop_pct": null,
+      "rank": "rsi",
+      "require": {
+        "rsi_os": true
+      },
+      "forbid": {},
+      "n_days": 21,
+      "final_equity": 9161.94,
+      "pass": false
+    },
+    {
+      "id": "rsi_os_h1_s8",
+      "after_fees_return": -7.336,
+      "start_day_win_rate": 0.3333,
+      "best_stock": "SION",
+      "without_best_stock_return": -10.225,
+      "hold": 1,
+      "stop_pct": 0.08,
+      "rank": "rsi",
+      "require": {
+        "rsi_os": true
+      },
+      "forbid": {},
+      "n_days": 21,
+      "final_equity": 9266.41,
+      "pass": false
+    },
+    {
+      "id": "rsi_os_h2_sx",
+      "after_fees_return": -5.413,
+      "start_day_win_rate": 0.3333,
+      "best_stock": "AIIO",
+      "without_best_stock_return": -7.906,
+      "hold": 2,
+      "stop_pct": null,
+      "rank": "rsi",
+      "require": {
+        "rsi_os": true
+      },
+      "forbid": {},
+      "n_days": 21,
+      "final_equity": 9458.72,
+      "pass": false
+    },
+    {
+      "id": "rsi_os_h2_s8",
+      "after_fees_return": -5.692,
+      "start_day_win_rate": 0.3333,
+      "best_stock": "AIIO",
+      "without_best_stock_return": -8.329,
+      "hold": 2,
+      "stop_pct": 0.08,
+      "rank": "rsi",
+      "require": {
+        "rsi_os": true
+      },
+      "forbid": {},
+      "n_days": 21,
+      "final_equity": 9430.83,
+      "pass": false
+    },
+    {
+      "id": "rvol_lg_h1_sx",
+      "after_fees_return": 3.105,
+      "start_day_win_rate": 1.0,
+      "best_stock": "CMRC",
+      "without_best_stock_return": 0.477,
+      "hold": 1,
+      "stop_pct": null,
+      "rank": "hot_score",
+      "require": {
+        "last_green": true,
+        "rvol_min": 1.5
+      },
+      "forbid": {
+        "alarm": true
+      },
+      "n_days": 21,
+      "final_equity": 10310.54,
+      "pass": true
+    },
+    {
+      "id": "rvol_lg_h1_s8",
+      "after_fees_return": 0.336,
+      "start_day_win_rate": 0.9524,
+      "best_stock": "CMRC",
+      "without_best_stock_return": -2.292,
+      "hold": 1,
+      "stop_pct": 0.08,
+      "rank": "hot_score",
+      "require": {
+        "last_green": true,
+        "rvol_min": 1.5
+      },
+      "forbid": {
+        "alarm": true
+      },
+      "n_days": 21,
+      "final_equity": 10033.59,
+      "pass": false
+    },
+    {
+      "id": "rvol_lg_h2_sx",
+      "after_fees_return": 1.917,
+      "start_day_win_rate": 1.0,
+      "best_stock": "CMRC",
+      "without_best_stock_return": -0.676,
+      "hold": 2,
+      "stop_pct": null,
+      "rank": "hot_score",
+      "require": {
+        "last_green": true,
+        "rvol_min": 1.5
+      },
+      "forbid": {
+        "alarm": true
+      },
+      "n_days": 21,
+      "final_equity": 10191.69,
+      "pass": false
+    },
+    {
+      "id": "rvol_lg_h2_s8",
+      "after_fees_return": -2.498,
+      "start_day_win_rate": 0.3333,
+      "best_stock": "CMRC",
+      "without_best_stock_return": -5.047,
+      "hold": 2,
+      "stop_pct": 0.08,
+      "rank": "hot_score",
+      "require": {
+        "last_green": true,
+        "rvol_min": 1.5
+      },
+      "forbid": {
+        "alarm": true
+      },
+      "n_days": 21,
+      "final_equity": 9750.18,
+      "pass": false
+    },
+    {
+      "id": "ret5_up_h1_sx",
+      "after_fees_return": -0.017,
+      "start_day_win_rate": 0.2381,
+      "best_stock": "GPRO",
+      "without_best_stock_return": -1.125,
+      "hold": 1,
+      "stop_pct": null,
+      "rank": "ret_5",
+      "require": {
+        "ret_5_min": 0
+      },
+      "forbid": {
+        "alarm": true
+      },
+      "n_days": 21,
+      "final_equity": 9998.27,
+      "pass": false
+    },
+    {
+      "id": "ret5_up_h1_s8",
+      "after_fees_return": -2.796,
+      "start_day_win_rate": 0.0,
+      "best_stock": "GPRO",
+      "without_best_stock_return": -3.873,
+      "hold": 1,
+      "stop_pct": 0.08,
+      "rank": "ret_5",
+      "require": {
+        "ret_5_min": 0
+      },
+      "forbid": {
+        "alarm": true
+      },
+      "n_days": 21,
+      "final_equity": 9720.42,
+      "pass": false
+    },
+    {
+      "id": "ret5_up_h2_sx",
+      "after_fees_return": -6.63,
+      "start_day_win_rate": 0.0,
+      "best_stock": "CAPR",
+      "without_best_stock_return": -11.344,
+      "hold": 2,
+      "stop_pct": null,
+      "rank": "ret_5",
+      "require": {
+        "ret_5_min": 0
+      },
+      "forbid": {
+        "alarm": true
+      },
+      "n_days": 21,
+      "final_equity": 9336.95,
+      "pass": false
+    },
+    {
+      "id": "ret5_up_h2_s8",
+      "after_fees_return": -7.745,
+      "start_day_win_rate": 0.0,
+      "best_stock": "CAPR",
+      "without_best_stock_return": -12.076,
+      "hold": 2,
+      "stop_pct": 0.08,
+      "rank": "ret_5",
+      "require": {
+        "ret_5_min": 0
+      },
+      "forbid": {
+        "alarm": true
+      },
+      "n_days": 21,
+      "final_equity": 9225.53,
+      "pass": false
+    },
+    {
+      "id": "pullback_h1_sx",
+      "after_fees_return": -10.38,
+      "start_day_win_rate": 0.0,
+      "best_stock": "FCEL",
+      "without_best_stock_return": -14.261,
+      "hold": 1,
+      "stop_pct": null,
+      "rank": "hot_score",
+      "require": {
+        "last_green": true,
+        "ret_5_max": -3
+      },
+      "forbid": {
+        "alarm": true
+      },
+      "n_days": 21,
+      "final_equity": 8961.95,
+      "pass": false
+    },
+    {
+      "id": "pullback_h1_s8",
+      "after_fees_return": -9.196,
+      "start_day_win_rate": 0.0,
+      "best_stock": "FCEL",
+      "without_best_stock_return": -12.444,
+      "hold": 1,
+      "stop_pct": 0.08,
+      "rank": "hot_score",
+      "require": {
+        "last_green": true,
+        "ret_5_max": -3
+      },
+      "forbid": {
+        "alarm": true
+      },
+      "n_days": 21,
+      "final_equity": 9080.41,
+      "pass": false
+    },
+    {
+      "id": "pullback_h2_sx",
+      "after_fees_return": -6.148,
+      "start_day_win_rate": 0.0476,
+      "best_stock": "FCEL",
+      "without_best_stock_return": -15.738,
+      "hold": 2,
+      "stop_pct": null,
+      "rank": "hot_score",
+      "require": {
+        "last_green": true,
+        "ret_5_max": -3
+      },
+      "forbid": {
+        "alarm": true
+      },
+      "n_days": 21,
+      "final_equity": 9385.24,
+      "pass": false
+    },
+    {
+      "id": "pullback_h2_s8",
+      "after_fees_return": -4.992,
+      "start_day_win_rate": 0.1905,
+      "best_stock": "FCEL",
+      "without_best_stock_return": -13.98,
+      "hold": 2,
+      "stop_pct": 0.08,
+      "rank": "hot_score",
+      "require": {
+        "last_green": true,
+        "ret_5_max": -3
+      },
+      "forbid": {
+        "alarm": true
+      },
+      "n_days": 21,
+      "final_equity": 9500.79,
+      "pass": false
+    },
+    {
+      "id": "break10_h1_sx",
+      "after_fees_return": 2.346,
+      "start_day_win_rate": 1.0,
+      "best_stock": "CMRC",
+      "without_best_stock_return": 0.659,
+      "hold": 1,
+      "stop_pct": null,
+      "rank": "hot_score",
+      "require": {
+        "break_10": true
+      },
+      "forbid": {
+        "alarm": true
+      },
+      "n_days": 21,
+      "final_equity": 10234.61,
+      "pass": true
+    },
+    {
+      "id": "break10_h1_s8",
+      "after_fees_return": -0.382,
+      "start_day_win_rate": 0.4286,
+      "best_stock": "CMRC",
+      "without_best_stock_return": -2.069,
+      "hold": 1,
+      "stop_pct": 0.08,
+      "rank": "hot_score",
+      "require": {
+        "break_10": true
+      },
+      "forbid": {
+        "alarm": true
+      },
+      "n_days": 21,
+      "final_equity": 9961.84,
+      "pass": false
+    },
+    {
+      "id": "break10_h2_sx",
+      "after_fees_return": 5.969,
+      "start_day_win_rate": 1.0,
+      "best_stock": "CMRC",
+      "without_best_stock_return": 4.225,
+      "hold": 2,
+      "stop_pct": null,
+      "rank": "hot_score",
+      "require": {
+        "break_10": true
+      },
+      "forbid": {
+        "alarm": true
+      },
+      "n_days": 21,
+      "final_equity": 10596.87,
+      "pass": true
+    },
+    {
+      "id": "break10_h2_s8",
+      "after_fees_return": 3.145,
+      "start_day_win_rate": 1.0,
+      "best_stock": "CMRC",
+      "without_best_stock_return": 1.402,
+      "hold": 2,
+      "stop_pct": 0.08,
+      "rank": "hot_score",
+      "require": {
+        "break_10": true
+      },
+      "forbid": {
+        "alarm": true
+      },
+      "n_days": 21,
+      "final_equity": 10314.53,
+      "pass": true
+    },
+    {
+      "id": "macd_x_h1_sx",
+      "after_fees_return": 0.562,
+      "start_day_win_rate": 1.0,
+      "best_stock": "EOSE",
+      "without_best_stock_return": -2.238,
+      "hold": 1,
+      "stop_pct": null,
+      "rank": "macd_hist",
+      "require": {
+        "macd_cross_up": true
+      },
+      "forbid": {},
+      "n_days": 21,
+      "final_equity": 10056.22,
+      "pass": false
+    },
+    {
+      "id": "macd_x_h1_s8",
+      "after_fees_return": 0.562,
+      "start_day_win_rate": 1.0,
+      "best_stock": "EOSE",
+      "without_best_stock_return": -2.238,
+      "hold": 1,
+      "stop_pct": 0.08,
+      "rank": "macd_hist",
+      "require": {
+        "macd_cross_up": true
+      },
+      "forbid": {},
+      "n_days": 21,
+      "final_equity": 10056.22,
+      "pass": false
+    },
+    {
+      "id": "macd_x_h2_sx",
+      "after_fees_return": 1.73,
+      "start_day_win_rate": 0.9524,
+      "best_stock": "EOSE",
+      "without_best_stock_return": -3.55,
+      "hold": 2,
+      "stop_pct": null,
+      "rank": "macd_hist",
+      "require": {
+        "macd_cross_up": true
+      },
+      "forbid": {},
+      "n_days": 21,
+      "final_equity": 10173.03,
+      "pass": false
+    },
+    {
+      "id": "macd_x_h2_s8",
+      "after_fees_return": 1.19,
+      "start_day_win_rate": 0.9524,
+      "best_stock": "EOSE",
+      "without_best_stock_return": -4.059,
+      "hold": 2,
+      "stop_pct": 0.08,
+      "rank": "macd_hist",
+      "require": {
+        "macd_cross_up": true
+      },
+      "forbid": {},
+      "n_days": 21,
+      "final_equity": 10118.99,
+      "pass": false
+    },
+    {
+      "id": "flow_lg_h1_sx",
+      "after_fees_return": -5.48,
+      "start_day_win_rate": 0.0,
+      "best_stock": "HAFN",
+      "without_best_stock_return": -3.804,
+      "hold": 1,
+      "stop_pct": null,
+      "rank": "hot_score",
+      "require": {
+        "flow_in": true,
+        "last_green": true
+      },
+      "forbid": {
+        "alarm": true
+      },
+      "n_days": 21,
+      "final_equity": 9452.05,
+      "pass": false
+    },
+    {
+      "id": "flow_lg_h1_s8",
+      "after_fees_return": -5.48,
+      "start_day_win_rate": 0.0,
+      "best_stock": "HAFN",
+      "without_best_stock_return": -3.804,
+      "hold": 1,
+      "stop_pct": 0.08,
+      "rank": "hot_score",
+      "require": {
+        "flow_in": true,
+        "last_green": true
+      },
+      "forbid": {
+        "alarm": true
+      },
+      "n_days": 21,
+      "final_equity": 9452.05,
+      "pass": false
+    },
+    {
+      "id": "flow_lg_h2_sx",
+      "after_fees_return": -2.221,
+      "start_day_win_rate": 0.2381,
+      "best_stock": "HAFN",
+      "without_best_stock_return": -2.59,
+      "hold": 2,
+      "stop_pct": null,
+      "rank": "hot_score",
+      "require": {
+        "flow_in": true,
+        "last_green": true
+      },
+      "forbid": {
+        "alarm": true
+      },
+      "n_days": 21,
+      "final_equity": 9777.91,
+      "pass": false
+    },
+    {
+      "id": "flow_lg_h2_s8",
+      "after_fees_return": -2.221,
+      "start_day_win_rate": 0.2381,
+      "best_stock": "HAFN",
+      "without_best_stock_return": -2.59,
+      "hold": 2,
+      "stop_pct": 0.08,
+      "rank": "hot_score",
+      "require": {
+        "flow_in": true,
+        "last_green": true
+      },
+      "forbid": {
+        "alarm": true
+      },
+      "n_days": 21,
+      "final_equity": 9777.91,
+      "pass": false
+    },
+    {
+      "id": "yday_white_h1_sx",
+      "after_fees_return": 1.679,
+      "start_day_win_rate": 1.0,
+      "best_stock": "TARS",
+      "without_best_stock_return": -0.527,
+      "hold": 1,
+      "stop_pct": null,
+      "rank": "cond",
+      "require": {
+        "yday_up": true,
+        "cam_bad_max": 0
+      },
+      "forbid": {
+        "alarm": true
+      },
+      "n_days": 21,
+      "final_equity": 10167.91,
+      "pass": false
+    },
+    {
+      "id": "yday_white_h1_s8",
+      "after_fees_return": 1.355,
+      "start_day_win_rate": 1.0,
+      "best_stock": "TARS",
+      "without_best_stock_return": -0.85,
+      "hold": 1,
+      "stop_pct": 0.08,
+      "rank": "cond",
+      "require": {
+        "yday_up": true,
+        "cam_bad_max": 0
+      },
+      "forbid": {
+        "alarm": true
+      },
+      "n_days": 21,
+      "final_equity": 10135.46,
+      "pass": false
+    },
+    {
+      "id": "yday_white_h2_sx",
+      "after_fees_return": -1.593,
+      "start_day_win_rate": 0.4286,
+      "best_stock": "BAND",
+      "without_best_stock_return": -3.088,
+      "hold": 2,
+      "stop_pct": null,
+      "rank": "cond",
+      "require": {
+        "yday_up": true,
+        "cam_bad_max": 0
+      },
+      "forbid": {
+        "alarm": true
+      },
+      "n_days": 21,
+      "final_equity": 9840.7,
+      "pass": false
+    },
+    {
+      "id": "yday_white_h2_s8",
+      "after_fees_return": -1.119,
+      "start_day_win_rate": 0.4286,
+      "best_stock": "BAND",
+      "without_best_stock_return": -2.612,
+      "hold": 2,
+      "stop_pct": 0.08,
+      "rank": "cond",
+      "require": {
+        "yday_up": true,
+        "cam_bad_max": 0
+      },
+      "forbid": {
+        "alarm": true
+      },
+      "n_days": 21,
+      "final_equity": 9888.12,
+      "pass": false
+    },
+    {
+      "id": "zero_candle_h1_sx",
+      "after_fees_return": 2.669,
+      "start_day_win_rate": 1.0,
+      "best_stock": "TARS",
+      "without_best_stock_return": -0.234,
+      "hold": 1,
+      "stop_pct": null,
+      "rank": "candle_score",
+      "require": {
+        "zero_red": true,
+        "last_green": true
+      },
+      "forbid": {
+        "alarm": true
+      },
+      "n_days": 21,
+      "final_equity": 10266.89,
+      "pass": false
+    },
+    {
+      "id": "zero_candle_h1_s8",
+      "after_fees_return": 2.669,
+      "start_day_win_rate": 1.0,
+      "best_stock": "TARS",
+      "without_best_stock_return": -0.234,
+      "hold": 1,
+      "stop_pct": 0.08,
+      "rank": "candle_score",
+      "require": {
+        "zero_red": true,
+        "last_green": true
+      },
+      "forbid": {
+        "alarm": true
+      },
+      "n_days": 21,
+      "final_equity": 10266.89,
+      "pass": false
+    },
+    {
+      "id": "zero_candle_h2_sx",
+      "after_fees_return": 0.951,
+      "start_day_win_rate": 1.0,
+      "best_stock": "SWKS",
+      "without_best_stock_return": 1.798,
+      "hold": 2,
+      "stop_pct": null,
+      "rank": "candle_score",
+      "require": {
+        "zero_red": true,
+        "last_green": true
+      },
+      "forbid": {
+        "alarm": true
+      },
+      "n_days": 21,
+      "final_equity": 10095.1,
+      "pass": true
+    },
+    {
+      "id": "zero_candle_h2_s8",
+      "after_fees_return": 0.951,
+      "start_day_win_rate": 1.0,
+      "best_stock": "SWKS",
+      "without_best_stock_return": 1.798,
+      "hold": 2,
+      "stop_pct": 0.08,
+      "rank": "candle_score",
+      "require": {
+        "zero_red": true,
+        "last_green": true
+      },
+      "forbid": {
+        "alarm": true
+      },
+      "n_days": 21,
+      "final_equity": 10095.1,
+      "pass": true
+    }
+  ],
+  "passed": [
+    "break10_h2_sx",
+    "break10_h2_s8",
+    "rvol_lg_h1_sx",
+    "break10_h1_sx",
+    "zero_candle_h2_s8",
+    "zero_candle_h2_sx"
+  ],
+  "freeze": [
+    "break10_h2_sx",
+    "break10_h2_s8",
+    "rvol_lg_h1_sx",
+    "break10_h1_sx",
+    "zero_candle_h2_s8"
+  ]
+}

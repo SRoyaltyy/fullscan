@@ -2194,6 +2194,36 @@
       "same_bar": "stop_first",
       "sha256": "460069dd64bc20378cdc655ad8c5128af79c6664b05ac6ac5035b2a244e08f9e"
     },
+    "oos0914_break10_h1_sx": {
+      "created_on": "2026-09-14",
+      "locked_on": "2026-09-14",
+      "same_bar": "stop_first",
+      "sha256": "a2a8b4eb1f90a3761c6a86f734cb3d66c8e1a2a7f2fde6bbf25a4c889379a859"
+    },
+    "oos0914_break10_h2_s8": {
+      "created_on": "2026-09-14",
+      "locked_on": "2026-09-14",
+      "same_bar": "stop_first",
+      "sha256": "eeb81f789b57d6bbb694280a7e7d2ad9cd4f9455bc13d722d56b43e18b88070f"
+    },
+    "oos0914_break10_h2_sx": {
+      "created_on": "2026-09-14",
+      "locked_on": "2026-09-14",
+      "same_bar": "stop_first",
+      "sha256": "d4a1d4d853a7f296b1b30778bd55c571bd28dc97eb513d4a908721dd909b3237"
+    },
+    "oos0914_rvol_lg_h1_sx": {
+      "created_on": "2026-09-14",
+      "locked_on": "2026-09-14",
+      "same_bar": "stop_first",
+      "sha256": "cf8a5668b664d6737acabe292d0c2a2572533acda6b9d63bff916380046c4b67"
+    },
+    "oos0914_zero_candle_h2_s8": {
+      "created_on": "2026-09-14",
+      "locked_on": "2026-09-14",
+      "same_bar": "stop_first",
+      "sha256": "5a13b45077269ccf07d665944c4ab17d21f00e58057b51722ab7ad213daf4521"
+    },
     "oppset_h1": {
       "created_on": "2026-08-13",
       "locked_on": "2026-09-25",

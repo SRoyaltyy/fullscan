@@ -1,0 +1,129 @@
+{
+  "designed_after": "2026-09-14",
+  "recipes": [
+    {
+      "name": "oos0914_break10_h2_sx",
+      "universe": "union",
+      "hold": 2,
+      "side": "long",
+      "top_n": 4,
+      "require": {
+        "break_10": true
+      },
+      "forbid": {
+        "alarm": true
+      },
+      "rank": "hot_score",
+      "exit_when": {},
+      "size": "leftover",
+      "sell": "time",
+      "s_boost": "none",
+      "day_cap": 1.0,
+      "take_pct": null,
+      "stop_pct": null,
+      "note": "OOS-0914 frozen rule. designed_after 2026-09-14.",
+      "created_on": "2026-09-14"
+    },
+    {
+      "name": "oos0914_break10_h2_s8",
+      "universe": "union",
+      "hold": 2,
+      "side": "long",
+      "top_n": 4,
+      "require": {
+        "break_10": true
+      },
+      "forbid": {
+        "alarm": true
+      },
+      "rank": "hot_score",
+      "exit_when": {},
+      "size": "leftover",
+      "sell": "time",
+      "s_boost": "none",
+      "day_cap": 1.0,
+      "take_pct": null,
+      "stop_pct": 0.08,
+      "note": "OOS-0914 frozen rule. designed_after 2026-09-14.",
+      "created_on": "2026-09-14"
+    },
+    {
+      "name": "oos0914_rvol_lg_h1_sx",
+      "universe": "union",
+      "hold": 1,
+      "side": "long",
+      "top_n": 4,
+      "require": {
+        "last_green": true,
+        "rvol_min": 1.5
+      },
+      "forbid": {
+        "alarm": true
+      },
+      "rank": "hot_score",
+      "exit_when": {},
+      "size": "leftover",
+      "sell": "time",
+      "s_boost": "none",
+      "day_cap": 1.0,
+      "take_pct": null,
+      "stop_pct": null,
+      "note": "OOS-0914 frozen rule. designed_after 2026-09-14.",
+      "created_on": "2026-09-14"
+    },
+    {
+      "name": "oos0914_break10_h1_sx",
+      "universe": "union",
+      "hold": 1,
+      "side": "long",
+      "top_n": 4,
+      "require": {
+        "break_10": true
+      },
+      "forbid": {
+        "alarm": true
+      },
+      "rank": "hot_score",
+      "exit_when": {},
+      "size": "leftover",
+      "sell": "time",
+      "s_boost": "none",
+      "day_cap": 1.0,
+      "take_pct": null,
+      "stop_pct": null,
+      "note": "OOS-0914 frozen rule. designed_after 2026-09-14.",
+      "created_on": "2026-09-14"
+    },
+    {
+      "name": "oos0914_zero_candle_h2_s8",
+      "universe": "union",
+      "hold": 2,
+      "side": "long",
+      "top_n": 4,
+      "require": {
+        "zero_red": true,
+        "last_green": true
+      },
+      "forbid": {
+        "alarm": true
+      },
+      "rank": "candle_score",
+      "exit_when": {},
+      "size": "leftover",
+      "sell": "time",
+      "s_boost": "none",
+      "day_cap": 1.0,
+      "take_pct": null,
+      "stop_pct": 0.08,
+      "note": "OOS-0914 frozen rule. designed_after 2026-09-14.",
+      "created_on": "2026-09-14"
+    }
+  ],
+  "fingerprints": {
+    "oos0914_break10_h2_sx": "d4a1d4d853a7f296b1b30778bd55c571bd28dc97eb513d4a908721dd909b3237",
+    "oos0914_break10_h2_s8": "eeb81f789b57d6bbb694280a7e7d2ad9cd4f9455bc13d722d56b43e18b88070f",
+    "oos0914_rvol_lg_h1_sx": "cf8a5668b664d6737acabe292d0c2a2572533acda6b9d63bff916380046c4b67",
+    "oos0914_break10_h1_sx": "a2a8b4eb1f90a3761c6a86f734cb3d66c8e1a2a7f2fde6bbf25a4c889379a859",
+    "oos0914_zero_candle_h2_s8": "5a13b45077269ccf07d665944c4ab17d21f00e58057b51722ab7ad213daf4521"
+  }
+}
