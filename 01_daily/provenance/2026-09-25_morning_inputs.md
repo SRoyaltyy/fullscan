@@ -9,3 +9,4 @@ Written by Trading Bot Taskforce at 07:15 ET, 2026-09-25, so the 09-25 locked da
 - Today's peers file (`data/peers/2026-09-25_peer_rs.csv`) was missing because of a date-fallback bug in `peer_rs._resolve_export`, which wrote into 09-24's file instead. It was rebuilt by AB Enrich 36127214334 (commit 93e67f9234).
 - The catalyst file was stamped OK with 0 of 8 dossiers. Its retry, 36118879001, hung and was cancelled.
 - The Factor Mine lock for 09-25 uses Yahoo bars and the 09-24 panel only. No DeepSeek-written content is among its inputs.
+- **Restore (07:20 ET):** the same peer_rs bug overwrote `data/peers/2026-09-24_peer_rs.csv` in 4c2c586ee8 (09:10Z 09-25) with different contents (all rows changed). It was restored byte-for-byte from 15938bbb78 (blob 11c4bb0158) in commit 450b9e13a6, so 09-24 matches what that morning actually saw.
