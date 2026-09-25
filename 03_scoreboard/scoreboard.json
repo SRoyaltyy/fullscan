@@ -28203,6 +28203,43 @@
       "anchor_score": -1.045,
       "overlay_score": -5.625,
       "index_carry": 0.676
+    },
+    {
+      "date": "2026-09-25",
+      "topic": "sector:Real Estate",
+      "predicted_direction": "down",
+      "predicted_magnitude_band": "mild",
+      "confidence_score": 0.585,
+      "total_score": -4.619,
+      "multiplier": 0.85,
+      "components": {
+        "S0_SHARED_MACRO": -1.0,
+        "S1_SECTOR_FACTORS": -3.0,
+        "S2_BREADTH": -1.0,
+        "S3_FLOWS_POSITIONING": -0.5,
+        "S4_ETF_TAPE": -1.0
+      },
+      "leading_sum": -13.0,
+      "actual_open": null,
+      "actual_close": null,
+      "actual_pct_change": null,
+      "actual_direction": null,
+      "actual_magnitude_band": null,
+      "direction_hit": null,
+      "magnitude_hit": null,
+      "divergence_flagged": true,
+      "divergence_verdict": null,
+      "per_factor_breakdown": [],
+      "reflection_lesson_ref": null,
+      "sources_used": [],
+      "horizon_calls": {},
+      "sector": "Real Estate",
+      "etf": "XLRE",
+      "rubric": "00_grounding/sectors/real_estate.md",
+      "engine": "v2",
+      "anchor_score": 0.705,
+      "overlay_score": -6.0,
+      "index_carry": 0.676
     }
   ]
 }

@@ -1,6 +1,6 @@
 {
   "date": "2026-09-25",
-  "generated_at": "2026-09-25T05:58:58.003897-04:00",
+  "generated_at": "2026-09-25T06:02:55.439931-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -25,7 +25,7 @@
     "direction": "up"
   },
   "sectors": {
-    "said": "2 up / 3 down / 3 flat",
+    "said": "2 up / 4 down / 3 flat",
     "bullets": [
       "XLB FLAT +1.4",
       "XLC FLAT -0.4",
@@ -35,7 +35,7 @@
       "XLF FLAT -0.1",
       "XLV UP +0.9",
       "XLI DOWN -6.0",
-      "XLRE missing",
+      "XLRE DOWN -4.6",
       "XLK missing",
       "XLU missing"
     ]
@@ -225,70 +225,70 @@
     },
     {
       "key": "sector_one",
-      "title": "Sector predict Industrials (8/11)",
+      "title": "Sector predict Real Estate (9/11)",
       "date": "2026-09-25",
       "ok": true,
       "pushed": true,
-      "at": "2026-09-25T05:58:57.382829-04:00",
+      "at": "2026-09-25T06:02:54.670282-04:00",
       "files": [
         {
-          "path": "01_daily/sectors/2026-09-25/industrials_predict.md",
+          "path": "01_daily/sectors/2026-09-25/real_estate_predict.md",
           "ok": true,
           "reason": "",
-          "size": 20348,
-          "preview": "# Sector Prediction \u2014 Industrials \u2014 2026-09-25\n- news_mode: **on**\n- ETF: **XLI**\n- rubric: `00_grounding/sectors/industrials.md`\n- predicted_direction: **down**\n- predicted_magnitude_band: **mild**\n- total_score: **-5.994** (mult 0.9)\n- regime: risk_off\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **-1.045** (ES +0.28%, ER2 +0.08%, HG +0.66%, PM:XLI -0.38%) \u00b7 index_carry **0.676** (general 2.706) \u00b7 llm_overlay **-5.625** (raw -5.625)"
+          "size": 20816,
+          "preview": "# Sector Prediction \u2014 Real Estate \u2014 2026-09-25\n- news_mode: **on**\n- ETF: **XLRE**\n- rubric: `00_grounding/sectors/real_estate.md`\n- predicted_direction: **down**\n- predicted_magnitude_band: **mild**\n- total_score: **-4.619** (mult 0.85)\n- regime: risk_off\n- divergence_flagged: **True**\n- engine: v2 \u00b7 tape_anchor **0.705** (ES +0.28%, ZN -0.03%) \u00b7 index_carry **0.676** (general 2.706) \u00b7 llm_overlay **-6.0** (raw -11.794)"
         },
         {
-          "path": "01_daily/sectors/2026-09-25/industrials_predict_trace.md",
+          "path": "01_daily/sectors/2026-09-25/real_estate_predict_trace.md",
           "ok": true,
           "reason": "",
-          "size": 394,
-          "preview": "# Reasoning trace \u2014 SECTOR PREDICT Industrials 2026-09-25 retry1\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (159,501 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Done researching.** The model stopped searching and wrote its full analysis (18,275 characters)."
+          "size": 8745,
+          "preview": "# Reasoning trace \u2014 SECTOR PREDICT Real Estate 2026-09-25\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (155,226 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Research.** The model wanted to know: *\"10 year Treasury yield 5.2% spike September 25 2026 futures\"* \u2192 got 6 results (via gnews_rss)\n- investingLive Asia-Pacific market news: Iran offers seven-day Hormuz dea - investingLive (https://news.google.com/rss/articles/CBMipgFBVV95cUxORVo4UGNybnNfTmRMZWRma1FFMkVFOTJnUGZTNUI4TUVETUZWd2J1UXRrbHNnYTM3OElxR0JzWFpieFFhVEstWU5wS21VNU1qdS1IQUZvT3o5SG91TS1ablFOMFBXTjd0c1A5SC1NcUN6dmZMa0xZem1hTGZxUXJHRGlWUlJISWlxLUNZaDFweXBwdnAyV3ZHU0N6TFc4MGQtaHduOXV3?oc=5)\n- U.S. Stock Market Trends (September 25): Oracle Falls 3.3% Due to Data Center Power Delays; 10-Year U.S. Treasury Yield\u2026 -"
         },
         {
-          "path": "01_daily/_transcripts/2026-09-25_sector_industrials_predict.json",
+          "path": "01_daily/_transcripts/2026-09-25_sector_real_estate_predict.json",
           "ok": true,
           "reason": "",
-          "size": 182118,
+          "size": 200218,
           "preview": "keys: model, messages"
         },
         {
           "path": "01_daily/2026-09-25_preopen_qc.json",
           "ok": true,
           "reason": "",
-          "size": 7208,
+          "size": 7201,
           "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok"
         },
         {
           "path": "01_daily/sectors/2026-09-25/_qc.json",
           "ok": true,
           "reason": "",
-          "size": 1226,
+          "size": 1222,
           "preview": "keys: date, n_ok, n_total, sectors"
         },
         {
           "path": "01_daily/sectors/2026-09-25/_BOARD.md",
           "ok": true,
           "reason": "",
-          "size": 1863,
-          "preview": "# Sector Board \u2014 2026-09-25\nGenerated: **2026-09-25T05:58:57.366231-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.)."
+          "size": 1925,
+          "preview": "# Sector Board \u2014 2026-09-25\nGenerated: **2026-09-25T06:02:54.653821-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.)."
         },
         {
           "path": "01_daily/sectors/2026-09-25/_board.json",
           "ok": true,
           "reason": "",
-          "size": 6613,
+          "size": 6788,
           "preview": "keys: date, generated_at, sectors"
         },
         {
           "path": "03_scoreboard/scoreboard.json",
           "ok": true,
           "reason": "",
-          "size": 910198,
+          "size": 911285,
           "preview": "keys: runs"
         }
       ],
-      "preview": "# Sector Prediction \u2014 Industrials \u2014 2026-09-25\n- news_mode: **on**\n- ETF: **XLI**\n- rubric: `00_grounding/sectors/industrials.md`\n- predicted_direction: **down**\n- predicted_magnitude_band: **mild**\n- total_score: **-5.994** (mult 0.9)\n- regime: risk_off\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **-1.045** (ES +0.28%, ER2 +0.08%, HG +0.66%, PM:XLI -0.38%) \u00b7 index_carry **0.676** (general 2.706) \u00b7 llm_overlay **-5.625** (raw -5.625) \u00b7 # Reasoning trace \u2014 SECTOR PREDICT Industrials 2026-09-25 retry1\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (159,501 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Done researching.** The model stopped searching and wrote its full analysis (18,275 characters). \u00b7 keys: model, messages \u00b7 keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok \u00b7 keys: date, n_ok, n_total, sectors \u00b7 # Sector Board \u2014 2026-09-25\nGenerated: **2026-09-25T05:58:57.366231-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.). \u00b7 keys: date"
+      "preview": "# Sector Prediction \u2014 Real Estate \u2014 2026-09-25\n- news_mode: **on**\n- ETF: **XLRE**\n- rubric: `00_grounding/sectors/real_estate.md`\n- predicted_direction: **down**\n- predicted_magnitude_band: **mild**\n- total_score: **-4.619** (mult 0.85)\n- regime: risk_off\n- divergence_flagged: **True**\n- engine: v2 \u00b7 tape_anchor **0.705** (ES +0.28%, ZN -0.03%) \u00b7 index_carry **0.676** (general 2.706) \u00b7 llm_overlay **-6.0** (raw -11.794) \u00b7 # Reasoning trace \u2014 SECTOR PREDICT Real Estate 2026-09-25\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (155,226 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Research.** The model wanted to know: *\"10 year Treasury yield 5.2% spike September 25 2026 futures\"* \u2192 got 6 results (via gnews_rss)\n- investingLive Asia-Pacific market news: Iran offers seven-day Hormuz dea - investingLive (https://news.google.com/rss/articles/CBMipgFBVV95cUxORVo4UGNybnNfTmRMZWRma1FFMkVFOTJnUGZTNUI4TUVETUZWd2J1UXRrbHNnYTM3OElxR0JzWFpieFFhVEstWU5wS21VNU1qdS1IQUZvT3o5SG91TS1ablFOMFBXTjd0c1A5SC1NcUN6dmZMa0xZem1hTGZxUXJHRGlWUlJISWlxLUNZaDFweXBwdnAyV3ZHU0N6TFc4MGQtaHduOXV3?oc="
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
