@@ -107,6 +107,7 @@ jobs:
             "auto: strategy tickets $(TZ=America/New_York date +%F)" \
             "data/day_board/${DATE}_strategy_tickets.json" \
             "data/day_board/${DATE}_strategy_tickets_draft.json" \
+            "data/factor_mine/send_inputs/${DATE}.json" \
             dashboard/factor-mine/index.html \
             data/day_board/strategy_tickets.json \
             data/day_board/today_strategies.json \

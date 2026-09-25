@@ -2197,6 +2197,26 @@ def build_ledger(panel: dict, payload: dict, recipes: list[dict],
     fees = fees if fees is not None else fm.pt_fees()
     regime = regime if regime is not None else fmb.load_regime()
     by_name = {r.get("name"): r for r in recipes if r.get("name")}
+    from . import factor_mine_send_inputs as fsi
+    send_doc = fsi.load(date) if fsi.applies(date) else None
+    day_source = None
+    if fsi.applies(date):
+        day_source = "send_inputs" if send_doc else "snapshot"
+        print(f"[factor-mine] {date} input_source={day_source}", flush=True)
+    live_rows = fsi.rows_for_record(date, send_doc) if send_doc else None
+
+    def choose_panel(name: str, members: list[str] | None = None) -> dict:
+        if not send_doc:
+            return panel
+        if members is None:
+            live = fsi.is_live_recipe(name, send_doc)
+        else:
+            live = bool(members) and all(
+                fsi.is_live_recipe(member, send_doc) for member in members
+            )
+        if not live:
+            return panel
+        return fsi.overlay_session(panel, date, live_rows or [])
     out_recipes: dict[str, dict] = {}
     failed: list[str] = []
 
@@ -2216,7 +2236,7 @@ def build_ledger(panel: dict, payload: dict, recipes: list[dict],
                     print(f"[factor-mine] bridge {name} from published book @ {prior}",
                           flush=True)
             book = _simulate_single(
-                panel, rec, start=None, bars=bars, fees=fees,
+                choose_panel(name), rec, start=None, bars=bars, fees=fees,
                 regime=regime, saved=saved,
             )
             primary = decision_from_book(book, date)
@@ -2233,7 +2253,7 @@ def build_ledger(panel: dict, payload: dict, recipes: list[dict],
                 if start == date:
                     saved_s = None
                 book_s = _simulate_single(
-                    panel, rec, start=start, bars=bars, fees=fees,
+                    choose_panel(name), rec, start=start, bars=bars, fees=fees,
                     regime=regime, saved=saved_s,
                 )
                 starts[start] = decision_from_book(book_s, date)
@@ -2274,7 +2294,8 @@ def build_ledger(panel: dict, payload: dict, recipes: list[dict],
         try:
             saved = _saved(prev_ledger, name, "primary")
             book = _simulate_combo(
-                panel, spec, members, start=None, bars=bars, fees=fees,
+                choose_panel(name, [m.get("name") or "" for m in members]),
+                spec, members, start=None, bars=bars, fees=fees,
                 regime=regime, saved=saved,
             )
             primary = decision_from_book(book, date)
@@ -2289,7 +2310,8 @@ def build_ledger(panel: dict, payload: dict, recipes: list[dict],
                 if start == date:
                     saved_s = None
                 book_s = _simulate_combo(
-                    panel, spec, members, start=start, bars=bars, fees=fees,
+                    choose_panel(name, [m.get("name") or "" for m in members]),
+                    spec, members, start=start, bars=bars, fees=fees,
                     regime=regime, saved=saved_s,
                 )
                 starts[start] = decision_from_book(book_s, date)
@@ -2303,12 +2325,15 @@ def build_ledger(panel: dict, payload: dict, recipes: list[dict],
             date, failed,
             "ledger incomplete — refusing to freeze a partial decision set",
         )
-    return {
+    ledger = {
         "date": date,
         "origin": "frozen",
         "code_sha": code_sha(),
         "recipes": out_recipes,
     }
+    if day_source:
+        ledger["input_source"] = day_source
+    return ledger
 
 
 def _growth(decision: dict, prior_equity: float | None) -> float | None:
@@ -2434,6 +2459,10 @@ def splice_payload(payload: dict, date: str, ledger: dict, *,
     payload["books"] = books
     payload["series"] = series
     payload["starts"] = starts
+    if ledger.get("input_source"):
+        labeled = dict(payload.get("input_sources") or {})
+        labeled[date] = ledger["input_source"]
+        payload["input_sources"] = labeled
     mornings = dict(payload.get("mornings") or {})
     if date not in mornings:
         try:

@@ -491,6 +491,8 @@ def main() -> None:
     test_locked_overwrite_and_failed_draft_still_fail()
     test_postclose_does_not_wait_on_ticket_publish()
     test_ticket_restate_log_appends_one_line_per_restore()
+    from src.test_factor_mine_send_inputs import main as send_inputs_main
+    send_inputs_main()
     from src.test_morning_scan import main as morning_scan_main
     morning_scan_main()
     from src.test_hot4_wire import main as hot4_wire_main
