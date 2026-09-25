@@ -469,6 +469,17 @@ def label_payload(payload: dict) -> dict:
     payload["reconstructed_dates"] = [
         d for d in dates if first and str(d) < str(first)
     ]
+    labels = {}
+    for date, meta in (load_manifest().get("snapshots") or {}).items():
+        lab = str((meta or {}).get("label") or "")
+        if lab:
+            labels[str(date)] = lab
+    if labels:
+        payload["retro"] = labels
+        payload["pit_rebuilt_dates"] = sorted(
+            d for d, lab in labels.items() if lab == "pit_rebuilt")
+        payload["incomplete_pit_dates"] = sorted(
+            d for d, lab in labels.items() if lab == "incomplete_pit")
     return payload
 
 
