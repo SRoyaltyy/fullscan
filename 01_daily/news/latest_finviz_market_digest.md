@@ -1,6 +1,6 @@
 # Finviz homepage market digest — 2026-09-25
 
-**Generated:** 2026-09-25T04:18:39.337880-04:00 (America/New_York)
+**Generated:** 2026-09-25T04:19:01.510585-04:00 (America/New_York)
 **Source:** `live`
 **Banner:** US equity futures point to a slightly higher open as traders await durable goods and Michigan sentiment data with oil softer and global markets mixed
 **Prior close:** SPX —  Nasdaq —  Dow —
