@@ -29,6 +29,8 @@ On the DeepSeek path, stages needing tools must run on deepseek-chat
 from __future__ import annotations
 
 import json
+import os
+import random
 import re
 import threading
 import time
@@ -178,7 +180,9 @@ def _post(payload: dict, retries: int = 4) -> dict:
 # stub as the assistant message) also trips the breaker after 2 in a row.
 # Under GROK_ONLY the breaker means "stop calling Grok and return empty"
 # — DeepSeek/SearXNG must not write analysis.
-_OPENCLAW_STATE = {"down": False, "reason": "", "timeouts": 0}
+_OPENCLAW_STATE = {
+    "down": False, "reason": "", "timeouts": 0, "last_fail_kind": "",
+}
 _CALL_STATE = threading.local()
 
 
@@ -187,8 +191,126 @@ def last_provider() -> str:
     return str(getattr(_CALL_STATE, "provider", "") or "")
 
 
+def last_fallback_reason() -> str:
+    return str(getattr(_CALL_STATE, "fallback_reason", "") or "")
+
+
+def last_sector_degraded() -> bool:
+    return bool(getattr(_CALL_STATE, "sector_degraded", False))
+
+
 def _set_last_provider(provider: str) -> None:
     _CALL_STATE.provider = provider
+
+
+def _is_sector_predict_stage(stage_label: str) -> bool:
+    return (stage_label or "").startswith("SECTOR PREDICT")
+
+
+def _remaining_label(pct: float | None) -> str:
+    if pct is None:
+        return "unknown"
+    return f"{pct:g}"
+
+
+def _log_fallback_decision(stage: str, reason: str, pct: float | None) -> None:
+    print(
+        f"[llm] fallback-decision stage={stage or 'llm run'} "
+        f"reason={reason} supergrok_remaining={_remaining_label(pct)}",
+        flush=True,
+    )
+
+
+def _log_backend_decision(stage: str, provider: str) -> None:
+    print(
+        f"[llm] backend-decision stage={stage or 'llm run'} "
+        f"provider={provider} supergrok_remaining="
+        f"{_remaining_label(config.supergrok_remaining()[0])}",
+        flush=True,
+    )
+
+
+def _classify_fail(reason: str) -> str:
+    text = (reason or "").lower()
+    if "429" in text:
+        return "429"
+    if "timeout" in text or "idle" in text or "timed out" in text:
+        return "openclaw_timeout"
+    if any(tok in text for tok in (
+        "connection refused", "connect timeout", "unreachable",
+        "name or service not known", "network is unreachable",
+    )):
+        return "gateway_down"
+    if _OPENCLAW_STATE.get("down"):
+        return "gateway_down"
+    return "openclaw_timeout"
+
+
+def _fail_kind() -> str:
+    kind = str(_OPENCLAW_STATE.get("last_fail_kind") or "")
+    if kind in ("prefer_deepseek", "openclaw_timeout", "gateway_down", "429", "no_key"):
+        return kind
+    if _OPENCLAW_STATE.get("down"):
+        return "gateway_down"
+    return "openclaw_timeout"
+
+
+def _remember_fail(reason: str) -> None:
+    _OPENCLAW_STATE["last_fail_kind"] = _classify_fail(reason)
+
+
+def reset_openclaw_breaker(why: str) -> None:
+    """A successful health ping must not leave sectors 4–11 dead for the run."""
+    was = bool(_OPENCLAW_STATE.get("down") or _OPENCLAW_STATE.get("timeouts"))
+    _OPENCLAW_STATE["down"] = False
+    _OPENCLAW_STATE["reason"] = ""
+    _OPENCLAW_STATE["timeouts"] = 0
+    _OPENCLAW_STATE["last_fail_kind"] = ""
+    if was:
+        print(f"[openclaw] gateway breaker reset after {why}", flush=True)
+
+
+def gateway_health_ping() -> bool:
+    """GET /v1/models. Same probe as scripts/openclaw_grok_ping.list_model_ids.
+
+    A HTTP 200 resets the 'marked DOWN after 3 consecutive HTTP timeouts'
+    breaker so the next sector can try Grok again.
+    """
+    url = (config.OPENCLAW_GATEWAY_URL or "").rstrip("/")
+    if not url:
+        return False
+    headers = {"Accept": "application/json"}
+    if config.OPENCLAW_TOKEN:
+        headers["Authorization"] = f"Bearer {config.OPENCLAW_TOKEN}"
+    try:
+        resp = requests.get(f"{url}/v1/models", headers=headers, timeout=10)
+        ok = resp.status_code == 200
+    except requests.RequestException as exc:
+        print(f"[openclaw] health ping failed: {exc}", flush=True)
+        return False
+    if ok:
+        reset_openclaw_breaker("health ping")
+        return True
+    print(f"[openclaw] health ping HTTP {resp.status_code}", flush=True)
+    return False
+
+
+def _sector_grok_retry_s() -> float:
+    raw = (os.environ.get("SECTOR_GROK_RETRY_S") or "").strip()
+    if raw:
+        try:
+            return max(0.0, float(raw))
+        except ValueError:
+            pass
+    return random.uniform(60.0, 120.0)
+
+
+def _sector_deepseek_allowed(pct: float | None) -> bool:
+    """DeepSeek sector essays only when a human forced the backend, or
+    SuperGrok remaining is known and at least 80%."""
+    if config.prefer_deepseek():
+        return True
+    return pct is not None and pct >= config.SUPERGROK_FALLBACK_MIN_PCT
 
 # Appended to the system prompt on research stages (tools=True). The
 # RESEARCH appendix goes at the END so output contracts (first-line
@@ -359,6 +481,7 @@ def _openclaw_chat(messages: list[dict], tools: bool, max_tokens: int,
         final = (resp["choices"][0]["message"].get("content") or "").strip()
     except (RuntimeError, KeyError, IndexError, TypeError) as e:
         reason = str(e)
+        _remember_fail(reason)
         if "timeout after" in reason.lower():
             _OPENCLAW_STATE["timeouts"] = _OPENCLAW_STATE.get("timeouts", 0) + 1
             n = _OPENCLAW_STATE["timeouts"]
@@ -372,6 +495,7 @@ def _openclaw_chat(messages: list[dict], tools: bool, max_tokens: int,
         return ""
 
     if not final:
+        _OPENCLAW_STATE["last_fail_kind"] = "openclaw_timeout"
         note = ("no DeepSeek/SearXNG fallback (GROK_ONLY)"
                 if config.grok_only() else "will fall back to DeepSeek")
         print(f"[openclaw] EMPTY answer ({stage_label or 'llm run'}) — {note}")
@@ -382,6 +506,7 @@ def _openclaw_chat(messages: list[dict], tools: bool, max_tokens: int,
         n = _OPENCLAW_STATE["timeouts"]
         note = ("no DeepSeek/SearXNG fallback (GROK_ONLY)"
                 if config.grok_only() else "will fall back to DeepSeek")
+        _OPENCLAW_STATE["last_fail_kind"] = "openclaw_timeout"
         print(f"[openclaw] timeout/error stub treated as empty "
               f"({stage_label or 'llm run'}; consecutive={n}) — {note}")
         if n >= 5:
@@ -390,6 +515,7 @@ def _openclaw_chat(messages: list[dict], tools: bool, max_tokens: int,
                 f"({stage_label or 'llm run'})")
         return ""
     _OPENCLAW_STATE["timeouts"] = 0
+    _OPENCLAW_STATE["last_fail_kind"] = ""
 
     if transcript_path:
         try:
@@ -608,6 +734,62 @@ def openclaw_complete(messages: list[dict], max_tokens: int = 64,
         return ""
 
 
+def _retry_sector_grok(messages: list[dict], tools: bool, max_tokens: int,
+                       temperature: float, transcript_path: str | None,
+                       trace_path: str | None, stage_label: str,
+                       backend_model: str | None) -> str:
+    """One Grok retry after a gateway health ping. No DeepSeek."""
+    ping_ok = gateway_health_ping()
+    pause = _sector_grok_retry_s()
+    print(f"[llm] sector grok retry backoff {pause:.0f}s "
+          f"health_ping={'ok' if ping_ok else 'fail'} ({stage_label})",
+          flush=True)
+    if pause > 0:
+        time.sleep(pause)
+    if not ping_ok and not openclaw_available():
+        return ""
+    return _openclaw_chat(
+        messages, tools=tools, max_tokens=max_tokens, temperature=temperature,
+        transcript_path=transcript_path, trace_path=trace_path,
+        stage_label=stage_label, backend_model=backend_model,
+    ) or ""
+
+
+def _sector_after_miss(stage_label: str, retry_grok) -> str | None:
+    """Decide a sector-predict miss.
+
+    Returns '' to stop (DEGRADED, no DeepSeek), a Grok essay after the
+    retry, or None when DeepSeek is allowed to run.
+    """
+    pct, _src = config.supergrok_remaining()
+    reason = "prefer_deepseek" if config.prefer_deepseek() else _fail_kind()
+    if reason not in (
+            "prefer_deepseek", "openclaw_timeout", "gateway_down", "429", "no_key"):
+        reason = "openclaw_timeout"
+    _log_fallback_decision(stage_label, reason, pct)
+    _CALL_STATE.fallback_reason = reason
+    allowed = _sector_deepseek_allowed(pct)
+    if reason in ("openclaw_timeout", "gateway_down") and not allowed:
+        text = retry_grok() or ""
+        if text:
+            _set_last_provider("openclaw")
+            _CALL_STATE.sector_degraded = False
+            _log_backend_decision(stage_label, "openclaw")
+            return text
+        _CALL_STATE.sector_degraded = True
+        print(f"[llm] sector DEGRADED ({stage_label}) — DeepSeek blocked "
+              f"(supergrok_remaining={_remaining_label(pct)})", flush=True)
+        return ""
+    if not allowed:
+        _CALL_STATE.sector_degraded = True
+        print(f"[llm] sector DEGRADED ({stage_label}) — DeepSeek blocked "
+              f"reason={reason} supergrok_remaining={_remaining_label(pct)}",
+              flush=True)
+        return ""
+    _CALL_STATE.sector_degraded = False
+    return None
+
+
 def chat(messages: list[dict], model: str, tools: bool = False,
          max_tokens: int = 8000, temperature: float = 0.2,
          transcript_path: str | None = None,
@@ -635,10 +817,26 @@ def chat(messages: list[dict], model: str, tools: bool = False,
     import os
 
     _set_last_provider("")
+    _CALL_STATE.fallback_reason = ""
+    _CALL_STATE.sector_degraded = False
+    sector_predict = _is_sector_predict_stage(stage_label)
+
+    def _retry_grok() -> str:
+        return _retry_sector_grok(
+            messages, tools=tools, max_tokens=max_tokens,
+            temperature=temperature, transcript_path=transcript_path,
+            trace_path=trace_path, stage_label=stage_label,
+            backend_model=backend_model,
+        )
+
     if config.prefer_deepseek():
         force_deepseek = True
         print(f"[llm] LLM_BACKEND=deepseek — OpenClaw skipped "
               f"({stage_label or 'llm run'})")
+        if sector_predict:
+            pct, _src = config.supergrok_remaining()
+            _log_fallback_decision(stage_label, "prefer_deepseek", pct)
+            _CALL_STATE.fallback_reason = "prefer_deepseek"
     grok_only = config.grok_only()
     if grok_only and force_deepseek:
         print(f"[llm] GROK_ONLY: ignoring force_deepseek "
@@ -657,7 +855,13 @@ def chat(messages: list[dict], model: str, tools: bool = False,
                               backend_model=backend_model)
         if text:
             _set_last_provider("openclaw")
+            if sector_predict:
+                _log_backend_decision(stage_label, "openclaw")
             return text
+        if sector_predict:
+            decided = _sector_after_miss(stage_label, _retry_grok)
+            if decided is not None:
+                return decided
         if grok_only:
             print("[llm] GROK_ONLY: OpenClaw failed — no DeepSeek/SearXNG fallback")
             return ""
@@ -665,9 +869,33 @@ def chat(messages: list[dict], model: str, tools: bool = False,
             print("[llm] OpenClaw failed and no DEEPSEEK_API_KEY fallback")
             return ""
         print(f"[llm] falling back to DeepSeek (model={model})")
+    elif sector_predict and not force_deepseek:
+        # Breaker already down (sectors 4–11 used to die in <1s). Ping,
+        # reset, retry Grok — DeepSeek only when remaining is known >= 80%.
+        if not _OPENCLAW_STATE.get("last_fail_kind"):
+            _OPENCLAW_STATE["last_fail_kind"] = "gateway_down"
+        decided = _sector_after_miss(stage_label, _retry_grok)
+        if decided is not None:
+            return decided
+        if not config.DEEPSEEK_API_KEY:
+            _CALL_STATE.sector_degraded = True
+            print("[llm] OpenClaw gateway down and no DEEPSEEK_API_KEY fallback")
+            return ""
+        print(f"[llm] falling back to DeepSeek (model={model})")
     elif force_deepseek:
         print(f"[llm] force_deepseek ({stage_label or 'llm run'}) — "
               "OpenClaw skipped for this call only")
+        if sector_predict and not config.prefer_deepseek():
+            pct, _src = config.supergrok_remaining()
+            reason = _fail_kind() if _fail_kind() != "openclaw_timeout" else "openclaw_timeout"
+            _log_fallback_decision(stage_label, reason, pct)
+            _CALL_STATE.fallback_reason = reason
+            if not _sector_deepseek_allowed(pct):
+                _CALL_STATE.sector_degraded = True
+                print(f"[llm] sector DEGRADED ({stage_label}) — "
+                      "force_deepseek blocked; SuperGrok remaining unknown or <80%",
+                      flush=True)
+                return ""
     elif grok_only:
         print("[llm] GROK_ONLY: OpenClaw unavailable/down — no fallback")
         return ""
@@ -696,6 +924,11 @@ def chat(messages: list[dict], model: str, tools: bool = False,
         payload["tool_choice"] = "auto"
 
     trace = [f"# Reasoning trace — {stage_label or 'llm run'}", ""]
+    if _is_sector_predict_stage(stage_label):
+        reason = last_fallback_reason() or "prefer_deepseek"
+        trace.append("provider: deepseek")
+        trace.append(f"fallback_reason: {reason}")
+        trace.append("")
     sys_chars = sum(len(str(m.get('content') or '')) for m in messages)
     trace.append(f"**Step 0 — Setup.** Loaded the rubric, standing lessons, "
                  f"and Channel 1 data ({sys_chars:,} characters of input). "
@@ -873,9 +1106,11 @@ def chat(messages: list[dict], model: str, tools: bool = False,
         try:
             os.makedirs(os.path.dirname(transcript_path), exist_ok=True)
             with open(transcript_path, "w", encoding="utf-8") as fh:
-                json.dump({"model": model,
-                           "messages": copy.deepcopy(messages)}, fh,
-                          indent=2, ensure_ascii=False, default=str)
+                body = {"model": model, "messages": copy.deepcopy(messages)}
+                if _is_sector_predict_stage(stage_label):
+                    body["provider"] = "deepseek"
+                    body["fallback_reason"] = last_fallback_reason() or "prefer_deepseek"
+                json.dump(body, fh, indent=2, ensure_ascii=False, default=str)
         except OSError as e:
             print(f"[transcript] save failed: {e}")
     if trace_path:

@@ -438,6 +438,8 @@ def run(
             print("[all] WARN: peer_rs missing for", date)
     else:
         print("[all] skip Peer relative strength (DONE for this day)")
+    if _exists("data", "peers", f"{date}_peer_rs.csv"):
+        _land(date, "peer_rs", "Peer RS")
 
     if need("ab"):
         if not _ab_raw(date):

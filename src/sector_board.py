@@ -57,11 +57,48 @@ def _hit(v) -> str:
     return "—"
 
 
+def pretty_fallback(reason: str) -> str:
+    text = (reason or "").strip()
+    if text in ("openclaw_timeout", "gateway_down", "gateway timeout", ""):
+        return "gateway timeout"
+    return text
+
+
+def provider_summary(rows: list[dict]) -> str:
+    """``11/11 via deepseek (fallback: gateway timeout)`` when that is what ran."""
+    if not rows:
+        return ""
+    via = [r for r in rows if str(r.get("provider") or "") == "deepseek"]
+    if not via:
+        return ""
+    reasons = [str(r.get("fallback_reason") or "") for r in via]
+    top = max(set(reasons), key=reasons.count) if reasons else ""
+    return (f"{len(via)}/{len(rows)} via deepseek "
+            f"(fallback: {pretty_fallback(top)})")
+
+
+def _llm_by_sector(date_str: str) -> dict[str, dict]:
+    path = os.path.join(config.DAILY_SECTORS, date_str, "_llm.json")
+    try:
+        with open(path, encoding="utf-8") as fh:
+            data = json.load(fh)
+    except (OSError, json.JSONDecodeError):
+        return {}
+    out = {}
+    if isinstance(data, dict):
+        for row in data.get("sectors") or []:
+            if isinstance(row, dict) and row.get("sector"):
+                out[str(row["sector"])] = row
+    return out
+
+
 def build(date_str: str) -> dict:
     board = scoreboard.load()
+    llm = _llm_by_sector(date_str)
     rows = []
     for sector in FINVIZ_SECTORS:
         e = _entry(board, date_str, sector) or {}
+        meta = llm.get(sector) or {}
         rows.append({
             "sector": sector,
             "etf": SECTOR_ETFS.get(sector, ""),
@@ -78,10 +115,16 @@ def build(date_str: str) -> dict:
             "has_predict_md": _md_exists(date_str, sector, "predict"),
             "has_outcome_md": _md_exists(date_str, sector, "outcome"),
             "components": e.get("components") or {},
+            "status": meta.get("status") or (
+                "OK" if _md_exists(date_str, sector, "predict") else "FAIL"),
+            "provider": meta.get("provider") or "",
+            "fallback_reason": meta.get("fallback_reason") or "",
         })
+    summary = provider_summary(rows)
     return {
         "date": date_str,
         "generated_at": datetime.now(ZoneInfo(config.TZ)).isoformat(),
+        "summary": summary,
         "sectors": rows,
     }
 
@@ -121,6 +164,7 @@ def to_markdown(payload: dict) -> str:
         "## Summary",
         "",
         f"- Predicts present: **{n_pred}/11**",
+        *([f"- **{payload['summary']}**"] if payload.get("summary") else []),
         f"- Outcomes graded: **{len(graded)}/11**",
         f"- Direction hits (when graded): **{hits}/{len(graded) if graded else 0}**",
         f"- Predicted up / down / flat-or-missing: "

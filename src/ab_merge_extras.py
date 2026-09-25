@@ -20,6 +20,7 @@ import numpy as np
 import pandas as pd
 
 from . import config
+from .past_write import refuse_past_overwrite
 
 ROOT = Path(__file__).resolve().parent.parent
 AB_DIR = ROOT / "data" / "ab_checklist"
@@ -144,6 +145,7 @@ def _color_features(asof: str) -> pd.DataFrame:
 
 
 def run(date: str | None = None) -> pd.DataFrame:
+    requested = date
     files = sorted(AB_DIR.glob("????-??-??_ab_checklist.csv"))
     if not files:
         raise SystemExit("[merge] no ab_checklist CSV — run ab_checklist first")
@@ -208,6 +210,12 @@ def run(date: str | None = None) -> pd.DataFrame:
         out = out.sort_values("score_merged", ascending=False)
 
     out_path = AB_DIR / f"{asof}_ab_checklist_merged.csv"
+    run_date = requested or asof
+    if refuse_past_overwrite(out_path, run_date):
+        raise SystemExit(
+            f"[merge] REFUSE past-date write {out_path.name} "
+            f"(file date < run date {run_date})"
+        )
     out.to_csv(out_path, index=False)
 
     lines = [

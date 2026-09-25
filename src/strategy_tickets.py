@@ -1005,8 +1005,8 @@ def attach_hard_red_research(payload: dict, date: str) -> dict:
 
 
 def build(date: str) -> dict:
-    from .decision_ready import evaluate
-    input_before = evaluate(date)
+    from .decision_ready import apply_main_gate, evaluate
+    input_before = apply_main_gate(evaluate(date))
     strats: list[dict] = []
     errors: list[str] = []
     try:
@@ -1093,6 +1093,7 @@ def build(date: str) -> dict:
     input_after["ready"] = bool(input_before["ready"] and input_after["ready"] and
                                 input_before["fingerprint"] == input_after["fingerprint"])
     input_after["completed_at"] = datetime.now(ET).isoformat()
+    input_after = apply_main_gate(input_after)
     payload["decision_readiness"] = input_after
     return payload
 
