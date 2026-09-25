@@ -1637,6 +1637,76 @@ def test_raw_open_uses_latest_commit_before_the_next_open() -> None:
             fmf.THEME_RADAR_SNAP_DIR = old
 
 
+def test_excel_signal_pin_is_the_last_commit_before_the_open() -> None:
+    from datetime import datetime
+
+    sug = "excel_bot/suggestions/suggestions.csv"
+    day = "excel_bot/daily/2026-09-23_excel_bot.md"
+    other = "excel_bot/strategies/L1/card.json"
+    before = datetime.fromisoformat("2026-09-24T08:00:00-04:00")
+    at_open = datetime.fromisoformat("2026-09-24T09:30:00-04:00")
+    after = datetime.fromisoformat("2026-09-24T11:00:00-04:00")
+    earlier = datetime.fromisoformat("2026-09-23T17:28:00-04:00")
+    history = {
+        sug: [
+            (earlier, "a" * 40, earlier.isoformat()),
+            (before, "b" * 40, before.isoformat()),
+            (at_open, "c" * 40, at_open.isoformat()),
+            (after, "d" * 40, after.isoformat()),
+        ],
+        day: [
+            (after, "e" * 40, after.isoformat()),
+        ],
+        other: [
+            (earlier, "f" * 40, earlier.isoformat()),
+        ],
+    }
+    assert fmf.is_excel_signal_path(sug)
+    assert fmf.is_excel_signal_path(day)
+    assert not fmf.is_excel_signal_path(other)
+    pinned = fmf.pin_excel_signals(["2026-09-24"], history)
+    files = pinned["2026-09-24"]["files"]
+    assert files[sug]["sha"] == "b" * 40
+    assert day not in files
+    assert other not in files
+    assert pinned["2026-09-24"]["cutoff"].startswith("2026-09-24T09:30:00")
+    with tempfile.TemporaryDirectory() as tmp:
+        old = _use(Path(tmp))
+        try:
+            snap = {"date": "2026-09-24", "rows": []}
+            digest = fmf.write_snapshot("2026-09-24", snap)
+            first = fmf.record_excel_signals(
+                ["2026-09-24"], history,
+                now=datetime.fromisoformat("2026-09-24T12:00:00-04:00"),
+            )
+            assert first["2026-09-24"]["files"][sug]["sha"] == "b" * 40
+            again = fmf.record_excel_signals(
+                ["2026-09-24"], history,
+                now=datetime.fromisoformat("2026-09-24T12:00:00-04:00"),
+            )
+            assert again == first
+            man = fmf.load_manifest()
+            assert man["snapshots"]["2026-09-24"]["sha256"] == digest
+            moved = {
+                sug: [(before, "9" * 40, before.isoformat())],
+            }
+            try:
+                fmf.record_excel_signals(
+                    ["2026-09-24"], moved,
+                    now=datetime.fromisoformat("2026-09-24T12:00:00-04:00"),
+                )
+                raised = False
+            except fmf.FrozenHistory:
+                raised = True
+            assert raised
+            assert (
+                fmf.load_manifest()["excel_signals"]["2026-09-24"]["files"][sug]["sha"]
+                == "b" * 40
+            )
+        finally:
+            _restore(old)
+
+
 if __name__ == "__main__":
     if os.environ.get("PYTHONHASHSEED") != "0":
         os.environ["PYTHONHASHSEED"] = "0"
@@ -1670,4 +1740,5 @@ if __name__ == "__main__":
     test_theme_radar_dated_file_rejects_current_and_a_bad_hash()
     test_webull_fill_outside_open_tolerance_holds()
     test_raw_open_uses_latest_commit_before_the_next_open()
+    test_excel_signal_pin_is_the_last_commit_before_the_open()
     print("factor-mine freeze tests passed")

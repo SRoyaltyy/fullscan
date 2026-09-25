@@ -782,6 +782,143 @@ def _next_session_date(date: str) -> str:
     return _next_weekday(str(date)[:10])
 
 
+EXCEL_SUGGESTIONS = "excel_bot/suggestions/suggestions.csv"
+EXCEL_DAILY_DIR = "excel_bot/daily"
+
+
+def is_excel_signal_path(path: str) -> bool:
+    """The rolling suggestion file and each daily signal note."""
+    rel = str(path or "").replace("\\", "/")
+    if rel == EXCEL_SUGGESTIONS:
+        return True
+    prefix = EXCEL_DAILY_DIR + "/"
+    if not rel.startswith(prefix) or "/" in rel[len(prefix):]:
+        return False
+    return rel.endswith("_excel_bot.md")
+
+
+def excel_open_cutoff(open_date: str) -> datetime:
+    """09:30 ET on the session that can see the prior evening's signals."""
+    day = str(open_date or "")[:10]
+    return datetime.fromisoformat(f"{day}T09:30:00").replace(tzinfo=tl.ET)
+
+
+def excel_signal_paths(repo: Path | None = None) -> list[str]:
+    root = Path(repo or ROOT)
+    out = subprocess.run(
+        ["git", "ls-files", EXCEL_SUGGESTIONS, EXCEL_DAILY_DIR],
+        cwd=root, capture_output=True, text=True, check=False,
+    )
+    if out.returncode != 0:
+        return []
+    return sorted(
+        line.strip() for line in (out.stdout or "").splitlines()
+        if is_excel_signal_path(line.strip())
+    )
+
+
+def git_commit_rows(path: str, repo: Path | None = None) -> list[tuple[datetime, str, str]]:
+    """Oldest-first ``(time, sha, raw stamp)`` for ``path``."""
+    root = Path(repo or ROOT)
+    out = subprocess.run(
+        ["git", "log", "--pretty=format:%cI %H", "--", path],
+        cwd=root, capture_output=True, text=True, check=False,
+    )
+    rows = []
+    for line in (out.stdout or "").splitlines():
+        line = line.strip()
+        if not line or " " not in line:
+            continue
+        stamp, sha = line.split(" ", 1)
+        try:
+            when = datetime.fromisoformat(stamp)
+        except ValueError:
+            continue
+        if when.tzinfo is None:
+            when = when.replace(tzinfo=tl.ET)
+        rows.append((when, sha.strip(), stamp))
+    rows.sort(key=lambda item: item[0])
+    return rows
+
+
+def last_commit_before(rows: list[tuple], cutoff: datetime) -> tuple | None:
+    """Last row strictly before ``cutoff``. A commit at 09:30 is too late."""
+    hit = None
+    for item in rows:
+        when = item[0]
+        if when.tzinfo is None:
+            when = when.replace(tzinfo=tl.ET)
+        if when < cutoff:
+            hit = item
+        else:
+            break
+    return hit
+
+
+def pin_excel_signals(opens: list[str],
+                      history: dict[str, list[tuple]]) -> dict:
+    """Sha of each Excel signal file at each 09:30 ET open.
+
+    The version is the last commit before that open. A file with no
+    commit yet is left out of that morning.
+    """
+    pinned = {}
+    for day in opens:
+        open_date = str(day)[:10]
+        cutoff = excel_open_cutoff(open_date)
+        files = {}
+        for path in sorted(history):
+            if not is_excel_signal_path(path):
+                continue
+            hit = last_commit_before(history[path], cutoff)
+            if hit is None:
+                continue
+            when, sha, stamp = hit[0], hit[1], hit[2] if len(hit) > 2 else when.isoformat()
+            files[path] = {"committed_at": stamp, "sha": sha}
+        pinned[open_date] = {
+            "cutoff": cutoff.isoformat(),
+            "files": files,
+            "rule": "last commit before this 09:30 ET open",
+        }
+    return pinned
+
+
+def load_excel_signal_history(repo: Path | None = None) -> dict[str, list[tuple]]:
+    root = Path(repo or ROOT)
+    return {path: git_commit_rows(path, root) for path in excel_signal_paths(root)}
+
+
+def record_excel_signals(opens: list[str],
+                         history: dict | None = None,
+                         *,
+                         now: datetime | None = None) -> dict:
+    """Write the Excel pins into the freeze manifest.
+
+    A pin whose 09:30 has passed does not move. A later run with the
+    same shas is a no-op. Snapshot and ledger hashes are not touched.
+    """
+    pins = pin_excel_signals(
+        opens, history if history is not None else load_excel_signal_history(),
+    )
+    man = load_manifest()
+    slot = man.setdefault("excel_signals", {})
+    clock = now or datetime.now(tl.ET)
+    changed = False
+    for day, pin in pins.items():
+        prev = slot.get(day)
+        if prev == pin:
+            continue
+        if prev and clock >= excel_open_cutoff(day):
+            raise FrozenHistory(
+                f"excel signal pin {day} already locked at the 09:30 open"
+            )
+        slot[day] = pin
+        changed = True
+    if changed:
+        save_manifest(man)
+    return pins
+
+
 def before_next_open(stamp: str | None, session: str) -> bool:
     """True when ``stamp`` is strictly before the next session's 09:30 ET.
 

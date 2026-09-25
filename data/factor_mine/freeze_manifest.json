@@ -151,6 +151,1010 @@
       "written_at": "2026-09-25T07:08:17.817362-04:00"
     }
   },
+  "excel_signals": {
+    "2026-08-13": {
+      "cutoff": "2026-08-13T09:30:00-04:00",
+      "files": {},
+      "rule": "last commit before this 09:30 ET open"
+    },
+    "2026-08-14": {
+      "cutoff": "2026-08-14T09:30:00-04:00",
+      "files": {},
+      "rule": "last commit before this 09:30 ET open"
+    },
+    "2026-08-17": {
+      "cutoff": "2026-08-17T09:30:00-04:00",
+      "files": {},
+      "rule": "last commit before this 09:30 ET open"
+    },
+    "2026-08-18": {
+      "cutoff": "2026-08-18T09:30:00-04:00",
+      "files": {},
+      "rule": "last commit before this 09:30 ET open"
+    },
+    "2026-08-19": {
+      "cutoff": "2026-08-19T09:30:00-04:00",
+      "files": {},
+      "rule": "last commit before this 09:30 ET open"
+    },
+    "2026-08-20": {
+      "cutoff": "2026-08-20T09:30:00-04:00",
+      "files": {},
+      "rule": "last commit before this 09:30 ET open"
+    },
+    "2026-08-21": {
+      "cutoff": "2026-08-21T09:30:00-04:00",
+      "files": {},
+      "rule": "last commit before this 09:30 ET open"
+    },
+    "2026-08-24": {
+      "cutoff": "2026-08-24T09:30:00-04:00",
+      "files": {},
+      "rule": "last commit before this 09:30 ET open"
+    },
+    "2026-08-25": {
+      "cutoff": "2026-08-25T09:30:00-04:00",
+      "files": {},
+      "rule": "last commit before this 09:30 ET open"
+    },
+    "2026-08-26": {
+      "cutoff": "2026-08-26T09:30:00-04:00",
+      "files": {},
+      "rule": "last commit before this 09:30 ET open"
+    },
+    "2026-08-27": {
+      "cutoff": "2026-08-27T09:30:00-04:00",
+      "files": {},
+      "rule": "last commit before this 09:30 ET open"
+    },
+    "2026-08-28": {
+      "cutoff": "2026-08-28T09:30:00-04:00",
+      "files": {},
+      "rule": "last commit before this 09:30 ET open"
+    },
+    "2026-08-31": {
+      "cutoff": "2026-08-31T09:30:00-04:00",
+      "files": {
+        "excel_bot/daily/2026-08-30_excel_bot.md": {
+          "committed_at": "2026-08-30T16:22:19+00:00",
+          "sha": "2cc2571f494e95d15a0864e0d6ce01e237665959"
+        },
+        "excel_bot/suggestions/suggestions.csv": {
+          "committed_at": "2026-08-30T16:22:19+00:00",
+          "sha": "2cc2571f494e95d15a0864e0d6ce01e237665959"
+        }
+      },
+      "rule": "last commit before this 09:30 ET open"
+    },
+    "2026-09-01": {
+      "cutoff": "2026-09-01T09:30:00-04:00",
+      "files": {
+        "excel_bot/daily/2026-08-30_excel_bot.md": {
+          "committed_at": "2026-08-30T16:22:19+00:00",
+          "sha": "2cc2571f494e95d15a0864e0d6ce01e237665959"
+        },
+        "excel_bot/suggestions/suggestions.csv": {
+          "committed_at": "2026-08-30T16:22:19+00:00",
+          "sha": "2cc2571f494e95d15a0864e0d6ce01e237665959"
+        }
+      },
+      "rule": "last commit before this 09:30 ET open"
+    },
+    "2026-09-02": {
+      "cutoff": "2026-09-02T09:30:00-04:00",
+      "files": {
+        "excel_bot/daily/2026-08-30_excel_bot.md": {
+          "committed_at": "2026-08-30T16:22:19+00:00",
+          "sha": "2cc2571f494e95d15a0864e0d6ce01e237665959"
+        },
+        "excel_bot/daily/2026-09-01_excel_bot.md": {
+          "committed_at": "2026-09-01T15:49:38+00:00",
+          "sha": "5fc8152510be096d60830b5ed0e50aecc049e24b"
+        },
+        "excel_bot/suggestions/suggestions.csv": {
+          "committed_at": "2026-09-01T15:49:38+00:00",
+          "sha": "5fc8152510be096d60830b5ed0e50aecc049e24b"
+        }
+      },
+      "rule": "last commit before this 09:30 ET open"
+    },
+    "2026-09-03": {
+      "cutoff": "2026-09-03T09:30:00-04:00",
+      "files": {
+        "excel_bot/daily/2026-08-30_excel_bot.md": {
+          "committed_at": "2026-08-30T16:22:19+00:00",
+          "sha": "2cc2571f494e95d15a0864e0d6ce01e237665959"
+        },
+        "excel_bot/daily/2026-09-01_excel_bot.md": {
+          "committed_at": "2026-09-01T15:49:38+00:00",
+          "sha": "5fc8152510be096d60830b5ed0e50aecc049e24b"
+        },
+        "excel_bot/daily/2026-09-02_excel_bot.md": {
+          "committed_at": "2026-09-02T15:09:54+00:00",
+          "sha": "a9ed6a403daa6812306820c3b9c7e0bece976f4e"
+        },
+        "excel_bot/suggestions/suggestions.csv": {
+          "committed_at": "2026-09-02T15:09:54+00:00",
+          "sha": "a9ed6a403daa6812306820c3b9c7e0bece976f4e"
+        }
+      },
+      "rule": "last commit before this 09:30 ET open"
+    },
+    "2026-09-04": {
+      "cutoff": "2026-09-04T09:30:00-04:00",
+      "files": {
+        "excel_bot/daily/2026-08-30_excel_bot.md": {
+          "committed_at": "2026-08-30T16:22:19+00:00",
+          "sha": "2cc2571f494e95d15a0864e0d6ce01e237665959"
+        },
+        "excel_bot/daily/2026-09-01_excel_bot.md": {
+          "committed_at": "2026-09-01T15:49:38+00:00",
+          "sha": "5fc8152510be096d60830b5ed0e50aecc049e24b"
+        },
+        "excel_bot/daily/2026-09-02_excel_bot.md": {
+          "committed_at": "2026-09-02T15:09:54+00:00",
+          "sha": "a9ed6a403daa6812306820c3b9c7e0bece976f4e"
+        },
+        "excel_bot/daily/2026-09-03_excel_bot.md": {
+          "committed_at": "2026-09-03T15:24:05+00:00",
+          "sha": "1c8354e489fa34d94ff8bb17f1c492bf0542cfc5"
+        },
+        "excel_bot/suggestions/suggestions.csv": {
+          "committed_at": "2026-09-03T15:24:05+00:00",
+          "sha": "1c8354e489fa34d94ff8bb17f1c492bf0542cfc5"
+        }
+      },
+      "rule": "last commit before this 09:30 ET open"
+    },
+    "2026-09-08": {
+      "cutoff": "2026-09-08T09:30:00-04:00",
+      "files": {
+        "excel_bot/daily/2026-08-30_excel_bot.md": {
+          "committed_at": "2026-08-30T16:22:19+00:00",
+          "sha": "2cc2571f494e95d15a0864e0d6ce01e237665959"
+        },
+        "excel_bot/daily/2026-09-01_excel_bot.md": {
+          "committed_at": "2026-09-01T15:49:38+00:00",
+          "sha": "5fc8152510be096d60830b5ed0e50aecc049e24b"
+        },
+        "excel_bot/daily/2026-09-02_excel_bot.md": {
+          "committed_at": "2026-09-02T15:09:54+00:00",
+          "sha": "a9ed6a403daa6812306820c3b9c7e0bece976f4e"
+        },
+        "excel_bot/daily/2026-09-03_excel_bot.md": {
+          "committed_at": "2026-09-03T15:24:05+00:00",
+          "sha": "1c8354e489fa34d94ff8bb17f1c492bf0542cfc5"
+        },
+        "excel_bot/daily/2026-09-04_excel_bot.md": {
+          "committed_at": "2026-09-04T15:03:47+00:00",
+          "sha": "fb22c0b5de2b80e4c47d9f7ed50adb0ef4ff28af"
+        },
+        "excel_bot/daily/2026-09-05_excel_bot.md": {
+          "committed_at": "2026-09-05T14:16:49+00:00",
+          "sha": "284a7ad025f9c349dc64f43f54a3135e4f5f884d"
+        },
+        "excel_bot/suggestions/suggestions.csv": {
+          "committed_at": "2026-09-05T14:16:49+00:00",
+          "sha": "284a7ad025f9c349dc64f43f54a3135e4f5f884d"
+        }
+      },
+      "rule": "last commit before this 09:30 ET open"
+    },
+    "2026-09-09": {
+      "cutoff": "2026-09-09T09:30:00-04:00",
+      "files": {
+        "excel_bot/daily/2026-08-30_excel_bot.md": {
+          "committed_at": "2026-08-30T16:22:19+00:00",
+          "sha": "2cc2571f494e95d15a0864e0d6ce01e237665959"
+        },
+        "excel_bot/daily/2026-09-01_excel_bot.md": {
+          "committed_at": "2026-09-01T15:49:38+00:00",
+          "sha": "5fc8152510be096d60830b5ed0e50aecc049e24b"
+        },
+        "excel_bot/daily/2026-09-02_excel_bot.md": {
+          "committed_at": "2026-09-02T15:09:54+00:00",
+          "sha": "a9ed6a403daa6812306820c3b9c7e0bece976f4e"
+        },
+        "excel_bot/daily/2026-09-03_excel_bot.md": {
+          "committed_at": "2026-09-03T15:24:05+00:00",
+          "sha": "1c8354e489fa34d94ff8bb17f1c492bf0542cfc5"
+        },
+        "excel_bot/daily/2026-09-04_excel_bot.md": {
+          "committed_at": "2026-09-04T15:03:47+00:00",
+          "sha": "fb22c0b5de2b80e4c47d9f7ed50adb0ef4ff28af"
+        },
+        "excel_bot/daily/2026-09-05_excel_bot.md": {
+          "committed_at": "2026-09-05T14:16:49+00:00",
+          "sha": "284a7ad025f9c349dc64f43f54a3135e4f5f884d"
+        },
+        "excel_bot/suggestions/suggestions.csv": {
+          "committed_at": "2026-09-05T14:16:49+00:00",
+          "sha": "284a7ad025f9c349dc64f43f54a3135e4f5f884d"
+        }
+      },
+      "rule": "last commit before this 09:30 ET open"
+    },
+    "2026-09-10": {
+      "cutoff": "2026-09-10T09:30:00-04:00",
+      "files": {
+        "excel_bot/daily/2026-08-30_excel_bot.md": {
+          "committed_at": "2026-08-30T16:22:19+00:00",
+          "sha": "2cc2571f494e95d15a0864e0d6ce01e237665959"
+        },
+        "excel_bot/daily/2026-09-01_excel_bot.md": {
+          "committed_at": "2026-09-01T15:49:38+00:00",
+          "sha": "5fc8152510be096d60830b5ed0e50aecc049e24b"
+        },
+        "excel_bot/daily/2026-09-02_excel_bot.md": {
+          "committed_at": "2026-09-02T15:09:54+00:00",
+          "sha": "a9ed6a403daa6812306820c3b9c7e0bece976f4e"
+        },
+        "excel_bot/daily/2026-09-03_excel_bot.md": {
+          "committed_at": "2026-09-03T15:24:05+00:00",
+          "sha": "1c8354e489fa34d94ff8bb17f1c492bf0542cfc5"
+        },
+        "excel_bot/daily/2026-09-04_excel_bot.md": {
+          "committed_at": "2026-09-04T15:03:47+00:00",
+          "sha": "fb22c0b5de2b80e4c47d9f7ed50adb0ef4ff28af"
+        },
+        "excel_bot/daily/2026-09-05_excel_bot.md": {
+          "committed_at": "2026-09-05T14:16:49+00:00",
+          "sha": "284a7ad025f9c349dc64f43f54a3135e4f5f884d"
+        },
+        "excel_bot/daily/2026-09-09_excel_bot.md": {
+          "committed_at": "2026-09-09T15:32:39+00:00",
+          "sha": "ee2dc53699635dee7f76f2b5fcb6e6bc9cb05e07"
+        },
+        "excel_bot/suggestions/suggestions.csv": {
+          "committed_at": "2026-09-09T15:32:39+00:00",
+          "sha": "ee2dc53699635dee7f76f2b5fcb6e6bc9cb05e07"
+        }
+      },
+      "rule": "last commit before this 09:30 ET open"
+    },
+    "2026-09-11": {
+      "cutoff": "2026-09-11T09:30:00-04:00",
+      "files": {
+        "excel_bot/daily/2026-08-30_excel_bot.md": {
+          "committed_at": "2026-08-30T16:22:19+00:00",
+          "sha": "2cc2571f494e95d15a0864e0d6ce01e237665959"
+        },
+        "excel_bot/daily/2026-09-01_excel_bot.md": {
+          "committed_at": "2026-09-01T15:49:38+00:00",
+          "sha": "5fc8152510be096d60830b5ed0e50aecc049e24b"
+        },
+        "excel_bot/daily/2026-09-02_excel_bot.md": {
+          "committed_at": "2026-09-02T15:09:54+00:00",
+          "sha": "a9ed6a403daa6812306820c3b9c7e0bece976f4e"
+        },
+        "excel_bot/daily/2026-09-03_excel_bot.md": {
+          "committed_at": "2026-09-03T15:24:05+00:00",
+          "sha": "1c8354e489fa34d94ff8bb17f1c492bf0542cfc5"
+        },
+        "excel_bot/daily/2026-09-04_excel_bot.md": {
+          "committed_at": "2026-09-04T15:03:47+00:00",
+          "sha": "fb22c0b5de2b80e4c47d9f7ed50adb0ef4ff28af"
+        },
+        "excel_bot/daily/2026-09-05_excel_bot.md": {
+          "committed_at": "2026-09-05T14:16:49+00:00",
+          "sha": "284a7ad025f9c349dc64f43f54a3135e4f5f884d"
+        },
+        "excel_bot/daily/2026-09-09_excel_bot.md": {
+          "committed_at": "2026-09-09T15:32:39+00:00",
+          "sha": "ee2dc53699635dee7f76f2b5fcb6e6bc9cb05e07"
+        },
+        "excel_bot/daily/2026-09-10_excel_bot.md": {
+          "committed_at": "2026-09-10T15:22:30+00:00",
+          "sha": "4dc97fcbd5d494194c6af7321993b12f123e61ec"
+        },
+        "excel_bot/suggestions/suggestions.csv": {
+          "committed_at": "2026-09-10T15:22:30+00:00",
+          "sha": "4dc97fcbd5d494194c6af7321993b12f123e61ec"
+        }
+      },
+      "rule": "last commit before this 09:30 ET open"
+    },
+    "2026-09-14": {
+      "cutoff": "2026-09-14T09:30:00-04:00",
+      "files": {
+        "excel_bot/daily/2026-08-30_excel_bot.md": {
+          "committed_at": "2026-08-30T16:22:19+00:00",
+          "sha": "2cc2571f494e95d15a0864e0d6ce01e237665959"
+        },
+        "excel_bot/daily/2026-09-01_excel_bot.md": {
+          "committed_at": "2026-09-01T15:49:38+00:00",
+          "sha": "5fc8152510be096d60830b5ed0e50aecc049e24b"
+        },
+        "excel_bot/daily/2026-09-02_excel_bot.md": {
+          "committed_at": "2026-09-02T15:09:54+00:00",
+          "sha": "a9ed6a403daa6812306820c3b9c7e0bece976f4e"
+        },
+        "excel_bot/daily/2026-09-03_excel_bot.md": {
+          "committed_at": "2026-09-03T15:24:05+00:00",
+          "sha": "1c8354e489fa34d94ff8bb17f1c492bf0542cfc5"
+        },
+        "excel_bot/daily/2026-09-04_excel_bot.md": {
+          "committed_at": "2026-09-04T15:03:47+00:00",
+          "sha": "fb22c0b5de2b80e4c47d9f7ed50adb0ef4ff28af"
+        },
+        "excel_bot/daily/2026-09-05_excel_bot.md": {
+          "committed_at": "2026-09-05T14:16:49+00:00",
+          "sha": "284a7ad025f9c349dc64f43f54a3135e4f5f884d"
+        },
+        "excel_bot/daily/2026-09-09_excel_bot.md": {
+          "committed_at": "2026-09-09T15:32:39+00:00",
+          "sha": "ee2dc53699635dee7f76f2b5fcb6e6bc9cb05e07"
+        },
+        "excel_bot/daily/2026-09-10_excel_bot.md": {
+          "committed_at": "2026-09-10T15:22:30+00:00",
+          "sha": "4dc97fcbd5d494194c6af7321993b12f123e61ec"
+        },
+        "excel_bot/daily/2026-09-11_excel_bot.md": {
+          "committed_at": "2026-09-11T15:22:11+00:00",
+          "sha": "87aeb54925577cbae7701a41e08ce32f9a02b681"
+        },
+        "excel_bot/daily/2026-09-12_excel_bot.md": {
+          "committed_at": "2026-09-12T14:29:01+00:00",
+          "sha": "081bbcb8067bf8f77f9cac4739d9c9dba9005d5f"
+        },
+        "excel_bot/suggestions/suggestions.csv": {
+          "committed_at": "2026-09-12T14:29:01+00:00",
+          "sha": "081bbcb8067bf8f77f9cac4739d9c9dba9005d5f"
+        }
+      },
+      "rule": "last commit before this 09:30 ET open"
+    },
+    "2026-09-15": {
+      "cutoff": "2026-09-15T09:30:00-04:00",
+      "files": {
+        "excel_bot/daily/2026-08-30_excel_bot.md": {
+          "committed_at": "2026-08-30T16:22:19+00:00",
+          "sha": "2cc2571f494e95d15a0864e0d6ce01e237665959"
+        },
+        "excel_bot/daily/2026-09-01_excel_bot.md": {
+          "committed_at": "2026-09-01T15:49:38+00:00",
+          "sha": "5fc8152510be096d60830b5ed0e50aecc049e24b"
+        },
+        "excel_bot/daily/2026-09-02_excel_bot.md": {
+          "committed_at": "2026-09-02T15:09:54+00:00",
+          "sha": "a9ed6a403daa6812306820c3b9c7e0bece976f4e"
+        },
+        "excel_bot/daily/2026-09-03_excel_bot.md": {
+          "committed_at": "2026-09-03T15:24:05+00:00",
+          "sha": "1c8354e489fa34d94ff8bb17f1c492bf0542cfc5"
+        },
+        "excel_bot/daily/2026-09-04_excel_bot.md": {
+          "committed_at": "2026-09-04T15:03:47+00:00",
+          "sha": "fb22c0b5de2b80e4c47d9f7ed50adb0ef4ff28af"
+        },
+        "excel_bot/daily/2026-09-05_excel_bot.md": {
+          "committed_at": "2026-09-05T14:16:49+00:00",
+          "sha": "284a7ad025f9c349dc64f43f54a3135e4f5f884d"
+        },
+        "excel_bot/daily/2026-09-09_excel_bot.md": {
+          "committed_at": "2026-09-09T15:32:39+00:00",
+          "sha": "ee2dc53699635dee7f76f2b5fcb6e6bc9cb05e07"
+        },
+        "excel_bot/daily/2026-09-10_excel_bot.md": {
+          "committed_at": "2026-09-10T15:22:30+00:00",
+          "sha": "4dc97fcbd5d494194c6af7321993b12f123e61ec"
+        },
+        "excel_bot/daily/2026-09-11_excel_bot.md": {
+          "committed_at": "2026-09-11T15:22:11+00:00",
+          "sha": "87aeb54925577cbae7701a41e08ce32f9a02b681"
+        },
+        "excel_bot/daily/2026-09-12_excel_bot.md": {
+          "committed_at": "2026-09-12T14:29:01+00:00",
+          "sha": "081bbcb8067bf8f77f9cac4739d9c9dba9005d5f"
+        },
+        "excel_bot/daily/2026-09-14_excel_bot.md": {
+          "committed_at": "2026-09-14T21:07:15+00:00",
+          "sha": "b4f6731e73ef3f2953b626163a5fd3f00b73fa02"
+        },
+        "excel_bot/suggestions/suggestions.csv": {
+          "committed_at": "2026-09-14T21:07:15+00:00",
+          "sha": "b4f6731e73ef3f2953b626163a5fd3f00b73fa02"
+        }
+      },
+      "rule": "last commit before this 09:30 ET open"
+    },
+    "2026-09-16": {
+      "cutoff": "2026-09-16T09:30:00-04:00",
+      "files": {
+        "excel_bot/daily/2026-08-30_excel_bot.md": {
+          "committed_at": "2026-08-30T16:22:19+00:00",
+          "sha": "2cc2571f494e95d15a0864e0d6ce01e237665959"
+        },
+        "excel_bot/daily/2026-09-01_excel_bot.md": {
+          "committed_at": "2026-09-01T15:49:38+00:00",
+          "sha": "5fc8152510be096d60830b5ed0e50aecc049e24b"
+        },
+        "excel_bot/daily/2026-09-02_excel_bot.md": {
+          "committed_at": "2026-09-02T15:09:54+00:00",
+          "sha": "a9ed6a403daa6812306820c3b9c7e0bece976f4e"
+        },
+        "excel_bot/daily/2026-09-03_excel_bot.md": {
+          "committed_at": "2026-09-03T15:24:05+00:00",
+          "sha": "1c8354e489fa34d94ff8bb17f1c492bf0542cfc5"
+        },
+        "excel_bot/daily/2026-09-04_excel_bot.md": {
+          "committed_at": "2026-09-04T15:03:47+00:00",
+          "sha": "fb22c0b5de2b80e4c47d9f7ed50adb0ef4ff28af"
+        },
+        "excel_bot/daily/2026-09-05_excel_bot.md": {
+          "committed_at": "2026-09-05T14:16:49+00:00",
+          "sha": "284a7ad025f9c349dc64f43f54a3135e4f5f884d"
+        },
+        "excel_bot/daily/2026-09-09_excel_bot.md": {
+          "committed_at": "2026-09-09T15:32:39+00:00",
+          "sha": "ee2dc53699635dee7f76f2b5fcb6e6bc9cb05e07"
+        },
+        "excel_bot/daily/2026-09-10_excel_bot.md": {
+          "committed_at": "2026-09-10T15:22:30+00:00",
+          "sha": "4dc97fcbd5d494194c6af7321993b12f123e61ec"
+        },
+        "excel_bot/daily/2026-09-11_excel_bot.md": {
+          "committed_at": "2026-09-11T15:22:11+00:00",
+          "sha": "87aeb54925577cbae7701a41e08ce32f9a02b681"
+        },
+        "excel_bot/daily/2026-09-12_excel_bot.md": {
+          "committed_at": "2026-09-12T14:29:01+00:00",
+          "sha": "081bbcb8067bf8f77f9cac4739d9c9dba9005d5f"
+        },
+        "excel_bot/daily/2026-09-14_excel_bot.md": {
+          "committed_at": "2026-09-14T21:07:15+00:00",
+          "sha": "b4f6731e73ef3f2953b626163a5fd3f00b73fa02"
+        },
+        "excel_bot/daily/2026-09-15_excel_bot.md": {
+          "committed_at": "2026-09-15T21:51:44+00:00",
+          "sha": "4c7aaead87af8eb7bb3395404406a5e7c22999ab"
+        },
+        "excel_bot/suggestions/suggestions.csv": {
+          "committed_at": "2026-09-15T21:51:44+00:00",
+          "sha": "4c7aaead87af8eb7bb3395404406a5e7c22999ab"
+        }
+      },
+      "rule": "last commit before this 09:30 ET open"
+    },
+    "2026-09-17": {
+      "cutoff": "2026-09-17T09:30:00-04:00",
+      "files": {
+        "excel_bot/daily/2026-08-30_excel_bot.md": {
+          "committed_at": "2026-08-30T16:22:19+00:00",
+          "sha": "2cc2571f494e95d15a0864e0d6ce01e237665959"
+        },
+        "excel_bot/daily/2026-09-01_excel_bot.md": {
+          "committed_at": "2026-09-01T15:49:38+00:00",
+          "sha": "5fc8152510be096d60830b5ed0e50aecc049e24b"
+        },
+        "excel_bot/daily/2026-09-02_excel_bot.md": {
+          "committed_at": "2026-09-02T15:09:54+00:00",
+          "sha": "a9ed6a403daa6812306820c3b9c7e0bece976f4e"
+        },
+        "excel_bot/daily/2026-09-03_excel_bot.md": {
+          "committed_at": "2026-09-03T15:24:05+00:00",
+          "sha": "1c8354e489fa34d94ff8bb17f1c492bf0542cfc5"
+        },
+        "excel_bot/daily/2026-09-04_excel_bot.md": {
+          "committed_at": "2026-09-04T15:03:47+00:00",
+          "sha": "fb22c0b5de2b80e4c47d9f7ed50adb0ef4ff28af"
+        },
+        "excel_bot/daily/2026-09-05_excel_bot.md": {
+          "committed_at": "2026-09-05T14:16:49+00:00",
+          "sha": "284a7ad025f9c349dc64f43f54a3135e4f5f884d"
+        },
+        "excel_bot/daily/2026-09-09_excel_bot.md": {
+          "committed_at": "2026-09-09T15:32:39+00:00",
+          "sha": "ee2dc53699635dee7f76f2b5fcb6e6bc9cb05e07"
+        },
+        "excel_bot/daily/2026-09-10_excel_bot.md": {
+          "committed_at": "2026-09-10T15:22:30+00:00",
+          "sha": "4dc97fcbd5d494194c6af7321993b12f123e61ec"
+        },
+        "excel_bot/daily/2026-09-11_excel_bot.md": {
+          "committed_at": "2026-09-11T15:22:11+00:00",
+          "sha": "87aeb54925577cbae7701a41e08ce32f9a02b681"
+        },
+        "excel_bot/daily/2026-09-12_excel_bot.md": {
+          "committed_at": "2026-09-12T14:29:01+00:00",
+          "sha": "081bbcb8067bf8f77f9cac4739d9c9dba9005d5f"
+        },
+        "excel_bot/daily/2026-09-14_excel_bot.md": {
+          "committed_at": "2026-09-14T21:07:15+00:00",
+          "sha": "b4f6731e73ef3f2953b626163a5fd3f00b73fa02"
+        },
+        "excel_bot/daily/2026-09-15_excel_bot.md": {
+          "committed_at": "2026-09-15T21:51:44+00:00",
+          "sha": "4c7aaead87af8eb7bb3395404406a5e7c22999ab"
+        },
+        "excel_bot/daily/2026-09-16_excel_bot.md": {
+          "committed_at": "2026-09-16T21:31:09+00:00",
+          "sha": "a20ec7070f8f75c4a89d34b151ca2e195174172e"
+        },
+        "excel_bot/suggestions/suggestions.csv": {
+          "committed_at": "2026-09-16T21:31:09+00:00",
+          "sha": "a20ec7070f8f75c4a89d34b151ca2e195174172e"
+        }
+      },
+      "rule": "last commit before this 09:30 ET open"
+    },
+    "2026-09-18": {
+      "cutoff": "2026-09-18T09:30:00-04:00",
+      "files": {
+        "excel_bot/daily/2026-08-30_excel_bot.md": {
+          "committed_at": "2026-08-30T16:22:19+00:00",
+          "sha": "2cc2571f494e95d15a0864e0d6ce01e237665959"
+        },
+        "excel_bot/daily/2026-09-01_excel_bot.md": {
+          "committed_at": "2026-09-01T15:49:38+00:00",
+          "sha": "5fc8152510be096d60830b5ed0e50aecc049e24b"
+        },
+        "excel_bot/daily/2026-09-02_excel_bot.md": {
+          "committed_at": "2026-09-02T15:09:54+00:00",
+          "sha": "a9ed6a403daa6812306820c3b9c7e0bece976f4e"
+        },
+        "excel_bot/daily/2026-09-03_excel_bot.md": {
+          "committed_at": "2026-09-03T15:24:05+00:00",
+          "sha": "1c8354e489fa34d94ff8bb17f1c492bf0542cfc5"
+        },
+        "excel_bot/daily/2026-09-04_excel_bot.md": {
+          "committed_at": "2026-09-04T15:03:47+00:00",
+          "sha": "fb22c0b5de2b80e4c47d9f7ed50adb0ef4ff28af"
+        },
+        "excel_bot/daily/2026-09-05_excel_bot.md": {
+          "committed_at": "2026-09-05T14:16:49+00:00",
+          "sha": "284a7ad025f9c349dc64f43f54a3135e4f5f884d"
+        },
+        "excel_bot/daily/2026-09-09_excel_bot.md": {
+          "committed_at": "2026-09-09T15:32:39+00:00",
+          "sha": "ee2dc53699635dee7f76f2b5fcb6e6bc9cb05e07"
+        },
+        "excel_bot/daily/2026-09-10_excel_bot.md": {
+          "committed_at": "2026-09-10T15:22:30+00:00",
+          "sha": "4dc97fcbd5d494194c6af7321993b12f123e61ec"
+        },
+        "excel_bot/daily/2026-09-11_excel_bot.md": {
+          "committed_at": "2026-09-11T15:22:11+00:00",
+          "sha": "87aeb54925577cbae7701a41e08ce32f9a02b681"
+        },
+        "excel_bot/daily/2026-09-12_excel_bot.md": {
+          "committed_at": "2026-09-12T14:29:01+00:00",
+          "sha": "081bbcb8067bf8f77f9cac4739d9c9dba9005d5f"
+        },
+        "excel_bot/daily/2026-09-14_excel_bot.md": {
+          "committed_at": "2026-09-14T21:07:15+00:00",
+          "sha": "b4f6731e73ef3f2953b626163a5fd3f00b73fa02"
+        },
+        "excel_bot/daily/2026-09-15_excel_bot.md": {
+          "committed_at": "2026-09-15T21:51:44+00:00",
+          "sha": "4c7aaead87af8eb7bb3395404406a5e7c22999ab"
+        },
+        "excel_bot/daily/2026-09-16_excel_bot.md": {
+          "committed_at": "2026-09-16T21:31:09+00:00",
+          "sha": "a20ec7070f8f75c4a89d34b151ca2e195174172e"
+        },
+        "excel_bot/daily/2026-09-17_excel_bot.md": {
+          "committed_at": "2026-09-17T21:07:22+00:00",
+          "sha": "46ac3337a72daf5aa7245ea903da48df58f10bba"
+        },
+        "excel_bot/suggestions/suggestions.csv": {
+          "committed_at": "2026-09-17T21:07:22+00:00",
+          "sha": "46ac3337a72daf5aa7245ea903da48df58f10bba"
+        }
+      },
+      "rule": "last commit before this 09:30 ET open"
+    },
+    "2026-09-21": {
+      "cutoff": "2026-09-21T09:30:00-04:00",
+      "files": {
+        "excel_bot/daily/2026-08-30_excel_bot.md": {
+          "committed_at": "2026-08-30T16:22:19+00:00",
+          "sha": "2cc2571f494e95d15a0864e0d6ce01e237665959"
+        },
+        "excel_bot/daily/2026-09-01_excel_bot.md": {
+          "committed_at": "2026-09-01T15:49:38+00:00",
+          "sha": "5fc8152510be096d60830b5ed0e50aecc049e24b"
+        },
+        "excel_bot/daily/2026-09-02_excel_bot.md": {
+          "committed_at": "2026-09-02T15:09:54+00:00",
+          "sha": "a9ed6a403daa6812306820c3b9c7e0bece976f4e"
+        },
+        "excel_bot/daily/2026-09-03_excel_bot.md": {
+          "committed_at": "2026-09-03T15:24:05+00:00",
+          "sha": "1c8354e489fa34d94ff8bb17f1c492bf0542cfc5"
+        },
+        "excel_bot/daily/2026-09-04_excel_bot.md": {
+          "committed_at": "2026-09-04T15:03:47+00:00",
+          "sha": "fb22c0b5de2b80e4c47d9f7ed50adb0ef4ff28af"
+        },
+        "excel_bot/daily/2026-09-05_excel_bot.md": {
+          "committed_at": "2026-09-05T14:16:49+00:00",
+          "sha": "284a7ad025f9c349dc64f43f54a3135e4f5f884d"
+        },
+        "excel_bot/daily/2026-09-09_excel_bot.md": {
+          "committed_at": "2026-09-09T15:32:39+00:00",
+          "sha": "ee2dc53699635dee7f76f2b5fcb6e6bc9cb05e07"
+        },
+        "excel_bot/daily/2026-09-10_excel_bot.md": {
+          "committed_at": "2026-09-10T15:22:30+00:00",
+          "sha": "4dc97fcbd5d494194c6af7321993b12f123e61ec"
+        },
+        "excel_bot/daily/2026-09-11_excel_bot.md": {
+          "committed_at": "2026-09-11T15:22:11+00:00",
+          "sha": "87aeb54925577cbae7701a41e08ce32f9a02b681"
+        },
+        "excel_bot/daily/2026-09-12_excel_bot.md": {
+          "committed_at": "2026-09-12T14:29:01+00:00",
+          "sha": "081bbcb8067bf8f77f9cac4739d9c9dba9005d5f"
+        },
+        "excel_bot/daily/2026-09-14_excel_bot.md": {
+          "committed_at": "2026-09-14T21:07:15+00:00",
+          "sha": "b4f6731e73ef3f2953b626163a5fd3f00b73fa02"
+        },
+        "excel_bot/daily/2026-09-15_excel_bot.md": {
+          "committed_at": "2026-09-15T21:51:44+00:00",
+          "sha": "4c7aaead87af8eb7bb3395404406a5e7c22999ab"
+        },
+        "excel_bot/daily/2026-09-16_excel_bot.md": {
+          "committed_at": "2026-09-16T21:31:09+00:00",
+          "sha": "a20ec7070f8f75c4a89d34b151ca2e195174172e"
+        },
+        "excel_bot/daily/2026-09-17_excel_bot.md": {
+          "committed_at": "2026-09-17T21:07:22+00:00",
+          "sha": "46ac3337a72daf5aa7245ea903da48df58f10bba"
+        },
+        "excel_bot/daily/2026-09-18_excel_bot.md": {
+          "committed_at": "2026-09-18T15:24:05+00:00",
+          "sha": "1dd63357c4d554d82930188cd38dcf0a1e291f8c"
+        },
+        "excel_bot/daily/2026-09-19_excel_bot.md": {
+          "committed_at": "2026-09-19T14:45:42+00:00",
+          "sha": "f416f7c78ee4c1824f6ddce69e6f96ded9f2eec6"
+        },
+        "excel_bot/suggestions/suggestions.csv": {
+          "committed_at": "2026-09-19T14:45:42+00:00",
+          "sha": "f416f7c78ee4c1824f6ddce69e6f96ded9f2eec6"
+        }
+      },
+      "rule": "last commit before this 09:30 ET open"
+    },
+    "2026-09-22": {
+      "cutoff": "2026-09-22T09:30:00-04:00",
+      "files": {
+        "excel_bot/daily/2026-08-30_excel_bot.md": {
+          "committed_at": "2026-08-30T16:22:19+00:00",
+          "sha": "2cc2571f494e95d15a0864e0d6ce01e237665959"
+        },
+        "excel_bot/daily/2026-09-01_excel_bot.md": {
+          "committed_at": "2026-09-01T15:49:38+00:00",
+          "sha": "5fc8152510be096d60830b5ed0e50aecc049e24b"
+        },
+        "excel_bot/daily/2026-09-02_excel_bot.md": {
+          "committed_at": "2026-09-02T15:09:54+00:00",
+          "sha": "a9ed6a403daa6812306820c3b9c7e0bece976f4e"
+        },
+        "excel_bot/daily/2026-09-03_excel_bot.md": {
+          "committed_at": "2026-09-03T15:24:05+00:00",
+          "sha": "1c8354e489fa34d94ff8bb17f1c492bf0542cfc5"
+        },
+        "excel_bot/daily/2026-09-04_excel_bot.md": {
+          "committed_at": "2026-09-04T15:03:47+00:00",
+          "sha": "fb22c0b5de2b80e4c47d9f7ed50adb0ef4ff28af"
+        },
+        "excel_bot/daily/2026-09-05_excel_bot.md": {
+          "committed_at": "2026-09-05T14:16:49+00:00",
+          "sha": "284a7ad025f9c349dc64f43f54a3135e4f5f884d"
+        },
+        "excel_bot/daily/2026-09-09_excel_bot.md": {
+          "committed_at": "2026-09-09T15:32:39+00:00",
+          "sha": "ee2dc53699635dee7f76f2b5fcb6e6bc9cb05e07"
+        },
+        "excel_bot/daily/2026-09-10_excel_bot.md": {
+          "committed_at": "2026-09-10T15:22:30+00:00",
+          "sha": "4dc97fcbd5d494194c6af7321993b12f123e61ec"
+        },
+        "excel_bot/daily/2026-09-11_excel_bot.md": {
+          "committed_at": "2026-09-11T15:22:11+00:00",
+          "sha": "87aeb54925577cbae7701a41e08ce32f9a02b681"
+        },
+        "excel_bot/daily/2026-09-12_excel_bot.md": {
+          "committed_at": "2026-09-12T14:29:01+00:00",
+          "sha": "081bbcb8067bf8f77f9cac4739d9c9dba9005d5f"
+        },
+        "excel_bot/daily/2026-09-14_excel_bot.md": {
+          "committed_at": "2026-09-14T21:07:15+00:00",
+          "sha": "b4f6731e73ef3f2953b626163a5fd3f00b73fa02"
+        },
+        "excel_bot/daily/2026-09-15_excel_bot.md": {
+          "committed_at": "2026-09-15T21:51:44+00:00",
+          "sha": "4c7aaead87af8eb7bb3395404406a5e7c22999ab"
+        },
+        "excel_bot/daily/2026-09-16_excel_bot.md": {
+          "committed_at": "2026-09-16T21:31:09+00:00",
+          "sha": "a20ec7070f8f75c4a89d34b151ca2e195174172e"
+        },
+        "excel_bot/daily/2026-09-17_excel_bot.md": {
+          "committed_at": "2026-09-17T21:07:22+00:00",
+          "sha": "46ac3337a72daf5aa7245ea903da48df58f10bba"
+        },
+        "excel_bot/daily/2026-09-18_excel_bot.md": {
+          "committed_at": "2026-09-18T15:24:05+00:00",
+          "sha": "1dd63357c4d554d82930188cd38dcf0a1e291f8c"
+        },
+        "excel_bot/daily/2026-09-19_excel_bot.md": {
+          "committed_at": "2026-09-19T14:45:42+00:00",
+          "sha": "f416f7c78ee4c1824f6ddce69e6f96ded9f2eec6"
+        },
+        "excel_bot/daily/2026-09-21_excel_bot.md": {
+          "committed_at": "2026-09-21T21:24:11+00:00",
+          "sha": "abcfeaf8bed7df849446ef20309c0db5c1531fe4"
+        },
+        "excel_bot/suggestions/suggestions.csv": {
+          "committed_at": "2026-09-21T21:24:11+00:00",
+          "sha": "abcfeaf8bed7df849446ef20309c0db5c1531fe4"
+        }
+      },
+      "rule": "last commit before this 09:30 ET open"
+    },
+    "2026-09-23": {
+      "cutoff": "2026-09-23T09:30:00-04:00",
+      "files": {
+        "excel_bot/daily/2026-08-30_excel_bot.md": {
+          "committed_at": "2026-08-30T16:22:19+00:00",
+          "sha": "2cc2571f494e95d15a0864e0d6ce01e237665959"
+        },
+        "excel_bot/daily/2026-09-01_excel_bot.md": {
+          "committed_at": "2026-09-01T15:49:38+00:00",
+          "sha": "5fc8152510be096d60830b5ed0e50aecc049e24b"
+        },
+        "excel_bot/daily/2026-09-02_excel_bot.md": {
+          "committed_at": "2026-09-02T15:09:54+00:00",
+          "sha": "a9ed6a403daa6812306820c3b9c7e0bece976f4e"
+        },
+        "excel_bot/daily/2026-09-03_excel_bot.md": {
+          "committed_at": "2026-09-03T15:24:05+00:00",
+          "sha": "1c8354e489fa34d94ff8bb17f1c492bf0542cfc5"
+        },
+        "excel_bot/daily/2026-09-04_excel_bot.md": {
+          "committed_at": "2026-09-04T15:03:47+00:00",
+          "sha": "fb22c0b5de2b80e4c47d9f7ed50adb0ef4ff28af"
+        },
+        "excel_bot/daily/2026-09-05_excel_bot.md": {
+          "committed_at": "2026-09-05T14:16:49+00:00",
+          "sha": "284a7ad025f9c349dc64f43f54a3135e4f5f884d"
+        },
+        "excel_bot/daily/2026-09-09_excel_bot.md": {
+          "committed_at": "2026-09-09T15:32:39+00:00",
+          "sha": "ee2dc53699635dee7f76f2b5fcb6e6bc9cb05e07"
+        },
+        "excel_bot/daily/2026-09-10_excel_bot.md": {
+          "committed_at": "2026-09-10T15:22:30+00:00",
+          "sha": "4dc97fcbd5d494194c6af7321993b12f123e61ec"
+        },
+        "excel_bot/daily/2026-09-11_excel_bot.md": {
+          "committed_at": "2026-09-11T15:22:11+00:00",
+          "sha": "87aeb54925577cbae7701a41e08ce32f9a02b681"
+        },
+        "excel_bot/daily/2026-09-12_excel_bot.md": {
+          "committed_at": "2026-09-12T14:29:01+00:00",
+          "sha": "081bbcb8067bf8f77f9cac4739d9c9dba9005d5f"
+        },
+        "excel_bot/daily/2026-09-14_excel_bot.md": {
+          "committed_at": "2026-09-14T21:07:15+00:00",
+          "sha": "b4f6731e73ef3f2953b626163a5fd3f00b73fa02"
+        },
+        "excel_bot/daily/2026-09-15_excel_bot.md": {
+          "committed_at": "2026-09-15T21:51:44+00:00",
+          "sha": "4c7aaead87af8eb7bb3395404406a5e7c22999ab"
+        },
+        "excel_bot/daily/2026-09-16_excel_bot.md": {
+          "committed_at": "2026-09-16T21:31:09+00:00",
+          "sha": "a20ec7070f8f75c4a89d34b151ca2e195174172e"
+        },
+        "excel_bot/daily/2026-09-17_excel_bot.md": {
+          "committed_at": "2026-09-17T21:07:22+00:00",
+          "sha": "46ac3337a72daf5aa7245ea903da48df58f10bba"
+        },
+        "excel_bot/daily/2026-09-18_excel_bot.md": {
+          "committed_at": "2026-09-18T15:24:05+00:00",
+          "sha": "1dd63357c4d554d82930188cd38dcf0a1e291f8c"
+        },
+        "excel_bot/daily/2026-09-19_excel_bot.md": {
+          "committed_at": "2026-09-19T14:45:42+00:00",
+          "sha": "f416f7c78ee4c1824f6ddce69e6f96ded9f2eec6"
+        },
+        "excel_bot/daily/2026-09-21_excel_bot.md": {
+          "committed_at": "2026-09-21T21:24:11+00:00",
+          "sha": "abcfeaf8bed7df849446ef20309c0db5c1531fe4"
+        },
+        "excel_bot/daily/2026-09-22_excel_bot.md": {
+          "committed_at": "2026-09-22T21:25:49+00:00",
+          "sha": "feadeca24e8251e11e1dbc1fcbe348c99025b4e1"
+        },
+        "excel_bot/suggestions/suggestions.csv": {
+          "committed_at": "2026-09-22T21:25:49+00:00",
+          "sha": "feadeca24e8251e11e1dbc1fcbe348c99025b4e1"
+        }
+      },
+      "rule": "last commit before this 09:30 ET open"
+    },
+    "2026-09-24": {
+      "cutoff": "2026-09-24T09:30:00-04:00",
+      "files": {
+        "excel_bot/daily/2026-08-30_excel_bot.md": {
+          "committed_at": "2026-08-30T16:22:19+00:00",
+          "sha": "2cc2571f494e95d15a0864e0d6ce01e237665959"
+        },
+        "excel_bot/daily/2026-09-01_excel_bot.md": {
+          "committed_at": "2026-09-01T15:49:38+00:00",
+          "sha": "5fc8152510be096d60830b5ed0e50aecc049e24b"
+        },
+        "excel_bot/daily/2026-09-02_excel_bot.md": {
+          "committed_at": "2026-09-02T15:09:54+00:00",
+          "sha": "a9ed6a403daa6812306820c3b9c7e0bece976f4e"
+        },
+        "excel_bot/daily/2026-09-03_excel_bot.md": {
+          "committed_at": "2026-09-03T15:24:05+00:00",
+          "sha": "1c8354e489fa34d94ff8bb17f1c492bf0542cfc5"
+        },
+        "excel_bot/daily/2026-09-04_excel_bot.md": {
+          "committed_at": "2026-09-04T15:03:47+00:00",
+          "sha": "fb22c0b5de2b80e4c47d9f7ed50adb0ef4ff28af"
+        },
+        "excel_bot/daily/2026-09-05_excel_bot.md": {
+          "committed_at": "2026-09-05T14:16:49+00:00",
+          "sha": "284a7ad025f9c349dc64f43f54a3135e4f5f884d"
+        },
+        "excel_bot/daily/2026-09-09_excel_bot.md": {
+          "committed_at": "2026-09-09T15:32:39+00:00",
+          "sha": "ee2dc53699635dee7f76f2b5fcb6e6bc9cb05e07"
+        },
+        "excel_bot/daily/2026-09-10_excel_bot.md": {
+          "committed_at": "2026-09-10T15:22:30+00:00",
+          "sha": "4dc97fcbd5d494194c6af7321993b12f123e61ec"
+        },
+        "excel_bot/daily/2026-09-11_excel_bot.md": {
+          "committed_at": "2026-09-11T15:22:11+00:00",
+          "sha": "87aeb54925577cbae7701a41e08ce32f9a02b681"
+        },
+        "excel_bot/daily/2026-09-12_excel_bot.md": {
+          "committed_at": "2026-09-12T14:29:01+00:00",
+          "sha": "081bbcb8067bf8f77f9cac4739d9c9dba9005d5f"
+        },
+        "excel_bot/daily/2026-09-14_excel_bot.md": {
+          "committed_at": "2026-09-14T21:07:15+00:00",
+          "sha": "b4f6731e73ef3f2953b626163a5fd3f00b73fa02"
+        },
+        "excel_bot/daily/2026-09-15_excel_bot.md": {
+          "committed_at": "2026-09-15T21:51:44+00:00",
+          "sha": "4c7aaead87af8eb7bb3395404406a5e7c22999ab"
+        },
+        "excel_bot/daily/2026-09-16_excel_bot.md": {
+          "committed_at": "2026-09-16T21:31:09+00:00",
+          "sha": "a20ec7070f8f75c4a89d34b151ca2e195174172e"
+        },
+        "excel_bot/daily/2026-09-17_excel_bot.md": {
+          "committed_at": "2026-09-17T21:07:22+00:00",
+          "sha": "46ac3337a72daf5aa7245ea903da48df58f10bba"
+        },
+        "excel_bot/daily/2026-09-18_excel_bot.md": {
+          "committed_at": "2026-09-18T15:24:05+00:00",
+          "sha": "1dd63357c4d554d82930188cd38dcf0a1e291f8c"
+        },
+        "excel_bot/daily/2026-09-19_excel_bot.md": {
+          "committed_at": "2026-09-19T14:45:42+00:00",
+          "sha": "f416f7c78ee4c1824f6ddce69e6f96ded9f2eec6"
+        },
+        "excel_bot/daily/2026-09-21_excel_bot.md": {
+          "committed_at": "2026-09-21T21:24:11+00:00",
+          "sha": "abcfeaf8bed7df849446ef20309c0db5c1531fe4"
+        },
+        "excel_bot/daily/2026-09-22_excel_bot.md": {
+          "committed_at": "2026-09-22T21:25:49+00:00",
+          "sha": "feadeca24e8251e11e1dbc1fcbe348c99025b4e1"
+        },
+        "excel_bot/daily/2026-09-23_excel_bot.md": {
+          "committed_at": "2026-09-23T21:28:21+00:00",
+          "sha": "284929eff966df37a7f2ed5562b9e42ecff5a6fb"
+        },
+        "excel_bot/suggestions/suggestions.csv": {
+          "committed_at": "2026-09-23T21:28:21+00:00",
+          "sha": "284929eff966df37a7f2ed5562b9e42ecff5a6fb"
+        }
+      },
+      "rule": "last commit before this 09:30 ET open"
+    },
+    "2026-09-25": {
+      "cutoff": "2026-09-25T09:30:00-04:00",
+      "files": {
+        "excel_bot/daily/2026-08-30_excel_bot.md": {
+          "committed_at": "2026-08-30T16:22:19+00:00",
+          "sha": "2cc2571f494e95d15a0864e0d6ce01e237665959"
+        },
+        "excel_bot/daily/2026-09-01_excel_bot.md": {
+          "committed_at": "2026-09-01T15:49:38+00:00",
+          "sha": "5fc8152510be096d60830b5ed0e50aecc049e24b"
+        },
+        "excel_bot/daily/2026-09-02_excel_bot.md": {
+          "committed_at": "2026-09-02T15:09:54+00:00",
+          "sha": "a9ed6a403daa6812306820c3b9c7e0bece976f4e"
+        },
+        "excel_bot/daily/2026-09-03_excel_bot.md": {
+          "committed_at": "2026-09-03T15:24:05+00:00",
+          "sha": "1c8354e489fa34d94ff8bb17f1c492bf0542cfc5"
+        },
+        "excel_bot/daily/2026-09-04_excel_bot.md": {
+          "committed_at": "2026-09-04T15:03:47+00:00",
+          "sha": "fb22c0b5de2b80e4c47d9f7ed50adb0ef4ff28af"
+        },
+        "excel_bot/daily/2026-09-05_excel_bot.md": {
+          "committed_at": "2026-09-05T14:16:49+00:00",
+          "sha": "284a7ad025f9c349dc64f43f54a3135e4f5f884d"
+        },
+        "excel_bot/daily/2026-09-09_excel_bot.md": {
+          "committed_at": "2026-09-09T15:32:39+00:00",
+          "sha": "ee2dc53699635dee7f76f2b5fcb6e6bc9cb05e07"
+        },
+        "excel_bot/daily/2026-09-10_excel_bot.md": {
+          "committed_at": "2026-09-10T15:22:30+00:00",
+          "sha": "4dc97fcbd5d494194c6af7321993b12f123e61ec"
+        },
+        "excel_bot/daily/2026-09-11_excel_bot.md": {
+          "committed_at": "2026-09-11T15:22:11+00:00",
+          "sha": "87aeb54925577cbae7701a41e08ce32f9a02b681"
+        },
+        "excel_bot/daily/2026-09-12_excel_bot.md": {
+          "committed_at": "2026-09-12T14:29:01+00:00",
+          "sha": "081bbcb8067bf8f77f9cac4739d9c9dba9005d5f"
+        },
+        "excel_bot/daily/2026-09-14_excel_bot.md": {
+          "committed_at": "2026-09-14T21:07:15+00:00",
+          "sha": "b4f6731e73ef3f2953b626163a5fd3f00b73fa02"
+        },
+        "excel_bot/daily/2026-09-15_excel_bot.md": {
+          "committed_at": "2026-09-15T21:51:44+00:00",
+          "sha": "4c7aaead87af8eb7bb3395404406a5e7c22999ab"
+        },
+        "excel_bot/daily/2026-09-16_excel_bot.md": {
+          "committed_at": "2026-09-16T21:31:09+00:00",
+          "sha": "a20ec7070f8f75c4a89d34b151ca2e195174172e"
+        },
+        "excel_bot/daily/2026-09-17_excel_bot.md": {
+          "committed_at": "2026-09-17T21:07:22+00:00",
+          "sha": "46ac3337a72daf5aa7245ea903da48df58f10bba"
+        },
+        "excel_bot/daily/2026-09-18_excel_bot.md": {
+          "committed_at": "2026-09-18T15:24:05+00:00",
+          "sha": "1dd63357c4d554d82930188cd38dcf0a1e291f8c"
+        },
+        "excel_bot/daily/2026-09-19_excel_bot.md": {
+          "committed_at": "2026-09-19T14:45:42+00:00",
+          "sha": "f416f7c78ee4c1824f6ddce69e6f96ded9f2eec6"
+        },
+        "excel_bot/daily/2026-09-21_excel_bot.md": {
+          "committed_at": "2026-09-21T21:24:11+00:00",
+          "sha": "abcfeaf8bed7df849446ef20309c0db5c1531fe4"
+        },
+        "excel_bot/daily/2026-09-22_excel_bot.md": {
+          "committed_at": "2026-09-22T21:25:49+00:00",
+          "sha": "feadeca24e8251e11e1dbc1fcbe348c99025b4e1"
+        },
+        "excel_bot/daily/2026-09-23_excel_bot.md": {
+          "committed_at": "2026-09-23T21:28:21+00:00",
+          "sha": "284929eff966df37a7f2ed5562b9e42ecff5a6fb"
+        },
+        "excel_bot/daily/2026-09-24_excel_bot.md": {
+          "committed_at": "2026-09-24T21:05:30+00:00",
+          "sha": "7fc0b0a8b4084f0e50e93cfcf357cf997b6393a3"
+        },
+        "excel_bot/suggestions/suggestions.csv": {
+          "committed_at": "2026-09-24T21:05:30+00:00",
+          "sha": "7fc0b0a8b4084f0e50e93cfcf357cf997b6393a3"
+        }
+      },
+      "rule": "last commit before this 09:30 ET open"
+    }
+  },
   "first_frozen": "2026-08-13",
   "ledgers": {
     "2026-08-13": {

@@ -374,6 +374,7 @@ def _stamp_manifest(date: str, info: dict) -> None:
         "auto_adjust": False,
     }
     fmf.save_manifest(man)
+    fmf.record_excel_signals([date])
 
 
 def _price_ok(ticker: str, date: str) -> bool:
