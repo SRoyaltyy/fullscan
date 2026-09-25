@@ -165,9 +165,12 @@ def test_daily_returns_csv_lists_each_start_book() -> None:
             "recipes": {
                 "union_hot_n4_h1": {
                     "starts": {
-                        "2026-09-23": {"daily": {
-                            "equity": 10100, "yday_equity": 10000, "mean": 1.0,
-                        }},
+                        "2026-09-23": {
+                            "daily": {
+                                "equity": 10100, "yday_equity": 10000, "mean": 1.0,
+                            },
+                            "trades": [{"date": "2026-09-23", "side": "BUY", "ticker": "AAA"}],
+                        },
                     },
                 },
             },
@@ -181,9 +184,12 @@ def test_daily_returns_csv_lists_each_start_book() -> None:
                         "2026-09-23": {"daily": {
                             "equity": 10100, "yday_equity": 10100, "mean": 1.0,
                         }},
-                        "2026-09-24": {"daily": {
-                            "equity": 9900, "yday_equity": 10000, "mean": -1.0,
-                        }},
+                        "2026-09-24": {
+                            "daily": {
+                                "equity": 9900, "yday_equity": 10000, "mean": -1.0,
+                            },
+                            "trades": [{"date": "2026-09-24", "side": "BUY", "ticker": "BBB"}],
+                        },
                     },
                 },
             },
@@ -260,6 +266,14 @@ def test_daily_returns_csv_lists_each_start_book() -> None:
     assert late["news_clean"] == "false"
     assert rows[0]["timing_clean"] == "true"
     assert rows[0]["reads_news"] == "false"
+    assert rows[0]["fires"] == ""
+    assert rows[0]["untestable"] == ""
+    assert filled["fires"] == "1"
+    assert filled["untestable"] == "false"
+    assert flat_day["fires"] == "0"
+    assert flat_day["untestable"] == "false"
+    assert rows[5]["fires"] == "1"
+    assert rows[5]["untestable"] == "false"
 
 
 def test_news_flags_follow_331_and_recipe_gates() -> None:
@@ -314,6 +328,90 @@ def test_news_flags_follow_331_and_recipe_gates() -> None:
     assert news["timing_n"] == 2
     assert news["clean_n"] == 1
     assert news["clean_futubull"] == -50.0
+    quiet = [
+        {"recipe": "overnight_mega_h1", "start_date": "2026-08-13",
+         "D": "2026-08-13", "net_ret_futubull": "0.0000",
+         "net_ret_15bp": "0.0000", "timing_clean": "false",
+         "news_clean": "true", "reads_news": "false", "fires": "0"},
+        {"recipe": "overnight_mega_h1", "start_date": "2026-08-13",
+         "D": "2026-08-24", "net_ret_futubull": "",
+         "net_ret_15bp": "", "timing_clean": "true",
+         "news_clean": "true", "reads_news": "false", "fires": "0"},
+    ]
+    dead = retro.recipe_clean_windows(quiet)[0]
+    assert dead["untestable"] is True
+    assert dead["all_n"] == 2
+    assert dead["all_fires"] == 0
+    assert dead["all_futubull"] is None
+    assert dead["timing_n"] == 1
+    assert dead["timing_fires"] == 0
+    assert dead["timing_futubull"] is None
+
+
+def test_split_session_uses_prior_equity() -> None:
+    """A resumed split row stores yesterday as $10k. The CSV uses the prior close."""
+    import csv
+    import unittest.mock as mock
+
+    ledgers = {
+        "2026-08-28": {
+            "label": "pit_rebuilt",
+            "recipes": {
+                "combo_se_5050_split": {"starts": {"2026-08-28": {
+                    "daily": {"equity": 9876.34, "yday_equity": 10000.0, "mean": -1.2366},
+                    "trades": [{"side": "BUY", "ticker": "AAA"}],
+                }}},
+                "overnight_mega_h1": {"starts": {"2026-08-28": {
+                    "daily": {"equity": 10000.0, "yday_equity": 10000.0, "mean": 0.0},
+                    "trades": [{"side": "OPEN"}],
+                }}},
+            },
+        },
+        "2026-08-31": {
+            "label": "pit_rebuilt",
+            "recipes": {
+                "combo_se_5050_split": {"starts": {"2026-08-28": {
+                    "daily": {"equity": 9942.0, "yday_equity": 10000.0, "mean": -0.58},
+                    "trades": [{"side": "SELL", "ticker": "AAA"}],
+                }}},
+                "overnight_mega_h1": {"starts": {"2026-08-28": {
+                    "daily": {"equity": 10000.0, "yday_equity": 10000.0, "mean": 0.0},
+                    "trades": [{"side": "CLOSE"}],
+                }}},
+            },
+        },
+    }
+    catalog = {
+        "combo_se_5050_split": "2026-08-13",
+        "overnight_mega_h1": "2026-08-13",
+    }
+    flat = {
+        ("combo_se_5050_split", "2026-08-28", "2026-08-28"): -1.0791,
+        ("combo_se_5050_split", "2026-08-28", "2026-08-31"): 0.6638,
+        ("overnight_mega_h1", "2026-08-28", "2026-08-28"): 0.0,
+        ("overnight_mega_h1", "2026-08-28", "2026-08-31"): 0.0,
+    }
+    with tempfile.TemporaryDirectory() as d:
+        dest = Path(d) / "daily_returns.csv"
+        with mock.patch.object(retro.fmf, "read_ledger", side_effect=lambda date: ledgers.get(date)):
+            retro.write_daily_returns(
+                dest, ["2026-08-28", "2026-08-31"],
+                catalog=catalog, flat_returns=flat, manifest={"snapshots": {}},
+            )
+        with dest.open(newline="", encoding="utf-8") as handle:
+            rows = list(csv.DictReader(handle))
+    by = {(r["recipe"], r["start_date"], r["D"]): r for r in rows}
+    first = by[("combo_se_5050_split", "2026-08-28", "2026-08-28")]
+    second = by[("combo_se_5050_split", "2026-08-28", "2026-08-31")]
+    assert first["net_ret_futubull"] == "-1.2366"
+    assert second["net_ret_futubull"] == "0.6648"
+    assert second["net_ret_15bp"] == "0.6638"
+    assert first["untestable"] == "false"
+    quiet = by[("overnight_mega_h1", "2026-08-28", "2026-08-28")]
+    assert quiet["fires"] == "0"
+    assert quiet["untestable"] == "true"
+    assert quiet["net_ret_futubull"] == ""
+    assert quiet["net_ret_15bp"] == ""
 
 
 def test_baselines_section_keeps_the_hot4_table() -> None:
@@ -827,6 +925,7 @@ if __name__ == "__main__":
     test_daily_return_is_the_session_not_the_resumed_mean()
     test_daily_returns_csv_lists_each_start_book()
     test_news_flags_follow_331_and_recipe_gates()
+    test_split_session_uses_prior_equity()
     test_baselines_section_keeps_the_hot4_table()
     test_incomplete_snapshot_carries_no_rows()
     test_held_day_keeps_no_rows()

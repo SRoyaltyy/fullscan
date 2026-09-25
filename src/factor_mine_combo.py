@@ -981,7 +981,15 @@ def simulate_split(panel: dict, recs: list[dict], weights: list[float],
                    if row.get("date")}
     last_marked = max(marked) if marked else None
     daily = []
-    yday = CAPITAL
+    # A resumed split book only walks the new day. The saved combined
+    # equity is that day's baseline. Starting from the original $10k
+    # makes the session percent a cumulative return.
+    yday = float(CAPITAL)
+    if isinstance(resume, dict) and resume.get("yday_equity") not in (None, ""):
+        try:
+            yday = float(resume["yday_equity"])
+        except (TypeError, ValueError):
+            yday = float(CAPITAL)
     for date in cal:
         rows = [row for b in live if (row := _daily_on(b, date)) is not None]
         if not rows:

@@ -244,8 +244,14 @@ def test_split_tolerates_unequal_member_dailies() -> None:
             name="t_split_gap")
     finally:
         fmb.simulate_book = orig
-    assert [d["date"] for d in book["daily"]] == dates[:-1]
-    assert abs(book["daily"][-1]["equity"] - 10000.0) < 1e-6
+    got = [d["date"] for d in book["daily"]]
+    # Member books stop one session early. A later closed session is an
+    # unmarked stub; an still-open session is clipped by last_closed.
+    assert got[: len(dates) - 1] == dates[:-1]
+    marked = book["daily"][len(dates) - 2]
+    assert abs(marked["equity"] - 10000.0) < 1e-6
+    if len(got) == len(dates):
+        assert book["daily"][-1].get("why") == "unmarked session"
 
 
 def test_split_scales_capital_and_keeps_member_audits() -> None:
@@ -298,6 +304,35 @@ def _stub_book(daily: list[dict], *, ret: float = 0.0) -> dict:
         "n_skips": 0,
         "audit": {"ok": True},
     }
+
+
+def test_split_resume_mean_uses_prior_equity() -> None:
+    """The combined session percent is versus the saved equity, not $10k."""
+    dates = ["2026-08-28", "2026-08-31"]
+    panel = _panel([], dates)
+    rec = fm.make_recipe("union_h1", universe="union", hold=1, top_n=1)
+    rec["name"] = "union_h1"
+
+    def fake_book(_panel, _rec, **_kw):
+        return _stub_book([
+            _stub_day("2026-08-31", 4900.0),
+        ])
+
+    orig = fmb.simulate_book
+    fmb.simulate_book = fake_book
+    try:
+        book = fmc.simulate_split(
+            panel, [rec, rec], [1, 1], bars={}, fees=ZERO_FEES, regime={},
+            name="t_split_resume",
+            resume={"yday_equity": 9600.0, "after": "2026-08-28", "members": [{}, {}]},
+        )
+    finally:
+        fmb.simulate_book = orig
+    row = book["daily"][0]
+    assert row["date"] == "2026-08-31"
+    assert row["yday_equity"] == 9600.0
+    assert row["equity"] == 9800.0
+    assert abs(row["mean"] - round(100.0 * (9800.0 / 9600.0 - 1.0), 4)) < 1e-9
 
 
 def test_split_unequal_or_empty_daily_does_not_indexerror() -> None:
@@ -477,6 +512,7 @@ if __name__ == "__main__":
     test_missing_open_is_not_replaced_by_close()
     test_split_tolerates_unequal_member_dailies()
     test_split_scales_capital_and_keeps_member_audits()
+    test_split_resume_mean_uses_prior_equity()
     test_split_unequal_or_empty_daily_does_not_indexerror()
     test_yf_bound_strips_iso_midnight()
     test_scorecard_beats_all_book()
@@ -485,4 +521,4 @@ if __name__ == "__main__":
     test_run_skips_combos_when_members_absent()
     test_leg_pnl_and_long_led_bar()
     test_enrich_payload_legs_pins_long_led()
-    print("17 factor-mine combo tests passed")
+    print("18 factor-mine combo tests passed")

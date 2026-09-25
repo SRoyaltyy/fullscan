@@ -1681,8 +1681,10 @@ DAILY_RETURNS_CSV = ROOT / "data" / "factor_mine" / "daily_returns.csv"
 DAILY_RETURN_FIELDS = (
     "recipe", "recipe_created_date", "start_date", "D",
     "net_ret_futubull", "net_ret_15bp", "day_status", "source_shas",
-    "timing_clean", "news_clean", "reads_news",
+    "timing_clean", "news_clean", "reads_news", "fires", "untestable",
 )
+# Fills that count as the recipe firing. OPEN/CLOSE marks are not trades.
+FILL_SIDES = frozenset({"BUY", "SHORT", "SELL", "COVER"})
 DAY_STATUSES = ("locked", "pit_rebuilt", "incomplete_pit", "held", "skipped")
 # #331 data/quarantine_sessions.json. Not on main; the file is copied here
 # so news_clean uses that list (18 sessions), not the shorter sketch.
@@ -1760,6 +1762,43 @@ def recipe_reads_news(name: str, by_name: dict | None = None,
         if recipe_reads_news(str(member), by_name, seen):
             return True
     return False
+
+
+def _fill_count(block: dict | None) -> int:
+    """BUY / SHORT / SELL / COVER fills. OPEN and CLOSE marks are not fires."""
+    return sum(
+        1 for trade in ((block or {}).get("trades") or [])
+        if trade.get("side") in FILL_SIDES
+    )
+
+
+def session_return_from_equity(daily: dict | None,
+                               prior: float | None) -> float | None:
+    """Session percent versus the previous session's equity.
+
+    A resumed split ledger stores ``yday_equity`` as the original $10k.
+    ``prior`` is that start's equity on the previous session, and it
+    wins when it is present. The first session still uses the stored base.
+    """
+    row = daily or {}
+    equity = row.get("equity")
+    if equity is None:
+        return None
+    try:
+        equity = float(equity)
+    except (TypeError, ValueError):
+        return None
+    if prior is not None:
+        base = float(prior)
+    else:
+        prev = row.get("yday_equity")
+        try:
+            base = float(prev) if prev not in (None, "") else float(fm.CAPITAL)
+        except (TypeError, ValueError):
+            return None
+    if base == 0:
+        return None
+    return round(100.0 * (equity / base - 1.0), 4)
 
 
 def daily_return_pct(daily: dict | None) -> float | None:
@@ -1931,11 +1970,15 @@ def write_daily_returns(path: Path | None = None,
 
     Columns: recipe, recipe_created_date, start_date, D,
     net_ret_futubull, net_ret_15bp, day_status, source_shas,
-    timing_clean, news_clean, reads_news.
+    timing_clean, news_clean, reads_news, fires, untestable.
     A held or missing day has empty returns. A real flat session is 0.
-    timing_clean is the day's label (pit_rebuilt only). news_clean is
-    false on a #331 quarantine date. reads_news is the recipe, repeated
-    on every row. Ledgers are reduced one file at a time.
+    A start whose ledgers contain zero fills is untestable: its returns
+    are blank, not 0. timing_clean is the day's label (pit_rebuilt only).
+    news_clean is false on a #331 quarantine date. reads_news is the
+    recipe, repeated on every row. The Futubull session percent uses the
+    prior session's equity for that start, so a resumed split row that
+    stored yesterday as $10k is restated. Ledgers are reduced one file
+    at a time.
     """
     import csv
 
@@ -1952,6 +1995,9 @@ def write_daily_returns(path: Path | None = None,
     reads = {name: recipe_reads_news(name, by_name) for name in names}
     quarantined = news_quarantine_dates()
     fut: dict[tuple[str, str, str], float | None] = {}
+    fires: dict[tuple[str, str, str], int] = {}
+    fire_total: dict[tuple[str, str], int] = {}
+    prior_equity: dict[tuple[str, str], float] = {}
     present: set[tuple[str, str, str]] = set()
     status_of: dict[str, str] = {}
     shas_of: dict[str, str] = {}
@@ -1966,8 +2012,15 @@ def write_daily_returns(path: Path | None = None,
                 daily = (block or {}).get("daily") if isinstance(block, dict) else None
                 if not isinstance(daily, dict) or daily.get("equity") is None:
                     continue
-                present.add((name, str(start)[:10], day))
-                fut[(name, str(start)[:10], day)] = daily_return_pct(daily)
+                start = str(start)[:10]
+                key = (name, start, day)
+                chain = (name, start)
+                present.add(key)
+                fut[key] = session_return_from_equity(daily, prior_equity.get(chain))
+                prior_equity[chain] = float(daily["equity"])
+                n_fills = _fill_count(block if isinstance(block, dict) else None)
+                fires[key] = n_fills
+                fire_total[chain] = fire_total.get(chain, 0) + n_fills
         del ledger
     n = 0
     held = 0
@@ -1977,6 +2030,7 @@ def write_daily_returns(path: Path | None = None,
         for name in names:
             created = str(book.get(name) or "")[:10]
             for start in days:
+                quiet = fire_total.get((name, start), None) == 0
                 for day in days:
                     if day < start:
                         continue
@@ -1992,16 +2046,23 @@ def write_daily_returns(path: Path | None = None,
                         cell = status if status in ("held", "skipped") else "held"
                         writer.writerow([
                             name, created, start, day, "", "", cell,
-                            shas_of.get(day) or "", *flags,
+                            shas_of.get(day) or "", *flags, "", "",
                         ])
                         held += 1
                     else:
+                        day_fires = fires.get(key, 0)
+                        if quiet:
+                            fut_cell, flat_cell, mark = "", "", "true"
+                        else:
+                            fut_cell = format_net(fut.get(key))
+                            flat_cell = format_net(flat.get(key))
+                            mark = "false"
                         writer.writerow([
                             name, created, start, day,
-                            format_net(fut.get(key)),
-                            format_net(flat.get(key)),
+                            fut_cell, flat_cell,
                             status_of.get(day) or "held",
                             shas_of.get(day) or "", *flags,
+                            str(day_fires), mark,
                         ])
                     n += 1
     print(f"[retro] daily returns {n} rows held={held} {dest}", flush=True)
@@ -2031,12 +2092,26 @@ def _parse_net(cell: str) -> float | None:
     return number
 
 
+def _parse_fires(row: dict) -> int | None:
+    """None when the row has no fires cell. Zero is a real count."""
+    if "fires" not in row:
+        return None
+    text = str(row.get("fires") if row.get("fires") is not None else "").strip()
+    if not text:
+        return None
+    try:
+        return int(float(text))
+    except ValueError:
+        return None
+
+
 def recipe_clean_windows(rows: list[dict]) -> list[dict]:
     """One row per recipe: all days, timing_clean days, and both-clean days.
 
     The book is the earliest ``start_date`` for that recipe. A blank
     return is left out of the chain and out of ``n``. Both-clean is
-    filled only when ``reads_news`` is true.
+    filled only when ``reads_news`` is true. A window whose fires sum
+    to zero is untestable: the return is blank even if the cells say 0.
     """
     by_recipe: dict[str, list[dict]] = {}
     for row in rows:
@@ -2052,12 +2127,20 @@ def recipe_clean_windows(rows: list[dict]) -> list[dict]:
         book.sort(key=lambda r: str(r.get("D") or ""))
         reads = str((book[0].get("reads_news") if book else "") or "").lower() == "true"
 
-        def chain(pred) -> tuple[int, float | None, float | None]:
+        def chain(pred) -> tuple[int | None, float | None, float | None, int | None, bool]:
             fut_vals = []
             flat_vals = []
+            fires_sum = 0
+            saw_fires = False
+            n_book = 0
             for row in book:
                 if not pred(row):
                     continue
+                counted = _parse_fires(row)
+                if counted is not None:
+                    fires_sum += counted
+                    saw_fires = True
+                    n_book += 1
                 fut = _parse_net(row.get("net_ret_futubull") or "")
                 flat = _parse_net(row.get("net_ret_15bp") or "")
                 if fut is None and flat is None:
@@ -2066,29 +2149,36 @@ def recipe_clean_windows(rows: list[dict]) -> list[dict]:
                     fut_vals.append(fut)
                 if flat is not None:
                     flat_vals.append(flat)
+            if saw_fires and fires_sum == 0:
+                return n_book, None, None, 0, True
             n = max(len(fut_vals), len(flat_vals))
-            return n, _compound_pct(fut_vals), _compound_pct(flat_vals)
+            fires_out = fires_sum if saw_fires else None
+            return n, _compound_pct(fut_vals), _compound_pct(flat_vals), fires_out, False
 
-        all_n, all_fut, all_flat = chain(lambda _r: True)
-        timing_n, timing_fut, timing_flat = chain(
+        all_n, all_fut, all_flat, all_fires, untestable = chain(lambda _r: True)
+        timing_n, timing_fut, timing_flat, timing_fires, _timing_quiet = chain(
             lambda r: str(r.get("timing_clean") or "").lower() == "true")
         if reads:
-            clean_n, clean_fut, clean_flat = chain(
+            clean_n, clean_fut, clean_flat, clean_fires, _clean_quiet = chain(
                 lambda r: str(r.get("timing_clean") or "").lower() == "true"
                 and str(r.get("news_clean") or "").lower() == "true")
         else:
-            clean_n, clean_fut, clean_flat = None, None, None
+            clean_n = clean_fut = clean_flat = clean_fires = None
         out.append({
             "recipe": name,
             "reads_news": reads,
             "start": start,
+            "untestable": untestable,
             "all_n": all_n,
+            "all_fires": all_fires,
             "all_futubull": all_fut,
             "all_15bp": all_flat,
             "timing_n": timing_n,
+            "timing_fires": timing_fires,
             "timing_futubull": timing_fut,
             "timing_15bp": timing_flat,
             "clean_n": clean_n,
+            "clean_fires": clean_fires,
             "clean_futubull": clean_fut,
             "clean_15bp": clean_flat,
         })
@@ -2099,6 +2189,12 @@ def format_window_pct(value: float | None) -> str:
     if value is None:
         return ""
     return f"{value:.3f}"
+
+
+def format_fires(value: int | None) -> str:
+    if value is None:
+        return ""
+    return str(int(value))
 
 
 def clean_window_markdown(rows: list[dict]) -> str:
@@ -2117,20 +2213,26 @@ def clean_window_markdown(rows: list[dict]) -> str:
         "Each book is the earliest start date. A blank return is omitted. "
         "Returns are the compounded session percents already in the CSV. "
         "Days that fail the flag are left out of the chain. The calendar "
-        "is not rebuilt.",
+        "is not rebuilt. `fires` counts BUY, SHORT, SELL, and COVER. "
+        "A window with zero fires is untestable: the return is blank, "
+        "and that recipe is left out of rankings and the luck test.",
         "",
-        "| recipe | reads_news | all n | all futubull % | all 15bp % | timing n | timing futubull % | timing 15bp % | both n | both futubull % | both 15bp % |",
-        "| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |",
+        "| recipe | reads_news | untestable | all n | all fires | all futubull % | all 15bp % | timing n | timing fires | timing futubull % | timing 15bp % | both n | both fires | both futubull % | both 15bp % |",
+        "| --- | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |",
     ]
     for row in windows:
         both_n = "" if row["clean_n"] is None else str(row["clean_n"])
         lines.append(
             f"| `{row['recipe']}` | {format_bool(row['reads_news'])} | "
-            f"{row['all_n']} | {format_window_pct(row['all_futubull'])} | "
+            f"{format_bool(row['untestable'])} | "
+            f"{row['all_n']} | {format_fires(row['all_fires'])} | "
+            f"{format_window_pct(row['all_futubull'])} | "
             f"{format_window_pct(row['all_15bp'])} | "
-            f"{row['timing_n']} | {format_window_pct(row['timing_futubull'])} | "
+            f"{row['timing_n']} | {format_fires(row['timing_fires'])} | "
+            f"{format_window_pct(row['timing_futubull'])} | "
             f"{format_window_pct(row['timing_15bp'])} | "
-            f"{both_n} | {format_window_pct(row['clean_futubull'])} | "
+            f"{both_n} | {format_fires(row['clean_fires'])} | "
+            f"{format_window_pct(row['clean_futubull'])} | "
             f"{format_window_pct(row['clean_15bp'])} |"
         )
     return "\n".join(lines) + "\n"
@@ -2197,10 +2299,12 @@ def publish_baselines(*, draws: int = RANDOM4_DRAWS) -> dict:
             "are `data/factor_mine/daily_returns.csv` (recipe, "
             "recipe_created_date, start_date, D, net_ret_futubull, "
             "net_ret_15bp, day_status, source_shas, timing_clean, "
-            "news_clean, reads_news). One row per recipe, start date, and "
-            "day. A held or missing day is `held` with empty returns, never 0. "
-            "timing_clean is true only on pit_rebuilt days. news_clean is "
-            "false on the #331 quarantine dates."
+            "news_clean, reads_news, fires, untestable). One row per recipe, "
+            "start date, and day. A held or missing day is `held` with empty "
+            "returns, never 0. timing_clean is true only on pit_rebuilt days. "
+            "news_clean is false on the #331 quarantine dates. fires counts "
+            "BUY, SHORT, SELL, and COVER. A start with zero fires is "
+            "untestable and its returns are blank."
         ),
     }
     write_baselines(payload)
