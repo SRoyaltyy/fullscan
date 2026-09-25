@@ -30,6 +30,12 @@ the undated copies and ``<date>_strategy_tickets_draft.json``. That
 draft is the expected path: a warning, and the publish exits 0. The
 job still fails if a locked dated file is actually modified, or if
 the draft write fails.
+
+From 2026-09-28 the same publish freezes the inputs it read into
+``data/factor_mine/send_inputs/<date>.json`` (file hashes, candidate
+rows, sizing prices). That file uses the dated-ticket lock. A session
+with no same-day panel rows sits: no live lookup, no new buys. The
+Factor Mine lock reuses that set for HOT4 and holdup.
 """
 from __future__ import annotations
 
@@ -232,7 +238,7 @@ def assert_session_look(payload: dict, date: str) -> None:
         raise AssertionError(
             f"panel bake date {bake or look.get('date')} ≠ session open {date}"
         )
-    if bake and bake != date and source not in ("look", "panel"):
+    if bake and bake != date and source not in ("look", "panel", "no_same_day_panel"):
         raise AssertionError(
             f"panel bake date {bake} ≠ session open {date}"
         )
@@ -275,6 +281,9 @@ def _session_look(date: str, panel: dict) -> dict:
     last factor-mine bake (09-11 Friday). ``combo_broker.resolve_rows``
     already builds leak-free look rows for an open morning; if that
     look is stale, refuse the names instead of shipping Friday's list.
+
+    From 2026-09-28 a missing same-day panel sits. It does not call the
+    live lookup.
     """
     by_date = panel.get("by_date") or {}
     bake = str(panel.get("to_date") or "")
@@ -283,6 +292,17 @@ def _session_look(date: str, panel: dict) -> dict:
             "date": date, "rows": by_date[date], "stale": False,
             "source": "panel", "want_date": date,
             "panel_bake_date": bake or date,
+        }
+    from . import factor_mine_send_inputs as fsi
+    if fsi.applies(date):
+        err = (
+            f"no same-day panel rows for {date} — sitting, no live lookup"
+        )
+        print(f"[strategy-tickets] WARN: {err}", flush=True)
+        return {
+            "date": date, "rows": [], "stale": False,
+            "source": "no_same_day_panel", "want_date": date,
+            "error": err, "panel_bake_date": bake, "sit": True,
         }
     try:
         from . import combo_broker as cb
@@ -464,17 +484,37 @@ def recipe_strats(date: str, look_out: dict | None = None) -> list[dict]:
     try:
         from . import factor_mine as fm
         from . import factor_mine_book as fmb
+        from . import factor_mine_send_inputs as fsi
         from . import morning_scan as mscan
     except Exception as e:  # noqa: BLE001
         print(f"[strategy-tickets] WARN: factor-mine import: {e}", flush=True)
         return []
+    recipe_strats.last_session = {
+        "date": date, "source": "missing", "rows": [], "error": "", "picks": {},
+    }
     raw = _load_json(PANEL)
     if not raw:
+        sit = fsi.applies(date)
+        note = (
+            "panel.json missing — sitting, no live lookup"
+            if sit else "panel.json missing"
+        )
+        recipe_strats.last_session = {
+            "date": date,
+            "source": "no_same_day_panel" if sit else "missing",
+            "rows": [],
+            "error": note,
+            "picks": {name: [] for name in fsi.LIVE_RECIPES},
+        }
         if look_out is not None:
-            look_out.update({"source": "missing", "want_date": date,
-                             "stale": True, "error": "panel.json missing"})
+            look_out.update({
+                "source": recipe_strats.last_session["source"],
+                "want_date": date,
+                "stale": not sit,
+                "error": note,
+            })
         return [_entry("factor_mine", "factor_mine", date, [], [],
-                       status="no_panel", note="panel.json missing")]
+                       status="sit" if sit else "no_panel", note=note)]
     panel = fm.rehydrate_panel(raw)
     looked = _session_look(date, panel)
     if look_out is not None:
@@ -553,7 +593,7 @@ def recipe_strats(date: str, look_out: dict | None = None) -> list[dict]:
             if not rows:
                 out.append(_entry(
                     name, "factor_mine", date, [], [],
-                    status=empty_status,
+                    status="sit" if looked.get("source") == "no_same_day_panel" else empty_status,
                     note=empty_note,
                     side=rec_side,
                 ))
@@ -594,19 +634,21 @@ def recipe_strats(date: str, look_out: dict | None = None) -> list[dict]:
                 ))
             continue
         # HOT4 is the Webull wire: session panel + pick_day, same as
-        # cash-start. Other sleeves may still scan the Clock-B aisle.
+        # cash-start. From 2026-09-28 holdup uses that same row set.
+        # Other sleeves may still scan the Clock-B aisle.
         wire = name == HOT4_WIRE
-        pick_rows = base_rows if wire else rows
+        live_pick = wire or (fsi.applies(date) and name in fsi.LIVE_RECIPES)
+        pick_rows = base_rows if live_pick else rows
         if not pick_rows:
             out.append(_entry(
                 name, "factor_mine", date, [], [],
-                status=empty_status,
+                status="sit" if looked.get("source") == "no_same_day_panel" else empty_status,
                 note=empty_note,
                 side=rec_side,
             ))
             continue
         try:
-            picked = (fm.pick_day if wire else mscan.pick_morning)(pick_rows, rec)
+            picked = (fm.pick_day if live_pick else mscan.pick_morning)(pick_rows, rec)
         except Exception as e:  # noqa: BLE001
             out.append(_entry(
                 name, "factor_mine", date, [], [],
@@ -661,6 +703,24 @@ def recipe_strats(date: str, look_out: dict | None = None) -> list[dict]:
         rec.setdefault("session_open", date)
         if bake:
             rec.setdefault("panel_bake_date", bake)
+    picks = {}
+    for name in fsi.LIVE_RECIPES:
+        entry = next((row for row in out if row.get("name") == name), None)
+        bought = []
+        if entry:
+            bought = [
+                str(b.get("ticker"))
+                for b in (entry.get("buy") or [])
+                if isinstance(b, dict) and b.get("ticker")
+            ]
+        picks[name] = bought
+    recipe_strats.last_session = {
+        "date": date,
+        "source": looked.get("source") or "",
+        "error": look_err,
+        "rows": list(base_rows) if looked.get("source") == "panel" else [],
+        "picks": picks,
+    }
     return out
 
 
@@ -1297,7 +1357,26 @@ def write(date: str, payload: dict | None = None, now: datetime | None = None) -
         f"errors={payload.get('errors') or []}",
         flush=True,
     )
+    _freeze_send_inputs(date, payload, now)
     return wrote
+
+
+def _freeze_send_inputs(date: str, payload: dict, now: datetime | None) -> None:
+    """Save the send set with the dated ticket. No-op before 2026-09-28."""
+    from . import factor_mine_send_inputs as fsi
+    if not fsi.applies(date):
+        return
+    session = getattr(recipe_strats, "last_session", None) or {}
+    if session.get("date") != date:
+        look = payload.get("look") or {}
+        session = {
+            "date": date,
+            "source": look.get("source") or "no_same_day_panel",
+            "error": look.get("error") or "",
+            "rows": [],
+            "picks": {name: [] for name in fsi.LIVE_RECIPES},
+        }
+    fsi.store(date, payload, session, now=now)
 
 
 def main(argv=None) -> int:
