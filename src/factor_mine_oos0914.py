@@ -958,14 +958,122 @@ def test_dates(through: str | None = None) -> list[str]:
     return dates
 
 
+def _has_print(bar: dict | None) -> bool:
+    if not bar:
+        return False
+    return bar.get("open") is not None or bar.get("close") is not None
+
+
+def _pin_bars(date: str, tickers: set[str]) -> dict:
+    """Read the frozen price pin. Do not call yfinance."""
+    path = fmf.price_path(date)
+    if not path.is_file():
+        return {}
+    try:
+        doc = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return {}
+    names = doc.get("names") or {}
+    out = {}
+    for ticker in tickers:
+        info = names.get(ticker)
+        if not isinstance(info, dict) or not _has_print(info):
+            continue
+        out[(ticker, date)] = {
+            "open": info.get("open"),
+            "high": info.get("high"),
+            "low": info.get("low"),
+            "close": info.get("close"),
+        }
+    return out
+
+
+def _fill_test_bars(dates: list[str], tickers: set[str], bars: dict) -> dict:
+    """Fill a test session the locked retro store does not cover.
+
+    Retro bars stay as they are. A missing open and close comes from that
+    day's frozen price pin, then from the live Yahoo store for a carried
+    name the pin does not list. Neither store is written.
+    """
+    filled = dict(bars)
+    names = {str(t).upper() for t in tickers if t and str(t).upper() != "IWM"}
+    for date in dates:
+        stamp = str(date)[:10]
+        missing = {
+            ticker for ticker in names
+            if not _has_print(filled.get((ticker, stamp)))
+        }
+        if not missing:
+            continue
+        for key, bar in _pin_bars(stamp, missing).items():
+            if not _has_print(filled.get(key)):
+                filled[key] = bar
+            missing.discard(key[0])
+        if not missing:
+            continue
+        live = load_session_bars(
+            LIVE_OHLC, [stamp], missing, max_date=stamp, allow_test=True,
+        )
+        for key, bar in live.items():
+            if _has_print(bar) and not _has_print(filled.get(key)):
+                filled[key] = bar
+    return filled
+
+
 def _bars_for_window(dates: list[str], tickers: set[str], *,
                      allow_test: bool) -> dict:
     if not dates:
         return {}
     path = RETRO_OHLC if allow_test else LIVE_OHLC
-    return load_session_bars(
+    bars = load_session_bars(
         path, dates, tickers, max_date=dates[-1], allow_test=allow_test,
     )
+    if allow_test:
+        bars = _fill_test_bars(dates, tickers, bars)
+    return bars
+
+
+def assert_new_session_has_bars(dates: list[str], recipes: list[dict],
+                                snaps: dict, bars: dict, root: Path) -> None:
+    """Refuse to lock a new day whose session tape is empty.
+
+    One missing name stays ``unpriced_held``. An empty tape is a different
+    failure: every lot carries at yesterday's price and nothing is bought,
+    then that flat day is locked. A date that already has a state file is
+    left alone so a rewalk of locked history does not fail.
+    """
+    root = Path(root)
+    for date in dates:
+        stamp = str(date)[:10]
+        pending = [
+            rec for rec in recipes
+            if rec.get("name") and seq.read_state(rec["name"], stamp, root) is None
+        ]
+        if not pending:
+            continue
+        row_names = {
+            str(row.get("ticker") or "").upper()
+            for row in snapshot_rows(snaps.get(stamp) or snaps.get(date) or {}, stamp)
+            if row.get("ticker")
+        }
+        if row_names:
+            priced = sum(1 for ticker in row_names if _has_print(bars.get((ticker, stamp))))
+            if priced == 0:
+                raise SystemExit(
+                    f"[oos0914] {stamp} has {len(row_names)} snapshot rows "
+                    "and no session bars; refusing to lock a flat carry"
+                )
+            continue
+        carried: set[str] = set()
+        for rec in pending:
+            carried |= fmf._positions_before(root / str(rec["name"]), stamp)
+        if carried and not any(
+            _has_print(bars.get((ticker, stamp))) for ticker in carried
+        ):
+            raise SystemExit(
+                f"[oos0914] {stamp} has {len(carried)} carried names "
+                "and no session bars; refusing to lock a flat carry"
+            )
 
 
 def _ensure_iwm(dates: list[str], bars: dict, *, allow_test: bool) -> dict:
@@ -1120,6 +1228,7 @@ def walk_test(dates: list[str], recipes: list[dict], *,
                 tickers.add(str(row["ticker"]).upper())
     tickers |= _held_into(root, dates)
     bars = _bars_for_window(dates, tickers, allow_test=True)
+    assert_new_session_has_bars(dates, recipes, snaps, bars, root)
     fees = fm.pt_fees()
 
     def rows_for(date: str):
