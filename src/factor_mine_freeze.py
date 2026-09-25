@@ -10,7 +10,15 @@ A landed session is frozen once:
   recipe and every start-date book, plus the end-of-day state the next
   session resumes from. Gzip of the canonical JSON so a full book stays
   under the publish size budget. The manifest hash is the gzip bytes.
+* ``data/factor_mine/lineups/{D}.json`` — recipes shown on the dashboard
+  for D, each with its creation date. Write-once.
+* ``data/factor_mine/recipe_created_on.json`` — creation date of every
+  recipe. New names can be appended. An existing date cannot change.
 * ``data/factor_mine/freeze_manifest.json`` — sha256 of each file
+
+Every snapshot and ledger carries ``code_sha``, the git commit that
+built that day. A later rule change is a new recipe version or a
+logged ``--restate``. It does not rewrite the old file in place.
 
 Later runs read those files and append the new day. They do not rebuild
 earlier dates. ``--restate D`` is the logged correction path.
@@ -33,6 +41,8 @@ SNAP_DIR = ROOT / "data" / "factor_mine" / "snapshots"
 LEDGER_DIR = ROOT / "data" / "factor_mine" / "ledgers"
 PRICE_DIR = ROOT / "data" / "factor_mine" / "prices"
 MANIFEST_PATH = ROOT / "data" / "factor_mine" / "freeze_manifest.json"
+LINEUP_DIR = ROOT / "data" / "factor_mine" / "lineups"
+CREATED_PATH = ROOT / "data" / "factor_mine" / "recipe_created_on.json"
 
 _FILL_KEYS = (
     "date", "ticker", "side", "shares", "price", "fees", "pnl",
@@ -70,6 +80,21 @@ def encode_frozen(slot: str, obj) -> bytes:
     if slot != "ledgers":
         return raw
     return gzip.compress(raw, compresslevel=6, mtime=0)
+
+
+def code_sha() -> str:
+    """Git commit that is building this frozen day."""
+    try:
+        out = subprocess.run(
+            ["git", "rev-parse", "HEAD"],
+            cwd=ROOT, capture_output=True, text=True, check=False,
+        )
+    except OSError:
+        return "unknown"
+    sha = (out.stdout or "").strip()
+    if out.returncode != 0 or len(sha) < 7:
+        return "unknown"
+    return sha
 
 
 def _json_default(obj):
@@ -137,6 +162,20 @@ def ledger_path(date: str) -> Path:
 
 def price_path(date: str) -> Path:
     return PRICE_DIR / f"{date}.json"
+
+
+def lineup_path(date: str) -> Path:
+    return LINEUP_DIR / f"{date}.json"
+
+
+def slot_path(slot: str, date: str) -> Path:
+    if slot == "ledgers":
+        return ledger_path(date)
+    if slot == "lineups":
+        return lineup_path(date)
+    if slot == "prices":
+        return price_path(date)
+    return snapshot_path(date)
 
 
 def reset_price_memory() -> None:
@@ -465,6 +504,7 @@ def make_snapshot(date: str, rows: list[dict], prior: str | None,
         "date": date,
         "asof": "09:30_et",
         "open_clock": "09:30 ET",
+        "code_sha": code_sha(),
         "heat": heat,
         "prices_sha256": prices_sha,
         "n_rows": len(frozen_rows),
@@ -530,7 +570,7 @@ def guard_manifest(old: dict | None, new: dict | None,
     old = old or {}
     new = new or {}
     allow = {str(d)[:10] for d in (restate or []) if d}
-    for slot in ("snapshots", "ledgers"):
+    for slot in ("snapshots", "ledgers", "lineups"):
         for date, meta in (old.get(slot) or {}).items():
             if date in allow:
                 print(f"[factor-mine] restate allowed {slot} {date}", flush=True)
@@ -543,9 +583,9 @@ def guard_manifest(old: dict | None, new: dict | None,
                     f"frozen {slot} {date} hash changed {prev} -> {got}. "
                     f"Pass --restate {date} to log a correction."
                 )
-    for slot in ("snapshots", "ledgers"):
+    for slot in ("snapshots", "ledgers", "lineups"):
         for date, meta in (new.get(slot) or {}).items():
-            path = snapshot_path(date) if slot == "snapshots" else ledger_path(date)
+            path = slot_path(slot, date)
             if not path.is_file():
                 raise SystemExit(f"freeze manifest lists {slot} {date} but {path} is missing")
             have = sha256_bytes(path.read_bytes())
@@ -555,12 +595,131 @@ def guard_manifest(old: dict | None, new: dict | None,
                 )
 
 
+def read_lineup(date: str) -> dict | None:
+    return read_json(lineup_path(date))
+
+
+def lineup_document(date: str, recipes: list[dict],
+                    shown: list[str] | None = None) -> dict:
+    """Recipes displayed on D. Creation date must be on or before D."""
+    from . import factor_mine as fm
+
+    by: dict[str, str] = {}
+    for rec in recipes:
+        name = str(rec.get("name") or "")
+        if not name:
+            continue
+        by[name] = fm.recipe_created_on(name, rec)
+    if shown is None:
+        names = [name for name, created in by.items() if created <= date]
+    else:
+        names = []
+        for name in shown:
+            created = by.get(name)
+            if created is None:
+                created = fm.recipe_created_on(name, {})
+                by[name] = created
+            if created <= date:
+                names.append(name)
+    entries = [
+        {"created_on": by[name], "name": name}
+        for name in sorted(set(names))
+    ]
+    return {"code_sha": code_sha(), "date": date, "recipes": entries}
+
+
+def record_lineup(date: str, recipes: list[dict],
+                  shown: list[str] | None = None) -> dict | None:
+    """Write D's dashboard lineup once. A second call keeps the first file."""
+    day = str(date or "")[:10]
+    if len(day) != 10 or not recipes:
+        return None
+    existing = read_lineup(day)
+    if existing:
+        return existing
+    doc = lineup_document(day, recipes, shown)
+    _write_frozen(lineup_path(day), doc, "lineups", day, restate=False)
+    return doc
+
+
+def load_recipe_catalog(path: Path | None = None) -> dict[str, str]:
+    src = Path(path or CREATED_PATH)
+    if not src.is_file():
+        return {}
+    try:
+        doc = json.loads(src.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return {}
+    if not isinstance(doc, dict):
+        return {}
+    return {str(k): str(v)[:10] for k, v in doc.items() if k and v}
+
+
+def record_recipe_dates(recipes: list[dict], path: Path | None = None) -> dict[str, str]:
+    """Append creation dates. An existing name cannot move to another date."""
+    from . import factor_mine as fm
+
+    dest = Path(path or CREATED_PATH)
+    catalog = load_recipe_catalog(dest)
+    for rec in recipes:
+        name = str(rec.get("name") or "")
+        if not name:
+            continue
+        created = fm.recipe_created_on(name, rec)
+        prev = catalog.get(name)
+        if prev and prev != created:
+            raise FrozenHistory(
+                f"recipe {name} created_on is {prev}; refusing {created}"
+            )
+        catalog[name] = created
+    dest.parent.mkdir(parents=True, exist_ok=True)
+    dest.write_text(
+        json.dumps(dict(sorted(catalog.items())), indent=2, sort_keys=True) + "\n",
+        encoding="utf-8",
+    )
+    return catalog
+
+
+def guard_recipe_catalog(old: dict | None, new: dict | None) -> None:
+    """New recipe names may appear. An existing creation date may not change."""
+    old = old or {}
+    new = new or {}
+    for name, created in old.items():
+        got = new.get(name)
+        if got != created:
+            raise SystemExit(
+                f"recipe {name} created_on changed {created} -> {got}. "
+                "Add a new recipe version instead of moving the old one."
+            )
+
+
+def committed_recipe_catalog() -> dict:
+    rel = CREATED_PATH.relative_to(ROOT).as_posix()
+    try:
+        out = subprocess.run(
+            ["git", "show", f"HEAD:{rel}"],
+            cwd=ROOT, capture_output=True, text=True, check=False,
+        )
+    except OSError:
+        return {}
+    if out.returncode != 0 or not (out.stdout or "").strip():
+        return {}
+    try:
+        doc = json.loads(out.stdout)
+    except json.JSONDecodeError:
+        return {}
+    if not isinstance(doc, dict):
+        return {}
+    return {str(k): str(v)[:10] for k, v in doc.items()}
+
+
 def assert_history_unchanged(restate: list[str] | str | None = None) -> None:
     if isinstance(restate, str):
         restate = [d for d in restate.split(",") if d.strip()]
     env = os.environ.get("FM_RESTATE") or os.environ.get("RESTATE") or ""
     extra = [d.strip() for d in env.split(",") if d.strip()]
     guard_manifest(committed_manifest(), load_manifest(), list(restate or []) + extra)
+    guard_recipe_catalog(committed_recipe_catalog(), load_recipe_catalog())
 
 
 def _prior(cal: list[str], date: str) -> str | None:
@@ -843,7 +1002,12 @@ def build_ledger(panel: dict, payload: dict, recipes: list[dict],
             date, failed,
             "ledger incomplete — refusing to freeze a partial decision set",
         )
-    return {"date": date, "origin": "frozen", "recipes": out_recipes}
+    return {
+        "date": date,
+        "origin": "frozen",
+        "code_sha": code_sha(),
+        "recipes": out_recipes,
+    }
 
 
 def _growth(decision: dict, prior_equity: float | None) -> float | None:

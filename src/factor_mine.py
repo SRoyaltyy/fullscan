@@ -3142,6 +3142,18 @@ def _baked_recipe_names() -> set[str] | None:
     return names or None
 
 
+def _frozen_lineup_names(payload: dict) -> list[str] | None:
+    """Displayed names already locked for this page's to-date. None if unlocked."""
+    to = str(payload.get("to_date") or "")[:10]
+    if len(to) != 10:
+        return None
+    from . import factor_mine_freeze as fmf
+    doc = fmf.read_lineup(to)
+    if not doc:
+        return None
+    return [str(r.get("name")) for r in (doc.get("recipes") or []) if r.get("name")]
+
+
 def prune_payload_workable(payload: dict, bar: dict | None = None,
                            always=None, keep_names: set[str] | None = None
                            ) -> dict:
@@ -3175,7 +3187,14 @@ def prune_payload_workable(payload: dict, bar: dict | None = None,
     names_now = {r.get("name") for r in recipes if r.get("name")}
     names_now |= {s.get("name") for s in stats if s.get("name")}
     pins = set(WORKABLE_ALWAYS if always is None else always)
-    if keep_names is not None:
+    frozen_shown = _frozen_lineup_names(payload)
+    if frozen_shown is not None:
+        keep = {n for n in frozen_shown if n in names_now}
+        note = (
+            f"Dashboard lineup for {str(payload.get('to_date') or '')[:10]} "
+            "is frozen. It was not re-chosen."
+        )
+    elif keep_names is not None:
         keep = set(keep_names)
         note = "caller keep_names"
     elif first and clean_n >= int(bar["min_trades"]):
@@ -3303,9 +3322,17 @@ def _clear_key_shards(dest: Path, key: str) -> None:
         p.unlink()
 
 
+def stable_asof(payload: dict) -> str:
+    """Session stamp for published bytes. Wall-clock time is not part of a replay."""
+    to = str(payload.get("to_date") or "")[:10]
+    if len(to) == 10:
+        return f"{to}T16:00:00-04:00"
+    return "frozen"
+
+
 def _gzip_json(obj) -> bytes:
-    raw = json.dumps(obj, separators=(",", ":")).encode("utf-8")
-    return gzip.compress(raw, compresslevel=9)
+    raw = json.dumps(obj, sort_keys=True, separators=(",", ":")).encode("utf-8")
+    return gzip.compress(raw, compresslevel=9, mtime=0)
 
 
 def _load_gzip_json(path: Path):
@@ -3322,7 +3349,7 @@ def _split_mapping(obj: dict, max_gzip: int) -> list[dict]:
     gz = _gzip_json(obj)
     if len(gz) <= max_gzip:
         return [obj]
-    items = list(obj.items())
+    items = sorted(obj.items(), key=lambda kv: str(kv[0]))
     if len(items) == 1:
         # Single recipe still too big — last resort: write it anyway and
         # let assert_publish_budget fail with a clear path.
@@ -3367,7 +3394,10 @@ def write_scoreboard(payload: dict, out_json: Path | None = None) -> dict:
     slim["layout"] = LAYOUT_SHARDS
     slim["shards"] = manifest
     slim["shard_bytes"] = sizes
-    dest_json.write_text(json.dumps(slim, separators=(",", ":")), encoding="utf-8")
+    dest_json.write_text(
+        json.dumps(slim, sort_keys=True, separators=(",", ":")),
+        encoding="utf-8",
+    )
     assert_publish_budget(dest_json)
     return slim
 
@@ -3429,6 +3459,8 @@ def write_outputs(payload: dict, stats: list[dict] | None = None,
                   paths: dict | None = None,
                   always=None, keep_names: set[str] | None = None,
                   pin_long_led: bool = True) -> None:
+    payload = dict(payload)
+    payload["generated_at"] = stable_asof(payload)
     recipes_stamped = []
     for rec in payload.get("recipes") or []:
         item = dict(rec)
@@ -3576,7 +3608,12 @@ def write_dash_html(payload: dict, dash_dir: Path | None = None,
     payload = dict(payload)
     # Pack to_date / generated_at stay with the cash book. Pages built
     # is this bake so a 9/15 cash-start is not read as a missing pack.
-    payload["pages_built_at"] = datetime.now(tl.ET).isoformat()
+    payload["pages_built_at"] = stable_asof(payload)
+    to = str(payload.get("to_date") or "")[:10]
+    if len(to) == 10 and payload.get("recipes"):
+        from . import factor_mine_freeze as fmf
+        fmf.record_lineup(to, list(payload.get("recipes") or []))
+        payload["lineup_frozen"] = to
     dest_dir = Path(dash_dir or DASH_DIR)
     dest_dir.mkdir(parents=True, exist_ok=True)
     dest = dest_dir / "index.html"
@@ -3678,8 +3715,8 @@ def encode_payload(payload: dict) -> str:
     over 100MB and the .io page took a minute to parse). Gzip lands ~8.5MB
     (~11.5MB as base64) and the browser inflates it with DecompressionStream.
     """
-    raw = json.dumps(payload, separators=(",", ":")).encode("utf-8")
-    return base64.b64encode(gzip.compress(raw, compresslevel=9)).decode("ascii")
+    raw = json.dumps(payload, sort_keys=True, separators=(",", ":")).encode("utf-8")
+    return base64.b64encode(gzip.compress(raw, compresslevel=9, mtime=0)).decode("ascii")
 
 
 def decode_payload(b64: str) -> dict:

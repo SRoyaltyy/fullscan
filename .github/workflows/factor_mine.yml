@@ -253,6 +253,8 @@ jobs:
             data/factor_mine/freeze_manifest.json \
             data/factor_mine/snapshots/ \
             data/factor_mine/ledgers/ \
+            data/factor_mine/lineups/ \
+            data/factor_mine/recipe_created_on.json \
             data/factor_mine/prices/ \
             data/prices/ohlc.parquet \
             data/prices/meta.json \

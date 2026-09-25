@@ -422,6 +422,7 @@ def snapshot_for(date: str, info: dict, rows: list[dict],
         "sources": info.get("sources") or {},
         "missing_late": list(info.get("missing_late") or []),
         "absent": list(info.get("absent") or []),
+        "code_sha": fmf.code_sha(),
         "n_rows": len(frozen_rows),
         "rows": frozen_rows,
     }

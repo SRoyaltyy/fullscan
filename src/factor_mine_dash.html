@@ -2236,6 +2236,7 @@ function renderAll(){
     " · days before a recipe's created_on are in-sample"+
     ((D.pit_rebuilt_dates&&D.pit_rebuilt_dates.length)?(" · "+D.pit_rebuilt_dates.length+" sessions pit_rebuilt"):"")+
     ((D.incomplete_pit_dates&&D.incomplete_pit_dates.length)?(" · "+D.incomplete_pit_dates.length+" sessions incomplete_pit"):"")+
+    (D.lineup_frozen?(" · lineup "+D.lineup_frozen+" frozen"):"")+
     (((D.combos||{}).n)
       ? (" · "+D.combos.n+" combo books"+(((D.combos.outperform||[]).length)?" · "+D.combos.outperform.length+" WIN":""))
       : "")+

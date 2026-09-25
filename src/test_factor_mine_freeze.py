@@ -1,6 +1,7 @@
 """Append-only factor-mine snapshots, ledgers, and the price hold."""
 from __future__ import annotations
 
+import gzip
 import json
 import tempfile
 from pathlib import Path
@@ -16,22 +17,25 @@ from src import ticker_lookback as tl
 def _redirect(tmp: Path):
     return (
         fmf.SNAP_DIR, fmf.LEDGER_DIR, fmf.PRICE_DIR, fmf.MANIFEST_PATH,
+        fmf.LINEUP_DIR,
     ), (
         tmp / "snapshots", tmp / "ledgers", tmp / "prices",
-        tmp / "freeze_manifest.json",
+        tmp / "freeze_manifest.json", tmp / "lineups",
     )
 
 
 def _use(tmp: Path):
     old, new = _redirect(tmp)
-    fmf.SNAP_DIR, fmf.LEDGER_DIR, fmf.PRICE_DIR, fmf.MANIFEST_PATH = new
-    for p in new[:3]:
+    (fmf.SNAP_DIR, fmf.LEDGER_DIR, fmf.PRICE_DIR, fmf.MANIFEST_PATH,
+     fmf.LINEUP_DIR) = new
+    for p in (new[0], new[1], new[2], new[4]):
         p.mkdir(parents=True, exist_ok=True)
     return old
 
 
 def _restore(old) -> None:
-    fmf.SNAP_DIR, fmf.LEDGER_DIR, fmf.PRICE_DIR, fmf.MANIFEST_PATH = old
+    (fmf.SNAP_DIR, fmf.LEDGER_DIR, fmf.PRICE_DIR, fmf.MANIFEST_PATH,
+     fmf.LINEUP_DIR) = old
 
 
 def test_snapshot_is_write_once_and_restate_logs_previous_hash() -> None:
@@ -667,8 +671,13 @@ def test_prune_does_not_use_full_window_stats() -> None:
              "book_n_trades": 40, "audit_ok": True, "universe": "union"},
         ],
     }
-    with mock.patch.object(fm, "_baked_recipe_names", return_value={"union_h1"}):
-        out = fm.prune_payload_workable(payload)
+    with tempfile.TemporaryDirectory() as d:
+        old = _use(Path(d))
+        try:
+            with mock.patch.object(fm, "_baked_recipe_names", return_value={"union_h1"}):
+                out = fm.prune_payload_workable(payload)
+        finally:
+            _restore(old)
     names = {r["name"] for r in out["recipes"]}
     assert "union_h1" in names
     assert "lucky_h1" not in names
@@ -699,6 +708,180 @@ def test_partial_ledger_is_not_frozen() -> None:
             _restore(old)
 
 
+def _mini_panel():
+    date = "2026-08-17"
+    row = {
+        "date": date, "ticker": "AAA", "sources": ["union"],
+        "boxes": {"vol": "good"}, "blue": False, "alarm": False,
+        "zero_red": True, "last_green": True, "last_red": False,
+        "ohlc_ret_5": 3.0, "ohlc_ret_1": 1.0, "ohlc_rvol": 1.0,
+        "ohlc_hot_score": 1.0, "src_rank": 0, "cond_good": 1, "cond_bad": 0,
+        "e_pol": "none", "rsi": 50, "open": 10.0, "close": 11.0,
+    }
+    rows = [row]
+    return {
+        "from_date": date,
+        "to_date": date,
+        "session_dates": [date],
+        "rows": rows,
+        "by_date": {date: rows},
+        "n_rows": 1,
+        "n_sessions": 1,
+        "_ohlc_filled": True,
+        "_tape_filled": True,
+        "_clock_b": True,
+        "_oppset": True,
+    }
+
+
+def _emit_once(root: Path) -> dict[str, bytes]:
+    from src import factor_mine_book as fmb
+    from src import paper_trade as pt
+
+    panel = _mini_panel()
+    date = panel["to_date"]
+    rec = fm.make_recipe("union_h1", hold=1, top_n=1)
+    bars = {("AAA", date): {"open": 10.0, "close": 11.0}}
+    old = _use(root)
+    try:
+        with mock.patch.object(fmf, "code_sha", return_value="determinism-test"), \
+                mock.patch.object(fmf, "heat_record", return_value={
+                    "vintage": date, "phase": "morning_overlay",
+                    "board_date": date, "source": None, "sha256": "abc",
+                }), \
+                mock.patch.object(fm, "flatten_plan", return_value={
+                    "route": "", "flatten_ok": False,
+                }), \
+                mock.patch.object(fmb, "load_regime", return_value={}):
+            snap = fmf.make_snapshot(date, panel["rows"], None, "prices-sha")
+            fmf.write_snapshot(date, snap, restate=False)
+            ledger = fmf.build_ledger(
+                panel, {"recipes": [rec]}, [rec], date, bars,
+                fees=pt.load_fees(), regime={},
+            )
+            fmf.write_ledger(date, ledger, restate=False)
+            payload = fmf.splice_payload({"recipes": [rec], "stats": []}, date, ledger)
+            payload["to_date"] = date
+            payload["from_date"] = date
+            payload["dates"] = [date]
+            payload = fmf.label_payload(payload)
+            dest = root / "factor_mine.json"
+            fm.write_scoreboard(payload, dest)
+        files = {
+            "snapshot": fmf.snapshot_path(date).read_bytes(),
+            "ledger": fmf.ledger_path(date).read_bytes(),
+            "scoreboard": dest.read_bytes(),
+        }
+        shard_dir = dest.parent / "factor_mine" / "shards"
+        for path in sorted(shard_dir.glob("*.json.gz")):
+            files[path.name] = path.read_bytes()
+        return files
+    finally:
+        _restore(old)
+
+
+def test_replay_twice_is_byte_identical() -> None:
+    """Same commit and the same frozen inputs land the same bytes."""
+    with tempfile.TemporaryDirectory() as a, tempfile.TemporaryDirectory() as b:
+        first = _emit_once(Path(a))
+        second = _emit_once(Path(b))
+    assert first.keys() == second.keys()
+    for key in first:
+        assert first[key] == second[key], key
+    snap = json.loads(first["snapshot"])
+    assert snap["code_sha"] == "determinism-test"
+    ledger = json.loads(gzip.decompress(first["ledger"]))
+    assert ledger["code_sha"] == "determinism-test"
+
+
+def test_corrupt_frozen_input_fails_the_hash_guard() -> None:
+    with tempfile.TemporaryDirectory() as d:
+        old = _use(Path(d))
+        try:
+            fmf.write_snapshot("2026-09-25", {
+                "date": "2026-09-25",
+                "rows": [{"ticker": "AAA", "open": 10.0}],
+            }, restate=False)
+            man = fmf.load_manifest()
+            path = fmf.snapshot_path("2026-09-25")
+            raw = bytearray(path.read_bytes())
+            raw[-1] ^= 0xFF
+            path.write_bytes(bytes(raw))
+            try:
+                fmf.guard_manifest(man, man, restate=[])
+                caught = False
+            except SystemExit as e:
+                caught = True
+                assert "sha does not match" in str(e)
+            assert caught
+        finally:
+            _restore(old)
+
+
+def test_lineup_is_append_only_and_prune_keeps_it() -> None:
+    early = fm.make_recipe("union_h1")
+    later = fm.make_recipe("union_hot_n4_holdup")
+    with tempfile.TemporaryDirectory() as d:
+        old = _use(Path(d))
+        try:
+            with mock.patch.object(fmf, "code_sha", return_value="lineup-test"):
+                first = fmf.record_lineup("2026-08-13", [early, later])
+                second = fmf.record_lineup(
+                    "2026-08-13", [early, later, fm.make_recipe("overnight_mega_h1")],
+                )
+            assert [r["name"] for r in first["recipes"]] == ["union_h1"]
+            assert second == first
+            assert first["recipes"][0]["created_on"] == "2026-08-13"
+            payload = {
+                "to_date": "2026-08-13",
+                "dates": ["2026-08-13"],
+                "freeze": {"first_frozen": "2026-08-13"},
+                "recipes": [early, later],
+                "stats": [
+                    {"name": "union_h1", "win_rate": 0.1, "total_ret_pct": -1,
+                     "start_rate": 0, "profitable_day_rate": 0,
+                     "book_n_trades": 1, "audit_ok": True},
+                    {"name": "union_hot_n4_holdup", "win_rate": 0.99,
+                     "total_ret_pct": 50, "start_rate": 1,
+                     "profitable_day_rate": 1, "book_n_trades": 40,
+                     "audit_ok": True},
+                ],
+            }
+            out = fm.prune_payload_workable(payload)
+            assert [r["name"] for r in out["recipes"]] == ["union_h1"]
+            assert "not re-chosen" in out["workable"]["note"]
+        finally:
+            _restore(old)
+
+
+def test_recipe_creation_date_cannot_move() -> None:
+    with tempfile.TemporaryDirectory() as d:
+        path = Path(d) / "recipe_created_on.json"
+        rec = fm.make_recipe("union_h1")
+        fmf.record_recipe_dates([rec], path)
+        moved = dict(rec)
+        moved["created_on"] = "2026-09-21"
+        try:
+            fmf.record_recipe_dates([moved], path)
+            refused = False
+        except fmf.FrozenHistory:
+            refused = True
+        assert refused
+        try:
+            fmf.guard_recipe_catalog(
+                {"union_h1": "2026-08-13"},
+                {"union_h1": "2026-09-21", "overnight_h1": "2026-08-13"},
+            )
+            caught = False
+        except SystemExit:
+            caught = True
+        assert caught
+        fmf.guard_recipe_catalog(
+            {"union_h1": "2026-08-13"},
+            {"union_h1": "2026-08-13", "overnight_h1": "2026-08-13"},
+        )
+
+
 if __name__ == "__main__":
     test_snapshot_is_write_once_and_restate_logs_previous_hash()
     test_guard_fails_when_an_earlier_hash_changes()
@@ -716,4 +899,8 @@ if __name__ == "__main__":
     test_holdup_created_on_is_the_first_session_after_the_commit()
     test_prune_does_not_use_full_window_stats()
     test_partial_ledger_is_not_frozen()
+    test_replay_twice_is_byte_identical()
+    test_corrupt_frozen_input_fails_the_hash_guard()
+    test_lineup_is_append_only_and_prune_keeps_it()
+    test_recipe_creation_date_cannot_move()
     print("factor-mine freeze tests passed")
