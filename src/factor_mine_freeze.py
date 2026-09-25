@@ -70,9 +70,11 @@ PRICE_CHECK = {
 }
 # A candidate missing the hot-score lookback (ohlc.INDICATOR_LOOKBACK
 # prior closes, or the session print) is dropped and is not scored.
-# The day still locks. Zero rankable names skip the day. This constant
-# is not a hold.
+# The day still locks. A name with no Yahoo session bar is dropped the
+# same way and listed as ``dropped_missing_bars``. The lock is refused
+# only when the universe is empty or Yahoo has no bar for every name.
 UNRANKABLE_MAX_SHARE = 0.10
+MISSING_YAHOO_BARS = "missing yahoo bars"
 SNAPSHOT_OPEN_FROM = "2026-09-25"
 # scrape_ts exists on the slim snapshot and in manifest.json from this day.
 SCRAPE_TS_FROM = "2026-09-24"
@@ -381,13 +383,48 @@ def completeness_gaps(ticker: str, date: str) -> list[str]:
     return gaps
 
 
+def yahoo_session_missing(ticker: str, date: str) -> bool:
+    """True when Yahoo has no open or close for this name on ``date``."""
+    d = str(date or "")[:10]
+    t = str(ticker or "").strip().upper()
+    if not t or len(d) != 10:
+        return True
+    for bar in _raw_bars(t):
+        if str(bar.get("date") or "")[:10] != d:
+            continue
+        if bar.get("open") is not None or bar.get("close") is not None:
+            return False
+    official = tl._official_ohlc(t, d)
+    if official.get("open") is not None or official.get("close") is not None:
+        return False
+    return True
+
+
+def _dropped_missing_tickers(gaps: list | None) -> list[str]:
+    """Tickers whose Yahoo session bar was missing, in ticker order."""
+    out = []
+    seen: set[str] = set()
+    for gap in gaps or []:
+        if not isinstance(gap, dict):
+            continue
+        if MISSING_YAHOO_BARS not in (gap.get("missing") or []):
+            continue
+        tick = str(gap.get("ticker") or "").strip().upper()
+        if not tick or tick in seen:
+            continue
+        seen.add(tick)
+        out.append(tick)
+    out.sort()
+    return out
+
+
 def ensure_candidate_bars(date: str, tickers: list[str]) -> list[dict]:
     """Fetch Yahoo bars for every candidate.
 
-    A name with no print or too few earlier bars is dropped and
-    returned. Missing data does not hold the day. An empty universe
-    skips the day. A wholesale fetch failure and dividend-adjusted
-    bars still refuse to lock.
+    A name with no session bar, or too few earlier bars, is dropped and
+    returned. The day still locks. An empty universe, or a session where
+    every name lacks a Yahoo bar, is a hard failure. A wholesale fetch
+    failure and dividend-adjusted bars still refuse to lock.
     """
     from . import price_store as ps
 
@@ -399,17 +436,45 @@ def ensure_candidate_bars(date: str, tickers: list[str]) -> list[dict]:
             gaps=[{"ticker": t, "missing": ["adjusted bars"]} for t in names],
         )
     if not names:
-        raise SkipDay(date, "no rankable names — skipping day")
+        raise HoldDay(
+            date, [], "entire universe or panel is missing",
+            status="held_incomplete",
+        )
     try:
-        ps.ensure_through(date, tickers=names, strict=True)
+        # Partial misses are dropped below. strict=True used to hold the
+        # whole session when Yahoo had no bar for one name in the batch.
+        ps.ensure_through(date, tickers=names, strict=False)
     except (Exception, SystemExit) as e:
         raise HoldDay(
             date, names, f"price fetch failed: {e}",
             status="held_incomplete",
         ) from e
     reset_price_memory()
+    absent = [t for t in names if yahoo_session_missing(t, date)]
+    if len(absent) == len(names):
+        raise HoldDay(
+            date, absent, "entire universe missing yahoo bars",
+            status="held_incomplete",
+            gaps=[{
+                "ticker": t,
+                "missing": [MISSING_YAHOO_BARS],
+                "reason": MISSING_YAHOO_BARS,
+            } for t in absent],
+        )
+    absent_set = set(absent)
     gaps = []
     for t in names:
+        if t in absent_set:
+            missing = [MISSING_YAHOO_BARS]
+            for item in completeness_gaps(t, date):
+                if item not in missing:
+                    missing.append(item)
+            gaps.append({
+                "ticker": t,
+                "missing": missing,
+                "reason": "; ".join(missing),
+            })
+            continue
         missing = completeness_gaps(t, date)
         if missing:
             gaps.append({
@@ -1503,11 +1568,43 @@ def _review_hold(date: str, gaps: list[dict]) -> None:
     )
 
 
+def _warn_cross_check(date: str, gaps: list[dict]) -> list[dict]:
+    """Log Finviz/Stooq disagreement. Paper-fill gaps still hold the day."""
+    warns = []
+    holds = []
+    for gap in gaps or []:
+        if not isinstance(gap, dict):
+            continue
+        if gap.get("field") == "fill":
+            holds.append(gap)
+        else:
+            warns.append(gap)
+    if warns:
+        bits = []
+        for gap in warns[:12]:
+            if gap.get("missing"):
+                bits.append(
+                    f"{gap.get('ticker')}: {', '.join(gap['missing'])}")
+            else:
+                bits.append(
+                    f"{gap.get('ticker')} {gap.get('field')} "
+                    f"ours={gap.get('ours')} ref={gap.get('ref')} "
+                    f"({gap.get('source')})"
+                )
+        print(
+            f"[factor-mine] price warning {date}: finviz/stooq disagreement "
+            f"n={len(warns)}; " + "; ".join(bits),
+            flush=True,
+        )
+    return holds
+
+
 def prepare_lock(date: str) -> dict:
     """Candidate log plus the open/close cross-check.
 
-    The open-source row is the only file this writes. A mismatch still
-    holds the day before any snapshot, pin, or candidate file.
+    The open-source row is the only file this writes. Finviz/Stooq
+    disagreement is a warning. A Webull paper fill outside the open
+    tolerance still holds the day before any snapshot is written.
     """
     doc = candidate_provenance(date)
     names = [row["ticker"] for row in doc.get("names") or []]
@@ -1516,8 +1613,9 @@ def prepare_lock(date: str) -> dict:
     decision = LAST_OPEN_SOURCE.get(str(date)[:10])
     if decision:
         write_open_source_row(date, decision)
-    if gaps:
-        _review_hold(date, gaps)
+    holds = _warn_cross_check(date, gaps)
+    if holds:
+        _review_hold(date, holds)
     return doc
 
 
@@ -1661,6 +1759,9 @@ def _write_frozen(path: Path, obj: dict, slot: str, date: str, *,
     if slot == "snapshots":
         man[slot][date]["n_rows"] = len(obj.get("rows") or [])
         man[slot][date]["heat_vintage"] = (obj.get("heat") or {}).get("vintage")
+        if "dropped_missing_bars" in obj:
+            man[slot][date]["dropped_missing_bars"] = list(
+                obj.get("dropped_missing_bars") or [])
     save_manifest(man)
     print(f"[factor-mine] froze {slot} {date} sha={digest[:12]}", flush=True)
     return digest
@@ -1698,17 +1799,24 @@ def read_json(path: Path) -> dict | None:
         return None
 
 
-def apply_frozen_snapshots(panel: dict) -> dict:
-    """Replace landed dates with their frozen rows. Other dates stay."""
+def apply_frozen_snapshots(panel: dict, *, through: str | None = None) -> dict:
+    """Replace landed dates with their frozen rows. Other dates stay.
+
+    A file dated after ``through`` is not opened. A planted future
+    snapshot cannot change the day being locked.
+    """
     from . import factor_mine as fm
 
     panel = fm.rehydrate_panel(panel)
     if not SNAP_DIR.is_dir():
         return panel
+    cutoff = str(through)[:10] if through else ""
     by_date = dict(panel.get("by_date") or {})
     replaced = False
     for path in sorted(SNAP_DIR.glob("*.json")):
         date = path.stem
+        if cutoff and date > cutoff:
+            continue
         snap = read_json(path) or {}
         rows = list(snap.get("rows") or [])
         if not rows:
@@ -1801,6 +1909,7 @@ def make_snapshot(date: str, rows: list[dict], prior: str | None,
         "n_rows": len(frozen_rows),
         "n_dropped": len(logged),
         "dropped": logged,
+        "dropped_missing_bars": _dropped_missing_tickers(logged),
         "rows": frozen_rows,
     }
     if candidates is not None:
@@ -2538,7 +2647,8 @@ def append_land(from_date: str, target: str, *, write: bool = False,
                 panel = {}
         else:
             panel = {}
-    panel = apply_frozen_snapshots(fm.rehydrate_panel(panel or {}))
+    panel = apply_frozen_snapshots(
+        fm.rehydrate_panel(panel or {}), through=target)
     have = set(landed_dates(panel))
     # Closed sessions strictly after the published board, plus restatements.
     # A date already listed as a pending start is not frozen until its
@@ -2579,6 +2689,11 @@ def append_land(from_date: str, target: str, *, write: bool = False,
             continue
         except HoldDay as e:
             print(f"[factor-mine] {e}", flush=True)
+            if (
+                "entire universe" in (e.reason or "")
+                or "entire panel" in (e.reason or "")
+            ):
+                raise
             break
         try:
             candidates = prepare_lock(date)
@@ -2610,7 +2725,7 @@ def append_land(from_date: str, target: str, *, write: bool = False,
             write_snapshot(date, snap, restate=date in restate_set)
         except FrozenHistory as e:
             print(f"[factor-mine] {e}", flush=True)
-        panel = apply_frozen_snapshots(panel)
+        panel = apply_frozen_snapshots(panel, through=date)
         bars = bars_for_decisions(panel, date, pinned)
         recs = list(recipes or payload.get("recipes") or [])
         existing = read_ledger(date)

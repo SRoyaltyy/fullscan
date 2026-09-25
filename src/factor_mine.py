@@ -2142,7 +2142,8 @@ def build_panel(from_date: str = START, to_date: str | None = None,
         frozen: list[dict] | None = None
         if fail_closed:
             # Bars for every candidate before membership or hot_score.
-            # A gapped name is dropped. The day still locks. A rerun
+            # A gapped name is dropped, including names with no Yahoo bar
+            # (``dropped_missing_bars``). The day still locks. A rerun
             # keeps the frozen dropped list even if Yahoo later fills it.
             from . import factor_mine_freeze as fmf
             universe = fmf.ranking_universe(
@@ -2413,12 +2414,12 @@ def load_or_build_panel(from_date: str = START, to_date: str | None = None,
         raw = json.loads(PANEL_PATH.read_text(encoding="utf-8"))
     except (OSError, json.JSONDecodeError):
         return build_panel(from_date, to_date, fail_closed=fail_closed)
-    raw = fmf.apply_frozen_snapshots(rehydrate_panel(raw))
+    end = live_panel_end(from_date, to_date)
+    raw = fmf.apply_frozen_snapshots(rehydrate_panel(raw), through=end)
     if restate_set:
         for date in sorted(restate_set):
             extra = build_panel(date, date, fail_closed=fail_closed)
             raw = merge_panel_days(raw, extra)
-    end = live_panel_end(from_date, to_date)
     want = [d for d in panel_lookback_calendar(from_date, to_date)
             if d >= from_date and (not end or d <= end)]
     have = set(raw.get("session_dates") or [])
