@@ -52,11 +52,13 @@ GUARD_SLOTS = ("snapshots", "ledgers", "lineups", "candidates")
 # One table so the external daily checker uses these exact numbers.
 # Close (Finviz post-close Price, else theme-radar Price): max(0.5%, $0.02).
 # Open and Webull paper fills: max(1%, $0.02).
-# Open source: theme-radar ``{D}.raw.csv`` Finviz Open when that fetch's
-# scrape_ts is after D 09:30 ET and before the next session's 09:30 ET
-# and the HASHES.json sha256 matches. From SNAPSHOT_OPEN_FROM the slim
-# ``{D}.csv`` Open column is next, under the same guard. A missing or
-# late scrape uses Stooq for that day. ``current.csv`` is never a source.
+# Open source: theme-radar ``{D}.raw.csv`` Finviz Open when the latest
+# git commit of that file is before the next session's 09:30 ET. The
+# lower bound is the after-close workflow, not a second clock check.
+# From 2026-09-24 a present scrape_ts must also be before that next
+# open. From SNAPSHOT_OPEN_FROM the slim ``{D}.csv`` Open column is
+# next. A missing export, a late commit, or a late scrape uses Stooq.
+# ``current.csv`` is never a source.
 PRICE_CHECK = {
     "close": {"pct": 0.005, "abs": 0.02},
     "open": {"pct": 0.01, "abs": 0.02},
@@ -76,10 +78,18 @@ THEME_RADAR_HASHES_URL = (
     "https://raw.githubusercontent.com/SRoyaltyy/theme-radar/"
     "main/data/snapshots/HASHES.json"
 )
+THEME_RADAR_COMMITS_URL = (
+    "https://api.github.com/repos/SRoyaltyy/theme-radar/commits"
+)
+OPEN_LOG_FIELDS = (
+    "date", "source", "commit_sha", "commit_time", "scrape_ts", "note",
+)
 STOOQ_DAILY_URL = "https://stooq.com/q/d/l/?s={ticker}.us&i=d"
 PAPER_OPEN_DIR = ROOT / "data" / "paper_open"
 # Tests point this at a temp dir. None uses the vendor / slim / remote lookup.
 THEME_RADAR_SNAP_DIR: Path | None = None
+_COMMIT_CACHE: dict[str, dict | None] = {}
+_HASHES_DOC: dict | None = None
 # Morning files only. Flatten books and mover buys are prior-night
 # outputs and are not a reason a name is on this list.
 MORNING_SOURCES = (
@@ -501,16 +511,30 @@ def _theme_radar_bytes(date: str) -> bytes | None:
     return _fetch_url(THEME_RADAR_SNAPSHOT_URL.format(date=str(date)[:10]))
 
 
-def _theme_radar_expected_hash(date: str) -> str | None:
-    """sha256 from HASHES.json for the slim dated csv. Empty if unknown."""
+def _hashes_doc() -> dict | None:
+    """HASHES.json, fetched once per process. A snap dir skips the network."""
+    global _HASHES_DOC
     if THEME_RADAR_SNAP_DIR is not None:
         return None
+    if _HASHES_DOC is not None:
+        return _HASHES_DOC
     raw = _fetch_url(THEME_RADAR_HASHES_URL)
     if not raw:
         return None
     try:
         doc = json.loads(raw.decode("utf-8"))
     except (UnicodeDecodeError, json.JSONDecodeError):
+        return None
+    if not isinstance(doc, dict):
+        return None
+    _HASHES_DOC = doc
+    return doc
+
+
+def _theme_radar_expected_hash(date: str) -> str | None:
+    """sha256 from HASHES.json for the slim dated csv. Empty if unknown."""
+    doc = _hashes_doc()
+    if not doc:
         return None
     files = doc.get("files") if isinstance(doc, dict) else None
     if not isinstance(files, dict):
@@ -613,14 +637,8 @@ def _theme_radar_raw_bytes(date: str) -> bytes | None:
 
 def _theme_radar_raw_expected_hash(date: str) -> str | None:
     """sha256 of ``data/snapshots/{D}.raw.csv``. Empty when unknown."""
-    if THEME_RADAR_SNAP_DIR is not None:
-        return None
-    raw = _fetch_url(THEME_RADAR_HASHES_URL)
-    if not raw:
-        return None
-    try:
-        doc = json.loads(raw.decode("utf-8"))
-    except (UnicodeDecodeError, json.JSONDecodeError):
+    doc = _hashes_doc()
+    if not doc:
         return None
     files = doc.get("files") if isinstance(doc, dict) else None
     if not isinstance(files, dict):
@@ -669,36 +687,68 @@ def _next_session_date(date: str) -> str:
     return _next_weekday(str(date)[:10])
 
 
-def scrape_covers_session(stamp: str | None, session: str) -> bool:
-    """True when ``stamp`` is after D 09:30 ET and before the next session's 09:30.
+def before_next_open(stamp: str | None, session: str) -> bool:
+    """True when ``stamp`` is strictly before the next session's 09:30 ET.
 
-    A missing stamp does not cover the session. Equality on either open
-    is outside the window, so a scrape at exactly 09:30 is not accepted.
+    The snapshot workflow starts after the close, so there is no lower
+    bound against D 09:30. A missing or unreadable stamp does not pass.
+    Equality with the next open is outside the window.
     """
     when = _parse_et(stamp or "")
     if when is None:
         return False
     day = str(session or "")[:10]
-    opened = datetime.fromisoformat(f"{day}T09:30:00").replace(tzinfo=tl.ET)
-    if when <= opened:
-        return False
     nxt = datetime.fromisoformat(
         f"{_next_session_date(day)}T09:30:00"
     ).replace(tzinfo=tl.ET)
     return when < nxt
 
 
-def _scrape_reject_note(stamp: str | None, session: str) -> str:
-    if not stamp:
-        return "missing scrape_ts"
-    when = _parse_et(stamp)
-    if when is None:
-        return "unreadable scrape_ts"
-    day = str(session or "")[:10]
-    opened = datetime.fromisoformat(f"{day}T09:30:00").replace(tzinfo=tl.ET)
-    if when <= opened:
-        return "scrape_ts at or before D 09:30 ET"
-    return "scrape_ts at or after the next session 09:30 ET"
+def theme_radar_latest_commit(path: str) -> dict | None:
+    """Latest commit of a theme-radar path, or None when it was never committed.
+
+    ``path`` is ``data/snapshots/{D}.raw.csv`` (or the slim ``{D}.csv``).
+    The time is the committer timestamp from
+    ``GET /repos/SRoyaltyy/theme-radar/commits?path=``. ``per_page=1`` is
+    the newest commit. A lookup failure returns ``{"error": ...}`` so the
+    day does not treat a blip as a missing export. ``current.csv`` is
+    refused. A test snap dir does not call the network.
+    """
+    name = Path(str(path or "")).name
+    if not name or "current" in name:
+        return None
+    key = str(path)
+    if THEME_RADAR_SNAP_DIR is None and key in _COMMIT_CACHE:
+        return _COMMIT_CACHE[key]
+    if THEME_RADAR_SNAP_DIR is not None:
+        return None
+    from urllib.parse import urlencode
+
+    url = THEME_RADAR_COMMITS_URL + "?" + urlencode({"path": key, "per_page": "1"})
+    raw = _fetch_github(url)
+    if raw is None:
+        return {"error": "commit lookup failed"}
+    try:
+        doc = json.loads(raw.decode("utf-8"))
+    except (UnicodeDecodeError, json.JSONDecodeError):
+        return {"error": "commit lookup failed"}
+    if isinstance(doc, dict):
+        return {"error": str(doc.get("message") or "commit lookup failed")}
+    if not isinstance(doc, list):
+        return {"error": "commit lookup failed"}
+    if not doc:
+        _COMMIT_CACHE[key] = None
+        return None
+    item = doc[0] if isinstance(doc[0], dict) else {}
+    commit = item.get("commit") if isinstance(item.get("commit"), dict) else {}
+    committer = commit.get("committer") if isinstance(commit.get("committer"), dict) else {}
+    sha = str(item.get("sha") or "")
+    committed = str(committer.get("date") or "")
+    if not sha or not committed:
+        return {"error": "commit lookup failed"}
+    found = {"sha": sha, "committed_at": committed}
+    _COMMIT_CACHE[key] = found
+    return found
 
 
 def _slim_text(date: str) -> str:
@@ -744,50 +794,132 @@ def theme_radar_raw_opens(date: str) -> dict[str, float]:
     return parse_finviz_opens(raw.decode("utf-8", errors="replace"))
 
 
+def _open_decision(
+    source: str,
+    *,
+    commit_sha: str = "",
+    commit_time: str = "",
+    scrape_ts: str | None = None,
+    opens: dict | None = None,
+    note: str = "",
+) -> dict:
+    return {
+        "source": source,
+        "commit_sha": commit_sha,
+        "commit_time": commit_time,
+        "scrape_ts": scrape_ts,
+        "opens": opens or {},
+        "note": note,
+    }
+
+
+def _session_scrape_ts(day: str, slim: str) -> str | None:
+    """scrape_ts from the slim snapshot, else the raw header. Absent before 09-24."""
+    stamp = first_scrape_ts(slim) if slim else None
+    if stamp:
+        return stamp
+    return first_scrape_ts(_raw_header_text(day))
+
+
+def _slim_open_or_stooq(
+    day: str, slim: str, stamp: str | None, note: str,
+    *, commit_sha: str = "", commit_time: str = "",
+) -> dict:
+    """Slim Open from 2026-09-25, otherwise the Stooq note already chosen."""
+    if day < SNAPSHOT_OPEN_FROM or not slim:
+        return _open_decision(
+            "stooq", commit_sha=commit_sha, commit_time=commit_time,
+            scrape_ts=stamp, note=note,
+        )
+    if stamp and not before_next_open(stamp, day):
+        return _open_decision(
+            "stooq", commit_sha=commit_sha, commit_time=commit_time,
+            scrape_ts=stamp,
+            note="scrape_ts at or after the next session 09:30 ET",
+        )
+    slim_commit = theme_radar_latest_commit(f"data/snapshots/{day}.csv") or {}
+    if slim_commit.get("error"):
+        return _open_decision(
+            "stooq", scrape_ts=stamp, note="commit lookup failed",
+        )
+    slim_sha = str(slim_commit.get("sha") or "")
+    slim_time = str(slim_commit.get("committed_at") or "")
+    if not slim_sha or not before_next_open(slim_time, day):
+        return _open_decision(
+            "stooq",
+            commit_sha=slim_sha or commit_sha,
+            commit_time=slim_time or commit_time,
+            scrape_ts=stamp,
+            note=note if not slim_sha else (
+                "snapshot commit at or after the next session 09:30 ET"
+            ),
+        )
+    slim_opens = parse_finviz_opens(slim)
+    if not slim_opens:
+        return _open_decision(
+            "stooq", commit_sha=slim_sha, commit_time=slim_time,
+            scrape_ts=stamp, note="no Open on the accepted snapshot",
+        )
+    extra = ""
+    if stamp:
+        extra = "; scrape_ts before the next session 09:30 ET"
+    return _open_decision(
+        "finviz_snapshot", commit_sha=slim_sha, commit_time=slim_time,
+        scrape_ts=stamp, opens=slim_opens,
+        note="latest snapshot commit before the next session 09:30 ET" + extra,
+    )
+
+
 def day_open_tape(date: str) -> dict:
     """Which open file is allowed for D.
 
-    The raw Finviz export is primary when its scrape_ts (stamped on the
-    paired slim snapshot, or on the raw file when that column exists)
-    sits after D 09:30 ET and before the next session's 09:30. From
-    2026-09-25 the slim snapshot's Open column is the next file under
-    the same guard. Otherwise the day is Stooq.
+    ``{D}.raw.csv`` Finviz Open is primary when the latest git commit of
+    that path is before the next session's 09:30 ET. A scrape_ts, present
+    from 2026-09-24, must clear the same upper bound. From 2026-09-25 the
+    slim snapshot Open is next. 2026-08-27 has no raw export, so that day
+    is Stooq, as is any late commit or late scrape.
     """
     day = str(date or "")[:10]
+    raw_commit = theme_radar_latest_commit(f"data/snapshots/{day}.raw.csv") or {}
+    if raw_commit.get("error"):
+        return _open_decision("stooq", note="commit lookup failed")
+    sha = str(raw_commit.get("sha") or "")
+    committed = str(raw_commit.get("committed_at") or "")
     slim = _slim_text(day)
-    stamp = first_scrape_ts(slim) if slim else None
-    if not stamp:
-        stamp = first_scrape_ts(_raw_header_text(day))
-    if not scrape_covers_session(stamp, day):
-        return {
-            "source": "stooq",
-            "scrape_ts": stamp,
-            "opens": {},
-            "note": _scrape_reject_note(stamp, day),
-        }
-    opens = theme_radar_raw_opens(day)
+    stamp = _session_scrape_ts(day, slim)
+    if not sha:
+        return _slim_open_or_stooq(day, slim, stamp, "no raw export")
+    if not before_next_open(committed, day):
+        return _open_decision(
+            "stooq", commit_sha=sha, commit_time=committed, scrape_ts=stamp,
+            note="raw.csv commit at or after the next session 09:30 ET",
+        )
+    if stamp and not before_next_open(stamp, day):
+        return _open_decision(
+            "stooq", commit_sha=sha, commit_time=committed, scrape_ts=stamp,
+            note="scrape_ts at or after the next session 09:30 ET",
+        )
+    raw = _theme_radar_raw_bytes(day)
+    expect = _theme_radar_raw_expected_hash(day)
+    if raw and expect and sha256_bytes(raw) != expect:
+        return _open_decision(
+            "stooq", commit_sha=sha, commit_time=committed, scrape_ts=stamp,
+            note="raw.csv hash does not match HASHES.json",
+        )
+    opens = parse_finviz_opens(raw.decode("utf-8", errors="replace")) if raw else {}
     if opens:
-        return {
-            "source": f"theme-radar snapshots/{day}.raw.csv Open",
-            "scrape_ts": stamp,
-            "opens": opens,
-            "note": "scrape_ts inside the session window",
-        }
-    if day >= SNAPSHOT_OPEN_FROM and slim:
-        slim_opens = parse_finviz_opens(slim)
-        if slim_opens:
-            return {
-                "source": f"theme-radar snapshots/{day}.csv Open",
-                "scrape_ts": stamp,
-                "opens": slim_opens,
-                "note": "scrape_ts inside the session window",
-            }
-    return {
-        "source": "stooq",
-        "scrape_ts": stamp,
-        "opens": {},
-        "note": "no Open on the accepted snapshot",
-    }
+        extra = ""
+        if stamp:
+            extra = "; scrape_ts before the next session 09:30 ET"
+        return _open_decision(
+            "finviz_raw", commit_sha=sha, commit_time=committed,
+            scrape_ts=stamp, opens=opens,
+            note="latest raw.csv commit before the next session 09:30 ET" + extra,
+        )
+    return _slim_open_or_stooq(
+        day, slim, stamp, "no Open on the accepted raw export",
+        commit_sha=sha, commit_time=committed,
+    )
 
 
 def log_open_sources(dates: list[str], *, path: Path | None = None) -> list[dict]:
@@ -799,6 +931,8 @@ def log_open_sources(dates: list[str], *, path: Path | None = None) -> list[dict
         row = {
             "date": str(date)[:10],
             "source": tape.get("source"),
+            "commit_sha": tape.get("commit_sha") or "",
+            "commit_time": tape.get("commit_time") or "",
             "scrape_ts": tape.get("scrape_ts") or "",
             "note": tape.get("note") or "",
         }
@@ -826,14 +960,14 @@ def write_open_source_row(date: str, row: dict, *, path: Path | None = None) -> 
     kept.append({
         "date": day,
         "source": str(row.get("source") or ""),
+        "commit_sha": str(row.get("commit_sha") or ""),
+        "commit_time": str(row.get("commit_time") or ""),
         "scrape_ts": str(row.get("scrape_ts") or ""),
         "note": str(row.get("note") or ""),
     })
     kept.sort(key=lambda item: item.get("date") or "")
     with dest.open("w", newline="", encoding="utf-8") as handle:
-        writer = csv.DictWriter(
-            handle, fieldnames=["date", "source", "scrape_ts", "note"],
-        )
+        writer = csv.DictWriter(handle, fieldnames=list(OPEN_LOG_FIELDS))
         writer.writeheader()
         writer.writerows(kept)
 
@@ -871,6 +1005,25 @@ def _fetch_url(url: str) -> bytes | None:
 
     try:
         req = urllib.request.Request(url, headers={"User-Agent": "fullscan-factor-mine"})
+        with urllib.request.urlopen(req, timeout=20) as resp:
+            return resp.read()
+    except Exception:
+        return None
+
+
+def _fetch_github(url: str) -> bytes | None:
+    """GitHub JSON. Sends a token when the environment has one."""
+    import urllib.request
+
+    headers = {
+        "User-Agent": "fullscan-factor-mine",
+        "Accept": "application/vnd.github+json",
+    }
+    token = os.environ.get("GITHUB_TOKEN") or os.environ.get("GH_TOKEN") or ""
+    if token:
+        headers["Authorization"] = f"Bearer {token}"
+    try:
+        req = urllib.request.Request(url, headers=headers)
         with urllib.request.urlopen(req, timeout=20) as resp:
             return resp.read()
     except Exception:
@@ -965,9 +1118,10 @@ def session_cross_check(date: str, tickers: list[str]) -> list[dict]:
 
     Close order: post-close ``finviz_{D}.csv`` Price, else the dated
     theme-radar snapshot Price (never ``current.csv``). Open order:
-    ``{D}.raw.csv`` Finviz Open when scrape_ts is inside the session
-    window, else from 2026-09-25 the slim snapshot Open, else Stooq.
-    A filled Webull paper order is a third check against our 09:30 open.
+    ``finviz_raw`` when the latest ``{D}.raw.csv`` commit is before the
+    next session's 09:30 ET, else from 2026-09-25 ``finviz_snapshot``,
+    else Stooq. A filled Webull paper order is a third check against
+    our 09:30 open.
     """
     day = str(date or "")[:10]
     post = export_is_postclose(day)

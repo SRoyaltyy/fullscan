@@ -1044,13 +1044,15 @@ def test_open_close_cross_check_sources_and_tolerances() -> None:
             def tape(date):
                 calls.append("tape")
                 return {
-                    "source": f"theme-radar snapshots/{date}.raw.csv Open",
+                    "source": "finviz_raw",
+                    "commit_sha": "a" * 40,
+                    "commit_time": "2026-09-25T20:05:00+00:00",
                     "scrape_ts": "2026-09-25T20:05:00+00:00",
                     "opens": {
                         "AAA": 10.02, "BBB": 1.02, "CCC": 100.0,
                         "DDD": 100.0, "FFF": 10.15,
                     },
-                    "note": "scrape_ts inside the session window",
+                    "note": "latest raw.csv commit before the next session 09:30 ET",
                 }
 
             with mock.patch.object(tl, "_official_ohlc", side_effect=_prints(book)), \
@@ -1068,7 +1070,7 @@ def test_open_close_cross_check_sources_and_tolerances() -> None:
             assert close_gap[0]["source"] == f"finviz_{day}.csv Price"
             assert close_gap[0]["ref"] == 100.0
             assert len(open_gap) == 1 and open_gap[0]["field"] == "open"
-            assert open_gap[0]["source"] == f"theme-radar snapshots/{day}.raw.csv Open"
+            assert open_gap[0]["source"] == "finviz_raw"
             assert open_gap[0]["ref"] == 10.15
             assert {item for g in missing for item in g["missing"]} == {
                 "missing session close", "missing 09:30 open reference",
@@ -1082,7 +1084,7 @@ def test_open_close_cross_check_sources_and_tolerances() -> None:
                 "source": "stooq",
                 "scrape_ts": "2026-09-25T12:00:00+00:00",
                 "opens": {},
-                "note": "scrape_ts at or before D 09:30 ET",
+                "note": "raw.csv commit at or after the next session 09:30 ET",
             }
             with mock.patch.object(tl, "_official_ohlc", side_effect=_prints(book)), \
                     mock.patch.object(fmf, "theme_radar_prices", return_value={"AAA": 10.0}), \
@@ -1250,7 +1252,8 @@ def test_stooq_fills_open_when_the_export_has_no_open_column() -> None:
                 "open": 10.10, "high": 11.0, "low": 9.0, "close": 10.0,
             }), mock.patch.object(fmf, "day_open_tape", return_value={
                 "source": "stooq", "scrape_ts": None, "opens": {},
-                "note": "missing scrape_ts",
+                "commit_sha": "", "commit_time": "",
+                "note": "no raw export",
             }):
                 gaps = fmf.session_cross_check(day, ["AAA"])
             assert gaps == []
@@ -1315,10 +1318,12 @@ def test_webull_fill_outside_open_tolerance_holds() -> None:
         fmf.PAPER_OPEN_DIR = root
         fmf.OPEN_SOURCE_LOG = root / "open_source_log.csv"
         raw_tape = {
-            "source": f"theme-radar snapshots/{day}.raw.csv Open",
+            "source": "finviz_raw",
+            "commit_sha": "b" * 40,
+            "commit_time": "2026-09-25T20:10:00+00:00",
             "scrape_ts": "2026-09-25T20:10:00+00:00",
             "opens": {"AAA": 10.0},
-            "note": "scrape_ts inside the session window",
+            "note": "latest raw.csv commit before the next session 09:30 ET",
         }
         try:
             fills = fmf.paper_fills(day)
@@ -1326,12 +1331,7 @@ def test_webull_fill_outside_open_tolerance_holds() -> None:
             with mock.patch.object(tl, "_official_ohlc", side_effect=_prints({
                 "AAA": {"open": 10.0, "close": 10.5},
             })), mock.patch.object(fmf, "stooq_bar", side_effect=AssertionError), \
-                    mock.patch.object(fmf, "day_open_tape", return_value={
-                        "source": f"theme-radar snapshots/{day}.raw.csv Open",
-                        "scrape_ts": "2026-09-25T20:10:00+00:00",
-                        "opens": {"AAA": 10.0},
-                        "note": "scrape_ts inside the session window",
-                    }):
+                    mock.patch.object(fmf, "day_open_tape", return_value=raw_tape):
                 assert fmf.session_cross_check(day, ["AAA"]) == []
             (root / f"{day}_status.json").write_text(json.dumps({
                 "sent": [{
@@ -1366,23 +1366,45 @@ def test_webull_fill_outside_open_tolerance_holds() -> None:
             tl._FINVIZ_BARS.clear()
 
 
-def test_raw_open_needs_scrape_ts_inside_the_session() -> None:
-    """raw.csv Open is D's open only inside the scrape_ts window.
+def test_raw_open_uses_latest_commit_before_the_next_open() -> None:
+    """raw.csv Open follows the latest theme-radar commit, not a lower bound.
 
-    The window is after D 09:30 ET and before the next session's 09:30.
-    Labor Day 2026-09-07 makes the next session after 09-04 Tuesday 09-08.
-    A late or missing stamp uses Stooq. From 09-25 a slim Open column is
-    the next file. A bad raw hash is not used. current.csv is not read.
+    Accept the file when that commit is before the next session's 09:30 ET.
+    A scrape_ts, once the column exists, must clear the same upper bound.
+    A missing stamp does not reject the day. Labor Day 2026-09-07 makes
+    the next session after 09-04 Tuesday 09-08. 2026-08-27 has no raw
+    export, so it is Stooq. From 09-25 a slim Open is finviz_snapshot.
+    A bad raw hash is not used. current.csv is not read.
     """
-    assert fmf.scrape_covers_session("2026-09-24T13:30:00+00:00", "2026-09-24") is False
-    assert fmf.scrape_covers_session("2026-09-24T13:31:00+00:00", "2026-09-24") is True
-    assert fmf.scrape_covers_session("2026-09-25T13:29:00+00:00", "2026-09-24") is True
-    assert fmf.scrape_covers_session("2026-09-25T13:30:00+00:00", "2026-09-24") is False
-    assert fmf.scrape_covers_session("2026-09-08T13:29:00+00:00", "2026-09-04") is True
-    assert fmf.scrape_covers_session("2026-09-08T13:30:00+00:00", "2026-09-04") is False
-    assert fmf.scrape_covers_session(None, "2026-09-24") is False
+    assert fmf.before_next_open("2026-09-24T13:30:00+00:00", "2026-09-24") is True
+    assert fmf.before_next_open("2026-09-24T12:00:00+00:00", "2026-09-24") is True
+    assert fmf.before_next_open("2026-09-25T13:29:00+00:00", "2026-09-24") is True
+    assert fmf.before_next_open("2026-09-25T13:30:00+00:00", "2026-09-24") is False
+    assert fmf.before_next_open("2026-09-08T13:29:00+00:00", "2026-09-04") is True
+    assert fmf.before_next_open("2026-09-08T13:30:00+00:00", "2026-09-04") is False
+    assert fmf.before_next_open(None, "2026-09-24") is False
     early = "2026-09-24"
     late = "2026-09-25"
+    missing_day = "2026-08-27"
+    raw_sha = "a" * 40
+    slim_sha = "b" * 40
+    state = {
+        "raw": {"sha": raw_sha, "committed_at": "2026-09-25T14:00:00+00:00"},
+        "slim": {"sha": slim_sha, "committed_at": "2026-09-25T20:00:00+00:00"},
+    }
+
+    def commits(path):
+        name = str(path)
+        if name.endswith(f"{missing_day}.raw.csv") or "current" in name:
+            return None
+        if name.endswith(f"{early}.raw.csv"):
+            return state["raw"]
+        if name.endswith(f"{late}.raw.csv"):
+            return None
+        if name.endswith(f"{late}.csv"):
+            return state["slim"]
+        return None
+
     with tempfile.TemporaryDirectory() as d:
         root = Path(d)
         (root / "current.csv").write_text(
@@ -1390,7 +1412,7 @@ def test_raw_open_needs_scrape_ts_inside_the_session() -> None:
         (root / "current.raw.csv").write_text(
             "Ticker,Open\nAAA,1\n", encoding="utf-8")
         (root / f"{early}.csv").write_text(
-            "Ticker,Price,scrape_ts\nAAA,10.0,2026-09-25T14:00:00+00:00\n",
+            "Ticker,Price,scrape_ts\nAAA,10.0,2026-09-24T20:00:00+00:00\n",
             encoding="utf-8")
         (root / f"{early}.raw.csv").write_text(
             "Ticker,Open\nAAA,10.0\n", encoding="utf-8")
@@ -1401,34 +1423,65 @@ def test_raw_open_needs_scrape_ts_inside_the_session() -> None:
         fmf.THEME_RADAR_SNAP_DIR = root
         try:
             assert fmf._dated_raw_name("current") is None
-            late_stamp = fmf.day_open_tape(early)
-            assert late_stamp["source"] == "stooq"
-            assert "next session" in late_stamp["note"]
-            (root / f"{early}.csv").write_text(
-                "Ticker,Price\nAAA,10.0\n", encoding="utf-8")
-            missing = fmf.day_open_tape(early)
-            assert missing["source"] == "stooq"
-            assert missing["note"] == "missing scrape_ts"
-            (root / f"{early}.csv").write_text(
-                "Ticker,Price,scrape_ts\nAAA,10.0,2026-09-24T20:00:00+00:00\n",
-                encoding="utf-8")
-            accepted = fmf.day_open_tape(early)
-            assert accepted["source"] == f"theme-radar snapshots/{early}.raw.csv Open"
-            assert accepted["opens"]["AAA"] == 10.0
-            digest = fmf.sha256_bytes((root / f"{early}.raw.csv").read_bytes())
-            with mock.patch.object(
-                fmf, "_theme_radar_raw_expected_hash", return_value="0" * 64,
-            ):
-                rejected = fmf.day_open_tape(early)
-            assert rejected["source"] == "stooq"
-            with mock.patch.object(
-                fmf, "_theme_radar_raw_expected_hash", return_value=digest,
-            ):
-                assert fmf.theme_radar_raw_opens(early)["AAA"] == 10.0
-            (root / f"{early}.raw.csv").unlink()
-            slim = fmf.day_open_tape(late)
-            assert slim["source"] == f"theme-radar snapshots/{late}.csv Open"
-            assert slim["opens"]["AAA"] == 10.25
+            assert fmf.theme_radar_latest_commit(
+                "data/snapshots/current.raw.csv") is None
+            with mock.patch.object(fmf, "theme_radar_latest_commit", side_effect=commits):
+                late_commit = fmf.day_open_tape(early)
+                assert late_commit["source"] == "stooq"
+                assert late_commit["commit_sha"] == raw_sha
+                assert "next session" in late_commit["note"]
+                assert late_commit["opens"] == {}
+                state["raw"] = {
+                    "sha": raw_sha, "committed_at": "2026-09-24T13:30:00+00:00",
+                }
+                (root / f"{early}.csv").write_text(
+                    "Ticker,Price\nAAA,10.0\n", encoding="utf-8")
+                no_stamp = fmf.day_open_tape(early)
+                assert no_stamp["source"] == "finviz_raw"
+                assert no_stamp["opens"]["AAA"] == 10.0
+                assert no_stamp["scrape_ts"] is None
+                assert no_stamp["commit_time"] == "2026-09-24T13:30:00+00:00"
+                absent = fmf.day_open_tape(missing_day)
+                assert absent["source"] == "stooq"
+                assert absent["note"] == "no raw export"
+                assert absent["commit_sha"] == ""
+                state["raw"] = {
+                    "sha": raw_sha, "committed_at": "2026-09-24T20:00:00+00:00",
+                }
+                (root / f"{early}.csv").write_text(
+                    "Ticker,Price,scrape_ts\nAAA,10.0,2026-09-25T14:00:00+00:00\n",
+                    encoding="utf-8")
+                late_scrape = fmf.day_open_tape(early)
+                assert late_scrape["source"] == "stooq"
+                assert "scrape_ts" in late_scrape["note"]
+                assert late_scrape["commit_sha"] == raw_sha
+                (root / f"{early}.csv").write_text(
+                    "Ticker,Price,scrape_ts\nAAA,10.0,2026-09-24T20:00:00+00:00\n",
+                    encoding="utf-8")
+                accepted = fmf.day_open_tape(early)
+                assert accepted["source"] == "finviz_raw"
+                assert accepted["opens"]["AAA"] == 10.0
+                assert accepted["commit_sha"] == raw_sha
+                fmf.write_open_source_row(early, accepted, path=root / "log.csv")
+                logged = (root / "log.csv").read_text(encoding="utf-8").splitlines()
+                assert logged[0] == "date,source,commit_sha,commit_time,scrape_ts,note"
+                assert logged[1].startswith(f"{early},finviz_raw,{raw_sha},")
+                digest = fmf.sha256_bytes((root / f"{early}.raw.csv").read_bytes())
+                with mock.patch.object(
+                    fmf, "_theme_radar_raw_expected_hash", return_value="0" * 64,
+                ):
+                    rejected = fmf.day_open_tape(early)
+                assert rejected["source"] == "stooq"
+                assert "hash" in rejected["note"]
+                with mock.patch.object(
+                    fmf, "_theme_radar_raw_expected_hash", return_value=digest,
+                ):
+                    assert fmf.theme_radar_raw_opens(early)["AAA"] == 10.0
+                (root / f"{early}.raw.csv").unlink()
+                slim = fmf.day_open_tape(late)
+                assert slim["source"] == "finviz_snapshot"
+                assert slim["opens"]["AAA"] == 10.25
+                assert slim["commit_sha"] == slim_sha
         finally:
             fmf.THEME_RADAR_SNAP_DIR = old
 
@@ -1464,5 +1517,5 @@ if __name__ == "__main__":
     test_stooq_fills_open_when_the_export_has_no_open_column()
     test_theme_radar_dated_file_rejects_current_and_a_bad_hash()
     test_webull_fill_outside_open_tolerance_holds()
-    test_raw_open_needs_scrape_ts_inside_the_session()
+    test_raw_open_uses_latest_commit_before_the_next_open()
     print("factor-mine freeze tests passed")

@@ -1252,16 +1252,22 @@ def publish_baselines(*, draws: int = RANDOM4_DRAWS) -> dict:
         },
         "iwm": {"tape": tape, "rows": iwm_rows},
         "open_check": (
-            "Open cross-check uses theme-radar `{D}.raw.csv` Finviz Open when "
-            "that fetch's scrape_ts is after D 09:30 ET and before the next "
-            "session's 09:30 ET, and the sha256 matches HASHES.json. From "
-            "2026-09-25 the slim `{D}.csv` Open column (appended last) is the "
-            "next file under the same guard. A missing or late scrape uses "
-            "Stooq for that day. `current.csv` is not a source. Webull paper "
-            "fills stay a third check. The source used each day is "
-            "`data/factor_mine/open_source_log.csv`. Per-recipe session "
-            "returns for the shuffle test are "
-            "`data/factor_mine/daily_returns.csv` "
+            "Open cross-check uses theme-radar `{D}.raw.csv` Finviz Open "
+            "(`finviz_raw`) when the latest git commit of that file is before "
+            "the next session's 09:30 ET. The time is the GitHub commits API "
+            "committer timestamp (`commits?path=data/snapshots/{D}.raw.csv`). "
+            "There is no lower bound; the snapshot workflow starts after the "
+            "close. From 2026-09-24 a present scrape_ts must also be before "
+            "that next open. A missing raw export, a commit at or after the "
+            "next open, a late scrape_ts, or a hash mismatch uses Stooq. From "
+            "2026-09-25 the slim `{D}.csv` Open column is the next file "
+            "(`finviz_snapshot`) under the same upper bound. `current.csv` is "
+            "not a source. Webull paper fills stay a third check. On this "
+            "window every session except 2026-08-27 uses `finviz_raw`. "
+            "2026-08-27 has no raw export, so it uses Stooq. The log is "
+            "`data/factor_mine/open_source_log.csv` (source, commit sha, "
+            "commit time). Per-recipe session returns for the shuffle test "
+            "are `data/factor_mine/daily_returns.csv` "
             "(recipe, start_date, D, ret as percent versus the prior close equity)."
         ),
     }
