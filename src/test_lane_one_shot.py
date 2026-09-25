@@ -1752,3 +1752,60 @@ def test_openclaw_keeps_tsv_mixed_without_a_hopper(monkeypatch):
     assert parsed["entities"][0]["direction"] == "mixed"
     assert (hop, model) == ("openclaw", "xai/grok-4.6")
     assert len(prompts) == 1
+
+
+def test_lane_harvest_skips_stale_parsed_window(tmp_path, capsys):
+    """Lane-100 reads *_parsed.json. The 2026-09-24 file is the Aug 26-29 tail."""
+    news = tmp_path / "01_daily" / "news"
+    news.mkdir(parents=True)
+    fixture = json.loads(
+        Path("src/fixtures/stale_news_2026-09-24.json").read_text(encoding="utf-8")
+    )
+    (news / "2026-09-24_parsed.json").write_text(
+        json.dumps({"all_items": fixture["items"]}), encoding="utf-8",
+    )
+    fresh = [
+        {
+            "title": f"Session overnight headline number {i} for the oil complex",
+            "published_at": "2026-09-23T08:00:00-04:00",
+            "source": "rss",
+        }
+        for i in range(8)
+    ]
+    (news / "2026-09-23_parsed.json").write_text(
+        json.dumps({"all_items": fresh}), encoding="utf-8",
+    )
+    from src.lane_one_shot import harvest
+    rows = harvest(tmp_path)
+    titles = " ".join(row["title"] for row in rows)
+    assert "Warsh" not in titles
+    assert "Jackson Hole" not in titles
+    assert "Session overnight headline number 0" in titles
+    assert sum(1 for row in rows if row["harvest_source"] == "parsed") == 8
+    windows = harvest.last_windows
+    skipped = [row for row in windows["parsed"] if not row["keep"]]
+    kept = [row for row in windows["parsed"] if row["keep"]]
+    assert len(skipped) == 1 and skipped[0]["session"] == "2026-09-24"
+    assert skipped[0]["min"] == "2023-10-13"
+    assert skipped[0]["max"] == "2026-08-29"
+    assert "2026-08-28" in skipped[0]["reason"]
+    assert windows["admitted_min"] == "2026-09-23"
+    assert windows["admitted_max"] == "2026-09-23"
+    assert len(kept) == 1
+    log = capsys.readouterr().out
+    assert "SKIP stale" in log
+    assert "2026-08-26" in log or "2023-10-13" in log
+    text = render_markdown(
+        {
+            "n_drawn": 8, "n_rejected": 0, "n_kept": 8, "invented_tickers": 0,
+            "status": "SHORTFALL", "article_dates": windows,
+            "classify_histogram": {"lane::openclaw::xai/grok-4.3": 1},
+            "gold": {"tsa": "PASS"},
+        },
+        [],
+    )
+    assert "## Article date ranges" in text
+    assert "SKIP stale" in text
+    assert "2023-10-13 .. 2026-08-29" in text
+    assert "admitted parsed span: 2026-09-23 .. 2026-09-23" in text
+    assert "skipped stale parsed files: 1" in text

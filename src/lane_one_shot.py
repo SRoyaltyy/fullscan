@@ -131,8 +131,98 @@ def _add(bag: dict[str, dict], title: str, body: str, source: str,
     }
 
 
-def harvest(root: Path | None = None) -> list[dict]:
+_PARSED_NAME = re.compile(r"(20\d{2}-\d{2}-\d{2})_parsed\.json$")
+
+
+def _published_span(items: list[dict]) -> dict:
+    """Calendar min/max in America/New_York.
+
+    Same clock as the freshness gate: ``published_at`` when it parses,
+    otherwise the Finviz ``scraped_at`` export stamp.
+    """
+    from .news_freshness import ET, item_when
+    stamps: list[str] = []
+    for it in items:
+        parsed = item_when(it)
+        if parsed is not None:
+            stamps.append(parsed.astimezone(ET).date().isoformat())
+    stamps.sort()
+    return {
+        "n": len(items),
+        "n_dated": len(stamps),
+        "min": stamps[0] if stamps else "",
+        "max": stamps[-1] if stamps else "",
+    }
+
+
+def article_windows(root: Path | None = None) -> dict:
+    """Published-date span of every parsed file, and whether Lane may read it.
+
+    Lane-100 harvests ``*_parsed.json`` directly. That is the same artifact
+    Pre-Open wrote on 2026-09-24 (400 rows, published 2026-08-26..08-29).
+    ``decision`` is the freshness gate: a stale window is not drawn.
+    """
     root = root or Path(".")
+    from .news_freshness import decision
+    news = root / "01_daily" / "news"
+    parsed_rows: list[dict] = []
+    admitted: list[str] = []
+    if news.is_dir():
+        for path in sorted(news.glob("*_parsed.json")):
+            match = _PARSED_NAME.search(path.name)
+            session = match.group(1) if match else ""
+            try:
+                blob = json.loads(path.read_text(encoding="utf-8"))
+            except (OSError, json.JSONDecodeError):
+                continue
+            if not isinstance(blob, dict):
+                continue
+            items = [it for it in (blob.get("all_items") or []) if isinstance(it, dict)]
+            span = _published_span(items)
+            rel = str(path.relative_to(root)) if path.is_relative_to(root) else str(path)
+            if session:
+                verdict = decision(session, root)
+            else:
+                verdict = {"ok": True, "news_mode": "on", "reason": ""}
+            keep = bool(verdict.get("ok"))
+            fresh = verdict.get("freshness") if isinstance(verdict.get("freshness"), dict) else {}
+            row = {
+                "file": rel,
+                "session": session,
+                "keep": keep,
+                "news_mode": verdict.get("news_mode") or ("on" if keep else "none_stale"),
+                "reason": "" if keep else str(verdict.get("reason") or "stale news window"),
+                "median": str(fresh.get("median_published") or ""),
+                **span,
+            }
+            parsed_rows.append(row)
+            if keep and span["min"]:
+                admitted.extend((span["min"], span["max"]))
+            flag = "keep" if keep else "SKIP stale"
+            print(
+                f"[lane_one_shot] parsed {path.name} {flag} "
+                f"published {span['min'] or 'undated'}..{span['max'] or 'undated'} "
+                f"n={span['n']} dated={span['n_dated']}"
+            )
+            if not keep:
+                print(f"[lane_one_shot]   {row['reason'][:240]}")
+    admitted.sort()
+    return {
+        "parsed": parsed_rows,
+        "admitted_min": admitted[0] if admitted else "",
+        "admitted_max": admitted[-1] if admitted else "",
+        "skipped_stale": sum(1 for row in parsed_rows if not row["keep"]),
+        "other_harvest": {},
+    }
+
+
+def harvest(root: Path | None = None, windows: dict | None = None) -> list[dict]:
+    root = root or Path(".")
+    windows = article_windows(root) if windows is None else windows
+    harvest.last_windows = windows
+    blocked = {
+        row["file"] for row in (windows.get("parsed") or []) if not row.get("keep")
+    }
     bag: dict[str, dict] = {}
     news = root / NEWS if not (root / "01_daily").exists() else root / "01_daily" / "news"
     # NEWS is already 01_daily/news; root / NEWS doubles if root is repo.
@@ -141,6 +231,9 @@ def harvest(root: Path | None = None) -> list[dict]:
     elite = root / "data" / "theme_radar_snapshots"
     if news.is_dir():
         for path in sorted(news.glob("*_parsed.json")):
+            rel = str(path.relative_to(root)) if path.is_relative_to(root) else str(path)
+            if rel in blocked:
+                continue
             try:
                 blob = json.loads(path.read_text(encoding="utf-8"))
             except (OSError, json.JSONDecodeError):
@@ -150,7 +243,7 @@ def harvest(root: Path | None = None) -> list[dict]:
                     _add(
                         bag, str(item.get("title") or ""),
                         str(item.get("source") or item.get("summary") or ""),
-                        str(path.relative_to(root)) if path.is_relative_to(root) else str(path),
+                        rel,
                         str(item.get("published_at") or ""),
                         "", "parsed",
                     )
@@ -198,6 +291,23 @@ def harvest(root: Path | None = None) -> list[dict]:
                         str(row.get("Ticker") or ""),
                         "elite_snapshot",
                     )
+    from .news_freshness import ET, parse_published
+    other_dates: list[str] = []
+    other_n = 0
+    for art in bag.values():
+        if art.get("harvest_source") == "parsed":
+            continue
+        other_n += 1
+        parsed = parse_published(art.get("known_at"))
+        if parsed is not None:
+            other_dates.append(parsed.astimezone(ET).date().isoformat())
+    other_dates.sort()
+    windows["other_harvest"] = {
+        "n": other_n,
+        "n_dated": len(other_dates),
+        "min": other_dates[0] if other_dates else "",
+        "max": other_dates[-1] if other_dates else "",
+    }
     return list(bag.values())
 
 
@@ -652,8 +762,9 @@ def run_shard(
         for art in GOLD_KEEP + GOLD_REJECT + GOLD_EXTRA:
             handle(art)
 
+    windows = article_windows(root)
     pool = [] if gold_only else [
-        art for art in harvest(root)
+        art for art in harvest(root, windows)
         if _shard_of(art["title"], shards) == shard
         and _norm(art["title"]) not in {
             _norm(g["title"]) for g in GOLD_KEEP + GOLD_REJECT + GOLD_EXTRA
@@ -700,6 +811,7 @@ def run_shard(
         "finviz_file": index.source,
         "kept": kept,
         "rejected": rejected[:80],
+        "article_dates": windows,
     }
     scratch.mkdir(parents=True, exist_ok=True)
     (scratch / f"shard_{shard}.json").write_text(
@@ -731,6 +843,7 @@ def merge_boards(src: Path, board: Path | None = None, expect: int = 100) -> int
     gold: dict[str, str] = {}
     env: list[str] = []
     finviz_file = ""
+    article_dates: dict = {}
     for path in shards:
         blob = _load_json(path)
         drawn += int(blob.get("n_drawn") or 0)
@@ -742,6 +855,8 @@ def merge_boards(src: Path, board: Path | None = None, expect: int = 100) -> int
         gold.update(blob.get("gold") or {})
         env = blob.get("env") or env
         finviz_file = blob.get("finviz_file") or finviz_file
+        if blob.get("article_dates") and not article_dates:
+            article_dates = blob["article_dates"]
         for row in blob.get("kept") or []:
             if row.get("keep") and _valid_watermark(row) and row.get("action"):
                 if "no action" in str(row.get("action")).lower():
@@ -781,6 +896,7 @@ def merge_boards(src: Path, board: Path | None = None, expect: int = 100) -> int
         "finviz_file": finviz_file,
         "status": status,
         "tape": summarize_tape(kept),
+        "article_dates": article_dates,
     }
     if invented or not kept:
         print("[lane_one_shot] refusing finished board", status, "kept", len(kept))
@@ -905,6 +1021,7 @@ def write_gold_report(report: dict) -> int:
         "env": report.get("env") or [],
         "finviz_file": report.get("finviz_file") or "",
         "status": "GOLD_PASS" if not problems else "GOLD_FAIL",
+        "article_dates": report.get("article_dates") or {},
     }
     dest = Path("03_scoreboard/LANE_ONE_SHOT_GOLD.md")
     dest.parent.mkdir(parents=True, exist_ok=True)

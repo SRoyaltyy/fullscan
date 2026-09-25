@@ -1,0 +1,51 @@
+{
+  "session": "2026-09-24",
+  "note": "Reduced copy of 01_daily/news/2026-09-24_parsed.json all_items. That file was generated 2026-09-24T05:59:35-04:00 with raw_count 400; 396 published_at values fall on 2026-08-26..08-29 (median 2026-08-28) plus four older outliers back to 2023-10-13. Pre-Open run 35983706220.",
+  "items": [
+    {
+      "source": "rss_marketwatch_top",
+      "title": "Kevin Warsh gets what every Fed chair hopes for: a bond market that trusts his word",
+      "published_at": "Fri, 28 Aug 2026 20:10:00 GMT"
+    },
+    {
+      "source": "rss_google_macro",
+      "title": "Stocks Fall as Hawkish Warsh Boosts Fed Rate Hike Chances - Barchart.com",
+      "published_at": "Fri, 28 Aug 2026 20:41:41 GMT"
+    },
+    {
+      "source": "rss_google_macro",
+      "title": "Analysis: Kevin Warsh sharpens inflation warning at Jackson Hole, signaling possible rate hike - CNBC",
+      "published_at": "Fri, 28 Aug 2026 15:56:37 GMT"
+    },
+    {
+      "source": "rss_google_macro",
+      "title": "September Fed decision is now a coin flip as rate hike odds increase post Warsh - CNBC",
+      "published_at": "Fri, 28 Aug 2026 15:22:10 GMT"
+    },
+    {
+      "source": "rss_google_business",
+      "title": "Hormuz tanker risk lifts the oil risk premium",
+      "published_at": "Thu, 27 Aug 2026 07:28:03 GMT"
+    },
+    {
+      "source": "rss_yahoo_finance",
+      "title": "nVent could pay about $2.3B for Maverick Power",
+      "published_at": "2026-08-27T20:23:33Z"
+    },
+    {
+      "source": "rss_google_markets",
+      "title": "Jackson Hole week in review",
+      "published_at": "Wed, 26 Aug 2026 18:00:00 GMT"
+    },
+    {
+      "source": "rss_google_us",
+      "title": "Saturday follow-through on the Fed chair speech",
+      "published_at": "Sat, 29 Aug 2026 12:00:00 GMT"
+    },
+    {
+      "source": "rss_bbc_world",
+      "title": "Older wire still in the table tail",
+      "published_at": "Fri, 13 Oct 2023 11:00:00 GMT"
+    }
+  ]
+}

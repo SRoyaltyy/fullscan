@@ -84,7 +84,25 @@ def _latest_export(asof: str | None = None) -> Path | None:
     return files[-1]
 
 
-def _load_ticker_digests(path: Path, max_rows: int | None = None) -> list[dict]:
+def read_export_scraped_at(export: Path | None) -> str:
+    """ISO clock written next to the CSV when the export was saved.
+
+    Empty when the sidecar is missing. Do not substitute ``datetime.now()``
+    or the file mtime: rebuilding an older ``--date`` would look like a
+    same-morning scrape, and a checkout stamps every CSV at once.
+    """
+    if export is None:
+        return ""
+    side = Path(export).with_suffix(".scraped_at")
+    try:
+        text = side.read_text(encoding="utf-8").strip()
+    except OSError:
+        return ""
+    return text.splitlines()[0].strip() if text else ""
+
+
+def _load_ticker_digests(path: Path, max_rows: int | None = None,
+                         scraped_at: str = "") -> list[dict]:
     df = pd.read_csv(path, low_memory=False)
     if "Daily Digest" not in df.columns:
         return []
@@ -118,7 +136,7 @@ def _load_ticker_digests(path: Path, max_rows: int | None = None) -> list[dict]:
         news_title = str(r.get("News Title") or "").strip()
         if news_title.lower() in ("nan", "none"):
             news_title = ""
-        rows.append({
+        row = {
             "ticker": ticker,
             "digest": dig,
             "news_title": news_title,
@@ -128,7 +146,10 @@ def _load_ticker_digests(path: Path, max_rows: int | None = None) -> list[dict]:
             "has_signal": signal,
             "rank": round(rank, 3),
             "source": "finviz_export",
-        })
+        }
+        if scraped_at:
+            row["scraped_at"] = scraped_at
+        rows.append(row)
     rows.sort(key=lambda x: -x["rank"])
     seen: set[str] = set()
     out = []
@@ -283,7 +304,9 @@ def _scrape_indices(skip: bool = False, export: Path | None = None) -> list[dict
 def build_report(asof: str | None = None, skip_scrape: bool = False) -> dict:
     asof = asof or datetime.now(ET).date().isoformat()
     export = _latest_export(asof)
-    ticker_digests = _load_ticker_digests(export) if export else []
+    stamp = read_export_scraped_at(export)
+    ticker_digests = _load_ticker_digests(
+        export, scraped_at=stamp) if export else []
     index_digests = _scrape_indices(skip=skip_scrape, export=export)
 
     signal = [d for d in ticker_digests if d["has_signal"] and not d["is_dividend"]]
@@ -293,7 +316,7 @@ def build_report(asof: str | None = None, skip_scrape: bool = False) -> dict:
         sec = d["sector"] or "_unknown"
         by_sector.setdefault(sec, []).append(d)
 
-    return {
+    report = {
         "date": asof,
         "generated_at": datetime.now(ET).isoformat(),
         "export_used": str(export.relative_to(ROOT)) if export else None,
@@ -305,6 +328,9 @@ def build_report(asof: str | None = None, skip_scrape: bool = False) -> dict:
             by_sector.items(), key=lambda kv: -len(kv[1]))},
         "all_ticker_digests": ticker_digests[:200],
     }
+    if stamp:
+        report["scraped_at"] = stamp
+    return report
 
 
 def to_markdown(report: dict) -> str:

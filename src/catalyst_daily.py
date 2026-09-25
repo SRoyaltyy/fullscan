@@ -185,6 +185,12 @@ def select_targets(date: str, max_n: int = DEFAULT_MAX,
                 heat_side[t] = "sell"
             elif sent == "pos" or direction == "up":
                 heat_side[t] = "buy"
+    from .news_freshness import decision as news_decision
+    news_dec = news_decision(date)
+    if not news_dec["ok"]:
+        print(f"[catalyst] news inputs off (news_mode=none_stale) — "
+              f"{news_dec['reason']}")
+        actions = {}
     action_rows = actions.get("ticker_actions") or []
     if isinstance(action_rows, dict):
         action_rows = [{"ticker": k, **(v if isinstance(v, dict) else {})}
@@ -249,6 +255,11 @@ def apply_to_actions(date: str, dossiers: list[dict] | None = None) -> dict:
     report = _load_json(path)
     if not report:
         return {}
+    from .news_freshness import decision as news_decision
+    if (not news_decision(date)["ok"]
+            or report.get("news_mode") == "none_stale"):
+        print("[catalyst] not merging dossiers into stale news actions")
+        return report
     dossiers = dossiers if dossiers is not None else load_dossiers(date)
     if not dossiers:
         return report

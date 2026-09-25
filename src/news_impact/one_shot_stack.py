@@ -1283,6 +1283,38 @@ def render_markdown(header: dict, rows: list[dict]) -> str:
     lines += ["", "## Reject reasons", ""]
     for key, n in (header.get("reject_histogram") or {}).items():
         lines.append(f"- {key}: {n}")
+    dates = header.get("article_dates") or {}
+    if dates:
+        lines += ["", "## Article date ranges", ""]
+        parsed_files = dates.get("parsed") or []
+        if not parsed_files:
+            lines.append("- parsed files: (none)")
+        for row in parsed_files:
+            span = f"{row.get('min') or 'undated'} .. {row.get('max') or 'undated'}"
+            flag = "KEEP" if row.get("keep") else "SKIP stale"
+            median = f", median {row['median']}" if row.get("median") else ""
+            why = ""
+            if not row.get("keep") and row.get("reason"):
+                why = f" — {row['reason']}"
+            lines.append(
+                f"- {row.get('file')}: {flag}, published {span}, "
+                f"n={row.get('n', 0)}, dated={row.get('n_dated', 0)}{median}{why}"
+            )
+        if dates.get("admitted_min") or dates.get("admitted_max"):
+            lines.append(
+                "- admitted parsed span: "
+                f"{dates.get('admitted_min') or '—'} .. {dates.get('admitted_max') or '—'}"
+            )
+        other = dates.get("other_harvest") or {}
+        if other:
+            lines.append(
+                "- other harvest known_at: "
+                f"{other.get('min') or '—'} .. {other.get('max') or '—'} "
+                f"(n={other.get('n', 0)}, dated={other.get('n_dated', 0)})"
+            )
+        lines.append(
+            f"- skipped stale parsed files: {dates.get('skipped_stale', 0)}"
+        )
     lines += ["", "## Rows", ""]
     for i, row in enumerate(rows, 1):
         winners, losers = row.get("winners") or [], row.get("losers") or []

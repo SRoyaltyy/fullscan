@@ -13,6 +13,10 @@ from . import config, step_deadline
 # 2026-09-09: 90s × 3 variants × 3 retries still ate the 480s parse slot
 # (exit 124) so judge/actions never started. Morning default is 20s,
 # jump to last-N LIMIT after the first timeout, retry once.
+# 2026-09-24: collectors have been off since 2026-08-29. The bounded
+# windows were empty and the unbounded last-N LIMIT was returned as the
+# 48h window — 400 rows, median published 2026-08-28. last-N is now a
+# timeout escape hatch only, and those rows must still be inside `hours`.
 _DEFAULT_STATEMENT_TIMEOUT_MS = 20_000
 
 
@@ -180,6 +184,21 @@ def _conn():
     return None
 
 
+def _published_within_hours(rows: list[dict], hours: int) -> list[dict]:
+    """Drop last-N rows whose published_at is outside the requested window."""
+    from datetime import datetime, timedelta, timezone
+
+    from .news_freshness import parse_published
+
+    cutoff = datetime.now(timezone.utc) - timedelta(hours=max(1, int(hours)))
+    kept = []
+    for row in rows:
+        dt = parse_published(row.get("published_at"))
+        if dt is not None and dt >= cutoff:
+            kept.append(row)
+    return kept
+
+
 def _recent_news_once(hours: int, limit: int) -> list[dict]:
     """One connection, bounded variants. Raises NewsDbError on timeout."""
     conn = _conn()
@@ -187,7 +206,8 @@ def _recent_news_once(hours: int, limit: int) -> list[dict]:
         return []
     # Variant 0: collected_at window, no per-row regex (that scan timed out).
     # Variant 1: published_at window (text column; still bounded).
-    # Variant 2: last-N rows only — last resort, still LIMIT, no full sort regex.
+    # Variant 2: last-N rows — timeout escape hatch only. An empty bounded
+    # window must stay empty (2026-09-24 shipped this LIMIT as "48h").
     queries = [
         ("""SELECT source, title, url, published_at
             FROM news
@@ -207,17 +227,31 @@ def _recent_news_once(hours: int, limit: int) -> list[dict]:
     ]
     last_err: BaseException | None = None
     saw_timeout = False
+    last_n_ok = False
     try:
         cur = conn.cursor()
         try:
             i = 0
             while i < len(queries):
+                is_last = i == len(queries) - 1
+                if is_last and not saw_timeout:
+                    print("[db] bounded news window empty — not reading "
+                          "unbounded last-N (2026-09-24 that LIMIT was the "
+                          "Aug 26-29 Warsh cluster)")
+                    break
                 q, params = queries[i]
                 try:
                     _execute_bounded(conn, cur, q, params)
                     rows = [{"source": s, "title": t, "url": u,
                              "published_at": str(p)}
                             for s, t, u, p in cur.fetchall()]
+                    if is_last:
+                        last_n_ok = True
+                        fresh = _published_within_hours(rows, hours)
+                        if len(fresh) != len(rows):
+                            print(f"[db] last-N published_at filter kept "
+                                  f"{len(fresh)}/{len(rows)} inside {hours}h")
+                        rows = fresh
                     if rows:
                         return rows
                 except Exception as e:  # noqa: BLE001
@@ -226,13 +260,13 @@ def _recent_news_once(hours: int, limit: int) -> list[dict]:
                     print(f"[db] news query variant {i} failed: {e}")
                     if _is_timeout(e):
                         saw_timeout = True
-                        if i < len(queries) - 1:
+                        if not is_last:
                             print("[db] statement_timeout — jumping to last-N LIMIT")
                             i = len(queries) - 1
                             continue
                         break
                 i += 1
-            if saw_timeout:
+            if saw_timeout and not last_n_ok:
                 raise NewsDbError(
                     "db_timeout",
                     f"news query statement_timeout after variants ({last_err})")

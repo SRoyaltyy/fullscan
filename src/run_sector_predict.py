@@ -78,9 +78,11 @@ def _load_system_prompt(sector: str) -> str:
 
 
 def _write_essay(path: str, sector: str, date_str: str, slug: str,
-                 etf_ctx: str, text: str, decision: dict) -> None:
+                 etf_ctx: str, text: str, decision: dict,
+                 news_mode: str = "on") -> None:
     with open(path, "w", encoding="utf-8") as fh:
         fh.write(f"# Sector Prediction — {sector} — {date_str}\n\n")
+        fh.write(f"- news_mode: **{news_mode}**\n")
         fh.write(f"- ETF: **{SECTOR_ETFS.get(sector)}**\n")
         fh.write(f"- rubric: `00_grounding/sectors/{slug}.md`\n")
         fh.write(f"- predicted_direction: **{decision['predicted_direction']}**\n")
@@ -174,13 +176,24 @@ def run_one(sector: str, date_str: str, ch1_md: str,
     rubric = _load_system_prompt(sector)
     etf_ctx = etf_relative_snapshot(sector)
     seeds = search_query_bundle(sector, limit=16)
-    nj = news_judge_block(date_str) or news_judge_block()
-    fv = finviz_digest_block(date_str) or finviz_digest_block()
+    from .news_freshness import banner, decision as news_decision
+    news_dec = news_decision(date_str)
+    if news_dec["ok"]:
+        nj = news_judge_block(date_str) or news_judge_block()
+        fv = finviz_digest_block(date_str) or finviz_digest_block()
+        news_banner = ""
+    else:
+        print(f"[sector-predict] {sector}: news_mode=none_stale — "
+              f"{news_dec['reason']}")
+        nj = ""
+        fv = ""
+        news_banner = banner(news_dec["reason"])
     mh = map_heat_research_block(date_str, sector=sector)
     user_msg = (
         f"TODAY: {date_str} (America/New_York)\n"
         f"SECTOR UNDER ANALYSIS (ONLY THIS ONE): {sector}\n"
         f"ETF TO GRADE LATER: {SECTOR_ETFS.get(sector)}\n\n"
+        f"{news_banner}"
         f"{prediction_context(sector)}\n\n"
         f"{nj}{fv}{mh}{ch1_md}\n\n"
         f"=== CHANNEL 1 SECTOR ETF TAPE (also pre-fetched) ===\n"
@@ -228,7 +241,8 @@ def run_one(sector: str, date_str: str, ch1_md: str,
             ch1=_CTX.get("ch1"), general_total=_general_total_today(date_str))
         decision = map_heat_decision_gate(date_str, decision, sector=sector)
         horizon_calls = compute_scores.parse_horizon_calls(scores)
-        _write_essay(path, sector, date_str, slug, etf_ctx or "", text, decision)
+        _write_essay(path, sector, date_str, slug, etf_ctx or "", text, decision,
+                     news_mode=news_dec["news_mode"])
         file_qc = output_qc.qc_sector_predict(path)
         last_qc = file_qc
         if not file_qc.ok:

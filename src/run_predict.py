@@ -33,10 +33,11 @@ except Exception:
 
 
 def _write(path: str, date_str: str, text: str, decision: dict, scores: dict,
-           ch1, horizon_calls: dict) -> None:
+           ch1, horizon_calls: dict, news_mode: str = "on") -> None:
     os.makedirs(config.DAILY_GENERAL, exist_ok=True)
     with open(path, "w", encoding="utf-8") as fh:
         fh.write(f"# Premarket Prediction — {date_str}\n\n")
+        fh.write(f"- news_mode: **{news_mode}**\n\n")
         fh.write(snapshot.predict_snapshot(decision, scores, ch1))
         fh.write(text)
         fh.write("\n\n---\n## Pipeline-computed decision (deterministic)\n\n")
@@ -118,13 +119,21 @@ def main() -> None:
     fetch_channel1.save(ch1, date_str, "predict")
     ch1_md = fetch_channel1.to_markdown(ch1)
 
+    from .news_freshness import banner, decision
+    news_dec = decision(date_str)
     # 1b. Ranked news judge (LLM layer on mechanical parse) — preferred B1 input
-    nj = news_judge_block(date_str)
-    if not nj:
-        nj = news_judge_block()  # fall back to latest_judge.md
-
-    # 1c. Finviz Daily Digest (export + index narratives) — elevated themes
-    fv = finviz_digest_block(date_str) or finviz_digest_block()
+    # 1c. Finviz Daily Digest — elevated themes. Both are news inputs.
+    if news_dec["ok"]:
+        nj = news_judge_block(date_str)
+        if not nj:
+            nj = news_judge_block()  # fall back to latest_judge.md
+        fv = finviz_digest_block(date_str) or finviz_digest_block()
+        news_banner = ""
+    else:
+        print(f"[predict] news_mode=none_stale — {news_dec['reason']}")
+        nj = ""
+        fv = ""
+        news_banner = banner(news_dec["reason"])
     mh = map_heat_research_block(date_str)
 
     # 2. Assemble prompt: rubric + event scan + news judge + finviz digest + memory + channel 1
@@ -132,6 +141,7 @@ def main() -> None:
               encoding="utf-8") as fh:
         rubric = fh.read()
     user_msg = (f"TODAY: {date_str} (America/New_York)\n\n"
+                f"{news_banner}"
                 f"{event_context.block()}\n\n"
                 f"{nj}"
                 f"{fv}"
@@ -189,7 +199,8 @@ def main() -> None:
         decision = compute_scores.compute(scores, ch1=ch1)
         decision = map_heat_decision_gate(date_str, decision)
         horizon_calls = compute_scores.parse_horizon_calls(scores)
-        _write(path, date_str, text, decision, scores, ch1, horizon_calls)
+        _write(path, date_str, text, decision, scores, ch1, horizon_calls,
+               news_mode=news_dec["news_mode"])
 
         file_qc = output_qc.qc_general_predict(path)
         last_qc = file_qc
