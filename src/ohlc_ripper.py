@@ -24,6 +24,11 @@ from . import gainer_asof as ga
 
 LOOKBACK = 20
 INDICATOR_LOOKBACK = 60   # RSI(14) + MACD(12/26/9) need more than the hot-20
+MACD_FAST = 12
+MACD_SLOW = 26
+MACD_SIGNAL = 9
+# slow + signal is the shortest history that makes every indicator a number.
+MIN_INDICATOR_BARS = MACD_SLOW + MACD_SIGNAL
 HOT_TOP_N = 80
 CONT_TOP_N = 8
 CONT_RET5_MAX = 10.0
@@ -132,8 +137,8 @@ def _ema(x: np.ndarray, span: int) -> np.ndarray:
     return out
 
 
-def _macd(closes: np.ndarray, fast: int = 12, slow: int = 26,
-          signal: int = 9) -> tuple:
+def _macd(closes: np.ndarray, fast: int = MACD_FAST, slow: int = MACD_SLOW,
+          signal: int = MACD_SIGNAL) -> tuple:
     """(macd, signal, hist, cross_up, cross_down) on the last prior bar."""
     need = slow + signal
     if len(closes) < need:
