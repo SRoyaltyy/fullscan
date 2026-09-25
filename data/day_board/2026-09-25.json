@@ -1,6 +1,6 @@
 {
   "date": "2026-09-25",
-  "generated_at": "2026-09-25T05:37:04.838198-04:00",
+  "generated_at": "2026-09-25T05:37:15.711477-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -560,8 +560,8 @@
           "path": "01_daily/weather/2026-09-25_weather.json",
           "role": "required",
           "status": "OK",
-          "reason": "sectors=11 bytes=9729 vix=falling yields=rising",
-          "size": 9729,
+          "reason": "sectors=11 bytes=9728 vix=falling yields=rising",
+          "size": 9728,
           "said": "favorable 1 \u00b7 hostile 4 \u00b7 neutral 6",
           "bullets": [
             "hostile: Communication Services, Energy, Real Estate, Utilities",
@@ -782,8 +782,8 @@
           "path": "01_daily/weather/2026-09-25_weather.json",
           "role": "input",
           "status": "OK",
-          "reason": "sectors=11 bytes=9729 vix=falling yields=rising",
-          "size": 9729,
+          "reason": "sectors=11 bytes=9728 vix=falling yields=rising",
+          "size": 9728,
           "said": "favorable 1 \u00b7 hostile 4 \u00b7 neutral 6",
           "bullets": [
             "hostile: Communication Services, Energy, Real Estate, Utilities",
@@ -1693,6 +1693,31 @@
         }
       ],
       "preview": "keys: date, source_heat_date, phase, generated_at, n_targets, n_cards, coverage, validation_errors, source_calendar_results, source_market_reaction_pct, cards, size_gate \u00b7 # MAP HEAT RESEARCH \u2014 2026-09-25\n142 captain cards \u00b7 size_gate=False set by pre-open refresh"
+    },
+    {
+      "key": "weather",
+      "title": "Weather / regime",
+      "date": "2026-09-25",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-25T05:37:15.156592-04:00",
+      "files": [
+        {
+          "path": "01_daily/weather/2026-09-25_weather.json",
+          "ok": true,
+          "reason": "",
+          "size": 9728,
+          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -0.6, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -1.78, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -0.74, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.26, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': 0.0, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -1.3, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -0.5, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}"
+        },
+        {
+          "path": "01_daily/weather/2026-09-25_weather.md",
+          "ok": true,
+          "reason": "",
+          "size": 5304,
+          "preview": "# Weather report \u2014 2026-09-25\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+        }
+      ],
+      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -0.6, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -1.78, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -0.74, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.26, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': 0.0, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -1.3, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -0.5, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-09-25\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
     }
   ],
   "href": {
