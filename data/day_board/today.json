@@ -1,6 +1,6 @@
 {
   "date": "2026-09-25",
-  "generated_at": "2026-09-25T12:37:11.208903-04:00",
+  "generated_at": "2026-09-25T14:00:25.336516-04:00",
   "overall": "OK",
   "ranker_ready": true,
   "counts": {
@@ -616,13 +616,13 @@
       "date": "2026-09-25",
       "ok": true,
       "pushed": true,
-      "at": "2026-09-25T10:02:37.314223-04:00",
+      "at": "2026-09-25T14:00:24.573833-04:00",
       "files": [
         {
           "path": "data/day_board/today.json",
           "ok": true,
           "reason": "",
-          "size": 39270,
+          "size": 39280,
           "preview": "2026-09-25 BUY SONO, OMER, PDFS, FIVN, VCYT, REGN, OLLI, CCC \u00b7 SELL ARE, AESI, KGS, ACDC, BXMT, UUUU, HP, PUMP"
         },
         {
@@ -636,70 +636,70 @@
           "path": "data/day_board/2026-09-25.json",
           "ok": true,
           "reason": "",
-          "size": 129293,
+          "size": 129303,
           "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href"
         },
         {
           "path": "data/day_board/2026-09-25_tickets.json",
           "ok": true,
           "reason": "",
-          "size": 92668,
+          "size": 92678,
           "preview": "2026-09-25 BUY SONO, OMER, PDFS, FIVN, VCYT, REGN, OLLI, CCC \u00b7 SELL ARE, AESI, KGS, ACDC, BXMT, UUUU, HP, PUMP"
         },
         {
           "path": "data/day_board/strategy_tickets.json",
           "ok": true,
           "reason": "",
-          "size": 851762,
+          "size": 875386,
           "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
         },
         {
           "path": "data/day_board/2026-09-25_strategy_tickets.json",
           "ok": true,
           "reason": "",
-          "size": 851762,
+          "size": 754529,
           "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
         },
         {
           "path": "data/day_board/today_strategies.json",
           "ok": true,
           "reason": "",
-          "size": 1253077,
+          "size": 1287902,
           "preview": "2026-09-25 BUY SONO, OMER, PDFS, FIVN, VCYT, REGN, OLLI, CCC \u00b7 SELL ARE, AESI, KGS, ACDC, BXMT, UUUU, HP, PUMP"
         },
         {
           "path": "data/factor_mine/strategy_tickets.json",
           "ok": true,
           "reason": "",
-          "size": 851762,
+          "size": 875386,
           "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
         },
         {
           "path": "dashboard/factor-mine/today.json",
           "ok": true,
           "reason": "",
-          "size": 92668,
+          "size": 92678,
           "preview": "2026-09-25 BUY SONO, OMER, PDFS, FIVN, VCYT, REGN, OLLI, CCC \u00b7 SELL ARE, AESI, KGS, ACDC, BXMT, UUUU, HP, PUMP"
         },
         {
           "path": "dashboard/factor-mine/strategy_tickets.json",
           "ok": true,
           "reason": "",
-          "size": 851762,
+          "size": 875386,
           "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
         },
         {
           "path": "dashboard/factor-mine/today_strategies.json",
           "ok": true,
           "reason": "",
-          "size": 851762,
+          "size": 875386,
           "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
         },
         {
           "path": "dashboard/today_strategies.json",
           "ok": true,
           "reason": "",
-          "size": 1253077,
+          "size": 1287902,
           "preview": "2026-09-25 BUY SONO, OMER, PDFS, FIVN, VCYT, REGN, OLLI, CCC \u00b7 SELL ARE, AESI, KGS, ACDC, BXMT, UUUU, HP, PUMP"
         },
         {
