@@ -1,6 +1,6 @@
 {
   "date": "2026-09-25",
-  "generated_at": "2026-09-25T05:45:12.566975-04:00",
+  "generated_at": "2026-09-25T05:48:58.146655-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -177,7 +177,7 @@
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 13,
+      "n_req_ok": 14,
       "n_req": 20,
       "n_opt_ok": 3,
       "n_opt": 3,
@@ -343,8 +343,8 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 5927,
-          "said": "1 up / 1 down / 2 flat",
+          "size": 6101,
+          "said": "1 up / 2 down / 2 flat",
           "bullets": [
             "XLB FLAT +1.4",
             "XLC FLAT -0.4",
@@ -359,8 +359,8 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 7237,
-          "said": "all_ok=False \u00b7 sectors 4/11 \u00b7 8 fail",
+          "size": 7230,
+          "said": "all_ok=False \u00b7 sectors 5/11 \u00b7 7 fail",
           "bullets": [
             "finviz_market_digest:missing",
             "sector_predict:missing",
@@ -449,11 +449,13 @@
           "name": "Sector predict \u2014 energy",
           "path": "01_daily/sectors/2026-09-25/energy_predict.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 16030,
+          "said": "DOWN mild -9.556",
+          "bullets": [
+            "- news_mode: **on"
+          ]
         },
         {
           "key": "sector_financial",
@@ -522,7 +524,7 @@
           "bullets": []
         }
       ],
-      "said": "general UP  2.706 \u00b7 sectors 1 up / 1 down / 2 flat \u00b7 news news_mode: on \u00b7 400 raw / 81 usable \u00b7 US 10-Year Treasury Yield Tops 5.2%, Fueling Bets on Another Fed Rate Hike - blo",
+      "said": "general UP  2.706 \u00b7 sectors 1 up / 2 down / 2 flat \u00b7 news news_mode: on \u00b7 400 raw / 81 usable \u00b7 US 10-Year Treasury Yield Tops 5.2%, Fueling Bets on Another Fed Rate Hike - blo",
       "bullets": [
         "bad: 1w 10Y +10bp at 5.11 handle",
         "bad: Williams year-end hike 'reasonable'",
@@ -533,7 +535,7 @@
         "XLC FLAT -0.4",
         "XLY DOWN -3.2",
         "XLP UP +3.0",
-        "XLE missing"
+        "XLE DOWN -9.6"
       ]
     },
     {
@@ -729,8 +731,8 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 5927,
-          "said": "1 up / 1 down / 2 flat",
+          "size": 6101,
+          "said": "1 up / 2 down / 2 flat",
           "bullets": [
             "XLB FLAT +1.4",
             "XLC FLAT -0.4",
@@ -981,13 +983,13 @@
       "direction": "up"
     },
     "sectors": {
-      "said": "1 up / 1 down / 2 flat",
+      "said": "1 up / 2 down / 2 flat",
       "bullets": [
         "XLB FLAT +1.4",
         "XLC FLAT -0.4",
         "XLY DOWN -3.2",
         "XLP UP +3.0",
-        "XLE missing",
+        "XLE DOWN -9.6",
         "XLF missing",
         "XLV missing",
         "XLI missing",
@@ -1729,70 +1731,70 @@
     },
     {
       "key": "sector_one",
-      "title": "Sector predict Consumer Defensive (4/11)",
+      "title": "Sector predict Energy (5/11)",
       "date": "2026-09-25",
       "ok": true,
       "pushed": true,
-      "at": "2026-09-25T05:45:11.971197-04:00",
+      "at": "2026-09-25T05:48:57.543149-04:00",
       "files": [
         {
-          "path": "01_daily/sectors/2026-09-25/consumer_defensive_predict.md",
+          "path": "01_daily/sectors/2026-09-25/energy_predict.md",
           "ok": true,
           "reason": "",
-          "size": 22049,
-          "preview": "# Sector Prediction \u2014 Consumer Defensive \u2014 2026-09-25\n- news_mode: **on**\n- ETF: **XLP**\n- rubric: `00_grounding/sectors/consumer_defensive.md`\n- predicted_direction: **up**\n- predicted_magnitude_band: **mild**\n- total_score: **2.978** (mult 0.8)\n- regime: mixed\n- divergence_flagged: **True**\n- engine: v2 \u00b7 tape_anchor **-0.299** (ES +0.28%, ZN -0.03%, PM:XLP -0.12%) \u00b7 index_carry **0.676** (general 2.706) \u00b7 llm_overlay **2.6** (raw 2.6)"
+          "size": 16030,
+          "preview": "# Sector Prediction \u2014 Energy \u2014 2026-09-25\n- news_mode: **on**\n- ETF: **XLE**\n- rubric: `00_grounding/sectors/energy.md`\n- predicted_direction: **down**\n- predicted_magnitude_band: **mild**\n- total_score: **-9.556** (mult 0.85)\n- regime: mixed\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **-5.133** (CL -1.59%, QA -1.02%, ES +0.28%, PM:XLE -0.99%) \u00b7 index_carry **0.676** (general 2.706) \u00b7 llm_overlay **-5.1** (raw -5.1)"
         },
         {
-          "path": "01_daily/sectors/2026-09-25/consumer_defensive_predict_trace.md",
+          "path": "01_daily/sectors/2026-09-25/energy_predict_trace.md",
           "ok": true,
           "reason": "",
-          "size": 4473,
-          "preview": "# Reasoning trace \u2014 SECTOR PREDICT Consumer Defensive 2026-09-25\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (149,370 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Research.** The model wanted to know: *\"Consumer Defensive XLP staples relative performance September 2026\"* \u2192 got 6 results (via gnews_rss)\n- Only three consumer staples stocks have held Strong Buy ratings for at least 60 days (XLP:NYSEARCA) - Seeking Alpha (https://news.google.com/rss/articles/CBMivwFBVV95cUxOZlJvU3czb3M5TFRVOC0xcmIwSjBRdUNfSFJDSGI0NEYzZmswSkYtbUowb1hPd3ktZXBsNzNPOTFscUxLenppTERqbUR1VXNqa2hvdDdXVXJabnoxT0RRdDFkWDhvYVc2UXZpZVljQl91TTBqUW5SQUpoX0cxM0xRQ2pNRjlIdnQ2OHJucDZEY3pSSTZuOHZZMU5hUE5CTjduSnNEWUhMRmZWZ3lpaGJ6OGl5SGFjVnlsQVJSUkh3SQ?oc=5)\n- Better Consumer Staples ETF: Vanguard's VDC vs."
+          "size": 389,
+          "preview": "# Reasoning trace \u2014 SECTOR PREDICT Energy 2026-09-25 retry1\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (153,639 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Done researching.** The model stopped searching and wrote its full analysis (14,124 characters)."
         },
         {
-          "path": "01_daily/_transcripts/2026-09-25_sector_consumer_defensive_predict.json",
+          "path": "01_daily/_transcripts/2026-09-25_sector_energy_predict.json",
           "ok": true,
           "reason": "",
-          "size": 184457,
+          "size": 172037,
           "preview": "keys: model, messages"
         },
         {
           "path": "01_daily/2026-09-25_preopen_qc.json",
           "ok": true,
           "reason": "",
-          "size": 7237,
+          "size": 7230,
           "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok"
         },
         {
           "path": "01_daily/sectors/2026-09-25/_qc.json",
           "ok": true,
           "reason": "",
-          "size": 1242,
+          "size": 1238,
           "preview": "keys: date, n_ok, n_total, sectors"
         },
         {
           "path": "01_daily/sectors/2026-09-25/_BOARD.md",
           "ok": true,
           "reason": "",
-          "size": 1687,
-          "preview": "# Sector Board \u2014 2026-09-25\nGenerated: **2026-09-25T05:45:11.954501-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.)."
+          "size": 1743,
+          "preview": "# Sector Board \u2014 2026-09-25\nGenerated: **2026-09-25T05:48:57.528308-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.)."
         },
         {
           "path": "01_daily/sectors/2026-09-25/_board.json",
           "ok": true,
           "reason": "",
-          "size": 5927,
+          "size": 6101,
           "preview": "keys: date, generated_at, sectors"
         },
         {
           "path": "03_scoreboard/scoreboard.json",
           "ok": true,
           "reason": "",
-          "size": 905893,
+          "size": 906963,
           "preview": "keys: runs"
         }
       ],
-      "preview": "# Sector Prediction \u2014 Consumer Defensive \u2014 2026-09-25\n- news_mode: **on**\n- ETF: **XLP**\n- rubric: `00_grounding/sectors/consumer_defensive.md`\n- predicted_direction: **up**\n- predicted_magnitude_band: **mild**\n- total_score: **2.978** (mult 0.8)\n- regime: mixed\n- divergence_flagged: **True**\n- engine: v2 \u00b7 tape_anchor **-0.299** (ES +0.28%, ZN -0.03%, PM:XLP -0.12%) \u00b7 index_carry **0.676** (general 2.706) \u00b7 llm_overlay **2.6** (raw 2.6) \u00b7 # Reasoning trace \u2014 SECTOR PREDICT Consumer Defensive 2026-09-25\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (149,370 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Research.** The model wanted to know: *\"Consumer Defensive XLP staples relative performance September 2026\"* \u2192 got 6 results (via gnews_rss)\n- Only three consumer staples stocks have held Strong Buy ratings for at least 60 days (XLP:NYSEARCA) - Seeking Alpha (https://news.google.com/rss/articles/CBMivwFBVV95cUxOZlJvU3czb3M5TFRVOC0xcmIwSjBRdUNfSFJDSGI0NEYzZmswSkYtbUowb1hPd3ktZXBsNzNPOTFscUxLenppTERqbUR1VXNqa2hvdDdXVXJabnoxT0RRdDFkWDhvYVc2UXZpZVljQl91TTBqUW5SQUpoX0cxM0"
+      "preview": "# Sector Prediction \u2014 Energy \u2014 2026-09-25\n- news_mode: **on**\n- ETF: **XLE**\n- rubric: `00_grounding/sectors/energy.md`\n- predicted_direction: **down**\n- predicted_magnitude_band: **mild**\n- total_score: **-9.556** (mult 0.85)\n- regime: mixed\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **-5.133** (CL -1.59%, QA -1.02%, ES +0.28%, PM:XLE -0.99%) \u00b7 index_carry **0.676** (general 2.706) \u00b7 llm_overlay **-5.1** (raw -5.1) \u00b7 # Reasoning trace \u2014 SECTOR PREDICT Energy 2026-09-25 retry1\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (153,639 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Done researching.** The model stopped searching and wrote its full analysis (14,124 characters). \u00b7 keys: model, messages \u00b7 keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok \u00b7 keys: date, n_ok, n_total, sectors \u00b7 # Sector Board \u2014 2026-09-25\nGenerated: **2026-09-25T05:48:57.528308-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.). \u00b7 keys: date, generated_at, sector"
     }
   ],
   "href": {
