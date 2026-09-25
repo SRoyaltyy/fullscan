@@ -2154,6 +2154,7 @@ def review_day(date: str, info: dict, dest: Path,
                 rows = [
                     row for row in _panel_rows(date)
                     if row.get("ticker") not in dropped
+                    and not is_unrankable(row.get("ticker"), date)
                 ]
             traded = list(fmf.paper_fills(date))
             single = SINGLE_SOURCE.get(str(date)[:10], set())
@@ -2210,7 +2211,7 @@ def rebuild(*, fetch: bool = True) -> dict:
     raw_diff: dict = {}
     if os.environ.get("FM_RETRO_SKIP_VALIDATE") != "1":
         try:
-            raw_diff = validate_raw_vs_yahoo()
+            raw_diff = validate_raw_vs_yahoo(candidate_tickers())
         except Exception as exc:  # noqa: BLE001
             print(f"[retro] raw vs yahoo skipped: {exc}", flush=True)
             raw_diff = {"error": str(exc)}
@@ -2222,6 +2223,7 @@ def rebuild(*, fetch: bool = True) -> dict:
     for info in classed:
         date = info["date"]
         rows, provenance = review_day(date, info, work, history)
+        prices_sha = _read_meta().get("sha256") or prices_sha
         snap = snapshot_for(date, info, rows, prices_sha, provenance)
         fmf.write_snapshot(date, snap, restate=True)
         _stamp_manifest(date, info)
