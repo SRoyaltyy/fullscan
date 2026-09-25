@@ -1,7 +1,7 @@
 {
   "meta": {
     "date": "2026-09-25",
-    "generated_at": "2026-09-25T16:36:44.374304-04:00",
+    "generated_at": "2026-09-25T16:40:59.224411-04:00",
     "general_bias": 0.5167999999999999,
     "sector_bias": {
       "Basic Materials": 0.0,
@@ -23,23 +23,23 @@
         "gate": 0.85
       },
       "sector:Basic Materials": {
-        "hit_rate": 0.444,
-        "n": 27,
+        "hit_rate": 0.429,
+        "n": 28,
         "gate": 0.5
       },
       "sector:Communication Services": {
-        "hit_rate": 0.231,
-        "n": 26,
+        "hit_rate": 0.222,
+        "n": 27,
         "gate": 0.5
       },
       "sector:Consumer Cyclical": {
-        "hit_rate": 0.481,
-        "n": 27,
+        "hit_rate": 0.464,
+        "n": 28,
         "gate": 0.85
       },
       "sector:Consumer Defensive": {
-        "hit_rate": 0.462,
-        "n": 26,
+        "hit_rate": 0.481,
+        "n": 27,
         "gate": 0.85
       },
       "sector:Energy": {
