@@ -149,6 +149,11 @@
       "bytes": 176088,
       "sha256": "2d41cffbc6b08bfd75504d502cc53db3fcfc6e548b2c44dd0627f0d9828af2af",
       "written_at": "2026-09-25T07:08:17.817362-04:00"
+    },
+    "2026-09-25": {
+      "bytes": 175242,
+      "sha256": "d2fcadaa9c1ec0555d9d0cca81e04f36bef30ad5bb20ba19295e48cbba0bac3b",
+      "written_at": "2026-09-25T18:28:33.095257-04:00"
     }
   },
   "excel_signals": {
@@ -1336,6 +1341,12 @@
       "encoding": "gzip",
       "sha256": "923e5edd630fab2a40345dd84e8cc44d5c16e49d1fac05ab79a106e6c3f0ee9d",
       "written_at": "2026-09-25T07:09:36.622368-04:00"
+    },
+    "2026-09-25": {
+      "bytes": 13842075,
+      "encoding": "gzip",
+      "sha256": "7fe6355b0eee17a7c1e308e1b8bc7bb69c3e09ecd4ad8933fd55876f824445b7",
+      "written_at": "2026-09-25T18:29:13.250474-04:00"
     }
   },
   "lineups": {
@@ -1488,9 +1499,20 @@
       "bytes": 811,
       "sha256": "b11d83718c093ad29228f4c9c2969295e1b4d5a242a1746d8527fc706a80e68a",
       "written_at": "2026-09-24T23:59:20.426389-04:00"
+    },
+    "2026-09-25": {
+      "bytes": 811,
+      "sha256": "bf7b32721af392489183b67498e2273cb079a312f861f6eb4dad0f7b39fa2edc",
+      "written_at": "2026-09-25T18:29:32.635199-04:00"
     }
   },
-  "prices": {},
+  "prices": {
+    "2026-09-25": {
+      "bytes": 516525,
+      "sha256": "46e906232d3da2924684fa5c6f06fbe32a1c27d752d69823b04b37acc3a71b60",
+      "written_at": "2026-09-25T18:28:33.111302-04:00"
+    }
+  },
   "recipe_rules": {
     "coil_h3_exit_alarm": {
       "created_on": "2026-08-13",
@@ -6692,6 +6714,32 @@
         "data/join/2026-09-24_ranked.csv": "e87a13bdd7926d1407f91d7ece923bca7409d196"
       },
       "written_at": "2026-09-25T07:09:16.170799-04:00"
+    },
+    "2026-09-25": {
+      "bytes": 277141,
+      "dropped_missing_bars": [
+        "HYAC-U",
+        "TBCVU"
+      ],
+      "heat_vintage": "2026-09-25",
+      "n_rows": 62,
+      "sha256": "faaa6aa82c1b571d2703d7471f87ee3e7f02540365fe2fec38765a2b9e9a5dfc",
+      "unpriced_held": [
+        "AIBZ",
+        "ARQQ",
+        "DCX",
+        "DGII",
+        "DYOR",
+        "FJET",
+        "GRC",
+        "IOSP",
+        "IRMD",
+        "KMTS",
+        "UPXI",
+        "WOR",
+        "WTS"
+      ],
+      "written_at": "2026-09-25T18:28:36.304310-04:00"
     }
   },
   "version": 1
