@@ -1,6 +1,6 @@
 {
   "date": "2026-09-25",
-  "generated_at": "2026-09-25T05:48:58.146655-04:00",
+  "generated_at": "2026-09-25T05:49:32.104198-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -25,14 +25,14 @@
     "direction": "up"
   },
   "sectors": {
-    "said": "1 up / 2 down / 2 flat",
+    "said": "1 up / 2 down / 3 flat",
     "bullets": [
       "XLB FLAT +1.4",
       "XLC FLAT -0.4",
       "XLY DOWN -3.2",
       "XLP UP +3.0",
       "XLE DOWN -9.6",
-      "XLF missing",
+      "XLF FLAT -0.1",
       "XLV missing",
       "XLI missing",
       "XLRE missing",
@@ -225,70 +225,70 @@
     },
     {
       "key": "sector_one",
-      "title": "Sector predict Energy (5/11)",
+      "title": "Sector predict Financial (6/11)",
       "date": "2026-09-25",
       "ok": true,
       "pushed": true,
-      "at": "2026-09-25T05:48:57.543149-04:00",
+      "at": "2026-09-25T05:49:31.482334-04:00",
       "files": [
         {
-          "path": "01_daily/sectors/2026-09-25/energy_predict.md",
+          "path": "01_daily/sectors/2026-09-25/financial_predict.md",
           "ok": true,
           "reason": "",
-          "size": 16030,
-          "preview": "# Sector Prediction \u2014 Energy \u2014 2026-09-25\n- news_mode: **on**\n- ETF: **XLE**\n- rubric: `00_grounding/sectors/energy.md`\n- predicted_direction: **down**\n- predicted_magnitude_band: **mild**\n- total_score: **-9.556** (mult 0.85)\n- regime: mixed\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **-5.133** (CL -1.59%, QA -1.02%, ES +0.28%, PM:XLE -0.99%) \u00b7 index_carry **0.676** (general 2.706) \u00b7 llm_overlay **-5.1** (raw -5.1)"
+          "size": 18500,
+          "preview": "# Sector Prediction \u2014 Financial \u2014 2026-09-25\n- news_mode: **on**\n- ETF: **XLF**\n- rubric: `00_grounding/sectors/financial.md`\n- predicted_direction: **flat**\n- predicted_magnitude_band: **flat**\n- total_score: **-0.085** (mult 0.9)\n- regime: mixed\n- divergence_flagged: **True**\n- engine: v2 \u00b7 tape_anchor **0.814** (ES +0.28%, ZN -0.03%, PM:XLF +0.09%) \u00b7 index_carry **0.676** (general 2.706) \u00b7 llm_overlay **-1.575** (raw -1.575)"
         },
         {
-          "path": "01_daily/sectors/2026-09-25/energy_predict_trace.md",
+          "path": "01_daily/sectors/2026-09-25/financial_predict_trace.md",
           "ok": true,
           "reason": "",
-          "size": 389,
-          "preview": "# Reasoning trace \u2014 SECTOR PREDICT Energy 2026-09-25 retry1\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (153,639 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Done researching.** The model stopped searching and wrote its full analysis (14,124 characters)."
+          "size": 385,
+          "preview": "# Reasoning trace \u2014 SECTOR PREDICT Financial 2026-09-25\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (151,365 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Done researching.** The model stopped searching and wrote its full analysis (16,513 characters)."
         },
         {
-          "path": "01_daily/_transcripts/2026-09-25_sector_energy_predict.json",
+          "path": "01_daily/_transcripts/2026-09-25_sector_financial_predict.json",
           "ok": true,
           "reason": "",
-          "size": 172037,
+          "size": 172316,
           "preview": "keys: model, messages"
         },
         {
           "path": "01_daily/2026-09-25_preopen_qc.json",
           "ok": true,
           "reason": "",
-          "size": 7230,
+          "size": 7223,
           "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok"
         },
         {
           "path": "01_daily/sectors/2026-09-25/_qc.json",
           "ok": true,
           "reason": "",
-          "size": 1238,
+          "size": 1234,
           "preview": "keys: date, n_ok, n_total, sectors"
         },
         {
           "path": "01_daily/sectors/2026-09-25/_BOARD.md",
           "ok": true,
           "reason": "",
-          "size": 1743,
-          "preview": "# Sector Board \u2014 2026-09-25\nGenerated: **2026-09-25T05:48:57.528308-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.)."
+          "size": 1746,
+          "preview": "# Sector Board \u2014 2026-09-25\nGenerated: **2026-09-25T05:49:31.466505-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.)."
         },
         {
           "path": "01_daily/sectors/2026-09-25/_board.json",
           "ok": true,
           "reason": "",
-          "size": 6101,
+          "size": 6272,
           "preview": "keys: date, generated_at, sectors"
         },
         {
           "path": "03_scoreboard/scoreboard.json",
           "ok": true,
           "reason": "",
-          "size": 906963,
+          "size": 908040,
           "preview": "keys: runs"
         }
       ],
-      "preview": "# Sector Prediction \u2014 Energy \u2014 2026-09-25\n- news_mode: **on**\n- ETF: **XLE**\n- rubric: `00_grounding/sectors/energy.md`\n- predicted_direction: **down**\n- predicted_magnitude_band: **mild**\n- total_score: **-9.556** (mult 0.85)\n- regime: mixed\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **-5.133** (CL -1.59%, QA -1.02%, ES +0.28%, PM:XLE -0.99%) \u00b7 index_carry **0.676** (general 2.706) \u00b7 llm_overlay **-5.1** (raw -5.1) \u00b7 # Reasoning trace \u2014 SECTOR PREDICT Energy 2026-09-25 retry1\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (153,639 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Done researching.** The model stopped searching and wrote its full analysis (14,124 characters). \u00b7 keys: model, messages \u00b7 keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok \u00b7 keys: date, n_ok, n_total, sectors \u00b7 # Sector Board \u2014 2026-09-25\nGenerated: **2026-09-25T05:48:57.528308-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.). \u00b7 keys: date, generated_at, sector"
+      "preview": "# Sector Prediction \u2014 Financial \u2014 2026-09-25\n- news_mode: **on**\n- ETF: **XLF**\n- rubric: `00_grounding/sectors/financial.md`\n- predicted_direction: **flat**\n- predicted_magnitude_band: **flat**\n- total_score: **-0.085** (mult 0.9)\n- regime: mixed\n- divergence_flagged: **True**\n- engine: v2 \u00b7 tape_anchor **0.814** (ES +0.28%, ZN -0.03%, PM:XLF +0.09%) \u00b7 index_carry **0.676** (general 2.706) \u00b7 llm_overlay **-1.575** (raw -1.575) \u00b7 # Reasoning trace \u2014 SECTOR PREDICT Financial 2026-09-25\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (151,365 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Done researching.** The model stopped searching and wrote its full analysis (16,513 characters). \u00b7 keys: model, messages \u00b7 keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok \u00b7 keys: date, n_ok, n_total, sectors \u00b7 # Sector Board \u2014 2026-09-25\nGenerated: **2026-09-25T05:49:31.466505-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.). \u00b7 keys: date, generated_at, sectors \u00b7 keys"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
