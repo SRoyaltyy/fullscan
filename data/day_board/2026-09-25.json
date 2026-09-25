@@ -1,6 +1,6 @@
 {
   "date": "2026-09-25",
-  "generated_at": "2026-09-25T05:49:32.104198-04:00",
+  "generated_at": "2026-09-25T05:54:11.669603-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -177,7 +177,7 @@
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 15,
+      "n_req_ok": 16,
       "n_req": 20,
       "n_opt_ok": 3,
       "n_opt": 3,
@@ -343,8 +343,8 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 6272,
-          "said": "1 up / 2 down / 3 flat",
+          "size": 6439,
+          "said": "2 up / 2 down / 3 flat",
           "bullets": [
             "XLB FLAT +1.4",
             "XLC FLAT -0.4",
@@ -359,8 +359,8 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 7223,
-          "said": "all_ok=False \u00b7 sectors 6/11 \u00b7 6 fail",
+          "size": 7216,
+          "said": "all_ok=False \u00b7 sectors 7/11 \u00b7 5 fail",
           "bullets": [
             "finviz_market_digest:missing",
             "sector_predict:missing",
@@ -475,11 +475,13 @@
           "name": "Sector predict \u2014 healthcare",
           "path": "01_daily/sectors/2026-09-25/healthcare_predict.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 14842,
+          "said": "UP mild 0.936",
+          "bullets": [
+            "- news_mode: **on"
+          ]
         },
         {
           "key": "sector_industrials",
@@ -526,7 +528,7 @@
           "bullets": []
         }
       ],
-      "said": "general UP  2.706 \u00b7 sectors 1 up / 2 down / 3 flat \u00b7 news news_mode: on \u00b7 400 raw / 81 usable \u00b7 US 10-Year Treasury Yield Tops 5.2%, Fueling Bets on Another Fed Rate Hike - blo",
+      "said": "general UP  2.706 \u00b7 sectors 2 up / 2 down / 3 flat \u00b7 news news_mode: on \u00b7 400 raw / 81 usable \u00b7 US 10-Year Treasury Yield Tops 5.2%, Fueling Bets on Another Fed Rate Hike - blo",
       "bullets": [
         "bad: 1w 10Y +10bp at 5.11 handle",
         "bad: Williams year-end hike 'reasonable'",
@@ -733,8 +735,8 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 6272,
-          "said": "1 up / 2 down / 3 flat",
+          "size": 6439,
+          "said": "2 up / 2 down / 3 flat",
           "bullets": [
             "XLB FLAT +1.4",
             "XLC FLAT -0.4",
@@ -985,7 +987,7 @@
       "direction": "up"
     },
     "sectors": {
-      "said": "1 up / 2 down / 3 flat",
+      "said": "2 up / 2 down / 3 flat",
       "bullets": [
         "XLB FLAT +1.4",
         "XLC FLAT -0.4",
@@ -993,7 +995,7 @@
         "XLP UP +3.0",
         "XLE DOWN -9.6",
         "XLF FLAT -0.1",
-        "XLV missing",
+        "XLV UP +0.9",
         "XLI missing",
         "XLRE missing",
         "XLK missing",
@@ -1733,70 +1735,70 @@
     },
     {
       "key": "sector_one",
-      "title": "Sector predict Financial (6/11)",
+      "title": "Sector predict Healthcare (7/11)",
       "date": "2026-09-25",
       "ok": true,
       "pushed": true,
-      "at": "2026-09-25T05:49:31.482334-04:00",
+      "at": "2026-09-25T05:54:11.032573-04:00",
       "files": [
         {
-          "path": "01_daily/sectors/2026-09-25/financial_predict.md",
+          "path": "01_daily/sectors/2026-09-25/healthcare_predict.md",
           "ok": true,
           "reason": "",
-          "size": 18500,
-          "preview": "# Sector Prediction \u2014 Financial \u2014 2026-09-25\n- news_mode: **on**\n- ETF: **XLF**\n- rubric: `00_grounding/sectors/financial.md`\n- predicted_direction: **flat**\n- predicted_magnitude_band: **flat**\n- total_score: **-0.085** (mult 0.9)\n- regime: mixed\n- divergence_flagged: **True**\n- engine: v2 \u00b7 tape_anchor **0.814** (ES +0.28%, ZN -0.03%, PM:XLF +0.09%) \u00b7 index_carry **0.676** (general 2.706) \u00b7 llm_overlay **-1.575** (raw -1.575)"
+          "size": 14842,
+          "preview": "# Sector Prediction \u2014 Healthcare \u2014 2026-09-25\n- news_mode: **on**\n- ETF: **XLV**\n- rubric: `00_grounding/sectors/healthcare.md`\n- predicted_direction: **up**\n- predicted_magnitude_band: **mild**\n- total_score: **0.936** (mult 0.8)\n- regime: mixed\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **0.26** (ES +0.28%, PM:XLV -0.01%) \u00b7 index_carry **0.676** (general 2.706) \u00b7 llm_overlay **0.0** (raw 0.0)"
         },
         {
-          "path": "01_daily/sectors/2026-09-25/financial_predict_trace.md",
+          "path": "01_daily/sectors/2026-09-25/healthcare_predict_trace.md",
           "ok": true,
           "reason": "",
-          "size": 385,
-          "preview": "# Reasoning trace \u2014 SECTOR PREDICT Financial 2026-09-25\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (151,365 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Done researching.** The model stopped searching and wrote its full analysis (16,513 characters)."
+          "size": 393,
+          "preview": "# Reasoning trace \u2014 SECTOR PREDICT Healthcare 2026-09-25 retry1\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (145,991 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Done researching.** The model stopped searching and wrote its full analysis (13,077 characters)."
         },
         {
-          "path": "01_daily/_transcripts/2026-09-25_sector_financial_predict.json",
+          "path": "01_daily/_transcripts/2026-09-25_sector_healthcare_predict.json",
           "ok": true,
           "reason": "",
-          "size": 172316,
+          "size": 163094,
           "preview": "keys: model, messages"
         },
         {
           "path": "01_daily/2026-09-25_preopen_qc.json",
           "ok": true,
           "reason": "",
-          "size": 7223,
+          "size": 7216,
           "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok"
         },
         {
           "path": "01_daily/sectors/2026-09-25/_qc.json",
           "ok": true,
           "reason": "",
-          "size": 1234,
+          "size": 1230,
           "preview": "keys: date, n_ok, n_total, sectors"
         },
         {
           "path": "01_daily/sectors/2026-09-25/_BOARD.md",
           "ok": true,
           "reason": "",
-          "size": 1746,
-          "preview": "# Sector Board \u2014 2026-09-25\nGenerated: **2026-09-25T05:49:31.466505-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.)."
+          "size": 1802,
+          "preview": "# Sector Board \u2014 2026-09-25\nGenerated: **2026-09-25T05:54:11.018004-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.)."
         },
         {
           "path": "01_daily/sectors/2026-09-25/_board.json",
           "ok": true,
           "reason": "",
-          "size": 6272,
+          "size": 6439,
           "preview": "keys: date, generated_at, sectors"
         },
         {
           "path": "03_scoreboard/scoreboard.json",
           "ok": true,
           "reason": "",
-          "size": 908040,
+          "size": 909111,
           "preview": "keys: runs"
         }
       ],
-      "preview": "# Sector Prediction \u2014 Financial \u2014 2026-09-25\n- news_mode: **on**\n- ETF: **XLF**\n- rubric: `00_grounding/sectors/financial.md`\n- predicted_direction: **flat**\n- predicted_magnitude_band: **flat**\n- total_score: **-0.085** (mult 0.9)\n- regime: mixed\n- divergence_flagged: **True**\n- engine: v2 \u00b7 tape_anchor **0.814** (ES +0.28%, ZN -0.03%, PM:XLF +0.09%) \u00b7 index_carry **0.676** (general 2.706) \u00b7 llm_overlay **-1.575** (raw -1.575) \u00b7 # Reasoning trace \u2014 SECTOR PREDICT Financial 2026-09-25\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (151,365 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Done researching.** The model stopped searching and wrote its full analysis (16,513 characters). \u00b7 keys: model, messages \u00b7 keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok \u00b7 keys: date, n_ok, n_total, sectors \u00b7 # Sector Board \u2014 2026-09-25\nGenerated: **2026-09-25T05:49:31.466505-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.). \u00b7 keys: date, generated_at, sectors \u00b7 keys"
+      "preview": "# Sector Prediction \u2014 Healthcare \u2014 2026-09-25\n- news_mode: **on**\n- ETF: **XLV**\n- rubric: `00_grounding/sectors/healthcare.md`\n- predicted_direction: **up**\n- predicted_magnitude_band: **mild**\n- total_score: **0.936** (mult 0.8)\n- regime: mixed\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **0.26** (ES +0.28%, PM:XLV -0.01%) \u00b7 index_carry **0.676** (general 2.706) \u00b7 llm_overlay **0.0** (raw 0.0) \u00b7 # Reasoning trace \u2014 SECTOR PREDICT Healthcare 2026-09-25 retry1\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (145,991 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Done researching.** The model stopped searching and wrote its full analysis (13,077 characters). \u00b7 keys: model, messages \u00b7 keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok \u00b7 keys: date, n_ok, n_total, sectors \u00b7 # Sector Board \u2014 2026-09-25\nGenerated: **2026-09-25T05:54:11.018004-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.). \u00b7 keys: date, generated_at, sectors \u00b7 keys: runs"
     }
   ],
   "href": {
