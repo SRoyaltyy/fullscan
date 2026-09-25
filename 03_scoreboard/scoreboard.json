@@ -27865,18 +27865,119 @@
         "B7_OIL_DOLLAR": 0.5
       },
       "leading_sum": -1.0,
-      "actual_open": null,
-      "actual_close": null,
-      "actual_pct_change": null,
-      "actual_direction": null,
-      "actual_magnitude_band": null,
-      "direction_hit": null,
-      "magnitude_hit": null,
+      "actual_open": 7709.86,
+      "actual_close": 7743.41,
+      "actual_pct_change": 0.51,
+      "actual_direction": "up",
+      "actual_magnitude_band": "mild",
+      "direction_hit": true,
+      "magnitude_hit": true,
       "divergence_flagged": false,
       "divergence_verdict": null,
-      "per_factor_breakdown": [],
+      "per_factor_breakdown": [
+        {
+          "factor": "B0_ASIA",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B0_EUROPE",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B1_CATALYSTS",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B2_BONDS",
+          "score": -0.5,
+          "status": "miss"
+        },
+        {
+          "factor": "B3_FEDPATH",
+          "score": -0.5,
+          "status": "miss"
+        },
+        {
+          "factor": "B4_VIX",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B5_SENTIMENT",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B6_FUTURES",
+          "score": 0.5,
+          "status": "hit"
+        },
+        {
+          "factor": "B7_OIL_DOLLAR",
+          "score": 0.5,
+          "status": "hit"
+        }
+      ],
       "reflection_lesson_ref": null,
-      "sources_used": [],
+      "sources_used": [
+        {
+          "url": "https://apnews.com/article/stocks-markets-oil-bond-us-b3b7a2b6a065f88e7a92fb58379d55dd",
+          "date_accessed": "2026-09-25",
+          "summary": "AP attributes the up day primarily to an oil-price cooldown relieving bond-market pressure.",
+          "verification": "http_403"
+        },
+        {
+          "url": "https://finance.yahoo.com/markets/live/stock-market-today-friday-september-25-dow-sp-500-nasdaq-081738529.html",
+          "date_accessed": "2026-09-25",
+          "summary": "Yahoo confirms the weekly-win framing and identifies yields and oil as the two swing factors.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.tickmill.com/blog/daily-market-outlook-september-25-2026",
+          "date_accessed": "2026-09-25",
+          "summary": "Documents the bond-market stabilization that was the necessary condition for the equity bid.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.reuters.com/world/china/global-markets-global-markets-2026-09-24/",
+          "date_accessed": "2026-09-25",
+          "summary": "Establishes the structural yield backdrop that Friday's reprieve interrupted.",
+          "verification": "http_401"
+        },
+        {
+          "url": "https://www.cnbc.com/2026/09/23/stock-market-today-live-updates.html",
+          "date_accessed": "2026-09-25",
+          "summary": "Identifies the shared root of the oil-down / dollar-down / energy-stock-down cluster.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.cnbc.com/2026/09/25/trump-xi-china-trade-greer.html",
+          "date_accessed": "2026-09-25",
+          "summary": "Mid-session catalyst that added a mild positive but deferred the real news to Monday.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://whbl.com/2026/09/25/feds-hammack-says-bond-yield-surge-not-about-lost-inflation-confidence/",
+          "date_accessed": "2026-09-25",
+          "summary": "A hawkish mid-session voice that the tape fully absorbed without selling off.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://tech-insider.org/stocktwits-ai-roundup-muse-akamai-oracle-2026/",
+          "date_accessed": "2026-09-25",
+          "summary": "Documents the AI bid that nonetheless failed to produce NDX index leadership.",
+          "verification": "http_403"
+        },
+        {
+          "url": "https://www.financecharts.com/etfs/XLE",
+          "date_accessed": "2026-09-25",
+          "summary": "Confirms energy was the day's clear laggard, consistent with the oil-down rotation.",
+          "verification": "http_403"
+        }
+      ],
       "horizon_calls": {
         "HORIZON_3D": {
           "trading_days": 3,
@@ -27906,7 +28007,14 @@
       "news_judge_present": true,
       "engine": "v2",
       "anchor_score": 2.206,
-      "overlay_score": 0.5
+      "overlay_score": 0.5,
+      "ops_fail": false,
+      "path_shape": "trend up (closed near day high)",
+      "primary_driver": "Oil cooldown on the US–Iran phased-Hormuz-deal report, which steadied the bond market and released the discount-rate squeeze",
+      "key_interaction": "Offsetting/masking — the oil-and-yield relief (positive) roughly cancelled the still-live 5.2% 10Y and unresolved Hormuz war (negative), so the calm +0.51% close understates how close the tape remained to the prior three sessions' yield-driven selloff",
+      "knowable_at_9am": "partially — oil was already offered and the phased-deal report was dated 09-24, so the direction was foreseeable; the magnitude of the equity response and the cyclical-over-tech leadership were not",
+      "attribution_contested": "yes — AP/WSJ lead with oil relief, Bloomberg/CNN lead with bond-market stabilization, Yahoo frames equities as shrugging off the selloff",
+      "outlier_watch": "NDX (+0.48%) lagged the Dow (+0.93%) despite the premarket tape showing NQ leadership, and HY spreads widened (2.73→2.80) even as equities rallied — credit did not confirm the risk-on"
     },
     {
       "date": "2026-09-25",
