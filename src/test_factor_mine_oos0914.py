@@ -23,12 +23,27 @@ def test_preregister_stays_small() -> None:
     assert doc["designed_after"] == "2026-09-14"
     assert doc["selection"]["random4"]["seed"] == 20260813
     assert doc["selection"]["random4"]["draws"] == 1000
+    assert doc["max_candidates"] == 50
+    assert doc["trim"]["luck_test_n"] == 37
+    assert doc["trim"]["before_mining"] is True
     cands = oos.expand_candidates(doc)
     assert len(cands) <= 50
-    assert len(cands) == 40
+    assert len(cands) == 37
+    own = [c for c in cands if c["family"] == "own"]
+    war = [c for c in cands if c["family"] != "own"]
+    assert len(own) == 20
+    assert len(war) == 17
     assert cands[0]["id"] == "lg_hot_h1_sx"
-    assert cands[-1]["id"] == "zero_candle_h2_s8"
-    assert cands[1]["stop_pct"] == 0.08
+    assert cands[1]["id"] == "lg_hot_h2_sx"
+    assert cands[1]["stop_pct"] is None
+    assert all(c["stop_pct"] is None for c in own)
+    assert all(c["created_on"] == "2026-09-14" for c in own)
+    assert all(c["created_on"] == "2026-09-28" for c in war)
+    assert cands[-1]["id"] == "tr12_dfpe_first_top_hammer_h3"
+    assert not any("short" in str(c["family"]) for c in cands)
+    for spec in doc["war_room_files"].values():
+        raw = (oos.ROOT / spec["path"]).read_bytes()
+        assert hashlib.sha256(raw).hexdigest() == spec["sha256"]
 
 
 def test_no_future_read(tmp_path: Path) -> None:
@@ -177,8 +192,8 @@ def test_ironclad_linked_from_scoreboard() -> None:
     for number in range(1, 24):
         assert f"\n{number}. " in text
     board = oos.SCOREBOARD.read_text(encoding="utf-8")
-    assert board == oos.render_hold_scoreboard()
     assert "../IRONCLAD_RULES.md" in board
+    assert "../IRONCLAD_RULES.md" in oos.render_hold_scoreboard()
     sample = oos.render_scoreboard(
         {"n_candidates": 0, "random4": {}, "iwm": {}, "rows": [], "train": {"sessions": []}},
         None,
@@ -842,11 +857,57 @@ def test_rule_23_no_real_money_yet() -> None:
     assert oos.STATE_ROOT != seq.STATE_DIR
 
 
+def test_excel_feature_uses_prior_close() -> None:
+    import pandas as pd
+    from src.factor_mine_oos0914_excel import build_features
+
+    rows = []
+    for i, close in enumerate((10.0, 11.0, 12.0)):
+        rows.append({
+            "date": f"2026-08-{10 + i:02d}",
+            "ticker": "AAA",
+            "open": close,
+            "high": close + 0.5,
+            "low": close - 0.5,
+            "close": close,
+            "volume": 1000.0,
+        })
+    feat = build_features(pd.DataFrame(rows))
+    last = feat[feat["date"] == "2026-08-12"].iloc[0]
+    assert abs(float(last["ret1"]) - 0.1) < 1e-9
+
+
+def test_theme_train_does_not_open_future_snapshot(tmp_path: Path) -> None:
+    import pandas as pd
+    from src.factor_mine_oos0914_theme import (
+        _top_quintile, read_snapshot, snapshot_dates,
+    )
+
+    tmp_path.mkdir(parents=True, exist_ok=True)
+    (tmp_path / "2026-09-11.csv").write_text(
+        "Ticker,Forward P/E,Market Cap,Analyst Recom\nAAA,1,1,1\n",
+        encoding="utf-8",
+    )
+    future = tmp_path / "2026-09-14.csv"
+    future.write_text("CANARY\n", encoding="utf-8")
+    assert snapshot_dates(tmp_path, allow_test=False) == ["2026-09-11"]
+    try:
+        read_snapshot(tmp_path, "2026-09-14", allow_test=False)
+        raised = False
+    except oos.FutureLeak:
+        raised = True
+    assert raised
+    assert future.read_text(encoding="utf-8") == "CANARY\n"
+    top = _top_quintile(pd.Series({f"T{i}": float(i) for i in range(5)}))
+    assert top == {"T4"}
+
+
 def main() -> None:
     import tempfile
     manifest = fmf.MANIFEST_PATH.read_bytes()
     test_ironclad_linked_from_scoreboard()
     test_preregister_stays_small()
+    test_excel_feature_uses_prior_close()
     test_rule_05_designed_after()
     test_rule_14_futubull_plus_flat_15bp()
     test_rule_18_small_list_and_luck_null()
@@ -875,6 +936,7 @@ def main() -> None:
         test_rule_15_no_future_load(root / "r15")
         test_rule_16_list_committed_before_mining(root / "r16")
         test_rule_17_freeze_before_test_score(root / "r17")
+        test_theme_train_does_not_open_future_snapshot(root / "theme")
     assert fmf.MANIFEST_PATH.read_bytes() == manifest
     print("oos0914 tests passed")
 

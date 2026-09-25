@@ -2,7 +2,10 @@
   "track": "OOS-0914",
   "designed_after": "2026-09-14",
   "knowable_before": "2026-09-14T09:30:00-04:00",
-  "train_sessions": {"start": "2026-08-13", "end": "2026-09-11"},
+  "train_sessions": {
+    "start": "2026-08-13",
+    "end": "2026-09-11"
+  },
   "price_history_end": "2026-09-11",
   "cutoff": "2026-09-14",
   "max_candidates": 50,
@@ -21,7 +24,11 @@
     "hard_red": false
   },
   "selection": {
-    "rank": ["after_fees_return_desc", "start_day_win_rate_desc", "name_asc"],
+    "rank": [
+      "after_fees_return_desc",
+      "start_day_win_rate_desc",
+      "name_asc"
+    ],
     "max_freeze": 5,
     "name_prefix": "oos0914_",
     "pass": {
@@ -41,24 +48,381 @@
       "universe": "that morning's frozen snapshot rows",
       "fees_train": "futubull"
     },
-    "iwm": {"mode": "buy_and_hold", "fees_train": "futubull"},
+    "iwm": {
+      "mode": "buy_and_hold",
+      "fees_train": "futubull"
+    },
     "test_baseline_fees": "futubull_plus_flat_15bp",
     "flat_bp_round_trip": 15
   },
   "grid": {
-    "holds": [1, 2],
-    "stop_pcts": [null, 0.08]
+    "holds": [
+      1,
+      2
+    ],
+    "stop_pcts": [
+      null
+    ]
   },
   "bases": [
-    {"id": "lg_hot", "require": {"last_green": true}, "forbid": {"alarm": true}, "rank": "hot_score"},
-    {"id": "rsi_os", "require": {"rsi_os": true}, "forbid": {}, "rank": "rsi"},
-    {"id": "rvol_lg", "require": {"last_green": true, "rvol_min": 1.5}, "forbid": {"alarm": true}, "rank": "hot_score"},
-    {"id": "ret5_up", "require": {"ret_5_min": 0}, "forbid": {"alarm": true}, "rank": "ret_5"},
-    {"id": "pullback", "require": {"last_green": true, "ret_5_max": -3}, "forbid": {"alarm": true}, "rank": "hot_score"},
-    {"id": "break10", "require": {"break_10": true}, "forbid": {"alarm": true}, "rank": "hot_score"},
-    {"id": "macd_x", "require": {"macd_cross_up": true}, "forbid": {}, "rank": "macd_hist"},
-    {"id": "flow_lg", "require": {"flow_in": true, "last_green": true}, "forbid": {"alarm": true}, "rank": "hot_score"},
-    {"id": "yday_white", "require": {"yday_up": true, "cam_bad_max": 0}, "forbid": {"alarm": true}, "rank": "cond"},
-    {"id": "zero_candle", "require": {"zero_red": true, "last_green": true}, "forbid": {"alarm": true}, "rank": "candle_score"}
-  ]
+    {
+      "id": "lg_hot",
+      "require": {
+        "last_green": true
+      },
+      "forbid": {
+        "alarm": true
+      },
+      "rank": "hot_score"
+    },
+    {
+      "id": "rsi_os",
+      "require": {
+        "rsi_os": true
+      },
+      "forbid": {},
+      "rank": "rsi"
+    },
+    {
+      "id": "rvol_lg",
+      "require": {
+        "last_green": true,
+        "rvol_min": 1.5
+      },
+      "forbid": {
+        "alarm": true
+      },
+      "rank": "hot_score"
+    },
+    {
+      "id": "ret5_up",
+      "require": {
+        "ret_5_min": 0
+      },
+      "forbid": {
+        "alarm": true
+      },
+      "rank": "ret_5"
+    },
+    {
+      "id": "pullback",
+      "require": {
+        "last_green": true,
+        "ret_5_max": -3
+      },
+      "forbid": {
+        "alarm": true
+      },
+      "rank": "hot_score"
+    },
+    {
+      "id": "break10",
+      "require": {
+        "break_10": true
+      },
+      "forbid": {
+        "alarm": true
+      },
+      "rank": "hot_score"
+    },
+    {
+      "id": "macd_x",
+      "require": {
+        "macd_cross_up": true
+      },
+      "forbid": {},
+      "rank": "macd_hist"
+    },
+    {
+      "id": "flow_lg",
+      "require": {
+        "flow_in": true,
+        "last_green": true
+      },
+      "forbid": {
+        "alarm": true
+      },
+      "rank": "hot_score"
+    },
+    {
+      "id": "yday_white",
+      "require": {
+        "yday_up": true,
+        "cam_bad_max": 0
+      },
+      "forbid": {
+        "alarm": true
+      },
+      "rank": "cond"
+    },
+    {
+      "id": "zero_candle",
+      "require": {
+        "zero_red": true,
+        "last_green": true
+      },
+      "forbid": {
+        "alarm": true
+      },
+      "rank": "candle_score"
+    }
+  ],
+  "trim": {
+    "decided": "2026-09-25",
+    "before_mining": true,
+    "reason": "40 own candidates plus 17 War room candidates is 57, which breaks the 50 cap. Drop every 8% stop variant. 10 gates times holds 1 and 2 leaves 20 of ours. 20 plus 17 is 37. The cap stays 50. Nothing else in the own grid changes. The luck test N is 37.",
+    "dropped": "every own candidate whose stop is 8%",
+    "own_remaining": 20,
+    "war_room": 17,
+    "total": 37,
+    "luck_test_n": 37,
+    "cap": 50
+  },
+  "war_room_files": {
+    "excel": {
+      "path": "data/factor_mine/oos0914_candidates_excel.md",
+      "sha256": "9061cd8d78a70e7bdcb75650918a7cae9d045711d1d4bcf57f427291828902a8"
+    },
+    "theme_radar": {
+      "path": "data/factor_mine/oos0914_candidates_theme_radar.md",
+      "sha256": "932d7e2a422545495d6ef6e0f9e6f657851fdc21266942ae0c64d2b4a77b1200"
+    }
+  },
+  "excel": {
+    "author": "excel",
+    "created_on": "2026-09-28",
+    "designed_after_through": "2026-09-25",
+    "clean_from": "2026-09-28",
+    "seed": 7,
+    "top_n": 4,
+    "hold": 1,
+    "exit": "close",
+    "size": "equal",
+    "fees": "futubull",
+    "target": "open_to_close_minus_0.0015",
+    "tie_break": "ticker_asc",
+    "zscore_cap": 5,
+    "features": [
+      "ret1",
+      "ret5",
+      "ret20",
+      "gap1",
+      "range1",
+      "relvol",
+      "log_relvol",
+      "atr14_pct",
+      "dist_hi20",
+      "dist_lo20",
+      "log_price",
+      "log_dolvol",
+      "ret1_x_log_relvol"
+    ],
+    "train_universe": {
+      "ret1_abs_min": 0.05,
+      "relvol_min": 2.0,
+      "min_prev_close": 1.0,
+      "min_avg_dollar_vol": 1000000
+    },
+    "live_universe": "data/factor_mine/candidates/<date>.json",
+    "models": [
+      {
+        "id": "ridge_px",
+        "model": "ridge",
+        "alphas": [
+          0.1,
+          1,
+          10,
+          100,
+          1000
+        ]
+      },
+      {
+        "id": "logit_px",
+        "model": "logit",
+        "C": [
+          0.01,
+          0.1,
+          1,
+          10
+        ],
+        "positive_above": 0.01
+      },
+      {
+        "id": "gbm_px",
+        "model": "gbm",
+        "max_depth": 3,
+        "max_iter": 300,
+        "learning_rate": 0.05,
+        "min_samples_leaf": 200
+      },
+      {
+        "id": "ens_px",
+        "model": "ensemble",
+        "members": [
+          "ridge_px",
+          "gbm_px"
+        ]
+      },
+      {
+        "id": "ridge_px_exmega",
+        "model": "ridge_exmega",
+        "parent": "ridge_px",
+        "ret1_abs_max": 0.4
+      }
+    ]
+  },
+  "theme_radar_skip": {
+    "author": "theme_radar",
+    "created_on": "2026-09-28",
+    "designed_after_through": "2026-09-25",
+    "clean_from": "2026-09-28",
+    "role": "skip gate on long picks",
+    "parent": {
+      "universe": "union",
+      "rank": "hot_score",
+      "top_n": 4,
+      "sell": "time",
+      "size": "leftover"
+    },
+    "no_backfill": true,
+    "since_first": "2026-08-06",
+    "top_bin": "qcut_5",
+    "earn_values": [
+      "today",
+      "tomorrow",
+      "this_week"
+    ],
+    "rules": [
+      {
+        "id": "tr01_fpe_top_earn_h3",
+        "field": "Forward P/E",
+        "lag": "level",
+        "op": "top_quintile",
+        "earn": true,
+        "er": false,
+        "hammer": false,
+        "hold": 3
+      },
+      {
+        "id": "tr02_dfpe_t3_top_earn_h3",
+        "field": "Forward P/E",
+        "lag": "T-3",
+        "op": "top_quintile",
+        "earn": true,
+        "er": false,
+        "hammer": false,
+        "hold": 3
+      },
+      {
+        "id": "tr03_dfpe_t2_top_earn_h3",
+        "field": "Forward P/E",
+        "lag": "T-2",
+        "op": "top_quintile",
+        "earn": true,
+        "er": false,
+        "hammer": false,
+        "hold": 3
+      },
+      {
+        "id": "tr04_dfpe_t3_pos_earn_h3",
+        "field": "Forward P/E",
+        "lag": "T-3",
+        "op": "positive",
+        "earn": true,
+        "er": false,
+        "hammer": false,
+        "hold": 3
+      },
+      {
+        "id": "tr05_dmcap_t3_top_earn_h3",
+        "field": "Market Cap",
+        "lag": "T-3",
+        "op": "top_quintile",
+        "earn": true,
+        "er": false,
+        "hammer": false,
+        "hold": 3
+      },
+      {
+        "id": "tr06_dfpe_first_top_earn_h3",
+        "field": "Forward P/E",
+        "lag": "since_first",
+        "op": "top_quintile",
+        "earn": true,
+        "er": false,
+        "hammer": false,
+        "hold": 3
+      },
+      {
+        "id": "tr07_drecom_t3_down_er_h3",
+        "field": "Analyst Recom",
+        "lag": "T-3",
+        "op": "negative",
+        "earn": false,
+        "er": true,
+        "hammer": false,
+        "hold": 3
+      },
+      {
+        "id": "tr08_dfpe_t1_top_hammer_h2",
+        "field": "Forward P/E",
+        "lag": "T-1",
+        "op": "top_quintile",
+        "earn": false,
+        "er": false,
+        "hammer": true,
+        "hold": 2
+      },
+      {
+        "id": "tr09_dfpe_t1_top_hammer_h3",
+        "field": "Forward P/E",
+        "lag": "T-1",
+        "op": "top_quintile",
+        "earn": false,
+        "er": false,
+        "hammer": true,
+        "hold": 3
+      },
+      {
+        "id": "tr10_dfpe_t2_pos_hammer_h2",
+        "field": "Forward P/E",
+        "lag": "T-2",
+        "op": "positive",
+        "earn": false,
+        "er": false,
+        "hammer": true,
+        "hold": 2
+      },
+      {
+        "id": "tr11_dfpe_first_top_hammer_h2",
+        "field": "Forward P/E",
+        "lag": "since_first",
+        "op": "top_quintile",
+        "earn": false,
+        "er": false,
+        "hammer": true,
+        "hold": 2
+      },
+      {
+        "id": "tr12_dfpe_first_top_hammer_h3",
+        "field": "Forward P/E",
+        "lag": "since_first",
+        "op": "top_quintile",
+        "earn": false,
+        "er": false,
+        "hammer": true,
+        "hold": 3
+      }
+    ]
+  },
+  "theme_radar_short_research": {
+    "in_candidate_count": false,
+    "in_freeze_ranking": false,
+    "entry": "T+1 close",
+    "cover": "close h sessions later",
+    "costs": "15bp round trip plus 0.3 percent borrow",
+    "borrow": 0.003,
+    "flat_bp_round_trip": 15,
+    "note": "Same 12 gates, scored only as research. Not part of the 37."
+  }
 }

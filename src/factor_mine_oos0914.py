@@ -29,6 +29,7 @@ FROZEN_PATH = OUT_DIR / "frozen_rules.json"
 TEST_REPORT = OUT_DIR / "test_report.json"
 STATE_ROOT = OUT_DIR / "state"
 LEDGER_DIR = OUT_DIR / "ledgers"
+FROZEN_LIST = OUT_DIR / "frozen_list.json"
 SCOREBOARD = ROOT / "03_scoreboard" / "FACTOR_MINE_OOS0914.md"
 LIVE_OHLC = ROOT / "data" / "prices" / "ohlc.parquet"
 LIVE_META = ROOT / "data" / "prices" / "meta.json"
@@ -65,12 +66,15 @@ def load_preregister(path: Path | None = None) -> dict:
 
 
 def expand_candidates(doc: dict | None = None) -> list[dict]:
-    """The preregistered grid. Order is bases, then holds, then stops."""
+    """The preregistered grid. Own gates first, then Excel, then Theme Radar.
+
+    The short Theme Radar books are research and are not in this list.
+    """
     doc = doc if doc is not None else load_preregister()
     grid = doc.get("grid") or {}
     book = doc.get("book") or {}
     holds = [int(h) for h in (grid.get("holds") or [])]
-    stops = list(grid.get("stop_pcts") or [])
+    stops = list(grid.get("stop_pcts") or [None])
     cap = int(doc.get("max_candidates") or 50)
     out = []
     for base in doc.get("bases") or []:
@@ -80,6 +84,9 @@ def expand_candidates(doc: dict | None = None) -> list[dict]:
                 tag = "sx" if stop is None else f"s{int(round(100 * float(stop)))}"
                 out.append({
                     "id": f"{bid}_h{hold}_{tag}",
+                    "author": "oos",
+                    "family": "own",
+                    "created_on": DESIGNED_AFTER,
                     "universe": book.get("universe") or "union",
                     "hold": hold,
                     "side": book.get("side") or "long",
@@ -95,6 +102,65 @@ def expand_candidates(doc: dict | None = None) -> list[dict]:
                     "take_pct": None,
                     "stop_pct": None if stop is None else float(stop),
                 })
+    excel = doc.get("excel") or {}
+    for model in excel.get("models") or []:
+        out.append({
+            "id": model["id"],
+            "author": "excel",
+            "family": "excel",
+            "created_on": excel.get("created_on") or "2026-09-28",
+            "clean_from": excel.get("clean_from") or "2026-09-28",
+            "designed_after_through": excel.get("designed_after_through") or "2026-09-25",
+            "universe": "candidates",
+            "hold": int(excel.get("hold") or 1),
+            "side": "long",
+            "top_n": int(excel.get("top_n") or 4),
+            "require": {"family": "excel", **model},
+            "forbid": {},
+            "rank": "model",
+            "exit_when": {},
+            "size": excel.get("size") or "equal",
+            "sell": excel.get("exit") or "close",
+            "s_boost": "none",
+            "day_cap": 1.0,
+            "take_pct": None,
+            "stop_pct": None,
+        })
+    theme = doc.get("theme_radar_skip") or {}
+    parent = theme.get("parent") or {}
+    for rule in theme.get("rules") or []:
+        out.append({
+            "id": rule["id"],
+            "author": "theme_radar",
+            "family": "theme_radar_skip",
+            "created_on": theme.get("created_on") or "2026-09-28",
+            "clean_from": theme.get("clean_from") or "2026-09-28",
+            "designed_after_through": theme.get("designed_after_through") or "2026-09-25",
+            "universe": parent.get("universe") or "union",
+            "hold": int(rule["hold"]),
+            "side": "long",
+            "top_n": int(parent.get("top_n") or 4),
+            "require": {
+                "family": "theme_radar_skip",
+                "field": rule["field"],
+                "lag": rule["lag"],
+                "op": rule["op"],
+                "earn": bool(rule.get("earn")),
+                "er": bool(rule.get("er")),
+                "hammer": bool(rule.get("hammer")),
+                "since_first": theme.get("since_first") or "2026-08-06",
+                "no_backfill": bool(theme.get("no_backfill", True)),
+            },
+            "forbid": {},
+            "rank": parent.get("rank") or "hot_score",
+            "exit_when": {},
+            "size": parent.get("size") or "leftover",
+            "sell": parent.get("sell") or "time",
+            "s_boost": "none",
+            "day_cap": 1.0,
+            "take_pct": None,
+            "stop_pct": None,
+        })
     if len(out) > cap:
         raise RuntimeError(f"preregister expands to {len(out)} candidates; cap is {cap}")
     return out
@@ -103,6 +169,8 @@ def expand_candidates(doc: dict | None = None) -> list[dict]:
 def study_recipes(doc: dict | None = None) -> list[dict]:
     recipes = []
     for cand in expand_candidates(doc):
+        if cand.get("family") not in (None, "own"):
+            continue
         recipes.append(fm.make_recipe(
             cand["id"],
             universe=cand["universe"],
@@ -526,34 +594,59 @@ def mine() -> dict:
         LIVE_OHLC, dates, tickers, max_date=TRAIN_END, allow_test=False,
     )
     print(f"[oos0914] train days={len(dates)} names={len(tickers)} "
-          f"candidates={len(recipes)}", flush=True)
+          f"own={len(recipes)} candidates={len(expand_candidates(doc))}", flush=True)
     history = _score_named(dates, recipes, snaps, bars)
+    cands = expand_candidates(doc)
+    excel_ids = [c["id"] for c in cands if c.get("family") == "excel"]
+    theme_ids = [c for c in cands if c.get("family") == "theme_radar_skip"]
+    if excel_ids:
+        from .factor_mine_oos0914_excel import score_dates as excel_score
+        history.update(excel_score(dates, allow_test=False))
+    if theme_ids:
+        history.update(_score_theme(dates, theme_ids, snaps, bars, allow_test=False))
     random4 = score_random4(dates, snaps, bars, flat_15bp=False)
     iwm = score_iwm(dates, bars, flat_15bp=False)
     rows = []
-    for rec in recipes:
-        name = rec["name"]
+    own_by_name = {rec["name"]: rec for rec in recipes}
+    for cand in cands:
+        name = cand["id"]
         series = history.get(name) or []
         ret = compound_return(series)
         start = start_day_win_rate(series)
         winner = best_ticker(series)
         without = ret
-        if winner:
+        if winner and cand.get("family") == "excel":
+            from .factor_mine_oos0914_excel import load_fit, score_dates as excel_score
+            again = excel_score(dates, allow_test=False, fit=load_fit(), exclude=winner)
+            without = compound_return(again.get(name) or [])
+        elif winner and cand.get("family") == "theme_radar_skip":
+            again = _score_theme(
+                dates, [cand], snaps, bars, allow_test=False, exclude=winner,
+            )
+            without = compound_return(again.get(name) or [])
+        elif winner and name in own_by_name:
             again = _score_named(
-                dates, [rec], _without(snaps, winner), bars,
+                dates, [own_by_name[name]], _without(snaps, winner), bars,
             )
             without = compound_return(again.get(name) or [])
         row = {
             "id": name,
+            "author": cand.get("author"),
+            "family": cand.get("family"),
+            "created_on": cand.get("created_on"),
+            "daily": [
+                {"date": item.get("date"), "ret_pct": item.get("mean")}
+                for item in series
+            ],
             "after_fees_return": ret,
             "start_day_win_rate": start,
             "best_stock": winner,
             "without_best_stock_return": without,
-            "hold": rec["hold"],
-            "stop_pct": rec.get("stop_pct"),
-            "rank": rec.get("rank"),
-            "require": rec.get("require") or {},
-            "forbid": rec.get("forbid") or {},
+            "hold": cand.get("hold"),
+            "stop_pct": cand.get("stop_pct"),
+            "rank": cand.get("rank"),
+            "require": cand.get("require") or {},
+            "forbid": cand.get("forbid") or {},
             "n_days": len(series),
             "final_equity": None if not series else series[-1].get("equity"),
         }
@@ -600,7 +693,58 @@ def _without(snaps: dict, ticker: str) -> dict:
     return out
 
 
+def _score_theme(dates, studies, snaps, bars, *, allow_test: bool,
+                 exclude: str | None = None) -> dict[str, list]:
+    from .factor_mine_oos0914_theme import kept_rows, skip_calendar
+
+    rules = []
+    for study in studies:
+        req = study["require"]
+        rules.append({
+            "id": study["id"],
+            "field": req["field"],
+            "lag": req["lag"],
+            "op": req["op"],
+            "earn": req.get("earn"),
+            "er": req.get("er"),
+            "hammer": req.get("hammer"),
+            "hold": study["hold"],
+            "since_first": req.get("since_first"),
+        })
+    flags = skip_calendar(dates, rules, allow_test=allow_test)
+    ban = str(exclude or "").upper()
+    history = {}
+    for study in studies:
+        rec = fm.make_recipe(
+            study["id"], universe=study.get("universe") or "union",
+            hold=int(study["hold"]), top_n=int(study.get("top_n") or 4),
+            rank=study.get("rank") or "hot_score", sell=study.get("sell") or "time",
+            size=study.get("size") or "leftover",
+        )
+
+        def rows_for(date, study=study, rec=rec):
+            rows = snapshot_rows(snaps.get(date) or {}, date)
+            if ban:
+                rows = [
+                    row for row in rows
+                    if str(row.get("ticker") or "").upper() != ban
+                ]
+            return kept_rows(rows, rec, flags[study["id"]].get(date))
+
+        history.update(_walk(dates, [rec], rows_for, bars, root=None, persist=False))
+    return history
+
+
 def _frozen_recipe(study: dict) -> dict:
+    created = str(study.get("created_on") or DESIGNED_AFTER)[:10]
+    note = "OOS-0914 frozen rule."
+    if study.get("clean_from"):
+        note += (
+            f" Clean record starts {study['clean_from']}."
+            f" {DESIGNED_AFTER} through {study.get('designed_after_through')} is designed_after."
+        )
+    else:
+        note += " designed_after 2026-09-14."
     rec = fm.make_recipe(
         f"oos0914_{study['id']}",
         universe=study.get("universe") or "union",
@@ -614,9 +758,15 @@ def _frozen_recipe(study: dict) -> dict:
         sell=study.get("sell") or "time",
         take_pct=study.get("take_pct"),
         stop_pct=study.get("stop_pct"),
-        note="OOS-0914 frozen rule. designed_after 2026-09-14.",
+        note=note,
+        created_on=created,
     )
-    rec["created_on"] = DESIGNED_AFTER
+    rec["created_on"] = created
+    rec["author"] = study.get("author")
+    rec["family"] = study.get("family") or "own"
+    if study.get("clean_from"):
+        rec["clean_from"] = study["clean_from"]
+        rec["designed_after_through"] = study.get("designed_after_through")
     return rec
 
 
@@ -631,6 +781,7 @@ def freeze() -> dict:
         payload = {"designed_after": DESIGNED_AFTER, "recipes": []}
         OUT_DIR.mkdir(parents=True, exist_ok=True)
         FROZEN_PATH.write_text(json.dumps(payload, indent=2), encoding="utf-8")
+        write_frozen_list(report, [])
         return payload
     by_id = {r["id"]: r for r in expand_candidates()}
     recipes = []
@@ -648,7 +799,45 @@ def freeze() -> dict:
         },
     }
     FROZEN_PATH.write_text(json.dumps(payload, indent=2), encoding="utf-8")
+    write_frozen_list(report, recipes)
     print(f"[oos0914] froze {[r['name'] for r in recipes]}", flush=True)
+    return payload
+
+
+def write_frozen_list(report: dict, selected: list[dict]) -> dict:
+    """Every preregistered candidate, fingerprinted, with its train daily path.
+
+    Excel's luck test reads this file. It has no test-window results.
+    """
+    chosen = {rec.get("name") for rec in selected}
+    by_id = {row["id"]: row for row in (report.get("rows") or [])}
+    candidates = []
+    for study in expand_candidates():
+        rec = _frozen_recipe(study)
+        train = by_id.get(study["id"]) or {}
+        candidates.append({
+            "id": study["id"],
+            "name": rec["name"],
+            "author": study.get("author"),
+            "family": study.get("family"),
+            "created_on": rec.get("created_on"),
+            "sha256": fmr.recipe_fingerprint(rec),
+            "selected": rec["name"] in chosen,
+            "after_fees_return": train.get("after_fees_return"),
+            "daily": train.get("daily") or [],
+        })
+    payload = {
+        "track": "OOS-0914",
+        "path": "data/factor_mine/oos0914/frozen_list.json",
+        "luck_test_n": len(candidates),
+        "train": (report.get("train") or {}),
+        "selected": [rec.get("name") for rec in selected],
+        "candidates": candidates,
+    }
+    OUT_DIR.mkdir(parents=True, exist_ok=True)
+    dest = OUT_DIR / "frozen_list.json"
+    dest.write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8")
+    print(f"[oos0914] frozen list {dest} n={len(candidates)}", flush=True)
     return payload
 
 
@@ -777,7 +966,7 @@ def _rows_for_factory(snaps: dict):
 
 
 def walk_test(dates: list[str], recipes: list[dict], *,
-              root: Path | None = None) -> None:
+              root: Path | None = None, ledger: bool = True) -> None:
     """Sequential lock. Existing state files are not recomputed."""
     root = Path(root or STATE_ROOT)
     if not recipes or not dates:
@@ -801,8 +990,9 @@ def walk_test(dates: list[str], recipes: list[dict], *,
         return snapshot_rows(snaps.get(date) or {}, date)
 
     _walk(dates, recipes, rows_for, bars, root=root, persist=True, fees=fees)
-    for date in dates:
-        write_oos_ledger(date, _ledger_doc(date, recipes, root, snaps.get(date) or {}))
+    if ledger:
+        for date in dates:
+            write_oos_ledger(date, _ledger_doc(date, recipes, root, snaps.get(date) or {}))
 
 
 def _chain(name: str, dates: list[str], root: Path) -> list[dict]:
@@ -901,13 +1091,28 @@ def render_scoreboard(train: dict, test: dict | None) -> str:
             span = f"{sessions[0]} through {sessions[-1]}"
         bits = []
         for rule in frozen:
-            bits.append(
-                f"`{rule['name']}` made {_pct(rule.get('after_fees_return'))} "
-                f"on the {n_days} locked test sessions ({span}) after fees, "
-                f"versus random picks {_pct(r4)} and IWM {_pct(iwm)}. "
-                f"Without its best stock ({rule.get('best_stock') or 'none'}) "
-                f"that test window was {_pct(rule.get('without_best_stock_return'))}."
-            )
+            if rule.get("clean_from") and rule.get("after_fees_return") is None:
+                bits.append(
+                    f"`{rule['name']}` has no clean test session yet. "
+                    f"Its clean record starts {rule.get('clean_from')}. "
+                    f"Sessions from {DESIGNED_AFTER} through "
+                    f"{rule.get('designed_after_through')} were already seen, "
+                    f"so they are designed_after and are not the result. "
+                    f"The hindsight figure on those days is "
+                    f"{_pct(rule.get('designed_after_return'))}, "
+                    f"versus random picks {_pct(r4)} and IWM {_pct(iwm)}. "
+                    f"Without its best stock ({rule.get('best_stock') or 'none'}) "
+                    f"that hindsight window was "
+                    f"{_pct(rule.get('designed_after_without_best_stock_return'))}."
+                )
+            else:
+                bits.append(
+                    f"`{rule['name']}` made {_pct(rule.get('after_fees_return'))} "
+                    f"on the {n_days} locked test sessions ({span}) after fees, "
+                    f"versus random picks {_pct(r4)} and IWM {_pct(iwm)}. "
+                    f"Without its best stock ({rule.get('best_stock') or 'none'}) "
+                    f"that test window was {_pct(rule.get('without_best_stock_return'))}."
+                )
         lines.append(" ".join(bits))
     lines += ["", "## Train", ""]
     r4t = train.get("random4") or {}
@@ -921,6 +1126,12 @@ def render_scoreboard(train: dict, test: dict | None) -> str:
         f"Best-of-{r4t.get('n_candidates')} null {_pct(r4t.get('best_of_n_null'))} "
         "(the random-book percentile a search of this size should expect to win)."
     )
+    if any(row.get("family") in ("excel", "theme_radar_skip") for row in (train.get("rows") or [])):
+        lines.append(
+            "War room rules were seen on 2026-09-14 through 2026-09-25. "
+            "Their clean record starts 2026-09-28. The train numbers are the "
+            "pre-registered selection window."
+        )
     lines += [
         "",
         "| rule | after fees | start-day win rate | fires | win rate | asymmetric | best stock | without best stock | pass |",
@@ -973,7 +1184,14 @@ def render_scoreboard(train: dict, test: dict | None) -> str:
                 f"{day.get('fees')} | {day.get('cash')} | {day.get('equity')} | "
                 f"{_pct(day.get('mean'))} |"
             )
-        lines.append("")
+            lines.append("")
+            if rule.get("clean_from"):
+                lines.append(
+                    f"Clean record starts {rule.get('clean_from')}. "
+                    f"Sessions through {rule.get('designed_after_through')} "
+                    "are designed_after and are not the result."
+                )
+                lines.append("")
     base = (test or {}).get("baselines") or {}
     lines += [
         "## Baselines",
@@ -999,6 +1217,26 @@ def render_scoreboard(train: dict, test: dict | None) -> str:
         "positive with its best stock removed, before it was named.",
         "",
     ]
+    shorts = list((test or {}).get("research_shorts") or [])
+    if shorts:
+        lines += [
+            "## Research shorts",
+            "",
+            "Theme Radar's short books are not in the 37 and were not frozen. "
+            "Each enters at that session's close and covers h sessions later, "
+            "or stays open and is marked at the last close when the cover "
+            "falls past this window. Cost is 15 bp round trip plus 0.3 percent "
+            "borrow. Days before 2026-09-28 are designed_after.",
+            "",
+            "| rule | after fees | fires |",
+            "| --- | ---: | ---: |",
+        ]
+        for row in shorts:
+            lines.append(
+                f"| `{row.get('id')}` | {_pct(row.get('after_fees_return'))} | "
+                f"{row.get('fires') if row.get('fires') is not None else ''} |"
+            )
+        lines.append("")
     return "\n".join(lines)
 
 
@@ -1006,6 +1244,281 @@ def _tick(item) -> str:
     if isinstance(item, dict):
         return str(item.get("ticker") or "")
     return str(item or "")
+
+
+def _family(rec: dict) -> str:
+    fam = rec.get("family")
+    if fam:
+        return str(fam)
+    return str((rec.get("require") or {}).get("family") or "own")
+
+
+def _bare_id(name: str) -> str:
+    prefix = "oos0914_"
+    text = str(name or "")
+    return text[len(prefix):] if text.startswith(prefix) else text
+
+
+def _lock_theme(dates: list[str], recipes: list[dict], root: Path) -> None:
+    """Skip-gate books. State is stored under the frozen ``oos0914_`` name."""
+    from .factor_mine_oos0914_theme import kept_rows, skip_calendar
+
+    snaps = {}
+    tickers = set()
+    for date in dates:
+        doc = (load_snapshot_dir(
+            SNAP_DIR, start=date, end=date, cutoff="9999-99-99",
+        ).get(date) or {})
+        snaps[date] = doc
+        for row in snapshot_rows(doc, date):
+            if row.get("ticker"):
+                tickers.add(str(row["ticker"]).upper())
+    bars = _bars_for_window(dates, tickers, allow_test=True)
+    rules = []
+    for rec in recipes:
+        req = rec.get("require") or {}
+        rules.append({
+            "id": rec["name"],
+            "field": req["field"],
+            "lag": req["lag"],
+            "op": req["op"],
+            "earn": req.get("earn"),
+            "er": req.get("er"),
+            "hammer": req.get("hammer"),
+            "hold": rec.get("hold"),
+            "since_first": req.get("since_first"),
+        })
+    flags = skip_calendar(dates, rules, allow_test=True)
+    for rec in recipes:
+        plain = fm.make_recipe(
+            rec["name"], universe=rec.get("universe") or "union",
+            hold=int(rec["hold"]), top_n=int(rec.get("top_n") or 4),
+            rank=rec.get("rank") or "hot_score", sell=rec.get("sell") or "time",
+            size=rec.get("size") or "leftover",
+            created_on=rec.get("created_on"),
+        )
+
+        def rows_for(date, rec=rec, plain=plain):
+            rows = snapshot_rows(snaps.get(date) or {}, date)
+            return kept_rows(rows, plain, flags[rec["name"]].get(date))
+
+        _walk(dates, [plain], rows_for, bars, root=root, persist=True)
+
+
+def _lock_excel(dates: list[str], recipes: list[dict], root: Path) -> None:
+    """Load the frozen fit. Do not train again."""
+    from .factor_mine_oos0914_excel import load_fit, score_dates
+
+    history = score_dates(dates, allow_test=True, fit=load_fit())
+    for rec in recipes:
+        series = history.get(_bare_id(rec["name"])) or []
+        by_date = {str(row.get("date"))[:10]: row for row in series}
+        for date in dates:
+            doc = by_date.get(date)
+            if doc is None:
+                continue
+            seq.write_state(rec["name"], date, doc, root)
+
+
+def lock_books(dates: list[str], recipes: list[dict], *,
+               root: Path | None = None, ledger: bool = True) -> None:
+    """Lock every frozen family, then write each day ledger once."""
+    root = Path(root or STATE_ROOT)
+    if not recipes or not dates:
+        return
+    own = [rec for rec in recipes if _family(rec) == "own"]
+    theme = [rec for rec in recipes if _family(rec) == "theme_radar_skip"]
+    excel = [rec for rec in recipes if _family(rec) == "excel"]
+    if own:
+        walk_test(dates, own, root=root, ledger=False)
+    if theme:
+        _lock_theme(dates, theme, root)
+    if excel:
+        _lock_excel(dates, excel, root)
+    if not ledger:
+        return
+    snaps = {}
+    for date in dates:
+        snaps[date] = (load_snapshot_dir(
+            SNAP_DIR, start=date, end=date, cutoff="9999-99-99",
+        ).get(date) or {})
+    for date in dates:
+        write_oos_ledger(
+            date, _ledger_doc(date, recipes, root, snaps.get(date) or {}),
+        )
+
+
+def _without_best(rec: dict, dates: list[str], root: Path) -> dict:
+    """Rerun ``dates`` from $10k with the best ticker removed."""
+    if not dates:
+        return {"best_stock": None, "after_fees_return": None}
+    series = _chain(rec["name"], dates, root)
+    winner = best_ticker(series)
+    if not winner:
+        return {"best_stock": None, "after_fees_return": compound_return(series)}
+    fam = _family(rec)
+    if fam == "excel":
+        from .factor_mine_oos0914_excel import load_fit, score_dates
+        again = score_dates(dates, allow_test=True, fit=load_fit(), exclude=winner)
+        return {
+            "best_stock": winner,
+            "after_fees_return": compound_return(again.get(_bare_id(rec["name"])) or []),
+        }
+    if fam == "theme_radar_skip":
+        snaps = load_snapshot_dir(
+            SNAP_DIR, start=dates[0], end=dates[-1], cutoff="9999-99-99",
+        )
+        tickers = {winner}
+        for doc in snaps.values():
+            for row in doc.get("rows") or []:
+                if row.get("ticker"):
+                    tickers.add(str(row["ticker"]).upper())
+        bars = _bars_for_window(dates, tickers, allow_test=True)
+        study = {
+            "id": rec["name"],
+            "hold": rec.get("hold"),
+            "universe": rec.get("universe"),
+            "top_n": rec.get("top_n"),
+            "rank": rec.get("rank"),
+            "sell": rec.get("sell"),
+            "size": rec.get("size"),
+            "require": rec.get("require") or {},
+        }
+        again = _score_theme(dates, [study], snaps, bars, allow_test=True, exclude=winner)
+        return {
+            "best_stock": winner,
+            "after_fees_return": compound_return(again.get(rec["name"]) or []),
+        }
+    return _drop_best_test(rec["name"], dates, rec, root)
+
+
+def _rule_report(rec: dict, dates: list[str], root: Path) -> dict:
+    series = _chain(rec["name"], dates, root)
+    clean = str(rec.get("clean_from") or "")[:10]
+    peeked = [row for row in series if clean and str(row.get("date"))[:10] < clean]
+    real = [row for row in series if not clean or str(row.get("date"))[:10] >= clean]
+    report = {
+        "name": rec["name"],
+        "family": _family(rec),
+        "days": [
+            {
+                "date": row.get("date"),
+                "buys": row.get("buys") or [],
+                "sells": row.get("sells") or [],
+                "fees": row.get("fees"),
+                "cash": row.get("cash"),
+                "equity": row.get("equity"),
+                "mean": row.get("mean"),
+            }
+            for row in series
+        ],
+    }
+    if not clean:
+        dropped = _without_best(rec, dates, root)
+        report["after_fees_return"] = compound_return(series)
+        report["start_day_win_rate"] = start_day_win_rate(series)
+        report["best_stock"] = dropped.get("best_stock")
+        report["without_best_stock_return"] = dropped.get("after_fees_return")
+        return report
+    report["clean_from"] = clean
+    report["designed_after_through"] = rec.get("designed_after_through")
+    report["designed_after_return"] = compound_return(peeked)
+    report["after_fees_return"] = compound_return(real) if real else None
+    report["start_day_win_rate"] = start_day_win_rate(real) if real else None
+    if real:
+        dropped = _without_best(rec, [d for d in dates if d >= clean], root)
+        report["best_stock"] = dropped.get("best_stock")
+        report["without_best_stock_return"] = dropped.get("after_fees_return")
+    else:
+        dropped = _without_best(rec, [d for d in dates if d < clean], root)
+        report["best_stock"] = dropped.get("best_stock")
+        report["without_best_stock_return"] = None
+        report["designed_after_without_best_stock_return"] = dropped.get("after_fees_return")
+    return report
+
+
+def _short_rules() -> list[dict]:
+    theme = (load_preregister().get("theme_radar_skip") or {})
+    since = theme.get("since_first") or "2026-08-06"
+    rules = []
+    for rule in theme.get("rules") or []:
+        rules.append({
+            "id": rule["id"],
+            "field": rule["field"],
+            "lag": rule["lag"],
+            "op": rule["op"],
+            "earn": bool(rule.get("earn")),
+            "er": bool(rule.get("er")),
+            "hammer": bool(rule.get("hammer")),
+            "hold": int(rule["hold"]),
+            "since_first": since,
+        })
+    return rules
+
+
+def _closes(dates: list[str], tickers: set[str], *, allow_test: bool) -> dict:
+    import pandas as pd
+
+    if not dates or not tickers:
+        return {}
+    cols = ["date", "ticker", "close"]
+    frame = pd.read_parquet(LIVE_OHLC, columns=cols)
+    frame["date"] = pd.to_datetime(frame["date"]).dt.strftime("%Y-%m-%d")
+    frame["ticker"] = frame["ticker"].astype(str).str.upper()
+    cap = dates[-1] if allow_test else TRAIN_END
+    frame = frame[frame["date"] <= cap]
+    if (not allow_test) and bool((frame["date"] >= CUTOFF).any()):
+        raise FutureLeak("short research prices reach the cutoff")
+    if allow_test and cap >= CUTOFF:
+        retro_px = pd.read_parquet(RETRO_OHLC, columns=cols)
+        retro_px["date"] = pd.to_datetime(retro_px["date"]).dt.strftime("%Y-%m-%d")
+        retro_px["ticker"] = retro_px["ticker"].astype(str).str.upper()
+        retro_px = retro_px[(retro_px["date"] >= CUTOFF) & (retro_px["date"] <= cap)]
+        frame = pd.concat([frame, retro_px], ignore_index=True)
+    want = set(dates)
+    frame = frame[frame["ticker"].isin(tickers) & frame["date"].isin(want)]
+    out = {}
+    for row in frame.itertuples(index=False):
+        out[(row.ticker, row.date)] = {"close": float(row.close)}
+    return out
+
+
+def _research_shorts(dates: list[str], *, allow_test: bool) -> list[dict]:
+    """Same 12 gates, short at the close. Not a freeze candidate."""
+    from .factor_mine_oos0914_theme import SNAP_DIR, score_shorts, skip_calendar
+
+    if not dates or not SNAP_DIR.is_dir():
+        return []
+    rules = _short_rules()
+    flags = skip_calendar(dates, rules, allow_test=allow_test)
+    tickers = set()
+    for rule in rules:
+        for names in (flags.get(rule["id"]) or {}).values():
+            if names:
+                tickers.update(names)
+    closes = _closes(dates, tickers, allow_test=allow_test)
+    reports = score_shorts(dates, rules, closes, list(dates), allow_test=allow_test)
+    rows = []
+    for rule in rules:
+        row = dict(reports.get(rule["id"]) or {})
+        row["designed_after"] = bool(allow_test)
+        rows.append(row)
+    return rows
+
+
+def _write_test(dates: list[str], recipes: list[dict]) -> dict:
+    train = json.loads(TRAIN_REPORT.read_text(encoding="utf-8"))
+    rules = [_rule_report(rec, dates, STATE_ROOT) for rec in recipes]
+    test = {
+        "sessions": dates,
+        "rules": rules,
+        "baselines": _baselines(dates) if dates else {},
+        "research_shorts": _research_shorts(dates, allow_test=True),
+    }
+    OUT_DIR.mkdir(parents=True, exist_ok=True)
+    TEST_REPORT.write_text(json.dumps(test, indent=2), encoding="utf-8")
+    SCOREBOARD.write_text(render_scoreboard(train, test), encoding="utf-8")
+    return test
 
 
 def score() -> dict:
@@ -1020,40 +1533,19 @@ def score() -> dict:
         print("[oos0914] nothing frozen; test not scored", flush=True)
         return {"rules": []}
     dates = test_dates()
-    walk_test(dates, recipes)
-    rules = []
-    for rec in recipes:
-        series = _chain(rec["name"], dates, STATE_ROOT)
-        dropped = _drop_best_test(rec["name"], dates, rec, STATE_ROOT)
-        rules.append({
-            "name": rec["name"],
-            "after_fees_return": compound_return(series),
-            "start_day_win_rate": start_day_win_rate(series),
-            "best_stock": dropped.get("best_stock"),
-            "without_best_stock_return": dropped.get("after_fees_return"),
-            "days": [
-                {
-                    "date": row.get("date"),
-                    "buys": row.get("buys") or [],
-                    "sells": row.get("sells") or [],
-                    "fees": row.get("fees"),
-                    "cash": row.get("cash"),
-                    "equity": row.get("equity"),
-                    "mean": row.get("mean"),
-                }
-                for row in series
-            ],
-        })
-    baselines = _baselines(dates)
-    test = {"sessions": dates, "rules": rules, "baselines": baselines}
-    OUT_DIR.mkdir(parents=True, exist_ok=True)
-    TEST_REPORT.write_text(json.dumps(test, indent=2), encoding="utf-8")
-    SCOREBOARD.write_text(render_scoreboard(train, test), encoding="utf-8")
-    for rule in rules:
-        print(
-            f"[oos0914] test {rule['name']} {rule['after_fees_return']}",
-            flush=True,
-        )
+    lock_books(dates, recipes)
+    test = _write_test(dates, recipes)
+    for rule in test["rules"]:
+        shown = rule.get("after_fees_return")
+        if shown is None and rule.get("clean_from"):
+            shown = rule.get("designed_after_return")
+            print(
+                f"[oos0914] test {rule['name']} clean=n/a "
+                f"designed_after={shown}",
+                flush=True,
+            )
+        else:
+            print(f"[oos0914] test {rule['name']} {shown}", flush=True)
     return test
 
 
@@ -1089,43 +1581,10 @@ def append_nightly(*, through: str = "", write: bool = False) -> dict:
         return {"appended": None, "pending": nxt}
     # The calendar includes earlier locked days so day N reads day N-1.
     # Those state files already match and are not rewritten.
-    walk_test([d for d in dates if d <= nxt], recipes)
-    if TEST_REPORT.is_file() and TRAIN_REPORT.is_file():
-        # Refresh the prose from the locked files. Day files stay put.
-        train = json.loads(TRAIN_REPORT.read_text(encoding="utf-8"))
-        prior = json.loads(TEST_REPORT.read_text(encoding="utf-8"))
-        # Recompute the summary from state rather than trusting the old prose.
+    lock_books([d for d in dates if d <= nxt], recipes)
+    if TRAIN_REPORT.is_file():
         dates = test_dates(closed)
-        rules = []
-        for rec in recipes:
-            series = _chain(rec["name"], dates, STATE_ROOT)
-            dropped = _drop_best_test(rec["name"], dates, rec, STATE_ROOT)
-            rules.append({
-                "name": rec["name"],
-                "after_fees_return": compound_return(series),
-                "start_day_win_rate": start_day_win_rate(series),
-                "best_stock": dropped.get("best_stock"),
-                "without_best_stock_return": dropped.get("after_fees_return"),
-                "days": [
-                    {
-                        "date": row.get("date"),
-                        "buys": row.get("buys") or [],
-                        "sells": row.get("sells") or [],
-                        "fees": row.get("fees"),
-                        "cash": row.get("cash"),
-                        "equity": row.get("equity"),
-                        "mean": row.get("mean"),
-                    }
-                    for row in series
-                ],
-            })
-        test = {
-            "sessions": dates,
-            "rules": rules,
-            "baselines": prior.get("baselines") or {},
-        }
-        TEST_REPORT.write_text(json.dumps(test, indent=2), encoding="utf-8")
-        SCOREBOARD.write_text(render_scoreboard(train, test), encoding="utf-8")
+        _write_test(dates, recipes)
     print(f"[oos0914] nightly: appended {nxt}", flush=True)
     return {"appended": nxt}
 
