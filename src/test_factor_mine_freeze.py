@@ -385,6 +385,7 @@ def test_build_panel_fetches_bars_before_candidates() -> None:
             mock.patch.object(fm.fla, "flatten_day_targets",
                               return_value={"tickers": ["AAA"]}), \
             mock.patch.object(fmf, "ranking_universe", side_effect=fake_universe), \
+            mock.patch.object(fmf, "frozen_dropped", return_value=None), \
             mock.patch.object(fmf, "ensure_candidate_bars", side_effect=fake_ensure), \
             mock.patch.object(fm, "_candidates", side_effect=fake_candidates), \
             mock.patch.object(fm, "_attach_row", side_effect=fake_attach), \
@@ -416,6 +417,7 @@ def test_build_panel_refuses_unresolved_hot_score() -> None:
             mock.patch.object(fm.fla, "flatten_day_targets",
                               return_value={"tickers": ["AAA"]}), \
             mock.patch.object(fmf, "ranking_universe", return_value=["AAA"]), \
+            mock.patch.object(fmf, "frozen_dropped", return_value=None), \
             mock.patch.object(fmf, "ensure_candidate_bars", return_value=None), \
             mock.patch.object(fm, "_candidates",
                               return_value={"flatten": ["AAA"]}), \
@@ -1465,8 +1467,12 @@ def test_webull_fill_outside_open_tolerance_holds() -> None:
         old_export = _with_exports(root)
         old_paper = fmf.PAPER_OPEN_DIR
         old_log = fmf.OPEN_SOURCE_LOG
+        old_snap = fmf.SNAP_DIR
         fmf.PAPER_OPEN_DIR = root
         fmf.OPEN_SOURCE_LOG = root / "open_source_log.csv"
+        # The locked 2026-09-25 snapshot is already on disk. This check is
+        # that the hold wrote nothing, so it has to look at an empty folder.
+        fmf.SNAP_DIR = root / "snapshots"
         raw_tape = {
             "source": "finviz_raw",
             "commit_sha": "b" * 40,
@@ -1512,6 +1518,7 @@ def test_webull_fill_outside_open_tolerance_holds() -> None:
         finally:
             fmf.PAPER_OPEN_DIR = old_paper
             fmf.OPEN_SOURCE_LOG = old_log
+            fmf.SNAP_DIR = old_snap
             tl.EXPORT_DIR = old_export
             tl._FINVIZ_BARS.clear()
 
@@ -2184,6 +2191,122 @@ def test_unpriced_held_keeps_its_slot_and_exits_on_the_first_bar() -> None:
     assert pool["pos"] == {}
 
 
+def test_held_names_are_fetched_even_when_they_are_not_candidates() -> None:
+    """The day's Yahoo fetch includes carried names that are not candidates.
+
+    A bar that comes back is not unpriced_held, and it is on the decision
+    tape. A carried name Yahoo still lacks is unpriced_held and is not
+    added to the pick-pool drop list. An empty candidate list still holds
+    the day. One missing candidate still holds the day even when a held
+    name has a bar.
+    """
+    day = "2026-09-28"
+    seen = {}
+
+    def raw(ticker):
+        tick = str(ticker).upper()
+        hist = [{"date": "2026-09-08", "open": 1.0, "high": 1.0,
+                 "low": 1.0, "close": 1.0, "volume": 100.0}]
+        if tick == "AAA":
+            return _bars(35) + [{
+                "date": day, "open": 10.0, "high": 11.0, "low": 9.0,
+                "close": 10.5, "volume": 100.0,
+            }]
+        if tick == "WTS":
+            return hist + [{
+                "date": day, "open": 12.5, "high": 13.0, "low": 12.0,
+                "close": 12.8, "volume": 100.0,
+            }]
+        if tick == "MISS":
+            return hist
+        return []
+
+    def official(ticker, date, bars=None):
+        tick = str(ticker).upper()
+        if tick == "AAA":
+            return {"open": 10.0, "high": 11.0, "low": 9.0, "close": 10.5}
+        if tick == "WTS" and str(date)[:10] == day:
+            return {"open": 12.5, "high": 13.0, "low": 12.0, "close": 12.8}
+        return {"open": None, "high": None, "low": None, "close": None}
+
+    def fake_ensure(end, tickers=None, strict=False):
+        seen["end"] = end
+        seen["tickers"] = list(tickers or [])
+        seen["strict"] = strict
+
+    with mock.patch("src.price_store.ensure_through", side_effect=fake_ensure), \
+            mock.patch.object(fmf, "_raw_bars", side_effect=raw), \
+            mock.patch.object(tl, "_official_ohlc", side_effect=official), \
+            mock.patch.object(tl, "session_bar", side_effect=official):
+        try:
+            fmf.ensure_candidate_bars(day, [], also=["WTS"])
+            empty = False
+        except fmf.HoldDay as e:
+            empty = True
+            assert "entire universe or panel is missing" in e.reason
+        assert empty
+        assert "tickers" not in seen
+
+        gaps = fmf.ensure_candidate_bars(day, ["AAA"], also=["WTS", "MISS"])
+        with mock.patch.object(fmf, "carried_tickers", return_value={"WTS", "MISS"}), \
+                mock.patch.object(fmf, "morning_pick_tickers", return_value=set()):
+            flagged = fmf.unpriced_held_tickers(day, gaps)
+        bars = fmf.bars_for_decisions(
+            {"rows": [{
+                "ticker": "AAA", "date": day, "open": 10.0, "close": 10.5,
+            }]},
+            day, None, also=["WTS", "MISS"],
+        )
+        fetched = list(seen["tickers"])
+
+        def raw_miss_aaa(ticker):
+            if str(ticker).upper() == "WTS":
+                return raw("WTS")
+            if str(ticker).upper() == "AAA":
+                return [{"date": "2026-09-08", "open": 1.0, "close": 1.0}]
+            return []
+
+        def official_miss_aaa(ticker, date, bars=None):
+            if str(ticker).upper() == "WTS" and str(date)[:10] == day:
+                return {"open": 12.5, "high": 13.0, "low": 12.0, "close": 12.8}
+            return {"open": None, "high": None, "low": None, "close": None}
+
+    assert fetched == ["AAA", "MISS", "WTS"]
+    assert seen["strict"] is False
+    assert seen["end"] == day
+    assert gaps == []
+    assert flagged == ["MISS"]
+    assert bars[("WTS", day)]["open"] == 12.5
+    assert bars[("AAA", day)]["open"] == 10.0
+    assert ("MISS", day) not in bars
+
+    with mock.patch("src.price_store.ensure_through", return_value=None), \
+            mock.patch.object(fmf, "_raw_bars", side_effect=raw_miss_aaa), \
+            mock.patch.object(tl, "_official_ohlc", side_effect=official_miss_aaa):
+        try:
+            fmf.ensure_candidate_bars(day, ["AAA"], also=["WTS"])
+            held_open = False
+        except fmf.HoldDay as e:
+            held_open = True
+            assert e.missing == ["AAA"]
+            assert "entire universe missing yahoo bars" in e.reason
+    assert held_open
+
+    discovered = {}
+
+    def fake_ensure_discovered(end, tickers=None, strict=False):
+        discovered["tickers"] = list(tickers or [])
+
+    with mock.patch("src.price_store.ensure_through",
+                    side_effect=fake_ensure_discovered), \
+            mock.patch.object(fmf, "_raw_bars", side_effect=raw), \
+            mock.patch.object(tl, "_official_ohlc", side_effect=official), \
+            mock.patch.object(fmf, "carried_tickers", return_value={"WTS"}), \
+            mock.patch.object(fmf, "morning_pick_tickers", return_value=set()):
+        fmf.ensure_candidate_bars(day, ["AAA"])
+    assert discovered["tickers"] == ["AAA", "WTS"]
+
+
 if __name__ == "__main__":
     if os.environ.get("PYTHONHASHSEED") != "0":
         os.environ["PYTHONHASHSEED"] = "0"
@@ -2194,6 +2317,7 @@ if __name__ == "__main__":
     test_finviz_stooq_disagreement_does_not_hold_the_day()
     test_missing_yahoo_bars_drop_and_the_day_locks()
     test_unpriced_held_keeps_its_slot_and_exits_on_the_first_bar()
+    test_held_names_are_fetched_even_when_they_are_not_candidates()
     test_completeness_gate_lists_every_hole_and_refuses_adjusted_bars()
     test_one_gapped_name_is_dropped_and_the_rerun_matches()
     test_build_panel_fetches_bars_before_candidates()
