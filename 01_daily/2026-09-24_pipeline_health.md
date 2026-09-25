@@ -1,8 +1,8 @@
 # Pipeline health — postclose
 
-pre-open date=2026-09-24  post-close source=2026-09-24  post-close target=2026-09-24  book=2026-09-24
-generated 2026-09-24T20:35:31.887129-04:00  round=1
-**result=FAIL**  required_fails=1  warns=8
+pre-open date=2026-09-24  post-close source=2026-09-24  post-close target=2026-09-25  book=2026-09-24
+generated 2026-09-24T20:38:24.124597-04:00  round=1
+**result=FAIL**  required_fails=2  warns=8
 
 Heal loop: audit → fix OpenClaw door / timers on this box → start systemd or spawn the owning ECS job (ubuntu workflows are GH-dispatched with force=true) → wait for files → re-audit. Finviz HTML is never scraped on ECS. xAI OAuth dies ~6h and cannot be refreshed (Cloudflare). Permanent auth is XAI_API_KEY in `~/.openclaw/.env`. An expiring token does not block Grok jobs.
 
@@ -29,12 +29,12 @@ Heal loop: audit → fix OpenClaw door / timers on this box → start systemd or
 | WARN | Sector Daily outcome+reflect ran on 2026-09-24 | clock | no | n=0 on 2026-09-24 — file checks below decide | `` |
 | WARN | Learn Cycle ran on 2026-09-24 | clock | no | n=0 on 2026-09-24 — file checks below decide | `` |
 | OK | Stock Book ALL ran on 2026-09-24 | clock | no | n=5 latest=success event=push | `https://github.com/SRoyaltyy/fullscan/actions/runs/36077796466` |
-| OK | 2026-09-24_map_heat.json (industry groups + captains) | postclose | yes | phase=morning_overlay 270739 bytes | `/home/gha/actions-runner/_work/fullscan/fullscan/01_daily/map_heat/2026-09-24_map_heat.json` |
-| OK | 2026-09-24_map_heat.md | postclose | no | 17075 bytes | `/home/gha/actions-runner/_work/fullscan/fullscan/01_daily/map_heat/2026-09-24_map_heat.md` |
-| FAIL | 2026-09-24_research_baseline.json (captain cards) | postclose | yes | PASS-OVER from source_heat_date=2026-09-23 (want 2026-09-24) | `/home/gha/actions-runner/_work/fullscan/fullscan/01_daily/map_heat/2026-09-24_research_baseline.json` |
-| OK | 2026-09-24_research_baseline.md | postclose | yes | 44049 bytes | `/home/gha/actions-runner/_work/fullscan/fullscan/01_daily/map_heat/2026-09-24_research_baseline.md` |
+| FAIL | 2026-09-25_map_heat.json (industry groups + captains) | postclose | yes | PASS-OVER from date=2026-09-24 (want 2026-09-25) | `/home/gha/actions-runner/_work/fullscan/fullscan/01_daily/map_heat/2026-09-25_map_heat.json` |
+| OK | 2026-09-25_map_heat.md | postclose | no | 17075 bytes | `/home/gha/actions-runner/_work/fullscan/fullscan/01_daily/map_heat/2026-09-25_map_heat.md` |
+| FAIL | 2026-09-25_research_baseline.json (captain cards) | postclose | yes | PASS-OVER from source_heat_date=2026-09-24 (want 2026-09-25) | `/home/gha/actions-runner/_work/fullscan/fullscan/01_daily/map_heat/2026-09-25_research_baseline.json` |
+| OK | 2026-09-25_research_baseline.md | postclose | yes | 44468 bytes | `/home/gha/actions-runner/_work/fullscan/fullscan/01_daily/map_heat/2026-09-25_research_baseline.md` |
 | OK | Captain coverage ≥ 90% | postclose | yes | cards=142 coverage=1.0 | `` |
-| OK | Post-close LLM transcripts | postclose | no | n=30 | `` |
+| OK | Post-close LLM transcripts | postclose | no | n=32 | `` |
 | OK | INPUT: Finviz Elite export | book | yes | 10963783 bytes | `/home/gha/actions-runner/_work/fullscan/fullscan/data/exports/finviz_2026-09-24.csv` |
 | OK | Universe labels (segments) | book | yes | 1121131 bytes | `/home/gha/actions-runner/_work/fullscan/fullscan/data/universe/2026-09-24_membership.csv` |
 | OK | Weather / regime JSON | book | yes | 10537 bytes | `/home/gha/actions-runner/_work/fullscan/fullscan/01_daily/weather/2026-09-24_weather.json` |
@@ -43,9 +43,9 @@ Heal loop: audit → fix OpenClaw door / timers on this box → start systemd or
 | OK | AB checklist (raw) | book | no | 7628740 bytes | `/home/gha/actions-runner/_work/fullscan/fullscan/data/ab_checklist/2026-09-24_ab_checklist.csv` |
 | OK | AB checklist (enriched) — s_ab | book | yes | 3297063 bytes | `/home/gha/actions-runner/_work/fullscan/fullscan/data/ab_checklist/2026-09-24_ab_checklist_enriched.csv` |
 | OK | Peer relative strength — s_peer | book | yes | 814069 bytes | `/home/gha/actions-runner/_work/fullscan/fullscan/data/peers/2026-09-24_peer_rs.csv` |
-| OK | Stock book JSON (5 horizons) | book | yes | 1244489 bytes | `/home/gha/actions-runner/_work/fullscan/fullscan/data/stock_book/2026-09-24_stock_book.json` |
+| OK | Stock book JSON (5 horizons) | book | yes | 1243271 bytes | `/home/gha/actions-runner/_work/fullscan/fullscan/data/stock_book/2026-09-24_stock_book.json` |
 | OK | Green pile grades (all-green BUY) | book | yes | 585 bytes | `/home/gha/actions-runner/_work/fullscan/fullscan/data/stock_book/2026-09-24_green.json` |
-| OK | Stock book MD | book | yes | 53595 bytes | `/home/gha/actions-runner/_work/fullscan/fullscan/01_daily/2026-09-24_stock_book.md` |
+| OK | Stock book MD | book | yes | 53299 bytes | `/home/gha/actions-runner/_work/fullscan/fullscan/01_daily/2026-09-24_stock_book.md` |
 | OK | Stock book backtest (repo-level) | book | yes | 10360 bytes | `/home/gha/actions-runner/_work/fullscan/fullscan/03_scoreboard/STOCK_BOOK_BACKTEST.md` |
 | OK | Paper trading summary | book | yes | 1819 bytes | `/home/gha/actions-runner/_work/fullscan/fullscan/03_scoreboard/PAPER_TRADING.md` |
 | OK | Dashboard HTML (Pages source) | book | yes | 8633452 bytes | `/home/gha/actions-runner/_work/fullscan/fullscan/dashboard/index.html` |
