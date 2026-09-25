@@ -1,6 +1,6 @@
 # Open-bell slippage / no-fill — research overlay
 
-Open-bell fills at 09:30 ET: combo_sh_macd_5050_shared MARKET KILL · union_hot_n4_h1 MARKET KILL · flatten_would MARKET KILL. KILL combo_sh_macd_5050_shared / market: 141 filled fires but after-fee win 15.6% ≤ 55%; vs ideal-open $-60.58.
+Open-bell fills at 09:30 ET: combo_sh_macd_5050_shared MARKET KILL · union_hot_n4_h1 MARKET KILL · flatten_would MARKET KILL. KILL combo_sh_macd_5050_shared / market: 191 filled fires but after-fee win 18.3% ≤ 55%; vs ideal-open $-80.37.
 
 Research only. Live `flatten_robust`, hard-red sit, and Webull paper execution are **not** changed. Orders are modeled as sent at **09:30 ET** (same clock as the Open 09:30 pack / PR #239). This board does not wire MARKET or LIMIT into the live book.
 
@@ -19,30 +19,30 @@ Window `2026-08-13 → 2026-09-25` (31 sessions). KEEP bar: **≥30 filled fires
 
 | Sleeve | Reality | Intended | Filled | Miss | After-fee win | After-fee $ | vs ideal $ | Verdict |
 |---|---|---:|---:|---:|---:|---:|---:|---|
-| `combo_sh_macd_5050_shared` | ideal | 191 | 141 | 50 | 31.9% | -93.56 | — | **KILL** |
-| `combo_sh_macd_5050_shared` | market | 191 | 141 | 50 | 15.6% | -154.14 | $-60.58 | **KILL** |
-| `combo_sh_macd_5050_shared` | limit_open | 191 | 131 | 60 | 28.2% | -100.17 | $-6.61 | **KILL** |
-| `combo_sh_macd_5050_shared` | limit_prior | 191 | 117 | 74 | 30.8% | -71.17 | $+22.39 | **KILL** |
-| `union_hot_n4_h1` | ideal | 124 | 88 | 36 | 33.0% | -37.23 | — | **KILL** |
-| `union_hot_n4_h1` | market | 124 | 88 | 36 | 17.1% | -79.40 | $-42.17 | **KILL** |
-| `union_hot_n4_h1` | limit_open | 124 | 82 | 42 | 28.1% | -44.02 | $-6.79 | **KILL** |
-| `union_hot_n4_h1` | limit_prior | 124 | 74 | 50 | 32.4% | -29.85 | $+7.38 | **KILL** |
-| `flatten_would` | ideal | 190 | 140 | 50 | 22.1% | -122.07 | — | **KILL** |
-| `flatten_would` | market | 190 | 140 | 50 | 10.7% | -191.19 | $-69.12 | **KILL** |
-| `flatten_would` | limit_open | 190 | 134 | 56 | 21.6% | -125.91 | $-3.84 | **KILL** |
-| `flatten_would` | limit_prior | 190 | 102 | 88 | 22.6% | -44.33 | $+77.74 | **KILL** |
+| `combo_sh_macd_5050_shared` | ideal | 191 | 191 | 0 | 34.0% | -158.97 | — | **KILL** |
+| `combo_sh_macd_5050_shared` | market | 191 | 191 | 0 | 18.3% | -239.34 | $-80.37 | **KILL** |
+| `combo_sh_macd_5050_shared` | limit_open | 191 | 181 | 10 | 31.5% | -165.58 | $-6.61 | **KILL** |
+| `combo_sh_macd_5050_shared` | limit_prior | 191 | 166 | 25 | 31.3% | -142.29 | $+16.68 | **KILL** |
+| `union_hot_n4_h1` | ideal | 124 | 124 | 0 | 36.3% | -40.07 | — | **KILL** |
+| `union_hot_n4_h1` | market | 124 | 124 | 0 | 21.0% | -97.44 | $-57.37 | **KILL** |
+| `union_hot_n4_h1` | limit_open | 124 | 118 | 6 | 33.1% | -46.86 | $-6.79 | **KILL** |
+| `union_hot_n4_h1` | limit_prior | 124 | 108 | 16 | 32.4% | -39.12 | $+0.95 | **KILL** |
+| `flatten_would` | ideal | 190 | 190 | 0 | 19.5% | -230.12 | — | **KILL** |
+| `flatten_would` | market | 190 | 190 | 0 | 8.4% | -324.40 | $-94.28 | **KILL** |
+| `flatten_would` | limit_open | 190 | 183 | 7 | 18.6% | -234.06 | $-3.94 | **KILL** |
+| `flatten_would` | limit_prior | 190 | 149 | 41 | 16.8% | -171.41 | $+58.71 | **KILL** |
 
 ### Why, in plain language
 
-- KILL combo_sh_macd_5050_shared / market: 141 filled fires but after-fee win 15.6% ≤ 55%; vs ideal-open $-60.58.
-- KILL combo_sh_macd_5050_shared / limit_open: 131 filled fires but after-fee win 28.2% ≤ 55%; vs ideal-open $-6.61.
-- KILL combo_sh_macd_5050_shared / limit_prior: 117 filled fires but after-fee win 30.8% ≤ 55%; vs ideal-open $+22.39.
-- KILL union_hot_n4_h1 / market: 88 filled fires but after-fee win 17.1% ≤ 55%; vs ideal-open $-42.17.
-- KILL union_hot_n4_h1 / limit_open: 82 filled fires but after-fee win 28.1% ≤ 55%; vs ideal-open $-6.79.
-- KILL union_hot_n4_h1 / limit_prior: 74 filled fires but after-fee win 32.4% ≤ 55%; vs ideal-open $+7.38.
-- KILL flatten_would / market: 140 filled fires but after-fee win 10.7% ≤ 55%; vs ideal-open $-69.12.
-- KILL flatten_would / limit_open: 134 filled fires but after-fee win 21.6% ≤ 55%; vs ideal-open $-3.84.
-- KILL flatten_would / limit_prior: 102 filled fires but after-fee win 22.6% ≤ 55%; vs ideal-open $+77.74.
+- KILL combo_sh_macd_5050_shared / market: 191 filled fires but after-fee win 18.3% ≤ 55%; vs ideal-open $-80.37.
+- KILL combo_sh_macd_5050_shared / limit_open: 181 filled fires but after-fee win 31.5% ≤ 55%; vs ideal-open $-6.61.
+- KILL combo_sh_macd_5050_shared / limit_prior: 166 filled fires but after-fee win 31.3% ≤ 55%; vs ideal-open $+16.68.
+- KILL union_hot_n4_h1 / market: 124 filled fires but after-fee win 21.0% ≤ 55%; vs ideal-open $-57.37.
+- KILL union_hot_n4_h1 / limit_open: 118 filled fires but after-fee win 33.1% ≤ 55%; vs ideal-open $-6.79.
+- KILL union_hot_n4_h1 / limit_prior: 108 filled fires but after-fee win 32.4% ≤ 55%; vs ideal-open $+0.95.
+- KILL flatten_would / market: 190 filled fires but after-fee win 8.4% ≤ 55%; vs ideal-open $-94.28.
+- KILL flatten_would / limit_open: 183 filled fires but after-fee win 18.6% ≤ 55%; vs ideal-open $-3.94.
+- KILL flatten_would / limit_prior: 149 filled fires but after-fee win 16.8% ≤ 55%; vs ideal-open $+58.71.
 
 ## After-fee caveat
 
