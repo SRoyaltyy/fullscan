@@ -1,6 +1,6 @@
 {
   "date": "2026-09-25",
-  "generated_at": "2026-09-25T10:02:38.071291-04:00",
+  "generated_at": "2026-09-25T10:03:23.125703-04:00",
   "overall": "OK",
   "ranker_ready": true,
   "counts": {
@@ -169,59 +169,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "stock_book",
-      "title": "Stock book + green",
-      "date": "2026-09-25",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-25T06:12:05.451731-04:00",
-      "files": [
-        {
-          "path": "data/stock_book/2026-09-25_stock_book.json",
-          "ok": true,
-          "reason": "",
-          "size": 1566667,
-          "preview": "1d BUY OMER, VCYT, SONO, OLLI, ELF, CCC, CNK, REGN \u00b7 SELL ARE, AESI, KGS, ACDC, BXMT, UUUU, REAX, HP"
-        },
-        {
-          "path": "data/stock_book/2026-09-25_green.json",
-          "ok": true,
-          "reason": "",
-          "size": 2250,
-          "preview": "green 138 \u00b7 NTCT, SONO, GDYN, YMM, EXLS, TDC, NTNX, LSCC, TRMB, SPSC"
-        },
-        {
-          "path": "data/stock_book/2026-09-25_input_health.json",
-          "ok": true,
-          "reason": "",
-          "size": 2474,
-          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
-        },
-        {
-          "path": "data/stock_book/2026-09-25_suggestions.json",
-          "ok": true,
-          "reason": "",
-          "size": 13809,
-          "preview": "2026-09-25 BUY OMER, VCYT, SONO, OLLI, ELF, CCC, CNK, REGN \u00b7 SELL ARE, AESI, KGS, ACDC, BXMT, UUUU, REAX, HP"
-        },
-        {
-          "path": "data/stock_book/latest_suggestions.json",
-          "ok": true,
-          "reason": "",
-          "size": 13809,
-          "preview": "2026-09-25 BUY OMER, VCYT, SONO, OLLI, ELF, CCC, CNK, REGN \u00b7 SELL ARE, AESI, KGS, ACDC, BXMT, UUUU, REAX, HP"
-        },
-        {
-          "path": "01_daily/2026-09-25_stock_book.md",
-          "ok": true,
-          "reason": "",
-          "size": 91800,
-          "preview": "# Stock book \u2014 2026-09-25\n_Generated 2026-09-25T06:10:44.715993-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
-        }
-      ],
-      "preview": "1d BUY OMER, VCYT, SONO, OLLI, ELF, CCC, CNK, REGN \u00b7 SELL ARE, AESI, KGS, ACDC, BXMT, UUUU, REAX, HP \u00b7 green 138 \u00b7 NTCT, SONO, GDYN, YMM, EXLS, TDC, NTNX, LSCC, TRMB, SPSC \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-09-25 BUY OMER, VCYT, SONO, OLLI, ELF, CCC, CNK, REGN \u00b7 SELL ARE, AESI, KGS, ACDC, BXMT, UUUU, REAX, HP \u00b7 2026-09-25 BUY OMER, VCYT, SONO, OLLI, ELF, CCC, CNK, REGN \u00b7 SELL ARE, AESI, KGS, ACDC, BXMT, UUUU, REAX, HP \u00b7 # Stock book \u2014 2026-09-25\n_Generated 2026-09-25T06:10:44.715993-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
-    },
     {
       "key": "live_boards",
       "title": "Live 1d BUY/SELL strip",
@@ -617,6 +564,115 @@
       "ok": true,
       "pushed": true,
       "at": "2026-09-25T10:02:37.314223-04:00",
+      "files": [
+        {
+          "path": "data/day_board/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 39270,
+          "preview": "2026-09-25 BUY SONO, OMER, PDFS, FIVN, VCYT, REGN, OLLI, CCC \u00b7 SELL ARE, AESI, KGS, ACDC, BXMT, UUUU, HP, PUMP"
+        },
+        {
+          "path": "data/day_board/latest.json",
+          "ok": true,
+          "reason": "",
+          "size": 714,
+          "preview": "keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages"
+        },
+        {
+          "path": "data/day_board/2026-09-25.json",
+          "ok": true,
+          "reason": "",
+          "size": 129293,
+          "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href"
+        },
+        {
+          "path": "data/day_board/2026-09-25_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 92668,
+          "preview": "2026-09-25 BUY SONO, OMER, PDFS, FIVN, VCYT, REGN, OLLI, CCC \u00b7 SELL ARE, AESI, KGS, ACDC, BXMT, UUUU, HP, PUMP"
+        },
+        {
+          "path": "data/day_board/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 851762,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "data/day_board/2026-09-25_strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 851762,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "data/day_board/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 1253077,
+          "preview": "2026-09-25 BUY SONO, OMER, PDFS, FIVN, VCYT, REGN, OLLI, CCC \u00b7 SELL ARE, AESI, KGS, ACDC, BXMT, UUUU, HP, PUMP"
+        },
+        {
+          "path": "data/factor_mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 851762,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 92668,
+          "preview": "2026-09-25 BUY SONO, OMER, PDFS, FIVN, VCYT, REGN, OLLI, CCC \u00b7 SELL ARE, AESI, KGS, ACDC, BXMT, UUUU, HP, PUMP"
+        },
+        {
+          "path": "dashboard/factor-mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 851762,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 851762,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 1253077,
+          "preview": "2026-09-25 BUY SONO, OMER, PDFS, FIVN, VCYT, REGN, OLLI, CCC \u00b7 SELL ARE, AESI, KGS, ACDC, BXMT, UUUU, HP, PUMP"
+        },
+        {
+          "path": "data/day_board/hold_live_px.json",
+          "ok": true,
+          "reason": "",
+          "size": 1870,
+          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
+        },
+        {
+          "path": "dashboard/factor-mine/hold_live_px.json",
+          "ok": true,
+          "reason": "",
+          "size": 1870,
+          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
+        }
+      ],
+      "preview": "2026-09-25 BUY SONO, OMER, PDFS, FIVN, VCYT, REGN, OLLI, CCC \u00b7 SELL ARE, AESI, KGS, ACDC, BXMT, UUUU, HP, PUMP \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href \u00b7 2026-09-25 BUY SONO, OMER, PDFS, FIVN, VCYT, REGN, OLLI, CCC \u00b7 SELL ARE, AESI, KGS, ACDC, BXMT, UUUU, HP, PUMP \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-25 BUY SONO, OMER, PDFS, FIVN, VCYT, REGN, OLLI, CCC \u00b7 SELL ARE, AESI, KGS, ACDC, BXMT, UUUU, HP, PUMP \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-25 BUY SONO, OMER, PDFS, FIVN, VCYT, REGN, OLLI, CCC \u00b7 SELL ARE, AESI, KGS, ACDC, BXMT, UUUU, HP, PUMP \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategi"
+    },
+    {
+      "key": "live_boards",
+      "title": "live_boards",
+      "date": "2026-09-25",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-25T10:03:22.531916-04:00",
       "files": [
         {
           "path": "data/day_board/today.json",
