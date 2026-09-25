@@ -1,6 +1,6 @@
 {
   "date": "2026-09-25",
-  "generated_at": "2026-09-25T06:09:59.741162-04:00",
+  "generated_at": "2026-09-25T06:10:03.309088-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -1822,6 +1822,24 @@
         }
       ],
       "preview": "11/11 sector predicts ok: basic_materials, communication_services, consumer_cyclical, consumer_defensive, energy, financial, healthcare, industrials"
+    },
+    {
+      "key": "sector_board",
+      "title": "Sector board",
+      "date": "2026-09-25",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-25T06:10:02.682485-04:00",
+      "files": [
+        {
+          "path": "01_daily/sectors/2026-09-25/_board.json",
+          "ok": true,
+          "reason": "",
+          "size": 7130,
+          "preview": "keys: date, generated_at, sectors"
+        }
+      ],
+      "preview": "keys: date, generated_at, sectors"
     }
   ],
   "href": {
