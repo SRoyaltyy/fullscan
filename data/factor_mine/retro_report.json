@@ -575,5 +575,184 @@
       "final_equity": 8980.31,
       "n_trades": 11
     }
-  ]
+  ],
+  "baselines": {
+    "random4": {
+      "n": 4,
+      "draws": 1000,
+      "seed": 20260813,
+      "rows": [
+        {
+          "name": "random4",
+          "fee": "futubull",
+          "exclude": null,
+          "universe": "with GLND",
+          "start": "2026-08-13",
+          "draws": 1000,
+          "seed": 20260813,
+          "mean": -7.501,
+          "p5": -21.497,
+          "p50": -7.31,
+          "p95": 6.313,
+          "trades": 70,
+          "n_draws": 1000
+        },
+        {
+          "name": "random4",
+          "fee": "futubull",
+          "exclude": null,
+          "universe": "with GLND",
+          "start": "2026-09-21",
+          "draws": 1000,
+          "seed": 20260813,
+          "mean": -6.439,
+          "p5": -12.771,
+          "p50": -6.803,
+          "p95": 0.471,
+          "trades": 22,
+          "n_draws": 1000
+        },
+        {
+          "name": "random4",
+          "fee": "futubull",
+          "exclude": "GLND",
+          "universe": "without GLND",
+          "start": "2026-08-13",
+          "draws": 1000,
+          "seed": 20260813,
+          "mean": -7.694,
+          "p5": -22.32,
+          "p50": -7.735,
+          "p95": 6.626,
+          "trades": 70,
+          "n_draws": 1000
+        },
+        {
+          "name": "random4",
+          "fee": "futubull",
+          "exclude": "GLND",
+          "universe": "without GLND",
+          "start": "2026-09-21",
+          "draws": 1000,
+          "seed": 20260813,
+          "mean": -6.707,
+          "p5": -13.031,
+          "p50": -6.759,
+          "p95": -0.363,
+          "trades": 22,
+          "n_draws": 1000
+        },
+        {
+          "name": "random4",
+          "fee": "flat_15bp",
+          "exclude": null,
+          "universe": "with GLND",
+          "start": "2026-08-13",
+          "draws": 1000,
+          "seed": 20260813,
+          "mean": -4.993,
+          "p5": -18.462,
+          "p50": -4.88,
+          "p95": 9.012,
+          "trades": 70,
+          "n_draws": 1000
+        },
+        {
+          "name": "random4",
+          "fee": "flat_15bp",
+          "exclude": null,
+          "universe": "with GLND",
+          "start": "2026-09-21",
+          "draws": 1000,
+          "seed": 20260813,
+          "mean": -5.622,
+          "p5": -11.631,
+          "p50": -5.908,
+          "p95": 1.163,
+          "trades": 22,
+          "n_draws": 1000
+        },
+        {
+          "name": "random4",
+          "fee": "flat_15bp",
+          "exclude": "GLND",
+          "universe": "without GLND",
+          "start": "2026-08-13",
+          "draws": 1000,
+          "seed": 20260813,
+          "mean": -5.202,
+          "p5": -19.63,
+          "p50": -5.359,
+          "p95": 9.019,
+          "trades": 70,
+          "n_draws": 1000
+        },
+        {
+          "name": "random4",
+          "fee": "flat_15bp",
+          "exclude": "GLND",
+          "universe": "without GLND",
+          "start": "2026-09-21",
+          "draws": 1000,
+          "seed": 20260813,
+          "mean": -5.898,
+          "p5": -11.974,
+          "p50": -5.957,
+          "p95": 0.365,
+          "trades": 22,
+          "n_draws": 1000
+        }
+      ]
+    },
+    "iwm": {
+      "tape": "Yahoo auto_adjust=True, fetched in memory. Not written to data/factor_mine/retro_prices or data/prices.",
+      "rows": [
+        {
+          "name": "iwm",
+          "fee": "futubull",
+          "universe": "buy-and-hold",
+          "start": "2026-08-13",
+          "mean": -6.929,
+          "trades": 1,
+          "final_equity": 9307.1,
+          "n_open": 1,
+          "tape": "Yahoo auto_adjust=True, fetched in memory. Not written to data/factor_mine/retro_prices or data/prices."
+        },
+        {
+          "name": "iwm",
+          "fee": "futubull",
+          "universe": "buy-and-hold",
+          "start": "2026-09-21",
+          "mean": -1.588,
+          "trades": 1,
+          "final_equity": 9841.17,
+          "n_open": 1,
+          "tape": "Yahoo auto_adjust=True, fetched in memory. Not written to data/factor_mine/retro_prices or data/prices."
+        },
+        {
+          "name": "iwm",
+          "fee": "flat_15bp",
+          "universe": "buy-and-hold",
+          "start": "2026-08-13",
+          "mean": -6.981,
+          "trades": 1,
+          "final_equity": 9301.91,
+          "n_open": 1,
+          "tape": "Yahoo auto_adjust=True, fetched in memory. Not written to data/factor_mine/retro_prices or data/prices."
+        },
+        {
+          "name": "iwm",
+          "fee": "flat_15bp",
+          "universe": "buy-and-hold",
+          "start": "2026-09-21",
+          "mean": -1.64,
+          "trades": 1,
+          "final_equity": 9835.96,
+          "n_open": 1,
+          "tape": "Yahoo auto_adjust=True, fetched in memory. Not written to data/factor_mine/retro_prices or data/prices."
+        }
+      ]
+    },
+    "open_check": "Open cross-check from 2026-09-25 uses the theme-radar snapshot Open column when that dated file has a value (Finviz Open appended at the end of the snapshot). Sessions 2026-08-13 through 2026-09-24 use the Stooq daily open. On and after 2026-09-25 the order is snapshot Open, then post-close Finviz Open, then Stooq."
+  }
 }

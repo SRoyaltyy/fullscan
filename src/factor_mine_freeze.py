@@ -51,11 +51,15 @@ CREATED_PATH = ROOT / "data" / "factor_mine" / "recipe_created_on.json"
 GUARD_SLOTS = ("snapshots", "ledgers", "lineups", "candidates")
 # One table so the external daily checker uses these exact numbers.
 # Close (Finviz post-close Price, else theme-radar Price): max(0.5%, $0.02).
-# Open (Finviz Open, else Stooq) and Webull paper fills: max(1%, $0.02).
+# Open and Webull paper fills: max(1%, $0.02).
+# Open source, from SNAPSHOT_OPEN_FROM: theme-radar snapshot Open when the
+# dated file has a value, else post-close Finviz Open, else Stooq.
+# Before that date the open reference is Stooq (08-13..09-24).
 PRICE_CHECK = {
     "close": {"pct": 0.005, "abs": 0.02},
     "open": {"pct": 0.01, "abs": 0.02},
 }
+SNAPSHOT_OPEN_FROM = "2026-09-25"
 THEME_RADAR_SNAPSHOT_URL = (
     "https://raw.githubusercontent.com/SRoyaltyy/theme-radar/"
     "main/data/snapshots/{date}.csv"
@@ -508,30 +512,63 @@ def _theme_radar_expected_hash(date: str) -> str | None:
     return sha or None
 
 
-def parse_theme_radar_prices(text: str) -> dict[str, float]:
-    """Ticker → Price from a theme-radar snapshot. No Open column there."""
+def _as_float(raw):
+    """Finite float, or None. A blank cell is missing, not zero."""
+    if isinstance(raw, bool) or raw is None:
+        return None
+    if isinstance(raw, (int, float)):
+        val = float(raw)
+        return val if math.isfinite(val) else None
+    text = str(raw).replace(",", "").strip()
+    if not text:
+        return None
+    try:
+        val = float(text)
+    except (TypeError, ValueError):
+        return None
+    return val if math.isfinite(val) else None
+
+
+def radar_quote(entry) -> tuple[float | None, float | None]:
+    """``(close, open)`` from one snapshot row.
+
+    A bare float is the close proxy and no open. That keeps a caller
+    which still hands back ``{ticker: price}`` working.
+    """
+    if isinstance(entry, dict):
+        return _as_float(entry.get("close")), _as_float(entry.get("open"))
+    return _as_float(entry), None
+
+
+def parse_theme_radar_prices(text: str) -> dict[str, dict]:
+    """Ticker → ``{close, open}`` from a theme-radar snapshot.
+
+    ``Price`` is the close proxy. ``Open`` is the Finviz open appended
+    on dated snapshots from 2026-09-25. The column may sit at the end.
+    A missing or blank Open is None.
+    """
     import csv
     import io
 
-    out: dict[str, float] = {}
+    out: dict[str, dict] = {}
     reader = csv.DictReader(io.StringIO(text or ""))
     if not reader.fieldnames or "Ticker" not in reader.fieldnames or "Price" not in reader.fieldnames:
         return out
+    has_open = "Open" in reader.fieldnames
     for row in reader:
         tick = str(row.get("Ticker") or "").strip().upper()
         if not tick:
             continue
-        try:
-            px = float(str(row.get("Price") or "").replace(",", ""))
-        except (TypeError, ValueError):
+        px = _as_float(row.get("Price"))
+        if px is None:
             continue
-        if math.isfinite(px):
-            out[tick] = px
+        opened = _as_float(row.get("Open")) if has_open else None
+        out[tick] = {"close": px, "open": opened}
     return out
 
 
-def theme_radar_prices(date: str) -> dict[str, float]:
-    """Close proxy from ``data/snapshots/{D}.csv``. A bad hash is not used."""
+def theme_radar_prices(date: str) -> dict[str, dict]:
+    """Dated snapshot quotes. A bad hash is not used. Never ``current.csv``."""
     raw = _theme_radar_bytes(date)
     if not raw:
         return {}
@@ -649,17 +686,26 @@ def session_cross_check(date: str, tickers: list[str]) -> list[dict]:
     """Open and close versus the external sources, then paper fills.
 
     Close order: post-close ``finviz_{D}.csv`` Price, else the dated
-    theme-radar snapshot Price (never ``current.csv``). Open order:
-    that same file's Open column when the export is post-close and the
-    column is present, else the Stooq daily open. A filled Webull paper
-    order is a third check against our 09:30 open.
+    theme-radar snapshot Price (never ``current.csv``). Open order from
+    ``SNAPSHOT_OPEN_FROM``: that snapshot's Open when the cell is
+    present, else post-close Finviz Open, else Stooq. Earlier sessions
+    (2026-08-13 through 2026-09-24) use the Stooq daily open. A filled
+    Webull paper order is a third check against our 09:30 open.
     """
     day = str(date or "")[:10]
     post = export_is_postclose(day)
     has_open = finviz_export_has_open(day) if post else False
-    radar: dict[str, float] | None = None
+    use_snapshot_open = day >= SNAPSHOT_OPEN_FROM
+    radar: dict | None = None
     stooq: dict[str, dict] = {}
     fills = paper_fills(day)
+
+    def radar_map() -> dict:
+        nonlocal radar
+        if radar is None:
+            radar = theme_radar_prices(day) or {}
+        return radar
+
     gaps = []
     names = sorted({str(t).strip().upper() for t in tickers if t})
     for t in names:
@@ -672,10 +718,8 @@ def session_cross_check(date: str, tickers: list[str]) -> list[dict]:
                 close_ref = bar.get("close")
                 close_src = f"finviz_{day}.csv Price"
         if close_ref is None:
-            if radar is None:
-                radar = theme_radar_prices(day)
-            if t in radar:
-                close_ref = radar[t]
+            close_ref = radar_quote(radar_map().get(t))[0]
+            if close_ref is not None:
                 close_src = f"theme-radar snapshots/{day}.csv Price"
         if close_ref is None:
             gaps.append({
@@ -688,7 +732,12 @@ def session_cross_check(date: str, tickers: list[str]) -> list[dict]:
 
         open_ref = None
         open_src = None
-        if post and has_open:
+        if use_snapshot_open:
+            opened = radar_quote(radar_map().get(t))[1]
+            if opened is not None:
+                open_ref = opened
+                open_src = f"theme-radar snapshots/{day}.csv Open"
+        if open_ref is None and use_snapshot_open and post and has_open:
             opened = tl._finviz_bar(t, day).get("open")
             if opened is not None:
                 open_ref = opened

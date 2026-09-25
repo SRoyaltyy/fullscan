@@ -1000,10 +1000,12 @@ def _prints(book):
 
 
 def test_open_close_cross_check_sources_and_tolerances() -> None:
-    """Post-close Finviz Open and Price, else theme-radar and Stooq.
+    """Post-close Finviz Price, snapshot Open when present, else Finviz Open.
 
     Close agrees inside max(0.5%, $0.02). Open agrees inside max(1%, $0.02).
-    A morning Price is not the close. ``current.csv`` is not a source.
+    On 2026-09-25 an empty snapshot Open falls through to Finviz Open and
+    does not call Stooq. A morning Price is not the close. A bare float
+    from the snapshot reader is a close and no open.
     """
     assert fmf.PRICE_CHECK["close"] == {"pct": 0.005, "abs": 0.02}
     assert fmf.PRICE_CHECK["open"] == {"pct": 0.01, "abs": 0.02}
@@ -1046,7 +1048,7 @@ def test_open_close_cross_check_sources_and_tolerances() -> None:
                 assert fmf.export_is_postclose(day)
                 assert fmf.finviz_export_has_open(day)
                 assert fmf.session_cross_check(day, ["AAA", "BBB", "CCC"]) == []
-                assert calls == []
+                assert calls == ["radar"]
                 close_gap = fmf.session_cross_check(day, ["DDD"])
                 open_gap = fmf.session_cross_check(day, ["FFF"])
                 missing = fmf.session_cross_check(day, ["EEE"])
@@ -1227,7 +1229,7 @@ def test_stooq_fills_open_when_the_export_has_no_open_column() -> None:
                 "AAA": {"open": 10.10, "close": 10.0},
             })), mock.patch.object(fmf, "stooq_bar", return_value={
                 "open": 10.10, "high": 11.0, "low": 9.0, "close": 10.0,
-            }), mock.patch.object(fmf, "theme_radar_prices", side_effect=AssertionError):
+            }), mock.patch.object(fmf, "theme_radar_prices", return_value={}):
                 gaps = fmf.session_cross_check(day, ["AAA"])
             assert gaps == []
         finally:
@@ -1240,7 +1242,11 @@ def test_theme_radar_dated_file_rejects_current_and_a_bad_hash() -> None:
     day = "2026-09-25"
     body = "Ticker,Price,scrape_ts\nAAA,10.50,2026-09-25 16:30:00\n"
     parsed = fmf.parse_theme_radar_prices(body)
-    assert parsed == {"AAA": 10.50}
+    assert parsed == {"AAA": {"close": 10.50, "open": None}}
+    opened = "Ticker,Price,scrape_ts,Open\nAAA,10.50,2026-09-25 16:30:00,10.25\n"
+    assert fmf.parse_theme_radar_prices(opened) == {
+        "AAA": {"close": 10.50, "open": 10.25},
+    }
     with tempfile.TemporaryDirectory() as d:
         root = Path(d)
         (root / "current.csv").write_text(
@@ -1250,12 +1256,12 @@ def test_theme_radar_dated_file_rejects_current_and_a_bad_hash() -> None:
         fmf.THEME_RADAR_SNAP_DIR = root
         try:
             assert fmf._dated_snapshot_name("current") is None
-            assert fmf.theme_radar_prices(day) == {"AAA": 10.50}
+            assert fmf.theme_radar_prices(day) == {"AAA": {"close": 10.50, "open": None}}
             digest = fmf.sha256_bytes(body.encode("utf-8"))
             with mock.patch.object(fmf, "_theme_radar_expected_hash", return_value="0" * 64):
                 assert fmf.theme_radar_prices(day) == {}
             with mock.patch.object(fmf, "_theme_radar_expected_hash", return_value=digest):
-                assert fmf.theme_radar_prices(day) == {"AAA": 10.50}
+                assert fmf.theme_radar_prices(day) == {"AAA": {"close": 10.50, "open": None}}
             (root / f"{day}.csv").unlink()
             assert fmf.theme_radar_prices(day) == {}
         finally:
@@ -1290,7 +1296,7 @@ def test_webull_fill_outside_open_tolerance_holds() -> None:
             with mock.patch.object(tl, "_official_ohlc", side_effect=_prints({
                 "AAA": {"open": 10.0, "close": 10.5},
             })), mock.patch.object(fmf, "stooq_bar", side_effect=AssertionError), \
-                    mock.patch.object(fmf, "theme_radar_prices", side_effect=AssertionError):
+                    mock.patch.object(fmf, "theme_radar_prices", return_value={}):
                 assert fmf.session_cross_check(day, ["AAA"]) == []
             (root / f"{day}_status.json").write_text(json.dumps({
                 "sent": [{
@@ -1304,7 +1310,7 @@ def test_webull_fill_outside_open_tolerance_holds() -> None:
                 "date": day, "n": 1, "names": [{"ticker": "AAA", "sources": []}],
                 "excluded": ["flatten", "mover_buy"],
             }), mock.patch.object(fmf, "stooq_bar", side_effect=AssertionError), \
-                    mock.patch.object(fmf, "theme_radar_prices", side_effect=AssertionError):
+                    mock.patch.object(fmf, "theme_radar_prices", return_value={}):
                 try:
                     fmf.prepare_lock(day)
                     held = False
@@ -1318,6 +1324,76 @@ def test_webull_fill_outside_open_tolerance_holds() -> None:
             assert err.gaps[0]["ref"] == 10.20
             assert "webull paper" in err.gaps[0]["source"]
             assert not fmf.snapshot_path(day).exists()
+        finally:
+            fmf.PAPER_OPEN_DIR = old_paper
+            tl.EXPORT_DIR = old_export
+            tl._FINVIZ_BARS.clear()
+
+
+def test_snapshot_open_from_0925_stooq_before() -> None:
+    """Snapshot Open wins from 09-25. Earlier sessions stay on Stooq.
+
+    A 09-24 Finviz Open that matches our print is ignored when Stooq
+    does not. A 09-25 snapshot Open is used even when Finviz Open is
+    a different number, and Stooq is not called.
+    """
+    assert fmf.SNAPSHOT_OPEN_FROM == "2026-09-25"
+    early = "2026-09-24"
+    late = "2026-09-25"
+    with tempfile.TemporaryDirectory() as d:
+        root = Path(d)
+        _csv(root / f"finviz_{early}.csv", [{
+            "Ticker": "AAA", "Open": 10.0, "High": 11, "Low": 9, "Price": 10.0,
+        }])
+        _csv(root / f"finviz_{late}.csv", [{
+            "Ticker": "AAA", "Open": 50.0, "High": 11, "Low": 9, "Price": 10.0,
+        }])
+        (root / f"finviz_{early}.scraped_at").write_text(
+            "2026-09-24T16:30:00-04:00\n", encoding="utf-8")
+        (root / f"finviz_{late}.scraped_at").write_text(
+            "2026-09-25T16:30:00-04:00\n", encoding="utf-8")
+        old_export = _with_exports(root)
+        old_paper = fmf.PAPER_OPEN_DIR
+        fmf.PAPER_OPEN_DIR = root / "no-fills"
+        try:
+            book = {"AAA": {"open": 10.0, "close": 10.0}}
+            with mock.patch.object(tl, "_official_ohlc", side_effect=_prints(book)), \
+                    mock.patch.object(fmf, "theme_radar_prices", return_value={
+                        "AAA": {"close": 10.0, "open": 10.0},
+                    }), \
+                    mock.patch.object(fmf, "stooq_bar", return_value={
+                        "open": 12.0, "high": 12.0, "low": 9.0, "close": 10.0,
+                    }):
+                early_gaps = fmf.session_cross_check(early, ["AAA"])
+            assert len(early_gaps) == 1
+            assert early_gaps[0]["field"] == "open"
+            assert early_gaps[0]["ref"] == 12.0
+            assert early_gaps[0]["source"] == "stooq AAA.us Open"
+
+            stooq_calls: list[str] = []
+
+            def refuse_stooq(ticker, date):
+                stooq_calls.append(ticker)
+                raise AssertionError("stooq is not the open once snapshot Open is set")
+
+            with mock.patch.object(tl, "_official_ohlc", side_effect=_prints({
+                "AAA": {"open": 10.25, "close": 10.0},
+            })), mock.patch.object(fmf, "theme_radar_prices", return_value={
+                "AAA": {"close": 10.0, "open": 10.25},
+            }), mock.patch.object(fmf, "stooq_bar", side_effect=refuse_stooq):
+                assert fmf.session_cross_check(late, ["AAA"]) == []
+            assert stooq_calls == []
+
+            with mock.patch.object(tl, "_official_ohlc", side_effect=_prints(book)), \
+                    mock.patch.object(fmf, "theme_radar_prices", return_value={
+                        "AAA": {"close": 10.0, "open": 11.0},
+                    }), mock.patch.object(fmf, "stooq_bar", side_effect=refuse_stooq):
+                late_gap = fmf.session_cross_check(late, ["AAA"])
+            assert len(late_gap) == 1
+            assert late_gap[0]["field"] == "open"
+            assert late_gap[0]["ref"] == 11.0
+            assert late_gap[0]["source"] == f"theme-radar snapshots/{late}.csv Open"
+            assert stooq_calls == []
         finally:
             fmf.PAPER_OPEN_DIR = old_paper
             tl.EXPORT_DIR = old_export
@@ -1355,4 +1431,5 @@ if __name__ == "__main__":
     test_stooq_fills_open_when_the_export_has_no_open_column()
     test_theme_radar_dated_file_rejects_current_and_a_bad_hash()
     test_webull_fill_outside_open_tolerance_holds()
+    test_snapshot_open_from_0925_stooq_before()
     print("factor-mine freeze tests passed")

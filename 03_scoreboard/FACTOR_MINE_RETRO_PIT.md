@@ -54,3 +54,27 @@ Names with no adjusted bar or no session open were dropped from that day's rows.
 
 Ledgers are gzip of the canonical decision JSON (`{D}.json.gz`). The manifest sha256 is those gzip bytes.
 
+## Baselines
+
+Scored on the same frozen sessions as HOT4 and holdup. Same $10k leftover book and the same fees (Futubull, and flat 15bp as 7.5 bp per side). RANDOM4 draws 4 names from that day's frozen snapshot list, the morning candidate rows the HOT4 book saw. Seed `20260813`, 1000 draws, `random.Random(seed + draw)`. An empty snapshot buys nothing. With GLND keeps that name in the pool. Without GLND drops it before the draw. Mean and 5/50/95 are total return percent, linear percentile. Trades are the median count. The morning S is the same one the HOT4 book reads, so a hard-red morning still sits.
+
+IWM is buy-and-hold over those sessions. The name stays on the list every day, so the lot is not sold, and the book is marked at the last close. Hard-red does not skip the IWM entry. IWM is one series, not a with-GLND and without-GLND pair.
+
+IWM tape: Yahoo auto_adjust=True, fetched in memory. Not written to data/factor_mine/retro_prices or data/prices.
+
+| baseline | fee | universe | window | mean % | p5 | p50 | p95 | trades |
+| --- | --- | --- | --- | ---: | ---: | ---: | ---: | ---: |
+| `random4` | futubull | with GLND | 2026-08-13 | -7.501 | -21.497 | -7.31 | 6.313 | 70 |
+| `random4` | futubull | with GLND | 2026-09-21 | -6.439 | -12.771 | -6.803 | 0.471 | 22 |
+| `random4` | futubull | without GLND | 2026-08-13 | -7.694 | -22.32 | -7.735 | 6.626 | 70 |
+| `random4` | futubull | without GLND | 2026-09-21 | -6.707 | -13.031 | -6.759 | -0.363 | 22 |
+| `random4` | flat_15bp | with GLND | 2026-08-13 | -4.993 | -18.462 | -4.88 | 9.012 | 70 |
+| `random4` | flat_15bp | with GLND | 2026-09-21 | -5.622 | -11.631 | -5.908 | 1.163 | 22 |
+| `random4` | flat_15bp | without GLND | 2026-08-13 | -5.202 | -19.63 | -5.359 | 9.019 | 70 |
+| `random4` | flat_15bp | without GLND | 2026-09-21 | -5.898 | -11.974 | -5.957 | 0.365 | 22 |
+| `iwm` | futubull | buy-and-hold | 2026-08-13 | -6.929 |  |  |  | 1 |
+| `iwm` | futubull | buy-and-hold | 2026-09-21 | -1.588 |  |  |  | 1 |
+| `iwm` | flat_15bp | buy-and-hold | 2026-08-13 | -6.981 |  |  |  | 1 |
+| `iwm` | flat_15bp | buy-and-hold | 2026-09-21 | -1.64 |  |  |  | 1 |
+
+Open cross-check from 2026-09-25 uses the theme-radar snapshot Open column when that dated file has a value (Finviz Open appended at the end of the snapshot). Sessions 2026-08-13 through 2026-09-24 use the Stooq daily open. On and after 2026-09-25 the order is snapshot Open, then post-close Finviz Open, then Stooq.

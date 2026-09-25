@@ -17,6 +17,7 @@ from __future__ import annotations
 import hashlib
 import json
 import os
+import random
 import subprocess
 import time
 from concurrent.futures import ThreadPoolExecutor
@@ -680,6 +681,532 @@ def score_recipe(panel: dict, name: str, *, flat_15bp: bool = False,
         "final_equity": book.get("final_equity"),
         "n_trades": book.get("n_trades"),
     }
+
+
+RANDOM4_N = 4
+RANDOM4_DRAWS = 1000
+RANDOM4_SEED = 20260813
+BASELINE_WINDOWS = (SESSIONS[0], "2026-09-21")
+
+
+def linear_percentile(values, p: float) -> float:
+    """Linear percentile. Index is ``(n - 1) * (p / 100)``."""
+    xs = sorted(float(v) for v in values)
+    n = len(xs)
+    if n == 0:
+        raise ValueError("empty")
+    if n == 1:
+        return round(xs[0], 3)
+    k = (n - 1) * (float(p) / 100.0)
+    lo = int(k)
+    hi = min(lo + 1, n - 1)
+    weight = k - lo
+    return round(xs[lo] * (1.0 - weight) + xs[hi] * weight, 3)
+
+
+def _mean3(values) -> float:
+    return round(sum(float(v) for v in values) / len(values), 3)
+
+
+def median_count(values) -> int | float:
+    """Median of a count. A .5 split stays one decimal."""
+    xs = sorted(float(v) for v in values)
+    n = len(xs)
+    mid = n // 2
+    med = xs[mid] if n % 2 else (xs[mid - 1] + xs[mid]) / 2.0
+    if abs(med - round(med)) < 1e-9:
+        return int(round(med))
+    return round(med, 1)
+
+
+def random4_recipe() -> dict:
+    """Inline book. Not registered and not written to the creation catalog."""
+    return {
+        "name": "random4",
+        "universe": "union",
+        "hold": 1,
+        "side": "long",
+        "top_n": RANDOM4_N,
+        "require": {},
+        "forbid": {},
+        "rank": "list",
+        "exit_when": {},
+        "size": "leftover",
+        "sell": "list",
+        "s_boost": "none",
+        "day_cap": 1.0,
+        "take_pct": None,
+        "stop_pct": None,
+        "note": "4 random names from that morning's frozen candidate list",
+        "created_on": SESSIONS[0],
+    }
+
+
+def iwm_recipe() -> dict:
+    return {
+        "name": "iwm",
+        "universe": "union",
+        "hold": 1,
+        "side": "long",
+        "top_n": 1,
+        "require": {},
+        "forbid": {},
+        "rank": "list",
+        "exit_when": {},
+        "size": "leftover",
+        "sell": "list",
+        "s_boost": "none",
+        "day_cap": 1.0,
+        "take_pct": None,
+        "stop_pct": None,
+        "note": "IWM buy-and-hold over the same sessions",
+        "created_on": SESSIONS[0],
+    }
+
+
+def snapshot_pools(dates: list[str] | None = None) -> dict[str, list[str]]:
+    """Sorted unique tickers on each frozen snapshot.
+
+    That list is the morning candidate set the HOT4 book was scored on.
+    An incomplete day has no rows, so the pool is empty.
+    """
+    pools: dict[str, list[str]] = {}
+    for date in dates or SESSIONS:
+        snap = fmf.read_json(fmf.snapshot_path(date)) or {}
+        seen: set[str] = set()
+        for row in snap.get("rows") or []:
+            tick = fm._tick(row.get("ticker"))
+            if tick:
+                seen.add(tick)
+        pools[date] = sorted(seen)
+    return pools
+
+
+def random4_draw(pools: dict[str, list[str]], draw_i: int, *,
+                 n: int = RANDOM4_N, seed: int = RANDOM4_SEED,
+                 exclude: str | None = None) -> dict[str, list[str]]:
+    """One draw. ``exclude`` is removed before the sample."""
+    rng = random.Random(int(seed) + int(draw_i))
+    ban = str(exclude or "").upper()
+    out: dict[str, list[str]] = {}
+    for date in sorted(pools):
+        pool = [t for t in pools[date] if t != ban]
+        k = min(int(n), len(pool))
+        out[date] = rng.sample(pool, k) if k else []
+    return out
+
+
+def _sim_ready(panel: dict) -> dict:
+    """Skip tape, catalyst, and clock fills. These rows are already picks."""
+    panel["_ohlc_filled"] = True
+    panel["_tape_filled"] = True
+    panel["_clock_b"] = True
+    panel["_oppset"] = True
+    return panel
+
+
+def panel_from_picks(dates: list[str], picks: dict[str, list[str]]) -> dict:
+    """Rows only on the day they are bought. A later day without the name sells it."""
+    rows = []
+    by_date: dict[str, list] = {}
+    for date in dates:
+        day_rows = []
+        for i, tick in enumerate(picks.get(date) or []):
+            row = {
+                "date": date,
+                "ticker": tick,
+                "sources": ["union"],
+                "src_rank": i,
+                "ohlc_ret_1": 0.0,
+                "rsi": 50.0,
+            }
+            day_rows.append(row)
+            rows.append(row)
+        by_date[date] = day_rows
+    panel = {
+        "from_date": dates[0] if dates else None,
+        "to_date": dates[-1] if dates else None,
+        "session_dates": list(dates),
+        "rows": rows,
+        "by_date": by_date,
+        "n_rows": len(rows),
+        "n_sessions": len(dates),
+        "asof": "09:30_et",
+    }
+    return _sim_ready(panel)
+
+
+def score_panel(panel: dict, rec: dict, bars: dict, *,
+                flat_15bp: bool = False, fees=None,
+                regime=None, rules=None) -> dict:
+    """One cash book. ``regime`` is optional; None reads the morning S files."""
+    from . import factor_mine_book as fmb
+    from . import paper_trade as pt
+
+    fees = fm.pt_fees() if fees is None else fees
+    orig = pt.order_fees
+    if flat_15bp:
+        pt.order_fees = flat_15bp_order_fees
+    try:
+        book = fmb.simulate_book(
+            panel, rec, bars=bars, fees=fees, regime=regime, rules=rules,
+        )
+    finally:
+        pt.order_fees = orig
+    return {
+        "total_ret_pct": book.get("total_ret_pct"),
+        "n_trades": book.get("n_trades"),
+        "final_equity": book.get("final_equity"),
+        "n_open": book.get("n_open"),
+        "trades": book.get("trades"),
+    }
+
+
+def morning_regime(dates: list[str]) -> dict:
+    """Same morning S ``score_recipe`` would read, cached for the draws."""
+    from .factor_mine_book import morning_s
+
+    regime = {}
+    for date in dates:
+        score = morning_s(None, date)
+        if score is not None:
+            regime[date] = {"predict_score": float(score)}
+    return regime
+
+
+def bars_for_tickers(tickers: set[str], dates: list[str]) -> dict:
+    """Adjusted retro bars for these names. Does not write the store."""
+    import pandas as pd
+
+    bars: dict = {}
+    if not RETRO_STORE.is_file() or not tickers:
+        return bars
+    df = pd.read_parquet(
+        RETRO_STORE, columns=["date", "ticker", "open", "high", "low", "close"],
+    )
+    df["date"] = pd.to_datetime(df["date"]).dt.strftime("%Y-%m-%d")
+    want = set(dates)
+    day = df[df["date"].isin(want) & df["ticker"].isin(tickers)]
+    for rec in day.itertuples(index=False):
+        ticker = str(getattr(rec, "ticker", "") or "").upper()
+        date = str(getattr(rec, "date", ""))[:10]
+        if not ticker or not date:
+            continue
+        bars[(ticker, date)] = {
+            "open": getattr(rec, "open", None),
+            "high": getattr(rec, "high", None),
+            "low": getattr(rec, "low", None),
+            "close": getattr(rec, "close", None),
+        }
+    return bars
+
+
+def _summarize(rets: list[float], trades: list) -> dict:
+    return {
+        "mean": _mean3(rets),
+        "p5": linear_percentile(rets, 5),
+        "p50": linear_percentile(rets, 50),
+        "p95": linear_percentile(rets, 95),
+        "trades": median_count(trades),
+        "n_draws": len(rets),
+    }
+
+
+def score_random4(pools: dict[str, list[str]], bars: dict, *,
+                  draws: int = RANDOM4_DRAWS, seed: int = RANDOM4_SEED,
+                  windows: tuple[str, ...] = BASELINE_WINDOWS,
+                  regime=None, fees=None) -> list[dict]:
+    """1000 draws × Futubull and 15bp × with and without GLND × both windows."""
+    rec = random4_recipe()
+    fees = fm.pt_fees() if fees is None else fees
+    rows = []
+    for flat in (False, True):
+        for exclude in (None, GLND):
+            for start in windows:
+                dates = [d for d in SESSIONS if d >= start and d in pools]
+                window_pools = {d: pools[d] for d in dates}
+                rets = []
+                trades = []
+                label = "without GLND" if exclude else "with GLND"
+                fee = "flat_15bp" if flat else "futubull"
+                print(f"[retro] random4 {fee} {label} from {start} draws={draws}",
+                      flush=True)
+                for i in range(int(draws)):
+                    picks = random4_draw(
+                        window_pools, i, n=RANDOM4_N, seed=seed, exclude=exclude,
+                    )
+                    panel = panel_from_picks(dates, picks)
+                    scored = score_panel(
+                        panel, rec, bars, flat_15bp=flat, fees=fees, regime=regime,
+                    )
+                    rets.append(scored["total_ret_pct"])
+                    trades.append(scored["n_trades"])
+                    if draws >= 100 and (i + 1) % 250 == 0:
+                        print(f"[retro] random4 {fee} {label} {start} {i + 1}/{draws}",
+                              flush=True)
+                summary = _summarize(rets, trades)
+                rows.append({
+                    "name": "random4",
+                    "fee": fee,
+                    "exclude": exclude,
+                    "universe": label,
+                    "start": start,
+                    "draws": int(draws),
+                    "seed": int(seed),
+                    **summary,
+                })
+    return rows
+
+
+def _bar_ok(bar: dict | None) -> bool:
+    if not bar:
+        return False
+    return bar.get("open") is not None and bar.get("close") is not None
+
+
+def _iwm_frame(raw) -> dict:
+    import pandas as pd
+
+    if raw is None or len(raw) == 0:
+        return {}
+    frame = raw.copy()
+    if isinstance(frame.columns, pd.MultiIndex):
+        level0 = [str(c) for c in frame.columns.get_level_values(0)]
+        if "Open" in level0:
+            frame.columns = frame.columns.get_level_values(0)
+        else:
+            frame.columns = frame.columns.get_level_values(-1)
+    frame = frame.reset_index()
+    cols = {str(c).lower(): c for c in frame.columns}
+    date_col = cols.get("date") or cols.get("datetime") or frame.columns[0]
+    out = {}
+    for _, row in frame.iterrows():
+        day = str(pd.Timestamp(row[date_col]).date())
+
+        def num(key, row=row):
+            col = cols.get(key)
+            if col is None:
+                return None
+            try:
+                val = float(row[col])
+            except (TypeError, ValueError):
+                return None
+            if val != val:
+                return None
+            return val
+
+        opened, closed = num("open"), num("close")
+        if opened is None and closed is None:
+            continue
+        out[("IWM", day)] = {
+            "open": opened,
+            "high": num("high"),
+            "low": num("low"),
+            "close": closed,
+        }
+    return out
+
+
+def _iwm_yahoo(dates: list[str]) -> dict:
+    import yfinance as yf
+
+    raw = yf.download(
+        "IWM", start=min(dates), end="2026-09-25",
+        auto_adjust=True, actions=False, progress=False, threads=False,
+    )
+    return _iwm_frame(raw)
+
+
+def _iwm_stooq(dates: list[str]) -> dict:
+    text = fmf._fetch_stooq("IWM")
+    out = {}
+    for day in dates:
+        bar = fmf.parse_stooq_bar(text, day)
+        if bar.get("open") is None and bar.get("close") is None:
+            continue
+        out[("IWM", day)] = bar
+    return out
+
+
+def fetch_iwm_bars(dates: list[str]) -> tuple[dict, str]:
+    """Adjusted IWM in memory. Neither price store is written."""
+    try:
+        bars = _iwm_yahoo(dates)
+        yahoo_days = {d for d in dates if _bar_ok(bars.get(("IWM", d)))}
+    except Exception as exc:
+        print(f"[retro] IWM yahoo failed: {exc}", flush=True)
+        bars = {}
+        yahoo_days = set()
+    missing = [d for d in dates if d not in yahoo_days]
+    stooq_days: set[str] = set()
+    if missing:
+        alt = _iwm_stooq(dates)
+        for day in missing:
+            bar = alt.get(("IWM", day))
+            if _bar_ok(bar):
+                bars[("IWM", day)] = bar
+                stooq_days.add(day)
+    still = [d for d in dates if not _bar_ok(bars.get(("IWM", d)))]
+    if still:
+        raise RuntimeError(f"IWM tape missing {still[:8]}")
+    if stooq_days and yahoo_days:
+        source = (
+            "Yahoo auto_adjust=True with Stooq iwm.us filling "
+            f"{len(stooq_days)} session(s), in memory. "
+            "Not written to data/factor_mine/retro_prices or data/prices."
+        )
+    elif stooq_days:
+        source = (
+            "Stooq iwm.us daily, in memory (Yahoo did not cover the window). "
+            "Not written to data/factor_mine/retro_prices or data/prices."
+        )
+    else:
+        source = (
+            "Yahoo auto_adjust=True, fetched in memory. "
+            "Not written to data/factor_mine/retro_prices or data/prices."
+        )
+    return bars, source
+
+
+def score_iwm(bars: dict, *, windows: tuple[str, ...] = BASELINE_WINDOWS,
+              regime=None, fees=None, tape: str = "") -> list[dict]:
+    """One buy, held every session. Hard-red does not skip the entry."""
+    rec = iwm_recipe()
+    fees = fm.pt_fees() if fees is None else fees
+    rules = {"hard_red_no_new": False}
+    rows = []
+    for flat in (False, True):
+        for start in windows:
+            dates = [d for d in SESSIONS if d >= start]
+            picks = {d: ["IWM"] for d in dates}
+            panel = panel_from_picks(dates, picks)
+            scored = score_panel(
+                panel, rec, bars, flat_15bp=flat, fees=fees,
+                regime=regime, rules=rules,
+            )
+            rows.append({
+                "name": "iwm",
+                "fee": "flat_15bp" if flat else "futubull",
+                "universe": "buy-and-hold",
+                "start": start,
+                "mean": scored["total_ret_pct"],
+                "trades": scored["n_trades"],
+                "final_equity": scored["final_equity"],
+                "n_open": scored["n_open"],
+                "tape": tape,
+            })
+    return rows
+
+
+def _baseline_md(payload: dict) -> str:
+    note = payload.get("open_check") or ""
+    lines = [
+        "## Baselines",
+        "",
+        "Scored on the same frozen sessions as HOT4 and holdup. "
+        "Same $10k leftover book and the same fees (Futubull, and flat 15bp "
+        "as 7.5 bp per side). RANDOM4 draws 4 names from that day's frozen "
+        "snapshot list, the morning candidate rows the HOT4 book saw. "
+        f"Seed `{RANDOM4_SEED}`, {RANDOM4_DRAWS} draws, "
+        "`random.Random(seed + draw)`. "
+        "An empty snapshot buys nothing. With GLND keeps that name in the "
+        "pool. Without GLND drops it before the draw. Mean and 5/50/95 are "
+        "total return percent, linear percentile. Trades are the median count. "
+        "The morning S is the same one the HOT4 book reads, so a hard-red "
+        "morning still sits.",
+        "",
+        "IWM is buy-and-hold over those sessions. The name stays on the list "
+        "every day, so the lot is not sold, and the book is marked at the last "
+        "close. Hard-red does not skip the IWM entry. IWM is one series, not "
+        "a with-GLND and without-GLND pair.",
+        "",
+        f"IWM tape: {payload.get('iwm', {}).get('tape', '')}",
+        "",
+        "| baseline | fee | universe | window | mean % | p5 | p50 | p95 | trades |",
+        "| --- | --- | --- | --- | ---: | ---: | ---: | ---: | ---: |",
+    ]
+    for row in payload.get("random4", {}).get("rows") or []:
+        lines.append(
+            f"| `random4` | {row['fee']} | {row['universe']} | {row['start']} | "
+            f"{row['mean']} | {row['p5']} | {row['p50']} | {row['p95']} | "
+            f"{row['trades']} |"
+        )
+    for row in payload.get("iwm", {}).get("rows") or []:
+        lines.append(
+            f"| `iwm` | {row['fee']} | {row['universe']} | {row['start']} | "
+            f"{row['mean']} |  |  |  | {row['trades']} |"
+        )
+    lines += ["", note, ""]
+    return "\n".join(lines)
+
+
+def _splice_baselines_md(text: str, section: str) -> str:
+    marker = "## Baselines"
+    if marker in text:
+        text = text[:text.index(marker)].rstrip() + "\n"
+    else:
+        text = text.rstrip() + "\n"
+    return text + "\n" + section
+
+
+def _splice_baselines_json(original: str, payload: dict) -> str:
+    """Attach ``baselines`` without reformatting classed or scores."""
+    marker = '\n  "baselines": '
+    if marker in original:
+        head = original.split(marker, 1)[0].rstrip()
+        if head.endswith(","):
+            head = head[:-1].rstrip()
+    else:
+        head = original.rstrip()
+        if not head.endswith("}"):
+            raise RuntimeError("retro report json is not an object")
+        head = head[:-1].rstrip()
+    blob = json.dumps(payload, indent=2)
+    indented = blob.replace("\n", "\n  ")
+    return head + ",\n  \"baselines\": " + indented + "\n}\n"
+
+
+def write_baselines(payload: dict) -> None:
+    """Append or replace the baselines section. HOT4 rows stay as they are."""
+    text = REPORT_MD.read_text(encoding="utf-8") if REPORT_MD.is_file() else ""
+    REPORT_MD.write_text(_splice_baselines_md(text, _baseline_md(payload)), encoding="utf-8")
+    raw = REPORT_JSON.read_text(encoding="utf-8") if REPORT_JSON.is_file() else "{}\n"
+    REPORT_JSON.write_text(_splice_baselines_json(raw, payload), encoding="utf-8")
+    print(f"[retro] baselines appended to {REPORT_MD.name}", flush=True)
+
+
+def publish_baselines(*, draws: int = RANDOM4_DRAWS) -> dict:
+    """Score RANDOM4 and IWM from frozen snapshots. Does not rebuild them."""
+    pools = snapshot_pools()
+    tickers = {t for names in pools.values() for t in names}
+    print(f"[retro] baseline pools days={len(pools)} names={len(tickers)}", flush=True)
+    bars = bars_for_tickers(tickers, list(SESSIONS))
+    regime = morning_regime(list(SESSIONS))
+    fees = fm.pt_fees()
+    random_rows = score_random4(
+        pools, bars, draws=draws, regime=regime, fees=fees,
+    )
+    iwm_bars, tape = fetch_iwm_bars(list(SESSIONS))
+    iwm_rows = score_iwm(iwm_bars, regime=regime, fees=fees, tape=tape)
+    payload = {
+        "random4": {
+            "n": RANDOM4_N,
+            "draws": int(draws),
+            "seed": RANDOM4_SEED,
+            "rows": random_rows,
+        },
+        "iwm": {"tape": tape, "rows": iwm_rows},
+        "open_check": (
+            "Open cross-check from 2026-09-25 uses the theme-radar snapshot "
+            "Open column when that dated file has a value (Finviz Open "
+            "appended at the end of the snapshot). Sessions 2026-08-13 "
+            "through 2026-09-24 use the Stooq daily open. On and after "
+            "2026-09-25 the order is snapshot Open, then post-close Finviz "
+            "Open, then Stooq."
+        ),
+    }
+    write_baselines(payload)
+    return payload
 
 
 def write_report(classed: list[dict], scores: list[dict]) -> None:
