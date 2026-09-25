@@ -1,0 +1,474 @@
+{
+  "job": "postclose",
+  "date": "2026-09-24",
+  "source_date": "2026-09-24",
+  "target_date": "2026-09-24",
+  "book_date": "2026-09-24",
+  "generated_at": "2026-09-24T20:35:31.887129-04:00",
+  "ok": false,
+  "n_fail": 1,
+  "n_warn": 8,
+  "round": 1,
+  "fix_actions": null,
+  "checks": [
+    {
+      "step": "runtime.home",
+      "name": "HOME is /home/gha on ECS",
+      "group": "runtime",
+      "status": "OK",
+      "required": false,
+      "detail": "HOME='/home/gha'",
+      "path": ""
+    },
+    {
+      "step": "runtime.token",
+      "name": "OpenClaw token (48 json vs 64 secret)",
+      "group": "runtime",
+      "status": "OK",
+      "required": true,
+      "detail": "live_len=48 tail=864c",
+      "path": ""
+    },
+    {
+      "step": "runtime.port",
+      "name": "OpenClaw port 18789 listening",
+      "group": "runtime",
+      "status": "OK",
+      "required": true,
+      "detail": "http://127.0.0.1:18789",
+      "path": ""
+    },
+    {
+      "step": "runtime.pong",
+      "name": "OpenClaw PONG",
+      "group": "runtime",
+      "status": "OK",
+      "required": true,
+      "detail": "model=openclaw/default",
+      "path": ""
+    },
+    {
+      "step": "runtime.model",
+      "name": "Classroom model is Grok not DeepSeek",
+      "group": "runtime",
+      "status": "OK",
+      "required": true,
+      "detail": "model=openclaw/default",
+      "path": ""
+    },
+    {
+      "step": "runtime.oauth",
+      "name": "xAI auth (OAuth or API key)",
+      "group": "runtime",
+      "status": "WARN",
+      "required": false,
+      "detail": "xAI token expiring but still usable | Config        : ~/.openclaw/openclaw.json Agent dir     : ~/.openclaw/agents/main/agent Default       : xai/grok-4.6 Fal",
+      "path": ""
+    },
+    {
+      "step": "runtime.api_key",
+      "name": "XAI_API_KEY on this box (permanent)",
+      "group": "runtime",
+      "status": "WARN",
+      "required": false,
+      "detail": "missing \u2014 OAuth dies ~6h. Put a console.x.ai key in ~/.openclaw/.env",
+      "path": ""
+    },
+    {
+      "step": "runtime.grok_only",
+      "name": "GROK_ONLY (this health process)",
+      "group": "runtime",
+      "status": "WARN",
+      "required": false,
+      "detail": "off here \u2014 heal exports GROK_ONLY=1",
+      "path": ""
+    },
+    {
+      "step": "clock.fullscan-preopen.timer",
+      "name": "systemd pre-open timer enabled",
+      "group": "clock",
+      "status": "OK",
+      "required": false,
+      "detail": "enabled",
+      "path": ""
+    },
+    {
+      "step": "clock.fullscan-preopen.service",
+      "name": "systemd pre-open service (now)",
+      "group": "clock",
+      "status": "WARN",
+      "required": false,
+      "detail": "failed",
+      "path": ""
+    },
+    {
+      "step": "clock.fullscan-map-postclose.timer",
+      "name": "systemd post-close timer enabled",
+      "group": "clock",
+      "status": "OK",
+      "required": true,
+      "detail": "enabled",
+      "path": ""
+    },
+    {
+      "step": "clock.fullscan-openclaw-gateway.service",
+      "name": "OpenClaw gateway unit",
+      "group": "clock",
+      "status": "OK",
+      "required": false,
+      "detail": "active",
+      "path": ""
+    },
+    {
+      "step": "clock.ecs_clock",
+      "name": "ECS clock file written",
+      "group": "clock",
+      "status": "OK",
+      "required": false,
+      "detail": "306 bytes",
+      "path": "/home/gha/actions-runner/_work/fullscan/fullscan/01_daily/_ecs_clock.md"
+    },
+    {
+      "step": "clock.map_heat_postclose.yml",
+      "name": "Map heat captain research (post-close) ran on 2026-09-24",
+      "group": "clock",
+      "status": "WARN",
+      "required": false,
+      "detail": "n=0 on 2026-09-24 \u2014 file checks below decide",
+      "path": ""
+    },
+    {
+      "step": "clock.postclose_all.yml",
+      "name": "Post-Close ALL ran on 2026-09-24",
+      "group": "clock",
+      "status": "OK",
+      "required": false,
+      "detail": "n=4 latest=success event=schedule",
+      "path": "https://github.com/SRoyaltyy/fullscan/actions/runs/36071383153"
+    },
+    {
+      "step": "clock.label_weather.yml",
+      "name": "Label + Weather ran on 2026-09-24",
+      "group": "clock",
+      "status": "OK",
+      "required": false,
+      "detail": "n=1 latest=success event=workflow_dispatch",
+      "path": "https://github.com/SRoyaltyy/fullscan/actions/runs/35983925474"
+    },
+    {
+      "step": "clock.ab_checklist.yml",
+      "name": "A+B1 Checklist ran on 2026-09-24",
+      "group": "clock",
+      "status": "OK",
+      "required": false,
+      "detail": "n=1 latest=success event=workflow_dispatch",
+      "path": "https://github.com/SRoyaltyy/fullscan/actions/runs/35983925842"
+    },
+    {
+      "step": "clock.daily_pipeline.yml",
+      "name": "Daily pipeline outcome+reflect ran on 2026-09-24",
+      "group": "clock",
+      "status": "WARN",
+      "required": false,
+      "detail": "n=0 on 2026-09-24 \u2014 file checks below decide",
+      "path": ""
+    },
+    {
+      "step": "clock.sector_daily.yml",
+      "name": "Sector Daily outcome+reflect ran on 2026-09-24",
+      "group": "clock",
+      "status": "WARN",
+      "required": false,
+      "detail": "n=0 on 2026-09-24 \u2014 file checks below decide",
+      "path": ""
+    },
+    {
+      "step": "clock.learn_cycle.yml",
+      "name": "Learn Cycle ran on 2026-09-24",
+      "group": "clock",
+      "status": "WARN",
+      "required": false,
+      "detail": "n=0 on 2026-09-24 \u2014 file checks below decide",
+      "path": ""
+    },
+    {
+      "step": "clock.stock_book_all.yml",
+      "name": "Stock Book ALL ran on 2026-09-24",
+      "group": "clock",
+      "status": "OK",
+      "required": false,
+      "detail": "n=5 latest=success event=push",
+      "path": "https://github.com/SRoyaltyy/fullscan/actions/runs/36077796466"
+    },
+    {
+      "step": "postclose.map_heat_json",
+      "name": "2026-09-24_map_heat.json (industry groups + captains)",
+      "group": "postclose",
+      "status": "OK",
+      "required": true,
+      "detail": "phase=morning_overlay 270739 bytes",
+      "path": "/home/gha/actions-runner/_work/fullscan/fullscan/01_daily/map_heat/2026-09-24_map_heat.json"
+    },
+    {
+      "step": "postclose.map_heat_md",
+      "name": "2026-09-24_map_heat.md",
+      "group": "postclose",
+      "status": "OK",
+      "required": false,
+      "detail": "17075 bytes",
+      "path": "/home/gha/actions-runner/_work/fullscan/fullscan/01_daily/map_heat/2026-09-24_map_heat.md"
+    },
+    {
+      "step": "postclose.baseline_json",
+      "name": "2026-09-24_research_baseline.json (captain cards)",
+      "group": "postclose",
+      "status": "FAIL",
+      "required": true,
+      "detail": "PASS-OVER from source_heat_date=2026-09-23 (want 2026-09-24)",
+      "path": "/home/gha/actions-runner/_work/fullscan/fullscan/01_daily/map_heat/2026-09-24_research_baseline.json"
+    },
+    {
+      "step": "postclose.baseline_md",
+      "name": "2026-09-24_research_baseline.md",
+      "group": "postclose",
+      "status": "OK",
+      "required": true,
+      "detail": "44049 bytes",
+      "path": "/home/gha/actions-runner/_work/fullscan/fullscan/01_daily/map_heat/2026-09-24_research_baseline.md"
+    },
+    {
+      "step": "postclose.coverage",
+      "name": "Captain coverage \u2265 90%",
+      "group": "postclose",
+      "status": "OK",
+      "required": true,
+      "detail": "cards=142 coverage=1.0",
+      "path": ""
+    },
+    {
+      "step": "postclose.transcripts",
+      "name": "Post-close LLM transcripts",
+      "group": "postclose",
+      "status": "OK",
+      "required": false,
+      "detail": "n=30",
+      "path": ""
+    },
+    {
+      "step": "book.finviz",
+      "name": "INPUT: Finviz Elite export",
+      "group": "book",
+      "status": "OK",
+      "required": true,
+      "detail": "10963783 bytes",
+      "path": "/home/gha/actions-runner/_work/fullscan/fullscan/data/exports/finviz_2026-09-24.csv"
+    },
+    {
+      "step": "book.membership",
+      "name": "Universe labels (segments)",
+      "group": "book",
+      "status": "OK",
+      "required": true,
+      "detail": "1121131 bytes",
+      "path": "/home/gha/actions-runner/_work/fullscan/fullscan/data/universe/2026-09-24_membership.csv"
+    },
+    {
+      "step": "book.weather",
+      "name": "Weather / regime JSON",
+      "group": "book",
+      "status": "OK",
+      "required": true,
+      "detail": "10537 bytes",
+      "path": "/home/gha/actions-runner/_work/fullscan/fullscan/01_daily/weather/2026-09-24_weather.json"
+    },
+    {
+      "step": "book.weather_sectors",
+      "name": "Weather signals.sectors \u2265 5",
+      "group": "book",
+      "status": "OK",
+      "required": true,
+      "detail": "n=11",
+      "path": ""
+    },
+    {
+      "step": "book.join",
+      "name": "Join ranked CSV",
+      "group": "book",
+      "status": "OK",
+      "required": true,
+      "detail": "2264238 bytes",
+      "path": "/home/gha/actions-runner/_work/fullscan/fullscan/data/join/2026-09-24_ranked.csv"
+    },
+    {
+      "step": "book.ab_raw",
+      "name": "AB checklist (raw)",
+      "group": "book",
+      "status": "OK",
+      "required": false,
+      "detail": "7628740 bytes",
+      "path": "/home/gha/actions-runner/_work/fullscan/fullscan/data/ab_checklist/2026-09-24_ab_checklist.csv"
+    },
+    {
+      "step": "book.ab",
+      "name": "AB checklist (enriched) \u2014 s_ab",
+      "group": "book",
+      "status": "OK",
+      "required": true,
+      "detail": "3297063 bytes",
+      "path": "/home/gha/actions-runner/_work/fullscan/fullscan/data/ab_checklist/2026-09-24_ab_checklist_enriched.csv"
+    },
+    {
+      "step": "book.peers",
+      "name": "Peer relative strength \u2014 s_peer",
+      "group": "book",
+      "status": "OK",
+      "required": true,
+      "detail": "814069 bytes",
+      "path": "/home/gha/actions-runner/_work/fullscan/fullscan/data/peers/2026-09-24_peer_rs.csv"
+    },
+    {
+      "step": "book.book_json",
+      "name": "Stock book JSON (5 horizons)",
+      "group": "book",
+      "status": "OK",
+      "required": true,
+      "detail": "1244489 bytes",
+      "path": "/home/gha/actions-runner/_work/fullscan/fullscan/data/stock_book/2026-09-24_stock_book.json"
+    },
+    {
+      "step": "book.green_json",
+      "name": "Green pile grades (all-green BUY)",
+      "group": "book",
+      "status": "OK",
+      "required": true,
+      "detail": "585 bytes",
+      "path": "/home/gha/actions-runner/_work/fullscan/fullscan/data/stock_book/2026-09-24_green.json"
+    },
+    {
+      "step": "book.book_md",
+      "name": "Stock book MD",
+      "group": "book",
+      "status": "OK",
+      "required": true,
+      "detail": "53595 bytes",
+      "path": "/home/gha/actions-runner/_work/fullscan/fullscan/01_daily/2026-09-24_stock_book.md"
+    },
+    {
+      "step": "book.backtest",
+      "name": "Stock book backtest (repo-level)",
+      "group": "book",
+      "status": "OK",
+      "required": true,
+      "detail": "10360 bytes",
+      "path": "/home/gha/actions-runner/_work/fullscan/fullscan/03_scoreboard/STOCK_BOOK_BACKTEST.md"
+    },
+    {
+      "step": "book.paper_md",
+      "name": "Paper trading summary",
+      "group": "book",
+      "status": "OK",
+      "required": true,
+      "detail": "1819 bytes",
+      "path": "/home/gha/actions-runner/_work/fullscan/fullscan/03_scoreboard/PAPER_TRADING.md"
+    },
+    {
+      "step": "book.dashboard",
+      "name": "Dashboard HTML (Pages source)",
+      "group": "book",
+      "status": "OK",
+      "required": true,
+      "detail": "8633452 bytes",
+      "path": "/home/gha/actions-runner/_work/fullscan/fullscan/dashboard/index.html"
+    },
+    {
+      "step": "book.hit_board",
+      "name": "HIT_BOARD",
+      "group": "book",
+      "status": "OK",
+      "required": false,
+      "detail": "9468 bytes",
+      "path": "/home/gha/actions-runner/_work/fullscan/fullscan/03_scoreboard/HIT_BOARD.md"
+    },
+    {
+      "step": "outcome.general",
+      "name": "General outcome (graded call)",
+      "group": "outcome",
+      "status": "OK",
+      "required": true,
+      "detail": "24320 bytes",
+      "path": "/home/gha/actions-runner/_work/fullscan/fullscan/01_daily/general/2026-09-24_outcome.md"
+    },
+    {
+      "step": "outcome.reflect",
+      "name": "General reflect MD",
+      "group": "outcome",
+      "status": "OK",
+      "required": false,
+      "detail": "488 bytes",
+      "path": "/home/gha/actions-runner/_work/fullscan/fullscan/01_daily/general/2026-09-24_reflect.md"
+    },
+    {
+      "step": "outcome.candidate",
+      "name": "Candidate lesson filed today",
+      "group": "outcome",
+      "status": "OK",
+      "required": false,
+      "detail": "n=11",
+      "path": ""
+    },
+    {
+      "step": "outcome.sector_count",
+      "name": "Sector outcomes graded (>=8/11)",
+      "group": "outcome",
+      "status": "OK",
+      "required": true,
+      "detail": "10/11",
+      "path": ""
+    },
+    {
+      "step": "learn.dated",
+      "name": "2026-09-24_learnings.md (session copy)",
+      "group": "learn",
+      "status": "OK",
+      "required": true,
+      "detail": "47575 bytes",
+      "path": "/home/gha/actions-runner/_work/fullscan/fullscan/01_daily/2026-09-24_learnings.md"
+    },
+    {
+      "step": "learn.learnings",
+      "name": "LEARNINGS.md digest",
+      "group": "learn",
+      "status": "OK",
+      "required": true,
+      "detail": "47575 bytes",
+      "path": "/home/gha/actions-runner/_work/fullscan/fullscan/03_scoreboard/LEARNINGS.md"
+    },
+    {
+      "step": "learn.mutable_policy",
+      "name": "mutable_policy.md (machine injection)",
+      "group": "learn",
+      "status": "OK",
+      "required": true,
+      "detail": "20137 bytes",
+      "path": "/home/gha/actions-runner/_work/fullscan/fullscan/00_grounding/mutable_policy.md"
+    },
+    {
+      "step": "learn.book_policy",
+      "name": "book_policy.json (learned ranker weights)",
+      "group": "learn",
+      "status": "FAIL",
+      "required": false,
+      "detail": "PASS-OVER from asof=2026-09-17 (want 2026-09-24)",
+      "path": "/home/gha/actions-runner/_work/fullscan/fullscan/00_grounding/book_policy.json"
+    },
+    {
+      "step": "pages.dashboard",
+      "name": "Live dashboard reachable + data injected",
+      "group": "pages",
+      "status": "OK",
+      "required": true,
+      "detail": "HTTP 200, data_injected=True",
+      "path": "https://sroyaltyy.github.io/fullscan/dashboard/"
+    }
+  ]
+}
