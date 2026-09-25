@@ -134,7 +134,7 @@ permissions:
 
 concurrency:
   group: factor-strategy-mine
-  cancel-in-progress: ${{ github.event_name == 'workflow_dispatch' }}
+  cancel-in-progress: false
 
 env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
