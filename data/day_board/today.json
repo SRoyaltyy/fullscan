@@ -1,11 +1,11 @@
 {
   "date": "2026-09-25",
-  "generated_at": "2026-09-25T06:03:19.095925-04:00",
+  "generated_at": "2026-09-25T06:09:53.555311-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
-    "ok": 4,
-    "partial": 3,
+    "ok": 5,
+    "partial": 2,
     "fail": 1,
     "n": 8
   },
@@ -25,7 +25,7 @@
     "direction": "up"
   },
   "sectors": {
-    "said": "2 up / 4 down / 4 flat",
+    "said": "2 up / 5 down / 4 flat",
     "bullets": [
       "XLB FLAT +1.4",
       "XLC FLAT -0.4",
@@ -37,7 +37,7 @@
       "XLI DOWN -6.0",
       "XLRE DOWN -4.6",
       "XLK FLAT +2.8",
-      "XLU missing"
+      "XLU DOWN -3.2"
     ]
   },
   "lands": [
@@ -225,70 +225,70 @@
     },
     {
       "key": "sector_one",
-      "title": "Sector predict Technology (10/11)",
+      "title": "Sector predict Utilities (11/11)",
       "date": "2026-09-25",
       "ok": true,
       "pushed": true,
-      "at": "2026-09-25T06:03:18.436377-04:00",
+      "at": "2026-09-25T06:09:52.916684-04:00",
       "files": [
         {
-          "path": "01_daily/sectors/2026-09-25/technology_predict.md",
+          "path": "01_daily/sectors/2026-09-25/utilities_predict.md",
           "ok": true,
           "reason": "",
-          "size": 15104,
-          "preview": "# Sector Prediction \u2014 Technology \u2014 2026-09-25\n- news_mode: **on**\n- ETF: **XLK**\n- rubric: `00_grounding/sectors/technology.md`\n- predicted_direction: **flat**\n- predicted_magnitude_band: **flat**\n- total_score: **2.841** (mult 0.85)\n- regime: mixed\n- divergence_flagged: **True**\n- engine: v2 \u00b7 tape_anchor **4.29** (NQ +0.57%, ES +0.28%, PM:XLK +0.79%) \u00b7 index_carry **0.676** (general 2.706) \u00b7 llm_overlay **-2.125** (raw -2.125)"
+          "size": 16305,
+          "preview": "# Sector Prediction \u2014 Utilities \u2014 2026-09-25\n- news_mode: **on**\n- ETF: **XLU**\n- rubric: `00_grounding/sectors/utilities.md`\n- predicted_direction: **down**\n- predicted_magnitude_band: **mild**\n- total_score: **-3.24** (mult 0.9)\n- regime: risk_off\n- divergence_flagged: **True**\n- engine: v2 \u00b7 tape_anchor **1.371** (ES +0.28%, ZN -0.03%, PM:XLU +0.30%) \u00b7 index_carry **0.676** (general 2.706) \u00b7 llm_overlay **-5.288** (raw -5.288)"
         },
         {
-          "path": "01_daily/sectors/2026-09-25/technology_predict_trace.md",
+          "path": "01_daily/sectors/2026-09-25/utilities_predict_trace.md",
           "ok": true,
           "reason": "",
-          "size": 386,
-          "preview": "# Reasoning trace \u2014 SECTOR PREDICT Technology 2026-09-25\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (152,024 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Done researching.** The model stopped searching and wrote its full analysis (13,143 characters)."
+          "size": 12350,
+          "preview": "# Reasoning trace \u2014 SECTOR PREDICT Utilities 2026-09-25\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (150,385 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Research.** The model wanted to know: *\"10 year Treasury yield 5.2% September 25 2026 utilities selloff\"* \u2192 \u274c search failed (searxng#1: 404 Client Error: Not Found for url: https://searxng-production-f4dd.up.railway.app/search?q=10+year+Treasury)\n**Step 2 \u2014 Research.** The model wanted to know: *\"XLU utilities ETF September 25 2026 premarket data center power demand\"* \u2192 \u274c search failed (searxng#1: 404 Client Error: Not Found for url: https://searxng-production-f4dd.up.railway.app/search?q=XLU+utilities+ET)\n**Step 4 \u2014 Research.** The model wanted to know: *\"utilities sector rotation rate case data center power demand "
         },
         {
-          "path": "01_daily/_transcripts/2026-09-25_sector_technology_predict.json",
+          "path": "01_daily/_transcripts/2026-09-25_sector_utilities_predict.json",
           "ok": true,
           "reason": "",
-          "size": 169371,
+          "size": 207592,
           "preview": "keys: model, messages"
         },
         {
           "path": "01_daily/2026-09-25_preopen_qc.json",
           "ok": true,
           "reason": "",
-          "size": 7195,
+          "size": 7188,
           "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok"
         },
         {
           "path": "01_daily/sectors/2026-09-25/_qc.json",
           "ok": true,
           "reason": "",
-          "size": 1219,
+          "size": 1215,
           "preview": "keys: date, n_ok, n_total, sectors"
         },
         {
           "path": "01_daily/sectors/2026-09-25/_BOARD.md",
           "ok": true,
           "reason": "",
-          "size": 1928,
-          "preview": "# Sector Board \u2014 2026-09-25\nGenerated: **2026-09-25T06:03:18.421963-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.)."
+          "size": 1987,
+          "preview": "# Sector Board \u2014 2026-09-25\nGenerated: **2026-09-25T06:09:52.901706-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.)."
         },
         {
           "path": "01_daily/sectors/2026-09-25/_board.json",
           "ok": true,
           "reason": "",
-          "size": 6958,
+          "size": 7130,
           "preview": "keys: date, generated_at, sectors"
         },
         {
           "path": "03_scoreboard/scoreboard.json",
           "ok": true,
           "reason": "",
-          "size": 912363,
+          "size": 913441,
           "preview": "keys: runs"
         }
       ],
-      "preview": "# Sector Prediction \u2014 Technology \u2014 2026-09-25\n- news_mode: **on**\n- ETF: **XLK**\n- rubric: `00_grounding/sectors/technology.md`\n- predicted_direction: **flat**\n- predicted_magnitude_band: **flat**\n- total_score: **2.841** (mult 0.85)\n- regime: mixed\n- divergence_flagged: **True**\n- engine: v2 \u00b7 tape_anchor **4.29** (NQ +0.57%, ES +0.28%, PM:XLK +0.79%) \u00b7 index_carry **0.676** (general 2.706) \u00b7 llm_overlay **-2.125** (raw -2.125) \u00b7 # Reasoning trace \u2014 SECTOR PREDICT Technology 2026-09-25\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (152,024 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Done researching.** The model stopped searching and wrote its full analysis (13,143 characters). \u00b7 keys: model, messages \u00b7 keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok \u00b7 keys: date, n_ok, n_total, sectors \u00b7 # Sector Board \u2014 2026-09-25\nGenerated: **2026-09-25T06:03:18.421963-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.). \u00b7 keys: date, generated_at, sectors \u00b7 ke"
+      "preview": "# Sector Prediction \u2014 Utilities \u2014 2026-09-25\n- news_mode: **on**\n- ETF: **XLU**\n- rubric: `00_grounding/sectors/utilities.md`\n- predicted_direction: **down**\n- predicted_magnitude_band: **mild**\n- total_score: **-3.24** (mult 0.9)\n- regime: risk_off\n- divergence_flagged: **True**\n- engine: v2 \u00b7 tape_anchor **1.371** (ES +0.28%, ZN -0.03%, PM:XLU +0.30%) \u00b7 index_carry **0.676** (general 2.706) \u00b7 llm_overlay **-5.288** (raw -5.288) \u00b7 # Reasoning trace \u2014 SECTOR PREDICT Utilities 2026-09-25\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (150,385 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Research.** The model wanted to know: *\"10 year Treasury yield 5.2% September 25 2026 utilities selloff\"* \u2192 \u274c search failed (searxng#1: 404 Client Error: Not Found for url: https://searxng-production-f4dd.up.railway.app/search?q=10+year+Treasury)\n**Step 2 \u2014 Research.** The model wanted to know: *\"XLU utilities ETF September 25 2026 premarket data center power demand\"* \u2192 \u274c search failed (searxng#1: 404 Client Error: Not Found for url: https://searxng-production-f4dd.up.railway.app/sea"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
