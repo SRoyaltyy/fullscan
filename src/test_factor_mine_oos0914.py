@@ -768,11 +768,16 @@ def test_rule_18_small_list_and_luck_null() -> None:
     assert out["best_of_n_null"] is not None
 
 
-def test_rule_19_and_20_baselines_and_best_stock() -> None:
+def test_rule_19_baselines() -> None:
     text = oos.render_scoreboard(_judge_train(), _judge_test())
     assert "RANDOM4" in text
     assert "IWM" in text
     assert "seed 20260813" in text
+    assert "1,000" in text or "1000" in text
+
+
+def test_rule_20_without_best_stock() -> None:
+    text = oos.render_scoreboard(_judge_train(), _judge_test())
     assert "Without its best stock (AAA)" in text
     assert "+0.40%" in text
 
@@ -845,7 +850,8 @@ def main() -> None:
     test_rule_05_designed_after()
     test_rule_14_futubull_plus_flat_15bp()
     test_rule_18_small_list_and_luck_null()
-    test_rule_19_and_20_baselines_and_best_stock()
+    test_rule_19_baselines()
+    test_rule_20_without_best_stock()
     test_rule_21_keep_bar_reported()
     test_rule_22_untestable_out_of_rankings()
     test_rule_23_no_real_money_yet()
