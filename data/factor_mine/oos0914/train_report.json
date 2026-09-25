@@ -1,0 +1,4344 @@
+{
+  "track": "OOS-0914",
+  "cutoff": "2026-09-14",
+  "train": {
+    "start": "2026-08-13",
+    "end": "2026-09-11",
+    "sessions": [
+      "2026-08-13",
+      "2026-08-14",
+      "2026-08-17",
+      "2026-08-18",
+      "2026-08-19",
+      "2026-08-20",
+      "2026-08-21",
+      "2026-08-24",
+      "2026-08-25",
+      "2026-08-26",
+      "2026-08-27",
+      "2026-08-28",
+      "2026-08-31",
+      "2026-09-01",
+      "2026-09-02",
+      "2026-09-03",
+      "2026-09-04",
+      "2026-09-08",
+      "2026-09-09",
+      "2026-09-10",
+      "2026-09-11"
+    ]
+  },
+  "n_candidates": 37,
+  "random4": {
+    "draws": 1000,
+    "seed": 20260813,
+    "n": 4,
+    "mean": -2.794,
+    "p5": -8.601,
+    "p50": -2.897,
+    "p95": 3.48,
+    "best_of_n_null": 4.655,
+    "n_candidates": 37,
+    "min": -13.289,
+    "max": 8.608,
+    "fee": "futubull"
+  },
+  "iwm": {
+    "after_fees_return": -3.019,
+    "final_equity": 9698.07,
+    "fee": "futubull"
+  },
+  "rows": [
+    {
+      "id": "lg_hot_h1_sx",
+      "author": "oos",
+      "family": "own",
+      "created_on": "2026-09-14",
+      "daily": [
+        {
+          "date": "2026-08-13",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-14",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-17",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-18",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-19",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-20",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-21",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-24",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-25",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-26",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-27",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-28",
+          "ret_pct": -1.7486
+        },
+        {
+          "date": "2026-08-31",
+          "ret_pct": -0.9935
+        },
+        {
+          "date": "2026-09-01",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-09-02",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-09-03",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-09-04",
+          "ret_pct": 2.3537
+        },
+        {
+          "date": "2026-09-08",
+          "ret_pct": 0.1814
+        },
+        {
+          "date": "2026-09-09",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-09-10",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-09-11",
+          "ret_pct": -0.6837
+        }
+      ],
+      "after_fees_return": -0.936,
+      "start_day_win_rate": 0.2381,
+      "best_stock": "ASST",
+      "without_best_stock_return": -1.152,
+      "hold": 1,
+      "stop_pct": null,
+      "rank": "hot_score",
+      "require": {
+        "last_green": true
+      },
+      "forbid": {
+        "alarm": true
+      },
+      "n_days": 21,
+      "final_equity": 9906.35,
+      "fires": 11,
+      "untestable": false,
+      "win_rate": 0.5,
+      "asymmetric_payoff": 0.916,
+      "keep_bar": false,
+      "pass": false
+    },
+    {
+      "id": "lg_hot_h2_sx",
+      "author": "oos",
+      "family": "own",
+      "created_on": "2026-09-14",
+      "daily": [
+        {
+          "date": "2026-08-13",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-14",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-17",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-18",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-19",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-20",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-21",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-24",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-25",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-26",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-27",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-28",
+          "ret_pct": -1.7486
+        },
+        {
+          "date": "2026-08-31",
+          "ret_pct": -0.0432
+        },
+        {
+          "date": "2026-09-01",
+          "ret_pct": 1.198
+        },
+        {
+          "date": "2026-09-02",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-09-03",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-09-04",
+          "ret_pct": 2.3464
+        },
+        {
+          "date": "2026-09-08",
+          "ret_pct": -0.8876
+        },
+        {
+          "date": "2026-09-09",
+          "ret_pct": 1.4556
+        },
+        {
+          "date": "2026-09-10",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-09-11",
+          "ret_pct": -0.6835
+        }
+      ],
+      "after_fees_return": 1.583,
+      "start_day_win_rate": 0.8571,
+      "best_stock": "ASST",
+      "without_best_stock_return": -1.528,
+      "hold": 2,
+      "stop_pct": null,
+      "rank": "hot_score",
+      "require": {
+        "last_green": true
+      },
+      "forbid": {
+        "alarm": true
+      },
+      "n_days": 21,
+      "final_equity": 10158.31,
+      "fires": 11,
+      "untestable": false,
+      "win_rate": 0.5,
+      "asymmetric_payoff": 1.582,
+      "keep_bar": false,
+      "pass": false
+    },
+    {
+      "id": "rsi_os_h1_sx",
+      "author": "oos",
+      "family": "own",
+      "created_on": "2026-09-14",
+      "daily": [
+        {
+          "date": "2026-08-13",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-14",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-17",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-18",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-19",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-20",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-21",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-24",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-25",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-26",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-27",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-28",
+          "ret_pct": -2.3372
+        },
+        {
+          "date": "2026-08-31",
+          "ret_pct": -5.4525
+        },
+        {
+          "date": "2026-09-01",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-09-02",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-09-03",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-09-04",
+          "ret_pct": 0.963
+        },
+        {
+          "date": "2026-09-08",
+          "ret_pct": -2.0376
+        },
+        {
+          "date": "2026-09-09",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-09-10",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-09-11",
+          "ret_pct": 0.3198
+        }
+      ],
+      "after_fees_return": -8.381,
+      "start_day_win_rate": 0.1429,
+      "best_stock": "SION",
+      "without_best_stock_return": -11.784,
+      "hold": 1,
+      "stop_pct": null,
+      "rank": "rsi",
+      "require": {
+        "rsi_os": true
+      },
+      "forbid": {},
+      "n_days": 21,
+      "final_equity": 9161.94,
+      "fires": 9,
+      "untestable": false,
+      "win_rate": 0.3333,
+      "asymmetric_payoff": 0.453,
+      "keep_bar": false,
+      "pass": false
+    },
+    {
+      "id": "rsi_os_h2_sx",
+      "author": "oos",
+      "family": "own",
+      "created_on": "2026-09-14",
+      "daily": [
+        {
+          "date": "2026-08-13",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-14",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-17",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-18",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-19",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-20",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-21",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-24",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-25",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-26",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-27",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-28",
+          "ret_pct": -2.3372
+        },
+        {
+          "date": "2026-08-31",
+          "ret_pct": -4.0782
+        },
+        {
+          "date": "2026-09-01",
+          "ret_pct": -2.5717
+        },
+        {
+          "date": "2026-09-02",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-09-03",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-09-04",
+          "ret_pct": 0.9473
+        },
+        {
+          "date": "2026-09-08",
+          "ret_pct": 3.4558
+        },
+        {
+          "date": "2026-09-09",
+          "ret_pct": -1.0851
+        },
+        {
+          "date": "2026-09-10",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-09-11",
+          "ret_pct": 0.3205
+        }
+      ],
+      "after_fees_return": -5.413,
+      "start_day_win_rate": 0.3333,
+      "best_stock": "AIIO",
+      "without_best_stock_return": -7.906,
+      "hold": 2,
+      "stop_pct": null,
+      "rank": "rsi",
+      "require": {
+        "rsi_os": true
+      },
+      "forbid": {},
+      "n_days": 21,
+      "final_equity": 9458.72,
+      "fires": 9,
+      "untestable": false,
+      "win_rate": 0.3333,
+      "asymmetric_payoff": 0.955,
+      "keep_bar": false,
+      "pass": false
+    },
+    {
+      "id": "rvol_lg_h1_sx",
+      "author": "oos",
+      "family": "own",
+      "created_on": "2026-09-14",
+      "daily": [
+        {
+          "date": "2026-08-13",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-14",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-17",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-18",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-19",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-20",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-21",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-24",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-25",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-26",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-27",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-28",
+          "ret_pct": -1.8027
+        },
+        {
+          "date": "2026-08-31",
+          "ret_pct": -1.1378
+        },
+        {
+          "date": "2026-09-01",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-09-02",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-09-03",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-09-04",
+          "ret_pct": 3.7034
+        },
+        {
+          "date": "2026-09-08",
+          "ret_pct": -0.6293
+        },
+        {
+          "date": "2026-09-09",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-09-10",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-09-11",
+          "ret_pct": 3.0623
+        }
+      ],
+      "after_fees_return": 3.105,
+      "start_day_win_rate": 1.0,
+      "best_stock": "CMRC",
+      "without_best_stock_return": 0.477,
+      "hold": 1,
+      "stop_pct": null,
+      "rank": "hot_score",
+      "require": {
+        "last_green": true,
+        "rvol_min": 1.5
+      },
+      "forbid": {
+        "alarm": true
+      },
+      "n_days": 21,
+      "final_equity": 10310.54,
+      "fires": 12,
+      "untestable": false,
+      "win_rate": 0.5,
+      "asymmetric_payoff": 1.013,
+      "keep_bar": false,
+      "pass": true
+    },
+    {
+      "id": "rvol_lg_h2_sx",
+      "author": "oos",
+      "family": "own",
+      "created_on": "2026-09-14",
+      "daily": [
+        {
+          "date": "2026-08-13",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-14",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-17",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-18",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-19",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-20",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-21",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-24",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-25",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-26",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-27",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-28",
+          "ret_pct": -1.8027
+        },
+        {
+          "date": "2026-08-31",
+          "ret_pct": -1.0713
+        },
+        {
+          "date": "2026-09-01",
+          "ret_pct": -1.3816
+        },
+        {
+          "date": "2026-09-02",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-09-03",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-09-04",
+          "ret_pct": 3.6955
+        },
+        {
+          "date": "2026-09-08",
+          "ret_pct": -2.2853
+        },
+        {
+          "date": "2026-09-09",
+          "ret_pct": 1.8753
+        },
+        {
+          "date": "2026-09-10",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-09-11",
+          "ret_pct": 3.0571
+        }
+      ],
+      "after_fees_return": 1.917,
+      "start_day_win_rate": 1.0,
+      "best_stock": "CMRC",
+      "without_best_stock_return": -0.676,
+      "hold": 2,
+      "stop_pct": null,
+      "rank": "hot_score",
+      "require": {
+        "last_green": true,
+        "rvol_min": 1.5
+      },
+      "forbid": {
+        "alarm": true
+      },
+      "n_days": 21,
+      "final_equity": 10191.69,
+      "fires": 12,
+      "untestable": false,
+      "win_rate": 0.375,
+      "asymmetric_payoff": 1.266,
+      "keep_bar": false,
+      "pass": false
+    },
+    {
+      "id": "ret5_up_h1_sx",
+      "author": "oos",
+      "family": "own",
+      "created_on": "2026-09-14",
+      "daily": [
+        {
+          "date": "2026-08-13",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-14",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-17",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-18",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-19",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-20",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-21",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-24",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-25",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-26",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-27",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-28",
+          "ret_pct": -0.3856
+        },
+        {
+          "date": "2026-08-31",
+          "ret_pct": -1.5999
+        },
+        {
+          "date": "2026-09-01",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-09-02",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-09-03",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-09-04",
+          "ret_pct": 4.1961
+        },
+        {
+          "date": "2026-09-08",
+          "ret_pct": -1.6584
+        },
+        {
+          "date": "2026-09-09",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-09-10",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-09-11",
+          "ret_pct": -0.4552
+        }
+      ],
+      "after_fees_return": -0.017,
+      "start_day_win_rate": 0.2381,
+      "best_stock": "GPRO",
+      "without_best_stock_return": -1.125,
+      "hold": 1,
+      "stop_pct": null,
+      "rank": "ret_5",
+      "require": {
+        "ret_5_min": 0
+      },
+      "forbid": {
+        "alarm": true
+      },
+      "n_days": 21,
+      "final_equity": 9998.27,
+      "fires": 12,
+      "untestable": false,
+      "win_rate": 0.75,
+      "asymmetric_payoff": 0.387,
+      "keep_bar": false,
+      "pass": false
+    },
+    {
+      "id": "ret5_up_h2_sx",
+      "author": "oos",
+      "family": "own",
+      "created_on": "2026-09-14",
+      "daily": [
+        {
+          "date": "2026-08-13",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-14",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-17",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-18",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-19",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-20",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-21",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-24",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-25",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-26",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-27",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-28",
+          "ret_pct": -0.3856
+        },
+        {
+          "date": "2026-08-31",
+          "ret_pct": -2.4073
+        },
+        {
+          "date": "2026-09-01",
+          "ret_pct": 0.6219
+        },
+        {
+          "date": "2026-09-02",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-09-03",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-09-04",
+          "ret_pct": 4.1981
+        },
+        {
+          "date": "2026-09-08",
+          "ret_pct": -7.3421
+        },
+        {
+          "date": "2026-09-09",
+          "ret_pct": -0.6847
+        },
+        {
+          "date": "2026-09-10",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-09-11",
+          "ret_pct": -0.4561
+        }
+      ],
+      "after_fees_return": -6.63,
+      "start_day_win_rate": 0.0,
+      "best_stock": "CAPR",
+      "without_best_stock_return": -11.344,
+      "hold": 2,
+      "stop_pct": null,
+      "rank": "ret_5",
+      "require": {
+        "ret_5_min": 0
+      },
+      "forbid": {
+        "alarm": true
+      },
+      "n_days": 21,
+      "final_equity": 9336.95,
+      "fires": 12,
+      "untestable": false,
+      "win_rate": 0.25,
+      "asymmetric_payoff": 0.89,
+      "keep_bar": false,
+      "pass": false
+    },
+    {
+      "id": "pullback_h1_sx",
+      "author": "oos",
+      "family": "own",
+      "created_on": "2026-09-14",
+      "daily": [
+        {
+          "date": "2026-08-13",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-14",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-17",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-18",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-19",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-20",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-21",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-24",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-25",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-26",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-27",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-28",
+          "ret_pct": -2.4276
+        },
+        {
+          "date": "2026-08-31",
+          "ret_pct": -1.6184
+        },
+        {
+          "date": "2026-09-01",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-09-02",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-09-03",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-09-04",
+          "ret_pct": -3.3644
+        },
+        {
+          "date": "2026-09-08",
+          "ret_pct": -0.7109
+        },
+        {
+          "date": "2026-09-09",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-09-10",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-09-11",
+          "ret_pct": -2.6977
+        }
+      ],
+      "after_fees_return": -10.38,
+      "start_day_win_rate": 0.0,
+      "best_stock": "FCEL",
+      "without_best_stock_return": -14.261,
+      "hold": 1,
+      "stop_pct": null,
+      "rank": "hot_score",
+      "require": {
+        "last_green": true,
+        "ret_5_max": -3
+      },
+      "forbid": {
+        "alarm": true
+      },
+      "n_days": 21,
+      "final_equity": 8961.95,
+      "fires": 9,
+      "untestable": false,
+      "win_rate": 0.2,
+      "asymmetric_payoff": 0.6,
+      "keep_bar": false,
+      "pass": false
+    },
+    {
+      "id": "pullback_h2_sx",
+      "author": "oos",
+      "family": "own",
+      "created_on": "2026-09-14",
+      "daily": [
+        {
+          "date": "2026-08-13",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-14",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-17",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-18",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-19",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-20",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-21",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-24",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-25",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-26",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-27",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-28",
+          "ret_pct": -2.4276
+        },
+        {
+          "date": "2026-08-31",
+          "ret_pct": 0.0412
+        },
+        {
+          "date": "2026-09-01",
+          "ret_pct": -3.2079
+        },
+        {
+          "date": "2026-09-02",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-09-03",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-09-04",
+          "ret_pct": -3.3861
+        },
+        {
+          "date": "2026-09-08",
+          "ret_pct": 5.4944
+        },
+        {
+          "date": "2026-09-09",
+          "ret_pct": 0.17
+        },
+        {
+          "date": "2026-09-10",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-09-11",
+          "ret_pct": -2.7045
+        }
+      ],
+      "after_fees_return": -6.148,
+      "start_day_win_rate": 0.0476,
+      "best_stock": "FCEL",
+      "without_best_stock_return": -15.738,
+      "hold": 2,
+      "stop_pct": null,
+      "rank": "hot_score",
+      "require": {
+        "last_green": true,
+        "ret_5_max": -3
+      },
+      "forbid": {
+        "alarm": true
+      },
+      "n_days": 21,
+      "final_equity": 9385.24,
+      "fires": 9,
+      "untestable": false,
+      "win_rate": 0.2,
+      "asymmetric_payoff": 2.687,
+      "keep_bar": false,
+      "pass": false
+    },
+    {
+      "id": "break10_h1_sx",
+      "author": "oos",
+      "family": "own",
+      "created_on": "2026-09-14",
+      "daily": [
+        {
+          "date": "2026-08-13",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-14",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-17",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-18",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-19",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-20",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-21",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-24",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-25",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-26",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-27",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-28",
+          "ret_pct": -2.5732
+        },
+        {
+          "date": "2026-08-31",
+          "ret_pct": -1.3285
+        },
+        {
+          "date": "2026-09-01",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-09-02",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-09-03",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-09-04",
+          "ret_pct": 2.3428
+        },
+        {
+          "date": "2026-09-08",
+          "ret_pct": 0.1557
+        },
+        {
+          "date": "2026-09-09",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-09-10",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-09-11",
+          "ret_pct": 3.8647
+        }
+      ],
+      "after_fees_return": 2.346,
+      "start_day_win_rate": 1.0,
+      "best_stock": "CMRC",
+      "without_best_stock_return": 0.659,
+      "hold": 1,
+      "stop_pct": null,
+      "rank": "hot_score",
+      "require": {
+        "break_10": true
+      },
+      "forbid": {
+        "alarm": true
+      },
+      "n_days": 21,
+      "final_equity": 10234.61,
+      "fires": 12,
+      "untestable": false,
+      "win_rate": 0.375,
+      "asymmetric_payoff": 1.041,
+      "keep_bar": false,
+      "pass": true
+    },
+    {
+      "id": "break10_h2_sx",
+      "author": "oos",
+      "family": "own",
+      "created_on": "2026-09-14",
+      "daily": [
+        {
+          "date": "2026-08-13",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-14",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-17",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-18",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-19",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-20",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-21",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-24",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-25",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-26",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-27",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-28",
+          "ret_pct": -2.5732
+        },
+        {
+          "date": "2026-08-31",
+          "ret_pct": 0.6928
+        },
+        {
+          "date": "2026-09-01",
+          "ret_pct": 1.0499
+        },
+        {
+          "date": "2026-09-02",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-09-03",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-09-04",
+          "ret_pct": 2.3517
+        },
+        {
+          "date": "2026-09-08",
+          "ret_pct": -0.891
+        },
+        {
+          "date": "2026-09-09",
+          "ret_pct": 1.4591
+        },
+        {
+          "date": "2026-09-10",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-09-11",
+          "ret_pct": 3.864
+        }
+      ],
+      "after_fees_return": 5.969,
+      "start_day_win_rate": 1.0,
+      "best_stock": "CMRC",
+      "without_best_stock_return": 4.225,
+      "hold": 2,
+      "stop_pct": null,
+      "rank": "hot_score",
+      "require": {
+        "break_10": true
+      },
+      "forbid": {
+        "alarm": true
+      },
+      "n_days": 21,
+      "final_equity": 10596.87,
+      "fires": 12,
+      "untestable": false,
+      "win_rate": 0.5,
+      "asymmetric_payoff": 1.485,
+      "keep_bar": false,
+      "pass": true
+    },
+    {
+      "id": "macd_x_h1_sx",
+      "author": "oos",
+      "family": "own",
+      "created_on": "2026-09-14",
+      "daily": [
+        {
+          "date": "2026-08-13",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-14",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-17",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-18",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-19",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-20",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-21",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-24",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-25",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-26",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-27",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-28",
+          "ret_pct": -2.3048
+        },
+        {
+          "date": "2026-08-31",
+          "ret_pct": -0.6271
+        },
+        {
+          "date": "2026-09-01",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-09-02",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-09-03",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-09-04",
+          "ret_pct": 2.789
+        },
+        {
+          "date": "2026-09-08",
+          "ret_pct": 0.0562
+        },
+        {
+          "date": "2026-09-09",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-09-10",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-09-11",
+          "ret_pct": 0.717
+        }
+      ],
+      "after_fees_return": 0.562,
+      "start_day_win_rate": 1.0,
+      "best_stock": "EOSE",
+      "without_best_stock_return": -2.238,
+      "hold": 1,
+      "stop_pct": null,
+      "rank": "macd_hist",
+      "require": {
+        "macd_cross_up": true
+      },
+      "forbid": {},
+      "n_days": 21,
+      "final_equity": 10056.22,
+      "fires": 11,
+      "untestable": false,
+      "win_rate": 0.375,
+      "asymmetric_payoff": 1.603,
+      "keep_bar": false,
+      "pass": false
+    },
+    {
+      "id": "macd_x_h2_sx",
+      "author": "oos",
+      "family": "own",
+      "created_on": "2026-09-14",
+      "daily": [
+        {
+          "date": "2026-08-13",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-14",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-17",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-18",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-19",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-20",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-21",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-24",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-25",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-26",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-27",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-28",
+          "ret_pct": -2.3048
+        },
+        {
+          "date": "2026-08-31",
+          "ret_pct": 0.3706
+        },
+        {
+          "date": "2026-09-01",
+          "ret_pct": -1.8423
+        },
+        {
+          "date": "2026-09-02",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-09-03",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-09-04",
+          "ret_pct": 2.8118
+        },
+        {
+          "date": "2026-09-08",
+          "ret_pct": 2.9158
+        },
+        {
+          "date": "2026-09-09",
+          "ret_pct": -0.8401
+        },
+        {
+          "date": "2026-09-10",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-09-11",
+          "ret_pct": 0.736
+        }
+      ],
+      "after_fees_return": 1.73,
+      "start_day_win_rate": 0.9524,
+      "best_stock": "EOSE",
+      "without_best_stock_return": -3.55,
+      "hold": 2,
+      "stop_pct": null,
+      "rank": "macd_hist",
+      "require": {
+        "macd_cross_up": true
+      },
+      "forbid": {},
+      "n_days": 21,
+      "final_equity": 10173.03,
+      "fires": 11,
+      "untestable": false,
+      "win_rate": 0.375,
+      "asymmetric_payoff": 1.986,
+      "keep_bar": false,
+      "pass": false
+    },
+    {
+      "id": "flow_lg_h1_sx",
+      "author": "oos",
+      "family": "own",
+      "created_on": "2026-09-14",
+      "daily": [
+        {
+          "date": "2026-08-13",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-14",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-17",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-18",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-19",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-20",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-21",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-24",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-25",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-26",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-27",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-28",
+          "ret_pct": -4.4304
+        },
+        {
+          "date": "2026-08-31",
+          "ret_pct": 0.6558
+        },
+        {
+          "date": "2026-09-01",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-09-02",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-09-03",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-09-04",
+          "ret_pct": 2.9821
+        },
+        {
+          "date": "2026-09-08",
+          "ret_pct": -4.5874
+        },
+        {
+          "date": "2026-09-09",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-09-10",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-09-11",
+          "ret_pct": 0.0
+        }
+      ],
+      "after_fees_return": -5.48,
+      "start_day_win_rate": 0.0,
+      "best_stock": "HAFN",
+      "without_best_stock_return": -3.804,
+      "hold": 1,
+      "stop_pct": null,
+      "rank": "hot_score",
+      "require": {
+        "flow_in": true,
+        "last_green": true
+      },
+      "forbid": {
+        "alarm": true
+      },
+      "n_days": 21,
+      "final_equity": 9452.05,
+      "fires": 2,
+      "untestable": false,
+      "win_rate": 0.0,
+      "asymmetric_payoff": null,
+      "keep_bar": false,
+      "pass": false
+    },
+    {
+      "id": "flow_lg_h2_sx",
+      "author": "oos",
+      "family": "own",
+      "created_on": "2026-09-14",
+      "daily": [
+        {
+          "date": "2026-08-13",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-14",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-17",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-18",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-19",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-20",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-21",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-24",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-25",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-26",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-27",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-28",
+          "ret_pct": -4.4304
+        },
+        {
+          "date": "2026-08-31",
+          "ret_pct": 3.6916
+        },
+        {
+          "date": "2026-09-01",
+          "ret_pct": -1.7035
+        },
+        {
+          "date": "2026-09-02",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-09-03",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-09-04",
+          "ret_pct": 2.9834
+        },
+        {
+          "date": "2026-09-08",
+          "ret_pct": -2.8199
+        },
+        {
+          "date": "2026-09-09",
+          "ret_pct": 0.2998
+        },
+        {
+          "date": "2026-09-10",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-09-11",
+          "ret_pct": 0.0
+        }
+      ],
+      "after_fees_return": -2.221,
+      "start_day_win_rate": 0.2381,
+      "best_stock": "HAFN",
+      "without_best_stock_return": -2.59,
+      "hold": 2,
+      "stop_pct": null,
+      "rank": "hot_score",
+      "require": {
+        "flow_in": true,
+        "last_green": true
+      },
+      "forbid": {
+        "alarm": true
+      },
+      "n_days": 21,
+      "final_equity": 9777.91,
+      "fires": 2,
+      "untestable": false,
+      "win_rate": 0.5,
+      "asymmetric_payoff": 0.143,
+      "keep_bar": false,
+      "pass": false
+    },
+    {
+      "id": "yday_white_h1_sx",
+      "author": "oos",
+      "family": "own",
+      "created_on": "2026-09-14",
+      "daily": [
+        {
+          "date": "2026-08-13",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-14",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-17",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-18",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-19",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-20",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-21",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-24",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-25",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-26",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-27",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-28",
+          "ret_pct": -3.886
+        },
+        {
+          "date": "2026-08-31",
+          "ret_pct": 0.5101
+        },
+        {
+          "date": "2026-09-01",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-09-02",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-09-03",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-09-04",
+          "ret_pct": 2.2445
+        },
+        {
+          "date": "2026-09-08",
+          "ret_pct": -0.3968
+        },
+        {
+          "date": "2026-09-09",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-09-10",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-09-11",
+          "ret_pct": 3.3527
+        }
+      ],
+      "after_fees_return": 1.679,
+      "start_day_win_rate": 1.0,
+      "best_stock": "TARS",
+      "without_best_stock_return": -0.527,
+      "hold": 1,
+      "stop_pct": null,
+      "rank": "cond",
+      "require": {
+        "yday_up": true,
+        "cam_bad_max": 0
+      },
+      "forbid": {
+        "alarm": true
+      },
+      "n_days": 21,
+      "final_equity": 10167.91,
+      "fires": 12,
+      "untestable": false,
+      "win_rate": 0.375,
+      "asymmetric_payoff": 1.04,
+      "keep_bar": false,
+      "pass": false
+    },
+    {
+      "id": "yday_white_h2_sx",
+      "author": "oos",
+      "family": "own",
+      "created_on": "2026-09-14",
+      "daily": [
+        {
+          "date": "2026-08-13",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-14",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-17",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-18",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-19",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-20",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-21",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-24",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-25",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-26",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-27",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-28",
+          "ret_pct": -3.886
+        },
+        {
+          "date": "2026-08-31",
+          "ret_pct": 0.9796
+        },
+        {
+          "date": "2026-09-01",
+          "ret_pct": -1.8791
+        },
+        {
+          "date": "2026-09-02",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-09-03",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-09-04",
+          "ret_pct": 2.194
+        },
+        {
+          "date": "2026-09-08",
+          "ret_pct": -2.0356
+        },
+        {
+          "date": "2026-09-09",
+          "ret_pct": -0.1487
+        },
+        {
+          "date": "2026-09-10",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-09-11",
+          "ret_pct": 3.3707
+        }
+      ],
+      "after_fees_return": -1.593,
+      "start_day_win_rate": 0.4286,
+      "best_stock": "BAND",
+      "without_best_stock_return": -3.088,
+      "hold": 2,
+      "stop_pct": null,
+      "rank": "cond",
+      "require": {
+        "yday_up": true,
+        "cam_bad_max": 0
+      },
+      "forbid": {
+        "alarm": true
+      },
+      "n_days": 21,
+      "final_equity": 9840.7,
+      "fires": 12,
+      "untestable": false,
+      "win_rate": 0.25,
+      "asymmetric_payoff": 0.856,
+      "keep_bar": false,
+      "pass": false
+    },
+    {
+      "id": "zero_candle_h1_sx",
+      "author": "oos",
+      "family": "own",
+      "created_on": "2026-09-14",
+      "daily": [
+        {
+          "date": "2026-08-13",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-14",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-17",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-18",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-19",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-20",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-21",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-24",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-25",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-26",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-27",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-28",
+          "ret_pct": -1.7563
+        },
+        {
+          "date": "2026-08-31",
+          "ret_pct": 0.1071
+        },
+        {
+          "date": "2026-09-01",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-09-02",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-09-03",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-09-04",
+          "ret_pct": 2.7251
+        },
+        {
+          "date": "2026-09-08",
+          "ret_pct": -0.1101
+        },
+        {
+          "date": "2026-09-09",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-09-10",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-09-11",
+          "ret_pct": 1.7352
+        }
+      ],
+      "after_fees_return": 2.669,
+      "start_day_win_rate": 1.0,
+      "best_stock": "TARS",
+      "without_best_stock_return": -0.234,
+      "hold": 1,
+      "stop_pct": null,
+      "rank": "candle_score",
+      "require": {
+        "zero_red": true,
+        "last_green": true
+      },
+      "forbid": {
+        "alarm": true
+      },
+      "n_days": 21,
+      "final_equity": 10266.89,
+      "fires": 12,
+      "untestable": false,
+      "win_rate": 0.5,
+      "asymmetric_payoff": 1.428,
+      "keep_bar": false,
+      "pass": false
+    },
+    {
+      "id": "zero_candle_h2_sx",
+      "author": "oos",
+      "family": "own",
+      "created_on": "2026-09-14",
+      "daily": [
+        {
+          "date": "2026-08-13",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-14",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-17",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-18",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-19",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-20",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-21",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-24",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-25",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-26",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-27",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-28",
+          "ret_pct": -1.7563
+        },
+        {
+          "date": "2026-08-31",
+          "ret_pct": 0.7525
+        },
+        {
+          "date": "2026-09-01",
+          "ret_pct": -1.5309
+        },
+        {
+          "date": "2026-09-02",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-09-03",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-09-04",
+          "ret_pct": 2.748
+        },
+        {
+          "date": "2026-09-08",
+          "ret_pct": -0.9356
+        },
+        {
+          "date": "2026-09-09",
+          "ret_pct": -0.0065
+        },
+        {
+          "date": "2026-09-10",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-09-11",
+          "ret_pct": 1.7624
+        }
+      ],
+      "after_fees_return": 0.951,
+      "start_day_win_rate": 1.0,
+      "best_stock": "SWKS",
+      "without_best_stock_return": 1.798,
+      "hold": 2,
+      "stop_pct": null,
+      "rank": "candle_score",
+      "require": {
+        "zero_red": true,
+        "last_green": true
+      },
+      "forbid": {
+        "alarm": true
+      },
+      "n_days": 21,
+      "final_equity": 10095.1,
+      "fires": 12,
+      "untestable": false,
+      "win_rate": 0.5,
+      "asymmetric_payoff": 0.755,
+      "keep_bar": false,
+      "pass": true
+    },
+    {
+      "id": "ridge_px",
+      "author": "excel",
+      "family": "excel",
+      "created_on": "2026-09-28",
+      "daily": [
+        {
+          "date": "2026-08-13",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-14",
+          "ret_pct": -0.4921
+        },
+        {
+          "date": "2026-08-17",
+          "ret_pct": -0.3187
+        },
+        {
+          "date": "2026-08-18",
+          "ret_pct": -0.7285
+        },
+        {
+          "date": "2026-08-19",
+          "ret_pct": -0.5877
+        },
+        {
+          "date": "2026-08-20",
+          "ret_pct": -0.1191
+        },
+        {
+          "date": "2026-08-21",
+          "ret_pct": -0.1045
+        },
+        {
+          "date": "2026-08-24",
+          "ret_pct": -0.7628
+        },
+        {
+          "date": "2026-08-25",
+          "ret_pct": 0.366
+        },
+        {
+          "date": "2026-08-26",
+          "ret_pct": -1.6577
+        },
+        {
+          "date": "2026-08-27",
+          "ret_pct": 0.0957
+        },
+        {
+          "date": "2026-08-28",
+          "ret_pct": -1.2269
+        },
+        {
+          "date": "2026-08-31",
+          "ret_pct": -0.0758
+        },
+        {
+          "date": "2026-09-01",
+          "ret_pct": -0.6186
+        },
+        {
+          "date": "2026-09-02",
+          "ret_pct": -0.4521
+        },
+        {
+          "date": "2026-09-03",
+          "ret_pct": -2.2598
+        },
+        {
+          "date": "2026-09-04",
+          "ret_pct": -0.0509
+        },
+        {
+          "date": "2026-09-08",
+          "ret_pct": -0.4027
+        },
+        {
+          "date": "2026-09-09",
+          "ret_pct": 0.8074
+        },
+        {
+          "date": "2026-09-10",
+          "ret_pct": -1.8096
+        },
+        {
+          "date": "2026-09-11",
+          "ret_pct": -2.0193
+        }
+      ],
+      "after_fees_return": -11.767,
+      "start_day_win_rate": 0.0,
+      "best_stock": "XHG",
+      "without_best_stock_return": -13.766,
+      "hold": 1,
+      "stop_pct": null,
+      "rank": "model",
+      "require": {
+        "family": "excel",
+        "id": "ridge_px",
+        "model": "ridge",
+        "alphas": [
+          0.1,
+          1,
+          10,
+          100,
+          1000
+        ]
+      },
+      "forbid": {},
+      "n_days": 21,
+      "final_equity": 8823.2726,
+      "fires": 80,
+      "untestable": false,
+      "win_rate": 0.1875,
+      "asymmetric_payoff": 0.831,
+      "keep_bar": false,
+      "pass": false
+    },
+    {
+      "id": "logit_px",
+      "author": "excel",
+      "family": "excel",
+      "created_on": "2026-09-28",
+      "daily": [
+        {
+          "date": "2026-08-13",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-14",
+          "ret_pct": -3.8002
+        },
+        {
+          "date": "2026-08-17",
+          "ret_pct": -6.8798
+        },
+        {
+          "date": "2026-08-18",
+          "ret_pct": 7.942
+        },
+        {
+          "date": "2026-08-19",
+          "ret_pct": 4.1825
+        },
+        {
+          "date": "2026-08-20",
+          "ret_pct": -0.795
+        },
+        {
+          "date": "2026-08-21",
+          "ret_pct": -0.9268
+        },
+        {
+          "date": "2026-08-24",
+          "ret_pct": -4.0437
+        },
+        {
+          "date": "2026-08-25",
+          "ret_pct": 0.6235
+        },
+        {
+          "date": "2026-08-26",
+          "ret_pct": -0.4329
+        },
+        {
+          "date": "2026-08-27",
+          "ret_pct": -0.0125
+        },
+        {
+          "date": "2026-08-28",
+          "ret_pct": -2.2153
+        },
+        {
+          "date": "2026-08-31",
+          "ret_pct": 6.5677
+        },
+        {
+          "date": "2026-09-01",
+          "ret_pct": -2.4963
+        },
+        {
+          "date": "2026-09-02",
+          "ret_pct": -19.1641
+        },
+        {
+          "date": "2026-09-03",
+          "ret_pct": -13.9357
+        },
+        {
+          "date": "2026-09-04",
+          "ret_pct": -2.2894
+        },
+        {
+          "date": "2026-09-08",
+          "ret_pct": -1.063
+        },
+        {
+          "date": "2026-09-09",
+          "ret_pct": -9.8273
+        },
+        {
+          "date": "2026-09-10",
+          "ret_pct": -1.2404
+        },
+        {
+          "date": "2026-09-11",
+          "ret_pct": -0.8424
+        }
+      ],
+      "after_fees_return": -42.568,
+      "start_day_win_rate": 0.0,
+      "best_stock": "BYND",
+      "without_best_stock_return": -45.543,
+      "hold": 1,
+      "stop_pct": null,
+      "rank": "model",
+      "require": {
+        "family": "excel",
+        "id": "logit_px",
+        "model": "logit",
+        "C": [
+          0.01,
+          0.1,
+          1,
+          10
+        ],
+        "positive_above": 0.01
+      },
+      "forbid": {},
+      "n_days": 21,
+      "final_equity": 5743.2027,
+      "fires": 80,
+      "untestable": false,
+      "win_rate": 0.4,
+      "asymmetric_payoff": 0.724,
+      "keep_bar": false,
+      "pass": false
+    },
+    {
+      "id": "gbm_px",
+      "author": "excel",
+      "family": "excel",
+      "created_on": "2026-09-28",
+      "daily": [
+        {
+          "date": "2026-08-13",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-14",
+          "ret_pct": -7.6068
+        },
+        {
+          "date": "2026-08-17",
+          "ret_pct": -1.8398
+        },
+        {
+          "date": "2026-08-18",
+          "ret_pct": -0.8362
+        },
+        {
+          "date": "2026-08-19",
+          "ret_pct": -6.3836
+        },
+        {
+          "date": "2026-08-20",
+          "ret_pct": -3.713
+        },
+        {
+          "date": "2026-08-21",
+          "ret_pct": -1.2121
+        },
+        {
+          "date": "2026-08-24",
+          "ret_pct": -7.7396
+        },
+        {
+          "date": "2026-08-25",
+          "ret_pct": -1.5765
+        },
+        {
+          "date": "2026-08-26",
+          "ret_pct": -0.3576
+        },
+        {
+          "date": "2026-08-27",
+          "ret_pct": -0.9332
+        },
+        {
+          "date": "2026-08-28",
+          "ret_pct": -3.4389
+        },
+        {
+          "date": "2026-08-31",
+          "ret_pct": 1.11
+        },
+        {
+          "date": "2026-09-01",
+          "ret_pct": -4.5123
+        },
+        {
+          "date": "2026-09-02",
+          "ret_pct": -1.1436
+        },
+        {
+          "date": "2026-09-03",
+          "ret_pct": -1.9177
+        },
+        {
+          "date": "2026-09-04",
+          "ret_pct": -1.6719
+        },
+        {
+          "date": "2026-09-08",
+          "ret_pct": -3.9869
+        },
+        {
+          "date": "2026-09-09",
+          "ret_pct": -7.1864
+        },
+        {
+          "date": "2026-09-10",
+          "ret_pct": -1.5465
+        },
+        {
+          "date": "2026-09-11",
+          "ret_pct": 0.4922
+        }
+      ],
+      "after_fees_return": -43.745,
+      "start_day_win_rate": 0.0476,
+      "best_stock": "CMRC",
+      "without_best_stock_return": -45.707,
+      "hold": 1,
+      "stop_pct": null,
+      "rank": "model",
+      "require": {
+        "family": "excel",
+        "id": "gbm_px",
+        "model": "gbm",
+        "max_depth": 3,
+        "max_iter": 300,
+        "learning_rate": 0.05,
+        "min_samples_leaf": 200
+      },
+      "forbid": {},
+      "n_days": 21,
+      "final_equity": 5625.504,
+      "fires": 80,
+      "untestable": false,
+      "win_rate": 0.175,
+      "asymmetric_payoff": 0.477,
+      "keep_bar": false,
+      "pass": false
+    },
+    {
+      "id": "ens_px",
+      "author": "excel",
+      "family": "excel",
+      "created_on": "2026-09-28",
+      "daily": [
+        {
+          "date": "2026-08-13",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-14",
+          "ret_pct": -0.2725
+        },
+        {
+          "date": "2026-08-17",
+          "ret_pct": -2.0294
+        },
+        {
+          "date": "2026-08-18",
+          "ret_pct": -0.9999
+        },
+        {
+          "date": "2026-08-19",
+          "ret_pct": -4.0699
+        },
+        {
+          "date": "2026-08-20",
+          "ret_pct": -0.7216
+        },
+        {
+          "date": "2026-08-21",
+          "ret_pct": -0.6943
+        },
+        {
+          "date": "2026-08-24",
+          "ret_pct": -2.7166
+        },
+        {
+          "date": "2026-08-25",
+          "ret_pct": -1.1195
+        },
+        {
+          "date": "2026-08-26",
+          "ret_pct": -0.7953
+        },
+        {
+          "date": "2026-08-27",
+          "ret_pct": -0.1116
+        },
+        {
+          "date": "2026-08-28",
+          "ret_pct": -1.1384
+        },
+        {
+          "date": "2026-08-31",
+          "ret_pct": -0.7617
+        },
+        {
+          "date": "2026-09-01",
+          "ret_pct": -3.5367
+        },
+        {
+          "date": "2026-09-02",
+          "ret_pct": -1.0571
+        },
+        {
+          "date": "2026-09-03",
+          "ret_pct": 0.2183
+        },
+        {
+          "date": "2026-09-04",
+          "ret_pct": -0.2894
+        },
+        {
+          "date": "2026-09-08",
+          "ret_pct": -1.2442
+        },
+        {
+          "date": "2026-09-09",
+          "ret_pct": -1.7349
+        },
+        {
+          "date": "2026-09-10",
+          "ret_pct": -3.7128
+        },
+        {
+          "date": "2026-09-11",
+          "ret_pct": 1.7499
+        }
+      ],
+      "after_fees_return": -22.423,
+      "start_day_win_rate": 0.0476,
+      "best_stock": "CMRC",
+      "without_best_stock_return": -24.789,
+      "hold": 1,
+      "stop_pct": null,
+      "rank": "model",
+      "require": {
+        "family": "excel",
+        "id": "ens_px",
+        "model": "ensemble",
+        "members": [
+          "ridge_px",
+          "gbm_px"
+        ]
+      },
+      "forbid": {},
+      "n_days": 21,
+      "final_equity": 7757.7023,
+      "fires": 80,
+      "untestable": false,
+      "win_rate": 0.2375,
+      "asymmetric_payoff": 0.498,
+      "keep_bar": false,
+      "pass": false
+    },
+    {
+      "id": "ridge_px_exmega",
+      "author": "excel",
+      "family": "excel",
+      "created_on": "2026-09-28",
+      "daily": [
+        {
+          "date": "2026-08-13",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-14",
+          "ret_pct": -0.4921
+        },
+        {
+          "date": "2026-08-17",
+          "ret_pct": -0.3187
+        },
+        {
+          "date": "2026-08-18",
+          "ret_pct": -0.7285
+        },
+        {
+          "date": "2026-08-19",
+          "ret_pct": -0.5877
+        },
+        {
+          "date": "2026-08-20",
+          "ret_pct": -0.1191
+        },
+        {
+          "date": "2026-08-21",
+          "ret_pct": -0.1045
+        },
+        {
+          "date": "2026-08-24",
+          "ret_pct": -0.7628
+        },
+        {
+          "date": "2026-08-25",
+          "ret_pct": 0.366
+        },
+        {
+          "date": "2026-08-26",
+          "ret_pct": -1.6577
+        },
+        {
+          "date": "2026-08-27",
+          "ret_pct": 0.0957
+        },
+        {
+          "date": "2026-08-28",
+          "ret_pct": -1.2269
+        },
+        {
+          "date": "2026-08-31",
+          "ret_pct": -0.0758
+        },
+        {
+          "date": "2026-09-01",
+          "ret_pct": -0.6186
+        },
+        {
+          "date": "2026-09-02",
+          "ret_pct": -0.4521
+        },
+        {
+          "date": "2026-09-03",
+          "ret_pct": -2.2598
+        },
+        {
+          "date": "2026-09-04",
+          "ret_pct": -0.0509
+        },
+        {
+          "date": "2026-09-08",
+          "ret_pct": -0.4027
+        },
+        {
+          "date": "2026-09-09",
+          "ret_pct": 0.8074
+        },
+        {
+          "date": "2026-09-10",
+          "ret_pct": -1.8096
+        },
+        {
+          "date": "2026-09-11",
+          "ret_pct": -2.0193
+        }
+      ],
+      "after_fees_return": -11.767,
+      "start_day_win_rate": 0.0,
+      "best_stock": "XHG",
+      "without_best_stock_return": -13.766,
+      "hold": 1,
+      "stop_pct": null,
+      "rank": "model",
+      "require": {
+        "family": "excel",
+        "id": "ridge_px_exmega",
+        "model": "ridge_exmega",
+        "parent": "ridge_px",
+        "ret1_abs_max": 0.4
+      },
+      "forbid": {},
+      "n_days": 21,
+      "final_equity": 8823.2726,
+      "fires": 80,
+      "untestable": false,
+      "win_rate": 0.1875,
+      "asymmetric_payoff": 0.831,
+      "keep_bar": false,
+      "pass": false
+    },
+    {
+      "id": "tr01_fpe_top_earn_h3",
+      "author": "theme_radar",
+      "family": "theme_radar_skip",
+      "created_on": "2026-09-28",
+      "daily": [
+        {
+          "date": "2026-08-13",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-14",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-17",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-18",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-19",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-20",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-21",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-24",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-25",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-26",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-27",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-28",
+          "ret_pct": -1.2266
+        },
+        {
+          "date": "2026-08-31",
+          "ret_pct": 1.5967
+        },
+        {
+          "date": "2026-09-01",
+          "ret_pct": 0.9648
+        },
+        {
+          "date": "2026-09-02",
+          "ret_pct": -1.0421
+        },
+        {
+          "date": "2026-09-03",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-09-04",
+          "ret_pct": 6.0043
+        },
+        {
+          "date": "2026-09-08",
+          "ret_pct": -4.2939
+        },
+        {
+          "date": "2026-09-09",
+          "ret_pct": -3.8641
+        },
+        {
+          "date": "2026-09-10",
+          "ret_pct": -3.2477
+        },
+        {
+          "date": "2026-09-11",
+          "ret_pct": -0.6834
+        }
+      ],
+      "after_fees_return": -6.034,
+      "start_day_win_rate": 0.0,
+      "best_stock": "MRNA",
+      "without_best_stock_return": -10.689,
+      "hold": 3,
+      "stop_pct": null,
+      "rank": "hot_score",
+      "require": {
+        "family": "theme_radar_skip",
+        "field": "Forward P/E",
+        "lag": "level",
+        "op": "top_quintile",
+        "earn": true,
+        "er": false,
+        "hammer": false,
+        "since_first": "2026-08-06",
+        "no_backfill": true
+      },
+      "forbid": {},
+      "n_days": 21,
+      "final_equity": 9396.63,
+      "fires": 11,
+      "untestable": false,
+      "win_rate": 0.375,
+      "asymmetric_payoff": 0.725,
+      "keep_bar": false,
+      "pass": false
+    },
+    {
+      "id": "tr02_dfpe_t3_top_earn_h3",
+      "author": "theme_radar",
+      "family": "theme_radar_skip",
+      "created_on": "2026-09-28",
+      "daily": [
+        {
+          "date": "2026-08-13",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-14",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-17",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-18",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-19",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-20",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-21",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-24",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-25",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-26",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-27",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-28",
+          "ret_pct": -1.2266
+        },
+        {
+          "date": "2026-08-31",
+          "ret_pct": 1.5967
+        },
+        {
+          "date": "2026-09-01",
+          "ret_pct": 0.9648
+        },
+        {
+          "date": "2026-09-02",
+          "ret_pct": -1.0421
+        },
+        {
+          "date": "2026-09-03",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-09-04",
+          "ret_pct": 6.0043
+        },
+        {
+          "date": "2026-09-08",
+          "ret_pct": -4.2939
+        },
+        {
+          "date": "2026-09-09",
+          "ret_pct": -3.8641
+        },
+        {
+          "date": "2026-09-10",
+          "ret_pct": -3.2477
+        },
+        {
+          "date": "2026-09-11",
+          "ret_pct": -0.6834
+        }
+      ],
+      "after_fees_return": -6.034,
+      "start_day_win_rate": 0.0,
+      "best_stock": "MRNA",
+      "without_best_stock_return": -10.689,
+      "hold": 3,
+      "stop_pct": null,
+      "rank": "hot_score",
+      "require": {
+        "family": "theme_radar_skip",
+        "field": "Forward P/E",
+        "lag": "T-3",
+        "op": "top_quintile",
+        "earn": true,
+        "er": false,
+        "hammer": false,
+        "since_first": "2026-08-06",
+        "no_backfill": true
+      },
+      "forbid": {},
+      "n_days": 21,
+      "final_equity": 9396.63,
+      "fires": 11,
+      "untestable": false,
+      "win_rate": 0.375,
+      "asymmetric_payoff": 0.725,
+      "keep_bar": false,
+      "pass": false
+    },
+    {
+      "id": "tr03_dfpe_t2_top_earn_h3",
+      "author": "theme_radar",
+      "family": "theme_radar_skip",
+      "created_on": "2026-09-28",
+      "daily": [
+        {
+          "date": "2026-08-13",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-14",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-17",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-18",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-19",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-20",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-21",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-24",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-25",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-26",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-27",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-28",
+          "ret_pct": -1.2266
+        },
+        {
+          "date": "2026-08-31",
+          "ret_pct": 1.5967
+        },
+        {
+          "date": "2026-09-01",
+          "ret_pct": 0.9648
+        },
+        {
+          "date": "2026-09-02",
+          "ret_pct": -1.0421
+        },
+        {
+          "date": "2026-09-03",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-09-04",
+          "ret_pct": 6.0043
+        },
+        {
+          "date": "2026-09-08",
+          "ret_pct": -4.2939
+        },
+        {
+          "date": "2026-09-09",
+          "ret_pct": -3.8641
+        },
+        {
+          "date": "2026-09-10",
+          "ret_pct": -3.2477
+        },
+        {
+          "date": "2026-09-11",
+          "ret_pct": -0.6834
+        }
+      ],
+      "after_fees_return": -6.034,
+      "start_day_win_rate": 0.0,
+      "best_stock": "MRNA",
+      "without_best_stock_return": -10.689,
+      "hold": 3,
+      "stop_pct": null,
+      "rank": "hot_score",
+      "require": {
+        "family": "theme_radar_skip",
+        "field": "Forward P/E",
+        "lag": "T-2",
+        "op": "top_quintile",
+        "earn": true,
+        "er": false,
+        "hammer": false,
+        "since_first": "2026-08-06",
+        "no_backfill": true
+      },
+      "forbid": {},
+      "n_days": 21,
+      "final_equity": 9396.63,
+      "fires": 11,
+      "untestable": false,
+      "win_rate": 0.375,
+      "asymmetric_payoff": 0.725,
+      "keep_bar": false,
+      "pass": false
+    },
+    {
+      "id": "tr04_dfpe_t3_pos_earn_h3",
+      "author": "theme_radar",
+      "family": "theme_radar_skip",
+      "created_on": "2026-09-28",
+      "daily": [
+        {
+          "date": "2026-08-13",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-14",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-17",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-18",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-19",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-20",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-21",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-24",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-25",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-26",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-27",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-28",
+          "ret_pct": -1.2266
+        },
+        {
+          "date": "2026-08-31",
+          "ret_pct": 1.5967
+        },
+        {
+          "date": "2026-09-01",
+          "ret_pct": 0.9648
+        },
+        {
+          "date": "2026-09-02",
+          "ret_pct": -1.0421
+        },
+        {
+          "date": "2026-09-03",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-09-04",
+          "ret_pct": 6.0043
+        },
+        {
+          "date": "2026-09-08",
+          "ret_pct": -4.2939
+        },
+        {
+          "date": "2026-09-09",
+          "ret_pct": -3.8641
+        },
+        {
+          "date": "2026-09-10",
+          "ret_pct": -3.2477
+        },
+        {
+          "date": "2026-09-11",
+          "ret_pct": -0.6834
+        }
+      ],
+      "after_fees_return": -6.034,
+      "start_day_win_rate": 0.0,
+      "best_stock": "MRNA",
+      "without_best_stock_return": -10.689,
+      "hold": 3,
+      "stop_pct": null,
+      "rank": "hot_score",
+      "require": {
+        "family": "theme_radar_skip",
+        "field": "Forward P/E",
+        "lag": "T-3",
+        "op": "positive",
+        "earn": true,
+        "er": false,
+        "hammer": false,
+        "since_first": "2026-08-06",
+        "no_backfill": true
+      },
+      "forbid": {},
+      "n_days": 21,
+      "final_equity": 9396.63,
+      "fires": 11,
+      "untestable": false,
+      "win_rate": 0.375,
+      "asymmetric_payoff": 0.725,
+      "keep_bar": false,
+      "pass": false
+    },
+    {
+      "id": "tr05_dmcap_t3_top_earn_h3",
+      "author": "theme_radar",
+      "family": "theme_radar_skip",
+      "created_on": "2026-09-28",
+      "daily": [
+        {
+          "date": "2026-08-13",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-14",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-17",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-18",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-19",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-20",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-21",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-24",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-25",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-26",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-27",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-28",
+          "ret_pct": -1.2266
+        },
+        {
+          "date": "2026-08-31",
+          "ret_pct": 1.5967
+        },
+        {
+          "date": "2026-09-01",
+          "ret_pct": 0.9648
+        },
+        {
+          "date": "2026-09-02",
+          "ret_pct": -1.0421
+        },
+        {
+          "date": "2026-09-03",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-09-04",
+          "ret_pct": 6.0043
+        },
+        {
+          "date": "2026-09-08",
+          "ret_pct": -4.2939
+        },
+        {
+          "date": "2026-09-09",
+          "ret_pct": -3.8641
+        },
+        {
+          "date": "2026-09-10",
+          "ret_pct": -3.2477
+        },
+        {
+          "date": "2026-09-11",
+          "ret_pct": -0.6834
+        }
+      ],
+      "after_fees_return": -6.034,
+      "start_day_win_rate": 0.0,
+      "best_stock": "MRNA",
+      "without_best_stock_return": -10.689,
+      "hold": 3,
+      "stop_pct": null,
+      "rank": "hot_score",
+      "require": {
+        "family": "theme_radar_skip",
+        "field": "Market Cap",
+        "lag": "T-3",
+        "op": "top_quintile",
+        "earn": true,
+        "er": false,
+        "hammer": false,
+        "since_first": "2026-08-06",
+        "no_backfill": true
+      },
+      "forbid": {},
+      "n_days": 21,
+      "final_equity": 9396.63,
+      "fires": 11,
+      "untestable": false,
+      "win_rate": 0.375,
+      "asymmetric_payoff": 0.725,
+      "keep_bar": false,
+      "pass": false
+    },
+    {
+      "id": "tr06_dfpe_first_top_earn_h3",
+      "author": "theme_radar",
+      "family": "theme_radar_skip",
+      "created_on": "2026-09-28",
+      "daily": [
+        {
+          "date": "2026-08-13",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-14",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-17",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-18",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-19",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-20",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-21",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-24",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-25",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-26",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-27",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-28",
+          "ret_pct": -1.2266
+        },
+        {
+          "date": "2026-08-31",
+          "ret_pct": 1.5967
+        },
+        {
+          "date": "2026-09-01",
+          "ret_pct": 0.9648
+        },
+        {
+          "date": "2026-09-02",
+          "ret_pct": -1.0421
+        },
+        {
+          "date": "2026-09-03",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-09-04",
+          "ret_pct": 6.0043
+        },
+        {
+          "date": "2026-09-08",
+          "ret_pct": -4.2939
+        },
+        {
+          "date": "2026-09-09",
+          "ret_pct": -3.8641
+        },
+        {
+          "date": "2026-09-10",
+          "ret_pct": -3.2477
+        },
+        {
+          "date": "2026-09-11",
+          "ret_pct": -0.6834
+        }
+      ],
+      "after_fees_return": -6.034,
+      "start_day_win_rate": 0.0,
+      "best_stock": "MRNA",
+      "without_best_stock_return": -10.689,
+      "hold": 3,
+      "stop_pct": null,
+      "rank": "hot_score",
+      "require": {
+        "family": "theme_radar_skip",
+        "field": "Forward P/E",
+        "lag": "since_first",
+        "op": "top_quintile",
+        "earn": true,
+        "er": false,
+        "hammer": false,
+        "since_first": "2026-08-06",
+        "no_backfill": true
+      },
+      "forbid": {},
+      "n_days": 21,
+      "final_equity": 9396.63,
+      "fires": 11,
+      "untestable": false,
+      "win_rate": 0.375,
+      "asymmetric_payoff": 0.725,
+      "keep_bar": false,
+      "pass": false
+    },
+    {
+      "id": "tr07_drecom_t3_down_er_h3",
+      "author": "theme_radar",
+      "family": "theme_radar_skip",
+      "created_on": "2026-09-28",
+      "daily": [
+        {
+          "date": "2026-08-13",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-14",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-17",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-18",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-19",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-20",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-21",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-24",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-25",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-26",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-27",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-28",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-31",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-09-01",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-09-02",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-09-03",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-09-04",
+          "ret_pct": 7.6097
+        },
+        {
+          "date": "2026-09-08",
+          "ret_pct": -4.4671
+        },
+        {
+          "date": "2026-09-09",
+          "ret_pct": -4.5293
+        },
+        {
+          "date": "2026-09-10",
+          "ret_pct": -3.5586
+        },
+        {
+          "date": "2026-09-11",
+          "ret_pct": -0.6835
+        }
+      ],
+      "after_fees_return": -5.993,
+      "start_day_win_rate": 0.0,
+      "best_stock": "ASST",
+      "without_best_stock_return": -8.699,
+      "hold": 3,
+      "stop_pct": null,
+      "rank": "hot_score",
+      "require": {
+        "family": "theme_radar_skip",
+        "field": "Analyst Recom",
+        "lag": "T-3",
+        "op": "negative",
+        "earn": false,
+        "er": true,
+        "hammer": false,
+        "since_first": "2026-08-06",
+        "no_backfill": true
+      },
+      "forbid": {},
+      "n_days": 21,
+      "final_equity": 9400.69,
+      "fires": 6,
+      "untestable": false,
+      "win_rate": 0.3333,
+      "asymmetric_payoff": 0.345,
+      "keep_bar": false,
+      "pass": false
+    },
+    {
+      "id": "tr08_dfpe_t1_top_hammer_h2",
+      "author": "theme_radar",
+      "family": "theme_radar_skip",
+      "created_on": "2026-09-28",
+      "daily": [
+        {
+          "date": "2026-08-13",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-14",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-17",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-18",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-19",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-20",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-21",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-24",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-25",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-26",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-27",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-28",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-31",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-09-01",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-09-02",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-09-03",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-09-04",
+          "ret_pct": 6.0111
+        },
+        {
+          "date": "2026-09-08",
+          "ret_pct": -4.2968
+        },
+        {
+          "date": "2026-09-09",
+          "ret_pct": 1.2232
+        },
+        {
+          "date": "2026-09-10",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-09-11",
+          "ret_pct": -0.6837
+        }
+      ],
+      "after_fees_return": 1.995,
+      "start_day_win_rate": 0.8571,
+      "best_stock": "ASST",
+      "without_best_stock_return": -1.446,
+      "hold": 2,
+      "stop_pct": null,
+      "rank": "hot_score",
+      "require": {
+        "family": "theme_radar_skip",
+        "field": "Forward P/E",
+        "lag": "T-1",
+        "op": "top_quintile",
+        "earn": false,
+        "er": false,
+        "hammer": true,
+        "since_first": "2026-08-06",
+        "no_backfill": true
+      },
+      "forbid": {},
+      "n_days": 21,
+      "final_equity": 10199.49,
+      "fires": 7,
+      "untestable": false,
+      "win_rate": 0.75,
+      "asymmetric_payoff": 1.284,
+      "keep_bar": false,
+      "pass": false
+    },
+    {
+      "id": "tr09_dfpe_t1_top_hammer_h3",
+      "author": "theme_radar",
+      "family": "theme_radar_skip",
+      "created_on": "2026-09-28",
+      "daily": [
+        {
+          "date": "2026-08-13",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-14",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-17",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-18",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-19",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-20",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-21",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-24",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-25",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-26",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-27",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-28",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-31",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-09-01",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-09-02",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-09-03",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-09-04",
+          "ret_pct": 6.0111
+        },
+        {
+          "date": "2026-09-08",
+          "ret_pct": -4.2968
+        },
+        {
+          "date": "2026-09-09",
+          "ret_pct": -3.8671
+        },
+        {
+          "date": "2026-09-10",
+          "ret_pct": -3.2515
+        },
+        {
+          "date": "2026-09-11",
+          "ret_pct": -0.6844
+        }
+      ],
+      "after_fees_return": -6.285,
+      "start_day_win_rate": 0.0,
+      "best_stock": "ASST",
+      "without_best_stock_return": -8.3,
+      "hold": 3,
+      "stop_pct": null,
+      "rank": "hot_score",
+      "require": {
+        "family": "theme_radar_skip",
+        "field": "Forward P/E",
+        "lag": "T-1",
+        "op": "top_quintile",
+        "earn": false,
+        "er": false,
+        "hammer": true,
+        "since_first": "2026-08-06",
+        "no_backfill": true
+      },
+      "forbid": {},
+      "n_days": 21,
+      "final_equity": 9371.55,
+      "fires": 7,
+      "untestable": false,
+      "win_rate": 0.25,
+      "asymmetric_payoff": 0.383,
+      "keep_bar": false,
+      "pass": false
+    },
+    {
+      "id": "tr10_dfpe_t2_pos_hammer_h2",
+      "author": "theme_radar",
+      "family": "theme_radar_skip",
+      "created_on": "2026-09-28",
+      "daily": [
+        {
+          "date": "2026-08-13",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-14",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-17",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-18",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-19",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-20",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-21",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-24",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-25",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-26",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-27",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-28",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-31",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-09-01",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-09-02",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-09-03",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-09-04",
+          "ret_pct": 6.0111
+        },
+        {
+          "date": "2026-09-08",
+          "ret_pct": -4.2968
+        },
+        {
+          "date": "2026-09-09",
+          "ret_pct": 1.2232
+        },
+        {
+          "date": "2026-09-10",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-09-11",
+          "ret_pct": -0.6837
+        }
+      ],
+      "after_fees_return": 1.995,
+      "start_day_win_rate": 0.8571,
+      "best_stock": "ASST",
+      "without_best_stock_return": -1.446,
+      "hold": 2,
+      "stop_pct": null,
+      "rank": "hot_score",
+      "require": {
+        "family": "theme_radar_skip",
+        "field": "Forward P/E",
+        "lag": "T-2",
+        "op": "positive",
+        "earn": false,
+        "er": false,
+        "hammer": true,
+        "since_first": "2026-08-06",
+        "no_backfill": true
+      },
+      "forbid": {},
+      "n_days": 21,
+      "final_equity": 10199.49,
+      "fires": 7,
+      "untestable": false,
+      "win_rate": 0.75,
+      "asymmetric_payoff": 1.284,
+      "keep_bar": false,
+      "pass": false
+    },
+    {
+      "id": "tr11_dfpe_first_top_hammer_h2",
+      "author": "theme_radar",
+      "family": "theme_radar_skip",
+      "created_on": "2026-09-28",
+      "daily": [
+        {
+          "date": "2026-08-13",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-14",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-17",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-18",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-19",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-20",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-21",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-24",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-25",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-26",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-27",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-28",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-31",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-09-01",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-09-02",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-09-03",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-09-04",
+          "ret_pct": 6.0111
+        },
+        {
+          "date": "2026-09-08",
+          "ret_pct": -4.2968
+        },
+        {
+          "date": "2026-09-09",
+          "ret_pct": 1.2232
+        },
+        {
+          "date": "2026-09-10",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-09-11",
+          "ret_pct": -0.6837
+        }
+      ],
+      "after_fees_return": 1.995,
+      "start_day_win_rate": 0.8571,
+      "best_stock": "ASST",
+      "without_best_stock_return": -1.446,
+      "hold": 2,
+      "stop_pct": null,
+      "rank": "hot_score",
+      "require": {
+        "family": "theme_radar_skip",
+        "field": "Forward P/E",
+        "lag": "since_first",
+        "op": "top_quintile",
+        "earn": false,
+        "er": false,
+        "hammer": true,
+        "since_first": "2026-08-06",
+        "no_backfill": true
+      },
+      "forbid": {},
+      "n_days": 21,
+      "final_equity": 10199.49,
+      "fires": 7,
+      "untestable": false,
+      "win_rate": 0.75,
+      "asymmetric_payoff": 1.284,
+      "keep_bar": false,
+      "pass": false
+    },
+    {
+      "id": "tr12_dfpe_first_top_hammer_h3",
+      "author": "theme_radar",
+      "family": "theme_radar_skip",
+      "created_on": "2026-09-28",
+      "daily": [
+        {
+          "date": "2026-08-13",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-14",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-17",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-18",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-19",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-20",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-21",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-24",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-25",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-26",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-27",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-28",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-08-31",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-09-01",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-09-02",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-09-03",
+          "ret_pct": 0.0
+        },
+        {
+          "date": "2026-09-04",
+          "ret_pct": 6.0111
+        },
+        {
+          "date": "2026-09-08",
+          "ret_pct": -4.2968
+        },
+        {
+          "date": "2026-09-09",
+          "ret_pct": -3.8671
+        },
+        {
+          "date": "2026-09-10",
+          "ret_pct": -3.2515
+        },
+        {
+          "date": "2026-09-11",
+          "ret_pct": -0.6844
+        }
+      ],
+      "after_fees_return": -6.285,
+      "start_day_win_rate": 0.0,
+      "best_stock": "ASST",
+      "without_best_stock_return": -8.3,
+      "hold": 3,
+      "stop_pct": null,
+      "rank": "hot_score",
+      "require": {
+        "family": "theme_radar_skip",
+        "field": "Forward P/E",
+        "lag": "since_first",
+        "op": "top_quintile",
+        "earn": false,
+        "er": false,
+        "hammer": true,
+        "since_first": "2026-08-06",
+        "no_backfill": true
+      },
+      "forbid": {},
+      "n_days": 21,
+      "final_equity": 9371.55,
+      "fires": 7,
+      "untestable": false,
+      "win_rate": 0.25,
+      "asymmetric_payoff": 0.383,
+      "keep_bar": false,
+      "pass": false
+    }
+  ],
+  "passed": [
+    "break10_h2_sx",
+    "rvol_lg_h1_sx",
+    "break10_h1_sx",
+    "zero_candle_h2_sx"
+  ],
+  "freeze": [
+    "break10_h2_sx",
+    "rvol_lg_h1_sx",
+    "break10_h1_sx",
+    "zero_candle_h2_sx"
+  ]
+}
