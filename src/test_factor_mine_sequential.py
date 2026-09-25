@@ -261,6 +261,61 @@ def test_hot4_orders_csv_prices_and_unlocked_day(tmp_path: Path) -> None:
     assert "not_locked" in text
 
 
+def test_hot4_wire_imports_held_unheld_and_hard_red() -> None:
+    held = seq.hot4_wire_day(
+        "2026-09-22",
+        [{"ticker": "AMD", "px": 600.0}, {"ticker": "GME", "px": 23.0}],
+        [],
+        positions={"GME": {"shares": 10}},
+        cash=100000.0, s=-0.5, sit=False,
+    )
+    kinds = {(s["ticker"], s["kind"]) for s in held["skips"]}
+    assert ("GME", "held") in kinds
+    assert [t["ticker"] for t in held["tickets"]] == ["AMD"]
+
+    unheld = seq.hot4_wire_day(
+        "2026-09-23",
+        [],
+        [{"ticker": "SECZ"}, {"ticker": "INDP"}],
+        positions={"INDP": {"shares": 5}},
+        cash=1000.0, s=2.0, sit=False,
+    )
+    assert ("SECZ", "unheld") in {(s["ticker"], s["kind"]) for s in unheld["skips"]}
+    assert [t["ticker"] for t in unheld["tickets"]] == ["INDP"]
+
+    red = seq.hot4_wire_day(
+        "2026-09-24",
+        [{"ticker": "GPRO", "px": 1.2}, {"ticker": "TJGC", "px": 17.0}],
+        [{"ticker": "GLND"}, {"ticker": "XHLD"}],
+        positions={"XHLD": {"shares": 168}},
+        cash=5000.0, s=-7.659, sit=True,
+    )
+    skip_kinds = {(s["ticker"], s["kind"]) for s in red["skips"]}
+    assert ("GPRO", "hard_red") in skip_kinds
+    assert ("TJGC", "hard_red") in skip_kinds
+    assert ("GLND", "unheld") in skip_kinds
+    assert [t["ticker"] for t in red["tickets"]] == ["XHLD"]
+
+
+def test_paper_journals_replay_matches_wire_skips() -> None:
+    days = seq.replay_hot4_wire()
+    by = {d["date"]: d for d in days}
+    assert set(by) >= {"2026-09-22", "2026-09-23", "2026-09-24"}
+
+    def pairs(rows):
+        return {(str(r.get("ticker")), str(r.get("kind"))) for r in rows}
+
+    for date in ("2026-09-22", "2026-09-23", "2026-09-24"):
+        assert pairs(by[date]["skips"]) == pairs(by[date]["journal_skips"])
+        got = [(t["side"], t["ticker"], t["shares"]) for t in by[date]["tickets"]]
+        want = [
+            (t["side"], t["ticker"], t["shares"])
+            for t in by[date]["journal_tickets"]
+        ]
+        assert got == want
+    assert "GME" in by["2026-09-22"]["positions_in"]
+
+
 def test_walk_does_not_rewrite_ledgers(tmp_path: Path) -> None:
     before = seq.ledger_fingerprint()
     _walk(tmp_path / "books")
@@ -279,6 +334,8 @@ def _main() -> None:
         test_stop_first_same_bar_fills_the_stop_price()
         test_same_bar_stop_without_a_take_fills_at_the_stop()
         test_hot4_orders_csv_prices_and_unlocked_day(root / "orders")
+        test_hot4_wire_imports_held_unheld_and_hard_red()
+        test_paper_journals_replay_matches_wire_skips()
         test_walk_does_not_rewrite_ledgers(root / "ledgers")
     print("factor-mine sequential tests passed")
 

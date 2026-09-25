@@ -244,6 +244,145 @@ def record_from_book(name: str, date: str, book: dict) -> dict:
     }
 
 
+def hot4_wire_day(date: str, buys: list, sells: list, *,
+                  positions: dict | None, cash: float,
+                  s=None, sit: bool = False) -> dict:
+    """One HOT4 session through the live wire.
+
+    Held, unheld, and hard-red skips come from ``webull_exec``. This
+    function does not reimplement them.
+    """
+    from . import webull_exec as we
+
+    pos: dict[str, dict] = {}
+    for ticker, lot in (positions or {}).items():
+        name = str(ticker or "").upper().strip()
+        if not name:
+            continue
+        if isinstance(lot, dict):
+            try:
+                shares = int(float(lot.get("shares") or 0))
+            except (TypeError, ValueError):
+                shares = 0
+        else:
+            try:
+                shares = int(float(lot or 0))
+            except (TypeError, ValueError):
+                shares = 0
+        if shares > 0:
+            pos[name] = {"shares": shares}
+    sell_tickets, sell_skips = we.size_hot4_sells(
+        list(sells or []), positions=pos, date=date,
+    )
+    buy_tickets, buy_skips = we.size_hot4_tickets(
+        list(buys or []), cash=float(cash or 0), held=set(pos),
+        date=date, s=s, sit=bool(sit),
+    )
+    return {
+        "date": date,
+        "tickets": sell_tickets + buy_tickets,
+        "skips": sell_skips + buy_skips,
+        "positions_in": sorted(pos),
+    }
+
+
+def _paper_positions(date: str) -> dict[str, dict]:
+    """Share counts from that day's paper status, when the file exists."""
+    path = ROOT / "data" / "paper_open" / f"{date}_status.json"
+    if not path.is_file():
+        return {}
+    try:
+        doc = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return {}
+    snip = ((doc.get("fill_observe") or {}).get("positions_snip") or [])
+    out: dict[str, dict] = {}
+    for row in snip:
+        if not isinstance(row, dict):
+            continue
+        ticker = str(row.get("symbol") or row.get("ticker") or "").upper()
+        try:
+            shares = int(float(row.get("qty") or 0))
+        except (TypeError, ValueError):
+            shares = 0
+        if ticker and shares > 0:
+            out[ticker] = {"shares": shares}
+    return out
+
+
+def _apply_wire_tickets(positions: dict[str, dict], tickets: list[dict]) -> dict[str, dict]:
+    pos = {k: {"shares": int(v.get("shares") or 0)} for k, v in positions.items()}
+    for ticket in tickets or []:
+        ticker = str(ticket.get("ticker") or "").upper()
+        try:
+            shares = int(ticket.get("shares") or 0)
+        except (TypeError, ValueError):
+            shares = 0
+        if not ticker or shares < 1:
+            continue
+        have = int((pos.get(ticker) or {}).get("shares") or 0)
+        side = str(ticket.get("side") or "").upper()
+        if side == "BUY":
+            pos[ticker] = {"shares": have + shares}
+        elif side == "SELL":
+            left = have - shares
+            if left > 0:
+                pos[ticker] = {"shares": left}
+            else:
+                pos.pop(ticker, None)
+    return pos
+
+
+def replay_hot4_wire(journals: list[dict] | None = None) -> list[dict]:
+    """Walk paper submit journals in order through the live wire.
+
+    Positions carry from the prior close. The first day starts from the
+    previous session's paper status. Frozen research state is not written.
+    """
+    if journals is None:
+        journals = []
+        folder = ROOT / "data" / "paper_open"
+        for path in sorted(folder.glob("*_submit.json")):
+            try:
+                doc = json.loads(path.read_text(encoding="utf-8"))
+            except (OSError, json.JSONDecodeError):
+                continue
+            if isinstance(doc, dict) and doc.get("date"):
+                journals.append(doc)
+    journals = [
+        d for d in journals
+        if str(d.get("date") or "") >= "2026-09-22"
+    ]
+    journals = sorted(journals, key=lambda d: str(d.get("date") or ""))
+    # Open lots for 09-22 are the 09-21 paper print (VSTS qty 0 is omitted).
+    positions: dict[str, dict] = _paper_positions("2026-09-21")
+    out = []
+    for doc in journals:
+        date = str(doc.get("date") or "")
+        if not date:
+            continue
+        card = doc.get("card") or {}
+        buys = list((card.get("would_buy") or {}).get("rows") or [])
+        sells = list((card.get("would_sell") or {}).get("rows") or [])
+        try:
+            cash = float(doc.get("cash") or 0)
+        except (TypeError, ValueError):
+            cash = 0.0
+        day = hot4_wire_day(
+            date, buys, sells, positions=positions, cash=cash,
+            s=card.get("score"), sit=bool(card.get("hard_red")),
+        )
+        day["journal_skips"] = list(card.get("skipped") or [])
+        day["journal_tickets"] = [
+            {"side": t.get("side"), "ticker": t.get("ticker"), "shares": t.get("shares")}
+            for t in (card.get("tickets") or [])
+        ]
+        positions = _apply_wire_tickets(positions, day["tickets"])
+        day["positions_out"] = sorted(positions)
+        out.append(day)
+    return out
+
+
 def session_mean(equity, prior: dict | None) -> float | None:
     """Session percent versus yesterday's close. The first day uses $10k.
 
@@ -293,6 +432,19 @@ def step_recipe(date: str, rec: dict, rows: list[dict], bars: dict, *,
         )
     doc = record_from_book(name, date, book)
     doc["mean"] = session_mean(doc.get("equity"), prior)
+    if name == HOT4_RECIPE:
+        prior_state = (prior or {}).get("state") or {}
+        daily = {}
+        for row in (book.get("daily") or []):
+            if row.get("date") == date:
+                daily = row
+                break
+        doc["wire"] = hot4_wire_day(
+            date, doc.get("buys") or [], doc.get("sells") or [],
+            positions=prior_state.get("pos") or {},
+            cash=float(prior_state.get("cash") or fm.CAPITAL),
+            s=daily.get("s"), sit=bool(daily.get("hard_red")),
+        )
     return doc
 
 

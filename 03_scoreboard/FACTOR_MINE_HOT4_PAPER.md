@@ -90,6 +90,10 @@ The send-time tickets and the Webull acknowledgements match after the wire's ski
 
 The rebuilt $10k book does not match those paper orders on any of the four days. 09-22 has no shared ticker. 09-23 shares INDP on opposite sides. 09-24 shares FEAM as a sell the paper account did not hold. 09-25 has no rebuilt orders.
 
+## Wire replay
+
+The day-by-day build calls `webull_exec.size_hot4_tickets` and `webull_exec.size_hot4_sells` for `union_hot_n4_h1`. It does not keep a second copy of the held, unheld, or hard-red checks. Replaying the paper submit journals from 2026-09-22 onward, with open lots taken from the 2026-09-21 paper print (DELL, GME, UMC), reproduces each journal's tickets and skip kinds: GME held on 09-22, SECZ/GRAL/NUAI unheld on 09-23, hard-red buys and GLND/FEAM unheld on 09-24. The $10k research state files are not rewritten. 2026-09-25 has no submit journal in the tree.
+
 ## Dated file guard
 
 `strategy_tickets.write` may replace `data/day_board/<date>_strategy_tickets.json` until that date's 09:30 ET. At 09:30 and after, a different body is left unwritten and the undated live copies still update. The first write of a missing dated file is still allowed, including a late first publish. This does not restore 09-22 through 09-24 to the send-time commits. Those files in the tree are still the evening versions.
