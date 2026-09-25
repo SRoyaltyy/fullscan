@@ -1081,6 +1081,25 @@ def _rows_for_factory(snaps: dict):
     return rows_for
 
 
+def _held_into(root: Path, dates: list[str]) -> set[str]:
+    """Names already held when any of ``dates`` opens.
+
+    The bar load has to include them. A position that is not in that
+    morning's snapshot rows otherwise has no print, and the book carries
+    it flat. Existing state files are not opened for rewrite.
+    """
+    out: set[str] = set()
+    root = Path(root)
+    if not dates or not root.is_dir():
+        return out
+    for folder in root.iterdir():
+        if not folder.is_dir():
+            continue
+        for date in dates:
+            out |= fmf._positions_before(folder, date)
+    return out
+
+
 def walk_test(dates: list[str], recipes: list[dict], *,
               root: Path | None = None, ledger: bool = True) -> None:
     """Sequential lock. Existing state files are not recomputed."""
@@ -1099,6 +1118,7 @@ def walk_test(dates: list[str], recipes: list[dict], *,
         for row in snapshot_rows(doc, date):
             if row.get("ticker"):
                 tickers.add(str(row["ticker"]).upper())
+    tickers |= _held_into(root, dates)
     bars = _bars_for_window(dates, tickers, allow_test=True)
     fees = fm.pt_fees()
 
@@ -1414,6 +1434,7 @@ def _lock_theme(dates: list[str], recipes: list[dict], root: Path) -> None:
         for row in snapshot_rows(doc, date):
             if row.get("ticker"):
                 tickers.add(str(row["ticker"]).upper())
+    tickers |= _held_into(root, dates)
     bars = _bars_for_window(dates, tickers, allow_test=True)
     rules = []
     for rec in recipes:

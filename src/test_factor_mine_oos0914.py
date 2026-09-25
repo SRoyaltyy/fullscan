@@ -1071,6 +1071,48 @@ def test_oos_append_failure_does_not_fail_the_lock(tmp_path: Path) -> None:
     assert fmf.MANIFEST_PATH.read_bytes() == manifest
 
 
+def test_oos_bar_load_includes_a_carried_name(tmp_path: Path) -> None:
+    """A name held into the day is loaded even when it is not a snapshot row."""
+    day = "2026-09-15"
+    prior = "2026-09-12"
+    tmp_path.mkdir(parents=True, exist_ok=True)
+    snaps = tmp_path / "snaps"
+    snaps.mkdir()
+    (snaps / f"{day}.json").write_text(json.dumps({
+        "date": day,
+        "dropped": [],
+        "rows": [{
+            "date": day, "ticker": "AAA", "sources": ["union"],
+            "ohlc_hot_score": 1.0,
+        }],
+    }), encoding="utf-8")
+    root = tmp_path / "state"
+    seq.write_state("oos0914_other", prior, {
+        "date": prior,
+        "state": {"pos": {"WTS": {"shares": 4, "ticker": "WTS"}}},
+    }, root)
+    saved_snap, saved_ledger = oos.SNAP_DIR, oos.LEDGER_DIR
+    oos.SNAP_DIR = snaps
+    oos.LEDGER_DIR = tmp_path / "ledgers"
+    seen: dict = {}
+
+    def capture(_dates, tickers, *, allow_test=False):
+        seen["tickers"] = {str(t).upper() for t in tickers}
+        return {("AAA", day): {"open": 10.0, "high": 11.0, "low": 9.0, "close": 10.5}}
+
+    old_bars = oos._bars_for_window
+    oos._bars_for_window = capture
+    rec = fm.make_recipe("oos0914_toy", hold=1, top_n=1, rank="hot_score", sell="time")
+    try:
+        oos.walk_test([day], [rec], root=root)
+    finally:
+        oos.SNAP_DIR = saved_snap
+        oos.LEDGER_DIR = saved_ledger
+        oos._bars_for_window = old_bars
+    assert "WTS" in seen["tickers"]
+    assert "AAA" in seen["tickers"]
+
+
 def main() -> None:
     import tempfile
     manifest = fmf.MANIFEST_PATH.read_bytes()
@@ -1109,6 +1151,7 @@ def main() -> None:
         test_rule_17_freeze_before_test_score(root / "r17")
         test_theme_train_does_not_open_future_snapshot(root / "theme")
         test_oos_append_failure_does_not_fail_the_lock(root / "append_fail")
+        test_oos_bar_load_includes_a_carried_name(root / "held_bars")
     assert fmf.MANIFEST_PATH.read_bytes() == manifest
     print("oos0914 tests passed")
 

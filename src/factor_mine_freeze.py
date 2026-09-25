@@ -468,8 +468,24 @@ def _positions_before(folder: Path, date: str) -> set[str]:
     return out
 
 
+def _folders_held(root: Path, date: str) -> set[str]:
+    """Positions in every recipe folder under ``root`` carried into ``date``."""
+    out: set[str] = set()
+    if not root.is_dir():
+        return out
+    for folder in root.iterdir():
+        if folder.is_dir():
+            out |= _positions_before(folder, date)
+    return out
+
+
 def carried_tickers(date: str) -> set[str]:
-    """Names held at the prior lock: ledger, HOT4, holdup, and OOS rules."""
+    """Names held at the prior lock, across every recipe and OOS book.
+
+    The ledger primary book covers the factor-mine recipes. Sequential
+    state covers the same books plus HOT4 and holdup when that file is
+    the copy the next session resumes. OOS-0914 state is a separate tree.
+    """
     out: set[str] = set()
     led = latest_ledger_before(date)
     for block in ((led or {}).get("recipes") or {}).values():
@@ -478,16 +494,10 @@ def carried_tickers(date: str) -> set[str]:
         state = ((block.get("primary") or {}).get("state") or {})
         out |= _tickers_from_pos(state.get("pos"))
     from . import factor_mine_sequential as seq
-
-    for name in (seq.HOT4_RECIPE, "union_hot_n4_holdup"):
-        out |= _positions_before(Path(seq.STATE_DIR) / name, date)
     from . import factor_mine_oos0914 as oos
 
-    root = Path(oos.STATE_ROOT)
-    if root.is_dir():
-        for folder in root.iterdir():
-            if folder.is_dir():
-                out |= _positions_before(folder, date)
+    out |= _folders_held(Path(seq.STATE_DIR), date)
+    out |= _folders_held(Path(oos.STATE_ROOT), date)
     return out
 
 
@@ -557,13 +567,28 @@ def unpriced_held_tickers(date: str, gaps: list | None, *,
     return sorted(t for t in protected if t in missing)
 
 
-def ensure_candidate_bars(date: str, tickers: list[str]) -> list[dict]:
-    """Fetch Yahoo bars for every candidate.
+def _price_also(date: str, also: set[str] | list[str] | None) -> set[str]:
+    """Names priced with the pick pool, but not ranked as candidates.
 
-    A name with no session bar, or too few earlier bars, is dropped and
-    returned. The day still locks. An empty universe, or a session where
-    every name lacks a Yahoo bar, is a hard failure. A wholesale fetch
-    failure and dividend-adjusted bars still refuse to lock.
+    Pass ``also`` to name them in a test. The default is every position
+    carried into ``date`` plus the 09:30 tickets.
+    """
+    if also is not None:
+        return {str(t).strip().upper() for t in also if str(t).strip()}
+    return carried_tickers(date) | morning_pick_tickers(date)
+
+
+def ensure_candidate_bars(date: str, tickers: list[str], *,
+                          also: set[str] | list[str] | None = None) -> list[dict]:
+    """Fetch Yahoo bars for every candidate and every held name.
+
+    A candidate with no session bar, or too few earlier bars, is dropped
+    and returned. The day still locks. An empty candidate list, or a
+    session where every candidate lacks a Yahoo bar, is a hard failure.
+    Held names and 09:30 tickets are fetched in the same call so a real
+    Yahoo bar is not mistaken for a miss, but a miss among them does not
+    hold the day and does not enlarge ``dropped_missing_bars``. A
+    wholesale fetch failure and dividend-adjusted bars still refuse to lock.
     """
     from . import price_store as ps
 
@@ -579,10 +604,12 @@ def ensure_candidate_bars(date: str, tickers: list[str]) -> list[dict]:
             date, [], "entire universe or panel is missing",
             status="held_incomplete",
         )
+    fetch = sorted(set(names) | _price_also(date, also))
     try:
         # Partial misses are dropped below. strict=True used to hold the
         # whole session when Yahoo had no bar for one name in the batch.
-        ps.ensure_through(date, tickers=names, strict=False)
+        # Held names ride along; a miss there is unpriced_held, not a hold.
+        ps.ensure_through(date, tickers=fetch, strict=False)
     except (Exception, SystemExit) as e:
         raise HoldDay(
             date, names, f"price fetch failed: {e}",
@@ -1847,7 +1874,15 @@ def bars_from_panel(panel: dict) -> dict:
     return bars
 
 
-def bars_for_decisions(panel: dict, date: str, pinned: dict | None) -> dict:
+def bars_for_decisions(panel: dict, date: str, pinned: dict | None, *,
+                       also: set[str] | list[str] | None = None) -> dict:
+    """Panel and pin bars, plus session bars for names the books still hold.
+
+    A held name that is not in the day's candidate rows never lands in
+    the panel. Without this merge the book marks it unpriced even after
+    Yahoo filled the store. A name that still has no open and no close
+    stays out of the map so the lot carries at its last price.
+    """
     bars = bars_from_panel(panel)
     for t, info in ((pinned or {}).get("names") or {}).items():
         bars[(t, date)] = {
@@ -1855,6 +1890,20 @@ def bars_for_decisions(panel: dict, date: str, pinned: dict | None) -> dict:
             "high": info.get("high"),
             "low": info.get("low"),
             "close": info.get("close"),
+        }
+    for t in sorted(_price_also(date, also)):
+        key = (t, date)
+        have = bars.get(key) or {}
+        if have.get("open") is not None or have.get("close") is not None:
+            continue
+        sess = tl.session_bar(t, date) or {}
+        if sess.get("open") is None and sess.get("close") is None:
+            continue
+        bars[key] = {
+            "open": sess.get("open"),
+            "high": sess.get("high"),
+            "low": sess.get("low"),
+            "close": sess.get("close"),
         }
     return bars
 
