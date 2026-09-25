@@ -116,4 +116,75 @@ IWM tape: Yahoo auto_adjust=False, fetched in memory. Not written to data/factor
 | `iwm` | flat_15bp | buy-and-hold | 2026-08-13 | -7.235 |  |  |  | 1 |
 | `iwm` | flat_15bp | buy-and-hold | 2026-09-21 | -1.64 |  |  |  | 1 |
 
+## Dropped names that moved more than 10%
+
+Move is that session's close versus the prior stored Yahoo close. A dropped name with no session print is not a mover. `2026-08-18` EQR and `2026-09-03` HLX had no print.
+
+| date | dropped | moved more than 10% |
+| --- | ---: | --- |
+| 2026-08-13 | 0 | |
+| 2026-08-14 | 61 | ADIG -17.7%, APMD +10.3%, STDN +10.1% |
+| 2026-08-17 | 58 | ATTO +14.4% |
+| 2026-08-18 | 52 | EROC -12.5% |
+| 2026-08-19 | 54 | QMLS -12.3% |
+| 2026-08-20 | 54 | APMD -10.9%, AADX -10.2% |
+| 2026-08-21 | 49 | |
+| 2026-08-24 | 50 | USDE -15.4%, ITG -10.1% |
+| 2026-08-25 | 50 | STDN +16.8% |
+| 2026-08-26 | 32 | |
+| 2026-08-27 | 32 | USDE +34.9% |
+| 2026-08-28 | 47 | USDE -16.2% |
+| 2026-08-31 | 43 | USDE +31.2%, STDN +14.3%, APMD -11.6% |
+| 2026-09-01 | 15 | |
+| 2026-09-02 | 21 | ADBT -53.3%, STDN -11.5%, USDE -10.3% |
+| 2026-09-03 | 38 | ADBT -80.2%, USDE +16.9%, BRR +13.9% |
+| 2026-09-04 | 35 | |
+| 2026-09-08 | 32 | QMLS +12.9%, SECZ +11.2%, STDN -10.1% |
+| 2026-09-09 | 12 | TRBG -16.1% |
+| 2026-09-10 | 26 | |
+| 2026-09-11 | 26 | ADBT -25.8% |
+| 2026-09-14 | 24 | ADBT -56.5% |
+| 2026-09-15 | 23 | SWRD -30.2%, USDE -17.7% |
+| 2026-09-16 | 22 | |
+| 2026-09-17 | 22 | USDE +24.4%, SWRD +17.7%, SECZ +14.9% |
+| 2026-09-18 | 21 | USDE +32.2%, SECZ +21.6% |
+| 2026-09-21 | 20 | SECZ +24.3% |
+| 2026-09-22 | 22 | BRR +14.5%, XTND -10.8% |
+| 2026-09-23 | 22 | APMD -11.8%, SWRD +11.0%, SECZ +10.5% |
+| 2026-09-24 | 21 | SWRD +16.1%, SECZ +15.1% |
+
+## pit_rebuilt days only
+
+The all-days book keeps the 15 incomplete sessions on the calendar (no new ranking). The pit-only book uses only the 15 `pit_rebuilt` sessions, so the first day is `2026-08-24`. `2026-09-21` through `2026-09-24` are all `pit_rebuilt`, so that window matches the all-days window.
+
+| recipe | fee | days | window | return % | trades |
+| --- | --- | --- | --- | ---: | ---: |
+| `union_hot_n4_h1` | futubull | all | 2026-08-13 | 24.991 | 62 |
+| `union_hot_n4_h1` | futubull | pit_rebuilt | 2026-08-24 | 17.277 | 62 |
+| `union_hot_n4_h1` | flat_15bp | all | 2026-08-13 | 29.536 | 62 |
+| `union_hot_n4_h1` | flat_15bp | pit_rebuilt | 2026-08-24 | 21.486 | 62 |
+| `union_hot_n4_holdup` | futubull | all | 2026-08-13 | 52.196 | 53 |
+| `union_hot_n4_holdup` | futubull | pit_rebuilt | 2026-08-24 | 41.690 | 51 |
+| `union_hot_n4_holdup` | futubull | all | 2026-09-21 | 16.444 | 11 |
+| `union_hot_n4_holdup` | futubull | pit_rebuilt | 2026-09-21 | 16.444 | 11 |
+| `union_hot_n4_holdup` | flat_15bp | all | 2026-08-13 | 55.918 | 53 |
+| `union_hot_n4_holdup` | flat_15bp | pit_rebuilt | 2026-08-24 | 44.606 | 51 |
+| `union_hot_n4_holdup` | flat_15bp | all | 2026-09-21 | 17.404 | 11 |
+| `union_hot_n4_holdup` | flat_15bp | pit_rebuilt | 2026-09-21 | 17.404 | 11 |
+
+## HOT4 without its best stock
+
+The largest closed winner on the all-days book is INDP (realized pnl $617.41 on `union_hot_n4_h1`, $1,132.67 on `union_hot_n4_holdup`), not GLND. Dropping INDP from the candidate rows and rescoring:
+
+| recipe | fee | universe | window | return % | trades |
+| --- | --- | --- | --- | ---: | ---: |
+| `union_hot_n4_h1` | futubull | without INDP | 2026-08-13 | 24.669 | 64 |
+| `union_hot_n4_h1` | flat_15bp | without INDP | 2026-08-13 | 28.777 | 64 |
+| `union_hot_n4_holdup` | futubull | without INDP | 2026-08-13 | 45.124 | 59 |
+| `union_hot_n4_holdup` | futubull | without INDP | 2026-09-21 | 16.444 | 11 |
+| `union_hot_n4_holdup` | flat_15bp | without INDP | 2026-08-13 | 48.569 | 57 |
+| `union_hot_n4_holdup` | flat_15bp | without INDP | 2026-09-21 | 17.404 | 11 |
+
+INDP was not held in the `2026-09-21` window, so that window is unchanged. The without-GLND rows above are a different cut.
+
 Open cross-check uses theme-radar `{D}.raw.csv` Finviz Open (`finviz_raw`) when the latest git commit of that file is before the next session's 09:30 ET. The time is the GitHub commits API committer timestamp (`commits?path=data/snapshots/{D}.raw.csv`). There is no lower bound; the snapshot workflow starts after the close. From 2026-09-24 a present scrape_ts must also be before that next open. The stamp is the slim `{D}.csv` scrape_ts column, or `scrape_ts_utc` in theme-radar `manifest.json`. It is not read from raw.csv. A missing raw export, a commit at or after the next open, a late scrape_ts, or a hash mismatch uses Stooq. From 2026-09-25 the slim `{D}.csv` Open column is the next file (`finviz_snapshot`) under the same upper bound. `current.csv` is not a source. Webull paper fills stay a third check. On this window every session except 2026-08-27 uses `finviz_raw`. 2026-08-27 has no raw export, so it uses Stooq. The log is `data/factor_mine/open_source_log.csv` (source, commit sha, commit time). Per-recipe session returns for the shuffle test are `data/factor_mine/daily_returns.csv` (recipe, recipe_created_date, start_date, D, net_ret_futubull, net_ret_15bp, day_status, source_shas). One row per recipe, start date, and day. A held or missing day is `held` with empty returns, never 0.
