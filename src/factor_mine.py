@@ -2128,19 +2128,32 @@ def build_panel(from_date: str = START, to_date: str | None = None,
               if cal else {"by_date": {}})
     rows: list[dict] = []
     by_date: dict[str, list[dict]] = {}
+    excluded: list[dict] = []
     for date in cal:
         prior_sess = gc.prior_session(lookback, date)
         prior_export = gc.knowable_export_date(lookback, date)
         # Prior export only. Same-day Finviz is never a feature.
         prior_df = ga.load_finviz(prior_export) if prior_export else None
         plan = fla.flatten_day_targets(date)
+        dropped_rows: list[dict] = []
+        universe: list[str] = []
+        frozen: list[dict] | None = None
         if fail_closed:
             # Bars for every candidate before membership or hot_score.
-            # A miss holds D; it is not written as hot_score 0.
+            # A gapped name is dropped. The day still locks. A rerun
+            # keeps the frozen dropped list even if Yahoo later fills it.
             from . import factor_mine_freeze as fmf
             universe = fmf.ranking_universe(
                 date, lookback, plan, movers.get("by_date") or {})
-            fmf.ensure_candidate_bars(date, universe)
+            frozen = fmf.frozen_dropped(date)
+            if frozen is None:
+                found = fmf.ensure_candidate_bars(date, universe) or []
+                dropped_rows.extend(found)
+            else:
+                dropped_rows.extend(frozen)
+                print(f"[factor-mine] {date} frozen dropped n={len(frozen)}",
+                      flush=True)
+        dropped = {g.get("ticker") for g in dropped_rows}
         buckets = _candidates(date, lookback, plan, movers.get("by_date") or {})
         reasons: dict[str, list[str]] = {}
         order: list[str] = []
@@ -2156,20 +2169,48 @@ def build_panel(from_date: str = START, to_date: str | None = None,
         sess = sess_map.get(date)
         prev_sess = sess_map.get(prior_sess) if prior_sess else None
         day_rows = []
+        late: list[dict] = []
         for i, t in enumerate(order):
             if sess is None:
+                continue
+            if t in dropped:
                 continue
             rec = _attach_row(
                 date, t, reasons[t], i, sess, prev_sess, prior_export, prior_df,
             )
-            if fail_closed:
+            if fail_closed and frozen is None:
                 from . import factor_mine_freeze as fmf
                 problem = fmf.row_price_problem(t, date)
                 if problem:
-                    raise fmf.HoldDay(date, [t], problem)
+                    late.append({
+                        "ticker": t,
+                        "missing": [problem],
+                        "reason": problem,
+                    })
+                    continue
             day_rows.append(rec)
+        if fail_closed and frozen is None:
+            from . import factor_mine_freeze as fmf
+            dropped_rows.extend(late)
+            bad = {g.get("ticker") for g in dropped_rows}
+            rankable = [t for t in universe if t not in bad]
+            if not rankable and not day_rows:
+                detail = "; ".join(
+                    g.get("reason") or "" for g in dropped_rows if g.get("reason")
+                )
+                reason = "no rankable names — skipping day"
+                if detail:
+                    reason = f"{reason}: {detail}"
+                raise fmf.SkipDay(date, reason)
+        for gap in dropped_rows:
+            item = dict(gap)
+            item["date"] = date
+            excluded.append(item)
         by_date[date] = day_rows
         rows.extend(day_rows)
+        if dropped_rows:
+            print(f"[factor-mine] {date} dropped {len(dropped_rows)}",
+                  flush=True)
         print(f"[factor-mine] panel {date} names={len(day_rows)} "
               f"total={len(rows)}", flush=True)
     return {
@@ -2183,6 +2224,7 @@ def build_panel(from_date: str = START, to_date: str | None = None,
         "lookback": PANEL_LOOKBACK,
         "rows": rows,
         "by_date": by_date,
+        "dropped": excluded,
     }
 
 

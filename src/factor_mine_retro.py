@@ -420,7 +420,7 @@ def snapshot_for(date: str, info: dict, rows: list[dict],
     heat_sha = (info.get("sources") or {}).get(
         f"01_daily/map_heat/{date}_map_heat.json")
     frozen_rows = []
-    if info["label"] not in ("incomplete_pit", "held"):
+    if info["label"] not in ("incomplete_pit", "held", "skipped"):
         for row in rows:
             item = dict(row)
             item["heat_vintage"] = heat_sha
@@ -447,6 +447,8 @@ def snapshot_for(date: str, info: dict, rows: list[dict],
         "tape": "raw",
         "auto_adjust": False,
         "n_rows": len(frozen_rows),
+        "n_dropped": len(info.get("dropped") or []),
+        "dropped": list(info.get("dropped") or []),
         "rows": frozen_rows,
     }
     if candidates is not None:
@@ -872,11 +874,11 @@ def _known_prints() -> set[tuple[str, str]]:
 
 
 def fill_raw_history(tickers: list[str] | None = None) -> int:
-    """Insert missing bars from each guarded raw.csv. Stored bars stay.
+    """Insert raw.csv bars only for names Yahoo has no print for.
 
-    Returns how many bars were inserted. Names Yahoo did not have are
-    recorded in ``SINGLE_SOURCE``. ``Prev Close`` fills the prior session
-    only when that session still has no print.
+    A ticker that already has any stored print is left alone, including
+    its missing sessions, highs, lows, and prior closes. ``Prev Close``
+    is not turned into a bar. Inserted names are tagged ``single_source``.
     """
     import pandas as pd
 
@@ -884,6 +886,7 @@ def fill_raw_history(tickers: list[str] | None = None) -> int:
     if tickers is not None:
         allowed = {str(t).strip().upper() for t in tickers if t}
     known = _known_prints()
+    have_yahoo = {ticker for _date, ticker in known}
     rows = []
     for date in raw_fill_dates():
         quotes = _radar_raw_quotes(date)
@@ -892,30 +895,21 @@ def fill_raw_history(tickers: list[str] | None = None) -> int:
         for ticker, quote in quotes.items():
             if allowed is not None and ticker not in allowed:
                 continue
+            if ticker in have_yahoo:
+                continue
             key = (date, ticker)
-            if key not in known:
-                bar = _bar_fields(
-                    date, ticker,
-                    quote.get("open"), quote.get("high"), quote.get("low"),
-                    quote.get("close"), quote.get("volume"),
-                )
-                if bar:
-                    rows.append(bar)
-                    SINGLE_SOURCE.setdefault(date, set()).add(ticker)
-                    known.add(key)
-            prev = _prev_weekday(date)
-            prev_key = (prev, ticker)
-            prev_close = quote.get("prev_close")
-            if prev_key in known or prev_close is None:
+            if key in known:
                 continue
             bar = _bar_fields(
-                prev, ticker, prev_close, prev_close, prev_close, prev_close,
+                date, ticker,
+                quote.get("open"), quote.get("high"), quote.get("low"),
+                quote.get("close"), quote.get("volume"),
             )
             if not bar:
                 continue
             rows.append(bar)
-            SINGLE_SOURCE.setdefault(prev, set()).add(ticker)
-            known.add(prev_key)
+            SINGLE_SOURCE.setdefault(date, set()).add(ticker)
+            known.add(key)
     if not rows:
         return 0
     print(f"[retro] raw.csv history rows {len(rows)}", flush=True)
@@ -1017,6 +1011,25 @@ def validate_raw_vs_yahoo(tickers: list[str] | None = None) -> dict:
     return stats
 
 
+def drop_record(ticker: str, date: str) -> dict | None:
+    """Why this name is dropped, or None when it can be ranked."""
+    from . import ohlc_ripper as ohlc
+
+    gaps = list(fmf.completeness_gaps(ticker, date))
+    need = int(ohlc.INDICATOR_LOOKBACK)
+    priors = [
+        b for b in fmf._raw_bars(ticker)
+        if str(b.get("date") or "") < str(date)[:10] and b.get("close") is not None
+    ]
+    if len(priors) < need:
+        gaps.append(f"indicator bars {len(priors)}/{need}")
+    if not gaps:
+        return None
+    # One reason string. Duplicate lookback lines stay as completeness wrote them.
+    reason = "; ".join(dict.fromkeys(gaps))
+    return {"ticker": str(ticker).upper(), "missing": gaps, "reason": reason}
+
+
 def is_unrankable(ticker: str, date: str) -> bool:
     """True when the hot score would be computed on a short history.
 
@@ -1075,13 +1088,11 @@ def parse_stooq_history(text: str) -> list[dict]:
 
 
 def recover_session_bars(date: str, tickers: list[str]) -> list[str]:
-    """Fill missing session prints. Yahoo raw, then raw.csv, then Stooq.
+    """Fill a missing session from Yahoo, then raw.csv when Yahoo has no print.
 
-    Returns tickers that still have no open and close on ``date``.
-    A stored bar is not overwritten.
+    Stooq is not a price source. Returns tickers that still have no open
+    and close on ``date``. A stored bar is not overwritten.
     """
-    import pandas as pd
-
     names = sorted({str(t).strip().upper() for t in tickers if t})
     missing = _missing_session(date, names)
     if not missing:
@@ -1095,18 +1106,6 @@ def recover_session_bars(date: str, tickers: list[str]) -> list[str]:
     # raw.csv is marked single_source.
     fill_raw_history(names)
     missing = _missing_session(date, names)
-    if missing:
-        rows = []
-        for ticker in missing:
-            history = parse_stooq_history(fmf._fetch_stooq(ticker))
-            for bar in history:
-                bar["ticker"] = ticker
-                rows.append(bar)
-            time.sleep(0.15)
-        if rows:
-            print(f"[retro] {date} stooq rows {len(rows)}", flush=True)
-            merge_raw_bars(pd.DataFrame(rows))
-        missing = _missing_session(date, names)
     if missing:
         print(f"[retro] {date} still missing {len(missing)}: {missing[:12]}", flush=True)
     return missing
@@ -1683,7 +1682,7 @@ DAILY_RETURN_FIELDS = (
     "recipe", "recipe_created_date", "start_date", "D",
     "net_ret_futubull", "net_ret_15bp", "day_status", "source_shas",
 )
-DAY_STATUSES = ("locked", "pit_rebuilt", "incomplete_pit", "held")
+DAY_STATUSES = ("locked", "pit_rebuilt", "incomplete_pit", "held", "skipped")
 
 
 def daily_return_pct(daily: dict | None) -> float | None:
@@ -1722,10 +1721,12 @@ def format_net(value) -> str:
 
 
 def ledger_day_status(ledger: dict | None) -> str:
-    """``locked``, ``pit_rebuilt``, ``incomplete_pit``, or ``held``."""
+    """``locked``, ``pit_rebuilt``, ``incomplete_pit``, ``skipped``, or ``held``."""
+    label = str((ledger or {}).get("label") or "")
+    if label == "skipped":
+        return "skipped"
     if not ledger or not (ledger.get("recipes") or {}):
         return "held"
-    label = str(ledger.get("label") or "")
     if label in ("pit_rebuilt", "incomplete_pit", "locked"):
         return label
     if label in ("held", "held_incomplete", "held_review"):
@@ -1897,10 +1898,12 @@ def write_daily_returns(path: Path | None = None,
                     if day < start:
                         continue
                     key = (name, start, day)
-                    missing = status_of.get(day) == "held" or key not in present
+                    status = status_of.get(day) or "held"
+                    missing = status in ("held", "skipped") or key not in present
                     if missing:
+                        cell = status if status in ("held", "skipped") else "held"
                         writer.writerow([
-                            name, created, start, day, "", "", "held",
+                            name, created, start, day, "", "", cell,
                             shas_of.get(day) or "",
                         ])
                         held += 1
@@ -1981,6 +1984,7 @@ def write_report(classed: list[dict], scores: list[dict],
     rebuilt = [c["date"] for c in classed if c["label"] == "pit_rebuilt"]
     incomplete = [c for c in classed if c["label"] == "incomplete_pit"]
     held = [c for c in classed if c["label"] == "held"]
+    skipped = [c for c in classed if c["label"] == "skipped"]
     lines = [
         "# Factor Mine retroactive point-in-time rebuild",
         "",
@@ -1988,29 +1992,38 @@ def write_report(classed: list[dict], scores: list[dict],
         "Each D-dated packet is the last git commit at or before D 09:30 ET. "
         "A named input that exists only in a later commit is withheld.",
         "",
+        "Yahoo `auto_adjust=False` daily bars are the only price source and "
+        "are used as stored (split-adjusted, dividends not applied). A "
+        "Finviz or Stooq disagreement is a warning and does not hold the day. "
+        "raw.csv fills a name only when Yahoo has no print at all, and that "
+        "name is tagged single_source. A name with no print or too few "
+        "earlier bars is dropped. The day locks unless nobody is rankable.",
+        "",
         f"- pit_rebuilt: {len(rebuilt)}",
         f"- incomplete_pit: {len(incomplete)}",
         f"- held: {len(held)}",
+        f"- skipped: {len(skipped)}",
         "",
-        "## Held days",
+        "## Held and skipped days",
         "",
-        "A day is held when more than 10% of its candidates are unrankable, "
-        "or when a Yahoo print disagrees with the external open or close "
-        "beyond PRICE_CHECK. An unrankable name under that line is left off "
-        "the ranking and is not scored. A raw.csv bar Yahoo did not have is "
-        "single_source. The book is empty and the ledger recipes are empty. "
-        "The return is not 0.",
+        "A day is not held because a print is missing or because Yahoo "
+        "disagrees with Finviz or Stooq. The only skip is zero rankable "
+        "names. A held row here is a ledger failure, not a price gap.",
         "",
     ]
     for info in held:
-        missing = ", ".join(info.get("missing_prices") or []) or "(none)"
-        n_gaps = info.get("cross_check_n") or 0
-        share = info.get("unrankable_share")
-        share_txt = "" if share is None else f"; unrankable {share:.1%}"
         reason = info.get("hold_reason") or ""
+        lines.append(f"- `{info['date']}` held {reason}")
+    for info in skipped:
+        n_drop = info.get("unrankable_n")
+        lines.append(f"- `{info['date']}` skipped no rankable names dropped={n_drop}")
+    if not held and not skipped:
+        lines.append("- (none)")
+    lines += ["", "## Dropped names", ""]
+    for info in classed:
         lines.append(
-            f"- `{info['date']}` {reason} missing: {missing}; "
-            f"cross-check gaps: {n_gaps}{share_txt}"
+            f"- `{info['date']}` dropped {info.get('unrankable_n') or 0}"
+            + (f" / {info.get('unrankable_share')}" if info.get("unrankable_share") is not None else "")
         )
     if raw_diff:
         lines += ["", "## raw.csv versus Yahoo raw", ""]
@@ -2060,7 +2073,8 @@ def write_report(classed: list[dict], scores: list[dict],
     lines += [
         "",
         "Prices: `data/factor_mine/retro_prices/ohlc.parquet` "
-        "(Yahoo `auto_adjust=False`, raw prints, locked, first bar wins). "
+        "(Yahoo `auto_adjust=False` split-adjusted bars, used as stored, "
+        "locked, first bar wins). "
         "Split and dividend factors: `data/factor_mine/retro_prices/actions.parquet` "
         "(dated, keep-first). Indicators apply only events with ex-date before D. "
         "The live `data/prices` tape was not rewritten.",
@@ -2120,12 +2134,11 @@ def _mark_candidates(date: str, provenance: dict, names: list[str]) -> tuple[lis
 
 def review_day(date: str, info: dict, dest: Path,
                history: dict | None = None) -> tuple[list[dict], dict]:
-    """Fill raw.csv holes, drop unrankable names, then cross-check Yahoo.
+    """Drop names Yahoo cannot rank. A price disagreement is a warning.
 
-    A name without the hot-score lookback is unrankable and is not scored.
-    The day is held when that share is above 10%, or when a Yahoo print
-    disagrees with the external open or close. A single_source fill has
-    no Yahoo print, so it is not a disagreement.
+    The remaining names are ranked and the day locks. Zero rankable
+    names skip the day. Finviz and Stooq never hold it. A raw.csv fill
+    is only a name Yahoo has no print for, and that name is single_source.
     """
     materialize(date, dest, history)
     with overlay_inputs(dest):
@@ -2139,57 +2152,59 @@ def review_day(date: str, info: dict, dest: Path,
         info["unrankable_n"] = len(bad)
         info["unrankable_share"] = provenance.get("unrankable_share")
         info["missing_prices"] = list(missing)
-        share_holds = (
-            info["label"] == "pit_rebuilt"
-            and unrankable_holds(len(bad), len(names))
-        )
-        rows: list[dict] = []
-        if share_holds:
-            gaps = []
-            tape = fmf.day_open_tape(date)
-            fmf.LAST_OPEN_SOURCE[str(date)[:10]] = tape
-        else:
-            if info["label"] == "pit_rebuilt":
-                dropped = set(bad)
-                rows = [
-                    row for row in _panel_rows(date)
-                    if row.get("ticker") not in dropped
-                    and not is_unrankable(row.get("ticker"), date)
-                ]
-            traded = list(fmf.paper_fills(date))
-            single = SINGLE_SOURCE.get(str(date)[:10], set())
-            check = sorted({
-                str(t).strip().upper()
-                for t in list(good) + traded + [r.get("ticker") for r in rows]
-                if t and str(t).strip().upper() not in single
+        info["dropped"] = []
+        for ticker in bad:
+            info["dropped"].append(drop_record(ticker, date) or {
+                "ticker": ticker,
+                "missing": ["unrankable"],
+                "reason": "unrankable",
             })
-            # No Stooq sweep. 2026-08-27 has no raw export; a missing
-            # reference is recorded and does not hold the day.
-            gaps = fmf.session_cross_check(date, check, fetch_stooq=False)
+        rows: list[dict] = []
+        if info["label"] == "pit_rebuilt":
+            dropped = set(bad)
+            rows = [
+                row for row in _panel_rows(date)
+                if row.get("ticker") not in dropped
+                and not is_unrankable(row.get("ticker"), date)
+            ]
+        traded = list(fmf.paper_fills(date))
+        single = SINGLE_SOURCE.get(str(date)[:10], set())
+        check = sorted({
+            str(t).strip().upper()
+            for t in list(good) + traded + [r.get("ticker") for r in rows]
+            if t and str(t).strip().upper() not in single
+        })
+        # Comparison only. A missing reference or a disagreement does not
+        # hold the day, and Stooq is not fetched to fill a bar.
+        gaps = fmf.session_cross_check(date, check, fetch_stooq=False)
         decision = fmf.LAST_OPEN_SOURCE.get(str(date)[:10])
         if decision:
             fmf.write_open_source_row(date, decision)
     disagreements = [gap for gap in gaps if not gap.get("missing")]
-    if share_holds or disagreements:
-        info["label"] = "held"
-        info["cross_check_n"] = len(disagreements)
-        info["cross_check"] = list(disagreements[:12])
-        if share_holds:
-            info["hold_reason"] = "unrankable share"
-        else:
-            info["hold_reason"] = "price cross-check"
+    info["cross_check_n"] = len(disagreements)
+    info["cross_check"] = list(disagreements[:12])
+    if disagreements:
         print(
-            f"[retro] hold {date} {info['hold_reason']} "
-            f"unrankable={len(bad)}/{len(names)} gaps={len(disagreements)}",
+            f"[retro] WARNING {date} price cross-check "
+            f"gaps={len(disagreements)} "
+            f"sample={disagreements[:4]}",
             flush=True,
         )
-        return [], provenance
     if info["label"] != "pit_rebuilt":
         print(f"[retro] carry {date}", flush=True)
         return [], provenance
+    if not good:
+        info["label"] = "skipped"
+        info["skip_reason"] = "no rankable names"
+        print(
+            f"[retro] skip {date} no rankable names "
+            f"dropped={len(bad)}/{len(names)}",
+            flush=True,
+        )
+        return [], provenance
     print(
         f"[retro] built {date} rows={len(rows)} "
-        f"unrankable={len(bad)}/{len(names)}",
+        f"dropped={len(bad)}/{len(names)}",
         flush=True,
     )
     return rows, provenance
@@ -2235,8 +2250,9 @@ def rebuild(*, fetch: bool = True) -> dict:
         landed = [d for d in SESSIONS if d <= date]
         day_panel = assemble_panel(landed)
         bars = _bars_for(day_panel, date)
-        if info["label"] == "held":
-            ledger = _held_ledger(date, info.get("hold_reason") or "held")
+        if info["label"] in ("held", "skipped"):
+            ledger = _held_ledger(date, info.get("skip_reason") or info.get("hold_reason") or info["label"])
+            ledger["label"] = info["label"]
         else:
             try:
                 ledger = fmf.build_ledger(

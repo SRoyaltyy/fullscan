@@ -398,24 +398,34 @@ def test_recover_fills_raw_csv_then_stooq_without_touching_live_prices() -> None
                 pd.DataFrame(), pd.DataFrame(),
             )
             retro._radar_raw_quotes = lambda date: {
-                "PACS": {"open": 12.0, "close": 13.0},
+                "PACS": {"open": 12.0, "close": 13.0, "prev_close": 9.0},
+                "NEW": {"open": 4.0, "high": 5.0, "low": 3.0, "close": 4.5, "volume": 8},
             }
+            retro.SINGLE_SOURCE.clear()
             stooq_calls: list[str] = []
 
             def no_stooq(ticker):
                 stooq_calls.append(ticker)
-                return ""
+                return (
+                    "Date,Open,High,Low,Close,Volume\n"
+                    "2026-09-22,1,2,0.5,1.5,10\n"
+                )
 
             fmf._fetch_stooq = no_stooq
-            assert retro.recover_session_bars("2026-09-22", ["PACS"]) == []
+            # PACS already has a Yahoo print, so raw.csv does not fill it.
+            assert retro.recover_session_bars("2026-09-22", ["PACS", "NEW"]) == ["PACS"]
             assert stooq_calls == []
             df = pd.read_parquet(retro.RETRO_STORE)
             df["date"] = pd.to_datetime(df["date"]).dt.strftime("%Y-%m-%d")
+            df["ticker"] = df["ticker"].astype(str)
             prior = df[(df["ticker"] == "PACS") & (df["date"] == "2026-09-21")]
             assert float(prior["close"].iloc[0]) == 10.0
-            filled = df[(df["ticker"] == "PACS") & (df["date"] == "2026-09-22")]
-            assert float(filled["open"].iloc[0]) == 12.0
-            assert float(filled["close"].iloc[0]) == 13.0
+            assert df[(df["ticker"] == "PACS") & (df["date"] == "2026-09-22")].empty
+            filled = df[(df["ticker"] == "NEW") & (df["date"] == "2026-09-22")]
+            assert float(filled["open"].iloc[0]) == 4.0
+            assert float(filled["close"].iloc[0]) == 4.5
+            assert "NEW" in retro.SINGLE_SOURCE.get("2026-09-22", set())
+            assert "PACS" not in retro.SINGLE_SOURCE.get("2026-09-22", set())
 
             retro._radar_raw_quotes = lambda date: {}
 
@@ -427,11 +437,11 @@ def test_recover_fills_raw_csv_then_stooq_without_touching_live_prices() -> None
                 )
 
             fmf._fetch_stooq = stooq
-            assert retro.recover_session_bars("2026-09-22", ["ZZZ"]) == []
-            assert stooq_calls == ["ZZZ"]
+            assert retro.recover_session_bars("2026-09-22", ["ZZZ"]) == ["ZZZ"]
+            assert stooq_calls == []
             df = pd.read_parquet(retro.RETRO_STORE)
             df["ticker"] = df["ticker"].astype(str)
-            assert "ZZZ" in set(df["ticker"])
+            assert "ZZZ" not in set(df["ticker"])
 
             def empty_stooq(ticker):
                 return ""
@@ -471,7 +481,7 @@ def test_late_raw_csv_is_not_a_session_fill() -> None:
             fmf._fetch_stooq = lambda ticker: (
                 "Date,Open,High,Low,Close,Volume\n2026-09-22,1,1,1,1,1\n"
             )
-            assert retro.recover_session_bars("2026-09-22", ["PACS"]) == []
+            assert retro.recover_session_bars("2026-09-22", ["PACS"]) == ["PACS"]
             assert calls["raw"] == 0
         finally:
             retro._download_raw = download
@@ -701,16 +711,23 @@ def test_review_excludes_unrankable_names_until_the_share_exceeds_ten_percent() 
     assert seen["fetch_stooq"] is False
 
     got, prov, info, seen = run(2, [])
-    assert info["label"] == "held"
-    assert info["hold_reason"] == "unrankable share"
+    assert info["label"] == "pit_rebuilt"
+    assert [row["ticker"] for row in got] == [f"N{i}" for i in range(2, 10)]
+    assert info.get("hold_reason") is None
+    assert len(info["dropped"]) == 2
+
+    got, prov, info, seen = run(10, [])
+    assert info["label"] == "skipped"
+    assert info["skip_reason"] == "no rankable names"
     assert got == []
 
     got, prov, info, seen = run(0, [{
         "ticker": "N3", "field": "close", "ours": 1.0, "ref": 3.0,
     }])
-    assert info["label"] == "held"
-    assert info["hold_reason"] == "price cross-check"
-    assert got == []
+    assert info["label"] == "pit_rebuilt"
+    assert info.get("hold_reason") is None
+    assert info["cross_check_n"] == 1
+    assert len(got) == 10
 
     got, prov, info, seen = run(0, [{
         "ticker": "N3", "missing": ["missing session close"],

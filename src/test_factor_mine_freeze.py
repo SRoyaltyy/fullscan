@@ -128,6 +128,7 @@ def test_guard_fails_when_an_earlier_hash_changes() -> None:
 
 
 def test_missing_bars_hold_the_day_and_do_not_write_hot_zero() -> None:
+    """Every candidate gapped means nobody is rankable, so the day is skipped."""
     with tempfile.TemporaryDirectory() as d:
         old = _use(Path(d))
         try:
@@ -135,17 +136,39 @@ def test_missing_bars_hold_the_day_and_do_not_write_hot_zero() -> None:
                     mock.patch.object(fmf, "_raw_bars", return_value=[]), \
                     mock.patch.object(tl, "_official_ohlc",
                                       return_value={"open": None, "close": None}):
+                gaps = fmf.ensure_candidate_bars("2026-09-25", ["BBB", "AAA"])
+            assert [g["ticker"] for g in gaps] == ["AAA", "BBB"]
+            assert all(g["reason"] for g in gaps)
+
+            def fake_attach(*_a, **_k):
+                raise AssertionError("a dropped name must not be scored")
+
+            with mock.patch.object(fm, "live_panel_end", return_value="2026-09-25"), \
+                    mock.patch.object(fm.sm, "load_payload", return_value={}), \
+                    mock.patch.object(fm.sm, "list_books", return_value=[]), \
+                    mock.patch.object(fm.sm, "session_calendar",
+                                      return_value=["2026-09-25"]), \
+                    mock.patch.object(fm.gc, "lookback_calendar",
+                                      side_effect=lambda c: list(c)), \
+                    mock.patch.object(fm, "_session_map",
+                                      return_value=({"2026-09-25": {"date": "2026-09-25"}}, [])), \
+                    mock.patch.object(fm.fla, "collect_mover_buys",
+                                      return_value={"by_date": {}}), \
+                    mock.patch.object(fm.fla, "flatten_day_targets",
+                                      return_value={"tickers": ["AAA", "BBB"]}), \
+                    mock.patch.object(fmf, "ranking_universe",
+                                      return_value=["AAA", "BBB"]), \
+                    mock.patch.object(fmf, "ensure_candidate_bars", return_value=gaps), \
+                    mock.patch.object(fm, "_candidates",
+                                      return_value={"flatten": ["AAA", "BBB"]}), \
+                    mock.patch.object(fm, "_attach_row", side_effect=fake_attach):
                 try:
-                    fmf.ensure_candidate_bars("2026-09-25", ["BBB", "AAA"])
-                    held = False
-                    err = None
-                except fmf.HoldDay as e:
-                    held = True
-                    err = e
-            assert held and err is not None
-            assert err.status == "held_incomplete"
-            assert err.missing == ["AAA", "BBB"]
-            assert {g["ticker"] for g in err.gaps} == {"AAA", "BBB"}
+                    fm.build_panel("2026-09-25", "2026-09-25", fail_closed=True)
+                    skipped = False
+                except fmf.SkipDay as e:
+                    skipped = True
+                    assert "no rankable" in e.reason
+            assert skipped
             assert not fmf.snapshot_path("2026-09-25").exists()
         finally:
             _restore(old)
@@ -178,19 +201,12 @@ def test_completeness_gate_lists_every_hole_and_refuses_adjusted_bars() -> None:
     with mock.patch("src.price_store.ensure_through", return_value=None), \
             mock.patch.object(fmf, "_raw_bars", side_effect=raw), \
             mock.patch.object(tl, "_official_ohlc", side_effect=official):
-        try:
-            fmf.ensure_candidate_bars("2026-09-25", ["AAA", "BBB", "CCC"])
-            held = False
-            err = None
-        except fmf.HoldDay as e:
-            held = True
-            err = e
-    assert held and err is not None
-    assert err.status == "held_incomplete"
-    by = {g["ticker"]: g["missing"] for g in err.gaps}
+        gaps = fmf.ensure_candidate_bars("2026-09-25", ["AAA", "BBB", "CCC"])
+    by = {g["ticker"]: g["missing"] for g in gaps}
     assert "AAA" not in by
     assert any(item.startswith("indicator bars") for item in by["BBB"])
     assert "missing 09:30 open" in by["CCC"]
+    assert "indicator bars" in next(g["reason"] for g in gaps if g["ticker"] == "BBB")
     from src import price_store as ps
     old = ps.AUTO_ADJUST
     ps.AUTO_ADJUST = True
@@ -211,6 +227,102 @@ def test_completeness_gate_lists_every_hole_and_refuses_adjusted_bars() -> None:
         assert snapped
     finally:
         ps.AUTO_ADJUST = old
+
+
+def test_one_gapped_name_is_dropped_and_the_rerun_matches() -> None:
+    """One hole drops that name and the day locks. A later fill stays dropped."""
+    names = ["AAA", "GAP"]
+    gap = {
+        "ticker": "GAP",
+        "missing": ["missing 09:30 open", "indicator bars 0/35"],
+        "reason": "missing 09:30 open; indicator bars 0/35",
+    }
+    ensures = {"n": 0}
+
+    def fake_ensure(date, tickers):
+        ensures["n"] += 1
+        assert "GAP" in tickers
+        return [dict(gap)]
+
+    def fake_attach(date, ticker, sources, src_rank, sess, prev, prior, df):
+        return {
+            "date": date, "ticker": ticker, "sources": sources,
+            "src_rank": src_rank, "open": 10.0, "close": 11.0,
+            "ohlc_hot_score": 1.5,
+        }
+
+    def boom(*_a, **_k):
+        raise RuntimeError("download down")
+
+    with mock.patch("src.price_store.ensure_through", side_effect=boom):
+        try:
+            fmf.ensure_candidate_bars("2026-09-25", ["AAA", "BBB"])
+            fetched = False
+        except fmf.HoldDay as e:
+            fetched = True
+            assert e.status == "held_incomplete"
+            assert "price fetch failed" in e.reason
+    assert fetched
+
+    with tempfile.TemporaryDirectory() as d:
+        old = _use(Path(d))
+        try:
+            with mock.patch.object(fm, "live_panel_end", return_value="2026-09-25"), \
+                    mock.patch.object(fm.sm, "load_payload", return_value={}), \
+                    mock.patch.object(fm.sm, "list_books", return_value=[]), \
+                    mock.patch.object(fm.sm, "session_calendar",
+                                      return_value=["2026-09-24", "2026-09-25"]), \
+                    mock.patch.object(fm.gc, "lookback_calendar",
+                                      side_effect=lambda c: list(c)), \
+                    mock.patch.object(fm, "_session_map",
+                                      return_value=({"2026-09-25": {"date": "2026-09-25"}}, [])), \
+                    mock.patch.object(fm.fla, "collect_mover_buys",
+                                      return_value={"by_date": {}}), \
+                    mock.patch.object(fm.fla, "flatten_day_targets",
+                                      return_value={"tickers": names}), \
+                    mock.patch.object(fmf, "ranking_universe", return_value=list(names)), \
+                    mock.patch.object(fmf, "ensure_candidate_bars", side_effect=fake_ensure), \
+                    mock.patch.object(fm, "_candidates",
+                                      return_value={"flatten": list(names)}), \
+                    mock.patch.object(fm, "_attach_row", side_effect=fake_attach), \
+                    mock.patch.object(fmf, "row_price_problem", return_value=None), \
+                    mock.patch.object(fmf, "heat_record", return_value={
+                        "vintage": "2026-09-24", "phase": "morning_overlay",
+                        "board_date": "2026-09-25", "source": None, "sha256": "abc",
+                    }), mock.patch.object(fmf, "code_sha", return_value="cafebabe"):
+                panel = fm.build_panel("2026-09-25", "2026-09-25", fail_closed=True)
+                snap = fmf.make_snapshot(
+                    "2026-09-25", panel["rows"], "2026-09-24", "pricesha",
+                    dropped=panel["dropped"],
+                )
+                digest = fmf.write_snapshot("2026-09-25", snap, restate=False)
+                locked = fmf.snapshot_path("2026-09-25").read_bytes()
+                assert fmf.sha256_bytes(locked) == digest
+                # Yahoo later fills GAP. The frozen list still drops it.
+                panel2 = fm.build_panel("2026-09-25", "2026-09-25", fail_closed=True)
+                snap2 = fmf.make_snapshot(
+                    "2026-09-25", panel2["rows"], "2026-09-24", "pricesha",
+                    dropped=panel2["dropped"],
+                )
+                try:
+                    fmf.write_snapshot("2026-09-25", snap2, restate=False)
+                    rewrote = True
+                except fmf.FrozenHistory:
+                    rewrote = False
+        finally:
+            _restore(old)
+    assert ensures["n"] == 1
+    assert [r["ticker"] for r in panel["rows"]] == ["AAA"]
+    assert panel["rows"][0]["ohlc_hot_score"] == 1.5
+    assert snap["n_dropped"] == 1
+    assert snap["dropped"][0]["ticker"] == "GAP"
+    assert "missing 09:30 open" in snap["dropped"][0]["reason"]
+    assert snap["auto_adjust"] is False
+    assert [r["ticker"] for r in panel2["rows"]] == ["AAA"]
+    assert snap2["dropped"] == snap["dropped"]
+    assert fmf.canonical_bytes(snap2) == locked
+    assert not rewrote
+    assert fmf.sha256_bytes(locked) == digest
 
 
 def test_build_panel_fetches_bars_before_candidates() -> None:
@@ -290,9 +402,10 @@ def test_build_panel_refuses_unresolved_hot_score() -> None:
         try:
             fm.build_panel("2026-09-25", "2026-09-25", fail_closed=True)
             refused = False
-        except fmf.HoldDay as e:
+        except fmf.SkipDay as e:
             refused = True
             assert "hot_score" in e.reason
+            assert "no rankable" in e.reason
     assert refused
 
 
@@ -1532,6 +1645,7 @@ if __name__ == "__main__":
     test_guard_fails_when_an_earlier_hash_changes()
     test_missing_bars_hold_the_day_and_do_not_write_hot_zero()
     test_completeness_gate_lists_every_hole_and_refuses_adjusted_bars()
+    test_one_gapped_name_is_dropped_and_the_rerun_matches()
     test_build_panel_fetches_bars_before_candidates()
     test_build_panel_refuses_unresolved_hot_score()
     test_morning_map_heat_is_not_replaced_by_postclose()

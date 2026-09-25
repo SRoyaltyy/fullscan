@@ -66,8 +66,9 @@ PRICE_CHECK = {
     "open": {"pct": 0.01, "abs": 0.02},
 }
 # A candidate missing the hot-score lookback (ohlc.INDICATOR_LOOKBACK
-# prior closes, or the session print) is unrankable and is not scored.
-# The day is held only when that share is strictly above this line.
+# prior closes, or the session print) is dropped and is not scored.
+# The day still locks. Zero rankable names skip the day. This constant
+# is not a hold.
 UNRANKABLE_MAX_SHARE = 0.10
 SNAPSHOT_OPEN_FROM = "2026-09-25"
 # scrape_ts exists on the slim snapshot and in manifest.json from this day.
@@ -139,6 +140,15 @@ class HoldDay(Exception):
 
 class FrozenHistory(Exception):
     """A frozen snapshot or ledger already exists and was not restated."""
+
+
+class SkipDay(Exception):
+    """No rankable names. Do not lock D."""
+
+    def __init__(self, date: str, reason: str):
+        self.date = str(date)
+        self.reason = reason
+        super().__init__(f"skip {self.date}: {reason}")
 
 
 def canonical_bytes(obj) -> bytes:
@@ -329,7 +339,11 @@ def ranking_universe(date: str, cal: list[str], plan: dict,
 
 
 def _raw_bars(ticker: str) -> list[dict]:
-    """Stored prints for one ticker, oldest first. Not split-adjusted."""
+    """Stored Yahoo prints for one ticker, oldest first.
+
+    ``auto_adjust=False`` bars are split-adjusted and are the tape we
+    lock. Dividend-adjusted bars (``auto_adjust=True``) are refused.
+    """
     from . import candle_factor as cf
 
     return list(cf._ticker_bars().get(str(ticker or "").strip().upper()) or [])
@@ -365,8 +379,14 @@ def completeness_gaps(ticker: str, date: str) -> list[str]:
     return gaps
 
 
-def ensure_candidate_bars(date: str, tickers: list[str]) -> None:
-    """Fetch raw bars for every candidate. Any hole holds D."""
+def ensure_candidate_bars(date: str, tickers: list[str]) -> list[dict]:
+    """Fetch Yahoo bars for every candidate.
+
+    A name with no print or too few earlier bars is dropped and
+    returned. Missing data does not hold the day. An empty universe
+    skips the day. A wholesale fetch failure and dividend-adjusted
+    bars still refuse to lock.
+    """
     from . import price_store as ps
 
     names = sorted({str(t).strip().upper() for t in tickers if t})
@@ -377,10 +397,7 @@ def ensure_candidate_bars(date: str, tickers: list[str]) -> None:
             gaps=[{"ticker": t, "missing": ["adjusted bars"]} for t in names],
         )
     if not names:
-        raise HoldDay(
-            date, [], "no candidates — refusing to freeze an empty day",
-            status="held_incomplete",
-        )
+        raise SkipDay(date, "no rankable names — skipping day")
     try:
         ps.ensure_through(date, tickers=names, strict=True)
     except (Exception, SystemExit) as e:
@@ -393,14 +410,12 @@ def ensure_candidate_bars(date: str, tickers: list[str]) -> None:
     for t in names:
         missing = completeness_gaps(t, date)
         if missing:
-            gaps.append({"ticker": t, "missing": missing})
-    if gaps:
-        raise HoldDay(
-            date, [g["ticker"] for g in gaps],
-            "held_incomplete — refusing to write hot_score 0",
-            status="held_incomplete",
-            gaps=gaps,
-        )
+            gaps.append({
+                "ticker": t,
+                "missing": missing,
+                "reason": "; ".join(missing),
+            })
+    return gaps
 
 
 def row_price_problem(ticker: str, date: str) -> str | None:
@@ -1583,9 +1598,32 @@ def apply_frozen_snapshots(panel: dict) -> dict:
     return out
 
 
+def frozen_dropped(date: str) -> list[dict] | None:
+    """Dropped names already locked on this day.
+
+    None when D has no snapshot yet. A present list, including an empty
+    one, is authoritative: a later Yahoo print does not put a name back.
+    """
+    snap = read_json(snapshot_path(date))
+    if not isinstance(snap, dict) or "dropped" not in snap:
+        return None
+    out = []
+    for gap in snap.get("dropped") or []:
+        if not isinstance(gap, dict) or not gap.get("ticker"):
+            continue
+        missing = list(gap.get("missing") or [])
+        out.append({
+            "ticker": gap.get("ticker"),
+            "missing": missing,
+            "reason": gap.get("reason") or "; ".join(str(m) for m in missing),
+        })
+    return out
+
+
 def make_snapshot(date: str, rows: list[dict], prior: str | None,
                   prices_sha: str | None,
-                  candidates: dict | None = None) -> dict:
+                  candidates: dict | None = None,
+                  dropped: list | None = None) -> dict:
     from . import price_store as ps
 
     if ps.AUTO_ADJUST:
@@ -1603,6 +1641,15 @@ def make_snapshot(date: str, rows: list[dict], prior: str | None,
     frozen_rows.sort(key=lambda r: (
         r.get("date") or "", int(r.get("src_rank") or 0), r.get("ticker") or "",
     ))
+    logged = []
+    for gap in dropped or []:
+        missing = list(gap.get("missing") or [])
+        logged.append({
+            "ticker": gap.get("ticker"),
+            "missing": missing,
+            "reason": gap.get("reason") or "; ".join(str(m) for m in missing),
+        })
+    logged.sort(key=lambda r: r.get("ticker") or "")
     snap = {
         "date": date,
         "asof": "09:30_et",
@@ -1613,6 +1660,8 @@ def make_snapshot(date: str, rows: list[dict], prior: str | None,
         "heat": heat,
         "prices_sha256": prices_sha,
         "n_rows": len(frozen_rows),
+        "n_dropped": len(logged),
+        "dropped": logged,
         "rows": frozen_rows,
     }
     if candidates is not None:
@@ -2349,6 +2398,9 @@ def append_land(from_date: str, target: str, *, write: bool = False,
             continue
         try:
             extra = fm.build_panel(date, date, fail_closed=True)
+        except SkipDay as e:
+            print(f"[factor-mine] {e}", flush=True)
+            continue
         except HoldDay as e:
             print(f"[factor-mine] {e}", flush=True)
             break
@@ -2374,7 +2426,10 @@ def append_land(from_date: str, target: str, *, write: bool = False,
             print(f"[factor-mine] {e}", flush=True)
             prices_sha = (load_manifest().get("prices") or {}).get(date, {}).get("sha256")
             pinned = read_json(price_path(date)) or pinned
-        snap = make_snapshot(date, rows, prior, prices_sha, candidates)
+        snap = make_snapshot(
+            date, rows, prior, prices_sha, candidates,
+            dropped=extra.get("dropped") or [],
+        )
         try:
             write_snapshot(date, snap, restate=date in restate_set)
         except FrozenHistory as e:
