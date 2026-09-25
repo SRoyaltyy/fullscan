@@ -1,6 +1,6 @@
 {
   "date": "2026-09-24",
-  "generated_at": "2026-09-24T13:55:09.879623-04:00",
+  "generated_at": "2026-09-24T20:31:43.253198-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -12,15 +12,15 @@
   "buy_1d": [
     {
       "ticker": "CVE",
-      "score": 0.1312394058340678
+      "score": 0.14280440583406778
     },
     {
       "ticker": "EOG",
-      "score": 0.4785963124550665
+      "score": 0.49016131245506656
     },
     {
       "ticker": "RRC",
-      "score": 0.7652202318912844
+      "score": 0.7767852318912845
     },
     {
       "ticker": "S",
@@ -1730,13 +1730,13 @@
       "date": "2026-09-24",
       "ok": true,
       "pushed": true,
-      "at": "2026-09-24T11:06:49.162191-04:00",
+      "at": "2026-09-24T13:56:25.761471-04:00",
       "files": [
         {
           "path": "data/day_board/today.json",
           "ok": true,
           "reason": "",
-          "size": 33347,
+          "size": 33349,
           "preview": "2026-09-24 BUY CVE, EOG, RRC, S, GCT, HITI, RPD \u00b7 SELL FLNC, AEHL, XIFR, ASPI, HSAI, TRIP, METC, NRG"
         },
         {
@@ -1750,70 +1750,70 @@
           "path": "data/day_board/2026-09-24.json",
           "ok": true,
           "reason": "",
-          "size": 145260,
+          "size": 145262,
           "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, selections, lands, href"
         },
         {
           "path": "data/day_board/2026-09-24_tickets.json",
           "ok": true,
           "reason": "",
-          "size": 107772,
+          "size": 107774,
           "preview": "2026-09-24 BUY CVE, EOG, RRC, S, GCT, HITI, RPD \u00b7 SELL FLNC, AEHL, XIFR, ASPI, HSAI, TRIP, METC, NRG"
         },
         {
           "path": "data/day_board/strategy_tickets.json",
           "ok": true,
           "reason": "",
-          "size": 3039674,
+          "size": 3081096,
           "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
         },
         {
           "path": "data/day_board/2026-09-24_strategy_tickets.json",
           "ok": true,
           "reason": "",
-          "size": 3039674,
+          "size": 3081096,
           "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
         },
         {
           "path": "data/day_board/today_strategies.json",
           "ok": true,
           "reason": "",
-          "size": 3442950,
+          "size": 3506613,
           "preview": "2026-09-24 BUY CVE, EOG, RRC, S, GCT, HITI, RPD \u00b7 SELL FLNC, AEHL, XIFR, ASPI, HSAI, TRIP, METC, NRG"
         },
         {
           "path": "data/factor_mine/strategy_tickets.json",
           "ok": true,
           "reason": "",
-          "size": 3039674,
+          "size": 3081096,
           "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
         },
         {
           "path": "dashboard/factor-mine/today.json",
           "ok": true,
           "reason": "",
-          "size": 107772,
+          "size": 107774,
           "preview": "2026-09-24 BUY CVE, EOG, RRC, S, GCT, HITI, RPD \u00b7 SELL FLNC, AEHL, XIFR, ASPI, HSAI, TRIP, METC, NRG"
         },
         {
           "path": "dashboard/factor-mine/strategy_tickets.json",
           "ok": true,
           "reason": "",
-          "size": 3039674,
+          "size": 3081096,
           "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
         },
         {
           "path": "dashboard/factor-mine/today_strategies.json",
           "ok": true,
           "reason": "",
-          "size": 3039674,
+          "size": 3081096,
           "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
         },
         {
           "path": "dashboard/today_strategies.json",
           "ok": true,
           "reason": "",
-          "size": 3442950,
+          "size": 3506613,
           "preview": "2026-09-24 BUY CVE, EOG, RRC, S, GCT, HITI, RPD \u00b7 SELL FLNC, AEHL, XIFR, ASPI, HSAI, TRIP, METC, NRG"
         },
         {
@@ -1832,6 +1832,31 @@
         }
       ],
       "preview": "2026-09-24 BUY CVE, EOG, RRC, S, GCT, HITI, RPD \u00b7 SELL FLNC, AEHL, XIFR, ASPI, HSAI, TRIP, METC, NRG \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, selections, lands, href \u00b7 2026-09-24 BUY CVE, EOG, RRC, S, GCT, HITI, RPD \u00b7 SELL FLNC, AEHL, XIFR, ASPI, HSAI, TRIP, METC, NRG \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-24 BUY CVE, EOG, RRC, S, GCT, HITI, RPD \u00b7 SELL FLNC, AEHL, XIFR, ASPI, HSAI, TRIP, METC, NRG \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-24 BUY CVE, EOG, RRC, S, GCT, HITI, RPD \u00b7 SELL FLNC, AEHL, XIFR, ASPI, HSAI, TRIP, METC, NRG \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2"
+    },
+    {
+      "key": "finviz_market_digest_close",
+      "title": "Finviz homepage market digest (close)",
+      "date": "2026-09-24",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-24T16:24:11.058825-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-09-24_finviz_market_digest_close.json",
+          "ok": true,
+          "reason": "",
+          "size": 6238,
+          "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for"
+        },
+        {
+          "path": "01_daily/news/2026-09-24_finviz_market_digest_close.md",
+          "ok": true,
+          "reason": "",
+          "size": 3208,
+          "preview": "# Finviz homepage market digest (close) \u2014 2026-09-24\n**Generated:** 2026-09-24T16:24:10.948576-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stocks ended mixed as global bond selloff pushed Treasury yields toward multi-decade highs and Brent crude held above $100 on Middle East tensions\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** Brent crude $100.0\n**CPI/Fed:** \u2014\n**Leaders:** ORCL, P, META, MCD, MGM, DRI, COST\n**Next session:** housing no \u00b7 retail no \u00b7 Fed no\n**Earnings slate:** \u2014\n**Geo/grain:** geo\n**Clock legal for:** 2026-09-25\n**Clock use:** `next_open`"
+        }
+      ],
+      "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest (close) \u2014 2026-09-24\n**Generated:** 2026-09-24T16:24:10.948576-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stocks ended mixed as global bond selloff pushed Treasury yields toward multi-decade highs and Brent crude held above $100 on Middle East tensions\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** Brent crude $100.0\n**CPI/Fed:** \u2014\n**Leaders:** ORCL, P, META, MCD, MGM, DRI, COST\n**Next session:** housing no \u00b7 retail no \u00b7 Fed no\n**Earnings slate:** \u2014\n**Geo/grain:** geo\n**Clock legal for:** 2026-09-25\n**Clock use:** `next_open`"
     }
   ],
   "source": "publish_live_boards"

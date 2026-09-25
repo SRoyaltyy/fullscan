@@ -1,6 +1,6 @@
 {
   "date": "2026-09-24",
-  "generated_at": "2026-09-24T16:24:11.881007-04:00",
+  "generated_at": "2026-09-24T20:32:02.758797-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -241,7 +241,7 @@
           "status": "OK",
           "reason": "",
           "size": 304512,
-          "said": "400 raw / 39 usable \u00b7 Kevin Warsh gets what every Fed chair hopes for: a bond market that trusts his w",
+          "said": "news_mode: none_stale \u00b7 400 raw / 39 usable \u00b7 Kevin Warsh gets what every Fed chair hopes for: a bond market that trusts his w",
           "bullets": [
             "Kevin Warsh gets what every Fed chair hopes for: a bond market that trusts his word",
             "Stocks Fall as Hawkish Warsh Boosts Fed Rate Hike Chances - Barchart.com",
@@ -346,7 +346,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 6974,
+          "size": 7135,
           "said": "1 up / 9 down / 0 flat",
           "bullets": [
             "XLB DOWN -2.9",
@@ -535,7 +535,7 @@
           ]
         }
       ],
-      "said": "general DOWN  -7.659 \u00b7 sectors 1 up / 9 down / 0 flat \u00b7 news 400 raw / 39 usable \u00b7 Kevin Warsh gets what every Fed chair hopes for: a bond market that trusts his w",
+      "said": "general DOWN  -7.659 \u00b7 sectors 1 up / 9 down / 0 flat \u00b7 news news_mode: none_stale \u00b7 400 raw / 39 usable \u00b7 Kevin Warsh gets what every Fed chair hopes for: a bond market that trusts his w",
       "bullets": [
         "bad: NQ -1.13% on yield backup",
         "bad: 10Y ~5.12% biting tech",
@@ -744,7 +744,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 6974,
+          "size": 7135,
           "said": "1 up / 9 down / 0 flat",
           "bullets": [
             "XLB DOWN -2.9",
@@ -859,7 +859,7 @@
           "role": "required",
           "status": "OK",
           "reason": "horizons=5 names=149",
-          "size": 1244198,
+          "size": 1244489,
           "said": "1d BUY CVE, EOG, RRC, S, GCT, HITI, RPD \u00b7 SELL FLNC, AEHL, XIFR, ASPI, HSAI, TRIP \u00b7 -0.6851",
           "bullets": []
         },
@@ -870,10 +870,10 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 52622,
+          "size": 52604,
           "said": "Stock book \u2014 2026-09-24",
           "bullets": [
-            "_Generated 2026-09-24T16:08:16.090843-04:00_",
+            "_Generated 2026-09-24T19:19:29.324241-04:00_",
             "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
           ]
         },
@@ -937,7 +937,7 @@
           "role": "input",
           "status": "OK",
           "reason": "horizons=5 names=149",
-          "size": 1244198,
+          "size": 1244489,
           "said": "1d BUY CVE, EOG, RRC, S, GCT, HITI, RPD \u00b7 SELL FLNC, AEHL, XIFR, ASPI, HSAI, TRIP \u00b7 -0.6851",
           "bullets": []
         },
@@ -982,19 +982,21 @@
       "bullets": []
     }
   ],
+  "news_mode": "none_stale",
+  "news_mode_reason": "0% of dated headlines are inside 36h of 2026-09-24 09:30 ET (need >=50%); median published 2026-08-28 is older than 2 trading days before 2026-09-24 (floor 2026-09-22)",
   "selections": {
     "buy_1d": [
       {
         "ticker": "CVE",
-        "score": 0.1312394058340678
+        "score": 0.14280440583406778
       },
       {
         "ticker": "EOG",
-        "score": 0.4785963124550665
+        "score": 0.49016131245506656
       },
       {
         "ticker": "RRC",
-        "score": 0.7652202318912844
+        "score": 0.7767852318912845
       },
       {
         "ticker": "S",
@@ -1091,7 +1093,7 @@
       ]
     },
     "news": {
-      "said": "400 raw / 39 usable \u00b7 Kevin Warsh gets what every Fed chair hopes for: a bond market that trusts his w",
+      "said": "news_mode: none_stale \u00b7 400 raw / 39 usable \u00b7 Kevin Warsh gets what every Fed chair hopes for: a bond market that trusts his w",
       "bullets": [
         "Kevin Warsh gets what every Fed chair hopes for: a bond market that trusts his word",
         "Stocks Fall as Hawkish Warsh Boosts Fed Rate Hike Chances - Barchart.com",
@@ -2850,6 +2852,115 @@
         }
       ],
       "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest (close) \u2014 2026-09-24\n**Generated:** 2026-09-24T16:24:10.948576-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stocks ended mixed as global bond selloff pushed Treasury yields toward multi-decade highs and Brent crude held above $100 on Middle East tensions\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** Brent crude $100.0\n**CPI/Fed:** \u2014\n**Leaders:** ORCL, P, META, MCD, MGM, DRI, COST\n**Next session:** housing no \u00b7 retail no \u00b7 Fed no\n**Earnings slate:** \u2014\n**Geo/grain:** geo\n**Clock legal for:** 2026-09-25\n**Clock use:** `next_open`"
+    },
+    {
+      "key": "live_boards",
+      "title": "live_boards",
+      "date": "2026-09-24",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-24T20:32:02.036546-04:00",
+      "files": [
+        {
+          "path": "data/day_board/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 33245,
+          "preview": "2026-09-24 BUY CVE, EOG, RRC, S, GCT, HITI, RPD \u00b7 SELL FLNC, AEHL, XIFR, ASPI, HSAI, TRIP, METC, NRG"
+        },
+        {
+          "path": "data/day_board/latest.json",
+          "ok": true,
+          "reason": "",
+          "size": 701,
+          "preview": "keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages"
+        },
+        {
+          "path": "data/day_board/2026-09-24.json",
+          "ok": true,
+          "reason": "",
+          "size": 148305,
+          "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href"
+        },
+        {
+          "path": "data/day_board/2026-09-24_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 110155,
+          "preview": "2026-09-24 BUY CVE, EOG, RRC, S, GCT, HITI, RPD \u00b7 SELL FLNC, AEHL, XIFR, ASPI, HSAI, TRIP, METC, NRG"
+        },
+        {
+          "path": "data/day_board/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 3172908,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "data/day_board/2026-09-24_strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 3172908,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "data/day_board/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 3615380,
+          "preview": "2026-09-24 BUY CVE, EOG, RRC, S, GCT, HITI, RPD \u00b7 SELL FLNC, AEHL, XIFR, ASPI, HSAI, TRIP, METC, NRG"
+        },
+        {
+          "path": "data/factor_mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 3172908,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 110155,
+          "preview": "2026-09-24 BUY CVE, EOG, RRC, S, GCT, HITI, RPD \u00b7 SELL FLNC, AEHL, XIFR, ASPI, HSAI, TRIP, METC, NRG"
+        },
+        {
+          "path": "dashboard/factor-mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 3172908,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 3172908,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 3615380,
+          "preview": "2026-09-24 BUY CVE, EOG, RRC, S, GCT, HITI, RPD \u00b7 SELL FLNC, AEHL, XIFR, ASPI, HSAI, TRIP, METC, NRG"
+        },
+        {
+          "path": "data/day_board/hold_live_px.json",
+          "ok": true,
+          "reason": "",
+          "size": 1870,
+          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
+        },
+        {
+          "path": "dashboard/factor-mine/hold_live_px.json",
+          "ok": true,
+          "reason": "",
+          "size": 1870,
+          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
+        }
+      ],
+      "preview": "2026-09-24 BUY CVE, EOG, RRC, S, GCT, HITI, RPD \u00b7 SELL FLNC, AEHL, XIFR, ASPI, HSAI, TRIP, METC, NRG \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href \u00b7 2026-09-24 BUY CVE, EOG, RRC, S, GCT, HITI, RPD \u00b7 SELL FLNC, AEHL, XIFR, ASPI, HSAI, TRIP, METC, NRG \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-24 BUY CVE, EOG, RRC, S, GCT, HITI, RPD \u00b7 SELL FLNC, AEHL, XIFR, ASPI, HSAI, TRIP, METC, NRG \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-24 BUY CVE, EOG, RRC, S, GCT, HITI, RPD \u00b7 SELL FLNC, AEHL, XIFR, ASPI, HSAI, TRIP, METC, NRG \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, cloc"
     }
   ],
   "href": {
