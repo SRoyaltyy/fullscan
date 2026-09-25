@@ -10,4 +10,4 @@ A job that would change picks, fills, or P&L on a locked day fails. The first ba
 
 See `03_scoreboard/FACTOR_MINE_DESIGNED_AFTER.md` for the split totals.
 
-`data/day_board/<date>_strategy_tickets.json` stays the send-time file. After that session's 09:30 ET, a different body does not replace it.
+`data/day_board/<date>_strategy_tickets.json` stays the send-time file. Once `data/paper_open/<date>_submit.json` exists, or after that session's 09:30 ET, a different body fails the job. The evening body is written to the undated copies and `<date>_strategy_tickets_draft.json`.
