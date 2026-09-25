@@ -89406,7 +89406,7 @@
           "action": "buy",
           "rule": "blue",
           "src": "book",
-          "book_score": 0.7652202318912844,
+          "book_score": 0.7767852318912845,
           "marks": {
             "blue": true,
             "alarm": false,
@@ -89494,7 +89494,7 @@
           "action": "buy",
           "rule": "blue",
           "src": "book",
-          "book_score": 0.4785963124550665,
+          "book_score": 0.4901613124550665,
           "marks": {
             "blue": true,
             "alarm": false,
@@ -89582,7 +89582,7 @@
           "action": "buy",
           "rule": "blue",
           "src": "book",
-          "book_score": 0.1312394058340678,
+          "book_score": 0.1428044058340677,
           "marks": {
             "blue": true,
             "alarm": false,
@@ -90022,7 +90022,7 @@
           "action": "buy",
           "rule": "blue",
           "src": "extra",
-          "book_score": 0.5991045750631323,
+          "book_score": 0.6106695750631324,
           "marks": {
             "blue": true,
             "alarm": false,
