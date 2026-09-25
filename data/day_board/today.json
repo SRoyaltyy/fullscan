@@ -1,6 +1,6 @@
 {
   "date": "2026-09-25",
-  "generated_at": "2026-09-25T04:20:15.949620-04:00",
+  "generated_at": "2026-09-25T04:20:36.804056-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -185,6 +185,31 @@
         }
       ],
       "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-09-25\nExport `finviz_2026-09-24.csv` \u00b7 11616 names \u00b7 generated 2026-09-25T04:20:15.712152-04:00"
+    },
+    {
+      "key": "map_heat",
+      "title": "Map heat morning overlay",
+      "date": "2026-09-25",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-25T04:20:36.618637-04:00",
+      "files": [
+        {
+          "path": "01_daily/map_heat/2026-09-25_map_heat.json",
+          "ok": true,
+          "reason": "",
+          "size": 269682,
+          "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape"
+        },
+        {
+          "path": "01_daily/map_heat/2026-09-25_map_heat.md",
+          "ok": true,
+          "reason": "",
+          "size": 17201,
+          "preview": "# MAP HEAT \u2014 2026-09-25\nExport `finviz_2026-09-25.csv` \u00b7 11616 names \u00b7 generated 2026-09-25T04:20:36.576875-04:00"
+        }
+      ],
+      "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-09-25\nExport `finviz_2026-09-25.csv` \u00b7 11616 names \u00b7 generated 2026-09-25T04:20:36.576875-04:00"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"

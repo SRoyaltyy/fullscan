@@ -1,8 +1,8 @@
 {
   "date": "2026-09-25",
-  "generated_at": "2026-09-25T04:20:15.712152-04:00",
+  "generated_at": "2026-09-25T04:20:36.576875-04:00",
   "phase": "morning_overlay",
-  "export": "finviz_2026-09-24.csv",
+  "export": "finviz_2026-09-25.csv",
   "n_tickers": 11616,
   "sectors": [
     {
@@ -8935,7 +8935,7 @@
   ],
   "ticker_news": [
     {
-      "time": "15 min",
+      "time": "16 min",
       "title": "SPCX Stock Climbs Premarket As Musk Teases 3 Nvidia Chip Waves  Google Books SpaceX Ride For Orbital AI Test",
       "url": "https://finance.yahoo.com/technology/ai/articles/spcx-stock-climbs-premarket-musk-080410561.html",
       "source": "Stocktwits",
@@ -9213,8 +9213,8 @@
       "tickers": [
         "AMZN",
         "MSFT",
-        "GOOGL",
         "ORCL",
+        "GOOGL",
         "GOOG"
       ]
     },
@@ -9258,8 +9258,8 @@
         "AMZN",
         "META",
         "MSFT",
-        "GOOGL",
-        "ORCL"
+        "ORCL",
+        "GOOGL"
       ]
     },
     {
@@ -9345,8 +9345,8 @@
       "url": "https://www.barrons.com/articles/from-the-buffett-of-bonds-advice-for-tumultuous-times-50ac83e7?mod=bar_FV",
       "source": "Barrons.com",
       "tickers": [
-        "BRK-B",
-        "ORCL"
+        "ORCL",
+        "BRK-B"
       ]
     },
     {
@@ -10541,5 +10541,5 @@
   "calendar_window_days": 16,
   "econ_window_count": 159,
   "earnings_window_count": 42,
-  "overlay_at": "2026-09-25T04:20:15.712152-04:00"
+  "overlay_at": "2026-09-25T04:20:36.576875-04:00"
 }
