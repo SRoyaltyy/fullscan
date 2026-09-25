@@ -70,9 +70,14 @@ PRICE_CHECK = {
 }
 # A candidate missing the hot-score lookback (ohlc.INDICATOR_LOOKBACK
 # prior closes, or the session print) is dropped and is not scored.
-# The day still locks. A name with no Yahoo session bar is dropped the
-# same way and listed as ``dropped_missing_bars``. The lock is refused
-# only when the universe is empty or Yahoo has no bar for every name.
+# The day still locks. A name with no Yahoo session bar is removed only
+# from the pool a rule can newly pick from, and listed as
+# ``dropped_missing_bars``. It stays in the 09:30 row set so that slot
+# is not given to the next name. A pick already made at 09:30, or a
+# position carried from the prior day, is not removed: it is marked at
+# its last price, listed as ``unpriced_held``, and sold on the first
+# later session that has a real bar. The lock is refused only when the
+# universe is empty or Yahoo has no bar for every name.
 UNRANKABLE_MAX_SHARE = 0.10
 MISSING_YAHOO_BARS = "missing yahoo bars"
 SNAPSHOT_OPEN_FROM = "2026-09-25"
@@ -416,6 +421,140 @@ def _dropped_missing_tickers(gaps: list | None) -> list[str]:
         out.append(tick)
     out.sort()
     return out
+
+
+def _tickers_from_pos(pos) -> set[str]:
+    out: set[str] = set()
+    if not isinstance(pos, dict):
+        return out
+    for key, lot in pos.items():
+        tick = str(key or "").strip().upper()
+        if not tick:
+            continue
+        shares = 0
+        if isinstance(lot, dict):
+            try:
+                shares = int(float(lot.get("shares") or 0))
+            except (TypeError, ValueError):
+                shares = 0
+        if shares > 0:
+            out.add(tick)
+    return out
+
+
+def _positions_before(folder: Path, date: str) -> set[str]:
+    """Holdings in the latest state file strictly before ``date``."""
+    if not folder.is_dir():
+        return set()
+    day = str(date or "")[:10]
+    found: list[tuple[str, Path]] = []
+    for path in folder.glob("*.json"):
+        stamp = path.name[:10]
+        if len(stamp) == 10 and stamp < day:
+            found.append((stamp, path))
+    if not found:
+        return set()
+    doc = read_json(max(found)[1]) or {}
+    if not isinstance(doc, dict):
+        return set()
+    pos = _tickers_from_pos((doc.get("state") or {}).get("pos"))
+    if pos:
+        return pos
+    out: set[str] = set()
+    for raw in doc.get("holdings") or []:
+        tick = str(raw or "").strip().upper()
+        if tick:
+            out.add(tick)
+    return out
+
+
+def carried_tickers(date: str) -> set[str]:
+    """Names held at the prior lock: ledger, HOT4, holdup, and OOS rules."""
+    out: set[str] = set()
+    led = latest_ledger_before(date)
+    for block in ((led or {}).get("recipes") or {}).values():
+        if not isinstance(block, dict):
+            continue
+        state = ((block.get("primary") or {}).get("state") or {})
+        out |= _tickers_from_pos(state.get("pos"))
+    from . import factor_mine_sequential as seq
+
+    for name in (seq.HOT4_RECIPE, "union_hot_n4_holdup"):
+        out |= _positions_before(Path(seq.STATE_DIR) / name, date)
+    from . import factor_mine_oos0914 as oos
+
+    root = Path(oos.STATE_ROOT)
+    if root.is_dir():
+        for folder in root.iterdir():
+            if folder.is_dir():
+                out |= _positions_before(folder, date)
+    return out
+
+
+def _names_from_ticket_rows(rows) -> set[str]:
+    out: set[str] = set()
+    for row in rows or []:
+        if isinstance(row, str):
+            tick = row.strip().upper()
+        elif isinstance(row, dict):
+            tick = str(row.get("ticker") or "").strip().upper()
+        else:
+            continue
+        if tick:
+            out.add(tick)
+    return out
+
+
+def morning_pick_tickers(date: str) -> set[str]:
+    """Buys already chosen at 09:30: send inputs and the locked ticket file."""
+    day = str(date or "")[:10]
+    out: set[str] = set()
+    from . import factor_mine_send_inputs as fsi
+
+    if fsi.applies(day):
+        doc = fsi.load(day) or {}
+        for picks in (doc.get("picks") or {}).values():
+            out |= _names_from_ticket_rows(picks)
+    paths = [
+        ROOT / "data" / "day_board" / f"{day}_strategy_tickets.json",
+        ROOT / "data" / "factor_mine" / "strategy_tickets.json",
+    ]
+    for path in paths:
+        doc = read_json(path)
+        if not isinstance(doc, dict):
+            continue
+        if str(doc.get("date") or "")[:10] != day:
+            continue
+        for rec in (doc.get("strategies") or {}).values():
+            if isinstance(rec, dict):
+                out |= _names_from_ticket_rows(rec.get("buy"))
+    return out
+
+
+def unpriced_held_tickers(date: str, gaps: list | None, *,
+                          held: set[str] | None = None,
+                          picked: set[str] | None = None) -> list[str]:
+    """Picked or carried names that have no Yahoo bar on ``date``.
+
+    Pass ``held`` or ``picked`` to test the intersection without reading
+    the live books. Otherwise the prior lock and the 09:30 tickets are
+    the protected set. A name outside the gap list counts only when the
+    store already has history for it and that history has no session bar.
+    """
+    missing = set(_dropped_missing_tickers(gaps))
+    if held is None and picked is None:
+        protected = carried_tickers(date) | morning_pick_tickers(date)
+        extra = []
+        for tick in sorted(protected):
+            if tick in missing:
+                continue
+            if _raw_bars(tick) and yahoo_session_missing(tick, date):
+                extra.append(tick)
+        missing.update(extra)
+    else:
+        protected = {str(t).strip().upper() for t in (held or set()) if t}
+        protected |= {str(t).strip().upper() for t in (picked or set()) if t}
+    return sorted(t for t in protected if t in missing)
 
 
 def ensure_candidate_bars(date: str, tickers: list[str]) -> list[dict]:
@@ -1762,6 +1901,9 @@ def _write_frozen(path: Path, obj: dict, slot: str, date: str, *,
         if "dropped_missing_bars" in obj:
             man[slot][date]["dropped_missing_bars"] = list(
                 obj.get("dropped_missing_bars") or [])
+        if "unpriced_held" in obj:
+            man[slot][date]["unpriced_held"] = list(
+                obj.get("unpriced_held") or [])
     save_manifest(man)
     print(f"[factor-mine] froze {slot} {date} sha={digest[:12]}", flush=True)
     return digest
@@ -1870,7 +2012,8 @@ def frozen_dropped(date: str) -> list[dict] | None:
 def make_snapshot(date: str, rows: list[dict], prior: str | None,
                   prices_sha: str | None,
                   candidates: dict | None = None,
-                  dropped: list | None = None) -> dict:
+                  dropped: list | None = None,
+                  unpriced_held: list | None = None) -> dict:
     from . import price_store as ps
 
     if ps.AUTO_ADJUST:
@@ -1910,6 +2053,9 @@ def make_snapshot(date: str, rows: list[dict], prior: str | None,
         "n_dropped": len(logged),
         "dropped": logged,
         "dropped_missing_bars": _dropped_missing_tickers(logged),
+        "unpriced_held": sorted({
+            str(t).strip().upper() for t in (unpriced_held or []) if t
+        }),
         "rows": frozen_rows,
     }
     if candidates is not None:
@@ -2717,9 +2863,11 @@ def append_land(from_date: str, target: str, *, write: bool = False,
             print(f"[factor-mine] {e}", flush=True)
             prices_sha = (load_manifest().get("prices") or {}).get(date, {}).get("sha256")
             pinned = read_json(price_path(date)) or pinned
+        dropped = list(extra.get("dropped") or [])
         snap = make_snapshot(
             date, rows, prior, prices_sha, candidates,
-            dropped=extra.get("dropped") or [],
+            dropped=dropped,
+            unpriced_held=unpriced_held_tickers(date, dropped),
         )
         try:
             write_snapshot(date, snap, restate=date in restate_set)

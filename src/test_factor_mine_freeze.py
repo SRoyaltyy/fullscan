@@ -1817,11 +1817,14 @@ def test_missing_yahoo_bars_drop_and_the_day_locks() -> None:
         return None
 
     def fake_attach(date, ticker, sources, src_rank, sess, prev, prior, df):
-        assert ticker == "AAA"
+        missing = ticker in dropped
         return {
             "date": date, "ticker": ticker, "sources": list(sources),
-            "src_rank": src_rank, "open": 10.0, "close": 10.5,
-            "ohlc_hot_score": 1.5, "boxes": {}, "alarm": False,
+            "src_rank": src_rank,
+            "open": None if missing else 10.0,
+            "close": None if missing else 10.5,
+            "ohlc_hot_score": 9.0 if missing else 1.5,
+            "boxes": {}, "alarm": False,
         }
 
     def fake_ledger(panel, payload, recipes, date, bars, fees=None, regime=None):
@@ -1995,6 +1998,7 @@ def test_missing_yahoo_bars_drop_and_the_day_locks() -> None:
             assert fmf.sha256_bytes(fmf.snapshot_path(day).read_bytes()) == digest
             assert man["snapshots"][day]["sha256"] == digest
             assert man["snapshots"][day]["dropped_missing_bars"] == dropped
+            assert man["snapshots"][day]["unpriced_held"] == []
             assert man["ledgers"][day]["sha256"] == fmf.sha256_bytes(ledger_bytes)
             return {
                 "snap": locked,
@@ -2023,16 +2027,157 @@ def test_missing_yahoo_bars_drop_and_the_day_locks() -> None:
     assert clean["seen"]["dates"] == planted["seen"]["dates"]
     assert future not in clean["seen"]["dates"]
     assert "FUTUREONLY" not in planted["seen"]["tickers"]
-    assert dropped[0] not in planted["seen"]["tickers"]
-    assert dropped[1] not in planted["seen"]["tickers"]
+    # Missing bars stay in the ranking rows. They are not a new buy, and
+    # they are not held, so the snapshot does not mark them unpriced.
+    assert dropped[0] in planted["seen"]["tickers"]
+    assert dropped[1] in planted["seen"]["tickers"]
     doc = clean["snap_doc"]
     assert doc["dropped_missing_bars"] == dropped
-    assert [row["ticker"] for row in doc["rows"]] == ["AAA"]
+    assert doc["unpriced_held"] == []
+    assert [row["ticker"] for row in doc["rows"]] == ["AAA", *dropped]
     assert doc["rows"][0]["ohlc_hot_score"] == 1.5
+    assert doc["rows"][0]["open"] == 10.0
+    flagged = [row for row in doc["rows"] if row.get("missing_yahoo_bar")]
+    assert [row["ticker"] for row in flagged] == dropped
+    assert all(row.get("open") is None for row in flagged)
     assert [gap["ticker"] for gap in doc["dropped"]
             if fmf.MISSING_YAHOO_BARS in (gap.get("missing") or [])] == dropped
     assert "KEEP" in clean["seen"]["tickers"]
     assert "AAA" in clean["seen"]["tickers"]
+
+
+def test_unpriced_held_keeps_its_slot_and_exits_on_the_first_bar() -> None:
+    """A missing bar does not promote the next name.
+
+    A carried position stays at its last price, is flagged on the
+    snapshot, and sells at the first later open. A name that only sat
+    in the pick pool is not bought and does not hand its slot over.
+    """
+    from src import factor_mine_book as fmb
+
+    gap_day = "2026-09-25"
+    exit_day = "2026-09-28"
+    dates = [gap_day, exit_day]
+
+    def row(date, ticker, hot, *, missing=False, open_px=None, close_px=None):
+        return {
+            "date": date,
+            "ticker": ticker,
+            "sources": ["union"],
+            "src_rank": 0 if ticker == "MISS" else 1,
+            "boxes": {},
+            "alarm": False,
+            "ohlc_hot_score": hot,
+            "open": open_px,
+            "close": close_px,
+            "missing_yahoo_bar": missing,
+        }
+
+    rows = [
+        row(gap_day, "MISS", 9.0, missing=True),
+        row(gap_day, "NEXT", 1.0, open_px=4.0, close_px=4.2),
+        row(exit_day, "MISS", 9.0, open_px=9.25, close_px=9.4),
+        row(exit_day, "NEXT", 1.0, open_px=4.1, close_px=4.3),
+    ]
+    by = {}
+    for item in rows:
+        by.setdefault(item["date"], []).append(item)
+    panel = {
+        "session_dates": dates,
+        "rows": rows,
+        "by_date": by,
+        "from_date": dates[0],
+        "to_date": dates[-1],
+    }
+    bars = {
+        ("NEXT", gap_day): {"open": 4.0, "close": 4.2},
+        ("NEXT", exit_day): {"open": 4.1, "close": 4.3},
+        ("MISS", exit_day): {"open": 9.25, "close": 9.4},
+    }
+    rec = fm.make_recipe(
+        "union_hot_n1", hold=1, top_n=1, rank="hot_score", sell="list",
+    )
+    regime = {d: {"predict_score": 0.0} for d in dates}
+    resume = {
+        "cash": 8000.0,
+        "yday_equity": 10000.0,
+        "after": "2026-09-24",
+        "pos": {
+            "MISS": {
+                "ticker": "MISS",
+                "shares": 10,
+                "entry_px": 8.0,
+                "entry_date": "2026-09-24",
+                "cost": 80.0,
+                "fee_in": 0.0,
+                "notional": 80.0,
+                "last_px": 8.5,
+                "peak_px": 8.5,
+                "close_px": 8.5,
+                "min_hold": 5,
+            },
+        },
+    }
+    gaps = [{
+        "ticker": "MISS",
+        "missing": [fmf.MISSING_YAHOO_BARS],
+        "reason": fmf.MISSING_YAHOO_BARS,
+    }]
+    assert fmf.unpriced_held_tickers(
+        gap_day, gaps, held={"MISS"}, picked=set(),
+    ) == ["MISS"]
+    assert fmf.unpriced_held_tickers(
+        gap_day, gaps, held=set(), picked={"MISS"},
+    ) == ["MISS"]
+    assert fmf.unpriced_held_tickers(
+        gap_day, gaps, held=set(), picked={"NEXT"},
+    ) == []
+    snap = fmf.make_snapshot(
+        gap_day, by[gap_day], "2026-09-24", "prices",
+        dropped=gaps, unpriced_held=["MISS"],
+    )
+    assert snap["unpriced_held"] == ["MISS"]
+    assert snap["dropped_missing_bars"] == ["MISS"]
+    assert [item["ticker"] for item in snap["rows"]] == ["MISS", "NEXT"]
+
+    with mock.patch.object(fm, "session_has_closed", return_value=True), \
+            mock.patch.object(fm, "ensure_sim_fields", side_effect=lambda p, rec=None: p), \
+            mock.patch.object(fm, "flatten_plan", return_value={"route": "", "flatten_ok": False}):
+        held = fmb.simulate_book(
+            panel, rec, bars=bars, fees=fm.pt_fees(), regime=regime, resume=resume,
+        )
+        pool = fmb.simulate_book(
+            {
+                **panel,
+                "session_dates": [gap_day],
+                "to_date": gap_day,
+                "rows": by[gap_day],
+                "by_date": {gap_day: by[gap_day]},
+            },
+            rec, bars=bars, fees=fm.pt_fees(), regime=regime,
+        )
+
+    gap_buys = [t for t in held["trades"] if t["date"] == gap_day and t["side"] == "BUY"]
+    gap_sells = [t for t in held["trades"] if t["date"] == gap_day and t["side"] == "SELL"]
+    assert gap_buys == []
+    assert gap_sells == []
+    gap_daily = next(d for d in held["daily"] if d["date"] == gap_day)
+    assert gap_daily["bought"] == []
+    assert gap_daily["sold"] == []
+    assert gap_daily["held"] == ["MISS"]
+    # 10 shares stay marked at the last close, 8.50. Cash is untouched.
+    assert gap_daily["cash"] == 8000.0
+    assert gap_daily["equity"] == 8085.0
+    exit_sells = [t for t in held["trades"] if t["date"] == exit_day and t["side"] == "SELL"]
+    assert [t["ticker"] for t in exit_sells] == ["MISS"]
+    assert exit_sells[0]["price"] == 9.25
+    assert exit_sells[0]["fill_rule"] == "unpriced_exit"
+    assert "first bar" in exit_sells[0]["reason"]
+    assert "MISS" not in held["pos"]
+    assert all(t.get("ticker") != "NEXT" for t in held["trades"] if t.get("side") == "BUY")
+    pool_buys = [t for t in pool["trades"] if t.get("side") == "BUY"]
+    assert pool_buys == []
+    assert pool["pos"] == {}
 
 
 if __name__ == "__main__":
@@ -2044,6 +2189,7 @@ if __name__ == "__main__":
     test_missing_bars_hold_the_day_and_do_not_write_hot_zero()
     test_finviz_stooq_disagreement_does_not_hold_the_day()
     test_missing_yahoo_bars_drop_and_the_day_locks()
+    test_unpriced_held_keeps_its_slot_and_exits_on_the_first_bar()
     test_completeness_gate_lists_every_hole_and_refuses_adjusted_bars()
     test_one_gapped_name_is_dropped_and_the_rerun_matches()
     test_build_panel_fetches_bars_before_candidates()
