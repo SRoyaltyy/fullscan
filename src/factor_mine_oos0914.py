@@ -10,6 +10,7 @@ HOT4, holdup, flatten_robust, or the live factor-mine books.
 """
 from __future__ import annotations
 
+import hashlib
 import json
 import random
 from pathlib import Path
@@ -41,6 +42,10 @@ TRAIN_END = "2026-09-11"
 TEST_START = "2026-09-14"
 DESIGNED_AFTER = "2026-09-14"
 FLAT_RT = 0.0015
+KEEP_MIN_FIRES = 30
+KEEP_MIN_WIN_RATE = 0.55
+REAL_MONEY_MIN_SESSIONS = 20
+RULES_LINK = "[IRONCLAD_RULES.md](../IRONCLAD_RULES.md)"
 
 
 class FutureLeak(RuntimeError):
@@ -153,8 +158,7 @@ def snapshot_rows(doc: dict, date: str) -> list[dict]:
             continue
         item = dict(row)
         item["date"] = date
-        if "e_pol" not in item:
-            item["e_pol"] = False
+        item["e_pol"] = False
         rows.append(item)
     return rows
 
@@ -240,6 +244,93 @@ def _rate(value) -> str:
 
 def compound_return(records: list[dict]) -> float | None:
     return seq.compound(records)
+
+
+def trade_fires(records: list[dict] | None) -> int:
+    """Buys. A recipe with zero fires never traded."""
+    total = 0
+    for row in records or []:
+        total += len(row.get("buys") or [])
+    return total
+
+
+def is_untestable(records: list[dict] | None) -> bool:
+    return trade_fires(records) == 0
+
+
+def closed_win_rate(records: list[dict] | None) -> float | None:
+    """Share of closing fills whose after-fee P&L is strictly positive."""
+    pnls = []
+    for row in records or []:
+        for fill in row.get("fills") or []:
+            if str(fill.get("side") or "") not in ("SELL", "COVER"):
+                continue
+            if fill.get("pnl") is None:
+                continue
+            pnls.append(float(fill["pnl"]))
+    if not pnls:
+        return None
+    return round(sum(1 for pnl in pnls if pnl > 0) / len(pnls), 4)
+
+
+def asymmetric_payoff(records: list[dict] | None) -> float | None:
+    """Average winning close divided by the average losing close."""
+    wins: list[float] = []
+    losses: list[float] = []
+    for row in records or []:
+        for fill in row.get("fills") or []:
+            if str(fill.get("side") or "") not in ("SELL", "COVER"):
+                continue
+            if fill.get("pnl") is None:
+                continue
+            pnl = float(fill["pnl"])
+            if pnl > 0:
+                wins.append(pnl)
+            elif pnl < 0:
+                losses.append(pnl)
+    if not wins or not losses:
+        return None
+    return round(abs((sum(wins) / len(wins)) / (sum(losses) / len(losses))), 3)
+
+
+def keep_bar_met(records: list[dict] | None) -> bool:
+    """≥30 fires and a win rate above 55% after fees. Not the train filter."""
+    rate = closed_win_rate(records)
+    if rate is None:
+        return False
+    return trade_fires(records) >= KEEP_MIN_FIRES and rate > KEEP_MIN_WIN_RATE
+
+
+def real_money_allowed(*, locked_sessions: int, beats_random4: bool,
+                       beats_iwm: bool, without_best_beats: bool) -> bool:
+    """Research stays research until about 20 locked sessions clear both baselines."""
+    return (
+        int(locked_sessions) >= REAL_MONEY_MIN_SESSIONS
+        and bool(beats_random4)
+        and bool(beats_iwm)
+        and bool(without_best_beats)
+    )
+
+
+def ranked_pass_ids(rows: list[dict]) -> list[str]:
+    """Passers only. A recipe that never traded stays out of the ranking."""
+    passed = [
+        row for row in rows
+        if row.get("pass") and not row.get("untestable")
+    ]
+    passed.sort(key=lambda row: (
+        -(row.get("after_fees_return") or -1e9),
+        -(row.get("start_day_win_rate") or -1e9),
+        row.get("id") or "",
+    ))
+    return [str(row["id"]) for row in passed]
+
+
+def snapshot_input_sha(doc: dict) -> str:
+    """Hash of the frozen morning rows. A later arrival is a different hash."""
+    rows = (doc or {}).get("rows") or []
+    raw = json.dumps(rows, sort_keys=True, separators=(",", ":"), default=str)
+    return hashlib.sha256(raw.encode("utf-8")).hexdigest()
 
 
 def start_day_win_rate(records: list[dict]) -> float | None:
@@ -466,6 +557,11 @@ def mine() -> dict:
             "n_days": len(series),
             "final_equity": None if not series else series[-1].get("equity"),
         }
+        row["fires"] = trade_fires(series)
+        row["untestable"] = is_untestable(series)
+        row["win_rate"] = closed_win_rate(series)
+        row["asymmetric_payoff"] = asymmetric_payoff(series)
+        row["keep_bar"] = keep_bar_met(series)
         row["pass"] = _passes(row, random4["mean"], iwm["after_fees_return"])
         rows.append(row)
         print(
@@ -473,12 +569,7 @@ def mine() -> dict:
             f"without={without} pass={row['pass']}",
             flush=True,
         )
-    passed = [r for r in rows if r["pass"]]
-    passed.sort(key=lambda r: (
-        -(r["after_fees_return"] or -1e9),
-        -(r["start_day_win_rate"] or -1e9),
-        r["id"],
-    ))
+    passed_ids = ranked_pass_ids(rows)
     report = {
         "track": "OOS-0914",
         "cutoff": CUTOFF,
@@ -487,8 +578,8 @@ def mine() -> dict:
         "random4": random4,
         "iwm": iwm,
         "rows": rows,
-        "passed": [r["id"] for r in passed],
-        "freeze": [r["id"] for r in passed[:5]],
+        "passed": passed_ids,
+        "freeze": passed_ids[:5],
     }
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     TRAIN_REPORT.write_text(json.dumps(report, indent=2), encoding="utf-8")
@@ -617,21 +708,35 @@ def _ensure_iwm(dates: list[str], bars: dict, *, allow_test: bool) -> dict:
 
 
 def write_oos_ledger(date: str, doc: dict, path: Path | None = None) -> Path:
-    """One locked test day. #338 refuses a changed fill; bytes never change."""
+    """One locked test day. #338 refuses a changed fill; bytes never change.
+
+    The first write stores a sha256 beside the file. A later run re-checks
+    that fingerprint before it will accept the day.
+    """
     dest = Path(path or (LEDGER_DIR / f"{date}.json"))
     payload = dict(doc)
     payload["date"] = str(date)[:10]
     raw = fmr._canonical(payload)
+    digest = hashlib.sha256(raw).hexdigest()
+    side = dest.with_name(dest.name + ".sha256")
     if dest.is_file():
-        prior = json.loads(dest.read_text(encoding="utf-8"))
+        have = dest.read_bytes()
+        if side.is_file():
+            stamped = side.read_text(encoding="utf-8").strip()
+            if hashlib.sha256(have).hexdigest() != stamped:
+                raise fmr.AppendDrift(
+                    f"ledger fingerprint mismatch {date}"
+                )
+        prior = json.loads(have.decode("utf-8"))
         fmr.assert_ledger_append(prior, payload)
-        if dest.read_bytes() != raw:
+        if have != raw or (side.is_file() and side.read_text(encoding="utf-8").strip() != digest):
             raise fmr.AppendDrift(
                 f"ledger rewrite {date}: locked day bytes would change"
             )
         return dest
     dest.parent.mkdir(parents=True, exist_ok=True)
     dest.write_bytes(raw)
+    side.write_text(digest + "\n", encoding="utf-8")
     return dest
 
 
@@ -655,6 +760,7 @@ def _ledger_doc(date: str, recipes: list[dict], root: Path,
         "date": date,
         "asof": "16:00_et_lock",
         "dropped": list(snap.get("dropped") or []),
+        "input_sha256": snapshot_input_sha(snap),
         "recipes": slots,
     }
 
@@ -750,9 +856,28 @@ def _baselines(dates: list[str]) -> dict:
     return {"random4": both("random4"), "iwm": both("iwm")}
 
 
+def render_hold_scoreboard() -> str:
+    """The board while the candidate list is still open."""
+    return "\n".join([
+        "# Factor Mine OOS-0914",
+        "",
+        f"Rules for this mine: {RULES_LINK}.",
+        "",
+        "The candidate freeze is held. The draft list is in "
+        "`data/factor_mine/oos0914_preregister.json`. "
+        "No rule is frozen, and the test window is not scored.",
+        "",
+    ])
+
+
 def render_scoreboard(train: dict, test: dict | None) -> str:
     """Plain language first, then the tables."""
-    lines = ["# Factor Mine OOS-0914", ""]
+    lines = [
+        "# Factor Mine OOS-0914",
+        "",
+        f"Rules for this mine: {RULES_LINK}.",
+        "",
+    ]
     frozen = list((test or {}).get("rules") or [])
     if not frozen:
         lines.append(
@@ -798,13 +923,19 @@ def render_scoreboard(train: dict, test: dict | None) -> str:
     )
     lines += [
         "",
-        "| rule | after fees | start-day win rate | best stock | without best stock | pass |",
-        "| --- | ---: | ---: | --- | ---: | --- |",
+        "| rule | after fees | start-day win rate | fires | win rate | asymmetric | best stock | without best stock | pass |",
+        "| --- | ---: | ---: | ---: | ---: | ---: | --- | ---: | --- |",
     ]
     for row in train.get("rows") or []:
+        if row.get("untestable"):
+            continue
         lines.append(
             f"| `{row['id']}` | {_pct(row.get('after_fees_return'))} | "
-            f"{_rate(row.get('start_day_win_rate'))} | {row.get('best_stock') or ''} | "
+            f"{_rate(row.get('start_day_win_rate'))} | "
+            f"{row.get('fires') if row.get('fires') is not None else ''} | "
+            f"{_rate(row.get('win_rate'))} | "
+            f"{row.get('asymmetric_payoff') if row.get('asymmetric_payoff') is not None else ''} | "
+            f"{row.get('best_stock') or ''} | "
             f"{_pct(row.get('without_best_stock_return'))} | "
             f"{'yes' if row.get('pass') else 'no'} |"
         )
