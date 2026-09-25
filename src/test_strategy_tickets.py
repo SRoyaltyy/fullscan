@@ -4,6 +4,7 @@ Run: PYTHONPATH=. python3 -m src.test_strategy_tickets
 """
 from __future__ import annotations
 
+import json
 from pathlib import Path
 from unittest import mock
 
@@ -285,24 +286,35 @@ def test_evening_run_does_not_rewrite_dated_tickets(tmp_path=None) -> None:
         st.write(date, revised, now=datetime(2026, 9, 23, 9, 20, tzinfo=et))
         assert "GLND" in dated.read_text(encoding="utf-8")
         frozen = dated.read_bytes()
+        import contextlib
+        import io
         for clock in (
             datetime(2026, 9, 23, 9, 30, tzinfo=et),
             datetime(2026, 9, 23, 17, 5, tzinfo=et),
         ):
-            try:
+            buf = io.StringIO()
+            with contextlib.redirect_stdout(buf):
                 st.write(date, evening, now=clock)
-                raised = False
-            except st.DatedTicketsLocked as exc:
-                raised = True
-                assert "Job failed" in str(exc)
-            assert raised
+            log = buf.getvalue()
+            assert "WARN" in log
+            assert "Evening body is in" in log
+            assert "Job failed" not in log
             assert dated.read_bytes() == frozen
+            lock = st.write.last_lock or {}
+            assert lock.get("status") == "draft"
+            assert "09:30" in (lock.get("reason") or "")
         draft = tmp_path / "day" / f"{date}_strategy_tickets_draft.json"
         assert "FEAM" in draft.read_text(encoding="utf-8")
         live = (tmp_path / "day" / "strategy_tickets.json").read_text(encoding="utf-8")
         assert "FEAM" in live
         assert "INDP" not in dated.read_text(encoding="utf-8")
         assert "GLND" in dated.read_text(encoding="utf-8")
+        slim = json.loads((tmp_path / "day" / "today_strategies.json").read_text())
+        assert slim["ticket_lock"]["dated_unchanged"] is True
+        assert slim["ticket_lock"]["draft"].endswith("_strategy_tickets_draft.json")
+        st.write(date, revised, now=datetime(2026, 9, 23, 17, 5, tzinfo=et))
+        assert st.write.last_lock is None
+        assert dated.read_bytes() == frozen
         late = "2026-09-24"
         st.write(late, dict(evening, date=late), now=datetime(2026, 9, 24, 16, 0, tzinfo=et))
         assert (tmp_path / "day" / f"{late}_strategy_tickets.json").is_file()
@@ -344,17 +356,101 @@ def test_journal_locks_the_dated_file_before_the_open(tmp_path=None) -> None:
         journal = tmp_path / "data" / "paper_open" / f"{date}_submit.json"
         journal.parent.mkdir(parents=True, exist_ok=True)
         journal.write_text("{}", encoding="utf-8")
-        try:
-            st.write(date, rewrite, now=morning)
-            raised = False
-        except st.DatedTicketsLocked as exc:
-            raised = True
-            assert "journal" in str(exc)
-        assert raised
+        st.write(date, rewrite, now=morning)
         assert dated.read_bytes() == frozen
         assert "AMD" in dated.read_text(encoding="utf-8")
+        lock = st.write.last_lock or {}
+        assert lock.get("status") == "draft"
+        assert "journal" in (lock.get("reason") or "")
         draft = tmp_path / "day" / f"{date}_strategy_tickets_draft.json"
         assert "ZS" in draft.read_text(encoding="utf-8")
+
+
+def test_locked_overwrite_and_failed_draft_still_fail(tmp_path=None) -> None:
+    from datetime import datetime
+    from zoneinfo import ZoneInfo
+    import tempfile
+
+    if tmp_path is None:
+        tmp_path = Path(tempfile.mkdtemp())
+    et = ZoneInfo("America/New_York")
+    date = "2026-09-25"
+    morning = {
+        "date": date,
+        "decision_readiness": {"ready": True, "fingerprint": "abc"},
+        "strategies": {"union_hot_n4_h1": {
+            "date": date, "buy": [{"ticker": "AMD"}], "sell": [], "status": "ok",
+        }},
+    }
+    evening = {
+        "date": date,
+        "decision_readiness": {"ready": True, "fingerprint": "abc"},
+        "strategies": {"union_hot_n4_h1": {
+            "date": date, "buy": [{"ticker": "FEAM"}], "sell": [], "status": "ok",
+        }},
+    }
+    clock = datetime(2026, 9, 25, 16, 15, tzinfo=et)
+    with mock.patch.object(st, "DAY", tmp_path / "day"), \
+         mock.patch.object(st, "FM_DIR", tmp_path / "fm"), \
+         mock.patch.object(st, "DASH_FM", tmp_path / "dash"), \
+         mock.patch.object(st, "ROOT", tmp_path), \
+         mock.patch.object(st, "assert_session_look"), \
+         mock.patch("src.hard_red_sit_research.write_per_sleeve"):
+        st.write(date, morning, now=datetime(2026, 9, 25, 8, 30, tzinfo=et))
+        dated = tmp_path / "day" / f"{date}_strategy_tickets.json"
+        frozen = dated.read_bytes()
+        real = Path.write_text
+
+        def also_touch_dated(self, data, *args, **kwargs):
+            real(self, data, *args, **kwargs)
+            if self.name == f"{date}_strategy_tickets_draft.json":
+                real(dated, data, *args, **kwargs)
+
+        with mock.patch.object(Path, "write_text", also_touch_dated):
+            try:
+                st.write(date, evening, now=clock)
+            except st.DatedTicketsLocked as exc:
+                assert "modified" in str(exc)
+                assert "Job failed" in str(exc)
+            else:
+                raise AssertionError("overwrite of a locked dated file must fail")
+        dated.write_bytes(frozen)
+        leftover = tmp_path / "day" / f"{date}_strategy_tickets_draft.json"
+        if leftover.is_file():
+            leftover.unlink()
+
+        def skip_draft(self, data, *args, **kwargs):
+            if self.name == f"{date}_strategy_tickets_draft.json":
+                return 0
+            return real(self, data, *args, **kwargs)
+
+        with mock.patch.object(Path, "write_text", skip_draft):
+            try:
+                st.write(date, evening, now=clock)
+            except st.DatedTicketsLocked as exc:
+                assert "draft write failed" in str(exc)
+                assert "Job failed" in str(exc)
+            else:
+                raise AssertionError("a failed draft write must fail the job")
+        assert dated.read_bytes() == frozen
+
+
+def test_postclose_does_not_wait_on_ticket_publish() -> None:
+    """Post-close grades on its own clock. A ticket refusal must not gate it."""
+    root = Path(__file__).resolve().parent.parent
+    post = (root / ".github/workflows/postclose_all.yml").read_text(encoding="utf-8")
+    assert "Publish strategy tickets" not in post
+    assert "workflow_run:" not in post
+    factor = (root / ".github/workflows/factor_mine.yml").read_text(encoding="utf-8")
+    assert 'Post-Close ALL (grade + learn + next captains)' in factor
+    assert "Publish strategy tickets" not in factor
+    orch = (root / ".github/workflows/daily_orchestrator.yml").read_text(encoding="utf-8")
+    assert "maybe postclose_all.yml" in orch
+    assert "skip Post-Close ALL until 16:00 ET" in orch
+    tickets = (root / ".github/workflows/publish_strategy_tickets.yml").read_text(
+        encoding="utf-8")
+    assert 'python3 -m src.decision_ready --date "$DATE" --publish' in tickets
+    assert "python -m src.paper_open --submit --ready --owner actions" in tickets
 
 
 def test_ticket_restate_log_appends_one_line_per_restore(tmp_path=None) -> None:
@@ -392,6 +488,8 @@ def main() -> None:
     test_assert_open_lock_requires_webull_sit_names()
     test_evening_run_does_not_rewrite_dated_tickets()
     test_journal_locks_the_dated_file_before_the_open()
+    test_locked_overwrite_and_failed_draft_still_fail()
+    test_postclose_does_not_wait_on_ticket_publish()
     test_ticket_restate_log_appends_one_line_per_restore()
     from src.test_morning_scan import main as morning_scan_main
     morning_scan_main()

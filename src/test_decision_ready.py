@@ -130,6 +130,136 @@ def test_old_ready_artifact_cannot_hide_failed_rebuild(tmp_path):
             dr.publish(date)
 
 
+def _draft_publish_patches(tmp_path, publish_out):
+    from datetime import datetime
+    from zoneinfo import ZoneInfo
+    from . import stock_book, publish_live_boards
+
+    et = ZoneInfo('America/New_York')
+
+    class Clock(datetime):
+        @classmethod
+        def now(cls, tz=None):
+            base = datetime(2026, 9, 25, 16, 15, tzinfo=et)
+            return base if tz is not None else base.replace(tzinfo=None)
+
+    return (
+        patch.object(dr, 'ROOT', tmp_path),
+        patch.object(dr, 'datetime', Clock),
+        patch.object(dr, 'evaluate', return_value={'ready': True, 'fingerprint': 'abc'}),
+        patch.object(stock_book, 'build', return_value=(None, {})),
+        patch.object(stock_book, 'write_report'),
+        patch.object(publish_live_boards, 'publish', return_value=publish_out),
+        patch('src.book_suggestions.refresh_factor_live_poller'),
+    )
+
+
+def _enter_all(patches):
+    for item in patches:
+        item.start()
+
+    def stop():
+        for item in reversed(patches):
+            item.stop()
+    return stop
+
+
+def test_locked_draft_publication_is_complete(tmp_path):
+    import io
+    import contextlib
+    date = '2026-09-25'
+    evening = {
+        'decision_readiness': {
+            'ready': True,
+            'fingerprint': 'abc',
+            'completed_at': '2026-09-25T16:15:02-04:00',
+        },
+        'strategies': {'union_hot_n4_h1': {'status': 'ok'}},
+    }
+    morning = {
+        'decision_readiness': {
+            'ready': True,
+            'fingerprint': 'morning',
+            'completed_at': '2026-09-25T08:30:00-04:00',
+        },
+        'strategies': {'union_hot_n4_h1': {'status': 'ok'}},
+    }
+    board = tmp_path / 'data/day_board'
+    board.mkdir(parents=True)
+    dated = board / f'{date}_strategy_tickets.json'
+    draft = board / f'{date}_strategy_tickets_draft.json'
+    dated.write_text(json.dumps(morning))
+    draft.write_text(json.dumps(evening))
+    stop = _enter_all(_draft_publish_patches(tmp_path, {'ticket_lock': 'draft'}))
+    try:
+        buf = io.StringIO()
+        with contextlib.redirect_stdout(buf):
+            assert dr.publish(date) == 0
+        log = buf.getvalue()
+        assert 'Publication complete' in log
+        assert 'WARN' in log
+        assert json.loads(dated.read_text())['decision_readiness']['fingerprint'] == 'morning'
+    finally:
+        stop()
+
+
+def test_locked_draft_fails_when_dated_file_matches_or_draft_is_missing(tmp_path):
+    import pytest
+    date = '2026-09-25'
+    body = {
+        'decision_readiness': {
+            'ready': True,
+            'fingerprint': 'abc',
+            'completed_at': '2026-09-25T16:15:02-04:00',
+        },
+        'strategies': {'union_hot_n4_h1': {'status': 'ok'}},
+    }
+    board = tmp_path / 'data/day_board'
+    board.mkdir(parents=True)
+    dated = board / f'{date}_strategy_tickets.json'
+    draft = board / f'{date}_strategy_tickets_draft.json'
+    text = json.dumps(body)
+    dated.write_text(text)
+    draft.write_text(text)
+    stop = _enter_all(_draft_publish_patches(tmp_path, {'ticket_lock': 'draft'}))
+    try:
+        with pytest.raises(RuntimeError, match='modified'):
+            dr.publish(date)
+        draft.unlink()
+        with pytest.raises(RuntimeError, match='draft write failed'):
+            dr.publish(date)
+    finally:
+        stop()
+
+
+def test_strategy_error_still_refuses_success_on_the_draft_path(tmp_path):
+    import pytest
+    date = '2026-09-25'
+    evening = {
+        'decision_readiness': {
+            'ready': True,
+            'fingerprint': 'abc',
+            'completed_at': '2026-09-25T16:15:02-04:00',
+        },
+        'strategies': {'union_hot_n4_h1': {'status': 'ok'}},
+    }
+    board = tmp_path / 'data/day_board'
+    board.mkdir(parents=True)
+    (board / f'{date}_strategy_tickets.json').write_text(json.dumps({
+        'decision_readiness': {'ready': True, 'fingerprint': 'morning',
+                               'completed_at': '2026-09-25T08:30:00-04:00'},
+        'strategies': {'union_hot_n4_h1': {'status': 'ok'}},
+    }))
+    (board / f'{date}_strategy_tickets_draft.json').write_text(json.dumps(evening))
+    stop = _enter_all(_draft_publish_patches(
+        tmp_path, {'ticket_lock': 'draft', 'strategy_error': 'boom'}))
+    try:
+        with pytest.raises(RuntimeError, match='incomplete'):
+            dr.publish(date)
+    finally:
+        stop()
+
+
 def test_day_board_merge_never_treats_strategy_sidecar_as_a_board(tmp_path):
     from . import day_board as db
     ours = tmp_path/'ours'; ours.mkdir()
