@@ -117,3 +117,82 @@ None of the 13 were held or traded by these books on 09-24 or 09-25.
 
 OOS-0914 did not append 09-25. HOT4 and holdup have no 09-25 state file; their 09-25 result is the factor-mine ledger above. The false `unpriced_held` flag did not change their fills or their equity.
 
+## 2026-08-13 through 2026-09-24
+
+Annotation only. Locked days, ledgers, snapshots, pins, sequential state, OOS state, and fingerprints are unchanged. Yahoo bars for this section were downloaded in memory (`auto_adjust=False`) and were not written to `data/prices/ohlc.parquet`.
+
+Compared, for every session in that window:
+
+- Every carried open and every still-held close on the primary book, and on every start-date replay inside the ledger (the pre-freeze books, both `incomplete_pit` and `pit_rebuilt`).
+- Every position close and every fill in the sequential rebuild (`data/factor_mine/state`, #336), 10,170 state files.
+- Every open position in the four OOS-0914 books.
+
+A mark counts as the real bar when it equals the Yahoo open or close within half a cent, or when it is that print rounded to the cent. A fill counts when it is the open, the close, or a price inside that session's high-low (a stop on the same bar).
+
+No carried or held name was marked at a last-known price in place of a real Yahoo bar. Stale-price P&L is **$0.00 on every recipe**, on the primary book, on the start-date replays, and on the sequential rebuild.
+
+Sessions before 2026-08-31 have no overnight carry in the locked ledgers. HOT4 and holdup are flat at $10,000 from 08-13 through 08-27. Their first buys are the 08-28 open. Those fills are the Yahoo open.
+
+| date | ledger label | carried names | sleeves with a carry | stale names |
+| --- | --- | ---: | ---: | --- |
+| 2026-08-13 | incomplete_pit | 0 | 0 | none |
+| 2026-08-14 | incomplete_pit | 0 | 0 | none |
+| 2026-08-17 | incomplete_pit | 0 | 0 | none |
+| 2026-08-18 | incomplete_pit | 0 | 0 | none |
+| 2026-08-19 | incomplete_pit | 0 | 0 | none |
+| 2026-08-20 | incomplete_pit | 0 | 0 | none |
+| 2026-08-21 | incomplete_pit | 0 | 0 | none |
+| 2026-08-24 | pit_rebuilt | 0 | 0 | none |
+| 2026-08-25 | incomplete_pit | 0 | 0 | none |
+| 2026-08-26 | incomplete_pit | 0 | 0 | none |
+| 2026-08-27 | incomplete_pit | 0 | 0 | none |
+| 2026-08-28 | pit_rebuilt | 0 | 0 | none |
+| 2026-08-31 | pit_rebuilt | 87 | 305 | none |
+| 2026-09-01 | incomplete_pit | 83 | 221 | none |
+| 2026-09-02 | incomplete_pit | 83 | 199 | none |
+| 2026-09-03 | incomplete_pit | 44 | 49 | none |
+| 2026-09-04 | pit_rebuilt | 44 | 49 | none |
+| 2026-09-08 | incomplete_pit | 74 | 317 | none |
+| 2026-09-09 | incomplete_pit | 69 | 205 | none |
+| 2026-09-10 | pit_rebuilt | 69 | 202 | none |
+| 2026-09-11 | pit_rebuilt | 44 | 56 | none |
+| 2026-09-14 | pit_rebuilt | 106 | 301 | none |
+| 2026-09-15 | pit_rebuilt | 63 | 223 | none |
+| 2026-09-16 | pit_rebuilt | 61 | 188 | none |
+| 2026-09-17 | pit_rebuilt | 82 | 301 | none |
+| 2026-09-18 | pit_rebuilt | 118 | 298 | none |
+| 2026-09-21 | pit_rebuilt | 129 | 296 | none |
+| 2026-09-22 | pit_rebuilt | 152 | 292 | none |
+| 2026-09-23 | pit_rebuilt | 181 | 276 | none |
+| 2026-09-24 | pit_rebuilt | 183 | 289 | none |
+
+The local price store is missing a row for 32 carried ticker-sessions from 09-14 through 09-24 (the same fetch hole as 09-25: the name was held, and the store was not asked for that session). The locked mark on each of those names is the Yahoo print, so the book was not carrying yesterday's close. Replacing the mark with the Yahoo bar changes equity by $0.00.
+
+| date | held names with no row in `ohlc.parquet` | locked mark vs Yahoo |
+| --- | --- | --- |
+| 2026-09-14 | ABM, HPK, HQ, SLBT | equal |
+| 2026-09-15 | HPK, SLBT | equal |
+| 2026-09-16 | HPK, SLBT | equal |
+| 2026-09-17 | ARQQ, HQ | equal |
+| 2026-09-18 | ARQQ, HQ | equal |
+| 2026-09-21 | ARQQ, DCX, HQ | equal |
+| 2026-09-22 | ARQQ, DCX, HQ, PRAA | equal |
+| 2026-09-23 | AIBZ, ARQQ, DCX, FJET, HQ, PRAA, UPXI | equal |
+| 2026-09-24 | AIBZ, ARQQ, DCX, FJET, PRAA, UPXI | equal |
+
+## HOT4 and holdup through 2026-09-24
+
+These are the sequential books and the retro scores through 09-24 (HOT4 equity $12,499.09, holdup equity $15,219.62). They are not the scoreboard figures that include 09-25.
+
+| book | published return | equity | stale prices | stale dollars |
+| --- | --- | ---: | --- | ---: |
+| HOT4 `union_hot_n4_h1` | +24.99% | 12,499.09 | none | 0.00 |
+| HOT4 without GLND | −4.13% | 9,587.47 | none | 0.00 |
+| holdup `union_hot_n4_holdup` | +52.20% | 15,219.62 | none | 0.00 |
+
+HOT4 +24.99% does not rest on a stale price. Every carried mark and every fill from 08-28 through 09-24 matches a Yahoo bar. The dollar impact of repricing those marks is $0.00.
+
+The −4.13% figure is the retro score that drops GLND from the panel and walks the same window (63 trades, equity $9,587.47). GLND's locked HOT4 prices are the Yahoo prints: bought 2026-09-23 at 2.70, marked 2026-09-24 at an open of 3.22 and a close of 5.35. That published number does not rest on a stale GLND price. Stale-price contribution is $0.00.
+
+Holdup +52.20% does not rest on a stale price. Its carried marks and fills match Yahoo on every session. Stale-price contribution is $0.00.
+
