@@ -1,22 +1,14 @@
 {
   "date": "2026-09-24",
-  "generated_at": "2026-09-24T07:45:57.119215-04:00",
+  "generated_at": "2026-09-25T02:08:19.410309-04:00",
   "all_ok": false,
   "qc_all_ok": true,
   "book_ok": true,
   "grok_ok": false,
   "grok_fails": [
     {
-      "path": "01_daily/news/2026-09-24_parsed.json",
-      "reason": "News parse is a carry-forward of a stale 2026-08-27/08-28 news window: every usable item's published_at is Aug 27-28 (Warsh Jackson Hole cluster), not the 2026-09-24 session; the file is dated 09-24 but its content is a prior-date scan."
-    },
-    {
-      "path": "01_daily/news/2026-09-24_actions.json",
-      "reason": "Same stale-window defect: reasoned_events evidence (fed_rate_path, hormuz_energy_risk, ai_power_demand) all carry Aug 27-28 published_at timestamps and a 'weak_labor_print' book that does not match today's tape; not a same-day scan."
-    },
-    {
-      "path": "01_daily/map_heat/2026-09-24_map_heat.md",
-      "reason": "TAPE table is internally inconsistent with the rest of the packet and with itself: ES/NQ shown +0.20%/+0.41% while every sector card and the general predict use ES -0.64% / NQ -1.09%; VIX 18.4 vs 16.44/16.52 elsewhere; WTI 104.16 vs the live ~92.7 cited in energy. The futures tape is not a coherent same-session read."
+      "path": "(review)",
+      "reason": "empty_review_reply"
     }
   ],
   "missing_required": [],
@@ -191,7 +183,7 @@
         "ok": true,
         "reason": "",
         "path": "01_daily/news/2026-09-24_finviz_digest.json",
-        "size": 87599
+        "size": 86969
       },
       {
         "kind": "finviz_market_digest",
@@ -202,10 +194,10 @@
       },
       {
         "kind": "finviz_market_digest",
-        "ok": false,
-        "reason": "missing",
+        "ok": true,
+        "reason": "",
         "path": "01_daily/news/2026-09-24_finviz_market_digest_close.json",
-        "size": 0
+        "size": 6238
       },
       {
         "kind": "map_heat",
