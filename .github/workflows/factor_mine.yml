@@ -160,6 +160,7 @@ jobs:
           python -m src.test_factor_mine_freeze
           python -m src.test_factor_mine_rules
           python -m src.test_factor_mine_dash_pack
+          python -m src.test_factor_mine_gaps
           python -m src.test_price_actions
       - name: Mine recipes (cash book)
         env:

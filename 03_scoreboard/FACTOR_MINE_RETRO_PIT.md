@@ -212,6 +212,15 @@ Open cross-check uses theme-radar `{D}.raw.csv` Finviz Open (`finviz_raw`) when 
 | `union_hot_n4_h1` | futubull | without GLND | timing_clean | -1.339 | 15 |
 | `union_hot_n4_h1` | flat_15bp | without GLND | timing_clean | 2.086 | 15 |
 
+## Holdup without GLND on timing-clean days
+
+`union_hot_n4_holdup` with GLND dropped from the candidate rows, same method as HOT4. The book still runs every session. This window compounds only the 15 `pit_rebuilt` session percents. The calendar is not rebuilt. All-days without GLND stays futubull 15.832% and flat 15bp 18.574%.
+
+| recipe | fee | universe | window | return % | n |
+| --- | --- | --- | --- | ---: | ---: |
+| `union_hot_n4_holdup` | futubull | without GLND | timing_clean | 17.986 | 15 |
+| `union_hot_n4_holdup` | flat_15bp | without GLND | timing_clean | 20.456 | 15 |
+
 ## Split order fees
 
 The three split recipes were compounding each session against the original $10,000. A resumed split book stored yesterday's equity as $10,000, so the published session percent was the return from the start of the book. `combo_se_5050_split` showed futubull -53.389% next to flat 15bp -7.280%. The equity path was already the real book. That start ends at $9,144.59, which is -8.554%.

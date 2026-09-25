@@ -30,7 +30,7 @@ Send-time commit `18039b02cf` at 2026-09-22 08:30 ET. HOT4 status `ok`, S `-0.49
 
 Webull sent AMD, ABVX, and MRAM. GME was on the ticket and was not sent. The paper record says that name was already held from 09-21. No Webull ticker is in the rebuilt list. Rebuilt session return on the $10k book is 7.057% (equity $10,637.65).
 
-The dated file in the tree now says BUY MRAM, ZS, ASX, BLSH. That is the evening overwrite, not `18039b02cf`.
+The dated file in the tree is the send-time body from `18039b02cf` (BUY AMD, ABVX, MRAM, GME). The evening overwrite was restored and logged in `data/day_board/RESTATEMENTS.log`.
 
 ## 2026-09-23
 
@@ -53,7 +53,7 @@ Send-time commit `409c73e31a` at 2026-09-23 06:29 ET. HOT4 status `ok`, S `2.293
 
 Webull bought the four ticket names and did not sell. The paper record says SECZ, GRAL, and NUAI were never held, so those sells were skipped. The rebuilt book sold GRAL, INDP, and NUAI and bought FEAM, GLND, VICR, and VKTX. The shared name is INDP, on opposite sides: Webull bought 557 at 3.91, the rebuild sold 798 at 3.93. Rebuilt session return is -0.5555% (equity $10,578.56).
 
-The dated file in the tree now says BUY GLND, FEAM, XHLD, INDP and SELL SECZ, GRAL, CRML, NUAI. That is the evening overwrite, not `409c73e31a`.
+The dated file in the tree is the send-time body from `409c73e31a` (BUY INDP, XHLD, GPRO, INSP; SELL SECZ, GRAL, NUAI). The evening overwrite was restored and logged in `data/day_board/RESTATEMENTS.log`.
 
 ## 2026-09-24
 
@@ -68,7 +68,7 @@ Send-time commit `36416dd8a9` at 2026-09-24 06:19 ET. HOT4 status `sit`, S `-7.6
 
 Webull sold XHLD and INDP, the two ticket sells it actually held. It bought nothing. The paper record says the hard-red sit blocked new longs, and GLND and FEAM were never held. The rebuilt book sold FEAM and VKTX and bought nothing. FEAM is on the ticket sell list and on the rebuild; Webull did not sell it. XHLD and INDP were sold at Webull and are absent from the rebuild that day (the rebuild had sold INDP the session before). Rebuilt session return is 18.1549% (equity $12,499.09). That equity jump is the $10k book's mark, including GLND still held, and is a different account from the paper P&L.
 
-The dated file in the tree now says BUY GLND, TJGC, SECZ, VICR and SELL FEAM, VKTX, SVIA, still `sit` at S `-7.659`. That is the evening overwrite, not `36416dd8a9`.
+The dated file in the tree is the send-time body from `36416dd8a9` (sit, BUY GPRO, INSP, TJGC, AIB; SELL GLND, FEAM, XHLD, INDP). The evening overwrite was restored and logged in `data/day_board/RESTATEMENTS.log`.
 
 ## 2026-09-25
 
@@ -84,6 +84,16 @@ Webull sent TJGC and QRVO. GPRO and INSP were already held from 09-23, and GLND 
 
 There is no `data/day_board/2026-09-25_strategy_tickets.json` in this tree.
 
+## Input trace
+
+One row per day. The send-time ticket is the commit named below. The mine commit is the last `03_scoreboard/factor_mine.json` on that commit's parent, which is the tree the ticket job had checked out. The frozen snapshot is `data/factor_mine/snapshots/<date>.json`. Its `sources` pins are the last commit of each morning file before 09:30 ET.
+
+| date | send | mine the writer had | input that moved the list |
+| --- | --- | --- | --- |
+| 2026-09-22 | `18039b02cf` 08:30 ET. BUY AMD, ABVX, MRAM, GME. | `087d5fda40` 2026-09-21 17:51 ET. Panel ends 2026-09-21. | The 12 pinned morning files match the send parent byte for byte. The panel had no 09-22 rows, so the ticket used the live session look. AMD and GME are liquid_tape candidates and are not among the 72 frozen rows. The rebuild bought GRAL, NUAI, ARM, INDP from those rows. Snapshot code `693b0b078bba` is not in the send parent. |
+| 2026-09-23 | `409c73e31a` 06:29 ET. BUY INDP, XHLD, GPRO, INSP. SELL SECZ, GRAL, NUAI. | `41bcc47fe1` 2026-09-22 20:04 ET. Panel ends 2026-09-22. | The 12 pinned morning files match the send parent. GPRO and INSP are not frozen rows. SECZ is dropped: indicator bars 58/60. The rebuild bought FEAM, GLND, VICR, VKTX, which are frozen rows. |
+| 2026-09-24 | `36416dd8a9` 06:19 ET. Sit, S -7.659. BUY GPRO, INSP, TJGC, AIB. SELL GLND, FEAM, XHLD, INDP. | `0d3fdf1110` 2026-09-23 17:16 ET. Panel ends 2026-09-23. | Six snapshot pins are not the send parent's bytes. Missing at send: `01_daily/catalyst/2026-09-24_dossiers.json` and `01_daily/map_heat/2026-09-24_research.json`. Earlier blobs: finviz export `c4199bbdd4` (06:53 ET), join `e87a13bdd7` (06:53 ET), weather `055df1a548` (06:53 ET), actions `15938bbb78` (07:46 ET). GPRO and INSP are not frozen rows. The rebuild sold FEAM and VKTX and bought nothing. |
+
 ## What matches
 
 The send-time tickets and the Webull acknowledgements match after the wire's skip rules: already held, never held, and the 09-24 hard-red sit. Webull added no names that were absent from that commit's HOT4 list.
@@ -96,4 +106,4 @@ The day-by-day build calls `webull_exec.size_hot4_tickets` and `webull_exec.size
 
 ## Dated file guard
 
-`strategy_tickets.write` may replace `data/day_board/<date>_strategy_tickets.json` until that date's 09:30 ET. At 09:30 and after, a different body is left unwritten and the undated live copies still update. The first write of a missing dated file is still allowed, including a late first publish. This does not restore 09-22 through 09-24 to the send-time commits. Those files in the tree are still the evening versions.
+`strategy_tickets.write` keeps the dated file once a paper submit journal exists or 09:30 ET has arrived. A later different body goes to the undated live copies and to `<date>_strategy_tickets_draft.json`, and the job fails. 09-22 through 09-24 in this tree are the send-time commits.
