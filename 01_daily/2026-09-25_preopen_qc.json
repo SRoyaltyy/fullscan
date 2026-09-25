@@ -1,6 +1,6 @@
 {
   "date": "2026-09-25",
-  "generated_at": "2026-09-25T04:28:42.922715-04:00",
+  "generated_at": "2026-09-25T04:36:27.952006-04:00",
   "items": [
     {
       "ok": false,
@@ -14,14 +14,14 @@
       "missing_markers": []
     },
     {
-      "ok": false,
+      "ok": true,
       "kind": "events",
       "path": "01_daily/events/2026-09-25_events.json",
-      "reason": "missing",
-      "size": 0,
+      "reason": "",
+      "size": 33560,
       "carried": false,
       "timeout": false,
-      "empty": true,
+      "empty": false,
       "missing_markers": []
     },
     {

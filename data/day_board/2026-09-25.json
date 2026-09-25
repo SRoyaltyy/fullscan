@@ -1,6 +1,6 @@
 {
   "date": "2026-09-25",
-  "generated_at": "2026-09-25T04:28:43.611519-04:00",
+  "generated_at": "2026-09-25T04:36:28.667540-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -182,7 +182,7 @@
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 2,
+      "n_req_ok": 3,
       "n_req": 20,
       "n_opt_ok": 1,
       "n_opt": 3,
@@ -256,11 +256,16 @@
           "name": "Events JSON",
           "path": "01_daily/events/2026-09-25_events.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 33560,
+          "said": "32 events \u00b7 elevated uncertainty \u00b7 The Sept 24 Trump\u2013Xi pageant extended the trade truce to Jan 10 and removed the Nov 10 cliff, but it did not de-risk the market: Hormuz is s",
+          "bullets": [
+            "Hormuz tanker war; Brent ~$106, commercial transits still a fraction of normal",
+            "China Mid-Autumn / Golden Week travel surge begins",
+            "Trump\u2013Xi White House summit; trade truce extended to Jan 10",
+            "US\u2013Iran UNGA shuttle talks on reopening Hormuz"
+          ]
         },
         {
           "key": "judge",
@@ -335,13 +340,13 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 7280,
-          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 17 fail",
+          "size": 7277,
+          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 16 fail",
           "bullets": [
             "general_predict:missing",
-            "events:missing",
             "news_judge:missing",
-            "news_actions:missing"
+            "news_actions:missing",
+            "finviz_market_digest:missing"
           ]
         },
         {
@@ -1304,6 +1309,31 @@
         }
       ],
       "preview": "raw=400 usable=81 single=20 \u00b7 US 10-Year Treasury Yield Tops 5.2%, Fueling Bets on Another Fed Rate Hike - blo | Treasury yields surge as Hardika Singh warns of Federal Reserve rate hike risks  | Will the Nasdaq Fall After the First Interest Rate Hike in 3 Years? History Offe | South African rand softens as markets absorb central bank rate hike - Reuters | On the eve of the midterm elections, the Federal Reserve may initiate its second \u00b7 # News Parse v2 \u2014 2026-09-25T04:28:35.389863-04:00\nWindow\u224848h | news_mode=on | raw=400 | usable=81 | single_name=20 | noise_dropped=299\nusable polarity={'+': 6, '-': 17, 'mixed': 2, 'neutral': 56}"
+    },
+    {
+      "key": "events",
+      "title": "Event scanner (primary)",
+      "date": "2026-09-25",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-25T04:36:27.994691-04:00",
+      "files": [
+        {
+          "path": "01_daily/events/2026-09-25_events.json",
+          "ok": true,
+          "reason": "",
+          "size": 33560,
+          "preview": "32 events \u00b7 Hormuz tanker war; Brent ~$106, commercial transits still a fraction o | China Mid-Autumn / Golden Week travel surge begins | Trump\u2013Xi White House summit; trade truce extended to Jan 10 | US\u2013Iran UNGA shuttle talks on reopening Hormuz | 80 countries demand urgent Hormuz reopening at UNGA | Trump\u2013Zelenskyy UNGA push for Ukraine energy/Black Sea truce"
+        },
+        {
+          "path": "01_daily/events/2026-09-25_events.md",
+          "ok": true,
+          "reason": "",
+          "size": 19810,
+          "preview": "# Event Scan \u2014 2026-09-25\n- events tracked: **32** (via openclaw)\n- uncertainty: **elevated**\n- summary: The Sept 24 Trump\u2013Xi pageant extended the trade truce to Jan 10 and removed the Nov 10 cliff, but it did not de-risk the market: Hormuz is still barely open (Brent ~$106, single-digit daily transits), UNGA diplomacy produced no deal, and futures have lifted October 28 hike odds to roughly two-thirds. This window's live catalysts are Canada Section 338 bans (Sept 29), labor/PCE week (Sept 29\u2013Oct 2), China PMI into Golden Week (Sept 30), Micron (Sept 30), and the Oct 4 OPEC+ meeting \u2014 not a US shutdown, which is already funded through Dec 11."
+        }
+      ],
+      "preview": "32 events \u00b7 Hormuz tanker war; Brent ~$106, commercial transits still a fraction o | China Mid-Autumn / Golden Week travel surge begins | Trump\u2013Xi White House summit; trade truce extended to Jan 10 | US\u2013Iran UNGA shuttle talks on reopening Hormuz | 80 countries demand urgent Hormuz reopening at UNGA | Trump\u2013Zelenskyy UNGA push for Ukraine energy/Black Sea truce \u00b7 # Event Scan \u2014 2026-09-25\n- events tracked: **32** (via openclaw)\n- uncertainty: **elevated**\n- summary: The Sept 24 Trump\u2013Xi pageant extended the trade truce to Jan 10 and removed the Nov 10 cliff, but it did not de-risk the market: Hormuz is still barely open (Brent ~$106, single-digit daily transits), UNGA diplomacy produced no deal, and futures have lifted October 28 hike odds to roughly two-thirds. This window's live catalysts are Canada Section 338 bans (Sept 29), labor/PCE week (Sept 29\u2013Oct 2), China PMI into Golden Week (Sept 30), Micron (Sept 30), and the Oct 4 OPEC+ meeting \u2014 not a US shutdown, which is already funded through Dec 11."
     }
   ],
   "href": {
