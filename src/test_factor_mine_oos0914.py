@@ -1093,6 +1093,181 @@ def test_logged_append_must_be_committed() -> None:
     ) == []
 
 
+def _tiny_ohlc(path: Path, rows: list[dict]) -> None:
+    import pandas as pd
+
+    path.parent.mkdir(parents=True, exist_ok=True)
+    pd.DataFrame(rows).to_parquet(path, index=False)
+
+
+def test_test_day_bars_come_from_pin_then_live(tmp_path: Path) -> None:
+    """A retro miss keeps a retro print, then takes the pin, then live."""
+    day = "2026-09-15"
+    tmp_path.mkdir(parents=True, exist_ok=True)
+    retro_path = tmp_path / "retro" / "ohlc.parquet"
+    live_path = tmp_path / "live" / "ohlc.parquet"
+    pin_dir = tmp_path / "prices"
+    _tiny_ohlc(retro_path, [{
+        "date": day, "ticker": "AAA",
+        "open": 1.0, "high": 1.2, "low": 0.9, "close": 1.1,
+    }])
+    _tiny_ohlc(live_path, [
+        {
+            "date": day, "ticker": "BBB",
+            "open": 8.0, "high": 8.0, "low": 8.0, "close": 8.0,
+        },
+        {
+            "date": day, "ticker": "CCC",
+            "open": 3.0, "high": 3.4, "low": 2.9, "close": 3.2,
+        },
+    ])
+    pin_dir.mkdir()
+    (pin_dir / f"{day}.json").write_text(json.dumps({
+        "date": day,
+        "names": {
+            "AAA": {"open": 9.0, "high": 9.0, "low": 9.0, "close": 9.0},
+            "BBB": {"open": 2.0, "high": 2.2, "low": 1.8, "close": 2.1},
+        },
+    }), encoding="utf-8")
+    saved = (oos.RETRO_OHLC, oos.LIVE_OHLC, fmf.PRICE_DIR)
+    oos.RETRO_OHLC = retro_path
+    oos.LIVE_OHLC = live_path
+    fmf.PRICE_DIR = pin_dir
+    try:
+        bars = oos._bars_for_window(
+            [day], {"AAA", "BBB", "CCC"}, allow_test=True,
+        )
+    finally:
+        oos.RETRO_OHLC, oos.LIVE_OHLC, fmf.PRICE_DIR = saved
+    assert bars[("AAA", day)]["open"] == 1.0
+    assert bars[("BBB", day)]["open"] == 2.0
+    assert bars[("CCC", day)]["open"] == 3.0
+
+
+def test_empty_tape_refuses_to_lock(tmp_path: Path) -> None:
+    """Snapshot rows and no session print must not lock a flat carry."""
+    day = "2026-09-15"
+    tmp_path.mkdir(parents=True, exist_ok=True)
+    snaps = tmp_path / "snaps"
+    snaps.mkdir()
+    (snaps / f"{day}.json").write_text(json.dumps({
+        "date": day,
+        "dropped": [],
+        "rows": [{
+            "date": day, "ticker": "AAA", "sources": ["union"],
+            "ohlc_hot_score": 1.0,
+        }],
+    }), encoding="utf-8")
+    root = tmp_path / "state"
+    ledgers = tmp_path / "ledgers"
+    saved = (oos.SNAP_DIR, oos.LEDGER_DIR, oos.RETRO_OHLC, oos.LIVE_OHLC, fmf.PRICE_DIR)
+    oos.SNAP_DIR = snaps
+    oos.LEDGER_DIR = ledgers
+    oos.RETRO_OHLC = tmp_path / "missing-retro.parquet"
+    oos.LIVE_OHLC = tmp_path / "missing-live.parquet"
+    fmf.PRICE_DIR = tmp_path / "no-pins"
+    rec = fm.make_recipe("oos0914_toy", hold=1, top_n=1, rank="hot_score", sell="time")
+    try:
+        try:
+            oos.walk_test([day], [rec], root=root)
+        except SystemExit as exc:
+            assert "no session bars" in str(exc)
+            assert day in str(exc)
+        else:
+            raise AssertionError("empty tape locked a day")
+    finally:
+        oos.SNAP_DIR, oos.LEDGER_DIR, oos.RETRO_OHLC, oos.LIVE_OHLC, fmf.PRICE_DIR = saved
+    assert not ledgers.exists()
+    assert not (root / rec["name"] / f"{day}.json").exists()
+    partial = {
+        day: {"date": day, "rows": [
+            {"date": day, "ticker": "AAA"},
+            {"date": day, "ticker": "BBB"},
+        ]},
+    }
+    oos.assert_new_session_has_bars(
+        [day], [rec], partial,
+        {("BBB", day): {"open": 1.0, "close": 1.1}},
+        root,
+    )
+
+
+def test_carried_name_sells_at_the_session_open(tmp_path: Path) -> None:
+    """A hold that is due sells at the live open, not yesterday's close."""
+    day = "2026-09-15"
+    prior = "2026-09-12"
+    tmp_path.mkdir(parents=True, exist_ok=True)
+    snaps = tmp_path / "snaps"
+    snaps.mkdir()
+    (snaps / f"{day}.json").write_text(json.dumps({
+        "date": day,
+        "dropped": [],
+        "rows": [{
+            "date": day, "ticker": "AAA", "sources": ["union"],
+            "ohlc_hot_score": 1.0,
+        }],
+    }), encoding="utf-8")
+    pin_dir = tmp_path / "prices"
+    pin_dir.mkdir()
+    (pin_dir / f"{day}.json").write_text(json.dumps({
+        "date": day,
+        "names": {
+            "AAA": {"open": 10.0, "high": 11.0, "low": 9.0, "close": 10.5},
+        },
+    }), encoding="utf-8")
+    live_path = tmp_path / "live" / "ohlc.parquet"
+    _tiny_ohlc(live_path, [{
+        "date": day, "ticker": "WTS",
+        "open": 4.25, "high": 4.40, "low": 4.05, "close": 4.10,
+    }])
+    name = "oos0914_toy"
+    root = tmp_path / "state"
+    seq.write_state(name, prior, {
+        "date": prior,
+        "recipe": name,
+        "cash": 9000.0,
+        "holdings": ["WTS"],
+        "equity": 10000.0,
+        "state": {
+            "cash": 9000.0,
+            "yday_equity": 10000.0,
+            "after": prior,
+            "pos": {
+                "WTS": {
+                    "ticker": "WTS",
+                    "shares": 10,
+                    "entry_px": 3.0,
+                    "entry_date": prior,
+                    "cost": 30.0,
+                    "fee_in": 0.0,
+                    "notional": 30.0,
+                    "last_px": 2.5,
+                    "peak_px": 3.0,
+                    "close_px": 2.5,
+                    "min_hold": 1,
+                },
+            },
+        },
+    }, root)
+    saved = (oos.SNAP_DIR, oos.LEDGER_DIR, oos.RETRO_OHLC, oos.LIVE_OHLC, fmf.PRICE_DIR)
+    oos.SNAP_DIR = snaps
+    oos.LEDGER_DIR = tmp_path / "ledgers"
+    oos.RETRO_OHLC = tmp_path / "missing-retro.parquet"
+    oos.LIVE_OHLC = live_path
+    fmf.PRICE_DIR = pin_dir
+    rec = fm.make_recipe(name, hold=1, top_n=1, rank="hot_score", sell="time")
+    try:
+        oos.walk_test([prior, day], [rec], root=root)
+    finally:
+        oos.SNAP_DIR, oos.LEDGER_DIR, oos.RETRO_OHLC, oos.LIVE_OHLC, fmf.PRICE_DIR = saved
+    locked = seq.read_state(name, day, root)
+    assert locked is not None
+    sells = locked.get("sells") or []
+    assert sells and sells[0]["ticker"] == "WTS"
+    assert abs(float(sells[0]["price"]) - 4.25) < 1e-9
+    assert "WTS" not in (locked.get("holdings") or [])
+
+
 def test_oos_bar_load_includes_a_carried_name(tmp_path: Path) -> None:
     """A name held into the day is loaded even when it is not a snapshot row."""
     day = "2026-09-15"
@@ -1174,6 +1349,9 @@ def main() -> None:
         test_theme_train_does_not_open_future_snapshot(root / "theme")
         test_oos_append_failure_does_not_fail_the_lock(root / "append_fail")
         test_logged_append_must_be_committed()
+        test_test_day_bars_come_from_pin_then_live(root / "bar_fill")
+        test_empty_tape_refuses_to_lock(root / "empty_tape")
+        test_carried_name_sells_at_the_session_open(root / "session_open")
         test_oos_bar_load_includes_a_carried_name(root / "held_bars")
     assert fmf.MANIFEST_PATH.read_bytes() == manifest
     print("oos0914 tests passed")
