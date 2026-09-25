@@ -65,7 +65,11 @@ CAPITAL = fm.CAPITAL
 
 def slice_panel(panel: dict, start: str | None = None,
                 end: str | None = None) -> dict:
-    """Rows and calendar inside ``[start, end]``. No later session leaks in."""
+    """Rows and calendar inside ``[start, end]``. No later session leaks in.
+
+    Quarantined dates stay. News, catalyst, judge, and map-heat on those
+    days are blanked when the book is scored.
+    """
     cal = [d for d in (panel.get("session_dates") or [])
            if (not start or d >= start) and (not end or d <= end)]
     keep = set(cal)
@@ -859,6 +863,13 @@ def run(*, from_date: str = book_era.DASHBOARD_START,
     recipes = list(recipes or fm.build_recipes())
     panel = panel if panel is not None else fm.load_or_build_panel(
         from_date, to_date)
+    from . import quarantine_sessions as qsess
+    skipped = [d for d in (panel.get("session_dates") or [])
+               if qsess.is_quarantined(d)]
+    panel = fm.scrub_quarantine_inputs(panel)
+    if skipped:
+        print(f"[wf] nulled news/catalyst/judge/heat on {skipped}; "
+              f"dates and price tape kept", flush=True)
     cal = list(panel.get("session_dates") or [])
     folds_spec = make_folds(
         cal, first_cutoff=first_cutoff, step=step, forward=forward)

@@ -394,9 +394,105 @@ def make_recipe(name: str, *, universe: str = "union", hold: int = 1,
     }
 
 
+# Pre-open packet cameras fed by the stale news window. Digest is the
+# headline box next to the news camera. Price / Finviz tape stays.
+_QUARANTINE_CAMERAS = ("news", "digest", "judge", "heat", "catal")
+
+
+def _scrub_quarantine_row(row: dict) -> dict:
+    """Copy one row with news, catalyst, judge, and map-heat cleared."""
+    out = dict(row)
+    boxes = {k: v for k, v in (row.get("boxes") or {}).items()}
+    for cam in _QUARANTINE_CAMERAS:
+        boxes[cam] = "missing"
+    out["boxes"] = boxes
+    out["news_box"] = "missing"
+    out["news_prior"] = "missing"
+    out["news_export_date"] = None
+    # Headline insider flag. Form-4 buys are a filing, not this packet.
+    out["ins_buy"] = False
+    n_good = sum(1 for k in CAMERAS if boxes.get(k) == "good")
+    n_bad = sum(1 for k in CAMERAS if boxes.get(k) == "bad")
+    out["cond_good"] = n_good
+    out["cond_bad"] = n_bad
+    out["zero_red"] = n_bad == 0 and n_good >= 1
+    return out
+
+
+def _recompute_book_signals(rows: list[dict], bad: set[str]) -> None:
+    """Blue / alarm from the cameras that remain, per ticker."""
+    by_ticker: dict[str, list[dict]] = {}
+    for row in rows:
+        by_ticker.setdefault(str(row.get("ticker") or ""), []).append(row)
+    for group in by_ticker.values():
+        group.sort(key=lambda r: str(r.get("date") or ""))
+        prev_boxes = None
+        for row in group:
+            boxes = row.get("boxes") or {}
+            if str(row.get("date") or "")[:10] in bad:
+                if prev_boxes is None:
+                    row["blue"] = False
+                    row["alarm"] = False
+                else:
+                    delta = tl.point_delta(prev_boxes, boxes)
+                    row["blue"] = bool(
+                        tl.objectively_better(prev_boxes, boxes)
+                        or delta >= tl.BLUE_POINT_JUMP
+                    )
+                    row["alarm"] = bool(tl.purely_worse(prev_boxes, boxes))
+            prev_boxes = boxes
+
+
+def scrub_quarantine_inputs(panel: dict) -> dict:
+    """Keep every session. On quarantined days, blank the stale packet.
+
+    Nulled: news (camera, headline digest, news_box, news_prior),
+    catalyst camera, judge, map-heat, and the book tallies those cameras
+    feed (cond, zero-red, blue, alarm, Clock-B flags). Price and Finviz
+    tape — hot score, holdup, returns, RSI, volume — stay. Lane and the
+    news-impact backtest still skip the whole date elsewhere.
+    """
+    if not isinstance(panel, dict):
+        return panel
+    if panel.get("_quarantine_scrubbed"):
+        return panel
+    from . import quarantine_sessions as qsess
+    bad = qsess.dates()
+    rows_in = list(panel.get("rows") or [])
+    rows = []
+    touched = False
+    for row in rows_in:
+        if str(row.get("date") or "")[:10] in bad:
+            rows.append(_scrub_quarantine_row(row))
+            touched = True
+        else:
+            rows.append(row)
+    if touched:
+        _recompute_book_signals(rows, bad)
+        for row in rows:
+            if str(row.get("date") or "")[:10] in bad:
+                cbt.stamp_row(row)
+    by_date: dict[str, list] = {}
+    for row in rows:
+        by_date.setdefault(row.get("date"), []).append(row)
+    out = dict(panel)
+    out["rows"] = rows
+    out["by_date"] = by_date
+    cal = list(panel.get("session_dates") or [])
+    out["session_dates"] = cal
+    out["n_sessions"] = len(cal)
+    out["n_rows"] = len(rows)
+    out["_quarantine_scrubbed"] = True
+    return out
+
+
 def slice_panel(panel: dict, start: str | None = None,
                 end: str | None = None) -> dict:
-    """Rows and calendar inside ``[start, end]``. Later sessions stay out."""
+    """Rows and calendar inside ``[start, end]``. Later sessions stay out.
+
+    Quarantined dates stay in the slice. Their news, catalyst, judge,
+    and map-heat inputs are blanked when the panel is scored.
+    """
     cal = [d for d in (panel.get("session_dates") or [])
            if (not start or d >= start) and (not end or d <= end)]
     keep = set(cal)
@@ -2383,6 +2479,7 @@ def window_hits(ticker: str, date: str, hold: int, cal: list[str],
 
 def score_recipe(panel: dict, rec: dict, tapes: dict,
                  bars: dict | None = None) -> dict:
+    panel = scrub_quarantine_inputs(panel)
     panel = ensure_sim_fields(panel, rec)
     cal = list(panel.get("session_dates") or [])
     by_date = panel.get("by_date") or {}
@@ -2586,6 +2683,13 @@ def run(from_date: str = START, to_date: str | None = None,
         slim = {k: v for k, v in panel.items() if k != "by_date"}
         slim["by_date"] = None
         PANEL_PATH.write_text(json.dumps(slim, indent=2), encoding="utf-8")
+    from . import quarantine_sessions as qsess
+    skipped = [d for d in (panel.get("session_dates") or [])
+               if qsess.is_quarantined(d)]
+    panel = scrub_quarantine_inputs(panel)
+    if skipped:
+        print(f"[factor-mine] nulled news/catalyst/judge/heat on {skipped}; "
+              f"dates and price tape kept", flush=True)
     cal = list(panel.get("session_dates") or [])
     tapes = _tapes(cal)
     regime = fmb.load_regime() if book else {}

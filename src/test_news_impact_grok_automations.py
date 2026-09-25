@@ -161,7 +161,7 @@ def test_ingest_gmail_and_connector_roundtrip() -> None:
 
 
 def test_load_all_sources_includes_grok() -> None:
-    raw, meta = load_all_sources("2026-09-21")
+    raw, meta = load_all_sources("2026-08-20")
     by = meta.get("by_harvest_source") or {}
     assert by.get(SOURCE, 0) >= 1
     assert any((a.get("harvest_source") == SOURCE) for a in raw)

@@ -208,12 +208,18 @@ def load_actions_keep(date: str | None = None) -> list[dict]:
 
 
 def load_parsed_tagged(date: str | None = None) -> list[dict]:
+    from ..quarantine_sessions import is_quarantined
     arts: list[dict] = []
     if date and date.lower() not in {"all", "*", "history"}:
+        if is_quarantined(date):
+            return []
         paths = [NEWS_DIR / f"{date}_parsed.json"]
     else:
         paths = sorted(NEWS_DIR.glob("*_parsed.json"))
     for p in paths:
+        m = _DATE_IN_NAME.search(p.name) if hasattr(p, "name") else None
+        if m and is_quarantined(m.group(1)):
+            continue
         for a in load_parsed(p):
             a["harvest_source"] = "parsed"
             arts.append(a)
@@ -346,6 +352,9 @@ def inventory() -> dict[str, Any]:
 
 def load_all_sources(date: str | None = None) -> tuple[list[dict], dict[str, Any]]:
     """Raw articles from every used fullscan path. Caller dedupes."""
+    from ..quarantine_sessions import is_quarantined
+    if date and str(date).lower() not in {"all", "*", "history", ""} and is_quarantined(date):
+        return [], {"n_raw": 0, "by_harvest_source": {}, "quarantined": date}
     raw: list[dict] = []
     raw.extend(load_parsed_tagged(date))
     raw.extend(load_finviz_exports(date))
@@ -357,6 +366,13 @@ def load_all_sources(date: str | None = None) -> tuple[list[dict], dict[str, Any
     named = bool(date and str(date).lower() not in {"all", "*", "history", ""})
     # --date all reads on-disk snapshots only (no remote fan-out).
     raw.extend(load_theme_radar(date, allow_remote=named))
+    kept = []
+    for art in raw:
+        session = _date_of(Path(str(art.get("source_file") or "x")))
+        if session and is_quarantined(session):
+            continue
+        kept.append(art)
+    raw = kept
     by_src = Counter(a.get("harvest_source") or a.get("source") or "?" for a in raw)
     return raw, {"n_raw": len(raw), "by_harvest_source": dict(by_src)}
 
