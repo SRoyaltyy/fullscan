@@ -1,0 +1,32 @@
+name: excel ml lever
+
+# Research lever tests. No live orders. Numpy only.
+
+on:
+  pull_request:
+    paths:
+      - "research/lever_search/excel_ml_lever/**"
+      - ".github/workflows/excel_ml_lever.yml"
+  push:
+    branches: [main]
+    paths:
+      - "research/lever_search/excel_ml_lever/**"
+      - ".github/workflows/excel_ml_lever.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    name: no-lookahead and determinism
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: install numpy
+        run: pip install numpy
+      - name: lever tests
+        run: python research/lever_search/excel_ml_lever/test_excel_ml_lever.py

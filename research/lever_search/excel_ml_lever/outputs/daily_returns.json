@@ -1,0 +1,160 @@
+{
+  "after_fees_return": 0.0,
+  "after_fees_return_15bp": 0.0,
+  "author": "excel",
+  "borrow_if_short": 0.003,
+  "created_on": "2026-09-26",
+  "cutoff": "2026-09-14",
+  "daily": [],
+  "designed_after": true,
+  "dropped": [
+    {
+      "commit": "e3bc9af22701c918c70fb04a487b35253d415f93",
+      "date": "2026-08-13",
+      "reason": "data/factor_mine/panel.json is not in the last main tree proven before 09:30 ET",
+      "server_time": "2026-08-13T12:50:09Z"
+    },
+    {
+      "commit": "6b74bb2d501c7ecc82f90a72dd901e0fb0c1b41d",
+      "date": "2026-08-14",
+      "reason": "data/factor_mine/panel.json is not in the last main tree proven before 09:30 ET",
+      "server_time": "2026-08-14T12:44:05Z"
+    },
+    {
+      "commit": "b5db5f33fb35ba13295835a183000131d9d1209b",
+      "date": "2026-08-17",
+      "reason": "data/factor_mine/panel.json is not in the last main tree proven before 09:30 ET",
+      "server_time": "2026-08-17T13:24:36Z"
+    },
+    {
+      "commit": "8658af86b5d77252c12cd4f67f066daa9d36c7f0",
+      "date": "2026-08-18",
+      "reason": "data/factor_mine/panel.json is not in the last main tree proven before 09:30 ET",
+      "server_time": "2026-08-18T13:26:52Z"
+    },
+    {
+      "commit": "36d1652e2faa9e865201c7e1f846a495a3f72c4c",
+      "date": "2026-08-19",
+      "reason": "data/factor_mine/panel.json is not in the last main tree proven before 09:30 ET",
+      "server_time": "2026-08-19T13:28:11Z"
+    },
+    {
+      "commit": "0bffc0417d181f2176dc38a4b538cadb9fc47716",
+      "date": "2026-08-20",
+      "reason": "data/factor_mine/panel.json is not in the last main tree proven before 09:30 ET",
+      "server_time": "2026-08-20T13:28:35Z"
+    },
+    {
+      "commit": "1f9fb2a751d57119f9ce1fa034ae7567d015c3ca",
+      "date": "2026-08-21",
+      "reason": "data/factor_mine/panel.json is not in the last main tree proven before 09:30 ET",
+      "server_time": "2026-08-21T13:29:20Z"
+    },
+    {
+      "commit": "0997a96011fc2bc7e0eb41a036b471c408ab3c8b",
+      "date": "2026-08-24",
+      "reason": "data/factor_mine/panel.json is not in the last main tree proven before 09:30 ET",
+      "server_time": "2026-08-24T13:29:24Z"
+    },
+    {
+      "commit": "3e0ce83b16f019fd9fa6b21806409363a3a2e0d6",
+      "date": "2026-08-25",
+      "reason": "data/factor_mine/panel.json is not in the last main tree proven before 09:30 ET",
+      "server_time": "2026-08-25T13:27:03Z"
+    },
+    {
+      "commit": "2a7287637d9dc5d4cd4859482856326938e9f1b4",
+      "date": "2026-08-26",
+      "reason": "data/factor_mine/panel.json is not in the last main tree proven before 09:30 ET",
+      "server_time": "2026-08-26T13:12:40Z"
+    },
+    {
+      "commit": "fb3cc7e4315a01f8552943310b320f4f5afe04c6",
+      "date": "2026-08-27",
+      "reason": "data/factor_mine/panel.json is not in the last main tree proven before 09:30 ET",
+      "server_time": "2026-08-27T13:25:10Z"
+    },
+    {
+      "commit": "4b6eae716771e6d87850c353732d609a72d602b8",
+      "date": "2026-08-28",
+      "reason": "data/factor_mine/panel.json is not in the last main tree proven before 09:30 ET",
+      "server_time": "2026-08-28T11:37:52Z"
+    },
+    {
+      "commit": "7c40e94aca6184cc6c9692a3048821ae6f3e0a0e",
+      "date": "2026-08-31",
+      "reason": "data/factor_mine/panel.json is not in the last main tree proven before 09:30 ET",
+      "server_time": "2026-08-31T13:29:36Z"
+    },
+    {
+      "commit": "324f0dacf57b7119568e045beba8174538ff2c5c",
+      "date": "2026-09-01",
+      "reason": "data/factor_mine/panel.json is not in the last main tree proven before 09:30 ET",
+      "server_time": "2026-09-01T13:25:57Z"
+    },
+    {
+      "commit": "6563d1cdbcc71f658a43dc841f35d342f9b3f686",
+      "date": "2026-09-02",
+      "reason": "data/factor_mine/panel.json is not in the last main tree proven before 09:30 ET",
+      "server_time": "2026-09-02T13:25:27Z"
+    },
+    {
+      "commit": "67e651be5459f7c4091a090e72459dbde1c522a5",
+      "date": "2026-09-03",
+      "reason": "data/factor_mine/panel.json is not in the last main tree proven before 09:30 ET",
+      "server_time": "2026-09-03T13:22:29Z"
+    },
+    {
+      "commit": "68aab7cbc3746116f608a2ccb96da9fa787d645e",
+      "date": "2026-09-04",
+      "reason": "data/factor_mine/panel.json is not in the last main tree proven before 09:30 ET",
+      "server_time": "2026-09-04T13:17:38Z"
+    },
+    {
+      "commit": "eeccf2bb7f31ad47e6a8d6ea8abfd2a314e687c3",
+      "date": "2026-09-08",
+      "reason": "data/factor_mine/panel.json is not in the last main tree proven before 09:30 ET",
+      "server_time": "2026-09-08T13:22:07Z"
+    },
+    {
+      "commit": "c1167245934f9925941ce2a731efed6fc3c58901",
+      "date": "2026-09-09",
+      "reason": "pre-open panel sessions end 2026-09-08; this morning is not in that blob, and a later copy is not used",
+      "server_time": "2026-09-09T13:29:07Z"
+    },
+    {
+      "commit": "a714ba9c06220f0a68f54c5fffd9f046e72f8276",
+      "date": "2026-09-10",
+      "reason": "pre-open panel sessions end 2026-09-09; this morning is not in that blob, and a later copy is not used",
+      "server_time": "2026-09-10T13:11:49Z"
+    },
+    {
+      "commit": "ae97009391d281cf563278ee8681e557e4761e2a",
+      "date": "2026-09-11",
+      "reason": "pre-open panel sessions end 2026-09-09; this morning is not in that blob, and a later copy is not used",
+      "server_time": "2026-09-11T11:49:49Z"
+    }
+  ],
+  "family": "lever",
+  "fee": "futubull",
+  "fills": [],
+  "final_equity": 10000.0,
+  "final_equity_15bp": 10000.0,
+  "flat_fee": "15bp",
+  "hold": 1,
+  "id": "excel_ml_lever_h1",
+  "min_resolved_sessions": 8,
+  "min_train_rows": 30,
+  "n_days": 0,
+  "n_days_picked": 0,
+  "n_train_sessions": 0,
+  "note": "Every morning in 2026-08-13..2026-09-11 lacks a pre-open copy of its own candidate list. Those days are dropped. Today's panel.json is not substituted. Training sessions: 0. Picks: 0.",
+  "ridge_alpha": 10.0,
+  "seed": 7,
+  "side": "long",
+  "top_n": 4,
+  "window": {
+    "end": null,
+    "start": null
+  }
+}
