@@ -1,0 +1,76 @@
+{
+  "longhist_break10_h2": {
+    "mismatches": [],
+    "n_mismatch": 0,
+    "look_lengths": {
+      "0": 275,
+      "2": 314,
+      "1": 392,
+      "4": 718,
+      "3": 214
+    },
+    "fill_counts": {
+      "0": 1487,
+      "2": 70,
+      "1": 327,
+      "4": 11,
+      "3": 18
+    },
+    "sessions": 1913
+  },
+  "longhist_rvol_lg_h1": {
+    "mismatches": [],
+    "n_mismatch": 0,
+    "look_lengths": {
+      "1": 180,
+      "2": 207,
+      "3": 208,
+      "0": 86,
+      "4": 1232
+    },
+    "fill_counts": {
+      "1": 362,
+      "2": 137,
+      "3": 92,
+      "0": 1121,
+      "4": 201
+    },
+    "sessions": 1913
+  },
+  "longhist_break10_h1": {
+    "mismatches": [],
+    "n_mismatch": 0,
+    "look_lengths": {
+      "0": 275,
+      "2": 314,
+      "1": 392,
+      "4": 718,
+      "3": 214
+    },
+    "fill_counts": {
+      "0": 1413,
+      "2": 112,
+      "1": 295,
+      "4": 35,
+      "3": 58
+    },
+    "sessions": 1913
+  },
+  "longhist_zero_candle_h2": {
+    "mismatches": [],
+    "n_mismatch": 0,
+    "look_lengths": {
+      "0": 1777,
+      "1": 130,
+      "2": 5,
+      "3": 1
+    },
+    "fill_counts": {
+      "0": 1791,
+      "1": 116,
+      "2": 5,
+      "3": 1
+    },
+    "sessions": 1913
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "train_end": "2023-12-31",
+  "test_not_scored": true,
+  "n_grid": 40,
+  "n_passed_train": 0,
+  "winners": [],
+  "selection": []
+}

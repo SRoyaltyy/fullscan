@@ -1,0 +1,50 @@
+{
+  "futu_equity": 9.116010146313966,
+  "bp15_equity": 103.05087071757374,
+  "fixed_gross": -32824.336085021496,
+  "fixed_futu": -178598.07378502167,
+  "fixed_bp15": -61096.3541582216,
+  "missing_close_marks": 0,
+  "mean_panel": 13.420282279142707,
+  "max_panel": 60,
+  "min_panel": 0,
+  "mean_filled": 1.2315734448510194,
+  "days_zero_panel": 14,
+  "example": {
+    "date": "2019-01-03",
+    "fills": [
+      {
+        "ticker": "SBS",
+        "shares": 1700,
+        "open": 2.062000036239624,
+        "buy_fee": 21.93,
+        "close_missing": false,
+        "close": 1.9320000410079956,
+        "sell_fee": 22.2385,
+        "bp_fee": 5.258100092411042
+      },
+      {
+        "ticker": "ATHE",
+        "shares": 194,
+        "open": 18.0,
+        "buy_fee": 2.572,
+        "close_missing": false,
+        "close": 17.5,
+        "sell_fee": 2.6314,
+        "bp_fee": 5.2379999999999995
+      },
+      {
+        "ticker": "SMPL",
+        "shares": 195,
+        "open": 17.860000610351562,
+        "buy_fee": 2.575,
+        "close_missing": false,
+        "close": 19.920000076293945,
+        "sell_fee": 2.6384,
+        "bp_fee": 5.224050178527832
+      }
+    ],
+    "pre_cash": 10522.344263043213
+  },
+  "n_days": 1913
+}
