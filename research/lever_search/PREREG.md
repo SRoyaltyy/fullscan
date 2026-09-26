@@ -1,6 +1,6 @@
 # Fullscan lever search — preregistration
 
-- status: body written. Section 5 is the one open line. The fingerprint is filled when that line closes, at or after 17:30 HKT on 2026-09-26 and before 17:45 HKT. This commit has no returns, no p-values, and no luck-test output.
+- status: two layers written. The Excel ML line in section 5 is the one open line. The fingerprint is filled when that line closes, at or after 17:30 HKT on 2026-09-26 and before 17:45 HKT. This commit has no returns, no p-values, and no luck-test output.
 - written: 2026-09-26
 - fingerprint_sha256: PENDING
 - fingerprint_scope: SHA-256 of the UTF-8 bytes after the line `<!-- BEGIN COVERED -->`, including the final newline. Line endings are LF.
@@ -19,17 +19,23 @@ Changing a gate, weight, hold, exit, size, fee, fill, universe, or the combinati
 
 No score is computed in this commit.
 
-## 1. Sessions the search may read
+The search is two layers. Each layer has its own combination count, its own rolling check, and its own line in the luck-test tally. Both daily-return series go into that test. A try in one layer is not a try in the other, even when the factor id matches.
+
+Layer B is the full fullscan grid on the real morning panel, 2026-08-13 through 2026-09-11. It keeps the price and Excel atoms, and it includes the inputs that cannot be rebuilt: enriched AB (`boxes.ab`), S, hard-red, sector, news, heat, catalyst, and the Theme Radar fields.
+
+Layer A is rebuildable inputs only. Its universe is the price-only stand-in in section 6. Its span is 2024-04-02 through 2026-09-11.
+
+## 1. Layer B sessions
 
 Source: `data/factor_mine/panel.json`, sha256 `f9a4efc13a8aa13b92ac5847f0ef4f3dc4bddf0b16652684b183a9fe3170a506`.
 
-The search and the walk-forward read these 21 sessions and no others:
+Layer B's search and Layer B's walk-forward read these 21 sessions and no others:
 
 `2026-08-13`, `2026-08-14`, `2026-08-17`, `2026-08-18`, `2026-08-19`, `2026-08-20`, `2026-08-21`, `2026-08-24`, `2026-08-25`, `2026-08-26`, `2026-08-27`, `2026-08-28`, `2026-08-31`, `2026-09-01`, `2026-09-02`, `2026-09-03`, `2026-09-04`, `2026-09-08`, `2026-09-09`, `2026-09-10`, `2026-09-11`.
 
 `panel.json` also holds 2026-09-14 through 2026-09-25. The loader keeps a row only when `date` is in the list above. A kept row dated 2026-09-14 or later fails the run. The same cutoff applies to every other file: a bar, snapshot row, Excel signal, or Theme Radar row dated 2026-09-14 or later is not an input to the search or the walk-forward.
 
-The one designed-after look in section 8 is a separate open. It may read 2026-09-14 through 2026-09-25 only after the walk-forward choices are written and fingerprinted. It does not read 2026-09-28. That session is the first day of any later clean record.
+The designed-after look in section 8 is a separate open for each layer. It may read 2026-09-14 through 2026-09-25 only after that layer's walk-forward choices are written and fingerprinted. It does not read 2026-09-28. That session is the first day of any later clean record.
 
 ## 2. Clock and prices
 
@@ -64,9 +70,9 @@ Columns that are not levers, and are not read as gates, ranks, or deltas:
 - `Open` (empty on the search window; not a fill)
 - `trf_dir_*` (the sign of the matching `trf_d_*`; the delta lever uses `trf_d_*` once)
 
-## 4. One combination
+## 4. Layer B — one combination
 
-A combination picks exactly one signal and exactly one value from each other lever. A signal is one factor, or one unordered pair, or one day-over-day delta. It is not all three at once. Pairing every factor with every pair with every delta is a different study.
+A Layer B combination picks exactly one signal and exactly one value from each other lever. A signal is one factor, or one unordered pair, or one day-over-day delta. It is not all three at once. Pairing every factor with every pair with every delta is a different study.
 
 The combination id, used for tie-breaks and the parquet key, is:
 
@@ -76,7 +82,7 @@ The combination id, used for tie-breaks and the parquet key, is:
 
 Rank is not a free lever. It is fixed by the signal:
 
-- any panel price atom, or `hot_top`, or a delta of a price field: rank by `ohlc_hot_score` descending
+- any panel price atom, any panel camera atom, `hot_top`, or a delta of a price or camera field: rank by `ohlc_hot_score` descending
 - an Excel card alone: the card's own row order
 - a Theme Radar score atom: that score descending
 - a pair: the first of those rules that matches either member
@@ -84,13 +90,17 @@ Rank is not a free lever. It is fixed by the signal:
 
 Top-N is applied after the gate. Names that fail the gate are not ranked.
 
-### 4.1 Factors (91 atoms)
+### 4.1 Factors (95 atoms)
 
 Panel atoms use `data/factor_mine/panel.json` for that session. A camera whose source file is missing that morning matches nobody (INPUT_HISTORY). Theme Radar atoms use the frozen export joined on `(trade_date, Ticker)`. Excel atoms use `excel_bot/suggestions/suggestions.csv`. A card with `signal_date` D is knowable after D's close, so it is an input on the next panel session, not on D. `current_price`, `ret_vs_close`, and `ret_vs_open` are ignored. The seven cards are the folders under `excel_bot/strategies/`. The committed CSV has rows for L1, L2, L3, and L5 only. L4, S1, and S2 have no row through 2026-09-25, so those atoms match nobody on this window and still count.
 
 | id | rule |
 | --- | --- |
-| `ab_good` | `boxes.ab` is `good` |
+| `ab_good` | `boxes.ab` is `good` (enriched checklist; not the price-only A rules) |
+| `sector_good` | `boxes.sector` is `good` |
+| `news_good` | `boxes.news` is `good` |
+| `heat_good` | `boxes.heat` is `good` |
+| `catal_good` | `boxes.catal` is `good` |
 | `last_green` | `last_green` is true |
 | `break_10` | `ohlc_break_10` is true |
 | `rsi_os` | `rsi_os` is true |
@@ -154,13 +164,15 @@ Catalyst flags, rule is the column equal to 1:
 
 `trf_upside_pos`: `trf_upside_pct_lvl` > 0.
 
-Count: 12 panel + 7 Excel + 16 Finviz + 33 rubric + 14 composite + 8 catalyst + 1 upside = 91.
+Count: 16 panel + 7 Excel + 16 Finviz + 33 rubric + 14 composite + 8 catalyst + 1 upside = 95.
+
+The 16 panel atoms are `ab_good`, `sector_good`, `news_good`, `heat_good`, `catal_good`, and the 11 price atoms from `last_green` through `hot_top`.
 
 ### 4.2 Pairs
 
-Every unordered pair of two distinct atoms. 91 × 90 / 2 = 4,095. Both atoms must be true. A name that is absent from one side of the join fails the pair.
+Every unordered pair of two distinct atoms. 95 × 94 / 2 = 4,465. Both atoms must be true. A name that is absent from one side of the join fails the pair.
 
-### 4.3 Day-over-day deltas (38)
+### 4.3 Day-over-day deltas (42)
 
 A delta uses the value on the prior session and the value on this morning. Both must already be knowable at 09:30. The first session, 2026-08-13, has no prior search session, so every delta matches nobody and the book sits.
 
@@ -170,7 +182,11 @@ A delta uses the value on the prior session and the value on this morning. Both 
 | `d_ret5` | `ohlc_ret_5` above the prior session |
 | `d_rvol` | `ohlc_rvol` above the prior session |
 | `d_rsi` | `rsi` above the prior session |
-| `d_ab_tone` | camera `ab` moved toward `good` (`bad` to `neutral` or `good`, or `neutral` to `good`) |
+| `d_ab_tone` | `boxes.ab` moved toward `good` (`bad` to `neutral` or `good`, or `neutral` to `good`) |
+| `d_sector_tone` | `boxes.sector` moved toward `good`, same steps |
+| `d_news_tone` | `boxes.news` moved toward `good`, same steps |
+| `d_heat_tone` | `boxes.heat` moved toward `good`, same steps |
+| `d_catal_tone` | `boxes.catal` moved toward `good`, same steps |
 | `d_s` | morning S above the prior session |
 | `d_tr1d_total` | `tr1d_total_score` above the prior trade_date |
 | `d_tr1w_total` | `tr1w_total_score` above the prior trade_date |
@@ -195,13 +211,13 @@ Plus `trf_d_*` > 0 for these 28 columns, id `d_` plus the column slug (`d_price`
 | S gate | `off`, `gt_0` (new buys only when morning S > 0), `gt_5` (S > 5), `le_0` (S ≤ 0). S is the committed general-predict total score, else weather `general_score`. A missing S fails every gate except `off`. |
 | hard-red | `off`, `on`. `on` sits new buys when S ≤ −3. A missing S with `on` sits. |
 
-Signal count = 91 + 4,095 + 38 = 4,224.
+Signal count = 95 + 4,465 + 42 = 4,602.
 
 The other levers multiply to 2 × 2 × 4 × 15 × 4 × 4 × 2 × 4 × 2 = 61,440.
 
-**N = 4,224 × 61,440 = 259,522,560.**
+**N_B = 4,602 × 61,440 = 282,746,880.**
 
-Every one of those combinations is one try, including a combination that sits because a file is missing or a gate matches nobody.
+Every one of those combinations is one Layer B try, including a combination that sits because a file is missing or a gate matches nobody.
 
 ## 5. Excel ML-lever spec
 
@@ -209,55 +225,213 @@ Checked `origin/main` at `ad3e064f66eb4e0c62e768a3f7f675d06db8a8f7` (2026-09-26T
 
 `excel_ml_count: UNRESOLVED`
 
-This is the one line still open. At or after 17:30 HKT on 2026-09-26 (09:30 UTC), look again at fullscan `main` for a single spec committed for this search. If it is there, set `excel_ml_count` to 1, record its path and sha256, and count that spec as one try. The spec is not unpacked into the grid. If it is not there, set `excel_ml_count` to 0 and the status to `pending, excluded`. Then recompute the fingerprint in the header. Do not wait past that check.
+This is the one line still open. At or after 17:30 HKT on 2026-09-26 (09:30 UTC), look again at fullscan `main` for a single spec committed for this search. If it is there, set `excel_ml_count` to 1, record its path and sha256, and count that spec as one try. The spec is not unpacked into either layer. If it is not there, set `excel_ml_count` to 0 and the status to `pending, excluded`. Then recompute the fingerprint in the header. Do not wait past that check.
 
-## 6. Walk-forward
+## 6. Layer B walk-forward
 
 Check days, in order: `2026-08-27`, `2026-08-28`, `2026-08-31`, `2026-09-01`, `2026-09-02`, `2026-09-03`, `2026-09-04`, `2026-09-08`, `2026-09-09`, `2026-09-10`, `2026-09-11`. Eleven days.
 
 For each check day:
 
-1. The choice set is every combination's after-fee compound return on the sessions in section 1 that are strictly before that check day. The first choice set starts at 2026-08-13.
+1. The choice set is every Layer B combination's after-fee compound return on the section 1 sessions that are strictly before that check day. The first choice set starts at 2026-08-13.
 2. Drop combinations with zero fires on that choice set (untestable).
 3. Freeze the one winner: highest after-fee return, then highest without-best-stock return on that same choice set, then combination id ascending.
 4. Write the frozen id and the choice-set fingerprint before scoring the check day.
 5. Score that check day with the frozen combination. The check day's return is not an input to its own choice.
 
-The walk-forward path is those eleven day returns, compounded in order.
+The Layer B walk-forward path is those eleven day returns, compounded in order. Layer A does not enter this choice.
 
-## 7. Tally for the luck test
+## 7. Layer A — rebuildable only
 
-Three layers are already closed. The fourth is section 5.
+Layer A does not read `panel.json`, Theme Radar, or any LLM file. Opening one of those inside the Layer A search fails the run.
+
+### 7.1 Universe
+
+The membership rule is section 3 of [research/longhist/PREREG.md](../longhist/PREREG.md). That file's covered-body fingerprint is `0e519c4f8e3081571b79f23ef15f9946716ebeb46c354ea7e8c53470ec78394a` (SHA-256 of the UTF-8 bytes after `<!-- BEGIN COVERED -->`, including the final newline).
+
+The symbol roster is the frozen listed leg only: `research/longhist/listed_common.txt`, sha256 `62609d9165bcbd5e7327516ea4da03f05297698d67aab660f207ddf8426195d5`, 4,193 symbols. The delisted leg in that prereg is not fingerprinted (`tickers.json` does not exist yet), so it is out of this tally.
+
+On session D, apply section 3 unchanged: 20 prior bars, prior close in [$1, $30], 20-day mean dollar volume in [$1,000,000, $40,000,000], official open gap |G| ≥ 0.04, prior-day rvol ≥ 1.5 with `ok` true. If more than 60 names pass, keep 60 by larger |G|, then larger rvol, then ticker A→Z. Do not lower a threshold to fill the list. A dot in a symbol is sent to Yahoo as a hyphen. Bars are `data/prices` quote OHLC where the name-day is already stored.
+
+### 7.2 Span
+
+Store sessions are the distinct `date` values in `data/prices/ohlc.parquet` (644 dates, 2024-03-04 through 2026-09-25).
+
+Layer A reads the 614 store sessions from `2024-04-02` through `2026-09-11` inclusive. `2024-04-02` is the first store session with 20 earlier store sessions, which is the hot-score and section-3 warmup. That is the ~2024-04 start. The search and the rolling check do not read a session after 2026-09-11.
+
+A feature whose own lookback is longer stays false until that name has enough bars with `date` < session. The combination still counts. The lookbacks are: OHLC `from_bars` 5 bars, candle patterns 2 bars, RSI 15 closes, MACD 35 bars (`MACD_SLOW + MACD_SIGNAL`), A09 50 bars, A11 63 bars, A10 80 bars. Excel cards need 600 calendar days of that name's bars before `signal_date` (`DEEP_WARMUP_DAYS`). The first store session on which a name present since 2024-03-04 can clear that Excel warmup is 2025-10-27.
+
+Calendar-year session counts inside the span: 2024 has 190 (2024-04-02 through 2024-12-31), 2025 has 250, 2026 has 174 (through 2026-09-11).
+
+### 7.3 One combination
+
+Same signal rule as Layer B: exactly one factor, or one unordered pair, or one day-over-day delta, plus one value of each other lever.
+
+Id: `{signal}|{side}|{entry}|{exit}|h{hold}m{min_hold}|stop{stop}|n{top_n}|rg{regime}`
+
+Rank: a price, candle, or AB atom, and `hot_top`, rank by `ohlc_hot_score` descending. An Excel card uses the engine's own row order. A pair uses the first of those rules that matches either member. Tie-break: ticker ascending.
+
+#### Factors (41 atoms)
+
+Price atoms use `ohlc_ripper.from_bars` on bars with `date` < session. The predicate is the same one Layer B reads off the panel row.
+
+| id | rule |
+| --- | --- |
+| `last_green` | `last_green` is true |
+| `break_10` | `break_10` is true |
+| `rsi_os` | `rsi` ≤ 30 |
+| `rsi_ob` | `rsi` ≥ 70 |
+| `macd_cross_up` | `macd_cross_up` is true |
+| `macd_up` | MACD histogram > 0 |
+| `flow_in` | `flow_in` is true |
+| `ret5_pos` | `ret_5` > 0 |
+| `rvol_ge_1_5` | `rvol` ≥ 1.5 |
+| `nr7` | `nr7` is true |
+| `hot_top` | no boolean gate; rank by `hot_score` |
+
+Candle atoms use `candle_factor.features` (8 completed bars, `date` < session). `low_s_*` rules are not here; they read S.
+
+| id | rule |
+| --- | --- |
+| `cd_engulf_bull` | `engulf_bull` |
+| `cd_engulf_bear` | `engulf_bear` |
+| `cd_hammer` | `hammer` |
+| `cd_shooting_star` | `shooting_star` |
+| `cd_morning_star` | `morning_star` |
+| `cd_three_green` | `three_green` |
+| `cd_three_red` | `three_red` |
+| `cd_body_rg_gt_1` | `body_rg` > 1 |
+| `cd_vol_rg_gt_1` | `vol_rg` > 1 |
+
+Price-only AB atoms. The flag is the committed `_pass_a` value, and the atom is true when that flag equals 1. Source is `src/ab_checklist.py` at git `01d6380c8ed6dfff34afc78feed675386b26bf68` plus the A15 patch in the current `src/ab_checklist.py`. Part B is not read.
+
+| id | true when |
+| --- | --- |
+| `a01` | `A01_rsi_value` = 1 (RSI ≤ 30) |
+| `a02` | `A02_rsi_cross_30` = 1 (cross up through 30) |
+| `a03` | `A03_rsi_cross_50` = 1 (cross up through 50) |
+| `a04` | `A04_rsi_cross_70` = 1 |
+| `a05` | `A05_body_red_green_2day` = 1 |
+| `a06` | `A06_volume_red_green_2day` = 1 |
+| `a07` | `A07_rvol` = 1 (rvol ≥ 1.5) |
+| `a08` | `A08_bollinger_position` = 1 (position ≤ −0.8) |
+| `a09` | `A09_above_sma50` = 1 |
+| `a10` | `A10_sma20_50_80_stack` = 1 (bull stack) |
+| `a11` | `A11_three_section_lows` = 1 |
+| `a12` | `A12_green_body_vs_wick_2day` = 1 |
+| `a13` | `A13_red_body_vs_wick_2day` = 1 |
+| `a15` | `A15_tape_recovery_setup` = 1 |
+
+`A14_profitable_oversold_setup` is not an atom. It requires the part-B `profitable` flag, which is not a price. `A04` equals 1 only if a later code path sets it; the committed `_pass_a` sets `A04` to −1 on both cross directions, so `a04` matches nobody and still counts.
+
+Excel atoms are the seven cards. Each `card.json` sha256:
+
+| id | card | sha256 |
+| --- | --- | --- |
+| `xl_L1` | `L1_long_green_tp8_lowvol` | `01171dfa11a9ab6fe81a040d84e0c683c39a8e1aac38b96fae8258b983cc0805` |
+| `xl_L2` | `L2_long_green_tp3_lowvol` | `04ee7e2994ccd616b95f249abda5f0e25b56653e8825669f5c176eee1c2b8978` |
+| `xl_L3` | `L3_long_green_hold2_midcap` | `49ecdba5338d58bcaee9157a52220daa8b96801b9780ffc4ff9cf4269d29c556` |
+| `xl_L4` | `L4_long_green_hold8_bbailike` | `3d48351ffa3f0b8e46b5df3460d494749690b6701af46de19b8ebb874f194f23` |
+| `xl_L5` | `L5_long_green_hold2_midhibeta` | `dc289f7a0856f47af841738cd764952aeaa837853ff0b60a3d638bcee7201127` |
+| `xl_S1` | `S1_short_red_1day_optionable` | `d4f29b1db30ab3097bd72ad7f472ccb4840b95a79429684e1b4fec504720f047` |
+| `xl_S2` | `S2_short_red_1day_hivol` | `b90b3207da854d41f1d51a01b4a7a6c8f01061ca9894f6c7d20e31ed7776938d` |
+
+A card with `signal_date` D is an input on the next store session. Color and hold math come from quote OHLC. A filter the price store cannot answer (market cap, beta, optionable) fails closed for that name unless a committed Finviz export with `date` < session already contains it. `current_price`, `ret_vs_close`, and `ret_vs_open` are ignored. Where `suggestions.csv` has that `signal_date`, the rebuilt membership is not required to match it: that CSV is a later tape and is not an input to Layer A.
+
+Count: 11 price + 9 candle + 14 AB + 7 Excel = 41.
+
+#### Pairs
+
+Every unordered pair of two distinct atoms. 41 × 40 / 2 = 820. Both must be true.
+
+#### Deltas (6)
+
+The first span session, 2024-04-02, has no prior Layer A session, so every delta matches nobody.
+
+| id | rule |
+| --- | --- |
+| `d_hot` | `hot_score` above the prior session |
+| `d_ret5` | `ret_5` above the prior session |
+| `d_rvol` | `rvol` above the prior session |
+| `d_rsi` | `rsi` above the prior session |
+| `d_cd_score` | candle `score` above the prior session |
+| `d_ab_n` | count of {A01–A13, A15} equal to 1 above the prior session |
+
+#### Other levers
+
+Side, entry, exit, hold and min_hold, stop, and top-N take the same values as Layer B section 4.4. There is no universe lever, no S gate, and no hard-red lever.
+
+Regime is one lever. It gates new buys. It does not rank names. Labels use `00_grounding/weather_rules.json`, sha256 `9e2715fae8586906a082623da799dbc9814ee2f7e315c2a037358bcbe56969d8`, and the branches in `src/weather.py` for VIX and for FRED DGS10. They do not read the general-predict score, Fear & Greed, or a committed channel-1 JSON.
+
+VIX label, from Yahoo daily `^VIX` and `^VIX3M` (else `^VXV`) closes with `date` < session: `spiking` when the ratio ≥ 1.10, `falling` when the ratio ≤ 0.90, else `spiking` when the 1-day change ≥ 1.5, `falling` when that change ≤ −1.5, else `spiking` when the spot ≥ 25, else `calm`. The ratio is VIX/VIX3M when both dates exist, else VIX over its 20-day mean when at least 10 closes exist. Missing VIX is `unknown`.
+
+Yields label, from FRED `DGS10`, latest observation with `date` < session: `delta_1d` if present, else `delta_1w`. `rising` when the delta > 0.02, `falling` when the delta < −0.02, else `flat`. Missing DGS10 is `unknown`.
+
+| regime | new buys |
+| --- | --- |
+| `off` | no regime gate |
+| `vix_calm` | only when the VIX label is `calm` |
+| `vix_not_spiking` | only when the VIX label is `calm` or `falling` |
+| `yields_falling` | only when the yields label is `falling` |
+| `yields_not_rising` | only when the yields label is `falling` or `flat` |
+
+`unknown` fails every regime except `off`, and the book sits.
+
+Signal count = 41 + 820 + 6 = 867.
+
+Other levers: 2 × 2 × 4 × 15 × 4 × 4 × 5 = 19,200.
+
+**N_A = 867 × 19,200 = 16,646,400.**
+
+Every one of those combinations is one Layer A try, including a combination that sits.
+
+### 7.4 Rolling check and yearly breakdown
+
+Check days, the last 12 store sessions before 2026-09-14, in order: `2026-08-26`, `2026-08-27`, `2026-08-28`, `2026-08-31`, `2026-09-01`, `2026-09-02`, `2026-09-03`, `2026-09-04`, `2026-09-08`, `2026-09-09`, `2026-09-10`, `2026-09-11`.
+
+The choice procedure is section 6, applied to Layer A combinations only. The choice set is Layer A sessions strictly before that check day, starting at 2024-04-02. Layer B does not enter this choice.
+
+The yearly breakdown is a report, not an extra pass gate. For every Layer A combination, and for each of 2024, 2025, and 2026, write the after-fee compound on the span sessions in that calendar year, and the without-best-stock after-fee compound on those same sessions. 2024 starts 2024-04-02. 2026 ends 2026-09-11.
+
+## 8. Tally for the luck test
 
 | layer | tries |
 | --- | ---: |
-| this grid, N | 259,522,560 |
+| Layer A, N_A | 16,646,400 |
+| Layer B, N_B | 282,746,880 |
 | OOS-0914 candidates, `data/factor_mine/oos0914_preregister.json` sha256 `989e05291a04a059062bed0ba15514ae674060679ded87de3c30447307fc659e` | 37 |
 | Theme Radar prior tries (`theme_radar_search.tries_floor` in that same file) | 8,264 |
 | Excel ML spec | `excel_ml_count` |
 
-The luck-test denominator is N + 37 + 8,264 + `excel_ml_count`. The 37 and the 8,264 are prior searches on these same days. They are counted. They are not rerun. Each layer stays separate in the report.
+The luck-test denominator is N_A + N_B + 37 + 8,264 + `excel_ml_count`. The 37 and the 8,264 are prior searches. They are counted. They are not rerun. Each line stays separate in the report.
 
-Baselines, on the same sessions, after Futubull fees: RANDOM4 (4 names, 1,000 draws, seed `20260813`, hold 1, drawn from the combination's universe that morning) and IWM buy-and-hold. IRONCLAD rule 19.
+Baselines, on that layer's own sessions, after Futubull fees: RANDOM4 (4 names, 1,000 draws, seed `20260813`, hold 1, drawn from the combination's universe that morning) and IWM buy-and-hold. IRONCLAD rule 19.
 
-## 8. What the scored run writes later
+## 9. What the scored run writes later
 
 This commit writes none of these files.
 
-Daily returns for every combination, sessions of section 1, one row per combination per session:
+Daily returns for every combination, one row per combination per session of that layer:
 
-`research/lever_search/returns/` parquet, sharded, columns `combo_id`, `date`, `ret_futubull`, `ret_flat_15bp`. This is the input to the best-of-N luck test.
+- `research/lever_search/returns/layer_a/` parquet, sharded, the 614 sessions
+- `research/lever_search/returns/layer_b/` parquet, sharded, the 21 sessions
 
-List A: combinations whose after-fee compound return on all 21 sessions is strictly above 20%.
+Columns `combo_id`, `date`, `ret_futubull`, `ret_flat_15bp`. Both series are inputs to the best-of-N luck test.
 
-List B: combinations on list A whose own after-fee compound return on the eleven check sessions is strictly positive, and whose after-fee compound return on the one designed-after window 2026-09-14 through 2026-09-25 is greater than or equal to zero. Beside each list-B row, report the without-best-stock after-fee return on the 21 sessions (drop the ticker with the highest attributed P&L; ties break to the earlier ticker). Also report the single walk-forward path from section 6.
+`research/lever_search/returns/layer_a_years.parquet`: `combo_id`, `year`, `ret_futubull`, `ret_without_best`.
+
+Layer B list A: after-fee compound on all 21 sessions strictly above 20%.
+
+Layer B list B: on list A, own after-fee compound on the eleven check sessions strictly positive, and after-fee compound on the designed-after window 2026-09-14 through 2026-09-25 greater than or equal to zero. Beside each row, the without-best-stock after-fee return on the 21 sessions (drop the ticker with the highest attributed P&L; ties break to the earlier ticker). Also the single Layer B walk-forward path.
+
+Layer A has no 20% screen. That bar was set for 21 sessions. A Layer A naming candidate has a strictly positive after-fee compound on its twelve check sessions, and an after-fee compound on the same designed-after window greater than or equal to zero. Beside each candidate, the yearly breakdown and the without-best-stock after-fee return on the 614 sessions.
 
 The designed-after window is hindsight. It is not the clean record.
 
-A named finalist is a list-B combination. At most 50 are named (IRONCLAD rule 18). Rank: walk-forward day-return compound on the days that combination was the frozen choice, descending; then the 21-session after-fee return, descending; then combination id ascending. A combination that was never the frozen choice has an empty walk-forward compound and ranks after those that were chosen. Each name is `ls_` plus the combination id. The strategy is built one day at a time from frozen 09:30 inputs. Days before 2026-09-28 are `designed_after`. The clean record starts 2026-09-28.
+Named finalists are Layer B list B plus Layer A naming candidates, at most 50 together (IRONCLAD rule 18). Rank: that layer's walk-forward compound on the days the combination was the frozen choice, descending; then that layer's full-span after-fee return, descending; then combination id ascending. A combination that was never the frozen choice ranks after those that were chosen. Layer A names start with `lsa_`. Layer B names start with `lsb_`. The strategy is built one day at a time from frozen 09:30 inputs. Days before 2026-09-28 are `designed_after`. The clean record starts 2026-09-28.
 
-Keep bar (IRONCLAD rule 21) is reported and does not add or remove a list-A or list-B row: at least 30 fires and a win rate above 55% after fees. A recipe that never traded is `untestable` and stays out of the ranking (rule 22). No real money follows from this search (rule 23).
+Keep bar (IRONCLAD rule 21) is reported and does not add or remove a row: at least 30 fires and a win rate above 55% after fees. A recipe that never traded is `untestable` and stays out of the ranking (rule 22). No real money follows from this search (rule 23).
 
-## 9. Refusal
+## 10. Refusal
 
-The scored run refuses to start when the header fingerprint disagrees with the covered bytes, when `excel_ml_count` is still `UNRESOLVED`, or when a row dated 2026-09-14 or later is passed into the search or the walk-forward.
+The scored run refuses to start when the header fingerprint disagrees with the covered bytes, when `excel_ml_count` is still `UNRESOLVED`, when a row dated 2026-09-14 or later is passed into either search or either rolling check, or when the Layer A search opens `panel.json`, a Theme Radar file, or an LLM morning file.
