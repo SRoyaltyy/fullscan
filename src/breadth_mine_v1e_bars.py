@@ -69,6 +69,7 @@ def session_jumps(bars: dict[str, list[dict]] | None = None,
                         "date": row["date"],
                         "explained": explained,
                         "ratio": round(float(ratio), 6),
+                        "split": split,
                         "ticker": ticker,
                     })
             prev = row

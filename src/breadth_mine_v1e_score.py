@@ -1013,7 +1013,7 @@ def render_report(rows: list[dict], verdict: str) -> str:
     raw_head = pass_head + " failed guards |"
     raw_rule = pass_rule + " --- |"
     header = [
-        "# Breadth mine v1d",
+        "# Breadth mine v1e",
         "",
         f"study: {STUDY}",
         "",
@@ -1021,10 +1021,10 @@ def render_report(rows: list[dict], verdict: str) -> str:
         "",
         "Ranked by Futubull after-fee compound on the whole check window, "
         "every store session from 2026-08-20 through 2026-09-11, including sessions a rule sat out. "
-        "The primary target is that compound at or above 30%. "
-        "Guards are ex-best at or above 10%, top-1 share at or below 50%, "
-        "at least 30 fires, win rate above 55%, the 2026-09-14 through 2026-09-25 compound at or above 0, "
-        "luck p below 0.05, and a compound strictly above RANDOM4 and IWM on that same window.",
+        "The primary target is that compound at or above 30% among rules that pass the guards. "
+        "Guards are at least 30 fires, win rate above 55%, top-1 share at or below 50%, "
+        "and a compound strictly above RANDOM4 and IWM on that same window. "
+        "Luck p is reported and does not decide. The 2026-09-14 through 2026-09-25 result is not a selection key.",
         "",
         f"N = {N}. Luck denominator = {LUCK_DENOMINATOR}. "
         "Raw p is the one-sided t-test. Adjusted p multiplies raw p by the denominator and caps at 1.",
@@ -1068,9 +1068,10 @@ def bar_audit_section() -> str:
         "| --- | --- | ---: | ---: | --- |",
     ]
     for row in flags:
-        split = "" if row["split"] is None else str(row["split"])
+        split = row.get("split")
+        split_text = "" if split is None else str(split)
         lines.append(
-            f"| {row['ticker']} | {row['date']} | {row['ratio']} | {split} | {str(row['explained']).lower()} |"
+            f"| {row['ticker']} | {row['date']} | {row['ratio']} | {split_text} | {str(row['explained']).lower()} |"
         )
     return "\n".join(lines) + "\n"
 
@@ -1421,7 +1422,7 @@ def study_verdict(pick: dict | None, forward: dict | None) -> str:
 
 
 def render_verdict(pick: dict | None, forward: dict | None, path: list[dict],
-                   hindsight: dict | None, verdict: str) -> str:
+                   hindsight: dict | None, verdict: str, rows: list[dict] | None = None) -> str:
     def pct(value) -> str:
         if value is None:
             return ""
@@ -1443,7 +1444,17 @@ def render_verdict(pick: dict | None, forward: dict | None, path: list[dict],
         "",
     ]
     if pick is None:
-        lines.append("No rule passed the pre-09-14 guards and the 30% compound.")
+        day_count = sum(1 for day in SESSIONS if OOS_START <= day <= "2026-09-25")
+        lines += [
+            "No rule passed the pre-09-14 guards and the 30% compound.",
+            "",
+            "Forward result, 2026-09-14 through 2026-09-25. There is no pick, so this window was not used to choose a rule.",
+            "",
+            "- Futubull compound: none",
+            "- ex-best: none",
+            "- trade count: none",
+            f"- day count: {day_count}",
+        ]
     else:
         lines += [
             f"- rule: `{pick['id']}`",
@@ -1484,8 +1495,54 @@ def render_verdict(pick: dict | None, forward: dict | None, path: list[dict],
         lines.append(
             f"`{hindsight['id']}` compound {pct(hindsight['compound'])} on 2026-09-14 through 2026-09-25. Not the pick."
         )
+    if rows:
+        lines += _highest_pre_section(rows, pct)
     lines += ["", bar_audit_section()]
     return "\n".join(lines)
+
+
+def _highest_pre_section(rows: list[dict], pct) -> list[str]:
+    """Show the pre-window ranking. It is not a second pick."""
+    testable = [row for row in rows if row["label"] != "untestable"]
+    ranked = _by_compound(testable)[:10]
+    primary_rows = [row for row in testable if row.get("primary_hit")]
+    guards = [row for row in testable if not row.get("failed")]
+    both = [row for row in primary_rows if not row.get("failed")]
+    under = [row for row in guards if not row.get("primary_hit")]
+    best_guard = sorted(under, key=lambda row: (-row["full"], row["id"]))[0] if under else None
+    sample = next((row for row in testable if row.get("random4_mean") is not None), None)
+    lines = [
+        "",
+        "## Highest pre-09-14 compounds",
+        "",
+        "These rows are not the pick. The pick is rank 1 among rules that pass the guards and the 30% bar. "
+        f"{len(primary_rows)} rules reached 30% Futubull compound. {len(both)} of those also passed every guard. "
+        f"{len(under)} rules passed every guard with compound under 30%.",
+    ]
+    if best_guard is not None:
+        lines.append(
+            f"Best guard-passing compound: `{best_guard['id']}` at {pct(best_guard['full'])}."
+        )
+    if sample is not None:
+        lines.append(
+            f"RANDOM4 mean on the check window: {pct(sample['random4_mean'])}. "
+            f"IWM on the same sessions: {pct(sample['iwm'])}."
+        )
+    lines += [
+        "Luck p is in the table and did not decide the verdict.",
+        "",
+        "| rank | rule | compound | ex-best | fires | win | top-1 | raw p | luck p | failed guards |",
+        "| ---: | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | --- |",
+    ]
+    for rank, row in enumerate(ranked, start=1):
+        failed = ", ".join(row.get("failed") or []) or "none"
+        lines.append(
+            f"| {rank} | `{row['id']}` | {pct(row['full'])} | {pct(row['ex_best'])} | {row['fires']} | "
+            f"{pct(row['win'])} | {pct(row['top1'])} | {row['raw_p']:.4g} | {row['luck_p']:.4g} | {failed} |"
+        )
+    if not ranked:
+        lines.append("|  |  |  |  |  |  |  |  |  |  |")
+    return lines
 
 
 def main() -> None:
@@ -1541,7 +1598,7 @@ def main() -> None:
     hindsight = hindsight_best(scored, ids)
     verdict = study_verdict(pick, forward)
     write_record(days, scored, rows, verdict)
-    report = render_verdict(pick, forward, path, hindsight, verdict)
+    report = render_verdict(pick, forward, path, hindsight, verdict, rows)
     (RETURNS / "REPORT.md").write_text(report, encoding="utf-8")
     print(verdict, flush=True)
 

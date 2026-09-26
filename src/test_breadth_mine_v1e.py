@@ -6,7 +6,7 @@ import numpy as np
 from src.breadth_mine_v1e_bars import assert_split_consistent, unexplained
 from src.breadth_mine_v1e_grid import LUCK_DENOMINATOR, N, PRIMARY_MIN
 from src.breadth_mine_v1e_protocol import FINGERPRINT, FORMATION_END, fingerprint_sha256
-from src.breadth_mine_v1e_score import apply_objective, cap_day, select_pick, study_verdict
+from src.breadth_mine_v1e_score import apply_objective, cap_day, render_verdict, select_pick, study_verdict
 
 
 def test_fingerprint_matches() -> None:
@@ -76,6 +76,18 @@ def test_forward_loss_is_not_a_win() -> None:
     assert study_verdict(None, None) == "nothing selected"
 
 
+def test_nothing_selected_names_the_forward_fields() -> None:
+    text = render_verdict(None, None, [], None, "nothing selected")
+    assert "Nothing used to form the pick was fitted after 2026-09-13." in text
+    assert "Verdict: `nothing selected`" in text
+    assert "Futubull compound: none" in text
+    assert "ex-best: none" in text
+    assert "trade count: none" in text
+    assert "day count: 10" in text
+    assert "walk_forward" in text
+    assert "hindsight" in text
+
+
 def test_guards_exclude_a_thin_book() -> None:
     thin = _row(fires=9, win=0.80)
     apply_objective(thin, True)
@@ -91,5 +103,6 @@ if __name__ == "__main__":
     test_candidate_cap()
     test_luck_does_not_choose_the_pick()
     test_forward_loss_is_not_a_win()
+    test_nothing_selected_names_the_forward_fields()
     test_guards_exclude_a_thin_book()
     print("ok")
