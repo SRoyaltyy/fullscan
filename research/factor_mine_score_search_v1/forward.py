@@ -147,21 +147,26 @@ def _render(payload: dict) -> str:
         "",
     ]
     labels = (("tune", "Through 2026-09-11"), ("forward", "2026-09-14 through 2026-09-25"))
+    header = (
+        "| set | version | X | compound | flat 15bp | up | down | flat | "
+        "days entered | entries | closed | win | ex-best | positive | too few |"
+    )
+    rule = "| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |"
     for key, label in labels:
         lines += [f"## {label}", ""]
-        lines.append("| set | version | X | compound | up | down | flat | days entered | entries | closed | win | ex-best | positive | too few |")
-        lines.append("| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |")
         for version in ("clean", "yahoo"):
+            lines += [header, rule]
             block = payload["versions"][version][key]
             for name in ("best", "top10", "top20"):
                 for top_n in ("2", "4", "8"):
                     row = block[name][top_n]
                     lines.append(
-                        "| {name} | {version} | {x} | {compound} | {up} | {down} | {flat} | {entered} | {entries} | {closed} | {win} | {ex} | {pos} | {few} |".format(
+                        "| {name} | {version} | {x} | {compound} | {flat15} | {up} | {down} | {flat} | {entered} | {entries} | {closed} | {win} | {ex} | {pos} | {few} |".format(
                             name=name,
                             version=version,
                             x=top_n,
                             compound=_pct(row["compound_mean"]),
+                            flat15=_pct(row["compound_15_mean"]),
                             up=_num(row["up_mean"]),
                             down=_num(row["down_mean"]),
                             flat=_num(row["flat_mean"]),
@@ -175,11 +180,11 @@ def _render(payload: dict) -> str:
                         )
                     )
             lines.append(
-                f"| IWM | {version} |  | {_pct(block['iwm']['compound'])} | {block['iwm']['up']} | {block['iwm']['down']} | {block['iwm']['flat']} |  |  |  |  |  |  |  |"
+                f"| IWM | {version} |  | {_pct(block['iwm']['compound'])} |  | {block['iwm']['up']} | {block['iwm']['down']} | {block['iwm']['flat']} |  |  |  |  |  |  |  |"
             )
             rnd = block["random4"]
             lines.append(
-                f"| RANDOM4 | {version} | 4 | {_pct(rnd['compound_mean'])} |  |  |  |  |  |  |  |  |  |  |"
+                f"| RANDOM4 | {version} | 4 | {_pct(rnd['compound_mean'])} |  |  |  |  |  |  |  |  |  |  |  |"
             )
             lines.append("")
             lines.append(
@@ -217,7 +222,7 @@ def _render(payload: dict) -> str:
         )
     lines += [
         "",
-        "Flat 15bp is printed as `compound_15_mean` in `summary.json`. It is not the rank.",
+        "Flat 15bp is the `flat 15bp` column and `compound_15_mean` in `summary.json`. It is not the rank.",
         "A row with `too few` above 0 has at least that many formulas under 30 closed trades.",
         "",
     ]
