@@ -2,7 +2,7 @@
 
 - status: protocol locked. The initial run uses server-proven inputs only. Layer B and the Excel ML spec are later add-ons. This commit has no returns, no p-values, and no luck-test output.
 - written: 2026-09-26
-- fingerprint_sha256: 29398031839c101c713d8b1a324d916b6cd345add7120a1894fdfb66caa7b94d
+- fingerprint_sha256: b056209236eb78a6589706b3b5cb4c5612b7be358fdc7e0e712936ba6b0188ac
 - fingerprint_scope: SHA-256 of the UTF-8 bytes after the line `<!-- BEGIN COVERED -->`, including the final newline. Line endings are LF.
 - scoring: do not start until Cyrus replies `go`. Results of the scored run are due by 22:00 HKT on Sunday 2026-09-27.
 - live paths: not used. No edits to flatten_robust, Webull submit, Supabase, or Theme Radar. Output of the later run lives only under `research/lever_search/`.
@@ -15,15 +15,21 @@ This is the mine that scores first. N below is the try count for that mine. The 
 
 The walk is the Factor Mine engine in section 4: one session at a time, from inputs knowable at 09:30, with the previous day's locked positions carried forward. A past buy or sell is not re-picked. The 110 recipes in that engine stay the core of the later Layer B grid. They are not an extra line in today's tally.
 
-The walk-forward is section 6. Check days are 2026-08-27 through 2026-09-11. The choice set for each check day is the initial-window sessions strictly before that day, starting 2026-08-13.
+The run window is every store session from 2026-08-13 through 2026-09-11. Each recipe runs on every one of those sessions where all of its own inputs are server-proven. A session with a missing input for that recipe is sat out. The book does not open a position from the missing input, and no value is filled in. The combination remains one try.
+
+Price and Finviz recipes start 2026-08-13, the first proven Theme Radar morning inside the window. A recipe whose signal includes an Excel card starts 2026-08-31 and runs only on Excel's seven server-proven sessions: 2026-08-31, 2026-09-02, 2026-09-03, 2026-09-04, 2026-09-08, 2026-09-10, and 2026-09-11. A recipe that reads both an Excel card and a Finviz atom needs both proven that morning. All seven Excel sessions have Finviz proof. On 2026-08-28 Finviz is missing, so a recipe that reads Finviz sits out. A price-only recipe can still run that day, and its prices stay provisional. A regime other than `off` reads `weather_rules.json`, server-proven from 2026-08-21, so that recipe sits out on 2026-08-13 through 2026-08-20.
+
+The candidate universe on 2026-08-13 through 2026-09-08 comes from proven inputs only: Theme Radar's proven Finviz mornings, and the price-only candidate sources in section 7.1. Price-only sources stay provisional pending the audit. Today's `data/factor_mine/panel.json` rows are refused as the candidate universe for 2026-08-13 through 2026-09-08. The initial run does not open `panel.json` on 2026-09-09 through 2026-09-11 either. That file stays a later add-on. On those three sessions the candidate universe is still the proven Finviz morning plus the price-only sources.
+
+The rolling walk-forward check is section 6. The first check day is 2026-08-20, the first store session after five training sessions. Training lookback is expanding: the choice set is every run-window session strictly before the check day, and the choice set starts 2026-08-13. The first check day's training set is five sessions: 2026-08-13, 2026-08-14, 2026-08-17, 2026-08-18, and 2026-08-19. Check days run through 2026-09-11. There are 16 check days. 2026-09-07 is Labor Day and is not a session.
 
 ### Inputs loaded
 
-Price levers are the Layer A price atoms, candle atoms, and price-only AB atoms in section 7, their pairs with each other, and the six price deltas. The universe is section 7.1. The daily series for a price-only signal runs 2024-04-02 through 2026-09-11. These price inputs are **PROVISIONAL**. `research/lever_search/INPUT_ASOF_MANIFEST.json`, sha256 `2ab0b23127f8773a23b84bf1df93e201974db5b9dc72741d610e16398f033cfe`, records `rebuild_match` as null on the price store, the listed roster, `src/ab_checklist.py`, and `weather_rules.json`. A recipe is not something good while an input it relies on is provisional. If the audit does not set `rebuild_match` to `exact` for that input, every recipe that relies on it is struck. Fills read `data/prices/ohlc.parquet`, so a failed price audit strikes the whole initial run. The price store's Actions run start is 2026-09-25T20:50:47Z. That is not a before-09:30 copy of any search session, and the git committer date is not proof.
+Price levers are the Layer A price atoms, candle atoms, and price-only AB atoms in section 7, their pairs with each other, and the six price deltas. On 2026-08-13 through 2026-09-08 the candidate universe is the window rule above. The price-only leg of that universe is section 7.1. The daily series for a price-only signal runs 2024-04-02 through 2026-09-11. These price inputs are **PROVISIONAL**. `research/lever_search/INPUT_ASOF_MANIFEST.json`, sha256 `2baa320b185be9657595c5dba1628f390c012aea951f0918d922841d2a42a2d7`, records `rebuild_match` as null on the price store, the listed roster, `src/ab_checklist.py`, and `weather_rules.json`. A recipe is not something good while an input it relies on is provisional. If the audit does not set `rebuild_match` to `exact` for that input, every recipe that relies on it is struck. Fills read `data/prices/ohlc.parquet`, so a failed price audit strikes the whole initial run. The price store's Actions run start is 2026-09-25T20:50:47Z. That is not a before-09:30 copy of any search session, and the git committer date is not proof.
 
 Theme Radar and Finviz levers are **available-proven** for every export morning in `SRoyaltyy/theme-radar` commit `19973230e4d80c74565e1246ada911503a808fb7`, file `research/lever_panel/server_time_proof.csv`, sha256 `5bde5e9164f499899b4ed70fcdbfde3f72b3e8b5692da645f1e9682e3c6a913e`. That file has 234 rows, all `PROVEN`, on 35 trade dates. Twenty of those dates sit inside 2026-08-13 through 2026-09-11: 2026-08-13, 2026-08-14, 2026-08-17, 2026-08-18, 2026-08-19, 2026-08-20, 2026-08-21, 2026-08-24, 2026-08-25, 2026-08-26, 2026-08-27, 2026-08-31, 2026-09-01, 2026-09-02, 2026-09-03, 2026-09-04, 2026-09-08, 2026-09-09, 2026-09-10, 2026-09-11. The initial run loads Finviz on those 20 only, and only the 15 Finviz columns behind the 16 `fv_*` atoms. Mornings after 2026-09-11 stay out of the search load. A sample of eight cited runs was read with `gh api repos/SRoyaltyy/theme-radar/actions/runs/{id}`: 31136381205, 31642191661, 31645482181, 33026531289, 33814488206, 34539436709, 34541105465, and 36187437404. On each one, `run_started_at` matched the file's `created_at` and was before 13:30 UTC on that trade date. Rubric scores, composite scores, catalyst flags, upside, `trf_d_*`, and `trf_dir_*` are available-proven on those mornings and are not loaded on this run.
 
-Excel signal columns (`ticker`, `strategy`, `signal_date`) are allowed only on server-proven days in `research/lever_search/excel_preopen_proof.csv`, sha256 `04e6b996c450427ea408646b305be91c33f0778c1f6ee167de9be1a08d129ded`. Inside the walk-forward 2026-08-27 through 2026-09-11 those days are 2026-08-31, 2026-09-02, 2026-09-03, 2026-09-04, 2026-09-08, 2026-09-10, and 2026-09-11. Every other day in that window is dropped for Excel columns: 2026-08-27, 2026-08-28, 2026-09-01, and 2026-09-09. Post-open rows are dropped even on a proven day: CMII on 2026-09-02, AUBN on 2026-09-04, and SVCC on 2026-09-11. Price and return columns stay outcomes. Pre-09-14 Excel signals were computed from mid-session prices. That is clock-legal: each pre-open copy was frozen before the next open. The results deadline is unchanged, 22:00 HKT on Sunday 2026-09-27.
+Excel signal columns (`ticker`, `strategy`, `signal_date`) are allowed only on server-proven days in `research/lever_search/excel_preopen_proof.csv`, sha256 `04e6b996c450427ea408646b305be91c33f0778c1f6ee167de9be1a08d129ded`. Inside the run window those days are 2026-08-31, 2026-09-02, 2026-09-03, 2026-09-04, 2026-09-08, 2026-09-10, and 2026-09-11. Every other session from 2026-08-13 through 2026-09-11 is sat out for a recipe that reads an Excel card: 2026-08-13, 2026-08-14, 2026-08-17, 2026-08-18, 2026-08-19, 2026-08-20, 2026-08-21, 2026-08-24, 2026-08-25, 2026-08-26, 2026-08-27, 2026-08-28, 2026-09-01, and 2026-09-09. Post-open rows are dropped even on a proven day: CMII on 2026-09-02, AUBN on 2026-09-04, and SVCC on 2026-09-11. Price and return columns stay outcomes. Pre-09-14 Excel signals were computed from mid-session prices. That is clock-legal: each pre-open copy was frozen before the next open. The results deadline is unchanged, 22:00 HKT on Sunday 2026-09-27.
 
 ### N
 
@@ -34,6 +40,8 @@ Other levers are the Layer A cross: side 2, entry 2, exit 4 (`time`, `list`, `cu
 **N = 1,659 × 19,200 = 31,852,800.**
 
 The running tally is N + 37 + 8,264 + 868 = **31,861,969**. The 37, the 8,264, and the 868 stay separate prior lines. They are not rerun.
+
+Recomputed after the run window moved to 2026-08-13: the grid is unchanged. N counts combinations. A sat-out session is not an extra try and does not multiply N. N stays 31,852,800. The running tally stays 31,861,969.
 
 Combination id: `{signal}|{side}|{entry}|{exit}|h{hold}m{min_hold}|stop{stop}|n{top_n}|reg{regime}`.
 
@@ -51,7 +59,8 @@ No later copy is substituted.
 
 - Theme Radar trade date 2026-08-28. The server-time proof has no row.
 - Any Theme Radar row dated after 2026-09-11.
-- Excel columns on walk-forward sessions 2026-08-27, 2026-08-28, 2026-09-01, and 2026-09-09. Those days are not server-proven in `excel_preopen_proof.csv`.
+- Excel columns on every run-window session outside the seven proven days: 2026-08-13, 2026-08-14, 2026-08-17, 2026-08-18, 2026-08-19, 2026-08-20, 2026-08-21, 2026-08-24, 2026-08-25, 2026-08-26, 2026-08-27, 2026-08-28, 2026-09-01, and 2026-09-09.
+- Today's `data/factor_mine/panel.json` rows as the candidate universe on 2026-08-13 through 2026-09-08.
 - Post-open Excel rows: CMII on 2026-09-02, AUBN on 2026-09-04, and SVCC on 2026-09-11.
 - `research/longhist/listed_common.txt`. No Actions run has that `head_sha`, and the events API has no `PushEvent` for it.
 - `00_grounding/weather_rules.json` on sessions before 2026-08-21. Its run start is 2026-08-21T05:46:36Z.
@@ -302,7 +311,7 @@ Top-N is applied after the gate. Names that fail the gate are not ranked.
 
 ### 4.1 Factors (110 atoms)
 
-Panel atoms use `data/factor_mine/panel.json` for that session. A camera whose source file is missing that morning matches nobody (INPUT_HISTORY). Theme Radar atoms use the frozen export joined on `(trade_date, Ticker)`. Excel atoms use the server-proven days in `excel_preopen_proof.csv`, not the current `suggestions.csv` blob. A card with `signal_date` D is an input on the next panel session, not on D, and only on a walk-forward day that file marks server-proven. The loaded cells are `ticker`, `strategy`, and `signal_date`. Price and return columns are outcomes. The seven cards are the folders under `excel_bot/strategies/`. The committed CSV has rows for L1, L2, L3, and L5 only. L4, S1, and S2 have no row through 2026-09-25, so those atoms match nobody on this window and still count.
+Panel atoms use `data/factor_mine/panel.json` for that session. A camera whose source file is missing that morning matches nobody (INPUT_HISTORY). Theme Radar atoms use the frozen export joined on `(trade_date, Ticker)`. Excel atoms use the server-proven days in `excel_preopen_proof.csv`, not the current `suggestions.csv` blob. A card with `signal_date` D is an input on the next panel session, not on D, and only on a run-window session that file marks server-proven. The loaded cells are `ticker`, `strategy`, and `signal_date`. Price and return columns are outcomes. The seven cards are the folders under `excel_bot/strategies/`. The committed CSV has rows for L1, L2, L3, and L5 only. L4, S1, and S2 have no row through 2026-09-25, so those atoms match nobody on this window and still count.
 
 | id | rule |
 | --- | --- |
@@ -467,17 +476,17 @@ No ML-lever spec was on main at the lock. It is not in N and not in the running 
 
 ## 6. Layer B walk-forward
 
-Check days, in order: `2026-08-27`, `2026-08-28`, `2026-08-31`, `2026-09-01`, `2026-09-02`, `2026-09-03`, `2026-09-04`, `2026-09-08`, `2026-09-09`, `2026-09-10`, `2026-09-11`. Eleven days.
+Check days, in order: `2026-08-20`, `2026-08-21`, `2026-08-24`, `2026-08-25`, `2026-08-26`, `2026-08-27`, `2026-08-28`, `2026-08-31`, `2026-09-01`, `2026-09-02`, `2026-09-03`, `2026-09-04`, `2026-09-08`, `2026-09-09`, `2026-09-10`, `2026-09-11`. Sixteen days. The first check day is 2026-08-20. 2026-09-07 is Labor Day and is not a session.
 
 For each check day:
 
-1. The choice set is every Layer B combination's after-fee compound return on the section 1 sessions that are strictly before that check day. The first choice set starts at 2026-08-13.
+1. The choice set is every initial-run combination's after-fee compound return on the run-window sessions that are strictly before that check day. Training lookback is expanding, and the choice set starts at 2026-08-13. The first check day's training set is the five sessions 2026-08-13, 2026-08-14, 2026-08-17, 2026-08-18, and 2026-08-19.
 2. Drop combinations with zero fires on that choice set (untestable).
 3. Freeze the one winner: highest after-fee return, then highest without-best-stock return on that same choice set, then combination id ascending.
 4. Write the frozen id and the choice-set fingerprint before scoring the check day.
 5. Score that check day with the frozen combination. The check day's return is not an input to its own choice.
 
-The Layer B walk-forward path is those eleven day returns, compounded in order. Layer A does not enter this choice.
+The initial-run walk-forward path is those sixteen day returns, compounded in order, on the N grid. Layer B's later walk-forward uses the same sixteen days on its own grid. The twelve-day list in section 7.4 is a later report and is not this check.
 
 ## 7. Layer A — rebuildable only
 
@@ -488,6 +497,8 @@ A price-only signal does not read `panel.json`, Theme Radar, or any LLM file. Op
 The membership rule is section 3 of [research/longhist/PREREG.md](../longhist/PREREG.md). That file's covered-body fingerprint is `0e519c4f8e3081571b79f23ef15f9946716ebeb46c354ea7e8c53470ec78394a` (SHA-256 of the UTF-8 bytes after `<!-- BEGIN COVERED -->`, including the final newline).
 
 The symbol roster is the frozen listed leg only: `research/longhist/listed_common.txt`, sha256 `62609d9165bcbd5e7327516ea4da03f05297698d67aab660f207ddf8426195d5`, 4,193 symbols. The delisted leg in that prereg is not fingerprinted (`tickers.json` does not exist yet), so it is out of this tally.
+
+On 2026-08-13 through 2026-09-08 this price-only list is one of the two allowed candidate sources. The other is that morning's proven Theme Radar Finviz names, when the morning is one of the 20 proven dates. Today's `panel.json` rows are refused as a candidate source on those sessions.
 
 On session D, apply section 3 unchanged: 20 prior bars, prior close in [$1, $30], 20-day mean dollar volume in [$1,000,000, $40,000,000], official open gap |G| ≥ 0.04, prior-day rvol ≥ 1.5 with `ok` true. If more than 60 names pass, keep 60 by larger |G|, then larger rvol, then ticker A→Z. Do not lower a threshold to fill the list. A dot in a symbol is sent to Yahoo as a hyphen. Bars are `data/prices` quote OHLC where the name-day is already stored.
 
@@ -574,7 +585,7 @@ Excel atoms are the seven cards. Each `card.json` sha256:
 | `xl_S1` | `S1_short_red_1day_optionable` | `d4f29b1db30ab3097bd72ad7f472ccb4840b95a79429684e1b4fec504720f047` |
 | `xl_S2` | `S2_short_red_1day_hivol` | `b90b3207da854d41f1d51a01b4a7a6c8f01061ca9894f6c7d20e31ed7776938d` |
 
-A card with `signal_date` D is an input on the next store session, and only on a day `excel_preopen_proof.csv` marks server-proven. Inside 2026-08-27 through 2026-09-11 that is the seven sessions named above. Color and hold math come from quote OHLC. A filter the price store cannot answer (market cap, beta, optionable) fails closed for that name unless a committed Finviz export with server-time proof before the session already contains it. `ref_close`, `first_open`, `current_price`, `ret_vs_close`, `ret_vs_open`, and `days_held` are outcomes. Signals dated before 2026-09-14 were computed from mid-session prices and frozen before the next open. The current `suggestions.csv` blob is a later tape and is not the pre-open copy.
+A card with `signal_date` D is an input on the next store session, and only on a day `excel_preopen_proof.csv` marks server-proven. Inside 2026-08-13 through 2026-09-11 that is the seven sessions named above. Every other session in that window is sat out for the card. Color and hold math come from quote OHLC. A filter the price store cannot answer (market cap, beta, optionable) fails closed for that name unless a committed Finviz export with server-time proof before the session already contains it. `ref_close`, `first_open`, `current_price`, `ret_vs_close`, `ret_vs_open`, and `days_held` are outcomes. Signals dated before 2026-09-14 were computed from mid-session prices and frozen before the next open. The current `suggestions.csv` blob is a later tape and is not the pre-open copy.
 
 Count: 11 price + 9 candle + 14 AB + 7 Excel = 41.
 
@@ -627,7 +638,7 @@ Every one of those combinations is one Layer A try, including a combination that
 
 Check days, the last 12 store sessions before 2026-09-14, in order: `2026-08-26`, `2026-08-27`, `2026-08-28`, `2026-08-31`, `2026-09-01`, `2026-09-02`, `2026-09-03`, `2026-09-04`, `2026-09-08`, `2026-09-09`, `2026-09-10`, `2026-09-11`.
 
-The initial run does not use these 12 check days. Its walk-forward is section 6, 2026-08-27 through 2026-09-11, and its choice set starts 2026-08-13. The 12-day list and the choice set that starts 2024-04-02 stay a later report for price-only history. They are not the success test.
+The initial run does not use these 12 check days. Its walk-forward is section 6: sixteen check days from 2026-08-20 through 2026-09-11, with an expanding choice set that starts 2026-08-13 and a five-session training set on the first check day. The 12-day list and the choice set that starts 2024-04-02 stay a later report for price-only history. They are not the success test.
 
 The yearly breakdown is a report, not an extra pass gate. For every Layer A combination, and for each of 2024, 2025, and 2026, write the after-fee compound on the span sessions in that calendar year, and the without-best-stock after-fee compound on those same sessions. 2024 starts 2024-04-02. 2026 ends 2026-09-11.
 
@@ -661,7 +672,7 @@ This commit writes none of the return files.
 
 The scored run commits a daily return series for every initial combination, not only the top recipes. One row per combination per scored session. Both fee columns are required: `ret_futubull` and `ret_flat_15bp`. The file is parquet or csv.gz under `research/lever_search/returns/initial/`. Beside it, `research/lever_search/returns/initial_manifest.json` lists every `combo_id` and the sha256 of that combination's return series, plus the sha256 of each return file.
 
-Price-only signals include the 614 sessions from 2024-04-02 through 2026-09-11. Signals that include an `fv_*` atom or an Excel card include the 21 sessions from 2026-08-13 through 2026-09-11. The designed-after rows, 2026-09-14 through 2026-09-25, are a second file written after the walk-forward choices are frozen. Same columns. Same manifest rule.
+Price-only signals include the 614 sessions from 2024-04-02 through 2026-09-11. Signals that include an `fv_*` atom or an Excel card include the 21 sessions from 2026-08-13 through 2026-09-11. A session the recipe sits out is still a row in that series. The row carries the locked book and contains no fill built from a missing input. The designed-after rows, 2026-09-14 through 2026-09-25, are a second file written after the walk-forward choices are frozen. Same columns. Same manifest rule.
 
 Both series are inputs to Excel's best-of-N luck test. The prior 8,264 and 868 keep the fingerprinted series already named in section 8. They are not rewritten.
 
@@ -671,7 +682,7 @@ The report also lists the top recipes, the after-fee return with the single best
 
 Layer B list A: after-fee compound on all 21 sessions strictly above 20%.
 
-Layer B list B: on list A, own after-fee compound on the eleven check sessions strictly positive, and after-fee compound on the designed-after window 2026-09-14 through 2026-09-25 greater than or equal to zero. Beside each row, the without-best-stock after-fee return on the 21 sessions (drop the ticker with the highest attributed P&L; ties break to the earlier ticker). Also the single Layer B walk-forward path.
+Layer B list B: on list A, own after-fee compound on the sixteen check sessions strictly positive, and after-fee compound on the designed-after window 2026-09-14 through 2026-09-25 greater than or equal to zero. Beside each row, the without-best-stock after-fee return on the 21 sessions (drop the ticker with the highest attributed P&L; ties break to the earlier ticker). Also the single Layer B walk-forward path.
 
 Layer A has no 20% screen. That bar was set for 21 sessions. A Layer A naming candidate has a strictly positive after-fee compound on its twelve check sessions, and an after-fee compound on the same designed-after window greater than or equal to zero. Beside each candidate, the yearly breakdown and the without-best-stock after-fee return on the 614 sessions.
 
@@ -683,15 +694,15 @@ Keep bar (IRONCLAD rule 21) is reported and does not add or remove a row: at lea
 
 ## 10. Refusal
 
-The scored run refuses to start when the header fingerprint disagrees with the covered bytes, when a pinned file's sha256 disagrees with the manifest, when a before-09:30 claim rests on a git author date or a git committer date, when a row dated 2026-09-14 or later is passed into the search or the walk-forward, when the search loader is given a session after 2026-09-11, when a loaded search row contains a `trade_date` after 2026-09-11, when a Theme Radar date outside the 20 proven mornings is requested, when a dropped Excel session or a dropped Excel pair is requested, when an Excel read asks for a price or return column, when an initial Finviz read asks for a column outside the 15 Finviz fields, or when a price-only signal opens `panel.json`, a Theme Radar file, or an LLM morning file.
+The scored run refuses to start when the header fingerprint disagrees with the covered bytes, when a pinned file's sha256 disagrees with the manifest, when a before-09:30 claim rests on a git author date or a git committer date, when a row dated 2026-09-14 or later is passed into the search or the walk-forward, when the search loader is given a session after 2026-09-11, when a loaded search row contains a `trade_date` after 2026-09-11, when a Theme Radar date outside the 20 proven mornings is requested, when a dropped Excel session or a dropped Excel pair is requested, when an Excel read asks for a price or return column, when an initial Finviz read asks for a column outside the 15 Finviz fields, when a price-only signal opens `panel.json`, a Theme Radar file, or an LLM morning file, when today's `panel.json` rows are read as the candidate universe for a session from 2026-08-13 through 2026-09-08, or when a recipe opens a fill on a session where one of its own inputs is not server-proven.
 
 ## 11. Success criteria
 
 Fixed before any score. A recipe is something good only when every line below holds.
 
-(a) After Futubull fees, the cumulative return on the walk-forward path 2026-08-27 through 2026-09-11 is at least 20%.
+(a) After Futubull fees, the cumulative return on the walk-forward path 2026-08-20 through 2026-09-11 is at least 20%.
 
-(b) That same walk-forward path, with the single best stock removed, is strictly positive. The best stock is the ticker with the highest attributed P&L on those eleven sessions. Ties break to the earlier ticker.
+(b) That same walk-forward path, with the single best stock removed, is strictly positive. The best stock is the ticker with the highest attributed P&L on those sixteen sessions. Ties break to the earlier ticker.
 
 (c) The after-fee compound from 2026-09-14 through 2026-09-25 is greater than or equal to zero.
 

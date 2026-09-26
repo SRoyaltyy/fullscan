@@ -46,10 +46,11 @@ FINVIZ_PROVEN_DATES: tuple[str, ...] = (
     "2026-09-11",
 )
 
-# Walk-forward sessions whose Excel signal columns are server-proven in
+# Excel signal columns are server-proven only on these sessions, from
 # research/lever_search/excel_preopen_proof.csv. The proof is the Excel Bot
 # run whose job log pushed the pre-open commit, with run updated_at before
-# 09:30 ET. The other walk-forward sessions are dropped for Excel columns.
+# 09:30 ET. Every other session in the 2026-08-13..2026-09-11 run window is
+# sat out for a recipe that reads an Excel card.
 EXCEL_SESSIONS: tuple[str, ...] = (
     "2026-08-31",
     "2026-09-02",
@@ -60,7 +61,14 @@ EXCEL_SESSIONS: tuple[str, ...] = (
     "2026-09-11",
 )
 
+# Check days with no Excel proof. Training sessions before the first check
+# day are also sat out for Excel, because they are absent from EXCEL_SESSIONS.
 EXCEL_DROPPED_SESSIONS: tuple[str, ...] = (
+    "2026-08-20",
+    "2026-08-21",
+    "2026-08-24",
+    "2026-08-25",
+    "2026-08-26",
     "2026-08-27",
     "2026-08-28",
     "2026-09-01",
@@ -86,7 +94,22 @@ EXCEL_DROPPED: frozenset[tuple[str, str]] = frozenset({
     ("SVCC", "2026-09-11"),
 })
 
+# First check day is the first store session after five training sessions
+# that begin 2026-08-13. Lookback is expanding from that start.
+TRAINING_LOOKBACK: tuple[str, ...] = (
+    "2026-08-13",
+    "2026-08-14",
+    "2026-08-17",
+    "2026-08-18",
+    "2026-08-19",
+)
+
 WALK_FORWARD: tuple[str, ...] = (
+    "2026-08-20",
+    "2026-08-21",
+    "2026-08-24",
+    "2026-08-25",
+    "2026-08-26",
     "2026-08-27",
     "2026-08-28",
     "2026-08-31",

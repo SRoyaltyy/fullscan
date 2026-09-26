@@ -3,6 +3,58 @@
   "cutoff": "09:30 America/New_York (13:30 UTC)",
   "initial_n": 31852800,
   "running_tally": 31861969,
+  "n_note": "Recomputed after the run window moved to 2026-08-13. N is the combination count. A sat-out session is not an extra try and does not multiply N.",
+  "run_window": {
+    "start": "2026-08-13",
+    "end": "2026-09-11",
+    "session_count": 21,
+    "price_finviz_start": "2026-08-13",
+    "first_proven_theme_radar_morning": "2026-08-13",
+    "excel_signal_start": "2026-08-31",
+    "sit_out": "A recipe runs on a session only when every input that recipe reads is server-proven that morning. A missing input sits the recipe out. No fill is written from the missing input. The combination remains one try."
+  },
+  "walk_forward_check": {
+    "first_day": "2026-08-20",
+    "last_day": "2026-09-11",
+    "check_day_count": 16,
+    "training_lookback": "expanding",
+    "training_start": "2026-08-13",
+    "first_check_training_count": 5,
+    "first_check_training_sessions": [
+      "2026-08-13",
+      "2026-08-14",
+      "2026-08-17",
+      "2026-08-18",
+      "2026-08-19"
+    ],
+    "check_days": [
+      "2026-08-20",
+      "2026-08-21",
+      "2026-08-24",
+      "2026-08-25",
+      "2026-08-26",
+      "2026-08-27",
+      "2026-08-28",
+      "2026-08-31",
+      "2026-09-01",
+      "2026-09-02",
+      "2026-09-03",
+      "2026-09-04",
+      "2026-09-08",
+      "2026-09-09",
+      "2026-09-10",
+      "2026-09-11"
+    ]
+  },
+  "universe_before_0909": {
+    "sessions": "2026-08-13 through 2026-09-08",
+    "sources": [
+      "Theme Radar proven Finviz mornings",
+      "price-only candidate sources in PREREG section 7.1"
+    ],
+    "price_sources": "PROVISIONAL pending rebuild_match=exact",
+    "forbidden": "data/factor_mine/panel.json rows for 2026-08-13 through 2026-09-08"
+  },
   "finviz_proven_dates": [
     "2026-08-13",
     "2026-08-14",
@@ -3025,6 +3077,46 @@
   },
   "excel_dropped_sessions": [
     {
+      "session_date": "2026-08-13",
+      "reason": "Not a server-proven day in excel_preopen_proof.csv. An Excel-signal recipe sits this session out."
+    },
+    {
+      "session_date": "2026-08-14",
+      "reason": "Not a server-proven day in excel_preopen_proof.csv. An Excel-signal recipe sits this session out."
+    },
+    {
+      "session_date": "2026-08-17",
+      "reason": "Not a server-proven day in excel_preopen_proof.csv. An Excel-signal recipe sits this session out."
+    },
+    {
+      "session_date": "2026-08-18",
+      "reason": "Not a server-proven day in excel_preopen_proof.csv. An Excel-signal recipe sits this session out."
+    },
+    {
+      "session_date": "2026-08-19",
+      "reason": "Not a server-proven day in excel_preopen_proof.csv. An Excel-signal recipe sits this session out."
+    },
+    {
+      "session_date": "2026-08-20",
+      "reason": "Not a server-proven day in excel_preopen_proof.csv. An Excel-signal recipe sits this session out."
+    },
+    {
+      "session_date": "2026-08-21",
+      "reason": "Not a server-proven day in excel_preopen_proof.csv. An Excel-signal recipe sits this session out."
+    },
+    {
+      "session_date": "2026-08-24",
+      "reason": "Not a server-proven day in excel_preopen_proof.csv. An Excel-signal recipe sits this session out."
+    },
+    {
+      "session_date": "2026-08-25",
+      "reason": "Not a server-proven day in excel_preopen_proof.csv. An Excel-signal recipe sits this session out."
+    },
+    {
+      "session_date": "2026-08-26",
+      "reason": "Not a server-proven day in excel_preopen_proof.csv. An Excel-signal recipe sits this session out."
+    },
+    {
       "session_date": "2026-08-27",
       "reason": "MISSING in excel_preopen_proof.csv. excel_bot did not exist before the open."
     },
@@ -3395,7 +3487,10 @@
       "path": "research/lever_search/excel_preopen_proof.csv",
       "sha256": "04e6b996c450427ea408646b305be91c33f0778c1f6ee167de9be1a08d129ded"
     },
-    "walk_forward": "2026-08-27..2026-09-11",
+    "run_window": "2026-08-13..2026-09-11",
+    "excel_start": "2026-08-31",
+    "walk_forward": "2026-08-20..2026-09-11",
+    "check_day_count": 16,
     "pre_0914_prices": "computed from mid-session prices; clock-legal; frozen before the next open",
     "deadline": "22:00 HKT Sunday 2026-09-27"
   }

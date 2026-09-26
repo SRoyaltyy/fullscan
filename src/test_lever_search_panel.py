@@ -371,8 +371,36 @@ def test_initial_inputs_and_hash_guard() -> None:
             pass
         else:
             raise AssertionError(f"{session} excel was accepted")
-    from src.lever_search_inputs import WALK_FORWARD
+    from src.lever_search_inputs import TRAINING_LOOKBACK, WALK_FORWARD
     assert tuple(day for day in WALK_FORWARD if day not in EXCEL_SESSIONS) == EXCEL_DROPPED_SESSIONS
+    assert WALK_FORWARD[0] == "2026-08-20"
+    assert WALK_FORWARD[-1] == "2026-09-11"
+    assert len(WALK_FORWARD) == 16
+    assert TRAINING_LOOKBACK == (
+        "2026-08-13",
+        "2026-08-14",
+        "2026-08-17",
+        "2026-08-18",
+        "2026-08-19",
+    )
+    check = manifest["walk_forward_check"]
+    assert check["first_day"] == "2026-08-20"
+    assert check["check_day_count"] == 16
+    assert check["first_check_training_count"] == 5
+    assert check["check_days"] == list(WALK_FORWARD)
+    assert check["first_check_training_sessions"] == list(TRAINING_LOOKBACK)
+    assert manifest["initial_n"] == 31852800
+    assert manifest["running_tally"] == 31861969
+    assert manifest["run_window"]["price_finviz_start"] == "2026-08-13"
+    assert manifest["run_window"]["excel_signal_start"] == "2026-08-31"
+    assert "panel.json" in manifest["universe_before_0909"]["forbidden"]
+    for session in ("2026-08-20", "2026-08-26", "2026-08-19"):
+        try:
+            assert_excel_row("AAPL", session)
+        except DroppedInput:
+            pass
+        else:
+            raise AssertionError(f"{session} excel was accepted")
     for day in manifest["finviz_mornings"]:
         for source in day["sources"]:
             if "/snapshots/" not in source["source_path"]:
