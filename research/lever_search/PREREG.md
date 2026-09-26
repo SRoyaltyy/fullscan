@@ -21,7 +21,7 @@ No score is computed in this commit.
 
 The search is two layers. Each layer has its own combination count, its own rolling check, and its own line in the luck-test tally. Both daily-return series go into that test. A try in one layer is not a try in the other, even when the factor id matches.
 
-Layer B is the full fullscan grid on the real morning panel, 2026-08-13 through 2026-09-11. It keeps the price and Excel atoms, and it includes the inputs that cannot be rebuilt: enriched AB (`boxes.ab`), S, hard-red, sector, news, heat, catalyst, and the Theme Radar fields.
+Layer B is the full fullscan grid on the real morning panel, 2026-08-13 through 2026-09-11. Its core is the recipe space of the Factor Mine engine in section 4. That core is extended with the levers the engine did not have: Excel cards, Theme Radar fields, the full pairwise set, day-over-day deltas, stops, min-hold below the hold, entry sizing, the S gate, hard-red, and the `theme_radar` universe. It includes the inputs that cannot be rebuilt: enriched AB (`boxes.ab`), S, hard-red, sector, news, heat, catalyst, and the Theme Radar fields.
 
 Layer A is rebuildable inputs only. Its universe is the price-only stand-in in section 6. Its span is 2024-04-02 through 2026-09-11.
 
@@ -35,13 +35,15 @@ Layer B's search and Layer B's walk-forward read these 21 sessions and no others
 
 `panel.json` also holds 2026-09-14 through 2026-09-25. The loader keeps a row only when `date` is in the list above. A kept row dated 2026-09-14 or later fails the run. The same cutoff applies to every other file: a bar, snapshot row, Excel signal, or Theme Radar row dated 2026-09-14 or later is not an input to the search or the walk-forward.
 
-The designed-after look in section 8 is a separate open for each layer. It may read 2026-09-14 through 2026-09-25 only after that layer's walk-forward choices are written and fingerprinted. It does not read 2026-09-28. That session is the first day of any later clean record.
+The designed-after look in section 9 is a separate open for each layer. It may read 2026-09-14 through 2026-09-25 only after that layer's walk-forward choices are written and fingerprinted. It does not read 2026-09-28. That session is the first day of any later clean record.
 
 ## 2. Clock and prices
 
 Day N uses inputs knowable at 09:30 ET on day N, plus day N−1 cash, holdings, and fees. The book is built one session at a time. A restart from a saved day must match byte for byte.
 
-Fills follow IRONCLAD rules 12 and 13. Buy at the 09:30 open. A stop fills at the stop, or at the open when the open gaps through it. When one bar touches both a stop and a target, the stop fills first. A finished hold sells at the next session's open. The close is the mark.
+Both layers walk every candidate that way. Sells and buys on day N come from the locked day N−1 lots and from inputs knowable at 09:30 on day N. A name already held is not bought again. A fill that was locked is not replaced. The old engine's `score_recipe` / `hold_return` does not do this: each session is graded as its own trade from that morning's open to the horizon close, and the next session picks again as if those shares were not still held. Compounding those overlapping equal-weight returns is the signal-only path. On the current scoreboard that path is the Signal% column. `union_vol_ab_h3` prints +81.51 there, against a cash-book Book% of +4.57. This search does not use that path.
+
+Fills follow IRONCLAD rules 12 and 13. Buy at the 09:30 open. A stop fills at the stop, or at the open when the open gaps through it. When one bar touches both a stop and a target, the stop fills first. A finished hold sells at the next session's open. The close is the mark. The engine's horizon-close grade is not a fill.
 
 Prices are Yahoo daily `indicators.quote` open, high, low, close, and volume (split-adjusted). `adjclose` is not read. Where `data/prices` already has that name-day, the search uses the stored print and does not download a second adjustment over it. A name with no bar that session is dropped from that session's book. The dropped list for the session is frozen. The day still locks.
 
@@ -72,17 +74,38 @@ Columns that are not levers, and are not read as gates, ranks, or deltas:
 
 ## 4. Layer B — one combination
 
-A Layer B combination picks exactly one signal and exactly one value from each other lever. A signal is one factor, or one unordered pair, or one day-over-day delta. It is not all three at once. Pairing every factor with every pair with every delta is a different study.
+The core is the Factor Mine mining engine introduced in [PR #126](https://github.com/SRoyaltyy/fullscan/pull/126), commit `8e8c36a7117e60040d04cfa598e503b82fd7c6ea` (`Leak-free 09:30 factor strategy miner`, merged 2026-09-05). `build_recipes()` in that commit returns **110** recipes. The count is 15 universe baselines (5 lists × holds 1, 3, 5) + 38 single gates (19 gates × holds 1 and 3) + 5 of those gates at hold 5 + 20 named combos (10 × holds 1 and 3) + 2 one-offs + 12 rank recipes (6 ranks × holds 1 and 3) + 3 top-N recipes + 5 exit recipes + 10 shorts (5 × holds 1 and 3).
+
+Those 110 are the engine's enumerated list. They are not an extra line in the luck-test tally. A grid point that lands on one of them is still one Layer B try.
+
+The axes that list varies, and the values this grid extends them with:
+
+| axis | values in the 110 | extended value list in this grid |
+| --- | --- | --- |
+| universe | `union`, `flatten`, `probable`, `yday_gainer`, `ohlc_hot` | those five, plus `theme_radar` |
+| hold | 1, 3, 5 | 1, 2, 3, 4, 5, with min-hold 1 through hold |
+| top-N | 4, 8, 12 (`TOP_N_DEFAULT` is 8) | 1, 4, 8, 12 |
+| sell | time, exit on alarm, exit on last red, exit on news red | those four, plus `list`, `cut_loser`, `trail` |
+| gate | empty, 19 single gates, 10 named combos | that gate list, plus the Excel, Theme Radar, Finviz, and remaining panel atoms below, their unordered pairs, and the deltas |
+
+Side is already `long` or `short` in the 110. Stops, entry sizing, the S gate, and hard-red are not in `build_recipes()`. They are extension axes.
+
+A Layer B combination picks exactly one signal and exactly one value from each other lever. A signal is one factor, or one unordered pair, or one named compound, or one day-over-day delta. It is not more than one of those at once.
 
 The combination id, used for tie-breaks and the parquet key, is:
 
 `{signal}|{side}|{entry}|{exit}|h{hold}m{min_hold}|stop{stop}|n{top_n}|u{universe}|s{s_gate}|hr{hard_red}`
 
-`signal` is `f:{atom}`, `p:{a}+{b}` with `a` < `b` in byte order, or `d:{delta}`.
+`signal` is `f:{atom}`, `p:{a}+{b}` with `a` < `b` in byte order, `c:{compound}`, or `d:{delta}`.
 
-Rank is not a free lever. It is fixed by the signal:
+`union` is that morning's `panel.json` rows. `flatten`, `probable`, `yday_gainer`, and `ohlc_hot` keep a row only when `sources` contains that name. `theme_radar` is the frozen export for that `trade_date`. A camera gate on a name that is not on the panel that morning matches nobody.
 
-- any panel price atom, any panel camera atom, `hot_top`, or a delta of a price or camera field: rank by `ohlc_hot_score` descending
+The 19 single gates and the named combos forbid `alarm`, as those recipes do in `build_recipes()`. Any other signal does not.
+
+Rank is not a free lever. The engine's `rank_key` names are `src_rank`, `hot_score`, `candle_score`, `ret_5`, `cond`, `w_hot_cond`, and `w_hot_candle`. This grid fixes the key from the signal:
+
+- a core gate with no score of its own, or a camera atom: `src_rank` ascending, then ticker
+- any panel price atom, `hot_top`, or a delta of a price field: `hot_score` descending
 - an Excel card alone: the card's own row order
 - a Theme Radar score atom: that score descending
 - a pair: the first of those rules that matches either member
@@ -90,7 +113,7 @@ Rank is not a free lever. It is fixed by the signal:
 
 Top-N is applied after the gate. Names that fail the gate are not ranked.
 
-### 4.1 Factors (95 atoms)
+### 4.1 Factors (110 atoms)
 
 Panel atoms use `data/factor_mine/panel.json` for that session. A camera whose source file is missing that morning matches nobody (INPUT_HISTORY). Theme Radar atoms use the frozen export joined on `(trade_date, Ticker)`. Excel atoms use `excel_bot/suggestions/suggestions.csv`. A card with `signal_date` D is knowable after D's close, so it is an input on the next panel session, not on D. `current_price`, `ret_vs_close`, and `ret_vs_open` are ignored. The seven cards are the folders under `excel_bot/strategies/`. The committed CSV has rows for L1, L2, L3, and L5 only. L4, S1, and S2 have no row through 2026-09-25, so those atoms match nobody on this window and still count.
 
@@ -101,6 +124,21 @@ Panel atoms use `data/factor_mine/panel.json` for that session. A camera whose s
 | `news_good` | `boxes.news` is `good` |
 | `heat_good` | `boxes.heat` is `good` |
 | `catal_good` | `boxes.catal` is `good` |
+| `vol_g` | `boxes.vol` is `good` |
+| `vol_missing` | `boxes.vol` is `missing` |
+| `join_g` | `boxes.join` is `good` |
+| `join_present` | `boxes.join` is not `missing` |
+| `news_present` | `boxes.news` is not `missing` |
+| `news_missing` | `boxes.news` is `missing` |
+| `catal_present` | `boxes.catal` is not `missing` |
+| `blue` | `blue` is true |
+| `white` | `zero_red` is true |
+| `last_red` | `last_red` is true |
+| `candle` | `candle_capture` is true |
+| `coil_off` | `ohlc_ret_5` is between 0 and 10 inclusive, and `ohlc_rvol` is between 0.7 and 2.2 inclusive |
+| `earn_react` | `erd_earn_react` is true |
+| `e_fresh` | `erd_days_since_E` ≤ 1 and `erd_flag_E` ≥ 0 |
+| `r_up` | `erd_days_since_R` ≤ 5 and `erd_flag_R` is 1 |
 | `last_green` | `last_green` is true |
 | `break_10` | `ohlc_break_10` is true |
 | `rsi_os` | `rsi_os` is true |
@@ -164,15 +202,26 @@ Catalyst flags, rule is the column equal to 1:
 
 `trf_upside_pos`: `trf_upside_pct_lvl` > 0.
 
-Count: 16 panel + 7 Excel + 16 Finviz + 33 rubric + 14 composite + 8 catalyst + 1 upside = 95.
+Count: 16 panel + 15 engine gates + 7 Excel + 16 Finviz + 33 rubric + 14 composite + 8 catalyst + 1 upside = 110.
 
-The 16 panel atoms are `ab_good`, `sector_good`, `news_good`, `heat_good`, `catal_good`, and the 11 price atoms from `last_green` through `hot_top`.
+The 16 panel atoms are `ab_good`, `sector_good`, `news_good`, `heat_good`, `catal_good`, and the 11 price atoms from `last_green` through `hot_top`. The 15 engine gates are `vol_g` through `r_up`. Together with `ab_good`, `news_good`, `last_green`, and `break_10`, those are the 19 single gates in `build_recipes()`.
 
-### 4.2 Pairs
+### 4.2 Pairs and named compounds
 
-Every unordered pair of two distinct atoms. 95 × 94 / 2 = 4,465. Both atoms must be true. A name that is absent from one side of the join fails the pair.
+Every unordered pair of two distinct atoms. 110 × 109 / 2 = 5,995. Both atoms must be true. A name that is absent from one side of the join fails the pair.
 
-### 4.3 Day-over-day deltas (42)
+Four engine combos are not a pair of two atoms. Each is one signal, id `c:` plus the name. They forbid `alarm`.
+
+| id | rule |
+| --- | --- |
+| `c:probable_ok` | `last_green` and `ohlc_ret_5` ≤ 10 |
+| `c:blue_coil` | `blue` and `ohlc_ret_5` ≤ 10 |
+| `c:white_coil` | `white` and `ohlc_ret_5` ≤ 10 and `ohlc_rvol` ≤ 2.2 |
+| `c:join_vol_green` | `join_g` and `vol_g` and `last_green` |
+
+`coil_green` is the pair `coil_off` + `last_green`. `vol_ab`, `blue_vol`, `news_vol`, `e_green`, and `vol_green` are pairs of the atoms above. They are not a second signal.
+
+### 4.3 Day-over-day deltas (44)
 
 A delta uses the value on the prior session and the value on this morning. Both must already be knowable at 09:30. The first session, 2026-08-13, has no prior search session, so every delta matches nobody and the book sits.
 
@@ -187,6 +236,8 @@ A delta uses the value on the prior session and the value on this morning. Both 
 | `d_news_tone` | `boxes.news` moved toward `good`, same steps |
 | `d_heat_tone` | `boxes.heat` moved toward `good`, same steps |
 | `d_catal_tone` | `boxes.catal` moved toward `good`, same steps |
+| `d_vol_tone` | `boxes.vol` moved toward `good`, same steps |
+| `d_join_tone` | `boxes.join` moved toward `good`, same steps |
 | `d_s` | morning S above the prior session |
 | `d_tr1d_total` | `tr1d_total_score` above the prior trade_date |
 | `d_tr1w_total` | `tr1w_total_score` above the prior trade_date |
@@ -203,19 +254,19 @@ Plus `trf_d_*` > 0 for these 28 columns, id `d_` plus the column slug (`d_price`
 | --- | --- |
 | side | `long`, `short` |
 | entry | `open_equal` (leftover cash split equally), `open_rank` (leftover cash weighted by rank). Both buy at the 09:30 open. |
-| exit | `time` (sell the remainder at the open after `hold` sessions), `list` (sell at the open when the name leaves the list, after `min_hold`), `cut_loser` (sell a 3% loser at the next open; book `CUT_LOS`), `trail` (5% off the favorable extreme; book `TRAIL_OFF`) |
+| exit | `time` (sell the remainder at the next open after `hold` sessions), `list` (sell at the open when the name leaves the list, after `min_hold`), `cut_loser` (sell a 3% loser at the next open; book `CUT_LOS`), `trail` (5% off the favorable extreme; book `TRAIL_OFF`), `exit_alarm` (sell at the next open when `alarm` is true, after `min_hold`), `exit_last_red` (sell at the next open when `last_red` is true, after `min_hold`), `exit_news_bad` (sell at the next open when `boxes.news` is `bad`, after `min_hold`) |
 | hold and min_hold | hold is 1, 2, 3, 4, or 5 sessions. min_hold is an integer from 1 through hold. The 15 legal pairs are (1,1), (2,1), (2,2), (3,1), (3,2), (3,3), (4,1), (4,2), (4,3), (4,4), (5,1), (5,2), (5,3), (5,4), (5,5). |
 | stop | `none`, `0.03`, `0.05`, `0.08` (fraction under the fill for a long, over the fill for a short) |
 | top-N | `1`, `4`, `8`, `12` |
-| universe | `panel` (that morning's `panel.json` rows), `theme_radar` (that `trade_date` on the frozen export; 11,568 to 11,659 tickers on the search sessions that have a row) |
+| universe | `union` (that morning's `panel.json` rows), `flatten`, `probable`, `yday_gainer`, `ohlc_hot` (row `sources` must contain the name), `theme_radar` (that `trade_date` on the frozen export; 11,568 to 11,659 tickers on the search sessions that have a row) |
 | S gate | `off`, `gt_0` (new buys only when morning S > 0), `gt_5` (S > 5), `le_0` (S ≤ 0). S is the committed general-predict total score, else weather `general_score`. A missing S fails every gate except `off`. |
 | hard-red | `off`, `on`. `on` sits new buys when S ≤ −3. A missing S with `on` sits. |
 
-Signal count = 95 + 4,465 + 42 = 4,602.
+Signal count = 110 + 5,995 + 4 + 44 = 6,153.
 
-The other levers multiply to 2 × 2 × 4 × 15 × 4 × 4 × 2 × 4 × 2 = 61,440.
+The other levers multiply to 2 × 2 × 7 × 15 × 4 × 4 × 6 × 4 × 2 = 322,560.
 
-**N_B = 4,602 × 61,440 = 282,746,880.**
+**N_B = 6,153 × 322,560 = 1,984,711,680.**
 
 Every one of those combinations is one Layer B try, including a combination that sits because a file is missing or a gate matches nobody.
 
@@ -359,7 +410,7 @@ The first span session, 2024-04-02, has no prior Layer A session, so every delta
 
 #### Other levers
 
-Side, entry, exit, hold and min_hold, stop, and top-N take the same values as Layer B section 4.4. There is no universe lever, no S gate, and no hard-red lever.
+Side is `long` or `short`. Entry is `open_equal` or `open_rank`. Exit is `time`, `list`, `cut_loser`, or `trail`. Hold and min-hold are the 15 pairs in section 4.4. Stop is `none`, `0.03`, `0.05`, or `0.08`. Top-N is `1`, `4`, `8`, or `12`. There is no universe lever, no S gate, and no hard-red lever. Layer A's exits do not include `exit_alarm`, `exit_last_red`, or `exit_news_bad`.
 
 Regime is one lever. It gates new buys. It does not rank names. Labels use `00_grounding/weather_rules.json`, sha256 `9e2715fae8586906a082623da799dbc9814ee2f7e315c2a037358bcbe56969d8`, and the branches in `src/weather.py` for VIX and for FRED DGS10. They do not read the general-predict score, Fear & Greed, or a committed channel-1 JSON.
 
@@ -398,12 +449,12 @@ The yearly breakdown is a report, not an extra pass gate. For every Layer A comb
 | layer | tries |
 | --- | ---: |
 | Layer A, N_A | 16,646,400 |
-| Layer B, N_B | 282,746,880 |
+| Layer B, N_B | 1,984,711,680 |
 | OOS-0914 candidates, `data/factor_mine/oos0914_preregister.json` sha256 `989e05291a04a059062bed0ba15514ae674060679ded87de3c30447307fc659e` | 37 |
 | Theme Radar prior tries (`theme_radar_search.tries_floor` in that same file) | 8,264 |
 | Excel ML spec | `excel_ml_count` |
 
-The luck-test denominator is N_A + N_B + 37 + 8,264 + `excel_ml_count`. The 37 and the 8,264 are prior searches. They are counted. They are not rerun. Each line stays separate in the report.
+The luck-test denominator is N_A + N_B + 37 + 8,264 + `excel_ml_count`. With `excel_ml_count` at 0 that is 2,001,366,381. The 37 and the 8,264 are prior searches. They are counted. They are not rerun. Each line stays separate in the report.
 
 Baselines, on that layer's own sessions, after Futubull fees: RANDOM4 (4 names, 1,000 draws, seed `20260813`, hold 1, drawn from the combination's universe that morning) and IWM buy-and-hold. IRONCLAD rule 19.
 
