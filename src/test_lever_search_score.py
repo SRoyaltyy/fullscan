@@ -87,9 +87,11 @@ def test_hold_one_sells_next_open_and_reprices_15bp() -> None:
     )
     first, second = book["days"]
     assert [fill["side"] for fill in first["fills"]] == ["BUY"]
-    assert [fill["side"] for fill in second["fills"]] == ["SELL"]
+    # The lot sells at the next open. The name still matches, so it is bought again.
+    assert [fill["side"] for fill in second["fills"]] == ["SELL", "BUY"]
     assert first["fills"][0]["price"] == 10.0
     assert second["fills"][0]["price"] == 12.0
+    assert second["fills"][1]["price"] == 12.0
     assert first["ret_flat_15bp"] != first["ret_futubull"]
     shares = first["fills"][0]["shares"]
     assert fee_15(shares, 10.0) == round(shares * 10.0 * 0.000075, 4)
