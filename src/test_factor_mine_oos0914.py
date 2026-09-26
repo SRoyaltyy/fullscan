@@ -1369,6 +1369,42 @@ def test_second_restate_is_refused(tmp_path: Path) -> None:
         raise AssertionError("write_state accepted a changed day")
 
 
+def test_published_view_comes_from_ledgers(tmp_path: Path) -> None:
+    """The scoreboard follows the locked ledgers and does not rewrite them."""
+    tmp_path.mkdir(parents=True, exist_ok=True)
+    before = oos._lock_file_hashes()
+    report = tmp_path / "test_report.json"
+    board = tmp_path / "board.md"
+    report.write_bytes(oos.TEST_REPORT.read_bytes())
+    saved = (oos.TEST_REPORT, oos.SCOREBOARD)
+    oos.TEST_REPORT = report
+    oos.SCOREBOARD = board
+    try:
+        fresh = oos.refresh_published_from_ledgers()
+    finally:
+        oos.TEST_REPORT, oos.SCOREBOARD = saved
+    assert oos._lock_file_hashes() == before
+    text = board.read_text(encoding="utf-8")
+    assert "RESTATEMENTS.md" in text
+    assert "designed after the fact" in text
+    assert "The 2026-09-25 rows below are that restated ledger." in text
+    assert "RANDOM4 and IWM were not rebuilt" in text
+    assert "FEAM" in text
+    restated = next(
+        rule for rule in fresh["rules"] if rule["name"] == "oos0914_break10_h2_sx"
+    )
+    day = next(row for row in restated["days"] if row["date"] == "2026-09-25")
+    sold = {oos._tick(item) for item in day["sells"]}
+    assert sold == {"FEAM", "SVIA"}
+    assert day["equity"] != 10028.12
+    assert fresh["restatement"]["date"] == "2026-09-25"
+    assert fresh["restatement"]["clean_record"] is False
+    # Other locked days stay the rows the ledgers already had.
+    prior = next(row for row in restated["days"] if row["date"] == "2026-09-24")
+    assert prior["equity"] == 10028.12
+    assert {oos._tick(item) for item in prior["sells"]} == {"ARM", "ARQQ", "GRAL", "NUAI"}
+
+
 def test_logged_0925_restate_cannot_run_again() -> None:
     """The committed log is the lock. A second call does not touch 09-24."""
     text = oos.RESTATE_LOG.read_text(encoding="utf-8")
@@ -1438,6 +1474,7 @@ def main() -> None:
         test_oos_bar_load_includes_a_carried_name(root / "held_bars")
         test_restate_refuses_any_other_date(root / "restate_dates")
         test_second_restate_is_refused(root / "restate_once")
+        test_published_view_comes_from_ledgers(root / "published_view")
         test_logged_0925_restate_cannot_run_again()
     assert fmf.MANIFEST_PATH.read_bytes() == manifest
     print("oos0914 tests passed")

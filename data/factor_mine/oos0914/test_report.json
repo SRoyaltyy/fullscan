@@ -297,21 +297,65 @@
         },
         {
           "date": "2026-09-25",
-          "buys": [],
-          "sells": [],
-          "fees": 0,
-          "cash": 9972.65,
-          "equity": 10028.12,
-          "mean": 0.0,
-          "mean_flat_15bp": 0.0
+          "buys": [
+            {
+              "fill_rule": "open",
+              "price": 6.06,
+              "shares": 413,
+              "side": "BUY",
+              "ticker": "GLND"
+            },
+            {
+              "fill_rule": "open",
+              "price": 29.76,
+              "shares": 84,
+              "side": "BUY",
+              "ticker": "TJGC"
+            },
+            {
+              "fill_rule": "open",
+              "price": 16.21,
+              "shares": 154,
+              "side": "BUY",
+              "ticker": "SECZ"
+            },
+            {
+              "fill_rule": "open",
+              "price": 15.5811,
+              "shares": 160,
+              "side": "BUY",
+              "ticker": "USDE"
+            }
+          ],
+          "sells": [
+            {
+              "fill_rule": "open",
+              "price": 2.77,
+              "shares": 10,
+              "side": "SELL",
+              "ticker": "FEAM"
+            },
+            {
+              "fill_rule": "open",
+              "price": 3.94,
+              "shares": 7,
+              "side": "SELL",
+              "ticker": "SVIA"
+            }
+          ],
+          "fees": 13.1355,
+          "cash": 22.86,
+          "equity": 9732.88,
+          "mean": -2.9441,
+          "mean_flat_15bp": -2.8556
         }
       ],
       "keep_bar_met": false,
       "keep_bar_note": "12 train fires against the 30-fire bar. Excel's luck test p=0.87.",
-      "after_fees_return": 0.281,
-      "start_day_win_rate": 0.3,
+      "after_fees_return": -2.671,
+      "start_day_win_rate": 0.0,
       "best_stock": "SDGR",
-      "without_best_stock_return": -3.035
+      "without_best_stock_return": -5.883
     },
     {
       "name": "oos0914_rvol_lg_h1_sx",
@@ -757,21 +801,50 @@
         },
         {
           "date": "2026-09-25",
-          "buys": [],
+          "buys": [
+            {
+              "fill_rule": "open",
+              "price": 6.06,
+              "shares": 381,
+              "side": "BUY",
+              "ticker": "GLND"
+            },
+            {
+              "fill_rule": "open",
+              "price": 16.21,
+              "shares": 142,
+              "side": "BUY",
+              "ticker": "SECZ"
+            },
+            {
+              "fill_rule": "open",
+              "price": 123.5,
+              "shares": 18,
+              "side": "BUY",
+              "ticker": "GRAL"
+            },
+            {
+              "fill_rule": "open",
+              "price": 10.2,
+              "shares": 226,
+              "side": "BUY",
+              "ticker": "DNA"
+            }
+          ],
           "sells": [],
-          "fees": 0,
-          "cash": 9243.36,
-          "equity": 9243.36,
-          "mean": 0.0,
-          "mean_flat_15bp": 0.0
+          "fees": 12.2903,
+          "cash": 92.19,
+          "equity": 9162.43,
+          "mean": -0.8755,
+          "mean_flat_15bp": -0.7873
         }
       ],
       "keep_bar_met": false,
       "keep_bar_note": "12 train fires against the 30-fire bar. Excel's luck test p=0.87.",
-      "after_fees_return": -7.566,
+      "after_fees_return": -8.376,
       "start_day_win_rate": 0.0,
       "best_stock": "CYPH",
-      "without_best_stock_return": -9.186
+      "without_best_stock_return": -9.971
     },
     {
       "name": "oos0914_break10_h1_sx",
@@ -1217,21 +1290,50 @@
         },
         {
           "date": "2026-09-25",
-          "buys": [],
+          "buys": [
+            {
+              "fill_rule": "open",
+              "price": 6.06,
+              "shares": 349,
+              "side": "BUY",
+              "ticker": "GLND"
+            },
+            {
+              "fill_rule": "open",
+              "price": 29.76,
+              "shares": 71,
+              "side": "BUY",
+              "ticker": "TJGC"
+            },
+            {
+              "fill_rule": "open",
+              "price": 16.21,
+              "shares": 130,
+              "side": "BUY",
+              "ticker": "SECZ"
+            },
+            {
+              "fill_rule": "open",
+              "price": 15.5811,
+              "shares": 135,
+              "side": "BUY",
+              "ticker": "USDE"
+            }
+          ],
           "sells": [],
-          "fees": 0,
-          "cash": 8464.79,
-          "equity": 8464.79,
-          "mean": 0.0,
-          "mean_flat_15bp": 0.0
+          "fees": 11.4801,
+          "cash": 14.66,
+          "equity": 8214.71,
+          "mean": -2.9544,
+          "mean_flat_15bp": -2.7947
         }
       ],
       "keep_bar_met": false,
       "keep_bar_note": "12 train fires against the 30-fire bar. Excel's luck test p=0.87.",
-      "after_fees_return": -15.352,
+      "after_fees_return": -17.853,
       "start_day_win_rate": 0.0,
-      "best_stock": "HLP",
-      "without_best_stock_return": -16.676
+      "best_stock": "USDE",
+      "without_best_stock_return": -19.526
     },
     {
       "name": "oos0914_zero_candle_h2_sx",
@@ -1506,21 +1608,79 @@
         },
         {
           "date": "2026-09-25",
-          "buys": [],
-          "sells": [],
-          "fees": 0,
-          "cash": 158.23,
-          "equity": 10387.12,
-          "mean": 0.0,
-          "mean_flat_15bp": 0.0
+          "buys": [
+            {
+              "fill_rule": "open",
+              "price": 171.98,
+              "shares": 15,
+              "side": "BUY",
+              "ticker": "A"
+            },
+            {
+              "fill_rule": "open",
+              "price": 410.0,
+              "shares": 6,
+              "side": "BUY",
+              "ticker": "NTRA"
+            },
+            {
+              "fill_rule": "open",
+              "price": 10.28,
+              "shares": 251,
+              "side": "BUY",
+              "ticker": "SENS"
+            },
+            {
+              "fill_rule": "open",
+              "price": 7.85,
+              "shares": 328,
+              "side": "BUY",
+              "ticker": "RSKD"
+            }
+          ],
+          "sells": [
+            {
+              "fill_rule": "open",
+              "price": 171.98,
+              "shares": 15,
+              "side": "SELL",
+              "ticker": "A"
+            },
+            {
+              "fill_rule": "open",
+              "price": 87.38,
+              "shares": 29,
+              "side": "SELL",
+              "ticker": "DXCM"
+            },
+            {
+              "fill_rule": "open",
+              "price": 112.95,
+              "shares": 22,
+              "side": "SELL",
+              "ticker": "NICE"
+            },
+            {
+              "fill_rule": "open",
+              "price": 18.4,
+              "shares": 140,
+              "side": "SELL",
+              "ticker": "NTSK"
+            }
+          ],
+          "fees": 20.2247,
+          "cash": 117.85,
+          "equity": 10246.9,
+          "mean": -1.3499,
+          "mean_flat_15bp": -1.3012
         }
       ],
       "keep_bar_met": false,
       "keep_bar_note": "12 train fires against the 30-fire bar. Excel's luck test p=0.87.",
-      "after_fees_return": 3.871,
-      "start_day_win_rate": 0.6,
+      "after_fees_return": 2.469,
+      "start_day_win_rate": 0.4,
       "best_stock": "WGS",
-      "without_best_stock_return": 1.33
+      "without_best_stock_return": -0.04
     }
   ],
   "baselines": {
@@ -1567,5 +1727,12 @@
       }
     }
   },
-  "research_shorts": []
+  "research_shorts": [],
+  "restatement": {
+    "date": "2026-09-25",
+    "record": "designed_after",
+    "clean_record": false,
+    "log": "03_scoreboard/RESTATEMENTS.md",
+    "note": "Restated once. The first lock had no session bars. Designed after the fact; not part of the clean record."
+  }
 }

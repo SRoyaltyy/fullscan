@@ -1447,6 +1447,20 @@ def render_scoreboard(train: dict, test: dict | None) -> str:
         "if the same bar also hits a take-profit, the stop fills first. "
         "The flat 15bp column prices those same fills at 7.5 bp per side."
     )
+    if (
+        OOS_RESTATE_DATE in sessions
+        and restatement_logged(OOS_RESTATE_DATE)
+    ):
+        lines.append("")
+        lines.append(
+            f"{OOS_RESTATE_DATE} was restated once from the same frozen "
+            "snapshot and the same frozen rules. The first lock had no "
+            "session bars. The 2026-09-25 rows below are that restated "
+            "ledger. The day is designed after the fact and is not part of "
+            "the clean record. See [RESTATEMENTS.md](RESTATEMENTS.md). "
+            "RANDOM4 and IWM in the headline were not rebuilt. They still "
+            "include the first, unpriced 09-25 session."
+        )
     lines.append("")
     for rule in frozen:
         lines += [f"### `{rule['name']}`", ""]
@@ -1488,6 +1502,18 @@ def render_scoreboard(train: dict, test: dict | None) -> str:
         f"| IWM buy-and-hold | {_pct(((base.get('iwm') or {}).get('futubull') or {}).get('after_fees_return'))} | "
         f"{_pct(((base.get('iwm') or {}).get('futubull_plus_15bp') or {}).get('after_fees_return'))} |",
         "",
+    ]
+    if (
+        OOS_RESTATE_DATE in ((test or {}).get("sessions") or [])
+        and restatement_logged(OOS_RESTATE_DATE)
+    ):
+        lines.append(
+            "RANDOM4 and IWM were not rebuilt after the "
+            f"{OOS_RESTATE_DATE} restatement. Those two rows still include "
+            "the first lock, which had no session bars."
+        )
+        lines.append("")
+    lines += [
         "## Luck check",
         "",
         f"On the train window the best-of-{r4t.get('n_candidates')} null "
@@ -1806,6 +1832,90 @@ def _write_test(dates: list[str], recipes: list[dict]) -> dict:
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     TEST_REPORT.write_text(json.dumps(test, indent=2), encoding="utf-8")
     SCOREBOARD.write_text(render_scoreboard(train, test), encoding="utf-8")
+    return test
+
+
+def _lock_file_hashes() -> dict[str, str]:
+    """sha256 of every OOS ledger and state file. The published view must not move these."""
+    found = {}
+    for path in sorted(LEDGER_DIR.glob("*")):
+        if path.is_file():
+            found[str(path.relative_to(ROOT))] = hashlib.sha256(path.read_bytes()).hexdigest()
+    for path in sorted(STATE_ROOT.glob("*/*.json")):
+        found[str(path.relative_to(ROOT))] = hashlib.sha256(path.read_bytes()).hexdigest()
+    return found
+
+
+def _assert_ledger_matches_state(name: str, dates: list[str]) -> None:
+    """The published row is the ledger. The ledger matches that recipe's state."""
+    for date in dates:
+        path = LEDGER_DIR / f"{date}.json"
+        if not path.is_file():
+            raise SystemExit(f"[oos0914] view refuses; missing ledger {date}")
+        slot = (json.loads(path.read_text(encoding="utf-8")).get("recipes") or {}).get(name) or {}
+        state = seq.read_state(name, date, STATE_ROOT) or {}
+        if not state:
+            raise SystemExit(f"[oos0914] view refuses; missing state {name} {date}")
+        for key in ("buys", "sells", "holdings"):
+            if (slot.get(key) or []) != (state.get(key) or []):
+                raise SystemExit(f"[oos0914] view refuses; {name} {date} {key} ledger != state")
+        for key in ("fees", "cash", "equity", "mean"):
+            if not _same_number(slot.get(key), state.get(key)):
+                raise SystemExit(f"[oos0914] view refuses; {name} {date} {key} ledger != state")
+        trades = slot.get("trades") or []
+        fills = state.get("fills") or []
+        if trades != fills:
+            raise SystemExit(f"[oos0914] view refuses; {name} {date} fills ledger != state")
+
+
+def refresh_published_from_ledgers() -> dict:
+    """Rewrite the test report and scoreboard from the locked ledgers.
+
+    Does not write a ledger, a state file, a fingerprint, or a frozen rule.
+    """
+    recipes = frozen_recipes()
+    if not recipes:
+        raise SystemExit("[oos0914] view refuses; nothing frozen")
+    dates = test_dates()
+    if not dates:
+        raise SystemExit("[oos0914] view refuses; no locked test session")
+    before = _lock_file_hashes()
+    for rec in recipes:
+        _assert_ledger_matches_state(rec["name"], dates)
+    rules = [_rule_report(rec, dates, STATE_ROOT) for rec in recipes]
+    test = {}
+    if TEST_REPORT.is_file():
+        test = json.loads(TEST_REPORT.read_text(encoding="utf-8"))
+    test["sessions"] = dates
+    test["rules"] = rules
+    if restatement_logged(OOS_RESTATE_DATE) and OOS_RESTATE_DATE in dates:
+        test["restatement"] = {
+            "date": OOS_RESTATE_DATE,
+            "record": "designed_after",
+            "clean_record": False,
+            "log": "03_scoreboard/RESTATEMENTS.md",
+            "note": (
+                "Restated once. The first lock had no session bars. "
+                "Designed after the fact; not part of the clean record."
+            ),
+        }
+    OUT_DIR.mkdir(parents=True, exist_ok=True)
+    TEST_REPORT.write_text(json.dumps(test, indent=2), encoding="utf-8")
+    train = json.loads(TRAIN_REPORT.read_text(encoding="utf-8"))
+    SCOREBOARD.parent.mkdir(parents=True, exist_ok=True)
+    SCOREBOARD.write_text(render_scoreboard(train, test), encoding="utf-8")
+    after = _lock_file_hashes()
+    if after != before:
+        moved = sorted(set(before) | set(after))
+        bad = [rel for rel in moved if before.get(rel) != after.get(rel)]
+        raise SystemExit(
+            "[oos0914] view moved a locked file:\n" + "\n".join(bad)
+        )
+    print(
+        f"[oos0914] published view from ledgers days={len(dates)} "
+        f"rules={len(rules)} locks={len(after)}",
+        flush=True,
+    )
     return test
 
 
@@ -2362,7 +2472,9 @@ def apply_report_view() -> None:
 def main(argv=None) -> int:
     import argparse
     parser = argparse.ArgumentParser(description="OOS-0914 strategy mine")
-    parser.add_argument("cmd", choices=("mine", "freeze", "score", "append", "restate"))
+    parser.add_argument(
+        "cmd", choices=("mine", "freeze", "score", "append", "restate", "view")
+    )
     parser.add_argument("--through", default="")
     parser.add_argument("--write", action="store_true")
     args = parser.parse_args(argv)
@@ -2374,6 +2486,8 @@ def main(argv=None) -> int:
         score()
     elif args.cmd == "restate":
         restate_oos_day(args.through)
+    elif args.cmd == "view":
+        refresh_published_from_ledgers()
     else:
         append_nightly(through=args.through, write=args.write or True)
     return 0
