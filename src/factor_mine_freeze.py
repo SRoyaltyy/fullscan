@@ -1016,14 +1016,22 @@ EXCEL_DAILY_DIR = "excel_bot/daily"
 
 
 def is_excel_signal_path(path: str) -> bool:
-    """The rolling suggestion file and each daily signal note."""
+    """The rolling suggestion file and each final daily signal note.
+
+    ``<date>_excel_bot_draft.md`` and draft csv/json siblings are the
+    pre-close note. Tickets, send-input freeze, and the next open keep
+    the final ``<date>_excel_bot.md``.
+    """
     rel = str(path or "").replace("\\", "/")
     if rel == EXCEL_SUGGESTIONS:
         return True
     prefix = EXCEL_DAILY_DIR + "/"
     if not rel.startswith(prefix) or "/" in rel[len(prefix):]:
         return False
-    return rel.endswith("_excel_bot.md")
+    name = rel[len(prefix):]
+    if "_draft" in name:
+        return False
+    return name.endswith("_excel_bot.md")
 
 
 def excel_open_cutoff(open_date: str) -> datetime:
