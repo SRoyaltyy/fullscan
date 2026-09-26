@@ -1,0 +1,345 @@
+{
+  "dropped_for_jump_on_or_before_2026-09-13": [
+    "AIXI",
+    "ALP",
+    "ASTC",
+    "CAPR",
+    "CAST",
+    "CELZ",
+    "CHAI",
+    "CISS",
+    "CLRO",
+    "DSY",
+    "EDHL",
+    "EHGO",
+    "ENGN",
+    "EYPT",
+    "FCUV",
+    "FTRK",
+    "HAO",
+    "HKIT",
+    "HYFM",
+    "ILLR",
+    "IPST",
+    "JEM",
+    "JZ",
+    "LHSW",
+    "MB",
+    "MGN",
+    "MYSE",
+    "NAMI",
+    "OFAL",
+    "PLAG",
+    "PPCB",
+    "QH",
+    "QNME",
+    "SCKT",
+    "SION",
+    "SLBT",
+    "SXTC",
+    "TGHL",
+    "TNMG",
+    "UPC",
+    "VSME",
+    "WCT",
+    "WETO",
+    "WOK",
+    "XHG",
+    "YJ"
+  ],
+  "forward_rows_omitted_after_2026-09-13": [
+    "GIPR",
+    "MPU",
+    "NFE",
+    "RITR",
+    "VWAV",
+    "ZTG"
+  ],
+  "unexplained": [
+    {
+      "ticker": "ILLR",
+      "date": "2026-03-20",
+      "ratio": 0.005
+    },
+    {
+      "ticker": "MGN",
+      "date": "2026-03-26",
+      "ratio": 0.099764
+    },
+    {
+      "ticker": "MYSE",
+      "date": "2026-04-16",
+      "ratio": 3.833333
+    },
+    {
+      "ticker": "QH",
+      "date": "2026-04-20",
+      "ratio": 0.209302
+    },
+    {
+      "ticker": "QH",
+      "date": "2026-04-27",
+      "ratio": 30.0
+    },
+    {
+      "ticker": "ENGN",
+      "date": "2026-05-07",
+      "ratio": 0.242938
+    },
+    {
+      "ticker": "HAO",
+      "date": "2026-05-11",
+      "ratio": 0.087671
+    },
+    {
+      "ticker": "WOK",
+      "date": "2026-05-13",
+      "ratio": 0.186186
+    },
+    {
+      "ticker": "ASTC",
+      "date": "2026-05-27",
+      "ratio": 3.004049
+    },
+    {
+      "ticker": "TGHL",
+      "date": "2026-06-01",
+      "ratio": 6.091954
+    },
+    {
+      "ticker": "HKIT",
+      "date": "2026-06-02",
+      "ratio": 0.253799
+    },
+    {
+      "ticker": "JZ",
+      "date": "2026-06-02",
+      "ratio": 0.222581
+    },
+    {
+      "ticker": "CHAI",
+      "date": "2026-06-09",
+      "ratio": 4.353658
+    },
+    {
+      "ticker": "DSY",
+      "date": "2026-06-10",
+      "ratio": 5.206522
+    },
+    {
+      "ticker": "VSME",
+      "date": "2026-06-10",
+      "ratio": 4.495747
+    },
+    {
+      "ticker": "EDHL",
+      "date": "2026-06-11",
+      "ratio": 4.722857
+    },
+    {
+      "ticker": "CAST",
+      "date": "2026-06-15",
+      "ratio": 3.122581
+    },
+    {
+      "ticker": "SLBT",
+      "date": "2026-06-16",
+      "ratio": 3.366366
+    },
+    {
+      "ticker": "EHGO",
+      "date": "2026-06-17",
+      "ratio": 3.643939
+    },
+    {
+      "ticker": "ILLR",
+      "date": "2026-06-25",
+      "ratio": 3.459038
+    },
+    {
+      "ticker": "UPC",
+      "date": "2026-06-29",
+      "ratio": 5.800676
+    },
+    {
+      "ticker": "CELZ",
+      "date": "2026-06-30",
+      "ratio": 3.221427
+    },
+    {
+      "ticker": "JEM",
+      "date": "2026-06-30",
+      "ratio": 4.574074
+    },
+    {
+      "ticker": "LHSW",
+      "date": "2026-07-06",
+      "ratio": 3.777778
+    },
+    {
+      "ticker": "WETO",
+      "date": "2026-07-22",
+      "ratio": 0.2325
+    },
+    {
+      "ticker": "SXTC",
+      "date": "2026-07-23",
+      "ratio": 0.202475
+    },
+    {
+      "ticker": "CAPR",
+      "date": "2026-07-27",
+      "ratio": 0.29797
+    },
+    {
+      "ticker": "CISS",
+      "date": "2026-07-27",
+      "ratio": 0.269231
+    },
+    {
+      "ticker": "FCUV",
+      "date": "2026-07-31",
+      "ratio": 5.43617
+    },
+    {
+      "ticker": "WETO",
+      "date": "2026-07-31",
+      "ratio": 3.466667
+    },
+    {
+      "ticker": "HYFM",
+      "date": "2026-08-03",
+      "ratio": 5.759259
+    },
+    {
+      "ticker": "QNME",
+      "date": "2026-08-04",
+      "ratio": 3.566879
+    },
+    {
+      "ticker": "CLRO",
+      "date": "2026-08-06",
+      "ratio": 3.17663
+    },
+    {
+      "ticker": "MB",
+      "date": "2026-08-07",
+      "ratio": 3.813333
+    },
+    {
+      "ticker": "NAMI",
+      "date": "2026-08-07",
+      "ratio": 3.130584
+    },
+    {
+      "ticker": "SCKT",
+      "date": "2026-08-10",
+      "ratio": 6.692308
+    },
+    {
+      "ticker": "SION",
+      "date": "2026-08-10",
+      "ratio": 0.095024
+    },
+    {
+      "ticker": "OFAL",
+      "date": "2026-08-12",
+      "ratio": 3.562412
+    },
+    {
+      "ticker": "PLAG",
+      "date": "2026-08-12",
+      "ratio": 0.232358
+    },
+    {
+      "ticker": "XHG",
+      "date": "2026-08-13",
+      "ratio": 6.338798
+    },
+    {
+      "ticker": "EYPT",
+      "date": "2026-08-17",
+      "ratio": 0.275254
+    },
+    {
+      "ticker": "IPST",
+      "date": "2026-08-17",
+      "ratio": 3.6
+    },
+    {
+      "ticker": "YJ",
+      "date": "2026-08-19",
+      "ratio": 3.373563
+    },
+    {
+      "ticker": "AIXI",
+      "date": "2026-08-25",
+      "ratio": 3.187773
+    },
+    {
+      "ticker": "PPCB",
+      "date": "2026-08-27",
+      "ratio": 3.280374
+    },
+    {
+      "ticker": "FTRK",
+      "date": "2026-08-28",
+      "ratio": 0.14
+    },
+    {
+      "ticker": "MGN",
+      "date": "2026-09-09",
+      "ratio": 3.46
+    },
+    {
+      "ticker": "TNMG",
+      "date": "2026-09-09",
+      "ratio": 7.91762
+    },
+    {
+      "ticker": "WCT",
+      "date": "2026-09-09",
+      "ratio": 4.8125
+    },
+    {
+      "ticker": "ALP",
+      "date": "2026-09-10",
+      "ratio": 52.121211
+    },
+    {
+      "ticker": "VWAV",
+      "date": "2026-09-14",
+      "ratio": 0.043255
+    },
+    {
+      "ticker": "NFE",
+      "date": "2026-09-15",
+      "ratio": 41.484846
+    },
+    {
+      "ticker": "MPU",
+      "date": "2026-09-16",
+      "ratio": 19.4
+    },
+    {
+      "ticker": "ZTG",
+      "date": "2026-09-16",
+      "ratio": 3.432392
+    },
+    {
+      "ticker": "RITR",
+      "date": "2026-09-17",
+      "ratio": 0.262812
+    },
+    {
+      "ticker": "VWAV",
+      "date": "2026-09-17",
+      "ratio": 19.787798
+    },
+    {
+      "ticker": "GIPR",
+      "date": "2026-09-18",
+      "ratio": 3.386364
+    }
+  ]
+}
