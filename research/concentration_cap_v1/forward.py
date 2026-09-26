@@ -147,6 +147,7 @@ def _report(freeze: dict, tune_rows: list[dict], forward_rows: list[dict], iwm_t
         f"Luck N is {LUCK_N}. That is 45 tries plus 21,536 plus 260 from concentration_screen_v1.",
         "Leftover cash from a trim sits in cash. A trim does not add shares to a name that is already held.",
         f"Tune IWM { _pct(iwm_tune) }. P2 IWM { _pct(iwm_p2) }. P2 starts at the 2026-09-11 close.",
+        "The width-4 cap-none P2 return without the top stock matches the corrected v4 keep-held reading: `union_hot_n4_h1__w0` +5.62%, `union_hot_n4_holdup__w0` +11.25%, `union_hot_n4_h1_nonews__w0` +5.04%.",
         "",
         "## Frozen and not rejected",
         "",
@@ -172,8 +173,8 @@ def _report(freeze: dict, tune_rows: list[dict], forward_rows: list[dict], iwm_t
     lines.extend([
         "## Tune, 2026-08-13 through 2026-09-11",
         "",
-        "| id | passer | worst joint | return | 15bp | ex top 1 | ex top 3 | ex top 5 | best share | tickers | trades | win rate |",
-        "| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |",
+        "| id | passer | worst joint | return | 15bp | ex top 1 | ex top 3 | ex top 5 | best share | tickers | trades | win rate | RANDOM4 |",
+        "| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |",
     ])
     for row in tune_rows:
         tune = row["tune"]
@@ -181,7 +182,7 @@ def _report(freeze: dict, tune_rows: list[dict], forward_rows: list[dict], iwm_t
             f"| `{row['id']}` | {row['passer']} | {_pct(row['rank_key'])} | {_pct(tune['compound'])} | "
             f"{_pct(tune['compound_15'])} | {_pct(tune['ex_top1'])} | {_pct(tune['ex_top3'])} | "
             f"{_pct(tune['ex_top5'])} | {_pct(tune['profit_share'])} | {tune['distinct']} | "
-            f"{tune['n']} | {_pct(tune['win_rate'])} |"
+            f"{tune['n']} | {_pct(tune['win_rate'])} | {_pct(row.get('random4'))} |"
         )
     lines.extend([
         "",
@@ -189,8 +190,8 @@ def _report(freeze: dict, tune_rows: list[dict], forward_rows: list[dict], iwm_t
         "",
         "A row that was not frozen cannot be rejected and cannot be carried. Rejected means a frozen passer with at least 30 P2 trades and a joint under 0.5.",
         "",
-        "| id | frozen | rejected | return | 15bp | ex top 1 | ex top 3 | ex top 5 | best share | tickers | trades | win rate |",
-        "| --- | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |",
+        "| id | frozen | rejected | return | 15bp | ex top 1 | ex top 3 | ex top 5 | best share | tickers | trades | win rate | RANDOM4 |",
+        "| --- | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |",
     ])
     for row in forward_rows:
         p2 = row["p2"]
@@ -198,11 +199,11 @@ def _report(freeze: dict, tune_rows: list[dict], forward_rows: list[dict], iwm_t
             f"| `{row['id']}` | {row['frozen']} | {row['rejected']} | {_pct(p2['compound'])} | "
             f"{_pct(p2['compound_15'])} | {_pct(p2['ex_top1'])} | {_pct(p2['ex_top3'])} | "
             f"{_pct(p2['ex_top5'])} | {_pct(p2['profit_share'])} | {p2['distinct']} | "
-            f"{p2['n']} | {_pct(p2['win_rate'])} |"
+            f"{p2['n']} | {_pct(p2['win_rate'])} | {_pct(row.get('random4'))} |"
         )
     lines.extend([
         "",
-        f"RANDOM4 seed 20260813, 1000 draws, mean compound, same weight cap, hold, sell, holdup, and weather. Tune and P2 means are in `returns/TUNE.json` and `returns/FORWARD.json`.",
+        "RANDOM4 is the mean of 1000 draws, seed 20260813, 4 names, the recipe's hold, sell, holdup, weather, and weight cap. IWM is buy-and-hold on that window after the Futubull entry fee.",
         f"Keep bar is at least {MIN_TRADES} closed trades and a win rate above 55%. It does not add or remove a frozen row.",
         "",
     ])
