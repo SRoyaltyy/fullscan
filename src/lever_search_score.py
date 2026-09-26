@@ -617,8 +617,23 @@ def _mark(cash: float, pos: dict, session: str, store: Store, side: str) -> floa
 
 
 def walk_recipe(recipe: dict, sessions: list[str], rows_by_date: dict[str, list[dict]],
-                store: Store, search_ok: dict[str, bool], fees: dict) -> dict:
-    """One $10k book. Share counts follow Futubull fees. 15 bp reprices those fills."""
+                store: Store, search_ok: dict[str, bool], fees: dict,
+                fill: str = "renew") -> dict:
+    """One $10k book. Share counts follow Futubull fees. 15 bp reprices those fills.
+
+    ``fill="renew"`` is the locked Group 3 path: once ``held >= hold`` the
+    lot sells at the open and, if the name is still selected, buys again
+    at that same open. Both sides pay fees. ``fill="keep_held"`` matches
+    the live paper path and does not rewrite that default. A name that is
+    still selected and already held stays; there is no sell, no buy, and
+    no fee. A sell is only ``lot_should_sell`` (list-drop after min-hold,
+    or an early recipe exit). Hard-red is not a sell.
+    """
+    if fill not in ("renew", "keep_held"):
+        raise SystemExit(f"fill {fill!r} is not renew or keep_held")
+    lot_should_sell = None
+    if fill == "keep_held":
+        from src.factor_mine_book import lot_should_sell as lot_should_sell
     cash_f = CAPITAL
     cash_15 = CAPITAL
     pos: dict[str, dict] = {}
@@ -645,7 +660,22 @@ def walk_recipe(recipe: dict, sessions: list[str], rows_by_date: dict[str, list[
             held = sessions.index(session) - sessions.index(lot["entry"])
             row = by_ticker.get(ticker) or {}
             early = should_exit(row, recipe.get("exit_when"))
-            do_sell = early or held >= hold
+            if fill == "renew":
+                do_sell = early or held >= hold
+            else:
+                try:
+                    px_now = store.session_open(ticker, session)
+                except Exception:
+                    px_now = None
+                still_in = {picked["ticker"] for picked in chosen}
+                do_sell, _kind = lot_should_sell(
+                    lot, held=held, min_hold=hold, early=early,
+                    dropped=ticker not in still_in,
+                    sell_mode=recipe.get("sell") or "list",
+                    px=px_now, side=side,
+                    take_pct=recipe.get("take_pct"),
+                    stop_pct=recipe.get("stop_pct"),
+                )
             if not do_sell:
                 continue
             try:
