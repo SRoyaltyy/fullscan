@@ -432,11 +432,47 @@ def _buy_shares(cash: float, px: float, per: float, fees: dict) -> tuple[int, fl
     return 0, 0.0
 
 
+def _stored_open_close(bars, ticker: str, session: str | None) -> tuple[float | None, float | None]:
+    if bars is None or not session:
+        return None, None
+    return bars.session_open_close(ticker, session)
+
+
+def resolve_held_prices(open_of: dict[str, float], close_of: dict[str, float], ticker: str,
+                        bars, session: str | None) -> tuple[float | None, float | None, str]:
+    """Price a held name from the session map, then from the bar store.
+
+    The map only contains today's candidate list. A name that has left that list
+    can still have a bar. `source` is `map`, `store`, or `missing`.
+    """
+    opx = open_of.get(ticker)
+    cpx = close_of.get(ticker)
+    source = "map"
+    if opx is None or opx <= 0 or cpx is None or cpx <= 0:
+        stored_open, stored_close = _stored_open_close(bars, ticker, session)
+        if opx is None or opx <= 0:
+            if stored_open is not None and stored_open > 0:
+                opx = stored_open
+                source = "store"
+            else:
+                source = "missing"
+        if (cpx is None or cpx <= 0) and stored_close is not None and stored_close > 0:
+            cpx = stored_close
+    return opx, cpx, source
+
+
 def advance_book(book: Book, *, side: str, exit_name: str, hold: int, min_hold: int,
                  pick_names: list[str] | None, open_of: dict[str, float],
                  close_of: dict[str, float], universe: set[str], day_i: int,
-                 fees: dict) -> tuple[float, float, int, int, int, dict[str, float], list[float]]:
-    """One session. pick_names is None when the rule sits out."""
+                 fees: dict, bars=None, session: str | None = None,
+                 forced: list | None = None) -> tuple[float, float, int, int, int, dict[str, float], list[float]]:
+    """One session. pick_names is None when the rule sits out.
+
+    A held name missing from today's candidate map is priced from the bar store.
+    If that bar is also missing and the hold limit is due, the position is
+    force-closed at the last known price. A missing bar before the hold limit
+    keeps the last mark. Both cases are appended to `forced` when it is passed.
+    """
     if not book.pos and not pick_names:
         return 0.0, 0.0, 0, 0, 0, {}, []
     pnl: dict[str, float] = {}
@@ -448,11 +484,41 @@ def advance_book(book: Book, *, side: str, exit_name: str, hold: int, min_hold: 
     for ticker in list(book.pos):
         lot = book.pos[ticker]
         held = day_i - lot["entry_i"]
-        px = open_of.get(ticker)
+        px, _close_px, source = resolve_held_prices(open_of, close_of, ticker, bars, session)
         if px is None or px <= 0:
+            if held >= hold:
+                px = float(lot["prev"])
+                if forced is not None:
+                    forced.append({
+                        "action": "force-close",
+                        "held": held,
+                        "hold": hold,
+                        "price": px,
+                        "session": session or "",
+                        "ticker": ticker,
+                    })
+            else:
+                if forced is not None:
+                    forced.append({
+                        "action": "mark-at-last",
+                        "held": held,
+                        "hold": hold,
+                        "price": float(lot["prev"]),
+                        "session": session or "",
+                        "ticker": ticker,
+                    })
+                continue
+        elif not want_exit(held, hold, min_hold, exit_name, side, px, lot, ticker in universe):
             continue
-        if not want_exit(held, hold, min_hold, exit_name, side, px, lot, ticker in universe):
-            continue
+        elif source == "store" and forced is not None:
+            forced.append({
+                "action": "priced-from-store",
+                "held": held,
+                "hold": hold,
+                "price": px,
+                "session": session or "",
+                "ticker": ticker,
+            })
         shares = lot["shares"]
         fee_f = order_fees(shares, px, "sell" if side == "long" else "buy", fees)
         fee_b = fee_15(shares, px)
@@ -523,7 +589,7 @@ def advance_book(book: Book, *, side: str, exit_name: str, hold: int, min_hold: 
                     n_under += 1
 
     for ticker, lot in book.pos.items():
-        close = close_of.get(ticker)
+        _open_px, close, _source = resolve_held_prices(open_of, close_of, ticker, bars, session)
         if close is None or close <= 0:
             close = float(lot["prev"])
         prev_px = float(lot["prev"])
@@ -718,7 +784,7 @@ def _mechanics():
     return out
 
 
-def walk_all(days: list[dict], fees: dict) -> dict:
+def walk_all(days: list[dict], fees: dict, bars=None, forced: list | None = None) -> dict:
     from src.breadth_mine_v1b_grid import rule_id
 
     signals = signal_pairs()
@@ -775,6 +841,9 @@ def walk_all(days: list[dict], fees: dict) -> dict:
                     universe=universe,
                     day_i=di,
                     fees=fees,
+                    bars=bars,
+                    session=sessions[di],
+                    forced=forced,
                 )
                 ret_f[ri, di] = retf
                 ret_15[ri, di] = ret15
@@ -901,6 +970,8 @@ def evaluate(scored: dict, ids: list[str]) -> list[dict]:
             "trades_per_day": (entries / n_check) if n_check else 0.0,
             "n_trades": len(trades),
             "from_0914": from14,
+            "entries_before": _entry_text(sessions, scored["n_entries"][ri], before=True),
+            "entries_from": _entry_text(sessions, scored["n_entries"][ri], before=False),
             "win_days_0914": winning_days_from_0914(
                 sessions,
                 rets,
@@ -916,6 +987,24 @@ def evaluate(scored: dict, ids: list[str]) -> list[dict]:
             "lines": lines,
         })
     return rows
+
+
+def _entry_text(sessions, counts, *, before: bool) -> str:
+    """Entry count and the sessions that had an entry, split at 2026-09-14."""
+    days = []
+    count = 0
+    for session, raw in zip(sessions, counts):
+        n = int(raw)
+        if n <= 0:
+            continue
+        is_before = session < DESIGNED_AFTER_START
+        if is_before != before:
+            continue
+        count += n
+        days.append(session)
+    if count == 0:
+        return "0"
+    return f"{count}: {', '.join(days)}"
 
 
 def winning_days_from_0914(sessions, rets, fills, marked) -> str:
@@ -965,6 +1054,8 @@ def render_report(rows: list[dict], verdict: str) -> str:
             f"{row['trades_per_day']:.2f}",
             pct(row["from_0914"]),
             row.get("win_days_0914", ""),
+            row.get("entries_before", ""),
+            row.get("entries_from", ""),
             pct(row["under_3"]),
             pct(row["full_15"]),
             f"{row['raw_p']:.4g}",
@@ -999,20 +1090,28 @@ def render_report(rows: list[dict], verdict: str) -> str:
         top = ranked[0]
         header.append(
             f"Frozen rank 1: `{top['id']}`. From 09-14: {pct(top['from_0914'])}. "
-            f"Winning days from 09-14: {top.get('win_days_0914', '')}."
+            f"Winning days from 09-14: {top.get('win_days_0914', '')}. "
+            f"Entries before 09-14: {top.get('entries_before', '')}. "
+            f"Entries from 09-14: {top.get('entries_from', '')}."
         )
+        if top["id"] == "p:catalyst_on+heat_up|short|cut_loser|h5m2|n1":
+            header.append(
+                "The empty 2026-08-13 through 2026-08-25 stretch on this rule is a sit-out: "
+                "both the catalyst input and the heat input are absent on every one of those sessions, "
+                "and the pair signal needs both."
+            )
     else:
         header.append("Frozen rank 1: none. Winning days from 09-14: none.")
     header += [
         "",
         "## Top 20",
         "",
-        "| rank | rule | side | check days | full compound | ex-best | best ticker | median trade | win rate | top-1 share | top-3 share | trades/day | from 09-14 | winning days from 09-14 | under $3 | 15bp compound | raw p | luck p | label |",
-        "| ---: | --- | --- | ---: | ---: | ---: | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- | ---: | ---: | ---: | ---: | --- |",
+        "| rank | rule | side | check days | full compound | ex-best | best ticker | median trade | win rate | top-1 share | top-3 share | trades/day | from 09-14 | winning days from 09-14 | entries before 09-14 | entries from 09-14 | under $3 | 15bp compound | raw p | luck p | label |",
+        "| ---: | --- | --- | ---: | ---: | ---: | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- | --- | --- | ---: | ---: | ---: | ---: | --- |",
     ]
     body = [cell(row, rank) for rank, row in enumerate(ranked[:20], start=1)]
     if not body:
-        body = ["|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | no eligible rule |"]
+        body = ["|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | no eligible rule |"]
     return "\n".join(header + body) + "\n\n" + bar_audit_section()
 
 
@@ -1133,7 +1232,7 @@ def main() -> None:
         days.append(day)
         print(f"  names {len(day['names'])} roles {sorted(day['roles'])}", flush=True)
     fees = load_fees()
-    scored = walk_all(days, fees)
+    scored = walk_all(days, fees, bars)
     ids = _ids()
     if len(ids) != N:
         raise SystemExit(f"id count {len(ids)}")

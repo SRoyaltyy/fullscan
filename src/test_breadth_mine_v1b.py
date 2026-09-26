@@ -191,6 +191,59 @@ def test_unexplained_jump_fails_the_gate() -> None:
     assert not bad, f"{len(bad)} unexplained open/close jumps, including {names}"
 
 
+class _Store:
+    def session_open_close(self, ticker, session):
+        if session == "2026-09-09":
+            return 12.0, 11.0
+        return None, None
+
+
+def test_hold_limit_without_a_bar_force_closes_at_last_price() -> None:
+    fees = load_fees()
+    book = Book()
+    forced = []
+    advance_book(
+        book, side="short", exit_name="cut_loser", hold=2, min_hold=1,
+        pick_names=["AMR"], open_of={"AMR": 10.0}, close_of={"AMR": 10.0},
+        universe={"AMR"}, day_i=0, fees=fees, session="2026-09-01", forced=forced,
+    )
+    advance_book(
+        book, side="short", exit_name="cut_loser", hold=2, min_hold=1,
+        pick_names=None, open_of={}, close_of={}, universe=set(),
+        day_i=1, fees=fees, session="2026-09-02", forced=forced,
+    )
+    assert "AMR" in book.pos
+    assert forced[-1]["action"] == "mark-at-last"
+    advance_book(
+        book, side="short", exit_name="cut_loser", hold=2, min_hold=1,
+        pick_names=None, open_of={}, close_of={}, universe=set(),
+        day_i=2, fees=fees, session="2026-09-03", forced=forced,
+    )
+    assert "AMR" not in book.pos
+    assert forced[-1]["action"] == "force-close"
+    assert forced[-1]["price"] == 10.0
+
+
+def test_store_bar_is_used_when_the_name_left_the_candidate_map() -> None:
+    fees = load_fees()
+    book = Book()
+    forced = []
+    advance_book(
+        book, side="short", exit_name="time", hold=1, min_hold=1,
+        pick_names=["AMR"], open_of={"AMR": 10.0}, close_of={"AMR": 10.0},
+        universe={"AMR"}, day_i=0, fees=fees, session="2026-09-08",
+    )
+    _ret, _r15, fills, _u, _e, pnl, _closed = advance_book(
+        book, side="short", exit_name="time", hold=1, min_hold=1,
+        pick_names=None, open_of={}, close_of={}, universe=set(),
+        day_i=1, fees=fees, bars=_Store(), session="2026-09-09", forced=forced,
+    )
+    assert "AMR" not in book.pos
+    assert fills == 1
+    assert forced[-1]["action"] == "priced-from-store"
+    assert pnl["AMR"] != 0
+
+
 def test_winning_days_count_traded_sessions_only() -> None:
     text = winning_days_from_0914(
         ["2026-09-11", "2026-09-14", "2026-09-15", "2026-09-16", "2026-09-17", "2026-09-18"],
@@ -202,8 +255,11 @@ def test_winning_days_count_traded_sessions_only() -> None:
     report = (RETURNS / "REPORT.md").read_text(encoding="utf-8")
     assert "Winning days from 09-14: 7/9." in report
     assert "winning days from 09-14" in report
+    assert "catalyst input and the heat input are absent" in report
     rank1 = next(line for line in report.splitlines() if line.startswith("| 1 |"))
     assert "5.27% | 7/9 |" in rank1
+    assert "entries before 09-14" in report
+    assert "entries from 09-14" in report
 
 
 def test_scored_record_when_present() -> None:
@@ -245,6 +301,8 @@ def main() -> None:
         test_reax_fresh_opens_are_one_scale,
         test_audit_matches_a_rescan,
         test_unexplained_jump_fails_the_gate,
+        test_hold_limit_without_a_bar_force_closes_at_last_price,
+        test_store_bar_is_used_when_the_name_left_the_candidate_map,
         test_winning_days_count_traded_sessions_only,
         test_scored_record_when_present,
     ]
