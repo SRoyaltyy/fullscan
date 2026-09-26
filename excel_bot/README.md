@@ -17,8 +17,10 @@ Workflow: `.github/workflows/excel_bot.yml` → "Excel Bot (cluster signals dail
    suggestion is a cluster whose *confirmation day* is the latest trading day.
 5. **Store** — appended to `suggestions/suggestions.csv` (one file, deduped).
    All past suggestions get `current_price` / returns refreshed.
-6. **Summary** — `daily/{date}_excel_bot.md`: today's signals, live strategy
-   scoreboard, best/worst open suggestions.
+6. **Summary** — before 16:00 ET, `daily/{date}_excel_bot_draft.md` only.
+   At or after 16:00 ET, `daily/{date}_excel_bot.md` is created once
+   (today's signals, live strategy scoreboard, best/worst open
+   suggestions) and a later run refuses to overwrite it.
 7. **Save** — the price cache is re-packed and force-pushed to `excel-state`
    (history squashed, the branch never grows).
 
@@ -26,7 +28,7 @@ Workflow: `.github/workflows/excel_bot.yml` → "Excel Bot (cluster signals dail
 
 | Path | What |
 |---|---|
-| `excel_bot/daily/` | **Start here.** One human-readable MD per run. |
+| `excel_bot/daily/` | **Start here.** Final `{date}_excel_bot.md` after the close. `{date}_excel_bot_draft.md` is the pre-close note. |
 | `excel_bot/suggestions/suggestions.csv` | Every suggestion ever + live tracking. `ret_vs_open` = honest "how is it doing". |
 | `excel_bot/strategies/README.md` | The strategy cards + backtest stats. |
 | `excel_state` branch | Machine state only — never edit by hand. |

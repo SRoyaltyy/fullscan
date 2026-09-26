@@ -1674,6 +1674,8 @@ def test_excel_signal_pin_is_the_last_commit_before_the_open() -> None:
 
     sug = "excel_bot/suggestions/suggestions.csv"
     day = "excel_bot/daily/2026-09-23_excel_bot.md"
+    prior = "excel_bot/daily/2026-09-22_excel_bot.md"
+    draft = "excel_bot/daily/2026-09-23_excel_bot_draft.md"
     other = "excel_bot/strategies/L1/card.json"
     before = datetime.fromisoformat("2026-09-24T08:00:00-04:00")
     at_open = datetime.fromisoformat("2026-09-24T09:30:00-04:00")
@@ -1689,17 +1691,32 @@ def test_excel_signal_pin_is_the_last_commit_before_the_open() -> None:
         day: [
             (after, "e" * 40, after.isoformat()),
         ],
+        prior: [
+            (earlier, "7" * 40, earlier.isoformat()),
+        ],
+        draft: [
+            (before, "1" * 40, before.isoformat()),
+        ],
         other: [
             (earlier, "f" * 40, earlier.isoformat()),
         ],
     }
     assert fmf.is_excel_signal_path(sug)
     assert fmf.is_excel_signal_path(day)
+    assert not fmf.is_excel_signal_path(draft)
+    assert not fmf.is_excel_signal_path(
+        "excel_bot/daily/2026-09-23_excel_bot_draft.csv"
+    )
+    assert not fmf.is_excel_signal_path(
+        "excel_bot/daily/2026-09-23_excel_bot_draft.json"
+    )
     assert not fmf.is_excel_signal_path(other)
     pinned = fmf.pin_excel_signals(["2026-09-24"], history)
     files = pinned["2026-09-24"]["files"]
     assert files[sug]["sha"] == "b" * 40
+    assert files[prior]["sha"] == "7" * 40
     assert day not in files
+    assert draft not in files
     assert other not in files
     assert pinned["2026-09-24"]["cutoff"].startswith("2026-09-24T09:30:00")
     with tempfile.TemporaryDirectory() as tmp:

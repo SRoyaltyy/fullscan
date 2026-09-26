@@ -10,7 +10,18 @@ name: Excel Bot (cluster signals daily)
 
 on:
   schedule:
-    - cron: "30 10 * * 2-6"   # Tue-Sat 10:30 UTC = 18:30 HKT, after US close
+    # Tue-Sat 10:30 UTC. GitHub often starts it around 15:00 UTC (~11:00 ET),
+    # before the cash close. That run and the after-close dispatch share
+    # engine/gh_summary.py. The writer uses 16:00 ET: draft only before
+    # the close, the dated final once at or after the close.
+    - cron: "30 10 * * 2-6"
+  pull_request:
+    paths:
+      - "excel_bot/engine/gh_summary.py"
+      - "excel_bot/engine/test_gh_summary.py"
+      - "src/factor_mine_freeze.py"
+      - "src/test_factor_mine_freeze.py"
+      - ".github/workflows/excel_bot.yml"
   workflow_dispatch:
     inputs:
       limit:
@@ -25,12 +36,28 @@ on:
 permissions:
   contents: write
 
-concurrency:
-  group: excel-bot
-  cancel-in-progress: false
-
 jobs:
+  test:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install
+        run: pip install pandas
+      - name: Draft vs final dated signal
+        run: python excel_bot/engine/test_gh_summary.py
+
   run:
+    if: github.event_name != 'pull_request'
+    concurrency:
+      group: excel-bot
+      cancel-in-progress: false
     runs-on: ubuntu-latest
     timeout-minutes: 330
     steps:
@@ -63,6 +90,8 @@ jobs:
           if [ "${SIGNALS_ONLY:-false}" = "true" ]; then ARGS="$ARGS --signals-only"; fi
           echo "CMD: python engine/daily_run.py --workers 4 $ARGS"
           python engine/daily_run.py --workers 4 $ARGS
+          # Before 16:00 ET this writes *_excel_bot_draft.md only.
+          # At/after 16:00 ET it creates *_excel_bot.md once, then refuses.
           python engine/gh_summary.py
 
       - name: Save price-cache state (squash excel-state)
