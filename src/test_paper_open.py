@@ -376,3 +376,417 @@ def test_load_local_reads_dated_tickets(tmp_path):
     (board / f'{DATE}_strategy_tickets.json').write_text(json.dumps(payload()))
     got = po.load_local(DATE, root=tmp_path)
     assert got['decision_readiness']['fingerprint'] == 'abc'
+
+
+FLAT_DATE = '2026-09-28'
+FLAT_READY = datetime.fromisoformat(FLAT_DATE + 'T08:03:00-04:00')
+FLAT_RUN = datetime.fromisoformat(FLAT_DATE + 'T08:07:00-04:00')
+
+
+class GuardAPI(API):
+    """Other-date path must not touch cancels."""
+
+    def list_open_orders(self):
+        raise AssertionError('must not list open orders')
+
+    def cancel_order(self, order_id):
+        raise AssertionError('must not cancel')
+
+
+class FlattenAPI:
+    host = we.PAPER_HOST
+    err = None
+
+    def __init__(self, *, cancel_ok=True, snap_error=None, list_error=None, orders=None):
+        self.events = []
+        self.calls = []
+        self.cancel_ok = cancel_ok
+        self.snap_error = snap_error
+        self.list_error = list_error
+        self.orders = orders if orders is not None else [
+            {'order_id': 'OID-1', 'client_order_id': 'fsOLD1', 'symbol': 'AAA', 'side': 'BUY'},
+            {'order_id': 'OID-2', 'client_order_id': 'fsOLD2', 'symbol': 'BBB', 'side': 'SELL'},
+        ]
+        self.positions = {
+            'AAA': {'shares': 10, 'last_px': 5},
+            'BBB': {'shares': 2, 'last_px': 8},
+            'CCC': {'shares': 0, 'last_px': 1},
+            'DDD': {'shares': 0.4, 'last_px': 2},
+        }
+
+    def connect(self):
+        self.events.append('connect')
+        return True
+
+    def list_open_orders(self):
+        self.events.append('list')
+        if self.list_error:
+            raise RuntimeError(self.list_error)
+        return list(self.orders)
+
+    def cancel_order(self, order_id):
+        self.events.append(('cancel', order_id))
+        if not self.cancel_ok:
+            return {'ok': False, 'order_id': order_id, 'error': 'rejected'}
+        return {'ok': True, 'order_id': order_id}
+
+    def snapshot(self):
+        self.events.append('snapshot')
+        if self.snap_error:
+            return BrokerSnap(
+                env='paper', cash=0, positions={}, connected=False, error=self.snap_error)
+        return BrokerSnap(
+            env='paper', cash=1000, positions=self.positions, connected=True)
+
+    def place_batch(self, tickets):
+        self.events.append('place')
+        self.calls.append(tickets)
+        return {
+            we.client_order_id(t['date'], t['side'], t['ticker']): {
+                'ok': True, 'order_id': 'broker-' + t['ticker'], 'shares': t['shares'],
+            }
+            for t in tickets
+        }
+
+
+def _refuse_hot4(monkeypatch):
+    monkeypatch.setattr(
+        po.we, 'plan_hot4_for_broker',
+        lambda *a, **k: (_ for _ in ()).throw(AssertionError('plan_hot4_for_broker')))
+    monkeypatch.setattr(
+        'src.strategy_tickets.assert_hot4_wire',
+        lambda *a, **k: (_ for _ in ()).throw(AssertionError('assert_hot4_wire')))
+    monkeypatch.setattr(
+        po, 'load_local',
+        lambda *a, **k: (_ for _ in ()).throw(AssertionError('load_local')))
+    monkeypatch.setattr(
+        po, 'load_published',
+        lambda *a, **k: (_ for _ in ()).throw(AssertionError('load_published')))
+
+
+def test_paper_flatten_flag_is_only_2026_09_28():
+    doc = json.loads((po.ROOT / '00_grounding' / 'paper_flatten.json').read_text())
+    assert doc['date'] == FLAT_DATE
+    assert doc['mode'] == 'flatten_account'
+    assert datetime.fromisoformat(FLAT_DATE).weekday() == 0
+    assert po.flatten_gate(FLAT_READY)[0] == 'flatten'
+    assert po.flatten_gate(datetime.fromisoformat(DATE + 'T08:03:00-04:00')) is None
+    assert po.flatten_gate(datetime.fromisoformat('2026-09-29T08:03:00-04:00')) is None
+
+
+def _assert_flatten_sells(api, journal):
+    assert api.events == [
+        'connect', 'list', ('cancel', 'OID-1'), ('cancel', 'OID-2'), 'snapshot', 'place']
+    assert len(api.calls) == 1
+    tickets = api.calls[0]
+    assert [(t['side'], t['ticker'], t['shares']) for t in tickets] == [
+        ('SELL', 'AAA', 10), ('SELL', 'BBB', 2)]
+    assert not any(t['side'] == 'BUY' for t in tickets)
+    for ticket in tickets:
+        body = we.order_body(ticket)
+        assert body['order_type'] == 'MARKET'
+        assert body['support_trading_session'] == 'CORE'
+        assert body['time_in_force'] == 'DAY'
+        assert body['side'] == 'SELL'
+    assert journal['date'] == FLAT_DATE
+    assert journal['mode'] == 'flatten_account'
+    assert journal['status'] == 'acknowledged'
+    assert journal['submit'] is True
+    assert [c['order_id'] for c in journal['cancels']] == ['OID-1', 'OID-2']
+    assert all(c['ok'] is True for c in journal['cancels'])
+    assert [(r['side'], r['ticker'], r['order_id'], r['status']) for r in journal['sent']] == [
+        ('SELL', 'AAA', 'broker-AAA', 'acknowledged'),
+        ('SELL', 'BBB', 'broker-BBB', 'acknowledged'),
+    ]
+    assert not any(r['side'] == 'BUY' for r in journal['sent'])
+
+
+def test_ready_flatten_cancels_then_sells_all_and_writes_journal(tmp_path, monkeypatch):
+    _refuse_hot4(monkeypatch)
+    api = FlattenAPI()
+    with patch.object(we, 'write_last'), \
+            patch.object(po, 'remote_session_journal', return_value=None):
+        rc = po.submit_ready(
+            submit=True, clock=lambda: FLAT_READY,
+            loader=lambda _: (_ for _ in ()).throw(AssertionError('loader')),
+            api=api, state_dir=tmp_path)
+        assert rc == 0
+        journal = json.loads((tmp_path / f'{FLAT_DATE}_submit.json').read_text())
+        _assert_flatten_sells(api, journal)
+        frozen = len(api.events)
+        assert po.submit_ready(
+            submit=True, clock=lambda: FLAT_READY,
+            loader=lambda _: (_ for _ in ()).throw(AssertionError('loader')),
+            api=api, state_dir=tmp_path) == 0
+
+        def sleep(_seconds):
+            raise AssertionError('later run must no-op')
+
+        def loader(_date):
+            raise AssertionError('later run must not load')
+
+        assert po.run(
+            submit=True, clock=lambda: FLAT_RUN, sleep=sleep, loader=loader,
+            api=api, state_dir=tmp_path) == 0
+        assert len(api.events) == frozen
+
+
+def test_run_flatten_cancels_then_sells_without_waiting(tmp_path, monkeypatch):
+    _refuse_hot4(monkeypatch)
+    api = FlattenAPI()
+
+    def sleep(_seconds):
+        raise AssertionError('flatten must not wait for the bell')
+
+    def loader(_date):
+        raise AssertionError('loader')
+
+    with patch.object(we, 'write_last'), \
+            patch.object(po, 'remote_session_journal', return_value=None):
+        rc = po.run(
+            submit=True, clock=lambda: FLAT_RUN, sleep=sleep, loader=loader,
+            api=api, state_dir=tmp_path)
+    assert rc == 0
+    journal = json.loads((tmp_path / f'{FLAT_DATE}_submit.json').read_text())
+    _assert_flatten_sells(api, journal)
+
+
+def test_other_date_ready_path_unchanged(tmp_path):
+    api = GuardAPI()
+    early = datetime.fromisoformat(DATE + 'T06:20:00-04:00')
+    with patch.object(we, 'write_last'), \
+            patch.object(po, 'remote_session_journal', return_value=None):
+        rc = po.submit_ready(
+            submit=True, clock=lambda: early, loader=lambda _: early_payload(),
+            api=api, state_dir=tmp_path)
+    assert rc == 0
+    assert len(api.calls) == 1
+    assert api.calls[0][0]['side'] == 'BUY'
+    assert api.calls[0][0]['ticker'] == 'ABC'
+    journal = json.loads((tmp_path / f'{DATE}_submit.json').read_text())
+    assert journal['status'] == 'acknowledged'
+    assert journal.get('mode') != 'flatten_account'
+    assert 'cancels' not in journal
+
+
+def test_other_date_run_path_unchanged(tmp_path):
+    t = [BELL - timedelta(seconds=35)]
+
+    def clock():
+        return t[0]
+
+    def sleep(seconds):
+        t[0] += timedelta(seconds=seconds)
+
+    calls = []
+
+    def loader(date):
+        calls.append(clock())
+        assert clock() < BELL - timedelta(seconds=5)
+        return payload()
+
+    api = GuardAPI()
+    with patch.object(we, 'write_last'), \
+            patch.object(po, 'remote_session_journal', return_value=None):
+        assert po.run(
+            submit=True, clock=clock, sleep=sleep, loader=loader,
+            api=api, state_dir=tmp_path) == 0
+    assert t[0] == BELL
+    assert calls
+    assert len(api.calls) == 1
+    assert api.calls[0][0]['side'] == 'BUY'
+    assert api.calls[0][0]['ticker'] == 'ABC'
+
+
+def test_flatten_cancel_failure_sends_no_orders(tmp_path, capsys):
+    api = FlattenAPI(cancel_ok=False)
+    with patch.object(we, 'write_last'), \
+            patch.object(po, 'remote_session_journal', return_value=None):
+        rc = po.submit_ready(
+            submit=True, clock=lambda: FLAT_READY, loader=lambda _: payload(),
+            api=api, state_dir=tmp_path)
+    assert rc == 2
+    assert api.calls == []
+    assert api.events == ['connect', 'list', ('cancel', 'OID-1')]
+    assert not (tmp_path / f'{FLAT_DATE}_submit.json').exists()
+    status = json.loads((tmp_path / f'{FLAT_DATE}_status.json').read_text())
+    assert status['status'] == 'blocked'
+    assert status['mode'] == 'flatten_account'
+    assert 'OID-1' in status['error']
+    out = capsys.readouterr().out
+    assert 'FLATTEN ABORT' in out
+    assert 'no orders sent' in out
+
+
+def test_flatten_snapshot_failure_sends_no_orders(tmp_path, capsys):
+    api = FlattenAPI(snap_error='positions HTTP 500')
+    with patch.object(we, 'write_last'), \
+            patch.object(po, 'remote_session_journal', return_value=None):
+        rc = po.submit_ready(
+            submit=True, clock=lambda: FLAT_READY, loader=lambda _: payload(),
+            api=api, state_dir=tmp_path)
+    assert rc == 2
+    assert api.calls == []
+    assert 'place' not in api.events
+    assert api.events[-1] == 'snapshot'
+    assert ('cancel', 'OID-1') in api.events
+    assert ('cancel', 'OID-2') in api.events
+    assert not (tmp_path / f'{FLAT_DATE}_submit.json').exists()
+    status = json.loads((tmp_path / f'{FLAT_DATE}_status.json').read_text())
+    assert status['status'] == 'blocked'
+    assert 'snapshot failed' in status['error']
+    out = capsys.readouterr().out
+    assert 'FLATTEN ABORT' in out
+    assert 'no orders sent' in out
+
+
+def test_flatten_open_order_list_failure_sends_no_orders(tmp_path, capsys):
+    api = FlattenAPI(list_error='list down')
+    with patch.object(we, 'write_last'), \
+            patch.object(po, 'remote_session_journal', return_value=None):
+        rc = po.run(
+            submit=True, clock=lambda: FLAT_RUN, sleep=lambda _s: (_ for _ in ()).throw(
+                AssertionError('must not wait')),
+            loader=lambda _: (_ for _ in ()).throw(AssertionError('loader')),
+            api=api, state_dir=tmp_path)
+    assert rc == 2
+    assert api.calls == []
+    assert api.events == ['connect', 'list']
+    assert not (tmp_path / f'{FLAT_DATE}_submit.json').exists()
+    out = capsys.readouterr().out
+    assert 'FLATTEN ABORT' in out
+    assert 'no orders sent' in out
+
+
+def test_flatten_non_paper_host_sends_nothing(tmp_path, capsys):
+    api = FlattenAPI()
+    api.host = 'api.webull.com'
+    with patch.object(po, 'remote_session_journal', return_value=None):
+        rc = po.submit_ready(
+            submit=True, clock=lambda: FLAT_READY, loader=lambda _: payload(),
+            api=api, state_dir=tmp_path)
+    assert rc == 2
+    assert api.events == []
+    assert api.calls == []
+    assert not (tmp_path / f'{FLAT_DATE}_submit.json').exists()
+    assert 'no orders sent' in capsys.readouterr().out
+
+
+def test_ecs_owner_skips_on_flatten_date(tmp_path, monkeypatch):
+    rec = tmp_path / 'owner.json'
+    rec.write_text(json.dumps({'owner': 'actions'}))
+    monkeypatch.setenv('PAPER_OPEN_OWNER_FILE', str(rec))
+    monkeypatch.setattr(
+        po, 'flatten_gate',
+        lambda *a, **k: (_ for _ in ()).throw(AssertionError('ecs must not read the flatten flag')))
+    with patch.object(po, 'submit_ready', side_effect=AssertionError('submit')), \
+            patch.object(po, 'run', side_effect=AssertionError('run')):
+        assert po.main(['--submit', '--ready', '--owner', 'ecs']) == 0
+        assert po.main(['--submit', '--owner', 'ecs']) == 0
+
+
+def test_list_open_orders_reuses_standtest_probe_calls():
+    from types import SimpleNamespace
+    calls = []
+
+    def list_order_open(aid):
+        calls.append(('list_order_open', aid))
+        raise RuntimeError('missing')
+
+    def get_order_open(aid):
+        calls.append(('get_order_open', aid))
+        raise RuntimeError('missing too')
+
+    def get_order_detail(aid, oid):
+        calls.append(('get_order_detail', aid, oid))
+        raise AssertionError('detail needs an id')
+
+    def v2_open(aid):
+        calls.append(('v2', aid))
+        return {
+            'data': [
+                {'order_id': 'OID-9', 'client_order_id': 'c9', 'symbol': 'ZZ'},
+                {'order_id': 'OID-9', 'symbol': 'ZZ'},
+            ],
+        }
+
+    api = we.PaperAPI()
+    api.account_id = 'aid-1'
+    api.trade = SimpleNamespace(
+        order_v3=SimpleNamespace(
+            list_order_open=list_order_open,
+            get_order_open=get_order_open,
+            get_order_detail=get_order_detail,
+        ),
+        order_v2=SimpleNamespace(get_order_open=v2_open),
+    )
+    rows = api.list_open_orders()
+    assert calls == [
+        ('list_order_open', 'aid-1'),
+        ('get_order_open', 'aid-1'),
+        ('v2', 'aid-1'),
+    ]
+    assert rows == [{'order_id': 'OID-9', 'client_order_id': 'c9', 'symbol': 'ZZ'}]
+    calls.clear()
+
+    def first(aid):
+        calls.append(('list_order_open', aid))
+        return {'orders': [{'order_id': 'A', 'symbol': 'ZZ'}]}
+
+    api.trade = SimpleNamespace(
+        order_v3=SimpleNamespace(
+            list_order_open=first,
+            get_order_open=lambda aid: (_ for _ in ()).throw(AssertionError('second')),
+            get_order_detail=get_order_detail,
+        ),
+        order_v2=SimpleNamespace(
+            get_order_open=lambda aid: (_ for _ in ()).throw(AssertionError('v2'))),
+    )
+    assert api.list_open_orders() == [{'order_id': 'A', 'symbol': 'ZZ'}]
+    assert calls == [('list_order_open', 'aid-1')]
+
+
+def test_open_order_list_failure_is_not_an_empty_book():
+    from types import SimpleNamespace
+
+    def boom(aid):
+        raise RuntimeError('down')
+
+    api = we.PaperAPI()
+    api.account_id = 'aid-1'
+    api.trade = SimpleNamespace(
+        order_v3=SimpleNamespace(
+            list_order_open=boom,
+            get_order_open=boom,
+            get_order_detail=boom,
+        ),
+    )
+    with pytest.raises(RuntimeError, match='open-order list failed'):
+        api.list_open_orders()
+
+
+def test_cancel_order_reuses_probe_call():
+    from types import SimpleNamespace
+    seen = {}
+
+    def cancel_order(aid, oid):
+        seen['args'] = (aid, oid)
+        return {'order_id': oid, 'status': 'CANCELLED'}
+
+    api = we.PaperAPI()
+    api.account_id = 'aid-1'
+    api.trade = SimpleNamespace(order_v3=SimpleNamespace(cancel_order=cancel_order))
+    assert api.cancel_order('OID-9') == {'ok': True, 'order_id': 'OID-9'}
+    assert seen['args'] == ('aid-1', 'OID-9')
+
+    def reject(aid, oid):
+        return {'code': 'ERROR', 'msg': 'nope'}
+
+    api.trade = SimpleNamespace(order_v3=SimpleNamespace(cancel_order=reject))
+    bad = api.cancel_order('OID-9')
+    assert bad['ok'] is False
+    assert bad['order_id'] == 'OID-9'
+
+    api.host = 'api.webull.com'
+    with pytest.raises(RuntimeError, match='sandbox'):
+        api.cancel_order('OID-9')

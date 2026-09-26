@@ -14,6 +14,10 @@ fundable when the open prints above the plan px.
 No feature building, dependency installation or Pages deployment on the
 send path. Paper host only. Submit refuses when published HOT4 buys
 or sells diverge from the Factor Mine cash-start recipe for that date.
+
+00_grounding/paper_flatten.json names one ET date. On that date the
+paper host cancels open orders and sells every lot (MARKET/CORE/DAY).
+No buys, and no HOT4 plan. Any other date is unchanged.
 """
 from __future__ import annotations
 import argparse
@@ -34,6 +38,8 @@ ROOT = Path(__file__).resolve().parent.parent
 STANDING_OPEN_HOUR = 4   # CORE session; STANDTEST accepted 06:20 ET
 STANDING_CLOSE_HOUR = 16
 OK_STATUSES = ('acknowledged', 'no_trade', 'dry_run')
+FLATTEN_FLAG = ROOT / '00_grounding' / 'paper_flatten.json'
+FLATTEN_MODE = 'flatten_account'
 
 
 def now():
@@ -223,6 +229,208 @@ def release(plan, api, clock, journal, *, submit, max_late=2, standing=False):
     return result
 
 
+def flatten_gate(clock_dt):
+    """None when this ET date is not the flag date.
+
+    ('flatten', doc) on the flagged session. ('block', reason) when the
+    flag file is unreadable or the date matches a mode we will not trade.
+    Callers must not fall through to HOT4 buys on block.
+    """
+    try:
+        raw = FLATTEN_FLAG.read_text()
+    except FileNotFoundError:
+        return None
+    try:
+        doc = json.loads(raw)
+    except Exception as exc:
+        return ('block', f'flatten flag unreadable: {exc}')
+    if not isinstance(doc, dict):
+        return ('block', 'flatten flag is not an object')
+    if clock_dt.tzinfo is None:
+        clock_dt = clock_dt.replace(tzinfo=ET)
+    else:
+        clock_dt = clock_dt.astimezone(ET)
+    if str(doc.get('date') or '') != clock_dt.date().isoformat():
+        return None
+    if str(doc.get('mode') or '') != FLATTEN_MODE:
+        return ('block', 'flatten flag date matches but mode is not flatten_account')
+    return ('flatten', doc)
+
+
+def _whole_shares(raw):
+    if isinstance(raw, dict):
+        raw = raw.get('shares')
+    try:
+        shares = float(raw)
+    except (TypeError, ValueError):
+        return 0
+    if not math.isfinite(shares) or shares < 1:
+        return 0
+    return int(shares)
+
+
+def _flatten_sell_tickets(date, snap):
+    """One whole-share SELL per lot. Lots under 1 share are skipped. No buys."""
+    tickets = []
+    positions = getattr(snap, 'positions', None) or {}
+    for ticker in sorted(positions):
+        shares = _whole_shares(positions[ticker])
+        if shares < 1:
+            continue
+        name = str(ticker or '').upper().strip()
+        if not name:
+            continue
+        tickets.append({
+            'ticker': name,
+            'side': 'SELL',
+            'shares': shares,
+            'date': date,
+            'order_type': 'MARKET',
+            'support_trading_session': 'CORE',
+            'time_in_force': 'DAY',
+        })
+    return tickets
+
+
+def _abort_flatten(status_path, date, error, **extra):
+    print(f'[paper-open] FLATTEN ABORT — no orders sent: {error}', flush=True)
+    atomic_json(status_path, {
+        'date': date, 'status': 'blocked', 'mode': FLATTEN_MODE,
+        'error': str(error), 'standing': True, **extra,
+    })
+    return 2
+
+
+def _open_order_rows(api):
+    rows = api.list_open_orders()
+    if rows is None:
+        raise RuntimeError('open-order list returned nothing')
+    if not isinstance(rows, list):
+        raise RuntimeError('open-order list returned an unexpected payload')
+    return rows
+
+
+def _flatten_session(*, date, clock, submit, api, status_path, journal):
+    """Cancel every open paper order, then sell every lot. Never buy."""
+    if not submit:
+        print('[paper-open] FLATTEN due; dry-run sends nothing', flush=True)
+        atomic_json(status_path, {
+            'date': date, 'status': 'dry_run', 'mode': FLATTEN_MODE, 'submit': False,
+        })
+        return 0
+    api = api or we.PaperAPI('paper')
+    if getattr(api, 'host', None) != we.PAPER_HOST:
+        return _abort_flatten(status_path, date, 'paper-open refuses any non-sandbox host')
+    if not api.connect():
+        err = getattr(api, 'err', None) or 'broker disconnected'
+        return _abort_flatten(status_path, date, err)
+    if getattr(api, 'host', None) != we.PAPER_HOST:
+        return _abort_flatten(status_path, date, 'paper-open refuses any non-sandbox host')
+    try:
+        rows = _open_order_rows(api)
+    except Exception as exc:
+        return _abort_flatten(status_path, date, f'open-order list failed: {exc}')
+    pending = []
+    seen = set()
+    for row in rows:
+        if not isinstance(row, dict):
+            continue
+        oid = str(row.get('order_id') or row.get('orderId') or '').strip()
+        if not oid:
+            return _abort_flatten(
+                status_path, date, 'open order missing order_id; no orders sent')
+        if oid in seen:
+            continue
+        seen.add(oid)
+        pending.append((oid, row))
+    cancels = []
+    for oid, row in pending:
+        try:
+            got = api.cancel_order(oid)
+        except Exception as exc:
+            cancels.append({'order_id': oid, 'ok': False, 'error': str(exc)[:400]})
+            return _abort_flatten(
+                status_path, date, f'cancel {oid} failed: {exc}', cancels=cancels)
+        ok = isinstance(got, dict) and bool(got.get('ok'))
+        rec = {
+            'order_id': str((got or {}).get('order_id') or oid) if isinstance(got, dict) else oid,
+            'client_order_id': str(row.get('client_order_id') or row.get('clientOrderId') or ''),
+            'symbol': row.get('symbol') or row.get('ticker'),
+            'ok': ok,
+        }
+        if isinstance(got, dict) and got.get('error'):
+            rec['error'] = str(got.get('error'))[:400]
+        cancels.append(rec)
+        if not ok:
+            return _abort_flatten(
+                status_path, date,
+                f'cancel {oid} failed: {rec.get("error") or "not acknowledged"}',
+                cancels=cancels)
+    try:
+        snap = api.snapshot()
+    except Exception as exc:
+        return _abort_flatten(
+            status_path, date, f'snapshot failed: {exc}', cancels=cancels)
+    if snap is None or not getattr(snap, 'connected', False):
+        err = getattr(snap, 'error', None) if snap is not None else 'no snapshot'
+        return _abort_flatten(
+            status_path, date, f'snapshot failed: {err or "broker snapshot failed"}',
+            cancels=cancels)
+    tickets = _flatten_sell_tickets(date, snap)
+    for ticket in tickets:
+        if str(ticket.get('side') or '').upper() != 'SELL' or int(ticket.get('shares') or 0) < 1:
+            return _abort_flatten(
+                status_path, date, 'flatten refused a non-sell ticket', cancels=cancels)
+    current = clock()
+    plan = {
+        'date': date,
+        'prepared_at': current.isoformat(),
+        'mode': FLATTEN_MODE,
+        'fingerprint': FLATTEN_MODE,
+        'card': {
+            'tickets': tickets,
+            'skipped': [],
+            'order_type': 'MARKET',
+            'support_trading_session': 'CORE',
+            'time_in_force': 'DAY',
+        },
+        'cash': getattr(snap, 'cash', None),
+        'n_positions': len(getattr(snap, 'positions', None) or {}),
+        'cancels': cancels,
+    }
+    try:
+        result = release(plan, api, clock, journal, submit=True, standing=True)
+    except Exception as exc:
+        return _abort_flatten(status_path, date, str(exc), cancels=cancels)
+    if any(str(row.get('side') or '').upper() == 'BUY' for row in result.get('sent') or []):
+        print('[paper-open] FLATTEN ABORT — buy recorded after send; reconcile broker',
+              flush=True)
+        atomic_json(status_path, result)
+        return 2
+    cancel_ids = ', '.join(c['order_id'] for c in cancels) or 'none'
+    sell_ids = ', '.join(
+        f"{row.get('ticker')}:{row.get('order_id') or row.get('status')}"
+        for row in result.get('sent') or []) or 'none'
+    print(f'[paper-open] FLATTEN {date}: status={result["status"]} '
+          f'cancelled=[{cancel_ids}] sells=[{sell_ids}]', flush=True)
+    atomic_json(status_path, result)
+    we.write_last(result)
+    return 2 if result['status'] == 'failed' else 0
+
+
+def _maybe_flatten(current, *, date, clock, submit, api, status_path, journal):
+    """Run the one-day flatten, or return None to keep today's path."""
+    gate = flatten_gate(current)
+    if gate is None:
+        return None
+    kind, info = gate
+    if kind != 'flatten':
+        return _abort_flatten(status_path, date, info)
+    return _flatten_session(
+        date=date, clock=clock, submit=submit, api=api,
+        status_path=status_path, journal=journal)
+
+
 def run(*, submit=False, clock=now, sleep=time.sleep, loader=load_published, api=None, state_dir=None):
     import fcntl
     current = clock()
@@ -245,6 +453,12 @@ def run(*, submit=False, clock=now, sleep=time.sleep, loader=load_published, api
             # preserve the first attempt rather than replace it.
             print('[paper-open] session already attempted; no resend', flush=True)
             return 0 if prior.get('status') in OK_STATUSES else 2
+        # Flagged ET date only. Any other date keeps the bell path below.
+        flattened = _maybe_flatten(
+            current, date=date, clock=clock, submit=submit, api=api,
+            status_path=status_path, journal=journal)
+        if flattened is not None:
+            return flattened
         if current >= target:
             atomic_json(status_path, {'date': date, 'status': 'missed_deadline', 'observed_at': current.isoformat()})
             return 2
@@ -315,6 +529,12 @@ def submit_ready(*, submit=True, clock=now, loader=None, api=None, state_dir=Non
         if prior is not None:
             print('[paper-open] session already attempted; no resend', flush=True)
             return 0 if prior.get('status') in OK_STATUSES else 2
+        # Flagged ET date only. Any other date keeps the HOT4 standing path.
+        flattened = _maybe_flatten(
+            current, date=date, clock=clock, submit=submit, api=api,
+            status_path=status_path, journal=journal)
+        if flattened is not None:
+            return flattened
         api = api or we.PaperAPI('paper')
         if not api.connect():
             atomic_json(status_path, {'date': date, 'status': 'broker_unavailable',
