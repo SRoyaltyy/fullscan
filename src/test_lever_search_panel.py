@@ -339,6 +339,13 @@ def test_initial_inputs_and_hash_guard() -> None:
     assert len(manifest["finviz_proven_dates"]) == 24
     assert_finviz_date("2026-08-07")
     assert_manifest_hashes()
+    from src.lever_search_inputs import SUGGESTIONS_CSV, sha256_git_blob
+
+    sug = next(item for item in manifest["pinned_files"] if item["path"] == SUGGESTIONS_CSV)
+    assert sug["sha256"] == "a2906ccde607dbbfe77967592ba44e37b57e3dc636b734b6092d243f5e877dc3"
+    assert sug["commit_sha"] == "d17af51c6a4d59b90d26f7207c4762cc0b3a99eb"
+    repo = Path(__file__).resolve().parents[1]
+    assert sha256_git_blob(repo, sug["commit_sha"], SUGGESTIONS_CSV) == sug["sha256"]
     for name in ("fwd_1d", "tr1d_ret_H", "trf_true_ret", "label_date_1", "seg_mom"):
         try:
             assert_initial_finviz_column(name)
@@ -506,6 +513,29 @@ def test_initial_inputs_and_hash_guard() -> None:
         raise AssertionError("bad hash was accepted")
 
 
+def test_suggestions_hash_ignores_live_rewrite() -> None:
+    """The guard hashes the preregistration blob, even when the worktree file is absent."""
+    from src.lever_search_inputs import (
+        SUGGESTIONS_CSV,
+        InputHashError,
+        assert_manifest_hashes,
+        load_manifest,
+    )
+
+    manifest = load_manifest()
+    item = next(row for row in manifest["pinned_files"] if row["path"] == SUGGESTIONS_CSV)
+    only = {"pinned_files": [item]}
+    with tempfile.TemporaryDirectory() as tmp:
+        assert_manifest_hashes(root=Path(tmp), manifest=only)
+    bad = {"pinned_files": [dict(item, sha256="0" * 64)]}
+    try:
+        assert_manifest_hashes(manifest=bad)
+    except InputHashError:
+        pass
+    else:
+        raise AssertionError("bad suggestions hash was accepted")
+
+
 def main() -> None:
     tests = [
         test_prereg_whitelist_matches_loader,
@@ -518,6 +548,7 @@ def main() -> None:
         test_requesting_excluded_column_raises_before_load,
         test_tally_lines_stay_in_prereg,
         test_initial_inputs_and_hash_guard,
+        test_suggestions_hash_ignores_live_rewrite,
     ]
     failed = 0
     for fn in tests:

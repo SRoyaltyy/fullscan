@@ -7,6 +7,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import subprocess
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -43,6 +44,11 @@ SEARCH_N = GROUP3_N
 RUNNING_TALLY = LUCK_N
 MIN_CHECK_DAYS = 10
 FULLSCAN_PROOF_PATH = "research/audit/FULLSCAN_FILE_PROOF.csv"
+
+# Daily excel-bot commits rewrite this path. The manifest sha256 is the
+# blob at the pinned_files commit_sha (the copy in the #351 preregistration),
+# not the worktree file.
+SUGGESTIONS_CSV = "excel_bot/suggestions/suggestions.csv"
 
 # First session on which that column family is present in panel_meta.json.
 COLUMN_FAMILY_START: tuple[tuple[str, str], ...] = (
@@ -187,17 +193,51 @@ def sha256_file(path: Path) -> str:
     return digest.hexdigest()
 
 
+def git_repo(start: Path) -> Path:
+    """Directory whose history holds the pinned blob. A fixture tree falls back to this repo."""
+    for candidate in (start, *start.parents):
+        if (candidate / ".git").exists():
+            return candidate
+    if (ROOT / ".git").exists():
+        return ROOT
+    return start
+
+
+def sha256_git_blob(repo: Path, commit: str, rel: str) -> str:
+    """sha256 of `git show commit:rel`. The bytes are the committed blob."""
+    proc = subprocess.run(
+        ["git", "-C", str(repo), "show", f"{commit}:{rel}"],
+        capture_output=True,
+        check=False,
+    )
+    if proc.returncode != 0:
+        detail = proc.stderr.decode("utf-8", errors="replace").strip()
+        raise InputHashError(f"cannot read {rel} at {commit}: {detail}")
+    return hashlib.sha256(proc.stdout).hexdigest()
+
+
 def assert_manifest_hashes(root: Path | None = None, manifest: dict | None = None) -> None:
-    """Re-hash every pinned file. One mismatch raises InputHashError."""
+    """Re-hash every pinned file. One mismatch raises InputHashError.
+
+    ``excel_bot/suggestions/suggestions.csv`` is rewritten by the daily
+    excel-bot commit. Its manifest hash is the blob at that entry's
+    ``commit_sha``, the copy present at preregistration, not the live file.
+    """
     root = root or ROOT
     manifest = manifest or load_manifest()
     for item in manifest.get("pinned_files") or []:
         rel = item["path"]
         expect = item["sha256"]
-        path = root / rel
-        if not path.is_file():
-            raise InputHashError(f"missing pinned file {rel}")
-        got = sha256_file(path)
+        if rel == SUGGESTIONS_CSV:
+            commit = str(item.get("commit_sha") or "").strip()
+            if not commit:
+                raise InputHashError(f"{rel} pin has no commit_sha")
+            got = sha256_git_blob(git_repo(root), commit, rel)
+        else:
+            path = root / rel
+            if not path.is_file():
+                raise InputHashError(f"missing pinned file {rel}")
+            got = sha256_file(path)
         if got != expect:
             raise InputHashError(f"{rel} sha256 {got} != manifest {expect}")
 
