@@ -58,3 +58,30 @@ Luck N is 21536. A table sorted for reading is the freeze, not a live record.
 | 50 | `union_hot_n4_holdup__w1` |  |  | 30.30% | 24.07% | 55.88% | 52.94% | 34 |  | 12.00% | 23.53% | 12.00% | 30.30% | 29.60% | -4.88% | -4.87% |
 
 Verdict: union_hot_n4_h1_time__w0 beats the base.
+
+## Forward check 2026-09-14 through 2026-09-25
+
+This window can only reject a frozen recipe. Under 30 closed trades is unproven. The frozen list is unchanged. Recipes that are not rejected and not unproven are still not proven; the record carries from 2026-09-28.
+
+| id | status | compound | renew compound | win rate | up share | trades | joint |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| `union_hot_score_h3__w0` | rejected | 5.77% | 6.72% | 32.73% | 50.00% | 55 | 32.73% |
+| `union_hot_n4_h1__w0` | not_rejected | 36.02% | 31.50% | 53.12% | 50.00% | 32 | 50.00% |
+| `union_hot_n4_holdup__w0` | not_rejected | 38.82% | 45.54% | 53.33% | 60.00% | 30 | 53.33% |
+| `union_candle_score_h3__w0` | rejected | 2.71% | 2.49% | 46.30% | 60.00% | 54 | 46.30% |
+| `union_cond_h3__w0` | rejected | -5.06% | -5.89% | 30.61% | 50.00% | 49 | 30.61% |
+| `union_ret_5_h3__w0` | rejected | 3.12% | 3.88% | 41.82% | 50.00% | 55 | 41.82% |
+| `union_w_hot_cond_h3__w0` | rejected | 3.84% | 4.73% | 33.96% | 50.00% | 53 | 33.96% |
+| `union_w_hot_candle_h3__w0` | rejected | 9.03% | 5.69% | 36.54% | 40.00% | 52 | 36.54% |
+| `union_hot_n12_h1__w0` | rejected | 2.13% | -0.19% | 41.98% | 30.00% | 81 | 30.00% |
+| `union_hot_n4_h3__w0` | unproven | 29.34% | 26.46% | 46.43% | 60.00% | 28 |  |
+| `union_hot_score_h1__w0` | rejected | 10.72% | 7.46% | 43.86% | 50.00% | 57 | 43.86% |
+| `union_hot_n4_h5__w0` | unproven | 13.46% | 13.45% | 50.00% | 75.00% | 12 |  |
+| `union_hot_score_h3_time__w0` | rejected | 6.72% | 6.72% | 37.50% | 50.00% | 56 | 37.50% |
+| `union_hot_n4_h1_time__w0` | rejected | 31.50% | 31.50% | 47.37% | 50.00% | 38 | 47.37% |
+| `union_hot_score_h3_exitalarm__w0` | rejected | 6.64% | 8.29% | 37.74% | 50.00% | 53 | 37.74% |
+| `union_hot_score_h3_holdup__w0` | rejected | 5.77% | 6.72% | 32.73% | 50.00% | 55 | 32.73% |
+| `union_hot_score_h3_green__w0` | rejected | -2.29% | -2.80% | 35.42% | 40.00% | 48 | 35.42% |
+| `union_hot_n4_h1_green__w0` | unproven | 15.13% | 14.75% | 51.72% | 50.00% | 29 |  |
+| `union_hot_score_h3_nonews__w0` | rejected | 5.41% | 5.49% | 32.73% | 40.00% | 55 | 32.73% |
+| `union_hot_n4_h1_nonews__w0` | not_rejected | 35.47% | 30.94% | 53.12% | 50.00% | 32 | 50.00% |
