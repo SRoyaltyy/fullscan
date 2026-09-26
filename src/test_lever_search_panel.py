@@ -536,6 +536,42 @@ def test_suggestions_hash_ignores_live_rewrite() -> None:
         raise AssertionError("bad suggestions hash was accepted")
 
 
+def test_suggestions_signal_cell_is_frozen() -> None:
+    """A tracking refresh of the live file passes. A signal cell does not."""
+    from src.lever_search_inputs import (
+        SUGGESTIONS_CSV,
+        InputHashError,
+        assert_suggestions_signal_columns,
+        load_pinned_suggestions,
+        read_pinned_suggestions,
+    )
+
+    pinned = read_pinned_suggestions()
+    repo = Path(__file__).resolve().parents[1]
+    live = (repo / SUGGESTIONS_CSV).read_text(encoding="utf-8")
+    assert_suggestions_signal_columns(pinned.decode("utf-8"), live)
+    with tempfile.TemporaryDirectory() as tmp:
+        loaded = load_pinned_suggestions(root=Path(tmp))
+    assert loaded
+    assert loaded[0]["ticker"]
+
+    header = (
+        "run_date,signal_date,ticker,side,strategy,exit_rule,ref_close,"
+        "first_open,current_price,ret_vs_close,ret_vs_open,days_held,signal_colors"
+    )
+    base = "2026-07-28,2026-07-24,AEP,LONG,L1,tp8,135.54,135.18,118.35,-1%,-2%,4,green"
+    tracking = "2026-07-28,2026-07-24,AEP,LONG,L1,tp8,135.54,135.18,99.00,9%,8%,1,green"
+    signal = "2026-07-28,2026-07-24,ZZZ,LONG,L1,tp8,135.54,135.18,118.35,-1%,-2%,4,green"
+    pin_text = header + "\n" + base + "\n"
+    assert_suggestions_signal_columns(pin_text, header + "\n" + tracking + "\n")
+    try:
+        assert_suggestions_signal_columns(pin_text, header + "\n" + signal + "\n")
+    except InputHashError:
+        pass
+    else:
+        raise AssertionError("changed signal cell was accepted")
+
+
 def main() -> None:
     tests = [
         test_prereg_whitelist_matches_loader,
@@ -549,6 +585,7 @@ def main() -> None:
         test_tally_lines_stay_in_prereg,
         test_initial_inputs_and_hash_guard,
         test_suggestions_hash_ignores_live_rewrite,
+        test_suggestions_signal_cell_is_frozen,
     ]
     failed = 0
     for fn in tests:

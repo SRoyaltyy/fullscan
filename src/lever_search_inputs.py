@@ -5,7 +5,9 @@ dropped Excel rows, and the manifest hashes. A mismatch raises.
 """
 from __future__ import annotations
 
+import csv
 import hashlib
+import io
 import json
 import subprocess
 from pathlib import Path
@@ -47,8 +49,28 @@ FULLSCAN_PROOF_PATH = "research/audit/FULLSCAN_FILE_PROOF.csv"
 
 # Daily excel-bot commits rewrite this path. The manifest sha256 is the
 # blob at the pinned_files commit_sha (the copy in the #351 preregistration),
-# not the worktree file.
+# not the worktree file. That hash is never rewritten.
 SUGGESTIONS_CSV = "excel_bot/suggestions/suggestions.csv"
+
+# Cells that must match the pinned row. Daily commits may refresh only
+# SUGGESTION_TRACKING_COLUMNS on those rows.
+SUGGESTION_SIGNAL_COLUMNS: tuple[str, ...] = (
+    "run_date",
+    "signal_date",
+    "ticker",
+    "side",
+    "strategy",
+    "exit_rule",
+    "ref_close",
+    "first_open",
+    "signal_colors",
+)
+SUGGESTION_TRACKING_COLUMNS: tuple[str, ...] = (
+    "current_price",
+    "ret_vs_close",
+    "ret_vs_open",
+    "days_held",
+)
 
 # First session on which that column family is present in panel_meta.json.
 COLUMN_FAMILY_START: tuple[tuple[str, str], ...] = (
@@ -203,8 +225,8 @@ def git_repo(start: Path) -> Path:
     return start
 
 
-def sha256_git_blob(repo: Path, commit: str, rel: str) -> str:
-    """sha256 of `git show commit:rel`. The bytes are the committed blob."""
+def git_blob_bytes(repo: Path, commit: str, rel: str) -> bytes:
+    """Bytes of `git show commit:rel`. The blob is the committed file."""
     proc = subprocess.run(
         ["git", "-C", str(repo), "show", f"{commit}:{rel}"],
         capture_output=True,
@@ -213,7 +235,79 @@ def sha256_git_blob(repo: Path, commit: str, rel: str) -> str:
     if proc.returncode != 0:
         detail = proc.stderr.decode("utf-8", errors="replace").strip()
         raise InputHashError(f"cannot read {rel} at {commit}: {detail}")
-    return hashlib.sha256(proc.stdout).hexdigest()
+    return proc.stdout
+
+
+def sha256_git_blob(repo: Path, commit: str, rel: str) -> str:
+    """sha256 of `git show commit:rel`. The bytes are the committed blob."""
+    return hashlib.sha256(git_blob_bytes(repo, commit, rel)).hexdigest()
+
+
+def suggestions_pin(manifest: dict | None = None) -> dict:
+    """The pinned_files entry for suggestions.csv. Its sha256 is left as written."""
+    manifest = manifest or load_manifest()
+    for item in manifest.get("pinned_files") or []:
+        if item.get("path") == SUGGESTIONS_CSV:
+            return item
+    raise InputHashError(f"missing pinned file {SUGGESTIONS_CSV}")
+
+
+def read_pinned_suggestions(root: Path | None = None, manifest: dict | None = None) -> bytes:
+    """suggestions.csv as of the pin commit, checked against the manifest hash.
+
+    The worktree file is not opened. The manifest hash is not changed.
+    """
+    root = root or ROOT
+    item = suggestions_pin(manifest)
+    commit = str(item.get("commit_sha") or "").strip()
+    expect = item["sha256"]
+    if not commit:
+        raise InputHashError(f"{SUGGESTIONS_CSV} pin has no commit_sha")
+    blob = git_blob_bytes(git_repo(root), commit, SUGGESTIONS_CSV)
+    got = hashlib.sha256(blob).hexdigest()
+    if got != expect:
+        raise InputHashError(f"{SUGGESTIONS_CSV} sha256 {got} != manifest {expect}")
+    return blob
+
+
+def load_pinned_suggestions(root: Path | None = None, manifest: dict | None = None) -> list[dict]:
+    """Suggestion rows from the preregistration blob. The live file is not opened."""
+    text = read_pinned_suggestions(root, manifest).decode("utf-8")
+    return list(csv.DictReader(io.StringIO(text)))
+
+
+def _suggestion_rows(text: str) -> list[dict]:
+    reader = csv.DictReader(io.StringIO(text))
+    rows = list(reader)
+    fields = reader.fieldnames or []
+    missing = [name for name in SUGGESTION_SIGNAL_COLUMNS if name not in fields]
+    if missing:
+        raise InputHashError(f"suggestions csv missing columns {missing}")
+    return rows
+
+
+def assert_suggestions_signal_columns(pinned_csv: str, live_csv: str) -> None:
+    """Pinned rows keep their signal cells in the live file.
+
+    ``current_price``, ``ret_vs_close``, ``ret_vs_open``, and ``days_held``
+    may change. Every other listed cell on a pinned row must match the live
+    row at the same index. Rows appended after the pinned copy are ignored.
+    """
+    pinned = _suggestion_rows(pinned_csv)
+    live = _suggestion_rows(live_csv)
+    if len(live) < len(pinned):
+        raise InputHashError(
+            f"live suggestions has {len(live)} rows; pinned copy has {len(pinned)}"
+        )
+    for index, prow in enumerate(pinned):
+        lrow = live[index]
+        for name in SUGGESTION_SIGNAL_COLUMNS:
+            left = prow.get(name) or ""
+            right = lrow.get(name) or ""
+            if left != right:
+                raise InputHashError(
+                    f"suggestions row {index} {name} {left!r} != live {right!r}"
+                )
 
 
 def assert_manifest_hashes(root: Path | None = None, manifest: dict | None = None) -> None:
@@ -229,15 +323,12 @@ def assert_manifest_hashes(root: Path | None = None, manifest: dict | None = Non
         rel = item["path"]
         expect = item["sha256"]
         if rel == SUGGESTIONS_CSV:
-            commit = str(item.get("commit_sha") or "").strip()
-            if not commit:
-                raise InputHashError(f"{rel} pin has no commit_sha")
-            got = sha256_git_blob(git_repo(root), commit, rel)
-        else:
-            path = root / rel
-            if not path.is_file():
-                raise InputHashError(f"missing pinned file {rel}")
-            got = sha256_file(path)
+            read_pinned_suggestions(root, manifest)
+            continue
+        path = root / rel
+        if not path.is_file():
+            raise InputHashError(f"missing pinned file {rel}")
+        got = sha256_file(path)
         if got != expect:
             raise InputHashError(f"{rel} sha256 {got} != manifest {expect}")
 
