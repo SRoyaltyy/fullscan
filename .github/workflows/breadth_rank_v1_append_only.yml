@@ -1,0 +1,42 @@
+name: breadth_rank_v1 append-only
+
+on:
+  push:
+    paths:
+      - "research/breadth_rank_v1/**"
+      - "src/breadth_rank_v1_append.py"
+      - "src/breadth_rank_v1_score.py"
+      - "src/breadth_rank_v1_bars.py"
+      - "src/test_breadth_rank_v1.py"
+      - "src/test_breadth_rank_v1_append.py"
+      - ".github/workflows/breadth_rank_v1_append_only.yml"
+  pull_request:
+    paths:
+      - "research/breadth_rank_v1/**"
+      - "src/breadth_rank_v1_append.py"
+      - "src/breadth_rank_v1_score.py"
+      - "src/breadth_rank_v1_bars.py"
+      - "src/test_breadth_rank_v1.py"
+      - "src/test_breadth_rank_v1_append.py"
+      - ".github/workflows/breadth_rank_v1_append_only.yml"
+
+jobs:
+  append-only:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install bar and score dependencies
+        run: pip install numpy pandas pyarrow
+      - name: Fetch the base branch
+        run: git fetch --no-tags origin main
+      - name: append-only, protocol, and split scale
+        run: |
+          python3 -m src.breadth_rank_v1_append --check-against origin/main
+          python3 -m src.test_breadth_rank_v1_append
+          python3 -m src.test_breadth_rank_v1
+          python3 -m src.breadth_rank_v1_bars --check

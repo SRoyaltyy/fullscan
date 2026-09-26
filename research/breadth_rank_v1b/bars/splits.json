@@ -1,0 +1,262 @@
+[
+  {
+    "date": "2026-07-06",
+    "split": 0.06666667,
+    "ticker": "ABTC"
+  },
+  {
+    "date": "2026-03-05",
+    "split": 0.16666667,
+    "ticker": "AEHL"
+  },
+  {
+    "date": "2026-08-10",
+    "split": 0.0625,
+    "ticker": "AEHL"
+  },
+  {
+    "date": "2026-06-12",
+    "split": 0.16666667,
+    "ticker": "AIFA"
+  },
+  {
+    "date": "2026-06-16",
+    "split": 0.05,
+    "ticker": "AIFU"
+  },
+  {
+    "date": "2026-04-06",
+    "split": 0.05,
+    "ticker": "AIIO"
+  },
+  {
+    "date": "2026-04-27",
+    "split": 0.05,
+    "ticker": "AIOS"
+  },
+  {
+    "date": "2026-07-01",
+    "split": 0.05,
+    "ticker": "ALIT"
+  },
+  {
+    "date": "2026-07-27",
+    "split": 0.125,
+    "ticker": "AMZE"
+  },
+  {
+    "date": "2026-04-20",
+    "split": 1.5,
+    "ticker": "ANAB"
+  },
+  {
+    "date": "2026-09-03",
+    "split": 2.0,
+    "ticker": "APH"
+  },
+  {
+    "date": "2026-06-15",
+    "split": 1.253,
+    "ticker": "ATRO"
+  },
+  {
+    "date": "2026-08-17",
+    "split": 2.793,
+    "ticker": "AVB"
+  },
+  {
+    "date": "2026-03-23",
+    "split": 0.1,
+    "ticker": "AZI"
+  },
+  {
+    "date": "2026-07-13",
+    "split": 0.1,
+    "ticker": "BIYA"
+  },
+  {
+    "date": "2026-04-06",
+    "split": 25.0,
+    "ticker": "BKNG"
+  },
+  {
+    "date": "2026-08-24",
+    "split": 0.1,
+    "ticker": "BRCC"
+  },
+  {
+    "date": "2026-08-14",
+    "split": 0.03333333,
+    "ticker": "BYND"
+  },
+  {
+    "date": "2026-07-21",
+    "split": 0.1,
+    "ticker": "CANG"
+  },
+  {
+    "date": "2026-06-08",
+    "split": 0.1,
+    "ticker": "CDLX"
+  },
+  {
+    "date": "2026-07-02",
+    "split": 4.0,
+    "ticker": "CRWD"
+  },
+  {
+    "date": "2026-05-08",
+    "split": 5.0,
+    "ticker": "CVNA"
+  },
+  {
+    "date": "2026-06-01",
+    "split": 0.04,
+    "ticker": "DAIC"
+  },
+  {
+    "date": "2026-06-01",
+    "split": 1.241,
+    "ticker": "FDX"
+  },
+  {
+    "date": "2026-03-24",
+    "split": 0.08333333,
+    "ticker": "FUBO"
+  },
+  {
+    "date": "2026-07-10",
+    "split": 0.25,
+    "ticker": "GORO"
+  },
+  {
+    "date": "2026-06-29",
+    "split": 0.9535,
+    "ticker": "HON"
+  },
+  {
+    "date": "2026-06-12",
+    "split": 10.0,
+    "ticker": "KLAC"
+  },
+  {
+    "date": "2026-09-01",
+    "split": 0.008,
+    "ticker": "LGCL"
+  },
+  {
+    "date": "2026-03-16",
+    "split": 0.04,
+    "ticker": "MASK"
+  },
+  {
+    "date": "2026-08-19",
+    "split": 0.06666667,
+    "ticker": "NRDY"
+  },
+  {
+    "date": "2026-08-10",
+    "split": 0.01,
+    "ticker": "NXTT"
+  },
+  {
+    "date": "2026-03-24",
+    "split": 4.0,
+    "ticker": "PIPR"
+  },
+  {
+    "date": "2026-05-26",
+    "split": 0.1,
+    "ticker": "PRTS"
+  },
+  {
+    "date": "2026-08-25",
+    "split": 0.1,
+    "ticker": "REAX"
+  },
+  {
+    "date": "2026-08-04",
+    "split": 1.437,
+    "ticker": "REZI"
+  },
+  {
+    "date": "2026-09-01",
+    "split": 1.5,
+    "ticker": "RUSHA"
+  },
+  {
+    "date": "2026-05-13",
+    "split": 1.01,
+    "ticker": "SCCO"
+  },
+  {
+    "date": "2026-08-11",
+    "split": 1.012,
+    "ticker": "SCCO"
+  },
+  {
+    "date": "2026-03-23",
+    "split": 1.5,
+    "ticker": "SNEX"
+  },
+  {
+    "date": "2026-07-20",
+    "split": 1.5,
+    "ticker": "SNEX"
+  },
+  {
+    "date": "2026-07-01",
+    "split": 1.057,
+    "ticker": "SPGI"
+  },
+  {
+    "date": "2026-07-07",
+    "split": 0.2,
+    "ticker": "SVC"
+  },
+  {
+    "date": "2026-04-24",
+    "split": 0.03333333,
+    "ticker": "TDTH"
+  },
+  {
+    "date": "2026-05-26",
+    "split": 0.33333333,
+    "ticker": "TJGC"
+  },
+  {
+    "date": "2026-04-21",
+    "split": 8.0,
+    "ticker": "VGT"
+  },
+  {
+    "date": "2026-04-13",
+    "split": 0.2,
+    "ticker": "WFF"
+  },
+  {
+    "date": "2026-06-02",
+    "split": 0.25,
+    "ticker": "WYHG"
+  },
+  {
+    "date": "2026-05-18",
+    "split": 0.06666667,
+    "ticker": "YMT"
+  },
+  {
+    "date": "2026-08-27",
+    "split": 0.0625,
+    "ticker": "YMT"
+  },
+  {
+    "date": "2026-07-14",
+    "split": 0.1,
+    "ticker": "YXT"
+  },
+  {
+    "date": "2026-03-16",
+    "split": 0.05,
+    "ticker": "ZJYL"
+  }
+]

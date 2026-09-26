@@ -1,0 +1,943 @@
+{
+  "dropped": [
+    "ADBT",
+    "AIXI",
+    "AKAN",
+    "ALP",
+    "AMIX",
+    "ASTC",
+    "CAPR",
+    "CAST",
+    "CELZ",
+    "CHAI",
+    "CISS",
+    "CLRO",
+    "DSY",
+    "EDHL",
+    "EHGO",
+    "EJH",
+    "ENGN",
+    "EYPT",
+    "FCUV",
+    "FEED",
+    "FIRY",
+    "FTRK",
+    "GIPR",
+    "HAO",
+    "HKIT",
+    "HYFM",
+    "ILLR",
+    "INHD",
+    "IPST",
+    "JEM",
+    "JLHL",
+    "JZ",
+    "LBGJ",
+    "LGCL",
+    "LHSW",
+    "LZMH",
+    "MB",
+    "MGN",
+    "MPU",
+    "MSGY",
+    "MYSE",
+    "NAMI",
+    "NFE",
+    "NXTT",
+    "OFAL",
+    "OMH",
+    "ONCO",
+    "PAAI",
+    "PFSA",
+    "PLAG",
+    "PPCB",
+    "QH",
+    "QNME",
+    "RCON",
+    "RITR",
+    "SCKT",
+    "SION",
+    "SLBT",
+    "SMJF",
+    "STAK",
+    "SXTC",
+    "TGHL",
+    "TNMG",
+    "UPC",
+    "VSME",
+    "VWAV",
+    "WCT",
+    "WETO",
+    "WOK",
+    "XHG",
+    "XHLD",
+    "YAAS",
+    "YJ",
+    "YXT",
+    "YYAI",
+    "ZCMD",
+    "ZTG"
+  ],
+  "jumps": [
+    {
+      "date": "2026-09-03",
+      "detail": "Re-pull matches the old print (ratio 0.223684). Yahoo splits (none) do not explain this close_over_open within 25%. Not patched. Dropped.",
+      "leg": "close_over_open",
+      "prev_priced": "2026-09-03",
+      "ratio": 0.223684,
+      "resolution": "unexplained_dropped",
+      "ticker": "ADBT"
+    },
+    {
+      "date": "2026-08-25",
+      "detail": "Re-pull matches the old print (ratio 3.187773). Yahoo splits (2026-05-11 0.05, 2026-09-08 0.14285714) do not explain this open_over_prev_close within 25%. Not patched. Dropped.",
+      "leg": "open_over_prev_close",
+      "prev_priced": "2026-08-24",
+      "ratio": 3.187773,
+      "resolution": "unexplained_dropped",
+      "ticker": "AIXI"
+    },
+    {
+      "date": "2026-04-22",
+      "detail": "Re-pull matches the old print (ratio 3.141538). Yahoo splits (2026-04-13 0.222) do not explain this close_over_open within 25%. Not patched. Dropped.",
+      "leg": "close_over_open",
+      "prev_priced": "2026-04-22",
+      "ratio": 3.141538,
+      "resolution": "unexplained_dropped",
+      "ticker": "AKAN"
+    },
+    {
+      "date": "2026-09-10",
+      "detail": "Yahoo split on 2026-09-09 share factor 0.02 (price factor 50). Re-pulled Close still jumps 52.121211 and Adj Close equals Close. Not rescaled. Dropped.",
+      "leg": "open_over_prev_close",
+      "prev_priced": "2026-09-04",
+      "ratio": 52.121211,
+      "resolution": "matched_split_dropped",
+      "ticker": "ALP"
+    },
+    {
+      "date": "2026-08-04",
+      "detail": "Re-pull matches the old print (ratio 3.624535). Yahoo splits (2026-06-24 0.047619048) do not explain this close_over_open within 25%. Not patched. Dropped.",
+      "leg": "close_over_open",
+      "prev_priced": "2026-08-04",
+      "ratio": 3.624535,
+      "resolution": "unexplained_dropped",
+      "ticker": "AMIX"
+    },
+    {
+      "date": "2026-05-27",
+      "detail": "Re-pull matches the old print (ratio 3.004049). Yahoo splits (none) do not explain this open_over_prev_close within 25%. Not patched. Dropped.",
+      "leg": "open_over_prev_close",
+      "prev_priced": "2026-05-26",
+      "ratio": 3.004049,
+      "resolution": "unexplained_dropped",
+      "ticker": "ASTC"
+    },
+    {
+      "date": "2026-07-27",
+      "detail": "Re-pull matches the old print (ratio 0.297970). Yahoo splits (none) do not explain this open_over_prev_close within 25%. Not patched. Dropped.",
+      "leg": "open_over_prev_close",
+      "prev_priced": "2026-07-24",
+      "ratio": 0.29797,
+      "resolution": "unexplained_dropped",
+      "ticker": "CAPR"
+    },
+    {
+      "date": "2026-03-10",
+      "detail": "Re-pull matches the old print (ratio 0.276667). Yahoo splits (none) do not explain this close_over_open within 25%. Not patched. Dropped.",
+      "leg": "close_over_open",
+      "prev_priced": "2026-03-10",
+      "ratio": 0.276667,
+      "resolution": "unexplained_dropped",
+      "ticker": "CAST"
+    },
+    {
+      "date": "2026-06-15",
+      "detail": "Re-pull matches the old print (ratio 3.122581). Yahoo splits (none) do not explain this open_over_prev_close within 25%. Not patched. Dropped.",
+      "leg": "open_over_prev_close",
+      "prev_priced": "2026-06-12",
+      "ratio": 3.122581,
+      "resolution": "unexplained_dropped",
+      "ticker": "CAST"
+    },
+    {
+      "date": "2026-06-30",
+      "detail": "Re-pull matches the old print (ratio 3.221427). Yahoo splits (none) do not explain this open_over_prev_close within 25%. Not patched. Dropped.",
+      "leg": "open_over_prev_close",
+      "prev_priced": "2026-06-29",
+      "ratio": 3.221427,
+      "resolution": "unexplained_dropped",
+      "ticker": "CELZ"
+    },
+    {
+      "date": "2026-06-09",
+      "detail": "Re-pull matches the old print (ratio 4.353658). Yahoo splits (none) do not explain this open_over_prev_close within 25%. Not patched. Dropped.",
+      "leg": "open_over_prev_close",
+      "prev_priced": "2026-06-08",
+      "ratio": 4.353658,
+      "resolution": "unexplained_dropped",
+      "ticker": "CHAI"
+    },
+    {
+      "date": "2026-07-27",
+      "detail": "Re-pull matches the old print (ratio 0.269231). Yahoo splits (2026-04-27 0.14285714, 2026-08-19 0.025) do not explain this open_over_prev_close within 25%. Not patched. Dropped.",
+      "leg": "open_over_prev_close",
+      "prev_priced": "2026-07-24",
+      "ratio": 0.269231,
+      "resolution": "unexplained_dropped",
+      "ticker": "CISS"
+    },
+    {
+      "date": "2026-08-06",
+      "detail": "Re-pull matches the old print (ratio 3.176630). Yahoo splits (none) do not explain this open_over_prev_close within 25%. Not patched. Dropped.",
+      "leg": "open_over_prev_close",
+      "prev_priced": "2026-08-05",
+      "ratio": 3.17663,
+      "resolution": "unexplained_dropped",
+      "ticker": "CLRO"
+    },
+    {
+      "date": "2026-06-10",
+      "detail": "Re-pull matches the old print (ratio 5.206522). Yahoo splits (none) do not explain this open_over_prev_close within 25%. Not patched. Dropped.",
+      "leg": "open_over_prev_close",
+      "prev_priced": "2026-06-09",
+      "ratio": 5.206522,
+      "resolution": "unexplained_dropped",
+      "ticker": "DSY"
+    },
+    {
+      "date": "2026-06-11",
+      "detail": "Re-pull matches the old print (ratio 4.722857). Yahoo splits (none) do not explain this open_over_prev_close within 25%. Not patched. Dropped.",
+      "leg": "open_over_prev_close",
+      "prev_priced": "2026-06-10",
+      "ratio": 4.722857,
+      "resolution": "unexplained_dropped",
+      "ticker": "EDHL"
+    },
+    {
+      "date": "2026-06-17",
+      "detail": "Re-pull matches the old print (ratio 3.643939). Yahoo splits (2026-04-20 0.0625) do not explain this open_over_prev_close within 25%. Not patched. Dropped.",
+      "leg": "open_over_prev_close",
+      "prev_priced": "2026-06-16",
+      "ratio": 3.643939,
+      "resolution": "unexplained_dropped",
+      "ticker": "EHGO"
+    },
+    {
+      "date": "2026-03-09",
+      "detail": "Re-pull matches the old print (ratio 0.278889). Yahoo splits (2026-03-30 0.04) do not explain this close_over_open within 25%. Not patched. Dropped.",
+      "leg": "close_over_open",
+      "prev_priced": "2026-03-09",
+      "ratio": 0.278889,
+      "resolution": "unexplained_dropped",
+      "ticker": "EJH"
+    },
+    {
+      "date": "2026-05-07",
+      "detail": "Re-pull matches the old print (ratio 0.242938). Yahoo splits (none) do not explain this open_over_prev_close within 25%. Not patched. Dropped.",
+      "leg": "open_over_prev_close",
+      "prev_priced": "2026-05-06",
+      "ratio": 0.242938,
+      "resolution": "unexplained_dropped",
+      "ticker": "ENGN"
+    },
+    {
+      "date": "2026-08-17",
+      "detail": "Re-pull matches the old print (ratio 0.275254). Yahoo splits (none) do not explain this open_over_prev_close within 25%. Not patched. Dropped.",
+      "leg": "open_over_prev_close",
+      "prev_priced": "2026-08-14",
+      "ratio": 0.275254,
+      "resolution": "unexplained_dropped",
+      "ticker": "EYPT"
+    },
+    {
+      "date": "2026-07-31",
+      "detail": "Re-pull matches the old print (ratio 5.436170). Yahoo splits (2026-06-23 0.25) do not explain this open_over_prev_close within 25%. Not patched. Dropped.",
+      "leg": "open_over_prev_close",
+      "prev_priced": "2026-07-30",
+      "ratio": 5.43617,
+      "resolution": "unexplained_dropped",
+      "ticker": "FCUV"
+    },
+    {
+      "date": "2026-09-15",
+      "detail": "Re-pull matches the old print (ratio 0.308383). Yahoo splits (2026-09-01 0.083333333) do not explain this close_over_open within 25%. Not patched. Dropped.",
+      "leg": "close_over_open",
+      "prev_priced": "2026-09-15",
+      "ratio": 0.308383,
+      "resolution": "unexplained_dropped",
+      "ticker": "FEED"
+    },
+    {
+      "date": "2026-04-23",
+      "detail": "Re-pull matches the old print (ratio 3.439227). Yahoo splits (none) do not explain this close_over_open within 25%. Not patched. Dropped.",
+      "leg": "close_over_open",
+      "prev_priced": "2026-04-23",
+      "ratio": 3.439227,
+      "resolution": "unexplained_dropped",
+      "ticker": "FIRY"
+    },
+    {
+      "date": "2026-08-28",
+      "detail": "Re-pull matches the old print (ratio 0.140000). Yahoo splits (2026-08-28 0.05) do not explain this open_over_prev_close within 25%. Not patched. Dropped.",
+      "leg": "open_over_prev_close",
+      "prev_priced": "2026-08-27",
+      "ratio": 0.14,
+      "resolution": "unexplained_dropped",
+      "ticker": "FTRK"
+    },
+    {
+      "date": "2026-09-18",
+      "detail": "Re-pull matches the old print (ratio 3.386364). Yahoo splits (2026-07-10 0.1) do not explain this open_over_prev_close within 25%. Not patched. Dropped.",
+      "leg": "open_over_prev_close",
+      "prev_priced": "2026-09-17",
+      "ratio": 3.386364,
+      "resolution": "unexplained_dropped",
+      "ticker": "GIPR"
+    },
+    {
+      "date": "2026-05-11",
+      "detail": "Re-pull matches the old print (ratio 0.087671). Yahoo splits (2026-05-21 0.0078125, 2026-08-14 0.05) do not explain this open_over_prev_close within 25%. Not patched. Dropped.",
+      "leg": "open_over_prev_close",
+      "prev_priced": "2026-05-08",
+      "ratio": 0.087671,
+      "resolution": "unexplained_dropped",
+      "ticker": "HAO"
+    },
+    {
+      "date": "2026-07-10",
+      "detail": "Re-pull matches the old print (ratio 0.220245). Yahoo splits (2026-05-21 0.0078125, 2026-08-14 0.05) do not explain this close_over_open within 25%. Not patched. Dropped.",
+      "leg": "close_over_open",
+      "prev_priced": "2026-07-10",
+      "ratio": 0.220245,
+      "resolution": "unexplained_dropped",
+      "ticker": "HAO"
+    },
+    {
+      "date": "2026-03-23",
+      "detail": "Re-pull matches the old print (ratio 0.097436). Yahoo splits (2026-04-06 0.02, 2026-05-29 0.33333333, 2026-07-06 0.04) do not explain this close_over_open within 25%. Not patched. Dropped.",
+      "leg": "close_over_open",
+      "prev_priced": "2026-03-23",
+      "ratio": 0.097436,
+      "resolution": "unexplained_dropped",
+      "ticker": "HKIT"
+    },
+    {
+      "date": "2026-06-02",
+      "detail": "Re-pull matches the old print (ratio 0.253799). Yahoo splits (2026-04-06 0.02, 2026-05-29 0.33333333, 2026-07-06 0.04) do not explain this open_over_prev_close within 25%. Not patched. Dropped.",
+      "leg": "open_over_prev_close",
+      "prev_priced": "2026-06-01",
+      "ratio": 0.253799,
+      "resolution": "unexplained_dropped",
+      "ticker": "HKIT"
+    },
+    {
+      "date": "2026-08-03",
+      "detail": "Re-pull matches the old print (ratio 5.759259). Yahoo splits (none) do not explain this open_over_prev_close within 25%. Not patched. Dropped.",
+      "leg": "open_over_prev_close",
+      "prev_priced": "2026-07-31",
+      "ratio": 5.759259,
+      "resolution": "unexplained_dropped",
+      "ticker": "HYFM"
+    },
+    {
+      "date": "2026-03-20",
+      "detail": "Re-pull matches the old print (ratio 150.000003). Yahoo splits (2026-06-23 0.1) do not explain this close_over_open within 25%. Not patched. Dropped.",
+      "leg": "close_over_open",
+      "prev_priced": "2026-03-20",
+      "ratio": 150.000003,
+      "resolution": "unexplained_dropped",
+      "ticker": "ILLR"
+    },
+    {
+      "date": "2026-03-20",
+      "detail": "Re-pull matches the old print (ratio 0.005000). Yahoo splits (2026-06-23 0.1) do not explain this open_over_prev_close within 25%. Not patched. Dropped.",
+      "leg": "open_over_prev_close",
+      "prev_priced": "2026-03-19",
+      "ratio": 0.005,
+      "resolution": "unexplained_dropped",
+      "ticker": "ILLR"
+    },
+    {
+      "date": "2026-06-25",
+      "detail": "Re-pull matches the old print (ratio 3.459038). Yahoo splits (2026-06-23 0.1) do not explain this open_over_prev_close within 25%. Not patched. Dropped.",
+      "leg": "open_over_prev_close",
+      "prev_priced": "2026-06-24",
+      "ratio": 3.459038,
+      "resolution": "unexplained_dropped",
+      "ticker": "ILLR"
+    },
+    {
+      "date": "2026-06-08",
+      "detail": "Re-pull matches the old print (ratio 35.576578). Yahoo splits (2026-05-04 0.05) do not explain this close_over_open within 25%. Not patched. Dropped.",
+      "leg": "close_over_open",
+      "prev_priced": "2026-06-08",
+      "ratio": 35.576578,
+      "resolution": "unexplained_dropped",
+      "ticker": "INHD"
+    },
+    {
+      "date": "2026-08-17",
+      "detail": "Re-pull matches the old print (ratio 3.600000). Yahoo splits (2026-04-23 0.05) do not explain this open_over_prev_close within 25%. Not patched. Dropped.",
+      "leg": "open_over_prev_close",
+      "prev_priced": "2026-08-14",
+      "ratio": 3.6,
+      "resolution": "unexplained_dropped",
+      "ticker": "IPST"
+    },
+    {
+      "date": "2026-06-30",
+      "detail": "Re-pull matches the old print (ratio 4.574074). Yahoo splits (2026-04-13 0.05, 2026-07-14 0.083333333) do not explain this open_over_prev_close within 25%. Not patched. Dropped.",
+      "leg": "open_over_prev_close",
+      "prev_priced": "2026-06-29",
+      "ratio": 4.574074,
+      "resolution": "unexplained_dropped",
+      "ticker": "JEM"
+    },
+    {
+      "date": "2026-07-09",
+      "detail": "Re-pull matches the old print (ratio 3.428954). Yahoo splits (none) do not explain this close_over_open within 25%. Not patched. Dropped.",
+      "leg": "close_over_open",
+      "prev_priced": "2026-07-09",
+      "ratio": 3.428954,
+      "resolution": "unexplained_dropped",
+      "ticker": "JLHL"
+    },
+    {
+      "date": "2026-06-01",
+      "detail": "Re-pull matches the old print (ratio 3.202479). Yahoo splits (2026-07-06 0.033333333) do not explain this close_over_open within 25%. Not patched. Dropped.",
+      "leg": "close_over_open",
+      "prev_priced": "2026-06-01",
+      "ratio": 3.202479,
+      "resolution": "unexplained_dropped",
+      "ticker": "JZ"
+    },
+    {
+      "date": "2026-06-02",
+      "detail": "Re-pull matches the old print (ratio 0.222581). Yahoo splits (2026-07-06 0.033333333) do not explain this open_over_prev_close within 25%. Not patched. Dropped.",
+      "leg": "open_over_prev_close",
+      "prev_priced": "2026-06-01",
+      "ratio": 0.222581,
+      "resolution": "unexplained_dropped",
+      "ticker": "JZ"
+    },
+    {
+      "date": "2026-07-20",
+      "detail": "Re-pull matches the old print (ratio 0.102778). Yahoo splits (2026-03-27 0.01, 2026-08-03 0.005) do not explain this close_over_open within 25%. Not patched. Dropped.",
+      "leg": "close_over_open",
+      "prev_priced": "2026-07-20",
+      "ratio": 0.102778,
+      "resolution": "unexplained_dropped",
+      "ticker": "LBGJ"
+    },
+    {
+      "date": "2026-08-18",
+      "detail": "Re-pull matches the old print (ratio 0.210435). Yahoo splits (2026-09-01 0.008) do not explain this close_over_open within 25%. Not patched. Dropped.",
+      "leg": "close_over_open",
+      "prev_priced": "2026-08-18",
+      "ratio": 0.210435,
+      "resolution": "unexplained_dropped",
+      "ticker": "LGCL"
+    },
+    {
+      "date": "2026-07-06",
+      "detail": "Re-pull matches the old print (ratio 3.777778). Yahoo splits (2026-06-22 0.0625) do not explain this open_over_prev_close within 25%. Not patched. Dropped.",
+      "leg": "open_over_prev_close",
+      "prev_priced": "2026-07-02",
+      "ratio": 3.777778,
+      "resolution": "unexplained_dropped",
+      "ticker": "LHSW"
+    },
+    {
+      "date": "2026-09-08",
+      "detail": "Re-pull matches the old print (ratio 0.293333). Yahoo splits (2026-06-22 0.0625) do not explain this close_over_open within 25%. Not patched. Dropped.",
+      "leg": "close_over_open",
+      "prev_priced": "2026-09-08",
+      "ratio": 0.293333,
+      "resolution": "unexplained_dropped",
+      "ticker": "LHSW"
+    },
+    {
+      "date": "2026-04-17",
+      "detail": "Re-pull matches the old print (ratio 0.141463). Yahoo splits (2026-05-22 0.05) do not explain this close_over_open within 25%. Not patched. Dropped.",
+      "leg": "close_over_open",
+      "prev_priced": "2026-04-17",
+      "ratio": 0.141463,
+      "resolution": "unexplained_dropped",
+      "ticker": "LZMH"
+    },
+    {
+      "date": "2026-08-07",
+      "detail": "Re-pull matches the old print (ratio 3.813333). Yahoo splits (none) do not explain this open_over_prev_close within 25%. Not patched. Dropped.",
+      "leg": "open_over_prev_close",
+      "prev_priced": "2026-08-06",
+      "ratio": 3.813333,
+      "resolution": "unexplained_dropped",
+      "ticker": "MB"
+    },
+    {
+      "date": "2026-03-26",
+      "detail": "Re-pull matches the old print (ratio 0.099764). Yahoo splits (2026-09-08 0.025, 2026-09-17 0.033333333) do not explain this open_over_prev_close within 25%. Not patched. Dropped.",
+      "leg": "open_over_prev_close",
+      "prev_priced": "2026-03-25",
+      "ratio": 0.099764,
+      "resolution": "unexplained_dropped",
+      "ticker": "MGN"
+    },
+    {
+      "date": "2026-09-09",
+      "detail": "Re-pull matches the old print (ratio 3.460000). Yahoo splits (2026-09-08 0.025, 2026-09-17 0.033333333) do not explain this open_over_prev_close within 25%. Not patched. Dropped.",
+      "leg": "open_over_prev_close",
+      "prev_priced": "2026-09-08",
+      "ratio": 3.46,
+      "resolution": "unexplained_dropped",
+      "ticker": "MGN"
+    },
+    {
+      "date": "2026-09-16",
+      "detail": "Re-pull matches the old print (ratio 19.400000). Yahoo splits (none) do not explain this open_over_prev_close within 25%. Not patched. Dropped.",
+      "leg": "open_over_prev_close",
+      "prev_priced": "2026-09-11",
+      "ratio": 19.4,
+      "resolution": "unexplained_dropped",
+      "ticker": "MPU"
+    },
+    {
+      "date": "2026-09-25",
+      "detail": "Re-pull matches the old print (ratio 3.788732). Yahoo splits (2026-08-11 0.125) do not explain this close_over_open within 25%. Not patched. Dropped.",
+      "leg": "close_over_open",
+      "prev_priced": "2026-09-25",
+      "ratio": 3.788732,
+      "resolution": "unexplained_dropped",
+      "ticker": "MSGY"
+    },
+    {
+      "date": "2026-04-16",
+      "detail": "Re-pull matches the old print (ratio 3.833333). Yahoo splits (none) do not explain this open_over_prev_close within 25%. Not patched. Dropped.",
+      "leg": "open_over_prev_close",
+      "prev_priced": "2026-04-15",
+      "ratio": 3.833333,
+      "resolution": "unexplained_dropped",
+      "ticker": "MYSE"
+    },
+    {
+      "date": "2026-08-07",
+      "detail": "Re-pull matches the old print (ratio 3.130584). Yahoo splits (2026-06-25 0.04) do not explain this open_over_prev_close within 25%. Not patched. Dropped.",
+      "leg": "open_over_prev_close",
+      "prev_priced": "2026-08-06",
+      "ratio": 3.130584,
+      "resolution": "unexplained_dropped",
+      "ticker": "NAMI"
+    },
+    {
+      "date": "2026-09-15",
+      "detail": "Yahoo split on 2026-09-14 share factor 0.02 (price factor 50). Re-pulled Close still jumps 41.484846 and Adj Close equals Close. Not rescaled. Dropped.",
+      "leg": "open_over_prev_close",
+      "prev_priced": "2026-09-11",
+      "ratio": 41.484846,
+      "resolution": "matched_split_dropped",
+      "ticker": "NFE"
+    },
+    {
+      "date": "2026-08-04",
+      "detail": "Re-pull matches the old print (ratio 0.302632). Yahoo splits (2026-08-10 0.01) do not explain this close_over_open within 25%. Not patched. Dropped.",
+      "leg": "close_over_open",
+      "prev_priced": "2026-08-04",
+      "ratio": 0.302632,
+      "resolution": "unexplained_dropped",
+      "ticker": "NXTT"
+    },
+    {
+      "date": "2026-08-12",
+      "detail": "Re-pull matches the old print (ratio 3.562412). Yahoo splits (2026-07-31 0.1) do not explain this open_over_prev_close within 25%. Not patched. Dropped.",
+      "leg": "open_over_prev_close",
+      "prev_priced": "2026-08-11",
+      "ratio": 3.562412,
+      "resolution": "unexplained_dropped",
+      "ticker": "OFAL"
+    },
+    {
+      "date": "2026-07-21",
+      "detail": "Re-pull matches the old print (ratio 3.224000). Yahoo splits (2026-08-31 0.02) do not explain this close_over_open within 25%. Not patched. Dropped.",
+      "leg": "close_over_open",
+      "prev_priced": "2026-07-21",
+      "ratio": 3.224,
+      "resolution": "unexplained_dropped",
+      "ticker": "OMH"
+    },
+    {
+      "date": "2026-03-27",
+      "detail": "Re-pull matches the old print (ratio 0.332192). Yahoo splits (2026-03-25 0.2, 2026-05-21 0.1) do not explain this close_over_open within 25%. Not patched. Dropped.",
+      "leg": "close_over_open",
+      "prev_priced": "2026-03-27",
+      "ratio": 0.332192,
+      "resolution": "unexplained_dropped",
+      "ticker": "ONCO"
+    },
+    {
+      "date": "2026-09-17",
+      "detail": "Re-pull matches the old print (ratio 3.553191). Yahoo splits (none) do not explain this close_over_open within 25%. Not patched. Dropped.",
+      "leg": "close_over_open",
+      "prev_priced": "2026-09-17",
+      "ratio": 3.553191,
+      "resolution": "unexplained_dropped",
+      "ticker": "PAAI"
+    },
+    {
+      "date": "2026-08-18",
+      "detail": "Re-pull matches the old print (ratio 3.115646). Yahoo splits (2026-07-07 0.04, 2026-08-17 0.25) do not explain this close_over_open within 25%. Not patched. Dropped.",
+      "leg": "close_over_open",
+      "prev_priced": "2026-08-18",
+      "ratio": 3.115646,
+      "resolution": "unexplained_dropped",
+      "ticker": "PFSA"
+    },
+    {
+      "date": "2026-08-11",
+      "detail": "Re-pull matches the old print (ratio 5.429906). Yahoo splits (none) do not explain this close_over_open within 25%. Not patched. Dropped.",
+      "leg": "close_over_open",
+      "prev_priced": "2026-08-11",
+      "ratio": 5.429906,
+      "resolution": "unexplained_dropped",
+      "ticker": "PLAG"
+    },
+    {
+      "date": "2026-08-12",
+      "detail": "Re-pull matches the old print (ratio 0.232358). Yahoo splits (none) do not explain this open_over_prev_close within 25%. Not patched. Dropped.",
+      "leg": "open_over_prev_close",
+      "prev_priced": "2026-08-11",
+      "ratio": 0.232358,
+      "resolution": "unexplained_dropped",
+      "ticker": "PLAG"
+    },
+    {
+      "date": "2026-08-27",
+      "detail": "Re-pull matches the old print (ratio 3.280374). Yahoo splits (2026-05-18 0.04) do not explain this open_over_prev_close within 25%. Not patched. Dropped.",
+      "leg": "open_over_prev_close",
+      "prev_priced": "2026-08-26",
+      "ratio": 3.280374,
+      "resolution": "unexplained_dropped",
+      "ticker": "PPCB"
+    },
+    {
+      "date": "2026-04-20",
+      "detail": "Re-pull matches the old print (ratio 5.111111). Yahoo splits (none) do not explain this close_over_open within 25%. Not patched. Dropped.",
+      "leg": "close_over_open",
+      "prev_priced": "2026-04-20",
+      "ratio": 5.111111,
+      "resolution": "unexplained_dropped",
+      "ticker": "QH"
+    },
+    {
+      "date": "2026-04-20",
+      "detail": "Re-pull matches the old print (ratio 0.209302). Yahoo splits (none) do not explain this open_over_prev_close within 25%. Not patched. Dropped.",
+      "leg": "open_over_prev_close",
+      "prev_priced": "2026-04-17",
+      "ratio": 0.209302,
+      "resolution": "unexplained_dropped",
+      "ticker": "QH"
+    },
+    {
+      "date": "2026-04-27",
+      "detail": "Re-pull matches the old print (ratio 30.000000). Yahoo splits (none) do not explain this open_over_prev_close within 25%. Not patched. Dropped.",
+      "leg": "open_over_prev_close",
+      "prev_priced": "2026-04-24",
+      "ratio": 30.0,
+      "resolution": "unexplained_dropped",
+      "ticker": "QH"
+    },
+    {
+      "date": "2026-08-04",
+      "detail": "Re-pull matches the old print (ratio 3.566879). Yahoo splits (none) do not explain this open_over_prev_close within 25%. Not patched. Dropped.",
+      "leg": "open_over_prev_close",
+      "prev_priced": "2026-08-03",
+      "ratio": 3.566879,
+      "resolution": "unexplained_dropped",
+      "ticker": "QNME"
+    },
+    {
+      "date": "2026-08-05",
+      "detail": "Re-pull matches the old print (ratio 0.153846). Yahoo splits (2026-08-18 0.005) do not explain this close_over_open within 25%. Not patched. Dropped.",
+      "leg": "close_over_open",
+      "prev_priced": "2026-08-05",
+      "ratio": 0.153846,
+      "resolution": "unexplained_dropped",
+      "ticker": "RCON"
+    },
+    {
+      "date": "2026-09-17",
+      "detail": "Re-pull matches the old print (ratio 0.195000). Yahoo splits (none) do not explain this close_over_open within 25%. Not patched. Dropped.",
+      "leg": "close_over_open",
+      "prev_priced": "2026-09-17",
+      "ratio": 0.195,
+      "resolution": "unexplained_dropped",
+      "ticker": "RITR"
+    },
+    {
+      "date": "2026-09-17",
+      "detail": "Re-pull matches the old print (ratio 0.262812). Yahoo splits (none) do not explain this open_over_prev_close within 25%. Not patched. Dropped.",
+      "leg": "open_over_prev_close",
+      "prev_priced": "2026-09-16",
+      "ratio": 0.262812,
+      "resolution": "unexplained_dropped",
+      "ticker": "RITR"
+    },
+    {
+      "date": "2026-08-10",
+      "detail": "Re-pull matches the old print (ratio 6.692308). Yahoo splits (none) do not explain this open_over_prev_close within 25%. Not patched. Dropped.",
+      "leg": "open_over_prev_close",
+      "prev_priced": "2026-08-07",
+      "ratio": 6.692308,
+      "resolution": "unexplained_dropped",
+      "ticker": "SCKT"
+    },
+    {
+      "date": "2026-08-10",
+      "detail": "Re-pull matches the old print (ratio 0.095024). Yahoo splits (none) do not explain this open_over_prev_close within 25%. Not patched. Dropped.",
+      "leg": "open_over_prev_close",
+      "prev_priced": "2026-08-07",
+      "ratio": 0.095024,
+      "resolution": "unexplained_dropped",
+      "ticker": "SION"
+    },
+    {
+      "date": "2026-06-16",
+      "detail": "Re-pull matches the old print (ratio 3.366366). Yahoo splits (none) do not explain this open_over_prev_close within 25%. Not patched. Dropped.",
+      "leg": "open_over_prev_close",
+      "prev_priced": "2026-06-15",
+      "ratio": 3.366366,
+      "resolution": "unexplained_dropped",
+      "ticker": "SLBT"
+    },
+    {
+      "date": "2026-08-27",
+      "detail": "Re-pull matches the old print (ratio 0.131603). Yahoo splits (none) do not explain this close_over_open within 25%. Not patched. Dropped.",
+      "leg": "close_over_open",
+      "prev_priced": "2026-08-27",
+      "ratio": 0.131603,
+      "resolution": "unexplained_dropped",
+      "ticker": "SMJF"
+    },
+    {
+      "date": "2026-07-24",
+      "detail": "Re-pull matches the old print (ratio 7.536586). Yahoo splits (none) do not explain this close_over_open within 25%. Not patched. Dropped.",
+      "leg": "close_over_open",
+      "prev_priced": "2026-07-24",
+      "ratio": 7.536586,
+      "resolution": "unexplained_dropped",
+      "ticker": "STAK"
+    },
+    {
+      "date": "2026-07-23",
+      "detail": "Re-pull matches the old print (ratio 0.202475). Yahoo splits (2026-08-10 0.0125) do not explain this open_over_prev_close within 25%. Not patched. Dropped.",
+      "leg": "open_over_prev_close",
+      "prev_priced": "2026-07-22",
+      "ratio": 0.202475,
+      "resolution": "unexplained_dropped",
+      "ticker": "SXTC"
+    },
+    {
+      "date": "2026-07-24",
+      "detail": "Re-pull matches the old print (ratio 0.250980). Yahoo splits (2026-08-10 0.0125) do not explain this close_over_open within 25%. Not patched. Dropped.",
+      "leg": "close_over_open",
+      "prev_priced": "2026-07-24",
+      "ratio": 0.25098,
+      "resolution": "unexplained_dropped",
+      "ticker": "SXTC"
+    },
+    {
+      "date": "2026-06-01",
+      "detail": "Re-pull matches the old print (ratio 6.091954). Yahoo splits (none) do not explain this open_over_prev_close within 25%. Not patched. Dropped.",
+      "leg": "open_over_prev_close",
+      "prev_priced": "2026-05-29",
+      "ratio": 6.091954,
+      "resolution": "unexplained_dropped",
+      "ticker": "TGHL"
+    },
+    {
+      "date": "2026-09-09",
+      "detail": "Yahoo split on 2026-09-08 share factor 0.125 (price factor 8). Re-pulled Close still jumps 7.917620 and Adj Close equals Close. Not rescaled. Dropped.",
+      "leg": "open_over_prev_close",
+      "prev_priced": "2026-09-04",
+      "ratio": 7.91762,
+      "resolution": "matched_split_dropped",
+      "ticker": "TNMG"
+    },
+    {
+      "date": "2026-06-29",
+      "detail": "Re-pull matches the old print (ratio 5.800676). Yahoo splits (none) do not explain this open_over_prev_close within 25%. Not patched. Dropped.",
+      "leg": "open_over_prev_close",
+      "prev_priced": "2026-06-26",
+      "ratio": 5.800676,
+      "resolution": "unexplained_dropped",
+      "ticker": "UPC"
+    },
+    {
+      "date": "2026-06-10",
+      "detail": "Re-pull matches the old print (ratio 4.495747). Yahoo splits (none) do not explain this open_over_prev_close within 25%. Not patched. Dropped.",
+      "leg": "open_over_prev_close",
+      "prev_priced": "2026-06-09",
+      "ratio": 4.495747,
+      "resolution": "unexplained_dropped",
+      "ticker": "VSME"
+    },
+    {
+      "date": "2026-09-14",
+      "detail": "Re-pull matches the old print (ratio 0.043255). Yahoo splits (2026-09-22 0.05) do not explain this open_over_prev_close within 25%. Not patched. Dropped.",
+      "leg": "open_over_prev_close",
+      "prev_priced": "2026-09-11",
+      "ratio": 0.043255,
+      "resolution": "unexplained_dropped",
+      "ticker": "VWAV"
+    },
+    {
+      "date": "2026-09-17",
+      "detail": "Re-pull matches the old print (ratio 19.787798). Yahoo splits (2026-09-22 0.05) do not explain this open_over_prev_close within 25%. Not patched. Dropped.",
+      "leg": "open_over_prev_close",
+      "prev_priced": "2026-09-16",
+      "ratio": 19.787798,
+      "resolution": "unexplained_dropped",
+      "ticker": "VWAV"
+    },
+    {
+      "date": "2026-09-09",
+      "detail": "Yahoo split on 2026-09-08 share factor 0.2 (price factor 5). Re-pulled Close still jumps 4.812500 and Adj Close equals Close. Not rescaled. Dropped.",
+      "leg": "open_over_prev_close",
+      "prev_priced": "2026-09-04",
+      "ratio": 4.8125,
+      "resolution": "matched_split_dropped",
+      "ticker": "WCT"
+    },
+    {
+      "date": "2026-07-22",
+      "detail": "Re-pull matches the old print (ratio 0.232500). Yahoo splits (2026-08-03 0.01) do not explain this open_over_prev_close within 25%. Not patched. Dropped.",
+      "leg": "open_over_prev_close",
+      "prev_priced": "2026-07-21",
+      "ratio": 0.2325,
+      "resolution": "unexplained_dropped",
+      "ticker": "WETO"
+    },
+    {
+      "date": "2026-07-31",
+      "detail": "Re-pull matches the old print (ratio 3.466667). Yahoo splits (2026-08-03 0.01) do not explain this open_over_prev_close within 25%. Not patched. Dropped.",
+      "leg": "open_over_prev_close",
+      "prev_priced": "2026-07-30",
+      "ratio": 3.466667,
+      "resolution": "unexplained_dropped",
+      "ticker": "WETO"
+    },
+    {
+      "date": "2026-05-13",
+      "detail": "Re-pull matches the old print (ratio 0.186186). Yahoo splits (2026-06-18 0.01) do not explain this open_over_prev_close within 25%. Not patched. Dropped.",
+      "leg": "open_over_prev_close",
+      "prev_priced": "2026-05-12",
+      "ratio": 0.186186,
+      "resolution": "unexplained_dropped",
+      "ticker": "WOK"
+    },
+    {
+      "date": "2026-08-13",
+      "detail": "Re-pull matches the old print (ratio 6.338798). Yahoo splits (none) do not explain this open_over_prev_close within 25%. Not patched. Dropped.",
+      "leg": "open_over_prev_close",
+      "prev_priced": "2026-08-12",
+      "ratio": 6.338798,
+      "resolution": "unexplained_dropped",
+      "ticker": "XHG"
+    },
+    {
+      "date": "2026-08-06",
+      "detail": "Re-pull matches the old print (ratio 3.469136). Yahoo splits (none) do not explain this close_over_open within 25%. Not patched. Dropped.",
+      "leg": "close_over_open",
+      "prev_priced": "2026-08-06",
+      "ratio": 3.469136,
+      "resolution": "unexplained_dropped",
+      "ticker": "XHLD"
+    },
+    {
+      "date": "2026-08-19",
+      "detail": "Re-pull matches the old print (ratio 3.373563). Yahoo splits (none) do not explain this open_over_prev_close within 25%. Not patched. Dropped.",
+      "leg": "open_over_prev_close",
+      "prev_priced": "2026-08-18",
+      "ratio": 3.373563,
+      "resolution": "unexplained_dropped",
+      "ticker": "YJ"
+    },
+    {
+      "date": "2026-08-05",
+      "detail": "Re-pull matches the old print (ratio 3.200820). Yahoo splits (2026-07-14 0.1) do not explain this close_over_open within 25%. Not patched. Dropped.",
+      "leg": "close_over_open",
+      "prev_priced": "2026-08-05",
+      "ratio": 3.20082,
+      "resolution": "unexplained_dropped",
+      "ticker": "YXT"
+    },
+    {
+      "date": "2026-07-27",
+      "detail": "Re-pull matches the old print (ratio 0.277264). Yahoo splits (2026-05-18 0.025, 2026-08-17 0.05) do not explain this close_over_open within 25%. Not patched. Dropped.",
+      "leg": "close_over_open",
+      "prev_priced": "2026-07-27",
+      "ratio": 0.277264,
+      "resolution": "unexplained_dropped",
+      "ticker": "YYAI"
+    },
+    {
+      "date": "2026-07-28",
+      "detail": "Re-pull matches the old print (ratio 0.312195). Yahoo splits (2026-05-18 0.025, 2026-08-17 0.05) do not explain this close_over_open within 25%. Not patched. Dropped.",
+      "leg": "close_over_open",
+      "prev_priced": "2026-07-28",
+      "ratio": 0.312195,
+      "resolution": "unexplained_dropped",
+      "ticker": "YYAI"
+    },
+    {
+      "date": "2026-05-29",
+      "detail": "Re-pull matches the old print (ratio 0.283531). Yahoo splits (2026-03-02 0.125, 2026-06-08 0.032258065, 2026-06-29 0.33333333) do not explain this close_over_open within 25%. Not patched. Dropped.",
+      "leg": "close_over_open",
+      "prev_priced": "2026-05-29",
+      "ratio": 0.283531,
+      "resolution": "unexplained_dropped",
+      "ticker": "ZCMD"
+    },
+    {
+      "date": "2026-08-17",
+      "detail": "Re-pull matches the old print (ratio 0.332994). Yahoo splits (none) do not explain this close_over_open within 25%. Not patched. Dropped.",
+      "leg": "close_over_open",
+      "prev_priced": "2026-08-17",
+      "ratio": 0.332994,
+      "resolution": "unexplained_dropped",
+      "ticker": "ZTG"
+    },
+    {
+      "date": "2026-09-16",
+      "detail": "Re-pull matches the old print (ratio 3.432392). Yahoo splits (none) do not explain this open_over_prev_close within 25%. Not patched. Dropped.",
+      "leg": "open_over_prev_close",
+      "prev_priced": "2026-09-15",
+      "ratio": 3.432392,
+      "resolution": "unexplained_dropped",
+      "ticker": "ZTG"
+    },
+    {
+      "date": "2026-07-30",
+      "detail": "Not one of the 93. Jump 5.202703 on 2026-07-30 matches Yahoo split share factor 0.2. Left dropped. Not rescaled.",
+      "leg": "open_over_prev_close",
+      "prev_priced": null,
+      "ratio": 5.202703,
+      "resolution": "explained_on_date_dropped",
+      "ticker": "YAAS"
+    }
+  ],
+  "n_dropped": 77,
+  "n_jumps": 94,
+  "removed_from_rank_snapshot": [
+    "ADBT",
+    "FIRY",
+    "JLHL",
+    "LGCL",
+    "NXTT",
+    "SMJF",
+    "XHLD",
+    "YXT"
+  ],
+  "rule": "93 unexplained legs from breadth_mine_v1b: 57 open/previous-close and 36 close/open. Each was re-pulled Yahoo auto_adjust=false. A matching split whose adjusted Close still jumps is dropped, not rescaled. Eight names that were inside the breadth_rank_v1b snapshot (ADBT, FIRY, JLHL, LGCL, NXTT, SMJF, XHLD, YXT) are removed here.",
+  "source_sha256": "53ea564340a6d7fb452dc44c798f583d50d39968af145b577a8929d5e1daa797"
+}
