@@ -1,6 +1,6 @@
 {
   "date": "2026-09-25",
-  "generated_at": "2026-09-25T06:09:59.108939-04:00",
+  "generated_at": "2026-09-26T02:07:42.556446-04:00",
   "all_ok": false,
   "qc_all_ok": true,
   "book_ok": true,
@@ -8,48 +8,8 @@
   "grok_ok": false,
   "grok_fails": [
     {
-      "path": "01_daily/sectors/2026-09-25/basic_materials_predict.md",
-      "reason": "missing"
-    },
-    {
-      "path": "01_daily/sectors/2026-09-25/communication_services_predict.md",
-      "reason": "missing"
-    },
-    {
-      "path": "01_daily/sectors/2026-09-25/consumer_cyclical_predict.md",
-      "reason": "missing"
-    },
-    {
-      "path": "01_daily/sectors/2026-09-25/consumer_defensive_predict.md",
-      "reason": "missing"
-    },
-    {
-      "path": "01_daily/sectors/2026-09-25/energy_predict.md",
-      "reason": "missing"
-    },
-    {
-      "path": "01_daily/sectors/2026-09-25/financial_predict.md",
-      "reason": "missing"
-    },
-    {
-      "path": "01_daily/sectors/2026-09-25/healthcare_predict.md",
-      "reason": "missing"
-    },
-    {
-      "path": "01_daily/sectors/2026-09-25/industrials_predict.md",
-      "reason": "missing"
-    },
-    {
-      "path": "01_daily/sectors/2026-09-25/real_estate_predict.md",
-      "reason": "missing"
-    },
-    {
-      "path": "01_daily/sectors/2026-09-25/technology_predict.md",
-      "reason": "missing"
-    },
-    {
-      "path": "01_daily/sectors/2026-09-25/utilities_predict.md",
-      "reason": "missing"
+      "path": "(review)",
+      "reason": "empty_review_reply"
     }
   ],
   "missing_required": [],
@@ -218,7 +178,7 @@
         "ok": true,
         "reason": "",
         "path": "01_daily/news/2026-09-25_finviz_digest.json",
-        "size": 97598
+        "size": 96544
       },
       {
         "kind": "finviz_market_digest",
@@ -229,10 +189,10 @@
       },
       {
         "kind": "finviz_market_digest",
-        "ok": false,
-        "reason": "missing",
+        "ok": true,
+        "reason": "",
         "path": "01_daily/news/2026-09-25_finviz_market_digest_close.json",
-        "size": 0
+        "size": 6655
       },
       {
         "kind": "map_heat",

@@ -1,0 +1,5 @@
+{
+  "date": "2026-09-28",
+  "mode": "flatten_account",
+  "note": "Paper host only. On this ET date, cancel every open order and sell every lot with MARKET/CORE/DAY. No buys. Any other date is ignored."
+}

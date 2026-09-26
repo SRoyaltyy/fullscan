@@ -679,6 +679,82 @@ def parse_order_id(payload) -> str:
     return ""
 
 
+def _payload_order_id(payload) -> str:
+    """Broker order id only — never a client_order_id echo."""
+    if isinstance(payload, dict):
+        for key in ("order_id", "orderId"):
+            if payload.get(key):
+                return str(payload[key])
+        for key in ("data", "orders", "result"):
+            if key in payload:
+                found = _payload_order_id(payload[key])
+                if found:
+                    return found
+    elif isinstance(payload, list):
+        for item in payload:
+            found = _payload_order_id(item)
+            if found:
+                return found
+    return ""
+
+
+def _broker_rejected(value) -> bool:
+    if isinstance(value, list):
+        return any(_broker_rejected(item) for item in value)
+    if not isinstance(value, dict):
+        return False
+    if value.get("success") is False or value.get("error") or value.get("error_code"):
+        return True
+    if str(value.get("status", "")).upper() in ("REJECTED", "FAILED", "ERROR"):
+        return True
+    if "code" in value and str(value["code"]).upper() not in ("0", "200", "SUCCESS", "OK"):
+        return True
+    return any(_broker_rejected(value[key]) for key in ("data", "orders") if key in value)
+
+
+def _walk_open_orders(payload) -> list:
+    """Same row walk as scripts/webull_standtest_probe.py status mode."""
+    rows: list = []
+
+    def walk(value):
+        if isinstance(value, list):
+            for item in value:
+                walk(item)
+        elif isinstance(value, dict):
+            if value.get("order_id") or value.get("orderId") or value.get("client_order_id"):
+                rows.append(value)
+            for key in ("data", "orders", "list", "items", "result"):
+                if key in value:
+                    walk(value[key])
+
+    walk(payload)
+    identified = []
+    orphans = []
+    seen = set()
+    for row in rows:
+        oid = str(row.get("order_id") or row.get("orderId") or "").strip()
+        coid = str(row.get("client_order_id") or row.get("clientOrderId") or "").strip()
+        if oid:
+            if oid in seen:
+                continue
+            seen.add(oid)
+            identified.append(row)
+        elif coid:
+            orphans.append(row)
+    known = {
+        str(row.get("client_order_id") or row.get("clientOrderId") or "").strip()
+        for row in identified
+    }
+    seen_coid = set()
+    for row in orphans:
+        coid = str(row.get("client_order_id") or row.get("clientOrderId") or "").strip()
+        if not coid or coid in known or coid in seen_coid:
+            continue
+        seen_coid.add(coid)
+        identified.append(row)
+    return identified
+
+
 class PaperAPI:
     """Thin official-SDK wrapper. Missing package / keys → connected=False."""
 
@@ -765,6 +841,75 @@ class PaperAPI:
         return BrokerSnap(env=self.env, cash=cash, buying_power=power,
                           positions=parse_positions(pos), connected=True,
                           acc_id=self.account_id)
+
+    def _ensure_account_id(self) -> str:
+        if self.account_id:
+            return str(self.account_id)
+        if self.trade is None:
+            raise RuntimeError(self.err or "not connected")
+        accounts = self._json(self.trade.account_v2.get_account_list(), "account_list")
+        self.account_id = parse_account_id(accounts, "")
+        if not self.account_id:
+            raise RuntimeError("no Webull account_id in list")
+        return str(self.account_id)
+
+    def list_open_orders(self) -> list:
+        """Open orders via the standtest probe's SDK attempts, in that order.
+
+        scripts/webull_standtest_probe.py status mode tries
+        order_v3.list_order_open, order_v3.get_order_open,
+        order_v3.get_order_detail (only when an id is already known),
+        then order_v2.get_order_open. A total miss is an error, not an
+        empty book — callers must not sell while orders may still be open.
+        """
+        if self.host != PAPER_HOST:
+            raise RuntimeError("paper-open refuses any non-sandbox host")
+        if self.trade is None:
+            raise RuntimeError(self.err or "not connected")
+        aid = self._ensure_account_id()
+        trade = self.trade
+        want = ""
+        open_payload = None
+        errors = []
+        for call in (
+            lambda: trade.order_v3.list_order_open(aid),
+            lambda: trade.order_v3.get_order_open(aid),
+            lambda: trade.order_v3.get_order_detail(aid, want) if want else (_ for _ in ()).throw(RuntimeError("no want")),
+            lambda: trade.order_v2.get_order_open(aid) if hasattr(trade, "order_v2") else (_ for _ in ()).throw(AttributeError("no v2")),
+        ):
+            try:
+                open_payload = self._json(call(), "open_orders")
+                break
+            except Exception as exc:  # noqa: BLE001 — try the next probe call
+                errors.append(str(exc)[:160])
+        if open_payload is None:
+            raise RuntimeError("open-order list failed: " + " | ".join(errors))
+        return _walk_open_orders(open_payload)
+
+    def cancel_order(self, order_id: str) -> dict:
+        """Cancel one sandbox order. Same call as the standtest probe."""
+        if self.host != PAPER_HOST:
+            raise RuntimeError("paper-open refuses any non-sandbox host")
+        if self.trade is None:
+            raise RuntimeError(self.err or "not connected")
+        aid = self._ensure_account_id()
+        oid = str(order_id or "").strip()
+        if not oid:
+            raise RuntimeError("cancel requires order_id")
+        try:
+            res = self.trade.order_v3.cancel_order(aid, oid)
+            payload = self._json(res, "cancel_order")
+        except Exception as exc:  # noqa: BLE001
+            return {"ok": False, "order_id": oid, "error": str(exc)[:400]}
+        if _broker_rejected(payload):
+            snip = ""
+            try:
+                snip = json.dumps(payload)[:500]
+            except (TypeError, ValueError):
+                snip = str(payload)[:500]
+            return {"ok": False, "order_id": oid, "error": "broker rejected cancel",
+                    "payload_snip": snip}
+        return {"ok": True, "order_id": _payload_order_id(payload) or oid}
 
     def _sandbox_cash(self) -> float | None:
         """Available cash from a live snapshot, or None if we cannot tell.
