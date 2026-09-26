@@ -29,12 +29,8 @@
     "2026-08-28"
   ],
   "excel_sessions": [
-    "2026-08-31",
-    "2026-09-02",
     "2026-09-03",
     "2026-09-04",
-    "2026-09-08",
-    "2026-09-10",
     "2026-09-11"
   ],
   "excel_dropped": [
@@ -95,7 +91,16 @@
       "git_commit_date": "2026-09-25T20:50:21+00:00",
       "status": "PROVISIONAL",
       "rebuild_match": null,
-      "role": "price store. Every fill reads it. Not something good until rebuild_match is exact. A failed audit strikes every initial recipe."
+      "role": "price store. Every fill reads it. Not something good until rebuild_match is exact. A failed audit strikes every initial recipe. Server time is after 2026-09-11, so this commit is not a before-09:30 copy of any search session. git_commit_date is not proof.",
+      "proof": {
+        "kind": "actions_run_start",
+        "run_id": 36188179408,
+        "run_name": "Hard-red exceptions (daily investigator list)",
+        "event": "schedule",
+        "run_started_at": "2026-09-25T20:50:47Z",
+        "head_sha": "ff996f535e1343dd739cc801780ae224018bd96c",
+        "matched_by": "actions_runs.head_sha"
+      }
     },
     {
       "path": "data/prices/meta.json",
@@ -104,16 +109,29 @@
       "git_commit_date": "2026-09-25T22:29:54+00:00",
       "status": "PROVISIONAL",
       "rebuild_match": null,
-      "role": "price store meta"
+      "role": "price store meta Server time is after 2026-09-11, so this commit is not a before-09:30 copy of any search session. git_commit_date is not proof.",
+      "proof": {
+        "kind": "actions_run_start",
+        "run_id": 36197014625,
+        "run_name": "Deploy dashboard to GitHub Pages",
+        "event": "schedule",
+        "run_started_at": "2026-09-25T22:30:13Z",
+        "head_sha": "77db2793d6a2fc4941156a896eafaf85eb892460",
+        "matched_by": "actions_runs.head_sha"
+      }
     },
     {
       "path": "research/longhist/listed_common.txt",
       "sha256": "62609d9165bcbd5e7327516ea4da03f05297698d67aab660f207ddf8426195d5",
       "commit_sha": "9e3100853012a07f80f53839d485e97d852b0f40",
       "git_commit_date": "2026-09-26T11:34:24+08:00",
-      "status": "PROVISIONAL",
+      "status": "MISSING",
       "rebuild_match": null,
-      "role": "Layer A listed roster"
+      "role": "Layer A listed roster",
+      "proof": {
+        "kind": "missing",
+        "reason": "no Actions run with this head_sha; repository events show a PullRequestEvent only, not a PushEvent. git_commit_date is not proof."
+      }
     },
     {
       "path": "src/ab_checklist.py",
@@ -122,34 +140,70 @@
       "git_commit_date": "2026-09-25T22:00:26+08:00",
       "status": "PROVISIONAL",
       "rebuild_match": null,
-      "role": "price-only A01-A15 flags"
+      "role": "price-only A01-A15 flags Server time is after 2026-09-11, so this commit is not a before-09:30 copy of any search session. git_commit_date is not proof.",
+      "proof": {
+        "kind": "actions_run_start",
+        "run_id": 36144616160,
+        "run_name": "Stock Book ALL (one-shot)",
+        "event": "schedule",
+        "run_started_at": "2026-09-25T14:00:29Z",
+        "head_sha": "4ebffabc33fff0b41cbe070d97a8d3defab412e4",
+        "matched_by": "actions_runs.head_sha"
+      }
     },
     {
       "path": "00_grounding/weather_rules.json",
       "sha256": "9e2715fae8586906a082623da799dbc9814ee2f7e315c2a037358bcbe56969d8",
       "commit_sha": "0501dfd7611c00d4b3ebdefde93ea46afa60493c",
       "git_commit_date": "2026-08-21T05:46:32+00:00",
-      "status": "PROVISIONAL",
+      "status": "PROVEN_FROM_2026-08-21",
       "rebuild_match": null,
-      "role": "VIX and yield regime thresholds"
+      "role": "VIX and yield regime thresholds. Server-proven from run start 2026-08-21T05:46:36Z. Sessions before 2026-08-21 do not load it.",
+      "proof": {
+        "kind": "actions_run_start",
+        "run_id": 32451800260,
+        "run_name": ".github/workflows/restore_ab_checklist.yml",
+        "event": "schedule",
+        "run_started_at": "2026-08-21T05:46:36Z",
+        "head_sha": "0501dfd7611c00d4b3ebdefde93ea46afa60493c",
+        "matched_by": "actions_runs.head_sha"
+      }
     },
     {
       "path": "00_grounding/futubull_fees.json",
       "sha256": "019ebdba0fc0b20e02c91f116dc5591b81e96630f60c110dfbfd3b5d8e16c0d3",
       "commit_sha": "399a06d62917ae42e1e9b90169f9004d6001044e",
       "git_commit_date": "2026-08-13T19:02:43+08:00",
-      "status": "PINNED",
+      "status": "PROVEN",
       "rebuild_match": null,
-      "role": "fee schedule"
+      "role": "fee schedule",
+      "proof": {
+        "kind": "actions_run_start",
+        "run_id": 31694265859,
+        "run_name": "News Parse (Supabase)",
+        "event": "schedule",
+        "run_started_at": "2026-08-13T11:09:32Z",
+        "head_sha": "399a06d62917ae42e1e9b90169f9004d6001044e",
+        "matched_by": "actions_runs.head_sha"
+      }
     },
     {
       "path": "excel_bot/suggestions/suggestions.csv",
       "sha256": "a2906ccde607dbbfe77967592ba44e37b57e3dc636b734b6092d243f5e877dc3",
       "commit_sha": "d17af51c6a4d59b90d26f7207c4762cc0b3a99eb",
       "git_commit_date": "2026-09-25T21:15:49+00:00",
-      "status": "PINNED_ROWS",
+      "status": "NOT_A_PREOPEN_COPY",
       "rebuild_match": null,
-      "role": "Excel rows. Loaded only on the seven sessions, with the three dropped pairs removed. The blob itself was committed after those mornings."
+      "role": "Current suggestions.csv blob. Its run start is 2026-09-25T21:37:42Z, after every search session, so it is not a before-09:30 copy. Search sessions use excel_copies.",
+      "proof": {
+        "kind": "actions_run_start",
+        "run_id": 36192567873,
+        "run_name": "Elite live hold marks",
+        "event": "schedule",
+        "run_started_at": "2026-09-25T21:37:42Z",
+        "head_sha": "d17af51c6a4d59b90d26f7207c4762cc0b3a99eb",
+        "matched_by": "actions_runs.head_sha"
+      }
     }
   ],
   "finviz_mornings": [
@@ -160,64 +214,128 @@
           "source_path": "data/composite/2026-08-12_composite_rank.csv",
           "commit_sha": "eb0fa8a91bcad6052289f88746074f471df317a3",
           "git_commit_date": "2026-08-12T22:06:30Z",
-          "server_time_utc": "2026-08-12T22:06:33Z",
-          "server_source": "actions_run 31645482181 (Composite Rank, schedule; created_at 2026-08-12T22:05:50Z, updated_at 2026-08-12T22:06:33Z; pushed commit in its 'main -> main' range per job log)",
-          "status": "PROVEN",
-          "loaded_in_initial_run": false
+          "server_time_utc": "2026-08-13T21:23:37Z",
+          "server_source": "actions_run 31745431106 (Finviz Daily Snapshot, schedule; run_started_at 2026-08-13T21:23:37Z; head_sha eb0fa8a91bcad6052289f88746074f471df317a3)",
+          "status": "MISSING",
+          "loaded_in_initial_run": false,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 31745431106,
+            "run_name": "Finviz Daily Snapshot",
+            "event": "schedule",
+            "run_started_at": "2026-08-13T21:23:37Z",
+            "head_sha": "eb0fa8a91bcad6052289f88746074f471df317a3",
+            "matched_by": "actions_runs.head_sha"
+          },
+          "dropped_reason": "head_sha run start is after 09:30 ET"
         },
         {
           "source_path": "data/features/2026-08-12_1d.csv",
           "commit_sha": "cc4a239d67ba473a48a30ce6d8b894b2cfa14e9d",
           "git_commit_date": "2026-08-12T21:36:27Z",
-          "server_time_utc": "2026-08-12T21:36:33Z",
-          "server_source": "actions_run 31643220660 (Finviz Score Delta, schedule; created_at 2026-08-12T21:35:26Z, updated_at 2026-08-12T21:36:33Z; pushed commit in its 'main -> main' range per job log)",
+          "server_time_utc": "2026-08-12T22:05:50Z",
+          "server_source": "actions_run 31645482181 (Composite Rank, schedule; run_started_at 2026-08-12T22:05:50Z; head_sha cc4a239d67ba473a48a30ce6d8b894b2cfa14e9d)",
           "status": "PROVEN",
-          "loaded_in_initial_run": false
+          "loaded_in_initial_run": false,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 31645482181,
+            "run_name": "Composite Rank",
+            "event": "schedule",
+            "run_started_at": "2026-08-12T22:05:50Z",
+            "head_sha": "cc4a239d67ba473a48a30ce6d8b894b2cfa14e9d",
+            "matched_by": "actions_runs.head_sha"
+          }
         },
         {
           "source_path": "data/scores/2026-08-12_1d.csv",
           "commit_sha": "cc4a239d67ba473a48a30ce6d8b894b2cfa14e9d",
           "git_commit_date": "2026-08-12T21:36:27Z",
-          "server_time_utc": "2026-08-12T21:36:33Z",
-          "server_source": "actions_run 31643220660 (Finviz Score Delta, schedule; created_at 2026-08-12T21:35:26Z, updated_at 2026-08-12T21:36:33Z; pushed commit in its 'main -> main' range per job log)",
+          "server_time_utc": "2026-08-12T22:05:50Z",
+          "server_source": "actions_run 31645482181 (Composite Rank, schedule; run_started_at 2026-08-12T22:05:50Z; head_sha cc4a239d67ba473a48a30ce6d8b894b2cfa14e9d)",
           "status": "PROVEN",
-          "loaded_in_initial_run": false
+          "loaded_in_initial_run": false,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 31645482181,
+            "run_name": "Composite Rank",
+            "event": "schedule",
+            "run_started_at": "2026-08-12T22:05:50Z",
+            "head_sha": "cc4a239d67ba473a48a30ce6d8b894b2cfa14e9d",
+            "matched_by": "actions_runs.head_sha"
+          }
         },
         {
           "source_path": "data/scores/2026-08-12_1m.csv",
           "commit_sha": "cc4a239d67ba473a48a30ce6d8b894b2cfa14e9d",
           "git_commit_date": "2026-08-12T21:36:27Z",
-          "server_time_utc": "2026-08-12T21:36:33Z",
-          "server_source": "actions_run 31643220660 (Finviz Score Delta, schedule; created_at 2026-08-12T21:35:26Z, updated_at 2026-08-12T21:36:33Z; pushed commit in its 'main -> main' range per job log)",
+          "server_time_utc": "2026-08-12T22:05:50Z",
+          "server_source": "actions_run 31645482181 (Composite Rank, schedule; run_started_at 2026-08-12T22:05:50Z; head_sha cc4a239d67ba473a48a30ce6d8b894b2cfa14e9d)",
           "status": "PROVEN",
-          "loaded_in_initial_run": false
+          "loaded_in_initial_run": false,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 31645482181,
+            "run_name": "Composite Rank",
+            "event": "schedule",
+            "run_started_at": "2026-08-12T22:05:50Z",
+            "head_sha": "cc4a239d67ba473a48a30ce6d8b894b2cfa14e9d",
+            "matched_by": "actions_runs.head_sha"
+          }
         },
         {
           "source_path": "data/scores/2026-08-12_1w.csv",
           "commit_sha": "cc4a239d67ba473a48a30ce6d8b894b2cfa14e9d",
           "git_commit_date": "2026-08-12T21:36:27Z",
-          "server_time_utc": "2026-08-12T21:36:33Z",
-          "server_source": "actions_run 31643220660 (Finviz Score Delta, schedule; created_at 2026-08-12T21:35:26Z, updated_at 2026-08-12T21:36:33Z; pushed commit in its 'main -> main' range per job log)",
+          "server_time_utc": "2026-08-12T22:05:50Z",
+          "server_source": "actions_run 31645482181 (Composite Rank, schedule; run_started_at 2026-08-12T22:05:50Z; head_sha cc4a239d67ba473a48a30ce6d8b894b2cfa14e9d)",
           "status": "PROVEN",
-          "loaded_in_initial_run": false
+          "loaded_in_initial_run": false,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 31645482181,
+            "run_name": "Composite Rank",
+            "event": "schedule",
+            "run_started_at": "2026-08-12T22:05:50Z",
+            "head_sha": "cc4a239d67ba473a48a30ce6d8b894b2cfa14e9d",
+            "matched_by": "actions_runs.head_sha"
+          }
         },
         {
           "source_path": "data/snapshots/2026-08-12.csv",
           "commit_sha": "cd882feed1f6ae6c0f6a44e8bc1440d891be8d8c",
           "git_commit_date": "2026-08-12T21:22:36Z",
-          "server_time_utc": "2026-08-12T21:22:42Z",
-          "server_source": "actions_run 31642191661 (Finviz Daily Snapshot, schedule; created_at 2026-08-12T21:22:08Z, updated_at 2026-08-12T21:22:42Z; pushed commit in its 'main -> main' range per job log)",
+          "server_time_utc": "2026-08-12T21:35:26Z",
+          "server_source": "actions_run 31643220660 (Finviz Score Delta, schedule; run_started_at 2026-08-12T21:35:26Z; head_sha cd882feed1f6ae6c0f6a44e8bc1440d891be8d8c)",
           "status": "PROVEN",
-          "loaded_in_initial_run": true
+          "loaded_in_initial_run": true,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 31643220660,
+            "run_name": "Finviz Score Delta",
+            "event": "schedule",
+            "run_started_at": "2026-08-12T21:35:26Z",
+            "head_sha": "cd882feed1f6ae6c0f6a44e8bc1440d891be8d8c",
+            "matched_by": "actions_runs.head_sha"
+          }
         },
         {
           "source_path": "data/universe/2026-08-12_membership.csv",
           "commit_sha": "cc4a239d67ba473a48a30ce6d8b894b2cfa14e9d",
           "git_commit_date": "2026-08-12T21:36:27Z",
-          "server_time_utc": "2026-08-12T21:36:33Z",
-          "server_source": "actions_run 31643220660 (Finviz Score Delta, schedule; created_at 2026-08-12T21:35:26Z, updated_at 2026-08-12T21:36:33Z; pushed commit in its 'main -> main' range per job log)",
+          "server_time_utc": "2026-08-12T22:05:50Z",
+          "server_source": "actions_run 31645482181 (Composite Rank, schedule; run_started_at 2026-08-12T22:05:50Z; head_sha cc4a239d67ba473a48a30ce6d8b894b2cfa14e9d)",
           "status": "PROVEN",
-          "loaded_in_initial_run": false
+          "loaded_in_initial_run": false,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 31645482181,
+            "run_name": "Composite Rank",
+            "event": "schedule",
+            "run_started_at": "2026-08-12T22:05:50Z",
+            "head_sha": "cc4a239d67ba473a48a30ce6d8b894b2cfa14e9d",
+            "matched_by": "actions_runs.head_sha"
+          }
         }
       ]
     },
@@ -228,64 +346,128 @@
           "source_path": "data/composite/2026-08-13_composite_rank.csv",
           "commit_sha": "a570a5539efb72e18bae59a7269e727174eb3884",
           "git_commit_date": "2026-08-13T22:06:14Z",
-          "server_time_utc": "2026-08-13T22:06:18Z",
-          "server_source": "actions_run 31748500597 (Composite Rank, schedule; created_at 2026-08-13T22:05:30Z, updated_at 2026-08-13T22:06:18Z; pushed commit in its 'main -> main' range per job log)",
-          "status": "PROVEN",
-          "loaded_in_initial_run": false
+          "server_time_utc": "2026-08-14T20:57:27Z",
+          "server_source": "actions_run 31840276074 (Finviz Daily Snapshot, schedule; run_started_at 2026-08-14T20:57:27Z; head_sha a570a5539efb72e18bae59a7269e727174eb3884)",
+          "status": "MISSING",
+          "loaded_in_initial_run": false,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 31840276074,
+            "run_name": "Finviz Daily Snapshot",
+            "event": "schedule",
+            "run_started_at": "2026-08-14T20:57:27Z",
+            "head_sha": "a570a5539efb72e18bae59a7269e727174eb3884",
+            "matched_by": "actions_runs.head_sha"
+          },
+          "dropped_reason": "head_sha run start is after 09:30 ET"
         },
         {
           "source_path": "data/features/2026-08-13_1d.csv",
           "commit_sha": "26c59371d33efd1b6d09d9aff5eae1e5301ac8a6",
           "git_commit_date": "2026-08-13T21:36:37Z",
-          "server_time_utc": "2026-08-13T21:36:44Z",
-          "server_source": "actions_run 31746321019 (Finviz Score Delta, schedule; created_at 2026-08-13T21:35:21Z, updated_at 2026-08-13T21:36:44Z; pushed commit in its 'main -> main' range per job log)",
+          "server_time_utc": "2026-08-13T22:05:30Z",
+          "server_source": "actions_run 31748500597 (Composite Rank, schedule; run_started_at 2026-08-13T22:05:30Z; head_sha 26c59371d33efd1b6d09d9aff5eae1e5301ac8a6)",
           "status": "PROVEN",
-          "loaded_in_initial_run": false
+          "loaded_in_initial_run": false,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 31748500597,
+            "run_name": "Composite Rank",
+            "event": "schedule",
+            "run_started_at": "2026-08-13T22:05:30Z",
+            "head_sha": "26c59371d33efd1b6d09d9aff5eae1e5301ac8a6",
+            "matched_by": "actions_runs.head_sha"
+          }
         },
         {
           "source_path": "data/scores/2026-08-13_1d.csv",
           "commit_sha": "26c59371d33efd1b6d09d9aff5eae1e5301ac8a6",
           "git_commit_date": "2026-08-13T21:36:37Z",
-          "server_time_utc": "2026-08-13T21:36:44Z",
-          "server_source": "actions_run 31746321019 (Finviz Score Delta, schedule; created_at 2026-08-13T21:35:21Z, updated_at 2026-08-13T21:36:44Z; pushed commit in its 'main -> main' range per job log)",
+          "server_time_utc": "2026-08-13T22:05:30Z",
+          "server_source": "actions_run 31748500597 (Composite Rank, schedule; run_started_at 2026-08-13T22:05:30Z; head_sha 26c59371d33efd1b6d09d9aff5eae1e5301ac8a6)",
           "status": "PROVEN",
-          "loaded_in_initial_run": false
+          "loaded_in_initial_run": false,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 31748500597,
+            "run_name": "Composite Rank",
+            "event": "schedule",
+            "run_started_at": "2026-08-13T22:05:30Z",
+            "head_sha": "26c59371d33efd1b6d09d9aff5eae1e5301ac8a6",
+            "matched_by": "actions_runs.head_sha"
+          }
         },
         {
           "source_path": "data/scores/2026-08-13_1m.csv",
           "commit_sha": "26c59371d33efd1b6d09d9aff5eae1e5301ac8a6",
           "git_commit_date": "2026-08-13T21:36:37Z",
-          "server_time_utc": "2026-08-13T21:36:44Z",
-          "server_source": "actions_run 31746321019 (Finviz Score Delta, schedule; created_at 2026-08-13T21:35:21Z, updated_at 2026-08-13T21:36:44Z; pushed commit in its 'main -> main' range per job log)",
+          "server_time_utc": "2026-08-13T22:05:30Z",
+          "server_source": "actions_run 31748500597 (Composite Rank, schedule; run_started_at 2026-08-13T22:05:30Z; head_sha 26c59371d33efd1b6d09d9aff5eae1e5301ac8a6)",
           "status": "PROVEN",
-          "loaded_in_initial_run": false
+          "loaded_in_initial_run": false,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 31748500597,
+            "run_name": "Composite Rank",
+            "event": "schedule",
+            "run_started_at": "2026-08-13T22:05:30Z",
+            "head_sha": "26c59371d33efd1b6d09d9aff5eae1e5301ac8a6",
+            "matched_by": "actions_runs.head_sha"
+          }
         },
         {
           "source_path": "data/scores/2026-08-13_1w.csv",
           "commit_sha": "26c59371d33efd1b6d09d9aff5eae1e5301ac8a6",
           "git_commit_date": "2026-08-13T21:36:37Z",
-          "server_time_utc": "2026-08-13T21:36:44Z",
-          "server_source": "actions_run 31746321019 (Finviz Score Delta, schedule; created_at 2026-08-13T21:35:21Z, updated_at 2026-08-13T21:36:44Z; pushed commit in its 'main -> main' range per job log)",
+          "server_time_utc": "2026-08-13T22:05:30Z",
+          "server_source": "actions_run 31748500597 (Composite Rank, schedule; run_started_at 2026-08-13T22:05:30Z; head_sha 26c59371d33efd1b6d09d9aff5eae1e5301ac8a6)",
           "status": "PROVEN",
-          "loaded_in_initial_run": false
+          "loaded_in_initial_run": false,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 31748500597,
+            "run_name": "Composite Rank",
+            "event": "schedule",
+            "run_started_at": "2026-08-13T22:05:30Z",
+            "head_sha": "26c59371d33efd1b6d09d9aff5eae1e5301ac8a6",
+            "matched_by": "actions_runs.head_sha"
+          }
         },
         {
           "source_path": "data/snapshots/2026-08-13.csv",
           "commit_sha": "a56a7f8d52cef158232fdeca25f9cf53f65291ab",
           "git_commit_date": "2026-08-13T21:24:13Z",
-          "server_time_utc": "2026-08-13T21:24:21Z",
-          "server_source": "actions_run 31745431106 (Finviz Daily Snapshot, schedule; created_at 2026-08-13T21:23:37Z, updated_at 2026-08-13T21:24:21Z; pushed commit in its 'main -> main' range per job log)",
+          "server_time_utc": "2026-08-13T21:35:21Z",
+          "server_source": "actions_run 31746321019 (Finviz Score Delta, schedule; run_started_at 2026-08-13T21:35:21Z; head_sha a56a7f8d52cef158232fdeca25f9cf53f65291ab)",
           "status": "PROVEN",
-          "loaded_in_initial_run": true
+          "loaded_in_initial_run": true,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 31746321019,
+            "run_name": "Finviz Score Delta",
+            "event": "schedule",
+            "run_started_at": "2026-08-13T21:35:21Z",
+            "head_sha": "a56a7f8d52cef158232fdeca25f9cf53f65291ab",
+            "matched_by": "actions_runs.head_sha"
+          }
         },
         {
           "source_path": "data/universe/2026-08-13_membership.csv",
           "commit_sha": "26c59371d33efd1b6d09d9aff5eae1e5301ac8a6",
           "git_commit_date": "2026-08-13T21:36:37Z",
-          "server_time_utc": "2026-08-13T21:36:44Z",
-          "server_source": "actions_run 31746321019 (Finviz Score Delta, schedule; created_at 2026-08-13T21:35:21Z, updated_at 2026-08-13T21:36:44Z; pushed commit in its 'main -> main' range per job log)",
+          "server_time_utc": "2026-08-13T22:05:30Z",
+          "server_source": "actions_run 31748500597 (Composite Rank, schedule; run_started_at 2026-08-13T22:05:30Z; head_sha 26c59371d33efd1b6d09d9aff5eae1e5301ac8a6)",
           "status": "PROVEN",
-          "loaded_in_initial_run": false
+          "loaded_in_initial_run": false,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 31748500597,
+            "run_name": "Composite Rank",
+            "event": "schedule",
+            "run_started_at": "2026-08-13T22:05:30Z",
+            "head_sha": "26c59371d33efd1b6d09d9aff5eae1e5301ac8a6",
+            "matched_by": "actions_runs.head_sha"
+          }
         }
       ]
     },
@@ -296,64 +478,127 @@
           "source_path": "data/composite/2026-08-14_composite_rank.csv",
           "commit_sha": "e6445a4a09a86682461278bc03de9ba8b3a60ad5",
           "git_commit_date": "2026-08-14T21:44:22Z",
-          "server_time_utc": "2026-08-14T21:44:27Z",
-          "server_source": "actions_run 31843655509 (Composite Rank, schedule; created_at 2026-08-14T21:43:26Z, updated_at 2026-08-14T21:44:27Z; pushed commit in its 'main -> main' range per job log)",
+          "server_time_utc": "2026-08-15T08:31:32Z",
+          "server_source": "actions_run 31874696513 (Factor Backtest, workflow_dispatch; run_started_at 2026-08-15T08:31:32Z; head_sha e6445a4a09a86682461278bc03de9ba8b3a60ad5)",
           "status": "PROVEN",
-          "loaded_in_initial_run": false
+          "loaded_in_initial_run": false,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 31874696513,
+            "run_name": "Factor Backtest",
+            "event": "workflow_dispatch",
+            "run_started_at": "2026-08-15T08:31:32Z",
+            "head_sha": "e6445a4a09a86682461278bc03de9ba8b3a60ad5",
+            "matched_by": "actions_runs.head_sha"
+          }
         },
         {
           "source_path": "data/features/2026-08-14_1d.csv",
           "commit_sha": "f7fcff8c0b621ef21b2202036118a5eed4508217",
           "git_commit_date": "2026-08-14T21:17:56Z",
-          "server_time_utc": "2026-08-14T21:18:01Z",
-          "server_source": "actions_run 31841718175 (Finviz Score Delta, schedule; created_at 2026-08-14T21:16:38Z, updated_at 2026-08-14T21:18:01Z; pushed commit in its 'main -> main' range per job log)",
+          "server_time_utc": "2026-08-14T21:43:26Z",
+          "server_source": "actions_run 31843655509 (Composite Rank, schedule; run_started_at 2026-08-14T21:43:26Z; head_sha f7fcff8c0b621ef21b2202036118a5eed4508217)",
           "status": "PROVEN",
-          "loaded_in_initial_run": false
+          "loaded_in_initial_run": false,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 31843655509,
+            "run_name": "Composite Rank",
+            "event": "schedule",
+            "run_started_at": "2026-08-14T21:43:26Z",
+            "head_sha": "f7fcff8c0b621ef21b2202036118a5eed4508217",
+            "matched_by": "actions_runs.head_sha"
+          }
         },
         {
           "source_path": "data/scores/2026-08-14_1d.csv",
           "commit_sha": "f7fcff8c0b621ef21b2202036118a5eed4508217",
           "git_commit_date": "2026-08-14T21:17:56Z",
-          "server_time_utc": "2026-08-14T21:18:01Z",
-          "server_source": "actions_run 31841718175 (Finviz Score Delta, schedule; created_at 2026-08-14T21:16:38Z, updated_at 2026-08-14T21:18:01Z; pushed commit in its 'main -> main' range per job log)",
+          "server_time_utc": "2026-08-14T21:43:26Z",
+          "server_source": "actions_run 31843655509 (Composite Rank, schedule; run_started_at 2026-08-14T21:43:26Z; head_sha f7fcff8c0b621ef21b2202036118a5eed4508217)",
           "status": "PROVEN",
-          "loaded_in_initial_run": false
+          "loaded_in_initial_run": false,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 31843655509,
+            "run_name": "Composite Rank",
+            "event": "schedule",
+            "run_started_at": "2026-08-14T21:43:26Z",
+            "head_sha": "f7fcff8c0b621ef21b2202036118a5eed4508217",
+            "matched_by": "actions_runs.head_sha"
+          }
         },
         {
           "source_path": "data/scores/2026-08-14_1m.csv",
           "commit_sha": "f7fcff8c0b621ef21b2202036118a5eed4508217",
           "git_commit_date": "2026-08-14T21:17:56Z",
-          "server_time_utc": "2026-08-14T21:18:01Z",
-          "server_source": "actions_run 31841718175 (Finviz Score Delta, schedule; created_at 2026-08-14T21:16:38Z, updated_at 2026-08-14T21:18:01Z; pushed commit in its 'main -> main' range per job log)",
+          "server_time_utc": "2026-08-14T21:43:26Z",
+          "server_source": "actions_run 31843655509 (Composite Rank, schedule; run_started_at 2026-08-14T21:43:26Z; head_sha f7fcff8c0b621ef21b2202036118a5eed4508217)",
           "status": "PROVEN",
-          "loaded_in_initial_run": false
+          "loaded_in_initial_run": false,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 31843655509,
+            "run_name": "Composite Rank",
+            "event": "schedule",
+            "run_started_at": "2026-08-14T21:43:26Z",
+            "head_sha": "f7fcff8c0b621ef21b2202036118a5eed4508217",
+            "matched_by": "actions_runs.head_sha"
+          }
         },
         {
           "source_path": "data/scores/2026-08-14_1w.csv",
           "commit_sha": "f7fcff8c0b621ef21b2202036118a5eed4508217",
           "git_commit_date": "2026-08-14T21:17:56Z",
-          "server_time_utc": "2026-08-14T21:18:01Z",
-          "server_source": "actions_run 31841718175 (Finviz Score Delta, schedule; created_at 2026-08-14T21:16:38Z, updated_at 2026-08-14T21:18:01Z; pushed commit in its 'main -> main' range per job log)",
+          "server_time_utc": "2026-08-14T21:43:26Z",
+          "server_source": "actions_run 31843655509 (Composite Rank, schedule; run_started_at 2026-08-14T21:43:26Z; head_sha f7fcff8c0b621ef21b2202036118a5eed4508217)",
           "status": "PROVEN",
-          "loaded_in_initial_run": false
+          "loaded_in_initial_run": false,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 31843655509,
+            "run_name": "Composite Rank",
+            "event": "schedule",
+            "run_started_at": "2026-08-14T21:43:26Z",
+            "head_sha": "f7fcff8c0b621ef21b2202036118a5eed4508217",
+            "matched_by": "actions_runs.head_sha"
+          }
         },
         {
           "source_path": "data/snapshots/2026-08-14.csv",
           "commit_sha": "f895079d16ff8d579fcbba5654e4ebcc659bf92a",
           "git_commit_date": "2026-08-14T20:58:12Z",
-          "server_time_utc": "2026-08-14T20:58:19Z",
-          "server_source": "actions_run 31840276074 (Finviz Daily Snapshot, schedule; created_at 2026-08-14T20:57:27Z, updated_at 2026-08-14T20:58:19Z; pushed commit in its 'main -> main' range per job log)",
+          "server_time_utc": "2026-08-14T21:16:38Z",
+          "server_source": "actions_run 31841718175 (Finviz Score Delta, schedule; run_started_at 2026-08-14T21:16:38Z; head_sha f895079d16ff8d579fcbba5654e4ebcc659bf92a)",
           "status": "PROVEN",
-          "loaded_in_initial_run": true
+          "loaded_in_initial_run": true,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 31841718175,
+            "run_name": "Finviz Score Delta",
+            "event": "schedule",
+            "run_started_at": "2026-08-14T21:16:38Z",
+            "head_sha": "f895079d16ff8d579fcbba5654e4ebcc659bf92a",
+            "matched_by": "actions_runs.head_sha"
+          }
         },
         {
           "source_path": "data/universe/2026-08-14_membership.csv",
           "commit_sha": "f7fcff8c0b621ef21b2202036118a5eed4508217",
           "git_commit_date": "2026-08-14T21:17:56Z",
-          "server_time_utc": "2026-08-14T21:18:01Z",
-          "server_source": "actions_run 31841718175 (Finviz Score Delta, schedule; created_at 2026-08-14T21:16:38Z, updated_at 2026-08-14T21:18:01Z; pushed commit in its 'main -> main' range per job log)",
+          "server_time_utc": "2026-08-14T21:43:26Z",
+          "server_source": "actions_run 31843655509 (Composite Rank, schedule; run_started_at 2026-08-14T21:43:26Z; head_sha f7fcff8c0b621ef21b2202036118a5eed4508217)",
           "status": "PROVEN",
-          "loaded_in_initial_run": false
+          "loaded_in_initial_run": false,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 31843655509,
+            "run_name": "Composite Rank",
+            "event": "schedule",
+            "run_started_at": "2026-08-14T21:43:26Z",
+            "head_sha": "f7fcff8c0b621ef21b2202036118a5eed4508217",
+            "matched_by": "actions_runs.head_sha"
+          }
         }
       ]
     },
@@ -364,64 +609,128 @@
           "source_path": "data/composite/2026-08-17_composite_rank.csv",
           "commit_sha": "07ae9da56404f8e506b5ae46693ae459c07f9a08",
           "git_commit_date": "2026-08-17T21:44:51Z",
-          "server_time_utc": "2026-08-17T21:44:54Z",
-          "server_source": "actions_run 32072600392 (Composite Rank, schedule; created_at 2026-08-17T21:43:51Z, updated_at 2026-08-17T21:44:54Z; pushed commit in its 'main -> main' range per job log)",
-          "status": "PROVEN",
-          "loaded_in_initial_run": false
+          "server_time_utc": "2026-08-18T20:51:32Z",
+          "server_source": "actions_run 32184602029 (Finviz Daily Snapshot, schedule; run_started_at 2026-08-18T20:51:32Z; head_sha 07ae9da56404f8e506b5ae46693ae459c07f9a08)",
+          "status": "MISSING",
+          "loaded_in_initial_run": false,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 32184602029,
+            "run_name": "Finviz Daily Snapshot",
+            "event": "schedule",
+            "run_started_at": "2026-08-18T20:51:32Z",
+            "head_sha": "07ae9da56404f8e506b5ae46693ae459c07f9a08",
+            "matched_by": "actions_runs.head_sha"
+          },
+          "dropped_reason": "head_sha run start is after 09:30 ET"
         },
         {
           "source_path": "data/features/2026-08-17_1d.csv",
           "commit_sha": "fed0d4c70290c3af718189fd95215ab098db7f27",
           "git_commit_date": "2026-08-17T21:18:24Z",
-          "server_time_utc": "2026-08-17T21:18:32Z",
-          "server_source": "actions_run 32070272103 (Finviz Score Delta, schedule; created_at 2026-08-17T21:16:48Z, updated_at 2026-08-17T21:18:32Z; pushed commit in its 'main -> main' range per job log)",
+          "server_time_utc": "2026-08-17T21:43:51Z",
+          "server_source": "actions_run 32072600392 (Composite Rank, schedule; run_started_at 2026-08-17T21:43:51Z; head_sha fed0d4c70290c3af718189fd95215ab098db7f27)",
           "status": "PROVEN",
-          "loaded_in_initial_run": false
+          "loaded_in_initial_run": false,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 32072600392,
+            "run_name": "Composite Rank",
+            "event": "schedule",
+            "run_started_at": "2026-08-17T21:43:51Z",
+            "head_sha": "fed0d4c70290c3af718189fd95215ab098db7f27",
+            "matched_by": "actions_runs.head_sha"
+          }
         },
         {
           "source_path": "data/scores/2026-08-17_1d.csv",
           "commit_sha": "fed0d4c70290c3af718189fd95215ab098db7f27",
           "git_commit_date": "2026-08-17T21:18:24Z",
-          "server_time_utc": "2026-08-17T21:18:32Z",
-          "server_source": "actions_run 32070272103 (Finviz Score Delta, schedule; created_at 2026-08-17T21:16:48Z, updated_at 2026-08-17T21:18:32Z; pushed commit in its 'main -> main' range per job log)",
+          "server_time_utc": "2026-08-17T21:43:51Z",
+          "server_source": "actions_run 32072600392 (Composite Rank, schedule; run_started_at 2026-08-17T21:43:51Z; head_sha fed0d4c70290c3af718189fd95215ab098db7f27)",
           "status": "PROVEN",
-          "loaded_in_initial_run": false
+          "loaded_in_initial_run": false,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 32072600392,
+            "run_name": "Composite Rank",
+            "event": "schedule",
+            "run_started_at": "2026-08-17T21:43:51Z",
+            "head_sha": "fed0d4c70290c3af718189fd95215ab098db7f27",
+            "matched_by": "actions_runs.head_sha"
+          }
         },
         {
           "source_path": "data/scores/2026-08-17_1m.csv",
           "commit_sha": "fed0d4c70290c3af718189fd95215ab098db7f27",
           "git_commit_date": "2026-08-17T21:18:24Z",
-          "server_time_utc": "2026-08-17T21:18:32Z",
-          "server_source": "actions_run 32070272103 (Finviz Score Delta, schedule; created_at 2026-08-17T21:16:48Z, updated_at 2026-08-17T21:18:32Z; pushed commit in its 'main -> main' range per job log)",
+          "server_time_utc": "2026-08-17T21:43:51Z",
+          "server_source": "actions_run 32072600392 (Composite Rank, schedule; run_started_at 2026-08-17T21:43:51Z; head_sha fed0d4c70290c3af718189fd95215ab098db7f27)",
           "status": "PROVEN",
-          "loaded_in_initial_run": false
+          "loaded_in_initial_run": false,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 32072600392,
+            "run_name": "Composite Rank",
+            "event": "schedule",
+            "run_started_at": "2026-08-17T21:43:51Z",
+            "head_sha": "fed0d4c70290c3af718189fd95215ab098db7f27",
+            "matched_by": "actions_runs.head_sha"
+          }
         },
         {
           "source_path": "data/scores/2026-08-17_1w.csv",
           "commit_sha": "fed0d4c70290c3af718189fd95215ab098db7f27",
           "git_commit_date": "2026-08-17T21:18:24Z",
-          "server_time_utc": "2026-08-17T21:18:32Z",
-          "server_source": "actions_run 32070272103 (Finviz Score Delta, schedule; created_at 2026-08-17T21:16:48Z, updated_at 2026-08-17T21:18:32Z; pushed commit in its 'main -> main' range per job log)",
+          "server_time_utc": "2026-08-17T21:43:51Z",
+          "server_source": "actions_run 32072600392 (Composite Rank, schedule; run_started_at 2026-08-17T21:43:51Z; head_sha fed0d4c70290c3af718189fd95215ab098db7f27)",
           "status": "PROVEN",
-          "loaded_in_initial_run": false
+          "loaded_in_initial_run": false,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 32072600392,
+            "run_name": "Composite Rank",
+            "event": "schedule",
+            "run_started_at": "2026-08-17T21:43:51Z",
+            "head_sha": "fed0d4c70290c3af718189fd95215ab098db7f27",
+            "matched_by": "actions_runs.head_sha"
+          }
         },
         {
           "source_path": "data/snapshots/2026-08-17.csv",
           "commit_sha": "72c7283431dd0dc8b0a4e73b3f38473235c8a58e",
           "git_commit_date": "2026-08-17T20:56:34Z",
-          "server_time_utc": "2026-08-17T20:56:41Z",
-          "server_source": "actions_run 32068406258 (Finviz Daily Snapshot, schedule; created_at 2026-08-17T20:55:43Z, updated_at 2026-08-17T20:56:41Z; pushed commit in its 'main -> main' range per job log)",
+          "server_time_utc": "2026-08-17T21:16:48Z",
+          "server_source": "actions_run 32070272103 (Finviz Score Delta, schedule; run_started_at 2026-08-17T21:16:48Z; head_sha 72c7283431dd0dc8b0a4e73b3f38473235c8a58e)",
           "status": "PROVEN",
-          "loaded_in_initial_run": true
+          "loaded_in_initial_run": true,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 32070272103,
+            "run_name": "Finviz Score Delta",
+            "event": "schedule",
+            "run_started_at": "2026-08-17T21:16:48Z",
+            "head_sha": "72c7283431dd0dc8b0a4e73b3f38473235c8a58e",
+            "matched_by": "actions_runs.head_sha"
+          }
         },
         {
           "source_path": "data/universe/2026-08-17_membership.csv",
           "commit_sha": "fed0d4c70290c3af718189fd95215ab098db7f27",
           "git_commit_date": "2026-08-17T21:18:24Z",
-          "server_time_utc": "2026-08-17T21:18:32Z",
-          "server_source": "actions_run 32070272103 (Finviz Score Delta, schedule; created_at 2026-08-17T21:16:48Z, updated_at 2026-08-17T21:18:32Z; pushed commit in its 'main -> main' range per job log)",
+          "server_time_utc": "2026-08-17T21:43:51Z",
+          "server_source": "actions_run 32072600392 (Composite Rank, schedule; run_started_at 2026-08-17T21:43:51Z; head_sha fed0d4c70290c3af718189fd95215ab098db7f27)",
           "status": "PROVEN",
-          "loaded_in_initial_run": false
+          "loaded_in_initial_run": false,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 32072600392,
+            "run_name": "Composite Rank",
+            "event": "schedule",
+            "run_started_at": "2026-08-17T21:43:51Z",
+            "head_sha": "fed0d4c70290c3af718189fd95215ab098db7f27",
+            "matched_by": "actions_runs.head_sha"
+          }
         }
       ]
     },
@@ -432,64 +741,128 @@
           "source_path": "data/composite/2026-08-18_composite_rank.csv",
           "commit_sha": "95b3a8e490524a969985f21dafdaae2b27dd1dd1",
           "git_commit_date": "2026-08-18T21:42:47Z",
-          "server_time_utc": "2026-08-18T21:42:52Z",
-          "server_source": "actions_run 32189040007 (Composite Rank, schedule; created_at 2026-08-18T21:41:38Z, updated_at 2026-08-18T21:42:52Z; pushed commit in its 'main -> main' range per job log)",
-          "status": "PROVEN",
-          "loaded_in_initial_run": false
+          "server_time_utc": "2026-08-19T20:55:44Z",
+          "server_source": "actions_run 32301194644 (Finviz Daily Snapshot, schedule; run_started_at 2026-08-19T20:55:44Z; head_sha 95b3a8e490524a969985f21dafdaae2b27dd1dd1)",
+          "status": "MISSING",
+          "loaded_in_initial_run": false,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 32301194644,
+            "run_name": "Finviz Daily Snapshot",
+            "event": "schedule",
+            "run_started_at": "2026-08-19T20:55:44Z",
+            "head_sha": "95b3a8e490524a969985f21dafdaae2b27dd1dd1",
+            "matched_by": "actions_runs.head_sha"
+          },
+          "dropped_reason": "head_sha run start is after 09:30 ET"
         },
         {
           "source_path": "data/features/2026-08-18_1d.csv",
           "commit_sha": "c98dca86a9e34947a2f7e77f7822f8949b0f7f13",
           "git_commit_date": "2026-08-18T21:16:06Z",
-          "server_time_utc": "2026-08-18T21:16:14Z",
-          "server_source": "actions_run 32186663807 (Finviz Score Delta, schedule; created_at 2026-08-18T21:14:19Z, updated_at 2026-08-18T21:16:14Z; pushed commit in its 'main -> main' range per job log)",
+          "server_time_utc": "2026-08-18T21:41:38Z",
+          "server_source": "actions_run 32189040007 (Composite Rank, schedule; run_started_at 2026-08-18T21:41:38Z; head_sha c98dca86a9e34947a2f7e77f7822f8949b0f7f13)",
           "status": "PROVEN",
-          "loaded_in_initial_run": false
+          "loaded_in_initial_run": false,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 32189040007,
+            "run_name": "Composite Rank",
+            "event": "schedule",
+            "run_started_at": "2026-08-18T21:41:38Z",
+            "head_sha": "c98dca86a9e34947a2f7e77f7822f8949b0f7f13",
+            "matched_by": "actions_runs.head_sha"
+          }
         },
         {
           "source_path": "data/scores/2026-08-18_1d.csv",
           "commit_sha": "c98dca86a9e34947a2f7e77f7822f8949b0f7f13",
           "git_commit_date": "2026-08-18T21:16:06Z",
-          "server_time_utc": "2026-08-18T21:16:14Z",
-          "server_source": "actions_run 32186663807 (Finviz Score Delta, schedule; created_at 2026-08-18T21:14:19Z, updated_at 2026-08-18T21:16:14Z; pushed commit in its 'main -> main' range per job log)",
+          "server_time_utc": "2026-08-18T21:41:38Z",
+          "server_source": "actions_run 32189040007 (Composite Rank, schedule; run_started_at 2026-08-18T21:41:38Z; head_sha c98dca86a9e34947a2f7e77f7822f8949b0f7f13)",
           "status": "PROVEN",
-          "loaded_in_initial_run": false
+          "loaded_in_initial_run": false,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 32189040007,
+            "run_name": "Composite Rank",
+            "event": "schedule",
+            "run_started_at": "2026-08-18T21:41:38Z",
+            "head_sha": "c98dca86a9e34947a2f7e77f7822f8949b0f7f13",
+            "matched_by": "actions_runs.head_sha"
+          }
         },
         {
           "source_path": "data/scores/2026-08-18_1m.csv",
           "commit_sha": "c98dca86a9e34947a2f7e77f7822f8949b0f7f13",
           "git_commit_date": "2026-08-18T21:16:06Z",
-          "server_time_utc": "2026-08-18T21:16:14Z",
-          "server_source": "actions_run 32186663807 (Finviz Score Delta, schedule; created_at 2026-08-18T21:14:19Z, updated_at 2026-08-18T21:16:14Z; pushed commit in its 'main -> main' range per job log)",
+          "server_time_utc": "2026-08-18T21:41:38Z",
+          "server_source": "actions_run 32189040007 (Composite Rank, schedule; run_started_at 2026-08-18T21:41:38Z; head_sha c98dca86a9e34947a2f7e77f7822f8949b0f7f13)",
           "status": "PROVEN",
-          "loaded_in_initial_run": false
+          "loaded_in_initial_run": false,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 32189040007,
+            "run_name": "Composite Rank",
+            "event": "schedule",
+            "run_started_at": "2026-08-18T21:41:38Z",
+            "head_sha": "c98dca86a9e34947a2f7e77f7822f8949b0f7f13",
+            "matched_by": "actions_runs.head_sha"
+          }
         },
         {
           "source_path": "data/scores/2026-08-18_1w.csv",
           "commit_sha": "c98dca86a9e34947a2f7e77f7822f8949b0f7f13",
           "git_commit_date": "2026-08-18T21:16:06Z",
-          "server_time_utc": "2026-08-18T21:16:14Z",
-          "server_source": "actions_run 32186663807 (Finviz Score Delta, schedule; created_at 2026-08-18T21:14:19Z, updated_at 2026-08-18T21:16:14Z; pushed commit in its 'main -> main' range per job log)",
+          "server_time_utc": "2026-08-18T21:41:38Z",
+          "server_source": "actions_run 32189040007 (Composite Rank, schedule; run_started_at 2026-08-18T21:41:38Z; head_sha c98dca86a9e34947a2f7e77f7822f8949b0f7f13)",
           "status": "PROVEN",
-          "loaded_in_initial_run": false
+          "loaded_in_initial_run": false,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 32189040007,
+            "run_name": "Composite Rank",
+            "event": "schedule",
+            "run_started_at": "2026-08-18T21:41:38Z",
+            "head_sha": "c98dca86a9e34947a2f7e77f7822f8949b0f7f13",
+            "matched_by": "actions_runs.head_sha"
+          }
         },
         {
           "source_path": "data/snapshots/2026-08-18.csv",
           "commit_sha": "16530295bda23cc14e4953601819d0f5712515b4",
           "git_commit_date": "2026-08-18T20:52:34Z",
-          "server_time_utc": "2026-08-18T20:52:43Z",
-          "server_source": "actions_run 32184602029 (Finviz Daily Snapshot, schedule; created_at 2026-08-18T20:51:32Z, updated_at 2026-08-18T20:52:43Z; pushed commit in its 'main -> main' range per job log)",
+          "server_time_utc": "2026-08-18T21:14:19Z",
+          "server_source": "actions_run 32186663807 (Finviz Score Delta, schedule; run_started_at 2026-08-18T21:14:19Z; head_sha 16530295bda23cc14e4953601819d0f5712515b4)",
           "status": "PROVEN",
-          "loaded_in_initial_run": true
+          "loaded_in_initial_run": true,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 32186663807,
+            "run_name": "Finviz Score Delta",
+            "event": "schedule",
+            "run_started_at": "2026-08-18T21:14:19Z",
+            "head_sha": "16530295bda23cc14e4953601819d0f5712515b4",
+            "matched_by": "actions_runs.head_sha"
+          }
         },
         {
           "source_path": "data/universe/2026-08-18_membership.csv",
           "commit_sha": "c98dca86a9e34947a2f7e77f7822f8949b0f7f13",
           "git_commit_date": "2026-08-18T21:16:06Z",
-          "server_time_utc": "2026-08-18T21:16:14Z",
-          "server_source": "actions_run 32186663807 (Finviz Score Delta, schedule; created_at 2026-08-18T21:14:19Z, updated_at 2026-08-18T21:16:14Z; pushed commit in its 'main -> main' range per job log)",
+          "server_time_utc": "2026-08-18T21:41:38Z",
+          "server_source": "actions_run 32189040007 (Composite Rank, schedule; run_started_at 2026-08-18T21:41:38Z; head_sha c98dca86a9e34947a2f7e77f7822f8949b0f7f13)",
           "status": "PROVEN",
-          "loaded_in_initial_run": false
+          "loaded_in_initial_run": false,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 32189040007,
+            "run_name": "Composite Rank",
+            "event": "schedule",
+            "run_started_at": "2026-08-18T21:41:38Z",
+            "head_sha": "c98dca86a9e34947a2f7e77f7822f8949b0f7f13",
+            "matched_by": "actions_runs.head_sha"
+          }
         }
       ]
     },
@@ -500,64 +873,128 @@
           "source_path": "data/composite/2026-08-19_composite_rank.csv",
           "commit_sha": "440a5b754821ae000480c141c2c473d4a1370f47",
           "git_commit_date": "2026-08-19T21:45:07Z",
-          "server_time_utc": "2026-08-19T21:45:11Z",
-          "server_source": "actions_run 32305345952 (Composite Rank, schedule; created_at 2026-08-19T21:43:41Z, updated_at 2026-08-19T21:45:11Z; pushed commit in its 'main -> main' range per job log)",
-          "status": "PROVEN",
-          "loaded_in_initial_run": false
+          "server_time_utc": "2026-08-20T20:57:51Z",
+          "server_source": "actions_run 32416911183 (Finviz Daily Snapshot, schedule; run_started_at 2026-08-20T20:57:51Z; head_sha 440a5b754821ae000480c141c2c473d4a1370f47)",
+          "status": "MISSING",
+          "loaded_in_initial_run": false,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 32416911183,
+            "run_name": "Finviz Daily Snapshot",
+            "event": "schedule",
+            "run_started_at": "2026-08-20T20:57:51Z",
+            "head_sha": "440a5b754821ae000480c141c2c473d4a1370f47",
+            "matched_by": "actions_runs.head_sha"
+          },
+          "dropped_reason": "head_sha run start is after 09:30 ET"
         },
         {
           "source_path": "data/features/2026-08-19_1d.csv",
           "commit_sha": "5641cdf95cbd4bbb7e5dc3f924e97d4f82729d4f",
           "git_commit_date": "2026-08-19T21:18:48Z",
-          "server_time_utc": "2026-08-19T21:18:56Z",
-          "server_source": "actions_run 32303058275 (Finviz Score Delta, schedule; created_at 2026-08-19T21:16:53Z, updated_at 2026-08-19T21:18:56Z; pushed commit in its 'main -> main' range per job log)",
+          "server_time_utc": "2026-08-19T21:43:41Z",
+          "server_source": "actions_run 32305345952 (Composite Rank, schedule; run_started_at 2026-08-19T21:43:41Z; head_sha 5641cdf95cbd4bbb7e5dc3f924e97d4f82729d4f)",
           "status": "PROVEN",
-          "loaded_in_initial_run": false
+          "loaded_in_initial_run": false,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 32305345952,
+            "run_name": "Composite Rank",
+            "event": "schedule",
+            "run_started_at": "2026-08-19T21:43:41Z",
+            "head_sha": "5641cdf95cbd4bbb7e5dc3f924e97d4f82729d4f",
+            "matched_by": "actions_runs.head_sha"
+          }
         },
         {
           "source_path": "data/scores/2026-08-19_1d.csv",
           "commit_sha": "5641cdf95cbd4bbb7e5dc3f924e97d4f82729d4f",
           "git_commit_date": "2026-08-19T21:18:48Z",
-          "server_time_utc": "2026-08-19T21:18:56Z",
-          "server_source": "actions_run 32303058275 (Finviz Score Delta, schedule; created_at 2026-08-19T21:16:53Z, updated_at 2026-08-19T21:18:56Z; pushed commit in its 'main -> main' range per job log)",
+          "server_time_utc": "2026-08-19T21:43:41Z",
+          "server_source": "actions_run 32305345952 (Composite Rank, schedule; run_started_at 2026-08-19T21:43:41Z; head_sha 5641cdf95cbd4bbb7e5dc3f924e97d4f82729d4f)",
           "status": "PROVEN",
-          "loaded_in_initial_run": false
+          "loaded_in_initial_run": false,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 32305345952,
+            "run_name": "Composite Rank",
+            "event": "schedule",
+            "run_started_at": "2026-08-19T21:43:41Z",
+            "head_sha": "5641cdf95cbd4bbb7e5dc3f924e97d4f82729d4f",
+            "matched_by": "actions_runs.head_sha"
+          }
         },
         {
           "source_path": "data/scores/2026-08-19_1m.csv",
           "commit_sha": "5641cdf95cbd4bbb7e5dc3f924e97d4f82729d4f",
           "git_commit_date": "2026-08-19T21:18:48Z",
-          "server_time_utc": "2026-08-19T21:18:56Z",
-          "server_source": "actions_run 32303058275 (Finviz Score Delta, schedule; created_at 2026-08-19T21:16:53Z, updated_at 2026-08-19T21:18:56Z; pushed commit in its 'main -> main' range per job log)",
+          "server_time_utc": "2026-08-19T21:43:41Z",
+          "server_source": "actions_run 32305345952 (Composite Rank, schedule; run_started_at 2026-08-19T21:43:41Z; head_sha 5641cdf95cbd4bbb7e5dc3f924e97d4f82729d4f)",
           "status": "PROVEN",
-          "loaded_in_initial_run": false
+          "loaded_in_initial_run": false,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 32305345952,
+            "run_name": "Composite Rank",
+            "event": "schedule",
+            "run_started_at": "2026-08-19T21:43:41Z",
+            "head_sha": "5641cdf95cbd4bbb7e5dc3f924e97d4f82729d4f",
+            "matched_by": "actions_runs.head_sha"
+          }
         },
         {
           "source_path": "data/scores/2026-08-19_1w.csv",
           "commit_sha": "5641cdf95cbd4bbb7e5dc3f924e97d4f82729d4f",
           "git_commit_date": "2026-08-19T21:18:48Z",
-          "server_time_utc": "2026-08-19T21:18:56Z",
-          "server_source": "actions_run 32303058275 (Finviz Score Delta, schedule; created_at 2026-08-19T21:16:53Z, updated_at 2026-08-19T21:18:56Z; pushed commit in its 'main -> main' range per job log)",
+          "server_time_utc": "2026-08-19T21:43:41Z",
+          "server_source": "actions_run 32305345952 (Composite Rank, schedule; run_started_at 2026-08-19T21:43:41Z; head_sha 5641cdf95cbd4bbb7e5dc3f924e97d4f82729d4f)",
           "status": "PROVEN",
-          "loaded_in_initial_run": false
+          "loaded_in_initial_run": false,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 32305345952,
+            "run_name": "Composite Rank",
+            "event": "schedule",
+            "run_started_at": "2026-08-19T21:43:41Z",
+            "head_sha": "5641cdf95cbd4bbb7e5dc3f924e97d4f82729d4f",
+            "matched_by": "actions_runs.head_sha"
+          }
         },
         {
           "source_path": "data/snapshots/2026-08-19.csv",
           "commit_sha": "c0ee269eed30f22e10fda1e8fd3c2f2ac4fe797f",
           "git_commit_date": "2026-08-19T20:56:52Z",
-          "server_time_utc": "2026-08-19T20:56:58Z",
-          "server_source": "actions_run 32301194644 (Finviz Daily Snapshot, schedule; created_at 2026-08-19T20:55:44Z, updated_at 2026-08-19T20:56:58Z; pushed commit in its 'main -> main' range per job log)",
+          "server_time_utc": "2026-08-19T21:16:53Z",
+          "server_source": "actions_run 32303058275 (Finviz Score Delta, schedule; run_started_at 2026-08-19T21:16:53Z; head_sha c0ee269eed30f22e10fda1e8fd3c2f2ac4fe797f)",
           "status": "PROVEN",
-          "loaded_in_initial_run": true
+          "loaded_in_initial_run": true,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 32303058275,
+            "run_name": "Finviz Score Delta",
+            "event": "schedule",
+            "run_started_at": "2026-08-19T21:16:53Z",
+            "head_sha": "c0ee269eed30f22e10fda1e8fd3c2f2ac4fe797f",
+            "matched_by": "actions_runs.head_sha"
+          }
         },
         {
           "source_path": "data/universe/2026-08-19_membership.csv",
           "commit_sha": "5641cdf95cbd4bbb7e5dc3f924e97d4f82729d4f",
           "git_commit_date": "2026-08-19T21:18:48Z",
-          "server_time_utc": "2026-08-19T21:18:56Z",
-          "server_source": "actions_run 32303058275 (Finviz Score Delta, schedule; created_at 2026-08-19T21:16:53Z, updated_at 2026-08-19T21:18:56Z; pushed commit in its 'main -> main' range per job log)",
+          "server_time_utc": "2026-08-19T21:43:41Z",
+          "server_source": "actions_run 32305345952 (Composite Rank, schedule; run_started_at 2026-08-19T21:43:41Z; head_sha 5641cdf95cbd4bbb7e5dc3f924e97d4f82729d4f)",
           "status": "PROVEN",
-          "loaded_in_initial_run": false
+          "loaded_in_initial_run": false,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 32305345952,
+            "run_name": "Composite Rank",
+            "event": "schedule",
+            "run_started_at": "2026-08-19T21:43:41Z",
+            "head_sha": "5641cdf95cbd4bbb7e5dc3f924e97d4f82729d4f",
+            "matched_by": "actions_runs.head_sha"
+          }
         }
       ]
     },
@@ -568,64 +1005,128 @@
           "source_path": "data/composite/2026-08-20_composite_rank.csv",
           "commit_sha": "82e4f42c6a28f03b4cf5b5456498c0c18100ae1d",
           "git_commit_date": "2026-08-20T21:47:38Z",
-          "server_time_utc": "2026-08-20T21:56:37Z",
-          "server_source": "actions_run 32421063605 (Composite Rank, schedule; created_at 2026-08-20T21:46:18Z, updated_at 2026-08-20T21:56:37Z; pushed commit in its 'main -> main' range per job log)",
-          "status": "PROVEN",
-          "loaded_in_initial_run": false
+          "server_time_utc": "2026-08-21T20:51:53Z",
+          "server_source": "actions_run 32525705353 (Finviz Daily Snapshot, schedule; run_started_at 2026-08-21T20:51:53Z; head_sha 82e4f42c6a28f03b4cf5b5456498c0c18100ae1d)",
+          "status": "MISSING",
+          "loaded_in_initial_run": false,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 32525705353,
+            "run_name": "Finviz Daily Snapshot",
+            "event": "schedule",
+            "run_started_at": "2026-08-21T20:51:53Z",
+            "head_sha": "82e4f42c6a28f03b4cf5b5456498c0c18100ae1d",
+            "matched_by": "actions_runs.head_sha"
+          },
+          "dropped_reason": "head_sha run start is after 09:30 ET"
         },
         {
           "source_path": "data/features/2026-08-20_1d.csv",
           "commit_sha": "1a2853e653f196ad9423fef72d1063cb32d204fe",
           "git_commit_date": "2026-08-20T21:20:21Z",
-          "server_time_utc": "2026-08-20T21:20:30Z",
-          "server_source": "actions_run 32418761396 (Finviz Score Delta, schedule; created_at 2026-08-20T21:18:52Z, updated_at 2026-08-20T21:20:30Z; pushed commit in its 'main -> main' range per job log)",
+          "server_time_utc": "2026-08-20T21:46:18Z",
+          "server_source": "actions_run 32421063605 (Composite Rank, schedule; run_started_at 2026-08-20T21:46:18Z; head_sha 1a2853e653f196ad9423fef72d1063cb32d204fe)",
           "status": "PROVEN",
-          "loaded_in_initial_run": false
+          "loaded_in_initial_run": false,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 32421063605,
+            "run_name": "Composite Rank",
+            "event": "schedule",
+            "run_started_at": "2026-08-20T21:46:18Z",
+            "head_sha": "1a2853e653f196ad9423fef72d1063cb32d204fe",
+            "matched_by": "actions_runs.head_sha"
+          }
         },
         {
           "source_path": "data/scores/2026-08-20_1d.csv",
           "commit_sha": "1a2853e653f196ad9423fef72d1063cb32d204fe",
           "git_commit_date": "2026-08-20T21:20:21Z",
-          "server_time_utc": "2026-08-20T21:20:30Z",
-          "server_source": "actions_run 32418761396 (Finviz Score Delta, schedule; created_at 2026-08-20T21:18:52Z, updated_at 2026-08-20T21:20:30Z; pushed commit in its 'main -> main' range per job log)",
+          "server_time_utc": "2026-08-20T21:46:18Z",
+          "server_source": "actions_run 32421063605 (Composite Rank, schedule; run_started_at 2026-08-20T21:46:18Z; head_sha 1a2853e653f196ad9423fef72d1063cb32d204fe)",
           "status": "PROVEN",
-          "loaded_in_initial_run": false
+          "loaded_in_initial_run": false,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 32421063605,
+            "run_name": "Composite Rank",
+            "event": "schedule",
+            "run_started_at": "2026-08-20T21:46:18Z",
+            "head_sha": "1a2853e653f196ad9423fef72d1063cb32d204fe",
+            "matched_by": "actions_runs.head_sha"
+          }
         },
         {
           "source_path": "data/scores/2026-08-20_1m.csv",
           "commit_sha": "1a2853e653f196ad9423fef72d1063cb32d204fe",
           "git_commit_date": "2026-08-20T21:20:21Z",
-          "server_time_utc": "2026-08-20T21:20:30Z",
-          "server_source": "actions_run 32418761396 (Finviz Score Delta, schedule; created_at 2026-08-20T21:18:52Z, updated_at 2026-08-20T21:20:30Z; pushed commit in its 'main -> main' range per job log)",
+          "server_time_utc": "2026-08-20T21:46:18Z",
+          "server_source": "actions_run 32421063605 (Composite Rank, schedule; run_started_at 2026-08-20T21:46:18Z; head_sha 1a2853e653f196ad9423fef72d1063cb32d204fe)",
           "status": "PROVEN",
-          "loaded_in_initial_run": false
+          "loaded_in_initial_run": false,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 32421063605,
+            "run_name": "Composite Rank",
+            "event": "schedule",
+            "run_started_at": "2026-08-20T21:46:18Z",
+            "head_sha": "1a2853e653f196ad9423fef72d1063cb32d204fe",
+            "matched_by": "actions_runs.head_sha"
+          }
         },
         {
           "source_path": "data/scores/2026-08-20_1w.csv",
           "commit_sha": "1a2853e653f196ad9423fef72d1063cb32d204fe",
           "git_commit_date": "2026-08-20T21:20:21Z",
-          "server_time_utc": "2026-08-20T21:20:30Z",
-          "server_source": "actions_run 32418761396 (Finviz Score Delta, schedule; created_at 2026-08-20T21:18:52Z, updated_at 2026-08-20T21:20:30Z; pushed commit in its 'main -> main' range per job log)",
+          "server_time_utc": "2026-08-20T21:46:18Z",
+          "server_source": "actions_run 32421063605 (Composite Rank, schedule; run_started_at 2026-08-20T21:46:18Z; head_sha 1a2853e653f196ad9423fef72d1063cb32d204fe)",
           "status": "PROVEN",
-          "loaded_in_initial_run": false
+          "loaded_in_initial_run": false,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 32421063605,
+            "run_name": "Composite Rank",
+            "event": "schedule",
+            "run_started_at": "2026-08-20T21:46:18Z",
+            "head_sha": "1a2853e653f196ad9423fef72d1063cb32d204fe",
+            "matched_by": "actions_runs.head_sha"
+          }
         },
         {
           "source_path": "data/snapshots/2026-08-20.csv",
           "commit_sha": "9f6efeb4c66746da92bd0eb6dba78007a5eb3ecf",
           "git_commit_date": "2026-08-20T20:58:25Z",
-          "server_time_utc": "2026-08-20T20:58:31Z",
-          "server_source": "actions_run 32416911183 (Finviz Daily Snapshot, schedule; created_at 2026-08-20T20:57:51Z, updated_at 2026-08-20T20:58:31Z; pushed commit in its 'main -> main' range per job log)",
+          "server_time_utc": "2026-08-20T21:18:52Z",
+          "server_source": "actions_run 32418761396 (Finviz Score Delta, schedule; run_started_at 2026-08-20T21:18:52Z; head_sha 9f6efeb4c66746da92bd0eb6dba78007a5eb3ecf)",
           "status": "PROVEN",
-          "loaded_in_initial_run": true
+          "loaded_in_initial_run": true,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 32418761396,
+            "run_name": "Finviz Score Delta",
+            "event": "schedule",
+            "run_started_at": "2026-08-20T21:18:52Z",
+            "head_sha": "9f6efeb4c66746da92bd0eb6dba78007a5eb3ecf",
+            "matched_by": "actions_runs.head_sha"
+          }
         },
         {
           "source_path": "data/universe/2026-08-20_membership.csv",
           "commit_sha": "1a2853e653f196ad9423fef72d1063cb32d204fe",
           "git_commit_date": "2026-08-20T21:20:21Z",
-          "server_time_utc": "2026-08-20T21:20:30Z",
-          "server_source": "actions_run 32418761396 (Finviz Score Delta, schedule; created_at 2026-08-20T21:18:52Z, updated_at 2026-08-20T21:20:30Z; pushed commit in its 'main -> main' range per job log)",
+          "server_time_utc": "2026-08-20T21:46:18Z",
+          "server_source": "actions_run 32421063605 (Composite Rank, schedule; run_started_at 2026-08-20T21:46:18Z; head_sha 1a2853e653f196ad9423fef72d1063cb32d204fe)",
           "status": "PROVEN",
-          "loaded_in_initial_run": false
+          "loaded_in_initial_run": false,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 32421063605,
+            "run_name": "Composite Rank",
+            "event": "schedule",
+            "run_started_at": "2026-08-20T21:46:18Z",
+            "head_sha": "1a2853e653f196ad9423fef72d1063cb32d204fe",
+            "matched_by": "actions_runs.head_sha"
+          }
         }
       ]
     },
@@ -636,64 +1137,127 @@
           "source_path": "data/composite/2026-08-21_composite_rank.csv",
           "commit_sha": "19cc67eb87274e116b634b8808f8dc3a569ad74b",
           "git_commit_date": "2026-08-21T21:43:20Z",
-          "server_time_utc": "2026-08-21T21:43:25Z",
-          "server_source": "actions_run 32529753466 (Composite Rank, schedule; created_at 2026-08-21T21:42:30Z, updated_at 2026-08-21T21:43:25Z; pushed commit in its 'main -> main' range per job log)",
+          "server_time_utc": "2026-08-23T15:24:54Z",
+          "server_source": "actions_run 32648473445 (Weekly Lesson Promote, schedule; run_started_at 2026-08-23T15:24:54Z; head_sha 19cc67eb87274e116b634b8808f8dc3a569ad74b)",
           "status": "PROVEN",
-          "loaded_in_initial_run": false
+          "loaded_in_initial_run": false,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 32648473445,
+            "run_name": "Weekly Lesson Promote",
+            "event": "schedule",
+            "run_started_at": "2026-08-23T15:24:54Z",
+            "head_sha": "19cc67eb87274e116b634b8808f8dc3a569ad74b",
+            "matched_by": "actions_runs.head_sha"
+          }
         },
         {
           "source_path": "data/features/2026-08-21_1d.csv",
           "commit_sha": "6a5d4360186f1c935f059f46312740fd40125dca",
           "git_commit_date": "2026-08-21T21:15:41Z",
-          "server_time_utc": "2026-08-21T21:15:50Z",
-          "server_source": "actions_run 32527528532 (Finviz Score Delta, schedule; created_at 2026-08-21T21:14:12Z, updated_at 2026-08-21T21:15:50Z; pushed commit in its 'main -> main' range per job log)",
+          "server_time_utc": "2026-08-21T21:42:30Z",
+          "server_source": "actions_run 32529753466 (Composite Rank, schedule; run_started_at 2026-08-21T21:42:30Z; head_sha 6a5d4360186f1c935f059f46312740fd40125dca)",
           "status": "PROVEN",
-          "loaded_in_initial_run": false
+          "loaded_in_initial_run": false,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 32529753466,
+            "run_name": "Composite Rank",
+            "event": "schedule",
+            "run_started_at": "2026-08-21T21:42:30Z",
+            "head_sha": "6a5d4360186f1c935f059f46312740fd40125dca",
+            "matched_by": "actions_runs.head_sha"
+          }
         },
         {
           "source_path": "data/scores/2026-08-21_1d.csv",
           "commit_sha": "6a5d4360186f1c935f059f46312740fd40125dca",
           "git_commit_date": "2026-08-21T21:15:41Z",
-          "server_time_utc": "2026-08-21T21:15:50Z",
-          "server_source": "actions_run 32527528532 (Finviz Score Delta, schedule; created_at 2026-08-21T21:14:12Z, updated_at 2026-08-21T21:15:50Z; pushed commit in its 'main -> main' range per job log)",
+          "server_time_utc": "2026-08-21T21:42:30Z",
+          "server_source": "actions_run 32529753466 (Composite Rank, schedule; run_started_at 2026-08-21T21:42:30Z; head_sha 6a5d4360186f1c935f059f46312740fd40125dca)",
           "status": "PROVEN",
-          "loaded_in_initial_run": false
+          "loaded_in_initial_run": false,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 32529753466,
+            "run_name": "Composite Rank",
+            "event": "schedule",
+            "run_started_at": "2026-08-21T21:42:30Z",
+            "head_sha": "6a5d4360186f1c935f059f46312740fd40125dca",
+            "matched_by": "actions_runs.head_sha"
+          }
         },
         {
           "source_path": "data/scores/2026-08-21_1m.csv",
           "commit_sha": "6a5d4360186f1c935f059f46312740fd40125dca",
           "git_commit_date": "2026-08-21T21:15:41Z",
-          "server_time_utc": "2026-08-21T21:15:50Z",
-          "server_source": "actions_run 32527528532 (Finviz Score Delta, schedule; created_at 2026-08-21T21:14:12Z, updated_at 2026-08-21T21:15:50Z; pushed commit in its 'main -> main' range per job log)",
+          "server_time_utc": "2026-08-21T21:42:30Z",
+          "server_source": "actions_run 32529753466 (Composite Rank, schedule; run_started_at 2026-08-21T21:42:30Z; head_sha 6a5d4360186f1c935f059f46312740fd40125dca)",
           "status": "PROVEN",
-          "loaded_in_initial_run": false
+          "loaded_in_initial_run": false,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 32529753466,
+            "run_name": "Composite Rank",
+            "event": "schedule",
+            "run_started_at": "2026-08-21T21:42:30Z",
+            "head_sha": "6a5d4360186f1c935f059f46312740fd40125dca",
+            "matched_by": "actions_runs.head_sha"
+          }
         },
         {
           "source_path": "data/scores/2026-08-21_1w.csv",
           "commit_sha": "6a5d4360186f1c935f059f46312740fd40125dca",
           "git_commit_date": "2026-08-21T21:15:41Z",
-          "server_time_utc": "2026-08-21T21:15:50Z",
-          "server_source": "actions_run 32527528532 (Finviz Score Delta, schedule; created_at 2026-08-21T21:14:12Z, updated_at 2026-08-21T21:15:50Z; pushed commit in its 'main -> main' range per job log)",
+          "server_time_utc": "2026-08-21T21:42:30Z",
+          "server_source": "actions_run 32529753466 (Composite Rank, schedule; run_started_at 2026-08-21T21:42:30Z; head_sha 6a5d4360186f1c935f059f46312740fd40125dca)",
           "status": "PROVEN",
-          "loaded_in_initial_run": false
+          "loaded_in_initial_run": false,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 32529753466,
+            "run_name": "Composite Rank",
+            "event": "schedule",
+            "run_started_at": "2026-08-21T21:42:30Z",
+            "head_sha": "6a5d4360186f1c935f059f46312740fd40125dca",
+            "matched_by": "actions_runs.head_sha"
+          }
         },
         {
           "source_path": "data/snapshots/2026-08-21.csv",
           "commit_sha": "03103e30e9afa36218dc02e6813a1af938489a4f",
           "git_commit_date": "2026-08-21T20:52:32Z",
-          "server_time_utc": "2026-08-21T20:52:41Z",
-          "server_source": "actions_run 32525705353 (Finviz Daily Snapshot, schedule; created_at 2026-08-21T20:51:53Z, updated_at 2026-08-21T20:52:41Z; pushed commit in its 'main -> main' range per job log)",
+          "server_time_utc": "2026-08-21T21:14:12Z",
+          "server_source": "actions_run 32527528532 (Finviz Score Delta, schedule; run_started_at 2026-08-21T21:14:12Z; head_sha 03103e30e9afa36218dc02e6813a1af938489a4f)",
           "status": "PROVEN",
-          "loaded_in_initial_run": true
+          "loaded_in_initial_run": true,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 32527528532,
+            "run_name": "Finviz Score Delta",
+            "event": "schedule",
+            "run_started_at": "2026-08-21T21:14:12Z",
+            "head_sha": "03103e30e9afa36218dc02e6813a1af938489a4f",
+            "matched_by": "actions_runs.head_sha"
+          }
         },
         {
           "source_path": "data/universe/2026-08-21_membership.csv",
           "commit_sha": "6a5d4360186f1c935f059f46312740fd40125dca",
           "git_commit_date": "2026-08-21T21:15:41Z",
-          "server_time_utc": "2026-08-21T21:15:50Z",
-          "server_source": "actions_run 32527528532 (Finviz Score Delta, schedule; created_at 2026-08-21T21:14:12Z, updated_at 2026-08-21T21:15:50Z; pushed commit in its 'main -> main' range per job log)",
+          "server_time_utc": "2026-08-21T21:42:30Z",
+          "server_source": "actions_run 32529753466 (Composite Rank, schedule; run_started_at 2026-08-21T21:42:30Z; head_sha 6a5d4360186f1c935f059f46312740fd40125dca)",
           "status": "PROVEN",
-          "loaded_in_initial_run": false
+          "loaded_in_initial_run": false,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 32529753466,
+            "run_name": "Composite Rank",
+            "event": "schedule",
+            "run_started_at": "2026-08-21T21:42:30Z",
+            "head_sha": "6a5d4360186f1c935f059f46312740fd40125dca",
+            "matched_by": "actions_runs.head_sha"
+          }
         }
       ]
     },
@@ -704,64 +1268,128 @@
           "source_path": "data/composite/2026-08-24_composite_rank.csv",
           "commit_sha": "7e1d8aaed52283620d4193e9027ae63e5836dd96",
           "git_commit_date": "2026-08-24T21:47:24Z",
-          "server_time_utc": "2026-08-24T21:47:29Z",
-          "server_source": "actions_run 32781287743 (Composite Rank, schedule; created_at 2026-08-24T21:46:32Z, updated_at 2026-08-24T21:47:29Z; pushed commit in its 'main -> main' range per job log)",
-          "status": "PROVEN",
-          "loaded_in_initial_run": false
+          "server_time_utc": "2026-08-25T20:56:45Z",
+          "server_source": "actions_run 32898256110 (Finviz Daily Snapshot, schedule; run_started_at 2026-08-25T20:56:45Z; head_sha 7e1d8aaed52283620d4193e9027ae63e5836dd96)",
+          "status": "MISSING",
+          "loaded_in_initial_run": false,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 32898256110,
+            "run_name": "Finviz Daily Snapshot",
+            "event": "schedule",
+            "run_started_at": "2026-08-25T20:56:45Z",
+            "head_sha": "7e1d8aaed52283620d4193e9027ae63e5836dd96",
+            "matched_by": "actions_runs.head_sha"
+          },
+          "dropped_reason": "head_sha run start is after 09:30 ET"
         },
         {
           "source_path": "data/features/2026-08-24_1d.csv",
           "commit_sha": "0042786b9de0d4a855056e4e91efc8353ff36330",
           "git_commit_date": "2026-08-24T21:21:31Z",
-          "server_time_utc": "2026-08-24T21:21:39Z",
-          "server_source": "actions_run 32778889251 (Finviz Score Delta, schedule; created_at 2026-08-24T21:19:39Z, updated_at 2026-08-24T21:21:39Z; pushed commit in its 'main -> main' range per job log)",
+          "server_time_utc": "2026-08-24T21:46:32Z",
+          "server_source": "actions_run 32781287743 (Composite Rank, schedule; run_started_at 2026-08-24T21:46:32Z; head_sha 0042786b9de0d4a855056e4e91efc8353ff36330)",
           "status": "PROVEN",
-          "loaded_in_initial_run": false
+          "loaded_in_initial_run": false,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 32781287743,
+            "run_name": "Composite Rank",
+            "event": "schedule",
+            "run_started_at": "2026-08-24T21:46:32Z",
+            "head_sha": "0042786b9de0d4a855056e4e91efc8353ff36330",
+            "matched_by": "actions_runs.head_sha"
+          }
         },
         {
           "source_path": "data/scores/2026-08-24_1d.csv",
           "commit_sha": "0042786b9de0d4a855056e4e91efc8353ff36330",
           "git_commit_date": "2026-08-24T21:21:31Z",
-          "server_time_utc": "2026-08-24T21:21:39Z",
-          "server_source": "actions_run 32778889251 (Finviz Score Delta, schedule; created_at 2026-08-24T21:19:39Z, updated_at 2026-08-24T21:21:39Z; pushed commit in its 'main -> main' range per job log)",
+          "server_time_utc": "2026-08-24T21:46:32Z",
+          "server_source": "actions_run 32781287743 (Composite Rank, schedule; run_started_at 2026-08-24T21:46:32Z; head_sha 0042786b9de0d4a855056e4e91efc8353ff36330)",
           "status": "PROVEN",
-          "loaded_in_initial_run": false
+          "loaded_in_initial_run": false,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 32781287743,
+            "run_name": "Composite Rank",
+            "event": "schedule",
+            "run_started_at": "2026-08-24T21:46:32Z",
+            "head_sha": "0042786b9de0d4a855056e4e91efc8353ff36330",
+            "matched_by": "actions_runs.head_sha"
+          }
         },
         {
           "source_path": "data/scores/2026-08-24_1m.csv",
           "commit_sha": "0042786b9de0d4a855056e4e91efc8353ff36330",
           "git_commit_date": "2026-08-24T21:21:31Z",
-          "server_time_utc": "2026-08-24T21:21:39Z",
-          "server_source": "actions_run 32778889251 (Finviz Score Delta, schedule; created_at 2026-08-24T21:19:39Z, updated_at 2026-08-24T21:21:39Z; pushed commit in its 'main -> main' range per job log)",
+          "server_time_utc": "2026-08-24T21:46:32Z",
+          "server_source": "actions_run 32781287743 (Composite Rank, schedule; run_started_at 2026-08-24T21:46:32Z; head_sha 0042786b9de0d4a855056e4e91efc8353ff36330)",
           "status": "PROVEN",
-          "loaded_in_initial_run": false
+          "loaded_in_initial_run": false,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 32781287743,
+            "run_name": "Composite Rank",
+            "event": "schedule",
+            "run_started_at": "2026-08-24T21:46:32Z",
+            "head_sha": "0042786b9de0d4a855056e4e91efc8353ff36330",
+            "matched_by": "actions_runs.head_sha"
+          }
         },
         {
           "source_path": "data/scores/2026-08-24_1w.csv",
           "commit_sha": "0042786b9de0d4a855056e4e91efc8353ff36330",
           "git_commit_date": "2026-08-24T21:21:31Z",
-          "server_time_utc": "2026-08-24T21:21:39Z",
-          "server_source": "actions_run 32778889251 (Finviz Score Delta, schedule; created_at 2026-08-24T21:19:39Z, updated_at 2026-08-24T21:21:39Z; pushed commit in its 'main -> main' range per job log)",
+          "server_time_utc": "2026-08-24T21:46:32Z",
+          "server_source": "actions_run 32781287743 (Composite Rank, schedule; run_started_at 2026-08-24T21:46:32Z; head_sha 0042786b9de0d4a855056e4e91efc8353ff36330)",
           "status": "PROVEN",
-          "loaded_in_initial_run": false
+          "loaded_in_initial_run": false,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 32781287743,
+            "run_name": "Composite Rank",
+            "event": "schedule",
+            "run_started_at": "2026-08-24T21:46:32Z",
+            "head_sha": "0042786b9de0d4a855056e4e91efc8353ff36330",
+            "matched_by": "actions_runs.head_sha"
+          }
         },
         {
           "source_path": "data/snapshots/2026-08-24.csv",
           "commit_sha": "e05cc702340724294b9e3123b1f88bc5ce3b4802",
           "git_commit_date": "2026-08-24T21:00:40Z",
-          "server_time_utc": "2026-08-24T21:00:48Z",
-          "server_source": "actions_run 32777047461 (Finviz Daily Snapshot, schedule; created_at 2026-08-24T20:59:57Z, updated_at 2026-08-24T21:00:48Z; pushed commit in its 'main -> main' range per job log)",
+          "server_time_utc": "2026-08-24T21:19:39Z",
+          "server_source": "actions_run 32778889251 (Finviz Score Delta, schedule; run_started_at 2026-08-24T21:19:39Z; head_sha e05cc702340724294b9e3123b1f88bc5ce3b4802)",
           "status": "PROVEN",
-          "loaded_in_initial_run": true
+          "loaded_in_initial_run": true,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 32778889251,
+            "run_name": "Finviz Score Delta",
+            "event": "schedule",
+            "run_started_at": "2026-08-24T21:19:39Z",
+            "head_sha": "e05cc702340724294b9e3123b1f88bc5ce3b4802",
+            "matched_by": "actions_runs.head_sha"
+          }
         },
         {
           "source_path": "data/universe/2026-08-24_membership.csv",
           "commit_sha": "0042786b9de0d4a855056e4e91efc8353ff36330",
           "git_commit_date": "2026-08-24T21:21:31Z",
-          "server_time_utc": "2026-08-24T21:21:39Z",
-          "server_source": "actions_run 32778889251 (Finviz Score Delta, schedule; created_at 2026-08-24T21:19:39Z, updated_at 2026-08-24T21:21:39Z; pushed commit in its 'main -> main' range per job log)",
+          "server_time_utc": "2026-08-24T21:46:32Z",
+          "server_source": "actions_run 32781287743 (Composite Rank, schedule; run_started_at 2026-08-24T21:46:32Z; head_sha 0042786b9de0d4a855056e4e91efc8353ff36330)",
           "status": "PROVEN",
-          "loaded_in_initial_run": false
+          "loaded_in_initial_run": false,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 32781287743,
+            "run_name": "Composite Rank",
+            "event": "schedule",
+            "run_started_at": "2026-08-24T21:46:32Z",
+            "head_sha": "0042786b9de0d4a855056e4e91efc8353ff36330",
+            "matched_by": "actions_runs.head_sha"
+          }
         }
       ]
     },
@@ -772,64 +1400,128 @@
           "source_path": "data/composite/2026-08-25_composite_rank.csv",
           "commit_sha": "c5e397b86f70c48e534c6a785d49a64373957ba4",
           "git_commit_date": "2026-08-25T21:47:27Z",
-          "server_time_utc": "2026-08-25T21:47:31Z",
-          "server_source": "actions_run 32902766323 (Composite Rank, schedule; created_at 2026-08-25T21:46:21Z, updated_at 2026-08-25T21:47:31Z; pushed commit in its 'main -> main' range per job log)",
-          "status": "PROVEN",
-          "loaded_in_initial_run": false
+          "server_time_utc": "2026-08-26T23:59:26Z",
+          "server_source": "actions_run 33025264557 (Finviz Daily Snapshot, schedule; run_started_at 2026-08-26T23:59:26Z; head_sha c5e397b86f70c48e534c6a785d49a64373957ba4)",
+          "status": "MISSING",
+          "loaded_in_initial_run": false,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 33025264557,
+            "run_name": "Finviz Daily Snapshot",
+            "event": "schedule",
+            "run_started_at": "2026-08-26T23:59:26Z",
+            "head_sha": "c5e397b86f70c48e534c6a785d49a64373957ba4",
+            "matched_by": "actions_runs.head_sha"
+          },
+          "dropped_reason": "head_sha run start is after 09:30 ET"
         },
         {
           "source_path": "data/features/2026-08-25_1d.csv",
           "commit_sha": "5a886d42e04d79eca412fe17aeff956066caef02",
           "git_commit_date": "2026-08-25T21:20:25Z",
-          "server_time_utc": "2026-08-25T21:20:32Z",
-          "server_source": "actions_run 32900298866 (Finviz Score Delta, schedule; created_at 2026-08-25T21:18:31Z, updated_at 2026-08-25T21:20:32Z; pushed commit in its 'main -> main' range per job log)",
+          "server_time_utc": "2026-08-25T21:46:21Z",
+          "server_source": "actions_run 32902766323 (Composite Rank, schedule; run_started_at 2026-08-25T21:46:21Z; head_sha 5a886d42e04d79eca412fe17aeff956066caef02)",
           "status": "PROVEN",
-          "loaded_in_initial_run": false
+          "loaded_in_initial_run": false,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 32902766323,
+            "run_name": "Composite Rank",
+            "event": "schedule",
+            "run_started_at": "2026-08-25T21:46:21Z",
+            "head_sha": "5a886d42e04d79eca412fe17aeff956066caef02",
+            "matched_by": "actions_runs.head_sha"
+          }
         },
         {
           "source_path": "data/scores/2026-08-25_1d.csv",
           "commit_sha": "5a886d42e04d79eca412fe17aeff956066caef02",
           "git_commit_date": "2026-08-25T21:20:25Z",
-          "server_time_utc": "2026-08-25T21:20:32Z",
-          "server_source": "actions_run 32900298866 (Finviz Score Delta, schedule; created_at 2026-08-25T21:18:31Z, updated_at 2026-08-25T21:20:32Z; pushed commit in its 'main -> main' range per job log)",
+          "server_time_utc": "2026-08-25T21:46:21Z",
+          "server_source": "actions_run 32902766323 (Composite Rank, schedule; run_started_at 2026-08-25T21:46:21Z; head_sha 5a886d42e04d79eca412fe17aeff956066caef02)",
           "status": "PROVEN",
-          "loaded_in_initial_run": false
+          "loaded_in_initial_run": false,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 32902766323,
+            "run_name": "Composite Rank",
+            "event": "schedule",
+            "run_started_at": "2026-08-25T21:46:21Z",
+            "head_sha": "5a886d42e04d79eca412fe17aeff956066caef02",
+            "matched_by": "actions_runs.head_sha"
+          }
         },
         {
           "source_path": "data/scores/2026-08-25_1m.csv",
           "commit_sha": "5a886d42e04d79eca412fe17aeff956066caef02",
           "git_commit_date": "2026-08-25T21:20:25Z",
-          "server_time_utc": "2026-08-25T21:20:32Z",
-          "server_source": "actions_run 32900298866 (Finviz Score Delta, schedule; created_at 2026-08-25T21:18:31Z, updated_at 2026-08-25T21:20:32Z; pushed commit in its 'main -> main' range per job log)",
+          "server_time_utc": "2026-08-25T21:46:21Z",
+          "server_source": "actions_run 32902766323 (Composite Rank, schedule; run_started_at 2026-08-25T21:46:21Z; head_sha 5a886d42e04d79eca412fe17aeff956066caef02)",
           "status": "PROVEN",
-          "loaded_in_initial_run": false
+          "loaded_in_initial_run": false,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 32902766323,
+            "run_name": "Composite Rank",
+            "event": "schedule",
+            "run_started_at": "2026-08-25T21:46:21Z",
+            "head_sha": "5a886d42e04d79eca412fe17aeff956066caef02",
+            "matched_by": "actions_runs.head_sha"
+          }
         },
         {
           "source_path": "data/scores/2026-08-25_1w.csv",
           "commit_sha": "5a886d42e04d79eca412fe17aeff956066caef02",
           "git_commit_date": "2026-08-25T21:20:25Z",
-          "server_time_utc": "2026-08-25T21:20:32Z",
-          "server_source": "actions_run 32900298866 (Finviz Score Delta, schedule; created_at 2026-08-25T21:18:31Z, updated_at 2026-08-25T21:20:32Z; pushed commit in its 'main -> main' range per job log)",
+          "server_time_utc": "2026-08-25T21:46:21Z",
+          "server_source": "actions_run 32902766323 (Composite Rank, schedule; run_started_at 2026-08-25T21:46:21Z; head_sha 5a886d42e04d79eca412fe17aeff956066caef02)",
           "status": "PROVEN",
-          "loaded_in_initial_run": false
+          "loaded_in_initial_run": false,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 32902766323,
+            "run_name": "Composite Rank",
+            "event": "schedule",
+            "run_started_at": "2026-08-25T21:46:21Z",
+            "head_sha": "5a886d42e04d79eca412fe17aeff956066caef02",
+            "matched_by": "actions_runs.head_sha"
+          }
         },
         {
           "source_path": "data/snapshots/2026-08-25.csv",
           "commit_sha": "7948a17e4a8b373b4837dc540da73ba67149a2a4",
           "git_commit_date": "2026-08-25T20:57:34Z",
-          "server_time_utc": "2026-08-25T20:57:40Z",
-          "server_source": "actions_run 32898256110 (Finviz Daily Snapshot, schedule; created_at 2026-08-25T20:56:45Z, updated_at 2026-08-25T20:57:40Z; pushed commit in its 'main -> main' range per job log)",
+          "server_time_utc": "2026-08-25T21:18:31Z",
+          "server_source": "actions_run 32900298866 (Finviz Score Delta, schedule; run_started_at 2026-08-25T21:18:31Z; head_sha 7948a17e4a8b373b4837dc540da73ba67149a2a4)",
           "status": "PROVEN",
-          "loaded_in_initial_run": true
+          "loaded_in_initial_run": true,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 32900298866,
+            "run_name": "Finviz Score Delta",
+            "event": "schedule",
+            "run_started_at": "2026-08-25T21:18:31Z",
+            "head_sha": "7948a17e4a8b373b4837dc540da73ba67149a2a4",
+            "matched_by": "actions_runs.head_sha"
+          }
         },
         {
           "source_path": "data/universe/2026-08-25_membership.csv",
           "commit_sha": "5a886d42e04d79eca412fe17aeff956066caef02",
           "git_commit_date": "2026-08-25T21:20:25Z",
-          "server_time_utc": "2026-08-25T21:20:32Z",
-          "server_source": "actions_run 32900298866 (Finviz Score Delta, schedule; created_at 2026-08-25T21:18:31Z, updated_at 2026-08-25T21:20:32Z; pushed commit in its 'main -> main' range per job log)",
+          "server_time_utc": "2026-08-25T21:46:21Z",
+          "server_source": "actions_run 32902766323 (Composite Rank, schedule; run_started_at 2026-08-25T21:46:21Z; head_sha 5a886d42e04d79eca412fe17aeff956066caef02)",
           "status": "PROVEN",
-          "loaded_in_initial_run": false
+          "loaded_in_initial_run": false,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 32902766323,
+            "run_name": "Composite Rank",
+            "event": "schedule",
+            "run_started_at": "2026-08-25T21:46:21Z",
+            "head_sha": "5a886d42e04d79eca412fe17aeff956066caef02",
+            "matched_by": "actions_runs.head_sha"
+          }
         }
       ]
     },
@@ -840,64 +1532,128 @@
           "source_path": "data/composite/2026-08-26_composite_rank.csv",
           "commit_sha": "87c4106bd45ea0fe4b103d498509b49d3ec55936",
           "git_commit_date": "2026-08-27T00:51:10Z",
-          "server_time_utc": "2026-08-27T00:51:14Z",
-          "server_source": "actions_run 33028163095 (Composite Rank, schedule; created_at 2026-08-27T00:50:28Z, updated_at 2026-08-27T00:51:14Z; pushed commit in its 'main -> main' range per job log); push event 19064527598 at 2026-08-27T00:51:12Z",
-          "status": "PROVEN",
-          "loaded_in_initial_run": false
+          "server_time_utc": "2026-08-28T04:25:44Z",
+          "server_source": "actions_run 33141782411 (Finviz Daily Snapshot, schedule; run_started_at 2026-08-28T04:25:44Z; head_sha 87c4106bd45ea0fe4b103d498509b49d3ec55936)",
+          "status": "MISSING",
+          "loaded_in_initial_run": false,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 33141782411,
+            "run_name": "Finviz Daily Snapshot",
+            "event": "schedule",
+            "run_started_at": "2026-08-28T04:25:44Z",
+            "head_sha": "87c4106bd45ea0fe4b103d498509b49d3ec55936",
+            "matched_by": "actions_runs.head_sha"
+          },
+          "dropped_reason": "head_sha run start is after 09:30 ET"
         },
         {
           "source_path": "data/features/2026-08-26_1d.csv",
           "commit_sha": "45aca2142919713b4089d2b3185769deebee1965",
           "git_commit_date": "2026-08-27T00:22:20Z",
-          "server_time_utc": "2026-08-27T00:22:28Z",
-          "server_source": "actions_run 33026531289 (Finviz Score Delta, schedule; created_at 2026-08-27T00:20:52Z, updated_at 2026-08-27T00:22:28Z; pushed commit in its 'main -> main' range per job log); push event 19008110693 at 2026-08-27T00:22:26Z",
+          "server_time_utc": "2026-08-27T00:50:28Z",
+          "server_source": "actions_run 33028163095 (Composite Rank, schedule; run_started_at 2026-08-27T00:50:28Z; head_sha 45aca2142919713b4089d2b3185769deebee1965)",
           "status": "PROVEN",
-          "loaded_in_initial_run": false
+          "loaded_in_initial_run": false,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 33028163095,
+            "run_name": "Composite Rank",
+            "event": "schedule",
+            "run_started_at": "2026-08-27T00:50:28Z",
+            "head_sha": "45aca2142919713b4089d2b3185769deebee1965",
+            "matched_by": "actions_runs.head_sha"
+          }
         },
         {
           "source_path": "data/scores/2026-08-26_1d.csv",
           "commit_sha": "45aca2142919713b4089d2b3185769deebee1965",
           "git_commit_date": "2026-08-27T00:22:20Z",
-          "server_time_utc": "2026-08-27T00:22:28Z",
-          "server_source": "actions_run 33026531289 (Finviz Score Delta, schedule; created_at 2026-08-27T00:20:52Z, updated_at 2026-08-27T00:22:28Z; pushed commit in its 'main -> main' range per job log); push event 19008110693 at 2026-08-27T00:22:26Z",
+          "server_time_utc": "2026-08-27T00:50:28Z",
+          "server_source": "actions_run 33028163095 (Composite Rank, schedule; run_started_at 2026-08-27T00:50:28Z; head_sha 45aca2142919713b4089d2b3185769deebee1965)",
           "status": "PROVEN",
-          "loaded_in_initial_run": false
+          "loaded_in_initial_run": false,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 33028163095,
+            "run_name": "Composite Rank",
+            "event": "schedule",
+            "run_started_at": "2026-08-27T00:50:28Z",
+            "head_sha": "45aca2142919713b4089d2b3185769deebee1965",
+            "matched_by": "actions_runs.head_sha"
+          }
         },
         {
           "source_path": "data/scores/2026-08-26_1m.csv",
           "commit_sha": "45aca2142919713b4089d2b3185769deebee1965",
           "git_commit_date": "2026-08-27T00:22:20Z",
-          "server_time_utc": "2026-08-27T00:22:28Z",
-          "server_source": "actions_run 33026531289 (Finviz Score Delta, schedule; created_at 2026-08-27T00:20:52Z, updated_at 2026-08-27T00:22:28Z; pushed commit in its 'main -> main' range per job log); push event 19008110693 at 2026-08-27T00:22:26Z",
+          "server_time_utc": "2026-08-27T00:50:28Z",
+          "server_source": "actions_run 33028163095 (Composite Rank, schedule; run_started_at 2026-08-27T00:50:28Z; head_sha 45aca2142919713b4089d2b3185769deebee1965)",
           "status": "PROVEN",
-          "loaded_in_initial_run": false
+          "loaded_in_initial_run": false,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 33028163095,
+            "run_name": "Composite Rank",
+            "event": "schedule",
+            "run_started_at": "2026-08-27T00:50:28Z",
+            "head_sha": "45aca2142919713b4089d2b3185769deebee1965",
+            "matched_by": "actions_runs.head_sha"
+          }
         },
         {
           "source_path": "data/scores/2026-08-26_1w.csv",
           "commit_sha": "45aca2142919713b4089d2b3185769deebee1965",
           "git_commit_date": "2026-08-27T00:22:20Z",
-          "server_time_utc": "2026-08-27T00:22:28Z",
-          "server_source": "actions_run 33026531289 (Finviz Score Delta, schedule; created_at 2026-08-27T00:20:52Z, updated_at 2026-08-27T00:22:28Z; pushed commit in its 'main -> main' range per job log); push event 19008110693 at 2026-08-27T00:22:26Z",
+          "server_time_utc": "2026-08-27T00:50:28Z",
+          "server_source": "actions_run 33028163095 (Composite Rank, schedule; run_started_at 2026-08-27T00:50:28Z; head_sha 45aca2142919713b4089d2b3185769deebee1965)",
           "status": "PROVEN",
-          "loaded_in_initial_run": false
+          "loaded_in_initial_run": false,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 33028163095,
+            "run_name": "Composite Rank",
+            "event": "schedule",
+            "run_started_at": "2026-08-27T00:50:28Z",
+            "head_sha": "45aca2142919713b4089d2b3185769deebee1965",
+            "matched_by": "actions_runs.head_sha"
+          }
         },
         {
           "source_path": "data/snapshots/2026-08-26.csv",
           "commit_sha": "01a90174fa1039b0e2c242a68ca3ab6e054e3516",
           "git_commit_date": "2026-08-27T00:00:57Z",
-          "server_time_utc": "2026-08-27T00:01:10Z",
-          "server_source": "actions_run 33025264557 (Finviz Daily Snapshot, schedule; created_at 2026-08-26T23:59:26Z, updated_at 2026-08-27T00:01:10Z; pushed commit in its 'main -> main' range per job log); push event 19134375559 at 2026-08-27T00:01:06Z",
+          "server_time_utc": "2026-08-27T00:20:52Z",
+          "server_source": "actions_run 33026531289 (Finviz Score Delta, schedule; run_started_at 2026-08-27T00:20:52Z; head_sha 01a90174fa1039b0e2c242a68ca3ab6e054e3516)",
           "status": "PROVEN",
-          "loaded_in_initial_run": true
+          "loaded_in_initial_run": true,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 33026531289,
+            "run_name": "Finviz Score Delta",
+            "event": "schedule",
+            "run_started_at": "2026-08-27T00:20:52Z",
+            "head_sha": "01a90174fa1039b0e2c242a68ca3ab6e054e3516",
+            "matched_by": "actions_runs.head_sha"
+          }
         },
         {
           "source_path": "data/universe/2026-08-26_membership.csv",
           "commit_sha": "45aca2142919713b4089d2b3185769deebee1965",
           "git_commit_date": "2026-08-27T00:22:20Z",
-          "server_time_utc": "2026-08-27T00:22:28Z",
-          "server_source": "actions_run 33026531289 (Finviz Score Delta, schedule; created_at 2026-08-27T00:20:52Z, updated_at 2026-08-27T00:22:28Z; pushed commit in its 'main -> main' range per job log); push event 19008110693 at 2026-08-27T00:22:26Z",
+          "server_time_utc": "2026-08-27T00:50:28Z",
+          "server_source": "actions_run 33028163095 (Composite Rank, schedule; run_started_at 2026-08-27T00:50:28Z; head_sha 45aca2142919713b4089d2b3185769deebee1965)",
           "status": "PROVEN",
-          "loaded_in_initial_run": false
+          "loaded_in_initial_run": false,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 33028163095,
+            "run_name": "Composite Rank",
+            "event": "schedule",
+            "run_started_at": "2026-08-27T00:50:28Z",
+            "head_sha": "45aca2142919713b4089d2b3185769deebee1965",
+            "matched_by": "actions_runs.head_sha"
+          }
         }
       ]
     },
@@ -908,64 +1664,127 @@
           "source_path": "data/composite/2026-08-28_composite_rank.csv",
           "commit_sha": "a915bfb07f16205cb8334dda39dda87a246585e1",
           "git_commit_date": "2026-08-29T03:12:07Z",
-          "server_time_utc": "2026-08-29T03:12:11Z",
-          "server_source": "actions_run 33230766254 (Composite Rank, schedule; created_at 2026-08-29T03:11:18Z, updated_at 2026-08-29T03:12:11Z; pushed commit in its 'main -> main' range per job log); push event 19348848000 at 2026-08-29T03:12:09Z",
+          "server_time_utc": "2026-08-30T18:28:52Z",
+          "server_source": "actions_run 33328185609 (Weekly Lesson Promote, schedule; run_started_at 2026-08-30T18:28:52Z; head_sha a915bfb07f16205cb8334dda39dda87a246585e1)",
           "status": "PROVEN",
-          "loaded_in_initial_run": false
+          "loaded_in_initial_run": false,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 33328185609,
+            "run_name": "Weekly Lesson Promote",
+            "event": "schedule",
+            "run_started_at": "2026-08-30T18:28:52Z",
+            "head_sha": "a915bfb07f16205cb8334dda39dda87a246585e1",
+            "matched_by": "actions_runs.head_sha"
+          }
         },
         {
           "source_path": "data/features/2026-08-28_1d.csv",
           "commit_sha": "82cddccbafde6ed8c703dc766ec0b48c8b6856a8",
           "git_commit_date": "2026-08-29T02:58:47Z",
-          "server_time_utc": "2026-08-29T02:58:55Z",
-          "server_source": "actions_run 33230170606 (Finviz Score Delta, schedule; created_at 2026-08-29T02:56:48Z, updated_at 2026-08-29T02:58:55Z; pushed commit in its 'main -> main' range per job log); push event 19348179534 at 2026-08-29T02:58:51Z",
+          "server_time_utc": "2026-08-29T03:11:18Z",
+          "server_source": "actions_run 33230766254 (Composite Rank, schedule; run_started_at 2026-08-29T03:11:18Z; head_sha 82cddccbafde6ed8c703dc766ec0b48c8b6856a8)",
           "status": "PROVEN",
-          "loaded_in_initial_run": false
+          "loaded_in_initial_run": false,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 33230766254,
+            "run_name": "Composite Rank",
+            "event": "schedule",
+            "run_started_at": "2026-08-29T03:11:18Z",
+            "head_sha": "82cddccbafde6ed8c703dc766ec0b48c8b6856a8",
+            "matched_by": "actions_runs.head_sha"
+          }
         },
         {
           "source_path": "data/scores/2026-08-28_1d.csv",
           "commit_sha": "82cddccbafde6ed8c703dc766ec0b48c8b6856a8",
           "git_commit_date": "2026-08-29T02:58:47Z",
-          "server_time_utc": "2026-08-29T02:58:55Z",
-          "server_source": "actions_run 33230170606 (Finviz Score Delta, schedule; created_at 2026-08-29T02:56:48Z, updated_at 2026-08-29T02:58:55Z; pushed commit in its 'main -> main' range per job log); push event 19348179534 at 2026-08-29T02:58:51Z",
+          "server_time_utc": "2026-08-29T03:11:18Z",
+          "server_source": "actions_run 33230766254 (Composite Rank, schedule; run_started_at 2026-08-29T03:11:18Z; head_sha 82cddccbafde6ed8c703dc766ec0b48c8b6856a8)",
           "status": "PROVEN",
-          "loaded_in_initial_run": false
+          "loaded_in_initial_run": false,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 33230766254,
+            "run_name": "Composite Rank",
+            "event": "schedule",
+            "run_started_at": "2026-08-29T03:11:18Z",
+            "head_sha": "82cddccbafde6ed8c703dc766ec0b48c8b6856a8",
+            "matched_by": "actions_runs.head_sha"
+          }
         },
         {
           "source_path": "data/scores/2026-08-28_1m.csv",
           "commit_sha": "82cddccbafde6ed8c703dc766ec0b48c8b6856a8",
           "git_commit_date": "2026-08-29T02:58:47Z",
-          "server_time_utc": "2026-08-29T02:58:55Z",
-          "server_source": "actions_run 33230170606 (Finviz Score Delta, schedule; created_at 2026-08-29T02:56:48Z, updated_at 2026-08-29T02:58:55Z; pushed commit in its 'main -> main' range per job log); push event 19348179534 at 2026-08-29T02:58:51Z",
+          "server_time_utc": "2026-08-29T03:11:18Z",
+          "server_source": "actions_run 33230766254 (Composite Rank, schedule; run_started_at 2026-08-29T03:11:18Z; head_sha 82cddccbafde6ed8c703dc766ec0b48c8b6856a8)",
           "status": "PROVEN",
-          "loaded_in_initial_run": false
+          "loaded_in_initial_run": false,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 33230766254,
+            "run_name": "Composite Rank",
+            "event": "schedule",
+            "run_started_at": "2026-08-29T03:11:18Z",
+            "head_sha": "82cddccbafde6ed8c703dc766ec0b48c8b6856a8",
+            "matched_by": "actions_runs.head_sha"
+          }
         },
         {
           "source_path": "data/scores/2026-08-28_1w.csv",
           "commit_sha": "82cddccbafde6ed8c703dc766ec0b48c8b6856a8",
           "git_commit_date": "2026-08-29T02:58:47Z",
-          "server_time_utc": "2026-08-29T02:58:55Z",
-          "server_source": "actions_run 33230170606 (Finviz Score Delta, schedule; created_at 2026-08-29T02:56:48Z, updated_at 2026-08-29T02:58:55Z; pushed commit in its 'main -> main' range per job log); push event 19348179534 at 2026-08-29T02:58:51Z",
+          "server_time_utc": "2026-08-29T03:11:18Z",
+          "server_source": "actions_run 33230766254 (Composite Rank, schedule; run_started_at 2026-08-29T03:11:18Z; head_sha 82cddccbafde6ed8c703dc766ec0b48c8b6856a8)",
           "status": "PROVEN",
-          "loaded_in_initial_run": false
+          "loaded_in_initial_run": false,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 33230766254,
+            "run_name": "Composite Rank",
+            "event": "schedule",
+            "run_started_at": "2026-08-29T03:11:18Z",
+            "head_sha": "82cddccbafde6ed8c703dc766ec0b48c8b6856a8",
+            "matched_by": "actions_runs.head_sha"
+          }
         },
         {
           "source_path": "data/snapshots/2026-08-28.csv",
           "commit_sha": "946f1237e81ffd3efc915e7c82daca3e4e0e5fef",
           "git_commit_date": "2026-08-29T02:53:58Z",
-          "server_time_utc": "2026-08-29T02:54:06Z",
-          "server_source": "actions_run 33230038306 (Finviz Daily Snapshot, schedule; created_at 2026-08-29T02:53:11Z, updated_at 2026-08-29T02:54:06Z; pushed commit in its 'main -> main' range per job log); push event 19347961489 at 2026-08-29T02:54:03Z",
+          "server_time_utc": "2026-08-29T02:56:48Z",
+          "server_source": "actions_run 33230170606 (Finviz Score Delta, schedule; run_started_at 2026-08-29T02:56:48Z; head_sha 946f1237e81ffd3efc915e7c82daca3e4e0e5fef)",
           "status": "PROVEN",
-          "loaded_in_initial_run": true
+          "loaded_in_initial_run": true,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 33230170606,
+            "run_name": "Finviz Score Delta",
+            "event": "schedule",
+            "run_started_at": "2026-08-29T02:56:48Z",
+            "head_sha": "946f1237e81ffd3efc915e7c82daca3e4e0e5fef",
+            "matched_by": "actions_runs.head_sha"
+          }
         },
         {
           "source_path": "data/universe/2026-08-28_membership.csv",
           "commit_sha": "82cddccbafde6ed8c703dc766ec0b48c8b6856a8",
           "git_commit_date": "2026-08-29T02:58:47Z",
-          "server_time_utc": "2026-08-29T02:58:55Z",
-          "server_source": "actions_run 33230170606 (Finviz Score Delta, schedule; created_at 2026-08-29T02:56:48Z, updated_at 2026-08-29T02:58:55Z; pushed commit in its 'main -> main' range per job log); push event 19348179534 at 2026-08-29T02:58:51Z",
+          "server_time_utc": "2026-08-29T03:11:18Z",
+          "server_source": "actions_run 33230766254 (Composite Rank, schedule; run_started_at 2026-08-29T03:11:18Z; head_sha 82cddccbafde6ed8c703dc766ec0b48c8b6856a8)",
           "status": "PROVEN",
-          "loaded_in_initial_run": false
+          "loaded_in_initial_run": false,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 33230766254,
+            "run_name": "Composite Rank",
+            "event": "schedule",
+            "run_started_at": "2026-08-29T03:11:18Z",
+            "head_sha": "82cddccbafde6ed8c703dc766ec0b48c8b6856a8",
+            "matched_by": "actions_runs.head_sha"
+          }
         }
       ]
     },
@@ -976,64 +1795,128 @@
           "source_path": "data/composite/2026-08-31_composite_rank.csv",
           "commit_sha": "436350e6b10b0917841eafb2e38252d8ade8f944",
           "git_commit_date": "2026-09-01T00:40:09Z",
-          "server_time_utc": "2026-09-01T00:40:14Z",
-          "server_source": "actions_run 33455634952 (Composite Rank, schedule; created_at 2026-09-01T00:39:23Z, updated_at 2026-09-01T00:40:14Z; pushed commit in its 'main -> main' range per job log); push event 19649676930 at 2026-09-01T00:40:11Z",
-          "status": "PROVEN",
-          "loaded_in_initial_run": false
+          "server_time_utc": "2026-09-01T22:45:26Z",
+          "server_source": "actions_run 33567827355 (Finviz Daily Snapshot, schedule; run_started_at 2026-09-01T22:45:26Z; head_sha 436350e6b10b0917841eafb2e38252d8ade8f944)",
+          "status": "MISSING",
+          "loaded_in_initial_run": false,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 33567827355,
+            "run_name": "Finviz Daily Snapshot",
+            "event": "schedule",
+            "run_started_at": "2026-09-01T22:45:26Z",
+            "head_sha": "436350e6b10b0917841eafb2e38252d8ade8f944",
+            "matched_by": "actions_runs.head_sha"
+          },
+          "dropped_reason": "head_sha run start is after 09:30 ET"
         },
         {
           "source_path": "data/features/2026-08-31_1d.csv",
           "commit_sha": "b21802005a50195a90737bd8920ea171510ba25c",
           "git_commit_date": "2026-09-01T00:14:40Z",
-          "server_time_utc": "2026-09-01T00:14:47Z",
-          "server_source": "actions_run 33453853298 (Finviz Score Delta, schedule; created_at 2026-09-01T00:13:05Z, updated_at 2026-09-01T00:14:47Z; pushed commit in its 'main -> main' range per job log); push event 19600683386 at 2026-09-01T00:14:45Z",
+          "server_time_utc": "2026-09-01T00:39:23Z",
+          "server_source": "actions_run 33455634952 (Composite Rank, schedule; run_started_at 2026-09-01T00:39:23Z; head_sha b21802005a50195a90737bd8920ea171510ba25c)",
           "status": "PROVEN",
-          "loaded_in_initial_run": false
+          "loaded_in_initial_run": false,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 33455634952,
+            "run_name": "Composite Rank",
+            "event": "schedule",
+            "run_started_at": "2026-09-01T00:39:23Z",
+            "head_sha": "b21802005a50195a90737bd8920ea171510ba25c",
+            "matched_by": "actions_runs.head_sha"
+          }
         },
         {
           "source_path": "data/scores/2026-08-31_1d.csv",
           "commit_sha": "b21802005a50195a90737bd8920ea171510ba25c",
           "git_commit_date": "2026-09-01T00:14:40Z",
-          "server_time_utc": "2026-09-01T00:14:47Z",
-          "server_source": "actions_run 33453853298 (Finviz Score Delta, schedule; created_at 2026-09-01T00:13:05Z, updated_at 2026-09-01T00:14:47Z; pushed commit in its 'main -> main' range per job log); push event 19600683386 at 2026-09-01T00:14:45Z",
+          "server_time_utc": "2026-09-01T00:39:23Z",
+          "server_source": "actions_run 33455634952 (Composite Rank, schedule; run_started_at 2026-09-01T00:39:23Z; head_sha b21802005a50195a90737bd8920ea171510ba25c)",
           "status": "PROVEN",
-          "loaded_in_initial_run": false
+          "loaded_in_initial_run": false,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 33455634952,
+            "run_name": "Composite Rank",
+            "event": "schedule",
+            "run_started_at": "2026-09-01T00:39:23Z",
+            "head_sha": "b21802005a50195a90737bd8920ea171510ba25c",
+            "matched_by": "actions_runs.head_sha"
+          }
         },
         {
           "source_path": "data/scores/2026-08-31_1m.csv",
           "commit_sha": "b21802005a50195a90737bd8920ea171510ba25c",
           "git_commit_date": "2026-09-01T00:14:40Z",
-          "server_time_utc": "2026-09-01T00:14:47Z",
-          "server_source": "actions_run 33453853298 (Finviz Score Delta, schedule; created_at 2026-09-01T00:13:05Z, updated_at 2026-09-01T00:14:47Z; pushed commit in its 'main -> main' range per job log); push event 19600683386 at 2026-09-01T00:14:45Z",
+          "server_time_utc": "2026-09-01T00:39:23Z",
+          "server_source": "actions_run 33455634952 (Composite Rank, schedule; run_started_at 2026-09-01T00:39:23Z; head_sha b21802005a50195a90737bd8920ea171510ba25c)",
           "status": "PROVEN",
-          "loaded_in_initial_run": false
+          "loaded_in_initial_run": false,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 33455634952,
+            "run_name": "Composite Rank",
+            "event": "schedule",
+            "run_started_at": "2026-09-01T00:39:23Z",
+            "head_sha": "b21802005a50195a90737bd8920ea171510ba25c",
+            "matched_by": "actions_runs.head_sha"
+          }
         },
         {
           "source_path": "data/scores/2026-08-31_1w.csv",
           "commit_sha": "b21802005a50195a90737bd8920ea171510ba25c",
           "git_commit_date": "2026-09-01T00:14:40Z",
-          "server_time_utc": "2026-09-01T00:14:47Z",
-          "server_source": "actions_run 33453853298 (Finviz Score Delta, schedule; created_at 2026-09-01T00:13:05Z, updated_at 2026-09-01T00:14:47Z; pushed commit in its 'main -> main' range per job log); push event 19600683386 at 2026-09-01T00:14:45Z",
+          "server_time_utc": "2026-09-01T00:39:23Z",
+          "server_source": "actions_run 33455634952 (Composite Rank, schedule; run_started_at 2026-09-01T00:39:23Z; head_sha b21802005a50195a90737bd8920ea171510ba25c)",
           "status": "PROVEN",
-          "loaded_in_initial_run": false
+          "loaded_in_initial_run": false,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 33455634952,
+            "run_name": "Composite Rank",
+            "event": "schedule",
+            "run_started_at": "2026-09-01T00:39:23Z",
+            "head_sha": "b21802005a50195a90737bd8920ea171510ba25c",
+            "matched_by": "actions_runs.head_sha"
+          }
         },
         {
           "source_path": "data/snapshots/2026-08-31.csv",
           "commit_sha": "25568b6a6997c7015be4c1e90742beaf47213149",
           "git_commit_date": "2026-09-01T00:02:52Z",
-          "server_time_utc": "2026-09-01T00:03:00Z",
-          "server_source": "actions_run 33453120680 (Finviz Daily Snapshot, schedule; created_at 2026-09-01T00:02:06Z, updated_at 2026-09-01T00:03:00Z; pushed commit in its 'main -> main' range per job log); push event 19600189072 at 2026-09-01T00:02:58Z",
+          "server_time_utc": "2026-09-01T00:13:05Z",
+          "server_source": "actions_run 33453853298 (Finviz Score Delta, schedule; run_started_at 2026-09-01T00:13:05Z; head_sha 25568b6a6997c7015be4c1e90742beaf47213149)",
           "status": "PROVEN",
-          "loaded_in_initial_run": true
+          "loaded_in_initial_run": true,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 33453853298,
+            "run_name": "Finviz Score Delta",
+            "event": "schedule",
+            "run_started_at": "2026-09-01T00:13:05Z",
+            "head_sha": "25568b6a6997c7015be4c1e90742beaf47213149",
+            "matched_by": "actions_runs.head_sha"
+          }
         },
         {
           "source_path": "data/universe/2026-08-31_membership.csv",
           "commit_sha": "b21802005a50195a90737bd8920ea171510ba25c",
           "git_commit_date": "2026-09-01T00:14:40Z",
-          "server_time_utc": "2026-09-01T00:14:47Z",
-          "server_source": "actions_run 33453853298 (Finviz Score Delta, schedule; created_at 2026-09-01T00:13:05Z, updated_at 2026-09-01T00:14:47Z; pushed commit in its 'main -> main' range per job log); push event 19600683386 at 2026-09-01T00:14:45Z",
+          "server_time_utc": "2026-09-01T00:39:23Z",
+          "server_source": "actions_run 33455634952 (Composite Rank, schedule; run_started_at 2026-09-01T00:39:23Z; head_sha b21802005a50195a90737bd8920ea171510ba25c)",
           "status": "PROVEN",
-          "loaded_in_initial_run": false
+          "loaded_in_initial_run": false,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 33455634952,
+            "run_name": "Composite Rank",
+            "event": "schedule",
+            "run_started_at": "2026-09-01T00:39:23Z",
+            "head_sha": "b21802005a50195a90737bd8920ea171510ba25c",
+            "matched_by": "actions_runs.head_sha"
+          }
         }
       ]
     },
@@ -1044,64 +1927,128 @@
           "source_path": "data/composite/2026-09-01_composite_rank.csv",
           "commit_sha": "d803e2c98496ba62e442c5e15b182e0198f8053a",
           "git_commit_date": "2026-09-01T23:21:52Z",
-          "server_time_utc": "2026-09-01T23:21:57Z",
-          "server_source": "actions_run 33570612447 (Composite Rank, schedule; created_at 2026-09-01T23:20:57Z, updated_at 2026-09-01T23:21:57Z; pushed commit in its 'main -> main' range per job log); push event 19760743434 at 2026-09-01T23:21:55Z",
-          "status": "PROVEN",
-          "loaded_in_initial_run": false
+          "server_time_utc": "2026-09-02T22:47:08Z",
+          "server_source": "actions_run 33692047066 (Finviz Daily Snapshot, schedule; run_started_at 2026-09-02T22:47:08Z; head_sha d803e2c98496ba62e442c5e15b182e0198f8053a)",
+          "status": "MISSING",
+          "loaded_in_initial_run": false,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 33692047066,
+            "run_name": "Finviz Daily Snapshot",
+            "event": "schedule",
+            "run_started_at": "2026-09-02T22:47:08Z",
+            "head_sha": "d803e2c98496ba62e442c5e15b182e0198f8053a",
+            "matched_by": "actions_runs.head_sha"
+          },
+          "dropped_reason": "head_sha run start is after 09:30 ET"
         },
         {
           "source_path": "data/features/2026-09-01_1d.csv",
           "commit_sha": "b0493b0ffbbc5d30c0f3efc0083ccd53f4004045",
           "git_commit_date": "2026-09-01T22:56:10Z",
-          "server_time_utc": "2026-09-01T22:56:16Z",
-          "server_source": "actions_run 33568513219 (Finviz Score Delta, schedule; created_at 2026-09-01T22:54:15Z, updated_at 2026-09-01T22:56:16Z; pushed commit in its 'main -> main' range per job log); push event 19773894638 at 2026-09-01T22:56:14Z",
+          "server_time_utc": "2026-09-01T23:20:57Z",
+          "server_source": "actions_run 33570612447 (Composite Rank, schedule; run_started_at 2026-09-01T23:20:57Z; head_sha b0493b0ffbbc5d30c0f3efc0083ccd53f4004045)",
           "status": "PROVEN",
-          "loaded_in_initial_run": false
+          "loaded_in_initial_run": false,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 33570612447,
+            "run_name": "Composite Rank",
+            "event": "schedule",
+            "run_started_at": "2026-09-01T23:20:57Z",
+            "head_sha": "b0493b0ffbbc5d30c0f3efc0083ccd53f4004045",
+            "matched_by": "actions_runs.head_sha"
+          }
         },
         {
           "source_path": "data/scores/2026-09-01_1d.csv",
           "commit_sha": "b0493b0ffbbc5d30c0f3efc0083ccd53f4004045",
           "git_commit_date": "2026-09-01T22:56:10Z",
-          "server_time_utc": "2026-09-01T22:56:16Z",
-          "server_source": "actions_run 33568513219 (Finviz Score Delta, schedule; created_at 2026-09-01T22:54:15Z, updated_at 2026-09-01T22:56:16Z; pushed commit in its 'main -> main' range per job log); push event 19773894638 at 2026-09-01T22:56:14Z",
+          "server_time_utc": "2026-09-01T23:20:57Z",
+          "server_source": "actions_run 33570612447 (Composite Rank, schedule; run_started_at 2026-09-01T23:20:57Z; head_sha b0493b0ffbbc5d30c0f3efc0083ccd53f4004045)",
           "status": "PROVEN",
-          "loaded_in_initial_run": false
+          "loaded_in_initial_run": false,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 33570612447,
+            "run_name": "Composite Rank",
+            "event": "schedule",
+            "run_started_at": "2026-09-01T23:20:57Z",
+            "head_sha": "b0493b0ffbbc5d30c0f3efc0083ccd53f4004045",
+            "matched_by": "actions_runs.head_sha"
+          }
         },
         {
           "source_path": "data/scores/2026-09-01_1m.csv",
           "commit_sha": "b0493b0ffbbc5d30c0f3efc0083ccd53f4004045",
           "git_commit_date": "2026-09-01T22:56:10Z",
-          "server_time_utc": "2026-09-01T22:56:16Z",
-          "server_source": "actions_run 33568513219 (Finviz Score Delta, schedule; created_at 2026-09-01T22:54:15Z, updated_at 2026-09-01T22:56:16Z; pushed commit in its 'main -> main' range per job log); push event 19773894638 at 2026-09-01T22:56:14Z",
+          "server_time_utc": "2026-09-01T23:20:57Z",
+          "server_source": "actions_run 33570612447 (Composite Rank, schedule; run_started_at 2026-09-01T23:20:57Z; head_sha b0493b0ffbbc5d30c0f3efc0083ccd53f4004045)",
           "status": "PROVEN",
-          "loaded_in_initial_run": false
+          "loaded_in_initial_run": false,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 33570612447,
+            "run_name": "Composite Rank",
+            "event": "schedule",
+            "run_started_at": "2026-09-01T23:20:57Z",
+            "head_sha": "b0493b0ffbbc5d30c0f3efc0083ccd53f4004045",
+            "matched_by": "actions_runs.head_sha"
+          }
         },
         {
           "source_path": "data/scores/2026-09-01_1w.csv",
           "commit_sha": "b0493b0ffbbc5d30c0f3efc0083ccd53f4004045",
           "git_commit_date": "2026-09-01T22:56:10Z",
-          "server_time_utc": "2026-09-01T22:56:16Z",
-          "server_source": "actions_run 33568513219 (Finviz Score Delta, schedule; created_at 2026-09-01T22:54:15Z, updated_at 2026-09-01T22:56:16Z; pushed commit in its 'main -> main' range per job log); push event 19773894638 at 2026-09-01T22:56:14Z",
+          "server_time_utc": "2026-09-01T23:20:57Z",
+          "server_source": "actions_run 33570612447 (Composite Rank, schedule; run_started_at 2026-09-01T23:20:57Z; head_sha b0493b0ffbbc5d30c0f3efc0083ccd53f4004045)",
           "status": "PROVEN",
-          "loaded_in_initial_run": false
+          "loaded_in_initial_run": false,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 33570612447,
+            "run_name": "Composite Rank",
+            "event": "schedule",
+            "run_started_at": "2026-09-01T23:20:57Z",
+            "head_sha": "b0493b0ffbbc5d30c0f3efc0083ccd53f4004045",
+            "matched_by": "actions_runs.head_sha"
+          }
         },
         {
           "source_path": "data/snapshots/2026-09-01.csv",
           "commit_sha": "c421900d79bad3ec5e0e187e5f7b1c27777b973b",
           "git_commit_date": "2026-09-01T22:46:11Z",
-          "server_time_utc": "2026-09-01T22:46:19Z",
-          "server_source": "actions_run 33567827355 (Finviz Daily Snapshot, schedule; created_at 2026-09-01T22:45:26Z, updated_at 2026-09-01T22:46:19Z; pushed commit in its 'main -> main' range per job log); push event 19723572196 at 2026-09-01T22:46:16Z",
+          "server_time_utc": "2026-09-01T22:54:15Z",
+          "server_source": "actions_run 33568513219 (Finviz Score Delta, schedule; run_started_at 2026-09-01T22:54:15Z; head_sha c421900d79bad3ec5e0e187e5f7b1c27777b973b)",
           "status": "PROVEN",
-          "loaded_in_initial_run": true
+          "loaded_in_initial_run": true,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 33568513219,
+            "run_name": "Finviz Score Delta",
+            "event": "schedule",
+            "run_started_at": "2026-09-01T22:54:15Z",
+            "head_sha": "c421900d79bad3ec5e0e187e5f7b1c27777b973b",
+            "matched_by": "actions_runs.head_sha"
+          }
         },
         {
           "source_path": "data/universe/2026-09-01_membership.csv",
           "commit_sha": "b0493b0ffbbc5d30c0f3efc0083ccd53f4004045",
           "git_commit_date": "2026-09-01T22:56:10Z",
-          "server_time_utc": "2026-09-01T22:56:16Z",
-          "server_source": "actions_run 33568513219 (Finviz Score Delta, schedule; created_at 2026-09-01T22:54:15Z, updated_at 2026-09-01T22:56:16Z; pushed commit in its 'main -> main' range per job log); push event 19773894638 at 2026-09-01T22:56:14Z",
+          "server_time_utc": "2026-09-01T23:20:57Z",
+          "server_source": "actions_run 33570612447 (Composite Rank, schedule; run_started_at 2026-09-01T23:20:57Z; head_sha b0493b0ffbbc5d30c0f3efc0083ccd53f4004045)",
           "status": "PROVEN",
-          "loaded_in_initial_run": false
+          "loaded_in_initial_run": false,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 33570612447,
+            "run_name": "Composite Rank",
+            "event": "schedule",
+            "run_started_at": "2026-09-01T23:20:57Z",
+            "head_sha": "b0493b0ffbbc5d30c0f3efc0083ccd53f4004045",
+            "matched_by": "actions_runs.head_sha"
+          }
         }
       ]
     },
@@ -1112,64 +2059,128 @@
           "source_path": "data/composite/2026-09-02_composite_rank.csv",
           "commit_sha": "35a733789318a88f80b3b836a4793256d0fb324e",
           "git_commit_date": "2026-09-02T23:21:57Z",
-          "server_time_utc": "2026-09-02T23:22:02Z",
-          "server_source": "actions_run 33694670986 (Composite Rank, schedule; created_at 2026-09-02T23:20:59Z, updated_at 2026-09-02T23:22:02Z; pushed commit in its 'main -> main' range per job log); push event 19865255469 at 2026-09-02T23:22:00Z",
-          "status": "PROVEN",
-          "loaded_in_initial_run": false
+          "server_time_utc": "2026-09-03T22:44:52Z",
+          "server_source": "actions_run 33814488206 (Finviz Daily Snapshot, schedule; run_started_at 2026-09-03T22:44:52Z; head_sha 35a733789318a88f80b3b836a4793256d0fb324e)",
+          "status": "MISSING",
+          "loaded_in_initial_run": false,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 33814488206,
+            "run_name": "Finviz Daily Snapshot",
+            "event": "schedule",
+            "run_started_at": "2026-09-03T22:44:52Z",
+            "head_sha": "35a733789318a88f80b3b836a4793256d0fb324e",
+            "matched_by": "actions_runs.head_sha"
+          },
+          "dropped_reason": "head_sha run start is after 09:30 ET"
         },
         {
           "source_path": "data/features/2026-09-02_1d.csv",
           "commit_sha": "aba6d110e1ca1db7552bb2feb9a263e02d3ebc95",
           "git_commit_date": "2026-09-02T22:56:23Z",
-          "server_time_utc": "2026-09-02T22:56:31Z",
-          "server_source": "actions_run 33692595832 (Finviz Score Delta, schedule; created_at 2026-09-02T22:54:16Z, updated_at 2026-09-02T22:56:31Z; pushed commit in its 'main -> main' range per job log); push event 20026237412 at 2026-09-02T22:56:28Z",
+          "server_time_utc": "2026-09-02T23:20:59Z",
+          "server_source": "actions_run 33694670986 (Composite Rank, schedule; run_started_at 2026-09-02T23:20:59Z; head_sha aba6d110e1ca1db7552bb2feb9a263e02d3ebc95)",
           "status": "PROVEN",
-          "loaded_in_initial_run": false
+          "loaded_in_initial_run": false,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 33694670986,
+            "run_name": "Composite Rank",
+            "event": "schedule",
+            "run_started_at": "2026-09-02T23:20:59Z",
+            "head_sha": "aba6d110e1ca1db7552bb2feb9a263e02d3ebc95",
+            "matched_by": "actions_runs.head_sha"
+          }
         },
         {
           "source_path": "data/scores/2026-09-02_1d.csv",
           "commit_sha": "aba6d110e1ca1db7552bb2feb9a263e02d3ebc95",
           "git_commit_date": "2026-09-02T22:56:23Z",
-          "server_time_utc": "2026-09-02T22:56:31Z",
-          "server_source": "actions_run 33692595832 (Finviz Score Delta, schedule; created_at 2026-09-02T22:54:16Z, updated_at 2026-09-02T22:56:31Z; pushed commit in its 'main -> main' range per job log); push event 20026237412 at 2026-09-02T22:56:28Z",
+          "server_time_utc": "2026-09-02T23:20:59Z",
+          "server_source": "actions_run 33694670986 (Composite Rank, schedule; run_started_at 2026-09-02T23:20:59Z; head_sha aba6d110e1ca1db7552bb2feb9a263e02d3ebc95)",
           "status": "PROVEN",
-          "loaded_in_initial_run": false
+          "loaded_in_initial_run": false,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 33694670986,
+            "run_name": "Composite Rank",
+            "event": "schedule",
+            "run_started_at": "2026-09-02T23:20:59Z",
+            "head_sha": "aba6d110e1ca1db7552bb2feb9a263e02d3ebc95",
+            "matched_by": "actions_runs.head_sha"
+          }
         },
         {
           "source_path": "data/scores/2026-09-02_1m.csv",
           "commit_sha": "aba6d110e1ca1db7552bb2feb9a263e02d3ebc95",
           "git_commit_date": "2026-09-02T22:56:23Z",
-          "server_time_utc": "2026-09-02T22:56:31Z",
-          "server_source": "actions_run 33692595832 (Finviz Score Delta, schedule; created_at 2026-09-02T22:54:16Z, updated_at 2026-09-02T22:56:31Z; pushed commit in its 'main -> main' range per job log); push event 20026237412 at 2026-09-02T22:56:28Z",
+          "server_time_utc": "2026-09-02T23:20:59Z",
+          "server_source": "actions_run 33694670986 (Composite Rank, schedule; run_started_at 2026-09-02T23:20:59Z; head_sha aba6d110e1ca1db7552bb2feb9a263e02d3ebc95)",
           "status": "PROVEN",
-          "loaded_in_initial_run": false
+          "loaded_in_initial_run": false,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 33694670986,
+            "run_name": "Composite Rank",
+            "event": "schedule",
+            "run_started_at": "2026-09-02T23:20:59Z",
+            "head_sha": "aba6d110e1ca1db7552bb2feb9a263e02d3ebc95",
+            "matched_by": "actions_runs.head_sha"
+          }
         },
         {
           "source_path": "data/scores/2026-09-02_1w.csv",
           "commit_sha": "aba6d110e1ca1db7552bb2feb9a263e02d3ebc95",
           "git_commit_date": "2026-09-02T22:56:23Z",
-          "server_time_utc": "2026-09-02T22:56:31Z",
-          "server_source": "actions_run 33692595832 (Finviz Score Delta, schedule; created_at 2026-09-02T22:54:16Z, updated_at 2026-09-02T22:56:31Z; pushed commit in its 'main -> main' range per job log); push event 20026237412 at 2026-09-02T22:56:28Z",
+          "server_time_utc": "2026-09-02T23:20:59Z",
+          "server_source": "actions_run 33694670986 (Composite Rank, schedule; run_started_at 2026-09-02T23:20:59Z; head_sha aba6d110e1ca1db7552bb2feb9a263e02d3ebc95)",
           "status": "PROVEN",
-          "loaded_in_initial_run": false
+          "loaded_in_initial_run": false,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 33694670986,
+            "run_name": "Composite Rank",
+            "event": "schedule",
+            "run_started_at": "2026-09-02T23:20:59Z",
+            "head_sha": "aba6d110e1ca1db7552bb2feb9a263e02d3ebc95",
+            "matched_by": "actions_runs.head_sha"
+          }
         },
         {
           "source_path": "data/snapshots/2026-09-02.csv",
           "commit_sha": "c21d7aaa3de0a9955a7ca393fc190a9e8f564544",
           "git_commit_date": "2026-09-02T22:47:56Z",
-          "server_time_utc": "2026-09-02T22:48:03Z",
-          "server_source": "actions_run 33692047066 (Finviz Daily Snapshot, schedule; created_at 2026-09-02T22:47:08Z, updated_at 2026-09-02T22:48:03Z; pushed commit in its 'main -> main' range per job log); push event 19982038241 at 2026-09-02T22:48:00Z",
+          "server_time_utc": "2026-09-02T22:54:16Z",
+          "server_source": "actions_run 33692595832 (Finviz Score Delta, schedule; run_started_at 2026-09-02T22:54:16Z; head_sha c21d7aaa3de0a9955a7ca393fc190a9e8f564544)",
           "status": "PROVEN",
-          "loaded_in_initial_run": true
+          "loaded_in_initial_run": true,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 33692595832,
+            "run_name": "Finviz Score Delta",
+            "event": "schedule",
+            "run_started_at": "2026-09-02T22:54:16Z",
+            "head_sha": "c21d7aaa3de0a9955a7ca393fc190a9e8f564544",
+            "matched_by": "actions_runs.head_sha"
+          }
         },
         {
           "source_path": "data/universe/2026-09-02_membership.csv",
           "commit_sha": "aba6d110e1ca1db7552bb2feb9a263e02d3ebc95",
           "git_commit_date": "2026-09-02T22:56:23Z",
-          "server_time_utc": "2026-09-02T22:56:31Z",
-          "server_source": "actions_run 33692595832 (Finviz Score Delta, schedule; created_at 2026-09-02T22:54:16Z, updated_at 2026-09-02T22:56:31Z; pushed commit in its 'main -> main' range per job log); push event 20026237412 at 2026-09-02T22:56:28Z",
+          "server_time_utc": "2026-09-02T23:20:59Z",
+          "server_source": "actions_run 33694670986 (Composite Rank, schedule; run_started_at 2026-09-02T23:20:59Z; head_sha aba6d110e1ca1db7552bb2feb9a263e02d3ebc95)",
           "status": "PROVEN",
-          "loaded_in_initial_run": false
+          "loaded_in_initial_run": false,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 33694670986,
+            "run_name": "Composite Rank",
+            "event": "schedule",
+            "run_started_at": "2026-09-02T23:20:59Z",
+            "head_sha": "aba6d110e1ca1db7552bb2feb9a263e02d3ebc95",
+            "matched_by": "actions_runs.head_sha"
+          }
         }
       ]
     },
@@ -1180,64 +2191,128 @@
           "source_path": "data/composite/2026-09-03_composite_rank.csv",
           "commit_sha": "c182255fa5fc238beaae7f96b77c918cc1bd6be1",
           "git_commit_date": "2026-09-03T23:19:52Z",
-          "server_time_utc": "2026-09-03T23:19:57Z",
-          "server_source": "actions_run 33817041495 (Composite Rank, schedule; created_at 2026-09-03T23:18:44Z, updated_at 2026-09-03T23:19:57Z; pushed commit in its 'main -> main' range per job log); push event 20055411380 at 2026-09-03T23:19:54Z",
-          "status": "PROVEN",
-          "loaded_in_initial_run": false
+          "server_time_utc": "2026-09-04T22:29:05Z",
+          "server_source": "actions_run 33925698594 (Finviz Daily Snapshot, schedule; run_started_at 2026-09-04T22:29:05Z; head_sha c182255fa5fc238beaae7f96b77c918cc1bd6be1)",
+          "status": "MISSING",
+          "loaded_in_initial_run": false,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 33925698594,
+            "run_name": "Finviz Daily Snapshot",
+            "event": "schedule",
+            "run_started_at": "2026-09-04T22:29:05Z",
+            "head_sha": "c182255fa5fc238beaae7f96b77c918cc1bd6be1",
+            "matched_by": "actions_runs.head_sha"
+          },
+          "dropped_reason": "head_sha run start is after 09:30 ET"
         },
         {
           "source_path": "data/features/2026-09-03_1d.csv",
           "commit_sha": "389253c08b72c3047a44221fa56d1f521c13e1fd",
           "git_commit_date": "2026-09-03T22:56:07Z",
-          "server_time_utc": "2026-09-03T22:56:15Z",
-          "server_source": "actions_run 33815166781 (Finviz Score Delta, schedule; created_at 2026-09-03T22:53:46Z, updated_at 2026-09-03T22:56:15Z; pushed commit in its 'main -> main' range per job log); push event 20179718625 at 2026-09-03T22:56:13Z",
+          "server_time_utc": "2026-09-03T23:18:44Z",
+          "server_source": "actions_run 33817041495 (Composite Rank, schedule; run_started_at 2026-09-03T23:18:44Z; head_sha 389253c08b72c3047a44221fa56d1f521c13e1fd)",
           "status": "PROVEN",
-          "loaded_in_initial_run": false
+          "loaded_in_initial_run": false,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 33817041495,
+            "run_name": "Composite Rank",
+            "event": "schedule",
+            "run_started_at": "2026-09-03T23:18:44Z",
+            "head_sha": "389253c08b72c3047a44221fa56d1f521c13e1fd",
+            "matched_by": "actions_runs.head_sha"
+          }
         },
         {
           "source_path": "data/scores/2026-09-03_1d.csv",
           "commit_sha": "389253c08b72c3047a44221fa56d1f521c13e1fd",
           "git_commit_date": "2026-09-03T22:56:07Z",
-          "server_time_utc": "2026-09-03T22:56:15Z",
-          "server_source": "actions_run 33815166781 (Finviz Score Delta, schedule; created_at 2026-09-03T22:53:46Z, updated_at 2026-09-03T22:56:15Z; pushed commit in its 'main -> main' range per job log); push event 20179718625 at 2026-09-03T22:56:13Z",
+          "server_time_utc": "2026-09-03T23:18:44Z",
+          "server_source": "actions_run 33817041495 (Composite Rank, schedule; run_started_at 2026-09-03T23:18:44Z; head_sha 389253c08b72c3047a44221fa56d1f521c13e1fd)",
           "status": "PROVEN",
-          "loaded_in_initial_run": false
+          "loaded_in_initial_run": false,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 33817041495,
+            "run_name": "Composite Rank",
+            "event": "schedule",
+            "run_started_at": "2026-09-03T23:18:44Z",
+            "head_sha": "389253c08b72c3047a44221fa56d1f521c13e1fd",
+            "matched_by": "actions_runs.head_sha"
+          }
         },
         {
           "source_path": "data/scores/2026-09-03_1m.csv",
           "commit_sha": "389253c08b72c3047a44221fa56d1f521c13e1fd",
           "git_commit_date": "2026-09-03T22:56:07Z",
-          "server_time_utc": "2026-09-03T22:56:15Z",
-          "server_source": "actions_run 33815166781 (Finviz Score Delta, schedule; created_at 2026-09-03T22:53:46Z, updated_at 2026-09-03T22:56:15Z; pushed commit in its 'main -> main' range per job log); push event 20179718625 at 2026-09-03T22:56:13Z",
+          "server_time_utc": "2026-09-03T23:18:44Z",
+          "server_source": "actions_run 33817041495 (Composite Rank, schedule; run_started_at 2026-09-03T23:18:44Z; head_sha 389253c08b72c3047a44221fa56d1f521c13e1fd)",
           "status": "PROVEN",
-          "loaded_in_initial_run": false
+          "loaded_in_initial_run": false,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 33817041495,
+            "run_name": "Composite Rank",
+            "event": "schedule",
+            "run_started_at": "2026-09-03T23:18:44Z",
+            "head_sha": "389253c08b72c3047a44221fa56d1f521c13e1fd",
+            "matched_by": "actions_runs.head_sha"
+          }
         },
         {
           "source_path": "data/scores/2026-09-03_1w.csv",
           "commit_sha": "389253c08b72c3047a44221fa56d1f521c13e1fd",
           "git_commit_date": "2026-09-03T22:56:07Z",
-          "server_time_utc": "2026-09-03T22:56:15Z",
-          "server_source": "actions_run 33815166781 (Finviz Score Delta, schedule; created_at 2026-09-03T22:53:46Z, updated_at 2026-09-03T22:56:15Z; pushed commit in its 'main -> main' range per job log); push event 20179718625 at 2026-09-03T22:56:13Z",
+          "server_time_utc": "2026-09-03T23:18:44Z",
+          "server_source": "actions_run 33817041495 (Composite Rank, schedule; run_started_at 2026-09-03T23:18:44Z; head_sha 389253c08b72c3047a44221fa56d1f521c13e1fd)",
           "status": "PROVEN",
-          "loaded_in_initial_run": false
+          "loaded_in_initial_run": false,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 33817041495,
+            "run_name": "Composite Rank",
+            "event": "schedule",
+            "run_started_at": "2026-09-03T23:18:44Z",
+            "head_sha": "389253c08b72c3047a44221fa56d1f521c13e1fd",
+            "matched_by": "actions_runs.head_sha"
+          }
         },
         {
           "source_path": "data/snapshots/2026-09-03.csv",
           "commit_sha": "85cd460af8755afd3e5155f094220af1f860cd54",
           "git_commit_date": "2026-09-03T22:45:46Z",
-          "server_time_utc": "2026-09-03T22:45:53Z",
-          "server_source": "actions_run 33814488206 (Finviz Daily Snapshot, schedule; created_at 2026-09-03T22:44:52Z, updated_at 2026-09-03T22:45:53Z; pushed commit in its 'main -> main' range per job log); push event 19998998702 at 2026-09-03T22:45:51Z",
+          "server_time_utc": "2026-09-03T22:53:46Z",
+          "server_source": "actions_run 33815166781 (Finviz Score Delta, schedule; run_started_at 2026-09-03T22:53:46Z; head_sha 85cd460af8755afd3e5155f094220af1f860cd54)",
           "status": "PROVEN",
-          "loaded_in_initial_run": true
+          "loaded_in_initial_run": true,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 33815166781,
+            "run_name": "Finviz Score Delta",
+            "event": "schedule",
+            "run_started_at": "2026-09-03T22:53:46Z",
+            "head_sha": "85cd460af8755afd3e5155f094220af1f860cd54",
+            "matched_by": "actions_runs.head_sha"
+          }
         },
         {
           "source_path": "data/universe/2026-09-03_membership.csv",
           "commit_sha": "389253c08b72c3047a44221fa56d1f521c13e1fd",
           "git_commit_date": "2026-09-03T22:56:07Z",
-          "server_time_utc": "2026-09-03T22:56:15Z",
-          "server_source": "actions_run 33815166781 (Finviz Score Delta, schedule; created_at 2026-09-03T22:53:46Z, updated_at 2026-09-03T22:56:15Z; pushed commit in its 'main -> main' range per job log); push event 20179718625 at 2026-09-03T22:56:13Z",
+          "server_time_utc": "2026-09-03T23:18:44Z",
+          "server_source": "actions_run 33817041495 (Composite Rank, schedule; run_started_at 2026-09-03T23:18:44Z; head_sha 389253c08b72c3047a44221fa56d1f521c13e1fd)",
           "status": "PROVEN",
-          "loaded_in_initial_run": false
+          "loaded_in_initial_run": false,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 33817041495,
+            "run_name": "Composite Rank",
+            "event": "schedule",
+            "run_started_at": "2026-09-03T23:18:44Z",
+            "head_sha": "389253c08b72c3047a44221fa56d1f521c13e1fd",
+            "matched_by": "actions_runs.head_sha"
+          }
         }
       ]
     },
@@ -1248,64 +2323,127 @@
           "source_path": "data/composite/2026-09-04_composite_rank.csv",
           "commit_sha": "97d057866332f6026cdb48ff7ef58ed34d261aea",
           "git_commit_date": "2026-09-04T23:05:07Z",
-          "server_time_utc": "2026-09-04T23:05:11Z",
-          "server_source": "actions_run 33928059775 (Composite Rank, schedule; created_at 2026-09-04T23:04:07Z, updated_at 2026-09-04T23:05:11Z; pushed commit in its 'main -> main' range per job log); push event 20162340511 at 2026-09-04T23:05:09Z",
+          "server_time_utc": "2026-09-06T17:31:52Z",
+          "server_source": "actions_run 34048887724 (Weekly Lesson Promote, schedule; run_started_at 2026-09-06T17:31:52Z; head_sha 97d057866332f6026cdb48ff7ef58ed34d261aea)",
           "status": "PROVEN",
-          "loaded_in_initial_run": false
+          "loaded_in_initial_run": false,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 34048887724,
+            "run_name": "Weekly Lesson Promote",
+            "event": "schedule",
+            "run_started_at": "2026-09-06T17:31:52Z",
+            "head_sha": "97d057866332f6026cdb48ff7ef58ed34d261aea",
+            "matched_by": "actions_runs.head_sha"
+          }
         },
         {
           "source_path": "data/features/2026-09-04_1d.csv",
           "commit_sha": "118bd7c5e7807eb5855d24d74b9ae6acde3595da",
           "git_commit_date": "2026-09-04T22:40:50Z",
-          "server_time_utc": "2026-09-04T22:40:57Z",
-          "server_source": "actions_run 33926382084 (Finviz Score Delta, schedule; created_at 2026-09-04T22:38:43Z, updated_at 2026-09-04T22:40:57Z; pushed commit in its 'main -> main' range per job log); push event 20107932503 at 2026-09-04T22:40:54Z",
+          "server_time_utc": "2026-09-04T23:04:07Z",
+          "server_source": "actions_run 33928059775 (Composite Rank, schedule; run_started_at 2026-09-04T23:04:07Z; head_sha 118bd7c5e7807eb5855d24d74b9ae6acde3595da)",
           "status": "PROVEN",
-          "loaded_in_initial_run": false
+          "loaded_in_initial_run": false,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 33928059775,
+            "run_name": "Composite Rank",
+            "event": "schedule",
+            "run_started_at": "2026-09-04T23:04:07Z",
+            "head_sha": "118bd7c5e7807eb5855d24d74b9ae6acde3595da",
+            "matched_by": "actions_runs.head_sha"
+          }
         },
         {
           "source_path": "data/scores/2026-09-04_1d.csv",
           "commit_sha": "118bd7c5e7807eb5855d24d74b9ae6acde3595da",
           "git_commit_date": "2026-09-04T22:40:50Z",
-          "server_time_utc": "2026-09-04T22:40:57Z",
-          "server_source": "actions_run 33926382084 (Finviz Score Delta, schedule; created_at 2026-09-04T22:38:43Z, updated_at 2026-09-04T22:40:57Z; pushed commit in its 'main -> main' range per job log); push event 20107932503 at 2026-09-04T22:40:54Z",
+          "server_time_utc": "2026-09-04T23:04:07Z",
+          "server_source": "actions_run 33928059775 (Composite Rank, schedule; run_started_at 2026-09-04T23:04:07Z; head_sha 118bd7c5e7807eb5855d24d74b9ae6acde3595da)",
           "status": "PROVEN",
-          "loaded_in_initial_run": false
+          "loaded_in_initial_run": false,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 33928059775,
+            "run_name": "Composite Rank",
+            "event": "schedule",
+            "run_started_at": "2026-09-04T23:04:07Z",
+            "head_sha": "118bd7c5e7807eb5855d24d74b9ae6acde3595da",
+            "matched_by": "actions_runs.head_sha"
+          }
         },
         {
           "source_path": "data/scores/2026-09-04_1m.csv",
           "commit_sha": "118bd7c5e7807eb5855d24d74b9ae6acde3595da",
           "git_commit_date": "2026-09-04T22:40:50Z",
-          "server_time_utc": "2026-09-04T22:40:57Z",
-          "server_source": "actions_run 33926382084 (Finviz Score Delta, schedule; created_at 2026-09-04T22:38:43Z, updated_at 2026-09-04T22:40:57Z; pushed commit in its 'main -> main' range per job log); push event 20107932503 at 2026-09-04T22:40:54Z",
+          "server_time_utc": "2026-09-04T23:04:07Z",
+          "server_source": "actions_run 33928059775 (Composite Rank, schedule; run_started_at 2026-09-04T23:04:07Z; head_sha 118bd7c5e7807eb5855d24d74b9ae6acde3595da)",
           "status": "PROVEN",
-          "loaded_in_initial_run": false
+          "loaded_in_initial_run": false,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 33928059775,
+            "run_name": "Composite Rank",
+            "event": "schedule",
+            "run_started_at": "2026-09-04T23:04:07Z",
+            "head_sha": "118bd7c5e7807eb5855d24d74b9ae6acde3595da",
+            "matched_by": "actions_runs.head_sha"
+          }
         },
         {
           "source_path": "data/scores/2026-09-04_1w.csv",
           "commit_sha": "118bd7c5e7807eb5855d24d74b9ae6acde3595da",
           "git_commit_date": "2026-09-04T22:40:50Z",
-          "server_time_utc": "2026-09-04T22:40:57Z",
-          "server_source": "actions_run 33926382084 (Finviz Score Delta, schedule; created_at 2026-09-04T22:38:43Z, updated_at 2026-09-04T22:40:57Z; pushed commit in its 'main -> main' range per job log); push event 20107932503 at 2026-09-04T22:40:54Z",
+          "server_time_utc": "2026-09-04T23:04:07Z",
+          "server_source": "actions_run 33928059775 (Composite Rank, schedule; run_started_at 2026-09-04T23:04:07Z; head_sha 118bd7c5e7807eb5855d24d74b9ae6acde3595da)",
           "status": "PROVEN",
-          "loaded_in_initial_run": false
+          "loaded_in_initial_run": false,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 33928059775,
+            "run_name": "Composite Rank",
+            "event": "schedule",
+            "run_started_at": "2026-09-04T23:04:07Z",
+            "head_sha": "118bd7c5e7807eb5855d24d74b9ae6acde3595da",
+            "matched_by": "actions_runs.head_sha"
+          }
         },
         {
           "source_path": "data/snapshots/2026-09-04.csv",
           "commit_sha": "9561fb79fd582e63c3eccf002cc1ee600e8c04b3",
           "git_commit_date": "2026-09-04T22:30:10Z",
-          "server_time_utc": "2026-09-04T22:30:17Z",
-          "server_source": "actions_run 33925698594 (Finviz Daily Snapshot, schedule; created_at 2026-09-04T22:29:05Z, updated_at 2026-09-04T22:30:17Z; pushed commit in its 'main -> main' range per job log); push event 20161710508 at 2026-09-04T22:30:14Z",
+          "server_time_utc": "2026-09-04T22:38:43Z",
+          "server_source": "actions_run 33926382084 (Finviz Score Delta, schedule; run_started_at 2026-09-04T22:38:43Z; head_sha 9561fb79fd582e63c3eccf002cc1ee600e8c04b3)",
           "status": "PROVEN",
-          "loaded_in_initial_run": true
+          "loaded_in_initial_run": true,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 33926382084,
+            "run_name": "Finviz Score Delta",
+            "event": "schedule",
+            "run_started_at": "2026-09-04T22:38:43Z",
+            "head_sha": "9561fb79fd582e63c3eccf002cc1ee600e8c04b3",
+            "matched_by": "actions_runs.head_sha"
+          }
         },
         {
           "source_path": "data/universe/2026-09-04_membership.csv",
           "commit_sha": "118bd7c5e7807eb5855d24d74b9ae6acde3595da",
           "git_commit_date": "2026-09-04T22:40:50Z",
-          "server_time_utc": "2026-09-04T22:40:57Z",
-          "server_source": "actions_run 33926382084 (Finviz Score Delta, schedule; created_at 2026-09-04T22:38:43Z, updated_at 2026-09-04T22:40:57Z; pushed commit in its 'main -> main' range per job log); push event 20107932503 at 2026-09-04T22:40:54Z",
+          "server_time_utc": "2026-09-04T23:04:07Z",
+          "server_source": "actions_run 33928059775 (Composite Rank, schedule; run_started_at 2026-09-04T23:04:07Z; head_sha 118bd7c5e7807eb5855d24d74b9ae6acde3595da)",
           "status": "PROVEN",
-          "loaded_in_initial_run": false
+          "loaded_in_initial_run": false,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 33928059775,
+            "run_name": "Composite Rank",
+            "event": "schedule",
+            "run_started_at": "2026-09-04T23:04:07Z",
+            "head_sha": "118bd7c5e7807eb5855d24d74b9ae6acde3595da",
+            "matched_by": "actions_runs.head_sha"
+          }
         }
       ]
     },
@@ -1316,64 +2454,128 @@
           "source_path": "data/composite/2026-09-08_composite_rank.csv",
           "commit_sha": "554a0d74a362b49e41c5745784f81e90c8c62ab9",
           "git_commit_date": "2026-09-08T23:26:29Z",
-          "server_time_utc": "2026-09-08T23:26:33Z",
-          "server_source": "actions_run 34290581391 (Composite Rank, schedule; created_at 2026-09-08T23:25:30Z, updated_at 2026-09-08T23:26:33Z; pushed commit in its 'main -> main' range per job log); push event 20507599870 at 2026-09-08T23:26:32Z",
-          "status": "PROVEN",
-          "loaded_in_initial_run": false
+          "server_time_utc": "2026-09-09T22:41:41Z",
+          "server_source": "actions_run 34413473691 (Finviz Daily Snapshot, schedule; run_started_at 2026-09-09T22:41:41Z; head_sha 554a0d74a362b49e41c5745784f81e90c8c62ab9)",
+          "status": "MISSING",
+          "loaded_in_initial_run": false,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 34413473691,
+            "run_name": "Finviz Daily Snapshot",
+            "event": "schedule",
+            "run_started_at": "2026-09-09T22:41:41Z",
+            "head_sha": "554a0d74a362b49e41c5745784f81e90c8c62ab9",
+            "matched_by": "actions_runs.head_sha"
+          },
+          "dropped_reason": "head_sha run start is after 09:30 ET"
         },
         {
           "source_path": "data/features/2026-09-08_1d.csv",
           "commit_sha": "c6cd40acd9ec24526b9d49e4d42851606069d80d",
           "git_commit_date": "2026-09-08T23:05:48Z",
-          "server_time_utc": "2026-09-08T23:05:58Z",
-          "server_source": "actions_run 34288886622 (Finviz Score Delta, schedule; created_at 2026-09-08T23:03:32Z, updated_at 2026-09-08T23:05:58Z; pushed commit in its 'main -> main' range per job log); push event 20504306221 at 2026-09-08T23:05:55Z",
+          "server_time_utc": "2026-09-08T23:25:30Z",
+          "server_source": "actions_run 34290581391 (Composite Rank, schedule; run_started_at 2026-09-08T23:25:30Z; head_sha c6cd40acd9ec24526b9d49e4d42851606069d80d)",
           "status": "PROVEN",
-          "loaded_in_initial_run": false
+          "loaded_in_initial_run": false,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 34290581391,
+            "run_name": "Composite Rank",
+            "event": "schedule",
+            "run_started_at": "2026-09-08T23:25:30Z",
+            "head_sha": "c6cd40acd9ec24526b9d49e4d42851606069d80d",
+            "matched_by": "actions_runs.head_sha"
+          }
         },
         {
           "source_path": "data/scores/2026-09-08_1d.csv",
           "commit_sha": "c6cd40acd9ec24526b9d49e4d42851606069d80d",
           "git_commit_date": "2026-09-08T23:05:48Z",
-          "server_time_utc": "2026-09-08T23:05:58Z",
-          "server_source": "actions_run 34288886622 (Finviz Score Delta, schedule; created_at 2026-09-08T23:03:32Z, updated_at 2026-09-08T23:05:58Z; pushed commit in its 'main -> main' range per job log); push event 20504306221 at 2026-09-08T23:05:55Z",
+          "server_time_utc": "2026-09-08T23:25:30Z",
+          "server_source": "actions_run 34290581391 (Composite Rank, schedule; run_started_at 2026-09-08T23:25:30Z; head_sha c6cd40acd9ec24526b9d49e4d42851606069d80d)",
           "status": "PROVEN",
-          "loaded_in_initial_run": false
+          "loaded_in_initial_run": false,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 34290581391,
+            "run_name": "Composite Rank",
+            "event": "schedule",
+            "run_started_at": "2026-09-08T23:25:30Z",
+            "head_sha": "c6cd40acd9ec24526b9d49e4d42851606069d80d",
+            "matched_by": "actions_runs.head_sha"
+          }
         },
         {
           "source_path": "data/scores/2026-09-08_1m.csv",
           "commit_sha": "c6cd40acd9ec24526b9d49e4d42851606069d80d",
           "git_commit_date": "2026-09-08T23:05:48Z",
-          "server_time_utc": "2026-09-08T23:05:58Z",
-          "server_source": "actions_run 34288886622 (Finviz Score Delta, schedule; created_at 2026-09-08T23:03:32Z, updated_at 2026-09-08T23:05:58Z; pushed commit in its 'main -> main' range per job log); push event 20504306221 at 2026-09-08T23:05:55Z",
+          "server_time_utc": "2026-09-08T23:25:30Z",
+          "server_source": "actions_run 34290581391 (Composite Rank, schedule; run_started_at 2026-09-08T23:25:30Z; head_sha c6cd40acd9ec24526b9d49e4d42851606069d80d)",
           "status": "PROVEN",
-          "loaded_in_initial_run": false
+          "loaded_in_initial_run": false,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 34290581391,
+            "run_name": "Composite Rank",
+            "event": "schedule",
+            "run_started_at": "2026-09-08T23:25:30Z",
+            "head_sha": "c6cd40acd9ec24526b9d49e4d42851606069d80d",
+            "matched_by": "actions_runs.head_sha"
+          }
         },
         {
           "source_path": "data/scores/2026-09-08_1w.csv",
           "commit_sha": "c6cd40acd9ec24526b9d49e4d42851606069d80d",
           "git_commit_date": "2026-09-08T23:05:48Z",
-          "server_time_utc": "2026-09-08T23:05:58Z",
-          "server_source": "actions_run 34288886622 (Finviz Score Delta, schedule; created_at 2026-09-08T23:03:32Z, updated_at 2026-09-08T23:05:58Z; pushed commit in its 'main -> main' range per job log); push event 20504306221 at 2026-09-08T23:05:55Z",
+          "server_time_utc": "2026-09-08T23:25:30Z",
+          "server_source": "actions_run 34290581391 (Composite Rank, schedule; run_started_at 2026-09-08T23:25:30Z; head_sha c6cd40acd9ec24526b9d49e4d42851606069d80d)",
           "status": "PROVEN",
-          "loaded_in_initial_run": false
+          "loaded_in_initial_run": false,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 34290581391,
+            "run_name": "Composite Rank",
+            "event": "schedule",
+            "run_started_at": "2026-09-08T23:25:30Z",
+            "head_sha": "c6cd40acd9ec24526b9d49e4d42851606069d80d",
+            "matched_by": "actions_runs.head_sha"
+          }
         },
         {
           "source_path": "data/snapshots/2026-09-08.csv",
           "commit_sha": "fceabb131123514c75cd907f6dcb7cc3a7fd8b70",
           "git_commit_date": "2026-09-08T22:55:52Z",
-          "server_time_utc": "2026-09-08T22:56:01Z",
-          "server_source": "actions_run 34288228016 (Finviz Daily Snapshot, schedule; created_at 2026-09-08T22:55:04Z, updated_at 2026-09-08T22:56:01Z; pushed commit in its 'main -> main' range per job log); push event 20669296839 at 2026-09-08T22:55:58Z",
+          "server_time_utc": "2026-09-08T23:03:32Z",
+          "server_source": "actions_run 34288886622 (Finviz Score Delta, schedule; run_started_at 2026-09-08T23:03:32Z; head_sha fceabb131123514c75cd907f6dcb7cc3a7fd8b70)",
           "status": "PROVEN",
-          "loaded_in_initial_run": true
+          "loaded_in_initial_run": true,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 34288886622,
+            "run_name": "Finviz Score Delta",
+            "event": "schedule",
+            "run_started_at": "2026-09-08T23:03:32Z",
+            "head_sha": "fceabb131123514c75cd907f6dcb7cc3a7fd8b70",
+            "matched_by": "actions_runs.head_sha"
+          }
         },
         {
           "source_path": "data/universe/2026-09-08_membership.csv",
           "commit_sha": "c6cd40acd9ec24526b9d49e4d42851606069d80d",
           "git_commit_date": "2026-09-08T23:05:48Z",
-          "server_time_utc": "2026-09-08T23:05:58Z",
-          "server_source": "actions_run 34288886622 (Finviz Score Delta, schedule; created_at 2026-09-08T23:03:32Z, updated_at 2026-09-08T23:05:58Z; pushed commit in its 'main -> main' range per job log); push event 20504306221 at 2026-09-08T23:05:55Z",
+          "server_time_utc": "2026-09-08T23:25:30Z",
+          "server_source": "actions_run 34290581391 (Composite Rank, schedule; run_started_at 2026-09-08T23:25:30Z; head_sha c6cd40acd9ec24526b9d49e4d42851606069d80d)",
           "status": "PROVEN",
-          "loaded_in_initial_run": false
+          "loaded_in_initial_run": false,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 34290581391,
+            "run_name": "Composite Rank",
+            "event": "schedule",
+            "run_started_at": "2026-09-08T23:25:30Z",
+            "head_sha": "c6cd40acd9ec24526b9d49e4d42851606069d80d",
+            "matched_by": "actions_runs.head_sha"
+          }
         }
       ]
     },
@@ -1384,64 +2586,128 @@
           "source_path": "data/composite/2026-09-09_composite_rank.csv",
           "commit_sha": "6af05ea0ec5dffa81bd5bc64d57ff4ab2c16117b",
           "git_commit_date": "2026-09-09T23:19:34Z",
-          "server_time_utc": "2026-09-09T23:20:18Z",
-          "server_source": "actions_run 34416334776 (Composite Rank, schedule; created_at 2026-09-09T23:18:27Z, updated_at 2026-09-09T23:20:18Z; pushed commit in its 'main -> main' range per job log); push event 20781607167 at 2026-09-09T23:20:16Z",
-          "status": "PROVEN",
-          "loaded_in_initial_run": false
+          "server_time_utc": "2026-09-10T22:43:38Z",
+          "server_source": "actions_run 34538852090 (Finviz Daily Snapshot, schedule; run_started_at 2026-09-10T22:43:38Z; head_sha 6af05ea0ec5dffa81bd5bc64d57ff4ab2c16117b)",
+          "status": "MISSING",
+          "loaded_in_initial_run": false,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 34538852090,
+            "run_name": "Finviz Daily Snapshot",
+            "event": "schedule",
+            "run_started_at": "2026-09-10T22:43:38Z",
+            "head_sha": "6af05ea0ec5dffa81bd5bc64d57ff4ab2c16117b",
+            "matched_by": "actions_runs.head_sha"
+          },
+          "dropped_reason": "head_sha run start is after 09:30 ET"
         },
         {
           "source_path": "data/features/2026-09-09_1d.csv",
           "commit_sha": "013a63291b87e9b52d2eed248eec28eb53380a50",
           "git_commit_date": "2026-09-09T22:52:41Z",
-          "server_time_utc": "2026-09-09T22:52:53Z",
-          "server_source": "actions_run 34414148048 (Finviz Score Delta, schedule; created_at 2026-09-09T22:50:11Z, updated_at 2026-09-09T22:52:53Z; pushed commit in its 'main -> main' range per job log); push event 20634044973 at 2026-09-09T22:52:50Z",
+          "server_time_utc": "2026-09-09T23:18:27Z",
+          "server_source": "actions_run 34416334776 (Composite Rank, schedule; run_started_at 2026-09-09T23:18:27Z; head_sha 013a63291b87e9b52d2eed248eec28eb53380a50)",
           "status": "PROVEN",
-          "loaded_in_initial_run": false
+          "loaded_in_initial_run": false,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 34416334776,
+            "run_name": "Composite Rank",
+            "event": "schedule",
+            "run_started_at": "2026-09-09T23:18:27Z",
+            "head_sha": "013a63291b87e9b52d2eed248eec28eb53380a50",
+            "matched_by": "actions_runs.head_sha"
+          }
         },
         {
           "source_path": "data/scores/2026-09-09_1d.csv",
           "commit_sha": "013a63291b87e9b52d2eed248eec28eb53380a50",
           "git_commit_date": "2026-09-09T22:52:41Z",
-          "server_time_utc": "2026-09-09T22:52:53Z",
-          "server_source": "actions_run 34414148048 (Finviz Score Delta, schedule; created_at 2026-09-09T22:50:11Z, updated_at 2026-09-09T22:52:53Z; pushed commit in its 'main -> main' range per job log); push event 20634044973 at 2026-09-09T22:52:50Z",
+          "server_time_utc": "2026-09-09T23:18:27Z",
+          "server_source": "actions_run 34416334776 (Composite Rank, schedule; run_started_at 2026-09-09T23:18:27Z; head_sha 013a63291b87e9b52d2eed248eec28eb53380a50)",
           "status": "PROVEN",
-          "loaded_in_initial_run": false
+          "loaded_in_initial_run": false,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 34416334776,
+            "run_name": "Composite Rank",
+            "event": "schedule",
+            "run_started_at": "2026-09-09T23:18:27Z",
+            "head_sha": "013a63291b87e9b52d2eed248eec28eb53380a50",
+            "matched_by": "actions_runs.head_sha"
+          }
         },
         {
           "source_path": "data/scores/2026-09-09_1m.csv",
           "commit_sha": "013a63291b87e9b52d2eed248eec28eb53380a50",
           "git_commit_date": "2026-09-09T22:52:41Z",
-          "server_time_utc": "2026-09-09T22:52:53Z",
-          "server_source": "actions_run 34414148048 (Finviz Score Delta, schedule; created_at 2026-09-09T22:50:11Z, updated_at 2026-09-09T22:52:53Z; pushed commit in its 'main -> main' range per job log); push event 20634044973 at 2026-09-09T22:52:50Z",
+          "server_time_utc": "2026-09-09T23:18:27Z",
+          "server_source": "actions_run 34416334776 (Composite Rank, schedule; run_started_at 2026-09-09T23:18:27Z; head_sha 013a63291b87e9b52d2eed248eec28eb53380a50)",
           "status": "PROVEN",
-          "loaded_in_initial_run": false
+          "loaded_in_initial_run": false,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 34416334776,
+            "run_name": "Composite Rank",
+            "event": "schedule",
+            "run_started_at": "2026-09-09T23:18:27Z",
+            "head_sha": "013a63291b87e9b52d2eed248eec28eb53380a50",
+            "matched_by": "actions_runs.head_sha"
+          }
         },
         {
           "source_path": "data/scores/2026-09-09_1w.csv",
           "commit_sha": "013a63291b87e9b52d2eed248eec28eb53380a50",
           "git_commit_date": "2026-09-09T22:52:41Z",
-          "server_time_utc": "2026-09-09T22:52:53Z",
-          "server_source": "actions_run 34414148048 (Finviz Score Delta, schedule; created_at 2026-09-09T22:50:11Z, updated_at 2026-09-09T22:52:53Z; pushed commit in its 'main -> main' range per job log); push event 20634044973 at 2026-09-09T22:52:50Z",
+          "server_time_utc": "2026-09-09T23:18:27Z",
+          "server_source": "actions_run 34416334776 (Composite Rank, schedule; run_started_at 2026-09-09T23:18:27Z; head_sha 013a63291b87e9b52d2eed248eec28eb53380a50)",
           "status": "PROVEN",
-          "loaded_in_initial_run": false
+          "loaded_in_initial_run": false,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 34416334776,
+            "run_name": "Composite Rank",
+            "event": "schedule",
+            "run_started_at": "2026-09-09T23:18:27Z",
+            "head_sha": "013a63291b87e9b52d2eed248eec28eb53380a50",
+            "matched_by": "actions_runs.head_sha"
+          }
         },
         {
           "source_path": "data/snapshots/2026-09-09.csv",
           "commit_sha": "15530ddba6757671303b008faa4fc8a44c6c3a63",
           "git_commit_date": "2026-09-09T22:42:40Z",
-          "server_time_utc": "2026-09-09T22:42:53Z",
-          "server_source": "actions_run 34413473691 (Finviz Daily Snapshot, schedule; created_at 2026-09-09T22:41:41Z, updated_at 2026-09-09T22:42:53Z; pushed commit in its 'main -> main' range per job log); push event 20856444049 at 2026-09-09T22:42:51Z",
+          "server_time_utc": "2026-09-09T22:50:11Z",
+          "server_source": "actions_run 34414148048 (Finviz Score Delta, schedule; run_started_at 2026-09-09T22:50:11Z; head_sha 15530ddba6757671303b008faa4fc8a44c6c3a63)",
           "status": "PROVEN",
-          "loaded_in_initial_run": true
+          "loaded_in_initial_run": true,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 34414148048,
+            "run_name": "Finviz Score Delta",
+            "event": "schedule",
+            "run_started_at": "2026-09-09T22:50:11Z",
+            "head_sha": "15530ddba6757671303b008faa4fc8a44c6c3a63",
+            "matched_by": "actions_runs.head_sha"
+          }
         },
         {
           "source_path": "data/universe/2026-09-09_membership.csv",
           "commit_sha": "013a63291b87e9b52d2eed248eec28eb53380a50",
           "git_commit_date": "2026-09-09T22:52:41Z",
-          "server_time_utc": "2026-09-09T22:52:53Z",
-          "server_source": "actions_run 34414148048 (Finviz Score Delta, schedule; created_at 2026-09-09T22:50:11Z, updated_at 2026-09-09T22:52:53Z; pushed commit in its 'main -> main' range per job log); push event 20634044973 at 2026-09-09T22:52:50Z",
+          "server_time_utc": "2026-09-09T23:18:27Z",
+          "server_source": "actions_run 34416334776 (Composite Rank, schedule; run_started_at 2026-09-09T23:18:27Z; head_sha 013a63291b87e9b52d2eed248eec28eb53380a50)",
           "status": "PROVEN",
-          "loaded_in_initial_run": false
+          "loaded_in_initial_run": false,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 34416334776,
+            "run_name": "Composite Rank",
+            "event": "schedule",
+            "run_started_at": "2026-09-09T23:18:27Z",
+            "head_sha": "013a63291b87e9b52d2eed248eec28eb53380a50",
+            "matched_by": "actions_runs.head_sha"
+          }
         }
       ]
     },
@@ -1452,66 +2718,232 @@
           "source_path": "data/composite/2026-09-10_composite_rank.csv",
           "commit_sha": "ec83a59644648f29931e6c21e8d8e1bf031b0d16",
           "git_commit_date": "2026-09-10T23:14:29Z",
-          "server_time_utc": "2026-09-10T23:14:37Z",
-          "server_source": "actions_run 34541105465 (Composite Rank, schedule; created_at 2026-09-10T23:12:37Z, updated_at 2026-09-10T23:14:37Z; pushed commit in its 'main -> main' range per job log); push event 20737456299 at 2026-09-10T23:14:34Z",
-          "status": "PROVEN",
-          "loaded_in_initial_run": false
+          "server_time_utc": "2026-09-11T22:44:16Z",
+          "server_source": "actions_run 34655284259 (Finviz Daily Snapshot, schedule; run_started_at 2026-09-11T22:44:16Z; head_sha ec83a59644648f29931e6c21e8d8e1bf031b0d16)",
+          "status": "MISSING",
+          "loaded_in_initial_run": false,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 34655284259,
+            "run_name": "Finviz Daily Snapshot",
+            "event": "schedule",
+            "run_started_at": "2026-09-11T22:44:16Z",
+            "head_sha": "ec83a59644648f29931e6c21e8d8e1bf031b0d16",
+            "matched_by": "actions_runs.head_sha"
+          },
+          "dropped_reason": "head_sha run start is after 09:30 ET"
         },
         {
           "source_path": "data/features/2026-09-10_1d.csv",
           "commit_sha": "924af14507c63f500cf647c83140a250d14163e4",
           "git_commit_date": "2026-09-10T22:53:52Z",
-          "server_time_utc": "2026-09-10T22:53:59Z",
-          "server_source": "actions_run 34539436709 (Finviz Score Delta, schedule; created_at 2026-09-10T22:51:11Z, updated_at 2026-09-10T22:53:59Z; pushed commit in its 'main -> main' range per job log); push event 20855954046 at 2026-09-10T22:53:57Z",
+          "server_time_utc": "2026-09-10T23:12:37Z",
+          "server_source": "actions_run 34541105465 (Composite Rank, schedule; run_started_at 2026-09-10T23:12:37Z; head_sha 924af14507c63f500cf647c83140a250d14163e4)",
           "status": "PROVEN",
-          "loaded_in_initial_run": false
+          "loaded_in_initial_run": false,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 34541105465,
+            "run_name": "Composite Rank",
+            "event": "schedule",
+            "run_started_at": "2026-09-10T23:12:37Z",
+            "head_sha": "924af14507c63f500cf647c83140a250d14163e4",
+            "matched_by": "actions_runs.head_sha"
+          }
         },
         {
           "source_path": "data/scores/2026-09-10_1d.csv",
           "commit_sha": "924af14507c63f500cf647c83140a250d14163e4",
           "git_commit_date": "2026-09-10T22:53:52Z",
-          "server_time_utc": "2026-09-10T22:53:59Z",
-          "server_source": "actions_run 34539436709 (Finviz Score Delta, schedule; created_at 2026-09-10T22:51:11Z, updated_at 2026-09-10T22:53:59Z; pushed commit in its 'main -> main' range per job log); push event 20855954046 at 2026-09-10T22:53:57Z",
+          "server_time_utc": "2026-09-10T23:12:37Z",
+          "server_source": "actions_run 34541105465 (Composite Rank, schedule; run_started_at 2026-09-10T23:12:37Z; head_sha 924af14507c63f500cf647c83140a250d14163e4)",
           "status": "PROVEN",
-          "loaded_in_initial_run": false
+          "loaded_in_initial_run": false,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 34541105465,
+            "run_name": "Composite Rank",
+            "event": "schedule",
+            "run_started_at": "2026-09-10T23:12:37Z",
+            "head_sha": "924af14507c63f500cf647c83140a250d14163e4",
+            "matched_by": "actions_runs.head_sha"
+          }
         },
         {
           "source_path": "data/scores/2026-09-10_1m.csv",
           "commit_sha": "924af14507c63f500cf647c83140a250d14163e4",
           "git_commit_date": "2026-09-10T22:53:52Z",
-          "server_time_utc": "2026-09-10T22:53:59Z",
-          "server_source": "actions_run 34539436709 (Finviz Score Delta, schedule; created_at 2026-09-10T22:51:11Z, updated_at 2026-09-10T22:53:59Z; pushed commit in its 'main -> main' range per job log); push event 20855954046 at 2026-09-10T22:53:57Z",
+          "server_time_utc": "2026-09-10T23:12:37Z",
+          "server_source": "actions_run 34541105465 (Composite Rank, schedule; run_started_at 2026-09-10T23:12:37Z; head_sha 924af14507c63f500cf647c83140a250d14163e4)",
           "status": "PROVEN",
-          "loaded_in_initial_run": false
+          "loaded_in_initial_run": false,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 34541105465,
+            "run_name": "Composite Rank",
+            "event": "schedule",
+            "run_started_at": "2026-09-10T23:12:37Z",
+            "head_sha": "924af14507c63f500cf647c83140a250d14163e4",
+            "matched_by": "actions_runs.head_sha"
+          }
         },
         {
           "source_path": "data/scores/2026-09-10_1w.csv",
           "commit_sha": "924af14507c63f500cf647c83140a250d14163e4",
           "git_commit_date": "2026-09-10T22:53:52Z",
-          "server_time_utc": "2026-09-10T22:53:59Z",
-          "server_source": "actions_run 34539436709 (Finviz Score Delta, schedule; created_at 2026-09-10T22:51:11Z, updated_at 2026-09-10T22:53:59Z; pushed commit in its 'main -> main' range per job log); push event 20855954046 at 2026-09-10T22:53:57Z",
+          "server_time_utc": "2026-09-10T23:12:37Z",
+          "server_source": "actions_run 34541105465 (Composite Rank, schedule; run_started_at 2026-09-10T23:12:37Z; head_sha 924af14507c63f500cf647c83140a250d14163e4)",
           "status": "PROVEN",
-          "loaded_in_initial_run": false
+          "loaded_in_initial_run": false,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 34541105465,
+            "run_name": "Composite Rank",
+            "event": "schedule",
+            "run_started_at": "2026-09-10T23:12:37Z",
+            "head_sha": "924af14507c63f500cf647c83140a250d14163e4",
+            "matched_by": "actions_runs.head_sha"
+          }
         },
         {
           "source_path": "data/snapshots/2026-09-10.csv",
           "commit_sha": "3897260ae9b3e435cf46e5a4da84b6450e4ee237",
           "git_commit_date": "2026-09-10T22:44:38Z",
-          "server_time_utc": "2026-09-10T22:44:47Z",
-          "server_source": "actions_run 34538852090 (Finviz Daily Snapshot, schedule; created_at 2026-09-10T22:43:38Z, updated_at 2026-09-10T22:44:47Z; pushed commit in its 'main -> main' range per job log); push event 20735138032 at 2026-09-10T22:44:43Z",
+          "server_time_utc": "2026-09-10T22:51:11Z",
+          "server_source": "actions_run 34539436709 (Finviz Score Delta, schedule; run_started_at 2026-09-10T22:51:11Z; head_sha 3897260ae9b3e435cf46e5a4da84b6450e4ee237)",
           "status": "PROVEN",
-          "loaded_in_initial_run": true
+          "loaded_in_initial_run": true,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 34539436709,
+            "run_name": "Finviz Score Delta",
+            "event": "schedule",
+            "run_started_at": "2026-09-10T22:51:11Z",
+            "head_sha": "3897260ae9b3e435cf46e5a4da84b6450e4ee237",
+            "matched_by": "actions_runs.head_sha"
+          }
         },
         {
           "source_path": "data/universe/2026-09-10_membership.csv",
           "commit_sha": "924af14507c63f500cf647c83140a250d14163e4",
           "git_commit_date": "2026-09-10T22:53:52Z",
-          "server_time_utc": "2026-09-10T22:53:59Z",
-          "server_source": "actions_run 34539436709 (Finviz Score Delta, schedule; created_at 2026-09-10T22:51:11Z, updated_at 2026-09-10T22:53:59Z; pushed commit in its 'main -> main' range per job log); push event 20855954046 at 2026-09-10T22:53:57Z",
+          "server_time_utc": "2026-09-10T23:12:37Z",
+          "server_source": "actions_run 34541105465 (Composite Rank, schedule; run_started_at 2026-09-10T23:12:37Z; head_sha 924af14507c63f500cf647c83140a250d14163e4)",
           "status": "PROVEN",
-          "loaded_in_initial_run": false
+          "loaded_in_initial_run": false,
+          "proof": {
+            "kind": "actions_run_start",
+            "run_id": 34541105465,
+            "run_name": "Composite Rank",
+            "event": "schedule",
+            "run_started_at": "2026-09-10T23:12:37Z",
+            "head_sha": "924af14507c63f500cf647c83140a250d14163e4",
+            "matched_by": "actions_runs.head_sha"
+          }
         }
       ]
     }
-  ]
+  ],
+  "clock_rule": {
+    "accepted": [
+      "actions run_started_at of the run whose head_sha equals the file commit",
+      "PushEvent created_at from the repository events API"
+    ],
+    "rejected": [
+      "git author date",
+      "git committer date"
+    ],
+    "cutoff": "session date 13:30 UTC, which is 09:30 ET",
+    "missing_means": "the copy is missing and that input's session is dropped; no later copy is substituted"
+  },
+  "excel_dropped_sessions": [
+    {
+      "session_date": "2026-08-31",
+      "reason": "no Actions run with head_sha of a suggestions.csv commit, and no retained PushEvent, before 2026-08-31T13:30:00Z"
+    },
+    {
+      "session_date": "2026-09-02",
+      "reason": "commit 5fc8152510be096d60830b5ed0e50aecc049e24b has no head_sha run and no retained PushEvent; the next proven copy starts 2026-09-02T15:20:56Z, after 09:30 ET"
+    },
+    {
+      "session_date": "2026-09-08",
+      "reason": "the 2026-09-04 signal commit has no head_sha run and no retained PushEvent before 2026-09-08T13:30:00Z"
+    },
+    {
+      "session_date": "2026-09-10",
+      "reason": "the 2026-09-09 signal commit has no head_sha run and no retained PushEvent before 2026-09-10T13:30:00Z"
+    }
+  ],
+  "excel_signal_columns": [
+    "ticker",
+    "strategy",
+    "signal_date"
+  ],
+  "excel_outcome_columns": [
+    "ref_close",
+    "first_open",
+    "current_price",
+    "ret_vs_close",
+    "ret_vs_open",
+    "days_held"
+  ],
+  "excel_copies": [
+    {
+      "session_date": "2026-09-03",
+      "signal_date": "2026-09-02",
+      "path": "excel_bot/suggestions/suggestions.csv",
+      "commit_sha": "a9ed6a403daa6812306820c3b9c7e0bece976f4e",
+      "sha256": "08ecc6381e0ad4cc47000c55d5821214e32117764c5139e14742376327de23c6",
+      "proof": {
+        "kind": "actions_run_start",
+        "run_id": 33647962749,
+        "run_name": "Daily Orchestrator (missed-job guard)",
+        "event": "schedule",
+        "run_started_at": "2026-09-02T15:20:56Z",
+        "head_sha": "a9ed6a403daa6812306820c3b9c7e0bece976f4e",
+        "matched_by": "actions_runs.head_sha"
+      }
+    },
+    {
+      "session_date": "2026-09-04",
+      "signal_date": "2026-09-03",
+      "path": "excel_bot/suggestions/suggestions.csv",
+      "commit_sha": "1c8354e489fa34d94ff8bb17f1c492bf0542cfc5",
+      "sha256": "4a3a3e93ef0565ee342f325c59edbde6c6dd3d02e1cdeeb2c77e99ff5b1b98eb",
+      "proof": {
+        "kind": "actions_run_start",
+        "run_id": 33780154658,
+        "run_name": "Stock Book readiness",
+        "event": "schedule",
+        "run_started_at": "2026-09-03T16:41:44Z",
+        "head_sha": "1c8354e489fa34d94ff8bb17f1c492bf0542cfc5",
+        "matched_by": "actions_runs.head_sha"
+      }
+    },
+    {
+      "session_date": "2026-09-11",
+      "signal_date": "2026-09-10",
+      "path": "excel_bot/suggestions/suggestions.csv",
+      "commit_sha": "4dc97fcbd5d494194c6af7321993b12f123e61ec",
+      "sha256": "1396b67da50071beea9c4a1d512aa4fb3cb7ad74a340cf35eaf7e0c22f0af88b",
+      "proof": {
+        "kind": "actions_run_start",
+        "run_id": 34503648211,
+        "run_name": "Stock Book readiness",
+        "event": "schedule",
+        "run_started_at": "2026-09-10T16:41:36Z",
+        "head_sha": "4dc97fcbd5d494194c6af7321993b12f123e61ec",
+        "matched_by": "actions_runs.head_sha"
+      }
+    }
+  ],
+  "theme_radar_columns": {
+    "outcome_columns": [],
+    "seg_columns": "segment labels",
+    "all_columns_allowed": true,
+    "referenced_by_sha256": [
+      "c8977b8eea8e74115899e9d4cc04d5b4ea67490376d972905781eb8e1aeb6459",
+      "cbf35da9e1587703059abd9ff77525a1047c67a91edc3276ca93db4cd8669c16"
+    ]
+  }
 }

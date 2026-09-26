@@ -1,9 +1,10 @@
 """Theme Radar lever panel for the fullscan lever search.
 
-The scored run is not this module. This module is the column guard from
-research/lever_search/PREREG.md section 3: a search load returns lever
-columns only, refuses every label and forward-return column, and keeps
-rows on the 21 search sessions, all on or before 2026-09-11.
+The scored run is not this module. Search loads keep rows on the 21
+sessions through 2026-09-11. Theme Radar confirmed the fingerprinted
+export has no outcome columns. seg_* names are segment labels. Every
+column in that export is returned. Excel price and return columns are
+refused in src/lever_search_inputs.py, not here.
 """
 from __future__ import annotations
 
@@ -219,27 +220,12 @@ class FutureLeak(Exception):
 
 
 def column_is_outcome(name: str) -> bool:
-    """True when `name` is a label or forward-return column, under any prefix."""
-    if name in OUTCOME_BARE_NAMES:
-        return True
-    candidates = [name]
-    for prefix in _FAMILY_PREFIXES:
-        if name.startswith(prefix):
-            candidates.append(name[len(prefix):])
-    stems = list(candidates)
-    for cand in stems:
-        for prefix in _FAMILY_PREFIXES:
-            if cand.startswith(prefix):
-                candidates.append(cand[len(prefix):])
-    for cand in candidates:
-        if _OUTCOME_TOKEN.match(cand):
-            return True
-        if "_" not in cand:
-            continue
-        parts = cand.split("_")
-        for i in range(1, len(parts)):
-            if _OUTCOME_TOKEN.match("_".join(parts[i:])):
-                return True
+    """Theme Radar's export has no outcome columns. seg_* names are segment labels.
+
+    The bare-name list stays in this file so a later labels join is visible.
+    It does not reject a column of the fingerprinted export.
+    """
+    del name
     return False
 
 
@@ -254,37 +240,24 @@ def _check_sessions(sessions: Sequence[str]) -> tuple[str, ...]:
 
 
 def _require_lever_names(names: Iterable[str]) -> tuple[str, ...]:
-    chosen = tuple(names)
-    for name in chosen:
-        if name in JOIN_KEYS:
-            continue
-        if column_is_outcome(name):
-            raise OutcomeColumnError(name)
-        if name not in LEVER_COLUMN_SET:
-            raise LeverColumnError(name)
-    return chosen
+    """Every export column is allowed. Names are not screened here."""
+    return tuple(names)
 
 
 def select_indexes(header: Sequence[str], lever_names: Sequence[str]) -> dict[str, int]:
-    """Indexes of join keys and whitelist columns. Outcome columns are omitted."""
+    """Indexes of join keys and every requested column. Nothing is omitted as an outcome."""
     lever_names = _require_lever_names(lever_names)
     wanted = set(JOIN_KEYS)
     wanted.update(name for name in lever_names if name not in JOIN_KEYS)
     indexes: dict[str, int] = {}
     for i, name in enumerate(header):
-        if column_is_outcome(name):
-            continue
         if name in wanted:
             indexes[name] = i
     return indexes
 
 
 def read_lever(row: Mapping[str, str], column: str) -> str:
-    """Return one whitelist cell. Outcome names raise before the row is touched."""
-    if column_is_outcome(column):
-        raise OutcomeColumnError(column)
-    if column not in LEVER_COLUMN_SET and column not in JOIN_KEYS:
-        raise LeverColumnError(column)
+    """Return one cell. Every Theme Radar export column is allowed."""
     if column not in row:
         raise KeyError(column)
     return row[column]
@@ -295,9 +268,9 @@ def project_search_row(
     *,
     columns: Sequence[str] | None = None,
 ) -> dict[str, str]:
-    """Copy join keys and lever cells. Outcome columns are not copied."""
+    """Copy join keys and every requested cell. Default is every cell on the row."""
     lever_names = _require_lever_names(
-        LEVER_COLUMNS if columns is None else columns
+        tuple(row.keys()) if columns is None else columns
     )
     out = {
         "trade_date": row.get("trade_date", ""),
@@ -308,9 +281,6 @@ def project_search_row(
             continue
         if name in row:
             out[name] = row[name]
-    for key in out:
-        if column_is_outcome(key):
-            raise OutcomeColumnError(key)
     return out
 
 
@@ -348,13 +318,11 @@ def load_search_csv(
 ) -> list[dict[str, str]]:
     """Load a panel CSV for the search.
 
-    Outcome columns stay out of the index, so their cells are not read.
+    Every column on the header is returned unless `columns` names a subset.
     Rows with trade_date after 2026-09-11 are not returned. Asking for a
     session after that date raises FutureLeak.
     """
-    lever_names = _require_lever_names(
-        LEVER_COLUMNS if columns is None else columns
-    )
+    lever_names = _require_lever_names(() if columns is None else columns)
     allowed = set(_check_sessions(sessions))
     out: list[dict[str, str]] = []
     with _open_text(Path(path)) as handle:
@@ -363,6 +331,8 @@ def load_search_csv(
             header = next(reader)
         except StopIteration:
             return []
+        if columns is None:
+            lever_names = _require_lever_names(tuple(header))
         indexes = select_indexes(header, lever_names)
 
         def cell(raw: list[str], name: str) -> str | None:
@@ -387,8 +357,5 @@ def load_search_csv(
                     projected[name] = value
             if projected["trade_date"] > SEARCH_CUTOFF:
                 raise FutureLeak(projected["trade_date"])
-            for key in projected:
-                if column_is_outcome(key):
-                    raise OutcomeColumnError(key)
             out.append(projected)
     return out

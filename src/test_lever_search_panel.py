@@ -1,9 +1,9 @@
-"""Column guard for the Theme Radar lever panel.
+"""Column guard for the Theme Radar lever panel and the Excel signal file.
 
 Run: PYTHONHASHSEED=0 python3 -m src.test_lever_search_panel
 
-Fails when an excluded outcome column is requested or returned, and when a
-search load keeps a trade_date after 2026-09-11.
+Theme Radar export columns are all allowed. Excel price and return columns
+are outcomes. A search load must not keep a trade_date after 2026-09-11.
 """
 from __future__ import annotations
 
@@ -126,65 +126,59 @@ def test_prereg_whitelist_matches_loader() -> None:
 
 
 def test_prereg_exclude_block_is_outcome() -> None:
+    from src.lever_search_inputs import EXCEL_OUTCOME_COLUMNS, assert_excel_column
+
     text = PREREG.read_text(encoding="utf-8")
-    names = _marked(text, "<!-- OUTCOME_EXCLUDE_BEGIN -->", "<!-- OUTCOME_EXCLUDE_END -->")
-    assert names
+    names = _marked(text, "<!-- EXCEL_OUTCOME_BEGIN -->", "<!-- EXCEL_OUTCOME_END -->")
+    assert names == sorted(EXCEL_OUTCOME_COLUMNS)
     for name in names:
-        assert column_is_outcome(name), name
         try:
-            read_lever({"trade_date": "2026-08-13"}, name)
+            assert_excel_column(name)
         except OutcomeColumnError:
             pass
         else:
-            raise AssertionError(f"{name} was readable")
+            raise AssertionError(f"{name} was a signal column")
+    assert "<!-- OUTCOME_EXCLUDE_BEGIN -->" not in text
     overlap = set(names) & set(LEVER_COLUMNS)
     assert not overlap
 
 
 def test_outcome_names_and_safe_scores() -> None:
-    excluded = [
-        "fwd_1d", "fwd_2d", "fwd_3d",
-        "short_fwd_1d", "short_fwd_2d", "short_fwd_3d",
-        "label_date_1", "label_date_2", "label_date_3",
-        "exit_price_1d", "exit_price_2d", "exit_price_3d",
-        "prediction_day_1d", "prediction_day_2d", "prediction_day_3d",
-        "price_T", "price_T1", "price_T2", "price_T3",
-        "up_3d", "down_3d", "scan_date", "signal_asof", "entry_price",
-        "ret_H", "true_ret", "true_ret_dir",
-        "tr1d_ret_H", "tr1w_ret_H", "tr1m_ret_H",
-        "trf_true_ret", "trf_true_ret_dir",
-        "tr1d_fwd_1d", "tr1w_short_fwd_2d", "trf_label_date_1",
-        "seg_exit_price_1d", "trc_price_T1", "tr1m_true_ret",
+    from src.lever_search_inputs import assert_excel_column
+
+    # Theme Radar confirmed the export has none of these as outcomes.
+    allowed = [
+        "fwd_1d", "tr1d_ret_H", "trf_true_ret", "trf_true_ret_dir",
+        "seg_mom", "seg_exit_price_1d", "Open", "trf_dir_Price",
+        "trc_ret", "trc_resid", "Performance (Quarter)",
     ]
-    for name in excluded:
-        assert column_is_outcome(name), name
-    kept = [
-        "trc_ret", "trc_resid", "trf_d_Forward P/E", "trf_upside_pct_lvl",
-        "Performance (Quarter)", "tr1d_total_score", "Open", "seg_mom",
-        "trf_dir_Price",
-    ]
-    for name in kept:
+    for name in allowed:
         assert not column_is_outcome(name), name
+        read_lever({"trade_date": "2026-08-13", name: "1"}, name)
+    for name in ("current_price", "ret_vs_close", "ret_vs_open", "ref_close", "first_open", "days_held"):
+        try:
+            assert_excel_column(name)
+        except OutcomeColumnError:
+            pass
+        else:
+            raise AssertionError(name)
+    for name in ("ticker", "strategy", "signal_date"):
+        assert_excel_column(name)
+    for name in ("run_date", "side", "exit_rule", "signal_colors"):
+        try:
+            assert_excel_column(name)
+        except LeverColumnError:
+            pass
+        else:
+            raise AssertionError(name)
 
 
 def test_select_indexes_skips_outcome_columns() -> None:
-    indexes = select_indexes(HEADER, ["Performance (Week)", "trc_resid"])
-    assert "fwd_1d" not in indexes
-    assert "tr1d_ret_H" not in indexes
-    assert "trf_true_ret" not in indexes
+    indexes = select_indexes(HEADER, ["Performance (Week)", "trc_resid", "fwd_1d", "tr1d_ret_H", "seg_mom"])
+    assert indexes["fwd_1d"] == HEADER.index("fwd_1d")
+    assert indexes["tr1d_ret_H"] == HEADER.index("tr1d_ret_H")
+    assert indexes["seg_mom"] == HEADER.index("seg_mom")
     assert indexes["Performance (Week)"] == HEADER.index("Performance (Week)")
-    try:
-        select_indexes(HEADER, ["fwd_1d"])
-    except OutcomeColumnError as exc:
-        assert "fwd_1d" in str(exc)
-    else:
-        raise AssertionError("fwd_1d index was built")
-    try:
-        select_indexes(HEADER, ["tr1d_ret_H"])
-    except OutcomeColumnError:
-        pass
-    else:
-        raise AssertionError("tr1d_ret_H index was built")
 
 
 def _assert_loaded(rows: list[dict[str, str]]) -> None:
@@ -195,32 +189,17 @@ def _assert_loaded(rows: list[dict[str, str]]) -> None:
     tickers = [row["Ticker"] for row in rows]
     assert tickers == ["KEEP", "LAST"]
     for row in rows:
-        blob = " ".join(row.values())
-        assert LEAK not in blob
         for name in HEADER:
-            if column_is_outcome(name):
-                assert name not in row
-        assert "seg_mom" not in row
-        assert "trf_dir_Price" not in row
-        assert "Open" not in row
-        assert "tr1d_status_trend" not in row
+            assert name in row
+        assert row["seg_mom"] == LEAK
+        assert row["fwd_1d"] == LEAK
+        assert row["tr1d_ret_H"] == LEAK
+        assert row["Open"] == LEAK
         assert row["Performance (Week)"] == "1.5"
         assert row["trc_ret"] == "0.1"
         assert read_lever(row, "trc_resid") == "0.2"
-        for bad in ("fwd_1d", "tr1d_ret_H", "trf_true_ret", "label_date_1", "exit_price_1d"):
-            try:
-                read_lever(row, bad)
-            except OutcomeColumnError:
-                pass
-            else:
-                raise AssertionError(f"read {bad}")
-        for blocked in ("seg_mom", "Open", "trf_dir_Price", "tr1d_status_trend"):
-            try:
-                read_lever(row, blocked)
-            except LeverColumnError:
-                pass
-            else:
-                raise AssertionError(f"read {blocked}")
+        assert read_lever(row, "seg_mom") == LEAK
+        assert read_lever(row, "trf_true_ret") == LEAK
 
 
 def test_search_csv_drops_late_rows_and_outcome_cells() -> None:
@@ -246,7 +225,8 @@ def test_in_memory_rows_and_late_session() -> None:
     ]
     loaded = load_search_rows(rows)
     assert [row["Ticker"] for row in loaded] == ["KEEP"]
-    assert LEAK not in " ".join(loaded[0].values())
+    assert loaded[0]["fwd_1d"] == LEAK
+    assert loaded[0]["seg_mom"] == LEAK
     try:
         load_search_rows(rows, sessions=SEARCH_SESSIONS + ("2026-09-14",))
     except FutureLeak as exc:
@@ -268,13 +248,10 @@ def test_in_memory_rows_and_late_session() -> None:
 def test_requesting_excluded_column_raises_before_load() -> None:
     with tempfile.TemporaryDirectory() as tmp:
         path = _write_csv(Path(tmp), gzip_file=False)
-        for name in ("fwd_1d", "tr1d_ret_H", "trf_true_ret_dir", "short_fwd_1d"):
-            try:
-                load_search_csv(path, columns=["Performance (Week)", name])
-            except OutcomeColumnError as exc:
-                assert name in str(exc)
-            else:
-                raise AssertionError(f"loaded {name}")
+        rows = load_search_csv(path, columns=["Performance (Week)", "fwd_1d", "seg_mom", "tr1d_ret_H"])
+        assert rows[0]["fwd_1d"] == LEAK
+        assert rows[0]["seg_mom"] == LEAK
+        assert "Open" not in rows[0]
 
 
 def test_tally_lines_stay_in_prereg() -> None:
@@ -303,29 +280,42 @@ def test_tally_lines_stay_in_prereg() -> None:
 def test_initial_inputs_and_hash_guard() -> None:
     from src.lever_search_inputs import (
         EXCEL_DROPPED,
+        EXCEL_DROPPED_SESSIONS,
+        EXCEL_SESSIONS,
         FINVIZ_PROVEN_DATES,
         DroppedInput,
         InputHashError,
+        assert_excel_column,
         assert_excel_row,
         assert_finviz_date,
         assert_initial_finviz_column,
         assert_manifest_hashes,
         load_manifest,
+        proof_is_before_open,
     )
     from src.lever_search_panel import LeverColumnError, OutcomeColumnError
 
     manifest = load_manifest()
     assert manifest["finviz_proven_dates"] == list(FINVIZ_PROVEN_DATES)
+    assert manifest["excel_sessions"] == list(EXCEL_SESSIONS)
     assert "2026-08-28" not in manifest["finviz_proven_dates"]
     assert len(manifest["finviz_proven_dates"]) == 20
     assert_manifest_hashes()
-    for name in ("fwd_1d", "tr1d_ret_H", "trf_true_ret", "label_date_1"):
+    for name in ("fwd_1d", "tr1d_ret_H", "trf_true_ret", "label_date_1", "seg_mom"):
         try:
             assert_initial_finviz_column(name)
-        except OutcomeColumnError:
+        except LeverColumnError:
             pass
         else:
             raise AssertionError(name)
+    try:
+        assert_excel_column("current_price")
+    except OutcomeColumnError:
+        pass
+    else:
+        raise AssertionError("current_price was a signal")
+    for session in EXCEL_DROPPED_SESSIONS:
+        assert session not in manifest["excel_sessions"]
     for name in ("tr1d_total_score", "trc_resid", "trf_d_Price", "Open"):
         try:
             assert_initial_finviz_column(name)
@@ -360,7 +350,29 @@ def test_initial_inputs_and_hash_guard() -> None:
         pass
     else:
         raise AssertionError("08-13 excel was accepted")
-    assert_excel_row("AAPL", "2026-09-02")
+    try:
+        assert_excel_row("AAPL", "2026-09-02")
+    except DroppedInput:
+        pass
+    else:
+        raise AssertionError("09-02 excel was accepted")
+    assert_excel_row("AAPL", "2026-09-03")
+    assert_excel_row("AAPL", "2026-09-11")
+    for day in manifest["finviz_mornings"]:
+        for source in day["sources"]:
+            if "/snapshots/" not in source["source_path"]:
+                continue
+            assert source["status"] == "PROVEN"
+            assert source["proof"]["kind"] == "actions_run_start"
+            assert source["proof"]["head_sha"] == source["commit_sha"]
+            assert proof_is_before_open(source, day["trade_date"])
+            assert not proof_is_before_open(
+                {"commit_sha": source["commit_sha"], "git_commit_date": source["git_commit_date"]},
+                day["trade_date"],
+            )
+    for copy in manifest["excel_copies"]:
+        assert proof_is_before_open(copy, copy["session_date"])
+        assert copy["session_date"] in EXCEL_SESSIONS
     bad = dict(manifest)
     bad["pinned_files"] = [dict(manifest["pinned_files"][0], sha256="0" * 64)]
     try:

@@ -46,15 +46,33 @@ FINVIZ_PROVEN_DATES: tuple[str, ...] = (
     "2026-09-11",
 )
 
+# Sessions whose suggestions.csv copy has an Actions run start, matched by
+# head_sha, strictly before that session's 09:30 ET. The other four candidate
+# sessions have only a git committer date, or a server time after the open.
 EXCEL_SESSIONS: tuple[str, ...] = (
-    "2026-08-31",
-    "2026-09-02",
     "2026-09-03",
     "2026-09-04",
-    "2026-09-08",
-    "2026-09-10",
     "2026-09-11",
 )
+
+EXCEL_DROPPED_SESSIONS: tuple[str, ...] = (
+    "2026-08-31",
+    "2026-09-02",
+    "2026-09-08",
+    "2026-09-10",
+)
+
+# Signal columns only. `strategy` is the card letter (L1, L2, L3, L4, L5, S1, S2).
+EXCEL_SIGNAL_COLUMNS: tuple[str, ...] = ("ticker", "strategy", "signal_date")
+
+EXCEL_OUTCOME_COLUMNS: frozenset[str] = frozenset({
+    "ref_close",
+    "first_open",
+    "current_price",
+    "ret_vs_close",
+    "ret_vs_open",
+    "days_held",
+})
 
 # Session date, not signal_date. The row's signal_date is the prior session.
 EXCEL_DROPPED: frozenset[tuple[str, str]] = frozenset({
@@ -138,13 +156,49 @@ def assert_finviz_date(trade_date: str, manifest: dict | None = None) -> None:
         raise DroppedInput(trade_date)
 
 
+def assert_excel_column(name: str) -> None:
+    """Signal columns pass. Price and return columns are outcomes."""
+    from src.lever_search_panel import LeverColumnError, OutcomeColumnError
+
+    if name in EXCEL_OUTCOME_COLUMNS:
+        raise OutcomeColumnError(name)
+    if name not in EXCEL_SIGNAL_COLUMNS:
+        raise LeverColumnError(name)
+
+
 def assert_excel_row(ticker: str, session_date: str) -> None:
-    """Allow one suggestions row on a proven session. Dropped pairs raise."""
-    if session_date not in EXCEL_SESSIONS:
+    """Allow one suggestions row on a server-proven session. Dropped pairs raise."""
+    if session_date in EXCEL_DROPPED_SESSIONS or session_date not in EXCEL_SESSIONS:
         raise DroppedInput(session_date)
     key = (str(ticker or "").upper(), session_date)
     if key in EXCEL_DROPPED:
         raise DroppedInput(f"{key[0]} {key[1]}")
+
+
+def proof_is_before_open(entry: dict, session_date: str) -> bool:
+    """True only for an Actions run start or a push-event time before 09:30 ET.
+
+    Git author and committer dates are ignored. `head_sha` must equal the
+    file's commit for an Actions proof.
+    """
+    proof = entry.get("proof") or {}
+    cutoff = f"{session_date}T13:30:00Z"
+    kind = proof.get("kind")
+    if kind == "actions_run_start":
+        started = proof.get("run_started_at") or ""
+        head = proof.get("head_sha") or ""
+        commit = entry.get("commit_sha") or proof.get("commit_sha") or ""
+        if not started or head != commit:
+            return False
+        return started < cutoff
+    if kind == "push_event":
+        pushed = proof.get("push_created_at") or ""
+        commit = entry.get("commit_sha") or ""
+        head = proof.get("head_sha") or commit
+        if not pushed or (commit and head != commit):
+            return False
+        return pushed < cutoff
+    return False
 
 
 def covered_fingerprint(text: str) -> str:

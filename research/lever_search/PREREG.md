@@ -2,7 +2,7 @@
 
 - status: protocol locked. The initial run uses server-proven inputs only. Layer B and the Excel ML spec are later add-ons. This commit has no returns, no p-values, and no luck-test output.
 - written: 2026-09-26
-- fingerprint_sha256: 3afa56de39012b363eebea416af1be900cee83f21ae2f5d00eee6b39c4f38bef
+- fingerprint_sha256: 00e717eb18f7d9e06ff97c83e382b15923bea9ebc2110002a9bf16e5ab713e89
 - fingerprint_scope: SHA-256 of the UTF-8 bytes after the line `<!-- BEGIN COVERED -->`, including the final newline. Line endings are LF.
 - scoring: do not start until Cyrus replies `go`. Results of the scored run are due by 22:00 HKT on Sunday 2026-09-27.
 - live paths: not used. No edits to flatten_robust, Webull submit, Supabase, or Theme Radar. Output of the later run lives only under `research/lever_search/`.
@@ -19,11 +19,11 @@ The walk-forward is section 6. Check days are 2026-08-27 through 2026-09-11. The
 
 ### Inputs loaded
 
-Price levers are the Layer A price atoms, candle atoms, and price-only AB atoms in section 7, their pairs with each other, and the six price deltas. The universe is section 7.1. The daily series for a price-only signal runs 2024-04-02 through 2026-09-11. These price inputs are **PROVISIONAL**. `research/lever_search/INPUT_ASOF_MANIFEST.json`, sha256 `865f75c553b0aa9895a0dd1bf7a429f4ab4fd979554dc65183a13b2a6b26d8bf`, records `rebuild_match` as null on the price store, the listed roster, `src/ab_checklist.py`, and `weather_rules.json`. A recipe is not something good while an input it relies on is provisional. If the audit does not set `rebuild_match` to `exact` for that input, every recipe that relies on it is struck. Fills read `data/prices/ohlc.parquet`, so a failed price audit strikes the whole initial run.
+Price levers are the Layer A price atoms, candle atoms, and price-only AB atoms in section 7, their pairs with each other, and the six price deltas. The universe is section 7.1. The daily series for a price-only signal runs 2024-04-02 through 2026-09-11. These price inputs are **PROVISIONAL**. `research/lever_search/INPUT_ASOF_MANIFEST.json`, sha256 `e2162443297d8d9aeaa07d7f5cf07462d822ede4fa5f056197a4282c483d9777`, records `rebuild_match` as null on the price store, the listed roster, `src/ab_checklist.py`, and `weather_rules.json`. A recipe is not something good while an input it relies on is provisional. If the audit does not set `rebuild_match` to `exact` for that input, every recipe that relies on it is struck. Fills read `data/prices/ohlc.parquet`, so a failed price audit strikes the whole initial run. The price store's Actions run start is 2026-09-25T20:50:47Z. That is not a before-09:30 copy of any search session, and the git committer date is not proof.
 
-Theme Radar Finviz is the 16 `fv_*` atoms in section 4.1, on these 20 trade dates only: 2026-08-13, 2026-08-14, 2026-08-17, 2026-08-18, 2026-08-19, 2026-08-20, 2026-08-21, 2026-08-24, 2026-08-25, 2026-08-26, 2026-08-27, 2026-08-31, 2026-09-01, 2026-09-02, 2026-09-03, 2026-09-04, 2026-09-08, 2026-09-09, 2026-09-10, 2026-09-11. The clock is `SRoyaltyy/theme-radar` commit `19973230e4d80c74565e1246ada911503a808fb7`, file `research/lever_panel/server_time_proof.csv`, sha256 `5bde5e9164f499899b4ed70fcdbfde3f72b3e8b5692da645f1e9682e3c6a913e`. Every row in that file is `PROVEN`. Each of the 20 mornings has its snapshot `server_time_utc` before 13:30 UTC, which is 09:30 ET. The loader reads only the 15 Finviz columns behind those 16 atoms. Rubric scores, composite scores, catalyst flags, upside, `trf_d_*`, and `trf_dir_*` are not loaded.
+Theme Radar Finviz is the 16 `fv_*` atoms in section 4.1, on these 20 trade dates only: 2026-08-13, 2026-08-14, 2026-08-17, 2026-08-18, 2026-08-19, 2026-08-20, 2026-08-21, 2026-08-24, 2026-08-25, 2026-08-26, 2026-08-27, 2026-08-31, 2026-09-01, 2026-09-02, 2026-09-03, 2026-09-04, 2026-09-08, 2026-09-09, 2026-09-10, 2026-09-11. Each snapshot commit has an Actions run whose `head_sha` equals that commit and whose `run_started_at` is before 13:30 UTC on the trade date. The inventory of commits is `SRoyaltyy/theme-radar` commit `19973230e4d80c74565e1246ada911503a808fb7`, file `research/lever_panel/server_time_proof.csv`, sha256 `5bde5e9164f499899b4ed70fcdbfde3f72b3e8b5692da645f1e9682e3c6a913e`. The clock used here is the `head_sha` run start recorded in the manifest, not the git committer date and not that CSV's `updated_at`. The initial loader reads only the 15 Finviz columns behind those 16 atoms. Rubric scores, composite scores, catalyst flags, upside, `trf_d_*`, and `trf_dir_*` are not loaded on this run. Sixteen in-window composite files have a `head_sha` run start after that morning's 09:30 ET, so those copies are missing.
 
-Excel signal columns come from `excel_bot/suggestions/suggestions.csv` on session dates 2026-08-31, 2026-09-02, 2026-09-03, 2026-09-04, 2026-09-08, 2026-09-10, and 2026-09-11. A row with `signal_date` D is read on the next store session. Dropped, and not loaded: CMII on the 2026-09-02 session (`signal_date` 2026-09-01), AUBN on the 2026-09-04 session (`signal_date` 2026-09-03), SVCC on the 2026-09-11 session (`signal_date` 2026-09-10). `current_price`, `ret_vs_close`, and `ret_vs_open` are ignored.
+Excel reads `ticker`, `strategy` (the card letter), and `signal_date` only, from the `excel_copies` in the manifest. A row with `signal_date` D is read on the next store session. Server-proven sessions are 2026-09-03 (commit `a9ed6a403daa6812306820c3b9c7e0bece976f4e`, run start 2026-09-02T15:20:56Z, sha256 `08ecc6381e0ad4cc47000c55d5821214e32117764c5139e14742376327de23c6`), 2026-09-04 (commit `1c8354e489fa34d94ff8bb17f1c492bf0542cfc5`, run start 2026-09-03T16:41:44Z, sha256 `4a3a3e93ef0565ee342f325c59edbde6c6dd3d02e1cdeeb2c77e99ff5b1b98eb`), and 2026-09-11 (commit `4dc97fcbd5d494194c6af7321993b12f123e61ec`, run start 2026-09-10T16:41:36Z, sha256 `1396b67da50071beea9c4a1d512aa4fb3cb7ad74a340cf35eaf7e0c22f0af88b`). Dropped sessions, because the only timestamps are git committer dates or a server time after the open: 2026-08-31, 2026-09-02, 2026-09-08, 2026-09-10. Dropped pairs that remain on a proven session: AUBN on 2026-09-04 (`signal_date` 2026-09-03), SVCC on 2026-09-11 (`signal_date` 2026-09-10). CMII on 2026-09-02 is inside a dropped session. Price and return columns are outcomes and are not read. The current `suggestions.csv` blob, run start 2026-09-25T21:37:42Z, is not a before-09:30 copy.
 
 ### N
 
@@ -51,13 +51,20 @@ No later copy is substituted.
 
 - Theme Radar trade date 2026-08-28. The server-time proof has no row.
 - Any Theme Radar row dated after 2026-09-11.
-- Excel rows whose session is not one of the seven dates above.
-- CMII on 2026-09-02, AUBN on 2026-09-04, SVCC on 2026-09-11.
+- Excel sessions 2026-08-31, 2026-09-02, 2026-09-08, and 2026-09-10. No Actions run start matched by `head_sha`, and no retained `PushEvent`, falls before 09:30 ET.
+- AUBN on 2026-09-04 and SVCC on 2026-09-11. CMII on 2026-09-02 sits inside a dropped session.
+- Sixteen in-window composite files whose `head_sha` run start is after 09:30 ET.
+- `research/longhist/listed_common.txt`. No Actions run has that `head_sha`, and the events API has no `PushEvent` for it.
+- `00_grounding/weather_rules.json` on sessions before 2026-08-21. Its run start is 2026-08-21T05:46:36Z.
 - The later-add-on files in the list above. The initial run does not open them.
 
 ### Rehash
 
-Before each session the search hashes every path in `pinned_files` inside the manifest and stops on a mismatch (`InputHashError`). A request for a dropped date, a dropped Excel pair, an outcome column, or a Theme Radar column outside the 15 Finviz fields stops the same way.
+Before each session the search hashes every path in `pinned_files` inside the manifest and stops on a mismatch (`InputHashError`). A request for a dropped date, a dropped Excel session, a dropped Excel pair, an Excel price or return column, or a Theme Radar column outside the 15 Finviz fields on the initial run stops the same way.
+
+### Server time
+
+A file is knowable before 09:30 ET on session D only when a GitHub server-side time is strictly before D at 13:30 UTC. Two times count. The Actions run start, `run_started_at`, of a run whose `head_sha` equals the commit that contains the file (`GET /repos/{owner}/{repo}/actions/runs?head_sha=`). Or the `created_at` of a `PushEvent` from the repository events API whose commits include that sha. Git author dates and git committer dates do not count. A copy with only those dates is missing. No later copy is substituted. The session that needed the missing copy is dropped for that input. The manifest records `proof.kind` as `actions_run_start` or `push_event` on each file, with the run id or the push time, and the matching `head_sha`.
 
 ## 0. What this file is
 
@@ -110,15 +117,15 @@ Frozen export on `SRoyaltyy/theme-radar` commit `3973e13cd953e5705d08d8d9f78a5b1
 | `research/lever_panel/finviz_panel_asof0930_2026-08.csv.gz` | `c8977b8eea8e74115899e9d4cc04d5b4ea67490376d972905781eb8e1aeb6459` |
 | `research/lever_panel/finviz_panel_asof0930_2026-09.csv.gz` | `cbf35da9e1587703059abd9ff77525a1047c67a91edc3276ca93db4cd8669c16` |
 
-`trade_date` is the morning the row may be used. `snapshot_date` is the previous trading day. Every value is from a snapshot taken after that prior close and committed before 09:30 ET on `trade_date`. The builder's clock check passed on that commit. This search still drops a cell when that date's provenance says the family was not committed before 09:30 ET. Empty cells stay empty.
+`trade_date` is the morning the row may be used. `snapshot_date` is the previous trading day. A family is loaded on `trade_date` only when the manifest's `proof` for that file is an Actions run start or a push-event time before 09:30 ET, under the server-time rule above. A git committer date does not keep the cell. Empty cells stay empty.
 
 The export has 237 columns and 406,649 rows. `trade_date` runs from 2026-08-07 through 2026-09-28. Two mornings are absent: 2026-08-06, because snapshot 2026-08-05 is missing, and 2026-08-28, because snapshot 2026-08-27 is missing. A `theme_radar` universe sits on 2026-08-28.
 
 The September file contains trade dates through 2026-09-28. Search loads go through `src/lever_search_panel.py`. A row is loaded only when `trade_date` is one of the 21 sessions in section 1. Each of those sessions is on or before 2026-09-11. Rows dated 2026-08-07 through 2026-08-12 are in the export and outside that session list, so the search loader leaves them out. Rows dated 2026-09-14 through 2026-09-28 are in the September file and stay out of the search load. 2026-09-28 is never loaded. Passing a session after 2026-09-11 into the search loader raises `FutureLeak`. A returned row dated after 2026-09-11 raises the same error. The designed-after window in section 9 is a later open. It does not use this loader.
 
-Lever columns are the whitelist below: Finviz fields the section 4 atoms read, Theme Radar score columns the rubric atoms read, the 14 composite score columns, and the feature columns the deltas, catalyst flags, and upside atom read. That is 102 columns. Composite columns are the numeric scores from the composite file, including `trc_ret` and `trc_resid`. They stay in the grid, so N_B in section 4 is unchanged.
+Theme Radar confirms this export has no outcome columns. `seg_*` columns are segment labels, not outcomes. Every column in the two files above is allowed. The loader returns them. The files stay pinned by the sha256s in the table. The 102 names below are the columns the named atoms read. They are not a ban on the other columns. Composite columns, including `trc_ret` and `trc_resid`, stay in the grid, so N_B in section 4 is unchanged. Allowing the other columns does not add a try. A later add-on that uses one of them joins the tally when it is specified.
 
-The loader returns `trade_date` and `Ticker` so a row can be joined onto the panel. Those two names are not gates. `read_lever` raises `OutcomeColumnError` when the name is an excluded outcome column, and raises `LeverColumnError` for every other name outside the whitelist. Outcome columns are left out of the column index, so their cells are not read. `src/test_lever_search_panel.py` fails when an excluded column is requested or when a loaded search row contains one.
+The loader returns `trade_date` and `Ticker` so a row can be joined onto the panel. Those two names are not gates. The initial run still asks only for the 15 Finviz fields. `src/test_lever_search_panel.py` fails when a search row is dated after 2026-09-11.
 
 <!-- LEVER_WHITELIST_BEGIN -->
 
@@ -238,53 +245,20 @@ Feature columns, the 28 `trf_d_*` deltas, the 8 catalyst flags, and `trf_upside_
 
 <!-- LEVER_WHITELIST_END -->
 
-A column is an excluded outcome column when its name is one of the bare names below, when stripping one family prefix (`tr1d_`, `tr1w_`, `tr1m_`, `trf_`, `trc_`, or `seg_`) leaves one of those bare names, or when any `_`-separated suffix of the name is one of those bare names. The bare names are the Theme Radar labels file `data/labels/*_fwd.csv` (`fwd_*`, `short_fwd_*`, `label_date_*`, `exit_price_*`, `entry_price`, `prediction_day_*`, `price_T`, `price_T1`, `price_T2`, `price_T3`, `up_3d`, `down_3d`, `scan_date`, `signal_asof`) plus `ret_H`, `true_ret`, and `true_ret_dir`. The same rule covers those names with a prefix. Inside this export the outcome columns are `tr1d_ret_H`, `tr1w_ret_H`, `tr1m_ret_H`, `trf_true_ret`, and `trf_true_ret_dir`.
+Excel `suggestions.csv` is not part of that export. Its signal whitelist is `ticker`, `strategy` (the card letter), and `signal_date`. Every price or return tracking column is an outcome and is not read:
 
-<!-- OUTCOME_EXCLUDE_BEGIN -->
+<!-- EXCEL_OUTCOME_BEGIN -->
 
-- `scan_date`
-- `signal_asof`
-- `entry_price`
-- `price_T`
-- `price_T1`
-- `price_T2`
-- `price_T3`
-- `prediction_day_1d`
-- `prediction_day_2d`
-- `prediction_day_3d`
-- `label_date_1`
-- `label_date_2`
-- `label_date_3`
-- `exit_price_1d`
-- `exit_price_2d`
-- `exit_price_3d`
-- `fwd_1d`
-- `fwd_2d`
-- `fwd_3d`
-- `short_fwd_1d`
-- `short_fwd_2d`
-- `short_fwd_3d`
-- `up_3d`
-- `down_3d`
-- `ret_H`
-- `true_ret`
-- `true_ret_dir`
-- `tr1d_ret_H`
-- `tr1w_ret_H`
-- `tr1m_ret_H`
-- `trf_true_ret`
-- `trf_true_ret_dir`
-- `tr1d_fwd_1d`
-- `tr1w_short_fwd_2d`
-- `tr1m_label_date_3`
-- `trf_exit_price_1d`
-- `trc_price_T1`
-- `seg_entry_price`
-- `tr1d_true_ret`
+- `current_price`
+- `days_held`
+- `first_open`
+- `ref_close`
+- `ret_vs_close`
+- `ret_vs_open`
 
-<!-- OUTCOME_EXCLUDE_END -->
+<!-- EXCEL_OUTCOME_END -->
 
-Columns outside the whitelist are not levers, and the loader does not return them. That set includes the clock and identity fields other than `trade_date` and `Ticker`, the text buckets (`mcap_bucket`, `beta_bucket`, `status_*`, `kill_flags`, `top_pos`, `top_neg`, `trf_pair_date`), `Open`, every `trf_dir_*` sign (the delta lever reads the matching `trf_d_*` column once), `trf_price_then`, and the `seg_*` membership fields.
+`run_date`, `side`, `exit_rule`, and `signal_colors` are not signal columns, so the loader does not return them. `assert_excel_column` raises `OutcomeColumnError` for a price or return column and `LeverColumnError` for every other name outside the three signal columns.
 
 ## 4. Layer B — one combination
 
@@ -329,7 +303,7 @@ Top-N is applied after the gate. Names that fail the gate are not ranked.
 
 ### 4.1 Factors (110 atoms)
 
-Panel atoms use `data/factor_mine/panel.json` for that session. A camera whose source file is missing that morning matches nobody (INPUT_HISTORY). Theme Radar atoms use the frozen export joined on `(trade_date, Ticker)`. Excel atoms use `excel_bot/suggestions/suggestions.csv`. A card with `signal_date` D is knowable after D's close, so it is an input on the next panel session, not on D. `current_price`, `ret_vs_close`, and `ret_vs_open` are ignored. The seven cards are the folders under `excel_bot/strategies/`. The committed CSV has rows for L1, L2, L3, and L5 only. L4, S1, and S2 have no row through 2026-09-25, so those atoms match nobody on this window and still count.
+Panel atoms use `data/factor_mine/panel.json` for that session. A camera whose source file is missing that morning matches nobody (INPUT_HISTORY). Theme Radar atoms use the frozen export joined on `(trade_date, Ticker)`. Excel atoms use the server-proven `excel_copies` in the manifest, not the current `suggestions.csv` blob. A card with `signal_date` D is an input on the next panel session, not on D, and only when that copy's Actions run start is before 09:30 ET. The loaded cells are `ticker`, `strategy`, and `signal_date`. Price and return columns are outcomes. The seven cards are the folders under `excel_bot/strategies/`. The committed CSV has rows for L1, L2, L3, and L5 only. L4, S1, and S2 have no row through 2026-09-25, so those atoms match nobody on this window and still count.
 
 | id | rule |
 | --- | --- |
@@ -601,7 +575,7 @@ Excel atoms are the seven cards. Each `card.json` sha256:
 | `xl_S1` | `S1_short_red_1day_optionable` | `d4f29b1db30ab3097bd72ad7f472ccb4840b95a79429684e1b4fec504720f047` |
 | `xl_S2` | `S2_short_red_1day_hivol` | `b90b3207da854d41f1d51a01b4a7a6c8f01061ca9894f6c7d20e31ed7776938d` |
 
-A card with `signal_date` D is an input on the next store session. Color and hold math come from quote OHLC. A filter the price store cannot answer (market cap, beta, optionable) fails closed for that name unless a committed Finviz export with `date` < session already contains it. `current_price`, `ret_vs_close`, and `ret_vs_open` are ignored. Where `suggestions.csv` has that `signal_date`, the rebuilt membership is not required to match it: that CSV is a later tape and is not an input to Layer A.
+A card with `signal_date` D is an input on the next store session, and only from a copy whose Actions run start or push-event time is before that session's 09:30 ET. Color and hold math come from quote OHLC. A filter the price store cannot answer (market cap, beta, optionable) fails closed for that name unless a committed Finviz export with server-time proof before the session already contains it. `ref_close`, `first_open`, `current_price`, `ret_vs_close`, `ret_vs_open`, and `days_held` are outcomes. The current `suggestions.csv` blob is a later tape and is not an input to Layer A.
 
 Count: 11 price + 9 candle + 14 AB + 7 Excel = 41.
 
@@ -710,7 +684,7 @@ Keep bar (IRONCLAD rule 21) is reported and does not add or remove a row: at lea
 
 ## 10. Refusal
 
-The scored run refuses to start when the header fingerprint disagrees with the covered bytes, when a pinned file's sha256 disagrees with the manifest, when a row dated 2026-09-14 or later is passed into the search or the walk-forward, when the search loader is given a session after 2026-09-11, when a loaded search row contains a `trade_date` after 2026-09-11, when a Theme Radar date outside the 20 proven mornings is requested, when a dropped Excel pair is requested, when `read_lever` is asked for an excluded outcome column, when a loaded search row contains an excluded outcome column, when an initial Finviz read asks for a column outside the 15 Finviz fields, or when a price-only signal opens `panel.json`, a Theme Radar file, or an LLM morning file.
+The scored run refuses to start when the header fingerprint disagrees with the covered bytes, when a pinned file's sha256 disagrees with the manifest, when a before-09:30 claim rests on a git author date or a git committer date, when a row dated 2026-09-14 or later is passed into the search or the walk-forward, when the search loader is given a session after 2026-09-11, when a loaded search row contains a `trade_date` after 2026-09-11, when a Theme Radar date outside the 20 proven mornings is requested, when a dropped Excel session or a dropped Excel pair is requested, when an Excel read asks for a price or return column, when an initial Finviz read asks for a column outside the 15 Finviz fields, or when a price-only signal opens `panel.json`, a Theme Radar file, or an LLM morning file.
 
 ## 11. Success criteria
 
