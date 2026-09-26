@@ -42,6 +42,31 @@ ET = ZoneInfo("America/New_York")
 REPO = "SRoyaltyy/fullscan"
 CACHE = Path("/tmp/fm_audit_336")
 
+PANEL_ERA = "2026-09-09"
+# AI text is never regenerated. An early file counts only when a pre-open
+# copy exists and its shape matches a proven copy from the panel era.
+AI_ROLES = {
+    "digest", "map_heat", "catalyst", "baseline", "predict",
+    "actions", "judge", "events", "research",
+}
+# Deterministic outputs. Rebuildable for days before the panel era only
+# when today's code matches the pre-open copy on every later proven day.
+REBUILD_KEYS = (
+    "ab_a1_a15", "price_features", "ohlc_hot", "yday_gainer",
+    "yday_mover", "overnight", "probable", "earn_react",
+)
+A_FLAGS = (
+    "A01_rsi_value", "A02_rsi_cross_30", "A03_rsi_cross_50",
+    "A04_rsi_cross_70", "A05_body_red_green_2day",
+    "A06_volume_red_green_2day", "A07_rvol", "A08_bollinger_position",
+    "A09_above_sma50", "A10_sma20_50_80_stack", "A11_three_section_lows",
+    "A12_green_body_vs_wick_2day", "A13_red_body_vs_wick_2day",
+    "A15_tape_recovery_setup",
+)
+PRICE_FIELDS = (
+    "ohlc_ret_1", "ohlc_ret_5", "ohlc_ret_10", "ohlc_rvol", "ohlc_hot_score",
+)
+
 SESSIONS = (
     "2026-08-13", "2026-08-14", "2026-08-17", "2026-08-18", "2026-08-19",
     "2026-08-20", "2026-08-21", "2026-08-24", "2026-08-25", "2026-08-26",
@@ -326,8 +351,61 @@ def fetch_events() -> tuple[dict[str, datetime], dict]:
     return times, meta
 
 
+def _lookup_cache_path() -> Path:
+    return CACHE / "lookup.json"
+
+
+def _load_lookup_cache(have: dict[str, list[dict]]) -> set[str]:
+    path = _lookup_cache_path()
+    if not path.is_file():
+        return set()
+    try:
+        payload = json.loads(path.read_text(encoding="utf-8"))
+    except json.JSONDecodeError:
+        return set()
+    seen = set()
+    for sha, rows in (payload.get("shas") or {}).items():
+        seen.add(sha)
+        if sha in have:
+            continue
+        parsed = []
+        for row in rows or []:
+            ts = parse_time(row.get("started") or "")
+            if ts is None:
+                continue
+            parsed.append({
+                "event": row.get("event") or "",
+                "started": ts,
+                "run_id": row.get("run_id") or "",
+                "url": row.get("url") or "",
+            })
+        if parsed:
+            have[sha] = parsed
+    return seen
+
+
+def _save_lookup_cache(found: dict[str, list[dict]], seen: set[str]) -> None:
+    CACHE.mkdir(parents=True, exist_ok=True)
+    shas = {}
+    for sha in seen:
+        rows = found.get(sha) or []
+        shas[sha] = [
+            {
+                "event": row.get("event") or "",
+                "started": iso(row.get("started")),
+                "run_id": row.get("run_id") or "",
+                "url": row.get("url") or "",
+            }
+            for row in rows
+        ]
+    _lookup_cache_path().write_text(
+        json.dumps({"shas": shas}), encoding="utf-8",
+    )
+
+
 def lookup_missing(shas: list[str], have: dict[str, list[dict]]) -> None:
-    missing = [s for s in shas if s and s not in have]
+    seen = _load_lookup_cache(have)
+    missing = [s for s in shas if s and s not in have and s not in seen]
     if not missing:
         return
 
@@ -361,9 +439,12 @@ def lookup_missing(shas: list[str], have: dict[str, list[dict]]) -> None:
             sha, rows = fut.result()
             if rows:
                 have[sha] = rows
+            seen.add(sha)
             done += 1
             if done % 100 == 0 or done == len(missing):
                 print(f"[audit] lookup {done}/{len(missing)}", flush=True)
+                _save_lookup_cache(have, seen)
+    _save_lookup_cache(have, seen)
 
 
 def prove(sha: str | None, runs: dict[str, list[dict]],
@@ -815,8 +896,721 @@ def recompute(dates: list[str], *, drop_glnd: bool) -> dict:
     return out
 
 
+def named_item(items: list[dict], key: str) -> dict | None:
+    role = f"named input {key}"
+    for item in items:
+        if item.get("role") == role:
+            return item
+    return None
+
+
+def blob_shape(path: str, blob: bytes) -> tuple:
+    """Coarse format: kind plus keys, columns, or markdown headings."""
+    if path.endswith(".json"):
+        try:
+            doc = json.loads(blob)
+        except json.JSONDecodeError:
+            return ("json-bad",)
+        if isinstance(doc, dict):
+            return ("json-object", tuple(sorted(str(k) for k in doc)))
+        if isinstance(doc, list):
+            if doc and isinstance(doc[0], dict):
+                return ("json-list", tuple(sorted(str(k) for k in doc[0])))
+            return ("json-list",)
+        return ("json-other", type(doc).__name__)
+    if path.endswith(".csv"):
+        line = blob.splitlines()[0] if blob else b""
+        cols = tuple(sorted(c.strip() for c in line.decode("utf-8", "replace").split(",")))
+        return ("csv", cols)
+    if path.endswith(".md"):
+        text = blob.decode("utf-8", "replace")
+        heads = tuple(
+            line.strip() for line in text.splitlines()
+            if line.startswith("#") and len(line) < 100
+        )[:8]
+        return ("md", heads)
+    return ("other", path.rsplit(".", 1)[-1])
+
+
+def sector_role(path: str) -> str:
+    name = path.rsplit("/", 1)[-1]
+    if name.startswith("_board"):
+        return "board-json"
+    if name.startswith("_BOARD"):
+        return "board-md"
+    if name.startswith("_qc"):
+        return "qc"
+    if name.endswith("_predict.md"):
+        return "predict"
+    if name.endswith("_outcome.md"):
+        return "outcome"
+    if name.endswith("_reflect.md"):
+        return "reflect"
+    return name
+
+
+def close_num(saved, fresh) -> bool:
+    try:
+        a = float(saved)
+        b = float(fresh)
+    except (TypeError, ValueError):
+        return saved == fresh
+    if a != a and b != b:
+        return True
+    scale = max(abs(a), abs(b), 1.0)
+    return abs(a - b) <= 1e-3 * scale or abs(a - b) <= 1e-4
+
+
+def _ab_module():
+    sys.path.insert(0, str(ROOT))
+    from src import ab_checklist as ab
+    return ab
+
+
+def compare_ab_rules(days: dict, history, proofs) -> dict:
+    """Part A flags from today's loader versus each pre-open AB file.
+
+    Bars dated the session itself are left out. At 09:30 that bar does
+    not exist yet. The live ``run()`` filter is ``date <= asof``, which
+    only matches the morning file when the store has not yet grown the
+    session bar.
+    """
+    def flag_file(day: str):
+        cutoff = cutoff_for(day)
+        for suffix in (
+            "_ab_slim.csv",
+            "_ab_checklist_enriched.csv",
+            "_ab_checklist.csv",
+        ):
+            path = f"data/ab_checklist/{day}{suffix}"
+            sha = latest_proven(history.get(path) or [], proofs, cutoff)
+            if not sha:
+                continue
+            blob = git_bytes(sha, path)
+            header = blob.splitlines()[0] if blob else b""
+            if b"flag_A01_rsi_value" not in header:
+                continue
+            return sha, path
+        return None
+
+    flag_days = [day for day in SESSIONS if flag_file(day)]
+    tested = []
+    for day in flag_days:
+        if day < PANEL_ERA:
+            continue
+        sha, path = flag_file(day)
+        tested.append((day, sha, path))
+    out = {
+        "key": "ab_a1_a15",
+        "kind": "price rules A1-A15",
+        "tested": len(tested),
+        "matched": 0,
+        "days": [],
+        "rebuildable": False,
+        "note": "Compared with the server-proven pre-open AB file that contains A flags. Part B is not rebuilt.",
+        "flag_days": flag_days,
+    }
+    if not tested:
+        out["note"] = "No 09-09+ day has a server-proven pre-open AB file."
+        return out
+    import pandas as pd
+    ab = _ab_module()
+    store = pd.read_parquet(ROOT / "data" / "prices" / "ohlc.parquet")
+    store["date"] = pd.to_datetime(store["date"])
+    groups = {
+        t: g.drop(columns=["ticker"]).set_index("date").sort_index()
+        for t, g in store.groupby("ticker")
+    }
+    matched_days = 0
+    for day, sha, path in tested:
+        blob = git_bytes(sha, path)
+        if not blob:
+            out["days"].append({"day": day, "match": False, "reason": "blob missing"})
+            continue
+        frame = pd.read_csv(io.BytesIO(blob))
+        flag_cols = [f"flag_{name}" for name in A_FLAGS if f"flag_{name}" in frame.columns]
+        if "Ticker" not in frame.columns or not flag_cols:
+            out["days"].append({
+                "day": day, "match": False, "rows": len(frame),
+                "reason": "no Ticker or A flags",
+            })
+            continue
+        asof = pd.Timestamp(day)
+        same = 0
+        bad_flags: dict[str, int] = defaultdict(int)
+        last_bars: dict[str, int] = defaultdict(int)
+        for rec in frame.itertuples(index=False):
+            ticker = str(getattr(rec, "Ticker") or "").strip().upper()
+            bars = groups.get(ticker)
+            fresh = {name: 0 for name in A_FLAGS}
+            if bars is not None:
+                window = bars[bars.index < asof]
+                part = ab._part_a(window)
+                passed = ab._pass_a(part)
+                fresh.update(passed)
+                if part.get("asof_session"):
+                    last_bars[str(part["asof_session"])] += 1
+            row_ok = True
+            for col in flag_cols:
+                name = col[len("flag_"):]
+                try:
+                    saved = int(float(getattr(rec, col)))
+                except (TypeError, ValueError):
+                    saved = None
+                if saved != int(fresh.get(name, 0)):
+                    row_ok = False
+                    bad_flags[name] += 1
+            if row_ok:
+                same += 1
+        saved_end = ""
+        if "pair_day_b" in frame.columns:
+            mode = frame["pair_day_b"].astype(str).mode()
+            saved_end = str(mode.iloc[0]) if len(mode) else ""
+        day_match = same == len(frame) and len(frame) > 0
+        if day_match:
+            matched_days += 1
+        top = sorted(bad_flags.items(), key=lambda kv: -kv[1])[:6]
+        rebuilt_end = ""
+        if last_bars:
+            rebuilt_end = max(last_bars.items(), key=lambda kv: kv[1])[0]
+        out["days"].append({
+            "day": day,
+            "path": path,
+            "sha": sha,
+            "rows": len(frame),
+            "same": same,
+            "match": day_match,
+            "flags": flag_cols,
+            "mismatch_flags": top,
+            "saved_last_bar": saved_end,
+            "rebuilt_last_bar": rebuilt_end,
+        })
+        print(f"[audit] ab {day} same={same}/{len(frame)} match={day_match}", flush=True)
+    out["matched"] = matched_days
+    out["rebuildable"] = bool(tested) and matched_days == len(tested)
+    return out
+
+
+def _snapshot_sources(snap: dict) -> dict[str, list[str]]:
+    buckets: dict[str, list[str]] = defaultdict(list)
+    for row in snap.get("rows") or []:
+        if not isinstance(row, dict):
+            continue
+        ticker = str(row.get("ticker") or "").strip().upper()
+        if not ticker:
+            continue
+        for src in row.get("sources") or []:
+            if ticker not in buckets[src]:
+                buckets[src].append(ticker)
+    return buckets
+
+
+def compare_generated_lists(days: dict, history, proofs) -> dict:
+    """Today's list builders versus #336 snapshot membership.
+
+    The snapshot was pushed on 2026-09-25. It is not a pre-open copy, so
+    a match here does not make the list rebuildable for earlier days.
+    A day is tested only when the prior Finviz export has a server time
+    at or before this session's 09:30.
+    """
+    sys.path.insert(0, str(ROOT))
+    from src import gainer_asof as ga
+    from src import gainer_capture as gc
+    from src import ohlc_ripper as ohlc
+
+    keys = ("ohlc_hot", "yday_gainer", "yday_mover", "overnight", "probable", "earn_react")
+    built_report = {
+        key: {
+            "key": key,
+            "tested": 0,
+            "matched": 0,
+            "preopen_tested": 0,
+            "preopen_matched": 0,
+            "rebuildable": False,
+            "days": [],
+            "note": (
+                "No pre-open file stores this list. "
+                "The rate below is against the #336 snapshot, which is not a pre-open copy."
+            ),
+        }
+        for key in keys
+    }
+    look = list(SESSIONS)
+    try:
+        look = gc.lookback_calendar(list(SESSIONS))
+    except Exception as exc:
+        print(f"[audit] calendar fallback {exc}", flush=True)
+    original = ga.load_finviz
+    state = {"cutoff_day": None, "frames": {}}
+
+    def load_finviz(date: str):
+        import pandas as pd
+        key = (state["cutoff_day"], date)
+        if key in state["frames"]:
+            return state["frames"][key]
+        path = f"data/exports/finviz_{date}.csv"
+        sha = latest_proven(history.get(path) or [], proofs, cutoff_for(state["cutoff_day"]))
+        frame = pd.DataFrame()
+        if sha:
+            blob = git_bytes(sha, path)
+            if blob:
+                frame = pd.read_csv(io.BytesIO(blob))
+        state["frames"][key] = frame
+        return frame
+
+    ga.load_finviz = load_finviz
+    try:
+        for day in SESSIONS:
+            if day < PANEL_ERA:
+                continue
+            snap_rows = (days[day].get("snap_rows") or [])
+            if not snap_rows:
+                continue
+            prior = gc.knowable_export_date(look, day)
+            # knowable_export_date reads the working tree. Prefer the
+            # snapshot's recorded prior export when it is proven.
+            recorded = None
+            # filled by caller via days[day]['prior_export'] if set
+            recorded = days[day].get("prior_export")
+            prior = recorded or prior
+            if not prior:
+                continue
+            export_sha = latest_proven(
+                history.get(f"data/exports/finviz_{prior}.csv") or [],
+                proofs, cutoff_for(day),
+            )
+            if not export_sha:
+                for key in keys:
+                    built_report[key]["days"].append({
+                        "day": day, "tested": False,
+                        "reason": f"prior export {prior} not proven before the open",
+                    })
+                continue
+            state["cutoff_day"] = day
+            nxt = gc.next_session(look, day)
+            built = {
+                "yday_gainer": gc.yesterday_gainers(prior, top_n=25),
+                "yday_mover": gc.yesterday_movers(prior, top_n=20),
+                "ohlc_hot": ohlc.liquid_hot(prior, day, top_n=30),
+                "overnight": gc.overnight_scheduled(prior, day, nxt),
+                "probable": ohlc.continuation(prior, day, top_n=ohlc.CONT_TOP_N),
+                "earn_react": gc.earnings_reaction(prior, day),
+            }
+            saved = _snapshot_sources({"rows": snap_rows})
+            for key in keys:
+                fresh = [t for t in built[key] if t]
+                old = saved.get(key) or []
+                ok = fresh == old
+                built_report[key]["tested"] += 1
+                if ok:
+                    built_report[key]["matched"] += 1
+                built_report[key]["days"].append({
+                    "day": day,
+                    "tested": True,
+                    "match": ok,
+                    "set_match": set(fresh) == set(old),
+                    "fresh": len(fresh),
+                    "saved": len(old),
+                    "only_fresh": [t for t in fresh if t not in set(old)][:8],
+                    "only_saved": [t for t in old if t not in set(fresh)][:8],
+                    "prior": prior,
+                    "export_sha": export_sha,
+                })
+            print(
+                "[audit] lists "
+                + day
+                + " "
+                + " ".join(f"{k}={built_report[k]['days'][-1]['match']}" for k in keys),
+                flush=True,
+            )
+    finally:
+        ga.load_finviz = original
+    return built_report
+
+
+def compare_price_features(days: dict) -> dict:
+    """Today's ohlc.features versus snapshot row fields.
+
+    Those rows were not on GitHub before the open. A match does not
+    make the features rebuildable.
+    """
+    sys.path.insert(0, str(ROOT))
+    from src import ohlc_ripper as ohlc
+    out = {
+        "key": "price_features",
+        "tested": 0,
+        "matched": 0,
+        "rebuildable": False,
+        "days": [],
+        "note": (
+            "No pre-open file stores ret/rvol/hot_score. "
+            "The rate below is against the #336 snapshot, which is not a pre-open copy."
+        ),
+    }
+    for day in SESSIONS:
+        if day < PANEL_ERA:
+            continue
+        rows = days[day].get("snap_rows") or []
+        if not rows:
+            continue
+        same = 0
+        bad = 0
+        for row in rows:
+            ticker = str(row.get("ticker") or "").strip().upper()
+            feat = ohlc.features(ticker, day) if ticker else {}
+            ok = True
+            for field, src in (
+                ("ohlc_ret_1", "ret_1"),
+                ("ohlc_ret_5", "ret_5"),
+                ("ohlc_ret_10", "ret_10"),
+                ("ohlc_rvol", "rvol"),
+                ("ohlc_hot_score", "hot_score"),
+            ):
+                if not close_num(row.get(field), feat.get(src)):
+                    ok = False
+                    break
+            if ok:
+                same += 1
+            else:
+                bad += 1
+        day_match = same == len(rows) and len(rows) > 0
+        out["tested"] += 1
+        if day_match:
+            out["matched"] += 1
+        out["days"].append({
+            "day": day, "rows": len(rows), "same": same, "bad": bad, "match": day_match,
+        })
+        print(f"[audit] px {day} same={same}/{len(rows)}", flush=True)
+    return out
+
+
+def _ai_shapes(days: dict) -> dict[str, set]:
+    shapes: dict[str, set] = defaultdict(set)
+    for day in SESSIONS:
+        if day < PANEL_ERA:
+            continue
+        for key in AI_ROLES:
+            item = named_item(days[day]["items"], key)
+            sha = (item or {}).get("proven")
+            path = (item or {}).get("path")
+            if not sha or not path:
+                continue
+            blob = git_bytes(sha, path)
+            if blob is None:
+                continue
+            shapes[key].add(blob_shape(path, blob))
+        for item in days[day]["items"]:
+            if item["group"] != "sector" or not item.get("proven"):
+                continue
+            blob = git_bytes(item["proven"], item["path"])
+            if blob is None:
+                continue
+            shapes["sector:" + sector_role(item["path"])].add(blob_shape(item["path"], blob))
+        for item in days[day]["items"]:
+            if item["group"] != "excel" or not item.get("proven"):
+                continue
+            blob = git_bytes(item["proven"], item["path"])
+            if blob is None:
+                continue
+            role = "excel-csv" if item["path"].endswith(".csv") else "excel-md"
+            shapes[role].add(blob_shape(item["path"], blob))
+    return shapes
+
+
+def _file_cell(day: str, item: dict | None, *, ai: bool, shapes: set) -> str:
+    if not item or not item.get("proven"):
+        return "missing"
+    if day >= PANEL_ERA or not ai:
+        return "available-proven"
+    blob = git_bytes(item["proven"], item["path"])
+    if blob is None or not shapes:
+        return "missing"
+    if blob_shape(item["path"], blob) not in shapes:
+        return "missing"
+    return "available-proven"
+
+
+def availability(days: dict, ab_proof: dict) -> dict:
+    """Per day, per input: available-proven, rebuildable-verified, or missing."""
+    shapes = _ai_shapes(days)
+    ab_rebuild = bool(ab_proof.get("rebuildable"))
+    grid = {}
+    for day in SESSIONS:
+        items = days[day]["items"]
+        cell = {}
+        for key in (
+            "digest", "map_heat", "export", "join", "catalyst", "baseline",
+            "weather", "predict", "actions", "judge", "events", "research",
+        ):
+            item = named_item(items, key)
+            ai = key in AI_ROLES
+            cell[key] = _file_cell(day, item, ai=ai, shapes=shapes.get(key) or set())
+        ab_item = next((it for it in items if it["group"] == "ab"), None)
+        cell["ab"] = _file_cell(day, ab_item, ai=False, shapes=set())
+        if day in set(ab_proof.get("flag_days") or []):
+            cell["ab_a1_a15"] = "available-proven"
+        elif day < PANEL_ERA and ab_rebuild:
+            cell["ab_a1_a15"] = "rebuildable-verified"
+        else:
+            cell["ab_a1_a15"] = "missing"
+        sector_items = [it for it in items if it["group"] == "sector" and not it["path"].endswith("/")]
+        if not sector_items:
+            cell["sector"] = "missing"
+        else:
+            ok = True
+            for item in sector_items:
+                role = "sector:" + sector_role(item["path"])
+                status = _file_cell(
+                    day, item, ai=True, shapes=shapes.get(role) or set(),
+                )
+                if status != "available-proven":
+                    ok = False
+                    break
+            cell["sector"] = "available-proven" if ok else "missing"
+        excel_items = [it for it in items if it["group"] == "excel"]
+        excel_ok = True
+        saw_excel = False
+        for item in excel_items:
+            if item["match"] == "both absent" and not item.get("proven"):
+                continue
+            saw_excel = True
+            role = "excel-csv" if item["path"].endswith(".csv") else "excel-md"
+            status = _file_cell(day, item, ai=True, shapes=shapes.get(role) or set())
+            if status != "available-proven":
+                excel_ok = False
+        cell["excel"] = "available-proven" if saw_excel and excel_ok else "missing"
+        pin = next((it for it in items if it["group"] == "price"), None)
+        cell["price_pin"] = _file_cell(day, pin, ai=False, shapes=set())
+        for key in REBUILD_KEYS:
+            if key == "ab_a1_a15":
+                continue
+            # No pre-open copy of these outputs, and the snapshot match
+            # is not a license. Early and late days stay missing.
+            cell[key] = "missing"
+        cell["alarm"] = "missing"
+        cell["flatten"] = "missing"
+        cell["mover_buy"] = "missing"
+        grid[day] = cell
+    return grid
+
+
+HOT4_PARTS = (
+    "yday_gainer", "yday_mover", "ohlc_hot", "overnight", "probable",
+    "earn_react", "price_features", "alarm", "flatten", "mover_buy",
+)
+
+
+def hot4_days(grid: dict) -> list[str]:
+    ready = []
+    for day in SESSIONS:
+        cell = grid[day]
+        if all(cell.get(part) in ("available-proven", "rebuildable-verified") for part in HOT4_PARTS):
+            ready.append(day)
+    return ready
+
+
+def rebuild_report(days: dict, history, proofs) -> dict:
+    print("[audit] rebuild proofs", flush=True)
+    ab_proof = compare_ab_rules(days, history, proofs)
+    lists = compare_generated_lists(days, history, proofs)
+    prices = compare_price_features(days)
+    grid = availability(days, ab_proof)
+    ready = hot4_days(grid)
+    return {
+        "ab": ab_proof,
+        "lists": lists,
+        "prices": prices,
+        "grid": grid,
+        "hot4_days": ready,
+    }
+
+
 def esc(text: str) -> str:
     return str(text).replace("|", "\\|")
+
+
+def _rate(matched: int, tested: int) -> str:
+    if not tested:
+        return "no days"
+    pct = 100.0 * matched / tested
+    return f"{matched}/{tested} ({pct:.1f}%)"
+
+
+def render_per_input(w, report: dict) -> None:
+    block = report.get("per_input") or {}
+    if not block:
+        return
+    w("## Per-input availability")
+    w("")
+    w("This section is per input, not per day. A derived input is "
+      "rebuildable for sessions before 2026-09-09 only when today's code "
+      "matches the server-proven pre-open copy on every session from "
+      "2026-09-09 onward that has one. AI text is never regenerated. "
+      "An early AI file counts only when that pre-open copy exists and "
+      "its keys, columns, or headings match a proven copy from 2026-09-09 on.")
+    w("")
+    w("Cell values are `available-proven`, `rebuildable-verified`, or `missing`.")
+    w("")
+    ab = block["ab"]
+    w("### Match rate against the pre-open copy")
+    w("")
+    w("| Input | Proven days (09-09 on) | Matched | Match rate | Rebuildable for earlier days |")
+    w("| --- | ---: | ---: | --- | --- |")
+    w(f"| AB price rules A1-A15 | {ab['tested']} | {ab['matched']} | "
+      f"{_rate(ab['matched'], ab['tested'])} | "
+      f"{'yes' if ab['rebuildable'] else 'no'} |")
+    for key in (
+        "price_features", "ohlc_hot", "yday_gainer", "yday_mover",
+        "overnight", "probable", "earn_react",
+    ):
+        w(f"| {key} | 0 | — | no pre-open copy of this output | no |")
+    w("")
+    w(ab["note"])
+    w("")
+    if ab.get("days"):
+        w("AB days. The rebuilt last bar is the newest bar strictly before "
+          "09:30 that today's price store still has. The saved last bar is "
+          "the mode of `pair_day_b` in the pre-open file.")
+        w("")
+        w("| Day | Rows | Same flags | Match | Saved last bar | Rebuilt last bar | Flags that differ |")
+        w("| --- | ---: | ---: | --- | --- | --- | --- |")
+        for row in ab["days"]:
+            flags = ", ".join(f"{name} {n}" for name, n in row.get("mismatch_flags") or []) or "—"
+            if row.get("reason"):
+                flags = row["reason"]
+            w(f"| {row['day']} | {row.get('rows', '—')} | {row.get('same', '—')} | "
+              f"{'yes' if row.get('match') else 'no'} | {row.get('saved_last_bar') or '—'} | "
+              f"{row.get('rebuilt_last_bar') or '—'} | {esc(flags)} |")
+        w("")
+    w("### Same generator against the #336 snapshot")
+    w("")
+    w("The snapshot files were pushed on 2026-09-25, after every open in "
+      "this window. A match here shows that today's function still emits "
+      "the membership or the price fields stored in that late file. It "
+      "does not make the input rebuildable.")
+    w("")
+    w("| Input | Days compared | Matched | Rate |")
+    w("| --- | ---: | ---: | --- |")
+    prices = block["prices"]
+    w(f"| price_features | {prices['tested']} | {prices['matched']} | "
+      f"{_rate(prices['matched'], prices['tested'])} |")
+    for key, rec in block["lists"].items():
+        w(f"| {key} | {rec['tested']} | {rec['matched']} | "
+          f"{_rate(rec['matched'], rec['tested'])} |")
+    w("")
+    w(prices["note"])
+    w("")
+    for key, rec in block["lists"].items():
+        misses = [d for d in rec["days"] if d.get("tested") and not d.get("match")]
+        if not misses:
+            continue
+        w(f"`{key}` mismatches:")
+        w("")
+        for row in misses[:8]:
+            same_names = "same names, different order" if row.get("set_match") else "different names"
+            w(f"- {row['day']}: {same_names}; rebuilt {row['fresh']}, snapshot {row['saved']}, "
+              f"only in rebuild {', '.join(row['only_fresh']) or '—'}, "
+              f"only in snapshot {', '.join(row['only_saved']) or '—'}.")
+        w("")
+    px_miss = [d for d in prices["days"] if not d.get("match")]
+    if px_miss:
+        w("Price-feature days that are not an exact row match: "
+          + ", ".join(f"{d['day']} ({d['same']}/{d['rows']})" for d in px_miss)
+          + ".")
+        w("")
+    w("### Day by input")
+    w("")
+    cols = (
+        ("digest", "digest"),
+        ("map_heat", "map_heat"),
+        ("export", "export"),
+        ("join", "join"),
+        ("catalyst", "catalyst"),
+        ("baseline", "baseline"),
+        ("weather", "weather"),
+        ("predict", "predict"),
+        ("actions", "actions"),
+        ("judge", "judge"),
+        ("events", "events"),
+        ("research", "research"),
+        ("ab", "ab file"),
+        ("ab_a1_a15", "A1-A15"),
+        ("sector", "sector"),
+        ("excel", "excel"),
+        ("price_pin", "price pin"),
+        ("price_features", "price feat."),
+        ("ohlc_hot", "ohlc_hot"),
+        ("yday_gainer", "yday_gainer"),
+        ("yday_mover", "yday_mover"),
+        ("overnight", "overnight"),
+        ("probable", "probable"),
+        ("earn_react", "earn_react"),
+        ("alarm", "alarm"),
+        ("flatten", "flatten"),
+        ("mover_buy", "mover_buy"),
+    )
+    header = "| Day | " + " | ".join(label for _key, label in cols) + " |"
+    sep = "| --- | " + " | ".join("---" for _ in cols) + " |"
+    w(header)
+    w(sep)
+    short_cell = {
+        "available-proven": "available-proven",
+        "rebuildable-verified": "rebuildable-verified",
+        "missing": "missing",
+    }
+    grid = block["grid"]
+    for day in SESSIONS:
+        cells = " | ".join(short_cell[grid[day][key]] for key, _label in cols)
+        w(f"| {day[5:]} | {cells} |")
+    w("")
+    w("Alarm, flatten, and mover_buy have no pre-open copy of the list or "
+      "the bit, and they are not rebuilt. Alarm is the camera gate HOT4 "
+      "forbids. Flatten and mover_buy are union members that come from the "
+      "stock-book wish list, not from the price-tape functions above.")
+    w("")
+    w("### HOT4 and holdup components")
+    w("")
+    w("HOT4 (`union_hot_n4_h1`) and holdup (`union_hot_n4_holdup`) use the "
+      "same union: yday_gainer, yday_mover, ohlc_hot, overnight, probable, "
+      "earn_react, plus price features for the hot_score rank, plus the "
+      "alarm gate, plus flatten and mover_buy. Holdup adds a carry rule, "
+      "not a new file. A component can run when its cell is "
+      "`available-proven` or `rebuildable-verified`. The recipe is scored "
+      "only on days where every one of those components can run.")
+    w("")
+    ready = block["hot4_days"]
+    if ready:
+        w("Days where every component can run: " + ", ".join(ready) + ".")
+    else:
+        w("Days where every component can run: none.")
+    w("")
+    w("| Day | Components that can run | Recipe |")
+    w("| --- | --- | --- |")
+    for day in SESSIONS:
+        cell = grid[day]
+        can = [part for part in HOT4_PARTS
+               if cell.get(part) in ("available-proven", "rebuildable-verified")]
+        recipe = "yes" if day in ready else "no"
+        shown = ", ".join(can) if can else "—"
+        w(f"| {day[5:]} | {shown} | {recipe} |")
+    w("")
+    w("Replay of HOT4 and holdup on that set only, from $10,000, "
+      "`persist=False`. Days outside the set are left out.")
+    w("")
+    for label, score in (
+        ("HOT4 and holdup on input-ready days, GLND kept", report.get("score_input_keep") or {}),
+        ("HOT4 and holdup on input-ready days, GLND removed", report.get("score_input_drop") or {}),
+    ):
+        w(f"**{label}.**")
+        if not score.get("days"):
+            w("No session has every HOT4 input available-proven or rebuildable-verified, "
+              "so there is no return and no ending equity.")
+            w("")
+            continue
+        for name, rec in score["recipes"].items():
+            w(f"- {name}: {rec['compound_pct']}% , ending equity {rec['equity']}, "
+              f"sessions {rec['n']}.")
+        w("")
 
 
 def render(report: dict) -> str:
@@ -837,6 +1631,12 @@ def render(report: dict) -> str:
     else:
         w("Proven-frozen days: none.")
     w("Not proven: " + ", ".join(not_frozen) + ".")
+    w("")
+    w("Per input, none of the price lists, price features, or A1-A15 rules "
+      "matched a server-proven pre-open copy on every day from 2026-09-09 on, "
+      "so none are rebuildable for earlier sessions. HOT4 and holdup still have "
+      "no day on which every component is available-proven or rebuildable-verified. "
+      "The table is in Per-input availability.")
     w("")
     w("HOT4 is `union_hot_n4_h1`. Holdup is `union_hot_n4_holdup`. "
       "The replay runs only on proven-frozen days, in that order, starting from $10,000. "
@@ -861,6 +1661,7 @@ def render(report: dict) -> str:
       "That is one file for every session. It is pre-open only for a session whose "
       "09:30 ET is after that server time.")
     w("")
+    render_per_input(w, report)
     w("## What the #336 path opens")
     w("")
     w("`src/factor_mine_sequential.run_books` steps each session in "
@@ -1140,12 +1941,21 @@ def main() -> None:
                 "n_rows": snap.get("n_rows"),
                 "code_sha": snap.get("code_sha"),
             },
+            "snap_rows": [r for r in (snap.get("rows") or []) if isinstance(r, dict)],
+            "prior_export": (snap.get("candidates") or {}).get("prior_export"),
         }
         print(f"[audit] {day} frozen={frozen} rows={rows['status']} reasons={len(reasons)}", flush=True)
 
     frozen_days = [d for d in SESSIONS if days[d]["frozen"]]
+    per_input = rebuild_report(days, history, proofs)
     score_keep = recompute(frozen_days, drop_glnd=False)
     score_drop = recompute(frozen_days, drop_glnd=True)
+    input_days = per_input["hot4_days"]
+    score_input_keep = recompute(input_days, drop_glnd=False)
+    score_input_drop = recompute(input_days, drop_glnd=True)
+    cache_py = ROOT / "src" / "_ab_checklist_cached.py"
+    if cache_py.is_file():
+        cache_py.unlink()
     after = fingerprint()
     if after != before:
         moved = [k for k in set(before) | set(after) if before.get(k) != after.get(k)]
@@ -1167,6 +1977,9 @@ def main() -> None:
         "days": days,
         "score_keep": score_keep,
         "score_drop": score_drop,
+        "per_input": per_input,
+        "score_input_keep": score_input_keep,
+        "score_input_drop": score_input_drop,
         "fingerprint_ok": True,
         "events_meta": events_meta,
         "n_action_shas": len(runs),

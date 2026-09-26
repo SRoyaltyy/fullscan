@@ -9,6 +9,8 @@ Proven-frozen: 0. Not proven: 31.
 Proven-frozen days: none.
 Not proven: 2026-08-13, 2026-08-14, 2026-08-17, 2026-08-18, 2026-08-19, 2026-08-20, 2026-08-21, 2026-08-24, 2026-08-25, 2026-08-26, 2026-08-27, 2026-08-28, 2026-08-31, 2026-09-01, 2026-09-02, 2026-09-03, 2026-09-04, 2026-09-08, 2026-09-09, 2026-09-10, 2026-09-11, 2026-09-14, 2026-09-15, 2026-09-16, 2026-09-17, 2026-09-18, 2026-09-21, 2026-09-22, 2026-09-23, 2026-09-24, 2026-09-25.
 
+Per input, none of the price lists, price features, or A1-A15 rules matched a server-proven pre-open copy on every day from 2026-09-09 on, so none are rebuildable for earlier sessions. HOT4 and holdup still have no day on which every component is available-proven or rebuildable-verified. The table is in Per-input availability.
+
 HOT4 is `union_hot_n4_h1`. Holdup is `union_hot_n4_holdup`. The replay runs only on proven-frozen days, in that order, starting from $10,000. A day that is not proven is left out, not scored as a flat day.
 
 **HOT4 and holdup, GLND kept.**
@@ -18,6 +20,177 @@ No proven-frozen sessions, so there is no return and no ending equity.
 No proven-frozen sessions, so there is no return and no ending equity.
 
 The fill tape the scorer opens is `data/factor_mine/retro_prices/ohlc.parquet`, commit `5f13a4415ea0`, server time 2026-09-25 15:49:10Z via actions_push. That is one file for every session. It is pre-open only for a session whose 09:30 ET is after that server time.
+
+## Per-input availability
+
+This section is per input, not per day. A derived input is rebuildable for sessions before 2026-09-09 only when today's code matches the server-proven pre-open copy on every session from 2026-09-09 onward that has one. AI text is never regenerated. An early AI file counts only when that pre-open copy exists and its keys, columns, or headings match a proven copy from 2026-09-09 on.
+
+Cell values are `available-proven`, `rebuildable-verified`, or `missing`.
+
+### Match rate against the pre-open copy
+
+| Input | Proven days (09-09 on) | Matched | Match rate | Rebuildable for earlier days |
+| --- | ---: | ---: | --- | --- |
+| AB price rules A1-A15 | 3 | 0 | 0/3 (0.0%) | no |
+| price_features | 0 | — | no pre-open copy of this output | no |
+| ohlc_hot | 0 | — | no pre-open copy of this output | no |
+| yday_gainer | 0 | — | no pre-open copy of this output | no |
+| yday_mover | 0 | — | no pre-open copy of this output | no |
+| overnight | 0 | — | no pre-open copy of this output | no |
+| probable | 0 | — | no pre-open copy of this output | no |
+| earn_react | 0 | — | no pre-open copy of this output | no |
+
+Compared with the server-proven pre-open AB file that contains A flags. Part B is not rebuilt.
+
+AB days. The rebuilt last bar is the newest bar strictly before 09:30 that today's price store still has. The saved last bar is the mode of `pair_day_b` in the pre-open file.
+
+| Day | Rows | Same flags | Match | Saved last bar | Rebuilt last bar | Flags that differ |
+| --- | ---: | ---: | --- | --- | --- | --- |
+| 2026-09-21 | 2663 | 84 | no | 2026-09-08 | 2026-09-18 | A07_rvol 1753, A12_green_body_vs_wick_2day 1725, A13_red_body_vs_wick_2day 1622, A06_volume_red_green_2day 1255, A05_body_red_green_2day 1251, A08_bollinger_position 1043 |
+| 2026-09-22 | 2670 | 113 | no | 2026-09-08 | 2026-09-21 | A12_green_body_vs_wick_2day 1735, A13_red_body_vs_wick_2day 1639, A06_volume_red_green_2day 1274, A05_body_red_green_2day 1234, A08_bollinger_position 1046, A10_sma20_50_80_stack 728 |
+| 2026-09-24 | 2658 | 69 | no | 2026-09-08 | 2026-09-23 | A12_green_body_vs_wick_2day 1748, A13_red_body_vs_wick_2day 1600, A05_body_red_green_2day 1228, A06_volume_red_green_2day 1212, A08_bollinger_position 1181, A10_sma20_50_80_stack 897 |
+
+### Same generator against the #336 snapshot
+
+The snapshot files were pushed on 2026-09-25, after every open in this window. A match here shows that today's function still emits the membership or the price fields stored in that late file. It does not make the input rebuildable.
+
+| Input | Days compared | Matched | Rate |
+| --- | ---: | ---: | --- |
+| price_features | 12 | 1 | 1/12 (8.3%) |
+| ohlc_hot | 4 | 0 | 0/4 (0.0%) |
+| yday_gainer | 4 | 0 | 0/4 (0.0%) |
+| yday_mover | 4 | 0 | 0/4 (0.0%) |
+| overnight | 4 | 3 | 3/4 (75.0%) |
+| probable | 4 | 0 | 0/4 (0.0%) |
+| earn_react | 4 | 1 | 1/4 (25.0%) |
+
+No pre-open file stores ret/rvol/hot_score. The rate below is against the #336 snapshot, which is not a pre-open copy.
+
+`ohlc_hot` mismatches:
+
+- 2026-09-10: different names; rebuilt 30, snapshot 30, only in rebuild QRVO, TXG, CRDL, JMIA, CHYM, DH, INSM, WDS, only in snapshot INSP, AMBQ, VISN, INTC, EQ, TJGC, AESI, CVI.
+- 2026-09-15: different names; rebuilt 30, snapshot 30, only in rebuild GPRO, TRX, CYPH, BLSH, SM, BAH, EPAM, only in snapshot ATRC, RBRK, APH, NAT, CLNE, STLN, HCAT.
+- 2026-09-16: different names; rebuilt 30, snapshot 28, only in rebuild REF, GH, CRGY, YPF, KR, ATRC, MTCH, only in snapshot TENB, WAY, NAT, APH, QCOM.
+- 2026-09-25: different names; rebuilt 30, snapshot 30, only in rebuild DDOG, RVTY, TBBB, SNPS, only in snapshot CDNA, BLLN, SONO, SENS.
+
+`yday_gainer` mismatches:
+
+- 2026-09-10: different names; rebuilt 25, snapshot 23, only in rebuild VENU, CABA, UPB, CNTB, LFMD, HAS, ORBS, BHC, only in snapshot BAND, DDOG, INSP, CHYM, IRD, ODD, SIG, NAUT.
+- 2026-09-15: different names; rebuilt 25, snapshot 25, only in rebuild BNC, ASTH, VRSK, BBW, SRRK, CLB, FRNM, CDZI, only in snapshot TENB, RBRK, SAIL, QLYS, CYPH, TYRA, IVVD, OKTA.
+- 2026-09-16: different names; rebuilt 25, snapshot 24, only in rebuild XHLD, CRDF, BAND, DRVN, TXG, P, DELL, AIAI, only in snapshot BBNX, TEM, RIG, QTRX, VAL, KRMN, ADPT, HQ.
+- 2026-09-25: different names; rebuilt 25, snapshot 24, only in rebuild FRT, ECAT, FJET, TLSA, SN, VNOM, VRXA, RANI, only in snapshot WRBY, TXG, AEHL, BRVE, GLND, ZSQR, TJGC, DNA.
+
+`yday_mover` mismatches:
+
+- 2026-09-10: different names; rebuilt 20, snapshot 19, only in rebuild DYN, VENU, TRBG, SRPT, NVS, CABA, UPB, IONS, only in snapshot BAND, IRD, ODD, SIG, NAUT, ASO, INDP, XHLD.
+- 2026-09-15: different names; rebuilt 20, snapshot 20, only in rebuild RUM, ETR, OLMA, BNC, ASTH, VRSK, NOK, BBW, only in snapshot TENB, RBRK, SAIL, QLYS, CYPH, HLP, RPD, ZS.
+- 2026-09-16: different names; rebuilt 20, snapshot 18, only in rebuild SWRD, FPS, ASND, USDE, XHLD, DFDV, CRCL, AXON, only in snapshot BBNX, HQ, HLP, INDP, FTRE, DVLT, NMRA, CTMX.
+- 2026-09-25: different names; rebuilt 20, snapshot 19, only in rebuild ACRS, ENS, FRT, ECAT, FJET, MGM, TLSA, VKTX, only in snapshot WRBY, GLND, ZSQR, TJGC, DNA, TWST, SECZ, GRAL.
+
+`overnight` mismatches:
+
+- 2026-09-10: different names; rebuilt 6, snapshot 7, only in rebuild —, only in snapshot DSGX.
+
+`probable` mismatches:
+
+- 2026-09-10: different names; rebuilt 8, snapshot 8, only in rebuild VENU, CABA, UPB, CNTB, LFMD, HAS, BHC, SARO, only in snapshot BAND, DDOG, INSP, CHYM, LAC, XHG, SUNB, TNGX.
+- 2026-09-15: different names; rebuilt 8, snapshot 8, only in rebuild ASTH, VRSK, BBW, CLB, FRNM, CDZI, PBLS, PYXS, only in snapshot TENB, RBRK, SAIL, QLYS, CYPH, TYRA, IVVD, OKTA.
+- 2026-09-16: different names; rebuilt 8, snapshot 8, only in rebuild XHLD, DRVN, P, DELL, AIAI, ARM, TALO, only in snapshot BBNX, TEM, RIG, QTRX, VAL, KRMN, ADPT.
+- 2026-09-25: different names; rebuilt 8, snapshot 8, only in rebuild FRT, ECAT, FJET, TLSA, SN, VNOM, VRXA, RANI, only in snapshot WRBY, TXG, AEHL, BRVE, HLP, SATL, PL, TEM.
+
+`earn_react` mismatches:
+
+- 2026-09-10: different names; rebuilt 6, snapshot 9, only in rebuild —, only in snapshot DBI, NB, SHOE.
+- 2026-09-15: different names; rebuilt 3, snapshot 4, only in rebuild —, only in snapshot UROY.
+- 2026-09-25: different names; rebuilt 1, snapshot 2, only in rebuild —, only in snapshot RZLT.
+
+Price-feature days that are not an exact row match: 2026-09-10 (3/82), 2026-09-11 (2/74), 2026-09-14 (1/62), 2026-09-15 (2/64), 2026-09-16 (1/65), 2026-09-17 (2/60), 2026-09-18 (2/55), 2026-09-21 (3/62), 2026-09-22 (3/72), 2026-09-23 (1/76), 2026-09-24 (4/74).
+
+### Day by input
+
+| Day | digest | map_heat | export | join | catalyst | baseline | weather | predict | actions | judge | events | research | ab file | A1-A15 | sector | excel | price pin | price feat. | ohlc_hot | yday_gainer | yday_mover | overnight | probable | earn_react | alarm | flatten | mover_buy |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 08-13 | missing | missing | available-proven | available-proven | missing | missing | available-proven | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing |
+| 08-14 | missing | missing | available-proven | available-proven | missing | missing | available-proven | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing |
+| 08-17 | missing | missing | available-proven | available-proven | missing | missing | available-proven | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing |
+| 08-18 | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing |
+| 08-19 | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing |
+| 08-20 | available-proven | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing |
+| 08-21 | available-proven | missing | missing | missing | missing | missing | missing | missing | missing | available-proven | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing |
+| 08-24 | available-proven | missing | missing | missing | missing | missing | missing | missing | missing | available-proven | missing | missing | available-proven | available-proven | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing |
+| 08-25 | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | available-proven | available-proven | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing |
+| 08-26 | available-proven | missing | missing | missing | missing | missing | missing | missing | missing | available-proven | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing |
+| 08-27 | available-proven | missing | missing | available-proven | missing | missing | available-proven | missing | missing | available-proven | missing | missing | missing | available-proven | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing |
+| 08-28 | missing | missing | available-proven | available-proven | missing | missing | available-proven | missing | missing | available-proven | missing | missing | available-proven | available-proven | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing |
+| 08-31 | available-proven | available-proven | available-proven | available-proven | available-proven | available-proven | available-proven | missing | missing | missing | missing | missing | available-proven | available-proven | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing |
+| 09-01 | available-proven | available-proven | available-proven | missing | available-proven | missing | missing | missing | missing | available-proven | missing | missing | available-proven | available-proven | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing |
+| 09-02 | available-proven | available-proven | available-proven | missing | missing | available-proven | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing |
+| 09-03 | missing | missing | missing | missing | missing | available-proven | missing | missing | missing | missing | missing | missing | available-proven | available-proven | missing | available-proven | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing |
+| 09-04 | missing | available-proven | missing | available-proven | available-proven | available-proven | available-proven | missing | missing | available-proven | available-proven | available-proven | available-proven | available-proven | missing | available-proven | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing |
+| 09-08 | available-proven | missing | available-proven | available-proven | missing | available-proven | available-proven | missing | missing | available-proven | missing | missing | missing | missing | missing | available-proven | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing |
+| 09-09 | missing | missing | missing | missing | missing | missing | available-proven | missing | missing | missing | missing | missing | missing | missing | missing | available-proven | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing |
+| 09-10 | missing | missing | missing | missing | missing | available-proven | missing | missing | available-proven | available-proven | missing | missing | missing | missing | missing | available-proven | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing |
+| 09-11 | missing | missing | missing | available-proven | missing | available-proven | available-proven | available-proven | available-proven | missing | missing | missing | missing | missing | missing | available-proven | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing |
+| 09-14 | missing | missing | available-proven | available-proven | missing | available-proven | available-proven | missing | available-proven | missing | missing | missing | missing | missing | missing | available-proven | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing |
+| 09-15 | available-proven | missing | available-proven | available-proven | missing | missing | available-proven | missing | available-proven | missing | available-proven | missing | missing | missing | missing | available-proven | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing |
+| 09-16 | missing | missing | missing | missing | missing | available-proven | missing | missing | missing | missing | missing | missing | missing | missing | missing | available-proven | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing |
+| 09-17 | missing | missing | missing | available-proven | missing | missing | available-proven | missing | available-proven | missing | missing | missing | missing | missing | missing | available-proven | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing |
+| 09-18 | available-proven | available-proven | missing | available-proven | available-proven | missing | available-proven | available-proven | available-proven | available-proven | missing | available-proven | available-proven | missing | missing | available-proven | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing |
+| 09-21 | available-proven | available-proven | missing | available-proven | missing | available-proven | available-proven | available-proven | available-proven | available-proven | missing | available-proven | available-proven | available-proven | missing | available-proven | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing |
+| 09-22 | available-proven | available-proven | missing | available-proven | missing | missing | available-proven | available-proven | available-proven | available-proven | missing | available-proven | available-proven | available-proven | missing | available-proven | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing |
+| 09-23 | available-proven | available-proven | missing | available-proven | missing | missing | available-proven | available-proven | available-proven | available-proven | missing | available-proven | available-proven | missing | missing | available-proven | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing |
+| 09-24 | available-proven | available-proven | available-proven | available-proven | missing | available-proven | available-proven | available-proven | available-proven | available-proven | missing | available-proven | available-proven | available-proven | missing | available-proven | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing |
+| 09-25 | available-proven | available-proven | available-proven | available-proven | available-proven | available-proven | available-proven | available-proven | available-proven | available-proven | available-proven | available-proven | available-proven | missing | missing | available-proven | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing | missing |
+
+Alarm, flatten, and mover_buy have no pre-open copy of the list or the bit, and they are not rebuilt. Alarm is the camera gate HOT4 forbids. Flatten and mover_buy are union members that come from the stock-book wish list, not from the price-tape functions above.
+
+### HOT4 and holdup components
+
+HOT4 (`union_hot_n4_h1`) and holdup (`union_hot_n4_holdup`) use the same union: yday_gainer, yday_mover, ohlc_hot, overnight, probable, earn_react, plus price features for the hot_score rank, plus the alarm gate, plus flatten and mover_buy. Holdup adds a carry rule, not a new file. A component can run when its cell is `available-proven` or `rebuildable-verified`. The recipe is scored only on days where every one of those components can run.
+
+Days where every component can run: none.
+
+| Day | Components that can run | Recipe |
+| --- | --- | --- |
+| 08-13 | — | no |
+| 08-14 | — | no |
+| 08-17 | — | no |
+| 08-18 | — | no |
+| 08-19 | — | no |
+| 08-20 | — | no |
+| 08-21 | — | no |
+| 08-24 | — | no |
+| 08-25 | — | no |
+| 08-26 | — | no |
+| 08-27 | — | no |
+| 08-28 | — | no |
+| 08-31 | — | no |
+| 09-01 | — | no |
+| 09-02 | — | no |
+| 09-03 | — | no |
+| 09-04 | — | no |
+| 09-08 | — | no |
+| 09-09 | — | no |
+| 09-10 | — | no |
+| 09-11 | — | no |
+| 09-14 | — | no |
+| 09-15 | — | no |
+| 09-16 | — | no |
+| 09-17 | — | no |
+| 09-18 | — | no |
+| 09-21 | — | no |
+| 09-22 | — | no |
+| 09-23 | — | no |
+| 09-24 | — | no |
+| 09-25 | — | no |
+
+Replay of HOT4 and holdup on that set only, from $10,000, `persist=False`. Days outside the set are left out.
+
+**HOT4 and holdup on input-ready days, GLND kept.**
+No session has every HOT4 input available-proven or rebuildable-verified, so there is no return and no ending equity.
+
+**HOT4 and holdup on input-ready days, GLND removed.**
+No session has every HOT4 input available-proven or rebuildable-verified, so there is no return and no ending equity.
 
 ## What the #336 path opens
 
