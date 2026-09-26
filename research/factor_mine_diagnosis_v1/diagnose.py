@@ -359,22 +359,39 @@ def _trade_rows(trades: list[dict]) -> list[dict]:
             days_on_list=int(trade["days_on_list"]), score=trade.get("s"),
         )
         rows.append({
-            "bins": bins, "entry": trade["entry"], "hold": trade.get("hold"),
-            "recipe": trade.get("recipe"), "ret": float(trade["ret"]), "win": bool(trade["win"]),
+            "bins": bins,
+            "boost": trade.get("boost"),
+            "entry": trade["entry"],
+            "hold": trade.get("hold"),
+            "recipe": trade.get("recipe"),
+            "ret": float(trade["ret"]),
+            "side": trade.get("side"),
+            "win": bool(trade["win"]),
         })
     return rows
 
 
 def _leaf_random(leaf_rows: list[dict], random_daily: dict[str, dict[str, float]]) -> dict:
-    names = {row.get("recipe") for row in leaf_rows}
+    """Hold-matched RANDOM4 on the leaf's entry dates.
+
+    One shared exit (hold, side, holdup) uses that exit's random books.
+    Mixed holds use the long hold-1 weather-on books, and the mix is labeled.
+    """
+    names = {row.get("recipe") for row in leaf_rows if row.get("recipe")}
+    holds = {row.get("hold") for row in leaf_rows}
+    sides = {row.get("side") for row in leaf_rows}
+    boosts = {row.get("boost") for row in leaf_rows}
     entries = sorted({row["entry"] for row in leaf_rows})
-    if len(names) == 1 and next(iter(names)) in random_daily:
+    mixed = len(holds) != 1 or len(sides) != 1 or len(boosts) != 1 or not names
+    if not mixed and len(names) == 1 and next(iter(names)) in random_daily:
         key = next(iter(names))
+    elif not mixed:
+        key = next((name for name in names if name in random_daily), "hold1")
     else:
         key = "hold1"
     series = random_daily.get(key) or {}
     vals = [series[day] for day in entries if day in series]
-    return {"key": key, "mean": mean(vals), "n_days": len(vals)}
+    return {"key": key, "mean": mean(vals), "mixed_holds": mixed, "n_days": len(vals)}
 
 
 def describe_combos(trades: list[dict], forward_trades: list[dict], random_daily: dict) -> dict:
@@ -407,18 +424,21 @@ def describe_combos(trades: list[dict], forward_trades: list[dict], random_daily
             "top": forward_hits,
         }
         grown = grow_tree(forward_rows, depth)
+        forward_top = []
+        for leaf in top_leaves(grown):
+            matched = [row for row in forward_rows if leaf_matches(row["bins"], leaf["conds"])]
+            forward_top.append({
+                "conds": leaf["conds"],
+                "mean": leaf["mean_ret"],
+                "n": leaf["n"],
+                "parts": _parts(forward_rows, leaf["conds"]),
+                "random": _leaf_random(matched, random_daily),
+                "win_rate": leaf["win_rate"],
+            })
         out["forward_tree"][str(depth)] = {
             "flagged": sum(1 for leaf in grown if leaf["flag_lt_30"]),
             "leaves": len(grown),
-            "top": [
-                {
-                    "conds": leaf["conds"],
-                    "mean": leaf["mean_ret"],
-                    "n": leaf["n"],
-                    "win_rate": leaf["win_rate"],
-                }
-                for leaf in top_leaves(grown)
-            ],
+            "top": forward_top,
         }
     out["joint"] = {
         "tune": _joints(tune_rows),
@@ -532,6 +552,90 @@ def day_conditions(book: dict, days: list[dict], window: tuple[str, ...]) -> dic
     return out
 
 
+def _count(rows: list[dict], pred) -> int:
+    return sum(1 for row in rows if pred(row))
+
+
+def plain_reading(payload: dict) -> list[str]:
+    """A reading of the tables. It names where the dollars sat. It selects nothing."""
+    lines = ["## Reading", ""]
+    lines.append(
+        "These tables describe the nineteen books. The order of a table is for reading. No recipe and no combination is selected for trading."
+    )
+    lines.append("")
+    for tape, label in (("clean", "cleaned v1c"), ("yahoo", "Yahoo pin")):
+        for window, when in (("tune", "through 2026-09-11"), ("forward", "from 2026-09-14")):
+            base = [row for row in payload["baseline"] if row["tape"] == tape and row["window"] == window]
+            positive = [row for row in base if row["compound"] > 0]
+            still = [
+                row["name"] for row in positive
+                if row["ex"].get("1") is not None and row["ex"]["1"] > 0
+            ]
+            flagged = [row["name"] for row in base if row["too_few"]]
+            above = _count(
+                [row for row in payload["random"] if row["tape"] == tape and row["window"] == window],
+                lambda row: row["recipe"] > row["mean"],
+            )
+            weather_hurt = _count(
+                [row for row in payload["drop_one"] if row["tape"] == tape and row["window"] == window and row["part"] == "weather"],
+                lambda row: row["compound_delta"] < 0,
+            )
+            sort_help = _count(
+                [row for row in payload["drop_one"] if row["tape"] == tape and row["window"] == window and row["part"] == "sort"],
+                lambda row: row["compound_delta"] > 0,
+            )
+            lines.append(
+                f"On the {label} tape, {when}: {len(positive)} of 19 books compound above zero. "
+                f"After the largest name's dollars are removed, {len(still)} of those stay above zero"
+                + (f" ({', '.join(f'`{name}`' for name in still)})" if still else "")
+                + f". {above} of 19 compounds sit above the mean of that book's 1,000 RANDOM4 paths. "
+                f"The weather sit lowers the compound on {weather_hurt} of 19 books. "
+                f"The recipe sort, against a seeded shuffle of the same matched list, raises the compound on {sort_help} of 19. "
+                f"Flagged under 30 closed trades: {len(flagged)}"
+                + (f" ({', '.join(f'`{name}`' for name in flagged)})" if flagged else "")
+                + "."
+            )
+            lines.append("")
+    lines.append(
+        "`union_hot_n4_holdup` was created on 2026-09-21, so the window through 2026-09-11 is before that sleeve existed. It is described with the others. It is not promoted. Its forward row is under 30 closed trades."
+    )
+    lines.append("")
+    lines.append(
+        "A few tickers carry a large share of the net. On the cleaned tape through 2026-09-11, CYPH is the largest name on several union books, and the holdup book's CYPH dollars are about half of that book's net. From 2026-09-14 the largest names are GLND and TJGC. A share above 100% means that name's gain was larger than the book's net, because other names lost money."
+    )
+    lines.append("")
+    by_name = {
+        row["name"]: row for row in payload["baseline"]
+        if row["tape"] == "clean" and row["window"] == "tune"
+    }
+    holdup = by_name["union_hot_n4_holdup"]
+    probable = by_name["probable_h3"]
+    lines.append(
+        f"Timing on the cleaned tape through 2026-09-11: `{holdup['name']}` books "
+        f"${holdup['later_dollars']:.0f} on later days and ${holdup['first_dollars']:.0f} on the entry day, "
+        f"with ${holdup['session_dollars']:.0f} from 09:30 to the close and ${holdup['gap']:.0f} from the overnight gap. "
+        f"`probable_h3` books ${probable['later_dollars']:.0f} on later days and ${probable['first_dollars']:.0f} on the entry day, "
+        f"with ${probable['session_dollars']:.0f} from 09:30 to the close and ${probable['gap']:.0f} from the overnight gap. "
+        f"Up and down days, with morning S and the missing-IWM count, are under `conditions` in the results file."
+    )
+    lines.append("")
+    lines.append(
+        "Yahoo IWM is an outcome, and it is missing on 3 tune sessions and on all 10 sessions from 2026-09-14. Those sessions are counted as missing. The cleaned tape has an IWM bar on the sessions in this study."
+    )
+    lines.append("")
+    clean = payload["combos"]["clean"]["tune_tree"]["2"]["top"]
+    earn = next((leaf for leaf in clean if any(c["feature"] == "earn" and c["op"] == "!=" for c in leaf["conds"])), None)
+    if earn:
+        lines.append(
+            f"The tune tree's earnings-react leaf has {earn['tune_n']} pooled trades and a {100 * earn['tune_win']:.1f}% win rate. "
+            f"The same leaf on forward trades has {earn['forward_n']} trades"
+            + (" and is flagged under 30." if earn["forward_too_few"] else ".")
+            + " Pooled counts can repeat a name-day once per recipe. Joint buckets with at least 30 trades that sit farthest from a 50% win rate are losing buckets. No leaf is selected."
+        )
+        lines.append("")
+    return lines
+
+
 def render(payload: dict) -> str:
     lines = [
         "# factor_mine_diagnosis_v1",
@@ -543,6 +647,7 @@ def render(payload: dict) -> str:
         "A row with fewer than 30 closed trades is flagged and kept.",
         "",
     ]
+    lines.extend(plain_reading(payload))
     lines.append("## Baseline")
     lines.append("")
     lines.append("| recipe | tape | window | compound | flat 15bp | win rate | closed | up | down | flat | <30 | ex-best |")
@@ -635,12 +740,21 @@ def render(payload: dict) -> str:
     lines.append("")
     lines.append("| recipe pool | tape | window | side | n | entry px | ret 5 | cond | hot | days on list | news good | earn | S |")
     lines.append("| --- | --- | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |")
+    camera_lines = []
     for row in payload["profiles"]:
         for side in ("winners", "losers"):
-            prof = row[side]
+            prof = row[side] or {}
             lines.append(
                 f"| all subjects | {row['tape']} | {row['window']} | {side} | {row['n_'+side]} | {_num(prof.get('entry_px'))} | {_num(prof.get('ret_5'))} | {_num(prof.get('cond_net'))} | {_num(prof.get('hot'))} | {_num(prof.get('days_on_list'))} | {_pct(prof.get('news_good'))} | {_pct(prof.get('earn_react'))} | {_num(prof.get('weather_s'))} |"
             )
+            cams = ", ".join(
+                f"{item['tone']} {_pct(item['share'])}" for item in (prof.get("cameras") or [])[:6]
+            )
+            camera_lines.append(f"- {row['tape']} {row['window']} {side}: {cams or '—'}")
+    lines.append("")
+    lines.append("Most common camera tones on those trades:")
+    lines.append("")
+    lines.extend(camera_lines)
     lines.append("")
     lines.append("## Combo descriptions")
     lines.append("")
@@ -660,22 +774,60 @@ def render(payload: dict) -> str:
                     f"| {text} | {leaf['tune_n']} | {_pct(leaf['tune_win'])} | {_pct(leaf['tune_mean'])} | {leaf['forward_n']} | {_pct(leaf['forward_win'])} | {_pct(leaf['forward_mean'])} | {'yes' if leaf['forward_too_few'] else ''} |"
                 )
             lines.append("")
-            if tree["top"]:
-                lines.append("Each condition alone, on the tune trade pool, and the random-book mean on the leaf's entry dates:")
+            _combo_parts(lines, tree["top"], n_key="tune_n", win_key="tune_win", mean_key="tune_mean")
+        for depth, tree in block["forward_tree"].items():
+            lines.append(f"### {tape} forward tree depth {depth}")
+            lines.append("")
+            lines.append("Grown on forward trades only. A description of that window. Not a selection.")
+            lines.append("")
+            lines.append(f"Leaves {tree['leaves']}, flagged under 30: {tree['flagged']}.")
+            lines.append("")
+            lines.append("| conditions | n | win | mean |")
+            lines.append("| --- | ---: | ---: | ---: |")
+            for leaf in tree["top"]:
+                text = "; ".join(f"{c['feature']} {c['op']} {c['value']}" for c in leaf["conds"])
+                lines.append(f"| {text} | {leaf['n']} | {_pct(leaf['win_rate'])} | {_pct(leaf['mean'])} |")
+            lines.append("")
+            _combo_parts(lines, tree["top"], n_key="n", win_key="win_rate", mean_key="mean")
+        for window_name in ("tune", "forward"):
+            joints = block["joint"][window_name]
+            for spec, grid in joints.items():
+                lines.append(f"### {tape} {window_name} joint {spec}")
                 lines.append("")
-                lines.append("| leaf | part | n | win | mean | <30 | random mean |")
-                lines.append("| --- | --- | ---: | ---: | ---: | --- | ---: |")
-                for leaf in tree["top"]:
-                    label = "; ".join(f"{c['feature']}{c['op']}{c['value']}" for c in leaf["conds"])
-                    for part in leaf["parts"]:
-                        cond = part["cond"]
-                        lines.append(
-                            f"| {label} | {cond['feature']} {cond['op']} {cond['value']} | {part['n']} | {_pct(part['win_rate'])} | {_pct(part['mean'])} | {'yes' if part['too_few'] else ''} | {_pct(leaf['random']['mean'])} |"
-                        )
+                lines.append(f"Cells under 30, counted and not listed: {grid['flagged_lt_30']}.")
                 lines.append("")
-    lines.append("Joint buckets with at least 30 trades are in `RESULTS.json` under `combos`. Cells under 30 are counted and not listed as combos.")
+                lines.append("| bucket | n | win | mean |")
+                lines.append("| --- | ---: | ---: | ---: |")
+                for cell in grid["cells"]:
+                    lines.append(
+                        f"| {' · '.join(cell['key'])} | {cell['n']} | {_pct(cell['win_rate'])} | {_pct(cell['mean'])} |"
+                    )
+                lines.append("")
+    lines.append("No leaf and no bucket is selected for trading.")
     lines.append("")
     return "\n".join(lines) + "\n"
+
+
+def _combo_parts(lines: list[str], leaves: list[dict], *, n_key: str, win_key: str, mean_key: str) -> None:
+    if not leaves:
+        return
+    lines.append("Full combination, each condition alone, and RANDOM4 on the leaf's entry dates. A mixed-hold leaf uses the long hold-1 weather-on random books.")
+    lines.append("")
+    lines.append("| leaf | part | n | win | mean | <30 | random mean | random book |")
+    lines.append("| --- | --- | ---: | ---: | ---: | --- | ---: | --- |")
+    for leaf in leaves:
+        label = "; ".join(f"{c['feature']}{c['op']}{c['value']}" for c in leaf["conds"])
+        random = leaf["random"]
+        book = "hold-1 mixed" if random.get("mixed_holds") else str(random.get("key"))
+        lines.append(
+            f"| {label} | full combo | {leaf[n_key]} | {_pct(leaf[win_key])} | {_pct(leaf[mean_key])} |  | {_pct(random['mean'])} | {book} |"
+        )
+        for part in leaf["parts"]:
+            cond = part["cond"]
+            lines.append(
+                f"| {label} | {cond['feature']} {cond['op']} {cond['value']} | {part['n']} | {_pct(part['win_rate'])} | {_pct(part['mean'])} | {'yes' if part['too_few'] else ''} | {_pct(random['mean'])} | {book} |"
+            )
+    lines.append("")
 
 
 def main() -> None:
@@ -866,12 +1018,20 @@ def main() -> None:
         # combos from pooled baseline trades
         tune_trades = []
         forward_trades = []
+        tune_set = set(TUNE)
+        forward_set = set(FORWARD)
         for recipe in recipes:
             for trade in books[recipe["name"]]["closed"]:
-                if trade["exit"] in set(TUNE):
-                    tune_trades.append(trade)
-                elif trade["exit"] in set(FORWARD):
-                    forward_trades.append(trade)
+                if trade["exit"] not in tune_set and trade["exit"] not in forward_set:
+                    continue
+                stamped = dict(trade)
+                stamped["boost"] = recipe.get("s_boost") or "none"
+                stamped["hold"] = int(recipe["hold"])
+                stamped["recipe"] = recipe["name"]
+                if trade["exit"] in tune_set:
+                    tune_trades.append(stamped)
+                else:
+                    forward_trades.append(stamped)
         # random daily mean for leaf comparison: matched is not one series; use hold-1 and also each recipe later if needed
         random_daily = {"hold1": {}}
         for index, session in enumerate(SESSIONS):
