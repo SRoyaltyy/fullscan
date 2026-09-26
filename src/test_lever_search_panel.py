@@ -339,6 +339,13 @@ def test_initial_inputs_and_hash_guard() -> None:
     assert len(manifest["finviz_proven_dates"]) == 24
     assert_finviz_date("2026-08-07")
     assert_manifest_hashes()
+    from src.lever_search_inputs import SUGGESTIONS_CSV, sha256_git_blob
+
+    sug = next(item for item in manifest["pinned_files"] if item["path"] == SUGGESTIONS_CSV)
+    assert sug["sha256"] == "a2906ccde607dbbfe77967592ba44e37b57e3dc636b734b6092d243f5e877dc3"
+    assert sug["commit_sha"] == "d17af51c6a4d59b90d26f7207c4762cc0b3a99eb"
+    repo = Path(__file__).resolve().parents[1]
+    assert sha256_git_blob(repo, sug["commit_sha"], SUGGESTIONS_CSV) == sug["sha256"]
     for name in ("fwd_1d", "tr1d_ret_H", "trf_true_ret", "label_date_1", "seg_mom"):
         try:
             assert_initial_finviz_column(name)
@@ -506,6 +513,65 @@ def test_initial_inputs_and_hash_guard() -> None:
         raise AssertionError("bad hash was accepted")
 
 
+def test_suggestions_hash_ignores_live_rewrite() -> None:
+    """The guard hashes the preregistration blob, even when the worktree file is absent."""
+    from src.lever_search_inputs import (
+        SUGGESTIONS_CSV,
+        InputHashError,
+        assert_manifest_hashes,
+        load_manifest,
+    )
+
+    manifest = load_manifest()
+    item = next(row for row in manifest["pinned_files"] if row["path"] == SUGGESTIONS_CSV)
+    only = {"pinned_files": [item]}
+    with tempfile.TemporaryDirectory() as tmp:
+        assert_manifest_hashes(root=Path(tmp), manifest=only)
+    bad = {"pinned_files": [dict(item, sha256="0" * 64)]}
+    try:
+        assert_manifest_hashes(manifest=bad)
+    except InputHashError:
+        pass
+    else:
+        raise AssertionError("bad suggestions hash was accepted")
+
+
+def test_suggestions_signal_cell_is_frozen() -> None:
+    """A tracking refresh of the live file passes. A signal cell does not."""
+    from src.lever_search_inputs import (
+        SUGGESTIONS_CSV,
+        InputHashError,
+        assert_suggestions_signal_columns,
+        load_pinned_suggestions,
+        read_pinned_suggestions,
+    )
+
+    pinned = read_pinned_suggestions()
+    repo = Path(__file__).resolve().parents[1]
+    live = (repo / SUGGESTIONS_CSV).read_text(encoding="utf-8")
+    assert_suggestions_signal_columns(pinned.decode("utf-8"), live)
+    with tempfile.TemporaryDirectory() as tmp:
+        loaded = load_pinned_suggestions(root=Path(tmp))
+    assert loaded
+    assert loaded[0]["ticker"]
+
+    header = (
+        "run_date,signal_date,ticker,side,strategy,exit_rule,ref_close,"
+        "first_open,current_price,ret_vs_close,ret_vs_open,days_held,signal_colors"
+    )
+    base = "2026-07-28,2026-07-24,AEP,LONG,L1,tp8,135.54,135.18,118.35,-1%,-2%,4,green"
+    tracking = "2026-07-28,2026-07-24,AEP,LONG,L1,tp8,135.54,135.18,99.00,9%,8%,1,green"
+    signal = "2026-07-28,2026-07-24,ZZZ,LONG,L1,tp8,135.54,135.18,118.35,-1%,-2%,4,green"
+    pin_text = header + "\n" + base + "\n"
+    assert_suggestions_signal_columns(pin_text, header + "\n" + tracking + "\n")
+    try:
+        assert_suggestions_signal_columns(pin_text, header + "\n" + signal + "\n")
+    except InputHashError:
+        pass
+    else:
+        raise AssertionError("changed signal cell was accepted")
+
+
 def main() -> None:
     tests = [
         test_prereg_whitelist_matches_loader,
@@ -518,6 +584,8 @@ def main() -> None:
         test_requesting_excluded_column_raises_before_load,
         test_tally_lines_stay_in_prereg,
         test_initial_inputs_and_hash_guard,
+        test_suggestions_hash_ignores_live_rewrite,
+        test_suggestions_signal_cell_is_frozen,
     ]
     failed = 0
     for fn in tests:
