@@ -36,6 +36,7 @@ from research.factor_mine_avg_v1.protocol import (  # noqa: E402
     mean,
     median,
     prereg_fingerprint,
+    random4_rows,
     universe,
 )
 from src.lever_search_proof import required_roles  # noqa: E402
@@ -111,7 +112,13 @@ class Hide:
 def _pct(value) -> str:
     if value is None:
         return "n/a"
-    return f"{float(value) * 100:.2f}%"
+    shown = float(value)
+    if shown == 0.0:
+        shown = 0.0
+    text = f"{shown * 100:.2f}%"
+    if text == "-0.00%":
+        return "0.00%"
+    return text
 
 
 def _num(value, digits: int = 2) -> str:
@@ -239,13 +246,6 @@ def _blank_recipe(name: str, hold: int, top_n: int) -> dict:
     }
 
 
-def _pick_rows(session: str, names: list[str]) -> list[dict]:
-    return [
-        {"date": session, "ticker": ticker, "sources": ["union"], "src_rank": i}
-        for i, ticker in enumerate(names)
-    ]
-
-
 def _pool(rows: list[dict], store, session: str) -> list[str]:
     out = []
     for row in rows:
@@ -304,7 +304,7 @@ def _random4(store, fees: dict, pools: dict[str, list[str]]) -> list[dict]:
             pool = list(pools.get(session) or [])
             k = min(RANDOM4_N, len(pool))
             picks = rng.sample(pool, k) if k else []
-            rows[session] = _pick_rows(session, picks)
+            rows[session] = random4_rows(session, picks)
         books.append(walk_recipe(recipe, list(SESSIONS), rows, store, ok, fees))
         if draw_i % 200 == 0:
             print(f"random4 {draw_i}", flush=True)
@@ -578,6 +578,10 @@ def main() -> None:
             },
             "per_recipe": per,
         }
+        for version in ("a", "b"):
+            rnd = windows[key][version]["random4"]
+            if rnd["compound_mean"] == 0.0 and rnd["compound_median"] == 0.0:
+                raise SystemExit(f"RANDOM4 sat every draw on {key} {version}")
     payload = {
         "clean_commit": drop["source_commit"],
         "cleaned_parquet_sha256": drop["cleaned_parquet_sha256"],

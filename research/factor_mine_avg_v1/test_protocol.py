@@ -22,6 +22,7 @@ from research.factor_mine_avg_v1.protocol import (  # noqa: E402
     load_drop,
     median,
     prereg_fingerprint,
+    random4_rows,
     universe,
 )
 
@@ -103,6 +104,13 @@ def test_ex_best_removes_only_the_best_ticker() -> None:
     assert abs(compound([0.10, 0.10]) - 0.21) < 1e-12
 
 
+def test_random4_rows_are_stock_book_picks() -> None:
+    rows = random4_rows("2026-08-13", ["AAA", "BBB"])
+    assert [row["sources"] for row in rows] == [["stock_book"], ["stock_book"]]
+    assert [row["ticker"] for row in rows] == ["AAA", "BBB"]
+    assert [row["src_rank"] for row in rows] == [0, 1]
+
+
 def test_diff_stays_inside_the_study() -> None:
     try:
         base = _git("merge-base", "HEAD", "origin/main").strip()
@@ -148,6 +156,7 @@ def main() -> None:
     test_windows_do_not_overlap_and_stop_where_locked()
     test_drop_list_is_the_362_cleanup()
     test_ex_best_removes_only_the_best_ticker()
+    test_random4_rows_are_stock_book_picks()
     test_diff_stays_inside_the_study()
     test_results_do_not_rewrite_the_prereg()
     print("factor_mine_avg_v1 protocol ok")

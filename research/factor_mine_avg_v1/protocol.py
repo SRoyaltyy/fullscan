@@ -174,6 +174,14 @@ def ex_best_compound(
     return compound(out)
 
 
+def random4_rows(session: str, names: list[str]) -> list[dict]:
+    """Picks the union walk keeps on a stock_book day and drops on a sit day."""
+    return [
+        {"date": session, "ticker": ticker, "sources": ["stock_book"], "src_rank": i}
+        for i, ticker in enumerate(names)
+    ]
+
+
 def mean(values: list[float]) -> float | None:
     if not values:
         return None
