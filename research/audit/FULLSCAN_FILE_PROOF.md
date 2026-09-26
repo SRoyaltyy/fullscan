@@ -10,7 +10,7 @@ S is the predict.md score (`Prediction: … total score`). When predict.md was n
 
 Headline inputs (actions, baseline, catalyst, digest, events, judge, map_heat, market_digest, parsed, research) have `stale_content=yes` on the 18 quarantine sessions (7 stale-dated, 11 undated Finviz). Those rows count only when `before_0930=yes` and `stale_content=no`.
 
-Excel's separate proof table is not on `origin/main`. Theme Radar's not-proven-frozen file was not part of this CSV. Excel daily notes and `suggestions.csv` below use the same job-log rule as the other files.
+Excel rows use the owner table `research/audit/excel_preopen_proof.csv`: session N reads `suggestions.csv` rows whose `signal_date` is the prior trading day, and the `excel_bot.yml` run must have finished before 13:30 UTC. A same-day filename is not the session key.
 
 | input | proven days | total |
 |---|---:|---:|
@@ -37,8 +37,8 @@ Excel's separate proof table is not on `origin/main`. Theme Radar's not-proven-f
 | universe_membership | 0 | 31 |
 | segment_stats | 0 | 31 |
 | quote_colors | 9 | 31 |
-| excel_daily | 0 | 31 |
-| excel_suggestions | 0 | 31 |
+| excel_daily | 17 | 31 |
+| excel_suggestions | 17 | 31 |
 | S | 27 | 31 |
 | hard_red | 27 | 31 |
 | sector_predict | 21 | 31 |
@@ -49,7 +49,7 @@ Excel's separate proof table is not on `origin/main`. Theme Radar's not-proven-f
 
 Join, peers, universe membership, and segment stats have ranked rows and a dated filename, and the body does not contain the session date. `green.json` is the same: a pre-open copy on some days, with no session date in the json. Coverage fails for those, so they are not PROVEN.
 
-Excel daily notes that exist were pushed after 13:30 UTC (0/31 before the open). `suggestions.csv` is cumulative: on days a pre-open blob exists, that blob has zero rows dated that morning, and `late_rows` lists the signal rows added later (0/31). Excel's own proof table is not on `origin/main` (`777415401c5b`). Those two inputs stay pending owner proof.
+Excel, owner proof, these 31 sessions: 14 PROVEN (08-31, 09-03, 09-08, 09-10, 09-14 through 09-18, 09-21 through 09-25) and 3 PROVEN_BUT_CHANGED, where only the pre-open rows count (09-02 drop CMII, 09-04 drop AUBN, 09-11 drop SVCC). Not proven: 08-13 through 08-28, 09-01, and 09-09. GitHub API spot-check agreed. Run 33322096008 finished 2026-08-30T16:22:25Z and its job log says `[safe-push] pushed 2cc2571` (commit `2cc2571f494e`), before the 08-31 open. Run 34490029194 finished 2026-09-10T15:22:39Z and pushed `4dc97fcb`, before the 09-11 open; SVCC arrived in run 34610907074, which finished 2026-09-11T15:22:17Z, after that open. Run 34240092081 (09-08) was cancelled and left no 09-09 signals.
 
 Theme Radar landed [research/lever_panel/server_time_proof.csv](https://github.com/SRoyaltyy/theme-radar/blob/19973230e4d80c74565e1246ada911503a808fb7/research/lever_panel/server_time_proof.csv) at `19973230e4d80c74565e1246ada911503a808fb7` (2026-09-26T03:56:51Z). All 234 rows are `PROVEN` from that repo's Actions logs. There is no separate "not proven frozen" file next to the lever panel. That table is Theme Radar's Finviz lever panel, not this repo's `panel.json`.
 

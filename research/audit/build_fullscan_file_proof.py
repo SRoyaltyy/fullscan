@@ -28,6 +28,11 @@ ROOT = Path("/workspace")
 CACHE = Path("/tmp/fm_audit_336")
 OUT_CSV = ROOT / "research/audit/FULLSCAN_FILE_PROOF.csv"
 OUT_MD = ROOT / "research/audit/FULLSCAN_FILE_PROOF.md"
+EXCEL_PROOF = ROOT / "research/audit/excel_preopen_proof.csv"
+EXCEL_RUN = re.compile(
+    r"actions_run (\d+) \(([^)]+)\) job (\d+).*?"
+    r"run (\d{4}-\d{2}-\d{2}T[\d:.]+Z)\.\.(\d{4}-\d{2}-\d{2}T[\d:.]+Z)"
+)
 HITS = CACHE / "push_hits.tsv"
 MAIN = "origin/main"
 
@@ -762,6 +767,148 @@ def catalog(history_paths: set[str]) -> dict[str, list[tuple[str, str]]]:
     return by_day
 
 
+# Owner proof: session N uses the prior trading day's signal_date. Only the
+# pre-open rows count. These three tickers landed after 13:30 UTC.
+EXCEL_LATE_ROWS = {
+    "2026-09-02": "added=2:CMII/L1_long_green_tp8_lowvol,CMII/L2_long_green_tp3_lowvol",
+    "2026-09-04": "added=2:AUBN/L1_long_green_tp8_lowvol,AUBN/L2_long_green_tp3_lowvol",
+    "2026-09-11": "added=2:SVCC/L1_long_green_tp8_lowvol,SVCC/L2_long_green_tp3_lowvol",
+}
+EXCEL_LATE_SHA = {
+    "2026-09-02": "1b3ec8c8",
+    "2026-09-04": "fb22c0b5",
+    "2026-09-11": "87aeb549",
+}
+
+
+def git_blob(commit: str, path: str) -> str:
+    if not commit or not path or path.startswith("("):
+        return ""
+    proc = subprocess.run(
+        ["git", "rev-parse", "--verify", f"{commit}:{path}"],
+        cwd=ROOT, capture_output=True, text=True, check=False,
+    )
+    if proc.returncode != 0:
+        return ""
+    return proc.stdout.strip()
+
+
+def resolve_commit(prefix: str) -> str:
+    prefix = (prefix or "").strip()
+    if not prefix:
+        return ""
+    proc = subprocess.run(
+        ["git", "rev-parse", "--verify", f"{prefix}^{{commit}}"],
+        cwd=ROOT, capture_output=True, text=True, check=False,
+    )
+    if proc.returncode != 0:
+        return ""
+    return proc.stdout.strip()
+
+
+def apply_excel_owner_proof(rows: list[dict]) -> None:
+    """Replace excel_daily and excel_suggestions with the owner proof table.
+
+    A session counts only when excel_preopen_proof.csv says PROVEN or
+    PROVEN_BUT_CHANGED. MISSING owner rows (no bot yet, or zero signals)
+    are NOT_PROVEN. The owner column proven=True on a zero-row day is an
+    earlier suggestions blob, not this session's signals.
+    """
+    if not EXCEL_PROOF.exists():
+        raise SystemExit(f"missing {EXCEL_PROOF}")
+    by_day: dict[str, dict] = {}
+    with EXCEL_PROOF.open(encoding="utf-8", newline="") as fh:
+        for rec in csv.DictReader(fh):
+            by_day[rec["session_date"]] = rec
+    head_ref = "origin/main"
+    for row in rows:
+        if row["input"] not in ("excel_daily", "excel_suggestions"):
+            continue
+        owner = by_day.get(row["date"])
+        if owner is None:
+            row["status"] = "NOT_PROVEN"
+            row["proven"] = "no"
+            row["before_0930"] = "no"
+            row["coverage"] = "no"
+            row["coverage_note"] = "no owner row in excel_preopen_proof.csv"
+            row["stale_content"] = "n/a"
+            row["candidate_from_per_day_files"] = "no"
+            continue
+        status = (owner.get("status") or "").strip()
+        counts = status in ("PROVEN", "PROVEN_BUT_CHANGED")
+        try:
+            n_pre = int(owner.get("n_signal_rows_preopen") or 0)
+        except ValueError:
+            n_pre = 0
+        match = EXCEL_RUN.search(owner.get("server_proof_kind") or "")
+        commit = resolve_commit(owner.get("preopen_commit") or "")
+        note = (owner.get("diff_note") or "").strip()
+        if row["input"] == "excel_suggestions":
+            path = "excel_bot/suggestions/suggestions.csv"
+            blob = git_blob(commit, path) if counts and commit else ""
+            head_blob = git_blob(head_ref, path)
+            identical = "yes" if blob and blob == head_blob else ("no" if blob else "n/a")
+        else:
+            files = [
+                part.strip()
+                for part in (owner.get("signal_file") or "").split(";")
+                if part.strip() and part.strip() != "(none)"
+            ]
+            if counts and files:
+                path = ";".join(files)
+                blobs = [git_blob(commit, part) for part in files]
+                blob = ";".join(item for item in blobs if item)
+                identical = "yes" if blobs and all(
+                    item and item == git_blob(head_ref, part)
+                    for item, part in zip(blobs, files)
+                ) else "no"
+            else:
+                path = "(none)"
+                blob = ""
+                identical = "n/a"
+        row["path"] = path
+        row["blob_sha"] = blob
+        server = (owner.get("server_time_utc") or "").strip()
+        row["first_server_time_utc"] = server
+        row["server_time_utc"] = server
+        row["server_kind"] = "log_line" if server else ""
+        row["run_id"] = match.group(1) if match else ""
+        row["run_start_utc"] = match.group(4) if match else ""
+        row["run_finish_utc"] = match.group(5) if match else ""
+        row["generator_workflow"] = (
+            "Excel Bot (cluster signals daily)" if match else ""
+        )
+        row["generator_script"] = "excel_bot (excel_bot.yml)" if match else ""
+        row["generator_commit"] = ""
+        row["stale_content"] = "n/a"
+        row["byte_identical_to_head"] = identical
+        row["coverage_note"] = note
+        row["candidate_from_per_day_files"] = "no"
+        if counts and n_pre > 0:
+            row["status"] = status
+            row["proven"] = "yes"
+            row["before_0930"] = "yes"
+            row["coverage"] = "yes"
+            if status == "PROVEN_BUT_CHANGED":
+                row["later_modified"] = "yes"
+                row["late_rows"] = EXCEL_LATE_ROWS.get(row["date"], "")
+                row["later_shas"] = EXCEL_LATE_SHA.get(row["date"], "")
+            else:
+                row["later_modified"] = "no"
+                row["late_rows"] = ""
+                row["later_shas"] = ""
+        else:
+            row["status"] = "NOT_PROVEN"
+            row["proven"] = "no"
+            row["before_0930"] = "no"
+            row["coverage"] = "no"
+            row["later_modified"] = "no"
+            row["late_rows"] = ""
+            row["later_shas"] = ""
+            row["blob_sha"] = ""
+            row["byte_identical_to_head"] = "n/a"
+
+
 def day_proven(rows: list[dict], role: str) -> bool:
     group = [row for row in rows if row["input"] == role]
     if not group:
@@ -793,7 +940,7 @@ def render_md(rows: list[dict], stats: dict, quarantine: dict[str, str]) -> str:
         "",
         f"Headline inputs ({', '.join(sorted(HEADLINE))}) have `stale_content=yes` on the {len(quarantine)} quarantine sessions (7 stale-dated, 11 undated Finviz). Those rows count only when `before_0930=yes` and `stale_content=no`.",
         "",
-        "Excel's separate proof table is not on `origin/main`. Theme Radar's not-proven-frozen file was not part of this CSV. Excel daily notes and `suggestions.csv` below use the same job-log rule as the other files.",
+        "Excel rows use the owner table `research/audit/excel_preopen_proof.csv`: session N reads `suggestions.csv` rows whose `signal_date` is the prior trading day, and the `excel_bot.yml` run must have finished before 13:30 UTC. A same-day filename is not the session key.",
         "",
         "| input | proven days | total |",
         "|---|---:|---:|",
@@ -813,7 +960,7 @@ def render_md(rows: list[dict], stats: dict, quarantine: dict[str, str]) -> str:
         "",
         "Join, peers, universe membership, and segment stats have ranked rows and a dated filename, and the body does not contain the session date. `green.json` is the same: a pre-open copy on some days, with no session date in the json. Coverage fails for those, so they are not PROVEN.",
         "",
-        "Excel daily notes that exist were pushed after 13:30 UTC (0/31 before the open). `suggestions.csv` is cumulative: on days a pre-open blob exists, that blob has zero rows dated that morning, and `late_rows` lists the signal rows added later (0/31). Excel's own proof table is not on `origin/main` (`777415401c5b`). Those two inputs stay pending owner proof.",
+        "Excel, owner proof, these 31 sessions: 14 PROVEN (08-31, 09-03, 09-08, 09-10, 09-14 through 09-18, 09-21 through 09-25) and 3 PROVEN_BUT_CHANGED, where only the pre-open rows count (09-02 drop CMII, 09-04 drop AUBN, 09-11 drop SVCC). Not proven: 08-13 through 08-28, 09-01, and 09-09. GitHub API spot-check agreed. Run 33322096008 finished 2026-08-30T16:22:25Z and its job log says `[safe-push] pushed 2cc2571` (commit `2cc2571f494e`), before the 08-31 open. Run 34490029194 finished 2026-09-10T15:22:39Z and pushed `4dc97fcb`, before the 09-11 open; SVCC arrived in run 34610907074, which finished 2026-09-11T15:22:17Z, after that open. Run 34240092081 (09-08) was cancelled and left no 09-09 signals.",
         "",
         "Theme Radar landed [research/lever_panel/server_time_proof.csv](https://github.com/SRoyaltyy/theme-radar/blob/19973230e4d80c74565e1246ada911503a808fb7/research/lever_panel/server_time_proof.csv) at `19973230e4d80c74565e1246ada911503a808fb7` (2026-09-26T03:56:51Z). All 234 rows are `PROVEN` from that repo's Actions logs. There is no separate \"not proven frozen\" file next to the lever panel. That table is Theme Radar's Finviz lever panel, not this repo's `panel.json`.",
         "",
@@ -861,6 +1008,7 @@ def main() -> None:
             print(f"day {day} rows {len(rows)}", flush=True)
     finally:
         blobs.close()
+    apply_excel_owner_proof(rows)
     OUT_CSV.parent.mkdir(parents=True, exist_ok=True)
     with OUT_CSV.open("w", encoding="utf-8", newline="") as fh:
         writer = csv.DictWriter(fh, fieldnames=COLUMNS, lineterminator="\n")
