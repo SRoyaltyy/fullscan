@@ -291,6 +291,15 @@ def test_tally_lines_stay_in_prereg() -> None:
     assert "30d483f2944b6a23e5ebca5bd894aeba1e2b94366de5d1168c2fe568f16fb32c" in text
     assert "b01166a6a3803672c21daf4af55c276402abb3c7" in text
     assert "excel_ml_count: LATER_ADDON" in text
+    assert "1bf94d7dc3ce00c29667d0fae6fdb6bb8effb73c" in text
+    assert "832eaa4fdc19d368d87a4dad5c3edd3c200b0a54" in text
+    assert "3456f7f489a6fa7033e8ae5cc942d8279f0113e3" in text
+    assert "stale_content" in text
+    assert "A1-A15" in text
+    assert "0/3" in text
+    assert "split-adjusted" in text
+    assert "search days min 0, median 10, max 25" in text
+    assert "Check days min 0, median 7, max 16" in text
     digest = covered_fingerprint(text)
     assert f"fingerprint_sha256: {digest}" in text
 
@@ -449,6 +458,15 @@ def test_initial_inputs_and_hash_guard() -> None:
     assert manifest["append_only"]["manifest"].endswith("manifest.jsonl")
     assert manifest["group3_n"] == 110
     assert manifest["fullscan_file_proof"]["path"].endswith("FULLSCAN_FILE_PROOF.csv")
+    assert manifest["fullscan_file_proof"]["commit"] == "1bf94d7dc3ce00c29667d0fae6fdb6bb8effb73c"
+    assert manifest["fullscan_file_proof"]["blob_sha"] == "832eaa4fdc19d368d87a4dad5c3edd3c200b0a54"
+    assert manifest["group3_days"]["search_min"] == 0
+    assert manifest["group3_days"]["search_median"] == 10
+    assert manifest["group3_days"]["search_max"] == 25
+    assert manifest["group3_days"]["check_min"] == 0
+    assert manifest["group3_days"]["check_median"] == 7
+    assert manifest["group3_days"]["check_max"] == 16
+    assert "A1-A15" in manifest["fullscan_file_proof"]["ab_part_a"]
     assert manifest["group1_n"] == GROUP1_N
     assert manifest["group2_n"] == GROUP2_N
     assert manifest["panel_meta"]["plain_finviz_fields"] == 50

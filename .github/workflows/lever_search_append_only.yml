@@ -19,5 +19,7 @@ jobs:
         run: PYTHONHASHSEED=0 python3 -m src.test_lever_search_append
       - name: Prereg panel tests
         run: PYTHONHASHSEED=0 python3 -m src.test_lever_search_panel
+      - name: Same-day bar and proof-day tests
+        run: PYTHONHASHSEED=0 python3 -m src.test_lever_search_bars
       - name: Fail if an earlier factor_mine_seq session changed
         run: python3 -m src.lever_search_append --check-against "${{ github.event.pull_request.base.sha }}"
