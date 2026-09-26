@@ -12,7 +12,7 @@ Changing a feature, the target, the ridge penalty, the training minimum, the hol
 
 ## What it trades
 
-The universe each morning is that session's rows on the fullscan morning panel, `data/factor_mine/panel.json`. That file is the 09:30 ET candidate list (about 60 to 100 names on a normal day; 9 names on 2026-08-13). Rows dated 2026-09-14 or later are dropped before any feature, fit, or score.
+The universe each morning would be that session's rows in `data/factor_mine/panel.json` as that file stood in git before 09:30 ET on that morning. The clock is the latest commit on main that has a GitHub Actions `run_started_at` strictly before 09:30 ET. The git committer date is not the clock. Today's worktree `panel.json` is not read. A morning whose pinned blob has no row for that date is dropped. A later rewrite is not substituted.
 
 Prices are the factor-mine Yahoo tape `data/prices/ohlc.parquet`. Those bars are `auto_adjust=false`, which this repo treats as split-adjusted and not dividend-adjusted. A name with no positive open that session is dropped from the buy list. The loader refuses any bar dated 2026-09-14 or later. The luck-test load stops at 2026-09-11. Price features may use bars back to 2024-03-04. This lever's load starts at 2026-05-01, which is inside that window and is enough for a 20-session return before 2026-08-13.
 
@@ -48,29 +48,11 @@ Price features, from bars with date strictly before N (today's open is not one o
 - `px_gap_prior`: prior session's open / the close before that, minus 1
 - `px_rvol_prior`: prior volume / mean of the last 20 prior volumes, including that prior bar, when at least 8 prior bars exist (same rvol as `ohlc_ripper.from_bars`)
 
-Excel features come only from `excel_bot/daily/<date>_excel_bot.md`. Draft notes are not signal files. The live `excel_bot/suggestions/suggestions.csv` is not read: it is rewritten through later dates and its `current_price`, `ret_vs_close`, and `ret_vs_open` columns are tracking marks. The clear-letter panel `excel_bot/research/excel_clear_letter_panel.csv` is not a morning input in INPUT_HISTORY (it was generated 2026-09-12) and is not read.
+Excel features, on a morning that is actually loaded, come from `excel_bot/suggestions/suggestions.csv` as that file stood in the same pre-open commit. Only the signal columns are read: `ticker`, `side`, `strategy`, `signal_date`. `current_price`, `ret_vs_close`, `ret_vs_open`, and `days_held` are tracking marks and their cells are not subscripted. A row with `signal_date` on the morning itself, or later, is not a feature. No morning in this window is loaded, so these columns are not read for the published series. The clear-letter panel is not a morning input in INPUT_HISTORY and is not read. Daily note files are not read from today's tree.
 
-The job that writes a daily note runs after the US close. Some dates were committed twice, once midday and again after the close. For a note dated D, the legal blob is the last git commit strictly before the next fullscan panel session's 09:30 ET. A commit at 09:30 is too late. That is the same rule Factor Mine's freeze uses (`last_commit_before`: strictly before the open). That blob is a feature on that next session only. It is not a feature on D, and it is not picked up on a later morning. If every commit is at or after that open, the note is unused. If the next panel session is on or after 2026-09-14, the note is not loaded.
-
-Two notes can share one morning. The 2026-09-04 note and the 2026-09-05 note both become visible at the 2026-09-08 open, and both are used that morning. Mornings before 2026-08-31 have no daily note, so the Excel flags are 0.
-
-Only the New suggestions table is read. The parser stops at the next heading, so the scoreboard and the best and worst sections (live returns) are ignored. Columns kept from that table are ticker, side, and strategy. Strategy is an open name list and is not a model column. Signal colors are not a feature.
-
-- `excel_sugg_long`: 1 if this ticker has a LONG row on a note pinned to morning N, else 0
+- `excel_sugg_long`: 1 if this ticker has a LONG row on the prior confirm in that pre-open file, else 0
 - `excel_sugg_short`: same for SHORT
-- `excel_sugg_n`: how many such rows (a name can match more than one strategy)
-
-Pins used for this window (short sha, full sha is the git object):
-
-- 2026-08-30 note, visible 2026-08-31: `2cc2571f494e` (the 15:45Z commit is earlier and is not used)
-- 2026-09-01 note, visible 2026-09-02: `5fc8152510be`
-- 2026-09-02 note, visible 2026-09-03: `a9ed6a403daa` (the 14:21Z commit is earlier and is not used)
-- 2026-09-03 note, visible 2026-09-04: `1c8354e489fa`
-- 2026-09-04 note, visible 2026-09-08: `fb22c0b5de2b`
-- 2026-09-05 note, visible 2026-09-08: `284a7ad025f9`
-- 2026-09-09 note, visible 2026-09-10: `ee2dc5369963`
-- 2026-09-10 note, visible 2026-09-11: `4dc97fcbd5d4`
-- 2026-09-11 note: unused. Its next session is 2026-09-14, which is not scored. The commit itself is also after the 2026-09-11 open.
+- `excel_sugg_n`: how many such rows
 
 ## Excluded, and why
 
@@ -153,12 +135,24 @@ Borrow, if a short were opened: 0.3% of short notional. This lever is long only,
 
 Nothing in those files is a session on or after 2026-09-14.
 
-Published luck-test result, designed_after, 21 sessions, 12 mornings with a buy:
+## Dropped mornings
 
-- Total return after Futubull: 0.4731% (equity $10,047.31)
-- Total return at 15bp: 8.7633% (equity $10,876.33)
+`input_manifest.json` records, for each day, the commit, the Actions `run_started_at`, and the sha256 of each input file that existed in that tree. No shared taskforce manifest was on main when this file was written.
 
-The gap is the Futubull per-order minimum on a $10,000 book split four ways. It is not a second model.
+All 21 mornings are dropped. Training sessions: 0. Training rows: 0. Mornings with a buy: 0.
+
+`panel.json` is absent from the last pre-open tree on 2026-08-13, 2026-08-14, 2026-08-17, 2026-08-18, 2026-08-19, 2026-08-20, 2026-08-21, 2026-08-24, 2026-08-25, 2026-08-26, 2026-08-27, 2026-08-28, 2026-08-31, 2026-09-01, 2026-09-02, 2026-09-03, 2026-09-04, and 2026-09-08.
+
+The file exists before the open on the last three mornings, and it still does not contain that morning:
+
+- 2026-09-09, commit `c1167245934f9925941ce2a731efed6fc3c58901`, Actions `2026-09-09T13:29:07Z`. Sessions in that blob end 2026-09-08.
+- 2026-09-10, commit `a714ba9c06220f0a68f54c5fffd9f046e72f8276`, Actions `2026-09-10T13:11:49Z`. Sessions end 2026-09-09.
+- 2026-09-11, commit `ae97009391d281cf563278ee8681e557e4761e2a`, Actions `2026-09-11T11:49:49Z`. Sessions end 2026-09-09.
+
+Published luck-test result, designed_after: no scored session.
+
+- Total return after Futubull: 0% (equity $10,000)
+- Total return at 15bp: 0% (equity $10,000)
 
 ## Theme Radar hook
 
@@ -177,6 +171,6 @@ If the flag is turned on, the reader loads only an explicit whitelist (snapshot 
 
 SHA-256 of the UTF-8 bytes of `excel_ml_lever.py`:
 
-`55800c34419de632af9598f4c10ba112450c6a1bd03d147556de979ea4064694`
+`f5d4f34b2622b6409805165f1382e41a8b532662d8a6a8380f737a4133c3cc63`
 
 The SHA-256 of this SPEC.md file is in `frozen_spec.json`.
