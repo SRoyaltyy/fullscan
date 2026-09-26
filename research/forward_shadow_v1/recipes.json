@@ -1,0 +1,61 @@
+{
+  "baselines": {
+    "IWM": "buy at the first locked session open, whole shares, Futubull fee, mark at each close",
+    "RANDOM4": "1000 draws, random.Random(20260813 + draw), 4 names from that day's frozen universe, long, hold 1, time exit at the next session open. A baseline, not the keep-held book."
+  },
+  "capital": 10000.0,
+  "day_cap": 1.0,
+  "fees_sha256": "019ebdba0fc0b20e02c91f116dc5591b81e96630f60c110dfbfd3b5d8e16c0d3",
+  "fill_model": "keep-held",
+  "fill_px": "09:30 open",
+  "flat_15bp_side": 7.5e-05,
+  "forward_start": "2026-09-28",
+  "hard_red_max": -3.0,
+  "hard_red_rule": "When the frozen send file carries s and s is at or below hard_red_max, new buys sit. A missing s does not sit. List-drop sells still happen. A kept lot is not liquidated.",
+  "inputs": "earliest committed data/factor_mine/send_inputs/<date>.json",
+  "mark_px": "session close",
+  "min_hold": "recipe hold in locked sessions; the entry session counts as zero",
+  "random4_draws": 1000,
+  "random4_seed": 20260813,
+  "recipes": [
+    {
+      "exit_when": {},
+      "forbid": {
+        "alarm": true
+      },
+      "hold": 1,
+      "name": "fwd_union_hot_n4_h1",
+      "note": "",
+      "rank": "hot_score",
+      "require": {},
+      "side": "long",
+      "source_name": "union_hot_n4_h1",
+      "top_n": 4,
+      "trades_at_open": true,
+      "universe": "union"
+    },
+    {
+      "exit_when": {},
+      "forbid": {
+        "alarm": true
+      },
+      "hold": 3,
+      "name": "fwd_union_hot_score_h3",
+      "note": "",
+      "rank": "hot_score",
+      "require": {},
+      "side": "long",
+      "source_name": "union_hot_score_h3",
+      "top_n": 8,
+      "trades_at_open": true,
+      "universe": "union"
+    }
+  ],
+  "renewal": "A held name that is still selected that morning stays. The book records no sell and no buy for that name and charges no fee.",
+  "sell": "list",
+  "shares": "whole",
+  "size": "leftover",
+  "spec_sha256": "5a7698b0dc9a04ef2a0da0866ae192d2cd97a2450ea8ff19bd8cf0bbb63bf8df",
+  "study": "forward_shadow_v1",
+  "v4_hook": "hooks/v4_winners.json may only gain winners. first_session is the first locked session after the fingerprint commit. Earlier sessions stay as written."
+}

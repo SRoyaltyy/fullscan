@@ -1,0 +1,6 @@
+{
+  "note": "Append a winner only after its fingerprint commit. first_session is the first locked session after that commit. Earlier sessions stay as written.",
+  "schema": 1,
+  "study": "forward_shadow_v1",
+  "winners": []
+}

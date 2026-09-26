@@ -1,0 +1,37 @@
+name: forward_shadow_v1 append-only
+
+on:
+  pull_request:
+    paths:
+      - "research/forward_shadow_v1/**"
+      - "src/forward_shadow_v1.py"
+      - "src/forward_shadow_v1_bars.py"
+      - "src/forward_shadow_v1_append.py"
+      - "src/test_forward_shadow_v1.py"
+      - "src/lever_search_proof.py"
+      - ".github/workflows/forward_shadow_v1.yml"
+      - ".github/workflows/forward_shadow_v1_append_only.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  append-only:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install
+        run: pip install pandas pyarrow
+      - name: Fetch the PR base
+        run: git fetch --no-tags origin "${{ github.event.pull_request.base.sha }}"
+      - name: Spec, keep-held, and append-only
+        run: |
+          python3 -m src.forward_shadow_v1 --check-spec
+          python3 -m src.test_forward_shadow_v1
+          python3 -m src.forward_shadow_v1_append --check-against "${{ github.event.pull_request.base.sha }}"
+          python3 -m src.forward_shadow_v1_bars --check
