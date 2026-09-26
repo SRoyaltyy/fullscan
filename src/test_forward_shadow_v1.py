@@ -140,6 +140,10 @@ def test_spec_is_group3_keep_held() -> None:
     assert f"fingerprint_sha256: {sha256_text(covered.decode('utf-8'))}" in prereg
     for name in names:
         assert f"`{name}`" in prereg
+    assert prereg.count("not-proven") >= 4
+    assert "did not pass all three tuning starts" in prereg
+    assert "about +5% to +11% (Excel's corrected figures)" in prereg
+    assert "rest on GLND over 2026-09-14 to 2026-09-25" in prereg
 
 
 def test_v4_carry_forwards_are_frozen_weather_off() -> None:

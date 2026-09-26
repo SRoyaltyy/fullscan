@@ -5,7 +5,7 @@
 - written: 2026-09-26
 - forward start: 2026-09-28. No earlier session is filled.
 - fill model: `keep-held`
-- fingerprint_sha256: 944eb4ee2d10f443f92fb6dc9fa6cf9ca09668dc902e4f51bc7d97cd84d7d79d
+- fingerprint_sha256: a09f8eb4165b57429ccd2039c325f5b139020759f0370c9eb2ff2795a43b62b2
 - fingerprint_scope: SHA-256 of the UTF-8 bytes after the line `<!-- BEGIN COVERED -->`, including the final newline. Line endings are LF.
 
 <!-- BEGIN COVERED -->
@@ -20,13 +20,15 @@ Two recipes keep the Factor Mine `build_group3_recipes()` definitions scored in 
 
 Three recipes are the weather-off carry-forwards frozen in PR #370 (`factor_mine_recipe_search_v4`). The bodies and parameters are the locked `candidates()` rows: part, `weather` false, id `name__w0`. The frozen spec commit is `7da63e4f6cf4214b072d462cec04feddaa60147f`. The spec hash is the preregistration fingerprint `0503a5a549a66093754c9102eb430d01bc035687b08bca4f04d699e3a7daeca7`. That protocol file is unchanged at PR head `0f323096993747fc55a4d821c9158fab4ad9f920`. `already_picked` on `union_hot_n4_h1` is the frozen label from that spec.
 
-| sleeve | source | hold | top_n | rank | s_boost | weather | forbid |
-| --- | --- | ---: | ---: | --- | --- | --- | --- |
-| `fwd_union_hot_n4_h1` | `union_hot_n4_h1` | 1 | 4 | `hot_score` | | | alarm |
-| `fwd_union_hot_score_h3` | `union_hot_score_h3` | 3 | 8 | `hot_score` | | | alarm |
-| `union_hot_n4_h1__w0` | `union_hot_n4_h1` | 1 | 4 | `hot_score` | none | off | alarm |
-| `union_hot_n4_holdup__w0` | `union_hot_n4_holdup` | 1 | 4 | `hot_score` | holdup | off | alarm |
-| `union_hot_n4_h1_nonews__w0` | `union_hot_n4_h1_nonews` | 1 | 4 | `hot_score` | none | off | alarm and news bad |
+| sleeve | source | hold | top_n | rank | s_boost | weather | forbid | label |
+| --- | --- | ---: | ---: | --- | --- | --- | --- | --- |
+| `fwd_union_hot_n4_h1` | `union_hot_n4_h1` | 1 | 4 | `hot_score` | | | alarm | |
+| `fwd_union_hot_score_h3` | `union_hot_score_h3` | 3 | 8 | `hot_score` | | | alarm | |
+| `union_hot_n4_h1__w0` | `union_hot_n4_h1` | 1 | 4 | `hot_score` | none | off | alarm | not-proven |
+| `union_hot_n4_holdup__w0` | `union_hot_n4_holdup` | 1 | 4 | `hot_score` | holdup | off | alarm | not-proven |
+| `union_hot_n4_h1_nonews__w0` | `union_hot_n4_h1_nonews` | 1 | 4 | `hot_score` | none | off | alarm and news bad | not-proven |
+
+`union_hot_n4_h1__w0`, `union_hot_n4_holdup__w0`, and `union_hot_n4_h1_nonews__w0` are not-proven. `union_hot_n4_holdup__w0` did not pass all three tuning starts and carries forward only because the 2026-09-14 to 2026-09-25 check did not reject it. All three rest on GLND over 2026-09-14 to 2026-09-25. Without GLND they made about +5% to +11% (Excel's corrected figures).
 
 Side is long. Universe is union. `exit_when` is empty. The two Group 3 sleeves have `trades_at_open` true. The three carry-forwards sell `list`. The committed copy is `research/forward_shadow_v1/recipes.json`. Its `spec_sha256` is `ea4449212a2727af38a0dab8cdb716432b6bfcc878e2476159bb295785ab4649`. That hash covers the file body, including `fill_model`.
 
