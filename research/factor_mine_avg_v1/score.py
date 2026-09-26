@@ -20,6 +20,7 @@ from research.factor_mine_avg_v1.protocol import (  # noqa: E402
     AFTER,
     BAR_PIN,
     BEFORE,
+    CAPITAL,
     RANDOM4_DRAWS,
     RANDOM4_N,
     RANDOM4_SEED,
@@ -198,8 +199,10 @@ def _closed(days: list[dict], fees: dict, window: tuple[str, ...]) -> list[float
 
 def _window_stats(book: dict, fees: dict, window: tuple[str, ...], sessions: tuple[str, ...]) -> dict:
     ret_by = {day["session"]: float(day["ret_futubull"]) for day in book["days"]}
+    ret15_by = {day["session"]: float(day["ret_flat_15bp"]) for day in book["days"]}
     returns = [ret_by[session] for session in sessions]
     check = [ret_by[session] for session in window]
+    check15 = [ret15_by[session] for session in window]
     pnl = _pnl_by_day(book)
     totals: dict[str, float] = {}
     for session in window:
@@ -211,6 +214,7 @@ def _window_stats(book: dict, fees: dict, window: tuple[str, ...], sessions: tup
     return {
         "best": best,
         "compound": compound(check) if check else 0.0,
+        "compound_15": compound(check15) if check15 else 0.0,
         "down": down,
         "ex_best": ex_best_compound(list(sessions), list(window), returns, pnl, best),
         "flat": flat,
@@ -254,14 +258,39 @@ def _pool(rows: list[dict], store, session: str) -> list[str]:
 
 
 def _iwm(store, fees: dict) -> dict:
-    recipe = _blank_recipe("iwm", 10000, 1)
-    rows = {}
+    """One buy on the first session that has an open. A session with no close is missing.
+
+    The last mark carries forward. The next real close includes that gap.
+    A window with no real close is untestable, not a flat zero.
+    """
+    cash = CAPITAL
+    shares = 0
+    prev = CAPITAL
+    rets: dict[str, float] = {}
+    missing: list[str] = []
     for session in SESSIONS:
-        if store.session_open("IWM", session) is None:
-            raise SystemExit(f"IWM missing {session}")
-        rows[session] = _pick_rows(session, ["IWM"])
-    ok = {session: True for session in SESSIONS}
-    return walk_recipe(recipe, list(SESSIONS), rows, store, ok, fees)
+        opx = store.session_open("IWM", session)
+        cpx = store.session_close("IWM", session)
+        if shares == 0 and opx is not None and opx > 0:
+            per = cash
+            got, fee = 0, 0.0
+            trial = int(per // opx) if opx else 0
+            while trial >= 1:
+                fee = order_fees(trial, opx, "buy", fees)
+                if trial * opx + fee <= cash + 1e-6:
+                    got = trial
+                    break
+                trial -= 1
+            if got >= 1:
+                cash -= got * opx + fee
+                shares = got
+        if shares == 0 or cpx is None or cpx <= 0:
+            missing.append(session)
+            continue
+        equity = cash + shares * cpx
+        rets[session] = equity / prev - 1.0 if prev else 0.0
+        prev = equity
+    return {"missing": missing, "returns": rets, "shares": shares}
 
 
 def _random4(store, fees: dict, pools: dict[str, list[str]]) -> list[dict]:
@@ -284,12 +313,18 @@ def _random4(store, fees: dict, pools: dict[str, list[str]]) -> list[dict]:
 
 def _agg(stats: list[dict]) -> dict:
     compounds = [row["compound"] for row in stats]
+    compounds_15 = [row["compound_15"] for row in stats]
+    closed = [row["n_closed"] for row in stats]
     ups = [row["up"] for row in stats]
     downs = [row["down"] for row in stats]
     flats = [row["flat"] for row in stats]
     ex = [row["ex_best"] for row in stats if row["ex_best"] is not None]
     wins = [row["win_rate"] for row in stats if row["win_rate"] is not None]
     return {
+        "closed_mean": mean(closed),
+        "closed_median": median(closed),
+        "compound_15_mean": mean(compounds_15),
+        "compound_15_median": median(compounds_15),
         "compound_mean": mean(compounds),
         "compound_median": median(compounds),
         "down_mean": mean(downs),
@@ -328,6 +363,20 @@ def _share(stats: list[dict], names: set[str]) -> dict:
     }
 
 
+def _iwm_window(path: dict, window: tuple[str, ...]) -> dict:
+    check = [path["returns"][session] for session in window if session in path["returns"]]
+    missing = [session for session in window if session in set(path["missing"])]
+    up, down, flat = day_counts(check)
+    return {
+        "compound": compound(check) if check else None,
+        "down": down,
+        "flat": flat,
+        "missing": missing,
+        "n_marked": len(check),
+        "up": up,
+    }
+
+
 def _bench(books: list[dict], fees: dict, window: tuple[str, ...]) -> dict:
     compounds = [_window_stats(book, fees, window, SESSIONS)["compound"] for book in books]
     return {"compound_mean": mean(compounds), "compound_median": median(compounds), "n": len(compounds)}
@@ -362,6 +411,7 @@ def _render(payload: dict) -> str:
         lines += [f"## {label}", ""]
         lines.append("| version | compound mean | compound median | up mean/median | down mean/median | flat mean/median | win mean | win median | win omitted | ex-best mean | ex-best median | positive share |")
         lines.append("| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |")
+        side: list[str] = []
         for version in ("a", "b"):
             row = payload["windows"][window][version]["recipes"]
             lines.append(
@@ -380,6 +430,13 @@ def _render(payload: dict) -> str:
                     pos=_pct(row["positive_share"]),
                 )
             )
+            side.append(
+                f"Version {version} flat 15bp compound mean {_pct(row['compound_15_mean'])}, "
+                f"median {_pct(row['compound_15_median'])}. "
+                f"Closed trades mean {_num(row['closed_mean'])}, median {_num(row['closed_median'])}."
+            )
+        lines.append("")
+        lines.extend(side)
         gap = payload["windows"][window]["gap"]
         lines += [
             "",
@@ -392,16 +449,25 @@ def _render(payload: dict) -> str:
             "| benchmark | version | compound mean | compound median | up | down | flat |",
             "| --- | --- | ---: | ---: | ---: | ---: | ---: |",
         ]
+        notes: list[str] = []
         for version in ("a", "b"):
             iwm = payload["windows"][window][version]["iwm"]
             rnd = payload["windows"][window][version]["random4"]
             lines.append(
                 f"| IWM | {version} | {_pct(iwm['compound'])} |  | {iwm['up']} | {iwm['down']} | {iwm['flat']} |"
             )
+            if iwm["missing"]:
+                notes.append(
+                    f"IWM on version {version} has no bar on: {', '.join(iwm['missing'])}. "
+                    f"Those sessions are not a flat day. Marked sessions: {iwm['n_marked']}."
+                )
             lines.append(
                 f"| RANDOM4 | {version} | {_pct(rnd['compound_mean'])} | {_pct(rnd['compound_median'])} |  |  |  |"
             )
         lines.append("")
+        lines.extend(notes)
+        if notes:
+            lines.append("")
         lines += [
             "Per recipe, compound then ex-best, version (a) then (b). Order is the locked name order.",
             "",
@@ -494,12 +560,12 @@ def main() -> None:
         gap_a = _agg(stats["a"])
         windows[key] = {
             "a": {
-                "iwm": _window_stats(iwm["a"], fees, window, SESSIONS),
+                "iwm": _iwm_window(iwm["a"], window),
                 "random4": _bench(random_a, fees, window),
                 "recipes": gap_a,
             },
             "b": {
-                "iwm": _window_stats(iwm["b"], fees, window, SESSIONS),
+                "iwm": _iwm_window(iwm["b"], window),
                 "random4": _bench(random_b, fees, window),
                 "recipes": gap_b,
             },
