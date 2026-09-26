@@ -1,0 +1,285 @@
+{
+  "main": "9a0e12ca2f7a3e87f965190e8766053a37ffaabc",
+  "rule": "earliest origin/main commit whose panel.json contains the session; morning S is the earliest predict.md score else the earliest weather general_score; a later rebuild is not used",
+  "sessions": {
+    "2026-08-13": {
+      "blob": "d0e427d434d6d30da22ea6bf31133ed4648fb277",
+      "commit": "f5b46d20eec2a7acf5df3924fc5201023d0dcd40",
+      "n": 9,
+      "path": "data/factor_mine/panel.json",
+      "s": 8.525,
+      "s_commit": "bd650e582ff7a5568d93690f543be0a60b785f7b",
+      "s_source": "predict"
+    },
+    "2026-08-14": {
+      "blob": "d0e427d434d6d30da22ea6bf31133ed4648fb277",
+      "commit": "f5b46d20eec2a7acf5df3924fc5201023d0dcd40",
+      "n": 107,
+      "path": "data/factor_mine/panel.json",
+      "s": 5.5,
+      "s_commit": "aff60dbd38271931729d6f97773e2e02451279d2",
+      "s_source": "predict"
+    },
+    "2026-08-17": {
+      "blob": "d0e427d434d6d30da22ea6bf31133ed4648fb277",
+      "commit": "f5b46d20eec2a7acf5df3924fc5201023d0dcd40",
+      "n": 75,
+      "path": "data/factor_mine/panel.json",
+      "s": 2.25,
+      "s_commit": "682d3731365e833cf07a257b46c138d67e1bc3a7",
+      "s_source": "predict"
+    },
+    "2026-08-18": {
+      "blob": "d0e427d434d6d30da22ea6bf31133ed4648fb277",
+      "commit": "f5b46d20eec2a7acf5df3924fc5201023d0dcd40",
+      "n": 99,
+      "path": "data/factor_mine/panel.json",
+      "s": -6.2,
+      "s_commit": "c74bb5b7b46e5373422de9bc3a479468254092d5",
+      "s_source": "predict"
+    },
+    "2026-08-19": {
+      "blob": "d0e427d434d6d30da22ea6bf31133ed4648fb277",
+      "commit": "f5b46d20eec2a7acf5df3924fc5201023d0dcd40",
+      "n": 100,
+      "path": "data/factor_mine/panel.json",
+      "s": -7.2,
+      "s_commit": "b6fc915b0413c60fd3ea1ac3727e34439a90dee5",
+      "s_source": "predict"
+    },
+    "2026-08-20": {
+      "blob": "d0e427d434d6d30da22ea6bf31133ed4648fb277",
+      "commit": "f5b46d20eec2a7acf5df3924fc5201023d0dcd40",
+      "n": 87,
+      "path": "data/factor_mine/panel.json",
+      "s": 1.125,
+      "s_commit": "db5f47399361d11cec7f7bc8a697f91cc206f312",
+      "s_source": "predict"
+    },
+    "2026-08-21": {
+      "blob": "d0e427d434d6d30da22ea6bf31133ed4648fb277",
+      "commit": "f5b46d20eec2a7acf5df3924fc5201023d0dcd40",
+      "n": 79,
+      "path": "data/factor_mine/panel.json",
+      "s": 3.25,
+      "s_commit": "5be5f4bbbbc55952a5276e0137b384b921ad3d5b",
+      "s_source": "predict"
+    },
+    "2026-08-24": {
+      "blob": "d0e427d434d6d30da22ea6bf31133ed4648fb277",
+      "commit": "f5b46d20eec2a7acf5df3924fc5201023d0dcd40",
+      "n": 69,
+      "path": "data/factor_mine/panel.json",
+      "s": 0.0,
+      "s_commit": "e2ab857c4bd9657259c3128b3a8a008f52bb9190",
+      "s_source": "predict"
+    },
+    "2026-08-25": {
+      "blob": "d0e427d434d6d30da22ea6bf31133ed4648fb277",
+      "commit": "f5b46d20eec2a7acf5df3924fc5201023d0dcd40",
+      "n": 91,
+      "path": "data/factor_mine/panel.json",
+      "s": 1.8,
+      "s_commit": "9e190e285e8d6c8780083c84ec8937ee7079eb28",
+      "s_source": "predict"
+    },
+    "2026-08-26": {
+      "blob": "d0e427d434d6d30da22ea6bf31133ed4648fb277",
+      "commit": "f5b46d20eec2a7acf5df3924fc5201023d0dcd40",
+      "n": 84,
+      "path": "data/factor_mine/panel.json",
+      "s": 2.025,
+      "s_commit": "f90f7fdc19915556e32e3ecf443307038b9ced0a",
+      "s_source": "predict"
+    },
+    "2026-08-27": {
+      "blob": "d0e427d434d6d30da22ea6bf31133ed4648fb277",
+      "commit": "f5b46d20eec2a7acf5df3924fc5201023d0dcd40",
+      "n": 19,
+      "path": "data/factor_mine/panel.json",
+      "s": null,
+      "s_commit": null,
+      "s_source": null
+    },
+    "2026-08-28": {
+      "blob": "d0e427d434d6d30da22ea6bf31133ed4648fb277",
+      "commit": "f5b46d20eec2a7acf5df3924fc5201023d0dcd40",
+      "n": 99,
+      "path": "data/factor_mine/panel.json",
+      "s": 0.75,
+      "s_commit": "411132e8e5ad4b1fca97deef0991a9ea75eb3f58",
+      "s_source": "predict"
+    },
+    "2026-08-31": {
+      "blob": "d0e427d434d6d30da22ea6bf31133ed4648fb277",
+      "commit": "f5b46d20eec2a7acf5df3924fc5201023d0dcd40",
+      "n": 68,
+      "path": "data/factor_mine/panel.json",
+      "s": -5.85,
+      "s_commit": "203ee9f0c3ca9a819f26d7ee2a7bb5b726751b71",
+      "s_source": "predict"
+    },
+    "2026-09-01": {
+      "blob": "d0e427d434d6d30da22ea6bf31133ed4648fb277",
+      "commit": "f5b46d20eec2a7acf5df3924fc5201023d0dcd40",
+      "n": 85,
+      "path": "data/factor_mine/panel.json",
+      "s": -6.3,
+      "s_commit": "324f0dacf57b7119568e045beba8174538ff2c5c",
+      "s_source": "predict"
+    },
+    "2026-09-02": {
+      "blob": "d0e427d434d6d30da22ea6bf31133ed4648fb277",
+      "commit": "f5b46d20eec2a7acf5df3924fc5201023d0dcd40",
+      "n": 89,
+      "path": "data/factor_mine/panel.json",
+      "s": -3.825,
+      "s_commit": "5231bc1e5499699b4021ff2cb81d2b497af36435",
+      "s_source": "predict"
+    },
+    "2026-09-03": {
+      "blob": "d0e427d434d6d30da22ea6bf31133ed4648fb277",
+      "commit": "f5b46d20eec2a7acf5df3924fc5201023d0dcd40",
+      "n": 91,
+      "path": "data/factor_mine/panel.json",
+      "s": -0.9,
+      "s_commit": "70da5272a6b1f979289b5ff97d4113bedb792cf8",
+      "s_source": "predict"
+    },
+    "2026-09-04": {
+      "blob": "d0e427d434d6d30da22ea6bf31133ed4648fb277",
+      "commit": "f5b46d20eec2a7acf5df3924fc5201023d0dcd40",
+      "n": 80,
+      "path": "data/factor_mine/panel.json",
+      "s": 2.25,
+      "s_commit": "5d71ebebd6038c1be322f9e8084b2eac558b5484",
+      "s_source": "predict"
+    },
+    "2026-09-08": {
+      "blob": "d0e427d434d6d30da22ea6bf31133ed4648fb277",
+      "commit": "f5b46d20eec2a7acf5df3924fc5201023d0dcd40",
+      "n": 77,
+      "path": "data/factor_mine/panel.json",
+      "s": -11.475,
+      "s_commit": "78eac8500afab69d9128b72c6d42c28cf4c7235f",
+      "s_source": "predict"
+    },
+    "2026-09-09": {
+      "blob": "620cbd24964693505e96b90f2a28ee2b63386718",
+      "commit": "957fc58e6215832d1e310786aeacc64b3d3652a2",
+      "n": 84,
+      "path": "data/factor_mine/panel.json",
+      "s": -13.95,
+      "s_commit": "85ee8d6edfad5ea5bdd73c477f0b6d1d5bc5a6ac",
+      "s_source": "predict"
+    },
+    "2026-09-10": {
+      "blob": "1c4adfbe0510ab459b4e60671e55d31b1ce58101",
+      "commit": "1c7a450b893d66f8a3f344ce5d31f6e9e8f3a527",
+      "n": 78,
+      "path": "data/factor_mine/panel.json",
+      "s": -13.275,
+      "s_commit": "267017fec3500d751374453e934d9acd1a6c8694",
+      "s_source": "predict"
+    },
+    "2026-09-11": {
+      "blob": "1c4adfbe0510ab459b4e60671e55d31b1ce58101",
+      "commit": "1c7a450b893d66f8a3f344ce5d31f6e9e8f3a527",
+      "n": 80,
+      "path": "data/factor_mine/panel.json",
+      "s": 0.5,
+      "s_commit": "8dd42563c909150ea4380ea356b787c1393e09b6",
+      "s_source": "predict"
+    },
+    "2026-09-14": {
+      "blob": "c35995f2689863b38152026886cd96e8731babf7",
+      "commit": "eef0854ca59c1ca8d6dce600b02d128f8d49ecd8",
+      "n": 64,
+      "path": "data/factor_mine/panel.json",
+      "s": -11.002,
+      "s_commit": "200687ab14dc73ab53c372ad428de3b0048a98e9",
+      "s_source": "predict"
+    },
+    "2026-09-15": {
+      "blob": "ed1b2e3e7282f4bea3d0fbb2add4e29cf025f075",
+      "commit": "284ca0e3a187cd12bd8cf5421f60f0091945daf3",
+      "n": 66,
+      "path": "data/factor_mine/panel.json",
+      "s": -6.215,
+      "s_commit": "f9d261f2a03085f3c774af132e2f537cbbc0597a",
+      "s_source": "predict"
+    },
+    "2026-09-16": {
+      "blob": "e12680f3fa288f7e4130cb9c7f4f7aee9afd5b08",
+      "commit": "5ae9d19c83e5def5e205c87c67e5621e7ccd30dd",
+      "n": 4,
+      "path": "data/factor_mine/panel.json",
+      "s": 5.297,
+      "s_commit": "f3ae3982ed23b0d6ec521d754f8e5a36ddee25d7",
+      "s_source": "predict"
+    },
+    "2026-09-17": {
+      "blob": "c534749c725cec78af3e80d433b6035d4acb6b0a",
+      "commit": "2208918b2fac5df50be978a34670d970e9876951",
+      "n": 6,
+      "path": "data/factor_mine/panel.json",
+      "s": 7.383,
+      "s_commit": "e7939a81e64ff0b2ae66e10e2ba9093eb34025b0",
+      "s_source": "predict"
+    },
+    "2026-09-18": {
+      "blob": "136e5261bf2ba5a4ce115d22a91ecb9cc35b7155",
+      "commit": "77a6a92c58576ba7caf1ef531ca92f7d24dcd471",
+      "n": 4,
+      "path": "data/factor_mine/panel.json",
+      "s": 4.861,
+      "s_commit": "ccdfe58999c9580edfc327b669cce3768e52655d",
+      "s_source": "predict"
+    },
+    "2026-09-21": {
+      "blob": "f1c6e7a6adc8e707616a0e87802d938b62a0455e",
+      "commit": "087d5fda408d2aa419fe21b64034edd0b9e1d356",
+      "n": 62,
+      "path": "data/factor_mine/panel.json",
+      "s": 12.871,
+      "s_commit": "35e6e34f8d34c998c6656ad254706333548c1121",
+      "s_source": "predict"
+    },
+    "2026-09-22": {
+      "blob": "07d6f53cef5eafdb8104698822850f713b084c61",
+      "commit": "41bcc47fe1690a49679b5ee827364c9183eb4d44",
+      "n": 66,
+      "path": "data/factor_mine/panel.json",
+      "s": -0.497,
+      "s_commit": "4e3d46749663aae2b3f1615350e5032e8a3bc59a",
+      "s_source": "predict"
+    },
+    "2026-09-23": {
+      "blob": "301e4a4a248a7e949b9375bc8cccbfae60000811",
+      "commit": "0d3fdf1110489b35d64fba9aca37ffff6861a07a",
+      "n": 73,
+      "path": "data/factor_mine/panel.json",
+      "s": 2.293,
+      "s_commit": "564b959cf12b1d0f30030bca39d372c08073fbcd",
+      "s_source": "predict"
+    },
+    "2026-09-24": {
+      "blob": "1dbc93ee90fbde49c4bff330f5a061015e728e58",
+      "commit": "0eab5298326fe6983e51eb2f1839d1417094a433",
+      "n": 77,
+      "path": "data/factor_mine/panel.json",
+      "s": -7.659,
+      "s_commit": "f3f6b05d19eea3d2b9f5afc99fdd0d5874a6a486",
+      "s_source": "predict"
+    },
+    "2026-09-25": {
+      "blob": "ee80d93e5e23553bb8c349bb92cae34e4314a1f7",
+      "commit": "b5946b1d71bfc5b116c7cbb95a5d57d7c0817840",
+      "n": 67,
+      "path": "data/factor_mine/panel.json",
+      "s": 2.706,
+      "s_commit": "eccc6f4bd24b4090fea8c64e492d5c1381940992",
+      "s_source": "predict"
+    }
+  }
+}

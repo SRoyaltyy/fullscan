@@ -1,0 +1,19 @@
+name: Factor Mine recipe search v4
+on:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  protocol:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+    - uses: actions/setup-python@v5
+      with:
+        python-version: "3.12"
+    - name: Protocol lock
+      run: PYTHONHASHSEED=0 python3 research/factor_mine_recipe_search_v4/test_protocol.py
+    - name: Drop-compound lock
+      run: PYTHONHASHSEED=0 python3 research/factor_mine_recipe_search_v4/test_metrics.py
