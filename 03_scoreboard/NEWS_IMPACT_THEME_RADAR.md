@@ -21,12 +21,12 @@ Rubric hit rates count a call only when q5=impulse, direction in {up, down}, tra
 | non-weather | 17966 |
 | reaction-in-title (killed by the router) | 625 |
 | impulse + up/down + listed | 10106 |
-| graded articles 0-1d | 1142 |
-| graded articles 2d | 1084 |
-| graded articles 3d | 1065 |
-| graded articles 4d | 1041 |
-| graded articles 5d | 1014 |
-| graded articles 1-4w | 4747 |
+| graded articles 0-1d | 1146 |
+| graded articles 2d | 1093 |
+| graded articles 3d | 1071 |
+| graded articles 4d | 1048 |
+| graded articles 5d | 1023 |
+| graded articles 1-4w | 4786 |
 
 ## Hit rates
 
@@ -34,12 +34,12 @@ Rubric column skips long-horizon classes on 0-1d and 2-5d. Broad column keeps th
 
 | horizon | rubric hits | rubric n | rubric rate | broad hits | broad n | broad rate |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: |
-| 0-1d | 983 | 2067 | 983/2067 = 47.6% | 5313 | 10889 | 5313/10889 = 48.8% |
-| 2d | 962 | 1907 | 962/1907 = 50.4% | 5145 | 10481 | 5145/10481 = 49.1% |
-| 3d | 896 | 1868 | 896/1868 = 48.0% | 5077 | 10336 | 5077/10336 = 49.1% |
-| 4d | 892 | 1817 | 892/1817 = 49.1% | 4979 | 10156 | 4979/10156 = 49.0% |
-| 5d | 859 | 1744 | 859/1744 = 49.3% | 4847 | 9931 | 4847/9931 = 48.8% |
-| 1-4w | 3104 | 6708 | 3104/6708 = 46.3% | — | — | — |
+| 0-1d | 988 | 2072 | 988/2072 = 47.7% | 5331 | 10922 | 5331/10922 = 48.8% |
+| 2d | 970 | 1916 | 970/1916 = 50.6% | 5178 | 10533 | 5178/10533 = 49.2% |
+| 3d | 901 | 1875 | 901/1875 = 48.1% | 5087 | 10369 | 5087/10369 = 49.1% |
+| 4d | 902 | 1829 | 902/1829 = 49.3% | 4996 | 10187 | 4996/10187 = 49.0% |
+| 5d | 863 | 1756 | 863/1756 = 49.1% | 4861 | 9969 | 4861/9969 = 48.8% |
+| 1-4w | 3120 | 6770 | 3120/6770 = 46.1% | — | — | — |
 
 ## Convergence / clash ledger
 
@@ -59,8 +59,8 @@ Hit rates grade the entity once per session. Converge uses that side. Clash uses
 
 | bucket | 0-1d | 2d | 3d | 4d | 5d |
 | --- | --- | --- | --- | --- | --- |
-| singleton | 480/1034 = 46.4% | 496/989 = 50.2% | 479/970 = 49.4% | 470/944 = 49.8% | 471/927 = 50.8% |
-| converge | 63/119 = 52.9% | 51/106 = 48.1% | 53/104 = 51.0% | 51/101 = 50.5% | 47/93 = 50.5% |
+| singleton | 484/1038 = 46.6% | 502/996 = 50.4% | 484/977 = 49.5% | 475/951 = 49.9% | 473/933 = 50.7% |
+| converge | 63/119 = 52.9% | 52/107 = 48.6% | 53/104 = 51.0% | 51/101 = 50.5% | 47/95 = 49.5% |
 | clash | 4/10 = 40.0% | 4/10 = 40.0% | 5/10 = 50.0% | 2/10 = 20.0% | 2/10 = 20.0% |
 
 ### Top converge names
@@ -133,7 +133,7 @@ Same direction as the call and |forward return| at the threshold. 5% rows are �
 
 ### 2d
 
-- ≥5% and <10%: **920**
+- ≥5% and <10%: **923**
 - ≥10%: **533**
 
 | threshold | ticker | date | ret | class | title |
@@ -163,7 +163,7 @@ Same direction as the call and |forward return| at the threshold. 5% rows are �
 | ≥10% | OABI | 2026-08-07 | +42.62% | guidance | VERAXA Biotech (VRXA) Advances VXA-222 Cancer Program While Expanding Patent Portfolio for Next-Generation Ant |
 | ≥10% | PEPG | 2026-08-06 | +42.38% | print_vs_priced | PepGen Reports Second Quarter 2026 Financial Results and Recent Corporate Highlights |
 | ≥10% | ACDC | 2026-08-06 | +42.06% | print_vs_priced | ProFrac Holding Corp. Reports Second Quarter 2026 Results |
-| … | | | | | 1428 more in the JSON |
+| … | | | | | 1431 more in the JSON |
 
 ### 3d
 
@@ -202,7 +202,7 @@ Same direction as the call and |forward return| at the threshold. 5% rows are �
 ### 4d
 
 - ≥5% and <10%: **1094**
-- ≥10%: **743**
+- ≥10%: **751**
 
 | threshold | ticker | date | ret | class | title |
 | --- | --- | --- | ---: | --- | --- |
@@ -231,12 +231,12 @@ Same direction as the call and |forward return| at the threshold. 5% rows are �
 | ≥10% | SECZ | 2026-09-18 | +77.36% | market_structure | SEC Allows Tokenized Stocks After Clarity Act Falters |
 | ≥10% | SECZ | 2026-09-18 | +77.36% | market_structure | SEC Sends Strong Signal to Robinhood, Coinbase Investors |
 | ≥10% | SECZ | 2026-09-18 | +77.36% | market_structure | SEC Greenlights Tokenized Stocks After Clarity Act Fails in Senate |
-| … | | | | | 1812 more in the JSON |
+| … | | | | | 1820 more in the JSON |
 
 ### 5d
 
-- ≥5% and <10%: **1096**
-- ≥10%: **795**
+- ≥5% and <10%: **1103**
+- ≥10%: **798**
 
 | threshold | ticker | date | ret | class | title |
 | --- | --- | --- | ---: | --- | --- |
@@ -265,7 +265,7 @@ Same direction as the call and |forward return| at the threshold. 5% rows are �
 | ≥10% | SECZ | 2026-09-18 | +71.24% | market_structure | SEC Allows Tokenized Stocks After Clarity Act Falters |
 | ≥10% | SECZ | 2026-09-18 | +71.24% | market_structure | SEC Sends Strong Signal to Robinhood, Coinbase Investors |
 | ≥10% | SECZ | 2026-09-18 | +71.24% | market_structure | SEC Greenlights Tokenized Stocks After Clarity Act Fails in Senate |
-| … | | | | | 1866 more in the JSON |
+| … | | | | | 1876 more in the JSON |
 
 ## AMRX
 

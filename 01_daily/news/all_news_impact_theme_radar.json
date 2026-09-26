@@ -21,82 +21,82 @@
     "reaction_in_title": 625,
     "impulse_updown_listed": 10106,
     "graded_articles": {
-      "0-1d": 1142,
-      "2d": 1084,
-      "3d": 1065,
-      "4d": 1041,
-      "5d": 1014,
-      "1-4w": 4747
+      "0-1d": 1146,
+      "2d": 1093,
+      "3d": 1071,
+      "4d": 1048,
+      "5d": 1023,
+      "1-4w": 4786
     }
   },
   "hit_rates": {
     "0-1d": {
-      "hits": 983,
-      "n_calls": 2067,
-      "hit_rate": 0.4756,
-      "graded_articles": 1142
+      "hits": 988,
+      "n_calls": 2072,
+      "hit_rate": 0.4768,
+      "graded_articles": 1146
     },
     "2d": {
-      "hits": 962,
-      "n_calls": 1907,
-      "hit_rate": 0.5045,
-      "graded_articles": 1084
+      "hits": 970,
+      "n_calls": 1916,
+      "hit_rate": 0.5063,
+      "graded_articles": 1093
     },
     "3d": {
-      "hits": 896,
-      "n_calls": 1868,
-      "hit_rate": 0.4797,
-      "graded_articles": 1065
+      "hits": 901,
+      "n_calls": 1875,
+      "hit_rate": 0.4805,
+      "graded_articles": 1071
     },
     "4d": {
-      "hits": 892,
-      "n_calls": 1817,
-      "hit_rate": 0.4909,
-      "graded_articles": 1041
+      "hits": 902,
+      "n_calls": 1829,
+      "hit_rate": 0.4932,
+      "graded_articles": 1048
     },
     "5d": {
-      "hits": 859,
-      "n_calls": 1744,
-      "hit_rate": 0.4925,
-      "graded_articles": 1014
+      "hits": 863,
+      "n_calls": 1756,
+      "hit_rate": 0.4915,
+      "graded_articles": 1023
     },
     "1-4w": {
-      "hits": 3104,
-      "n_calls": 6708,
-      "hit_rate": 0.4627,
-      "graded_articles": 4747
+      "hits": 3120,
+      "n_calls": 6770,
+      "hit_rate": 0.4609,
+      "graded_articles": 4786
     }
   },
   "hit_rates_broad_short": {
     "0-1d": {
-      "hits": 5313,
-      "n_calls": 10889,
-      "hit_rate": 0.4879,
-      "graded_articles": 7032
+      "hits": 5331,
+      "n_calls": 10922,
+      "hit_rate": 0.4881,
+      "graded_articles": 7055
     },
     "2d": {
-      "hits": 5145,
-      "n_calls": 10481,
-      "hit_rate": 0.4909,
-      "graded_articles": 6847
+      "hits": 5178,
+      "n_calls": 10533,
+      "hit_rate": 0.4916,
+      "graded_articles": 6880
     },
     "3d": {
-      "hits": 5077,
-      "n_calls": 10336,
-      "hit_rate": 0.4912,
-      "graded_articles": 6770
+      "hits": 5087,
+      "n_calls": 10369,
+      "hit_rate": 0.4906,
+      "graded_articles": 6791
     },
     "4d": {
-      "hits": 4979,
-      "n_calls": 10156,
-      "hit_rate": 0.4903,
-      "graded_articles": 6690
+      "hits": 4996,
+      "n_calls": 10187,
+      "hit_rate": 0.4904,
+      "graded_articles": 6708
     },
     "5d": {
-      "hits": 4847,
-      "n_calls": 9931,
-      "hit_rate": 0.4881,
-      "graded_articles": 6593
+      "hits": 4861,
+      "n_calls": 9969,
+      "hit_rate": 0.4876,
+      "graded_articles": 6624
     }
   },
   "rippers": {
@@ -7255,7 +7255,7 @@
       ]
     },
     "2d": {
-      "ge_5_n": 920,
+      "ge_5_n": 923,
       "ge_10_n": 533,
       "ge_5": [
         {
@@ -9615,6 +9615,24 @@
           "published_at": "2026-09-02 06:06:43",
           "title": "Gap, Kohls among retailers adding DoorDash delivery option",
           "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "INNV",
+          "direction": "down",
+          "ret": -7.46,
+          "entry_date": "2026-09-23",
+          "published_at": "2026-09-22 16:02:00",
+          "title": "InnovAge Announces Launch of Proposed Secondary Offering of Common Stock by Selling Stockholders",
+          "event_class": "dilution"
+        },
+        {
+          "ticker": "INNV",
+          "direction": "down",
+          "ret": -7.46,
+          "entry_date": "2026-09-23",
+          "published_at": "2026-09-22 20:46:00",
+          "title": "InnovAge Announces Pricing of Secondary Offering of Common Stock by Selling Stockholders",
+          "event_class": "dilution"
         },
         {
           "ticker": "RPD",
@@ -15464,6 +15482,15 @@
           "entry_date": "2026-08-24",
           "published_at": "2026-08-22 09:08:47",
           "title": "Bitcoin Hits Its Stride As Dollar Weakness And Treasury Buybacks Fuel Hard-Asset Rally, Galaxy Analysts Call Bottom",
+          "event_class": "capital_return"
+        },
+        {
+          "ticker": "VEON",
+          "direction": "up",
+          "ret": 5.03,
+          "entry_date": "2026-09-23",
+          "published_at": "2026-09-23 07:38:00",
+          "title": "VEON increases Share Buyback and Accelerates share cancellations",
           "event_class": "capital_return"
         },
         {
@@ -35001,7 +35028,7 @@
     },
     "4d": {
       "ge_5_n": 1094,
-      "ge_10_n": 743,
+      "ge_10_n": 751,
       "ge_5": [
         {
           "ticker": "RGEN",
@@ -46148,6 +46175,51 @@
           "event_class": "print_vs_priced"
         },
         {
+          "ticker": "PARA",
+          "direction": "down",
+          "ret": -23.91,
+          "entry_date": "2026-09-21",
+          "published_at": "2026-09-18 10:41:11",
+          "title": "Is Disney Stock A Bargain Or Just A Slower Grower?",
+          "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "PARA",
+          "direction": "down",
+          "ret": -23.91,
+          "entry_date": "2026-09-21",
+          "published_at": "2026-09-18 10:41:11",
+          "title": "Is Disney Stock A Bargain Or Just A Slower Grower?",
+          "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "PARA",
+          "direction": "down",
+          "ret": -23.91,
+          "entry_date": "2026-09-21",
+          "published_at": "2026-09-18 10:41:11",
+          "title": "Is Disney Stock A Bargain Or Just A Slower Grower?",
+          "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "PARA",
+          "direction": "down",
+          "ret": -23.91,
+          "entry_date": "2026-09-21",
+          "published_at": "2026-09-18 10:41:11",
+          "title": "Is Disney Stock A Bargain Or Just A Slower Grower?",
+          "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "PARA",
+          "direction": "down",
+          "ret": -23.91,
+          "entry_date": "2026-09-21",
+          "published_at": "2026-09-21 09:18:40",
+          "title": "Could You Have Seen Warner Bros Discovery Stock's Run Coming?",
+          "event_class": "print_vs_priced"
+        },
+        {
           "ticker": "GOGO",
           "direction": "down",
           "ret": -23.84,
@@ -47316,6 +47388,15 @@
           "published_at": "2026-09-09 07:00:00",
           "title": "Schrodinger Announces Licensing and Collaboration Agreement with Tectora Therapeutics, a New Biotechnology Company It Co-founded to Advance Immunology and Inflammation Programs",
           "event_class": "guidance"
+        },
+        {
+          "ticker": "LFT",
+          "direction": "down",
+          "ret": -16.83,
+          "entry_date": "2026-09-21",
+          "published_at": "2026-09-18 17:00:00",
+          "title": "Lument Finance Trust Suspends Common Stock Dividend, and Declares Q3 Preferred Stock Dividend",
+          "event_class": "capital_return"
         },
         {
           "ticker": "RBNE",
@@ -50243,6 +50324,15 @@
           "event_class": "print_vs_priced"
         },
         {
+          "ticker": "MKTW",
+          "direction": "up",
+          "ret": 11.51,
+          "entry_date": "2026-09-21",
+          "published_at": "2026-09-18 11:14:00",
+          "title": "Many young investors can't afford to invest without their parents' help",
+          "event_class": "guidance"
+        },
+        {
           "ticker": "DAKT",
           "direction": "up",
           "ret": 11.49,
@@ -50646,6 +50736,15 @@
           "published_at": "2026-08-14 16:15:00",
           "title": "Exzeo Authorizes $25 Million Stock Repurchase Program",
           "event_class": "capital_return"
+        },
+        {
+          "ticker": "PS",
+          "direction": "up",
+          "ret": 10.97,
+          "entry_date": "2026-09-21",
+          "published_at": "2026-09-19 08:02:00",
+          "title": "Bill Ackman's Pershing Square IPO Breaks Out",
+          "event_class": "listing_flow"
         },
         {
           "ticker": "ITUB",
@@ -51541,8 +51640,8 @@
       ]
     },
     "5d": {
-      "ge_5_n": 1096,
-      "ge_10_n": 795,
+      "ge_5_n": 1103,
+      "ge_10_n": 798,
       "ge_5": [
         {
           "ticker": "SGI",
@@ -51633,6 +51732,15 @@
           "published_at": "2026-09-16 16:05:00",
           "title": "Rollins to Present at Upcoming Investor Conference",
           "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "BRR",
+          "direction": "up",
+          "ret": 9.8,
+          "entry_date": "2026-09-18",
+          "published_at": "2026-09-16 07:00:00",
+          "title": "ProCap Financial Repurchases an Additional 2.2% of Shares Outstanding, Bringing Total Repurchases to Approximately 12.2%",
+          "event_class": "capital_return"
         },
         {
           "ticker": "ESAB",
@@ -53289,6 +53397,15 @@
           "published_at": "2026-08-17 16:05:18",
           "title": "Cathie Wood Pours $27 Million Into Major AI Stock",
           "event_class": "blast_legal"
+        },
+        {
+          "ticker": "NWTG",
+          "direction": "down",
+          "ret": -8.61,
+          "entry_date": "2026-09-18",
+          "published_at": "2026-09-17 16:40:00",
+          "title": "CORRECTION: Emerging Growth Research Issues Quarterly Update on Newton Golf Company, Inc.",
+          "event_class": "print_vs_priced"
         },
         {
           "ticker": "SJM",
@@ -55313,6 +55430,24 @@
           "entry_date": "2026-08-26",
           "published_at": "2026-08-26 07:00:00",
           "title": "Palladyne AI and NORDA Dynamics to Integrate SwarmOS Collaborative Autonomy Software with NORDA's Combat-Proven Underdog Autonomy Module",
+          "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "ENLT",
+          "direction": "down",
+          "ret": -7.31,
+          "entry_date": "2026-09-18",
+          "published_at": "2026-09-18 02:18:07",
+          "title": "These 5 Green Stocks Have Crushed Clean Energy ETFs, S&P 500 And AI Funds In 2026",
+          "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "ENLT",
+          "direction": "down",
+          "ret": -7.31,
+          "entry_date": "2026-09-18",
+          "published_at": "2026-09-18 02:18:07",
+          "title": "These 5 Green Stocks Have Crushed Clean Energy ETFs, S&P 500 And AI Funds In 2026",
           "event_class": "print_vs_priced"
         },
         {
@@ -58250,6 +58385,15 @@
           "event_class": "dilution"
         },
         {
+          "ticker": "HERE",
+          "direction": "down",
+          "ret": -6.11,
+          "entry_date": "2026-09-18",
+          "published_at": "2026-09-18 08:00:00",
+          "title": "Here to Report Fourth Fiscal Quarter and Full Fiscal Year 2026 Financial Results on September 22, 2026",
+          "event_class": "guidance"
+        },
+        {
           "ticker": "TU",
           "direction": "down",
           "ret": -6.1,
@@ -59526,6 +59670,24 @@
           "published_at": "2026-08-24 16:25:42",
           "title": "Coinbase Enters the Tokenized Stock Wars",
           "event_class": "market_structure"
+        },
+        {
+          "ticker": "HELE",
+          "direction": "up",
+          "ret": 5.61,
+          "entry_date": "2026-09-18",
+          "published_at": "2026-09-17 16:05:00",
+          "title": "Helen of Troy Limited Announces Earnings Release Date, Conference Call, and Webcast for Second Quarter Fiscal Year 2027 Results",
+          "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "BSET",
+          "direction": "up",
+          "ret": 5.6,
+          "entry_date": "2026-09-18",
+          "published_at": "2026-09-17 11:30:00",
+          "title": "Bassett Announces Third Quarter Conference Call",
+          "event_class": "print_vs_priced"
         },
         {
           "ticker": "CRON",
@@ -62444,6 +62606,24 @@
           "published_at": "2026-08-13 08:30:00",
           "title": "Energous Corporation Q2 2026 Earnings Call Summary",
           "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "LVO",
+          "direction": "down",
+          "ret": -27.55,
+          "entry_date": "2026-09-18",
+          "published_at": "2026-09-17 22:50:00",
+          "title": "LiveOne (NASDAQ:LVO) Acquires 1.47M PodcastOne (NASDAQ:PODC) Common Shares Since March 31, 2026 at $2.81/Share Average; Increases PODC Ownership to 20.8M Shares",
+          "event_class": "access_control"
+        },
+        {
+          "ticker": "LVO",
+          "direction": "down",
+          "ret": -27.55,
+          "entry_date": "2026-09-18",
+          "published_at": "2026-09-17 22:50:00",
+          "title": "LiveOne (NASDAQ:LVO) Acquires 1.47M PodcastOne (NASDAQ:PODC) Common Shares Since March 31, 2026 at $2.81/Share Average; Increases PODC Ownership to 20.8M Shares",
+          "event_class": "access_control"
         },
         {
           "ticker": "OESX",
@@ -65929,6 +66109,15 @@
           "event_class": "gate"
         },
         {
+          "ticker": "XRTX",
+          "direction": "down",
+          "ret": -13.33,
+          "entry_date": "2026-09-18",
+          "published_at": "2026-09-18 08:05:00",
+          "title": "XORTX Announces Planned FDA IND Submission for XRx-026 Gout Program Using XORLO, Targeting USD$700M+ U.S. Gout Market Opportunity",
+          "event_class": "print_vs_priced"
+        },
+        {
           "ticker": "TPVG",
           "direction": "up",
           "ret": 13.31,
@@ -68619,29 +68808,29 @@
     "hit_rates": {
       "singleton": {
         "0-1d": {
-          "hits": 480,
-          "n": 1034,
-          "hit_rate": 0.4642
+          "hits": 484,
+          "n": 1038,
+          "hit_rate": 0.4663
         },
         "2d": {
-          "hits": 496,
-          "n": 989,
-          "hit_rate": 0.5015
+          "hits": 502,
+          "n": 996,
+          "hit_rate": 0.504
         },
         "3d": {
-          "hits": 479,
-          "n": 970,
-          "hit_rate": 0.4938
+          "hits": 484,
+          "n": 977,
+          "hit_rate": 0.4954
         },
         "4d": {
-          "hits": 470,
-          "n": 944,
-          "hit_rate": 0.4979
+          "hits": 475,
+          "n": 951,
+          "hit_rate": 0.4995
         },
         "5d": {
-          "hits": 471,
-          "n": 927,
-          "hit_rate": 0.5081
+          "hits": 473,
+          "n": 933,
+          "hit_rate": 0.507
         }
       },
       "converge": {
@@ -68651,9 +68840,9 @@
           "hit_rate": 0.5294
         },
         "2d": {
-          "hits": 51,
-          "n": 106,
-          "hit_rate": 0.4811
+          "hits": 52,
+          "n": 107,
+          "hit_rate": 0.486
         },
         "3d": {
           "hits": 53,
@@ -68667,8 +68856,8 @@
         },
         "5d": {
           "hits": 47,
-          "n": 93,
-          "hit_rate": 0.5054
+          "n": 95,
+          "hit_rate": 0.4947
         }
       },
       "clash": {
