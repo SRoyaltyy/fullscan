@@ -1,0 +1,27 @@
+{
+  "schema": "grok_automation_harvest_v1",
+  "stage": 1,
+  "since": "2026-08-13",
+  "harvested_at": "2026-09-20T17:23:39Z",
+  "automation_get_results": false,
+  "reason": "automation_get_results unavailable in this environment (cloud VM / GH Actions cannot see automation run logs)",
+  "tasks": {
+    "9b838f02-f233-495a-b609-47ff7c9a61ba": "news_parsing",
+    "5b4f01c3-fe5b-463a-a270-8bc9def8e26f": "google_news",
+    "23a24524-4eaa-4b9e-bd39-5b30e2ec74ae": "hype_factor",
+    "883e005e-8986-4bcc-a7ee-2c835369c94e": "macro_intelligence",
+    "c49a2ad4-007f-4ecd-a4ab-840756060710": "sector_fime",
+    "636e4bff-3b56-481f-bea7-802de312e0f9": "sector_defensive",
+    "76044fbe-9312-4c50-8918-3b1caed159d8": "sector_tech",
+    "4453231e-ccad-4451-ab64-898f2b082493": "human_sources",
+    "161ba94e-6599-4915-885e-f7d8181b3602": "overall_market"
+  },
+  "skipped": [
+    "13 Questions (climate score only)",
+    "Webull STANDTEST"
+  ],
+  "n_results": 0,
+  "n_days": 0,
+  "files": [],
+  "note": "Stage 1 must be run by Grok Bot / Cursor with an Automations connector. GitHub Actions cannot see automation run logs. Stage 2 reads frozen files in data/grok_automations/ plus dated repo news only."
+}
