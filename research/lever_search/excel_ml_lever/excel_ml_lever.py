@@ -1258,10 +1258,149 @@ def filter_panel(doc: dict, *, cutoff: str = CUTOFF) -> tuple[list[str], dict]:
     return sessions, by_day
 
 
+MANIFEST_NAME = "input_manifest.json"
+SIGNAL_COLUMNS = ("signal_date", "ticker", "side", "strategy")
+
+
 def load_panel(path: Path | None = None) -> tuple[list[str], dict]:
-    src = path or (ROOT / "data" / "factor_mine" / "panel.json")
-    doc = json.loads(src.read_text(encoding="utf-8"))
+    """The worktree panel is today's file. It is not a pre-open copy of a past morning."""
+    if path is None or path == ROOT / "data" / "factor_mine" / "panel.json":
+        raise RuntimeError(
+            "refusing to read today's panel.json; past mornings come from the pre-open manifest"
+        )
+    doc = json.loads(Path(path).read_text(encoding="utf-8"))
     return filter_panel(doc)
+
+
+def load_input_manifest(path: Path | None = None) -> dict:
+    src = path or (HERE / MANIFEST_NAME)
+    return json.loads(src.read_text(encoding="utf-8"))
+
+
+def server_before_open(stamp: str, day: str) -> bool:
+    """True when a GitHub Actions run_started_at is strictly before 09:30 ET."""
+    text = str(stamp or "").strip()
+    if not text:
+        return False
+    if text.endswith("Z"):
+        text = text[:-1] + "+00:00"
+    try:
+        when = dt.datetime.fromisoformat(text)
+    except ValueError:
+        return False
+    return _aware(when) < excel_open_cutoff(day)
+
+
+def panel_has_morning(doc: dict, day: str) -> bool:
+    """The pinned blob covers day only when that morning's rows are already in it."""
+    if not day or day >= CUTOFF:
+        return False
+    sessions = [_as_day(item) for item in (doc.get("session_dates") or [])]
+    if day not in sessions:
+        return False
+    return any(_as_day(row.get("date")) == day for row in (doc.get("rows") or []))
+
+
+def signal_rows_from_header(header, cell_rows, *, morning: str) -> list[dict]:
+    """Signal columns only. Tracking-price cells are not subscripted.
+
+    A row whose signal_date is this morning or later is the confirm that
+    uses this session's close, so it is not a feature.
+    """
+    positions = []
+    for name in SIGNAL_COLUMNS:
+        if name not in list(header):
+            raise RuntimeError(f"suggestions file is missing {name}")
+        positions.append((name, list(header).index(name)))
+    out = []
+    for cells in cell_rows:
+        picked = {}
+        for name, index in positions:
+            picked[name] = cells[index] if index < len(cells) else ""
+        sig = _as_day(picked.get("signal_date"))
+        if not sig or sig >= morning or sig >= CUTOFF:
+            continue
+        ticker = _tick(picked.get("ticker"))
+        side = str(picked.get("side") or "").strip().lower()
+        if not ticker or side not in {"long", "short"}:
+            continue
+        out.append({
+            "ticker": ticker,
+            "side": side,
+            "strategy": str(picked.get("strategy") or "").strip(),
+            "signal_date": sig,
+        })
+    return out
+
+
+def series_from_manifest(manifest: dict, read_blob) -> dict:
+    """Score only mornings whose own list is in the pre-open tree.
+
+    ``read_blob(commit, path)`` is the only way a file is loaded. The
+    worktree ``panel.json`` is not opened. A day whose pinned blob has no
+    row for that morning is dropped, not filled from a later commit.
+    """
+    dropped = []
+    for day in sorted((manifest.get("days") or {})):
+        if day >= CUTOFF:
+            raise RuntimeError(f"manifest contains {day}")
+        slot = manifest["days"][day]
+        if not server_before_open(slot.get("server_time"), day):
+            raise RuntimeError(f"{day} snapshot {slot.get('server_time')} is not before 09:30 ET")
+        if slot.get("status") != "loaded":
+            dropped.append({
+                "date": day,
+                "reason": slot.get("reason"),
+                "commit": slot.get("commit"),
+                "server_time": slot.get("server_time"),
+            })
+            continue
+        raw = read_blob(slot["commit"], "data/factor_mine/panel.json")
+        doc = json.loads(raw)
+        if panel_has_morning(doc, day):
+            raise RuntimeError(
+                f"{day} has a pre-open morning list; the blob walk is required and the worktree file is refused"
+            )
+        dropped.append({
+            "date": day,
+            "reason": "pinned blob has no row for this morning",
+            "commit": slot.get("commit"),
+            "server_time": slot.get("server_time"),
+        })
+    return {
+        "id": LEVER_ID,
+        "author": AUTHOR,
+        "family": FAMILY,
+        "created_on": CREATED_ON,
+        "hold": HOLD,
+        "side": "long",
+        "top_n": TOP_N,
+        "seed": SEED,
+        "ridge_alpha": RIDGE_ALPHA,
+        "min_resolved_sessions": MIN_RESOLVED_SESSIONS,
+        "min_train_rows": MIN_TRAIN_ROWS,
+        "cutoff": CUTOFF,
+        "designed_after": True,
+        "note": (
+            "Every morning in 2026-08-13..2026-09-11 lacks a pre-open copy of "
+            "its own candidate list. Those days are dropped. Today's panel.json "
+            "is not substituted. Training sessions: 0. Picks: 0."
+        ),
+        "window": {"start": None, "end": None},
+        "daily": [],
+        "fills": [],
+        "dropped": dropped,
+        "after_fees_return": 0.0,
+        "after_fees_return_15bp": 0.0,
+        "final_equity": CAPITAL,
+        "final_equity_15bp": CAPITAL,
+        "n_days": 0,
+        "n_days_picked": 0,
+        "n_train_sessions": 0,
+        "fee": "futubull",
+        "flat_fee": "15bp",
+        "borrow_if_short": BORROW_FEE_RATE,
+    }
 
 
 def git_commit_rows(path: str, repo: Path | None = None) -> list[tuple]:
@@ -1430,22 +1569,24 @@ def write_outputs(report: dict, out_dir: Path) -> None:
 
 
 def run_luck_test(*, state_dir: Path | None = None, out_dir: Path | None = None) -> dict:
-    """Sequential luck-test walk for 2026-08-13..2026-09-11. Nothing later."""
-    sessions, panel_by_day = load_panel()
-    window = [day for day in sessions if LUCK_START <= day <= LUCK_END]
-    if not window or window[-1] >= CUTOFF:
-        raise RuntimeError("luck-test calendar is empty or crosses the cutoff")
-    names = panel_tickers({day: panel_by_day[day] for day in window})
-    bars = load_bars(names, max_date=LUCK_END)
-    excel_by_day = load_pinned_excel(sessions)
-    # Full session list, still cut before the cutoff, so N+1 inside the
-    # window is the next fullscan session and 2026-09-14 is not on the clock.
-    clock = [day for day in sessions if day <= LUCK_END and day >= LUCK_START]
-    report = walk(
-        clock, panel_by_day, bars, excel_by_day=excel_by_day,
-        state_dir=state_dir if state_dir is not None else HERE / "state",
-        start=LUCK_START, end=LUCK_END,
-    )
+    """Luck-test window. Days without a pre-open morning list are dropped.
+
+    Nothing is read from the worktree panel, the worktree price file, or
+    the worktree suggestions file. No session on or after 2026-09-14 is scored.
+    """
+    manifest = load_input_manifest()
+
+    def read_blob(commit: str, path: str) -> bytes:
+        if path == "data/factor_mine/panel.json" and commit in {"", "WORKTREE"}:
+            raise RuntimeError("refusing to read today's panel.json")
+        import subprocess
+        return subprocess.check_output(["git", "show", f"{commit}:{path}"])
+
+    report = series_from_manifest(manifest, read_blob)
+    # Dropped days have no locked state. A previous series must not remain.
+    if state_dir is not None and state_dir.is_dir():
+        for child in state_dir.glob("*.json"):
+            child.unlink()
     write_outputs(report, out_dir if out_dir is not None else HERE / "outputs")
     return report
 
@@ -1457,26 +1598,11 @@ def main(argv: list[str] | None = None) -> None:
     parser.add_argument("--out", default=str(HERE / "outputs"))
     parser.add_argument("--state", default=str(HERE / "state"))
     args = parser.parse_args(argv)
+    if args.end >= CUTOFF or args.start >= CUTOFF:
+        raise SystemExit(f"refusing range {args.start}..{args.end}")
     if args.start != LUCK_START or args.end != LUCK_END:
-        # The frozen lever's published series is the luck-test window.
-        # Other ranges on or after the cutoff are refused. An earlier
-        # one-day rebuild still goes through walk(), which locks past days.
-        if args.end >= CUTOFF or args.start >= CUTOFF:
-            raise SystemExit(f"refusing range {args.start}..{args.end}")
-    if args.start == LUCK_START and args.end == LUCK_END:
-        report = run_luck_test(state_dir=Path(args.state), out_dir=Path(args.out))
-    else:
-        sessions, panel_by_day = load_panel()
-        clock = [day for day in sessions if args.start <= day <= args.end and day < CUTOFF]
-        names = panel_tickers({day: panel_by_day[day] for day in clock})
-        bars = load_bars(names, max_date=args.end)
-        usable = [day for day in sessions if day < CUTOFF and day <= args.end]
-        excel_by_day = load_pinned_excel(usable)
-        report = walk(
-            usable, panel_by_day, bars, excel_by_day=excel_by_day,
-            state_dir=Path(args.state), start=args.start, end=args.end,
-        )
-        write_outputs(report, Path(args.out))
+        raise SystemExit("refusing to rebuild from today's panel.json")
+    report = run_luck_test(state_dir=Path(args.state), out_dir=Path(args.out))
     print(
         f"[excel_ml_lever] days={report['n_days']} picked={report['n_days_picked']} "
         f"futubull={report['after_fees_return']} flat15={report['after_fees_return_15bp']}",

@@ -428,15 +428,87 @@ def test_published_window_stops_at_09_11() -> None:
     if not path.is_file():
         _fail("luck-test daily_returns.json is missing")
     doc = json.loads(path.read_text(encoding="utf-8"))
-    dates = [row["date"] for row in doc["daily"]]
-    if dates[0] != "2026-08-13" or dates[-1] != "2026-09-11":
-        _fail(f"window is {dates[0]}..{dates[-1]}")
-    if any(day >= "2026-09-14" for day in dates):
+    if doc["daily"]:
+        _fail("a morning without a pre-open list was scored")
+    if doc["n_days"] != 0 or doc["n_days_picked"] != 0 or doc["n_train_sessions"] != 0:
+        _fail(f"day counts drifted: {doc['n_days']} {doc['n_days_picked']} {doc.get('n_train_sessions')}")
+    if doc["after_fees_return"] != 0 or doc["after_fees_return_15bp"] != 0:
+        _fail("an empty book has a return")
+    dropped = [row["date"] for row in doc.get("dropped") or []]
+    if dropped[0] != "2026-08-13" or dropped[-1] != "2026-09-11" or len(dropped) != 21:
+        _fail(f"dropped days drifted: {dropped[:2]}..{dropped[-1:]} n={len(dropped)}")
+    if any(day >= "2026-09-14" for day in dropped):
         _fail("published series scores the cutoff")
-    if doc["n_days"] != 21 or doc["n_days_picked"] != 12:
-        _fail(f"day counts drifted: {doc['n_days']} {doc['n_days_picked']}")
     if doc["id"] != "excel_ml_lever_h1":
         _fail("lever id drifted")
+
+
+def test_preopen_inputs_are_not_todays_panel() -> None:
+    try:
+        M.load_panel()
+    except RuntimeError:
+        pass
+    else:
+        _fail("today's panel.json was readable")
+    if M.server_before_open("2026-09-09T13:30:00Z", "2026-09-09"):
+        _fail("a run at 09:30 ET was early enough")
+    if not M.server_before_open("2026-09-09T13:29:07Z", "2026-09-09"):
+        _fail("13:29Z should be before 09:30 ET")
+    if M.panel_has_morning(
+        {"session_dates": ["2026-08-13", "2026-09-08"], "rows": [{"date": "2026-09-08", "ticker": "AAA"}]},
+        "2026-09-09",
+    ):
+        _fail("a blob that ends 09-08 was treated as the 09-09 morning list")
+    manifest = json.loads((HERE / "input_manifest.json").read_text(encoding="utf-8"))
+    called = []
+
+    def read_blob(commit, path):
+        called.append((commit, path))
+        raise AssertionError("a dropped day must not load a blob")
+
+    report = M.series_from_manifest(manifest, read_blob)
+    if called:
+        _fail(f"manifest read a file: {called[:2]}")
+    if report["n_days"] != 0 or len(report["dropped"]) != 21:
+        _fail("manifest series is not the 21 dropped mornings")
+    for day, slot in manifest["days"].items():
+        if not M.server_before_open(slot["server_time"], day):
+            _fail(f"{day} server time {slot['server_time']} is not before the open")
+        if slot["status"] == "loaded":
+            _fail(f"{day} was marked loaded")
+        latest = slot.get("latest_session_in_panel")
+        if latest is not None and latest >= day:
+            _fail(f"{day} panel already contains that morning")
+
+    class SpyList(list):
+        def __init__(self, values):
+            super().__init__(values)
+            self.touched = []
+
+        def __getitem__(self, index):
+            self.touched.append(index)
+            return list.__getitem__(self, index)
+
+    header = [
+        "run_date", "signal_date", "ticker", "side", "strategy",
+        "current_price", "ret_vs_close", "ret_vs_open",
+    ]
+    leak = header.index("current_price")
+    cells = SpyList([
+        "2026-09-08", "2026-09-08", "AAA", "LONG", "L1", "99", "1", "1",
+    ])
+    rows = M.signal_rows_from_header(header, [cells], morning="2026-09-09")
+    if leak in cells.touched:
+        _fail("current_price was read")
+    if rows != [{
+        "ticker": "AAA", "side": "long", "strategy": "L1", "signal_date": "2026-09-08",
+    }]:
+        _fail(f"signal row drifted: {rows}")
+    same_day = SpyList([
+        "2026-09-09", "2026-09-09", "BBB", "LONG", "L1", "99", "1", "1",
+    ])
+    if M.signal_rows_from_header(header, [same_day], morning="2026-09-09"):
+        _fail("signal_date equal to the morning was kept")
 
 
 def test_theme_reader_rejects_non_whitelist_and_stays_off() -> None:
@@ -589,6 +661,7 @@ def main() -> None:
         test_fees_match_the_schedule_and_borrow_is_separate,
         test_ridge_is_deterministic,
         test_published_window_stops_at_09_11,
+        test_preopen_inputs_are_not_todays_panel,
         test_theme_reader_rejects_non_whitelist_and_stays_off,
         test_fingerprints,
     ]

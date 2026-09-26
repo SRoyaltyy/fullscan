@@ -1,0 +1,441 @@
+{
+  "clock": "Latest commit on main whose GitHub Actions run_started_at is strictly before 09:30 America/New_York. Git committer dates are not the clock. The worktree copy of panel.json is not read.",
+  "days": {
+    "2026-08-13": {
+      "commit": "e3bc9af22701c918c70fb04a487b35253d415f93",
+      "cutoff": "2026-08-13T09:30:00-04:00",
+      "files": {
+        "data/factor_mine/panel.json": null,
+        "data/prices/ohlc.parquet": null,
+        "excel_bot/suggestions/suggestions.csv": null
+      },
+      "latest_session_in_panel": null,
+      "reason": "data/factor_mine/panel.json is not in the last main tree proven before 09:30 ET",
+      "server_source": "actions run_started_at event=schedule branch=main",
+      "server_time": "2026-08-13T12:50:09Z",
+      "status": "dropped"
+    },
+    "2026-08-14": {
+      "commit": "6b74bb2d501c7ecc82f90a72dd901e0fb0c1b41d",
+      "cutoff": "2026-08-14T09:30:00-04:00",
+      "files": {
+        "data/factor_mine/panel.json": null,
+        "data/prices/ohlc.parquet": null,
+        "excel_bot/suggestions/suggestions.csv": null
+      },
+      "latest_session_in_panel": null,
+      "reason": "data/factor_mine/panel.json is not in the last main tree proven before 09:30 ET",
+      "server_source": "actions run_started_at event=schedule branch=main",
+      "server_time": "2026-08-14T12:44:05Z",
+      "status": "dropped"
+    },
+    "2026-08-17": {
+      "commit": "b5db5f33fb35ba13295835a183000131d9d1209b",
+      "cutoff": "2026-08-17T09:30:00-04:00",
+      "files": {
+        "data/factor_mine/panel.json": null,
+        "data/prices/ohlc.parquet": {
+          "commit": "b5db5f33fb35ba13295835a183000131d9d1209b",
+          "git_blob": "a447a0b6dacaf83aedde33845acc9fd9f5ee266b",
+          "sha256": "856ebaaed5f1ce307dc4a28c497b3eb27f44c586b21ea14a2e68dbec01602dd2"
+        },
+        "excel_bot/suggestions/suggestions.csv": null
+      },
+      "latest_session_in_panel": null,
+      "reason": "data/factor_mine/panel.json is not in the last main tree proven before 09:30 ET",
+      "server_source": "actions run_started_at event=workflow_run branch=main",
+      "server_time": "2026-08-17T13:24:36Z",
+      "status": "dropped"
+    },
+    "2026-08-18": {
+      "commit": "8658af86b5d77252c12cd4f67f066daa9d36c7f0",
+      "cutoff": "2026-08-18T09:30:00-04:00",
+      "files": {
+        "data/factor_mine/panel.json": null,
+        "data/prices/ohlc.parquet": {
+          "commit": "8658af86b5d77252c12cd4f67f066daa9d36c7f0",
+          "git_blob": "a447a0b6dacaf83aedde33845acc9fd9f5ee266b",
+          "sha256": "856ebaaed5f1ce307dc4a28c497b3eb27f44c586b21ea14a2e68dbec01602dd2"
+        },
+        "excel_bot/suggestions/suggestions.csv": null
+      },
+      "latest_session_in_panel": null,
+      "reason": "data/factor_mine/panel.json is not in the last main tree proven before 09:30 ET",
+      "server_source": "actions run_started_at event=schedule branch=main",
+      "server_time": "2026-08-18T13:26:52Z",
+      "status": "dropped"
+    },
+    "2026-08-19": {
+      "commit": "36d1652e2faa9e865201c7e1f846a495a3f72c4c",
+      "cutoff": "2026-08-19T09:30:00-04:00",
+      "files": {
+        "data/factor_mine/panel.json": null,
+        "data/prices/ohlc.parquet": {
+          "commit": "36d1652e2faa9e865201c7e1f846a495a3f72c4c",
+          "git_blob": "4d17b11c4e66587b36fe80de2023283a36b1d725",
+          "sha256": "1b56db09be256e6cc3e6c96ee7696f517811c6b806382973347ab9dfcf2779b7"
+        },
+        "excel_bot/suggestions/suggestions.csv": null
+      },
+      "latest_session_in_panel": null,
+      "reason": "data/factor_mine/panel.json is not in the last main tree proven before 09:30 ET",
+      "server_source": "actions run_started_at event=schedule branch=main",
+      "server_time": "2026-08-19T13:28:11Z",
+      "status": "dropped"
+    },
+    "2026-08-20": {
+      "commit": "0bffc0417d181f2176dc38a4b538cadb9fc47716",
+      "cutoff": "2026-08-20T09:30:00-04:00",
+      "files": {
+        "data/factor_mine/panel.json": null,
+        "data/prices/ohlc.parquet": {
+          "commit": "0bffc0417d181f2176dc38a4b538cadb9fc47716",
+          "git_blob": "0b96c6b5b8c9535492764091b5dc154ad9c27adb",
+          "sha256": "e2952ff21ddd926605310c57188b28180c9a3a612100d7bdd2e946f92d4ee9ca"
+        },
+        "excel_bot/suggestions/suggestions.csv": null
+      },
+      "latest_session_in_panel": null,
+      "reason": "data/factor_mine/panel.json is not in the last main tree proven before 09:30 ET",
+      "server_source": "actions run_started_at event=schedule branch=main",
+      "server_time": "2026-08-20T13:28:35Z",
+      "status": "dropped"
+    },
+    "2026-08-21": {
+      "commit": "1f9fb2a751d57119f9ce1fa034ae7567d015c3ca",
+      "cutoff": "2026-08-21T09:30:00-04:00",
+      "files": {
+        "data/factor_mine/panel.json": null,
+        "data/prices/ohlc.parquet": {
+          "commit": "1f9fb2a751d57119f9ce1fa034ae7567d015c3ca",
+          "git_blob": "e7096c22ad9b6d6ca8be17f7f935b9dade8798c4",
+          "sha256": "ed94e4921faa44b68e5a42f884be84e9ce68104108a15755f76b70c237feb46c"
+        },
+        "excel_bot/suggestions/suggestions.csv": null
+      },
+      "latest_session_in_panel": null,
+      "reason": "data/factor_mine/panel.json is not in the last main tree proven before 09:30 ET",
+      "server_source": "actions run_started_at event=schedule branch=main",
+      "server_time": "2026-08-21T13:29:20Z",
+      "status": "dropped"
+    },
+    "2026-08-24": {
+      "commit": "0997a96011fc2bc7e0eb41a036b471c408ab3c8b",
+      "cutoff": "2026-08-24T09:30:00-04:00",
+      "files": {
+        "data/factor_mine/panel.json": null,
+        "data/prices/ohlc.parquet": {
+          "commit": "0997a96011fc2bc7e0eb41a036b471c408ab3c8b",
+          "git_blob": "a8e42b48dd273c691a60213e03a0a4d24f81292b",
+          "sha256": "913bc4a1eb3b4da17e377f2b8b56b0e3d7e1511eda18ae26695926602688c748"
+        },
+        "excel_bot/suggestions/suggestions.csv": null
+      },
+      "latest_session_in_panel": null,
+      "reason": "data/factor_mine/panel.json is not in the last main tree proven before 09:30 ET",
+      "server_source": "actions run_started_at event=schedule branch=main",
+      "server_time": "2026-08-24T13:29:24Z",
+      "status": "dropped"
+    },
+    "2026-08-25": {
+      "commit": "3e0ce83b16f019fd9fa6b21806409363a3a2e0d6",
+      "cutoff": "2026-08-25T09:30:00-04:00",
+      "files": {
+        "data/factor_mine/panel.json": null,
+        "data/prices/ohlc.parquet": {
+          "commit": "3e0ce83b16f019fd9fa6b21806409363a3a2e0d6",
+          "git_blob": "a8e42b48dd273c691a60213e03a0a4d24f81292b",
+          "sha256": "913bc4a1eb3b4da17e377f2b8b56b0e3d7e1511eda18ae26695926602688c748"
+        },
+        "excel_bot/suggestions/suggestions.csv": null
+      },
+      "latest_session_in_panel": null,
+      "reason": "data/factor_mine/panel.json is not in the last main tree proven before 09:30 ET",
+      "server_source": "actions run_started_at event=schedule branch=main",
+      "server_time": "2026-08-25T13:27:03Z",
+      "status": "dropped"
+    },
+    "2026-08-26": {
+      "commit": "2a7287637d9dc5d4cd4859482856326938e9f1b4",
+      "cutoff": "2026-08-26T09:30:00-04:00",
+      "files": {
+        "data/factor_mine/panel.json": null,
+        "data/prices/ohlc.parquet": {
+          "commit": "2a7287637d9dc5d4cd4859482856326938e9f1b4",
+          "git_blob": "a8e42b48dd273c691a60213e03a0a4d24f81292b",
+          "sha256": "913bc4a1eb3b4da17e377f2b8b56b0e3d7e1511eda18ae26695926602688c748"
+        },
+        "excel_bot/suggestions/suggestions.csv": null
+      },
+      "latest_session_in_panel": null,
+      "reason": "data/factor_mine/panel.json is not in the last main tree proven before 09:30 ET",
+      "server_source": "actions run_started_at event=schedule branch=main",
+      "server_time": "2026-08-26T13:12:40Z",
+      "status": "dropped"
+    },
+    "2026-08-27": {
+      "commit": "fb3cc7e4315a01f8552943310b320f4f5afe04c6",
+      "cutoff": "2026-08-27T09:30:00-04:00",
+      "files": {
+        "data/factor_mine/panel.json": null,
+        "data/prices/ohlc.parquet": {
+          "commit": "fb3cc7e4315a01f8552943310b320f4f5afe04c6",
+          "git_blob": "a8e42b48dd273c691a60213e03a0a4d24f81292b",
+          "sha256": "913bc4a1eb3b4da17e377f2b8b56b0e3d7e1511eda18ae26695926602688c748"
+        },
+        "excel_bot/suggestions/suggestions.csv": null
+      },
+      "latest_session_in_panel": null,
+      "reason": "data/factor_mine/panel.json is not in the last main tree proven before 09:30 ET",
+      "server_source": "actions run_started_at event=workflow_dispatch branch=main",
+      "server_time": "2026-08-27T13:25:10Z",
+      "status": "dropped"
+    },
+    "2026-08-28": {
+      "commit": "4b6eae716771e6d87850c353732d609a72d602b8",
+      "cutoff": "2026-08-28T09:30:00-04:00",
+      "files": {
+        "data/factor_mine/panel.json": null,
+        "data/prices/ohlc.parquet": {
+          "commit": "4b6eae716771e6d87850c353732d609a72d602b8",
+          "git_blob": "a8e42b48dd273c691a60213e03a0a4d24f81292b",
+          "sha256": "913bc4a1eb3b4da17e377f2b8b56b0e3d7e1511eda18ae26695926602688c748"
+        },
+        "excel_bot/suggestions/suggestions.csv": null
+      },
+      "latest_session_in_panel": null,
+      "reason": "data/factor_mine/panel.json is not in the last main tree proven before 09:30 ET",
+      "server_source": "actions run_started_at event=schedule branch=main",
+      "server_time": "2026-08-28T11:37:52Z",
+      "status": "dropped"
+    },
+    "2026-08-31": {
+      "commit": "7c40e94aca6184cc6c9692a3048821ae6f3e0a0e",
+      "cutoff": "2026-08-31T09:30:00-04:00",
+      "files": {
+        "data/factor_mine/panel.json": null,
+        "data/prices/ohlc.parquet": {
+          "commit": "7c40e94aca6184cc6c9692a3048821ae6f3e0a0e",
+          "git_blob": "a8e42b48dd273c691a60213e03a0a4d24f81292b",
+          "sha256": "913bc4a1eb3b4da17e377f2b8b56b0e3d7e1511eda18ae26695926602688c748"
+        },
+        "excel_bot/suggestions/suggestions.csv": {
+          "commit": "7c40e94aca6184cc6c9692a3048821ae6f3e0a0e",
+          "git_blob": "98d9c6bb1d4bd81920c711c75ca6d9713af44fc2",
+          "sha256": "130832c47832b986134cc5f77ac72ac0307dadf08459d0c04914be850029c215"
+        }
+      },
+      "latest_session_in_panel": null,
+      "reason": "data/factor_mine/panel.json is not in the last main tree proven before 09:30 ET",
+      "server_source": "actions run_started_at event=workflow_dispatch branch=main",
+      "server_time": "2026-08-31T13:29:36Z",
+      "status": "dropped"
+    },
+    "2026-09-01": {
+      "commit": "324f0dacf57b7119568e045beba8174538ff2c5c",
+      "cutoff": "2026-09-01T09:30:00-04:00",
+      "files": {
+        "data/factor_mine/panel.json": null,
+        "data/prices/ohlc.parquet": {
+          "commit": "324f0dacf57b7119568e045beba8174538ff2c5c",
+          "git_blob": "a8e42b48dd273c691a60213e03a0a4d24f81292b",
+          "sha256": "913bc4a1eb3b4da17e377f2b8b56b0e3d7e1511eda18ae26695926602688c748"
+        },
+        "excel_bot/suggestions/suggestions.csv": {
+          "commit": "324f0dacf57b7119568e045beba8174538ff2c5c",
+          "git_blob": "98d9c6bb1d4bd81920c711c75ca6d9713af44fc2",
+          "sha256": "130832c47832b986134cc5f77ac72ac0307dadf08459d0c04914be850029c215"
+        }
+      },
+      "latest_session_in_panel": null,
+      "reason": "data/factor_mine/panel.json is not in the last main tree proven before 09:30 ET",
+      "server_source": "actions run_started_at event=workflow_dispatch branch=main",
+      "server_time": "2026-09-01T13:25:57Z",
+      "status": "dropped"
+    },
+    "2026-09-02": {
+      "commit": "6563d1cdbcc71f658a43dc841f35d342f9b3f686",
+      "cutoff": "2026-09-02T09:30:00-04:00",
+      "files": {
+        "data/factor_mine/panel.json": null,
+        "data/prices/ohlc.parquet": {
+          "commit": "6563d1cdbcc71f658a43dc841f35d342f9b3f686",
+          "git_blob": "a8e42b48dd273c691a60213e03a0a4d24f81292b",
+          "sha256": "913bc4a1eb3b4da17e377f2b8b56b0e3d7e1511eda18ae26695926602688c748"
+        },
+        "excel_bot/suggestions/suggestions.csv": {
+          "commit": "6563d1cdbcc71f658a43dc841f35d342f9b3f686",
+          "git_blob": "d808b5fe41ca1742df1858f47cbf5e21aa4123b6",
+          "sha256": "fc274c97fec7bfc6817b782402fb5e42fd62cf257651e65bd8ba9fd33ffc639e"
+        }
+      },
+      "latest_session_in_panel": null,
+      "reason": "data/factor_mine/panel.json is not in the last main tree proven before 09:30 ET",
+      "server_source": "actions run_started_at event=workflow_dispatch branch=main",
+      "server_time": "2026-09-02T13:25:27Z",
+      "status": "dropped"
+    },
+    "2026-09-03": {
+      "commit": "67e651be5459f7c4091a090e72459dbde1c522a5",
+      "cutoff": "2026-09-03T09:30:00-04:00",
+      "files": {
+        "data/factor_mine/panel.json": null,
+        "data/prices/ohlc.parquet": {
+          "commit": "67e651be5459f7c4091a090e72459dbde1c522a5",
+          "git_blob": "a8e42b48dd273c691a60213e03a0a4d24f81292b",
+          "sha256": "913bc4a1eb3b4da17e377f2b8b56b0e3d7e1511eda18ae26695926602688c748"
+        },
+        "excel_bot/suggestions/suggestions.csv": {
+          "commit": "67e651be5459f7c4091a090e72459dbde1c522a5",
+          "git_blob": "bb82a123313d0b309091442c9de35553dddb2614",
+          "sha256": "08ecc6381e0ad4cc47000c55d5821214e32117764c5139e14742376327de23c6"
+        }
+      },
+      "latest_session_in_panel": null,
+      "reason": "data/factor_mine/panel.json is not in the last main tree proven before 09:30 ET",
+      "server_source": "actions run_started_at event=workflow_dispatch branch=main",
+      "server_time": "2026-09-03T13:22:29Z",
+      "status": "dropped"
+    },
+    "2026-09-04": {
+      "commit": "68aab7cbc3746116f608a2ccb96da9fa787d645e",
+      "cutoff": "2026-09-04T09:30:00-04:00",
+      "files": {
+        "data/factor_mine/panel.json": null,
+        "data/prices/ohlc.parquet": {
+          "commit": "68aab7cbc3746116f608a2ccb96da9fa787d645e",
+          "git_blob": "a8e42b48dd273c691a60213e03a0a4d24f81292b",
+          "sha256": "913bc4a1eb3b4da17e377f2b8b56b0e3d7e1511eda18ae26695926602688c748"
+        },
+        "excel_bot/suggestions/suggestions.csv": {
+          "commit": "68aab7cbc3746116f608a2ccb96da9fa787d645e",
+          "git_blob": "afb4abbf090107e3e49b70e2b15f5e1628e6d64b",
+          "sha256": "4a3a3e93ef0565ee342f325c59edbde6c6dd3d02e1cdeeb2c77e99ff5b1b98eb"
+        }
+      },
+      "latest_session_in_panel": null,
+      "reason": "data/factor_mine/panel.json is not in the last main tree proven before 09:30 ET",
+      "server_source": "actions run_started_at event=push branch=main",
+      "server_time": "2026-09-04T13:17:38Z",
+      "status": "dropped"
+    },
+    "2026-09-08": {
+      "commit": "eeccf2bb7f31ad47e6a8d6ea8abfd2a314e687c3",
+      "cutoff": "2026-09-08T09:30:00-04:00",
+      "files": {
+        "data/factor_mine/panel.json": null,
+        "data/prices/ohlc.parquet": {
+          "commit": "eeccf2bb7f31ad47e6a8d6ea8abfd2a314e687c3",
+          "git_blob": "a8e42b48dd273c691a60213e03a0a4d24f81292b",
+          "sha256": "913bc4a1eb3b4da17e377f2b8b56b0e3d7e1511eda18ae26695926602688c748"
+        },
+        "excel_bot/suggestions/suggestions.csv": {
+          "commit": "eeccf2bb7f31ad47e6a8d6ea8abfd2a314e687c3",
+          "git_blob": "38cdd3e364e04109942c54d0f78a9b97e591eda6",
+          "sha256": "f6814179f7b27855b5e399f98541049d4c4e434176ec3f97774bd85bb86e21e5"
+        }
+      },
+      "latest_session_in_panel": null,
+      "reason": "data/factor_mine/panel.json is not in the last main tree proven before 09:30 ET",
+      "server_source": "actions run_started_at event=workflow_run branch=main",
+      "server_time": "2026-09-08T13:22:07Z",
+      "status": "dropped"
+    },
+    "2026-09-09": {
+      "commit": "c1167245934f9925941ce2a731efed6fc3c58901",
+      "cutoff": "2026-09-09T09:30:00-04:00",
+      "files": {
+        "data/factor_mine/panel.json": {
+          "commit": "c1167245934f9925941ce2a731efed6fc3c58901",
+          "git_blob": "d0e427d434d6d30da22ea6bf31133ed4648fb277",
+          "sha256": "f2fb0f9811821d64ad7e30ba7c1db1d61abdf3889dc35a12fd08baefec661a10"
+        },
+        "data/prices/ohlc.parquet": {
+          "commit": "c1167245934f9925941ce2a731efed6fc3c58901",
+          "git_blob": "30dc1129f7d6c285a72042cb0533958b4bcae9df",
+          "sha256": "269cb1b03c47cc6e9731dc6177913036426def375faf3c266f49544e07d5aaf8"
+        },
+        "excel_bot/suggestions/suggestions.csv": {
+          "commit": "c1167245934f9925941ce2a731efed6fc3c58901",
+          "git_blob": "38cdd3e364e04109942c54d0f78a9b97e591eda6",
+          "sha256": "f6814179f7b27855b5e399f98541049d4c4e434176ec3f97774bd85bb86e21e5"
+        }
+      },
+      "latest_session_in_panel": "2026-09-08",
+      "reason": "pre-open panel sessions end 2026-09-08; this morning is not in that blob, and a later copy is not used",
+      "server_source": "actions run_started_at event=workflow_run branch=main",
+      "server_time": "2026-09-09T13:29:07Z",
+      "status": "dropped"
+    },
+    "2026-09-10": {
+      "commit": "a714ba9c06220f0a68f54c5fffd9f046e72f8276",
+      "cutoff": "2026-09-10T09:30:00-04:00",
+      "files": {
+        "data/factor_mine/panel.json": {
+          "commit": "a714ba9c06220f0a68f54c5fffd9f046e72f8276",
+          "git_blob": "620cbd24964693505e96b90f2a28ee2b63386718",
+          "sha256": "230ae882985748332152541cd7cecfba92fe9b1e2a04333d5939496013247ea8"
+        },
+        "data/prices/ohlc.parquet": {
+          "commit": "a714ba9c06220f0a68f54c5fffd9f046e72f8276",
+          "git_blob": "6cdd7c15b017183a5c836897eccb275b674cd12c",
+          "sha256": "01846b92e198a60d2ac7f2520933f7c780c38233a748394e46bbcfcb685b768c"
+        },
+        "excel_bot/suggestions/suggestions.csv": {
+          "commit": "a714ba9c06220f0a68f54c5fffd9f046e72f8276",
+          "git_blob": "4311bedee464cf3aa481ed64d5583a7b21a9e6da",
+          "sha256": "0366f12b6ecf60fe07776f45e5a8fc0f9fa0c0721ef73e0e95336369db5b2e3c"
+        }
+      },
+      "latest_session_in_panel": "2026-09-09",
+      "reason": "pre-open panel sessions end 2026-09-09; this morning is not in that blob, and a later copy is not used",
+      "server_source": "actions run_started_at event=workflow_dispatch branch=main",
+      "server_time": "2026-09-10T13:11:49Z",
+      "status": "dropped"
+    },
+    "2026-09-11": {
+      "commit": "ae97009391d281cf563278ee8681e557e4761e2a",
+      "cutoff": "2026-09-11T09:30:00-04:00",
+      "files": {
+        "data/factor_mine/panel.json": {
+          "commit": "ae97009391d281cf563278ee8681e557e4761e2a",
+          "git_blob": "620cbd24964693505e96b90f2a28ee2b63386718",
+          "sha256": "230ae882985748332152541cd7cecfba92fe9b1e2a04333d5939496013247ea8"
+        },
+        "data/prices/ohlc.parquet": {
+          "commit": "ae97009391d281cf563278ee8681e557e4761e2a",
+          "git_blob": "6cdd7c15b017183a5c836897eccb275b674cd12c",
+          "sha256": "01846b92e198a60d2ac7f2520933f7c780c38233a748394e46bbcfcb685b768c"
+        },
+        "excel_bot/suggestions/suggestions.csv": {
+          "commit": "ae97009391d281cf563278ee8681e557e4761e2a",
+          "git_blob": "b0541167a66ad70dbcc928b7d7f262c8735b162f",
+          "sha256": "1396b67da50071beea9c4a1d512aa4fb3cb7ad74a340cf35eaf7e0c22f0af88b"
+        }
+      },
+      "latest_session_in_panel": "2026-09-09",
+      "reason": "pre-open panel sessions end 2026-09-09; this morning is not in that blob, and a later copy is not used",
+      "server_source": "actions run_started_at event=workflow_run branch=main",
+      "server_time": "2026-09-11T11:49:49Z",
+      "status": "dropped"
+    }
+  },
+  "ignored_suggestion_columns": [
+    "current_price",
+    "ret_vs_close",
+    "ret_vs_open",
+    "days_held",
+    "ref_close",
+    "first_open",
+    "signal_colors",
+    "run_date",
+    "exit_rule"
+  ],
+  "repo": "SRoyaltyy/fullscan",
+  "signal_columns": [
+    "ticker",
+    "side",
+    "strategy",
+    "signal_date"
+  ]
+}
