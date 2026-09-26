@@ -1,6 +1,6 @@
 # Fullscan lever search — preregistration
 
-- status: two layers written. The Excel ML line in section 5 is the one open line. The fingerprint is filled when that line closes, at or after 17:30 HKT on 2026-09-26 and before 17:45 HKT. This commit has no returns, no p-values, and no luck-test output.
+- status: two layers written. Theme Radar lever columns are whitelisted and outcome columns are excluded. The Excel ML line in section 5 is the one open line. The fingerprint is filled when that line closes, at or after 17:30 HKT on 2026-09-26 and before 17:45 HKT. This commit has no returns, no p-values, and no luck-test output.
 - written: 2026-09-26
 - fingerprint_sha256: PENDING
 - fingerprint_scope: SHA-256 of the UTF-8 bytes after the line `<!-- BEGIN COVERED -->`, including the final newline. Line endings are LF.
@@ -62,15 +62,179 @@ Frozen export on `SRoyaltyy/theme-radar` commit `3973e13cd953e5705d08d8d9f78a5b1
 
 `trade_date` is the morning the row may be used. `snapshot_date` is the previous trading day. Every value is from a snapshot taken after that prior close and committed before 09:30 ET on `trade_date`. The builder's clock check passed on that commit. This search still drops a cell when that date's provenance says the family was not committed before 09:30 ET. Empty cells stay empty.
 
-The September file contains trade dates through 2026-09-28. During the search and the walk-forward the loader keeps `trade_date` in the 21 sessions of section 1. 2026-08-28 has no Theme Radar row (no prior-close snapshot). A `theme_radar` universe sits that day.
+The export has 237 columns and 406,649 rows. `trade_date` runs from 2026-08-07 through 2026-09-28. Two mornings are absent: 2026-08-06, because snapshot 2026-08-05 is missing, and 2026-08-28, because snapshot 2026-08-27 is missing. A `theme_radar` universe sits on 2026-08-28.
 
-Columns that are not levers, and are not read as gates, ranks, or deltas:
+The September file contains trade dates through 2026-09-28. Search loads go through `src/lever_search_panel.py`. A row is loaded only when `trade_date` is one of the 21 sessions in section 1. Each of those sessions is on or before 2026-09-11. Rows dated 2026-08-07 through 2026-08-12 are in the export and outside that session list, so the search loader leaves them out. Rows dated 2026-09-14 through 2026-09-28 are in the September file and stay out of the search load. 2026-09-28 is never loaded. Passing a session after 2026-09-11 into the search loader raises `FutureLeak`. A returned row dated after 2026-09-11 raises the same error. The designed-after window in section 9 is a later open. It does not use this loader.
 
-- clock and identity: `trade_date`, `snapshot_date`, `scrape_ts_utc`, `scrape_ts_source`, `snapshot_commit_ts_utc`, `tr_scores_commit_ts_utc`, `tr_features_commit_ts_utc`, `tr_composite_commit_ts_utc`, `tr_segments_commit_ts_utc`, `Ticker`, `Company`, `Industry`, `Sector`, `Country`, `Exchange`, `Index`, `News Time`
-- text buckets: every `tr*_mcap_bucket`, `tr*_beta_bucket`, `tr*_status_*`, `tr*_kill_flags`, `tr*_top_pos`, `tr*_top_neg`, `trf_pair_date`
-- outcome-style returns: `tr1d_ret_H`, `tr1w_ret_H`, `tr1m_ret_H`, `trf_true_ret`, `trf_true_ret_dir`
-- `Open` (empty on the search window; not a fill)
-- `trf_dir_*` (the sign of the matching `trf_d_*`; the delta lever uses `trf_d_*` once)
+Lever columns are the whitelist below: Finviz fields the section 4 atoms read, Theme Radar score columns the rubric atoms read, the 14 composite score columns, and the feature columns the deltas, catalyst flags, and upside atom read. That is 102 columns. Composite columns are the numeric scores from the composite file, including `trc_ret` and `trc_resid`. They stay in the grid, so N_B in section 4 is unchanged.
+
+The loader returns `trade_date` and `Ticker` so a row can be joined onto the panel. Those two names are not gates. `read_lever` raises `OutcomeColumnError` when the name is an excluded outcome column, and raises `LeverColumnError` for every other name outside the whitelist. Outcome columns are left out of the column index, so their cells are not read. `src/test_lever_search_panel.py` fails when an excluded column is requested or when a loaded search row contains one.
+
+<!-- LEVER_WHITELIST_BEGIN -->
+
+Finviz fields, the 15 columns the section 4 Finviz atoms read:
+
+- `Performance (Week)`
+- `Performance (Month)`
+- `Performance (Quarter)`
+- `Relative Volume`
+- `Relative Strength Index (14)`
+- `EPS Surprise`
+- `Revenue Surprise`
+- `20-Day Simple Moving Average`
+- `50-Day Simple Moving Average`
+- `Short Float`
+- `Insider Transactions`
+- `Institutional Transactions`
+- `Analyst Recom`
+- `Gross Margin`
+- `Profit Margin`
+
+Theme Radar score columns, 12 fields on each of `tr1d_`, `tr1w_`, and `tr1m_` (36):
+
+- `tr1d_price_score`
+- `tr1d_flow_score`
+- `tr1d_technical_score`
+- `tr1d_positioning_score`
+- `tr1d_valuation_score`
+- `tr1d_fundamental_score`
+- `tr1d_catalyst_score`
+- `tr1d_total_score`
+- `tr1d_score_100`
+- `tr1d_upside_pct`
+- `tr1d_n_pos`
+- `tr1d_n_neg`
+- `tr1w_price_score`
+- `tr1w_flow_score`
+- `tr1w_technical_score`
+- `tr1w_positioning_score`
+- `tr1w_valuation_score`
+- `tr1w_fundamental_score`
+- `tr1w_catalyst_score`
+- `tr1w_total_score`
+- `tr1w_score_100`
+- `tr1w_upside_pct`
+- `tr1w_n_pos`
+- `tr1w_n_neg`
+- `tr1m_price_score`
+- `tr1m_flow_score`
+- `tr1m_technical_score`
+- `tr1m_positioning_score`
+- `tr1m_valuation_score`
+- `tr1m_fundamental_score`
+- `tr1m_catalyst_score`
+- `tr1m_total_score`
+- `tr1m_score_100`
+- `tr1m_upside_pct`
+- `tr1m_n_pos`
+- `tr1m_n_neg`
+
+Composite score columns (14):
+
+- `trc_resid`
+- `trc_pressure`
+- `trc_ret`
+- `trc_SPEC_DURATION`
+- `trc_QUALITY_DEFENSIVE`
+- `trc_CROWDING`
+- `trc_SIZE_TILT`
+- `trc_mom`
+- `trc_profitable`
+- `trc_leverage`
+- `trc_short`
+- `trc_beta`
+- `trc_size`
+- `trc_index`
+
+Feature columns, the 28 `trf_d_*` deltas, the 8 catalyst flags, and `trf_upside_pct_lvl`:
+
+- `trf_d_Price`
+- `trf_d_Market Cap`
+- `trf_d_Average Volume`
+- `trf_d_Relative Volume`
+- `trf_d_Performance (Week)`
+- `trf_d_Performance (Month)`
+- `trf_d_Performance (Quarter)`
+- `trf_d_Performance (YTD)`
+- `trf_d_Relative Strength Index (14)`
+- `trf_d_Short Float`
+- `trf_d_Short Ratio`
+- `trf_d_Institutional Transactions`
+- `trf_d_Institutional Ownership`
+- `trf_d_Insider Transactions`
+- `trf_d_Analyst Recom`
+- `trf_d_Target Price`
+- `trf_d_Forward P/E`
+- `trf_d_Sales Year Over Year TTM`
+- `trf_d_Sales Growth Quarter Over Quarter`
+- `trf_d_EPS Surprise`
+- `trf_d_Profit Margin`
+- `trf_d_Gross Margin`
+- `trf_d_20-Day Simple Moving Average`
+- `trf_d_50-Day Simple Moving Average`
+- `trf_d_200-Day Simple Moving Average`
+- `trf_d_Beta`
+- `trf_d_Volatility (Month)`
+- `trf_d_Total Debt/Equity`
+- `trf_cat_nuclear_smr`
+- `trf_cat_optics_transceiver`
+- `trf_cat_data_center_power`
+- `trf_cat_hbm_memory`
+- `trf_cat_copper_metals`
+- `trf_cat_ai_capex`
+- `trf_cat_defense`
+- `trf_cat_semiconductor_equip`
+- `trf_upside_pct_lvl`
+
+<!-- LEVER_WHITELIST_END -->
+
+A column is an excluded outcome column when its name is one of the bare names below, when stripping one family prefix (`tr1d_`, `tr1w_`, `tr1m_`, `trf_`, `trc_`, or `seg_`) leaves one of those bare names, or when any `_`-separated suffix of the name is one of those bare names. The bare names are the Theme Radar labels file `data/labels/*_fwd.csv` (`fwd_*`, `short_fwd_*`, `label_date_*`, `exit_price_*`, `entry_price`, `prediction_day_*`, `price_T`, `price_T1`, `price_T2`, `price_T3`, `up_3d`, `down_3d`, `scan_date`, `signal_asof`) plus `ret_H`, `true_ret`, and `true_ret_dir`. The same rule covers those names with a prefix. Inside this export the outcome columns are `tr1d_ret_H`, `tr1w_ret_H`, `tr1m_ret_H`, `trf_true_ret`, and `trf_true_ret_dir`.
+
+<!-- OUTCOME_EXCLUDE_BEGIN -->
+
+- `scan_date`
+- `signal_asof`
+- `entry_price`
+- `price_T`
+- `price_T1`
+- `price_T2`
+- `price_T3`
+- `prediction_day_1d`
+- `prediction_day_2d`
+- `prediction_day_3d`
+- `label_date_1`
+- `label_date_2`
+- `label_date_3`
+- `exit_price_1d`
+- `exit_price_2d`
+- `exit_price_3d`
+- `fwd_1d`
+- `fwd_2d`
+- `fwd_3d`
+- `short_fwd_1d`
+- `short_fwd_2d`
+- `short_fwd_3d`
+- `up_3d`
+- `down_3d`
+- `ret_H`
+- `true_ret`
+- `true_ret_dir`
+- `tr1d_ret_H`
+- `tr1w_ret_H`
+- `tr1m_ret_H`
+- `trf_true_ret`
+- `trf_true_ret_dir`
+- `tr1d_fwd_1d`
+- `tr1w_short_fwd_2d`
+- `tr1m_label_date_3`
+- `trf_exit_price_1d`
+- `trc_price_T1`
+- `seg_entry_price`
+- `tr1d_true_ret`
+
+<!-- OUTCOME_EXCLUDE_END -->
+
+Columns outside the whitelist are not levers, and the loader does not return them. That set includes the clock and identity fields other than `trade_date` and `Ticker`, the text buckets (`mcap_bucket`, `beta_bucket`, `status_*`, `kill_flags`, `top_pos`, `top_neg`, `trf_pair_date`), `Open`, every `trf_dir_*` sign (the delta lever reads the matching `trf_d_*` column once), `trf_price_then`, and the `seg_*` membership fields.
 
 ## 4. Layer B — one combination
 
@@ -451,10 +615,20 @@ The yearly breakdown is a report, not an extra pass gate. For every Layer A comb
 | Layer A, N_A | 16,646,400 |
 | Layer B, N_B | 1,984,711,680 |
 | OOS-0914 candidates, `data/factor_mine/oos0914_preregister.json` sha256 `989e05291a04a059062bed0ba15514ae674060679ded87de3c30447307fc659e` | 37 |
-| Theme Radar prior tries (`theme_radar_search.tries_floor` in that same file) | 8,264 |
+| Theme Radar prior tries, pass 1 | 8,264 |
+| Theme Radar follow-up tries | 868 |
 | Excel ML spec | `excel_ml_count` |
 
-The luck-test denominator is N_A + N_B + 37 + 8,264 + `excel_ml_count`. With `excel_ml_count` at 0 that is 2,001,366,381. The 37 and the 8,264 are prior searches. They are counted. They are not rerun. Each line stays separate in the report.
+Theme Radar's prior tries are commit `b01166a6a3803672c21daf4af55c276402abb3c7` on `SRoyaltyy/theme-radar` (2026-09-26T03:44:17Z).
+
+| file | sha256 |
+| --- | --- |
+| `research/lever_panel/prior_tries_daily_returns.csv.gz` | `30d483f2944b6a23e5ebca5bd894aeba1e2b94366de5d1168c2fe568f16fb32c` |
+| `research/lever_panel/prior_tries_combos.csv.gz` | `e4b6f4b5736ffaff08e2e3ec6f556c710fc6737989e2b1f1d64a1ef0ca05855e` |
+
+`prior_tries_combos.csv.gz` has 9,132 rows. `in_8264_pass1_tally` is true on 8,264 of them and false on 868. Those two counts are separate lines. `prior_tries_daily_returns.csv.gz` is the after-fee series saved with that commit (columns `combo_id`, `date`, `ret_after_fee`, `n_names`). The tally counts the 8,264 and the 868 tries. It does not rerun them, and it does not count the daily rows as extra tries.
+
+The luck-test denominator is N_A + N_B + 37 + 8,264 + 868 + `excel_ml_count`. With `excel_ml_count` at 0 that is 2,001,367,249. The 37, the 8,264, and the 868 are prior searches. They are counted. They are not rerun. Each line stays separate in the report.
 
 Baselines, on that layer's own sessions, after Futubull fees: RANDOM4 (4 names, 1,000 draws, seed `20260813`, hold 1, drawn from the combination's universe that morning) and IWM buy-and-hold. IRONCLAD rule 19.
 
@@ -485,4 +659,4 @@ Keep bar (IRONCLAD rule 21) is reported and does not add or remove a row: at lea
 
 ## 10. Refusal
 
-The scored run refuses to start when the header fingerprint disagrees with the covered bytes, when `excel_ml_count` is still `UNRESOLVED`, when a row dated 2026-09-14 or later is passed into either search or either rolling check, or when the Layer A search opens `panel.json`, a Theme Radar file, or an LLM morning file.
+The scored run refuses to start when the header fingerprint disagrees with the covered bytes, when `excel_ml_count` is still `UNRESOLVED`, when a row dated 2026-09-14 or later is passed into either search or either rolling check, when the search loader is given a session after 2026-09-11, when a loaded search row contains a `trade_date` after 2026-09-11, when `read_lever` is asked for an excluded outcome column, when a loaded search row contains an excluded outcome column, or when the Layer A search opens `panel.json`, a Theme Radar file, or an LLM morning file.
