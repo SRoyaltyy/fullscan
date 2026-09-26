@@ -297,6 +297,16 @@ def test_initial_inputs_and_hash_guard() -> None:
 
     manifest = load_manifest()
     assert manifest["finviz_proven_dates"] == list(FINVIZ_PROVEN_DATES)
+    levers = manifest["theme_radar_finviz_levers"]
+    assert levers["status"] == "available-proven"
+    assert levers["commit"] == "19973230e4d80c74565e1246ada911503a808fb7"
+    assert levers["path"] == "research/lever_panel/server_time_proof.csv"
+    assert levers["sha256"] == "5bde5e9164f499899b4ed70fcdbfde3f72b3e8b5692da645f1e9682e3c6a913e"
+    assert levers["export_morning_count"] == 35
+    assert levers["in_window_count"] == 20
+    assert levers["in_window_mornings"] == list(FINVIZ_PROVEN_DATES)
+    assert len(levers["sample_api_checks"]) == 8
+    assert all(row["start_before_0930_et"] and row["created_at_matches_api"] for row in levers["sample_api_checks"])
     assert manifest["excel_sessions"] == list(EXCEL_SESSIONS)
     assert "2026-08-28" not in manifest["finviz_proven_dates"]
     assert len(manifest["finviz_proven_dates"]) == 20

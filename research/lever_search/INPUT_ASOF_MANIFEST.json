@@ -216,7 +216,7 @@
           "git_commit_date": "2026-08-12T22:06:30Z",
           "server_time_utc": "2026-08-13T21:23:37Z",
           "server_source": "actions_run 31745431106 (Finviz Daily Snapshot, schedule; run_started_at 2026-08-13T21:23:37Z; head_sha eb0fa8a91bcad6052289f88746074f471df317a3)",
-          "status": "MISSING",
+          "status": "available-proven",
           "loaded_in_initial_run": false,
           "proof": {
             "kind": "actions_run_start",
@@ -227,7 +227,8 @@
             "head_sha": "eb0fa8a91bcad6052289f88746074f471df317a3",
             "matched_by": "actions_runs.head_sha"
           },
-          "dropped_reason": "head_sha run start is after 09:30 ET"
+          "lever_availability": "available-proven",
+          "availability_note": "Cited proof file marks this morning PROVEN. The creating run's start is before 09:30 ET. A later run whose head_sha equals this commit can start after the open; that later run is not the availability clock."
         },
         {
           "source_path": "data/features/2026-08-12_1d.csv",
@@ -337,7 +338,14 @@
             "matched_by": "actions_runs.head_sha"
           }
         }
-      ]
+      ],
+      "finviz_levers": "available-proven",
+      "availability_citation": {
+        "repo": "SRoyaltyy/theme-radar",
+        "commit": "19973230e4d80c74565e1246ada911503a808fb7",
+        "path": "research/lever_panel/server_time_proof.csv",
+        "sha256": "5bde5e9164f499899b4ed70fcdbfde3f72b3e8b5692da645f1e9682e3c6a913e"
+      }
     },
     {
       "trade_date": "2026-08-14",
@@ -348,7 +356,7 @@
           "git_commit_date": "2026-08-13T22:06:14Z",
           "server_time_utc": "2026-08-14T20:57:27Z",
           "server_source": "actions_run 31840276074 (Finviz Daily Snapshot, schedule; run_started_at 2026-08-14T20:57:27Z; head_sha a570a5539efb72e18bae59a7269e727174eb3884)",
-          "status": "MISSING",
+          "status": "available-proven",
           "loaded_in_initial_run": false,
           "proof": {
             "kind": "actions_run_start",
@@ -359,7 +367,8 @@
             "head_sha": "a570a5539efb72e18bae59a7269e727174eb3884",
             "matched_by": "actions_runs.head_sha"
           },
-          "dropped_reason": "head_sha run start is after 09:30 ET"
+          "lever_availability": "available-proven",
+          "availability_note": "Cited proof file marks this morning PROVEN. The creating run's start is before 09:30 ET. A later run whose head_sha equals this commit can start after the open; that later run is not the availability clock."
         },
         {
           "source_path": "data/features/2026-08-13_1d.csv",
@@ -469,7 +478,14 @@
             "matched_by": "actions_runs.head_sha"
           }
         }
-      ]
+      ],
+      "finviz_levers": "available-proven",
+      "availability_citation": {
+        "repo": "SRoyaltyy/theme-radar",
+        "commit": "19973230e4d80c74565e1246ada911503a808fb7",
+        "path": "research/lever_panel/server_time_proof.csv",
+        "sha256": "5bde5e9164f499899b4ed70fcdbfde3f72b3e8b5692da645f1e9682e3c6a913e"
+      }
     },
     {
       "trade_date": "2026-08-17",
@@ -600,7 +616,14 @@
             "matched_by": "actions_runs.head_sha"
           }
         }
-      ]
+      ],
+      "finviz_levers": "available-proven",
+      "availability_citation": {
+        "repo": "SRoyaltyy/theme-radar",
+        "commit": "19973230e4d80c74565e1246ada911503a808fb7",
+        "path": "research/lever_panel/server_time_proof.csv",
+        "sha256": "5bde5e9164f499899b4ed70fcdbfde3f72b3e8b5692da645f1e9682e3c6a913e"
+      }
     },
     {
       "trade_date": "2026-08-18",
@@ -611,7 +634,7 @@
           "git_commit_date": "2026-08-17T21:44:51Z",
           "server_time_utc": "2026-08-18T20:51:32Z",
           "server_source": "actions_run 32184602029 (Finviz Daily Snapshot, schedule; run_started_at 2026-08-18T20:51:32Z; head_sha 07ae9da56404f8e506b5ae46693ae459c07f9a08)",
-          "status": "MISSING",
+          "status": "available-proven",
           "loaded_in_initial_run": false,
           "proof": {
             "kind": "actions_run_start",
@@ -622,7 +645,8 @@
             "head_sha": "07ae9da56404f8e506b5ae46693ae459c07f9a08",
             "matched_by": "actions_runs.head_sha"
           },
-          "dropped_reason": "head_sha run start is after 09:30 ET"
+          "lever_availability": "available-proven",
+          "availability_note": "Cited proof file marks this morning PROVEN. The creating run's start is before 09:30 ET. A later run whose head_sha equals this commit can start after the open; that later run is not the availability clock."
         },
         {
           "source_path": "data/features/2026-08-17_1d.csv",
@@ -732,7 +756,14 @@
             "matched_by": "actions_runs.head_sha"
           }
         }
-      ]
+      ],
+      "finviz_levers": "available-proven",
+      "availability_citation": {
+        "repo": "SRoyaltyy/theme-radar",
+        "commit": "19973230e4d80c74565e1246ada911503a808fb7",
+        "path": "research/lever_panel/server_time_proof.csv",
+        "sha256": "5bde5e9164f499899b4ed70fcdbfde3f72b3e8b5692da645f1e9682e3c6a913e"
+      }
     },
     {
       "trade_date": "2026-08-19",
@@ -743,7 +774,7 @@
           "git_commit_date": "2026-08-18T21:42:47Z",
           "server_time_utc": "2026-08-19T20:55:44Z",
           "server_source": "actions_run 32301194644 (Finviz Daily Snapshot, schedule; run_started_at 2026-08-19T20:55:44Z; head_sha 95b3a8e490524a969985f21dafdaae2b27dd1dd1)",
-          "status": "MISSING",
+          "status": "available-proven",
           "loaded_in_initial_run": false,
           "proof": {
             "kind": "actions_run_start",
@@ -754,7 +785,8 @@
             "head_sha": "95b3a8e490524a969985f21dafdaae2b27dd1dd1",
             "matched_by": "actions_runs.head_sha"
           },
-          "dropped_reason": "head_sha run start is after 09:30 ET"
+          "lever_availability": "available-proven",
+          "availability_note": "Cited proof file marks this morning PROVEN. The creating run's start is before 09:30 ET. A later run whose head_sha equals this commit can start after the open; that later run is not the availability clock."
         },
         {
           "source_path": "data/features/2026-08-18_1d.csv",
@@ -864,7 +896,14 @@
             "matched_by": "actions_runs.head_sha"
           }
         }
-      ]
+      ],
+      "finviz_levers": "available-proven",
+      "availability_citation": {
+        "repo": "SRoyaltyy/theme-radar",
+        "commit": "19973230e4d80c74565e1246ada911503a808fb7",
+        "path": "research/lever_panel/server_time_proof.csv",
+        "sha256": "5bde5e9164f499899b4ed70fcdbfde3f72b3e8b5692da645f1e9682e3c6a913e"
+      }
     },
     {
       "trade_date": "2026-08-20",
@@ -875,7 +914,7 @@
           "git_commit_date": "2026-08-19T21:45:07Z",
           "server_time_utc": "2026-08-20T20:57:51Z",
           "server_source": "actions_run 32416911183 (Finviz Daily Snapshot, schedule; run_started_at 2026-08-20T20:57:51Z; head_sha 440a5b754821ae000480c141c2c473d4a1370f47)",
-          "status": "MISSING",
+          "status": "available-proven",
           "loaded_in_initial_run": false,
           "proof": {
             "kind": "actions_run_start",
@@ -886,7 +925,8 @@
             "head_sha": "440a5b754821ae000480c141c2c473d4a1370f47",
             "matched_by": "actions_runs.head_sha"
           },
-          "dropped_reason": "head_sha run start is after 09:30 ET"
+          "lever_availability": "available-proven",
+          "availability_note": "Cited proof file marks this morning PROVEN. The creating run's start is before 09:30 ET. A later run whose head_sha equals this commit can start after the open; that later run is not the availability clock."
         },
         {
           "source_path": "data/features/2026-08-19_1d.csv",
@@ -996,7 +1036,14 @@
             "matched_by": "actions_runs.head_sha"
           }
         }
-      ]
+      ],
+      "finviz_levers": "available-proven",
+      "availability_citation": {
+        "repo": "SRoyaltyy/theme-radar",
+        "commit": "19973230e4d80c74565e1246ada911503a808fb7",
+        "path": "research/lever_panel/server_time_proof.csv",
+        "sha256": "5bde5e9164f499899b4ed70fcdbfde3f72b3e8b5692da645f1e9682e3c6a913e"
+      }
     },
     {
       "trade_date": "2026-08-21",
@@ -1007,7 +1054,7 @@
           "git_commit_date": "2026-08-20T21:47:38Z",
           "server_time_utc": "2026-08-21T20:51:53Z",
           "server_source": "actions_run 32525705353 (Finviz Daily Snapshot, schedule; run_started_at 2026-08-21T20:51:53Z; head_sha 82e4f42c6a28f03b4cf5b5456498c0c18100ae1d)",
-          "status": "MISSING",
+          "status": "available-proven",
           "loaded_in_initial_run": false,
           "proof": {
             "kind": "actions_run_start",
@@ -1018,7 +1065,8 @@
             "head_sha": "82e4f42c6a28f03b4cf5b5456498c0c18100ae1d",
             "matched_by": "actions_runs.head_sha"
           },
-          "dropped_reason": "head_sha run start is after 09:30 ET"
+          "lever_availability": "available-proven",
+          "availability_note": "Cited proof file marks this morning PROVEN. The creating run's start is before 09:30 ET. A later run whose head_sha equals this commit can start after the open; that later run is not the availability clock."
         },
         {
           "source_path": "data/features/2026-08-20_1d.csv",
@@ -1128,7 +1176,14 @@
             "matched_by": "actions_runs.head_sha"
           }
         }
-      ]
+      ],
+      "finviz_levers": "available-proven",
+      "availability_citation": {
+        "repo": "SRoyaltyy/theme-radar",
+        "commit": "19973230e4d80c74565e1246ada911503a808fb7",
+        "path": "research/lever_panel/server_time_proof.csv",
+        "sha256": "5bde5e9164f499899b4ed70fcdbfde3f72b3e8b5692da645f1e9682e3c6a913e"
+      }
     },
     {
       "trade_date": "2026-08-24",
@@ -1259,7 +1314,14 @@
             "matched_by": "actions_runs.head_sha"
           }
         }
-      ]
+      ],
+      "finviz_levers": "available-proven",
+      "availability_citation": {
+        "repo": "SRoyaltyy/theme-radar",
+        "commit": "19973230e4d80c74565e1246ada911503a808fb7",
+        "path": "research/lever_panel/server_time_proof.csv",
+        "sha256": "5bde5e9164f499899b4ed70fcdbfde3f72b3e8b5692da645f1e9682e3c6a913e"
+      }
     },
     {
       "trade_date": "2026-08-25",
@@ -1270,7 +1332,7 @@
           "git_commit_date": "2026-08-24T21:47:24Z",
           "server_time_utc": "2026-08-25T20:56:45Z",
           "server_source": "actions_run 32898256110 (Finviz Daily Snapshot, schedule; run_started_at 2026-08-25T20:56:45Z; head_sha 7e1d8aaed52283620d4193e9027ae63e5836dd96)",
-          "status": "MISSING",
+          "status": "available-proven",
           "loaded_in_initial_run": false,
           "proof": {
             "kind": "actions_run_start",
@@ -1281,7 +1343,8 @@
             "head_sha": "7e1d8aaed52283620d4193e9027ae63e5836dd96",
             "matched_by": "actions_runs.head_sha"
           },
-          "dropped_reason": "head_sha run start is after 09:30 ET"
+          "lever_availability": "available-proven",
+          "availability_note": "Cited proof file marks this morning PROVEN. The creating run's start is before 09:30 ET. A later run whose head_sha equals this commit can start after the open; that later run is not the availability clock."
         },
         {
           "source_path": "data/features/2026-08-24_1d.csv",
@@ -1391,7 +1454,14 @@
             "matched_by": "actions_runs.head_sha"
           }
         }
-      ]
+      ],
+      "finviz_levers": "available-proven",
+      "availability_citation": {
+        "repo": "SRoyaltyy/theme-radar",
+        "commit": "19973230e4d80c74565e1246ada911503a808fb7",
+        "path": "research/lever_panel/server_time_proof.csv",
+        "sha256": "5bde5e9164f499899b4ed70fcdbfde3f72b3e8b5692da645f1e9682e3c6a913e"
+      }
     },
     {
       "trade_date": "2026-08-26",
@@ -1402,7 +1472,7 @@
           "git_commit_date": "2026-08-25T21:47:27Z",
           "server_time_utc": "2026-08-26T23:59:26Z",
           "server_source": "actions_run 33025264557 (Finviz Daily Snapshot, schedule; run_started_at 2026-08-26T23:59:26Z; head_sha c5e397b86f70c48e534c6a785d49a64373957ba4)",
-          "status": "MISSING",
+          "status": "available-proven",
           "loaded_in_initial_run": false,
           "proof": {
             "kind": "actions_run_start",
@@ -1413,7 +1483,8 @@
             "head_sha": "c5e397b86f70c48e534c6a785d49a64373957ba4",
             "matched_by": "actions_runs.head_sha"
           },
-          "dropped_reason": "head_sha run start is after 09:30 ET"
+          "lever_availability": "available-proven",
+          "availability_note": "Cited proof file marks this morning PROVEN. The creating run's start is before 09:30 ET. A later run whose head_sha equals this commit can start after the open; that later run is not the availability clock."
         },
         {
           "source_path": "data/features/2026-08-25_1d.csv",
@@ -1523,7 +1594,14 @@
             "matched_by": "actions_runs.head_sha"
           }
         }
-      ]
+      ],
+      "finviz_levers": "available-proven",
+      "availability_citation": {
+        "repo": "SRoyaltyy/theme-radar",
+        "commit": "19973230e4d80c74565e1246ada911503a808fb7",
+        "path": "research/lever_panel/server_time_proof.csv",
+        "sha256": "5bde5e9164f499899b4ed70fcdbfde3f72b3e8b5692da645f1e9682e3c6a913e"
+      }
     },
     {
       "trade_date": "2026-08-27",
@@ -1534,7 +1612,7 @@
           "git_commit_date": "2026-08-27T00:51:10Z",
           "server_time_utc": "2026-08-28T04:25:44Z",
           "server_source": "actions_run 33141782411 (Finviz Daily Snapshot, schedule; run_started_at 2026-08-28T04:25:44Z; head_sha 87c4106bd45ea0fe4b103d498509b49d3ec55936)",
-          "status": "MISSING",
+          "status": "available-proven",
           "loaded_in_initial_run": false,
           "proof": {
             "kind": "actions_run_start",
@@ -1545,7 +1623,8 @@
             "head_sha": "87c4106bd45ea0fe4b103d498509b49d3ec55936",
             "matched_by": "actions_runs.head_sha"
           },
-          "dropped_reason": "head_sha run start is after 09:30 ET"
+          "lever_availability": "available-proven",
+          "availability_note": "Cited proof file marks this morning PROVEN. The creating run's start is before 09:30 ET. A later run whose head_sha equals this commit can start after the open; that later run is not the availability clock."
         },
         {
           "source_path": "data/features/2026-08-26_1d.csv",
@@ -1655,7 +1734,14 @@
             "matched_by": "actions_runs.head_sha"
           }
         }
-      ]
+      ],
+      "finviz_levers": "available-proven",
+      "availability_citation": {
+        "repo": "SRoyaltyy/theme-radar",
+        "commit": "19973230e4d80c74565e1246ada911503a808fb7",
+        "path": "research/lever_panel/server_time_proof.csv",
+        "sha256": "5bde5e9164f499899b4ed70fcdbfde3f72b3e8b5692da645f1e9682e3c6a913e"
+      }
     },
     {
       "trade_date": "2026-08-31",
@@ -1786,7 +1872,14 @@
             "matched_by": "actions_runs.head_sha"
           }
         }
-      ]
+      ],
+      "finviz_levers": "available-proven",
+      "availability_citation": {
+        "repo": "SRoyaltyy/theme-radar",
+        "commit": "19973230e4d80c74565e1246ada911503a808fb7",
+        "path": "research/lever_panel/server_time_proof.csv",
+        "sha256": "5bde5e9164f499899b4ed70fcdbfde3f72b3e8b5692da645f1e9682e3c6a913e"
+      }
     },
     {
       "trade_date": "2026-09-01",
@@ -1797,7 +1890,7 @@
           "git_commit_date": "2026-09-01T00:40:09Z",
           "server_time_utc": "2026-09-01T22:45:26Z",
           "server_source": "actions_run 33567827355 (Finviz Daily Snapshot, schedule; run_started_at 2026-09-01T22:45:26Z; head_sha 436350e6b10b0917841eafb2e38252d8ade8f944)",
-          "status": "MISSING",
+          "status": "available-proven",
           "loaded_in_initial_run": false,
           "proof": {
             "kind": "actions_run_start",
@@ -1808,7 +1901,8 @@
             "head_sha": "436350e6b10b0917841eafb2e38252d8ade8f944",
             "matched_by": "actions_runs.head_sha"
           },
-          "dropped_reason": "head_sha run start is after 09:30 ET"
+          "lever_availability": "available-proven",
+          "availability_note": "Cited proof file marks this morning PROVEN. The creating run's start is before 09:30 ET. A later run whose head_sha equals this commit can start after the open; that later run is not the availability clock."
         },
         {
           "source_path": "data/features/2026-08-31_1d.csv",
@@ -1918,7 +2012,14 @@
             "matched_by": "actions_runs.head_sha"
           }
         }
-      ]
+      ],
+      "finviz_levers": "available-proven",
+      "availability_citation": {
+        "repo": "SRoyaltyy/theme-radar",
+        "commit": "19973230e4d80c74565e1246ada911503a808fb7",
+        "path": "research/lever_panel/server_time_proof.csv",
+        "sha256": "5bde5e9164f499899b4ed70fcdbfde3f72b3e8b5692da645f1e9682e3c6a913e"
+      }
     },
     {
       "trade_date": "2026-09-02",
@@ -1929,7 +2030,7 @@
           "git_commit_date": "2026-09-01T23:21:52Z",
           "server_time_utc": "2026-09-02T22:47:08Z",
           "server_source": "actions_run 33692047066 (Finviz Daily Snapshot, schedule; run_started_at 2026-09-02T22:47:08Z; head_sha d803e2c98496ba62e442c5e15b182e0198f8053a)",
-          "status": "MISSING",
+          "status": "available-proven",
           "loaded_in_initial_run": false,
           "proof": {
             "kind": "actions_run_start",
@@ -1940,7 +2041,8 @@
             "head_sha": "d803e2c98496ba62e442c5e15b182e0198f8053a",
             "matched_by": "actions_runs.head_sha"
           },
-          "dropped_reason": "head_sha run start is after 09:30 ET"
+          "lever_availability": "available-proven",
+          "availability_note": "Cited proof file marks this morning PROVEN. The creating run's start is before 09:30 ET. A later run whose head_sha equals this commit can start after the open; that later run is not the availability clock."
         },
         {
           "source_path": "data/features/2026-09-01_1d.csv",
@@ -2050,7 +2152,14 @@
             "matched_by": "actions_runs.head_sha"
           }
         }
-      ]
+      ],
+      "finviz_levers": "available-proven",
+      "availability_citation": {
+        "repo": "SRoyaltyy/theme-radar",
+        "commit": "19973230e4d80c74565e1246ada911503a808fb7",
+        "path": "research/lever_panel/server_time_proof.csv",
+        "sha256": "5bde5e9164f499899b4ed70fcdbfde3f72b3e8b5692da645f1e9682e3c6a913e"
+      }
     },
     {
       "trade_date": "2026-09-03",
@@ -2061,7 +2170,7 @@
           "git_commit_date": "2026-09-02T23:21:57Z",
           "server_time_utc": "2026-09-03T22:44:52Z",
           "server_source": "actions_run 33814488206 (Finviz Daily Snapshot, schedule; run_started_at 2026-09-03T22:44:52Z; head_sha 35a733789318a88f80b3b836a4793256d0fb324e)",
-          "status": "MISSING",
+          "status": "available-proven",
           "loaded_in_initial_run": false,
           "proof": {
             "kind": "actions_run_start",
@@ -2072,7 +2181,8 @@
             "head_sha": "35a733789318a88f80b3b836a4793256d0fb324e",
             "matched_by": "actions_runs.head_sha"
           },
-          "dropped_reason": "head_sha run start is after 09:30 ET"
+          "lever_availability": "available-proven",
+          "availability_note": "Cited proof file marks this morning PROVEN. The creating run's start is before 09:30 ET. A later run whose head_sha equals this commit can start after the open; that later run is not the availability clock."
         },
         {
           "source_path": "data/features/2026-09-02_1d.csv",
@@ -2182,7 +2292,14 @@
             "matched_by": "actions_runs.head_sha"
           }
         }
-      ]
+      ],
+      "finviz_levers": "available-proven",
+      "availability_citation": {
+        "repo": "SRoyaltyy/theme-radar",
+        "commit": "19973230e4d80c74565e1246ada911503a808fb7",
+        "path": "research/lever_panel/server_time_proof.csv",
+        "sha256": "5bde5e9164f499899b4ed70fcdbfde3f72b3e8b5692da645f1e9682e3c6a913e"
+      }
     },
     {
       "trade_date": "2026-09-04",
@@ -2193,7 +2310,7 @@
           "git_commit_date": "2026-09-03T23:19:52Z",
           "server_time_utc": "2026-09-04T22:29:05Z",
           "server_source": "actions_run 33925698594 (Finviz Daily Snapshot, schedule; run_started_at 2026-09-04T22:29:05Z; head_sha c182255fa5fc238beaae7f96b77c918cc1bd6be1)",
-          "status": "MISSING",
+          "status": "available-proven",
           "loaded_in_initial_run": false,
           "proof": {
             "kind": "actions_run_start",
@@ -2204,7 +2321,8 @@
             "head_sha": "c182255fa5fc238beaae7f96b77c918cc1bd6be1",
             "matched_by": "actions_runs.head_sha"
           },
-          "dropped_reason": "head_sha run start is after 09:30 ET"
+          "lever_availability": "available-proven",
+          "availability_note": "Cited proof file marks this morning PROVEN. The creating run's start is before 09:30 ET. A later run whose head_sha equals this commit can start after the open; that later run is not the availability clock."
         },
         {
           "source_path": "data/features/2026-09-03_1d.csv",
@@ -2314,7 +2432,14 @@
             "matched_by": "actions_runs.head_sha"
           }
         }
-      ]
+      ],
+      "finviz_levers": "available-proven",
+      "availability_citation": {
+        "repo": "SRoyaltyy/theme-radar",
+        "commit": "19973230e4d80c74565e1246ada911503a808fb7",
+        "path": "research/lever_panel/server_time_proof.csv",
+        "sha256": "5bde5e9164f499899b4ed70fcdbfde3f72b3e8b5692da645f1e9682e3c6a913e"
+      }
     },
     {
       "trade_date": "2026-09-08",
@@ -2445,7 +2570,14 @@
             "matched_by": "actions_runs.head_sha"
           }
         }
-      ]
+      ],
+      "finviz_levers": "available-proven",
+      "availability_citation": {
+        "repo": "SRoyaltyy/theme-radar",
+        "commit": "19973230e4d80c74565e1246ada911503a808fb7",
+        "path": "research/lever_panel/server_time_proof.csv",
+        "sha256": "5bde5e9164f499899b4ed70fcdbfde3f72b3e8b5692da645f1e9682e3c6a913e"
+      }
     },
     {
       "trade_date": "2026-09-09",
@@ -2456,7 +2588,7 @@
           "git_commit_date": "2026-09-08T23:26:29Z",
           "server_time_utc": "2026-09-09T22:41:41Z",
           "server_source": "actions_run 34413473691 (Finviz Daily Snapshot, schedule; run_started_at 2026-09-09T22:41:41Z; head_sha 554a0d74a362b49e41c5745784f81e90c8c62ab9)",
-          "status": "MISSING",
+          "status": "available-proven",
           "loaded_in_initial_run": false,
           "proof": {
             "kind": "actions_run_start",
@@ -2467,7 +2599,8 @@
             "head_sha": "554a0d74a362b49e41c5745784f81e90c8c62ab9",
             "matched_by": "actions_runs.head_sha"
           },
-          "dropped_reason": "head_sha run start is after 09:30 ET"
+          "lever_availability": "available-proven",
+          "availability_note": "Cited proof file marks this morning PROVEN. The creating run's start is before 09:30 ET. A later run whose head_sha equals this commit can start after the open; that later run is not the availability clock."
         },
         {
           "source_path": "data/features/2026-09-08_1d.csv",
@@ -2577,7 +2710,14 @@
             "matched_by": "actions_runs.head_sha"
           }
         }
-      ]
+      ],
+      "finviz_levers": "available-proven",
+      "availability_citation": {
+        "repo": "SRoyaltyy/theme-radar",
+        "commit": "19973230e4d80c74565e1246ada911503a808fb7",
+        "path": "research/lever_panel/server_time_proof.csv",
+        "sha256": "5bde5e9164f499899b4ed70fcdbfde3f72b3e8b5692da645f1e9682e3c6a913e"
+      }
     },
     {
       "trade_date": "2026-09-10",
@@ -2588,7 +2728,7 @@
           "git_commit_date": "2026-09-09T23:19:34Z",
           "server_time_utc": "2026-09-10T22:43:38Z",
           "server_source": "actions_run 34538852090 (Finviz Daily Snapshot, schedule; run_started_at 2026-09-10T22:43:38Z; head_sha 6af05ea0ec5dffa81bd5bc64d57ff4ab2c16117b)",
-          "status": "MISSING",
+          "status": "available-proven",
           "loaded_in_initial_run": false,
           "proof": {
             "kind": "actions_run_start",
@@ -2599,7 +2739,8 @@
             "head_sha": "6af05ea0ec5dffa81bd5bc64d57ff4ab2c16117b",
             "matched_by": "actions_runs.head_sha"
           },
-          "dropped_reason": "head_sha run start is after 09:30 ET"
+          "lever_availability": "available-proven",
+          "availability_note": "Cited proof file marks this morning PROVEN. The creating run's start is before 09:30 ET. A later run whose head_sha equals this commit can start after the open; that later run is not the availability clock."
         },
         {
           "source_path": "data/features/2026-09-09_1d.csv",
@@ -2709,7 +2850,14 @@
             "matched_by": "actions_runs.head_sha"
           }
         }
-      ]
+      ],
+      "finviz_levers": "available-proven",
+      "availability_citation": {
+        "repo": "SRoyaltyy/theme-radar",
+        "commit": "19973230e4d80c74565e1246ada911503a808fb7",
+        "path": "research/lever_panel/server_time_proof.csv",
+        "sha256": "5bde5e9164f499899b4ed70fcdbfde3f72b3e8b5692da645f1e9682e3c6a913e"
+      }
     },
     {
       "trade_date": "2026-09-11",
@@ -2720,7 +2868,7 @@
           "git_commit_date": "2026-09-10T23:14:29Z",
           "server_time_utc": "2026-09-11T22:44:16Z",
           "server_source": "actions_run 34655284259 (Finviz Daily Snapshot, schedule; run_started_at 2026-09-11T22:44:16Z; head_sha ec83a59644648f29931e6c21e8d8e1bf031b0d16)",
-          "status": "MISSING",
+          "status": "available-proven",
           "loaded_in_initial_run": false,
           "proof": {
             "kind": "actions_run_start",
@@ -2731,7 +2879,8 @@
             "head_sha": "ec83a59644648f29931e6c21e8d8e1bf031b0d16",
             "matched_by": "actions_runs.head_sha"
           },
-          "dropped_reason": "head_sha run start is after 09:30 ET"
+          "lever_availability": "available-proven",
+          "availability_note": "Cited proof file marks this morning PROVEN. The creating run's start is before 09:30 ET. A later run whose head_sha equals this commit can start after the open; that later run is not the availability clock."
         },
         {
           "source_path": "data/features/2026-09-10_1d.csv",
@@ -2841,7 +2990,14 @@
             "matched_by": "actions_runs.head_sha"
           }
         }
-      ]
+      ],
+      "finviz_levers": "available-proven",
+      "availability_citation": {
+        "repo": "SRoyaltyy/theme-radar",
+        "commit": "19973230e4d80c74565e1246ada911503a808fb7",
+        "path": "research/lever_panel/server_time_proof.csv",
+        "sha256": "5bde5e9164f499899b4ed70fcdbfde3f72b3e8b5692da645f1e9682e3c6a913e"
+      }
     }
   ],
   "clock_rule": {
@@ -2944,6 +3100,175 @@
     "referenced_by_sha256": [
       "c8977b8eea8e74115899e9d4cc04d5b4ea67490376d972905781eb8e1aeb6459",
       "cbf35da9e1587703059abd9ff77525a1047c67a91edc3276ca93db4cd8669c16"
+    ]
+  },
+  "theme_radar_finviz_levers": {
+    "status": "available-proven",
+    "repo": "SRoyaltyy/theme-radar",
+    "commit": "19973230e4d80c74565e1246ada911503a808fb7",
+    "path": "research/lever_panel/server_time_proof.csv",
+    "sha256": "5bde5e9164f499899b4ed70fcdbfde3f72b3e8b5692da645f1e9682e3c6a913e",
+    "rows": 234,
+    "rows_status": "PROVEN",
+    "export_mornings": [
+      "2026-08-07",
+      "2026-08-10",
+      "2026-08-11",
+      "2026-08-12",
+      "2026-08-13",
+      "2026-08-14",
+      "2026-08-17",
+      "2026-08-18",
+      "2026-08-19",
+      "2026-08-20",
+      "2026-08-21",
+      "2026-08-24",
+      "2026-08-25",
+      "2026-08-26",
+      "2026-08-27",
+      "2026-08-31",
+      "2026-09-01",
+      "2026-09-02",
+      "2026-09-03",
+      "2026-09-04",
+      "2026-09-08",
+      "2026-09-09",
+      "2026-09-10",
+      "2026-09-11",
+      "2026-09-14",
+      "2026-09-15",
+      "2026-09-16",
+      "2026-09-17",
+      "2026-09-18",
+      "2026-09-21",
+      "2026-09-22",
+      "2026-09-23",
+      "2026-09-24",
+      "2026-09-25",
+      "2026-09-28"
+    ],
+    "export_morning_count": 35,
+    "in_window_mornings": [
+      "2026-08-13",
+      "2026-08-14",
+      "2026-08-17",
+      "2026-08-18",
+      "2026-08-19",
+      "2026-08-20",
+      "2026-08-21",
+      "2026-08-24",
+      "2026-08-25",
+      "2026-08-26",
+      "2026-08-27",
+      "2026-08-31",
+      "2026-09-01",
+      "2026-09-02",
+      "2026-09-03",
+      "2026-09-04",
+      "2026-09-08",
+      "2026-09-09",
+      "2026-09-10",
+      "2026-09-11"
+    ],
+    "in_window_count": 20,
+    "note": "All 35 export mornings are available-proven by Actions run times in the cited file. 20 of them fall inside 2026-08-13..2026-09-11 and are the initial Finviz dates. Mornings after 2026-09-11 stay out of the search load. A sample of run_started_at values was read from the Actions API and matched the file.",
+    "sample_api_checks": [
+      {
+        "trade_date": "2026-08-07",
+        "source_path": "data/snapshots/2026-08-06.csv",
+        "run_id": 31136381205,
+        "api_run_started_at": "2026-08-07T00:56:46Z",
+        "api_updated_at": "2026-08-07T00:57:23Z",
+        "csv_created_at": "2026-08-07T00:56:46Z",
+        "csv_server_time_utc": "2026-08-07T00:57:23Z",
+        "start_before_0930_et": true,
+        "created_at_matches_api": true,
+        "server_time_matches_api_updated_at": true
+      },
+      {
+        "trade_date": "2026-08-13",
+        "source_path": "data/snapshots/2026-08-12.csv",
+        "run_id": 31642191661,
+        "api_run_started_at": "2026-08-12T21:22:08Z",
+        "api_updated_at": "2026-08-12T21:22:42Z",
+        "csv_created_at": "2026-08-12T21:22:08Z",
+        "csv_server_time_utc": "2026-08-12T21:22:42Z",
+        "start_before_0930_et": true,
+        "created_at_matches_api": true,
+        "server_time_matches_api_updated_at": true
+      },
+      {
+        "trade_date": "2026-08-13",
+        "source_path": "data/composite/2026-08-12_composite_rank.csv",
+        "run_id": 31645482181,
+        "api_run_started_at": "2026-08-12T22:05:50Z",
+        "api_updated_at": "2026-08-12T22:06:33Z",
+        "csv_created_at": "2026-08-12T22:05:50Z",
+        "csv_server_time_utc": "2026-08-12T22:06:33Z",
+        "start_before_0930_et": true,
+        "created_at_matches_api": true,
+        "server_time_matches_api_updated_at": true
+      },
+      {
+        "trade_date": "2026-09-04",
+        "source_path": "data/snapshots/2026-09-03.csv",
+        "run_id": 33814488206,
+        "api_run_started_at": "2026-09-03T22:44:52Z",
+        "api_updated_at": "2026-09-03T22:45:53Z",
+        "csv_created_at": "2026-09-03T22:44:52Z",
+        "csv_server_time_utc": "2026-09-03T22:45:53Z",
+        "start_before_0930_et": true,
+        "created_at_matches_api": true,
+        "server_time_matches_api_updated_at": true
+      },
+      {
+        "trade_date": "2026-09-11",
+        "source_path": "data/scores/2026-09-10_1d.csv",
+        "run_id": 34539436709,
+        "api_run_started_at": "2026-09-10T22:51:11Z",
+        "api_updated_at": "2026-09-10T22:53:59Z",
+        "csv_created_at": "2026-09-10T22:51:11Z",
+        "csv_server_time_utc": "2026-09-10T22:53:59Z",
+        "start_before_0930_et": true,
+        "created_at_matches_api": true,
+        "server_time_matches_api_updated_at": true
+      },
+      {
+        "trade_date": "2026-09-11",
+        "source_path": "data/composite/2026-09-10_composite_rank.csv",
+        "run_id": 34541105465,
+        "api_run_started_at": "2026-09-10T23:12:37Z",
+        "api_updated_at": "2026-09-10T23:14:37Z",
+        "csv_created_at": "2026-09-10T23:12:37Z",
+        "csv_server_time_utc": "2026-09-10T23:14:37Z",
+        "start_before_0930_et": true,
+        "created_at_matches_api": true,
+        "server_time_matches_api_updated_at": true
+      },
+      {
+        "trade_date": "2026-09-28",
+        "source_path": "data/snapshots/2026-09-25.csv",
+        "run_id": 36187437404,
+        "api_run_started_at": "2026-09-25T20:43:13Z",
+        "api_updated_at": "2026-09-25T20:45:08Z",
+        "csv_created_at": "2026-09-25T20:43:13Z",
+        "csv_server_time_utc": "2026-09-25T20:45:08Z",
+        "start_before_0930_et": true,
+        "created_at_matches_api": true,
+        "server_time_matches_api_updated_at": true
+      },
+      {
+        "trade_date": "2026-08-27",
+        "source_path": "data/universe/2026-08-26_membership.csv",
+        "run_id": 33026531289,
+        "api_run_started_at": "2026-08-27T00:20:52Z",
+        "api_updated_at": "2026-08-27T00:22:28Z",
+        "csv_created_at": "2026-08-27T00:20:52Z",
+        "csv_server_time_utc": "2026-08-27T00:22:28Z",
+        "start_before_0930_et": true,
+        "created_at_matches_api": true,
+        "server_time_matches_api_updated_at": true
+      }
     ]
   }
 }
