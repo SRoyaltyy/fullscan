@@ -1,0 +1,4111 @@
+{
+  "bars": {
+    "blob_sha": "eaad5e25fe223314815c690dfd9376b7aa7cbcab",
+    "dropped_sha256": "eb2a559172b10d1a8d5565b0fb2a68f3a7993e1b220648fb716fd076ffd63d79",
+    "path": "research/breadth_rank_v1/bars/ohlc.parquet",
+    "sha256": "8ac67b7110176e954c6cc938dea58f821aabef352da6205fa3b79015505a5339",
+    "splits_sha256": "2bcbb61cc8c13cc0f590480c995f093cd893c268a7a129574c4c7c17c236c091"
+  },
+  "inputs": [
+    {
+      "blob_sha": "ce1306e135212faa77156b6f2713e068e94dadf5",
+      "commit": "bd650e582ff7a5568d93690f543be0a60b785f7b",
+      "date": "2026-08-13",
+      "input": "actions",
+      "path": "01_daily/news/2026-08-13_actions.json"
+    },
+    {
+      "blob_sha": "4b585232ee02751a718ca47a19933623c6b90784",
+      "commit": "375531b812c261047d112e8fa8c3ab3282640411",
+      "date": "2026-08-13",
+      "input": "export",
+      "path": "data/exports/finviz_2026-08-13.csv"
+    },
+    {
+      "blob_sha": "1da02db0b6f5f5499976451f2c90d0511369c45e",
+      "commit": "4589feb316f0afbe5832525b50afd1822a00d034",
+      "date": "2026-08-13",
+      "input": "judge",
+      "path": "01_daily/news/2026-08-13_judge.json"
+    },
+    {
+      "blob_sha": "d0e427d434d6d30da22ea6bf31133ed4648fb277",
+      "commit": "f5b46d20eec2a7acf5df3924fc5201023d0dcd40",
+      "date": "2026-08-13",
+      "input": "panel",
+      "n_rows": 9,
+      "path": "data/factor_mine/panel.json"
+    },
+    {
+      "blob_sha": "bc220e100df80d7e06688a8b3d5b3c400c07574f",
+      "commit": "bd650e582ff7a5568d93690f543be0a60b785f7b",
+      "date": "2026-08-13",
+      "input": "predict",
+      "path": "01_daily/general/2026-08-13_predict.md"
+    },
+    {
+      "blob_sha": "6d695ea3f97e262000e78d348b9495dacec98e9b",
+      "commit": "bd650e582ff7a5568d93690f543be0a60b785f7b",
+      "date": "2026-08-13",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-08-13/basic_materials_predict.md"
+    },
+    {
+      "blob_sha": "3b2ed8ed8da85427b6bd03ad5a0329013e3560c4",
+      "commit": "bd650e582ff7a5568d93690f543be0a60b785f7b",
+      "date": "2026-08-13",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-08-13/communication_services_predict.md"
+    },
+    {
+      "blob_sha": "1fe69577f5e2dcc64bcc523e66273ad4786e55d6",
+      "commit": "bd650e582ff7a5568d93690f543be0a60b785f7b",
+      "date": "2026-08-13",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-08-13/consumer_cyclical_predict.md"
+    },
+    {
+      "blob_sha": "e99b049e7bd5ea9a01fb8d01b6d9f690efbb65a3",
+      "commit": "bd650e582ff7a5568d93690f543be0a60b785f7b",
+      "date": "2026-08-13",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-08-13/consumer_defensive_predict.md"
+    },
+    {
+      "blob_sha": "6760064d28c7034c0cbec50d60a8682bc5f588cf",
+      "commit": "bd650e582ff7a5568d93690f543be0a60b785f7b",
+      "date": "2026-08-13",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-08-13/energy_predict.md"
+    },
+    {
+      "blob_sha": "9a64de5d9cc114c5661223fc91aad28bc1bc6e59",
+      "commit": "bd650e582ff7a5568d93690f543be0a60b785f7b",
+      "date": "2026-08-13",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-08-13/financial_predict.md"
+    },
+    {
+      "blob_sha": "42b8cb3a2a85b646246807e346dc29bf78e73a03",
+      "commit": "bd650e582ff7a5568d93690f543be0a60b785f7b",
+      "date": "2026-08-13",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-08-13/healthcare_predict.md"
+    },
+    {
+      "blob_sha": "6df3a0813c26e0fb8995b33432c854abef9c435a",
+      "commit": "bd650e582ff7a5568d93690f543be0a60b785f7b",
+      "date": "2026-08-13",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-08-13/industrials_predict.md"
+    },
+    {
+      "blob_sha": "43e8fb238d5b911c26f47e8e8bdcc669b2d8af13",
+      "commit": "bd650e582ff7a5568d93690f543be0a60b785f7b",
+      "date": "2026-08-13",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-08-13/real_estate_predict.md"
+    },
+    {
+      "blob_sha": "9afb79e5d0b5e1799711d2a5357d94e9c412fd6e",
+      "commit": "bd650e582ff7a5568d93690f543be0a60b785f7b",
+      "date": "2026-08-13",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-08-13/technology_predict.md"
+    },
+    {
+      "blob_sha": "15c09a586510ccea0cb062a9b589e7cce0903255",
+      "commit": "bd650e582ff7a5568d93690f543be0a60b785f7b",
+      "date": "2026-08-13",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-08-13/utilities_predict.md"
+    },
+    {
+      "blob_sha": "a6f7b2982901e0b16eb83eeff36f059a6a4e7f5a",
+      "commit": "bd650e582ff7a5568d93690f543be0a60b785f7b",
+      "date": "2026-08-13",
+      "input": "stock_book",
+      "path": "data/stock_book/2026-08-13_stock_book.json"
+    },
+    {
+      "blob_sha": "814c48bff2d60977451847e8e3375cb8dd841778",
+      "commit": "aff60dbd38271931729d6f97773e2e02451279d2",
+      "date": "2026-08-14",
+      "input": "actions",
+      "path": "01_daily/news/2026-08-14_actions.json"
+    },
+    {
+      "blob_sha": "1b6ed98f0c2092765ded395f1741be989b43268e",
+      "commit": "aff60dbd38271931729d6f97773e2e02451279d2",
+      "date": "2026-08-14",
+      "input": "export",
+      "path": "data/exports/finviz_2026-08-14.csv"
+    },
+    {
+      "blob_sha": "e6ceaf442fe2d2604c298d9b73fedf7dda1b73cf",
+      "commit": "4589feb316f0afbe5832525b50afd1822a00d034",
+      "date": "2026-08-14",
+      "input": "judge",
+      "path": "01_daily/news/2026-08-14_judge.json"
+    },
+    {
+      "blob_sha": "d0e427d434d6d30da22ea6bf31133ed4648fb277",
+      "commit": "f5b46d20eec2a7acf5df3924fc5201023d0dcd40",
+      "date": "2026-08-14",
+      "input": "panel",
+      "n_rows": 107,
+      "path": "data/factor_mine/panel.json"
+    },
+    {
+      "blob_sha": "446afe780d9b20f321a60ea7bd1db68edfc9b524",
+      "commit": "aff60dbd38271931729d6f97773e2e02451279d2",
+      "date": "2026-08-14",
+      "input": "predict",
+      "path": "01_daily/general/2026-08-14_predict.md"
+    },
+    {
+      "blob_sha": "35338de77f2053c3da51c61f24140e804296d438",
+      "commit": "aff60dbd38271931729d6f97773e2e02451279d2",
+      "date": "2026-08-14",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-08-14/basic_materials_predict.md"
+    },
+    {
+      "blob_sha": "5a6eb98bbc5ff291e70057ebb3c9ba49fbb045d0",
+      "commit": "aff60dbd38271931729d6f97773e2e02451279d2",
+      "date": "2026-08-14",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-08-14/communication_services_predict.md"
+    },
+    {
+      "blob_sha": "3382e63a67136b73f6ad0d84896e95c5f3b3dff1",
+      "commit": "aff60dbd38271931729d6f97773e2e02451279d2",
+      "date": "2026-08-14",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-08-14/consumer_cyclical_predict.md"
+    },
+    {
+      "blob_sha": "80ac1e780b3e9a3c98fd39f993a44d38e6c13ef7",
+      "commit": "aff60dbd38271931729d6f97773e2e02451279d2",
+      "date": "2026-08-14",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-08-14/consumer_defensive_predict.md"
+    },
+    {
+      "blob_sha": "a190f08e85051b90899ecc62a7bea2abde47d252",
+      "commit": "aff60dbd38271931729d6f97773e2e02451279d2",
+      "date": "2026-08-14",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-08-14/energy_predict.md"
+    },
+    {
+      "blob_sha": "01d0ea2220caa0365fb41d99564b6e08bcfd86c3",
+      "commit": "aff60dbd38271931729d6f97773e2e02451279d2",
+      "date": "2026-08-14",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-08-14/financial_predict.md"
+    },
+    {
+      "blob_sha": "c5934eb9465ca83ec12ffd776311bd98cf43d01d",
+      "commit": "aff60dbd38271931729d6f97773e2e02451279d2",
+      "date": "2026-08-14",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-08-14/healthcare_predict.md"
+    },
+    {
+      "blob_sha": "1d270f4e7ca87a1d6148b8d8da8e880622c92d0c",
+      "commit": "aff60dbd38271931729d6f97773e2e02451279d2",
+      "date": "2026-08-14",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-08-14/industrials_predict.md"
+    },
+    {
+      "blob_sha": "e3a1ea5ac4e1a7274f2a62cb5c3246c6326c708b",
+      "commit": "aff60dbd38271931729d6f97773e2e02451279d2",
+      "date": "2026-08-14",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-08-14/real_estate_predict.md"
+    },
+    {
+      "blob_sha": "2fe904e75618a99724c0d95915ce650e42698905",
+      "commit": "aff60dbd38271931729d6f97773e2e02451279d2",
+      "date": "2026-08-14",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-08-14/technology_predict.md"
+    },
+    {
+      "blob_sha": "492b6d594f2ba5b2845a942d779e86d9553a6ccd",
+      "commit": "aff60dbd38271931729d6f97773e2e02451279d2",
+      "date": "2026-08-14",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-08-14/utilities_predict.md"
+    },
+    {
+      "blob_sha": "d466433f90019a4f3897e2cbcba526b3ab10b31d",
+      "commit": "aff60dbd38271931729d6f97773e2e02451279d2",
+      "date": "2026-08-14",
+      "input": "stock_book",
+      "path": "data/stock_book/2026-08-14_stock_book.json"
+    },
+    {
+      "blob_sha": "153fd2b871316efc303462da53180ed3d8e8aae6",
+      "commit": "b74e206dc8e17446630a5c72fe65891495204576",
+      "date": "2026-08-17",
+      "input": "actions",
+      "path": "01_daily/news/2026-08-17_actions.json"
+    },
+    {
+      "blob_sha": "d472ab865939031f63f09ccac26da6f28197e2fc",
+      "commit": "b5db5f33fb35ba13295835a183000131d9d1209b",
+      "date": "2026-08-17",
+      "input": "export",
+      "path": "data/exports/finviz_2026-08-17.csv"
+    },
+    {
+      "blob_sha": "aea6d85cc53eb425cdaa9a72b24fe07c09702072",
+      "commit": "4589feb316f0afbe5832525b50afd1822a00d034",
+      "date": "2026-08-17",
+      "input": "judge",
+      "path": "01_daily/news/2026-08-17_judge.json"
+    },
+    {
+      "blob_sha": "d0e427d434d6d30da22ea6bf31133ed4648fb277",
+      "commit": "f5b46d20eec2a7acf5df3924fc5201023d0dcd40",
+      "date": "2026-08-17",
+      "input": "panel",
+      "n_rows": 75,
+      "path": "data/factor_mine/panel.json"
+    },
+    {
+      "blob_sha": "fe5b3a37d0a8fbe2fb20ff931f7f9bfb8361b474",
+      "commit": "682d3731365e833cf07a257b46c138d67e1bc3a7",
+      "date": "2026-08-17",
+      "input": "predict",
+      "path": "01_daily/general/2026-08-17_predict.md"
+    },
+    {
+      "blob_sha": "75ca235afa246668a3968a19263ef58e22baff4e",
+      "commit": "b5db5f33fb35ba13295835a183000131d9d1209b",
+      "date": "2026-08-17",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-08-17/basic_materials_predict.md"
+    },
+    {
+      "blob_sha": "e3a8e215cbac9d3ee3a042078bf4929183ce6c1b",
+      "commit": "b5db5f33fb35ba13295835a183000131d9d1209b",
+      "date": "2026-08-17",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-08-17/communication_services_predict.md"
+    },
+    {
+      "blob_sha": "042694974c793ee782e5286b818be6076ccd1bce",
+      "commit": "b5db5f33fb35ba13295835a183000131d9d1209b",
+      "date": "2026-08-17",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-08-17/consumer_cyclical_predict.md"
+    },
+    {
+      "blob_sha": "1aabf3770e378c4b61d199f85cd3330f9ae21da2",
+      "commit": "b5db5f33fb35ba13295835a183000131d9d1209b",
+      "date": "2026-08-17",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-08-17/consumer_defensive_predict.md"
+    },
+    {
+      "blob_sha": "e65f8ef6cd10dc5c4e21c483e0574fbb49888944",
+      "commit": "b5db5f33fb35ba13295835a183000131d9d1209b",
+      "date": "2026-08-17",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-08-17/energy_predict.md"
+    },
+    {
+      "blob_sha": "6dff478d01cbc63cce03d97c75ae72ada5b0194d",
+      "commit": "b5db5f33fb35ba13295835a183000131d9d1209b",
+      "date": "2026-08-17",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-08-17/financial_predict.md"
+    },
+    {
+      "blob_sha": "d05286107810bfffc2c3578b066e3ba233852c37",
+      "commit": "b5db5f33fb35ba13295835a183000131d9d1209b",
+      "date": "2026-08-17",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-08-17/healthcare_predict.md"
+    },
+    {
+      "blob_sha": "df0bc4c5e1f1281b3a89638e76716c00b7e8a4cc",
+      "commit": "b5db5f33fb35ba13295835a183000131d9d1209b",
+      "date": "2026-08-17",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-08-17/industrials_predict.md"
+    },
+    {
+      "blob_sha": "73b6b7d15e6e071b361888c3eacd69b63c53fa87",
+      "commit": "b5db5f33fb35ba13295835a183000131d9d1209b",
+      "date": "2026-08-17",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-08-17/real_estate_predict.md"
+    },
+    {
+      "blob_sha": "a7f5dcae35316b4af822af4372ac70037eb78667",
+      "commit": "b5db5f33fb35ba13295835a183000131d9d1209b",
+      "date": "2026-08-17",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-08-17/technology_predict.md"
+    },
+    {
+      "blob_sha": "abcb30a1b7299323654f5ef148dbb3b93c55d937",
+      "commit": "b5db5f33fb35ba13295835a183000131d9d1209b",
+      "date": "2026-08-17",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-08-17/utilities_predict.md"
+    },
+    {
+      "blob_sha": "1b5898af5d4d2c11c89d9bcc91aa564730f8f5d5",
+      "commit": "b5db5f33fb35ba13295835a183000131d9d1209b",
+      "date": "2026-08-17",
+      "input": "stock_book",
+      "path": "data/stock_book/2026-08-17_stock_book.json"
+    },
+    {
+      "blob_sha": "cd27c92cd58120d23c21346ec6da6a3ff2a8cc85",
+      "commit": "3bb3fd9fe46075afe5d47dfef7bf0b6b0f06e3a0",
+      "date": "2026-08-18",
+      "input": "ab_checklist",
+      "path": "data/ab_checklist/2026-08-18_ab_checklist.csv"
+    },
+    {
+      "blob_sha": "a7682ce9d3bb0337563b70ad700ea75a0a535ccc",
+      "commit": "c9d2d79cb94de95f72ffe62d5bba36aa9f055090",
+      "date": "2026-08-18",
+      "input": "actions",
+      "path": "01_daily/news/2026-08-18_actions.json"
+    },
+    {
+      "blob_sha": "c20d392db442855e16d3be174f179210b359e564",
+      "commit": "7178b8a98542710e9443327f28daad4bf2c837ab",
+      "date": "2026-08-18",
+      "input": "export",
+      "path": "data/exports/finviz_2026-08-18.csv"
+    },
+    {
+      "blob_sha": "ea4638314c5a120c94841ab080bc2e0971a02c9f",
+      "commit": "4589feb316f0afbe5832525b50afd1822a00d034",
+      "date": "2026-08-18",
+      "input": "judge",
+      "path": "01_daily/news/2026-08-18_judge.json"
+    },
+    {
+      "blob_sha": "d0e427d434d6d30da22ea6bf31133ed4648fb277",
+      "commit": "f5b46d20eec2a7acf5df3924fc5201023d0dcd40",
+      "date": "2026-08-18",
+      "input": "panel",
+      "n_rows": 99,
+      "path": "data/factor_mine/panel.json"
+    },
+    {
+      "blob_sha": "cb1b169743730385d5251e31d4100382d9e6a462",
+      "commit": "c74bb5b7b46e5373422de9bc3a479468254092d5",
+      "date": "2026-08-18",
+      "input": "predict",
+      "path": "01_daily/general/2026-08-18_predict.md"
+    },
+    {
+      "blob_sha": "21c50757f4dcd021ace703d081a1203be644bf08",
+      "commit": "7178b8a98542710e9443327f28daad4bf2c837ab",
+      "date": "2026-08-18",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-08-18/basic_materials_predict.md"
+    },
+    {
+      "blob_sha": "9cfd41239234658e133cc7508befc4d4eb06902d",
+      "commit": "7178b8a98542710e9443327f28daad4bf2c837ab",
+      "date": "2026-08-18",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-08-18/communication_services_predict.md"
+    },
+    {
+      "blob_sha": "013f5048ebd62a09580bda12a9165d37b107fe3c",
+      "commit": "7178b8a98542710e9443327f28daad4bf2c837ab",
+      "date": "2026-08-18",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-08-18/consumer_cyclical_predict.md"
+    },
+    {
+      "blob_sha": "9912f16168b8862e6ab40aa5d802017813e8bdfe",
+      "commit": "7178b8a98542710e9443327f28daad4bf2c837ab",
+      "date": "2026-08-18",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-08-18/consumer_defensive_predict.md"
+    },
+    {
+      "blob_sha": "bd80e75c42087e1c7ec38a4b239292b7b10db247",
+      "commit": "7178b8a98542710e9443327f28daad4bf2c837ab",
+      "date": "2026-08-18",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-08-18/energy_predict.md"
+    },
+    {
+      "blob_sha": "99c00d092cf89b72064daac8af63769bd80fb87b",
+      "commit": "7178b8a98542710e9443327f28daad4bf2c837ab",
+      "date": "2026-08-18",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-08-18/financial_predict.md"
+    },
+    {
+      "blob_sha": "8f7b69af25fd0b0ae6a02a578f0b71d98d4a1ba8",
+      "commit": "7178b8a98542710e9443327f28daad4bf2c837ab",
+      "date": "2026-08-18",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-08-18/healthcare_predict.md"
+    },
+    {
+      "blob_sha": "26cd49b376a5e6cd26314cc02dbc274548ffe109",
+      "commit": "7178b8a98542710e9443327f28daad4bf2c837ab",
+      "date": "2026-08-18",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-08-18/industrials_predict.md"
+    },
+    {
+      "blob_sha": "b09f8c1f3c11c2b92955130fc2f28819c45313bf",
+      "commit": "7178b8a98542710e9443327f28daad4bf2c837ab",
+      "date": "2026-08-18",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-08-18/real_estate_predict.md"
+    },
+    {
+      "blob_sha": "158c6e0deca601a7b0ed06a5e7b59c49bb14f46e",
+      "commit": "7178b8a98542710e9443327f28daad4bf2c837ab",
+      "date": "2026-08-18",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-08-18/technology_predict.md"
+    },
+    {
+      "blob_sha": "c284652c4fbf88471be763cd30203ba80bc8f1ad",
+      "commit": "7178b8a98542710e9443327f28daad4bf2c837ab",
+      "date": "2026-08-18",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-08-18/utilities_predict.md"
+    },
+    {
+      "blob_sha": "15eba636680e17e447b05aad3983672281cb7146",
+      "commit": "7178b8a98542710e9443327f28daad4bf2c837ab",
+      "date": "2026-08-18",
+      "input": "stock_book",
+      "path": "data/stock_book/2026-08-18_stock_book.json"
+    },
+    {
+      "blob_sha": "d089bbb4191fd947407fa0e3973037c196a5b4f6",
+      "commit": "b456fc0a4cff8c35d791e98bf6180546c89bbd36",
+      "date": "2026-08-19",
+      "input": "ab_checklist",
+      "path": "data/ab_checklist/2026-08-19_ab_checklist.csv"
+    },
+    {
+      "blob_sha": "97eabe520b242290d33185a749ec4b7cc7481a7c",
+      "commit": "230d4e52816e254cbe5e8f6c0a3bb2f0754ba4ec",
+      "date": "2026-08-19",
+      "input": "ab_enriched",
+      "path": "data/ab_checklist/2026-08-19_ab_checklist_enriched.csv"
+    },
+    {
+      "blob_sha": "960d37e07be909f38d99d3461420c36337738f6e",
+      "commit": "b7c6bb6d6c8eb9c5541c220fa8482bfa2170b68a",
+      "date": "2026-08-19",
+      "input": "actions",
+      "path": "01_daily/news/2026-08-19_actions.json"
+    },
+    {
+      "blob_sha": "77d4c1e5393cefe8bc19ada02b20cb12ff8abb30",
+      "commit": "084da4e22707678aa443e5c0b1e8b3f5c63b01ca",
+      "date": "2026-08-19",
+      "input": "export",
+      "path": "data/exports/finviz_2026-08-19.csv"
+    },
+    {
+      "blob_sha": "d78bf6e97f3813c1ec47a589f4c4856475106d93",
+      "commit": "cf09d6750aeef0035e859f2d95bef27315c2936f",
+      "date": "2026-08-19",
+      "input": "judge",
+      "path": "01_daily/news/2026-08-19_judge.json"
+    },
+    {
+      "blob_sha": "d0e427d434d6d30da22ea6bf31133ed4648fb277",
+      "commit": "f5b46d20eec2a7acf5df3924fc5201023d0dcd40",
+      "date": "2026-08-19",
+      "input": "panel",
+      "n_rows": 100,
+      "path": "data/factor_mine/panel.json"
+    },
+    {
+      "blob_sha": "9498dc4b4505383419a4d61e17c0a41779723c75",
+      "commit": "b6fc915b0413c60fd3ea1ac3727e34439a90dee5",
+      "date": "2026-08-19",
+      "input": "predict",
+      "path": "01_daily/general/2026-08-19_predict.md"
+    },
+    {
+      "blob_sha": "2eace796524cbb0c1f5e38a6cb9613696355ada9",
+      "commit": "3359d32a8c240fa90fd44cb91eea9a3c727b34e4",
+      "date": "2026-08-19",
+      "input": "stock_book",
+      "path": "data/stock_book/2026-08-19_stock_book.json"
+    },
+    {
+      "blob_sha": "c1686f0509f56340898f3c887c1e91c857debb76",
+      "commit": "5190cd71a4ff126c82816d2ff5f9d25b6f893863",
+      "date": "2026-08-20",
+      "input": "ab_checklist",
+      "path": "data/ab_checklist/2026-08-20_ab_checklist.csv"
+    },
+    {
+      "blob_sha": "0a21d5d68295c37817230ed7ed70ce3d040673b6",
+      "commit": "0501dfd7611c00d4b3ebdefde93ea46afa60493c",
+      "date": "2026-08-20",
+      "input": "ab_enriched",
+      "path": "data/ab_checklist/2026-08-20_ab_checklist_enriched.csv"
+    },
+    {
+      "blob_sha": "9a7a365b1a5d813ffac208d42b6d0c4d02fad384",
+      "commit": "c37da9cb4cf6b3bfb41ee61ac2f875ede317d7ec",
+      "date": "2026-08-20",
+      "input": "actions",
+      "path": "01_daily/news/2026-08-20_actions.json"
+    },
+    {
+      "blob_sha": "25a6e5dcff3f81dcd11b77dd9031f6593ebd2788",
+      "commit": "c8fc7c9d8fbcda7fde6a68a0a1eca47f27d7225f",
+      "date": "2026-08-20",
+      "input": "export",
+      "path": "data/exports/finviz_2026-08-20.csv"
+    },
+    {
+      "blob_sha": "98d1d1a390b486b7763188f7e3e052519e5bfbcd",
+      "commit": "0501dfd7611c00d4b3ebdefde93ea46afa60493c",
+      "date": "2026-08-20",
+      "input": "judge",
+      "path": "01_daily/news/2026-08-20_judge.json"
+    },
+    {
+      "blob_sha": "d0e427d434d6d30da22ea6bf31133ed4648fb277",
+      "commit": "f5b46d20eec2a7acf5df3924fc5201023d0dcd40",
+      "date": "2026-08-20",
+      "input": "panel",
+      "n_rows": 87,
+      "path": "data/factor_mine/panel.json"
+    },
+    {
+      "blob_sha": "80a2b5de5c29e082ea2894931ff48e03fe451abe",
+      "commit": "db5f47399361d11cec7f7bc8a697f91cc206f312",
+      "date": "2026-08-20",
+      "input": "predict",
+      "path": "01_daily/general/2026-08-20_predict.md"
+    },
+    {
+      "blob_sha": "ed2911a418da27466e3a2ec78cffd9f1d3b01c32",
+      "commit": "afb0ef34f7064c06b98b520c22611d88f0b52c29",
+      "date": "2026-08-20",
+      "input": "stock_book",
+      "path": "data/stock_book/2026-08-20_stock_book.json"
+    },
+    {
+      "blob_sha": "01aa50c9c523069838b3c18fce4fbf34fa389822",
+      "commit": "51e9ac55e0639d7d4f401c48aa43eb110729ed87",
+      "date": "2026-08-21",
+      "input": "ab_checklist",
+      "path": "data/ab_checklist/2026-08-21_ab_checklist.csv"
+    },
+    {
+      "blob_sha": "613bf53524055761bf6c31d82c9b1b2bae66aaa5",
+      "commit": "51e9ac55e0639d7d4f401c48aa43eb110729ed87",
+      "date": "2026-08-21",
+      "input": "ab_enriched",
+      "path": "data/ab_checklist/2026-08-21_ab_checklist_enriched.csv"
+    },
+    {
+      "blob_sha": "0c1f60544e7940d85a430053bb8974a1d89cab8f",
+      "commit": "9c659d7d603721c854bade60740cdf2754f69a96",
+      "date": "2026-08-21",
+      "input": "actions",
+      "path": "01_daily/news/2026-08-21_actions.json"
+    },
+    {
+      "blob_sha": "b7fedafc26a2665979e2b8f4dce5772ab4eb52a7",
+      "commit": "b0b58ef6f7712206cfcb0c59877cbec9891688a3",
+      "date": "2026-08-21",
+      "input": "export",
+      "path": "data/exports/finviz_2026-08-21.csv"
+    },
+    {
+      "blob_sha": "713c28623122c02605f240d5cd5a3fc025aa1155",
+      "commit": "e39c4a640b48dda93b34666b2f7f0a2f4476b676",
+      "date": "2026-08-21",
+      "input": "judge",
+      "path": "01_daily/news/2026-08-21_judge.json"
+    },
+    {
+      "blob_sha": "d0e427d434d6d30da22ea6bf31133ed4648fb277",
+      "commit": "f5b46d20eec2a7acf5df3924fc5201023d0dcd40",
+      "date": "2026-08-21",
+      "input": "panel",
+      "n_rows": 79,
+      "path": "data/factor_mine/panel.json"
+    },
+    {
+      "blob_sha": "a64cf8fceca52ad8a1d1988c0f1403dede7bf240",
+      "commit": "5be5f4bbbbc55952a5276e0137b384b921ad3d5b",
+      "date": "2026-08-21",
+      "input": "predict",
+      "path": "01_daily/general/2026-08-21_predict.md"
+    },
+    {
+      "blob_sha": "f6c167afa5a66911588898f37af08c4cc2f9d4ca",
+      "commit": "d9f354124c214e9d2b6f56e716e701af4c955d24",
+      "date": "2026-08-21",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-08-21/basic_materials_predict.md"
+    },
+    {
+      "blob_sha": "face0f72013422dd3255235e4f582f1d39e90fb1",
+      "commit": "d9f354124c214e9d2b6f56e716e701af4c955d24",
+      "date": "2026-08-21",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-08-21/communication_services_predict.md"
+    },
+    {
+      "blob_sha": "e4b0f6407a0fbdf10d39d1b3e14db62dd436ce86",
+      "commit": "d9f354124c214e9d2b6f56e716e701af4c955d24",
+      "date": "2026-08-21",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-08-21/consumer_cyclical_predict.md"
+    },
+    {
+      "blob_sha": "ae08c4f8f9c02bf16c4d45d8c6332c191371059c",
+      "commit": "d9f354124c214e9d2b6f56e716e701af4c955d24",
+      "date": "2026-08-21",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-08-21/consumer_defensive_predict.md"
+    },
+    {
+      "blob_sha": "8d5c12ad26e53044fdd5d88073f862c6a8f97a23",
+      "commit": "d9f354124c214e9d2b6f56e716e701af4c955d24",
+      "date": "2026-08-21",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-08-21/energy_predict.md"
+    },
+    {
+      "blob_sha": "ddd2ed2e39a223c51872061f789d0f44b0b1c202",
+      "commit": "d9f354124c214e9d2b6f56e716e701af4c955d24",
+      "date": "2026-08-21",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-08-21/financial_predict.md"
+    },
+    {
+      "blob_sha": "37f201d21c089101aae15febfe78941aa9722113",
+      "commit": "d9f354124c214e9d2b6f56e716e701af4c955d24",
+      "date": "2026-08-21",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-08-21/healthcare_predict.md"
+    },
+    {
+      "blob_sha": "2ec380a065bd258e8c40c7c770f27715522c3515",
+      "commit": "d9f354124c214e9d2b6f56e716e701af4c955d24",
+      "date": "2026-08-21",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-08-21/industrials_predict.md"
+    },
+    {
+      "blob_sha": "c797d87738f50a2c5392cf85e4adf13ea2def7f3",
+      "commit": "d9f354124c214e9d2b6f56e716e701af4c955d24",
+      "date": "2026-08-21",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-08-21/real_estate_predict.md"
+    },
+    {
+      "blob_sha": "5db0c1330a2deae57190d9e59f5551bed3bc211d",
+      "commit": "d9f354124c214e9d2b6f56e716e701af4c955d24",
+      "date": "2026-08-21",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-08-21/technology_predict.md"
+    },
+    {
+      "blob_sha": "a42befa502d6730e1e6d86fe8603078ff30ef97b",
+      "commit": "d9f354124c214e9d2b6f56e716e701af4c955d24",
+      "date": "2026-08-21",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-08-21/utilities_predict.md"
+    },
+    {
+      "blob_sha": "af86d74ac42ccecebfa603c3dcdc7237301a9630",
+      "commit": "0739ebc909e41fa449ab151dfcfec2ab3483a30d",
+      "date": "2026-08-21",
+      "input": "stock_book",
+      "path": "data/stock_book/2026-08-21_stock_book.json"
+    },
+    {
+      "blob_sha": "b0a16e44e484854b65bd38d3908623a10e743365",
+      "commit": "b146f8000479b8548829b134c38a2225cc364357",
+      "date": "2026-08-24",
+      "input": "ab_checklist",
+      "path": "data/ab_checklist/2026-08-24_ab_checklist.csv"
+    },
+    {
+      "blob_sha": "2a6177907faf78080986fd55cde66cffef67b047",
+      "commit": "b146f8000479b8548829b134c38a2225cc364357",
+      "date": "2026-08-24",
+      "input": "ab_enriched",
+      "path": "data/ab_checklist/2026-08-24_ab_checklist_enriched.csv"
+    },
+    {
+      "blob_sha": "fdae5a39b1bedd86f72b3026630acc1f3f01ea8f",
+      "commit": "2d5f82bfd7b1c05b6ccec1c636a012ff3445358f",
+      "date": "2026-08-24",
+      "input": "actions",
+      "path": "01_daily/news/2026-08-24_actions.json"
+    },
+    {
+      "blob_sha": "a8b1e3a871184383af8fd61d57776a00f8c8f54d",
+      "commit": "645a7b3949631bd4faee8a82bad086a2d982b907",
+      "date": "2026-08-24",
+      "input": "export",
+      "path": "data/exports/finviz_2026-08-24.csv"
+    },
+    {
+      "blob_sha": "4858ac7c493f5fd8ef064fe0d01d9a5490a96e48",
+      "commit": "260c443f1c3b87b85324b8506d5b8b8e6ed2ba5f",
+      "date": "2026-08-24",
+      "input": "judge",
+      "path": "01_daily/news/2026-08-24_judge.json"
+    },
+    {
+      "blob_sha": "d0e427d434d6d30da22ea6bf31133ed4648fb277",
+      "commit": "f5b46d20eec2a7acf5df3924fc5201023d0dcd40",
+      "date": "2026-08-24",
+      "input": "panel",
+      "n_rows": 69,
+      "path": "data/factor_mine/panel.json"
+    },
+    {
+      "blob_sha": "fa5a808b1c242e296b5316423b97f0e46171bc69",
+      "commit": "e2ab857c4bd9657259c3128b3a8a008f52bb9190",
+      "date": "2026-08-24",
+      "input": "predict",
+      "path": "01_daily/general/2026-08-24_predict.md"
+    },
+    {
+      "blob_sha": "a766ca41ddf3e854ccab03da6f5f4f7c046cb0e4",
+      "commit": "dbf8a514207739d54584668829a048c49137cc29",
+      "date": "2026-08-24",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-08-24/basic_materials_predict.md"
+    },
+    {
+      "blob_sha": "2efafc2f6670f81247779b2c9867b6747917c2bc",
+      "commit": "dbf8a514207739d54584668829a048c49137cc29",
+      "date": "2026-08-24",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-08-24/communication_services_predict.md"
+    },
+    {
+      "blob_sha": "97b7bd779c2ac587a77d646ef3531e212af6cc69",
+      "commit": "dbf8a514207739d54584668829a048c49137cc29",
+      "date": "2026-08-24",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-08-24/consumer_cyclical_predict.md"
+    },
+    {
+      "blob_sha": "c891360f4e38cad59065a158b427c3d345f67ce5",
+      "commit": "dbf8a514207739d54584668829a048c49137cc29",
+      "date": "2026-08-24",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-08-24/consumer_defensive_predict.md"
+    },
+    {
+      "blob_sha": "a1e5f907aadb4b06d80a82755e8626cd3abdcf65",
+      "commit": "dbf8a514207739d54584668829a048c49137cc29",
+      "date": "2026-08-24",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-08-24/energy_predict.md"
+    },
+    {
+      "blob_sha": "028488e4e58c93819a4f6efc9ea7e99920d9eee5",
+      "commit": "dbf8a514207739d54584668829a048c49137cc29",
+      "date": "2026-08-24",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-08-24/financial_predict.md"
+    },
+    {
+      "blob_sha": "ac67c83ecf2f63717eba1d7c955e2f6f8055374e",
+      "commit": "dbf8a514207739d54584668829a048c49137cc29",
+      "date": "2026-08-24",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-08-24/healthcare_predict.md"
+    },
+    {
+      "blob_sha": "2fa4b19c7277e03f25338f301e605145202175e3",
+      "commit": "dbf8a514207739d54584668829a048c49137cc29",
+      "date": "2026-08-24",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-08-24/industrials_predict.md"
+    },
+    {
+      "blob_sha": "98f81f661fc77bc292fa8e108e051ed884aaf13c",
+      "commit": "dbf8a514207739d54584668829a048c49137cc29",
+      "date": "2026-08-24",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-08-24/real_estate_predict.md"
+    },
+    {
+      "blob_sha": "ad057f64b45913a68e03628de7df2136640922d3",
+      "commit": "dbf8a514207739d54584668829a048c49137cc29",
+      "date": "2026-08-24",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-08-24/technology_predict.md"
+    },
+    {
+      "blob_sha": "d68a3b1e658526733ad391a318646e135a4e2fc3",
+      "commit": "dbf8a514207739d54584668829a048c49137cc29",
+      "date": "2026-08-24",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-08-24/utilities_predict.md"
+    },
+    {
+      "blob_sha": "f0eced2f2194f3b6ec00c9312efbe309e99966e7",
+      "commit": "3e0ce83b16f019fd9fa6b21806409363a3a2e0d6",
+      "date": "2026-08-25",
+      "input": "ab_checklist",
+      "path": "data/ab_checklist/2026-08-25_ab_checklist.csv"
+    },
+    {
+      "blob_sha": "76c313ab9ef7c6485bc28168b080e85e21c1b36e",
+      "commit": "3e0ce83b16f019fd9fa6b21806409363a3a2e0d6",
+      "date": "2026-08-25",
+      "input": "ab_enriched",
+      "path": "data/ab_checklist/2026-08-25_ab_checklist_enriched.csv"
+    },
+    {
+      "blob_sha": "3c761bd78f6abb4cf6b92fe2a6d87e2607fe0f05",
+      "commit": "9e190e285e8d6c8780083c84ec8937ee7079eb28",
+      "date": "2026-08-25",
+      "input": "actions",
+      "path": "01_daily/news/2026-08-25_actions.json"
+    },
+    {
+      "blob_sha": "d7ec78b7abc8ea82850aed2987178f12abfba0bb",
+      "commit": "8b562adec21280036e167155942394712be79cdc",
+      "date": "2026-08-25",
+      "input": "export",
+      "path": "data/exports/finviz_2026-08-25.csv"
+    },
+    {
+      "blob_sha": "94fa6d34a9800173db7d3f3ae2f6c769a61b9487",
+      "commit": "9e190e285e8d6c8780083c84ec8937ee7079eb28",
+      "date": "2026-08-25",
+      "input": "judge",
+      "path": "01_daily/news/2026-08-25_judge.json"
+    },
+    {
+      "blob_sha": "d0e427d434d6d30da22ea6bf31133ed4648fb277",
+      "commit": "f5b46d20eec2a7acf5df3924fc5201023d0dcd40",
+      "date": "2026-08-25",
+      "input": "panel",
+      "n_rows": 91,
+      "path": "data/factor_mine/panel.json"
+    },
+    {
+      "blob_sha": "726262100c438dbbcdf79145553d1ef85cabd5f9",
+      "commit": "9e190e285e8d6c8780083c84ec8937ee7079eb28",
+      "date": "2026-08-25",
+      "input": "predict",
+      "path": "01_daily/general/2026-08-25_predict.md"
+    },
+    {
+      "blob_sha": "d00240c9a8374d5aacbcb77175f1ac44ffdbc906",
+      "commit": "9e190e285e8d6c8780083c84ec8937ee7079eb28",
+      "date": "2026-08-25",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-08-25/basic_materials_predict.md"
+    },
+    {
+      "blob_sha": "2d3f72c59a816a310924b7f0829b9191d9fe457b",
+      "commit": "9e190e285e8d6c8780083c84ec8937ee7079eb28",
+      "date": "2026-08-25",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-08-25/communication_services_predict.md"
+    },
+    {
+      "blob_sha": "2abdd522d4f2bca1889ac5f03721e6bd6c349bc2",
+      "commit": "9e190e285e8d6c8780083c84ec8937ee7079eb28",
+      "date": "2026-08-25",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-08-25/consumer_cyclical_predict.md"
+    },
+    {
+      "blob_sha": "a1f7c2d3b0ebee20be4011e8a301f49680c50259",
+      "commit": "9e190e285e8d6c8780083c84ec8937ee7079eb28",
+      "date": "2026-08-25",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-08-25/consumer_defensive_predict.md"
+    },
+    {
+      "blob_sha": "14b3aee4a96bedaf2144f17ea12fe8866e115f29",
+      "commit": "9e190e285e8d6c8780083c84ec8937ee7079eb28",
+      "date": "2026-08-25",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-08-25/energy_predict.md"
+    },
+    {
+      "blob_sha": "72f226f289a78c0b89d87673dd60e63ef71b2eaa",
+      "commit": "9e190e285e8d6c8780083c84ec8937ee7079eb28",
+      "date": "2026-08-25",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-08-25/financial_predict.md"
+    },
+    {
+      "blob_sha": "a696b2cbcc8f9ad530d1d43b478216fd7e2b2f22",
+      "commit": "9e190e285e8d6c8780083c84ec8937ee7079eb28",
+      "date": "2026-08-25",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-08-25/industrials_predict.md"
+    },
+    {
+      "blob_sha": "4d74ad25e415fd42d3b5280f3381be5fd528d995",
+      "commit": "9e190e285e8d6c8780083c84ec8937ee7079eb28",
+      "date": "2026-08-25",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-08-25/real_estate_predict.md"
+    },
+    {
+      "blob_sha": "39fd26a495323c0dc304e647711a1f97f5eff8b8",
+      "commit": "9e190e285e8d6c8780083c84ec8937ee7079eb28",
+      "date": "2026-08-25",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-08-25/technology_predict.md"
+    },
+    {
+      "blob_sha": "71c910d044585f0ec9cebaf286b199770cda6d58",
+      "commit": "9e190e285e8d6c8780083c84ec8937ee7079eb28",
+      "date": "2026-08-25",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-08-25/utilities_predict.md"
+    },
+    {
+      "blob_sha": "52e9cbead23c2e182244363d2697b43e0d13b24a",
+      "commit": "f90f7fdc19915556e32e3ecf443307038b9ced0a",
+      "date": "2026-08-26",
+      "input": "actions",
+      "path": "01_daily/news/2026-08-26_actions.json"
+    },
+    {
+      "blob_sha": "886589f76b5a46d27161afadb49bbe81ee9d93d3",
+      "commit": "c35c8ff2971ad253dea65fe4d329e97e67237fc2",
+      "date": "2026-08-26",
+      "input": "catalyst",
+      "path": "01_daily/catalyst/2026-08-26_dossiers.json"
+    },
+    {
+      "blob_sha": "9d7dcd5a987d37f5ea5f6d4aa44279f8f52bf117",
+      "commit": "14ca89d7e462bdfa38436c674b053a35df5b29bf",
+      "date": "2026-08-26",
+      "input": "heat",
+      "path": "01_daily/map_heat/2026-08-26_map_heat.json"
+    },
+    {
+      "blob_sha": "0188c1fca1fb18a8f9c828ddc8166db2a9f224a3",
+      "commit": "f90f7fdc19915556e32e3ecf443307038b9ced0a",
+      "date": "2026-08-26",
+      "input": "judge",
+      "path": "01_daily/news/2026-08-26_judge.json"
+    },
+    {
+      "blob_sha": "d0e427d434d6d30da22ea6bf31133ed4648fb277",
+      "commit": "f5b46d20eec2a7acf5df3924fc5201023d0dcd40",
+      "date": "2026-08-26",
+      "input": "panel",
+      "n_rows": 84,
+      "path": "data/factor_mine/panel.json"
+    },
+    {
+      "blob_sha": "cf85e24f9cea347aff39b6a70dce65ec5f333ad2",
+      "commit": "f90f7fdc19915556e32e3ecf443307038b9ced0a",
+      "date": "2026-08-26",
+      "input": "predict",
+      "path": "01_daily/general/2026-08-26_predict.md"
+    },
+    {
+      "blob_sha": "abce7c0dc63f964a551635f1e7019f61b30cdd6d",
+      "commit": "f90f7fdc19915556e32e3ecf443307038b9ced0a",
+      "date": "2026-08-26",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-08-26/basic_materials_predict.md"
+    },
+    {
+      "blob_sha": "069d7534945d5c477a9563583df06279b49731d8",
+      "commit": "f90f7fdc19915556e32e3ecf443307038b9ced0a",
+      "date": "2026-08-26",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-08-26/communication_services_predict.md"
+    },
+    {
+      "blob_sha": "94843a9956d7927d7147af9a54f9b25d706b23b3",
+      "commit": "f90f7fdc19915556e32e3ecf443307038b9ced0a",
+      "date": "2026-08-26",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-08-26/consumer_cyclical_predict.md"
+    },
+    {
+      "blob_sha": "86c1a52310d24bedc57cc9c1706b7fc99df26515",
+      "commit": "f90f7fdc19915556e32e3ecf443307038b9ced0a",
+      "date": "2026-08-26",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-08-26/consumer_defensive_predict.md"
+    },
+    {
+      "blob_sha": "5cfe1c6381d4046c179f802933c7c40f3818bff1",
+      "commit": "f90f7fdc19915556e32e3ecf443307038b9ced0a",
+      "date": "2026-08-26",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-08-26/energy_predict.md"
+    },
+    {
+      "blob_sha": "623810e5c66f864635215c488a20e91680c78aea",
+      "commit": "f90f7fdc19915556e32e3ecf443307038b9ced0a",
+      "date": "2026-08-26",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-08-26/financial_predict.md"
+    },
+    {
+      "blob_sha": "f285f8f1cda2ee738f04f6c5874473b9df6df88e",
+      "commit": "f90f7fdc19915556e32e3ecf443307038b9ced0a",
+      "date": "2026-08-26",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-08-26/industrials_predict.md"
+    },
+    {
+      "blob_sha": "bdaf332b14c8119f2d68a698c803a2c7868cdaf6",
+      "commit": "f90f7fdc19915556e32e3ecf443307038b9ced0a",
+      "date": "2026-08-26",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-08-26/real_estate_predict.md"
+    },
+    {
+      "blob_sha": "fc1d4c6ea8aa5cd7726b66f4f94b9ace393e637b",
+      "commit": "f90f7fdc19915556e32e3ecf443307038b9ced0a",
+      "date": "2026-08-26",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-08-26/technology_predict.md"
+    },
+    {
+      "blob_sha": "e5799cbc9e15682daf17fb9b48ccbdd98ae147a6",
+      "commit": "f90f7fdc19915556e32e3ecf443307038b9ced0a",
+      "date": "2026-08-26",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-08-26/utilities_predict.md"
+    },
+    {
+      "blob_sha": "ff7e93dcd5fdaf7c698cc930540856f8fbd7a1c5",
+      "commit": "24f596758d297d19d7ab949475b12f21ef9ec5ab",
+      "date": "2026-08-27",
+      "input": "ab_checklist",
+      "path": "data/ab_checklist/2026-08-27_ab_checklist.csv"
+    },
+    {
+      "blob_sha": "600507ddb6040b19e16d2658742c7e8a7c1e9033",
+      "commit": "543979ab7363cc2a24f28f5cc1294bff7af21c34",
+      "date": "2026-08-27",
+      "input": "ab_enriched",
+      "path": "data/ab_checklist/2026-08-27_ab_checklist_enriched.csv"
+    },
+    {
+      "blob_sha": "2240b6fbac8ad2663398861c4f8ae7c7b3460f46",
+      "commit": "b40850c0842ef96f299741f81f68a0280187a494",
+      "date": "2026-08-27",
+      "input": "actions",
+      "path": "01_daily/news/2026-08-27_actions.json"
+    },
+    {
+      "blob_sha": "c0fe1e2f06dca9dce6b07bb5a584f530d15109e3",
+      "commit": "8ab7da4e2c6af446ad5f5b46e943e826a5a9d431",
+      "date": "2026-08-27",
+      "input": "catalyst",
+      "path": "01_daily/catalyst/2026-08-27_dossiers.json"
+    },
+    {
+      "blob_sha": "6817957f233f56e89edd1caf731c9b8ce411221c",
+      "commit": "a05223b4974986b5d9760d0188cec5cc27d3dc3f",
+      "date": "2026-08-27",
+      "input": "export",
+      "path": "data/exports/finviz_2026-08-27.csv"
+    },
+    {
+      "blob_sha": "ed5313af943759ebccd8dd17c50b232703b4f016",
+      "commit": "56b4dcbcc8ae05655975d08ea7d4f368776c540e",
+      "date": "2026-08-27",
+      "input": "heat",
+      "path": "01_daily/map_heat/2026-08-27_map_heat.json"
+    },
+    {
+      "blob_sha": "84770c93c5df70d4fc3ef91004b51ef846f91c7f",
+      "commit": "b40850c0842ef96f299741f81f68a0280187a494",
+      "date": "2026-08-27",
+      "input": "judge",
+      "path": "01_daily/news/2026-08-27_judge.json"
+    },
+    {
+      "blob_sha": "d0e427d434d6d30da22ea6bf31133ed4648fb277",
+      "commit": "f5b46d20eec2a7acf5df3924fc5201023d0dcd40",
+      "date": "2026-08-27",
+      "input": "panel",
+      "n_rows": 19,
+      "path": "data/factor_mine/panel.json"
+    },
+    {
+      "blob_sha": "3d123e13bd83ebc5c185c4a77768634c17c0eb0a",
+      "commit": "69314679d827ba5269c4956f944cb4259f2dc62e",
+      "date": "2026-08-27",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-08-27/basic_materials_predict.md"
+    },
+    {
+      "blob_sha": "ac074413e91b54834de09feab96d35f1c5978488",
+      "commit": "69314679d827ba5269c4956f944cb4259f2dc62e",
+      "date": "2026-08-27",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-08-27/communication_services_predict.md"
+    },
+    {
+      "blob_sha": "0efd24efcfd003f5b2070c526488e3e7652ce312",
+      "commit": "69314679d827ba5269c4956f944cb4259f2dc62e",
+      "date": "2026-08-27",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-08-27/consumer_cyclical_predict.md"
+    },
+    {
+      "blob_sha": "db6c6c750b06c7a56c7664955c9a6fa5194edd1f",
+      "commit": "69314679d827ba5269c4956f944cb4259f2dc62e",
+      "date": "2026-08-27",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-08-27/consumer_defensive_predict.md"
+    },
+    {
+      "blob_sha": "c24c19bc747bf9c41b5581ea30285be6f633fb18",
+      "commit": "69314679d827ba5269c4956f944cb4259f2dc62e",
+      "date": "2026-08-27",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-08-27/energy_predict.md"
+    },
+    {
+      "blob_sha": "3c2987f381150e3e76dd3804239a0b34358090d7",
+      "commit": "69314679d827ba5269c4956f944cb4259f2dc62e",
+      "date": "2026-08-27",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-08-27/financial_predict.md"
+    },
+    {
+      "blob_sha": "cf8fb32846896c63c9b18427c6ec5cab34b74eb9",
+      "commit": "69314679d827ba5269c4956f944cb4259f2dc62e",
+      "date": "2026-08-27",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-08-27/industrials_predict.md"
+    },
+    {
+      "blob_sha": "806bc4de75b7a4c72576afdb0974d04024884f0e",
+      "commit": "69314679d827ba5269c4956f944cb4259f2dc62e",
+      "date": "2026-08-27",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-08-27/real_estate_predict.md"
+    },
+    {
+      "blob_sha": "9ce9bf82b15d1f0a7040c7fcb2d38218fda7f299",
+      "commit": "69314679d827ba5269c4956f944cb4259f2dc62e",
+      "date": "2026-08-27",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-08-27/technology_predict.md"
+    },
+    {
+      "blob_sha": "eb3e52c07e4aecdd676fccd867dd3defe7a9a127",
+      "commit": "69314679d827ba5269c4956f944cb4259f2dc62e",
+      "date": "2026-08-27",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-08-27/utilities_predict.md"
+    },
+    {
+      "blob_sha": "19cf31b2900f96fde783c7965d787aabb75abf47",
+      "commit": "b40850c0842ef96f299741f81f68a0280187a494",
+      "date": "2026-08-27",
+      "input": "stock_book",
+      "path": "data/stock_book/2026-08-27_stock_book.json"
+    },
+    {
+      "blob_sha": "36f20c7bb7f091bf39fc64760d8b932f36b8370b",
+      "commit": "4794d85793b50b87c00630b64e342d1287f673f8",
+      "date": "2026-08-28",
+      "input": "ab_checklist",
+      "path": "data/ab_checklist/2026-08-28_ab_checklist.csv"
+    },
+    {
+      "blob_sha": "5c456bdec650c97df9db9a281c41cf0c57618804",
+      "commit": "4794d85793b50b87c00630b64e342d1287f673f8",
+      "date": "2026-08-28",
+      "input": "ab_enriched",
+      "path": "data/ab_checklist/2026-08-28_ab_checklist_enriched.csv"
+    },
+    {
+      "blob_sha": "ef3292a85f3e97eeb83207ef8bb116b687a0cfc0",
+      "commit": "411132e8e5ad4b1fca97deef0991a9ea75eb3f58",
+      "date": "2026-08-28",
+      "input": "actions",
+      "path": "01_daily/news/2026-08-28_actions.json"
+    },
+    {
+      "blob_sha": "a9992176a2a8fde86a150b8892cba5a42ddbcbb5",
+      "commit": "411132e8e5ad4b1fca97deef0991a9ea75eb3f58",
+      "date": "2026-08-28",
+      "input": "catalyst",
+      "path": "01_daily/catalyst/2026-08-28_dossiers.json"
+    },
+    {
+      "blob_sha": "92dc011f7ea4cf29844a8868a0983a33cc6951d8",
+      "commit": "e3ff37ede97c038d60ef64775004922e7f6958cb",
+      "date": "2026-08-28",
+      "input": "export",
+      "path": "data/exports/finviz_2026-08-28.csv"
+    },
+    {
+      "blob_sha": "116904574d21def014e05e7b322f8d380eeee57f",
+      "commit": "0c708927c65d61bea44cb273a8b2c17720a12d31",
+      "date": "2026-08-28",
+      "input": "heat",
+      "path": "01_daily/map_heat/2026-08-28_map_heat.json"
+    },
+    {
+      "blob_sha": "fcf3b04b9afa7d5d2585a05eb096d7d28db4b9e8",
+      "commit": "411132e8e5ad4b1fca97deef0991a9ea75eb3f58",
+      "date": "2026-08-28",
+      "input": "judge",
+      "path": "01_daily/news/2026-08-28_judge.json"
+    },
+    {
+      "blob_sha": "d0e427d434d6d30da22ea6bf31133ed4648fb277",
+      "commit": "f5b46d20eec2a7acf5df3924fc5201023d0dcd40",
+      "date": "2026-08-28",
+      "input": "panel",
+      "n_rows": 99,
+      "path": "data/factor_mine/panel.json"
+    },
+    {
+      "blob_sha": "d89348112b1d7db776aee76536c5a1c5686d6778",
+      "commit": "411132e8e5ad4b1fca97deef0991a9ea75eb3f58",
+      "date": "2026-08-28",
+      "input": "predict",
+      "path": "01_daily/general/2026-08-28_predict.md"
+    },
+    {
+      "blob_sha": "b36837df52e4322e392f5ab111b72ae4eb19b6c4",
+      "commit": "411132e8e5ad4b1fca97deef0991a9ea75eb3f58",
+      "date": "2026-08-28",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-08-28/basic_materials_predict.md"
+    },
+    {
+      "blob_sha": "8835963727aa1548d6cb0dfd3e92424b6de6838c",
+      "commit": "411132e8e5ad4b1fca97deef0991a9ea75eb3f58",
+      "date": "2026-08-28",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-08-28/communication_services_predict.md"
+    },
+    {
+      "blob_sha": "32634f94a0975d859c4924e7643a670c886c9b5d",
+      "commit": "411132e8e5ad4b1fca97deef0991a9ea75eb3f58",
+      "date": "2026-08-28",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-08-28/consumer_cyclical_predict.md"
+    },
+    {
+      "blob_sha": "88cbbadd9def6ca6873bacab8a5cfa6630978352",
+      "commit": "411132e8e5ad4b1fca97deef0991a9ea75eb3f58",
+      "date": "2026-08-28",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-08-28/consumer_defensive_predict.md"
+    },
+    {
+      "blob_sha": "2b8729ab6710b0f76bb8c971f7bcc2001778e17d",
+      "commit": "411132e8e5ad4b1fca97deef0991a9ea75eb3f58",
+      "date": "2026-08-28",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-08-28/energy_predict.md"
+    },
+    {
+      "blob_sha": "fe32ffc209ba87f2bf77570a16558fbd2dbc512c",
+      "commit": "411132e8e5ad4b1fca97deef0991a9ea75eb3f58",
+      "date": "2026-08-28",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-08-28/financial_predict.md"
+    },
+    {
+      "blob_sha": "65a06596cd056fa1720769937895b438c4aaa133",
+      "commit": "411132e8e5ad4b1fca97deef0991a9ea75eb3f58",
+      "date": "2026-08-28",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-08-28/healthcare_predict.md"
+    },
+    {
+      "blob_sha": "29fc6ef8578ad208dd50381daacee6d0f0cf21e4",
+      "commit": "411132e8e5ad4b1fca97deef0991a9ea75eb3f58",
+      "date": "2026-08-28",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-08-28/industrials_predict.md"
+    },
+    {
+      "blob_sha": "6aba1e0274e73fd3334011713b9448453ba00314",
+      "commit": "411132e8e5ad4b1fca97deef0991a9ea75eb3f58",
+      "date": "2026-08-28",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-08-28/real_estate_predict.md"
+    },
+    {
+      "blob_sha": "105272a4afd2d87fa01d80ac2df5b20a32258316",
+      "commit": "411132e8e5ad4b1fca97deef0991a9ea75eb3f58",
+      "date": "2026-08-28",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-08-28/technology_predict.md"
+    },
+    {
+      "blob_sha": "c67a45a796fd24de8b60e7d60c84a1fc074d0350",
+      "commit": "411132e8e5ad4b1fca97deef0991a9ea75eb3f58",
+      "date": "2026-08-28",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-08-28/utilities_predict.md"
+    },
+    {
+      "blob_sha": "16b1cc06d13bff12b666965ff4d76ba46c4f8943",
+      "commit": "c48c306a8e1d2f685bfc525aa254623f5bdef5a9",
+      "date": "2026-08-31",
+      "input": "ab_checklist",
+      "path": "data/ab_checklist/2026-08-31_ab_checklist.csv"
+    },
+    {
+      "blob_sha": "bd46d9230c4235e4d3ce167cbce45df180813539",
+      "commit": "1ec53dc30f97620dbae97d5146d4bfb005418e4d",
+      "date": "2026-08-31",
+      "input": "ab_enriched",
+      "path": "data/ab_checklist/2026-08-31_ab_checklist_enriched.csv"
+    },
+    {
+      "blob_sha": "70a27bad0df46ec23444b47ed09a4294e230e2a0",
+      "commit": "203ee9f0c3ca9a819f26d7ee2a7bb5b726751b71",
+      "date": "2026-08-31",
+      "input": "actions",
+      "path": "01_daily/news/2026-08-31_actions.json"
+    },
+    {
+      "blob_sha": "2ae79c944f207ffd9b207a6c7c042172244a2744",
+      "commit": "203ee9f0c3ca9a819f26d7ee2a7bb5b726751b71",
+      "date": "2026-08-31",
+      "input": "catalyst",
+      "path": "01_daily/catalyst/2026-08-31_dossiers.json"
+    },
+    {
+      "blob_sha": "0e1b5af79bb2c522be09622e0467c8a1db3ee3b9",
+      "commit": "4e814505cc453b0ddf762d289c7f1b01ea2291a5",
+      "date": "2026-08-31",
+      "input": "export",
+      "path": "data/exports/finviz_2026-08-31.csv"
+    },
+    {
+      "blob_sha": "0dec43a97b7b12a94e9d079cbd997806512cdc20",
+      "commit": "3f78b56995c201e2ffe0f2bd41ec47683472f8b7",
+      "date": "2026-08-31",
+      "input": "heat",
+      "path": "01_daily/map_heat/2026-08-31_map_heat.json"
+    },
+    {
+      "blob_sha": "83be705878952b3c5ee5c17f347df9271b964e1e",
+      "commit": "203ee9f0c3ca9a819f26d7ee2a7bb5b726751b71",
+      "date": "2026-08-31",
+      "input": "judge",
+      "path": "01_daily/news/2026-08-31_judge.json"
+    },
+    {
+      "blob_sha": "d0e427d434d6d30da22ea6bf31133ed4648fb277",
+      "commit": "f5b46d20eec2a7acf5df3924fc5201023d0dcd40",
+      "date": "2026-08-31",
+      "input": "panel",
+      "n_rows": 68,
+      "path": "data/factor_mine/panel.json"
+    },
+    {
+      "blob_sha": "968c27fc76e6343b3b3c5b59489eddb401f9cfa7",
+      "commit": "203ee9f0c3ca9a819f26d7ee2a7bb5b726751b71",
+      "date": "2026-08-31",
+      "input": "predict",
+      "path": "01_daily/general/2026-08-31_predict.md"
+    },
+    {
+      "blob_sha": "ef3132ba4e45a4532c16e4de08d9eb0a4bb02d0e",
+      "commit": "0286e463fc5f2b356d7291456fb3f17996b1d177",
+      "date": "2026-08-31",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-08-31/consumer_cyclical_predict.md"
+    },
+    {
+      "blob_sha": "d262192d15861dff5ffb2c3d98fbbac59374b2da",
+      "commit": "203ee9f0c3ca9a819f26d7ee2a7bb5b726751b71",
+      "date": "2026-08-31",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-08-31/consumer_defensive_predict.md"
+    },
+    {
+      "blob_sha": "e8e7f3ccbfd11a6355c8045ce4ccee036e6cd4d8",
+      "commit": "203ee9f0c3ca9a819f26d7ee2a7bb5b726751b71",
+      "date": "2026-08-31",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-08-31/energy_predict.md"
+    },
+    {
+      "blob_sha": "b0d129e9971f2bb103122cbe4d33e99bca7d844a",
+      "commit": "203ee9f0c3ca9a819f26d7ee2a7bb5b726751b71",
+      "date": "2026-08-31",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-08-31/financial_predict.md"
+    },
+    {
+      "blob_sha": "212f240a16336cdf9088518f151bab90958edfee",
+      "commit": "203ee9f0c3ca9a819f26d7ee2a7bb5b726751b71",
+      "date": "2026-08-31",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-08-31/healthcare_predict.md"
+    },
+    {
+      "blob_sha": "3e91c4c48df332f487d2790d773da9686dbb14d7",
+      "commit": "203ee9f0c3ca9a819f26d7ee2a7bb5b726751b71",
+      "date": "2026-08-31",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-08-31/real_estate_predict.md"
+    },
+    {
+      "blob_sha": "0b326d97b986349ec8a49ec77a40fb80bb29df69",
+      "commit": "203ee9f0c3ca9a819f26d7ee2a7bb5b726751b71",
+      "date": "2026-08-31",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-08-31/technology_predict.md"
+    },
+    {
+      "blob_sha": "52b8e68c5c974dc4fbfc1466edc59878ebd101d1",
+      "commit": "203ee9f0c3ca9a819f26d7ee2a7bb5b726751b71",
+      "date": "2026-08-31",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-08-31/utilities_predict.md"
+    },
+    {
+      "blob_sha": "67c19ab196a2b4adec828e016ecd0db0d03c851c",
+      "commit": "0286e463fc5f2b356d7291456fb3f17996b1d177",
+      "date": "2026-08-31",
+      "input": "stock_book",
+      "path": "data/stock_book/2026-08-31_stock_book.json"
+    },
+    {
+      "blob_sha": "0001379380c5d758033786322e7d5bc2ea79baa7",
+      "commit": "5e0ffec92dc31e307a0738385d0a4d5dd2c39c5a",
+      "date": "2026-09-01",
+      "input": "ab_checklist",
+      "path": "data/ab_checklist/2026-09-01_ab_checklist.csv"
+    },
+    {
+      "blob_sha": "aea085c4620e3ecde17fd623939a35aca8a54bfa",
+      "commit": "5e0ffec92dc31e307a0738385d0a4d5dd2c39c5a",
+      "date": "2026-09-01",
+      "input": "ab_enriched",
+      "path": "data/ab_checklist/2026-09-01_ab_checklist_enriched.csv"
+    },
+    {
+      "blob_sha": "88fc669e5b610d1f81d9c7b0dad076108ab56f1e",
+      "commit": "324f0dacf57b7119568e045beba8174538ff2c5c",
+      "date": "2026-09-01",
+      "input": "actions",
+      "path": "01_daily/news/2026-09-01_actions.json"
+    },
+    {
+      "blob_sha": "375403ea2d3f2b04e39b16163d88e03707965e3a",
+      "commit": "324f0dacf57b7119568e045beba8174538ff2c5c",
+      "date": "2026-09-01",
+      "input": "catalyst",
+      "path": "01_daily/catalyst/2026-09-01_dossiers.json"
+    },
+    {
+      "blob_sha": "575df1290e63b003f994cb2cf85d66c00bee6438",
+      "commit": "e08744600d83675123bb5ca494eed367ab36c9a3",
+      "date": "2026-09-01",
+      "input": "export",
+      "path": "data/exports/finviz_2026-09-01.csv"
+    },
+    {
+      "blob_sha": "74f2814fb4c5cc1358bc2101b9bca283290431f2",
+      "commit": "e08744600d83675123bb5ca494eed367ab36c9a3",
+      "date": "2026-09-01",
+      "input": "heat",
+      "path": "01_daily/map_heat/2026-09-01_map_heat.json"
+    },
+    {
+      "blob_sha": "26c3f1273a8e3ece3224561e30506ae302a83e57",
+      "commit": "324f0dacf57b7119568e045beba8174538ff2c5c",
+      "date": "2026-09-01",
+      "input": "judge",
+      "path": "01_daily/news/2026-09-01_judge.json"
+    },
+    {
+      "blob_sha": "d0e427d434d6d30da22ea6bf31133ed4648fb277",
+      "commit": "f5b46d20eec2a7acf5df3924fc5201023d0dcd40",
+      "date": "2026-09-01",
+      "input": "panel",
+      "n_rows": 85,
+      "path": "data/factor_mine/panel.json"
+    },
+    {
+      "blob_sha": "c03efe80526a531202325eb19e0dd2fe5c583f49",
+      "commit": "324f0dacf57b7119568e045beba8174538ff2c5c",
+      "date": "2026-09-01",
+      "input": "predict",
+      "path": "01_daily/general/2026-09-01_predict.md"
+    },
+    {
+      "blob_sha": "4b0221b45b2205037848ae5a720cc4ce9ed24420",
+      "commit": "324f0dacf57b7119568e045beba8174538ff2c5c",
+      "date": "2026-09-01",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-01/basic_materials_predict.md"
+    },
+    {
+      "blob_sha": "4c63f6eaf2200d93beb2602292c2e74e270a4ea1",
+      "commit": "324f0dacf57b7119568e045beba8174538ff2c5c",
+      "date": "2026-09-01",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-01/communication_services_predict.md"
+    },
+    {
+      "blob_sha": "eeffa7a748b6213d9ea1dac7e3c435a686c2d568",
+      "commit": "324f0dacf57b7119568e045beba8174538ff2c5c",
+      "date": "2026-09-01",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-01/consumer_cyclical_predict.md"
+    },
+    {
+      "blob_sha": "a8584bd37bcd243e1d4dbd3eef0de3303adc8c75",
+      "commit": "324f0dacf57b7119568e045beba8174538ff2c5c",
+      "date": "2026-09-01",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-01/consumer_defensive_predict.md"
+    },
+    {
+      "blob_sha": "18e255eb8ed39e757dcc41ef0bb3b6fa73a9de43",
+      "commit": "324f0dacf57b7119568e045beba8174538ff2c5c",
+      "date": "2026-09-01",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-01/energy_predict.md"
+    },
+    {
+      "blob_sha": "a5a72545be52ecbaec680b6c657051fa6233155f",
+      "commit": "324f0dacf57b7119568e045beba8174538ff2c5c",
+      "date": "2026-09-01",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-01/financial_predict.md"
+    },
+    {
+      "blob_sha": "e8a99146643bf1d75f17f4a6fcc35ac61ea1306f",
+      "commit": "324f0dacf57b7119568e045beba8174538ff2c5c",
+      "date": "2026-09-01",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-01/healthcare_predict.md"
+    },
+    {
+      "blob_sha": "36cc449e29366ce22a4f86d123e845d77b4b3ec3",
+      "commit": "324f0dacf57b7119568e045beba8174538ff2c5c",
+      "date": "2026-09-01",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-01/industrials_predict.md"
+    },
+    {
+      "blob_sha": "70dfc985fd5e3dfa8244901685173ccf3574e57c",
+      "commit": "324f0dacf57b7119568e045beba8174538ff2c5c",
+      "date": "2026-09-01",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-01/real_estate_predict.md"
+    },
+    {
+      "blob_sha": "e6399f565ed73d8007cf640ef03dc70d1af6ce6f",
+      "commit": "324f0dacf57b7119568e045beba8174538ff2c5c",
+      "date": "2026-09-01",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-01/technology_predict.md"
+    },
+    {
+      "blob_sha": "1786deb8184101e6c4e7e7c401ac841019117dbe",
+      "commit": "324f0dacf57b7119568e045beba8174538ff2c5c",
+      "date": "2026-09-01",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-01/utilities_predict.md"
+    },
+    {
+      "blob_sha": "38c82a7fb14444b348987bce75285b8e405c8cac",
+      "commit": "479a0a0a46537253a9a28ef887a1812562434458",
+      "date": "2026-09-01",
+      "input": "stock_book",
+      "path": "data/stock_book/2026-09-01_stock_book.json"
+    },
+    {
+      "blob_sha": "05c50a56c81a22505bd54c27957ef9caaf62f09e",
+      "commit": "4a1ebcf5f452faf0ce058cc43826c49fdf63e7c6",
+      "date": "2026-09-02",
+      "input": "ab_checklist",
+      "path": "data/ab_checklist/2026-09-02_ab_checklist.csv"
+    },
+    {
+      "blob_sha": "c5be59dd053df7810da7c0fe0d1683d2c91d0801",
+      "commit": "4a1ebcf5f452faf0ce058cc43826c49fdf63e7c6",
+      "date": "2026-09-02",
+      "input": "ab_enriched",
+      "path": "data/ab_checklist/2026-09-02_ab_checklist_enriched.csv"
+    },
+    {
+      "blob_sha": "817623a170eb1b9221b43a59d83c219776ad9847",
+      "commit": "5231bc1e5499699b4021ff2cb81d2b497af36435",
+      "date": "2026-09-02",
+      "input": "actions",
+      "path": "01_daily/news/2026-09-02_actions.json"
+    },
+    {
+      "blob_sha": "3fa42343ba2f7c360b5d46d921a987639e14f88a",
+      "commit": "5231bc1e5499699b4021ff2cb81d2b497af36435",
+      "date": "2026-09-02",
+      "input": "catalyst",
+      "path": "01_daily/catalyst/2026-09-02_dossiers.json"
+    },
+    {
+      "blob_sha": "9581d4490711c7fbd6c47c069f819f65dce46ddc",
+      "commit": "3b576cbaf1bed8f2e1c69aac3bcac9250c7ffd25",
+      "date": "2026-09-02",
+      "input": "export",
+      "path": "data/exports/finviz_2026-09-02.csv"
+    },
+    {
+      "blob_sha": "74f2814fb4c5cc1358bc2101b9bca283290431f2",
+      "commit": "30ac803f097b05278025cd3dd9671fe1b7f8b784",
+      "date": "2026-09-02",
+      "input": "heat",
+      "path": "01_daily/map_heat/2026-09-02_map_heat.json"
+    },
+    {
+      "blob_sha": "62c0788ac6c162efb67b68313151867b36cc3aba",
+      "commit": "5231bc1e5499699b4021ff2cb81d2b497af36435",
+      "date": "2026-09-02",
+      "input": "judge",
+      "path": "01_daily/news/2026-09-02_judge.json"
+    },
+    {
+      "blob_sha": "d0e427d434d6d30da22ea6bf31133ed4648fb277",
+      "commit": "f5b46d20eec2a7acf5df3924fc5201023d0dcd40",
+      "date": "2026-09-02",
+      "input": "panel",
+      "n_rows": 89,
+      "path": "data/factor_mine/panel.json"
+    },
+    {
+      "blob_sha": "304337f38625e56d6f9bf11111dd87f56ab01aab",
+      "commit": "5231bc1e5499699b4021ff2cb81d2b497af36435",
+      "date": "2026-09-02",
+      "input": "predict",
+      "path": "01_daily/general/2026-09-02_predict.md"
+    },
+    {
+      "blob_sha": "8fc9ed17e3c042313d942ca42c817e2da62036cb",
+      "commit": "5231bc1e5499699b4021ff2cb81d2b497af36435",
+      "date": "2026-09-02",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-02/basic_materials_predict.md"
+    },
+    {
+      "blob_sha": "e260455cc270c456bfbf1153d18b62fef543415e",
+      "commit": "5231bc1e5499699b4021ff2cb81d2b497af36435",
+      "date": "2026-09-02",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-02/communication_services_predict.md"
+    },
+    {
+      "blob_sha": "bb99bd64183884808a8c257a06024a850fdf6110",
+      "commit": "5231bc1e5499699b4021ff2cb81d2b497af36435",
+      "date": "2026-09-02",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-02/consumer_cyclical_predict.md"
+    },
+    {
+      "blob_sha": "67efa5cf6f91b684c25a92b8c4a6424c7ed45d5d",
+      "commit": "5231bc1e5499699b4021ff2cb81d2b497af36435",
+      "date": "2026-09-02",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-02/consumer_defensive_predict.md"
+    },
+    {
+      "blob_sha": "54e7d4b871ff2a4f26a23c53f5824c9a232d4fcc",
+      "commit": "5231bc1e5499699b4021ff2cb81d2b497af36435",
+      "date": "2026-09-02",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-02/energy_predict.md"
+    },
+    {
+      "blob_sha": "935b38b805cffa55b48860090dd2969390d82c26",
+      "commit": "5231bc1e5499699b4021ff2cb81d2b497af36435",
+      "date": "2026-09-02",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-02/financial_predict.md"
+    },
+    {
+      "blob_sha": "8d718e720b18f3f261fd1f7d022f841ef7657c42",
+      "commit": "5231bc1e5499699b4021ff2cb81d2b497af36435",
+      "date": "2026-09-02",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-02/healthcare_predict.md"
+    },
+    {
+      "blob_sha": "f7be4f337a88b13b8b2239896b6f505cdd3bcc66",
+      "commit": "5231bc1e5499699b4021ff2cb81d2b497af36435",
+      "date": "2026-09-02",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-02/industrials_predict.md"
+    },
+    {
+      "blob_sha": "9f4aa814837daa511c67570e7c1a1ab52df72180",
+      "commit": "5231bc1e5499699b4021ff2cb81d2b497af36435",
+      "date": "2026-09-02",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-02/real_estate_predict.md"
+    },
+    {
+      "blob_sha": "a65e9cf86a0cac8d2f26d44af6614c1d80e54b19",
+      "commit": "799a91334b790f7621c6bedd86976934421f62c7",
+      "date": "2026-09-02",
+      "input": "stock_book",
+      "path": "data/stock_book/2026-09-02_stock_book.json"
+    },
+    {
+      "blob_sha": "fd5d44c2636e88de1bf3b4333d8ebb504d20f4ce",
+      "commit": "2423ad84eda3d86eac8be2141f066dd655117ee5",
+      "date": "2026-09-03",
+      "input": "ab_checklist",
+      "path": "data/ab_checklist/2026-09-03_ab_checklist.csv"
+    },
+    {
+      "blob_sha": "a1e9192af6056a719a95bbb8a799189829f446cc",
+      "commit": "2423ad84eda3d86eac8be2141f066dd655117ee5",
+      "date": "2026-09-03",
+      "input": "ab_enriched",
+      "path": "data/ab_checklist/2026-09-03_ab_checklist_enriched.csv"
+    },
+    {
+      "blob_sha": "c94ce2df85a019316ddec424386505014833870c",
+      "commit": "70da5272a6b1f979289b5ff97d4113bedb792cf8",
+      "date": "2026-09-03",
+      "input": "actions",
+      "path": "01_daily/news/2026-09-03_actions.json"
+    },
+    {
+      "blob_sha": "9202f4e7b95fabba231d94061651ae4792d16fdf",
+      "commit": "70da5272a6b1f979289b5ff97d4113bedb792cf8",
+      "date": "2026-09-03",
+      "input": "catalyst",
+      "path": "01_daily/catalyst/2026-09-03_dossiers.json"
+    },
+    {
+      "blob_sha": "1290e1455c02f196879475f3a33a371e2e4d9411",
+      "commit": "27c279c34a5419766f8789690c0cb5a4db2d9ecd",
+      "date": "2026-09-03",
+      "input": "export",
+      "path": "data/exports/finviz_2026-09-03.csv"
+    },
+    {
+      "blob_sha": "687e2866685f4d91845a83028ca8e0d491af3881",
+      "commit": "87ebeb9045a1fcbdd258b81fd74443cf9c7bd627",
+      "date": "2026-09-03",
+      "input": "heat",
+      "path": "01_daily/map_heat/2026-09-03_map_heat.json"
+    },
+    {
+      "blob_sha": "bd38df32784fd0b4d8719b55803f52b329f201f2",
+      "commit": "70da5272a6b1f979289b5ff97d4113bedb792cf8",
+      "date": "2026-09-03",
+      "input": "judge",
+      "path": "01_daily/news/2026-09-03_judge.json"
+    },
+    {
+      "blob_sha": "d0e427d434d6d30da22ea6bf31133ed4648fb277",
+      "commit": "f5b46d20eec2a7acf5df3924fc5201023d0dcd40",
+      "date": "2026-09-03",
+      "input": "panel",
+      "n_rows": 91,
+      "path": "data/factor_mine/panel.json"
+    },
+    {
+      "blob_sha": "b830f646890fce72e645d1c6bb5047aef426b788",
+      "commit": "70da5272a6b1f979289b5ff97d4113bedb792cf8",
+      "date": "2026-09-03",
+      "input": "predict",
+      "path": "01_daily/general/2026-09-03_predict.md"
+    },
+    {
+      "blob_sha": "e7818638c901001872e3b346ea4fb5ab60af5f79",
+      "commit": "70da5272a6b1f979289b5ff97d4113bedb792cf8",
+      "date": "2026-09-03",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-03/basic_materials_predict.md"
+    },
+    {
+      "blob_sha": "6c4a7a151d364df72f74d01cf893ebba3cfcfd82",
+      "commit": "70da5272a6b1f979289b5ff97d4113bedb792cf8",
+      "date": "2026-09-03",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-03/communication_services_predict.md"
+    },
+    {
+      "blob_sha": "05cdc23a6a2e6648ea214d9cc1601901843946ce",
+      "commit": "70da5272a6b1f979289b5ff97d4113bedb792cf8",
+      "date": "2026-09-03",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-03/consumer_cyclical_predict.md"
+    },
+    {
+      "blob_sha": "d5166c80967f0bb7d567a4edf825c6ea29b3a9ee",
+      "commit": "70da5272a6b1f979289b5ff97d4113bedb792cf8",
+      "date": "2026-09-03",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-03/consumer_defensive_predict.md"
+    },
+    {
+      "blob_sha": "31c03d58200f871885f430d84c418f6c0f9ec0d8",
+      "commit": "70da5272a6b1f979289b5ff97d4113bedb792cf8",
+      "date": "2026-09-03",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-03/energy_predict.md"
+    },
+    {
+      "blob_sha": "80d70b91f01cdc484d02996323640344baf1ac85",
+      "commit": "70da5272a6b1f979289b5ff97d4113bedb792cf8",
+      "date": "2026-09-03",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-03/financial_predict.md"
+    },
+    {
+      "blob_sha": "fca73e7c23d0ebfa1dc46e0e332551c3e9fa5e45",
+      "commit": "70da5272a6b1f979289b5ff97d4113bedb792cf8",
+      "date": "2026-09-03",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-03/healthcare_predict.md"
+    },
+    {
+      "blob_sha": "89726d809dc51246915b161dcddaa342f450781c",
+      "commit": "70da5272a6b1f979289b5ff97d4113bedb792cf8",
+      "date": "2026-09-03",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-03/industrials_predict.md"
+    },
+    {
+      "blob_sha": "c4e7f13731ce93f70145149890f31c754cec2ff2",
+      "commit": "70da5272a6b1f979289b5ff97d4113bedb792cf8",
+      "date": "2026-09-03",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-03/real_estate_predict.md"
+    },
+    {
+      "blob_sha": "eb131b6d30f306f17e5f788767bbef6a66775c8e",
+      "commit": "70da5272a6b1f979289b5ff97d4113bedb792cf8",
+      "date": "2026-09-03",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-03/technology_predict.md"
+    },
+    {
+      "blob_sha": "df011bd45349f0552135845cc49e1e457c2e4e66",
+      "commit": "70da5272a6b1f979289b5ff97d4113bedb792cf8",
+      "date": "2026-09-03",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-03/utilities_predict.md"
+    },
+    {
+      "blob_sha": "7dda381c140d450644415f4f002383bd13f8d022",
+      "commit": "6d40b02924acaf1ae6d9c1449954370ba39d0cf5",
+      "date": "2026-09-03",
+      "input": "stock_book",
+      "path": "data/stock_book/2026-09-03_stock_book.json"
+    },
+    {
+      "blob_sha": "ce0bee2b5eec2635b90ee5f78d0f1874e523faf4",
+      "commit": "5d71ebebd6038c1be322f9e8084b2eac558b5484",
+      "date": "2026-09-04",
+      "input": "ab_checklist",
+      "path": "data/ab_checklist/2026-09-04_ab_checklist.csv"
+    },
+    {
+      "blob_sha": "69819317b95780f4c6771b443d872e7f310eae79",
+      "commit": "5d71ebebd6038c1be322f9e8084b2eac558b5484",
+      "date": "2026-09-04",
+      "input": "ab_enriched",
+      "path": "data/ab_checklist/2026-09-04_ab_checklist_enriched.csv"
+    },
+    {
+      "blob_sha": "a7cc62fc472b2ad3421224e605fb4c47c5089d06",
+      "commit": "5d71ebebd6038c1be322f9e8084b2eac558b5484",
+      "date": "2026-09-04",
+      "input": "actions",
+      "path": "01_daily/news/2026-09-04_actions.json"
+    },
+    {
+      "blob_sha": "46feecfea567bfbfcb3a7898fb8d6a300f23d83b",
+      "commit": "5d71ebebd6038c1be322f9e8084b2eac558b5484",
+      "date": "2026-09-04",
+      "input": "catalyst",
+      "path": "01_daily/catalyst/2026-09-04_dossiers.json"
+    },
+    {
+      "blob_sha": "f658abc6c241b8297dfbf59f360a1912fb9253a3",
+      "commit": "57a60f57e39db5c5a69c8a46d3adb417d7cda91c",
+      "date": "2026-09-04",
+      "input": "export",
+      "path": "data/exports/finviz_2026-09-04.csv"
+    },
+    {
+      "blob_sha": "839b18297c0dd1cfcb25c5306466364712b0481a",
+      "commit": "2e6b50aa7c2232fdfa2f3373ececf1651dec325c",
+      "date": "2026-09-04",
+      "input": "heat",
+      "path": "01_daily/map_heat/2026-09-04_map_heat.json"
+    },
+    {
+      "blob_sha": "0474b566ae46b491f381c3d172922af1b6d6d41e",
+      "commit": "5d71ebebd6038c1be322f9e8084b2eac558b5484",
+      "date": "2026-09-04",
+      "input": "judge",
+      "path": "01_daily/news/2026-09-04_judge.json"
+    },
+    {
+      "blob_sha": "d0e427d434d6d30da22ea6bf31133ed4648fb277",
+      "commit": "f5b46d20eec2a7acf5df3924fc5201023d0dcd40",
+      "date": "2026-09-04",
+      "input": "panel",
+      "n_rows": 80,
+      "path": "data/factor_mine/panel.json"
+    },
+    {
+      "blob_sha": "4d84a988d2df8dbf628899799f8c6ff2a894976b",
+      "commit": "5d71ebebd6038c1be322f9e8084b2eac558b5484",
+      "date": "2026-09-04",
+      "input": "predict",
+      "path": "01_daily/general/2026-09-04_predict.md"
+    },
+    {
+      "blob_sha": "4e43957c914eab41f25828b2988a85f04dcdc8f8",
+      "commit": "5d71ebebd6038c1be322f9e8084b2eac558b5484",
+      "date": "2026-09-04",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-04/basic_materials_predict.md"
+    },
+    {
+      "blob_sha": "1b065004c1651ad988e5c61b2d1581835f6875d5",
+      "commit": "5d71ebebd6038c1be322f9e8084b2eac558b5484",
+      "date": "2026-09-04",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-04/communication_services_predict.md"
+    },
+    {
+      "blob_sha": "5d42d180f8f81d1f7f87b7d294433b8ec68d29c3",
+      "commit": "5d71ebebd6038c1be322f9e8084b2eac558b5484",
+      "date": "2026-09-04",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-04/consumer_cyclical_predict.md"
+    },
+    {
+      "blob_sha": "d15244c3143b9d5591049041a5615e2eb6a6f275",
+      "commit": "5d71ebebd6038c1be322f9e8084b2eac558b5484",
+      "date": "2026-09-04",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-04/consumer_defensive_predict.md"
+    },
+    {
+      "blob_sha": "7bff3dcd5c3bfabb7cbb047aff2ae47cc2109457",
+      "commit": "5d71ebebd6038c1be322f9e8084b2eac558b5484",
+      "date": "2026-09-04",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-04/energy_predict.md"
+    },
+    {
+      "blob_sha": "27e32a12448f162369112d1a2e273e38b3f4ea5a",
+      "commit": "5d71ebebd6038c1be322f9e8084b2eac558b5484",
+      "date": "2026-09-04",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-04/financial_predict.md"
+    },
+    {
+      "blob_sha": "539f24b08e6b58480af63054b169e4bf341c9db4",
+      "commit": "5d71ebebd6038c1be322f9e8084b2eac558b5484",
+      "date": "2026-09-04",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-04/healthcare_predict.md"
+    },
+    {
+      "blob_sha": "7d5f1a2e2e842f7b9a682e81061e2ffcfb31e24e",
+      "commit": "5d71ebebd6038c1be322f9e8084b2eac558b5484",
+      "date": "2026-09-04",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-04/industrials_predict.md"
+    },
+    {
+      "blob_sha": "1450c7956da0b03272ad67e0fb1b877904a4d76e",
+      "commit": "5d71ebebd6038c1be322f9e8084b2eac558b5484",
+      "date": "2026-09-04",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-04/real_estate_predict.md"
+    },
+    {
+      "blob_sha": "555ee7f757fbcb17ee5375997d687a0b5f5f7e94",
+      "commit": "5d71ebebd6038c1be322f9e8084b2eac558b5484",
+      "date": "2026-09-04",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-04/technology_predict.md"
+    },
+    {
+      "blob_sha": "b6961d0a35a955fa338a43f074a539f394d779e8",
+      "commit": "5d71ebebd6038c1be322f9e8084b2eac558b5484",
+      "date": "2026-09-04",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-04/utilities_predict.md"
+    },
+    {
+      "blob_sha": "c42603b5e38d0d1ff2663a750461d8d96c524a00",
+      "commit": "5d71ebebd6038c1be322f9e8084b2eac558b5484",
+      "date": "2026-09-04",
+      "input": "stock_book",
+      "path": "data/stock_book/2026-09-04_stock_book.json"
+    },
+    {
+      "blob_sha": "b0c855add13ce331f2d8fcec2440732f4500219f",
+      "commit": "b658cbb942ef128e7f1cc03df872a1c9847e54f0",
+      "date": "2026-09-08",
+      "input": "ab_checklist",
+      "path": "data/ab_checklist/2026-09-08_ab_checklist.csv"
+    },
+    {
+      "blob_sha": "efcca778ba5f6585d22a6a6f542c11246bb075c0",
+      "commit": "b658cbb942ef128e7f1cc03df872a1c9847e54f0",
+      "date": "2026-09-08",
+      "input": "ab_enriched",
+      "path": "data/ab_checklist/2026-09-08_ab_checklist_enriched.csv"
+    },
+    {
+      "blob_sha": "f5d09bd5ca350bc3ce13d25894777ec905bc5226",
+      "commit": "78eac8500afab69d9128b72c6d42c28cf4c7235f",
+      "date": "2026-09-08",
+      "input": "actions",
+      "path": "01_daily/news/2026-09-08_actions.json"
+    },
+    {
+      "blob_sha": "b8e90352ee6361357c447e93bb2aa4f5302eb96b",
+      "commit": "289b087a3715ea1192694c9dbdaa611cad396c75",
+      "date": "2026-09-08",
+      "input": "export",
+      "path": "data/exports/finviz_2026-09-08.csv"
+    },
+    {
+      "blob_sha": "acee35d6239ecdbc828b6196fb39f3ba7110f9ad",
+      "commit": "8ab4559c8c9afbeafaf3dd2c38ed5b7cb89cb1a7",
+      "date": "2026-09-08",
+      "input": "heat",
+      "path": "01_daily/map_heat/2026-09-08_map_heat.json"
+    },
+    {
+      "blob_sha": "546932b25a4b923b98228df953cb0c23f57b4145",
+      "commit": "c72c653dde23129f4fdcea493424a74ca68419fb",
+      "date": "2026-09-08",
+      "input": "judge",
+      "path": "01_daily/news/2026-09-08_judge.json"
+    },
+    {
+      "blob_sha": "d0e427d434d6d30da22ea6bf31133ed4648fb277",
+      "commit": "f5b46d20eec2a7acf5df3924fc5201023d0dcd40",
+      "date": "2026-09-08",
+      "input": "panel",
+      "n_rows": 77,
+      "path": "data/factor_mine/panel.json"
+    },
+    {
+      "blob_sha": "b35fd2e7daa381f9aebbd1db77df75c357ef0dcb",
+      "commit": "78eac8500afab69d9128b72c6d42c28cf4c7235f",
+      "date": "2026-09-08",
+      "input": "predict",
+      "path": "01_daily/general/2026-09-08_predict.md"
+    },
+    {
+      "blob_sha": "70296db9a0bb3d5199bd9d7e256d7e7dcdda3c9e",
+      "commit": "78eac8500afab69d9128b72c6d42c28cf4c7235f",
+      "date": "2026-09-08",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-08/basic_materials_predict.md"
+    },
+    {
+      "blob_sha": "01b7e25a04ce92d93f5544f1cf213ed885dff17f",
+      "commit": "78eac8500afab69d9128b72c6d42c28cf4c7235f",
+      "date": "2026-09-08",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-08/communication_services_predict.md"
+    },
+    {
+      "blob_sha": "15a5ac3702263ff2a5f3b624163e52af0f72ed44",
+      "commit": "78eac8500afab69d9128b72c6d42c28cf4c7235f",
+      "date": "2026-09-08",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-08/consumer_cyclical_predict.md"
+    },
+    {
+      "blob_sha": "130b9749891f84e27f0b1f6ffa8ef79204b6feb3",
+      "commit": "78eac8500afab69d9128b72c6d42c28cf4c7235f",
+      "date": "2026-09-08",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-08/consumer_defensive_predict.md"
+    },
+    {
+      "blob_sha": "0729fe513e9e48d74f6686cdbcb658e0170cb38f",
+      "commit": "78eac8500afab69d9128b72c6d42c28cf4c7235f",
+      "date": "2026-09-08",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-08/energy_predict.md"
+    },
+    {
+      "blob_sha": "8e11dbd09d084072e2a399e376e6fb5101a35c76",
+      "commit": "78eac8500afab69d9128b72c6d42c28cf4c7235f",
+      "date": "2026-09-08",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-08/financial_predict.md"
+    },
+    {
+      "blob_sha": "79db138c15d1fa0600e8a2e4f762138f29fe8f7a",
+      "commit": "78eac8500afab69d9128b72c6d42c28cf4c7235f",
+      "date": "2026-09-08",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-08/healthcare_predict.md"
+    },
+    {
+      "blob_sha": "7cbcb684ece663047de01e8a2fb79422be65ff16",
+      "commit": "78eac8500afab69d9128b72c6d42c28cf4c7235f",
+      "date": "2026-09-08",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-08/industrials_predict.md"
+    },
+    {
+      "blob_sha": "1e541d345343197822f4ff0e2d5451b783c94a83",
+      "commit": "78eac8500afab69d9128b72c6d42c28cf4c7235f",
+      "date": "2026-09-08",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-08/real_estate_predict.md"
+    },
+    {
+      "blob_sha": "c7069e27e1ebde77f418505c7c8f12b4eb3764b0",
+      "commit": "72461b977d2676c6d29f5aa7cc9d391956a24cf3",
+      "date": "2026-09-08",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-08/technology_predict.md"
+    },
+    {
+      "blob_sha": "fa1f267521332a7873af2465765cc5b90ce839ec",
+      "commit": "d7f3bce2640e8b6d39898d58fb26a3c360c30f11",
+      "date": "2026-09-08",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-08/utilities_predict.md"
+    },
+    {
+      "blob_sha": "f4ee1dd1bed36b45dc915f8846e6360137aeb559",
+      "commit": "b658cbb942ef128e7f1cc03df872a1c9847e54f0",
+      "date": "2026-09-08",
+      "input": "stock_book",
+      "path": "data/stock_book/2026-09-08_stock_book.json"
+    },
+    {
+      "blob_sha": "801de7015da047c60f6c7f18d80e612a490eb313",
+      "commit": "65d87926545365ddd71a0ab957ed0fbccfe66e20",
+      "date": "2026-09-09",
+      "input": "ab_checklist",
+      "path": "data/ab_checklist/2026-09-09_ab_checklist.csv"
+    },
+    {
+      "blob_sha": "6a355329509f64d3321b598183c1993dd978b647",
+      "commit": "65d87926545365ddd71a0ab957ed0fbccfe66e20",
+      "date": "2026-09-09",
+      "input": "ab_enriched",
+      "path": "data/ab_checklist/2026-09-09_ab_checklist_enriched.csv"
+    },
+    {
+      "blob_sha": "e384dfe3ed571a076e518141cf6bb8ac4f84d738",
+      "commit": "d97220676334a0c65360201b9f546db8651d5b01",
+      "date": "2026-09-09",
+      "input": "actions",
+      "path": "01_daily/news/2026-09-09_actions.json"
+    },
+    {
+      "blob_sha": "32bc701c72c75bcfac2f6f5a1011bda52a0ce800",
+      "commit": "584ae48de0b8a7068db7f361db67ef89da038f8d",
+      "date": "2026-09-09",
+      "input": "export",
+      "path": "data/exports/finviz_2026-09-09.csv"
+    },
+    {
+      "blob_sha": "fde7ce3c9979f1d78a447fe83babc1f4464347bb",
+      "commit": "81e0780268d6be0be500caf797f636f6b16bf29f",
+      "date": "2026-09-09",
+      "input": "judge",
+      "path": "01_daily/news/2026-09-09_judge.json"
+    },
+    {
+      "blob_sha": "620cbd24964693505e96b90f2a28ee2b63386718",
+      "commit": "957fc58e6215832d1e310786aeacc64b3d3652a2",
+      "date": "2026-09-09",
+      "input": "panel",
+      "n_rows": 84,
+      "path": "data/factor_mine/panel.json"
+    },
+    {
+      "blob_sha": "3125f2603b86d88713db8280536cdea2e7df4aab",
+      "commit": "85ee8d6edfad5ea5bdd73c477f0b6d1d5bc5a6ac",
+      "date": "2026-09-09",
+      "input": "predict",
+      "path": "01_daily/general/2026-09-09_predict.md"
+    },
+    {
+      "blob_sha": "bdcbe4eb70e626a0ce4a7f004bcffc425cc5a497",
+      "commit": "5dac616c43acb5b4d069639a6e301c6b66131b6d",
+      "date": "2026-09-09",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-09/basic_materials_predict.md"
+    },
+    {
+      "blob_sha": "add61a79e959847f7a0eb4aa55315be805ec3796",
+      "commit": "5dac616c43acb5b4d069639a6e301c6b66131b6d",
+      "date": "2026-09-09",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-09/communication_services_predict.md"
+    },
+    {
+      "blob_sha": "fb68c80107137c2f012b6ff8acfc30736c53e8e6",
+      "commit": "5dac616c43acb5b4d069639a6e301c6b66131b6d",
+      "date": "2026-09-09",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-09/consumer_cyclical_predict.md"
+    },
+    {
+      "blob_sha": "303e76e64358122f477544f9159d582a84c6f299",
+      "commit": "5dac616c43acb5b4d069639a6e301c6b66131b6d",
+      "date": "2026-09-09",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-09/consumer_defensive_predict.md"
+    },
+    {
+      "blob_sha": "ed64e517b05279e9f47aae983891ecc231ba79d2",
+      "commit": "5dac616c43acb5b4d069639a6e301c6b66131b6d",
+      "date": "2026-09-09",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-09/energy_predict.md"
+    },
+    {
+      "blob_sha": "7daa6836cca328834718029c32ac50524d13c8b3",
+      "commit": "5dac616c43acb5b4d069639a6e301c6b66131b6d",
+      "date": "2026-09-09",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-09/financial_predict.md"
+    },
+    {
+      "blob_sha": "e525a9b4829aa88ae74e1b014698c97a57f19786",
+      "commit": "5dac616c43acb5b4d069639a6e301c6b66131b6d",
+      "date": "2026-09-09",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-09/healthcare_predict.md"
+    },
+    {
+      "blob_sha": "1685f9668dd2aea3f77814b8f4bed59d24abe00b",
+      "commit": "5dac616c43acb5b4d069639a6e301c6b66131b6d",
+      "date": "2026-09-09",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-09/industrials_predict.md"
+    },
+    {
+      "blob_sha": "2602e368fa0eead9e86d908db29c3808a5ad830e",
+      "commit": "85ee8d6edfad5ea5bdd73c477f0b6d1d5bc5a6ac",
+      "date": "2026-09-09",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-09/real_estate_predict.md"
+    },
+    {
+      "blob_sha": "03c77910f5fb2fe5728d1f44d95b63c81dd8b464",
+      "commit": "5dac616c43acb5b4d069639a6e301c6b66131b6d",
+      "date": "2026-09-09",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-09/technology_predict.md"
+    },
+    {
+      "blob_sha": "4b15fcfbff1607404c8b0049a688e24696251bda",
+      "commit": "5dac616c43acb5b4d069639a6e301c6b66131b6d",
+      "date": "2026-09-09",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-09/utilities_predict.md"
+    },
+    {
+      "blob_sha": "22a263ce4f74d5e652279dddbd5de20c82ba9002",
+      "commit": "412109b20aafbc4ffaa2110386de57015d20f661",
+      "date": "2026-09-09",
+      "input": "stock_book",
+      "path": "data/stock_book/2026-09-09_stock_book.json"
+    },
+    {
+      "blob_sha": "3a8308dfeacafb76aaf980730aeb966a2450959f",
+      "commit": "5cfca9af70a36246b9a8c3b982d272526562319a",
+      "date": "2026-09-10",
+      "input": "ab_checklist",
+      "path": "data/ab_checklist/2026-09-10_ab_checklist.csv"
+    },
+    {
+      "blob_sha": "876c98d93476d6960bab44cdd165f8d21f8ccd2a",
+      "commit": "5cfca9af70a36246b9a8c3b982d272526562319a",
+      "date": "2026-09-10",
+      "input": "ab_enriched",
+      "path": "data/ab_checklist/2026-09-10_ab_checklist_enriched.csv"
+    },
+    {
+      "blob_sha": "44f2352afecc2ec75af67d141d62c4ac1f13c7c0",
+      "commit": "3ea0c159984bd14b38e8a3e35d4927ccf6257256",
+      "date": "2026-09-10",
+      "input": "actions",
+      "path": "01_daily/news/2026-09-10_actions.json"
+    },
+    {
+      "blob_sha": "98f49f955c57d45ac2cc063916b016def0f82d93",
+      "commit": "e494580eb95ecb91a7bebbe8e698dde7e5aa2778",
+      "date": "2026-09-10",
+      "input": "catalyst",
+      "path": "01_daily/catalyst/2026-09-10_dossiers.json"
+    },
+    {
+      "blob_sha": "9ca8749aa337caa4cd16b5d167c06aa46339dafe",
+      "commit": "bd578381fa534dcb261c429e94d94ef9cc2a8130",
+      "date": "2026-09-10",
+      "input": "export",
+      "path": "data/exports/finviz_2026-09-10.csv"
+    },
+    {
+      "blob_sha": "b20a267a1a83bda3bb8671a4b77c08a449cd61d2",
+      "commit": "5168072227d6477eda3e2b903b1f6291a6f90209",
+      "date": "2026-09-10",
+      "input": "heat",
+      "path": "01_daily/map_heat/2026-09-10_map_heat.json"
+    },
+    {
+      "blob_sha": "dc7f5a90f124dea624b531e72e83236ac85191a5",
+      "commit": "93b06d05545e276bc0e1514f64c6dbbdbfc5d596",
+      "date": "2026-09-10",
+      "input": "judge",
+      "path": "01_daily/news/2026-09-10_judge.json"
+    },
+    {
+      "blob_sha": "1c4adfbe0510ab459b4e60671e55d31b1ce58101",
+      "commit": "1c7a450b893d66f8a3f344ce5d31f6e9e8f3a527",
+      "date": "2026-09-10",
+      "input": "panel",
+      "n_rows": 78,
+      "path": "data/factor_mine/panel.json"
+    },
+    {
+      "blob_sha": "52c50006372b4e15afeb9c36b291ee6e7f62dcf7",
+      "commit": "267017fec3500d751374453e934d9acd1a6c8694",
+      "date": "2026-09-10",
+      "input": "predict",
+      "path": "01_daily/general/2026-09-10_predict.md"
+    },
+    {
+      "blob_sha": "bd8b9703f3429f21114dd1eec5e66ffc2c15e7e1",
+      "commit": "ba62d39f10a6bb23fc93f09ca6def3007b513095",
+      "date": "2026-09-10",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-10/basic_materials_predict.md"
+    },
+    {
+      "blob_sha": "af37ead2c4f0aeec5a2261438eb6084b5d019234",
+      "commit": "ba62d39f10a6bb23fc93f09ca6def3007b513095",
+      "date": "2026-09-10",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-10/communication_services_predict.md"
+    },
+    {
+      "blob_sha": "1182372560e5581db7f6226a82178fe41383b93b",
+      "commit": "ba62d39f10a6bb23fc93f09ca6def3007b513095",
+      "date": "2026-09-10",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-10/consumer_cyclical_predict.md"
+    },
+    {
+      "blob_sha": "3328cf2da916053677e3f0cd41bc16fd2a9e4b77",
+      "commit": "ba62d39f10a6bb23fc93f09ca6def3007b513095",
+      "date": "2026-09-10",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-10/consumer_defensive_predict.md"
+    },
+    {
+      "blob_sha": "0b0169f2174d7f5bd0212e948e00f0fd06d174cc",
+      "commit": "ba62d39f10a6bb23fc93f09ca6def3007b513095",
+      "date": "2026-09-10",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-10/energy_predict.md"
+    },
+    {
+      "blob_sha": "172753f1b5fad2ecfc6bcd25bba43a12d4df102b",
+      "commit": "ba62d39f10a6bb23fc93f09ca6def3007b513095",
+      "date": "2026-09-10",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-10/financial_predict.md"
+    },
+    {
+      "blob_sha": "0b9a0b9244a29b3b49b57e323ed0d98a6dfb53cd",
+      "commit": "ba62d39f10a6bb23fc93f09ca6def3007b513095",
+      "date": "2026-09-10",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-10/healthcare_predict.md"
+    },
+    {
+      "blob_sha": "3ed9a338a111c1363be049bfb765d2bf864e13a8",
+      "commit": "ba62d39f10a6bb23fc93f09ca6def3007b513095",
+      "date": "2026-09-10",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-10/industrials_predict.md"
+    },
+    {
+      "blob_sha": "dfa221fce7385ca04495eb203ccb2909d3359806",
+      "commit": "ba62d39f10a6bb23fc93f09ca6def3007b513095",
+      "date": "2026-09-10",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-10/real_estate_predict.md"
+    },
+    {
+      "blob_sha": "aea0e54a9e4830c7b8d61abfa7e909aad81faea6",
+      "commit": "ba62d39f10a6bb23fc93f09ca6def3007b513095",
+      "date": "2026-09-10",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-10/technology_predict.md"
+    },
+    {
+      "blob_sha": "c6df5b15e3b87ed89b66633d8ac666af545bd8a4",
+      "commit": "ba62d39f10a6bb23fc93f09ca6def3007b513095",
+      "date": "2026-09-10",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-10/utilities_predict.md"
+    },
+    {
+      "blob_sha": "e4c518f2e3d2d7cd0984d5711155f553812fac43",
+      "commit": "7becc8ad113607cefa69d0f9eb58b6d902e6af40",
+      "date": "2026-09-10",
+      "input": "stock_book",
+      "path": "data/stock_book/2026-09-10_stock_book.json"
+    },
+    {
+      "blob_sha": "74338e58e2c630160e68410ba8385de875d937cc",
+      "commit": "55b922d43226a826f4904532502d551882c403eb",
+      "date": "2026-09-11",
+      "input": "ab_checklist",
+      "path": "data/ab_checklist/2026-09-11_ab_checklist.csv"
+    },
+    {
+      "blob_sha": "71b22f101d1d29850a150cf375d0ba1b22a06f8b",
+      "commit": "73eff6980f97ba9c2fb7bfa6b18a6c1aa96234f1",
+      "date": "2026-09-11",
+      "input": "ab_enriched",
+      "path": "data/ab_checklist/2026-09-11_ab_checklist_enriched.csv"
+    },
+    {
+      "blob_sha": "8ac885f9617be2b6d9a2a93c764962ef65d02d1d",
+      "commit": "38131418c901f9d609dad6d2caca77bfc19b76dd",
+      "date": "2026-09-11",
+      "input": "actions",
+      "path": "01_daily/news/2026-09-11_actions.json"
+    },
+    {
+      "blob_sha": "1e9271e4d8ccd3cb0ab7ec9244670f742b73d000",
+      "commit": "8b1eb3ef0beb6f4b85e22714bc73502ff7a2d55e",
+      "date": "2026-09-11",
+      "input": "catalyst",
+      "path": "01_daily/catalyst/2026-09-11_dossiers.json"
+    },
+    {
+      "blob_sha": "6dd0ac68d68c7902267b217cf0099b438ce41b2a",
+      "commit": "f797382c4f9bbea570571dfda84632b110187829",
+      "date": "2026-09-11",
+      "input": "export",
+      "path": "data/exports/finviz_2026-09-11.csv"
+    },
+    {
+      "blob_sha": "e8cfd611141c280d05eddfb42d3ac645e4ecbb1d",
+      "commit": "53b1a1e928971a7c2b12e0b3395f2c9a030d26fc",
+      "date": "2026-09-11",
+      "input": "heat",
+      "path": "01_daily/map_heat/2026-09-11_map_heat.json"
+    },
+    {
+      "blob_sha": "2acbe0c04fdd4bd4b970cc276161f4da80659993",
+      "commit": "f97dce68295a0f8a2de9af84f1569c8865c19899",
+      "date": "2026-09-11",
+      "input": "judge",
+      "path": "01_daily/news/2026-09-11_judge.json"
+    },
+    {
+      "blob_sha": "1c4adfbe0510ab459b4e60671e55d31b1ce58101",
+      "commit": "1c7a450b893d66f8a3f344ce5d31f6e9e8f3a527",
+      "date": "2026-09-11",
+      "input": "panel",
+      "n_rows": 80,
+      "path": "data/factor_mine/panel.json"
+    },
+    {
+      "blob_sha": "9ca8a0e421d94d3cd77b6ab7b7b214e8bb90f87c",
+      "commit": "8dd42563c909150ea4380ea356b787c1393e09b6",
+      "date": "2026-09-11",
+      "input": "predict",
+      "path": "01_daily/general/2026-09-11_predict.md"
+    },
+    {
+      "blob_sha": "1d3f9c5baac9fedc8b92a63e4e6a7c9e6494f97c",
+      "commit": "d6f9998941beffe9c163bf0536198c6258c2d926",
+      "date": "2026-09-11",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-11/basic_materials_predict.md"
+    },
+    {
+      "blob_sha": "21277f67e4d5300aeb361d1f490d1d43dc952adf",
+      "commit": "d6f9998941beffe9c163bf0536198c6258c2d926",
+      "date": "2026-09-11",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-11/communication_services_predict.md"
+    },
+    {
+      "blob_sha": "1bd029a8295165cafbaacbed4f3ec441ef92824e",
+      "commit": "d6f9998941beffe9c163bf0536198c6258c2d926",
+      "date": "2026-09-11",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-11/consumer_cyclical_predict.md"
+    },
+    {
+      "blob_sha": "44e83b429caa584558a839576e591124dd600622",
+      "commit": "d6f9998941beffe9c163bf0536198c6258c2d926",
+      "date": "2026-09-11",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-11/consumer_defensive_predict.md"
+    },
+    {
+      "blob_sha": "8d8f5ad83d5046cd796a05a31784efd301239d06",
+      "commit": "d6f9998941beffe9c163bf0536198c6258c2d926",
+      "date": "2026-09-11",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-11/energy_predict.md"
+    },
+    {
+      "blob_sha": "619cda3b13212f1ffb58d4febe16c550084a6cb5",
+      "commit": "d6f9998941beffe9c163bf0536198c6258c2d926",
+      "date": "2026-09-11",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-11/financial_predict.md"
+    },
+    {
+      "blob_sha": "c3bf82425fc14cb4bf3d194d8c1439887602b701",
+      "commit": "d6f9998941beffe9c163bf0536198c6258c2d926",
+      "date": "2026-09-11",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-11/healthcare_predict.md"
+    },
+    {
+      "blob_sha": "25460e24c6665f69ca7b2e45d71fe85514b6ecb5",
+      "commit": "d6f9998941beffe9c163bf0536198c6258c2d926",
+      "date": "2026-09-11",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-11/industrials_predict.md"
+    },
+    {
+      "blob_sha": "2f39d7085efb826b8dc5cbe8784b53379edfcd88",
+      "commit": "d6f9998941beffe9c163bf0536198c6258c2d926",
+      "date": "2026-09-11",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-11/real_estate_predict.md"
+    },
+    {
+      "blob_sha": "d6ae907b3c016bed5f4e43f37aa008442161bcd2",
+      "commit": "d6f9998941beffe9c163bf0536198c6258c2d926",
+      "date": "2026-09-11",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-11/technology_predict.md"
+    },
+    {
+      "blob_sha": "0b63ef151db7a33d38af56a8fb4833965670dd13",
+      "commit": "d6f9998941beffe9c163bf0536198c6258c2d926",
+      "date": "2026-09-11",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-11/utilities_predict.md"
+    },
+    {
+      "blob_sha": "7347a14151343cfe7aeac03aa4642255d613ba21",
+      "commit": "748ab3ea948ebb733b016d9c3e60b9ff99d666e0",
+      "date": "2026-09-11",
+      "input": "stock_book",
+      "path": "data/stock_book/2026-09-11_stock_book.json"
+    },
+    {
+      "blob_sha": "d26a4f01ea8bcaf98ae24aefcbef4e736b51c51a",
+      "commit": "feadc5890619b3e8198f955d053657bd8200f535",
+      "date": "2026-09-14",
+      "input": "ab_checklist",
+      "path": "data/ab_checklist/2026-09-14_ab_checklist.csv"
+    },
+    {
+      "blob_sha": "be38dbc5a81fca76e576b361af77fa5280767143",
+      "commit": "f03f6f70b78f9345f178f1468a4eb0b478583dc7",
+      "date": "2026-09-14",
+      "input": "ab_enriched",
+      "path": "data/ab_checklist/2026-09-14_ab_checklist_enriched.csv"
+    },
+    {
+      "blob_sha": "c761144e58dd46a97cfae674d5cb9169cfa9f4a7",
+      "commit": "f5fdc155d3eae1737771564e557d94dda606ef4e",
+      "date": "2026-09-14",
+      "input": "actions",
+      "path": "01_daily/news/2026-09-14_actions.json"
+    },
+    {
+      "blob_sha": "ce89fcd421a45cf78c1440131db90f9b59cd9b26",
+      "commit": "148656b241efada7ebf9fe9e72a5fb683d8d38cf",
+      "date": "2026-09-14",
+      "input": "catalyst",
+      "path": "01_daily/catalyst/2026-09-14_dossiers.json"
+    },
+    {
+      "blob_sha": "2b401950ffaff926a9080db3ff25094f21becae9",
+      "commit": "ee0c964756e9586cb2f7cc1ae1f8e584d00a433d",
+      "date": "2026-09-14",
+      "input": "export",
+      "path": "data/exports/finviz_2026-09-14.csv"
+    },
+    {
+      "blob_sha": "d8fd572e641146c3e610514e49fe83341f0c604f",
+      "commit": "eb1b620a86d436648218583ddf2e16c7d70a7806",
+      "date": "2026-09-14",
+      "input": "heat",
+      "path": "01_daily/map_heat/2026-09-14_map_heat.json"
+    },
+    {
+      "blob_sha": "3b31c2871188422932e5f8edfdfe85a957ebca6d",
+      "commit": "40b4b69042aedd94a155ea5574baaa9d9a5c1506",
+      "date": "2026-09-14",
+      "input": "judge",
+      "path": "01_daily/news/2026-09-14_judge.json"
+    },
+    {
+      "blob_sha": "c35995f2689863b38152026886cd96e8731babf7",
+      "commit": "eef0854ca59c1ca8d6dce600b02d128f8d49ecd8",
+      "date": "2026-09-14",
+      "input": "panel",
+      "n_rows": 64,
+      "path": "data/factor_mine/panel.json"
+    },
+    {
+      "blob_sha": "69fbfdd0a58f06a8e4a1aff35d32fea6b4ddcfae",
+      "commit": "200687ab14dc73ab53c372ad428de3b0048a98e9",
+      "date": "2026-09-14",
+      "input": "predict",
+      "path": "01_daily/general/2026-09-14_predict.md"
+    },
+    {
+      "blob_sha": "d4248db22ef7a92d15919f4916e26c2974e8672e",
+      "commit": "782723f046b583528ee3719a79a2c8081ec29033",
+      "date": "2026-09-14",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-14/basic_materials_predict.md"
+    },
+    {
+      "blob_sha": "28ef207a267c974fb0fea089bc948b8322a315eb",
+      "commit": "782723f046b583528ee3719a79a2c8081ec29033",
+      "date": "2026-09-14",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-14/consumer_cyclical_predict.md"
+    },
+    {
+      "blob_sha": "3c15ad48ada23ed53cb288247e92665f27902e21",
+      "commit": "782723f046b583528ee3719a79a2c8081ec29033",
+      "date": "2026-09-14",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-14/consumer_defensive_predict.md"
+    },
+    {
+      "blob_sha": "9af2e015fc5af69cd09657ed2a9c19b22fddd277",
+      "commit": "782723f046b583528ee3719a79a2c8081ec29033",
+      "date": "2026-09-14",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-14/energy_predict.md"
+    },
+    {
+      "blob_sha": "64420869ed074308f393dc116bbee5549f5e3646",
+      "commit": "782723f046b583528ee3719a79a2c8081ec29033",
+      "date": "2026-09-14",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-14/financial_predict.md"
+    },
+    {
+      "blob_sha": "cf1df581a3c45134d000baa5628208b3218cfd58",
+      "commit": "782723f046b583528ee3719a79a2c8081ec29033",
+      "date": "2026-09-14",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-14/healthcare_predict.md"
+    },
+    {
+      "blob_sha": "837358315d609d725d7c9badb9e519b18ed2fc91",
+      "commit": "782723f046b583528ee3719a79a2c8081ec29033",
+      "date": "2026-09-14",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-14/industrials_predict.md"
+    },
+    {
+      "blob_sha": "e93584b2c4515d032d152db5d61bb0b832736002",
+      "commit": "782723f046b583528ee3719a79a2c8081ec29033",
+      "date": "2026-09-14",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-14/real_estate_predict.md"
+    },
+    {
+      "blob_sha": "2c8f86292f65a9aa99d867c09edaadd0ca4d442a",
+      "commit": "782723f046b583528ee3719a79a2c8081ec29033",
+      "date": "2026-09-14",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-14/technology_predict.md"
+    },
+    {
+      "blob_sha": "cf832d3f21db457c913c62ff15e0e300a6c55ded",
+      "commit": "782723f046b583528ee3719a79a2c8081ec29033",
+      "date": "2026-09-14",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-14/utilities_predict.md"
+    },
+    {
+      "blob_sha": "e00138a5b62de2e18a507a4972f976f8e98b0d45",
+      "commit": "76ea2084c10708a649fe1d471855b027eac6b072",
+      "date": "2026-09-14",
+      "input": "stock_book",
+      "path": "data/stock_book/2026-09-14_stock_book.json"
+    },
+    {
+      "blob_sha": "203c77f1f2f7344b3894000f1f8abb91f3de6d8f",
+      "commit": "d95bc24a96f50589b1765f17f693768cb4e9fbd8",
+      "date": "2026-09-15",
+      "input": "ab_checklist",
+      "path": "data/ab_checklist/2026-09-15_ab_checklist.csv"
+    },
+    {
+      "blob_sha": "db69d44a7c91fa5b3bede5fbf6018dbe53e147f4",
+      "commit": "3d497af14555176bafa33d34ae315e76c186890e",
+      "date": "2026-09-15",
+      "input": "ab_enriched",
+      "path": "data/ab_checklist/2026-09-15_ab_checklist_enriched.csv"
+    },
+    {
+      "blob_sha": "3106164c3aef8dddcc13872693f228a49a8aec47",
+      "commit": "bdba8aebe553283a461ae2edac5699da5d1e5327",
+      "date": "2026-09-15",
+      "input": "actions",
+      "path": "01_daily/news/2026-09-15_actions.json"
+    },
+    {
+      "blob_sha": "601ff76b122e30e5a14e8482f3c1079bcce7a02f",
+      "commit": "6f21490c8479c15ebc7bf6f7b8452c75d13fb736",
+      "date": "2026-09-15",
+      "input": "catalyst",
+      "path": "01_daily/catalyst/2026-09-15_dossiers.json"
+    },
+    {
+      "blob_sha": "2801af15ca17ea2c40219b45b0bb0ae7955589ae",
+      "commit": "6f13979cf5761efe2b59320ab841c39a7b5538cc",
+      "date": "2026-09-15",
+      "input": "export",
+      "path": "data/exports/finviz_2026-09-15.csv"
+    },
+    {
+      "blob_sha": "cf3ac1e2de82705d0965b4ef5368ff095459f995",
+      "commit": "449e7338dc074032306d9037c67b11bf697f3a22",
+      "date": "2026-09-15",
+      "input": "heat",
+      "path": "01_daily/map_heat/2026-09-15_map_heat.json"
+    },
+    {
+      "blob_sha": "ae21b163909bb92af14e0de28b3b6f26d2b1d470",
+      "commit": "69616687f09e0d52433e33a0d139d56b69dbfae7",
+      "date": "2026-09-15",
+      "input": "judge",
+      "path": "01_daily/news/2026-09-15_judge.json"
+    },
+    {
+      "blob_sha": "ed1b2e3e7282f4bea3d0fbb2add4e29cf025f075",
+      "commit": "284ca0e3a187cd12bd8cf5421f60f0091945daf3",
+      "date": "2026-09-15",
+      "input": "panel",
+      "n_rows": 66,
+      "path": "data/factor_mine/panel.json"
+    },
+    {
+      "blob_sha": "07e60dc2fc9a4587002b2901117ea5d2950bf6d0",
+      "commit": "f9d261f2a03085f3c774af132e2f537cbbc0597a",
+      "date": "2026-09-15",
+      "input": "predict",
+      "path": "01_daily/general/2026-09-15_predict.md"
+    },
+    {
+      "blob_sha": "7af1c3e9cb0164a754f75d7a59b22e6e5e76f95d",
+      "commit": "525df2b813e777d5650aeadff517fdc22d778eae",
+      "date": "2026-09-15",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-15/basic_materials_predict.md"
+    },
+    {
+      "blob_sha": "06e07110549015a78d855dcbfcdfc33430b4c0a7",
+      "commit": "520a7e36075ea426fe08fe3d454aea5b4b42197e",
+      "date": "2026-09-15",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-15/communication_services_predict.md"
+    },
+    {
+      "blob_sha": "aa99b241d9c88d3beb1ce6d5b245812e9e2b2efc",
+      "commit": "520a7e36075ea426fe08fe3d454aea5b4b42197e",
+      "date": "2026-09-15",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-15/consumer_cyclical_predict.md"
+    },
+    {
+      "blob_sha": "72b3bc5952539beb6d68b9e5444584a35a4e03c7",
+      "commit": "1f2d8aed29206449ee0115fe90374e37b625eb72",
+      "date": "2026-09-15",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-15/consumer_defensive_predict.md"
+    },
+    {
+      "blob_sha": "733be82a78d6c90c68f8f873004f9b9856306869",
+      "commit": "520a7e36075ea426fe08fe3d454aea5b4b42197e",
+      "date": "2026-09-15",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-15/energy_predict.md"
+    },
+    {
+      "blob_sha": "aa3e80d390d0ef5abd648d5ea6868ccb471cca0f",
+      "commit": "520a7e36075ea426fe08fe3d454aea5b4b42197e",
+      "date": "2026-09-15",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-15/financial_predict.md"
+    },
+    {
+      "blob_sha": "1a68c62287cb6921a3aa4477d120cdb249400834",
+      "commit": "520a7e36075ea426fe08fe3d454aea5b4b42197e",
+      "date": "2026-09-15",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-15/healthcare_predict.md"
+    },
+    {
+      "blob_sha": "8eaf96760bdc2f02b5b90033da33503db96ae9a9",
+      "commit": "525df2b813e777d5650aeadff517fdc22d778eae",
+      "date": "2026-09-15",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-15/industrials_predict.md"
+    },
+    {
+      "blob_sha": "052e32083fb943cb7a4aafd3456677d0b17b6c12",
+      "commit": "525df2b813e777d5650aeadff517fdc22d778eae",
+      "date": "2026-09-15",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-15/real_estate_predict.md"
+    },
+    {
+      "blob_sha": "c88d712598aaafd82ba053f58225171e826adee7",
+      "commit": "525df2b813e777d5650aeadff517fdc22d778eae",
+      "date": "2026-09-15",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-15/technology_predict.md"
+    },
+    {
+      "blob_sha": "c6616880968ffed9e7ae2964a0039e74ded5a7f3",
+      "commit": "525df2b813e777d5650aeadff517fdc22d778eae",
+      "date": "2026-09-15",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-15/utilities_predict.md"
+    },
+    {
+      "blob_sha": "ee981de722943a7aa975c7d51ca57cde094f0b7c",
+      "commit": "0deb18c5439fb170c29cc93885accbb94eaa871d",
+      "date": "2026-09-15",
+      "input": "stock_book",
+      "path": "data/stock_book/2026-09-15_stock_book.json"
+    },
+    {
+      "blob_sha": "1c0eb25c5021ffc871db414948e51a054870a0c9",
+      "commit": "db18720c2e38dc3f355ce15bb6155bcbf1a9335b",
+      "date": "2026-09-16",
+      "input": "ab_checklist",
+      "path": "data/ab_checklist/2026-09-16_ab_checklist.csv"
+    },
+    {
+      "blob_sha": "20afa4002381d1e7147f1161d74efab233b54438",
+      "commit": "279de084bbd44547757e38c9a47f149334478219",
+      "date": "2026-09-16",
+      "input": "ab_enriched",
+      "path": "data/ab_checklist/2026-09-16_ab_checklist_enriched.csv"
+    },
+    {
+      "blob_sha": "bf079909bf711d2e72d4e0d1ac1c64f12b575e40",
+      "commit": "71c6776913e3b73da5812c91f4d24057ea3974cb",
+      "date": "2026-09-16",
+      "input": "actions",
+      "path": "01_daily/news/2026-09-16_actions.json"
+    },
+    {
+      "blob_sha": "3fdc25bd398f54e531232e96052f9c0f2c2331ab",
+      "commit": "c81e9078e808d6f506dfc8f4401d5c1090fc8dc9",
+      "date": "2026-09-16",
+      "input": "catalyst",
+      "path": "01_daily/catalyst/2026-09-16_dossiers.json"
+    },
+    {
+      "blob_sha": "ba650c39b3d31c796a96de5a9a43badc5b30c9ab",
+      "commit": "a99cd80fd5ec0d61c03d095d35105f6c81960b32",
+      "date": "2026-09-16",
+      "input": "export",
+      "path": "data/exports/finviz_2026-09-16.csv"
+    },
+    {
+      "blob_sha": "a2f9293b691b501d97caa2c823140cffd0672b58",
+      "commit": "eff98da18bdb3569c63136102bca2d825746f240",
+      "date": "2026-09-16",
+      "input": "heat",
+      "path": "01_daily/map_heat/2026-09-16_map_heat.json"
+    },
+    {
+      "blob_sha": "3b5bd4ad8cf00fe3ce789f8ce3c97d44f44d7fa1",
+      "commit": "914adc1e8ec4d70c4451aa5e1af52f33b279d5d9",
+      "date": "2026-09-16",
+      "input": "judge",
+      "path": "01_daily/news/2026-09-16_judge.json"
+    },
+    {
+      "blob_sha": "e12680f3fa288f7e4130cb9c7f4f7aee9afd5b08",
+      "commit": "5ae9d19c83e5def5e205c87c67e5621e7ccd30dd",
+      "date": "2026-09-16",
+      "input": "panel",
+      "n_rows": 4,
+      "path": "data/factor_mine/panel.json"
+    },
+    {
+      "blob_sha": "05ed1412f668d0e8671911e7b928f5b9cb88a343",
+      "commit": "f3ae3982ed23b0d6ec521d754f8e5a36ddee25d7",
+      "date": "2026-09-16",
+      "input": "predict",
+      "path": "01_daily/general/2026-09-16_predict.md"
+    },
+    {
+      "blob_sha": "46da625ba267a084566235626b961fd7f1cd0b9e",
+      "commit": "8f43ae21ce6c7c6f6656419eec94fd9e254a4718",
+      "date": "2026-09-16",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-16/basic_materials_predict.md"
+    },
+    {
+      "blob_sha": "538b2478e54c3b3253442e8acbe5d5d2f7d6785a",
+      "commit": "8f43ae21ce6c7c6f6656419eec94fd9e254a4718",
+      "date": "2026-09-16",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-16/communication_services_predict.md"
+    },
+    {
+      "blob_sha": "aaadcff9b71026ca2bbddc5676ad46f31be391a3",
+      "commit": "8f43ae21ce6c7c6f6656419eec94fd9e254a4718",
+      "date": "2026-09-16",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-16/consumer_cyclical_predict.md"
+    },
+    {
+      "blob_sha": "e6b56190d4afb2361a30d67813315086483eb3e2",
+      "commit": "8f43ae21ce6c7c6f6656419eec94fd9e254a4718",
+      "date": "2026-09-16",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-16/consumer_defensive_predict.md"
+    },
+    {
+      "blob_sha": "85bce91ff076932ebdf3b13068b14941a8b1fce3",
+      "commit": "8f43ae21ce6c7c6f6656419eec94fd9e254a4718",
+      "date": "2026-09-16",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-16/energy_predict.md"
+    },
+    {
+      "blob_sha": "264710f4f720a8bb80eed26866fd9edc061175ed",
+      "commit": "8f43ae21ce6c7c6f6656419eec94fd9e254a4718",
+      "date": "2026-09-16",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-16/financial_predict.md"
+    },
+    {
+      "blob_sha": "50af89e521f00dbace5077cb3796ef3cd4b57e24",
+      "commit": "8f43ae21ce6c7c6f6656419eec94fd9e254a4718",
+      "date": "2026-09-16",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-16/healthcare_predict.md"
+    },
+    {
+      "blob_sha": "19b9e93d7a96797a521c9a6b8a5259f6087aae87",
+      "commit": "8f43ae21ce6c7c6f6656419eec94fd9e254a4718",
+      "date": "2026-09-16",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-16/industrials_predict.md"
+    },
+    {
+      "blob_sha": "fe5182e506f15d901508283a31304a8ecc5baa72",
+      "commit": "8f43ae21ce6c7c6f6656419eec94fd9e254a4718",
+      "date": "2026-09-16",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-16/real_estate_predict.md"
+    },
+    {
+      "blob_sha": "b79d09049169c07f0fa49a7cb4153e39a7394458",
+      "commit": "8f43ae21ce6c7c6f6656419eec94fd9e254a4718",
+      "date": "2026-09-16",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-16/technology_predict.md"
+    },
+    {
+      "blob_sha": "ad658f3006216a9e22656d2984972a1177a653c5",
+      "commit": "8f43ae21ce6c7c6f6656419eec94fd9e254a4718",
+      "date": "2026-09-16",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-16/utilities_predict.md"
+    },
+    {
+      "blob_sha": "ae110ce74875e7b79e2e6ebad8c74f31330a74cb",
+      "commit": "3ce3706dbabb1cb41a1d842a49f6e8e479b2c02b",
+      "date": "2026-09-16",
+      "input": "stock_book",
+      "path": "data/stock_book/2026-09-16_stock_book.json"
+    },
+    {
+      "blob_sha": "2a32e524dd6b50196a9befe848fe7c372ede69d7",
+      "commit": "f649d669211bcd111e07af2c73ec404e7f0be539",
+      "date": "2026-09-17",
+      "input": "ab_checklist",
+      "path": "data/ab_checklist/2026-09-17_ab_checklist.csv"
+    },
+    {
+      "blob_sha": "fd0a91fcecada8455e2861d8dca8dcecafb700ab",
+      "commit": "06774b863bd5cabcbbe2d12c2bb5e3d5bd0285d9",
+      "date": "2026-09-17",
+      "input": "ab_enriched",
+      "path": "data/ab_checklist/2026-09-17_ab_checklist_enriched.csv"
+    },
+    {
+      "blob_sha": "d83663f3e7f405997eca0366ef3f875a6102241a",
+      "commit": "14d0b8ef6cdbccb9240722e2dab77db2c9ffa2c3",
+      "date": "2026-09-17",
+      "input": "actions",
+      "path": "01_daily/news/2026-09-17_actions.json"
+    },
+    {
+      "blob_sha": "b2446ddd4fb2d4b2c68d5417dc2ec44d659a6c64",
+      "commit": "d15894cb6f37f252826e0048603917fc0171c70a",
+      "date": "2026-09-17",
+      "input": "catalyst",
+      "path": "01_daily/catalyst/2026-09-17_dossiers.json"
+    },
+    {
+      "blob_sha": "16f34eb3d770c9af2db88beb88aefa76dff60758",
+      "commit": "95dcfd0b6804150605cb191992588754e077d5ea",
+      "date": "2026-09-17",
+      "input": "export",
+      "path": "data/exports/finviz_2026-09-17.csv"
+    },
+    {
+      "blob_sha": "b2794f4ed1079f800104722fa842c8535afe5904",
+      "commit": "6354c1d72a80927f8acee18c5c3ec6d93170cdf0",
+      "date": "2026-09-17",
+      "input": "heat",
+      "path": "01_daily/map_heat/2026-09-17_map_heat.json"
+    },
+    {
+      "blob_sha": "346e1982702abc827e278c46b68d3d76f292aca3",
+      "commit": "94b445bf2f7827466b5356877989da931bf71df7",
+      "date": "2026-09-17",
+      "input": "judge",
+      "path": "01_daily/news/2026-09-17_judge.json"
+    },
+    {
+      "blob_sha": "c534749c725cec78af3e80d433b6035d4acb6b0a",
+      "commit": "2208918b2fac5df50be978a34670d970e9876951",
+      "date": "2026-09-17",
+      "input": "panel",
+      "n_rows": 6,
+      "path": "data/factor_mine/panel.json"
+    },
+    {
+      "blob_sha": "a96dbfc00c9df926497dbd2802a48bd952620853",
+      "commit": "e7939a81e64ff0b2ae66e10e2ba9093eb34025b0",
+      "date": "2026-09-17",
+      "input": "predict",
+      "path": "01_daily/general/2026-09-17_predict.md"
+    },
+    {
+      "blob_sha": "7364642f0f0713c6f787fdab1a857fa558b39e5b",
+      "commit": "2adc3a8cac643776b6982b111d6bf7f6bf86ec1a",
+      "date": "2026-09-17",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-17/basic_materials_predict.md"
+    },
+    {
+      "blob_sha": "6eeb4ab66dfe12e8701166b37a084ea3ed62d922",
+      "commit": "bce9a035b9cd20fd3168354e2402d766c2d61e90",
+      "date": "2026-09-17",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-17/communication_services_predict.md"
+    },
+    {
+      "blob_sha": "8be7b1ea3e0d7da41346077bb4f412077740c987",
+      "commit": "d0fe9a9c1f5045e93b3506c82d015837b917a087",
+      "date": "2026-09-17",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-17/consumer_cyclical_predict.md"
+    },
+    {
+      "blob_sha": "bfc8be976b4cdc4e90999f0ea208bc8aec5bd4f4",
+      "commit": "cb94ce4d1064bc694efa778b190b17f10030b6c6",
+      "date": "2026-09-17",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-17/consumer_defensive_predict.md"
+    },
+    {
+      "blob_sha": "f3c41fb8b02e2e66e321aa36e5eaa013f500f8b4",
+      "commit": "ad33fdc11f714eddfd61bc92fd013dd7aa3cb924",
+      "date": "2026-09-17",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-17/energy_predict.md"
+    },
+    {
+      "blob_sha": "a858beffff792eda881666c3fd919ad7c763c5c6",
+      "commit": "3aff2b803bfc4a1488bb55dc03215ffb6af3df74",
+      "date": "2026-09-17",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-17/financial_predict.md"
+    },
+    {
+      "blob_sha": "0bd96554a1dffbc67729146ad08dae0dbd9ebb7b",
+      "commit": "4c1626077c8efa78753ad54885713d5398e4cbc2",
+      "date": "2026-09-17",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-17/healthcare_predict.md"
+    },
+    {
+      "blob_sha": "7438f1a9dca5d12f57831c2cf686c299ea21efae",
+      "commit": "e0ab4f2d597bb8010d784b97f1a8b6813a7e351b",
+      "date": "2026-09-17",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-17/industrials_predict.md"
+    },
+    {
+      "blob_sha": "d578cb0236dff7826176ba2f866d2a292ab662f3",
+      "commit": "2bebda8af2fe545b94e89c4c42e97163846e8828",
+      "date": "2026-09-17",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-17/real_estate_predict.md"
+    },
+    {
+      "blob_sha": "c4c7509cdcef410a23a724c9b0c1130fe35aa878",
+      "commit": "31c8c68c74cab57eef1349257b4baa5294f494b0",
+      "date": "2026-09-17",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-17/technology_predict.md"
+    },
+    {
+      "blob_sha": "b0c6c1bdcae9f0f43f4d062f5549d145706c5c22",
+      "commit": "97356efc8f8886b0b10a29065a88fee7188128c9",
+      "date": "2026-09-17",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-17/utilities_predict.md"
+    },
+    {
+      "blob_sha": "8121b065e706ac305eb210893de978c67638eb23",
+      "commit": "501f477ad8e922fa80ed571518c24ef4c4f582f7",
+      "date": "2026-09-17",
+      "input": "stock_book",
+      "path": "data/stock_book/2026-09-17_stock_book.json"
+    },
+    {
+      "blob_sha": "b8d8917faee883cc2b42a6bf7e1e45d9e0f05322",
+      "commit": "3c5050c91abb547c49d8d0a3c68e11996ab4bc73",
+      "date": "2026-09-18",
+      "input": "ab_enriched",
+      "path": "data/ab_checklist/2026-09-18_ab_checklist_enriched.csv"
+    },
+    {
+      "blob_sha": "e82035023d653f72ead2c1c964488d1a99816797",
+      "commit": "28f7c4534a432ef7ce59d52c613d92435ffee8f3",
+      "date": "2026-09-18",
+      "input": "actions",
+      "path": "01_daily/news/2026-09-18_actions.json"
+    },
+    {
+      "blob_sha": "511a9d3c9826f29e8a050a133e664873d431c265",
+      "commit": "f532a7a84eba552d5566ae0bc3054207f721fea3",
+      "date": "2026-09-18",
+      "input": "catalyst",
+      "path": "01_daily/catalyst/2026-09-18_dossiers.json"
+    },
+    {
+      "blob_sha": "0f31f25735cdf8da88926bf8c540a0919053c9d6",
+      "commit": "f399c5edf74d3e68d1b18581cd648d5971aed551",
+      "date": "2026-09-18",
+      "input": "export",
+      "path": "data/exports/finviz_2026-09-18.csv"
+    },
+    {
+      "blob_sha": "9efbb89ddcf3d8578bfdb9b23bba9e9c04c673ed",
+      "commit": "b5094bec6c7548a5de496cd48f0736d97eee460d",
+      "date": "2026-09-18",
+      "input": "heat",
+      "path": "01_daily/map_heat/2026-09-18_map_heat.json"
+    },
+    {
+      "blob_sha": "a6fb5eb28135ad7e116a0453ffdf6c74857ef7fb",
+      "commit": "2f64e7f95d17cf25b9265e59d617831a71aeda92",
+      "date": "2026-09-18",
+      "input": "judge",
+      "path": "01_daily/news/2026-09-18_judge.json"
+    },
+    {
+      "blob_sha": "136e5261bf2ba5a4ce115d22a91ecb9cc35b7155",
+      "commit": "77a6a92c58576ba7caf1ef531ca92f7d24dcd471",
+      "date": "2026-09-18",
+      "input": "panel",
+      "n_rows": 4,
+      "path": "data/factor_mine/panel.json"
+    },
+    {
+      "blob_sha": "5232c31a86b7ef15e8ca91bd2518e4462b1f9ac2",
+      "commit": "ccdfe58999c9580edfc327b669cce3768e52655d",
+      "date": "2026-09-18",
+      "input": "predict",
+      "path": "01_daily/general/2026-09-18_predict.md"
+    },
+    {
+      "blob_sha": "449a8f79afe91c5663e43f01ed040abd35f6f8d3",
+      "commit": "f6a355620f3ea9083101644c43a3b9043672968b",
+      "date": "2026-09-18",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-18/basic_materials_predict.md"
+    },
+    {
+      "blob_sha": "4fa56515116fdd90876f42a4fa233f8992f88c7f",
+      "commit": "6cd7c0f120d4140ce4901c0d0a174680140f216e",
+      "date": "2026-09-18",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-18/communication_services_predict.md"
+    },
+    {
+      "blob_sha": "f8275c39fef559af9bc39083818e7acd94557c70",
+      "commit": "4f02607f9aaf3991c556c9f97bc9d673ebbd658b",
+      "date": "2026-09-18",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-18/consumer_cyclical_predict.md"
+    },
+    {
+      "blob_sha": "2be425aa0c8f724a305f1d9da43b61583e177afc",
+      "commit": "243b935922ac11b044fe1b5cc1a9e8ca44313fbf",
+      "date": "2026-09-18",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-18/consumer_defensive_predict.md"
+    },
+    {
+      "blob_sha": "6342c2f3a8c8a4b661f02b8057bff0e78e96cc00",
+      "commit": "e6ddda04565585527177f8310f755002a4739881",
+      "date": "2026-09-18",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-18/energy_predict.md"
+    },
+    {
+      "blob_sha": "f8c1bb4877f1450c389c42d3729a4481598a2160",
+      "commit": "92f7de887a4e6d8af48d2da37f0861c2662d7930",
+      "date": "2026-09-18",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-18/financial_predict.md"
+    },
+    {
+      "blob_sha": "1376244b1ae6b5b81507f623da9e11950854dc44",
+      "commit": "f6873322031ac71e5b6ba0624e728254f69a2d28",
+      "date": "2026-09-18",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-18/healthcare_predict.md"
+    },
+    {
+      "blob_sha": "b63e4c986e0053a67ce7dd7ddaa609e5206d4e2e",
+      "commit": "10f5fd455fa9c648bea69851340e49a2819f0f6f",
+      "date": "2026-09-18",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-18/industrials_predict.md"
+    },
+    {
+      "blob_sha": "63f3d1517c1e121bdf577c9ee46a0b841a2bedd2",
+      "commit": "f0226e5331987e7f7e08e4017a78a5c334b1c85a",
+      "date": "2026-09-18",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-18/real_estate_predict.md"
+    },
+    {
+      "blob_sha": "efebc1f8fe0d43214eabcc97f680cc7c1589a3f9",
+      "commit": "54f06c45da9ab4c55289e2c52ab06f70a73f50f6",
+      "date": "2026-09-18",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-18/technology_predict.md"
+    },
+    {
+      "blob_sha": "cb17e078334a007b876385fa5eb170ea8fe082ac",
+      "commit": "18fc8cbd0993ef28206fecc4a260f1f0c48aed63",
+      "date": "2026-09-18",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-18/utilities_predict.md"
+    },
+    {
+      "blob_sha": "e8b86743298dfb7a1d10a4cbe0399f60600ed079",
+      "commit": "d732e5b18838bb381d686af47720222d8d2ba088",
+      "date": "2026-09-18",
+      "input": "stock_book",
+      "path": "data/stock_book/2026-09-18_stock_book.json"
+    },
+    {
+      "blob_sha": "202f73c47f25b371254f22a64a828cae0c40c93e",
+      "commit": "cf81555c0ccc9da71dfd2af49ba8f5d5c93a2b6a",
+      "date": "2026-09-21",
+      "input": "ab_checklist",
+      "path": "data/ab_checklist/2026-09-21_ab_checklist.csv"
+    },
+    {
+      "blob_sha": "5eeed7bdac90a4c5bf8263bc55b04d92115cee44",
+      "commit": "eebc5b119e111560f17f23e055e0ec0bc10e780f",
+      "date": "2026-09-21",
+      "input": "ab_enriched",
+      "path": "data/ab_checklist/2026-09-21_ab_checklist_enriched.csv"
+    },
+    {
+      "blob_sha": "0b668d31540798b21b9b3f907f68f8890903bcd4",
+      "commit": "041c8710bddf9cdef0d66b69cc83ff8b32c4df1a",
+      "date": "2026-09-21",
+      "input": "actions",
+      "path": "01_daily/news/2026-09-21_actions.json"
+    },
+    {
+      "blob_sha": "2cb7ef097121cfe65fe16008d61a8f1a773f941b",
+      "commit": "3e097546616876378f2d757d332c0bb4c36e5977",
+      "date": "2026-09-21",
+      "input": "catalyst",
+      "path": "01_daily/catalyst/2026-09-21_dossiers.json"
+    },
+    {
+      "blob_sha": "2dd23c9410ec42809a93efc21d4ef2038395b348",
+      "commit": "5ad33775c4396e0f4afe0a12a4c8dcbb757d8fd0",
+      "date": "2026-09-21",
+      "input": "export",
+      "path": "data/exports/finviz_2026-09-21.csv"
+    },
+    {
+      "blob_sha": "fd849a8ed224143e166ccb90059db518a4f958fe",
+      "commit": "f2e764bee30fac8032fe4027ebf78339a5de39e9",
+      "date": "2026-09-21",
+      "input": "heat",
+      "path": "01_daily/map_heat/2026-09-21_map_heat.json"
+    },
+    {
+      "blob_sha": "356bd25399452f8088cf510456cb88b502de6e85",
+      "commit": "ce2d2ae8d0be52c85bd98d99240adfdbcc9ca2cb",
+      "date": "2026-09-21",
+      "input": "judge",
+      "path": "01_daily/news/2026-09-21_judge.json"
+    },
+    {
+      "blob_sha": "f1c6e7a6adc8e707616a0e87802d938b62a0455e",
+      "commit": "087d5fda408d2aa419fe21b64034edd0b9e1d356",
+      "date": "2026-09-21",
+      "input": "panel",
+      "n_rows": 62,
+      "path": "data/factor_mine/panel.json"
+    },
+    {
+      "blob_sha": "60eb837ea0d401fdd687cdcf7f8a2eb98f9e58f3",
+      "commit": "35e6e34f8d34c998c6656ad254706333548c1121",
+      "date": "2026-09-21",
+      "input": "predict",
+      "path": "01_daily/general/2026-09-21_predict.md"
+    },
+    {
+      "blob_sha": "52415fe9b2d08340817318ece4434d074899fcc5",
+      "commit": "229f44c9b8deabb0d970b515fd37e91161b538fd",
+      "date": "2026-09-21",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-21/basic_materials_predict.md"
+    },
+    {
+      "blob_sha": "dc76e71c9d8d50d3dcdaf35c37cb610db0a92768",
+      "commit": "68a7dab2e9d4115f71edb64580d3615dab64ebc1",
+      "date": "2026-09-21",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-21/communication_services_predict.md"
+    },
+    {
+      "blob_sha": "c34b46fc2a1cd720c28608c8abae984eac6a9690",
+      "commit": "eadc1e9edf733db43de553733c97e228a9b3df84",
+      "date": "2026-09-21",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-21/consumer_cyclical_predict.md"
+    },
+    {
+      "blob_sha": "9895bd1a879146400f43ed6ea0ee9438406072ff",
+      "commit": "ac9301f06adb6449a1197080dd363b24517499a7",
+      "date": "2026-09-21",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-21/consumer_defensive_predict.md"
+    },
+    {
+      "blob_sha": "176a1427f8a2deb7b43a7fdaaf2884c79d3d1c57",
+      "commit": "0c476d88f8ac905e7b2a292b1e3f0335de698b5e",
+      "date": "2026-09-21",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-21/energy_predict.md"
+    },
+    {
+      "blob_sha": "73c8450946a2b520296eb012b1572e61d29e0908",
+      "commit": "00b0ec71bfe896b1cd92409158e742dc320642e7",
+      "date": "2026-09-21",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-21/financial_predict.md"
+    },
+    {
+      "blob_sha": "2f5e3a7859935e08764519575679a483cb60d80d",
+      "commit": "e13c487ce652ecb536ea5c22527f7e92b93a3d68",
+      "date": "2026-09-21",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-21/healthcare_predict.md"
+    },
+    {
+      "blob_sha": "74ed767ffcdb07dff4da3acb9703f1263841b8bc",
+      "commit": "7bc9e71895afbd7b655ae5801fb4aeb42ce488ff",
+      "date": "2026-09-21",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-21/industrials_predict.md"
+    },
+    {
+      "blob_sha": "e8cfc8ae7ad1699f7f19aaf9b529ef5d2dc8ef5e",
+      "commit": "1a15c4d255bf31be10dfaadc2fb8dcefe5fba557",
+      "date": "2026-09-21",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-21/real_estate_predict.md"
+    },
+    {
+      "blob_sha": "f9d63e5d52dac14569d3d9cdb489a1863b4f66bf",
+      "commit": "1c45c3745a639a807f659dbc428f8e6e9e0b1b49",
+      "date": "2026-09-21",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-21/technology_predict.md"
+    },
+    {
+      "blob_sha": "4129e262ec32b174f12a73997cb10617663576f8",
+      "commit": "5688975bf14edcc0a420ce6c0871512cf654833a",
+      "date": "2026-09-21",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-21/utilities_predict.md"
+    },
+    {
+      "blob_sha": "657cf42820360f44dbd3fac66309f1eae352d928",
+      "commit": "dd0a8b2354c4fb671848eefd5e787e4f0595a132",
+      "date": "2026-09-21",
+      "input": "stock_book",
+      "path": "data/stock_book/2026-09-21_stock_book.json"
+    },
+    {
+      "blob_sha": "99c7e30f11b80b264747ce52de1395cd2e23b752",
+      "commit": "e827bca9a1a724523da4943d5aa35c2bc04b6301",
+      "date": "2026-09-22",
+      "input": "ab_checklist",
+      "path": "data/ab_checklist/2026-09-22_ab_checklist.csv"
+    },
+    {
+      "blob_sha": "80bcbb49988a5129ad45c4241a4776acc5807129",
+      "commit": "f0a33b7b29113a5950c4b6a0c00884209234fd5b",
+      "date": "2026-09-22",
+      "input": "ab_enriched",
+      "path": "data/ab_checklist/2026-09-22_ab_checklist_enriched.csv"
+    },
+    {
+      "blob_sha": "e7444e2147d375e3c5e3e3bc413d29007c166d1a",
+      "commit": "24b755e0afdc7ee91f6d4e3585a5fddd4c148e00",
+      "date": "2026-09-22",
+      "input": "actions",
+      "path": "01_daily/news/2026-09-22_actions.json"
+    },
+    {
+      "blob_sha": "f386806ecd49907da8fda2a32508e09d9caccb41",
+      "commit": "fb889f32d698eee973a04a44b57dfb87339dc578",
+      "date": "2026-09-22",
+      "input": "catalyst",
+      "path": "01_daily/catalyst/2026-09-22_dossiers.json"
+    },
+    {
+      "blob_sha": "ea8ac0383806b029df443d3546cd171340d38e62",
+      "commit": "6e129981abd7beddaa30e9b07336aa0be03dda1d",
+      "date": "2026-09-22",
+      "input": "export",
+      "path": "data/exports/finviz_2026-09-22.csv"
+    },
+    {
+      "blob_sha": "ed576d7d8a3c9c7e29ed0f0192fc5082f01e0343",
+      "commit": "d828e88cdcc98aff7c4cc4162887d3aa90f1b308",
+      "date": "2026-09-22",
+      "input": "heat",
+      "path": "01_daily/map_heat/2026-09-22_map_heat.json"
+    },
+    {
+      "blob_sha": "30f5c47362a8ba618edb09460eca7bae8852af0f",
+      "commit": "77eb08342a6e2033c35e96ffaba1dac9a8356e07",
+      "date": "2026-09-22",
+      "input": "judge",
+      "path": "01_daily/news/2026-09-22_judge.json"
+    },
+    {
+      "blob_sha": "07d6f53cef5eafdb8104698822850f713b084c61",
+      "commit": "41bcc47fe1690a49679b5ee827364c9183eb4d44",
+      "date": "2026-09-22",
+      "input": "panel",
+      "n_rows": 66,
+      "path": "data/factor_mine/panel.json"
+    },
+    {
+      "blob_sha": "b7505e81dde968ba44abc0f9bc9e08ff72850c87",
+      "commit": "4e3d46749663aae2b3f1615350e5032e8a3bc59a",
+      "date": "2026-09-22",
+      "input": "predict",
+      "path": "01_daily/general/2026-09-22_predict.md"
+    },
+    {
+      "blob_sha": "e2417f863733ed761b3103825c5d729ba0eba2f1",
+      "commit": "4648d60ed2016d47718a57d129af57ec94077a2e",
+      "date": "2026-09-22",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-22/basic_materials_predict.md"
+    },
+    {
+      "blob_sha": "5aa5a1caa0879006d00826749097f8d38ab0cded",
+      "commit": "fadea4e859699c1ed5f17d6d4f9a377910122995",
+      "date": "2026-09-22",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-22/communication_services_predict.md"
+    },
+    {
+      "blob_sha": "d03d0c73952a98cf53de52fc2dbb4d8293215862",
+      "commit": "c242612ed26b8ad128d92e7b2dce011709a8ff92",
+      "date": "2026-09-22",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-22/consumer_cyclical_predict.md"
+    },
+    {
+      "blob_sha": "71338bae13663619f4ca1bfb470f1c9b021a58d1",
+      "commit": "a158aeae8179e811551b0ea28cb65809098b7574",
+      "date": "2026-09-22",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-22/consumer_defensive_predict.md"
+    },
+    {
+      "blob_sha": "da35200a6bdbf49c8f8dfb3e57777156a7890f66",
+      "commit": "77c244903027430f57498978445f5b77839427c9",
+      "date": "2026-09-22",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-22/energy_predict.md"
+    },
+    {
+      "blob_sha": "eaeba1898fd7460ef1e8745587fcaf0991c7de11",
+      "commit": "208f0e9fad8d9b46ddd38b26c121f994e10a3dc1",
+      "date": "2026-09-22",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-22/financial_predict.md"
+    },
+    {
+      "blob_sha": "a4e96779f7b88278a9c3e5459a8061883392a331",
+      "commit": "4c7c21040dc9ff48be308d3068e7ea4d1c7453dc",
+      "date": "2026-09-22",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-22/healthcare_predict.md"
+    },
+    {
+      "blob_sha": "e6527ab694d75193a8df911ccc647a5e6157e67f",
+      "commit": "85c1c54689dd4736cda3b579dd58386835645b90",
+      "date": "2026-09-22",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-22/industrials_predict.md"
+    },
+    {
+      "blob_sha": "bc0d1acd393c3beda43b6ce8d588f88f49f22b65",
+      "commit": "6e8c37189c5ad119a6211f3771fda8e3ecfd1266",
+      "date": "2026-09-22",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-22/real_estate_predict.md"
+    },
+    {
+      "blob_sha": "ef1077d24d5300002b1bfe92333f74801c14d73f",
+      "commit": "1d0d51b24e522d19cb7a57ae000e5da0f76e93f9",
+      "date": "2026-09-22",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-22/technology_predict.md"
+    },
+    {
+      "blob_sha": "8604d6fed299c4812c812267ecfa95a0cf79c5ee",
+      "commit": "c0ca58571b4102579faf29a9faf7fac0b040f701",
+      "date": "2026-09-22",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-22/utilities_predict.md"
+    },
+    {
+      "blob_sha": "ab852573b0bbb26426e625cabb557fdbc182d01e",
+      "commit": "6d5dcd02547959df6132e3bc3f7cfc73df273ed6",
+      "date": "2026-09-22",
+      "input": "stock_book",
+      "path": "data/stock_book/2026-09-22_stock_book.json"
+    },
+    {
+      "blob_sha": "761e358249833d6607e1300617ad3a7e3f74e290",
+      "commit": "4c9e8a28df788bb251896d894253d4373ce828d3",
+      "date": "2026-09-23",
+      "input": "ab_checklist",
+      "path": "data/ab_checklist/2026-09-23_ab_checklist.csv"
+    },
+    {
+      "blob_sha": "367db649c62e09a015d7c0afa11be640b6ff0e99",
+      "commit": "9f6d4b8ed72ddd59c7cc261e858ae58ba37d95ff",
+      "date": "2026-09-23",
+      "input": "ab_enriched",
+      "path": "data/ab_checklist/2026-09-23_ab_checklist_enriched.csv"
+    },
+    {
+      "blob_sha": "cee70021b688cc117c79bc4411ee333019c4840f",
+      "commit": "9a67c9ef7a5778a86a42f91b278e56de56e1455b",
+      "date": "2026-09-23",
+      "input": "actions",
+      "path": "01_daily/news/2026-09-23_actions.json"
+    },
+    {
+      "blob_sha": "999fadc617848a78b7a37580bf8e8b882f07a01d",
+      "commit": "82a2aa5041e2ce469e6f9a764f4bd71b41d59235",
+      "date": "2026-09-23",
+      "input": "catalyst",
+      "path": "01_daily/catalyst/2026-09-23_dossiers.json"
+    },
+    {
+      "blob_sha": "6d431607b8c15cd4464093c211f08e20c81ebb44",
+      "commit": "eb5503bb8195aa15925ee90596682bbd67759418",
+      "date": "2026-09-23",
+      "input": "export",
+      "path": "data/exports/finviz_2026-09-23.csv"
+    },
+    {
+      "blob_sha": "4df8026d2398d576e3a22bf7d6b39ec1b47d4c97",
+      "commit": "67fa8571a2d8d821870622315cfb8d6415d4a46e",
+      "date": "2026-09-23",
+      "input": "heat",
+      "path": "01_daily/map_heat/2026-09-23_map_heat.json"
+    },
+    {
+      "blob_sha": "94d902be8b4d5f482ddbe1ffe82479a4fe982519",
+      "commit": "37c4cf4140d410a91204444aa38bfb2dcb2b12ec",
+      "date": "2026-09-23",
+      "input": "judge",
+      "path": "01_daily/news/2026-09-23_judge.json"
+    },
+    {
+      "blob_sha": "301e4a4a248a7e949b9375bc8cccbfae60000811",
+      "commit": "0d3fdf1110489b35d64fba9aca37ffff6861a07a",
+      "date": "2026-09-23",
+      "input": "panel",
+      "n_rows": 73,
+      "path": "data/factor_mine/panel.json"
+    },
+    {
+      "blob_sha": "a70cda0b2bf3341bfd5cb26065582cefe9119829",
+      "commit": "564b959cf12b1d0f30030bca39d372c08073fbcd",
+      "date": "2026-09-23",
+      "input": "predict",
+      "path": "01_daily/general/2026-09-23_predict.md"
+    },
+    {
+      "blob_sha": "81d3f43fd23a179229e2051e5587080e146bf894",
+      "commit": "30dc75b50fe8be7938a61df0e01590682d5cee07",
+      "date": "2026-09-23",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-23/basic_materials_predict.md"
+    },
+    {
+      "blob_sha": "4ecdeec50cb0de21d41b1f7521465b919d81d009",
+      "commit": "6c8fd9f6cca1451a36ab0565e33e4f7ccb7c959a",
+      "date": "2026-09-23",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-23/communication_services_predict.md"
+    },
+    {
+      "blob_sha": "4018f7503895c6c6916f74fcca14d6cfd3707c2b",
+      "commit": "b17a71176981a4391074c3d645c86f88142081fc",
+      "date": "2026-09-23",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-23/consumer_cyclical_predict.md"
+    },
+    {
+      "blob_sha": "53240ac50d66c3a7d40e9257560d4ecb39a5dffb",
+      "commit": "7a26b4fc8da54f0471bd62e3d34c73dc6847a6c7",
+      "date": "2026-09-23",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-23/consumer_defensive_predict.md"
+    },
+    {
+      "blob_sha": "8c06aa93e26a70d77731d5ae4f9fc7669f2e823f",
+      "commit": "e5b0fca433c64cc456174c7a43a4ef3f109817c0",
+      "date": "2026-09-23",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-23/energy_predict.md"
+    },
+    {
+      "blob_sha": "78901777f1d00162e0996ac6b8a6619a20f6b212",
+      "commit": "5011286cb46b62138d769d0744fb2c6eb29266fe",
+      "date": "2026-09-23",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-23/financial_predict.md"
+    },
+    {
+      "blob_sha": "d90166b3f6f202dc96d539e5fe46af932267fdd3",
+      "commit": "f1ca006377a2ff83d676ad05efe8d17a700e9e6c",
+      "date": "2026-09-23",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-23/healthcare_predict.md"
+    },
+    {
+      "blob_sha": "e23c3d5b15e0a2da02345c1be78bc89590921073",
+      "commit": "0bf9c3a3e1110b933cfb45a272517602cc1e5e46",
+      "date": "2026-09-23",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-23/industrials_predict.md"
+    },
+    {
+      "blob_sha": "788b0d4f7106c8704d994cfd3d233718e19295b2",
+      "commit": "f5def9df8d8b57445bf20e05f5ed814961d7f426",
+      "date": "2026-09-23",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-23/real_estate_predict.md"
+    },
+    {
+      "blob_sha": "95f01fa9ff9ec48d4d410fe7df5fcb788038dd7b",
+      "commit": "bad68d46ebda466f8061c66b2b47d2d20d10f7b2",
+      "date": "2026-09-23",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-23/technology_predict.md"
+    },
+    {
+      "blob_sha": "4cdc8b295c0e1b7f5986bd5ae598a2459b688d2a",
+      "commit": "e8eef078e6faab3c109b0badc09a238f98134fe3",
+      "date": "2026-09-23",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-23/utilities_predict.md"
+    },
+    {
+      "blob_sha": "23bf4d62e6953ebc6f47927c34dc355bbf65e602",
+      "commit": "bf32226d546c76933c05d6e2ddd231cba699841e",
+      "date": "2026-09-23",
+      "input": "stock_book",
+      "path": "data/stock_book/2026-09-23_stock_book.json"
+    },
+    {
+      "blob_sha": "3bf553275f6d94b740f8c9471dbf0c026fb54305",
+      "commit": "f7bb41a03b31a7cff7da8563039fcd168430123d",
+      "date": "2026-09-24",
+      "input": "ab_checklist",
+      "path": "data/ab_checklist/2026-09-24_ab_checklist.csv"
+    },
+    {
+      "blob_sha": "0fb2293f2c4893ce46a74ccf1c7050ffa6b4680e",
+      "commit": "f7bb41a03b31a7cff7da8563039fcd168430123d",
+      "date": "2026-09-24",
+      "input": "ab_enriched",
+      "path": "data/ab_checklist/2026-09-24_ab_checklist_enriched.csv"
+    },
+    {
+      "blob_sha": "9a06c7441cca040bead76af8bbc58e991e6c9f9c",
+      "commit": "4146a9d6e1aa6c40578980ddea06a79d3c915cd3",
+      "date": "2026-09-24",
+      "input": "actions",
+      "path": "01_daily/news/2026-09-24_actions.json"
+    },
+    {
+      "blob_sha": "94d6d1dace9993ee654e3b4fd2e73070676e697c",
+      "commit": "c484ed513a61a36fe4a1fcd8d31718dc69baf9c7",
+      "date": "2026-09-24",
+      "input": "catalyst",
+      "path": "01_daily/catalyst/2026-09-24_dossiers.json"
+    },
+    {
+      "blob_sha": "597c94db6bbe5a5820e67c579474ececa0aebfe5",
+      "commit": "321f8e45e31df03d5ba817a836e8edd056b13481",
+      "date": "2026-09-24",
+      "input": "export",
+      "path": "data/exports/finviz_2026-09-24.csv"
+    },
+    {
+      "blob_sha": "c71533efd06bfe97cebb7c4a9872c03b2c965214",
+      "commit": "ef0140cf67ce7c03887dce48ddf7f63ab78e951f",
+      "date": "2026-09-24",
+      "input": "heat",
+      "path": "01_daily/map_heat/2026-09-24_map_heat.json"
+    },
+    {
+      "blob_sha": "c87a4329d9938749bd47d75e4398466d2cb2bcaa",
+      "commit": "8c2495a3cc314b65dfd281677b6ddba04513a051",
+      "date": "2026-09-24",
+      "input": "judge",
+      "path": "01_daily/news/2026-09-24_judge.json"
+    },
+    {
+      "blob_sha": "1dbc93ee90fbde49c4bff330f5a061015e728e58",
+      "commit": "0eab5298326fe6983e51eb2f1839d1417094a433",
+      "date": "2026-09-24",
+      "input": "panel",
+      "n_rows": 77,
+      "path": "data/factor_mine/panel.json"
+    },
+    {
+      "blob_sha": "4a6d5785f782e87d94baa43648fb799da8e2539d",
+      "commit": "f3f6b05d19eea3d2b9f5afc99fdd0d5874a6a486",
+      "date": "2026-09-24",
+      "input": "predict",
+      "path": "01_daily/general/2026-09-24_predict.md"
+    },
+    {
+      "blob_sha": "976121b9451fffaca08b14bf1e5fec930ce5e449",
+      "commit": "61573b3c65bb27cea0687f5298d96ef152923633",
+      "date": "2026-09-24",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-24/basic_materials_predict.md"
+    },
+    {
+      "blob_sha": "e99d3111a8a52302a6cd7f6f35fb305a9e4c6da6",
+      "commit": "fa5908b9c2946b529274c73ad1b8c0367b9ed7f9",
+      "date": "2026-09-24",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-24/communication_services_predict.md"
+    },
+    {
+      "blob_sha": "8fccf8096c873ec6064cbfe5a2590ca69bc2cc4c",
+      "commit": "69761516a4d490e0b3cadc128158a7b5eb8d15aa",
+      "date": "2026-09-24",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-24/consumer_cyclical_predict.md"
+    },
+    {
+      "blob_sha": "a65be22ab4522ff47e296b592b1b078ca8070214",
+      "commit": "3a260e33a9fbe15b678a90111da8497de435549f",
+      "date": "2026-09-24",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-24/energy_predict.md"
+    },
+    {
+      "blob_sha": "cbac0632e06803df2f7da5d4acbb8cb8897bf4ae",
+      "commit": "23b24a1d70e766311d479e8e505ac65454899219",
+      "date": "2026-09-24",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-24/financial_predict.md"
+    },
+    {
+      "blob_sha": "9b519474555ad344433a0f5bec7f4c67da5dd910",
+      "commit": "5f5013c451f68503e169119e603aeb19f3907b32",
+      "date": "2026-09-24",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-24/healthcare_predict.md"
+    },
+    {
+      "blob_sha": "8fb1df4f61b8c2208ec1927693ffc354aa7e7543",
+      "commit": "d5f72ce3f8d70494b2dc13eadc8d0dc4ee420521",
+      "date": "2026-09-24",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-24/industrials_predict.md"
+    },
+    {
+      "blob_sha": "8473ee97012d3bfa17c0838c41290b224f89262e",
+      "commit": "d98577c908355adf0c942e19559db5afb5a8c61b",
+      "date": "2026-09-24",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-24/real_estate_predict.md"
+    },
+    {
+      "blob_sha": "a07a9b8df56e77de7b669ed040b06eb5aed2affa",
+      "commit": "07165c97fbfad65c55a7c5913bea068e410930bb",
+      "date": "2026-09-24",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-24/technology_predict.md"
+    },
+    {
+      "blob_sha": "c47150e0e646553d7062a2b4fc0cd3115edb92a3",
+      "commit": "b75fd08f62d9004321dbcfabc4df01f892f3d459",
+      "date": "2026-09-24",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-24/utilities_predict.md"
+    },
+    {
+      "blob_sha": "2487c3d536a292d0a970bcd95cd01e9eafb9149f",
+      "commit": "7a8d605d63c94e616ac9de5b8ffc39a3706e559d",
+      "date": "2026-09-24",
+      "input": "stock_book",
+      "path": "data/stock_book/2026-09-24_stock_book.json"
+    },
+    {
+      "blob_sha": "d553a3a1210b07ba85438f1064061f348a1d5e4a",
+      "commit": "5c390d9c0ac997f8e99423d2ee6ac84b7b4aeae6",
+      "date": "2026-09-25",
+      "input": "ab_enriched",
+      "path": "data/ab_checklist/2026-09-25_ab_checklist_enriched.csv"
+    },
+    {
+      "blob_sha": "a5c05b06a185dea08c548e56548b2aae1e554c3c",
+      "commit": "eaca2779317296cb13c04eff56cb2d128ae0eb43",
+      "date": "2026-09-25",
+      "input": "actions",
+      "path": "01_daily/news/2026-09-25_actions.json"
+    },
+    {
+      "blob_sha": "70d8134b0d02e4b30c139e1e32ab6b4fe920ce75",
+      "commit": "afb4dc0c5bd346ae60ddba0b5217781faec30a0e",
+      "date": "2026-09-25",
+      "input": "catalyst",
+      "path": "01_daily/catalyst/2026-09-25_dossiers.json"
+    },
+    {
+      "blob_sha": "a6a1a98388c2daf371d671e2e692f91a0d6f74e4",
+      "commit": "a1f0eb34e51898a90eddd19191f99e9d56e40747",
+      "date": "2026-09-25",
+      "input": "export",
+      "path": "data/exports/finviz_2026-09-25.csv"
+    },
+    {
+      "blob_sha": "e630328598f46914e8620439901c9e935078dfa5",
+      "commit": "40cf89f50989e07ebda4900f877cda5d69b3ed11",
+      "date": "2026-09-25",
+      "input": "heat",
+      "path": "01_daily/map_heat/2026-09-25_map_heat.json"
+    },
+    {
+      "blob_sha": "4ed75c6dc0b0f0f660a29fcb216dd3b56f68d927",
+      "commit": "7ad127bb151f489627fab1bfc0da5cdcdfef3daa",
+      "date": "2026-09-25",
+      "input": "judge",
+      "path": "01_daily/news/2026-09-25_judge.json"
+    },
+    {
+      "blob_sha": "ee80d93e5e23553bb8c349bb92cae34e4314a1f7",
+      "commit": "b5946b1d71bfc5b116c7cbb95a5d57d7c0817840",
+      "date": "2026-09-25",
+      "input": "panel",
+      "n_rows": 67,
+      "path": "data/factor_mine/panel.json"
+    },
+    {
+      "blob_sha": "a26965e0c038e8d71db3e8ad035831b518d6d91f",
+      "commit": "eccc6f4bd24b4090fea8c64e492d5c1381940992",
+      "date": "2026-09-25",
+      "input": "predict",
+      "path": "01_daily/general/2026-09-25_predict.md"
+    },
+    {
+      "blob_sha": "2a206121ee893e505fe428fd4b049201986541c8",
+      "commit": "975703c69a7e19ff23a967bb1d67c7f6675ff4bd",
+      "date": "2026-09-25",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-25/basic_materials_predict.md"
+    },
+    {
+      "blob_sha": "9ee54fbe05c94429894306de9697429e9785fd75",
+      "commit": "87c7723a8512541da3038cd817d65221c88810b0",
+      "date": "2026-09-25",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-25/communication_services_predict.md"
+    },
+    {
+      "blob_sha": "d6b659d13429cb7d2bceb3f555f6aea1c1759ed8",
+      "commit": "d4810c68de3ff7ae568e7169deb50762cce93f65",
+      "date": "2026-09-25",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-25/consumer_cyclical_predict.md"
+    },
+    {
+      "blob_sha": "5ad52e1bf2a56392c3dcabc792a22e86dc89d425",
+      "commit": "837343ff9a36cc0cb7b7509a517fb5879c73a61a",
+      "date": "2026-09-25",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-25/consumer_defensive_predict.md"
+    },
+    {
+      "blob_sha": "bbdb49a66d19556fb2aea34123c162ab7baff737",
+      "commit": "060a7e0928920854f34a214fdb1f181ff9b453dd",
+      "date": "2026-09-25",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-25/energy_predict.md"
+    },
+    {
+      "blob_sha": "c5b5329b649c6e815b44a1a3e054efd28c9493c8",
+      "commit": "f1b374604e9cd23afca914ee08094ce6c462b474",
+      "date": "2026-09-25",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-25/financial_predict.md"
+    },
+    {
+      "blob_sha": "e3814953bd80d72d911851daad0e816ddd8c5750",
+      "commit": "149cd9744509ebbc0df98fa984dcc7c6bdcfefcc",
+      "date": "2026-09-25",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-25/healthcare_predict.md"
+    },
+    {
+      "blob_sha": "d833b76f1027ac22ca67da127cd56f0bfff68107",
+      "commit": "9e92a0d7c3a87831e74d5cfc966f40c9e367b3cd",
+      "date": "2026-09-25",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-25/industrials_predict.md"
+    },
+    {
+      "blob_sha": "c69568bb89fede1674c92eda5c357618010adbba",
+      "commit": "9e3378d0f0d2ec2e66745baddb51b5b65840a5c3",
+      "date": "2026-09-25",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-25/real_estate_predict.md"
+    },
+    {
+      "blob_sha": "ba03daacca02027bf9bbc8ba3b80fdfe7ac2cab4",
+      "commit": "0ac08967fa13c72621cf4c4c312db0ef0ed631d3",
+      "date": "2026-09-25",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-25/technology_predict.md"
+    },
+    {
+      "blob_sha": "90e2ac8abcd68223121b003712765fbe7492c800",
+      "commit": "a81df54f5dc2257111aa927bcf56562ee0e9e108",
+      "date": "2026-09-25",
+      "input": "sector",
+      "path": "01_daily/sectors/2026-09-25/utilities_predict.md"
+    },
+    {
+      "blob_sha": "9d9f76b2d5a3fed2429a8267fcf6d59813dc872b",
+      "commit": "39b0bf9ac4bfe58b0377044077e7b8e46ae6ed34",
+      "date": "2026-09-25",
+      "input": "stock_book",
+      "path": "data/stock_book/2026-09-25_stock_book.json"
+    }
+  ],
+  "label": "assumed pre-open, not server-proven",
+  "study": "breadth_rank_v1"
+}
