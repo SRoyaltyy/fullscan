@@ -14,5 +14,9 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+      - name: Install
+        run: pip install pandas
       - name: Protocol lock
         run: PYTHONHASHSEED=0 python3 research/concentration_cap_v3/test_protocol.py
+      - name: Engine lock
+        run: PYTHONHASHSEED=0 python3 research/concentration_cap_v3/test_engine.py
