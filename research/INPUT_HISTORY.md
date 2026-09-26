@@ -122,6 +122,7 @@ From files already in the repo, before 2026-08-13:
 
 - Price features (hot score, returns, rvol, NR7, break-10, candle, RSI, MACD): back to 2024-03-04, plus indicator warmup.
 - Excel color signals: already present from 2026-07-23, and recomputable from Yahoo with a 600-day weekly warmup.
+- Correction: Excel signals are usable from 2026-08-31 (server-proven), not 2026-07-23.
 - Channel 1 FRED/VIX: files from 2026-07-31; the public series go back much further.
 - One Finviz export and one membership file on 2026-04-26. Not a calendar.
 - LLM packet that already exists and must not be regenerated: general predict and news judge from 2026-07-31 (9 sessions), news actions from 2026-08-09, events from 2026-08-10, sector folders from 2026-08-08, weather and join on 2026-08-12.
