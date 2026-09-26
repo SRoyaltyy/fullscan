@@ -93,7 +93,7 @@ Pins used for this window (short sha, full sha is the git object):
 - Numeric `s_ab`: not on the panel. `box_ab` is the morning AB gate, and only inside the 31 sessions
 - Morning S and the hard-red sit: a day-level rule, not a per-name panel column. This lever's pick rule is top 4, not that sit. Hard-red is not rebuilt for earlier dates
 - Sector essays, news judgments, and Grok review before 2026-08-13: not rebuildable
-- Theme Radar frozen export: not in the repo. The hook is off (`THEME_RADAR_ENABLED = False`). Oppset columns already stamped on the panel are the Clock-B aisle and they are included. Turning the hook on would be a new lever
+- Theme Radar frozen 09:30 export: optional and off. See the hook section. Oppset columns already stamped on the panel stay in the feature list above
 
 ## Target
 
@@ -162,12 +162,21 @@ The gap is the Futubull per-order minimum on a $10,000 book split four ways. It 
 
 ## Theme Radar hook
 
-`THEME_RADAR_ENABLED` is false. The expected file would be `data/theme_radar/frozen_export.json` from SRoyaltyy/theme-radar. It was not available when this spec was frozen. The code does not wait for it and does not read it. Oppset fields already on the morning panel stay in the feature list above.
+`THEME_RADAR_ENABLED` is false. The declared feature list does not include Theme Radar columns, and the published series does not read the files.
+
+The frozen export is on SRoyaltyy/theme-radar at commit `3973e13cd953e5705d08d8d9f78a5b1b9dd1a1d0`:
+
+- `research/lever_panel/finviz_panel_asof0930_2026-08.csv.gz`, sha256 `c8977b8eea8e74115899e9d4cc04d5b4ea67490376d972905781eb8e1aeb6459`
+- `research/lever_panel/finviz_panel_asof0930_2026-09.csv.gz`, sha256 `cbf35da9e1587703059abd9ff77525a1047c67a91edc3276ca93db4cd8669c16`
+
+Each row is one stock on one morning, captured before that morning's 09:30 ET. The join key is `trade_date` plus `Ticker`. That key is unique in the export. It does not cover this lever's calendar: trade date 2026-08-28 has no prior-close snapshot, so that fullscan morning would be entirely missing. The files are also not in this repo. The declared lever therefore does not depend on them.
+
+If the flag is turned on, the reader loads only an explicit whitelist (snapshot fundamentals and Theme Radar scores such as `Price`, `Relative Volume`, `tr1d_total_score`, `trc_pressure`, `seg_n_themes`). It does not read label, outcome, future-return, hit, or `trf_true_ret` columns. A test fails if a cell outside that allow-list is subscripted. Rows after 2026-09-11 are dropped, and a scrape stamp that is not strictly before 09:30 ET is dropped. The pinned sha256 is checked before a blob is used. Oppset fields already on the morning panel stay in the feature list above either way.
 
 ## Fingerprint
 
 SHA-256 of the UTF-8 bytes of `excel_ml_lever.py`:
 
-`ff21b76e9b7d8ddb95638e40e7aaa631f3364dbdd7c813b31b31ae831f804d4c`
+`55800c34419de632af9598f4c10ba112450c6a1bd03d147556de979ea4064694`
 
 The SHA-256 of this SPEC.md file is in `frozen_spec.json`.

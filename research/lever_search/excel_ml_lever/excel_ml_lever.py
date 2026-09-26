@@ -50,11 +50,58 @@ LLM_START = "2026-08-13"
 ET = ZoneInfo("America/New_York")
 _DAILY_NOTE = re.compile(r"^excel_bot/daily/(\d{4}-\d{2}-\d{2})_excel_bot\.md$")
 
-# Theme Radar frozen export (SRoyaltyy/theme-radar, due 17:00 HKT).
-# Not in this repo when the spec was frozen. Off. Turning it on is a new
-# strategy under IRONCLAD rule 4, not a rerun of this lever.
+# Theme Radar frozen 09:30 export. Off. The declared feature list does not
+# include it: 2026-08-28 has no snapshot, and the files are not in this repo.
+# Turning it on reads only THEME_RADAR_WHITELIST from the pinned blobs.
 THEME_RADAR_ENABLED = False
-THEME_RADAR_EXPORT = "data/theme_radar/frozen_export.json"
+THEME_RADAR_COMMIT = "3973e13cd953e5705d08d8d9f78a5b1b9dd1a1d0"
+THEME_RADAR_REPO = "SRoyaltyy/theme-radar"
+THEME_RADAR_FILES = (
+    {
+        "path": "research/lever_panel/finviz_panel_asof0930_2026-08.csv.gz",
+        "sha256": "c8977b8eea8e74115899e9d4cc04d5b4ea67490376d972905781eb8e1aeb6459",
+    },
+    {
+        "path": "research/lever_panel/finviz_panel_asof0930_2026-09.csv.gz",
+        "sha256": "cbf35da9e1587703059abd9ff77525a1047c67a91edc3276ca93db4cd8669c16",
+    },
+)
+# Join and clock columns are read to attach a row. They are not model features.
+THEME_RADAR_JOIN = ("trade_date", "Ticker")
+THEME_RADAR_CLOCK = ("scrape_ts_utc",)
+# Explicit score and snapshot columns. Text, buckets, kill lists, the
+# snapshot Open, and realized-return names are not in this tuple.
+THEME_RADAR_WHITELIST = (
+    "Price",
+    "Market Cap",
+    "Average Volume",
+    "Relative Volume",
+    "Short Float",
+    "Short Ratio",
+    "Institutional Ownership",
+    "Insider Ownership",
+    "Analyst Recom",
+    "Performance (Week)",
+    "Performance (Month)",
+    "Relative Strength Index (14)",
+    "EPS Surprise",
+    "Beta",
+    "tr1d_total_score",
+    "tr1d_score_100",
+    "tr1d_confidence",
+    "tr1d_n_pos",
+    "tr1d_n_neg",
+    "tr1w_total_score",
+    "tr1w_score_100",
+    "tr1w_confidence",
+    "tr1m_total_score",
+    "tr1m_score_100",
+    "tr1m_confidence",
+    "trc_pressure",
+    "trc_resid",
+    "seg_n_themes",
+)
+THEME_RADAR_READ = THEME_RADAR_JOIN + THEME_RADAR_CLOCK + THEME_RADAR_WHITELIST
 
 PANEL_NUMERIC = (
     "src_rank", "cond_good", "cond_bad",
@@ -138,7 +185,7 @@ EXCLUDED = (
     ("suggestions.csv live file", "rewritten through later dates and carries tracking marks"),
     ("daily note scoreboard", "live returns in the same markdown file; not the signal"),
     ("daily note commit at or after the next 09:30", "too late for that open, and not reused later"),
-    ("theme_radar frozen export", "file not in the repo; hook is off"),
+    ("theme_radar frozen export", "optional and off; 2026-08-28 does not join; files are not in this repo"),
     ("numeric s_ab", "not a panel column; the morning AB gate is box_ab"),
     ("morning S / hard-red", "day-level sit, not a per-name panel column; pick rule is top 4"),
     ("LLM packet before 2026-08-13", "AB, sector, news, and Grok exist only on the 31 sessions"),
@@ -402,8 +449,158 @@ def _blank_llm(out: dict) -> None:
             out[name] = None
 
 
+def _theme_banned(name: str) -> bool:
+    """Label, outcome, future-return, hit, and realized-return names."""
+    text = str(name or "").lower().replace(" ", "_")
+    if text in {"trf_true_ret", "trf_true_ret_dir", "open"}:
+        return True
+    return re.search(
+        r"(label|outcome|future_ret|fwd_ret|forward_ret|(^|_)hit($|_)|y_true|true_ret)",
+        text,
+    ) is not None
+
+
+def assert_theme_read_list(columns) -> None:
+    """Fail if a read column is outside the allow-list or is a banned name."""
+    allowed = set(THEME_RADAR_READ)
+    bad = [column for column in columns if column not in allowed or _theme_banned(column)]
+    if bad:
+        raise RuntimeError(f"non-whitelisted theme column read: {bad}")
+
+
+assert_theme_read_list(THEME_RADAR_READ)
+
+
+def theme_feature_name(column: str) -> str:
+    slug = re.sub(r"[^a-z0-9]+", "_", str(column).lower()).strip("_")
+    return "tr_" + slug
+
+
+def _stamp_before_open(stamp: str, trade_date: str) -> bool:
+    text = str(stamp or "").strip()
+    if not text:
+        return False
+    if text.endswith("Z"):
+        text = text[:-1] + "+00:00"
+    try:
+        when = dt.datetime.fromisoformat(text)
+    except ValueError:
+        return False
+    return _aware(when) < excel_open_cutoff(trade_date)
+
+
+def theme_column_index(header) -> list[tuple[str, int]]:
+    """Positions of allow-list columns. Extra header names are not indexed."""
+    assert_theme_read_list(THEME_RADAR_READ)
+    positions = []
+    for name in THEME_RADAR_READ:
+        if name in header:
+            positions.append((name, list(header).index(name)))
+    return positions
+
+
+def fields_from_cells(header, cells) -> dict:
+    """Build a row from allow-list cells only. Other cells are not subscripted."""
+    picked = {name: None for name in THEME_RADAR_READ}
+    for name, index in theme_column_index(header):
+        if index < len(cells):
+            picked[name] = cells[index]
+    return picked
+
+
+def load_theme_stream(handle, *, max_date: str = LUCK_END) -> dict:
+    reader = csv.reader(handle)
+    try:
+        header = next(reader)
+    except StopIteration:
+        return {}
+    packed = []
+    for cells in reader:
+        if not cells:
+            continue
+        packed.append(fields_from_cells(header, cells))
+    return load_theme_rows(packed, max_date=max_date)
+
+
+def take_theme_fields(raw) -> dict:
+    """Copy only the allow-list. Other keys in raw are not read."""
+    assert_theme_read_list(THEME_RADAR_READ)
+    picked = {}
+    for key in THEME_RADAR_READ:
+        if key in raw:
+            picked[key] = raw[key]
+        else:
+            picked[key] = None
+    return picked
+
+
+def project_theme_row(raw) -> dict:
+    """Whitelist values only. A banned or extra column raises."""
+    assert_theme_read_list(THEME_RADAR_WHITELIST)
+    out = {}
+    for key in THEME_RADAR_WHITELIST:
+        if key in raw:
+            raw_value = raw[key]
+        else:
+            raw_value = None
+        out[theme_feature_name(key)] = _finite(raw_value)
+    return out
+
+
+def load_theme_rows(rows, *, max_date: str = LUCK_END) -> dict:
+    """(trade_date, ticker) -> whitelist features, through max_date and before the cutoff.
+
+    A second row for the same pair raises. The join is then not clean.
+    A scrape stamp that is missing or not strictly before 09:30 ET is dropped.
+    """
+    if max_date >= CUTOFF:
+        raise RuntimeError(f"theme load max_date {max_date} is on or after {CUTOFF}")
+    out = {}
+    for raw in rows:
+        picked = take_theme_fields(raw)
+        day = _as_day(picked.get("trade_date"))
+        if not day or day > max_date or day >= CUTOFF:
+            continue
+        if not _stamp_before_open(picked.get("scrape_ts_utc"), day):
+            continue
+        ticker = _tick(picked.get("Ticker"))
+        if not ticker:
+            continue
+        key = (day, ticker)
+        if key in out:
+            raise RuntimeError(f"theme radar join is not clean: duplicate {day} {ticker}")
+        out[key] = project_theme_row(picked)
+    return out
+
+
+def load_pinned_theme_radar(root: Path | None = None, *, max_date: str = LUCK_END) -> dict:
+    """Read the pinned gzip blobs if the flag is on. Sha256 must match the commit."""
+    import gzip
+
+    base = Path(root or ROOT)
+    rows = []
+    for item in THEME_RADAR_FILES:
+        path = base / "data" / "theme_radar" / Path(item["path"]).name
+        if not path.is_file():
+            raise RuntimeError(
+                f"theme radar file missing: {path.name} from {THEME_RADAR_COMMIT}"
+            )
+        digest = sha256_file(path)
+        if digest != item["sha256"]:
+            raise RuntimeError(f"theme radar sha256 mismatch for {path.name}")
+        with gzip.open(path, "rt", encoding="utf-8", newline="") as handle:
+            rows.append(load_theme_stream(handle, max_date=max_date))
+    merged = {}
+    for part in rows:
+        for key, value in part.items():
+            if key in merged:
+                raise RuntimeError(f"theme radar join is not clean: duplicate {key[0]} {key[1]}")
+            merged[key] = value
+    return merged
+
+
 def row_features(row: dict, *, price_features: dict | None,
-                 excel_rows: list | None) -> dict:
+                 excel_rows: list | None, theme_row: dict | None = None) -> dict:
     """One name's raw features. None means missing (rank-fills to the center)."""
     day = _as_day(row.get("date"))
     ticker = _tick(row.get("ticker"))
@@ -432,10 +629,13 @@ def row_features(row: dict, *, price_features: dict | None,
     for name in PRICE_FEATURES:
         out[name] = _finite(px.get(name))
     out.update(suggestion_features(ticker, excel_rows))
+    if THEME_RADAR_ENABLED:
+        projected = theme_row or {}
+        for column in THEME_RADAR_WHITELIST:
+            name = theme_feature_name(column)
+            out[name] = projected.get(name)
     if day and day < LLM_START:
         _blank_llm(out)
-    if THEME_RADAR_ENABLED:
-        raise RuntimeError("theme radar hook is off in the frozen lever")
     return out
 
 
@@ -459,14 +659,23 @@ def suggestion_features(ticker: str, rows: list | None) -> dict:
     }
 
 
+def feature_list() -> tuple:
+    """Declared features. Theme columns are added only when the hook is on."""
+    if not THEME_RADAR_ENABLED:
+        return FEATURES
+    extra = tuple(theme_feature_name(column) for column in THEME_RADAR_WHITELIST)
+    return FEATURES + extra
+
+
 def rank_rows(raws: list[dict]) -> list[dict]:
-    """Attach a rank vector in FEATURES order. raws items need an 'x' dict."""
+    """Attach a rank vector in feature_list order. raws items need an 'x' dict."""
+    names = feature_list()
     columns = []
-    for name in FEATURES:
+    for name in names:
         columns.append(rank_center([item["x"].get(name) for item in raws]))
     ranked = []
     for index, item in enumerate(raws):
-        vector = [columns[col][index] for col in range(len(FEATURES))]
+        vector = [columns[col][index] for col in range(len(names))]
         nxt = dict(item)
         nxt["rank"] = vector
         ranked.append(nxt)
@@ -658,7 +867,7 @@ def hold_target(entry_open: float | None, exit_open: float | None) -> float | No
 
 
 def build_day_items(rows: list[dict], day: str, sessions: list[str], *,
-                    excel_by_day, bars_by_ticker) -> list[dict]:
+                    excel_by_day, bars_by_ticker, theme_by_key=None) -> list[dict]:
     morning_rows = (excel_by_day or {}).get(day) or []
     raws = []
     seen = set()
@@ -673,18 +882,20 @@ def build_day_items(rows: list[dict], day: str, sessions: list[str], *,
             continue
         seen.add(ticker)
         px = price_features_from_bars(bars_by_ticker.get(ticker) or [], day)
+        theme_row = (theme_by_key or {}).get((day, ticker)) if THEME_RADAR_ENABLED else None
         raws.append({
             "ticker": ticker,
             "date": day,
             "x": row_features(
                 row, price_features={(day, ticker): px}, excel_rows=morning_rows,
+                theme_row=theme_row,
             ),
         })
     return rank_rows(raws)
 
 
 def training_items(panel_by_day: dict, sessions: list[str], day: str, *,
-                   excel_by_day, bars_by_ticker) -> list[dict]:
+                   excel_by_day, bars_by_ticker, theme_by_key=None) -> list[dict]:
     entries = training_entry_dates(sessions, day)
     assert_no_lookahead(sessions, day, entries)
     items = []
@@ -695,6 +906,7 @@ def training_items(panel_by_day: dict, sessions: list[str], day: str, *,
         for item in build_day_items(
             panel_by_day.get(entry) or [], entry, sessions,
             excel_by_day=excel_by_day, bars_by_ticker=bars_by_ticker,
+            theme_by_key=theme_by_key,
         ):
             ticker = item["ticker"]
             bars = bars_by_ticker.get(ticker) or []
@@ -855,7 +1067,7 @@ def _locked_matches(saved: dict, fresh: dict) -> bool:
 
 
 def walk(sessions: list[str], panel_by_day: dict, bars_by_ticker: dict, *,
-         excel_by_day=None, fees: dict | None = None,
+         excel_by_day=None, theme_by_key=None, fees: dict | None = None,
          state_dir: Path | None = None, start: str | None = None,
          end: str | None = None) -> dict:
     """Fit and trade one session at a time. Refuses the cutoff and after."""
@@ -870,6 +1082,8 @@ def walk(sessions: list[str], panel_by_day: dict, bars_by_ticker: dict, *,
         clock = [day for day in clock if day <= end]
     if any(day >= CUTOFF for day in clock):
         raise RuntimeError("clock contains a cutoff date")
+    if THEME_RADAR_ENABLED and theme_by_key is None:
+        theme_by_key = load_pinned_theme_radar()
     fees = fees if fees is not None else load_fees()
     cash = CAPITAL
     cash_flat = CAPITAL
@@ -882,6 +1096,7 @@ def walk(sessions: list[str], panel_by_day: dict, bars_by_ticker: dict, *,
         items = training_items(
             panel_by_day, sessions, day,
             excel_by_day=excel_by_day, bars_by_ticker=bars_by_ticker,
+            theme_by_key=theme_by_key,
         )
         # Attach today's exit opens onto lots before the sell, from the tape.
         still_held = set()
@@ -901,6 +1116,7 @@ def walk(sessions: list[str], panel_by_day: dict, bars_by_ticker: dict, *,
             today = build_day_items(
                 panel_by_day.get(day) or [], day, sessions,
                 excel_by_day=excel_by_day, bars_by_ticker=bars_by_ticker,
+                theme_by_key=theme_by_key,
             )
             scores = predict(model, today)
             scored = []

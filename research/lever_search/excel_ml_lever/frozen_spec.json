@@ -7,10 +7,10 @@
   "hold_2": false,
   "lever": "excel_ml_lever_h1",
   "module_sha256": {
-    "excel_ml_lever.py": "ff21b76e9b7d8ddb95638e40e7aaa631f3364dbdd7c813b31b31ae831f804d4c"
+    "excel_ml_lever.py": "55800c34419de632af9598f4c10ba112450c6a1bd03d147556de979ea4064694"
   },
   "spec_file": "research/lever_search/excel_ml_lever/SPEC.md",
-  "spec_sha256": "7a18f2d4ac806e4688d4df6d19e8ed958003b47da36dbdfdddc821f2701e89f2",
+  "spec_sha256": "0c9318f3e0c4fb0b12f41a5016601aecdab0be7d5013745937ddf3b58810335e",
   "theme_radar_enabled": false,
   "window": [
     "2026-08-13",

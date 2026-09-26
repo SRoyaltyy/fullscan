@@ -5,7 +5,9 @@ Run: python research/lever_search/excel_ml_lever/test_excel_ml_lever.py
 from __future__ import annotations
 
 import datetime as dt
+import gzip
 import importlib.util
+import io
 import json
 import tempfile
 from pathlib import Path
@@ -437,6 +439,104 @@ def test_published_window_stops_at_09_11() -> None:
         _fail("lever id drifted")
 
 
+def test_theme_reader_rejects_non_whitelist_and_stays_off() -> None:
+    if M.THEME_RADAR_ENABLED:
+        _fail("theme radar is on in the declared lever")
+    if M.feature_list() != M.FEATURES:
+        _fail("declared features include the optional theme block")
+    if any(name.startswith("tr_") for name in M.FEATURES):
+        _fail("a theme column is in the declared feature list")
+    if not str(M.THEME_RADAR_COMMIT).startswith("3973e13"):
+        _fail(f"theme commit pin drifted: {M.THEME_RADAR_COMMIT}")
+    hashes = {item["path"]: item["sha256"] for item in M.THEME_RADAR_FILES}
+    august = "research/lever_panel/finviz_panel_asof0930_2026-08.csv.gz"
+    september = "research/lever_panel/finviz_panel_asof0930_2026-09.csv.gz"
+    if hashes.get(august) != "c8977b8eea8e74115899e9d4cc04d5b4ea67490376d972905781eb8e1aeb6459":
+        _fail("august theme sha256 drifted")
+    if hashes.get(september) != "cbf35da9e1587703059abd9ff77525a1047c67a91edc3276ca93db4cd8669c16":
+        _fail("september theme sha256 drifted")
+    banned = (
+        "fwd_ret", "label", "outcome", "future_ret", "hit",
+        "trf_true_ret", "trf_true_ret_dir", "Open", "y_true",
+    )
+    for name in banned:
+        if name in M.THEME_RADAR_READ:
+            _fail(f"{name} is in the theme read list")
+        if not M._theme_banned(name):
+            _fail(f"{name} is not treated as banned")
+    try:
+        M.assert_theme_read_list(["Price", "fwd_ret"])
+    except RuntimeError:
+        pass
+    else:
+        _fail("a non-whitelisted column was accepted")
+
+    class SpyList(list):
+        def __init__(self, values):
+            super().__init__(values)
+            self.touched = []
+
+        def __getitem__(self, index):
+            self.touched.append(index)
+            return list.__getitem__(self, index)
+
+    header = [
+        "trade_date", "Ticker", "scrape_ts_utc", "Price",
+        "fwd_ret", "hit", "label", "trf_true_ret",
+    ]
+    leak_at = header.index("fwd_ret")
+    cells = SpyList([
+        "2026-09-11", "aaa", "2026-09-11T12:00:00Z", "3.5",
+        "999", "1", "up", "0.2",
+    ])
+    picked = M.fields_from_cells(header, cells)
+    if leak_at in cells.touched or "999" in set(picked.values()):
+        _fail(f"a non-whitelisted cell was read: {cells.touched}")
+    if set(picked) - set(M.THEME_RADAR_READ):
+        _fail(f"picked keys left the allow-list: {set(picked)}")
+    late = ["2026-09-14", "BBB", "2026-09-14T12:00:00Z", "4", "999", "1", "up", "0.2"]
+    at_open = ["2026-09-11", "CCC", "2026-09-11T13:30:00Z", "4", "999", "1", "up", "0.2"]
+    joined = M.load_theme_rows([
+        picked,
+        M.fields_from_cells(header, late),
+        M.fields_from_cells(header, at_open),
+    ])
+    if set(joined) != {("2026-09-11", "AAA")}:
+        _fail(f"theme join kept a row after 2026-09-11 or at the open: {set(joined)}")
+    if joined[("2026-09-11", "AAA")].get("tr_price") != 3.5:
+        _fail("whitelist price did not join")
+    try:
+        M.load_theme_rows([picked, picked])
+    except RuntimeError:
+        pass
+    else:
+        _fail("a duplicate theme key was accepted")
+    blob = io.BytesIO()
+    with gzip.GzipFile(fileobj=blob, mode="wb", mtime=0) as gz:
+        gz.write(
+            b"trade_date,Ticker,scrape_ts_utc,Price,fwd_ret\n"
+            b"2026-09-11,AAA,2026-09-11T12:00:00Z,3.5,999\n"
+            b"2026-09-14,BBB,2026-09-14T12:00:00Z,8,999\n"
+        )
+    blob.seek(0)
+    with gzip.GzipFile(fileobj=blob, mode="rb") as gz:
+        text = io.TextIOWrapper(gz, encoding="utf-8", newline="")
+        streamed = M.load_theme_stream(text)
+    if set(streamed) != {("2026-09-11", "AAA")}:
+        _fail(f"gzip reader kept a late row: {set(streamed)}")
+    old = M.THEME_RADAR_ENABLED
+    M.THEME_RADAR_ENABLED = True
+    try:
+        try:
+            M.walk(["2026-08-13"], {}, {}, fees=_fees(), end="2026-08-13")
+        except RuntimeError:
+            pass
+        else:
+            _fail("the hook ran without the pinned files")
+    finally:
+        M.THEME_RADAR_ENABLED = old
+
+
 def test_fingerprints() -> None:
     module_hash = M.sha256_file(HERE / "excel_ml_lever.py")
     spec_path = HERE / "SPEC.md"
@@ -489,6 +589,7 @@ def main() -> None:
         test_fees_match_the_schedule_and_borrow_is_separate,
         test_ridge_is_deterministic,
         test_published_window_stops_at_09_11,
+        test_theme_reader_rejects_non_whitelist_and_stays_off,
         test_fingerprints,
     ]
     for test in tests:
