@@ -1,85 +1,212 @@
 {
-  "buys": [],
-  "cash": 158.23,
+  "buys": [
+    {
+      "fill_rule": "open",
+      "price": 171.98,
+      "shares": 15,
+      "side": "BUY",
+      "ticker": "A"
+    },
+    {
+      "fill_rule": "open",
+      "price": 410.0,
+      "shares": 6,
+      "side": "BUY",
+      "ticker": "NTRA"
+    },
+    {
+      "fill_rule": "open",
+      "price": 10.28,
+      "shares": 251,
+      "side": "BUY",
+      "ticker": "SENS"
+    },
+    {
+      "fill_rule": "open",
+      "price": 7.85,
+      "shares": 328,
+      "side": "BUY",
+      "ticker": "RSKD"
+    }
+  ],
+  "cash": 117.85,
   "date": "2026-09-25",
-  "equity": 10387.12,
-  "fees": 0,
-  "fills": [],
+  "equity": 10246.9,
+  "fees": 20.2247,
+  "fills": [
+    {
+      "fees": 2.0656,
+      "fill_rule": "open",
+      "pnl": 77.5,
+      "price": 171.98,
+      "shares": 15,
+      "side": "SELL",
+      "ticker": "A"
+    },
+    {
+      "fees": 2.1073,
+      "fill_rule": "open",
+      "pnl": -65.66,
+      "price": 87.38,
+      "shares": 29,
+      "side": "SELL",
+      "ticker": "DXCM"
+    },
+    {
+      "fees": 2.0859,
+      "fill_rule": "open",
+      "pnl": -118.32,
+      "price": 112.95,
+      "shares": 22,
+      "side": "SELL",
+      "ticker": "NICE"
+    },
+    {
+      "fees": 2.4538,
+      "fill_rule": "open",
+      "pnl": -29.36,
+      "price": 18.4,
+      "shares": 140,
+      "side": "SELL",
+      "ticker": "NTSK"
+    },
+    {
+      "fees": 2.035,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 171.98,
+      "shares": 15,
+      "side": "BUY",
+      "ticker": "A"
+    },
+    {
+      "fees": 2.008,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 410.0,
+      "shares": 6,
+      "side": "BUY",
+      "ticker": "NTRA"
+    },
+    {
+      "fees": 3.2379,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 10.28,
+      "shares": 251,
+      "side": "BUY",
+      "ticker": "SENS"
+    },
+    {
+      "fees": 4.2312,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 7.85,
+      "shares": 328,
+      "side": "BUY",
+      "ticker": "RSKD"
+    }
+  ],
   "holdings": [
     "A",
-    "DXCM",
-    "NICE",
-    "NTSK"
+    "NTRA",
+    "RSKD",
+    "SENS"
   ],
-  "mean": 0.0,
-  "n_trades_today": 0,
+  "mean": -1.3499,
+  "n_trades_today": 8,
   "recipe": "oos0914_zero_candle_h2_sx",
-  "sells": [],
+  "sells": [
+    {
+      "fill_rule": "open",
+      "price": 171.98,
+      "shares": 15,
+      "side": "SELL",
+      "ticker": "A"
+    },
+    {
+      "fill_rule": "open",
+      "price": 87.38,
+      "shares": 29,
+      "side": "SELL",
+      "ticker": "DXCM"
+    },
+    {
+      "fill_rule": "open",
+      "price": 112.95,
+      "shares": 22,
+      "side": "SELL",
+      "ticker": "NICE"
+    },
+    {
+      "fill_rule": "open",
+      "price": 18.4,
+      "shares": 140,
+      "side": "SELL",
+      "ticker": "NTSK"
+    }
+  ],
   "state": {
     "after": "2026-09-25",
-    "cash": 158.23,
+    "cash": 117.85,
     "pos": {
       "A": {
-        "close_px": 172.83999633789062,
-        "cost": 2500.134899291992,
-        "entry_date": "2026-09-23",
-        "entry_px": 166.5399932861328,
+        "close_px": 172.79,
+        "cost": 2581.7349999999997,
+        "entry_date": "2026-09-25",
+        "entry_px": 171.98,
         "fee_in": 2.035,
-        "last_px": 163.9499969482422,
+        "last_px": 171.98,
         "min_hold": 2,
-        "notional": 2498.099899291992,
-        "peak_px": 166.5399932861328,
-        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate zero_red=True,last_green=True; rank candle_score; list flatten; \ud83d\udd35; \u26aa; ret5=+11.3; leftover $2615.00",
+        "notional": 2579.7,
+        "peak_px": 171.98,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate zero_red=True,last_green=True; rank candle_score; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+10.6; leftover $2581.03",
         "shares": 15,
-        "ticker": "A",
-        "unpriced_held": true
+        "ticker": "A"
       },
-      "DXCM": {
-        "close_px": 87.47000122070312,
-        "cost": 2597.577,
-        "entry_date": "2026-09-23",
-        "entry_px": 89.5,
-        "fee_in": 2.077,
-        "last_px": 87.68000030517578,
+      "NTRA": {
+        "close_px": 412.56,
+        "cost": 2462.008,
+        "entry_date": "2026-09-25",
+        "entry_px": 410.0,
+        "fee_in": 2.008,
+        "last_px": 410.0,
         "min_hold": 2,
-        "notional": 2595.5,
-        "peak_px": 89.5,
-        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate zero_red=True,last_green=True; rank candle_score; list flatten; \ud83d\udd35; \u26aa; ret5=+3.6; leftover $2615.00",
-        "shares": 29,
-        "ticker": "DXCM",
-        "unpriced_held": true
+        "notional": 2460.0,
+        "peak_px": 410.0,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate zero_red=True,last_green=True; rank candle_score; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+11.6; leftover $2581.03",
+        "shares": 6,
+        "ticker": "NTRA"
       },
-      "NICE": {
-        "close_px": 113.62999725341797,
-        "cost": 2601.1359865722657,
-        "entry_date": "2026-09-23",
-        "entry_px": 118.13999938964844,
-        "fee_in": 2.056,
-        "last_px": 117.33999633789062,
+      "RSKD": {
+        "close_px": 7.78,
+        "cost": 2579.0312,
+        "entry_date": "2026-09-25",
+        "entry_px": 7.85,
+        "fee_in": 4.2312,
+        "last_px": 7.85,
         "min_hold": 2,
-        "notional": 2599.0799865722656,
-        "peak_px": 118.13999938964844,
-        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate zero_red=True,last_green=True; rank candle_score; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+13.8; leftover $2615.00",
-        "shares": 22,
-        "ticker": "NICE",
-        "unpriced_held": true
+        "notional": 2574.7999999999997,
+        "peak_px": 7.85,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate zero_red=True,last_green=True; rank candle_score; list yday_gainer; \ud83d\udd35; \u26aa; ret5=+25.4; leftover $2581.03",
+        "shares": 328,
+        "ticker": "RSKD"
       },
-      "NTSK": {
-        "close_px": 18.56999969482422,
-        "cost": 2602.9101068115233,
-        "entry_date": "2026-09-23",
-        "entry_px": 18.575000762939453,
-        "fee_in": 2.41,
-        "last_px": 18.389999389648438,
+      "SENS": {
+        "close_px": 10.0,
+        "cost": 2583.5179,
+        "entry_date": "2026-09-25",
+        "entry_px": 10.28,
+        "fee_in": 3.2379,
+        "last_px": 10.28,
         "min_hold": 2,
-        "notional": 2600.5001068115234,
-        "peak_px": 18.575000762939453,
-        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate zero_red=True,last_green=True; rank candle_score; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+6.2; leftover $2615.00",
-        "shares": 140,
-        "ticker": "NTSK",
-        "unpriced_held": true
+        "notional": 2580.2799999999997,
+        "peak_px": 10.28,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate zero_red=True,last_green=True; rank candle_score; list ohlc_hot; \u26aa; ret5=+9.7; leftover $2581.03",
+        "shares": 251,
+        "ticker": "SENS"
       }
     },
-    "yday_equity": 10387.12
+    "yday_equity": 10246.9
   }
 }

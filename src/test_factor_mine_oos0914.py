@@ -1310,6 +1310,89 @@ def test_oos_bar_load_includes_a_carried_name(tmp_path: Path) -> None:
     assert "AAA" in seen["tickers"]
 
 
+def test_restate_refuses_any_other_date(tmp_path: Path) -> None:
+    """The one-time path is hard-coded to 2026-09-25."""
+    tmp_path.mkdir(parents=True, exist_ok=True)
+    for day in ("", "2026-09-24", "2026-09-26", "2026-09-28"):
+        try:
+            oos.restate_oos_day(day, log_path=tmp_path / "log.md")
+        except SystemExit as exc:
+            assert "refuses" in str(exc)
+            assert oos.OOS_RESTATE_DATE in str(exc)
+        else:
+            raise AssertionError(f"{day or '(empty)'} was accepted")
+    try:
+        oos._write_restate_bytes(tmp_path / "2026-09-24.json", b"{}", "2026-09-24")
+    except SystemExit as exc:
+        assert "refuses" in str(exc)
+    else:
+        raise AssertionError("other date was written")
+    try:
+        oos._write_restate_bytes(tmp_path / "2026-09-25.json", b"{}", oos.OOS_RESTATE_DATE)
+    except SystemExit as exc:
+        assert "refuses" in str(exc)
+    else:
+        raise AssertionError("path outside the OOS tree was written")
+    assert not (tmp_path / "2026-09-25.json").exists()
+
+
+def test_second_restate_is_refused(tmp_path: Path) -> None:
+    """A log entry for 2026-09-25 blocks another rewrite, and other days stay write-once."""
+    tmp_path.mkdir(parents=True, exist_ok=True)
+    log = tmp_path / "RESTATEMENTS.md"
+    log.write_text(oos._restate_token(oos.OOS_RESTATE_DATE) + "\n", encoding="utf-8")
+    ledger = oos.LEDGER_DIR / "2026-09-24.json"
+    before = ledger.read_bytes()
+    try:
+        oos.restate_oos_day(oos.OOS_RESTATE_DATE, log_path=log)
+    except SystemExit as exc:
+        assert "already exists" in str(exc)
+    else:
+        raise AssertionError("second restatement ran")
+    assert ledger.read_bytes() == before
+    doc = json.loads(before)
+    doc["note"] = "should not land"
+    try:
+        oos.write_oos_ledger("2026-09-24", doc)
+    except fmr.AppendDrift:
+        pass
+    else:
+        raise AssertionError("write_oos_ledger accepted a changed day")
+    assert ledger.read_bytes() == before
+    root = tmp_path / "state"
+    seq.write_state("toy", "2026-09-24", {"cash": 1, "date": "2026-09-24"}, root)
+    try:
+        seq.write_state("toy", "2026-09-24", {"cash": 2, "date": "2026-09-24"}, root)
+    except fmf.FrozenHistory:
+        pass
+    else:
+        raise AssertionError("write_state accepted a changed day")
+
+
+def test_logged_0925_restate_cannot_run_again() -> None:
+    """The committed log is the lock. A second call does not touch 09-24."""
+    text = oos.RESTATE_LOG.read_text(encoding="utf-8")
+    assert oos._restate_token(oos.OOS_RESTATE_DATE) in text.splitlines() or any(
+        line.strip() == oos._restate_token(oos.OOS_RESTATE_DATE) for line in text.splitlines()
+    )
+    assert "Cyrus" in text
+    assert "2026-09-26 HKT" in text
+    assert "designed after the fact" in text
+    assert "not part of the clean record" in text
+    ledger = json.loads((oos.LEDGER_DIR / "2026-09-25.json").read_text(encoding="utf-8"))
+    assert ledger.get("record") == "designed_after"
+    assert ledger.get("clean_record") is False
+    day = oos.LEDGER_DIR / "2026-09-24.json"
+    before = day.read_bytes()
+    try:
+        oos.restate_oos_day(oos.OOS_RESTATE_DATE)
+    except SystemExit as exc:
+        assert "already exists" in str(exc)
+    else:
+        raise AssertionError("committed restatement ran again")
+    assert day.read_bytes() == before
+
+
 def main() -> None:
     import tempfile
     manifest = fmf.MANIFEST_PATH.read_bytes()
@@ -1353,6 +1436,9 @@ def main() -> None:
         test_empty_tape_refuses_to_lock(root / "empty_tape")
         test_carried_name_sells_at_the_session_open(root / "session_open")
         test_oos_bar_load_includes_a_carried_name(root / "held_bars")
+        test_restate_refuses_any_other_date(root / "restate_dates")
+        test_second_restate_is_refused(root / "restate_once")
+        test_logged_0925_restate_cannot_run_again()
     assert fmf.MANIFEST_PATH.read_bytes() == manifest
     print("oos0914 tests passed")
 
