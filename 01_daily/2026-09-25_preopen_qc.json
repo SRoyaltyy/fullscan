@@ -1,6 +1,6 @@
 {
   "date": "2026-09-25",
-  "generated_at": "2026-09-25T06:09:58.983694-04:00",
+  "generated_at": "2026-09-26T02:07:42.380132-04:00",
   "items": [
     {
       "ok": true,
@@ -62,7 +62,7 @@
       "kind": "finviz_digest",
       "path": "01_daily/news/2026-09-25_finviz_digest.json",
       "reason": "",
-      "size": 97598,
+      "size": 96544,
       "carried": false,
       "timeout": false,
       "empty": false,
@@ -80,14 +80,14 @@
       "missing_markers": []
     },
     {
-      "ok": false,
+      "ok": true,
       "kind": "finviz_market_digest",
       "path": "01_daily/news/2026-09-25_finviz_market_digest_close.json",
-      "reason": "missing",
-      "size": 0,
+      "reason": "",
+      "size": 6655,
       "carried": false,
       "timeout": false,
-      "empty": true,
+      "empty": false,
       "missing_markers": []
     },
     {
@@ -250,67 +250,78 @@
       "sector": "Basic Materials",
       "ok": true,
       "reason": "",
-      "size": 17356
+      "size": 17356,
+      "status": "OK"
     },
     {
       "sector": "Communication Services",
       "ok": true,
       "reason": "",
-      "size": 21174
+      "size": 21174,
+      "status": "OK"
     },
     {
       "sector": "Consumer Cyclical",
       "ok": true,
       "reason": "",
-      "size": 23876
+      "size": 23876,
+      "status": "OK"
     },
     {
       "sector": "Consumer Defensive",
       "ok": true,
       "reason": "",
-      "size": 22049
+      "size": 22049,
+      "status": "OK"
     },
     {
       "sector": "Energy",
       "ok": true,
       "reason": "",
-      "size": 16030
+      "size": 16030,
+      "status": "OK"
     },
     {
       "sector": "Financial",
       "ok": true,
       "reason": "",
-      "size": 18500
+      "size": 18500,
+      "status": "OK"
     },
     {
       "sector": "Healthcare",
       "ok": true,
       "reason": "",
-      "size": 14842
+      "size": 14842,
+      "status": "OK"
     },
     {
       "sector": "Industrials",
       "ok": true,
       "reason": "",
-      "size": 20348
+      "size": 20348,
+      "status": "OK"
     },
     {
       "sector": "Real Estate",
       "ok": true,
       "reason": "",
-      "size": 20816
+      "size": 20816,
+      "status": "OK"
     },
     {
       "sector": "Technology",
       "ok": true,
       "reason": "",
-      "size": 15104
+      "size": 15104,
+      "status": "OK"
     },
     {
       "sector": "Utilities",
       "ok": true,
       "reason": "",
-      "size": 16305
+      "size": 16305,
+      "status": "OK"
     }
   ],
   "sector_n_ok": 11,
