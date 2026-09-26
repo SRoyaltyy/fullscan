@@ -13,6 +13,7 @@ from research.factor_mine_recipe_search_v4.bars import CleanStore  # noqa: E402
 from research.factor_mine_recipe_search_v4.engine import walk  # noqa: E402
 from research.factor_mine_recipe_search_v4.metrics import summarize  # noqa: E402
 from research.factor_mine_recipe_search_v4.protocol import (  # noqa: E402
+    CAPITAL,
     FORWARD,
     FREEZE,
     INPUTS,
@@ -28,19 +29,34 @@ from src.paper_trade import load_fees  # noqa: E402
 
 
 def _slice(book: dict) -> dict:
-    daily = [day for day in book["daily"] if day["session"] in FORWARD]
-    # Rebase the forward slice as its own compound from the equity entering 09-14.
+    """Forward sessions only. Dollar drops start from the prior close, not CAPITAL."""
+    wanted = set(FORWARD)
+    daily = [day for day in book["daily"] if day["session"] in wanted]
     if not daily:
         return book
     # summarize() compounds daily ret, which is already a ratio. Slicing the
     # ratios is the forward return of the continuous book. Closed trades are
-    # those whose sell date is in the forward window.
-    closed = [trade for trade in book["closed"] if trade["exit"] in set(FORWARD)]
-    pnl = {day: bucket for day, bucket in book["pnl_by_day"].items() if day in set(FORWARD)}
+    # those whose sell date is in the forward window. A without-stock figure
+    # needs the equity at the close before this window (2026-09-11).
+    prior = [day for day in book["daily"] if day["session"] < daily[0]["session"]]
+    if prior:
+        start_equity = float(prior[-1]["equity"])
+    elif book.get("start_equity") is not None:
+        start_equity = float(book["start_equity"])
+    else:
+        start_equity = float(CAPITAL)
+    closed = [trade for trade in book["closed"] if trade["exit"] in wanted]
+    pnl = {day: bucket for day, bucket in book["pnl_by_day"].items() if day in wanted}
     first = {}
     for trade in closed:
         first.setdefault(trade["ticker"], trade["entry"])
-    return {"closed": closed, "daily": daily, "first": first, "pnl_by_day": pnl}
+    return {
+        "closed": closed,
+        "daily": daily,
+        "first": first,
+        "pnl_by_day": pnl,
+        "start_equity": start_equity,
+    }
 
 
 def main() -> None:

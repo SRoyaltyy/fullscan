@@ -217,7 +217,13 @@ def walk(days: list[dict], recipe: dict, fees: dict, price, fill: str) -> dict:
         })
         prev = equity
         prev_15 = equity_15
-    return {"closed": closed, "daily": daily, "first": first, "pnl_by_day": pnl_by_day}
+    return {
+        "closed": closed,
+        "daily": daily,
+        "first": first,
+        "pnl_by_day": pnl_by_day,
+        "start_equity": CAPITAL,
+    }
 
 
 def assert_fills() -> None:
