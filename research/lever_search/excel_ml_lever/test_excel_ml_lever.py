@@ -4,6 +4,7 @@ Run: python research/lever_search/excel_ml_lever/test_excel_ml_lever.py
 """
 from __future__ import annotations
 
+import datetime as dt
 import importlib.util
 import json
 import tempfile
@@ -87,25 +88,119 @@ def test_price_features_ignore_today_and_the_future() -> None:
         _fail("same-day open is the fill and should still be readable")
 
 
+def _when(stamp: str) -> dt.datetime:
+    text = stamp[:-1] + "+00:00" if stamp.endswith("Z") else stamp
+    return dt.datetime.fromisoformat(text)
+
+
+_NOTE = """# note
+
+## New suggestions
+
+| ticker | side | strategy | exit | ref close | signal colors |
+|---|---|---|---|---|---|
+| AAPL | LONG | L1_long_green_tp8_lowvol | tp8 | 10 | red|white |
+| E | SHORT | L9_short | tp3 | 5 | white |
+
+## Live strategy scoreboard (all tracked suggestions, ret vs entry open)
+
+| strategy | n | mean | median | win% |
+|---|---|---|---|---|
+| L1_long_green_tp8_lowvol | 290 | -0.08% | -0.97% | 42.4% |
+
+## Best open suggestions (ret vs entry open)
+
+| signal date | ticker | strategy | entry open | current | ret | days held |
+|---|---|---|---|---|---|---|
+| 2026-07-27 | HHS | L1_long_green_tp8_lowvol | 2.36 | 4.33 | +83.47% | 34 |
+"""
+
+_EMPTY = "None — no cluster confirmed today.\n"
+
+
 def test_suggestion_clock() -> None:
-    suggestions = {
-        "AAA": [
-            {"signal_date": "2026-08-14", "side": "long"},
-            {"signal_date": "2026-08-17", "side": "long"},
-            {"signal_date": "2026-09-25", "side": "short"},
-        ]
-    }
-    # Morning 08-17 may see the 08-14 confirm (prior session) only.
-    today = M.suggestion_features("AAA", "2026-08-14", suggestions)
-    if today["excel_sugg_long"] != 1.0 or today["excel_sugg_n"] != 1.0:
-        _fail(f"prior confirm missing: {today}")
-    same_day = M.suggestion_features("AAA", "2026-08-16", suggestions)
-    if same_day["excel_sugg_long"] != 0.0 or same_day["excel_sugg_n"] != 0.0:
-        _fail(f"a non-prior signal leaked: {same_day}")
-    # signal_date == decision day is not the prior session, so it is absent.
-    leaked = M.suggestion_features("AAA", None, suggestions)
-    if leaked["excel_sugg_long"] is not None:
-        _fail("first session should not invent a suggestion")
+    """A note dated D is visible only on the next panel session, from the last commit before that 09:30."""
+    sessions = [
+        "2026-08-28", "2026-08-31", "2026-09-01", "2026-09-03",
+        "2026-09-04", "2026-09-08", "2026-09-11",
+    ]
+    early = "a" * 40
+    late = "b" * 40
+    notes = [{
+        "date": "2026-08-30",
+        "commits": [
+            (_when("2026-08-30T15:45:42Z"), early, "early"),
+            (_when("2026-08-30T16:22:19Z"), late, "late"),
+        ],
+        "blobs": {early: _EMPTY, late: _NOTE},
+    }]
+    pinned = M.assign_pinned_signals(sessions, notes)
+    morning = pinned["2026-08-31"]
+    if [row["ticker"] for row in morning] != ["AAPL", "E"]:
+        _fail(f"later blob was not the pin: {morning}")
+    if any(row["ticker"] == "HHS" for row in morning):
+        _fail("scoreboard ticker leaked into the signal")
+    flags = M.suggestion_features("AAPL", morning)
+    if flags["excel_sugg_long"] != 1.0 or flags["excel_sugg_n"] != 1.0:
+        _fail(f"long flag missing: {flags}")
+    short = M.suggestion_features("E", morning)
+    if short["excel_sugg_short"] != 1.0 or short["excel_sugg_long"] != 0.0:
+        _fail(f"short flag missing: {short}")
+    if pinned["2026-09-01"]:
+        _fail("a note must not be reused on a later morning")
+    if pinned["2026-08-28"]:
+        _fail("a note must not be a feature on a morning before it exists")
+    # A commit at the open, and a commit after it, are both too late.
+    at_open = M.excel_open_cutoff("2026-08-31")
+    after = _when("2026-08-31T18:00:00Z")
+    late_only = M.assign_pinned_signals(sessions, [{
+        "date": "2026-08-30",
+        "commits": [(at_open, late, "at"), (after, early, "after")],
+        "blobs": {late: _NOTE, early: _NOTE},
+    }])
+    if late_only["2026-08-31"]:
+        _fail("a commit at 09:30 was treated as knowable")
+    # The earlier blob is the pin when the second write misses the open.
+    mixed = M.assign_pinned_signals(sessions, [{
+        "date": "2026-08-30",
+        "commits": [
+            (_when("2026-08-30T15:45:42Z"), early, "early"),
+            (after, late, "late"),
+        ],
+        "blobs": {early: _EMPTY, late: _NOTE},
+    }])
+    if mixed["2026-08-31"]:
+        _fail("the after-open rewrite was used, or the empty blob invented rows")
+    # Two notes share the next session (Friday and Saturday both open Monday).
+    friday = "c" * 40
+    saturday = "d" * 40
+    both = M.assign_pinned_signals(sessions, [
+        {
+            "date": "2026-09-04",
+            "commits": [(_when("2026-09-04T20:00:00Z"), friday, "fri")],
+            "blobs": {friday: _NOTE},
+        },
+        {
+            "date": "2026-09-05",
+            "commits": [(_when("2026-09-05T20:00:00Z"), saturday, "sat")],
+            "blobs": {saturday: _NOTE},
+        },
+    ])
+    if len(both["2026-09-08"]) != 4:
+        _fail(f"Friday and Saturday notes did not union onto Monday: {both['2026-09-08']}")
+    if both["2026-09-11"]:
+        _fail("weekend notes leaked onto a later morning")
+    # A note whose next session is the cutoff is not loaded.
+    past = M.assign_pinned_signals(sessions, [{
+        "date": "2026-09-11",
+        "commits": [(_when("2026-09-11T20:00:00Z"), late, "late")],
+        "blobs": {late: _NOTE},
+    }])
+    if any(past.values()):
+        _fail(f"a note aimed at the cutoff was loaded: {past}")
+    absent = M.suggestion_features("AAA", [])
+    if absent["excel_sugg_long"] != 0.0 or absent["excel_sugg_n"] != 0.0:
+        _fail(f"a morning with no note should be zeros: {absent}")
 
 
 def test_excluded_columns_are_not_features() -> None:
@@ -124,6 +219,40 @@ def test_excluded_columns_are_not_features() -> None:
         _fail("theme radar hook must stay off")
     if any(name.startswith("theme_") for name in M.FEATURES):
         _fail("theme radar column is on")
+    letters = {
+        "excel_FQ", "excel_ER", "excel_EP", "excel_AH", "excel_FR",
+        "excel_prior_hammer",
+    }
+    leaked = letters & set(M.FEATURES)
+    if leaked:
+        _fail(f"clear-letter columns are features: {leaked}")
+    if set(M.EXCEL_FEATURES) != {"excel_sugg_long", "excel_sugg_short", "excel_sugg_n"}:
+        _fail(f"excel features drifted: {M.EXCEL_FEATURES}")
+
+
+def test_llm_packet_is_blank_before_the_panel() -> None:
+    row = {
+        "date": "2026-08-12",
+        "ticker": "AAA",
+        "ohlc_hot_score": 1.5,
+        "boxes": {"ab": "good", "sector": "bad", "peer": "good", "vol": "neutral"},
+        "news_prior": "good",
+        "clk_mom_break_peer": True,
+        "last_green": True,
+    }
+    feat = M.row_features(row, price_features={}, excel_rows=[])
+    if feat["box_ab"] is not None or feat["box_sector"] is not None:
+        _fail(f"LLM boxes were rebuilt before the panel: {feat['box_ab']}")
+    if feat["cat_news_prior"] is not None or feat["clk_mom_break_peer"] is not None:
+        _fail("news or clock-b was rebuilt before the panel")
+    if feat["box_peer"] != 1.0 or feat["ohlc_hot_score"] != 1.5 or feat["last_green"] != 1.0:
+        _fail("price boxes were blanked with the LLM packet")
+    kept = M.row_features(
+        {"date": "2026-08-13", "ticker": "AAA", "boxes": {"ab": "good"}},
+        price_features={}, excel_rows=[],
+    )
+    if kept["box_ab"] != 1.0:
+        _fail("AB on a real morning session was dropped")
 
 
 def _synthetic():
@@ -191,7 +320,7 @@ def test_walk_does_not_train_on_unknown_exits_and_is_deterministic() -> None:
                 _fail("cutoff day was scored")
         # A name's training target for the decision day must not use that day's exit.
         day = picked[-1]["date"]
-        items = M.training_items(panel, sessions, day, letters={}, suggestions={}, bars_by_ticker=bars)
+        items = M.training_items(panel, sessions, day, excel_by_day={}, bars_by_ticker=bars)
         for item in items:
             if item["exit"] >= day:
                 _fail(f"training exit {item['exit']} is not before {day}")
@@ -351,6 +480,7 @@ def main() -> None:
         test_price_features_ignore_today_and_the_future,
         test_suggestion_clock,
         test_excluded_columns_are_not_features,
+        test_llm_packet_is_blank_before_the_panel,
         test_walk_does_not_train_on_unknown_exits_and_is_deterministic,
         test_future_panel_row_is_dropped,
         test_cutoff_range_is_refused,

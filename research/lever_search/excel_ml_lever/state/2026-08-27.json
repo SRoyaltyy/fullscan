@@ -4,7 +4,7 @@
       "fees": 3.5088,
       "fees_15bp": 1.8748,
       "price": 9.19,
-      "score": 0.283751,
+      "score": 0.264827,
       "shares": 272,
       "side": "BUY",
       "ticker": "CAPR"
@@ -13,7 +13,7 @@
       "fees": 2.7993,
       "fees_15bp": 1.8749,
       "price": 11.52,
-      "score": 0.273805,
+      "score": 0.238385,
       "shares": 217,
       "side": "BUY",
       "ticker": "FLNC"
@@ -22,31 +22,31 @@
       "fees": 6.708,
       "fees_15bp": 1.8759,
       "price": 4.81,
-      "score": 0.19901,
+      "score": 0.20266,
       "shares": 520,
       "side": "BUY",
       "ticker": "OABI"
     },
     {
-      "fees": 2.416,
-      "fees_15bp": 1.8744,
-      "price": 17.6,
-      "score": 0.180892,
-      "shares": 142,
+      "fees": 19.2339,
+      "fees_15bp": 1.8675,
+      "price": 1.67,
+      "score": 0.187665,
+      "shares": 1491,
       "side": "BUY",
-      "ticker": "FWRD"
+      "ticker": "CNDT"
     }
   ],
-  "cash": 21.7277,
-  "cash_flat": 34.9239,
+  "cash": 14.1399,
+  "cash_flat": 44.1609,
   "date": "2026-08-27",
   "designed_after": true,
-  "equity": 10021.65,
-  "equity_15bp": 10034.84,
+  "equity": 10004.83,
+  "equity_15bp": 10034.85,
   "holdings": [
     "CAPR",
+    "CNDT",
     "FLNC",
-    "FWRD",
     "OABI"
   ],
   "n": 4,
@@ -56,27 +56,27 @@
     "CAPR",
     "FLNC",
     "OABI",
-    "FWRD"
+    "CNDT"
   ],
-  "ret_pct": 0.3165,
-  "ret_pct_flat_15bp": 0.4228,
+  "ret_pct": 0.1481,
+  "ret_pct_flat_15bp": 0.4229,
   "sat": false,
   "scores": [
     {
-      "score": 0.283751,
+      "score": 0.264827,
       "ticker": "CAPR"
     },
     {
-      "score": 0.273805,
+      "score": 0.238385,
       "ticker": "FLNC"
     },
     {
-      "score": 0.19901,
+      "score": 0.20266,
       "ticker": "OABI"
     },
     {
-      "score": 0.180892,
-      "ticker": "FWRD"
+      "score": 0.187665,
+      "ticker": "CNDT"
     }
   ],
   "sells": [
@@ -117,5 +117,5 @@
       "ticker": "WIX"
     }
   ],
-  "sha256": "1c723ab1a2734570d2debb254b11268e707697e7a44791781e589f57674c8d8b"
+  "sha256": "021c2e4bc1eda13444d13701d0d241e1d091302df0fece922c9ee06a73fcb077"
 }

@@ -1,121 +1,121 @@
 {
   "buys": [
     {
-      "fees": 5.3664,
-      "fees_15bp": 1.8782,
+      "fees": 5.6115,
+      "fees_15bp": 1.964,
       "price": 6.02,
-      "score": 0.112818,
-      "shares": 416,
+      "score": 0.111558,
+      "shares": 435,
       "side": "BUY",
       "ticker": "DFDV"
     },
     {
-      "fees": 28.5993,
-      "fees_15bp": 1.8623,
-      "price": 1.12,
-      "score": 0.111982,
-      "shares": 2217,
+      "fees": 4.5279,
+      "fees_15bp": 1.9638,
+      "price": 7.46,
+      "score": 0.11024,
+      "shares": 351,
       "side": "BUY",
-      "ticker": "ORBS"
+      "ticker": "UGP"
     },
     {
-      "fees": 2.35,
-      "fees_15bp": 1.8729,
-      "price": 20.81,
-      "score": 0.108263,
-      "shares": 120,
-      "side": "BUY",
-      "ticker": "SRPT"
-    },
-    {
-      "fees": 8.0754,
-      "fees_15bp": 1.878,
+      "fees": 8.4366,
+      "fees_15bp": 1.962,
       "price": 4.0,
-      "score": 0.10762,
-      "shares": 626,
+      "score": 0.087925,
+      "shares": 654,
       "side": "BUY",
       "ticker": "HYLN"
+    },
+    {
+      "fees": 29.8893,
+      "fees_15bp": 1.9463,
+      "price": 1.12,
+      "score": 0.085338,
+      "shares": 2317,
+      "side": "BUY",
+      "ticker": "ORBS"
     }
   ],
-  "cash": 15.7082,
-  "cash_flat": 584.9093,
+  "cash": 4.4349,
+  "cash_flat": 628.6144,
   "date": "2026-09-09",
   "designed_after": true,
-  "equity": 10004.27,
-  "equity_15bp": 10573.47,
+  "equity": 10452.63,
+  "equity_15bp": 11076.81,
   "holdings": [
     "DFDV",
     "HYLN",
     "ORBS",
-    "SRPT"
+    "UGP"
   ],
   "n": 4,
   "n_train_rows": 1569,
   "n_train_sessions": 17,
   "picks": [
     "DFDV",
-    "ORBS",
-    "SRPT",
-    "HYLN"
+    "UGP",
+    "HYLN",
+    "ORBS"
   ],
-  "ret_pct": -1.5717,
-  "ret_pct_flat_15bp": -0.8264,
+  "ret_pct": 3.1298,
+  "ret_pct_flat_15bp": 3.6328,
   "sat": false,
   "scores": [
     {
-      "score": 0.112818,
+      "score": 0.111558,
       "ticker": "DFDV"
     },
     {
-      "score": 0.111982,
-      "ticker": "ORBS"
+      "score": 0.11024,
+      "ticker": "UGP"
     },
     {
-      "score": 0.108263,
-      "ticker": "SRPT"
-    },
-    {
-      "score": 0.10762,
+      "score": 0.087925,
       "ticker": "HYLN"
+    },
+    {
+      "score": 0.085338,
+      "ticker": "ORBS"
     }
   ],
   "sells": [
     {
-      "fees": 16.5743,
-      "fees_15bp": 1.8435,
-      "pnl": -108.9385,
+      "fees": 16.522,
+      "fees_15bp": 1.8377,
+      "pnl": -108.5946,
       "price": 1.94,
-      "shares": 1267,
+      "shares": 1263,
       "side": "SELL",
       "ticker": "BMEA"
     },
     {
-      "fees": 21.1334,
-      "fees_15bp": 1.7574,
-      "pnl": -227.8198,
-      "price": 1.45,
-      "shares": 1616,
+      "fees": 13.6241,
+      "fees_15bp": 2.1041,
+      "pnl": 248.8119,
+      "price": 2.695,
+      "shares": 1041,
       "side": "SELL",
-      "ticker": "GPRO"
+      "ticker": "CYPH"
     },
     {
-      "fees": 2.0744,
-      "fees_15bp": 1.9146,
-      "pnl": 71.4818,
-      "price": 141.82,
-      "shares": 18,
+      "fees": 5.7178,
+      "fees_15bp": 1.9685,
+      "pnl": 80.2178,
+      "price": 6.02,
+      "shares": 436,
       "side": "SELL",
-      "ticker": "MSTR"
+      "ticker": "DFDV"
     },
     {
-      "fees": 2.4735,
-      "fees_15bp": 1.9934,
-      "pnl": 108.2484,
+      "fees": 2.4702,
+      "fees_15bp": 1.9798,
+      "pnl": 107.4797,
       "price": 18.205,
-      "shares": 146,
+      "shares": 145,
       "side": "SELL",
       "ticker": "SMMT"
     }
   ],
-  "sha256": "24c85be2c843616dd0405640c91b91b758abcdaae4731c4df5aa67e1bac4324e"
+  "sha256": "1301e02c7255509fc4e80d473ae7dc75e038e1fd7f4612f0d1ff0ca2606cdc90"
 }

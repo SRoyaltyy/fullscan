@@ -1,48 +1,48 @@
 {
   "buys": [
     {
-      "fees": 22.5363,
-      "fees_15bp": 1.7164,
-      "price": 1.31,
-      "score": 0.221585,
-      "shares": 1747,
-      "side": "BUY",
-      "ticker": "SKYX"
-    },
-    {
-      "fees": 8.9397,
-      "fees_15bp": 1.7256,
+      "fees": 8.9139,
+      "fees_15bp": 1.7206,
       "price": 3.32,
-      "score": 0.210184,
-      "shares": 693,
+      "score": 0.224375,
+      "shares": 691,
       "side": "BUY",
       "ticker": "CTMX"
     },
     {
-      "fees": 2.59,
-      "fees_15bp": 1.731,
+      "fees": 2.587,
+      "fees_15bp": 1.7223,
       "price": 11.54,
-      "score": 0.209029,
-      "shares": 200,
+      "score": 0.188668,
+      "shares": 199,
       "side": "BUY",
       "ticker": "TRLV"
     },
     {
-      "fees": 17.0022,
-      "fees_15bp": 1.72,
+      "fees": 22.4718,
+      "fees_15bp": 1.7115,
+      "price": 1.31,
+      "score": 0.174192,
+      "shares": 1742,
+      "side": "BUY",
+      "ticker": "SKYX"
+    },
+    {
+      "fees": 16.9506,
+      "fees_15bp": 1.7148,
       "price": 1.74,
-      "score": 0.159021,
-      "shares": 1318,
+      "score": 0.157889,
+      "shares": 1314,
       "side": "BUY",
       "ticker": "CYPH"
     }
   ],
-  "cash": 5.6965,
-  "cash_flat": 225.634,
+  "cash": 8.2999,
+  "cash_flat": 288.4565,
   "date": "2026-09-01",
   "designed_after": true,
-  "equity": 9196.35,
-  "equity_15bp": 9416.28,
+  "equity": 9167.26,
+  "equity_15bp": 9447.42,
   "holdings": [
     "CTMX",
     "CYPH",
@@ -53,69 +53,69 @@
   "n_train_rows": 1123,
   "n_train_sessions": 12,
   "picks": [
-    "SKYX",
     "CTMX",
     "TRLV",
+    "SKYX",
     "CYPH"
   ],
-  "ret_pct": -3.8628,
-  "ret_pct_flat_15bp": -2.8601,
+  "ret_pct": -4.7223,
+  "ret_pct_flat_15bp": -3.5626,
   "sat": false,
   "scores": [
     {
-      "score": 0.221585,
-      "ticker": "SKYX"
-    },
-    {
-      "score": 0.210184,
+      "score": 0.224375,
       "ticker": "CTMX"
     },
     {
-      "score": 0.209029,
+      "score": 0.188668,
       "ticker": "TRLV"
     },
     {
-      "score": 0.159021,
+      "score": 0.174192,
+      "ticker": "SKYX"
+    },
+    {
+      "score": 0.157889,
       "ticker": "CYPH"
     }
   ],
   "sells": [
     {
-      "fees": 39.8861,
-      "fees_15bp": 1.5657,
-      "pnl": -357.4732,
+      "fees": 40.172,
+      "fees_15bp": 1.577,
+      "pnl": -360.0355,
       "price": 0.348,
-      "shares": 5999,
+      "shares": 6042,
       "side": "SELL",
       "ticker": "CAN"
     },
     {
-      "fees": 2.2659,
-      "fees_15bp": 1.8195,
-      "pnl": 42.0762,
+      "fees": 2.2693,
+      "fees_15bp": 1.8419,
+      "pnl": 42.6448,
       "price": 29.95,
-      "shares": 81,
+      "shares": 82,
       "side": "SELL",
       "ticker": "CNXC"
     },
     {
-      "fees": 5.2854,
-      "fees_15bp": 1.8558,
-      "pnl": 66.0859,
-      "price": 6.14,
-      "shares": 403,
+      "fees": 18.1288,
+      "fees_15bp": 1.8087,
+      "pnl": -29.0782,
+      "price": 1.74,
+      "shares": 1386,
       "side": "SELL",
-      "ticker": "FWDI"
+      "ticker": "CYPH"
     },
     {
-      "fees": 7.6227,
-      "fees_15bp": 1.7154,
-      "pnl": -125.7104,
+      "fees": 7.6751,
+      "fees_15bp": 1.7272,
+      "pnl": -126.5744,
       "price": 3.93,
-      "shares": 582,
+      "shares": 586,
       "side": "SELL",
       "ticker": "NABL"
     }
   ],
-  "sha256": "6ba42f03365e472e58f93fa4826a5da1e59fdbf5b2a4ebb6c8a0c1d680e75b1b"
+  "sha256": "4ebc5b18201f2a4e89bf0720562c0a6237443dc131cf85853ffd19d1f3cf5e72"
 }

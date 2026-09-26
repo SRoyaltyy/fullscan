@@ -1,52 +1,52 @@
 {
   "buys": [
     {
-      "fees": 41.6331,
-      "fees_15bp": 1.7727,
+      "fees": 41.9315,
+      "fees_15bp": 1.7854,
       "price": 0.394,
-      "score": 0.161396,
-      "shares": 5999,
+      "score": 0.198285,
+      "shares": 6042,
       "side": "BUY",
       "ticker": "CAN"
     },
     {
-      "fees": 7.5078,
-      "fees_15bp": 1.7984,
+      "fees": 7.5594,
+      "fees_15bp": 1.8107,
       "price": 4.12,
-      "score": 0.154344,
-      "shares": 582,
+      "score": 0.162443,
+      "shares": 586,
       "side": "BUY",
       "ticker": "NABL"
     },
     {
-      "fees": 5.1987,
-      "fees_15bp": 1.7984,
-      "price": 5.95,
-      "score": 0.135325,
-      "shares": 403,
+      "fees": 17.8794,
+      "fees_15bp": 1.8035,
+      "price": 1.735,
+      "score": 0.146763,
+      "shares": 1386,
       "side": "BUY",
-      "ticker": "FWDI"
+      "ticker": "CYPH"
     },
     {
-      "fees": 2.233,
-      "fees_15bp": 1.7845,
+      "fees": 2.236,
+      "fees_15bp": 1.8066,
       "price": 29.375,
-      "score": 0.132514,
-      "shares": 81,
+      "score": 0.136909,
+      "shares": 82,
       "side": "BUY",
       "ticker": "CNXC"
     }
   ],
-  "cash": 27.1926,
-  "cash_flat": 154.8512,
+  "cash": 13.2922,
+  "cash_flat": 188.1043,
   "date": "2026-08-31",
   "designed_after": true,
-  "equity": 9565.86,
-  "equity_15bp": 9693.52,
+  "equity": 9621.62,
+  "equity_15bp": 9796.43,
   "holdings": [
     "CAN",
     "CNXC",
-    "FWDI",
+    "CYPH",
     "NABL"
   ],
   "n": 4,
@@ -55,67 +55,67 @@
   "picks": [
     "CAN",
     "NABL",
-    "FWDI",
+    "CYPH",
     "CNXC"
   ],
-  "ret_pct": -3.7339,
-  "ret_pct_flat_15bp": -2.9324,
+  "ret_pct": -3.8595,
+  "ret_pct_flat_15bp": -2.9222,
   "sat": false,
   "scores": [
     {
-      "score": 0.161396,
+      "score": 0.198285,
       "ticker": "CAN"
     },
     {
-      "score": 0.154344,
+      "score": 0.162443,
       "ticker": "NABL"
     },
     {
-      "score": 0.135325,
-      "ticker": "FWDI"
+      "score": 0.146763,
+      "ticker": "CYPH"
     },
     {
-      "score": 0.132514,
+      "score": 0.136909,
       "ticker": "CNXC"
     }
   ],
   "sells": [
     {
-      "fees": 3.3512,
-      "fees_15bp": 1.8169,
-      "pnl": -65.2906,
+      "fees": 3.3775,
+      "fees_15bp": 1.8311,
+      "pnl": -65.8027,
       "price": 9.5,
-      "shares": 255,
+      "shares": 257,
       "side": "SELL",
       "ticker": "CAPR"
     },
     {
-      "fees": 3.3645,
-      "fees_15bp": 1.8336,
-      "pnl": -50.1869,
+      "fees": 3.3776,
+      "fees_15bp": 1.8408,
+      "pnl": -50.3829,
       "price": 9.55,
-      "shares": 256,
+      "shares": 257,
       "side": "SELL",
       "ticker": "DJT"
     },
     {
-      "fees": 26.8699,
-      "fees_15bp": 1.8033,
-      "pnl": -115.0296,
+      "fees": 27.066,
+      "fees_15bp": 1.8164,
+      "pnl": -115.8692,
       "price": 1.17,
-      "shares": 2055,
+      "shares": 2070,
       "side": "SELL",
       "ticker": "MIST"
     },
     {
-      "fees": 2.4237,
-      "fees_15bp": 1.7808,
-      "pnl": -119.4317,
+      "fees": 2.4271,
+      "fees_15bp": 1.7944,
+      "pnl": -120.3131,
       "price": 18.125,
-      "shares": 131,
+      "shares": 132,
       "side": "SELL",
       "ticker": "TH"
     }
   ],
-  "sha256": "50cf01e9d1132c45f2db190e423bbb9eb34d89edc29ad849562349303a0c312e"
+  "sha256": "d6a3c9a5547a5bb94ba6d0301e4d704c38aacddb00badacedd179ef500fc962b"
 }

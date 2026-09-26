@@ -8,13 +8,15 @@ Every session in the published series (2026-08-13 through 2026-09-11) is before 
 
 Changing a feature, the target, the ridge penalty, the training minimum, the hold, the top-N, the fees, or the fill makes a new lever. This one stays as written.
 
+`research/INPUT_HISTORY.md` is the source of truth for which columns and dates are legal. A column that file does not treat as knowable at 09:30 ET is not a feature.
+
 ## What it trades
 
 The universe each morning is that session's rows on the fullscan morning panel, `data/factor_mine/panel.json`. That file is the 09:30 ET candidate list (about 60 to 100 names on a normal day; 9 names on 2026-08-13). Rows dated 2026-09-14 or later are dropped before any feature, fit, or score.
 
-Prices are the factor-mine Yahoo tape `data/prices/ohlc.parquet`. Those bars are `auto_adjust=false`, which this repo treats as split-adjusted and not dividend-adjusted. A name with no positive open that session is dropped from the buy list. The loader refuses any bar dated 2026-09-14 or later. The luck-test load stops at 2026-09-11.
+Prices are the factor-mine Yahoo tape `data/prices/ohlc.parquet`. Those bars are `auto_adjust=false`, which this repo treats as split-adjusted and not dividend-adjusted. A name with no positive open that session is dropped from the buy list. The loader refuses any bar dated 2026-09-14 or later. The luck-test load stops at 2026-09-11. Price features may use bars back to 2024-03-04. This lever's load starts at 2026-05-01, which is inside that window and is enough for a 20-session return before 2026-08-13.
 
-## Features (93)
+## Features (87)
 
 Each feature is known at 09:30 ET on day N, or it is not used. Within each day, finite values are turned into average ranks and mapped to about -0.5 to +0.5. A missing value sits at 0 (the middle). Ties share one rank.
 
@@ -32,11 +34,13 @@ Morning panel scores and gates, as already stamped on that day's row (not recomp
 - Clock-B stamps already on the row: `clk_mom_break_peer`, `clk_fresh_cat_coil`, `clk_earn_guide_react`, `clk_neg_weak_fail`, `clk_ext_veto`, `clk_hold_vs_sector`, `clk_insider_cash_stab`, `clk_flow_coil`, `clk_r_up_coil`, `clk_nr7_mom`
 - Morning polarity: `cat_e_pol`, `cat_r_pol`, `cat_news_prior`, `cat_news_box`, `cat_headline_tone`
 
-`box_ab` is the AB gate. The panel does not carry a numeric `s_ab`. The enriched AB file is not re-read.
+`box_ab` is the AB gate already stamped on the 31 morning sessions. The panel does not carry a numeric `s_ab`. The enriched AB file is not re-read, and it is not rebuilt for any date before 2026-08-13.
 
-Oppset numbers are the Clock-B T-1 stamp (`opp_finviz_asof` is before the row's date on every row checked). If that as-of date is not before day N, the opp fields are blanked.
+On a row dated before 2026-08-13, the LLM packet is blanked (missing, so it ranks at the center): `box_join`, `box_sector`, `box_gen`, `box_news`, `box_digest`, `box_judge`, `box_ab`, `box_heat`, `box_catal`, the news tones `cat_news_prior`, `cat_news_box`, `cat_headline_tone`, and every `clk_*` gate. Those columns exist only inside the 31 sessions (list size 9 to 118 names a day) and must not be regenerated earlier. Price fields on the row stay. The published panel already starts on 2026-08-13, so this guard does not change the luck-test rows. It stops a later backfill from inventing them.
 
-Price features, from bars with date strictly before N (today's open is not one of them):
+Oppset numbers are the Clock-B T-1 stamp (`opp_finviz_asof` is before the row's date on every row checked). If that as-of date is not before day N, the opp fields are blanked. If `news_export_date` is not before day N, the news tones are blanked.
+
+Price features, from bars with date strictly before N (today's open is not one of them). Same-day open, close, and volume are not features. Bars on or after 2026-09-14 are not read.
 
 - `px_ret1`: prior close / close before that, minus 1
 - `px_ret5`: prior close / close five sessions earlier, minus 1
@@ -44,18 +48,29 @@ Price features, from bars with date strictly before N (today's open is not one o
 - `px_gap_prior`: prior session's open / the close before that, minus 1
 - `px_rvol_prior`: prior volume / mean of the last 20 prior volumes, including that prior bar, when at least 8 prior bars exist (same rvol as `ohlc_ripper.from_bars`)
 
-Excel open letters from `excel_bot/research/excel_clear_letter_panel.csv`, joined on the panel date and ticker. The panel note says FQ, ER, EP, AH, FR and lagged DF are knowable at 09:30. Same-row DF, BB, and BQ are not in that file and are not used.
+Excel features come only from `excel_bot/daily/<date>_excel_bot.md`. Draft notes are not signal files. The live `excel_bot/suggestions/suggestions.csv` is not read: it is rewritten through later dates and its `current_price`, `ret_vs_close`, and `ret_vs_open` columns are tracking marks. The clear-letter panel `excel_bot/research/excel_clear_letter_panel.csv` is not a morning input in INPUT_HISTORY (it was generated 2026-09-12) and is not read.
 
-- `excel_FQ`, `excel_ER`, `excel_EP`, `excel_AH`, `excel_FR`
-- `excel_prior_hammer`: 1 when `DF_lag1` contains "Hammer" and does not contain "Inverted", else 0 when a pattern is present, else missing
+The job that writes a daily note runs after the US close. Some dates were committed twice, once midday and again after the close. For a note dated D, the legal blob is the last git commit strictly before the next fullscan panel session's 09:30 ET. A commit at 09:30 is too late. That is the same rule Factor Mine's freeze uses (`last_commit_before`: strictly before the open). That blob is a feature on that next session only. It is not a feature on D, and it is not picked up on a later morning. If every commit is at or after that open, the note is unused. If the next panel session is on or after 2026-09-14, the note is not loaded.
 
-Excel suggestions from `excel_bot/suggestions/suggestions.csv`. `signal_date` is the confirm day. The job runs after the US close, and the fill is the next open. On morning N the prior session's confirm is known. `run_date` is not a clock (the file carries stale bake dates).
+Two notes can share one morning. The 2026-09-04 note and the 2026-09-05 note both become visible at the 2026-09-08 open, and both are used that morning. Mornings before 2026-08-31 have no daily note, so the Excel flags are 0.
 
-- `excel_sugg_long`: 1 if that ticker has a LONG row with `signal_date` equal to the prior panel session
+Only the New suggestions table is read. The parser stops at the next heading, so the scoreboard and the best and worst sections (live returns) are ignored. Columns kept from that table are ticker, side, and strategy. Strategy is an open name list and is not a model column. Signal colors are not a feature.
+
+- `excel_sugg_long`: 1 if this ticker has a LONG row on a note pinned to morning N, else 0
 - `excel_sugg_short`: same for SHORT
-- `excel_sugg_n`: how many such rows
+- `excel_sugg_n`: how many such rows (a name can match more than one strategy)
 
-A suggestion with `signal_date` on or after 2026-09-14 is dropped at load.
+Pins used for this window (short sha, full sha is the git object):
+
+- 2026-08-30 note, visible 2026-08-31: `2cc2571f494e` (the 15:45Z commit is earlier and is not used)
+- 2026-09-01 note, visible 2026-09-02: `5fc8152510be`
+- 2026-09-02 note, visible 2026-09-03: `a9ed6a403daa` (the 14:21Z commit is earlier and is not used)
+- 2026-09-03 note, visible 2026-09-04: `1c8354e489fa`
+- 2026-09-04 note, visible 2026-09-08: `fb22c0b5de2b`
+- 2026-09-05 note, visible 2026-09-08: `284a7ad025f9`
+- 2026-09-09 note, visible 2026-09-10: `ee2dc5369963`
+- 2026-09-10 note, visible 2026-09-11: `4dc97fcbd5d4`
+- 2026-09-11 note: unused. Its next session is 2026-09-14, which is not scored. The commit itself is also after the 2026-09-11 open.
 
 ## Excluded, and why
 
@@ -63,15 +78,21 @@ A suggestion with `signal_date` on or after 2026-09-14 is dropped at load.
 - `close`: the same-day close is not known at 09:30
 - `headline`, `e_label`, `r_label`: free text. The polarities above are the gates
 - `sources`: an open list of list names. `src_rank` is the number
-- `news_export_date`, `prior_date`, `opp_finviz_asof`: dates. The export date is only a leak guard (if it is not before day N, the news tones are blanked)
+- `news_export_date`, `prior_date`, `opp_finviz_asof`: dates. The export date is only a leak guard
 - `heat_vintage`, `_clock_b`: stamps, not name scores
 - Excel `current_price`, `ret_vs_close`, `ret_vs_open`, `days_held`: tracking marks refreshed later
 - Excel `ref_close`, `first_open`: prices, not the signal identity
 - Excel `run_date`: not a clock
 - Excel `signal_colors`: an open color vocabulary
-- Excel `signal_date` equal to day N: that confirm uses day N's close
-- Numeric `s_ab`: not on the panel. `box_ab` is the morning AB gate
-- Morning S and the hard-red sit: a day-level rule, not a per-name panel column. This lever's pick rule is top 4, not that sit
+- Excel strategy name: an open vocabulary. Side and row count are the features
+- Excel `signal_date` equal to day N: that confirm uses day N's close, and the note is written after the close
+- Excel clear-letter panel (FQ, ER, EP, AH, FR, lagged DF): not a legal morning input
+- The live suggestions CSV: not the pinned note
+- Scoreboard, best, and worst sections of the daily note: live returns
+- A daily-note commit at or after the next session's 09:30: too late, and not reused later
+- Numeric `s_ab`: not on the panel. `box_ab` is the morning AB gate, and only inside the 31 sessions
+- Morning S and the hard-red sit: a day-level rule, not a per-name panel column. This lever's pick rule is top 4, not that sit. Hard-red is not rebuilt for earlier dates
+- Sector essays, news judgments, and Grok review before 2026-08-13: not rebuildable
 - Theme Radar frozen export: not in the repo. The hook is off (`THEME_RADAR_ENABLED = False`). Oppset columns already stamped on the panel are the Clock-B aisle and they are included. Turning the hook on would be a new lever
 
 ## Target
@@ -90,7 +111,7 @@ Rank the features inside the day, as above. On the training rows only, subtract 
 - Seed `7` (the fit itself has no draw)
 - No cross-validation and no search over alpha
 
-There is no hold-2 model.
+There is no hold-2 model and no second feature set.
 
 ## Training window
 
@@ -134,8 +155,8 @@ Nothing in those files is a session on or after 2026-09-14.
 
 Published luck-test result, designed_after, 21 sessions, 12 mornings with a buy:
 
-- Total return after Futubull: 0.8074% (equity $10,080.74)
-- Total return at 15bp: 8.0679% (equity $10,806.79)
+- Total return after Futubull: 0.4731% (equity $10,047.31)
+- Total return at 15bp: 8.7633% (equity $10,876.33)
 
 The gap is the Futubull per-order minimum on a $10,000 book split four ways. It is not a second model.
 
@@ -147,6 +168,6 @@ The gap is the Futubull per-order minimum on a $10,000 book split four ways. It 
 
 SHA-256 of the UTF-8 bytes of `excel_ml_lever.py`:
 
-`be64b1f14a36fab1e2f4ec598276b77c9b5bc2eed74b6fd023025f20eeabe68a`
+`ff21b76e9b7d8ddb95638e40e7aaa631f3364dbdd7c813b31b31ae831f804d4c`
 
 The SHA-256 of this SPEC.md file is in `frozen_spec.json`.

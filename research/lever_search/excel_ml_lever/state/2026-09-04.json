@@ -4,45 +4,45 @@
       "fees": 2.017,
       "fees_15bp": 1.7777,
       "price": 263.36,
-      "score": 0.186058,
+      "score": 0.188823,
       "shares": 9,
       "side": "BUY",
       "ticker": "CRM"
     },
     {
-      "fees": 17.2473,
-      "fees_15bp": 1.9052,
+      "fees": 5.6631,
+      "fees_15bp": 1.9064,
+      "price": 5.79,
+      "score": 0.150492,
+      "shares": 439,
+      "side": "BUY",
+      "ticker": "DFDV"
+    },
+    {
+      "fees": 17.1957,
+      "fees_15bp": 1.8995,
       "price": 1.9,
-      "score": 0.154998,
-      "shares": 1337,
+      "score": 0.149119,
+      "shares": 1333,
       "side": "BUY",
       "ticker": "BMEA"
     },
     {
-      "fees": 16.899,
-      "fees_15bp": 1.9061,
+      "fees": 16.8345,
+      "fees_15bp": 1.8988,
       "price": 1.94,
-      "score": 0.149993,
-      "shares": 1310,
+      "score": 0.1325,
+      "shares": 1305,
       "side": "BUY",
       "ticker": "BAK"
-    },
-    {
-      "fees": 5.676,
-      "fees_15bp": 1.9107,
-      "price": 5.79,
-      "score": 0.141146,
-      "shares": 440,
-      "side": "BUY",
-      "ticker": "DFDV"
     }
   ],
-  "cash": 192.8495,
-  "cash_flat": 621.4046,
+  "cash": 183.7268,
+  "cash_flat": 671.8616,
   "date": "2026-09-04",
   "designed_after": true,
-  "equity": 10192.39,
-  "equity_15bp": 10620.94,
+  "equity": 10160.18,
+  "equity_15bp": 10648.31,
   "holdings": [
     "BAK",
     "BMEA",
@@ -54,47 +54,47 @@
   "n_train_sessions": 15,
   "picks": [
     "CRM",
+    "DFDV",
     "BMEA",
-    "BAK",
-    "DFDV"
+    "BAK"
   ],
-  "ret_pct": -0.3921,
-  "ret_pct_flat_15bp": 0.2476,
+  "ret_pct": -0.3899,
+  "ret_pct_flat_15bp": 0.2484,
   "sat": false,
   "scores": [
     {
-      "score": 0.186058,
+      "score": 0.188823,
       "ticker": "CRM"
     },
     {
-      "score": 0.154998,
+      "score": 0.150492,
+      "ticker": "DFDV"
+    },
+    {
+      "score": 0.149119,
       "ticker": "BMEA"
     },
     {
-      "score": 0.149993,
+      "score": 0.1325,
       "ticker": "BAK"
-    },
-    {
-      "score": 0.141146,
-      "ticker": "DFDV"
     }
   ],
   "sells": [
     {
-      "fees": 17.2803,
-      "fees_15bp": 1.8824,
-      "pnl": -73.9512,
+      "fees": 17.2279,
+      "fees_15bp": 1.8767,
+      "pnl": -73.7272,
       "price": 1.9,
-      "shares": 1321,
+      "shares": 1317,
       "side": "SELL",
       "ticker": "BMEA"
     },
     {
-      "fees": 17.555,
-      "fees_15bp": 1.9123,
-      "pnl": -34.8668,
+      "fees": 17.5026,
+      "fees_15bp": 1.9066,
+      "pnl": -34.7628,
       "price": 1.9,
-      "shares": 1342,
+      "shares": 1338,
       "side": "SELL",
       "ticker": "CNDT"
     },
@@ -117,5 +117,5 @@
       "ticker": "MMED"
     }
   ],
-  "sha256": "bc210db46423d0ebceae4666b686a9974ee128a4117d6988ac60e4aed3cd5962"
+  "sha256": "ddda3e794cbf6cc19b7c9a3f1355d9af8dbaa78d63ddd52f2d0319eef7ba697c"
 }

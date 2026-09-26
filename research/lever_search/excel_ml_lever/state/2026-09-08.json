@@ -1,52 +1,52 @@
 {
   "buys": [
     {
-      "fees": 16.3443,
-      "fees_15bp": 1.9005,
+      "fees": 16.2927,
+      "fees_15bp": 1.8945,
       "price": 2.0,
-      "score": 0.148407,
-      "shares": 1267,
+      "score": 0.127861,
+      "shares": 1263,
       "side": "BUY",
       "ticker": "BMEA"
     },
     {
-      "fees": 2.428,
-      "fees_15bp": 1.9086,
+      "fees": 2.425,
+      "fees_15bp": 1.8955,
       "price": 17.43,
-      "score": 0.135584,
-      "shares": 146,
+      "score": 0.124679,
+      "shares": 145,
       "side": "BUY",
       "ticker": "SMMT"
     },
     {
-      "fees": 2.044,
-      "fees_15bp": 1.8579,
-      "price": 137.62,
-      "score": 0.106359,
-      "shares": 18,
+      "fees": 5.6244,
+      "fees_15bp": 1.8999,
+      "price": 5.81,
+      "score": 0.107111,
+      "shares": 436,
       "side": "BUY",
-      "ticker": "MSTR"
+      "ticker": "DFDV"
     },
     {
-      "fees": 20.8464,
-      "fees_15bp": 1.8968,
-      "price": 1.565,
-      "score": 0.099622,
-      "shares": 1616,
+      "fees": 13.4289,
+      "fees_15bp": 1.8972,
+      "price": 2.43,
+      "score": 0.103143,
+      "shares": 1041,
       "side": "BUY",
-      "ticker": "GPRO"
+      "ticker": "CYPH"
     }
   ],
-  "cash": 79.0446,
-  "cash_flat": 576.5993,
+  "cash": 19.2743,
+  "cash_flat": 572.3806,
   "date": "2026-09-08",
   "designed_after": true,
-  "equity": 10164.02,
-  "equity_15bp": 10661.58,
+  "equity": 10135.41,
+  "equity_15bp": 10688.52,
   "holdings": [
     "BMEA",
-    "GPRO",
-    "MSTR",
+    "CYPH",
+    "DFDV",
     "SMMT"
   ],
   "n": 4,
@@ -55,46 +55,46 @@
   "picks": [
     "BMEA",
     "SMMT",
-    "MSTR",
-    "GPRO"
+    "DFDV",
+    "CYPH"
   ],
-  "ret_pct": -0.2783,
-  "ret_pct_flat_15bp": 0.3826,
+  "ret_pct": -0.2438,
+  "ret_pct_flat_15bp": 0.3776,
   "sat": false,
   "scores": [
     {
-      "score": 0.148407,
+      "score": 0.127861,
       "ticker": "BMEA"
     },
     {
-      "score": 0.135584,
+      "score": 0.124679,
       "ticker": "SMMT"
     },
     {
-      "score": 0.106359,
-      "ticker": "MSTR"
+      "score": 0.107111,
+      "ticker": "DFDV"
     },
     {
-      "score": 0.099622,
-      "ticker": "GPRO"
+      "score": 0.103143,
+      "ticker": "CYPH"
     }
   ],
   "sells": [
     {
-      "fees": 17.1368,
-      "fees_15bp": 1.9061,
-      "pnl": -34.0358,
+      "fees": 17.0714,
+      "fees_15bp": 1.8988,
+      "pnl": -33.9059,
       "price": 1.94,
-      "shares": 1310,
+      "shares": 1305,
       "side": "SELL",
       "ticker": "BAK"
     },
     {
-      "fees": 17.4906,
-      "fees_15bp": 2.0055,
-      "pnl": 98.9621,
+      "fees": 17.4383,
+      "fees_15bp": 1.9995,
+      "pnl": 98.666,
       "price": 2.0,
-      "shares": 1337,
+      "shares": 1333,
       "side": "SELL",
       "ticker": "BMEA"
     },
@@ -108,14 +108,14 @@
       "ticker": "CRM"
     },
     {
-      "fees": 5.7695,
-      "fees_15bp": 1.9173,
-      "pnl": -2.6455,
+      "fees": 5.7564,
+      "fees_15bp": 1.9129,
+      "pnl": -2.6395,
       "price": 5.81,
-      "shares": 440,
+      "shares": 439,
       "side": "SELL",
       "ticker": "DFDV"
     }
   ],
-  "sha256": "77b97b9785329993bf5255a14f9fde71afe0912d64f02d9077f604d9dedd4d8f"
+  "sha256": "ad75e50bc5b1147c2ccec0bee85ffebe8cac8c0daf477578cf26779448e0e49c"
 }

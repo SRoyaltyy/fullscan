@@ -1,29 +1,29 @@
 {
   "buys": [
     {
-      "fees": 12.0357,
-      "fees_15bp": 1.8893,
+      "fees": 11.997,
+      "fees_15bp": 1.8833,
       "price": 2.7,
-      "score": 0.169498,
-      "shares": 933,
+      "score": 0.155903,
+      "shares": 930,
       "side": "BUY",
       "ticker": "INDP"
     },
     {
-      "fees": 15.2994,
-      "fees_15bp": 1.8857,
+      "fees": 15.2478,
+      "fees_15bp": 1.8794,
       "price": 2.12,
-      "score": 0.139894,
-      "shares": 1186,
+      "score": 0.122416,
+      "shares": 1182,
       "side": "BUY",
       "ticker": "BAK"
     },
     {
-      "fees": 15.9057,
-      "fees_15bp": 1.8865,
+      "fees": 15.8541,
+      "fees_15bp": 1.8804,
       "price": 2.04,
-      "score": 0.109624,
-      "shares": 1233,
+      "score": 0.109849,
+      "shares": 1229,
       "side": "BUY",
       "ticker": "AMTX"
     },
@@ -31,18 +31,18 @@
       "fees": 2.146,
       "fees_15bp": 1.886,
       "price": 48.36,
-      "score": 0.073532,
+      "score": 0.080778,
       "shares": 52,
       "side": "BUY",
       "ticker": "CVI"
     }
   ],
-  "cash": 17.2785,
-  "cash_flat": 743.3317,
+  "cash": 8.5904,
+  "cash_flat": 837.6066,
   "date": "2026-09-11",
   "designed_after": true,
-  "equity": 10080.74,
-  "equity_15bp": 10806.79,
+  "equity": 10047.31,
+  "equity_15bp": 10876.33,
   "holdings": [
     "AMTX",
     "BAK",
@@ -58,64 +58,64 @@
     "AMTX",
     "CVI"
   ],
-  "ret_pct": 8.9929,
-  "ret_pct_flat_15bp": 9.1971,
+  "ret_pct": 5.9576,
+  "ret_pct_flat_15bp": 6.5183,
   "sat": false,
   "scores": [
     {
-      "score": 0.169498,
+      "score": 0.155903,
       "ticker": "INDP"
     },
     {
-      "score": 0.139894,
+      "score": 0.122416,
       "ticker": "BAK"
     },
     {
-      "score": 0.109624,
+      "score": 0.109849,
       "ticker": "AMTX"
     },
     {
-      "score": 0.073532,
+      "score": 0.080778,
       "ticker": "CVI"
     }
   ],
   "sells": [
     {
-      "fees": 2.4983,
-      "fees_15bp": 1.6426,
-      "pnl": -125.8533,
+      "fees": 2.5114,
+      "fees_15bp": 1.685,
+      "pnl": -128.9984,
       "price": 14.13,
-      "shares": 155,
+      "shares": 159,
       "side": "SELL",
       "ticker": "CMPS"
     },
     {
-      "fees": 15.1031,
-      "fees_15bp": 2.3369,
-      "pnl": 777.8104,
+      "fees": 15.5219,
+      "fees_15bp": 2.4017,
+      "pnl": 799.3788,
       "price": 2.7,
-      "shares": 1154,
+      "shares": 1186,
       "side": "SELL",
       "ticker": "INDP"
     },
     {
-      "fees": 27.4168,
-      "fees_15bp": 1.6357,
-      "pnl": -169.8032,
+      "fees": 28.1752,
+      "fees_15bp": 1.6809,
+      "pnl": -174.4998,
       "price": 1.04,
-      "shares": 2097,
+      "shares": 2155,
       "side": "SELL",
       "ticker": "OCGN"
     },
     {
-      "fees": 3.2095,
-      "fees_15bp": 2.0038,
-      "pnl": 347.4429,
-      "price": 10.95,
-      "shares": 244,
+      "fees": 24.3355,
+      "fees_15bp": 1.8424,
+      "pnl": 44.7077,
+      "price": 1.32,
+      "shares": 1861,
       "side": "SELL",
-      "ticker": "WLTH"
+      "ticker": "SID"
     }
   ],
-  "sha256": "75daec03afdf7004e4b053645cf3180682b67310458917d7a4bc2149c6abb408"
+  "sha256": "154b6f2536466c5537e414960c686f5c310b7353fd35bdb8cf4fcf9c1f3649ec"
 }

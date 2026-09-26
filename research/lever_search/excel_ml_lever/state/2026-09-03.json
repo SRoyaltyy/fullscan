@@ -4,45 +4,45 @@
       "fees": 2.473,
       "fees_15bp": 1.9163,
       "price": 15.87,
-      "score": 0.180693,
+      "score": 0.203086,
       "shares": 161,
       "side": "BUY",
       "ticker": "FRNM"
     },
     {
-      "fees": 17.0409,
-      "fees_15bp": 1.9121,
+      "fees": 2.311,
+      "fees_15bp": 1.9164,
+      "price": 23.88,
+      "score": 0.1468,
+      "shares": 107,
+      "side": "BUY",
+      "ticker": "MMED"
+    },
+    {
+      "fees": 16.9893,
+      "fees_15bp": 1.9064,
       "price": 1.93,
-      "score": 0.180532,
-      "shares": 1321,
+      "score": 0.142498,
+      "shares": 1317,
       "side": "BUY",
       "ticker": "BMEA"
     },
     {
-      "fees": 17.3118,
-      "fees_15bp": 1.9123,
+      "fees": 17.2602,
+      "fees_15bp": 1.9066,
       "price": 1.9,
-      "score": 0.162725,
-      "shares": 1342,
+      "score": 0.140439,
+      "shares": 1338,
       "side": "BUY",
       "ticker": "CNDT"
-    },
-    {
-      "fees": 2.311,
-      "fees_15bp": 1.9164,
-      "price": 23.88,
-      "score": 0.154372,
-      "shares": 107,
-      "side": "BUY",
-      "ticker": "MMED"
     }
   ],
-  "cash": 22.9541,
-  "cash_flat": 385.1525,
+  "cash": 5.7076,
+  "cash_flat": 427.6908,
   "date": "2026-09-03",
   "designed_after": true,
-  "equity": 10232.51,
-  "equity_15bp": 10594.71,
+  "equity": 10199.95,
+  "equity_15bp": 10621.93,
   "holdings": [
     "BMEA",
     "CNDT",
@@ -54,56 +54,56 @@
   "n_train_sessions": 14,
   "picks": [
     "FRNM",
+    "MMED",
     "BMEA",
-    "CNDT",
-    "MMED"
+    "CNDT"
   ],
-  "ret_pct": 10.565,
-  "ret_pct_flat_15bp": 10.9094,
+  "ret_pct": 10.5636,
+  "ret_pct_flat_15bp": 10.8387,
   "sat": false,
   "scores": [
     {
-      "score": 0.180693,
+      "score": 0.203086,
       "ticker": "FRNM"
     },
     {
-      "score": 0.180532,
+      "score": 0.1468,
+      "ticker": "MMED"
+    },
+    {
+      "score": 0.142498,
       "ticker": "BMEA"
     },
     {
-      "score": 0.162725,
+      "score": 0.140439,
       "ticker": "CNDT"
-    },
-    {
-      "score": 0.154372,
-      "ticker": "MMED"
     }
   ],
   "sells": [
     {
-      "fees": 10.5106,
-      "fees_15bp": 1.7465,
-      "pnl": -4.8093,
+      "fees": 10.4714,
+      "fees_15bp": 1.74,
+      "pnl": -4.7914,
       "price": 2.9,
-      "shares": 803,
+      "shares": 800,
       "side": "SELL",
       "ticker": "AVXL"
     },
     {
-      "fees": 3.3635,
-      "fees_15bp": 1.7434,
-      "pnl": 3.5741,
+      "fees": 3.3504,
+      "fees_15bp": 1.7365,
+      "pnl": 3.5601,
       "price": 9.08,
-      "shares": 256,
+      "shares": 255,
       "side": "SELL",
       "ticker": "EOLS"
     },
     {
-      "fees": 24.6432,
-      "fees_15bp": 2.5151,
-      "pnl": 1006.0931,
+      "fees": 24.5647,
+      "fees_15bp": 2.5071,
+      "pnl": 1002.889,
       "price": 1.78,
-      "shares": 1884,
+      "shares": 1878,
       "side": "SELL",
       "ticker": "GPRO"
     },
@@ -117,5 +117,5 @@
       "ticker": "TEL"
     }
   ],
-  "sha256": "3660be4ecb4ebda57975ec3035f48860306e8f1ca1a7f528cace526a0d087091"
+  "sha256": "18bd1ed4282bd9b53fcbf0eb16741e842d8500d6946e46e7495ed9690801434d"
 }

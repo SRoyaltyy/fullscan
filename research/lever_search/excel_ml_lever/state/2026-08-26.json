@@ -4,7 +4,7 @@
       "fees": 2.8896,
       "fees_15bp": 1.8682,
       "price": 11.12,
-      "score": 0.342302,
+      "score": 0.311062,
       "shares": 224,
       "side": "BUY",
       "ticker": "FLNC"
@@ -13,7 +13,7 @@
       "fees": 2.077,
       "fees_15bp": 1.8274,
       "price": 84.02,
-      "score": 0.255336,
+      "score": 0.272965,
       "shares": 29,
       "side": "BUY",
       "ticker": "WIX"
@@ -22,7 +22,7 @@
       "fees": 2.143,
       "fees_15bp": 1.8429,
       "price": 48.18,
-      "score": 0.249072,
+      "score": 0.264408,
       "shares": 51,
       "side": "BUY",
       "ticker": "B"
@@ -31,7 +31,7 @@
       "fees": 2.8638,
       "fees_15bp": 1.8681,
       "price": 11.22,
-      "score": 0.232415,
+      "score": 0.235343,
       "shares": 222,
       "side": "BUY",
       "ticker": "TRLV"
@@ -63,22 +63,22 @@
   "sat": false,
   "scores": [
     {
-      "score": 0.342302,
+      "score": 0.311062,
       "ticker": "FLNC"
     },
     {
-      "score": 0.255336,
+      "score": 0.272965,
       "ticker": "WIX"
     },
     {
-      "score": 0.249072,
+      "score": 0.264408,
       "ticker": "B"
     },
     {
-      "score": 0.232415,
+      "score": 0.235343,
       "ticker": "TRLV"
     }
   ],
   "sells": [],
-  "sha256": "9cab3792bc30ca09257e5724951f30618c8b9153109abf4303d93e6bc1f2049e"
+  "sha256": "37065b158f97e560f8677b63242785f674c35da05d5d3b2802bf28ba3d3cea89"
 }

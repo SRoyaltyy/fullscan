@@ -1,48 +1,48 @@
 {
   "buys": [
     {
-      "fees": 3.2895,
-      "fees_15bp": 1.8609,
+      "fees": 3.3153,
+      "fees_15bp": 1.8755,
       "price": 9.73,
-      "score": 0.234241,
-      "shares": 255,
+      "score": 0.255833,
+      "shares": 257,
       "side": "BUY",
       "ticker": "CAPR"
     },
     {
-      "fees": 3.3024,
-      "fees_15bp": 1.8662,
+      "fees": 3.3153,
+      "fees_15bp": 1.8735,
       "price": 9.72,
-      "score": 0.194142,
-      "shares": 256,
+      "score": 0.200714,
+      "shares": 257,
       "side": "BUY",
       "ticker": "DJT"
     },
     {
-      "fees": 26.5095,
-      "fees_15bp": 1.8495,
+      "fees": 26.703,
+      "fees_15bp": 1.863,
       "price": 1.2,
-      "score": 0.192232,
-      "shares": 2055,
+      "score": 0.181026,
+      "shares": 2070,
       "side": "BUY",
       "ticker": "MIST"
     },
     {
-      "fees": 2.383,
-      "fees_15bp": 1.8668,
+      "fees": 2.386,
+      "fees_15bp": 1.881,
       "price": 19.0,
-      "score": 0.172558,
-      "shares": 131,
+      "score": 0.18086,
+      "shares": 132,
       "side": "BUY",
       "ticker": "TH"
     }
   ],
-  "cash": 12.4204,
-  "cash_flat": 61.8857,
+  "cash": 17.2247,
+  "cash_flat": 100.6712,
   "date": "2026-08-28",
   "designed_after": true,
-  "equity": 9936.89,
-  "equity_15bp": 9986.36,
+  "equity": 10007.87,
+  "equity_15bp": 10091.32,
   "holdings": [
     "CAPR",
     "DJT",
@@ -58,24 +58,24 @@
     "MIST",
     "TH"
   ],
-  "ret_pct": -0.8458,
-  "ret_pct_flat_15bp": -0.4831,
+  "ret_pct": 0.0304,
+  "ret_pct_flat_15bp": 0.5627,
   "sat": false,
   "scores": [
     {
-      "score": 0.234241,
+      "score": 0.255833,
       "ticker": "CAPR"
     },
     {
-      "score": 0.194142,
+      "score": 0.200714,
       "ticker": "DJT"
     },
     {
-      "score": 0.192232,
+      "score": 0.181026,
       "ticker": "MIST"
     },
     {
-      "score": 0.172558,
+      "score": 0.18086,
       "ticker": "TH"
     }
   ],
@@ -90,6 +90,15 @@
       "ticker": "CAPR"
     },
     {
+      "fees": 19.5023,
+      "fees_15bp": 1.9569,
+      "pnl": 80.5439,
+      "price": 1.75,
+      "shares": 1491,
+      "side": "SELL",
+      "ticker": "CNDT"
+    },
+    {
       "fees": 2.8549,
       "fees_15bp": 1.8342,
       "pnl": -59.9042,
@@ -97,15 +106,6 @@
       "shares": 217,
       "side": "SELL",
       "ticker": "FLNC"
-    },
-    {
-      "fees": 2.4597,
-      "fees_15bp": 1.8851,
-      "pnl": 9.3244,
-      "price": 17.7,
-      "shares": 142,
-      "side": "SELL",
-      "ticker": "FWRD"
     },
     {
       "fees": 6.8132,
@@ -117,5 +117,5 @@
       "ticker": "OABI"
     }
   ],
-  "sha256": "01d2ec8ace42da5b6a5caac711bbadf1649f927ed9ee402105d01401e9d3a59c"
+  "sha256": "be2aa56b073ea4a24af25e589cf2944fe2efb6db45cf857e73b52f24bfbe5014"
 }

@@ -11,10 +11,14 @@ from __future__ import annotations
 
 import argparse
 import csv
+import datetime as dt
 import hashlib
 import json
 import math
+import re
+import subprocess
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 import numpy as np
 
@@ -39,6 +43,12 @@ CUTOFF = "2026-09-14"
 LUCK_START = "2026-08-13"
 LUCK_END = "2026-09-11"
 PRICE_FLOOR = "2026-05-01"
+# AB, S, hard-red, sector essays, news judgments, and Grok review exist
+# only on the 31 morning sessions that start this day. A row dated earlier
+# must not be filled by rebuilding those columns.
+LLM_START = "2026-08-13"
+ET = ZoneInfo("America/New_York")
+_DAILY_NOTE = re.compile(r"^excel_bot/daily/(\d{4}-\d{2}-\d{2})_excel_bot\.md$")
 
 # Theme Radar frozen export (SRoyaltyy/theme-radar, due 17:00 HKT).
 # Not in this repo when the spec was frozen. Off. Turning it on is a new
@@ -83,10 +93,13 @@ PRICE_FEATURES = (
     "px_ret1", "px_ret5", "px_ret20", "px_gap_prior", "px_rvol_prior",
 )
 EXCEL_FEATURES = (
-    "excel_FQ", "excel_ER", "excel_EP", "excel_AH", "excel_FR",
-    "excel_prior_hammer",
     "excel_sugg_long", "excel_sugg_short", "excel_sugg_n",
 )
+# Camera boxes that are an LLM or vendor-essay packet. Price boxes stay.
+LLM_BOXES = (
+    "join", "sector", "gen", "news", "digest", "judge", "ab", "heat", "catal",
+)
+LLM_CATS = {"news_prior", "news_box", "headline_tone"}
 FEATURES = (
     PANEL_NUMERIC
     + tuple(f"box_{name}" for name in BOXES)
@@ -119,10 +132,16 @@ EXCLUDED = (
     ("first_open", "the next open is the fill, not a feature"),
     ("run_date", "not a clock; the suggestions file bakes stale run dates"),
     ("signal_colors", "open color vocabulary; side and count are the features"),
+    ("strategy name", "open strategy vocabulary; side and row count are the features"),
     ("signal_date == N", "confirm day uses that session's close; not known at 09:30 N"),
+    ("excel clear-letter panel", "not a morning input in INPUT_HISTORY; generated 2026-09-12"),
+    ("suggestions.csv live file", "rewritten through later dates and carries tracking marks"),
+    ("daily note scoreboard", "live returns in the same markdown file; not the signal"),
+    ("daily note commit at or after the next 09:30", "too late for that open, and not reused later"),
     ("theme_radar frozen export", "file not in the repo; hook is off"),
     ("numeric s_ab", "not a panel column; the morning AB gate is box_ab"),
     ("morning S / hard-red", "day-level sit, not a per-name panel column; pick rule is top 4"),
+    ("LLM packet before 2026-08-13", "AB, sector, news, and Grok exist only on the 31 sessions"),
 )
 
 TONE = {"good": 1.0, "neutral": 0.0, "bad": -1.0}
@@ -267,17 +286,124 @@ def _bool(value) -> float | None:
     return 1.0 if bool(value) else 0.0
 
 
-def prior_hammer(text) -> float | None:
-    raw = str(text or "").strip()
-    if raw.lower() in {"", "none", "nan", "null"}:
-        return None
-    if "Hammer" in raw and "Inverted" not in raw:
-        return 1.0
-    return 0.0
+def excel_open_cutoff(open_date: str) -> dt.datetime:
+    """09:30 ET on the session that can see the prior note. A commit at 09:30 is late."""
+    day = str(open_date or "")[:10]
+    return dt.datetime.fromisoformat(f"{day}T09:30:00").replace(tzinfo=ET)
 
 
-def row_features(row: dict, *, letters: dict | None, suggestions: dict | None,
-                 price_features: dict | None, prior: str | None) -> dict:
+def _aware(when: dt.datetime) -> dt.datetime:
+    if when.tzinfo is None:
+        return when.replace(tzinfo=ET)
+    return when
+
+
+def last_commit_before(rows: list, cutoff: dt.datetime) -> tuple | None:
+    """Last row strictly before cutoff. Rows are (time, sha, ...). Sorted here."""
+    ordered = sorted(rows or [], key=lambda item: _aware(item[0]))
+    hit = None
+    for item in ordered:
+        if _aware(item[0]) < cutoff:
+            hit = item
+        else:
+            break
+    return hit
+
+
+def next_visible_session(file_date: str, sessions: list[str]) -> str | None:
+    """The next panel session after the note's date, if that session is before the cutoff.
+
+    The note is a feature on that morning only. A later morning does not
+    pick the note up, and a next session on or after the cutoff is unused.
+    """
+    day = _as_day(file_date)
+    for session in sessions:
+        if session > day and session < CUTOFF:
+            return session
+    return None
+
+
+def parse_new_suggestions(text: str) -> list[dict]:
+    """Ticker, side, and strategy from the New suggestions table only.
+
+    The scoreboard and the best/worst sections sit under later headings.
+    They carry live returns and are not read. A note with no table is empty.
+    """
+    lines = str(text or "").splitlines()
+    start = None
+    for index, line in enumerate(lines):
+        if line.strip().lower() == "## new suggestions":
+            start = index + 1
+            break
+    if start is None:
+        return []
+    header = None
+    rows = []
+    for line in lines[start:]:
+        stripped = line.strip()
+        if stripped.startswith("## "):
+            break
+        if not stripped.startswith("|"):
+            continue
+        cells = [cell.strip() for cell in stripped.strip("|").split("|")]
+        if header is None:
+            header = [cell.lower() for cell in cells]
+            continue
+        if cells and all(set(cell) <= set("-: ") and cell for cell in cells):
+            continue
+        data = {header[i]: cells[i] for i in range(min(len(header), len(cells)))}
+        ticker = _tick(data.get("ticker"))
+        side = str(data.get("side") or "").strip().lower()
+        if not ticker or side not in {"long", "short"}:
+            continue
+        rows.append({
+            "ticker": ticker,
+            "side": side,
+            "strategy": str(data.get("strategy") or "").strip(),
+        })
+    return rows
+
+
+def assign_pinned_signals(sessions: list[str], notes: list[dict]) -> dict[str, list]:
+    """Map each daily note onto the one morning that may see it.
+
+    ``notes`` items are ``{date, commits, blobs}``. ``commits`` are
+    ``(time, sha, ...)``. ``blobs`` maps sha to the file text. The legal
+    blob is the last commit strictly before the next panel session's
+    09:30 ET. No such commit means the note is unused.
+    """
+    out: dict[str, list] = {day: [] for day in sessions if day < CUTOFF}
+    for note in notes:
+        file_date = _as_day(note.get("date"))
+        if not file_date or file_date >= CUTOFF:
+            continue
+        visible = next_visible_session(file_date, sessions)
+        if visible is None:
+            continue
+        hit = last_commit_before(note.get("commits") or [], excel_open_cutoff(visible))
+        if hit is None:
+            continue
+        text = (note.get("blobs") or {}).get(hit[1], "")
+        for row in parse_new_suggestions(text):
+            kept = dict(row)
+            kept["signal_date"] = file_date
+            out.setdefault(visible, []).append(kept)
+    return out
+
+
+def _blank_llm(out: dict) -> None:
+    for name in LLM_BOXES:
+        out[f"box_{name}"] = None
+    for source, dest in CATS:
+        if source in LLM_CATS:
+            out[dest] = None
+    for name in PANEL_BOOL:
+        if name.startswith("clk_"):
+            out[name] = None
+
+
+def row_features(row: dict, *, price_features: dict | None,
+                 excel_rows: list | None) -> dict:
     """One name's raw features. None means missing (rank-fills to the center)."""
     day = _as_day(row.get("date"))
     ticker = _tick(row.get("ticker"))
@@ -305,42 +431,24 @@ def row_features(row: dict, *, letters: dict | None, suggestions: dict | None,
     px = (price_features or {}).get((day, ticker)) or {}
     for name in PRICE_FEATURES:
         out[name] = _finite(px.get(name))
-    letter = (letters or {}).get((day, ticker)) or {}
-    for name in ("excel_FQ", "excel_ER", "excel_EP", "excel_AH", "excel_FR"):
-        out[name] = _finite(letter.get(name))
-    if letter:
-        out["excel_prior_hammer"] = prior_hammer(letter.get("DF_lag1"))
-    else:
-        out["excel_prior_hammer"] = None
-    sugg = suggestion_features(ticker, prior, suggestions)
-    out.update(sugg)
+    out.update(suggestion_features(ticker, excel_rows))
+    if day and day < LLM_START:
+        _blank_llm(out)
     if THEME_RADAR_ENABLED:
         raise RuntimeError("theme radar hook is off in the frozen lever")
     return out
 
 
-def suggestion_features(ticker: str, prior: str | None,
-                        suggestions: dict | None) -> dict:
-    """Prior-session Excel suggestions only.
+def suggestion_features(ticker: str, rows: list | None) -> dict:
+    """Long/short flags and row count for this ticker on this morning's pinned notes.
 
-    signal_date is the confirm day (that session's completed colors). The
-    job writes after the US close, and the fill is the next open. A row is
-    a morning feature on N only when signal_date is the prior session.
-    signal_date == N is the same day's close and is excluded. run_date is
-    not a clock.
+    Absence is 0, not missing: the morning either had a legal note or it did not.
+    Strategy names are not a feature. Same-day signal letters are not a feature.
     """
-    empty = {
-        "excel_sugg_long": 0.0 if prior else None,
-        "excel_sugg_short": 0.0 if prior else None,
-        "excel_sugg_n": 0.0 if prior else None,
-    }
-    if not prior:
-        return empty
-    rows = (suggestions or {}).get(ticker) or []
     matched = [
-        row for row in rows
-        if _as_day(row.get("signal_date")) == prior
-        and _as_day(row.get("signal_date")) < CUTOFF
+        row for row in (rows or [])
+        if _tick(row.get("ticker")) == _tick(ticker)
+        and _as_day(row.get("signal_date") or "0000-01-01") < CUTOFF
     ]
     longs = sum(1 for row in matched if str(row.get("side") or "").lower() == "long")
     shorts = sum(1 for row in matched if str(row.get("side") or "").lower() == "short")
@@ -550,8 +658,8 @@ def hold_target(entry_open: float | None, exit_open: float | None) -> float | No
 
 
 def build_day_items(rows: list[dict], day: str, sessions: list[str], *,
-                    letters, suggestions, bars_by_ticker) -> list[dict]:
-    prior = prior_session(sessions, day)
+                    excel_by_day, bars_by_ticker) -> list[dict]:
+    morning_rows = (excel_by_day or {}).get(day) or []
     raws = []
     seen = set()
     ordered = sorted(rows, key=lambda row: (_tick(row.get("ticker")), int(row.get("src_rank") or 0)))
@@ -569,15 +677,14 @@ def build_day_items(rows: list[dict], day: str, sessions: list[str], *,
             "ticker": ticker,
             "date": day,
             "x": row_features(
-                row, letters=letters, suggestions=suggestions,
-                price_features={(day, ticker): px}, prior=prior,
+                row, price_features={(day, ticker): px}, excel_rows=morning_rows,
             ),
         })
     return rank_rows(raws)
 
 
 def training_items(panel_by_day: dict, sessions: list[str], day: str, *,
-                   letters, suggestions, bars_by_ticker) -> list[dict]:
+                   excel_by_day, bars_by_ticker) -> list[dict]:
     entries = training_entry_dates(sessions, day)
     assert_no_lookahead(sessions, day, entries)
     items = []
@@ -587,7 +694,7 @@ def training_items(panel_by_day: dict, sessions: list[str], day: str, *,
             continue
         for item in build_day_items(
             panel_by_day.get(entry) or [], entry, sessions,
-            letters=letters, suggestions=suggestions, bars_by_ticker=bars_by_ticker,
+            excel_by_day=excel_by_day, bars_by_ticker=bars_by_ticker,
         ):
             ticker = item["ticker"]
             bars = bars_by_ticker.get(ticker) or []
@@ -748,7 +855,7 @@ def _locked_matches(saved: dict, fresh: dict) -> bool:
 
 
 def walk(sessions: list[str], panel_by_day: dict, bars_by_ticker: dict, *,
-         letters=None, suggestions=None, fees: dict | None = None,
+         excel_by_day=None, fees: dict | None = None,
          state_dir: Path | None = None, start: str | None = None,
          end: str | None = None) -> dict:
     """Fit and trade one session at a time. Refuses the cutoff and after."""
@@ -774,7 +881,7 @@ def walk(sessions: list[str], panel_by_day: dict, bars_by_ticker: dict, *,
         saved = _read_state(state_dir, day)
         items = training_items(
             panel_by_day, sessions, day,
-            letters=letters, suggestions=suggestions, bars_by_ticker=bars_by_ticker,
+            excel_by_day=excel_by_day, bars_by_ticker=bars_by_ticker,
         )
         # Attach today's exit opens onto lots before the sell, from the tape.
         still_held = set()
@@ -793,7 +900,7 @@ def walk(sessions: list[str], panel_by_day: dict, bars_by_ticker: dict, *,
             model = fit_model(items, RIDGE_ALPHA)
             today = build_day_items(
                 panel_by_day.get(day) or [], day, sessions,
-                letters=letters, suggestions=suggestions, bars_by_ticker=bars_by_ticker,
+                excel_by_day=excel_by_day, bars_by_ticker=bars_by_ticker,
             )
             scores = predict(model, today)
             scored = []
@@ -941,60 +1048,83 @@ def load_panel(path: Path | None = None) -> tuple[list[str], dict]:
     return filter_panel(doc)
 
 
-def load_letters(path: Path | None = None, sessions: list[str] | None = None,
-                 tickers: set[str] | None = None) -> dict:
-    src = path or (ROOT / "excel_bot" / "research" / "excel_clear_letter_panel.csv")
-    keep_days = set(sessions or [])
-    table = {}
-    if not src.is_file():
-        return table
-    with src.open(encoding="utf-8", newline="") as handle:
-        for row in csv.DictReader(handle):
-            day = _as_day(row.get("date"))
-            if day >= CUTOFF:
-                continue
-            if keep_days and day not in keep_days:
-                continue
-            ticker = _tick(row.get("ticker"))
-            if tickers and ticker not in tickers:
-                continue
-            table[(day, ticker)] = {
-                "excel_FQ": row.get("FQ"),
-                "excel_ER": row.get("ER"),
-                "excel_EP": row.get("EP"),
-                "excel_AH": row.get("AH"),
-                "excel_FR": row.get("FR"),
-                "DF_lag1": row.get("DF_lag1"),
-            }
-    return table
+def git_commit_rows(path: str, repo: Path | None = None) -> list[tuple]:
+    """Oldest-first (time, sha, stamp) for one path. Empty if git has no history."""
+    root = Path(repo or ROOT)
+    out = subprocess.run(
+        ["git", "log", "--pretty=format:%cI %H", "--", path],
+        cwd=root, capture_output=True, text=True, check=False,
+    )
+    rows = []
+    for line in (out.stdout or "").splitlines():
+        line = line.strip()
+        if not line or " " not in line:
+            continue
+        stamp, sha = line.split(" ", 1)
+        text = stamp.strip()
+        if text.endswith("Z"):
+            text = text[:-1] + "+00:00"
+        try:
+            when = dt.datetime.fromisoformat(text)
+        except ValueError:
+            continue
+        rows.append((_aware(when), sha.strip(), stamp.strip()))
+    rows.sort(key=lambda item: item[0])
+    return rows
 
 
-def load_suggestions(path: Path | None = None) -> dict:
-    """Ticker -> suggestion rows. Tracking price columns are not kept.
+def git_show(sha: str, path: str, repo: Path | None = None) -> str:
+    root = Path(repo or ROOT)
+    out = subprocess.run(
+        ["git", "show", f"{sha}:{path}"],
+        cwd=root, capture_output=True, text=True, check=False,
+    )
+    if out.returncode != 0:
+        return ""
+    return out.stdout
 
-    signal_date on or after the cutoff is dropped so a later row cannot
-    enter the luck-test window.
+
+def list_daily_notes(repo: Path | None = None) -> list[tuple[str, str]]:
+    """(file date, repo-relative path) for final daily notes. Drafts are not signal files."""
+    root = Path(repo or ROOT)
+    out = subprocess.run(
+        ["git", "ls-files", "excel_bot/daily"],
+        cwd=root, capture_output=True, text=True, check=False,
+    )
+    found = []
+    for line in (out.stdout or "").splitlines():
+        rel = line.strip().replace("\\", "/")
+        match = _DAILY_NOTE.match(rel)
+        if match:
+            found.append((match.group(1), rel))
+    return sorted(found)
+
+
+def load_pinned_excel(sessions: list[str], repo: Path | None = None) -> dict[str, list]:
+    """Pinned New-suggestions rows, keyed by the morning that may trade them.
+
+    For a note dated D, the blob is the last commit strictly before the next
+    panel session's 09:30 ET. That blob is attached only to that next session.
+    A note whose next session is on or after the cutoff is not loaded.
     """
-    src = path or (ROOT / "excel_bot" / "suggestions" / "suggestions.csv")
-    by: dict[str, list] = {}
-    if not src.is_file():
-        return by
-    with src.open(encoding="utf-8", newline="") as handle:
-        for row in csv.DictReader(handle):
-            day = _as_day(row.get("signal_date"))
-            if not day or day >= CUTOFF:
-                continue
-            ticker = _tick(row.get("ticker"))
-            if not ticker:
-                continue
-            side = str(row.get("side") or "").strip().lower()
-            if side not in {"long", "short"}:
-                continue
-            by.setdefault(ticker, []).append({
-                "signal_date": day,
-                "side": side,
-            })
-    return by
+    root = Path(repo or ROOT)
+    notes = []
+    for file_date, rel in list_daily_notes(root):
+        if file_date >= CUTOFF:
+            continue
+        visible = next_visible_session(file_date, sessions)
+        if visible is None:
+            continue
+        commits = git_commit_rows(rel, root)
+        hit = last_commit_before(commits, excel_open_cutoff(visible))
+        if hit is None:
+            continue
+        notes.append({
+            "date": file_date,
+            "commits": commits,
+            "blobs": {hit[1]: git_show(hit[1], rel, root)},
+        })
+    return assign_pinned_signals(sessions, notes)
 
 
 def load_bars(tickers: set[str], *, price_path: Path | None = None,
@@ -1091,13 +1221,12 @@ def run_luck_test(*, state_dir: Path | None = None, out_dir: Path | None = None)
         raise RuntimeError("luck-test calendar is empty or crosses the cutoff")
     names = panel_tickers({day: panel_by_day[day] for day in window})
     bars = load_bars(names, max_date=LUCK_END)
-    letters = load_letters(sessions=window, tickers=names)
-    suggestions = load_suggestions()
+    excel_by_day = load_pinned_excel(sessions)
     # Full session list, still cut before the cutoff, so N+1 inside the
     # window is the next fullscan session and 2026-09-14 is not on the clock.
     clock = [day for day in sessions if day <= LUCK_END and day >= LUCK_START]
     report = walk(
-        clock, panel_by_day, bars, letters=letters, suggestions=suggestions,
+        clock, panel_by_day, bars, excel_by_day=excel_by_day,
         state_dir=state_dir if state_dir is not None else HERE / "state",
         start=LUCK_START, end=LUCK_END,
     )
@@ -1125,11 +1254,10 @@ def main(argv: list[str] | None = None) -> None:
         clock = [day for day in sessions if args.start <= day <= args.end and day < CUTOFF]
         names = panel_tickers({day: panel_by_day[day] for day in clock})
         bars = load_bars(names, max_date=args.end)
-        letters = load_letters(sessions=clock, tickers=names)
-        suggestions = load_suggestions()
+        usable = [day for day in sessions if day < CUTOFF and day <= args.end]
+        excel_by_day = load_pinned_excel(usable)
         report = walk(
-            [day for day in sessions if day < CUTOFF and day <= args.end],
-            panel_by_day, bars, letters=letters, suggestions=suggestions,
+            usable, panel_by_day, bars, excel_by_day=excel_by_day,
             state_dir=Path(args.state), start=args.start, end=args.end,
         )
         write_outputs(report, Path(args.out))
