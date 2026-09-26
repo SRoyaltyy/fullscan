@@ -5,6 +5,7 @@ Run: PYTHONHASHSEED=0 python3 -m src.test_lever_search_labelled
 from __future__ import annotations
 
 import json
+import os
 import subprocess
 
 from src.lever_search_bars import SameDayBarError, feature_bars
@@ -28,7 +29,6 @@ from src.lever_search_labelled_protocol import (
 from src.lever_search_labelled_score import assemble_row
 from src.lever_search_proof import build_group3_recipes
 
-BASE = "8608a8fea760148b010e645ff573fe12154f0e04"
 ALLOWED = (
     "research/lever_search_labelled/",
     "src/lever_search_labelled_protocol.py",
@@ -191,11 +191,35 @@ def test_pins_are_the_earliest_commits() -> None:
         assert pinned["n_rows"] == count
 
 
-def test_diff_does_not_touch_an_existing_file() -> None:
-    names = subprocess.check_output(
-        ["git", "diff", "--name-only", BASE, "HEAD"],
+def _pr_changed_files() -> list[str]:
+    """Files this branch changes against the PR base.
+
+    A two-dot diff from the original branch point also lists files main
+    gained later. CI sees those when it checks out the pull-request merge.
+    Three-dot from the PR base is this study's own diff.
+    """
+    base = os.environ.get("LEVER_LABELLED_DIFF_BASE", "").strip()
+    if not base:
+        for candidate in ("origin/main", "main"):
+            probe = subprocess.run(
+                ["git", "rev-parse", "--verify", "--quiet", candidate],
+                capture_output=True,
+                text=True,
+            )
+            if probe.returncode == 0:
+                base = candidate
+                break
+    if not base:
+        raise AssertionError("PR base is not available")
+    return subprocess.check_output(
+        ["git", "diff", "--name-only", f"{base}...HEAD"],
         text=True,
     ).splitlines()
+
+
+def test_diff_does_not_touch_an_existing_file() -> None:
+    names = _pr_changed_files()
+    assert names, "PR diff is empty"
     for name in names:
         assert name.startswith(ALLOWED) or name in ALLOWED, name
 
