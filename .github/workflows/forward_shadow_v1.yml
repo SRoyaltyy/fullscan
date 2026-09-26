@@ -1,0 +1,89 @@
+name: Forward shadow v1
+
+# Research only. Reads frozen send_inputs, pins Yahoo bars, appends the ledger.
+# Does not place orders.
+
+on:
+  workflow_dispatch:
+    inputs:
+      phase:
+        description: "picks, fills, or both"
+        required: false
+        default: "both"
+      run_date:
+        description: "YYYY-MM-DD (empty = today ET)"
+        required: false
+        default: ""
+  schedule:
+    - cron: "20 14 * * 1-5"
+    - cron: "45 21 * * 1-5"
+    - cron: "15 23 * * 1-5"
+  workflow_run:
+    workflows: ["Publish strategy tickets"]
+    types: [completed]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: forward-shadow-v1
+  cancel-in-progress: false
+
+jobs:
+  shadow:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install
+        run: pip install pandas pyarrow yfinance
+      - name: Append the research book
+        env:
+          PHASE_INPUT: ${{ github.event.inputs.phase }}
+          RUN_DATE: ${{ github.event.inputs.run_date }}
+          EVENT_NAME: ${{ github.event_name }}
+          CRON: ${{ github.event.schedule }}
+        run: |
+          set -euo pipefail
+          git fetch origin main
+          DATE="${RUN_DATE:-$(TZ=America/New_York date +%F)}"
+          if [[ "$DATE" < "2026-09-28" ]]; then
+            echo "before forward start"
+            exit 0
+          fi
+          python3 -m src.forward_shadow_v1 --check-spec
+          PHASE="both"
+          if [[ "$EVENT_NAME" == "workflow_run" ]]; then
+            PHASE="picks"
+          elif [[ "$EVENT_NAME" == "schedule" ]]; then
+            HOUR="$(awk '{print $2}' <<< "$CRON")"
+            if [[ "$HOUR" == "14" ]]; then
+              PHASE="picks"
+            else
+              PHASE="fills"
+            fi
+          elif [[ -n "${PHASE_INPUT}" ]]; then
+            PHASE="$PHASE_INPUT"
+          fi
+          if [[ "$PHASE" == "picks" || "$PHASE" == "both" ]]; then
+            python3 -m src.forward_shadow_v1 --picks --date "$DATE" --rev origin/main
+          fi
+          if [[ "$PHASE" == "fills" || "$PHASE" == "both" ]]; then
+            python3 -m src.forward_shadow_v1 --fills --date "$DATE" --rev origin/main
+          fi
+          python3 -m src.forward_shadow_v1_bars --check
+          python3 -m src.forward_shadow_v1_append --check-against origin/main
+      - name: Push the research ledger
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          bash scripts/safe_git_push.sh \
+            "auto: forward_shadow_v1 $(TZ=America/New_York date +%F)" \
+            research/forward_shadow_v1
