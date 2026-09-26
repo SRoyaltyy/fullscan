@@ -257,6 +257,7 @@ def test_requesting_excluded_column_raises_before_load() -> None:
 def test_tally_lines_stay_in_prereg() -> None:
     from src.lever_search_inputs import (
         INITIAL_N,
+        LUCK_N,
         RUNNING_TALLY,
         covered_fingerprint,
     )
@@ -268,13 +269,19 @@ def test_tally_lines_stay_in_prereg() -> None:
     assert "31,861,969" in text
     assert "31,852,910" in text
     assert "31,862,079" in text
+    assert "31,862,080" in text
+    assert "9,280" in text
+    assert "DEFERRED" in text
+    assert "23:00 HKT" in text
+    assert "share of trades in names under $3" in text
     assert "FULLSCAN_FILE_PROOF.csv" in text
     assert "factor_mine_seq" in text
     assert "24,595,200" in text
     assert "7,257,600" in text
     assert "too few days to judge" in text
     assert f"{INITIAL_N}" == "31852800"
-    assert f"{RUNNING_TALLY}" == "31862079"
+    assert f"{RUNNING_TALLY}" == "9280"
+    assert f"{LUCK_N}" == "9280"
     assert "868" in text
     assert "nothing proven yet" in text
     assert "30d483f2944b6a23e5ebca5bd894aeba1e2b94366de5d1168c2fe568f16fb32c" in text
@@ -380,10 +387,12 @@ def test_initial_inputs_and_hash_guard() -> None:
         else:
             raise AssertionError(f"{session} excel was accepted")
     from src.lever_search_inputs import (
+        DEFERRED_N,
         GROUP1_N,
         GROUP2_N,
         GROUP3_N,
         INITIAL_N,
+        LUCK_N,
         MIN_CHECK_DAYS,
         SEARCH_N,
         fullscan_status_is_used,
@@ -412,7 +421,10 @@ def test_initial_inputs_and_hash_guard() -> None:
     assert GROUP2_N == 7257600
     assert GROUP3_N == 110
     assert GROUP1_N + GROUP2_N == INITIAL_N
-    assert SEARCH_N == INITIAL_N + GROUP3_N
+    assert DEFERRED_N == INITIAL_N
+    assert SEARCH_N == GROUP3_N
+    assert LUCK_N == 9280
+    assert LUCK_N + DEFERRED_N == 31862080
     assert fullscan_status_is_used("PROVEN")
     assert not fullscan_status_is_used("available-proven")
     assert not fullscan_status_is_used("")
@@ -423,8 +435,12 @@ def test_initial_inputs_and_hash_guard() -> None:
     assert check["group2_check_day_count"] == 9
     assert check["check_days"] == list(WALK_FORWARD)
     assert check["first_check_training_sessions"] == list(TRAINING_LOOKBACK)
-    assert manifest["initial_n"] == 31852910
-    assert manifest["running_tally"] == 31862079
+    assert manifest["initial_n"] == 110
+    assert manifest["luck_test_n"] == 9280
+    assert manifest["running_tally"] == 9280
+    assert manifest["groups_1_and_2"] == "DEFERRED"
+    assert manifest["group3_deadline"] == "23:00 HKT Saturday 2026-09-26"
+    assert "under $3" in manifest["report_under_3"]
     assert manifest["group3_n"] == 110
     assert manifest["fullscan_file_proof"]["path"].endswith("FULLSCAN_FILE_PROOF.csv")
     assert manifest["group1_n"] == GROUP1_N

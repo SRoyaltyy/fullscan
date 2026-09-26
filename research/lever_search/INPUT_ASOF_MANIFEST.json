@@ -1,10 +1,16 @@
 {
   "rule": "inputs_must_not_change",
   "cutoff": "09:30 America/New_York (13:30 UTC)",
-  "initial_n": 31852910,
+  "initial_n": 110,
+  "luck_test_n": 9280,
   "price_finviz_excel_n": 31852800,
-  "running_tally": 31862079,
-  "n_note": "N is Group 1 plus Group 2 plus the 110 original Factor Mine recipes. A sat-out session is not an extra try and does not multiply N.",
+  "running_tally": 9280,
+  "groups_1_and_2": "DEFERRED",
+  "n_note": "Tonight's initial run is the 110 Factor Mine recipes. The luck-test denominator is 110 + 37 + 8264 + 868 + 1 = 9280. Groups 1 and 2 are specified and not run tonight. A sat-out session does not multiply N.",
+  "group3_deadline": "23:00 HKT Saturday 2026-09-26",
+  "group3_deadline_depends_on": "research/audit/FULLSCAN_FILE_PROOF.csv",
+  "deferred_retest": "If Group 1 or Group 2 is run later, add its tries to the tally then and re-test every Group 3 result against the enlarged tally. If both join, the enlarged tally is 9280 + 24595200 + 7257600 = 31862080.",
+  "report_under_3": "Report each recipe at Futubull fees and at flat 15bp, and the share of fills with fill price strictly under $3. No price filter.",
   "group1_n": 24595200,
   "group2_n": 7257600,
   "group3_n": 110,
@@ -3561,6 +3567,6 @@
     "walk_forward": "2026-08-20..2026-09-11",
     "check_day_count": 16,
     "pre_0914_prices": "computed from mid-session prices; clock-legal; frozen before the next open",
-    "deadline": "22:00 HKT Sunday 2026-09-27"
+    "deadline": "23:00 HKT Saturday 2026-09-26, Group 3 result, dependent on FULLSCAN_FILE_PROOF.csv"
   }
 }
