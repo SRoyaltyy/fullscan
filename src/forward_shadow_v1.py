@@ -499,12 +499,18 @@ def step_day(recipe: dict, state: dict, session: str, sessions: list[str],
             cash_f += shares * px - fee_f
             cash_15 += shares * px - fee_b
             day_pnl = shares * (px - prev) - fee_f
-            round_pnl = shares * (px - entry_px) - fee_f - float(lot.get("fee_in_f") or 0)
+            round_pnl = (
+                shares * (px - entry_px) - fee_f - float(lot.get("fee_in_f") or 0)
+                + float(lot.get("realized") or 0.0)
+            )
         else:
             cash_f -= shares * px + fee_f
             cash_15 -= shares * px + fee_b
             day_pnl = shares * (prev - px) - fee_f
-            round_pnl = shares * (entry_px - px) - fee_f - float(lot.get("fee_in_f") or 0)
+            round_pnl = (
+                shares * (entry_px - px) - fee_f - float(lot.get("fee_in_f") or 0)
+                + float(lot.get("realized") or 0.0)
+            )
         ticker_pnl[ticker] = ticker_pnl.get(ticker, 0.0) + day_pnl
         pos.pop(ticker)
         trade_side = "SELL" if side == "long" else "COVER"
@@ -527,6 +533,67 @@ def step_day(recipe: dict, state: dict, session: str, sessions: list[str],
             "ticker": ticker,
             "win": round_pnl > 0,
         })
+
+    cap = recipe.get("weight_cap")
+    if side == "long" and isinstance(cap, (int, float)) and not isinstance(cap, bool) and 0.0 < float(cap) < 1.0:
+        from research.concentration_cap_v1.engine import shares_to_keep
+
+        trimmed: list[str] = []
+        for ticker in sorted(pos):
+            lot = pos.get(ticker)
+            if lot is None:
+                continue
+            px = opens.get(ticker)
+            if px is None or float(px) <= 0:
+                continue
+            px = float(px)
+            equity = cash_f + _open_stock(pos, opens, side)
+            shares = int(lot["shares"])
+            keep = shares_to_keep(shares, px, equity, float(cap), fees)
+            if keep >= shares:
+                continue
+            sold_n = shares - keep
+            fee_f = order_fees(sold_n, px, "sell", fees)
+            fee_b = fee_15(sold_n, px)
+            prev = float(lot.get("prev_mark", lot["entry_px"]))
+            entry_px = float(lot["entry_px"])
+            cash_f += sold_n * px - fee_f
+            cash_15 += sold_n * px - fee_b
+            day_pnl = sold_n * (px - prev) - fee_f
+            ticker_pnl[ticker] = ticker_pnl.get(ticker, 0.0) + day_pnl
+            fee_in = float(lot.get("fee_in_f") or 0.0)
+            fee_in_15 = float(lot.get("fee_in_15") or 0.0)
+            chunk = sold_n * (px - entry_px) - fee_f - fee_in * (sold_n / shares)
+            sells.append({
+                "fees": fee_f,
+                "fees_15": fee_b,
+                "kind": "trim",
+                "price": round(px, 6),
+                "shares": sold_n,
+                "side": "SELL",
+                "ticker": ticker,
+            })
+            if keep < 1:
+                round_pnl = chunk + float(lot.get("realized") or 0.0)
+                closed.append({
+                    "entry": lot["entry"],
+                    "entry_px": round(entry_px, 6),
+                    "exit": session,
+                    "exit_px": round(px, 6),
+                    "pnl": round(round_pnl, 4),
+                    "shares": shares,
+                    "ticker": ticker,
+                    "win": round_pnl > 0,
+                })
+                pos.pop(ticker)
+            else:
+                lot["fee_in_15"] = fee_in_15 * (keep / shares)
+                lot["fee_in_f"] = fee_in * (keep / shares)
+                lot["realized"] = float(lot.get("realized") or 0.0) + chunk
+                lot["shares"] = keep
+            trimmed.append(ticker)
+        if trimmed:
+            renewals[:] = [ticker for ticker in renewals if ticker not in trimmed]
 
     new = [ticker for ticker in selected if ticker not in pos]
     if hard_red:
