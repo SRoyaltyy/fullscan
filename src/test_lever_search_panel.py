@@ -278,15 +278,97 @@ def test_requesting_excluded_column_raises_before_load() -> None:
 
 
 def test_tally_lines_stay_in_prereg() -> None:
+    from src.lever_search_inputs import (
+        INITIAL_N,
+        RUNNING_TALLY,
+        covered_fingerprint,
+    )
+
     text = PREREG.read_text(encoding="utf-8")
     assert "1,984,711,680" in text
     assert "16,646,400" in text
-    assert "2,001,367,249" in text
+    assert "31,852,800" in text
+    assert "31,861,969" in text
+    assert f"{INITIAL_N}" == "31852800"
+    assert f"{RUNNING_TALLY}" == "31861969"
     assert "868" in text
+    assert "nothing proven yet" in text
     assert "30d483f2944b6a23e5ebca5bd894aeba1e2b94366de5d1168c2fe568f16fb32c" in text
     assert "b01166a6a3803672c21daf4af55c276402abb3c7" in text
-    assert "fingerprint_sha256: PENDING" in text
-    assert "excel_ml_count: UNRESOLVED" in text
+    assert "excel_ml_count: LATER_ADDON" in text
+    digest = covered_fingerprint(text)
+    assert f"fingerprint_sha256: {digest}" in text
+
+
+def test_initial_inputs_and_hash_guard() -> None:
+    from src.lever_search_inputs import (
+        EXCEL_DROPPED,
+        FINVIZ_PROVEN_DATES,
+        DroppedInput,
+        InputHashError,
+        assert_excel_row,
+        assert_finviz_date,
+        assert_initial_finviz_column,
+        assert_manifest_hashes,
+        load_manifest,
+    )
+    from src.lever_search_panel import LeverColumnError, OutcomeColumnError
+
+    manifest = load_manifest()
+    assert manifest["finviz_proven_dates"] == list(FINVIZ_PROVEN_DATES)
+    assert "2026-08-28" not in manifest["finviz_proven_dates"]
+    assert len(manifest["finviz_proven_dates"]) == 20
+    assert_manifest_hashes()
+    for name in ("fwd_1d", "tr1d_ret_H", "trf_true_ret", "label_date_1"):
+        try:
+            assert_initial_finviz_column(name)
+        except OutcomeColumnError:
+            pass
+        else:
+            raise AssertionError(name)
+    for name in ("tr1d_total_score", "trc_resid", "trf_d_Price", "Open"):
+        try:
+            assert_initial_finviz_column(name)
+        except LeverColumnError:
+            pass
+        else:
+            raise AssertionError(name)
+    assert_initial_finviz_column("Performance (Week)")
+    try:
+        assert_finviz_date("2026-08-28")
+    except DroppedInput:
+        pass
+    else:
+        raise AssertionError("08-28 was accepted")
+    try:
+        assert_finviz_date("2026-09-14")
+    except DroppedInput:
+        pass
+    else:
+        raise AssertionError("09-14 was accepted")
+    assert_finviz_date("2026-09-11")
+    for ticker, session in EXCEL_DROPPED:
+        try:
+            assert_excel_row(ticker, session)
+        except DroppedInput:
+            pass
+        else:
+            raise AssertionError((ticker, session))
+    try:
+        assert_excel_row("AAPL", "2026-08-13")
+    except DroppedInput:
+        pass
+    else:
+        raise AssertionError("08-13 excel was accepted")
+    assert_excel_row("AAPL", "2026-09-02")
+    bad = dict(manifest)
+    bad["pinned_files"] = [dict(manifest["pinned_files"][0], sha256="0" * 64)]
+    try:
+        assert_manifest_hashes(manifest=bad)
+    except InputHashError:
+        pass
+    else:
+        raise AssertionError("bad hash was accepted")
 
 
 def main() -> None:
@@ -300,6 +382,7 @@ def main() -> None:
         test_in_memory_rows_and_late_session,
         test_requesting_excluded_column_raises_before_load,
         test_tally_lines_stay_in_prereg,
+        test_initial_inputs_and_hash_guard,
     ]
     failed = 0
     for fn in tests:
