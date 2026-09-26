@@ -1,0 +1,121 @@
+{
+  "buys": [
+    {
+      "fees": 12.0357,
+      "fees_15bp": 1.8893,
+      "price": 2.7,
+      "score": 0.169498,
+      "shares": 933,
+      "side": "BUY",
+      "ticker": "INDP"
+    },
+    {
+      "fees": 15.2994,
+      "fees_15bp": 1.8857,
+      "price": 2.12,
+      "score": 0.139894,
+      "shares": 1186,
+      "side": "BUY",
+      "ticker": "BAK"
+    },
+    {
+      "fees": 15.9057,
+      "fees_15bp": 1.8865,
+      "price": 2.04,
+      "score": 0.109624,
+      "shares": 1233,
+      "side": "BUY",
+      "ticker": "AMTX"
+    },
+    {
+      "fees": 2.146,
+      "fees_15bp": 1.886,
+      "price": 48.36,
+      "score": 0.073532,
+      "shares": 52,
+      "side": "BUY",
+      "ticker": "CVI"
+    }
+  ],
+  "cash": 17.2785,
+  "cash_flat": 743.3317,
+  "date": "2026-09-11",
+  "designed_after": true,
+  "equity": 10080.74,
+  "equity_15bp": 10806.79,
+  "holdings": [
+    "AMTX",
+    "BAK",
+    "CVI",
+    "INDP"
+  ],
+  "n": 4,
+  "n_train_rows": 1751,
+  "n_train_sessions": 19,
+  "picks": [
+    "INDP",
+    "BAK",
+    "AMTX",
+    "CVI"
+  ],
+  "ret_pct": 8.9929,
+  "ret_pct_flat_15bp": 9.1971,
+  "sat": false,
+  "scores": [
+    {
+      "score": 0.169498,
+      "ticker": "INDP"
+    },
+    {
+      "score": 0.139894,
+      "ticker": "BAK"
+    },
+    {
+      "score": 0.109624,
+      "ticker": "AMTX"
+    },
+    {
+      "score": 0.073532,
+      "ticker": "CVI"
+    }
+  ],
+  "sells": [
+    {
+      "fees": 2.4983,
+      "fees_15bp": 1.6426,
+      "pnl": -125.8533,
+      "price": 14.13,
+      "shares": 155,
+      "side": "SELL",
+      "ticker": "CMPS"
+    },
+    {
+      "fees": 15.1031,
+      "fees_15bp": 2.3369,
+      "pnl": 777.8104,
+      "price": 2.7,
+      "shares": 1154,
+      "side": "SELL",
+      "ticker": "INDP"
+    },
+    {
+      "fees": 27.4168,
+      "fees_15bp": 1.6357,
+      "pnl": -169.8032,
+      "price": 1.04,
+      "shares": 2097,
+      "side": "SELL",
+      "ticker": "OCGN"
+    },
+    {
+      "fees": 3.2095,
+      "fees_15bp": 2.0038,
+      "pnl": 347.4429,
+      "price": 10.95,
+      "shares": 244,
+      "side": "SELL",
+      "ticker": "WLTH"
+    }
+  ],
+  "sha256": "75daec03afdf7004e4b053645cf3180682b67310458917d7a4bc2149c6abb408"
+}

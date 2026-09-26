@@ -1,0 +1,121 @@
+{
+  "buys": [
+    {
+      "fees": 3.3024,
+      "fees_15bp": 1.7357,
+      "price": 9.04,
+      "score": 0.185224,
+      "shares": 256,
+      "side": "BUY",
+      "ticker": "EOLS"
+    },
+    {
+      "fees": 10.3587,
+      "fees_15bp": 1.7345,
+      "price": 2.88,
+      "score": 0.177153,
+      "shares": 803,
+      "side": "BUY",
+      "ticker": "AVXL"
+    },
+    {
+      "fees": 24.3036,
+      "fees_15bp": 1.7239,
+      "price": 1.22,
+      "score": 0.145419,
+      "shares": 1884,
+      "side": "BUY",
+      "ticker": "GPRO"
+    },
+    {
+      "fees": 2.023,
+      "fees_15bp": 1.6938,
+      "price": 205.31,
+      "score": 0.145313,
+      "shares": 11,
+      "side": "BUY",
+      "ticker": "TEL"
+    }
+  ],
+  "cash": 70.9788,
+  "cash_flat": 368.8103,
+  "date": "2026-09-02",
+  "designed_after": true,
+  "equity": 9254.75,
+  "equity_15bp": 9552.58,
+  "holdings": [
+    "AVXL",
+    "EOLS",
+    "GPRO",
+    "TEL"
+  ],
+  "n": 4,
+  "n_train_rows": 1195,
+  "n_train_sessions": 13,
+  "picks": [
+    "EOLS",
+    "AVXL",
+    "GPRO",
+    "TEL"
+  ],
+  "ret_pct": 0.635,
+  "ret_pct_flat_15bp": 1.4475,
+  "sat": false,
+  "scores": [
+    {
+      "score": 0.185224,
+      "ticker": "EOLS"
+    },
+    {
+      "score": 0.177153,
+      "ticker": "AVXL"
+    },
+    {
+      "score": 0.145419,
+      "ticker": "GPRO"
+    },
+    {
+      "score": 0.145313,
+      "ticker": "TEL"
+    }
+  ],
+  "sells": [
+    {
+      "fees": 9.0754,
+      "fees_15bp": 1.9335,
+      "pnl": 259.185,
+      "price": 3.72,
+      "shares": 693,
+      "side": "SELL",
+      "ticker": "CTMX"
+    },
+    {
+      "fees": 17.2389,
+      "fees_15bp": 1.6805,
+      "pnl": -86.961,
+      "price": 1.7,
+      "shares": 1318,
+      "side": "SELL",
+      "ticker": "CYPH"
+    },
+    {
+      "fees": 22.8436,
+      "fees_15bp": 1.6247,
+      "pnl": -167.6698,
+      "price": 1.24,
+      "shares": 1747,
+      "side": "SELL",
+      "ticker": "SKYX"
+    },
+    {
+      "fees": 2.642,
+      "fees_15bp": 1.767,
+      "pnl": 42.768,
+      "price": 11.78,
+      "shares": 200,
+      "side": "SELL",
+      "ticker": "TRLV"
+    }
+  ],
+  "sha256": "1ace673d2b132f5807f1800aade3a93e5a9b0e1ddc64548b59c8ee001e7ef941"
+}

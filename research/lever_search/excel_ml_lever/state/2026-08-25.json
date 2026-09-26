@@ -1,0 +1,20 @@
+{
+  "buys": [],
+  "cash": 10000.0,
+  "cash_flat": 10000.0,
+  "date": "2026-08-25",
+  "designed_after": true,
+  "equity": 10000.0,
+  "equity_15bp": 10000.0,
+  "holdings": [],
+  "n": 0,
+  "n_train_rows": 614,
+  "n_train_sessions": 7,
+  "picks": [],
+  "ret_pct": 0.0,
+  "ret_pct_flat_15bp": 0.0,
+  "sat": true,
+  "scores": [],
+  "sells": [],
+  "sha256": "41f6799315dd950b9d3336f4b57d581c9ac06ff492675e440e5c6a43cbc1ef81"
+}

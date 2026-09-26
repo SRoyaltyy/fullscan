@@ -1,0 +1,121 @@
+{
+  "buys": [
+    {
+      "fees": 2.473,
+      "fees_15bp": 1.9163,
+      "price": 15.87,
+      "score": 0.180693,
+      "shares": 161,
+      "side": "BUY",
+      "ticker": "FRNM"
+    },
+    {
+      "fees": 17.0409,
+      "fees_15bp": 1.9121,
+      "price": 1.93,
+      "score": 0.180532,
+      "shares": 1321,
+      "side": "BUY",
+      "ticker": "BMEA"
+    },
+    {
+      "fees": 17.3118,
+      "fees_15bp": 1.9123,
+      "price": 1.9,
+      "score": 0.162725,
+      "shares": 1342,
+      "side": "BUY",
+      "ticker": "CNDT"
+    },
+    {
+      "fees": 2.311,
+      "fees_15bp": 1.9164,
+      "price": 23.88,
+      "score": 0.154372,
+      "shares": 107,
+      "side": "BUY",
+      "ticker": "MMED"
+    }
+  ],
+  "cash": 22.9541,
+  "cash_flat": 385.1525,
+  "date": "2026-09-03",
+  "designed_after": true,
+  "equity": 10232.51,
+  "equity_15bp": 10594.71,
+  "holdings": [
+    "BMEA",
+    "CNDT",
+    "FRNM",
+    "MMED"
+  ],
+  "n": 4,
+  "n_train_rows": 1286,
+  "n_train_sessions": 14,
+  "picks": [
+    "FRNM",
+    "BMEA",
+    "CNDT",
+    "MMED"
+  ],
+  "ret_pct": 10.565,
+  "ret_pct_flat_15bp": 10.9094,
+  "sat": false,
+  "scores": [
+    {
+      "score": 0.180693,
+      "ticker": "FRNM"
+    },
+    {
+      "score": 0.180532,
+      "ticker": "BMEA"
+    },
+    {
+      "score": 0.162725,
+      "ticker": "CNDT"
+    },
+    {
+      "score": 0.154372,
+      "ticker": "MMED"
+    }
+  ],
+  "sells": [
+    {
+      "fees": 10.5106,
+      "fees_15bp": 1.7465,
+      "pnl": -4.8093,
+      "price": 2.9,
+      "shares": 803,
+      "side": "SELL",
+      "ticker": "AVXL"
+    },
+    {
+      "fees": 3.3635,
+      "fees_15bp": 1.7434,
+      "pnl": 3.5741,
+      "price": 9.08,
+      "shares": 256,
+      "side": "SELL",
+      "ticker": "EOLS"
+    },
+    {
+      "fees": 24.6432,
+      "fees_15bp": 2.5151,
+      "pnl": 1006.0931,
+      "price": 1.78,
+      "shares": 1884,
+      "side": "SELL",
+      "ticker": "GPRO"
+    },
+    {
+      "fees": 2.0509,
+      "fees_15bp": 1.6759,
+      "pnl": -27.9439,
+      "price": 203.14,
+      "shares": 11,
+      "side": "SELL",
+      "ticker": "TEL"
+    }
+  ],
+  "sha256": "3660be4ecb4ebda57975ec3035f48860306e8f1ca1a7f528cace526a0d087091"
+}

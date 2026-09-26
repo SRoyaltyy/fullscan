@@ -1,0 +1,121 @@
+{
+  "buys": [
+    {
+      "fees": 3.5088,
+      "fees_15bp": 1.8748,
+      "price": 9.19,
+      "score": 0.283751,
+      "shares": 272,
+      "side": "BUY",
+      "ticker": "CAPR"
+    },
+    {
+      "fees": 2.7993,
+      "fees_15bp": 1.8749,
+      "price": 11.52,
+      "score": 0.273805,
+      "shares": 217,
+      "side": "BUY",
+      "ticker": "FLNC"
+    },
+    {
+      "fees": 6.708,
+      "fees_15bp": 1.8759,
+      "price": 4.81,
+      "score": 0.19901,
+      "shares": 520,
+      "side": "BUY",
+      "ticker": "OABI"
+    },
+    {
+      "fees": 2.416,
+      "fees_15bp": 1.8744,
+      "price": 17.6,
+      "score": 0.180892,
+      "shares": 142,
+      "side": "BUY",
+      "ticker": "FWRD"
+    }
+  ],
+  "cash": 21.7277,
+  "cash_flat": 34.9239,
+  "date": "2026-08-27",
+  "designed_after": true,
+  "equity": 10021.65,
+  "equity_15bp": 10034.84,
+  "holdings": [
+    "CAPR",
+    "FLNC",
+    "FWRD",
+    "OABI"
+  ],
+  "n": 4,
+  "n_train_rows": 804,
+  "n_train_sessions": 9,
+  "picks": [
+    "CAPR",
+    "FLNC",
+    "OABI",
+    "FWRD"
+  ],
+  "ret_pct": 0.3165,
+  "ret_pct_flat_15bp": 0.4228,
+  "sat": false,
+  "scores": [
+    {
+      "score": 0.283751,
+      "ticker": "CAPR"
+    },
+    {
+      "score": 0.273805,
+      "ticker": "FLNC"
+    },
+    {
+      "score": 0.19901,
+      "ticker": "OABI"
+    },
+    {
+      "score": 0.180892,
+      "ticker": "FWRD"
+    }
+  ],
+  "sells": [
+    {
+      "fees": 2.1722,
+      "fees_15bp": 1.8004,
+      "pnl": -60.9252,
+      "price": 47.07,
+      "shares": 51,
+      "side": "SELL",
+      "ticker": "B"
+    },
+    {
+      "fees": 2.9474,
+      "fees_15bp": 1.9354,
+      "pnl": 83.7631,
+      "price": 11.52,
+      "shares": 224,
+      "side": "SELL",
+      "ticker": "FLNC"
+    },
+    {
+      "fees": 2.9209,
+      "fees_15bp": 1.8948,
+      "pnl": 29.7353,
+      "price": 11.38,
+      "shares": 222,
+      "side": "SELL",
+      "ticker": "TRLV"
+    },
+    {
+      "fees": 2.1064,
+      "fees_15bp": 1.819,
+      "pnl": -15.4934,
+      "price": 83.63,
+      "shares": 29,
+      "side": "SELL",
+      "ticker": "WIX"
+    }
+  ],
+  "sha256": "1c723ab1a2734570d2debb254b11268e707697e7a44791781e589f57674c8d8b"
+}

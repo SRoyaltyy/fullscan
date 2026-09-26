@@ -1,0 +1,22 @@
+recipe,recipe_created_date,start_date,D,net_ret_futubull,net_ret_15bp,day_status,designed_after,n_picks,picks
+excel_ml_lever_h1,2026-09-26,2026-08-13,2026-08-13,0.0000,0.0000,sat,true,0,
+excel_ml_lever_h1,2026-09-26,2026-08-13,2026-08-14,0.0000,0.0000,sat,true,0,
+excel_ml_lever_h1,2026-09-26,2026-08-13,2026-08-17,0.0000,0.0000,sat,true,0,
+excel_ml_lever_h1,2026-09-26,2026-08-13,2026-08-18,0.0000,0.0000,sat,true,0,
+excel_ml_lever_h1,2026-09-26,2026-08-13,2026-08-19,0.0000,0.0000,sat,true,0,
+excel_ml_lever_h1,2026-09-26,2026-08-13,2026-08-20,0.0000,0.0000,sat,true,0,
+excel_ml_lever_h1,2026-09-26,2026-08-13,2026-08-21,0.0000,0.0000,sat,true,0,
+excel_ml_lever_h1,2026-09-26,2026-08-13,2026-08-24,0.0000,0.0000,sat,true,0,
+excel_ml_lever_h1,2026-09-26,2026-08-13,2026-08-25,0.0000,0.0000,sat,true,0,
+excel_ml_lever_h1,2026-09-26,2026-08-13,2026-08-26,-0.0997,-0.0741,picked,true,4,FLNC WIX B TRLV
+excel_ml_lever_h1,2026-09-26,2026-08-13,2026-08-27,0.3165,0.4228,picked,true,4,CAPR FLNC OABI FWRD
+excel_ml_lever_h1,2026-09-26,2026-08-13,2026-08-28,-0.8458,-0.4831,picked,true,4,CAPR DJT MIST TH
+excel_ml_lever_h1,2026-09-26,2026-08-13,2026-08-31,-3.7339,-2.9324,picked,true,4,CAN NABL FWDI CNXC
+excel_ml_lever_h1,2026-09-26,2026-08-13,2026-09-01,-3.8628,-2.8601,picked,true,4,SKYX CTMX TRLV CYPH
+excel_ml_lever_h1,2026-09-26,2026-08-13,2026-09-02,0.6350,1.4475,picked,true,4,EOLS AVXL GPRO TEL
+excel_ml_lever_h1,2026-09-26,2026-08-13,2026-09-03,10.5650,10.9094,picked,true,4,FRNM BMEA CNDT MMED
+excel_ml_lever_h1,2026-09-26,2026-08-13,2026-09-04,-0.3921,0.2476,picked,true,4,CRM BMEA BAK DFDV
+excel_ml_lever_h1,2026-09-26,2026-08-13,2026-09-08,-0.2783,0.3826,picked,true,4,BMEA SMMT MSTR GPRO
+excel_ml_lever_h1,2026-09-26,2026-08-13,2026-09-09,-1.5717,-0.8264,picked,true,4,DFDV ORBS SRPT HYLN
+excel_ml_lever_h1,2026-09-26,2026-08-13,2026-09-10,-7.5496,-6.4017,picked,true,4,OCGN INDP CMPS WLTH
+excel_ml_lever_h1,2026-09-26,2026-08-13,2026-09-11,8.9929,9.1971,picked,true,4,INDP BAK AMTX CVI

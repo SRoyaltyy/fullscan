@@ -1,0 +1,121 @@
+{
+  "buys": [
+    {
+      "fees": 41.6331,
+      "fees_15bp": 1.7727,
+      "price": 0.394,
+      "score": 0.161396,
+      "shares": 5999,
+      "side": "BUY",
+      "ticker": "CAN"
+    },
+    {
+      "fees": 7.5078,
+      "fees_15bp": 1.7984,
+      "price": 4.12,
+      "score": 0.154344,
+      "shares": 582,
+      "side": "BUY",
+      "ticker": "NABL"
+    },
+    {
+      "fees": 5.1987,
+      "fees_15bp": 1.7984,
+      "price": 5.95,
+      "score": 0.135325,
+      "shares": 403,
+      "side": "BUY",
+      "ticker": "FWDI"
+    },
+    {
+      "fees": 2.233,
+      "fees_15bp": 1.7845,
+      "price": 29.375,
+      "score": 0.132514,
+      "shares": 81,
+      "side": "BUY",
+      "ticker": "CNXC"
+    }
+  ],
+  "cash": 27.1926,
+  "cash_flat": 154.8512,
+  "date": "2026-08-31",
+  "designed_after": true,
+  "equity": 9565.86,
+  "equity_15bp": 9693.52,
+  "holdings": [
+    "CAN",
+    "CNXC",
+    "FWDI",
+    "NABL"
+  ],
+  "n": 4,
+  "n_train_rows": 1025,
+  "n_train_sessions": 11,
+  "picks": [
+    "CAN",
+    "NABL",
+    "FWDI",
+    "CNXC"
+  ],
+  "ret_pct": -3.7339,
+  "ret_pct_flat_15bp": -2.9324,
+  "sat": false,
+  "scores": [
+    {
+      "score": 0.161396,
+      "ticker": "CAN"
+    },
+    {
+      "score": 0.154344,
+      "ticker": "NABL"
+    },
+    {
+      "score": 0.135325,
+      "ticker": "FWDI"
+    },
+    {
+      "score": 0.132514,
+      "ticker": "CNXC"
+    }
+  ],
+  "sells": [
+    {
+      "fees": 3.3512,
+      "fees_15bp": 1.8169,
+      "pnl": -65.2906,
+      "price": 9.5,
+      "shares": 255,
+      "side": "SELL",
+      "ticker": "CAPR"
+    },
+    {
+      "fees": 3.3645,
+      "fees_15bp": 1.8336,
+      "pnl": -50.1869,
+      "price": 9.55,
+      "shares": 256,
+      "side": "SELL",
+      "ticker": "DJT"
+    },
+    {
+      "fees": 26.8699,
+      "fees_15bp": 1.8033,
+      "pnl": -115.0296,
+      "price": 1.17,
+      "shares": 2055,
+      "side": "SELL",
+      "ticker": "MIST"
+    },
+    {
+      "fees": 2.4237,
+      "fees_15bp": 1.7808,
+      "pnl": -119.4317,
+      "price": 18.125,
+      "shares": 131,
+      "side": "SELL",
+      "ticker": "TH"
+    }
+  ],
+  "sha256": "50cf01e9d1132c45f2db190e423bbb9eb34d89edc29ad849562349303a0c312e"
+}

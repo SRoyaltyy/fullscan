@@ -1,0 +1,1238 @@
+{
+  "after_fees_return": 0.8074,
+  "after_fees_return_15bp": 8.0679,
+  "author": "excel",
+  "borrow_if_short": 0.003,
+  "created_on": "2026-09-26",
+  "cutoff": "2026-09-14",
+  "daily": [
+    {
+      "date": "2026-08-13",
+      "designed_after": true,
+      "n": 0,
+      "picks": [],
+      "ret_pct": 0.0,
+      "ret_pct_flat_15bp": 0.0,
+      "sat": true
+    },
+    {
+      "date": "2026-08-14",
+      "designed_after": true,
+      "n": 0,
+      "picks": [],
+      "ret_pct": 0.0,
+      "ret_pct_flat_15bp": 0.0,
+      "sat": true
+    },
+    {
+      "date": "2026-08-17",
+      "designed_after": true,
+      "n": 0,
+      "picks": [],
+      "ret_pct": 0.0,
+      "ret_pct_flat_15bp": 0.0,
+      "sat": true
+    },
+    {
+      "date": "2026-08-18",
+      "designed_after": true,
+      "n": 0,
+      "picks": [],
+      "ret_pct": 0.0,
+      "ret_pct_flat_15bp": 0.0,
+      "sat": true
+    },
+    {
+      "date": "2026-08-19",
+      "designed_after": true,
+      "n": 0,
+      "picks": [],
+      "ret_pct": 0.0,
+      "ret_pct_flat_15bp": 0.0,
+      "sat": true
+    },
+    {
+      "date": "2026-08-20",
+      "designed_after": true,
+      "n": 0,
+      "picks": [],
+      "ret_pct": 0.0,
+      "ret_pct_flat_15bp": 0.0,
+      "sat": true
+    },
+    {
+      "date": "2026-08-21",
+      "designed_after": true,
+      "n": 0,
+      "picks": [],
+      "ret_pct": 0.0,
+      "ret_pct_flat_15bp": 0.0,
+      "sat": true
+    },
+    {
+      "date": "2026-08-24",
+      "designed_after": true,
+      "n": 0,
+      "picks": [],
+      "ret_pct": 0.0,
+      "ret_pct_flat_15bp": 0.0,
+      "sat": true
+    },
+    {
+      "date": "2026-08-25",
+      "designed_after": true,
+      "n": 0,
+      "picks": [],
+      "ret_pct": 0.0,
+      "ret_pct_flat_15bp": 0.0,
+      "sat": true
+    },
+    {
+      "date": "2026-08-26",
+      "designed_after": true,
+      "n": 4,
+      "picks": [
+        "FLNC",
+        "WIX",
+        "B",
+        "TRLV"
+      ],
+      "ret_pct": -0.0997,
+      "ret_pct_flat_15bp": -0.0741,
+      "sat": false
+    },
+    {
+      "date": "2026-08-27",
+      "designed_after": true,
+      "n": 4,
+      "picks": [
+        "CAPR",
+        "FLNC",
+        "OABI",
+        "FWRD"
+      ],
+      "ret_pct": 0.3165,
+      "ret_pct_flat_15bp": 0.4228,
+      "sat": false
+    },
+    {
+      "date": "2026-08-28",
+      "designed_after": true,
+      "n": 4,
+      "picks": [
+        "CAPR",
+        "DJT",
+        "MIST",
+        "TH"
+      ],
+      "ret_pct": -0.8458,
+      "ret_pct_flat_15bp": -0.4831,
+      "sat": false
+    },
+    {
+      "date": "2026-08-31",
+      "designed_after": true,
+      "n": 4,
+      "picks": [
+        "CAN",
+        "NABL",
+        "FWDI",
+        "CNXC"
+      ],
+      "ret_pct": -3.7339,
+      "ret_pct_flat_15bp": -2.9324,
+      "sat": false
+    },
+    {
+      "date": "2026-09-01",
+      "designed_after": true,
+      "n": 4,
+      "picks": [
+        "SKYX",
+        "CTMX",
+        "TRLV",
+        "CYPH"
+      ],
+      "ret_pct": -3.8628,
+      "ret_pct_flat_15bp": -2.8601,
+      "sat": false
+    },
+    {
+      "date": "2026-09-02",
+      "designed_after": true,
+      "n": 4,
+      "picks": [
+        "EOLS",
+        "AVXL",
+        "GPRO",
+        "TEL"
+      ],
+      "ret_pct": 0.635,
+      "ret_pct_flat_15bp": 1.4475,
+      "sat": false
+    },
+    {
+      "date": "2026-09-03",
+      "designed_after": true,
+      "n": 4,
+      "picks": [
+        "FRNM",
+        "BMEA",
+        "CNDT",
+        "MMED"
+      ],
+      "ret_pct": 10.565,
+      "ret_pct_flat_15bp": 10.9094,
+      "sat": false
+    },
+    {
+      "date": "2026-09-04",
+      "designed_after": true,
+      "n": 4,
+      "picks": [
+        "CRM",
+        "BMEA",
+        "BAK",
+        "DFDV"
+      ],
+      "ret_pct": -0.3921,
+      "ret_pct_flat_15bp": 0.2476,
+      "sat": false
+    },
+    {
+      "date": "2026-09-08",
+      "designed_after": true,
+      "n": 4,
+      "picks": [
+        "BMEA",
+        "SMMT",
+        "MSTR",
+        "GPRO"
+      ],
+      "ret_pct": -0.2783,
+      "ret_pct_flat_15bp": 0.3826,
+      "sat": false
+    },
+    {
+      "date": "2026-09-09",
+      "designed_after": true,
+      "n": 4,
+      "picks": [
+        "DFDV",
+        "ORBS",
+        "SRPT",
+        "HYLN"
+      ],
+      "ret_pct": -1.5717,
+      "ret_pct_flat_15bp": -0.8264,
+      "sat": false
+    },
+    {
+      "date": "2026-09-10",
+      "designed_after": true,
+      "n": 4,
+      "picks": [
+        "OCGN",
+        "INDP",
+        "CMPS",
+        "WLTH"
+      ],
+      "ret_pct": -7.5496,
+      "ret_pct_flat_15bp": -6.4017,
+      "sat": false
+    },
+    {
+      "date": "2026-09-11",
+      "designed_after": true,
+      "n": 4,
+      "picks": [
+        "INDP",
+        "BAK",
+        "AMTX",
+        "CVI"
+      ],
+      "ret_pct": 8.9929,
+      "ret_pct_flat_15bp": 9.1971,
+      "sat": false
+    }
+  ],
+  "designed_after": true,
+  "family": "lever",
+  "fee": "futubull",
+  "fills": [
+    {
+      "buys": [],
+      "date": "2026-08-13",
+      "sells": []
+    },
+    {
+      "buys": [],
+      "date": "2026-08-14",
+      "sells": []
+    },
+    {
+      "buys": [],
+      "date": "2026-08-17",
+      "sells": []
+    },
+    {
+      "buys": [],
+      "date": "2026-08-18",
+      "sells": []
+    },
+    {
+      "buys": [],
+      "date": "2026-08-19",
+      "sells": []
+    },
+    {
+      "buys": [],
+      "date": "2026-08-20",
+      "sells": []
+    },
+    {
+      "buys": [],
+      "date": "2026-08-21",
+      "sells": []
+    },
+    {
+      "buys": [],
+      "date": "2026-08-24",
+      "sells": []
+    },
+    {
+      "buys": [],
+      "date": "2026-08-25",
+      "sells": []
+    },
+    {
+      "buys": [
+        {
+          "fees": 2.8896,
+          "fees_15bp": 1.8682,
+          "price": 11.12,
+          "score": 0.342302,
+          "shares": 224,
+          "side": "BUY",
+          "ticker": "FLNC"
+        },
+        {
+          "fees": 2.077,
+          "fees_15bp": 1.8274,
+          "price": 84.02,
+          "score": 0.255336,
+          "shares": 29,
+          "side": "BUY",
+          "ticker": "WIX"
+        },
+        {
+          "fees": 2.143,
+          "fees_15bp": 1.8429,
+          "price": 48.18,
+          "score": 0.249072,
+          "shares": 51,
+          "side": "BUY",
+          "ticker": "B"
+        },
+        {
+          "fees": 2.8638,
+          "fees_15bp": 1.8681,
+          "price": 11.22,
+          "score": 0.232415,
+          "shares": 222,
+          "side": "BUY",
+          "ticker": "TRLV"
+        }
+      ],
+      "date": "2026-08-26",
+      "sells": []
+    },
+    {
+      "buys": [
+        {
+          "fees": 3.5088,
+          "fees_15bp": 1.8748,
+          "price": 9.19,
+          "score": 0.283751,
+          "shares": 272,
+          "side": "BUY",
+          "ticker": "CAPR"
+        },
+        {
+          "fees": 2.7993,
+          "fees_15bp": 1.8749,
+          "price": 11.52,
+          "score": 0.273805,
+          "shares": 217,
+          "side": "BUY",
+          "ticker": "FLNC"
+        },
+        {
+          "fees": 6.708,
+          "fees_15bp": 1.8759,
+          "price": 4.81,
+          "score": 0.19901,
+          "shares": 520,
+          "side": "BUY",
+          "ticker": "OABI"
+        },
+        {
+          "fees": 2.416,
+          "fees_15bp": 1.8744,
+          "price": 17.6,
+          "score": 0.180892,
+          "shares": 142,
+          "side": "BUY",
+          "ticker": "FWRD"
+        }
+      ],
+      "date": "2026-08-27",
+      "sells": [
+        {
+          "fees": 2.1722,
+          "fees_15bp": 1.8004,
+          "pnl": -60.9252,
+          "price": 47.07,
+          "shares": 51,
+          "side": "SELL",
+          "ticker": "B"
+        },
+        {
+          "fees": 2.9474,
+          "fees_15bp": 1.9354,
+          "pnl": 83.7631,
+          "price": 11.52,
+          "shares": 224,
+          "side": "SELL",
+          "ticker": "FLNC"
+        },
+        {
+          "fees": 2.9209,
+          "fees_15bp": 1.8948,
+          "pnl": 29.7353,
+          "price": 11.38,
+          "shares": 222,
+          "side": "SELL",
+          "ticker": "TRLV"
+        },
+        {
+          "fees": 2.1064,
+          "fees_15bp": 1.819,
+          "pnl": -15.4934,
+          "price": 83.63,
+          "shares": 29,
+          "side": "SELL",
+          "ticker": "WIX"
+        }
+      ]
+    },
+    {
+      "buys": [
+        {
+          "fees": 3.2895,
+          "fees_15bp": 1.8609,
+          "price": 9.73,
+          "score": 0.234241,
+          "shares": 255,
+          "side": "BUY",
+          "ticker": "CAPR"
+        },
+        {
+          "fees": 3.3024,
+          "fees_15bp": 1.8662,
+          "price": 9.72,
+          "score": 0.194142,
+          "shares": 256,
+          "side": "BUY",
+          "ticker": "DJT"
+        },
+        {
+          "fees": 26.5095,
+          "fees_15bp": 1.8495,
+          "price": 1.2,
+          "score": 0.192232,
+          "shares": 2055,
+          "side": "BUY",
+          "ticker": "MIST"
+        },
+        {
+          "fees": 2.383,
+          "fees_15bp": 1.8668,
+          "price": 19.0,
+          "score": 0.172558,
+          "shares": 131,
+          "side": "BUY",
+          "ticker": "TH"
+        }
+      ],
+      "date": "2026-08-28",
+      "sells": [
+        {
+          "fees": 3.5751,
+          "fees_15bp": 1.9849,
+          "pnl": 139.7961,
+          "price": 9.73,
+          "shares": 272,
+          "side": "SELL",
+          "ticker": "CAPR"
+        },
+        {
+          "fees": 2.8549,
+          "fees_15bp": 1.8342,
+          "pnl": -59.9042,
+          "price": 11.27,
+          "shares": 217,
+          "side": "SELL",
+          "ticker": "FLNC"
+        },
+        {
+          "fees": 2.4597,
+          "fees_15bp": 1.8851,
+          "pnl": 9.3244,
+          "price": 17.7,
+          "shares": 142,
+          "side": "SELL",
+          "ticker": "FWRD"
+        },
+        {
+          "fees": 6.8132,
+          "fees_15bp": 1.7706,
+          "pnl": -153.9212,
+          "price": 4.54,
+          "shares": 520,
+          "side": "SELL",
+          "ticker": "OABI"
+        }
+      ]
+    },
+    {
+      "buys": [
+        {
+          "fees": 41.6331,
+          "fees_15bp": 1.7727,
+          "price": 0.394,
+          "score": 0.161396,
+          "shares": 5999,
+          "side": "BUY",
+          "ticker": "CAN"
+        },
+        {
+          "fees": 7.5078,
+          "fees_15bp": 1.7984,
+          "price": 4.12,
+          "score": 0.154344,
+          "shares": 582,
+          "side": "BUY",
+          "ticker": "NABL"
+        },
+        {
+          "fees": 5.1987,
+          "fees_15bp": 1.7984,
+          "price": 5.95,
+          "score": 0.135325,
+          "shares": 403,
+          "side": "BUY",
+          "ticker": "FWDI"
+        },
+        {
+          "fees": 2.233,
+          "fees_15bp": 1.7845,
+          "price": 29.375,
+          "score": 0.132514,
+          "shares": 81,
+          "side": "BUY",
+          "ticker": "CNXC"
+        }
+      ],
+      "date": "2026-08-31",
+      "sells": [
+        {
+          "fees": 3.3512,
+          "fees_15bp": 1.8169,
+          "pnl": -65.2906,
+          "price": 9.5,
+          "shares": 255,
+          "side": "SELL",
+          "ticker": "CAPR"
+        },
+        {
+          "fees": 3.3645,
+          "fees_15bp": 1.8336,
+          "pnl": -50.1869,
+          "price": 9.55,
+          "shares": 256,
+          "side": "SELL",
+          "ticker": "DJT"
+        },
+        {
+          "fees": 26.8699,
+          "fees_15bp": 1.8033,
+          "pnl": -115.0296,
+          "price": 1.17,
+          "shares": 2055,
+          "side": "SELL",
+          "ticker": "MIST"
+        },
+        {
+          "fees": 2.4237,
+          "fees_15bp": 1.7808,
+          "pnl": -119.4317,
+          "price": 18.125,
+          "shares": 131,
+          "side": "SELL",
+          "ticker": "TH"
+        }
+      ]
+    },
+    {
+      "buys": [
+        {
+          "fees": 22.5363,
+          "fees_15bp": 1.7164,
+          "price": 1.31,
+          "score": 0.221585,
+          "shares": 1747,
+          "side": "BUY",
+          "ticker": "SKYX"
+        },
+        {
+          "fees": 8.9397,
+          "fees_15bp": 1.7256,
+          "price": 3.32,
+          "score": 0.210184,
+          "shares": 693,
+          "side": "BUY",
+          "ticker": "CTMX"
+        },
+        {
+          "fees": 2.59,
+          "fees_15bp": 1.731,
+          "price": 11.54,
+          "score": 0.209029,
+          "shares": 200,
+          "side": "BUY",
+          "ticker": "TRLV"
+        },
+        {
+          "fees": 17.0022,
+          "fees_15bp": 1.72,
+          "price": 1.74,
+          "score": 0.159021,
+          "shares": 1318,
+          "side": "BUY",
+          "ticker": "CYPH"
+        }
+      ],
+      "date": "2026-09-01",
+      "sells": [
+        {
+          "fees": 39.8861,
+          "fees_15bp": 1.5657,
+          "pnl": -357.4732,
+          "price": 0.348,
+          "shares": 5999,
+          "side": "SELL",
+          "ticker": "CAN"
+        },
+        {
+          "fees": 2.2659,
+          "fees_15bp": 1.8195,
+          "pnl": 42.0762,
+          "price": 29.95,
+          "shares": 81,
+          "side": "SELL",
+          "ticker": "CNXC"
+        },
+        {
+          "fees": 5.2854,
+          "fees_15bp": 1.8558,
+          "pnl": 66.0859,
+          "price": 6.14,
+          "shares": 403,
+          "side": "SELL",
+          "ticker": "FWDI"
+        },
+        {
+          "fees": 7.6227,
+          "fees_15bp": 1.7154,
+          "pnl": -125.7104,
+          "price": 3.93,
+          "shares": 582,
+          "side": "SELL",
+          "ticker": "NABL"
+        }
+      ]
+    },
+    {
+      "buys": [
+        {
+          "fees": 3.3024,
+          "fees_15bp": 1.7357,
+          "price": 9.04,
+          "score": 0.185224,
+          "shares": 256,
+          "side": "BUY",
+          "ticker": "EOLS"
+        },
+        {
+          "fees": 10.3587,
+          "fees_15bp": 1.7345,
+          "price": 2.88,
+          "score": 0.177153,
+          "shares": 803,
+          "side": "BUY",
+          "ticker": "AVXL"
+        },
+        {
+          "fees": 24.3036,
+          "fees_15bp": 1.7239,
+          "price": 1.22,
+          "score": 0.145419,
+          "shares": 1884,
+          "side": "BUY",
+          "ticker": "GPRO"
+        },
+        {
+          "fees": 2.023,
+          "fees_15bp": 1.6938,
+          "price": 205.31,
+          "score": 0.145313,
+          "shares": 11,
+          "side": "BUY",
+          "ticker": "TEL"
+        }
+      ],
+      "date": "2026-09-02",
+      "sells": [
+        {
+          "fees": 9.0754,
+          "fees_15bp": 1.9335,
+          "pnl": 259.185,
+          "price": 3.72,
+          "shares": 693,
+          "side": "SELL",
+          "ticker": "CTMX"
+        },
+        {
+          "fees": 17.2389,
+          "fees_15bp": 1.6805,
+          "pnl": -86.961,
+          "price": 1.7,
+          "shares": 1318,
+          "side": "SELL",
+          "ticker": "CYPH"
+        },
+        {
+          "fees": 22.8436,
+          "fees_15bp": 1.6247,
+          "pnl": -167.6698,
+          "price": 1.24,
+          "shares": 1747,
+          "side": "SELL",
+          "ticker": "SKYX"
+        },
+        {
+          "fees": 2.642,
+          "fees_15bp": 1.767,
+          "pnl": 42.768,
+          "price": 11.78,
+          "shares": 200,
+          "side": "SELL",
+          "ticker": "TRLV"
+        }
+      ]
+    },
+    {
+      "buys": [
+        {
+          "fees": 2.473,
+          "fees_15bp": 1.9163,
+          "price": 15.87,
+          "score": 0.180693,
+          "shares": 161,
+          "side": "BUY",
+          "ticker": "FRNM"
+        },
+        {
+          "fees": 17.0409,
+          "fees_15bp": 1.9121,
+          "price": 1.93,
+          "score": 0.180532,
+          "shares": 1321,
+          "side": "BUY",
+          "ticker": "BMEA"
+        },
+        {
+          "fees": 17.3118,
+          "fees_15bp": 1.9123,
+          "price": 1.9,
+          "score": 0.162725,
+          "shares": 1342,
+          "side": "BUY",
+          "ticker": "CNDT"
+        },
+        {
+          "fees": 2.311,
+          "fees_15bp": 1.9164,
+          "price": 23.88,
+          "score": 0.154372,
+          "shares": 107,
+          "side": "BUY",
+          "ticker": "MMED"
+        }
+      ],
+      "date": "2026-09-03",
+      "sells": [
+        {
+          "fees": 10.5106,
+          "fees_15bp": 1.7465,
+          "pnl": -4.8093,
+          "price": 2.9,
+          "shares": 803,
+          "side": "SELL",
+          "ticker": "AVXL"
+        },
+        {
+          "fees": 3.3635,
+          "fees_15bp": 1.7434,
+          "pnl": 3.5741,
+          "price": 9.08,
+          "shares": 256,
+          "side": "SELL",
+          "ticker": "EOLS"
+        },
+        {
+          "fees": 24.6432,
+          "fees_15bp": 2.5151,
+          "pnl": 1006.0931,
+          "price": 1.78,
+          "shares": 1884,
+          "side": "SELL",
+          "ticker": "GPRO"
+        },
+        {
+          "fees": 2.0509,
+          "fees_15bp": 1.6759,
+          "pnl": -27.9439,
+          "price": 203.14,
+          "shares": 11,
+          "side": "SELL",
+          "ticker": "TEL"
+        }
+      ]
+    },
+    {
+      "buys": [
+        {
+          "fees": 2.017,
+          "fees_15bp": 1.7777,
+          "price": 263.36,
+          "score": 0.186058,
+          "shares": 9,
+          "side": "BUY",
+          "ticker": "CRM"
+        },
+        {
+          "fees": 17.2473,
+          "fees_15bp": 1.9052,
+          "price": 1.9,
+          "score": 0.154998,
+          "shares": 1337,
+          "side": "BUY",
+          "ticker": "BMEA"
+        },
+        {
+          "fees": 16.899,
+          "fees_15bp": 1.9061,
+          "price": 1.94,
+          "score": 0.149993,
+          "shares": 1310,
+          "side": "BUY",
+          "ticker": "BAK"
+        },
+        {
+          "fees": 5.676,
+          "fees_15bp": 1.9107,
+          "price": 5.79,
+          "score": 0.141146,
+          "shares": 440,
+          "side": "BUY",
+          "ticker": "DFDV"
+        }
+      ],
+      "date": "2026-09-04",
+      "sells": [
+        {
+          "fees": 17.2803,
+          "fees_15bp": 1.8824,
+          "pnl": -73.9512,
+          "price": 1.9,
+          "shares": 1321,
+          "side": "SELL",
+          "ticker": "BMEA"
+        },
+        {
+          "fees": 17.555,
+          "fees_15bp": 1.9123,
+          "pnl": -34.8668,
+          "price": 1.9,
+          "shares": 1342,
+          "side": "SELL",
+          "ticker": "CNDT"
+        },
+        {
+          "fees": 2.5208,
+          "fees_15bp": 1.9803,
+          "pnl": 80.3362,
+          "price": 16.4,
+          "shares": 161,
+          "side": "SELL",
+          "ticker": "FRNM"
+        },
+        {
+          "fees": 2.3492,
+          "fees_15bp": 1.9132,
+          "pnl": -8.9401,
+          "price": 23.84,
+          "shares": 107,
+          "side": "SELL",
+          "ticker": "MMED"
+        }
+      ]
+    },
+    {
+      "buys": [
+        {
+          "fees": 16.3443,
+          "fees_15bp": 1.9005,
+          "price": 2.0,
+          "score": 0.148407,
+          "shares": 1267,
+          "side": "BUY",
+          "ticker": "BMEA"
+        },
+        {
+          "fees": 2.428,
+          "fees_15bp": 1.9086,
+          "price": 17.43,
+          "score": 0.135584,
+          "shares": 146,
+          "side": "BUY",
+          "ticker": "SMMT"
+        },
+        {
+          "fees": 2.044,
+          "fees_15bp": 1.8579,
+          "price": 137.62,
+          "score": 0.106359,
+          "shares": 18,
+          "side": "BUY",
+          "ticker": "MSTR"
+        },
+        {
+          "fees": 20.8464,
+          "fees_15bp": 1.8968,
+          "price": 1.565,
+          "score": 0.099622,
+          "shares": 1616,
+          "side": "BUY",
+          "ticker": "GPRO"
+        }
+      ],
+      "date": "2026-09-08",
+      "sells": [
+        {
+          "fees": 17.1368,
+          "fees_15bp": 1.9061,
+          "pnl": -34.0358,
+          "price": 1.94,
+          "shares": 1310,
+          "side": "SELL",
+          "ticker": "BAK"
+        },
+        {
+          "fees": 17.4906,
+          "fees_15bp": 2.0055,
+          "pnl": 98.9621,
+          "price": 2.0,
+          "shares": 1337,
+          "side": "SELL",
+          "ticker": "BMEA"
+        },
+        {
+          "fees": 2.0453,
+          "fees_15bp": 1.7126,
+          "pnl": -90.8222,
+          "price": 253.72,
+          "shares": 9,
+          "side": "SELL",
+          "ticker": "CRM"
+        },
+        {
+          "fees": 5.7695,
+          "fees_15bp": 1.9173,
+          "pnl": -2.6455,
+          "price": 5.81,
+          "shares": 440,
+          "side": "SELL",
+          "ticker": "DFDV"
+        }
+      ]
+    },
+    {
+      "buys": [
+        {
+          "fees": 5.3664,
+          "fees_15bp": 1.8782,
+          "price": 6.02,
+          "score": 0.112818,
+          "shares": 416,
+          "side": "BUY",
+          "ticker": "DFDV"
+        },
+        {
+          "fees": 28.5993,
+          "fees_15bp": 1.8623,
+          "price": 1.12,
+          "score": 0.111982,
+          "shares": 2217,
+          "side": "BUY",
+          "ticker": "ORBS"
+        },
+        {
+          "fees": 2.35,
+          "fees_15bp": 1.8729,
+          "price": 20.81,
+          "score": 0.108263,
+          "shares": 120,
+          "side": "BUY",
+          "ticker": "SRPT"
+        },
+        {
+          "fees": 8.0754,
+          "fees_15bp": 1.878,
+          "price": 4.0,
+          "score": 0.10762,
+          "shares": 626,
+          "side": "BUY",
+          "ticker": "HYLN"
+        }
+      ],
+      "date": "2026-09-09",
+      "sells": [
+        {
+          "fees": 16.5743,
+          "fees_15bp": 1.8435,
+          "pnl": -108.9385,
+          "price": 1.94,
+          "shares": 1267,
+          "side": "SELL",
+          "ticker": "BMEA"
+        },
+        {
+          "fees": 21.1334,
+          "fees_15bp": 1.7574,
+          "pnl": -227.8198,
+          "price": 1.45,
+          "shares": 1616,
+          "side": "SELL",
+          "ticker": "GPRO"
+        },
+        {
+          "fees": 2.0744,
+          "fees_15bp": 1.9146,
+          "pnl": 71.4818,
+          "price": 141.82,
+          "shares": 18,
+          "side": "SELL",
+          "ticker": "MSTR"
+        },
+        {
+          "fees": 2.4735,
+          "fees_15bp": 1.9934,
+          "pnl": 108.2484,
+          "price": 18.205,
+          "shares": 146,
+          "side": "SELL",
+          "ticker": "SMMT"
+        }
+      ]
+    },
+    {
+      "buys": [
+        {
+          "fees": 27.0513,
+          "fees_15bp": 1.7222,
+          "price": 1.095,
+          "score": 0.116258,
+          "shares": 2097,
+          "side": "BUY",
+          "ticker": "OCGN"
+        },
+        {
+          "fees": 14.8866,
+          "fees_15bp": 1.731,
+          "price": 2.0,
+          "score": 0.106184,
+          "shares": 1154,
+          "side": "BUY",
+          "ticker": "INDP"
+        },
+        {
+          "fees": 2.455,
+          "fees_15bp": 1.7333,
+          "price": 14.91,
+          "score": 0.096121,
+          "shares": 155,
+          "side": "BUY",
+          "ticker": "CMPS"
+        },
+        {
+          "fees": 3.1476,
+          "fees_15bp": 1.7385,
+          "price": 9.5,
+          "score": 0.084019,
+          "shares": 244,
+          "side": "BUY",
+          "ticker": "WLTH"
+        }
+      ],
+      "date": "2026-09-10",
+      "sells": [
+        {
+          "fees": 5.4528,
+          "fees_15bp": 1.6286,
+          "pnl": -343.6193,
+          "price": 5.22,
+          "shares": 416,
+          "side": "SELL",
+          "ticker": "DFDV"
+        },
+        {
+          "fees": 8.198,
+          "fees_15bp": 1.7559,
+          "pnl": -179.0334,
+          "price": 3.74,
+          "shares": 626,
+          "side": "SELL",
+          "ticker": "HYLN"
+        },
+        {
+          "fees": 28.7408,
+          "fees_15bp": 1.6278,
+          "pnl": -369.9372,
+          "price": 0.979,
+          "shares": 2217,
+          "side": "SELL",
+          "ticker": "ORBS"
+        },
+        {
+          "fees": 2.3911,
+          "fees_15bp": 1.9818,
+          "pnl": 140.459,
+          "price": 22.02,
+          "shares": 120,
+          "side": "SELL",
+          "ticker": "SRPT"
+        }
+      ]
+    },
+    {
+      "buys": [
+        {
+          "fees": 12.0357,
+          "fees_15bp": 1.8893,
+          "price": 2.7,
+          "score": 0.169498,
+          "shares": 933,
+          "side": "BUY",
+          "ticker": "INDP"
+        },
+        {
+          "fees": 15.2994,
+          "fees_15bp": 1.8857,
+          "price": 2.12,
+          "score": 0.139894,
+          "shares": 1186,
+          "side": "BUY",
+          "ticker": "BAK"
+        },
+        {
+          "fees": 15.9057,
+          "fees_15bp": 1.8865,
+          "price": 2.04,
+          "score": 0.109624,
+          "shares": 1233,
+          "side": "BUY",
+          "ticker": "AMTX"
+        },
+        {
+          "fees": 2.146,
+          "fees_15bp": 1.886,
+          "price": 48.36,
+          "score": 0.073532,
+          "shares": 52,
+          "side": "BUY",
+          "ticker": "CVI"
+        }
+      ],
+      "date": "2026-09-11",
+      "sells": [
+        {
+          "fees": 2.4983,
+          "fees_15bp": 1.6426,
+          "pnl": -125.8533,
+          "price": 14.13,
+          "shares": 155,
+          "side": "SELL",
+          "ticker": "CMPS"
+        },
+        {
+          "fees": 15.1031,
+          "fees_15bp": 2.3369,
+          "pnl": 777.8104,
+          "price": 2.7,
+          "shares": 1154,
+          "side": "SELL",
+          "ticker": "INDP"
+        },
+        {
+          "fees": 27.4168,
+          "fees_15bp": 1.6357,
+          "pnl": -169.8032,
+          "price": 1.04,
+          "shares": 2097,
+          "side": "SELL",
+          "ticker": "OCGN"
+        },
+        {
+          "fees": 3.2095,
+          "fees_15bp": 2.0038,
+          "pnl": 347.4429,
+          "price": 10.95,
+          "shares": 244,
+          "side": "SELL",
+          "ticker": "WLTH"
+        }
+      ]
+    }
+  ],
+  "final_equity": 10080.74,
+  "final_equity_15bp": 10806.79,
+  "flat_fee": "15bp",
+  "hold": 1,
+  "id": "excel_ml_lever_h1",
+  "min_resolved_sessions": 8,
+  "min_train_rows": 30,
+  "n_days": 21,
+  "n_days_picked": 12,
+  "note": "Luck-test window only. Every session is before the lever's creation date, so the series is designed_after and is not a real record. No session on or after 2026-09-14 is scored. The last entry's open-to-next-open move is not in this window because that exit is the next session, which is not scored.",
+  "ridge_alpha": 10.0,
+  "seed": 7,
+  "side": "long",
+  "top_n": 4,
+  "window": {
+    "end": "2026-09-11",
+    "start": "2026-08-13"
+  }
+}

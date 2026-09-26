@@ -1,0 +1,121 @@
+{
+  "buys": [
+    {
+      "fees": 3.2895,
+      "fees_15bp": 1.8609,
+      "price": 9.73,
+      "score": 0.234241,
+      "shares": 255,
+      "side": "BUY",
+      "ticker": "CAPR"
+    },
+    {
+      "fees": 3.3024,
+      "fees_15bp": 1.8662,
+      "price": 9.72,
+      "score": 0.194142,
+      "shares": 256,
+      "side": "BUY",
+      "ticker": "DJT"
+    },
+    {
+      "fees": 26.5095,
+      "fees_15bp": 1.8495,
+      "price": 1.2,
+      "score": 0.192232,
+      "shares": 2055,
+      "side": "BUY",
+      "ticker": "MIST"
+    },
+    {
+      "fees": 2.383,
+      "fees_15bp": 1.8668,
+      "price": 19.0,
+      "score": 0.172558,
+      "shares": 131,
+      "side": "BUY",
+      "ticker": "TH"
+    }
+  ],
+  "cash": 12.4204,
+  "cash_flat": 61.8857,
+  "date": "2026-08-28",
+  "designed_after": true,
+  "equity": 9936.89,
+  "equity_15bp": 9986.36,
+  "holdings": [
+    "CAPR",
+    "DJT",
+    "MIST",
+    "TH"
+  ],
+  "n": 4,
+  "n_train_rows": 912,
+  "n_train_sessions": 10,
+  "picks": [
+    "CAPR",
+    "DJT",
+    "MIST",
+    "TH"
+  ],
+  "ret_pct": -0.8458,
+  "ret_pct_flat_15bp": -0.4831,
+  "sat": false,
+  "scores": [
+    {
+      "score": 0.234241,
+      "ticker": "CAPR"
+    },
+    {
+      "score": 0.194142,
+      "ticker": "DJT"
+    },
+    {
+      "score": 0.192232,
+      "ticker": "MIST"
+    },
+    {
+      "score": 0.172558,
+      "ticker": "TH"
+    }
+  ],
+  "sells": [
+    {
+      "fees": 3.5751,
+      "fees_15bp": 1.9849,
+      "pnl": 139.7961,
+      "price": 9.73,
+      "shares": 272,
+      "side": "SELL",
+      "ticker": "CAPR"
+    },
+    {
+      "fees": 2.8549,
+      "fees_15bp": 1.8342,
+      "pnl": -59.9042,
+      "price": 11.27,
+      "shares": 217,
+      "side": "SELL",
+      "ticker": "FLNC"
+    },
+    {
+      "fees": 2.4597,
+      "fees_15bp": 1.8851,
+      "pnl": 9.3244,
+      "price": 17.7,
+      "shares": 142,
+      "side": "SELL",
+      "ticker": "FWRD"
+    },
+    {
+      "fees": 6.8132,
+      "fees_15bp": 1.7706,
+      "pnl": -153.9212,
+      "price": 4.54,
+      "shares": 520,
+      "side": "SELL",
+      "ticker": "OABI"
+    }
+  ],
+  "sha256": "01d2ec8ace42da5b6a5caac711bbadf1649f927ed9ee402105d01401e9d3a59c"
+}

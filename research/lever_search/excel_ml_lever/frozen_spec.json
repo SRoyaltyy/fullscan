@@ -1,0 +1,19 @@
+{
+  "author": "excel",
+  "created_on": "2026-09-26",
+  "cutoff": "2026-09-14",
+  "designed_after": true,
+  "hold": 1,
+  "hold_2": false,
+  "lever": "excel_ml_lever_h1",
+  "module_sha256": {
+    "excel_ml_lever.py": "be64b1f14a36fab1e2f4ec598276b77c9b5bc2eed74b6fd023025f20eeabe68a"
+  },
+  "spec_file": "research/lever_search/excel_ml_lever/SPEC.md",
+  "spec_sha256": "f8bb3cfa2ea5906a8363a034c07e71636905fc425b5e4dced4590ffe102d8a4f",
+  "theme_radar_enabled": false,
+  "window": [
+    "2026-08-13",
+    "2026-09-11"
+  ]
+}

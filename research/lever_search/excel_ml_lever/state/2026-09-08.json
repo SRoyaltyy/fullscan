@@ -1,0 +1,121 @@
+{
+  "buys": [
+    {
+      "fees": 16.3443,
+      "fees_15bp": 1.9005,
+      "price": 2.0,
+      "score": 0.148407,
+      "shares": 1267,
+      "side": "BUY",
+      "ticker": "BMEA"
+    },
+    {
+      "fees": 2.428,
+      "fees_15bp": 1.9086,
+      "price": 17.43,
+      "score": 0.135584,
+      "shares": 146,
+      "side": "BUY",
+      "ticker": "SMMT"
+    },
+    {
+      "fees": 2.044,
+      "fees_15bp": 1.8579,
+      "price": 137.62,
+      "score": 0.106359,
+      "shares": 18,
+      "side": "BUY",
+      "ticker": "MSTR"
+    },
+    {
+      "fees": 20.8464,
+      "fees_15bp": 1.8968,
+      "price": 1.565,
+      "score": 0.099622,
+      "shares": 1616,
+      "side": "BUY",
+      "ticker": "GPRO"
+    }
+  ],
+  "cash": 79.0446,
+  "cash_flat": 576.5993,
+  "date": "2026-09-08",
+  "designed_after": true,
+  "equity": 10164.02,
+  "equity_15bp": 10661.58,
+  "holdings": [
+    "BMEA",
+    "GPRO",
+    "MSTR",
+    "SMMT"
+  ],
+  "n": 4,
+  "n_train_rows": 1492,
+  "n_train_sessions": 16,
+  "picks": [
+    "BMEA",
+    "SMMT",
+    "MSTR",
+    "GPRO"
+  ],
+  "ret_pct": -0.2783,
+  "ret_pct_flat_15bp": 0.3826,
+  "sat": false,
+  "scores": [
+    {
+      "score": 0.148407,
+      "ticker": "BMEA"
+    },
+    {
+      "score": 0.135584,
+      "ticker": "SMMT"
+    },
+    {
+      "score": 0.106359,
+      "ticker": "MSTR"
+    },
+    {
+      "score": 0.099622,
+      "ticker": "GPRO"
+    }
+  ],
+  "sells": [
+    {
+      "fees": 17.1368,
+      "fees_15bp": 1.9061,
+      "pnl": -34.0358,
+      "price": 1.94,
+      "shares": 1310,
+      "side": "SELL",
+      "ticker": "BAK"
+    },
+    {
+      "fees": 17.4906,
+      "fees_15bp": 2.0055,
+      "pnl": 98.9621,
+      "price": 2.0,
+      "shares": 1337,
+      "side": "SELL",
+      "ticker": "BMEA"
+    },
+    {
+      "fees": 2.0453,
+      "fees_15bp": 1.7126,
+      "pnl": -90.8222,
+      "price": 253.72,
+      "shares": 9,
+      "side": "SELL",
+      "ticker": "CRM"
+    },
+    {
+      "fees": 5.7695,
+      "fees_15bp": 1.9173,
+      "pnl": -2.6455,
+      "price": 5.81,
+      "shares": 440,
+      "side": "SELL",
+      "ticker": "DFDV"
+    }
+  ],
+  "sha256": "77b97b9785329993bf5255a14f9fde71afe0912d64f02d9077f604d9dedd4d8f"
+}
