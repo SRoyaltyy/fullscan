@@ -11,16 +11,33 @@ def compound(returns: list[float]) -> float:
     return acc - 1.0
 
 
+def period_start(book: dict) -> float:
+    """Equity the window already has. A later slice does not restart at CAPITAL."""
+    if book.get("start_equity") is not None:
+        return float(book["start_equity"])
+    daily = book.get("daily") or []
+    if not daily:
+        return float(CAPITAL)
+    first = daily[0]
+    denom = 1.0 + float(first["ret"])
+    if denom == 0.0:
+        return float(CAPITAL)
+    return float(first["equity"]) / denom
+
+
 def _drop_compound(book: dict, ticker: str) -> float:
-    prev = CAPITAL
-    kept = CAPITAL
+    daily = book.get("daily") or []
+    if not daily:
+        return 0.0
+    prev = period_start(book)
+    kept = prev
     rets = []
-    for day in book["daily"]:
-        change = day["equity"] - prev
+    for day in daily:
+        change = float(day["equity"]) - prev
         cut = float((book["pnl_by_day"].get(day["session"]) or {}).get(ticker) or 0.0)
         nxt = kept + (change - cut)
         rets.append((nxt / kept - 1.0) if kept else 0.0)
-        prev = day["equity"]
+        prev = float(day["equity"])
         kept = nxt
     return compound(rets)
 

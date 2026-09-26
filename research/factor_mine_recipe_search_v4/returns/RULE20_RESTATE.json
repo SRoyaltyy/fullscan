@@ -1,0 +1,430 @@
+{
+  "carry_unchanged": [
+    "union_hot_n4_h1__w0",
+    "union_hot_n4_holdup__w0",
+    "union_hot_n4_h3__w0",
+    "union_hot_n4_h5__w0",
+    "union_hot_n4_h1_green__w0",
+    "union_hot_n4_h1_nonews__w0"
+  ],
+  "excel_ex_best_pct": {
+    "union_hot_n4_h1__w0": 5.6,
+    "union_hot_n4_h1_nonews__w0": 5.0,
+    "union_hot_n4_h1_time__w0": 4.2,
+    "union_hot_n4_holdup__w0": 11.2
+  },
+  "h3_holdup_identical": {
+    "union_hot_score_h3__w0=union_hot_score_h3_holdup__w0": {
+      "diffs": [],
+      "sessions": 31
+    },
+    "union_hot_score_h3__w1=union_hot_score_h3_holdup__w1": {
+      "diffs": [],
+      "sessions": 31
+    }
+  },
+  "note": "Rule 20 drops for 2026-09-14 through 2026-09-25 now start from the 2026-09-11 close. Status, compound, and who carries forward are unchanged.",
+  "results": [
+    {
+      "compound": 0.057691936995227566,
+      "ex_best": -0.008056722865026344,
+      "ex_best_ticker": "GLND",
+      "id": "union_hot_score_h3__w0",
+      "n": 55,
+      "named": {
+        "CYPH": 0.06368043909634413,
+        "GLND": -0.008056722865026344,
+        "INDP": 0.03195390687487043
+      },
+      "old_ex_best": 0.1942606475792601,
+      "old_named": {
+        "CYPH": 0.28062936590651555,
+        "GLND": 0.1942606475792601,
+        "INDP": 0.2424318703544528
+      },
+      "prior_equity": 12039.606246726518,
+      "status": "rejected"
+    },
+    {
+      "compound": 0.36017492235395276,
+      "ex_best": 0.056158666447697625,
+      "ex_best_ticker": "GLND",
+      "id": "union_hot_n4_h1__w0",
+      "n": 32,
+      "named": {
+        "CYPH": 0.3923795012223694,
+        "GLND": 0.056158666447697625,
+        "INDP": 0.29085388598691364
+      },
+      "old_ex_best": 0.46715297591707183,
+      "old_named": {
+        "CYPH": 0.9342110174555778,
+        "GLND": 0.46715297591707183,
+        "INDP": 0.7931776545182609
+      },
+      "prior_equity": 13891.40687404213,
+      "status": "not_rejected"
+    },
+    {
+      "compound": 0.3882255600857347,
+      "ex_best": 0.11246142393091185,
+      "ex_best_ticker": "GLND",
+      "id": "union_hot_n4_holdup__w0",
+      "n": 30,
+      "named": {
+        "CYPH": 0.38850024929560334,
+        "GLND": 0.11246142393091185,
+        "INDP": 0.2988831201111677
+      },
+      "old_ex_best": 0.7200702387314399,
+      "old_named": {
+        "CYPH": 1.1468770996529192,
+        "GLND": 0.7200702387314399,
+        "INDP": 1.0083125135246078
+      },
+      "prior_equity": 15461.841657875439,
+      "status": "not_rejected"
+    },
+    {
+      "compound": 0.02705533065445276,
+      "ex_best": -0.005227618815360047,
+      "ex_best_ticker": "INDP",
+      "id": "union_candle_score_h3__w0",
+      "n": 54,
+      "named": {
+        "CYPH": 0.02705533065445276,
+        "GLND": 0.02705533065445276,
+        "INDP": -0.005227618815360047
+      },
+      "old_ex_best": 0.007502227317571997,
+      "old_named": {
+        "CYPH": 0.04019829338294101,
+        "GLND": 0.04019829338294101,
+        "INDP": 0.007502227317571997
+      },
+      "prior_equity": 10127.967426254563,
+      "status": "rejected"
+    },
+    {
+      "compound": -0.05055613458737784,
+      "ex_best": -0.07130271152857037,
+      "ex_best_ticker": "FIVN",
+      "id": "union_cond_h3__w0",
+      "n": 49,
+      "named": {
+        "CYPH": -0.053320045191528886,
+        "GLND": -0.05055613458737784,
+        "INDP": -0.05055613458737784
+      },
+      "old_ex_best": -0.033590637911567356,
+      "old_named": {
+        "CYPH": -0.014877740480765844,
+        "GLND": -0.012001594381294,
+        "INDP": -0.012001594381294
+      },
+      "prior_equity": 10406.074983583454,
+      "status": "rejected"
+    },
+    {
+      "compound": 0.03120818833385841,
+      "ex_best": 0.00927963707910795,
+      "ex_best_ticker": "GLND",
+      "id": "union_ret_5_h3__w0",
+      "n": 55,
+      "named": {
+        "CYPH": 0.0360310738133216,
+        "GLND": 0.00927963707910795,
+        "INDP": 0.027308691769744042
+      },
+      "old_ex_best": 0.2182482888757562,
+      "old_named": {
+        "CYPH": 0.2505385390989161,
+        "GLND": 0.2182482888757562,
+        "INDP": 0.24001021116171373
+      },
+      "prior_equity": 12070.473277370496,
+      "status": "rejected"
+    },
+    {
+      "compound": 0.03839977577669851,
+      "ex_best": -0.011618281374308093,
+      "ex_best_ticker": "GLND",
+      "id": "union_w_hot_cond_h3__w0",
+      "n": 53,
+      "named": {
+        "CYPH": 0.046355050787471486,
+        "GLND": -0.011618281374308093,
+        "INDP": 0.020385632902123474
+      },
+      "old_ex_best": 0.13405751503266283,
+      "old_named": {
+        "CYPH": 0.20057543191700922,
+        "GLND": 0.13405751503266283,
+        "INDP": 0.17077842843251223
+      },
+      "prior_equity": 11473.881939151284,
+      "status": "rejected"
+    },
+    {
+      "compound": 0.09030870321490125,
+      "ex_best": -0.007173636557738172,
+      "ex_best_ticker": "GLND",
+      "id": "union_w_hot_candle_h3__w0",
+      "n": 52,
+      "named": {
+        "CYPH": 0.09472030060278835,
+        "GLND": -0.007173636557738172,
+        "INDP": 0.06774791831679328
+      },
+      "old_ex_best": 0.14020699137295223,
+      "old_named": {
+        "CYPH": 0.2572266272397281,
+        "GLND": 0.14020699137295223,
+        "INDP": 0.2262503155815172
+      },
+      "prior_equity": 11484.455221552558,
+      "status": "rejected"
+    },
+    {
+      "compound": 0.02131613315180969,
+      "ex_best": -0.078889343643476,
+      "ex_best_ticker": "GLND",
+      "id": "union_hot_n12_h1__w0",
+      "n": 81,
+      "named": {
+        "CYPH": 0.032269766310768055,
+        "GLND": -0.078889343643476,
+        "INDP": -0.006983031451376798
+      },
+      "old_ex_best": -0.11035894421815862,
+      "old_named": {
+        "CYPH": -0.002997567757014985,
+        "GLND": -0.11035894421815862,
+        "INDP": -0.04090929986272818
+      },
+      "prior_equity": 9658.3515741837,
+      "status": "rejected"
+    },
+    {
+      "compound": 0.2933955104449504,
+      "ex_best": 0.05712183088347733,
+      "ex_best_ticker": "GLND",
+      "id": "union_hot_n4_h3__w0",
+      "n": 28,
+      "named": {
+        "CYPH": 0.3059584615386628,
+        "GLND": 0.05712183088347733,
+        "INDP": 0.25217062209820007
+      },
+      "old_ex_best": 0.2168188429932978,
+      "old_named": {
+        "CYPH": 0.503246662533398,
+        "GLND": 0.2168188429932978,
+        "INDP": 0.4413332154330263
+      },
+      "prior_equity": 11510.677458778384,
+      "status": "unproven"
+    },
+    {
+      "compound": 0.10723113391327588,
+      "ex_best": -0.04214120465087956,
+      "ex_best_ticker": "GLND",
+      "id": "union_hot_score_h1__w0",
+      "n": 57,
+      "named": {
+        "CYPH": 0.1237221630856622,
+        "GLND": -0.04214120465087956,
+        "INDP": 0.06464891148533658
+      },
+      "old_ex_best": 0.019900073266515772,
+      "old_named": {
+        "CYPH": 0.1965065435814577,
+        "GLND": 0.019900073266515772,
+        "INDP": 0.13360707037329633
+      },
+      "prior_equity": 10647.70797343655,
+      "status": "rejected"
+    },
+    {
+      "compound": 0.1345828626404697,
+      "ex_best": 0.029098237151594875,
+      "ex_best_ticker": "BNC",
+      "id": "union_hot_n4_h5__w0",
+      "n": 12,
+      "named": {
+        "CYPH": 0.1345575057527697,
+        "GLND": 0.13435152186721688,
+        "INDP": 0.13396547083480548
+      },
+      "old_ex_best": 0.25000271997308743,
+      "old_named": {
+        "CYPH": 0.3780996963732346,
+        "GLND": 0.37784949633604037,
+        "INDP": 0.37738057624353427
+      },
+      "prior_equity": 12146.58304568596,
+      "status": "unproven"
+    },
+    {
+      "compound": 0.0672445239873023,
+      "ex_best": -0.0074941735631026685,
+      "ex_best_ticker": "GLND",
+      "id": "union_hot_score_h3_time__w0",
+      "n": 56,
+      "named": {
+        "CYPH": 0.06937626808488129,
+        "GLND": -0.0074941735631026685,
+        "INDP": 0.039528720245138205
+      },
+      "old_ex_best": 0.17884944989807683,
+      "old_named": {
+        "CYPH": 0.27015236766075623,
+        "GLND": 0.17884944989807683,
+        "INDP": 0.2347009230299426
+      },
+      "prior_equity": 11877.506594899847,
+      "status": "rejected"
+    },
+    {
+      "compound": 0.31504035097522465,
+      "ex_best": 0.0423229007798227,
+      "ex_best_ticker": "GLND",
+      "id": "union_hot_n4_h1_time__w0",
+      "n": 38,
+      "named": {
+        "CYPH": 0.3468733616046935,
+        "GLND": 0.0423229007798227,
+        "INDP": 0.24542952747997893
+      },
+      "old_ex_best": 0.40569999889835384,
+      "old_named": {
+        "CYPH": 0.8164235684618,
+        "GLND": 0.40569999889835384,
+        "INDP": 0.679614142696839
+      },
+      "prior_equity": 13486.22387406693,
+      "status": "rejected"
+    },
+    {
+      "compound": 0.0663683621711797,
+      "ex_best": 0.001181288222616761,
+      "ex_best_ticker": "GLND",
+      "id": "union_hot_score_h3_exitalarm__w0",
+      "n": 53,
+      "named": {
+        "CYPH": 0.073268308980738,
+        "GLND": 0.001181288222616761,
+        "INDP": 0.04076411951243264
+      },
+      "old_ex_best": 0.09853251377348893,
+      "old_named": {
+        "CYPH": 0.17762901413302412,
+        "GLND": 0.09853251377348893,
+        "INDP": 0.14196423555113769
+      },
+      "prior_equity": 10972.363613823605,
+      "status": "rejected"
+    },
+    {
+      "compound": 0.057691936995227566,
+      "ex_best": -0.008056722865026344,
+      "ex_best_ticker": "GLND",
+      "id": "union_hot_score_h3_holdup__w0",
+      "n": 55,
+      "named": {
+        "CYPH": 0.06368043909634413,
+        "GLND": -0.008056722865026344,
+        "INDP": 0.03195390687487043
+      },
+      "old_ex_best": 0.1942606475792601,
+      "old_named": {
+        "CYPH": 0.28062936590651555,
+        "GLND": 0.1942606475792601,
+        "INDP": 0.2424318703544528
+      },
+      "prior_equity": 12039.606246726518,
+      "status": "rejected"
+    },
+    {
+      "compound": -0.022854141407820605,
+      "ex_best": -0.046105179932944274,
+      "ex_best_ticker": "GLND",
+      "id": "union_hot_score_h3_green__w0",
+      "n": 48,
+      "named": {
+        "CYPH": -0.018348526041487068,
+        "GLND": -0.046105179932944274,
+        "INDP": -0.029132673010720755
+      },
+      "old_ex_best": 0.04696867223890733,
+      "old_named": {
+        "CYPH": 0.07743361078264654,
+        "GLND": 0.04696867223890733,
+        "INDP": 0.06559722820032543
+      },
+      "prior_equity": 10975.724474164865,
+      "status": "rejected"
+    },
+    {
+      "compound": 0.15131087271863075,
+      "ex_best": -0.047316779848110335,
+      "ex_best_ticker": "GLND",
+      "id": "union_hot_n4_h1_green__w0",
+      "n": 29,
+      "named": {
+        "CYPH": 0.18362080938515124,
+        "GLND": -0.047316779848110335,
+        "INDP": 0.14313171912512734
+      },
+      "old_ex_best": 0.10304983382171673,
+      "old_named": {
+        "CYPH": 0.3704374229369354,
+        "GLND": 0.10304983382171673,
+        "INDP": 0.3235577431669998
+      },
+      "prior_equity": 11578.34850545445,
+      "status": "unproven"
+    },
+    {
+      "compound": 0.054079763225601596,
+      "ex_best": -0.01838182608431793,
+      "ex_best_ticker": "GLND",
+      "id": "union_hot_score_h3_nonews__w0",
+      "n": 55,
+      "named": {
+        "CYPH": 0.05923526771895138,
+        "GLND": -0.01838182608431793,
+        "INDP": 0.02774076807466952
+      },
+      "old_ex_best": 0.1642586578937013,
+      "old_named": {
+        "CYPH": 0.25631723612940327,
+        "GLND": 0.1642586578937013,
+        "INDP": 0.21896285042093888
+      },
+      "prior_equity": 11860.60617897349,
+      "status": "rejected"
+    },
+    {
+      "compound": 0.35474169493713004,
+      "ex_best": 0.050402209618632066,
+      "ex_best_ticker": "GLND",
+      "id": "union_hot_n4_h1_nonews__w0",
+      "n": 32,
+      "named": {
+        "CYPH": 0.3869621727859811,
+        "GLND": 0.050402209618632066,
+        "INDP": 0.2854251304470221
+      },
+      "old_ex_best": 0.5206762466089063,
+      "old_named": {
+        "CYPH": 1.0079169786461835,
+        "GLND": 0.5206762466089063,
+        "INDP": 0.8609209355858423
+      },
+      "prior_equity": 14477.085374382596,
+      "status": "not_rejected"
+    }
+  ],
+  "source_forward": "research/factor_mine_recipe_search_v4/returns/FORWARD.json"
+}
