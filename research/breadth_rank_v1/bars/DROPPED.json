@@ -1,0 +1,224 @@
+{
+  "dropped": [
+    "AIXI",
+    "ASTC",
+    "CAPR",
+    "CAST",
+    "EDHL",
+    "ENGN",
+    "EYPT",
+    "FTRK",
+    "HKIT",
+    "JZ",
+    "LHSW",
+    "MB",
+    "MPU",
+    "MYSE",
+    "NAMI",
+    "NFE",
+    "QH",
+    "SION",
+    "SLBT",
+    "VSME",
+    "WETO",
+    "WOK",
+    "XHG",
+    "YAAS"
+  ],
+  "jumps": [
+    {
+      "date": "2026-08-25",
+      "explained": false,
+      "ratio": 3.187773,
+      "split": null,
+      "ticker": "AIXI"
+    },
+    {
+      "date": "2026-09-08",
+      "explained": true,
+      "ratio": 6.90678,
+      "split": 0.14285714,
+      "ticker": "AIXI"
+    },
+    {
+      "date": "2026-05-27",
+      "explained": false,
+      "ratio": 3.004049,
+      "split": null,
+      "ticker": "ASTC"
+    },
+    {
+      "date": "2026-07-27",
+      "explained": false,
+      "ratio": 0.29797,
+      "split": null,
+      "ticker": "CAPR"
+    },
+    {
+      "date": "2026-06-15",
+      "explained": false,
+      "ratio": 3.122581,
+      "split": null,
+      "ticker": "CAST"
+    },
+    {
+      "date": "2026-06-11",
+      "explained": false,
+      "ratio": 4.722857,
+      "split": null,
+      "ticker": "EDHL"
+    },
+    {
+      "date": "2026-05-07",
+      "explained": false,
+      "ratio": 0.242938,
+      "split": null,
+      "ticker": "ENGN"
+    },
+    {
+      "date": "2026-08-17",
+      "explained": false,
+      "ratio": 0.275254,
+      "split": null,
+      "ticker": "EYPT"
+    },
+    {
+      "date": "2026-08-28",
+      "explained": false,
+      "ratio": 0.14,
+      "split": 0.05,
+      "ticker": "FTRK"
+    },
+    {
+      "date": "2026-06-02",
+      "explained": false,
+      "ratio": 0.253799,
+      "split": null,
+      "ticker": "HKIT"
+    },
+    {
+      "date": "2026-06-02",
+      "explained": false,
+      "ratio": 0.222581,
+      "split": null,
+      "ticker": "JZ"
+    },
+    {
+      "date": "2026-07-06",
+      "explained": false,
+      "ratio": 3.777778,
+      "split": null,
+      "ticker": "LHSW"
+    },
+    {
+      "date": "2026-08-07",
+      "explained": false,
+      "ratio": 3.813333,
+      "split": null,
+      "ticker": "MB"
+    },
+    {
+      "date": "2026-09-16",
+      "explained": false,
+      "ratio": 19.4,
+      "split": null,
+      "ticker": "MPU"
+    },
+    {
+      "date": "2026-04-16",
+      "explained": false,
+      "ratio": 3.833333,
+      "split": null,
+      "ticker": "MYSE"
+    },
+    {
+      "date": "2026-08-07",
+      "explained": false,
+      "ratio": 3.130584,
+      "split": null,
+      "ticker": "NAMI"
+    },
+    {
+      "date": "2026-09-15",
+      "explained": false,
+      "ratio": 41.484846,
+      "split": null,
+      "ticker": "NFE"
+    },
+    {
+      "date": "2026-04-20",
+      "explained": false,
+      "ratio": 0.209302,
+      "split": null,
+      "ticker": "QH"
+    },
+    {
+      "date": "2026-04-27",
+      "explained": false,
+      "ratio": 30.0,
+      "split": null,
+      "ticker": "QH"
+    },
+    {
+      "date": "2026-08-10",
+      "explained": false,
+      "ratio": 0.095024,
+      "split": null,
+      "ticker": "SION"
+    },
+    {
+      "date": "2026-06-16",
+      "explained": false,
+      "ratio": 3.366366,
+      "split": null,
+      "ticker": "SLBT"
+    },
+    {
+      "date": "2026-06-10",
+      "explained": false,
+      "ratio": 4.495747,
+      "split": null,
+      "ticker": "VSME"
+    },
+    {
+      "date": "2026-07-22",
+      "explained": false,
+      "ratio": 0.2325,
+      "split": null,
+      "ticker": "WETO"
+    },
+    {
+      "date": "2026-07-31",
+      "explained": false,
+      "ratio": 3.466667,
+      "split": null,
+      "ticker": "WETO"
+    },
+    {
+      "date": "2026-05-13",
+      "explained": false,
+      "ratio": 0.186186,
+      "split": null,
+      "ticker": "WOK"
+    },
+    {
+      "date": "2026-08-13",
+      "explained": false,
+      "ratio": 6.338798,
+      "split": null,
+      "ticker": "XHG"
+    },
+    {
+      "date": "2026-07-30",
+      "explained": true,
+      "ratio": 5.202703,
+      "split": 0.2,
+      "ticker": "YAAS"
+    }
+  ],
+  "missing_download": [
+    "SKYT"
+  ],
+  "n_dropped": 24,
+  "rule": "drop any ticker with open/previous-close above 3x or below 1/3"
+}
