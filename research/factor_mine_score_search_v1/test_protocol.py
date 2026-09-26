@@ -1,6 +1,7 @@
 """Locks for factor_mine_score_search_v1. No price file and no score."""
 from __future__ import annotations
 
+import json
 import subprocess
 import sys
 from pathlib import Path
@@ -98,6 +99,26 @@ def test_windows_and_drop_list() -> None:
     payload = load_drop()
     assert payload["n_dropped"] == 77
     assert "YAAS" in payload["dropped"]
+    source = json.loads((ROOT / "research/breadth_rank_v1c/bars/DROPPED.json").read_text(encoding="utf-8"))
+    assert payload["dropped"] == source["dropped"]
+    assert file_sha256(ROOT / "research/breadth_rank_v1c/bars/DROPPED.json") == (
+        "4da67a52e469be8ccd1430b5b7992a1d70b7542bcca67851d7d6182c267ce6ad"
+    )
+    assert file_sha256(ROOT / "research/breadth_rank_v1c/JUMPS.md") == (
+        "8080267a532fff2ea4c9e225fdf006f38f4ddeb5ca8e30900b16a320e58ce05a"
+    )
+    jumps = (ROOT / "research/breadth_rank_v1c/JUMPS.md").read_text(encoding="utf-8")
+    tickers = []
+    for line in jumps.splitlines():
+        if not line.startswith("| ") or line.startswith("| ---") or line.startswith("| ticker"):
+            continue
+        tickers.append(line.split("|")[1].strip())
+    assert len(set(tickers) - {"YAAS"}) == 76
+    assert set(payload["dropped"]) - {"YAAS"} == set(tickers) - {"YAAS"}
+    assert payload["matched_splits"] == ["ALP", "NFE", "TNMG", "WCT"]
+    cite = (ROOT / "research/factor_mine_score_search_v1/DROP_CITE.md").read_text(encoding="utf-8")
+    assert "4da67a52e469be8ccd1430b5b7992a1d70b7542bcca67851d7d6182c267ce6ad" in cite
+    assert "5c272584309e14496dc006a3a356c6960ed5b340f945af3fd6f299301b261ef2" in cite
 
 
 def test_diff_stays_inside_the_study() -> None:
