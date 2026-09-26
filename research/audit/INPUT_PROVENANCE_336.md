@@ -9,7 +9,7 @@ Proven-frozen: 0. Not proven: 31.
 Proven-frozen days: none.
 Not proven: 2026-08-13, 2026-08-14, 2026-08-17, 2026-08-18, 2026-08-19, 2026-08-20, 2026-08-21, 2026-08-24, 2026-08-25, 2026-08-26, 2026-08-27, 2026-08-28, 2026-08-31, 2026-09-01, 2026-09-02, 2026-09-03, 2026-09-04, 2026-09-08, 2026-09-09, 2026-09-10, 2026-09-11, 2026-09-14, 2026-09-15, 2026-09-16, 2026-09-17, 2026-09-18, 2026-09-21, 2026-09-22, 2026-09-23, 2026-09-24, 2026-09-25.
 
-Per input, none of the price lists, price features, or A1-A15 rules matched a server-proven pre-open copy on every day from 2026-09-09 on, so none are rebuildable for earlier sessions. HOT4 and holdup still have no day on which every component is available-proven or rebuildable-verified. The table is in Per-input availability.
+Per input, `REBUILD_MATCH` is `exact`, `mismatch` (count and first differing day), or `not-rebuildable` (AI or Finviz snapshot). No price feature, AB price rule, candidate list, peer RS, or VIX series is exact on every tested day from 2026-09-09 on. RSI on the panel is the Finviz print. DGS10 was not recomputed: the live FRED pull timed out. HOT4 and holdup still have no day on which every component is available-proven or rebuildable-verified. The table is in Per-input availability.
 
 HOT4 is `union_hot_n4_h1`. Holdup is `union_hot_n4_holdup`. The replay runs only on proven-frozen days, in that order, starting from $10,000. A day that is not proven is left out, not scored as a flat day.
 
@@ -27,18 +27,41 @@ This section is per input, not per day. A derived input is rebuildable for sessi
 
 Cell values are `available-proven`, `rebuildable-verified`, or `missing`.
 
-### Match rate against the pre-open copy
+### REBUILD_MATCH
 
-| Input | Proven days (09-09 on) | Matched | Match rate | Rebuildable for earlier days |
-| --- | ---: | ---: | --- | --- |
-| AB price rules A1-A15 | 3 | 0 | 0/3 (0.0%) | no |
-| price_features | 0 | — | no pre-open copy of this output | no |
-| ohlc_hot | 0 | — | no pre-open copy of this output | no |
-| yday_gainer | 0 | — | no pre-open copy of this output | no |
-| yday_mover | 0 | — | no pre-open copy of this output | no |
-| overnight | 0 | — | no pre-open copy of this output | no |
-| probable | 0 | — | no pre-open copy of this output | no |
-| earn_react | 0 | — | no pre-open copy of this output | no |
+`exact` means today's generator matches on every tested day from 2026-09-09 on. `mismatch (k/n, first day)` is how many of those days differ, and the earliest one. AI text is not regenerated. A Finviz print is not a price-store formula. Price features and the candidate lists have no pre-open output file; those rows are today's code against the #336 snapshot (`5f13a4415ea0`), which is not a license to rebuild earlier days. Name-level diffs, the 14 AB rules' bad-row counts, and every missed panel name are in `research/audit/REBUILD_MATCH_336.md`.
+
+| Input | Proven days (09-09 on) | REBUILD_MATCH | Rebuildable for earlier days |
+| --- | ---: | --- | --- |
+| hot score | 0 pre-open; 12 snapshot | mismatch (11/12, first 2026-09-10) | no |
+| returns (1d, 5d, 10d) | 0 pre-open; 12 snapshot | mismatch (11/12, first 2026-09-10) | no |
+| rvol | 0 pre-open; 12 snapshot | mismatch (11/12, first 2026-09-10) | no |
+| 10d breakout | 0 pre-open; 12 snapshot | mismatch (7/12, first 2026-09-11) | no |
+| candles | 0 pre-open; 12 snapshot | mismatch (11/12, first 2026-09-10) | no |
+| MACD | 0 pre-open; 12 snapshot | mismatch (11/12, first 2026-09-10) | no |
+| RSI | 0 pre-open; 12 snapshot | not-rebuildable (Finviz snapshot) | no |
+| prior-day gainers | 0 pre-open output; 12 with proven prior export | mismatch (8/12 name sets, first 2026-09-10; order-only 4, first 2026-09-11) | no |
+| prior-day movers | 0 pre-open output; 12 with proven prior export | mismatch (7/12 name sets, first 2026-09-10; order-only 5, first 2026-09-11) | no |
+| hot list | 0 pre-open output; 12 with proven prior export | mismatch (11/12 name sets, first 2026-09-10; order-only 2026-09-25) | no |
+| overnight moves | 0 pre-open output; 12 with proven prior export | mismatch (1/12, first 2026-09-10) | no |
+| probable continuation | 0 pre-open output; 12 with proven prior export | mismatch (7/12, first 2026-09-11) | no |
+| earnings reaction | 0 pre-open output; 12 with proven prior export | not-rebuildable (Finviz snapshot) | no |
+| A01–A05, A07–A13, A15 | 10 | mismatch (9/10, first 2026-09-10) | no |
+| A06_volume_red_green_2day | 10 | mismatch (10/10, first 2026-09-09) | no |
+| A14_profitable_oversold_setup | 0 | not-rebuildable (no proven pre-open copy) | no |
+| peer RS | 13 | mismatch (2/13, first 2026-09-15) | no |
+| VIX | 13 | mismatch (13/13, first 2026-09-09) | no |
+| rates (DGS10) | 13 weather files | not-rebuildable (FRED print; live series timed out) | no |
+| predict | 12 | not-rebuildable (AI) | no |
+| actions, judge, digest, map heat, catalyst, research, baseline, events | 1 each | not-rebuildable (AI) | no |
+| sector predict | 10 | not-rebuildable (AI) | no |
+| Finviz export | 8 | not-rebuildable (Finviz snapshot) | no |
+
+Stored panel `rsi` equals `fv_rsi` on 808 of 808 snapshot rows that have a Finviz RSI. Wilder RSI from the price store does not match that field (12/12, first 2026-09-10). 2026-09-25 is the one snapshot day whose hot score, returns, rvol, 10-day breakout, candles, and MACD match today's code on every row. 2026-09-09 is the one checklist day that matches every A rule except A06. The checklist has no A14 column.
+
+A price-only rebuild (gainers, movers, hot list, overnight, probable) misses names that entered only through `flatten`, `mover_buy`, or `earn_react`. No snapshot source is named news. On days that have a snapshot list, the missed share is 5% (09-17 and 09-18, 3 names) up to 33% (08-28, 32 names). 09-10 misses 12 of 82 (15%): three flatten names and nine earnings-reaction names.
+
+The bundled A1–A15 check below is the earlier three-day pass. The column above uses all 10 log-proven checklist days from 09-09 on.
 
 Compared with the server-proven pre-open AB file that contains A flags. Part B is not rebuilt.
 
@@ -51,6 +74,8 @@ AB days. The rebuilt last bar is the newest bar strictly before 09:30 that today
 | 2026-09-24 | 2658 | 69 | no | 2026-09-08 | 2026-09-23 | A12_green_body_vs_wick_2day 1748, A13_red_body_vs_wick_2day 1600, A05_body_red_green_2day 1228, A06_volume_red_green_2day 1212, A08_bollinger_position 1181, A10_sma20_50_80_stack 897 |
 
 ### Same generator against the #336 snapshot
+
+`REBUILD_MATCH_336.md` is the job-log pass over all 12 snapshot sessions from 09-10 on. The four-day check below is the earlier pass, on days whose prior export was proven before the open under the first server-time rule.
 
 The snapshot files were pushed on 2026-09-25, after every open in this window. A match here shows that today's function still emits the membership or the price fields stored in that late file. It does not make the input rebuildable.
 
