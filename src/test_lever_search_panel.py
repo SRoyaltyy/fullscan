@@ -266,11 +266,15 @@ def test_tally_lines_stay_in_prereg() -> None:
     assert "16,646,400" in text
     assert "31,852,800" in text
     assert "31,861,969" in text
+    assert "31,852,910" in text
+    assert "31,862,079" in text
+    assert "FULLSCAN_FILE_PROOF.csv" in text
+    assert "factor_mine_seq" in text
     assert "24,595,200" in text
     assert "7,257,600" in text
     assert "too few days to judge" in text
     assert f"{INITIAL_N}" == "31852800"
-    assert f"{RUNNING_TALLY}" == "31861969"
+    assert f"{RUNNING_TALLY}" == "31862079"
     assert "868" in text
     assert "nothing proven yet" in text
     assert "30d483f2944b6a23e5ebca5bd894aeba1e2b94366de5d1168c2fe568f16fb32c" in text
@@ -378,8 +382,11 @@ def test_initial_inputs_and_hash_guard() -> None:
     from src.lever_search_inputs import (
         GROUP1_N,
         GROUP2_N,
+        GROUP3_N,
         INITIAL_N,
         MIN_CHECK_DAYS,
+        SEARCH_N,
+        fullscan_status_is_used,
         TRAINING_FROM_0813,
         TRAINING_LOOKBACK,
         WALK_FORWARD,
@@ -403,7 +410,12 @@ def test_initial_inputs_and_hash_guard() -> None:
     assert len(check_days_from("2026-08-31")) < MIN_CHECK_DAYS
     assert GROUP1_N == 24595200
     assert GROUP2_N == 7257600
+    assert GROUP3_N == 110
     assert GROUP1_N + GROUP2_N == INITIAL_N
+    assert SEARCH_N == INITIAL_N + GROUP3_N
+    assert fullscan_status_is_used("PROVEN")
+    assert not fullscan_status_is_used("available-proven")
+    assert not fullscan_status_is_used("")
     check = manifest["walk_forward_check"]
     assert check["first_day"] == "2026-08-20"
     assert check["check_day_count"] == 16
@@ -411,8 +423,10 @@ def test_initial_inputs_and_hash_guard() -> None:
     assert check["group2_check_day_count"] == 9
     assert check["check_days"] == list(WALK_FORWARD)
     assert check["first_check_training_sessions"] == list(TRAINING_LOOKBACK)
-    assert manifest["initial_n"] == 31852800
-    assert manifest["running_tally"] == 31861969
+    assert manifest["initial_n"] == 31852910
+    assert manifest["running_tally"] == 31862079
+    assert manifest["group3_n"] == 110
+    assert manifest["fullscan_file_proof"]["path"].endswith("FULLSCAN_FILE_PROOF.csv")
     assert manifest["group1_n"] == GROUP1_N
     assert manifest["group2_n"] == GROUP2_N
     assert manifest["panel_meta"]["plain_finviz_fields"] == 50

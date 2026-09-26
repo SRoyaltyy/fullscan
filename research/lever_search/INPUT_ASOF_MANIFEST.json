@@ -1,11 +1,19 @@
 {
   "rule": "inputs_must_not_change",
   "cutoff": "09:30 America/New_York (13:30 UTC)",
-  "initial_n": 31852800,
-  "running_tally": 31861969,
-  "n_note": "Recomputed after plain Finviz opened on 2026-08-07. N is the combination count. A sat-out session is not an extra try and does not multiply N. The same N splits into Group 1 and Group 2.",
+  "initial_n": 31852910,
+  "price_finviz_excel_n": 31852800,
+  "running_tally": 31862079,
+  "n_note": "N is Group 1 plus Group 2 plus the 110 original Factor Mine recipes. A sat-out session is not an extra try and does not multiply N.",
   "group1_n": 24595200,
   "group2_n": 7257600,
+  "group3_n": 110,
+  "fullscan_file_proof": {
+    "path": "research/audit/FULLSCAN_FILE_PROOF.csv",
+    "rule": "A per-day file is used on a session only when that row's status is PROVEN. Any other status, a blank, or a missing row sits that input out that day. No fill is written.",
+    "sha256": null,
+    "note": "Referenced by path. This commit does not vendor the file and does not assign which days are PROVEN."
+  },
   "group1_signals": 1281,
   "group2_signals": 378,
   "min_check_days_to_judge": 10,
@@ -90,7 +98,7 @@
       "price-only candidate sources in PREREG section 7.1"
     ],
     "price_sources": "PROVISIONAL pending rebuild_match=exact",
-    "forbidden": "data/factor_mine/panel.json rows for 2026-08-07 through 2026-09-08"
+    "forbidden": "data/factor_mine/panel.json rows on every session. The candidate list is rebuilt from PROVEN per-day files and proven Theme Radar and price sources."
   },
   "finviz_proven_dates": [
     "2026-08-07",

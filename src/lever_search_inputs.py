@@ -21,7 +21,6 @@ INITIAL_SIGNALS = INITIAL_ATOMS + INITIAL_PAIRS + INITIAL_DELTAS
 INITIAL_OTHER = 2 * 2 * 4 * 15 * 4 * 4 * 5
 INITIAL_N = INITIAL_SIGNALS * INITIAL_OTHER
 TALLY_PRIOR = 37 + 8264 + 868
-RUNNING_TALLY = INITIAL_N + TALLY_PRIOR
 
 # Group 1: no Excel card. Group 2: the signal includes an Excel card.
 # Pairs that mix an Excel card with another atom stay in Group 2.
@@ -33,7 +32,12 @@ GROUP2_PAIRS = INITIAL_PAIRS - GROUP1_PAIRS
 GROUP2_SIGNALS = EXCEL_ATOMS + GROUP2_PAIRS
 GROUP1_N = GROUP1_SIGNALS * INITIAL_OTHER
 GROUP2_N = GROUP2_SIGNALS * INITIAL_OTHER
+# Original Factor Mine recipe space, PR #126, commit 8e8c36a. One try each.
+GROUP3_N = 110
+SEARCH_N = INITIAL_N + GROUP3_N
+RUNNING_TALLY = SEARCH_N + TALLY_PRIOR
 MIN_CHECK_DAYS = 10
+FULLSCAN_PROOF_PATH = "research/audit/FULLSCAN_FILE_PROOF.csv"
 
 # First session on which that column family is present in panel_meta.json.
 COLUMN_FAMILY_START: tuple[tuple[str, str], ...] = (
@@ -268,6 +272,11 @@ def proof_is_before_open(entry: dict, session_date: str) -> bool:
             return False
         return updated < cutoff
     return False
+
+
+def fullscan_status_is_used(status: str) -> bool:
+    """PROVEN is used. Every other status sits that input out."""
+    return status == "PROVEN"
 
 
 def check_days_from(start: str) -> tuple[str, ...]:

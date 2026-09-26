@@ -1,8 +1,8 @@
 # Fullscan lever search — preregistration
 
-- status: protocol locked. The initial run uses server-proven inputs only. Layer B and the Excel ML spec are later add-ons. This commit has no returns, no p-values, and no luck-test output.
+- status: protocol locked. The initial run uses server-proven inputs only, including the original 110 Factor Mine recipes on fullscan inputs. The extended Layer B cross and the Excel ML spec stay later add-ons. This commit has no returns, no p-values, and no luck-test output.
 - written: 2026-09-26
-- fingerprint_sha256: 5cc4a152b2c6d50e0ca8c434eae9c6b9684c057ea9cbdeea6e7d64622276ce4c
+- fingerprint_sha256: 7b353f49fc836742b9f66cb31b82ea154ebd43bfd64f152baad9dd892d6708b5
 - fingerprint_scope: SHA-256 of the UTF-8 bytes after the line `<!-- BEGIN COVERED -->`, including the final newline. Line endings are LF.
 - scoring: do not start until Cyrus replies `go`. Results of the scored run are due by 22:00 HKT on Sunday 2026-09-27.
 - live paths: not used. No edits to flatten_robust, Webull submit, Supabase, or Theme Radar. Output of the later run lives only under `research/lever_search/`.
@@ -13,21 +13,23 @@
 
 This is the mine that scores first. N below is the try count for that mine. The running tally is N + 37 + 8,264 + 868. Scoring waits for the reply `go`.
 
-The walk is the Factor Mine engine in section 4: one session at a time, from inputs knowable at 09:30, with the previous day's locked positions carried forward. A past buy or sell is not re-picked. The 110 recipes in that engine stay the core of the later Layer B grid. They are not an extra line in today's tally.
+The walk is the original Factor Mine engine from [PR #126](https://github.com/SRoyaltyy/fullscan/pull/126), commit `8e8c36a7117e60040d04cfa598e503b82fd7c6ea`: one session at a time, from inputs knowable at 09:30, with the previous day's locked positions carried forward. A past buy or sell is not re-picked. No locked file is rewritten. The scored run appends its returns under `research/lever_search/returns/factor_mine_seq/`. The 110 recipes in that engine's `build_recipes()` are Group 3. They are in today's tally.
 
 The run window is every store session from 2026-08-07 through 2026-09-11. Each recipe runs on every one of those sessions on or after its start day where all of its own inputs are present and server-proven. A session with a missing input for that recipe is sat out. The book does not open a position from the missing input, and no value is filled in. The combination remains one try.
 
 A recipe's start day is the first session on which every column it reads is present and proven. Column presence is taken from `SRoyaltyy/theme-radar` commit `3973e13cd953e5705d08d8d9f78a5b1b9dd1a1d0`, file `research/lever_panel/panel_meta.json`, sha256 `8c8ee8631e2301cb852c7599633c9b550571ed8a1328aab30f751c09ce781a5d`. That file lists 50 plain Finviz fields, present from 2026-08-07, so a price recipe and a plain-Finviz recipe start 2026-08-07. The extra sessions before 2026-08-13 are 2026-08-07, 2026-08-10, 2026-08-11, and 2026-08-12. `tr1d_`, `tr1w_`, `tr1m_`, and `trf_` columns are empty on 2026-08-07 and start 2026-08-10. `seg_` columns are empty on 2026-08-07, 2026-08-10, and 2026-08-11 and start 2026-08-12. `trc_` columns start 2026-08-13. 2026-08-28 has no snapshot. Every recipe that reads a Finviz field, or a `tr1d_`, `tr1w_`, `tr1m_`, `trf_`, `seg_`, or `trc_` column, sits out 2026-08-28, and no fill is written. A price-only recipe can still run that day, and its prices stay provisional. A regime other than `off` reads `weather_rules.json`, server-proven from 2026-08-21, so that recipe sits out on sessions before 2026-08-21.
 
-Group 1 is every recipe whose signal does not include an Excel card. Its start day falls in 2026-08-07 through 2026-08-13. The initial-run Group 1 signals read prices and the 15 plain Finviz fields behind the 16 `fv_*` atoms, so every one of them starts 2026-08-07. Group 2 is every recipe whose signal includes an Excel card. It starts 2026-08-31 and runs only on Excel's seven server-proven sessions: 2026-08-31, 2026-09-02, 2026-09-03, 2026-09-04, 2026-09-08, 2026-09-10, and 2026-09-11. A recipe that reads both an Excel card and a Finviz atom needs both present that morning. All seven Excel sessions have a Finviz snapshot. Each group has its own luck test on its own tries. The report also states the overall tally.
+Group 1 is every recipe whose signal does not include an Excel card and does not read a fullscan input. Its start day falls in 2026-08-07 through 2026-08-13. The initial-run Group 1 signals read prices and the 15 plain Finviz fields behind the 16 `fv_*` atoms, so every one of them starts 2026-08-07. Group 2 is every recipe whose signal includes an Excel card and does not read a fullscan input. It starts 2026-08-31 and runs only on Excel's seven server-proven sessions: 2026-08-31, 2026-09-02, 2026-09-03, 2026-09-04, 2026-09-08, 2026-09-10, and 2026-09-11. A recipe that reads both an Excel card and a Finviz atom needs both present that morning. All seven Excel sessions have a Finviz snapshot. Group 3 is the 110 original Factor Mine recipes. They read fullscan inputs: enriched AB, S, hard-red, sector, general predict, news actions, judge, heat, and catalyst. A Group 3 recipe's start day is the first run-window session on which every fullscan input that recipe reads is `PROVEN` for that session. Each group has its own luck test on its own tries. The report also states the overall tally.
 
-The candidate universe on 2026-08-07 through 2026-09-08 comes from proven inputs only: Theme Radar's proven Finviz mornings, and the price-only candidate sources in section 7.1. Price-only sources stay provisional pending the audit. Today's `data/factor_mine/panel.json` rows are refused as the candidate universe for 2026-08-07 through 2026-09-08. The initial run does not open `panel.json` on 2026-09-09 through 2026-09-11 either. That file stays a later add-on. On those three sessions the candidate universe is still the proven Finviz morning plus the price-only sources.
+Fullscan inputs are included day by day from `research/audit/FULLSCAN_FILE_PROOF.csv`. Inclusion is mechanical. A per-day file is used on a session only when that row's status is `PROVEN`. Any other status, a blank, or a missing row sits that input out that day, and no fill is written. This commit does not vendor that file and does not assign which days are `PROVEN`.
+
+On every session the candidate list is rebuilt from `PROVEN` per-day files and from proven Theme Radar and price sources only. Price sources stay provisional pending the audit. Today's `data/factor_mine/panel.json` rows are never the candidate list.
 
 The rolling walk-forward check is section 6. The first check day is 2026-08-20. Training lookback is expanding: the choice set for a recipe is every run-window session strictly before the check day and on or after that recipe's start day. For a recipe that starts 2026-08-07, the first check day's training set is nine sessions: 2026-08-07, 2026-08-10, 2026-08-11, 2026-08-12, 2026-08-13, 2026-08-14, 2026-08-17, 2026-08-18, and 2026-08-19. For a recipe whose columns start 2026-08-13, that training set is the five sessions 2026-08-13, 2026-08-14, 2026-08-17, 2026-08-18, and 2026-08-19. The check calendar runs through 2026-09-11 and has 16 sessions. A recipe's own check days are the calendar sessions on or after its start day. A sit-out session in that span still counts, and it has no new fill. Group 1 recipes that start on or before 2026-08-20 have 16 check days. Group 2 starts 2026-08-31, so it has 9 check days: 2026-08-31, 2026-09-01, 2026-09-02, 2026-09-03, 2026-09-04, 2026-09-08, 2026-09-09, 2026-09-10, and 2026-09-11. 2026-09-07 is Labor Day and is not a session.
 
 ### Inputs loaded
 
-Price levers are the Layer A price atoms, candle atoms, and price-only AB atoms in section 7, their pairs with each other, and the six price deltas. On 2026-08-07 through 2026-09-08 the candidate universe is the window rule above. The price-only leg of that universe is section 7.1. The daily series for a price-only signal runs 2024-04-02 through 2026-09-11. These price inputs are **PROVISIONAL**. `research/lever_search/INPUT_ASOF_MANIFEST.json`, sha256 `1dfc619291fa9f9f23afc48418d3fdfddf80843c4c24bb03961cf28d6179cd9b`, records `rebuild_match` as null on the price store, the listed roster, `src/ab_checklist.py`, and `weather_rules.json`. A recipe is not something good while an input it relies on is provisional. If the audit does not set `rebuild_match` to `exact` for that input, every recipe that relies on it is struck. Fills read `data/prices/ohlc.parquet`, so a failed price audit strikes the whole initial run. The price store's Actions run start is 2026-09-25T20:50:47Z. That is not a before-09:30 copy of any search session, and the git committer date is not proof.
+Price levers are the Layer A price atoms, candle atoms, and price-only AB atoms in section 7, their pairs with each other, and the six price deltas. On 2026-08-07 through 2026-09-08 the candidate universe is the window rule above. The price-only leg of that universe is section 7.1. The daily series for a price-only signal runs 2024-04-02 through 2026-09-11. These price inputs are **PROVISIONAL**. `research/lever_search/INPUT_ASOF_MANIFEST.json`, sha256 `25256823d8105068b7959241d2ffb41f8e524f414bc8f33534cb2429b992fe16`, records `rebuild_match` as null on the price store, the listed roster, `src/ab_checklist.py`, and `weather_rules.json`. A recipe is not something good while an input it relies on is provisional. If the audit does not set `rebuild_match` to `exact` for that input, every recipe that relies on it is struck. Fills read `data/prices/ohlc.parquet`, so a failed price audit strikes the whole initial run. The price store's Actions run start is 2026-09-25T20:50:47Z. That is not a before-09:30 copy of any search session, and the git committer date is not proof.
 
 Theme Radar and Finviz levers are **available-proven** for every export morning in `SRoyaltyy/theme-radar` commit `19973230e4d80c74565e1246ada911503a808fb7`, file `research/lever_panel/server_time_proof.csv`, sha256 `5bde5e9164f499899b4ed70fcdbfde3f72b3e8b5692da645f1e9682e3c6a913e`. That file has 234 rows, all `PROVEN`, on 35 trade dates. Twenty-four of those dates sit inside 2026-08-07 through 2026-09-11. The four mornings before 2026-08-13 are 2026-08-07, 2026-08-10, 2026-08-11, and 2026-08-12. The other twenty are 2026-08-13, 2026-08-14, 2026-08-17, 2026-08-18, 2026-08-19, 2026-08-20, 2026-08-21, 2026-08-24, 2026-08-25, 2026-08-26, 2026-08-27, 2026-08-31, 2026-09-01, 2026-09-02, 2026-09-03, 2026-09-04, 2026-09-08, 2026-09-09, 2026-09-10, and 2026-09-11. The initial run loads Finviz on those 24 only, and only the 15 Finviz columns behind the 16 `fv_*` atoms. Mornings after 2026-09-11 stay out of the search load. A sample of eight cited runs was read with `gh api repos/SRoyaltyy/theme-radar/actions/runs/{id}`: 31136381205, 31642191661, 31645482181, 33026531289, 33814488206, 34539436709, 34541105465, and 36187437404. On each one, `run_started_at` matched the file's `created_at` and was before 13:30 UTC on that trade date. Rubric scores, composite scores, catalyst flags, upside, `trf_d_*`, and `trf_dir_*` are available-proven on those mornings and are not loaded on this run.
 
@@ -39,17 +41,19 @@ Atoms are the 41 Layer A atoms plus the 16 Finviz atoms: 57. Pairs are every uno
 
 Other levers are the Layer A cross: side 2, entry 2, exit 4 (`time`, `list`, `cut_loser`, `trail`), hold pairs 15, stop 4, top-N 4, regime 5. That is 2 × 2 × 4 × 15 × 4 × 4 × 5 = 19,200. There is no universe lever, no S gate, no hard-red, and no `exit_alarm`, `exit_last_red`, or `exit_news_bad`.
 
-**N = 1,659 × 19,200 = 31,852,800.**
+The price, Finviz, and Excel grid is 1,659 × 19,200 = 31,852,800.
 
-The running tally is N + 37 + 8,264 + 868 = **31,861,969**. The 37, the 8,264, and the 868 stay separate prior lines. They are not rerun.
+Group 3 adds the 110 original Factor Mine recipes, one try each. **N = 31,852,800 + 110 = 31,852,910.**
 
-Recomputed after plain Finviz opened on 2026-08-07: the grid is unchanged. N counts combinations. A sat-out session is not an extra try and does not multiply N. N stays 31,852,800. The running tally stays 31,861,969.
+The running tally is N + 37 + 8,264 + 868 = **31,862,079**. Before Group 3 joined, that tally was 31,861,969. The 37, the 8,264, and the 868 stay separate prior lines. They are not rerun.
+
+N counts combinations. A sat-out session is not an extra try and does not multiply N.
 
 The same 31,852,800 tries split by first possible day. Group 1 atoms are the 50 atoms with no Excel card: 34 price, candle, and price-only AB atoms, plus the 16 plain Finviz atoms. Group 1 pairs are the unordered pairs of those 50: 1,225. Group 1 deltas are the six price deltas. Group 1 signals = 50 + 1,225 + 6 = 1,281. Group 1 tries = 1,281 × 19,200 = **24,595,200**.
 
 Group 2 atoms are the 7 Excel cards. Group 2 pairs are every unordered pair that contains an Excel card: 7 × 50 + 21 = 371. Group 2 signals = 7 + 371 = 378. Group 2 tries = 378 × 19,200 = **7,257,600**.
 
-24,595,200 + 7,257,600 = 31,852,800. Group 1's luck test uses 24,595,200 tries. Group 2's luck test uses 7,257,600 tries. The overall tally, 31,861,969, is reported beside those two tests. The 37, the 8,264, and the 868 stay in the overall tally and stay out of both group denominators.
+24,595,200 + 7,257,600 = 31,852,800. Group 3 is 110. 31,852,800 + 110 = 31,852,910. Group 1's luck test uses 24,595,200 tries. Group 2's luck test uses 7,257,600 tries. Group 3's luck test uses 110 tries. The overall tally, 31,862,079, is reported beside the three tests. The 37, the 8,264, and the 868 stay in the overall tally and stay out of the three group denominators.
 
 Combination id: `{signal}|{side}|{entry}|{exit}|h{hold}m{min_hold}|stop{stop}|n{top_n}|reg{regime}`.
 
@@ -57,8 +61,7 @@ Combination id: `{signal}|{side}|{entry}|{exit}|h{hold}m{min_hold}|stop{stop}|n{
 
 These are not in N. Each joins the tally only after the input audit passes for the files it reads. A combination already inside the 1,659 × 19,200 grid is not added a second time.
 
-- Fullscan enriched AB, S, sector, news, heat, catalyst, join, and `data/factor_mine/panel.json`.
-- The rest of Layer B: engine gates, rubric, composite, catalyst flags, upside, the 44 deltas, the 4 named compounds, and the extra axes (universe, S gate, hard-red, and the three camera exits). That grid remains N_B = 1,984,711,680 under its own axes.
+- The extended Layer B cross beyond the original 110: rubric, composite, catalyst flags, upside, the 44 deltas, the 4 named compounds, the pairwise set, and the extra axes. That grid remains N_B = 1,984,711,680 under its own axes. It is not added on top of N. `data/factor_mine/panel.json` stays unread.
 - The Excel ML spec. It is one later entry if a single spec is committed. It is not unpacked into the initial grid. None was on main at this lock.
 
 ### DROPPED
@@ -68,7 +71,7 @@ No later copy is substituted.
 - Theme Radar trade date 2026-08-28. The server-time proof has no row.
 - Any Theme Radar row dated after 2026-09-11.
 - Excel columns on every run-window session outside the seven proven days: 2026-08-07, 2026-08-10, 2026-08-11, 2026-08-12, 2026-08-13, 2026-08-14, 2026-08-17, 2026-08-18, 2026-08-19, 2026-08-20, 2026-08-21, 2026-08-24, 2026-08-25, 2026-08-26, 2026-08-27, 2026-08-28, 2026-09-01, and 2026-09-09.
-- Today's `data/factor_mine/panel.json` rows as the candidate universe on 2026-08-07 through 2026-09-08.
+- Today's `data/factor_mine/panel.json` rows as the candidate list on any session.
 - Any Finviz or prefixed Theme Radar column on 2026-08-28. That morning has no snapshot.
 - Post-open Excel rows: CMII on 2026-09-02, AUBN on 2026-09-04, and SVCC on 2026-09-11.
 - `research/longhist/listed_common.txt`. No Actions run has that `head_sha`, and the events API has no `PushEvent` for it.
@@ -93,17 +96,15 @@ Changing a gate, weight, hold, exit, size, fee, fill, universe, or the combinati
 
 No score is computed in this commit.
 
-The search is two layers. The initial run below is what scores first, and it is the only new line in today's tally. Layer B and the Excel ML spec are later add-ons. Their tries are added to the tally when they join, after the input audit passes for the files they read. A combination already inside N is not counted again.
-
-Layer B is the full fullscan grid on the real morning panel, 2026-08-13 through 2026-09-11. It is not scored in the initial run. Its core is the recipe space of the Factor Mine engine in section 4. That core is extended with the levers the engine did not have: Excel cards, Theme Radar fields, the full pairwise set, day-over-day deltas, stops, min-hold below the hold, entry sizing, the S gate, hard-red, and the `theme_radar` universe. It includes the inputs that cannot be rebuilt: enriched AB (`boxes.ab`), S, hard-red, sector, news, heat, catalyst, and the Theme Radar fields.
+The initial run is what scores first. It holds Group 1, Group 2, and Group 3. Group 3 is the original Factor Mine recipe space, the 110 recipes, walked on fullscan inputs when `research/audit/FULLSCAN_FILE_PROOF.csv` marks the per-day file `PROVEN`. The extended cross N_B = 1,984,711,680 and the Excel ML spec stay later add-ons. A combination already inside N is not counted again.
 
 Layer A is rebuildable inputs only. Its universe is the price-only stand-in in section 6. Its span is 2024-04-02 through 2026-09-11.
 
 ## 1. Layer B sessions
 
-Source: `data/factor_mine/panel.json`, sha256 `f9a4efc13a8aa13b92ac5847f0ef4f3dc4bddf0b16652684b183a9fe3170a506`.
+`data/factor_mine/panel.json`, sha256 `f9a4efc13a8aa13b92ac5847f0ef4f3dc4bddf0b16652684b183a9fe3170a506`, is not a candidate source. The initial run does not load its rows.
 
-Layer B's search and Layer B's walk-forward read these 21 sessions and no others:
+The file's own session dates are these 21, and no others:
 
 `2026-08-13`, `2026-08-14`, `2026-08-17`, `2026-08-18`, `2026-08-19`, `2026-08-20`, `2026-08-21`, `2026-08-24`, `2026-08-25`, `2026-08-26`, `2026-08-27`, `2026-08-28`, `2026-08-31`, `2026-09-01`, `2026-09-02`, `2026-09-03`, `2026-09-04`, `2026-09-08`, `2026-09-09`, `2026-09-10`, `2026-09-11`.
 
@@ -281,7 +282,7 @@ Excel `suggestions.csv` is not part of that export. Its signal whitelist is `tic
 
 The core is the Factor Mine mining engine introduced in [PR #126](https://github.com/SRoyaltyy/fullscan/pull/126), commit `8e8c36a7117e60040d04cfa598e503b82fd7c6ea` (`Leak-free 09:30 factor strategy miner`, merged 2026-09-05). `build_recipes()` in that commit returns **110** recipes. The count is 15 universe baselines (5 lists × holds 1, 3, 5) + 38 single gates (19 gates × holds 1 and 3) + 5 of those gates at hold 5 + 20 named combos (10 × holds 1 and 3) + 2 one-offs + 12 rank recipes (6 ranks × holds 1 and 3) + 3 top-N recipes + 5 exit recipes + 10 shorts (5 × holds 1 and 3).
 
-Those 110 are the engine's enumerated list. They are not an extra line in the luck-test tally. A grid point that lands on one of them is still one Layer B try.
+Those 110 are the engine's enumerated list. They are Group 3, and each one is one try in N. The extended cross below is not the original recipe space and is not in N.
 
 The axes that list varies, and the values this grid extends them with:
 
@@ -303,7 +304,7 @@ The combination id, used for tie-breaks and the parquet key, is:
 
 `signal` is `f:{atom}`, `p:{a}+{b}` with `a` < `b` in byte order, `c:{compound}`, or `d:{delta}`.
 
-`union` is that morning's `panel.json` rows. `flatten`, `probable`, `yday_gainer`, and `ohlc_hot` keep a row only when `sources` contains that name. `theme_radar` is the frozen export for that `trade_date`. A camera gate on a name that is not on the panel that morning matches nobody.
+`union` is that morning's rebuilt candidate list: names from per-day files marked `PROVEN`, plus proven Theme Radar names and the price-only list. `flatten`, `probable`, `yday_gainer`, and `ohlc_hot` keep a name only when a `PROVEN` per-day file carries that list. `theme_radar` is the frozen export for that `trade_date`. A camera gate whose file is not `PROVEN` that morning matches nobody. `panel.json` rows are not a source.
 
 The 19 single gates and the named combos forbid `alarm`, as those recipes do in `build_recipes()`. Any other signal does not.
 
@@ -320,7 +321,7 @@ Top-N is applied after the gate. Names that fail the gate are not ranked.
 
 ### 4.1 Factors (110 atoms)
 
-Panel atoms use `data/factor_mine/panel.json` for that session. A camera whose source file is missing that morning matches nobody (INPUT_HISTORY). Theme Radar atoms use the frozen export joined on `(trade_date, Ticker)`. Excel atoms use the server-proven days in `excel_preopen_proof.csv`, not the current `suggestions.csv` blob. A card with `signal_date` D is an input on the next panel session, not on D, and only on a run-window session that file marks server-proven. The loaded cells are `ticker`, `strategy`, and `signal_date`. Price and return columns are outcomes. The seven cards are the folders under `excel_bot/strategies/`. The committed CSV has rows for L1, L2, L3, and L5 only. L4, S1, and S2 have no row through 2026-09-25, so those atoms match nobody on this window and still count.
+Panel atoms read the per-day file `research/audit/FULLSCAN_FILE_PROOF.csv` marks `PROVEN` for that session. They do not read `data/factor_mine/panel.json`. A camera whose per-day file is not `PROVEN` that morning sits out. Theme Radar atoms use the frozen export joined on `(trade_date, Ticker)`. Excel atoms use the server-proven days in `excel_preopen_proof.csv`, not the current `suggestions.csv` blob. A card with `signal_date` D is an input on the next panel session, not on D, and only on a run-window session that file marks server-proven. The loaded cells are `ticker`, `strategy`, and `signal_date`. Price and return columns are outcomes. The seven cards are the folders under `excel_bot/strategies/`. The committed CSV has rows for L1, L2, L3, and L5 only. L4, S1, and S2 have no row through 2026-09-25, so those atoms match nobody on this window and still count.
 
 | id | rule |
 | --- | --- |
@@ -463,7 +464,7 @@ Plus `trf_d_*` > 0 for these 28 columns, id `d_` plus the column slug (`d_price`
 | hold and min_hold | hold is 1, 2, 3, 4, or 5 sessions. min_hold is an integer from 1 through hold. The 15 legal pairs are (1,1), (2,1), (2,2), (3,1), (3,2), (3,3), (4,1), (4,2), (4,3), (4,4), (5,1), (5,2), (5,3), (5,4), (5,5). |
 | stop | `none`, `0.03`, `0.05`, `0.08` (fraction under the fill for a long, over the fill for a short) |
 | top-N | `1`, `4`, `8`, `12` |
-| universe | `union` (that morning's `panel.json` rows), `flatten`, `probable`, `yday_gainer`, `ohlc_hot` (row `sources` must contain the name), `theme_radar` (that `trade_date` on the frozen export; 11,568 to 11,659 tickers on the search sessions that have a row) |
+| universe | `union` (that morning's rebuilt candidate list), `flatten`, `probable`, `yday_gainer`, `ohlc_hot` (a `PROVEN` per-day file must carry the name), `theme_radar` (that `trade_date` on the frozen export) |
 | S gate | `off`, `gt_0` (new buys only when morning S > 0), `gt_5` (S > 5), `le_0` (S ≤ 0). S is the committed general-predict total score, else weather `general_score`. A missing S fails every gate except `off`. |
 | hard-red | `off`, `on`. `on` sits new buys when S ≤ −3. A missing S with `on` sits. |
 
@@ -657,12 +658,15 @@ The yearly breakdown is a report, not an extra pass gate. For every Layer A comb
 
 | line | tries |
 | --- | ---: |
-| Initial run, N | 31,852,800 |
+| Group 1, prices and Finviz | 24,595,200 |
+| Group 2, Excel signals | 7,257,600 |
+| Group 3, original Factor Mine recipes, PR #126 | 110 |
+| Initial run, N | 31,852,910 |
 | OOS-0914 candidates, `data/factor_mine/oos0914_preregister.json` sha256 `989e05291a04a059062bed0ba15514ae674060679ded87de3c30447307fc659e` | 37 |
 | Theme Radar prior tries, pass 1 | 8,264 |
 | Theme Radar follow-up tries | 868 |
 
-Layer A, N_A = 16,646,400, is the price-and-Excel grid before the 16 Finviz atoms were added. Layer B, N_B = 1,984,711,680, is the later add-on grid. Neither number is added on top of N. The Excel ML spec is a later add-on and is not in this table.
+Layer A, N_A = 16,646,400, is the price-and-Excel grid before the 16 Finviz atoms were added. It sits inside Group 1 and Group 2 and is not added again. The extended grid N_B = 1,984,711,680 is not the original 110 and is not added on top of N. Group 3's 110 are inside N. The Excel ML spec is a later add-on and is not in this table.
 
 Theme Radar's prior tries are commit `b01166a6a3803672c21daf4af55c276402abb3c7` on `SRoyaltyy/theme-radar` (2026-09-26T03:44:17Z).
 
@@ -673,7 +677,7 @@ Theme Radar's prior tries are commit `b01166a6a3803672c21daf4af55c276402abb3c7` 
 
 `prior_tries_combos.csv.gz` has 9,132 rows. `in_8264_pass1_tally` is true on 8,264 of them and false on 868. Those two counts are separate lines. `prior_tries_daily_returns.csv.gz` is the after-fee series saved with that commit (columns `combo_id`, `date`, `ret_after_fee`, `n_names`). The tally counts the 8,264 and the 868 tries. It does not rerun them, and it does not count the daily rows as extra tries.
 
-The overall tally is N + 37 + 8,264 + 868 = 31,861,969. Each group's luck test uses that group's own tries: 24,595,200 for Group 1 and 7,257,600 for Group 2. The 37, the 8,264, and the 868 are prior searches. They are counted in the overall tally. They are not rerun, and they are not added to either group denominator. Each line stays separate in the report. A later add-on joins the group its columns put it in, and it is appended to the overall tally when it joins.
+The overall tally is N + 37 + 8,264 + 868 = 31,862,079. Each group's luck test uses that group's own tries: 24,595,200 for Group 1, 7,257,600 for Group 2, and 110 for Group 3. The 37, the 8,264, and the 868 are prior searches. They are counted in the overall tally. They are not rerun, and they are not added to a group denominator. Each line stays separate in the report. A later add-on joins the group its columns put it in, and it is appended to the overall tally when it joins.
 
 Baselines, on that layer's own sessions, after Futubull fees: RANDOM4 (4 names, 1,000 draws, seed `20260813`, hold 1, drawn from the combination's universe that morning) and IWM buy-and-hold. IRONCLAD rule 19.
 
@@ -681,7 +685,7 @@ Baselines, on that layer's own sessions, after Futubull fees: RANDOM4 (4 names, 
 
 This commit writes none of the return files.
 
-The scored run commits a daily return series for every initial combination, not only the top recipes. One row per combination per scored session. Both fee columns are required: `ret_futubull` and `ret_flat_15bp`. The file is parquet or csv.gz under `research/lever_search/returns/initial/`. Beside it, `research/lever_search/returns/initial_manifest.json` lists every `combo_id` and the sha256 of that combination's return series, plus the sha256 of each return file.
+The scored run commits a daily return series for every initial combination, not only the top recipes. One row per combination per scored session. Both fee columns are required: `ret_futubull` and `ret_flat_15bp`. The file is parquet or csv.gz under `research/lever_search/returns/factor_mine_seq/`. That directory is a new name. The scored run appends a file there and does not replace a file that already exists. Beside it, `research/lever_search/returns/factor_mine_seq/manifest.json` lists every `combo_id` and the sha256 of that combination's return series, plus the sha256 of each return file. No locked ledger, scoreboard, panel, or prior return file is rewritten.
 
 Price-only signals include the 614 sessions from 2024-04-02 through 2026-09-11. Signals that include an `fv_*` atom include the 25 sessions from 2026-08-07 through 2026-09-11. Signals that include an Excel card include the 9 sessions from 2026-08-31 through 2026-09-11. A session the recipe sits out is still a row in that series. The row carries the locked book and contains no fill built from a missing input. Beside each cumulative return the file's manifest records `n_check_days` and the mean after-fee return per check day, under Futubull fees and under the flat 15bp. The designed-after rows, 2026-09-14 through 2026-09-25, are a second file written after the walk-forward choices are frozen. Same columns. Same manifest rule.
 
@@ -689,7 +693,7 @@ Both series are inputs to that recipe's group luck test. The prior 8,264 and 868
 
 The report also lists the top recipes, the after-fee return with the single best stock removed, and the after-fee result from 2026-09-14 on. Those lists do not replace the full series.
 
-`research/lever_search/returns/layer_a_years.parquet`: `combo_id`, `year`, `ret_futubull`, `ret_without_best`.
+`research/lever_search/returns/factor_mine_seq/layer_a_years.parquet`: `combo_id`, `year`, `ret_futubull`, `ret_without_best`. If that path already exists, the scored run writes a new sibling file instead of replacing it.
 
 Layer B list A: after-fee compound on all 21 sessions strictly above 20%.
 
@@ -705,7 +709,7 @@ Keep bar (IRONCLAD rule 21) is reported and does not add or remove a row: at lea
 
 ## 10. Refusal
 
-The scored run refuses to start when the header fingerprint disagrees with the covered bytes, when a pinned file's sha256 disagrees with the manifest, when a before-09:30 claim rests on a git author date or a git committer date, when a row dated 2026-09-14 or later is passed into the search or the walk-forward, when the search loader is given a session after 2026-09-11, when a loaded search row contains a `trade_date` after 2026-09-11, when a Theme Radar date outside the 24 proven mornings is requested, when a dropped Excel session or a dropped Excel pair is requested, when an Excel read asks for a price or return column, when an initial Finviz read asks for a column outside the 15 Finviz fields, when a price-only signal opens `panel.json`, a Theme Radar file, or an LLM morning file, when today's `panel.json` rows are read as the candidate universe for a session from 2026-08-07 through 2026-09-08, or when a recipe opens a fill on a session where one of its own inputs is not server-proven.
+The scored run refuses to start when the header fingerprint disagrees with the covered bytes, when a pinned file's sha256 disagrees with the manifest, when a before-09:30 claim rests on a git author date or a git committer date, when a row dated 2026-09-14 or later is passed into the search or the walk-forward, when the search loader is given a session after 2026-09-11, when a loaded search row contains a `trade_date` after 2026-09-11, when a Theme Radar date outside the 24 proven mornings is requested, when a dropped Excel session or a dropped Excel pair is requested, when an Excel read asks for a price or return column, when an initial Finviz read asks for a column outside the 15 Finviz fields, when a price-only signal opens `panel.json`, a Theme Radar file, or an LLM morning file, when today's `panel.json` rows are read as the candidate list on any session, when a fullscan input is used on a session whose `FULLSCAN_FILE_PROOF.csv` status is not `PROVEN`, or when a recipe opens a fill on a session where one of its own inputs is not server-proven.
 
 ## 11. Success criteria
 
@@ -717,7 +721,7 @@ Fixed before any score. A recipe is something good only when every line below ho
 
 (c) The after-fee compound from 2026-09-14 through 2026-09-25 is greater than or equal to zero.
 
-(d) The recipe's own group luck test has p < 0.05. Group 1 is tested on its 24,595,200 tries. Group 2 is tested on its 7,257,600 tries. The report also states the overall tally of 31,861,969.
+(d) The recipe's own group luck test has p < 0.05. Group 1 is tested on its 24,595,200 tries. Group 2 is tested on its 7,257,600 tries. Group 3 is tested on its 110 tries. The report also states the overall tally of 31,862,079.
 
 A recipe that misses any line is not something good. A recipe that meets all four lines and has fewer than 10 check days is labelled `too few days to judge` and is not proven. Group 2 has 9 check days, so a Group 2 recipe that meets the four lines carries that label. A recipe that relies on an input the audit does not mark `rebuild_match=exact` is struck, and a struck recipe is not something good. If no recipe is proven, the report says `nothing proven yet`, whatever the returns were.
 
