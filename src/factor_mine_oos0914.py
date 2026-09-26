@@ -31,6 +31,17 @@ STATE_ROOT = OUT_DIR / "state"
 LEDGER_DIR = OUT_DIR / "ledgers"
 FROZEN_LIST = OUT_DIR / "frozen_list.json"
 SCOREBOARD = ROOT / "03_scoreboard" / "FACTOR_MINE_OOS0914.md"
+# One approved correction. Any other date stays write-once.
+OOS_RESTATE_DATE = "2026-09-25"
+RESTATE_LOG = ROOT / "03_scoreboard" / "RESTATEMENTS.md"
+RESTATE_MARK = "OOS0914_RESTATE"
+RESTATE_NOTE = (
+    "designed after the fact; not part of the clean record. "
+    "One-time restatement approved by Cyrus on 2026-09-26 HKT. "
+    "The first lock had no 2026-09-25 bars because the test tape "
+    "ended 2026-09-24. Rebuilt from the same frozen snapshot and "
+    "the same frozen rules, priced from the frozen pin then the live store."
+)
 LIVE_OHLC = ROOT / "data" / "prices" / "ohlc.parquet"
 LIVE_META = ROOT / "data" / "prices" / "meta.json"
 RETRO_OHLC = retro.RETRO_STORE
@@ -1867,6 +1878,259 @@ def assert_logged_append_committed(log_text: str, committed) -> list[str]:
     return dates
 
 
+def _restate_token(date: str) -> str:
+    return f"{RESTATE_MARK} {str(date)[:10]}"
+
+
+def restatement_logged(date: str, path: Path | None = None) -> bool:
+    """True when the log already records a restatement of ``date``."""
+    src = Path(path or RESTATE_LOG)
+    if not src.is_file():
+        return False
+    token = _restate_token(date)
+    return any(line.strip() == token for line in src.read_text(encoding="utf-8").splitlines())
+
+
+def _write_restate_bytes(path: Path, raw: bytes, date: str) -> None:
+    """Overwrite one OOS file. Only the approved date, only that day's files."""
+    stamp = str(date)[:10]
+    if stamp != OOS_RESTATE_DATE:
+        raise SystemExit(
+            f"[oos0914] restate write refuses {stamp or '(empty)'}; "
+            f"only {OOS_RESTATE_DATE} is approved"
+        )
+    try:
+        shown = path.resolve().relative_to(ROOT.resolve())
+    except ValueError:
+        raise SystemExit(f"[oos0914] restate write refuses {path}")
+    parts = shown.parts
+    if parts[:3] != ("data", "factor_mine", "oos0914"):
+        raise SystemExit(f"[oos0914] restate write refuses {shown}")
+    names = {str(rec.get("name") or "") for rec in frozen_recipes()}
+    ledger_ok = (
+        len(parts) >= 2
+        and parts[-2] == "ledgers"
+        and parts[-1] in (f"{stamp}.json", f"{stamp}.json.sha256")
+    )
+    state_ok = (
+        len(parts) >= 3
+        and parts[-3] == "state"
+        and parts[-1] == f"{stamp}.json"
+        and parts[-2] in names
+    )
+    if not (ledger_ok or state_ok):
+        raise SystemExit(f"[oos0914] restate write refuses {shown}")
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_bytes(raw)
+
+
+def _assert_due_exits(date: str, dates: list[str], recipes: list[dict],
+                      docs: dict[str, dict]) -> None:
+    """A time-sell lot that has finished its hold must leave on this day."""
+    index = {stamp: i for i, stamp in enumerate(dates)}
+    prev = seq.prior_session(dates, date)
+    if not prev or date not in index:
+        raise SystemExit(f"[oos0914] restate refuses; {date} is not on the test calendar")
+    for rec in recipes:
+        if (rec.get("sell") or "list") != "time":
+            continue
+        prior = seq.read_state(rec["name"], prev, STATE_ROOT) or {}
+        pos = (prior.get("state") or {}).get("pos") or {}
+        sold = {
+            str(row.get("ticker") or "").upper()
+            for row in (docs[rec["name"]].get("sells") or [])
+        }
+        hold = int(rec.get("hold") or 1)
+        for ticker, lot in pos.items():
+            entry = str((lot or {}).get("entry_date") or "")[:10]
+            held = index[date] - index.get(entry, index[date])
+            min_hold = int((lot or {}).get("min_hold") or hold)
+            if held >= min_hold and str(ticker).upper() not in sold:
+                raise SystemExit(
+                    f"[oos0914] restate refuses to lock {date}: "
+                    f"{rec['name']} still holds {ticker} after min-hold {held}/{min_hold}"
+                )
+
+
+def _replay_oos_day(date: str, dates: list[str], recipes: list[dict]) -> dict[str, dict]:
+    """Walk ``date`` in a copy of the books. Earlier days are not written back."""
+    import shutil
+    import tempfile
+
+    tmp = Path(tempfile.mkdtemp(prefix="oos-restate-"))
+    try:
+        root = tmp / "state"
+        shutil.copytree(STATE_ROOT, root)
+        for path in root.glob(f"*/{date}.json"):
+            path.unlink()
+        walk_test(dates, recipes, root=root, ledger=False)
+        for path in root.glob("*/*.json"):
+            if path.stem == date:
+                continue
+            orig = STATE_ROOT / path.relative_to(root)
+            if not orig.is_file() or orig.read_bytes() != path.read_bytes():
+                raise SystemExit(
+                    f"[oos0914] restate refuses; replay changed {path.relative_to(root)}"
+                )
+        docs = {}
+        for rec in recipes:
+            doc = seq.read_state(rec["name"], date, root)
+            if doc is None:
+                raise SystemExit(
+                    f"[oos0914] restate produced no state for {rec['name']}"
+                )
+            blob = seq.state_path(rec["name"], date, root).read_bytes()
+            docs[rec["name"]] = {
+                "bytes": blob,
+                "doc": json.loads(blob.decode("utf-8")),
+            }
+        return docs
+    finally:
+        shutil.rmtree(tmp)
+
+
+def _append_restate_log(date: str, old_fp: str, new_fp: str,
+                        files: list[tuple[str, str, str]], *,
+                        path: Path | None = None) -> Path:
+    dest = Path(path or RESTATE_LOG)
+    dest.parent.mkdir(parents=True, exist_ok=True)
+    rows = "\n".join(
+        f"- `{rel}` `{old}` -> `{new}`" for rel, old, new in files
+    )
+    block = (
+        f"\n## {date} oos0914\n\n"
+        f"{_restate_token(date)}\n\n"
+        f"- book: oos0914\n"
+        f"- date: {date}\n"
+        f"- approver: Cyrus\n"
+        f"- approved: 2026-09-26 HKT\n"
+        f"- record: designed after the fact; not part of the clean record\n"
+        f"- reason: The first lock walked the retro store, which ends "
+        f"2026-09-24, so 2026-09-25 had no bars. Buys, sells, and equity "
+        f"were carried from 2026-09-24. Cyrus approved one restatement from "
+        f"the same frozen snapshot, the same frozen rules, and the "
+        f"2026-09-25 Yahoo prices (frozen price pin, then the live store).\n"
+        f"- old_fingerprint: {old_fp}\n"
+        f"- new_fingerprint: {new_fp}\n"
+        f"- files:\n{rows}\n"
+    )
+    if not dest.is_file():
+        header = (
+            "# Restatements\n\n"
+            "Records are append-only. A restatement is a one-time named "
+            "correction of a day that was never computed. A date listed "
+            "here cannot be restated again. The restated day stays "
+            "designed after the fact and is not part of the clean record.\n"
+        )
+        dest.write_text(header + block, encoding="utf-8")
+    else:
+        with dest.open("a", encoding="utf-8") as handle:
+            handle.write(block)
+    return dest
+
+
+def restate_oos_day(date: str, *, log_path: Path | None = None) -> dict:
+    """Rebuild one OOS day. Only 2026-09-25, and only once.
+
+    ``write_state`` and ``write_oos_ledger`` are not used. They still
+    refuse a different body on every day, including this one. The
+    overwrite below is the single approved exception, and it refuses
+    every other date and every path that is not this day's OOS file.
+    """
+    stamp = str(date or "")[:10]
+    if stamp != OOS_RESTATE_DATE:
+        raise SystemExit(
+            f"[oos0914] restate refuses {stamp or '(empty)'}; "
+            f"only {OOS_RESTATE_DATE} is approved"
+        )
+    log = Path(log_path or RESTATE_LOG)
+    if restatement_logged(stamp, log):
+        raise SystemExit(
+            f"[oos0914] restate refuses {stamp}; a restatement entry already exists"
+        )
+    recipes = [rec for rec in frozen_recipes() if _family(rec) == "own"]
+    if not recipes:
+        raise SystemExit("[oos0914] restate refuses; no frozen own rules")
+    dates = [d for d in test_dates(stamp) if d <= stamp]
+    if stamp not in dates:
+        raise SystemExit(f"[oos0914] restate refuses; {stamp} has no frozen snapshot")
+    prior_files = []
+    for rec in recipes:
+        path = seq.state_path(rec["name"], stamp, STATE_ROOT)
+        if not path.is_file():
+            raise SystemExit(f"[oos0914] restate refuses; missing {path}")
+        prior_files.append(path)
+    ledger_path = LEDGER_DIR / f"{stamp}.json"
+    side_path = ledger_path.with_name(ledger_path.name + ".sha256")
+    if not ledger_path.is_file() or not side_path.is_file():
+        raise SystemExit(f"[oos0914] restate refuses; missing {ledger_path}")
+    old_side = side_path.read_bytes()
+    old_fp = old_side.decode("utf-8").strip()
+    if hashlib.sha256(ledger_path.read_bytes()).hexdigest() != old_fp:
+        raise SystemExit(f"[oos0914] restate refuses; {stamp} ledger fingerprint mismatch")
+    old_state = {path: path.read_bytes() for path in prior_files}
+    replayed = _replay_oos_day(stamp, dates, recipes)
+    docs = {name: item["doc"] for name, item in replayed.items()}
+    _assert_due_exits(stamp, dates, recipes, docs)
+    file_rows = []
+    for rec in recipes:
+        dest = seq.state_path(rec["name"], stamp, STATE_ROOT)
+        raw = replayed[rec["name"]]["bytes"]
+        old = hashlib.sha256(old_state[dest]).hexdigest()
+        _write_restate_bytes(dest, raw, stamp)
+        file_rows.append((
+            str(dest.relative_to(ROOT)),
+            old,
+            hashlib.sha256(raw).hexdigest(),
+        ))
+    snap = (load_snapshot_dir(
+        SNAP_DIR, start=stamp, end=stamp, cutoff="9999-99-99",
+    ).get(stamp) or {})
+    payload = _ledger_doc(stamp, recipes, STATE_ROOT, snap)
+    payload["record"] = "designed_after"
+    payload["clean_record"] = False
+    payload["note"] = RESTATE_NOTE
+    raw = fmr._canonical(payload)
+    new_fp = hashlib.sha256(raw).hexdigest()
+    _write_restate_bytes(ledger_path, raw, stamp)
+    side_raw = (new_fp + "\n").encode("utf-8")
+    _write_restate_bytes(side_path, side_raw, stamp)
+    file_rows.insert(0, (
+        str(ledger_path.relative_to(ROOT)),
+        old_fp,
+        new_fp,
+    ))
+    file_rows.insert(1, (
+        str(side_path.relative_to(ROOT)),
+        hashlib.sha256(old_side).hexdigest(),
+        hashlib.sha256(side_raw).hexdigest(),
+    ))
+    _append_restate_log(stamp, old_fp, new_fp, file_rows, path=log)
+    print(
+        f"[oos0914] restate {stamp} {old_fp[:12]} -> {new_fp[:12]} "
+        f"record=designed_after",
+        flush=True,
+    )
+    return {
+        "date": stamp,
+        "old_fingerprint": old_fp,
+        "new_fingerprint": new_fp,
+        "files": file_rows,
+        "recipes": {
+            name: {
+                "buys": doc.get("buys") or [],
+                "sells": doc.get("sells") or [],
+                "equity": doc.get("equity"),
+                "cash": doc.get("cash"),
+                "fees": doc.get("fees"),
+                "holdings": doc.get("holdings") or [],
+                "mean": doc.get("mean"),
+            }
+            for name, doc in docs.items()
+        },
+    }
+
+
 def append_nightly(*, through: str = "", write: bool = False) -> dict:
     """After the factor-mine land, append the next OOS day if it is locked.
 
@@ -2098,7 +2362,7 @@ def apply_report_view() -> None:
 def main(argv=None) -> int:
     import argparse
     parser = argparse.ArgumentParser(description="OOS-0914 strategy mine")
-    parser.add_argument("cmd", choices=("mine", "freeze", "score", "append"))
+    parser.add_argument("cmd", choices=("mine", "freeze", "score", "append", "restate"))
     parser.add_argument("--through", default="")
     parser.add_argument("--write", action="store_true")
     args = parser.parse_args(argv)
@@ -2108,6 +2372,8 @@ def main(argv=None) -> int:
         freeze()
     elif args.cmd == "score":
         score()
+    elif args.cmd == "restate":
+        restate_oos_day(args.through)
     else:
         append_nightly(through=args.through, write=args.write or True)
     return 0

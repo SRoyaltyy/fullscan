@@ -1,19 +1,147 @@
 {
-  "buys": [],
-  "cash": 8464.79,
+  "buys": [
+    {
+      "fill_rule": "open",
+      "price": 6.06,
+      "shares": 349,
+      "side": "BUY",
+      "ticker": "GLND"
+    },
+    {
+      "fill_rule": "open",
+      "price": 29.76,
+      "shares": 71,
+      "side": "BUY",
+      "ticker": "TJGC"
+    },
+    {
+      "fill_rule": "open",
+      "price": 16.21,
+      "shares": 130,
+      "side": "BUY",
+      "ticker": "SECZ"
+    },
+    {
+      "fill_rule": "open",
+      "price": 15.5811,
+      "shares": 135,
+      "side": "BUY",
+      "ticker": "USDE"
+    }
+  ],
+  "cash": 14.66,
   "date": "2026-09-25",
-  "equity": 8464.79,
-  "fees": 0,
-  "fills": [],
-  "holdings": [],
-  "mean": 0.0,
-  "n_trades_today": 0,
+  "equity": 8214.71,
+  "fees": 11.4801,
+  "fills": [
+    {
+      "fees": 4.5021,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 6.06,
+      "shares": 349,
+      "side": "BUY",
+      "ticker": "GLND"
+    },
+    {
+      "fees": 2.203,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 29.76,
+      "shares": 71,
+      "side": "BUY",
+      "ticker": "TJGC"
+    },
+    {
+      "fees": 2.38,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 16.21,
+      "shares": 130,
+      "side": "BUY",
+      "ticker": "SECZ"
+    },
+    {
+      "fees": 2.395,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 15.5811,
+      "shares": 135,
+      "side": "BUY",
+      "ticker": "USDE"
+    }
+  ],
+  "holdings": [
+    "GLND",
+    "SECZ",
+    "TJGC",
+    "USDE"
+  ],
+  "mean": -2.9544,
+  "n_trades_today": 4,
   "recipe": "oos0914_break10_h1_sx",
   "sells": [],
   "state": {
     "after": "2026-09-25",
-    "cash": 8464.79,
-    "pos": {},
-    "yday_equity": 8464.79
+    "cash": 14.66,
+    "pos": {
+      "GLND": {
+        "close_px": 5.54,
+        "cost": 2119.4421,
+        "entry_date": "2026-09-25",
+        "entry_px": 6.06,
+        "fee_in": 4.5021,
+        "last_px": 6.06,
+        "min_hold": 1,
+        "notional": 2114.94,
+        "peak_px": 6.06,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate break_10=True; rank hot_score; list yday_gainer,yday_mover; ret5=+342.1; leftover $2116.20",
+        "shares": 349,
+        "ticker": "GLND"
+      },
+      "SECZ": {
+        "close_px": 15.96,
+        "cost": 2109.6800000000003,
+        "entry_date": "2026-09-25",
+        "entry_px": 16.21,
+        "fee_in": 2.38,
+        "last_px": 16.21,
+        "min_hold": 1,
+        "notional": 2107.3,
+        "peak_px": 16.21,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate break_10=True; rank hot_score; list yday_gainer,yday_mover; \ud83d\udd35; \u26aa; ret5=+85.1; leftover $2116.20",
+        "shares": 130,
+        "ticker": "SECZ"
+      },
+      "TJGC": {
+        "close_px": 26.24,
+        "cost": 2115.163,
+        "entry_date": "2026-09-25",
+        "entry_px": 29.76,
+        "fee_in": 2.203,
+        "last_px": 29.76,
+        "min_hold": 1,
+        "notional": 2112.96,
+        "peak_px": 29.76,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate break_10=True; rank hot_score; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+156.1; leftover $2116.20",
+        "shares": 71,
+        "ticker": "TJGC"
+      },
+      "USDE": {
+        "close_px": 17.25,
+        "cost": 2105.8435,
+        "entry_date": "2026-09-25",
+        "entry_px": 15.5811,
+        "fee_in": 2.395,
+        "last_px": 15.5811,
+        "min_hold": 1,
+        "notional": 2103.4485,
+        "peak_px": 15.5811,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate break_10=True; rank hot_score; list yday_gainer; \ud83d\udd35; ret5=+84.4; leftover $2116.20",
+        "shares": 135,
+        "ticker": "USDE"
+      }
+    },
+    "yday_equity": 8214.71
   }
 }

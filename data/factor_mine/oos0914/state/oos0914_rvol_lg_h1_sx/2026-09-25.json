@@ -1,19 +1,147 @@
 {
-  "buys": [],
-  "cash": 9243.36,
+  "buys": [
+    {
+      "fill_rule": "open",
+      "price": 6.06,
+      "shares": 381,
+      "side": "BUY",
+      "ticker": "GLND"
+    },
+    {
+      "fill_rule": "open",
+      "price": 16.21,
+      "shares": 142,
+      "side": "BUY",
+      "ticker": "SECZ"
+    },
+    {
+      "fill_rule": "open",
+      "price": 123.5,
+      "shares": 18,
+      "side": "BUY",
+      "ticker": "GRAL"
+    },
+    {
+      "fill_rule": "open",
+      "price": 10.2,
+      "shares": 226,
+      "side": "BUY",
+      "ticker": "DNA"
+    }
+  ],
+  "cash": 92.19,
   "date": "2026-09-25",
-  "equity": 9243.36,
-  "fees": 0,
-  "fills": [],
-  "holdings": [],
-  "mean": 0.0,
-  "n_trades_today": 0,
+  "equity": 9162.43,
+  "fees": 12.2903,
+  "fills": [
+    {
+      "fees": 4.9149,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 6.06,
+      "shares": 381,
+      "side": "BUY",
+      "ticker": "GLND"
+    },
+    {
+      "fees": 2.416,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 16.21,
+      "shares": 142,
+      "side": "BUY",
+      "ticker": "SECZ"
+    },
+    {
+      "fees": 2.044,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 123.5,
+      "shares": 18,
+      "side": "BUY",
+      "ticker": "GRAL"
+    },
+    {
+      "fees": 2.9154,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 10.2,
+      "shares": 226,
+      "side": "BUY",
+      "ticker": "DNA"
+    }
+  ],
+  "holdings": [
+    "DNA",
+    "GLND",
+    "GRAL",
+    "SECZ"
+  ],
+  "mean": -0.8755,
+  "n_trades_today": 4,
   "recipe": "oos0914_rvol_lg_h1_sx",
   "sells": [],
   "state": {
     "after": "2026-09-25",
-    "cash": 9243.36,
-    "pos": {},
-    "yday_equity": 9243.36
+    "cash": 92.19,
+    "pos": {
+      "DNA": {
+        "close_px": 10.66,
+        "cost": 2308.1153999999997,
+        "entry_date": "2026-09-25",
+        "entry_px": 10.2,
+        "fee_in": 2.9154,
+        "last_px": 10.2,
+        "min_hold": 1,
+        "notional": 2305.2,
+        "peak_px": 10.2,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate last_green=True,rvol_min=1.5; rank hot_score; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+30.7; leftover $2310.84",
+        "shares": 226,
+        "ticker": "DNA"
+      },
+      "GLND": {
+        "close_px": 5.54,
+        "cost": 2313.7749,
+        "entry_date": "2026-09-25",
+        "entry_px": 6.06,
+        "fee_in": 4.9149,
+        "last_px": 6.06,
+        "min_hold": 1,
+        "notional": 2308.8599999999997,
+        "peak_px": 6.06,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate last_green=True,rvol_min=1.5; rank hot_score; list yday_gainer,yday_mover; ret5=+342.1; leftover $2310.84",
+        "shares": 381,
+        "ticker": "GLND"
+      },
+      "GRAL": {
+        "close_px": 126.89,
+        "cost": 2225.044,
+        "entry_date": "2026-09-25",
+        "entry_px": 123.5,
+        "fee_in": 2.044,
+        "last_px": 123.5,
+        "min_hold": 1,
+        "notional": 2223.0,
+        "peak_px": 123.5,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate last_green=True,rvol_min=1.5; rank hot_score; list yday_gainer,yday_mover; \ud83d\udd35; \u26aa; ret5=+56.6; leftover $2310.84",
+        "shares": 18,
+        "ticker": "GRAL"
+      },
+      "SECZ": {
+        "close_px": 15.96,
+        "cost": 2304.2360000000003,
+        "entry_date": "2026-09-25",
+        "entry_px": 16.21,
+        "fee_in": 2.416,
+        "last_px": 16.21,
+        "min_hold": 1,
+        "notional": 2301.82,
+        "peak_px": 16.21,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate last_green=True,rvol_min=1.5; rank hot_score; list yday_gainer,yday_mover; \ud83d\udd35; \u26aa; ret5=+85.1; leftover $2310.84",
+        "shares": 142,
+        "ticker": "SECZ"
+      }
+    },
+    "yday_equity": 9162.43
   }
 }
