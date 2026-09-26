@@ -9,6 +9,12 @@
 - study label: `assumed pre-open, not server-proven`
 - live paths: not used. `research/breadth_mine_v1/` is not edited. Nothing under `research/lever_search/` is edited. `data/prices/ohlc.parquet` is not rewritten.
 
+## Addendum (Cyrus), winning days from 09-14
+
+This addendum sits outside the covered bytes. It does not change the grid, the rank, or the frozen pick.
+
+Winning days from 09-14 is W/T on store sessions from 2026-09-14 through 2026-09-25. A session is traded when that day's Futubull record has a fill, a ticker P&L line, or a daily after-fee return other than 0. W is how many of those traded sessions have a stored Futubull daily return strictly above 0. T is how many sessions were traded. A cash session is not in T. The figure is shown next to the 09-14 compound for the frozen rank-1 rule and in every ranking-table row. It does not choose the rank.
+
 <!-- BEGIN COVERED -->
 
 ## What this study is

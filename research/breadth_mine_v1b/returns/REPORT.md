@@ -13,30 +13,32 @@ Proven: 0.
 
 Verdict: `nothing proven yet`
 
+Frozen rank 1: `p:catalyst_on+heat_up|short|cut_loser|h5m2|n1`. From 09-14: 5.27%. Winning days from 09-14: 7/9.
+
 ## Top 20
 
-| rank | rule | side | check days | full compound | ex-best | best ticker | median trade | win rate | top-1 share | top-3 share | trades/day | from 09-14 | under $3 | 15bp compound | raw p | luck p | label |
-| ---: | --- | --- | ---: | ---: | ---: | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | --- |
-| 1 | `p:catalyst_on+heat_up|short|cut_loser|h5m2|n1` | short | 10 | 23.35% | 16.07% | UEC | 5.23% | 80.00% | 28.27% | 68.11% | 0.90 | 5.27% | 0.00% | 23.77% | 0.04259 | 1 | not something good |
-| 2 | `p:catalyst_on+heat_up|short|cut_loser|h5m3|n1` | short | 10 | 23.35% | 16.07% | UEC | 5.23% | 80.00% | 28.27% | 68.11% | 0.90 | 5.27% | 0.00% | 23.77% | 0.04259 | 1 | not something good |
-| 3 | `p:catalyst_on+heat_up|short|cut_loser|h5m4|n1` | short | 10 | 23.35% | 16.07% | UEC | 5.23% | 80.00% | 28.27% | 68.11% | 0.90 | 5.27% | 0.00% | 23.77% | 0.04259 | 1 | not something good |
-| 4 | `p:catalyst_on+heat_up|short|cut_loser|h5m5|n1` | short | 10 | 23.35% | 16.07% | UEC | 5.23% | 80.00% | 28.27% | 68.11% | 0.90 | 5.42% | 0.00% | 23.77% | 0.04259 | 1 | not something good |
-| 5 | `p:catalyst_on+heat_up|short|list|h5m1|n1` | short | 10 | 23.35% | 16.07% | UEC | 5.23% | 80.00% | 28.27% | 68.11% | 0.90 | 5.42% | 0.00% | 23.77% | 0.04259 | 1 | not something good |
-| 6 | `p:catalyst_on+heat_up|short|list|h5m2|n1` | short | 10 | 23.35% | 16.07% | UEC | 5.23% | 80.00% | 28.27% | 68.11% | 0.90 | 5.42% | 0.00% | 23.77% | 0.04259 | 1 | not something good |
-| 7 | `p:catalyst_on+heat_up|short|list|h5m3|n1` | short | 10 | 23.35% | 16.07% | UEC | 5.23% | 80.00% | 28.27% | 68.11% | 0.90 | 5.42% | 0.00% | 23.77% | 0.04259 | 1 | not something good |
-| 8 | `p:catalyst_on+heat_up|short|list|h5m4|n1` | short | 10 | 23.35% | 16.07% | UEC | 5.23% | 80.00% | 28.27% | 68.11% | 0.90 | 5.42% | 0.00% | 23.77% | 0.04259 | 1 | not something good |
-| 9 | `p:catalyst_on+heat_up|short|list|h5m5|n1` | short | 10 | 23.35% | 16.07% | UEC | 5.23% | 80.00% | 28.27% | 68.11% | 0.90 | 5.42% | 0.00% | 23.77% | 0.04259 | 1 | not something good |
-| 10 | `p:catalyst_on+heat_up|short|time|h5m1|n1` | short | 10 | 23.35% | 16.07% | UEC | 5.23% | 80.00% | 28.27% | 68.11% | 0.90 | 5.42% | 0.00% | 23.77% | 0.04259 | 1 | not something good |
-| 11 | `p:catalyst_on+heat_up|short|time|h5m2|n1` | short | 10 | 23.35% | 16.07% | UEC | 5.23% | 80.00% | 28.27% | 68.11% | 0.90 | 5.42% | 0.00% | 23.77% | 0.04259 | 1 | not something good |
-| 12 | `p:catalyst_on+heat_up|short|time|h5m3|n1` | short | 10 | 23.35% | 16.07% | UEC | 5.23% | 80.00% | 28.27% | 68.11% | 0.90 | 5.42% | 0.00% | 23.77% | 0.04259 | 1 | not something good |
-| 13 | `p:catalyst_on+heat_up|short|time|h5m4|n1` | short | 10 | 23.35% | 16.07% | UEC | 5.23% | 80.00% | 28.27% | 68.11% | 0.90 | 5.42% | 0.00% | 23.77% | 0.04259 | 1 | not something good |
-| 14 | `p:catalyst_on+heat_up|short|time|h5m5|n1` | short | 10 | 23.35% | 16.07% | UEC | 5.23% | 80.00% | 28.27% | 68.11% | 0.90 | 5.42% | 0.00% | 23.77% | 0.04259 | 1 | not something good |
-| 15 | `p:catalyst_on+heat_up|short|trail|h5m5|n1` | short | 10 | 23.35% | 16.07% | UEC | 5.23% | 80.00% | 28.27% | 68.11% | 0.90 | 5.42% | 0.00% | 23.77% | 0.04259 | 1 | not something good |
-| 16 | `p:catalyst_on+heat_up|short|cut_loser|h4m2|n1` | short | 10 | 23.47% | 15.77% | IE | 5.73% | 66.67% | 29.95% | 76.04% | 0.90 | 4.02% | 0.00% | 23.92% | 0.04212 | 1 | not something good |
-| 17 | `p:catalyst_on+heat_up|short|cut_loser|h4m3|n1` | short | 10 | 23.47% | 15.77% | IE | 5.73% | 66.67% | 29.95% | 76.04% | 0.90 | 4.02% | 0.00% | 23.92% | 0.04212 | 1 | not something good |
-| 18 | `p:catalyst_on+heat_up|short|cut_loser|h4m4|n1` | short | 10 | 23.47% | 15.77% | IE | 5.73% | 66.67% | 29.95% | 76.04% | 0.90 | 4.02% | 0.00% | 23.92% | 0.04212 | 1 | not something good |
-| 19 | `p:catalyst_on+heat_up|short|list|h4m1|n1` | short | 10 | 23.47% | 15.77% | IE | 5.73% | 66.67% | 29.95% | 76.04% | 0.90 | 4.02% | 0.00% | 23.92% | 0.04212 | 1 | not something good |
-| 20 | `p:catalyst_on+heat_up|short|list|h4m2|n1` | short | 10 | 23.47% | 15.77% | IE | 5.73% | 66.67% | 29.95% | 76.04% | 0.90 | 4.02% | 0.00% | 23.92% | 0.04212 | 1 | not something good |
+| rank | rule | side | check days | full compound | ex-best | best ticker | median trade | win rate | top-1 share | top-3 share | trades/day | from 09-14 | winning days from 09-14 | under $3 | 15bp compound | raw p | luck p | label |
+| ---: | --- | --- | ---: | ---: | ---: | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- | ---: | ---: | ---: | ---: | --- |
+| 1 | `p:catalyst_on+heat_up|short|cut_loser|h5m2|n1` | short | 10 | 23.35% | 16.07% | UEC | 5.23% | 80.00% | 28.27% | 68.11% | 0.90 | 5.27% | 7/9 | 0.00% | 23.77% | 0.04259 | 1 | not something good |
+| 2 | `p:catalyst_on+heat_up|short|cut_loser|h5m3|n1` | short | 10 | 23.35% | 16.07% | UEC | 5.23% | 80.00% | 28.27% | 68.11% | 0.90 | 5.27% | 7/9 | 0.00% | 23.77% | 0.04259 | 1 | not something good |
+| 3 | `p:catalyst_on+heat_up|short|cut_loser|h5m4|n1` | short | 10 | 23.35% | 16.07% | UEC | 5.23% | 80.00% | 28.27% | 68.11% | 0.90 | 5.27% | 7/9 | 0.00% | 23.77% | 0.04259 | 1 | not something good |
+| 4 | `p:catalyst_on+heat_up|short|cut_loser|h5m5|n1` | short | 10 | 23.35% | 16.07% | UEC | 5.23% | 80.00% | 28.27% | 68.11% | 0.90 | 5.42% | 7/10 | 0.00% | 23.77% | 0.04259 | 1 | not something good |
+| 5 | `p:catalyst_on+heat_up|short|list|h5m1|n1` | short | 10 | 23.35% | 16.07% | UEC | 5.23% | 80.00% | 28.27% | 68.11% | 0.90 | 5.42% | 7/10 | 0.00% | 23.77% | 0.04259 | 1 | not something good |
+| 6 | `p:catalyst_on+heat_up|short|list|h5m2|n1` | short | 10 | 23.35% | 16.07% | UEC | 5.23% | 80.00% | 28.27% | 68.11% | 0.90 | 5.42% | 7/10 | 0.00% | 23.77% | 0.04259 | 1 | not something good |
+| 7 | `p:catalyst_on+heat_up|short|list|h5m3|n1` | short | 10 | 23.35% | 16.07% | UEC | 5.23% | 80.00% | 28.27% | 68.11% | 0.90 | 5.42% | 7/10 | 0.00% | 23.77% | 0.04259 | 1 | not something good |
+| 8 | `p:catalyst_on+heat_up|short|list|h5m4|n1` | short | 10 | 23.35% | 16.07% | UEC | 5.23% | 80.00% | 28.27% | 68.11% | 0.90 | 5.42% | 7/10 | 0.00% | 23.77% | 0.04259 | 1 | not something good |
+| 9 | `p:catalyst_on+heat_up|short|list|h5m5|n1` | short | 10 | 23.35% | 16.07% | UEC | 5.23% | 80.00% | 28.27% | 68.11% | 0.90 | 5.42% | 7/10 | 0.00% | 23.77% | 0.04259 | 1 | not something good |
+| 10 | `p:catalyst_on+heat_up|short|time|h5m1|n1` | short | 10 | 23.35% | 16.07% | UEC | 5.23% | 80.00% | 28.27% | 68.11% | 0.90 | 5.42% | 7/10 | 0.00% | 23.77% | 0.04259 | 1 | not something good |
+| 11 | `p:catalyst_on+heat_up|short|time|h5m2|n1` | short | 10 | 23.35% | 16.07% | UEC | 5.23% | 80.00% | 28.27% | 68.11% | 0.90 | 5.42% | 7/10 | 0.00% | 23.77% | 0.04259 | 1 | not something good |
+| 12 | `p:catalyst_on+heat_up|short|time|h5m3|n1` | short | 10 | 23.35% | 16.07% | UEC | 5.23% | 80.00% | 28.27% | 68.11% | 0.90 | 5.42% | 7/10 | 0.00% | 23.77% | 0.04259 | 1 | not something good |
+| 13 | `p:catalyst_on+heat_up|short|time|h5m4|n1` | short | 10 | 23.35% | 16.07% | UEC | 5.23% | 80.00% | 28.27% | 68.11% | 0.90 | 5.42% | 7/10 | 0.00% | 23.77% | 0.04259 | 1 | not something good |
+| 14 | `p:catalyst_on+heat_up|short|time|h5m5|n1` | short | 10 | 23.35% | 16.07% | UEC | 5.23% | 80.00% | 28.27% | 68.11% | 0.90 | 5.42% | 7/10 | 0.00% | 23.77% | 0.04259 | 1 | not something good |
+| 15 | `p:catalyst_on+heat_up|short|trail|h5m5|n1` | short | 10 | 23.35% | 16.07% | UEC | 5.23% | 80.00% | 28.27% | 68.11% | 0.90 | 5.42% | 7/10 | 0.00% | 23.77% | 0.04259 | 1 | not something good |
+| 16 | `p:catalyst_on+heat_up|short|cut_loser|h4m2|n1` | short | 10 | 23.47% | 15.77% | IE | 5.73% | 66.67% | 29.95% | 76.04% | 0.90 | 4.02% | 6/9 | 0.00% | 23.92% | 0.04212 | 1 | not something good |
+| 17 | `p:catalyst_on+heat_up|short|cut_loser|h4m3|n1` | short | 10 | 23.47% | 15.77% | IE | 5.73% | 66.67% | 29.95% | 76.04% | 0.90 | 4.02% | 6/9 | 0.00% | 23.92% | 0.04212 | 1 | not something good |
+| 18 | `p:catalyst_on+heat_up|short|cut_loser|h4m4|n1` | short | 10 | 23.47% | 15.77% | IE | 5.73% | 66.67% | 29.95% | 76.04% | 0.90 | 4.02% | 6/9 | 0.00% | 23.92% | 0.04212 | 1 | not something good |
+| 19 | `p:catalyst_on+heat_up|short|list|h4m1|n1` | short | 10 | 23.47% | 15.77% | IE | 5.73% | 66.67% | 29.95% | 76.04% | 0.90 | 4.02% | 6/9 | 0.00% | 23.92% | 0.04212 | 1 | not something good |
+| 20 | `p:catalyst_on+heat_up|short|list|h4m2|n1` | short | 10 | 23.47% | 15.77% | IE | 5.73% | 66.67% | 29.95% | 76.04% | 0.90 | 4.02% | 6/9 | 0.00% | 23.92% | 0.04212 | 1 | not something good |
 
 ## Bars
 

@@ -901,6 +901,12 @@ def evaluate(scored: dict, ids: list[str]) -> list[dict]:
             "trades_per_day": (entries / n_check) if n_check else 0.0,
             "n_trades": len(trades),
             "from_0914": from14,
+            "win_days_0914": winning_days_from_0914(
+                sessions,
+                rets,
+                [int(scored["n_fills"][ri, di]) for di in range(len(sessions))],
+                [ri in scored["day_pnl"][di] for di in range(len(sessions))],
+            ),
             "under_3": (under / fills) if fills else None,
             "n_fills": fills,
             "raw_p": raw,
@@ -910,6 +916,21 @@ def evaluate(scored: dict, ids: list[str]) -> list[dict]:
             "lines": lines,
         })
     return rows
+
+
+def winning_days_from_0914(sessions, rets, fills, marked) -> str:
+    """W/T. W is traded sessions from 2026-09-14 on with a Futubull day return above 0."""
+    wins = 0
+    traded = 0
+    for session, ret, fill, mark in zip(sessions, rets, fills, marked):
+        if session < DESIGNED_AFTER_START or session > DESIGNED_AFTER_END:
+            continue
+        if int(fill) <= 0 and not mark and float(ret) == 0.0:
+            continue
+        traded += 1
+        if float(ret) > 0.0:
+            wins += 1
+    return f"{wins}/{traded}"
 
 
 def render_report(rows: list[dict], verdict: str) -> str:
@@ -943,6 +964,7 @@ def render_report(rows: list[dict], verdict: str) -> str:
             pct(row["top3"]),
             f"{row['trades_per_day']:.2f}",
             pct(row["from_0914"]),
+            row.get("win_days_0914", ""),
             pct(row["under_3"]),
             pct(row["full_15"]),
             f"{row['raw_p']:.4g}",
@@ -972,14 +994,25 @@ def render_report(rows: list[dict], verdict: str) -> str:
         "",
         f"Verdict: `{verdict}`",
         "",
+    ]
+    if ranked:
+        top = ranked[0]
+        header.append(
+            f"Frozen rank 1: `{top['id']}`. From 09-14: {pct(top['from_0914'])}. "
+            f"Winning days from 09-14: {top.get('win_days_0914', '')}."
+        )
+    else:
+        header.append("Frozen rank 1: none. Winning days from 09-14: none.")
+    header += [
+        "",
         "## Top 20",
         "",
-        "| rank | rule | side | check days | full compound | ex-best | best ticker | median trade | win rate | top-1 share | top-3 share | trades/day | from 09-14 | under $3 | 15bp compound | raw p | luck p | label |",
-        "| ---: | --- | --- | ---: | ---: | ---: | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | --- |",
+        "| rank | rule | side | check days | full compound | ex-best | best ticker | median trade | win rate | top-1 share | top-3 share | trades/day | from 09-14 | winning days from 09-14 | under $3 | 15bp compound | raw p | luck p | label |",
+        "| ---: | --- | --- | ---: | ---: | ---: | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- | ---: | ---: | ---: | ---: | --- |",
     ]
     body = [cell(row, rank) for rank, row in enumerate(ranked[:20], start=1)]
     if not body:
-        body = ["|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | no eligible rule |"]
+        body = ["|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | no eligible rule |"]
     return "\n".join(header + body) + "\n\n" + bar_audit_section()
 
 

@@ -27,7 +27,14 @@ from src.breadth_mine_v1b_protocol import (
     fingerprint_sha256,
     header_fingerprint,
 )
-from src.breadth_mine_v1b_score import Book, advance_book, assert_feature_dates, prior_end, want_exit
+from src.breadth_mine_v1b_score import (
+    Book,
+    advance_book,
+    assert_feature_dates,
+    prior_end,
+    want_exit,
+    winning_days_from_0914,
+)
 from src.lever_search_bars import SameDayBarError
 from src.paper_trade import load_fees
 
@@ -184,6 +191,21 @@ def test_unexplained_jump_fails_the_gate() -> None:
     assert not bad, f"{len(bad)} unexplained open/close jumps, including {names}"
 
 
+def test_winning_days_count_traded_sessions_only() -> None:
+    text = winning_days_from_0914(
+        ["2026-09-11", "2026-09-14", "2026-09-15", "2026-09-16", "2026-09-17", "2026-09-18"],
+        [0.2, 0.01, 0.02, -0.01, 0.0, 0.0],
+        [0, 1, 0, 0, 0, 1],
+        [False, False, True, True, False, False],
+    )
+    assert text == "2/4"
+    report = (RETURNS / "REPORT.md").read_text(encoding="utf-8")
+    assert "Winning days from 09-14: 7/9." in report
+    assert "winning days from 09-14" in report
+    rank1 = next(line for line in report.splitlines() if line.startswith("| 1 |"))
+    assert "5.27% | 7/9 |" in rank1
+
+
 def test_scored_record_when_present() -> None:
     report = RETURNS / "REPORT.md"
     manifest = RETURNS / "manifest.jsonl"
@@ -223,6 +245,7 @@ def main() -> None:
         test_reax_fresh_opens_are_one_scale,
         test_audit_matches_a_rescan,
         test_unexplained_jump_fails_the_gate,
+        test_winning_days_count_traded_sessions_only,
         test_scored_record_when_present,
     ]
     failed = 0
