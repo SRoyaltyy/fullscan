@@ -1,0 +1,14 @@
+{
+  "fingerprint_sha256": "c3d52476b6ea9c4ab248a4b8deaa52803a98aa0359397ce19dfa71e4d6e93987",
+  "passers": [
+    "union_hot_n4_holdup__w0__n6__c20",
+    "union_hot_n4_holdup__w0__n6__c25",
+    "union_hot_n4_holdup__w0__n6__cnone",
+    "union_hot_score_h3__w0__n8__c20",
+    "union_hot_score_h3__w0__n8__c25",
+    "union_hot_score_h3__w0__n8__cnone"
+  ],
+  "prereg_sha": "b7826097e91a4893a662c5b84cb6868bf786fb2c",
+  "study": "concentration_cap_v1",
+  "through": "2026-09-11"
+}

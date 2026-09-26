@@ -1,0 +1,22 @@
+name: concentration cap v2
+on:
+  pull_request:
+    paths:
+      - "research/concentration_cap_v2/**"
+      - ".github/workflows/concentration_cap_v2.yml"
+permissions:
+  contents: read
+jobs:
+  protocol:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install
+        run: pip install pandas
+      - name: Protocol lock
+        run: PYTHONHASHSEED=0 python3 research/concentration_cap_v2/test_protocol.py
+      - name: Engine lock
+        run: PYTHONHASHSEED=0 python3 research/concentration_cap_v2/test_engine.py
