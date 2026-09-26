@@ -63,9 +63,10 @@ WORKFLOWS = {
     345977999: "Excel Bot (cluster signals daily)",
     335072211: "Price store + checklist (1/3/4/5)",
     343530652: "Book Lookback (ranker time machine)",
+    350774807: "Factor strategy mine",
 }
 
-STEP_KEYS = ("commit", "push", "land", "safe", "sweep")
+STEP_KEYS = ("commit", "push", "land", "safe", "sweep", "publish")
 ANSI = re.compile(r"\x1b\[[0-9;]*m")
 LINE_TS = re.compile(
     r"^(\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d+)?Z)\s+(.*)$"
