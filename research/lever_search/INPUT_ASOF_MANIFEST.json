@@ -11,6 +11,15 @@
   "group3_deadline_depends_on": "research/audit/FULLSCAN_FILE_PROOF.csv",
   "deferred_retest": "If Group 1 or Group 2 is run later, add its tries to the tally then and re-test every Group 3 result against the enlarged tally. If both join, the enlarged tally is 9280 + 24595200 + 7257600 = 31862080.",
   "report_under_3": "Report each recipe at Futubull fees and at flat 15bp, and the share of fills with fill price strictly under $3. No price filter.",
+  "append_only": {
+    "rule": "APPEND-ONLY FOREVER",
+    "returns_dir": "research/lever_search/returns/factor_mine_seq",
+    "per_day_file": "{session}.json",
+    "manifest": "research/lever_search/returns/factor_mine_seq/manifest.jsonl",
+    "ci": ".github/workflows/lever_search_append_only.yml",
+    "input_pin": "Each manifest line pins that day's input snapshots by git blob sha.",
+    "new_study": "If inputs, code, or recipes change, that is a NEW study under a new name. Its tries are added to the tally. factor_mine_seq stays frozen."
+  },
   "group1_n": 24595200,
   "group2_n": 7257600,
   "group3_n": 110,

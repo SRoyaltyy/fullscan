@@ -274,6 +274,10 @@ def test_tally_lines_stay_in_prereg() -> None:
     assert "DEFERRED" in text
     assert "23:00 HKT" in text
     assert "share of trades in names under $3" in text
+    assert "APPEND-ONLY FOREVER" in text
+    assert "manifest.jsonl" in text
+    assert "blob sha" in text
+    assert "NEW study" in text
     assert "FULLSCAN_FILE_PROOF.csv" in text
     assert "factor_mine_seq" in text
     assert "24,595,200" in text
@@ -441,6 +445,8 @@ def test_initial_inputs_and_hash_guard() -> None:
     assert manifest["groups_1_and_2"] == "DEFERRED"
     assert manifest["group3_deadline"] == "23:00 HKT Saturday 2026-09-26"
     assert "under $3" in manifest["report_under_3"]
+    assert manifest["append_only"]["rule"] == "APPEND-ONLY FOREVER"
+    assert manifest["append_only"]["manifest"].endswith("manifest.jsonl")
     assert manifest["group3_n"] == 110
     assert manifest["fullscan_file_proof"]["path"].endswith("FULLSCAN_FILE_PROOF.csv")
     assert manifest["group1_n"] == GROUP1_N
