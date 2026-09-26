@@ -1,4 +1,4 @@
-"""Research-only forward book for two frozen Factor Mine recipes.
+"""Research-only forward book for frozen Factor Mine recipes.
 
 Each sleeve starts on 2026-09-28 with its own $10,000. Inputs are the
 earliest committed ``data/factor_mine/send_inputs/<date>.json``. The
@@ -42,6 +42,14 @@ PAIRS = (
     ("fwd_union_hot_n4_h1", "union_hot_n4_h1"),
     ("fwd_union_hot_score_h3", "union_hot_score_h3"),
 )
+# PR #370 lock. protocol.py and PREREG.md are unchanged from this commit
+# through the PR head 0f323096993747fc55a4d821c9158fab4ad9f920.
+V4_COMMIT = "7da63e4f6cf4214b072d462cec04feddaa60147f"
+V4_SPEC_SHA256 = "0503a5a549a66093754c9102eb430d01bc035687b08bca4f04d699e3a7daeca7"
+HOLDUP_S = 0.0
+HOLDUP_SESS = 2
+_V4_ALARM = {"alarm": True}
+_V4_NONEWS = {"alarm": True, "news": "bad"}
 
 
 class ForwardError(Exception):
@@ -199,6 +207,68 @@ def frozen_recipes() -> list[dict]:
     return out
 
 
+def _v4_part(name, *, rank="hot_score", top_n=8, hold=3, sell="list",
+             s_boost="none", require=None, forbid=None, exit_when=None,
+             earn_news=False, skip_first=False, base=False, already_picked=False):
+    """Same part row as factor_mine_recipe_search_v4.protocol._part."""
+    return {
+        "already_picked": already_picked,
+        "base": base,
+        "earn_news": earn_news,
+        "exit_when": dict(exit_when or {}),
+        "forbid": dict(forbid or _V4_ALARM),
+        "hold": hold,
+        "name": name,
+        "rank": rank,
+        "require": dict(require or {}),
+        "s_boost": s_boost,
+        "sell": sell,
+        "side": "long",
+        "skip_first": skip_first,
+        "top_n": top_n,
+        "universe": "union",
+    }
+
+
+def _with_keep_held_fingerprint(row: dict) -> dict:
+    """Fingerprint covers the frozen candidate plus fill_model keep-held."""
+    body = dict(row)
+    body["fill_model"] = FILL_MODEL
+    body["v4_commit"] = V4_COMMIT
+    body["v4_spec_sha256"] = V4_SPEC_SHA256
+    body["fingerprint_sha256"] = sha256_text(canon(body))
+    return body
+
+
+def v4_carry_recipes() -> list[dict]:
+    """Three not-rejected weather-off carry-forwards from PR #370.
+
+    Bodies are the locked ``candidates()`` rows: the part, ``weather``
+    false, and ``id`` ``name__w0``. ``already_picked`` on
+    ``union_hot_n4_h1`` is the frozen label, not a gate.
+    """
+    parts = (
+        _v4_part("union_hot_n4_h1", top_n=4, hold=1, already_picked=True),
+        _v4_part("union_hot_n4_holdup", top_n=4, hold=1, s_boost="holdup"),
+        _v4_part("union_hot_n4_h1_nonews", top_n=4, hold=1, forbid=_V4_NONEWS),
+    )
+    out = []
+    for part in parts:
+        row = dict(part)
+        row["weather"] = False
+        row["id"] = f"{part['name']}__w0"
+        out.append(_with_keep_held_fingerprint(row))
+    return out
+
+
+def recipe_key(recipe: dict) -> str:
+    """Sleeve name. v4 rows are keyed by the frozen candidate id."""
+    ident = recipe.get("id")
+    if ident:
+        return str(ident)
+    return str(recipe["name"])
+
+
 def spec_body() -> dict:
     return {
         "baselines": {
@@ -219,15 +289,20 @@ def spec_body() -> dict:
         "hard_red_max": HARD_RED_MAX,
         "hard_red_rule": (
             "When the frozen send file carries s and s is at or below "
-            "hard_red_max, new buys sit. A missing s does not sit. "
+            "hard_red_max, new buys sit. A recipe with weather false does not sit. "
+            "A missing s does not sit. "
             "List-drop sells still happen. A kept lot is not liquidated."
         ),
         "inputs": "earliest committed data/factor_mine/send_inputs/<date>.json",
         "mark_px": "session close",
-        "min_hold": "recipe hold in locked sessions; the entry session counts as zero",
+        "min_hold": (
+            "recipe hold in locked sessions; the entry session counts as zero. "
+            "When s_boost is holdup, s is present, and s is above 0, "
+            "the new lot's min-hold is 2."
+        ),
         "random4_draws": RANDOM_DRAWS,
         "random4_seed": RANDOM_SEED,
-        "recipes": frozen_recipes(),
+        "recipes": frozen_recipes() + v4_carry_recipes(),
         "renewal": (
             "A held name that is still selected that morning stays. "
             "The book records no sell and no buy for that name and charges no fee."
@@ -236,6 +311,12 @@ def spec_body() -> dict:
         "shares": "whole",
         "size": "leftover",
         "study": STUDY_NAME,
+        "v4_carry": {
+            "commit": V4_COMMIT,
+            "ids": [recipe["id"] for recipe in v4_carry_recipes()],
+            "spec_sha256": V4_SPEC_SHA256,
+            "weather": False,
+        },
         "v4_hook": (
             "hooks/v4_winners.json may only gain winners. first_session is "
             "the first locked session after the fingerprint commit. Earlier "
@@ -264,23 +345,46 @@ def load_spec(root: Path | None = None) -> dict:
 
 
 def assert_spec_matches_group3(root: Path | None = None) -> dict:
-    """The committed spec is the Group 3 bodies plus the keep-held book."""
+    """Group 3 copies stay exact. The three v4 carry-forwards stay pinned."""
     disk = load_spec(root)
     fresh = build_spec_document()
     if disk != fresh:
-        raise ForwardError("committed recipe spec drifted from build_group3_recipes()")
+        raise ForwardError("committed recipe spec drifted from the frozen recipes")
     found = group3_by_name()
-    for rec in disk["recipes"]:
+    expected = dict(PAIRS)
+    group3 = [rec for rec in disk["recipes"] if rec["name"] in expected]
+    if [rec["name"] for rec in group3] != [name for name, _old in PAIRS]:
+        raise ForwardError("group3 recipe order drift")
+    for rec in group3:
+        if expected.get(rec["name"]) != rec["source_name"]:
+            raise ForwardError("recipe rename drift")
         source = found[rec["source_name"]]
         for key, value in source.items():
             if key == "name":
                 continue
             if rec.get(key) != value:
                 raise ForwardError(f"recipe gate drift {rec['name']} {key}")
-    expected = dict(PAIRS)
-    for rec in disk["recipes"]:
-        if expected.get(rec["name"]) != rec["source_name"]:
-            raise ForwardError("recipe rename drift")
+        extra = set(rec) - set(source) - {"source_name"}
+        if extra:
+            raise ForwardError(f"group3 recipe gained fields {rec['name']} {sorted(extra)}")
+    carry = [rec for rec in disk["recipes"] if rec.get("id")]
+    pinned = v4_carry_recipes()
+    if [rec["id"] for rec in carry] != [rec["id"] for rec in pinned]:
+        raise ForwardError("v4 carry-forward drift")
+    if [recipe_key(rec) for rec in disk["recipes"]] != [
+        recipe_key(rec) for rec in frozen_recipes()
+    ] + [rec["id"] for rec in pinned]:
+        raise ForwardError("recipe order drift")
+    for rec, row in zip(carry, pinned):
+        if rec != row:
+            raise ForwardError(f"v4 recipe body drift {rec.get('id')}")
+        if rec.get("fill_model") != FILL_MODEL or rec.get("weather") is not False:
+            raise ForwardError(f"v4 recipe is not keep-held weather-off {rec.get('id')}")
+        covered = {key: value for key, value in rec.items() if key != "fingerprint_sha256"}
+        if sha256_text(canon(covered)) != rec.get("fingerprint_sha256"):
+            raise ForwardError(f"v4 recipe fingerprint drift {rec.get('id')}")
+        if covered.get("v4_commit") != V4_COMMIT or covered.get("v4_spec_sha256") != V4_SPEC_SHA256:
+            raise ForwardError(f"v4 citation drift {rec.get('id')}")
     return disk
 
 
@@ -310,6 +414,23 @@ def _state_from(cash_f: float, cash_15: float, pos: dict[str, dict],
     }
 
 
+def _sits_new_buys(recipe: dict, s: float | None) -> bool:
+    """Weather off buys on a hard-red morning. A missing weather gate sits."""
+    if "weather" in recipe and not recipe["weather"]:
+        return False
+    return s is not None and float(s) <= float(HARD_RED_MAX)
+
+
+def _entry_min_hold(recipe: dict, s: float | None, sit: bool) -> int:
+    """Holdup sets a new lot's min-hold to 2 when S is present and above 0."""
+    base = int(recipe["hold"])
+    boost = recipe.get("s_boost") or "none"
+    holdup = boost == "holdup" and s is not None and float(s) > HOLDUP_S and not sit
+    if holdup:
+        return max(base, HOLDUP_SESS)
+    return base
+
+
 def step_day(recipe: dict, state: dict, session: str, sessions: list[str],
              selected: list[str], rows_by_ticker: dict[str, dict],
              opens: dict[str, float], closes: dict[str, float], fees: dict,
@@ -319,11 +440,13 @@ def step_day(recipe: dict, state: dict, session: str, sessions: list[str],
         raise ForwardError("session missing from the locked calendar")
     side = recipe.get("side") or "long"
     min_hold = int(recipe["hold"])
+    sell_mode = recipe["sell"] if "sell" in recipe else SELL_MODE
     pos = _positions(state)
     index = {day: i for i, day in enumerate(sessions)}
     here = index[session]
     selected_set = set(selected)
-    hard_red = s is not None and float(s) <= float(HARD_RED_MAX)
+    hard_red = _sits_new_buys(recipe, s)
+    entry_min = _entry_min_hold(recipe, s, hard_red)
     sells: list[dict] = []
     buys: list[dict] = []
     renewals: list[str] = []
@@ -352,9 +475,10 @@ def step_day(recipe: dict, state: dict, session: str, sessions: list[str],
             lot["peak_px"] = round(max(float(lot.get("peak_px") or entry_px), px), 6)
         else:
             lot["peak_px"] = round(min(float(lot.get("peak_px") or entry_px), px), 6)
+        lot_min = int(lot.get("min_hold") or min_hold)
         do_sell, kind = lot_should_sell(
-            lot, held=held, min_hold=int(lot.get("min_hold") or min_hold),
-            early=early, dropped=dropped, sell_mode=SELL_MODE, px=px, side=side,
+            lot, held=held, min_hold=lot_min,
+            early=early, dropped=dropped, sell_mode=sell_mode, px=px, side=side,
             take_pct=None, stop_pct=None,
         )
         if not do_sell:
@@ -363,7 +487,7 @@ def step_day(recipe: dict, state: dict, session: str, sessions: list[str],
             elif dropped:
                 skips.append({
                     "kind": "min_hold", "ticker": ticker,
-                    "reason": f"dropped but min-hold {held}/{min_hold}",
+                    "reason": f"dropped but min-hold {held}/{lot_min}",
                 })
             continue
         shares = int(lot["shares"])
@@ -457,7 +581,7 @@ def step_day(recipe: dict, state: dict, session: str, sessions: list[str],
                 "fee_in_15": fee_b,
                 "fee_in_f": fee_f,
                 "last_px": round(px, 6),
-                "min_hold": min_hold,
+                "min_hold": entry_min,
                 "peak_px": round(px, 6),
                 "prev_mark": round(px, 6),
                 "shares": shares,
@@ -619,12 +743,12 @@ def validate_winner(winner: dict, *, last_session: str | None,
 def active_recipes(session: str, root: Path | None, spec: dict | None = None) -> list[dict]:
     spec = spec or load_spec(root)
     recipes = list(spec["recipes"])
-    known = {rec["name"] for rec in recipes}
+    known = {recipe_key(rec) for rec in recipes}
     for winner in load_winners(root):
         if str(winner.get("first_session") or "") > session:
             continue
         validate_winner(winner, last_session=None)
-        if winner["name"] in known:
+        if recipe_key(winner["recipe"]) in known or winner["name"] in known:
             raise ForwardError("duplicate recipe name")
         prior = [
             day for day in _sessions_of("picks", root)
@@ -635,12 +759,25 @@ def active_recipes(session: str, root: Path | None, spec: dict | None = None) ->
             if winner["name"] not in (picks.get("recipes") or {}):
                 raise ForwardError(f"{winner['name']} would backfill {day}")
         recipes.append(winner["recipe"])
-        known.add(winner["name"])
+        known.add(recipe_key(winner["recipe"]))
     return recipes
 
 
+def _pool(rows: list[dict], recipe: dict) -> list[dict]:
+    """skip_first and earn_news, as the v4 book applies them before pick_day."""
+    pool = rows
+    if recipe.get("skip_first"):
+        pool = [row for row in pool if int(row.get("days_on_list") or 1) > 1]
+    if recipe.get("earn_news"):
+        pool = [
+            row for row in pool
+            if row.get("erd_earn_react") or (row.get("boxes") or {}).get("news") == "good"
+        ]
+    return pool
+
+
 def _selected(rows: list[dict], recipe: dict) -> tuple[list[str], dict[str, dict]]:
-    chosen = pick_day(rows, recipe)
+    chosen = pick_day(_pool(rows, recipe), recipe)
     names = []
     by_ticker = {}
     for row in rows:
@@ -687,7 +824,7 @@ def build_picks(session: str, loaded: dict | None, root: Path | None,
         universe = sorted(seen)
     for recipe in recipes:
         names, _by = _selected(rows, recipe) if not sat else ([], {})
-        out_recipes[recipe["name"]] = {
+        out_recipes[recipe_key(recipe)] = {
             "picks": names,
             "source_name": recipe.get("source_name") or "",
         }
@@ -789,7 +926,7 @@ def build_fills(session: str, picks: dict, bars: dict, fees: dict,
     opens, closes = _bars_map(bars)
     if "IWM" not in opens or "IWM" not in closes:
         raise ForwardError("IWM bar missing")
-    recipes = {rec["name"]: rec for rec in active_recipes(session, root, spec)}
+    recipes = {recipe_key(rec): rec for rec in active_recipes(session, root, spec)}
     if set(recipes) != set((picks.get("recipes") or {})):
         raise ForwardError("picks recipe set does not match the active book")
     rows = []
@@ -1087,7 +1224,7 @@ def _ex_best(days: list[dict]) -> float | None:
 def collect_report(root: Path | None = None) -> dict:
     spec = load_spec(root)
     days = _sessions_of("fills", root)
-    sleeves: dict[str, list[dict]] = {rec["name"]: [] for rec in spec["recipes"]}
+    sleeves: dict[str, list[dict]] = {recipe_key(rec): [] for rec in spec["recipes"]}
     for winner in load_winners(root):
         sleeves.setdefault(winner["name"], [])
     iwm_rets = []

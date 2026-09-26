@@ -10,6 +10,8 @@ from src.factor_mine_book import HARD_RED, lot_should_sell
 from src.forward_shadow_v1 import (
     FILL_MODEL,
     FORWARD_START,
+    V4_COMMIT,
+    V4_SPEC_SHA256,
     ForwardError,
     assert_spec_matches_group3,
     build_spec_document,
@@ -18,8 +20,11 @@ from src.forward_shadow_v1 import (
     initial_state,
     load_fees,
     load_spec,
+    recipe_key,
+    _selected,
     record_fills,
     record_picks,
+    sha256_text,
     step_day,
     validate_winner,
 )
@@ -105,16 +110,109 @@ def test_spec_is_group3_keep_held() -> None:
     assert doc["sell"] == "list"
     assert doc["forward_start"] == FORWARD_START
     assert doc["hard_red_max"] == HARD_RED
-    names = [rec["name"] for rec in doc["recipes"]]
-    assert names == ["fwd_union_hot_n4_h1", "fwd_union_hot_score_h3"]
-    by = {rec["name"]: rec for rec in doc["recipes"]}
+    names = [recipe_key(rec) for rec in doc["recipes"]]
+    assert names == [
+        "fwd_union_hot_n4_h1",
+        "fwd_union_hot_score_h3",
+        "union_hot_n4_h1__w0",
+        "union_hot_n4_holdup__w0",
+        "union_hot_n4_h1_nonews__w0",
+    ]
+    by = {recipe_key(rec): rec for rec in doc["recipes"]}
     assert by["fwd_union_hot_n4_h1"]["top_n"] == 4
     assert by["fwd_union_hot_n4_h1"]["hold"] == 1
     assert by["fwd_union_hot_n4_h1"]["rank"] == "hot_score"
     assert by["fwd_union_hot_score_h3"]["top_n"] == 8
     assert by["fwd_union_hot_score_h3"]["hold"] == 3
     assert by["fwd_union_hot_n4_h1"]["forbid"] == {"alarm": True}
+    assert "fill_model" not in by["fwd_union_hot_n4_h1"]
+    assert "fill_model" not in by["fwd_union_hot_score_h3"]
+    assert "weather" not in by["fwd_union_hot_n4_h1"]
     assert doc["spec_sha256"] == load_spec(None)["spec_sha256"]
+    assert doc["v4_carry"]["commit"] == V4_COMMIT
+    assert doc["v4_carry"]["spec_sha256"] == V4_SPEC_SHA256
+    prereg = (ROOT / "research/forward_shadow_v1/PREREG.md").read_text(encoding="utf-8")
+    assert doc["spec_sha256"] in prereg
+    assert V4_COMMIT in prereg
+    assert V4_SPEC_SHA256 in prereg
+    marker = "<!-- BEGIN COVERED -->\n"
+    covered = prereg[prereg.find(marker) + len(marker):].encode("utf-8")
+    assert f"fingerprint_sha256: {sha256_text(covered.decode('utf-8'))}" in prereg
+    for name in names:
+        assert f"`{name}`" in prereg
+
+
+def test_v4_carry_forwards_are_frozen_weather_off() -> None:
+    doc = build_spec_document()
+    by = {recipe_key(rec): rec for rec in doc["recipes"]}
+    hot = by["union_hot_n4_h1__w0"]
+    holdup = by["union_hot_n4_holdup__w0"]
+    nonews = by["union_hot_n4_h1_nonews__w0"]
+    for rec in (hot, holdup, nonews):
+        covered = {key: value for key, value in rec.items() if key != "fingerprint_sha256"}
+        assert covered["fill_model"] == "keep-held"
+        assert sha256_text(canon(covered)) == rec["fingerprint_sha256"]
+        assert rec["weather"] is False
+        assert rec["v4_commit"] == V4_COMMIT
+        assert rec["v4_spec_sha256"] == V4_SPEC_SHA256
+        assert rec["sell"] == "list"
+        assert rec["rank"] == "hot_score"
+        assert rec["top_n"] == 4
+        assert rec["hold"] == 1
+        assert rec["universe"] == "union"
+        assert rec["side"] == "long"
+    assert hot["name"] == "union_hot_n4_h1"
+    assert hot["already_picked"] is True
+    assert hot["s_boost"] == "none"
+    assert hot["forbid"] == {"alarm": True}
+    assert holdup["name"] == "union_hot_n4_holdup"
+    assert holdup["s_boost"] == "holdup"
+    assert holdup["already_picked"] is False
+    assert nonews["forbid"] == {"alarm": True, "news": "bad"}
+    assert nonews["s_boost"] == "none"
+    fees = load_fees()
+    kept = by["fwd_union_hot_n4_h1"]
+    state, sat = step_day(
+        kept, initial_state(), "2026-09-28", ["2026-09-28"], ["AAA", "BBB"],
+        {"AAA": _row("AAA", 2), "BBB": _row("BBB", 1)},
+        {"AAA": 10.0, "BBB": 8.0}, {"AAA": 10.0, "BBB": 8.0}, fees, s=-3.0,
+    )
+    assert sat["buys"] == []
+    assert sat["hard_red"] is True
+    _open, bought = step_day(
+        hot, initial_state(), "2026-09-28", ["2026-09-28"], ["AAA", "BBB"],
+        {"AAA": _row("AAA", 2), "BBB": _row("BBB", 1)},
+        {"AAA": 10.0, "BBB": 8.0}, {"AAA": 10.0, "BBB": 8.0}, fees, s=-3.0,
+    )
+    assert bought["hard_red"] is False
+    assert [row["ticker"] for row in bought["buys"]] == ["AAA", "BBB"]
+    assert bought["fees_futubull"] > 0
+    held, opened = step_day(
+        holdup, initial_state(), "2026-09-28", ["2026-09-28"], ["AAA"],
+        {"AAA": _row("AAA", 2)}, {"AAA": 10.0}, {"AAA": 10.0}, fees, s=2.25,
+    )
+    assert held["positions"][0]["min_hold"] == 2
+    _mid, waiting = step_day(
+        holdup, held, "2026-09-29", ["2026-09-28", "2026-09-29"], [],
+        {}, {"AAA": 12.0}, {"AAA": 12.0}, fees, s=-0.9,
+    )
+    assert waiting["sells"] == []
+    assert waiting["skips"][0]["kind"] == "min_hold"
+    _done, sold = step_day(
+        holdup, _mid, "2026-09-30", ["2026-09-28", "2026-09-29", "2026-09-30"], [],
+        {}, {"AAA": 11.0}, {"AAA": 11.0}, fees, s=1.0,
+    )
+    assert [row["ticker"] for row in sold["sells"]] == ["AAA"]
+    bad = _row("BAD", 9.0)
+    bad["boxes"] = {"news": "bad"}
+    ok = _row("OK", 1.0)
+    ok["boxes"] = {"news": "good"}
+    alarm_names, _by = _selected([bad, ok], hot)
+    quiet_names, _by2 = _selected([bad, ok], nonews)
+    assert alarm_names[0] == "BAD"
+    assert "BAD" not in quiet_names
+    assert quiet_names == ["OK"]
+    assert state["positions"] == []
 
 
 def test_renewed_held_name_has_zero_trades_and_zero_fees() -> None:
@@ -378,6 +476,7 @@ def test_paper_free_surface() -> None:
 
 def main() -> None:
     test_spec_is_group3_keep_held()
+    test_v4_carry_forwards_are_frozen_weather_off()
     test_renewed_held_name_has_zero_trades_and_zero_fees()
     test_list_drop_sells_after_min_hold_and_keeps_before_it()
     test_hard_red_sits_new_buys_and_keeps_the_lot()

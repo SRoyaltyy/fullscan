@@ -11,10 +11,10 @@
   "flat_15bp_side": 7.5e-05,
   "forward_start": "2026-09-28",
   "hard_red_max": -3.0,
-  "hard_red_rule": "When the frozen send file carries s and s is at or below hard_red_max, new buys sit. A missing s does not sit. List-drop sells still happen. A kept lot is not liquidated.",
+  "hard_red_rule": "When the frozen send file carries s and s is at or below hard_red_max, new buys sit. A recipe with weather false does not sit. A missing s does not sit. List-drop sells still happen. A kept lot is not liquidated.",
   "inputs": "earliest committed data/factor_mine/send_inputs/<date>.json",
   "mark_px": "session close",
-  "min_hold": "recipe hold in locked sessions; the entry session counts as zero",
+  "min_hold": "recipe hold in locked sessions; the entry session counts as zero. When s_boost is holdup, s is present, and s is above 0, the new lot's min-hold is 2.",
   "random4_draws": 1000,
   "random4_seed": 20260813,
   "recipes": [
@@ -49,13 +49,99 @@
       "top_n": 8,
       "trades_at_open": true,
       "universe": "union"
+    },
+    {
+      "already_picked": true,
+      "base": false,
+      "earn_news": false,
+      "exit_when": {},
+      "fill_model": "keep-held",
+      "fingerprint_sha256": "d21da83a406481c1d4dcd8728710e223400a3630c584d6ad3164d7a102e3dea5",
+      "forbid": {
+        "alarm": true
+      },
+      "hold": 1,
+      "id": "union_hot_n4_h1__w0",
+      "name": "union_hot_n4_h1",
+      "rank": "hot_score",
+      "require": {},
+      "s_boost": "none",
+      "sell": "list",
+      "side": "long",
+      "skip_first": false,
+      "top_n": 4,
+      "universe": "union",
+      "v4_commit": "7da63e4f6cf4214b072d462cec04feddaa60147f",
+      "v4_spec_sha256": "0503a5a549a66093754c9102eb430d01bc035687b08bca4f04d699e3a7daeca7",
+      "weather": false
+    },
+    {
+      "already_picked": false,
+      "base": false,
+      "earn_news": false,
+      "exit_when": {},
+      "fill_model": "keep-held",
+      "fingerprint_sha256": "4b4d685433735f0cc38c7d9c5d29b029177e7951c411fc3fb9f4a42788235e70",
+      "forbid": {
+        "alarm": true
+      },
+      "hold": 1,
+      "id": "union_hot_n4_holdup__w0",
+      "name": "union_hot_n4_holdup",
+      "rank": "hot_score",
+      "require": {},
+      "s_boost": "holdup",
+      "sell": "list",
+      "side": "long",
+      "skip_first": false,
+      "top_n": 4,
+      "universe": "union",
+      "v4_commit": "7da63e4f6cf4214b072d462cec04feddaa60147f",
+      "v4_spec_sha256": "0503a5a549a66093754c9102eb430d01bc035687b08bca4f04d699e3a7daeca7",
+      "weather": false
+    },
+    {
+      "already_picked": false,
+      "base": false,
+      "earn_news": false,
+      "exit_when": {},
+      "fill_model": "keep-held",
+      "fingerprint_sha256": "4199e1bf84b51b32e4e628fc2ed285cd727c271f5c6e6cdf9169bdff454797dc",
+      "forbid": {
+        "alarm": true,
+        "news": "bad"
+      },
+      "hold": 1,
+      "id": "union_hot_n4_h1_nonews__w0",
+      "name": "union_hot_n4_h1_nonews",
+      "rank": "hot_score",
+      "require": {},
+      "s_boost": "none",
+      "sell": "list",
+      "side": "long",
+      "skip_first": false,
+      "top_n": 4,
+      "universe": "union",
+      "v4_commit": "7da63e4f6cf4214b072d462cec04feddaa60147f",
+      "v4_spec_sha256": "0503a5a549a66093754c9102eb430d01bc035687b08bca4f04d699e3a7daeca7",
+      "weather": false
     }
   ],
   "renewal": "A held name that is still selected that morning stays. The book records no sell and no buy for that name and charges no fee.",
   "sell": "list",
   "shares": "whole",
   "size": "leftover",
-  "spec_sha256": "5a7698b0dc9a04ef2a0da0866ae192d2cd97a2450ea8ff19bd8cf0bbb63bf8df",
+  "spec_sha256": "ea4449212a2727af38a0dab8cdb716432b6bfcc878e2476159bb295785ab4649",
   "study": "forward_shadow_v1",
+  "v4_carry": {
+    "commit": "7da63e4f6cf4214b072d462cec04feddaa60147f",
+    "ids": [
+      "union_hot_n4_h1__w0",
+      "union_hot_n4_holdup__w0",
+      "union_hot_n4_h1_nonews__w0"
+    ],
+    "spec_sha256": "0503a5a549a66093754c9102eb430d01bc035687b08bca4f04d699e3a7daeca7",
+    "weather": false
+  },
   "v4_hook": "hooks/v4_winners.json may only gain winners. first_session is the first locked session after the fingerprint commit. Earlier sessions stay as written."
 }
