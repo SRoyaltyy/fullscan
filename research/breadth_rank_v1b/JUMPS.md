@@ -75,3 +75,46 @@ Kept prices are the `breadth_rank_v1` snapshot copied to `research/breadth_rank_
 | ticker | date | ratio | resolution |
 | --- | --- | --- | --- |
 | YAAS | 2026-07-30 | 5.202703 | Not one of the 57 unexplained v1b jumps. breadth_rank_v1 already dropped it: open/previous-close 5.202703 on 2026-07-30 is within 25% of Yahoo split share factor 0.2 (price factor 5). The old snapshot removed it to keep one scale. Not restored and not rescaled. |
+
+## Close/open legs (the other 36 of the 93)
+
+The jump gate on `breadth_mine_v1b` also flags `close/open` on the same bar. These 36 were not in the table above. Each was re-pulled on 2026-09-26. None is explained by a Yahoo split on that date. They are dropped. Eight of the names (ADBT, FIRY, JLHL, LGCL, NXTT, SMJF, XHLD, YXT) are still inside this study's pinned parquet, which is not rewritten. They are removed in `breadth_rank_v1c`. The full 93-row table is `research/breadth_rank_v1c/JUMPS.md`.
+
+| ticker | date | leg | ratio | resolution |
+| --- | --- | --- | --- | --- |
+| ADBT | 2026-09-03 | close_over_open | 0.223684 | Re-pull matches the old print (ratio 0.223684). Yahoo splits (none) do not explain this close_over_open within 25%. Not patched. Dropped. |
+| AKAN | 2026-04-22 | close_over_open | 3.141538 | Re-pull matches the old print (ratio 3.141538). Yahoo splits (2026-04-13 0.222) do not explain this close_over_open within 25%. Not patched. Dropped. |
+| AMIX | 2026-08-04 | close_over_open | 3.624535 | Re-pull matches the old print (ratio 3.624535). Yahoo splits (2026-06-24 0.047619048) do not explain this close_over_open within 25%. Not patched. Dropped. |
+| CAST | 2026-03-10 | close_over_open | 0.276667 | Re-pull matches the old print (ratio 0.276667). Yahoo splits (none) do not explain this close_over_open within 25%. Not patched. Dropped. |
+| EJH | 2026-03-09 | close_over_open | 0.278889 | Re-pull matches the old print (ratio 0.278889). Yahoo splits (2026-03-30 0.04) do not explain this close_over_open within 25%. Not patched. Dropped. |
+| FEED | 2026-09-15 | close_over_open | 0.308383 | Re-pull matches the old print (ratio 0.308383). Yahoo splits (2026-09-01 0.083333333) do not explain this close_over_open within 25%. Not patched. Dropped. |
+| FIRY | 2026-04-23 | close_over_open | 3.439227 | Re-pull matches the old print (ratio 3.439227). Yahoo splits (none) do not explain this close_over_open within 25%. Not patched. Dropped. |
+| HAO | 2026-07-10 | close_over_open | 0.220245 | Re-pull matches the old print (ratio 0.220245). Yahoo splits (2026-05-21 0.0078125, 2026-08-14 0.05) do not explain this close_over_open within 25%. Not patched. Dropped. |
+| HKIT | 2026-03-23 | close_over_open | 0.097436 | Re-pull matches the old print (ratio 0.097436). Yahoo splits (2026-04-06 0.02, 2026-05-29 0.33333333, 2026-07-06 0.04) do not explain this close_over_open within 25%. Not patched. Dropped. |
+| ILLR | 2026-03-20 | close_over_open | 150.000003 | Re-pull matches the old print (ratio 150.000003). Yahoo splits (2026-06-23 0.1) do not explain this close_over_open within 25%. Not patched. Dropped. |
+| INHD | 2026-06-08 | close_over_open | 35.576578 | Re-pull matches the old print (ratio 35.576578). Yahoo splits (2026-05-04 0.05) do not explain this close_over_open within 25%. Not patched. Dropped. |
+| JLHL | 2026-07-09 | close_over_open | 3.428954 | Re-pull matches the old print (ratio 3.428954). Yahoo splits (none) do not explain this close_over_open within 25%. Not patched. Dropped. |
+| JZ | 2026-06-01 | close_over_open | 3.202479 | Re-pull matches the old print (ratio 3.202479). Yahoo splits (2026-07-06 0.033333333) do not explain this close_over_open within 25%. Not patched. Dropped. |
+| LBGJ | 2026-07-20 | close_over_open | 0.102778 | Re-pull matches the old print (ratio 0.102778). Yahoo splits (2026-03-27 0.01, 2026-08-03 0.005) do not explain this close_over_open within 25%. Not patched. Dropped. |
+| LGCL | 2026-08-18 | close_over_open | 0.210435 | Re-pull matches the old print (ratio 0.210435). Yahoo splits (2026-09-01 0.008) do not explain this close_over_open within 25%. Not patched. Dropped. |
+| LHSW | 2026-09-08 | close_over_open | 0.293333 | Re-pull matches the old print (ratio 0.293333). Yahoo splits (2026-06-22 0.0625) do not explain this close_over_open within 25%. Not patched. Dropped. |
+| LZMH | 2026-04-17 | close_over_open | 0.141463 | Re-pull matches the old print (ratio 0.141463). Yahoo splits (2026-05-22 0.05) do not explain this close_over_open within 25%. Not patched. Dropped. |
+| MSGY | 2026-09-25 | close_over_open | 3.788732 | Re-pull matches the old print (ratio 3.788732). Yahoo splits (2026-08-11 0.125) do not explain this close_over_open within 25%. Not patched. Dropped. |
+| NXTT | 2026-08-04 | close_over_open | 0.302632 | Re-pull matches the old print (ratio 0.302632). Yahoo splits (2026-08-10 0.01) do not explain this close_over_open within 25%. Not patched. Dropped. |
+| OMH | 2026-07-21 | close_over_open | 3.224 | Re-pull matches the old print (ratio 3.224000). Yahoo splits (2026-08-31 0.02) do not explain this close_over_open within 25%. Not patched. Dropped. |
+| ONCO | 2026-03-27 | close_over_open | 0.332192 | Re-pull matches the old print (ratio 0.332192). Yahoo splits (2026-03-25 0.2, 2026-05-21 0.1) do not explain this close_over_open within 25%. Not patched. Dropped. |
+| PAAI | 2026-09-17 | close_over_open | 3.553191 | Re-pull matches the old print (ratio 3.553191). Yahoo splits (none) do not explain this close_over_open within 25%. Not patched. Dropped. |
+| PFSA | 2026-08-18 | close_over_open | 3.115646 | Re-pull matches the old print (ratio 3.115646). Yahoo splits (2026-07-07 0.04, 2026-08-17 0.25) do not explain this close_over_open within 25%. Not patched. Dropped. |
+| PLAG | 2026-08-11 | close_over_open | 5.429906 | Re-pull matches the old print (ratio 5.429906). Yahoo splits (none) do not explain this close_over_open within 25%. Not patched. Dropped. |
+| QH | 2026-04-20 | close_over_open | 5.111111 | Re-pull matches the old print (ratio 5.111111). Yahoo splits (none) do not explain this close_over_open within 25%. Not patched. Dropped. |
+| RCON | 2026-08-05 | close_over_open | 0.153846 | Re-pull matches the old print (ratio 0.153846). Yahoo splits (2026-08-18 0.005) do not explain this close_over_open within 25%. Not patched. Dropped. |
+| RITR | 2026-09-17 | close_over_open | 0.195 | Re-pull matches the old print (ratio 0.195000). Yahoo splits (none) do not explain this close_over_open within 25%. Not patched. Dropped. |
+| SMJF | 2026-08-27 | close_over_open | 0.131603 | Re-pull matches the old print (ratio 0.131603). Yahoo splits (none) do not explain this close_over_open within 25%. Not patched. Dropped. |
+| STAK | 2026-07-24 | close_over_open | 7.536586 | Re-pull matches the old print (ratio 7.536586). Yahoo splits (none) do not explain this close_over_open within 25%. Not patched. Dropped. |
+| SXTC | 2026-07-24 | close_over_open | 0.25098 | Re-pull matches the old print (ratio 0.250980). Yahoo splits (2026-08-10 0.0125) do not explain this close_over_open within 25%. Not patched. Dropped. |
+| XHLD | 2026-08-06 | close_over_open | 3.469136 | Re-pull matches the old print (ratio 3.469136). Yahoo splits (none) do not explain this close_over_open within 25%. Not patched. Dropped. |
+| YXT | 2026-08-05 | close_over_open | 3.20082 | Re-pull matches the old print (ratio 3.200820). Yahoo splits (2026-07-14 0.1) do not explain this close_over_open within 25%. Not patched. Dropped. |
+| YYAI | 2026-07-27 | close_over_open | 0.277264 | Re-pull matches the old print (ratio 0.277264). Yahoo splits (2026-05-18 0.025, 2026-08-17 0.05) do not explain this close_over_open within 25%. Not patched. Dropped. |
+| YYAI | 2026-07-28 | close_over_open | 0.312195 | Re-pull matches the old print (ratio 0.312195). Yahoo splits (2026-05-18 0.025, 2026-08-17 0.05) do not explain this close_over_open within 25%. Not patched. Dropped. |
+| ZCMD | 2026-05-29 | close_over_open | 0.283531 | Re-pull matches the old print (ratio 0.283531). Yahoo splits (2026-03-02 0.125, 2026-06-08 0.032258065, 2026-06-29 0.33333333) do not explain this close_over_open within 25%. Not patched. Dropped. |
+| ZTG | 2026-08-17 | close_over_open | 0.332994 | Re-pull matches the old print (ratio 0.332994). Yahoo splits (none) do not explain this close_over_open within 25%. Not patched. Dropped. |
