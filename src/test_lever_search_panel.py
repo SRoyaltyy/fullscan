@@ -266,6 +266,9 @@ def test_tally_lines_stay_in_prereg() -> None:
     assert "16,646,400" in text
     assert "31,852,800" in text
     assert "31,861,969" in text
+    assert "24,595,200" in text
+    assert "7,257,600" in text
+    assert "too few days to judge" in text
     assert f"{INITIAL_N}" == "31852800"
     assert f"{RUNNING_TALLY}" == "31861969"
     assert "868" in text
@@ -303,13 +306,14 @@ def test_initial_inputs_and_hash_guard() -> None:
     assert levers["path"] == "research/lever_panel/server_time_proof.csv"
     assert levers["sha256"] == "5bde5e9164f499899b4ed70fcdbfde3f72b3e8b5692da645f1e9682e3c6a913e"
     assert levers["export_morning_count"] == 35
-    assert levers["in_window_count"] == 20
+    assert levers["in_window_count"] == 24
     assert levers["in_window_mornings"] == list(FINVIZ_PROVEN_DATES)
     assert len(levers["sample_api_checks"]) == 8
     assert all(row["start_before_0930_et"] and row["created_at_matches_api"] for row in levers["sample_api_checks"])
     assert manifest["excel_sessions"] == list(EXCEL_SESSIONS)
     assert "2026-08-28" not in manifest["finviz_proven_dates"]
-    assert len(manifest["finviz_proven_dates"]) == 20
+    assert len(manifest["finviz_proven_dates"]) == 24
+    assert_finviz_date("2026-08-07")
     assert_manifest_hashes()
     for name in ("fwd_1d", "tr1d_ret_H", "trf_true_ret", "label_date_1", "seg_mom"):
         try:
@@ -371,27 +375,49 @@ def test_initial_inputs_and_hash_guard() -> None:
             pass
         else:
             raise AssertionError(f"{session} excel was accepted")
-    from src.lever_search_inputs import TRAINING_LOOKBACK, WALK_FORWARD
+    from src.lever_search_inputs import (
+        GROUP1_N,
+        GROUP2_N,
+        INITIAL_N,
+        MIN_CHECK_DAYS,
+        TRAINING_FROM_0813,
+        TRAINING_LOOKBACK,
+        WALK_FORWARD,
+        check_days_from,
+    )
     assert tuple(day for day in WALK_FORWARD if day not in EXCEL_SESSIONS) == EXCEL_DROPPED_SESSIONS
     assert WALK_FORWARD[0] == "2026-08-20"
     assert WALK_FORWARD[-1] == "2026-09-11"
     assert len(WALK_FORWARD) == 16
-    assert TRAINING_LOOKBACK == (
+    assert TRAINING_LOOKBACK[0] == "2026-08-07"
+    assert len(TRAINING_LOOKBACK) == 9
+    assert TRAINING_FROM_0813 == (
         "2026-08-13",
         "2026-08-14",
         "2026-08-17",
         "2026-08-18",
         "2026-08-19",
     )
+    assert len(check_days_from("2026-08-07")) == 16
+    assert len(check_days_from("2026-08-31")) == 9
+    assert len(check_days_from("2026-08-31")) < MIN_CHECK_DAYS
+    assert GROUP1_N == 24595200
+    assert GROUP2_N == 7257600
+    assert GROUP1_N + GROUP2_N == INITIAL_N
     check = manifest["walk_forward_check"]
     assert check["first_day"] == "2026-08-20"
     assert check["check_day_count"] == 16
-    assert check["first_check_training_count"] == 5
+    assert check["first_check_training_count"] == 9
+    assert check["group2_check_day_count"] == 9
     assert check["check_days"] == list(WALK_FORWARD)
     assert check["first_check_training_sessions"] == list(TRAINING_LOOKBACK)
     assert manifest["initial_n"] == 31852800
     assert manifest["running_tally"] == 31861969
-    assert manifest["run_window"]["price_finviz_start"] == "2026-08-13"
+    assert manifest["group1_n"] == GROUP1_N
+    assert manifest["group2_n"] == GROUP2_N
+    assert manifest["panel_meta"]["plain_finviz_fields"] == 50
+    assert manifest["panel_meta"]["sha256"] == "8c8ee8631e2301cb852c7599633c9b550571ed8a1328aab30f751c09ce781a5d"
+    assert manifest["run_window"]["price_finviz_start"] == "2026-08-07"
     assert manifest["run_window"]["excel_signal_start"] == "2026-08-31"
     assert "panel.json" in manifest["universe_before_0909"]["forbidden"]
     for session in ("2026-08-20", "2026-08-26", "2026-08-19"):

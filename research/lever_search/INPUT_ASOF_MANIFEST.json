@@ -3,30 +3,67 @@
   "cutoff": "09:30 America/New_York (13:30 UTC)",
   "initial_n": 31852800,
   "running_tally": 31861969,
-  "n_note": "Recomputed after the run window moved to 2026-08-13. N is the combination count. A sat-out session is not an extra try and does not multiply N.",
+  "n_note": "Recomputed after plain Finviz opened on 2026-08-07. N is the combination count. A sat-out session is not an extra try and does not multiply N. The same N splits into Group 1 and Group 2.",
+  "group1_n": 24595200,
+  "group2_n": 7257600,
+  "group1_signals": 1281,
+  "group2_signals": 378,
+  "min_check_days_to_judge": 10,
+  "panel_meta": {
+    "repo": "SRoyaltyy/theme-radar",
+    "commit": "3973e13cd953e5705d08d8d9f78a5b1b9dd1a1d0",
+    "path": "research/lever_panel/panel_meta.json",
+    "sha256": "8c8ee8631e2301cb852c7599633c9b550571ed8a1328aab30f751c09ce781a5d",
+    "plain_finviz_fields": 50,
+    "column_family_start": {
+      "plain_finviz": "2026-08-07",
+      "tr1d": "2026-08-10",
+      "tr1w": "2026-08-10",
+      "tr1m": "2026-08-10",
+      "trf": "2026-08-10",
+      "seg": "2026-08-12",
+      "trc": "2026-08-13",
+      "excel": "2026-08-31"
+    },
+    "finviz_sit_out": "2026-08-28"
+  },
   "run_window": {
-    "start": "2026-08-13",
+    "start": "2026-08-07",
     "end": "2026-09-11",
-    "session_count": 21,
-    "price_finviz_start": "2026-08-13",
-    "first_proven_theme_radar_morning": "2026-08-13",
+    "session_count": 25,
+    "price_finviz_start": "2026-08-07",
+    "first_proven_theme_radar_morning": "2026-08-07",
     "excel_signal_start": "2026-08-31",
-    "sit_out": "A recipe runs on a session only when every input that recipe reads is server-proven that morning. A missing input sits the recipe out. No fill is written from the missing input. The combination remains one try."
+    "extra_sessions_before_0813": [
+      "2026-08-07",
+      "2026-08-10",
+      "2026-08-11",
+      "2026-08-12"
+    ],
+    "sit_out": "A recipe runs on a session on or after its start day only when every input that recipe reads is present and server-proven that morning. A missing input sits the recipe out. No fill is written from the missing input. The combination remains one try. Start day is the first session on which every column the recipe reads is present."
   },
   "walk_forward_check": {
     "first_day": "2026-08-20",
     "last_day": "2026-09-11",
     "check_day_count": 16,
     "training_lookback": "expanding",
-    "training_start": "2026-08-13",
-    "first_check_training_count": 5,
+    "training_start": "2026-08-07",
+    "first_check_training_count": 9,
     "first_check_training_sessions": [
+      "2026-08-07",
+      "2026-08-10",
+      "2026-08-11",
+      "2026-08-12",
       "2026-08-13",
       "2026-08-14",
       "2026-08-17",
       "2026-08-18",
       "2026-08-19"
     ],
+    "training_if_columns_start_0813_count": 5,
+    "group2_first_check_day": "2026-08-31",
+    "group2_check_day_count": 9,
+    "per_recipe": "Check days are the calendar sessions on or after the recipe's start day. A sit-out in that span still counts and has no new fill. Report n_check_days and the mean after-fee return per check day beside the cumulative return.",
     "check_days": [
       "2026-08-20",
       "2026-08-21",
@@ -47,15 +84,19 @@
     ]
   },
   "universe_before_0909": {
-    "sessions": "2026-08-13 through 2026-09-08",
+    "sessions": "2026-08-07 through 2026-09-08",
     "sources": [
       "Theme Radar proven Finviz mornings",
       "price-only candidate sources in PREREG section 7.1"
     ],
     "price_sources": "PROVISIONAL pending rebuild_match=exact",
-    "forbidden": "data/factor_mine/panel.json rows for 2026-08-13 through 2026-09-08"
+    "forbidden": "data/factor_mine/panel.json rows for 2026-08-07 through 2026-09-08"
   },
   "finviz_proven_dates": [
+    "2026-08-07",
+    "2026-08-10",
+    "2026-08-11",
+    "2026-08-12",
     "2026-08-13",
     "2026-08-14",
     "2026-08-17",
@@ -3077,6 +3118,22 @@
   },
   "excel_dropped_sessions": [
     {
+      "session_date": "2026-08-07",
+      "reason": "Not a server-proven day in excel_preopen_proof.csv. An Excel-signal recipe sits this session out."
+    },
+    {
+      "session_date": "2026-08-10",
+      "reason": "Not a server-proven day in excel_preopen_proof.csv. An Excel-signal recipe sits this session out."
+    },
+    {
+      "session_date": "2026-08-11",
+      "reason": "Not a server-proven day in excel_preopen_proof.csv. An Excel-signal recipe sits this session out."
+    },
+    {
+      "session_date": "2026-08-12",
+      "reason": "Not a server-proven day in excel_preopen_proof.csv. An Excel-signal recipe sits this session out."
+    },
+    {
       "session_date": "2026-08-13",
       "reason": "Not a server-proven day in excel_preopen_proof.csv. An Excel-signal recipe sits this session out."
     },
@@ -3358,6 +3415,10 @@
     ],
     "export_morning_count": 35,
     "in_window_mornings": [
+      "2026-08-07",
+      "2026-08-10",
+      "2026-08-11",
+      "2026-08-12",
       "2026-08-13",
       "2026-08-14",
       "2026-08-17",
@@ -3379,8 +3440,8 @@
       "2026-09-10",
       "2026-09-11"
     ],
-    "in_window_count": 20,
-    "note": "All 35 export mornings are available-proven by Actions run times in the cited file. 20 of them fall inside 2026-08-13..2026-09-11 and are the initial Finviz dates. Mornings after 2026-09-11 stay out of the search load. A sample of run_started_at values was read from the Actions API and matched the file.",
+    "in_window_count": 24,
+    "note": "All 35 export mornings are available-proven by Actions run times in the cited file. 24 of them fall inside 2026-08-07..2026-09-11 and are the initial Finviz dates. 2026-08-28 has no snapshot. Mornings after 2026-09-11 stay out of the search load. A sample of run_started_at values was read from the Actions API and matched the file.",
     "sample_api_checks": [
       {
         "trade_date": "2026-08-07",
@@ -3487,7 +3548,7 @@
       "path": "research/lever_search/excel_preopen_proof.csv",
       "sha256": "04e6b996c450427ea408646b305be91c33f0778c1f6ee167de9be1a08d129ded"
     },
-    "run_window": "2026-08-13..2026-09-11",
+    "run_window": "2026-08-07..2026-09-11",
     "excel_start": "2026-08-31",
     "walk_forward": "2026-08-20..2026-09-11",
     "check_day_count": 16,

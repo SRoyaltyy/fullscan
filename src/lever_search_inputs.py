@@ -23,7 +23,35 @@ INITIAL_N = INITIAL_SIGNALS * INITIAL_OTHER
 TALLY_PRIOR = 37 + 8264 + 868
 RUNNING_TALLY = INITIAL_N + TALLY_PRIOR
 
+# Group 1: no Excel card. Group 2: the signal includes an Excel card.
+# Pairs that mix an Excel card with another atom stay in Group 2.
+EXCEL_ATOMS = 7
+GROUP1_ATOMS = INITIAL_ATOMS - EXCEL_ATOMS
+GROUP1_PAIRS = GROUP1_ATOMS * (GROUP1_ATOMS - 1) // 2
+GROUP1_SIGNALS = GROUP1_ATOMS + GROUP1_PAIRS + INITIAL_DELTAS
+GROUP2_PAIRS = INITIAL_PAIRS - GROUP1_PAIRS
+GROUP2_SIGNALS = EXCEL_ATOMS + GROUP2_PAIRS
+GROUP1_N = GROUP1_SIGNALS * INITIAL_OTHER
+GROUP2_N = GROUP2_SIGNALS * INITIAL_OTHER
+MIN_CHECK_DAYS = 10
+
+# First session on which that column family is present in panel_meta.json.
+COLUMN_FAMILY_START: tuple[tuple[str, str], ...] = (
+    ("plain_finviz", "2026-08-07"),
+    ("tr1d", "2026-08-10"),
+    ("tr1w", "2026-08-10"),
+    ("tr1m", "2026-08-10"),
+    ("trf", "2026-08-10"),
+    ("seg", "2026-08-12"),
+    ("trc", "2026-08-13"),
+    ("excel", "2026-08-31"),
+)
+
 FINVIZ_PROVEN_DATES: tuple[str, ...] = (
+    "2026-08-07",
+    "2026-08-10",
+    "2026-08-11",
+    "2026-08-12",
     "2026-08-13",
     "2026-08-14",
     "2026-08-17",
@@ -49,7 +77,7 @@ FINVIZ_PROVEN_DATES: tuple[str, ...] = (
 # Excel signal columns are server-proven only on these sessions, from
 # research/lever_search/excel_preopen_proof.csv. The proof is the Excel Bot
 # run whose job log pushed the pre-open commit, with run updated_at before
-# 09:30 ET. Every other session in the 2026-08-13..2026-09-11 run window is
+# 09:30 ET. Every other session in the 2026-08-07..2026-09-11 run window is
 # sat out for a recipe that reads an Excel card.
 EXCEL_SESSIONS: tuple[str, ...] = (
     "2026-08-31",
@@ -94,15 +122,21 @@ EXCEL_DROPPED: frozenset[tuple[str, str]] = frozenset({
     ("SVCC", "2026-09-11"),
 })
 
-# First check day is the first store session after five training sessions
-# that begin 2026-08-13. Lookback is expanding from that start.
+# First check day stays 2026-08-20. A recipe that starts 2026-08-07 trains on
+# nine sessions. A recipe whose columns start 2026-08-13 trains on the last five.
 TRAINING_LOOKBACK: tuple[str, ...] = (
+    "2026-08-07",
+    "2026-08-10",
+    "2026-08-11",
+    "2026-08-12",
     "2026-08-13",
     "2026-08-14",
     "2026-08-17",
     "2026-08-18",
     "2026-08-19",
 )
+
+TRAINING_FROM_0813: tuple[str, ...] = TRAINING_LOOKBACK[4:]
 
 WALK_FORWARD: tuple[str, ...] = (
     "2026-08-20",
@@ -234,6 +268,11 @@ def proof_is_before_open(entry: dict, session_date: str) -> bool:
             return False
         return updated < cutoff
     return False
+
+
+def check_days_from(start: str) -> tuple[str, ...]:
+    """Check-calendar sessions on or after a recipe's start day."""
+    return tuple(day for day in WALK_FORWARD if day >= start)
 
 
 def covered_fingerprint(text: str) -> str:
