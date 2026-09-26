@@ -197,3 +197,232 @@ Part 1 RANDOM4 regenerated ending-equity mean return -99.96%. Published mean ret
 
 Part 2 test RANDOM4 regenerated ending-equity mean return -99.93%. Published mean return -99.93%.
 
+## 5. Worst days and position count
+
+This section reads the saved Part 1 ledgers. It does not rescore them. The proxy panel cap of 60 is the candidate list in PREREG section 3. Part 1 `top_n` is 4, and `top_n` is the length of the look list. Hold 1 sells the prior cohort at the open before the new buys, so the end-of-day book is at most 4 names. Hold 2 can still be holding the prior cohort, so the end-of-day book is at most 8 names. A recorded count of 1–3 is that sizing when the gate qualifies fewer than 4 names, or when leftover cash buys fewer than 1 share of a later name.
+
+### longhist_break10_h2
+
+Maximum end-of-day positions 6. First close under $1,000 is 2019-06-25 at $819.46. Position counts over the full window: 0: 1186, 1: 483, 2: 139, 3: 65, 4: 29, 5: 8, 6: 3. Through 2019-08-30: 0: 33, 1: 67, 2: 37, 3: 15, 4: 11, 5: 4, 6: 1.
+
+| date | daily return | equity | positions | cash | ticker | role | shares | entry | entry px | exit | exit px | day open | day close | prior close | split on the hold | bad bar |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 2020-03-13 | -36.46% | 45.52 | 1 | 0.08 | TLSA | held at close | 34 | 2020-03-12 | 2.300920 | 2020-03-16 | 1.000400 | 1.760704 | 1.336535 | 2.104842 | no | no |
+| 2019-03-08 | -33.52% | 7,222.49 | 2 | 8.09 | DBVT | sold at open | 638 | 2019-03-06 | 17.500000 | 2019-03-08 | 17.000000 | 17.000000 | 16.719999 | 17.000000 | no | no |
+|  |  |  |  |  | ALT | held at close | 1495 | 2019-03-08 | 3.630000 | 2019-03-12 | 2.780000 | 3.630000 | 2.880000 | 4.540000 | no | no |
+|  |  |  |  |  | CRDF | held at close | 606 | 2019-03-08 | 8.900000 | 2019-03-12 | 4.420000 | 8.900000 | 4.800000 | 4.130000 | no | no |
+| 2020-03-26 | -29.10% | 29.24 | 1 | 0.84 | CAPR | held at close | 20 | 2020-03-25 | 1.620000 | 2020-03-27 | 1.390000 | 1.440000 | 1.420000 | 2.020000 | no | no |
+| 2024-10-11 | -28.52% | 6.62 | 2 | 2.41 | SRFM | held at close | 1 | 2024-10-11 | 2.750000 | 2024-10-15 | 1.990000 | 2.750000 | 2.050000 | 3.270000 | no | no |
+|  |  |  |  |  | TURB | held at close | 1 | 2024-10-11 | 4.030000 | 2024-10-15 | 1.720000 | 4.030000 | 2.160000 | 3.030000 | no | no |
+| 2020-03-16 | -26.12% | 33.63 | 0 | 33.63 | TLSA | sold at open | 34 | 2020-03-12 | 2.300920 | 2020-03-16 | 1.000400 | 1.000400 | 0.900360 | 1.336535 | no | no |
+| 2019-06-25 | -23.89% | 819.46 | 2 | 6.00 | DMAC | sold at open | 234 | 2019-06-21 | 4.520000 | 2019-06-25 | 4.560000 | 4.560000 | 4.860000 | 4.600000 | no | no |
+|  |  |  |  |  | IGC | held at close | 227 | 2019-06-25 | 2.340000 | 2019-06-27 | 1.740000 | 2.340000 | 1.680000 | 2.050000 | no | no |
+|  |  |  |  |  | VIVO | held at close | 29 | 2019-06-25 | 18.000000 | 2019-06-27 | 14.000000 | 18.000000 | 14.900000 | 20.500000 | no | no |
+| 2024-01-04 | -21.84% | 3.30 | 1 | 0.48 | ABVC | held at close | 2 | 2024-01-04 | 1.850000 | 2024-01-08 | 1.370000 | 1.850000 | 1.410000 | 1.930000 | no | no |
+| 2022-12-20 | -20.51% | 3.57 | 1 | 1.88 | BYSI | held at close | 1 | 2022-12-19 | 2.120000 | 2022-12-21 | 1.940000 | 2.490000 | 1.690000 | 2.610000 | no | no |
+| 2020-03-03 | -20.51% | 108.16 | 2 | 0.88 | LRN | sold at open | 1 | 2020-02-28 | 19.770000 | 2020-03-03 | 19.480000 | 19.480000 | 20.330000 | 19.309999 | no | no |
+|  |  |  |  |  | SPPP | sold at open | 1 | 2020-02-28 | 18.080000 | 2020-03-03 | 16.809999 | 16.809999 | 16.940001 | 16.750000 | no | no |
+|  |  |  |  |  | IFRX | held at close | 8 | 2020-03-03 | 5.210000 | 2020-03-05 | 4.510000 | 5.210000 | 4.590000 | 6.080000 | no | no |
+|  |  |  |  |  | TOMZ | held at close | 3 | 2020-03-02 | 29.040001 | 2020-03-04 | 23.760000 | 29.520000 | 23.520000 | 30.959999 | no | no |
+| 2025-03-11 | -18.83% | 4.59 | 1 | 1.19 | ALXO | sold at open | 2 | 2025-03-07 | 1.250000 | 2025-03-11 | 0.910000 | 0.910000 | 0.973000 | 0.894000 | no | no |
+|  |  |  |  |  | TLSA | sold at open | 2 | 2025-03-07 | 1.580000 | 2025-03-11 | 1.530000 | 1.530000 | 1.370000 | 1.550000 | no | no |
+|  |  |  |  |  | SNOA | held at close | 1 | 2025-03-11 | 4.310000 | 2025-03-13 | 3.530000 | 4.310000 | 3.400000 | 2.790000 | no | no |
+
+Dollar contributions of those rows (sold names at the open gap minus the sell fee, new buys at close minus entry minus the buy fee, carried names at the close-to-prior-close move) match the published equity change within $0.0000 on these ten days.
+
+### longhist_rvol_lg_h1
+
+Maximum end-of-day positions 4. First close under $1,000 is 2020-05-29 at $998.52. Position counts over the full window: 0: 1121, 1: 362, 2: 137, 3: 92, 4: 201. Through 2019-08-30: 0: 30, 1: 46, 2: 37, 3: 25, 4: 30.
+
+| date | daily return | equity | positions | cash | ticker | role | shares | entry | entry px | exit | exit px | day open | day close | prior close | split on the hold | bad bar |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 2020-09-25 | -32.32% | 84.88 | 3 | 8.62 | POLA | sold at open | 4 | 2020-09-24 | 29.120001 | 2020-09-25 | 19.600000 | 19.600000 | 21.700001 | 25.830000 | no | no |
+|  |  |  |  |  | CBAT | held at close | 9 | 2020-09-25 | 3.500000 | 2020-09-28 | 2.790000 | 3.500000 | 2.450000 | 1.350000 | no | no |
+|  |  |  |  |  | FLR | held at close | 3 | 2020-09-25 | 8.860000 | 2020-09-28 | 9.640000 | 8.860000 | 9.590000 | 9.350000 | no | no |
+|  |  |  |  |  | PPSI | held at close | 16 | 2020-09-25 | 2.000000 | 2020-09-28 | 1.590000 | 2.000000 | 1.590000 | 1.830000 | no | no |
+| 2019-03-08 | -27.50% | 8,160.73 | 3 | 1.84 | PETZ | sold at open | 574 | 2019-03-07 | 21.400000 | 2019-03-08 | 18.799999 | 18.799999 | 17.980000 | 19.600000 | no | no |
+|  |  |  |  |  | ALT | held at close | 990 | 2019-03-08 | 3.630000 | 2019-03-11 | 2.850000 | 3.630000 | 2.880000 | 4.540000 | no | no |
+|  |  |  |  |  | CRDF | held at close | 404 | 2019-03-08 | 8.900000 | 2019-03-11 | 5.320000 | 8.900000 | 4.800000 | 4.130000 | no | no |
+|  |  |  |  |  | SWBI | held at close | 440 | 2019-03-08 | 8.124520 | 2019-03-11 | 7.724827 | 8.124520 | 7.655650 | 8.739431 | no | no |
+| 2021-04-19 | -25.29% | 18.57 | 1 | 2.07 | WIT | sold at open | 7 | 2021-04-16 | 3.480000 | 2021-04-19 | 3.490000 | 3.490000 | 3.480000 | 3.480000 | no | no |
+|  |  |  |  |  | LFMD | held at close | 2 | 2021-04-19 | 11.170000 | 2021-04-20 | 8.000000 | 11.170000 | 8.250000 | 9.970000 | no | no |
+| 2020-06-09 | -24.08% | 867.18 | 4 | 3.69 | AMPY | sold at open | 105 | 2020-06-08 | 2.400000 | 2020-06-09 | 2.120000 | 2.120000 | 2.000000 | 2.230000 | no | no |
+|  |  |  |  |  | CHRD | sold at open | 159 | 2020-06-08 | 1.620000 | 2020-06-09 | 1.650000 | 1.650000 | 1.570000 | 2.040000 | no | no |
+|  |  |  |  |  | SMHI | sold at open | 70 | 2020-06-08 | 3.640000 | 2020-06-09 | 4.500000 | 4.500000 | 4.390000 | 4.790000 | no | no |
+|  |  |  |  |  | TDAY | sold at open | 85 | 2020-06-08 | 3.030000 | 2020-06-09 | 2.800000 | 2.800000 | 2.700000 | 2.910000 | no | no |
+|  |  |  |  |  | BORR | held at close | 54 | 2020-06-09 | 4.740000 | 2020-06-10 | 3.200000 | 4.740000 | 3.560000 | 5.260000 | no | no |
+|  |  |  |  |  | MITT | held at close | 12 | 2020-06-09 | 21.209999 | 2020-06-10 | 19.049999 | 21.209999 | 17.340000 | 22.709999 | no | no |
+|  |  |  |  |  | SMHI | held at close | 57 | 2020-06-09 | 4.500000 | 2020-06-10 | 4.400000 | 4.500000 | 4.390000 | 4.790000 | no | no |
+|  |  |  |  |  | SRG | held at close | 13 | 2020-06-09 | 19.280001 | 2020-06-10 | 16.650000 | 19.280001 | 16.379999 | 21.240000 | no | no |
+| 2020-06-24 | -21.30% | 541.65 | 3 | 12.63 | HYLN | sold at open | 9 | 2020-06-23 | 19.440001 | 2020-06-24 | 17.410000 | 17.410000 | 16.209999 | 17.400000 | no | no |
+|  |  |  |  |  | MVIS | sold at open | 7 | 2020-06-23 | 24.600000 | 2020-06-24 | 20.700001 | 20.700001 | 21.900000 | 22.049999 | no | no |
+|  |  |  |  |  | NEON | sold at open | 19 | 2020-06-23 | 9.270000 | 2020-06-24 | 8.000000 | 8.000000 | 8.200000 | 8.190000 | no | no |
+|  |  |  |  |  | VNET | sold at open | 8 | 2020-06-23 | 22.420000 | 2020-06-24 | 23.190001 | 23.190001 | 22.209999 | 23.750000 | no | no |
+|  |  |  |  |  | KMDA | held at close | 22 | 2020-06-24 | 9.910000 | 2020-06-25 | 9.250000 | 9.910000 | 9.450000 | 8.940000 | no | no |
+|  |  |  |  |  | LE | held at close | 24 | 2020-06-24 | 8.910000 | 2020-06-25 | 7.770000 | 8.910000 | 7.880000 | 9.400000 | no | no |
+|  |  |  |  |  | YHGJ | held at close | 4 | 2020-06-24 | 53.400002 | 2020-06-25 | 28.900000 | 53.400002 | 33.000000 | 23.600000 | no | no |
+| 2020-08-14 | -17.79% | 279.83 | 4 | 8.03 | AMTX | sold at open | 31 | 2020-08-13 | 2.800000 | 2020-08-14 | 2.400000 | 2.400000 | 2.450000 | 2.790000 | no | no |
+|  |  |  |  |  | CCO | sold at open | 66 | 2020-08-13 | 1.340000 | 2020-08-14 | 1.180000 | 1.180000 | 1.200000 | 1.130000 | no | no |
+|  |  |  |  |  | OPTT | sold at open | 60 | 2020-08-13 | 1.470000 | 2020-08-14 | 1.380000 | 1.380000 | 1.180000 | 1.480000 | no | no |
+|  |  |  |  |  | TIGR | sold at open | 13 | 2020-08-13 | 6.540000 | 2020-08-14 | 6.620000 | 6.620000 | 6.520000 | 6.760000 | no | no |
+|  |  |  |  |  | AHG | held at close | 18 | 2020-08-14 | 4.260000 | 2020-08-17 | 2.940000 | 4.260000 | 3.180000 | 7.440000 | no | no |
+|  |  |  |  |  | FOSL | held at close | 15 | 2020-08-14 | 5.080000 | 2020-08-17 | 5.490000 | 5.080000 | 5.620000 | 5.300000 | no | no |
+|  |  |  |  |  | OPTT | held at close | 57 | 2020-08-14 | 1.380000 | 2020-08-17 | 1.500000 | 1.380000 | 1.180000 | 1.480000 | no | no |
+|  |  |  |  |  | SNDL | held at close | 14 | 2020-08-14 | 5.500000 | 2020-08-17 | 4.840000 | 5.500000 | 4.500000 | 7.000000 | no | no |
+| 2020-07-01 | -16.24% | 403.02 | 4 | 2.19 | BLNK | sold at open | 21 | 2020-06-30 | 5.910000 | 2020-07-01 | 4.700000 | 4.700000 | 4.840000 | 5.680000 | no | no |
+|  |  |  |  |  | CLSK | sold at open | 45 | 2020-06-30 | 2.830000 | 2020-07-01 | 2.450000 | 2.450000 | 2.360000 | 2.590000 | no | no |
+|  |  |  |  |  | ERII | sold at open | 16 | 2020-06-30 | 7.700000 | 2020-07-01 | 7.610000 | 7.610000 | 7.010000 | 7.600000 | no | no |
+|  |  |  |  |  | PDSB | sold at open | 59 | 2020-06-30 | 2.140000 | 2020-07-01 | 1.850000 | 1.850000 | 1.720000 | 2.010000 | no | no |
+|  |  |  |  |  | GNW | held at close | 48 | 2020-07-01 | 2.210000 | 2020-07-02 | 2.310000 | 2.210000 | 2.220000 | 2.310000 | no | no |
+|  |  |  |  |  | HIMX | held at close | 25 | 2020-07-01 | 4.400000 | 2020-07-02 | 4.170000 | 4.400000 | 4.020000 | 4.140000 | no | no |
+|  |  |  |  |  | OPK | held at close | 29 | 2020-07-01 | 3.720000 | 2020-07-02 | 3.500000 | 3.720000 | 3.430000 | 3.410000 | no | no |
+|  |  |  |  |  | OXBR | held at close | 82 | 2020-07-01 | 1.330000 | 2020-07-02 | 1.110000 | 1.330000 | 1.150000 | 1.400000 | no | no |
+| 2022-01-06 | -16.17% | 8.71 | 1 | 6.73 | AACG | sold at open | 4 | 2022-01-05 | 1.800000 | 2022-01-06 | 1.890000 | 1.890000 | 1.980000 | 2.300000 | no | no |
+|  |  |  |  |  | AACG | held at close | 1 | 2022-01-06 | 1.890000 | 2022-01-07 | 1.930000 | 1.890000 | 1.980000 | 2.300000 | no | no |
+| 2020-06-17 | -15.93% | 628.00 | 4 | 56.78 | ALAR | sold at open | 11 | 2020-06-16 | 18.000000 | 2020-06-17 | 17.600000 | 17.600000 | 17.200001 | 17.000000 | no | no |
+|  |  |  |  |  | BYRN | sold at open | 12 | 2020-06-16 | 17.200001 | 2020-06-17 | 14.700000 | 14.700000 | 14.600000 | 14.800000 | no | no |
+|  |  |  |  |  | COCP | sold at open | 11 | 2020-06-16 | 18.360001 | 2020-06-17 | 16.200001 | 16.200001 | 15.600000 | 16.320000 | no | no |
+|  |  |  |  |  | SWBI | sold at open | 13 | 2020-06-16 | 15.126826 | 2020-06-17 | 14.373559 | 14.373559 | 13.927748 | 14.096849 | no | no |
+|  |  |  |  |  | CLIR | held at close | 6 | 2020-06-17 | 29.900000 | 2020-06-18 | 23.600000 | 29.900000 | 25.500000 | 23.700001 | no | no |
+|  |  |  |  |  | JFIN | held at close | 34 | 2020-06-17 | 5.490000 | 2020-06-18 | 5.000000 | 5.490000 | 5.300000 | 5.770000 | no | no |
+|  |  |  |  |  | UONEK | held at close | 2 | 2020-06-17 | 68.000000 | 2020-06-18 | 23.000000 | 68.000000 | 26.500000 | 27.400000 | no | no |
+|  |  |  |  |  | WAFU | held at close | 29 | 2020-06-17 | 6.250000 | 2020-06-18 | 5.920000 | 6.250000 | 6.380000 | 7.600000 | no | no |
+| 2019-04-11 | -15.74% | 5,601.63 | 3 | 17.01 | AACG | sold at open | 1035 | 2019-04-10 | 2.570000 | 2019-04-11 | 3.000000 | 3.000000 | 3.050000 | 3.850000 | no | no |
+|  |  |  |  |  | SGI | sold at open | 167 | 2019-04-10 | 15.812500 | 2019-04-11 | 15.890000 | 15.890000 | 16.070000 | 15.915000 | no | no |
+|  |  |  |  |  | AACG | held at close | 638 | 2019-04-11 | 3.000000 | 2019-04-12 | 2.860000 | 3.000000 | 3.050000 | 3.850000 | no | no |
+|  |  |  |  |  | MARA | held at close | 563 | 2019-04-11 | 3.400000 | 2019-04-12 | 3.250000 | 3.400000 | 3.190000 | 3.860000 | no | no |
+|  |  |  |  |  | RCEL | held at close | 65 | 2019-04-11 | 29.000000 | 2019-04-12 | 25.799999 | 29.000000 | 28.350000 | 27.100000 | no | no |
+
+Dollar contributions of those rows (sold names at the open gap minus the sell fee, new buys at close minus entry minus the buy fee, carried names at the close-to-prior-close move) match the published equity change within $0.0000 on these ten days.
+
+### longhist_break10_h1
+
+Maximum end-of-day positions 4. First close under $1,000 is 2019-08-29 at $787.44. Position counts over the full window: 0: 1413, 1: 295, 2: 112, 3: 58, 4: 35. Through 2019-08-30: 0: 62, 1: 68, 2: 21, 3: 6, 4: 11.
+
+| date | daily return | equity | positions | cash | ticker | role | shares | entry | entry px | exit | exit px | day open | day close | prior close | split on the hold | bad bar |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 2019-03-08 | -33.48% | 5,619.89 | 2 | 4.85 | ALT | held at close | 1163 | 2019-03-08 | 3.630000 | 2019-03-11 | 2.850000 | 3.630000 | 2.880000 | 4.540000 | no | no |
+|  |  |  |  |  | CRDF | held at close | 472 | 2019-03-08 | 8.900000 | 2019-03-11 | 5.320000 | 8.900000 | 4.800000 | 4.130000 | no | no |
+| 2020-03-26 | -28.60% | 88.48 | 2 | 13.88 | CAPR | sold at open | 61 | 2020-03-25 | 1.620000 | 2020-03-26 | 1.440000 | 1.440000 | 1.420000 | 2.020000 | no | no |
+|  |  |  |  |  | EGHT | held at close | 2 | 2020-03-26 | 16.620001 | 2020-03-27 | 16.010000 | 16.620001 | 16.600000 | 18.040001 | no | no |
+|  |  |  |  |  | XWEL | held at close | 3 | 2020-03-26 | 13.200000 | 2020-03-27 | 16.200001 | 13.200000 | 13.800000 | 19.200001 | no | no |
+| 2019-08-27 | -25.79% | 1,082.12 | 1 | 4.76 | FSLY | sold at open | 26 | 2019-08-26 | 26.860001 | 2019-08-27 | 28.040001 | 28.040001 | 29.410000 | 27.559999 | no | no |
+|  |  |  |  |  | OPTT | sold at open | 398 | 2019-08-26 | 1.780000 | 2019-08-27 | 1.830000 | 1.830000 | 1.730000 | 1.850000 | no | no |
+|  |  |  |  |  | AIFC | held at close | 268 | 2019-08-27 | 5.400000 | 2019-08-28 | 4.100000 | 5.400000 | 4.020000 | 6.050000 | no | no |
+| 2019-08-12 | -25.24% | 1,644.73 | 1 | 0.23 | AMPY | sold at open | 429 | 2019-08-09 | 4.510000 | 2019-08-12 | 4.510000 | 4.510000 | 5.120000 | 5.120000 | no | no |
+|  |  |  |  |  | LOMA | held at close | 299 | 2019-08-12 | 6.450000 | 2019-08-13 | 5.870000 | 6.450000 | 5.500000 | 12.880000 | no | no |
+| 2019-08-29 | -25.17% | 787.44 | 1 | 3.60 | SVM | sold at open | 235 | 2019-08-28 | 4.660000 | 2019-08-29 | 4.480000 | 4.480000 | 4.260000 | 4.470000 | no | no |
+|  |  |  |  |  | SY | held at close | 71 | 2019-08-29 | 14.730000 | 2019-08-30 | 11.740000 | 14.730000 | 11.040000 | 16.600000 | no | no |
+| 2019-04-11 | -24.46% | 3,334.29 | 2 | 0.79 | AACG | sold at open | 1146 | 2019-04-10 | 2.570000 | 2019-04-11 | 3.000000 | 3.000000 | 3.050000 | 3.850000 | no | no |
+|  |  |  |  |  | AACG | held at close | 570 | 2019-04-11 | 3.000000 | 2019-04-12 | 2.860000 | 3.000000 | 3.050000 | 3.850000 | no | no |
+|  |  |  |  |  | MARA | held at close | 500 | 2019-04-11 | 3.400000 | 2019-04-12 | 3.250000 | 3.400000 | 3.190000 | 3.860000 | no | no |
+| 2020-01-28 | -23.51% | 224.89 | 1 | 2.59 | APT | sold at open | 11 | 2020-01-27 | 7.800000 | 2020-01-28 | 7.160000 | 7.160000 | 5.700000 | 7.700000 | no | no |
+|  |  |  |  |  | VIR | sold at open | 3 | 2020-01-27 | 25.930000 | 2020-01-28 | 24.049999 | 24.049999 | 21.309999 | 24.775000 | no | no |
+|  |  |  |  |  | VRDN | sold at open | 5 | 2020-01-27 | 16.200001 | 2020-01-28 | 22.049999 | 22.049999 | 23.700001 | 21.900000 | no | no |
+|  |  |  |  |  | APT | held at close | 39 | 2020-01-28 | 7.160000 | 2020-01-29 | 5.850000 | 7.160000 | 5.700000 | 7.700000 | no | no |
+| 2021-06-22 | -19.45% | 6.36 | 1 | 0.47 | GBR | held at close | 1 | 2021-06-22 | 7.350000 | 2021-06-23 | 6.050000 | 7.350000 | 5.890000 | 9.400000 | no | no |
+| 2020-03-09 | -18.64% | 155.74 | 1 | 2.56 | ONCY | sold at open | 42 | 2020-03-06 | 2.620000 | 2020-03-09 | 2.070000 | 2.070000 | 1.930000 | 2.290000 | no | no |
+|  |  |  |  |  | OPK | sold at open | 40 | 2020-03-06 | 2.790000 | 2020-03-09 | 2.840000 | 2.840000 | 2.220000 | 2.320000 | no | no |
+|  |  |  |  |  | OPK | held at close | 69 | 2020-03-09 | 2.840000 | 2020-03-10 | 1.930000 | 2.840000 | 2.220000 | 2.320000 | no | no |
+| 2020-02-11 | -18.41% | 100.58 | 1 | 14.58 | COLL | sold at open | 5 | 2020-02-10 | 24.000000 | 2020-02-11 | 21.600000 | 21.600000 | 22.209999 | 21.620001 | no | no |
+|  |  |  |  |  | DAO | held at close | 4 | 2020-02-11 | 26.600000 | 2020-02-12 | 22.100000 | 26.600000 | 21.500000 | 29.500000 | no | no |
+
+Dollar contributions of those rows (sold names at the open gap minus the sell fee, new buys at close minus entry minus the buy fee, carried names at the close-to-prior-close move) match the published equity change within $0.0000 on these ten days.
+
+### longhist_zero_candle_h2
+
+Maximum end-of-day positions 3. First close under $1,000 is 2023-10-23 at $965.92. Position counts over the full window: 0: 1676, 1: 220, 2: 13, 3: 4. Through 2019-08-30: 0: 157, 1: 10, 2: 1.
+
+| date | daily return | equity | positions | cash | ticker | role | shares | entry | entry px | exit | exit px | day open | day close | prior close | split on the hold | bad bar |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 2022-09-16 | -48.92% | 3,099.97 | 1 | 2.34 | SJ | held at close | 1009 | 2022-09-16 | 6.000000 | 2022-09-20 | 2.880000 | 6.000000 | 3.070000 | 5.000000 | no | no |
+| 2021-10-29 | -38.85% | 6,846.35 | 1 | 16.80 | HUDI | held at close | 395 | 2021-10-28 | 22.040001 | 2021-11-01 | 15.560000 | 22.840000 | 17.290001 | 28.299999 | no | no |
+| 2024-03-07 | -35.56% | 1,882.24 | 1 | 6.74 | AXG | held at close | 62 | 2024-03-06 | 21.799999 | 2024-03-08 | 32.480000 | 31.420000 | 30.250000 | 47.000000 | no | no |
+| 2019-07-31 | -29.23% | 9,524.19 | 1 | 4.19 | SLS | held at close | 1120 | 2019-07-31 | 12.000000 | 2019-08-02 | 8.000000 | 12.000000 | 8.500000 | 10.000000 | no | no |
+| 2025-06-12 | -28.24% | 402.18 | 1 | 1.85 | VTAK | held at close | 49 | 2025-06-11 | 13.490000 | 2025-06-13 | 7.030000 | 8.360000 | 8.170000 | 11.400000 | no | no |
+| 2023-10-20 | -26.96% | 1,138.22 | 1 | 0.70 | OTLK | held at close | 118 | 2023-10-19 | 10.200000 | 2023-10-23 | 8.200000 | 12.420000 | 9.640000 | 13.200000 | no | no |
+| 2022-07-06 | -24.50% | 5,465.32 | 1 | 4.12 | YSG | held at close | 666 | 2022-07-06 | 10.850000 | 2022-07-08 | 9.050000 | 10.850000 | 8.200000 | 10.000000 | no | no |
+| 2024-10-29 | -24.40% | 760.41 | 1 | 0.41 | STKE | held at close | 76 | 2024-10-29 | 13.200000 | 2024-10-31 | 8.320000 | 13.200000 | 10.000000 | 11.680000 | no | no |
+| 2026-03-31 | -24.39% | 118.47 | 1 | 0.17 | SLND | held at close | 91 | 2026-03-31 | 1.700000 | 2026-04-02 | 1.350000 | 1.700000 | 1.300000 | 1.800000 | no | no |
+| 2024-03-13 | -21.72% | 1,579.90 | 1 | 1.92 | EONR | held at close | 514 | 2024-03-13 | 3.910000 | 2024-03-15 | 2.810000 | 3.910000 | 3.070000 | 4.468000 | no | no |
+
+Dollar contributions of those rows (sold names at the open gap minus the sell fee, new buys at close minus entry minus the buy fee, carried names at the close-to-prior-close move) match the published equity change within $0.0000 on these ten days.
+
+### Shared crash days
+
+2019-03-08 is in the worst ten for `longhist_break10_h2` (-33.52%), `longhist_rvol_lg_h1` (-27.50%), `longhist_break10_h1` (-33.48%).
+2019-04-11 is in the worst ten for `longhist_rvol_lg_h1` (-15.74%), `longhist_break10_h1` (-24.46%).
+2020-03-26 is in the worst ten for `longhist_break10_h2` (-29.10%), `longhist_break10_h1` (-28.60%).
+
+The names on those dates are in the tables above. A name bought by two gates is one cached open and one cached close, marked on each book.
+
+On 2019-03-08 the shared buys are ALT (open 3.63, close 2.88, prior close 4.54) and CRDF (open 8.90, close 4.80, prior close 4.13). CRDF's open sits inside that day's high 9.65 and low 4.64, and the bar's volume is 28.6 million shares. On 2020-03-26 the shared name is CAPR: prior close 2.02, open 1.44, close 1.42. Those holds contain no split.
+
+Two rvol holds have a wide open that still sits inside the high-low. UONEK on 2020-06-17 opened at 68.00 (high 68.40, low 23.80, close 26.50, volume 9.0 million). YHGJ on 2020-06-24 opened at 53.40 (high 59.70, low 32.40, close 33.00, volume 4.9 million). Yahoo records no split on either hold.
+
+On every name in these tables, the ledger entry equals the cached open on the entry date and the ledger exit equals the cached open on the exit date. No structural bad bar (non-positive price, high below low, open or close outside the high-low, negative volume) is on the entry bar, that worst day, or the exit bar.
+
+## 6. Flat 15bp equity series
+
+The published `daily_returns.parquet` is the Futubull path. `daily_returns_15bp.parquet` is the same trades and the same share counts. The only change is the fee. A buy debits `shares * entry`. A sell credits `shares * exit - 0.0015 * shares * entry`. The 15bp charge is once, on the exit, which is the closed-trade definition in PREREG. An open lot at the window end is marked at the close and is not charged, because it is not a closed trade. The Futubull replay of the same ledger is compared with the published equity. A max absolute gap under one cent means the 15bp path is on the recorded book.
+
+Largest Futubull replay gap across 84 books: part1 longhist_break10_h2 $0.000000.
+
+Part 1 finals, both fee models, from a $10,000 start.
+
+| rule | Futubull ending equity | Futubull return | 15bp ending equity | 15bp return |
+| --- | --- | --- | --- | --- |
+| longhist_break10_h2 | 3.85 | -99.96% | 1,092.66 | -89.07% |
+| longhist_rvol_lg_h1 | 4.18 | -99.96% | 6,013.66 | -39.86% |
+| longhist_break10_h1 | 1.32 | -99.99% | 2,004.14 | -79.96% |
+| longhist_zero_candle_h2 | 118.62 | -98.81% | 1,117.53 | -88.82% |
+
+Top 5 Part 2 rules by published Part 2 test Futubull ending equity. This is a sort of the books already scored. It is not a new pass rule and it does not change the frozen file. All 40 test books failed the addendum.
+
+| rule | Futubull ending equity | Futubull return | 15bp ending equity | 15bp return |
+| --- | --- | --- | --- | --- |
+| longhist2_zero_px_h1_n2_candle_score | 2,836.87 | -71.63% | 4,194.30 | -58.06% |
+| longhist2_zero_px_h1_n4_hot_score | 2,616.72 | -73.83% | 3,971.53 | -60.28% |
+| longhist2_zero_px_h1_n4_candle_score | 2,609.03 | -73.91% | 3,963.53 | -60.36% |
+| longhist2_zero_px_h1_n2_hot_score | 2,517.02 | -74.83% | 3,864.54 | -61.35% |
+| longhist2_zero_px_h2_n2_candle_score | 1,393.01 | -86.07% | 2,377.93 | -76.22% |
+
+Every rule's two endings are in `equity_15bp_totals.json`, next to the daily 15bp series.
+
+## 7. All-panel plumbing control
+
+Outside the tally. Each session buys every name on that day's stand-in panel, equal-weight, at the open, and sells at the close. The panel is `build_panel` on the cached bars, XNYS sessions 2019-01-02 through 2026-08-12, the same fee function, and the same whole-share leftover loop. No gate and no `top_n`. This is not a Part 1 result and not a Part 2 result.
+
+Sessions 1913. Panel size mean 13.42, min 0, max 60. Names filled by the compounded Futubull account, mean 1.23. Sessions with an empty panel: 14. Missing closes: 0.
+
+While compounded Futubull equity is still above $5,000 (59 sessions, mean panel 4.05), filled names equal panel names on every session (shortfall sessions: 0). After the account is a few tens of dollars, an open above the leftover budget is skipped, and the full-window mean fill falls to 1.23. The fixed $10,000 ticket is the path that keeps funding the panel.
+
+On the fixed ticket the 15bp charge averages $14.78 a day, which is 14.78 bp of $10,000 against a 15 bp schedule. That is 98.5% of the ticket deployed. The rest is the whole-share residual and any name whose open exceeds its slice.
+
+Compounded Futubull, start $10,000, reinvest what is left, fee on the buy and on the sell: ending equity $9.12 (-99.91%). Compounded 15bp uses the same panel and the same whole-share split, with no fee on the buy and `0.0015 * shares * open` once at the close: ending equity $103.05 (-98.97%).
+
+Fixed $10,000 notional per day, not compounded, same buy loop against a fresh $10,000. Sum of price P&L $-32,824.34. Sum after Futubull $-178,598.07. Sum after 15bp $-61,096.35. Per day that is $-17.16 gross, $-93.36 Futubull, $-31.94 at 15bp, on a $10,000 ticket (-0.17% gross, -0.93% Futubull, -0.32% at 15bp).
+
+Worked session 2019-01-03, compounded account cash before the buys $10,522.34.
+
+| ticker | shares | open | close | buy fee | sell fee | 15bp | price P&L |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| SBS | 1700 | 2.062000 | 1.932000 | 21.9300 | 22.2385 | 5.2581 | -221.0000 |
+| ATHE | 194 | 18.000000 | 17.500000 | 2.5720 | 2.6314 | 5.2380 | -97.0000 |
+| SMPL | 195 | 17.860001 | 19.920000 | 2.5750 | 2.6384 | 5.2241 | 401.6999 |
+
+Price P&L is `shares * (close - open)`. Futubull P&L subtracts the buy fee and the sell fee. 15bp P&L subtracts `0.0015 * shares * open` once.
+
+### Recorded Part 1 fills against the look list
+
+The same panel, the Part 1 gates, and the leftover buy loop, walked in calendar order. Expected shares are compared with `trades_part1.parquet`. A mismatch would be a plumbing bug and would not be fixed in this pull request.
+
+`longhist_break10_h2`: look-list length counts {"0": 275, "1": 392, "2": 314, "3": 214, "4": 718}. Recorded buy counts {"0": 1487, "1": 327, "2": 70, "3": 18, "4": 11}. Mismatched sessions: 0.
+
+`longhist_rvol_lg_h1`: look-list length counts {"0": 86, "1": 180, "2": 207, "3": 208, "4": 1232}. Recorded buy counts {"0": 1121, "1": 362, "2": 137, "3": 92, "4": 201}. Mismatched sessions: 0.
+
+`longhist_break10_h1`: look-list length counts {"0": 275, "1": 392, "2": 314, "3": 214, "4": 718}. Recorded buy counts {"0": 1413, "1": 295, "2": 112, "3": 58, "4": 35}. Mismatched sessions: 0.
+
+`longhist_zero_candle_h2`: look-list length counts {"0": 1777, "1": 130, "2": 5, "3": 1}. Recorded buy counts {"0": 1791, "1": 116, "2": 5, "3": 1}. Mismatched sessions: 0.
+
+Every Part 1 session matches the preregistered look list and the leftover share loop. End-of-day counts of 1–3 are the gate and the cash, on a book whose cap is `top_n` (4 names, or 8 when a hold of 2 still carries the prior cohort). The panel cap of 60 is the candidate list those gates read. No plumbing bug showed up in that fill audit, in the Futubull replay of the saved ledgers, or in the open-to-close prices. Nothing here is corrected in this pull request.
