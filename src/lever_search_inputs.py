@@ -46,20 +46,25 @@ FINVIZ_PROVEN_DATES: tuple[str, ...] = (
     "2026-09-11",
 )
 
-# Sessions whose suggestions.csv copy has an Actions run start, matched by
-# head_sha, strictly before that session's 09:30 ET. The other four candidate
-# sessions have only a git committer date, or a server time after the open.
+# Walk-forward sessions whose Excel signal columns are server-proven in
+# research/lever_search/excel_preopen_proof.csv. The proof is the Excel Bot
+# run whose job log pushed the pre-open commit, with run updated_at before
+# 09:30 ET. The other walk-forward sessions are dropped for Excel columns.
 EXCEL_SESSIONS: tuple[str, ...] = (
+    "2026-08-31",
+    "2026-09-02",
     "2026-09-03",
     "2026-09-04",
+    "2026-09-08",
+    "2026-09-10",
     "2026-09-11",
 )
 
 EXCEL_DROPPED_SESSIONS: tuple[str, ...] = (
-    "2026-08-31",
-    "2026-09-02",
-    "2026-09-08",
-    "2026-09-10",
+    "2026-08-27",
+    "2026-08-28",
+    "2026-09-01",
+    "2026-09-09",
 )
 
 # Signal columns only. `strategy` is the card letter (L1, L2, L3, L4, L5, S1, S2).
@@ -176,10 +181,11 @@ def assert_excel_row(ticker: str, session_date: str) -> None:
 
 
 def proof_is_before_open(entry: dict, session_date: str) -> bool:
-    """True only for an Actions run start or a push-event time before 09:30 ET.
+    """True when a server-side time is before 09:30 ET.
 
-    Git author and committer dates are ignored. `head_sha` must equal the
-    file's commit for an Actions proof.
+    Git author and committer dates are ignored. An Actions run start counts
+    only when `head_sha` equals the file commit. An Excel Bot safe-push
+    counts when the run's `updated_at` is before the open.
     """
     proof = entry.get("proof") or {}
     cutoff = f"{session_date}T13:30:00Z"
@@ -198,6 +204,12 @@ def proof_is_before_open(entry: dict, session_date: str) -> bool:
         if not pushed or (commit and head != commit):
             return False
         return pushed < cutoff
+    if kind == "excel_bot_safe_push":
+        # Excel Bot job-log push. The clock is the run's updated_at.
+        updated = proof.get("run_updated_at") or ""
+        if not updated or not proof.get("run_id"):
+            return False
+        return updated < cutoff
     return False
 
 

@@ -360,14 +360,19 @@ def test_initial_inputs_and_hash_guard() -> None:
         pass
     else:
         raise AssertionError("08-13 excel was accepted")
-    try:
-        assert_excel_row("AAPL", "2026-09-02")
-    except DroppedInput:
-        pass
-    else:
-        raise AssertionError("09-02 excel was accepted")
+    assert_excel_row("AAPL", "2026-08-31")
+    assert_excel_row("AAPL", "2026-09-02")
     assert_excel_row("AAPL", "2026-09-03")
     assert_excel_row("AAPL", "2026-09-11")
+    for session in ("2026-08-27", "2026-08-28", "2026-09-01", "2026-09-09"):
+        try:
+            assert_excel_row("AAPL", session)
+        except DroppedInput:
+            pass
+        else:
+            raise AssertionError(f"{session} excel was accepted")
+    from src.lever_search_inputs import WALK_FORWARD
+    assert tuple(day for day in WALK_FORWARD if day not in EXCEL_SESSIONS) == EXCEL_DROPPED_SESSIONS
     for day in manifest["finviz_mornings"]:
         for source in day["sources"]:
             if "/snapshots/" not in source["source_path"]:

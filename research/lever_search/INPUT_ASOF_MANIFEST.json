@@ -29,8 +29,12 @@
     "2026-08-28"
   ],
   "excel_sessions": [
+    "2026-08-31",
+    "2026-09-02",
     "2026-09-03",
     "2026-09-04",
+    "2026-09-08",
+    "2026-09-10",
     "2026-09-11"
   ],
   "excel_dropped": [
@@ -204,6 +208,13 @@
         "head_sha": "d17af51c6a4d59b90d26f7207c4762cc0b3a99eb",
         "matched_by": "actions_runs.head_sha"
       }
+    },
+    {
+      "path": "research/lever_search/excel_preopen_proof.csv",
+      "sha256": "04e6b996c450427ea408646b305be91c33f0778c1f6ee167de9be1a08d129ded",
+      "status": "PINNED",
+      "rebuild_match": null,
+      "role": "Excel pre-open proof. Signal columns are allowed only on days this file marks server-proven."
     }
   ],
   "finviz_mornings": [
@@ -3014,20 +3025,20 @@
   },
   "excel_dropped_sessions": [
     {
-      "session_date": "2026-08-31",
-      "reason": "no Actions run with head_sha of a suggestions.csv commit, and no retained PushEvent, before 2026-08-31T13:30:00Z"
+      "session_date": "2026-08-27",
+      "reason": "MISSING in excel_preopen_proof.csv. excel_bot did not exist before the open."
     },
     {
-      "session_date": "2026-09-02",
-      "reason": "commit 5fc8152510be096d60830b5ed0e50aecc049e24b has no head_sha run and no retained PushEvent; the next proven copy starts 2026-09-02T15:20:56Z, after 09:30 ET"
+      "session_date": "2026-08-28",
+      "reason": "MISSING in excel_preopen_proof.csv. Rows for this signal date were seeded later."
     },
     {
-      "session_date": "2026-09-08",
-      "reason": "the 2026-09-04 signal commit has no head_sha run and no retained PushEvent before 2026-09-08T13:30:00Z"
+      "session_date": "2026-09-01",
+      "reason": "MISSING in excel_preopen_proof.csv. No signals were produced for signal_date 2026-08-31."
     },
     {
-      "session_date": "2026-09-10",
-      "reason": "the 2026-09-09 signal commit has no head_sha run and no retained PushEvent before 2026-09-10T13:30:00Z"
+      "session_date": "2026-09-09",
+      "reason": "MISSING in excel_preopen_proof.csv. The only run that day was cancelled before it committed."
     }
   ],
   "excel_signal_columns": [
@@ -3045,19 +3056,69 @@
   ],
   "excel_copies": [
     {
+      "session_date": "2026-08-31",
+      "signal_date": "2026-08-28",
+      "path": "excel_bot/suggestions/suggestions.csv",
+      "commit_sha": "2cc2571f494e95d15a0864e0d6ce01e237665959",
+      "status": "PROVEN",
+      "proof": {
+        "kind": "excel_bot_safe_push",
+        "run_id": 33322096008,
+        "run_name": "Excel Bot (cluster signals daily)",
+        "event": "workflow_dispatch",
+        "run_started_at": "2026-08-30T16:18:44Z",
+        "run_updated_at": "2026-08-30T16:22:25Z",
+        "log_time_utc": "2026-08-30T16:22:22Z",
+        "matched_by": "excel_bot.yml job log [safe-push] pushed; run updated_at checked via gh api",
+        "citation": {
+          "repo": "SRoyaltyy/fullscan",
+          "path": "research/lever_search/excel_preopen_proof.csv",
+          "sha256": "04e6b996c450427ea408646b305be91c33f0778c1f6ee167de9be1a08d129ded"
+        }
+      }
+    },
+    {
+      "session_date": "2026-09-02",
+      "signal_date": "2026-09-01",
+      "path": "excel_bot/suggestions/suggestions.csv",
+      "commit_sha": "5fc8152510be096d60830b5ed0e50aecc049e24b",
+      "status": "PROVEN_BUT_CHANGED",
+      "proof": {
+        "kind": "excel_bot_safe_push",
+        "run_id": 33523682709,
+        "run_name": "Excel Bot (cluster signals daily)",
+        "event": "schedule",
+        "run_started_at": "2026-09-01T15:06:25Z",
+        "run_updated_at": "2026-09-01T15:49:43Z",
+        "log_time_utc": "2026-09-01T15:49:40Z",
+        "matched_by": "excel_bot.yml job log [safe-push] pushed; run updated_at checked via gh api",
+        "citation": {
+          "repo": "SRoyaltyy/fullscan",
+          "path": "research/lever_search/excel_preopen_proof.csv",
+          "sha256": "04e6b996c450427ea408646b305be91c33f0778c1f6ee167de9be1a08d129ded"
+        }
+      }
+    },
+    {
       "session_date": "2026-09-03",
       "signal_date": "2026-09-02",
       "path": "excel_bot/suggestions/suggestions.csv",
       "commit_sha": "a9ed6a403daa6812306820c3b9c7e0bece976f4e",
-      "sha256": "08ecc6381e0ad4cc47000c55d5821214e32117764c5139e14742376327de23c6",
+      "status": "PROVEN",
       "proof": {
-        "kind": "actions_run_start",
-        "run_id": 33647962749,
-        "run_name": "Daily Orchestrator (missed-job guard)",
+        "kind": "excel_bot_safe_push",
+        "run_id": 33643370631,
+        "run_name": "Excel Bot (cluster signals daily)",
         "event": "schedule",
-        "run_started_at": "2026-09-02T15:20:56Z",
-        "head_sha": "a9ed6a403daa6812306820c3b9c7e0bece976f4e",
-        "matched_by": "actions_runs.head_sha"
+        "run_started_at": "2026-09-02T14:38:34Z",
+        "run_updated_at": "2026-09-02T15:09:59Z",
+        "log_time_utc": "2026-09-02T15:09:56Z",
+        "matched_by": "excel_bot.yml job log [safe-push] pushed; run updated_at checked via gh api",
+        "citation": {
+          "repo": "SRoyaltyy/fullscan",
+          "path": "research/lever_search/excel_preopen_proof.csv",
+          "sha256": "04e6b996c450427ea408646b305be91c33f0778c1f6ee167de9be1a08d129ded"
+        }
       }
     },
     {
@@ -3065,15 +3126,65 @@
       "signal_date": "2026-09-03",
       "path": "excel_bot/suggestions/suggestions.csv",
       "commit_sha": "1c8354e489fa34d94ff8bb17f1c492bf0542cfc5",
-      "sha256": "4a3a3e93ef0565ee342f325c59edbde6c6dd3d02e1cdeeb2c77e99ff5b1b98eb",
+      "status": "PROVEN_BUT_CHANGED",
       "proof": {
-        "kind": "actions_run_start",
-        "run_id": 33780154658,
-        "run_name": "Stock Book readiness",
+        "kind": "excel_bot_safe_push",
+        "run_id": 33768369176,
+        "run_name": "Excel Bot (cluster signals daily)",
         "event": "schedule",
-        "run_started_at": "2026-09-03T16:41:44Z",
-        "head_sha": "1c8354e489fa34d94ff8bb17f1c492bf0542cfc5",
-        "matched_by": "actions_runs.head_sha"
+        "run_started_at": "2026-09-03T14:41:46Z",
+        "run_updated_at": "2026-09-03T15:24:14Z",
+        "log_time_utc": "2026-09-03T15:24:11Z",
+        "matched_by": "excel_bot.yml job log [safe-push] pushed; run updated_at checked via gh api",
+        "citation": {
+          "repo": "SRoyaltyy/fullscan",
+          "path": "research/lever_search/excel_preopen_proof.csv",
+          "sha256": "04e6b996c450427ea408646b305be91c33f0778c1f6ee167de9be1a08d129ded"
+        }
+      }
+    },
+    {
+      "session_date": "2026-09-08",
+      "signal_date": "2026-09-04",
+      "path": "excel_bot/suggestions/suggestions.csv",
+      "commit_sha": "284a7ad025f9c349dc64f43f54a3135e4f5f884d",
+      "status": "PROVEN",
+      "proof": {
+        "kind": "excel_bot_safe_push",
+        "run_id": 33969076774,
+        "run_name": "Excel Bot (cluster signals daily)",
+        "event": "schedule",
+        "run_started_at": "2026-09-05T13:30:16Z",
+        "run_updated_at": "2026-09-05T14:16:59Z",
+        "log_time_utc": "2026-09-05T14:16:54Z",
+        "matched_by": "excel_bot.yml job log [safe-push] pushed; run updated_at checked via gh api",
+        "citation": {
+          "repo": "SRoyaltyy/fullscan",
+          "path": "research/lever_search/excel_preopen_proof.csv",
+          "sha256": "04e6b996c450427ea408646b305be91c33f0778c1f6ee167de9be1a08d129ded"
+        }
+      }
+    },
+    {
+      "session_date": "2026-09-10",
+      "signal_date": "2026-09-09",
+      "path": "excel_bot/suggestions/suggestions.csv",
+      "commit_sha": "ee2dc53699635dee7f76f2b5fcb6e6bc9cb05e07",
+      "status": "PROVEN",
+      "proof": {
+        "kind": "excel_bot_safe_push",
+        "run_id": 34365726935,
+        "run_name": "Excel Bot (cluster signals daily)",
+        "event": "schedule",
+        "run_started_at": "2026-09-09T14:45:30Z",
+        "run_updated_at": "2026-09-09T15:32:48Z",
+        "log_time_utc": "2026-09-09T15:32:44Z",
+        "matched_by": "excel_bot.yml job log [safe-push] pushed; run updated_at checked via gh api",
+        "citation": {
+          "repo": "SRoyaltyy/fullscan",
+          "path": "research/lever_search/excel_preopen_proof.csv",
+          "sha256": "04e6b996c450427ea408646b305be91c33f0778c1f6ee167de9be1a08d129ded"
+        }
       }
     },
     {
@@ -3081,15 +3192,21 @@
       "signal_date": "2026-09-10",
       "path": "excel_bot/suggestions/suggestions.csv",
       "commit_sha": "4dc97fcbd5d494194c6af7321993b12f123e61ec",
-      "sha256": "1396b67da50071beea9c4a1d512aa4fb3cb7ad74a340cf35eaf7e0c22f0af88b",
+      "status": "PROVEN_BUT_CHANGED",
       "proof": {
-        "kind": "actions_run_start",
-        "run_id": 34503648211,
-        "run_name": "Stock Book readiness",
+        "kind": "excel_bot_safe_push",
+        "run_id": 34490029194,
+        "run_name": "Excel Bot (cluster signals daily)",
         "event": "schedule",
-        "run_started_at": "2026-09-10T16:41:36Z",
-        "head_sha": "4dc97fcbd5d494194c6af7321993b12f123e61ec",
-        "matched_by": "actions_runs.head_sha"
+        "run_started_at": "2026-09-10T14:35:13Z",
+        "run_updated_at": "2026-09-10T15:22:39Z",
+        "log_time_utc": "2026-09-10T15:22:33Z",
+        "matched_by": "excel_bot.yml job log [safe-push] pushed; run updated_at checked via gh api",
+        "citation": {
+          "repo": "SRoyaltyy/fullscan",
+          "path": "research/lever_search/excel_preopen_proof.csv",
+          "sha256": "04e6b996c450427ea408646b305be91c33f0778c1f6ee167de9be1a08d129ded"
+        }
       }
     }
   ],
@@ -3270,5 +3387,16 @@
         "server_time_matches_api_updated_at": true
       }
     ]
+  },
+  "excel_signal_rule": {
+    "allowed_only_on": "server-proven days in excel_preopen_proof.csv",
+    "citation": {
+      "repo": "SRoyaltyy/fullscan",
+      "path": "research/lever_search/excel_preopen_proof.csv",
+      "sha256": "04e6b996c450427ea408646b305be91c33f0778c1f6ee167de9be1a08d129ded"
+    },
+    "walk_forward": "2026-08-27..2026-09-11",
+    "pre_0914_prices": "computed from mid-session prices; clock-legal; frozen before the next open",
+    "deadline": "22:00 HKT Sunday 2026-09-27"
   }
 }
