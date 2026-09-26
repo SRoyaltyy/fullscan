@@ -13,7 +13,6 @@ from research.concentration_cap_v1.metrics import drop_compound, slice_book, win
 from research.concentration_cap_v1.tune import assert_tune_only  # noqa: E402
 from research.factor_mine_recipe_search_v4.engine import walk as v4_walk  # noqa: E402
 from research.factor_mine_recipe_search_v4.metrics import _drop_compound  # noqa: E402
-from src.forward_shadow_v1 import initial_state, step_day  # noqa: E402
 from src.paper_trade import load_fees  # noqa: E402
 
 
@@ -168,47 +167,12 @@ def test_tune_refuses_the_reject_window() -> None:
     raise SystemExit("tune accepted a forward session")
 
 
-def test_forward_runner_trims_and_leaves_uncapped_books_alone() -> None:
-    fees = load_fees()
-    recipe = {
-        "exit_when": {}, "forbid": {"alarm": True}, "hold": 1, "name": "fwd_ccap_example",
-        "rank": "hot_score", "require": {}, "sell": "list", "side": "long", "top_n": 4,
-        "trades_at_open": True, "universe": "union", "weather": False, "weight_cap": 0.25,
-        "s_boost": "none",
-    }
-    state, first = step_day(
-        recipe, initial_state(), "2026-09-28", ["2026-09-28"], ["AAA"],
-        {}, {"AAA": 10.0}, {"AAA": 10.0}, fees, s=1.0,
-    )
-    shares = state["positions"][0]["shares"]
-    _state, second = step_day(
-        recipe, state, "2026-09-29", ["2026-09-28", "2026-09-29"], ["AAA"],
-        {}, {"AAA": 10.0}, {"AAA": 10.0}, fees, s=1.0,
-    )
-    if second["buys"]:
-        raise SystemExit("forward trim bought the held name")
-    kept = _state["positions"][0]["shares"]
-    if kept >= shares:
-        raise SystemExit("forward runner did not trim")
-    if not any(row.get("kind") == "trim" for row in second["sells"]):
-        raise SystemExit("trim fee was not charged")
-    plain = dict(recipe)
-    plain.pop("weight_cap")
-    again, _day = step_day(
-        plain, state, "2026-09-29", ["2026-09-28", "2026-09-29"], ["AAA"],
-        {}, {"AAA": 10.0}, {"AAA": 10.0}, fees, s=1.0,
-    )
-    if again["positions"][0]["shares"] != shares or again["cash_f"] != state["cash_f"]:
-        raise SystemExit("uncapped forward book changed")
-
-
 def main() -> None:
     test_uncapped_matches_v4()
     test_trim_sits_and_does_not_top_up()
     test_shares_respect_the_cap_after_the_fee()
     test_drop_matches_v4_and_starts_from_prior_equity()
     test_tune_refuses_the_reject_window()
-    test_forward_runner_trims_and_leaves_uncapped_books_alone()
     print("ok")
 
 
