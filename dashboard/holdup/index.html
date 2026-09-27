@@ -27,6 +27,11 @@
  canvas{width:100%;height:280px;background:var(--card);border:1px solid var(--line);border-radius:10px}
  h2{font-size:14px;margin:14px 0 6px;color:#aeb9cf}
  .day{background:var(--day);border:1px solid var(--line);border-radius:10px;padding:8px 10px;margin:0 0 8px}
+ .day.pending{border-color:var(--gold);background:#1c1810}
+ .badge{display:inline-block;margin-left:6px;padding:1px 6px;border-radius:999px;font-size:10px;border:1px solid var(--line);color:var(--mut);vertical-align:1px}
+ .badge.pending{color:var(--gold);border-color:var(--gold)}
+ .badge.filled{color:var(--pos);border-color:#166534}
+ .badge.seeded{color:var(--dim)}
  .day h3{margin:0 0 4px;font-size:13px;font-family:ui-monospace,Menlo,Consolas,monospace}
  .hd{display:flex;flex-wrap:wrap;gap:6px 14px;color:var(--mut);font-variant-numeric:tabular-nums;margin:0 0 6px}
  .pills{display:flex;flex-wrap:wrap;gap:5px;margin:0 0 4px}
@@ -56,8 +61,11 @@
  <p class="sub">Day-by-day book. The page is drawn from the append-only log.</p>
  <div class="lock">
   <b>Rules locked. Luck N 22,017. Records are append-only.</b>
-  A past day is never regenerated. Each run appends only the next missing session, and a close is a new record — the buy line stays as written.
+  Picks for day D are sealed before the US open on D. Fills and P&amp;L for D are added after D's close.
+  A past line is never regenerated. The 31 sessions through 2026-09-25 are a seeded backfill and stay as written.
+  A later day is a plan, then a separate fill. Pending days are planned and not yet filled.
   Primary cost is the Futubull fee plus 0.5% per side. Fills are that session's official open. No orders are sent.
+  The plan run is 13:05 UTC weekdays. The fill run is 21:30 UTC weekdays.
  </div>
  <p id="skip" class="skip" hidden></p>
  <div class="cards" id="cards"></div>
@@ -139,88 +147,135 @@ function draw(sessions){
   }
 }
 
+function pills(rows, html, empty){
+  return rows && rows.length ? rows.map(html).join("") : `<span class="pill flat">${empty}</span>`;
+}
+function legPills(legs){
+  return pills(legs, leg =>
+    `<span class="pill">${esc(leg.ticker)} ${esc(leg.leg)} ${esc(leg.bar_date)}</span>`, "none");
+}
+function dayCard(view, prevEquity, byClose){
+  if (view.mode === "pending"){
+    const day = view.plan;
+    const picks = pills(day.picks, p =>
+      `<span class="pill buy">#${p.rank} ${esc(p.ticker)} ${(p.sources || []).join("+")}</span>`, "no pick");
+    const sells = pills(day.planned_sells, s =>
+      `<span class="pill sell">${esc(s.ticker)} ${s.shares} ${esc(s.reason)}</span>`, "no planned sell");
+    return `<article class="day pending">
+      <h3>${esc(day.date)} <span class="badge pending">pending</span></h3>
+      <div class="hd"><span>planned, not yet filled</span><span>holdup ${day.holdup_on ? "on" : "off"}</span><span>S ${day.morning_s == null ? "null" : day.morning_s}</span><span class="mut">${esc((day.sha256 || "").slice(0, 12))}</span></div>
+      <div class="lab">Ranked picks, sealed before the open. No prices from this session.</div>
+      <div class="pills">${picks}</div>
+      <div class="lab">Planned sells</div>
+      <div class="pills">${sells}</div>
+      <div class="lab">Excluded unexplained legs</div>
+      <div class="pills">${legPills(day.excluded_unexplained_legs)}</div>
+    </article>`;
+  }
+  const day = view.book;
+  const ret = Number(day.equity_primary) / prevEquity - 1;
+  const badge = view.mode === "seeded"
+    ? `<span class="badge seeded">seeded backfill</span>`
+    : `<span class="badge filled">filled after the close</span>`;
+  const buys = pills(day.buys, b =>
+    `<span class="pill buy">#${b.rank} ${esc(b.ticker)} ${b.shares} @ ${px(b.fill)} ${(b.sources || []).join("+")}</span>`, "no buy");
+  const sells = pills(day.sells, s =>
+    `<span class="pill sell">${esc(s.ticker)} ${s.shares} @ ${px(s.fill)} ${esc(s.reason)}</span>`, "no sell");
+  const held = pills(day.holdings, h =>
+    `<span class="pill">${esc(h.ticker)} ${h.shares} from ${esc(h.entry_date)} hold ${h.min_hold}</span>`, "flat");
+  const legs = view.mode === "filled"
+    ? (view.plan.excluded_unexplained_legs || []).concat(day.excluded_on_fill || [])
+    : (day.excluded_unexplained_legs || []);
+  const dayCloses = pills(byClose[day.date], c =>
+    `<span class="pill ${cls(c.pnl_primary)}">${esc(c.ticker)} ${money(c.pnl_primary)}</span>`, "none");
+  const missed = (day.unfilled || []).map(u =>
+    `<span class="pill flat">${esc(u.side)} ${esc(u.ticker)} ${esc(u.reason)}</span>`).join("");
+  return `<article class="day ${view.mode === "seeded" ? "seeded" : "filled"}">
+    <h3>${esc(day.date)} <span class="${cls(ret)}">${pct(ret)}</span>${badge}</h3>
+    <div class="hd">
+      <span>equity ${money(day.equity_primary)}</span>
+      <span>cash ${money(day.cash_primary)}</span>
+      <span>holdup ${day.holdup_on ? "on" : "off"}</span>
+      <span>S ${day.morning_s == null ? "null" : day.morning_s}</span>
+      <span class="mut">${esc((day.sha256 || "").slice(0, 12))}</span>
+    </div>
+    <div class="lab">${view.mode === "seeded" ? "Buys — seeded fill at that day's open" : "Buys — filled at that day's open"}</div>
+    <div class="pills">${buys}</div>
+    <div class="lab">Sells</div>
+    <div class="pills">${sells}</div>
+    <div class="lab">Closed-trade P&amp;L, 0.5%/side</div>
+    <div class="pills">${dayCloses}</div>
+    <div class="lab">Holdings after the day</div>
+    <div class="pills">${held}</div>
+    <div class="lab">Excluded unexplained legs</div>
+    <div class="pills">${legPills(legs)}</div>
+    ${missed ? `<div class="lab">Unfilled</div><div class="pills">${missed}</div>` : ""}
+  </article>`;
+}
+
 function render(rows, status){
   window.__rows = rows;
   const sessions = rows.filter(r => r.kind === "session");
+  const plans = rows.filter(r => r.kind === "plan");
+  const fills = rows.filter(r => r.kind === "fill");
   const closes = rows.filter(r => r.kind === "close");
-  const last = sessions[sessions.length - 1];
+  const fillBy = {};
+  fills.forEach(row => { fillBy[row.date] = row; });
+  const curve = sessions.concat(fills).slice().sort((a, b) => a.date < b.date ? -1 : a.date > b.date ? 1 : 0);
+  window.__curve = curve;
+  const last = curve[curve.length - 1];
   const equity = last ? Number(last.equity_primary) : CAPITAL;
   const realised = closes.reduce((sum, row) => sum + Number(row.pnl_primary), 0);
-  const openN = last ? last.holdings.length : 0;
+  const openN = last ? (last.holdings || []).length : 0;
+  const pendingN = plans.filter(row => !fillBy[row.date]).length;
   const cards = [
-    ["Sessions", String(sessions.length)],
+    ["Sessions", String(sessions.length + fills.length)],
     ["Equity", money(equity)],
     ["Since $10,000", pct(equity / CAPITAL - 1)],
     ["Realised P&L", money(realised)],
     ["Closed trades", String(closes.length)],
     ["Open names", String(openN)],
+    ["Pending", String(pendingN)],
   ];
   document.getElementById("cards").innerHTML = cards.map(([k, v]) => {
     const klass = k === "Since $10,000" || k === "Realised P&L" || k === "Equity"
       ? cls(k === "Equity" ? equity - CAPITAL : (k === "Since $10,000" ? equity - CAPITAL : realised))
-      : "";
+      : (k === "Pending" && pendingN ? "gold" : "");
     return `<div class="card"><span>${esc(k)}</span><b class="${klass}">${esc(v)}</b></div>`;
   }).join("");
-  draw(sessions);
+  draw(curve);
   const byClose = {};
   closes.forEach(row => {
     (byClose[row.date] = byClose[row.date] || []).push(row);
   });
-  document.getElementById("days").innerHTML = sessions.slice().reverse().map((day, rev) => {
-    const i = sessions.length - 1 - rev;
-    const prev = i === 0 ? CAPITAL : Number(sessions[i - 1].equity_primary);
-    const ret = Number(day.equity_primary) / prev - 1;
-    const buys = (day.buys || []).map(b =>
-      `<span class="pill buy">#${b.rank} ${esc(b.ticker)} ${b.shares} @ ${px(b.fill)} ${(b.sources || []).join("+")}</span>`
-    ).join("") || `<span class="pill flat">no buy</span>`;
-    const sells = (day.sells || []).map(s =>
-      `<span class="pill sell">${esc(s.ticker)} ${s.shares} @ ${px(s.fill)} ${esc(s.reason)}</span>`
-    ).join("") || `<span class="pill flat">no sell</span>`;
-    const held = (day.holdings || []).map(h =>
-      `<span class="pill">${esc(h.ticker)} ${h.shares} from ${esc(h.entry_date)} hold ${h.min_hold}</span>`
-    ).join("") || `<span class="pill flat">flat</span>`;
-    const legs = (day.excluded_unexplained_legs || []).map(leg =>
-      `<span class="pill">${esc(leg.ticker)} ${esc(leg.leg)} ${esc(leg.bar_date)}</span>`
-    ).join("") || `<span class="pill flat">none</span>`;
-    const dayCloses = (byClose[day.date] || []).map(c =>
-      `<span class="pill ${cls(c.pnl_primary)}">${esc(c.ticker)} ${money(c.pnl_primary)}</span>`
-    ).join("") || `<span class="pill flat">none</span>`;
-    const missed = (day.unfilled || []).map(u =>
-      `<span class="pill flat">${esc(u.side)} ${esc(u.ticker)} ${esc(u.reason)}</span>`
-    ).join("");
-    return `<article class="day">
-      <h3>${esc(day.date)} <span class="${cls(ret)}">${pct(ret)}</span></h3>
-      <div class="hd">
-        <span>equity ${money(day.equity_primary)}</span>
-        <span>cash ${money(day.cash_primary)}</span>
-        <span>holdup ${day.holdup_on ? "on" : "off"}</span>
-        <span>S ${day.morning_s == null ? "null" : day.morning_s}</span>
-        <span class="mut">${esc((day.sha256 || "").slice(0, 12))}</span>
-      </div>
-      <div class="lab">Buys — planned fill is that day's open</div>
-      <div class="pills">${buys}</div>
-      <div class="lab">Sells</div>
-      <div class="pills">${sells}</div>
-      <div class="lab">Closed-trade P&amp;L, 0.5%/side</div>
-      <div class="pills">${dayCloses}</div>
-      <div class="lab">Holdings after the day</div>
-      <div class="pills">${held}</div>
-      <div class="lab">Excluded unexplained legs</div>
-      <div class="pills">${legs}</div>
-      ${missed ? `<div class="lab">Unfilled</div><div class="pills">${missed}</div>` : ""}
-    </article>`;
-  }).join("");
+  const views = sessions.map(day => ({mode: "seeded", date: day.date, book: day})).concat(
+    plans.map(plan => fillBy[plan.date]
+      ? {mode: "filled", date: plan.date, plan: plan, book: fillBy[plan.date]}
+      : {mode: "pending", date: plan.date, plan: plan})
+  );
+  views.sort((a, b) => a.date < b.date ? 1 : a.date > b.date ? -1 : 0);
+  const equityBefore = {};
+  curve.forEach((row, i) => {
+    equityBefore[row.date] = i === 0 ? CAPITAL : Number(curve[i - 1].equity_primary);
+  });
+  document.getElementById("days").innerHTML = views.map(view =>
+    dayCard(view, view.mode === "pending" ? null : equityBefore[view.date], byClose)
+  ).join("");
   const ordered = closes.slice().reverse();
   document.getElementById("closes").innerHTML = ordered.map(c =>
     `<tr><td>${esc(c.date)}</td><td class="tick">${esc(c.ticker)}</td><td>${c.shares}</td><td>${px(c.entry_px)} ${esc(c.entry_date)}</td><td>${px(c.fill)}</td><td>${esc(c.reason)}</td><td class="${cls(c.pnl_primary)}">${money(c.pnl_primary)}</td></tr>`
   ).join("") || `<tr><td colspan="7" class="mut">No closed trade yet.</td></tr>`;
   document.getElementById("foot").textContent =
-    `${sessions.length} sessions, ${closes.length} close records, ${rows.length} sealed lines. ` +
+    `${sessions.length} seeded sessions, ${plans.length} plans, ${fills.length} fills, ${closes.length} close records, ${rows.length} sealed lines. ` +
+    `Picks for day D are sealed before the US open. Fills and P&L are added after the close. ` +
     `Recipe ${rows[0] ? rows[0].recipe : "union_hot_n4_holdup__w0"}. Luck N 22,017.`;
   const skip = document.getElementById("skip");
   if (status && status.latest_skip){
     skip.hidden = false;
     skip.textContent = `Next session ${status.date || ""} was not appended: ${status.latest_skip}`;
+  } else if (status && status.note){
+    skip.hidden = false;
+    skip.textContent = status.note;
   }
 }
 
@@ -233,7 +288,7 @@ fetch("log.json").then(r => {
   document.getElementById("days").textContent = "The log could not be read. " + err;
 });
 window.addEventListener("resize", () => {
-  if (window.__rows) draw(window.__rows.filter(r => r.kind === "session"));
+  if (window.__curve) draw(window.__curve);
 });
 </script>
 </body>
