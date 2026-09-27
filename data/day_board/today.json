@@ -1,12 +1,12 @@
 {
   "date": "2026-09-27",
-  "generated_at": "2026-09-27T15:56:50.493298-04:00",
+  "generated_at": "2026-09-27T15:56:55.995742-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
     "ok": 1,
-    "partial": 1,
-    "fail": 6,
+    "partial": 2,
+    "fail": 5,
     "n": 8
   },
   "buy_1d": [],
@@ -132,6 +132,24 @@
         }
       ],
       "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -1.85, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': 0.0, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -0.77, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -4.04, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -0.1, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.32, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -0.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-09-27\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+    },
+    {
+      "key": "join",
+      "title": "Join / match rank",
+      "date": "2026-09-27",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-27T15:56:55.839983-04:00",
+      "files": [
+        {
+          "path": "data/join/2026-09-27_ranked.csv",
+          "ok": true,
+          "reason": "",
+          "size": 2231946,
+          "preview": "5899 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 FORM, DOCU, NVDA, PLAB, NICE"
+        }
+      ],
+      "preview": "5899 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 FORM, DOCU, NVDA, PLAB, NICE"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
