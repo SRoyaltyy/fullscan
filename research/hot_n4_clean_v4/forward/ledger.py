@@ -67,8 +67,7 @@ def load(folder: Path | None = None) -> list[dict]:
     if len(log_lines) != len(led_lines):
         raise RuntimeError("ledger length")
     records = []
-    session_dates = []
-    close_keys = []
+    state = _new_state()
     for seq, (raw, led_raw) in enumerate(zip(log_lines, led_lines), start=1):
         try:
             obj = json.loads(raw)
@@ -94,30 +93,185 @@ def load(folder: Path | None = None) -> list[dict]:
             raise RuntimeError(f"ledger identity seq {seq}")
         if obj.get("recipe") != RECIPE:
             raise RuntimeError(f"recipe seq {seq}")
-        kind = obj.get("kind")
-        if kind == "session":
-            if obj["date"] in session_dates:
-                raise RuntimeError("duplicate session")
-            session_dates.append(obj["date"])
-            for buy in obj.get("buys") or []:
-                if "pnl" in buy or "pnl_primary" in buy:
-                    raise RuntimeError("pnl on a buy")
-            for sell in obj.get("sells") or []:
-                if "pnl" in sell or "pnl_primary" in sell:
-                    raise RuntimeError("pnl on a sell")
-        elif kind == "close":
-            key = (obj["date"], obj["ticker"], obj["entry_date"])
-            if key in close_keys:
-                raise RuntimeError("duplicate close")
-            close_keys.append(key)
-            if "pnl_primary" not in obj:
-                raise RuntimeError("close without pnl")
-        else:
-            raise RuntimeError(f"kind {kind}")
+        _note(state, obj)
         records.append(obj)
-    if session_dates != sorted(session_dates):
-        raise RuntimeError("session order")
+    _finish(state)
     return records
+
+
+_PLAN_FORBIDDEN = frozenset({
+    "buys", "sells", "unfilled", "holdings", "equity_primary", "cash_primary",
+    "fill", "open", "close", "pnl", "pnl_primary",
+})
+_PICK_FORBIDDEN = frozenset({"fill", "open", "close", "shares", "pnl", "pnl_primary"})
+_PLANNED_SELL_FORBIDDEN = frozenset({"fill", "open", "close", "pnl", "pnl_primary"})
+
+
+def _new_state() -> dict:
+    return {
+        "close_keys": [],
+        "closes": {},
+        "fill_dates": [],
+        "parents": {},
+        "plan_dates": [],
+        "plan_sha": {},
+        "plans": {},
+        "session_dates": [],
+    }
+
+
+def _state_from(records: list[dict]) -> dict:
+    state = _new_state()
+    for record in records:
+        _note(state, record)
+    _finish(state)
+    return state
+
+
+def _reject_keys(row: dict, banned: frozenset, label: str) -> None:
+    found = banned.intersection(row)
+    if found:
+        raise RuntimeError(f"{label} has {sorted(found)[0]}")
+
+
+def _note(state: dict, obj: dict) -> None:
+    """Accept one sealed record. Raises when the append would break the book."""
+    kind = obj.get("kind")
+    if kind == "session":
+        if state["plan_dates"]:
+            raise RuntimeError("session after plan")
+        if obj["date"] in state["session_dates"]:
+            raise RuntimeError("duplicate session")
+        if state["session_dates"] and obj["date"] <= state["session_dates"][-1]:
+            raise RuntimeError("session order")
+        state["session_dates"].append(obj["date"])
+        for buy in obj.get("buys") or []:
+            if "pnl" in buy or "pnl_primary" in buy:
+                raise RuntimeError("pnl on a buy")
+        for sell in obj.get("sells") or []:
+            if "pnl" in sell or "pnl_primary" in sell:
+                raise RuntimeError("pnl on a sell")
+        state["parents"][obj["date"]] = obj
+    elif kind == "plan":
+        _reject_keys(obj, _PLAN_FORBIDDEN, "plan")
+        for pick in obj.get("picks") or []:
+            _reject_keys(pick, _PICK_FORBIDDEN, "pick")
+        for sell in obj.get("planned_sells") or []:
+            _reject_keys(sell, _PLANNED_SELL_FORBIDDEN, "planned sell")
+        if not isinstance(obj.get("picks"), list) or not isinstance(obj.get("planned_sells"), list):
+            raise RuntimeError("plan shape")
+        if not isinstance(obj.get("excluded_unexplained_legs"), list):
+            raise RuntimeError("plan exclusions")
+        if state["session_dates"] and obj["date"] <= state["session_dates"][-1]:
+            raise RuntimeError("plan date")
+        if state["plan_dates"] and obj["date"] <= state["plan_dates"][-1]:
+            raise RuntimeError("plan order")
+        if state["plan_dates"] and state["plan_dates"][-1] not in state["fill_dates"]:
+            raise RuntimeError("previous plan is not filled")
+        if obj["date"] in state["plan_dates"]:
+            raise RuntimeError("duplicate plan")
+        state["plan_dates"].append(obj["date"])
+        state["plan_sha"][obj["date"]] = obj["sha256"]
+        state["plans"][obj["date"]] = obj
+    elif kind == "fill":
+        if obj["date"] not in state["plan_sha"]:
+            raise RuntimeError("fill without plan")
+        if state["fill_dates"] and obj["date"] <= state["fill_dates"][-1]:
+            raise RuntimeError("fill order")
+        if obj["date"] in state["fill_dates"]:
+            raise RuntimeError("duplicate fill")
+        _match_fill(state["plans"][obj["date"]], obj)
+        state["fill_dates"].append(obj["date"])
+        state["parents"][obj["date"]] = obj
+    elif kind == "close":
+        key = (obj["date"], obj["ticker"], obj["entry_date"])
+        if key in state["close_keys"]:
+            raise RuntimeError("duplicate close")
+        state["close_keys"].append(key)
+        if "pnl_primary" not in obj:
+            raise RuntimeError("close without pnl")
+        parent = state["parents"].get(obj["date"])
+        if parent is None:
+            raise RuntimeError("close without session or fill")
+        sell_names = {row["ticker"] for row in parent.get("sells") or []}
+        if obj["ticker"] not in sell_names:
+            raise RuntimeError("close is not a sell")
+        state["closes"].setdefault(obj["date"], []).append(obj)
+    else:
+        raise RuntimeError(f"kind {kind}")
+
+
+def _match_fill(plan: dict, fill: dict) -> None:
+    if fill.get("plan_sha256") != plan.get("sha256"):
+        raise RuntimeError("fill does not match plan")
+    picks = {row["ticker"]: row for row in plan.get("picks") or []}
+    planned = {row["ticker"]: row for row in plan.get("planned_sells") or []}
+    buy_names = set()
+    for buy in fill.get("buys") or []:
+        row = picks.get(buy["ticker"])
+        if row is None:
+            raise RuntimeError("fill buy is not a pick")
+        if int(buy["rank"]) != int(row["rank"]):
+            raise RuntimeError("fill rank")
+        buy_names.add(buy["ticker"])
+    sell_names = set()
+    for sell in fill.get("sells") or []:
+        row = planned.get(sell["ticker"])
+        if row is None:
+            raise RuntimeError("fill sell is not planned")
+        if sell.get("reason") != row.get("reason") or int(sell["shares"]) != int(row["shares"]):
+            raise RuntimeError("fill sell")
+        sell_names.add(sell["ticker"])
+    unfilled_buys = set()
+    unfilled_sells = set()
+    for row in fill.get("unfilled") or []:
+        side = row.get("side")
+        if side == "buy":
+            if row["ticker"] not in picks:
+                raise RuntimeError("unfilled buy is not a pick")
+            unfilled_buys.add(row["ticker"])
+        elif side == "sell":
+            if row["ticker"] not in planned:
+                raise RuntimeError("unfilled sell is not planned")
+            unfilled_sells.add(row["ticker"])
+        else:
+            raise RuntimeError("unfilled side")
+    held_after = {row["ticker"] for row in fill.get("holdings") or []}
+    for ticker in picks:
+        if ticker in buy_names or ticker in unfilled_buys or ticker in held_after:
+            continue
+        raise RuntimeError("pick missing from fill")
+    for ticker in planned:
+        if ticker not in sell_names and ticker not in unfilled_sells:
+            raise RuntimeError("planned sell missing from fill")
+
+
+def _finish(state: dict) -> None:
+    if state["session_dates"] != sorted(state["session_dates"]):
+        raise RuntimeError("session order")
+    if state["plan_dates"] != sorted(state["plan_dates"]):
+        raise RuntimeError("plan order")
+    if state["fill_dates"] != sorted(state["fill_dates"]):
+        raise RuntimeError("fill order")
+    for day, parent in state["parents"].items():
+        if parent.get("kind") not in ("session", "fill"):
+            continue
+        sells = [row["ticker"] for row in parent.get("sells") or []]
+        closed = [row["ticker"] for row in state["closes"].get(day, [])]
+        if sorted(sells) != sorted(closed):
+            raise RuntimeError("closes do not match sells")
+
+
+def open_plan(records: list[dict]) -> dict | None:
+    filled = {row["date"] for row in records if row["kind"] == "fill"}
+    for row in records:
+        if row["kind"] == "plan" and row["date"] not in filled:
+            return row
+    return None
+
+
+def book_dates(records: list[dict]) -> list[str]:
+    return [row["date"] for row in records if row["kind"] in ("session", "fill")]
 
 
 def session_dates(records: list[dict]) -> list[str]:
@@ -139,26 +293,7 @@ def append_records(bodies: list[dict], folder: Path | None = None) -> list[dict]
     folder.mkdir(parents=True, exist_ok=True)
     existing = load(folder)
     start = len(existing)
-    dates = session_dates(existing)
-    close_keys = {
-        (row["date"], row["ticker"], row["entry_date"])
-        for row in existing if row["kind"] == "close"
-    }
-    for body in bodies:
-        kind = body.get("kind")
-        if kind == "session":
-            if body["date"] in dates:
-                raise RuntimeError("session exists")
-            if dates and body["date"] <= dates[-1]:
-                raise RuntimeError("session order")
-            dates.append(body["date"])
-        elif kind == "close":
-            key = (body["date"], body["ticker"], body["entry_date"])
-            if key in close_keys:
-                raise RuntimeError("close exists")
-            close_keys.add(key)
-        else:
-            raise RuntimeError(f"kind {kind}")
+    state = _state_from(existing)
     log_file = log_path(folder)
     led_file = ledger_path(folder)
     before_log = log_file.read_bytes() if log_file.is_file() else b""
@@ -170,6 +305,7 @@ def append_records(bodies: list[dict], folder: Path | None = None) -> list[dict]
         if body.get("recipe") != RECIPE:
             raise RuntimeError("recipe")
         record, line = seal(body)
+        _note(state, record)
         seq = start + offset + 1
         led = {
             "bytes": len(line),
@@ -182,6 +318,7 @@ def append_records(bodies: list[dict], folder: Path | None = None) -> list[dict]
         log_out.append(line)
         led_out.append(canonical_bytes(led))
         sealed.append(record)
+    _finish(state)
     with log_file.open("ab") as handle:
         for line in log_out:
             handle.write(line)

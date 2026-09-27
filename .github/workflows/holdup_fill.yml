@@ -1,19 +1,18 @@
-name: Holdup append-only forward
+name: Holdup post-close fill
 
-# Weekdays after Pre-Open ALL (09:55 UTC) has had time to land the
-# morning files, and before the US cash open.
-# 13:05 UTC = 9:05 AM ET during EDT (UTC-4) and 8:05 AM ET during EST
-# (UTC-5). Hong Kong Time is 9:05 PM year-round (UTC+8, no DST).
-# The cash open is 9:30 AM ET, which is 1:30 PM UTC / 9:30 PM HKT in
-# EDT and 2:30 PM UTC / 10:30 PM HKT in EST.
-# This run seals a PLAN for session D only: ranked picks, planned sells,
-# and excluded names. It does not read D's prices. The fill is a separate
-# post-close workflow. If the pre-open inputs are missing, the log is not
-# touched and the reason is written to skips.jsonl.
+# Weekdays after the US cash close and after Yahoo has session D's daily bar.
+# 21:30 UTC = 5:30 PM ET during EDT (UTC-4) and 4:30 PM ET during EST
+# (UTC-5). Hong Kong Time is 5:30 AM the next calendar day (UTC+8, no DST).
+# The cash close is 4:00 PM ET, which is 20:00 UTC in EDT and 21:00 UTC in EST.
+# A bar is treated as final only at or after 21:15 UTC on that session, so
+# this run is past the close in both EDT and EST. The job is retry-safe:
+# a second run of a sealed fill does nothing, and a missing bar appends nothing.
+# The fill is written only when a sealed plan for D exists, and it does not
+# edit that plan.
 
 on:
   schedule:
-    - cron: "5 13 * * 1-5"
+    - cron: "30 21 * * 1-5"
   workflow_dispatch:
 
 permissions:
@@ -24,7 +23,7 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  append:
+  fill:
     runs-on: ubuntu-latest
     timeout-minutes: 45
     steps:
@@ -36,12 +35,12 @@ jobs:
           python-version: "3.12"
       - name: Install bar dependencies
         run: pip install numpy pandas pyarrow yfinance
-      - name: Theme Radar history for the pre-open panel
+      - name: Theme Radar history for the frozen panel
         run: |
           set -euo pipefail
           if ! git clone --filter=blob:none --no-checkout \
               https://github.com/SRoyaltyy/theme-radar.git vendor/theme-radar; then
-            echo "theme-radar clone failed; the forward step will log the missing panel"
+            echo "theme-radar clone failed; the price refresh will fetch held names and IWM only"
             exit 0
           fi
           git -C vendor/theme-radar sparse-checkout init --cone
@@ -51,12 +50,12 @@ jobs:
       - name: Refresh forward prices
         id: prices
         run: PYTHONHASHSEED=0 python3 research/hot_n4_clean_v4/forward/prices.py
-      - name: Seal the pre-open plan
-        id: plan
+      - name: Seal the post-close fill
+        id: fill
         if: success()
         env:
           HOLDUP_GIT_REF: origin/main
-          HOLDUP_MODE: plan
+          HOLDUP_MODE: fill
         run: PYTHONHASHSEED=0 python3 research/hot_n4_clean_v4/forward/forward.py
       - name: Commit the append
         if: always()
@@ -83,9 +82,9 @@ jobs:
             echo "no change"
             exit 0
           fi
-          git commit -m "Seal the next holdup plan."
+          git commit -m "Seal the holdup fill."
           git pull --rebase origin main
           git push origin HEAD:main
       - name: Fail the job when the book halted
-        if: steps.prices.outcome == 'failure' || steps.plan.outcome == 'failure'
+        if: steps.prices.outcome == 'failure' || steps.fill.outcome == 'failure'
         run: exit 1

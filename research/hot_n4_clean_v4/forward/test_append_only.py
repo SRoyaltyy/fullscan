@@ -71,7 +71,14 @@ def _temp() -> None:
             raise SystemExit("duplicate session was accepted")
         if log_path(folder).read_bytes() != before:
             raise SystemExit("duplicate session wrote")
-        append_records([_body("2026-08-14"), _body("2026-08-14", "close")], folder)
+        day = _body("2026-08-14")
+        day["sells"] = [{
+            "fill": 1.1,
+            "reason": "hold-expired",
+            "shares": 1,
+            "ticker": "ZZ",
+        }]
+        append_records([day, _body("2026-08-14", "close")], folder)
         if not log_path(folder).read_bytes().startswith(before):
             raise SystemExit("later append rewrote the first line")
         records = load(folder)
