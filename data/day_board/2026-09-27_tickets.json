@@ -1,6 +1,6 @@
 {
   "date": "2026-09-27",
-  "generated_at": "2026-09-27T15:59:21.781524-04:00",
+  "generated_at": "2026-09-27T15:59:17.291747-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -82,6 +82,124 @@
   "sectors": {},
   "lands": [
     {
+      "key": "news_actions",
+      "title": "News actions",
+      "date": "2026-09-27",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-27T15:55:22.221444-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-09-27_actions.json",
+          "ok": true,
+          "reason": "",
+          "size": 40322,
+          "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions"
+        },
+        {
+          "path": "01_daily/news/2026-09-27_actions.md",
+          "ok": true,
+          "reason": "",
+          "size": 9020,
+          "preview": "# News \u2192 Actions v4 (full framework) \u2014 2026-09-27T15:55:22.208914-04:00\nraw=300 unique_events=3 tickers=50"
+        }
+      ],
+      "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions \u00b7 # News \u2192 Actions v4 (full framework) \u2014 2026-09-27T15:55:22.208914-04:00\nraw=300 unique_events=3 tickers=50"
+    },
+    {
+      "key": "news_parse",
+      "title": "News parse",
+      "date": "2026-09-27",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-27T15:56:05.418471-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-09-27_parsed.json",
+          "ok": true,
+          "reason": "",
+          "size": 211837,
+          "preview": "raw=200 usable=26 single=22 \u00b7 Wall Street Braces for Jobs and Inflation Data as Rate Hike Fears Loom - finance | US Treasury Yields Top 5% and Fed October Rate Hike Odds Exceed 60% \u2014 Taiwan Sto | All Eyes on U.S. Jobs and Inflation Data as October Rate Hike Signals Take Cente | Markets Brace for U.S. Jobs, Inflation Data With Focus on Possible October Fed R | Fed Interest Rate Forecast: PCE Report Nears as 10-Year Yield Remains Above 5% -"
+        },
+        {
+          "path": "01_daily/news/2026-09-27_parsed.md",
+          "ok": true,
+          "reason": "",
+          "size": 6416,
+          "preview": "# News Parse v2 \u2014 2026-09-27T15:56:04.896691-04:00\nWindow\u224824h | news_mode=on | raw=200 | usable=26 | single_name=22 | noise_dropped=150\nusable polarity={'+': 1, '-': 10, 'mixed': 1, 'neutral': 14}"
+        }
+      ],
+      "preview": "raw=200 usable=26 single=22 \u00b7 Wall Street Braces for Jobs and Inflation Data as Rate Hike Fears Loom - finance | US Treasury Yields Top 5% and Fed October Rate Hike Odds Exceed 60% \u2014 Taiwan Sto | All Eyes on U.S. Jobs and Inflation Data as October Rate Hike Signals Take Cente | Markets Brace for U.S. Jobs, Inflation Data With Focus on Possible October Fed R | Fed Interest Rate Forecast: PCE Report Nears as 10-Year Yield Remains Above 5% - \u00b7 # News Parse v2 \u2014 2026-09-27T15:56:04.896691-04:00\nWindow\u224824h | news_mode=on | raw=200 | usable=26 | single_name=22 | noise_dropped=150\nusable polarity={'+': 1, '-': 10, 'mixed': 1, 'neutral': 14}"
+    },
+    {
+      "key": "finviz",
+      "title": "Finviz universe export",
+      "date": "2026-09-27",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-27T15:56:27.510860-04:00",
+      "files": [
+        {
+          "path": "data/exports/finviz_2026-09-27.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11285611,
+          "preview": "11678 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC"
+        },
+        {
+          "path": "data/finviz/latest.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11446883,
+          "preview": "11680 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+        }
+      ],
+      "preview": "11678 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC \u00b7 11680 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+    },
+    {
+      "key": "universe",
+      "title": "Universe labels",
+      "date": "2026-09-27",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-27T15:56:37.825856-04:00",
+      "files": [
+        {
+          "path": "data/universe/2026-09-27_membership.csv",
+          "ok": true,
+          "reason": "",
+          "size": 1122042,
+          "preview": "5899 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
+        }
+      ],
+      "preview": "5899 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
+    },
+    {
+      "key": "weather",
+      "title": "Weather / regime",
+      "date": "2026-09-27",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-27T15:56:50.364259-04:00",
+      "files": [
+        {
+          "path": "01_daily/weather/2026-09-27_weather.json",
+          "ok": true,
+          "reason": "",
+          "size": 9490,
+          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -1.85, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': 0.0, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -0.77, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -4.04, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -0.1, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.32, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -0.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}"
+        },
+        {
+          "path": "01_daily/weather/2026-09-27_weather.md",
+          "ok": true,
+          "reason": "",
+          "size": 5232,
+          "preview": "# Weather report \u2014 2026-09-27\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+        }
+      ],
+      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -1.85, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': 0.0, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -0.77, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -4.04, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -0.1, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.32, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -0.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-09-27\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+    },
+    {
       "key": "join",
       "title": "Join / match rank",
       "date": "2026-09-27",
@@ -141,146 +259,7 @@
         }
       ],
       "preview": "2660 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 FIGS, AAPL, AUPH, RGEN, GCT \u00b7 2660 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 RGEN, FIGS, ICLR, AAPL, BJ"
-    },
-    {
-      "key": "weather",
-      "title": "Weather / regime",
-      "date": "2026-09-27",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-27T15:57:48.774467-04:00",
-      "files": [
-        {
-          "path": "01_daily/weather/2026-09-27_weather.json",
-          "ok": true,
-          "reason": "",
-          "size": 9490,
-          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -1.85, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': 0.0, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -0.77, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -4.04, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -0.1, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.32, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -0.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}"
-        },
-        {
-          "path": "01_daily/weather/2026-09-27_weather.md",
-          "ok": true,
-          "reason": "",
-          "size": 5232,
-          "preview": "# Weather report \u2014 2026-09-27\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
-        }
-      ],
-      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -1.85, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': 0.0, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -0.77, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -4.04, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -0.1, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.32, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -0.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-09-27\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
-    },
-    {
-      "key": "join",
-      "title": "Join / match rank",
-      "date": "2026-09-27",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-27T15:57:55.466860-04:00",
-      "files": [
-        {
-          "path": "data/join/2026-09-27_ranked.csv",
-          "ok": true,
-          "reason": "",
-          "size": 2231946,
-          "preview": "5899 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 FORM, DOCU, NVDA, PLAB, NICE"
-        }
-      ],
-      "preview": "5899 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 FORM, DOCU, NVDA, PLAB, NICE"
-    },
-    {
-      "key": "peer_rs",
-      "title": "Peer RS",
-      "date": "2026-09-27",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-27T15:58:06.589931-04:00",
-      "files": [
-        {
-          "path": "data/peers/2026-09-27_peer_rs.csv",
-          "ok": true,
-          "reason": "",
-          "size": 821609,
-          "preview": "5097 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
-        }
-      ],
-      "preview": "5097 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
-    },
-    {
-      "key": "ab",
-      "title": "AB checklist",
-      "date": "2026-09-27",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-27T15:58:28.186746-04:00",
-      "files": [
-        {
-          "path": "data/ab_checklist/2026-09-27_ab_checklist.csv",
-          "ok": true,
-          "reason": "",
-          "size": 7630901,
-          "preview": "2660 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 FIGS, AAPL, GCT, AUPH, RGEN"
-        },
-        {
-          "path": "data/ab_checklist/2026-09-27_ab_checklist_enriched.csv",
-          "ok": true,
-          "reason": "",
-          "size": 8471252,
-          "preview": "2660 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 RGEN, ICLR, FIGS, AAPL, BJ"
-        }
-      ],
-      "preview": "2660 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 FIGS, AAPL, GCT, AUPH, RGEN \u00b7 2660 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 RGEN, ICLR, FIGS, AAPL, BJ"
-    },
-    {
-      "key": "stock_book",
-      "title": "Stock book + green",
-      "date": "2026-09-27",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-27T15:59:21.043205-04:00",
-      "files": [
-        {
-          "path": "data/stock_book/2026-09-27_stock_book.json",
-          "ok": true,
-          "reason": "",
-          "size": 1466095,
-          "preview": "1d BUY CRDO, OPRT, VIAV, AAON, QMCO, RSKD, FIGS, CRCT \u00b7 SELL SOC, TYRA, ACDC, WVE, AVTX, ALMS, AIRS, PROK"
-        },
-        {
-          "path": "data/stock_book/2026-09-27_green.json",
-          "ok": true,
-          "reason": "",
-          "size": 585,
-          "preview": "green 0 \u00b7 "
-        },
-        {
-          "path": "data/stock_book/2026-09-27_input_health.json",
-          "ok": true,
-          "reason": "",
-          "size": 2573,
-          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
-        },
-        {
-          "path": "data/stock_book/2026-09-27_suggestions.json",
-          "ok": true,
-          "reason": "",
-          "size": 12444,
-          "preview": "2026-09-27 BUY CRDO, OPRT, VIAV, AAON, QMCO, RSKD, FIGS, CRCT \u00b7 SELL SOC, TYRA, ACDC, WVE, AVTX, ALMS, AIRS, PROK"
-        },
-        {
-          "path": "data/stock_book/latest_suggestions.json",
-          "ok": true,
-          "reason": "",
-          "size": 12444,
-          "preview": "2026-09-27 BUY CRDO, OPRT, VIAV, AAON, QMCO, RSKD, FIGS, CRCT \u00b7 SELL SOC, TYRA, ACDC, WVE, AVTX, ALMS, AIRS, PROK"
-        },
-        {
-          "path": "01_daily/2026-09-27_stock_book.md",
-          "ok": true,
-          "reason": "",
-          "size": 78008,
-          "preview": "# Stock book \u2014 2026-09-27\n_Generated 2026-09-27T15:59:12.349575-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
-        }
-      ],
-      "preview": "1d BUY CRDO, OPRT, VIAV, AAON, QMCO, RSKD, FIGS, CRCT \u00b7 SELL SOC, TYRA, ACDC, WVE, AVTX, ALMS, AIRS, PROK \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-09-27 BUY CRDO, OPRT, VIAV, AAON, QMCO, RSKD, FIGS, CRCT \u00b7 SELL SOC, TYRA, ACDC, WVE, AVTX, ALMS, AIRS, PROK \u00b7 2026-09-27 BUY CRDO, OPRT, VIAV, AAON, QMCO, RSKD, FIGS, CRCT \u00b7 SELL SOC, TYRA, ACDC, WVE, AVTX, ALMS, AIRS, PROK \u00b7 # Stock book \u2014 2026-09-27\n_Generated 2026-09-27T15:59:12.349575-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
-  "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
+  "source": "publish_live_boards"
 }

@@ -1,18 +1,19 @@
 {
   "date": "2026-09-27",
-  "generated_at": "2026-09-27T15:58:28.835772-04:00",
+  "generated_at": "2026-09-27T15:59:21.781524-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
     "MISSING General predict MD `01_daily/general/2026-09-27_predict.md` \u2014 missing",
     "MISSING Sector board JSON `01_daily/sectors/2026-09-27/_board.json` \u2014 missing",
+    "MISSING News actions JSON `01_daily/news/2026-09-27_actions.json` \u2014 missing",
     "MISSING Quote-page digest JSON (*_finviz_digest) `01_daily/news/2026-09-27_finviz_digest.json` \u2014 missing",
     "MISSING News judge MD `01_daily/news/2026-09-27_judge.md` \u2014 missing"
   ],
   "counts": {
-    "ok": 2,
-    "partial": 3,
-    "fail": 3,
+    "ok": 4,
+    "partial": 0,
+    "fail": 4,
     "n": 8
   },
   "processes": [
@@ -160,11 +161,11 @@
       "key": "preopen",
       "name": "Pre-Open ALL",
       "yaml": "preopen_all.yml",
-      "status": "PARTIAL",
+      "status": "FAIL",
       "inputs_ready": false,
-      "n_req_ok": 1,
+      "n_req_ok": 0,
       "n_req": 20,
-      "n_opt_ok": 1,
+      "n_opt_ok": 0,
       "n_opt": 3,
       "files": [
         {
@@ -216,16 +217,11 @@
           "name": "News parse JSON",
           "path": "01_daily/news/2026-09-27_parsed.json",
           "role": "required",
-          "status": "OK",
-          "reason": "",
-          "size": 211837,
-          "said": "news_mode: on \u00b7 200 raw / 26 usable \u00b7 Wall Street Braces for Jobs and Inflation Data as Rate Hike Fears Loom - finance",
-          "bullets": [
-            "Wall Street Braces for Jobs and Inflation Data as Rate Hike Fears Loom - finance.biggo.com",
-            "US Treasury Yields Top 5% and Fed October Rate Hike Odds Exceed 60% \u2014 Taiwan Stocks Likely Under Pressure After Holiday - finance.biggo.com",
-            "All Eyes on U.S. Jobs and Inflation Data as October Rate Hike Signals Take Center Stage - finance.biggo.com",
-            "Markets Brace for U.S. Jobs, Inflation Data With Focus on Possible October Fed Rate Hike - bloomingbit"
-          ]
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "events",
@@ -276,16 +272,11 @@
           "name": "News actions JSON",
           "path": "01_daily/news/2026-09-27_actions.json",
           "role": "optional",
-          "status": "OK",
-          "reason": "",
-          "size": 40322,
-          "said": "50 ticker actions \u00b7 3 events \u00b7 300 headlines \u00b7 COP BUY, EOG BUY, RRC BUY, SM BUY, HPK BUY, REPX BUY, OXY BUY, FANG BUY",
-          "bullets": [
-            "BUY COP",
-            "BUY EOG",
-            "BUY RRC",
-            "BUY SM"
-          ]
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "general",
@@ -464,13 +455,8 @@
           "bullets": []
         }
       ],
-      "said": "news news_mode: on \u00b7 200 raw / 26 usable \u00b7 Wall Street Braces for Jobs and Inflation Data as Rate Hike Fears Loom - finance",
-      "bullets": [
-        "Wall Street Braces for Jobs and Inflation Data as Rate Hike Fears Loom - finance.biggo.com",
-        "US Treasury Yields Top 5% and Fed October Rate Hike Odds Exceed 60% \u2014 Taiwan Stocks Likely Under Pressure After Holiday - finance.biggo.com",
-        "All Eyes on U.S. Jobs and Inflation Data as October Rate Hike Signals Take Center Stage - finance.biggo.com",
-        "Markets Brace for U.S. Jobs, Inflation Data With Focus on Possible October Fed Rate Hike - bloomingbit"
-      ]
+      "said": "",
+      "bullets": []
     },
     {
       "key": "weather",
@@ -534,9 +520,9 @@
           "status": "OK",
           "reason": "rows=2660",
           "size": 7630901,
-          "said": "27 rows",
+          "said": "28 rows",
           "bullets": [
-            "FIGS, AAPL, GCT, AUPH, RGEN, CRSR, ERO, SN"
+            "FIGS, AAPL, AUPH, RGEN, GCT, HUM, DGX, CRSR"
           ]
         },
         {
@@ -549,13 +535,13 @@
           "size": 8471252,
           "said": "25 rows",
           "bullets": [
-            "RGEN, ICLR, FIGS, AAPL, BJ, LLY, VFF, GMAB"
+            "RGEN, FIGS, ICLR, AAPL, BJ, LLY, TTMI, VFF"
           ]
         }
       ],
       "said": "25 rows",
       "bullets": [
-        "RGEN, ICLR, FIGS, AAPL, BJ"
+        "RGEN, FIGS, ICLR, AAPL, BJ"
       ]
     },
     {
@@ -574,16 +560,11 @@
           "name": "News actions JSON",
           "path": "01_daily/news/2026-09-27_actions.json",
           "role": "input",
-          "status": "OK",
-          "reason": "",
-          "size": 40322,
-          "said": "50 ticker actions \u00b7 3 events \u00b7 300 headlines \u00b7 COP BUY, EOG BUY, RRC BUY, SM BUY, HPK BUY, REPX BUY, OXY BUY, FANG BUY",
-          "bullets": [
-            "BUY COP",
-            "BUY EOG",
-            "BUY RRC",
-            "BUY SM"
-          ]
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "in_digest",
@@ -608,27 +589,18 @@
           "bullets": []
         }
       ],
-      "said": "50 ticker actions \u00b7 3 events \u00b7 300 headlines \u00b7 COP BUY, EOG BUY, RRC BUY, SM BUY, HPK BUY, REPX BUY, OXY BUY, FANG BUY",
-      "bullets": [
-        "BUY COP",
-        "BUY EOG",
-        "BUY RRC",
-        "BUY SM",
-        "BUY HPK",
-        "BUY REPX",
-        "BUY OXY",
-        "BUY FANG"
-      ]
+      "said": "",
+      "bullets": []
     },
     {
       "key": "stock_book",
       "name": "Stock Book ALL",
       "yaml": "stock_book_all.yml",
-      "status": "PARTIAL",
+      "status": "OK",
       "inputs_ready": false,
-      "n_req_ok": 2,
+      "n_req_ok": 4,
       "n_req": 4,
-      "n_opt_ok": 1,
+      "n_opt_ok": 3,
       "n_opt": 3,
       "files": [
         {
@@ -658,16 +630,11 @@
           "name": "News actions JSON",
           "path": "01_daily/news/2026-09-27_actions.json",
           "role": "input",
-          "status": "OK",
-          "reason": "",
-          "size": 40322,
-          "said": "50 ticker actions \u00b7 3 events \u00b7 300 headlines \u00b7 COP BUY, EOG BUY, RRC BUY, SM BUY, HPK BUY, REPX BUY, OXY BUY, FANG BUY",
-          "bullets": [
-            "BUY COP",
-            "BUY EOG",
-            "BUY RRC",
-            "BUY SM"
-          ]
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "in_digest",
@@ -715,7 +682,7 @@
           "size": 8471252,
           "said": "25 rows",
           "bullets": [
-            "RGEN, ICLR, FIGS, AAPL, BJ, LLY, VFF, GMAB"
+            "RGEN, FIGS, ICLR, AAPL, BJ, LLY, TTMI, VFF"
           ]
         },
         {
@@ -728,7 +695,7 @@
           "size": 2231946,
           "said": "204 rows",
           "bullets": [
-            "FORM, DOCU, NVDA, PLAB, NICE, MU, SKHY, NTCT"
+            "FORM, DOCU, NVDA, PLAB, NICE, MU, NTCT, SKHY"
           ]
         },
         {
@@ -749,10 +716,10 @@
           "name": "Stock book JSON",
           "path": "data/stock_book/2026-09-27_stock_book.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "horizons=5 names=216",
+          "size": 1466095,
+          "said": "1d BUY CRDO, OPRT, VIAV, AAON, QMCO, RSKD, FIGS, CRCT \u00b7 SELL SOC, TYRA, ACDC, WVE, AVTX, ALMS",
           "bullets": []
         },
         {
@@ -760,21 +727,24 @@
           "name": "Stock book MD",
           "path": "01_daily/2026-09-27_stock_book.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 76991,
+          "said": "Stock book \u2014 2026-09-27",
+          "bullets": [
+            "_Generated 2026-09-27T15:59:12.349575-04:00_",
+            "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
+          ]
         },
         {
           "key": "green",
           "name": "Green-pile JSON",
           "path": "data/stock_book/2026-09-27_green.json",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "",
+          "size": 585,
+          "said": "0 green \u00b7",
           "bullets": []
         },
         {
@@ -796,10 +766,10 @@
           "name": "Dashboard HTML",
           "path": "dashboard/index.html",
           "role": "optional",
-          "status": "FAIL",
-          "reason": "session 2026-09-27 not in dashboard dates (last=2026-09-25)",
+          "status": "OK",
+          "reason": "live-book poller + today.json (2026-09-27)",
           "size": 8940656,
-          "said": "session 2026-09-27 not in dashboard dates (last=2026-09-25)",
+          "said": "live-book poller + today.json (2026-09-27)",
           "bullets": []
         }
       ],
@@ -812,9 +782,9 @@
       "key": "publish",
       "name": "Dashboard / .io",
       "yaml": "deploy-dashboard.yml",
-      "status": "PARTIAL",
-      "inputs_ready": false,
-      "n_req_ok": 1,
+      "status": "OK",
+      "inputs_ready": true,
+      "n_req_ok": 2,
       "n_req": 2,
       "n_opt_ok": 0,
       "n_opt": 1,
@@ -824,10 +794,10 @@
           "name": "Stock book JSON",
           "path": "data/stock_book/2026-09-27_stock_book.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "horizons=5 names=216",
+          "size": 1466095,
+          "said": "1d BUY CRDO, OPRT, VIAV, AAON, QMCO, RSKD, FIGS, CRCT \u00b7 SELL SOC, TYRA, ACDC, WVE, AVTX, ALMS",
           "bullets": []
         },
         {
@@ -835,10 +805,10 @@
           "name": "Dashboard HTML (repo)",
           "path": "dashboard/index.html",
           "role": "required",
-          "status": "FAIL",
-          "reason": "session 2026-09-27 not in dashboard dates (last=2026-09-25)",
+          "status": "OK",
+          "reason": "live-book poller + today.json (2026-09-27)",
           "size": 8940656,
-          "said": "session 2026-09-27 not in dashboard dates (last=2026-09-25)",
+          "said": "live-book poller + today.json (2026-09-27)",
           "bullets": []
         },
         {
@@ -874,22 +844,78 @@
   "news_mode": "on",
   "news_mode_reason": "",
   "selections": {
-    "buy_1d": [],
-    "sell_1d": [],
+    "buy_1d": [
+      {
+        "ticker": "CRDO",
+        "score": 1.045128397402071
+      },
+      {
+        "ticker": "OPRT",
+        "score": 0.8415107581225973
+      },
+      {
+        "ticker": "VIAV",
+        "score": 1.0071597981153306
+      },
+      {
+        "ticker": "AAON",
+        "score": 1.1103747193251907
+      },
+      {
+        "ticker": "QMCO",
+        "score": 1.1280065229544989
+      },
+      {
+        "ticker": "RSKD",
+        "score": 1.0852550538757935
+      },
+      {
+        "ticker": "FIGS",
+        "score": 0.885573675395378
+      },
+      {
+        "ticker": "CRCT",
+        "score": 1.0754241559182276
+      }
+    ],
+    "sell_1d": [
+      {
+        "ticker": "SOC",
+        "score": -0.670758079283839
+      },
+      {
+        "ticker": "TYRA",
+        "score": -0.640933055588772
+      },
+      {
+        "ticker": "ACDC",
+        "score": -0.6604960484120153
+      },
+      {
+        "ticker": "WVE",
+        "score": -0.6813454444732361
+      },
+      {
+        "ticker": "AVTX",
+        "score": -0.4050415203131745
+      },
+      {
+        "ticker": "ALMS",
+        "score": -0.6734222867678228
+      },
+      {
+        "ticker": "AIRS",
+        "score": -0.7394540314630519
+      },
+      {
+        "ticker": "PROK",
+        "score": -0.7030964078910189
+      }
+    ],
     "flatten": {},
     "general": {},
     "sectors": {},
-    "news": {
-      "said": "news_mode: on \u00b7 200 raw / 26 usable \u00b7 Wall Street Braces for Jobs and Inflation Data as Rate Hike Fears Loom - finance",
-      "bullets": [
-        "Wall Street Braces for Jobs and Inflation Data as Rate Hike Fears Loom - finance.biggo.com",
-        "US Treasury Yields Top 5% and Fed October Rate Hike Odds Exceed 60% \u2014 Taiwan Stocks Likely Under Pressure After Holiday - finance.biggo.com",
-        "All Eyes on U.S. Jobs and Inflation Data as October Rate Hike Signals Take Center Stage - finance.biggo.com",
-        "Markets Brace for U.S. Jobs, Inflation Data With Focus on Possible October Fed Rate Hike - bloomingbit",
-        "Fed Interest Rate Forecast: PCE Report Nears as 10-Year Yield Remains Above 5% - FXEmpire",
-        "The Week Ahead: US August PCE and September Nonfarm Payrolls Take Center Stage, Micron Earnings in Focus - TradingKey"
-      ]
-    },
+    "news": {},
     "weather": {
       "said": "favorable 1 \u00b7 hostile 4 \u00b7 neutral 6",
       "bullets": [
@@ -1163,6 +1189,59 @@
         }
       ],
       "preview": "2660 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 FIGS, AAPL, GCT, AUPH, RGEN \u00b7 2660 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 RGEN, ICLR, FIGS, AAPL, BJ"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-09-27",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-27T15:59:21.043205-04:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-09-27_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1466095,
+          "preview": "1d BUY CRDO, OPRT, VIAV, AAON, QMCO, RSKD, FIGS, CRCT \u00b7 SELL SOC, TYRA, ACDC, WVE, AVTX, ALMS, AIRS, PROK"
+        },
+        {
+          "path": "data/stock_book/2026-09-27_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 585,
+          "preview": "green 0 \u00b7 "
+        },
+        {
+          "path": "data/stock_book/2026-09-27_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2573,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-09-27_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12444,
+          "preview": "2026-09-27 BUY CRDO, OPRT, VIAV, AAON, QMCO, RSKD, FIGS, CRCT \u00b7 SELL SOC, TYRA, ACDC, WVE, AVTX, ALMS, AIRS, PROK"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12444,
+          "preview": "2026-09-27 BUY CRDO, OPRT, VIAV, AAON, QMCO, RSKD, FIGS, CRCT \u00b7 SELL SOC, TYRA, ACDC, WVE, AVTX, ALMS, AIRS, PROK"
+        },
+        {
+          "path": "01_daily/2026-09-27_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 78008,
+          "preview": "# Stock book \u2014 2026-09-27\n_Generated 2026-09-27T15:59:12.349575-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY CRDO, OPRT, VIAV, AAON, QMCO, RSKD, FIGS, CRCT \u00b7 SELL SOC, TYRA, ACDC, WVE, AVTX, ALMS, AIRS, PROK \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-09-27 BUY CRDO, OPRT, VIAV, AAON, QMCO, RSKD, FIGS, CRCT \u00b7 SELL SOC, TYRA, ACDC, WVE, AVTX, ALMS, AIRS, PROK \u00b7 2026-09-27 BUY CRDO, OPRT, VIAV, AAON, QMCO, RSKD, FIGS, CRCT \u00b7 SELL SOC, TYRA, ACDC, WVE, AVTX, ALMS, AIRS, PROK \u00b7 # Stock book \u2014 2026-09-27\n_Generated 2026-09-27T15:59:12.349575-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "href": {
