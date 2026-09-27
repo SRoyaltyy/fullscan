@@ -1,0 +1,41 @@
+name: holdup append-only
+
+on:
+  pull_request:
+    paths:
+      - "research/hot_n4_clean_v4/forward/**"
+      - "research/hot_n4_clean_v4/days/**"
+      - "research/hot_n4_clean_v4/returns/**"
+      - "dashboard/holdup/**"
+      - ".github/workflows/holdup_append_only.yml"
+      - ".github/workflows/holdup_forward.yml"
+  push:
+    branches: [main]
+    paths:
+      - "research/hot_n4_clean_v4/forward/**"
+      - "research/hot_n4_clean_v4/days/**"
+      - "research/hot_n4_clean_v4/returns/**"
+      - "dashboard/holdup/**"
+      - ".github/workflows/holdup_append_only.yml"
+      - ".github/workflows/holdup_forward.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  append-only:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install bar dependencies
+        run: pip install numpy pandas pyarrow
+      - name: Fetch the base branch
+        run: git fetch --no-tags origin main
+      - name: Sealed log, seed match, and prefix
+        run: PYTHONHASHSEED=0 python3 research/hot_n4_clean_v4/forward/test_append_only.py
