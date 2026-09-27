@@ -152,6 +152,52 @@ EXCLUDED_SPLITS = (
 )
 NO_BAR = ("AAC-U", "HYAC-U", "PNAQ-U")
 
+# Rule 9. Primary path is Futubull fees plus this slip per side.
+# 0 and 0.01 are sensitivity prints of the same shares. Not extra luck tries.
+SLIP_PRIMARY = 0.005
+SLIP_LINES = (0.0, 0.005, 0.01)
+LIQ_CAP_FRAC = 0.01
+LIQ_DAYS = 20
+WILSON_Z = 1.96
+
+# Candidate names that leave the frozen panel before 2026-09-25 and do not
+# return. last_bar is the last pinned ohlc date in August–September 2026,
+# or None when the price store has no bar. This is the in-window delist list.
+# (ticker, last_panel, last_bar)
+DELISTED = (
+    ("BBBY", "2026-08-17", "2026-08-14"),
+    ("EWAVU", "2026-08-17", "2026-08-14"),
+    ("THEOU", "2026-08-17", "2026-08-14"),
+    ("EQR", "2026-08-18", "2026-08-14"),
+    ("CGCFU", "2026-08-24", "2026-08-21"),
+    ("OSPRU", "2026-08-24", "2026-08-21"),
+    ("AVB", "2026-08-31", "2026-08-21"),
+    ("JAB", "2026-08-31", "2026-08-21"),
+    ("TALK", "2026-08-31", "2026-08-18"),
+    ("HLX", "2026-09-02", "2026-08-21"),
+    ("AAC-U", "2026-09-08", None),
+    ("FBRX", "2026-09-08", "2026-08-21"),
+    ("JONEU", "2026-09-08", "2026-08-21"),
+    ("LBRDK", "2026-09-08", "2026-08-19"),
+    ("LEG", "2026-09-08", "2026-08-21"),
+    ("NSAIU", "2026-09-08", "2026-08-21"),
+    ("TWO", "2026-09-08", "2026-08-21"),
+    ("WBS", "2026-09-08", "2026-08-20"),
+    ("XTERU", "2026-09-08", "2026-08-21"),
+    ("BCAR", "2026-09-14", "2026-09-11"),
+    ("BRTMU", "2026-09-14", "2026-09-08"),
+    ("CRNX", "2026-09-14", "2026-09-02"),
+    ("OCLTU", "2026-09-14", "2026-09-08"),
+    ("APGE", "2026-09-21", "2026-09-02"),
+    ("CATLU", "2026-09-21", "2026-09-08"),
+    ("DUKU", "2026-09-21", "2026-09-08"),
+    ("MTAKU", "2026-09-21", "2026-09-08"),
+    ("TLACU", "2026-09-21", "2026-09-08"),
+    ("XIIIU", "2026-09-21", "2026-09-08"),
+    ("BRR", "2026-09-22", "2026-09-11"),
+    ("DOMO", "2026-09-24", "2026-09-11"),
+)
+
 PRICE_SOURCES = ("ohlc_hot", "probable", "yday_gainer", "yday_mover")
 ALWAYS_ABSENT = (
     "earn_react", "flatten", "mover_buy", "overnight", "overnight_mega",

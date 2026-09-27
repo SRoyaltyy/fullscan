@@ -2,7 +2,7 @@
 
 - status: locked before any score. This commit has no return, no win rate, and no trade outcome.
 - written: 2026-09-27
-- fingerprint_sha256: 5c11d55e325ef3f0279052c30b94c3b24bad121cbf9171e6ac9b7a8622e9fd46
+- fingerprint_sha256: 7ca171a6b9e82b9cd15a03b28137270a65a7906ee539967ef37f7c832f351ef8
 - fingerprint_scope: SHA-256 of the UTF-8 bytes after the line `<!-- BEGIN COVERED -->`, including the final newline. Line endings are LF. The header above the marker is not covered.
 - study: `research/hot_n4_clean_v1/`. New files only. No edit to an engine, to `src/`, to `forward_shadow`, or to another study.
 - sessions: 2026-08-13 through 2026-09-25. The before window ends 2026-09-11. The after window starts 2026-09-14 and can only reject.
@@ -42,15 +42,15 @@ Both variants:
 
 `pick_day` keeps rows `matches` accepts, sorts by `rank_key`, and takes `top_n`. For `hot_score` the key is `(-hot_score, ticker)`: higher score first, ticker A to Z on a tie. `matches` with empty require and empty forbid accepts every candidate row. `should_exit` with empty `exit_when` does not fire an early exit.
 
-`lot_should_sell` for `sell=list`, with no take and no stop: a name still on the list is kept; a name that has dropped is sold only after `min_hold` sessions. The sell print is that session's official open, 09:30 America/New_York. A missing open does not sell and does not get replaced by the close. The slot stays.
+`lot_should_sell` for `sell=list`, with no take and no stop: a name still on the list is kept; a name that has dropped is sold only after `min_hold` sessions. The sell print is that session's official open from the pinned bars, never the prior close. Rule 9 covers a missing open.
 
 Holdup, and only the holdup variant: when the morning score S is not null, S > 0, and the book is not sitting out, a new lot's `min_hold` is `max(1, 2) = 2`. `HOLDUP_S` is 0 and `HOLDUP_SESS` is 2, the same constants as v4. Weather is off, so the hard-red sit is false on every session. When section 8 says the morning file is absent, holdup does not apply and `min_hold` stays 1. In this window the file is present every day. This commit does not record the sign of S.
 
 Fill is `keep_held`. A name that is still selected and already held is kept. That keep has no new trade and no new fee. The flat 15bp figure is a second print of the same fills, not a second variant and not a renew book. Renew is not scored.
 
-Capital is $10,000. Sells run before buys. Leftover cash is split equally across the new names (`split_budgets` mode `leftover`). Shares are whole. A name that cannot buy one share is skipped, and that leftover is not offered to a later name. One open that is missing keeps that slot empty for the day.
+Capital is $10,000. Sells run before buys. Leftover cash is split equally across the new names (`split_budgets` mode `leftover`). Shares are whole. A name that cannot buy one share is skipped, and that leftover is not offered to a later name. A buy with no open does not fill. Rule 9 covers the held lot.
 
-Primary fees are `paper_trade.order_fees` with `00_grounding/futubull_fees.json` sha256 `019ebdba0fc0b20e02c91f116dc5591b81e96630f60c110dfbfd3b5d8e16c0d3`. The secondary print charges 7.5bp per side (`0.000075` times shares times price, rounded to 4 decimals) on those same shares. That is the v4 `fee_15` definition. 7.5bp each side is the flat 15bp round trip.
+Futubull fees are `paper_trade.order_fees` with `00_grounding/futubull_fees.json` sha256 `019ebdba0fc0b20e02c91f116dc5591b81e96630f60c110dfbfd3b5d8e16c0d3`, charged on the actual open. Rule 9 adds 0.5% per side on top of that fee. That sum is the primary figure. The flat 15bp print charges 7.5bp per side (`0.000075` times shares times the actual open, rounded to 4 decimals) on those same shares, with no extra slip. That is the v4 `fee_15` definition. It is a fee-schedule line, not a slip rate, and not a third variant.
 
 `hot_score` is the pinned `ohlc_ripper.hot_score` on `from_bars`. With `ok` true:
 
@@ -62,7 +62,7 @@ With `ok` false the score is 0. `ok` needs at least 5 bars. `ret_5`, `ret_10`, a
 
 The variant count is 2. Luck N is 22,011.
 
-`research/concentration_cap_v3/protocol.py` locks `LUCK_N = 22009`, which is `84 + 84 + 45 + 21796`. `21796` is v4's `21536` plus the concentration screen's 260. v4's `21536` is `150 + 9500 + 9132 + 102 + 1326 + 1326`. This study adds the two variants above and nothing else. Keep-held and the flat 15bp print are one try. `22009 + 2 = 22011`.
+`research/concentration_cap_v3/protocol.py` locks `LUCK_N = 22009`, which is `84 + 84 + 45 + 21796`. `21796` is v4's `21536` plus the concentration screen's 260. v4's `21536` is `150 + 9500 + 9132 + 102 + 1326 + 1326`. This study adds the two variants above and nothing else. Keep-held, the flat 15bp print, and the 0% and 1% slip lines are one try. `22009 + 2 = 22011`.
 
 ## 3. Sequential generation
 
@@ -90,7 +90,7 @@ A file labelled after D is not read. A missing proof is not filled in. There is 
 
 Bars are `data/prices/ohlc.parquet` sha256 `559c8cf099808930bef2b4de4280b4e902883c9a1de85c8a417074f11aaefa55`, git blob `3456f7f489a6fa7033e8ae5cc942d8279f0113e3`. The file is not copied into this folder. `src/price_store.py` stores the session print with `AUTO_ADJUST` false, and a stored bar is never replaced. A split is a level jump in that file. It is not a back-adjusted series.
 
-Features use bars with `date < D` only, after the adjustment below. D's official open is the fill and the list-drop sell. It is not a feature. D's close is an accounting mark for a later equity line. It is not read when the candidate list or the rank is built. A missing open keeps the slot.
+Features use bars with `date < D` only, after the adjustment below. D's official open is the fill and the list-drop sell. It is not a feature. D's close is an accounting mark for a later equity line when the open exists. It is not read when the candidate list or the rank is built. A missing open is rule 9: the buy does not fill, and a held lot that cannot be sold is marked at the last close.
 
 Only returns and ratios come from these bars: hot score, returns, rvol, candles, and breakouts. Any price-level test or dollar-volume test uses the Finviz `Price` and `Volume` on the frozen row for that `trade_date`. This protocol's liquid gate does not apply a $1 cutoff, a $5 cutoff, or a price-times-volume floor. Adjusted closes are never used as a price level.
 
@@ -247,13 +247,13 @@ This section is the contract for a later scoring commit. That commit has not bee
 
 The later table, for each variant, for the before window and again for the after window:
 
-- Futubull keep-held return, primary, and the flat 15bp return beside it.
+- Primary return: Futubull keep-held fees plus 0.5% per side slippage. Beside it, the same shares at 0% slip and at 1% slip, and the flat 15bp fee-schedule print. The slip lines are locked in rule 9. They are not tuned and they are not extra variants.
 - The same two returns with the best stock removed. The best stock is the ticker with the largest Futubull closed-trade P&L in that slice. A tie breaks A to Z. That ticker is ineligible on the rerun. The rerun does not alter the original ledger.
 - The same two returns with the top 3 removed: the three largest Futubull closed-trade P&L tickers, same tie break, same rule about the original ledger.
 - The best stock's share: that ticker's Futubull closed-trade P&L divided by the book's Futubull closed-trade P&L. If the book P&L is 0, the share is undefined and the cell says so.
-- Win rate: winning closed trades divided by closed trades. A win is Futubull P&L greater than 0 on the sell date.
+- Win rate: winning closed trades divided by closed trades, on the primary path (Futubull fees plus 0.5% per side). A win is primary P&L greater than 0 on the sell date. Rule 11 puts a 95% Wilson interval on that rate. Skipped and unfilled orders are not in the numerator or the denominator. They are listed and counted beside the rate.
 - Up days: the count of sessions that have a buy or a sell and whose Futubull day return is greater than 0. Also the winning-day share, because the reject rule uses it.
-- Trades per session: closed trades divided by sessions in the slice, and the raw buy count beside it.
+- Trades per session: closed trades divided by sessions in the slice, and the raw buy count beside it. A missing-input day stays in that session count. Rule 10.
 - Positive-from-X-of-Y start days. Y is 3. The Monday starts inside `2026-08-17` through `2026-09-08` are `2026-08-17`, `2026-08-24`, and `2026-08-31`. `2026-09-07` is not a session. A start is positive when the Futubull keep-held sum of closed-trade P&L from that Monday through `2026-09-11` is greater than 0. The cell is X of 3. The after window is not a start.
 - IWM buy-and-hold on the same sessions, after the entry fee, plus the flat 15bp print of that same path.
 - RANDOM4. Seed `20260813`, 1000 draws, 4 names from that morning's candidate list. The draw uses the recipe's hold, list-drop sell, and holdup rule, with weather off. It does not use the recipe's filter or its hot-score sort.
@@ -284,3 +284,98 @@ Engine files, content sha256. A later run whose bytes differ stops.
 | `src/gainer_asof.py` | `43b36e5a17b7ffb07ddbee6ecb7b047a03281513fd9670d1828abf427e27f51e` |
 | `src/paper_trade.py` | `54e70b314dc0b959b45573343a234f46bb396588ed7f65dff678d79c88d23f9d` |
 | `src/ticker_lookback.py` | `1e08f2f42c732407f834847f2e347b0218d8a18b2612a2ee565f24bcc6a2731e` |
+
+## 12. Rule 9 — Fills, slippage, and the liquidity cap
+
+Buys and sells fill at day D's actual 09:30 open from the pinned bars. The prior close is never a fill. It is the mark used only when rule 9 says a held lot cannot be sold.
+
+Slippage is a fixed fraction of shares times that open, charged on top of the Futubull fee. The primary figure uses 0.5% per side (`0.005`). The same shares are also reported at 0% per side and at 1% per side (`0.01`). Those three rates are locked in this file. A later run does not pick a different rate, and the two sensitivity lines do not add to luck N.
+
+Share count is chosen once, on the primary path. A buy's cash cost is `shares * open * (1 + 0.005)` plus `order_fees(shares, open, buy)`. A sell's cash proceeds are `shares * open * (1 - 0.005)` minus `order_fees(shares, open, sell)`. The fee function sees the actual open, not the slipped price. If the primary cost is above cash, shares are reduced until one share no longer fits, and that order is then skipped. The 0% line and the 1% line reprice those same shares. They do not resize, and they do not change who is held. The flat 15bp line also uses those shares, with 7.5bp per side on the actual open and with no slip.
+
+The liquidity cap sizes a new buy. A position's notional at the open, `shares * open`, may not exceed 1% of the stock's 20-day median dollar volume. Excess budget stays cash. The cap does not trim a name that is already held.
+
+The 20 days are the 20 NYSE sessions strictly before D. For each of those sessions, dollar volume is Finviz `Price` times Finviz `Volume` on the frozen row whose `trade_date` is that session, when both numbers are present and positive. Otherwise it is the unadjusted pinned bar on that date, `close * volume`, when both are present and positive. Unadjusted means the stored print, before the split adjustment in section 5. The median of those 20 values is the arithmetic mean of the 10th and 11th after sorting. If fewer than 20 values exist, the buy is unfilled, the cash stays cash, and the order is counted under rule 11. The window is not shortened.
+
+Whole shares under the cap: `min(shares from the cash budget, floor(0.01 * median / open))`. If that floor is under 1, the buy is unfilled and counted.
+
+A stock with no open on D does not fill. A buy that day is an unfilled order. A held lot that cannot be sold stays held. It is marked at the last close, which is the most recent pinned close strictly before D. It is sold at the next later session that has an open, still subject to `lot_should_sell`. The missing open is not replaced by that close as a fill.
+
+## 13. Rule 10 — Missing days and delisted names
+
+A day whose required inputs are missing is a day in cash. It stays in the return series and in the day count. It is never dropped. Required inputs for a new buy are the pinned bars through D-1 and, for every source in section 7, the frozen row for `trade_date` D. `2026-08-28` has no frozen row, so that session takes no new buy. Cash that is not already in a held lot stays cash. A lot already held still follows rule 9 at the open. The session remains one of the 31. A missing morning-score file, if one occurred, would turn holdup off for that day and would not delete the day. This window has a score file every day.
+
+The jump halt in section 5 is not a missing-input day. An unexplained 3x leg still refuses the day file. Rule 10 does not waive that halt.
+
+A delisted name that has pinned bars is included for every session where those bars exist. After its last bar, a held lot that cannot be sold stays marked at that last close through the end of the window when no later open exists. The sell waits for an open that this store does not have.
+
+`research/longhist/tickers.json` has cutoff `2026-08-12`, the session before this window. It does not date a delisting inside the window. The list below is the candidate-universe evidence: a name that passes the liquid gate at least once, then has no frozen row on `2026-09-25`, and does not reappear on any earlier session after its last panel date. `bars` is whether `data/prices/ohlc.parquet` has a row for that ticker with a date in August or September 2026. `last bar` is that row's last date.
+
+| ticker | last panel date | last bar | bars exist |
+| --- | --- | --- | --- |
+| BBBY | 2026-08-17 | 2026-08-14 | yes |
+| EWAVU | 2026-08-17 | 2026-08-14 | yes |
+| THEOU | 2026-08-17 | 2026-08-14 | yes |
+| EQR | 2026-08-18 | 2026-08-14 | yes |
+| CGCFU | 2026-08-24 | 2026-08-21 | yes |
+| OSPRU | 2026-08-24 | 2026-08-21 | yes |
+| AVB | 2026-08-31 | 2026-08-21 | yes |
+| JAB | 2026-08-31 | 2026-08-21 | yes |
+| TALK | 2026-08-31 | 2026-08-18 | yes |
+| HLX | 2026-09-02 | 2026-08-21 | yes |
+| AAC-U | 2026-09-08 | | no |
+| FBRX | 2026-09-08 | 2026-08-21 | yes |
+| JONEU | 2026-09-08 | 2026-08-21 | yes |
+| LBRDK | 2026-09-08 | 2026-08-19 | yes |
+| LEG | 2026-09-08 | 2026-08-21 | yes |
+| NSAIU | 2026-09-08 | 2026-08-21 | yes |
+| TWO | 2026-09-08 | 2026-08-21 | yes |
+| WBS | 2026-09-08 | 2026-08-20 | yes |
+| XTERU | 2026-09-08 | 2026-08-21 | yes |
+| BCAR | 2026-09-14 | 2026-09-11 | yes |
+| BRTMU | 2026-09-14 | 2026-09-08 | yes |
+| CRNX | 2026-09-14 | 2026-09-02 | yes |
+| OCLTU | 2026-09-14 | 2026-09-08 | yes |
+| APGE | 2026-09-21 | 2026-09-02 | yes |
+| CATLU | 2026-09-21 | 2026-09-08 | yes |
+| DUKU | 2026-09-21 | 2026-09-08 | yes |
+| MTAKU | 2026-09-21 | 2026-09-08 | yes |
+| TLACU | 2026-09-21 | 2026-09-08 | yes |
+| XIIIU | 2026-09-21 | 2026-09-08 | yes |
+| BRR | 2026-09-22 | 2026-09-11 | yes |
+| DOMO | 2026-09-24 | 2026-09-11 | yes |
+
+HYAC-U and PNAQ-U pass the liquid gate, have no pinned bar, and are still on the frozen record on `2026-09-25`. They are not in the table. An order in either is unfilled. AAC-U is in the table and also has no bar.
+
+## 14. Rule 11 — Wilson interval and unfilled orders
+
+The win rate is reported with a 95% Wilson interval. With `n` closed trades, `k` wins, `p = k / n`, and `z = 1.96`:
+
+`denom = 1 + z² / n`
+
+`center = (p + z² / (2n)) / denom`
+
+`half = z * sqrt(p * (1 - p) / n + z² / (4n²)) / denom`
+
+The interval is `center - half` through `center + half`. `z = 1.96` is locked. If `n` is 0, the rate and the interval are undefined and the cell says so. This commit does not compute a rate.
+
+Skipped and unfilled orders are listed separately and counted in the report. Each line has the session, the ticker, the side, and the reason. The reasons are: no open, cannot buy one share, fewer than 20 dollar-volume observations, cap below one share, and no bar left to fill. The count is printed. Those orders are not closed trades, so they are not wins and they are not losses. The session stays in the day count.
+
+## 15. Rule 12 — What v4 and the cap studies did
+
+This table says which of rules 1–11 the earlier preregistrations followed. It copies no return. "Partial" means the study did some of the rule and not the rest. The weight caps in `concentration_cap_v1` through `concentration_cap_v3` are a share of book equity. They are not the 1% dollar-volume cap in rule 9.
+
+| rule | v4 | cap v1 | cap v2 | cap v3 |
+| --- | --- | --- | --- | --- |
+| 1. Sequential day file and hash ledger | No. Score files append and earlier score files are not rewritten. There is no input-day sha256 ledger that refuses a changed day. | No. Same, and the forward ledger is not edited. | No. Same. | No. Same. |
+| 2. Only copies proven before 13:30 UTC | No. The board is the earliest commit whose `panel.json` contains D. The #354 proof shows those copies were not proven before the open. | No. Names and S are the v4 stored rows. | No. Same v4 `INPUTS.json`. | No. Same. |
+| 3. Pinned Yahoo print, Finviz price levels, jump check | Partial. Open is the fill. The tape is the cleaned v1c parquet, not `data/prices/ohlc.parquet`. The jump check is the same-date 3x test. Dollar tests do not use Finviz `Price`. | Partial. Same v1c tape and same-date jump check. | Partial. Same. | Partial. Same. |
+| 4. Theme Radar frozen record, `snapshot_date`, gaps skipped | No. The input is `data/factor_mine/panel.json`. | No. The v4 stored board. | No. Same. | No. Same. |
+| 5. Rebuild price sources; drop `flatten` and `mover_buy` unless proven | No. The stored board is used as saved. | No. Same board. | No. Same. | No. Same. |
+| 6. Holdup S only from a file proven before the open | No. S is the earliest predict file, else the earliest weather file. v4 records 2026-08-27 as having no score. | No. The v4 stored S. | No. Same. | No. Same. |
+| 7. Alarm identified and unused | No. The default forbid includes `alarm`. The nonews rows are in the grid. | No. The frozen bases keep the v4 gates. | No. Same. | No. Same. |
+| 8. This report plan | Partial. Before and after, ex-best, win rate, up days, IWM, RANDOM4, and flat 15bp are in the v4 plan. Wilson, the slip lines, the dollar-volume cap, the skipped-order count, and positive-from-X-of-Y are not. | Partial. Adds ex top 1, top 3, and top 5, and a profit share. Not this plan. | Partial. Adds a 20% profit-share gate on the tune book. Not this plan. | Partial. Adds dependence, `1 - R_-1/R`. Not this plan. |
+| 9. Open fill, 0.5% slip, 1% dollar-volume cap, missing open | Partial. Open fill yes. Futubull fees yes. No slippage. No dollar-volume cap. A missing open keeps the slot in cash and is not replaced by the close. A held lot is not marked at the last close and sold at the next open. | Partial. Open fill yes. Futubull yes. No slippage. No dollar-volume cap. A missing open keeps the slot. A weight-cap trim sells at the open. | Partial. Open fill yes. Futubull yes. No slippage. No dollar-volume cap. The prereg says open is the fill. It does not restate the next-open carry. | Partial. Same as v2. |
+| 10. Missing day stays in cash and in the count; delists listed | No. | No. | No. | No. |
+| 11. Wilson interval; unfilled orders counted | No. Win rate is a point. A one-share skip is described and is not a counted report line. | No. | No. | No. |
+

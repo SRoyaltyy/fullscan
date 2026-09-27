@@ -18,7 +18,10 @@ from research.hot_n4_clean_v1.protocol import (  # noqa: E402
     CAP_V3_LUCK_N,
     ENGINE_SHA256,
     FEES_SHA256,
+    DELISTED,
     FIRST_HALT_SESSION,
+    LIQ_CAP_FRAC,
+    LIQ_DAYS,
     FORWARD,
     FULLSCAN_CSV_SHA256,
     GAP_DAY,
@@ -35,9 +38,12 @@ from research.hot_n4_clean_v1.protocol import (  # noqa: E402
     SPLITS_MD,
     SPLITS_MD_SHA256,
     STARTS,
+    SLIP_LINES,
+    SLIP_PRIMARY,
     S_SOURCE,
     TUNE,
     UNEXPLAINED,
+    WILSON_Z,
     VARIANTS,
     WEATHER_DAYS,
     commit_day,
@@ -76,6 +82,7 @@ def _rules(text: str) -> None:
         "not published", "signal_alarm", "purely_worse", "BOX_COLS",
         "union_hot_n4_h1__w0", "union_hot_n4_holdup__w0", "keep_held",
         "22011", "2026-08-28", "nonews",
+        "0.5%", "Wilson", "What v4", "1.96", "AAC-U",
     ):
         if phrase not in text:
             raise SystemExit(f"rule missing: {phrase}")
@@ -106,7 +113,7 @@ def _variants() -> None:
         raise SystemExit("luck add")
 
 
-def _calendar() -> None:
+def _calendar(text: str) -> None:
     if len(SESSIONS) != 31 or len(TUNE) != 21 or len(FORWARD) != 10:
         raise SystemExit("sessions")
     if TUNE[-1] != "2026-09-11" or FORWARD[0] != "2026-09-14":
@@ -124,6 +131,15 @@ def _calendar() -> None:
         raise SystemExit("unexplained")
     if FIRST_HALT_SESSION != "2026-08-17":
         raise SystemExit("halt")
+    if SLIP_PRIMARY != 0.005 or SLIP_LINES != (0.0, 0.005, 0.01):
+        raise SystemExit("slip")
+    if LIQ_CAP_FRAC != 0.01 or LIQ_DAYS != 20 or WILSON_Z != 1.96:
+        raise SystemExit("cap or wilson")
+    if len(DELISTED) != 31 or DELISTED[10] != ("AAC-U", "2026-09-08", None):
+        raise SystemExit("delist")
+    for ticker, _panel, _bar in DELISTED:
+        if ticker not in text:
+            raise SystemExit(f"delist missing {ticker}")
 
 
 def _sources() -> None:
@@ -211,7 +227,7 @@ def main() -> None:
     _pins(text)
     _rules(text)
     _variants()
-    _calendar()
+    _calendar(text)
     _sources()
     _ledger()
     # local price and audit bytes, when this checkout has them
