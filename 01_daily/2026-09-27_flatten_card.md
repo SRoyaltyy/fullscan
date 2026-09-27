@@ -1,6 +1,6 @@
 # flatten_robust card — 2026-09-27
 
-_Generated 2026-09-27T20:00:51 — live `flatten_robust`._
+_Generated 2026-09-27T20:01:19 — live `flatten_robust`._
 
 **morning S missing; no flatten (0 priced BUYs, prior book=yes); 16:00 refill robust:3d_size from leftover cash; skip names already held**
 
@@ -42,9 +42,9 @@ Sized from marked equity **$101,047.48** as if the book were flat. `io 3d_size (
 |---|---|---|---:|---:|---:|---|
 | 16:00 ET | CRDO | io_core | 79 | $210.97 | $16,666.63 | cash tied |
 | 16:00 ET | FN | io_core | 40 | $417.39 | $16,695.60 | cash tied |
-| 16:00 ET | VIAV | io_core | 413 | $40.68 | $16,800.84 | cash tied |
+| 16:00 ET | GRAB | io_core | 5380 | $3.13 | $16,839.40 | cash tied |
 | 16:00 ET | OUST | io_core | 385 | $43.72 | $16,832.20 | cash tied |
-| 16:00 ET | SONO | io_core | 926 | $18.18 | $16,830.05 | cash tied |
 | 16:00 ET | CCC | io_core | 2440 | $6.90 | $16,836.00 | cash tied |
+| 16:00 ET | SONO | io_core | 926 | $18.18 | $16,830.05 | cash tied |
 
 Dashboard: https://sroyaltyy.github.io/fullscan/dashboard/sleeve-merge/
