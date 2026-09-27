@@ -1,12 +1,12 @@
 {
   "date": "2026-09-27",
-  "generated_at": "2026-09-27T15:55:22.363247-04:00",
+  "generated_at": "2026-09-27T15:56:05.609354-04:00",
   "overall": "FAIL",
   "ranker_ready": false,
   "counts": {
     "ok": 0,
-    "partial": 1,
-    "fail": 7,
+    "partial": 2,
+    "fail": 6,
     "n": 8
   },
   "buy_1d": [],
@@ -39,6 +39,31 @@
         }
       ],
       "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions \u00b7 # News \u2192 Actions v4 (full framework) \u2014 2026-09-27T15:55:22.208914-04:00\nraw=300 unique_events=3 tickers=50"
+    },
+    {
+      "key": "news_parse",
+      "title": "News parse",
+      "date": "2026-09-27",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-27T15:56:05.418471-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-09-27_parsed.json",
+          "ok": true,
+          "reason": "",
+          "size": 211837,
+          "preview": "raw=200 usable=26 single=22 \u00b7 Wall Street Braces for Jobs and Inflation Data as Rate Hike Fears Loom - finance | US Treasury Yields Top 5% and Fed October Rate Hike Odds Exceed 60% \u2014 Taiwan Sto | All Eyes on U.S. Jobs and Inflation Data as October Rate Hike Signals Take Cente | Markets Brace for U.S. Jobs, Inflation Data With Focus on Possible October Fed R | Fed Interest Rate Forecast: PCE Report Nears as 10-Year Yield Remains Above 5% -"
+        },
+        {
+          "path": "01_daily/news/2026-09-27_parsed.md",
+          "ok": true,
+          "reason": "",
+          "size": 6416,
+          "preview": "# News Parse v2 \u2014 2026-09-27T15:56:04.896691-04:00\nWindow\u224824h | news_mode=on | raw=200 | usable=26 | single_name=22 | noise_dropped=150\nusable polarity={'+': 1, '-': 10, 'mixed': 1, 'neutral': 14}"
+        }
+      ],
+      "preview": "raw=200 usable=26 single=22 \u00b7 Wall Street Braces for Jobs and Inflation Data as Rate Hike Fears Loom - finance | US Treasury Yields Top 5% and Fed October Rate Hike Odds Exceed 60% \u2014 Taiwan Sto | All Eyes on U.S. Jobs and Inflation Data as October Rate Hike Signals Take Cente | Markets Brace for U.S. Jobs, Inflation Data With Focus on Possible October Fed R | Fed Interest Rate Forecast: PCE Report Nears as 10-Year Yield Remains Above 5% - \u00b7 # News Parse v2 \u2014 2026-09-27T15:56:04.896691-04:00\nWindow\u224824h | news_mode=on | raw=200 | usable=26 | single_name=22 | noise_dropped=150\nusable polarity={'+': 1, '-': 10, 'mixed': 1, 'neutral': 14}"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"

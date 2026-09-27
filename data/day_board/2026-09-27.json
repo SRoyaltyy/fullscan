@@ -1,11 +1,12 @@
 {
   "date": "2026-09-27",
-  "generated_at": "2026-09-27T15:55:22.363247-04:00",
+  "generated_at": "2026-09-27T15:56:05.609354-04:00",
   "overall": "FAIL",
   "ranker_ready": false,
   "blockers": [
     "MISSING General predict MD `01_daily/general/2026-09-27_predict.md` \u2014 missing",
     "MISSING Sector board JSON `01_daily/sectors/2026-09-27/_board.json` \u2014 missing",
+    "MISSING News actions JSON `01_daily/news/2026-09-27_actions.json` \u2014 missing",
     "MISSING Quote-page digest JSON (*_finviz_digest) `01_daily/news/2026-09-27_finviz_digest.json` \u2014 missing",
     "MISSING News judge MD `01_daily/news/2026-09-27_judge.md` \u2014 missing",
     "MISSING Weather JSON `01_daily/weather/2026-09-27_weather.json` \u2014 missing",
@@ -13,8 +14,8 @@
   ],
   "counts": {
     "ok": 0,
-    "partial": 1,
-    "fail": 7,
+    "partial": 2,
+    "fail": 6,
     "n": 8
   },
   "processes": [
@@ -162,11 +163,11 @@
       "key": "preopen",
       "name": "Pre-Open ALL",
       "yaml": "preopen_all.yml",
-      "status": "FAIL",
+      "status": "PARTIAL",
       "inputs_ready": false,
-      "n_req_ok": 0,
+      "n_req_ok": 3,
       "n_req": 20,
-      "n_opt_ok": 1,
+      "n_opt_ok": 0,
       "n_opt": 3,
       "files": [
         {
@@ -218,11 +219,16 @@
           "name": "News parse JSON",
           "path": "01_daily/news/2026-09-27_parsed.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 211837,
+          "said": "news_mode: on \u00b7 200 raw / 26 usable \u00b7 Wall Street Braces for Jobs and Inflation Data as Rate Hike Fears Loom - finance",
+          "bullets": [
+            "Wall Street Braces for Jobs and Inflation Data as Rate Hike Fears Loom - finance.biggo.com",
+            "US Treasury Yields Top 5% and Fed October Rate Hike Odds Exceed 60% \u2014 Taiwan Stocks Likely Under Pressure After Holiday - finance.biggo.com",
+            "All Eyes on U.S. Jobs and Inflation Data as October Rate Hike Signals Take Center Stage - finance.biggo.com",
+            "Markets Brace for U.S. Jobs, Inflation Data With Focus on Possible October Fed Rate Hike - bloomingbit"
+          ]
         },
         {
           "key": "events",
@@ -273,16 +279,11 @@
           "name": "News actions JSON",
           "path": "01_daily/news/2026-09-27_actions.json",
           "role": "optional",
-          "status": "OK",
-          "reason": "",
-          "size": 40322,
-          "said": "50 ticker actions \u00b7 3 events \u00b7 300 headlines \u00b7 COP BUY, EOG BUY, RRC BUY, SM BUY, HPK BUY, REPX BUY, OXY BUY, FANG BUY",
-          "bullets": [
-            "BUY COP",
-            "BUY EOG",
-            "BUY RRC",
-            "BUY SM"
-          ]
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "general",
@@ -311,11 +312,16 @@
           "name": "Pre-open QC JSON",
           "path": "01_daily/2026-09-27_preopen_qc.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "all_ok=False",
+          "size": 7572,
+          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 21 fail",
+          "bullets": [
+            "general_predict:missing",
+            "events:missing",
+            "news_judge:missing",
+            "news_actions:missing"
+          ]
         },
         {
           "key": "status",
@@ -333,11 +339,13 @@
           "name": "Grok review JSON",
           "path": "01_daily/2026-09-27_grok_review.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "ok=False Grok returned an empty review",
+          "size": 308,
+          "said": "ok=False \u00b7 empty_review_reply (review)",
+          "bullets": [
+            "Grok returned an empty review"
+          ]
         },
         {
           "key": "sector_basic_materials",
@@ -461,8 +469,13 @@
           "bullets": []
         }
       ],
-      "said": "",
-      "bullets": []
+      "said": "news news_mode: on \u00b7 200 raw / 26 usable \u00b7 Wall Street Braces for Jobs and Inflation Data as Rate Hike Fears Loom - finance",
+      "bullets": [
+        "Wall Street Braces for Jobs and Inflation Data as Rate Hike Fears Loom - finance.biggo.com",
+        "US Treasury Yields Top 5% and Fed October Rate Hike Odds Exceed 60% \u2014 Taiwan Stocks Likely Under Pressure After Holiday - finance.biggo.com",
+        "All Eyes on U.S. Jobs and Inflation Data as October Rate Hike Signals Take Center Stage - finance.biggo.com",
+        "Markets Brace for U.S. Jobs, Inflation Data With Focus on Possible October Fed Rate Hike - bloomingbit"
+      ]
     },
     {
       "key": "weather",
@@ -554,16 +567,11 @@
           "name": "News actions JSON",
           "path": "01_daily/news/2026-09-27_actions.json",
           "role": "input",
-          "status": "OK",
-          "reason": "",
-          "size": 40322,
-          "said": "50 ticker actions \u00b7 3 events \u00b7 300 headlines \u00b7 COP BUY, EOG BUY, RRC BUY, SM BUY, HPK BUY, REPX BUY, OXY BUY, FANG BUY",
-          "bullets": [
-            "BUY COP",
-            "BUY EOG",
-            "BUY RRC",
-            "BUY SM"
-          ]
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "in_digest",
@@ -588,17 +596,8 @@
           "bullets": []
         }
       ],
-      "said": "50 ticker actions \u00b7 3 events \u00b7 300 headlines \u00b7 COP BUY, EOG BUY, RRC BUY, SM BUY, HPK BUY, REPX BUY, OXY BUY, FANG BUY",
-      "bullets": [
-        "BUY COP",
-        "BUY EOG",
-        "BUY RRC",
-        "BUY SM",
-        "BUY HPK",
-        "BUY REPX",
-        "BUY OXY",
-        "BUY FANG"
-      ]
+      "said": "",
+      "bullets": []
     },
     {
       "key": "stock_book",
@@ -638,16 +637,11 @@
           "name": "News actions JSON",
           "path": "01_daily/news/2026-09-27_actions.json",
           "role": "input",
-          "status": "OK",
-          "reason": "",
-          "size": 40322,
-          "said": "50 ticker actions \u00b7 3 events \u00b7 300 headlines \u00b7 COP BUY, EOG BUY, RRC BUY, SM BUY, HPK BUY, REPX BUY, OXY BUY, FANG BUY",
-          "bullets": [
-            "BUY COP",
-            "BUY EOG",
-            "BUY RRC",
-            "BUY SM"
-          ]
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "in_digest",
@@ -848,7 +842,17 @@
     "flatten": {},
     "general": {},
     "sectors": {},
-    "news": {},
+    "news": {
+      "said": "news_mode: on \u00b7 200 raw / 26 usable \u00b7 Wall Street Braces for Jobs and Inflation Data as Rate Hike Fears Loom - finance",
+      "bullets": [
+        "Wall Street Braces for Jobs and Inflation Data as Rate Hike Fears Loom - finance.biggo.com",
+        "US Treasury Yields Top 5% and Fed October Rate Hike Odds Exceed 60% \u2014 Taiwan Stocks Likely Under Pressure After Holiday - finance.biggo.com",
+        "All Eyes on U.S. Jobs and Inflation Data as October Rate Hike Signals Take Center Stage - finance.biggo.com",
+        "Markets Brace for U.S. Jobs, Inflation Data With Focus on Possible October Fed Rate Hike - bloomingbit",
+        "Fed Interest Rate Forecast: PCE Report Nears as 10-Year Yield Remains Above 5% - FXEmpire",
+        "The Week Ahead: US August PCE and September Nonfarm Payrolls Take Center Stage, Micron Earnings in Focus - TradingKey"
+      ]
+    },
     "weather": {}
   },
   "lands": [
@@ -876,6 +880,31 @@
         }
       ],
       "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions \u00b7 # News \u2192 Actions v4 (full framework) \u2014 2026-09-27T15:55:22.208914-04:00\nraw=300 unique_events=3 tickers=50"
+    },
+    {
+      "key": "news_parse",
+      "title": "News parse",
+      "date": "2026-09-27",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-27T15:56:05.418471-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-09-27_parsed.json",
+          "ok": true,
+          "reason": "",
+          "size": 211837,
+          "preview": "raw=200 usable=26 single=22 \u00b7 Wall Street Braces for Jobs and Inflation Data as Rate Hike Fears Loom - finance | US Treasury Yields Top 5% and Fed October Rate Hike Odds Exceed 60% \u2014 Taiwan Sto | All Eyes on U.S. Jobs and Inflation Data as October Rate Hike Signals Take Cente | Markets Brace for U.S. Jobs, Inflation Data With Focus on Possible October Fed R | Fed Interest Rate Forecast: PCE Report Nears as 10-Year Yield Remains Above 5% -"
+        },
+        {
+          "path": "01_daily/news/2026-09-27_parsed.md",
+          "ok": true,
+          "reason": "",
+          "size": 6416,
+          "preview": "# News Parse v2 \u2014 2026-09-27T15:56:04.896691-04:00\nWindow\u224824h | news_mode=on | raw=200 | usable=26 | single_name=22 | noise_dropped=150\nusable polarity={'+': 1, '-': 10, 'mixed': 1, 'neutral': 14}"
+        }
+      ],
+      "preview": "raw=200 usable=26 single=22 \u00b7 Wall Street Braces for Jobs and Inflation Data as Rate Hike Fears Loom - finance | US Treasury Yields Top 5% and Fed October Rate Hike Odds Exceed 60% \u2014 Taiwan Sto | All Eyes on U.S. Jobs and Inflation Data as October Rate Hike Signals Take Cente | Markets Brace for U.S. Jobs, Inflation Data With Focus on Possible October Fed R | Fed Interest Rate Forecast: PCE Report Nears as 10-Year Yield Remains Above 5% - \u00b7 # News Parse v2 \u2014 2026-09-27T15:56:04.896691-04:00\nWindow\u224824h | news_mode=on | raw=200 | usable=26 | single_name=22 | noise_dropped=150\nusable polarity={'+': 1, '-': 10, 'mixed': 1, 'neutral': 14}"
     }
   ],
   "href": {
