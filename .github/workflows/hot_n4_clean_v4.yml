@@ -1,0 +1,20 @@
+name: hot_n4_clean_v4 prereg
+on:
+  pull_request:
+    paths:
+      - "research/hot_n4_clean_v4/**"
+      - ".github/workflows/hot_n4_clean_v4.yml"
+permissions:
+  contents: read
+jobs:
+  protocol:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - uses: actions/setup-python@v5
+      with:
+        python-version: "3.12"
+    - name: Fingerprint
+      run: PYTHONHASHSEED=0 python3 research/hot_n4_clean_v4/test_fingerprint.py
+    - name: Ledger and locks
+      run: PYTHONHASHSEED=0 python3 research/hot_n4_clean_v4/test_ledger.py

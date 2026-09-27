@@ -1,0 +1,41 @@
+session,n_excluded,ticker,bar_date,leg,reason
+2026-08-13,0,,,,
+2026-08-14,0,,,,
+2026-08-17,0,,,,
+2026-08-18,0,,,,
+2026-08-19,1,XHG,2026-08-13,open_over_prev_close,no filing
+2026-08-19,1,XHG,2026-08-13,close_over_prev_close,no filing
+2026-08-20,0,,,,
+2026-08-21,1,XHG,2026-08-13,open_over_prev_close,no filing
+2026-08-21,1,XHG,2026-08-13,close_over_prev_close,no filing
+2026-08-24,1,XHG,2026-08-13,open_over_prev_close,no filing
+2026-08-24,1,XHG,2026-08-13,close_over_prev_close,no filing
+2026-08-25,1,XHG,2026-08-13,open_over_prev_close,no filing
+2026-08-25,1,XHG,2026-08-13,close_over_prev_close,no filing
+2026-08-26,1,XHG,2026-08-13,open_over_prev_close,no filing
+2026-08-26,1,XHG,2026-08-13,close_over_prev_close,no filing
+2026-08-27,1,XHG,2026-08-13,open_over_prev_close,no filing
+2026-08-27,1,XHG,2026-08-13,close_over_prev_close,no filing
+2026-08-28,0,,,,
+2026-08-31,0,,,,
+2026-09-01,0,,,,
+2026-09-02,0,,,,
+2026-09-03,2,JLHL,2026-07-09,close_over_open,no filing
+2026-09-03,2,JLHL,2026-07-09,close_over_prev_close,no filing
+2026-09-03,2,SLBT,2026-06-16,open_over_prev_close,"20-F de-SPAC exchange ratio, unverified share change"
+2026-09-04,0,,,,
+2026-09-08,0,,,,
+2026-09-09,0,,,,
+2026-09-10,1,XHG,2026-08-13,open_over_prev_close,no filing
+2026-09-10,1,XHG,2026-08-13,close_over_prev_close,no filing
+2026-09-11,1,SLBT,2026-06-16,open_over_prev_close,"20-F de-SPAC exchange ratio, unverified share change"
+2026-09-14,0,,,,
+2026-09-15,0,,,,
+2026-09-16,0,,,,
+2026-09-17,0,,,,
+2026-09-18,0,,,,
+2026-09-21,0,,,,
+2026-09-22,0,,,,
+2026-09-23,0,,,,
+2026-09-24,0,,,,
+2026-09-25,0,,,,
