@@ -1,0 +1,1344 @@
+{
+  "generated_at": "2026-09-27T15:55:22.208914-04:00",
+  "hours": 48,
+  "raw_headlines": 300,
+  "news_source": "live_rss",
+  "news_mode": "on",
+  "unique_events": 3,
+  "universe_rows": 11679,
+  "interactions": [
+    "INTERACTION: Weak labor is the driver of Fed path this window — treat as one rates cluster, not two independent scores."
+  ],
+  "reasoned_events": [
+    {
+      "event": "fed_rate_path",
+      "headline_count": 34,
+      "framework": {
+        "keep": "keep",
+        "us_relevance": "high",
+        "us_relevance_why": "Discount rate / risk appetite for all US duration and banks",
+        "channel": "rates",
+        "geography": "us_domestic",
+        "severity": "regime",
+        "horizon": "1d-1w",
+        "action_object": "spx",
+        "action_object_detail": "SPX beta + rate-sensitive baskets (not a single stock thesis)",
+        "polarity": "hawkish",
+        "polarity_why": "hawkish language dominant",
+        "confidence": 0.9,
+        "drop_reason": "",
+        "notes": [
+          "headline_count=34 supports non-noise severity",
+          "rates polarity=hawkish"
+        ]
+      },
+      "mechanism": "Discount-rate channel: hawkish (hikes / higher-for-longer) pressures long-duration growth and rate-sensitive REITs, mixed for banks via curve; dovish (cuts / cooling hike odds) inverts those duration sides and often supports gold. Labor prints move Fed path expectations without being a ‘jobs ETF’ trade.",
+      "amp_damp": "Sides flip on dovish vs hawkish; unknown polarity → no hard book",
+      "mean_revert": "after FOMC / next print",
+      "taxonomy": [
+        "Institutional policy (Fed rate cut, QE, stimulus)",
+        "Rate hike/monetary tightening/liquidity withdrawal"
+      ],
+      "evidence": [
+        {
+          "title": "Gold Rises, but on Track for Weekly Loss as Fed Rate Hike Expectations Build - ASHARQ AL-AWSAT English",
+          "source": "rss_google_macro",
+          "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQdkduaHp5amw3WUFqYWRyWXVuZXJIR3dXWEVvblBaTnJRWkNTZ3dQa3JuZS1saHdraFltWFgySEpyV0ZtTGFZT2tXRjFEVEkydXlLRXR6a3dqZDZlRm5mRUc2ODNzR05QOWhvSFdhRkhYZnNLdmJQX1JwZGtkVFY5dUIwcGpoTXV2NDVmUTVIbFhJZlJtVkJuMG5tYUZaQUU0RHlCdlRBWW0?oc=5",
+          "published_at": "Sun, 27 Sep 2026 09:22:30 GMT"
+        },
+        {
+          "title": "US Treasury Yields Top 5% and Fed October Rate Hike Odds Exceed 60% — Taiwan Stocks Likely Under Pressure After Holiday - finance.biggo.com",
+          "source": "rss_google_macro",
+          "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1GRzREY1AwMkc4eDRsdXg1NnRDaERFclg4Nzdya2ZzNkdBendaclRsQkVTM0E2VXhWS1BBX1IxRm9JNWhTc3NKSGdCOEpiVV93VHlLN1otYXc4MDg4WmQzeFNKeTdaZmpTNHNCelRISE5wS0oyYXc?oc=5",
+          "published_at": "Sun, 27 Sep 2026 05:05:00 GMT"
+        },
+        {
+          "title": "6 Words From Kevin Warsh Changed the Question From “Will the Fed Hike Rates?” to “How High Can Rates Go?” - 24/7 Wall St.",
+          "source": "rss_google_macro",
+          "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxOMWdJNURvWVlCd3Z6MWR2MVZRaGNqRlk4UHdKNXU5cUdrOHVtVVhkdjVQVHhxRVdTdnFKbHZSWjBYYmlWWk4ydTRoczZqMGJpRXJMVnBBQjlUcnJGQ3laSklUOVhXVGNBWGFDMW9ZWC14d0R6TmNaLUFlbUduNk1rbGNNUk1sYlNfbFhITDdheGt4TXZ3bE45V0hCUmVLekRWY014bG9FZlI5ZDdpVXpLaDIxQXIyYnNKbHlRUkVvZUVmXzRSTDAtTVdEU0dpRk5YTHRqcHN5YU1Zc0U?oc=5",
+          "published_at": "Sat, 26 Sep 2026 12:32:00 GMT"
+        },
+        {
+          "title": "What Is a FOMC Meeting? What the Fed Decides and How Gold Reacts - GoldSilver",
+          "source": "rss_google_macro",
+          "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE45NTFIVHhpN1VyNGNraEFLa0lwQ2tIUVhQTHJ6bHlNQ3RjYnN5TFlYd3owQUw2SENpcGJjUjJ4SjhJamlyVkdoRjEySldKRXJoaFJxY0J5ak5DUEk4Wld5RzJnWlVCQWxmcGxSQ1I3SEZDQUkwbU9j?oc=5",
+          "published_at": "Sat, 26 Sep 2026 01:38:41 GMT"
+        },
+        {
+          "title": "Wall Street Braces for Jobs and Inflation Data as Rate Hike Fears Loom - finance.biggo.com",
+          "source": "rss_google_macro",
+          "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBHWUZjVzYyS3RDS05IR3FFd1VCZ3Y0ZkRqNjkwa3g2NS1McFdUMXg5a04xaWRxRWpveE5iOWw4cGFZZXJnWjNpRnRVX3NMVGRWMmJVUHcxdHNraFNKOUVPLXRvN3FnZEZYUFN5UG1nR3Z1TkdhSkE?oc=5",
+          "published_at": "Sun, 27 Sep 2026 18:16:00 GMT"
+        },
+        {
+          "title": "Bank stocks are sinking even though the Fed just handed them a rate hike - Startup Fortune",
+          "source": "rss_google_macro",
+          "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQWGV2b1lycTNVMUU1S19ibzJaQVZUdkp2dzJaeUtTRWI1Z0lUVGtPb2RSandidlRSZk1TTElGelJ3ZnVkVE1qMDRTaktmekdOcFJuYml4M1Q3N1otRDA4RE5GeFJNZGNfX3hKTm5jSjl2QnlNR2lxVmM1SXVLd1F2SzdFWUdYbXBQSHJzb1JGUGJCbWk3cHNsWmp2NWdVVnFSb0E?oc=5",
+          "published_at": "Sun, 27 Sep 2026 17:20:12 GMT"
+        },
+        {
+          "title": "New Orleans financial expert explains how Fed rate hike could affect your money - WDSU",
+          "source": "rss_google_macro",
+          "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOV1lmbzlFclladEl3X05SWE9KOHNPclpFaW5LVVFQTVNIcXdoRFhSZkZHUFZBU2ptV0VhNm5NVnFXVmVMT3E5N201Vl9kWmhOamJ3amdHeFNvYl94UzVyQnFlYkwwRTBGTUh3eFdEVDZzMVlieHlXaHY1NllSTWZnLUV2ZXI?oc=5",
+          "published_at": "Sun, 27 Sep 2026 16:15:00 GMT"
+        },
+        {
+          "title": "Fed Interest Rate Forecast: PCE Report Nears as 10-Year Yield Remains Above 5% - FXEmpire",
+          "source": "rss_google_macro",
+          "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOb3lSMjQ4WEtLeFY2QUk0WjNScUd6SGtNcWxqMXNfWUdoek1KdW1aNzF5cTBLN09XTmh1Z2NGblZhMlMxM3ZzSWJxQi05WWw0bzhUZngzTjhJb0dVdm9CcWtKQWcyUnJKUlFLOG90UWlnMmVST0NvcHk4V0l3OFI2ZC15NjBIakZJQld1TmhoSEZoaUFYSUtOUnBZajJEZmlLcGREQ19jR095emQxOVBTZUtnTTJudnJlNGlCcEtldW9VcVk3eHc?oc=5",
+          "published_at": "Sun, 27 Sep 2026 13:32:29 GMT"
+        }
+      ]
+    },
+    {
+      "event": "hormuz_energy_risk",
+      "headline_count": 13,
+      "framework": {
+        "keep": "keep",
+        "us_relevance": "high",
+        "us_relevance_why": "Global oil chokepoint the US market prices daily (WTI/Brent, XLE, fuel costs)",
+        "channel": "risk",
+        "geography": "global_priced",
+        "severity": "regime",
+        "horizon": "1d-1w",
+        "action_object": "sector_etf",
+        "action_object_detail": "XLE long bias / airline basket short / optional SPX if risk-off",
+        "polarity": "mixed",
+        "polarity_why": "bullish upstream oil risk premium; bearish fuel-cost airlines",
+        "confidence": 0.85,
+        "drop_reason": "",
+        "notes": [
+          "headline_count=13 supports non-noise severity"
+        ]
+      },
+      "mechanism": "Hormuz/Red Sea transit risk → oil risk premium → upstream producers benefit if price holds; airlines and other fuel-intensive transport are cost-shocked. Geography is global oil, but US E&P still price to WTI/Brent. Not a pure-gas trade.",
+      "amp_damp": "[+] real transit threat + oil up [−] rhetoric only, oil unchanged",
+      "mean_revert": "de-escalation / oil giveback",
+      "taxonomy": [
+        "Geopolitical event that hurts sector (sanctions, conflict disrupting supply chain)",
+        "Commodity price move favorable to the company"
+      ],
+      "evidence": [
+        {
+          "title": "Crude oil price forecast as Trump rejects Iran proposal to reopen Strait of Hormuz - Invezz",
+          "source": "rss_google_commodities",
+          "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNRlBrclRiQWJyVmNnLUVVYmtzOWs1QXA2Wm5ETmhNTGdscnpGNl9reXNjWjhYVHJpZllOWlpBdDdrcFJFNjdvVFllM0xmWnVpRG9qRFpCQnFvNGxWbm9wRVhzYWFhWUljcDdZWXNhbnNKd3B1NGNmNzJSelRwOTc3c1VvS2UzTjQ4cGhtdUtLd3FiN0ppZVNWc1NKR29oZUlfNTJSbXVBYU04YnEzNXM0LUowNWJ5R2NYeDBfMGFn?oc=5",
+          "published_at": "Sun, 27 Sep 2026 08:17:59 GMT"
+        },
+        {
+          "title": "Iran war live: Tehran ignores Trump as world holds breath for new Hormuz resolution - Arabian Business",
+          "source": "rss_google_geopolitics",
+          "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNeGVzSjhrbUhOTTctX0ViTkJTRnFEZnkwNTJQR3gySTJRQlk3aXNwenJ2Qk1DejVYcF84dmF4WDFPd2xKRzEwazEtOEdOb05OOFhJaXZQVTd3R2lDRHdGbTgtM1JSSEMxeFN5OTlLc0tLNE55MHlHRDZNU3lOVFBDaTJwQQ?oc=5",
+          "published_at": "Sun, 27 Sep 2026 06:36:21 GMT"
+        },
+        {
+          "title": "Goldman Sachs Estimates Oil Price To Increase By $15 Per Barrel If Strait of Hormuz Is Closed For A Month - Stocktwits",
+          "source": "rss_google_commodities",
+          "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNbUdwZHNJSk00Z3EwRGZVSWExekM4V19hQnVySzVNUHJMN2hZTXdaRjU1SVBUaGxUYmVWNzZ1MkRLTV9wbkh5RmctQy1YM0ZmNUl5YzVMcHZXZmpMWE8yTnpLeVpVeFdKdHl4SnVNRmFjVHNyZVhEd3RTUDhMS3NHQVZNT0dLSzJXQWhzTVRQZ3RiSXRRSEQzMmpTdG9xVm5mWXg5YjZaVGNfMm5FUVhuSUJYd0JWc3NLeHRBLWR0OXNnVEQ2?oc=5",
+          "published_at": "Sat, 26 Sep 2026 07:24:15 GMT"
+        },
+        {
+          "title": "WTI Oil Price Outlook: Can Hormuz Supply Risks Keep Crude Above $100? - equiti.com",
+          "source": "rss_google_commodities",
+          "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPblBfWWUwTW9nbkRJVUVDWE9xOVNjMUVFSUNHVVd2cmVlMXlKcGlPVlpSVG9uVG9zMXNudzE2aGI1UTZQcUE5NXlnWkFsY3dZcHZXNVdXbWkxMW1ab1dEamZaYkJMdmo3dk1yRTh5MlJmeHgwZ2FHSWdPZUFSa3N2d1RLWEJDWTR0aWlkejVWWnM1UFpOZnZMQWdrTzJWZw?oc=5",
+          "published_at": "Fri, 25 Sep 2026 22:06:50 GMT"
+        },
+        {
+          "title": "Oil Declines as Traders Weigh US, Iran Hormuz Talk Progress - Livemint",
+          "source": "rss_google_commodities",
+          "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOdjBjbGFjdUtxNTlYUURCMXRRREExeW9QQkJwQnJYYWFXV2o3bEVPN3JpdkZnS3FZdnVtMndhd05WbDN2SFVBVXE0TnNxTVViMFFsRHoyMTJmQ3hERW1ndkcyVzh1eHJzVVF2eERFRk1tcjRLd1VEVW5EekJNWGdmRDJvOE1Dc01kcGxCR051TlBhaVNGU29xNkt5Z3Y0dGQ1R0VpODVTaExpRDhvNThsS0dvTXLSAbQBQVVfeXFMTnYwY2xhY3VLcTU5WFFEQjF0UURBMXlvUEJCcEJyWGFhV1dqN2xFTzdyaXZGZ0txWXZ1bTJ3YXdOVmwzdkhVQVVxNE5zcU1VYjBRbER6MjEyZkN4REVtZ3ZHMlc4dXhyc1VRdnhERUZNbXI0S3dVRFVuRHpCTVhnZkQybzhNQ3NNZHBsQkdOdU5QYWlTRlNvcTZLeWd2NHRkNUdFaTg1U2hMaUQ4bzU4bEtHb01y?oc=5",
+          "published_at": "Fri, 25 Sep 2026 20:51:38 GMT"
+        },
+        {
+          "title": "Türkiye bolsters 'agro diplomacy' to minimize impact of geopolitical risks | Daily Sabah - Daily Sabah",
+          "source": "rss_google_geopolitics",
+          "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNMEVPci1ZcG5TTGtmQXo5Q0t6dlhPQlk3bXBrYjlQMzQ2Nmprb0dUM19sOVdRcnZWeU8wd3Q4R2VPS2tjMUtEOU5CUXhrWndESlFYZkhSYmNoTEplVnZ4ajZUWWpWMGMxRTM3X203Q2JOSV9vNXBJeGo0Nlg1SmF1NE9EUXQ2WWwxdVR0bWZjbGVDY09Rd0JjbTlKWi1GelV4ZWlwUjlrdzloa1FDTXNSbXlRVXNtSE5RYlJyVNIBvAFBVV95cUxNMEVPci1ZcG5TTGtmQXo5Q0t6dlhPQlk3bXBrYjlQMzQ2Nmprb0dUM19sOVdRcnZWeU8wd3Q4R2VPS2tjMUtEOU5CUXhrWndESlFYZkhSYmNoTEplVnZ4ajZUWWpWMGMxRTM3X203Q2JOSV9vNXBJeGo0Nlg1SmF1NE9EUXQ2WWwxdVR0bWZjbGVDY09Rd0JjbTlKWi1GelV4ZWlwUjlrdzloa1FDTXNSbXlRVXNtSE5RYlJyVA?oc=5",
+          "published_at": "Sun, 27 Sep 2026 12:10:00 GMT"
+        },
+        {
+          "title": "Geopolitical developments, crude oil to steer stock market in holiday-shortened week: Analysts - Moneycontrol.com",
+          "source": "rss_google_commodities",
+          "url": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxPM05va3hHclVfSWhVT3ZxNVRlbjdhUGFnb1NlV3RmbVJqTl82MmF0NVdLWlBQQmU5TkpwX09sSnhLYS1yalh1X0tOZmsyOGFNanZpRktpVjhWd3BFcjdUMWhGZFRCdVAySE55SzZXbW5Fc0lydzl3ZkRPNVdiaWxWRklMSWdrcl9VcTRMY0l2bzRneDVEV29kVjJ4b01CY2NYaTZXX05sZWloYU5wMjhLc2ZhUzY2WHpsZjNoLTBiaXd2Unp3SncwbDNBMGhLY3BscW1iLWNRVEVhLTVkSjVSdEVZQUxzbUxGbXk3ZGx5QjA4LUHSAfMBQVVfeXFMTzNOb2t4R3JVX0loVU92cTVUZW43YVBhZ29TZVd0Zm1Sak5fNjJhdDVXS1pQUEJlOU5KcF9PbEp4S2EtcmpYdV9LTmZrMjhhTWp2aUZLaVY4VndwRXI3VDFoRmRUQnVQMkhOeUs2V21uRXNJcnc5d2ZETzVXYmlsVkZJTElna3JfVXE0TGNJdm80Z3g1RFdvZFYyeG9NQmNjWGk2V19ObGVpaGFOcDI4S3NmYVM2Nlh6bGYzaC0wYml3dlJ6d0p3MGwzQTBoS2NwbHFtYi1jUVRFYS01ZEo1UnRFWUFMc21MRm15N2RseUIwOC1B?oc=5",
+          "published_at": "Sun, 27 Sep 2026 08:29:49 GMT"
+        },
+        {
+          "title": "Geopolitical developments, crude oil to steer stock market in holiday-shortened week: Analysts - TradingView",
+          "source": "rss_google_geopolitics",
+          "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxNVVhmempaZlpnaUNKb2hTdWpzNHpSNzZMWHZSSWtHVExFMlgxUjRQeWRvZGRSQXBjcWpReTREdkFqNFd1bVI2RWVOVzJLUmhPY0J5TzNRZjBZVUJhVmdQX1lhLTNEVWZ3VGN3Qktfa2RLZEZYeUE5UHh4OHJ5V21NU3J0aWhMZ09GMmk5VEEtbTNScVZSOElHVllPVW9nV1RCMlY3QlFtM3VJZTduaVJjRTd0eG84eTJ1a202VXRvX3JIblRJWHdiWVZqTmlLeVpkTzJnVk5wbVRYeGd6RU9rb2N4RQ?oc=5",
+          "published_at": "Sun, 27 Sep 2026 08:26:31 GMT"
+        }
+      ]
+    },
+    {
+      "event": "weak_labor_print",
+      "headline_count": 2,
+      "framework": {
+        "keep": "keep",
+        "us_relevance": "high",
+        "us_relevance_why": "Hard US macro print that moves Fed path and risk appetite",
+        "channel": "rates",
+        "geography": "us_domestic",
+        "severity": "session",
+        "horizon": "1d-1w",
+        "action_object": "spx",
+        "action_object_detail": "SPX/rates path; gold; not ‘jobs ETF’",
+        "polarity": "neutral",
+        "polarity_why": "no clear directional lexicon",
+        "confidence": 0.5,
+        "drop_reason": "",
+        "notes": [
+          "rates polarity unclear → lower confidence / soft book"
+        ]
+      },
+      "mechanism": "Weak US labor print → growth scare + higher cut odds. Near-term: risk assets can wobble while duration/gold catch a bid if the Fed path dominates. Not automatic risk-off for every name — check whether rates or recession narrative wins the day.",
+      "amp_damp": "",
+      "mean_revert": "next labor/CPI or Fed speak",
+      "taxonomy": [
+        "Macro headwinds (inflation spike, recession, unemployment surge)",
+        "Institutional policy (Fed rate cut, QE, stimulus)"
+      ],
+      "evidence": [
+        {
+          "title": "The Week Ahead: US August PCE and September Nonfarm Payrolls Take Center Stage, Micron Earnings in Focus - TradingKey",
+          "source": "rss_google_macro",
+          "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxPQ180TTRScjBNbWlYa2V1ZUZDMnFDX0QyMXdZT0NwTHdjbUt3djk1N09NREtkbDZnSjFma0xSVFBIWl84V3paZC00dkNucUhiaFEwakMzOEFabm9vSkVISEdoMUZkT0FZS3VVQ2tjRzVtYzgxbFdoeTUwSnp1QzdnQkY4NW9xQjNFZWZNblU3cUVfa09hVmJVakhxanFDU0dZSUc3WXI3dkUta3RpNTJvMU9OSmIwNmZ0djZJTXA4ZWwxOGxqSE9OamhmenhQblJra3ltaVozbUJ0aG9mZGc?oc=5",
+          "published_at": "Sun, 27 Sep 2026 06:09:46 GMT"
+        },
+        {
+          "title": "Wall Street Week Ahead: Jobs report, inflation data to test US rate path, economic strength - inkl",
+          "source": "rss_google_macro",
+          "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPQll6aUZhLWY5NUJOMUt0TWh2bzgxdnhmZHlUWTBNQ2NVcVVRRk5uN25YaUd3ZWtxemRaQ3pKV3RSaHlTc3FKenBEcU5kanRzeG9Dc21RUy1EejVMRnpXb2RZZmIzRWF2QVhSeWJBZTJtVXpTSEctV1NScHZsb1ZCOFRsZlp0U0h5NmxualVMV08yc21vX2hnQURONDlwOUl1QzNDOFY5OUc0c0hDaFR6UVRXMDc?oc=5",
+          "published_at": "Sat, 26 Sep 2026 05:15:45 GMT"
+        }
+      ]
+    }
+  ],
+  "edge_actions": [
+    {
+      "event": "fed_rate_path",
+      "role": "primary",
+      "bucket": "banks_diversified",
+      "side": "buy",
+      "weight": 2.83,
+      "tickers": [
+        "JPM",
+        "BAC",
+        "FRBT",
+        "WFC",
+        "C",
+        "BNY"
+      ],
+      "note": "curve/NIM — polarity adjusted",
+      "why": "Framework keep=keep channel=rates object=spx:SPX beta + rate-sensitive baskets (not a single stock thesis) horizon=1d-1w severity=regime conf=0.9. Edge=primary buy `banks_diversified` because curve/NIM — polarity adjusted.",
+      "framework_polarity": "hawkish"
+    },
+    {
+      "event": "fed_rate_path",
+      "role": "primary",
+      "bucket": "reit_office",
+      "side": "sell",
+      "weight": 3.65,
+      "tickers": [
+        "BXP",
+        "VNO",
+        "ARE",
+        "CDP",
+        "PSTL",
+        "HPP",
+        "CUZ",
+        "KRC"
+      ],
+      "note": "duration — polarity adjusted",
+      "why": "Framework keep=keep channel=rates object=spx:SPX beta + rate-sensitive baskets (not a single stock thesis) horizon=1d-1w severity=regime conf=0.9. Edge=primary sell `reit_office` because duration — polarity adjusted.",
+      "framework_polarity": "hawkish"
+    },
+    {
+      "event": "fed_rate_path",
+      "role": "primary",
+      "bucket": "software_app",
+      "side": "sell",
+      "weight": 2.83,
+      "tickers": [
+        "CRM",
+        "NOW",
+        "UBER",
+        "PAYC",
+        "BSY",
+        "IBTA",
+        "UPBD",
+        "SNOW"
+      ],
+      "note": "duration growth — polarity adjusted",
+      "why": "Framework keep=keep channel=rates object=spx:SPX beta + rate-sensitive baskets (not a single stock thesis) horizon=1d-1w severity=regime conf=0.9. Edge=primary sell `software_app` because duration growth — polarity adjusted.",
+      "framework_polarity": "hawkish"
+    },
+    {
+      "event": "fed_rate_path",
+      "role": "primary",
+      "bucket": "gold",
+      "side": "sell",
+      "weight": 2.83,
+      "tickers": [
+        "NEM",
+        "GOLD",
+        "AU",
+        "SSRM",
+        "AUGO",
+        "DC",
+        "CTGO",
+        "RGLD"
+      ],
+      "note": "real rate — polarity adjusted",
+      "why": "Framework keep=keep channel=rates object=spx:SPX beta + rate-sensitive baskets (not a single stock thesis) horizon=1d-1w severity=regime conf=0.9. Edge=primary sell `gold` because real rate — polarity adjusted.",
+      "framework_polarity": "hawkish"
+    },
+    {
+      "event": "hormuz_energy_risk",
+      "role": "primary",
+      "bucket": "oil_ep",
+      "side": "buy",
+      "weight": 6.8,
+      "tickers": [
+        "COP",
+        "EOG",
+        "RRC",
+        "SM",
+        "HPK",
+        "REPX",
+        "OXY",
+        "FANG"
+      ],
+      "note": "oil risk premium → producer cash flow leverage",
+      "why": "Framework keep=keep channel=risk object=sector_etf:XLE long bias / airline basket short / optional SPX if risk-off horizon=1d-1w severity=regime conf=0.85. Edge=primary buy `oil_ep` because oil risk premium → producer cash flow leverage.",
+      "framework_polarity": "mixed"
+    },
+    {
+      "event": "hormuz_energy_risk",
+      "role": "primary",
+      "bucket": "oil_integrated",
+      "side": "buy",
+      "weight": 4.76,
+      "tickers": [
+        "XOM",
+        "CVX",
+        "NFG",
+        "DEC"
+      ],
+      "note": "US integrated oil",
+      "why": "Framework keep=keep channel=risk object=sector_etf:XLE long bias / airline basket short / optional SPX if risk-off horizon=1d-1w severity=regime conf=0.85. Edge=primary buy `oil_integrated` because US integrated oil.",
+      "framework_polarity": "mixed"
+    },
+    {
+      "event": "hormuz_energy_risk",
+      "role": "primary",
+      "bucket": "airlines",
+      "side": "sell",
+      "weight": 4.76,
+      "tickers": [
+        "DAL",
+        "UAL",
+        "AAL",
+        "ALK",
+        "RJET",
+        "LUV",
+        "SKYW",
+        "ALGT"
+      ],
+      "note": "jet fuel is a major cost; disruption raises fuel",
+      "why": "Framework keep=keep channel=risk object=sector_etf:XLE long bias / airline basket short / optional SPX if risk-off horizon=1d-1w severity=regime conf=0.85. Edge=primary sell `airlines` because jet fuel is a major cost; disruption raises fuel.",
+      "framework_polarity": "mixed"
+    },
+    {
+      "event": "weak_labor_print",
+      "role": "primary",
+      "bucket": "banks_diversified",
+      "side": "sell",
+      "weight": 1.05,
+      "tickers": [
+        "JPM",
+        "BAC",
+        "FRBT",
+        "WFC",
+        "C",
+        "BNY"
+      ],
+      "note": "growth scare / credit cycle fear",
+      "why": "Framework keep=keep channel=rates object=spx:SPX/rates path; gold; not ‘jobs ETF’ horizon=1d-1w severity=session conf=0.5. Edge=primary sell `banks_diversified` because growth scare / credit cycle fear.",
+      "framework_polarity": "neutral"
+    },
+    {
+      "event": "weak_labor_print",
+      "role": "primary",
+      "bucket": "software_app",
+      "side": "buy",
+      "weight": 0.88,
+      "tickers": [
+        "CRM",
+        "NOW",
+        "UBER",
+        "PAYC",
+        "BSY",
+        "IBTA",
+        "UPBD",
+        "SNOW"
+      ],
+      "note": "if rates path dovish dominates — soft",
+      "why": "Framework keep=keep channel=rates object=spx:SPX/rates path; gold; not ‘jobs ETF’ horizon=1d-1w severity=session conf=0.5. Edge=primary buy `software_app` because if rates path dovish dominates — soft.",
+      "framework_polarity": "neutral"
+    },
+    {
+      "event": "weak_labor_print",
+      "role": "primary",
+      "bucket": "gold",
+      "side": "buy",
+      "weight": 1.4,
+      "tickers": [
+        "NEM",
+        "GOLD",
+        "AU",
+        "SSRM",
+        "AUGO",
+        "DC",
+        "CTGO",
+        "RGLD"
+      ],
+      "note": "growth scare + cut odds",
+      "why": "Framework keep=keep channel=rates object=spx:SPX/rates path; gold; not ‘jobs ETF’ horizon=1d-1w severity=session conf=0.5. Edge=primary buy `gold` because growth scare + cut odds.",
+      "framework_polarity": "neutral"
+    }
+  ],
+  "ticker_actions": [
+    {
+      "ticker": "COP",
+      "buy_score": 6.8,
+      "sell_score": 0.0,
+      "events": [
+        {
+          "event": "hormuz_energy_risk",
+          "side": "buy",
+          "weight": 6.8,
+          "bucket": "oil_ep"
+        }
+      ],
+      "net": 6.8,
+      "side": "buy",
+      "size": "large"
+    },
+    {
+      "ticker": "EOG",
+      "buy_score": 6.8,
+      "sell_score": 0.0,
+      "events": [
+        {
+          "event": "hormuz_energy_risk",
+          "side": "buy",
+          "weight": 6.8,
+          "bucket": "oil_ep"
+        }
+      ],
+      "net": 6.8,
+      "side": "buy",
+      "size": "large"
+    },
+    {
+      "ticker": "RRC",
+      "buy_score": 6.8,
+      "sell_score": 0.0,
+      "events": [
+        {
+          "event": "hormuz_energy_risk",
+          "side": "buy",
+          "weight": 6.8,
+          "bucket": "oil_ep"
+        }
+      ],
+      "net": 6.8,
+      "side": "buy",
+      "size": "mid"
+    },
+    {
+      "ticker": "SM",
+      "buy_score": 6.8,
+      "sell_score": 0.0,
+      "events": [
+        {
+          "event": "hormuz_energy_risk",
+          "side": "buy",
+          "weight": 6.8,
+          "bucket": "oil_ep"
+        }
+      ],
+      "net": 6.8,
+      "side": "buy",
+      "size": "mid"
+    },
+    {
+      "ticker": "HPK",
+      "buy_score": 6.8,
+      "sell_score": 0.0,
+      "events": [
+        {
+          "event": "hormuz_energy_risk",
+          "side": "buy",
+          "weight": 6.8,
+          "bucket": "oil_ep"
+        }
+      ],
+      "net": 6.8,
+      "side": "buy",
+      "size": "small"
+    },
+    {
+      "ticker": "REPX",
+      "buy_score": 6.8,
+      "sell_score": 0.0,
+      "events": [
+        {
+          "event": "hormuz_energy_risk",
+          "side": "buy",
+          "weight": 6.8,
+          "bucket": "oil_ep"
+        }
+      ],
+      "net": 6.8,
+      "side": "buy",
+      "size": "small"
+    },
+    {
+      "ticker": "OXY",
+      "buy_score": 6.8,
+      "sell_score": 0.0,
+      "events": [
+        {
+          "event": "hormuz_energy_risk",
+          "side": "buy",
+          "weight": 6.8,
+          "bucket": "oil_ep"
+        }
+      ],
+      "net": 6.8,
+      "side": "buy",
+      "size": "large"
+    },
+    {
+      "ticker": "FANG",
+      "buy_score": 6.8,
+      "sell_score": 0.0,
+      "events": [
+        {
+          "event": "hormuz_energy_risk",
+          "side": "buy",
+          "weight": 6.8,
+          "bucket": "oil_ep"
+        }
+      ],
+      "net": 6.8,
+      "side": "buy",
+      "size": "large"
+    },
+    {
+      "ticker": "XOM",
+      "buy_score": 4.76,
+      "sell_score": 0.0,
+      "events": [
+        {
+          "event": "hormuz_energy_risk",
+          "side": "buy",
+          "weight": 4.76,
+          "bucket": "oil_integrated"
+        }
+      ],
+      "net": 4.76,
+      "side": "buy",
+      "size": "mega"
+    },
+    {
+      "ticker": "CVX",
+      "buy_score": 4.76,
+      "sell_score": 0.0,
+      "events": [
+        {
+          "event": "hormuz_energy_risk",
+          "side": "buy",
+          "weight": 4.76,
+          "bucket": "oil_integrated"
+        }
+      ],
+      "net": 4.76,
+      "side": "buy",
+      "size": "mega"
+    },
+    {
+      "ticker": "NFG",
+      "buy_score": 4.76,
+      "sell_score": 0.0,
+      "events": [
+        {
+          "event": "hormuz_energy_risk",
+          "side": "buy",
+          "weight": 4.76,
+          "bucket": "oil_integrated"
+        }
+      ],
+      "net": 4.76,
+      "side": "buy",
+      "size": "mid"
+    },
+    {
+      "ticker": "DEC",
+      "buy_score": 4.76,
+      "sell_score": 0.0,
+      "events": [
+        {
+          "event": "hormuz_energy_risk",
+          "side": "buy",
+          "weight": 4.76,
+          "bucket": "oil_integrated"
+        }
+      ],
+      "net": 4.76,
+      "side": "buy",
+      "size": "small"
+    },
+    {
+      "ticker": "DAL",
+      "buy_score": 0.0,
+      "sell_score": 4.76,
+      "events": [
+        {
+          "event": "hormuz_energy_risk",
+          "side": "sell",
+          "weight": 4.76,
+          "bucket": "airlines"
+        }
+      ],
+      "net": -4.76,
+      "side": "sell",
+      "size": "large"
+    },
+    {
+      "ticker": "UAL",
+      "buy_score": 0.0,
+      "sell_score": 4.76,
+      "events": [
+        {
+          "event": "hormuz_energy_risk",
+          "side": "sell",
+          "weight": 4.76,
+          "bucket": "airlines"
+        }
+      ],
+      "net": -4.76,
+      "side": "sell",
+      "size": "large"
+    },
+    {
+      "ticker": "AAL",
+      "buy_score": 0.0,
+      "sell_score": 4.76,
+      "events": [
+        {
+          "event": "hormuz_energy_risk",
+          "side": "sell",
+          "weight": 4.76,
+          "bucket": "airlines"
+        }
+      ],
+      "net": -4.76,
+      "side": "sell",
+      "size": "mid"
+    },
+    {
+      "ticker": "ALK",
+      "buy_score": 0.0,
+      "sell_score": 4.76,
+      "events": [
+        {
+          "event": "hormuz_energy_risk",
+          "side": "sell",
+          "weight": 4.76,
+          "bucket": "airlines"
+        }
+      ],
+      "net": -4.76,
+      "side": "sell",
+      "size": "mid"
+    },
+    {
+      "ticker": "RJET",
+      "buy_score": 0.0,
+      "sell_score": 4.76,
+      "events": [
+        {
+          "event": "hormuz_energy_risk",
+          "side": "sell",
+          "weight": 4.76,
+          "bucket": "airlines"
+        }
+      ],
+      "net": -4.76,
+      "side": "sell",
+      "size": "small"
+    },
+    {
+      "ticker": "LUV",
+      "buy_score": 0.0,
+      "sell_score": 4.76,
+      "events": [
+        {
+          "event": "hormuz_energy_risk",
+          "side": "sell",
+          "weight": 4.76,
+          "bucket": "airlines"
+        }
+      ],
+      "net": -4.76,
+      "side": "sell",
+      "size": "large"
+    },
+    {
+      "ticker": "SKYW",
+      "buy_score": 0.0,
+      "sell_score": 4.76,
+      "events": [
+        {
+          "event": "hormuz_energy_risk",
+          "side": "sell",
+          "weight": 4.76,
+          "bucket": "airlines"
+        }
+      ],
+      "net": -4.76,
+      "side": "sell",
+      "size": "mid"
+    },
+    {
+      "ticker": "ALGT",
+      "buy_score": 0.0,
+      "sell_score": 4.76,
+      "events": [
+        {
+          "event": "hormuz_energy_risk",
+          "side": "sell",
+          "weight": 4.76,
+          "bucket": "airlines"
+        }
+      ],
+      "net": -4.76,
+      "side": "sell",
+      "size": "mid"
+    },
+    {
+      "ticker": "BXP",
+      "buy_score": 0.0,
+      "sell_score": 3.65,
+      "events": [
+        {
+          "event": "fed_rate_path",
+          "side": "sell",
+          "weight": 3.65,
+          "bucket": "reit_office"
+        }
+      ],
+      "net": -3.65,
+      "side": "sell",
+      "size": "large"
+    },
+    {
+      "ticker": "VNO",
+      "buy_score": 0.0,
+      "sell_score": 3.65,
+      "events": [
+        {
+          "event": "fed_rate_path",
+          "side": "sell",
+          "weight": 3.65,
+          "bucket": "reit_office"
+        }
+      ],
+      "net": -3.65,
+      "side": "sell",
+      "size": "mid"
+    },
+    {
+      "ticker": "ARE",
+      "buy_score": 0.0,
+      "sell_score": 3.65,
+      "events": [
+        {
+          "event": "fed_rate_path",
+          "side": "sell",
+          "weight": 3.65,
+          "bucket": "reit_office"
+        }
+      ],
+      "net": -3.65,
+      "side": "sell",
+      "size": "mid"
+    },
+    {
+      "ticker": "CDP",
+      "buy_score": 0.0,
+      "sell_score": 3.65,
+      "events": [
+        {
+          "event": "fed_rate_path",
+          "side": "sell",
+          "weight": 3.65,
+          "bucket": "reit_office"
+        }
+      ],
+      "net": -3.65,
+      "side": "sell",
+      "size": "mid"
+    },
+    {
+      "ticker": "PSTL",
+      "buy_score": 0.0,
+      "sell_score": 3.65,
+      "events": [
+        {
+          "event": "fed_rate_path",
+          "side": "sell",
+          "weight": 3.65,
+          "bucket": "reit_office"
+        }
+      ],
+      "net": -3.65,
+      "side": "sell",
+      "size": "small"
+    },
+    {
+      "ticker": "HPP",
+      "buy_score": 0.0,
+      "sell_score": 3.65,
+      "events": [
+        {
+          "event": "fed_rate_path",
+          "side": "sell",
+          "weight": 3.65,
+          "bucket": "reit_office"
+        }
+      ],
+      "net": -3.65,
+      "side": "sell",
+      "size": "small"
+    },
+    {
+      "ticker": "CUZ",
+      "buy_score": 0.0,
+      "sell_score": 3.65,
+      "events": [
+        {
+          "event": "fed_rate_path",
+          "side": "sell",
+          "weight": 3.65,
+          "bucket": "reit_office"
+        }
+      ],
+      "net": -3.65,
+      "side": "sell",
+      "size": "mid"
+    },
+    {
+      "ticker": "KRC",
+      "buy_score": 0.0,
+      "sell_score": 3.65,
+      "events": [
+        {
+          "event": "fed_rate_path",
+          "side": "sell",
+          "weight": 3.65,
+          "bucket": "reit_office"
+        }
+      ],
+      "net": -3.65,
+      "side": "sell",
+      "size": "mid"
+    },
+    {
+      "ticker": "CRM",
+      "buy_score": 0.88,
+      "sell_score": 2.83,
+      "events": [
+        {
+          "event": "fed_rate_path",
+          "side": "sell",
+          "weight": 2.83,
+          "bucket": "software_app"
+        },
+        {
+          "event": "weak_labor_print",
+          "side": "buy",
+          "weight": 0.88,
+          "bucket": "software_app"
+        }
+      ],
+      "net": -1.95,
+      "side": "sell",
+      "size": "large"
+    },
+    {
+      "ticker": "NOW",
+      "buy_score": 0.88,
+      "sell_score": 2.83,
+      "events": [
+        {
+          "event": "fed_rate_path",
+          "side": "sell",
+          "weight": 2.83,
+          "bucket": "software_app"
+        },
+        {
+          "event": "weak_labor_print",
+          "side": "buy",
+          "weight": 0.88,
+          "bucket": "software_app"
+        }
+      ],
+      "net": -1.95,
+      "side": "sell",
+      "size": "large"
+    },
+    {
+      "ticker": "UBER",
+      "buy_score": 0.88,
+      "sell_score": 2.83,
+      "events": [
+        {
+          "event": "fed_rate_path",
+          "side": "sell",
+          "weight": 2.83,
+          "bucket": "software_app"
+        },
+        {
+          "event": "weak_labor_print",
+          "side": "buy",
+          "weight": 0.88,
+          "bucket": "software_app"
+        }
+      ],
+      "net": -1.95,
+      "side": "sell",
+      "size": "large"
+    },
+    {
+      "ticker": "PAYC",
+      "buy_score": 0.88,
+      "sell_score": 2.83,
+      "events": [
+        {
+          "event": "fed_rate_path",
+          "side": "sell",
+          "weight": 2.83,
+          "bucket": "software_app"
+        },
+        {
+          "event": "weak_labor_print",
+          "side": "buy",
+          "weight": 0.88,
+          "bucket": "software_app"
+        }
+      ],
+      "net": -1.95,
+      "side": "sell",
+      "size": "mid"
+    },
+    {
+      "ticker": "BSY",
+      "buy_score": 0.88,
+      "sell_score": 2.83,
+      "events": [
+        {
+          "event": "fed_rate_path",
+          "side": "sell",
+          "weight": 2.83,
+          "bucket": "software_app"
+        },
+        {
+          "event": "weak_labor_print",
+          "side": "buy",
+          "weight": 0.88,
+          "bucket": "software_app"
+        }
+      ],
+      "net": -1.95,
+      "side": "sell",
+      "size": "mid"
+    },
+    {
+      "ticker": "IBTA",
+      "buy_score": 0.88,
+      "sell_score": 2.83,
+      "events": [
+        {
+          "event": "fed_rate_path",
+          "side": "sell",
+          "weight": 2.83,
+          "bucket": "software_app"
+        },
+        {
+          "event": "weak_labor_print",
+          "side": "buy",
+          "weight": 0.88,
+          "bucket": "software_app"
+        }
+      ],
+      "net": -1.95,
+      "side": "sell",
+      "size": "small"
+    },
+    {
+      "ticker": "UPBD",
+      "buy_score": 0.88,
+      "sell_score": 2.83,
+      "events": [
+        {
+          "event": "fed_rate_path",
+          "side": "sell",
+          "weight": 2.83,
+          "bucket": "software_app"
+        },
+        {
+          "event": "weak_labor_print",
+          "side": "buy",
+          "weight": 0.88,
+          "bucket": "software_app"
+        }
+      ],
+      "net": -1.95,
+      "side": "sell",
+      "size": "small"
+    },
+    {
+      "ticker": "SNOW",
+      "buy_score": 0.88,
+      "sell_score": 2.83,
+      "events": [
+        {
+          "event": "fed_rate_path",
+          "side": "sell",
+          "weight": 2.83,
+          "bucket": "software_app"
+        },
+        {
+          "event": "weak_labor_print",
+          "side": "buy",
+          "weight": 0.88,
+          "bucket": "software_app"
+        }
+      ],
+      "net": -1.95,
+      "side": "sell",
+      "size": "large"
+    },
+    {
+      "ticker": "JPM",
+      "buy_score": 2.83,
+      "sell_score": 1.05,
+      "events": [
+        {
+          "event": "fed_rate_path",
+          "side": "buy",
+          "weight": 2.83,
+          "bucket": "banks_diversified"
+        },
+        {
+          "event": "weak_labor_print",
+          "side": "sell",
+          "weight": 1.05,
+          "bucket": "banks_diversified"
+        }
+      ],
+      "net": 1.78,
+      "side": "buy",
+      "size": "mega"
+    },
+    {
+      "ticker": "BAC",
+      "buy_score": 2.83,
+      "sell_score": 1.05,
+      "events": [
+        {
+          "event": "fed_rate_path",
+          "side": "buy",
+          "weight": 2.83,
+          "bucket": "banks_diversified"
+        },
+        {
+          "event": "weak_labor_print",
+          "side": "sell",
+          "weight": 1.05,
+          "bucket": "banks_diversified"
+        }
+      ],
+      "net": 1.78,
+      "side": "buy",
+      "size": "mega"
+    },
+    {
+      "ticker": "FRBT",
+      "buy_score": 2.83,
+      "sell_score": 1.05,
+      "events": [
+        {
+          "event": "fed_rate_path",
+          "side": "buy",
+          "weight": 2.83,
+          "bucket": "banks_diversified"
+        },
+        {
+          "event": "weak_labor_print",
+          "side": "sell",
+          "weight": 1.05,
+          "bucket": "banks_diversified"
+        }
+      ],
+      "net": 1.78,
+      "side": "buy",
+      "size": "small"
+    },
+    {
+      "ticker": "WFC",
+      "buy_score": 2.83,
+      "sell_score": 1.05,
+      "events": [
+        {
+          "event": "fed_rate_path",
+          "side": "buy",
+          "weight": 2.83,
+          "bucket": "banks_diversified"
+        },
+        {
+          "event": "weak_labor_print",
+          "side": "sell",
+          "weight": 1.05,
+          "bucket": "banks_diversified"
+        }
+      ],
+      "net": 1.78,
+      "side": "buy",
+      "size": "mega"
+    },
+    {
+      "ticker": "C",
+      "buy_score": 2.83,
+      "sell_score": 1.05,
+      "events": [
+        {
+          "event": "fed_rate_path",
+          "side": "buy",
+          "weight": 2.83,
+          "bucket": "banks_diversified"
+        },
+        {
+          "event": "weak_labor_print",
+          "side": "sell",
+          "weight": 1.05,
+          "bucket": "banks_diversified"
+        }
+      ],
+      "net": 1.78,
+      "side": "buy",
+      "size": "mega"
+    },
+    {
+      "ticker": "BNY",
+      "buy_score": 2.83,
+      "sell_score": 1.05,
+      "events": [
+        {
+          "event": "fed_rate_path",
+          "side": "buy",
+          "weight": 2.83,
+          "bucket": "banks_diversified"
+        },
+        {
+          "event": "weak_labor_print",
+          "side": "sell",
+          "weight": 1.05,
+          "bucket": "banks_diversified"
+        }
+      ],
+      "net": 1.78,
+      "side": "buy",
+      "size": "large"
+    },
+    {
+      "ticker": "NEM",
+      "buy_score": 1.4,
+      "sell_score": 2.83,
+      "events": [
+        {
+          "event": "fed_rate_path",
+          "side": "sell",
+          "weight": 2.83,
+          "bucket": "gold"
+        },
+        {
+          "event": "weak_labor_print",
+          "side": "buy",
+          "weight": 1.4,
+          "bucket": "gold"
+        }
+      ],
+      "net": -1.43,
+      "side": "sell",
+      "size": "large"
+    },
+    {
+      "ticker": "GOLD",
+      "buy_score": 1.4,
+      "sell_score": 2.83,
+      "events": [
+        {
+          "event": "fed_rate_path",
+          "side": "sell",
+          "weight": 2.83,
+          "bucket": "gold"
+        },
+        {
+          "event": "weak_labor_print",
+          "side": "buy",
+          "weight": 1.4,
+          "bucket": "gold"
+        }
+      ],
+      "net": -1.43,
+      "side": "sell",
+      "size": "small"
+    },
+    {
+      "ticker": "AU",
+      "buy_score": 1.4,
+      "sell_score": 2.83,
+      "events": [
+        {
+          "event": "fed_rate_path",
+          "side": "sell",
+          "weight": 2.83,
+          "bucket": "gold"
+        },
+        {
+          "event": "weak_labor_print",
+          "side": "buy",
+          "weight": 1.4,
+          "bucket": "gold"
+        }
+      ],
+      "net": -1.43,
+      "side": "sell",
+      "size": "large"
+    },
+    {
+      "ticker": "SSRM",
+      "buy_score": 1.4,
+      "sell_score": 2.83,
+      "events": [
+        {
+          "event": "fed_rate_path",
+          "side": "sell",
+          "weight": 2.83,
+          "bucket": "gold"
+        },
+        {
+          "event": "weak_labor_print",
+          "side": "buy",
+          "weight": 1.4,
+          "bucket": "gold"
+        }
+      ],
+      "net": -1.43,
+      "side": "sell",
+      "size": "mid"
+    },
+    {
+      "ticker": "AUGO",
+      "buy_score": 1.4,
+      "sell_score": 2.83,
+      "events": [
+        {
+          "event": "fed_rate_path",
+          "side": "sell",
+          "weight": 2.83,
+          "bucket": "gold"
+        },
+        {
+          "event": "weak_labor_print",
+          "side": "buy",
+          "weight": 1.4,
+          "bucket": "gold"
+        }
+      ],
+      "net": -1.43,
+      "side": "sell",
+      "size": "mid"
+    },
+    {
+      "ticker": "DC",
+      "buy_score": 1.4,
+      "sell_score": 2.83,
+      "events": [
+        {
+          "event": "fed_rate_path",
+          "side": "sell",
+          "weight": 2.83,
+          "bucket": "gold"
+        },
+        {
+          "event": "weak_labor_print",
+          "side": "buy",
+          "weight": 1.4,
+          "bucket": "gold"
+        }
+      ],
+      "net": -1.43,
+      "side": "sell",
+      "size": "small"
+    },
+    {
+      "ticker": "CTGO",
+      "buy_score": 1.4,
+      "sell_score": 2.83,
+      "events": [
+        {
+          "event": "fed_rate_path",
+          "side": "sell",
+          "weight": 2.83,
+          "bucket": "gold"
+        },
+        {
+          "event": "weak_labor_print",
+          "side": "buy",
+          "weight": 1.4,
+          "bucket": "gold"
+        }
+      ],
+      "net": -1.43,
+      "side": "sell",
+      "size": "small"
+    },
+    {
+      "ticker": "RGLD",
+      "buy_score": 1.4,
+      "sell_score": 2.83,
+      "events": [
+        {
+          "event": "fed_rate_path",
+          "side": "sell",
+          "weight": 2.83,
+          "bucket": "gold"
+        },
+        {
+          "event": "weak_labor_print",
+          "side": "buy",
+          "weight": 1.4,
+          "bucket": "gold"
+        }
+      ],
+      "net": -1.43,
+      "side": "sell",
+      "size": "large"
+    }
+  ]
+}
