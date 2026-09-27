@@ -19,15 +19,19 @@ from research.hot_n4_clean_v1.protocol import (  # noqa: E402
     ENGINE_SHA256,
     FEES_SHA256,
     DELISTED,
+    ADV_SHARE_SCALE,
     FIRST_HALT_SESSION,
     LIQ_CAP_FRAC,
-    LIQ_DAYS,
+    MISSING_BARS_SHA256,
+    MISSING_COUNTS,
     FORWARD,
     FULLSCAN_CSV_SHA256,
     GAP_DAY,
     LUCK_N,
     N_VARIANTS,
     OHLC_SHA256,
+    PAPER_FILLS,
+    PAPER_FILL_SHA256,
     OUTCOME_KEYS,
     PRICE_SOURCES,
     PREREG,
@@ -83,6 +87,8 @@ def _rules(text: str) -> None:
         "union_hot_n4_h1__w0", "union_hot_n4_holdup__w0", "keep_held",
         "22011", "2026-08-28", "nonews",
         "0.5%", "Wilson", "What v4", "1.96", "AAC-U",
+        "Average Volume", "MISSING_BARS.csv", "0.2407%", "0.5268%",
+        "FILLED_VIA_POSITION", "stop_first_same_bar",
     ):
         if phrase not in text:
             raise SystemExit(f"rule missing: {phrase}")
@@ -133,8 +139,27 @@ def _calendar(text: str) -> None:
         raise SystemExit("halt")
     if SLIP_PRIMARY != 0.005 or SLIP_LINES != (0.0, 0.005, 0.01):
         raise SystemExit("slip")
-    if LIQ_CAP_FRAC != 0.01 or LIQ_DAYS != 20 or WILSON_Z != 1.96:
+    if LIQ_CAP_FRAC != 0.01 or ADV_SHARE_SCALE != 1000 or WILSON_Z != 1.96:
         raise SystemExit("cap or wilson")
+    if sum(row[1] for row in MISSING_COUNTS) != 1214:
+        raise SystemExit("missing total")
+    if sum(row[2] for row in MISSING_COUNTS) != 37 or len(MISSING_COUNTS) != 30:
+        raise SystemExit("missing liquid")
+    if MISSING_BARS_SHA256 not in text:
+        raise SystemExit("missing bars pin")
+    gaps = sorted(fill / op - 1.0 for _d, _t, _s, fill, op in PAPER_FILLS)
+    if len(gaps) != 3:
+        raise SystemExit("fills")
+    if abs(gaps[1] - 0.0024067265980642905) > 1e-12:
+        raise SystemExit("median gap")
+    if abs(gaps[-1] - 0.005267748452037591) > 1e-12:
+        raise SystemExit("worst gap")
+    got = file_sha256(ROOT / "data/paper_open/2026-09-21_status.json")
+    if got != PAPER_FILL_SHA256:
+        raise SystemExit("paper fill file")
+    got = file_sha256(ROOT / "research/hot_n4_clean_v1/MISSING_BARS.csv")
+    if got != MISSING_BARS_SHA256:
+        raise SystemExit("missing bars file")
     if len(DELISTED) != 31 or DELISTED[10] != ("AAC-U", "2026-09-08", None):
         raise SystemExit("delist")
     for ticker, _panel, _bar in DELISTED:

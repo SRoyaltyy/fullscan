@@ -2,7 +2,7 @@
 
 - status: locked before any score. This commit has no return, no win rate, and no trade outcome.
 - written: 2026-09-27
-- fingerprint_sha256: 7ca171a6b9e82b9cd15a03b28137270a65a7906ee539967ef37f7c832f351ef8
+- fingerprint_sha256: e45c85c9eaa4bacaa693fd1ec015db8935fa54394f406a619755ad53d3144cea
 - fingerprint_scope: SHA-256 of the UTF-8 bytes after the line `<!-- BEGIN COVERED -->`, including the final newline. Line endings are LF. The header above the marker is not covered.
 - study: `research/hot_n4_clean_v1/`. New files only. No edit to an engine, to `src/`, to `forward_shadow`, or to another study.
 - sessions: 2026-08-13 through 2026-09-25. The before window ends 2026-09-11. The after window starts 2026-09-14 and can only reject.
@@ -293,11 +293,7 @@ Slippage is a fixed fraction of shares times that open, charged on top of the Fu
 
 Share count is chosen once, on the primary path. A buy's cash cost is `shares * open * (1 + 0.005)` plus `order_fees(shares, open, buy)`. A sell's cash proceeds are `shares * open * (1 - 0.005)` minus `order_fees(shares, open, sell)`. The fee function sees the actual open, not the slipped price. If the primary cost is above cash, shares are reduced until one share no longer fits, and that order is then skipped. The 0% line and the 1% line reprice those same shares. They do not resize, and they do not change who is held. The flat 15bp line also uses those shares, with 7.5bp per side on the actual open and with no slip.
 
-The liquidity cap sizes a new buy. A position's notional at the open, `shares * open`, may not exceed 1% of the stock's 20-day median dollar volume. Excess budget stays cash. The cap does not trim a name that is already held.
-
-The 20 days are the 20 NYSE sessions strictly before D. For each of those sessions, dollar volume is Finviz `Price` times Finviz `Volume` on the frozen row whose `trade_date` is that session, when both numbers are present and positive. Otherwise it is the unadjusted pinned bar on that date, `close * volume`, when both are present and positive. Unadjusted means the stored print, before the split adjustment in section 5. The median of those 20 values is the arithmetic mean of the 10th and 11th after sorting. If fewer than 20 values exist, the buy is unfilled, the cash stays cash, and the order is counted under rule 11. The window is not shortened.
-
-Whole shares under the cap: `min(shares from the cash budget, floor(0.01 * median / open))`. If that floor is under 1, the buy is unfilled and counted.
+The liquidity cap sizes a new buy. Excess budget stays cash. The cap does not trim a name that is already held. The dollar level is rule 14: 1% of Finviz `Average Volume` times Finviz `Price` on the frozen row for trade_date D, with `Average Volume` converted from thousands of shares. Whole shares are `min(shares from the cash budget, floor(cap / open))`. If that floor is under 1, or `Price` or `Average Volume` is missing or not positive, the buy is unfilled and counted under rule 11.
 
 A stock with no open on D does not fill. A buy that day is an unfilled order. A held lot that cannot be sold stays held. It is marked at the last close, which is the most recent pinned close strictly before D. It is sold at the next later session that has an open, still subject to `lot_should_sell`. The missing open is not replaced by that close as a fill.
 
@@ -359,11 +355,11 @@ The win rate is reported with a 95% Wilson interval. With `n` closed trades, `k`
 
 The interval is `center - half` through `center + half`. `z = 1.96` is locked. If `n` is 0, the rate and the interval are undefined and the cell says so. This commit does not compute a rate.
 
-Skipped and unfilled orders are listed separately and counted in the report. Each line has the session, the ticker, the side, and the reason. The reasons are: no open, cannot buy one share, fewer than 20 dollar-volume observations, cap below one share, and no bar left to fill. The count is printed. Those orders are not closed trades, so they are not wins and they are not losses. The session stays in the day count.
+Skipped and unfilled orders are listed separately and counted in the report. Each line has the session, the ticker, the side, and the reason. The reasons are: no open, cannot buy one share, missing Finviz `Price` or `Average Volume`, cap below one share, no bar left to fill, and a frozen-record ticker with no pinned bar on or before D (rule 13). The count is printed. Those orders are not closed trades, so they are not wins and they are not losses. The session stays in the day count.
 
 ## 15. Rule 12 — What v4 and the cap studies did
 
-This table says which of rules 1–11 the earlier preregistrations followed. It copies no return. "Partial" means the study did some of the rule and not the rest. The weight caps in `concentration_cap_v1` through `concentration_cap_v3` are a share of book equity. They are not the 1% dollar-volume cap in rule 9.
+This table says which of rules 1–11 and 13–15 the earlier preregistrations followed. It copies no return. "Partial" means the study did some of the rule and not the rest. The weight caps in `concentration_cap_v1` through `concentration_cap_v3` are a share of book equity. They are not the 1% dollar-volume cap in rules 9 and 14. Rule 16 is a measurement in section 19, not a rule those studies wrote down.
 
 | rule | v4 | cap v1 | cap v2 | cap v3 |
 | --- | --- | --- | --- | --- |
@@ -378,4 +374,89 @@ This table says which of rules 1–11 the earlier preregistrations followed. It 
 | 9. Open fill, 0.5% slip, 1% dollar-volume cap, missing open | Partial. Open fill yes. Futubull fees yes. No slippage. No dollar-volume cap. A missing open keeps the slot in cash and is not replaced by the close. A held lot is not marked at the last close and sold at the next open. | Partial. Open fill yes. Futubull yes. No slippage. No dollar-volume cap. A missing open keeps the slot. A weight-cap trim sells at the open. | Partial. Open fill yes. Futubull yes. No slippage. No dollar-volume cap. The prereg says open is the fill. It does not restate the next-open carry. | Partial. Same as v2. |
 | 10. Missing day stays in cash and in the count; delists listed | No. | No. | No. | No. |
 | 11. Wilson interval; unfilled orders counted | No. Win rate is a point. A one-share skip is described and is not a counted report line. | No. | No. | No. |
+| 13. Universe is the frozen record for D; missing Yahoo bars listed | No. The board is the earliest factor-mine panel. Missing Yahoo bars are not listed per day. | No. The v4 stored board. | No. Same. | No. Same. |
+| 14. Liquidity cap from Finviz `Average Volume` times `Price` | No. | No. The weight cap is a share of book equity. | No. Same. | No. Same. |
+| 15. Gap through a stop fills at the open; stop before target | No. These recipes have no stop. The prereg does not lock the gap fill or stop-before-target. | No. The prereg says the recipes have no stop and no target. | No. The prereg does not restate a stop rule. | No. Same as v2. |
+
+## 16. Rule 13 — Universe is the frozen record
+
+Day D's candidate sources (`ohlc_hot`, `yday_gainer`, `yday_mover`, `probable`, `overnight`, `overnight_mega`) are computed only over tickers that have a row in the Theme Radar frozen record for `trade_date` D. Today's Yahoo ticker list is not the universe. Bars are read under the ticker string as it stood on D. A later rename is not substituted.
+
+A day-D ticker is missing when the pinned `data/prices/ohlc.parquet` has no row for that exact ticker with `date` on or before D. The name is listed. It is not dropped quietly. `2026-08-28` has no frozen row, so that session has no ticker list and is not a line in the count. The list for the other 30 sessions is `research/hot_n4_clean_v1/MISSING_BARS.csv`, sha256 `75e2778152e04cb0c0e059aca0c7c7c2aa4cdaf1b512260c4c7f6c8afeeb82b0`. It has 1,214 ticker-days and 141 distinct tickers. `no_store` means the ticker is absent from the price file. `first_bar_after` means the first stored bar is after D.
+
+| session | missing tickers | of which pass the liquid gate |
+| --- | --- | --- |
+| 2026-08-13 | 21 | 3 |
+| 2026-08-14 | 20 | 3 |
+| 2026-08-17 | 19 | 3 |
+| 2026-08-18 | 19 | 3 |
+| 2026-08-19 | 19 | 3 |
+| 2026-08-20 | 19 | 3 |
+| 2026-08-21 | 19 | 3 |
+| 2026-08-24 | 20 | 2 |
+| 2026-08-25 | 19 | 2 |
+| 2026-08-26 | 18 | 2 |
+| 2026-08-27 | 23 | 1 |
+| 2026-08-31 | 21 | 1 |
+| 2026-09-01 | 21 | 1 |
+| 2026-09-02 | 20 | 1 |
+| 2026-09-03 | 19 | 1 |
+| 2026-09-04 | 18 | 0 |
+| 2026-09-08 | 18 | 0 |
+| 2026-09-09 | 14 | 0 |
+| 2026-09-10 | 21 | 0 |
+| 2026-09-11 | 38 | 0 |
+| 2026-09-14 | 42 | 0 |
+| 2026-09-15 | 48 | 0 |
+| 2026-09-16 | 65 | 0 |
+| 2026-09-17 | 72 | 0 |
+| 2026-09-18 | 83 | 0 |
+| 2026-09-21 | 86 | 1 |
+| 2026-09-22 | 88 | 1 |
+| 2026-09-23 | 94 | 1 |
+| 2026-09-24 | 111 | 1 |
+| 2026-09-25 | 119 | 1 |
+
+A missing ticker that also passes the liquid gate is flagged `no_fill`. It was inside the set the price sources are computed over, and it cannot be ranked or filled. It does not take a top-4 slot, and it is not replaced by the next name. The flag is written on the day card. There are 37 such ticker-days, four tickers: AAC-U on the 10 sessions 2026-08-13 through 2026-08-26 (`no_store`), PNAQ-U on the 7 sessions 2026-08-13 through 2026-08-21 (`no_store`), NAT on the 15 sessions 2026-08-13 through 2026-09-03 (`first_bar_after`, first stored bar 2026-09-04), and HYAC-U on the 5 sessions 2026-09-21 through 2026-09-25 (`no_store`).
+
+## 17. Rule 14 — Liquidity cap field
+
+The cap base is the frozen row for trade_date D, as that row stood for that morning. Dollar average volume is Finviz `Price` times Finviz `Average Volume` times 1,000. `Average Volume` is thousands of shares: on the 2026-09-21 row, AAPL's `Average Volume` is 53,434.76 and its `Volume` is 86,561,467 shares. The 1,000 is that unit. It is not a tuned factor. The position notional at the open may not exceed 1% of that dollar average volume.
+
+The record's `Open` column is not used. On every frozen row from 2026-09-01 through 2026-09-25, `Open` is empty. On trade_date 2026-09-28, which is after this window, `Open` is filled and is the snapshot day's open, not session D's open. Session D's open remains the pinned bar.
+
+If `Price` or `Average Volume` is missing or not positive, the buy is unfilled under rule 11.
+
+## 18. Rule 15 — Stops
+
+`union_hot_n4_h1__w0` and `union_hot_n4_holdup__w0` have no stop and no target. `take_pct` and `stop_pct` stay null, so the stop branch does not fire for these two.
+
+The general rule, for any later recipe that does set them, is the pinned `lot_should_sell` path. For a long, the stop level is the entry times one minus the stop fraction. If the open is at or below that level, the sell fills at that open, not at the stop. If the same daily bar touches both the stop and the target, the stop is taken first: the code checks the stop before the take, and a bar that touches both is `stop_first_same_bar`. A short uses the mirrored test. These two recipes do not enter that branch.
+
+## 19. Rule 16 — Measured slippage beside the locked 0.5%
+
+This is a measurement of paper fills. It is not a recipe score, and it does not replace the locked 0.5% per side. The 0.5%, the 0% line, and the 1% line stay as rule 9 locked them.
+
+The committed paper and Webull fill prices for 2026-09-14 through 2026-09-25 live in `data/paper_open/`. The only file with an observed fill price is `data/paper_open/2026-09-21_status.json`, sha256 `0a88a810ec35a11dd94dc641edb8ef328c67b1e226c3697b7be50f89ec70050e`. `2026-09-21_submit.json` repeats the same sent rows and is not a second sample. There is no `data/paper_open` file for 2026-09-14, 2026-09-15, 2026-09-16, 2026-09-17, or 2026-09-18. The files for 2026-09-22 through 2026-09-25 are plans: ticket status `plan`, no `avg_fill_px`. VSTS on 2026-09-21 is `SUBMITTED` with `filled_qty` 0 and a null fill price, so it is not in the sample.
+
+A counted fill has `filled_qty` above 0 and a non-null `avg_fill_px`. The gap is `avg_fill_px / official_open - 1`. The official open is the pinned bar's open that session. The price split is that open: under $3, or $3 and above. The median is the middle signed gap. The worst 10% is the mean adverse gap among the `ceil(0.1 * n)` most adverse fills in the cell. Adverse for a buy is the signed gap. Adverse for a sell is the signed gap multiplied by minus one. A cell with n = 0 is empty.
+
+The host on that file is `api.sandbox.webull.com`, and the three fills are `FILLED_VIA_POSITION`. Paper fills are a lower bound on real slippage.
+
+| cell | n | median gap | worst 10% |
+| --- | --- | --- | --- |
+| buys, open under $3 | 0 | | |
+| buys, open $3 and above | 3 | +0.2407% | +0.5268% |
+| sells, open under $3 | 0 | | |
+| sells, open $3 and above | 0 | | |
+
+The three buys, all with an official open at or above $3:
+
+| ticker | side | fill | official open | gap |
+| --- | --- | --- | --- | --- |
+| DELL | BUY | 587.89 | 586.77001953125 | +0.1909% |
+| UMC | BUY | 24.99 | 24.93000030517578 | +0.2407% |
+| GME | BUY | 22.9 | 22.780000686645508 | +0.5268% |
+
+With n = 3, `ceil(0.1 * 3)` is 1, so the worst 10% is GME's gap. The median is UMC's gap, the middle of the three.
 

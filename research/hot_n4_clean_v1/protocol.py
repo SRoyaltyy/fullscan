@@ -157,8 +157,53 @@ NO_BAR = ("AAC-U", "HYAC-U", "PNAQ-U")
 SLIP_PRIMARY = 0.005
 SLIP_LINES = (0.0, 0.005, 0.01)
 LIQ_CAP_FRAC = 0.01
-LIQ_DAYS = 20
+# Finviz Average Volume is thousands of shares. Dollar ADV is Price * ADV * 1000.
+ADV_SHARE_SCALE = 1000
 WILSON_Z = 1.96
+MISSING_BARS_CSV = "research/hot_n4_clean_v1/MISSING_BARS.csv"
+MISSING_BARS_SHA256 = "75e2778152e04cb0c0e059aca0c7c7c2aa4cdaf1b512260c4c7f6c8afeeb82b0"
+# ticker-days on the frozen record with no pinned bar dated on or before D.
+# 2026-08-28 has no frozen row and is not a line.
+MISSING_COUNTS = (
+    ("2026-08-13", 21, 3),
+    ("2026-08-14", 20, 3),
+    ("2026-08-17", 19, 3),
+    ("2026-08-18", 19, 3),
+    ("2026-08-19", 19, 3),
+    ("2026-08-20", 19, 3),
+    ("2026-08-21", 19, 3),
+    ("2026-08-24", 20, 2),
+    ("2026-08-25", 19, 2),
+    ("2026-08-26", 18, 2),
+    ("2026-08-27", 23, 1),
+    ("2026-08-31", 21, 1),
+    ("2026-09-01", 21, 1),
+    ("2026-09-02", 20, 1),
+    ("2026-09-03", 19, 1),
+    ("2026-09-04", 18, 0),
+    ("2026-09-08", 18, 0),
+    ("2026-09-09", 14, 0),
+    ("2026-09-10", 21, 0),
+    ("2026-09-11", 38, 0),
+    ("2026-09-14", 42, 0),
+    ("2026-09-15", 48, 0),
+    ("2026-09-16", 65, 0),
+    ("2026-09-17", 72, 0),
+    ("2026-09-18", 83, 0),
+    ("2026-09-21", 86, 1),
+    ("2026-09-22", 88, 1),
+    ("2026-09-23", 94, 1),
+    ("2026-09-24", 111, 1),
+    ("2026-09-25", 119, 1),
+)
+# Observed paper fills. (session, ticker, side, avg_fill_px, official_open)
+# Source: data/paper_open/2026-09-21_status.json sent rows with a fill price.
+PAPER_FILL_SHA256 = "0a88a810ec35a11dd94dc641edb8ef328c67b1e226c3697b7be50f89ec70050e"
+PAPER_FILLS = (
+    ("2026-09-21", "DELL", "BUY", 587.89, 586.77001953125),
+    ("2026-09-21", "GME", "BUY", 22.9, 22.780000686645508),
+    ("2026-09-21", "UMC", "BUY", 24.99, 24.93000030517578),
+)
 
 # Candidate names that leave the frozen panel before 2026-09-25 and do not
 # return. last_bar is the last pinned ohlc date in August–September 2026,
