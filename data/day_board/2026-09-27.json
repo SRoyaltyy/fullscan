@@ -1,6 +1,6 @@
 {
   "date": "2026-09-27",
-  "generated_at": "2026-09-27T15:56:05.609354-04:00",
+  "generated_at": "2026-09-27T15:56:27.718039-04:00",
   "overall": "FAIL",
   "ranker_ready": false,
   "blockers": [
@@ -14,8 +14,8 @@
   ],
   "counts": {
     "ok": 0,
-    "partial": 2,
-    "fail": 6,
+    "partial": 1,
+    "fail": 7,
     "n": 8
   },
   "processes": [
@@ -163,9 +163,9 @@
       "key": "preopen",
       "name": "Pre-Open ALL",
       "yaml": "preopen_all.yml",
-      "status": "PARTIAL",
+      "status": "FAIL",
       "inputs_ready": false,
-      "n_req_ok": 3,
+      "n_req_ok": 0,
       "n_req": 20,
       "n_opt_ok": 0,
       "n_opt": 3,
@@ -219,16 +219,11 @@
           "name": "News parse JSON",
           "path": "01_daily/news/2026-09-27_parsed.json",
           "role": "required",
-          "status": "OK",
-          "reason": "",
-          "size": 211837,
-          "said": "news_mode: on \u00b7 200 raw / 26 usable \u00b7 Wall Street Braces for Jobs and Inflation Data as Rate Hike Fears Loom - finance",
-          "bullets": [
-            "Wall Street Braces for Jobs and Inflation Data as Rate Hike Fears Loom - finance.biggo.com",
-            "US Treasury Yields Top 5% and Fed October Rate Hike Odds Exceed 60% \u2014 Taiwan Stocks Likely Under Pressure After Holiday - finance.biggo.com",
-            "All Eyes on U.S. Jobs and Inflation Data as October Rate Hike Signals Take Center Stage - finance.biggo.com",
-            "Markets Brace for U.S. Jobs, Inflation Data With Focus on Possible October Fed Rate Hike - bloomingbit"
-          ]
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "events",
@@ -312,16 +307,11 @@
           "name": "Pre-open QC JSON",
           "path": "01_daily/2026-09-27_preopen_qc.json",
           "role": "required",
-          "status": "OK",
-          "reason": "all_ok=False",
-          "size": 7572,
-          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 21 fail",
-          "bullets": [
-            "general_predict:missing",
-            "events:missing",
-            "news_judge:missing",
-            "news_actions:missing"
-          ]
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "status",
@@ -339,13 +329,11 @@
           "name": "Grok review JSON",
           "path": "01_daily/2026-09-27_grok_review.json",
           "role": "required",
-          "status": "OK",
-          "reason": "ok=False Grok returned an empty review",
-          "size": 308,
-          "said": "ok=False \u00b7 empty_review_reply (review)",
-          "bullets": [
-            "Grok returned an empty review"
-          ]
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "sector_basic_materials",
@@ -469,13 +457,8 @@
           "bullets": []
         }
       ],
-      "said": "news news_mode: on \u00b7 200 raw / 26 usable \u00b7 Wall Street Braces for Jobs and Inflation Data as Rate Hike Fears Loom - finance",
-      "bullets": [
-        "Wall Street Braces for Jobs and Inflation Data as Rate Hike Fears Loom - finance.biggo.com",
-        "US Treasury Yields Top 5% and Fed October Rate Hike Odds Exceed 60% \u2014 Taiwan Stocks Likely Under Pressure After Holiday - finance.biggo.com",
-        "All Eyes on U.S. Jobs and Inflation Data as October Rate Hike Signals Take Center Stage - finance.biggo.com",
-        "Markets Brace for U.S. Jobs, Inflation Data With Focus on Possible October Fed Rate Hike - bloomingbit"
-      ]
+      "said": "",
+      "bullets": []
     },
     {
       "key": "weather",
@@ -842,17 +825,7 @@
     "flatten": {},
     "general": {},
     "sectors": {},
-    "news": {
-      "said": "news_mode: on \u00b7 200 raw / 26 usable \u00b7 Wall Street Braces for Jobs and Inflation Data as Rate Hike Fears Loom - finance",
-      "bullets": [
-        "Wall Street Braces for Jobs and Inflation Data as Rate Hike Fears Loom - finance.biggo.com",
-        "US Treasury Yields Top 5% and Fed October Rate Hike Odds Exceed 60% \u2014 Taiwan Stocks Likely Under Pressure After Holiday - finance.biggo.com",
-        "All Eyes on U.S. Jobs and Inflation Data as October Rate Hike Signals Take Center Stage - finance.biggo.com",
-        "Markets Brace for U.S. Jobs, Inflation Data With Focus on Possible October Fed Rate Hike - bloomingbit",
-        "Fed Interest Rate Forecast: PCE Report Nears as 10-Year Yield Remains Above 5% - FXEmpire",
-        "The Week Ahead: US August PCE and September Nonfarm Payrolls Take Center Stage, Micron Earnings in Focus - TradingKey"
-      ]
-    },
+    "news": {},
     "weather": {}
   },
   "lands": [
@@ -905,6 +878,31 @@
         }
       ],
       "preview": "raw=200 usable=26 single=22 \u00b7 Wall Street Braces for Jobs and Inflation Data as Rate Hike Fears Loom - finance | US Treasury Yields Top 5% and Fed October Rate Hike Odds Exceed 60% \u2014 Taiwan Sto | All Eyes on U.S. Jobs and Inflation Data as October Rate Hike Signals Take Cente | Markets Brace for U.S. Jobs, Inflation Data With Focus on Possible October Fed R | Fed Interest Rate Forecast: PCE Report Nears as 10-Year Yield Remains Above 5% - \u00b7 # News Parse v2 \u2014 2026-09-27T15:56:04.896691-04:00\nWindow\u224824h | news_mode=on | raw=200 | usable=26 | single_name=22 | noise_dropped=150\nusable polarity={'+': 1, '-': 10, 'mixed': 1, 'neutral': 14}"
+    },
+    {
+      "key": "finviz",
+      "title": "Finviz universe export",
+      "date": "2026-09-27",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-27T15:56:27.510860-04:00",
+      "files": [
+        {
+          "path": "data/exports/finviz_2026-09-27.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11285611,
+          "preview": "11678 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC"
+        },
+        {
+          "path": "data/finviz/latest.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11446883,
+          "preview": "11680 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+        }
+      ],
+      "preview": "11678 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC \u00b7 11680 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
     }
   ],
   "href": {
