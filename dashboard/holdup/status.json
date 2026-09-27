@@ -1,0 +1,5 @@
+{
+  "date": "2026-09-28",
+  "latest_skip": "price store latest bar is 2026-09-25; 2026-09-28 open is not in the file yet",
+  "recipe": "union_hot_n4_holdup__w0"
+}

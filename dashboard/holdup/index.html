@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>union_hot_n4_holdup__w0 — append-only</title>
+<style>
+ :root{
+  --bg:#0f1420; --card:#171e2e; --line:#262f45; --line2:#232c42;
+  --fg:#dfe6f2; --mut:#8b96ab; --dim:#66708a; --pos:#4ade80; --neg:#f87171;
+  --chip:#2a3450; --day:#121826; --gold:#fbbf24;
+ }
+ *{box-sizing:border-box}
+ html,body{margin:0;width:100%;max-width:100%;overflow-x:hidden}
+ body{background:var(--bg);color:var(--fg);font:13px/1.45 -apple-system,Segoe UI,Roboto,sans-serif}
+ .wrap{width:100%;max-width:1100px;margin:0 auto;padding:14px 12px 36px}
+ h1{font-size:18px;margin:0 0 4px}
+ .sub{color:var(--mut);font-size:12px;margin:0 0 10px}
+ .lock{background:var(--card);border:1px solid var(--gold);border-radius:10px;padding:10px 12px;margin:0 0 12px}
+ .lock b{color:var(--gold)}
+ .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(140px,100%),1fr));gap:6px;margin:0 0 12px}
+ .card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:8px 10px;min-width:0}
+ .card span{display:block;color:var(--mut);font-size:11px}
+ .card b{display:block;font-size:16px;margin-top:2px;font-variant-numeric:tabular-nums}
+ .pos{color:var(--pos)}.neg{color:var(--neg)}.mut{color:var(--mut)}.gold{color:var(--gold)}
+ .curve-box{width:100%;margin:0 0 12px}
+ canvas{width:100%;height:280px;background:var(--card);border:1px solid var(--line);border-radius:10px}
+ h2{font-size:14px;margin:14px 0 6px;color:#aeb9cf}
+ .day{background:var(--day);border:1px solid var(--line);border-radius:10px;padding:8px 10px;margin:0 0 8px}
+ .day h3{margin:0 0 4px;font-size:13px;font-family:ui-monospace,Menlo,Consolas,monospace}
+ .hd{display:flex;flex-wrap:wrap;gap:6px 14px;color:var(--mut);font-variant-numeric:tabular-nums;margin:0 0 6px}
+ .pills{display:flex;flex-wrap:wrap;gap:5px;margin:0 0 4px}
+ .pill{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:3px 7px;font:11.5px/1.35 ui-monospace,Menlo,Consolas,monospace}
+ .pill.buy{border-color:#166534}
+ .pill.sell{border-color:#7f1d1d}
+ .pill.flat{color:var(--mut)}
+ .lab{color:var(--dim);font-size:11px;margin:4px 0 2px}
+ table{width:100%;border-collapse:collapse;font-size:12px}
+ th,td{padding:4px 6px;border-bottom:1px solid var(--line2);text-align:right}
+ th{color:var(--mut);font-weight:600}
+ td:first-child,th:first-child{text-align:left}
+ td.tick{font-family:ui-monospace,Menlo,Consolas,monospace;text-align:left}
+ .note{color:var(--dim);font-size:11.5px;margin-top:8px}
+ .skip{color:var(--gold);margin:0 0 10px}
+ .tbl-wrap{overflow-x:auto}
+ @media (max-width:720px){
+  canvas{height:220px}
+  h1{font-size:16px}
+  .wrap{padding:10px 8px 24px}
+ }
+</style>
+</head>
+<body>
+<div class="wrap">
+ <h1>union_hot_n4_holdup__w0</h1>
+ <p class="sub">Day-by-day book. The page is drawn from the append-only log.</p>
+ <div class="lock">
+  <b>Rules locked. Luck N 22,017. Records are append-only.</b>
+  A past day is never regenerated. Each run appends only the next missing session, and a close is a new record — the buy line stays as written.
+  Primary cost is the Futubull fee plus 0.5% per side. Fills are that session's official open. No orders are sent.
+ </div>
+ <p id="skip" class="skip" hidden></p>
+ <div class="cards" id="cards"></div>
+ <div class="curve-box"><canvas id="curve" width="1000" height="280"></canvas></div>
+ <h2>Sessions</h2>
+ <div id="days"></div>
+ <h2>Closed trades</h2>
+ <div class="tbl-wrap">
+  <table>
+   <thead><tr><th>Exit</th><th>Ticker</th><th>Shares</th><th>Entry</th><th>Exit open</th><th>Reason</th><th>P&amp;L</th></tr></thead>
+   <tbody id="closes"></tbody>
+  </table>
+ </div>
+ <p class="note" id="foot"></p>
+</div>
+<script>
+const CAPITAL = 10000;
+function money(n){
+  const v = Number(n);
+  const sign = v < 0 ? "-" : "";
+  return sign + "$" + Math.abs(v).toLocaleString("en-US", {minimumFractionDigits:2, maximumFractionDigits:2});
+}
+function px(n){return Number(n).toLocaleString("en-US", {minimumFractionDigits:2, maximumFractionDigits:4});}
+function pct(n){
+  const v = Number(n) * 100;
+  const sign = v > 0 ? "+" : "";
+  return sign + v.toFixed(2) + "%";
+}
+function cls(n){return Number(n) > 0 ? "pos" : (Number(n) < 0 ? "neg" : "mut");}
+function esc(s){return String(s).replace(/[&<>]/g, ch => ({ "&":"&amp;", "<":"&lt;", ">":"&gt;" }[ch]));}
+
+function draw(sessions){
+  const canvas = document.getElementById("curve");
+  const dpr = window.devicePixelRatio || 1;
+  const w = canvas.clientWidth || 1000;
+  const h = canvas.clientHeight || 280;
+  canvas.width = Math.round(w * dpr);
+  canvas.height = Math.round(h * dpr);
+  const ctx = canvas.getContext("2d");
+  ctx.scale(dpr, dpr);
+  ctx.clearRect(0, 0, w, h);
+  const pad = {l:58, r:12, t:16, b:28};
+  const eq = sessions.map(s => Number(s.equity_primary));
+  const ys = [CAPITAL, ...eq];
+  let lo = Math.min(...ys), hi = Math.max(...ys);
+  if (hi === lo){ hi += 1; lo -= 1; }
+  const span = hi - lo;
+  lo -= span * 0.08; hi += span * 0.08;
+  const X = i => pad.l + (sessions.length < 2 ? (w - pad.l - pad.r) / 2 : i * (w - pad.l - pad.r) / (sessions.length - 1));
+  const Y = v => pad.t + (hi - v) / (hi - lo) * (h - pad.t - pad.b);
+  ctx.strokeStyle = "#262f45";
+  ctx.lineWidth = 1;
+  ctx.fillStyle = "#8b96ab";
+  ctx.font = "11px ui-monospace, Menlo, Consolas, monospace";
+  for (let g = 0; g < 4; g++){
+    const v = lo + (hi - lo) * g / 3;
+    const y = Y(v);
+    ctx.beginPath(); ctx.moveTo(pad.l, y); ctx.lineTo(w - pad.r, y); ctx.stroke();
+    ctx.fillText(money(v), 4, y + 3);
+  }
+  const base = Y(CAPITAL);
+  ctx.strokeStyle = "#fbbf24";
+  ctx.setLineDash([3, 3]);
+  ctx.beginPath(); ctx.moveTo(pad.l, base); ctx.lineTo(w - pad.r, base); ctx.stroke();
+  ctx.setLineDash([]);
+  ctx.strokeStyle = "#4ade80";
+  ctx.lineWidth = 2;
+  ctx.beginPath();
+  eq.forEach((v, i) => { if (i === 0) ctx.moveTo(X(i), Y(v)); else ctx.lineTo(X(i), Y(v)); });
+  ctx.stroke();
+  ctx.fillStyle = "#dfe6f2";
+  eq.forEach((v, i) => {
+    ctx.beginPath(); ctx.arc(X(i), Y(v), 2.5, 0, Math.PI * 2); ctx.fill();
+  });
+  ctx.fillStyle = "#8b96ab";
+  if (sessions.length){
+    ctx.fillText(sessions[0].date.slice(5), X(0), h - 8);
+    ctx.fillText(sessions[sessions.length - 1].date.slice(5), Math.max(pad.l, X(sessions.length - 1) - 36), h - 8);
+  }
+}
+
+function render(rows, status){
+  window.__rows = rows;
+  const sessions = rows.filter(r => r.kind === "session");
+  const closes = rows.filter(r => r.kind === "close");
+  const last = sessions[sessions.length - 1];
+  const equity = last ? Number(last.equity_primary) : CAPITAL;
+  const realised = closes.reduce((sum, row) => sum + Number(row.pnl_primary), 0);
+  const openN = last ? last.holdings.length : 0;
+  const cards = [
+    ["Sessions", String(sessions.length)],
+    ["Equity", money(equity)],
+    ["Since $10,000", pct(equity / CAPITAL - 1)],
+    ["Realised P&L", money(realised)],
+    ["Closed trades", String(closes.length)],
+    ["Open names", String(openN)],
+  ];
+  document.getElementById("cards").innerHTML = cards.map(([k, v]) => {
+    const klass = k === "Since $10,000" || k === "Realised P&L" || k === "Equity"
+      ? cls(k === "Equity" ? equity - CAPITAL : (k === "Since $10,000" ? equity - CAPITAL : realised))
+      : "";
+    return `<div class="card"><span>${esc(k)}</span><b class="${klass}">${esc(v)}</b></div>`;
+  }).join("");
+  draw(sessions);
+  const byClose = {};
+  closes.forEach(row => {
+    (byClose[row.date] = byClose[row.date] || []).push(row);
+  });
+  document.getElementById("days").innerHTML = sessions.slice().reverse().map((day, rev) => {
+    const i = sessions.length - 1 - rev;
+    const prev = i === 0 ? CAPITAL : Number(sessions[i - 1].equity_primary);
+    const ret = Number(day.equity_primary) / prev - 1;
+    const buys = (day.buys || []).map(b =>
+      `<span class="pill buy">#${b.rank} ${esc(b.ticker)} ${b.shares} @ ${px(b.fill)} ${(b.sources || []).join("+")}</span>`
+    ).join("") || `<span class="pill flat">no buy</span>`;
+    const sells = (day.sells || []).map(s =>
+      `<span class="pill sell">${esc(s.ticker)} ${s.shares} @ ${px(s.fill)} ${esc(s.reason)}</span>`
+    ).join("") || `<span class="pill flat">no sell</span>`;
+    const held = (day.holdings || []).map(h =>
+      `<span class="pill">${esc(h.ticker)} ${h.shares} from ${esc(h.entry_date)} hold ${h.min_hold}</span>`
+    ).join("") || `<span class="pill flat">flat</span>`;
+    const legs = (day.excluded_unexplained_legs || []).map(leg =>
+      `<span class="pill">${esc(leg.ticker)} ${esc(leg.leg)} ${esc(leg.bar_date)}</span>`
+    ).join("") || `<span class="pill flat">none</span>`;
+    const dayCloses = (byClose[day.date] || []).map(c =>
+      `<span class="pill ${cls(c.pnl_primary)}">${esc(c.ticker)} ${money(c.pnl_primary)}</span>`
+    ).join("") || `<span class="pill flat">none</span>`;
+    const missed = (day.unfilled || []).map(u =>
+      `<span class="pill flat">${esc(u.side)} ${esc(u.ticker)} ${esc(u.reason)}</span>`
+    ).join("");
+    return `<article class="day">
+      <h3>${esc(day.date)} <span class="${cls(ret)}">${pct(ret)}</span></h3>
+      <div class="hd">
+        <span>equity ${money(day.equity_primary)}</span>
+        <span>cash ${money(day.cash_primary)}</span>
+        <span>holdup ${day.holdup_on ? "on" : "off"}</span>
+        <span>S ${day.morning_s == null ? "null" : day.morning_s}</span>
+        <span class="mut">${esc((day.sha256 || "").slice(0, 12))}</span>
+      </div>
+      <div class="lab">Buys — planned fill is that day's open</div>
+      <div class="pills">${buys}</div>
+      <div class="lab">Sells</div>
+      <div class="pills">${sells}</div>
+      <div class="lab">Closed-trade P&amp;L, 0.5%/side</div>
+      <div class="pills">${dayCloses}</div>
+      <div class="lab">Holdings after the day</div>
+      <div class="pills">${held}</div>
+      <div class="lab">Excluded unexplained legs</div>
+      <div class="pills">${legs}</div>
+      ${missed ? `<div class="lab">Unfilled</div><div class="pills">${missed}</div>` : ""}
+    </article>`;
+  }).join("");
+  const ordered = closes.slice().reverse();
+  document.getElementById("closes").innerHTML = ordered.map(c =>
+    `<tr><td>${esc(c.date)}</td><td class="tick">${esc(c.ticker)}</td><td>${c.shares}</td><td>${px(c.entry_px)} ${esc(c.entry_date)}</td><td>${px(c.fill)}</td><td>${esc(c.reason)}</td><td class="${cls(c.pnl_primary)}">${money(c.pnl_primary)}</td></tr>`
+  ).join("") || `<tr><td colspan="7" class="mut">No closed trade yet.</td></tr>`;
+  document.getElementById("foot").textContent =
+    `${sessions.length} sessions, ${closes.length} close records, ${rows.length} sealed lines. ` +
+    `Recipe ${rows[0] ? rows[0].recipe : "union_hot_n4_holdup__w0"}. Luck N 22,017.`;
+  const skip = document.getElementById("skip");
+  if (status && status.latest_skip){
+    skip.hidden = false;
+    skip.textContent = `Next session ${status.date || ""} was not appended: ${status.latest_skip}`;
+  }
+}
+
+fetch("log.json").then(r => {
+  if (!r.ok) throw new Error("log.json " + r.status);
+  return r.json();
+}).then(rows => {
+  return fetch("status.json").then(r => r.ok ? r.json() : null).catch(() => null).then(status => render(rows, status));
+}).catch(err => {
+  document.getElementById("days").textContent = "The log could not be read. " + err;
+});
+window.addEventListener("resize", () => {
+  if (window.__rows) draw(window.__rows.filter(r => r.kind === "session"));
+});
+</script>
+</body>
+</html>
