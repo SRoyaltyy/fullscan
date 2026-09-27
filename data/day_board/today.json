@@ -1,12 +1,12 @@
 {
   "date": "2026-09-27",
-  "generated_at": "2026-09-27T15:57:09.478454-04:00",
+  "generated_at": "2026-09-27T15:57:38.097911-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
-    "ok": 1,
+    "ok": 2,
     "partial": 2,
-    "fail": 5,
+    "fail": 4,
     "n": 8
   },
   "buy_1d": [],
@@ -168,6 +168,31 @@
         }
       ],
       "preview": "5097 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+    },
+    {
+      "key": "ab",
+      "title": "AB checklist",
+      "date": "2026-09-27",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-27T15:57:37.419944-04:00",
+      "files": [
+        {
+          "path": "data/ab_checklist/2026-09-27_ab_checklist.csv",
+          "ok": true,
+          "reason": "",
+          "size": 7630901,
+          "preview": "2660 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 FIGS, AAPL, AUPH, RGEN, GCT"
+        },
+        {
+          "path": "data/ab_checklist/2026-09-27_ab_checklist_enriched.csv",
+          "ok": true,
+          "reason": "",
+          "size": 8471252,
+          "preview": "2660 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 RGEN, FIGS, ICLR, AAPL, BJ"
+        }
+      ],
+      "preview": "2660 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 FIGS, AAPL, AUPH, RGEN, GCT \u00b7 2660 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 RGEN, FIGS, ICLR, AAPL, BJ"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
