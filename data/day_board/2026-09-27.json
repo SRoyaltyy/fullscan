@@ -1,18 +1,18 @@
 {
   "date": "2026-09-27",
-  "generated_at": "2026-09-27T15:57:38.097911-04:00",
+  "generated_at": "2026-09-27T15:57:49.016291-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
     "MISSING General predict MD `01_daily/general/2026-09-27_predict.md` \u2014 missing",
     "MISSING Sector board JSON `01_daily/sectors/2026-09-27/_board.json` \u2014 missing",
-    "MISSING News actions JSON `01_daily/news/2026-09-27_actions.json` \u2014 missing",
     "MISSING Quote-page digest JSON (*_finviz_digest) `01_daily/news/2026-09-27_finviz_digest.json` \u2014 missing",
-    "MISSING News judge MD `01_daily/news/2026-09-27_judge.md` \u2014 missing"
+    "MISSING News judge MD `01_daily/news/2026-09-27_judge.md` \u2014 missing",
+    "MISSING AB checklist enriched `data/ab_checklist/2026-09-27_ab_checklist_enriched.csv` \u2014 missing"
   ],
   "counts": {
-    "ok": 2,
-    "partial": 2,
+    "ok": 1,
+    "partial": 3,
     "fail": 4,
     "n": 8
   },
@@ -161,11 +161,11 @@
       "key": "preopen",
       "name": "Pre-Open ALL",
       "yaml": "preopen_all.yml",
-      "status": "FAIL",
+      "status": "PARTIAL",
       "inputs_ready": false,
-      "n_req_ok": 0,
+      "n_req_ok": 1,
       "n_req": 20,
-      "n_opt_ok": 0,
+      "n_opt_ok": 1,
       "n_opt": 3,
       "files": [
         {
@@ -217,11 +217,16 @@
           "name": "News parse JSON",
           "path": "01_daily/news/2026-09-27_parsed.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 211837,
+          "said": "news_mode: on \u00b7 200 raw / 26 usable \u00b7 Wall Street Braces for Jobs and Inflation Data as Rate Hike Fears Loom - finance",
+          "bullets": [
+            "Wall Street Braces for Jobs and Inflation Data as Rate Hike Fears Loom - finance.biggo.com",
+            "US Treasury Yields Top 5% and Fed October Rate Hike Odds Exceed 60% \u2014 Taiwan Stocks Likely Under Pressure After Holiday - finance.biggo.com",
+            "All Eyes on U.S. Jobs and Inflation Data as October Rate Hike Signals Take Center Stage - finance.biggo.com",
+            "Markets Brace for U.S. Jobs, Inflation Data With Focus on Possible October Fed Rate Hike - bloomingbit"
+          ]
         },
         {
           "key": "events",
@@ -272,11 +277,16 @@
           "name": "News actions JSON",
           "path": "01_daily/news/2026-09-27_actions.json",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 40322,
+          "said": "50 ticker actions \u00b7 3 events \u00b7 300 headlines \u00b7 COP BUY, EOG BUY, RRC BUY, SM BUY, HPK BUY, REPX BUY, OXY BUY, FANG BUY",
+          "bullets": [
+            "BUY COP",
+            "BUY EOG",
+            "BUY RRC",
+            "BUY SM"
+          ]
         },
         {
           "key": "general",
@@ -455,8 +465,13 @@
           "bullets": []
         }
       ],
-      "said": "",
-      "bullets": []
+      "said": "news news_mode: on \u00b7 200 raw / 26 usable \u00b7 Wall Street Braces for Jobs and Inflation Data as Rate Hike Fears Loom - finance",
+      "bullets": [
+        "Wall Street Braces for Jobs and Inflation Data as Rate Hike Fears Loom - finance.biggo.com",
+        "US Treasury Yields Top 5% and Fed October Rate Hike Odds Exceed 60% \u2014 Taiwan Stocks Likely Under Pressure After Holiday - finance.biggo.com",
+        "All Eyes on U.S. Jobs and Inflation Data as October Rate Hike Signals Take Center Stage - finance.biggo.com",
+        "Markets Brace for U.S. Jobs, Inflation Data With Focus on Possible October Fed Rate Hike - bloomingbit"
+      ]
     },
     {
       "key": "weather",
@@ -505,11 +520,11 @@
       "key": "ab",
       "name": "AB checklist",
       "yaml": "ab_checklist.yml",
-      "status": "OK",
+      "status": "FAIL",
       "inputs_ready": true,
-      "n_req_ok": 1,
+      "n_req_ok": 0,
       "n_req": 1,
-      "n_opt_ok": 1,
+      "n_opt_ok": 0,
       "n_opt": 1,
       "files": [
         {
@@ -517,32 +532,26 @@
           "name": "AB checklist raw",
           "path": "data/ab_checklist/2026-09-27_ab_checklist.csv",
           "role": "optional",
-          "status": "OK",
-          "reason": "rows=2660",
-          "size": 7630901,
-          "said": "28 rows",
-          "bullets": [
-            "FIGS, AAPL, AUPH, RGEN, GCT, HUM, DGX, CRSR"
-          ]
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "ab_enriched",
           "name": "AB checklist enriched",
           "path": "data/ab_checklist/2026-09-27_ab_checklist_enriched.csv",
           "role": "required",
-          "status": "OK",
-          "reason": "rows=2660",
-          "size": 8471252,
-          "said": "25 rows",
-          "bullets": [
-            "RGEN, FIGS, ICLR, AAPL, BJ, LLY, TTMI, VFF"
-          ]
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         }
       ],
-      "said": "25 rows",
-      "bullets": [
-        "RGEN, FIGS, ICLR, AAPL, BJ"
-      ]
+      "said": "",
+      "bullets": []
     },
     {
       "key": "catalyst",
@@ -560,11 +569,16 @@
           "name": "News actions JSON",
           "path": "01_daily/news/2026-09-27_actions.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 40322,
+          "said": "50 ticker actions \u00b7 3 events \u00b7 300 headlines \u00b7 COP BUY, EOG BUY, RRC BUY, SM BUY, HPK BUY, REPX BUY, OXY BUY, FANG BUY",
+          "bullets": [
+            "BUY COP",
+            "BUY EOG",
+            "BUY RRC",
+            "BUY SM"
+          ]
         },
         {
           "key": "in_digest",
@@ -589,8 +603,17 @@
           "bullets": []
         }
       ],
-      "said": "",
-      "bullets": []
+      "said": "50 ticker actions \u00b7 3 events \u00b7 300 headlines \u00b7 COP BUY, EOG BUY, RRC BUY, SM BUY, HPK BUY, REPX BUY, OXY BUY, FANG BUY",
+      "bullets": [
+        "BUY COP",
+        "BUY EOG",
+        "BUY RRC",
+        "BUY SM",
+        "BUY HPK",
+        "BUY REPX",
+        "BUY OXY",
+        "BUY FANG"
+      ]
     },
     {
       "key": "stock_book",
@@ -598,7 +621,7 @@
       "yaml": "stock_book_all.yml",
       "status": "PARTIAL",
       "inputs_ready": false,
-      "n_req_ok": 2,
+      "n_req_ok": 1,
       "n_req": 4,
       "n_opt_ok": 1,
       "n_opt": 3,
@@ -630,11 +653,16 @@
           "name": "News actions JSON",
           "path": "01_daily/news/2026-09-27_actions.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 40322,
+          "said": "50 ticker actions \u00b7 3 events \u00b7 300 headlines \u00b7 COP BUY, EOG BUY, RRC BUY, SM BUY, HPK BUY, REPX BUY, OXY BUY, FANG BUY",
+          "bullets": [
+            "BUY COP",
+            "BUY EOG",
+            "BUY RRC",
+            "BUY SM"
+          ]
         },
         {
           "key": "in_digest",
@@ -677,13 +705,11 @@
           "name": "AB checklist enriched",
           "path": "data/ab_checklist/2026-09-27_ab_checklist_enriched.csv",
           "role": "input",
-          "status": "OK",
-          "reason": "rows=2660",
-          "size": 8471252,
-          "said": "25 rows",
-          "bullets": [
-            "RGEN, FIGS, ICLR, AAPL, BJ, LLY, TTMI, VFF"
-          ]
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "join",
@@ -703,13 +729,11 @@
           "name": "Peer RS CSV",
           "path": "data/peers/2026-09-27_peer_rs.csv",
           "role": "required",
-          "status": "OK",
-          "reason": "rows=5097",
-          "size": 821609,
-          "said": "494 rows",
-          "bullets": [
-            "A, AA, AACG, AAL, AAME, AAMI, AAOI, AAON"
-          ]
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "book_json",
@@ -846,7 +870,17 @@
     "flatten": {},
     "general": {},
     "sectors": {},
-    "news": {},
+    "news": {
+      "said": "news_mode: on \u00b7 200 raw / 26 usable \u00b7 Wall Street Braces for Jobs and Inflation Data as Rate Hike Fears Loom - finance",
+      "bullets": [
+        "Wall Street Braces for Jobs and Inflation Data as Rate Hike Fears Loom - finance.biggo.com",
+        "US Treasury Yields Top 5% and Fed October Rate Hike Odds Exceed 60% \u2014 Taiwan Stocks Likely Under Pressure After Holiday - finance.biggo.com",
+        "All Eyes on U.S. Jobs and Inflation Data as October Rate Hike Signals Take Center Stage - finance.biggo.com",
+        "Markets Brace for U.S. Jobs, Inflation Data With Focus on Possible October Fed Rate Hike - bloomingbit",
+        "Fed Interest Rate Forecast: PCE Report Nears as 10-Year Yield Remains Above 5% - FXEmpire",
+        "The Week Ahead: US August PCE and September Nonfarm Payrolls Take Center Stage, Micron Earnings in Focus - TradingKey"
+      ]
+    },
     "weather": {
       "said": "favorable 1 \u00b7 hostile 4 \u00b7 neutral 6",
       "bullets": [
@@ -1034,6 +1068,31 @@
         }
       ],
       "preview": "2660 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 FIGS, AAPL, AUPH, RGEN, GCT \u00b7 2660 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 RGEN, FIGS, ICLR, AAPL, BJ"
+    },
+    {
+      "key": "weather",
+      "title": "Weather / regime",
+      "date": "2026-09-27",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-27T15:57:48.774467-04:00",
+      "files": [
+        {
+          "path": "01_daily/weather/2026-09-27_weather.json",
+          "ok": true,
+          "reason": "",
+          "size": 9490,
+          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -1.85, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': 0.0, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -0.77, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -4.04, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -0.1, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.32, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -0.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}"
+        },
+        {
+          "path": "01_daily/weather/2026-09-27_weather.md",
+          "ok": true,
+          "reason": "",
+          "size": 5232,
+          "preview": "# Weather report \u2014 2026-09-27\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+        }
+      ],
+      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -1.85, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': 0.0, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -0.77, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -4.04, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -0.1, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.32, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -0.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-09-27\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
     }
   ],
   "href": {
