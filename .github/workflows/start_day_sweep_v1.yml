@@ -1,0 +1,24 @@
+name: start_day_sweep_v1 append-only
+on:
+  pull_request:
+    paths:
+      - "research/start_day_sweep_v1/**"
+      - ".github/workflows/start_day_sweep_v1.yml"
+permissions:
+  contents: read
+jobs:
+  append-only:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Fetch the PR base
+        run: git fetch --no-tags origin "${{ github.event.pull_request.base.sha }}"
+      - name: Report lock and append-only
+        run: |
+          PYTHONHASHSEED=0 python3 research/start_day_sweep_v1/test_sweep.py
+          PYTHONHASHSEED=0 python3 research/start_day_sweep_v1/append_check.py --check-against "${{ github.event.pull_request.base.sha }}"
