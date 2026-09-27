@@ -1,9 +1,12 @@
-"""Append the next missing holdup session. Never rewrite a sealed record.
+"""Seal a plan before the open, or a fill after the close.
 
-The job is meant to run on a weekday after the pre-open inputs are on
-GitHub and before the US cash open. It writes one session, plus close
-records whose fills are that session's official open. A rerun of a session
-that is already sealed does nothing. Missing inputs append nothing.
+The pre-open run writes one plan for session D. It uses the ranked picks,
+the planned sells, and the excluded names, and no print from D. The
+post-close run writes the fill for that plan at D's open, plus close
+records, and does not edit the plan. A rerun of a sealed plan or fill does
+nothing. Missing inputs append nothing.
+
+HOLDUP_MODE=plan is the pre-open run. HOLDUP_MODE=fill is the post-close run.
 """
 from __future__ import annotations
 
@@ -22,12 +25,20 @@ from research.hot_n4_clean_v4.forward.ledger import (  # noqa: E402
     HERE,
     RECIPE,
     append_records,
+    book_dates,
     canonical_bytes,
     load,
+    open_plan,
     session_dates,
 )
+from research.hot_n4_clean_v4.forward.planfill import (  # noqa: E402
+    book_state,
+    build_plan,
+    fill_book,
+    hide_session,
+)
+from research.hot_n4_clean_v4.forward.prices import overlay_forward  # noqa: E402
 from research.hot_n4_clean_v4.forward.render import write_page  # noqa: E402
-from research.hot_n4_clean_v4.forward.step import state_from_session, step  # noqa: E402
 from research.hot_n4_clean_v4.protocol import (  # noqa: E402
     ENGINE_SHA256,
     FEES_PATH,
@@ -290,43 +301,74 @@ def _payload(session: str, bars, held: set[str], score: dict, frame) -> dict:
     }
 
 
-def main() -> int:
+def _ready(records: list[dict]) -> tuple[dict | None, int]:
+    dates = session_dates(records)
+    if dates[:len(SESSIONS)] != list(SESSIONS):
+        _fail("seeded sessions are not the locked 2026-08-13..2026-09-25 prefix")
+        return None, 1
+    engine = _engine_ok()
+    if engine:
+        _fail(engine)
+        return None, 1
+    return records, 0
+
+
+def _bars(records: list[dict], target: str) -> tuple[dict | None, int]:
+    try:
+        bars = overlay_forward(load_bars())
+    except Exception as exc:  # noqa: BLE001 — a missing price file is an input gap
+        _log_skip(target, f"price store could not be read ({exc})", records)
+        return None, 0
+    drifted = _history_ok(records, bars)
+    if drifted:
+        _fail(drifted)
+        return None, 1
+    return bars, 0
+
+
+def _has_bar(bars: dict, session: str) -> bool:
+    for blob in bars["stored"].values():
+        dates = blob.get("date") or []
+        if session in dates:
+            return True
+    return False
+
+
+def _status(session: str, pending: str | None, skip: str | None, phase: str) -> dict:
+    return {
+        "date": session,
+        "latest_skip": skip,
+        "pending": pending,
+        "phase": phase,
+        "recipe": RECIPE,
+    }
+
+
+def plan_main() -> int:
+    """Seal session D from inputs available before 13:30 UTC. No prices from D."""
     try:
         records = load()
     except RuntimeError as exc:
         _fail(f"existing record hash does not match the ledger ({exc})")
         return 1
-    dates = session_dates(records)
-    if dates[:len(SESSIONS)] != list(SESSIONS):
-        _fail("seeded sessions are not the locked 2026-08-13..2026-09-25 prefix")
-        return 1
-    engine = _engine_ok()
-    if engine:
-        _fail(engine)
-        return 1
+    records, code = _ready(records)
+    if records is None:
+        return code
+    pending = open_plan(records)
+    if pending is not None:
+        print(f"plan already sealed {pending['date']}")
+        write_page(records, _status(pending["date"], pending["date"], None, "plan"))
+        return 0
+    dates = book_dates(records)
     target = next_session(dates[-1])
-    print(f"next missing session {target}", flush=True)
-    try:
-        bars = load_bars()
-    except Exception as exc:  # noqa: BLE001 — a missing price file is an input gap
-        _log_skip(target, f"price store could not be read ({exc})", records)
-        return 0
-    drifted = _history_ok(records, bars)
-    if drifted:
-        _fail(drifted)
-        return 1
-    latest = _latest_bar(bars["stored"])
-    if latest < target:
-        _log_skip(
-            target,
-            f"price store latest bar is {latest or 'empty'}; {target} open is not in the file yet",
-            records,
-        )
-        return 0
+    print(f"plan {target}", flush=True)
     index = _index()
     if target not in index:
         _log_skip(target, f"{target} is outside the v4 session calendar through 2026-12-31", records)
         return 0
+    bars, code = _bars(records, target)
+    if bars is None:
+        return code
     score, why = morning_score(target)
     if why:
         _log_skip(target, why, records)
@@ -335,48 +377,110 @@ def main() -> int:
     if why:
         _log_skip(target, why, records)
         return 0
-    last = [row for row in records if row["kind"] == "session"][-1]
-    state = state_from_session(last)
+    state = book_state(records)
     held = set(state["pos"])
     try:
-        payload = _payload(target, bars, held, score, frame)
+        payload = _payload(target, hide_session(bars, target), held, score, frame)
+        plan = build_plan(payload, state, index)
     except Halt as exc:
         _fail(str(exc))
         return 1
     except RuntimeError as exc:
         _log_skip(target, str(exc), records)
         return 0
-    fees = load_fees()
-    session_body, closes, _state = step(payload, state, bars, fees, index)
-    session_body["s_source"] = {
+    plan["s_source"] = {
         "blob_sha": score["blob_sha"],
         "kind": score["kind"],
         "path": score["path"],
         "server_time_utc": score["server_time_utc"],
         "status": score["status"],
     }
-    # Re-read before the write so a sealed session is left untouched.
     try:
         current = load()
     except RuntimeError as exc:
         _fail(f"existing record hash does not match the ledger ({exc})")
         return 1
-    if target in session_dates(current):
-        print(f"already appended {target}")
+    if open_plan(current) is not None or any(
+        row["kind"] == "plan" and row["date"] == target for row in current
+    ):
+        print(f"plan already sealed {target}")
         return 0
-    append_records([session_body, *closes])
+    append_records([plan])
     written = load()
-    write_page(written, {
-        "appended": target,
-        "latest_skip": None,
-        "recipe": RECIPE,
-    })
+    write_page(written, _status(target, target, None, "plan"))
     print(
-        f"appended {target} buys {len(session_body['buys'])} "
-        f"sells {len(session_body['sells'])} closes {len(closes)}",
+        f"sealed plan {target} picks {len(plan['picks'])} "
+        f"planned sells {len(plan['planned_sells'])}",
         flush=True,
     )
     return 0
+
+
+def fill_main() -> int:
+    """Fill a sealed plan at D's open. Does not edit the plan."""
+    try:
+        records = load()
+    except RuntimeError as exc:
+        _fail(f"existing record hash does not match the ledger ({exc})")
+        return 1
+    records, code = _ready(records)
+    if records is None:
+        return code
+    pending = open_plan(records)
+    if pending is None:
+        print("no unfilled plan")
+        return 0
+    target = pending["date"]
+    print(f"fill {target}", flush=True)
+    index = _index()
+    if target not in index:
+        _log_skip(target, f"{target} is outside the v4 session calendar through 2026-12-31", records)
+        return 0
+    bars, code = _bars(records, target)
+    if bars is None:
+        return code
+    if not _has_bar(bars, target):
+        latest = _latest_bar(bars["stored"])
+        _log_skip(
+            target,
+            f"price store latest bar is {latest or 'empty'}; {target} open is not in the file yet",
+            records,
+        )
+        return 0
+    state = book_state(records)
+    fees = load_fees()
+    try:
+        fill, closes, _state = fill_book(pending, state, bars, fees, index)
+    except (Halt, RuntimeError) as exc:
+        _fail(str(exc))
+        return 1
+    try:
+        current = load()
+    except RuntimeError as exc:
+        _fail(f"existing record hash does not match the ledger ({exc})")
+        return 1
+    if open_plan(current) is None:
+        print(f"fill already sealed {target}")
+        return 0
+    append_records([fill, *closes])
+    written = load()
+    write_page(written, _status(target, None, None, "fill"))
+    print(
+        f"sealed fill {target} buys {len(fill['buys'])} "
+        f"sells {len(fill['sells'])} closes {len(closes)}",
+        flush=True,
+    )
+    return 0
+
+
+def main() -> int:
+    mode = os.environ.get("HOLDUP_MODE", "plan")
+    if mode == "fill":
+        return fill_main()
+    if mode != "plan":
+        _fail(f"HOLDUP_MODE {mode}")
+        return 1
+    return plan_main()
 
 
 if __name__ == "__main__":
