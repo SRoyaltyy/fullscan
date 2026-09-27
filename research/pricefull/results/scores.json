@@ -1,0 +1,518 @@
+{
+  "audit_sha256": "cafff6a314723ed14b9d9cdf9b52658129981421dcd3a22e3a8945960fe68569",
+  "baselines": {
+    "iwm": {
+      "entry": 132.1699981689453,
+      "entry_date": "2019-01-02",
+      "exit": 302.7099914550781,
+      "exit_date": "2026-08-12",
+      "ok": true,
+      "pnl": 12785.87539645996,
+      "pnl_15bp": 12775.630371665955,
+      "return_15bp": 1.2775630371665956,
+      "return_on_10000": 1.278587539645996,
+      "shares": 75
+    },
+    "random4_draws": 1000,
+    "random4_mean_return": -0.9996151264703584,
+    "random4_seed": 20260813
+  },
+  "excel": {
+    "cards": [
+      {
+        "cohort_filter": "volM:low(<3%)",
+        "name": "L1_long_green_tp8_lowvol",
+        "path": "excel_bot/strategies/L1_long_green_tp8_lowvol/card.json"
+      },
+      {
+        "cohort_filter": "volM:low(<3%)",
+        "name": "L2_long_green_tp3_lowvol",
+        "path": "excel_bot/strategies/L2_long_green_tp3_lowvol/card.json"
+      },
+      {
+        "cohort_filter": "mid(1-10B):all",
+        "name": "L3_long_green_hold2_midcap",
+        "path": "excel_bot/strategies/L3_long_green_hold2_midcap/card.json"
+      },
+      {
+        "cohort_filter": "mid:BBAI-like(hi-beta,unprof)",
+        "name": "L4_long_green_hold8_bbailike",
+        "path": "excel_bot/strategies/L4_long_green_hold8_bbailike/card.json"
+      },
+      {
+        "cohort_filter": "mid:beta>1.5",
+        "name": "L5_long_green_hold2_midhibeta",
+        "path": "excel_bot/strategies/L5_long_green_hold2_midhibeta/card.json"
+      },
+      {
+        "cohort_filter": "opt:Yes",
+        "name": "S1_short_red_1day_optionable",
+        "path": "excel_bot/strategies/S1_short_red_1day_optionable/card.json"
+      },
+      {
+        "cohort_filter": "volM:high(>8%)",
+        "name": "S2_short_red_1day_hivol",
+        "path": "excel_bot/strategies/S2_short_red_1day_hivol/card.json"
+      }
+    ],
+    "cards_commit": "abe8d79facd84c94b61f3158b245f2c50262f1bd",
+    "counts_as_variant": false,
+    "engine_commit": "76aef1278a53cda755071b7bd970a3f886fcf2cc",
+    "engine_file_present": true,
+    "excel_set": "empty",
+    "n_cards": 7,
+    "n_cohort_all": 0,
+    "second_gate_reached": false
+  },
+  "first_session": "2019-01-02",
+  "freeze": {
+    "absent_families": [
+      "join",
+      "sector",
+      "general",
+      "news",
+      "ab",
+      "peer"
+    ],
+    "effective_weights_when_none_present": [
+      0.12,
+      0.1,
+      0.08,
+      0.25,
+      0.25,
+      0.2
+    ],
+    "freeze": "3fe544103b94d9795f2b182211e9a8d90d99b95e",
+    "neither_survives": "no score",
+    "pick_day_empty": [],
+    "shared_order_body": {
+      "capital": 10000.0,
+      "day_cap": 1,
+      "hold": 1,
+      "s_boost": "none",
+      "sell": "time",
+      "side": "long",
+      "size": "leftover",
+      "stop": null,
+      "take": null,
+      "top_n": 4
+    },
+    "signal_families": [
+      "join",
+      "sector",
+      "general",
+      "news",
+      "ab",
+      "peer"
+    ],
+    "split_budgets_empty": [],
+    "union_hot_n4_h1": {
+      "day_cap": 1.0,
+      "hold": 1,
+      "rank": "hot_score",
+      "s_boost": "none",
+      "sell_on_the_recipe": "list",
+      "side": "long",
+      "size": "leftover",
+      "stop_pct": null,
+      "take_pct": null,
+      "top_n": 4
+    },
+    "weights_1d": [
+      0.12,
+      0.1,
+      0.08,
+      0.25,
+      0.25,
+      0.2
+    ]
+  },
+  "head": "a74aacb89ad46f3de19652a5429c64eec9a3f556",
+  "inclusion": {
+    "ab_survives": false,
+    "dropped_ids": [
+      "hot_score",
+      "ret_1",
+      "ret_5",
+      "ret_10",
+      "rvol",
+      "break_10",
+      "last_green",
+      "candle_score",
+      "rsi",
+      "macd",
+      "overnight_gap",
+      "yday_gainer",
+      "yday_mover",
+      "ohlc_hot",
+      "overnight_move",
+      "A01_rsi_value",
+      "A02_rsi_cross_30",
+      "A03_rsi_cross_50",
+      "A04_rsi_cross_70",
+      "A05_body_red_green_2day",
+      "A06_volume_red_green_2day",
+      "A07_rvol",
+      "A08_bollinger_position",
+      "A09_above_sma50",
+      "A10_sma20_50_80_stack",
+      "A11_three_section_lows",
+      "A12_green_body_vs_wick_2day",
+      "A13_red_body_vs_wick_2day",
+      "A14_profitable_oversold_setup",
+      "A15_tape_recovery_setup",
+      "peer_rs",
+      "vix",
+      "dgs10",
+      "dgs30",
+      "dfii10",
+      "sofr"
+    ],
+    "exact_ids": [],
+    "found_marks": [
+      {
+        "id": "rvol",
+        "lines": [
+          38
+        ],
+        "marks": [
+          "mismatch (11/12, first 2026-09-10)"
+        ]
+      },
+      {
+        "id": "A06_volume_red_green_2day",
+        "lines": [
+          50
+        ],
+        "marks": [
+          "mismatch (10/10, first 2026-09-09)"
+        ]
+      },
+      {
+        "id": "A14_profitable_oversold_setup",
+        "lines": [
+          51
+        ],
+        "marks": [
+          "not-rebuildable (no proven pre-open copy)"
+        ]
+      }
+    ],
+    "hot_score_usable": false,
+    "peer_survives": false,
+    "variants": {
+      "pricefull_hot4": {
+        "buys": false,
+        "reason": "hot_score is not exact or no section 4.2 source is exact, so this variant buys nobody"
+      },
+      "pricefull_w1d": {
+        "buys": false,
+        "reason": "neither ab nor peer survives, so this variant buys nobody"
+      }
+    }
+  },
+  "last_session": "2026-08-12",
+  "luck": {
+    "expected_permutation_calls": 19130000,
+    "p_best": null,
+    "p_best_reason": "no variant has at least one pooled pick",
+    "permutation_calls": 19130000,
+    "real_best_1share_mean": null,
+    "reshuffles": 10000,
+    "rules": [
+      {
+        "hold": 1,
+        "p_rule": null,
+        "p_rule_reason": "no pooled pick, so null_mean >= real_1share_mean is not defined",
+        "pooled_picks": 0,
+        "real_1share_mean": null,
+        "rule": "pricefull_w1d"
+      },
+      {
+        "hold": 1,
+        "p_rule": null,
+        "p_rule_reason": "no pooled pick, so null_mean >= real_1share_mean is not defined",
+        "pooled_picks": 0,
+        "real_1share_mean": null,
+        "rule": "pricefull_hot4"
+      }
+    ],
+    "seed": 20260927
+  },
+  "n_sessions": 1913,
+  "prereg_fingerprint": "0dc51aeced8323f5466145e2311acd66a89319548ae5705db06c235b81200f3e",
+  "price_source": {
+    "adj_close_read": false,
+    "cache": "research/longhist/bars/ohlcv",
+    "fields_read": [
+      "open",
+      "high",
+      "low",
+      "close",
+      "volume"
+    ],
+    "jump_check": "longhist mechanics_check classifies Yahoo split events. Event JSON is not in the repo. Zero fills, so no trade spans an ex-date."
+  },
+  "survivorship": {
+    "listed_sha256": "62609d9165bcbd5e7327516ea4da03f05297698d67aab660f207ddf8426195d5",
+    "n_delisted_absent": 5880,
+    "n_delisted_candidates": 8018,
+    "n_delisted_served": 2138,
+    "n_listed": 4193,
+    "n_yahoo_charts": 7400,
+    "n_yahoo_does_not_chart": 618,
+    "no_chart_reasons": {
+      "no_bar_http_200": 137,
+      "no_bar_http_400": 200,
+      "no_bar_http_404": 281
+    },
+    "note": "618 delisted candidates do not chart on Yahoo. The study is not CRSP. The sign of the net bias is not known. Thresholds are not changed by this count.",
+    "tickers_sha256": "40e5b09c5460d71d07947c62c1123d9cd43ec03cab6abcbbb3527acbe074e653"
+  },
+  "variants": [
+    {
+      "best_pnl": null,
+      "best_share_of_closed_pnl": null,
+      "best_ticker": null,
+      "buy_fills": 0,
+      "buy_fills_by_year": {
+        "2019": 0,
+        "2020": 0,
+        "2021": 0,
+        "2022": 0,
+        "2023": 0,
+        "2024": 0,
+        "2025": 0,
+        "2026": 0
+      },
+      "buy_fills_per_session": 0.0,
+      "closed_pnl": 0.0,
+      "closed_trades": 0,
+      "cluster_mean": null,
+      "cluster_n": 0,
+      "ending_equity": 10000.0,
+      "fires_per_year": 0.0,
+      "ironclad_keep_bar": false,
+      "iwm": {
+        "entry": 132.1699981689453,
+        "entry_date": "2019-01-02",
+        "exit": 302.7099914550781,
+        "exit_date": "2026-08-12",
+        "ok": true,
+        "pnl": 12785.87539645996,
+        "pnl_15bp": 12775.630371665955,
+        "return_15bp": 1.2775630371665956,
+        "return_on_10000": 1.278587539645996,
+        "shares": 75
+      },
+      "label": "fail",
+      "p": 1.0,
+      "p_holm": 1.0,
+      "pass_9_1_mean": false,
+      "pass_9_2_years": false,
+      "pass_9_3_best_removed": false,
+      "pass_9_4_rate": false,
+      "pass_9_5_period": false,
+      "pnl_15bp_same_shares": 0.0,
+      "pnl_2025_01_01_through_2026_08_12": 0.0,
+      "pnl_without_best": 0.0,
+      "pnl_without_top3": 0.0,
+      "positive_years_2019_2024": 0,
+      "random4_draws_beaten": 1.0,
+      "random4_mean_return": -0.9996151264703586,
+      "removed_best_ticker": [],
+      "removed_top3": [],
+      "return_15bp_on_10000": 0.0,
+      "return_on_10000": 0.0,
+      "return_without_best": 0.0,
+      "return_without_top3": 0.0,
+      "rule": "pricefull_w1d",
+      "study_pass": false,
+      "t": null,
+      "trades_per_session": 0.0,
+      "win_rate": null,
+      "wins_losses_by_exit_year": {
+        "2019": {
+          "flat": 0,
+          "losses": 0,
+          "pnl": 0.0,
+          "trades": 0,
+          "wins": 0
+        },
+        "2020": {
+          "flat": 0,
+          "losses": 0,
+          "pnl": 0.0,
+          "trades": 0,
+          "wins": 0
+        },
+        "2021": {
+          "flat": 0,
+          "losses": 0,
+          "pnl": 0.0,
+          "trades": 0,
+          "wins": 0
+        },
+        "2022": {
+          "flat": 0,
+          "losses": 0,
+          "pnl": 0.0,
+          "trades": 0,
+          "wins": 0
+        },
+        "2023": {
+          "flat": 0,
+          "losses": 0,
+          "pnl": 0.0,
+          "trades": 0,
+          "wins": 0
+        },
+        "2024": {
+          "flat": 0,
+          "losses": 0,
+          "pnl": 0.0,
+          "trades": 0,
+          "wins": 0
+        },
+        "2025": {
+          "flat": 0,
+          "losses": 0,
+          "pnl": 0.0,
+          "trades": 0,
+          "wins": 0
+        },
+        "2026": {
+          "flat": 0,
+          "losses": 0,
+          "pnl": 0.0,
+          "trades": 0,
+          "wins": 0
+        }
+      }
+    },
+    {
+      "best_pnl": null,
+      "best_share_of_closed_pnl": null,
+      "best_ticker": null,
+      "buy_fills": 0,
+      "buy_fills_by_year": {
+        "2019": 0,
+        "2020": 0,
+        "2021": 0,
+        "2022": 0,
+        "2023": 0,
+        "2024": 0,
+        "2025": 0,
+        "2026": 0
+      },
+      "buy_fills_per_session": 0.0,
+      "closed_pnl": 0.0,
+      "closed_trades": 0,
+      "cluster_mean": null,
+      "cluster_n": 0,
+      "ending_equity": 10000.0,
+      "fires_per_year": 0.0,
+      "ironclad_keep_bar": false,
+      "iwm": {
+        "entry": 132.1699981689453,
+        "entry_date": "2019-01-02",
+        "exit": 302.7099914550781,
+        "exit_date": "2026-08-12",
+        "ok": true,
+        "pnl": 12785.87539645996,
+        "pnl_15bp": 12775.630371665955,
+        "return_15bp": 1.2775630371665956,
+        "return_on_10000": 1.278587539645996,
+        "shares": 75
+      },
+      "label": "fail",
+      "p": 1.0,
+      "p_holm": 1.0,
+      "pass_9_1_mean": false,
+      "pass_9_2_years": false,
+      "pass_9_3_best_removed": false,
+      "pass_9_4_rate": false,
+      "pass_9_5_period": false,
+      "pnl_15bp_same_shares": 0.0,
+      "pnl_2025_01_01_through_2026_08_12": 0.0,
+      "pnl_without_best": 0.0,
+      "pnl_without_top3": 0.0,
+      "positive_years_2019_2024": 0,
+      "random4_draws_beaten": 1.0,
+      "random4_mean_return": -0.9996151264703586,
+      "removed_best_ticker": [],
+      "removed_top3": [],
+      "return_15bp_on_10000": 0.0,
+      "return_on_10000": 0.0,
+      "return_without_best": 0.0,
+      "return_without_top3": 0.0,
+      "rule": "pricefull_hot4",
+      "study_pass": false,
+      "t": null,
+      "trades_per_session": 0.0,
+      "win_rate": null,
+      "wins_losses_by_exit_year": {
+        "2019": {
+          "flat": 0,
+          "losses": 0,
+          "pnl": 0.0,
+          "trades": 0,
+          "wins": 0
+        },
+        "2020": {
+          "flat": 0,
+          "losses": 0,
+          "pnl": 0.0,
+          "trades": 0,
+          "wins": 0
+        },
+        "2021": {
+          "flat": 0,
+          "losses": 0,
+          "pnl": 0.0,
+          "trades": 0,
+          "wins": 0
+        },
+        "2022": {
+          "flat": 0,
+          "losses": 0,
+          "pnl": 0.0,
+          "trades": 0,
+          "wins": 0
+        },
+        "2023": {
+          "flat": 0,
+          "losses": 0,
+          "pnl": 0.0,
+          "trades": 0,
+          "wins": 0
+        },
+        "2024": {
+          "flat": 0,
+          "losses": 0,
+          "pnl": 0.0,
+          "trades": 0,
+          "wins": 0
+        },
+        "2025": {
+          "flat": 0,
+          "losses": 0,
+          "pnl": 0.0,
+          "trades": 0,
+          "wins": 0
+        },
+        "2026": {
+          "flat": 0,
+          "losses": 0,
+          "pnl": 0.0,
+          "trades": 0,
+          "wins": 0
+        }
+      }
+    }
+  ],
+  "window": [
+    "2019-01-01",
+    "2026-08-12"
+  ]
+}
