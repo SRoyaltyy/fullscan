@@ -1,80 +1,80 @@
 {
   "date": "2026-09-27",
-  "generated_at": "2026-09-27T15:59:17.291747-04:00",
+  "generated_at": "2026-09-27T15:59:54.879016-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
     "ok": 4,
-    "partial": 0,
-    "fail": 4,
+    "partial": 1,
+    "fail": 3,
     "n": 8
   },
   "buy_1d": [
     {
       "ticker": "CRDO",
-      "score": 1.045128397402071
+      "score": 0.7508594803973399
     },
     {
       "ticker": "OPRT",
-      "score": 0.8415107581225973
+      "score": 0.6611704355072866
     },
     {
       "ticker": "VIAV",
-      "score": 1.0071597981153306
+      "score": 0.7244661043901491
     },
     {
       "ticker": "AAON",
-      "score": 1.1103747193251907
+      "score": 0.8480462392867556
     },
     {
       "ticker": "QMCO",
-      "score": 1.1280065229544989
+      "score": 0.8481031874354582
+    },
+    {
+      "ticker": "C",
+      "score": 0.3623365828419433
     },
     {
       "ticker": "RSKD",
-      "score": 1.0852550538757935
+      "score": 0.8305755145336218
     },
     {
       "ticker": "FIGS",
-      "score": 0.885573675395378
-    },
-    {
-      "ticker": "CRCT",
-      "score": 1.0754241559182276
+      "score": 0.6917989979659633
     }
   ],
   "sell_1d": [
     {
       "ticker": "SOC",
-      "score": -0.670758079283839
+      "score": -0.39001747615464233
     },
     {
       "ticker": "TYRA",
-      "score": -0.640933055588772
+      "score": -0.38452585063649497
     },
     {
       "ticker": "ACDC",
-      "score": -0.6604960484120153
+      "score": -0.3828857117755404
     },
     {
       "ticker": "WVE",
-      "score": -0.6813454444732361
+      "score": -0.4126217777934153
     },
     {
       "ticker": "AVTX",
-      "score": -0.4050415203131745
+      "score": -0.22054476266249845
     },
     {
       "ticker": "ALMS",
-      "score": -0.6734222867678228
+      "score": -0.40711404871719997
     },
     {
       "ticker": "AIRS",
-      "score": -0.7394540314630519
+      "score": -0.4652110800714747
     },
     {
       "ticker": "PROK",
-      "score": -0.7030964078910189
+      "score": -0.42774343899416306
     }
   ],
   "flatten": {},
@@ -259,6 +259,92 @@
         }
       ],
       "preview": "2660 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 FIGS, AAPL, AUPH, RGEN, GCT \u00b7 2660 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 RGEN, FIGS, ICLR, AAPL, BJ"
+    },
+    {
+      "key": "weather",
+      "title": "Weather / regime",
+      "date": "2026-09-27",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-27T15:57:48.774467-04:00",
+      "files": [
+        {
+          "path": "01_daily/weather/2026-09-27_weather.json",
+          "ok": true,
+          "reason": "",
+          "size": 9490,
+          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -1.85, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': 0.0, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -0.77, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -4.04, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -0.1, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.32, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -0.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}"
+        },
+        {
+          "path": "01_daily/weather/2026-09-27_weather.md",
+          "ok": true,
+          "reason": "",
+          "size": 5232,
+          "preview": "# Weather report \u2014 2026-09-27\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+        }
+      ],
+      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -1.85, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': 0.0, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -0.77, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -4.04, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -0.1, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.32, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -0.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-09-27\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+    },
+    {
+      "key": "join",
+      "title": "Join / match rank",
+      "date": "2026-09-27",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-27T15:57:55.466860-04:00",
+      "files": [
+        {
+          "path": "data/join/2026-09-27_ranked.csv",
+          "ok": true,
+          "reason": "",
+          "size": 2231946,
+          "preview": "5899 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 FORM, DOCU, NVDA, PLAB, NICE"
+        }
+      ],
+      "preview": "5899 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 FORM, DOCU, NVDA, PLAB, NICE"
+    },
+    {
+      "key": "peer_rs",
+      "title": "Peer RS",
+      "date": "2026-09-27",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-27T15:58:06.589931-04:00",
+      "files": [
+        {
+          "path": "data/peers/2026-09-27_peer_rs.csv",
+          "ok": true,
+          "reason": "",
+          "size": 821609,
+          "preview": "5097 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+        }
+      ],
+      "preview": "5097 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+    },
+    {
+      "key": "ab",
+      "title": "AB checklist",
+      "date": "2026-09-27",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-27T15:58:28.186746-04:00",
+      "files": [
+        {
+          "path": "data/ab_checklist/2026-09-27_ab_checklist.csv",
+          "ok": true,
+          "reason": "",
+          "size": 7630901,
+          "preview": "2660 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 FIGS, AAPL, GCT, AUPH, RGEN"
+        },
+        {
+          "path": "data/ab_checklist/2026-09-27_ab_checklist_enriched.csv",
+          "ok": true,
+          "reason": "",
+          "size": 8471252,
+          "preview": "2660 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 RGEN, ICLR, FIGS, AAPL, BJ"
+        }
+      ],
+      "preview": "2660 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 FIGS, AAPL, GCT, AUPH, RGEN \u00b7 2660 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 RGEN, ICLR, FIGS, AAPL, BJ"
     }
   ],
   "source": "publish_live_boards"

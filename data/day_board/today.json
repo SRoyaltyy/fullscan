@@ -1,104 +1,86 @@
 {
   "date": "2026-09-27",
-  "generated_at": "2026-09-27T15:59:27.145251-04:00",
+  "generated_at": "2026-09-27T15:59:59.130614-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
     "ok": 4,
-    "partial": 0,
-    "fail": 4,
+    "partial": 1,
+    "fail": 3,
     "n": 8
   },
   "buy_1d": [
     {
       "ticker": "CRDO",
-      "score": 1.045128397402071
+      "score": 0.7508594803973399
     },
     {
       "ticker": "OPRT",
-      "score": 0.8415107581225973
+      "score": 0.6611704355072866
     },
     {
       "ticker": "VIAV",
-      "score": 1.0071597981153306
+      "score": 0.7244661043901491
     },
     {
       "ticker": "AAON",
-      "score": 1.1103747193251907
+      "score": 0.8480462392867556
     },
     {
       "ticker": "QMCO",
-      "score": 1.1280065229544989
+      "score": 0.8481031874354582
+    },
+    {
+      "ticker": "C",
+      "score": 0.3623365828419433
     },
     {
       "ticker": "RSKD",
-      "score": 1.0852550538757935
+      "score": 0.8305755145336218
     },
     {
       "ticker": "FIGS",
-      "score": 0.885573675395378
-    },
-    {
-      "ticker": "CRCT",
-      "score": 1.0754241559182276
+      "score": 0.6917989979659633
     }
   ],
   "sell_1d": [
     {
       "ticker": "SOC",
-      "score": -0.670758079283839
+      "score": -0.39001747615464233
     },
     {
       "ticker": "TYRA",
-      "score": -0.640933055588772
+      "score": -0.38452585063649497
     },
     {
       "ticker": "ACDC",
-      "score": -0.6604960484120153
+      "score": -0.3828857117755404
     },
     {
       "ticker": "WVE",
-      "score": -0.6813454444732361
+      "score": -0.4126217777934153
     },
     {
       "ticker": "AVTX",
-      "score": -0.4050415203131745
+      "score": -0.22054476266249845
     },
     {
       "ticker": "ALMS",
-      "score": -0.6734222867678228
+      "score": -0.40711404871719997
     },
     {
       "ticker": "AIRS",
-      "score": -0.7394540314630519
+      "score": -0.4652110800714747
     },
     {
       "ticker": "PROK",
-      "score": -0.7030964078910189
+      "score": -0.42774343899416306
     }
   ],
   "flatten": {},
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "peer_rs",
-      "title": "Peer RS",
-      "date": "2026-09-27",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-27T15:57:09.311648-04:00",
-      "files": [
-        {
-          "path": "data/peers/2026-09-27_peer_rs.csv",
-          "ok": true,
-          "reason": "",
-          "size": 821609,
-          "preview": "5097 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
-        }
-      ],
-      "preview": "5097 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
-    },
     {
       "key": "ab",
       "title": "AB checklist",
@@ -364,6 +346,59 @@
         }
       ],
       "preview": "2026-09-27 BUY CRDO, OPRT, VIAV, AAON, QMCO, RSKD, FIGS, CRCT \u00b7 SELL SOC, TYRA, ACDC, WVE, AVTX, ALMS, AIRS, PROK \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href \u00b7 2026-09-27 BUY CRDO, OPRT, VIAV, AAON, QMCO, RSKD, FIGS, CRCT \u00b7 SELL SOC, TYRA, ACDC, WVE, AVTX, ALMS, AIRS, PROK \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-25 BUY SONO, OMER, PDFS, FIVN, VCYT, REGN, OLLI, CCC \u00b7 SELL ARE, AESI, KGS, ACDC, BXMT, UUUU, HP, PUMP \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-27 BUY CRDO, OPRT, VIAV, AAON, QMCO, RSKD, FIGS, CRCT \u00b7 SELL SOC, TYRA, ACDC, WVE, AVTX, ALMS, AIRS, PROK \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-25 BUY SONO, OMER, PDFS, FIVN, VCYT,"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-09-27",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-27T15:59:58.427353-04:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-09-27_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1467603,
+          "preview": "1d BUY CRDO, OPRT, VIAV, AAON, QMCO, C, RSKD, FIGS \u00b7 SELL SOC, TYRA, ACDC, WVE, AVTX, ALMS, AIRS, PROK"
+        },
+        {
+          "path": "data/stock_book/2026-09-27_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 585,
+          "preview": "green 0 \u00b7 "
+        },
+        {
+          "path": "data/stock_book/2026-09-27_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2569,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-09-27_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12447,
+          "preview": "2026-09-27 BUY CRDO, OPRT, VIAV, AAON, QMCO, C, RSKD, FIGS \u00b7 SELL SOC, TYRA, ACDC, WVE, AVTX, ALMS, AIRS, PROK"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12447,
+          "preview": "2026-09-27 BUY CRDO, OPRT, VIAV, AAON, QMCO, C, RSKD, FIGS \u00b7 SELL SOC, TYRA, ACDC, WVE, AVTX, ALMS, AIRS, PROK"
+        },
+        {
+          "path": "01_daily/2026-09-27_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 78033,
+          "preview": "# Stock book \u2014 2026-09-27\n_Generated 2026-09-27T15:59:50.926370-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY CRDO, OPRT, VIAV, AAON, QMCO, C, RSKD, FIGS \u00b7 SELL SOC, TYRA, ACDC, WVE, AVTX, ALMS, AIRS, PROK \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-09-27 BUY CRDO, OPRT, VIAV, AAON, QMCO, C, RSKD, FIGS \u00b7 SELL SOC, TYRA, ACDC, WVE, AVTX, ALMS, AIRS, PROK \u00b7 2026-09-27 BUY CRDO, OPRT, VIAV, AAON, QMCO, C, RSKD, FIGS \u00b7 SELL SOC, TYRA, ACDC, WVE, AVTX, ALMS, AIRS, PROK \u00b7 # Stock book \u2014 2026-09-27\n_Generated 2026-09-27T15:59:50.926370-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
