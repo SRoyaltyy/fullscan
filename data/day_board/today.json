@@ -1,6 +1,6 @@
 {
   "date": "2026-09-27",
-  "generated_at": "2026-09-27T15:57:49.016291-04:00",
+  "generated_at": "2026-09-27T15:57:55.633342-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -15,31 +15,6 @@
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "news_parse",
-      "title": "News parse",
-      "date": "2026-09-27",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-27T15:56:05.418471-04:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-09-27_parsed.json",
-          "ok": true,
-          "reason": "",
-          "size": 211837,
-          "preview": "raw=200 usable=26 single=22 \u00b7 Wall Street Braces for Jobs and Inflation Data as Rate Hike Fears Loom - finance | US Treasury Yields Top 5% and Fed October Rate Hike Odds Exceed 60% \u2014 Taiwan Sto | All Eyes on U.S. Jobs and Inflation Data as October Rate Hike Signals Take Cente | Markets Brace for U.S. Jobs, Inflation Data With Focus on Possible October Fed R | Fed Interest Rate Forecast: PCE Report Nears as 10-Year Yield Remains Above 5% -"
-        },
-        {
-          "path": "01_daily/news/2026-09-27_parsed.md",
-          "ok": true,
-          "reason": "",
-          "size": 6416,
-          "preview": "# News Parse v2 \u2014 2026-09-27T15:56:04.896691-04:00\nWindow\u224824h | news_mode=on | raw=200 | usable=26 | single_name=22 | noise_dropped=150\nusable polarity={'+': 1, '-': 10, 'mixed': 1, 'neutral': 14}"
-        }
-      ],
-      "preview": "raw=200 usable=26 single=22 \u00b7 Wall Street Braces for Jobs and Inflation Data as Rate Hike Fears Loom - finance | US Treasury Yields Top 5% and Fed October Rate Hike Odds Exceed 60% \u2014 Taiwan Sto | All Eyes on U.S. Jobs and Inflation Data as October Rate Hike Signals Take Cente | Markets Brace for U.S. Jobs, Inflation Data With Focus on Possible October Fed R | Fed Interest Rate Forecast: PCE Report Nears as 10-Year Yield Remains Above 5% - \u00b7 # News Parse v2 \u2014 2026-09-27T15:56:04.896691-04:00\nWindow\u224824h | news_mode=on | raw=200 | usable=26 | single_name=22 | noise_dropped=150\nusable polarity={'+': 1, '-': 10, 'mixed': 1, 'neutral': 14}"
-    },
     {
       "key": "finviz",
       "title": "Finviz universe export",
@@ -193,6 +168,24 @@
         }
       ],
       "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -1.85, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': 0.0, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -0.77, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -4.04, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -0.1, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.32, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -0.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-09-27\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+    },
+    {
+      "key": "join",
+      "title": "Join / match rank",
+      "date": "2026-09-27",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-27T15:57:55.466860-04:00",
+      "files": [
+        {
+          "path": "data/join/2026-09-27_ranked.csv",
+          "ok": true,
+          "reason": "",
+          "size": 2231946,
+          "preview": "5899 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 FORM, DOCU, NVDA, PLAB, NICE"
+        }
+      ],
+      "preview": "5899 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 FORM, DOCU, NVDA, PLAB, NICE"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
