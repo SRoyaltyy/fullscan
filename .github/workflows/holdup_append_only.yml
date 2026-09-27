@@ -9,6 +9,7 @@ on:
       - "dashboard/holdup/**"
       - ".github/workflows/holdup_append_only.yml"
       - ".github/workflows/holdup_forward.yml"
+      - ".github/workflows/holdup_fill.yml"
   push:
     branches: [main]
     paths:
@@ -18,6 +19,7 @@ on:
       - "dashboard/holdup/**"
       - ".github/workflows/holdup_append_only.yml"
       - ".github/workflows/holdup_forward.yml"
+      - ".github/workflows/holdup_fill.yml"
 
 permissions:
   contents: read
@@ -38,4 +40,6 @@ jobs:
       - name: Fetch the base branch
         run: git fetch --no-tags origin main
       - name: Sealed log, seed match, and prefix
-        run: PYTHONHASHSEED=0 python3 research/hot_n4_clean_v4/forward/test_append_only.py
+        run: |
+          PYTHONHASHSEED=0 python3 research/hot_n4_clean_v4/forward/test_append_only.py
+          PYTHONHASHSEED=0 python3 research/hot_n4_clean_v4/forward/test_plan_fill.py

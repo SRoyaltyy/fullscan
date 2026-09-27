@@ -17,6 +17,9 @@ PREFIX_PATHS = (
     HERE / LOG_NAME,
     HERE / LEDGER_NAME,
     HERE / "skips.jsonl",
+    HERE / "prices.jsonl",
+    HERE / "PRICE_LEDGER.jsonl",
+    HERE / "price_revisions.jsonl",
 )
 
 
