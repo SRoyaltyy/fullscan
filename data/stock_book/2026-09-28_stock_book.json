@@ -1,7 +1,7 @@
 {
   "meta": {
     "date": "2026-09-28",
-    "generated_at": "2026-09-28T17:03:33.246335-04:00",
+    "generated_at": "2026-09-28T17:08:14.720776-04:00",
     "general_bias": -0.6341,
     "sector_bias": {
       "Technology": -0.325,
@@ -28,8 +28,8 @@
         "gate": 0.5
       },
       "sector:Consumer Cyclical": {
-        "hit_rate": 0.464,
-        "n": 28,
+        "hit_rate": 0.483,
+        "n": 29,
         "gate": 0.85
       },
       "sector:Consumer Defensive": {
