@@ -1,41 +1,46 @@
-# Finviz homepage market digest — 2026-09-25
+# Finviz homepage market digest — 2026-09-28
 
-**Generated:** 2026-09-25T04:19:22.590699-04:00 (America/New_York)
+**Generated:** 2026-09-28T04:23:51.295172-04:00 (America/New_York)
 **Source:** `live`
-**Banner:** US equity futures point to a slightly higher open as traders await durable goods and Michigan sentiment data with oil softer and global markets mixed
+**Banner:** US equity futures point to a lower open as oil approaches $106–107 and rising yields reinforce higher‑for‑longer rate expectations ahead of Dallas Fed data
 **Prior close:** SPX —  Nasdaq —  Dow —
 **SPX:** —  **Nasdaq:** —  **Dow:** —
-**Oil:** —
+**Oil:** Brent crude $106.0
 **CPI/Fed:** —
-**Leaders:** TBN
-**Next session:** housing no · retail no · Fed no
-**Earnings slate:** TBN
-**Geo/grain:** —
-**Clock legal for:** 2026-09-25
+**Leaders:** GNS, NTWK
+**Next session:** housing no · retail no · Fed yes
+**Earnings slate:** —
+**Geo/grain:** geo
+**Clock legal for:** 2026-09-28
 **Clock use:** `same_morning`
 
 ## Clock
 
-Capture is **before 09:30 ET on this date**, so it is legal for that morning's Pre-Open (`clock_legal_for` = 2026-09-25).
+Capture is **before 09:30 ET on this date**, so it is legal for that morning's Pre-Open (`clock_legal_for` = 2026-09-28).
 
 Homepage `$MARKET` prose — **not** `YYYY-MM-DD_finviz_digest.md` (quote-page headlines + ticker blurbs). Capture only. Not wired into tape_anchor / predict / #210.
 
 ## Theme Radar
 
 - **Prior close:** SPX — · Nasdaq — · Dow —
-- **Oil:** —
+- **Oil:** Brent crude $106.0
 - **CPI / Fed-odds:** —
-- **Named leaders:** TBN
-- **Next-session calendar:** housing no · retail no · Fed no
-- **Earnings slate:** TBN
-- **Geo / grain:** —
+- **Named leaders:** GNS, NTWK
+- **Next-session calendar:** housing no · retail no · Fed yes
+  - The Dallas Fed Manufacturing Business Index is scheduled for release at 10:30 AM ET and is the main item on today’s US economic calendar
+  - Investors remain focused on how elevated oil prices may feed inflation and support expectations for higher‑for‑longer Federal Reserve policy rates
+- **Earnings slate:** —
+- **Geo / grain:** geo
 
 ## Narrative
 
-**US equity futures point to a slightly higher open as traders await durable goods and Michigan sentiment data with oil softer and global markets mixed**
+**US equity futures point to a lower open as oil approaches $106–107 and rising yields reinforce higher‑for‑longer rate expectations ahead of Dallas Fed data**
 
-- S&P 500 futures (@ES) rise 0.11%, Dow Jones futures (@YM) rise 0.10%, Nasdaq 100 futures (@NQ) rise 0.33%, and Russell 2000 futures (@ER2) rise 0.15%, indicating a slightly higher US open
-- Germany’s DAX (@DY) gains 0.59% in early European trading, while Asian markets saw the Nikkei 225 (@NKD) up 1.30% and the Hang Seng slightly lower
-- WTI crude oil futures (@CL) decline, with WTI down 1.10%
-- Small-cap name TBN (TBN) is among companies reporting earnings before the bell
-- Key US economic releases today are durable goods orders at 8:30 AM ET and the final University of Michigan consumer sentiment reading at 10:00 AM ET
+- S&P 500 Futures (@ES) are down 0.40%, Dow Jones Futures (@YM) decline 0.30%, Nasdaq 100 Futures (@NQ) fall 0.87%, and Russell 2000 Futures (@ER2) slip 0.49% in early trading
+- South Korea’s Kospi drops over 2% while Japan’s Nikkei (@NKD) is little changed after the Asian overnight session
+- Brent crude (@QA) trades toward $106–107 per barrel as reduced prospects for a swift US‑Iran truce add geopolitical pressure to oil markets
+- European equity futures edge modestly higher despite weaker sentiment in Asia and higher crude prices
+- No major US pre‑market stock movers with confirmed catalysts are cited in authoritative coverage after 4 AM ET
+- Overnight earnings activity is limited, with smaller names such as GNS (GNS) and NTWK (NTWK) reporting before the bell and few details versus estimates available
+- The Dallas Fed Manufacturing Business Index is scheduled for release at 10:30 AM ET and is the main item on today’s US economic calendar
+- Investors remain focused on how elevated oil prices may feed inflation and support expectations for higher‑for‑longer Federal Reserve policy rates
