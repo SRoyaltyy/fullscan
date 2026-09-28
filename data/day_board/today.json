@@ -94,31 +94,6 @@
   },
   "lands": [
     {
-      "key": "weather",
-      "title": "Weather / regime",
-      "date": "2026-09-28",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-28T05:40:22.099970-04:00",
-      "files": [
-        {
-          "path": "01_daily/weather/2026-09-28_weather.json",
-          "ok": true,
-          "reason": "",
-          "size": 10572,
-          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -2.96, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -1.59, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -0.29, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -0.75, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.45, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -0.26, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.08, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -0.825, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}"
-        },
-        {
-          "path": "01_daily/weather/2026-09-28_weather.md",
-          "ok": true,
-          "reason": "",
-          "size": 5982,
-          "preview": "# Weather report \u2014 2026-09-28\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
-        }
-      ],
-      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -2.96, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -1.59, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -0.29, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -0.75, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.45, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -0.26, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.08, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -0.825, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-09-28\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
-    },
-    {
       "key": "peer_rs",
       "title": "Peer RS",
       "date": "2026-09-28",
@@ -358,6 +333,31 @@
         }
       ],
       "preview": "2026-09-28 BUY THC, ASTH, GCT \u00b7 SELL TE, FCEL, OKLO, PLUG, EOSE, SOC, EXK, QBTS \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href \u00b7 2026-09-28 BUY THC, ASTH, GCT \u00b7 SELL TE, FCEL, OKLO, PLUG, EOSE, SOC, EXK, QBTS \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-28 BUY THC, ASTH, GCT \u00b7 SELL TE, FCEL, OKLO, PLUG, EOSE, SOC, EXK, QBTS \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-28 BUY THC, ASTH, GCT \u00b7 SELL TE, FCEL, OKLO, PLUG, EOSE, SOC, EXK, QBTS \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-28 BUY THC, ASTH, GCT \u00b7 SELL TE, FCEL, OKLO, PLU"
+    },
+    {
+      "key": "ab",
+      "title": "AB checklist",
+      "date": "2026-09-28",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-28T05:42:18.883755-04:00",
+      "files": [
+        {
+          "path": "data/ab_checklist/2026-09-28_ab_checklist.csv",
+          "ok": true,
+          "reason": "",
+          "size": 7629961,
+          "preview": "2660 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 FIGS, AUPH, GCT, RGEN, AAPL"
+        },
+        {
+          "path": "data/ab_checklist/2026-09-28_ab_checklist_enriched.csv",
+          "ok": true,
+          "reason": "",
+          "size": 8426743,
+          "preview": "2660 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 FIGS, RGEN, SN, ICLR, LLY"
+        }
+      ],
+      "preview": "2660 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 FIGS, AUPH, GCT, RGEN, AAPL \u00b7 2660 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 FIGS, RGEN, SN, ICLR, LLY"
     },
     {
       "key": "flatten",
