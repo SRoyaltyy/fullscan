@@ -145,12 +145,19 @@ def _run(book, clock, allow_early: bool = False) -> tuple[int, str, dict]:
     def skip(*args, **kwargs):
         calls["skip"] += 1
 
+    def engine_ok():
+        # A pull_request checkout is the merge with main. main can edit
+        # src/factor_mine.py without moving the v4 pin. This test is the
+        # clock, so it does not inherit that refusal.
+        return None
+
     saved = {
         "append_records": forward.append_records,
         "load": forward.load,
         "utc_now": forward.utc_now,
         "write_page": forward.write_page,
         "_bars": forward._bars,
+        "_engine_ok": forward._engine_ok,
         "_halt_known": forward._halt_known,
         "_log_skip": forward._log_skip,
         "morning_gate": forward.morning_gate,
@@ -171,6 +178,7 @@ def _run(book, clock, allow_early: bool = False) -> tuple[int, str, dict]:
         forward.append_records = append
         forward.write_page = page
         forward._bars = bars
+        forward._engine_ok = engine_ok
         forward._log_skip = skip
         forward._halt_known = lambda *args, **kwargs: None
         forward.morning_gate = morning
