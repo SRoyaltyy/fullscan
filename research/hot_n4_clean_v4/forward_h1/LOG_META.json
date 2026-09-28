@@ -35,11 +35,6 @@
     "2026-09-24",
     "2026-09-25"
   ],
-  "missing": [
-    {
-      "date": "2026-09-28",
-      "note": "No sealed pre-open h1 plan. forward_shadow_v1 separately records union_hot_n4_h1__w0 for that day, a different study."
-    }
-  ],
-  "note": "The seeded session lines are unchanged. This file is the label. It is not a rewrite of the log."
+  "note": "The seeded session lines are unchanged. This file is the label. It is not a rewrite of the log.",
+  "session_2026_09_28": "Marked missing only if no h1 plan for 2026-09-28 is committed before 09:30 ET. The 13:05 UTC PLAN run seals that session from the frozen Theme Radar record. forward_shadow_v1 records union_hot_n4_h1__w0 for that day as a different study."
 }

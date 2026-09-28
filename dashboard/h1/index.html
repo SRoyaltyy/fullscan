@@ -63,19 +63,20 @@
  <div class="lock">
   <b>Rules locked. Luck N 22,017. Records are append-only.</b>
   This is the prereg h1 recipe: min hold stays 1 session. It is not an edit of the holdup log.
-  Session 2026-09-28 has no sealed pre-open h1 plan. This page was added after that open, so no 2026-09-28 plan is written after the fact. The live forward record starts with the first PLAN run after merge. Holdup's 2026-09-28 plan, if the 13:05 UTC run wrote one, stays in the holdup log.
+  Session 2026-09-28 uses the frozen Theme Radar record. The 13:05 UTC PLAN run seals it for this book when the workflow is on main before 09:30 ET. A manual dispatch must commit before 13:25 UTC (09:25 ET). It is marked missing only if no plan is committed before 09:30 ET. forward_shadow_v1 is a different study.
   Picks for day D are sealed before the US open on D. At 13:35 UTC the planned buys and sells are marked filled at the official open when that open is already printed.
   13:35 UTC is 09:35 ET during EDT (UTC−4, through 2026-11-01). During EST (from 2026-11-01, UTC−5) the same cron is 08:35 ET, before the 09:30 open, and the run appends nothing if the open is not printed yet.
   P&amp;L for open positions stays pending until the close bar is saved. The 21:30 UTC fill adds closes and marks and does not repeat a fill already written.
   A past line is never regenerated. The 31 sessions through 2026-09-25 stay exactly as written and are labeled backfill (built afterwards, not sealed pre-open).
   Headline figures are live days only. A live day is a plan sealed at 09:05 ET before the open.
-  2026-09-28 is missing on this page. forward_shadow_v1 separately records union_hot_n4_h1__w0 for that day, a different study.
+  2026-09-28 is shown here once its plan is sealed. It is marked missing only if no sealed plan is committed before 09:30 ET.
   A later day is a plan, then an open fill, then the close mark. Pending days are planned and not yet filled.
   Primary cost is the Futubull fee plus 0.5% per side. Fills are that session's official open. No orders are sent.
   The plan run is 13:05 UTC (9:05 AM EDT, 8:05 AM EST, 9:05 PM HKT). The open-fill run is 13:35 UTC (9:35 AM EDT, 8:35 AM EST, 9:35 PM HKT). The fill run is 21:30 UTC (5:30 PM EDT, 4:30 PM EST, 5:30 AM HKT the next day).
  </div>
  <p id="skip" class="skip" hidden></p>
- <p id="missingDay" class="skip">2026-09-28 is missing. No sealed pre-open h1 plan. forward_shadow_v1 separately records union_hot_n4_h1__w0 for that day, a different study.</p>
+ <p id="waitingDay" class="skip" hidden>2026-09-28 seals at the 13:05 UTC PLAN run. Session 09-28 uses the frozen Theme Radar record. Marked missing only if no plan is committed before 09:30 ET.</p>
+ <p id="missingDay" class="skip" hidden>2026-09-28 is missing. No sealed pre-open h1 plan was committed before 09:30 ET. forward_shadow_v1 separately records union_hot_n4_h1__w0 for that day, a different study.</p>
  <h2>Live</h2>
  <p class="sub">Headline figures are live days only. A live day was sealed at 09:05 ET before the open.</p>
  <div class="cards" id="cards"></div>
@@ -369,14 +370,17 @@ function render(rows, status){
   const note = document.getElementById("backfillNote");
   if (note) note.textContent = `${BACKFILL_LABEL}. ${backfillBooks.length} sessions, ${backfillCloses.length} closed trades. Not included in the headline.`;
   const missing = document.getElementById("missingDay");
+  const waiting = document.getElementById("waitingDay");
   if (missing){
     const sealed = rows.some(row => row.date === "2026-09-28" && (row.kind === "plan" || row.kind === "session" || row.kind === "fill" || row.kind === "mark"));
-    missing.hidden = sealed;
+    const pastOpen = Date.now() >= Date.parse("2026-09-28T13:30:00Z");
+    missing.hidden = sealed || !pastOpen;
+    if (waiting) waiting.hidden = sealed || pastOpen;
   }
   document.getElementById("foot").textContent =
     `${sessions.length} backfill sessions, ${livePlans.length} live plans, ${opens.length} open fills, ${fills.length + marks.length} close marks, ${closes.length} close records, ${rows.length} sealed lines. ` +
     `Picks for day D are sealed before the US open. Open fills are marked at the official open. P&L for open positions stays pending until the close bar is saved. ` +
-    `Headline figures are live days only. ${BACKFILL_LABEL}. 2026-09-28 has no sealed pre-open h1 plan unless a PLAN run writes one before 09:30 ET. ` +
+    `Headline figures are live days only. ${BACKFILL_LABEL}. 2026-09-28 is marked missing only if no sealed plan is committed before 09:30 ET. ` +
     `Recipe ${rows[0] ? rows[0].recipe : "union_hot_n4_h1__w0"}. Min hold 1. Luck N 22,017.`;
   const skip = document.getElementById("skip");
   if (status && status.latest_skip){

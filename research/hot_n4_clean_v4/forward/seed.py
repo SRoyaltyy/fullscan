@@ -17,7 +17,6 @@ if str(ROOT) not in sys.path:
 from research.hot_n4_clean_v4.forward.book import H1, current_book  # noqa: E402
 from research.hot_n4_clean_v4.forward.ledger import (  # noqa: E402
     append_records,
-    canonical_bytes,
     load,
     session_dates,
 )
@@ -152,35 +151,21 @@ def build_bodies(payloads, bars, fees) -> list[dict]:
 
 
 def _h1_note(records: list[dict]) -> None:
-    """2026-09-28 has no sealed pre-open h1 plan. Do not write one after the open."""
-    reason = (
-        "no sealed pre-open h1 plan for 2026-09-28; this log is created after that open, "
-        "so no 2026-09-28 plan is written after the fact. "
-        "The live forward record starts with the first PLAN run after merge"
-    )
-    skips = current_book().folder / "skips.jsonl"
-    if not skips.is_file() or b"2026-09-28" not in skips.read_bytes():
-        body = {
-            "at": "2026-09-28T20:00:00Z",
-            "date": "2026-09-28",
-            "reason": reason,
-            "recipe": H1.recipe,
-        }
-        with skips.open("ab") as handle:
-            handle.write(canonical_bytes(body))
+    """Do not pre-declare 2026-09-28 missing. The 13:05 UTC PLAN seals it before 09:30 ET."""
     write_page(records, {
         "date": "2026-09-28",
-        "latest_skip": reason,
+        "latest_skip": None,
         "note": (
             "Seeded from the committed v4 day cards for union_hot_n4_h1__w0 "
             "and checked against returns/RESULTS.json. "
-            "Session 2026-09-28 has no sealed pre-open h1 plan. "
-            "This log was created after that open, so no 2026-09-28 plan is written after the fact. "
-            "The live forward record starts with the first PLAN run after merge. "
-            "Holdup's 2026-09-28 plan, if the 13:05 UTC run wrote one, stays in the holdup log."
+            "Session 2026-09-28 uses the frozen Theme Radar record. "
+            "The 13:05 UTC PLAN run seals it when this is on main before 09:30 ET. "
+            "It is marked missing only if no h1 plan is committed before that open. "
+            "forward_shadow_v1 records union_hot_n4_h1__w0 for that day as a different study. "
+            "A holdup plan already sealed is not written again."
         ),
         "pending": None,
-        "phase": "no-plan",
+        "phase": "awaiting-plan",
         "recipe": H1.recipe,
     })
 
