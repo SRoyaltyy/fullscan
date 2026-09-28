@@ -6,6 +6,8 @@ User prompt   = sector memory + full Channel 1 (same as general) + ETF tape + se
 CLI:
   python -m src.run_sector_predict [--date YYYY-MM-DD] [--sectors Technology,Energy]
                                    [--force] [--retries 1]
+                                   [--llm-backend grok|deepseek|auto]
+                                   [--runner ecs|ubuntu] [--backfill]
 
 After each fresh QC-ok write, mid-commits that sector via land_file.land_one_sector
 (safe_git_push) so main shows N/11 during the ~70–90m loop. Skip-if-good does not
@@ -17,7 +19,8 @@ import argparse
 import json
 import os
 import re
-from datetime import datetime
+import subprocess
+from datetime import datetime, timezone
 from zoneinfo import ZoneInfo
 
 from . import (compute_scores, compute_sector_scores, config, deepseek_client,
@@ -59,6 +62,69 @@ def _slug(sector: str) -> str:
     return re.sub(r"[^a-z0-9]+", "_", sector.lower()).strip("_")
 
 
+def essay_relpath(date_str: str, sector: str) -> str:
+    return f"01_daily/sectors/{date_str}/{_slug(sector)}_predict.md"
+
+
+def backfill_requested() -> bool:
+    v = (os.environ.get("SECTOR_BACKFILL") or "").strip().lower()
+    return v in ("1", "true", "yes", "on")
+
+
+def backfill_bypasses_cutoff(date_str: str, today: str | None = None) -> bool:
+    """True when a backfill may write a past or current session after 09:25 ET."""
+    if not backfill_requested():
+        return False
+    if today is None:
+        today = datetime.now(ZoneInfo(config.TZ)).date().isoformat()
+    return bool(date_str) and date_str <= today
+
+
+def refuse_ubuntu_grok(runner: str, backend: str) -> None:
+    """GitHub-hosted ubuntu cannot reach the ECS OpenClaw gateway."""
+    if (runner or "").strip().lower() != "ubuntu":
+        return
+    if (backend or "").strip().lower() != "grok":
+        return
+    raise SystemExit(
+        "ubuntu cannot reach OpenClaw. runner=ubuntu with llm_backend=grok "
+        "is refused. Re-dispatch with llm_backend=deepseek or auto, or runner=ecs."
+    )
+
+
+def essay_exists_on_main(date_str: str, sector: str, root: str | None = None) -> bool:
+    """True when origin/main (or local main) already has this sector essay.
+
+    Append-only: a later run must not overwrite it.
+    """
+    rel = essay_relpath(date_str, sector)
+    repo = root or os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+    for rev in ("origin/main", "main"):
+        try:
+            proc = subprocess.run(
+                ["git", "cat-file", "-e", f"{rev}:{rel}"],
+                cwd=repo,
+                capture_output=True,
+                timeout=30,
+            )
+        except (OSError, subprocess.TimeoutExpired):
+            continue
+        if proc.returncode == 0:
+            return True
+    return False
+
+
+def essay_model_id(provider: str) -> str:
+    """Model string stored on the essay. Grok stays xai/grok-4.6."""
+    recorded = (deepseek_client.last_model() or "").strip()
+    if recorded:
+        return recorded
+    if (provider or "") == "deepseek":
+        raw = (config.MODEL_PREDICT or "deepseek-chat").strip()
+        return raw if raw.startswith("deepseek/") else f"deepseek/{raw}"
+    return (config.OPENCLAW_BACKEND_MODEL or "xai/grok-4.6").strip()
+
+
 def _load_system_prompt(sector: str) -> str:
     method_path = os.path.join(config.GROUNDING, "sector_method.md")
     sector_path = os.path.join(config.GROUNDING, "sectors", f"{_slug(sector)}.md")
@@ -84,6 +150,13 @@ def _write_essay(path: str, sector: str, date_str: str, slug: str,
     with open(path, "w", encoding="utf-8") as fh:
         fh.write(f"# Sector Prediction — {sector} — {date_str}\n\n")
         fh.write(f"- news_mode: **{news_mode}**\n")
+        if decision.get("model"):
+            fh.write(f"- model: **{decision['model']}**\n")
+        if decision.get("written_after_open"):
+            fh.write("- written_after_open: **true**\n")
+            written_at = decision.get("written_at") or ""
+            if written_at:
+                fh.write(f"- written_at: **{written_at}**\n")
         fh.write(f"- ETF: **{SECTOR_ETFS.get(sector)}**\n")
         fh.write(f"- rubric: `00_grounding/sectors/{slug}.md`\n")
         fh.write(f"- predicted_direction: **{decision['predicted_direction']}**\n")
@@ -154,11 +227,17 @@ def _general_total_today(date_str: str) -> float | None:
 
 def run_one(sector: str, date_str: str, ch1_md: str,
             retries: int = 1, force: bool = False) -> dict:
-    config.require_llm()
     slug = _slug(sector)
     out_dir = os.path.join(config.DAILY_SECTORS, date_str)
     os.makedirs(out_dir, exist_ok=True)
     path = os.path.join(out_dir, f"{slug}_predict.md")
+    if essay_exists_on_main(date_str, sector):
+        print(f"[sector-predict] {sector}: skip, essay already on main "
+              f"(append-only, will not overwrite)")
+        return {"skipped": True, "quality": "ok", "status": "OK",
+                "reason": "exists_on_main", "provider": "",
+                "path": path, "sector": sector}
+    config.require_llm()
     if not force:
         existing = output_qc.qc_sector_predict(path)
         if existing.ok:
@@ -170,12 +249,16 @@ def run_one(sector: str, date_str: str, ch1_md: str,
             print(f"[sector-predict] {sector}: existing file rejected "
                   f"({existing.reason}) — throwing out and rerunning")
             output_qc.reject(path)
-    try:
-        preopen.refuse_if_late(f"sector-predict {sector}", force=force)
-    except SystemExit as e:
-        print(str(e))
-        return {"skipped": True, "reason": "past_cutoff", "status": "FAIL",
-                "path": path, "sector": sector}
+    if backfill_bypasses_cutoff(date_str):
+        print(f"[sector-predict] {sector}: backfill of {date_str}, "
+              f"ignoring 09:25 ET cutoff")
+    else:
+        try:
+            preopen.refuse_if_late(f"sector-predict {sector}", force=force)
+        except SystemExit as e:
+            print(str(e))
+            return {"skipped": True, "reason": "past_cutoff", "status": "FAIL",
+                    "path": path, "sector": sector}
     rubric = _load_system_prompt(sector)
     etf_ctx = etf_relative_snapshot(sector)
     seeds = search_query_bundle(sector, limit=16)
@@ -214,7 +297,8 @@ def run_one(sector: str, date_str: str, ch1_md: str,
     last_qc = None
     retry_extra = ""
     for attempt in range(retries + 1):
-        if attempt and preopen.past_predict_cutoff() and not force:
+        if (attempt and preopen.past_predict_cutoff() and not force
+                and not backfill_bypasses_cutoff(date_str)):
             print(f"[sector-predict] {sector}: past 09:25 ET, not retrying")
             break
         stage = (f"SECTOR PREDICT {sector} {date_str}"
@@ -257,6 +341,12 @@ def run_one(sector: str, date_str: str, ch1_md: str,
             scores, sector=sector, etf=SECTOR_ETFS.get(sector),
             ch1=_CTX.get("ch1"), general_total=_general_total_today(date_str))
         decision = map_heat_decision_gate(date_str, decision, sector=sector)
+        decision = dict(decision)
+        decision["model"] = essay_model_id(provider or "")
+        if backfill_bypasses_cutoff(date_str):
+            decision["written_after_open"] = True
+            decision["written_at"] = datetime.now(timezone.utc).strftime(
+                "%Y-%m-%dT%H:%M:%SZ")
         horizon_calls = compute_scores.parse_horizon_calls(scores)
         _write_essay(path, sector, date_str, slug, etf_ctx or "", text, decision,
                      news_mode=news_dec["news_mode"])
@@ -268,7 +358,6 @@ def run_one(sector: str, date_str: str, ch1_md: str,
             output_qc.reject(path)
             continue
         _update_scoreboard(sector, date_str, slug, decision, horizon_calls)
-        decision = dict(decision)
         decision["status"] = "OK"
         decision["provider"] = provider or "openclaw"
         decision["fallback_reason"] = fallback_reason
@@ -309,12 +398,15 @@ def _llm_row(sector: str, result: dict) -> dict:
             status = "OK"
         else:
             status = "FAIL"
-    return {
+    row = {
         "sector": sector,
         "status": status,
         "provider": str(result.get("provider") or ""),
         "fallback_reason": str(result.get("fallback_reason") or ""),
     }
+    if result.get("model"):
+        row["model"] = str(result["model"])
+    return row
 
 
 def write_sector_llm(date_str: str, rows: list[dict]) -> str:
@@ -348,7 +440,20 @@ def main() -> None:
     ap.add_argument("--sectors", default=None)
     ap.add_argument("--force", action="store_true")
     ap.add_argument("--retries", type=int, default=1)
+    ap.add_argument("--llm-backend", default=None,
+                    choices=("auto", "grok", "deepseek"))
+    ap.add_argument("--runner", default=None, choices=("ecs", "ubuntu"))
+    ap.add_argument("--backfill", action="store_true",
+                    help="Past/current session ignores 09:25 ET and is marked "
+                         "written_after_open")
     args = ap.parse_args()
+    if args.llm_backend:
+        config.apply_llm_backend(args.llm_backend)
+    if args.backfill:
+        os.environ["SECTOR_BACKFILL"] = "1"
+    runner = (args.runner or os.environ.get("SECTOR_RUNNER") or "").strip().lower()
+    backend = (args.llm_backend or config.llm_backend() or "").strip().lower()
+    refuse_ubuntu_grok(runner, backend)
     errs = validate()
     if errs:
         raise SystemExit(f"taxonomy invalid: {errs}")
@@ -439,6 +544,10 @@ def main() -> None:
           + (f" {summary}" if summary else ""))
     if n_ok == 0:
         raise SystemExit("no quality-ok sector essays on disk")
+    if backfill_requested() and n_fail:
+        raise SystemExit(
+            f"backfill: {n_fail} sector essay(s) did not land"
+        )
 
 
 if __name__ == "__main__":

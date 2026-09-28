@@ -1,15 +1,27 @@
 name: Sector Predict
 
 # One independent LLM run per sector (never mashed into one prompt).
-# sectors empty  → all 11 Finviz sectors, sequential
-# sectors filled → only those names
+# The sectors input DEFAULT is Technology (one sector). An empty string
+# runs all 11 Finviz sectors, sequential. A filled list runs only those names.
+#
+# runner=ecs (default) is [self-hosted, ecs] with FULLSCAN_HOME=/home/gha.
+# runner=ubuntu is ubuntu-latest with /home/runner. Ubuntu cannot reach
+# OpenClaw, so llm_backend=grok fails before any model call.
+# llm_backend default grok is OpenClaw only. deepseek skips OpenClaw.
+# auto is Grok, then DeepSeek on empty/timeout.
+# backfill=true on a past or current session ignores the 09:25 ET cutoff
+# and marks each new essay written_after_open.
+#
+# PR #395 does not edit this file. Its preopen runner rule is the same
+# expression: ubuntu only when runner == ubuntu, otherwise ECS.
 
 on:
   workflow_dispatch:
     inputs:
       sectors:
         description: >
-          Comma-separated Finviz sector names, or EMPTY for all 11.
+          Comma-separated Finviz sector names. Default is Technology,
+          not all 11. Pass an empty string to run all 11.
           Examples: Technology | Energy,Utilities | Basic Materials,Healthcare,Financial
         required: false
         default: "Technology"
@@ -17,13 +29,35 @@ on:
         description: "YYYY-MM-DD (default = today America/New_York)"
         required: false
         default: ""
+      runner:
+        description: "ecs (default, self-hosted OpenClaw) or ubuntu (GitHub-hosted)"
+        required: false
+        default: ecs
+        type: choice
+        options:
+          - ecs
+          - ubuntu
+      llm_backend:
+        description: "grok (OpenClaw, default) · deepseek (API only, no OpenClaw) · auto (grok then deepseek on empty/timeout)"
+        required: false
+        default: grok
+        type: choice
+        options:
+          - grok
+          - deepseek
+          - auto
+      backfill:
+        description: "true = past/current session ignores 09:25 ET and marks essays written_after_open"
+        required: false
+        default: false
+        type: boolean
 
 permissions:
   actions: write
   contents: write
 
 concurrency:
-  group: sector-predict
+  group: sector-predict-${{ inputs.runner }}
   cancel-in-progress: false
 
 env:
@@ -31,13 +65,24 @@ env:
 
 jobs:
   predict:
-    runs-on: [self-hosted, ecs]
+    runs-on: ${{ github.event.inputs.runner == 'ubuntu' && 'ubuntu-latest' || fromJSON('["self-hosted","ecs"]') }}
     timeout-minutes: 360
     env:
-      FULLSCAN_HOME: "/home/gha"
-      HOME: "/home/gha"
+      FULLSCAN_HOME: ${{ github.event.inputs.runner == 'ubuntu' && '/home/runner' || '/home/gha' }}
+      HOME: ${{ github.event.inputs.runner == 'ubuntu' && '/home/runner' || '/home/gha' }}
+      SECTOR_RUNNER: ${{ github.event.inputs.runner }}
     steps:
+      - name: Refuse ubuntu Grok
+        id: refuse
+        if: ${{ github.event.inputs.runner == 'ubuntu' && github.event.inputs.llm_backend == 'grok' }}
+        run: |
+          echo "::error::ubuntu cannot reach OpenClaw. runner=ubuntu with llm_backend=grok is refused. Use llm_backend=deepseek or auto, or runner=ecs."
+          exit 1
+
       - uses: actions/checkout@v4
+
+      - name: Fetch origin/main for append-only skip
+        run: git fetch origin main --depth=1
 
       - uses: actions/setup-python@v5
         with:
@@ -52,6 +97,10 @@ jobs:
         run: |
           echo "run_date: '${{ github.event.inputs.run_date }}'"
           echo "sectors:  '${{ github.event.inputs.sectors }}'"
+          echo "runner:   '${{ github.event.inputs.runner }}'"
+          echo "llm_backend: '${{ github.event.inputs.llm_backend }}'"
+          echo "backfill: '${{ github.event.inputs.backfill }}'"
+          echo "HOME=${HOME} FULLSCAN_HOME=${FULLSCAN_HOME}"
           if [ -z "${{ github.event.inputs.sectors }}" ]; then
             echo "Mode: ALL 11 (sequential, one LLM session each)"
           else
@@ -61,25 +110,44 @@ jobs:
       - name: Run sector predict
         # Mid-commit is inside src.run_sector_predict (same helper as
         # sector_daily / sector_pipeline). End commit is leftover sweep only.
+        # deepseek clears the gateway env so this step cannot call OpenClaw.
         env:
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
-          OPENCLAW_GATEWAY_URL: ${{ secrets.OPENCLAW_GATEWAY_URL }}
-          OPENCLAW_TOKEN: ${{ secrets.OPENCLAW_TOKEN }}
+          OPENCLAW_GATEWAY_URL: ${{ github.event.inputs.llm_backend == 'deepseek' && '' || secrets.OPENCLAW_GATEWAY_URL }}
+          OPENCLAW_TOKEN: ${{ github.event.inputs.llm_backend == 'deepseek' && '' || secrets.OPENCLAW_TOKEN }}
           SEARXNG_URL: ${{ secrets.SEARXNG_URL }}
           FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          SECTOR_PREDICT_AUTO_FALLBACK: ${{ github.event.inputs.llm_backend == 'auto' && '1' || '0' }}
         run: |
           set -e
+          export HOME="${HOME:?}"
           DATE="${{ github.event.inputs.run_date }}"
           SECTORS="${{ github.event.inputs.sectors }}"
-          ARGS=()
+          RUNNER="${{ github.event.inputs.runner }}"
+          BACKEND="${{ github.event.inputs.llm_backend }}"
+          BACKFILL="${{ github.event.inputs.backfill }}"
+          RUNNER="${RUNNER:-ecs}"
+          BACKEND="${BACKEND:-grok}"
+          if [ "$RUNNER" = "ubuntu" ] && [ "$BACKEND" = "grok" ]; then
+            echo "ERROR: ubuntu cannot reach OpenClaw. runner=ubuntu with llm_backend=grok is refused."
+            exit 1
+          fi
+          if [ "$BACKEND" = "deepseek" ]; then
+            unset OPENCLAW_GATEWAY_URL OPENCLAW_TOKEN OPENCLAW_GATEWAY_TOKEN
+            echo "llm_backend=deepseek — OpenClaw will not be called"
+          fi
+          ARGS=(--runner "$RUNNER" --llm-backend "$BACKEND")
           [ -n "$DATE" ] && ARGS+=(--date "$DATE")
           [ -n "$SECTORS" ] && ARGS+=(--sectors "$SECTORS")
+          if [ "$BACKFILL" = "true" ]; then
+            ARGS+=(--backfill)
+          fi
           echo "CMD: python -m src.run_sector_predict ${ARGS[*]}"
           python -m src.run_sector_predict "${ARGS[@]}"
 
       - name: Print outputs
-        if: always()
+        if: ${{ always() && steps.refuse.outcome != 'failure' }}
         run: |
           echo "=== files under 01_daily/sectors ==="
           find 01_daily/sectors -type f 2>/dev/null | sort || true
@@ -93,7 +161,7 @@ jobs:
           done
 
       - name: Commit results
-        if: always()
+        if: ${{ always() && steps.refuse.outcome != 'failure' }}
         run: |
           MSG="auto: sector predict"
           [ -n "${{ github.event.inputs.sectors }}" ] && MSG="auto: sector predict ${{ github.event.inputs.sectors }}"
