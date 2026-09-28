@@ -1,6 +1,6 @@
 {
   "date": "2026-09-28",
-  "generated_at": "2026-09-28T16:15:01.022929-04:00",
+  "generated_at": "2026-09-28T16:38:16.319240-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -84,7 +84,7 @@
       "inputs_ready": true,
       "n_req_ok": 1,
       "n_req": 1,
-      "n_opt_ok": 3,
+      "n_opt_ok": 5,
       "n_opt": 5,
       "files": [
         {
@@ -146,10 +146,10 @@
           "name": "Close answer-key JSON (*_finviz_market_digest_close)",
           "path": "01_daily/news/2026-09-28_finviz_market_digest_close.json",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "",
+          "size": 8038,
+          "said": "US stocks closed lower as 10-year yield topped 5.2% and oil rose after Trump rejected Iran Strait of Hormuz proposal \u00b7 leaders OXY, NVDA, MDB, META, INTC, AMD \u00b7 bad",
           "bullets": []
         },
         {
@@ -157,11 +157,14 @@
           "name": "Close answer-key MD (*_finviz_market_digest_close)",
           "path": "01_daily/news/2026-09-28_finviz_market_digest_close.md",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 3525,
+          "said": "Finviz homepage market digest (close) \u2014 2026-09-28",
+          "bullets": [
+            "Generated:** 2026-09-28T16:38:15.182490-04:00 (America/New_York)",
+            "Source:** `live`"
+          ]
         }
       ],
       "said": "5881 tickers \u00b7 2096 signals \u00b7 top AJG, AMD, AME, AMGN, AMX, AON, APH, ARGX",
@@ -859,7 +862,7 @@
           "size": 57225,
           "said": "Stock book \u2014 2026-09-28",
           "bullets": [
-            "_Generated 2026-09-28T16:14:57.727558-04:00_",
+            "_Generated 2026-09-28T16:21:13.799233-04:00_",
             "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
           ]
         },
@@ -3263,6 +3266,31 @@
         }
       ],
       "preview": "5899 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 ARGX, COP, REGN, AZN, DVN"
+    },
+    {
+      "key": "finviz_market_digest_close",
+      "title": "Finviz homepage market digest (close)",
+      "date": "2026-09-28",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-28T16:38:15.219464-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-09-28_finviz_market_digest_close.json",
+          "ok": true,
+          "reason": "",
+          "size": 8038,
+          "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for"
+        },
+        {
+          "path": "01_daily/news/2026-09-28_finviz_market_digest_close.md",
+          "ok": true,
+          "reason": "",
+          "size": 3525,
+          "preview": "# Finviz homepage market digest (close) \u2014 2026-09-28\n**Generated:** 2026-09-28T16:38:15.182490-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stocks closed lower as 10-year yield topped 5.2% and oil rose after Trump rejected Iran Strait of Hormuz proposal\n**Prior close:** SPX -0.77%  Nasdaq -0.92%  Dow \u2014\n**SPX:** -0.77%  **Nasdaq:** -0.92%  **Dow:** \u2014\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** OXY, NVDA, MDB, META, INTC, AMD, KR, PG, SPCX, JEF\n**Next session:** housing no \u00b7 retail no \u00b7 Fed no\n**Earnings slate:** JEF\n**Geo/grain:** geo\n**Clock legal for:** 2026-09-29\n**Clock use:** `next_open`"
+        }
+      ],
+      "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest (close) \u2014 2026-09-28\n**Generated:** 2026-09-28T16:38:15.182490-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stocks closed lower as 10-year yield topped 5.2% and oil rose after Trump rejected Iran Strait of Hormuz proposal\n**Prior close:** SPX -0.77%  Nasdaq -0.92%  Dow \u2014\n**SPX:** -0.77%  **Nasdaq:** -0.92%  **Dow:** \u2014\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** OXY, NVDA, MDB, META, INTC, AMD, KR, PG, SPCX, JEF\n**Next session:** housing no \u00b7 retail no \u00b7 Fed no\n**Earnings slate:** JEF\n**Geo/grain:** geo\n**Clock legal for:** 2026-09-29\n**Clock use:** `next_open`"
     }
   ],
   "href": {
