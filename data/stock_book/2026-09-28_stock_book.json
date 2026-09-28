@@ -1,7 +1,7 @@
 {
   "meta": {
     "date": "2026-09-28",
-    "generated_at": "2026-09-28T16:58:59.785841-04:00",
+    "generated_at": "2026-09-28T17:03:33.246335-04:00",
     "general_bias": -0.6341,
     "sector_bias": {
       "Technology": -0.325,
@@ -23,8 +23,8 @@
         "gate": 0.5
       },
       "sector:Communication Services": {
-        "hit_rate": 0.222,
-        "n": 27,
+        "hit_rate": 0.214,
+        "n": 28,
         "gate": 0.5
       },
       "sector:Consumer Cyclical": {
