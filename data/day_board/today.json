@@ -1,6 +1,6 @@
 {
   "date": "2026-09-28",
-  "generated_at": "2026-09-28T13:58:48.024007-04:00",
+  "generated_at": "2026-09-28T13:59:07.021327-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -125,24 +125,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "join",
-      "title": "Join / match rank",
-      "date": "2026-09-28",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-28T13:54:03.874384-04:00",
-      "files": [
-        {
-          "path": "data/join/2026-09-28_ranked.csv",
-          "ok": true,
-          "reason": "",
-          "size": 2255062,
-          "preview": "5899 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 ARGX, COP, REGN, AZN, DVN"
-        }
-      ],
-      "preview": "5899 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 ARGX, COP, REGN, AZN, DVN"
-    },
     {
       "key": "peer_rs",
       "title": "Peer RS",
@@ -429,6 +411,59 @@
         }
       ],
       "preview": "5097 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-09-28",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-28T13:59:06.005320-04:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-09-28_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1362645,
+          "preview": "1d BUY CNQ, CVE, ASTH, SONO, FIVN, AMN, CON, BAND \u00b7 SELL EOSE, TE, FCEL, METC, ARE, SOC, EXK, BAK"
+        },
+        {
+          "path": "data/stock_book/2026-09-28_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 585,
+          "preview": "green 0 \u00b7 "
+        },
+        {
+          "path": "data/stock_book/2026-09-28_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2453,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-09-28_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 10614,
+          "preview": "2026-09-28 BUY CNQ, CVE, ASTH, SONO, FIVN, AMN, CON, BAND \u00b7 SELL EOSE, TE, FCEL, METC, ARE, SOC, EXK, BAK"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 10614,
+          "preview": "2026-09-28 BUY CNQ, CVE, ASTH, SONO, FIVN, AMN, CON, BAND \u00b7 SELL EOSE, TE, FCEL, METC, ARE, SOC, EXK, BAK"
+        },
+        {
+          "path": "01_daily/2026-09-28_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 58225,
+          "preview": "# Stock book \u2014 2026-09-28\n_Generated 2026-09-28T13:58:57.356189-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY CNQ, CVE, ASTH, SONO, FIVN, AMN, CON, BAND \u00b7 SELL EOSE, TE, FCEL, METC, ARE, SOC, EXK, BAK \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-09-28 BUY CNQ, CVE, ASTH, SONO, FIVN, AMN, CON, BAND \u00b7 SELL EOSE, TE, FCEL, METC, ARE, SOC, EXK, BAK \u00b7 2026-09-28 BUY CNQ, CVE, ASTH, SONO, FIVN, AMN, CON, BAND \u00b7 SELL EOSE, TE, FCEL, METC, ARE, SOC, EXK, BAK \u00b7 # Stock book \u2014 2026-09-28\n_Generated 2026-09-28T13:58:57.356189-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
