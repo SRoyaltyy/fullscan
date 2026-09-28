@@ -1,6 +1,6 @@
 {
   "date": "2026-09-28",
-  "generated_at": "2026-09-28T09:30:15.523032-04:00",
+  "generated_at": "2026-09-28T17:23:09.926146-04:00",
   "summary": "",
   "sectors": [
     {
@@ -12,12 +12,12 @@
       "confidence_score": 0.65,
       "multiplier": 0.85,
       "divergence_flagged": false,
-      "actual_pct_change": null,
-      "actual_direction": null,
-      "direction_hit": null,
-      "magnitude_hit": null,
+      "actual_pct_change": -0.6626466293433997,
+      "actual_direction": "down",
+      "direction_hit": true,
+      "magnitude_hit": true,
       "has_predict_md": true,
-      "has_outcome_md": false,
+      "has_outcome_md": true,
       "components": {
         "S0_SHARED_MACRO": -1.0,
         "S1_SECTOR_FACTORS": -1.0,
@@ -38,12 +38,12 @@
       "confidence_score": 0.55,
       "multiplier": 0.8,
       "divergence_flagged": false,
-      "actual_pct_change": null,
-      "actual_direction": null,
-      "direction_hit": null,
-      "magnitude_hit": null,
+      "actual_pct_change": -1.5757779689479001,
+      "actual_direction": "down",
+      "direction_hit": false,
+      "magnitude_hit": false,
       "has_predict_md": true,
-      "has_outcome_md": false,
+      "has_outcome_md": true,
       "components": {
         "S0_SHARED_MACRO": -1.0,
         "S1_SECTOR_FACTORS": -1.0,
@@ -64,12 +64,12 @@
       "confidence_score": 0.65,
       "multiplier": 0.9,
       "divergence_flagged": false,
-      "actual_pct_change": null,
-      "actual_direction": null,
-      "direction_hit": null,
-      "magnitude_hit": null,
+      "actual_pct_change": -1.4109963757614863,
+      "actual_direction": "down",
+      "direction_hit": true,
+      "magnitude_hit": false,
       "has_predict_md": true,
-      "has_outcome_md": false,
+      "has_outcome_md": true,
       "components": {
         "S0_SHARED_MACRO": -1.0,
         "S1_SECTOR_FACTORS": 0.0,
@@ -78,7 +78,7 @@
         "S4_ETF_TAPE": 0.0
       },
       "status": "OK",
-      "provider": "",
+      "provider": "openclaw",
       "fallback_reason": ""
     },
     {
@@ -90,12 +90,12 @@
       "confidence_score": 0.525,
       "multiplier": 0.8,
       "divergence_flagged": false,
-      "actual_pct_change": null,
-      "actual_direction": null,
-      "direction_hit": null,
-      "magnitude_hit": null,
+      "actual_pct_change": 0.2680980102955033,
+      "actual_direction": "up",
+      "direction_hit": false,
+      "magnitude_hit": true,
       "has_predict_md": true,
-      "has_outcome_md": false,
+      "has_outcome_md": true,
       "components": {
         "S0_SHARED_MACRO": 1.0,
         "S1_SECTOR_FACTORS": -0.5,
@@ -104,7 +104,7 @@
         "S4_ETF_TAPE": 0.0
       },
       "status": "OK",
-      "provider": "",
+      "provider": "openclaw",
       "fallback_reason": ""
     },
     {
@@ -116,12 +116,12 @@
       "confidence_score": 0.65,
       "multiplier": 0.85,
       "divergence_flagged": false,
-      "actual_pct_change": null,
-      "actual_direction": null,
-      "direction_hit": null,
-      "magnitude_hit": null,
+      "actual_pct_change": 0.0967078621991746,
+      "actual_direction": "flat",
+      "direction_hit": false,
+      "magnitude_hit": false,
       "has_predict_md": true,
-      "has_outcome_md": false,
+      "has_outcome_md": true,
       "components": {
         "S0_SHARED_MACRO": 0.5,
         "S1_SECTOR_FACTORS": 2.0,
@@ -130,7 +130,7 @@
         "S4_ETF_TAPE": 0.0
       },
       "status": "OK",
-      "provider": "",
+      "provider": "openclaw",
       "fallback_reason": ""
     },
     {
@@ -222,12 +222,12 @@
       "confidence_score": 0.65,
       "multiplier": 0.85,
       "divergence_flagged": false,
-      "actual_pct_change": null,
-      "actual_direction": null,
-      "direction_hit": null,
-      "magnitude_hit": null,
+      "actual_pct_change": -0.8865366359031568,
+      "actual_direction": "down",
+      "direction_hit": true,
+      "magnitude_hit": true,
       "has_predict_md": true,
-      "has_outcome_md": false,
+      "has_outcome_md": true,
       "components": {
         "S0_SHARED_MACRO": -1.5,
         "S1_SECTOR_FACTORS": 0.0,
@@ -236,7 +236,7 @@
         "S4_ETF_TAPE": 1.0
       },
       "status": "OK",
-      "provider": "openclaw",
+      "provider": "",
       "fallback_reason": ""
     },
     {

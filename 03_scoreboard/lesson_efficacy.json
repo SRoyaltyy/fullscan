@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-09-25T16:45:08.720297-04:00",
+  "generated_at": "2026-09-28T17:23:35.900950-04:00",
   "window": 7,
   "summary": {
     "n_active": 213,
-    "n_judged": 175,
+    "n_judged": 177,
     "improved": 66,
-    "flat": 27,
-    "worse": 82,
-    "mean_delta": -0.026
+    "flat": 30,
+    "worse": 81,
+    "mean_delta": -0.022
   },
   "lessons": [
     {
@@ -74,11 +74,11 @@
         "n": 7
       },
       "after": {
-        "hit": 0.667,
-        "n": 6
+        "hit": 0.571,
+        "n": 7
       },
-      "delta": 0.096,
-      "verdict": "improved"
+      "delta": 0.0,
+      "verdict": "flat"
     },
     {
       "lesson": "a-bond-proxy-rate-sensitive-defensive-sector-staples-has-bee.md",
@@ -769,11 +769,11 @@
         "n": 7
       },
       "after": {
-        "hit": 0.75,
-        "n": 4
+        "hit": 0.6,
+        "n": 5
       },
-      "delta": 0.179,
-      "verdict": "improved"
+      "delta": 0.029,
+      "verdict": "flat"
     },
     {
       "lesson": "a-low-beta-defensive-healthcare-etf-xlv-like-posts-a-net-non.md",
@@ -801,10 +801,11 @@
         "n": 7
       },
       "after": {
-        "hit": 1.0,
-        "n": 3
+        "hit": 0.75,
+        "n": 4
       },
-      "verdict": "insufficient"
+      "delta": 0.321,
+      "verdict": "improved"
     },
     {
       "lesson": "a-macro-headwind-hawkish-fed-minutes-rate-hike-risk-was-rele.md",
@@ -1286,11 +1287,11 @@
         "n": 7
       },
       "after": {
-        "hit": 0.25,
-        "n": 4
+        "hit": 0.4,
+        "n": 5
       },
-      "delta": -0.179,
-      "verdict": "WORSE"
+      "delta": -0.029,
+      "verdict": "flat"
     },
     {
       "lesson": "a-sector-etf-gaps-1-at-the-open-on-a-risk-off-commodity-coll.md",
@@ -1414,10 +1415,10 @@
         "n": 7
       },
       "after": {
-        "hit": 0.167,
-        "n": 6
+        "hit": 0.286,
+        "n": 7
       },
-      "delta": -0.262,
+      "delta": -0.143,
       "verdict": "WORSE"
     },
     {
@@ -1845,10 +1846,11 @@
         "n": 7
       },
       "after": {
-        "hit": 0.333,
-        "n": 3
+        "hit": 0.5,
+        "n": 4
       },
-      "verdict": "insufficient"
+      "delta": 0.357,
+      "verdict": "improved"
     },
     {
       "lesson": "an-effectively-two-stock-sector-etf-meta-alphabet-heavy-has.md",
@@ -2686,10 +2688,10 @@
         "n": 7
       },
       "after": {
-        "hit": 0.167,
-        "n": 6
+        "hit": 0.143,
+        "n": 7
       },
-      "delta": -0.119,
+      "delta": -0.143,
       "verdict": "WORSE"
     },
     {
@@ -3293,7 +3295,7 @@
         "n": 10
       },
       "prev10": {
-        "hit": 0.4,
+        "hit": 0.5,
         "n": 10
       }
     },
@@ -3311,18 +3313,18 @@
     {
       "topic": "sector:Communication Services",
       "last10": {
-        "hit": 0.2,
+        "hit": 0.1,
         "n": 10
       },
       "prev10": {
-        "hit": 0.1,
+        "hit": 0.2,
         "n": 10
       }
     },
     {
       "topic": "sector:Consumer Cyclical",
       "last10": {
-        "hit": 0.2,
+        "hit": 0.3,
         "n": 10
       },
       "prev10": {
@@ -3333,11 +3335,11 @@
     {
       "topic": "sector:Consumer Defensive",
       "last10": {
-        "hit": 0.6,
+        "hit": 0.5,
         "n": 10
       },
       "prev10": {
-        "hit": 0.3,
+        "hit": 0.4,
         "n": 10
       }
     },
