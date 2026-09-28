@@ -5,19 +5,19 @@ Is today good for each *kind* of stock? Labels come from `data/universe/`; this 
 ## Snapshot
 
 - **Risk state:** OFF (general predict down score -6.1, conf 0.746)
-- **Yields:** rising (fred_dgs10) | **Dollar:** flat (dxy) | **Oil:** rising | **VIX:** calm (ratio 0.91 via vix/vix3m) spot 16.28
-- **Fear & Greed:** n/a | **Yield/SPX 5d corr:** -0.88
+- **Yields:** rising (fred_dgs10) | **Dollar:** strong (dxy) | **Oil:** flat | **VIX:** falling (ratio 0.88 via vix/vix3m) spot 15.99
+- **Fear & Greed:** n/a | **Yield/SPX 5d corr:** -0.78
 - **High-impact events:** 3 bullish vs 2 bearish
 
 ## Sectors
 
 | Label | Weather | Conf | Why |
 |---|---|---|---|
-| sector:Basic Materials | 🌧️ hostile | medium | finviz sector median week -3.46% [tape] |
-| sector:Communication Services | 🌧️ hostile | medium | finviz sector median week -1.73% [tape] |
-| sector:Consumer Cyclical | ⛅ neutral | medium | finviz sector median week -0.32% [tape] |
-| sector:Consumer Defensive | ⛅ neutral | medium | finviz sector median week -0.74% [tape] |
-| sector:Energy | 🌧️ hostile | medium | finviz sector median week -2.21% [tape] |
+| sector:Basic Materials | 🌧️ hostile | high | sector predict score -6.8 dir down conf 0.65 [sector board] |
+| sector:Communication Services | 🌧️ hostile | high | sector predict score -4.6 dir flat conf 0.55 [sector board] |
+| sector:Consumer Cyclical | 🌧️ hostile | high | sector predict score -6.8 dir down conf 0.65 [sector board] |
+| sector:Consumer Defensive | ⛅ neutral | high | sector predict score -0.6 dir flat conf 0.525 [sector board] |
+| sector:Energy | 🌤️ favorable | high | sector predict score +7.9 dir up conf 0.65 [sector board] |
 | sector:Financial | 🌧️ hostile | medium | news_judge SECTOR Financial [bearish] |
 | sector:Healthcare | 🌤️ favorable | medium | news_judge SECTOR Healthcare [bullish] |
 | sector:Industrials | ⛅ neutral | medium | finviz sector median week -0.94% [tape] |
@@ -29,8 +29,8 @@ Is today good for each *kind* of stock? Labels come from `data/universe/`; this 
 
 | Label | Weather | Conf | Why |
 |---|---|---|---|
-| size:micro | 🌧️ hostile | medium | risk-off — small caps de-rate first; risk-off, dollar flat [general predict + factors] |
-| size:small | 🌧️ hostile | medium | risk-off — small caps de-rate first; risk-off, dollar flat [general predict + factors] |
+| size:micro | 🌧️ hostile | medium | risk-off — small caps de-rate first; risk-off, dollar strong [general predict + factors] |
+| size:small | 🌧️ hostile | medium | risk-off — small caps de-rate first; risk-off, dollar strong [general predict + factors] |
 | size:large | 🌤️ favorable | medium | risk-off — defensive/quality bid concentrates in large & mega [general predict] |
 | size:mega | 🌤️ favorable | medium | risk-off — defensive/quality bid concentrates in large & mega [general predict] |
 | size:mid | ⛅ neutral | low | no dedicated mid-cap signal in v1 |

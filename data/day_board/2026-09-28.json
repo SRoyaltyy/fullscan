@@ -1,6 +1,6 @@
 {
   "date": "2026-09-28",
-  "generated_at": "2026-09-28T09:30:17.146202-04:00",
+  "generated_at": "2026-09-28T13:53:57.211631-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -359,7 +359,7 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 7505,
+          "size": 7565,
           "said": "all_ok=False \u00b7 sectors 6/11 \u00b7 6 fail",
           "bullets": [
             "finviz_market_digest:missing",
@@ -572,18 +572,18 @@
           "path": "01_daily/weather/2026-09-28_weather.json",
           "role": "required",
           "status": "OK",
-          "reason": "sectors=11 bytes=10568 vix=calm yields=rising",
-          "size": 10568,
-          "said": "favorable 2 \u00b7 hostile 6 \u00b7 neutral 3",
+          "reason": "sectors=11 bytes=10617 vix=falling yields=rising",
+          "size": 10617,
+          "said": "favorable 3 \u00b7 hostile 6 \u00b7 neutral 2",
           "bullets": [
-            "hostile: Basic Materials, Communication Services, Energy, Financial, Real Estate, Utilities",
+            "hostile: Basic Materials, Communication Services, Consumer Cyclical, Financial, Real Estate, Utilities",
             "events bull 3 / bear 2"
           ]
         }
       ],
-      "said": "favorable 2 \u00b7 hostile 6 \u00b7 neutral 3",
+      "said": "favorable 3 \u00b7 hostile 6 \u00b7 neutral 2",
       "bullets": [
-        "hostile: Basic Materials, Communication Services, Energy, Financial, Real Estate, Utilities",
+        "hostile: Basic Materials, Communication Services, Consumer Cyclical, Financial, Real Estate, Utilities",
         "events bull 3 / bear 2"
       ]
     },
@@ -791,11 +791,11 @@
           "path": "01_daily/weather/2026-09-28_weather.json",
           "role": "input",
           "status": "OK",
-          "reason": "sectors=11 bytes=10568 vix=calm yields=rising",
-          "size": 10568,
-          "said": "favorable 2 \u00b7 hostile 6 \u00b7 neutral 3",
+          "reason": "sectors=11 bytes=10617 vix=falling yields=rising",
+          "size": 10617,
+          "said": "favorable 3 \u00b7 hostile 6 \u00b7 neutral 2",
           "bullets": [
-            "hostile: Basic Materials, Communication Services, Energy, Financial, Real Estate, Utilities",
+            "hostile: Basic Materials, Communication Services, Consumer Cyclical, Financial, Real Estate, Utilities",
             "events bull 3 / bear 2"
           ]
         },
@@ -844,9 +844,9 @@
           "path": "data/stock_book/2026-09-28_stock_book.json",
           "role": "required",
           "status": "OK",
-          "reason": "horizons=5 names=150",
-          "size": 1329943,
-          "said": "1d BUY CNQ, ASTH, SONO, FIVN, AMN, CON, BAND, MQ \u00b7 SELL EOSE, FCEL, TE, METC, SOC, ARE \u00b7 -0.6341",
+          "reason": "horizons=5 names=155",
+          "size": 1363118,
+          "said": "1d BUY CNQ, CVE, ASTH, SONO, FIVN, AMN, CON, BAND \u00b7 SELL EOSE, FCEL, TE, METC, SOC, ARE \u00b7 -0.6341",
           "bullets": []
         },
         {
@@ -856,10 +856,10 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 53741,
+          "size": 57305,
           "said": "Stock book \u2014 2026-09-28",
           "bullets": [
-            "_Generated 2026-09-28T07:47:09.821142-04:00_",
+            "_Generated 2026-09-28T09:38:26.088767-04:00_",
             "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
           ]
         },
@@ -922,9 +922,9 @@
           "path": "data/stock_book/2026-09-28_stock_book.json",
           "role": "input",
           "status": "OK",
-          "reason": "horizons=5 names=150",
-          "size": 1329943,
-          "said": "1d BUY CNQ, ASTH, SONO, FIVN, AMN, CON, BAND, MQ \u00b7 SELL EOSE, FCEL, TE, METC, SOC, ARE \u00b7 -0.6341",
+          "reason": "horizons=5 names=155",
+          "size": 1363118,
+          "said": "1d BUY CNQ, CVE, ASTH, SONO, FIVN, AMN, CON, BAND \u00b7 SELL EOSE, FCEL, TE, METC, SOC, ARE \u00b7 -0.6341",
           "bullets": []
         },
         {
@@ -974,7 +974,11 @@
     "buy_1d": [
       {
         "ticker": "CNQ",
-        "score": 0.12664736847910935
+        "score": 0.19164736847910935
+      },
+      {
+        "ticker": "CVE",
+        "score": 0.15559400587939987
       },
       {
         "ticker": "ASTH",
@@ -1024,7 +1028,7 @@
       },
       {
         "ticker": "SOC",
-        "score": -0.3592264307685899
+        "score": -0.2942264307685899
       },
       {
         "ticker": "ARE",
@@ -1094,9 +1098,9 @@
       ]
     },
     "weather": {
-      "said": "favorable 2 \u00b7 hostile 6 \u00b7 neutral 3",
+      "said": "favorable 3 \u00b7 hostile 6 \u00b7 neutral 2",
       "bullets": [
-        "hostile: Basic Materials, Communication Services, Energy, Financial, Real Estate, Utilities",
+        "hostile: Basic Materials, Communication Services, Consumer Cyclical, Financial, Real Estate, Utilities",
         "events bull 3 / bear 2"
       ]
     }
@@ -2635,6 +2639,31 @@
         }
       ],
       "preview": "# Sector Prediction \u2014 Energy \u2014 2026-09-28\n- news_mode: **on**\n- ETF: **XLE**\n- rubric: `00_grounding/sectors/energy.md`\n- predicted_direction: **up**\n- predicted_magnitude_band: **mild**\n- total_score: **7.946** (mult 0.85)\n- regime: mixed\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **3.481** (CL -1.59%, QA -1.02%, ES -0.30%, PM:XLE +1.21%) \u00b7 index_carry **-1.535** (general -6.14) \u00b7 llm_overlay **6.0** (raw 6.162) \u00b7 # Reasoning trace \u2014 SECTOR PREDICT Energy 2026-09-28\n**Step 0 \u2014 Setup.** Loaded 154,134 characters of input. Provider: OpenClaw gateway, backend model `xai/grok-4.6`. Native web/X search was ENABLED inside the agent turn; see the RESEARCH APPENDIX at the end of the output for queries and sources.\n**Step 1 \u2014 Done.** The agent returned its full analysis (17,238 characters). \u00b7 keys: provider, agent, backend_model, messages \u00b7 keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok \u00b7 keys: date, n_ok, n_total, summary, sectors \u00b7 # Sector Board \u2014 2026-09-28\nGenerated: **2026-09-28T09:30:15.523032-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.). \u00b7 key"
+    },
+    {
+      "key": "weather",
+      "title": "Weather / regime",
+      "date": "2026-09-28",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-28T13:53:56.095948-04:00",
+      "files": [
+        {
+          "path": "01_daily/weather/2026-09-28_weather.json",
+          "ok": true,
+          "reason": "",
+          "size": 10617,
+          "preview": "weather sectors 11 \u00b7 Technology={'score': -13.383, 'dir': 'down', 'conf': 0.65, 'source': 'llm'}, Basic Materials={'score': -6.779, 'dir': 'down', 'conf': 0.65, 'source': 'llm'}, Communication Services={'score': -4.633, 'dir': 'flat', 'conf': 0.55, 'source': 'llm'}, Consumer Cyclical={'score': -6.753, 'dir': 'down', 'conf': 0.65, 'source': 'llm'}, Consumer Defensive={'score': -0.622, 'dir': 'flat', 'conf': 0.525, 'source': 'llm'}, Energy={'score': 7.946, 'dir': 'up', 'conf': 0.65, 'source': 'llm'}, Financial={'score': -0.28, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.16, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}"
+        },
+        {
+          "path": "01_daily/weather/2026-09-28_weather.md",
+          "ok": true,
+          "reason": "",
+          "size": 6088,
+          "preview": "# Weather report \u2014 2026-09-28\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+        }
+      ],
+      "preview": "weather sectors 11 \u00b7 Technology={'score': -13.383, 'dir': 'down', 'conf': 0.65, 'source': 'llm'}, Basic Materials={'score': -6.779, 'dir': 'down', 'conf': 0.65, 'source': 'llm'}, Communication Services={'score': -4.633, 'dir': 'flat', 'conf': 0.55, 'source': 'llm'}, Consumer Cyclical={'score': -6.753, 'dir': 'down', 'conf': 0.65, 'source': 'llm'}, Consumer Defensive={'score': -0.622, 'dir': 'flat', 'conf': 0.525, 'source': 'llm'}, Energy={'score': 7.946, 'dir': 'up', 'conf': 0.65, 'source': 'llm'}, Financial={'score': -0.28, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.16, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-09-28\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
     }
   ],
   "href": {
