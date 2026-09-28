@@ -1,6 +1,6 @@
 {
   "date": "2026-09-28",
-  "generated_at": "2026-09-28T05:39:54.384097-04:00",
+  "generated_at": "2026-09-28T05:40:05.704911-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -41,31 +41,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "events",
-      "title": "Event scanner (primary)",
-      "date": "2026-09-28",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-28T04:43:01.400399-04:00",
-      "files": [
-        {
-          "path": "01_daily/events/2026-09-28_events.json",
-          "ok": true,
-          "reason": "",
-          "size": 37854,
-          "preview": "36 events \u00b7 Hormuz still barely open; Brent ~$107 | China Mid-Autumn/Golden Week travel and market shutdown | PBoC up-to-RMB1tn/day holiday reverse repos | BoJ July minutes (hawkish pre-1.25% hike) | Teamsters expand Amazon warehouse pickets | US Section 338 bans on selected Canadian goods"
-        },
-        {
-          "path": "01_daily/events/2026-09-28_events.md",
-          "ok": true,
-          "reason": "",
-          "size": 20708,
-          "preview": "# Event Scan \u2014 2026-09-28\n- events tracked: **36** (via openclaw)\n- uncertainty: **elevated**\n- summary: The Sep 24 Trump-Xi pageant extended the trade truce to Jan 10 2027 and removed the Nov 10 cliff, but it did not de-risk the tape: Hormuz is still barely open (Brent ~$107, single-digit daily transits), UNGA diplomacy produced no deal, and prediction markets still price roughly two-thirds odds of another 25 bp Warsh hike on Oct 28. This window's live catalysts are Canada Section 338 bans (Sep 29), labor/PCE week (Sep 29-Oct 2), China PMI into Golden Week (Sep 30), Micron (Sep 30), and the Oct 4 OPEC+ meeting \u2014 not a US shutdown, which is already funded through Dec 11."
-        }
-      ],
-      "preview": "36 events \u00b7 Hormuz still barely open; Brent ~$107 | China Mid-Autumn/Golden Week travel and market shutdown | PBoC up-to-RMB1tn/day holiday reverse repos | BoJ July minutes (hawkish pre-1.25% hike) | Teamsters expand Amazon warehouse pickets | US Section 338 bans on selected Canadian goods \u00b7 # Event Scan \u2014 2026-09-28\n- events tracked: **36** (via openclaw)\n- uncertainty: **elevated**\n- summary: The Sep 24 Trump-Xi pageant extended the trade truce to Jan 10 2027 and removed the Nov 10 cliff, but it did not de-risk the tape: Hormuz is still barely open (Brent ~$107, single-digit daily transits), UNGA diplomacy produced no deal, and prediction markets still price roughly two-thirds odds of another 25 bp Warsh hike on Oct 28. This window's live catalysts are Canada Section 338 bans (Sep 29), labor/PCE week (Sep 29-Oct 2), China PMI into Golden Week (Sep 30), Micron (Sep 30), and the Oct 4 OPEC+ meeting \u2014 not a US shutdown, which is already funded through Dec 11."
-    },
     {
       "key": "news_actions",
       "title": "News actions",
@@ -226,6 +201,24 @@
         }
       ],
       "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -1.85, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': 0.0, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -0.77, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -4.04, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -0.1, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.32, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -0.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-09-28\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+    },
+    {
+      "key": "join",
+      "title": "Join / match rank",
+      "date": "2026-09-28",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-28T05:40:05.022159-04:00",
+      "files": [
+        {
+          "path": "data/join/2026-09-28_ranked.csv",
+          "ok": true,
+          "reason": "",
+          "size": 2244824,
+          "preview": "5899 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 REGN, ARGX, NICE, EXEL, ONC"
+        }
+      ],
+      "preview": "5899 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 REGN, ARGX, NICE, EXEL, ONC"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
