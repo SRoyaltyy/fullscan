@@ -23,21 +23,24 @@
       "ok": true,
       "reason": "",
       "size": 19188,
-      "status": "OK"
+      "status": "OK",
+      "provider": "openclaw"
     },
     {
       "sector": "Consumer Defensive",
       "ok": true,
       "reason": "",
       "size": 20050,
-      "status": "OK"
+      "status": "OK",
+      "provider": "openclaw"
     },
     {
       "sector": "Energy",
       "ok": true,
       "reason": "",
       "size": 19203,
-      "status": "OK"
+      "status": "OK",
+      "provider": "openclaw"
     },
     {
       "sector": "Financial",
@@ -72,8 +75,7 @@
       "ok": true,
       "reason": "",
       "size": 19193,
-      "status": "OK",
-      "provider": "openclaw"
+      "status": "OK"
     },
     {
       "sector": "Utilities",

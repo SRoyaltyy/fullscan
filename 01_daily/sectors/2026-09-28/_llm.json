@@ -3,9 +3,51 @@
   "summary": "",
   "sectors": [
     {
-      "sector": "Technology",
+      "sector": "Consumer Cyclical",
       "status": "OK",
       "provider": "openclaw",
+      "fallback_reason": ""
+    },
+    {
+      "sector": "Consumer Defensive",
+      "status": "OK",
+      "provider": "openclaw",
+      "fallback_reason": ""
+    },
+    {
+      "sector": "Energy",
+      "status": "OK",
+      "provider": "openclaw",
+      "fallback_reason": ""
+    },
+    {
+      "sector": "Financial",
+      "status": "FAIL",
+      "provider": "",
+      "fallback_reason": ""
+    },
+    {
+      "sector": "Healthcare",
+      "status": "FAIL",
+      "provider": "",
+      "fallback_reason": ""
+    },
+    {
+      "sector": "Industrials",
+      "status": "FAIL",
+      "provider": "",
+      "fallback_reason": ""
+    },
+    {
+      "sector": "Real Estate",
+      "status": "FAIL",
+      "provider": "",
+      "fallback_reason": ""
+    },
+    {
+      "sector": "Utilities",
+      "status": "FAIL",
+      "provider": "",
       "fallback_reason": ""
     }
   ]
