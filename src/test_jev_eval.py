@@ -354,7 +354,8 @@ def test_run_eval_writes_unlabeled_round_and_freezes_holdout():
         ROOT / "01_daily" / "news" / "2026-09-28_jev_keep.json",
         ROOT / ".github" / "workflows" / "jev_hop0.yml",
     ]
-    before = {p: p.read_bytes() for p in watched}
+    before = {p: p.read_bytes() for p in watched if p.is_file()}
+    missing = [p for p in watched if not p.is_file()]
     with tempfile.TemporaryDirectory() as tmp:
         root = Path(tmp)
         news = root / "news"
@@ -402,8 +403,10 @@ def test_run_eval_writes_unlabeled_round_and_freezes_holdout():
         # FOMC wire was blocked by Jaccard against nothing in this fixture's
         # archive, so it may be drawn. Gold title must not be.
         assert all("CAFE rollback" not in it["title"] for it in second["items"])
-    after = {p: p.read_bytes() for p in watched}
+    after = {p: p.read_bytes() for p in before}
     assert before == after
+    for path in missing:
+        assert not path.is_file()
     assert not HOLDOUT_PATH.exists()
 
 
