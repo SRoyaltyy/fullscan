@@ -189,12 +189,15 @@ def _h1(records: list[dict]) -> None:
     if rendered != records:
         raise SystemExit("h1 log.json is not the sealed log")
     status = json.loads((H1.page / "status.json").read_text(encoding="utf-8"))
-    sealed = (
-        status.get("date") == "2026-09-28"
-        and status.get("phase") == "plan"
-        and status.get("pending") == "2026-09-28"
-    )
-    if "2026-09-28" not in (status.get("note") or "") and not sealed:
+    # f9c8628a left phase "plan". The 09:35 open fill moves it to open_fill,
+    # and the close run moves it to fill or mark. A later seal moves date
+    # forward. The 2026-09-28 plan stays recorded in each of those states.
+    day = str(status.get("date") or "")
+    recorded = (
+        day == "2026-09-28"
+        and status.get("phase") in ("plan", "open_fill", "fill", "mark")
+    ) or day > "2026-09-28"
+    if "2026-09-28" not in (status.get("note") or "") and not recorded:
         raise SystemExit("h1 status does not record the 2026-09-28 plan")
 
 

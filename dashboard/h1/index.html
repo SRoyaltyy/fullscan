@@ -49,6 +49,9 @@
  .note{color:var(--dim);font-size:11.5px;margin-top:8px}
  .skip{color:var(--gold);margin:0 0 10px}
  .tbl-wrap{overflow-x:auto}
+ .today-plan{background:#1c1810;border:1px solid var(--gold);border-radius:10px;padding:10px 12px;margin:0 0 12px}
+ .today-plan h2{margin:0 0 6px;color:var(--gold);font-size:14px}
+ .today-plan h3{margin:0 0 6px;font-size:13px;font-family:ui-monospace,Menlo,Consolas,monospace}
  @media (max-width:720px){
   canvas{height:220px}
   h1{font-size:16px}
@@ -60,6 +63,7 @@
 <div class="wrap">
  <h1>union_hot_n4_h1__w0</h1>
  <p class="sub">Day-by-day book. Minimum hold is always 1 session. The page is drawn from log.json, the append-only log.</p>
+ <div id="todayPlan"></div>
  <div class="lock">
   <b>Rules locked. Luck N 22,017. Records are append-only.</b>
   This is the prereg h1 recipe: min hold stays 1 session. It is not an edit of the holdup log.
@@ -279,8 +283,157 @@ function dayCard(view, prevEquity, byClose){
   </article>`;
 }
 
+const SEAL_GIT = {
+  "b129d5505394941231f1e2c61c37949b9bad920fff9c9b09df3b51e6dd7b6951": "5e6a3d04",
+  "68dd183b35ce7783269dd9b4ae699e2518c64f7eb9c953a69acece0675f884b6": "f9c8628a"
+};
+function nthWeekday(year, month, weekday, n){
+  if (n > 0){
+    const d = new Date(Date.UTC(year, month - 1, 1));
+    const wd = (d.getUTCDay() + 6) % 7;
+    d.setUTCDate(1 + ((weekday - wd + 7) % 7) + (n - 1) * 7);
+    return d.toISOString().slice(0, 10);
+  }
+  const d = month === 12 ? new Date(Date.UTC(year + 1, 0, 1)) : new Date(Date.UTC(year, month, 1));
+  d.setUTCDate(d.getUTCDate() - 1);
+  const wd = (d.getUTCDay() + 6) % 7;
+  d.setUTCDate(d.getUTCDate() - ((wd - weekday + 7) % 7));
+  return d.toISOString().slice(0, 10);
+}
+function easterGregorian(year){
+  const a = year % 19;
+  const b = Math.floor(year / 100), c = year % 100;
+  const d = Math.floor(b / 4), e = b % 4;
+  const f = Math.floor((b + 8) / 25);
+  const g = Math.floor((b - f + 1) / 3);
+  const h = (19 * a + b - d - g + 15) % 30;
+  const i = Math.floor(c / 4), k = c % 4;
+  const el = (32 + 2 * e + 2 * i - h - k) % 7;
+  const m = Math.floor((a + 11 * h + 22 * el) / 451);
+  const monthDay = h + el - 7 * m + 114;
+  const month = Math.floor(monthDay / 31);
+  const day = (monthDay % 31) + 1;
+  return year + "-" + String(month).padStart(2, "0") + "-" + String(day).padStart(2, "0");
+}
+function observedNyse(ymd){
+  const d = new Date(ymd + "T00:00:00Z");
+  const wd = d.getUTCDay();
+  if (wd === 6) d.setUTCDate(d.getUTCDate() - 1);
+  else if (wd === 0) d.setUTCDate(d.getUTCDate() + 1);
+  return d.toISOString().slice(0, 10);
+}
+function nyseHoliday(ymd){
+  const year = Number(ymd.slice(0, 4));
+  const easter = easterGregorian(year);
+  const goodFriday = new Date(easter + "T00:00:00Z");
+  goodFriday.setUTCDate(goodFriday.getUTCDate() - 2);
+  const set = new Set([
+    observedNyse(year + "-01-01"),
+    nthWeekday(year, 1, 0, 3),
+    nthWeekday(year, 2, 0, 3),
+    goodFriday.toISOString().slice(0, 10),
+    nthWeekday(year, 5, 0, -1),
+    observedNyse(year + "-06-19"),
+    observedNyse(year + "-07-04"),
+    nthWeekday(year, 9, 0, 1),
+    nthWeekday(year, 11, 3, 4),
+    observedNyse(year + "-12-25")
+  ]);
+  return set.has(ymd);
+}
+function sessionOnOrAfter(ymd){
+  const d = new Date(ymd + "T00:00:00Z");
+  for (let i = 0; i < 14; i++){
+    const iso = d.toISOString().slice(0, 10);
+    const wd = (d.getUTCDay() + 6) % 7;
+    if (wd < 5 && !nyseHoliday(iso)) return iso;
+    d.setUTCDate(d.getUTCDate() + 1);
+  }
+  return ymd;
+}
+function focusSession(now){
+  const ymd = new Intl.DateTimeFormat("en-CA", {
+    timeZone: "America/New_York", year: "numeric", month: "2-digit", day: "2-digit"
+  }).format(now);
+  return sessionOnOrAfter(ymd);
+}
+function sealClocks(stamp){
+  if (!stamp) return ["", ""];
+  const d = new Date(stamp);
+  const fmt = zone => new Intl.DateTimeFormat("en-GB", {
+    timeZone: zone, hour: "2-digit", minute: "2-digit", hourCycle: "h23"
+  }).format(d);
+  return [fmt("America/New_York") + " ET", fmt("Asia/Hong_Kong") + " HKT"];
+}
+function morningLine(plan){
+  const score = plan.morning_s == null ? "null" : String(plan.morning_s);
+  if (plan.morning_status === "ABSENT"){
+    const why = plan.morning_reason || (plan.s_source && plan.s_source.reason) || "";
+    return "morning ABSENT · score " + score + (why ? " · " + why : "");
+  }
+  const status = plan.morning_status || (plan.s_source && plan.s_source.status) || "";
+  return status ? ("morning score " + score + " · status " + status) : ("morning score " + score);
+}
+function execFor(rows, day){
+  const buys = {}, sells = {};
+  function take(dest, list){
+    (list || []).forEach(row => {
+      if (row && row.ticker && row.fill != null) dest[row.ticker] = row;
+    });
+  }
+  rows.forEach(row => {
+    if (row.date !== day) return;
+    if (row.kind === "open_fill" || row.kind === "fill"){
+      take(buys, row.buys);
+      take(sells, row.sells);
+    } else if (row.kind === "mark"){
+      take(buys, row.added_buys);
+      take(sells, row.added_sells);
+    }
+  });
+  return {buys: buys, sells: sells};
+}
+function todayPlanHtml(rows){
+  const focus = focusSession(new Date());
+  let plan = null;
+  rows.forEach(row => { if (row.kind === "plan" && row.date === focus) plan = row; });
+  if (!plan){
+    return `<section class="today-plan"><h2>Today's plan</h2><p>no plan sealed yet for ${esc(focus)}; plan runs 09:05 ET</p></section>`;
+  }
+  const exe = execFor(rows, focus);
+  const seal = SEAL_GIT[plan.sha256] || String(plan.sha256 || "").slice(0, 12);
+  const clocks = sealClocks(plan.committed_at || "");
+  const hold = plan.holdup_on ? "on" : "off";
+  const sellPills = (plan.planned_sells || []).map(s => {
+    const hit = exe.sells[s.ticker];
+    if (hit) return `<span class="pill sell">${esc(s.ticker)} ${s.shares} ${esc(s.reason)} @ ${px(hit.fill)} filled</span>`;
+    return `<span class="pill sell">${esc(s.ticker)} ${s.shares} ${esc(s.reason)}</span>`;
+  }).join("") || `<span class="pill flat">no planned sell</span>`;
+  const buyPills = (plan.picks || []).map(p => {
+    const src = (p.sources || []).join("/");
+    const srcTxt = src ? " " + esc(src) : "";
+    const hit = exe.buys[p.ticker];
+    if (hit){
+      const shares = hit.shares == null ? "" : " " + hit.shares;
+      return `<span class="pill buy">${esc(p.ticker)}${shares}${srcTxt} @ ${px(hit.fill)} filled</span>`;
+    }
+    return `<span class="pill buy">${esc(p.ticker)}${srcTxt} · fills at 09:35 ET open</span>`;
+  }).join("") || `<span class="pill flat">no planned buy</span>`;
+  const lines = (plan.planned_sells || []).length + (plan.picks || []).length;
+  let priced = 0;
+  (plan.planned_sells || []).forEach(s => { if (exe.sells[s.ticker]) priced++; });
+  (plan.picks || []).forEach(p => { if (exe.buys[p.ticker]) priced++; });
+  const badge = lines && priced === lines
+    ? `<span class="badge filled">filled</span>`
+    : `<span class="badge pending">sealed</span>`;
+  const clock = clocks[0] ? `<span>${esc(clocks[0])}</span><span>${esc(clocks[1])}</span>` : "";
+  return `<section class="today-plan"><h2>Today's plan</h2><h3>${esc(plan.date || focus)} ${badge}</h3><div class="hd"><span>seal commit ${esc(seal)}</span>${clock}<span>${esc(morningLine(plan))}</span><span>holdup 2-day hold ${hold}</span></div><div class="lab">Planned sells</div><div class="pills">${sellPills}</div><div class="lab">Planned buys</div><div class="pills">${buyPills}</div></section>`;
+}
+
 function render(rows, status){
   window.__rows = rows;
+  const today = document.getElementById("todayPlan");
+  if (today) today.innerHTML = todayPlanHtml(rows);
   const sessions = rows.filter(r => r.kind === "session");
   const plans = rows.filter(r => r.kind === "plan");
   const fills = rows.filter(r => r.kind === "fill");
