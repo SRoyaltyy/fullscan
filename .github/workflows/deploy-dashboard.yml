@@ -202,6 +202,7 @@ jobs:
             cp -a dashboard/day-movers/. pages_out/dashboard/day-movers/
             echo "Overlayed dashboard/day-movers from main"
           fi
+          # Same overlay route as dashboard/factor-mine above: copy from main, then the site-root mirror.
           if [ -f dashboard/holdup/index.html ]; then
             mkdir -p pages_out/dashboard/holdup
             cp -a dashboard/holdup/. pages_out/dashboard/holdup/

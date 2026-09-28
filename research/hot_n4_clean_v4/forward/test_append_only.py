@@ -148,7 +148,10 @@ def _replay(records: list[dict]) -> None:
 
 def _page(records: list[dict]) -> None:
     text = PAGE.read_text(encoding="utf-8")
-    for phrase in ("22,017", "append-only", "union_hot_n4_holdup__w0", "log.json", "0.5%"):
+    for phrase in (
+        "22,017", "append-only", "union_hot_n4_holdup__w0", "log.json", "0.5%",
+        "backfill (built afterwards, not sealed pre-open)", "Live return",
+    ):
         if phrase not in text:
             raise SystemExit(f"page missing {phrase}")
     rendered = json.loads(LOG_JSON.read_text(encoding="utf-8"))
@@ -171,7 +174,10 @@ def _h1(records: list[dict]) -> None:
         raise SystemExit(f"h1 reasons {reasons}")
     page = ROOT / "dashboard" / "h1" / "index.html"
     text = page.read_text(encoding="utf-8")
-    for phrase in ("union_hot_n4_h1__w0", "append-only", "2026-09-28", "no sealed", "0.5%", "log.json"):
+    for phrase in (
+        "union_hot_n4_h1__w0", "append-only", "2026-09-28", "no sealed", "0.5%", "log.json",
+        "backfill (built afterwards, not sealed pre-open)", "forward_shadow_v1", "Live return",
+    ):
         if phrase not in text:
             raise SystemExit(f"h1 page missing {phrase}")
     rendered = json.loads((H1.page / "log.json").read_text(encoding="utf-8"))

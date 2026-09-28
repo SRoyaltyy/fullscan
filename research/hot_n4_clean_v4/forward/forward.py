@@ -12,12 +12,14 @@ holdup (default) or h1.
 """
 from __future__ import annotations
 
+import hashlib
 import json
 import os
 import subprocess
 import sys
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 ROOT = Path(__file__).resolve().parents[3]
 if str(ROOT) not in sys.path:
@@ -66,6 +68,11 @@ from research.hot_n4_clean_v4.run_study import (  # noqa: E402
 from src.skip_if_good import is_nyse_holiday  # noqa: E402
 
 GIT_REF = os.environ.get("HOLDUP_GIT_REF", "HEAD")
+# Sessions before this date stay on the frozen monthly gzip. From this
+# session the gzip has no trade_date row, so the plan reads theme-radar
+# data/snapshots/<previous session>.csv.
+SNAPSHOT_FROM = "2026-09-29"
+ET = ZoneInfo("America/New_York")
 
 
 def _skips() -> Path:
@@ -75,6 +82,7 @@ PANEL_COLS = [
     "trade_date", "snapshot_date", "Ticker", "Industry",
     "Market Cap", "Average Volume", "Volume", "Price",
 ]
+SNAPSHOT_COLS = ["Ticker", "Industry", "Market Cap", "Average Volume", "Volume", "Price"]
 
 
 def _fail(message: str) -> None:
@@ -97,9 +105,38 @@ def _git(repo: Path, args: list[str]) -> subprocess.CompletedProcess:
     )
 
 
-def blob_before_open(repo: Path, rel: str, session: str, ref: str | None = None) -> tuple[str, str, bytes] | None:
-    """Return (commit, committer iso, bytes) of ``rel`` last committed before 13:30 UTC."""
-    cutoff = f"{session}T{OPEN_UTC}Z"
+def session_open_utc(session: str) -> datetime:
+    """09:30 America/New_York on ``session``, as UTC. EDT is 13:30 UTC; EST is 14:30 UTC."""
+    local = datetime.fromisoformat(f"{session}T09:30:00").replace(tzinfo=ET)
+    return local.astimezone(timezone.utc)
+
+
+def plan_clock(session: str, now: datetime | None = None) -> str | None:
+    """Refuse a plan at or after 09:30 ET. Earlier than that returns None."""
+    now = now or datetime.now(timezone.utc)
+    if now.tzinfo is None:
+        now = now.replace(tzinfo=timezone.utc)
+    open_at = session_open_utc(session)
+    if now >= open_at:
+        stamp = open_at.strftime("%Y-%m-%dT%H:%M:%SZ")
+        return f"{session} is at or after 09:30 ET ({stamp}); refusing to seal a plan"
+    return None
+
+
+def plan_target(records: list[dict], requested: str) -> tuple[str | None, str | None]:
+    """Next book session, or the requested date when it is that session."""
+    dates = book_dates(records)
+    target = next_session(dates[-1])
+    if requested and requested != target:
+        return None, f"session_date {requested} is not the next session {target}"
+    return target, None
+
+
+def blob_before(repo: Path, rel: str, limit: datetime, ref: str | None = None) -> tuple[str, str, bytes] | None:
+    """Return (commit, committer iso, bytes) of ``rel`` last committed strictly before ``limit``."""
+    if limit.tzinfo is None:
+        limit = limit.replace(tzinfo=timezone.utc)
+    cutoff = limit.astimezone(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
     spec = [ref] if ref else []
     listed = _git(repo, ["log", *spec, "-1", f"--before={cutoff}", "--format=%H %cI", "--", rel])
     if listed.returncode != 0 or not listed.stdout.strip():
@@ -108,13 +145,18 @@ def blob_before_open(repo: Path, rel: str, session: str, ref: str | None = None)
     when = datetime.fromisoformat(stamp)
     if when.tzinfo is None:
         when = when.replace(tzinfo=timezone.utc)
-    limit = datetime.fromisoformat(f"{session}T{OPEN_UTC}+00:00")
-    if when.astimezone(timezone.utc) >= limit:
+    if when.astimezone(timezone.utc) >= limit.astimezone(timezone.utc):
         return None
     blob = _git(repo, ["cat-file", "-p", f"{commit}:{rel}"])
     if blob.returncode != 0:
         return None
     return commit, stamp, blob.stdout
+
+
+def blob_before_open(repo: Path, rel: str, session: str, ref: str | None = None) -> tuple[str, str, bytes] | None:
+    """Return (commit, committer iso, bytes) of ``rel`` last committed before 13:30 UTC."""
+    limit = datetime.fromisoformat(f"{session}T{OPEN_UTC}+00:00")
+    return blob_before(repo, rel, limit, ref)
 
 
 def _score_text(kind: str, raw: bytes) -> float | None:
@@ -226,6 +268,97 @@ def frozen_frame(session: str):
     return None, f"frozen Finviz row for {session} is missing"
 
 
+def _snapshot_provenance(
+    rel: str, snap: str, status: str, commit: str | None = None,
+    stamp: str | None = None, raw: bytes | None = None, reason: str | None = None,
+) -> dict:
+    body = {
+        "commit": commit,
+        "commit_time": stamp,
+        "file_sha256": hashlib.sha256(raw).hexdigest() if raw is not None else None,
+        "path": rel,
+        "snapshot_date": snap,
+        "status": status,
+    }
+    if reason:
+        body["reason"] = reason
+    return body
+
+
+def _snapshot_frame(raw: bytes, session: str, snap: str):
+    """Map a theme-radar snapshot CSV onto the frozen panel columns.
+
+    Earnings Date is kept when the export has it. The pinned gzip never had
+    that column, so a file without it leaves the earnings sources empty, the
+    same way the rebuild did. The Finviz Open column is not a fill price.
+    """
+    import io
+
+    import pandas as pd
+
+    try:
+        frame = pd.read_csv(io.BytesIO(raw))
+    except (ValueError, OSError) as exc:
+        return None, f"snapshot could not be read ({exc})"
+    missing = [col for col in SNAPSHOT_COLS if col not in frame.columns]
+    if missing:
+        return None, f"snapshot is missing {', '.join(missing)}"
+    keep = list(SNAPSHOT_COLS)
+    if "Earnings Date" in frame.columns:
+        keep.append("Earnings Date")
+    frame = frame.loc[:, keep].copy()
+    frame["Ticker"] = frame["Ticker"].astype(str).str.strip().str.upper()
+    frame["trade_date"] = session
+    frame["snapshot_date"] = snap
+    for col in ("Market Cap", "Average Volume", "Volume", "Price"):
+        frame[col] = pd.to_numeric(frame[col], errors="coerce")
+    return frame, None
+
+
+def snapshot_for(session: str) -> tuple[object, dict]:
+    """Finviz inputs for session D >= 2026-09-29.
+
+    The file is data/snapshots/<previous trading day>.csv as of the latest
+    theme-radar commit strictly before 09:30 ET on D. A missing file, a commit
+    that is not before the open, or an unreadable export returns no frame.
+    The caller then seals a plan with no Finviz names, the same as 2026-08-28.
+    """
+    try:
+        snap = prev_session(session)
+    except RuntimeError as exc:
+        return None, _snapshot_provenance(
+            "", "", "MISSING", reason=str(exc),
+        )
+    rel = f"data/snapshots/{snap}.csv"
+    limit = session_open_utc(session)
+    repos = _panel_repos()
+    if not repos:
+        return None, _snapshot_provenance(
+            rel, snap, "MISSING",
+            reason="theme-radar checkout is missing, so the snapshot is not available",
+        )
+    for repo in repos:
+        found = blob_before(repo, rel, limit)
+        if found is None:
+            continue
+        commit, stamp, raw = found
+        frame, why = _snapshot_frame(raw, session, snap)
+        if why:
+            return None, _snapshot_provenance(
+                rel, snap, "MISSING", commit=commit, stamp=stamp, raw=raw, reason=why,
+            )
+        return frame, _snapshot_provenance(
+            rel, snap, "BEFORE_OPEN", commit=commit, stamp=stamp, raw=raw,
+        )
+    return None, _snapshot_provenance(
+        rel, snap, "MISSING",
+        reason=(
+            f"{rel} has no theme-radar commit before 09:30 ET on {session}; "
+            "Finviz names are skipped and no new buy is filled"
+        ),
+    )
+
+
 def _latest_bar(stored: dict) -> str:
     latest = ""
     for blob in stored.values():
@@ -298,7 +431,7 @@ def _log_skip(session: str, reason: str, records: list[dict]) -> None:
     write_page(records, {"date": session, "latest_skip": reason, "recipe": current_book().recipe})
 
 
-def _payload(session: str, bars, held: set[str], score: dict, frame) -> dict:
+def _halt_known(session: str, bars, held: set[str]) -> None:
     stored = bars["stored"]
     iwm = [leg for leg in scan_legs(stored, "IWM", session) if classify(leg) != "split"]
     if iwm:
@@ -311,14 +444,31 @@ def _payload(session: str, bars, held: set[str], score: dict, frame) -> dict:
             raise Halt(
                 f"held {ticker} {session} unexplained {bad[0]['leg']} on {bad[0]['bar_date']}"
             )
+
+
+def _payload(session: str, bars, held: set[str], score: dict, frame) -> dict:
+    _halt_known(session, bars, held)
     candidates, excluded, _no_fill = build_candidates(
-        bars["feat"], stored, frame, session, held,
+        bars["feat"], bars["stored"], frame, session, held,
     )
     return {
         "bar_cutoff": prev_session(session),
         "candidates": candidates,
         "day_card_sha256": None,
         "excluded_unexplained_legs": excluded,
+        "morning_s": score["morning_s"],
+        "session": session,
+    }
+
+
+def _gap_payload(session: str, bars, held: set[str], score: dict) -> dict:
+    """No Finviz row. No new names. Held lots still follow the list-drop rule."""
+    _halt_known(session, bars, held)
+    return {
+        "bar_cutoff": prev_session(session),
+        "candidates": [],
+        "day_card_sha256": None,
+        "excluded_unexplained_legs": [],
         "morning_s": score["morning_s"],
         "session": session,
     }
@@ -382,8 +532,15 @@ def plan_main() -> int:
         print(f"plan already sealed {pending['date']}")
         write_page(records, _status(pending["date"], pending["date"], None, "plan"))
         return 0
-    dates = book_dates(records)
-    target = next_session(dates[-1])
+    requested = os.environ.get("PLAN_SESSION", "").strip()
+    target, why = plan_target(records, requested)
+    if why or target is None:
+        _fail(why or "no session")
+        return 1
+    late = plan_clock(target)
+    if late:
+        _fail(late)
+        return 1
     print(f"plan {target}", flush=True)
     index = _index()
     if target not in index:
@@ -396,14 +553,22 @@ def plan_main() -> int:
     if why:
         _log_skip(target, why, records)
         return 0
-    frame, why = frozen_frame(target)
-    if why:
-        _log_skip(target, why, records)
-        return 0
+    finviz = None
+    if target >= SNAPSHOT_FROM:
+        frame, finviz = snapshot_for(target)
+    else:
+        frame, why = frozen_frame(target)
+        if why:
+            _log_skip(target, why, records)
+            return 0
     state = book_state(records)
     held = set(state["pos"])
+    hidden = hide_session(bars, target)
     try:
-        payload = _payload(target, hide_session(bars, target), held, score, frame)
+        if frame is None:
+            payload = _gap_payload(target, hidden, held, score)
+        else:
+            payload = _payload(target, hidden, held, score, frame)
         plan = build_plan(payload, state, index)
     except Halt as exc:
         _fail(str(exc))
@@ -418,6 +583,8 @@ def plan_main() -> int:
         "server_time_utc": score["server_time_utc"],
         "status": score["status"],
     }
+    if finviz is not None:
+        plan["finviz_source"] = finviz
     try:
         current = load()
     except RuntimeError as exc:

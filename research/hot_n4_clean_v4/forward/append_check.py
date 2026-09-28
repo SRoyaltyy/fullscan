@@ -19,6 +19,7 @@ from research.hot_n4_clean_v4.forward.book import BOOKS  # noqa: E402
 
 RECORD_NAMES = (
     "LEDGER.jsonl",
+    "LOG_META.json",
     "PRICE_LEDGER.jsonl",
     "price_revisions.jsonl",
     "prices.jsonl",

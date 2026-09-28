@@ -140,44 +140,59 @@
  · <a href="/fullscan/dashboard/book-paper/" style="color:#93c5fd">book paper</a>
  · overlay: <a href="/fullscan/dashboard/boring-winners/" style="color:#93c5fd">boring winners lab</a></div>
 <section id="v4Forward" class="live-book">
- <div class="live-book-kicker">Forward books next to factor mine</div>
+ <div class="live-book-kicker">hot_n4_clean_v4 next to factor mine — live days only, sealed at 09:05 ET</div>
+ <div class="live-book-date">Same pages route as factor mine. Headline figures ignore backfill (built afterwards, not sealed pre-open).</div>
  <div id="v4ForwardBody" class="live-book-row">Loading today's positions…</div>
 </section>
 <script>
 (function(){
   function esc(s){return String(s).replace(/[&<>]/g, function(ch){return {"&":"&amp;","<":"&lt;",">":"&gt;"}[ch];});}
+  var BACKFILL_LAST = "2026-09-25";
+  function names(rows){
+    return (rows || []).map(function(row){return esc(row.ticker || "");}).filter(Boolean).join(" · ") || "—";
+  }
   function latest(rows){
-    var plans = {}, opens = {}, fills = {}, marks = {}, books = [];
+    var plans = {}, opens = {}, fills = {}, marks = {};
     (rows || []).forEach(function(r){
+      if (!r || !r.date || r.date <= BACKFILL_LAST) return;
       if (r.kind === "plan") plans[r.date] = r;
       if (r.kind === "open_fill") opens[r.date] = r;
       if (r.kind === "fill") fills[r.date] = r;
       if (r.kind === "mark") marks[r.date] = r;
-      if (r.kind === "session" || r.kind === "fill" || r.kind === "mark") books.push(r);
     });
     var dates = Object.keys(plans).sort();
-    if (!dates.length){
-      var last = books[books.length - 1];
-      return last ? {mode: "seeded", book: last, date: last.date} : null;
-    }
+    if (!dates.length) return null;
     var day = dates[dates.length - 1];
     if (fills[day]) return {mode: "filled", date: day, book: fills[day]};
-    if (marks[day]) return {mode: "marked", date: day, book: marks[day]};
+    if (marks[day]) return {mode: "marked", date: day, book: marks[day], open: opens[day]};
     if (opens[day]) return {mode: "open", date: day, book: opens[day]};
     return {mode: "pending", date: day, plan: plans[day]};
   }
-  function line(name, href, view){
-    if (!view) return '<div class="live-book-row"><b><a href="' + href + '">' + name + '</a></b> no sealed book</div>';
-    if (view.mode === "pending"){
-      var picks = (view.plan.picks || []).map(function(p){return esc(p.ticker);}).join(", ") || "none";
-      return '<div class="live-book-row"><b><a href="' + href + '">' + name + '</a></b> ' + esc(view.date) + ' planned, not filled · ' + picks + '</div>';
+  function line(name, href, view, missing){
+    var head = '<div class="live-book-row"><b><a href="' + href + '">' + esc(name) + '</a></b> ';
+    if (!view){
+      return head + (missing || "no sealed live session") + '</div>';
     }
-    var held = (view.book.holdings || []).map(function(h){return esc(h.ticker) + " " + h.shares;}).join(", ") || "flat";
+    if (view.mode === "pending"){
+      return head + esc(view.date) + ' planned, not filled</div>' +
+        '<div class="live-book-row"><b>BUY</b> ' + names(view.plan.picks) + '</div>' +
+        '<div class="live-book-row sell"><b>SELL</b> ' + names(view.plan.planned_sells) + '</div>';
+    }
     if (view.mode === "open"){
-      return '<div class="live-book-row"><b><a href="' + href + '">' + name + '</a></b> ' + esc(view.date) + ' filled at the open · ' + held + ' · P&L pending</div>';
+      return head + esc(view.date) + ' filled at the open · P&amp;L pending</div>' +
+        '<div class="live-book-row"><b>BUY</b> ' + names(view.book.buys) + '</div>' +
+        '<div class="live-book-row sell"><b>SELL</b> ' + names(view.book.sells) + '</div>';
+    }
+    var buys = view.book.buys || [];
+    var sells = view.book.sells || [];
+    if (view.open){
+      buys = (view.open.buys || []).concat(view.book.added_buys || []);
+      sells = (view.open.sells || []).concat(view.book.added_sells || []);
     }
     var eq = view.book.equity_primary == null ? "" : " · equity $" + Number(view.book.equity_primary).toFixed(2);
-    return '<div class="live-book-row"><b><a href="' + href + '">' + name + '</a></b> ' + esc(view.date) + ' · ' + held + eq + '</div>';
+    return head + esc(view.date) + eq + '</div>' +
+      '<div class="live-book-row"><b>BUY</b> ' + names(buys) + '</div>' +
+      '<div class="live-book-row sell"><b>SELL</b> ' + names(sells) + '</div>';
   }
   function load(path){
     return fetch(path, {cache: "no-store"}).then(function(r){ if (!r.ok) throw new Error(path); return r.json(); });
@@ -189,9 +204,12 @@
     one("holdup/log.json", "/fullscan/dashboard/holdup/log.json"),
     one("h1/log.json", "/fullscan/dashboard/h1/log.json")
   ]).then(function(pair){
+    var holdup = latest(pair[0]);
+    var h1 = latest(pair[1]);
+    var h1Missing = "2026-09-28 missing. No sealed pre-open plan. forward_shadow_v1 separately records union_hot_n4_h1__w0 for that day, a different study.";
     document.getElementById("v4ForwardBody").innerHTML =
-      line("holdup", "/fullscan/dashboard/holdup/", latest(pair[0])) +
-      line("h1", "/fullscan/dashboard/h1/", latest(pair[1]));
+      line("holdup", "/fullscan/dashboard/holdup/", holdup, "no sealed live session yet") +
+      line("h1", "/fullscan/dashboard/h1/", h1, h1Missing);
   });
 })();
 </script>

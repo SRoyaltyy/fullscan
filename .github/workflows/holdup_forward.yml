@@ -8,13 +8,26 @@ name: Holdup append-only forward
 # EDT and 2:30 PM UTC / 10:30 PM HKT in EST.
 # This run seals a PLAN for session D only: ranked picks, planned sells,
 # and excluded names. It does not read D's prices. The fill is a separate
-# post-close workflow. If the pre-open inputs are missing, the log is not
+# post-close workflow. If the morning score is missing, the log is not
 # touched and the reason is written to skips.jsonl.
+# From 2026-09-29 the Finviz universe is theme-radar
+# data/snapshots/<previous session>.csv at the last commit before 09:30 ET.
+# A missing file or a commit that is not before the open skips Finviz names
+# and fills no new buy, the same as 2026-08-28. It does not skip the day.
+# workflow_dispatch session_date seals that session when it is the next one.
+# The run refuses at or after 09:30 ET on that session and writes nothing.
+# The page is published by deploy-dashboard.yml on the same overlay route
+# as dashboard/factor-mine (copy from main, then the site-root mirror).
 
 on:
   schedule:
     - cron: "5 13 * * 1-5"
   workflow_dispatch:
+    inputs:
+      session_date:
+        description: "Session D (YYYY-MM-DD). Empty seals the next session. Refuses at or after 09:30 ET."
+        required: false
+        default: ""
 
 permissions:
   contents: write
@@ -45,7 +58,7 @@ jobs:
             exit 0
           fi
           git -C vendor/theme-radar sparse-checkout init --cone
-          git -C vendor/theme-radar sparse-checkout set research/lever_panel
+          git -C vendor/theme-radar sparse-checkout set research/lever_panel data/snapshots
           git -C vendor/theme-radar checkout main \
             || echo "theme-radar checkout failed"
       - name: Refresh forward prices
@@ -57,6 +70,7 @@ jobs:
         env:
           HOLDUP_GIT_REF: origin/main
           HOLDUP_MODE: plan
+          PLAN_SESSION: ${{ github.event.inputs.session_date }}
         run: PYTHONHASHSEED=0 python3 research/hot_n4_clean_v4/forward/forward.py
       - name: Commit the append
         if: always()

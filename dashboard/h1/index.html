@@ -32,6 +32,7 @@
  .badge.pending{color:var(--gold);border-color:var(--gold)}
  .badge.filled{color:var(--pos);border-color:#166534}
  .badge.seeded{color:var(--dim)}
+ .backfill{margin-top:28px;padding-top:12px;border-top:1px solid var(--line)}
  .day h3{margin:0 0 4px;font-size:13px;font-family:ui-monospace,Menlo,Consolas,monospace}
  .hd{display:flex;flex-wrap:wrap;gap:6px 14px;color:var(--mut);font-variant-numeric:tabular-nums;margin:0 0 6px}
  .pills{display:flex;flex-wrap:wrap;gap:5px;margin:0 0 4px}
@@ -66,27 +67,47 @@
   Picks for day D are sealed before the US open on D. At 13:35 UTC the planned buys and sells are marked filled at the official open when that open is already printed.
   13:35 UTC is 09:35 ET during EDT (UTC−4, through 2026-11-01). During EST (from 2026-11-01, UTC−5) the same cron is 08:35 ET, before the 09:30 open, and the run appends nothing if the open is not printed yet.
   P&amp;L for open positions stays pending until the close bar is saved. The 21:30 UTC fill adds closes and marks and does not repeat a fill already written.
-  A past line is never regenerated. The 31 sessions through 2026-09-25 are a seeded backfill and stay as written.
+  A past line is never regenerated. The 31 sessions through 2026-09-25 stay exactly as written and are labeled backfill (built afterwards, not sealed pre-open).
+  Headline figures are live days only. A live day is a plan sealed at 09:05 ET before the open.
+  2026-09-28 is missing on this page. forward_shadow_v1 separately records union_hot_n4_h1__w0 for that day, a different study.
   A later day is a plan, then an open fill, then the close mark. Pending days are planned and not yet filled.
   Primary cost is the Futubull fee plus 0.5% per side. Fills are that session's official open. No orders are sent.
   The plan run is 13:05 UTC (9:05 AM EDT, 8:05 AM EST, 9:05 PM HKT). The open-fill run is 13:35 UTC (9:35 AM EDT, 8:35 AM EST, 9:35 PM HKT). The fill run is 21:30 UTC (5:30 PM EDT, 4:30 PM EST, 5:30 AM HKT the next day).
  </div>
  <p id="skip" class="skip" hidden></p>
+ <p id="missingDay" class="skip">2026-09-28 is missing. No sealed pre-open h1 plan. forward_shadow_v1 separately records union_hot_n4_h1__w0 for that day, a different study.</p>
+ <h2>Live</h2>
+ <p class="sub">Headline figures are live days only. A live day was sealed at 09:05 ET before the open.</p>
  <div class="cards" id="cards"></div>
  <div class="curve-box"><canvas id="curve" width="1000" height="280"></canvas></div>
- <h2>Sessions</h2>
- <div id="days"></div>
- <h2>Closed trades</h2>
+ <div id="liveDays"></div>
+ <h2>Live closed trades</h2>
  <div class="tbl-wrap">
   <table>
    <thead><tr><th>Exit</th><th>Ticker</th><th>Shares</th><th>Entry</th><th>Exit open</th><th>Reason</th><th>P&amp;L</th></tr></thead>
    <tbody id="closes"></tbody>
   </table>
  </div>
+ <section class="backfill" id="backfill">
+  <h2>backfill (built afterwards, not sealed pre-open)</h2>
+  <p class="sub" id="backfillNote">The 31 sessions 2026-08-13 through 2026-09-25 were built afterwards. They are not in the headline.</p>
+  <div class="cards" id="backfillCards"></div>
+  <div class="curve-box"><canvas id="backfillCurve" width="1000" height="220"></canvas></div>
+  <div id="days"></div>
+  <h2>Backfill closed trades</h2>
+  <div class="tbl-wrap">
+   <table>
+    <thead><tr><th>Exit</th><th>Ticker</th><th>Shares</th><th>Entry</th><th>Exit open</th><th>Reason</th><th>P&amp;L</th></tr></thead>
+    <tbody id="backfillCloses"></tbody>
+   </table>
+  </div>
+ </section>
  <p class="note" id="foot"></p>
 </div>
 <script>
 const CAPITAL = 10000;
+const BACKFILL_LAST = "2026-09-25";
+const BACKFILL_LABEL = "backfill (built afterwards, not sealed pre-open)";
 function money(n){
   const v = Number(n);
   const sign = v < 0 ? "-" : "";
@@ -101,8 +122,8 @@ function pct(n){
 function cls(n){return Number(n) > 0 ? "pos" : (Number(n) < 0 ? "neg" : "mut");}
 function esc(s){return String(s).replace(/[&<>]/g, ch => ({ "&":"&amp;", "<":"&lt;", ">":"&gt;" }[ch]));}
 
-function draw(sessions){
-  const canvas = document.getElementById("curve");
+function draw(sessions, canvasId){
+  const canvas = document.getElementById(canvasId || "curve");
   const dpr = window.devicePixelRatio || 1;
   const w = canvas.clientWidth || 1000;
   const h = canvas.clientHeight || 280;
@@ -203,7 +224,7 @@ function dayCard(view, prevEquity, byClose){
   const day = view.book;
   const ret = Number(day.equity_primary) / prevEquity - 1;
   const badge = view.mode === "seeded"
-    ? `<span class="badge seeded">seeded backfill</span>`
+    ? `<span class="badge seeded">${esc(BACKFILL_LABEL)}</span>`
     : `<span class="badge filled">filled after the close</span>`;
   const buys = pills(day.buys, b =>
     `<span class="pill buy">#${b.rank} ${esc(b.ticker)} ${b.shares} @ ${px(b.fill)} ${(b.sources || []).join("+")}</span>`, "no buy");
@@ -256,29 +277,51 @@ function render(rows, status){
   marks.forEach(row => { markBy[row.date] = row; });
   const curve = sessions.concat(fills).concat(marks).slice().sort((a, b) => a.date < b.date ? -1 : a.date > b.date ? 1 : 0);
   window.__curve = curve;
+  const backfillBooks = curve.filter(row => row.date <= BACKFILL_LAST && row.kind === "session");
+  const liveBooks = curve.filter(row => row.date > BACKFILL_LAST);
+  const liveCloses = closes.filter(row => row.date > BACKFILL_LAST);
+  const backfillCloses = closes.filter(row => row.date <= BACKFILL_LAST);
+  const livePlans = plans.filter(row => row.date > BACKFILL_LAST);
   const last = curve[curve.length - 1];
-  const equity = last ? Number(last.equity_primary) : CAPITAL;
-  const realised = closes.reduce((sum, row) => sum + Number(row.pnl_primary), 0);
+  const backfillEnd = backfillBooks.length ? Number(backfillBooks[backfillBooks.length - 1].equity_primary) : CAPITAL;
+  const liveEq = liveBooks.length ? Number(liveBooks[liveBooks.length - 1].equity_primary) : null;
+  const liveRealised = liveCloses.reduce((sum, row) => sum + Number(row.pnl_primary), 0);
+  const backfillRealised = backfillCloses.reduce((sum, row) => sum + Number(row.pnl_primary), 0);
   const openN = last ? (last.holdings || []).length : 0;
-  const pendingN = plans.filter(row => !fillBy[row.date] && !markBy[row.date]).length;
-  const openPending = plans.filter(row => openBy[row.date] && !fillBy[row.date] && !markBy[row.date]).length;
+  const pendingN = livePlans.filter(row => !fillBy[row.date] && !markBy[row.date]).length;
+  const openPending = livePlans.filter(row => openBy[row.date] && !fillBy[row.date] && !markBy[row.date]).length;
+  const liveReturn = liveEq == null ? "no live session yet" : pct(liveEq / backfillEnd - 1);
   const cards = [
-    ["Sessions", String(sessions.length + fills.length)],
-    ["Equity", money(equity)],
-    ["Since $10,000", pct(equity / CAPITAL - 1)],
-    ["Realised P&L", money(realised)],
-    ["Closed trades", String(closes.length)],
+    ["Live days", String(liveBooks.length)],
+    ["Live equity", liveEq == null ? "—" : money(liveEq)],
+    ["Live return", liveReturn],
+    ["Live realised", money(liveRealised)],
+    ["Live closed trades", String(liveCloses.length)],
     ["Open names", String(openN)],
     ["Pending", String(pendingN)],
     ["P&L pending", String(openPending)],
   ];
   document.getElementById("cards").innerHTML = cards.map(([k, v]) => {
-    const klass = k === "Since $10,000" || k === "Realised P&L" || k === "Equity"
-      ? cls(k === "Equity" ? equity - CAPITAL : (k === "Since $10,000" ? equity - CAPITAL : realised))
+    const klass = k === "Live return" || k === "Live realised" || k === "Live equity"
+      ? cls(k === "Live equity" ? (liveEq == null ? 0 : liveEq - backfillEnd) : (k === "Live return" ? (liveEq == null ? 0 : liveEq - backfillEnd) : liveRealised))
       : (k === "Pending" && pendingN ? "gold" : "");
     return `<div class="card"><span>${esc(k)}</span><b class="${klass}">${esc(v)}</b></div>`;
   }).join("");
-  draw(curve);
+  const backfillCards = [
+    ["Sessions", String(backfillBooks.length)],
+    ["Equity", backfillBooks.length ? money(backfillEnd) : "—"],
+    ["Since $10,000", backfillBooks.length ? pct(backfillEnd / CAPITAL - 1) : "—"],
+    ["Realised P&L", money(backfillRealised)],
+    ["Closed trades", String(backfillCloses.length)],
+  ];
+  document.getElementById("backfillCards").innerHTML = backfillCards.map(([k, v]) => {
+    const klass = k === "Since $10,000" || k === "Realised P&L" || k === "Equity"
+      ? cls(k === "Realised P&L" ? backfillRealised : backfillEnd - CAPITAL)
+      : "";
+    return `<div class="card"><span>${esc(k)}</span><b class="${klass}">${esc(v)}</b></div>`;
+  }).join("");
+  draw(liveBooks, "curve");
+  draw(backfillBooks, "backfillCurve");
   const byClose = {};
   closes.forEach(row => {
     (byClose[row.date] = byClose[row.date] || []).push(row);
@@ -300,22 +343,40 @@ function render(rows, status){
     if (openBy[plan.date]) return {mode: "open", date: plan.date, plan: plan, book: openBy[plan.date]};
     return {mode: "pending", date: plan.date, plan: plan};
   }
-  const views = sessions.map(day => ({mode: "seeded", date: day.date, book: day})).concat(plans.map(viewFor));
-  views.sort((a, b) => a.date < b.date ? 1 : a.date > b.date ? -1 : 0);
+  const backfillViews = sessions.filter(day => day.date <= BACKFILL_LAST).map(day => ({mode: "seeded", date: day.date, book: day}));
+  const liveViews = plans.filter(plan => plan.date > BACKFILL_LAST).map(viewFor);
+  function byDateDesc(a, b){ return a.date < b.date ? 1 : a.date > b.date ? -1 : 0; }
+  backfillViews.sort(byDateDesc);
+  liveViews.sort(byDateDesc);
   const equityBefore = {};
   curve.forEach((row, i) => {
     equityBefore[row.date] = i === 0 ? CAPITAL : Number(curve[i - 1].equity_primary);
   });
-  document.getElementById("days").innerHTML = views.map(view =>
-    dayCard(view, view.mode === "pending" ? null : equityBefore[view.date], byClose)
-  ).join("");
-  const ordered = closes.slice().reverse();
-  document.getElementById("closes").innerHTML = ordered.map(c =>
-    `<tr><td>${esc(c.date)}</td><td class="tick">${esc(c.ticker)}</td><td>${c.shares}</td><td>${px(c.entry_px)} ${esc(c.entry_date)}</td><td>${px(c.fill)}</td><td>${esc(c.reason)}</td><td class="${cls(c.pnl_primary)}">${money(c.pnl_primary)}</td></tr>`
-  ).join("") || `<tr><td colspan="7" class="mut">No closed trade yet.</td></tr>`;
+  function cardsHtml(list){
+    return list.map(view =>
+      dayCard(view, view.mode === "pending" ? null : equityBefore[view.date], byClose)
+    ).join("") || `<p class="mut">None yet.</p>`;
+  }
+  document.getElementById("liveDays").innerHTML = cardsHtml(liveViews);
+  document.getElementById("days").innerHTML = cardsHtml(backfillViews);
+  function closeRows(list){
+    return list.slice().reverse().map(c =>
+      `<tr><td>${esc(c.date)}</td><td class="tick">${esc(c.ticker)}</td><td>${c.shares}</td><td>${px(c.entry_px)} ${esc(c.entry_date)}</td><td>${px(c.fill)}</td><td>${esc(c.reason)}</td><td class="${cls(c.pnl_primary)}">${money(c.pnl_primary)}</td></tr>`
+    ).join("") || `<tr><td colspan="7" class="mut">No closed trade yet.</td></tr>`;
+  }
+  document.getElementById("closes").innerHTML = closeRows(liveCloses);
+  document.getElementById("backfillCloses").innerHTML = closeRows(backfillCloses);
+  const note = document.getElementById("backfillNote");
+  if (note) note.textContent = `${BACKFILL_LABEL}. ${backfillBooks.length} sessions, ${backfillCloses.length} closed trades. Not included in the headline.`;
+  const missing = document.getElementById("missingDay");
+  if (missing){
+    const sealed = rows.some(row => row.date === "2026-09-28" && (row.kind === "plan" || row.kind === "session" || row.kind === "fill" || row.kind === "mark"));
+    missing.hidden = sealed;
+  }
   document.getElementById("foot").textContent =
-    `${sessions.length} seeded sessions, ${plans.length} plans, ${opens.length} open fills, ${fills.length + marks.length} close marks, ${closes.length} close records, ${rows.length} sealed lines. ` +
+    `${sessions.length} backfill sessions, ${livePlans.length} live plans, ${opens.length} open fills, ${fills.length + marks.length} close marks, ${closes.length} close records, ${rows.length} sealed lines. ` +
     `Picks for day D are sealed before the US open. Open fills are marked at the official open. P&L for open positions stays pending until the close bar is saved. ` +
+    `Headline figures are live days only. ${BACKFILL_LABEL}. 2026-09-28 has no sealed pre-open h1 plan unless a PLAN run writes one before 09:30 ET. ` +
     `Recipe ${rows[0] ? rows[0].recipe : "union_hot_n4_h1__w0"}. Min hold 1. Luck N 22,017.`;
   const skip = document.getElementById("skip");
   if (status && status.latest_skip){
