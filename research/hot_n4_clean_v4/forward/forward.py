@@ -4,7 +4,9 @@ The pre-open run writes one plan for session D. It uses the ranked picks,
 the planned sells, and the excluded names, and no print from D. The
 post-close run writes the fill for that plan at D's open, plus close
 records, and does not edit the plan. A rerun of a sealed plan or fill does
-nothing. Missing inputs append nothing.
+nothing. Missing bars, a calendar miss, and the other skips still append
+nothing. A missing or unreadable morning file does not skip the session:
+S stays null, holdup keeps min_hold 1, and the plan records the absence.
 
 HOLDUP_MODE=plan is the pre-open run. HOLDUP_MODE=open_fill is the 09:35 ET
 open-fill. HOLDUP_MODE=fill is the post-close run. FORWARD_BOOK selects
@@ -211,7 +213,11 @@ def _score_text(kind: str, raw: bytes) -> float | None:
 
 
 def morning_score(session: str) -> tuple[dict | None, str | None]:
-    """Predict wins. The blob must already have been on GitHub before 13:30 UTC."""
+    """Predict wins. The blob must already have been on GitHub before 13:30 UTC.
+
+    ``None`` plus a reason means the file is missing or unreadable. That is
+    not a session skip. ``morning_gate`` turns it into S null.
+    """
     for kind, rel in (
         ("predict", f"01_daily/general/{session}_predict.md"),
         ("weather", f"01_daily/weather/{session}_weather.json"),
@@ -238,6 +244,54 @@ def morning_score(session: str) -> tuple[dict | None, str | None]:
     return None, (
         f"no predict or weather file for {session} was on {GIT_REF} before 13:30 UTC"
     )
+
+
+def morning_gate(session: str) -> dict:
+    """Score dict for the plan. Absence is S null, not a skip.
+
+    A file that was on GitHub before 13:30 UTC but cannot be read is the
+    same: S null, status ABSENT, reason kept. A readable file with no
+    numeric score stays S null and status BEFORE_1330.
+    """
+    found, why = morning_score(session)
+    if found is not None:
+        return found
+    reason = why or (
+        f"no predict or weather file for {session} was on {GIT_REF} before 13:30 UTC"
+    )
+    return {
+        "blob_sha": None,
+        "kind": None,
+        "morning_s": None,
+        "path": None,
+        "reason": reason,
+        "server_time_utc": None,
+        "status": "ABSENT",
+    }
+
+
+def stamp_morning(plan: dict, score: dict) -> None:
+    """Write the morning provenance onto the plan. ABSENT stays on the record."""
+    if score.get("status") == "ABSENT":
+        reason = score.get("reason")
+        plan["morning_reason"] = reason
+        plan["morning_status"] = "ABSENT"
+        plan["s_source"] = {
+            "blob_sha": None,
+            "kind": None,
+            "path": None,
+            "reason": reason,
+            "server_time_utc": None,
+            "status": "ABSENT",
+        }
+        return
+    plan["s_source"] = {
+        "blob_sha": score["blob_sha"],
+        "kind": score["kind"],
+        "path": score["path"],
+        "server_time_utc": score["server_time_utc"],
+        "status": score["status"],
+    }
 
 
 def _panel_repos() -> list[Path]:
@@ -577,10 +631,12 @@ def plan_main() -> int:
     bars, code = _bars(records, target)
     if bars is None:
         return code
-    score, why = morning_score(target)
-    if why:
-        _log_skip(target, why, records)
-        return 0
+    score = morning_gate(target)
+    if score.get("status") == "ABSENT":
+        print(
+            f"morning file absent {target}: {score.get('reason')}; planning with S null",
+            flush=True,
+        )
     finviz = None
     if target >= SNAPSHOT_FROM:
         frame, finviz = snapshot_for(target)
@@ -604,13 +660,7 @@ def plan_main() -> int:
     except RuntimeError as exc:
         _log_skip(target, str(exc), records)
         return 0
-    plan["s_source"] = {
-        "blob_sha": score["blob_sha"],
-        "kind": score["kind"],
-        "path": score["path"],
-        "server_time_utc": score["server_time_utc"],
-        "status": score["status"],
-    }
+    stamp_morning(plan, score)
     if finviz is not None:
         plan["finviz_source"] = finviz
     try:

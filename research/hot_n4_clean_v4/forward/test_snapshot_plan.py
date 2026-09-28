@@ -286,6 +286,8 @@ def main() -> None:
         _snapshot_0928(root)
         _snapshot(root)
     _gap_fill()
+    from research.hot_n4_clean_v4.forward.test_morning_absent import main as morning_absent
+    morning_absent()
     check_against("origin/main")
     print("snapshot plan ok")
 

@@ -181,6 +181,17 @@ function positionPills(rows, pending){
     return `<span class="pill">${esc(h.ticker)} ${h.shares} from ${esc(h.entry_date)} hold ${h.min_hold}${pnl ? " · " + pnl : ""}</span>`;
   }, "flat");
 }
+function morningText(view){
+  const plan = view.plan || null;
+  const day = view.book || view.plan || {};
+  const absent = (plan && plan.morning_status === "ABSENT") ? plan
+    : (day.morning_status === "ABSENT" ? day : null);
+  if (absent){
+    const why = absent.morning_reason || (absent.s_source && absent.s_source.reason) || "";
+    return "morning ABSENT" + (why ? ": " + esc(why) : "") + " · S null";
+  }
+  return "S " + (day.morning_s == null ? "null" : day.morning_s);
+}
 function dayCard(view, prevEquity, byClose){
   if (view.mode === "missing"){
     return `<article class="day pending">
@@ -196,7 +207,7 @@ function dayCard(view, prevEquity, byClose){
       `<span class="pill sell">${esc(s.ticker)} ${s.shares} @ ${px(s.fill)} ${esc(s.reason)}</span>`, "no sell");
     return `<article class="day open">
       <h3>${esc(day.date)} <span class="badge pending">filled at the open · P&amp;L pending</span></h3>
-      <div class="hd"><span>cash ${money(day.cash_primary)}</span><span>holdup ${day.holdup_on ? "on" : "off"}</span><span>S ${day.morning_s == null ? "null" : day.morning_s}</span><span class="mut">${esc((day.sha256 || "").slice(0, 12))}</span></div>
+      <div class="hd"><span>cash ${money(day.cash_primary)}</span><span>holdup ${day.holdup_on ? "on" : "off"}</span><span>${morningText(view)}</span><span class="mut">${esc((day.sha256 || "").slice(0, 12))}</span></div>
       <div class="lab">Buys filled at the official open. P&amp;L stays pending until the close bar is saved.</div>
       <div class="pills">${picks}</div>
       <div class="lab">Sells filled at the official open</div>
@@ -214,7 +225,7 @@ function dayCard(view, prevEquity, byClose){
       `<span class="pill sell">${esc(s.ticker)} ${s.shares} ${esc(s.reason)}</span>`, "no planned sell");
     return `<article class="day pending">
       <h3>${esc(day.date)} <span class="badge pending">pending</span></h3>
-      <div class="hd"><span>planned, not yet filled</span><span>committed ${esc(day.committed_at || "")}</span><span>holdup ${day.holdup_on ? "on" : "off"}</span><span>S ${day.morning_s == null ? "null" : day.morning_s}</span><span class="mut">${esc((day.sha256 || "").slice(0, 12))}</span></div>
+      <div class="hd"><span>planned, not yet filled</span><span>committed ${esc(day.committed_at || "")}</span><span>holdup ${day.holdup_on ? "on" : "off"}</span><span>${morningText(view)}</span><span class="mut">${esc((day.sha256 || "").slice(0, 12))}</span></div>
       <div class="lab">Ranked picks, sealed before the open. No prices from this session.</div>
       <div class="pills">${picks}</div>
       <div class="lab">Planned sells</div>
@@ -246,7 +257,7 @@ function dayCard(view, prevEquity, byClose){
       <span>equity ${money(day.equity_primary)}</span>
       <span>cash ${money(day.cash_primary)}</span>
       <span>holdup ${day.holdup_on ? "on" : "off"}</span>
-      <span>S ${day.morning_s == null ? "null" : day.morning_s}</span>
+      <span>${morningText(view)}</span>
       <span class="mut">${esc((day.sha256 || "").slice(0, 12))}</span>
     </div>
     <div class="lab">${view.mode === "seeded" ? "Buys — seeded fill at that day's open" : "Buys — filled at that day's open"}</div>
