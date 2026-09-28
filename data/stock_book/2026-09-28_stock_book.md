@@ -1,6 +1,6 @@
 # Stock book — 2026-09-28
 
-_Generated 2026-09-28T07:47:09.821142-04:00_
+_Generated 2026-09-28T09:19:55.324834-04:00_
 
 This file is the **human read** of one run. CSV/JSON next to it are the machine files.
 
@@ -21,7 +21,7 @@ The existing red/yellow/green source graph remains visible. Its digest, judge an
 - Weather risk: **off**
 - General predict (same-day): -0.63 down (present)
 - Stand-down: **no** — 38 names qualified through catalyst_exception,probable (38 probable)
-- Sector predicts this date: 3/11 (ok)
+- Sector predicts this date: 4/11 (ok)
 - News tickers in play: 97
 - AB coverage: 1950 names · peer RS: 1825
 - Universe after liquidity: 2066
@@ -55,7 +55,7 @@ Decision domains: **MKT · parent · child · company · setup · flow**. Measur
 | 2 | **NE** | 🔴🟡🔴🟢🔴🔴 | blocked | usable dossier Bullish conv=16; Oil & Gas Drilling -3.3% d1 / -4.4% 1w / -5.4% vs parent | BLOCK BUY — HARD_RED: no company / child-outperform / lookback clock; child industry/theme RED; setup RED; flow RED; 🚨 alarm; featured fade; legacy Cond red; legacy region red; v2 domain region red / market=HARD_RED; parent=YELLOW; child=RED/rel=RED; company=GREEN(0.80); setup=RED; flow=RED |
 | 3 | **SLB** | 🔴🟡🔴🟡🟢🟡 | blocked | usable dossier Strong Bullish conv=50; Oil & Gas Equipment & Services -4.4% d1 / -6.8% 1w / -7.7% vs parent | BLOCK BUY — HARD_RED: no company / child-outperform / lookback clock; child industry/theme RED; direct catalyst lacks price confirmation; 🚨 alarm; featured fade; legacy Cond red / market=HARD_RED; parent=YELLOW; child=RED/rel=RED; company=YELLOW(0.80); setup=GREEN; flow=YELLOW |
 | 4 | **BE** | 🔴🔴🔴🟢🟢🟡 | blocked | direct high digest (same-day): Bloom Energy says Oracle remains committed to 2.4 GW Project Jupiter fuel cell contract and planned timeline despite force majeure notice; Electrical Equipment & Parts -6.8% d1 / -7.4% 1w / -4.7% vs parent | BLOCK BUY — HARD_RED: no company / child-outperform / lookback clock; parent sector RED; child industry/theme RED; direct catalyst lacks price confirmation; 🚨 alarm; featured fade / market=HARD_RED; parent=RED; child=RED/rel=RED; company=GREEN(0.72); setup=GREEN; flow=YELLOW |
-| 5 | **NKE** | 🔴🟡🟡🔴🟡🔴 | blocked | direct high digest (same-day): Bank of America cuts Nike FY27-28 EPS estimates, lowers price target to $30 and rates shares Underperform; Footwear & Accessories +0.1% d1 / -4.2% 1w / -2.3% vs parent | BLOCK BUY — HARD_RED: no company / child-outperform / lookback clock; company evidence RED; setup YELLOW; flow RED; 🚨 alarm; legacy Cond red; legacy region red; v2 domain alarm; v2 domain region red / market=HARD_RED; parent=YELLOW; child=YELLOW/rel=YELLOW; company=RED(0.72); setup=YELLOW; flow=RED |
+| 5 | **NKE** | 🔴🔴🟡🔴🟡🔴 | blocked | direct high digest (same-day): Bank of America cuts Nike FY27-28 EPS estimates, lowers price target to $30 and rates shares Underperform; Footwear & Accessories +0.1% d1 / -4.2% 1w / -2.3% vs parent | BLOCK BUY — HARD_RED: no company / child-outperform / lookback clock; parent sector RED; company evidence RED; setup YELLOW; flow RED; 🚨 alarm; legacy Cond red; legacy region red; v2 domain alarm; v2 domain region red / market=HARD_RED; parent=RED; child=YELLOW/rel=YELLOW; company=RED(0.72); setup=YELLOW; flow=RED |
 | 6 | **CNQ** | 🔴🟡🟡🟡🟢🟡 | probable | direct high digest (stale/undated): Canadian Natural Resources posts record Q2 2026 results with EPS $1.58, raises 2026 production guidance and returns about $4B to shareholders; Oil & Gas E&P -0.1% d1 / +1.5% 1w / +0.5% vs parent | BUY PROBABLE — most-probable long on HARD_RED (size ×0.25); clocks: lookback 🔵 blue — market=HARD_RED; parent=YELLOW; child=YELLOW/rel=YELLOW; company=YELLOW(0.48); setup=GREEN; flow=YELLOW; lookback=🔵,Cond green |
 | 7 | **ASTH** | 🔴🟡🟢🟡🟢🟢 | probable | no direct company event; Medical Care Facilities +0.6% d1 / +3.1% 1w / +5.6% vs parent | BUY PROBABLE — most-probable long on HARD_RED (size ×0.25); clocks: child/theme outperform +3.1% 1w / +5.6% rel — market=HARD_RED; parent=YELLOW; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=Cond green |
 | 8 | **HITI** | 🔴🟡🟢🟡🟢🟢 | probable | no direct company event; Pharmaceutical Retailers +3.6% d1 / +1.0% 1w / +3.5% vs parent | BUY PROBABLE — most-probable long on HARD_RED (size ×0.25); clocks: child/theme outperform +1.0% 1w / +3.5% rel — market=HARD_RED; parent=YELLOW; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=Cond green |
@@ -84,8 +84,8 @@ Decision domains: **MKT · parent · child · company · setup · flow**. Measur
 | 11 | **NEOV** | 🔴🔴🔴🟡🔴🟡 | Electrical Equipment & Parts | SELL/AVOID — market=HARD_RED; red domains=parent,child,setup; child lags parent -4.7% |
 | 12 | **SGML** | 🔴🔴🔴🟡🔴🔴 | Other Industrial Metals & Mining | SELL/AVOID — market=HARD_RED; red domains=parent,child,setup,flow |
 | 13 | **ICHR** | 🔴🔴🔴🟡🔴🔴 | Semiconductor Equipment & Materials | SELL/AVOID — market=HARD_RED; red domains=parent,child,setup,flow; child lags parent -6.3% |
-| 14 | **SVM** | 🔴🔴🔴🟡🔴🔴 | Silver | SELL/AVOID — market=HARD_RED; red domains=parent,child,setup,flow; child lags parent -4.5% |
-| 15 | **HNRG** | 🔴🔴🔴🟡🔴🟡 | Utilities - Independent Power Producers | SELL/AVOID — market=HARD_RED; red domains=parent,child,setup; child lags parent -6.3% |
+| 14 | **TDUP** | 🔴🔴🔴🟡🔴🔴 | Internet Retail | SELL/AVOID — market=HARD_RED; red domains=parent,child,setup,flow |
+| 15 | **PRKS** | 🔴🔴🔴🟡🔴🔴 | Leisure | SELL/AVOID — market=HARD_RED; red domains=parent,child,setup,flow |
 
 ## Finviz outperform board (industry + theme)
 
@@ -100,7 +100,7 @@ This is the live Finviz groups tape — child industry vs parent sector, plus th
 |--------|----------:|----------:|-------:|---------------|
 | Basic Materials | -2.1% | -4.8% | -0.33 |  |
 | Communication Services | +2.7% | +3.5% | +0.00 | essay flat, tape moving |
-| Consumer Cyclical | -0.4% | -2.0% | — |  |
+| Consumer Cyclical | -0.4% | -2.0% | -0.55 |  |
 | Consumer Defensive | +1.4% | +0.5% | — |  |
 | Energy | -0.8% | +1.0% | — |  |
 | Financial | -0.4% | -1.8% | — |  |
@@ -212,6 +212,7 @@ If a row says **missing**, that layer scored 0 today. If it says **found**, it m
 
 | Sector | bias |
 |--------|------|
+| Consumer Cyclical | -0.55 |
 | Technology | -0.33 |
 | Basic Materials | -0.33 |
 | Communication Services | +0.00 |
@@ -592,30 +593,30 @@ If a row says **missing**, that layer scored 0 today. If it says **found**, it m
 ## 1m AVOID — bottom of the same rank
 
 - **BAK** (micro, Basic Materials, $255M) score -0.696. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
+- **CWH** (small, Consumer Cyclical, $552M) score -0.693. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
+- **DAN** (mid, Consumer Cyclical, $2.9B) score -0.677. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
+- **STLA** (large, Consumer Cyclical, $13.6B) score -0.677. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
 - **PRM** (mid, Basic Materials, $4.8B) score -0.671. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **advancing**
+- **AIIO** (micro, Consumer Cyclical, $164M) score -0.657. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
 - **OLN** (small, Basic Materials, $1.9B) score -0.655. this name **lagged its own correlated peers** this week; the peer basket itself was **up**; the Finviz industry was **down**
+- **OI** (small, Consumer Cyclical, $900M) score -0.653. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **advancing**
+- **SFIX** (micro, Consumer Cyclical, $289M) score -0.643. this name **lagged its own correlated peers** this week; the peer basket itself was **up**; the Finviz industry was **advancing**
 - **SGML** (small, Basic Materials, $1.1B) score -0.642. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
+- **PENN** (mid, Consumer Cyclical, $2.1B) score -0.641. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
+- **XPEV** (mid, Consumer Cyclical, $7.9B) score -0.640. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
+- **TDUP** (micro, Consumer Cyclical, $289M) score -0.625. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
+- **LI** (mid, Consumer Cyclical, $9.5B) score -0.620. this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
 - **USAS** (small, Basic Materials, $1.6B) score -0.620. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
 - **LAR** (small, Basic Materials, $887M) score -0.618. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
 - **AMTX** (micro, Basic Materials, $129M) score -0.600. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **advancing**
 - **TROX** (small, Basic Materials, $644M) score -0.589. this name **lagged its own correlated peers** this week; the peer basket itself was **up**; the Finviz industry was **down**
+- **EVGO** (small, Consumer Cyclical, $434M) score -0.589. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **advancing**
 - **USAR** (mid, Basic Materials, $5.6B) score -0.588. the Finviz industry was **down**
 - **HUN** (small, Basic Materials, $1.6B) score -0.584. this name **lagged its own correlated peers** this week; the peer basket itself was **up**; the Finviz industry was **down**
 - **AA** (large, Basic Materials, $11.2B) score -0.571. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
 - **LODE** (micro, Basic Materials, $195M) score -0.569. this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
+- **AUR** (large, Consumer Cyclical, $12.0B) score -0.566. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
 - **ASPI** (small, Basic Materials, $448M) score -0.555. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **advancing**
-- **ACDC** (small, Energy, $840M) score -0.552. this name **lagged its own correlated peers** this week; the peer basket itself was **up**; the Finviz industry was **down**
-- **CC** (mid, Basic Materials, $2.2B) score -0.549. this name **lagged its own correlated peers** this week; the peer basket itself was **up**; the Finviz industry was **advancing**
-- **EOSE** (small, Industrials, $1.1B) score -0.525. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
-- **TMQ** (small, Basic Materials, $551M) score -0.523. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
-- **SOC** (small, Energy, $754M) score -0.518. this name **lagged its own correlated peers** this week; the peer basket itself was **up**; the Finviz industry was **down**
-- **RC** (micro, Real Estate, $223M) score -0.516. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
-- **PCT** (small, Industrials, $1.0B) score -0.514. this name **lagged its own correlated peers** this week; the peer basket itself was **up**; the Finviz industry was **down**
-- **UAMY** (small, Basic Materials, $671M) score -0.513. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
-- **MATW** (small, Industrials, $591M) score -0.503. this name **lagged its own correlated peers** this week; the peer basket itself was **up**; the Finviz industry was **down**
-- **PUMP** (small, Energy, $1.2B) score -0.501. this name **lagged its own correlated peers** this week; the peer basket itself was **up**; the Finviz industry was **down**
-- **METC** (small, Basic Materials, $498M) score -0.498. this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **advancing**
-- **FCEL** (small, Industrials, $1.3B) score -0.493. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
 
 ## Files for this run
 
