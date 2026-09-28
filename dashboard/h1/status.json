@@ -1,7 +1,7 @@
 {
   "date": "2026-09-28",
   "latest_skip": null,
-  "note": "Seeded from the committed v4 day cards for union_hot_n4_h1__w0 and checked against returns/RESULTS.json. Session 2026-09-28 uses the frozen Theme Radar record. The 13:05 UTC PLAN run seals it when this is on main before 09:30 ET. It is marked missing only if no h1 plan is committed before that open. forward_shadow_v1 records union_hot_n4_h1__w0 for that day as a different study. A holdup plan already sealed is not written again.",
+  "note": "Seeded from the committed v4 day cards for union_hot_n4_h1__w0 and checked against returns/RESULTS.json. Session 2026-09-28 reads theme-radar data/snapshots/2026-09-25.csv. The 13:05 UTC PLAN run seals it when this is on main before 09:30 ET. It is marked missing only if no h1 plan is committed before that open. forward_shadow_v1 records union_hot_n4_h1__w0 for that day as a different study. A holdup plan already sealed is not written again.",
   "pending": null,
   "phase": "awaiting-plan",
   "recipe": "union_hot_n4_h1__w0"

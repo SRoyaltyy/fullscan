@@ -218,13 +218,18 @@ jobs:
           # sub-dash there so homepage links like sleeve-merge/ resolve.
           for sub in boring-winners ticker-lookback gainer-lookback flatten-lookback \
                      mover-lookback sleeve-combine sleeve-merge mover-paper book-paper paper-book \
-                     strategy-board factor-mine day-board down-day-mine hard-red-exceptions day-movers holdup h1; do
+                     strategy-board factor-mine day-board down-day-mine hard-red-exceptions day-movers holdup; do
             if [ -d "pages_out/dashboard/${sub}" ]; then
               mkdir -p "pages_out/${sub}"
               cp -a "pages_out/dashboard/${sub}/." "pages_out/${sub}/"
               echo "Root copy pages_out/${sub}"
             fi
           done
+          if [ -d pages_out/dashboard/h1 ]; then
+            mkdir -p pages_out/h1
+            cp -a pages_out/dashboard/h1/. pages_out/h1/
+            echo "Root copy pages_out/h1"
+          fi
 
           if [ ! -f pages_out/dashboard/index.html ]; then
             echo "ERROR: no dashboard index.html to publish"

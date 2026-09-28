@@ -120,6 +120,7 @@ def _new_state() -> dict:
         "open_fill_dates": [],
         "open_fills": {},
         "parents": {},
+        "missing_dates": [],
         "plan_dates": [],
         "plan_sha": {},
         "plans": {},
@@ -183,6 +184,8 @@ def _note(state: dict, obj: dict) -> None:
         resolved = set(state["fill_dates"]) | set(state["mark_dates"])
         if state["plan_dates"] and state["plan_dates"][-1] not in resolved:
             raise RuntimeError("previous plan is not filled")
+        if obj["date"] in state["missing_dates"]:
+            raise RuntimeError("plan on a missing session")
         if obj["date"] in state["plan_dates"]:
             raise RuntimeError("duplicate plan")
         state["plan_dates"].append(obj["date"])
@@ -262,6 +265,25 @@ def _note(state: dict, obj: dict) -> None:
         if obj["ticker"] not in sell_names:
             raise RuntimeError("close is not a sell")
         state["closes"].setdefault(obj["date"], []).append(obj)
+    elif kind == "missing":
+        if obj.get("reason") != "missing: plan not sealed before open":
+            raise RuntimeError("missing reason")
+        if obj.get("picks") or obj.get("planned_sells"):
+            raise RuntimeError("missing has picks")
+        if not obj.get("committed_at"):
+            raise RuntimeError("missing timestamp")
+        resolved = set(state["fill_dates"]) | set(state["mark_dates"])
+        if state["plan_dates"] and state["plan_dates"][-1] not in resolved:
+            raise RuntimeError("previous plan is not filled")
+        if state["session_dates"] and obj["date"] <= state["session_dates"][-1]:
+            raise RuntimeError("missing date")
+        if obj["date"] in state["plan_dates"] or obj["date"] in state["missing_dates"]:
+            raise RuntimeError("duplicate missing")
+        if state["plan_dates"] and obj["date"] <= state["plan_dates"][-1]:
+            raise RuntimeError("missing order")
+        if state["missing_dates"] and obj["date"] <= state["missing_dates"][-1]:
+            raise RuntimeError("missing order")
+        state["missing_dates"].append(obj["date"])
     else:
         raise RuntimeError(f"kind {kind}")
 

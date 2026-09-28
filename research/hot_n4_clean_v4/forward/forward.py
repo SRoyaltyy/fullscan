@@ -69,9 +69,11 @@ from src.skip_if_good import is_nyse_holiday  # noqa: E402
 
 GIT_REF = os.environ.get("HOLDUP_GIT_REF", "HEAD")
 # Sessions before this date stay on the frozen monthly gzip. From this
-# session the gzip has no trade_date row, so the plan reads theme-radar
-# data/snapshots/<previous session>.csv.
-SNAPSHOT_FROM = "2026-09-29"
+# session the plan reads theme-radar data/snapshots/<previous session>.csv.
+# 2026-09-28 reads data/snapshots/2026-09-25.csv, the export already on
+# theme-radar main and the same rows as the frozen 09-28 record.
+SNAPSHOT_FROM = "2026-09-28"
+MISSING_REASON = "missing: plan not sealed before open"
 ET = ZoneInfo("America/New_York")
 
 
@@ -124,12 +126,42 @@ def plan_clock(session: str, now: datetime | None = None) -> str | None:
 
 
 def plan_target(records: list[dict], requested: str) -> tuple[str | None, str | None]:
-    """Next book session, or the requested date when it is that session."""
+    """Next book session, or the requested date when it is that session.
+
+    A session already recorded as missing is not planned again. The next
+    PLAN run moves to the following session.
+    """
     dates = book_dates(records)
     target = next_session(dates[-1])
+    skipped = {row["date"] for row in records if row.get("kind") == "missing"}
+    while target in skipped:
+        target = next_session(target)
     if requested and requested != target:
         return None, f"session_date {requested} is not the next session {target}"
     return target, None
+
+
+def seal_decision(plan: dict, now: datetime | None = None) -> dict:
+    """Stamp the append time. At or after that session's 09:30 ET, keep no picks.
+
+    The check uses the session being sealed, on every day. A job that started
+    for 2026-09-28 and is still running on 2026-09-29 is late for 2026-09-28.
+    """
+    now = now or datetime.now(timezone.utc)
+    if now.tzinfo is None:
+        now = now.replace(tzinfo=timezone.utc)
+    stamp = now.astimezone(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    if plan_clock(plan["date"], now):
+        return {
+            "committed_at": stamp,
+            "date": plan["date"],
+            "kind": "missing",
+            "reason": MISSING_REASON,
+            "recipe": plan["recipe"],
+        }
+    sealed = dict(plan)
+    sealed["committed_at"] = stamp
+    return sealed
 
 
 def blob_before(repo: Path, rel: str, limit: datetime, ref: str | None = None) -> tuple[str, str, bytes] | None:
@@ -316,7 +348,7 @@ def _snapshot_frame(raw: bytes, session: str, snap: str):
 
 
 def snapshot_for(session: str) -> tuple[object, dict]:
-    """Finviz inputs for session D >= 2026-09-29.
+    """Finviz inputs for session D >= 2026-09-28.
 
     The file is data/snapshots/<previous trading day>.csv as of the latest
     theme-radar commit strictly before 09:30 ET on D. A missing file, a commit
@@ -537,10 +569,6 @@ def plan_main() -> int:
     if why or target is None:
         _fail(why or "no session")
         return 1
-    late = plan_clock(target)
-    if late:
-        _fail(late)
-        return 1
     print(f"plan {target}", flush=True)
     index = _index()
     if target not in index:
@@ -595,12 +623,25 @@ def plan_main() -> int:
     ):
         print(f"plan already sealed {target}")
         return 0
-    append_records([plan])
+    if any(row["kind"] == "missing" and row["date"] == target for row in current):
+        print(f"missing already recorded {target}")
+        return 0
+    # Re-read the clock here, after the inputs are built. A schedule that
+    # started late, or a run that crossed 09:30 ET while working, does not
+    # commit the picks it just computed.
+    body = seal_decision(plan)
+    if body["kind"] == "missing":
+        append_records([body])
+        written = load()
+        write_page(written, _status(target, None, MISSING_REASON, "missing"))
+        print(f"{MISSING_REASON} {target} committed_at {body['committed_at']}", flush=True)
+        return 0
+    append_records([body])
     written = load()
     write_page(written, _status(target, target, None, "plan"))
     print(
-        f"sealed plan {target} picks {len(plan['picks'])} "
-        f"planned sells {len(plan['planned_sells'])}",
+        f"sealed plan {target} picks {len(body['picks'])} "
+        f"planned sells {len(body['planned_sells'])} committed_at {body['committed_at']}",
         flush=True,
     )
     return 0
