@@ -1,6 +1,6 @@
 {
   "date": "2026-09-28",
-  "generated_at": "2026-09-28T14:15:41.164743-04:00",
+  "generated_at": "2026-09-28T16:10:31.453611-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -572,8 +572,8 @@
           "path": "01_daily/weather/2026-09-28_weather.json",
           "role": "required",
           "status": "OK",
-          "reason": "sectors=11 bytes=10617 vix=falling yields=rising",
-          "size": 10617,
+          "reason": "sectors=11 bytes=10616 vix=falling yields=rising",
+          "size": 10616,
           "said": "favorable 3 \u00b7 hostile 6 \u00b7 neutral 2",
           "bullets": [
             "hostile: Basic Materials, Communication Services, Consumer Cyclical, Financial, Real Estate, Utilities",
@@ -791,8 +791,8 @@
           "path": "01_daily/weather/2026-09-28_weather.json",
           "role": "input",
           "status": "OK",
-          "reason": "sectors=11 bytes=10617 vix=falling yields=rising",
-          "size": 10617,
+          "reason": "sectors=11 bytes=10616 vix=falling yields=rising",
+          "size": 10616,
           "said": "favorable 3 \u00b7 hostile 6 \u00b7 neutral 2",
           "bullets": [
             "hostile: Basic Materials, Communication Services, Consumer Cyclical, Financial, Real Estate, Utilities",
@@ -859,7 +859,7 @@
           "size": 57225,
           "said": "Stock book \u2014 2026-09-28",
           "bullets": [
-            "_Generated 2026-09-28T14:15:38.326521-04:00_",
+            "_Generated 2026-09-28T15:19:31.190848-04:00_",
             "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
           ]
         },
@@ -3220,6 +3220,31 @@
         }
       ],
       "preview": "5899 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 ARGX, COP, REGN, AZN, DVN"
+    },
+    {
+      "key": "weather",
+      "title": "Weather / regime",
+      "date": "2026-09-28",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-28T16:10:30.327009-04:00",
+      "files": [
+        {
+          "path": "01_daily/weather/2026-09-28_weather.json",
+          "ok": true,
+          "reason": "",
+          "size": 10616,
+          "preview": "weather sectors 11 \u00b7 Technology={'score': -13.383, 'dir': 'down', 'conf': 0.65, 'source': 'llm'}, Basic Materials={'score': -6.779, 'dir': 'down', 'conf': 0.65, 'source': 'llm'}, Communication Services={'score': -4.633, 'dir': 'flat', 'conf': 0.55, 'source': 'llm'}, Consumer Cyclical={'score': -6.753, 'dir': 'down', 'conf': 0.65, 'source': 'llm'}, Consumer Defensive={'score': -0.622, 'dir': 'flat', 'conf': 0.525, 'source': 'llm'}, Energy={'score': 7.946, 'dir': 'up', 'conf': 0.65, 'source': 'llm'}, Financial={'score': -0.28, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.16, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}"
+        },
+        {
+          "path": "01_daily/weather/2026-09-28_weather.md",
+          "ok": true,
+          "reason": "",
+          "size": 6088,
+          "preview": "# Weather report \u2014 2026-09-28\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+        }
+      ],
+      "preview": "weather sectors 11 \u00b7 Technology={'score': -13.383, 'dir': 'down', 'conf': 0.65, 'source': 'llm'}, Basic Materials={'score': -6.779, 'dir': 'down', 'conf': 0.65, 'source': 'llm'}, Communication Services={'score': -4.633, 'dir': 'flat', 'conf': 0.55, 'source': 'llm'}, Consumer Cyclical={'score': -6.753, 'dir': 'down', 'conf': 0.65, 'source': 'llm'}, Consumer Defensive={'score': -0.622, 'dir': 'flat', 'conf': 0.525, 'source': 'llm'}, Energy={'score': 7.946, 'dir': 'up', 'conf': 0.65, 'source': 'llm'}, Financial={'score': -0.28, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.16, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-09-28\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
     }
   ],
   "href": {
