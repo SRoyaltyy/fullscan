@@ -1,6 +1,6 @@
 {
   "date": "2026-09-28",
-  "generated_at": "2026-09-28T07:20:30.504003-04:00",
+  "generated_at": "2026-09-28T07:40:57.958764-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -58,7 +58,7 @@
     },
     {
       "ticker": "METC",
-      "score": -0.12676161860311186
+      "score": -0.35926161860311184
     },
     {
       "ticker": "SOC",
@@ -70,7 +70,7 @@
     },
     {
       "ticker": "EXK",
-      "score": 0.09715472902571981
+      "score": -0.13534527097428023
     },
     {
       "ticker": "QBTS",
@@ -78,11 +78,11 @@
     },
     {
       "ticker": "BAK",
-      "score": -0.36023528058613385
+      "score": -0.5527352805861339
     },
     {
       "ticker": "USAS",
-      "score": -0.2266816142179039
+      "score": -0.45918161421790393
     }
   ],
   "flatten": {
@@ -105,9 +105,9 @@
     "direction": "down"
   },
   "sectors": {
-    "said": "0 up / 1 down / 0 flat",
+    "said": "0 up / 2 down / 0 flat",
     "bullets": [
-      "XLB missing",
+      "XLB DOWN -6.8",
       "XLC missing",
       "XLY missing",
       "XLP missing",
@@ -1590,70 +1590,70 @@
     },
     {
       "key": "sector_one",
-      "title": "Sector predict Technology (1/11)",
+      "title": "Sector predict Basic Materials (2/11)",
       "date": "2026-09-28",
       "ok": true,
       "pushed": true,
-      "at": "2026-09-28T07:11:43.423199-04:00",
+      "at": "2026-09-28T07:36:27.801226-04:00",
       "files": [
         {
-          "path": "01_daily/sectors/2026-09-28/technology_predict.md",
+          "path": "01_daily/sectors/2026-09-28/basic_materials_predict.md",
           "ok": true,
           "reason": "",
-          "size": 19193,
-          "preview": "# Sector Prediction \u2014 Technology \u2014 2026-09-28\n- news_mode: **on**\n- ETF: **XLK**\n- rubric: `00_grounding/sectors/technology.md`\n- predicted_direction: **down**\n- predicted_magnitude_band: **mild**\n- total_score: **-13.383** (mult 0.85)\n- regime: risk_off\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **-6.535** (NQ -0.96%, ES -0.52%, PM:XLK -1.16%) \u00b7 index_carry **-1.535** (general -6.14) \u00b7 llm_overlay **-5.312** (raw -5.312)"
+          "size": 21495,
+          "preview": "# Sector Prediction \u2014 Basic Materials \u2014 2026-09-28\n- news_mode: **on**\n- ETF: **XLB**\n- rubric: `00_grounding/sectors/basic_materials.md`\n- predicted_direction: **down**\n- predicted_magnitude_band: **mild**\n- total_score: **-6.779** (mult 0.85)\n- regime: risk_off\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **-0.144** (ES -0.53%, HG +0.66%, GC +0.90%, DX -0.02%) \u00b7 index_carry **-1.535** (general -6.14) \u00b7 llm_overlay **-5.1** (raw -5.1)"
         },
         {
-          "path": "01_daily/sectors/2026-09-28/technology_predict_trace.md",
+          "path": "01_daily/sectors/2026-09-28/basic_materials_predict_trace.md",
           "ok": true,
           "reason": "",
-          "size": 391,
-          "preview": "# Reasoning trace \u2014 SECTOR PREDICT Technology 2026-09-28\n**Step 0 \u2014 Setup.** Loaded 151,529 characters of input. Provider: OpenClaw gateway, backend model `xai/grok-4.6`. Native web/X search was ENABLED inside the agent turn; see the RESEARCH APPENDIX at the end of the output for queries and sources.\n**Step 1 \u2014 Done.** The agent returned its full analysis (17,199 characters)."
+          "size": 396,
+          "preview": "# Reasoning trace \u2014 SECTOR PREDICT Basic Materials 2026-09-28\n**Step 0 \u2014 Setup.** Loaded 151,318 characters of input. Provider: OpenClaw gateway, backend model `xai/grok-4.6`. Native web/X search was ENABLED inside the agent turn; see the RESEARCH APPENDIX at the end of the output for queries and sources.\n**Step 1 \u2014 Done.** The agent returned its full analysis (19,461 characters)."
         },
         {
-          "path": "01_daily/_transcripts/2026-09-28_sector_technology_predict.json",
+          "path": "01_daily/_transcripts/2026-09-28_sector_basic_materials_predict.json",
           "ok": true,
           "reason": "",
-          "size": 173127,
+          "size": 175177,
           "preview": "keys: provider, agent, backend_model, messages"
         },
         {
           "path": "01_daily/2026-09-28_preopen_qc.json",
           "ok": true,
           "reason": "",
-          "size": 8317,
+          "size": 7541,
           "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok"
         },
         {
           "path": "01_daily/sectors/2026-09-28/_qc.json",
           "ok": true,
           "reason": "",
-          "size": 2330,
+          "size": 1557,
           "preview": "keys: date, n_ok, n_total, summary, sectors"
         },
         {
           "path": "01_daily/sectors/2026-09-28/_BOARD.md",
           "ok": true,
           "reason": "",
-          "size": 1621,
-          "preview": "# Sector Board \u2014 2026-09-28\nGenerated: **2026-09-28T07:11:43.372510-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.)."
+          "size": 1685,
+          "preview": "# Sector Board \u2014 2026-09-28\nGenerated: **2026-09-28T07:36:27.772477-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.)."
         },
         {
           "path": "01_daily/sectors/2026-09-28/_board.json",
           "ok": true,
           "reason": "",
-          "size": 6537,
+          "size": 6437,
           "preview": "keys: date, generated_at, summary, sectors"
         },
         {
           "path": "03_scoreboard/scoreboard.json",
           "ok": true,
           "reason": "",
-          "size": 924529,
+          "size": 925627,
           "preview": "keys: runs"
         }
       ],
-      "preview": "# Sector Prediction \u2014 Technology \u2014 2026-09-28\n- news_mode: **on**\n- ETF: **XLK**\n- rubric: `00_grounding/sectors/technology.md`\n- predicted_direction: **down**\n- predicted_magnitude_band: **mild**\n- total_score: **-13.383** (mult 0.85)\n- regime: risk_off\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **-6.535** (NQ -0.96%, ES -0.52%, PM:XLK -1.16%) \u00b7 index_carry **-1.535** (general -6.14) \u00b7 llm_overlay **-5.312** (raw -5.312) \u00b7 # Reasoning trace \u2014 SECTOR PREDICT Technology 2026-09-28\n**Step 0 \u2014 Setup.** Loaded 151,529 characters of input. Provider: OpenClaw gateway, backend model `xai/grok-4.6`. Native web/X search was ENABLED inside the agent turn; see the RESEARCH APPENDIX at the end of the output for queries and sources.\n**Step 1 \u2014 Done.** The agent returned its full analysis (17,199 characters). \u00b7 keys: provider, agent, backend_model, messages \u00b7 keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok \u00b7 keys: date, n_ok, n_total, summary, sectors \u00b7 # Sector Board \u2014 2026-09-28\nGenerated: **2026-09-28T07:11:43.372510-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`,"
+      "preview": "# Sector Prediction \u2014 Basic Materials \u2014 2026-09-28\n- news_mode: **on**\n- ETF: **XLB**\n- rubric: `00_grounding/sectors/basic_materials.md`\n- predicted_direction: **down**\n- predicted_magnitude_band: **mild**\n- total_score: **-6.779** (mult 0.85)\n- regime: risk_off\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **-0.144** (ES -0.53%, HG +0.66%, GC +0.90%, DX -0.02%) \u00b7 index_carry **-1.535** (general -6.14) \u00b7 llm_overlay **-5.1** (raw -5.1) \u00b7 # Reasoning trace \u2014 SECTOR PREDICT Basic Materials 2026-09-28\n**Step 0 \u2014 Setup.** Loaded 151,318 characters of input. Provider: OpenClaw gateway, backend model `xai/grok-4.6`. Native web/X search was ENABLED inside the agent turn; see the RESEARCH APPENDIX at the end of the output for queries and sources.\n**Step 1 \u2014 Done.** The agent returned its full analysis (19,461 characters). \u00b7 keys: provider, agent, backend_model, messages \u00b7 keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok \u00b7 keys: date, n_ok, n_total, summary, sectors \u00b7 # Sector Board \u2014 2026-09-28\nGenerated: **2026-09-28T07:36:27.772477-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`techno"
     }
   ],
   "source": "publish_live_boards"
