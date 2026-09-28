@@ -1,0 +1,23 @@
+{
+ "risk_tilt": "off",
+ "macros": [
+  "hawkish",
+  "mixed",
+  "hawkish",
+  "mixed"
+ ],
+ "sector_tilts": {
+  "Financial": "bearish",
+  "Ai/Growth": "bearish",
+  "Technology": "bullish",
+  "Healthcare": "bullish",
+  "Energy/Ai-Power": "bullish"
+ },
+ "tickers": {
+  "XLF": -4.0,
+  "SMH": 4.0,
+  "XLV": 4.0
+ },
+ "b1_inject": "NEWS_JUDGE: n=8 rescued=1\nMACRO rates: [hawkish] 10Y multi-decade highs / >5%; Oct hike odds ~64-69% (regime/1w)\nMACRO data: [mixed] NFP + core PCE pending; Bessent says core inflation calm \u2014 do not pre-score the binary (session/1d-1w)\nMACRO oil-geo: [mixed] Hormuz standoff/oil into hike bets vs Friday easing-Iran recap; leftover not fresh kinetic (session)\nSECTOR financials: [bearish] banks sink despite hike; BNY prime +25bp to 7% (XLF)\nSECTOR AI/growth: [bearish] AI borrowers face yield-spike credit risk; APH already -6.5% on yields (AI/duration basket)\nSECTOR semis: [bullish] Friday chip leadership + AMD PT $720 on server CPU (SMH)\nSECTOR healthcare: [bullish] AMGN Ph3 Sj\u00f6gren's; LLY/NVO readout week (XLV)\nSECTOR energy/AI-power: [bullish] Bloom/Oracle 2.4GW Jupiter still on timeline (BE/IPPs)\nINTERACTION: hawkish 5% 10Y + AI credit stress + pending NFP/PCE = one rates cluster; do not buy AI/software on chips; do not B1=-3 Hormuz leftover; hike \u2260 XLF tailwind\nWATCH: NFP/PCE unresolved \u2014 no signed lean into the binary without futures confirmation",
+ "date": "2026-09-28"
+}

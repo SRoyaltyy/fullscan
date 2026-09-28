@@ -1,12 +1,11 @@
 {
   "date": "2026-09-28",
-  "generated_at": "2026-09-28T04:43:26.060857-04:00",
+  "generated_at": "2026-09-28T04:46:09.964043-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
     "MISSING General predict MD `01_daily/general/2026-09-28_predict.md` \u2014 missing",
     "MISSING Sector board JSON `01_daily/sectors/2026-09-28/_board.json` \u2014 missing",
-    "MISSING News judge MD `01_daily/news/2026-09-28_judge.md` \u2014 missing",
     "MISSING AB checklist enriched `data/ab_checklist/2026-09-28_ab_checklist_enriched.csv` \u2014 missing"
   ],
   "counts": {
@@ -182,7 +181,7 @@
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 3,
+      "n_req_ok": 4,
       "n_req": 20,
       "n_opt_ok": 2,
       "n_opt": 3,
@@ -272,11 +271,15 @@
           "name": "News judge MD",
           "path": "01_daily/news/2026-09-28_judge.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 11271,
+          "said": "1. **10-year Treasury at multi-decade highs / yields >5%** \u2014 This is the SPX-multiple and financial-conditions spine; it outranks duplicate gold/FX color. Chann",
+          "bullets": [
+            "2. **Hawkish Fed remarks lift October hike odds to ~64\u201369% (Nomura: 125bp/1y \u201cexcessive\u201d)** \u2014 Near-term policy path is the risk-appetite switch vs Friday\u2019s chip-led close. Channel: rates",
+            "3. **NFP and core PCE due as the next hard tests** \u2014 Scheduled binaries will reprice the whole hike cluster over the next 1\u20135 sessions. Channel: rates",
+            "4. **Hormuz standoff / oil up vs Friday\u2019s easing-Iran recap; gold dumped ~$100** \u2014 Live oil-to-rates overlay on beta, but freshness is contested after Friday\u2019s easing tape. Channel: risk"
+          ]
         },
         {
           "key": "research_json",
@@ -345,13 +348,13 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 7541,
-          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 16 fail",
+          "size": 7535,
+          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 14 fail",
           "bullets": [
             "general_predict:missing",
-            "news_judge:missing",
-            "news_actions:missing",
-            "finviz_market_digest:missing"
+            "finviz_market_digest:missing",
+            "map_heat_research:missing",
+            "sector_predict:missing"
           ]
         },
         {
@@ -725,11 +728,15 @@
           "name": "News judge MD",
           "path": "01_daily/news/2026-09-28_judge.md",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 11271,
+          "said": "1. **10-year Treasury at multi-decade highs / yields >5%** \u2014 This is the SPX-multiple and financial-conditions spine; it outranks duplicate gold/FX color. Chann",
+          "bullets": [
+            "2. **Hawkish Fed remarks lift October hike odds to ~64\u201369% (Nomura: 125bp/1y \u201cexcessive\u201d)** \u2014 Near-term policy path is the risk-appetite switch vs Friday\u2019s chip-led close. Channel: rates",
+            "3. **NFP and core PCE due as the next hard tests** \u2014 Scheduled binaries will reprice the whole hike cluster over the next 1\u20135 sessions. Channel: rates",
+            "4. **Hormuz standoff / oil up vs Friday\u2019s easing-Iran recap; gold dumped ~$100** \u2014 Live oil-to-rates overlay on beta, but freshness is contested after Friday\u2019s easing tape. Channel: risk"
+          ]
         },
         {
           "key": "in_weather",
@@ -1383,6 +1390,31 @@
         }
       ],
       "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions \u00b7 # News \u2192 Actions v4 (full framework) \u2014 2026-09-28T04:43:16.270373-04:00\nraw=400 unique_events=3 tickers=50"
+    },
+    {
+      "key": "news_judge",
+      "title": "News judge",
+      "date": "2026-09-28",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-28T04:46:09.418607-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-09-28_judge.md",
+          "ok": true,
+          "reason": "",
+          "size": 11271,
+          "preview": "# News Judge \u2014 2026-09-28"
+        },
+        {
+          "path": "01_daily/news/2026-09-28_judge.json",
+          "ok": true,
+          "reason": "",
+          "size": 1442,
+          "preview": "keys: risk_tilt, macros, sector_tilts, tickers, b1_inject, date"
+        }
+      ],
+      "preview": "# News Judge \u2014 2026-09-28 \u00b7 keys: risk_tilt, macros, sector_tilts, tickers, b1_inject, date"
     }
   ],
   "href": {
