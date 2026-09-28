@@ -2,24 +2,8 @@
 
 
 
-**Step 0 — Setup.** Loaded the rubric, standing lessons, and Channel 1 data (11,889 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.
+**Step 0 — Setup.** Loaded 12,326 characters of input. Provider: OpenClaw gateway, backend model `xai/grok-4.6`. Native web/X search was ENABLED inside the agent turn; see the RESEARCH APPENDIX at the end of the output for queries and sources.
 
 
 
-**Step 1 — Research.** The model wanted to know: *"SGHC Super Group earnings news September 2026"* → got 6 results (via gnews_rss)
-
-  - SGHC News Today | Why did Super Group (SGHC) stock go down today? - MarketBeat (https://news.google.com/rss/articles/CBMiXkFVX3lxTE02R1ZwNUtzOGYybnYxR2VaVFYzVllZM0Nkd2x6c1B3SHZILXl0bXVVLXh6WTJIWDhVek5IVU56ZlpmTV9KVWY5OTVaanFJQlg0Ry1iNjU3OW1HWFpKYVE?oc=5)
-
-  - Super Group Ltd (JSE:SPG) (FY 2026) Earnings Call Highlights: Record Profit Surge and Strategic ... - Yahoo Finance (https://news.google.com/rss/articles/CBMikgFBVV95cUxNZ3B4NDQxZFc1XzZWeDduSlNJMkdwamRpQk5VYUh3NG85ZjhIVnFRcGJhM3k3WVFmN05WU3VYeWJLMTMybjBGdlBXaGw1RkJvdHlSS05UcGV5Z1hYS3VmV3M5UWl3ZDJfSjBKbTVNRHNtckt5OXJ1ajNYZDRLa0R2UFpXUzlaM2R6ODRWVkpidnZnQQ?oc=5)
-
-  - Super Group (SGHC) Ltd's Dividend Analysis - GuruFocus (https://news.google.com/rss/articles/CBMihAFBVV95cUxNNlQzMmYxRHR0OW9EdXB0ejFEYzJLTnZNUjUwQkh1cU9TeVJGSGVNS0RrVTkyS0tBX2p2VHNJM2hYZURBOHBpMHdWODh5cWJRS3FocUxsMVRUckMtSEVDcHpELU1CYldnNllaVU9lMHFPNXdWRllGN0RNbTNCNGY5WEV1NXE?oc=5)
-
-**Step 2 — Research.** The model wanted to know: *"Rush Street Interactive RSI news September 2026"* → got 6 results (via gnews_rss)
-
-  - At $19.35 a share, director Jack A. Markell buys Rush Street Interactive (RSI) stock. - Stock Titan (https://news.google.com/rss/articles/CBMivAFBVV95cUxNSlBRcjdPQ3l6ZFo0bHhuZ1hoZ1VWc2NGV3lPR2NNdkZLRXVvdE5rUDRGTW5DTzZBVHBMY3lBV2NVWGhSUF84V0toSkZUdDVhY0Q0U1o4UjZTb3k2dWN6RHJNbnI5RmVNb2s1ZnNiVmtvRDFTWV9rUmNIVk9CN1JyYmMwaDlSTVo3a1pFMXJ6T2RldHVjcUFXM3A4SjBLWmNZNk5BaUJQY3NndE9iTHZzUXJ3UUo2WW5OMWE3LQ?oc=5)
-
-  - Rush Street Interactive director Jack Markell buys $29,025 in stock - Investing.com (https://news.google.com/rss/articles/CBMiygFBVV95cUxQMEVJbll4a0Z2NHY5My0yN3QzZnd2bGZ0bGpXZDZvaHdDYU5DdUljV3pxdnhfM2pYTmlobldJeXpTSEZzRkZmM2YxSjR0VEN5bzNXWmJ4SmhTTmh5a0ZSVXJoQlpNZnR0ZkhWWFJBdGU5RHlVWkJTMHpZeWNuUFd6ZWFleWFjNU1TeHpBWUtNR1d1RmM0TGoxcGJTcGdYTUhraU1FTEdrcl91NVd5cjlvdTRReE44SThvdF9TUUpuenNOOHEtdjNKTGt3?oc=5)
-
-  - Rush Street Interactive Inc (RSI) Stock Down 5.0% but Still Over - GuruFocus (https://news.google.com/rss/articles/CBMivAFBVV95cUxNMnlJNkxjRUwtRnNnN04wYk9fWjZPdk04QnZqLXNyMnBZOUZFYm40S01ZVHlsX1NjdUFSRlhxaU9jNFZkNVdTeEEwV0ptT24wUWJRZE8taXVFM0xzenY4ejNHaTNOcngxYWU4dzlEQjhMaDFHbEhEMWF6eUFDU2pzLTBaRnMzWUpFVHdFaURJQW5BYWIzaVF5Wld3TkI2Qy1KbTkxbFRWaE51Ujk4TmZGSW0ybHBCcmNMNHdhVg?oc=5)
-
-**Step 4 — Search budget exhausted.** Forced to conclude with what it already gathered.
+**Step 1 — Done.** The agent returned its full analysis (33,308 characters).
