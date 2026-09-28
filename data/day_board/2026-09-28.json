@@ -1,6 +1,6 @@
 {
   "date": "2026-09-28",
-  "generated_at": "2026-09-28T13:53:57.211631-04:00",
+  "generated_at": "2026-09-28T13:54:04.890050-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -819,10 +819,10 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=5899",
-          "size": 2249790,
-          "said": "213 rows",
+          "size": 2255062,
+          "said": "216 rows",
           "bullets": [
-            "ARGX, REGN, AZN, NICE, EXEL, ONC, DSGX, SKHY"
+            "ARGX, COP, REGN, AZN, DVN, PR, NICE, EXEL"
           ]
         },
         {
@@ -900,9 +900,9 @@
           "bullets": []
         }
       ],
-      "said": "213 rows",
+      "said": "216 rows",
       "bullets": [
-        "ARGX, REGN, AZN, NICE, EXEL"
+        "ARGX, COP, REGN, AZN, DVN"
       ]
     },
     {
@@ -2664,6 +2664,24 @@
         }
       ],
       "preview": "weather sectors 11 \u00b7 Technology={'score': -13.383, 'dir': 'down', 'conf': 0.65, 'source': 'llm'}, Basic Materials={'score': -6.779, 'dir': 'down', 'conf': 0.65, 'source': 'llm'}, Communication Services={'score': -4.633, 'dir': 'flat', 'conf': 0.55, 'source': 'llm'}, Consumer Cyclical={'score': -6.753, 'dir': 'down', 'conf': 0.65, 'source': 'llm'}, Consumer Defensive={'score': -0.622, 'dir': 'flat', 'conf': 0.525, 'source': 'llm'}, Energy={'score': 7.946, 'dir': 'up', 'conf': 0.65, 'source': 'llm'}, Financial={'score': -0.28, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.16, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-09-28\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+    },
+    {
+      "key": "join",
+      "title": "Join / match rank",
+      "date": "2026-09-28",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-28T13:54:03.874384-04:00",
+      "files": [
+        {
+          "path": "data/join/2026-09-28_ranked.csv",
+          "ok": true,
+          "reason": "",
+          "size": 2255062,
+          "preview": "5899 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 ARGX, COP, REGN, AZN, DVN"
+        }
+      ],
+      "preview": "5899 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 ARGX, COP, REGN, AZN, DVN"
     }
   ],
   "href": {
