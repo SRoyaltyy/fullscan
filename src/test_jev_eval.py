@@ -10,7 +10,9 @@ from unittest import mock
 
 from src.jev_eval import (
     HOLDOUT_PATH,
+    diff_knobs,
     draw_sample,
+    effective_params,
     load_archive,
     parse_rss_xml,
     render_sheet,
@@ -26,6 +28,7 @@ from src.jev_gate import (
     NEWS_DIR,
     ROOT,
     GateKnobs,
+    code_drop_reason,
     decide,
     gate,
     load_chokepoint_state,
@@ -345,6 +348,7 @@ def _fixture_rss() -> list[dict]:
 
 
 def test_run_eval_writes_unlabeled_round_and_freezes_holdout():
+    hold_before = HOLDOUT_PATH.read_bytes() if HOLDOUT_PATH.is_file() else None
     watched = [
         ROOT / "00_grounding" / "jev_gold.json",
         ROOT / "00_grounding" / "jev_closed_lists.json",
@@ -407,7 +411,8 @@ def test_run_eval_writes_unlabeled_round_and_freezes_holdout():
     assert before == after
     for path in missing:
         assert not path.is_file()
-    assert not HOLDOUT_PATH.exists()
+    hold_after = HOLDOUT_PATH.read_bytes() if HOLDOUT_PATH.is_file() else None
+    assert hold_before == hold_after
 
 
 def test_real_archive_draw_excludes_gold_and_reuses_holdout(tmp_ok=True):
@@ -446,6 +451,113 @@ def test_real_archive_draw_excludes_gold_and_reuses_holdout(tmp_ok=True):
         assert again["holdout_created"] is False
         assert hold.read_bytes() == frozen
         assert {r["id"] for r in again["holdout"]} == ids
+
+
+def _gate_one(title: str, poster):
+    row = {
+        "id": title_id(title),
+        "title": title,
+        "source": "reuters",
+        "published_at": "2026-09-28T15:00:00Z",
+    }
+    decided = gate(
+        [row], code_only=False, live=True, key="x", poster=poster,
+        asof=dt.date(2026, 9, 28),
+    )
+    return decided[0]
+
+
+def test_earnings_strip_and_code_keep_skip_jev():
+    poster = mock.Mock(side_effect=AssertionError("Jev should not run"))
+    akamai = _gate_one("Akamai shares +8% after the print", poster)
+    assert poster.call_count == 0
+    assert akamai["decision"] == "drop" and akamai["reason"] == "earnings"
+
+    guidance = _gate_one("A retailer cuts guidance for the spring quarter", poster)
+    assert guidance["reason"] == "earnings"
+    pt = _gate_one("Street raises PT on a listed retailer", poster)
+    assert pt["reason"] == "earnings"
+
+    cpi = _gate_one("CPI report shows inflation at 3.1 percent", poster)
+    assert cpi["decision"] == "keep" and cpi["reason"] == "code_print"
+    assert poster.call_count == 0
+
+    diesel = _gate_one("Trump mulls diesel export ban", poster)
+    assert diesel["decision"] == "keep" and diesel["reason"] == "code_lever"
+    floated = _gate_one("USTR considering a tariff on steel plate", poster)
+    assert floated["decision"] == "keep" and floated["reason"] == "code_lever"
+
+    state = load_chokepoint_state()
+    asof = dt.date(2026, 9, 28)
+    guide_row = {"title": "FDA issues guidance on compounding pharmacies", "source": "reuters"}
+    assert code_drop_reason(guide_row, asof=asof, state=state) == ""
+    assert not guide_row.get("_code_keep")
+    chip_row = {"title": "Marvell Stock Jumps On Google Chip, Investment Deal", "source": "reuters"}
+    assert code_drop_reason(chip_row, asof=asof, state=state) == ""
+    assert not chip_row.get("_code_keep")
+
+    slide = _gate_one(
+        "US stocks halt their slide after the Treasury Department moves to ease pressure from the bond market",
+        poster,
+    )
+    assert slide["decision"] == "drop" and slide["reason"] == "tape"
+    oil = _gate_one("Oil rises as talks stall in the Gulf", poster)
+    assert oil["decision"] == "drop" and oil["reason"] == "tape"
+    gold = _gate_one("Gold falls as traders price another Fed hike", poster)
+    assert gold["decision"] == "drop" and gold["reason"] == "tape"
+
+    coupon = _gate_one("Treasury shifts the coupon auction calendar", poster)
+    assert coupon["decision"] == "keep" and coupon["reason"] == "code_shape"
+    nhtsa = _gate_one("NHTSA opens a defect probe into a brake line", poster)
+    assert nhtsa["reason"] == "code_shape"
+    bis = _gate_one("BIS puts three toolmakers on the entity list", poster)
+    assert bis["decision"] == "keep"
+
+    stale = _gate_one("Tensions persist as tankers transit the Strait of Hormuz", poster)
+    assert stale["decision"] == "drop" and stale["reason"] == "reprint_weather"
+    fresh = _gate_one(
+        "Iran seizes tanker in Strait of Hormuz after first strike on shipping",
+        poster,
+    )
+    assert fresh["decision"] == "keep" and fresh["reason"] == "code_choke"
+    opinion = _gate_one("What it means for markets if the Fed holds", poster)
+    assert opinion["decision"] == "drop" and opinion["reason"] == "junk_shape"
+    watching = _gate_one("What we're watching before the cash open", poster)
+    assert watching["reason"] == "junk_shape"
+    assert poster.call_count == 0
+
+    lists = (ROOT / "00_grounding" / "jev_closed_lists.json").read_text(encoding="utf-8").lower()
+    junk = (ROOT / "00_grounding" / "jev_junk_shapes.json").read_text(encoding="utf-8").lower()
+    assert "cpi report shows" not in lists and "cpi report shows" not in junk
+    assert "diesel export ban" not in lists and "diesel export ban" not in junk
+
+
+def test_lever_keep_beats_opinion_and_low_material():
+    row = {
+        "title": "Trump mulls diesel export ban",
+        "_code_keep": "code_lever",
+    }
+    decided = decide(row, _answers(0.20, 0.10, "other", "other_person", opinion=0.95))
+    assert decided["decision"] == "keep"
+    assert decided["reason"] == "code_lever"
+
+
+def test_round2_knob_is_only_the_code_rules():
+    prev = json.loads(
+        (ROOT / "00_grounding" / "jev_rounds" / "20260928_1111.json").read_text(encoding="utf-8")
+    )["params"]
+    current = effective_params(GateKnobs(), load_chokepoint_state())
+    assert diff_knobs(current, prev) == {
+        "name": "hop0_code_rules",
+        "from": None,
+        "to": "on",
+    }
+    assert diff_knobs(current, None) is None
+    try:
+        diff_knobs({**current, "action_material": 0.5}, prev)
+        raise AssertionError("two knobs should fail")
+    except RuntimeError as exc:
+        assert "one knob" in str(exc)
 
 
 def test_cli_refuses_missing_key_and_two_knobs():
@@ -504,6 +616,9 @@ def main() -> None:
         test_score_rules_four_bars,
         test_run_eval_writes_unlabeled_round_and_freezes_holdout,
         test_real_archive_draw_excludes_gold_and_reuses_holdout,
+        test_earnings_strip_and_code_keep_skip_jev,
+        test_lever_keep_beats_opinion_and_low_material,
+        test_round2_knob_is_only_the_code_rules,
         test_cli_refuses_missing_key_and_two_knobs,
         test_workflow_is_dispatch_and_pr_only,
     ]

@@ -369,8 +369,19 @@ def test_code_only_gold_leaves_jev_rows():
     by_id = {r["id"]: r for r in report["gold"]["rows"]}
     assert by_id["palestine"]["decision"] == "keep"
     assert by_id["palestine"]["reason"] == "code_leftover"
-    assert by_id["cafe"]["reason"] == "code_leftover"
+    assert by_id["cafe"]["reason"] == "code_instrument"
+    assert by_id["bitget"]["reason"] == "code_structure"
+    assert by_id["fda"]["reason"] == "code_instrument"
+    assert by_id["nbs"]["reason"] == "code_print"
+    assert by_id["dup_a"]["reason"] == "code_print"
+    assert by_id["hormuz_new"]["reason"] == "code_choke"
+    assert by_id["red_sea"]["reason"] == "code_choke"
+    assert by_id["trump_arrest"]["reason"] == "code_leftover"
+    assert by_id["yemen"]["reason"] == "code_leftover"
+    assert by_id["noreaster"]["reason"] == "code_leftover"
     assert by_id["opinion"]["decision"] == "drop"
+    assert by_id["opinion"]["reason"] in {"source", "junk_shape"}
+    assert by_id["reaction"]["reason"] == "junk_shape"
     assert by_id["hormuz_reprint"]["decision"] == "drop"
 
 

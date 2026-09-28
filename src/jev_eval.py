@@ -568,6 +568,7 @@ def effective_params(knobs: GateKnobs, state: dict) -> dict:
         "listed_token_in_title": bool(knobs.listed_token_in_title),
         "reprint_weather_days": int(days),
         "new_verbs": verbs,
+        "hop0_code_rules": "on",
         "jaccard_drop": JACCARD_DROP,
         "trash_noul": TRASH_NOUL,
         "material_keep_default": MATERIAL_KEEP,
@@ -581,6 +582,49 @@ def knob_changed_record(name: str | None, knobs: GateKnobs, state_before: dict) 
     before = effective_params(GateKnobs(), state_before)
     after = effective_params(knobs, state_for_knobs(state_before, knobs))
     return {"name": name, "from": before.get(name), "to": after.get(name)}
+
+
+def diff_knobs(params: dict, previous: dict | None) -> dict | None:
+    """One changed param against the previous round. None when there is no previous."""
+    if previous is None:
+        return None
+    changed = [
+        key for key in sorted(set(params) | set(previous))
+        if params.get(key) != previous.get(key)
+    ]
+    if len(changed) > 1:
+        raise RuntimeError("one knob per round; changed " + ", ".join(changed))
+    if not changed:
+        return None
+    key = changed[0]
+    return {"name": key, "from": previous.get(key), "to": params.get(key)}
+
+
+def _latest_round_params(rounds_dir: Path) -> dict | None:
+    if not rounds_dir.is_dir():
+        return None
+    files = sorted(
+        p for p in rounds_dir.glob("*.json")
+        if p.is_file() and not p.name.endswith("_sheet.json")
+    )
+    if not files:
+        return None
+    try:
+        blob = json.loads(files[-1].read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return None
+    params = blob.get("params") if isinstance(blob, dict) else None
+    return params if isinstance(params, dict) else None
+
+
+def keep_via(decision: str, reason: str) -> str:
+    if decision != "keep":
+        return ""
+    if reason == "code_shape":
+        return "keep_shaped"
+    if reason.startswith("code_") and reason != "code_leftover":
+        return "code_override"
+    return "jev"
 
 
 def score_rules(items: list[dict], *, drop_rate: float | None = None) -> dict:
@@ -708,6 +752,7 @@ def _join_items(sample: dict, decided: dict[str, dict]) -> list[dict]:
                 "url": row.get("url") or "",
                 "predicted": dec.get("decision") or "",
                 "reason": dec.get("reason") or "",
+                "keep_via": keep_via(dec.get("decision") or "", dec.get("reason") or ""),
                 "label": "",
                 "geo": dec.get("geo") or "",
                 "actor_power": dec.get("actor_power") or "",
@@ -738,6 +783,8 @@ def render_sheet(report: dict) -> str:
         "",
         "Predicted keep/drop is the current gate. It is not a label.",
         "",
+        f"Earnings stripped before Jev: {(report.get('sample') or {}).get('earnings_stripped', 0)}",
+        "",
     ]
     sections = (
         ("parsed", "Archive sample (parsed, stratified by date)"),
@@ -748,17 +795,28 @@ def render_sheet(report: dict) -> str:
     for pool, heading in sections:
         lines.append(f"## {heading}")
         lines.append("")
-        lines.append("| n | pool | predicted | reason | label | title |")
-        lines.append("|---|------|-----------|--------|-------|-------|")
+        lines.append("| n | pool | predicted | reason | kept_by | label | title |")
+        lines.append("|---|------|-----------|--------|---------|-------|-------|")
         for it in report.get("items") or []:
             if it.get("pool") != pool:
                 continue
             n += 1
             lines.append(
                 f"| {n} | {pool} | {it.get('predicted')} | {_cell(it.get('reason') or '')} "
-                f"|  | {_cell(it.get('title') or '')} |"
+                f"| {_cell(it.get('keep_via') or '')} |  | {_cell(it.get('title') or '')} |"
             )
         lines.append("")
+    keeps = [it for it in (report.get("items") or []) if it.get("predicted") == "keep"]
+    lines.append("## Predicted keeps")
+    lines.append("")
+    lines.append("| pool | kept_by | reason | title |")
+    lines.append("|------|---------|--------|-------|")
+    for it in keeps:
+        lines.append(
+            f"| {it.get('pool')} | {_cell(it.get('keep_via') or '')} "
+            f"| {_cell(it.get('reason') or '')} | {_cell(it.get('title') or '')} |"
+        )
+    lines.append("")
     return "\n".join(lines) + "\n"
 
 
@@ -852,7 +910,7 @@ def run_eval(*, live: bool = True, workers: int = 16, seed: int | None = None,
         "model": model,
         "seed": seed,
         "params": effective_params(knobs, state_for_knobs(state_before, knobs)),
-        "knob_changed": knob_changed_record(knob_name, knobs, state_before),
+        "knob_changed": None,
         "sample": {
             "parsed_target": parsed_n,
             "rss_target": rss_n,
@@ -868,6 +926,7 @@ def run_eval(*, live: bool = True, workers: int = 16, seed: int | None = None,
             "holdout_algo": HASH_ALGO,
             "holdout_ids": list(sample["holdout_blob"].get("ids") or []),
             "tuning_overlap_holdout": sample["tuning_overlap_holdout"],
+            "earnings_stripped": sum(1 for it in items if it.get("reason") == "earnings"),
             "parsed_dates": dict(Counter(r.get("date") or "" for r in sample["parsed"])),
             "rss_queries": dict(Counter(r.get("query") or "" for r in sample["rss"])),
             "sources": {
@@ -880,6 +939,14 @@ def run_eval(*, live: bool = True, workers: int = 16, seed: int | None = None,
         "rules": None,
         "items": items,
     }
+    explicit = knob_changed_record(knob_name, knobs, state_before)
+    previous = _latest_round_params(rounds_dir) if rounds_dir.is_dir() else None
+    inferred = diff_knobs(report["params"], previous)
+    if inferred and explicit and inferred.get("name") != explicit.get("name"):
+        raise RuntimeError(
+            f"knob flag {explicit.get('name')} disagrees with param diff {inferred.get('name')}"
+        )
+    report["knob_changed"] = inferred if previous is not None else explicit
     # Recompute round index after stamp dir exists. _round_index counts json
     # files; this report is not written yet, so index is correct.
     if write:
@@ -928,11 +995,19 @@ def _print_summary(report: dict) -> None:
     )
     print(
         f"[jev_eval] keep={overall.get('keep')} drop={overall.get('drop')} "
-        f"drop_rate={overall.get('drop_rate')}"
+        f"drop_rate={overall.get('drop_rate')} "
+        f"earnings_stripped={sample.get('earnings_stripped')}"
     )
     for pool in ("parsed", "rss", "holdout"):
         chunk = pred.get(pool) or {}
         print(f"[jev_eval] {pool} keep={chunk.get('keep')} drop={chunk.get('drop')} n={chunk.get('n')}")
+    for it in report.get("items") or []:
+        if it.get("predicted") != "keep":
+            continue
+        print(
+            f"[jev_eval] KEEP pool={it.get('pool')} via={it.get('keep_via')} "
+            f"reason={it.get('reason')} title={it.get('title')}"
+        )
     if report.get("_sheet_path"):
         print(f"[jev_eval] sheet={report.get('_sheet_path')}")
         print(f"[jev_eval] round_json={report.get('_round_path')}")
@@ -948,6 +1023,7 @@ def _print_summary(report: dict) -> None:
             "rss": sample.get("rss"),
             "holdout": sample.get("holdout"),
             "gold_discarded_redrawn": sample.get("gold_discarded_redrawn"),
+            "earnings_stripped": sample.get("earnings_stripped"),
         },
         "predicted": pred,
     }

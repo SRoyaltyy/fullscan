@@ -428,18 +428,239 @@ def reprint_weather_code(title: str, asof: dt.date, state: dict) -> dict:
     }
 
 
+# Hop-0 is news. Earnings are a different pipe and never reach Jev.
+# Shapes below are tokens, not headlines. Closed lists stay untouched.
+_POLICY_CTX = re.compile(
+    r"(?i)\b(?:fda|fomc|fed|cpi|pce|ppi|nfp|nbs|pboc|ecb|boj|bis|nhtsa|"
+    r"epa|carb|sec|ftc|doj|cafe|wasde|eia|ism|gdp|ustr|treasury|cms|opec)\b"
+)
+_EARNINGS = re.compile(
+    r"(?i)(?:"
+    r"\bearnings\b"
+    r"|\bprice[- ]targets?\b"
+    r"|\beps\b"
+    r"|\bprofit warning\b"
+    r"|\brevenue\b.{0,24}\b(?:beat|miss)"
+    r"|\b(?:beats?|miss(?:es|ed)?)\b.{0,30}\b(?:earnings|estimates|expectations)\b"
+    r"|\bguidance\b"
+    r"|\b(?:raise[sd]?|cuts?|hikes?|lowers?|lowered|boosts?|boosted|slash(?:ed|es)?)\s+pt\b"
+    r"|\bpt\s+(?:raise[sd]?|cuts?|hikes?|lowers?|lowered|boosts?|boosted|slash(?:ed|es)?)\b"
+    r")"
+)
+_SHARE_PCT = re.compile(
+    r"(?i)(?:"
+    r"\b(?:shares|stock)\b.{0,24}(?:\+\d+(?:\.\d+)?%|up \d+(?:\.\d+)?%)"
+    r"|(?:\+\d+(?:\.\d+)?%|up \d+(?:\.\d+)?%).{0,24}\b(?:shares|stock)\b"
+    r")"
+)
+_EXTRA_JUNK = re.compile(
+    r"(?i)(?:"
+    r"what we.?re watching"
+    r"|\$\s*10[,.]?000"
+    r"|\b10k\b.{0,48}\btesla\b"
+    r"|\btesla\b.{0,48}\b10k\b"
+    r"|if you (?:had )?invested"
+    r"|sports?\s+stock\s+report"
+    r")"
+)
+_TAPE = re.compile(
+    r"(?i)(?:"
+    r"\bgold\b.{0,24}\b(?:falls?|drops?|plunges?|declines?|rises?|jumps?|fell|rose|slides?|slid)\b"
+    r"|\b(?:falls?|drops?|plunges?|rises?|jumps?|fell|rose)\b.{0,16}\bgold\b"
+    r"|\boil price today\b"
+    r"|\bbrent\b.{0,20}\b(?:rises?|falls?|jumps?|rose|fell)\b"
+    r"|\boil prices?\b.{0,24}\b(?:jump|jumps|jumped|rise|rises|rose|fall|falls|fell|climb|climbs|climbed|slide|slides|slid)\b"
+    r"|\boil\b.{0,12}\b(?:rises?|jumps?|climbs?|falls?|rose|fell)\b"
+    r"|\bstocks?\b.{0,40}\bhalt(?:s|ed)?\b"
+    r"|\bhalt (?:their|the) slide\b"
+    r"|\bstocks?\s+(?:jump|jumps|jumped|rally|rallies|rallied|fall|falls|fell)\s+as\b"
+    r")"
+)
+_INSTRUMENT = re.compile(
+    r"(?i)(?:"
+    r"\bexecutive orders?\b"
+    r"|\bfederal register\b"
+    r"|\bfinal rules?\b"
+    r"|\bcafe\b"
+    r"|\baccelerated approval\b"
+    r"|\bcomplete response letter\b"
+    r"|\bcrl\b"
+    r"|\badcomm\b"
+    r"|\bfda\b.{0,40}\b(?:approval|approves|approved|rejects|rejection)\b"
+    r"|\b(?:approval|approves|approved)\b.{0,40}\bfda\b"
+    r"|\b(?:sec|ftc|doj)\b.{0,50}\b(?:order|consent order|charges)\b"
+    r"|\b(?:consent order|charges)\b.{0,40}\b(?:sec|ftc|doj)\b"
+    r"|\bbis\b.{0,40}\b(?:export|entity)\b"
+    r"|\bcourt orders?\b"
+    r"|\bcourt rulings?\b"
+    r"|\binjunction\b"
+    r"|\btro\b"
+    r")"
+)
+_PRINT = re.compile(
+    r"(?i)(?:"
+    r"\b(?:cpi|pce|ppi|nfp)\b"
+    r"|\bnonfarm payrolls\b"
+    r"|\b(?:jobless|initial) claims\b"
+    r"|\bretail sales\b"
+    r"|\bgdp\b"
+    r"|\bwasde\b"
+    r"|\bindustrial profits\b"
+    r"|\bism\b"
+    r"|\beia\b"
+    r"|\bapi\b.{0,30}\b(?:crude|inventor(?:y|ies))\b"
+    r")"
+)
+_RATE = re.compile(
+    r"(?i)(?:"
+    r"\b(?:fomc|boj|ecb|pboc|federal reserve|fed)\b.{0,80}"
+    r"\b(?:holds?|hikes?|cuts?|pauses?|raises?|lowers?)\b.{0,40}"
+    r"\b(?:rates?|basis points?|bps|percent|%)\b"
+    r"|\b(?:fomc|boj|ecb|pboc|federal reserve|fed)\b.{0,60}\b(?:rate )?decision\b"
+    r"|\b(?:fomc|boj|ecb|pboc|federal reserve|fed)\b.{0,40}"
+    r"\d+(?:\.\d+)?\s*(?:%|percent|bps|basis points)\b"
+    r")"
+)
+_LEVER_ACTOR = re.compile(
+    r"(?i)\b(?:"
+    r"trump|biden|harris|powell|yellen|xi|lagarde|starmer|ishiba|modi|"
+    r"potus|president|white house|cabinet|fed official|federal reserve|"
+    r"fomc|warsh|pboc|ecb|boj|treasury|ustr|"
+    r"commerce secretary|energy secretary|defense secretary|"
+    r"secretary of commerce|secretary of energy|secretary of defense|"
+    r"secretary of the treasury|secretary of state"
+    r")\b"
+)
+_LEVER_VERB = re.compile(
+    r"(?i)\b(?:"
+    r"bans?|banned|tariffs?|sanctions?|quota|exports?|dut(?:y|ies)|"
+    r"ceasefire|hikes?|cuts?|pauses?|emergency|executive orders?|eo|rules?"
+    r")\b"
+)
+_OPS = re.compile(
+    r"(?i)(?:"
+    r"\b(?:plant|factory|refinery|pipeline|rig|mine)\b.{0,40}"
+    r"\b(?:explosion|fire|blast|explodes|exploded|outage)\b"
+    r"|\b(?:explosion|blast|explodes|exploded)\b.{0,40}"
+    r"\b(?:plant|factory|refinery|pipeline|rig|mine|terminal|port)\b"
+    r"|\bfaa\b.{0,40}\b(?:ground|grounds|grounding|grounded)\b"
+    r"|\b(?:port|rail) strike\b"
+    r"|\b(?:trading|exchange) halt\b"
+    r"|\bransomware\b"
+    r"|\bcyber ?attacks?\b"
+    r"|\bcyber\b.{0,20}\b(?:breach|hack)\b"
+    r"|\bzero[- ]day\b"
+    r"|\bmine outage\b"
+    r"|\bopec\b"
+    r")"
+)
+_STRUCTURE = re.compile(
+    r"(?i)(?:"
+    r"\btokenized\b.{0,20}\bstocks?\b"
+    r"|\bapp store\b"
+    r"|\bdigital markets act\b"
+    r"|\bdma ruling\b"
+    r"|\bdelisting\b"
+    r"|\bnew (?:exchange|venue)\b"
+    r"|\b(?:nasdaq|nyse)\b.{0,30}\b(?:listing|lists|delist)\b"
+    r")"
+)
+_SHAPE = re.compile(
+    r"(?i)(?:"
+    r"\b(?:tga|refunding|debt ceiling)\b"
+    r"|\b(?:coupon|auction|issuance)\b.{0,24}\bcalendar\b"
+    r"|\bcalendar\b.{0,24}\b(?:coupon|auction|issuance)\b"
+    r"|\b(?:bis|entity list|semiconductor export|export control|export[- ]licen[sc]e)\b"
+    r"|\b(?:cms|ira drug|drug price negotiation|medicare negotiation)\b"
+    r"|\b(?:nhtsa|carb|epa)\b"
+    r"|\bstrike authorization\b"
+    r"|\b(?:iam|ila)\b.{0,24}\bstrike\b"
+    r"|\b(?:failed auction|sovereign default|debt default)\b"
+    r"|\b(?:moody'?s|moodys|fitch|s\s*&\s*p)\b.{0,50}\b(?:cut|downgrade|rating)\b"
+    r"|\brating cut\b.{0,40}\b(?:sovereign|sifi|treasury)\b"
+    r"|\b(?:sovereign|sifi)\b.{0,40}\brating cut\b"
+    r"|\b(?:nasdaq|nyse|exchange)\b.{0,40}\b(?:hack|halt|outage|cyber)\b"
+    r"|\b(?:nbs|pboc|rrr|reserve requirement)\b"
+    r")"
+)
+
+
+def is_earnings(title: str) -> bool:
+    """Earnings, guidance, PT, and share-tape percents. Not a policy print."""
+    title = title or ""
+    if _SHARE_PCT.search(title) and not _POLICY_CTX.search(title):
+        return True
+    match = _EARNINGS.search(title)
+    if not match:
+        return False
+    hit = match.group(0).lower()
+    if "guidance" in hit and "earnings" not in title.lower() and _POLICY_CTX.search(title):
+        return False
+    return True
+
+
+def tape_hit(title: str) -> bool:
+    return bool(_TAPE.search(title or ""))
+
+
+def _instrument_hit(title: str) -> bool:
+    return bool(_INSTRUMENT.search(title or ""))
+
+
+def _print_hit(title: str) -> bool:
+    return bool(_PRINT.search(title or "") or _RATE.search(title or ""))
+
+
+def _lever_hit(title: str) -> bool:
+    """Actor plus a lever verb. 'Mulls' / 'considering' do not cancel or suffice."""
+    return bool(_LEVER_ACTOR.search(title or "") and _LEVER_VERB.search(title or ""))
+
+
+def _shape_hit(title: str) -> bool:
+    return bool(_SHAPE.search(title or ""))
+
+
+def code_keep_rule(title: str, clock: dict | None = None) -> str:
+    """Code keep. Empty string leaves the title for tape or for Jev."""
+    clock = clock or {}
+    if _instrument_hit(title):
+        return "code_instrument"
+    if _print_hit(title):
+        return "code_print"
+    if _OPS.search(title or ""):
+        return "code_ops"
+    if _STRUCTURE.search(title or ""):
+        return "code_structure"
+    if clock.get("hit") and clock.get("has_new_verb"):
+        return "code_choke"
+    if _shape_hit(title):
+        return "code_shape"
+    if not tape_hit(title) and _lever_hit(title):
+        return "code_lever"
+    return ""
+
+
 def code_drop_reason(row: dict, *, asof: dt.date, state: dict,
                      junk_rx: re.Pattern | None = None) -> str:
+    title = row.get("title") or ""
     if source_denied(row.get("source") or "", row.get("url") or ""):
         return "source"
-    if punct_trash(row.get("title") or ""):
+    if punct_trash(title):
         return "punct"
-    if junk_shape_hit(row.get("title") or "", junk_rx):
+    if is_earnings(title):
+        return "earnings"
+    if junk_shape_hit(title, junk_rx) or _EXTRA_JUNK.search(title):
         return "junk_shape"
-    clock = reprint_weather_code(row.get("title") or "", asof, state)
+    clock = reprint_weather_code(title, asof, state)
     row["_clock"] = clock
     if clock["hit"] and clock["stale"]:
         return "reprint_weather"
+    rule = code_keep_rule(title, clock)
+    if rule:
+        row["_code_keep"] = rule
+        return ""
+    if tape_hit(title):
+        return "tape"
     return ""
 
 
@@ -535,6 +756,11 @@ def decide(row: dict, answers: dict | None, knobs: GateKnobs | None = None) -> d
     if code:
         geo_out = "chokepoint" if code == "reprint_weather" else ""
         return pack("drop", code, geo_out)
+
+    # Code already kept this title. Jev opinion / low material does not override.
+    keep_rule = row.get("_code_keep") or ""
+    if keep_rule:
+        return pack("keep", keep_rule)
 
     if knobs is not None and knobs.reaction_regex:
         try:
@@ -747,7 +973,10 @@ def gate(rows: list[dict], *, code_only: bool = False, live: bool = False,
     rows = dedup_rows(list(rows), session_day=asof.isoformat())
     rows = apply_code(rows, asof=asof, state=state)
 
-    leftovers = [r for r in rows if not r.get("code_reason")]
+    leftovers = [
+        r for r in rows
+        if not r.get("code_reason") and not r.get("_code_keep")
+    ]
     answers_by_id: dict[str, dict] = gold_answers or {}
 
     if live and not code_only and leftovers:
@@ -946,6 +1175,7 @@ def gold_check(decided: list[dict], rows: list[dict], *,
         note = ""
         code_kills = {
             "source", "punct", "junk_shape", "dup", "reprint_weather",
+            "earnings", "tape",
         }
         if code_must == "drop" and reason not in code_kills:
             ok = False
