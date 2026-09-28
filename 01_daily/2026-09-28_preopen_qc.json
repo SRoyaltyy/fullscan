@@ -1,6 +1,6 @@
 {
   "date": "2026-09-28",
-  "generated_at": "2026-09-28T07:11:43.319524-04:00",
+  "generated_at": "2026-09-28T07:11:55.142450-04:00",
   "items": [
     {
       "ok": true,
@@ -251,97 +251,78 @@
       "ok": false,
       "reason": "missing",
       "size": 0,
-      "status": "DEGRADED",
-      "provider": "openclaw",
-      "fallback_reason": "openclaw_timeout"
+      "status": "FAIL"
     },
     {
       "sector": "Communication Services",
       "ok": false,
       "reason": "missing",
       "size": 0,
-      "status": "DEGRADED",
-      "provider": "openclaw",
-      "fallback_reason": "openclaw_timeout"
+      "status": "FAIL"
     },
     {
       "sector": "Consumer Cyclical",
       "ok": false,
       "reason": "missing",
       "size": 0,
-      "status": "DEGRADED",
-      "provider": "openclaw",
-      "fallback_reason": "openclaw_timeout"
+      "status": "FAIL"
     },
     {
       "sector": "Consumer Defensive",
       "ok": false,
       "reason": "missing",
       "size": 0,
-      "status": "DEGRADED",
-      "provider": "openclaw",
-      "fallback_reason": "openclaw_timeout"
+      "status": "FAIL"
     },
     {
       "sector": "Energy",
       "ok": false,
       "reason": "missing",
       "size": 0,
-      "status": "DEGRADED",
-      "provider": "openclaw",
-      "fallback_reason": "openclaw_timeout"
+      "status": "FAIL"
     },
     {
       "sector": "Financial",
       "ok": false,
       "reason": "missing",
       "size": 0,
-      "status": "DEGRADED",
-      "provider": "openclaw",
-      "fallback_reason": "openclaw_timeout"
+      "status": "FAIL"
     },
     {
       "sector": "Healthcare",
       "ok": false,
       "reason": "missing",
       "size": 0,
-      "status": "DEGRADED",
-      "provider": "openclaw",
-      "fallback_reason": "openclaw_timeout"
+      "status": "FAIL"
     },
     {
       "sector": "Industrials",
       "ok": false,
       "reason": "missing",
       "size": 0,
-      "status": "DEGRADED",
-      "provider": "openclaw",
-      "fallback_reason": "openclaw_timeout"
+      "status": "FAIL"
     },
     {
       "sector": "Real Estate",
       "ok": false,
       "reason": "missing",
       "size": 0,
-      "status": "DEGRADED",
-      "provider": "openclaw",
-      "fallback_reason": "openclaw_timeout"
+      "status": "FAIL"
     },
     {
       "sector": "Technology",
       "ok": true,
       "reason": "",
       "size": 19193,
-      "status": "FAIL",
-      "fallback_reason": "step deadline"
+      "status": "OK",
+      "provider": "openclaw"
     },
     {
       "sector": "Utilities",
       "ok": false,
       "reason": "missing",
       "size": 0,
-      "status": "FAIL",
-      "fallback_reason": "step deadline"
+      "status": "FAIL"
     }
   ],
   "sector_n_ok": 1,
