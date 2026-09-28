@@ -1,6 +1,6 @@
 {
   "date": "2026-09-28",
-  "generated_at": "2026-09-28T16:10:55.688395-04:00",
+  "generated_at": "2026-09-28T16:21:17.027286-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -90,10 +90,10 @@
     }
   ],
   "flatten": {
-    "said": "0 priced buys \u00b7 cash $100,001.27",
+    "said": "0 priced buys \u00b7 cash $67,770.37",
     "bullets": [
       "0 priced buys",
-      "cash $100,001.27"
+      "cash $67,770.37"
     ]
   },
   "general": {
@@ -2282,24 +2282,6 @@
         }
       ],
       "preview": "5899 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 ARGX, COP, REGN, AZN, DVN"
-    },
-    {
-      "key": "peer_rs",
-      "title": "Peer RS",
-      "date": "2026-09-28",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-28T16:10:41.897412-04:00",
-      "files": [
-        {
-          "path": "data/peers/2026-09-28_peer_rs.csv",
-          "ok": true,
-          "reason": "",
-          "size": 821609,
-          "preview": "5097 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
-        }
-      ],
-      "preview": "5097 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
     }
   ],
   "source": "publish_live_boards"
