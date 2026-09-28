@@ -1,7 +1,7 @@
 {
   "meta": {
     "date": "2026-09-28",
-    "generated_at": "2026-09-28T17:17:52.591837-04:00",
+    "generated_at": "2026-09-28T17:22:58.830279-04:00",
     "general_bias": -0.6341,
     "sector_bias": {
       "Technology": -0.325,
@@ -63,8 +63,8 @@
         "gate": 0.85
       },
       "sector:Technology": {
-        "hit_rate": 0.346,
-        "n": 26,
+        "hit_rate": 0.37,
+        "n": 27,
         "gate": 0.5
       },
       "sector:Utilities": {
