@@ -1,6 +1,6 @@
 {
   "date": "2026-09-28",
-  "generated_at": "2026-09-28T06:06:04.016279-04:00",
+  "generated_at": "2026-09-28T06:06:14.648352-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -11,24 +11,36 @@
   },
   "buy_1d": [
     {
+      "ticker": "CNQ",
+      "score": 0.17627924527283656
+    },
+    {
       "ticker": "ASTH",
       "score": 0.600685324903272
+    },
+    {
+      "ticker": "SONO",
+      "score": 0.7962422855262503
     },
     {
       "ticker": "FIVN",
       "score": 0.6576903219378318
     },
     {
-      "ticker": "GCT",
-      "score": 0.6268081671639238
+      "ticker": "AMN",
+      "score": 0.6589857846342768
     },
     {
-      "ticker": "TUYA",
-      "score": 0.6050669608333077
+      "ticker": "CON",
+      "score": 0.6471003114460387
     },
     {
-      "ticker": "THC",
-      "score": 0.1678203514596714
+      "ticker": "BAND",
+      "score": 0.6798816329541766
+    },
+    {
+      "ticker": "MQ",
+      "score": 0.7084761389836574
     }
   ],
   "sell_1d": [
@@ -63,6 +75,14 @@
     {
       "ticker": "QBTS",
       "score": -0.09920151650487147
+    },
+    {
+      "ticker": "BAK",
+      "score": -0.4180196874623082
+    },
+    {
+      "ticker": "USAS",
+      "score": -0.27406804296537
     }
   ],
   "flatten": {
@@ -101,59 +121,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "stock_book",
-      "title": "Stock book + green",
-      "date": "2026-09-28",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-28T05:43:55.964818-04:00",
-      "files": [
-        {
-          "path": "data/stock_book/2026-09-28_stock_book.json",
-          "ok": true,
-          "reason": "",
-          "size": 1158502,
-          "preview": "1d BUY HITI, SNPS, SONO, INOD \u00b7 SELL EOSE, TE, NEOV, METC, SOC, ACDC, MATW, RC"
-        },
-        {
-          "path": "data/stock_book/2026-09-28_green.json",
-          "ok": true,
-          "reason": "",
-          "size": 585,
-          "preview": "green 0 \u00b7 "
-        },
-        {
-          "path": "data/stock_book/2026-09-28_input_health.json",
-          "ok": true,
-          "reason": "",
-          "size": 2454,
-          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
-        },
-        {
-          "path": "data/stock_book/2026-09-28_suggestions.json",
-          "ok": true,
-          "reason": "",
-          "size": 8429,
-          "preview": "2026-09-28 BUY HITI, SNPS, SONO, INOD \u00b7 SELL EOSE, TE, NEOV, METC, SOC, ACDC, MATW, RC"
-        },
-        {
-          "path": "data/stock_book/latest_suggestions.json",
-          "ok": true,
-          "reason": "",
-          "size": 8429,
-          "preview": "2026-09-28 BUY HITI, SNPS, SONO, INOD \u00b7 SELL EOSE, TE, NEOV, METC, SOC, ACDC, MATW, RC"
-        },
-        {
-          "path": "01_daily/2026-09-28_stock_book.md",
-          "ok": true,
-          "reason": "",
-          "size": 41292,
-          "preview": "# Stock book \u2014 2026-09-28\n_Generated 2026-09-28T05:43:02.476363-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
-        }
-      ],
-      "preview": "1d BUY HITI, SNPS, SONO, INOD \u00b7 SELL EOSE, TE, NEOV, METC, SOC, ACDC, MATW, RC \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-09-28 BUY HITI, SNPS, SONO, INOD \u00b7 SELL EOSE, TE, NEOV, METC, SOC, ACDC, MATW, RC \u00b7 2026-09-28 BUY HITI, SNPS, SONO, INOD \u00b7 SELL EOSE, TE, NEOV, METC, SOC, ACDC, MATW, RC \u00b7 # Stock book \u2014 2026-09-28\n_Generated 2026-09-28T05:43:02.476363-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
-    },
     {
       "key": "live_boards",
       "title": "Live 1d BUY/SELL strip",
@@ -419,6 +386,59 @@
         }
       ],
       "preview": "5097 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-09-28",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-28T06:06:14.107362-04:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-09-28_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1314403,
+          "preview": "1d BUY CNQ, ASTH, SONO, FIVN, AMN, CON, BAND, MQ \u00b7 SELL EOSE, FCEL, TE, METC, SOC, ARE, EXK, QBTS"
+        },
+        {
+          "path": "data/stock_book/2026-09-28_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 585,
+          "preview": "green 0 \u00b7 "
+        },
+        {
+          "path": "data/stock_book/2026-09-28_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2454,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-09-28_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 10194,
+          "preview": "2026-09-28 BUY CNQ, ASTH, SONO, FIVN, AMN, CON, BAND, MQ \u00b7 SELL EOSE, FCEL, TE, METC, SOC, ARE, EXK, QBTS"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 10194,
+          "preview": "2026-09-28 BUY CNQ, ASTH, SONO, FIVN, AMN, CON, BAND, MQ \u00b7 SELL EOSE, FCEL, TE, METC, SOC, ARE, EXK, QBTS"
+        },
+        {
+          "path": "01_daily/2026-09-28_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 54649,
+          "preview": "# Stock book \u2014 2026-09-28\n_Generated 2026-09-28T06:06:09.461387-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY CNQ, ASTH, SONO, FIVN, AMN, CON, BAND, MQ \u00b7 SELL EOSE, FCEL, TE, METC, SOC, ARE, EXK, QBTS \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-09-28 BUY CNQ, ASTH, SONO, FIVN, AMN, CON, BAND, MQ \u00b7 SELL EOSE, FCEL, TE, METC, SOC, ARE, EXK, QBTS \u00b7 2026-09-28 BUY CNQ, ASTH, SONO, FIVN, AMN, CON, BAND, MQ \u00b7 SELL EOSE, FCEL, TE, METC, SOC, ARE, EXK, QBTS \u00b7 # Stock book \u2014 2026-09-28\n_Generated 2026-09-28T06:06:09.461387-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"

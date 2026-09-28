@@ -4,24 +4,36 @@
     "1d": {
       "buy": [
         {
+          "ticker": "CNQ",
+          "score": 0.17627924527283656
+        },
+        {
           "ticker": "ASTH",
           "score": 0.600685324903272
+        },
+        {
+          "ticker": "SONO",
+          "score": 0.7962422855262503
         },
         {
           "ticker": "FIVN",
           "score": 0.6576903219378318
         },
         {
-          "ticker": "GCT",
-          "score": 0.6268081671639238
+          "ticker": "AMN",
+          "score": 0.6589857846342768
         },
         {
-          "ticker": "TUYA",
-          "score": 0.6050669608333077
+          "ticker": "CON",
+          "score": 0.6471003114460387
         },
         {
-          "ticker": "THC",
-          "score": 0.1678203514596714
+          "ticker": "BAND",
+          "score": 0.6798816329541766
+        },
+        {
+          "ticker": "MQ",
+          "score": 0.7084761389836574
         }
       ],
       "sell": [
@@ -56,6 +68,14 @@
         {
           "ticker": "QBTS",
           "score": -0.09920151650487147
+        },
+        {
+          "ticker": "BAK",
+          "score": -0.4180196874623082
+        },
+        {
+          "ticker": "USAS",
+          "score": -0.27406804296537
         }
       ]
     },
@@ -453,11 +473,14 @@
     }
   },
   "buy_1d": [
+    "CNQ",
     "ASTH",
+    "SONO",
     "FIVN",
-    "GCT",
-    "TUYA",
-    "THC"
+    "AMN",
+    "CON",
+    "BAND",
+    "MQ"
   ],
   "sell_1d": [
     "EOSE",
@@ -467,6 +490,8 @@
     "SOC",
     "ARE",
     "EXK",
-    "QBTS"
+    "QBTS",
+    "BAK",
+    "USAS"
   ]
 }
