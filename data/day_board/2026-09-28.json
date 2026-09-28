@@ -1,6 +1,6 @@
 {
   "date": "2026-09-28",
-  "generated_at": "2026-09-28T06:02:02.509868-04:00",
+  "generated_at": "2026-09-28T06:05:53.675123-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -560,18 +560,18 @@
           "path": "01_daily/weather/2026-09-28_weather.json",
           "role": "required",
           "status": "OK",
-          "reason": "sectors=11 bytes=10534 vix=calm yields=rising",
-          "size": 10534,
-          "said": "favorable 2 \u00b7 hostile 4 \u00b7 neutral 5",
+          "reason": "sectors=11 bytes=10568 vix=calm yields=rising",
+          "size": 10568,
+          "said": "favorable 2 \u00b7 hostile 6 \u00b7 neutral 3",
           "bullets": [
-            "hostile: Basic Materials, Energy, Financial, Utilities",
+            "hostile: Basic Materials, Communication Services, Energy, Financial, Real Estate, Utilities",
             "events bull 3 / bear 2"
           ]
         }
       ],
-      "said": "favorable 2 \u00b7 hostile 4 \u00b7 neutral 5",
+      "said": "favorable 2 \u00b7 hostile 6 \u00b7 neutral 3",
       "bullets": [
-        "hostile: Basic Materials, Energy, Financial, Utilities",
+        "hostile: Basic Materials, Communication Services, Energy, Financial, Real Estate, Utilities",
         "events bull 3 / bear 2"
       ]
     },
@@ -592,11 +592,11 @@
           "path": "data/ab_checklist/2026-09-28_ab_checklist.csv",
           "role": "optional",
           "status": "OK",
-          "reason": "rows=2660",
-          "size": 7629961,
+          "reason": "rows=2661",
+          "size": 7633311,
           "said": "27 rows",
           "bullets": [
-            "FIGS, AUPH, GCT, RGEN, AAPL, ERO, AMN, SN"
+            "FIGS, AAPL, AUPH, ERO, WAY, GCT, RGEN, SN"
           ]
         },
         {
@@ -605,17 +605,17 @@
           "path": "data/ab_checklist/2026-09-28_ab_checklist_enriched.csv",
           "role": "required",
           "status": "OK",
-          "reason": "rows=2660",
-          "size": 8426743,
+          "reason": "rows=2661",
+          "size": 8479214,
           "said": "25 rows",
           "bullets": [
-            "FIGS, RGEN, SN, ICLR, LLY, BJ, AAPL, ALAB"
+            "RGEN, FIGS, ICLR, BJ, LRCX, TMO, WAT, JNJ"
           ]
         }
       ],
       "said": "25 rows",
       "bullets": [
-        "FIGS, RGEN, SN, ICLR, LLY"
+        "RGEN, FIGS, ICLR, BJ, LRCX"
       ]
     },
     {
@@ -784,11 +784,11 @@
           "path": "01_daily/weather/2026-09-28_weather.json",
           "role": "input",
           "status": "OK",
-          "reason": "sectors=11 bytes=10534 vix=calm yields=rising",
-          "size": 10534,
-          "said": "favorable 2 \u00b7 hostile 4 \u00b7 neutral 5",
+          "reason": "sectors=11 bytes=10568 vix=calm yields=rising",
+          "size": 10568,
+          "said": "favorable 2 \u00b7 hostile 6 \u00b7 neutral 3",
           "bullets": [
-            "hostile: Basic Materials, Energy, Financial, Utilities",
+            "hostile: Basic Materials, Communication Services, Energy, Financial, Real Estate, Utilities",
             "events bull 3 / bear 2"
           ]
         },
@@ -798,11 +798,11 @@
           "path": "data/ab_checklist/2026-09-28_ab_checklist_enriched.csv",
           "role": "input",
           "status": "OK",
-          "reason": "rows=2660",
-          "size": 8426743,
+          "reason": "rows=2661",
+          "size": 8479214,
           "said": "25 rows",
           "bullets": [
-            "FIGS, RGEN, SN, ICLR, LLY, BJ, AAPL, ALAB"
+            "RGEN, FIGS, ICLR, BJ, LRCX, TMO, WAT, JNJ"
           ]
         },
         {
@@ -812,10 +812,10 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=5899",
-          "size": 2244824,
+          "size": 2249790,
           "said": "213 rows",
           "bullets": [
-            "REGN, ARGX, NICE, EXEL, ONC, AZN, DSGX, TEL"
+            "ARGX, REGN, AZN, NICE, EXEL, ONC, DSGX, SKHY"
           ]
         },
         {
@@ -837,9 +837,9 @@
           "path": "data/stock_book/2026-09-28_stock_book.json",
           "role": "required",
           "status": "OK",
-          "reason": "horizons=5 names=130",
-          "size": 1158502,
-          "said": "1d BUY HITI, SNPS, SONO, INOD \u00b7 SELL EOSE, TE, NEOV, METC, SOC, ACDC \u00b7 -0.6341",
+          "reason": "horizons=5 names=145",
+          "size": 1296704,
+          "said": "1d BUY ASTH, FIVN, GCT, TUYA, THC \u00b7 SELL EOSE, FCEL, TE, METC, SOC, ARE \u00b7 -0.6341",
           "bullets": []
         },
         {
@@ -849,10 +849,10 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 40318,
+          "size": 48111,
           "said": "Stock book \u2014 2026-09-28",
           "bullets": [
-            "_Generated 2026-09-28T05:43:02.476363-04:00_",
+            "_Generated 2026-09-28T05:58:11.833740-04:00_",
             "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
           ]
         },
@@ -895,7 +895,7 @@
       ],
       "said": "213 rows",
       "bullets": [
-        "REGN, ARGX, NICE, EXEL, ONC"
+        "ARGX, REGN, AZN, NICE, EXEL"
       ]
     },
     {
@@ -915,9 +915,9 @@
           "path": "data/stock_book/2026-09-28_stock_book.json",
           "role": "input",
           "status": "OK",
-          "reason": "horizons=5 names=130",
-          "size": 1158502,
-          "said": "1d BUY HITI, SNPS, SONO, INOD \u00b7 SELL EOSE, TE, NEOV, METC, SOC, ACDC \u00b7 -0.6341",
+          "reason": "horizons=5 names=145",
+          "size": 1296704,
+          "said": "1d BUY ASTH, FIVN, GCT, TUYA, THC \u00b7 SELL EOSE, FCEL, TE, METC, SOC, ARE \u00b7 -0.6341",
           "bullets": []
         },
         {
@@ -966,65 +966,67 @@
   "selections": {
     "buy_1d": [
       {
-        "ticker": "HITI",
-        "score": 0.45593627614257604
+        "ticker": "ASTH",
+        "score": 0.600685324903272
       },
       {
-        "ticker": "SNPS",
-        "score": 0.5867202057343227
+        "ticker": "FIVN",
+        "score": 0.6576903219378318
       },
       {
-        "ticker": "SONO",
-        "score": 0.8007833140347225
+        "ticker": "GCT",
+        "score": 0.6268081671639238
       },
       {
-        "ticker": "INOD",
-        "score": 0.6216311252018027
+        "ticker": "TUYA",
+        "score": 0.6050669608333077
+      },
+      {
+        "ticker": "THC",
+        "score": 0.1678203514596714
       }
     ],
     "sell_1d": [
       {
         "ticker": "EOSE",
-        "score": -0.3949622968915913
+        "score": -0.424116881652071
+      },
+      {
+        "ticker": "FCEL",
+        "score": -0.3893283391665871
       },
       {
         "ticker": "TE",
-        "score": -0.307268477517126
-      },
-      {
-        "ticker": "NEOV",
-        "score": -0.3026075055530132
+        "score": -0.34239495506844914
       },
       {
         "ticker": "METC",
-        "score": -0.2302170443267199
+        "score": -0.16304821383995727
       },
       {
         "ticker": "SOC",
-        "score": -0.4055368107630624
+        "score": -0.39677414877993816
       },
       {
-        "ticker": "ACDC",
-        "score": -0.45735892472483347
+        "ticker": "ARE",
+        "score": -0.4382540152303856
       },
       {
-        "ticker": "MATW",
-        "score": -0.35415761730300316
+        "ticker": "EXK",
+        "score": 0.08574146788069488
       },
       {
-        "ticker": "RC",
-        "score": -0.4345022495610913
-      },
-      {
-        "ticker": "KGS",
-        "score": -0.1556129599672999
-      },
-      {
-        "ticker": "AMTX",
-        "score": -0.37399723607778423
+        "ticker": "QBTS",
+        "score": -0.09920151650487147
       }
     ],
-    "flatten": {},
+    "flatten": {
+      "said": "0 priced buys \u00b7 cash $67,378.63",
+      "bullets": [
+        "0 priced buys",
+        "cash $67,378.63"
+      ]
+    },
     "general": {
       "said": "DOWN  -6.14",
       "bullets": [
@@ -1065,9 +1067,9 @@
       ]
     },
     "weather": {
-      "said": "favorable 2 \u00b7 hostile 4 \u00b7 neutral 5",
+      "said": "favorable 2 \u00b7 hostile 6 \u00b7 neutral 3",
       "bullets": [
-        "hostile: Basic Materials, Energy, Financial, Utilities",
+        "hostile: Basic Materials, Communication Services, Energy, Financial, Real Estate, Utilities",
         "events bull 3 / bear 2"
       ]
     }
@@ -2270,6 +2272,31 @@
         }
       ],
       "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok \u00b7 keys: date, generated_at, run_id, runner, all_ok, qc_all_ok, book_ok, grok_ok, grok_fails, missing_required, attempts, github_runs \u00b7 # Pre-open ALL status \u2014 2026-09-28\nall_ok=False  qc_all_ok=False  book_ok=False  grok_ok=False  news_mode=on  missing=['sector_predict']\nPredictive modules + stock book (must land before 09:30 ET).\nOutcome / learn / tonight's captain research = Post-Close ALL.\n- Weather / regime: exit 0\n- News parse: exit 0\n- Event scanner (primary): exit 0\n- Event catcher (gap hunt, no carry): exit 0\n- News actions: exit 0\n- News judge: exit 0\n- General market predict: exit 0\n- Per-sector predict (all 11): exit 1\n- Map heat morning delta refresh: exit 0\n- Catalyst dossiers (after book): exit 4"
+    },
+    {
+      "key": "weather",
+      "title": "Weather / regime",
+      "date": "2026-09-28",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-28T06:05:53.085574-04:00",
+      "files": [
+        {
+          "path": "01_daily/weather/2026-09-28_weather.json",
+          "ok": true,
+          "reason": "",
+          "size": 10568,
+          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -3.46, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -1.73, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -0.32, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -0.74, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.21, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -0.28, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.16, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -0.94, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}"
+        },
+        {
+          "path": "01_daily/weather/2026-09-28_weather.md",
+          "ok": true,
+          "reason": "",
+          "size": 5986,
+          "preview": "# Weather report \u2014 2026-09-28\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+        }
+      ],
+      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -3.46, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -1.73, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -0.32, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -0.74, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.21, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -0.28, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.16, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -0.94, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-09-28\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
     }
   ],
   "href": {

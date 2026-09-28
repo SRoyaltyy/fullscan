@@ -1,6 +1,6 @@
 {
   "date": "2026-09-28",
-  "generated_at": "2026-09-28T06:02:02.509868-04:00",
+  "generated_at": "2026-09-28T06:05:53.675123-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -11,65 +11,67 @@
   },
   "buy_1d": [
     {
-      "ticker": "HITI",
-      "score": 0.45593627614257604
+      "ticker": "ASTH",
+      "score": 0.600685324903272
     },
     {
-      "ticker": "SNPS",
-      "score": 0.5867202057343227
+      "ticker": "FIVN",
+      "score": 0.6576903219378318
     },
     {
-      "ticker": "SONO",
-      "score": 0.8007833140347225
+      "ticker": "GCT",
+      "score": 0.6268081671639238
     },
     {
-      "ticker": "INOD",
-      "score": 0.6216311252018027
+      "ticker": "TUYA",
+      "score": 0.6050669608333077
+    },
+    {
+      "ticker": "THC",
+      "score": 0.1678203514596714
     }
   ],
   "sell_1d": [
     {
       "ticker": "EOSE",
-      "score": -0.3949622968915913
+      "score": -0.424116881652071
+    },
+    {
+      "ticker": "FCEL",
+      "score": -0.3893283391665871
     },
     {
       "ticker": "TE",
-      "score": -0.307268477517126
-    },
-    {
-      "ticker": "NEOV",
-      "score": -0.3026075055530132
+      "score": -0.34239495506844914
     },
     {
       "ticker": "METC",
-      "score": -0.2302170443267199
+      "score": -0.16304821383995727
     },
     {
       "ticker": "SOC",
-      "score": -0.4055368107630624
+      "score": -0.39677414877993816
     },
     {
-      "ticker": "ACDC",
-      "score": -0.45735892472483347
+      "ticker": "ARE",
+      "score": -0.4382540152303856
     },
     {
-      "ticker": "MATW",
-      "score": -0.35415761730300316
+      "ticker": "EXK",
+      "score": 0.08574146788069488
     },
     {
-      "ticker": "RC",
-      "score": -0.4345022495610913
-    },
-    {
-      "ticker": "KGS",
-      "score": -0.1556129599672999
-    },
-    {
-      "ticker": "AMTX",
-      "score": -0.37399723607778423
+      "ticker": "QBTS",
+      "score": -0.09920151650487147
     }
   ],
-  "flatten": {},
+  "flatten": {
+    "said": "0 priced buys \u00b7 cash $67,378.63",
+    "bullets": [
+      "0 priced buys",
+      "cash $67,378.63"
+    ]
+  },
   "general": {
     "said": "DOWN  -6.14",
     "bullets": [
@@ -99,115 +101,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "live_boards",
-      "title": "Live 1d BUY/SELL strip",
-      "date": "2026-09-28",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-28T05:41:26.041949-04:00",
-      "files": [
-        {
-          "path": "data/day_board/today.json",
-          "ok": true,
-          "reason": "",
-          "size": 13082,
-          "preview": "2026-09-28 BUY THC, ASTH, GCT \u00b7 SELL TE, FCEL, OKLO, PLUG, EOSE, SOC, EXK, QBTS"
-        },
-        {
-          "path": "data/day_board/latest.json",
-          "ok": true,
-          "reason": "",
-          "size": 755,
-          "preview": "keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages"
-        },
-        {
-          "path": "data/day_board/2026-09-28.json",
-          "ok": true,
-          "reason": "",
-          "size": 83195,
-          "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href"
-        },
-        {
-          "path": "data/day_board/2026-09-28_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 45279,
-          "preview": "2026-09-28 BUY THC, ASTH, GCT \u00b7 SELL TE, FCEL, OKLO, PLUG, EOSE, SOC, EXK, QBTS"
-        },
-        {
-          "path": "data/day_board/strategy_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 248703,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "data/day_board/2026-09-28_strategy_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 248703,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "data/day_board/today_strategies.json",
-          "ok": true,
-          "reason": "",
-          "size": 228489,
-          "preview": "2026-09-28 BUY THC, ASTH, GCT \u00b7 SELL TE, FCEL, OKLO, PLUG, EOSE, SOC, EXK, QBTS"
-        },
-        {
-          "path": "data/factor_mine/strategy_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 248703,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "dashboard/factor-mine/today.json",
-          "ok": true,
-          "reason": "",
-          "size": 45279,
-          "preview": "2026-09-28 BUY THC, ASTH, GCT \u00b7 SELL TE, FCEL, OKLO, PLUG, EOSE, SOC, EXK, QBTS"
-        },
-        {
-          "path": "dashboard/factor-mine/strategy_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 248703,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "dashboard/factor-mine/today_strategies.json",
-          "ok": true,
-          "reason": "",
-          "size": 248703,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "dashboard/today_strategies.json",
-          "ok": true,
-          "reason": "",
-          "size": 228489,
-          "preview": "2026-09-28 BUY THC, ASTH, GCT \u00b7 SELL TE, FCEL, OKLO, PLUG, EOSE, SOC, EXK, QBTS"
-        },
-        {
-          "path": "data/day_board/hold_live_px.json",
-          "ok": true,
-          "reason": "",
-          "size": 1668,
-          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
-        },
-        {
-          "path": "dashboard/factor-mine/hold_live_px.json",
-          "ok": true,
-          "reason": "",
-          "size": 1668,
-          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
-        }
-      ],
-      "preview": "2026-09-28 BUY THC, ASTH, GCT \u00b7 SELL TE, FCEL, OKLO, PLUG, EOSE, SOC, EXK, QBTS \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href \u00b7 2026-09-28 BUY THC, ASTH, GCT \u00b7 SELL TE, FCEL, OKLO, PLUG, EOSE, SOC, EXK, QBTS \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-28 BUY THC, ASTH, GCT \u00b7 SELL TE, FCEL, OKLO, PLUG, EOSE, SOC, EXK, QBTS \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-28 BUY THC, ASTH, GCT \u00b7 SELL TE, FCEL, OKLO, PLUG, EOSE, SOC, EXK, QBTS \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-28 BUY THC, ASTH, GCT \u00b7 SELL TE, FCEL, OKLO, PLU"
-    },
     {
       "key": "ab",
       "title": "AB checklist",
@@ -536,6 +429,31 @@
         }
       ],
       "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok \u00b7 keys: date, generated_at, run_id, runner, all_ok, qc_all_ok, book_ok, grok_ok, grok_fails, missing_required, attempts, github_runs \u00b7 # Pre-open ALL status \u2014 2026-09-28\nall_ok=False  qc_all_ok=False  book_ok=False  grok_ok=False  news_mode=on  missing=['sector_predict']\nPredictive modules + stock book (must land before 09:30 ET).\nOutcome / learn / tonight's captain research = Post-Close ALL.\n- Weather / regime: exit 0\n- News parse: exit 0\n- Event scanner (primary): exit 0\n- Event catcher (gap hunt, no carry): exit 0\n- News actions: exit 0\n- News judge: exit 0\n- General market predict: exit 0\n- Per-sector predict (all 11): exit 1\n- Map heat morning delta refresh: exit 0\n- Catalyst dossiers (after book): exit 4"
+    },
+    {
+      "key": "weather",
+      "title": "Weather / regime",
+      "date": "2026-09-28",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-28T06:05:53.085574-04:00",
+      "files": [
+        {
+          "path": "01_daily/weather/2026-09-28_weather.json",
+          "ok": true,
+          "reason": "",
+          "size": 10568,
+          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -3.46, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -1.73, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -0.32, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -0.74, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.21, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -0.28, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.16, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -0.94, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}"
+        },
+        {
+          "path": "01_daily/weather/2026-09-28_weather.md",
+          "ok": true,
+          "reason": "",
+          "size": 5986,
+          "preview": "# Weather report \u2014 2026-09-28\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+        }
+      ],
+      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -3.46, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -1.73, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -0.32, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -0.74, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.21, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -0.28, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.16, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -0.94, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-09-28\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
