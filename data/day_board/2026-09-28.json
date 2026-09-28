@@ -1,13 +1,13 @@
 {
   "date": "2026-09-28",
-  "generated_at": "2026-09-28T06:07:07.352879-04:00",
+  "generated_at": "2026-09-28T07:11:45.074516-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
   "counts": {
-    "ok": 6,
+    "ok": 7,
     "partial": 1,
-    "fail": 1,
+    "fail": 0,
     "n": 8
   },
   "processes": [
@@ -177,7 +177,7 @@
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 9,
+      "n_req_ok": 10,
       "n_req": 20,
       "n_opt_ok": 3,
       "n_opt": 3,
@@ -343,8 +343,8 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 6363,
-          "said": "0 up / 0 down / 0 flat",
+          "size": 6537,
+          "said": "0 up / 1 down / 0 flat",
           "bullets": [
             "XLB missing",
             "XLC missing",
@@ -359,8 +359,8 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 8324,
-          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 12 fail",
+          "size": 8317,
+          "said": "all_ok=False \u00b7 sectors 1/11 \u00b7 11 fail",
           "bullets": [
             "finviz_market_digest:missing",
             "sector_predict:missing",
@@ -496,11 +496,13 @@
           "name": "Sector predict \u2014 technology",
           "path": "01_daily/sectors/2026-09-28/technology_predict.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 19193,
+          "said": "DOWN mild -13.383",
+          "bullets": [
+            "- news_mode: **on"
+          ]
         },
         {
           "key": "sector_utilities",
@@ -514,7 +516,7 @@
           "bullets": []
         }
       ],
-      "said": "general DOWN  -6.14 \u00b7 sectors 0 up / 0 down / 0 flat \u00b7 news news_mode: on \u00b7 400 raw / 67 usable \u00b7 The 10-year Treasury yield is at its highest in nearly two decades. How we got h",
+      "said": "general DOWN  -6.14 \u00b7 sectors 0 up / 1 down / 0 flat \u00b7 news news_mode: on \u00b7 400 raw / 67 usable \u00b7 The 10-year Treasury yield is at its highest in nearly two decades. How we got h",
       "bullets": [
         "bad: 1w 10Y +24bp at 5.18 handle",
         "bad: NQ -0.94% / XLK -1.18%",
@@ -622,11 +624,11 @@
       "key": "catalyst",
       "name": "Catalyst dossiers",
       "yaml": "catalyst_daily.yml",
-      "status": "FAIL",
+      "status": "OK",
       "inputs_ready": true,
       "n_req_ok": 0,
       "n_req": 0,
-      "n_opt_ok": 0,
+      "n_opt_ok": 1,
       "n_opt": 1,
       "files": [
         {
@@ -665,16 +667,11 @@
           "name": "Catalyst dossiers JSON",
           "path": "01_daily/catalyst/2026-09-28_dossiers.json",
           "role": "optional",
-          "status": "FAIL",
-          "reason": "zero usable dossiers (n=8)",
-          "size": 2841,
-          "said": "zero usable dossiers (n=8) \u00b7 0/8 usable \u00b7 Grok \u2192 DeepSeek \u00b7 NE, RIG, SLB, BKR, CNR, SKYW, UBER, CRM",
-          "bullets": [
-            "NE: OpenClaw and DeepSeek both returned empty for CATALYST STEP1 NE",
-            "RIG: OpenClaw and DeepSeek both returned empty for CATALYST STEP1 RIG",
-            "SLB: OpenClaw and DeepSeek both returned empty for CATALYST STEP1 SLB",
-            "BKR: OpenClaw and DeepSeek both returned empty for CATALYST STEP1 BKR"
-          ]
+          "status": "OK",
+          "reason": "usable=3/3",
+          "size": 11995,
+          "said": "3/8 usable \u00b7 Grok \u2192 DeepSeek \u00b7 NE, RIG, SLB, BKR, CNR, SKYW, UBER, CRM",
+          "bullets": []
         }
       ],
       "said": "50 ticker actions \u00b7 3 events \u00b7 400 headlines \u00b7 COP BUY, EOG BUY, RRC BUY, SM BUY, HPK BUY, REPX BUY, OXY BUY, FANG BUY",
@@ -723,8 +720,8 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 6363,
-          "said": "0 up / 0 down / 0 flat",
+          "size": 6537,
+          "said": "0 up / 1 down / 0 flat",
           "bullets": [
             "XLB missing",
             "XLC missing",
@@ -838,7 +835,7 @@
           "role": "required",
           "status": "OK",
           "reason": "horizons=5 names=150",
-          "size": 1314403,
+          "size": 1314402,
           "said": "1d BUY CNQ, ASTH, SONO, FIVN, AMN, CON, BAND, MQ \u00b7 SELL EOSE, FCEL, TE, METC, SOC, ARE \u00b7 -0.6341",
           "bullets": []
         },
@@ -852,7 +849,7 @@
           "size": 53643,
           "said": "Stock book \u2014 2026-09-28",
           "bullets": [
-            "_Generated 2026-09-28T06:06:09.461387-04:00_",
+            "_Generated 2026-09-28T06:16:23.794035-04:00_",
             "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
           ]
         },
@@ -916,7 +913,7 @@
           "role": "input",
           "status": "OK",
           "reason": "horizons=5 names=150",
-          "size": 1314403,
+          "size": 1314402,
           "said": "1d BUY CNQ, ASTH, SONO, FIVN, AMN, CON, BAND, MQ \u00b7 SELL EOSE, FCEL, TE, METC, SOC, ARE \u00b7 -0.6341",
           "bullets": []
         },
@@ -1060,7 +1057,7 @@
       "direction": "down"
     },
     "sectors": {
-      "said": "0 up / 0 down / 0 flat",
+      "said": "0 up / 1 down / 0 flat",
       "bullets": [
         "XLB missing",
         "XLC missing",
@@ -1071,7 +1068,7 @@
         "XLV missing",
         "XLI missing",
         "XLRE missing",
-        "XLK missing",
+        "XLK DOWN -13.4",
         "XLU missing"
       ]
     },
@@ -2561,6 +2558,73 @@
         }
       ],
       "preview": "# flatten_robust card \u2014 2026-09-28\n_Generated 2026-09-28T10:07:06 \u2014 live `flatten_robust`._\n**S=-6.14; hard-red: no new buys; holds and due 1d exits stay**\n- Score **-6.14** (DOWN) \u00b7 route **hold** \u00b7 HARD-RED\n- Cash leftover **$67,378.63** (after 09:30 $67,378.63 \u00b7 after 16:00 $101,470.11)\n- Prior close **$101,493.78** \u00b7 09:30 **$101,493.78** \u00b7 overnight **$+0.00** \u00b7 session **$-23.67** \u00b7 16:00 **$101,470.11**\n- Overnight lots **8** \u00b7 priced mover BUYs **0** \u00b7 prior book yes\n- Planned buy cost **$0.00** \u2264 leftover after sells **$101,470.11** \u00b7 2026-09-28 BUY \u2014 \u00b7 SELL \u2014 \u00b7 [{\"date\": \"2026-08-13\", \"route\": \"io\", \"score\": 8.525, \"predict\": \"UP\", \"yday_equity\": 100000.0, \"open_cash\": 100000.0, \"open_held\": 0, \"open_equity\": 100000.0, \"overnight_delta\": 0.0, \"session_delta\": -169.94, \"equity\": 99830.06, \"cash\": 9917.52, \"overnight_names\": \"\", \"overnight\": [], \"marks\": [{\"ticker\": \"BTSG\", \"sleeve\": \"io_core\", \"shares_open\": 0, \"shares_close\": 166, \"shares\": 166, \"side\": \"BUY\", \"yday_px\": null, \"open_px\": 59.8, \"close_px\": 60.23, \"entry_px\": 60.23, \"entry_date\": \"2026-08-13\", \"overnight\": 0.0, \"session\": 71.38, \"day\": 71.38, \"pct_overnight\": null, \"pct_session\": 0.719, \"held\": \"bought\"}, {"
+    },
+    {
+      "key": "sector_one",
+      "title": "Sector predict Technology (1/11)",
+      "date": "2026-09-28",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-28T07:11:43.423199-04:00",
+      "files": [
+        {
+          "path": "01_daily/sectors/2026-09-28/technology_predict.md",
+          "ok": true,
+          "reason": "",
+          "size": 19193,
+          "preview": "# Sector Prediction \u2014 Technology \u2014 2026-09-28\n- news_mode: **on**\n- ETF: **XLK**\n- rubric: `00_grounding/sectors/technology.md`\n- predicted_direction: **down**\n- predicted_magnitude_band: **mild**\n- total_score: **-13.383** (mult 0.85)\n- regime: risk_off\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **-6.535** (NQ -0.96%, ES -0.52%, PM:XLK -1.16%) \u00b7 index_carry **-1.535** (general -6.14) \u00b7 llm_overlay **-5.312** (raw -5.312)"
+        },
+        {
+          "path": "01_daily/sectors/2026-09-28/technology_predict_trace.md",
+          "ok": true,
+          "reason": "",
+          "size": 391,
+          "preview": "# Reasoning trace \u2014 SECTOR PREDICT Technology 2026-09-28\n**Step 0 \u2014 Setup.** Loaded 151,529 characters of input. Provider: OpenClaw gateway, backend model `xai/grok-4.6`. Native web/X search was ENABLED inside the agent turn; see the RESEARCH APPENDIX at the end of the output for queries and sources.\n**Step 1 \u2014 Done.** The agent returned its full analysis (17,199 characters)."
+        },
+        {
+          "path": "01_daily/_transcripts/2026-09-28_sector_technology_predict.json",
+          "ok": true,
+          "reason": "",
+          "size": 173127,
+          "preview": "keys: provider, agent, backend_model, messages"
+        },
+        {
+          "path": "01_daily/2026-09-28_preopen_qc.json",
+          "ok": true,
+          "reason": "",
+          "size": 8317,
+          "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok"
+        },
+        {
+          "path": "01_daily/sectors/2026-09-28/_qc.json",
+          "ok": true,
+          "reason": "",
+          "size": 2330,
+          "preview": "keys: date, n_ok, n_total, summary, sectors"
+        },
+        {
+          "path": "01_daily/sectors/2026-09-28/_BOARD.md",
+          "ok": true,
+          "reason": "",
+          "size": 1621,
+          "preview": "# Sector Board \u2014 2026-09-28\nGenerated: **2026-09-28T07:11:43.372510-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.)."
+        },
+        {
+          "path": "01_daily/sectors/2026-09-28/_board.json",
+          "ok": true,
+          "reason": "",
+          "size": 6537,
+          "preview": "keys: date, generated_at, summary, sectors"
+        },
+        {
+          "path": "03_scoreboard/scoreboard.json",
+          "ok": true,
+          "reason": "",
+          "size": 924529,
+          "preview": "keys: runs"
+        }
+      ],
+      "preview": "# Sector Prediction \u2014 Technology \u2014 2026-09-28\n- news_mode: **on**\n- ETF: **XLK**\n- rubric: `00_grounding/sectors/technology.md`\n- predicted_direction: **down**\n- predicted_magnitude_band: **mild**\n- total_score: **-13.383** (mult 0.85)\n- regime: risk_off\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **-6.535** (NQ -0.96%, ES -0.52%, PM:XLK -1.16%) \u00b7 index_carry **-1.535** (general -6.14) \u00b7 llm_overlay **-5.312** (raw -5.312) \u00b7 # Reasoning trace \u2014 SECTOR PREDICT Technology 2026-09-28\n**Step 0 \u2014 Setup.** Loaded 151,529 characters of input. Provider: OpenClaw gateway, backend model `xai/grok-4.6`. Native web/X search was ENABLED inside the agent turn; see the RESEARCH APPENDIX at the end of the output for queries and sources.\n**Step 1 \u2014 Done.** The agent returned its full analysis (17,199 characters). \u00b7 keys: provider, agent, backend_model, messages \u00b7 keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok \u00b7 keys: date, n_ok, n_total, summary, sectors \u00b7 # Sector Board \u2014 2026-09-28\nGenerated: **2026-09-28T07:11:43.372510-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`,"
     }
   ],
   "href": {
