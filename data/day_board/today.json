@@ -1,6 +1,6 @@
 {
   "date": "2026-09-28",
-  "generated_at": "2026-09-28T05:44:21.031166-04:00",
+  "generated_at": "2026-09-28T05:48:31.754117-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -12,19 +12,15 @@
   "buy_1d": [
     {
       "ticker": "HITI",
-      "score": 0.45593627614257604
-    },
-    {
-      "ticker": "SNPS",
-      "score": 0.5867202057343227
+      "score": 0.45670933133865954
     },
     {
       "ticker": "SONO",
-      "score": 0.8007833140347225
+      "score": 0.8007497906758343
     },
     {
-      "ticker": "INOD",
-      "score": 0.6216311252018027
+      "ticker": "MQ",
+      "score": 0.6952288906623421
     }
   ],
   "sell_1d": [
@@ -38,7 +34,7 @@
     },
     {
       "ticker": "NEOV",
-      "score": -0.3026075055530132
+      "score": -0.29783921283970816
     },
     {
       "ticker": "METC",
@@ -50,7 +46,7 @@
     },
     {
       "ticker": "ACDC",
-      "score": -0.45735892472483347
+      "score": -0.45673539144358793
     },
     {
       "ticker": "MATW",
@@ -58,18 +54,16 @@
     },
     {
       "ticker": "RC",
-      "score": -0.4345022495610913
-    },
-    {
-      "ticker": "KGS",
-      "score": -0.1556129599672999
-    },
-    {
-      "ticker": "AMTX",
-      "score": -0.37399723607778423
+      "score": -0.4321855819652083
     }
   ],
-  "flatten": {},
+  "flatten": {
+    "said": "0 priced buys \u00b7 cash $67,378.63",
+    "bullets": [
+      "0 priced buys",
+      "cash $67,378.63"
+    ]
+  },
   "general": {
     "said": "DOWN  -6.14",
     "bullets": [
