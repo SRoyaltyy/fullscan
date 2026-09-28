@@ -1,6 +1,6 @@
 # Stock book — 2026-09-28
 
-_Generated 2026-09-28T07:15:57.034965-04:00_
+_Generated 2026-09-28T07:20:27.406270-04:00_
 
 This file is the **human read** of one run. CSV/JSON next to it are the machine files.
 
