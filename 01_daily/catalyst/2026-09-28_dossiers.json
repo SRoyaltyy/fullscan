@@ -1,14 +1,14 @@
 {
   "date": "2026-09-28",
-  "generated_at": "2026-09-28T05:59:08.707642-04:00",
+  "generated_at": "2026-09-28T06:56:08.330836-04:00",
   "max_n": 8,
   "routing": "Grok \u2192 DeepSeek",
   "grok": true,
-  "deepseek_fallback": false,
+  "deepseek_fallback": true,
   "gemini": false,
   "n_targets": 8,
-  "n_ok": 0,
-  "status": "FAIL",
+  "n_ok": 3,
+  "status": "OK",
   "targets": [
     {
       "ticker": "NE",
@@ -56,49 +56,190 @@
       "ticker": "NE",
       "role": "override_captain",
       "why": "OVERRIDE card Oil & Gas Drilling",
-      "error": "OpenClaw and DeepSeek both returned empty for CATALYST STEP1 NE"
+      "net_signal": "Bullish",
+      "conviction": 16,
+      "search_backend": "grok_native",
+      "catalyst_stack": "On April 26, 2026 Noble added about $565 million of new contract value and later booked bp UKCS, a $136.2 million Brunei Viking campaign on July 10, and a 670-day ConocoPhillips Interceptor P&A fixture on August 7. July 27 results reset the year: Q2 adjusted EPS of $0.01 missed ~$0.18\u2013$0.19 estimates, Brazil ANP suspensions of Noble Faye Kozack and Noble Courage took $43 million out of revenue, and FY2026 adjusted EBITDA guidance was cut to $850\u2013$925 million, with the stock down 9.07% on July 28. Analysts then split, as Citi and Susquehanna cut targets in June\u2013July, Barclays trimmed to $53 but stayed Overweight on July 30, Fearnley upgraded to Buy on July 29, and Citi raised its target to $50 on September 7. Plaintiff firms opened securities investigations around August 10 without filing suit, while September 28 tape tied a 7% bounce in Noble and other offshore drillers to Middle East tensions and higher oil.",
+      "key_assumption": "The July 2026 Brazil/ANP downtime and EBITDA guide cut are a utilization shock rather than a structural loss of Petrobras or Guyana work, so 2027\u201328 fixtures can refill 2026 white space if oil stays supportive.",
+      "n_pos": 6,
+      "n_neg": 5,
+      "top_hits": [
+        {
+          "type": "positive",
+          "taxonomy": "Contract win/expansion",
+          "event_date": "2026-08-07",
+          "headline": "The contract is scheduled to begin in the third quarter of 2027 and has an estimated duration of 670 days.",
+          "weight": 10,
+          "confidence": 91
+        },
+        {
+          "type": "positive",
+          "taxonomy": "Contract win/expansion",
+          "event_date": "2026-04-26",
+          "headline": "Noble Courage was extended by Petrobras for an additional 1,115 days, extending through December 2030, for a net incremental backlog addition of $339 million.",
+          "weight": 10,
+          "confidence": 80
+        },
+        {
+          "type": "positive",
+          "taxonomy": "Contract win/expansion",
+          "event_date": "2026-04-26",
+          "headline": "Noble Deliverer was awarded a 5-well contract with Woodside in Australia. The contract, valued at $121 million excluding additional services",
+          "weight": 10,
+          "confidence": 80
+        },
+        {
+          "type": "negative",
+          "taxonomy": "Earnings guidance cut",
+          "event_date": "2026-07-27",
+          "headline": "Adjusted EBITDA: $850 million \u2013 $925 million (previously $940M\u2013$1.02B).",
+          "weight": 9,
+          "confidence": 92
+        },
+        {
+          "type": "negative",
+          "taxonomy": "Operational setback",
+          "event_date": "2026-07-27",
+          "headline": "Our second quarter was adversely impacted by $43 million due to the operational suspension of both of our rigs in Brazil.",
+          "weight": 7,
+          "confidence": 91
+        },
+        {
+          "type": "positive",
+          "taxonomy": "Capacity expansion announced",
+          "event_date": "2026-04-26",
+          "headline": "Capex guidance was raised by $25 million to $615\u2013665 million to account for the Noble Deliverer reactivation.",
+          "weight": 6,
+          "confidence": 85
+        }
+      ],
+      "error": null
     },
     {
       "ticker": "RIG",
       "role": "override_captain",
       "why": "OVERRIDE card Oil & Gas Drilling",
-      "error": "OpenClaw and DeepSeek both returned empty for CATALYST STEP1 RIG"
+      "net_signal": "Strong Bullish",
+      "conviction": 85,
+      "search_backend": "grok_native",
+      "catalyst_stack": "On 2026-06-30 Transocean locked in a license-conditional Equinor package worth over $1 billion across seven rig-years, capping a backlog wave that also included Petrobras extensions, the V\u00e5r Energi Barents award, Harbour/Santos fixtures, and the 2026-08-20 ONGC KG2 letter of award. Q2 2026 results on 2026-08-05 printed a $0.03 adjusted EPS beat and $966 million of contract drilling revenue, and Fearnley upgraded the stock to Buy on 2026-08-07 even as Barclays cut its target to $7 on 2026-08-12. Merger-arb improved after Transocean certified DOJ second-request compliance on 2026-08-25 and a 2026-09-21 report that antitrust clearance could come early narrowed the Valaris spread. A 2026-09-25 SDNY dismissal without prejudice of the securities class action removed a near-term legal overhang, while 26% short interest leaves squeeze convexity if backlog conversion and the Valaris path hold.",
+      "key_assumption": "Equinor license conditions are satisfied, the Valaris combination obtains DOJ/HSR clearance without a break or synergy miss, and oil-linked floater demand stays firm enough for the new multi-year backlog to convert to FCF rather than idle time.",
+      "n_pos": 7,
+      "n_neg": 2,
+      "top_hits": [
+        {
+          "type": "positive",
+          "taxonomy": "Contract win/expansion",
+          "event_date": "2026-06-30",
+          "headline": "this agreement is worth over $1 billion in contract backlog over seven rig years, excluding additional services.",
+          "weight": 10,
+          "confidence": 95
+        },
+        {
+          "type": "positive",
+          "taxonomy": "Earnings beat (revenue, EBITDA, EPS)",
+          "event_date": "2026-08-05",
+          "headline": "Transocean Non-GAAP EPS of $0.03 beats by $0.02, revenue of $966M beats by $3.12M",
+          "weight": 10,
+          "confidence": 95
+        },
+        {
+          "type": "positive",
+          "taxonomy": "Contract win/expansion",
+          "event_date": "2026-09-15",
+          "headline": "contribute approximately $80 million in backlog, excluding additional services and compensation for mobilization and demobilization.",
+          "weight": 10,
+          "confidence": 80
+        },
+        {
+          "type": "positive",
+          "taxonomy": "Contract win/expansion",
+          "event_date": "2026-08-05",
+          "headline": "Since May, the company has secured five new drilling contracts worth approximately $292 million in additional backlog",
+          "weight": 10,
+          "confidence": 80
+        },
+        {
+          "type": "positive",
+          "taxonomy": "Favorable court ruling/patent grant",
+          "event_date": "2026-09-25",
+          "headline": "Transocean Ltd. investors fell short in pleading that top executives intended to publicly overvalue two oil and gas rigs later sold at a loss",
+          "weight": 9,
+          "confidence": 90
+        },
+        {
+          "type": "positive",
+          "taxonomy": "Analyst upgrade/PT increase",
+          "event_date": "2026-08-07",
+          "headline": "Fearnley Securities Buy Upgrades $6.7 Aug 7, 2026",
+          "weight": 6,
+          "confidence": 88
+        }
+      ],
+      "error": null
     },
     {
       "ticker": "SLB",
       "role": "override_captain",
       "why": "OVERRIDE card Oil & Gas Equipment & Services",
-      "error": "OpenClaw and DeepSeek both returned empty for CATALYST STEP1 SLB"
-    },
-    {
-      "ticker": "BKR",
-      "role": "override_captain",
-      "why": "OVERRIDE card Oil & Gas Equipment & Services",
-      "error": "OpenClaw and DeepSeek both returned empty for CATALYST STEP1 BKR"
-    },
-    {
-      "ticker": "CNR",
-      "role": "override_captain",
-      "why": "OVERRIDE card Thermal Coal",
-      "error": "OpenClaw and DeepSeek both returned empty for CATALYST STEP1 CNR"
-    },
-    {
-      "ticker": "SKYW",
-      "role": "conflict",
-      "why": "actions sell net=-4.76 vs heat buy",
-      "error": "OpenClaw and DeepSeek both returned empty for CATALYST STEP1 SKYW"
-    },
-    {
-      "ticker": "UBER",
-      "role": "conflict",
-      "why": "actions sell net=-1.95 vs heat buy",
-      "error": "OpenClaw and DeepSeek both returned empty for CATALYST STEP1 UBER"
-    },
-    {
-      "ticker": "CRM",
-      "role": "conflict",
-      "why": "actions sell net=-1.95 vs heat buy",
-      "error": "OpenClaw and DeepSeek both returned empty for CATALYST STEP1 CRM"
+      "net_signal": "Strong Bullish",
+      "conviction": 50,
+      "search_backend": "grok_native",
+      "catalyst_stack": "On 2026-09-23 SLB won OQEP\u2019s Bisat-B expansion in Oman to 548,000 bpd of gross fluids plus four years of O&M, and on 2026-09-28 it added four multi-year Aramco integrated well-construction awards after the 2026-06-30 seven-year KOC Ahmadi Innovation Valley contract covering nearly 100 AI and production-optimization projects. Deal-making is the other pillar: SLB agreed on 2026-08-31 to buy Kelvion for about $3.4 billion cash plus $700 million of assumed debt to enter AI data-center cooling, completed the S&P Global geoscience software purchase on 2026-09-01, and signed Tachyus in May, while the 2026-07-14 Liberty Energy alliance and NOC pacts with PETRONAS Suriname, Pertamina, and PDVSA extend digital, subsea, and power reach. Q2 2026 on 2026-07-24 printed $8.972 billion of revenue and $0.55 of adjusted EPS, beating estimates, and on 2026-09-14 UBS raised its target to $75 with a Buy, joining Wolfe and Bernstein Outperform calls. The offset is Q1 2026 on 2026-04-24, when profit fell as the Iran war disrupted Middle East activity\u2014an international exposure that still hangs over the book even after the Q2 rebound.",
+      "key_assumption": "Kelvion closes on the stated cash-and-debt terms without a dilutive equity raise, and Middle East activity does not re-break the way it did in Q1, so the Aramco/Oman/KOC awards and the Q2 beat dominate the Iran-war miss.",
+      "n_pos": 8,
+      "n_neg": 3,
+      "top_hits": [
+        {
+          "type": "negative",
+          "taxonomy": "Geopolitical event that hurts sector (sanctions, conflict disrupting supply chain)",
+          "event_date": "2026-04-24",
+          "headline": "lower quarterly profit after Middle East activity was disrupted by the Iran war",
+          "weight": 10,
+          "confidence": 90
+        },
+        {
+          "type": "positive",
+          "taxonomy": "Successful acquisition/synergy realization",
+          "event_date": "2026-08-31",
+          "headline": "SLB will pay approximately $3.4 billion in cash to acquire Kelvion and assume another $700 million of debt.",
+          "weight": 8,
+          "confidence": 92
+        },
+        {
+          "type": "positive",
+          "taxonomy": "Earnings beat (revenue, EBITDA, EPS)",
+          "event_date": "2026-07-24",
+          "headline": "SLB announced its second-quarter 2026 earnings on July 24, 2026, reporting: - Revenue: $8.972 billion",
+          "weight": 8,
+          "confidence": 90
+        },
+        {
+          "type": "positive",
+          "taxonomy": "Contract win/expansion",
+          "event_date": "2026-09-23",
+          "headline": "SLB has been awarded a contract by OQ Exploration & Production (OQEP) to deliver an expansion of the Bisat-B production facility in Oman",
+          "weight": 7,
+          "confidence": 93
+        },
+        {
+          "type": "positive",
+          "taxonomy": "Contract win/expansion",
+          "event_date": "2026-09-24",
+          "headline": "SLB has been awarded four integrated well construction contracts by Aramco covering more than 450 oil and gas wells across Saudi Arabia.",
+          "weight": 7,
+          "confidence": 80
+        },
+        {
+          "type": "positive",
+          "taxonomy": "Strategic partnership/alliance",
+          "event_date": "2026-07-14",
+          "headline": "SLB and Liberty Energy have agreed to form a strategic alliance to provide modular infrastructure and integrated power generation solutions",
+          "weight": 5,
+          "confidence": 90
+        }
+      ],
+      "error": null
     }
   ]
 }

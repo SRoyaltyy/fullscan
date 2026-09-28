@@ -1,0 +1,226 @@
+{
+  "ticker": "NE",
+  "analysis_date": "2026-09-28",
+  "current_price": "44.62",
+  "net_signal": "Bullish",
+  "conviction": 16,
+  "catalyst_stack": "On April 26, 2026 Noble added about $565 million of new contract value and later booked bp UKCS, a $136.2 million Brunei Viking campaign on July 10, and a 670-day ConocoPhillips Interceptor P&A fixture on August 7. July 27 results reset the year: Q2 adjusted EPS of $0.01 missed ~$0.18\u2013$0.19 estimates, Brazil ANP suspensions of Noble Faye Kozack and Noble Courage took $43 million out of revenue, and FY2026 adjusted EBITDA guidance was cut to $850\u2013$925 million, with the stock down 9.07% on July 28. Analysts then split, as Citi and Susquehanna cut targets in June\u2013July, Barclays trimmed to $53 but stayed Overweight on July 30, Fearnley upgraded to Buy on July 29, and Citi raised its target to $50 on September 7. Plaintiff firms opened securities investigations around August 10 without filing suit, while September 28 tape tied a 7% bounce in Noble and other offshore drillers to Middle East tensions and higher oil.",
+  "key_assumption": "The July 2026 Brazil/ANP downtime and EBITDA guide cut are a utilization shock rather than a structural loss of Petrobras or Guyana work, so 2027\u201328 fixtures can refill 2026 white space if oil stays supportive.",
+  "catalyst_grid": [
+    {
+      "taxonomy": "Contract win/expansion",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 8,
+      "adjusted_weight": 10,
+      "event_ids": [
+        2,
+        8,
+        13,
+        20
+      ],
+      "event_date": "2026-08-07",
+      "evidence_excerpt": "The contract is scheduled to begin in the third quarter of 2027 and has an estimated duration of 670 days.",
+      "source_urls": [
+        "https://www.oedigital.com/news/541887-conocophillips-hire-noble-corporation-s-jack-up-for-ekofisk-p-a-work",
+        "https://drillingcontractor.org/conocophillips-books-noble-interceptor-for-ekofisk-pa-79293"
+      ],
+      "confidence": 91
+    },
+    {
+      "taxonomy": "Capacity expansion announced",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 6,
+      "event_ids": [
+        3
+      ],
+      "event_date": "2026-04-26",
+      "evidence_excerpt": "Capex guidance was raised by $25 million to $615\u2013665 million to account for the Noble Deliverer reactivation.",
+      "source_urls": [
+        "https://www.offshore-technology.com/news/noble-q1-2026-net-income/",
+        "https://www.shippingherald.com/noble-corporation-announces-first-quarter-2026-results/"
+      ],
+      "confidence": 85
+    },
+    {
+      "taxonomy": "Geopolitical event that boosts sector",
+      "type": "positive",
+      "category": "external",
+      "status": "MISS",
+      "base_weight": 5,
+      "adjusted_weight": 0,
+      "event_ids": [
+        0
+      ],
+      "event_date": "2026-09-28",
+      "evidence_excerpt": "Middle East geopolitical tensions and surging oil prices lift Noble 7% with offshore drillers",
+      "source_urls": [
+        "https://www.barrons.com/articles/dividend-stocks-value-investing-picks-74c7f4a0?mod=bar_FV"
+      ],
+      "confidence": 0
+    },
+    {
+      "taxonomy": "Analyst upgrade/PT increase",
+      "type": "positive",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 5,
+      "event_ids": [
+        6,
+        18,
+        22
+      ],
+      "event_date": "2026-09-07",
+      "evidence_excerpt": "on September 7, 2026, Citi (Citigroup) raised its price target on Noble Corporation plc (NYSE: NE) to $50 from $45, while maintaining a Neutral rating.",
+      "source_urls": [
+        "https://www.tipranks.com/news/the-fly/noble-corp-price-target-raised-to-50-from-45-at-citi-thefly-news"
+      ],
+      "confidence": 85
+    },
+    {
+      "taxonomy": "Positive personnel change",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 4,
+      "event_ids": [
+        7
+      ],
+      "event_date": "2026-05-21",
+      "evidence_excerpt": "On May 21, 2026, Noble Corporation plc (NYSE: NE) announced the appointment of Jeffrey A. \"Jeff\" Miller",
+      "source_urls": [
+        "https://www.noblecorp.com/investors/news/news-details/2026/NOBLE-CORPORATION-PLC-ANNOUNCES-NEW-DIRECTOR-APPOINTMENT/default.aspx",
+        "https://noblecorp.com/press-release/noble-corporation-plc-announces-new-director-appointment/"
+      ],
+      "confidence": 90
+    },
+    {
+      "taxonomy": "Earnings guidance cut",
+      "type": "negative",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 7,
+      "adjusted_weight": 9,
+      "event_ids": [
+        16
+      ],
+      "event_date": "2026-07-27",
+      "evidence_excerpt": "Adjusted EBITDA: $850 million \u2013 $925 million (previously $940M\u2013$1.02B).",
+      "source_urls": [
+        "https://noblecorp.com/press-release/noble-corporation-plc-announces-second-quarter-2026-results/",
+        "https://www.investing.com/news/transcripts/earnings-call-transcript-noble-corp-q2-2026-profit-misses-as-stock-falls-55-93CH-4817247"
+      ],
+      "confidence": 92
+    },
+    {
+      "taxonomy": "Operational setback",
+      "type": "negative",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 7,
+      "event_ids": [
+        15
+      ],
+      "event_date": "2026-07-27",
+      "evidence_excerpt": "Our second quarter was adversely impacted by $43 million due to the operational suspension of both of our rigs in Brazil.",
+      "source_urls": [
+        "https://noblecorp.com/press-release/noble-corporation-plc-announces-second-quarter-2026-results/",
+        "https://globalenergynetwork.net/news-item/noble-corporation-posts-37-million-q2-loss-as-petrobras-suspends-two-drillships-in-brazil/"
+      ],
+      "confidence": 91
+    },
+    {
+      "taxonomy": "Earnings miss",
+      "type": "negative",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 6,
+      "event_ids": [
+        14
+      ],
+      "event_date": "2026-07-27",
+      "evidence_excerpt": "Total revenue: $720 million (vs. $849 million in Q2 2025 and $786 million in Q1 2026).",
+      "source_urls": [
+        "https://noblecorp.com/press-release/noble-corporation-plc-announces-second-quarter-2026-results/",
+        "https://www.tipranks.com/news/the-fly/noble-corp-reports-q2-adjusted-eps-1c-consensus-18c-thefly-news"
+      ],
+      "confidence": 93
+    },
+    {
+      "taxonomy": "Adverse litigation/antitrust",
+      "type": "negative",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 6,
+      "event_ids": [
+        21
+      ],
+      "event_date": "2026-08-10",
+      "evidence_excerpt": "Kirby McInerney LLP is investigating potential claims against Noble Corporation plc (\u201cNoble\u201d or the \u201cCompany\u201d) (NYSE: NE).",
+      "source_urls": [
+        "https://www.globenewswire.com/news-release/2026/08/11/3342364/937/en/noble-corporation-plc-investor-alert-kirby-mcinerney-llp-announces-investigation-into-potential-securities-fraud.html",
+        "https://www.morningstar.com/news/pr-newswire/20260827dc35599/investor-alert-pomerantz-law-firm-investigates-claims-on-behalf-of-investors-of-noble-corporation-plc-ne"
+      ],
+      "confidence": 84
+    },
+    {
+      "taxonomy": "Analyst downgrade/PT cut",
+      "type": "negative",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 5,
+      "event_ids": [
+        11,
+        12,
+        19
+      ],
+      "event_date": "2026-07-30",
+      "evidence_excerpt": "on July 30, 2026, Barclays analyst Eddie Kim lowered the price target on Noble Corporation plc (NYSE: NE) to $53 from $55 while maintaining an Overweight",
+      "source_urls": [
+        "https://www.tipranks.com/news/the-fly/noble-corp-price-target-lowered-to-53-from-55-at-barclays-thefly-news"
+      ],
+      "confidence": 86
+    },
+    {
+      "taxonomy": "Contract win/expansion",
+      "type": "positive",
+      "event_date": "2026-04-26",
+      "evidence_excerpt": "Noble Courage was extended by Petrobras for an additional 1,115 days, extending through December 2030, for a net incremental backlog addition of $339 million.",
+      "source_urls": [
+        "https://www.energy-pedia.com/news/general/noble-corporation-announces-q1-2026-results-203700"
+      ],
+      "status": "HIT",
+      "base_weight": 8,
+      "adjusted_weight": 10,
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Contract win/expansion",
+      "type": "positive",
+      "event_date": "2026-04-26",
+      "evidence_excerpt": "Noble Deliverer was awarded a 5-well contract with Woodside in Australia. The contract, valued at $121 million excluding additional services",
+      "source_urls": [
+        "https://www.energy-pedia.com/news/general/noble-corporation-announces-q1-2026-results-203700"
+      ],
+      "status": "HIT",
+      "base_weight": 8,
+      "adjusted_weight": 10,
+      "confidence": 80
+    }
+  ],
+  "grok_verdict": "Bearish",
+  "search_backend": "grok_native",
+  "generated_at": "2026-09-28",
+  "cutoff_date": null,
+  "role": "override_captain"
+}

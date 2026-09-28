@@ -1,0 +1,190 @@
+{
+  "ticker": "RIG",
+  "analysis_date": "2026-09-28",
+  "current_price": "5.49",
+  "net_signal": "Strong Bullish",
+  "conviction": 85,
+  "catalyst_stack": "On 2026-06-30 Transocean locked in a license-conditional Equinor package worth over $1 billion across seven rig-years, capping a backlog wave that also included Petrobras extensions, the V\u00e5r Energi Barents award, Harbour/Santos fixtures, and the 2026-08-20 ONGC KG2 letter of award. Q2 2026 results on 2026-08-05 printed a $0.03 adjusted EPS beat and $966 million of contract drilling revenue, and Fearnley upgraded the stock to Buy on 2026-08-07 even as Barclays cut its target to $7 on 2026-08-12. Merger-arb improved after Transocean certified DOJ second-request compliance on 2026-08-25 and a 2026-09-21 report that antitrust clearance could come early narrowed the Valaris spread. A 2026-09-25 SDNY dismissal without prejudice of the securities class action removed a near-term legal overhang, while 26% short interest leaves squeeze convexity if backlog conversion and the Valaris path hold.",
+  "key_assumption": "Equinor license conditions are satisfied, the Valaris combination obtains DOJ/HSR clearance without a break or synergy miss, and oil-linked floater demand stays firm enough for the new multi-year backlog to convert to FCF rather than idle time.",
+  "catalyst_grid": [
+    {
+      "taxonomy": "Contract win/expansion",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 8,
+      "adjusted_weight": 10,
+      "event_ids": [
+        0,
+        1,
+        2,
+        3,
+        6,
+        7,
+        11
+      ],
+      "event_date": "2026-06-30",
+      "evidence_excerpt": "this agreement is worth over $1 billion in contract backlog over seven rig years, excluding additional services.",
+      "source_urls": [
+        "https://investor.deepwater.com/news-releases/news-release-details/transocean-ltd-announces-agreement-equinor-valued-over-1-billion/",
+        "https://worldoil.com/news/2026/6/30/transocean-lands-seven-year-1-billion-equinor-rig-deal/"
+      ],
+      "confidence": 95
+    },
+    {
+      "taxonomy": "Earnings beat (revenue, EBITDA, EPS)",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 8,
+      "adjusted_weight": 10,
+      "event_ids": [
+        8
+      ],
+      "event_date": "2026-08-05",
+      "evidence_excerpt": "Transocean Non-GAAP EPS of $0.03 beats by $0.02, revenue of $966M beats by $3.12M",
+      "source_urls": [
+        "https://seekingalpha.com/news/4626856-transocean-non-gaap-eps-of-0_03-beats-by-0_02-revenue-of-966m-beats-by-3_12m",
+        "https://www.nasdaq.com/articles/transocean-q2-earnings-beat-estimates-revenues-decline-y-y"
+      ],
+      "confidence": 95
+    },
+    {
+      "taxonomy": "Regulatory approval (FDA, FCC, FTC clearance)",
+      "type": "positive",
+      "category": "external",
+      "status": "MISS",
+      "base_weight": 9,
+      "adjusted_weight": 0,
+      "event_ids": [
+        13,
+        14
+      ],
+      "event_date": "2026-08-25",
+      "evidence_excerpt": "Transocean (RIG) certified compliance with the Dept. of Justice's second request after the close on Friday",
+      "source_urls": [
+        "https://seekingalpha.com/news/4636691-transocean-certified-compliance-with-doj-2nd-request-on-valaris-deal-ctfn",
+        "https://seekingalpha.com/news/4644928-valaris-transocean-deal-spread-narrows-on-report-doj-to-clear-tranasction-early"
+      ],
+      "confidence": 0
+    },
+    {
+      "taxonomy": "Favorable court ruling/patent grant",
+      "type": "positive",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 8,
+      "adjusted_weight": 9,
+      "event_ids": [
+        15
+      ],
+      "event_date": "2026-09-25",
+      "evidence_excerpt": "Transocean Ltd. investors fell short in pleading that top executives intended to publicly overvalue two oil and gas rigs later sold at a loss",
+      "source_urls": [
+        "https://news.bloomberglaw.com/securities-law/transocean-dodges-investor-suit-over-rust-bucket-rig-valuation"
+      ],
+      "confidence": 90
+    },
+    {
+      "taxonomy": "Analyst upgrade/PT increase",
+      "type": "positive",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 6,
+      "event_ids": [
+        5,
+        9
+      ],
+      "event_date": "2026-08-07",
+      "evidence_excerpt": "Fearnley Securities Buy Upgrades $6.7 Aug 7, 2026",
+      "source_urls": [
+        "https://stockanalysis.com/stocks/rig/forecast/",
+        "https://www.tipranks.com/news/the-fly/transocean-upgraded-to-buy-from-hold-at-fearnley-thefly-news"
+      ],
+      "confidence": 88
+    },
+    {
+      "taxonomy": "Analyst downgrade/price target cut",
+      "type": "negative",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 5,
+      "event_ids": [
+        10
+      ],
+      "event_date": "2026-08-12",
+      "evidence_excerpt": "Barclays Buy Maintains $8 \u2192 $7 Aug 12, 2026",
+      "source_urls": [
+        "https://stockanalysis.com/stocks/rig/forecast/"
+      ],
+      "confidence": 88
+    },
+    {
+      "taxonomy": "Short squeeze potential",
+      "type": "positive",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 3,
+      "adjusted_weight": 3,
+      "event_ids": [
+        7,
+        8,
+        13,
+        14
+      ],
+      "event_date": "2026-09-28",
+      "evidence_excerpt": "Float short 26.18% and days-to-cover 6.24, with a live positive-catalyst cluster in backlog, earnings, and the Valaris DOJ path.",
+      "source_urls": [
+        "https://seekingalpha.com/news/4626856-transocean-non-gaap-eps-of-0_03-beats-by-0_02-revenue-of-966m-beats-by-3_12m",
+        "https://seekingalpha.com/news/4644928-valaris-transocean-deal-spread-narrows-on-report-doj-to-clear-tranasction-early"
+      ],
+      "confidence": 90
+    },
+    {
+      "taxonomy": "Contract win/expansion",
+      "type": "positive",
+      "event_date": "2026-09-15",
+      "evidence_excerpt": "contribute approximately $80 million in backlog, excluding additional services and compensation for mobilization and demobilization.",
+      "source_urls": [
+        "https://www.globenewswire.com/news-release/2026/09/15/3361834/0/en/transocean-ltd-announces-80-million-contract-for-ultra-deepwater-drillship.html"
+      ],
+      "status": "HIT",
+      "base_weight": 8,
+      "adjusted_weight": 10,
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Contract win/expansion",
+      "type": "positive",
+      "event_date": "2026-08-05",
+      "evidence_excerpt": "Since May, the company has secured five new drilling contracts worth approximately $292 million in additional backlog",
+      "source_urls": [
+        "https://www.bairdmaritime.com/offshore/drilling-production/transocean-reports-170m-q2-profit-as-backlog-reaches-67b"
+      ],
+      "status": "HIT",
+      "base_weight": 8,
+      "adjusted_weight": 10,
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Analyst downgrade/price target cut",
+      "type": "negative",
+      "event_date": "2026-07-08",
+      "evidence_excerpt": "Susquehanna Lower Target Positive $8.00 \u279d $7.00",
+      "source_urls": [
+        "https://www.marketbeat.com/stocks/NYSE/RIG/forecast/"
+      ],
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 5,
+      "confidence": 80
+    }
+  ],
+  "grok_verdict": "Bullish",
+  "search_backend": "grok_native",
+  "generated_at": "2026-09-28",
+  "cutoff_date": null,
+  "role": "override_captain"
+}
