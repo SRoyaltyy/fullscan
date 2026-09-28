@@ -1,6 +1,6 @@
 # OpenClaw live probe
 
-- generated: 2026-09-22T11:38:04Z UTC / 2026-09-22 07:38 EDT / 2026-09-22 19:38 CST
+- generated: 2026-09-28T11:20:22Z UTC / 2026-09-28 07:20 EDT / 2026-09-28 19:20 CST
 - uid=0 user=root home=/home/gha
 - gateway_url=http://127.0.0.1:18789
 - token_set=yes
@@ -15,22 +15,22 @@ LISTEN 0      511            [::1]:18789         [::]:*    users:(("openclaw-gat
 ### GET http://127.0.0.1:18789/health
 ```
 {"ok":true,"status":"live"}
-HTTP 200 time=0.384817s
+HTTP 200 time=0.033666s
 ```
 ### GET http://127.0.0.1:18789/healthz
 ```
 {"ok":true,"status":"live"}
-HTTP 200 time=0.002859s
+HTTP 200 time=0.007937s
 ```
 ### GET http://127.0.0.1:18789/ready
 ```
-{"ready":true,"failing":[],"uptimeMs":94647101,"eventLoop":{"degraded":true,"reasons":["event_loop_delay"],"intervalMs":59809,"delayP99Ms":22.1,"delayMaxMs":1375.7,"utilization":0.042,"cpuCoreRatio":0.021}}
-HTTP 200 time=0.010860s
+{"ready":true,"failing":[],"uptimeMs":611984461,"eventLoop":{"degraded":false,"reasons":[],"intervalMs":35820,"delayP99Ms":24.4,"delayMaxMs":395.1,"utilization":0.082,"cpuCoreRatio":0.039}}
+HTTP 200 time=0.008020s
 ```
 ### GET http://127.0.0.1:18789/readyz
 ```
-{"ready":true,"failing":[],"uptimeMs":94647130,"eventLoop":{"degraded":true,"reasons":["event_loop_delay"],"intervalMs":59809,"delayP99Ms":22.1,"delayMaxMs":1375.7,"utilization":0.042,"cpuCoreRatio":0.021}}
-HTTP 200 time=0.002907s
+{"ready":true,"failing":[],"uptimeMs":611984495,"eventLoop":{"degraded":false,"reasons":[],"intervalMs":35820,"delayP99Ms":24.4,"delayMaxMs":395.1,"utilization":0.082,"cpuCoreRatio":0.039}}
+HTTP 200 time=0.003733s
 ```
 ### GET http://127.0.0.1:18789/startup
 ```
@@ -57,8 +57,8 @@ HTTP 200 time=0.002907s
 ```
 ### GET http://127.0.0.1:18789/v1/models (Accept: application/json)
 ```
-{"error":{"message":"Unauthorized","type":"unauthorized"}}
-HTTP 401 time=0.008896s
+{"object":"list","data":[{"id":"openclaw","object":"model","created":0,"owned_by":"openclaw","permission":[]},{"id":"openclaw/default","object":"model","created":0,"owned_by":"openclaw","permission":[]},{"id":"openclaw/main","object":"model","created":0,"owned_by":"openclaw","permission":[]}]}
+HTTP 200 time=0.003351s
 ```
 
 ## 2. Live timeoutSeconds (CLI talks to the running gateway)
@@ -110,72 +110,191 @@ models.providers.anthropic.timeoutSeconds = 10800
 
 ### openclaw health --json
 ```
-gateway connect failed: GatewayClientRequestError: unauthorized: gateway token mismatch (provide gateway auth token)
 {
-  "ok": false,
-  "error": {
-    "type": "gateway_transport_error",
-    "kind": "closed",
-    "message": "gateway closed (1008): unauthorized: gateway token mismatch (provide gateway auth token)",
-    "code": 1008,
-    "reason": "unauthorized: gateway token mismatch (provide gateway auth token)"
+  "ok": true,
+  "ts": 1790594454496,
+  "durationMs": 22,
+  "eventLoop": {
+    "degraded": false,
+    "reasons": [],
+    "intervalMs": 7611,
+    "delayP99Ms": 32,
+    "delayMaxMs": 130,
+    "utilization": 0.19,
+    "cpuCoreRatio": 0.199
   },
-  "gateway": {
-    "url": "ws://127.0.0.1:18789",
-    "urlSource": "local loopback",
-    "bindDetail": "Bind: loopback"
-  }
-}
-[exit 1]
+  "plugins": {
+    "loaded": [
+      "alibaba",
+      "anthropic",
+      "azure-speech",
+      "browser",
+      "byteplus",
+      "canvas",
+      "clawrouter",
+      "cohere",
+      "comfy",
+      "copilot-proxy",
+      "deepgram",
+      "device-pair",
+      "document-extract",
+      "elevenlabs",
+      "fal",
+      "file-transfer",
+      "github-copilot",
+      "google",
+      "huggingface",
+      "litellm",
+      "lmstudio",
+      "memory-core",
+      "meta",
+      "microsoft",
+      "microsoft-foundry",
+      "minimax",
+      "mistral",
+      "novita",
+      "nvidia",
+      "ollama",
+      "openai",
+      "opencode",
+      "opencode-go",
+      "openrouter",
+      "phone-control",
+      "runway",
+      "senseaudio",
+      "sglang",
+      "synthetic",
+      "talk-voice",
+      "together",
+      "tts-local-cli",
+      "vllm",
+      "volcengine",
+      "voyage",
+      "vydra",
+      "web-readability",
+      "xai",
+      "xiaomi"
+    ],
+    "errors": []
+  },
+  "configReload": {
+    "hotReloadStatus": "active"
+  },
+  "modelPricing": {
+    "state": "ok",
+    "sources": []
+  },
+  "channels": {},
+  "channelOrder": [],
+  "channelLabels": {},
+  "heartbeatSeconds": 1800,
+  "defaultAgentId": "main",
+  "agents": [
 ```
 ### openclaw health --verbose
 ```
-gateway connect failed: GatewayClientRequestError: unauthorized: gateway token mismatch (provide gateway auth token)
-[openclaw] Could not start the CLI.
-[openclaw] Reason: gateway closed (1008): unauthorized: gateway token mismatch (provide gateway auth token)
-Gateway target: ws://127.0.0.1:18789
-Source: local loopback
-Config: /home/gha/.openclaw/openclaw.json
-Bind: loopback
-[openclaw] Stack:
-[openclaw] GatewayTransportError: gateway closed (1008): unauthorized: gateway token mismatch (provide gateway auth token)
-[openclaw] Gateway target: ws://127.0.0.1:18789
-[openclaw] Source: local loopback
-[openclaw] Config: /home/gha/.openclaw/openclaw.json
-[openclaw] Bind: loopback
-[openclaw]     at createGatewayCloseTransportError (file:///usr/lib/node_modules/openclaw/dist/call-Bj6Erfmh.js:459:9)
-[openclaw]     at Object.onClose (file:///usr/lib/node_modules/openclaw/dist/call-Bj6Erfmh.js:596:10)
-[openclaw]     at GatewayClient.notifyClose (file:///usr/lib/node_modules/openclaw/dist/src-DZzKBMa7.js:728:23)
-[openclaw]     at WebSocket.<anonymous> (file:///usr/lib/node_modules/openclaw/dist/src-DZzKBMa7.js:414:10)
-[openclaw]     at WebSocket.emit (node:events:514:20)
-[openclaw]     at WebSocket.emitClose (/usr/lib/node_modules/openclaw/node_modules/ws/lib/websocket.js:279:10)
-[openclaw]     at Socket.socketOnClose (/usr/lib/node_modules/openclaw/node_modules/ws/lib/websocket.js:1360:15)
-[openclaw]     at Socket.emit (node:events:514:20)
-[openclaw]     at TCP.<anonymous> (node:net:362:12)
-[openclaw] Try: openclaw doctor
-[openclaw] Help: openclaw --help
-[exit 1]
+Gateway connection:
+  Gateway target: ws://127.0.0.1:18789
+  Source: local loopback
+  Config: /home/gha/.openclaw/openclaw.json
+  Bind: loopback
+Gateway event loop: ok max=54ms p99=20ms util=0.035 cpu=0.034
+Agents: main (default)
+Heartbeat interval: 30m (main)
+Session store (main): /home/gha/.openclaw/agents/main/sessions/sessions.json (508 entries)
+- agent:main:fullscan-sector-predict-technology-2026-09-28-139fd185dbbc (9m ago)
+- agent:main:fullscan-catalyst-step1-bkr-1c685532c321 (24m ago)
+- agent:main:fullscan-catalyst-verdict-bkr-e4c01da337e5 (24m ago)
+- agent:main:fullscan-catalyst-step2-bkr-05a6d7ff8a3b (24m ago)
+- agent:main:fullscan-catalyst-catcher-slb-023723393165 (25m ago)
+[exit 0]
 ```
 ### openclaw status --deep
 ```
-gateway connect failed: GatewayClientRequestError: unauthorized: gateway token mismatch (provide gateway auth token)
-gateway connect failed: GatewayClientRequestError: unauthorized: gateway token mismatch (provide gateway auth token)
-gateway connect failed: GatewayClientRequestError: unauthorized: gateway token mismatch (provide gateway auth token)
-[openclaw] Could not start the CLI.
-[openclaw] Reason: gateway closed (1008): unauthorized: gateway token mismatch (provide gateway auth token)
-Gateway target: ws://127.0.0.1:18789
-Source: local loopback
-Config: /home/gha/.openclaw/openclaw.json
-Bind: loopback
-[openclaw] Debug: set OPENCLAW_DEBUG=1 to include the stack trace.
-[openclaw] Try: openclaw doctor
-[openclaw] Help: openclaw --help
-[exit 1]
+OpenClaw status
+
+Overview
+┌──────────────────────┬───────────────────────────────────────────────────────────────────────────────────────────────┐
+│ Item                 │ Value                                                                                         │
+├──────────────────────┼───────────────────────────────────────────────────────────────────────────────────────────────┤
+│ OS                   │ linux 5.15.0-187-generic (x64) · node 26.7.0                                                  │
+│ Dashboard            │ http://127.0.0.1:18789/                                                                       │
+│ Tailscale exposure   │ off                                                                                           │
+│ Channel              │ stable (default)                                                                              │
+│ Update               │ available · npm · npm update 2026.9.6 · deps ok                                               │
+│ Gateway              │ local · ws://127.0.0.1:18789 (local loopback) · reachable 481ms · auth token                  │
+│ Gateway service      │ systemd user not installed                                                                    │
+│ Node service         │ systemd user not installed                                                                    │
+│ Agents               │ 1 · 1 bootstrap file present · sessions 508 · default main active 10m ago                     │
+│ Memory               │ enabled (plugin memory-core) · not checked                                                    │
+│ Plugin compatibility │ none                                                                                          │
+│ Probes               │ enabled                                                                                       │
+│ Events               │ none                                                                                          │
+│ Tasks                │ none                                                                                          │
+│ Heartbeat            │ 30m (main)                                                                                    │
+│ Last heartbeat       │ skipped · just now ago · unknown                                                              │
+│ Sessions             │ 508 active · default grok-4.6 (200k ctx) · ~/.openclaw/agents/main/sessions/sessions.json     │
+└──────────────────────┴───────────────────────────────────────────────────────────────────────────────────────────────┘
+
+Security audit
+Summary: 0 critical · 1 warn · 2 info
+  WARN Reverse proxy headers are not trusted
+    gateway.bind is loopback and gateway.trustedProxies is empty. If you expose the Control UI through a reverse proxy, configure trusted proxies so local-client c…
+    Fix: Set gateway.trustedProxies to your proxy IPs or keep the Control UI local-only.
+Full report: openclaw security audit
+Deep probe: openclaw security audit --deep
+
+Channels
+No channels configured
+
+Sessions
+┌───────────────────────────────┬────────┬─────────┬──────────────┬──────────────────┬─────────────────────────────────┐
+│ Key                           │ Kind   │ Age     │ Model        │ Runtime          │ Tokens                          │
+├───────────────────────────────┼────────┼─────────┼──────────────┼──────────────────┼─────────────────────────────────┤
+│ agent:main:fullscan-sector-   │ direct │ 10m ago │ grok-4.6     │ OpenClaw Default │ 87k/256k (34%) · 🗄️ 49% cached  │
+│ pred…                         │        │         │              │                  │                                 │
+│ agent:main:fullscan-catalyst- │ direct │ 24m ago │ grok-4.6     │ OpenClaw Default │ 21k/256k (8%) · 🗄️ 2% cached    │
+│ st…                           │        │         │              │                  │                                 │
+│ agent:main:fullscan-catalyst- │ direct │ 24m ago │ grok-4.6     │ OpenClaw Default │ 21k/256k (8%) · 🗄️ 2% cached    │
+│ ve…                           │        │         │              │                  │                                 │
+│ agent:main:fullscan-catalyst- │ direct │ 24m ago │ grok-4.6     │ OpenClaw Default │ unknown/256k (?%)               │
+│ st…                           │        │         │              │                  │                                 │
+│ agent:main:fullscan-catalyst- │ direct │ 25m ago │ grok-4.6     │ OpenClaw Default │ 73k/256k (28%) · 🗄️ 85% cached  │
+│ ca…                           │        │         │              │                  │                                 │
+│ agent:main:fullscan-catalyst- │ direct │ 30m ago │ grok-4.6     │ OpenClaw Default │ 32k/256k (12%) · 🗄️ 50% cached  │
+│ st…                           │        │         │              │                  │                                 │
+│ agent:main:fullscan-catalyst- │ direct │ 36m ago │ grok-4.6     │ OpenClaw Default │ 115k/256k (45%) · 🗄️ 71% cached │
+│ st…                           │        │         │              │                  │                                 │
+│ agent:main:fullscan-catalyst- │ direct │ 36m ago │ grok-4.6     │ OpenClaw Default │ 136k/256k (53%) · 🗄️ 80% cached │
+│ ve…                           │        │         │              │                  │                                 │
+│ agent:main:fullscan-catalyst- │ direct │ 37m ago │ grok-4.6     │ OpenClaw Default │ 57k/256k (22%) · 🗄️ 73% cached  │
+│ st…                           │        │         │              │                  │                                 │
+│ agent:main:fullscan-catalyst- │ direct │ 43m ago │ grok-4.6     │ OpenClaw Default │ 83k/256k (32%) · 🗄️ 63% cached  │
+│ ca…                           │        │         │              │                  │                                 │
+└───────────────────────────────┴────────┴─────────┴──────────────┴──────────────────┴─────────────────────────────────┘
+
+Health
+┌────────────┬───────────┬─────────────────────────────────────────────────────────────────────────────────────────────┐
+│ Item       │ Status    │ Detail                                                                                      │
+├────────────┼───────────┼─────────────────────────────────────────────────────────────────────────────────────────────┤
+│ Gateway    │ reachable │ 20ms                                                                                        │
+│ Event loop │ OK        │ healthy · max 54ms · p99 52ms · util 0.173 · cpu 0.149                                      │
+└────────────┴───────────┴─────────────────────────────────────────────────────────────────────────────────────────────┘
+
+FAQ: https://docs.openclaw.ai/faq
+Troubleshooting: https://docs.openclaw.ai/troubleshooting
+
+Update available (npm 2026.9.6). Run: openclaw update
+Next steps:
+  Need to share?      openclaw status --all
+  Need to debug live? openclaw logs --follow
+  Need to test channels? openclaw status --deep
+[exit 0]
 ```
 ### openclaw gateway status --deep
 ```
 Service: systemd user (disabled)
-File logs: /tmp/openclaw-1000/openclaw-2026-09-22.log
+File logs: /tmp/openclaw-1000/openclaw-2026-09-28.log
 
 Config (cli): ~/.openclaw/openclaw.json
 Config (service): ~/.openclaw/openclaw.json
@@ -185,15 +304,13 @@ Probe target: ws://127.0.0.1:18789
 Dashboard: http://127.0.0.1:18789/
 Probe note: Loopback-only gateway; only local clients can connect.
 
-Runtime: stopped (state inactive, sub dead, last exit 0, reason 0)
-Connectivity probe: failed
-Probe target: ws://127.0.0.1:18789
-  unauthorized: gateway token mismatch (provide gateway auth token)
-Capability: unknown
+CLI version: 2026.7.1-2 (/usr/bin/openclaw)
+Gateway version: 2026.7.1-2
 
-Port 18789 is already in use.
-- pid 1608979 gha: openclaw-gateway (127.0.0.1:18789)
-- pid 1608979 gha: openclaw-gateway ([::1]:18789)
+Runtime: stopped (state inactive, sub dead, last exit 0, reason 0)
+Connectivity probe: ok
+Capability: connected-no-operator-scope
+
 Listening: 127.0.0.1:18789, [::1]:18789
 Troubles: run openclaw status
 Troubleshooting: https://docs.openclaw.ai/troubleshooting
@@ -215,7 +332,7 @@ Tip: if the gateway is remote, mDNS won’t cross networks; use Wide-Area Bonjou
 
 Targets
 Local loopback ws://127.0.0.1:18789
-  Connect: ok (57ms) · Capability: connect-only · Read probe: limited - missing scope: operator.read
+  Connect: ok (50ms) · Capability: connect-only · Read probe: limited - missing scope: operator.read
 
 [exit 0]
 ```
@@ -253,33 +370,32 @@ This is OpenClaw's own job timer, distinct from systemd fullscan-preopen.timer.
 ```
 ### openclaw cron list --all (alias)
 ```
-gateway connect failed: GatewayClientRequestError: unauthorized: gateway token mismatch (set gateway.remote.token to match gateway.auth.token)
-GatewayTransportError: gateway closed (1008): unauthorized: gateway token mismatch (set gateway.remote.token to match gateway.auth.token)
-Gateway target: ws://127.0.0.1:18789
-Source: local loopback
-Config: /home/gha/.openclaw/openclaw.json
-Bind: loopback
-[exit 1]
+No cron jobs.
+[exit 0]
 ```
 ### openclaw cron status
 ```
-gateway connect failed: GatewayClientRequestError: unauthorized: gateway token mismatch (set gateway.remote.token to match gateway.auth.token)
-GatewayTransportError: gateway closed (1008): unauthorized: gateway token mismatch (set gateway.remote.token to match gateway.auth.token)
-Gateway target: ws://127.0.0.1:18789
-Source: local loopback
-Config: /home/gha/.openclaw/openclaw.json
-Bind: loopback
-[exit 1]
+{
+  "enabled": true,
+  "storePath": "/home/gha/.openclaw/cron/jobs.json",
+  "storage": "sqlite",
+  "sqlitePath": "/home/gha/.openclaw/state/openclaw.sqlite",
+  "jobs": 0,
+  "nextWakeAtMs": null
+}
+[exit 0]
 ```
 ### openclaw cron status --json
 ```
-gateway connect failed: GatewayClientRequestError: unauthorized: gateway token mismatch (set gateway.remote.token to match gateway.auth.token)
-GatewayTransportError: gateway closed (1008): unauthorized: gateway token mismatch (set gateway.remote.token to match gateway.auth.token)
-Gateway target: ws://127.0.0.1:18789
-Source: local loopback
-Config: /home/gha/.openclaw/openclaw.json
-Bind: loopback
-[exit 1]
+{
+  "enabled": true,
+  "storePath": "/home/gha/.openclaw/cron/jobs.json",
+  "storage": "sqlite",
+  "sqlitePath": "/home/gha/.openclaw/state/openclaw.sqlite",
+  "jobs": 0,
+  "nextWakeAtMs": null
+}
+[exit 0]
 ```
 ### cron store on disk
 ```
@@ -292,15 +408,15 @@ ls: cannot access '/home/gha/.openclaw/cron': No such file or directory
 enabled
 active
 NEXT                        LEFT     LAST                        PASSED       UNIT                   ACTIVATES
-Wed 2026-09-23 17:55:00 CST 22h left Tue 2026-09-22 17:55:04 CST 1h 44min ago fullscan-preopen.timer fullscan-preopen.service
+Tue 2026-09-29 17:55:00 CST 22h left Mon 2026-09-28 17:55:04 CST 1h 26min ago fullscan-preopen.timer fullscan-preopen.service
 
 1 timers listed.
 
 ### fullscan-preopen.timer show
 ```
 Unit=fullscan-preopen.service
-NextElapseUSecRealtime=Wed 2026-09-23 17:55:00 CST
-LastTriggerUSec=Tue 2026-09-22 17:55:04 CST
+NextElapseUSecRealtime=Tue 2026-09-29 17:55:00 CST
+LastTriggerUSec=Mon 2026-09-28 17:55:04 CST
 Persistent=yes
 Triggers=fullscan-preopen.service
 ActiveState=active
@@ -332,31 +448,31 @@ active
 ● fullscan-openclaw-gateway.service - /usr/bin/openclaw gateway
      Loaded: loaded (/run/systemd/transient/fullscan-openclaw-gateway.service; transient)
   Transient: yes
-     Active: active (running) since Mon 2026-09-21 17:20:24 CST; 1 day 2h ago
+     Active: active (running) since Mon 2026-09-21 17:20:24 CST; 1 week 0 days ago
    Main PID: 1608979 (openclaw-gatewa)
       Tasks: 12 (limit: 1789)
-     Memory: 385.5M
-        CPU: 50min 47.280s
+     Memory: 495.0M
+        CPU: 6h 44min 1.976s
      CGroup: /system.slice/fullscan-openclaw-gateway.service
              └─1608979 openclaw-gateway "" "" "" "" "" "" "" "" "" "" "" "" "" ""
 
-Sep 22 19:39:03 iZt4nagf215582ts0wf5jcZ openclaw[1608979]: 2026-09-22T19:39:03.478+08:00 [ws] closed before connect conn=0a5f182b-b210-4c57-9374-c16948a500db peer=127.0.0.1:49648->127.0.0.1:18789 remote=127.0.0.1 fwd=n/a origin=n/a host=127.0.0.1:18789 ua=n/a code=1008 reason=unauthorized: gateway token mismatch (provide gateway auth token) phase=auth_credentials_received
-Sep 22 19:39:15 iZt4nagf215582ts0wf5jcZ openclaw[1608979]: 2026-09-22T19:39:15.929+08:00 [ws] ⇄ res ✗ status 5ms errorCode=INVALID_REQUEST errorMessage=missing scope: operator.read conn=46126760…0322 id=05e7f00f…078f
-Sep 22 19:39:15 iZt4nagf215582ts0wf5jcZ openclaw[1608979]: 2026-09-22T19:39:15.935+08:00 [ws] ⇄ res ✗ system-presence 30ms errorCode=INVALID_REQUEST errorMessage=missing scope: operator.read conn=46126760…0322 id=d04769ab…bb08
-Sep 22 19:39:15 iZt4nagf215582ts0wf5jcZ openclaw[1608979]: 2026-09-22T19:39:15.941+08:00 [ws] ⇄ res ✗ config.get 36ms errorCode=INVALID_REQUEST errorMessage=missing scope: operator.read conn=46126760…0322 id=56d7bbae…3c43
-Sep 22 19:39:34 iZt4nagf215582ts0wf5jcZ openclaw[1608979]: 2026-09-22T19:39:34.466+08:00 [ws] unauthorized conn=8523ddff-c1ac-4db2-9e67-f56de6ae1ed7 peer=127.0.0.1:42816->127.0.0.1:18789 remote=127.0.0.1 client=cli cli v2026.7.1-2 role=operator scopes=0 auth=token device=no platform=linux instance=025d450d-9eb8-4b71-b2e3-e620df133383 host=127.0.0.1:18789 origin=n/a ua=n/a reason=token_mismatch
-Sep 22 19:39:34 iZt4nagf215582ts0wf5jcZ openclaw[1608979]: 2026-09-22T19:39:34.552+08:00 [ws] closed before connect conn=8523ddff-c1ac-4db2-9e67-f56de6ae1ed7 peer=127.0.0.1:42816->127.0.0.1:18789 remote=127.0.0.1 fwd=n/a origin=n/a host=127.0.0.1:18789 ua=n/a code=1008 reason=connect failed phase=auth_credentials_received
-Sep 22 19:39:38 iZt4nagf215582ts0wf5jcZ openclaw[1608979]: 2026-09-22T19:39:38.785+08:00 [ws] unauthorized conn=507670ef-0625-4ef9-9f66-6580a6b1993c peer=127.0.0.1:42822->127.0.0.1:18789 remote=127.0.0.1 client=cli cli v2026.7.1-2 role=operator scopes=0 auth=token device=no platform=linux instance=b2776c73-2382-4db6-9a85-e57027ce2385 host=127.0.0.1:18789 origin=n/a ua=n/a reason=token_mismatch
-Sep 22 19:39:38 iZt4nagf215582ts0wf5jcZ openclaw[1608979]: 2026-09-22T19:39:38.872+08:00 [ws] closed before connect conn=507670ef-0625-4ef9-9f66-6580a6b1993c peer=127.0.0.1:42822->127.0.0.1:18789 remote=127.0.0.1 fwd=n/a origin=n/a host=127.0.0.1:18789 ua=n/a code=1008 reason=unauthorized: gateway token mismatch (set gateway.remote.token to match gateway.auth.token) phase=auth_credentials_received
-Sep 22 19:39:43 iZt4nagf215582ts0wf5jcZ openclaw[1608979]: 2026-09-22T19:39:43.204+08:00 [ws] unauthorized conn=ac9e5a12-8792-4321-9072-18b053908b6c peer=127.0.0.1:58070->127.0.0.1:18789 remote=127.0.0.1 client=cli cli v2026.7.1-2 role=operator scopes=0 auth=token device=no platform=linux instance=cec02be9-4da2-4038-8a94-61193a994728 host=127.0.0.1:18789 origin=n/a ua=n/a reason=token_mismatch
-Sep 22 19:39:43 iZt4nagf215582ts0wf5jcZ openclaw[1608979]: 2026-09-22T19:39:43.380+08:00 [ws] closed before connect conn=ac9e5a12-8792-4321-9072-18b053908b6c peer=127.0.0.1:58070->127.0.0.1:18789 remote=127.0.0.1 fwd=n/a origin=n/a host=127.0.0.1:18789 ua=n/a code=1008 reason=unauthorized: gateway token mismatch (set gateway.remote.token to match gateway.auth.token) phase=auth_credentials_received
+Sep 28 19:11:42 iZt4nagf215582ts0wf5jcZ openclaw[1608979]: 13. Stockanalysis / Public.com premarket (09-28) — LRCX ~$305.75 (~−3%); AMAT ~$470–472 (~−3%) vs 09-25 closes. **Nested semi-eq tape for S2.**
+Sep 28 19:11:42 iZt4nagf215582ts0wf5jcZ openclaw[1608979]: 14. X search 09-27..09-28 — sparse 09-28 posts; weekend setup: 10Y >5% as the test of AI/tech; Hormuz still headline risk; oil as premium not confirmed structural shutdown. **Color only; did not override Channel 1.**
+Sep 28 19:11:42 iZt4nagf215582ts0wf5jcZ openclaw[1608979]: 15. Yahoo Finance live blog fetch — **failed**; premarket XLK ~$194.56 −0.87% vs 09-25 $196.27 from Tradesmith/Investing.com search snippets, directionally consistent with Channel 1 XLK PM −1.16%.
+Sep 28 19:11:42 iZt4nagf215582ts0wf5jcZ openclaw[1608979]: **Not used as Channel 1 replacements:** Finviz futures board (stale SPX +0.20% / NQ +0.41% vs live ES/NQ vs-prior-close); Finviz WTI −1.59% vs Channel 1 CL=F +4.12%.
+Sep 28 19:11:42 iZt4nagf215582ts0wf5jcZ openclaw[1608979]: 2026-09-28T19:11:42.371+08:00 [agents/agent-command] [agent] run chatcmpl_11bddd69-8705-43d1-81f7-53f28ac80a75 ended with stopReason=stop
+Sep 28 19:20:59 iZt4nagf215582ts0wf5jcZ openclaw[1608979]: 2026-09-28T19:20:59.008+08:00 [ws] ⇄ res ✓ health 64ms conn=7822612c…bc12 id=32d1f7d0…409b
+Sep 28 19:21:15 iZt4nagf215582ts0wf5jcZ openclaw[1608979]: 2026-09-28T19:21:15.199+08:00 [ws] ⇄ res ✗ system-presence 2ms errorCode=INVALID_REQUEST errorMessage=missing scope: operator.read conn=2c9439a7…b2d7 id=9dcd9768…a8a3
+Sep 28 19:21:34 iZt4nagf215582ts0wf5jcZ openclaw[1608979]: 2026-09-28T19:21:34.832+08:00 [ws] ⇄ res ✗ status 2ms errorCode=INVALID_REQUEST errorMessage=missing scope: operator.read conn=a29fc077…0ce2 id=d8dd67e1…b9e3
+Sep 28 19:21:34 iZt4nagf215582ts0wf5jcZ openclaw[1608979]: 2026-09-28T19:21:34.842+08:00 [ws] ⇄ res ✗ system-presence 15ms errorCode=INVALID_REQUEST errorMessage=missing scope: operator.read conn=a29fc077…0ce2 id=6b87d9f0…54d0
+Sep 28 19:21:34 iZt4nagf215582ts0wf5jcZ openclaw[1608979]: 2026-09-28T19:21:34.851+08:00 [ws] ⇄ res ✗ config.get 22ms errorCode=INVALID_REQUEST errorMessage=missing scope: operator.read conn=a29fc077…0ce2 id=719263fa…4f37
 ```
 ### expected next 05:55 America/New_York vs systemd Next
 ```
-now ET: 2026-09-22T07:39:43.794083-04:00
-next weekday 05:55 ET: 2026-09-23T05:55:00-04:00
-next as CST: 2026-09-23T17:55:00+08:00
-hours until: 22.25
+now ET: 2026-09-28T07:22:02.968596-04:00
+next weekday 05:55 ET: 2026-09-29T05:55:00-04:00
+next as CST: 2026-09-29T17:55:00+08:00
+hours until: 22.55
 ```
 
 ## 6. Live chat ping (gateway actually answers)
@@ -365,20 +481,19 @@ Short completion against /v1/chat/completions. 90s cap. Proves the
 running process will take a Grok turn. Does NOT soak 9 minutes.
 
 ```
-/v1/chat/completions HTTP 401 in 0.0s '{"error":{"message":"Unauthorized","type":"unauthorized"}}'
-/openai/v1/chat/completions HTTP 404 in 0.0s 'Not Found'
-/api/v1/chat/completions HTTP 404 in 0.0s 'Not Found'
-/chat/completions HTTP 404 in 0.0s 'Not Found'
-PING_RESULT=NO_CHAT_ENDPOINT
+/v1/chat/completions HTTP 200 in 18.1s
+content: PONG
+model: openclaw/default
+PING_RESULT=PONG_OK
 ```
 
 ## 7. Verdict (live, this run)
 
-systemd NextElapseUSecRealtime: Wed 2026-09-23 17:55:00 CST
-systemd TimersCalendar: { OnCalendar=Mon..Fri *-*-* 05:55:00 America/New_York ; next_elapse=Wed 2026-09-23 17:55:00 CST }
+systemd NextElapseUSecRealtime: Tue 2026-09-29 17:55:00 CST
+systemd TimersCalendar: { OnCalendar=Mon..Fri *-*-* 05:55:00 America/New_York ; next_elapse=Tue 2026-09-29 17:55:00 CST }
 systemd Persistent: yes
-expect next 05:55 ET: 2026-09-23T05:55:00-04:00
-now ET: 2026-09-22T07:39:44.074146-04:00
+expect next 05:55 ET: 2026-09-29T05:55:00-04:00
+now ET: 2026-09-28T07:22:21.410523-04:00
 fullscan-openclaw-gateway: active
 
 OK:
