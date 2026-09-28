@@ -1,0 +1,113 @@
+name: Jev hop-0 eval
+
+# Fresh unlabeled hop-0 draw. Not the weekday harvest.
+# jev_hop0.yml (id 368978695, "Jev hop-0 net") stays disabled_manually.
+# Do not enable it and do not put a schedule on this file.
+# workflow_dispatch of a new workflow does not run until the file is on
+# main, so the first draw is the pull_request event on this branch.
+# The round commit only touches 00_grounding/jev_rounds and jev_holdout.json,
+# which are outside the path filter, and the message carries [skip ci].
+
+on:
+  workflow_dispatch:
+    inputs:
+      seed:
+        description: RNG seed. Blank draws a fresh seed.
+        required: false
+        default: ""
+        type: string
+      knob:
+        description: One knob, name=value. Blank keeps the current gate.
+        required: false
+        default: ""
+        type: string
+  pull_request:
+    types: [opened, synchronize, reopened]
+    paths:
+      - ".github/workflows/jev_eval.yml"
+      - "src/jev_gate.py"
+      - "src/jev_eval.py"
+      - "src/test_jev_eval.py"
+      - "00_grounding/jev_gold.json"
+      - "00_grounding/jev_closed_lists.json"
+      - "00_grounding/jev_junk_shapes.json"
+      - "00_grounding/jev_chokepoint_state.json"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: jev-eval-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  eval:
+    if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.ref || github.ref_name }}
+          fetch-depth: 1
+          persist-credentials: true
+          sparse-checkout: |
+            src
+            00_grounding
+            01_daily/news
+            .github/workflows
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Unit tests (no key)
+        run: PYTHONPATH=. python3 -m src.test_jev_eval
+      - name: Unlabeled eval draw
+        env:
+          JEV_API_KEY: ${{ secrets.JEV_API_KEY }}
+        run: |
+          set -euo pipefail
+          if [ -z "${JEV_API_KEY}" ]; then
+            echo "JEV_API_KEY empty"
+            exit 1
+          fi
+          SEED="${{ github.event.inputs.seed }}"
+          KNOB="${{ github.event.inputs.knob }}"
+          ARGS=()
+          if [ -n "${SEED}" ]; then
+            ARGS+=(--seed "${SEED}")
+          fi
+          if [ -n "${KNOB}" ]; then
+            ARGS+=(--knob "${KNOB}")
+          fi
+          if [ "${#ARGS[@]}" -eq 0 ]; then
+            PYTHONPATH=. python3 -m src.jev_gate --eval --workers 16
+          else
+            PYTHONPATH=. python3 -m src.jev_gate --eval --workers 16 "${ARGS[@]}"
+          fi
+      - name: Commit round back to this branch
+        env:
+          BRANCH: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.ref || github.ref_name }}
+        run: |
+          set -euo pipefail
+          git config user.name "Market-Bot-Automaton"
+          git config user.email "bot@users.noreply.github.com"
+          git add -- 00_grounding/jev_holdout.json 00_grounding/jev_rounds
+          bad=$(git diff --cached --name-only | grep -E -v '^(00_grounding/jev_holdout\.json|00_grounding/jev_rounds/)' || true)
+          if [ -n "${bad}" ]; then
+            echo "refusing to commit paths outside the eval record"
+            echo "${bad}"
+            exit 1
+          fi
+          if grep -R -E -n 'sk-[A-Za-z0-9]{8,}|Bearer [A-Za-z0-9]' \
+              00_grounding/jev_rounds 00_grounding/jev_holdout.json; then
+            echo "refusing to commit secret-like material"
+            exit 1
+          fi
+          if git diff --cached --quiet; then
+            echo "no eval output to commit"
+            exit 1
+          fi
+          git commit -m "jev eval: unlabeled hop-0 round [skip ci]"
+          git push origin "HEAD:${BRANCH}"
+          echo "pushed unlabeled round to ${BRANCH}"
+          git rev-parse HEAD

@@ -15,10 +15,12 @@ CLI:
   python -m src.jev_gate --date latest --limit 200
   python -m src.jev_gate --code-only --date 2026-09-28
   python -m src.jev_gate --mine
+  python -m src.jev_gate --eval
 """
 from __future__ import annotations
 
 import argparse
+import copy
 import csv
 import datetime as dt
 import json
@@ -29,6 +31,7 @@ import urllib.error
 import urllib.request
 from collections import Counter, defaultdict
 from concurrent.futures import ThreadPoolExecutor, as_completed
+from dataclasses import dataclass
 from email.utils import parsedate_to_datetime
 from pathlib import Path
 
@@ -74,6 +77,29 @@ POWERFUL = frozenset(
 CHOKE_HIT = re.compile(
     r"(?i)\b(oil|tanker|strait|canal|pipeline|port|shipping|lng)\b"
 )
+
+# Eval may move exactly one of these per round. Defaults reproduce the
+# current gate: empty reaction regex, listed-token keep off, reprint
+# clock and verb list taken from jev_chokepoint_state.json.
+ALLOWED_KNOBS = (
+    "action_material",
+    "reaction_regex",
+    "listed_token_in_title",
+    "new_instrument",
+    "reprint_weather_days",
+    "new_verbs",
+)
+
+
+@dataclass(frozen=True)
+class GateKnobs:
+    action_material: float = MATERIAL_KEEP
+    new_instrument: float = INSTRUMENT_KEEP
+    reaction_regex: str = ""
+    listed_token_in_title: bool = False
+    reprint_weather_days: int | None = None
+    new_verbs: tuple[str, ...] = ()
+    listed_tokens: frozenset[str] = frozenset()
 
 # Jev question ids. Do not add event_class / polarity / ticker.
 QUESTIONS: dict = {
@@ -446,10 +472,36 @@ def answers_from_gold(item: dict) -> dict:
     return {k: raw[k] for k in QUESTIONS if k in raw}
 
 
-def decide(row: dict, answers: dict | None) -> dict:
+def listed_token_hit(title: str, listed: frozenset[str]) -> str:
+    """Whole-word Finviz ticker in the title. Empty when the knob is off."""
+    if not listed:
+        return ""
+    words = [
+        w for w in normalize_title(title).split()
+        if len(w) >= 2 and w not in STOP and w in listed
+    ]
+    return words[0] if words else ""
+
+
+def state_for_knobs(state: dict, knobs: GateKnobs | None) -> dict:
+    """Copy chokepoint state only when a reprint knob is actually set."""
+    if knobs is None:
+        return state
+    if knobs.reprint_weather_days is None and not knobs.new_verbs:
+        return state
+    out = copy.deepcopy(state)
+    if knobs.reprint_weather_days is not None:
+        out["days_threshold"] = int(knobs.reprint_weather_days)
+    if knobs.new_verbs:
+        out["new_verbs_default"] = [str(v).lower().strip() for v in knobs.new_verbs if str(v).strip()]
+    return out
+
+
+def decide(row: dict, answers: dict | None, knobs: GateKnobs | None = None) -> dict:
     """Pure keep/drop given a code-flagged row + optional Jev answers.
 
     Jev is not allowed to invent an event class or polarity here.
+    knobs=None is the current gate. A GateKnobs() with defaults matches it.
     """
     title = row.get("title") or ""
     code = row.get("code_reason") or ""
@@ -459,6 +511,8 @@ def decide(row: dict, answers: dict | None) -> dict:
     material = 0.0
     instrument = 0.0
     reprint = 0.0
+    material_keep = MATERIAL_KEEP if knobs is None else float(knobs.action_material)
+    instrument_keep = INSTRUMENT_KEEP if knobs is None else float(knobs.new_instrument)
 
     def pack(decision: str, reason: str, geo_out: str = "") -> dict:
         return {
@@ -482,7 +536,17 @@ def decide(row: dict, answers: dict | None) -> dict:
         geo_out = "chokepoint" if code == "reprint_weather" else ""
         return pack("drop", code, geo_out)
 
+    if knobs is not None and knobs.reaction_regex:
+        try:
+            if re.search(knobs.reaction_regex, title, flags=re.IGNORECASE):
+                return pack("drop", "reaction_regex")
+        except re.error:
+            pass
+
     if not answers:
+        if knobs is not None and knobs.listed_token_in_title:
+            if listed_token_hit(title, knobs.listed_tokens):
+                return pack("keep", "listed_token")
         return pack("keep", "code_leftover")
 
     opinion = float(answers.get("is_opinion") or 0.0)
@@ -506,7 +570,7 @@ def decide(row: dict, answers: dict | None) -> dict:
         if geo == "other":
             geo = "core"
         if hints["newness"]:
-            instrument = max(instrument, INSTRUMENT_KEEP)
+            instrument = max(instrument, instrument_keep)
 
     # Jev over-fires Yemen/Palestine as Hormuz cousins. Place file or
     # tanker/strait keyword required to keep a chokepoint label.
@@ -524,10 +588,13 @@ def decide(row: dict, answers: dict | None) -> dict:
         return pack("drop", "crowd")
     if actor == "state_head" and hints["head_action"]:
         return pack("keep", "state_head_action")
+    if knobs is not None and knobs.listed_token_in_title:
+        if listed_token_hit(title, knobs.listed_tokens):
+            return pack("keep", "listed_token")
 
     if geo == "other":
         if actor in POWERFUL and (
-            material >= MATERIAL_KEEP or instrument >= INSTRUMENT_KEEP
+            material >= material_keep or instrument >= instrument_keep
         ):
             return pack("keep", "other_powerful")
         return pack("drop", "geo_other")
@@ -540,8 +607,8 @@ def decide(row: dict, answers: dict | None) -> dict:
         return pack("keep", "chokepoint")
 
     # core — high recall, but still require material or a real instrument
-    if material >= MATERIAL_KEEP or (
-        actor in POWERFUL and instrument >= INSTRUMENT_KEEP
+    if material >= material_keep or (
+        actor in POWERFUL and instrument >= instrument_keep
     ):
         return pack("keep", "core_material")
     return pack("drop", "low_material")
@@ -672,10 +739,11 @@ def jev_many(rows: list[dict], key: str, workers: int = 24,
 def gate(rows: list[dict], *, code_only: bool = False, live: bool = False,
          key: str = "", workers: int = 24, asof: dt.date | None = None,
          state: dict | None = None, poster=None,
-         gold_answers: dict | None = None) -> list[dict]:
+         gold_answers: dict | None = None,
+         knobs: GateKnobs | None = None) -> list[dict]:
     """Run hop-0. gold_answers maps row id → answer dict (tests / dry gold)."""
     asof = asof or dt.date.today()
-    state = state or load_chokepoint_state()
+    state = state_for_knobs(state or load_chokepoint_state(), knobs)
     rows = dedup_rows(list(rows), session_day=asof.isoformat())
     rows = apply_code(rows, asof=asof, state=state)
 
@@ -706,7 +774,7 @@ def gate(rows: list[dict], *, code_only: bool = False, live: bool = False,
 
     decided = []
     for row in rows:
-        decided.append(decide(row, row.get("_answers")))
+        decided.append(decide(row, row.get("_answers"), knobs))
     return decided
 
 
@@ -1108,12 +1176,21 @@ def build_parser() -> argparse.ArgumentParser:
                    help="Force Jev HTTP (default when a key is set and not --code-only)")
     p.add_argument("--mine", action="store_true")
     p.add_argument("--workers", type=int, default=24)
+    p.add_argument("--eval", action="store_true",
+                   help="Fresh hop-0 eval draw. Does not write keep.json or call Lane.")
+    p.add_argument("--seed", type=int, default=None,
+                   help="RNG seed for the eval draw. Default is a fresh seed.")
+    p.add_argument("--knob", action="append", default=None,
+                   help="One allowed knob, name=value. A second --knob is an error.")
     return p
 
 
 def main(argv: list[str] | None = None) -> int:
     args = build_parser().parse_args(argv)
     questions_are_hop0()
+    if args.eval:
+        from .jev_eval import run_eval_cli
+        return run_eval_cli(args)
     if args.mine:
         mined = mine_junk_shapes()
         print(f"[jev_gate] mined {len(mined.get('top') or [])} shapes "
