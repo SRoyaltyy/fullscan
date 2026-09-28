@@ -1,8 +1,8 @@
 {
   "date": "2026-09-28",
-  "generated_at": "2026-09-28T04:26:14.563292-04:00",
+  "generated_at": "2026-09-28T04:25:54.797117-04:00",
   "phase": "morning_overlay",
-  "export": "finviz_2026-09-28.csv",
+  "export": "finviz_2026-09-27.csv",
   "n_tickers": 11616,
   "sectors": [
     {
@@ -8935,7 +8935,7 @@
   ],
   "ticker_news": [
     {
-      "time": "4 min",
+      "time": "3 min",
       "title": "Eaton to acquire COL Group for $923m",
       "url": "https://finance.yahoo.com/technology/articles/eaton-acquire-col-group-923m-082154422.html",
       "source": "Power Technology",
@@ -8944,7 +8944,7 @@
       ]
     },
     {
-      "time": "5 min",
+      "time": "4 min",
       "title": "UWM Holdings Corporation Sued for Securities Law Violations - Contact the DJS Law Group to Discuss Your Rights - UWMC",
       "url": "/news/395757/uwm-holdings-corporation-sued-for-securities-law-violations-contact-the-djs-law-group-to-discuss-your-rights-uwmc",
       "source": "PR Newswire",
@@ -8953,7 +8953,7 @@
       ]
     },
     {
-      "time": "9 min",
+      "time": "8 min",
       "title": "HDFC Bank Limited Sued for Securities Law Violations - Contact the DJS Law Group to Discuss Your Rights - HDB",
       "url": "/news/395756/hdfc-bank-limited-sued-for-securities-law-violations-contact-the-djs-law-group-to-discuss-your-rights-hdb",
       "source": "PR Newswire",
@@ -8975,7 +8975,7 @@
       ]
     },
     {
-      "time": "14 min",
+      "time": "13 min",
       "title": "ARS Pharmaceuticals, Inc. Sued for Securities Law Violations - Contact the DJS Law Group to Discuss Your Rights - SPRY",
       "url": "/news/395755/ars-pharmaceuticals-inc-sued-for-securities-law-violations-contact-the-djs-law-group-to-discuss-your-rights-spry",
       "source": "PR Newswire",
@@ -8993,7 +8993,7 @@
       ]
     },
     {
-      "time": "18 min",
+      "time": "17 min",
       "title": "Datavault AI Inc. Sued for Securities Law Violations - Contact the DJS Law Group to Discuss Your Rights - DVLT",
       "url": "/news/395754/datavault-ai-inc-sued-for-securities-law-violations-contact-the-djs-law-group-to-discuss-your-rights-dvlt",
       "source": "PR Newswire",
@@ -9002,7 +9002,7 @@
       ]
     },
     {
-      "time": "18 min",
+      "time": "17 min",
       "title": "Why Is NU Stock Slipping In Premarket Trading Today?",
       "url": "https://finance.yahoo.com/markets/stocks/articles/why-nu-stock-slipping-premarket-080759065.html",
       "source": "Stocktwits",
@@ -9011,7 +9011,7 @@
       ]
     },
     {
-      "time": "20 min",
+      "time": "19 min",
       "title": "HSBC Adopts Nasdaq Calypso's Enhanced Exchange-Traded Derivatives Platform",
       "url": "/news/395753/hsbc-adopts-nasdaq-calypsos-enhanced-exchange-traded-derivatives-platform",
       "source": "GlobeNewswire",
@@ -9020,7 +9020,7 @@
       ]
     },
     {
-      "time": "23 min",
+      "time": "22 min",
       "title": "Guy Gentile Releases The Stock Operator, Tracing Three Decades of Trading, Risk and Loss",
       "url": "https://finance.yahoo.com/markets/stocks/articles/guy-gentile-releases-stock-operator-080300070.html",
       "source": "TMX Newsfile",
@@ -9029,7 +9029,7 @@
       ]
     },
     {
-      "time": "26 min",
+      "time": "25 min",
       "title": "Pentair plc Sued for Securities Law Violations - Contact the DJS Law Group to Discuss Your Rights - PNR",
       "url": "/news/395752/pentair-plc-sued-for-securities-law-violations-contact-the-djs-law-group-to-discuss-your-rights-pnr",
       "source": "PR Newswire",
@@ -9038,7 +9038,7 @@
       ]
     },
     {
-      "time": "27 min",
+      "time": "26 min",
       "title": "MRNA Stock Eyes Best Year Ever: Analyst Calls Chinas AI Drug Lead Baseless As Moderna Awaits Cancer Data",
       "url": "https://finance.yahoo.com/healthcare/articles/mrna-stock-eyes-best-ever-075902416.html",
       "source": "Stocktwits",
@@ -9059,7 +9059,7 @@
       ]
     },
     {
-      "time": "50 min",
+      "time": "49 min",
       "title": "Torm PLC - Major Shareholder Announcement",
       "url": "/news/395751/torm-plc-major-shareholder-announcement",
       "source": "PR Newswire",
@@ -9297,7 +9297,7 @@
       ]
     },
     {
-      "time": "3 hours",
+      "time": "2 hours",
       "title": "ASTS Stock Eyes Best Month Since May: New German Filing Puts 344-Satellite BlueBird Plan In Focus",
       "url": "https://finance.yahoo.com/markets/stocks/articles/asts-stock-eyes-best-month-052554809.html",
       "source": "Stocktwits",
@@ -10539,5 +10539,5 @@
   "calendar_window_days": 16,
   "econ_window_count": 182,
   "earnings_window_count": 56,
-  "overlay_at": "2026-09-28T04:26:14.563292-04:00"
+  "overlay_at": "2026-09-28T04:25:54.797117-04:00"
 }
