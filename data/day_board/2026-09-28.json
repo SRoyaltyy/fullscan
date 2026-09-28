@@ -1,6 +1,6 @@
 {
   "date": "2026-09-28",
-  "generated_at": "2026-09-28T14:00:25.347545-04:00",
+  "generated_at": "2026-09-28T14:03:24.177215-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -845,7 +845,7 @@
           "role": "required",
           "status": "OK",
           "reason": "horizons=5 names=155",
-          "size": 1362645,
+          "size": 1362644,
           "said": "1d BUY CNQ, CVE, ASTH, SONO, FIVN, AMN, CON, BAND \u00b7 SELL EOSE, TE, FCEL, METC, ARE, SOC \u00b7 -0.6341",
           "bullets": []
         },
@@ -859,7 +859,7 @@
           "size": 57225,
           "said": "Stock book \u2014 2026-09-28",
           "bullets": [
-            "_Generated 2026-09-28T13:58:57.356189-04:00_",
+            "_Generated 2026-09-28T14:03:21.369643-04:00_",
             "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
           ]
         },
@@ -923,7 +923,7 @@
           "role": "input",
           "status": "OK",
           "reason": "horizons=5 names=155",
-          "size": 1362645,
+          "size": 1362644,
           "said": "1d BUY CNQ, CVE, ASTH, SONO, FIVN, AMN, CON, BAND \u00b7 SELL EOSE, TE, FCEL, METC, ARE, SOC \u00b7 -0.6341",
           "bullets": []
         },
