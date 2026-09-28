@@ -210,6 +210,54 @@ def load_gold(path: Path | None = None) -> dict:
     return blob
 
 
+def load_closed_lists(path: Path | None = None) -> dict:
+    blob = _load_json(path or GROUND / "jev_closed_lists.json")
+    if not isinstance(blob, dict):
+        return {
+            "venues": [], "agencies": [], "state_heads": [],
+            "newness_verbs": [], "head_actions": [],
+        }
+    return blob
+
+
+def _has_phrase(norm: str, phrase: str) -> bool:
+    p = str(phrase or "").lower().strip()
+    if not p:
+        return False
+    if " " in p:
+        return p in norm
+    return f" {p} " in f" {norm} "
+
+
+def code_hints(title: str, lists: dict | None = None) -> dict:
+    """Closed lists only. Jev is not allowed to invent English."""
+    lists = lists or load_closed_lists()
+    norm = normalize_title(title)
+
+    def hits(key: str) -> list[str]:
+        return [str(p) for p in (lists.get(key) or []) if _has_phrase(norm, str(p))]
+
+    venue = hits("venues")
+    agency = hits("agencies")
+    head = hits("state_heads")
+    newness = hits("newness_verbs")
+    head_act = hits("head_actions")
+    return {
+        "venue": bool(venue),
+        "agency": bool(agency),
+        "state_head": bool(head),
+        "newness": bool(newness),
+        "head_action": bool(head_act),
+        "hits": {
+            "venue": venue,
+            "agency": agency,
+            "state_head": head,
+            "newness": newness,
+            "head_action": head_act,
+        },
+    }
+
+
 def api_key() -> str:
     return (
         os.environ.get("JEV_API_KEY")
@@ -445,15 +493,37 @@ def decide(row: dict, answers: dict | None) -> dict:
     instrument = float(answers.get("new_instrument") or 0.0)
     geo = str(answers.get("geo") or "other")
     actor = str(answers.get("actor_power") or "other_person")
+    hints = code_hints(title)
+
+    if hints["state_head"]:
+        actor = "state_head"
+    elif hints["agency"]:
+        actor = "regulator"
+    elif hints["venue"] and actor not in POWERFUL:
+        actor = "listed_firm"
+
+    if hints["agency"] or hints["venue"]:
+        if geo == "other":
+            geo = "core"
+        if hints["newness"]:
+            instrument = max(instrument, INSTRUMENT_KEEP)
+
+    # Jev over-fires Yemen/Palestine as Hormuz cousins. Place file or
+    # tanker/strait keyword required to keep a chokepoint label.
+    choke_kw = bool(CHOKE_HIT.search(title) or clock.get("hit"))
+    if geo == "chokepoint" and not choke_kw:
+        geo = "other"
 
     if opinion >= TRASH_NOUL:
         return pack("drop", "opinion")
-    if tabloid >= TRASH_NOUL:
-        return pack("drop", "tabloid")
     if reaction >= TRASH_NOUL:
         return pack("drop", "reaction")
+    if tabloid >= TRASH_NOUL and actor not in POWERFUL:
+        return pack("drop", "tabloid")
     if actor == "crowd" and material < CROWD_DROP:
         return pack("drop", "crowd")
+    if actor == "state_head" and hints["head_action"]:
+        return pack("keep", "state_head_action")
 
     if geo == "other":
         if actor in POWERFUL and (

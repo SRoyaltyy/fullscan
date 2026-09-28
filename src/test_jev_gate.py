@@ -17,6 +17,7 @@ from src.jev_gate import (
     api_key,
     calendar_day,
     code_drop_reason,
+    code_hints,
     decide,
     dedup_rows,
     gate,
@@ -149,7 +150,8 @@ def test_decide_palestine_vs_trump():
             "reprint_weather": 0.05,
         },
     )
-    assert head["decision"] == "keep" and head["reason"] == "other_powerful"
+    assert head["decision"] == "keep"
+    assert head["reason"] in {"other_powerful", "state_head_action"}
 
 
 def test_decide_core_and_chokepoint():
@@ -196,6 +198,60 @@ def test_decide_core_and_chokepoint():
         },
     )
     assert reprint["decision"] == "drop" and reprint["reason"] == "reprint_weather"
+
+
+def test_live_shaped_gold_misses():
+    """Recorded 2026-09-28 live Jev answers. Closed lists correct the four misses."""
+    trump = decide(
+        {"title": "Donald Trump arrested by UK Police"},
+        {
+            "is_opinion": 0.05, "is_tabloid": 0.82, "is_reaction": 0.04,
+            "geo": "other", "actor_power": "other_person",
+            "action_material": 0.37, "new_instrument": 0.16,
+            "reprint_weather": 0.15,
+        },
+    )
+    assert trump["decision"] == "keep", trump
+    assert trump["actor_power"] == "state_head"
+    bitget = decide(
+        {"title": "Bitget lists tokenized US stocks for non-US users"},
+        {
+            "is_opinion": 0.04, "is_tabloid": 0.05, "is_reaction": 0.04,
+            "geo": "other", "actor_power": "infrastructure",
+            "action_material": 0.21, "new_instrument": 0.17,
+            "reprint_weather": 0.17,
+        },
+    )
+    assert bitget["decision"] == "keep", bitget
+    yemen = decide(
+        {"title": "Yemen bombed by terrorist group"},
+        {
+            "is_opinion": 0.04, "is_tabloid": 0.15, "is_reaction": 0.05,
+            "geo": "chokepoint", "actor_power": "other_person",
+            "action_material": 0.41, "new_instrument": 0.03,
+            "reprint_weather": 0.35,
+        },
+    )
+    assert yemen["decision"] == "drop" and yemen["reason"] == "geo_other", yemen
+    nbs = decide(
+        {"title": "China NBS reports industrial profits fall 1.8% in August"},
+        {
+            "is_opinion": 0.03, "is_tabloid": 0.02, "is_reaction": 0.05,
+            "geo": "core", "actor_power": "regulator",
+            "action_material": 0.30, "new_instrument": 0.15,
+            "reprint_weather": 0.31,
+        },
+    )
+    assert nbs["decision"] == "keep", nbs
+
+
+def test_code_hints_closed_lists():
+    assert code_hints("Donald Trump arrested by UK Police")["state_head"]
+    assert code_hints("Donald Trump arrested by UK Police")["head_action"]
+    assert code_hints("Bitget lists tokenized US stocks")["venue"]
+    assert code_hints("China NBS reports industrial profits")["agency"]
+    assert code_hints("China NBS reports industrial profits")["newness"]
+    assert not code_hints("Yemen bombed by terrorist group")["venue"]
 
 
 def test_code_reason_short_circuits_jev():
@@ -394,6 +450,8 @@ def main() -> None:
         test_code_does_not_geo_drop_yemen_or_palestine,
         test_decide_palestine_vs_trump,
         test_decide_core_and_chokepoint,
+        test_live_shaped_gold_misses,
+        test_code_hints_closed_lists,
         test_code_reason_short_circuits_jev,
         test_questions_are_hop0_only,
         test_parse_answers_and_state,

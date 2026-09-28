@@ -17,6 +17,7 @@ on:
       - "00_grounding/jev_chokepoint_state.json"
       - "00_grounding/jev_gold.json"
       - "00_grounding/jev_junk_shapes.json"
+      - "00_grounding/jev_closed_lists.json"
   workflow_dispatch:
     inputs:
       date:
