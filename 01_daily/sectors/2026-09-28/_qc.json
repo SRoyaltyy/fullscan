@@ -1,6 +1,6 @@
 {
   "date": "2026-09-28",
-  "n_ok": 2,
+  "n_ok": 3,
   "n_total": 11,
   "summary": "",
   "sectors": [
@@ -13,10 +13,10 @@
     },
     {
       "sector": "Communication Services",
-      "ok": false,
-      "reason": "missing",
-      "size": 0,
-      "status": "FAIL"
+      "ok": true,
+      "reason": "",
+      "size": 20633,
+      "status": "OK"
     },
     {
       "sector": "Consumer Cyclical",
