@@ -1,4 +1,4 @@
-name: Jev hop-0 news gate
+name: Jev hop-0 net
 
 # Code first (dup / junk-shape / source / reprint clock), then one
 # Jev pack per leftover title. Does not classify the 52 event types
@@ -10,6 +10,7 @@ on:
   push:
     branches: [main]
     paths:
+      - ".github/workflows/jev_hop0.yml"
       - ".github/workflows/jev_gate.yml"
       - "src/jev_gate.py"
       - "src/test_jev_gate.py"
