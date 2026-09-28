@@ -4528,5 +4528,125 @@
       "status": "BEFORE_1330"
     },
     "sha256": "68dd183b35ce7783269dd9b4ae699e2518c64f7eb9c953a69acece0675f884b6"
+  },
+  {
+    "buys": [
+      {
+        "fee": 43.6733,
+        "fill": 0.9439,
+        "fill_basis": "open",
+        "liquidity_cap_shares": 77186,
+        "rank": 2,
+        "shares": 3511,
+        "sources": [
+          "yday_gainer",
+          "yday_mover"
+        ],
+        "ticker": "SRFM"
+      },
+      {
+        "fee": 9.2235,
+        "fill": 4.68,
+        "fill_basis": "open",
+        "liquidity_cap_shares": 5602,
+        "rank": 3,
+        "shares": 715,
+        "sources": [
+          "yday_gainer",
+          "yday_mover"
+        ],
+        "ticker": "SHMD"
+      },
+      {
+        "fee": 15.6735,
+        "fill": 2.75,
+        "fill_basis": "open",
+        "liquidity_cap_shares": 7257,
+        "rank": 4,
+        "shares": 1215,
+        "sources": [
+          "ohlc_hot"
+        ],
+        "ticker": "FEAM"
+      }
+    ],
+    "cash_primary": 5.005413243764906,
+    "cost_model": "futubull+0.5%/side",
+    "date": "2026-09-28",
+    "excluded_on_fill": [],
+    "holdings": [
+      {
+        "cost_primary": 3373.6297499999996,
+        "entry_date": "2026-09-28",
+        "entry_px": 2.75,
+        "last_px": 2.75,
+        "min_hold": 1,
+        "peak_px": 2.75,
+        "shares": 1215,
+        "ticker": "FEAM"
+      },
+      {
+        "cost_primary": 3372.1544999999996,
+        "entry_date": "2026-09-28",
+        "entry_px": 4.68,
+        "last_px": 4.68,
+        "min_hold": 1,
+        "peak_px": 4.68,
+        "shares": 715,
+        "ticker": "SHMD"
+      },
+      {
+        "cost_primary": 3374.276364499999,
+        "entry_date": "2026-09-28",
+        "entry_px": 0.9439,
+        "last_px": 0.9439,
+        "min_hold": 1,
+        "peak_px": 0.9439,
+        "shares": 3511,
+        "ticker": "SRFM"
+      },
+      {
+        "cost_primary": 2554.8969724884028,
+        "entry_date": "2026-09-25",
+        "entry_px": 15.581100463867188,
+        "last_px": 16.85,
+        "min_hold": 1,
+        "peak_px": 16.85,
+        "shares": 163,
+        "ticker": "USDE"
+      }
+    ],
+    "holdup_on": false,
+    "kind": "open_fill",
+    "morning_s": -6.14,
+    "open_source": "yahoo_split_adjusted_daily_open",
+    "plan_sha256": "68dd183b35ce7783269dd9b4ae699e2518c64f7eb9c953a69acece0675f884b6",
+    "pnl_status": "pending",
+    "recipe": "union_hot_n4_h1__w0",
+    "sells": [
+      {
+        "fee": 12.0454,
+        "fill": 5.138,
+        "reason": "hold-expired",
+        "shares": 919,
+        "ticker": "GLND"
+      },
+      {
+        "fee": 2.547,
+        "fill": 16.209999,
+        "reason": "hold-expired",
+        "shares": 169,
+        "ticker": "SECZ"
+      },
+      {
+        "fee": 2.3379,
+        "fill": 26.5,
+        "reason": "hold-expired",
+        "shares": 103,
+        "ticker": "TJGC"
+      }
+    ],
+    "sha256": "59e441f09c63a3b4cc240b23d3ba5beb34404a5d2c2b08e8683d56987be52272",
+    "unfilled": []
   }
 ]
