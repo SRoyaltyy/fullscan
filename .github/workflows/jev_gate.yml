@@ -1,0 +1,105 @@
+name: Jev hop-0 news gate
+
+# Code first (dup / junk-shape / source / reprint clock), then one
+# Jev pack per leftover title. Does not classify the 52 event types
+# or pick bullish/bearish. Does not touch flatten / Webull / factor-mine.
+# Agent tokens cannot workflow_dispatch — a push of this file on main
+# fires gold then a capped harvest.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/jev_gate.yml"
+      - "src/jev_gate.py"
+      - "src/test_jev_gate.py"
+      - "00_grounding/jev_chokepoint_state.json"
+      - "00_grounding/jev_gold.json"
+      - "00_grounding/jev_junk_shapes.json"
+  workflow_dispatch:
+    inputs:
+      date:
+        description: YYYY-MM-DD, latest, all, or gold
+        required: false
+        default: "latest"
+        type: string
+      limit:
+        description: Max harvest titles after gold (0 = all that day)
+        required: false
+        default: "200"
+        type: string
+      code_only:
+        description: "1 = skip Jev HTTP (code hops only)"
+        required: false
+        default: "0"
+        type: string
+      mine:
+        description: "1 = also mine junk shapes from the parsed archive"
+        required: false
+        default: "0"
+        type: string
+
+permissions:
+  contents: write
+
+concurrency:
+  group: jev-gate
+  cancel-in-progress: true
+
+jobs:
+  gate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Unit tests (no key)
+        run: PYTHONPATH=. python3 -m src.test_jev_gate
+      - name: Gold + capped harvest
+        env:
+          JEV_API_KEY: ${{ secrets.JEV_API_KEY }}
+          TYPESAFE_API_KEY: ${{ secrets.JEV_API_KEY }}
+        run: |
+          set -euo pipefail
+          CODE=""
+          if [ "${{ github.event.inputs.code_only }}" = "1" ]; then
+            CODE="--code-only"
+          fi
+          PYTHONPATH=. python3 -m src.jev_gate --gold $CODE
+          DATE="${{ github.event.inputs.date }}"
+          DATE="${DATE:-latest}"
+          LIMIT="${{ github.event.inputs.limit }}"
+          LIMIT="${LIMIT:-200}"
+          if [ "$DATE" != "gold" ]; then
+            PYTHONPATH=. python3 -m src.jev_gate --date "$DATE" --limit "$LIMIT" $CODE
+          fi
+          if [ "${{ github.event.inputs.mine }}" = "1" ]; then
+            PYTHONPATH=. python3 -m src.jev_gate --mine
+          fi
+      - name: Preview
+        if: always()
+        run: |
+          head -80 03_scoreboard/JEV_GATE.md || true
+          ls -lh 01_daily/news/*jev_keep* 01_daily/news/*jev_junk* || true
+      - name: Commit keep list
+        if: always()
+        run: |
+          export HOME="${HOME:-/home/gha}"
+          unset GIT_DIR GIT_WORK_TREE GIT_INDEX_FILE
+          cd "${GITHUB_WORKSPACE:-.}"
+          bash scripts/safe_git_push.sh \
+            "auto: jev hop-0 gate" \
+            01_daily/news \
+            03_scoreboard/JEV_GATE.md
+      - name: Upload artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: jev-gate
+          if-no-files-found: warn
+          path: |
+            01_daily/news/*jev_keep*
+            01_daily/news/*jev_junk*
+            03_scoreboard/JEV_GATE.md

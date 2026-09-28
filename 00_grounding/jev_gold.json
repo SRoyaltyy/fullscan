@@ -1,0 +1,296 @@
+{
+  "updated": "2026-09-28",
+  "note": "Tune thresholds here before pointing the net at 30k. expect = code + Jev. code_must = hop-0 code only.",
+  "must_keep": ["cafe", "bitget", "fda", "nbs", "trump_arrest"],
+  "must_drop": ["palestine", "opinion", "hormuz_reprint"],
+  "items": [
+    {
+      "id": "palestine",
+      "title": "Palestine Action protesters arrested outside UK Labour Party conference",
+      "source": "reuters",
+      "published_at": "2026-09-27T08:00:00Z",
+      "expect": "drop",
+      "code_must": "leftover",
+      "answers": {
+        "is_opinion": 0.04,
+        "is_tabloid": 0.08,
+        "is_reaction": 0.05,
+        "geo": "other",
+        "actor_power": "crowd",
+        "action_material": 0.08,
+        "new_instrument": 0.04,
+        "reprint_weather": 0.10
+      }
+    },
+    {
+      "id": "trump_arrest",
+      "title": "Donald Trump arrested by UK Police",
+      "source": "reuters",
+      "published_at": "2026-09-27T09:00:00Z",
+      "expect": "keep",
+      "code_must": "leftover",
+      "answers": {
+        "is_opinion": 0.02,
+        "is_tabloid": 0.12,
+        "is_reaction": 0.03,
+        "geo": "other",
+        "actor_power": "state_head",
+        "action_material": 0.93,
+        "new_instrument": 0.55,
+        "reprint_weather": 0.05
+      }
+    },
+    {
+      "id": "cafe",
+      "title": "Trump finalizes CAFE rollback",
+      "source": "reuters",
+      "published_at": "2026-09-27T10:00:00Z",
+      "expect": "keep",
+      "code_must": "leftover",
+      "answers": {
+        "is_opinion": 0.03,
+        "is_tabloid": 0.02,
+        "is_reaction": 0.04,
+        "geo": "core",
+        "actor_power": "state_head",
+        "action_material": 0.88,
+        "new_instrument": 0.91,
+        "reprint_weather": 0.04
+      }
+    },
+    {
+      "id": "bitget",
+      "title": "Bitget lists tokenized US stocks for non-US users",
+      "source": "reuters",
+      "published_at": "2026-09-27T11:00:00Z",
+      "expect": "keep",
+      "code_must": "leftover",
+      "answers": {
+        "is_opinion": 0.03,
+        "is_tabloid": 0.05,
+        "is_reaction": 0.04,
+        "geo": "core",
+        "actor_power": "listed_firm",
+        "action_material": 0.70,
+        "new_instrument": 0.74,
+        "reprint_weather": 0.03
+      }
+    },
+    {
+      "id": "hormuz_reprint",
+      "title": "Tensions persist as tankers transit the Strait of Hormuz",
+      "source": "reuters",
+      "published_at": "2026-09-27T12:00:00Z",
+      "expect": "drop",
+      "code_must": "drop",
+      "answers": {
+        "is_opinion": 0.05,
+        "is_tabloid": 0.03,
+        "is_reaction": 0.06,
+        "geo": "chokepoint",
+        "actor_power": "infrastructure",
+        "action_material": 0.40,
+        "new_instrument": 0.10,
+        "reprint_weather": 0.86
+      }
+    },
+    {
+      "id": "hormuz_new",
+      "title": "Iran seizes tanker in Strait of Hormuz after first strike on shipping",
+      "source": "reuters",
+      "published_at": "2026-09-27T13:00:00Z",
+      "expect": "keep",
+      "code_must": "leftover",
+      "answers": {
+        "is_opinion": 0.02,
+        "is_tabloid": 0.04,
+        "is_reaction": 0.03,
+        "geo": "chokepoint",
+        "actor_power": "infrastructure",
+        "action_material": 0.80,
+        "new_instrument": 0.72,
+        "reprint_weather": 0.12
+      }
+    },
+    {
+      "id": "yemen",
+      "title": "Yemen bombed by terrorist group",
+      "source": "reuters",
+      "published_at": "2026-09-27T14:00:00Z",
+      "expect": "drop",
+      "code_must": "leftover",
+      "answers": {
+        "is_opinion": 0.04,
+        "is_tabloid": 0.15,
+        "is_reaction": 0.05,
+        "geo": "other",
+        "actor_power": "other_person",
+        "action_material": 0.12,
+        "new_instrument": 0.05,
+        "reprint_weather": 0.20
+      }
+    },
+    {
+      "id": "red_sea",
+      "title": "Houthis hit a tanker in the Red Sea",
+      "source": "reuters",
+      "published_at": "2026-09-27T15:00:00Z",
+      "expect": "keep",
+      "code_must": "leftover",
+      "answers": {
+        "is_opinion": 0.03,
+        "is_tabloid": 0.06,
+        "is_reaction": 0.04,
+        "geo": "chokepoint",
+        "actor_power": "infrastructure",
+        "action_material": 0.77,
+        "new_instrument": 0.60,
+        "reprint_weather": 0.18
+      }
+    },
+    {
+      "id": "fda",
+      "title": "FDA grants accelerated approval to Vertex cystic fibrosis combo",
+      "source": "reuters",
+      "published_at": "2026-09-27T16:00:00Z",
+      "expect": "keep",
+      "code_must": "leftover",
+      "answers": {
+        "is_opinion": 0.02,
+        "is_tabloid": 0.02,
+        "is_reaction": 0.03,
+        "geo": "core",
+        "actor_power": "regulator",
+        "action_material": 0.84,
+        "new_instrument": 0.90,
+        "reprint_weather": 0.02
+      }
+    },
+    {
+      "id": "nbs",
+      "title": "China NBS reports industrial profits fall 1.8% in August",
+      "source": "reuters",
+      "published_at": "2026-09-27T17:00:00Z",
+      "expect": "keep",
+      "code_must": "leftover",
+      "answers": {
+        "is_opinion": 0.03,
+        "is_tabloid": 0.02,
+        "is_reaction": 0.05,
+        "geo": "core",
+        "actor_power": "regulator",
+        "action_material": 0.71,
+        "new_instrument": 0.80,
+        "reprint_weather": 0.08
+      }
+    },
+    {
+      "id": "opinion",
+      "title": "What it means for markets if the Fed holds",
+      "source": "seekingalpha",
+      "published_at": "2026-09-27T18:00:00Z",
+      "expect": "drop",
+      "code_must": "drop",
+      "answers": {
+        "is_opinion": 0.92,
+        "is_tabloid": 0.20,
+        "is_reaction": 0.40,
+        "geo": "core",
+        "actor_power": "other_person",
+        "action_material": 0.20,
+        "new_instrument": 0.08,
+        "reprint_weather": 0.30
+      }
+    },
+    {
+      "id": "reaction",
+      "title": "Why this matters: stocks rally after payrolls",
+      "source": "yahoo",
+      "published_at": "2026-09-27T18:10:00Z",
+      "expect": "drop",
+      "code_must": "drop",
+      "answers": {
+        "is_opinion": 0.40,
+        "is_tabloid": 0.15,
+        "is_reaction": 0.88,
+        "geo": "core",
+        "actor_power": "other_person",
+        "action_material": 0.15,
+        "new_instrument": 0.05,
+        "reprint_weather": 0.10
+      }
+    },
+    {
+      "id": "noreaster",
+      "title": "Nor'easter lashes East Coast boardwalk",
+      "source": "ap",
+      "published_at": "2026-09-27T19:00:00Z",
+      "expect": "drop",
+      "code_must": "leftover",
+      "answers": {
+        "is_opinion": 0.04,
+        "is_tabloid": 0.10,
+        "is_reaction": 0.06,
+        "geo": "core",
+        "actor_power": "other_person",
+        "action_material": 0.18,
+        "new_instrument": 0.04,
+        "reprint_weather": 0.12
+      }
+    },
+    {
+      "id": "dup_a",
+      "title": "Fed holds rates at 4.25 percent after FOMC meeting",
+      "source": "reuters",
+      "published_at": "2026-09-27T07:00:00Z",
+      "expect": "keep",
+      "code_must": "leftover",
+      "answers": {
+        "is_opinion": 0.03,
+        "is_tabloid": 0.02,
+        "is_reaction": 0.08,
+        "geo": "core",
+        "actor_power": "regulator",
+        "action_material": 0.86,
+        "new_instrument": 0.88,
+        "reprint_weather": 0.15
+      }
+    },
+    {
+      "id": "dup_b",
+      "title": "Fed holds rates at 4.25 percent after FOMC meeting - CNBC",
+      "source": "cnbc",
+      "published_at": "2026-09-27T07:40:00Z",
+      "expect": "drop",
+      "code_must": "drop",
+      "answers": {
+        "is_opinion": 0.03,
+        "is_tabloid": 0.02,
+        "is_reaction": 0.08,
+        "geo": "core",
+        "actor_power": "regulator",
+        "action_material": 0.86,
+        "new_instrument": 0.88,
+        "reprint_weather": 0.15
+      }
+    },
+    {
+      "id": "punct",
+      "title": "Is the market about to crash?!",
+      "source": "yahoo",
+      "published_at": "2026-09-27T20:00:00Z",
+      "expect": "drop",
+      "code_must": "drop",
+      "answers": {
+        "is_opinion": 0.70,
+        "is_tabloid": 0.60,
+        "is_reaction": 0.50,
+        "geo": "core",
+        "actor_power": "other_person",
+        "action_material": 0.10,
+        "new_instrument": 0.02,
+        "reprint_weather": 0.05
+      }
+    }
+  ]
+}

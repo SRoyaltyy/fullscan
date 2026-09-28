@@ -14,6 +14,8 @@ on:
       - "src/openclaw_models.py"
       - "src/lane_route.py"
       - "src/lane_news_scan.py"
+      - "src/test_jev_gate.py"
+      - "src/jev_gate.py"
       - "02_lessons/lane/**"
   push:
     branches: [main]
@@ -25,6 +27,8 @@ on:
       - "src/openclaw_models.py"
       - "src/lane_route.py"
       - "src/lane_news_scan.py"
+      - "src/test_jev_gate.py"
+      - "src/jev_gate.py"
       - "02_lessons/lane/**"
 
 permissions:
@@ -47,3 +51,4 @@ jobs:
           PYTHONPATH=. python3 -m src.test_workflow_fromjson
           PYTHONPATH=. python3 -m src.test_lane_news_scan
           PYTHONPATH=. python3 -m src.test_openclaw_models
+          PYTHONPATH=. python3 -m src.test_jev_gate
