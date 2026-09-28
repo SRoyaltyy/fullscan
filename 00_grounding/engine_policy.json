@@ -374,7 +374,7 @@
     }
   },
   "version": 27,
-  "updated": "2026-09-28T17:23:35-04:00",
+  "updated": "2026-09-28T17:39:53-04:00",
   "rules": {
     "min_n": 8,
     "mute_below": 0.45,
@@ -637,7 +637,7 @@
       ]
     },
     {
-      "at": "2026-09-28T17:23:35-04:00",
+      "at": "2026-09-28T17:39:53-04:00",
       "changes": [
         "Communication Services.S0_SHARED_MACRO: 0.5 -> 1.0 (n=16, hit=0.562)",
         "Communication Services.S1_SECTOR_FACTORS: 0.5 -> 1.0 (n=12, hit=0.583)",
