@@ -1,6 +1,6 @@
 {
   "date": "2026-09-28",
-  "generated_at": "2026-09-28T13:54:11.938399-04:00",
+  "generated_at": "2026-09-28T13:54:30.481242-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -845,8 +845,8 @@
           "role": "required",
           "status": "OK",
           "reason": "horizons=5 names=155",
-          "size": 1363118,
-          "said": "1d BUY CNQ, CVE, ASTH, SONO, FIVN, AMN, CON, BAND \u00b7 SELL EOSE, FCEL, TE, METC, SOC, ARE \u00b7 -0.6341",
+          "size": 1362645,
+          "said": "1d BUY CNQ, CVE, ASTH, SONO, FIVN, AMN, CON, BAND \u00b7 SELL EOSE, TE, FCEL, METC, ARE, SOC \u00b7 -0.6341",
           "bullets": []
         },
         {
@@ -856,10 +856,10 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 57305,
+          "size": 57225,
           "said": "Stock book \u2014 2026-09-28",
           "bullets": [
-            "_Generated 2026-09-28T09:38:26.088767-04:00_",
+            "_Generated 2026-09-28T13:54:21.118128-04:00_",
             "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
           ]
         },
@@ -923,8 +923,8 @@
           "role": "input",
           "status": "OK",
           "reason": "horizons=5 names=155",
-          "size": 1363118,
-          "said": "1d BUY CNQ, CVE, ASTH, SONO, FIVN, AMN, CON, BAND \u00b7 SELL EOSE, FCEL, TE, METC, SOC, ARE \u00b7 -0.6341",
+          "size": 1362645,
+          "said": "1d BUY CNQ, CVE, ASTH, SONO, FIVN, AMN, CON, BAND \u00b7 SELL EOSE, TE, FCEL, METC, ARE, SOC \u00b7 -0.6341",
           "bullets": []
         },
         {
@@ -974,81 +974,81 @@
     "buy_1d": [
       {
         "ticker": "CNQ",
-        "score": 0.19164736847910935
+        "score": 0.2421714774534895
       },
       {
         "ticker": "CVE",
-        "score": 0.15559400587939987
+        "score": 0.18230041462908336
       },
       {
         "ticker": "ASTH",
-        "score": 0.5636433562476346
+        "score": 0.5593004910733419
       },
       {
         "ticker": "SONO",
-        "score": 0.7290545770592951
+        "score": 0.7277474987185046
       },
       {
         "ticker": "FIVN",
-        "score": 0.5994548357216387
+        "score": 0.5958555240790689
       },
       {
         "ticker": "AMN",
-        "score": 0.6161014880296676
+        "score": 0.6139082297236333
       },
       {
         "ticker": "CON",
-        "score": 0.605406335306123
+        "score": 0.6041769515131301
       },
       {
         "ticker": "BAND",
-        "score": 0.6194189319535168
+        "score": 0.6151821000350606
       },
       {
         "ticker": "MQ",
-        "score": 0.6451605840083299
+        "score": 0.6431089586605956
       }
     ],
     "sell_1d": [
       {
         "ticker": "EOSE",
-        "score": -0.3817312765423017
-      },
-      {
-        "ticker": "FCEL",
-        "score": -0.35041308751736394
+        "score": -0.38093037305690153
       },
       {
         "ticker": "TE",
-        "score": -0.3081763507170246
+        "score": -0.3080314101860367
+      },
+      {
+        "ticker": "FCEL",
+        "score": -0.34797305489019464
       },
       {
         "ticker": "METC",
         "score": -0.35926161860311184
       },
       {
-        "ticker": "SOC",
-        "score": -0.2942264307685899
+        "ticker": "ARE",
+        "score": -0.3772381184544495
       },
       {
-        "ticker": "ARE",
-        "score": -0.37724675732763907
+        "ticker": "SOC",
+        "score": -0.26336947194895477
       },
       {
         "ticker": "EXK",
         "score": -0.13534527097428023
       },
       {
-        "ticker": "QBTS",
-        "score": -0.08178211006170005
-      },
-      {
         "ticker": "BAK",
-        "score": -0.5527352805861339
+        "score": -0.5490766034044455
       },
       {
-        "ticker": "USAS",
-        "score": -0.45918161421790393
+        "ticker": "QBTS",
+        "score": -0.07756314375879364
+      },
+      {
+        "ticker": "TDUP",
+        "score": -0.5065319157311595
       }
     ],
     "flatten": {
@@ -2700,6 +2700,59 @@
         }
       ],
       "preview": "5097 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-09-28",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-28T13:54:29.465088-04:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-09-28_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1362645,
+          "preview": "1d BUY CNQ, CVE, ASTH, SONO, FIVN, AMN, CON, BAND \u00b7 SELL EOSE, TE, FCEL, METC, ARE, SOC, EXK, BAK"
+        },
+        {
+          "path": "data/stock_book/2026-09-28_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 585,
+          "preview": "green 0 \u00b7 "
+        },
+        {
+          "path": "data/stock_book/2026-09-28_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2453,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-09-28_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 10614,
+          "preview": "2026-09-28 BUY CNQ, CVE, ASTH, SONO, FIVN, AMN, CON, BAND \u00b7 SELL EOSE, TE, FCEL, METC, ARE, SOC, EXK, BAK"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 10614,
+          "preview": "2026-09-28 BUY CNQ, CVE, ASTH, SONO, FIVN, AMN, CON, BAND \u00b7 SELL EOSE, TE, FCEL, METC, ARE, SOC, EXK, BAK"
+        },
+        {
+          "path": "01_daily/2026-09-28_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 58225,
+          "preview": "# Stock book \u2014 2026-09-28\n_Generated 2026-09-28T13:54:21.118128-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY CNQ, CVE, ASTH, SONO, FIVN, AMN, CON, BAND \u00b7 SELL EOSE, TE, FCEL, METC, ARE, SOC, EXK, BAK \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-09-28 BUY CNQ, CVE, ASTH, SONO, FIVN, AMN, CON, BAND \u00b7 SELL EOSE, TE, FCEL, METC, ARE, SOC, EXK, BAK \u00b7 2026-09-28 BUY CNQ, CVE, ASTH, SONO, FIVN, AMN, CON, BAND \u00b7 SELL EOSE, TE, FCEL, METC, ARE, SOC, EXK, BAK \u00b7 # Stock book \u2014 2026-09-28\n_Generated 2026-09-28T13:54:21.118128-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "href": {
