@@ -1,6 +1,6 @@
 {
   "date": "2026-09-28",
-  "generated_at": "2026-09-28T05:40:05.704911-04:00",
+  "generated_at": "2026-09-28T05:40:22.495132-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -179,7 +179,7 @@
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 7,
+      "n_req_ok": 8,
       "n_req": 20,
       "n_opt_ok": 3,
       "n_opt": 3,
@@ -361,7 +361,7 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 8327,
+          "size": 7532,
           "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 13 fail",
           "bullets": [
             "finviz_market_digest:missing",
@@ -386,11 +386,13 @@
           "name": "Grok review JSON",
           "path": "01_daily/2026-09-28_grok_review.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "ok=False Grok returned an empty review",
+          "size": 308,
+          "said": "ok=False \u00b7 empty_review_reply (review)",
+          "bullets": [
+            "Grok returned an empty review"
+          ]
         },
         {
           "key": "sector_basic_materials",
@@ -560,19 +562,19 @@
           "path": "01_daily/weather/2026-09-28_weather.json",
           "role": "required",
           "status": "OK",
-          "reason": "sectors=11 bytes=10534 vix=calm yields=rising",
-          "size": 10534,
-          "said": "favorable 2 \u00b7 hostile 4 \u00b7 neutral 5",
+          "reason": "sectors=11 bytes=10572 vix=calm yields=rising",
+          "size": 10572,
+          "said": "favorable 2 \u00b7 hostile 5 \u00b7 neutral 4",
           "bullets": [
-            "hostile: Basic Materials, Energy, Financial, Utilities",
-            "events bull 3 / bear 2"
+            "hostile: Basic Materials, Communication Services, Energy, Financial, Utilities",
+            "events bull 1 / bear 0"
           ]
         }
       ],
-      "said": "favorable 2 \u00b7 hostile 4 \u00b7 neutral 5",
+      "said": "favorable 2 \u00b7 hostile 5 \u00b7 neutral 4",
       "bullets": [
-        "hostile: Basic Materials, Energy, Financial, Utilities",
-        "events bull 3 / bear 2"
+        "hostile: Basic Materials, Communication Services, Energy, Financial, Utilities",
+        "events bull 1 / bear 0"
       ]
     },
     {
@@ -773,12 +775,12 @@
           "path": "01_daily/weather/2026-09-28_weather.json",
           "role": "input",
           "status": "OK",
-          "reason": "sectors=11 bytes=10534 vix=calm yields=rising",
-          "size": 10534,
-          "said": "favorable 2 \u00b7 hostile 4 \u00b7 neutral 5",
+          "reason": "sectors=11 bytes=10572 vix=calm yields=rising",
+          "size": 10572,
+          "said": "favorable 2 \u00b7 hostile 5 \u00b7 neutral 4",
           "bullets": [
-            "hostile: Basic Materials, Energy, Financial, Utilities",
-            "events bull 3 / bear 2"
+            "hostile: Basic Materials, Communication Services, Energy, Financial, Utilities",
+            "events bull 1 / bear 0"
           ]
         },
         {
@@ -799,10 +801,10 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=5899",
-          "size": 2244824,
-          "said": "213 rows",
+          "size": 2232018,
+          "said": "204 rows",
           "bullets": [
-            "REGN, ARGX, NICE, EXEL, ONC, AZN, DSGX, TEL"
+            "FORM, DOCU, NVDA, PLAB, NICE, MU, SKHY, NTCT"
           ]
         },
         {
@@ -875,9 +877,9 @@
           "bullets": []
         }
       ],
-      "said": "213 rows",
+      "said": "204 rows",
       "bullets": [
-        "REGN, ARGX, NICE, EXEL, ONC"
+        "FORM, DOCU, NVDA, PLAB, NICE"
       ]
     },
     {
@@ -989,10 +991,10 @@
       ]
     },
     "weather": {
-      "said": "favorable 2 \u00b7 hostile 4 \u00b7 neutral 5",
+      "said": "favorable 2 \u00b7 hostile 5 \u00b7 neutral 4",
       "bullets": [
-        "hostile: Basic Materials, Energy, Financial, Utilities",
-        "events bull 3 / bear 2"
+        "hostile: Basic Materials, Communication Services, Energy, Financial, Utilities",
+        "events bull 1 / bear 0"
       ]
     }
   },
@@ -1599,6 +1601,31 @@
         }
       ],
       "preview": "5899 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 REGN, ARGX, NICE, EXEL, ONC"
+    },
+    {
+      "key": "weather",
+      "title": "Weather / regime",
+      "date": "2026-09-28",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-28T05:40:22.099970-04:00",
+      "files": [
+        {
+          "path": "01_daily/weather/2026-09-28_weather.json",
+          "ok": true,
+          "reason": "",
+          "size": 10572,
+          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -2.96, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -1.59, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -0.29, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -0.75, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.45, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -0.26, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.08, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -0.825, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}"
+        },
+        {
+          "path": "01_daily/weather/2026-09-28_weather.md",
+          "ok": true,
+          "reason": "",
+          "size": 5982,
+          "preview": "# Weather report \u2014 2026-09-28\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+        }
+      ],
+      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -2.96, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -1.59, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -0.29, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -0.75, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.45, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -0.26, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.08, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -0.825, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-09-28\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
     }
   ],
   "href": {
