@@ -1,6 +1,6 @@
 # Finviz Daily Digest — 2026-09-28
 
-_Generated 2026-09-28T04:24:25.706380-04:00 · export=data/exports/finviz_2026-09-27.csv · ticker digests=5882 · high-signal=2087_
+_Generated 2026-09-28T04:24:24.106578-04:00 · export=data/exports/finviz_2026-09-28.csv · ticker digests=5881 · high-signal=2096_
 
 ## Major indices (live quote page)
 
@@ -19,7 +19,6 @@ _Generated 2026-09-28T04:24:25.706380-04:00 · export=data/exports/finviz_2026-0
 - **AON** [Financial]: Aon disclosed in an SEC filing that it has secured a $4 billion term loan and a $3 billion revolving credit facility to help finance its pending acquisition of USI.
 - **APH** [Technology]: Fabrinet earnings weakness and rising yields spark 6.5% APH drop
 - **ARGX** [Healthcare]: argenx announces it has completed the acquisition of Forte Biosciences for $77 per share in cash, adding first-in-class anti-CD122 antibody FB102 to its immunology pipeline.
-- **AU** [Basic Materials]: Gold prices slide more than 3% after Fed Chair Kevin Warshâs Jackson Hole comments boost September U.S. rate hike expectations
 - **BDX** [Healthcare]: Becton Dickinson beats Q3 2026 estimates with EPS $3.23 on $5.0B revenue, raises FY26 EPS guidance to $12.62â$12.72
 - **BE** [Industrials]: Bloom Energy says Oracle remains committed to 2.4 GW Project Jupiter fuel cell contract and planned timeline despite force majeure notice
 - **BNS** [Financial]: Bank of Nova Scotia posts record Q3 2026 EPS $2.28 as National Bank upgrades to Outperform, lifts target to C$142
@@ -28,7 +27,6 @@ _Generated 2026-09-28T04:24:25.706380-04:00 · export=data/exports/finviz_2026-0
 - **BX** [Financial]: Blackstone Infrastructure and PNM file amended New Mexico PRC merger plan with $220M ratepayer credits and $80M community benefits for $11.5B TXNM deal
 - **CAH** [Healthcare]: Barronâs reports that Cardinal Health CEO Jason Hollar recently sold about $29 million of company stock following the post-earnings share surge to record levels.
 - **CI** [Healthcare]: Jefferies downgrades Cigna to Hold from Buy, cuts price target to $307 from $336 on concern consensus too high post EviCore sale, Centene prescription drug plan shrinkage
-- **CIEN** [Technology]: Evercore ISI upgrades Ciena to Outperform, raises price target to $550 from $375
 - **CM** [Financial]: Canadian Imperial Bank Of Commerce reports fiscal Q3 2026 results with non-GAAP EPS $1.97 (+25% YoY) and revenue $6.0B (+14% YoY), beats EPS and revenue estimates
 - **CMCSA** [Communication Serv]: Comcast shares fall after Citi cuts its price target to $27.50 and KeyBanc downgrades the stock to Underweight with an $18 target.
 - **CNQ** [Energy]: Canadian Natural Resources posts record Q2 2026 results with EPS $1.58, raises 2026 production guidance and returns about $4B to shareholders
@@ -51,6 +49,8 @@ _Generated 2026-09-28T04:24:25.706380-04:00 · export=data/exports/finviz_2026-0
 - **FIX** [Industrials]: Zacks Strong Buy upgrade and AI data center backlog drive 11% FIX surge
 - **GE** [Industrials]: GE Aerospace plans $225 million upgrade of Niskayuna research center for AI, robotics and propulsion projects
 - **GEV** [Industrials]: GE Vernova settles over $300 million Vineyard Wind payment dispute, withdraws contract-termination notice and legal claims on Massachusetts offshore project
+- **GSK** [Healthcare]: Positive Jideytro ARROS-1 trial data for first-line ROS1+ NSCLC drives GSK premarket surge
+- **GWW** [Industrials]: Barclays cuts Grainger target to $1,172, sending shares down 2.7% during Friday trading
 
 ## By sector (top signal)
 
@@ -64,9 +64,9 @@ _Generated 2026-09-28T04:24:25.706380-04:00 · export=data/exports/finviz_2026-0
 ### Technology (n=8)
 - AMD: BofA raises AMD price target to $720 on stronger server CPU growth outlook
 - APH: Fabrinet earnings weakness and rising yields spark 6.5% APH drop
-- CIEN: Evercore ISI upgrades Ciena to Outperform, raises price target to $550 from $375
 - CRM: Salesforce issues FY27 revenue guidance of $46.4B, sets FY30 revenue target above $63B at Investor Day
 - CSCO: Cisco wins multiyear deal to upgrade University of Notre Dame campus network with nearly 1,000 Catalyst 9300X switches
+- DDOG: Snowflake's stronger-than-expected quarterly revenue and earnings support cloud and AI-focused enterprise software peers including Datadog
 
 ### Industrials (n=8)
 - AME: AMETEK completes $5.0 billion all-cash acquisition of Indicor Instrumentation
@@ -94,11 +94,6 @@ _Generated 2026-09-28T04:24:25.706380-04:00 · export=data/exports/finviz_2026-0
 - HLT: Deutsche Bank upgrades Hilton Worldwide to Buy from Hold, raises price target to $365
 - MCD: BMO, Evercore ISI and TD Cowen cut McDonald's price targets after NEXT strategy investor day
 
-### Basic Materials (n=3)
-- AU: Gold prices slide more than 3% after Fed Chair Kevin Warshâs Jackson Hole comments boost September U.S. rate hike expectations
-- CRH: Berenberg price target cut to $140 from $146 triggers CRH 3.87% drop to near 52-week low
-- LIN: Linde posts record Q2 EPS, raises 2026 EPS guidance floor as project backlog grows about $1B to $8.1B
-
 ### Communication Services (n=2)
 - AMX: JPMorgan upgrades America Movil to Overweight from Neutral and raises its price target to $32 from $30.
 - CMCSA: Comcast shares fall after Citi cuts its price target to $27.50 and KeyBanc downgrades the stock to Underweight with an $18 target.
@@ -106,6 +101,10 @@ _Generated 2026-09-28T04:24:25.706380-04:00 · export=data/exports/finviz_2026-0
 ### Consumer Defensive (n=2)
 - COST: Costco beats fiscal Q4 with EPS $6.75, revenue $95.7B as analysts flag slowing membership growth after tariff refunds
 - MNST: Q2 earnings momentum and recent stock split fuel MNST 4.09% gain
+
+### Basic Materials (n=2)
+- CRH: Berenberg price target cut to $140 from $146 triggers CRH 3.87% drop to near 52-week low
+- LIN: Linde posts record Q2 EPS, raises 2026 EPS guidance floor as project backlog grows about $1B to $8.1B
 
 ### Utilities (n=1)
 - DUK: Duke Energy's Florida subsidiary files to lower customer rates from January 2027, avoiding planned 2% base-rate hike and delivering about $50 million in savings next year
