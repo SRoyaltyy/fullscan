@@ -1,6 +1,6 @@
 {
   "date": "2026-09-28",
-  "generated_at": "2026-09-28T06:06:18.408814-04:00",
+  "generated_at": "2026-09-28T06:06:46.255225-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -560,19 +560,19 @@
           "path": "01_daily/weather/2026-09-28_weather.json",
           "role": "required",
           "status": "OK",
-          "reason": "sectors=11 bytes=10568 vix=calm yields=rising",
-          "size": 10568,
+          "reason": "sectors=11 bytes=10525 vix=calm yields=rising",
+          "size": 10525,
           "said": "favorable 2 \u00b7 hostile 6 \u00b7 neutral 3",
           "bullets": [
             "hostile: Basic Materials, Communication Services, Energy, Financial, Real Estate, Utilities",
-            "events bull 3 / bear 2"
+            "events bull 1 / bear 0"
           ]
         }
       ],
       "said": "favorable 2 \u00b7 hostile 6 \u00b7 neutral 3",
       "bullets": [
         "hostile: Basic Materials, Communication Services, Energy, Financial, Real Estate, Utilities",
-        "events bull 3 / bear 2"
+        "events bull 1 / bear 0"
       ]
     },
     {
@@ -784,12 +784,12 @@
           "path": "01_daily/weather/2026-09-28_weather.json",
           "role": "input",
           "status": "OK",
-          "reason": "sectors=11 bytes=10568 vix=calm yields=rising",
-          "size": 10568,
+          "reason": "sectors=11 bytes=10525 vix=calm yields=rising",
+          "size": 10525,
           "said": "favorable 2 \u00b7 hostile 6 \u00b7 neutral 3",
           "bullets": [
             "hostile: Basic Materials, Communication Services, Energy, Financial, Real Estate, Utilities",
-            "events bull 3 / bear 2"
+            "events bull 1 / bear 0"
           ]
         },
         {
@@ -838,7 +838,7 @@
           "role": "required",
           "status": "OK",
           "reason": "horizons=5 names=150",
-          "size": 1314403,
+          "size": 1314402,
           "said": "1d BUY CNQ, ASTH, SONO, FIVN, AMN, CON, BAND, MQ \u00b7 SELL EOSE, FCEL, TE, METC, SOC, ARE \u00b7 -0.6341",
           "bullets": []
         },
@@ -852,7 +852,7 @@
           "size": 53643,
           "said": "Stock book \u2014 2026-09-28",
           "bullets": [
-            "_Generated 2026-09-28T06:06:09.461387-04:00_",
+            "_Generated 2026-09-28T06:06:43.928752-04:00_",
             "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
           ]
         },
@@ -916,7 +916,7 @@
           "role": "input",
           "status": "OK",
           "reason": "horizons=5 names=150",
-          "size": 1314403,
+          "size": 1314402,
           "said": "1d BUY CNQ, ASTH, SONO, FIVN, AMN, CON, BAND, MQ \u00b7 SELL EOSE, FCEL, TE, METC, SOC, ARE \u00b7 -0.6341",
           "bullets": []
         },
@@ -1090,7 +1090,7 @@
       "said": "favorable 2 \u00b7 hostile 6 \u00b7 neutral 3",
       "bullets": [
         "hostile: Basic Materials, Communication Services, Energy, Financial, Real Estate, Utilities",
-        "events bull 3 / bear 2"
+        "events bull 1 / bear 0"
       ]
     }
   },
@@ -2292,229 +2292,6 @@
         }
       ],
       "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok \u00b7 keys: date, generated_at, run_id, runner, all_ok, qc_all_ok, book_ok, grok_ok, grok_fails, missing_required, attempts, github_runs \u00b7 # Pre-open ALL status \u2014 2026-09-28\nall_ok=False  qc_all_ok=False  book_ok=False  grok_ok=False  news_mode=on  missing=['sector_predict']\nPredictive modules + stock book (must land before 09:30 ET).\nOutcome / learn / tonight's captain research = Post-Close ALL.\n- Weather / regime: exit 0\n- News parse: exit 0\n- Event scanner (primary): exit 0\n- Event catcher (gap hunt, no carry): exit 0\n- News actions: exit 0\n- News judge: exit 0\n- General market predict: exit 0\n- Per-sector predict (all 11): exit 1\n- Map heat morning delta refresh: exit 0\n- Catalyst dossiers (after book): exit 4"
-    },
-    {
-      "key": "weather",
-      "title": "Weather / regime",
-      "date": "2026-09-28",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-28T06:05:53.085574-04:00",
-      "files": [
-        {
-          "path": "01_daily/weather/2026-09-28_weather.json",
-          "ok": true,
-          "reason": "",
-          "size": 10568,
-          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -3.46, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -1.73, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -0.32, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -0.74, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.21, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -0.28, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.16, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -0.94, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}"
-        },
-        {
-          "path": "01_daily/weather/2026-09-28_weather.md",
-          "ok": true,
-          "reason": "",
-          "size": 5986,
-          "preview": "# Weather report \u2014 2026-09-28\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
-        }
-      ],
-      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -3.46, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -1.73, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -0.32, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -0.74, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.21, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -0.28, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.16, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -0.94, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-09-28\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
-    },
-    {
-      "key": "join",
-      "title": "Join / match rank",
-      "date": "2026-09-28",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-28T06:05:58.373936-04:00",
-      "files": [
-        {
-          "path": "data/join/2026-09-28_ranked.csv",
-          "ok": true,
-          "reason": "",
-          "size": 2249790,
-          "preview": "5899 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 ARGX, REGN, AZN, NICE, EXEL"
-        }
-      ],
-      "preview": "5899 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 ARGX, REGN, AZN, NICE, EXEL"
-    },
-    {
-      "key": "peer_rs",
-      "title": "Peer RS",
-      "date": "2026-09-28",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-28T06:06:03.488188-04:00",
-      "files": [
-        {
-          "path": "data/peers/2026-09-28_peer_rs.csv",
-          "ok": true,
-          "reason": "",
-          "size": 821609,
-          "preview": "5097 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
-        }
-      ],
-      "preview": "5097 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
-    },
-    {
-      "key": "stock_book",
-      "title": "Stock book + green",
-      "date": "2026-09-28",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-28T06:06:14.107362-04:00",
-      "files": [
-        {
-          "path": "data/stock_book/2026-09-28_stock_book.json",
-          "ok": true,
-          "reason": "",
-          "size": 1314403,
-          "preview": "1d BUY CNQ, ASTH, SONO, FIVN, AMN, CON, BAND, MQ \u00b7 SELL EOSE, FCEL, TE, METC, SOC, ARE, EXK, QBTS"
-        },
-        {
-          "path": "data/stock_book/2026-09-28_green.json",
-          "ok": true,
-          "reason": "",
-          "size": 585,
-          "preview": "green 0 \u00b7 "
-        },
-        {
-          "path": "data/stock_book/2026-09-28_input_health.json",
-          "ok": true,
-          "reason": "",
-          "size": 2454,
-          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
-        },
-        {
-          "path": "data/stock_book/2026-09-28_suggestions.json",
-          "ok": true,
-          "reason": "",
-          "size": 10194,
-          "preview": "2026-09-28 BUY CNQ, ASTH, SONO, FIVN, AMN, CON, BAND, MQ \u00b7 SELL EOSE, FCEL, TE, METC, SOC, ARE, EXK, QBTS"
-        },
-        {
-          "path": "data/stock_book/latest_suggestions.json",
-          "ok": true,
-          "reason": "",
-          "size": 10194,
-          "preview": "2026-09-28 BUY CNQ, ASTH, SONO, FIVN, AMN, CON, BAND, MQ \u00b7 SELL EOSE, FCEL, TE, METC, SOC, ARE, EXK, QBTS"
-        },
-        {
-          "path": "01_daily/2026-09-28_stock_book.md",
-          "ok": true,
-          "reason": "",
-          "size": 54649,
-          "preview": "# Stock book \u2014 2026-09-28\n_Generated 2026-09-28T06:06:09.461387-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
-        }
-      ],
-      "preview": "1d BUY CNQ, ASTH, SONO, FIVN, AMN, CON, BAND, MQ \u00b7 SELL EOSE, FCEL, TE, METC, SOC, ARE, EXK, QBTS \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-09-28 BUY CNQ, ASTH, SONO, FIVN, AMN, CON, BAND, MQ \u00b7 SELL EOSE, FCEL, TE, METC, SOC, ARE, EXK, QBTS \u00b7 2026-09-28 BUY CNQ, ASTH, SONO, FIVN, AMN, CON, BAND, MQ \u00b7 SELL EOSE, FCEL, TE, METC, SOC, ARE, EXK, QBTS \u00b7 # Stock book \u2014 2026-09-28\n_Generated 2026-09-28T06:06:09.461387-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
-    },
-    {
-      "key": "live_boards",
-      "title": "Live 1d BUY/SELL strip",
-      "date": "2026-09-28",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-28T06:06:17.864130-04:00",
-      "files": [
-        {
-          "path": "data/day_board/today.json",
-          "ok": true,
-          "reason": "",
-          "size": 22057,
-          "preview": "2026-09-28 BUY CNQ, ASTH, SONO, FIVN, AMN, CON, BAND, MQ \u00b7 SELL EOSE, FCEL, TE, METC, SOC, ARE, EXK, QBTS"
-        },
-        {
-          "path": "data/day_board/latest.json",
-          "ok": true,
-          "reason": "",
-          "size": 755,
-          "preview": "keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages"
-        },
-        {
-          "path": "data/day_board/2026-09-28.json",
-          "ok": true,
-          "reason": "",
-          "size": 119069,
-          "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href"
-        },
-        {
-          "path": "data/day_board/2026-09-28_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 79705,
-          "preview": "2026-09-28 BUY CNQ, ASTH, SONO, FIVN, AMN, CON, BAND, MQ \u00b7 SELL EOSE, FCEL, TE, METC, SOC, ARE, EXK, QBTS"
-        },
-        {
-          "path": "data/day_board/strategy_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 261175,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "data/day_board/2026-09-28_strategy_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 251413,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "data/day_board/today_strategies.json",
-          "ok": true,
-          "reason": "",
-          "size": 246695,
-          "preview": "2026-09-28 BUY CNQ, ASTH, SONO, FIVN, AMN, CON, BAND, MQ \u00b7 SELL EOSE, FCEL, TE, METC, SOC, ARE, EXK, QBTS"
-        },
-        {
-          "path": "data/factor_mine/strategy_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 261175,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "dashboard/factor-mine/today.json",
-          "ok": true,
-          "reason": "",
-          "size": 79705,
-          "preview": "2026-09-28 BUY CNQ, ASTH, SONO, FIVN, AMN, CON, BAND, MQ \u00b7 SELL EOSE, FCEL, TE, METC, SOC, ARE, EXK, QBTS"
-        },
-        {
-          "path": "dashboard/factor-mine/strategy_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 261175,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "dashboard/factor-mine/today_strategies.json",
-          "ok": true,
-          "reason": "",
-          "size": 261175,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "dashboard/today_strategies.json",
-          "ok": true,
-          "reason": "",
-          "size": 246695,
-          "preview": "2026-09-28 BUY CNQ, ASTH, SONO, FIVN, AMN, CON, BAND, MQ \u00b7 SELL EOSE, FCEL, TE, METC, SOC, ARE, EXK, QBTS"
-        },
-        {
-          "path": "data/day_board/hold_live_px.json",
-          "ok": true,
-          "reason": "",
-          "size": 1668,
-          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
-        },
-        {
-          "path": "dashboard/factor-mine/hold_live_px.json",
-          "ok": true,
-          "reason": "",
-          "size": 1668,
-          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
-        }
-      ],
-      "preview": "2026-09-28 BUY CNQ, ASTH, SONO, FIVN, AMN, CON, BAND, MQ \u00b7 SELL EOSE, FCEL, TE, METC, SOC, ARE, EXK, QBTS \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href \u00b7 2026-09-28 BUY CNQ, ASTH, SONO, FIVN, AMN, CON, BAND, MQ \u00b7 SELL EOSE, FCEL, TE, METC, SOC, ARE, EXK, QBTS \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-28 BUY CNQ, ASTH, SONO, FIVN, AMN, CON, BAND, MQ \u00b7 SELL EOSE, FCEL, TE, METC, SOC, ARE, EXK, QBTS \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-28 BUY CNQ, ASTH, SONO, FIVN, AMN, CON, BAND, MQ \u00b7 SELL EOSE, FCEL, TE, METC, SOC, ARE, EXK, QBTS \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, l"
     }
   ],
   "href": {
