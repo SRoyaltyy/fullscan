@@ -103,16 +103,9 @@ jobs:
         run: |
           head -80 03_scoreboard/JEV_GATE.md || true
           ls -lh 01_daily/news/*jev_keep* 01_daily/news/*jev_junk* || true
-      - name: Commit keep list
-        if: success()
-        run: |
-          export HOME="${HOME:-/home/gha}"
-          unset GIT_DIR GIT_WORK_TREE GIT_INDEX_FILE
-          cd "${GITHUB_WORKSPACE:-.}"
-          bash scripts/safe_git_push.sh \
-            "auto: jev hop-0 gate" \
-            01_daily/news \
-            03_scoreboard/JEV_GATE.md
+      # Do not safe_git_push from a sparse clone — it fights every other
+      # main lander and the job gets cancelled mid-fetch. Artifact is
+      # the keep list; a later full land can copy it.
       - name: Upload artifact
         if: always()
         uses: actions/upload-artifact@v4
