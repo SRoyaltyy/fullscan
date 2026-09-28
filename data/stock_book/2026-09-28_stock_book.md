@@ -1,6 +1,6 @@
 # Stock book — 2026-09-28
 
-_Generated 2026-09-28T07:40:55.733322-04:00_
+_Generated 2026-09-28T07:47:09.821142-04:00_
 
 This file is the **human read** of one run. CSV/JSON next to it are the machine files.
 
@@ -21,7 +21,7 @@ The existing red/yellow/green source graph remains visible. Its digest, judge an
 - Weather risk: **off**
 - General predict (same-day): -0.63 down (present)
 - Stand-down: **no** — 38 names qualified through catalyst_exception,probable (38 probable)
-- Sector predicts this date: 2/11 (ok)
+- Sector predicts this date: 3/11 (ok)
 - News tickers in play: 97
 - AB coverage: 1950 names · peer RS: 1825
 - Universe after liquidity: 2066
@@ -99,7 +99,7 @@ This is the live Finviz groups tape — child industry vs parent sector, plus th
 | Sector | Finviz 1d | Finviz 1w | LLM 1d | Tape vs essay |
 |--------|----------:|----------:|-------:|---------------|
 | Basic Materials | -2.1% | -4.8% | -0.33 |  |
-| Communication Services | +2.7% | +3.5% | — |  |
+| Communication Services | +2.7% | +3.5% | +0.00 | essay flat, tape moving |
 | Consumer Cyclical | -0.4% | -2.0% | — |  |
 | Consumer Defensive | +1.4% | +0.5% | — |  |
 | Energy | -0.8% | +1.0% | — |  |
@@ -214,6 +214,7 @@ If a row says **missing**, that layer scored 0 today. If it says **found**, it m
 |--------|------|
 | Technology | -0.33 |
 | Basic Materials | -0.33 |
+| Communication Services | +0.00 |
 
 ### How much each predictor is trusted (graded hit rate)
 

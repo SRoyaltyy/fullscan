@@ -1,11 +1,12 @@
 {
   "meta": {
     "date": "2026-09-28",
-    "generated_at": "2026-09-28T07:40:55.733322-04:00",
+    "generated_at": "2026-09-28T07:47:09.821142-04:00",
     "general_bias": -0.6341,
     "sector_bias": {
       "Technology": -0.325,
-      "Basic Materials": -0.325
+      "Basic Materials": -0.325,
+      "Communication Services": 0.0
     },
     "accuracy_gates": {
       "general": {
@@ -75,7 +76,7 @@
     "n_ab": 1950,
     "n_peer": 1825,
     "same_day_general": true,
-    "same_day_sectors": 2,
+    "same_day_sectors": 3,
     "weather_risk": "off",
     "n_universe": 2066,
     "weights": {
