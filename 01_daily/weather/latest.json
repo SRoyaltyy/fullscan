@@ -1,6 +1,6 @@
 {
  "date": "2026-09-28",
- "generated_at": "2026-09-28T06:05:53.000409-04:00",
+ "generated_at": "2026-09-28T13:53:55.975072-04:00",
  "stance_vocabulary": [
   "favorable",
   "neutral",
@@ -21,49 +21,55 @@
   "yields_source": "fred_dgs10",
   "dgs10_delta_1d": 0.07,
   "dgs10_current": 5.18,
-  "dollar": "flat",
+  "dollar": "strong",
   "dollar_source": "dxy",
-  "dxy_pct_1d": 0.13,
-  "vix_ratio": 0.908,
-  "vix_spot": 16.28,
-  "vix_delta_1d": 1.41,
+  "dxy_pct_1d": 0.16,
+  "vix_ratio": 0.881,
+  "vix_spot": 15.99,
+  "vix_delta_1d": 1.12,
   "vix_ratio_source": "vix/vix3m",
-  "vix": "calm",
-  "oil_pct_1d": 3.67,
-  "oil": "rising",
+  "vix": "falling",
+  "oil_pct_1d": 0.18,
+  "oil": "flat",
   "fear_greed": null,
   "fear_greed_label": null,
-  "regime_corr": -0.877,
+  "regime_corr": -0.776,
   "sectors": {
-   "Basic Materials": {
-    "score": -3.46,
+   "Technology": {
+    "score": -13.383,
     "dir": "down",
-    "conf": 0.4,
-    "source": "finviz_week"
+    "conf": 0.65,
+    "source": "llm"
+   },
+   "Basic Materials": {
+    "score": -6.779,
+    "dir": "down",
+    "conf": 0.65,
+    "source": "llm"
    },
    "Communication Services": {
-    "score": -1.73,
-    "dir": "down",
-    "conf": 0.4,
-    "source": "finviz_week"
+    "score": -4.633,
+    "dir": "flat",
+    "conf": 0.55,
+    "source": "llm"
    },
    "Consumer Cyclical": {
-    "score": -0.32,
-    "dir": "flat",
-    "conf": 0.4,
-    "source": "finviz_week"
+    "score": -6.753,
+    "dir": "down",
+    "conf": 0.65,
+    "source": "llm"
    },
    "Consumer Defensive": {
-    "score": -0.74,
+    "score": -0.622,
     "dir": "flat",
-    "conf": 0.4,
-    "source": "finviz_week"
+    "conf": 0.525,
+    "source": "llm"
    },
    "Energy": {
-    "score": -2.21,
-    "dir": "down",
-    "conf": 0.4,
-    "source": "finviz_week"
+    "score": 7.946,
+    "dir": "up",
+    "conf": 0.65,
+    "source": "llm"
    },
    "Financial": {
     "score": -0.28,
@@ -86,12 +92,6 @@
    "Real Estate": {
     "score": -1.5,
     "dir": "down",
-    "conf": 0.4,
-    "source": "finviz_week"
-   },
-   "Technology": {
-    "score": -1.4449999999999998,
-    "dir": "flat",
     "conf": 0.4,
     "source": "finviz_week"
    },
@@ -123,28 +123,28 @@
   "sector": {
    "Basic Materials": {
     "stance": "hostile",
-    "confidence": "medium",
-    "why": "finviz sector median week -3.46% [tape]"
+    "confidence": "high",
+    "why": "sector predict score -6.8 dir down conf 0.65 [sector board]"
    },
    "Communication Services": {
     "stance": "hostile",
-    "confidence": "medium",
-    "why": "finviz sector median week -1.73% [tape]"
+    "confidence": "high",
+    "why": "sector predict score -4.6 dir flat conf 0.55 [sector board]"
    },
    "Consumer Cyclical": {
-    "stance": "neutral",
-    "confidence": "medium",
-    "why": "finviz sector median week -0.32% [tape]"
+    "stance": "hostile",
+    "confidence": "high",
+    "why": "sector predict score -6.8 dir down conf 0.65 [sector board]"
    },
    "Consumer Defensive": {
     "stance": "neutral",
-    "confidence": "medium",
-    "why": "finviz sector median week -0.74% [tape]"
+    "confidence": "high",
+    "why": "sector predict score -0.6 dir flat conf 0.525 [sector board]"
    },
    "Energy": {
-    "stance": "hostile",
-    "confidence": "medium",
-    "why": "finviz sector median week -2.21% [tape]"
+    "stance": "favorable",
+    "confidence": "high",
+    "why": "sector predict score +7.9 dir up conf 0.65 [sector board]"
    },
    "Financial": {
     "stance": "hostile",
@@ -181,12 +181,12 @@
    "micro": {
     "stance": "hostile",
     "confidence": "medium",
-    "why": "risk-off — small caps de-rate first; risk-off, dollar flat [general predict + factors]"
+    "why": "risk-off — small caps de-rate first; risk-off, dollar strong [general predict + factors]"
    },
    "small": {
     "stance": "hostile",
     "confidence": "medium",
-    "why": "risk-off — small caps de-rate first; risk-off, dollar flat [general predict + factors]"
+    "why": "risk-off — small caps de-rate first; risk-off, dollar strong [general predict + factors]"
    },
    "large": {
     "stance": "favorable",
@@ -223,7 +223,7 @@
    "rut": {
     "stance": "hostile",
     "confidence": "medium",
-    "why": "risk-off — small caps de-rate first; risk-off, dollar flat [general predict + factors]"
+    "why": "risk-off — small caps de-rate first; risk-off, dollar strong [general predict + factors]"
    },
    "none": {
     "stance": "neutral",
