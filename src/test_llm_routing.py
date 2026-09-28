@@ -166,15 +166,39 @@ def test_news_hop_watermarks_openclaw() -> None:
 
 
 def test_openclaw_hop_fail_soft_without_gateway() -> None:
-    from src.news_impact.openclaw_hop import hop as oc_hop
+    """Unreachable or empty OpenClaw must not return a green no-news hop."""
+    from src.news_impact.openclaw_hop import GrokHopError, hop as oc_hop
     from src.news_impact.pipeline import analyze_article
     _reset(openclaw_url="")
     config.OPENCLAW_TOKEN = ""
-    parsed, lane, model, log = oc_hop("news_classify", {"title": "x"})
-    assert parsed is None
-    assert log[0]["skip"] == "no_gateway"
+    try:
+        oc_hop("news_classify", {"title": "x"})
+        raise AssertionError("missing gateway must not return a green hop")
+    except GrokHopError as exc:
+        msg = str(exc)
+        assert "gateway unreachable" in msg
+        assert "OPENCLAW_GATEWAY_URL unset or empty" in msg
+    # Deterministic classify (OpenClaw off) is unchanged.
     row = analyze_article({"title": "Amgen gets FDA approval"}, persist=False)
     assert row["lane"] == "deterministic"
+
+    _reset(openclaw_url="http://127.0.0.1:18789")
+    with mock.patch("src.deepseek_client.openclaw_complete", return_value=""):
+        try:
+            oc_hop("news_classify", {"title": "empty"})
+            raise AssertionError("empty complete must not land no-news")
+        except GrokHopError as exc:
+            msg = str(exc)
+            assert "returned empty" in msg
+            assert "no-news artifact" in msg
+    with mock.patch("src.deepseek_client.openclaw_complete", return_value="not json"):
+        try:
+            oc_hop("news_classify", {"title": "garbage"})
+            raise AssertionError("unparseable complete must not land no-news")
+        except GrokHopError as exc:
+            msg = str(exc)
+            assert "unparseable text" in msg
+            assert "no-news artifact" in msg
 
 
 def test_native_search_note_only_when_tools() -> None:

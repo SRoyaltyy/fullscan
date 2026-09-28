@@ -5,10 +5,12 @@ name: Stock Book ALL (one-shot)
 #   then publish dashboard/ to GitHub Pages (fixed Chrome URL).
 #
 # LLM stages (predict / 11 sectors / events / news judge / book-reflect)
-# hit Grok 4.6 via OpenClaw on the ECS. DeepSeek automatically takes over
-# when Grok is unavailable, rate-limited, or out of credits.
-# Must run on [self-hosted, ecs]: ubuntu-latest cannot reach the
-# loopback gateway and used to fall back to DeepSeek every weekday.
+# hit Grok via OpenClaw on the ECS. A dead gateway fails the hop.
+# DeepSeek is not the default (set LLM_BACKEND=auto only on purpose).
+# Grok hops run on [self-hosted, ecs] for schedule, push, and
+# workflow_run. ubuntu-latest cannot reach the loopback gateway.
+# Ubuntu is only inputs.runner=ubuntu, and that path is the explicit
+# no-Grok land (skip_llm). DeepSeek is not the scheduled default.
 # One ECS runner — a 6h book run will queue other ECS jobs.
 # Catalyst daily is invoked inside src.run_stock_book_all before ranking
 # so dossiers merge into news actions and land on the .io paper book.
@@ -48,10 +50,11 @@ on:
         description: "true = always run all 11 sector predicts"
         required: false
         default: "false"
-  # ubuntu-only. ECS systemd 05:55 never starts GH land_book (that job
-  # lives on preopen_all.yml, which has no schedule). A 17:00 UTC ECS
-  # cron used to steal the box and miss 09:30. Schedule MUST force
-  # ubuntu + skip_llm + skip_extras — inputs are empty on cron.
+  # Schedule / push / workflow_run run the Grok job on ECS (inputs are
+  # empty on cron, so the runner expression must not treat them as ubuntu).
+  # inputs.runner=ubuntu is the explicit no-Grok land and stays skip_llm.
+  # Pre-Open land_book is the separate ubuntu ranker that does not wait
+  # on this box. Past 09:25 ET still skips LLM so a late book can land.
   schedule:
     - cron: "10 10 * * 1-5"   # ~06:10 ET — after 05:40 scrape
     - cron: "15 13 * * 1-5"   # ~09:15 ET — last chance before the bell
@@ -83,8 +86,11 @@ concurrency:
   # Ubuntu heal must not queue behind a 6h ECS Grok book.
   # Ubuntu twins cancel each other (09-08 commit-race pile-up).
   # ECS Grok stays uncanceled.
-  group: ${{ (github.event_name == 'schedule' || github.event_name == 'push' || github.event_name == 'workflow_run' || github.event.inputs.runner == 'ubuntu') && 'stock-book-all-ubuntu' || 'stock-book-all-ecs' }}
-  cancel-in-progress: ${{ github.event_name == 'schedule' || github.event_name == 'push' || github.event_name == 'workflow_run' || github.event.inputs.runner == 'ubuntu' }}
+  # Ubuntu twins cancel each other. Schedule / push / ECS share one
+  # group and queue (cancel-in-progress false) so a Grok book is not
+  # killed and a second twin does not run beside it.
+  group: ${{ github.event.inputs.runner == 'ubuntu' && 'stock-book-all-ubuntu' || 'stock-book-all-ecs' }}
+  cancel-in-progress: ${{ github.event.inputs.runner == 'ubuntu' }}
 
 env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -115,14 +121,13 @@ jobs:
   all:
     needs: gate
     if: needs.gate.outputs.go == 'yes'
-    runs-on: ${{ (github.event_name == 'schedule' || github.event_name == 'push' || github.event_name == 'workflow_run' || github.event.inputs.runner == 'ubuntu') && 'ubuntu-latest' || fromJSON('["self-hosted","ecs"]') }}
-    timeout-minutes: ${{ (github.event_name == 'schedule' || github.event_name == 'push' || github.event_name == 'workflow_run' || github.event.inputs.runner == 'ubuntu') && 90 || 360 }}
+    runs-on: ${{ github.event.inputs.runner == 'ubuntu' && 'ubuntu-latest' || fromJSON('["self-hosted","ecs"]') }}
+    timeout-minutes: ${{ github.event.inputs.runner == 'ubuntu' && 90 || 360 }}
     env:
-      # ECS persist / OpenClaw live under /home/gha. ubuntu-latest
-      # (schedule / push / workflow_run / explicit ubuntu) must keep
-      # the runner home or pip/git write to a missing directory.
-      FULLSCAN_HOME: ${{ (github.event_name == 'schedule' || github.event_name == 'push' || github.event_name == 'workflow_run' || github.event.inputs.runner == 'ubuntu') && '/home/runner' || '/home/gha' }}
-      HOME: ${{ (github.event_name == 'schedule' || github.event_name == 'push' || github.event_name == 'workflow_run' || github.event.inputs.runner == 'ubuntu') && '/home/runner' || '/home/gha' }}
+      # ECS persist / OpenClaw live under /home/gha. Explicit ubuntu
+      # keeps the runner home or pip/git write to a missing directory.
+      FULLSCAN_HOME: ${{ github.event.inputs.runner == 'ubuntu' && '/home/runner' || '/home/gha' }}
+      HOME: ${{ github.event.inputs.runner == 'ubuntu' && '/home/runner' || '/home/gha' }}
       FINVIZ_SKIP_LIVE: "1"
       FULLSCAN_LAND: "1"
     steps:
@@ -205,7 +210,8 @@ jobs:
           FINVIZ_EMAIL: ${{ secrets.FINVIZ_EMAIL }}
           FINVIZ_PASSWORD: ${{ secrets.FINVIZ_PASSWORD }}
           FINVIZ_EXPORT: ${{ secrets.FINVIZ_EXPORT }}
-          GROK_ONLY: "0"
+          GROK_ONLY: "1"
+          LLM_BACKEND: grok
           FINVIZ_SKIP_LIVE: "1"
         run: |
           set -e
@@ -220,12 +226,10 @@ jobs:
           SKIP="${SKIP:-false}"
           SKIP_EXTRAS="${SKIP_EXTRAS:-false}"
           FSEC="${FSEC:-false}"
-          if [ "${{ github.event_name }}" = "schedule" ] \
-             || [ "${{ github.event_name }}" = "push" ] \
-             || [ "${{ github.event_name }}" = "workflow_run" ]; then
+          if [ "${{ github.event.inputs.runner }}" = "ubuntu" ]; then
             SKIP=true
             SKIP_EXTRAS=true
-            echo "ubuntu land-book (${{ github.event_name }}) — skip LLM + extras (do not take ECS)"
+            echo "ubuntu runner — explicit no-Grok land (skip LLM + extras)"
           fi
           ET_HM=$((10#$(TZ=America/New_York date +%H%M)))
           if [ "$FORCE" != "true" ] && [ "$ET_HM" -ge 925 ]; then

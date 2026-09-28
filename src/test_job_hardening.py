@@ -106,7 +106,8 @@ def test_cancel_in_progress_off_on_grok_jobs() -> None:
         assert "cancel-in-progress: true" not in text, name
         assert "cancel-in-progress: false" in text, name
     book = (WF / "stock_book_all.yml").read_text(encoding="utf-8")
-    assert "cancel-in-progress: ${{ github.event_name == 'schedule'" in book
+    # Ubuntu land may cancel; ECS Grok shares one group and queues.
+    assert "cancel-in-progress: ${{ github.event.inputs.runner == 'ubuntu' }}" in book
     # 2026-09-25: ECS and ubuntu share one Pre-Open group and queue.
     pre = (WF / "preopen_all.yml").read_text(encoding="utf-8")
     group_line = next(ln for ln in pre.splitlines() if ln.strip().startswith("group:"))
@@ -197,6 +198,12 @@ def test_all_jobs_degrade_instead_of_failing() -> None:
     assert "[postclose-all] FAIL" not in post
     assert "DEGRADED" in pre
     assert "DEGRADED" in post
+    # Labeled DEGRADED still fails the job. Empty essays are not a green skip.
+    assert "Empty essays were not substituted. Exit 1." in pre
+    assert "empty grades were not " in post
+    assert "substituted. Exit 1." in post
+    assert "raise SystemExit(1)" in pre
+    assert "raise SystemExit(1)" in post
     assert "[all] FATAL: no membership" not in book
     assert "[all] FATAL: weather" not in book
     assert "FATAL: no join ranked" not in book
@@ -325,12 +332,16 @@ def test_preopen_does_not_skip_python_after_cutoff() -> None:
     assert "skip Post-Close ALL until 16:00 ET" in orch
     assert "18h Post-Close ALL spans midnight" in orch
     assert 'WF" != "postclose_all.yml"' in orch
-    # 17:15 is the existing cron. New 16:10/23:30 may skip day 1;
-    # dispatch ubuntu/DeepSeek so a dead ECS runner cannot stall the pack.
-    assert "dispatch_postclose_ubuntu" in orch
-    assert "MISSING night pack → postclose_all.yml ubuntu/DeepSeek" in orch
-    assert "inputs[llm_backend]=deepseek" in orch
-    assert "active run is push last-closed heal — queue ubuntu night_pack" in orch
+    # 17:15 is the existing cron. Night pack is ECS + OpenClaw.
+    # A second ubuntu/DeepSeek writer is not queued behind it.
+    assert "dispatch_postclose_ecs" in orch
+    assert "dispatch_postclose_ubuntu" not in orch
+    assert "MISSING night pack → postclose_all.yml ecs (OpenClaw, no DeepSeek)" in orch
+    assert "inputs[llm_backend]=grok" in orch
+    assert "inputs[llm_backend]=deepseek" not in orch
+    assert "inputs[llm_backend]=auto" not in orch
+    assert "OK — already running (same concurrency group; no second writer)" in orch
+    assert "active run is push last-closed heal — queue ubuntu night_pack" not in orch
     assert "dispatch_last_closed_sidecar" in orch
     assert "postclose_last_closed.yml/dispatches" in orch
     assert "MISSING last-closed pack → postclose_last_closed.yml" in orch
@@ -408,12 +419,13 @@ def test_ranker_inputs_before_llm_packet() -> None:
     assert 'cron: "10 20 * * 1-5"' in post_yml
     assert 'cron: "30 3 * * 2-6"' in post_yml
     assert "postclose-all-${{" in post_yml
-    assert "github.event_name == 'schedule'" in post_yml
-    # ubuntu/DeepSeek must not inherit ECS HOME or try Grok first.
+    assert "github.event.inputs.runner == 'ubuntu'" in post_yml
+    # Schedule lands on ECS. HOME is the runner expression, not a literal.
     assert "HOME: \"/home/gha\"" not in post_yml
     assert "FULLSCAN_HOME: \"/home/gha\"" not in post_yml
     assert "'/home/runner'" in post_yml
-    assert "&& 'deepseek'" in post_yml
+    assert "github.event.inputs.llm_backend || 'grok'" in post_yml
+    assert "&& 'deepseek'" not in post_yml
     assert 'export HOME="${FULLSCAN_HOME:-/home/gha}"' not in post_yml
     assert "MAP_POSTCLOSE_LOCK" in post_yml
     assert "leftover ECS files must not fake SKIP" in post_yml
@@ -483,10 +495,9 @@ def test_ranker_inputs_before_llm_packet() -> None:
     assert "past 09:25 ET — skip LLM + extras" in book_yml
     assert 'cron: "10 10 * * 1-5"' in book_yml
     assert 'cron: "15 13 * * 1-5"' in book_yml
-    assert "ubuntu land-book" in book_yml
-    assert 'github.event_name == \'schedule\'' in book_yml
-    assert 'github.event_name == \'push\'' in book_yml
-    assert 'github.event_name == \'workflow_run\'' in book_yml
+    assert "ubuntu runner — explicit no-Grok land" in book_yml
+    assert "github.event.inputs.runner == 'ubuntu'" in book_yml
+    assert "github.event_name == 'schedule'" not in book_yml
     assert "stock-book-all-ubuntu" in book_yml
     assert "stock-book-all-ecs" in book_yml
     assert "HOME: \"/home/gha\"" not in book_yml
@@ -755,24 +766,28 @@ def test_search_and_sector_rounds_are_bounded() -> None:
 
 
 def test_ubuntu_postclose_skips_grok_and_keeps_runner_home() -> None:
-    """16:10/23:30 + orch 17:15 must run DeepSeek under the runner HOME."""
+    """Schedule and orch postclose are ECS + auto. Ubuntu only if asked."""
     post_yml = (WF / "postclose_all.yml").read_text(encoding="utf-8")
     orch = (WF / "daily_orchestrator.yml").read_text(encoding="utf-8")
     book_yml = (WF / "stock_book_all.yml").read_text(encoding="utf-8")
     assert "HOME: \"/home/gha\"" not in post_yml
     assert "FULLSCAN_HOME: \"/home/gha\"" not in post_yml
     assert "'/home/runner'" in post_yml
-    assert "&& 'deepseek'" in post_yml
+    assert "&& 'deepseek'" not in post_yml
+    assert "github.event.inputs.llm_backend || 'grok'" in post_yml
     assert 'export HOME="${FULLSCAN_HOME:-/home/gha}"' not in post_yml
-    assert "dispatch_postclose_ubuntu" in orch
-    assert "inputs[llm_backend]=deepseek" in orch
+    assert "dispatch_postclose_ecs" in orch
+    assert "dispatch_postclose_ubuntu" not in orch
+    assert "inputs[llm_backend]=grok" in orch
+    assert "inputs[llm_backend]=deepseek" not in orch
+    assert "inputs[llm_backend]=auto" not in orch
     assert "HOME: \"/home/gha\"" not in book_yml
     assert "'/home/runner'" in book_yml
     ds = (ROOT / "src" / "deepseek_client.py").read_text(encoding="utf-8")
     assert "timeout=(15, config.OPENCLAW_TIMEOUT)" in ds
     assert '"connect timeout"' in ds
-    # Merge of healer code must start ubuntu last-closed (dispatch is 403).
-    assert "github.event_name == 'push'" in post_yml
+    # Merge of healer code must start the last-closed push heal.
+    assert '${{ github.event_name }}" = "push"' in post_yml
     assert "push heal — last_closed=" in post_yml
     assert "src/skip_if_good.py" not in post_yml
     assert "01_daily/" not in post_yml.split("push:")[1].split("workflow_dispatch:")[0]
@@ -944,11 +959,14 @@ def test_ubuntu_preopen_not_blocked_by_queued_ecs() -> None:
     assert "\n  group: preopen-all\n" in yml
     assert "cancel-in-progress: false" in yml
     assert "&& 'ubuntu' || 'ecs'" not in yml
-    assert "github.event_name == 'push'" in yml
+    assert '${{ github.event_name }}" = "push"' in yml
     assert "&& 'deepseek'" not in yml
-    assert "github.event.inputs.llm_backend || 'auto'" in yml
+    assert "github.event.inputs.llm_backend || 'grok'" in yml
+    assert 'GROK_ONLY: "1"' in yml
     assert "--job preopen_pass" in yml
-    assert "--skip-sectors" in yml
+    assert "--skip-sectors" not in yml
+    assert "Refusing to land empty sector essays" in yml
+    assert "exit 1" in yml
     assert "'/home/runner'" in yml
     assert "no persist lock dir (ubuntu)" in yml
     assert 'export HOME="${FULLSCAN_HOME:-/home/gha}"' not in yml

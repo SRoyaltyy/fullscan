@@ -1,26 +1,29 @@
 name: Pre-Open ALL (predictive one-shot)
 
 # One morning button: GH scrape (ubuntu) → book+green (ubuntu, no Grok)
-#   → packet (ECS). The ubuntu ranker does not wait on the ECS box —
-#   a 3h Grok hang must not leave BUY/SELL empty at 09:30.
+#   → packet (ECS / OpenClaw). The ubuntu ranker does not wait on the
+#   ECS box — a 3h Grok hang must not leave BUY/SELL empty at 09:30.
 # CLOCK: GitHub schedule 09:55 UTC (~05:55 ET EDT) owns the unattended
-# start. ECS systemd 05:55 is optional Grok extra.
-# A dead laptop / offline ECS runner must not stall the 09:30 packet.
+# start. The predictive `preopen` job runs on [self-hosted, ecs] for
+# schedule, push, and workflow_run — same as a manual ecs dispatch.
+# Ubuntu is only `inputs.runner=ubuntu` (explicit) or the no-Grok
+# land jobs (gate / scrape / land_book). Default LLM_BACKEND is grok
+# (no paid DeepSeek fallback). Pass llm_backend=auto or deepseek only
+# on an explicit dispatch.
 # Skip-if-good: each file already quality-ok is not rewritten (no LLM).
 # This file is a poke: a main push that touches it starts the packet
-# (workflow_dispatch is 403 from the cloud agent). Push and schedule
-# land on ubuntu-latest and stay on LLM_BACKEND=auto — they do not
-# silently map the runner to DeepSeek.
+# (workflow_dispatch is 403 from the cloud agent).
 #
 # HARDEN 2026-09-25: one concurrency group `preopen-all` for ECS and
 # ubuntu, cancel-in-progress false, so a twin queues instead of writing
 # a second LLM packet. Twin guard no-ops when today's preopen_status.json
 # already landed (force=true is the only bypass). A completed pass with
-# a missing book is a narrow heal (book/tickets only). Ubuntu with a
-# loopback or unset OpenClaw URL skips sector essays.
-#   #4 Ubuntu late heal after 09:25 ET passes --bypass-cutoff (essays
-#      may run; skip-if-good still honors quality-ok files). Covers
-#      weekday cron, orch ubuntu dispatch, and a yml poke — not ECS.
+# a missing book is a narrow heal (book/tickets only). An explicit ubuntu
+# dispatch with a loopback or unset OpenClaw URL fails the job. Empty
+# sector essays and no-news hops are not landed green.
+#   #4 Explicit runner=ubuntu after 09:25 ET passes --bypass-cutoff
+#      (essays may run; skip-if-good still honors quality-ok files).
+#      Weekday cron and push stay on ECS and stay inside the 09:25 gate.
 #      The 12:00 cap used to no-op a missing parse after lunch (09-09).
 #      Explicit workflow_dispatch force=true is the only full rewrite.
 #      Morning / on-time runs do NOT pass --force.
@@ -48,7 +51,7 @@ on:
   workflow_dispatch:
     inputs:
       runner:
-        description: "ecs (OpenClaw) or ubuntu (GitHub-hosted). ubuntu cannot reach Grok."
+        description: "ecs (OpenClaw, default for schedule/push) or ubuntu (explicit; cannot reach Grok)."
         required: false
         default: "ecs"
         type: choice
@@ -287,13 +290,13 @@ jobs:
   preopen:
     needs: [gate, scrape]
     if: ${{ needs.gate.outputs.go == 'yes' && always() }}
-    runs-on: ${{ (github.event_name == 'push' || github.event_name == 'schedule' || github.event.inputs.runner == 'ubuntu') && 'ubuntu-latest' || fromJSON('["self-hosted","ecs"]') }}
+    runs-on: ${{ github.event.inputs.runner == 'ubuntu' && 'ubuntu-latest' || fromJSON('["self-hosted","ecs"]') }}
     timeout-minutes: 240
     env:
       OPENCLAW_TIMEOUT: "10800"
       FULLSCAN_PERSIST: "/home/gha/fullscan-persist"
-      FULLSCAN_HOME: ${{ (github.event_name == 'push' || github.event_name == 'schedule' || github.event.inputs.runner == 'ubuntu') && '/home/runner' || '/home/gha' }}
-      HOME: ${{ (github.event_name == 'push' || github.event_name == 'schedule' || github.event.inputs.runner == 'ubuntu') && '/home/runner' || '/home/gha' }}
+      FULLSCAN_HOME: ${{ github.event.inputs.runner == 'ubuntu' && '/home/runner' || '/home/gha' }}
+      HOME: ${{ github.event.inputs.runner == 'ubuntu' && '/home/runner' || '/home/gha' }}
       FINVIZ_SKIP_LIVE: "1"
       PREOPEN_LOCK: "/home/gha/fullscan-persist/locks/preopen.lock"
       FULLSCAN_LAND: "1"
@@ -411,8 +414,8 @@ jobs:
           DATABASE_KEY: ${{ secrets.DATABASE_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           OPENCLAW_TIMEOUT: "10800"
-          GROK_ONLY: "0"
-          LLM_BACKEND: ${{ github.event.inputs.llm_backend || 'auto' }}
+          LLM_BACKEND: ${{ github.event.inputs.llm_backend || 'grok' }}
+          GROK_ONLY: "1"
           FINVIZ_SKIP_LIVE: "1"
           PREOPEN_LLM_TIMEOUT: "900"
         timeout-minutes: 180
@@ -438,27 +441,26 @@ jobs:
           EVENT="${{ github.event_name }}"
           RUNNER="${{ github.event.inputs.runner }}"
           ARGS=(--llm-backend "$BACKEND")
-          ON_UBUNTU=0
-          if [ "$EVENT" = "push" ] || [ "$EVENT" = "schedule" ] || [ "$RUNNER" = "ubuntu" ]; then
-            ON_UBUNTU=1
-          fi
           GW="${OPENCLAW_GATEWAY_URL:-}"
           GW_LOOP=0
           if [ -z "$GW" ] || printf '%s' "$GW" | grep -Eq '127\.0\.0\.1|localhost|\[::1\]'; then
             GW_LOOP=1
           fi
-          if [ "$ON_UBUNTU" = 1 ] && [ "$BACKEND" != "deepseek" ] && [ "$GW_LOOP" = 1 ]; then
-            ARGS+=(--skip-sectors)
-            echo "ubuntu runner: OpenClaw gateway is loopback/unset — skip sector essays (no silent DeepSeek)"
+          # Schedule / push / workflow_run have an empty runner input and
+          # land on ECS above. Only an explicit ubuntu dispatch can see a
+          # loopback gateway — that used to skip sectors and stay green.
+          if [ "$RUNNER" = "ubuntu" ] && [ "$BACKEND" != "deepseek" ] && [ "$GW_LOOP" = 1 ]; then
+            echo "ERROR: ubuntu runner cannot reach OpenClaw (gateway loopback or unset). Refusing to land empty sector essays or no-news hops. Re-dispatch with runner=ecs. DeepSeek is not enabled by default."
+            exit 1
           fi
           [ -n "$DATE" ] && ARGS+=(--date "$DATE")
           [ "$BOOK" = "false" ] && ARGS+=(--no-book)
           if [ "$FORCE" = "true" ]; then
             ARGS+=(--force)
             echo "explicit --force (rewrite quality-ok + bypass 09:25)"
-          elif [ "$ET_HM" -ge 925 ] && { [ "$EVENT" = "push" ] || [ "$EVENT" = "schedule" ] || [ "$RUNNER" = "ubuntu" ]; }; then
+          elif [ "$ET_HM" -ge 925 ] && [ "$RUNNER" = "ubuntu" ]; then
             ARGS+=(--bypass-cutoff)
-            echo "ubuntu late-heal --bypass-cutoff (after 09:25 ET; skip-if-good on)"
+            echo "ubuntu late-heal --bypass-cutoff (explicit runner=ubuntu after 09:25 ET; skip-if-good on)"
           fi
           echo "CMD: python -m src.run_preopen_all ${ARGS[*]}"
           python -m src.run_preopen_all "${ARGS[@]}"

@@ -126,26 +126,32 @@ def test_bypass_cutoff_skips_refuse() -> None:
 
 
 def test_ubuntu_late_heal_after_0925() -> None:
-    """#199 clock + orch dispatch must late-heal; ECS must not."""
-    assert preopen.ubuntu_late_heal("push", hm=925) is True
-    assert preopen.ubuntu_late_heal("schedule", hm=930) is True
+    """Only an explicit runner=ubuntu writer late-heals after 09:25.
+
+    Schedule, push, and ECS stay inside the 09:25 gate. A cron that
+    bypassed the cutoff used to land on ubuntu with no OpenClaw.
+    """
+    assert preopen.ubuntu_late_heal("push", hm=925) is False
+    assert preopen.ubuntu_late_heal("schedule", hm=930) is False
     assert preopen.ubuntu_late_heal("workflow_dispatch", "ubuntu", hm=935) is True
+    assert preopen.ubuntu_late_heal("schedule", "ubuntu", hm=930) is True
     assert preopen.ubuntu_late_heal("workflow_dispatch", "ecs", hm=935) is False
     assert preopen.ubuntu_late_heal("schedule", hm=924) is False
     assert preopen.ubuntu_late_heal("push", hm=554) is False
     yml = (ROOT / ".github" / "workflows" / "preopen_all.yml").read_text(
         encoding="utf-8")
     assert "ubuntu late-heal --bypass-cutoff" in yml
-    assert '[ "$EVENT" = "schedule" ]' in yml
+    assert '[ "$EVENT" = "schedule" ]' not in yml
     assert '[ "$RUNNER" = "ubuntu" ]' in yml
     assert 'event_name }}" = "push" ] && [ "$ET_HM" -ge 925 ]' not in yml
     assert "weekend push poke swallowed" in yml
     orch = (ROOT / ".github" / "workflows" / "daily_orchestrator.yml").read_text(
         encoding="utf-8")
-    assert "ubuntu Pre-Open late heal (--bypass-cutoff)" in orch
+    assert "past 09:25 ET — ecs Pre-Open (09:25 gate stays on)" in orch
+    assert "ubuntu Pre-Open late heal (--bypass-cutoff)" not in orch
     assert "maybe preopen_all.yml" in orch
-    # Midday late heal must not rewrite quality-ok files.
-    late = orch.split("past 09:25 ET — ubuntu Pre-Open late heal")[1]
+    # Midday pass must not rewrite quality-ok files or force a late packet.
+    late = orch.split("past 09:25 ET — ecs Pre-Open (09:25 gate stays on)")[1]
     assert "maybe preopen_all.yml" in late.split("MISSING news parse")[0]
     assert "inputs[force]=true" not in late.split("MISSING news parse")[0]
 
@@ -220,18 +226,23 @@ def test_incremental_land_hooks() -> None:
     assert "overlay_at" in ecs
 
 
-def test_preopen_unattended_clock_is_ubuntu() -> None:
-    """Laptop off: weekday cron + orch heal must not queue on ECS."""
+def test_preopen_unattended_clock_is_ecs() -> None:
+    """Laptop off: weekday cron + orch heal must reach OpenClaw on ECS."""
     yml = (ROOT / ".github" / "workflows" / "preopen_all.yml").read_text(
         encoding="utf-8")
     orch = (ROOT / ".github" / "workflows" / "daily_orchestrator.yml").read_text(
         encoding="utf-8")
     assert 'cron: "55 9 * * 1-5"' in yml
-    assert "github.event_name == 'schedule'" in yml
-    assert "dispatch_preopen_ubuntu" in orch
-    assert "inputs[llm_backend]=deepseek" in orch
+    assert "github.event_name == 'schedule'" not in yml
+    assert "github.event.inputs.runner == 'ubuntu'" in yml
+    assert "dispatch_preopen_ecs" in orch
+    assert "dispatch_preopen_ubuntu" not in orch
+    assert "inputs[llm_backend]=grok" in orch
+    assert "inputs[llm_backend]=deepseek" not in orch
+    assert "inputs[llm_backend]=auto" not in orch
+    assert '-f "inputs[runner]=ecs"' in orch
+    # Book heal is the explicit no-Grok land; Pre-Open itself is not.
     assert '-f "inputs[runner]=ubuntu"' in orch
-    # Bare dispatch would default runner=ecs and sit on an offline box.
     assert "maybe preopen_all.yml" in orch
 
 
@@ -351,7 +362,7 @@ def main() -> None:
         test_run_preopen_cli_has_bypass_not_permanent_force,
         test_map_heat_passthrough_flag_skips_llm,
         test_incremental_land_hooks,
-        test_preopen_unattended_clock_is_ubuntu,
+        test_preopen_unattended_clock_is_ecs,
         test_holiday_overlay_uses_last_session,
         test_weather_step_rejects_pre_0535_stamp,
         test_deepseek_preflight_is_wired,

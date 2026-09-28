@@ -437,6 +437,11 @@ def main() -> None:
     print(f"\n[sector-predict] QC {n_ok}/{len(FINVIZ_SECTORS)} quality-ok "
           f"(this-run skip={n_skip} fail={n_fail} degraded={n_degraded})"
           + (f" {summary}" if summary else ""))
+    if n_degraded:
+        raise SystemExit(
+            f"DEGRADED: OpenClaw unreachable or empty for {n_degraded} "
+            "sector essay(s); empty essays were not written"
+        )
     if n_ok == 0:
         raise SystemExit("no quality-ok sector essays on disk")
 

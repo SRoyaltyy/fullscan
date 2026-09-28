@@ -549,14 +549,14 @@ def run(date: str | None = None, force: bool = False,
     def step(key: str, title: str, cmd: list[str],
              timeout_s: int | None = None) -> int:
         if skip_sectors and key == "sector_predict":
-            print("[preopen-all] skip Per-sector predict "
-                  "(--skip-sectors; no silent DeepSeek)")
+            print("[preopen-all] DEGRADED: --skip-sectors refuses empty "
+                  "sector essays (OpenClaw unreachable on this runner)")
             attempts.append({
                 "key": key, "title": title, "cmd": cmd,
-                "returncode": 0, "skipped": True, "status": "DEGRADED",
-                "detail": "skipped: gateway unreachable on this runner",
+                "returncode": 1, "skipped": True, "status": "DEGRADED",
+                "detail": "DEGRADED: gateway unreachable; empty essays not written",
             })
-            return 0
+            return 1
         if ((not force) and (not bypass_cutoff) and key in llm_steps
                 and preopen.past_predict_cutoff()):
             print(f"[preopen-all] skip {title} (past 09:25 ET — book still runs)")
@@ -998,12 +998,12 @@ def run(date: str | None = None, force: bool = False,
     os.environ.pop("PREOPEN_IN_PACKET", None)
     if degraded:
         print(
-            f"[preopen-all] DEGRADED {date}: wrote whatever landed and will "
-            f"still commit/publish. missing={missing_required or 'none'} "
+            f"[preopen-all] DEGRADED {date}: OpenClaw/packet incomplete. "
+            f"missing={missing_required or 'none'} "
             f"qc_all_ok={bool(report.get('all_ok'))} grok_ok={bool(grok.get('ok'))} "
-            f"book_ok={book_ok}. Exit 0 so git + Pages still run."
+            f"book_ok={book_ok}. Empty essays were not substituted. Exit 1."
         )
-        return
+        raise SystemExit(1)
     print(f"[preopen-all] PASS {date} — packet"
           f"{' + stock book' if with_book else ''} ok")
 
@@ -1021,7 +1021,8 @@ def main() -> None:
                     choices=["auto", "grok", "deepseek"],
                     help="auto=Grok then DeepSeek; grok=Grok only; deepseek=no Grok")
     ap.add_argument("--skip-sectors", action="store_true",
-                    help="Do not write sector essays (ubuntu cannot reach a loopback gateway)")
+                    help="Do not write sector essays. Marks DEGRADED and exits 1 "
+                         "(ubuntu cannot reach a loopback gateway)")
     args = ap.parse_args()
     run(date=args.date, force=args.force,
         with_book=not args.no_book, llm_backend=args.llm_backend,
