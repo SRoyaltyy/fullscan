@@ -1,19 +1,18 @@
 {
   "date": "2026-09-28",
-  "generated_at": "2026-09-28T04:43:02.208945-04:00",
+  "generated_at": "2026-09-28T04:43:16.816199-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
     "MISSING General predict MD `01_daily/general/2026-09-28_predict.md` \u2014 missing",
     "MISSING Sector board JSON `01_daily/sectors/2026-09-28/_board.json` \u2014 missing",
-    "MISSING News actions JSON `01_daily/news/2026-09-28_actions.json` \u2014 missing",
     "MISSING News judge MD `01_daily/news/2026-09-28_judge.md` \u2014 missing",
     "MISSING AB checklist enriched `data/ab_checklist/2026-09-28_ab_checklist_enriched.csv` \u2014 missing"
   ],
   "counts": {
     "ok": 3,
-    "partial": 3,
-    "fail": 2,
+    "partial": 4,
+    "fail": 1,
     "n": 8
   },
   "processes": [
@@ -185,7 +184,7 @@
       "inputs_ready": true,
       "n_req_ok": 3,
       "n_req": 20,
-      "n_opt_ok": 1,
+      "n_opt_ok": 2,
       "n_opt": 3,
       "files": [
         {
@@ -306,11 +305,16 @@
           "name": "News actions JSON",
           "path": "01_daily/news/2026-09-28_actions.json",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 40698,
+          "said": "50 ticker actions \u00b7 3 events \u00b7 400 headlines \u00b7 COP BUY, EOG BUY, RRC BUY, SM BUY, HPK BUY, REPX BUY, OXY BUY, FANG BUY",
+          "bullets": [
+            "BUY COP",
+            "BUY EOG",
+            "BUY RRC",
+            "BUY SM"
+          ]
         },
         {
           "key": "general",
@@ -590,8 +594,8 @@
       "key": "catalyst",
       "name": "Catalyst dossiers",
       "yaml": "catalyst_daily.yml",
-      "status": "FAIL",
-      "inputs_ready": false,
+      "status": "PARTIAL",
+      "inputs_ready": true,
       "n_req_ok": 0,
       "n_req": 0,
       "n_opt_ok": 0,
@@ -602,11 +606,16 @@
           "name": "News actions JSON",
           "path": "01_daily/news/2026-09-28_actions.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 40698,
+          "said": "50 ticker actions \u00b7 3 events \u00b7 400 headlines \u00b7 COP BUY, EOG BUY, RRC BUY, SM BUY, HPK BUY, REPX BUY, OXY BUY, FANG BUY",
+          "bullets": [
+            "BUY COP",
+            "BUY EOG",
+            "BUY RRC",
+            "BUY SM"
+          ]
         },
         {
           "key": "in_digest",
@@ -635,8 +644,17 @@
           "bullets": []
         }
       ],
-      "said": "",
-      "bullets": []
+      "said": "50 ticker actions \u00b7 3 events \u00b7 400 headlines \u00b7 COP BUY, EOG BUY, RRC BUY, SM BUY, HPK BUY, REPX BUY, OXY BUY, FANG BUY",
+      "bullets": [
+        "BUY COP",
+        "BUY EOG",
+        "BUY RRC",
+        "BUY SM",
+        "BUY HPK",
+        "BUY REPX",
+        "BUY OXY",
+        "BUY FANG"
+      ]
     },
     {
       "key": "stock_book",
@@ -676,11 +694,16 @@
           "name": "News actions JSON",
           "path": "01_daily/news/2026-09-28_actions.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 40698,
+          "said": "50 ticker actions \u00b7 3 events \u00b7 400 headlines \u00b7 COP BUY, EOG BUY, RRC BUY, SM BUY, HPK BUY, REPX BUY, OXY BUY, FANG BUY",
+          "bullets": [
+            "BUY COP",
+            "BUY EOG",
+            "BUY RRC",
+            "BUY SM"
+          ]
         },
         {
           "key": "in_digest",
@@ -1335,6 +1358,31 @@
         }
       ],
       "preview": "36 events \u00b7 Hormuz still barely open; Brent ~$107 | China Mid-Autumn/Golden Week travel and market shutdown | PBoC up-to-RMB1tn/day holiday reverse repos | BoJ July minutes (hawkish pre-1.25% hike) | Teamsters expand Amazon warehouse pickets | US Section 338 bans on selected Canadian goods \u00b7 # Event Scan \u2014 2026-09-28\n- events tracked: **36** (via openclaw)\n- uncertainty: **elevated**\n- summary: The Sep 24 Trump-Xi pageant extended the trade truce to Jan 10 2027 and removed the Nov 10 cliff, but it did not de-risk the tape: Hormuz is still barely open (Brent ~$107, single-digit daily transits), UNGA diplomacy produced no deal, and prediction markets still price roughly two-thirds odds of another 25 bp Warsh hike on Oct 28. This window's live catalysts are Canada Section 338 bans (Sep 29), labor/PCE week (Sep 29-Oct 2), China PMI into Golden Week (Sep 30), Micron (Sep 30), and the Oct 4 OPEC+ meeting \u2014 not a US shutdown, which is already funded through Dec 11."
+    },
+    {
+      "key": "news_actions",
+      "title": "News actions",
+      "date": "2026-09-28",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-28T04:43:16.282254-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-09-28_actions.json",
+          "ok": true,
+          "reason": "",
+          "size": 40698,
+          "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions"
+        },
+        {
+          "path": "01_daily/news/2026-09-28_actions.md",
+          "ok": true,
+          "reason": "",
+          "size": 8938,
+          "preview": "# News \u2192 Actions v4 (full framework) \u2014 2026-09-28T04:43:16.270373-04:00\nraw=400 unique_events=3 tickers=50"
+        }
+      ],
+      "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions \u00b7 # News \u2192 Actions v4 (full framework) \u2014 2026-09-28T04:43:16.270373-04:00\nraw=400 unique_events=3 tickers=50"
     }
   ],
   "href": {

@@ -1,12 +1,12 @@
 {
   "date": "2026-09-28",
-  "generated_at": "2026-09-28T04:43:02.208945-04:00",
+  "generated_at": "2026-09-28T04:43:16.816199-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
     "ok": 3,
-    "partial": 3,
-    "fail": 2,
+    "partial": 4,
+    "fail": 1,
     "n": 8
   },
   "buy_1d": [],
@@ -15,31 +15,6 @@
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "map_heat",
-      "title": "Map heat tables",
-      "date": "2026-09-28",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-28T04:33:51.407603-04:00",
-      "files": [
-        {
-          "path": "01_daily/map_heat/2026-09-28_map_heat.json",
-          "ok": true,
-          "reason": "",
-          "size": 270793,
-          "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape"
-        },
-        {
-          "path": "01_daily/map_heat/2026-09-28_map_heat.md",
-          "ok": true,
-          "reason": "",
-          "size": 17700,
-          "preview": "# MAP HEAT \u2014 2026-09-28\nExport `finviz_2026-09-28.csv` \u00b7 11616 names \u00b7 generated 2026-09-28T04:26:14.563292-04:00"
-        }
-      ],
-      "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-09-28\nExport `finviz_2026-09-28.csv` \u00b7 11616 names \u00b7 generated 2026-09-28T04:26:14.563292-04:00"
-    },
     {
       "key": "map_heat_baseline",
       "title": "Map heat night baseline",
@@ -185,6 +160,31 @@
         }
       ],
       "preview": "36 events \u00b7 Hormuz still barely open; Brent ~$107 | China Mid-Autumn/Golden Week travel and market shutdown | PBoC up-to-RMB1tn/day holiday reverse repos | BoJ July minutes (hawkish pre-1.25% hike) | Teamsters expand Amazon warehouse pickets | US Section 338 bans on selected Canadian goods \u00b7 # Event Scan \u2014 2026-09-28\n- events tracked: **36** (via openclaw)\n- uncertainty: **elevated**\n- summary: The Sep 24 Trump-Xi pageant extended the trade truce to Jan 10 2027 and removed the Nov 10 cliff, but it did not de-risk the tape: Hormuz is still barely open (Brent ~$107, single-digit daily transits), UNGA diplomacy produced no deal, and prediction markets still price roughly two-thirds odds of another 25 bp Warsh hike on Oct 28. This window's live catalysts are Canada Section 338 bans (Sep 29), labor/PCE week (Sep 29-Oct 2), China PMI into Golden Week (Sep 30), Micron (Sep 30), and the Oct 4 OPEC+ meeting \u2014 not a US shutdown, which is already funded through Dec 11."
+    },
+    {
+      "key": "news_actions",
+      "title": "News actions",
+      "date": "2026-09-28",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-28T04:43:16.282254-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-09-28_actions.json",
+          "ok": true,
+          "reason": "",
+          "size": 40698,
+          "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions"
+        },
+        {
+          "path": "01_daily/news/2026-09-28_actions.md",
+          "ok": true,
+          "reason": "",
+          "size": 8938,
+          "preview": "# News \u2192 Actions v4 (full framework) \u2014 2026-09-28T04:43:16.270373-04:00\nraw=400 unique_events=3 tickers=50"
+        }
+      ],
+      "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions \u00b7 # News \u2192 Actions v4 (full framework) \u2014 2026-09-28T04:43:16.270373-04:00\nraw=400 unique_events=3 tickers=50"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
