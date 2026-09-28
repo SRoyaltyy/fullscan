@@ -1,6 +1,6 @@
 {
   "date": "2026-09-28",
-  "generated_at": "2026-09-28T13:58:34.485299-04:00",
+  "generated_at": "2026-09-28T13:58:42.771419-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -125,73 +125,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "sector_one",
-      "title": "Sector predict Energy (6/11)",
-      "date": "2026-09-28",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-28T09:30:15.551217-04:00",
-      "files": [
-        {
-          "path": "01_daily/sectors/2026-09-28/energy_predict.md",
-          "ok": true,
-          "reason": "",
-          "size": 19203,
-          "preview": "# Sector Prediction \u2014 Energy \u2014 2026-09-28\n- news_mode: **on**\n- ETF: **XLE**\n- rubric: `00_grounding/sectors/energy.md`\n- predicted_direction: **up**\n- predicted_magnitude_band: **mild**\n- total_score: **7.946** (mult 0.85)\n- regime: mixed\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **3.481** (CL -1.59%, QA -1.02%, ES -0.30%, PM:XLE +1.21%) \u00b7 index_carry **-1.535** (general -6.14) \u00b7 llm_overlay **6.0** (raw 6.162)"
-        },
-        {
-          "path": "01_daily/sectors/2026-09-28/energy_predict_trace.md",
-          "ok": true,
-          "reason": "",
-          "size": 387,
-          "preview": "# Reasoning trace \u2014 SECTOR PREDICT Energy 2026-09-28\n**Step 0 \u2014 Setup.** Loaded 154,134 characters of input. Provider: OpenClaw gateway, backend model `xai/grok-4.6`. Native web/X search was ENABLED inside the agent turn; see the RESEARCH APPENDIX at the end of the output for queries and sources.\n**Step 1 \u2014 Done.** The agent returned its full analysis (17,238 characters)."
-        },
-        {
-          "path": "01_daily/_transcripts/2026-09-28_sector_energy_predict.json",
-          "ok": true,
-          "reason": "",
-          "size": 175785,
-          "preview": "keys: provider, agent, backend_model, messages"
-        },
-        {
-          "path": "01_daily/2026-09-28_preopen_qc.json",
-          "ok": true,
-          "reason": "",
-          "size": 7505,
-          "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok"
-        },
-        {
-          "path": "01_daily/sectors/2026-09-28/_qc.json",
-          "ok": true,
-          "reason": "",
-          "size": 1533,
-          "preview": "keys: date, n_ok, n_total, summary, sectors"
-        },
-        {
-          "path": "01_daily/sectors/2026-09-28/_BOARD.md",
-          "ok": true,
-          "reason": "",
-          "size": 1803,
-          "preview": "# Sector Board \u2014 2026-09-28\nGenerated: **2026-09-28T09:30:15.523032-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.)."
-        },
-        {
-          "path": "01_daily/sectors/2026-09-28/_board.json",
-          "ok": true,
-          "reason": "",
-          "size": 7109,
-          "preview": "keys: date, generated_at, summary, sectors"
-        },
-        {
-          "path": "03_scoreboard/scoreboard.json",
-          "ok": true,
-          "reason": "",
-          "size": 930007,
-          "preview": "keys: runs"
-        }
-      ],
-      "preview": "# Sector Prediction \u2014 Energy \u2014 2026-09-28\n- news_mode: **on**\n- ETF: **XLE**\n- rubric: `00_grounding/sectors/energy.md`\n- predicted_direction: **up**\n- predicted_magnitude_band: **mild**\n- total_score: **7.946** (mult 0.85)\n- regime: mixed\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **3.481** (CL -1.59%, QA -1.02%, ES -0.30%, PM:XLE +1.21%) \u00b7 index_carry **-1.535** (general -6.14) \u00b7 llm_overlay **6.0** (raw 6.162) \u00b7 # Reasoning trace \u2014 SECTOR PREDICT Energy 2026-09-28\n**Step 0 \u2014 Setup.** Loaded 154,134 characters of input. Provider: OpenClaw gateway, backend model `xai/grok-4.6`. Native web/X search was ENABLED inside the agent turn; see the RESEARCH APPENDIX at the end of the output for queries and sources.\n**Step 1 \u2014 Done.** The agent returned its full analysis (17,238 characters). \u00b7 keys: provider, agent, backend_model, messages \u00b7 keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok \u00b7 keys: date, n_ok, n_total, summary, sectors \u00b7 # Sector Board \u2014 2026-09-28\nGenerated: **2026-09-28T09:30:15.523032-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.). \u00b7 key"
-    },
     {
       "key": "weather",
       "title": "Weather / regime",
@@ -485,6 +418,24 @@
         }
       ],
       "preview": "weather sectors 11 \u00b7 Technology={'score': -13.383, 'dir': 'down', 'conf': 0.65, 'source': 'llm'}, Basic Materials={'score': -6.779, 'dir': 'down', 'conf': 0.65, 'source': 'llm'}, Communication Services={'score': -4.633, 'dir': 'flat', 'conf': 0.55, 'source': 'llm'}, Consumer Cyclical={'score': -6.753, 'dir': 'down', 'conf': 0.65, 'source': 'llm'}, Consumer Defensive={'score': -0.622, 'dir': 'flat', 'conf': 0.525, 'source': 'llm'}, Energy={'score': 7.946, 'dir': 'up', 'conf': 0.65, 'source': 'llm'}, Financial={'score': -0.28, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.16, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-09-28\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+    },
+    {
+      "key": "join",
+      "title": "Join / match rank",
+      "date": "2026-09-28",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-28T13:58:41.756791-04:00",
+      "files": [
+        {
+          "path": "data/join/2026-09-28_ranked.csv",
+          "ok": true,
+          "reason": "",
+          "size": 2255062,
+          "preview": "5899 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 ARGX, COP, REGN, AZN, DVN"
+        }
+      ],
+      "preview": "5899 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 ARGX, COP, REGN, AZN, DVN"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
