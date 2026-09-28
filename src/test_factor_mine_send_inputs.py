@@ -174,7 +174,10 @@ def test_send_inputs_are_immutable_once_locked(tmp=None) -> None:
     morning = datetime(2026, 9, 28, 8, 30, tzinfo=ET)
     pre_open = datetime(2026, 9, 28, 9, 0, tzinfo=ET)
     evening = datetime(2026, 9, 28, 16, 15, tzinfo=ET)
-    with _use_dir(tmp):
+    # The live data/paper_open/2026-09-28_submit.json must not freeze this
+    # temp file. The 09:30 clock is what locks the evening rewrite.
+    with _use_dir(tmp), mock.patch.object(
+            st, "paper_submit_journal", return_value=tmp / "no-journal.json"):
         fsi.store(DATE, {}, session, now=morning)
         fsi.store(DATE, {}, revised, now=pre_open)
         frozen = (tmp / f"{DATE}.json").read_bytes()
