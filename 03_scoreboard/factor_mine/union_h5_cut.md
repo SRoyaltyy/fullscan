@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `cut_loser` · S-boost `none` · after min-hold, cut −3% losers
 
-Cash book **-7.55%** ($9,245) · signal-only (no cash/fees) was +16.74%. Starts YES **12/30**. Fills 174 · skips 468 · realized $+274.64.
+Cash book **-8.42%** ($9,158) · signal-only (no cash/fees) was +16.74%. Starts YES **12/30**. Fills 182 · skips 468 · realized $+274.64.
 
 ## How this sleeve decides (like you are 10)
 
@@ -304,6 +304,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-25 09:30 ET | **BUY** | `WRBY` | 1 | $26.27 | $0.27 | — | $133.29 | — | after min-hold, cut −3% losers; list probable,yday_gainer,yday_mover,ohlc_hot; 🔵; ret5=+8.6; leftover $31.79 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-09-25 09:30 ET | **BUY** | `AEHL` | 3 | $9.05 | $0.28 | — | $105.86 | — | after min-hold, cut −3% losers; list probable,yday_gainer; ret5=-27.1; leftover $31.79 | join🔴 sector🟡 gen🟢 news🔴 digest🟢 ab🔴 peer🔴 heat🔴 vol🔴 buy🟡 |
 | 2026-09-25 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $105.86 | ▼ close $9,244.94 vs 09:30 $9,287.79 (session -41.98) | 16:00 close · cash $105.86 · equity $9,244.94 vs 09:30 $9,287.79 (-42.85; session marks -41.98) · 14 name(s) marked open→close (per-name table). A×8 09:30 $171.98 → close $172.79 +6.48; ADMA×136 09:30 $9.52 → close $9.52 +0.00; ARQT×48 09:30 $26.27 → close $26.27 +0.00; CYPH×3 09:30 $4.00 → close $4.12 +0.35; DEFT×13 09:30 $0.53 → close $0.53 +0.00; DXCM×14 09:30 $87.47 → close $87.47 +0.00; EYPT×2 09:30 $3.65 → close $3.65 +0.00; FJET×3 09:30 $1.80 → close $1.80 -0.00; FTRE×66 09:30 $20.02 → close $20.02 +0.00; HALO×11 09:30 $115.36 → close $113.90 -16.06; OMER×64 09:30 $20.61 → close $20.08 -33.92; MRVI×4 09:30 $7.65 → close $7.60 -0.20; WRBY×1 09:30 $26.27 → close $26.71 +0.44; AEHL×3 09:30 $9.05 → close $9.36 +0.93 | — |
+| 2026-09-28 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $105.86 | ▼ 09:30 equity $9,159.03 vs yday $9,244.94 (-85.91) | 09:30 open · cash $105.86 (unchanged overnight, no fees) · equity $9,159.03 vs prior close $9,244.94 (-85.91) · 14 name(s) re-marked at the open (per-name table). A×8 yday $172.79 → 09:30 $170.00 -22.32; ADMA×136 yday $9.52 → 09:30 $9.38 -19.04; AEHL×3 yday $9.36 → 09:30 $9.01 -1.05; ARQT×48 yday $26.27 → 09:30 $26.70 +20.64; CYPH×3 yday $4.12 → 09:30 $4.03 -0.26; DEFT×13 yday $0.53 → 09:30 $0.51 -0.34; DXCM×14 yday $87.47 → 09:30 $86.87 -8.40; EYPT×2 yday $3.65 → 09:30 $3.59 -0.12; FJET×3 yday $1.80 → 09:30 $1.79 -0.03; FTRE×66 yday $20.02 → 09:30 $19.54 -31.68; HALO×11 yday $113.90 → 09:30 $113.34 -6.16; MRVI×4 yday $7.60 → 09:30 $7.49 -0.44; OMER×64 yday $20.08 → 09:30 $19.83 -16.00; WRBY×1 yday $26.71 → 09:30 $26.00 -0.71 | — |
+| 2026-09-28 09:30 ET | **SELL** | `ADMA` | 136 | $9.38 | $2.43 | $-63.31 | $1,379.11 | ▼ -63.31 after sell → book $9,156.60; vs 09:30 mark -2.43 | exit unpriced hold on first bar after 3 sess | — |
+| 2026-09-28 09:30 ET | **SELL** | `ARQT` | 48 | $26.70 | $2.15 | $-56.61 | $2,658.55 | ▼ -56.61 after sell → book $9,154.45; vs 09:30 mark -2.15 | exit unpriced hold on first bar after 3 sess | — |
+| 2026-09-28 09:30 ET | **SELL** | `CYPH` | 3 | $4.03 | $0.15 | $-0.18 | $2,670.50 | ▼ -0.18 after sell → book $9,154.30; vs 09:30 mark -0.15 | dropped from list after 5 sess (min 5) | join🟢 sector🟡 gen🔴 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-28 09:30 ET | **SELL** | `DEFT` | 13 | $0.51 | $0.12 | $-1.34 | $2,676.95 | ▼ -1.34 after sell → book $9,154.17; vs 09:30 mark -0.13 | exit unpriced hold on first bar after 4 sess | — |
+| 2026-09-28 09:30 ET | **SELL** | `DXCM` | 14 | $86.87 | $2.05 | $-40.90 | $3,891.08 | ▼ -40.90 after sell → book $9,152.12; vs 09:30 mark -2.05 | exit unpriced hold on first bar after 3 sess | — |
+| 2026-09-28 09:30 ET | **SELL** | `EYPT` | 2 | $3.59 | $0.10 | $-0.90 | $3,898.16 | ▼ -0.90 after sell → book $9,152.02; vs 09:30 mark -0.10 | exit unpriced hold on first bar after 6 sess | — |
+| 2026-09-28 09:30 ET | **SELL** | `FJET` | 3 | $1.79 | $0.08 | $-0.84 | $3,903.45 | ▼ -0.84 after sell → book $9,151.94; vs 09:30 mark -0.08 | exit unpriced hold on first bar after 4 sess | — |
+| 2026-09-28 09:30 ET | **SELL** | `FTRE` | 66 | $19.54 | $2.21 | $-51.26 | $5,190.88 | ▼ -51.26 after sell → book $9,149.73; vs 09:30 mark -2.21 | exit unpriced hold on first bar after 3 sess | — |
+| 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $5,190.88 | ▲ close $9,157.74 vs 09:30 $9,159.03 (session +8.01) | 16:00 close · cash $5,190.88 · equity $9,157.74 vs 09:30 $9,159.03 (-1.29; session marks +8.01) · 6 name(s) marked open→close (per-name table). A×8 09:30 $170.00 → close $175.21 +41.68; AEHL×3 09:30 $9.01 → close $8.23 -2.34; HALO×11 09:30 $113.34 → close $112.89 -4.95; MRVI×4 09:30 $7.49 → close $7.63 +0.56; OMER×64 09:30 $19.83 → close $19.43 -25.60; WRBY×1 09:30 $26.00 → close $24.66 -1.34 | — |
 
 ## Not taken
 

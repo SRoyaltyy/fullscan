@@ -49,7 +49,7 @@ Imagine a kid with $10,000 at the 09:30 school bell. They look at the mixed morn
 Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 09:30 packet + leftover cash + lots on hand decide the ticket. Same-day Change% is outcome only.
 
 - **Universe** `union` — candidate list at 09:30 (flatten wish-list, union, probable, yday gainer, or OHLC hot).
-- **Gate** `rsi_os=True,macd_up=True` · **rank** `list order` · **top_n** 8.
+- **Gate** `macd_up=True,rsi_os=True` · **rank** `list order` · **top_n** 8.
 - **Size** `leftover` splits leftover cash among *new* names only. Rank-weight / top-heavy still cannot invent money.
 - **Sell** `list` after min-hold **1**. We never sell a ticker we do not hold. Early 🚨 / last-red / news🔴 can still exit inside the floor.
 - **Entry:** Research universe (not the live flatten gate). Cash/share/fee rules still apply.
@@ -146,3 +146,5 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-24 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,173.55 | ▲ close $9,173.55 vs 09:30 $9,173.55 (session +0.00) | — | — |
 | 2026-09-25 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,367.74 | ▲ 09:30 equity $10,367.74 vs yday $10,367.74 (+0.00) | 09:30 open · cash $10,367.74 · no holdings · equity $10,367.74 vs prior close $10,367.74 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-09-25 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,367.74 | ▲ close $10,367.74 vs 09:30 $10,367.74 (session +0.00) | 16:00 close · cash $10,367.74 · no lots left · equity $10,367.74. | — |
+| 2026-09-28 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,367.74 | ▲ 09:30 equity $10,367.74 vs yday $10,367.74 (+0.00) | 09:30 open · cash $10,367.74 · no holdings · equity $10,367.74 vs prior close $10,367.74 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,367.74 | ▲ close $10,367.74 vs 09:30 $10,367.74 (session +0.00) | 16:00 close · cash $10,367.74 · no lots left · equity $10,367.74. | — |

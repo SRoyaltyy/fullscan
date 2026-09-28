@@ -6,7 +6,7 @@ Buys the flatten **wish-list** even on io/HOLD mornings — live `flatten_robust
 
 Side **long** · universe `flatten` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · baseline list, no extra gate
 
-Cash book **-14.59%** ($8,542) · signal-only (no cash/fees) was -9.51%. Starts YES **0/30**. Fills 195 · skips 78 · realized $-357.09.
+Cash book **-15.72%** ($8,428) · signal-only (no cash/fees) was -9.51%. Starts YES **0/30**. Fills 200 · skips 78 · realized $-357.09.
 
 ## How this sleeve decides (like you are 10)
 
@@ -325,6 +325,13 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-25 09:30 ET | **BUY** | `BLFS` | 44 | $38.51 | $2.12 | — | $1,890.86 | — | baseline list, no extra gate; list flatten; wish-list (live io HOLD — not a ticket); ret5=+4.7; leftover $1732.62 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
 | 2026-09-25 09:30 ET | **BUY** | `MRVI` | 226 | $7.65 | $2.92 | — | $159.05 | — | baseline list, no extra gate; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ⚪; ret5=+5.2; leftover $1732.62 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-09-25 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $159.05 | ▼ close $8,541.51 vs 09:30 $8,663.08 (session -110.26) | 16:00 close · cash $159.05 · equity $8,541.51 vs 09:30 $8,663.08 (-121.57; session marks -110.26) · 5 name(s) marked open→close (per-name table). REGN×2 09:30 $803.87 → close $788.04 -31.66; HALO×15 09:30 $115.36 → close $113.90 -21.90; OMER×84 09:30 $20.61 → close $20.08 -44.52; BLFS×44 09:30 $38.51 → close $38.49 -0.88; MRVI×226 09:30 $7.65 → close $7.60 -11.30 | — |
+| 2026-09-28 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $159.05 | ▼ 09:30 equity $8,439.00 vs yday $8,541.51 (-102.51) | 09:30 open · cash $159.05 (unchanged overnight, no fees) · equity $8,439.00 vs prior close $8,541.51 (-102.51) · 5 name(s) re-marked at the open (per-name table). BLFS×44 yday $38.49 → 09:30 $38.13 -15.84; HALO×15 yday $113.90 → 09:30 $113.34 -8.40; MRVI×226 yday $7.60 → 09:30 $7.49 -24.86; OMER×84 yday $20.08 → 09:30 $19.83 -21.00; REGN×2 yday $788.04 → 09:30 $771.84 -32.41 | — |
+| 2026-09-28 09:30 ET | **SELL** | `BLFS` | 44 | $38.13 | $2.15 | $-20.99 | $1,834.62 | ▼ -20.99 after sell → book $8,436.86; vs 09:30 mark -2.14 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-28 09:30 ET | **SELL** | `HALO` | 15 | $113.34 | $2.06 | $-34.39 | $3,532.67 | ▼ -34.39 after sell → book $8,434.80; vs 09:30 mark -2.06 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-28 09:30 ET | **SELL** | `MRVI` | 226 | $7.49 | $2.97 | $-42.04 | $5,222.44 | ▼ -42.04 after sell → book $8,431.83; vs 09:30 mark -2.97 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-28 09:30 ET | **SELL** | `OMER` | 84 | $19.83 | $2.27 | $-70.03 | $6,885.89 | ▼ -70.03 after sell → book $8,429.56; vs 09:30 mark -2.27 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-28 09:30 ET | **SELL** | `REGN` | 2 | $771.84 | $2.02 | $-68.08 | $8,427.54 | ▼ -68.08 after sell → book $8,427.54; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,427.54 | ▲ close $8,427.54 vs 09:30 $8,439.00 (session +0.00) | 16:00 close · cash $8,427.54 · no lots left · equity $8,427.54. | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-21.62%** ($7,838) · signal-only (no cash/fees) was +0.74%. Starts YES **0/30**. Fills 116 · skips 41 · realized $-847.98.
+Cash book **-22.42%** ($7,758) · signal-only (no cash/fees) was +0.74%. Starts YES **0/30**. Fills 118 · skips 41 · realized $-847.98.
 
 ## How this sleeve decides (like you are 10)
 
@@ -252,6 +252,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-25 09:30 ET | **BUY** | `ZSQR` | 1036 | $3.86 | $13.36 | — | $3,986.17 | — | combo gate; gate news=good,vol=good; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+46.1; leftover $3999.24 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-09-25 09:30 ET | **BUY** | `SECZ` | 245 | $16.21 | $3.16 | — | $11.56 | — | combo gate; gate news=good,vol=good; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+85.1; leftover $3999.24 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 judge🟢 ab🟡 heat🟢 vol🟢 buy🟡 |
 | 2026-09-25 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $11.56 | ▼ close $7,837.84 vs 09:30 $7,998.49 (session -144.13) | 16:00 close · cash $11.56 · equity $7,837.84 vs 09:30 $7,998.49 (-160.65; session marks -144.13) · 2 name(s) marked open→close (per-name table). ZSQR×1036 09:30 $3.86 → close $3.78 -82.88; SECZ×245 09:30 $16.21 → close $15.96 -61.25 | — |
+| 2026-09-28 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $11.56 | ▼ 09:30 equity $7,775.12 vs yday $7,837.84 (-62.72) | 09:30 open · cash $11.56 (unchanged overnight, no fees) · equity $7,775.12 vs prior close $7,837.84 (-62.72) · 2 name(s) re-marked at the open (per-name table). SECZ×245 yday $15.96 → 09:30 $16.00 +9.80; ZSQR×1036 yday $3.78 → 09:30 $3.71 -72.52 | — |
+| 2026-09-28 09:30 ET | **SELL** | `SECZ` | 245 | $16.00 | $3.23 | $-57.84 | $3,928.33 | ▼ -57.84 after sell → book $7,771.89; vs 09:30 mark -3.23 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-28 09:30 ET | **SELL** | `ZSQR` | 1036 | $3.71 | $13.57 | $-182.33 | $7,758.32 | ▼ -182.33 after sell → book $7,758.32; vs 09:30 mark -13.57 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,758.32 | ▲ close $7,758.32 vs 09:30 $7,775.12 (session +0.00) | 16:00 close · cash $7,758.32 · no lots left · equity $7,758.32. | — |
 
 ## Not taken
 

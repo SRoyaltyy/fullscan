@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · news🔴
 
-Cash book **-3.28%** ($9,672) · signal-only (no cash/fees) was +4.61%. Starts YES **16/30**. Fills 112 · skips 28 · realized $+7.41.
+Cash book **-2.03%** ($9,797) · signal-only (no cash/fees) was +4.61%. Starts YES **16/30**. Fills 115 · skips 28 · realized $+7.41.
 
 ## How this sleeve decides (like you are 10)
 
@@ -244,6 +244,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-25 09:30 ET | **SHORT** | `HALO` | 21 | $115.36 | $2.15 | — | $14,844.74 | — | news🔴; gate news=bad; list flatten; 🔵; ⚪; ret5=+5.1; leftover $2429.59 | join🟢 sector🟢 gen🟢 news🔴 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-09-25 09:30 ET | **SHORT** | `RSKD` | 309 | $7.85 | $4.12 | — | $17,266.27 | — | news🔴; gate news=bad; list yday_gainer; 🔵; ⚪; ret5=+25.4; leftover $2429.59 | join🟢 sector🟢 gen🟢 news🔴 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-09-25 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $17,266.27 | ▼ close $9,671.71 vs 09:30 $9,718.38 (session -40.40) | 16:00 close · cash $17,266.27 · equity $9,671.71 vs 09:30 $9,718.38 (-46.67; session marks -40.40) · 3 name(s) marked open→close (per-name table). AEHL×299 09:30 $9.05 → close $9.36 -92.69; HALO×21 09:30 $115.36 → close $113.90 +30.66; RSKD×309 09:30 $7.85 → close $7.78 +21.63 | — |
+| 2026-09-28 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $17,266.27 | ▲ 09:30 equity $9,806.66 vs yday $9,671.71 (+134.95) | 09:30 open · cash $17,266.27 (unchanged overnight, no fees) · equity $9,806.66 vs prior close $9,671.71 (+134.95) · 3 name(s) re-marked at the open (per-name table). AEHL×299 yday $9.36 → 09:30 $9.01 +104.65; HALO×21 yday $113.90 → 09:30 $113.34 +11.76; RSKD×309 yday $7.78 → 09:30 $7.72 +18.54 | — |
+| 2026-09-28 09:30 ET | **COVER** | `AEHL` | 299 | $9.01 | $3.86 | $-232.10 | $14,568.42 | ▼ -232.10 after sell → book $9,802.80; vs 09:30 mark -3.86 | dropped from list after 5 sess (min 1) | — |
+| 2026-09-28 09:30 ET | **COVER** | `HALO` | 21 | $113.34 | $2.05 | $+38.22 | $12,186.23 | ▲ +38.22 after sell → book $9,800.75; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-28 09:30 ET | **COVER** | `RSKD` | 309 | $7.72 | $3.99 | $+32.06 | $9,796.76 | ▲ +32.06 after sell → book $9,796.76; vs 09:30 mark -3.99 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,796.76 | ▲ close $9,796.76 vs 09:30 $9,806.66 (session +0.00) | 16:00 close · cash $9,796.76 · no lots left · equity $9,796.76. | — |
 
 ## Not taken
 

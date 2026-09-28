@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ flow_in hold 5, no 🚨
 
-Cash book **-6.34%** ($9,366) · signal-only (no cash/fees) was -2.74%. Starts YES **16/30**. Fills 51 · skips 144 · realized $+404.42.
+Cash book **-14.88%** ($8,512) · signal-only (no cash/fees) was -2.74%. Starts YES **16/30**. Fills 53 · skips 144 · realized $+404.42.
 
 ## How this sleeve decides (like you are 10)
 
@@ -185,6 +185,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-24 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $12.64 | ▲ close $10,499.82 vs 09:30 $10,142.55 (session +357.27) | — | — |
 | 2026-09-25 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $1.06 | ▲ 09:30 equity $9,366.30 vs yday $9,365.75 (+0.55) | 09:30 open · cash $1.06 (unchanged overnight, no fees) · equity $9,366.30 vs prior close $9,365.75 (+0.55) · 3 name(s) re-marked at the open (per-name table). BB×1065 yday $8.73 → 09:30 $8.73 +0.00; CBRL×1 yday $51.84 → 09:30 $52.39 +0.55; PGEN×2 yday $7.70 → 09:30 $7.70 +0.00 | — |
 | 2026-09-25 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1.06 | ▼ close $9,365.72 vs 09:30 $9,366.30 (session -0.58) | 16:00 close · cash $1.06 · equity $9,365.72 vs 09:30 $9,366.30 (-0.58; session marks -0.58) · 3 name(s) marked open→close (per-name table). BB×1065 09:30 $8.73 → close $8.73 -0.00; CBRL×1 09:30 $52.39 → close $51.81 -0.58; PGEN×2 09:30 $7.70 → close $7.70 -0.00 | — |
+| 2026-09-28 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $1.06 | ▼ 09:30 equity $8,524.63 vs yday $9,365.72 (-841.09) | 09:30 open · cash $1.06 (unchanged overnight, no fees) · equity $8,524.63 vs prior close $9,365.72 (-841.09) · 3 name(s) re-marked at the open (per-name table). BB×1065 yday $8.73 → 09:30 $7.94 -841.35; CBRL×1 yday $51.81 → 09:30 $52.25 +0.44; PGEN×2 yday $7.70 → 09:30 $7.61 -0.18 | — |
+| 2026-09-28 09:30 ET | **SELL** | `BB` | 1065 | $7.94 | $13.98 | $-730.62 | $8,443.18 | ▼ -730.62 after sell → book $8,510.65; vs 09:30 mark -13.98 | exit unpriced hold on first bar after 3 sess | — |
+| 2026-09-28 09:30 ET | **SELL** | `PGEN` | 2 | $7.61 | $0.18 | $-0.80 | $8,458.22 | ▼ -0.80 after sell → book $8,510.47; vs 09:30 mark -0.18 | exit unpriced hold on first bar after 5 sess | — |
+| 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,458.22 | ▲ close $8,511.95 vs 09:30 $8,524.63 (session +1.48) | 16:00 close · cash $8,458.22 · equity $8,511.95 vs 09:30 $8,524.63 (-12.68; session marks +1.48) · 1 name(s) marked open→close (per-name table). CBRL×1 09:30 $52.25 → close $53.73 +1.48 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `time` · S-boost `none` · sell at min-hold even if still listed
 
-Cash book **-12.29%** ($8,771) · signal-only (no cash/fees) was -0.80%. Starts YES **0/30**. Fills 284 · skips 108 · realized $-163.09.
+Cash book **-13.72%** ($8,628) · signal-only (no cash/fees) was -0.80%. Starts YES **0/30**. Fills 292 · skips 108 · realized $-163.09.
 
 ## How this sleeve decides (like you are 10)
 
@@ -414,6 +414,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-25 09:30 ET | **BUY** | `TXG` | 13 | $83.76 | $2.03 | — | $1,485.08 | — | sell at min-hold even if still listed; list probable,yday_gainer,ohlc_hot; 🔵; ⚪; ret5=+9.3; leftover $1096.56 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-09-25 09:30 ET | **BUY** | `AEHL` | 121 | $9.05 | $2.35 | — | $387.67 | — | sell at min-hold even if still listed; list probable,yday_gainer; ret5=-27.1; leftover $1096.56 | join🔴 sector🟡 gen🟢 news🔴 digest🟢 ab🔴 peer🔴 heat🔴 vol🔴 buy🟡 |
 | 2026-09-25 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $387.67 | ▲ close $8,771.47 vs 09:30 $8,772.49 (session +16.13) | 16:00 close · cash $387.67 · equity $8,771.47 vs 09:30 $8,772.49 (-1.02; session marks +16.13) · 8 name(s) marked open→close (per-name table). REGN×1 09:30 $803.87 → close $788.04 -15.83; HALO×9 09:30 $115.36 → close $113.90 -13.14; OMER×53 09:30 $20.61 → close $20.08 -28.09; BLFS×28 09:30 $38.51 → close $38.49 -0.56; MRVI×143 09:30 $7.65 → close $7.60 -7.15; WRBY×41 09:30 $26.27 → close $26.71 +18.04; TXG×13 09:30 $83.76 → close $85.71 +25.35; AEHL×121 09:30 $9.05 → close $9.36 +37.51 | — |
+| 2026-09-28 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $387.67 | ▼ 09:30 equity $8,645.30 vs yday $8,771.47 (-126.17) | 09:30 open · cash $387.67 (unchanged overnight, no fees) · equity $8,645.30 vs prior close $8,771.47 (-126.17) · 8 name(s) re-marked at the open (per-name table). AEHL×121 yday $9.36 → 09:30 $9.01 -42.35; BLFS×28 yday $38.49 → 09:30 $38.13 -10.08; HALO×9 yday $113.90 → 09:30 $113.34 -5.04; MRVI×143 yday $7.60 → 09:30 $7.49 -15.73; OMER×53 yday $20.08 → 09:30 $19.83 -13.25; REGN×1 yday $788.04 → 09:30 $771.84 -16.20; TXG×13 yday $85.71 → 09:30 $86.14 +5.59; WRBY×41 yday $26.71 → 09:30 $26.00 -29.11 | — |
+| 2026-09-28 09:30 ET | **SELL** | `AEHL` | 121 | $9.01 | $2.38 | $-9.58 | $1,475.50 | ▼ -9.58 after sell → book $8,642.91; vs 09:30 mark -2.39 | time-stop after 1 sess (min 1) | — |
+| 2026-09-28 09:30 ET | **SELL** | `BLFS` | 28 | $38.13 | $2.09 | $-14.81 | $2,541.04 | ▼ -14.81 after sell → book $8,640.82; vs 09:30 mark -2.09 | time-stop after 1 sess (min 1) | — |
+| 2026-09-28 09:30 ET | **SELL** | `HALO` | 9 | $113.34 | $2.04 | $-22.23 | $3,559.07 | ▼ -22.23 after sell → book $8,638.78; vs 09:30 mark -2.04 | time-stop after 1 sess (min 1) | — |
+| 2026-09-28 09:30 ET | **SELL** | `MRVI` | 143 | $7.49 | $2.45 | $-27.75 | $4,627.68 | ▼ -27.75 after sell → book $8,636.33; vs 09:30 mark -2.45 | time-stop after 1 sess (min 1) | — |
+| 2026-09-28 09:30 ET | **SELL** | `OMER` | 53 | $19.83 | $2.17 | $-45.66 | $5,676.50 | ▼ -45.66 after sell → book $8,634.16; vs 09:30 mark -2.17 | time-stop after 1 sess (min 1) | — |
+| 2026-09-28 09:30 ET | **SELL** | `REGN` | 1 | $771.84 | $2.01 | $-36.04 | $6,446.33 | ▼ -36.04 after sell → book $8,632.15; vs 09:30 mark -2.01 | time-stop after 1 sess (min 1) | — |
+| 2026-09-28 09:30 ET | **SELL** | `TXG` | 13 | $86.14 | $2.05 | $+26.86 | $7,564.10 | ▲ +26.86 after sell → book $8,630.10; vs 09:30 mark -2.05 | time-stop after 1 sess (min 1) | — |
+| 2026-09-28 09:30 ET | **SELL** | `WRBY` | 41 | $26.00 | $2.13 | $-15.32 | $8,627.97 | ▼ -15.32 after sell → book $8,627.97; vs 09:30 mark -2.13 | time-stop after 1 sess (min 1) | — |
+| 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,627.97 | ▲ close $8,627.97 vs 09:30 $8,645.30 (session +0.00) | 16:00 close · cash $8,627.97 · no lots left · equity $8,627.97. | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `ohlc_hot` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · hot list ∩ not exploded
 
-Cash book **-1.85%** ($9,815) · signal-only (no cash/fees) was -11.86%. Starts YES **9/30**. Fills 156 · skips 74 · realized $-1849.08.
+Cash book **-9.39%** ($9,061) · signal-only (no cash/fees) was -11.86%. Starts YES **9/30**. Fills 157 · skips 74 · realized $-1849.08.
 
 ## How this sleeve decides (like you are 10)
 
@@ -49,7 +49,7 @@ Imagine a kid with $10,000 at the 09:30 school bell. They look at names that loo
 Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 09:30 packet + leftover cash + lots on hand decide the ticket. Same-day Change% is outcome only.
 
 - **Universe** `ohlc_hot` — candidate list at 09:30 (flatten wish-list, union, probable, yday gainer, or OHLC hot).
-- **Gate** `ret_5_min=0.0,ret_5_max=10.0,rvol_max=2.2` · **rank** `list order` · **top_n** 8.
+- **Gate** `ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2` · **rank** `list order` · **top_n** 8.
 - **Size** `leftover` splits leftover cash among *new* names only. Rank-weight / top-heavy still cannot invent money.
 - **Sell** `list` after min-hold **1**. We never sell a ticker we do not hold. Early 🚨 / last-red / news🔴 can still exit inside the floor.
 - **Entry:** Research universe (not the live flatten gate). Cash/share/fee rules still apply.
@@ -292,6 +292,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-24 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $5,362.22 | ▼ close $8,157.67 vs 09:30 $8,192.07 (session -23.48) | — | — |
 | 2026-09-25 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10.48 | ▲ 09:30 equity $9,815.44 vs yday $9,815.44 (-0.00) | 09:30 open · cash $10.48 (unchanged overnight, no fees) · equity $9,815.44 vs prior close $9,815.44 (-0.00) · 1 name(s) re-marked at the open (per-name table). NTSK×528 yday $18.57 → 09:30 $18.57 +0.00 | — |
 | 2026-09-25 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10.48 | ▲ close $9,815.44 vs 09:30 $9,815.44 (session +0.00) | 16:00 close · cash $10.48 · equity $9,815.44 vs 09:30 $9,815.44 (-0.00; session marks +0.00) · 1 name(s) marked open→close (per-name table). NTSK×528 09:30 $18.57 → close $18.57 -0.00 | — |
+| 2026-09-28 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10.48 | ▼ 09:30 equity $9,068.21 vs yday $9,815.44 (-747.23) | 09:30 open · cash $10.48 (unchanged overnight, no fees) · equity $9,068.21 vs prior close $9,815.44 (-747.23) · 1 name(s) re-marked at the open (per-name table). NTSK×528 yday $18.57 → 09:30 $17.15 -747.23 | — |
+| 2026-09-28 09:30 ET | **SELL** | `NTSK` | 528 | $17.15 | $6.97 | $-581.49 | $9,061.24 | ▼ -581.49 after sell → book $9,061.24; vs 09:30 mark -6.97 | exit unpriced hold on first bar after 4 sess | — |
+| 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,061.24 | ▲ close $9,061.24 vs 09:30 $9,068.21 (session +0.00) | 16:00 close · cash $9,061.24 · no lots left · equity $9,061.24. | — |
 
 ## Not taken
 

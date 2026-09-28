@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · merged news🟢 and cameras +6 −≤1
 
-Cash book **-26.36%** ($7,364) · signal-only (no cash/fees) was -22.84%. Starts YES **1/30**. Fills 70 · skips 85 · realized $-2058.05.
+Cash book **-22.03%** ($7,797) · signal-only (no cash/fees) was -22.84%. Starts YES **1/30**. Fills 72 · skips 85 · realized $-2058.05.
 
 ## How this sleeve decides (like you are 10)
 
@@ -50,7 +50,7 @@ Imagine a kid with $10,000 at the 09:30 school bell. They look at the mixed morn
 Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 09:30 packet + leftover cash + lots on hand decide the ticket. Same-day Change% is outcome only.
 
 - **Universe** `union` — candidate list at 09:30 (flatten wish-list, union, probable, yday gainer, or OHLC hot).
-- **Gate** `news=good,n_pos_min=6,cam_bad_max=1` · **rank** `cond` · **top_n** 8.
+- **Gate** `cam_bad_max=1,n_pos_min=6,news=good` · **rank** `cond` · **top_n** 8.
 - **Size** `leftover` splits leftover cash among *new* names only. Rank-weight / top-heavy still cannot invent money.
 - **Sell** `list` after min-hold **3**. We never sell a ticker we do not hold. Early 🚨 / last-red / news🔴 can still exit inside the floor.
 - **Entry:** Research universe (not the live flatten gate). Cash/share/fee rules still apply.
@@ -207,6 +207,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-25 09:30 ET | **BUY** | `SECZ` | 110 | $16.21 | $2.32 | — | $1,936.17 | — | merged news🟢 and cameras +6 −≤1; gate news=good,n_pos_min=6,cam_bad_max=1; rank cond; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+85.1; leftover $1786.46 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 judge🟢 ab🟡 heat🟢 vol🟢 buy🟡 |
 | 2026-09-25 09:30 ET | **BUY** | `COST` | 2 | $887.00 | $2.00 | — | $160.18 | — | merged news🟢 and cameras +6 −≤1; gate news=good,n_pos_min=6,cam_bad_max=1; rank cond; list earn_react; 🔵; ret5=+0.3; leftover $1786.46 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
 | 2026-09-25 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $160.18 | ▼ close $7,364.47 vs 09:30 $7,382.64 (session -5.89) | 16:00 close · cash $160.18 · equity $7,364.47 vs 09:30 $7,382.64 (-18.17; session marks -5.89) · 6 name(s) marked open→close (per-name table). PGEN×16 09:30 $7.70 → close $7.70 -0.00; SGRY×8 09:30 $14.20 → close $14.20 -0.00; ZSQR×462 09:30 $3.86 → close $3.78 -36.96; ILMN×6 09:30 $272.16 → close $270.00 -12.96; SECZ×110 09:30 $16.21 → close $15.96 -27.50; COST×2 09:30 $887.00 → close $922.76 +71.53 | — |
+| 2026-09-28 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $160.18 | ▼ 09:30 equity $7,314.85 vs yday $7,364.47 (-49.62) | 09:30 open · cash $160.18 (unchanged overnight, no fees) · equity $7,314.85 vs prior close $7,364.47 (-49.62) · 6 name(s) re-marked at the open (per-name table). COST×2 yday $922.76 → 09:30 $924.88 +4.22; ILMN×6 yday $270.00 → 09:30 $265.95 -24.30; PGEN×16 yday $7.70 → 09:30 $7.61 -1.44; SECZ×110 yday $15.96 → 09:30 $16.00 +4.40; SGRY×8 yday $14.20 → 09:30 $14.18 -0.16; ZSQR×462 yday $3.78 → 09:30 $3.71 -32.34 | — |
+| 2026-09-28 09:30 ET | **SELL** | `PGEN` | 16 | $7.61 | $1.29 | $-8.05 | $280.65 | ▼ -8.05 after sell → book $7,313.56; vs 09:30 mark -1.29 | exit unpriced hold on first bar after 3 sess | — |
+| 2026-09-28 09:30 ET | **SELL** | `SGRY` | 8 | $14.18 | $1.18 | $-14.78 | $392.92 | ▼ -14.78 after sell → book $7,312.39; vs 09:30 mark -1.17 | exit unpriced hold on first bar after 3 sess | — |
+| 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $392.92 | ▲ close $7,796.94 vs 09:30 $7,314.85 (session +484.55) | 16:00 close · cash $392.92 · equity $7,796.94 vs 09:30 $7,314.85 (+482.09; session marks +484.55) · 4 name(s) marked open→close (per-name table). COST×2 09:30 $924.88 → close $922.92 -3.91; ILMN×6 09:30 $265.95 → close $271.90 +35.70; SECZ×110 09:30 $16.00 → close $16.63 +69.30; ZSQR×462 09:30 $3.71 → close $4.54 +383.46 | — |
 
 ## Not taken
 

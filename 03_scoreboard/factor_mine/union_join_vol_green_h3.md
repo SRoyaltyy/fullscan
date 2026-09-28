@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **+3.35%** ($10,335) · signal-only (no cash/fees) was +58.93%. Starts YES **21/30**. Fills 167 · skips 230 · realized $-9.83.
+Cash book **+2.90%** ($10,290) · signal-only (no cash/fees) was +58.93%. Starts YES **21/30**. Fills 177 · skips 230 · realized $-9.83.
 
 ## How this sleeve decides (like you are 10)
 
@@ -50,7 +50,7 @@ Imagine a kid with $10,000 at the 09:30 school bell. They look at the mixed morn
 Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 09:30 packet + leftover cash + lots on hand decide the ticket. Same-day Change% is outcome only.
 
 - **Universe** `union` — candidate list at 09:30 (flatten wish-list, union, probable, yday gainer, or OHLC hot).
-- **Gate** `join=good,vol=good,last_green=True` · **rank** `list order` · **top_n** 8.
+- **Gate** `join=good,last_green=True,vol=good` · **rank** `list order` · **top_n** 8.
 - **Size** `leftover` splits leftover cash among *new* names only. Rank-weight / top-heavy still cannot invent money.
 - **Sell** `list` after min-hold **3**. We never sell a ticker we do not hold. Early 🚨 / last-red / news🔴 can still exit inside the floor.
 - **Entry:** Research universe (not the live flatten gate). Cash/share/fee rules still apply.
@@ -304,6 +304,18 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-25 09:30 ET | **BUY** | `CYPH` | 282 | $4.00 | $3.64 | — | $1,206.70 | — | combo gate; gate join=good,vol=good,last_green=True; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+32.9; leftover $1131.39 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-09-25 09:30 ET | **BUY** | `CDNA` | 18 | $61.33 | $2.04 | — | $100.72 | — | combo gate; gate join=good,vol=good,last_green=True; list yday_gainer,yday_mover,ohlc_hot; 🔵; ret5=+13.1; leftover $1131.39 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-09-25 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $100.72 | ▲ close $10,334.78 vs 09:30 $10,211.32 (session +143.36) | 16:00 close · cash $100.72 · equity $10,334.78 vs 09:30 $10,211.32 (+123.46; session marks +143.36) · 18 name(s) marked open→close (per-name table). FSLY×6 09:30 $26.68 → close $26.68 +0.00; GRPN×8 09:30 $20.89 → close $20.89 -0.00; MAZE×3 09:30 $26.21 → close $26.21 -0.00; NMRA×140 09:30 $0.70 → close $0.70 +0.00; OMER×5 09:30 $20.61 → close $20.08 -2.65; THO×2 09:30 $70.93 → close $70.93 +0.00; TNGX×4 09:30 $24.63 → close $24.63 -0.00; TTAN×1 09:30 $59.98 → close $59.98 -0.00; VKTX×2 09:30 $36.75 → close $36.75 +0.00; XXI×27 09:30 $6.63 → close $6.63 +0.00; WRBY×43 09:30 $26.27 → close $26.71 +18.92; ZSQR×293 09:30 $3.86 → close $3.78 -23.44; TWST×6 09:30 $184.00 → close $182.83 -7.02; SECZ×69 09:30 $16.21 → close $15.96 -17.25; GRAL×9 09:30 $123.50 → close $126.89 +30.51; QMCO×37 09:30 $29.80 → close $31.68 +69.56; CYPH×282 09:30 $4.00 → close $4.12 +32.43; CDNA×18 09:30 $61.33 → close $63.68 +42.30 | — |
+| 2026-09-28 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $100.72 | ▼ 09:30 equity $10,224.32 vs yday $10,334.78 (-110.47) | 09:30 open · cash $100.72 (unchanged overnight, no fees) · equity $10,224.32 vs prior close $10,334.78 (-110.47) · 18 name(s) re-marked at the open (per-name table). CDNA×18 yday $63.68 → 09:30 $62.30 -24.84; CYPH×282 yday $4.12 → 09:30 $4.03 -24.68; FSLY×6 yday $26.68 → 09:30 $24.45 -13.38; GRAL×9 yday $126.89 → 09:30 $128.90 +18.09; GRPN×8 yday $20.89 → 09:30 $21.00 +0.88; MAZE×3 yday $26.21 → 09:30 $25.97 -0.72; NMRA×140 yday $0.70 → 09:30 $0.65 -7.70; OMER×5 yday $20.08 → 09:30 $19.83 -1.25; QMCO×37 yday $31.68 → 09:30 $31.65 -1.11; SECZ×69 yday $15.96 → 09:30 $16.00 +2.76; THO×2 yday $70.93 → 09:30 $71.65 +1.44; TNGX×4 yday $24.63 → 09:30 $24.92 +1.16; TTAN×1 yday $59.98 → 09:30 $57.00 -2.98; TWST×6 yday $182.83 → 09:30 $181.87 -5.76; VKTX×2 yday $36.75 → 09:30 $35.00 -3.50; WRBY×43 yday $26.71 → 09:30 $26.00 -30.53; XXI×27 yday $6.63 → 09:30 $6.71 +2.16; ZSQR×293 yday $3.78 → 09:30 $3.71 -20.51 | — |
+| 2026-09-28 09:30 ET | **SELL** | `FSLY` | 6 | $24.45 | $1.50 | $-24.62 | $245.91 | ▼ -24.62 after sell → book $10,222.81; vs 09:30 mark -1.51 | exit unpriced hold on first bar after 4 sess | — |
+| 2026-09-28 09:30 ET | **SELL** | `GRPN` | 8 | $21.00 | $1.72 | $-11.02 | $412.19 | ▼ -11.02 after sell → book $10,221.09; vs 09:30 mark -1.72 | exit unpriced hold on first bar after 4 sess | — |
+| 2026-09-28 09:30 ET | **SELL** | `MAZE` | 3 | $25.97 | $0.81 | $-8.66 | $489.29 | ▼ -8.66 after sell → book $10,220.28; vs 09:30 mark -0.81 | exit unpriced hold on first bar after 3 sess | — |
+| 2026-09-28 09:30 ET | **SELL** | `NMRA` | 140 | $0.65 | $1.36 | $-19.66 | $578.65 | ▼ -19.66 after sell → book $10,218.92; vs 09:30 mark -1.36 | exit unpriced hold on first bar after 3 sess | — |
+| 2026-09-28 09:30 ET | **SELL** | `OMER` | 5 | $19.83 | $1.03 | $-6.17 | $676.78 | ▼ -6.17 after sell → book $10,217.89; vs 09:30 mark -1.03 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-28 09:30 ET | **SELL** | `THO` | 2 | $71.65 | $1.46 | $-4.68 | $818.62 | ▼ -4.68 after sell → book $10,216.43; vs 09:30 mark -1.46 | exit unpriced hold on first bar after 4 sess | — |
+| 2026-09-28 09:30 ET | **SELL** | `TNGX` | 4 | $24.92 | $1.03 | $-3.98 | $917.27 | ▼ -3.98 after sell → book $10,215.40; vs 09:30 mark -1.03 | exit unpriced hold on first bar after 3 sess | — |
+| 2026-09-28 09:30 ET | **SELL** | `TTAN` | 1 | $57.00 | $0.59 | $-6.38 | $973.68 | ▼ -6.38 after sell → book $10,214.81; vs 09:30 mark -0.59 | exit unpriced hold on first bar after 3 sess | — |
+| 2026-09-28 09:30 ET | **SELL** | `VKTX` | 2 | $35.00 | $0.73 | $-15.09 | $1,042.95 | ▼ -15.09 after sell → book $10,214.08; vs 09:30 mark -0.73 | exit unpriced hold on first bar after 3 sess | — |
+| 2026-09-28 09:30 ET | **SELL** | `XXI` | 27 | $6.71 | $1.91 | $-0.53 | $1,222.21 | ▼ -0.53 after sell → book $10,212.17; vs 09:30 mark -1.91 | exit unpriced hold on first bar after 4 sess | — |
+| 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1,222.21 | ▲ close $10,289.57 vs 09:30 $10,224.32 (session +77.40) | 16:00 close · cash $1,222.21 · equity $10,289.57 vs 09:30 $10,224.32 (+65.25; session marks +77.40) · 8 name(s) marked open→close (per-name table). CDNA×18 09:30 $62.30 → close $64.60 +41.40; CYPH×282 09:30 $4.03 → close $3.31 -203.74; GRAL×9 09:30 $128.90 → close $132.63 +33.57; QMCO×37 09:30 $31.65 → close $31.40 -9.25; SECZ×69 09:30 $16.00 → close $16.63 +43.47; TWST×6 09:30 $181.87 → close $179.60 -13.62; WRBY×43 09:30 $26.00 → close $24.66 -57.62; ZSQR×293 09:30 $3.71 → close $4.54 +243.19 | — |
 
 ## Not taken
 

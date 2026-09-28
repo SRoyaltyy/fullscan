@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared union_news_pack_h1/short_news_r_h3 w=0.5,0.5 net=priority
 
-Cash book **-14.36%** ($8,564) · signal-only (no cash/fees) was —. Starts YES **2/30**. Fills 176 · skips 146 · realized $+903.47.
+Cash book **-12.31%** ($8,769) · signal-only (no cash/fees) was —. Starts YES **2/30**. Fills 182 · skips 146 · realized $+903.47.
 
 ## How this sleeve decides (like you are 10)
 
@@ -55,7 +55,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $13,933.45.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $12,804.06.
 
 ## Every lot, every session (09:30 mark and same-day change)
 
@@ -311,6 +311,14 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-25 09:30 ET | **BUY** | `COST` | 10 | $887.00 | $2.02 | — | $9,827.04 | — | morning packet news🟢 only (not the merged box); gate news_box=good; rank cond; list earn_react; 🔵; ret5=+0.3; combo leftover $9349.53; owner union_news_pack_h1 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
 | 2026-09-25 09:30 ET | **SHORT** | `RSKD` | 524 | $7.85 | $6.99 | — | $13,933.45 | — | news🔴; gate news=bad; list yday_gainer; 🔵; ⚪; ret5=+25.4; combo leftover $4117.86; owner short_news_r_h3 | join🟢 sector🟢 gen🟢 news🔴 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-09-25 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $13,933.45 | ▲ close $8,564.17 vs 09:30 $8,237.73 (session +335.45) | 16:00 close · cash $13,933.45 · equity $8,564.17 vs 09:30 $8,237.73 (+326.44; session marks +335.45) · 7 name(s) marked open→close (per-name table). AEHL×270 09:30 $9.05 → close $9.36 -83.70; BAND×35 09:30 $61.83 → close $61.83 -0.00; HALO×17 09:30 $115.36 → close $113.90 +24.82; PAYX×18 09:30 $101.59 → close $101.59 +0.00; USFD×22 09:30 $93.82 → close $93.82 +0.00; COST×10 09:30 $887.00 → close $922.76 +357.65; RSKD×524 09:30 $7.85 → close $7.78 +36.68 | — |
+| 2026-09-28 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $13,933.45 | ▲ 09:30 equity $8,772.60 vs yday $8,564.17 (+208.43) | 09:30 open · cash $13,933.45 (unchanged overnight, no fees) · equity $8,772.60 vs prior close $8,564.17 (+208.43) | — |
+| 2026-09-28 09:30 ET | **COVER** | `AEHL` | 270 | $9.01 | $3.48 | $-209.59 | $11,497.27 | ▼ -209.59 after sell → book $8,769.12; vs 09:30 mark -3.48 | short_news_r_h3: dropped from list after 5 sess (min 3) | — |
+| 2026-09-28 09:30 ET | **COVER** | `BAND` | 35 | $61.64 | $2.10 | $-131.32 | $9,337.77 | ▼ -131.32 after sell → book $8,767.02; vs 09:30 mark -2.10 | short_news_r_h3: dropped from list after 3 sess (min 3) | — |
+| 2026-09-28 09:30 ET | **SELL** | `COST` | 10 | $924.88 | $2.10 | $+374.63 | $18,584.42 | ▲ +374.63 after sell → book $8,764.92; vs 09:30 mark -2.10 | union_news_pack_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-09-28 09:30 ET | **COVER** | `HALO` | 17 | $113.34 | $2.04 | $+55.51 | $16,655.60 | ▲ +55.51 after sell → book $8,762.88; vs 09:30 mark -2.04 | short_news_r_h3: dropped from list after 3 sess (min 3) | — |
+| 2026-09-28 09:30 ET | **COVER** | `PAYX` | 18 | $100.08 | $2.04 | $+277.17 | $14,852.11 | ▲ +277.17 after sell → book $8,760.83; vs 09:30 mark -2.05 | short_news_r_h3: dropped from list after 4 sess (min 3) | — |
+| 2026-09-28 09:30 ET | **COVER** | `USFD` | 22 | $93.00 | $2.06 | $+19.56 | $12,804.06 | ▲ +19.56 after sell → book $8,758.78; vs 09:30 mark -2.05 | short_news_r_h3: dropped from list after 4 sess (min 3) | — |
+| 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $12,804.06 | ▲ close $8,769.26 vs 09:30 $8,772.60 (session +10.48) | 16:00 close · cash $12,804.06 · equity $8,769.26 vs 09:30 $8,772.60 (-3.34; session marks +10.48) · 1 name(s) marked open→close (per-name table). RSKD×524 09:30 $7.72 → close $7.70 +10.48 | — |
 
 ## Not taken
 

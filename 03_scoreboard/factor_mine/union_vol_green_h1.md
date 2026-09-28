@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-18.37%** ($8,163) · signal-only (no cash/fees) was -4.91%. Starts YES **5/30**. Fills 240 · skips 78 · realized $-2.02.
+Cash book **-20.34%** ($7,966) · signal-only (no cash/fees) was -4.91%. Starts YES **5/30**. Fills 248 · skips 78 · realized $-2.02.
 
 ## How this sleeve decides (like you are 10)
 
@@ -49,7 +49,7 @@ Imagine a kid with $10,000 at the 09:30 school bell. They look at the mixed morn
 Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 09:30 packet + leftover cash + lots on hand decide the ticket. Same-day Change% is outcome only.
 
 - **Universe** `union` — candidate list at 09:30 (flatten wish-list, union, probable, yday gainer, or OHLC hot).
-- **Gate** `vol=good,last_green=True` · **rank** `list order` · **top_n** 8.
+- **Gate** `last_green=True,vol=good` · **rank** `list order` · **top_n** 8.
 - **Size** `leftover` splits leftover cash among *new* names only. Rank-weight / top-heavy still cannot invent money.
 - **Sell** `list` after min-hold **1**. We never sell a ticker we do not hold. Early 🚨 / last-red / news🔴 can still exit inside the floor.
 - **Entry:** Research universe (not the live flatten gate). Cash/share/fee rules still apply.
@@ -376,6 +376,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-25 09:30 ET | **BUY** | `TWST` | 5 | $184.00 | $2.00 | — | $1,183.47 | — | combo gate; gate vol=good,last_green=True; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+18.3; leftover $1032.60 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-09-25 09:30 ET | **BUY** | `SECZ` | 63 | $16.21 | $2.18 | — | $160.06 | — | combo gate; gate vol=good,last_green=True; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+85.1; leftover $1032.60 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 judge🟢 ab🟡 heat🟢 vol🟢 buy🟡 |
 | 2026-09-25 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $160.06 | ▼ close $8,162.73 vs 09:30 $8,260.77 (session -79.32) | 16:00 close · cash $160.06 · equity $8,162.73 vs 09:30 $8,260.77 (-98.04; session marks -79.32) · 8 name(s) marked open→close (per-name table). WRBY×39 09:30 $26.27 → close $26.71 +17.16; PL×57 09:30 $17.91 → close $17.43 -27.36; TEM×12 09:30 $83.69 → close $85.01 +15.78; GLND×170 09:30 $6.06 → close $5.54 -88.40; ZSQR×267 09:30 $3.86 → close $3.78 -21.36; DNA×101 09:30 $10.20 → close $10.66 +46.46; TWST×5 09:30 $184.00 → close $182.83 -5.85; SECZ×63 09:30 $16.21 → close $15.96 -15.75 | — |
+| 2026-09-28 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $160.06 | ▼ 09:30 equity $7,984.85 vs yday $8,162.73 (-177.88) | 09:30 open · cash $160.06 (unchanged overnight, no fees) · equity $7,984.85 vs prior close $8,162.73 (-177.88) · 8 name(s) re-marked at the open (per-name table). DNA×101 yday $10.66 → 09:30 $10.38 -28.79; GLND×170 yday $5.54 → 09:30 $5.14 -68.34; PL×57 yday $17.43 → 09:30 $17.17 -14.82; SECZ×63 yday $15.96 → 09:30 $16.00 +2.52; TEM×12 yday $85.01 → 09:30 $83.57 -17.28; TWST×5 yday $182.83 → 09:30 $181.87 -4.80; WRBY×39 yday $26.71 → 09:30 $26.00 -27.69; ZSQR×267 yday $3.78 → 09:30 $3.71 -18.69 | — |
+| 2026-09-28 09:30 ET | **SELL** | `DNA` | 101 | $10.38 | $2.32 | $+13.06 | $1,205.62 | ▲ +13.06 after sell → book $7,982.53; vs 09:30 mark -2.32 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-28 09:30 ET | **SELL** | `GLND` | 170 | $5.14 | $2.54 | $-161.78 | $2,076.54 | ▼ -161.78 after sell → book $7,979.99; vs 09:30 mark -2.54 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-28 09:30 ET | **SELL** | `PL` | 57 | $17.17 | $2.18 | $-46.52 | $3,053.05 | ▼ -46.52 after sell → book $7,977.81; vs 09:30 mark -2.18 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-28 09:30 ET | **SELL** | `SECZ` | 63 | $16.00 | $2.20 | $-17.61 | $4,058.85 | ▼ -17.61 after sell → book $7,975.61; vs 09:30 mark -2.20 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-28 09:30 ET | **SELL** | `TEM` | 12 | $83.57 | $2.05 | $-5.57 | $5,059.64 | ▼ -5.57 after sell → book $7,973.56; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 digest🟢 judge🟢 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-09-28 09:30 ET | **SELL** | `TWST` | 5 | $181.87 | $2.02 | $-14.68 | $5,966.97 | ▼ -14.68 after sell → book $7,971.54; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-28 09:30 ET | **SELL** | `WRBY` | 39 | $26.00 | $2.13 | $-14.76 | $6,978.84 | ▼ -14.76 after sell → book $7,969.41; vs 09:30 mark -2.13 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-28 09:30 ET | **SELL** | `ZSQR` | 267 | $3.71 | $3.50 | $-46.99 | $7,965.91 | ▼ -46.99 after sell → book $7,965.91; vs 09:30 mark -3.50 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,965.91 | ▲ close $7,965.91 vs 09:30 $7,984.85 (session +0.00) | 16:00 close · cash $7,965.91 · no lots left · equity $7,965.91. | — |
 
 ## Not taken
 

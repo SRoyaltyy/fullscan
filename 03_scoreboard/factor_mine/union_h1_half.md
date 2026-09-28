@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `half` · sell `list` · S-boost `none` · deploy half leftover
 
-Cash book **-7.35%** ($9,265) · signal-only (no cash/fees) was -0.80%. Starts YES **0/30**. Fills 247 · skips 107 · realized $-342.82.
+Cash book **-8.08%** ($9,192) · signal-only (no cash/fees) was -0.80%. Starts YES **0/30**. Fills 254 · skips 107 · realized $-342.82.
 
 ## How this sleeve decides (like you are 10)
 
@@ -377,6 +377,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-25 09:30 ET | **BUY** | `TXG` | 6 | $83.76 | $2.01 | — | $5,867.03 | — | deploy half leftover; list probable,yday_gainer,ohlc_hot; 🔵; ⚪; ret5=+9.3; leftover $579.08 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-09-25 09:30 ET | **BUY** | `AEHL` | 63 | $9.05 | $2.18 | — | $5,294.70 | — | deploy half leftover; list probable,yday_gainer; ret5=-27.1; leftover $579.08 | join🔴 sector🟡 gen🟢 news🔴 digest🟢 ab🔴 peer🔴 heat🔴 vol🔴 buy🟡 |
 | 2026-09-25 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $5,294.70 | ▲ close $9,265.35 vs 09:30 $9,265.20 (session +14.72) | 16:00 close · cash $5,294.70 · equity $9,265.35 vs 09:30 $9,265.20 (+0.15; session marks +14.72) · 7 name(s) marked open→close (per-name table). HALO×5 09:30 $115.36 → close $113.90 -7.30; OMER×28 09:30 $20.61 → close $20.08 -14.84; BLFS×15 09:30 $38.51 → close $38.49 -0.30; MRVI×75 09:30 $7.65 → close $7.60 -3.75; WRBY×22 09:30 $26.27 → close $26.71 +9.68; TXG×6 09:30 $83.76 → close $85.71 +11.70; AEHL×63 09:30 $9.05 → close $9.36 +19.53 | — |
+| 2026-09-28 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $5,294.70 | ▼ 09:30 equity $9,206.81 vs yday $9,265.35 (-58.54) | 09:30 open · cash $5,294.70 (unchanged overnight, no fees) · equity $9,206.81 vs prior close $9,265.35 (-58.54) · 7 name(s) re-marked at the open (per-name table). AEHL×63 yday $9.36 → 09:30 $9.01 -22.05; BLFS×15 yday $38.49 → 09:30 $38.13 -5.40; HALO×5 yday $113.90 → 09:30 $113.34 -2.80; MRVI×75 yday $7.60 → 09:30 $7.49 -8.25; OMER×28 yday $20.08 → 09:30 $19.83 -7.00; TXG×6 yday $85.71 → 09:30 $86.14 +2.58; WRBY×22 yday $26.71 → 09:30 $26.00 -15.62 | — |
+| 2026-09-28 09:30 ET | **SELL** | `AEHL` | 63 | $9.01 | $2.20 | $-6.90 | $5,860.13 | ▼ -6.90 after sell → book $9,204.61; vs 09:30 mark -2.20 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-28 09:30 ET | **SELL** | `BLFS` | 15 | $38.13 | $2.06 | $-9.79 | $6,430.03 | ▼ -9.79 after sell → book $9,202.56; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-28 09:30 ET | **SELL** | `HALO` | 5 | $113.34 | $2.02 | $-14.13 | $6,994.70 | ▼ -14.13 after sell → book $9,200.53; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-28 09:30 ET | **SELL** | `MRVI` | 75 | $7.49 | $2.24 | $-16.45 | $7,554.21 | ▼ -16.45 after sell → book $9,198.29; vs 09:30 mark -2.24 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-28 09:30 ET | **SELL** | `OMER` | 28 | $19.83 | $2.09 | $-26.01 | $8,107.36 | ▼ -26.01 after sell → book $9,196.20; vs 09:30 mark -2.09 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-28 09:30 ET | **SELL** | `TXG` | 6 | $86.14 | $2.03 | $+10.24 | $8,622.17 | ▲ +10.24 after sell → book $9,194.17; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-28 09:30 ET | **SELL** | `WRBY` | 22 | $26.00 | $2.08 | $-10.07 | $9,192.10 | ▼ -10.07 after sell → book $9,192.10; vs 09:30 mark -2.07 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,192.10 | ▲ close $9,192.10 vs 09:30 $9,206.81 (session +0.00) | 16:00 close · cash $9,192.10 · no lots left · equity $9,192.10. | — |
 
 ## Not taken
 

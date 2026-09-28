@@ -154,6 +154,11 @@
       "bytes": 175242,
       "sha256": "d2fcadaa9c1ec0555d9d0cca81e04f36bef30ad5bb20ba19295e48cbba0bac3b",
       "written_at": "2026-09-25T18:28:33.095257-04:00"
+    },
+    "2026-09-28": {
+      "bytes": 175539,
+      "sha256": "18dc9de3fd96f516750b803a065639419d481ca38b4d7b6669af5be9a0880d5d",
+      "written_at": "2026-09-28T17:56:45.119423-04:00"
     }
   },
   "excel_signals": {
@@ -1347,6 +1352,12 @@
       "encoding": "gzip",
       "sha256": "7fe6355b0eee17a7c1e308e1b8bc7bb69c3e09ecd4ad8933fd55876f824445b7",
       "written_at": "2026-09-25T18:29:13.250474-04:00"
+    },
+    "2026-09-28": {
+      "bytes": 10569395,
+      "encoding": "gzip",
+      "sha256": "548bc8fdaa8bcd457307f5ced4da790c217ad28931c388733c9458a61fa12eec",
+      "written_at": "2026-09-28T17:57:18.208269-04:00"
     }
   },
   "lineups": {
@@ -1504,6 +1515,11 @@
       "bytes": 811,
       "sha256": "bf7b32721af392489183b67498e2273cb079a312f861f6eb4dad0f7b39fa2edc",
       "written_at": "2026-09-25T18:29:32.635199-04:00"
+    },
+    "2026-09-28": {
+      "bytes": 929,
+      "sha256": "4260f7df033cba527f2657d0fc5ca346af32b55e051b75c12a95ebdf7631613a",
+      "written_at": "2026-09-28T17:57:35.234932-04:00"
     }
   },
   "prices": {
@@ -1511,6 +1527,11 @@
       "bytes": 516525,
       "sha256": "46e906232d3da2924684fa5c6f06fbe32a1c27d752d69823b04b37acc3a71b60",
       "written_at": "2026-09-25T18:28:33.111302-04:00"
+    },
+    "2026-09-28": {
+      "bytes": 519818,
+      "sha256": "a15ea480ff7d513610ecd68a64fe908032e2dc413d974bff85355b89541ee3c3",
+      "written_at": "2026-09-28T17:56:45.134482-04:00"
     }
   },
   "recipe_rules": {
@@ -6740,6 +6761,29 @@
         "WTS"
       ],
       "written_at": "2026-09-25T18:28:36.304310-04:00"
+    },
+    "2026-09-28": {
+      "bytes": 278896,
+      "dropped_missing_bars": [
+        "HYAC-U",
+        "TBCVU",
+        "UNP",
+        "UROY",
+        "UTZ",
+        "VELO",
+        "VFC",
+        "VIR",
+        "VIV",
+        "VLTO",
+        "VNOM",
+        "VREX",
+        "VRRM"
+      ],
+      "heat_vintage": "2026-09-28",
+      "n_rows": 62,
+      "sha256": "1b688c53e10f10b124300b00aa782167f7a7e76d93d16925d99ae137ca4ab7b1",
+      "unpriced_held": [],
+      "written_at": "2026-09-28T17:56:49.552124-04:00"
     }
   },
   "version": 1

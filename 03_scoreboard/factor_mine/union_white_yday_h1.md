@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · union looker: 0 red cameras + yesterday up, rank +G−R
 
-Cash book **-12.73%** ($8,727) · signal-only (no cash/fees) was +1.95%. Starts YES **3/30**. Fills 184 · skips 2 · realized $-327.39.
+Cash book **-13.88%** ($8,612) · signal-only (no cash/fees) was +1.95%. Starts YES **3/30**. Fills 192 · skips 2 · realized $-327.39.
 
 ## How this sleeve decides (like you are 10)
 
@@ -49,7 +49,7 @@ Imagine a kid with $10,000 at the 09:30 school bell. They look at the mixed morn
 Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 09:30 packet + leftover cash + lots on hand decide the ticket. Same-day Change% is outcome only.
 
 - **Universe** `union` — candidate list at 09:30 (flatten wish-list, union, probable, yday gainer, or OHLC hot).
-- **Gate** `zero_red=True,yday_up=True` · **rank** `cond` · **top_n** 8.
+- **Gate** `yday_up=True,zero_red=True` · **rank** `cond` · **top_n** 8.
 - **Size** `leftover` splits leftover cash among *new* names only. Rank-weight / top-heavy still cannot invent money.
 - **Sell** `list` after min-hold **1**. We never sell a ticker we do not hold. Early 🚨 / last-red / news🔴 can still exit inside the floor.
 - **Entry:** Research universe (not the live flatten gate). Cash/share/fee rules still apply.
@@ -320,6 +320,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-25 09:30 ET | **BUY** | `PACB` | 691 | $1.57 | $8.91 | — | $1,323.24 | — | union looker: 0 red cameras + yesterday up, rank +G−R; gate zero_red=True,yday_up=True; rank cond; list yday_gainer,yday_mover,ohlc_hot; 🔵; ⚪; ret5=+14.5; leftover $1085.60 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-09-25 09:30 ET | **BUY** | `PRGO` | 73 | $14.81 | $2.21 | — | $239.90 | — | union looker: 0 red cameras + yesterday up, rank +G−R; gate zero_red=True,yday_up=True; rank cond; list ohlc_hot; 🔵; ⚪; ret5=+8.9; leftover $1085.60 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-09-25 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $239.90 | ▲ close $8,726.57 vs 09:30 $8,684.76 (session +67.20) | 16:00 close · cash $239.90 · equity $8,726.57 vs 09:30 $8,684.76 (+41.81; session marks +67.20) · 8 name(s) marked open→close (per-name table). RSKD×138 09:30 $7.85 → close $7.78 -9.66; CDNS×3 09:30 $324.97 → close $326.13 +3.48; CYPH×271 09:30 $4.00 → close $4.12 +31.17; DUOT×113 09:30 $9.59 → close $9.14 -50.85; GRAL×8 09:30 $123.50 → close $126.89 +27.12; HALO×9 09:30 $115.36 → close $113.90 -13.14; PACB×691 09:30 $1.57 → close $1.62 +34.55; PRGO×73 09:30 $14.81 → close $15.42 +44.53 | — |
+| 2026-09-28 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $239.90 | ▼ 09:30 equity $8,638.10 vs yday $8,726.57 (-88.47) | 09:30 open · cash $239.90 (unchanged overnight, no fees) · equity $8,638.10 vs prior close $8,726.57 (-88.47) · 8 name(s) re-marked at the open (per-name table). CDNS×3 yday $326.13 → 09:30 $318.99 -21.42; CYPH×271 yday $4.12 → 09:30 $4.03 -23.71; DUOT×113 yday $9.14 → 09:30 $8.99 -16.95; GRAL×8 yday $126.89 → 09:30 $128.90 +16.08; HALO×9 yday $113.90 → 09:30 $113.34 -5.04; PACB×691 yday $1.62 → 09:30 $1.60 -13.82; PRGO×73 yday $15.42 → 09:30 $15.21 -15.33; RSKD×138 yday $7.78 → 09:30 $7.72 -8.28 | — |
+| 2026-09-28 09:30 ET | **SELL** | `CDNS` | 3 | $318.99 | $2.02 | $-21.96 | $1,194.85 | ▼ -21.96 after sell → book $8,636.08; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | join🟢 sector🟢 gen🔴 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-28 09:30 ET | **SELL** | `CYPH` | 271 | $4.03 | $3.55 | $+0.41 | $2,284.11 | ▲ +0.41 after sell → book $8,632.53; vs 09:30 mark -3.55 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-28 09:30 ET | **SELL** | `DUOT` | 113 | $8.99 | $2.36 | $-72.49 | $3,297.62 | ▼ -72.49 after sell → book $8,630.17; vs 09:30 mark -2.36 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-28 09:30 ET | **SELL** | `GRAL` | 8 | $128.90 | $2.03 | $+39.15 | $4,326.79 | ▲ +39.15 after sell → book $8,628.14; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-28 09:30 ET | **SELL** | `HALO` | 9 | $113.34 | $2.04 | $-22.23 | $5,344.81 | ▼ -22.23 after sell → book $8,626.10; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-28 09:30 ET | **SELL** | `PACB` | 691 | $1.60 | $9.04 | $+2.78 | $6,441.37 | ▲ +2.78 after sell → book $8,617.06; vs 09:30 mark -9.04 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-28 09:30 ET | **SELL** | `PRGO` | 73 | $15.21 | $2.23 | $+24.76 | $7,549.47 | ▲ +24.76 after sell → book $8,614.83; vs 09:30 mark -2.23 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-28 09:30 ET | **SELL** | `RSKD` | 138 | $7.72 | $2.44 | $-22.78 | $8,612.39 | ▼ -22.78 after sell → book $8,612.39; vs 09:30 mark -2.44 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,612.39 | ▲ close $8,612.39 vs 09:30 $8,638.10 (session +0.00) | 16:00 close · cash $8,612.39 · no lots left · equity $8,612.39. | — |
 
 ## Not taken
 

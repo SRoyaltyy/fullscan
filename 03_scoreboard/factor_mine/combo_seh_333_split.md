@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · split short_news_r_h3/union_e_fresh_h3/union_hot_n4_h1 w=0.33,0.33,0.33 net=priority
 
-Cash book **+1.93%** ($10,193) · signal-only (no cash/fees) was —. Starts YES **29/30**. Fills 342 · skips 367 · realized $+2181.46.
+Cash book **+0.81%** ($10,081) · signal-only (no cash/fees) was —. Starts YES **29/30**. Fills 356 · skips 367 · realized $+2181.46.
 
 ## How this sleeve decides (like you are 10)
 
@@ -56,7 +56,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $8,482.19.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $11,567.55.
 
 ## Every lot, every session (09:30 mark and same-day change)
 
@@ -598,6 +598,22 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-25 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,303.36 | ▼ close $3,027.89 vs 09:30 $3,038.96 (session -8.42) | 16:00 close · cash $8,303.36 · equity $3,027.89 vs 09:30 $3,038.96 (-11.07; session marks -8.42) · 6 name(s) marked open→close (per-name table). AEHL×99 09:30 $9.05 → close $9.36 -30.69; BAND×13 09:30 $61.83 → close $61.83 -0.00; HALO×6 09:30 $115.36 → close $113.90 +8.76; PAYX×6 09:30 $101.59 → close $101.59 +0.00; USFD×8 09:30 $93.82 → close $93.82 +0.00; RSKD×193 09:30 $7.85 → close $7.78 +13.51 | — |
 | 2026-09-25 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $6,790.96 | ▼ 09:30 equity $3,038.96 vs yday $3,048.71 (-9.75) | 09:30 open · cash $6,790.96 (unchanged overnight, no fees) · equity $3,038.96 vs prior close $3,048.71 (-9.75) · 5 name(s) re-marked at the open (per-name table). AEHL×99 yday $8.96 → 09:30 $9.05 -8.91; BAND×13 yday $61.83 → 09:30 $61.83 -0.00; HALO×6 yday $115.22 → 09:30 $115.36 -0.84; PAYX×6 yday $101.59 → 09:30 $101.59 -0.00; USFD×8 yday $93.82 → 09:30 $93.82 -0.00 | — |
 | 2026-09-25 09:30 ET | **SHORT** | `RSKD` | 193 | $7.85 | $2.65 | — | $8,303.36 | — | news🔴; gate news=bad; list yday_gainer; 🔵; ⚪; ret5=+25.4; leftover $1519.48 | join🟢 sector🟢 gen🟢 news🔴 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $4,575.18 | ▲ close $3,089.08 vs 09:30 $3,095.57 (session +3.86) | 16:00 close · cash $4,575.18 · equity $3,089.08 vs 09:30 $3,095.57 (-6.49; session marks +3.86) · 1 name(s) marked open→close (per-name table). RSKD×193 09:30 $7.72 → close $7.70 +3.86 | — |
+| 2026-09-28 09:30 ET | **COVER** | `AEHL` | 99 | $9.01 | $2.29 | $-78.87 | $7,409.08 | ▼ -78.87 after sell → book $3,093.28; vs 09:30 mark -2.29 | dropped from list after 5 sess (min 3) | — |
+| 2026-09-28 09:30 ET | **COVER** | `BAND` | 13 | $61.64 | $2.03 | $-51.29 | $6,605.73 | ▼ -51.29 after sell → book $3,091.25; vs 09:30 mark -2.03 | exit unpriced hold on first bar after 3 sess | — |
+| 2026-09-28 09:30 ET | **COVER** | `HALO` | 6 | $113.34 | $2.01 | $+17.00 | $5,923.69 | ▲ +17.00 after sell → book $3,089.25; vs 09:30 mark -2.00 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-28 09:30 ET | **COVER** | `PAYX` | 6 | $100.08 | $2.01 | $+89.72 | $5,321.20 | ▲ +89.72 after sell → book $3,087.24; vs 09:30 mark -2.01 | exit unpriced hold on first bar after 4 sess | — |
+| 2026-09-28 09:30 ET | **COVER** | `USFD` | 8 | $93.00 | $2.01 | $+4.57 | $4,575.18 | ▲ +4.57 after sell → book $3,085.22; vs 09:30 mark -2.02 | exit unpriced hold on first bar after 4 sess | — |
+| 2026-09-28 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,303.36 | ▲ 09:30 equity $3,095.57 vs yday $3,027.89 (+67.68) | 09:30 open · cash $8,303.36 (unchanged overnight, no fees) · equity $3,095.57 vs prior close $3,027.89 (+67.68) · 6 name(s) re-marked at the open (per-name table). AEHL×99 yday $9.36 → 09:30 $9.01 +34.65; BAND×13 yday $61.83 → 09:30 $61.64 +2.47; HALO×6 yday $113.90 → 09:30 $113.34 +3.36; PAYX×6 yday $101.59 → 09:30 $100.08 +9.06; RSKD×193 yday $7.78 → 09:30 $7.72 +11.58; USFD×8 yday $93.82 → 09:30 $93.00 +6.56 | — |
+| 2026-09-28 09:30 ET | **SELL** | `ABVX` | 7 | $91.50 | $2.03 | $-82.72 | $785.66 | ▼ -82.72 after sell → book $2,971.60; vs 09:30 mark -2.03 | exit unpriced hold on first bar after 4 sess | — |
+| 2026-09-28 09:30 ET | **SELL** | `ANAB` | 14 | $51.00 | $2.05 | $-61.06 | $1,497.61 | ▼ -61.06 after sell → book $2,969.55; vs 09:30 mark -2.05 | exit unpriced hold on first bar after 4 sess | — |
+| 2026-09-28 09:30 ET | **SELL** | `GLND` | 321 | $5.14 | $4.21 | $+774.25 | $1,676.73 | ▲ +774.25 after sell → book $4,035.28; vs 09:30 mark -4.21 | dropped from list after 3 sess (min 1) | — |
+| 2026-09-28 09:30 ET | **SELL** | `MLKN` | 38 | $19.88 | $2.12 | $-33.87 | $2,250.92 | ▼ -33.87 after sell → book $2,967.42; vs 09:30 mark -2.13 | exit unpriced hold on first bar after 4 sess | — |
+| 2026-09-28 09:30 ET | **SELL** | `SECZ` | 32 | $16.00 | $2.11 | $-10.91 | $2,186.62 | ▼ -10.91 after sell → book $4,033.17; vs 09:30 mark -2.11 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-28 09:30 ET | **SELL** | `THO` | 10 | $71.65 | $2.04 | $-12.86 | $2,965.38 | ▼ -12.86 after sell → book $2,965.38; vs 09:30 mark -2.04 | exit unpriced hold on first bar after 4 sess | — |
+| 2026-09-28 09:30 ET | **SELL** | `TJGC` | 17 | $26.50 | $2.06 | $-59.52 | $2,635.06 | ▼ -59.52 after sell → book $4,031.11; vs 09:30 mark -2.06 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-28 09:30 ET | **SELL** | `USDE` | 33 | $16.85 | $2.11 | $+37.68 | $3,189.00 | ▲ +37.68 after sell → book $4,029.00; vs 09:30 mark -2.11 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🔴 news🟡 digest🟢 judge🔴 ab🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-09-28 09:30 ET | **SELL** | `VICR` | 3 | $280.00 | $2.02 | $+36.48 | $4,026.99 | ▲ +36.48 after sell → book $4,026.99; vs 09:30 mark -2.01 | exit unpriced hold on first bar after 3 sess | — |
 
 ## Not taken
 

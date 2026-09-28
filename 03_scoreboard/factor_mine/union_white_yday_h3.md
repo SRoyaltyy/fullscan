@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · union looker hold 3: 0 red + yesterday up
 
-Cash book **-11.16%** ($8,884) · signal-only (no cash/fees) was -11.78%. Starts YES **2/30**. Fills 120 · skips 140 · realized $-1313.49.
+Cash book **-12.99%** ($8,701) · signal-only (no cash/fees) was -11.78%. Starts YES **2/30**. Fills 126 · skips 140 · realized $-1313.49.
 
 ## How this sleeve decides (like you are 10)
 
@@ -49,7 +49,7 @@ Imagine a kid with $10,000 at the 09:30 school bell. They look at the mixed morn
 Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 09:30 packet + leftover cash + lots on hand decide the ticket. Same-day Change% is outcome only.
 
 - **Universe** `union` — candidate list at 09:30 (flatten wish-list, union, probable, yday gainer, or OHLC hot).
-- **Gate** `zero_red=True,yday_up=True` · **rank** `cond` · **top_n** 8.
+- **Gate** `yday_up=True,zero_red=True` · **rank** `cond` · **top_n** 8.
 - **Size** `leftover` splits leftover cash among *new* names only. Rank-weight / top-heavy still cannot invent money.
 - **Sell** `list` after min-hold **3**. We never sell a ticker we do not hold. Early 🚨 / last-red / news🔴 can still exit inside the floor.
 - **Entry:** Research universe (not the live flatten gate). Cash/share/fee rules still apply.
@@ -256,6 +256,14 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-25 09:30 ET | **BUY** | `PACB` | 712 | $1.57 | $9.18 | — | $1,257.29 | — | union looker hold 3: 0 red + yesterday up; gate zero_red=True,yday_up=True; rank cond; list yday_gainer,yday_mover,ohlc_hot; 🔵; ⚪; ret5=+14.5; leftover $1118.23 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-09-25 09:30 ET | **BUY** | `PRGO` | 75 | $14.81 | $2.21 | — | $144.33 | — | union looker hold 3: 0 red + yesterday up; gate zero_red=True,yday_up=True; rank cond; list ohlc_hot; 🔵; ⚪; ret5=+8.9; leftover $1118.23 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-09-25 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $144.33 | ▲ close $8,884.41 vs 09:30 $8,829.12 (session +79.06) | 16:00 close · cash $144.33 · equity $8,884.41 vs 09:30 $8,829.12 (+55.29; session marks +79.06) · 13 name(s) marked open→close (per-name table). ADMA×19 09:30 $9.52 → close $9.52 +0.00; BFLY×18 09:30 $9.41 → close $9.41 -0.00; HALO×1 09:30 $115.36 → close $113.90 -1.46; IBRX×20 09:30 $8.64 → close $8.64 +0.00; NEOG×13 09:30 $13.66 → close $13.66 -0.00; OMER×9 09:30 $20.61 → close $20.08 -4.77; RSKD×142 09:30 $7.85 → close $7.78 -9.94; CDNS×3 09:30 $324.97 → close $326.13 +3.48; CYPH×279 09:30 $4.00 → close $4.12 +32.09; DUOT×116 09:30 $9.59 → close $9.14 -52.20; GRAL×9 09:30 $123.50 → close $126.89 +30.51; PACB×712 09:30 $1.57 → close $1.62 +35.60; PRGO×75 09:30 $14.81 → close $15.42 +45.75 | — |
+| 2026-09-28 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $144.33 | ▼ 09:30 equity $8,789.12 vs yday $8,884.41 (-95.29) | 09:30 open · cash $144.33 (unchanged overnight, no fees) · equity $8,789.12 vs prior close $8,884.41 (-95.29) · 13 name(s) re-marked at the open (per-name table). ADMA×19 yday $9.52 → 09:30 $9.38 -2.66; BFLY×18 yday $9.41 → 09:30 $9.28 -2.34; CDNS×3 yday $326.13 → 09:30 $318.99 -21.42; CYPH×279 yday $4.12 → 09:30 $4.03 -24.41; DUOT×116 yday $9.14 → 09:30 $8.99 -17.40; GRAL×9 yday $126.89 → 09:30 $128.90 +18.09; HALO×1 yday $113.90 → 09:30 $113.34 -0.56; IBRX×20 yday $8.64 → 09:30 $8.39 -5.00; NEOG×13 yday $13.66 → 09:30 $13.75 +1.17; OMER×9 yday $20.08 → 09:30 $19.83 -2.25; PACB×712 yday $1.62 → 09:30 $1.60 -14.24; PRGO×75 yday $15.42 → 09:30 $15.21 -15.75; RSKD×142 yday $7.78 → 09:30 $7.72 -8.52 | — |
+| 2026-09-28 09:30 ET | **SELL** | `ADMA` | 19 | $9.38 | $1.86 | $-11.95 | $320.69 | ▼ -11.95 after sell → book $8,787.26; vs 09:30 mark -1.86 | exit unpriced hold on first bar after 3 sess | — |
+| 2026-09-28 09:30 ET | **SELL** | `BFLY` | 18 | $9.28 | $1.74 | $-14.74 | $485.99 | ▼ -14.74 after sell → book $8,785.51; vs 09:30 mark -1.75 | exit unpriced hold on first bar after 3 sess | — |
+| 2026-09-28 09:30 ET | **SELL** | `HALO` | 1 | $113.34 | $1.16 | $-5.84 | $598.17 | ▼ -5.84 after sell → book $8,784.36; vs 09:30 mark -1.15 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-28 09:30 ET | **SELL** | `IBRX` | 20 | $8.39 | $1.76 | $-21.07 | $764.21 | ▼ -21.07 after sell → book $8,782.60; vs 09:30 mark -1.76 | exit unpriced hold on first bar after 3 sess | — |
+| 2026-09-28 09:30 ET | **SELL** | `NEOG` | 13 | $13.75 | $1.85 | $-9.71 | $941.12 | ▼ -9.71 after sell → book $8,780.75; vs 09:30 mark -1.85 | exit unpriced hold on first bar after 3 sess | — |
+| 2026-09-28 09:30 ET | **SELL** | `OMER` | 9 | $19.83 | $1.83 | $-11.10 | $1,117.75 | ▼ -11.10 after sell → book $8,778.92; vs 09:30 mark -1.83 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1,117.75 | ▼ close $8,701.27 vs 09:30 $8,789.12 (session -77.65) | 16:00 close · cash $1,117.75 · equity $8,701.27 vs 09:30 $8,789.12 (-87.85; session marks -77.65) · 7 name(s) marked open→close (per-name table). CDNS×3 09:30 $318.99 → close $326.70 +23.13; CYPH×279 09:30 $4.03 → close $3.31 -201.58; DUOT×116 09:30 $8.99 → close $8.99 +0.00; GRAL×9 09:30 $128.90 → close $132.63 +33.57; PACB×712 09:30 $1.60 → close $1.71 +78.32; PRGO×75 09:30 $15.21 → close $15.10 -8.25; RSKD×142 09:30 $7.72 → close $7.70 -2.84 | — |
 
 ## Not taken
 

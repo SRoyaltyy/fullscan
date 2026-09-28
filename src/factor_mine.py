@@ -4628,13 +4628,15 @@ def main(argv=None) -> int:
         )
         # Research track only. A failure here must not fail the nightly
         # lock (HOT4 / holdup already written above).
+        # AppendDrift subclasses SystemExit, which `except Exception` misses,
+        # so a locked-day refusal was exiting 1 and skipping Publish.
         try:
             from . import factor_mine_oos0914 as oos0914
             oos0914.append_nightly(
                 through=str((payload or {}).get("to_date") or args.to_date or "")[:10],
                 write=bool(args.write),
             )
-        except Exception:
+        except (Exception, SystemExit):
             import logging
             import traceback
             logging.getLogger(__name__).warning(

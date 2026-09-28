@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · packet🟢 OR headline🟢 and camera net ≥ 2
 
-Cash book **-18.49%** ($8,151) · signal-only (no cash/fees) was -9.69%. Starts YES **1/30**. Fills 133 · skips 190 · realized $-1348.46.
+Cash book **-15.08%** ($8,492) · signal-only (no cash/fees) was -9.69%. Starts YES **1/30**. Fills 136 · skips 190 · realized $-1348.46.
 
 ## How this sleeve decides (like you are 10)
 
@@ -49,7 +49,7 @@ Imagine a kid with $10,000 at the 09:30 school bell. They look at the mixed morn
 Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 09:30 packet + leftover cash + lots on hand decide the ticket. Same-day Change% is outcome only.
 
 - **Universe** `union` — candidate list at 09:30 (flatten wish-list, union, probable, yday gainer, or OHLC hot).
-- **Gate** `news_or_headline=True,cam_net_min=2` · **rank** `cond` · **top_n** 8.
+- **Gate** `cam_net_min=2,news_or_headline=True` · **rank** `cond` · **top_n** 8.
 - **Size** `leftover` splits leftover cash among *new* names only. Rank-weight / top-heavy still cannot invent money.
 - **Sell** `list` after min-hold **3**. We never sell a ticker we do not hold. Early 🚨 / last-red / news🔴 can still exit inside the floor.
 - **Entry:** Research universe (not the live flatten gate). Cash/share/fee rules still apply.
@@ -269,6 +269,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-25 09:30 ET | **BUY** | `COST` | 1 | $887.00 | $1.99 | — | $2,497.28 | — | packet🟢 OR headline🟢 and camera net ≥ 2; gate news_or_headline=True,cam_net_min=2; rank cond; list earn_react; 🔵; ret5=+0.3; leftover $1581.55 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
 | 2026-09-25 09:30 ET | **BUY** | `RKLB` | 21 | $74.15 | $2.05 | — | $938.08 | — | packet🟢 OR headline🟢 and camera net ≥ 2; gate news_or_headline=True,cam_net_min=2; rank cond; list ohlc_hot; ret5=+8.5; leftover $1581.55 | join🔴 sector🟡 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
 | 2026-09-25 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $938.08 | ▼ close $8,150.97 vs 09:30 $8,200.78 (session -36.21) | 16:00 close · cash $938.08 · equity $8,150.97 vs 09:30 $8,200.78 (-49.81; session marks -36.21) · 8 name(s) marked open→close (per-name table). PGEN×13 09:30 $7.70 → close $7.70 -0.00; SGRY×6 09:30 $14.20 → close $14.20 -0.00; VERI×81 09:30 $1.33 → close $1.33 +0.00; ZSQR×409 09:30 $3.86 → close $3.78 -32.72; ILMN×5 09:30 $272.16 → close $270.00 -10.80; SECZ×97 09:30 $16.21 → close $15.96 -24.25; COST×1 09:30 $887.00 → close $922.76 +35.76; RKLB×21 09:30 $74.15 → close $73.95 -4.20 | — |
+| 2026-09-28 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $938.08 | ▼ 09:30 equity $8,087.80 vs yday $8,150.97 (-63.18) | 09:30 open · cash $938.08 (unchanged overnight, no fees) · equity $8,087.80 vs prior close $8,150.97 (-63.18) · 8 name(s) re-marked at the open (per-name table). COST×1 yday $922.76 → 09:30 $924.88 +2.11; ILMN×5 yday $270.00 → 09:30 $265.95 -20.25; PGEN×13 yday $7.70 → 09:30 $7.61 -1.17; RKLB×21 yday $73.95 → 09:30 $73.20 -15.75; SECZ×97 yday $15.96 → 09:30 $16.00 +3.88; SGRY×6 yday $14.20 → 09:30 $14.18 -0.12; VERI×81 yday $1.33 → 09:30 $1.29 -3.24; ZSQR×409 yday $3.78 → 09:30 $3.71 -28.63 | — |
+| 2026-09-28 09:30 ET | **SELL** | `PGEN` | 13 | $7.61 | $1.05 | $-6.54 | $1,035.96 | ▼ -6.54 after sell → book $8,086.75; vs 09:30 mark -1.05 | exit unpriced hold on first bar after 3 sess | — |
+| 2026-09-28 09:30 ET | **SELL** | `SGRY` | 6 | $14.18 | $0.89 | $-11.09 | $1,120.15 | ▼ -11.09 after sell → book $8,085.86; vs 09:30 mark -0.89 | exit unpriced hold on first bar after 3 sess | — |
+| 2026-09-28 09:30 ET | **SELL** | `VERI` | 81 | $1.29 | $1.31 | $-3.42 | $1,223.33 | ▼ -3.42 after sell → book $8,084.55; vs 09:30 mark -1.31 | exit unpriced hold on first bar after 3 sess | — |
+| 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1,223.33 | ▲ close $8,491.71 vs 09:30 $8,087.80 (session +407.16) | 16:00 close · cash $1,223.33 · equity $8,491.71 vs 09:30 $8,087.80 (+403.91; session marks +407.16) · 5 name(s) marked open→close (per-name table). COST×1 09:30 $924.88 → close $922.92 -1.96; ILMN×5 09:30 $265.95 → close $271.90 +29.75; RKLB×21 09:30 $73.20 → close $72.19 -21.21; SECZ×97 09:30 $16.00 → close $16.63 +61.11; ZSQR×409 09:30 $3.71 → close $4.54 +339.47 | — |
 
 ## Not taken
 

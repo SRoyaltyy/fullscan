@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · alarm
 
-Cash book **-1.98%** ($9,802) · signal-only (no cash/fees) was -2.80%. Starts YES **2/30**. Fills 121 · skips 221 · realized $+639.78.
+Cash book **-1.24%** ($9,876) · signal-only (no cash/fees) was -2.80%. Starts YES **2/30**. Fills 127 · skips 221 · realized $+639.78.
 
 ## How this sleeve decides (like you are 10)
 
@@ -253,6 +253,14 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-25 09:30 ET | **COVER** | `GLND` | 222 | $6.06 | $2.86 | $-698.43 | $14,253.83 | ▼ -698.43 after sell → book $9,804.10; vs 09:30 mark -2.86 | dropped from list after 3 sess (min 3) | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 heat🔴 vol🟢 buy🟡 |
 | 2026-09-25 09:30 ET | **COVER** | `USDE` | 50 | $15.58 | $2.14 | $-133.87 | $13,472.63 | ▼ -133.87 after sell → book $9,801.96; vs 09:30 mark -2.14 | dropped from list after 3 sess (min 3) | join🟡 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 heat🔴 vol🟡 buy🟡 |
 | 2026-09-25 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $13,472.63 | ▲ close $9,801.96 vs 09:30 $9,809.31 (session +0.00) | 16:00 close · cash $13,472.63 · equity $9,801.96 vs 09:30 $9,809.31 (-7.35; session marks +0.00) · 6 name(s) marked open→close (per-name table). ALOY×69 09:30 $8.52 → close $8.52 -0.00; AXTI×8 09:30 $75.90 → close $75.90 -0.00; CRML×71 09:30 $8.17 → close $8.17 -0.00; FJET×323 09:30 $1.80 → close $1.80 +0.00; VGZ×246 09:30 $2.71 → close $2.71 -0.00; YSS×66 09:30 $9.81 → close $9.81 -0.00 | — |
+| 2026-09-28 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $13,472.63 | ▲ 09:30 equity $9,891.90 vs yday $9,801.96 (+89.94) | 09:30 open · cash $13,472.63 (unchanged overnight, no fees) · equity $9,891.90 vs prior close $9,801.96 (+89.94) · 6 name(s) re-marked at the open (per-name table). ALOY×69 yday $8.52 → 09:30 $8.56 -2.76; AXTI×8 yday $75.90 → 09:30 $76.53 -5.00; CRML×71 yday $8.17 → 09:30 $7.62 +39.33; FJET×323 yday $1.80 → 09:30 $1.79 +3.23; VGZ×246 yday $2.71 → 09:30 $2.62 +22.14; YSS×66 yday $9.81 → 09:30 $9.31 +33.00 | — |
+| 2026-09-28 09:30 ET | **COVER** | `ALOY` | 69 | $8.56 | $2.20 | $+53.53 | $12,879.79 | ▲ +53.53 after sell → book $9,889.71; vs 09:30 mark -2.19 | exit unpriced hold on first bar after 4 sess | — |
+| 2026-09-28 09:30 ET | **COVER** | `AXTI` | 8 | $76.53 | $2.01 | $-3.14 | $12,265.58 | ▼ -3.14 after sell → book $9,887.69; vs 09:30 mark -2.02 | exit unpriced hold on first bar after 4 sess | — |
+| 2026-09-28 09:30 ET | **COVER** | `CRML` | 71 | $7.62 | $2.20 | $+101.63 | $11,722.64 | ▲ +101.63 after sell → book $9,885.49; vs 09:30 mark -2.20 | exit unpriced hold on first bar after 4 sess | — |
+| 2026-09-28 09:30 ET | **COVER** | `FJET` | 323 | $1.79 | $4.17 | $+65.88 | $11,140.30 | ▲ +65.88 after sell → book $9,881.32; vs 09:30 mark -4.17 | exit unpriced hold on first bar after 4 sess | — |
+| 2026-09-28 09:30 ET | **COVER** | `VGZ` | 246 | $2.62 | $3.17 | $+0.96 | $10,492.61 | ▲ +0.96 after sell → book $9,878.15; vs 09:30 mark -3.17 | exit unpriced hold on first bar after 4 sess | — |
+| 2026-09-28 09:30 ET | **COVER** | `YSS` | 66 | $9.31 | $2.19 | $+27.27 | $9,875.96 | ▲ +27.27 after sell → book $9,875.96; vs 09:30 mark -2.19 | exit unpriced hold on first bar after 4 sess | — |
+| 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,875.96 | ▲ close $9,875.96 vs 09:30 $9,891.90 (session +0.00) | 16:00 close · cash $9,875.96 · no lots left · equity $9,875.96. | — |
 
 ## Not taken
 

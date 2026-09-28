@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 4 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · top 4 by cond
 
-Cash book **-17.11%** ($8,289) · signal-only (no cash/fees) was -7.67%. Starts YES **1/30**. Fills 90 · skips 159 · realized $-515.67.
+Cash book **-21.79%** ($7,821) · signal-only (no cash/fees) was -7.67%. Starts YES **1/30**. Fills 93 · skips 159 · realized $-515.67.
 
 ## How this sleeve decides (like you are 10)
 
@@ -223,6 +223,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-25 09:30 ET | **BUY** | `CYPH` | 504 | $4.00 | $6.50 | — | $2,085.48 | — | top 4 by cond; rank cond; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+32.9; leftover $2020.77 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-09-25 09:30 ET | **BUY** | `DUOT` | 210 | $9.59 | $2.71 | — | $68.87 | — | top 4 by cond; rank cond; list ohlc_hot; 🔵; ⚪; ret5=+12.4; leftover $2020.77 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-09-25 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $68.87 | ▼ close $8,289.42 vs 09:30 $8,351.52 (session -47.57) | 16:00 close · cash $68.87 · equity $8,289.42 vs 09:30 $8,351.52 (-62.10; session marks -47.57) · 7 name(s) marked open→close (per-name table). BFLY×5 09:30 $9.41 → close $9.41 -0.00; FSLY×4 09:30 $26.68 → close $26.68 +0.00; UPXI×98 09:30 $1.17 → close $1.17 -0.00; RSKD×257 09:30 $7.85 → close $7.78 -17.99; CDNS×6 09:30 $324.97 → close $326.13 +6.96; CYPH×504 09:30 $4.00 → close $4.12 +57.96; DUOT×210 09:30 $9.59 → close $9.14 -94.50 | — |
+| 2026-09-28 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $68.87 | ▼ 09:30 equity $8,146.97 vs yday $8,289.42 (-142.45) | 09:30 open · cash $68.87 (unchanged overnight, no fees) · equity $8,146.97 vs prior close $8,289.42 (-142.45) · 7 name(s) re-marked at the open (per-name table). BFLY×5 yday $9.41 → 09:30 $9.28 -0.65; CDNS×6 yday $326.13 → 09:30 $318.99 -42.84; CYPH×504 yday $4.12 → 09:30 $4.03 -44.10; DUOT×210 yday $9.14 → 09:30 $8.99 -31.50; FSLY×4 yday $26.68 → 09:30 $24.45 -8.92; RSKD×257 yday $7.78 → 09:30 $7.72 -15.42; UPXI×98 yday $1.17 → 09:30 $1.18 +0.98 | — |
+| 2026-09-28 09:30 ET | **SELL** | `BFLY` | 5 | $9.28 | $0.50 | $-4.11 | $114.77 | ▼ -4.11 after sell → book $8,146.47; vs 09:30 mark -0.50 | exit unpriced hold on first bar after 3 sess | — |
+| 2026-09-28 09:30 ET | **SELL** | `FSLY` | 4 | $24.45 | $1.01 | $-16.42 | $211.56 | ▼ -16.42 after sell → book $8,145.46; vs 09:30 mark -1.01 | exit unpriced hold on first bar after 4 sess | — |
+| 2026-09-28 09:30 ET | **SELL** | `UPXI` | 98 | $1.18 | $1.48 | $-7.88 | $325.72 | ▼ -7.88 after sell → book $8,143.98; vs 09:30 mark -1.48 | exit unpriced hold on first bar after 4 sess | — |
+| 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $325.72 | ▼ close $7,820.96 vs 09:30 $8,146.97 (session -323.02) | 16:00 close · cash $325.72 · equity $7,820.96 vs 09:30 $8,146.97 (-326.01; session marks -323.02) · 4 name(s) marked open→close (per-name table). CDNS×6 09:30 $318.99 → close $326.70 +46.26; CYPH×504 09:30 $4.03 → close $3.31 -364.14; DUOT×210 09:30 $8.99 → close $8.99 +0.00; RSKD×257 09:30 $7.72 → close $7.70 -5.14 | — |
 
 ## Not taken
 

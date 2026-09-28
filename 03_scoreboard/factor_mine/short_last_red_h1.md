@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · last bar red
 
-Cash book **+2.35%** ($10,235) · signal-only (no cash/fees) was -2.93%. Starts YES **19/30**. Fills 251 · skips 107 · realized $-717.78.
+Cash book **+2.23%** ($10,223) · signal-only (no cash/fees) was -2.93%. Starts YES **19/30**. Fills 258 · skips 107 · realized $-717.78.
 
 ## How this sleeve decides (like you are 10)
 
@@ -383,6 +383,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-25 09:30 ET | **SHORT** | `SGMT` | 69 | $9.11 | $2.24 | — | $13,841.82 | — | last bar red; gate last_red=True; list yday_mover; 🔵; ⚪; ret5=-18.4; leftover $631.15 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-09-25 09:30 ET | **SHORT** | `SMWB` | 84 | $7.50 | $2.28 | — | $14,469.53 | — | last bar red; gate last_red=True; list yday_mover; 🔵; ret5=-9.7; leftover $631.15 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-09-25 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $14,469.53 | ▲ close $10,235.07 vs 09:30 $10,098.41 (session +155.27) | 16:00 close · cash $14,469.53 · equity $10,235.07 vs 09:30 $10,098.41 (+136.66; session marks +155.27) · 7 name(s) marked open→close (per-name table). OMER×30 09:30 $20.61 → close $20.08 +15.90; NEOV×264 09:30 $2.39 → close $2.19 +52.80; SFIX×286 09:30 $2.20 → close $2.15 +12.87; LRMR×190 09:30 $3.32 → close $3.08 +46.55; ACAD×28 09:30 $22.21 → close $20.68 +42.84; SGMT×69 09:30 $9.11 → close $9.24 -8.97; SMWB×84 09:30 $7.50 → close $7.58 -6.72 | — |
+| 2026-09-28 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $14,469.53 | ▲ 09:30 equity $10,241.10 vs yday $10,235.07 (+6.03) | 09:30 open · cash $14,469.53 (unchanged overnight, no fees) · equity $10,241.10 vs prior close $10,235.07 (+6.03) · 7 name(s) re-marked at the open (per-name table). ACAD×28 yday $20.68 → 09:30 $20.53 +4.20; LRMR×190 yday $3.08 → 09:30 $3.23 -29.60; NEOV×264 yday $2.19 → 09:30 $2.20 -2.64; OMER×30 yday $20.08 → 09:30 $19.83 +7.50; SFIX×286 yday $2.15 → 09:30 $2.12 +9.44; SGMT×69 yday $9.24 → 09:30 $9.15 +6.21; SMWB×84 yday $7.58 → 09:30 $7.45 +10.92 | — |
+| 2026-09-28 09:30 ET | **COVER** | `ACAD` | 28 | $20.53 | $2.07 | $+42.85 | $13,892.62 | ▲ +42.85 after sell → book $10,239.02; vs 09:30 mark -2.08 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-28 09:30 ET | **COVER** | `LRMR` | 190 | $3.23 | $2.56 | $+11.77 | $13,276.20 | ▲ +11.77 after sell → book $10,236.46; vs 09:30 mark -2.56 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-28 09:30 ET | **COVER** | `NEOV` | 264 | $2.20 | $3.41 | $+43.28 | $12,692.00 | ▲ +43.28 after sell → book $10,233.06; vs 09:30 mark -3.40 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-28 09:30 ET | **COVER** | `OMER` | 30 | $19.83 | $2.08 | $+19.20 | $12,095.02 | ▲ +19.20 after sell → book $10,230.98; vs 09:30 mark -2.08 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-28 09:30 ET | **COVER** | `SFIX` | 286 | $2.12 | $3.69 | $+14.85 | $11,484.44 | ▲ +14.85 after sell → book $10,227.29; vs 09:30 mark -3.69 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-28 09:30 ET | **COVER** | `SGMT` | 69 | $9.15 | $2.20 | $-7.19 | $10,850.89 | ▼ -7.19 after sell → book $10,225.09; vs 09:30 mark -2.20 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-28 09:30 ET | **COVER** | `SMWB` | 84 | $7.45 | $2.24 | $-0.33 | $10,222.85 | ▼ -0.33 after sell → book $10,222.85; vs 09:30 mark -2.24 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,222.85 | ▲ close $10,222.85 vs 09:30 $10,241.10 (session +0.00) | 16:00 close · cash $10,222.85 · no lots left · equity $10,222.85. | — |
 
 ## Not taken
 

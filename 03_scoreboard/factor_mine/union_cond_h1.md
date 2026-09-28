@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · rank by cond
 
-Cash book **-13.20%** ($8,680) · signal-only (no cash/fees) was -4.88%. Starts YES **0/30**. Fills 272 · skips 105 · realized $-723.91.
+Cash book **-14.08%** ($8,592) · signal-only (no cash/fees) was -4.88%. Starts YES **0/30**. Fills 279 · skips 105 · realized $-723.91.
 
 ## How this sleeve decides (like you are 10)
 
@@ -405,6 +405,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-25 09:30 ET | **BUY** | `PACB` | 687 | $1.57 | $8.86 | — | $1,309.23 | — | rank by cond; rank cond; list yday_gainer,yday_mover,ohlc_hot; 🔵; ⚪; ret5=+14.5; leftover $1079.87 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-09-25 09:30 ET | **BUY** | `PRGO` | 72 | $14.81 | $2.21 | — | $240.70 | — | rank by cond; rank cond; list ohlc_hot; 🔵; ⚪; ret5=+8.9; leftover $1079.87 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-09-25 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $240.70 | ▲ close $8,680.31 vs 09:30 $8,638.93 (session +66.68) | 16:00 close · cash $240.70 · equity $8,680.31 vs 09:30 $8,638.93 (+41.38; session marks +66.68) · 8 name(s) marked open→close (per-name table). RSKD×137 09:30 $7.85 → close $7.78 -9.59; CDNS×3 09:30 $324.97 → close $326.13 +3.48; CYPH×269 09:30 $4.00 → close $4.12 +30.94; DUOT×112 09:30 $9.59 → close $9.14 -50.40; GRAL×8 09:30 $123.50 → close $126.89 +27.12; HALO×9 09:30 $115.36 → close $113.90 -13.14; PACB×687 09:30 $1.57 → close $1.62 +34.35; PRGO×72 09:30 $14.81 → close $15.42 +43.92 | — |
+| 2026-09-28 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $240.70 | ▼ 09:30 equity $8,592.51 vs yday $8,680.31 (-87.80) | 09:30 open · cash $240.70 (unchanged overnight, no fees) · equity $8,592.51 vs prior close $8,680.31 (-87.80) · 8 name(s) re-marked at the open (per-name table). CDNS×3 yday $326.13 → 09:30 $318.99 -21.42; CYPH×269 yday $4.12 → 09:30 $4.03 -23.54; DUOT×112 yday $9.14 → 09:30 $8.99 -16.80; GRAL×8 yday $126.89 → 09:30 $128.90 +16.08; HALO×9 yday $113.90 → 09:30 $113.34 -5.04; PACB×687 yday $1.62 → 09:30 $1.60 -13.74; PRGO×72 yday $15.42 → 09:30 $15.21 -15.12; RSKD×137 yday $7.78 → 09:30 $7.72 -8.22 | — |
+| 2026-09-28 09:30 ET | **SELL** | `CYPH` | 269 | $4.03 | $3.52 | $+0.40 | $1,321.92 | ▲ +0.40 after sell → book $8,588.99; vs 09:30 mark -3.52 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-28 09:30 ET | **SELL** | `DUOT` | 112 | $8.99 | $2.35 | $-71.88 | $2,326.44 | ▼ -71.88 after sell → book $8,586.63; vs 09:30 mark -2.36 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-28 09:30 ET | **SELL** | `GRAL` | 8 | $128.90 | $2.03 | $+39.15 | $3,355.61 | ▲ +39.15 after sell → book $8,584.60; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-28 09:30 ET | **SELL** | `HALO` | 9 | $113.34 | $2.04 | $-22.23 | $4,373.63 | ▼ -22.23 after sell → book $8,582.56; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-28 09:30 ET | **SELL** | `PACB` | 687 | $1.60 | $8.99 | $+2.76 | $5,463.85 | ▲ +2.76 after sell → book $8,573.58; vs 09:30 mark -8.98 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-28 09:30 ET | **SELL** | `PRGO` | 72 | $15.21 | $2.23 | $+24.37 | $6,556.74 | ▲ +24.37 after sell → book $8,571.35; vs 09:30 mark -2.23 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-28 09:30 ET | **SELL** | `RSKD` | 137 | $7.72 | $2.43 | $-22.64 | $7,611.94 | ▼ -22.64 after sell → book $8,568.91; vs 09:30 mark -2.44 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,611.94 | ▲ close $8,592.04 vs 09:30 $8,592.51 (session +23.13) | 16:00 close · cash $7,611.94 · equity $8,592.04 vs 09:30 $8,592.51 (-0.47; session marks +23.13) · 1 name(s) marked open→close (per-name table). CDNS×3 09:30 $318.99 → close $326.70 +23.13 | — |
 
 ## Not taken
 

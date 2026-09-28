@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 4 · rank `cond` · size `conviction` · sell `list` · S-boost `none` · OR news + net≥4; 70% leftover if #1 net ≥ 5
 
-Cash book **-21.24%** ($7,876) · signal-only (no cash/fees) was -7.44%. Starts YES **12/30**. Fills 97 · skips 31 · realized $+852.81.
+Cash book **-22.55%** ($7,745) · signal-only (no cash/fees) was -7.44%. Starts YES **12/30**. Fills 100 · skips 31 · realized $+852.81.
 
 ## How this sleeve decides (like you are 10)
 
@@ -49,7 +49,7 @@ Imagine a kid with $10,000 at the 09:30 school bell. They look at the mixed morn
 Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 09:30 packet + leftover cash + lots on hand decide the ticket. Same-day Change% is outcome only.
 
 - **Universe** `union` — candidate list at 09:30 (flatten wish-list, union, probable, yday gainer, or OHLC hot).
-- **Gate** `news_or_headline=True,cam_net_min=4` · **rank** `cond` · **top_n** 4.
+- **Gate** `cam_net_min=4,news_or_headline=True` · **rank** `cond` · **top_n** 4.
 - **Size** `conviction` splits leftover cash among *new* names only. Rank-weight / top-heavy still cannot invent money.
 - **Sell** `list` after min-hold **1**. We never sell a ticker we do not hold. Early 🚨 / last-red / news🔴 can still exit inside the floor.
 - **Entry:** Research universe (not the live flatten gate). Cash/share/fee rules still apply.
@@ -233,6 +233,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-25 09:30 ET | **BUY** | `ILMN` | 2 | $272.16 | $2.00 | — | $1,846.85 | — | OR news + net≥4; 70% leftover if #1 net ≥ 5; gate news_or_headline=True,cam_net_min=4; rank cond; list ohlc_hot; 🔵; ⚪; ret5=+11.7; leftover $803.21 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-09-25 09:30 ET | **BUY** | `SECZ` | 49 | $16.21 | $2.14 | — | $1,050.42 | — | OR news + net≥4; 70% leftover if #1 net ≥ 5; gate news_or_headline=True,cam_net_min=4; rank cond; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+85.1; leftover $803.21 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 judge🟢 ab🟡 heat🟢 vol🟢 buy🟡 |
 | 2026-09-25 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1,050.42 | ▼ close $7,876.14 vs 09:30 $8,032.11 (session -133.05) | 16:00 close · cash $1,050.42 · equity $7,876.14 vs 09:30 $8,032.11 (-155.97; session marks -133.05) · 3 name(s) marked open→close (per-name table). ZSQR×1456 09:30 $3.86 → close $3.78 -116.48; ILMN×2 09:30 $272.16 → close $270.00 -4.32; SECZ×49 09:30 $16.21 → close $15.96 -12.25 | — |
+| 2026-09-28 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $1,050.42 | ▼ 09:30 equity $7,768.08 vs yday $7,876.14 (-108.06) | 09:30 open · cash $1,050.42 (unchanged overnight, no fees) · equity $7,768.08 vs prior close $7,876.14 (-108.06) · 3 name(s) re-marked at the open (per-name table). ILMN×2 yday $270.00 → 09:30 $265.95 -8.10; SECZ×49 yday $15.96 → 09:30 $16.00 +1.96; ZSQR×1456 yday $3.78 → 09:30 $3.71 -101.92 | — |
+| 2026-09-28 09:30 ET | **SELL** | `ILMN` | 2 | $265.95 | $2.02 | $-16.43 | $1,580.30 | ▼ -16.43 after sell → book $7,766.06; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-28 09:30 ET | **SELL** | `SECZ` | 49 | $16.00 | $2.16 | $-14.58 | $2,362.15 | ▼ -14.58 after sell → book $7,763.91; vs 09:30 mark -2.15 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-28 09:30 ET | **SELL** | `ZSQR` | 1456 | $3.71 | $19.07 | $-256.25 | $7,744.84 | ▼ -256.25 after sell → book $7,744.84; vs 09:30 mark -19.07 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,744.84 | ▲ close $7,744.84 vs 09:30 $7,768.08 (session +0.00) | 16:00 close · cash $7,744.84 · no lots left · equity $7,744.84. | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · Clock-B #6 stock holds while sector camera is red
 
-Cash book **-9.96%** ($9,004) · signal-only (no cash/fees) was -2.27%. Starts YES **25/30**. Fills 202 · skips 96 · realized $+387.41.
+Cash book **-12.22%** ($8,778) · signal-only (no cash/fees) was -2.27%. Starts YES **25/30**. Fills 205 · skips 96 · realized $+387.41.
 
 ## How this sleeve decides (like you are 10)
 
@@ -338,6 +338,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-25 09:30 ET | **BUY** | `GLND` | 519 | $6.06 | $6.70 | — | $3,153.46 | — | Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list yday_gainer,yday_mover; ret5=+342.1; leftover $3150.29 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 heat🔴 vol🟢 buy🟡 |
 | 2026-09-25 09:30 ET | **BUY** | `DGXX` | 657 | $4.78 | $8.48 | — | $4.53 | — | Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list ohlc_hot; 🔵; ret5=+18.0; leftover $3150.29 | join🔴 sector🔴 gen🟢 news🟡 digest🟡 ab🟢 heat🔴 vol🟡 buy🟡 |
 | 2026-09-25 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $4.53 | ▼ close $9,004.02 vs 09:30 $9,450.87 (session -429.51) | 16:00 close · cash $4.53 · equity $9,004.02 vs 09:30 $9,450.87 (-446.85; session marks -429.51) · 3 name(s) marked open→close (per-name table). CBRL×60 09:30 $52.39 → close $51.81 -34.80; GLND×519 09:30 $6.06 → close $5.54 -269.88; DGXX×657 09:30 $4.78 → close $4.59 -124.83 | — |
+| 2026-09-28 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $4.53 | ▼ 09:30 equity $8,795.50 vs yday $9,004.02 (-208.52) | 09:30 open · cash $4.53 (unchanged overnight, no fees) · equity $8,795.50 vs prior close $9,004.02 (-208.52) · 3 name(s) re-marked at the open (per-name table). CBRL×60 yday $51.81 → 09:30 $52.25 +26.40; DGXX×657 yday $4.59 → 09:30 $4.55 -26.28; GLND×519 yday $5.54 → 09:30 $5.14 -208.64 | — |
+| 2026-09-28 09:30 ET | **SELL** | `CBRL` | 60 | $52.25 | $2.21 | $-12.78 | $3,137.32 | ▼ -12.78 after sell → book $8,793.30; vs 09:30 mark -2.20 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-28 09:30 ET | **SELL** | `DGXX` | 657 | $4.55 | $8.61 | $-168.19 | $6,118.07 | ▼ -168.19 after sell → book $8,784.69; vs 09:30 mark -8.61 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-28 09:30 ET | **SELL** | `GLND` | 519 | $5.14 | $6.80 | $-492.02 | $8,777.89 | ▼ -492.02 after sell → book $8,777.89; vs 09:30 mark -6.80 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,777.89 | ▲ close $8,777.89 vs 09:30 $8,795.50 (session +0.00) | 16:00 close · cash $8,777.89 · no lots left · equity $8,777.89. | — |
 
 ## Not taken
 

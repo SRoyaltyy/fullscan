@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `hot_score` · size `leftover` · sell `list` · S-boost `none` · Clock-B #10 NR7 + moderate momentum
 
-Cash book **+4.25%** ($10,425) · signal-only (no cash/fees) was +27.44%. Starts YES **25/30**. Fills 55 · skips 16 · realized $+1589.64.
+Cash book **+2.89%** ($10,289) · signal-only (no cash/fees) was +27.44%. Starts YES **25/30**. Fills 56 · skips 16 · realized $+1589.64.
 
 ## How this sleeve decides (like you are 10)
 
@@ -191,6 +191,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-25 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,706.96 | ▲ 09:30 equity $10,706.96 vs yday $10,706.96 (+0.00) | 09:30 open · cash $10,706.96 · no holdings · equity $10,706.96 vs prior close $10,706.96 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-09-25 09:30 ET | **BUY** | `OMER` | 519 | $20.61 | $6.70 | — | $3.67 | — | Clock-B #10 NR7 + moderate momentum; gate clk_nr7_mom=True; rank hot_score; list flatten; 🔵; ret5=+9.1; leftover $10706.96 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-09-25 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $3.67 | ▼ close $10,425.19 vs 09:30 $10,706.96 (session -275.07) | 16:00 close · cash $3.67 · equity $10,425.19 vs 09:30 $10,706.96 (-281.77; session marks -275.07) · 1 name(s) marked open→close (per-name table). OMER×519 09:30 $20.61 → close $20.08 -275.07 | — |
+| 2026-09-28 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $3.67 | ▼ 09:30 equity $10,295.44 vs yday $10,425.19 (-129.75) | 09:30 open · cash $3.67 (unchanged overnight, no fees) · equity $10,295.44 vs prior close $10,425.19 (-129.75) · 1 name(s) re-marked at the open (per-name table). OMER×519 yday $20.08 → 09:30 $19.83 -129.75 | — |
+| 2026-09-28 09:30 ET | **SELL** | `OMER` | 519 | $19.83 | $6.86 | $-418.38 | $10,288.58 | ▼ -418.38 after sell → book $10,288.58; vs 09:30 mark -6.86 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,288.58 | ▲ close $10,288.58 vs 09:30 $10,295.44 (session +0.00) | 16:00 close · cash $10,288.58 · no lots left · equity $10,288.58. | — |
 
 ## Not taken
 
