@@ -3,9 +3,8 @@ name: Jev hop-0 news gate
 # Code first (dup / junk-shape / source / reprint clock), then one
 # Jev pack per leftover title. Does not classify the 52 event types
 # or pick bullish/bearish. Does not touch flatten / Webull / factor-mine.
-# Agent tokens cannot workflow_dispatch — a push of this file on main
-# fires gold then a capped harvest. Do not cancel-in-progress: main
-# lands every minute and a cancelled checkout never reaches Jev.
+# Sparse checkout: a full clone of this repo takes minutes and the job
+# was being cancelled mid-fetch while other bots land on main.
 
 on:
   push:
@@ -18,6 +17,8 @@ on:
       - "00_grounding/jev_gold.json"
       - "00_grounding/jev_junk_shapes.json"
       - "00_grounding/jev_closed_lists.json"
+  schedule:
+    - cron: "25 11 * * 1-6"
   workflow_dispatch:
     inputs:
       date:
@@ -45,17 +46,25 @@ permissions:
   contents: write
 
 concurrency:
-  group: jev-hop0-gate
+  group: jev-hop0-${{ github.sha }}
   cancel-in-progress: false
 
 jobs:
   gate:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
         with:
+          ref: ${{ github.sha }}
           fetch-depth: 1
+          sparse-checkout: |
+            src
+            00_grounding
+            01_daily/news
+            01_daily/events
+            03_scoreboard
+            scripts
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
