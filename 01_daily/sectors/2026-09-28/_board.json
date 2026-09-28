@@ -1,27 +1,33 @@
 {
   "date": "2026-09-28",
-  "generated_at": "2026-09-28T07:11:43.372510-04:00",
+  "generated_at": "2026-09-28T07:36:27.772477-04:00",
   "summary": "",
   "sectors": [
     {
       "sector": "Basic Materials",
       "etf": "XLB",
-      "predicted_direction": null,
-      "predicted_magnitude_band": null,
-      "total_score": null,
-      "confidence_score": null,
-      "multiplier": null,
-      "divergence_flagged": null,
+      "predicted_direction": "down",
+      "predicted_magnitude_band": "mild",
+      "total_score": -6.779,
+      "confidence_score": 0.65,
+      "multiplier": 0.85,
+      "divergence_flagged": false,
       "actual_pct_change": null,
       "actual_direction": null,
       "direction_hit": null,
       "magnitude_hit": null,
-      "has_predict_md": false,
+      "has_predict_md": true,
       "has_outcome_md": false,
-      "components": {},
-      "status": "DEGRADED",
-      "provider": "openclaw",
-      "fallback_reason": "openclaw_timeout"
+      "components": {
+        "S0_SHARED_MACRO": -1.0,
+        "S1_SECTOR_FACTORS": -1.0,
+        "S2_BREADTH": -1.0,
+        "S3_FLOWS_POSITIONING": -1.0,
+        "S4_ETF_TAPE": 0.0
+      },
+      "status": "OK",
+      "provider": "",
+      "fallback_reason": ""
     },
     {
       "sector": "Communication Services",
@@ -39,9 +45,9 @@
       "has_predict_md": false,
       "has_outcome_md": false,
       "components": {},
-      "status": "DEGRADED",
-      "provider": "openclaw",
-      "fallback_reason": "openclaw_timeout"
+      "status": "FAIL",
+      "provider": "",
+      "fallback_reason": ""
     },
     {
       "sector": "Consumer Cyclical",
@@ -59,9 +65,9 @@
       "has_predict_md": false,
       "has_outcome_md": false,
       "components": {},
-      "status": "DEGRADED",
-      "provider": "openclaw",
-      "fallback_reason": "openclaw_timeout"
+      "status": "FAIL",
+      "provider": "",
+      "fallback_reason": ""
     },
     {
       "sector": "Consumer Defensive",
@@ -79,9 +85,9 @@
       "has_predict_md": false,
       "has_outcome_md": false,
       "components": {},
-      "status": "DEGRADED",
-      "provider": "openclaw",
-      "fallback_reason": "openclaw_timeout"
+      "status": "FAIL",
+      "provider": "",
+      "fallback_reason": ""
     },
     {
       "sector": "Energy",
@@ -99,9 +105,9 @@
       "has_predict_md": false,
       "has_outcome_md": false,
       "components": {},
-      "status": "DEGRADED",
-      "provider": "openclaw",
-      "fallback_reason": "openclaw_timeout"
+      "status": "FAIL",
+      "provider": "",
+      "fallback_reason": ""
     },
     {
       "sector": "Financial",
@@ -119,9 +125,9 @@
       "has_predict_md": false,
       "has_outcome_md": false,
       "components": {},
-      "status": "DEGRADED",
-      "provider": "openclaw",
-      "fallback_reason": "openclaw_timeout"
+      "status": "FAIL",
+      "provider": "",
+      "fallback_reason": ""
     },
     {
       "sector": "Healthcare",
@@ -139,9 +145,9 @@
       "has_predict_md": false,
       "has_outcome_md": false,
       "components": {},
-      "status": "DEGRADED",
-      "provider": "openclaw",
-      "fallback_reason": "openclaw_timeout"
+      "status": "FAIL",
+      "provider": "",
+      "fallback_reason": ""
     },
     {
       "sector": "Industrials",
@@ -159,9 +165,9 @@
       "has_predict_md": false,
       "has_outcome_md": false,
       "components": {},
-      "status": "DEGRADED",
-      "provider": "openclaw",
-      "fallback_reason": "openclaw_timeout"
+      "status": "FAIL",
+      "provider": "",
+      "fallback_reason": ""
     },
     {
       "sector": "Real Estate",
@@ -179,9 +185,9 @@
       "has_predict_md": false,
       "has_outcome_md": false,
       "components": {},
-      "status": "DEGRADED",
-      "provider": "openclaw",
-      "fallback_reason": "openclaw_timeout"
+      "status": "FAIL",
+      "provider": "",
+      "fallback_reason": ""
     },
     {
       "sector": "Technology",
@@ -205,9 +211,9 @@
         "S3_FLOWS_POSITIONING": -1.0,
         "S4_ETF_TAPE": 1.0
       },
-      "status": "FAIL",
-      "provider": "",
-      "fallback_reason": "step deadline"
+      "status": "OK",
+      "provider": "openclaw",
+      "fallback_reason": ""
     },
     {
       "sector": "Utilities",
@@ -227,7 +233,7 @@
       "components": {},
       "status": "FAIL",
       "provider": "",
-      "fallback_reason": "step deadline"
+      "fallback_reason": ""
     }
   ]
 }
