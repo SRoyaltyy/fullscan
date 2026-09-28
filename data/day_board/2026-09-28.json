@@ -1,6 +1,6 @@
 {
   "date": "2026-09-28",
-  "generated_at": "2026-09-28T14:11:48.458021-04:00",
+  "generated_at": "2026-09-28T14:12:06.943929-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -845,7 +845,7 @@
           "role": "required",
           "status": "OK",
           "reason": "horizons=5 names=155",
-          "size": 1362644,
+          "size": 1362645,
           "said": "1d BUY CNQ, CVE, ASTH, SONO, FIVN, AMN, CON, BAND \u00b7 SELL EOSE, TE, FCEL, METC, ARE, SOC \u00b7 -0.6341",
           "bullets": []
         },
@@ -859,7 +859,7 @@
           "size": 57225,
           "said": "Stock book \u2014 2026-09-28",
           "bullets": [
-            "_Generated 2026-09-28T14:08:19.624641-04:00_",
+            "_Generated 2026-09-28T14:11:57.624384-04:00_",
             "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
           ]
         },
@@ -923,7 +923,7 @@
           "role": "input",
           "status": "OK",
           "reason": "horizons=5 names=155",
-          "size": 1362644,
+          "size": 1362645,
           "said": "1d BUY CNQ, CVE, ASTH, SONO, FIVN, AMN, CON, BAND \u00b7 SELL EOSE, TE, FCEL, METC, ARE, SOC \u00b7 -0.6341",
           "bullets": []
         },
@@ -3238,6 +3238,59 @@
         }
       ],
       "preview": "5097 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-09-28",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-28T14:12:05.940942-04:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-09-28_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1362645,
+          "preview": "1d BUY CNQ, CVE, ASTH, SONO, FIVN, AMN, CON, BAND \u00b7 SELL EOSE, TE, FCEL, METC, ARE, SOC, EXK, BAK"
+        },
+        {
+          "path": "data/stock_book/2026-09-28_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 585,
+          "preview": "green 0 \u00b7 "
+        },
+        {
+          "path": "data/stock_book/2026-09-28_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2453,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-09-28_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 10614,
+          "preview": "2026-09-28 BUY CNQ, CVE, ASTH, SONO, FIVN, AMN, CON, BAND \u00b7 SELL EOSE, TE, FCEL, METC, ARE, SOC, EXK, BAK"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 10614,
+          "preview": "2026-09-28 BUY CNQ, CVE, ASTH, SONO, FIVN, AMN, CON, BAND \u00b7 SELL EOSE, TE, FCEL, METC, ARE, SOC, EXK, BAK"
+        },
+        {
+          "path": "01_daily/2026-09-28_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 58225,
+          "preview": "# Stock book \u2014 2026-09-28\n_Generated 2026-09-28T14:11:57.624384-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY CNQ, CVE, ASTH, SONO, FIVN, AMN, CON, BAND \u00b7 SELL EOSE, TE, FCEL, METC, ARE, SOC, EXK, BAK \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-09-28 BUY CNQ, CVE, ASTH, SONO, FIVN, AMN, CON, BAND \u00b7 SELL EOSE, TE, FCEL, METC, ARE, SOC, EXK, BAK \u00b7 2026-09-28 BUY CNQ, CVE, ASTH, SONO, FIVN, AMN, CON, BAND \u00b7 SELL EOSE, TE, FCEL, METC, ARE, SOC, EXK, BAK \u00b7 # Stock book \u2014 2026-09-28\n_Generated 2026-09-28T14:11:57.624384-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "href": {
