@@ -1,6 +1,6 @@
 {
   "date": "2026-09-28",
-  "generated_at": "2026-09-28T07:42:44.587294-04:00",
+  "generated_at": "2026-09-28T09:16:00.650848-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -177,7 +177,7 @@
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 12,
+      "n_req_ok": 13,
       "n_req": 20,
       "n_opt_ok": 3,
       "n_opt": 3,
@@ -343,12 +343,12 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 6606,
-          "said": "0 up / 2 down / 1 flat",
+          "size": 6775,
+          "said": "0 up / 3 down / 1 flat",
           "bullets": [
             "XLB DOWN -6.8",
             "XLC FLAT -4.6",
-            "XLY missing",
+            "XLY DOWN -6.8",
             "XLP missing"
           ]
         },
@@ -359,8 +359,8 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 7532,
-          "said": "all_ok=False \u00b7 sectors 3/11 \u00b7 9 fail",
+          "size": 7523,
+          "said": "all_ok=False \u00b7 sectors 4/11 \u00b7 8 fail",
           "bullets": [
             "finviz_market_digest:missing",
             "sector_predict:missing",
@@ -423,11 +423,13 @@
           "name": "Sector predict \u2014 consumer_cyclical",
           "path": "01_daily/sectors/2026-09-28/consumer_cyclical_predict.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 19188,
+          "said": "DOWN mild -6.753",
+          "bullets": [
+            "- news_mode: **on"
+          ]
         },
         {
           "key": "sector_consumer_defensive",
@@ -520,7 +522,7 @@
           "bullets": []
         }
       ],
-      "said": "general DOWN  -6.14 \u00b7 sectors 0 up / 2 down / 1 flat \u00b7 news news_mode: on \u00b7 400 raw / 67 usable \u00b7 The 10-year Treasury yield is at its highest in nearly two decades. How we got h",
+      "said": "general DOWN  -6.14 \u00b7 sectors 0 up / 3 down / 1 flat \u00b7 news news_mode: on \u00b7 400 raw / 67 usable \u00b7 The 10-year Treasury yield is at its highest in nearly two decades. How we got h",
       "bullets": [
         "bad: 1w 10Y +24bp at 5.18 handle",
         "bad: NQ -0.94% / XLK -1.18%",
@@ -529,7 +531,7 @@
         "good: Channel 1 Brent offered -4.12%",
         "XLB DOWN -6.8",
         "XLC FLAT -4.6",
-        "XLY missing",
+        "XLY DOWN -6.8",
         "XLP missing",
         "XLE missing"
       ]
@@ -724,12 +726,12 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 6606,
-          "said": "0 up / 2 down / 1 flat",
+          "size": 6775,
+          "said": "0 up / 3 down / 1 flat",
           "bullets": [
             "XLB DOWN -6.8",
             "XLC FLAT -4.6",
-            "XLY missing",
+            "XLY DOWN -6.8",
             "XLP missing"
           ]
         },
@@ -839,7 +841,7 @@
           "role": "required",
           "status": "OK",
           "reason": "horizons=5 names=150",
-          "size": 1314402,
+          "size": 1329943,
           "said": "1d BUY CNQ, ASTH, SONO, FIVN, AMN, CON, BAND, MQ \u00b7 SELL EOSE, FCEL, TE, METC, SOC, ARE \u00b7 -0.6341",
           "bullets": []
         },
@@ -850,10 +852,10 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 53643,
+          "size": 53741,
           "said": "Stock book \u2014 2026-09-28",
           "bullets": [
-            "_Generated 2026-09-28T06:16:23.794035-04:00_",
+            "_Generated 2026-09-28T07:47:09.821142-04:00_",
             "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
           ]
         },
@@ -889,7 +891,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "live-book poller + today.json (2026-09-28)",
-          "size": 8940656,
+          "size": 8944875,
           "said": "live-book poller + today.json (2026-09-28)",
           "bullets": []
         }
@@ -917,7 +919,7 @@
           "role": "input",
           "status": "OK",
           "reason": "horizons=5 names=150",
-          "size": 1314402,
+          "size": 1329943,
           "said": "1d BUY CNQ, ASTH, SONO, FIVN, AMN, CON, BAND, MQ \u00b7 SELL EOSE, FCEL, TE, METC, SOC, ARE \u00b7 -0.6341",
           "bullets": []
         },
@@ -928,7 +930,7 @@
           "role": "required",
           "status": "OK",
           "reason": "live-book poller + today.json (2026-09-28)",
-          "size": 8940656,
+          "size": 8944875,
           "said": "live-book poller + today.json (2026-09-28)",
           "bullets": []
         },
@@ -968,77 +970,77 @@
     "buy_1d": [
       {
         "ticker": "CNQ",
-        "score": 0.17627924527283656
+        "score": 0.12664736847910935
       },
       {
         "ticker": "ASTH",
-        "score": 0.600685324903272
+        "score": 0.5636433562476346
       },
       {
         "ticker": "SONO",
-        "score": 0.7962422855262503
+        "score": 0.7290545770592951
       },
       {
         "ticker": "FIVN",
-        "score": 0.6576903219378318
+        "score": 0.5994548357216387
       },
       {
         "ticker": "AMN",
-        "score": 0.6589857846342768
+        "score": 0.6161014880296676
       },
       {
         "ticker": "CON",
-        "score": 0.6471003114460387
+        "score": 0.605406335306123
       },
       {
         "ticker": "BAND",
-        "score": 0.6798816329541766
+        "score": 0.6194189319535168
       },
       {
         "ticker": "MQ",
-        "score": 0.7084761389836574
+        "score": 0.6451605840083299
       }
     ],
     "sell_1d": [
       {
         "ticker": "EOSE",
-        "score": -0.424116881652071
+        "score": -0.3817312765423017
       },
       {
         "ticker": "FCEL",
-        "score": -0.3893283391665871
+        "score": -0.35041308751736394
       },
       {
         "ticker": "TE",
-        "score": -0.34239495506844914
+        "score": -0.3081763507170246
       },
       {
         "ticker": "METC",
-        "score": -0.16304821383995727
+        "score": -0.35926161860311184
       },
       {
         "ticker": "SOC",
-        "score": -0.39677414877993816
+        "score": -0.3592264307685899
       },
       {
         "ticker": "ARE",
-        "score": -0.4382540152303856
+        "score": -0.37724675732763907
       },
       {
         "ticker": "EXK",
-        "score": 0.08574146788069488
+        "score": -0.13534527097428023
       },
       {
         "ticker": "QBTS",
-        "score": -0.09920151650487147
+        "score": -0.08178211006170005
       },
       {
         "ticker": "BAK",
-        "score": -0.4180196874623082
+        "score": -0.5527352805861339
       },
       {
         "ticker": "USAS",
-        "score": -0.27406804296537
+        "score": -0.45918161421790393
       }
     ],
     "flatten": {
@@ -1061,11 +1063,11 @@
       "direction": "down"
     },
     "sectors": {
-      "said": "0 up / 2 down / 1 flat",
+      "said": "0 up / 3 down / 1 flat",
       "bullets": [
         "XLB DOWN -6.8",
         "XLC FLAT -4.6",
-        "XLY missing",
+        "XLY DOWN -6.8",
         "XLP missing",
         "XLE missing",
         "XLF missing",
@@ -2565,70 +2567,70 @@
     },
     {
       "key": "sector_one",
-      "title": "Sector predict Communication Services (3/11)",
+      "title": "Sector predict Consumer Cyclical (4/11)",
       "date": "2026-09-28",
       "ok": true,
       "pushed": true,
-      "at": "2026-09-28T07:42:43.005844-04:00",
+      "at": "2026-09-28T09:15:58.823855-04:00",
       "files": [
         {
-          "path": "01_daily/sectors/2026-09-28/communication_services_predict.md",
+          "path": "01_daily/sectors/2026-09-28/consumer_cyclical_predict.md",
           "ok": true,
           "reason": "",
-          "size": 20633,
-          "preview": "# Sector Prediction \u2014 Communication Services \u2014 2026-09-28\n- news_mode: **on**\n- ETF: **XLC**\n- rubric: `00_grounding/sectors/communication_services.md`\n- predicted_direction: **flat**\n- predicted_magnitude_band: **flat**\n- total_score: **-4.633** (mult 0.8)\n- regime: mixed\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **-1.098** (NQ -0.97%, ES -0.53%, PM:XLC +0.06%) \u00b7 index_carry **-1.535** (general -6.14) \u00b7 llm_overlay **-2.0** (raw -2.0)"
+          "size": 19188,
+          "preview": "# Sector Prediction \u2014 Consumer Cyclical \u2014 2026-09-28\n- news_mode: **on**\n- ETF: **XLY**\n- rubric: `00_grounding/sectors/consumer_cyclical.md`\n- predicted_direction: **down**\n- predicted_magnitude_band: **mild**\n- total_score: **-6.753** (mult 0.9)\n- regime: mixed\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **-1.168** (ES -0.30%, ER2 +0.08%, NQ -0.49%, PM:XLY -0.14%) \u00b7 index_carry **-1.535** (general -6.14) \u00b7 llm_overlay **-4.05** (raw -4.05)"
         },
         {
-          "path": "01_daily/sectors/2026-09-28/communication_services_predict_trace.md",
+          "path": "01_daily/sectors/2026-09-28/consumer_cyclical_predict_trace.md",
           "ok": true,
           "reason": "",
-          "size": 403,
-          "preview": "# Reasoning trace \u2014 SECTOR PREDICT Communication Services 2026-09-28\n**Step 0 \u2014 Setup.** Loaded 157,510 characters of input. Provider: OpenClaw gateway, backend model `xai/grok-4.6`. Native web/X search was ENABLED inside the agent turn; see the RESEARCH APPENDIX at the end of the output for queries and sources.\n**Step 1 \u2014 Done.** The agent returned its full analysis (18,603 characters)."
+          "size": 398,
+          "preview": "# Reasoning trace \u2014 SECTOR PREDICT Consumer Cyclical 2026-09-28\n**Step 0 \u2014 Setup.** Loaded 151,288 characters of input. Provider: OpenClaw gateway, backend model `xai/grok-4.6`. Native web/X search was ENABLED inside the agent turn; see the RESEARCH APPENDIX at the end of the output for queries and sources.\n**Step 1 \u2014 Done.** The agent returned its full analysis (17,171 characters)."
         },
         {
-          "path": "01_daily/_transcripts/2026-09-28_sector_communication_services_predict.json",
+          "path": "01_daily/_transcripts/2026-09-28_sector_consumer_cyclical_predict.json",
           "ok": true,
           "reason": "",
-          "size": 180473,
+          "size": 173035,
           "preview": "keys: provider, agent, backend_model, messages"
         },
         {
           "path": "01_daily/2026-09-28_preopen_qc.json",
           "ok": true,
           "reason": "",
-          "size": 7532,
+          "size": 7523,
           "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok"
         },
         {
           "path": "01_daily/sectors/2026-09-28/_qc.json",
           "ok": true,
           "reason": "",
-          "size": 1551,
+          "size": 1545,
           "preview": "keys: date, n_ok, n_total, summary, sectors"
         },
         {
           "path": "01_daily/sectors/2026-09-28/_BOARD.md",
           "ok": true,
           "reason": "",
-          "size": 1688,
-          "preview": "# Sector Board \u2014 2026-09-28\nGenerated: **2026-09-28T07:42:42.977046-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.)."
+          "size": 1755,
+          "preview": "# Sector Board \u2014 2026-09-28\nGenerated: **2026-09-28T09:15:58.780783-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.)."
         },
         {
           "path": "01_daily/sectors/2026-09-28/_board.json",
           "ok": true,
           "reason": "",
-          "size": 6606,
+          "size": 6775,
           "preview": "keys: date, generated_at, summary, sectors"
         },
         {
           "path": "03_scoreboard/scoreboard.json",
           "ok": true,
           "reason": "",
-          "size": 926743,
+          "size": 927845,
           "preview": "keys: runs"
         }
       ],
-      "preview": "# Sector Prediction \u2014 Communication Services \u2014 2026-09-28\n- news_mode: **on**\n- ETF: **XLC**\n- rubric: `00_grounding/sectors/communication_services.md`\n- predicted_direction: **flat**\n- predicted_magnitude_band: **flat**\n- total_score: **-4.633** (mult 0.8)\n- regime: mixed\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **-1.098** (NQ -0.97%, ES -0.53%, PM:XLC +0.06%) \u00b7 index_carry **-1.535** (general -6.14) \u00b7 llm_overlay **-2.0** (raw -2.0) \u00b7 # Reasoning trace \u2014 SECTOR PREDICT Communication Services 2026-09-28\n**Step 0 \u2014 Setup.** Loaded 157,510 characters of input. Provider: OpenClaw gateway, backend model `xai/grok-4.6`. Native web/X search was ENABLED inside the agent turn; see the RESEARCH APPENDIX at the end of the output for queries and sources.\n**Step 1 \u2014 Done.** The agent returned its full analysis (18,603 characters). \u00b7 keys: provider, agent, backend_model, messages \u00b7 keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok \u00b7 keys: date, n_ok, n_total, summary, sectors \u00b7 # Sector Board \u2014 2026-09-28\nGenerated: **2026-09-28T07:42:42.977046-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this fil"
+      "preview": "# Sector Prediction \u2014 Consumer Cyclical \u2014 2026-09-28\n- news_mode: **on**\n- ETF: **XLY**\n- rubric: `00_grounding/sectors/consumer_cyclical.md`\n- predicted_direction: **down**\n- predicted_magnitude_band: **mild**\n- total_score: **-6.753** (mult 0.9)\n- regime: mixed\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **-1.168** (ES -0.30%, ER2 +0.08%, NQ -0.49%, PM:XLY -0.14%) \u00b7 index_carry **-1.535** (general -6.14) \u00b7 llm_overlay **-4.05** (raw -4.05) \u00b7 # Reasoning trace \u2014 SECTOR PREDICT Consumer Cyclical 2026-09-28\n**Step 0 \u2014 Setup.** Loaded 151,288 characters of input. Provider: OpenClaw gateway, backend model `xai/grok-4.6`. Native web/X search was ENABLED inside the agent turn; see the RESEARCH APPENDIX at the end of the output for queries and sources.\n**Step 1 \u2014 Done.** The agent returned its full analysis (17,171 characters). \u00b7 keys: provider, agent, backend_model, messages \u00b7 keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok \u00b7 keys: date, n_ok, n_total, summary, sectors \u00b7 # Sector Board \u2014 2026-09-28\nGenerated: **2026-09-28T09:15:58.780783-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file"
     }
   ],
   "href": {

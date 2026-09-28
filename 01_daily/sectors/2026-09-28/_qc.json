@@ -1,6 +1,6 @@
 {
   "date": "2026-09-28",
-  "n_ok": 3,
+  "n_ok": 4,
   "n_total": 11,
   "summary": "",
   "sectors": [
@@ -20,10 +20,10 @@
     },
     {
       "sector": "Consumer Cyclical",
-      "ok": false,
-      "reason": "missing",
-      "size": 0,
-      "status": "FAIL"
+      "ok": true,
+      "reason": "",
+      "size": 19188,
+      "status": "OK"
     },
     {
       "sector": "Consumer Defensive",
