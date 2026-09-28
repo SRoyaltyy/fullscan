@@ -1,0 +1,77 @@
+{
+  "date": "2026-09-28",
+  "generated_at": "2026-09-28T04:23:51.295172-04:00",
+  "timezone": "America/New_York",
+  "source": "live",
+  "source_url": "https://elite.finviz.com/",
+  "archive_snapshot_ts": null,
+  "archive_snapshot_at": null,
+  "archive_url": null,
+  "clock_legal": true,
+  "clock_same_morning": true,
+  "clock_use": "same_morning",
+  "clock_legal_for": "2026-09-28",
+  "clock_rule": "Live: Generated must be before 09:30 ET on this date or leave missing. Wayback: capture before 09:30 ET that day is legal for that morning's Pre-Open. Afternoon Wayback is legal for the NEXT session open only (prior-day close recap), marked by clock_legal_for. Gaps stay gaps. Capture only — not tape_anchor / predict / #210.",
+  "kind": "finviz_homepage_market_digest",
+  "represents": "Finviz homepage market-day prose. Same-morning Pre-Open when Generated is before 09:30 ET; afternoon Wayback is a prior-day close recap legal for the next session only. Not quote-page ticker blurbs.",
+  "error": null,
+  "headline": "US equity futures point to a lower open as oil approaches $106–107 and rising yields reinforce higher‑for‑longer rate expectations ahead of Dallas Fed data",
+  "raw_text": "- S&P 500 Futures (@ES) are down 0.40%, Dow Jones Futures (@YM) decline 0.30%, Nasdaq 100 Futures (@NQ) fall 0.87%, and Russell 2000 Futures (@ER2) slip 0.49% in early trading\n- South Korea’s Kospi drops over 2% while Japan’s Nikkei (@NKD) is little changed after the Asian overnight session\n- Brent crude (@QA) trades toward $106–107 per barrel as reduced prospects for a swift US‑Iran truce add geopolitical pressure to oil markets\n- European equity futures edge modestly higher despite weaker sentiment in Asia and higher crude prices\n- No major US pre‑market stock movers with confirmed catalysts are cited in authoritative coverage after 4 AM ET\n- Overnight earnings activity is limited, with smaller names such as GNS (GNS) and NTWK (NTWK) reporting before the bell and few details versus estimates available\n- The Dallas Fed Manufacturing Business Index is scheduled for release at 10:30 AM ET and is the main item on today’s US economic calendar\n- Investors remain focused on how elevated oil prices may feed inflation and support expectations for higher‑for‑longer Federal Reserve policy rates",
+  "raw_summary_md": "- **S&P 500 Futures ([@ES](https://finviz.com/futures_charts?t=ES)) are down 0.40%**, Dow Jones Futures ([@YM](https://finviz.com/futures_charts?t=YM)) **decline 0.30%**, Nasdaq 100 Futures ([@NQ](https://finviz.com/futures_charts?t=NQ)) **fall 0.87%**, and Russell 2000 Futures ([@ER2](https://finviz.com/futures_charts?t=ER2)) **slip 0.49%** in early trading\n- South Korea’s **Kospi drops over 2%** while Japan’s Nikkei ([@NKD](https://finviz.com/futures_charts?t=NKD)) is **little changed** after the Asian overnight session\n- **Brent crude ([@QA](https://finviz.com/futures_charts?t=QA)) trades toward $106–107 per barrel** as **reduced prospects for a swift US‑Iran truce** add geopolitical pressure to oil markets\n- **European equity futures** edge **modestly higher** despite weaker sentiment in Asia and higher crude prices\n- **No major US pre‑market stock movers with confirmed catalysts** are cited in authoritative coverage after **4 AM ET**\n- Overnight earnings activity is limited, with smaller names such as **GNS ([GNS](https://finviz.com/quote?t=GNS)) and NTWK ([NTWK](https://finviz.com/quote?t=NTWK)) reporting before the bell** and few details versus estimates available\n- The **Dallas Fed Manufacturing Business Index** is scheduled for release at **10:30 AM ET** and is the main item on today’s US economic calendar\n- Investors remain focused on how **elevated oil prices** may feed **inflation** and support expectations for **higher‑for‑longer Federal Reserve policy rates**",
+  "index_moves": [],
+  "oil": {
+    "name": "Brent crude",
+    "price": 106.0,
+    "verb": null,
+    "direction": null
+  },
+  "cpi": null,
+  "fed_odds": null,
+  "named_tickers": [
+    "GNS",
+    "NTWK"
+  ],
+  "named_leaders": [
+    "GNS",
+    "NTWK"
+  ],
+  "calendar": [
+    "The Dallas Fed Manufacturing Business Index is scheduled for release at 10:30 AM ET and is the main item on today’s US economic calendar"
+  ],
+  "prior_close": {
+    "spx": null,
+    "nasdaq": null,
+    "dow": null
+  },
+  "cpi_fed": {
+    "cpi": null,
+    "fed_odds": null
+  },
+  "next_session_calendar": {
+    "housing": false,
+    "retail": false,
+    "fed": true,
+    "bullets": [
+      "The Dallas Fed Manufacturing Business Index is scheduled for release at 10:30 AM ET and is the main item on today’s US economic calendar",
+      "Investors remain focused on how elevated oil prices may feed inflation and support expectations for higher‑for‑longer Federal Reserve policy rates"
+    ],
+    "text": "The Dallas Fed Manufacturing Business Index is scheduled for release at 10:30 AM ET and is the main item on today’s US economic calendar Investors remain focused on how elevated oil prices may feed inflation and support expectations for higher‑for‑longer Federal Reserve policy rates"
+  },
+  "earnings_slate": {
+    "tickers": [],
+    "text": ""
+  },
+  "geo_grain": {
+    "geo": true,
+    "grain": false,
+    "flags": [
+      "geo"
+    ],
+    "text": "Brent crude (@QA) trades toward $106–107 per barrel as reduced prospects for a swift US‑Iran truce add geopolitical pressure to oil markets"
+  },
+  "finviz_id": 295458,
+  "finviz_ticker": "$MARKET",
+  "finviz_published_at": "2026-09-28T04:06:14.577",
+  "finviz_source": "market_summary",
+  "finviz_sentiment": "bad"
+}
