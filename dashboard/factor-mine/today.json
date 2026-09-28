@@ -1,88 +1,88 @@
 {
   "date": "2026-09-28",
-  "generated_at": "2026-09-28T06:16:25.942078-04:00",
+  "generated_at": "2026-09-28T07:16:00.155014-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
-    "ok": 6,
+    "ok": 7,
     "partial": 1,
-    "fail": 1,
+    "fail": 0,
     "n": 8
   },
   "buy_1d": [
     {
       "ticker": "CNQ",
-      "score": 0.17627924527283656
+      "score": 0.12664736847910935
     },
     {
       "ticker": "ASTH",
-      "score": 0.600685324903272
+      "score": 0.5636433562476346
     },
     {
       "ticker": "SONO",
-      "score": 0.7962422855262503
+      "score": 0.7290545770592951
     },
     {
       "ticker": "FIVN",
-      "score": 0.6576903219378318
+      "score": 0.5994548357216387
     },
     {
       "ticker": "AMN",
-      "score": 0.6589857846342768
+      "score": 0.6161014880296676
     },
     {
       "ticker": "CON",
-      "score": 0.6471003114460387
+      "score": 0.605406335306123
     },
     {
       "ticker": "BAND",
-      "score": 0.6798816329541766
+      "score": 0.6194189319535168
     },
     {
       "ticker": "MQ",
-      "score": 0.7084761389836574
+      "score": 0.6451605840083299
     }
   ],
   "sell_1d": [
     {
       "ticker": "EOSE",
-      "score": -0.424116881652071
+      "score": -0.3817312765423017
     },
     {
       "ticker": "FCEL",
-      "score": -0.3893283391665871
+      "score": -0.35041308751736394
     },
     {
       "ticker": "TE",
-      "score": -0.34239495506844914
+      "score": -0.3081763507170246
     },
     {
       "ticker": "METC",
-      "score": -0.16304821383995727
+      "score": -0.12676161860311186
     },
     {
       "ticker": "SOC",
-      "score": -0.39677414877993816
+      "score": -0.3592264307685899
     },
     {
       "ticker": "ARE",
-      "score": -0.4382540152303856
+      "score": -0.37724675732763907
     },
     {
       "ticker": "EXK",
-      "score": 0.08574146788069488
+      "score": 0.09715472902571981
     },
     {
       "ticker": "QBTS",
-      "score": -0.09920151650487147
+      "score": -0.08178211006170005
     },
     {
       "ticker": "BAK",
-      "score": -0.4180196874623082
+      "score": -0.36023528058613385
     },
     {
       "ticker": "USAS",
-      "score": -0.27406804296537
+      "score": -0.2266816142179039
     }
   ],
   "flatten": {
@@ -105,7 +105,7 @@
     "direction": "down"
   },
   "sectors": {
-    "said": "0 up / 0 down / 0 flat",
+    "said": "0 up / 1 down / 0 flat",
     "bullets": [
       "XLB missing",
       "XLC missing",
@@ -116,7 +116,7 @@
       "XLV missing",
       "XLI missing",
       "XLRE missing",
-      "XLK missing",
+      "XLK DOWN -13.4",
       "XLU missing"
     ]
   },
@@ -1587,6 +1587,73 @@
         }
       ],
       "preview": "# flatten_robust card \u2014 2026-09-28\n_Generated 2026-09-28T10:07:06 \u2014 live `flatten_robust`._\n**S=-6.14; hard-red: no new buys; holds and due 1d exits stay**\n- Score **-6.14** (DOWN) \u00b7 route **hold** \u00b7 HARD-RED\n- Cash leftover **$67,378.63** (after 09:30 $67,378.63 \u00b7 after 16:00 $101,470.11)\n- Prior close **$101,493.78** \u00b7 09:30 **$101,493.78** \u00b7 overnight **$+0.00** \u00b7 session **$-23.67** \u00b7 16:00 **$101,470.11**\n- Overnight lots **8** \u00b7 priced mover BUYs **0** \u00b7 prior book yes\n- Planned buy cost **$0.00** \u2264 leftover after sells **$101,470.11** \u00b7 2026-09-28 BUY \u2014 \u00b7 SELL \u2014 \u00b7 [{\"date\": \"2026-08-13\", \"route\": \"io\", \"score\": 8.525, \"predict\": \"UP\", \"yday_equity\": 100000.0, \"open_cash\": 100000.0, \"open_held\": 0, \"open_equity\": 100000.0, \"overnight_delta\": 0.0, \"session_delta\": -169.94, \"equity\": 99830.06, \"cash\": 9917.52, \"overnight_names\": \"\", \"overnight\": [], \"marks\": [{\"ticker\": \"BTSG\", \"sleeve\": \"io_core\", \"shares_open\": 0, \"shares_close\": 166, \"shares\": 166, \"side\": \"BUY\", \"yday_px\": null, \"open_px\": 59.8, \"close_px\": 60.23, \"entry_px\": 60.23, \"entry_date\": \"2026-08-13\", \"overnight\": 0.0, \"session\": 71.38, \"day\": 71.38, \"pct_overnight\": null, \"pct_session\": 0.719, \"held\": \"bought\"}, {"
+    },
+    {
+      "key": "sector_one",
+      "title": "Sector predict Technology (1/11)",
+      "date": "2026-09-28",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-28T07:11:43.423199-04:00",
+      "files": [
+        {
+          "path": "01_daily/sectors/2026-09-28/technology_predict.md",
+          "ok": true,
+          "reason": "",
+          "size": 19193,
+          "preview": "# Sector Prediction \u2014 Technology \u2014 2026-09-28\n- news_mode: **on**\n- ETF: **XLK**\n- rubric: `00_grounding/sectors/technology.md`\n- predicted_direction: **down**\n- predicted_magnitude_band: **mild**\n- total_score: **-13.383** (mult 0.85)\n- regime: risk_off\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **-6.535** (NQ -0.96%, ES -0.52%, PM:XLK -1.16%) \u00b7 index_carry **-1.535** (general -6.14) \u00b7 llm_overlay **-5.312** (raw -5.312)"
+        },
+        {
+          "path": "01_daily/sectors/2026-09-28/technology_predict_trace.md",
+          "ok": true,
+          "reason": "",
+          "size": 391,
+          "preview": "# Reasoning trace \u2014 SECTOR PREDICT Technology 2026-09-28\n**Step 0 \u2014 Setup.** Loaded 151,529 characters of input. Provider: OpenClaw gateway, backend model `xai/grok-4.6`. Native web/X search was ENABLED inside the agent turn; see the RESEARCH APPENDIX at the end of the output for queries and sources.\n**Step 1 \u2014 Done.** The agent returned its full analysis (17,199 characters)."
+        },
+        {
+          "path": "01_daily/_transcripts/2026-09-28_sector_technology_predict.json",
+          "ok": true,
+          "reason": "",
+          "size": 173127,
+          "preview": "keys: provider, agent, backend_model, messages"
+        },
+        {
+          "path": "01_daily/2026-09-28_preopen_qc.json",
+          "ok": true,
+          "reason": "",
+          "size": 8317,
+          "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok"
+        },
+        {
+          "path": "01_daily/sectors/2026-09-28/_qc.json",
+          "ok": true,
+          "reason": "",
+          "size": 2330,
+          "preview": "keys: date, n_ok, n_total, summary, sectors"
+        },
+        {
+          "path": "01_daily/sectors/2026-09-28/_BOARD.md",
+          "ok": true,
+          "reason": "",
+          "size": 1621,
+          "preview": "# Sector Board \u2014 2026-09-28\nGenerated: **2026-09-28T07:11:43.372510-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.)."
+        },
+        {
+          "path": "01_daily/sectors/2026-09-28/_board.json",
+          "ok": true,
+          "reason": "",
+          "size": 6537,
+          "preview": "keys: date, generated_at, summary, sectors"
+        },
+        {
+          "path": "03_scoreboard/scoreboard.json",
+          "ok": true,
+          "reason": "",
+          "size": 924529,
+          "preview": "keys: runs"
+        }
+      ],
+      "preview": "# Sector Prediction \u2014 Technology \u2014 2026-09-28\n- news_mode: **on**\n- ETF: **XLK**\n- rubric: `00_grounding/sectors/technology.md`\n- predicted_direction: **down**\n- predicted_magnitude_band: **mild**\n- total_score: **-13.383** (mult 0.85)\n- regime: risk_off\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **-6.535** (NQ -0.96%, ES -0.52%, PM:XLK -1.16%) \u00b7 index_carry **-1.535** (general -6.14) \u00b7 llm_overlay **-5.312** (raw -5.312) \u00b7 # Reasoning trace \u2014 SECTOR PREDICT Technology 2026-09-28\n**Step 0 \u2014 Setup.** Loaded 151,529 characters of input. Provider: OpenClaw gateway, backend model `xai/grok-4.6`. Native web/X search was ENABLED inside the agent turn; see the RESEARCH APPENDIX at the end of the output for queries and sources.\n**Step 1 \u2014 Done.** The agent returned its full analysis (17,199 characters). \u00b7 keys: provider, agent, backend_model, messages \u00b7 keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok \u00b7 keys: date, n_ok, n_total, summary, sectors \u00b7 # Sector Board \u2014 2026-09-28\nGenerated: **2026-09-28T07:11:43.372510-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`,"
     }
   ],
   "source": "publish_live_boards"
