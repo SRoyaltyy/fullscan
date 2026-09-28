@@ -1,12 +1,12 @@
 {
   "date": "2026-09-28",
-  "generated_at": "2026-09-28T05:41:03.740619-04:00",
+  "generated_at": "2026-09-28T05:41:21.844422-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
   "counts": {
-    "ok": 4,
-    "partial": 4,
+    "ok": 6,
+    "partial": 2,
     "fail": 0,
     "n": 8
   },
@@ -688,11 +688,11 @@
       "key": "stock_book",
       "name": "Stock Book ALL",
       "yaml": "stock_book_all.yml",
-      "status": "PARTIAL",
+      "status": "OK",
       "inputs_ready": true,
-      "n_req_ok": 2,
+      "n_req_ok": 4,
       "n_req": 4,
-      "n_opt_ok": 1,
+      "n_opt_ok": 3,
       "n_opt": 3,
       "files": [
         {
@@ -831,10 +831,10 @@
           "name": "Stock book JSON",
           "path": "data/stock_book/2026-09-28_stock_book.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "horizons=5 names=143",
+          "size": 1260398,
+          "said": "1d BUY THC, ASTH, GCT \u00b7 SELL TE, FCEL, OKLO, PLUG, EOSE, SOC \u00b7 -0.6341",
           "bullets": []
         },
         {
@@ -842,21 +842,24 @@
           "name": "Stock book MD",
           "path": "01_daily/2026-09-28_stock_book.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 45577,
+          "said": "Stock book \u2014 2026-09-28",
+          "bullets": [
+            "_Generated 2026-09-28T05:41:14.614881-04:00_",
+            "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
+          ]
         },
         {
           "key": "green",
           "name": "Green-pile JSON",
           "path": "data/stock_book/2026-09-28_green.json",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "",
+          "size": 585,
+          "said": "0 green \u00b7",
           "bullets": []
         },
         {
@@ -878,10 +881,10 @@
           "name": "Dashboard HTML",
           "path": "dashboard/index.html",
           "role": "optional",
-          "status": "FAIL",
-          "reason": "session 2026-09-28 not in dashboard dates (last=2026-09-25)",
+          "status": "OK",
+          "reason": "live-book poller + today.json (2026-09-28)",
           "size": 8940656,
-          "said": "session 2026-09-28 not in dashboard dates (last=2026-09-25)",
+          "said": "live-book poller + today.json (2026-09-28)",
           "bullets": []
         }
       ],
@@ -894,9 +897,9 @@
       "key": "publish",
       "name": "Dashboard / .io",
       "yaml": "deploy-dashboard.yml",
-      "status": "PARTIAL",
-      "inputs_ready": false,
-      "n_req_ok": 1,
+      "status": "OK",
+      "inputs_ready": true,
+      "n_req_ok": 2,
       "n_req": 2,
       "n_opt_ok": 0,
       "n_opt": 1,
@@ -906,10 +909,10 @@
           "name": "Stock book JSON",
           "path": "data/stock_book/2026-09-28_stock_book.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "horizons=5 names=143",
+          "size": 1260398,
+          "said": "1d BUY THC, ASTH, GCT \u00b7 SELL TE, FCEL, OKLO, PLUG, EOSE, SOC \u00b7 -0.6341",
           "bullets": []
         },
         {
@@ -917,10 +920,10 @@
           "name": "Dashboard HTML (repo)",
           "path": "dashboard/index.html",
           "role": "required",
-          "status": "FAIL",
-          "reason": "session 2026-09-28 not in dashboard dates (last=2026-09-25)",
+          "status": "OK",
+          "reason": "live-book poller + today.json (2026-09-28)",
           "size": 8940656,
-          "said": "session 2026-09-28 not in dashboard dates (last=2026-09-25)",
+          "said": "live-book poller + today.json (2026-09-28)",
           "bullets": []
         },
         {
@@ -956,8 +959,54 @@
   "news_mode": "on",
   "news_mode_reason": "",
   "selections": {
-    "buy_1d": [],
-    "sell_1d": [],
+    "buy_1d": [
+      {
+        "ticker": "THC",
+        "score": 0.2758575723404744
+      },
+      {
+        "ticker": "ASTH",
+        "score": 0.6374613921152084
+      },
+      {
+        "ticker": "GCT",
+        "score": 0.6888681328102133
+      }
+    ],
+    "sell_1d": [
+      {
+        "ticker": "TE",
+        "score": -0.3970689065338548
+      },
+      {
+        "ticker": "FCEL",
+        "score": -0.35784053349762995
+      },
+      {
+        "ticker": "OKLO",
+        "score": -0.2866608229696523
+      },
+      {
+        "ticker": "PLUG",
+        "score": -0.2304824109682534
+      },
+      {
+        "ticker": "EOSE",
+        "score": -0.42136924166283257
+      },
+      {
+        "ticker": "SOC",
+        "score": -0.39255794653954107
+      },
+      {
+        "ticker": "EXK",
+        "score": 0.04808582785831916
+      },
+      {
+        "ticker": "QBTS",
+        "score": -0.13082890906013284
+      }
+    ],
     "flatten": {},
     "general": {
       "said": "DOWN  -6.14",
@@ -1713,6 +1762,59 @@
         }
       ],
       "preview": "2661 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 FIGS, WAY, AAPL, GCT, RGEN \u00b7 2661 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 RGEN, ICLR, FIGS, BJ, GMAB"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-09-28",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-28T05:41:21.055546-04:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-09-28_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1260398,
+          "preview": "1d BUY THC, ASTH, GCT \u00b7 SELL TE, FCEL, OKLO, PLUG, EOSE, SOC, EXK, QBTS"
+        },
+        {
+          "path": "data/stock_book/2026-09-28_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 585,
+          "preview": "green 0 \u00b7 "
+        },
+        {
+          "path": "data/stock_book/2026-09-28_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2492,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-09-28_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 9497,
+          "preview": "2026-09-28 BUY THC, ASTH, GCT \u00b7 SELL TE, FCEL, OKLO, PLUG, EOSE, SOC, EXK, QBTS"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 9497,
+          "preview": "2026-09-28 BUY THC, ASTH, GCT \u00b7 SELL TE, FCEL, OKLO, PLUG, EOSE, SOC, EXK, QBTS"
+        },
+        {
+          "path": "01_daily/2026-09-28_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 46511,
+          "preview": "# Stock book \u2014 2026-09-28\n_Generated 2026-09-28T05:41:14.614881-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY THC, ASTH, GCT \u00b7 SELL TE, FCEL, OKLO, PLUG, EOSE, SOC, EXK, QBTS \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-09-28 BUY THC, ASTH, GCT \u00b7 SELL TE, FCEL, OKLO, PLUG, EOSE, SOC, EXK, QBTS \u00b7 2026-09-28 BUY THC, ASTH, GCT \u00b7 SELL TE, FCEL, OKLO, PLUG, EOSE, SOC, EXK, QBTS \u00b7 # Stock book \u2014 2026-09-28\n_Generated 2026-09-28T05:41:14.614881-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "href": {
