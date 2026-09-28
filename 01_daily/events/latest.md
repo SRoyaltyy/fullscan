@@ -1,258 +1,260 @@
-# Event Scan — 2026-09-25
+# Event Scan — 2026-09-28
 
-- events tracked: **32** (via openclaw)
+- events tracked: **36** (via openclaw)
 - uncertainty: **elevated**
-- summary: The Sept 24 Trump–Xi pageant extended the trade truce to Jan 10 and removed the Nov 10 cliff, but it did not de-risk the market: Hormuz is still barely open (Brent ~$106, single-digit daily transits), UNGA diplomacy produced no deal, and futures have lifted October 28 hike odds to roughly two-thirds. This window's live catalysts are Canada Section 338 bans (Sept 29), labor/PCE week (Sept 29–Oct 2), China PMI into Golden Week (Sept 30), Micron (Sept 30), and the Oct 4 OPEC+ meeting — not a US shutdown, which is already funded through Dec 11.
+- summary: The Sep 24 Trump-Xi pageant extended the trade truce to Jan 10 2027 and removed the Nov 10 cliff, but it did not de-risk the tape: Hormuz is still barely open (Brent ~$107, single-digit daily transits), UNGA diplomacy produced no deal, and prediction markets still price roughly two-thirds odds of another 25 bp Warsh hike on Oct 28. This window's live catalysts are Canada Section 338 bans (Sep 29), labor/PCE week (Sep 29-Oct 2), China PMI into Golden Week (Sep 30), Micron (Sep 30), and the Oct 4 OPEC+ meeting — not a US shutdown, which is already funded through Dec 11.
 
-## Events tracked (32)
+## Events tracked (36)
 
-1. **Hormuz tanker war; Brent ~$106, commercial transits still a fraction of normal**
+1. **Hormuz still barely open; Brent ~$107**
    - ongoing | today | 2026-09-07..2026-10-08 | impact 4/5 | mixed
    - regions: US, Iran, EU, JP, KR, CN | sectors: Energy, Industrials, BROAD
-   - Ship-tracking shows only ~9 commodity transits on the latest day versus a pre-war ~125 large vessels/day, keeping a war premium in G3 inflation and the Warsh extra-hike path.
-2. **China Mid-Autumn / Golden Week travel surge begins**
+   - Commercial transits remain a small fraction of the pre-war ~125 large vessels/day, keeping a war premium in G3 inflation and the Warsh extra-hike path.
+2. **China Mid-Autumn/Golden Week travel and market shutdown**
    - ongoing | today | 2026-09-25..2026-10-08 | impact 2/5 | mixed
    - regions: CN | sectors: Consumer Cyclical, Consumer Defensive, Energy, Industrials
-   - Overlapping Mid-Autumn and National Day holidays should lift domestic services/travel prints, but EV/rail substitution has already killed the old Golden Week gasoline spike.
-3. **Trump–Xi White House summit; trade truce extended to Jan 10**
-   - geopolitical | past | 2026-09-24 | impact 4/5 | bullish
-   - regions: US, CN, TW | sectors: BROAD, Technology, Industrials, Consumer Cyclical
-   - Bessent's two-month extension removes the Nov 10 tariff-cliff tail and buys negotiation runway, but no broader deal on rare earths, AI, or Taiwan was announced.
-4. **US–Iran UNGA shuttle talks on reopening Hormuz**
-   - geopolitical | past | 2026-09-22..2026-09-23 | impact 4/5 | mixed
-   - regions: US, Iran, EU, JP, KR, CN | sectors: Energy, Industrials, BROAD
-   - First real contact in months was called 'very productive,' but Iran denies dropping preconditions (end blockade, lift pressure, unfreeze assets), so oil remains headline-driven.
-5. **80 countries demand urgent Hormuz reopening at UNGA**
-   - geopolitical | past | 2026-09-24 | impact 3/5 | mixed
-   - regions: US, Iran, EU, KR | sectors: Energy, BROAD
-   - A GCC-plus-West joint statement condemns Iranian/Houthi interference and demands unimpeded transit with no tolls, raising diplomatic pressure without reopening the strait.
-6. **Trump–Zelenskyy UNGA push for Ukraine energy/Black Sea truce**
-   - geopolitical | past | 2026-09-22 | impact 3/5 | mixed
-   - regions: US, EU, RU | sectors: Energy, Industrials, BROAD
-   - A limited energy-infrastructure or grain-corridor pause would ease the diesel crunch from Russian refinery hits, but the Kremlin still rejects a simple ceasefire and has not moved on territory.
-7. **Graham Russia/Iran Act signed; up to 100% secondary tariffs**
-   - legislative | past | 2026-09-18 | impact 4/5 | mixed
-   - regions: US, RU, IN, CN, EU | sectors: Energy, BROAD, Industrials
-   - Law now requires up-to-100% tariffs on top buyers of Russian crude/gas that keep buying, a live escalation channel into China/India trade and crude flows, with presidential waiver discretion.
-8. **FY2027 CR already law through Dec 11; Sept 30 shutdown risk dead**
-   - legislative | past | 2026-09-30 | impact 1/5 | bullish
-   - regions: US | sectors: BROAD, Financial, Healthcare, Industrials
-   - H.R. 6500 / P.L. 119-103 was signed Sept 2, so the Oct 1 funding cliff the prior scan flagged is not live; next fight is the Dec 11 lame-duck CR.
-9. **US Section 338 import bans on selected Canadian goods take effect**
+   - Only three mainland workdays (Sep 28-30) sit between holidays; A-shares/FX close Oct 1-7, so PMI and any risk-off must clear before the shutdown.
+3. **PBoC up-to-RMB1tn/day holiday reverse repos**
+   - macro_data | today | 2026-09-28..2026-10-08 | impact 2/5 | bullish
+   - regions: CN | sectors: Financial, Real Estate
+   - Record-scale overnight RRPs from today through Oct 8 are meant to offset Golden Week and quarter-end cash demand, not a signal of an LPR cut.
+4. **BoJ July minutes (hawkish pre-1.25% hike)**
+   - macro_data | today | 2026-09-28 | impact 2/5 | mixed
+   - regions: JP | sectors: Financial, BROAD
+   - Minutes of the Jul 30-31 hold show members already debating faster hikes on oil/yen/wage pass-through, validating the Sep 18 move to 1.25%.
+5. **Teamsters expand Amazon warehouse pickets**
+   - ongoing | today | 2026-09-27..2026-10-12 | impact 2/5 | bearish
+   - regions: US | sectors: Consumer Cyclical, Industrials
+   - Union says pickets hit multiple FCs after a Sep 2 Riverside one-day ULP strike; Amazon's network can reroute, but peak-season delay risk is the market channel.
+6. **US Section 338 bans on selected Canadian goods**
    - government | upcoming | 2026-09-29 | impact 2/5 | bearish
    - regions: US, CA | sectors: Consumer Cyclical, Consumer Defensive, Industrials
-   - Sept 8 proclamations convert parts of the 50% Canada tit-for-tat into outright bans on specified beer/wine/spirits, some whey, and >800cc motorcycles at 12:01 a.m. ET Sept 29.
-10. **IEEPA tariff refunds; CAPE Phase 3 and Federal Circuit appeal**
-   - judicial | upcoming | 2026-10-06 | impact 3/5 | mixed
-   - regions: US | sectors: BROAD, Consumer Cyclical, Industrials
-   - Post-SCOTUS IEEPA invalidation, CBP is refunding unliquidated entries while DOJ appeals CIT's universal finally-liquidated refund order; Phase 3 is targeted around Oct 6.
-11. **Google ad-tech remedy: behavioral only, AdX not divested**
-   - judicial | past | 2026-09-16 | impact 2/5 | bullish
-   - regions: US | sectors: Communication Services, Technology
-   - Unsealed Brinkema opinion (ruling Sept 2) spares AdX, orders interoperability/non-discrimination for six years — a relief for GOOGL and a negative for ad-tech plaintiffs.
-12. **August PCE, personal income, and Q2 GDP third estimate + NIPA revisions**
-   - macro_data | upcoming | 2026-09-30 | impact 4/5 | mixed
-   - regions: US | sectors: BROAD, Financial, Real Estate, Consumer Cyclical
-   - First post-Warsh-hike inflation print; consensus clusters around core PCE +0.24–0.28% m/m and ~3.3–3.4% y/y, with annual NIPA revisions that could shave y/y and reprice the extra 2026 hike.
-13. **September nonfarm payrolls (October 2 jobs report)**
-   - macro_data | upcoming | 2026-10-02 | impact 4/5 | mixed
-   - regions: US | sectors: BROAD, Financial
-   - August was +162k; consensus now +90–110k and U-3 4.1–4.2%. A hot print cements ~65–72% Oct 28 hike odds; a miss revives the Warsh-overtightening debate.
-14. **August JOLTS job openings**
+   - Sep 8 proclamations convert parts of the 50% Canada tit-for-tat into outright bans on specified beer/wine/spirits, some whey, and >800cc motorcycles at 12:01 a.m. ET Sep 29.
+7. **August JOLTS job openings**
    - macro_data | upcoming | 2026-09-29 | impact 2/5 | mixed
    - regions: US | sectors: BROAD, Financial
    - Opens labor week into NFP; consensus ~7.2m after July's ~7.27m, a gauge of how much tightness the Warsh Fed still sees.
-15. **Conference Board consumer confidence (September)**
+8. **Conference Board consumer confidence (September)**
    - macro_data | upcoming | 2026-09-29 | impact 2/5 | mixed
-   - regions: US | sectors: Consumer Cyclical, Financial
-   - Oil-at-$106 and the Warsh hike are the two things that can crack spending intentions before PCE.
-16. **ISM Manufacturing PMI (September)**
-   - macro_data | upcoming | 2026-10-01 | impact 2/5 | mixed
-   - regions: US | sectors: Industrials, Basic Materials, BROAD
-   - August printed 54.6; one preview is 55.5. A still-expanding factory sector plus oil shock is the hawkish mix for Warsh.
-17. **August new-home sales beat at 684k SAAR**
-   - macro_data | past | 2026-09-24 | impact 2/5 | bullish
-   - regions: US | sectors: Real Estate, Consumer Cyclical, Financial
-   - Sales jumped 6.4% m/m to 684k (vs ~615–620k expected), showing the housing crack in existing sales/starts has not fully hit new-home demand after the Warsh hike.
-18. **BoJ 1.25% policy rate; 10y JGB at three-decade highs**
-   - macro_data | past | 2026-09-18..2026-09-24 | impact 3/5 | mixed
-   - regions: JP, US | sectors: Financial, BROAD
-   - Highest BoJ rate in 31 years (Sept 18, 7-2) is transmitting into JGBs (~3.07% 10y on Sept 24) and global duration just as G3 tightening is otherwise unfinished.
-19. **Takaichi fiscal stimulus / Japan debt-jitter debate**
-   - government | upcoming | 2026-09-26..2026-10-09 | impact 3/5 | mixed
-   - regions: JP | sectors: Financial, Industrials, Technology
-   - Growth package, food-tax cut talk, and record FY2027 budget requests are colliding with BoJ hikes, feeding the JGB selloff and global duration spillover.
-20. **Japan Tankan large manufacturers (Q3)**
-   - macro_data | upcoming | 2026-10-01 | impact 2/5 | mixed
-   - regions: JP | sectors: Industrials, Financial, Technology
-   - QUICK/CME consensus is +25 current DI (from +22), a read on whether rate hikes and energy costs are biting capex before the late-October BoJ.
-21. **PBOC pledges appropriately loose policy; LPR held 16th month**
-   - government | past | 2026-09-24 | impact 2/5 | mixed
-   - regions: CN | sectors: Financial, Real Estate, Consumer Cyclical, BROAD
-   - Accommodative pledge plus a stable yuan into the Xi visit is incremental easing, not a bazooka; 1y/5y LPR stay 3.0%/3.5% and near-term cuts look unlikely.
-22. **China NBS PMI (September) into Golden Week**
+   - regions: US | sectors: Consumer Cyclical, BROAD
+   - Same-morning companion to JOLTS into PCE/NFP; oil at ~$107 and 7% mortgages are the downside risks to the labor-differential.
+9. **August PCE, personal income, Q2 GDP third estimate + NIPA revisions**
+   - macro_data | upcoming | 2026-09-30 | impact 4/5 | mixed
+   - regions: US | sectors: BROAD, Financial, Real Estate, Consumer Cyclical
+   - First post-Warsh-hike inflation print plus annual NIPA revisions; consensus clusters around core PCE +0.24-0.28% m/m and ~3.3% y/y, GDP third ~1.5-1.6%.
+10. **China September NBS PMI (pre-Golden Week)**
    - macro_data | upcoming | 2026-09-30 | impact 3/5 | mixed
-   - regions: CN | sectors: Industrials, Basic Materials, Consumer Cyclical, BROAD
-   - Official mfg PMI was 49.8 in August (fourth sub-50 stretch); another contraction into the holiday would keep the 'exports strong, consumption dead' split in play.
-23. **China August activity: IP +5.2% vs retail +0.4%**
-   - macro_data | past | 2026-09-15 | impact 2/5 | mixed
-   - regions: CN | sectors: Industrials, Consumer Cyclical, Consumer Defensive
-   - Factory/high-tech resilience versus stalled consumption is why Beijing is doing targeted trade-in/bank capital measures rather than a 2024-style bazooka.
-24. **Eurozone HICP flash (September)**
-   - macro_data | upcoming | 2026-10-02 | impact 3/5 | mixed
-   - regions: EU | sectors: BROAD, Financial, Energy, Utilities
-   - August final was 3.2% y/y after a 3.3% flash, driven by energy +14.3%; another hot print keeps a non-trivial chance of an ECB hike at the Oct 29 meeting (just outside this window).
-25. **UK Q2 GDP third/quarterly release**
-   - macro_data | upcoming | 2026-09-30 | impact 2/5 | mixed
-   - regions: EU | sectors: BROAD, Financial
-   - BoE held 3.75% on Sept 17 (6-3, three hikers); a firm GDP print into energy inflation keeps sterling rates sticky with no October MPC.
-26. **OPEC+ eight-country meeting on November quotas**
-   - geopolitical | upcoming | 2026-10-04 | impact 3/5 | mixed
-   - regions: US, EU, CN, JP | sectors: Energy
-   - The Sept 6 virtual meeting froze October targets after completing the last 188 kb/d unwind; Oct 4 decides November against a Hormuz-disrupted physical market.
-27. **Micron FY Q4 2026 earnings**
-   - earnings | upcoming | 2026-09-30 | impact 3/5 | mixed
+   - regions: CN | sectors: Industrials, Basic Materials, Technology, BROAD
+   - Last mainland print before the Oct 1-7 close; consensus sees manufacturing back to ~50.1-50.2 after August 49.8, with non-manufacturing still sub-50.
+11. **Micron FY Q4 2026 earnings**
+   - earnings | upcoming | 2026-09-30 | impact 3/5 | bullish
    - regions: US, KR, TW, JP | sectors: Technology
-   - Only mega-cap-adjacent AI/memory bellwether reporting this week; guide on HBM/DRAM tightness is the sector tape into a Mag7-quiet window.
-28. **Nike FY Q1 2027 and Accenture FY26 earnings**
+   - Marquee AI/HBM print into a memory shortage; guide and HBM mix will reprice semis after SK Hynix/Samsung inventories fell below ~10 days.
+12. **FCC Open Meeting: unlock satellite spectrum**
+   - government | upcoming | 2026-09-30 | impact 2/5 | bullish
+   - regions: US | sectors: Communication Services, Technology, Industrials
+   - Commission considers a Report and Order unlocking >1,000 MHz in 12.7 GHz and 42 GHz for FSS plus FNPRMs on more Ku/Ka/D-band satellite use.
+13. **ISM Manufacturing PMI (September)**
+   - macro_data | upcoming | 2026-10-01 | impact 3/5 | mixed
+   - regions: US | sectors: Industrials, Basic Materials, BROAD
+   - Factory gauge after August 54.6; consensus mid-54s to ~55, still expansion but a prices-paid spike would feed the Warsh hike path.
+14. **Accenture FY26 Q4 earnings**
    - earnings | upcoming | 2026-10-01 | impact 2/5 | mixed
-   - regions: US, CN, EU | sectors: Consumer Cyclical, Technology, Industrials
-   - NKE is the China/consumer-demand tell; ACN is the IT-services/AI-spend tell. No Magnificent-7 reports until late October.
-29. **Oura IPO pricing window (~$2.1–2.2bn)**
-   - ipo | upcoming | 2026-09-28..2026-09-30 | impact 2/5 | mixed
-   - regions: US | sectors: Healthcare, Consumer Cyclical, Technology
-   - Largest consumer/healthtech deal in this window (50m shares at $40–44, mostly secondary) is a risk-appetite test with Mag7 earnings still a month away.
-30. **SpaceX staggered lockup tranche (~7% eligible)**
-   - ipo | upcoming | 2026-10-09 | impact 2/5 | bearish
-   - regions: US | sectors: Industrials, Technology, Communication Services
-   - Another ~328m Class A shares become eligible; prior tranches saw ~4% one-day dips. Musk remains locked into 2027.
-31. **Anthropic IPO marketing window (confidential S-1)**
-   - ipo | upcoming | 2026-10-06..2026-10-09 | impact 3/5 | mixed
-   - regions: US | sectors: Technology, Communication Services
-   - Sources have pointed to a mid-October launch after a June confidential S-1; a $1T-scale AI listing would dominate risk appetite even if pricing slips past this window.
-32. **Samsung/SK Hynix vs KEPCO grid-prepay fight**
-   - ongoing | upcoming | 2026-09-26..2026-10-09 | impact 2/5 | mixed
-   - regions: KR | sectors: Technology, Utilities
-   - Memory majors rejected a ~$18.6bn electricity prepay to fund chip-cluster power; this is the binding constraint on AI HBM expansion, not the summer heat wave (no Sept fab-outage reports).
+   - regions: US, EU | sectors: Technology, Industrials
+   - IT-services bellwether (consensus EPS ~$3.18) is a read-through on AI project conversion versus consulting slowdown.
+15. **Nike FY27 Q1 earnings**
+   - earnings | upcoming | 2026-10-01 | impact 2/5 | mixed
+   - regions: US, CN, EU | sectors: Consumer Cyclical
+   - Global consumer/China wholesale reset print (consensus EPS ~$0.44, sales ~$11.3bn) after a multi-quarter share-loss cycle.
+16. **September nonfarm payrolls**
+   - macro_data | upcoming | 2026-10-02 | impact 4/5 | mixed
+   - regions: US | sectors: BROAD, Financial
+   - August was +162k; consensus now +90-110k and U-3 4.1-4.2%. A hot print cements ~64-66% Oct 28 hike odds; a miss revives the Warsh-overtightening debate.
+17. **Euro area September flash HICP**
+   - macro_data | upcoming | 2026-10-02 | impact 3/5 | mixed
+   - regions: EU | sectors: BROAD, Energy, Financial
+   - First inflation print after the Sep 10 ECB 25 bp hike to 2.50% DF; August headline was 3.2-3.3% on energy +14.3%.
+18. **OPEC+ monthly Joint Ministerial meeting**
+   - geopolitical | upcoming | 2026-10-04 | impact 3/5 | unclear
+   - regions: US, EU, CN, JP | sectors: Energy, BROAD
+   - Sep 6 hold left October quotas unchanged because Hormuz, not spare capacity, is the binding constraint; Oct 4 sets November policy and 2027 capacity-audit talk.
+19. **ISM Services PMI (September)**
+   - macro_data | upcoming | 2026-10-05 | impact 3/5 | mixed
+   - regions: US | sectors: BROAD, Financial, Industrials
+   - Services are still the growth engine (August 55.4); consensus ~54.0, so a re-acceleration would support the extra-hike narrative into Oct 7 minutes.
+20. **IEEPA CAPE Phase 3 finally-liquidated refunds**
+   - judicial | upcoming | 2026-10-06 | impact 3/5 | mixed
+   - regions: US | sectors: BROAD, Consumer Cyclical, Industrials
+   - CBP starts Phase 3 on Oct 6 for CIT plaintiffs with reliquidation orders; DOJ still appeals universal finally-liquidated refunds at the Federal Circuit.
+21. **Constellation Brands earnings**
+   - earnings | upcoming | 2026-10-06 | impact 2/5 | mixed
+   - regions: US, MX | sectors: Consumer Defensive, Consumer Cyclical
+   - Beer/spirits bellwether reports the same week US Section 338 Canadian alcohol bans bite and IEEPA refunds start, a read on US demand plus trade-cost mix.
+22. **SK Hynix Nasdaq ADS 90-day lockup expiry**
+   - ipo | upcoming | 2026-10-07 | impact 2/5 | bearish
+   - regions: KR, US | sectors: Technology
+   - July ADS listing lockup (~2.6m ADS / ~$0.5bn) lifts into a memory-shortage rally; overlapping mid-October buyback-program expiry adds supply-overhang risk.
+23. **September FOMC minutes (Warsh 25 bp hike)**
+   - macro_data | upcoming | 2026-10-07 | impact 3/5 | mixed
+   - regions: US | sectors: BROAD, Financial, Real Estate
+   - Minutes of the Sep 15-16 unanimous hike to 3.75-4.00% will show how close the Committee is to another move at the Oct 27-28 non-SEP meeting.
+24. **PepsiCo Q3 2026 earnings**
+   - earnings | upcoming | 2026-10-08 | impact 2/5 | mixed
+   - regions: US | sectors: Consumer Defensive
+   - Staples/pricing-power print into $107 oil and Canada alcohol bans; company already set Oct 8 BMO for the quarter ended Sep 5.
+25. **Delta Air Lines September-quarter earnings**
+   - earnings | upcoming | 2026-10-09 | impact 2/5 | mixed
+   - regions: US | sectors: Industrials, Energy, Consumer Cyclical
+   - Airline bellwether is a direct read on jet-fuel (Hormuz) versus still-firm travel demand.
+26. **Anthropic IPO marketing window**
+   - ipo | upcoming | 2026-10-10..2026-10-12 | impact 3/5 | mixed
+   - regions: US | sectors: Technology
+   - Reuters sources shifted roadshow start to mid-October for a potentially mega-cap AI listing before midterms; still confidential, date can slip.
+27. **Trump-Xi White House summit; truce to Jan 10 2027**
+   - geopolitical | past | 2026-09-24 | impact 4/5 | bullish
+   - regions: US, CN, TW | sectors: BROAD, Technology, Industrials, Consumer Cyclical
+   - Bessent's two-month extension removes the Nov 10 tariff-cliff tail and adds coal/ag working groups, but no broader deal on rare earths, AI, or Taiwan.
+28. **US-Iran UNGA shuttle talks fail to reopen Hormuz**
+   - geopolitical | past | 2026-09-22..2026-09-25 | impact 4/5 | bearish
+   - regions: US, Iran, EU, JP, KR, CN | sectors: Energy, Industrials, BROAD
+   - First contact in months was called constructive, but Iran's seven-day plan demanded end-blockade/sanctions/asset unfreeze; Trump rejected it, so oil stays headline-driven.
+29. **80 countries demand Hormuz reopening at UNGA**
+   - geopolitical | past | 2026-09-24 | impact 3/5 | mixed
+   - regions: US, Iran, EU, KR | sectors: Energy, BROAD
+   - Bahrain-led GCC-plus-West statement condemns Iranian/Houthi interference and demands unimpeded transit with no tolls — pressure without a reopen.
+30. **Trump-Zelenskyy UNGA energy/Black Sea truce push**
+   - geopolitical | past | 2026-09-22 | impact 3/5 | mixed
+   - regions: US, EU, RU | sectors: Energy, Industrials, BROAD
+   - A limited energy-infrastructure pause would ease the diesel crunch from Russian refinery hits, but Moscow still wants sanctions relief and no deal was announced.
+31. **Graham Russia/Iran Act; 100% secondary-tariff clock**
+   - legislative | past | 2026-09-18 | impact 4/5 | bearish
+   - regions: US, RU, IN, CN, EU | sectors: Energy, BROAD, Industrials
+   - P.L. 119-111 requires up-to-100% tariffs on top buyers of Russian crude/gas that keep buying, with presidential implementation due by ~Oct 18 — a live CN/IN trade channel.
+32. **BoJ hikes to 1.25%, highest since 1995**
+   - macro_data | past | 2026-09-17..2026-09-18 | impact 3/5 | mixed
+   - regions: JP | sectors: Financial, BROAD
+   - 7-2 hike on oil, wages, and yen; next meeting Oct 29-30 with an Outlook Report is outside this window but the Sep minutes/SOP still reprice JGBs/USDJPY.
+33. **Google ad-tech remedy: behavioral only, AdX not divested**
+   - judicial | past | 2026-09-16 | impact 2/5 | bullish
+   - regions: US | sectors: Communication Services, Technology
+   - Unsealed Brinkema opinion (ruling Sep 2) spares AdX, orders interoperability/non-discrimination for six years — relief for GOOGL, negative for ad-tech plaintiffs.
+34. **Costco Q4 FY26 beat; IEEPA refund tailwind**
+   - earnings | past | 2026-09-24 | impact 2/5 | bullish
+   - regions: US | sectors: Consumer Defensive, Consumer Cyclical
+   - EPS $6.75 vs ~$6.54, comps +9.4%; $0.15 from IEEPA refunds is a live template for other importers ahead of CAPE Phase 3.
+35. **FY2027 CR already law through Dec 11**
+   - legislative | past | 2026-09-02 | impact 1/5 | bullish
+   - regions: US | sectors: BROAD, Financial, Healthcare, Industrials
+   - H.R. 6500 / P.L. 119-103 was signed Sep 2, so the Oct 1 funding cliff is not live; next fight is the Dec 11 lame-duck CR. Debt limit is a 2027 issue.
+36. **HBM/DRAM inventories below ~10 days at KR majors**
+   - ongoing | today | 2026-09-07..2026-10-12 | impact 3/5 | bullish
+   - regions: KR, US, TW, JP | sectors: Technology
+   - Samsung/SK Hynix stockpiles under 10 days as HBM4 eats capacity is the fundamental behind MU and the SKHY lockup; not a weather story.
 
 ---
 
 ## Model narrative
 
-## TODAY — 2026-09-25
+## TODAY — 2026-09-28
 
 **Ongoing / geopolitics**
-- **Hormuz tanker war still live** (Energy, Industrials, BROAD). Latest tracking: ~9 commodity transits vs ~125 large vessels/day pre-war; Brent ~$105–107. Why: physical oil still missing. Watch: reopen leaks vs Iranian preconditions.
-- **China Mid-Autumn/Golden Week travel starts** (Consumer, Energy). Why: services/tourism lift, not a gasoline boom (EV/rail). Watch: Oct 1 rail peak and holiday spend.
+- Hormuz tanker war (since Feb/Mar, still live). Energy, Industrials, BROAD. Brent ~$107; commercial transits still a fraction of normal. Watch daily transits and any mediator reply after Trump rejected Iran's seven-day roadmap.
+- China Mid-Autumn just ended; Golden Week shutdown starts Oct 1. Consumer, Energy, Industrials. Three workdays left to clear PMI/risk. Watch PBoC RRP take-up.
+- KR HBM/DRAM inventories <~10 days. Technology. Sets up Micron. Watch MU guide, not Korean weather (summer heat wave did not hit fabs).
 
-**Government / legislative / judicial**
-- Quiet on new White House EOs, FDA/FTC/FCC/SEC market-movers, and Congress. Canada 338 bans are still four days out. FY2027 CR already law — no Oct 1 shutdown.
+**Macro / policy today**
+- PBoC overnight RRPs up to RMB1tn/day (Sep 28-Oct 8). Financial, Real Estate. Holiday liquidity, not an LPR cut. Watch interbank rates into Oct 8.
+- BoJ July minutes (8:50 JST). Financial, BROAD. Hawkish pre-hike color. Watch JPY; Oct 1 SOP is next.
 
-**Macro / earnings / IPOs**
-- No top-tier US data today. Mag7 silent. Tape is digesting yesterday’s Xi summit and oil.
+**Labor / other**
+- Teamsters Amazon pickets (expanded Sep 27). Consumer Cyclical, Industrials. Localized, peak-season delay risk. Watch whether non-union sites honor lines.
+- World Cup: over (ended Jul 19). Quiet.
+- Atlantic hurricanes: unusually quiet / no hurricane yet. Quiet for US energy/insurance.
+- FTC: no market-wide ruling this window. Quiet.
 
 ## THIS WEEK AND NEXT (upcoming)
 
 **Government**
-- **Sept 29 — Section 338 Canada import bans** (Consumer Cyclical/Defensive, Industrials). Beer/wine/spirits, some whey, large motorcycles banned 12:01 a.m. ET. Watch: Ottawa retaliation.
-- **Takaichi stimulus / JGB supply** (Financial, JP). Still the fiscal side of the 10y-at-3% problem.
+- Sep 29: Canada Section 338 import bans (beer/wine/spirits, some whey, >800cc motorcycles). Consumer Cyclical/Defensive, Industrials. Converts 50% duties to prohibitions. Watch CBP annex enforcement.
+- Sep 30: FCC Open Meeting unlocks >1,000 MHz satellite spectrum (12.7 / 42 GHz). Communication Services, Technology. Watch the Report and Order vote.
 
 **Legislative**
-- Quiet. Graham Act is law (signed Sept 18); the live issue is implementation, not another vote. Next funding cliff is **Dec 11**, not Sept 30.
+- No shutdown. CR already law through Dec 11. Next fight is lame-duck, not Oct 1.
+- Graham Act still live: implementation clock ~Oct 18 (just outside this window) for up-to-100% secondary tariffs on top RU-energy buyers.
 
 **Judicial**
-- **~Oct 6 — IEEPA CAPE Phase 3** (BROAD). Refunds for finally liquidated entries vs DOJ Federal Circuit appeal.
+- Oct 6: IEEPA CAPE Phase 3 finally-liquidated refunds for CIT plaintiffs. BROAD, Consumer, Industrials. DOJ still appealing universal relief. Watch plaintiff-only vs CAFC.
 
-**Macro data & central banks** (expectations now)
-- **Sept 29 — JOLTS** consensus ~**7.2m** openings (July ~7.27m).
-- **Sept 29 — Conference Board confidence** ~**89**.
-- **Sept 30 — PCE / personal income / Q2 GDP third + NIPA revisions.** Core PCE **+0.24–0.28% m/m**, **~3.3–3.4% y/y**; Q2 GDP likely stays near **+1.5%**. This is the Warsh-Fed print.
-- **Sept 30 — China NBS PMI.** Aug mfg **49.8**; another sub-50 keeps stimulus-lite in place.
-- **Sept 30 — UK GDP** (~0.4% q/q in calendars). BoE next decision is **Nov 5**, not October.
-- **Oct 1 — ISM manufacturing** preview **~55.5** vs Aug **54.6**.
-- **Oct 1 — Japan Tankan** large-mfg DI consensus **+25** (from +22).
-- **Oct 2 — NFP** consensus **+90–110k**, U-3 **4.1–4.2%** (Aug was +162k).
-- **Oct 2 — Eurozone HICP flash.** Aug final **3.2%**; energy is the swing. ECB decision is **Oct 29** (outside window); markets still have a hike tail.
-- **FOMC Oct 28 is outside this window** but is the regime event: funds **3.75–4.00%** after the Sept 16 25 bp hike; futures/prediction markets ~**65–72%** for another 25 bp.
+**Macro (market expectation now)**
+- Sep 29: JOLTS openings ~7.2m (prior ~7.27m); Conference Board confidence. Mixed for Fed path.
+- Sep 30: Core PCE ~+0.24-0.28% m/m / ~3.3% y/y; Q2 GDP third ~1.5-1.6% plus NIPA revisions. First post-Warsh-hike inflation print.
+- Sep 30: China NBS mfg PMI ~50.1-50.2 (Aug 49.8); non-mfg still sub-50. Last print before Golden Week close.
+- Oct 1: ISM Manufacturing ~54.8-55 after Aug 54.6; BoJ Summary of Opinions on the 1.25% hike.
+- Oct 2: NFP +90-110k, U-3 4.1-4.2% (Aug +162k). Hot print cements ~64-66% Oct 28 hike odds (Kalshi/Polymarket).
+- Oct 2: Euro flash HICP. After ECB's Sep 10 hike to 2.50% DF; Aug headline 3.2-3.3% on energy.
+- Oct 5: ISM Services ~54.0 after Aug 55.4.
+- Oct 7: Sep FOMC minutes (unanimous 25 bp to 3.75-4.00%). Color on a second hike.
+- Oct 27-28 FOMC is **outside** this window but is the thing PCE/NFP are pricing.
 
-**Earnings**
-- **Sept 30 AMC — Micron** (Technology / AI memory).
-- **Oct 1 — Accenture (BMO) and Nike (AMC).** No Mag7 until ~Oct 21–29.
-
-**IPOs / lockups**
-- **Week of Sept 28 — Oura** $40–44, ~$2.1–2.2bn, mostly secondary.
-- **Oct 9 — SpaceX ~7% lockup tranche.**
-- **Anthropic** still aimed at mid-October (low confidence this window).
+**Earnings / IPO**
+- Sep 30 AMC: Micron FQ4 — AI/HBM bellwether.
+- Oct 1: Accenture BMO (~$3.18 EPS); Nike AMC (~$0.44 EPS).
+- Oct 6 AMC: Constellation Brands.
+- Oct 7: SK Hynix ADS 90-day lockup (~$0.5bn).
+- Oct 8 BMO: PepsiCo Q3.
+- Oct 9 BMO: Delta (jet-fuel vs travel).
+- Mid-Oct (low confidence): Anthropic IPO marketing may start; still confidential.
 
 **Geopolitics**
-- **Oct 4 — OPEC+ 7/8 meeting** on November quotas after freezing October at Sept 6.
-- US–Iran and Ukraine energy-truce diplomacy can reprice oil/diesel any day; no dated follow-up locked.
-
-**Ongoing**
-- **Oct 1–7 China Golden Week.**
-- **Korea chip-power**: Samsung/SK Hynix vs KEPCO prepay; summer heat wave is **not** a current fab-outage story.
-- World Cup **over** (Spain beat Argentina July 19). Jackson Hole **over**. SEMICON West is **Oct 13–15** (just outside). Atlantic hurricane season unusually quiet for the US mainland; Pacific systems (Nolo/Polo/Odalys) are not a US-equity event.
+- Oct 4: OPEC+ monthly meeting. Expect another hold unless Hormuz changes; 2027 capacity audit is the medium-term story.
 
 ## STILL IN PLAY (recent past)
 
-- **Trump–Xi / truce to Jan 10 (Sept 24)** — cliff removed, no grand bargain. Residual bullish for CN/US cyclicals.
-- **US–Iran UNGA talks (Sept 22–23)** + **80-country Hormuz statement (Sept 24)** — diplomacy live, strait not open.
-- **Graham Act (Sept 18)** — secondary-tariff gun is loaded.
-- **BoJ 1.25% (Sept 18) / JGB 10y ~3.07% (Sept 24)** — global duration spillover not finished.
-- **PBOC “appropriately loose” + LPR hold (Sept 24)**; **China Aug IP/retail split (Sept 15)**.
-- **IEEPA refunds** — process live, appeal live.
-- **Google AdX spared (opinion unsealed Sept 16)** — resolved as a price event.
-- **New-home sales 684k (Sept 24)** — resolved beat; housing still rate-sensitive.
-- **Sept 30 shutdown** — **resolved/averted** (CR through Dec 11 signed Sept 2).
-- Dropped as stale: Korea heat-wave fab risk (no Sept disruption), World Cup, Jackson Hole, FOMC-as-this-window-event.
+- **Resolved, effect live:** Trump-Xi (Sep 24) truce to **Jan 10 2027** — no rare-earth/AI/Taiwan deal, but Nov 10 cliff is dead. US-Iran UNGA talks (Sep 22-25) produced no Hormuz deal. 80-country UNGA statement (Sep 24) is diplomatic pressure only. Zelenskyy energy-truce pitch (Sep 22) has no Russian buy-in; refinery/grid strikes continue.
+- **Resolved, mostly priced:** BoJ hike to 1.25% (Sep 17-18). Google AdX spared (opinion unsealed Sep 16). Costco beat (Sep 24) with $0.15 IEEPA refund. ECB already hiked Sep 10 (just before this past window).
+- **Carried, not finished:** Graham Act (signed Sep 18) — secondary-tariff determinations still ahead. IEEPA refunds Phases 1-2 ongoing; Phase 3 Oct 6. Hormuz war premium intact.
+- **Dropped as live:** Oct 1 US shutdown (CR through Dec 11). World Cup. Korea heat wave as a chip-output event (no fab impact found).
 
 ## TOP RISKS / TOP OPPORTUNITIES
 
 **Risks**
-1. Hormuz stays shut → oil and hike odds.
-2. Hot PCE/NFP → October 28 hike fully priced.
-3. JGB/UST duration spillover.
-4. Graham secondary tariffs on CN/IN.
-5. Canada 338 bans widen the US–CA goods war.
+1. Hormuz stays shut; $107 oil feeds G3 inflation and Warsh.
+2. Hot PCE (Wed) and/or NFP (Fri) lock Oct 28 hike.
+3. Graham secondary tariffs on CN/IN crude buyers.
+4. Canada bans (Tue) add a real goods-level shock.
+5. China PMI miss into a week-long mainland close.
 
 **Opportunities**
-1. Hormuz reopen path.
-2. Jan 10 truce runway if talks stay quiet.
-3. Soft labor data vs Warsh.
-4. Micron as the AI-memory print.
-5. Ukraine energy truce / European diesel.
+1. Any Hormuz corridor/reopen headline.
+2. Soft PCE/NFP cutting hike odds from ~2/3.
+3. Micron as AI-memory upside.
+4. IEEPA Phase 3 cash (Costco already showed it).
+5. Truce to Jan 10 still removes the Nov 10 cliff.
 
 ## UNCERTAINTY
 
-**elevated** — The trade-truce extension is real but small next to an unresolved oil war, a hawkish new Fed chair, and a G3 inflation impulse that has already pulled October hike odds up into the two-thirds range.
+**elevated** — Oil, Fed, and China are all live in the same five sessions, and UNGA produced process without a Hormuz or Ukraine energy deal.
 
 ## RESEARCH APPENDIX
 
-**Queries run (web_search + x_search)**  
-US–China summit/truce; US–Iran/Hormuz/UNGA; shutdown/CR; Fed/Warsh/PCE/NFP/JOLTS calendar; S&P earnings; China PBOC/PMI; ECB/HICP; BoJ/Takaichi/JGBs; Korea semis/heat; OPEC+; IPO/lockups; Graham Act; Section 338 Canada; IEEPA refunds; Google ad-tech; Brent/Hormuz transits; Golden Week; White House EOs/FDA/FTC/FCC/SEC; Ukraine talks; World Cup/hurricanes/SEMICON; ADP/ISM/Tankan; SpaceX lockup; Oura IPO; Taiwan/TSMC export controls; UK/EU/JP/KR calendars; X tape 2026-09-24..25.
+**Queries run:** US White House/tariffs Sep 2026; Congress CR/shutdown/debt ceiling; Fed/PCE/jobs/CPI calendar; S&P earnings + Micron; China PMI/Golden Week; ECB/Europe inflation; BoJ/BoK; Hormuz/OPEC; IPO/lockups; strikes/hurricanes/World Cup/SEMICON; JOLTS/PCE/GDP/NFP/ISM consensus; Fed funds Oct 28 odds; IEEPA CAPE Phase 3; Canada 338 bans; Trump-Xi truce; Brent/transits; OPEC+ Oct 4; Nike/ACN/Costco; China PMI consensus; Ukraine energy truce; Graham Act; US-Iran UNGA; Google Brinkema; ISM services/CPI dates; PEP/DAL/STZ; Anthropic IPO; SK Hynix lockup; PBoC LPR/liquidity; euro flash HICP; FDA/FTC/FCC/SEC; BoJ minutes; FOMC minutes; Taiwan/TSMC; Amazon Teamsters; FCC Sep 30; Q2 GDP third; core PCE 0.24-0.28; 80-country Hormuz statement; Costco results; Korea heat/chips. X search: Hormuz/Brent/Fed odds/PCE/jobs.
 
 **Key sources and facts used**
-- Reuters Trump–Xi takeaways (2026-09-24): 2-month truce to **Jan 10**, pageantry > substance. https://www.reuters.com/world/china/four-takeaways-trumps-summit-with-xi-washington-2026-09-24/
-- Reuters US–Iran UNGA talks (2026-09-23): first shuttle talks in months, no deal. https://www.reuters.com/world/middle-east/hope-progress-after-us-iran-hold-first-shuttle-talks-months-2026-09-23/
-- Reuters 80-country Hormuz statement (2026-09-24). https://www.reuters.com/world/middle-east/un-80-countries-demand-reopening-hormuz-condemn-iran-houthi-attacks-2026-09-24/
-- FMT/Kpler (2026-09-25): **9** commodity transits vs ~**125**/day pre-war. https://www.freemalaysiatoday.com/category/business/2026/09/25/hormuz-commodity-ship-transits-fall-to-nine-ship-tracking-data-shows
-- Investing.com Brent ~**$105.71** on 2026-09-25.
-- CRS/Roll Call: CR through **Dec 11, 2026** enacted Sept 2 — no Oct 1 shutdown.
-- BEA schedule: PCE + GDP third **Sept 30**; BLS NFP **Oct 2**; JOLTS **Sept 29**.
-- KPMG/Continuum: NFP **+90–110k**, U-3 **4.1–4.2%**; core PCE **~0.24–0.28% m/m**.
-- Census: new-home sales **684k** (Sept 24 release).
-- Clyde & Co: Graham Act signed **Sept 18**, 100% secondary tariffs.
-- EY/Osler: Canada 338 bans **Sept 29**.
-- Steptoe: IEEPA refunds + Fed Cir appeal; Phase 3 ~**Oct 6**.
-- DOJ: Google ad-tech behavioral remedies, no AdX sale (unsealed Sept 16).
-- OPEC.org: Oct quotas unchanged; next meeting **Oct 4**.
-- Micron IR: FY Q4 **Sept 30**.
-- Reuters: Oura IPO terms Sept 21; Anthropic mid-October.
-- CGTN: PBOC accommodative pledge Sept 24; Golden Week travel Sept 25.
-- Reuters JGBs: 10y **~3.075%** Sept 24.
-- ECB/Eurostat: Aug HICP **3.2%** final; flash **Oct 2**; next GC **Oct 29**.
-- BoE: no October MPC; Bank Rate **3.75%**.
-- ISM calendar: manufacturing **Oct 1**.
-- Nikkei: Tankan large-mfg **+25** consensus, release **Oct 1**.
+- Fed calendar (fetched): 2026 FOMC Sep 15-16*, Oct 27-28, Dec 8-9* — https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm
+- BEA schedule: PCE + GDP third + NIPA Sep 30 8:30 ET — https://www.bea.gov/news/schedule
+- White House Canada 338 fact sheet / proclamations — https://www.whitehouse.gov/fact-sheets/2026/09/fact-sheet-president-donald-j-trump-responds-to-canadas-retaliation/
+- Reuters Trump-Xi takeaways, truce to Jan 10 2027 — https://www.reuters.com/world/china/four-takeaways-trumps-summit-with-xi-washington-2026-09-24/
+- Reuters 80 countries Hormuz — https://www.reuters.com/world/middle-east/un-80-countries-demand-reopening-hormuz-condemn-iran-houthi-attacks-2026-09-24/
+- CNN US-Iran UNGA / seven-day plan rejected — https://www.cnn.com/2026/09/25/middleeast/iran-unga-us-hormuz-intl
+- OPEC Sep 6 hold, next meeting Oct 4 — https://www.opec.org/pr-detail/1835613-6-september-2026.html
+- Micron IR: FQ4 on Sep 30 — https://investors.micron.com/news/press-release/2026/Micron-Technology-to-Report-Fiscal-Fourth-Quarter-Results-on-September-30-2026/default.aspx
+- Kalshi/Polymarket: ~64-66% Oct 28 +25 bp — https://kalshi.com/markets/kxfeddecision/fed-meeting/kxfeddecision-26oct
+- CBP CAPE Phase 3 Oct 6 — https://www.thompsonhine.com/insights/cbp-confirms-october-6-2026-launch-of-phase-3-of-the-ieepa-tariff-refund-process/
+- BoJ hike PDF — https://www.boj.or.jp/en/mopo/mpmdeci/mpr_2026/k260918a.pdf
+- ECB Sep 10 statement/projections — https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2026/html/ecb.is260910~6a45359cfc.en.html
+- FCC Sep 30 agenda — https://www.fcc.gov/September2026
+- Costco Q4 PR — https://s201.q4cdn.com/287523651/files/doc_news/Costco-Wholesale-Corporation-Reports-Fourth-Quarter-and-Fiscal-Year-2026-Operating-Results-2026.pdf
+- CRS CR through Dec 11 — https://www.congress.gov/crs-product/R49353
+- Anthropic IPO Reuters Sep 4 — https://www.reuters.com/world/anthropic-ipo-launch-shifts-toward-mid-october-sources-say-2026-09-04/
 
-**Prior-scan hygiene:** merged duplicate truce/summit items; marked shutdown, Google remedies, and new-home sales **resolved**; carried Hormuz, Iran talks, Graham, 338, IEEPA, PCE, NFP, JOLTS, BoJ/JGBs, Takaichi, China activity; dropped FOMC Oct 28 from the event list (outside 2026-09-26..2026-10-09), Korea heat-wave fab scare, and World Cup.
+**Previous-scan updates:** Hormuz, Golden Week, Canada bans, PCE/NFP/JOLTS/confidence, IEEPA Phase 3, OPEC+ Oct 4, Micron, Graham Act carried. Trump-Xi, UNGA Iran talks, 80-country statement, Zelenskyy meeting, Google remedies, Costco, CR marked resolved. Shutdown dropped as a live catalyst. Added BoJ hike/minutes, PBoC RRPs, FCC spectrum, China PMI, ISM mfg/services, euro HICP, FOMC minutes, ACN/NKE/PEP/DAL/STZ, SKHY lockup, Anthropic window, Amazon pickets, HBM shortage.

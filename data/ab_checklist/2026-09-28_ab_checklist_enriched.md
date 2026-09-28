@@ -18,28 +18,28 @@
 
 | Ticker | enr | base | ctx | rs_w | beat% | ind_med_w | sector | board | label |
 |--------|----:|-----:|----:|-----:|------:|----------:|--------|-------|-------|
-| RGEN | +20 | +16 | +4 | +4.2 | 80% | +0.5 | Healthcare | up | LEAD,peers↑,ind↑,sec↑ |
-| FIGS | +19 | +17 | +2 | +1.8 | 62% | +2.0 | Consumer Cyclical | down | LEAD,peers↑,ind↑,sec↓ |
-| ICLR | +19 | +15 | +4 | +4.3 | 90% | +2.7 | Healthcare | up | LEAD,peers↑,ind↑,sec↑ |
-| BJ | +18 | +14 | +4 | +1.5 | 62% | +1.9 | Consumer Defensive | up | LEAD,peers↑,ind↑,sec↑ |
-| LRCX | +17 | +13 | +4 | +0.0 | 50% | +1.7 | Technology | flat | LEAD,peers↑,ind↑,sec↑ |
-| TMO | +17 | +13 | +4 | +1.0 | 62% | +2.7 | Healthcare | up | LEAD,peers↑,ind↑,sec↑ |
-| WAT | +17 | +13 | +4 | +0.9 | 75% | +2.7 | Healthcare | up | LEAD,peers↑,ind↑,sec↑ |
-| JNJ | +17 | +13 | +4 | +0.8 | 60% | +0.4 | Healthcare | up | LEAD,peers↑,ind↑,sec↑ |
-| A | +17 | +13 | +4 | +4.6 | 88% | +2.7 | Healthcare | up | LEAD,peers↑,ind↑,sec↑ |
-| LLY | +17 | +15 | +2 | +2.3 | 80% | +0.4 | Healthcare | up | LEAD,peers↓,ind↑,sec↑ |
-| CDNA | +17 | +13 | +4 | +13.5 | 100% | +2.7 | Healthcare | up | LEAD,peers↑,ind↑,sec↑ |
-| GMAB | +17 | +15 | +2 | +0.3 | 50% | -3.8 | Healthcare | up | LEAD,peers↑,ind↓,sec↑ |
-| BDX | +17 | +13 | +4 | +0.6 | 67% | +0.5 | Healthcare | up | LEAD,peers↑,ind↑,sec↑ |
-| AMGN | +16 | +12 | +4 | +3.9 | 80% | +0.4 | Healthcare | up | LEAD,peers↑,ind↑,sec↑ |
-| VECO | +16 | +12 | +4 | +10.1 | 100% | +1.7 | Technology | flat | LEAD,peers↑,ind↑,sec↑ |
-| VFF | +16 | +14 | +2 | +7.8 | 80% | -4.8 | Consumer Defensive | up | LEAD,peers↑,ind↓,sec↑ |
-| ESI | +16 | +12 | +4 | +7.4 | 90% | +0.6 | Basic Materials | flat | LEAD,peers↑,ind↑,sec↑ |
-| CLS | +16 | +12 | +4 | +2.7 | 100% | +2.6 | Technology | flat | LEAD,peers↑,ind↑,sec↑ |
-| ETON | +16 | +14 | +2 | +4.0 | 100% | -0.6 | Healthcare | up | LEAD,peers↑,ind↓,sec↑ |
-| ALAB | +16 | +13 | +3 | +3.0 | 70% | +0.0 | Technology | flat | LEAD,peers↑,sec↑ |
-| AUPH | +16 | +16 | +0 | -2.9 | 11% | -3.8 | Healthcare | up | LAG,peers↑,ind↓,sec↑ |
-| GCT | +16 | +16 | +0 | +6.8 | 100% | -1.9 | Technology | flat | LEAD,peers↓,ind↓,sec↑ |
-| DG | +16 | +12 | +4 | +1.0 | 75% | +1.9 | Consumer Defensive | up | LEAD,peers↑,ind↑,sec↑ |
-| ERO | +16 | +16 | +0 | +7.6 | 100% | -2.9 | Basic Materials | flat | LEAD,peers↓,ind↓,sec↑ |
-| AAPL | +16 | +16 | +0 | +3.0 | 90% | -1.4 | Technology | flat | LEAD,peers↓,ind↓,sec↑ |
+| FIGS | +20 | +17 | +3 | +0.4 | 50% | +2.0 | Consumer Cyclical | — | LEAD,peers↑,ind↑ |
+| RGEN | +19 | +16 | +3 | +3.2 | 70% | +0.2 | Healthcare | — | LEAD,peers↑,ind↑ |
+| SN | +18 | +15 | +3 | +6.8 | 100% | +0.6 | Consumer Cyclical | — | LEAD,peers↑,ind↑ |
+| ICLR | +18 | +15 | +3 | +4.1 | 90% | +1.5 | Healthcare | — | LEAD,peers↑,ind↑ |
+| LLY | +17 | +14 | +3 | +2.4 | 80% | +0.4 | Healthcare | — | LEAD,peers↑,ind↑ |
+| BJ | +17 | +14 | +3 | +0.4 | 62% | +2.0 | Consumer Defensive | — | LEAD,peers↑,ind↑ |
+| AAPL | +17 | +16 | +1 | +2.4 | 80% | +0.4 | Technology | — | LEAD,peers↓,ind↑ |
+| ALAB | +16 | +13 | +3 | +11.3 | 100% | +4.8 | Technology | — | LEAD,peers↑,ind↑ |
+| CDNA | +16 | +13 | +3 | +14.8 | 100% | +1.5 | Healthcare | — | LEAD,peers↑,ind↑ |
+| ERO | +16 | +15 | +1 | +12.4 | 100% | +0.9 | Basic Materials | — | LEAD,peers↓,ind↑ |
+| ETN | +16 | +13 | +3 | +0.9 | 62% | +1.0 | Industrials | — | LEAD,peers↑,ind↑ |
+| AMD | +16 | +13 | +3 | +5.8 | 80% | +4.8 | Technology | — | LEAD,peers↑,ind↑ |
+| TMO | +16 | +13 | +3 | +1.5 | 62% | +1.5 | Healthcare | — | LEAD,peers↑,ind↑ |
+| GMAB | +16 | +15 | +1 | +0.8 | 60% | -4.4 | Healthcare | — | LEAD,peers↑,ind↓ |
+| TTMI | +16 | +13 | +3 | +3.1 | 89% | +5.4 | Technology | — | LEAD,peers↑,ind↑ |
+| ARHS | +16 | +13 | +3 | +22.4 | 100% | +0.5 | Consumer Cyclical | — | LEAD,peers↑,ind↑ |
+| LRCX | +16 | +13 | +3 | +1.2 | 70% | +7.2 | Technology | — | LEAD,peers↑,ind↑ |
+| A | +16 | +13 | +3 | +8.3 | 100% | +1.5 | Healthcare | — | LEAD,peers↑,ind↑ |
+| CRSR | +15 | +15 | +0 | +2.2 | 67% | +0.0 | Technology | — | LEAD,peers↓ |
+| AUPH | +15 | +16 | -1 | -3.1 | 22% | -4.4 | Healthcare | — | LAG,peers↑,ind↓ |
+| NVDA | +15 | +14 | +1 | -6.9 | 10% | +4.8 | Technology | — | LAG,peers↑,ind↑ |
+| GCT | +15 | +16 | -1 | +3.7 | 80% | -0.4 | Technology | — | LEAD,peers↓,ind↓ |
+| GLW | +15 | +12 | +3 | +1.8 | 62% | +5.4 | Technology | — | LEAD,peers↑,ind↑ |
+| SKY | +15 | +12 | +3 | +1.2 | 89% | +2.5 | Consumer Cyclical | — | LEAD,peers↑,ind↑ |
+| VECO | +15 | +12 | +3 | +7.1 | 100% | +7.2 | Technology | — | LEAD,peers↑,ind↑ |

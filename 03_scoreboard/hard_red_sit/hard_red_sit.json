@@ -2928,7 +2928,7 @@
             "ticker": "CRDO",
             "side": "long",
             "open": null,
-            "px": 202.71,
+            "px": 210.97,
             "px_src": "session_export",
             "low": null,
             "scoops": {
@@ -2964,7 +2964,7 @@
             "ticker": "FN",
             "side": "long",
             "open": null,
-            "px": 407.98,
+            "px": 417.39,
             "px_src": "session_export",
             "low": null,
             "scoops": {
@@ -3000,7 +3000,7 @@
             "ticker": "GRAB",
             "side": "long",
             "open": null,
-            "px": 3.15,
+            "px": 3.13,
             "px_src": "session_export",
             "low": null,
             "scoops": {
@@ -3036,7 +3036,7 @@
             "ticker": "OUST",
             "side": "long",
             "open": null,
-            "px": 42.27,
+            "px": 43.72,
             "px_src": "session_export",
             "low": null,
             "scoops": {

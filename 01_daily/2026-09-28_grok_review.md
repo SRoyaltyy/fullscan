@@ -2,7 +2,17 @@
 
 ok=False
 
-Grok returned an empty review
+Core news/events/general/map-heat packets are same-day and usable (general DOWN/mild, events scan_date 2026-09-28 with new items, judge/parse/finviz/map-heat tape populated). All 11 sector essays are absent, so the 8/11 floor is missed and the day fails. Research reused last-night captain cards after a failed morning refresh; that is an enhancement note, not a core fail. Missing close-digest is not required.
 
 ## Fails
-- `(review)`: empty_review_reply
+- `01_daily/sectors/2026-09-28/basic_materials_predict.md`: missing; 0/11 sector predicts
+- `01_daily/sectors/2026-09-28/communication_services_predict.md`: missing; 0/11 sector predicts
+- `01_daily/sectors/2026-09-28/consumer_cyclical_predict.md`: missing; 0/11 sector predicts
+- `01_daily/sectors/2026-09-28/consumer_defensive_predict.md`: missing; 0/11 sector predicts
+- `01_daily/sectors/2026-09-28/energy_predict.md`: missing; 0/11 sector predicts
+- `01_daily/sectors/2026-09-28/financial_predict.md`: missing; 0/11 sector predicts
+- `01_daily/sectors/2026-09-28/healthcare_predict.md`: missing; 0/11 sector predicts
+- `01_daily/sectors/2026-09-28/industrials_predict.md`: missing; 0/11 sector predicts
+- `01_daily/sectors/2026-09-28/real_estate_predict.md`: missing; 0/11 sector predicts
+- `01_daily/sectors/2026-09-28/technology_predict.md`: missing; 0/11 sector predicts
+- `01_daily/sectors/2026-09-28/utilities_predict.md`: missing; 0/11 sector predicts
