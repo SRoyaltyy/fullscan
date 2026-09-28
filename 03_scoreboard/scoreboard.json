@@ -28504,18 +28504,113 @@
         "B7_OIL_DOLLAR": 0.0
       },
       "leading_sum": -6.0,
-      "actual_open": null,
-      "actual_close": null,
-      "actual_pct_change": null,
-      "actual_direction": null,
-      "actual_magnitude_band": null,
-      "direction_hit": null,
-      "magnitude_hit": null,
+      "actual_open": 7721.7,
+      "actual_close": 7683.69,
+      "actual_pct_change": -0.77,
+      "actual_direction": "down",
+      "actual_magnitude_band": "mild",
+      "direction_hit": true,
+      "magnitude_hit": true,
       "divergence_flagged": false,
       "divergence_verdict": null,
-      "per_factor_breakdown": [],
+      "per_factor_breakdown": [
+        {
+          "factor": "B0_ASIA",
+          "score": -0.5,
+          "status": "hit"
+        },
+        {
+          "factor": "B0_EUROPE",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B1_CATALYSTS",
+          "score": -1.0,
+          "status": "hit"
+        },
+        {
+          "factor": "B2_BONDS",
+          "score": -1.0,
+          "status": "hit"
+        },
+        {
+          "factor": "B3_FEDPATH",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B4_VIX",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B5_SENTIMENT",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B6_FUTURES",
+          "score": -0.5,
+          "status": "hit"
+        },
+        {
+          "factor": "B7_OIL_DOLLAR",
+          "score": 0.0,
+          "status": "neutral"
+        }
+      ],
       "reflection_lesson_ref": null,
-      "sources_used": [],
+      "sources_used": [
+        {
+          "url": "https://www.channelnewsasia.com/business/stocks-fall-oil-prices-highs-amid-renewed-hopes-middle-east-negotiations-6414451",
+          "date_accessed": "2026-09-28",
+          "summary": "Independent close prints match Channel 1 cash (−0.77% / −0.67% / NDX −0.92%).",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.bostonherald.com/2026/09/28/oil-prices-us-markets-iran-proposal/",
+          "date_accessed": "2026-09-28",
+          "summary": "Same-day yield extension is the cross-asset fingerprint of the equity selloff.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.cnbc.com/2026/09/28/treasury-yields-bonds-selloff.html",
+          "date_accessed": "2026-09-28",
+          "summary": "Outlets that lead with bonds treat FCI, not a single stock, as the day’s mechanism.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.channelnewsasia.com/business/stocks-fall-oil-prices-highs-amid-renewed-hopes-middle-east-negotiations-6414451",
+          "date_accessed": "2026-09-28",
+          "summary": "The weekend diplomatic rejection is the same-day geo trigger; not a confirmed overnight tanker strike.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.bostonherald.com/2026/09/28/oil-prices-us-markets-iran-proposal/",
+          "date_accessed": "2026-09-28",
+          "summary": "Rejection was knowable premarket; the later mediation chatter is the fade that kept SPX choppy rather than trend-crashing.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://news.bloomberglaw.com/banking-law/feds-cook-says-ai-gains-wont-offset-near-term-inflation",
+          "date_accessed": "2026-09-28",
+          "summary": "Mid-afternoon Fed color reinforced the hike/inflation narrative after cash was already red.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://nvidianews.nvidia.com/news/nvidia-announces-a-150-billion-share-repurchase-authorization-increase",
+          "date_accessed": "2026-09-28",
+          "summary": "Largest-weight AI name had a genuine positive idiosyncratic; it did not lift the Nasdaq.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.channelnewsasia.com/business/stocks-fall-oil-prices-highs-amid-renewed-hopes-middle-east-negotiations-6414451",
+          "date_accessed": "2026-09-28",
+          "summary": "Cross-asset fingerprint favors a real-yield shock over a classic risk-off scramble.",
+          "verification": "quote_not_found"
+        }
+      ],
       "horizon_calls": {
         "HORIZON_3D": {
           "trading_days": 3,
@@ -28545,7 +28640,14 @@
       "news_judge_present": true,
       "engine": "v2",
       "anchor_score": -2.015,
-      "overlay_score": -4.125
+      "overlay_score": -4.125,
+      "ops_fail": false,
+      "path_shape": "choppy / range-bound",
+      "primary_driver": "Same-session extension of the multi-decade 10Y backup (~5.23–5.25%, tag 5.27%) tightening FCI and compressing duration/tech",
+      "key_interaction": "Hormuz rejection amplified an already-live bond selloff (shared-root oil/yields/Cook), while NVDA buyback offset only one weight inside a red Nasdaq",
+      "knowable_at_9am": "yes",
+      "attribution_contested": "yes",
+      "outlier_watch": "NVDA +1.7% on a $150bn buyback while other chips dumped; gold -3.6% on a geo day; Europe flat; energy only modest as oil faded"
     },
     {
       "date": "2026-09-28",
