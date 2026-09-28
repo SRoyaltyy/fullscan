@@ -1,6 +1,6 @@
 {
   "date": "2026-09-28",
-  "generated_at": "2026-09-28T09:30:17.146202-04:00",
+  "generated_at": "2026-09-28T09:34:23.017540-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -12,7 +12,11 @@
   "buy_1d": [
     {
       "ticker": "CNQ",
-      "score": 0.12664736847910935
+      "score": 0.19164736847910935
+    },
+    {
+      "ticker": "CVE",
+      "score": 0.15559400587939987
     },
     {
       "ticker": "ASTH",
@@ -62,7 +66,7 @@
     },
     {
       "ticker": "SOC",
-      "score": -0.3592264307685899
+      "score": -0.2942264307685899
     },
     {
       "ticker": "ARE",

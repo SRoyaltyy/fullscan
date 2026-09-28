@@ -1,6 +1,6 @@
 {
   "date": "2026-09-28",
-  "generated_at": "2026-09-28T09:26:13.178352-04:00",
+  "generated_at": "2026-09-28T09:34:23.017540-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -12,7 +12,11 @@
   "buy_1d": [
     {
       "ticker": "CNQ",
-      "score": 0.12664736847910935
+      "score": 0.19164736847910935
+    },
+    {
+      "ticker": "CVE",
+      "score": 0.15559400587939987
     },
     {
       "ticker": "ASTH",
@@ -62,7 +66,7 @@
     },
     {
       "ticker": "SOC",
-      "score": -0.3592264307685899
+      "score": -0.2942264307685899
     },
     {
       "ticker": "ARE",
@@ -105,13 +109,13 @@
     "direction": "down"
   },
   "sectors": {
-    "said": "0 up / 3 down / 2 flat",
+    "said": "1 up / 3 down / 2 flat",
     "bullets": [
       "XLB DOWN -6.8",
       "XLC FLAT -4.6",
       "XLY DOWN -6.8",
       "XLP FLAT -0.6",
-      "XLE missing",
+      "XLE UP +7.9",
       "XLF missing",
       "XLV missing",
       "XLI missing",
@@ -1590,70 +1594,70 @@
     },
     {
       "key": "sector_one",
-      "title": "Sector predict Consumer Defensive (5/11)",
+      "title": "Sector predict Energy (6/11)",
       "date": "2026-09-28",
       "ok": true,
       "pushed": true,
-      "at": "2026-09-28T09:21:53.438972-04:00",
+      "at": "2026-09-28T09:30:15.551217-04:00",
       "files": [
         {
-          "path": "01_daily/sectors/2026-09-28/consumer_defensive_predict.md",
+          "path": "01_daily/sectors/2026-09-28/energy_predict.md",
           "ok": true,
           "reason": "",
-          "size": 20050,
-          "preview": "# Sector Prediction \u2014 Consumer Defensive \u2014 2026-09-28\n- news_mode: **on**\n- ETF: **XLP**\n- rubric: `00_grounding/sectors/consumer_defensive.md`\n- predicted_direction: **flat**\n- predicted_magnitude_band: **flat**\n- total_score: **-0.622** (mult 0.8)\n- regime: mixed\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **0.113** (ES -0.30%, ZN -0.03%, PM:XLP +0.09%) \u00b7 index_carry **-1.535** (general -6.14) \u00b7 llm_overlay **0.8** (raw 0.8)"
+          "size": 19203,
+          "preview": "# Sector Prediction \u2014 Energy \u2014 2026-09-28\n- news_mode: **on**\n- ETF: **XLE**\n- rubric: `00_grounding/sectors/energy.md`\n- predicted_direction: **up**\n- predicted_magnitude_band: **mild**\n- total_score: **7.946** (mult 0.85)\n- regime: mixed\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **3.481** (CL -1.59%, QA -1.02%, ES -0.30%, PM:XLE +1.21%) \u00b7 index_carry **-1.535** (general -6.14) \u00b7 llm_overlay **6.0** (raw 6.162)"
         },
         {
-          "path": "01_daily/sectors/2026-09-28/consumer_defensive_predict_trace.md",
+          "path": "01_daily/sectors/2026-09-28/energy_predict_trace.md",
           "ok": true,
           "reason": "",
-          "size": 399,
-          "preview": "# Reasoning trace \u2014 SECTOR PREDICT Consumer Defensive 2026-09-28\n**Step 0 \u2014 Setup.** Loaded 150,011 characters of input. Provider: OpenClaw gateway, backend model `xai/grok-4.6`. Native web/X search was ENABLED inside the agent turn; see the RESEARCH APPENDIX at the end of the output for queries and sources.\n**Step 1 \u2014 Done.** The agent returned its full analysis (18,017 characters)."
+          "size": 387,
+          "preview": "# Reasoning trace \u2014 SECTOR PREDICT Energy 2026-09-28\n**Step 0 \u2014 Setup.** Loaded 154,134 characters of input. Provider: OpenClaw gateway, backend model `xai/grok-4.6`. Native web/X search was ENABLED inside the agent turn; see the RESEARCH APPENDIX at the end of the output for queries and sources.\n**Step 1 \u2014 Done.** The agent returned its full analysis (17,238 characters)."
         },
         {
-          "path": "01_daily/_transcripts/2026-09-28_sector_consumer_defensive_predict.json",
+          "path": "01_daily/_transcripts/2026-09-28_sector_energy_predict.json",
           "ok": true,
           "reason": "",
-          "size": 172370,
+          "size": 175785,
           "preview": "keys: provider, agent, backend_model, messages"
         },
         {
           "path": "01_daily/2026-09-28_preopen_qc.json",
           "ok": true,
           "reason": "",
-          "size": 7514,
+          "size": 7505,
           "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok"
         },
         {
           "path": "01_daily/sectors/2026-09-28/_qc.json",
           "ok": true,
           "reason": "",
-          "size": 1539,
+          "size": 1533,
           "preview": "keys: date, n_ok, n_total, summary, sectors"
         },
         {
           "path": "01_daily/sectors/2026-09-28/_BOARD.md",
           "ok": true,
           "reason": "",
-          "size": 1758,
-          "preview": "# Sector Board \u2014 2026-09-28\nGenerated: **2026-09-28T09:21:53.410879-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.)."
+          "size": 1803,
+          "preview": "# Sector Board \u2014 2026-09-28\nGenerated: **2026-09-28T09:30:15.523032-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.)."
         },
         {
           "path": "01_daily/sectors/2026-09-28/_board.json",
           "ok": true,
           "reason": "",
-          "size": 6944,
+          "size": 7109,
           "preview": "keys: date, generated_at, summary, sectors"
         },
         {
           "path": "03_scoreboard/scoreboard.json",
           "ok": true,
           "reason": "",
-          "size": 928946,
+          "size": 930007,
           "preview": "keys: runs"
         }
       ],
-      "preview": "# Sector Prediction \u2014 Consumer Defensive \u2014 2026-09-28\n- news_mode: **on**\n- ETF: **XLP**\n- rubric: `00_grounding/sectors/consumer_defensive.md`\n- predicted_direction: **flat**\n- predicted_magnitude_band: **flat**\n- total_score: **-0.622** (mult 0.8)\n- regime: mixed\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **0.113** (ES -0.30%, ZN -0.03%, PM:XLP +0.09%) \u00b7 index_carry **-1.535** (general -6.14) \u00b7 llm_overlay **0.8** (raw 0.8) \u00b7 # Reasoning trace \u2014 SECTOR PREDICT Consumer Defensive 2026-09-28\n**Step 0 \u2014 Setup.** Loaded 150,011 characters of input. Provider: OpenClaw gateway, backend model `xai/grok-4.6`. Native web/X search was ENABLED inside the agent turn; see the RESEARCH APPENDIX at the end of the output for queries and sources.\n**Step 1 \u2014 Done.** The agent returned its full analysis (18,017 characters). \u00b7 keys: provider, agent, backend_model, messages \u00b7 keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok \u00b7 keys: date, n_ok, n_total, summary, sectors \u00b7 # Sector Board \u2014 2026-09-28\nGenerated: **2026-09-28T09:21:53.410879-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_"
+      "preview": "# Sector Prediction \u2014 Energy \u2014 2026-09-28\n- news_mode: **on**\n- ETF: **XLE**\n- rubric: `00_grounding/sectors/energy.md`\n- predicted_direction: **up**\n- predicted_magnitude_band: **mild**\n- total_score: **7.946** (mult 0.85)\n- regime: mixed\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **3.481** (CL -1.59%, QA -1.02%, ES -0.30%, PM:XLE +1.21%) \u00b7 index_carry **-1.535** (general -6.14) \u00b7 llm_overlay **6.0** (raw 6.162) \u00b7 # Reasoning trace \u2014 SECTOR PREDICT Energy 2026-09-28\n**Step 0 \u2014 Setup.** Loaded 154,134 characters of input. Provider: OpenClaw gateway, backend model `xai/grok-4.6`. Native web/X search was ENABLED inside the agent turn; see the RESEARCH APPENDIX at the end of the output for queries and sources.\n**Step 1 \u2014 Done.** The agent returned its full analysis (17,238 characters). \u00b7 keys: provider, agent, backend_model, messages \u00b7 keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok \u00b7 keys: date, n_ok, n_total, summary, sectors \u00b7 # Sector Board \u2014 2026-09-28\nGenerated: **2026-09-28T09:30:15.523032-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.). \u00b7 key"
     }
   ],
   "source": "publish_live_boards"
