@@ -1,6 +1,6 @@
 {
   "date": "2026-09-28",
-  "generated_at": "2026-09-28T04:34:48.579842-04:00",
+  "generated_at": "2026-09-28T04:36:26.522773-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -15,49 +15,6 @@
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "map_heat",
-      "title": "Map heat morning overlay",
-      "date": "2026-09-28",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-28T04:26:14.611519-04:00",
-      "files": [
-        {
-          "path": "01_daily/map_heat/2026-09-28_map_heat.json",
-          "ok": true,
-          "reason": "",
-          "size": 270793,
-          "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape"
-        },
-        {
-          "path": "01_daily/map_heat/2026-09-28_map_heat.md",
-          "ok": true,
-          "reason": "",
-          "size": 17700,
-          "preview": "# MAP HEAT \u2014 2026-09-28\nExport `finviz_2026-09-28.csv` \u00b7 11616 names \u00b7 generated 2026-09-28T04:26:14.563292-04:00"
-        }
-      ],
-      "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-09-28\nExport `finviz_2026-09-28.csv` \u00b7 11616 names \u00b7 generated 2026-09-28T04:26:14.563292-04:00"
-    },
-    {
-      "key": "universe",
-      "title": "Universe labels",
-      "date": "2026-09-28",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-28T04:28:52.571705-04:00",
-      "files": [
-        {
-          "path": "data/universe/2026-09-28_membership.csv",
-          "ok": true,
-          "reason": "",
-          "size": 1121111,
-          "preview": "5899 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
-        }
-      ],
-      "preview": "5899 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
-    },
     {
       "key": "finviz_digest",
       "title": "Finviz digest",
@@ -193,6 +150,41 @@
         }
       ],
       "preview": "5899 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 FORM, DOCU, NVDA, PLAB, NICE"
+    },
+    {
+      "key": "ab",
+      "title": "AB checklist",
+      "date": "2026-09-28",
+      "ok": false,
+      "pushed": false,
+      "at": "2026-09-28T04:36:06.146291-04:00",
+      "files": [],
+      "preview": "no files"
+    },
+    {
+      "key": "news_parse",
+      "title": "News parse",
+      "date": "2026-09-28",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-28T04:36:26.041009-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-09-28_parsed.json",
+          "ok": true,
+          "reason": "",
+          "size": 381222,
+          "preview": "raw=400 usable=67 single=23 \u00b7 The 10-year Treasury yield is at its highest in nearly two decades. How we got h | Dow Jones futures drop as rising oil, US Treasury yields fuel Fed rate hike fear | Strait of Hormuz Standoff Fuels Rate Hike Bets as Gold Plunges Nearly $100 in As | Wall Street Braces for Jobs and Inflation Data as Rate Hike Fears Loom - finance | Silver Price Forecast: XAG/USD falls to near $62.00 amid Fed rate hike odds - FX"
+        },
+        {
+          "path": "01_daily/news/2026-09-28_parsed.md",
+          "ok": true,
+          "reason": "",
+          "size": 7606,
+          "preview": "# News Parse v2 \u2014 2026-09-28T04:36:25.953570-04:00\nWindow\u224848h | news_mode=on | raw=400 | usable=67 | single_name=23 | noise_dropped=310\nusable polarity={'+': 2, '-': 20, 'mixed': 2, 'neutral': 43}"
+        }
+      ],
+      "preview": "raw=400 usable=67 single=23 \u00b7 The 10-year Treasury yield is at its highest in nearly two decades. How we got h | Dow Jones futures drop as rising oil, US Treasury yields fuel Fed rate hike fear | Strait of Hormuz Standoff Fuels Rate Hike Bets as Gold Plunges Nearly $100 in As | Wall Street Braces for Jobs and Inflation Data as Rate Hike Fears Loom - finance | Silver Price Forecast: XAG/USD falls to near $62.00 amid Fed rate hike odds - FX \u00b7 # News Parse v2 \u2014 2026-09-28T04:36:25.953570-04:00\nWindow\u224848h | news_mode=on | raw=400 | usable=67 | single_name=23 | noise_dropped=310\nusable polarity={'+': 2, '-': 20, 'mixed': 2, 'neutral': 43}"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
