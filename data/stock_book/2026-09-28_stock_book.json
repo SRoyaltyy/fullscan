@@ -1,7 +1,7 @@
 {
   "meta": {
     "date": "2026-09-28",
-    "generated_at": "2026-09-28T16:54:09.737770-04:00",
+    "generated_at": "2026-09-28T16:58:59.785841-04:00",
     "general_bias": -0.6341,
     "sector_bias": {
       "Technology": -0.325,
@@ -18,8 +18,8 @@
         "gate": 0.85
       },
       "sector:Basic Materials": {
-        "hit_rate": 0.429,
-        "n": 28,
+        "hit_rate": 0.448,
+        "n": 29,
         "gate": 0.5
       },
       "sector:Communication Services": {
