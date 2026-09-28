@@ -1,12 +1,12 @@
 {
   "date": "2026-09-28",
-  "generated_at": "2026-09-28T05:40:41.414653-04:00",
+  "generated_at": "2026-09-28T05:41:03.740619-04:00",
   "overall": "PARTIAL",
-  "ranker_ready": false,
+  "ranker_ready": true,
   "counts": {
-    "ok": 3,
+    "ok": 4,
     "partial": 4,
-    "fail": 1,
+    "fail": 0,
     "n": 8
   },
   "buy_1d": [],
@@ -41,31 +41,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "map_heat_research",
-      "title": "Map heat morning delta refresh",
-      "date": "2026-09-28",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-28T05:36:18.429571-04:00",
-      "files": [
-        {
-          "path": "01_daily/map_heat/2026-09-28_research.json",
-          "ok": true,
-          "reason": "",
-          "size": 43838,
-          "preview": "keys: date, phase, passthrough, source_baseline_generated_at, generated_at, n_targets, n_cards, n_refreshed, evidence_errors, morning_refresh_errors, cards, size_gate"
-        },
-        {
-          "path": "01_daily/map_heat/2026-09-28_research.md",
-          "ok": true,
-          "reason": "",
-          "size": 43838,
-          "preview": "# MAP HEAT RESEARCH \u2014 2026-09-28\n142 captain cards \u00b7 size_gate=True set by pre-open refresh"
-        }
-      ],
-      "preview": "keys: date, phase, passthrough, source_baseline_generated_at, generated_at, n_targets, n_cards, n_refreshed, evidence_errors, morning_refresh_errors, cards, size_gate \u00b7 # MAP HEAT RESEARCH \u2014 2026-09-28\n142 captain cards \u00b7 size_gate=True set by pre-open refresh"
-    },
     {
       "key": "finviz",
       "title": "Finviz universe export",
@@ -212,6 +187,31 @@
         }
       ],
       "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+    },
+    {
+      "key": "ab",
+      "title": "AB checklist",
+      "date": "2026-09-28",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-28T05:41:02.992873-04:00",
+      "files": [
+        {
+          "path": "data/ab_checklist/2026-09-28_ab_checklist.csv",
+          "ok": true,
+          "reason": "",
+          "size": 7633482,
+          "preview": "2661 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 FIGS, WAY, AAPL, GCT, RGEN"
+        },
+        {
+          "path": "data/ab_checklist/2026-09-28_ab_checklist_enriched.csv",
+          "ok": true,
+          "reason": "",
+          "size": 8479374,
+          "preview": "2661 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 RGEN, ICLR, FIGS, BJ, GMAB"
+        }
+      ],
+      "preview": "2661 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 FIGS, WAY, AAPL, GCT, RGEN \u00b7 2661 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 RGEN, ICLR, FIGS, BJ, GMAB"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
