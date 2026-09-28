@@ -1,6 +1,6 @@
 {
   "date": "2026-09-28",
-  "generated_at": "2026-09-28T05:48:31.754117-04:00",
+  "generated_at": "2026-09-28T05:53:13.612971-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -11,30 +11,38 @@
   },
   "buy_1d": [
     {
-      "ticker": "HITI",
-      "score": 0.45670933133865954
+      "ticker": "ASTH",
+      "score": 0.5749936683214443
     },
     {
-      "ticker": "SONO",
-      "score": 0.8007497906758343
+      "ticker": "FIVN",
+      "score": 0.6709433027153752
     },
     {
-      "ticker": "MQ",
-      "score": 0.6952288906623421
+      "ticker": "GCT",
+      "score": 0.6240350786968518
+    },
+    {
+      "ticker": "TUYA",
+      "score": 0.5826903847287777
+    },
+    {
+      "ticker": "THC",
+      "score": 0.15072208402844628
     }
   ],
   "sell_1d": [
     {
       "ticker": "EOSE",
-      "score": -0.3949622968915913
+      "score": -0.3948380211236095
+    },
+    {
+      "ticker": "FCEL",
+      "score": -0.3735313494842403
     },
     {
       "ticker": "TE",
       "score": -0.307268477517126
-    },
-    {
-      "ticker": "NEOV",
-      "score": -0.29783921283970816
     },
     {
       "ticker": "METC",
@@ -45,16 +53,16 @@
       "score": -0.4055368107630624
     },
     {
-      "ticker": "ACDC",
-      "score": -0.45673539144358793
+      "ticker": "ARE",
+      "score": -0.3779162733593053
     },
     {
-      "ticker": "MATW",
-      "score": -0.35415761730300316
+      "ticker": "EXK",
+      "score": 0.05224832735709392
     },
     {
-      "ticker": "RC",
-      "score": -0.4321855819652083
+      "ticker": "QBTS",
+      "score": -0.044685398898061446
     }
   ],
   "flatten": {
