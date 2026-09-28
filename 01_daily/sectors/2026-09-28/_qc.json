@@ -1,6 +1,6 @@
 {
   "date": "2026-09-28",
-  "n_ok": 5,
+  "n_ok": 6,
   "n_total": 11,
   "summary": "",
   "sectors": [
@@ -34,10 +34,10 @@
     },
     {
       "sector": "Energy",
-      "ok": false,
-      "reason": "missing",
-      "size": 0,
-      "status": "FAIL"
+      "ok": true,
+      "reason": "",
+      "size": 19203,
+      "status": "OK"
     },
     {
       "sector": "Financial",
