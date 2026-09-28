@@ -4,7 +4,8 @@ name: Jev hop-0 news gate
 # Jev pack per leftover title. Does not classify the 52 event types
 # or pick bullish/bearish. Does not touch flatten / Webull / factor-mine.
 # Agent tokens cannot workflow_dispatch — a push of this file on main
-# fires gold then a capped harvest.
+# fires gold then a capped harvest. Do not cancel-in-progress: main
+# lands every minute and a cancelled checkout never reaches Jev.
 
 on:
   push:
@@ -43,8 +44,8 @@ permissions:
   contents: write
 
 concurrency:
-  group: jev-gate
-  cancel-in-progress: true
+  group: jev-hop0-gate
+  cancel-in-progress: false
 
 jobs:
   gate:
@@ -52,6 +53,8 @@ jobs:
     timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
@@ -66,6 +69,11 @@ jobs:
           CODE=""
           if [ "${{ github.event.inputs.code_only }}" = "1" ]; then
             CODE="--code-only"
+          fi
+          if [ -z "${JEV_API_KEY}" ]; then
+            echo "JEV_API_KEY empty — gold --code-only only"
+            PYTHONPATH=. python3 -m src.jev_gate --gold --code-only
+            exit 1
           fi
           PYTHONPATH=. python3 -m src.jev_gate --gold $CODE
           DATE="${{ github.event.inputs.date }}"
@@ -84,7 +92,7 @@ jobs:
           head -80 03_scoreboard/JEV_GATE.md || true
           ls -lh 01_daily/news/*jev_keep* 01_daily/news/*jev_junk* || true
       - name: Commit keep list
-        if: always()
+        if: success()
         run: |
           export HOME="${HOME:-/home/gha}"
           unset GIT_DIR GIT_WORK_TREE GIT_INDEX_FILE
