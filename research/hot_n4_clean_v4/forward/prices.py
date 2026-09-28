@@ -25,6 +25,7 @@ ROOT = Path(__file__).resolve().parents[3]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
+from research.hot_n4_clean_v4.forward.book import current_book  # noqa: E402
 from research.hot_n4_clean_v4.forward.ledger import (  # noqa: E402
     HERE,
     book_dates,
@@ -55,16 +56,20 @@ class SealedBarRevision(RuntimeError):
     """Yahoo changed a bar a sealed record already used."""
 
 
+def _price_folder(folder: Path | None) -> Path:
+    return folder or current_book().folder
+
+
 def prices_path(folder: Path | None = None) -> Path:
-    return (folder or HERE) / PRICES_NAME
+    return _price_folder(folder) / PRICES_NAME
 
 
 def price_ledger_path(folder: Path | None = None) -> Path:
-    return (folder or HERE) / LEDGER_NAME
+    return _price_folder(folder) / LEDGER_NAME
 
 
 def revisions_path(folder: Path | None = None) -> Path:
-    return (folder or HERE) / REVISIONS_NAME
+    return _price_folder(folder) / REVISIONS_NAME
 
 
 def bar_is_final(session: str, now: datetime) -> bool:
@@ -131,8 +136,13 @@ def sealed_bar_keys(records: list[dict]) -> set[tuple[str, str]]:
     keys = set()
     for record in records:
         kind = record.get("kind")
-        if kind in ("session", "fill"):
+        if kind in ("session", "fill", "open_fill"):
             for row in list(record.get("buys") or []) + list(record.get("sells") or []):
+                keys.add((row["ticker"], record["date"]))
+            for row in record.get("holdings") or []:
+                keys.add((row["ticker"], record["date"]))
+        elif kind == "mark":
+            for row in list(record.get("added_buys") or []) + list(record.get("added_sells") or []):
                 keys.add((row["ticker"], record["date"]))
             for row in record.get("holdings") or []:
                 keys.add((row["ticker"], record["date"]))
@@ -569,7 +579,7 @@ def main() -> int:
             pinned_stored=bars["stored"],
             records=records,
             fetch=fetch_yahoo,
-            folder=HERE,
+            folder=current_book().folder,
             note=note,
         )
     except (Halt, SealedBarRevision) as exc:

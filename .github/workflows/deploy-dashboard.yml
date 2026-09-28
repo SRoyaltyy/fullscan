@@ -202,10 +202,16 @@ jobs:
             cp -a dashboard/day-movers/. pages_out/dashboard/day-movers/
             echo "Overlayed dashboard/day-movers from main"
           fi
+          # Same overlay route as dashboard/factor-mine above: copy from main, then the site-root mirror.
           if [ -f dashboard/holdup/index.html ]; then
             mkdir -p pages_out/dashboard/holdup
             cp -a dashboard/holdup/. pages_out/dashboard/holdup/
             echo "Overlayed dashboard/holdup from main"
+          fi
+          if [ -f dashboard/h1/index.html ]; then
+            mkdir -p pages_out/dashboard/h1
+            cp -a dashboard/h1/. pages_out/dashboard/h1/
+            echo "Overlayed dashboard/h1 from main"
           fi
 
           # The paper book is also copied to the site root. Mirror every
@@ -219,6 +225,11 @@ jobs:
               echo "Root copy pages_out/${sub}"
             fi
           done
+          if [ -d pages_out/dashboard/h1 ]; then
+            mkdir -p pages_out/h1
+            cp -a pages_out/dashboard/h1/. pages_out/h1/
+            echo "Root copy pages_out/h1"
+          fi
 
           if [ ! -f pages_out/dashboard/index.html ]; then
             echo "ERROR: no dashboard index.html to publish"
@@ -256,5 +267,6 @@ jobs:
           echo "https://SRoyaltyy.github.io/fullscan/dashboard/day-movers/"
           echo "https://SRoyaltyy.github.io/fullscan/dashboard/down-day-mine/"
           echo "https://SRoyaltyy.github.io/fullscan/dashboard/holdup/"
+          echo "https://SRoyaltyy.github.io/fullscan/dashboard/h1/"
           echo "https://SRoyaltyy.github.io/fullscan/"
           echo "If 404: Settings → Pages → Deploy from branch → gh-pages / root"

@@ -1,31 +1,28 @@
-name: Holdup post-close fill
+name: h1 open fill
 
-# Weekdays after the US cash close and after Yahoo has session D's daily bar.
-# 21:30 UTC = 5:30 PM ET during EDT (UTC-4) and 4:30 PM ET during EST
-# (UTC-5). Hong Kong Time is 5:30 AM the next calendar day (UTC+8, no DST).
-# The cash close is 4:00 PM ET, which is 20:00 UTC in EDT and 21:00 UTC in EST.
-# A bar is treated as final only at or after 21:15 UTC on that session, so
-# this run is past the close in both EDT and EST. The job is retry-safe:
-# a second run of a sealed fill does nothing, and a missing bar appends nothing.
-# The fill is written only when a sealed plan for D exists, and it does not
-# edit that plan. If the 13:35 UTC open-fill already marked the buys and
-# sells, this run appends only closes, the close mark, and names that
-# open-fill could not price. It does not append those fills again.
+# Same clock as the holdup open-fill.
+# 13:35 UTC = 09:35 ET during EDT (UTC-4, through 2026-11-01) and 08:35 ET
+# during EST (UTC-5, from 2026-11-01). Hong Kong Time is 9:35 PM the same
+# calendar day (UTC+8, no DST). GitHub cron does not follow DST. During EST
+# this is before the 09:30 open; a missing open appends nothing and the
+# 21:30 UTC fill writes the trades.
+# Reads the h1 plan sealed at 13:05 UTC for today's session. No plan for
+# today, including 2026-09-28, appends nothing.
 
 on:
   schedule:
-    - cron: "30 21 * * 1-5"
+    - cron: "35 13 * * 1-5"
   workflow_dispatch:
 
 permissions:
   contents: write
 
 concurrency:
-  group: holdup-forward
+  group: h1-forward
   cancel-in-progress: false
 
 jobs:
-  fill:
+  open-fill:
     runs-on: ubuntu-latest
     timeout-minutes: 45
     steps:
@@ -51,13 +48,16 @@ jobs:
             || echo "theme-radar checkout failed"
       - name: Refresh forward prices
         id: prices
+        env:
+          FORWARD_BOOK: h1
         run: PYTHONHASHSEED=0 python3 research/hot_n4_clean_v4/forward/prices.py
-      - name: Seal the post-close fill
-        id: fill
+      - name: Seal the open fill
+        id: open_fill
         if: success()
         env:
+          FORWARD_BOOK: h1
           HOLDUP_GIT_REF: origin/main
-          HOLDUP_MODE: fill
+          HOLDUP_MODE: open_fill
         run: PYTHONHASHSEED=0 python3 research/hot_n4_clean_v4/forward/forward.py
       - name: Commit the append
         if: always()
@@ -66,14 +66,14 @@ jobs:
           git config user.name "Market-Bot-Automaton"
           git config user.email "bot@users.noreply.github.com"
           files=(
-            research/hot_n4_clean_v4/forward/holdup_log.jsonl
-            research/hot_n4_clean_v4/forward/LEDGER.jsonl
-            research/hot_n4_clean_v4/forward/skips.jsonl
-            research/hot_n4_clean_v4/forward/prices.jsonl
-            research/hot_n4_clean_v4/forward/PRICE_LEDGER.jsonl
-            research/hot_n4_clean_v4/forward/price_revisions.jsonl
-            dashboard/holdup/log.json
-            dashboard/holdup/status.json
+            research/hot_n4_clean_v4/forward_h1/h1_log.jsonl
+            research/hot_n4_clean_v4/forward_h1/LEDGER.jsonl
+            research/hot_n4_clean_v4/forward_h1/skips.jsonl
+            research/hot_n4_clean_v4/forward_h1/prices.jsonl
+            research/hot_n4_clean_v4/forward_h1/PRICE_LEDGER.jsonl
+            research/hot_n4_clean_v4/forward_h1/price_revisions.jsonl
+            dashboard/h1/log.json
+            dashboard/h1/status.json
           )
           for path in "${files[@]}"; do
             if [ -f "$path" ]; then
@@ -84,9 +84,9 @@ jobs:
             echo "no change"
             exit 0
           fi
-          git commit -m "Seal the holdup fill."
+          git commit -m "Seal the h1 open fill."
           git pull --rebase origin main
           git push origin HEAD:main
       - name: Fail the job when the book halted
-        if: steps.prices.outcome == 'failure' || steps.fill.outcome == 'failure'
+        if: steps.prices.outcome == 'failure' || steps.open_fill.outcome == 'failure'
         run: exit 1

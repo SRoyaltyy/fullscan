@@ -1,21 +1,22 @@
-name: Holdup append-only forward
+name: h1 append-only forward
 
-# Weekdays after Pre-Open ALL (09:55 UTC) has had time to land the
-# morning files, and before the US cash open.
-# 13:05 UTC = 9:05 AM ET during EDT (UTC-4) and 8:05 AM ET during EST
-# (UTC-5). Hong Kong Time is 9:05 PM year-round (UTC+8, no DST).
-# The cash open is 9:30 AM ET, which is 1:30 PM UTC / 9:30 PM HKT in
-# EDT and 2:30 PM UTC / 10:30 PM HKT in EST.
-# This run seals a PLAN for session D only: ranked picks, planned sells,
-# and excluded names. It does not read D's prices. The fill is a separate
-# post-close workflow. If the morning score is missing, the log is not
-# touched and the reason is written to skips.jsonl.
+# Same clock as the holdup plan. Weekdays after Pre-Open ALL (09:55 UTC)
+# has had time to land the morning files, and before the US cash open.
+# 13:05 UTC = 9:05 AM ET during EDT (UTC-4, through 2026-11-01) and 8:05 AM
+# ET during EST (UTC-5, from 2026-11-01). Hong Kong Time is 9:05 PM
+# year-round (UTC+8, no DST). GitHub cron does not follow DST.
+# This run seals a PLAN for session D only. It does not read D's prices.
+# Session 2026-09-28 uses the frozen Theme Radar record (trade date 09-28).
+# This 13:05 UTC run seals that plan for h1 when it is on main before 09:30 ET
+# (13:30 UTC during EDT). A workflow_dispatch must commit before 13:25 UTC
+# (09:25 ET) to count. The run refuses at or after 09:30 ET and writes nothing.
+# 09-28 is marked missing only when no plan was committed before that open.
+# Holdup is a different book: this job sets FORWARD_BOOK=h1 and does not
+# append a second holdup plan.
 # From 2026-09-29 the Finviz universe is theme-radar
 # data/snapshots/<previous session>.csv at the last commit before 09:30 ET.
 # A missing file or a commit that is not before the open skips Finviz names
-# and fills no new buy, the same as 2026-08-28. It does not skip the day.
-# workflow_dispatch session_date seals that session when it is the next one.
-# The run refuses at or after 09:30 ET on that session and writes nothing.
+# and fills no new buy, the same as 2026-08-28.
 # The page is published by deploy-dashboard.yml on the same overlay route
 # as dashboard/factor-mine (copy from main, then the site-root mirror).
 
@@ -33,7 +34,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: holdup-forward
+  group: h1-forward
   cancel-in-progress: false
 
 jobs:
@@ -63,11 +64,14 @@ jobs:
             || echo "theme-radar checkout failed"
       - name: Refresh forward prices
         id: prices
+        env:
+          FORWARD_BOOK: h1
         run: PYTHONHASHSEED=0 python3 research/hot_n4_clean_v4/forward/prices.py
       - name: Seal the pre-open plan
         id: plan
         if: success()
         env:
+          FORWARD_BOOK: h1
           HOLDUP_GIT_REF: origin/main
           HOLDUP_MODE: plan
           PLAN_SESSION: ${{ github.event.inputs.session_date }}
@@ -79,14 +83,14 @@ jobs:
           git config user.name "Market-Bot-Automaton"
           git config user.email "bot@users.noreply.github.com"
           files=(
-            research/hot_n4_clean_v4/forward/holdup_log.jsonl
-            research/hot_n4_clean_v4/forward/LEDGER.jsonl
-            research/hot_n4_clean_v4/forward/skips.jsonl
-            research/hot_n4_clean_v4/forward/prices.jsonl
-            research/hot_n4_clean_v4/forward/PRICE_LEDGER.jsonl
-            research/hot_n4_clean_v4/forward/price_revisions.jsonl
-            dashboard/holdup/log.json
-            dashboard/holdup/status.json
+            research/hot_n4_clean_v4/forward_h1/h1_log.jsonl
+            research/hot_n4_clean_v4/forward_h1/LEDGER.jsonl
+            research/hot_n4_clean_v4/forward_h1/skips.jsonl
+            research/hot_n4_clean_v4/forward_h1/prices.jsonl
+            research/hot_n4_clean_v4/forward_h1/PRICE_LEDGER.jsonl
+            research/hot_n4_clean_v4/forward_h1/price_revisions.jsonl
+            dashboard/h1/log.json
+            dashboard/h1/status.json
           )
           for path in "${files[@]}"; do
             if [ -f "$path" ]; then
@@ -97,7 +101,7 @@ jobs:
             echo "no change"
             exit 0
           fi
-          git commit -m "Seal the next holdup plan."
+          git commit -m "Seal the next h1 plan."
           git pull --rebase origin main
           git push origin HEAD:main
       - name: Fail the job when the book halted

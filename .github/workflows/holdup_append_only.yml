@@ -4,22 +4,34 @@ on:
   pull_request:
     paths:
       - "research/hot_n4_clean_v4/forward/**"
+      - "research/hot_n4_clean_v4/forward_h1/**"
       - "research/hot_n4_clean_v4/days/**"
       - "research/hot_n4_clean_v4/returns/**"
       - "dashboard/holdup/**"
+      - "dashboard/h1/**"
       - ".github/workflows/holdup_append_only.yml"
       - ".github/workflows/holdup_forward.yml"
       - ".github/workflows/holdup_fill.yml"
+      - ".github/workflows/holdup_open_fill.yml"
+      - ".github/workflows/h1_forward.yml"
+      - ".github/workflows/h1_open_fill.yml"
+      - ".github/workflows/h1_fill.yml"
   push:
     branches: [main]
     paths:
       - "research/hot_n4_clean_v4/forward/**"
+      - "research/hot_n4_clean_v4/forward_h1/**"
       - "research/hot_n4_clean_v4/days/**"
       - "research/hot_n4_clean_v4/returns/**"
       - "dashboard/holdup/**"
+      - "dashboard/h1/**"
       - ".github/workflows/holdup_append_only.yml"
       - ".github/workflows/holdup_forward.yml"
       - ".github/workflows/holdup_fill.yml"
+      - ".github/workflows/holdup_open_fill.yml"
+      - ".github/workflows/h1_forward.yml"
+      - ".github/workflows/h1_open_fill.yml"
+      - ".github/workflows/h1_fill.yml"
 
 permissions:
   contents: read
@@ -43,3 +55,5 @@ jobs:
         run: |
           PYTHONHASHSEED=0 python3 research/hot_n4_clean_v4/forward/test_append_only.py
           PYTHONHASHSEED=0 python3 research/hot_n4_clean_v4/forward/test_plan_fill.py
+          PYTHONHASHSEED=0 python3 research/hot_n4_clean_v4/forward/test_open_fill.py
+          PYTHONHASHSEED=0 python3 research/hot_n4_clean_v4/forward/test_snapshot_plan.py

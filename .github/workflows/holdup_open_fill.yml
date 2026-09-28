@@ -1,33 +1,21 @@
-name: Holdup append-only forward
+name: Holdup open fill
 
-# Weekdays after Pre-Open ALL (09:55 UTC) has had time to land the
-# morning files, and before the US cash open.
-# 13:05 UTC = 9:05 AM ET during EDT (UTC-4) and 8:05 AM ET during EST
-# (UTC-5). Hong Kong Time is 9:05 PM year-round (UTC+8, no DST).
-# The cash open is 9:30 AM ET, which is 1:30 PM UTC / 9:30 PM HKT in
-# EDT and 2:30 PM UTC / 10:30 PM HKT in EST.
-# This run seals a PLAN for session D only: ranked picks, planned sells,
-# and excluded names. It does not read D's prices. The fill is a separate
-# post-close workflow. If the morning score is missing, the log is not
-# touched and the reason is written to skips.jsonl.
-# From 2026-09-29 the Finviz universe is theme-radar
-# data/snapshots/<previous session>.csv at the last commit before 09:30 ET.
-# A missing file or a commit that is not before the open skips Finviz names
-# and fills no new buy, the same as 2026-08-28. It does not skip the day.
-# workflow_dispatch session_date seals that session when it is the next one.
-# The run refuses at or after 09:30 ET on that session and writes nothing.
-# The page is published by deploy-dashboard.yml on the same overlay route
-# as dashboard/factor-mine (copy from main, then the site-root mirror).
+# Weekdays about five minutes after the US cash open during EDT.
+# 13:35 UTC = 09:35 ET during EDT (UTC-4, through 2026-11-01) and 08:35 ET
+# during EST (UTC-5, from 2026-11-01). Hong Kong Time is 9:35 PM the same
+# calendar day (UTC+8, no DST). GitHub cron is UTC and does not follow DST.
+# During EST this run is before the 09:30 ET open. If the official open is
+# not printed yet, the job appends nothing and the 21:30 UTC fill writes
+# the trades.
+# The job reads the plan sealed at 13:05 UTC for today's session and appends
+# open-fill lines at the Yahoo split-adjusted daily Open. It does not edit
+# the plan. No plan for today appends nothing. A second run appends nothing.
+# P&L stays pending until the close bar is saved.
 
 on:
   schedule:
-    - cron: "5 13 * * 1-5"
+    - cron: "35 13 * * 1-5"
   workflow_dispatch:
-    inputs:
-      session_date:
-        description: "Session D (YYYY-MM-DD). Empty seals the next session. Refuses at or after 09:30 ET."
-        required: false
-        default: ""
 
 permissions:
   contents: write
@@ -37,7 +25,7 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  append:
+  open-fill:
     runs-on: ubuntu-latest
     timeout-minutes: 45
     steps:
@@ -49,28 +37,27 @@ jobs:
           python-version: "3.12"
       - name: Install bar dependencies
         run: pip install numpy pandas pyarrow yfinance
-      - name: Theme Radar history for the pre-open panel
+      - name: Theme Radar history for the frozen panel
         run: |
           set -euo pipefail
           if ! git clone --filter=blob:none --no-checkout \
               https://github.com/SRoyaltyy/theme-radar.git vendor/theme-radar; then
-            echo "theme-radar clone failed; the forward step will log the missing panel"
+            echo "theme-radar clone failed; the price refresh will fetch held names and IWM only"
             exit 0
           fi
           git -C vendor/theme-radar sparse-checkout init --cone
-          git -C vendor/theme-radar sparse-checkout set research/lever_panel data/snapshots
+          git -C vendor/theme-radar sparse-checkout set research/lever_panel
           git -C vendor/theme-radar checkout main \
             || echo "theme-radar checkout failed"
       - name: Refresh forward prices
         id: prices
         run: PYTHONHASHSEED=0 python3 research/hot_n4_clean_v4/forward/prices.py
-      - name: Seal the pre-open plan
-        id: plan
+      - name: Seal the open fill
+        id: open_fill
         if: success()
         env:
           HOLDUP_GIT_REF: origin/main
-          HOLDUP_MODE: plan
-          PLAN_SESSION: ${{ github.event.inputs.session_date }}
+          HOLDUP_MODE: open_fill
         run: PYTHONHASHSEED=0 python3 research/hot_n4_clean_v4/forward/forward.py
       - name: Commit the append
         if: always()
@@ -97,9 +84,9 @@ jobs:
             echo "no change"
             exit 0
           fi
-          git commit -m "Seal the next holdup plan."
+          git commit -m "Seal the holdup open fill."
           git pull --rebase origin main
           git push origin HEAD:main
       - name: Fail the job when the book halted
-        if: steps.prices.outcome == 'failure' || steps.plan.outcome == 'failure'
+        if: steps.prices.outcome == 'failure' || steps.open_fill.outcome == 'failure'
         run: exit 1

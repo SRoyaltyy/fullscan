@@ -11,6 +11,8 @@ import hashlib
 import json
 from pathlib import Path
 
+from research.hot_n4_clean_v4.forward.book import current_book
+
 HERE = Path(__file__).resolve().parent
 LOG_NAME = "holdup_log.jsonl"
 LEDGER_NAME = "LEDGER.jsonl"
@@ -27,11 +29,12 @@ def sha256_bytes(raw: bytes) -> str:
 
 
 def log_path(folder: Path | None = None) -> Path:
-    return (folder or HERE) / LOG_NAME
+    book = current_book()
+    return (folder or book.folder) / book.log_name
 
 
 def ledger_path(folder: Path | None = None) -> Path:
-    return (folder or HERE) / LEDGER_NAME
+    return (folder or current_book().folder) / LEDGER_NAME
 
 
 def _split(text: bytes, what: str) -> list[bytes]:
@@ -61,13 +64,14 @@ def seal(body: dict) -> tuple[dict, bytes]:
 
 def load(folder: Path | None = None) -> list[dict]:
     """Parse and check every line. Raise if the log and the ledger disagree."""
-    folder = folder or HERE
+    folder = current_book().folder if folder is None else folder
     log_lines = _split(log_path(folder).read_bytes() if log_path(folder).is_file() else b"", "log")
     led_lines = _split(ledger_path(folder).read_bytes() if ledger_path(folder).is_file() else b"", "ledger")
     if len(log_lines) != len(led_lines):
         raise RuntimeError("ledger length")
     records = []
     state = _new_state()
+    recipe = current_book().recipe
     for seq, (raw, led_raw) in enumerate(zip(log_lines, led_lines), start=1):
         try:
             obj = json.loads(raw)
@@ -89,9 +93,9 @@ def load(folder: Path | None = None) -> list[dict]:
             raise RuntimeError(f"ledger mismatch seq {seq}")
         if int(led.get("seq")) != seq or led.get("kind") != obj.get("kind"):
             raise RuntimeError(f"ledger seq {seq}")
-        if led.get("date") != obj.get("date") or led.get("recipe") != RECIPE:
+        if led.get("date") != obj.get("date") or led.get("recipe") != recipe:
             raise RuntimeError(f"ledger identity seq {seq}")
-        if obj.get("recipe") != RECIPE:
+        if obj.get("recipe") != recipe:
             raise RuntimeError(f"recipe seq {seq}")
         _note(state, obj)
         records.append(obj)
@@ -112,7 +116,11 @@ def _new_state() -> dict:
         "close_keys": [],
         "closes": {},
         "fill_dates": [],
+        "mark_dates": [],
+        "open_fill_dates": [],
+        "open_fills": {},
         "parents": {},
+        "missing_dates": [],
         "plan_dates": [],
         "plan_sha": {},
         "plans": {},
@@ -132,6 +140,13 @@ def _reject_keys(row: dict, banned: frozenset, label: str) -> None:
     found = banned.intersection(row)
     if found:
         raise RuntimeError(f"{label} has {sorted(found)[0]}")
+
+
+def _unique_symbols(buys: list, sells: list) -> None:
+    buy_names = [row["ticker"] for row in buys]
+    sell_names = [row["ticker"] for row in sells]
+    if len(buy_names) != len(set(buy_names)) or len(sell_names) != len(set(sell_names)):
+        raise RuntimeError("duplicate fill")
 
 
 def _note(state: dict, obj: dict) -> None:
@@ -166,23 +181,76 @@ def _note(state: dict, obj: dict) -> None:
             raise RuntimeError("plan date")
         if state["plan_dates"] and obj["date"] <= state["plan_dates"][-1]:
             raise RuntimeError("plan order")
-        if state["plan_dates"] and state["plan_dates"][-1] not in state["fill_dates"]:
+        resolved = set(state["fill_dates"]) | set(state["mark_dates"])
+        if state["plan_dates"] and state["plan_dates"][-1] not in resolved:
             raise RuntimeError("previous plan is not filled")
+        if obj["date"] in state["missing_dates"]:
+            raise RuntimeError("plan on a missing session")
         if obj["date"] in state["plan_dates"]:
             raise RuntimeError("duplicate plan")
         state["plan_dates"].append(obj["date"])
         state["plan_sha"][obj["date"]] = obj["sha256"]
         state["plans"][obj["date"]] = obj
+    elif kind == "open_fill":
+        if "equity_primary" in obj:
+            raise RuntimeError("open fill has equity")
+        if obj.get("pnl_status") != "pending":
+            raise RuntimeError("open fill pnl")
+        if obj["date"] not in state["plan_sha"]:
+            raise RuntimeError("open fill without plan")
+        if obj["date"] in state["open_fill_dates"] or obj["date"] in state["fill_dates"] or obj["date"] in state["mark_dates"]:
+            raise RuntimeError("duplicate fill")
+        if state["open_fill_dates"] and obj["date"] <= state["open_fill_dates"][-1]:
+            raise RuntimeError("open fill order")
+        _match_fill(state["plans"][obj["date"]], obj)
+        _unique_symbols(obj.get("buys") or [], obj.get("sells") or [])
+        state["open_fill_dates"].append(obj["date"])
+        state["open_fills"][obj["date"]] = obj
     elif kind == "fill":
         if obj["date"] not in state["plan_sha"]:
             raise RuntimeError("fill without plan")
+        if obj["date"] in state["open_fill_dates"] or obj["date"] in state["mark_dates"]:
+            raise RuntimeError("duplicate fill")
         if state["fill_dates"] and obj["date"] <= state["fill_dates"][-1]:
             raise RuntimeError("fill order")
         if obj["date"] in state["fill_dates"]:
             raise RuntimeError("duplicate fill")
         _match_fill(state["plans"][obj["date"]], obj)
+        _unique_symbols(obj.get("buys") or [], obj.get("sells") or [])
         state["fill_dates"].append(obj["date"])
         state["parents"][obj["date"]] = obj
+    elif kind == "mark":
+        if obj["date"] not in state["open_fills"]:
+            raise RuntimeError("mark without open fill")
+        if obj["date"] in state["mark_dates"] or obj["date"] in state["fill_dates"]:
+            raise RuntimeError("duplicate mark")
+        if state["mark_dates"] and obj["date"] <= state["mark_dates"][-1]:
+            raise RuntimeError("mark order")
+        opened = state["open_fills"][obj["date"]]
+        if obj.get("open_fill_sha256") != opened.get("sha256"):
+            raise RuntimeError("mark does not match open fill")
+        if obj.get("plan_sha256") != state["plan_sha"].get(obj["date"]):
+            raise RuntimeError("mark does not match plan")
+        if obj.get("pnl_status") != "marked" or "equity_primary" not in obj:
+            raise RuntimeError("mark pnl")
+        buy_names = {row["ticker"] for row in opened.get("buys") or []}
+        sell_names = {row["ticker"] for row in opened.get("sells") or []}
+        planned = {row["ticker"]: row for row in state["plans"][obj["date"]].get("planned_sells") or []}
+        for row in obj.get("added_buys") or []:
+            if row["ticker"] in buy_names:
+                raise RuntimeError("duplicate fill")
+            buy_names.add(row["ticker"])
+        for row in obj.get("added_sells") or []:
+            if row["ticker"] in sell_names:
+                raise RuntimeError("duplicate fill")
+            if row["ticker"] not in planned:
+                raise RuntimeError("fill sell is not planned")
+            sell_names.add(row["ticker"])
+        _unique_symbols(obj.get("added_buys") or [], obj.get("added_sells") or [])
+        state["mark_dates"].append(obj["date"])
+        parent = dict(obj)
+        parent["sells"] = list(opened.get("sells") or []) + list(obj.get("added_sells") or [])
+        state["parents"][obj["date"]] = parent
     elif kind == "close":
         key = (obj["date"], obj["ticker"], obj["entry_date"])
         if key in state["close_keys"]:
@@ -197,6 +265,25 @@ def _note(state: dict, obj: dict) -> None:
         if obj["ticker"] not in sell_names:
             raise RuntimeError("close is not a sell")
         state["closes"].setdefault(obj["date"], []).append(obj)
+    elif kind == "missing":
+        if obj.get("reason") != "missing: plan not sealed before open":
+            raise RuntimeError("missing reason")
+        if obj.get("picks") or obj.get("planned_sells"):
+            raise RuntimeError("missing has picks")
+        if not obj.get("committed_at"):
+            raise RuntimeError("missing timestamp")
+        resolved = set(state["fill_dates"]) | set(state["mark_dates"])
+        if state["plan_dates"] and state["plan_dates"][-1] not in resolved:
+            raise RuntimeError("previous plan is not filled")
+        if state["session_dates"] and obj["date"] <= state["session_dates"][-1]:
+            raise RuntimeError("missing date")
+        if obj["date"] in state["plan_dates"] or obj["date"] in state["missing_dates"]:
+            raise RuntimeError("duplicate missing")
+        if state["plan_dates"] and obj["date"] <= state["plan_dates"][-1]:
+            raise RuntimeError("missing order")
+        if state["missing_dates"] and obj["date"] <= state["missing_dates"][-1]:
+            raise RuntimeError("missing order")
+        state["missing_dates"].append(obj["date"])
     else:
         raise RuntimeError(f"kind {kind}")
 
@@ -254,7 +341,7 @@ def _finish(state: dict) -> None:
     if state["fill_dates"] != sorted(state["fill_dates"]):
         raise RuntimeError("fill order")
     for day, parent in state["parents"].items():
-        if parent.get("kind") not in ("session", "fill"):
+        if parent.get("kind") not in ("session", "fill", "mark"):
             continue
         sells = [row["ticker"] for row in parent.get("sells") or []]
         closed = [row["ticker"] for row in state["closes"].get(day, [])]
@@ -263,15 +350,30 @@ def _finish(state: dict) -> None:
 
 
 def open_plan(records: list[dict]) -> dict | None:
-    filled = {row["date"] for row in records if row["kind"] == "fill"}
+    """A plan with no fill and no close mark. An open-fill alone is still open."""
+    resolved = {row["date"] for row in records if row["kind"] in ("fill", "mark")}
     for row in records:
-        if row["kind"] == "plan" and row["date"] not in filled:
+        if row["kind"] == "plan" and row["date"] not in resolved:
+            return row
+    return None
+
+
+def plan_on(records: list[dict], day: str) -> dict | None:
+    for row in records:
+        if row["kind"] == "plan" and row["date"] == day:
+            return row
+    return None
+
+
+def kind_on(records: list[dict], day: str, kind: str) -> dict | None:
+    for row in records:
+        if row["kind"] == kind and row["date"] == day:
             return row
     return None
 
 
 def book_dates(records: list[dict]) -> list[str]:
-    return [row["date"] for row in records if row["kind"] in ("session", "fill")]
+    return [row["date"] for row in records if row["kind"] in ("session", "fill", "mark")]
 
 
 def session_dates(records: list[dict]) -> list[str]:
@@ -289,7 +391,7 @@ def append_records(bodies: list[dict], folder: Path | None = None) -> list[dict]
     """
     if not bodies:
         raise RuntimeError("empty append")
-    folder = folder or HERE
+    folder = current_book().folder if folder is None else folder
     folder.mkdir(parents=True, exist_ok=True)
     existing = load(folder)
     start = len(existing)
@@ -302,7 +404,7 @@ def append_records(bodies: list[dict], folder: Path | None = None) -> list[dict]
     led_out = []
     sealed = []
     for offset, body in enumerate(bodies):
-        if body.get("recipe") != RECIPE:
+        if body.get("recipe") != current_book().recipe:
             raise RuntimeError("recipe")
         record, line = seal(body)
         _note(state, record)
@@ -311,7 +413,7 @@ def append_records(bodies: list[dict], folder: Path | None = None) -> list[dict]
             "bytes": len(line),
             "date": record["date"],
             "kind": record["kind"],
-            "recipe": RECIPE,
+            "recipe": current_book().recipe,
             "seq": seq,
             "sha256": record["sha256"],
         }
