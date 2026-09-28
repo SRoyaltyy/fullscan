@@ -1,6 +1,6 @@
 {
   "date": "2026-09-28",
-  "generated_at": "2026-09-28T04:46:19.289600-04:00",
+  "generated_at": "2026-09-28T04:50:55.787777-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -12,27 +12,20 @@
   "buy_1d": [],
   "sell_1d": [],
   "flatten": {},
-  "general": {},
+  "general": {
+    "said": "DOWN  -6.14",
+    "bullets": [
+      "bad: 1w 10Y +24bp at 5.18 handle",
+      "bad: NQ -0.94% / XLK -1.18%",
+      "bad: Asia -0.88% (Kospi -2.7%)",
+      "good: Europe partial green +0.41%",
+      "good: Channel 1 Brent offered -4.12%"
+    ],
+    "score": "-6.14",
+    "direction": "down"
+  },
   "sectors": {},
   "lands": [
-    {
-      "key": "universe",
-      "title": "Universe labels",
-      "date": "2026-09-28",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-28T04:34:13.430450-04:00",
-      "files": [
-        {
-          "path": "data/universe/2026-09-28_membership.csv",
-          "ok": true,
-          "reason": "",
-          "size": 1121994,
-          "preview": "5899 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
-        }
-      ],
-      "preview": "5899 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
-    },
     {
       "key": "weather",
       "title": "Weather / regime (offline retry)",
@@ -185,6 +178,24 @@
         }
       ],
       "preview": "# News Judge \u2014 2026-09-28 \u00b7 keys: risk_tilt, macros, sector_tilts, tickers, b1_inject, date"
+    },
+    {
+      "key": "general_predict",
+      "title": "General market predict",
+      "date": "2026-09-28",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-28T04:50:55.293424-04:00",
+      "files": [
+        {
+          "path": "01_daily/general/2026-09-28_predict.md",
+          "ok": true,
+          "reason": "",
+          "size": 17225,
+          "preview": "# Premarket Prediction \u2014 2026-09-28\n- news_mode: **on**\n> ## \ud83d\udccb SNAPSHOT (human-readable)\n>\n> **Prediction: DOWN \ud83d\udcc9 \u2014 MILD** | total score -6.14 (uncertainty multiplier \u00d71.1) | confidence 0.746\n>\n> **Good news vs bad news:** good +0 pts vs bad -6.25 pts \u2192 bad news outweighs good\n>\n> **Good news driving this:**\n> - Europe partial green +0.41%\n> - Channel 1 Brent offered -4.12%\n> - HY contained 2.80\n> - Trump-Xi truce T+n (Nov 10 cliff gone)\n> - no fresh MAG7 miss\n>\n> **Bad news driving this:**\n> - 1w 10Y +24bp at 5.18 handle\n> - NQ -0.94% / XLK -1.18%\n> - Asia -0.88% (Kospi -2.7%)\n> - leftover Hormuz standoff vs Friday easing\n> - EPU +128 1d\n>\n> **market uncertainty: **elevated** | VIX 16.14 | policy-uncertainty index 306.28 (1d +127.58)**\n>\n> **Factor scoreboard** (score \u00d7 weight = contribution):\n> - \ud83d\udd34 Asia overnight session: -0.5 \u00d7 2.0 = -1.0\n> - \u26aa Europe session: +0.0 \u00d7 2.0 = +0.0\n> - \ud83d\udd34 "
+        }
+      ],
+      "preview": "# Premarket Prediction \u2014 2026-09-28\n- news_mode: **on**\n> ## \ud83d\udccb SNAPSHOT (human-readable)\n>\n> **Prediction: DOWN \ud83d\udcc9 \u2014 MILD** | total score -6.14 (uncertainty multiplier \u00d71.1) | confidence 0.746\n>\n> **Good news vs bad news:** good +0 pts vs bad -6.25 pts \u2192 bad news outweighs good\n>\n> **Good news driving this:**\n> - Europe partial green +0.41%\n> - Channel 1 Brent offered -4.12%\n> - HY contained 2.80\n> - Trump-Xi truce T+n (Nov 10 cliff gone)\n> - no fresh MAG7 miss\n>\n> **Bad news driving this:**\n> - 1w 10Y +24bp at 5.18 handle\n> - NQ -0.94% / XLK -1.18%\n> - Asia -0.88% (Kospi -2.7%)\n> - leftover Hormuz standoff vs Friday easing\n> - EPU +128 1d\n>\n> **market uncertainty: **elevated** | VIX 16.14 | policy-uncertainty index 306.28 (1d +127.58)**\n>\n> **Factor scoreboard** (score \u00d7 weight = contribution):\n> - \ud83d\udd34 Asia overnight session: -0.5 \u00d7 2.0 = -1.0\n> - \u26aa Europe session: +0.0 \u00d7 2.0 = +0.0\n> - \ud83d\udd34 "
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
