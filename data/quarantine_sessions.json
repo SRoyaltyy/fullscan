@@ -33,57 +33,57 @@
     {
       "date": "2026-09-09",
       "reason": "undated_finviz",
-      "detail": "Parsed file has 0 dated items of 155 (need >= 8). Items are on-disk Finviz and events (finviz_export 114, events 37, finviz_elite_news 4); hours stamped 24. Not a live-buy rule."
+      "detail": "Parsed file has 0 dated items of 155 (need >= 8). The digest news_parse read is 6d998c8b0 at 2026-09-09 08:58:42 ET, before scheduled scrape run 34359886902 (09:52:23\u201309:53:38 ET) and outside Pre-Open runs 34333137717 (05:09\u201306:40 ET) and 34357637365 (09:31\u201310:32 ET). Parse tip 32a7e4a95 landed at 13:24:04 ET. Not that morning's scrape. Not a live-buy rule."
     },
     {
       "date": "2026-09-10",
-      "reason": "undated_finviz",
-      "detail": "Parsed file has 0 dated items of 118. Actions news_source is local_files:empty; items are finviz_export. Not a live-buy rule."
+      "reason": "finviz_scrape_dated",
+      "detail": "Digest 3368fcb08 at 2026-09-10 06:25:56 ET is after the Pre-Open scrape land bd578381f at 06:23:18 ET and before news_parse 5e1de5c93 at 06:27:18 ET. All three sit inside Pre-Open run 34465506284 (06:20:06\u201307:07:46 ET). The later scheduled scrape 34484752653 at 09:46 ET is after that parse. Not a live-buy rule."
     },
     {
       "date": "2026-09-11",
       "reason": "undated_finviz",
-      "detail": "Parsed file has 0 dated items of 122. Actions news_source is local_files:empty; items are finviz_export. Not a live-buy rule."
+      "detail": "Parsed file has 0 dated items of 122. The digest news_parse read is 0004dc334 at 2026-09-11 05:02:32 ET, before the in-Pre-Open scrape commit f797382c4 at 05:03:57 ET and before scrape run 34583202864 (05:14:39\u201305:16:38 ET). Parse 397d0984e at 05:08:08 ET did not read that scrape. Not a live-buy rule."
     },
     {
       "date": "2026-09-14",
-      "reason": "undated_finviz",
-      "detail": "Parsed file has 0 dated items of 149. Actions news_source is local_files:empty; items are finviz_export and events. Not a live-buy rule."
+      "reason": "finviz_scrape_dated",
+      "detail": "Digest b4c19484b at 2026-09-14 04:14:04 ET landed 9s after scrape run 34821315406 (04:09:59\u201304:13:55 ET) and during Pre-Open run 34821320339 (04:10:03\u201305:40:51 ET). news_parse a500c698f at 05:55:12 ET still read that digest. Not a live-buy rule."
     },
     {
       "date": "2026-09-15",
       "reason": "undated_finviz",
-      "detail": "Parsed file has 0 dated items of 252. Actions news_source is local_files:empty; items are events and finviz_export. Not a live-buy rule."
+      "detail": "Parsed file has 0 dated items of 252. The file on disk now is news_parse 6304bcf3a at 2026-09-15 15:23:08 ET, which read digest e56e8e311 at 15:21:52 ET. That is after the morning scrapes (03:40 and 04:01 ET) and after the morning Pre-Open attempts. The 04:24 ET parse was overwritten. Not a live-buy rule."
     },
     {
       "date": "2026-09-16",
-      "reason": "undated_finviz",
-      "detail": "Parsed file has 0 dated items of 120. Actions news_source is local_files:empty; items are finviz_export. Not a live-buy rule."
+      "reason": "finviz_scrape_dated",
+      "detail": "Digest 372e70236 at 2026-09-16 04:03:33 ET is inside scrape run 35071527193 (04:01:23\u201304:04:51 ET). news_parse 893941b1c at 04:12:54 ET is inside Pre-Open run 35071543058 (04:01:34\u201305:04:41 ET) and read that digest. Not a live-buy rule."
     },
     {
       "date": "2026-09-17",
-      "reason": "undated_finviz",
-      "detail": "Parsed file has 0 dated items of 121. Actions news_source is local_files:empty; items are finviz_export. Lane news scan 35554500452 read this Finviz file. Not a live-buy rule."
+      "reason": "finviz_scrape_dated",
+      "detail": "Digest 6a061e17d at 2026-09-17 04:09:03 ET is inside scrape run 35197949972 (04:06:52\u201304:10:15 ET). news_parse f7a657b69 at 04:17:48 ET is inside Pre-Open run 35197967189 (04:07:03\u201305:08:36 ET) and read that digest. Not a live-buy rule."
     },
     {
       "date": "2026-09-18",
-      "reason": "undated_finviz",
-      "detail": "Parsed file has 0 dated items of 123. Actions news_source is local_files:empty; items are finviz_export. Not a live-buy rule."
+      "reason": "finviz_scrape_dated",
+      "detail": "Digest f399c5edf at 2026-09-18 04:08:16 ET is inside scrape run 35322625469 (04:05:40\u201304:09:44 ET). news_parse 351d35e0b at 04:20:32 ET is inside Pre-Open run 35322632817 (04:05:44\u201305:07:09 ET) and read that digest. Not a live-buy rule."
     },
     {
       "date": "2026-09-21",
-      "reason": "undated_finviz",
-      "detail": "Parsed file has 0 dated items of 119. Actions news_source is local_files:empty; items are finviz_export. Not a live-buy rule."
+      "reason": "finviz_scrape_dated",
+      "detail": "Digest 5ad33775c at 2026-09-21 04:17:26 ET is inside scrape run 35576924049 (04:15:09\u201304:19:05 ET). news_parse 102155c95 at 04:26:45 ET is inside Pre-Open run 35576934565 (04:15:15\u201305:06:47 ET) and read that digest. Not a live-buy rule."
     },
     {
       "date": "2026-09-22",
-      "reason": "undated_finviz",
-      "detail": "Parsed file has 0 dated items of 122. Actions news_source is local_files:empty; items are finviz_export. Not a live-buy rule."
+      "reason": "finviz_scrape_dated",
+      "detail": "Digest 6e129981a at 2026-09-22 04:12:06 ET is inside scrape run 35703317424 (04:09:52\u201304:13:41 ET). news_parse cc0f2b1ce at 04:23:20 ET is inside Pre-Open run 35703325293 (04:09:57\u201305:06:58 ET) and read that digest. Not a live-buy rule."
     },
     {
       "date": "2026-09-23",
-      "reason": "undated_finviz",
-      "detail": "Parsed file has 0 dated items of 120. Actions news_source is local_files:empty; items are finviz_export. Not a live-buy rule."
+      "reason": "finviz_scrape_dated",
+      "detail": "Digest eb5503bb8 at 2026-09-23 04:15:14 ET is inside scrape run 35835870043 (04:13:02\u201304:16:48 ET). news_parse 6726d18d5 at 04:25:41 ET is inside Pre-Open run 35835879204 (04:13:08\u201305:09:59 ET) and read that digest. Not a live-buy rule."
     },
     {
       "date": "2026-09-24",
