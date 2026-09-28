@@ -1,6 +1,6 @@
 # Finviz homepage market digest — 2026-09-28
 
-**Generated:** 2026-09-28T04:23:51.295172-04:00 (America/New_York)
+**Generated:** 2026-09-28T04:24:54.031846-04:00 (America/New_York)
 **Source:** `live`
 **Banner:** US equity futures point to a lower open as oil approaches $106–107 and rising yields reinforce higher‑for‑longer rate expectations ahead of Dallas Fed data
 **Prior close:** SPX —  Nasdaq —  Dow —
