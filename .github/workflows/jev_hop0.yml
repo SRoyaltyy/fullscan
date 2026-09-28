@@ -66,6 +66,7 @@ jobs:
             01_daily/events
             03_scoreboard
             scripts
+            .github/workflows
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
