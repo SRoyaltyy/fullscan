@@ -427,7 +427,7 @@ def test_api_key_not_in_repo_and_env():
 
 
 def test_workflow_wires_secret_and_stays_stdlib():
-    yml = (ROOT / ".github" / "workflows" / "jev_gate.yml").read_text(encoding="utf-8")
+    yml = (ROOT / ".github" / "workflows" / "jev_hop0.yml").read_text(encoding="utf-8")
     assert "secrets.JEV_API_KEY" in yml
     assert "src.jev_gate" in yml
     assert "src.test_jev_gate" in yml
