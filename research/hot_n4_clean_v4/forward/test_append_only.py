@@ -11,6 +11,7 @@ if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 from research.hot_n4_clean_v4.forward.append_check import check_against  # noqa: E402
+from research.hot_n4_clean_v4.forward.book import H1, reset_book, use_book  # noqa: E402
 from research.hot_n4_clean_v4.forward.ledger import (  # noqa: E402
     RECIPE,
     append_records,
@@ -155,6 +156,32 @@ def _page(records: list[dict]) -> None:
         raise SystemExit("log.json is not the sealed log")
 
 
+def _h1(records: list[dict]) -> None:
+    dates = session_dates(records)
+    if dates != list(SESSIONS):
+        raise SystemExit("h1 seed sessions")
+    if any(row["kind"] == "plan" and row["date"] == "2026-09-28" for row in records):
+        raise SystemExit("h1 wrote a 2026-09-28 plan after the open")
+    closes = [row for row in records if row["kind"] == "close"]
+    buys = [row for row in records if row["kind"] == "session" for row in row["buys"]]
+    if len(closes) != 80 or len(buys) != 84:
+        raise SystemExit(f"h1 trades closes {len(closes)} buys {len(buys)}")
+    reasons = {row["reason"] for row in closes}
+    if reasons != {"hold-expired"}:
+        raise SystemExit(f"h1 reasons {reasons}")
+    page = ROOT / "dashboard" / "h1" / "index.html"
+    text = page.read_text(encoding="utf-8")
+    for phrase in ("union_hot_n4_h1__w0", "append-only", "2026-09-28", "no sealed", "0.5%", "log.json"):
+        if phrase not in text:
+            raise SystemExit(f"h1 page missing {phrase}")
+    rendered = json.loads((H1.page / "log.json").read_text(encoding="utf-8"))
+    if rendered != records:
+        raise SystemExit("h1 log.json is not the sealed log")
+    status = json.loads((H1.page / "status.json").read_text(encoding="utf-8"))
+    if "2026-09-28" not in (status.get("note") or ""):
+        raise SystemExit("h1 status does not record the missing 2026-09-28 plan")
+
+
 def main() -> None:
     _temp()
     records = load()
@@ -163,6 +190,14 @@ def main() -> None:
     check_against("origin/main")
     _replay(records)
     print("holdup append-only ok", len(records), "records")
+    token = use_book(H1)
+    try:
+        h1 = load()
+        _h1(h1)
+        _replay(h1)
+    finally:
+        reset_book(token)
+    print("h1 append-only ok", "seed matches returns/")
 
 
 if __name__ == "__main__":

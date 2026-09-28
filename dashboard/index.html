@@ -133,10 +133,68 @@
  · <a href="/fullscan/dashboard/sleeve-merge/" style="color:#93c5fd">.io × mover combine</a>
  · <a href="/fullscan/dashboard/flatten-lookback/" style="color:#93c5fd">flatten lookback</a>
  · <a href="/fullscan/dashboard/factor-mine/" style="color:#93c5fd">factor mine</a>
+ · <a href="/fullscan/dashboard/holdup/" style="color:#93c5fd">holdup</a>
+ · <a href="/fullscan/dashboard/h1/" style="color:#93c5fd">h1</a>
  · <a href="/fullscan/dashboard/sleeve-combine/" style="color:#93c5fd">sleeve combine</a>
  · <a href="/fullscan/dashboard/mover-paper/" style="color:#93c5fd">mover paper</a>
  · <a href="/fullscan/dashboard/book-paper/" style="color:#93c5fd">book paper</a>
  · overlay: <a href="/fullscan/dashboard/boring-winners/" style="color:#93c5fd">boring winners lab</a></div>
+<section id="v4Forward" class="live-book">
+ <div class="live-book-kicker">Forward books next to factor mine</div>
+ <div id="v4ForwardBody" class="live-book-row">Loading today's positions…</div>
+</section>
+<script>
+(function(){
+  function esc(s){return String(s).replace(/[&<>]/g, function(ch){return {"&":"&amp;","<":"&lt;",">":"&gt;"}[ch];});}
+  function latest(rows){
+    var plans = {}, opens = {}, fills = {}, marks = {}, books = [];
+    (rows || []).forEach(function(r){
+      if (r.kind === "plan") plans[r.date] = r;
+      if (r.kind === "open_fill") opens[r.date] = r;
+      if (r.kind === "fill") fills[r.date] = r;
+      if (r.kind === "mark") marks[r.date] = r;
+      if (r.kind === "session" || r.kind === "fill" || r.kind === "mark") books.push(r);
+    });
+    var dates = Object.keys(plans).sort();
+    if (!dates.length){
+      var last = books[books.length - 1];
+      return last ? {mode: "seeded", book: last, date: last.date} : null;
+    }
+    var day = dates[dates.length - 1];
+    if (fills[day]) return {mode: "filled", date: day, book: fills[day]};
+    if (marks[day]) return {mode: "marked", date: day, book: marks[day]};
+    if (opens[day]) return {mode: "open", date: day, book: opens[day]};
+    return {mode: "pending", date: day, plan: plans[day]};
+  }
+  function line(name, href, view){
+    if (!view) return '<div class="live-book-row"><b><a href="' + href + '">' + name + '</a></b> no sealed book</div>';
+    if (view.mode === "pending"){
+      var picks = (view.plan.picks || []).map(function(p){return esc(p.ticker);}).join(", ") || "none";
+      return '<div class="live-book-row"><b><a href="' + href + '">' + name + '</a></b> ' + esc(view.date) + ' planned, not filled · ' + picks + '</div>';
+    }
+    var held = (view.book.holdings || []).map(function(h){return esc(h.ticker) + " " + h.shares;}).join(", ") || "flat";
+    if (view.mode === "open"){
+      return '<div class="live-book-row"><b><a href="' + href + '">' + name + '</a></b> ' + esc(view.date) + ' filled at the open · ' + held + ' · P&L pending</div>';
+    }
+    var eq = view.book.equity_primary == null ? "" : " · equity $" + Number(view.book.equity_primary).toFixed(2);
+    return '<div class="live-book-row"><b><a href="' + href + '">' + name + '</a></b> ' + esc(view.date) + ' · ' + held + eq + '</div>';
+  }
+  function load(path){
+    return fetch(path, {cache: "no-store"}).then(function(r){ if (!r.ok) throw new Error(path); return r.json(); });
+  }
+  function one(rel, abs){
+    return load(rel).catch(function(){ return load(abs); }).catch(function(){ return []; });
+  }
+  Promise.all([
+    one("holdup/log.json", "/fullscan/dashboard/holdup/log.json"),
+    one("h1/log.json", "/fullscan/dashboard/h1/log.json")
+  ]).then(function(pair){
+    document.getElementById("v4ForwardBody").innerHTML =
+      line("holdup", "/fullscan/dashboard/holdup/", latest(pair[0])) +
+      line("h1", "/fullscan/dashboard/h1/", latest(pair[1]));
+  });
+})();
+</script>
 <div class="overview">
 <div class="cards" id="cards"></div>
 <div class="bar" id="sleeveBar"></div>

@@ -9,8 +9,7 @@ from __future__ import annotations
 import bisect
 import math
 
-from research.hot_n4_clean_v4.forward.ledger import RECIPE
-from research.hot_n4_clean_v4.forward.step import VARIANT, sell_reason, state_from_session
+from research.hot_n4_clean_v4.forward.step import _recipe, _variant, sell_reason, state_from_session
 from research.hot_n4_clean_v4.protocol import (
     ADV_SHARE_SCALE,
     GAP_DAY,
@@ -43,12 +42,24 @@ def book_state(records: list[dict]) -> dict:
     """Cash and lots after the last seeded session or the last fill."""
     last = None
     for record in records:
-        if record["kind"] in ("session", "fill"):
+        if record["kind"] in ("session", "fill", "open_fill", "mark"):
             last = record
     if last is None:
         from research.hot_n4_clean_v4.forward.step import fresh_state
         return fresh_state()
     return state_from_session(last)
+
+
+def book_state_before(records: list[dict], day: str) -> dict:
+    """Cash and lots before ``day`` is planned or filled."""
+    trimmed = [
+        row for row in records
+        if not (
+            row.get("date") == day
+            and row.get("kind") in ("plan", "open_fill", "fill", "mark", "close")
+        )
+    ]
+    return book_state(trimmed)
 
 
 def hide_session(bars: dict, session: str) -> dict:
@@ -76,14 +87,15 @@ def hide_session(bars: dict, session: str) -> dict:
 def build_plan(payload: dict, state: dict, index: dict[str, int]) -> dict:
     """Ranked picks and planned sells. No open, fill, or equity from D."""
     session = payload["session"]
+    variant = _variant()
     rows = [row for row in payload["candidates"]]
-    chosen = pick_day(rows, VARIANT)
+    chosen = pick_day(rows, variant)
     chosen_names = {row["ticker"] for row in chosen}
     row_by = {row["ticker"]: row for row in rows}
     rank_of = {row["ticker"]: rank for rank, row in enumerate(chosen, start=1)}
     morning = payload.get("morning_s")
     holdup = (
-        VARIANT["s_boost"] == "holdup"
+        variant["s_boost"] == "holdup"
         and morning is not None
         and float(morning) > HOLDUP_S
     )
@@ -92,11 +104,11 @@ def build_plan(payload: dict, state: dict, index: dict[str, int]) -> dict:
     for ticker in sorted(pos):
         lot = pos[ticker]
         row = row_by.get(ticker) or {}
-        early = should_exit(row, VARIANT.get("exit_when") or {})
+        early = should_exit(row, variant.get("exit_when") or {})
         held_n = index[session] - index[lot["entry_date"]]
         do_sell, kind = lot_should_sell(
             lot, held=held_n, min_hold=int(lot["min_hold"]), early=early,
-            dropped=ticker not in chosen_names, sell_mode=VARIANT["sell"],
+            dropped=ticker not in chosen_names, sell_mode=variant["sell"],
             px=None, side="long", take_pct=None, stop_pct=None,
         )
         if not do_sell:
@@ -128,7 +140,7 @@ def build_plan(payload: dict, state: dict, index: dict[str, int]) -> dict:
         "morning_s": morning,
         "picks": picks,
         "planned_sells": planned,
-        "recipe": RECIPE,
+        "recipe": _recipe(),
     }
 
 
@@ -206,7 +218,7 @@ def fill_book(plan: dict, state: dict, bars: dict, fees: dict, index: dict[str, 
             "kind": "close",
             "pnl_primary": pnl,
             "reason": row["reason"],
-            "recipe": RECIPE,
+            "recipe": _recipe(),
             "shares": int(lot["shares"]),
             "ticker": ticker,
         })
@@ -318,7 +330,7 @@ def fill_book(plan: dict, state: dict, bars: dict, fees: dict, index: dict[str, 
         "kind": "fill",
         "morning_s": morning,
         "plan_sha256": plan["sha256"],
-        "recipe": RECIPE,
+        "recipe": _recipe(),
         "sells": sells,
         "unfilled": unfilled,
     }

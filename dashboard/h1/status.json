@@ -1,0 +1,8 @@
+{
+  "date": "2026-09-28",
+  "latest_skip": "no sealed pre-open h1 plan for 2026-09-28; this log is created after that open, so no 2026-09-28 plan is written after the fact. The live forward record starts with the first PLAN run after merge",
+  "note": "Seeded from the committed v4 day cards for union_hot_n4_h1__w0 and checked against returns/RESULTS.json. Session 2026-09-28 has no sealed pre-open h1 plan. This log was created after that open, so no 2026-09-28 plan is written after the fact. The live forward record starts with the first PLAN run after merge. Holdup's 2026-09-28 plan, if the 13:05 UTC run wrote one, stays in the holdup log.",
+  "pending": null,
+  "phase": "no-plan",
+  "recipe": "union_hot_n4_h1__w0"
+}

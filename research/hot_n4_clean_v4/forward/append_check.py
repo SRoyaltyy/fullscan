@@ -1,4 +1,9 @@
-"""Fail when an existing holdup log line or rendered day is edited or deleted."""
+"""Fail when an existing forward log line or rendered day is edited or deleted.
+
+Covers the holdup book and the h1 book, including price ledgers. A file that
+is not on the base ref is new and is not a rewrite. A file that is on the
+base and is missing, shorter, or different in any earlier byte fails.
+"""
 from __future__ import annotations
 
 import json
@@ -10,16 +15,14 @@ ROOT = Path(__file__).resolve().parents[3]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from research.hot_n4_clean_v4.forward.ledger import LEDGER_NAME, LOG_NAME, HERE  # noqa: E402
-from research.hot_n4_clean_v4.forward.render import LOG_JSON  # noqa: E402
+from research.hot_n4_clean_v4.forward.book import BOOKS  # noqa: E402
 
-PREFIX_PATHS = (
-    HERE / LOG_NAME,
-    HERE / LEDGER_NAME,
-    HERE / "skips.jsonl",
-    HERE / "prices.jsonl",
-    HERE / "PRICE_LEDGER.jsonl",
-    HERE / "price_revisions.jsonl",
+RECORD_NAMES = (
+    "LEDGER.jsonl",
+    "PRICE_LEDGER.jsonl",
+    "price_revisions.jsonl",
+    "prices.jsonl",
+    "skips.jsonl",
 )
 
 
@@ -47,25 +50,33 @@ def _prefix(old: bytes, new: bytes, label: str) -> None:
         raise SystemExit(f"{label} suffix is not complete lines")
 
 
-def check_against(ref: str) -> None:
-    for path in PREFIX_PATHS:
-        old = git_bytes(ref, path)
-        if old is None:
-            continue
-        if not path.is_file():
-            raise SystemExit(f"append-only violated: {path.relative_to(ROOT)} was deleted")
-        _prefix(old, path.read_bytes(), path.relative_to(ROOT).as_posix())
-    old_page = git_bytes(ref, LOG_JSON)
+def _check_page(ref: str, path: Path) -> None:
+    old_page = git_bytes(ref, path)
+    label = path.relative_to(ROOT).as_posix()
     if old_page is None:
         return
-    if not LOG_JSON.is_file():
-        raise SystemExit("append-only violated: dashboard/holdup/log.json was deleted")
+    if not path.is_file():
+        raise SystemExit(f"append-only violated: {label} was deleted")
     old_rows = json.loads(old_page)
-    new_rows = json.loads(LOG_JSON.read_text(encoding="utf-8"))
+    new_rows = json.loads(path.read_text(encoding="utf-8"))
     if not isinstance(old_rows, list) or not isinstance(new_rows, list):
-        raise SystemExit("log.json is not a list")
+        raise SystemExit(f"{label} is not a list")
     if len(new_rows) < len(old_rows) or new_rows[:len(old_rows)] != old_rows:
-        raise SystemExit("append-only violated: dashboard/holdup/log.json rewrote a past day")
+        raise SystemExit(f"append-only violated: {label} rewrote a past day")
+
+
+def check_against(ref: str) -> None:
+    for book in BOOKS:
+        names = (book.log_name, *RECORD_NAMES)
+        for name in names:
+            path = book.folder / name
+            old = git_bytes(ref, path)
+            if old is None:
+                continue
+            if not path.is_file():
+                raise SystemExit(f"append-only violated: {path.relative_to(ROOT)} was deleted")
+            _prefix(old, path.read_bytes(), path.relative_to(ROOT).as_posix())
+        _check_page(ref, book.page / "log.json")
 
 
 def main() -> None:

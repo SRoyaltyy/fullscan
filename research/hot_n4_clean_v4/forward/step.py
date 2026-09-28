@@ -6,6 +6,7 @@ P&L is returned as a separate close body. It is not written onto the buy.
 """
 from __future__ import annotations
 
+from research.hot_n4_clean_v4.forward.book import current_book
 from research.hot_n4_clean_v4.forward.ledger import RECIPE
 from research.hot_n4_clean_v4.protocol import (
     CAPITAL,
@@ -29,6 +30,14 @@ from src.factor_mine import pick_day, should_exit
 from src.factor_mine_book import lot_should_sell, split_budgets
 
 VARIANT = next(row for row in VARIANTS if row["id"] == RECIPE)
+
+
+def _recipe() -> str:
+    return current_book().recipe
+
+
+def _variant() -> dict:
+    return next(row for row in VARIANTS if row["id"] == _recipe())
 
 
 def sell_reason(min_hold: int, held_n: int, kind: str) -> str:
@@ -68,14 +77,15 @@ def step(payload: dict, state: dict, bars: dict, fees: dict, index: dict[str, in
     """Advance one session. ``payload`` is a committed day card or the same shape."""
     stored = bars["stored"]
     session = payload["session"]
+    variant = _variant()
     rows = [row for row in payload["candidates"]]
-    chosen = pick_day(rows, VARIANT)
+    chosen = pick_day(rows, variant)
     chosen_names = {row["ticker"] for row in chosen}
     row_by = {row["ticker"]: row for row in rows}
     rank_of = {row["ticker"]: rank for rank, row in enumerate(chosen, start=1)}
     morning = payload.get("morning_s")
     holdup = (
-        VARIANT["s_boost"] == "holdup"
+        variant["s_boost"] == "holdup"
         and morning is not None
         and float(morning) > HOLDUP_S
     )
@@ -88,11 +98,11 @@ def step(payload: dict, state: dict, bars: dict, fees: dict, index: dict[str, in
         lot = pos[ticker]
         op = open_px(stored, ticker, session)
         row = row_by.get(ticker) or {}
-        early = should_exit(row, VARIANT.get("exit_when") or {})
+        early = should_exit(row, variant.get("exit_when") or {})
         held_n = index[session] - index[lot["entry_date"]]
         do_sell, kind = lot_should_sell(
             lot, held=held_n, min_hold=int(lot["min_hold"]), early=early,
-            dropped=ticker not in chosen_names, sell_mode=VARIANT["sell"],
+            dropped=ticker not in chosen_names, sell_mode=variant["sell"],
             px=op, side="long", take_pct=None, stop_pct=None,
         )
         if op is None:
@@ -126,7 +136,7 @@ def step(payload: dict, state: dict, bars: dict, fees: dict, index: dict[str, in
             "kind": "close",
             "pnl_primary": pnl,
             "reason": reason,
-            "recipe": RECIPE,
+            "recipe": _recipe(),
             "shares": int(lot["shares"]),
             "ticker": ticker,
         })
@@ -200,7 +210,7 @@ def step(payload: dict, state: dict, bars: dict, fees: dict, index: dict[str, in
         "holdup_on": holdup,
         "kind": "session",
         "morning_s": morning,
-        "recipe": RECIPE,
+        "recipe": _recipe(),
         "sells": sells,
         "unfilled": unfilled,
     }

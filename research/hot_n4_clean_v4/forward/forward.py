@@ -6,7 +6,9 @@ post-close run writes the fill for that plan at D's open, plus close
 records, and does not edit the plan. A rerun of a sealed plan or fill does
 nothing. Missing inputs append nothing.
 
-HOLDUP_MODE=plan is the pre-open run. HOLDUP_MODE=fill is the post-close run.
+HOLDUP_MODE=plan is the pre-open run. HOLDUP_MODE=open_fill is the 09:35 ET
+open-fill. HOLDUP_MODE=fill is the post-close run. FORWARD_BOOK selects
+holdup (default) or h1.
 """
 from __future__ import annotations
 
@@ -21,23 +23,26 @@ ROOT = Path(__file__).resolve().parents[3]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
+from research.hot_n4_clean_v4.forward.book import current_book  # noqa: E402
 from research.hot_n4_clean_v4.forward.ledger import (  # noqa: E402
-    HERE,
-    RECIPE,
     append_records,
     book_dates,
     canonical_bytes,
+    kind_on,
     load,
     open_plan,
+    plan_on,
     session_dates,
 )
+from research.hot_n4_clean_v4.forward.openfill import decide_fill, decide_open_fill  # noqa: E402
+from research.hot_n4_clean_v4.forward.opens import collect_opens  # noqa: E402
 from research.hot_n4_clean_v4.forward.planfill import (  # noqa: E402
     book_state,
+    book_state_before,
     build_plan,
-    fill_book,
     hide_session,
 )
-from research.hot_n4_clean_v4.forward.prices import overlay_forward  # noqa: E402
+from research.hot_n4_clean_v4.forward.prices import fetch_yahoo, overlay_forward  # noqa: E402
 from research.hot_n4_clean_v4.forward.render import write_page  # noqa: E402
 from research.hot_n4_clean_v4.protocol import (  # noqa: E402
     ENGINE_SHA256,
@@ -60,8 +65,11 @@ from research.hot_n4_clean_v4.run_study import (  # noqa: E402
 )
 from src.skip_if_good import is_nyse_holiday  # noqa: E402
 
-SKIPS = HERE / "skips.jsonl"
 GIT_REF = os.environ.get("HOLDUP_GIT_REF", "HEAD")
+
+
+def _skips() -> Path:
+    return current_book().folder / "skips.jsonl"
 OPEN_UTC = "13:30:00"
 PANEL_COLS = [
     "trade_date", "snapshot_date", "Ticker", "Industry",
@@ -230,14 +238,28 @@ def _latest_bar(stored: dict) -> str:
 def _history_ok(records: list[dict], bars: dict) -> str | None:
     stored = bars["stored"]
     for record in records:
-        if record["kind"] == "session":
-            rows = [(record["date"], row["ticker"], row["fill"]) for row in record["buys"]]
-            rows += [(record["date"], row["ticker"], row["fill"]) for row in record["sells"]]
-        else:
+        kind = record["kind"]
+        if kind in ("session", "fill", "open_fill"):
+            rows = [(record["date"], row["ticker"], row["fill"]) for row in record.get("buys") or []]
+            rows += [(record["date"], row["ticker"], row["fill"]) for row in record.get("sells") or []]
+        elif kind == "mark":
+            rows = [(record["date"], row["ticker"], row["fill"]) for row in record.get("added_buys") or []]
+            rows += [(record["date"], row["ticker"], row["fill"]) for row in record.get("added_sells") or []]
+        elif kind == "close":
             rows = [(record["date"], record["ticker"], record["fill"])]
+        else:
+            continue
         for day, ticker, fill in rows:
             op = open_px(stored, ticker, day)
-            if op is None or float(op) != float(fill):
+            if op is None:
+                # The 09:35 open is sealed from the live Yahoo print. The
+                # daily bar is stored only once it is final, so an open-fill
+                # may not be in the file yet. A stored open that differs
+                # still fails below.
+                if kind == "open_fill":
+                    continue
+                return f"stored open for {ticker} on {day} no longer matches the sealed fill"
+            if float(op) != float(fill):
                 return f"stored open for {ticker} on {day} no longer matches the sealed fill"
     return None
 
@@ -259,20 +281,21 @@ def _index() -> dict[str, int]:
 def _log_skip(session: str, reason: str, records: list[dict]) -> None:
     print(f"append nothing: {session}: {reason}")
     last = None
-    if SKIPS.is_file() and SKIPS.stat().st_size:
-        last = json.loads(SKIPS.read_text(encoding="utf-8").splitlines()[-1])
+    skips = _skips()
+    if skips.is_file() and skips.stat().st_size:
+        last = json.loads(skips.read_text(encoding="utf-8").splitlines()[-1])
     if last and last.get("date") == session and last.get("reason") == reason:
-        write_page(records, {"date": session, "latest_skip": reason, "recipe": RECIPE})
+        write_page(records, {"date": session, "latest_skip": reason, "recipe": current_book().recipe})
         return
     body = {
         "at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
         "date": session,
         "reason": reason,
-        "recipe": RECIPE,
+        "recipe": current_book().recipe,
     }
-    with SKIPS.open("ab") as handle:
+    with skips.open("ab") as handle:
         handle.write(canonical_bytes(body))
-    write_page(records, {"date": session, "latest_skip": reason, "recipe": RECIPE})
+    write_page(records, {"date": session, "latest_skip": reason, "recipe": current_book().recipe})
 
 
 def _payload(session: str, bars, held: set[str], score: dict, frame) -> dict:
@@ -340,7 +363,7 @@ def _status(session: str, pending: str | None, skip: str | None, phase: str) -> 
         "latest_skip": skip,
         "pending": pending,
         "phase": phase,
-        "recipe": RECIPE,
+        "recipe": current_book().recipe,
     }
 
 
@@ -416,8 +439,104 @@ def plan_main() -> int:
     return 0
 
 
+def _today() -> str:
+    raw = os.environ.get("FORWARD_SESSION")
+    if raw:
+        return raw
+    return datetime.now(timezone.utc).date().isoformat()
+
+
+def _already(records: list[dict], session: str) -> bool:
+    return any(
+        row["kind"] in ("open_fill", "fill", "mark") and row["date"] == session
+        for row in records
+    )
+
+
+def open_fill_main() -> int:
+    """Fill today's sealed plan at the official open. No close P&L yet.
+
+    No plan for today appends nothing. A plan already filled appends nothing.
+    No trustworthy open appends nothing and leaves the post-close fill to
+    write the trades. 13:35 UTC is 09:35 ET only during EDT (UTC-4). During
+    EST (from 2026-11-01, UTC-5) the same cron is 08:35 ET, before the open,
+    and this run then finds no open.
+    """
+    try:
+        records = load()
+    except RuntimeError as exc:
+        _fail(f"existing record hash does not match the ledger ({exc})")
+        return 1
+    records, code = _ready(records)
+    if records is None:
+        return code
+    target = _today()
+    plan = plan_on(records, target)
+    if plan is None:
+        print(f"no plan for {target}; append nothing")
+        return 0
+    if _already(records, target):
+        print(f"open fill already sealed {target}")
+        phase = "fill" if kind_on(records, target, "fill") or kind_on(records, target, "mark") else "open_fill"
+        write_page(records, _status(target, None if phase == "fill" else target, None, phase))
+        return 0
+    print(f"open fill {target}", flush=True)
+    index = _index()
+    if target not in index:
+        _log_skip(target, f"{target} is outside the v4 session calendar through 2026-12-31", records)
+        return 0
+    bars, code = _bars(records, target)
+    if bars is None:
+        return code
+    held = set(book_state_before(records, target)["pos"])
+    names = sorted(
+        held
+        | {"IWM"}
+        | {row["ticker"] for row in plan.get("picks") or []}
+        | {row["ticker"] for row in plan.get("planned_sells") or []}
+    )
+    opens = collect_opens(names, target, bars["stored"], fetch_yahoo)
+    fees = load_fees()
+    try:
+        bodies, why = decide_open_fill(records, target, opens, bars, fees, index)
+    except Halt as exc:
+        _fail(str(exc))
+        return 1
+    except RuntimeError as exc:
+        _log_skip(target, str(exc), records)
+        return 0
+    if not bodies:
+        if why:
+            _log_skip(target, why, records)
+        else:
+            print(f"append nothing {target}")
+        return 0
+    try:
+        current = load()
+    except RuntimeError as exc:
+        _fail(f"existing record hash does not match the ledger ({exc})")
+        return 1
+    if plan_on(current, target) is None or _already(current, target):
+        print(f"open fill already sealed {target}")
+        return 0
+    append_records(bodies)
+    written = load()
+    write_page(written, _status(target, target, None, "open_fill"))
+    opened = bodies[0]
+    print(
+        f"sealed open fill {target} buys {len(opened['buys'])} "
+        f"sells {len(opened['sells'])} pnl pending",
+        flush=True,
+    )
+    return 0
+
+
 def fill_main() -> int:
-    """Fill a sealed plan at D's open. Does not edit the plan."""
+    """Add closes and the close mark. Do not repeat an open-fill already sealed.
+
+    When the 09:35 run wrote nothing, this writes the whole fill and its
+    closes, which is the path the book used before open-fill existed.
+    """
     try:
         records = load()
     except RuntimeError as exc:
@@ -447,13 +566,16 @@ def fill_main() -> int:
             records,
         )
         return 0
-    state = book_state(records)
     fees = load_fees()
     try:
-        fill, closes, _state = fill_book(pending, state, bars, fees, index)
+        bodies, why = decide_fill(records, bars, fees, index)
     except (Halt, RuntimeError) as exc:
         _fail(str(exc))
         return 1
+    if not bodies:
+        if why:
+            _log_skip(target, why, records)
+        return 0
     try:
         current = load()
     except RuntimeError as exc:
@@ -462,14 +584,21 @@ def fill_main() -> int:
     if open_plan(current) is None:
         print(f"fill already sealed {target}")
         return 0
-    append_records([fill, *closes])
+    append_records(bodies)
     written = load()
-    write_page(written, _status(target, None, None, "fill"))
-    print(
-        f"sealed fill {target} buys {len(fill['buys'])} "
-        f"sells {len(fill['sells'])} closes {len(closes)}",
-        flush=True,
-    )
+    write_page(written, _status(target, None, None, bodies[0]["kind"]))
+    if bodies[0]["kind"] == "mark":
+        print(
+            f"sealed mark {target} added buys {len(bodies[0]['added_buys'])} "
+            f"added sells {len(bodies[0]['added_sells'])} closes {len(bodies) - 1}",
+            flush=True,
+        )
+    else:
+        print(
+            f"sealed fill {target} buys {len(bodies[0]['buys'])} "
+            f"sells {len(bodies[0]['sells'])} closes {len(bodies) - 1}",
+            flush=True,
+        )
     return 0
 
 
@@ -477,6 +606,8 @@ def main() -> int:
     mode = os.environ.get("HOLDUP_MODE", "plan")
     if mode == "fill":
         return fill_main()
+    if mode == "open_fill":
+        return open_fill_main()
     if mode != "plan":
         _fail(f"HOLDUP_MODE {mode}")
         return 1

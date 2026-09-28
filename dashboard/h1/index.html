@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>union_hot_n4_holdup__w0 — append-only</title>
+<title>union_hot_n4_h1__w0 — append-only</title>
 <style>
  :root{
   --bg:#0f1420; --card:#171e2e; --line:#262f45; --line2:#232c42;
@@ -57,10 +57,12 @@
 </head>
 <body>
 <div class="wrap">
- <h1>union_hot_n4_holdup__w0</h1>
- <p class="sub">Day-by-day book. The page is drawn from the append-only log.</p>
+ <h1>union_hot_n4_h1__w0</h1>
+ <p class="sub">Day-by-day book. Minimum hold is always 1 session. The page is drawn from log.json, the append-only log.</p>
  <div class="lock">
   <b>Rules locked. Luck N 22,017. Records are append-only.</b>
+  This is the prereg h1 recipe: min hold stays 1 session. It is not an edit of the holdup log.
+  Session 2026-09-28 has no sealed pre-open h1 plan. This page was added after that open, so no 2026-09-28 plan is written after the fact. The live forward record starts with the first PLAN run after merge. Holdup's 2026-09-28 plan, if the 13:05 UTC run wrote one, stays in the holdup log.
   Picks for day D are sealed before the US open on D. At 13:35 UTC the planned buys and sells are marked filled at the official open when that open is already printed.
   13:35 UTC is 09:35 ET during EDT (UTC−4, through 2026-11-01). During EST (from 2026-11-01, UTC−5) the same cron is 08:35 ET, before the 09:30 open, and the run appends nothing if the open is not printed yet.
   P&amp;L for open positions stays pending until the close bar is saved. The 21:30 UTC fill adds closes and marks and does not repeat a fill already written.
@@ -314,7 +316,7 @@ function render(rows, status){
   document.getElementById("foot").textContent =
     `${sessions.length} seeded sessions, ${plans.length} plans, ${opens.length} open fills, ${fills.length + marks.length} close marks, ${closes.length} close records, ${rows.length} sealed lines. ` +
     `Picks for day D are sealed before the US open. Open fills are marked at the official open. P&L for open positions stays pending until the close bar is saved. ` +
-    `Recipe ${rows[0] ? rows[0].recipe : "union_hot_n4_holdup__w0"}. Luck N 22,017.`;
+    `Recipe ${rows[0] ? rows[0].recipe : "union_hot_n4_h1__w0"}. Min hold 1. Luck N 22,017.`;
   const skip = document.getElementById("skip");
   if (status && status.latest_skip){
     skip.hidden = false;
