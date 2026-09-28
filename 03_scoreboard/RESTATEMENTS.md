@@ -32,3 +32,27 @@ RULE20_FORWARD_DROP 2026-09-26
 - reason: Rule 20 asks for the result without the strategy's single best stock. `_drop_compound` started that arithmetic at $10,000. The forward slice is a continuation, so the base is the equity at the 2026-09-11 close. The same miss hit the without-CYPH, without-GLND, and without-INDP figures. The window compound, win rate, up-day share, trade count, and reject status come from the daily return ratios and are unchanged.
 - reading: without the best stock, `union_hot_n4_h1_time__w0` is +4.23% (the committed figure was +40.57%), `union_hot_n4_h1__w0` is +5.62% (was +46.72%), `union_hot_n4_holdup__w0` is +11.25% (was +72.01%), and `union_hot_n4_h1_nonews__w0` is +5.04% (was +52.07%). A positive contribution from the removed stock now sits below the window's own return.
 - carry: unchanged. Still not rejected: `union_hot_n4_h1__w0`, `union_hot_n4_holdup__w0`, `union_hot_n4_h1_nonews__w0`. Still unproven: `union_hot_n4_h3__w0`, `union_hot_n4_h5__w0`, `union_hot_n4_h1_green__w0`. The tune leader `union_hot_n4_h1_time__w0` stays rejected. `union_hot_n4_holdup__w0` still carries because the window left it not rejected; it cleared 2 of 3 tuning starts.
+
+## 2026-09-28 oos0914 append
+
+This entry does not restate a locked day. `2026-09-25` stays the one approved restatement above. No ledger line through that day was rewritten.
+
+Land-closed run 36486236072 called `factor_mine_oos0914.append_nightly` for 2026-09-28. `lock_books` rebuilt every ledger in the window, including 2026-09-25, and `write_oos_ledger` raised `AppendDrift: ledger rewrite 2026-09-25: locked day bytes would change`. Merged PR #399 catches that `SystemExit` and logs `OOS0914_APPEND_FAILED`. The land committed the 2026-09-28 state files and did not write the 2026-09-28 ledger.
+
+Reproducing the rebuild on current main, without writing, changes only the 2026-09-25 ledger. Days 2026-09-14 through 2026-09-24 rebuild byte-identical. The 2026-09-25 diff is three fields the restatement stamp added and `_ledger_doc` does not emit:
+
+| field | locked bytes | rebuild |
+| --- | --- | --- |
+| `record` | `designed_after` | absent |
+| `clean_record` | `false` | absent |
+| `note` | designed after the fact; not part of the clean record. One-time restatement approved by Cyrus on 2026-09-26 HKT. The first lock had no 2026-09-25 bars because the test tape ended 2026-09-24. Rebuilt from the same frozen snapshot and the same frozen rules, priced from the frozen pin then the live store. | absent |
+
+`date`, `asof`, `dropped`, `input_sha256`, and every recipe slot (`buys`, `sells`, `trades`, `equity`, `mean`, `cash`, `fees`, `holdings`, `mean_flat_15bp`) match. Locked file `6536` bytes, sha256 `426d1d9e8e9ba595c4c75b937a6e10dc2051eae76b8a1d2028a7bd21fd7cfca0`. Rebuild `6176` bytes, sha256 `4ff53d0c775f4271c4825fa8cdc170b38b9601434b9cc0d63a89817107284080`.
+
+Cause: `eafb431f931b6b6055f87246885dd2f412cccd25` (PR #346) wrote `record`, `clean_record`, and `note` onto `data/factor_mine/oos0914/ledgers/2026-09-25.json` after `_ledger_doc`. The nightly path from `a0c24ae070962c7bd6b1ab57c8db9893a74aca54` (PR #341) passes every day `<=` the new session to `lock_books`, which calls `write_oos_ledger`. That rebuilds the day from `_ledger_doc` and refuses when the canonical bytes differ. `assert_ledger_append` does not look at those three keys, so picks, fills, and P&L pass and the byte check fails.
+
+Not a price revision, a snapshot drift, or a non-deterministic format. A resimulation of 2026-09-25 from the frozen 2026-09-24 state and the current tape matches the locked state files (`0b51bbe7e42db444…`, `59f2f83e5c5ddf78…`, `4efbac9d8701acf3…`, `61297bf32a8b2d32…`). The 2026-09-28 state committed by `2916bf5ef67268b1e966fdbbd846afc291f3c6b6` matches a replay that reads the frozen 2026-09-25 state and does not rewrite it. `src/price_store.py` has no commit after the restatement. Later `data/prices/ohlc.parquet` lands did not move the 2026-09-25 book. The only OOS-module commit after the restatement and before this append is `d17f47104e8de69dbe8be0a94cc60e99fa8b0dd2` (PR #348), which rebuilt the scoreboard from the locked ledgers and did not change `2026-09-25.json`. `2916bf5ef67268b1e966fdbbd846afc291f3c6b6` only soft-fails the `AppendDrift`.
+
+The append now treats a missing ledger as the pending day. It checks each locked sidecar and writes only the new ledger. The new day is stepped from the prior frozen state, so a revised historical bar cannot alter a locked file.
+
+2026-09-28 was appended. Ledger sha256 `390d8f0bc78b8d2fcf4da67da96f760c9b76659e8ec3c0e4aaf7b8978de17ffe`. The sha256 of every locked OOS ledger and state file through 2026-09-25, and of the 2026-09-28 state files that were already on disk, was unchanged before and after. RANDOM4 and IWM baselines were not rebuilt; they are still the figures from the prior window, including the unpriced first 2026-09-25 lock. The rule table gained 2026-09-28 from the new ledger. The headline return is the eleven-session compound.

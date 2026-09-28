@@ -1109,6 +1109,18 @@ def _ensure_iwm(dates: list[str], bars: dict, *, allow_test: bool) -> dict:
     return bars
 
 
+def _assert_ledger_fingerprint(date: str, path: Path | None = None) -> None:
+    """The ledger bytes and the sidecar hash must agree. Does not rebuild."""
+    dest = Path(path or (LEDGER_DIR / f"{str(date)[:10]}.json"))
+    side = dest.with_name(dest.name + ".sha256")
+    if not dest.is_file() or not side.is_file():
+        raise fmr.AppendDrift(f"ledger fingerprint mismatch {date}")
+    have = dest.read_bytes()
+    stamped = side.read_text(encoding="utf-8").strip()
+    if hashlib.sha256(have).hexdigest() != stamped:
+        raise fmr.AppendDrift(f"ledger fingerprint mismatch {date}")
+
+
 def write_oos_ledger(date: str, doc: dict, path: Path | None = None) -> Path:
     """One locked test day. #338 refuses a changed fill; bytes never change.
 
@@ -1645,12 +1657,20 @@ def lock_books(dates: list[str], recipes: list[dict], *,
         _lock_excel(dates, excel, root)
     if not ledger:
         return
+    # A ledger already on disk is the lock. Rebuilding it from ``_ledger_doc``
+    # drops the 2026-09-25 restatement stamp (record, clean_record, note)
+    # and the byte check then refuses the whole append. Check the sidecar
+    # and leave the bytes.
+    for date in dates:
+        if (LEDGER_DIR / f"{date}.json").is_file():
+            _assert_ledger_fingerprint(date)
     snaps = {}
     for date in dates:
+        if (LEDGER_DIR / f"{date}.json").is_file():
+            continue
         snaps[date] = (load_snapshot_dir(
             SNAP_DIR, start=date, end=date, cutoff="9999-99-99",
         ).get(date) or {})
-    for date in dates:
         write_oos_ledger(
             date, _ledger_doc(date, recipes, root, snaps.get(date) or {}),
         )
@@ -1868,15 +1888,16 @@ def _assert_ledger_matches_state(name: str, dates: list[str]) -> None:
             raise SystemExit(f"[oos0914] view refuses; {name} {date} fills ledger != state")
 
 
-def refresh_published_from_ledgers() -> dict:
+def refresh_published_from_ledgers(through: str | None = None) -> dict:
     """Rewrite the test report and scoreboard from the locked ledgers.
 
     Does not write a ledger, a state file, a fingerprint, or a frozen rule.
+    Baselines already on the test report stay as they are.
     """
     recipes = frozen_recipes()
     if not recipes:
         raise SystemExit("[oos0914] view refuses; nothing frozen")
-    dates = test_dates()
+    dates = test_dates(through) if through else test_dates()
     if not dates:
         raise SystemExit("[oos0914] view refuses; no locked test session")
     before = _lock_file_hashes()
@@ -2244,8 +2265,11 @@ def restate_oos_day(date: str, *, log_path: Path | None = None) -> dict:
 def append_nightly(*, through: str = "", write: bool = False) -> dict:
     """After the factor-mine land, append the next OOS day if it is locked.
 
-    A day already on disk is not rewritten. No frozen rule means nothing
-    to append. Live HOT4 / holdup state is a different directory.
+    A day is pending when its ledger is missing. State for that day may
+    already exist: the 2026-09-28 land wrote state, then the ledger rebuild
+    refused 2026-09-25. The new day is stepped from the prior day's frozen
+    state. Locked ledger and state bytes are not rewritten. No frozen rule
+    means nothing to append. Live HOT4 / holdup state is a different directory.
     """
     recipes = frozen_recipes()
     if not recipes:
@@ -2258,11 +2282,7 @@ def append_nightly(*, through: str = "", write: bool = False) -> dict:
     if not dates:
         print("[oos0914] nightly: no locked test session", flush=True)
         return {"appended": None}
-    have = [
-        d for d in dates
-        if seq.read_state(recipes[0]["name"], d, STATE_ROOT) is not None
-    ]
-    missing = [d for d in dates if d not in have]
+    missing = [d for d in dates if not (LEDGER_DIR / f"{d}.json").is_file()]
     if not missing:
         print(f"[oos0914] nightly: through {dates[-1]} already locked", flush=True)
         return {"appended": None}
@@ -2272,11 +2292,11 @@ def append_nightly(*, through: str = "", write: bool = False) -> dict:
         print(f"[oos0914] nightly: would append {nxt}", flush=True)
         return {"appended": None, "pending": nxt}
     # The calendar includes earlier locked days so day N reads day N-1.
-    # Those state files already match and are not rewritten.
+    # Those state files already match and are not rewritten. Ledgers that
+    # are already on disk are not rebuilt.
     lock_books([d for d in dates if d <= nxt], recipes)
     if TRAIN_REPORT.is_file():
-        dates = test_dates(closed)
-        _write_test(dates, recipes)
+        refresh_published_from_ledgers(through=closed)
     print(f"[oos0914] nightly: appended {nxt}", flush=True)
     return {"appended": nxt}
 

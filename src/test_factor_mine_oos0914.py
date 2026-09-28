@@ -1417,6 +1417,107 @@ def test_published_view_comes_from_ledgers(tmp_path: Path) -> None:
     assert {oos._tick(item) for item in prior["sells"]} == {"ARM", "ARQQ", "GRAL", "NUAI"}
 
 
+def test_revised_bar_cannot_change_a_locked_day(tmp_path: Path) -> None:
+    """A revised historical bar does not move a locked day, and the append adds one day.
+
+    The locked ledger carries the restatement stamp. Rebuilding that day
+    drops ``record``, ``clean_record``, and ``note``, which is what made
+    the 2026-09-28 nightly refuse 2026-09-25. The append leaves those bytes.
+    """
+    tmp_path.mkdir(parents=True, exist_ok=True)
+    dates = ["2026-09-24", "2026-09-25", "2026-09-28"]
+    locked_day = "2026-09-25"
+    new_day = "2026-09-28"
+    rec = fm.make_recipe(
+        "toy_oos", hold=1, top_n=1, rank="hot_score", sell="time",
+    )
+    snap_dir = tmp_path / "snapshots"
+    snap_dir.mkdir()
+    for date in dates:
+        ticker = "BBB" if date == new_day else "AAA"
+        (snap_dir / f"{date}.json").write_text(json.dumps({
+            "date": date,
+            "rows": [{
+                "date": date,
+                "ticker": ticker,
+                "sources": ["union"],
+                "ohlc_hot_score": 3.0,
+                "alarm": False,
+                "e_pol": False,
+                "rsi": 40.0,
+            }],
+            "dropped": [],
+        }), encoding="utf-8")
+    bars = {}
+    for date in dates:
+        bars[("AAA", date)] = {"open": 10.0, "high": 11.0, "low": 9.5, "close": 10.5}
+        bars[("BBB", date)] = {"open": 8.0, "high": 8.5, "low": 7.5, "close": 8.2}
+    state = tmp_path / "state"
+    ledgers = tmp_path / "ledgers"
+    frozen = tmp_path / "frozen_rules.json"
+    frozen.write_text(json.dumps({"recipes": [rec]}), encoding="utf-8")
+    saved = (
+        oos.SNAP_DIR, oos.STATE_ROOT, oos.LEDGER_DIR, oos.FROZEN_PATH,
+        oos.TRAIN_REPORT, oos._bars_for_window,
+    )
+    oos.SNAP_DIR = snap_dir
+    oos.STATE_ROOT = state
+    oos.LEDGER_DIR = ledgers
+    oos.FROZEN_PATH = frozen
+    oos.TRAIN_REPORT = tmp_path / "missing_train_report.json"
+
+    def fake_bars(_dates, _tickers, *, allow_test):
+        return dict(bars)
+
+    oos._bars_for_window = fake_bars
+    try:
+        oos.lock_books(dates[:2], [rec])
+        path = ledgers / f"{locked_day}.json"
+        doc = json.loads(path.read_text(encoding="utf-8"))
+        doc["record"] = "designed_after"
+        doc["clean_record"] = False
+        doc["note"] = oos.RESTATE_NOTE
+        raw = fmr._canonical(doc)
+        path.write_bytes(raw)
+        path.with_name(path.name + ".sha256").write_text(
+            hashlib.sha256(raw).hexdigest() + "\n", encoding="utf-8",
+        )
+        snap = json.loads((snap_dir / f"{locked_day}.json").read_text(encoding="utf-8"))
+        rebuilt = fmr._canonical(oos._ledger_doc(locked_day, [rec], state, snap))
+        assert rebuilt != raw
+        before = {}
+        for file in ledgers.glob("*"):
+            before[file.name] = file.read_bytes()
+        for file in (state / rec["name"]).glob("*.json"):
+            before[f"state/{file.name}"] = file.read_bytes()
+        bars[("AAA", locked_day)] = {
+            "open": 50.0, "high": 55.0, "low": 40.0, "close": 48.0,
+        }
+        result = oos.append_nightly(through=new_day, write=True)
+        assert result == {"appended": new_day}
+        for name, blob in before.items():
+            if name.startswith("state/"):
+                got = (state / rec["name"] / name.split("/", 1)[1]).read_bytes()
+            else:
+                got = (ledgers / name).read_bytes()
+            assert got == blob, name
+        ledgers_now = sorted(p.name for p in ledgers.glob("*.json"))
+        assert ledgers_now == [
+            "2026-09-24.json", "2026-09-25.json", "2026-09-28.json",
+        ]
+        added = [name for name in ledgers_now if name not in before]
+        assert added == ["2026-09-28.json"]
+        assert (state / rec["name"] / f"{new_day}.json").is_file()
+        # The revised 09-25 bar is not the prior state the new day read.
+        fresh = seq.read_state(rec["name"], locked_day, state)
+        assert fresh == json.loads(before[f"state/{locked_day}.json"].decode("utf-8"))
+    finally:
+        (
+            oos.SNAP_DIR, oos.STATE_ROOT, oos.LEDGER_DIR, oos.FROZEN_PATH,
+            oos.TRAIN_REPORT, oos._bars_for_window,
+        ) = saved
+
+
 def test_logged_0925_restate_cannot_run_again() -> None:
     """The committed log is the lock. A second call does not touch 09-24."""
     text = oos.RESTATE_LOG.read_text(encoding="utf-8")
@@ -1487,6 +1588,7 @@ def main() -> None:
         test_restate_refuses_any_other_date(root / "restate_dates")
         test_second_restate_is_refused(root / "restate_once")
         test_published_view_comes_from_ledgers(root / "published_view")
+        test_revised_bar_cannot_change_a_locked_day(root / "revised_bar")
         test_logged_0925_restate_cannot_run_again()
     assert fmf.MANIFEST_PATH.read_bytes() == manifest
     print("oos0914 tests passed")
