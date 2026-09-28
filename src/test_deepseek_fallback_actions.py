@@ -13,12 +13,16 @@ WORKFLOWS = ROOT / ".github" / "workflows"
 
 LLM_ACTIONS = (
     "map_heat_postclose.yml",
-    "preopen_all.yml",
-    "postclose_all.yml",
     "catalyst_daily.yml",
-    "stock_book_all.yml",
     "daily_pipeline.yml",
     "events_daily.yml",
+)
+# Scheduled Fullscan writers default to Grok only. DeepSeek is an
+# explicit dispatch input, not the cron fallback.
+GROK_ONLY_ACTIONS = (
+    "preopen_all.yml",
+    "postclose_all.yml",
+    "stock_book_all.yml",
 )
 NON_LLM_ACTIONS = (
     "finviz_preopen_scrape.yml",
@@ -31,6 +35,11 @@ def test_llm_actions_enable_deepseek_fallback() -> None:
     for name in LLM_ACTIONS:
         text = (WORKFLOWS / name).read_text(encoding="utf-8")
         assert 'GROK_ONLY: "0"' in text, name
+        assert "secrets.DEEPSEEK_API_KEY" in text, name
+    for name in GROK_ONLY_ACTIONS:
+        text = (WORKFLOWS / name).read_text(encoding="utf-8")
+        assert 'GROK_ONLY: "1"' in text, name
+        assert 'GROK_ONLY: "0"' not in text, name
         assert "secrets.DEEPSEEK_API_KEY" in text, name
 
 

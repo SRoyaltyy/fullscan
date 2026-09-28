@@ -196,7 +196,7 @@ jobs:
   shard:
     needs: gold
     if: ${{ github.event.inputs.mode == 'full' }}
-    runs-on: ${{ (github.event_name == 'push' || github.event.inputs.runner == 'ubuntu') && 'ubuntu-latest' || fromJSON('["self-hosted","ecs"]') }}
+    runs-on: ${{ github.event.inputs.runner == 'ubuntu' && 'ubuntu-latest' || fromJSON('["self-hosted","ecs"]') }}
     timeout-minutes: 240
     strategy:
       fail-fast: false

@@ -227,10 +227,10 @@ def _run_one(date: str, force: bool = False) -> None:
 
     if not skip_if_good.check_postclose_all(date):
         print(f"[postclose-all] DEGRADED {date}: outcome/reflect/sectors/"
-              "learn/next-session still missing — wrote whatever landed; "
-              "persist then continue")
+              "learn/next-session still missing — empty grades were not "
+              "substituted. Exit 1.")
         _push_pack(date)
-        return
+        raise SystemExit(1)
     print(f"[postclose-all] PASS {date} — grades/learn/next-session research done")
     _push_pack(date)
 

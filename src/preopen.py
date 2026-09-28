@@ -26,23 +26,23 @@ from . import config
 # 09:25 ET — last moment a predictive write is allowed to start/land.
 PREDICT_CUTOFF_HM = 925
 PREDICT_WINDOW_START_HM = 600  # 06:00 ET
-# Ubuntu late-heal in preopen_all.yml (after 09:25 ET; skip-if-good on).
-# Weekday cron / orch ubuntu dispatch / yml poke. ECS stays gated.
+# Explicit runner=ubuntu late-heal in preopen_all.yml (after 09:25 ET;
+# skip-if-good on). Schedule / push / ECS stay inside the 09:25 gate.
 LATE_HEAL_END_HM = 1200
 
 
 def ubuntu_late_heal(event_name: str, runner: str = "",
                      hm: int | None = None) -> bool:
-    """True when an ubuntu Pre-Open writer should pass --bypass-cutoff.
+    """True when an explicit ubuntu Pre-Open writer should pass --bypass-cutoff.
 
-    Matches preopen_all.yml: after 09:25 ET, push / schedule / runner=ubuntu
-    get late heal. ECS dispatch does not (needs explicit --force).
+    Matches preopen_all.yml: after 09:25 ET, only inputs.runner=ubuntu
+    gets late heal. Schedule, push, and ECS stay gated.
+    ``event_name`` is accepted so callers can log the trigger; it does
+    not by itself open the gate.
     """
+    del event_name
     if (et_hm() if hm is None else int(hm)) < PREDICT_CUTOFF_HM:
         return False
-    ev = (event_name or "").strip().lower()
-    if ev in ("push", "schedule"):
-        return True
     return (runner or "").strip().lower() == "ubuntu"
 
 

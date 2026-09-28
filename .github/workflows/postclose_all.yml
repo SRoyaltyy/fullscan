@@ -2,12 +2,16 @@ name: Post-Close ALL (grade + learn + next captains)
 
 # One evening button: outcome → sector grades → learn → tomorrow's
 # captain notebook. Skip-if-good on every LLM step.
-# CLOCK: merge/push of this workflow (ubuntu/DeepSeek, last-closed only)
-#        + GH ubuntu ~16:10 ET + orch 17:15 ET ubuntu/DeepSeek
-#        + GH ubuntu ~23:30 ET backup + ECS 22:00 timer (Grok).
+# CLOCK: merge/push, the 16:10 ET cron, and the 23:30 ET cron run on
+#        [self-hosted, ecs] (OpenClaw). Ubuntu is only inputs.runner=ubuntu.
+#        Default LLM_BACKEND is grok (no paid DeepSeek fallback).
+#        Pass llm_backend=auto or deepseek only on an explicit dispatch.
+#        ECS systemd 22:00 is the same Grok pack.
 # Push uses last_closed_session() so a mid-day heal grades yesterday
 # (09-03) and does not spend hours on 09-02 before 17:15 needs 09-04.
-# A queued ECS job must not block the ubuntu backup (split concurrency).
+# Explicit ubuntu and ECS stay in separate concurrency groups so an
+# ubuntu land does not queue behind Grok, and two ECS twins share one
+# group so they cannot pile up.
 
 on:
   schedule:
@@ -60,16 +64,16 @@ permissions:
   actions: write
 
 concurrency:
-  # Queued self-hosted runs sit forever if the ECS runner is offline.
-  # Ubuntu must not share that group or the backup never starts.
-  group: postclose-all-${{ (github.event_name == 'schedule' || github.event_name == 'push' || github.event.inputs.runner == 'ubuntu') && 'ubuntu' || 'ecs' }}
+  # Explicit ubuntu does not share the ECS group. Schedule / push /
+  # ecs dispatch share postclose-all-ecs so a second twin queues.
+  group: postclose-all-${{ github.event.inputs.runner == 'ubuntu' && 'ubuntu' || 'ecs' }}
   cancel-in-progress: false
 
 jobs:
   postclose:
-    # Schedule + orch evening + explicit ubuntu dispatch = DeepSeek.
-    # Manual default stays ECS/Grok. systemd 22:00 is independent.
-    runs-on: ${{ (github.event_name == 'schedule' || github.event_name == 'push' || github.event.inputs.runner == 'ubuntu') && 'ubuntu-latest' || fromJSON('["self-hosted","ecs"]') }}
+    # Schedule, push, and ecs dispatch run OpenClaw. Ubuntu only when
+    # inputs.runner=ubuntu. systemd 22:00 is the same Grok pack.
+    runs-on: ${{ github.event.inputs.runner == 'ubuntu' && 'ubuntu-latest' || fromJSON('["self-hosted","ecs"]') }}
     # Two closed sessions × 11 sector grades + reflects + captains.
     # 12h died mid-pack when several Grok calls each burned the 900s cap.
     timeout-minutes: 1080
@@ -78,8 +82,8 @@ jobs:
       # ECS OpenClaw + persist live under /home/gha. ubuntu-latest must
       # keep the runner home or pip/git/gh write to a directory the
       # hosted image cannot create.
-      FULLSCAN_HOME: ${{ (github.event_name == 'schedule' || github.event_name == 'push' || github.event.inputs.runner == 'ubuntu') && '/home/runner' || '/home/gha' }}
-      HOME: ${{ (github.event_name == 'schedule' || github.event_name == 'push' || github.event.inputs.runner == 'ubuntu') && '/home/runner' || '/home/gha' }}
+      FULLSCAN_HOME: ${{ github.event.inputs.runner == 'ubuntu' && '/home/runner' || '/home/gha' }}
+      HOME: ${{ github.event.inputs.runner == 'ubuntu' && '/home/runner' || '/home/gha' }}
       FINVIZ_SKIP_LIVE: "1"
       FULLSCAN_PERSIST: "/home/gha/fullscan-persist"
       MAP_POSTCLOSE_LOCK: "/home/gha/fullscan-persist/locks/map-postclose.lock"
@@ -157,11 +161,11 @@ jobs:
           DATABASE_KEY: ${{ secrets.DATABASE_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           OPENCLAW_TIMEOUT: "900"
-          GROK_ONLY: "0"
-          # ubuntu cannot reach the ECS loopback gateway. auto would
-          # burn OPENCLAW_TIMEOUT (900s) per call when the URL hangs
-          # instead of connection-refused (timeout is not a hard DOWN).
-          LLM_BACKEND: ${{ (github.event_name == 'schedule' || github.event_name == 'push' || github.event.inputs.runner == 'ubuntu') && 'deepseek' || github.event.inputs.llm_backend || 'auto' }}
+          GROK_ONLY: "1"
+          # grok = OpenClaw only. DeepSeek only when the dispatch
+          # input says auto or deepseek. A dead gateway must fail the hop,
+          # not spend the paid fallback or land an empty grade.
+          LLM_BACKEND: ${{ github.event.inputs.llm_backend || 'grok' }}
           FINVIZ_SKIP_LIVE: "1"
         run: |
           set -e

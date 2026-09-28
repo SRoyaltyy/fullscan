@@ -372,12 +372,13 @@ def assert_preopen_job(text: str, *, source: str = "preopen_all.yml") -> None:
     if not raw:
         raise AssertionError(f"{source}: job `preopen` has no runs-on")
 
-    ubuntu = as_labels(eval_runs_on(raw, event_name="push", runner=""))
-    if ubuntu != ["ubuntu-latest"]:
-        raise AssertionError(
-            f"{source}: preopen ubuntu branch resolved to {ubuntu}, "
-            "expected ['ubuntu-latest']"
-        )
+    for event in ("schedule", "push", "workflow_run"):
+        scheduled = as_labels(eval_runs_on(raw, event_name=event, runner=""))
+        if scheduled != ECS_LABELS:
+            raise AssertionError(
+                f"{source}: preopen {event} resolved to {scheduled}, "
+                f"expected {ECS_LABELS}"
+            )
     ubuntu_dispatch = as_labels(
         eval_runs_on(raw, event_name="workflow_dispatch", runner="ubuntu")
     )
@@ -467,13 +468,17 @@ def test_ubuntu_only_preopen_fails_ecs_branch() -> None:
 
 
 def test_good_fromjson_resolves_both_branches() -> None:
+    """Schedule / push / workflow_run are ECS. Ubuntu is explicit only."""
     good = (
-        "${{ (github.event_name == 'push' || github.event_name == 'schedule' "
-        "|| github.event.inputs.runner == 'ubuntu') && 'ubuntu-latest' "
+        "${{ github.event.inputs.runner == 'ubuntu' && 'ubuntu-latest' "
         "|| fromJSON('[\"self-hosted\",\"ecs\"]') }}"
     )
-    assert eval_runs_on(good, event_name="push") == "ubuntu-latest"
-    assert eval_runs_on(good, event_name="schedule") == "ubuntu-latest"
+    assert eval_runs_on(good, event_name="push") == ECS_LABELS
+    assert eval_runs_on(good, event_name="schedule") == ECS_LABELS
+    assert eval_runs_on(good, event_name="workflow_run") == ECS_LABELS
+    assert eval_runs_on(
+        good, event_name="workflow_dispatch", runner=""
+    ) == ECS_LABELS
     assert eval_runs_on(
         good, event_name="workflow_dispatch", runner="ubuntu"
     ) == "ubuntu-latest"
@@ -528,10 +533,49 @@ def test_stock_book_all_fromjson_resolves() -> None:
     jobs = parse_workflow_jobs(text)
     raw = jobs["all"]["runs-on"]
     assert_all_fromjson_valid(text, source="stock_book_all.yml")
-    assert eval_runs_on(raw, event_name="schedule") == "ubuntu-latest"
+    assert eval_runs_on(raw, event_name="schedule") == ECS_LABELS
+    assert eval_runs_on(raw, event_name="push") == ECS_LABELS
+    assert eval_runs_on(raw, event_name="workflow_run") == ECS_LABELS
+    assert eval_runs_on(
+        raw, event_name="workflow_dispatch", runner="ubuntu"
+    ) == "ubuntu-latest"
     assert eval_runs_on(
         raw, event_name="workflow_dispatch", runner="ecs"
     ) == ECS_LABELS
+
+
+def test_scheduled_grok_jobs_use_ecs() -> None:
+    """Cron / push / workflow_run of a Grok job must not pick ubuntu-latest."""
+    cases = (
+        ("preopen_all.yml", "preopen"),
+        ("stock_book_all.yml", "all"),
+        ("postclose_all.yml", "postclose"),
+        ("lane_one_shot_100.yml", "shard"),
+    )
+    for name, job_id in cases:
+        text = (WF / name).read_text(encoding="utf-8")
+        raw = parse_workflow_jobs(text)[job_id]["runs-on"]
+        for event in ("schedule", "push", "workflow_run"):
+            got = eval_runs_on(raw, event_name=event, runner="")
+            assert as_labels(got) == ECS_LABELS, f"{name}:{job_id} {event} -> {got}"
+        assert as_labels(
+            eval_runs_on(raw, event_name="workflow_dispatch", runner="ubuntu")
+        ) == ["ubuntu-latest"], name
+        assert as_labels(
+            eval_runs_on(raw, event_name="workflow_dispatch", runner="ecs")
+        ) == ECS_LABELS, name
+    post = (WF / "postclose_all.yml").read_text(encoding="utf-8")
+    assert "&& 'deepseek'" not in post
+    assert "github.event.inputs.llm_backend || 'grok'" in post
+    orch = (WF / "daily_orchestrator.yml").read_text(encoding="utf-8")
+    assert "dispatch_preopen_ecs" in orch
+    assert "dispatch_postclose_ecs" in orch
+    assert "inputs[runner]=ecs" in orch
+    assert "inputs[llm_backend]=grok" in orch
+    assert "inputs[llm_backend]=deepseek" not in orch
+    assert "inputs[llm_backend]=auto" not in orch
+    assert "dispatch_book_ubuntu" in orch
+    assert "inputs[skip_llm]=true" in orch
 
 
 def test_openclaw_probe_stays_on_ecs() -> None:
@@ -1396,6 +1440,7 @@ def main() -> None:
         test_live_workflows_fromjson_is_valid_json,
         test_preopen_all_job_resolves_ubuntu_and_ecs,
         test_stock_book_all_fromjson_resolves,
+        test_scheduled_grok_jobs_use_ecs,
         test_openclaw_probe_stays_on_ecs,
         test_openclaw_grok_ping_stays_on_ecs,
         test_news_impact_live_stays_on_ecs,

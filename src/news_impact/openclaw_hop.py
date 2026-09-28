@@ -9,6 +9,10 @@ from .prompts import ANALYST_SYSTEM, CLASSIFIER_SYSTEM, analyst_prompt, classifi
 from .schema import Classification
 
 
+class GrokHopError(RuntimeError):
+    """OpenClaw unreachable or empty. Do not land a blank news hop."""
+
+
 def news_model() -> str:
     return (config.OPENCLAW_NEWS_MODEL
             or pick_cheapest_above_30b()
@@ -36,12 +40,17 @@ def _complete(system: str, user: str, max_tokens: int, stage: str) -> tuple[str,
 
 def hop(tmpl: str, art: dict, family: str = "", cls: Classification | None = None,
         pack: dict | None = None) -> tuple[dict | None, str, str, list[dict]]:
-    """One SuperGrok turn. Returns (parsed, lane, model, hop_log). Fail soft."""
+    """One SuperGrok turn. Returns (parsed, lane, model, hop_log).
+
+    Unreachable gateway or an empty/unparseable reply raises GrokHopError.
+    Callers must not write a green no-news artifact for that hop.
+    """
     if not gateway_ready():
-        return None, "", "", [{
-            "role": tmpl, "lane": "openclaw", "model": "",
-            "ok": False, "skip": "no_gateway",
-        }]
+        raise GrokHopError(
+            "OpenClaw news hop: gateway unreachable "
+            "(OPENCLAW_GATEWAY_URL unset or empty). "
+            "Refusing to land an empty hop."
+        )
     if tmpl == "news_classify":
         prompt = classifier_prompt(
             str(art.get("title") or ""),
@@ -65,12 +74,16 @@ def hop(tmpl: str, art: dict, family: str = "", cls: Classification | None = Non
         budget = 900
     text, model = _complete(system, prompt, budget, tmpl)
     parsed = extract_json(text) if text else None
+    if not (text or "").strip():
+        raise GrokHopError(
+            f"OpenClaw news hop returned empty ({tmpl}, model={model}). "
+            "Refusing to land a no-news artifact."
+        )
     if not isinstance(parsed, dict):
-        return None, "openclaw", model, [{
-            "role": tmpl, "lane": "openclaw", "model": model,
-            "ok": False, "skip": "empty" if not text else "unparseable",
-            "excerpt": (text or "")[:160],
-        }]
+        raise GrokHopError(
+            f"OpenClaw news hop returned unparseable text ({tmpl}, "
+            f"model={model}). Refusing to land a no-news artifact."
+        )
     return parsed, "openclaw", model, [{
         "role": tmpl, "lane": "openclaw", "model": model,
         "ok": True, "excerpt": (text or "")[:160],
