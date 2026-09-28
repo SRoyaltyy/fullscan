@@ -1,0 +1,70 @@
+{
+  "updated": "2026-09-28",
+  "days_threshold": 14,
+  "note": "Clock on a named place, not a vocabulary. Update last_new_verb_date when a new verb hits, not when the place name reprints.",
+  "new_verbs_default": [
+    "closure",
+    "closed",
+    "closes",
+    "ceasefire",
+    "first strike",
+    "mine",
+    "mined",
+    "mines",
+    "seizure",
+    "seizes",
+    "seized",
+    "blocks",
+    "blocked",
+    "blockade",
+    "hit",
+    "hits",
+    "struck",
+    "strike",
+    "strikes",
+    "attack",
+    "attacks",
+    "boarded",
+    "boarding",
+    "halts",
+    "halted"
+  ],
+  "places": [
+    {
+      "id": "hormuz",
+      "keys": ["strait of hormuz", "hormuz"],
+      "last_new_verb": "seizure",
+      "last_new_verb_date": "2026-03-01"
+    },
+    {
+      "id": "red_sea",
+      "keys": ["bab el-mandeb", "bab el mandeb", "bab-el-mandeb", "red sea"],
+      "last_new_verb": "hit",
+      "last_new_verb_date": "2026-03-15"
+    },
+    {
+      "id": "suez",
+      "keys": ["suez canal", "suez"],
+      "last_new_verb": "blockage",
+      "last_new_verb_date": "2026-01-10"
+    },
+    {
+      "id": "panama",
+      "keys": ["panama canal", "panama"],
+      "last_new_verb": "draft cut",
+      "last_new_verb_date": "2026-04-01"
+    },
+    {
+      "id": "taiwan_strait",
+      "keys": ["taiwan strait", "taiwan straits"],
+      "last_new_verb": "encirclement",
+      "last_new_verb_date": "2026-05-20"
+    },
+    {
+      "id": "malacca",
+      "keys": ["strait of malacca", "malacca"],
+      "last_new_verb": "closure",
+      "last_new_verb_date": "2025-11-01"
+    }
+  ]
+}
