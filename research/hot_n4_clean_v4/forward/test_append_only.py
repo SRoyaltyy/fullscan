@@ -163,8 +163,13 @@ def _h1(records: list[dict]) -> None:
     dates = session_dates(records)
     if dates != list(SESSIONS):
         raise SystemExit("h1 seed sessions")
-    if any(row["kind"] == "plan" and row["date"] == "2026-09-28" for row in records):
-        raise SystemExit("h1 wrote a 2026-09-28 plan after the open")
+    # f9c8628a sealed the 2026-09-28 h1 plan at 12:36 UTC, before 09:30 ET.
+    # A plan committed at or after that open is still a late write.
+    for row in records:
+        if row["kind"] != "plan" or row["date"] != "2026-09-28":
+            continue
+        if str(row.get("committed_at") or "") >= "2026-09-28T13:30:00Z":
+            raise SystemExit("h1 wrote a 2026-09-28 plan after the open")
     closes = [row for row in records if row["kind"] == "close"]
     buys = [row for row in records if row["kind"] == "session" for row in row["buys"]]
     if len(closes) != 80 or len(buys) != 84:
@@ -184,8 +189,13 @@ def _h1(records: list[dict]) -> None:
     if rendered != records:
         raise SystemExit("h1 log.json is not the sealed log")
     status = json.loads((H1.page / "status.json").read_text(encoding="utf-8"))
-    if "2026-09-28" not in (status.get("note") or ""):
-        raise SystemExit("h1 status does not record the missing 2026-09-28 plan")
+    sealed = (
+        status.get("date") == "2026-09-28"
+        and status.get("phase") == "plan"
+        and status.get("pending") == "2026-09-28"
+    )
+    if "2026-09-28" not in (status.get("note") or "") and not sealed:
+        raise SystemExit("h1 status does not record the 2026-09-28 plan")
 
 
 def main() -> None:
