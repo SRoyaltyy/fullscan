@@ -4340,5 +4340,103 @@
     "sha256": "4503c386f9ebcfbd05fb46fe4018ce4703564a08fed6e6131f95b98532d2ea0f",
     "shares": 14,
     "ticker": "VICR"
+  },
+  {
+    "bar_cutoff": "2026-09-25",
+    "cash_before": 11.685590021509597,
+    "committed_at": "2026-09-28T12:36:56Z",
+    "date": "2026-09-28",
+    "excluded_unexplained_legs": [
+      {
+        "bar_date": "2026-08-13",
+        "leg": "close_over_prev_close",
+        "reason": "no filing",
+        "ticker": "XHG"
+      },
+      {
+        "bar_date": "2026-08-13",
+        "leg": "open_over_prev_close",
+        "reason": "no filing",
+        "ticker": "XHG"
+      }
+    ],
+    "finviz_source": {
+      "commit": "c420fb2abd57db441bac1c687ab9c9da599d480f",
+      "commit_time": "2026-09-25T20:45:01Z",
+      "file_sha256": "d3a366b29ba6b19e5ec7154eb4364ab911f0d60f3b4be08e663a1f506394ce3c",
+      "path": "data/snapshots/2026-09-25.csv",
+      "snapshot_date": "2026-09-25",
+      "status": "BEFORE_OPEN"
+    },
+    "holdup_on": false,
+    "kind": "plan",
+    "morning_s": -6.14,
+    "picks": [
+      {
+        "fv_avg_volume": 5373.97,
+        "fv_price": 17.25,
+        "rank": 1,
+        "sources": [
+          "yday_gainer",
+          "yday_mover"
+        ],
+        "ticker": "USDE"
+      },
+      {
+        "fv_avg_volume": 6563.62,
+        "fv_price": 1.11,
+        "rank": 2,
+        "sources": [
+          "yday_gainer",
+          "yday_mover"
+        ],
+        "ticker": "SRFM"
+      },
+      {
+        "fv_avg_volume": 600.04,
+        "fv_price": 4.37,
+        "rank": 3,
+        "sources": [
+          "yday_gainer",
+          "yday_mover"
+        ],
+        "ticker": "SHMD"
+      },
+      {
+        "fv_avg_volume": 712.81,
+        "fv_price": 2.8,
+        "rank": 4,
+        "sources": [
+          "ohlc_hot"
+        ],
+        "ticker": "FEAM"
+      }
+    ],
+    "planned_sells": [
+      {
+        "reason": "hold-expired",
+        "shares": 377,
+        "ticker": "GLND"
+      },
+      {
+        "reason": "hold-expired",
+        "shares": 58,
+        "ticker": "SECZ"
+      },
+      {
+        "reason": "hold-expired",
+        "shares": 35,
+        "ticker": "TJGC"
+      }
+    ],
+    "recipe": "union_hot_n4_holdup__w0",
+    "s_source": {
+      "blob_sha": "ffadf6f82d9ced6b4f7652b2c5c445a63367988e",
+      "kind": "predict",
+      "path": "01_daily/general/2026-09-28_predict.md",
+      "server_time_utc": "2026-09-28T16:51:00+08:00",
+      "status": "BEFORE_1330"
+    },
+    "sha256": "b129d5505394941231f1e2c61c37949b9bad920fff9c9b09df3b51e6dd7b6951"
   }
 ]

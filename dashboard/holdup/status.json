@@ -1,8 +1,7 @@
 {
   "date": "2026-09-28",
   "latest_skip": null,
-  "note": "No sealed plan for 2026-09-28 yet. The weekday 13:05 UTC run seals picks before the US open. Fills and P&L are added after the close by the 21:30 UTC run.",
-  "pending": null,
-  "phase": "waiting",
+  "pending": "2026-09-28",
+  "phase": "plan",
   "recipe": "union_hot_n4_holdup__w0"
 }
