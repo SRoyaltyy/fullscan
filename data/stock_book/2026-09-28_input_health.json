@@ -1,12 +1,12 @@
 {
   "date": "2026-09-28",
-  "generated_at": "2026-09-28T05:41:12.114955-04:00",
+  "generated_at": "2026-09-28T05:42:51.402286-04:00",
   "inputs": [
     {
       "name": "finviz_export",
       "family": "join",
       "status": "ok",
-      "n": 11681,
+      "n": 11678,
       "detail": "finviz_2026-09-28.csv"
     },
     {
@@ -21,7 +21,7 @@
       "family": "join",
       "status": "ok",
       "n": 5899,
-      "detail": "std=0.963"
+      "detail": "std=0.961"
     },
     {
       "name": "news_actions",
@@ -48,14 +48,14 @@
       "name": "ab_checklist",
       "family": "ab",
       "status": "ok",
-      "n": 2661,
+      "n": 2660,
       "detail": "2026-09-28_ab_checklist_enriched.csv"
     },
     {
       "name": "peer_rs",
       "family": "peer",
       "status": "ok",
-      "n": 5096,
+      "n": 5097,
       "detail": ""
     },
     {
@@ -82,9 +82,9 @@
     {
       "name": "general_predict",
       "family": "general",
-      "status": "degraded",
+      "status": "ok",
       "n": null,
-      "detail": "QC fail: not on scoreboard"
+      "detail": ""
     },
     {
       "name": "sector_predicts",
@@ -107,7 +107,7 @@
     "ab": "ok",
     "peer": "ok",
     "heat": "ok",
-    "general": "degraded",
+    "general": "ok",
     "sector": "missing"
   },
   "families_present": {
