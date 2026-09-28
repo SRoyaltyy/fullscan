@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ rsi_os, no 🚨
 
-Cash book **-14.71%** ($8,529) · signal-only (no cash/fees) was -42.97%. Starts YES **6/30**. Fills 72 · skips 88 · realized $-2389.72.
+Cash book **-11.66%** ($8,834) · signal-only (no cash/fees) was -42.97%. Starts YES **6/30**. Fills 75 · skips 88 · realized $-2389.72.
 
 ## How this sleeve decides (like you are 10)
 
@@ -206,6 +206,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-25 09:30 ET | **BUY** | `ACAD` | 134 | $22.21 | $2.39 | — | $2,968.08 | — | union ∩ rsi_os, no 🚨; gate rsi_os=True; list yday_mover; 🔵; ret5=-19.2; leftover $2980.96 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-09-25 09:30 ET | **BUY** | `GEN` | 129 | $22.91 | $2.38 | — | $10.31 | — | union ∩ rsi_os, no 🚨; gate rsi_os=True; list yday_mover; 🔵; ret5=-23.6; leftover $2980.96 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-09-25 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10.31 | ▼ close $8,528.71 vs 09:30 $8,983.30 (session -432.36) | 16:00 close · cash $10.31 · equity $8,528.71 vs 09:30 $8,983.30 (-454.59; session marks -432.36) · 6 name(s) marked open→close (per-name table). CMPX×13 09:30 $1.14 → close $1.14 -0.00; NMRA×22 09:30 $0.70 → close $0.70 +0.00; XNDU×2 09:30 $5.10 → close $5.10 -0.00; SFIX×1354 09:30 $2.20 → close $2.15 -60.93; ACAD×134 09:30 $22.21 → close $20.68 -205.02; GEN×129 09:30 $22.91 → close $21.62 -166.41 | — |
+| 2026-09-28 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10.31 | ▼ 09:30 equity $8,439.07 vs yday $8,528.71 (-89.64) | 09:30 open · cash $10.31 (unchanged overnight, no fees) · equity $8,439.07 vs prior close $8,528.71 (-89.64) · 6 name(s) re-marked at the open (per-name table). ACAD×134 yday $20.68 → 09:30 $20.53 -20.10; CMPX×13 yday $1.13 → 09:30 $1.14 +0.07; GEN×129 yday $21.62 → 09:30 $21.44 -23.22; NMRA×22 yday $0.70 → 09:30 $0.65 -1.21; SFIX×1354 yday $2.15 → 09:30 $2.12 -44.68; XNDU×2 yday $5.10 → 09:30 $4.86 -0.48 | — |
+| 2026-09-28 09:30 ET | **SELL** | `CMPX` | 13 | $1.14 | $0.21 | $-1.44 | $24.92 | ▼ -1.44 after sell → book $8,438.87; vs 09:30 mark -0.20 | exit unpriced hold on first bar after 3 sess | — |
+| 2026-09-28 09:30 ET | **SELL** | `NMRA` | 22 | $0.65 | $0.23 | $-3.10 | $38.95 | ▼ -3.10 after sell → book $8,438.64; vs 09:30 mark -0.23 | exit unpriced hold on first bar after 3 sess | — |
+| 2026-09-28 09:30 ET | **SELL** | `XNDU` | 2 | $4.86 | $0.12 | $-2.51 | $48.55 | ▼ -2.51 after sell → book $8,438.52; vs 09:30 mark -0.12 | exit unpriced hold on first bar after 3 sess | — |
+| 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $48.55 | ▲ close $8,833.60 vs 09:30 $8,439.07 (session +395.08) | 16:00 close · cash $48.55 · equity $8,833.60 vs 09:30 $8,439.07 (+394.53; session marks +395.08) · 3 name(s) marked open→close (per-name table). ACAD×134 09:30 $20.53 → close $20.53 +0.00; GEN×129 09:30 $21.44 → close $20.85 -76.11; SFIX×1354 09:30 $2.12 → close $2.47 +471.19 | — |
 
 ## Not taken
 

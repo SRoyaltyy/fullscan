@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-21.53%** ($7,847) · signal-only (no cash/fees) was -22.27%. Starts YES **0/30**. Fills 125 · skips 128 · realized $-1374.07.
+Cash book **-21.29%** ($7,871) · signal-only (no cash/fees) was -22.27%. Starts YES **0/30**. Fills 131 · skips 128 · realized $-1374.07.
 
 ## How this sleeve decides (like you are 10)
 
@@ -50,7 +50,7 @@ Imagine a kid with $10,000 at the 09:30 school bell. They look at the mixed morn
 Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 09:30 packet + leftover cash + lots on hand decide the ticket. Same-day Change% is outcome only.
 
 - **Universe** `union` — candidate list at 09:30 (flatten wish-list, union, probable, yday gainer, or OHLC hot).
-- **Gate** `zero_red=True,ret_5_max=10.0,rvol_max=2.2` · **rank** `list order` · **top_n** 8.
+- **Gate** `ret_5_max=10.0,rvol_max=2.2,zero_red=True` · **rank** `list order` · **top_n** 8.
 - **Size** `leftover` splits leftover cash among *new* names only. Rank-weight / top-heavy still cannot invent money.
 - **Sell** `list` after min-hold **3**. We never sell a ticker we do not hold. Early 🚨 / last-red / news🔴 can still exit inside the floor.
 - **Entry:** Research universe (not the live flatten gate). Cash/share/fee rules still apply.
@@ -262,6 +262,14 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-25 09:30 ET | **BUY** | `SENS` | 137 | $10.28 | $2.40 | — | $1,570.28 | — | combo gate; gate zero_red=True,ret_5_max=10.0,rvol_max=2.2; list ohlc_hot; ⚪; ret5=+9.7; leftover $1414.91 | join🟡 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-09-25 09:30 ET | **BUY** | `RGEN` | 7 | $189.92 | $2.01 | — | $238.83 | — | combo gate; gate zero_red=True,ret_5_max=10.0,rvol_max=2.2; list ohlc_hot; 🔵; ⚪; ret5=+7.0; leftover $1414.91 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-09-25 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $238.83 | ▼ close $7,847.30 vs 09:30 $7,865.20 (session -6.87) | 16:00 close · cash $238.83 · equity $7,847.30 vs 09:30 $7,865.20 (-17.90; session marks -6.87) · 11 name(s) marked open→close (per-name table). DXCM×1 09:30 $87.47 → close $87.47 +0.00; FTRE×8 09:30 $20.02 → close $20.02 +0.00; NTSK×9 09:30 $18.57 → close $18.57 -0.00; PAYX×1 09:30 $101.59 → close $101.59 -0.00; SAIL×7 09:30 $22.05 → close $20.64 -9.87; TTAN×2 09:30 $59.98 → close $59.98 -0.00; MRVI×184 09:30 $7.65 → close $7.60 -9.20; TXG×16 09:30 $83.76 → close $85.71 +31.20; TEM×16 09:30 $83.69 → close $85.01 +21.04; SENS×137 09:30 $10.28 → close $10.00 -38.36; RGEN×7 09:30 $189.92 → close $189.68 -1.68 | — |
+| 2026-09-28 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $238.83 | ▼ 09:30 equity $7,744.42 vs yday $7,847.30 (-102.88) | 09:30 open · cash $238.83 (unchanged overnight, no fees) · equity $7,744.42 vs prior close $7,847.30 (-102.88) · 11 name(s) re-marked at the open (per-name table). DXCM×1 yday $87.47 → 09:30 $86.87 -0.60; FTRE×8 yday $20.02 → 09:30 $19.54 -3.84; MRVI×184 yday $7.60 → 09:30 $7.49 -20.24; NTSK×9 yday $18.57 → 09:30 $17.15 -12.74; PAYX×1 yday $101.59 → 09:30 $100.08 -1.51; RGEN×7 yday $189.68 → 09:30 $187.25 -17.01; SAIL×7 yday $20.64 → 09:30 $20.03 -4.27; SENS×137 yday $10.00 → 09:30 $9.85 -20.55; TEM×16 yday $85.01 → 09:30 $83.57 -23.04; TTAN×2 yday $59.98 → 09:30 $57.00 -5.96; TXG×16 yday $85.71 → 09:30 $86.14 +6.88 | — |
+| 2026-09-28 09:30 ET | **SELL** | `DXCM` | 1 | $86.87 | $0.89 | $-4.42 | $324.81 | ▼ -4.42 after sell → book $7,743.53; vs 09:30 mark -0.89 | exit unpriced hold on first bar after 3 sess | — |
+| 2026-09-28 09:30 ET | **SELL** | `FTRE` | 8 | $19.54 | $1.61 | $-8.93 | $479.52 | ▼ -8.93 after sell → book $7,741.92; vs 09:30 mark -1.61 | exit unpriced hold on first bar after 3 sess | — |
+| 2026-09-28 09:30 ET | **SELL** | `NTSK` | 9 | $17.15 | $1.59 | $-16.07 | $632.32 | ▼ -16.07 after sell → book $7,740.33; vs 09:30 mark -1.59 | exit unpriced hold on first bar after 3 sess | — |
+| 2026-09-28 09:30 ET | **SELL** | `PAYX` | 1 | $100.08 | $1.02 | $-11.71 | $731.38 | ▼ -11.71 after sell → book $7,739.31; vs 09:30 mark -1.02 | exit unpriced hold on first bar after 3 sess | — |
+| 2026-09-28 09:30 ET | **SELL** | `SAIL` | 7 | $20.03 | $1.44 | $-13.33 | $870.15 | ▼ -13.33 after sell → book $7,737.87; vs 09:30 mark -1.44 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-28 09:30 ET | **SELL** | `TTAN` | 2 | $57.00 | $1.17 | $-12.74 | $982.98 | ▼ -12.74 after sell → book $7,736.70; vs 09:30 mark -1.17 | exit unpriced hold on first bar after 3 sess | — |
+| 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $982.98 | ▲ close $7,870.89 vs 09:30 $7,744.42 (session +134.19) | 16:00 close · cash $982.98 · equity $7,870.89 vs 09:30 $7,744.42 (+126.47; session marks +134.19) · 5 name(s) marked open→close (per-name table). MRVI×184 09:30 $7.49 → close $7.63 +25.76; RGEN×7 09:30 $187.25 → close $194.09 +47.88; SENS×137 09:30 $9.85 → close $9.84 -1.37; TEM×16 09:30 $83.57 → close $85.08 +24.16; TXG×16 09:30 $86.14 → close $88.50 +37.76 | — |
 
 ## Not taken
 

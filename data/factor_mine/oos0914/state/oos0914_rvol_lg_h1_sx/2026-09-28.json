@@ -1,0 +1,85 @@
+{
+  "buys": [],
+  "cash": 8974.22,
+  "date": "2026-09-28",
+  "equity": 8974.22,
+  "fees": 12.4958,
+  "fills": [
+    {
+      "fees": 2.9717,
+      "fill_rule": "open",
+      "pnl": 33.66,
+      "price": 10.375,
+      "shares": 226,
+      "side": "SELL",
+      "ticker": "DNA"
+    },
+    {
+      "fees": 4.9938,
+      "fill_rule": "open",
+      "pnl": -361.19,
+      "price": 5.138,
+      "shares": 381,
+      "side": "SELL",
+      "ticker": "GLND"
+    },
+    {
+      "fees": 2.0726,
+      "fill_rule": "open",
+      "pnl": 93.08,
+      "price": 128.9,
+      "shares": 18,
+      "side": "SELL",
+      "ticker": "GRAL"
+    },
+    {
+      "fees": 2.4577,
+      "fill_rule": "open",
+      "pnl": -34.69,
+      "price": 16.0,
+      "shares": 142,
+      "side": "SELL",
+      "ticker": "SECZ"
+    }
+  ],
+  "holdings": [],
+  "mean": -2.0541,
+  "n_trades_today": 4,
+  "recipe": "oos0914_rvol_lg_h1_sx",
+  "sells": [
+    {
+      "fill_rule": "open",
+      "price": 10.375,
+      "shares": 226,
+      "side": "SELL",
+      "ticker": "DNA"
+    },
+    {
+      "fill_rule": "open",
+      "price": 5.138,
+      "shares": 381,
+      "side": "SELL",
+      "ticker": "GLND"
+    },
+    {
+      "fill_rule": "open",
+      "price": 128.9,
+      "shares": 18,
+      "side": "SELL",
+      "ticker": "GRAL"
+    },
+    {
+      "fill_rule": "open",
+      "price": 16.0,
+      "shares": 142,
+      "side": "SELL",
+      "ticker": "SECZ"
+    }
+  ],
+  "state": {
+    "after": "2026-09-28",
+    "cash": 8974.22,
+    "pos": {},
+    "yday_equity": 8974.22
+  }
+}

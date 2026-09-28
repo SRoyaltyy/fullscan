@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 4 · rank `hot_score` · size `leftover` · sell `list` · S-boost `holdup` · hot4; S>0 lots stay through the next 09:30 so the overnight gap is in the book
 
-Cash book **+54.26%** ($15,426) · signal-only (no cash/fees) was +89.81%. Starts YES **29/30**. Fills 92 · skips 79 · realized $+4974.44.
+Cash book **+48.29%** ($14,829) · signal-only (no cash/fees) was +89.81%. Starts YES **29/30**. Fills 95 · skips 79 · realized $+4974.44.
 
 ## How this sleeve decides (like you are 10)
 
@@ -226,6 +226,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-25 09:30 ET | **BUY** | `SECZ` | 50 | $16.21 | $2.14 | — | $820.97 | — | hot4; S>0 lots stay through the next 09:30 so the overnight gap is in the book; rank hot_score; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+85.1; leftover $813.07 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 judge🟢 ab🟡 heat🟢 vol🟢 buy🟡 |
 | 2026-09-25 09:30 ET | **BUY** | `USDE` | 52 | $15.58 | $2.15 | — | $8.61 | — | hot4; S>0 lots stay through the next 09:30 so the overnight gap is in the book; rank hot_score; list yday_gainer; 🔵; ret5=+84.4; leftover $813.07 | join🟡 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 heat🔴 vol🟡 buy🟡 |
 | 2026-09-25 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8.61 | ▼ close $15,425.64 vs 09:30 $16,090.79 (session -658.80) | 16:00 close · cash $8.61 · equity $15,425.64 vs 09:30 $16,090.79 (-665.15; session marks -658.80) · 6 name(s) marked open→close (per-name table). GLND×1227 09:30 $6.06 → close $5.54 -638.04; VICR×12 09:30 $276.06 → close $276.06 -0.00; VKTX×79 09:30 $36.75 → close $36.75 +0.00; TJGC×27 09:30 $29.76 → close $26.24 -95.04; SECZ×50 09:30 $16.21 → close $15.96 -12.50; USDE×52 09:30 $15.58 → close $17.25 +86.78 | — |
+| 2026-09-28 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8.61 | ▼ 09:30 equity $14,829.64 vs yday $15,425.64 (-596.00) | 09:30 open · cash $8.61 (unchanged overnight, no fees) · equity $14,829.64 vs prior close $15,425.64 (-596.00) · 6 name(s) re-marked at the open (per-name table). GLND×1227 yday $5.54 → 09:30 $5.14 -493.25; SECZ×50 yday $15.96 → 09:30 $16.00 +2.00; TJGC×27 yday $26.24 → 09:30 $26.50 +7.02; USDE×52 yday $17.25 → 09:30 $16.85 -20.80; VICR×12 yday $276.06 → 09:30 $280.00 +47.28; VKTX×79 yday $36.75 → 09:30 $35.00 -138.25 | — |
+| 2026-09-28 09:30 ET | **SELL** | `GLND` | 1227 | $5.14 | $16.08 | $+2959.52 | $6,296.85 | ▲ +2,959.52 after sell → book $14,813.55; vs 09:30 mark -16.09 | dropped from list after 3 sess (min 2) | — |
+| 2026-09-28 09:30 ET | **SELL** | `VICR` | 12 | $280.00 | $2.06 | $+157.91 | $9,654.79 | ▲ +157.91 after sell → book $14,811.49; vs 09:30 mark -2.06 | exit unpriced hold on first bar after 3 sess | — |
+| 2026-09-28 09:30 ET | **SELL** | `VKTX` | 79 | $35.00 | $2.26 | $-538.53 | $12,417.53 | ▼ -538.53 after sell → book $14,809.23; vs 09:30 mark -2.26 | exit unpriced hold on first bar after 3 sess | — |
+| 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $12,417.53 | ▲ close $14,828.73 vs 09:30 $14,829.64 (session +19.50) | 16:00 close · cash $12,417.53 · equity $14,828.73 vs 09:30 $14,829.64 (-0.91; session marks +19.50) · 3 name(s) marked open→close (per-name table). SECZ×50 09:30 $16.00 → close $16.63 +31.50; TJGC×27 09:30 $26.50 → close $28.54 +55.08; USDE×52 09:30 $16.85 → close $15.56 -67.08 | — |
 
 ## Not taken
 

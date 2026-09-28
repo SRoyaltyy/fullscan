@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 4 · rank `list` · size `leftover` · sell `list` · S-boost `none` · −0 red + yday up AND catalyst, top 4 by Score
 
-Cash book **-4.77%** ($9,523) · signal-only (no cash/fees) was +6.63%. Starts YES **7/30**. Fills 94 · skips 0 · realized $+1337.35.
+Cash book **-5.61%** ($9,439) · signal-only (no cash/fees) was +6.63%. Starts YES **7/30**. Fills 98 · skips 0 · realized $+1337.35.
 
 ## How this sleeve decides (like you are 10)
 
@@ -230,3 +230,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-25 09:30 ET | **BUY** | `TXG` | 28 | $83.76 | $2.07 | — | $2,454.30 | — | −0 red + yday up AND catalyst, top 4 by Score; gate cam_bad_max=0,yday_and_catalyst=True; rank list; list probable,yday_gainer,ohlc_hot; 🔵; ⚪; ret5=+9.3; leftover $2371.60 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-09-25 09:30 ET | **BUY** | `TEM` | 28 | $83.69 | $2.07 | — | $108.76 | — | −0 red + yday up AND catalyst, top 4 by Score; gate cam_bad_max=0,yday_and_catalyst=True; rank list; list probable,ohlc_hot; ⚪; ret5=+2.3; leftover $2371.60 | join🟡 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-09-25 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $108.76 | ▲ close $9,522.92 vs 09:30 $9,486.40 (session +46.72) | 16:00 close · cash $108.76 · equity $9,522.92 vs 09:30 $9,486.40 (+36.52; session marks +46.72) · 4 name(s) marked open→close (per-name table). HALO×20 09:30 $115.36 → close $113.90 -29.20; MRVI×310 09:30 $7.65 → close $7.60 -15.50; TXG×28 09:30 $83.76 → close $85.71 +54.60; TEM×28 09:30 $83.69 → close $85.01 +36.82 | — |
+| 2026-09-28 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $108.76 | ▼ 09:30 equity $9,449.34 vs yday $9,522.92 (-73.58) | 09:30 open · cash $108.76 (unchanged overnight, no fees) · equity $9,449.34 vs prior close $9,522.92 (-73.58) · 4 name(s) re-marked at the open (per-name table). HALO×20 yday $113.90 → 09:30 $113.34 -11.20; MRVI×310 yday $7.60 → 09:30 $7.49 -34.10; TEM×28 yday $85.01 → 09:30 $83.57 -40.32; TXG×28 yday $85.71 → 09:30 $86.14 +12.04 | — |
+| 2026-09-28 09:30 ET | **SELL** | `HALO` | 20 | $113.34 | $2.08 | $-44.53 | $2,373.48 | ▼ -44.53 after sell → book $9,447.26; vs 09:30 mark -2.08 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-28 09:30 ET | **SELL** | `MRVI` | 310 | $7.49 | $4.07 | $-57.67 | $4,691.31 | ▼ -57.67 after sell → book $9,443.19; vs 09:30 mark -4.07 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-28 09:30 ET | **SELL** | `TEM` | 28 | $83.57 | $2.10 | $-7.68 | $7,029.17 | ▼ -7.68 after sell → book $9,441.09; vs 09:30 mark -2.10 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 digest🟢 judge🟢 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-09-28 09:30 ET | **SELL** | `TXG` | 28 | $86.14 | $2.10 | $+62.46 | $9,438.99 | ▲ +62.46 after sell → book $9,438.99; vs 09:30 mark -2.10 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,438.99 | ▲ close $9,438.99 vs 09:30 $9,449.34 (session +0.00) | 16:00 close · cash $9,438.99 · no lots left · equity $9,438.99. | — |

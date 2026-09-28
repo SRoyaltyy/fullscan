@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared union_e_fresh_h3/flatten_h5 w=0.7,0.3 net=priority
 
-Cash book **-9.49%** ($9,050) · signal-only (no cash/fees) was —. Starts YES **22/30**. Fills 243 · skips 528 · realized $+2168.14.
+Cash book **-10.20%** ($8,980) · signal-only (no cash/fees) was —. Starts YES **22/30**. Fills 260 · skips 528 · realized $+2168.14.
 
 ## How this sleeve decides (like you are 10)
 
@@ -55,7 +55,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $61.64.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $8,176.25.
 
 ## Every lot, every session (09:30 mark and same-day change)
 
@@ -378,6 +378,25 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-25 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $84.83 | ▼ 09:30 equity $9,018.63 vs yday $9,040.97 (-22.34) | 09:30 open · cash $84.83 (unchanged overnight, no fees) · equity $9,018.63 vs prior close $9,040.97 (-22.34) | — |
 | 2026-09-25 09:30 ET | **BUY** | `MRVI` | 3 | $7.65 | $0.24 | — | $61.64 | — | baseline list, no extra gate; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ⚪; ret5=+5.2; combo leftover $28.28; owner flatten_h5 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-09-25 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $61.64 | ▲ close $9,050.45 vs 09:30 $9,018.63 (session +32.07) | 16:00 close · cash $61.64 · equity $9,050.45 vs 09:30 $9,018.63 (+31.82; session marks +32.07) · 26 name(s) marked open→close (per-name table). A×7 09:30 $171.98 → close $172.79 +5.67; ADMA×14 09:30 $9.52 → close $9.52 +0.00; ANAB×1 09:30 $51.70 → close $51.70 +0.00; ARQT×5 09:30 $26.27 → close $26.27 +0.00; CBRL×5 09:30 $52.39 → close $51.81 -2.90; CTAS×1 09:30 $197.68 → close $197.68 -0.00; CYPH×301 09:30 $4.00 → close $4.12 +34.62; DLO×3 09:30 $13.88 → close $13.88 +0.00; DXCM×13 09:30 $87.47 → close $87.47 +0.00; ECO×3 09:30 $78.22 → close $78.22 +0.00; FIVN×8 09:30 $36.66 → close $36.66 -0.00; FTRE×7 09:30 $20.02 → close $20.02 +0.00; GIS×7 09:30 $34.83 → close $34.83 +0.00; GNRC×1 09:30 $198.05 → close $198.05 +0.00; HALO×1 09:30 $115.36 → close $113.90 -1.46; HUM×3 09:30 $380.32 → close $380.32 +0.00; KBH×5 09:30 $47.65 → close $47.65 +0.00; MGTX×89 09:30 $11.05 → close $11.05 +0.00; MLKN×3 09:30 $19.91 → close $19.91 -0.00; OMER×7 09:30 $20.61 → close $20.08 -3.71; PACS×1 09:30 $41.46 → close $41.46 -0.00; PAYX×2 09:30 $101.59 → close $101.59 -0.00; RBRK×2 09:30 $113.80 → close $113.80 +0.00; TDC×1 09:30 $29.46 → close $29.46 -0.00; VICR×1 09:30 $276.06 → close $276.06 -0.00; MRVI×3 09:30 $7.65 → close $7.60 -0.15 | — |
+| 2026-09-28 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $61.64 | ▼ 09:30 equity $8,997.49 vs yday $9,050.45 (-52.96) | 09:30 open · cash $61.64 (unchanged overnight, no fees) · equity $8,997.49 vs prior close $9,050.45 (-52.96) | — |
+| 2026-09-28 09:30 ET | **SELL** | `A` | 7 | $170.00 | $2.03 | $+80.87 | $1,249.61 | ▲ +80.87 after sell → book $8,995.46; vs 09:30 mark -2.03 | flatten_h5: dropped from list after 5 sess (min 5) | — |
+| 2026-09-28 09:30 ET | **SELL** | `ANAB` | 1 | $51.00 | $0.53 | $-5.16 | $1,300.08 | ▼ -5.16 after sell → book $8,994.93; vs 09:30 mark -0.53 | union_e_fresh_h3: dropped from list after 4 sess (min 3) | — |
+| 2026-09-28 09:30 ET | **SELL** | `CBRL` | 5 | $52.25 | $2.02 | $+19.37 | $1,559.30 | ▲ +19.37 after sell → book $8,992.90; vs 09:30 mark -2.03 | union_e_fresh_h3: dropped from list after 3 sess (min 3) | — |
+| 2026-09-28 09:30 ET | **SELL** | `CTAS` | 1 | $199.51 | $2.01 | $-1.25 | $1,756.80 | ▼ -1.25 after sell → book $8,990.89; vs 09:30 mark -2.01 | union_e_fresh_h3: dropped from list after 3 sess (min 3) | — |
+| 2026-09-28 09:30 ET | **SELL** | `CYPH` | 301 | $4.03 | $3.94 | $+1.96 | $2,966.64 | ▲ +1.96 after sell → book $8,986.95; vs 09:30 mark -3.94 | flatten_h5: dropped from list after 5 sess (min 5) | join🟢 sector🟡 gen🔴 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-28 09:30 ET | **SELL** | `DXCM` | 13 | $86.87 | $2.05 | $-29.56 | $4,093.90 | ▼ -29.56 after sell → book $8,984.90; vs 09:30 mark -2.05 | flatten_h5: dropped from list after 5 sess (min 5) | — |
+| 2026-09-28 09:30 ET | **SELL** | `ECO` | 3 | $79.55 | $2.02 | $-20.37 | $4,330.53 | ▼ -20.37 after sell → book $8,982.88; vs 09:30 mark -2.02 | flatten_h5: dropped from list after 6 sess (min 5) | — |
+| 2026-09-28 09:30 ET | **SELL** | `FIVN` | 8 | $34.75 | $2.03 | $-1.57 | $4,606.50 | ▼ -1.57 after sell → book $8,980.85; vs 09:30 mark -2.03 | flatten_h5: dropped from list after 6 sess (min 5) | — |
+| 2026-09-28 09:30 ET | **SELL** | `GIS` | 7 | $33.60 | $2.03 | $-19.02 | $4,839.67 | ▼ -19.02 after sell → book $8,978.82; vs 09:30 mark -2.03 | union_e_fresh_h3: dropped from list after 3 sess (min 3) | — |
+| 2026-09-28 09:30 ET | **SELL** | `GNRC` | 1 | $207.41 | $2.01 | $-6.12 | $5,045.06 | ▼ -6.12 after sell → book $8,976.80; vs 09:30 mark -2.02 | flatten_h5: dropped from list after 6 sess (min 5) | — |
+| 2026-09-28 09:30 ET | **SELL** | `HUM` | 3 | $397.43 | $2.02 | $+29.67 | $6,235.34 | ▲ +29.67 after sell → book $8,974.79; vs 09:30 mark -2.01 | flatten_h5: dropped from list after 5 sess (min 5) | — |
+| 2026-09-28 09:30 ET | **SELL** | `KBH` | 5 | $47.58 | $2.02 | $-1.88 | $6,471.21 | ▼ -1.88 after sell → book $8,972.76; vs 09:30 mark -2.03 | union_e_fresh_h3: dropped from list after 3 sess (min 3) | — |
+| 2026-09-28 09:30 ET | **SELL** | `MGTX` | 89 | $10.79 | $2.28 | $-243.06 | $7,429.24 | ▼ -243.06 after sell → book $8,970.48; vs 09:30 mark -2.28 | flatten_h5: dropped from list after 5 sess (min 5) | — |
+| 2026-09-28 09:30 ET | **SELL** | `MLKN` | 3 | $19.88 | $0.63 | $-3.59 | $7,488.25 | ▼ -3.59 after sell → book $8,969.85; vs 09:30 mark -0.63 | union_e_fresh_h3: dropped from list after 4 sess (min 3) | — |
+| 2026-09-28 09:30 ET | **SELL** | `PAYX` | 2 | $100.08 | $2.02 | $-23.19 | $7,686.40 | ▼ -23.19 after sell → book $8,967.84; vs 09:30 mark -2.01 | union_e_fresh_h3: dropped from list after 3 sess (min 3) | — |
+| 2026-09-28 09:30 ET | **SELL** | `RBRK` | 2 | $106.94 | $2.02 | $-7.23 | $7,898.26 | ▼ -7.23 after sell → book $8,965.82; vs 09:30 mark -2.02 | flatten_h5: dropped from list after 6 sess (min 5) | — |
+| 2026-09-28 09:30 ET | **SELL** | `VICR` | 1 | $280.00 | $2.01 | $+56.37 | $8,176.25 | ▲ +56.37 after sell → book $8,963.81; vs 09:30 mark -2.01 | flatten_h5: dropped from list after 6 sess (min 5) | — |
+| 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,176.25 | ▲ close $8,979.86 vs 09:30 $8,997.49 (session +16.05) | 16:00 close · cash $8,176.25 · equity $8,979.86 vs 09:30 $8,997.49 (-17.63; session marks +16.05) · 9 name(s) marked open→close (per-name table). ADMA×14 09:30 $9.38 → close $10.12 +10.36; ARQT×5 09:30 $26.70 → close $27.33 +3.15; DLO×3 09:30 $13.91 → close $13.82 -0.27; FTRE×7 09:30 $19.54 → close $20.06 +3.64; HALO×1 09:30 $113.34 → close $112.89 -0.45; MRVI×3 09:30 $7.49 → close $7.63 +0.42; OMER×7 09:30 $19.83 → close $19.43 -2.80; PACS×1 09:30 $41.27 → close $43.06 +1.79; TDC×1 09:30 $28.34 → close $28.55 +0.21 | — |
 
 ## Not taken
 

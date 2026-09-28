@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared union_e_fresh_h3/union_news_g_h1 w=0.5,0.5 net=priority
 
-Cash book **-8.88%** ($9,112) · signal-only (no cash/fees) was —. Starts YES **25/30**. Fills 300 · skips 300 · realized $+2521.08.
+Cash book **-9.85%** ($9,015) · signal-only (no cash/fees) was —. Starts YES **25/30**. Fills 313 · skips 300 · realized $+2521.08.
 
 ## How this sleeve decides (like you are 10)
 
@@ -55,7 +55,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $136.62.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $8,091.82.
 
 ## Every lot, every session (09:30 mark and same-day change)
 
@@ -435,6 +435,21 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-25 09:30 ET | **BUY** | `ILMN` | 1 | $272.16 | $1.99 | — | $509.38 | — | union ∩ news_g, no 🚨; gate news=good; list ohlc_hot; 🔵; ⚪; ret5=+11.7; combo leftover $391.70; owner union_news_g_h1 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-09-25 09:30 ET | **BUY** | `RKLB` | 5 | $74.15 | $2.00 | — | $136.62 | — | union ∩ news_g, no 🚨; gate news=good; list ohlc_hot; ret5=+8.5; combo leftover $391.70; owner union_news_g_h1 | join🔴 sector🟡 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
 | 2026-09-25 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $136.62 | ▲ close $9,112.09 vs 09:30 $9,109.71 (session +12.72) | 16:00 close · cash $136.62 · equity $9,112.09 vs 09:30 $9,109.71 (+2.38; session marks +12.72) · 14 name(s) marked open→close (per-name table). ABVX×11 09:30 $94.87 → close $94.87 +0.00; ANAB×21 09:30 $51.70 → close $51.70 +0.00; CBRL×10 09:30 $52.39 → close $51.81 -5.80; CTAS×2 09:30 $197.68 → close $197.68 -0.00; GIS×13 09:30 $34.83 → close $34.83 +0.00; KBH×10 09:30 $47.65 → close $47.65 +0.00; MLKN×57 09:30 $19.91 → close $19.91 -0.00; PAYX×4 09:30 $101.59 → close $101.59 -0.00; THO×16 09:30 $70.93 → close $70.93 +0.00; COST×1 09:30 $887.00 → close $922.76 +35.76; ZSQR×101 09:30 $3.86 → close $3.78 -8.08; SECZ×24 09:30 $16.21 → close $15.96 -6.00; ILMN×1 09:30 $272.16 → close $270.00 -2.16; RKLB×5 09:30 $74.15 → close $73.95 -1.00 | — |
+| 2026-09-28 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $136.62 | ▼ 09:30 equity $9,043.65 vs yday $9,112.09 (-68.44) | 09:30 open · cash $136.62 (unchanged overnight, no fees) · equity $9,043.65 vs prior close $9,112.09 (-68.44) | — |
+| 2026-09-28 09:30 ET | **SELL** | `ABVX` | 11 | $91.50 | $2.04 | $-127.71 | $1,141.08 | ▼ -127.71 after sell → book $9,041.61; vs 09:30 mark -2.04 | union_e_fresh_h3: dropped from list after 4 sess (min 3) | — |
+| 2026-09-28 09:30 ET | **SELL** | `ANAB` | 21 | $51.00 | $2.07 | $-89.60 | $2,210.00 | ▼ -89.60 after sell → book $9,039.54; vs 09:30 mark -2.07 | union_e_fresh_h3: dropped from list after 4 sess (min 3) | — |
+| 2026-09-28 09:30 ET | **SELL** | `CBRL` | 10 | $52.25 | $2.04 | $+42.74 | $2,730.46 | ▲ +42.74 after sell → book $9,037.50; vs 09:30 mark -2.04 | union_e_fresh_h3: dropped from list after 3 sess (min 3) | — |
+| 2026-09-28 09:30 ET | **SELL** | `CTAS` | 2 | $199.51 | $2.02 | $+1.45 | $3,127.47 | ▲ +1.45 after sell → book $9,035.48; vs 09:30 mark -2.02 | union_e_fresh_h3: dropped from list after 3 sess (min 3) | — |
+| 2026-09-28 09:30 ET | **SELL** | `GIS` | 13 | $33.60 | $2.05 | $-31.90 | $3,562.22 | ▼ -31.90 after sell → book $9,033.43; vs 09:30 mark -2.05 | union_e_fresh_h3: dropped from list after 3 sess (min 3) | — |
+| 2026-09-28 09:30 ET | **SELL** | `ILMN` | 1 | $265.95 | $2.01 | $-10.22 | $3,826.16 | ▼ -10.22 after sell → book $9,031.42; vs 09:30 mark -2.01 | union_news_g_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-09-28 09:30 ET | **SELL** | `KBH` | 10 | $47.58 | $2.04 | $+0.24 | $4,299.92 | ▲ +0.24 after sell → book $9,029.38; vs 09:30 mark -2.04 | union_e_fresh_h3: dropped from list after 3 sess (min 3) | — |
+| 2026-09-28 09:30 ET | **SELL** | `MLKN` | 57 | $19.88 | $2.18 | $-48.80 | $5,430.90 | ▼ -48.80 after sell → book $9,027.20; vs 09:30 mark -2.18 | union_e_fresh_h3: dropped from list after 4 sess (min 3) | — |
+| 2026-09-28 09:30 ET | **SELL** | `PAYX` | 4 | $100.08 | $2.02 | $-42.38 | $5,829.19 | ▼ -42.38 after sell → book $9,025.18; vs 09:30 mark -2.02 | union_e_fresh_h3: dropped from list after 3 sess (min 3) | — |
+| 2026-09-28 09:30 ET | **SELL** | `RKLB` | 5 | $73.20 | $2.02 | $-8.78 | $6,193.17 | ▼ -8.78 after sell → book $9,023.15; vs 09:30 mark -2.03 | union_news_g_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-09-28 09:30 ET | **SELL** | `SECZ` | 24 | $16.00 | $2.08 | $-9.18 | $6,575.09 | ▼ -9.18 after sell → book $9,021.07; vs 09:30 mark -2.08 | union_news_g_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-09-28 09:30 ET | **SELL** | `THO` | 16 | $71.65 | $2.06 | $-18.18 | $7,719.43 | ▼ -18.18 after sell → book $9,019.01; vs 09:30 mark -2.06 | union_e_fresh_h3: dropped from list after 4 sess (min 3) | — |
+| 2026-09-28 09:30 ET | **SELL** | `ZSQR` | 101 | $3.71 | $2.32 | $-19.76 | $8,091.82 | ▼ -19.76 after sell → book $9,016.69; vs 09:30 mark -2.32 | union_news_g_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,091.82 | ▼ close $9,014.74 vs 09:30 $9,043.65 (session -1.96) | 16:00 close · cash $8,091.82 · equity $9,014.74 vs 09:30 $9,043.65 (-28.91; session marks -1.96) · 1 name(s) marked open→close (per-name table). COST×1 09:30 $924.88 → close $922.92 -1.96 | — |
 
 ## Not taken
 

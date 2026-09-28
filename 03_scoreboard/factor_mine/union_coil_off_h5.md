@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ coil_off hold 5, no 🚨
 
-Cash book **-13.65%** ($8,635) · signal-only (no cash/fees) was -38.99%. Starts YES **0/30**. Fills 154 · skips 444 · realized $-915.44.
+Cash book **-16.29%** ($8,371) · signal-only (no cash/fees) was -38.99%. Starts YES **0/30**. Fills 165 · skips 444 · realized $-915.44.
 
 ## How this sleeve decides (like you are 10)
 
@@ -50,7 +50,7 @@ Imagine a kid with $10,000 at the 09:30 school bell. They look at the mixed morn
 Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 09:30 packet + leftover cash + lots on hand decide the ticket. Same-day Change% is outcome only.
 
 - **Universe** `union` — candidate list at 09:30 (flatten wish-list, union, probable, yday gainer, or OHLC hot).
-- **Gate** `ret_5_min=0.0,ret_5_max=10.0,rvol_min=0.7,rvol_max=2.2` · **rank** `list order` · **top_n** 8.
+- **Gate** `ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7` · **rank** `list order` · **top_n** 8.
 - **Size** `leftover` splits leftover cash among *new* names only. Rank-weight / top-heavy still cannot invent money.
 - **Sell** `list` after min-hold **5**. We never sell a ticker we do not hold. Early 🚨 / last-red / news🔴 can still exit inside the floor.
 - **Entry:** Research universe (not the live flatten gate). Cash/share/fee rules still apply.
@@ -291,6 +291,19 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-25 09:30 ET | **BUY** | `HLP` | 6 | $2.20 | $0.15 | — | $87.61 | — | union ∩ coil_off hold 5, no 🚨; gate ret_5_min=0.0,ret_5_max=10.0,rvol_min=0.7,rvol_max=2.2; list probable,ohlc_hot; 🔵; ret5=+8.9; leftover $13.59 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🔴 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-09-25 09:30 ET | **BUY** | `SATL` | 2 | $6.00 | $0.13 | — | $75.48 | — | union ∩ coil_off hold 5, no 🚨; gate ret_5_min=0.0,ret_5_max=10.0,rvol_min=0.7,rvol_max=2.2; list probable,ohlc_hot; 🔵; ret5=+7.8; leftover $13.59 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
 | 2026-09-25 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $75.48 | ▼ close $8,634.86 vs 09:30 $8,912.64 (session -277.42) | 16:00 close · cash $75.48 · equity $8,634.86 vs 09:30 $8,912.64 (-277.78; session marks -277.42) · 15 name(s) marked open→close (per-name table). AIB×16 09:30 $1.42 → close $1.42 -0.00; BHVN×1 09:30 $13.19 → close $13.19 -0.00; BTBT×3 09:30 $1.79 → close $1.79 -0.00; BTQ×2 09:30 $2.79 → close $2.79 -0.00; DDD×5 09:30 $3.43 → close $3.43 +0.00; HELP×1 09:30 $12.59 → close $12.59 +0.00; INDP×1083 09:30 $4.00 → close $4.00 +0.00; ORBS×5 09:30 $1.03 → close $1.03 -0.00; RANI×21 09:30 $0.75 → close $0.75 +0.00; SAIL×197 09:30 $22.05 → close $20.64 -277.77; SHLS×2 09:30 $7.45 → close $7.45 -0.00; XE×1 09:30 $15.72 → close $15.72 +0.00; MRVI×1 09:30 $7.65 → close $7.60 -0.05; HLP×6 09:30 $2.20 → close $2.21 +0.06; SATL×2 09:30 $6.00 → close $6.17 +0.34 | — |
+| 2026-09-28 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $75.48 | ▼ 09:30 equity $8,280.01 vs yday $8,634.86 (-354.85) | 09:30 open · cash $75.48 (unchanged overnight, no fees) · equity $8,280.01 vs prior close $8,634.86 (-354.85) · 15 name(s) re-marked at the open (per-name table). AIB×16 yday $1.42 → 09:30 $1.66 +3.84; BHVN×1 yday $13.19 → 09:30 $12.82 -0.37; BTBT×3 yday $1.79 → 09:30 $1.75 -0.13; BTQ×2 yday $2.79 → 09:30 $2.74 -0.10; DDD×5 yday $3.43 → 09:30 $3.50 +0.35; HELP×1 yday $12.59 → 09:30 $12.47 -0.12; HLP×6 yday $2.21 → 09:30 $2.22 +0.06; INDP×1083 yday $4.00 → 09:30 $3.78 -238.26; MRVI×1 yday $7.60 → 09:30 $7.49 -0.11; ORBS×5 yday $1.03 → 09:30 $1.15 +0.60; RANI×21 yday $0.75 → 09:30 $0.77 +0.44; SAIL×197 yday $20.64 → 09:30 $20.03 -120.17; SATL×2 yday $6.17 → 09:30 $6.17 +0.00; SHLS×2 yday $7.45 → 09:30 $7.37 -0.16; XE×1 yday $15.72 → 09:30 $15.00 -0.72 | — |
+| 2026-09-28 09:30 ET | **SELL** | `AIB` | 16 | $1.66 | $0.33 | $+2.58 | $101.71 | ▲ +2.58 after sell → book $8,279.67; vs 09:30 mark -0.34 | exit unpriced hold on first bar after 7 sess | join🟢 sector🟢 gen🔴 news🟡 digest🟢 judge🟢 ab🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-28 09:30 ET | **SELL** | `BHVN` | 1 | $12.82 | $0.15 | $-1.54 | $114.38 | ▼ -1.54 after sell → book $8,279.52; vs 09:30 mark -0.15 | exit unpriced hold on first bar after 6 sess | — |
+| 2026-09-28 09:30 ET | **SELL** | `BTBT` | 3 | $1.75 | $0.08 | $-0.39 | $119.53 | ▼ -0.39 after sell → book $8,279.44; vs 09:30 mark -0.08 | exit unpriced hold on first bar after 5 sess | — |
+| 2026-09-28 09:30 ET | **SELL** | `BTQ` | 2 | $2.74 | $0.08 | $-0.34 | $124.93 | ▼ -0.34 after sell → book $8,279.36; vs 09:30 mark -0.08 | exit unpriced hold on first bar after 4 sess | — |
+| 2026-09-28 09:30 ET | **SELL** | `DDD` | 5 | $3.50 | $0.21 | $-0.80 | $142.22 | ▼ -0.80 after sell → book $8,279.15; vs 09:30 mark -0.21 | exit unpriced hold on first bar after 6 sess | — |
+| 2026-09-28 09:30 ET | **SELL** | `HELP` | 1 | $12.47 | $0.15 | $-2.98 | $154.54 | ▼ -2.98 after sell → book $8,279.00; vs 09:30 mark -0.15 | exit unpriced hold on first bar after 6 sess | — |
+| 2026-09-28 09:30 ET | **SELL** | `INDP` | 1083 | $3.78 | $14.18 | $-190.60 | $4,234.10 | ▼ -190.60 after sell → book $8,264.82; vs 09:30 mark -14.18 | exit unpriced hold on first bar after 3 sess | — |
+| 2026-09-28 09:30 ET | **SELL** | `ORBS` | 5 | $1.15 | $0.09 | $+0.04 | $4,239.75 | ▲ +0.04 after sell → book $8,264.72; vs 09:30 mark -0.10 | exit unpriced hold on first bar after 5 sess | join🔴 sector🔴 gen🔴 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-28 09:30 ET | **SELL** | `RANI` | 21 | $0.77 | $0.24 | $-2.17 | $4,255.68 | ▼ -2.17 after sell → book $8,264.48; vs 09:30 mark -0.24 | exit unpriced hold on first bar after 6 sess | — |
+| 2026-09-28 09:30 ET | **SELL** | `SHLS` | 2 | $7.37 | $0.17 | $-0.87 | $4,270.25 | ▼ -0.87 after sell → book $8,264.31; vs 09:30 mark -0.17 | exit unpriced hold on first bar after 6 sess | — |
+| 2026-09-28 09:30 ET | **SELL** | `XE` | 1 | $15.00 | $0.17 | $-1.62 | $4,285.07 | ▼ -1.62 after sell → book $8,264.13; vs 09:30 mark -0.18 | exit unpriced hold on first bar after 6 sess | — |
+| 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $4,285.07 | ▲ close $8,371.43 vs 09:30 $8,280.01 (session +107.30) | 16:00 close · cash $4,285.07 · equity $8,371.43 vs 09:30 $8,280.01 (+91.42; session marks +107.30) · 4 name(s) marked open→close (per-name table). HLP×6 09:30 $2.22 → close $2.39 +1.02; MRVI×1 09:30 $7.49 → close $7.63 +0.14; SAIL×197 09:30 $20.03 → close $20.57 +106.38; SATL×2 09:30 $6.17 → close $6.05 -0.24 | — |
 
 ## Not taken
 

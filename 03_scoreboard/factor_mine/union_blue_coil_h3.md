@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-23.40%** ($7,660) · signal-only (no cash/fees) was -38.70%. Starts YES **1/30**. Fills 194 · skips 286 · realized $-1292.46.
+Cash book **-23.73%** ($7,627) · signal-only (no cash/fees) was -38.70%. Starts YES **1/30**. Fills 199 · skips 286 · realized $-1292.46.
 
 ## How this sleeve decides (like you are 10)
 
@@ -330,6 +330,13 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-25 09:30 ET | **BUY** | `SATL` | 153 | $6.00 | $2.45 | — | $999.48 | — | combo gate; gate blue=True,ret_5_max=10.0; list probable,ohlc_hot; 🔵; ret5=+7.8; leftover $919.64 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
 | 2026-09-25 09:30 ET | **BUY** | `PL` | 51 | $17.91 | $2.14 | — | $83.93 | — | combo gate; gate blue=True,ret_5_max=10.0; list probable; 🔵; ret5=+3.7; leftover $919.64 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🔴 vol🟢 buy🟡 |
 | 2026-09-25 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $83.93 | ▼ close $7,659.88 vs 09:30 $7,784.71 (session -104.15) | 16:00 close · cash $83.93 · equity $7,659.88 vs 09:30 $7,784.71 (-124.83; session marks -104.15) · 13 name(s) marked open→close (per-name table). ARHS×43 09:30 $9.47 → close $9.47 +0.00; CMPX×5 09:30 $1.14 → close $1.14 -0.00; GT×1 09:30 $5.07 → close $5.07 +0.00; INDP×1 09:30 $4.00 → close $4.00 +0.00; NMRA×8 09:30 $0.70 → close $0.70 +0.00; OMER×44 09:30 $20.61 → close $20.08 -23.32; MRVI×120 09:30 $7.65 → close $7.60 -6.00; WRBY×35 09:30 $26.27 → close $26.71 +15.40; TXG×10 09:30 $83.76 → close $85.71 +19.50; BRVE×39 09:30 $23.58 → close $20.62 -115.44; HLP×418 09:30 $2.20 → close $2.21 +4.18; SATL×153 09:30 $6.00 → close $6.17 +26.01; PL×51 09:30 $17.91 → close $17.43 -24.48 | — |
+| 2026-09-28 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $83.93 | ▼ 09:30 equity $7,589.31 vs yday $7,659.88 (-70.57) | 09:30 open · cash $83.93 (unchanged overnight, no fees) · equity $7,589.31 vs prior close $7,659.88 (-70.57) · 13 name(s) re-marked at the open (per-name table). ARHS×43 yday $9.47 → 09:30 $9.43 -1.72; BRVE×39 yday $20.62 → 09:30 $20.25 -14.43; CMPX×5 yday $1.13 → 09:30 $1.14 +0.03; GT×1 yday $5.07 → 09:30 $5.12 +0.05; HLP×418 yday $2.21 → 09:30 $2.22 +4.18; INDP×1 yday $4.00 → 09:30 $3.78 -0.22; MRVI×120 yday $7.60 → 09:30 $7.49 -13.20; NMRA×8 yday $0.70 → 09:30 $0.65 -0.44; OMER×44 yday $20.08 → 09:30 $19.83 -11.00; PL×51 yday $17.43 → 09:30 $17.17 -13.26; SATL×153 yday $6.17 → 09:30 $6.17 +0.00; TXG×10 yday $85.71 → 09:30 $86.14 +4.30; WRBY×35 yday $26.71 → 09:30 $26.00 -24.85 | — |
+| 2026-09-28 09:30 ET | **SELL** | `ARHS` | 43 | $9.43 | $2.14 | $+18.53 | $487.28 | ▲ +18.53 after sell → book $7,587.18; vs 09:30 mark -2.13 | exit unpriced hold on first bar after 4 sess | — |
+| 2026-09-28 09:30 ET | **SELL** | `CMPX` | 5 | $1.14 | $0.09 | $-0.57 | $492.89 | ▼ -0.57 after sell → book $7,587.08; vs 09:30 mark -0.10 | exit unpriced hold on first bar after 3 sess | — |
+| 2026-09-28 09:30 ET | **SELL** | `GT` | 1 | $5.12 | $0.07 | $-0.46 | $497.93 | ▼ -0.46 after sell → book $7,587.01; vs 09:30 mark -0.07 | exit unpriced hold on first bar after 3 sess | — |
+| 2026-09-28 09:30 ET | **SELL** | `INDP` | 1 | $3.78 | $0.06 | $-0.25 | $501.65 | ▼ -0.25 after sell → book $7,586.95; vs 09:30 mark -0.06 | exit unpriced hold on first bar after 3 sess | — |
+| 2026-09-28 09:30 ET | **SELL** | `NMRA` | 8 | $0.65 | $0.10 | $-1.14 | $506.74 | ▼ -1.14 after sell → book $7,586.85; vs 09:30 mark -0.10 | exit unpriced hold on first bar after 3 sess | — |
+| 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $506.74 | ▲ close $7,627.03 vs 09:30 $7,589.31 (session +40.18) | 16:00 close · cash $506.74 · equity $7,627.03 vs 09:30 $7,589.31 (+37.72; session marks +40.18) · 8 name(s) marked open→close (per-name table). BRVE×39 09:30 $20.25 → close $21.07 +31.98; HLP×418 09:30 $2.22 → close $2.39 +71.06; MRVI×120 09:30 $7.49 → close $7.63 +16.80; OMER×44 09:30 $19.83 → close $19.43 -17.60; PL×51 09:30 $17.17 → close $16.77 -20.40; SATL×153 09:30 $6.17 → close $6.05 -18.36; TXG×10 09:30 $86.14 → close $88.50 +23.60; WRBY×35 09:30 $26.00 → close $24.66 -46.90 | — |
 
 ## Not taken
 

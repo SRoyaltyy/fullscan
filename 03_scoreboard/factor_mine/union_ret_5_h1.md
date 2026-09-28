@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `ret_5` · size `leftover` · sell `list` · S-boost `none` · rank by ret_5
 
-Cash book **+11.44%** ($11,143) · signal-only (no cash/fees) was +36.33%. Starts YES **29/30**. Fills 254 · skips 100 · realized $+370.60.
+Cash book **+8.72%** ($10,872) · signal-only (no cash/fees) was +36.33%. Starts YES **29/30**. Fills 263 · skips 100 · realized $+370.60.
 
 ## How this sleeve decides (like you are 10)
 
@@ -387,6 +387,17 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-25 09:30 ET | **BUY** | `CYPH` | 263 | $4.00 | $3.39 | — | $1,131.54 | — | rank by ret_5; rank ret_5; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+32.9; leftover $1054.46 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-09-25 09:30 ET | **BUY** | `DNA` | 103 | $10.20 | $2.30 | — | $78.64 | — | rank by ret_5; rank ret_5; list yday_gainer,yday_mover; 🔵; ret5=+30.7; leftover $1054.46 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-09-25 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $78.64 | ▼ close $11,143.45 vs 09:30 $11,351.84 (session -190.68) | 16:00 close · cash $78.64 · equity $11,143.45 vs 09:30 $11,351.84 (-208.39; session marks -190.68) · 9 name(s) marked open→close (per-name table). GLND×473 09:30 $6.06 → close $5.54 -245.96; VICR×4 09:30 $276.06 → close $276.06 -0.00; TJGC×35 09:30 $29.76 → close $26.24 -123.20; SECZ×65 09:30 $16.21 → close $15.96 -16.25; USDE×67 09:30 $15.58 → close $17.25 +111.82; GRAL×8 09:30 $123.50 → close $126.89 +27.12; ZSQR×273 09:30 $3.86 → close $3.78 -21.84; CYPH×263 09:30 $4.00 → close $4.12 +30.25; DNA×103 09:30 $10.20 → close $10.66 +47.38 | — |
+| 2026-09-28 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $78.64 | ▼ 09:30 equity $10,898.57 vs yday $11,143.45 (-244.88) | 09:30 open · cash $78.64 (unchanged overnight, no fees) · equity $10,898.57 vs prior close $11,143.45 (-244.88) · 9 name(s) re-marked at the open (per-name table). CYPH×263 yday $4.12 → 09:30 $4.03 -23.01; DNA×103 yday $10.66 → 09:30 $10.38 -29.36; GLND×473 yday $5.54 → 09:30 $5.14 -190.15; GRAL×8 yday $126.89 → 09:30 $128.90 +16.08; SECZ×65 yday $15.96 → 09:30 $16.00 +2.60; TJGC×35 yday $26.24 → 09:30 $26.50 +9.10; USDE×67 yday $17.25 → 09:30 $16.85 -26.80; VICR×4 yday $276.06 → 09:30 $280.00 +15.76; ZSQR×273 yday $3.78 → 09:30 $3.71 -19.11 | — |
+| 2026-09-28 09:30 ET | **SELL** | `CYPH` | 263 | $4.03 | $3.45 | $+0.39 | $1,135.74 | ▲ +0.39 after sell → book $10,895.12; vs 09:30 mark -3.45 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-28 09:30 ET | **SELL** | `DNA` | 103 | $10.38 | $2.33 | $+13.40 | $2,202.04 | ▲ +13.40 after sell → book $10,892.79; vs 09:30 mark -2.33 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-28 09:30 ET | **SELL** | `GLND` | 473 | $5.14 | $6.20 | $+1140.87 | $4,626.11 | ▲ +1,140.87 after sell → book $10,886.59; vs 09:30 mark -6.20 | dropped from list after 3 sess (min 1) | — |
+| 2026-09-28 09:30 ET | **SELL** | `GRAL` | 8 | $128.90 | $2.03 | $+39.15 | $5,655.28 | ▲ +39.15 after sell → book $10,884.56; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-28 09:30 ET | **SELL** | `SECZ` | 65 | $16.00 | $2.21 | $-18.04 | $6,693.07 | ▼ -18.04 after sell → book $10,882.35; vs 09:30 mark -2.21 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-28 09:30 ET | **SELL** | `TJGC` | 35 | $26.50 | $2.12 | $-118.31 | $7,618.46 | ▼ -118.31 after sell → book $10,880.24; vs 09:30 mark -2.11 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-28 09:30 ET | **SELL** | `USDE` | 67 | $16.85 | $2.21 | $+80.61 | $8,745.20 | ▲ +80.61 after sell → book $10,878.03; vs 09:30 mark -2.21 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🔴 news🟡 digest🟢 judge🔴 ab🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-09-28 09:30 ET | **SELL** | `VICR` | 4 | $280.00 | $2.02 | $+49.98 | $9,863.18 | ▲ +49.98 after sell → book $10,876.01; vs 09:30 mark -2.02 | exit unpriced hold on first bar after 3 sess | — |
+| 2026-09-28 09:30 ET | **SELL** | `ZSQR` | 273 | $3.71 | $3.58 | $-48.05 | $10,872.43 | ▼ -48.05 after sell → book $10,872.43; vs 09:30 mark -3.58 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,872.43 | ▲ close $10,872.43 vs 09:30 $10,898.57 (session +0.00) | 16:00 close · cash $10,872.43 · no lots left · equity $10,872.43. | — |
 
 ## Not taken
 

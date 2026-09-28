@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `macd_hist` · size `leftover` · sell `list` · S-boost `none` · rank by macd_hist
 
-Cash book **+0.22%** ($10,022) · signal-only (no cash/fees) was +3.37%. Starts YES **20/30**. Fills 236 · skips 94 · realized $-657.32.
+Cash book **-3.50%** ($9,650) · signal-only (no cash/fees) was +3.37%. Starts YES **20/30**. Fills 246 · skips 94 · realized $-657.32.
 
 ## How this sleeve decides (like you are 10)
 
@@ -369,6 +369,18 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-25 09:30 ET | **BUY** | `GRAL` | 7 | $123.50 | $2.01 | — | $1,719.36 | — | rank by macd_hist; rank macd_hist; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+56.6; leftover $881.08 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-09-25 09:30 ET | **BUY** | `TWST` | 4 | $184.00 | $2.00 | — | $981.35 | — | rank by macd_hist; rank macd_hist; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+18.3; leftover $881.08 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-09-25 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $981.35 | ▼ close $10,021.69 vs 09:30 $10,068.90 (session -31.22) | 16:00 close · cash $981.35 · equity $10,021.69 vs 09:30 $10,068.90 (-47.21; session marks -31.22) · 11 name(s) marked open→close (per-name table). MDB×2 09:30 $421.40 → close $421.40 -0.00; VICR×4 09:30 $276.06 → close $276.06 -0.00; ZS×5 09:30 $214.64 → close $214.64 -0.00; AMD×1 09:30 $634.53 → close $630.63 -3.90; META×1 09:30 $768.85 → close $751.66 -17.19; CLS×2 09:30 $380.51 → close $365.44 -30.14; NTRA×2 09:30 $410.00 → close $412.56 +5.12; ILMN×3 09:30 $272.16 → close $270.00 -6.48; CDNS×2 09:30 $324.97 → close $326.13 +2.32; GRAL×7 09:30 $123.50 → close $126.89 +23.73; TWST×4 09:30 $184.00 → close $182.83 -4.68 | — |
+| 2026-09-28 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $981.35 | ▼ 09:30 equity $9,654.94 vs yday $10,021.69 (-366.75) | 09:30 open · cash $981.35 (unchanged overnight, no fees) · equity $9,654.94 vs prior close $10,021.69 (-366.75) · 11 name(s) re-marked at the open (per-name table). AMD×1 yday $630.63 → 09:30 $624.89 -5.74; CDNS×2 yday $326.13 → 09:30 $318.99 -14.28; CLS×2 yday $365.44 → 09:30 $363.93 -3.02; GRAL×7 yday $126.89 → 09:30 $128.90 +14.07; ILMN×3 yday $270.00 → 09:30 $265.95 -12.15; MDB×2 yday $421.40 → 09:30 $311.24 -220.33; META×1 yday $751.66 → 09:30 $750.42 -1.24; NTRA×2 yday $412.56 → 09:30 $408.94 -7.24; TWST×4 yday $182.83 → 09:30 $181.87 -3.84; VICR×4 yday $276.06 → 09:30 $280.00 +15.76; ZS×5 yday $214.64 → 09:30 $188.89 -128.75 | — |
+| 2026-09-28 09:30 ET | **SELL** | `AMD` | 1 | $624.89 | $2.01 | $-13.65 | $1,604.23 | ▼ -13.65 after sell → book $9,652.93; vs 09:30 mark -2.01 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-28 09:30 ET | **SELL** | `CLS` | 2 | $363.93 | $2.02 | $-37.17 | $2,330.08 | ▼ -37.17 after sell → book $9,650.91; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-28 09:30 ET | **SELL** | `GRAL` | 7 | $128.90 | $2.03 | $+33.76 | $3,230.35 | ▲ +33.76 after sell → book $9,648.88; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-28 09:30 ET | **SELL** | `ILMN` | 3 | $265.95 | $2.02 | $-22.65 | $4,026.18 | ▼ -22.65 after sell → book $9,646.86; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-28 09:30 ET | **SELL** | `MDB` | 2 | $311.24 | $2.02 | $-240.22 | $4,646.63 | ▼ -240.22 after sell → book $9,644.85; vs 09:30 mark -2.01 | exit unpriced hold on first bar after 3 sess | — |
+| 2026-09-28 09:30 ET | **SELL** | `META` | 1 | $750.42 | $2.01 | $-22.43 | $5,395.04 | ▼ -22.43 after sell → book $9,642.83; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-28 09:30 ET | **SELL** | `NTRA` | 2 | $408.94 | $2.02 | $-6.13 | $6,210.91 | ▼ -6.13 after sell → book $9,640.82; vs 09:30 mark -2.01 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-28 09:30 ET | **SELL** | `TWST` | 4 | $181.87 | $2.02 | $-12.54 | $6,936.37 | ▼ -12.54 after sell → book $9,638.80; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-28 09:30 ET | **SELL** | `VICR` | 4 | $280.00 | $2.02 | $+49.98 | $8,054.34 | ▲ +49.98 after sell → book $9,636.77; vs 09:30 mark -2.03 | exit unpriced hold on first bar after 3 sess | — |
+| 2026-09-28 09:30 ET | **SELL** | `ZS` | 5 | $188.89 | $2.02 | $-124.58 | $8,996.77 | ▼ -124.58 after sell → book $9,634.75; vs 09:30 mark -2.02 | exit unpriced hold on first bar after 3 sess | join🟢 sector🟢 gen🔴 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,996.77 | ▲ close $9,650.17 vs 09:30 $9,654.94 (session +15.42) | 16:00 close · cash $8,996.77 · equity $9,650.17 vs 09:30 $9,654.94 (-4.77; session marks +15.42) · 1 name(s) marked open→close (per-name table). CDNS×2 09:30 $318.99 → close $326.70 +15.42 | — |
 
 ## Not taken
 

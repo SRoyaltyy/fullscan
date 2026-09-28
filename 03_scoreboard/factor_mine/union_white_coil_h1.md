@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-18.94%** ($8,106) · signal-only (no cash/fees) was -4.35%. Starts YES **0/30**. Fills 158 · skips 0 · realized $-550.20.
+Cash book **-20.17%** ($7,983) · signal-only (no cash/fees) was -4.35%. Starts YES **0/30**. Fills 164 · skips 0 · realized $-550.20.
 
 ## How this sleeve decides (like you are 10)
 
@@ -50,7 +50,7 @@ Imagine a kid with $10,000 at the 09:30 school bell. They look at the mixed morn
 Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 09:30 packet + leftover cash + lots on hand decide the ticket. Same-day Change% is outcome only.
 
 - **Universe** `union` — candidate list at 09:30 (flatten wish-list, union, probable, yday gainer, or OHLC hot).
-- **Gate** `zero_red=True,ret_5_max=10.0,rvol_max=2.2` · **rank** `list order` · **top_n** 8.
+- **Gate** `ret_5_max=10.0,rvol_max=2.2,zero_red=True` · **rank** `list order` · **top_n** 8.
 - **Size** `leftover` splits leftover cash among *new* names only. Rank-weight / top-heavy still cannot invent money.
 - **Sell** `list` after min-hold **1**. We never sell a ticker we do not hold. Early 🚨 / last-red / news🔴 can still exit inside the floor.
 - **Entry:** Research universe (not the live flatten gate). Cash/share/fee rules still apply.
@@ -295,3 +295,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-25 09:30 ET | **BUY** | `SENS` | 132 | $10.28 | $2.39 | — | $1,446.31 | — | combo gate; gate zero_red=True,ret_5_max=10.0,rvol_max=2.2; list ohlc_hot; ⚪; ret5=+9.7; leftover $1366.74 | join🟡 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-09-25 09:30 ET | **BUY** | `RGEN` | 7 | $189.92 | $2.01 | — | $114.86 | — | combo gate; gate zero_red=True,ret_5_max=10.0,rvol_max=2.2; list ohlc_hot; 🔵; ⚪; ret5=+7.0; leftover $1366.74 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-09-25 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $114.86 | ▼ close $8,105.98 vs 09:30 $8,200.46 (session -81.31) | 16:00 close · cash $114.86 · equity $8,105.98 vs 09:30 $8,200.46 (-94.48; session marks -81.31) · 6 name(s) marked open→close (per-name table). MRVI×178 09:30 $7.65 → close $7.60 -8.90; TXG×16 09:30 $83.76 → close $85.71 +31.20; TEM×16 09:30 $83.69 → close $85.01 +21.04; SAIL×61 09:30 $22.05 → close $20.64 -86.01; SENS×132 09:30 $10.28 → close $10.00 -36.96; RGEN×7 09:30 $189.92 → close $189.68 -1.68 | — |
+| 2026-09-28 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $114.86 | ▼ 09:30 equity $7,996.22 vs yday $8,105.98 (-109.76) | 09:30 open · cash $114.86 (unchanged overnight, no fees) · equity $7,996.22 vs prior close $8,105.98 (-109.76) · 6 name(s) re-marked at the open (per-name table). MRVI×178 yday $7.60 → 09:30 $7.49 -19.58; RGEN×7 yday $189.68 → 09:30 $187.25 -17.01; SAIL×61 yday $20.64 → 09:30 $20.03 -37.21; SENS×132 yday $10.00 → 09:30 $9.85 -19.80; TEM×16 yday $85.01 → 09:30 $83.57 -23.04; TXG×16 yday $85.71 → 09:30 $86.14 +6.88 | — |
+| 2026-09-28 09:30 ET | **SELL** | `MRVI` | 178 | $7.49 | $2.56 | $-33.57 | $1,445.52 | ▼ -33.57 after sell → book $7,993.66; vs 09:30 mark -2.56 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-28 09:30 ET | **SELL** | `RGEN` | 7 | $187.25 | $2.03 | $-22.73 | $2,754.23 | ▼ -22.73 after sell → book $7,991.62; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-28 09:30 ET | **SELL** | `SAIL` | 61 | $20.03 | $2.19 | $-127.59 | $3,973.87 | ▼ -127.59 after sell → book $7,989.43; vs 09:30 mark -2.19 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-28 09:30 ET | **SELL** | `SENS` | 132 | $9.85 | $2.42 | $-61.56 | $5,271.65 | ▼ -61.56 after sell → book $7,987.01; vs 09:30 mark -2.42 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-28 09:30 ET | **SELL** | `TEM` | 16 | $83.57 | $2.06 | $-6.10 | $6,606.71 | ▼ -6.10 after sell → book $7,984.95; vs 09:30 mark -2.06 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 digest🟢 judge🟢 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-09-28 09:30 ET | **SELL** | `TXG` | 16 | $86.14 | $2.06 | $+33.98 | $7,982.90 | ▲ +33.98 after sell → book $7,982.90; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,982.90 | ▲ close $7,982.90 vs 09:30 $7,996.22 (session +0.00) | 16:00 close · cash $7,982.90 · no lots left · equity $7,982.90. | — |

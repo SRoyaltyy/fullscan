@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-18.05%** ($8,194) · signal-only (no cash/fees) was +139.18%. Starts YES **0/30**. Fills 94 · skips 133 · realized $-1334.78.
+Cash book **-8.24%** ($9,175) · signal-only (no cash/fees) was +139.18%. Starts YES **0/30**. Fills 96 · skips 133 · realized $-1334.78.
 
 ## How this sleeve decides (like you are 10)
 
@@ -230,6 +230,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-25 09:30 ET | **BUY** | `ZSQR` | 1056 | $3.86 | $13.62 | — | $4,064.02 | — | combo gate; gate news=good,vol=good; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+46.1; leftover $4076.90 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-09-25 09:30 ET | **BUY** | `SECZ` | 250 | $16.21 | $3.23 | — | $8.30 | — | combo gate; gate news=good,vol=good; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+85.1; leftover $4076.90 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 judge🟢 ab🟡 heat🟢 vol🟢 buy🟡 |
 | 2026-09-25 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8.30 | ▼ close $8,194.46 vs 09:30 $8,360.31 (session -146.98) | 16:00 close · cash $8.30 · equity $8,194.46 vs 09:30 $8,360.31 (-165.85; session marks -146.98) · 4 name(s) marked open→close (per-name table). CMPX×4 09:30 $1.14 → close $1.14 -0.00; IVVD×219 09:30 $0.91 → close $0.91 -0.00; ZSQR×1056 09:30 $3.86 → close $3.78 -84.48; SECZ×250 09:30 $16.21 → close $15.96 -62.50 | — |
+| 2026-09-28 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8.30 | ▼ 09:30 equity $8,144.39 vs yday $8,194.46 (-50.07) | 09:30 open · cash $8.30 (unchanged overnight, no fees) · equity $8,144.39 vs prior close $8,194.46 (-50.07) · 4 name(s) re-marked at the open (per-name table). CMPX×4 yday $1.13 → 09:30 $1.14 +0.02; IVVD×219 yday $0.91 → 09:30 $0.98 +13.82; SECZ×250 yday $15.96 → 09:30 $16.00 +10.00; ZSQR×1056 yday $3.78 → 09:30 $3.71 -73.92 | — |
+| 2026-09-28 09:30 ET | **SELL** | `CMPX` | 4 | $1.14 | $0.08 | $-0.46 | $12.78 | ▼ -0.46 after sell → book $8,144.31; vs 09:30 mark -0.08 | exit unpriced hold on first bar after 3 sess | — |
+| 2026-09-28 09:30 ET | **SELL** | `IVVD` | 219 | $0.98 | $2.84 | $-13.09 | $223.71 | ▼ -13.09 after sell → book $8,141.47; vs 09:30 mark -2.84 | exit unpriced hold on first bar after 4 sess | — |
+| 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $223.71 | ▲ close $9,175.45 vs 09:30 $8,144.39 (session +1,033.98) | 16:00 close · cash $223.71 · equity $9,175.45 vs 09:30 $8,144.39 (+1031.06; session marks +1033.98) · 2 name(s) marked open→close (per-name table). SECZ×250 09:30 $16.00 → close $16.63 +157.50; ZSQR×1056 09:30 $3.71 → close $4.54 +876.48 | — |
 
 ## Not taken
 

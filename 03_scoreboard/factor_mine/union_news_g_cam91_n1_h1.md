@@ -50,7 +50,7 @@ Imagine a kid with $10,000 at the 09:30 school bell. They look at the mixed morn
 Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 09:30 packet + leftover cash + lots on hand decide the ticket. Same-day Change% is outcome only.
 
 - **Universe** `union` — candidate list at 09:30 (flatten wish-list, union, probable, yday gainer, or OHLC hot).
-- **Gate** `news=good,n_pos_min=9,cam_bad_max=1` · **rank** `cond` · **top_n** 1.
+- **Gate** `cam_bad_max=1,n_pos_min=9,news=good` · **rank** `cond` · **top_n** 1.
 - **Size** `leftover` splits leftover cash among *new* names only. Rank-weight / top-heavy still cannot invent money.
 - **Sell** `list` after min-hold **1**. We never sell a ticker we do not hold. Early 🚨 / last-red / news🔴 can still exit inside the floor.
 - **Entry:** Research universe (not the live flatten gate). Cash/share/fee rules still apply.
@@ -143,6 +143,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-24 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $11,232.62 | ▲ close $11,232.62 vs 09:30 $11,232.62 (session +0.00) | — | — |
 | 2026-09-25 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,788.92 | ▲ 09:30 equity $7,788.92 vs yday $7,788.92 (+0.00) | 09:30 open · cash $7,788.92 · no holdings · equity $7,788.92 vs prior close $7,788.92 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-09-25 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,788.92 | ▲ close $7,788.92 vs 09:30 $7,788.92 (session +0.00) | 16:00 close · cash $7,788.92 · no lots left · equity $7,788.92. | — |
+| 2026-09-28 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,788.92 | ▲ 09:30 equity $7,788.92 vs yday $7,788.92 (+0.00) | 09:30 open · cash $7,788.92 · no holdings · equity $7,788.92 vs prior close $7,788.92 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,788.92 | ▲ close $7,788.92 vs 09:30 $7,788.92 (session +0.00) | 16:00 close · cash $7,788.92 · no lots left · equity $7,788.92. | — |
 
 ## Not taken
 

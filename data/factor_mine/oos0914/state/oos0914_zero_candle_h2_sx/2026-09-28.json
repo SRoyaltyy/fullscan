@@ -1,0 +1,81 @@
+{
+  "buys": [],
+  "cash": 117.85,
+  "date": "2026-09-28",
+  "equity": 10212.06,
+  "fees": 0,
+  "fills": [],
+  "holdings": [
+    "A",
+    "NTRA",
+    "RSKD",
+    "SENS"
+  ],
+  "mean": -0.34,
+  "n_trades_today": 0,
+  "recipe": "oos0914_zero_candle_h2_sx",
+  "sells": [],
+  "state": {
+    "after": "2026-09-28",
+    "cash": 117.85,
+    "pos": {
+      "A": {
+        "close_px": 175.2100067138672,
+        "cost": 2581.7349999999997,
+        "entry_date": "2026-09-25",
+        "entry_px": 171.98,
+        "fee_in": 2.035,
+        "last_px": 170.0,
+        "min_hold": 2,
+        "notional": 2579.7,
+        "peak_px": 171.98,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate zero_red=True,last_green=True; rank candle_score; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+10.6; leftover $2581.03",
+        "shares": 15,
+        "ticker": "A"
+      },
+      "NTRA": {
+        "close_px": 411.7699890136719,
+        "cost": 2462.008,
+        "entry_date": "2026-09-25",
+        "entry_px": 410.0,
+        "fee_in": 2.008,
+        "last_px": 408.94000244140625,
+        "min_hold": 2,
+        "notional": 2460.0,
+        "peak_px": 410.0,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate zero_red=True,last_green=True; rank candle_score; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+11.6; leftover $2581.03",
+        "shares": 6,
+        "ticker": "NTRA"
+      },
+      "RSKD": {
+        "close_px": 7.699999809265137,
+        "cost": 2579.0312,
+        "entry_date": "2026-09-25",
+        "entry_px": 7.85,
+        "fee_in": 4.2312,
+        "last_px": 7.71999979019165,
+        "min_hold": 2,
+        "notional": 2574.7999999999997,
+        "peak_px": 7.85,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate zero_red=True,last_green=True; rank candle_score; list yday_gainer; \ud83d\udd35; \u26aa; ret5=+25.4; leftover $2581.03",
+        "shares": 328,
+        "ticker": "RSKD"
+      },
+      "SENS": {
+        "close_px": 9.84000015258789,
+        "cost": 2583.5179,
+        "entry_date": "2026-09-25",
+        "entry_px": 10.28,
+        "fee_in": 3.2379,
+        "last_px": 9.850000381469727,
+        "min_hold": 2,
+        "notional": 2580.2799999999997,
+        "peak_px": 10.28,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate zero_red=True,last_green=True; rank candle_score; list ohlc_hot; \u26aa; ret5=+9.7; leftover $2581.03",
+        "shares": 251,
+        "ticker": "SENS"
+      }
+    },
+    "yday_equity": 10212.06
+  }
+}

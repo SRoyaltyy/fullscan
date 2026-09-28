@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared union_e_fresh_h3/union_e_fresh_h1 w=0.3,0.7 net=priority
 
-Cash book **-8.40%** ($9,160) · signal-only (no cash/fees) was —. Starts YES **29/30**. Fills 117 · skips 250 · realized $+4004.41.
+Cash book **-9.36%** ($9,064) · signal-only (no cash/fees) was —. Starts YES **29/30**. Fills 121 · skips 250 · realized $+4004.41.
 
 ## How this sleeve decides (like you are 10)
 
@@ -55,7 +55,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $105.05.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $9,064.35.
 
 ## Every lot, every session (09:30 mark and same-day change)
 
@@ -252,6 +252,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-24 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $168.41 | ▲ close $14,010.49 vs 09:30 $13,802.53 (session +207.96) | — | — |
 | 2026-09-25 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $105.05 | ▲ 09:30 equity $9,160.41 vs yday $9,160.41 (+0.00) | 09:30 open · cash $105.05 (unchanged overnight, no fees) · equity $9,160.41 vs prior close $9,160.41 (+0.00) | — |
 | 2026-09-25 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $105.05 | ▲ close $9,160.41 vs 09:30 $9,160.41 (session +0.00) | 16:00 close · cash $105.05 · equity $9,160.41 vs 09:30 $9,160.41 (+0.00; session marks +0.00) · 4 name(s) marked open→close (per-name table). ABVX×23 09:30 $94.87 → close $94.87 +0.00; ANAB×43 09:30 $51.70 → close $51.70 +0.00; MLKN×116 09:30 $19.91 → close $19.91 -0.00; THO×33 09:30 $70.93 → close $70.93 +0.00 | — |
+| 2026-09-28 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $105.05 | ▼ 09:30 equity $9,073.08 vs yday $9,160.41 (-87.33) | 09:30 open · cash $105.05 (unchanged overnight, no fees) · equity $9,073.08 vs prior close $9,160.41 (-87.33) | — |
+| 2026-09-28 09:30 ET | **SELL** | `ABVX` | 23 | $91.50 | $2.09 | $-262.66 | $2,207.46 | ▼ -262.66 after sell → book $9,070.99; vs 09:30 mark -2.09 | union_e_fresh_h3: dropped from list after 4 sess (min 3) | — |
+| 2026-09-28 09:30 ET | **SELL** | `ANAB` | 43 | $51.00 | $2.15 | $-179.28 | $4,398.32 | ▼ -179.28 after sell → book $9,068.85; vs 09:30 mark -2.14 | union_e_fresh_h3: dropped from list after 4 sess (min 3) | — |
+| 2026-09-28 09:30 ET | **SELL** | `MLKN` | 116 | $19.88 | $2.38 | $-95.19 | $6,702.02 | ▼ -95.19 after sell → book $9,066.47; vs 09:30 mark -2.38 | union_e_fresh_h3: dropped from list after 4 sess (min 3) | — |
+| 2026-09-28 09:30 ET | **SELL** | `THO` | 33 | $71.65 | $2.12 | $-33.25 | $9,064.35 | ▼ -33.25 after sell → book $9,064.35; vs 09:30 mark -2.12 | union_e_fresh_h3: dropped from list after 4 sess (min 3) | — |
+| 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,064.35 | ▲ close $9,064.35 vs 09:30 $9,073.08 (session +0.00) | 16:00 close · cash $9,064.35 · no lots left · equity $9,064.35. | — |
 
 ## Not taken
 

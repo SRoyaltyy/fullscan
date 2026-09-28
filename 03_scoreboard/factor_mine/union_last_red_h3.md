@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ last_red, no 🚨
 
-Cash book **-28.76%** ($7,124) · signal-only (no cash/fees) was +0.15%. Starts YES **10/30**. Fills 178 · skips 295 · realized $+93.52.
+Cash book **-26.73%** ($7,327) · signal-only (no cash/fees) was +0.15%. Starts YES **10/30**. Fills 185 · skips 295 · realized $+93.52.
 
 ## How this sleeve decides (like you are 10)
 
@@ -312,6 +312,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-25 09:30 ET | **BUY** | `SGMT` | 88 | $9.11 | $2.25 | — | $1,612.52 | — | union ∩ last_red, no 🚨; gate last_red=True; list yday_mover; 🔵; ⚪; ret5=-18.4; leftover $802.14 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-09-25 09:30 ET | **BUY** | `SMWB` | 106 | $7.50 | $2.31 | — | $815.21 | — | union ∩ last_red, no 🚨; gate last_red=True; list yday_mover; 🔵; ret5=-9.7; leftover $802.14 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-09-25 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $815.21 | ▼ close $7,123.58 vs 09:30 $7,343.81 (session -197.72) | 16:00 close · cash $815.21 · equity $7,123.58 vs 09:30 $7,343.81 (-220.23; session marks -197.72) · 14 name(s) marked open→close (per-name table). DEFT×223 09:30 $0.53 → close $0.53 +0.00; DLO×9 09:30 $13.88 → close $13.88 +0.00; FWDI×16 09:30 $8.35 → close $8.35 +0.00; INDP×42 09:30 $4.00 → close $4.00 +0.00; MX×41 09:30 $3.18 → close $3.18 +0.00; PACS×3 09:30 $41.46 → close $41.46 -0.00; UPXI×107 09:30 $1.17 → close $1.17 -0.00; OMER×38 09:30 $20.61 → close $20.08 -20.14; NEOV×335 09:30 $2.39 → close $2.19 -67.00; SFIX×364 09:30 $2.20 → close $2.15 -16.38; LRMR×241 09:30 $3.32 → close $3.08 -59.04; ACAD×36 09:30 $22.21 → close $20.68 -55.08; SGMT×88 09:30 $9.11 → close $9.24 +11.44; SMWB×106 09:30 $7.50 → close $7.58 +8.48 | — |
+| 2026-09-28 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $815.21 | ▲ 09:30 equity $7,130.02 vs yday $7,123.58 (+6.44) | 09:30 open · cash $815.21 (unchanged overnight, no fees) · equity $7,130.02 vs prior close $7,123.58 (+6.44) · 14 name(s) re-marked at the open (per-name table). ACAD×36 yday $20.68 → 09:30 $20.53 -5.40; DEFT×223 yday $0.53 → 09:30 $0.51 -5.84; DLO×9 yday $13.88 → 09:30 $13.91 +0.27; FWDI×16 yday $8.35 → 09:30 $8.31 -0.64; INDP×42 yday $4.00 → 09:30 $3.78 -9.24; LRMR×241 yday $3.08 → 09:30 $3.23 +37.55; MX×41 yday $3.18 → 09:30 $3.89 +29.11; NEOV×335 yday $2.19 → 09:30 $2.20 +3.35; OMER×38 yday $20.08 → 09:30 $19.83 -9.50; PACS×3 yday $41.46 → 09:30 $41.27 -0.57; SFIX×364 yday $2.15 → 09:30 $2.12 -12.01; SGMT×88 yday $9.24 → 09:30 $9.15 -7.92; SMWB×106 yday $7.58 → 09:30 $7.45 -13.78; UPXI×107 yday $1.17 → 09:30 $1.18 +1.07 | — |
+| 2026-09-28 09:30 ET | **SELL** | `DEFT` | 223 | $0.51 | $1.84 | $-22.61 | $926.16 | ▼ -22.61 after sell → book $7,128.18; vs 09:30 mark -1.84 | exit unpriced hold on first bar after 4 sess | — |
+| 2026-09-28 09:30 ET | **SELL** | `DLO` | 9 | $13.91 | $1.30 | $-7.94 | $1,050.05 | ▼ -7.94 after sell → book $7,126.88; vs 09:30 mark -1.30 | exit unpriced hold on first bar after 4 sess | — |
+| 2026-09-28 09:30 ET | **SELL** | `FWDI` | 16 | $8.31 | $1.40 | $-0.51 | $1,181.61 | ▼ -0.51 after sell → book $7,125.48; vs 09:30 mark -1.40 | exit unpriced hold on first bar after 4 sess | — |
+| 2026-09-28 09:30 ET | **SELL** | `INDP` | 42 | $3.78 | $1.73 | $+25.40 | $1,338.64 | ▲ +25.40 after sell → book $7,123.75; vs 09:30 mark -1.73 | exit unpriced hold on first bar after 4 sess | — |
+| 2026-09-28 09:30 ET | **SELL** | `MX` | 41 | $3.89 | $1.74 | $+25.95 | $1,496.39 | ▲ +25.95 after sell → book $7,122.01; vs 09:30 mark -1.74 | exit unpriced hold on first bar after 4 sess | — |
+| 2026-09-28 09:30 ET | **SELL** | `PACS` | 3 | $41.27 | $1.27 | $-4.51 | $1,618.93 | ▼ -4.51 after sell → book $7,120.75; vs 09:30 mark -1.26 | exit unpriced hold on first bar after 4 sess | — |
+| 2026-09-28 09:30 ET | **SELL** | `UPXI` | 107 | $1.18 | $1.61 | $-8.60 | $1,743.58 | ▼ -8.60 after sell → book $7,119.13; vs 09:30 mark -1.62 | exit unpriced hold on first bar after 4 sess | — |
+| 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1,743.58 | ▲ close $7,327.11 vs 09:30 $7,130.02 (session +207.98) | 16:00 close · cash $1,743.58 · equity $7,327.11 vs 09:30 $7,130.02 (+197.09; session marks +207.98) · 7 name(s) marked open→close (per-name table). ACAD×36 09:30 $20.53 → close $20.53 +0.00; LRMR×241 09:30 $3.23 → close $3.17 -14.65; NEOV×335 09:30 $2.20 → close $2.28 +26.80; OMER×38 09:30 $19.83 → close $19.43 -15.20; SFIX×364 09:30 $2.12 → close $2.47 +126.67; SGMT×88 09:30 $9.15 → close $9.94 +69.52; SMWB×106 09:30 $7.45 → close $7.59 +14.84 | — |
 
 ## Not taken
 

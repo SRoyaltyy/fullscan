@@ -6,7 +6,7 @@ Buys the flatten **wish-list** even on io/HOLD mornings — live `flatten_robust
 
 Side **long** · universe `flatten` · top 8 · rank `list` · size `topheavy` · sell `list` · S-boost `none` · 40% to #1, rest split
 
-Cash book **-21.83%** ($7,817) · signal-only (no cash/fees) was -10.41%. Starts YES **2/30**. Fills 138 · skips 214 · realized $-900.04.
+Cash book **-23.16%** ($7,684) · signal-only (no cash/fees) was -10.41%. Starts YES **2/30**. Fills 143 · skips 214 · realized $-900.04.
 
 ## How this sleeve decides (like you are 10)
 
@@ -268,6 +268,13 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-25 09:30 ET | **BUY** | `BLFS` | 30 | $38.51 | $2.08 | — | $1,846.31 | — | 40% to #1, rest split; list flatten; wish-list (live io HOLD — not a ticket); ret5=+4.7; leftover $1159.39 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
 | 2026-09-25 09:30 ET | **BUY** | `MRVI` | 151 | $7.65 | $2.44 | — | $688.72 | — | 40% to #1, rest split; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ⚪; ret5=+5.2; leftover $1159.39 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-09-25 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $688.72 | ▼ close $7,817.44 vs 09:30 $7,928.06 (session -99.92) | 16:00 close · cash $688.72 · equity $7,817.44 vs 09:30 $7,928.06 (-110.62; session marks -99.92) · 10 name(s) marked open→close (per-name table). ADMA×1 09:30 $9.52 → close $9.52 +0.00; DLO×2 09:30 $13.88 → close $13.88 +0.00; PACS×3 09:30 $41.46 → close $41.46 -0.00; PGEN×1 09:30 $7.70 → close $7.70 -0.00; TDC×1 09:30 $29.46 → close $29.46 -0.00; REGN×3 09:30 $803.87 → close $788.04 -47.49; HALO×10 09:30 $115.36 → close $113.90 -14.60; OMER×56 09:30 $20.61 → close $20.08 -29.68; BLFS×30 09:30 $38.51 → close $38.49 -0.60; MRVI×151 09:30 $7.65 → close $7.60 -7.55 | — |
+| 2026-09-28 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $688.72 | ▼ 09:30 equity $7,719.96 vs yday $7,817.44 (-97.48) | 09:30 open · cash $688.72 (unchanged overnight, no fees) · equity $7,719.96 vs prior close $7,817.44 (-97.48) · 10 name(s) re-marked at the open (per-name table). ADMA×1 yday $9.52 → 09:30 $9.38 -0.14; BLFS×30 yday $38.49 → 09:30 $38.13 -10.80; DLO×2 yday $13.88 → 09:30 $13.91 +0.06; HALO×10 yday $113.90 → 09:30 $113.34 -5.60; MRVI×151 yday $7.60 → 09:30 $7.49 -16.61; OMER×56 yday $20.08 → 09:30 $19.83 -14.00; PACS×3 yday $41.46 → 09:30 $41.27 -0.57; PGEN×1 yday $7.70 → 09:30 $7.61 -0.09; REGN×3 yday $788.04 → 09:30 $771.84 -48.61; TDC×1 yday $29.46 → 09:30 $28.34 -1.12 | — |
+| 2026-09-28 09:30 ET | **SELL** | `ADMA` | 1 | $9.38 | $0.12 | $-0.65 | $697.98 | ▼ -0.65 after sell → book $7,719.84; vs 09:30 mark -0.12 | exit unpriced hold on first bar after 3 sess | — |
+| 2026-09-28 09:30 ET | **SELL** | `DLO` | 2 | $13.91 | $0.30 | $-1.78 | $725.50 | ▼ -1.78 after sell → book $7,719.54; vs 09:30 mark -0.30 | exit unpriced hold on first bar after 4 sess | — |
+| 2026-09-28 09:30 ET | **SELL** | `PACS` | 3 | $41.27 | $1.27 | $-4.51 | $848.04 | ▼ -4.51 after sell → book $7,718.27; vs 09:30 mark -1.27 | exit unpriced hold on first bar after 4 sess | — |
+| 2026-09-28 09:30 ET | **SELL** | `PGEN` | 1 | $7.61 | $0.10 | $-0.52 | $855.55 | ▼ -0.52 after sell → book $7,718.17; vs 09:30 mark -0.10 | exit unpriced hold on first bar after 3 sess | — |
+| 2026-09-28 09:30 ET | **SELL** | `TDC` | 1 | $28.34 | $0.31 | $-2.05 | $883.59 | ▼ -2.05 after sell → book $7,717.86; vs 09:30 mark -0.31 | exit unpriced hold on first bar after 4 sess | — |
+| 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $883.59 | ▼ close $7,683.95 vs 09:30 $7,719.96 (session -33.92) | 16:00 close · cash $883.59 · equity $7,683.95 vs 09:30 $7,719.96 (-36.01; session marks -33.92) · 5 name(s) marked open→close (per-name table). BLFS×30 09:30 $38.13 → close $39.15 +30.60; HALO×10 09:30 $113.34 → close $112.89 -4.50; MRVI×151 09:30 $7.49 → close $7.63 +21.14; OMER×56 09:30 $19.83 → close $19.43 -22.40; REGN×3 09:30 $771.84 → close $752.25 -58.76 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `ohlc_hot` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · baseline list, no extra gate
 
-Cash book **-10.07%** ($8,993) · signal-only (no cash/fees) was +107.52%. Starts YES **4/30**. Fills 188 · skips 271 · realized $-671.83.
+Cash book **-8.95%** ($9,105) · signal-only (no cash/fees) was +107.52%. Starts YES **4/30**. Fills 195 · skips 271 · realized $-671.83.
 
 ## How this sleeve decides (like you are 10)
 
@@ -318,6 +318,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-25 09:30 ET | **BUY** | `PACB` | 687 | $1.57 | $8.86 | — | $1,248.96 | — | baseline list, no extra gate; list yday_gainer,yday_mover,ohlc_hot; 🔵; ⚪; ret5=+14.5; leftover $1080.08 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-09-25 09:30 ET | **BUY** | `P` | 8 | $122.88 | $2.01 | — | $263.91 | — | baseline list, no extra gate; list yday_gainer,ohlc_hot; 🔵; ret5=+17.2; leftover $1080.08 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 heat🔴 vol🟢 buy🟡 |
 | 2026-09-25 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $263.91 | ▲ close $8,992.85 vs 09:30 $8,828.81 (session +191.98) | 16:00 close · cash $263.91 · equity $8,992.85 vs 09:30 $8,828.81 (+164.04; session marks +191.98) · 15 name(s) marked open→close (per-name table). AMRX×1 09:30 $19.80 → close $19.80 +0.00; FSLY×1 09:30 $26.68 → close $26.68 +0.00; GCTS×16 09:30 $2.24 → close $2.24 +0.00; GRPN×1 09:30 $20.89 → close $20.89 -0.00; INDP×11 09:30 $4.00 → close $4.00 +0.00; VERI×10 09:30 $1.33 → close $1.33 +0.00; VNET×4 09:30 $6.92 → close $6.92 +0.00; WRBY×41 09:30 $26.27 → close $26.71 +18.04; TXG×12 09:30 $83.76 → close $85.71 +23.40; HLP×490 09:30 $2.20 → close $2.21 +4.90; SATL×180 09:30 $6.00 → close $6.17 +30.60; TEM×12 09:30 $83.69 → close $85.01 +15.78; CDNA×17 09:30 $61.33 → close $63.68 +39.95; PACB×687 09:30 $1.57 → close $1.62 +34.35; P×8 09:30 $122.88 → close $126.00 +24.96 | — |
+| 2026-09-28 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $263.91 | ▼ 09:30 equity $8,900.61 vs yday $8,992.85 (-92.24) | 09:30 open · cash $263.91 (unchanged overnight, no fees) · equity $8,900.61 vs prior close $8,992.85 (-92.24) · 15 name(s) re-marked at the open (per-name table). AMRX×1 yday $19.81 → 09:30 $19.55 -0.26; CDNA×17 yday $63.68 → 09:30 $62.30 -23.46; FSLY×1 yday $26.68 → 09:30 $24.45 -2.23; GCTS×16 yday $2.24 → 09:30 $2.18 -0.96; GRPN×1 yday $20.89 → 09:30 $21.00 +0.11; HLP×490 yday $2.21 → 09:30 $2.22 +4.90; INDP×11 yday $4.00 → 09:30 $3.78 -2.42; P×8 yday $126.00 → 09:30 $124.60 -11.20; PACB×687 yday $1.62 → 09:30 $1.60 -13.74; SATL×180 yday $6.17 → 09:30 $6.17 +0.00; TEM×12 yday $85.01 → 09:30 $83.57 -17.28; TXG×12 yday $85.71 → 09:30 $86.14 +5.16; VERI×10 yday $1.33 → 09:30 $1.29 -0.40; VNET×4 yday $6.92 → 09:30 $6.58 -1.36; WRBY×41 yday $26.71 → 09:30 $26.00 -29.11 | — |
+| 2026-09-28 09:30 ET | **SELL** | `AMRX` | 1 | $19.55 | $0.22 | $-0.87 | $283.24 | ▼ -0.87 after sell → book $8,900.39; vs 09:30 mark -0.22 | exit unpriced hold on first bar after 4 sess | — |
+| 2026-09-28 09:30 ET | **SELL** | `FSLY` | 1 | $24.45 | $0.27 | $-4.12 | $307.42 | ▼ -4.12 after sell → book $8,900.12; vs 09:30 mark -0.27 | exit unpriced hold on first bar after 4 sess | — |
+| 2026-09-28 09:30 ET | **SELL** | `GCTS` | 16 | $2.18 | $0.42 | $-0.49 | $341.89 | ▼ -0.49 after sell → book $8,899.71; vs 09:30 mark -0.41 | exit unpriced hold on first bar after 4 sess | — |
+| 2026-09-28 09:30 ET | **SELL** | `GRPN` | 1 | $21.00 | $0.23 | $-1.40 | $362.65 | ▼ -1.40 after sell → book $8,899.47; vs 09:30 mark -0.24 | exit unpriced hold on first bar after 4 sess | — |
+| 2026-09-28 09:30 ET | **SELL** | `INDP` | 11 | $3.78 | $0.47 | $+6.64 | $403.77 | ▲ +6.64 after sell → book $8,899.01; vs 09:30 mark -0.46 | exit unpriced hold on first bar after 4 sess | — |
+| 2026-09-28 09:30 ET | **SELL** | `VERI` | 10 | $1.29 | $0.18 | $-0.44 | $416.49 | ▼ -0.44 after sell → book $8,898.83; vs 09:30 mark -0.18 | exit unpriced hold on first bar after 3 sess | — |
+| 2026-09-28 09:30 ET | **SELL** | `VNET` | 4 | $6.58 | $0.30 | $-2.99 | $442.51 | ▼ -2.99 after sell → book $8,898.53; vs 09:30 mark -0.30 | exit unpriced hold on first bar after 4 sess | — |
+| 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $442.51 | ▲ close $9,104.80 vs 09:30 $8,900.61 (session +206.27) | 16:00 close · cash $442.51 · equity $9,104.80 vs 09:30 $8,900.61 (+204.19; session marks +206.27) · 8 name(s) marked open→close (per-name table). CDNA×17 09:30 $62.30 → close $64.60 +39.10; HLP×490 09:30 $2.22 → close $2.39 +83.30; P×8 09:30 $124.60 → close $129.40 +38.40; PACB×687 09:30 $1.60 → close $1.71 +75.57; SATL×180 09:30 $6.17 → close $6.05 -21.60; TEM×12 09:30 $83.57 → close $85.08 +18.12; TXG×12 09:30 $86.14 → close $88.50 +28.32; WRBY×41 09:30 $26.00 → close $24.66 -54.94 | — |
 
 ## Not taken
 

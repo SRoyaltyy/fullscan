@@ -6,7 +6,7 @@ Buys the flatten **wish-list** even on io/HOLD mornings — live `flatten_robust
 
 Side **long** · universe `flatten` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · flatten wish-list ∩ vol🟢
 
-Cash book **-29.32%** ($7,068) · signal-only (no cash/fees) was -19.12%. Starts YES **6/30**. Fills 58 · skips 71 · realized $-2440.55.
+Cash book **-29.95%** ($7,005) · signal-only (no cash/fees) was -19.12%. Starts YES **6/30**. Fills 59 · skips 71 · realized $-2440.55.
 
 ## How this sleeve decides (like you are 10)
 
@@ -192,6 +192,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-25 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,099.38 | ▲ 09:30 equity $7,161.21 vs yday $7,159.77 (+1.44) | 09:30 open · cash $7,099.38 (unchanged overnight, no fees) · equity $7,161.21 vs prior close $7,159.77 (+1.44) · 1 name(s) re-marked at the open (per-name table). OMER×3 yday $20.13 → 09:30 $20.61 +1.44 | — |
 | 2026-09-25 09:30 ET | **BUY** | `HALO` | 61 | $115.36 | $2.17 | — | $60.25 | — | flatten wish-list ∩ vol🟢; gate vol=good; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ⚪; ret5=+5.1; leftover $7099.38 | join🟢 sector🟢 gen🟢 news🔴 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-09-25 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $60.25 | ▼ close $7,068.39 vs 09:30 $7,161.21 (session -90.65) | 16:00 close · cash $60.25 · equity $7,068.39 vs 09:30 $7,161.21 (-92.82; session marks -90.65) · 2 name(s) marked open→close (per-name table). OMER×3 09:30 $20.61 → close $20.08 -1.59; HALO×61 09:30 $115.36 → close $113.90 -89.06 | — |
+| 2026-09-28 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $60.25 | ▼ 09:30 equity $7,033.48 vs yday $7,068.39 (-34.91) | 09:30 open · cash $60.25 (unchanged overnight, no fees) · equity $7,033.48 vs prior close $7,068.39 (-34.91) · 2 name(s) re-marked at the open (per-name table). HALO×61 yday $113.90 → 09:30 $113.34 -34.16; OMER×3 yday $20.08 → 09:30 $19.83 -0.75 | — |
+| 2026-09-28 09:30 ET | **SELL** | `OMER` | 3 | $19.83 | $0.62 | $-3.71 | $119.12 | ▼ -3.71 after sell → book $7,032.86; vs 09:30 mark -0.62 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $119.12 | ▼ close $7,005.41 vs 09:30 $7,033.48 (session -27.45) | 16:00 close · cash $119.12 · equity $7,005.41 vs 09:30 $7,033.48 (-28.07; session marks -27.45) · 1 name(s) marked open→close (per-name table). HALO×61 09:30 $113.34 → close $112.89 -27.45 | — |
 
 ## Not taken
 

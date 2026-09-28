@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ candle, no 🚨
 
-Cash book **-12.93%** ($8,707) · signal-only (no cash/fees) was -3.26%. Starts YES **0/30**. Fills 254 · skips 106 · realized $-563.17.
+Cash book **-13.95%** ($8,606) · signal-only (no cash/fees) was -3.26%. Starts YES **0/30**. Fills 262 · skips 106 · realized $-563.17.
 
 ## How this sleeve decides (like you are 10)
 
@@ -388,6 +388,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-25 09:30 ET | **BUY** | `HLP` | 499 | $2.20 | $6.44 | — | $1,191.13 | — | union ∩ candle, no 🚨; gate candle_capture=True; list probable,ohlc_hot; 🔵; ret5=+8.9; leftover $1098.43 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🔴 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-09-25 09:30 ET | **BUY** | `SATL` | 183 | $6.00 | $2.54 | — | $90.59 | — | union ∩ candle, no 🚨; gate candle_capture=True; list probable,ohlc_hot; 🔵; ret5=+7.8; leftover $1098.43 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
 | 2026-09-25 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $90.59 | ▼ close $8,707.42 vs 09:30 $8,787.47 (session -58.05) | 16:00 close · cash $90.59 · equity $8,707.42 vs 09:30 $8,787.47 (-80.05; session marks -58.05) · 8 name(s) marked open→close (per-name table). HALO×9 09:30 $115.36 → close $113.90 -13.14; BLFS×28 09:30 $38.51 → close $38.49 -0.56; MRVI×143 09:30 $7.65 → close $7.60 -7.15; TXG×13 09:30 $83.76 → close $85.71 +25.35; AEHL×121 09:30 $9.05 → close $9.36 +37.51; BRVE×46 09:30 $23.58 → close $20.62 -136.16; HLP×499 09:30 $2.20 → close $2.21 +4.99; SATL×183 09:30 $6.00 → close $6.17 +31.11 | — |
+| 2026-09-28 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $90.59 | ▼ 09:30 equity $8,627.78 vs yday $8,707.42 (-79.64) | 09:30 open · cash $90.59 (unchanged overnight, no fees) · equity $8,627.78 vs prior close $8,707.42 (-79.64) · 8 name(s) re-marked at the open (per-name table). AEHL×121 yday $9.36 → 09:30 $9.01 -42.35; BLFS×28 yday $38.49 → 09:30 $38.13 -10.08; BRVE×46 yday $20.62 → 09:30 $20.25 -17.02; HALO×9 yday $113.90 → 09:30 $113.34 -5.04; HLP×499 yday $2.21 → 09:30 $2.22 +4.99; MRVI×143 yday $7.60 → 09:30 $7.49 -15.73; SATL×183 yday $6.17 → 09:30 $6.17 +0.00; TXG×13 yday $85.71 → 09:30 $86.14 +5.59 | — |
+| 2026-09-28 09:30 ET | **SELL** | `AEHL` | 121 | $9.01 | $2.38 | $-9.58 | $1,178.42 | ▼ -9.58 after sell → book $8,625.40; vs 09:30 mark -2.38 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-28 09:30 ET | **SELL** | `BLFS` | 28 | $38.13 | $2.09 | $-14.81 | $2,243.96 | ▼ -14.81 after sell → book $8,623.30; vs 09:30 mark -2.10 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-28 09:30 ET | **SELL** | `BRVE` | 46 | $20.25 | $2.15 | $-157.46 | $3,173.31 | ▼ -157.46 after sell → book $8,621.15; vs 09:30 mark -2.15 | dropped from list after 1 sess (min 1) | join🟡 sector🟡 gen🔴 news🟡 digest🟢 judge🟢 ab🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-09-28 09:30 ET | **SELL** | `HALO` | 9 | $113.34 | $2.04 | $-22.23 | $4,191.34 | ▼ -22.23 after sell → book $8,619.12; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-28 09:30 ET | **SELL** | `HLP` | 499 | $2.22 | $6.53 | $-2.99 | $5,292.59 | ▼ -2.99 after sell → book $8,612.59; vs 09:30 mark -6.53 | dropped from list after 1 sess (min 1) | join🔴 sector🔴 gen🔴 news🟡 digest🟡 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-09-28 09:30 ET | **SELL** | `MRVI` | 143 | $7.49 | $2.45 | $-27.75 | $6,361.21 | ▼ -27.75 after sell → book $8,610.14; vs 09:30 mark -2.45 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-28 09:30 ET | **SELL** | `SATL` | 183 | $6.17 | $2.58 | $+25.99 | $7,487.74 | ▲ +25.99 after sell → book $8,607.56; vs 09:30 mark -2.58 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-28 09:30 ET | **SELL** | `TXG` | 13 | $86.14 | $2.05 | $+26.86 | $8,605.51 | ▲ +26.86 after sell → book $8,605.51; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,605.51 | ▲ close $8,605.51 vs 09:30 $8,627.78 (session +0.00) | 16:00 close · cash $8,605.51 · no lots left · equity $8,605.51. | — |
 
 ## Not taken
 

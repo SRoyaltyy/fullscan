@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · packet🟢 and camera net ≥ 2
 
-Cash book **-8.57%** ($9,143) · signal-only (no cash/fees) was +7.99%. Starts YES **21/30**. Fills 65 · skips 28 · realized $+1837.87.
+Cash book **-8.40%** ($9,160) · signal-only (no cash/fees) was +7.99%. Starts YES **21/30**. Fills 66 · skips 28 · realized $+1837.87.
 
 ## How this sleeve decides (like you are 10)
 
@@ -49,7 +49,7 @@ Imagine a kid with $10,000 at the 09:30 school bell. They look at the mixed morn
 Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 09:30 packet + leftover cash + lots on hand decide the ticket. Same-day Change% is outcome only.
 
 - **Universe** `union` — candidate list at 09:30 (flatten wish-list, union, probable, yday gainer, or OHLC hot).
-- **Gate** `news_box=good,cam_net_min=2` · **rank** `cond` · **top_n** 8.
+- **Gate** `cam_net_min=2,news_box=good` · **rank** `cond` · **top_n** 8.
 - **Size** `leftover` splits leftover cash among *new* names only. Rank-weight / top-heavy still cannot invent money.
 - **Sell** `list` after min-hold **1**. We never sell a ticker we do not hold. Early 🚨 / last-red / news🔴 can still exit inside the floor.
 - **Entry:** Research universe (not the live flatten gate). Cash/share/fee rules still apply.
@@ -201,6 +201,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-25 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,823.29 | ▲ 09:30 equity $8,823.29 vs yday $8,823.29 (+0.00) | 09:30 open · cash $8,823.29 · no holdings · equity $8,823.29 vs prior close $8,823.29 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-09-25 09:30 ET | **BUY** | `COST` | 9 | $887.00 | $2.02 | — | $838.27 | — | packet🟢 and camera net ≥ 2; gate news_box=good,cam_net_min=2; rank cond; list earn_react; 🔵; ret5=+0.3; leftover $8823.29 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
 | 2026-09-25 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $838.27 | ▲ close $9,143.16 vs 09:30 $8,823.29 (session +321.88) | 16:00 close · cash $838.27 · equity $9,143.16 vs 09:30 $8,823.29 (+319.87; session marks +321.88) · 1 name(s) marked open→close (per-name table). COST×9 09:30 $887.00 → close $922.76 +321.88 | — |
+| 2026-09-28 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $838.27 | ▲ 09:30 equity $9,162.15 vs yday $9,143.16 (+18.99) | 09:30 open · cash $838.27 (unchanged overnight, no fees) · equity $9,162.15 vs prior close $9,143.16 (+18.99) · 1 name(s) re-marked at the open (per-name table). COST×9 yday $922.76 → 09:30 $924.88 +18.99 | — |
+| 2026-09-28 09:30 ET | **SELL** | `COST` | 9 | $924.88 | $2.09 | $+336.76 | $9,160.05 | ▲ +336.76 after sell → book $9,160.05; vs 09:30 mark -2.10 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,160.05 | ▲ close $9,160.05 vs 09:30 $9,162.15 (session +0.00) | 16:00 close · cash $9,160.05 · no lots left · equity $9,160.05. | — |
 
 ## Not taken
 

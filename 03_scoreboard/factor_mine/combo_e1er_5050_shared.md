@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared union_e_fresh_h1/union_earn_react_h3 w=0.5,0.5 net=priority
 
-Cash book **-4.84%** ($9,516) · signal-only (no cash/fees) was —. Starts YES **8/30**. Fills 205 · skips 137 · realized $-376.82.
+Cash book **-4.65%** ($9,535) · signal-only (no cash/fees) was —. Starts YES **8/30**. Fills 206 · skips 137 · realized $-376.82.
 
 ## How this sleeve decides (like you are 10)
 
@@ -55,7 +55,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $288.18.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $9,534.83.
 
 ## Every lot, every session (09:30 mark and same-day change)
 
@@ -340,6 +340,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-25 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,160.20 | ▲ 09:30 equity $9,160.20 vs yday $9,160.20 (+0.00) | 09:30 open · cash $9,160.20 (unchanged overnight, no fees) · equity $9,160.20 vs prior close $9,160.20 (+0.00) | — |
 | 2026-09-25 09:30 ET | **BUY** | `COST` | 10 | $887.00 | $2.02 | — | $288.18 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; 🔵; ret5=+0.3; combo leftover $9160.20; owner union_e_fresh_h1 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
 | 2026-09-25 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $288.18 | ▲ close $9,515.83 vs 09:30 $9,160.20 (session +357.65) | 16:00 close · cash $288.18 · equity $9,515.83 vs 09:30 $9,160.20 (+355.63; session marks +357.65) · 1 name(s) marked open→close (per-name table). COST×10 09:30 $887.00 → close $922.76 +357.65 | — |
+| 2026-09-28 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $288.18 | ▲ 09:30 equity $9,536.93 vs yday $9,515.83 (+21.10) | 09:30 open · cash $288.18 (unchanged overnight, no fees) · equity $9,536.93 vs prior close $9,515.83 (+21.10) | — |
+| 2026-09-28 09:30 ET | **SELL** | `COST` | 10 | $924.88 | $2.10 | $+374.63 | $9,534.83 | ▲ +374.63 after sell → book $9,534.83; vs 09:30 mark -2.10 | union_e_fresh_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,534.83 | ▲ close $9,534.83 vs 09:30 $9,536.93 (session +0.00) | 16:00 close · cash $9,534.83 · no lots left · equity $9,534.83. | — |
 
 ## Not taken
 

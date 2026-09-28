@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ overnight, no 🚨
 
-Cash book **-17.05%** ($8,295) · signal-only (no cash/fees) was -45.53%. Starts YES **0/30**. Fills 89 · skips 176 · realized $-1797.14.
+Cash book **-17.07%** ($8,293) · signal-only (no cash/fees) was -45.53%. Starts YES **0/30**. Fills 92 · skips 176 · realized $-1797.14.
 
 ## How this sleeve decides (like you are 10)
 
@@ -223,6 +223,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-24 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,150.16 | ▼ close $8,192.86 vs 09:30 $8,200.80 (session -1.25) | — | — |
 | 2026-09-25 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,266.49 | ▼ 09:30 equity $8,295.78 vs yday $8,295.85 (-0.07) | 09:30 open · cash $8,266.49 (unchanged overnight, no fees) · equity $8,295.78 vs prior close $8,295.85 (-0.07) · 3 name(s) re-marked at the open (per-name table). BB×1 yday $8.73 → 09:30 $8.73 +0.00; NEOV×4 yday $2.39 → 09:30 $2.39 -0.02; SFIX×5 yday $2.21 → 09:30 $2.20 -0.05 | — |
 | 2026-09-25 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,266.49 | ▼ close $8,294.75 vs 09:30 $8,295.78 (session -1.03) | 16:00 close · cash $8,266.49 · equity $8,294.75 vs 09:30 $8,295.78 (-1.03; session marks -1.03) · 3 name(s) marked open→close (per-name table). BB×1 09:30 $8.73 → close $8.73 -0.00; NEOV×4 09:30 $2.39 → close $2.19 -0.80; SFIX×5 09:30 $2.20 → close $2.15 -0.23 | — |
+| 2026-09-28 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,266.49 | ▼ 09:30 equity $8,293.84 vs yday $8,294.75 (-0.91) | 09:30 open · cash $8,266.49 (unchanged overnight, no fees) · equity $8,293.84 vs prior close $8,294.75 (-0.91) · 3 name(s) re-marked at the open (per-name table). BB×1 yday $8.73 → 09:30 $7.94 -0.79; NEOV×4 yday $2.19 → 09:30 $2.20 +0.04; SFIX×5 yday $2.15 → 09:30 $2.12 -0.16 | — |
+| 2026-09-28 09:30 ET | **SELL** | `BB` | 1 | $7.94 | $0.10 | $-0.85 | $8,274.33 | ▼ -0.85 after sell → book $8,293.74; vs 09:30 mark -0.10 | exit unpriced hold on first bar after 3 sess | — |
+| 2026-09-28 09:30 ET | **SELL** | `NEOV` | 4 | $2.20 | $0.12 | $-5.07 | $8,283.01 | ▼ -5.07 after sell → book $8,293.62; vs 09:30 mark -0.12 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-28 09:30 ET | **SELL** | `SFIX` | 5 | $2.12 | $0.14 | $-4.65 | $8,293.48 | ▼ -4.65 after sell → book $8,293.48; vs 09:30 mark -0.14 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,293.48 | ▲ close $8,293.48 vs 09:30 $8,293.84 (session +0.00) | 16:00 close · cash $8,293.48 · no lots left · equity $8,293.48. | — |
 
 ## Not taken
 

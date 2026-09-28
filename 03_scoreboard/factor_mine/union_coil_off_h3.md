@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ coil_off, no 🚨
 
-Cash book **-23.12%** ($7,688) · signal-only (no cash/fees) was -24.98%. Starts YES **1/30**. Fills 180 · skips 306 · realized $-1766.84.
+Cash book **-23.00%** ($7,700) · signal-only (no cash/fees) was -24.98%. Starts YES **1/30**. Fills 188 · skips 306 · realized $-1766.84.
 
 ## How this sleeve decides (like you are 10)
 
@@ -50,7 +50,7 @@ Imagine a kid with $10,000 at the 09:30 school bell. They look at the mixed morn
 Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 09:30 packet + leftover cash + lots on hand decide the ticket. Same-day Change% is outcome only.
 
 - **Universe** `union` — candidate list at 09:30 (flatten wish-list, union, probable, yday gainer, or OHLC hot).
-- **Gate** `ret_5_min=0.0,ret_5_max=10.0,rvol_min=0.7,rvol_max=2.2` · **rank** `list order` · **top_n** 8.
+- **Gate** `ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7` · **rank** `list order` · **top_n** 8.
 - **Size** `leftover` splits leftover cash among *new* names only. Rank-weight / top-heavy still cannot invent money.
 - **Sell** `list` after min-hold **3**. We never sell a ticker we do not hold. Early 🚨 / last-red / news🔴 can still exit inside the floor.
 - **Entry:** Research universe (not the live flatten gate). Cash/share/fee rules still apply.
@@ -317,6 +317,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-25 09:30 ET | **BUY** | `SATL` | 131 | $6.00 | $2.38 | — | $1,730.61 | — | union ∩ coil_off, no 🚨; gate ret_5_min=0.0,ret_5_max=10.0,rvol_min=0.7,rvol_max=2.2; list probable,ohlc_hot; 🔵; ret5=+7.8; leftover $790.74 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
 | 2026-09-25 09:30 ET | **BUY** | `PL` | 44 | $17.91 | $2.12 | — | $940.45 | — | union ∩ coil_off, no 🚨; gate ret_5_min=0.0,ret_5_max=10.0,rvol_min=0.7,rvol_max=2.2; list probable; 🔵; ret5=+3.7; leftover $790.74 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🔴 vol🟢 buy🟡 |
 | 2026-09-25 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $940.45 | ▲ close $7,687.85 vs 09:30 $7,700.20 (session +5.16) | 16:00 close · cash $940.45 · equity $7,687.85 vs 09:30 $7,700.20 (-12.35; session marks +5.16) · 15 name(s) marked open→close (per-name table). ANAB×4 09:30 $51.70 → close $51.70 +0.00; APPS×18 09:30 $10.88 → close $10.88 +0.00; ARHS×25 09:30 $9.47 → close $9.47 +0.00; BTQ×78 09:30 $2.79 → close $2.79 -0.00; INDP×12 09:30 $4.00 → close $4.00 +0.00; NN×14 09:30 $14.45 → close $14.45 -0.00; NTSK×12 09:30 $18.57 → close $18.57 -0.00; SAIL×2 09:30 $22.05 → close $20.64 -2.82; HALO×6 09:30 $115.36 → close $113.90 -8.76; BLFS×20 09:30 $38.51 → close $38.49 -0.40; MRVI×103 09:30 $7.65 → close $7.60 -5.15; TXG×9 09:30 $83.76 → close $85.71 +17.55; HLP×359 09:30 $2.20 → close $2.21 +3.59; SATL×131 09:30 $6.00 → close $6.17 +22.27; PL×44 09:30 $17.91 → close $17.43 -21.12 | — |
+| 2026-09-28 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $940.45 | ▼ 09:30 equity $7,632.80 vs yday $7,687.85 (-55.05) | 09:30 open · cash $940.45 (unchanged overnight, no fees) · equity $7,632.80 vs prior close $7,687.85 (-55.05) · 15 name(s) re-marked at the open (per-name table). ANAB×4 yday $51.70 → 09:30 $51.00 -2.80; APPS×18 yday $10.88 → 09:30 $11.00 +2.16; ARHS×25 yday $9.47 → 09:30 $9.43 -1.00; BLFS×20 yday $38.49 → 09:30 $38.13 -7.20; BTQ×78 yday $2.79 → 09:30 $2.74 -3.90; HALO×6 yday $113.90 → 09:30 $113.34 -3.36; HLP×359 yday $2.21 → 09:30 $2.22 +3.59; INDP×12 yday $4.00 → 09:30 $3.78 -2.64; MRVI×103 yday $7.60 → 09:30 $7.49 -11.33; NN×14 yday $14.45 → 09:30 $14.25 -2.80; NTSK×12 yday $18.57 → 09:30 $17.15 -16.98; PL×44 yday $17.43 → 09:30 $17.17 -11.44; SAIL×2 yday $20.64 → 09:30 $20.03 -1.22; SATL×131 yday $6.17 → 09:30 $6.17 +0.00; TXG×9 yday $85.71 → 09:30 $86.14 +3.87 | — |
+| 2026-09-28 09:30 ET | **SELL** | `ANAB` | 4 | $51.00 | $2.02 | $-20.30 | $1,142.43 | ▼ -20.30 after sell → book $7,630.78; vs 09:30 mark -2.02 | exit unpriced hold on first bar after 4 sess | — |
+| 2026-09-28 09:30 ET | **SELL** | `APPS` | 18 | $11.00 | $2.05 | $-26.42 | $1,338.37 | ▼ -26.42 after sell → book $7,628.72; vs 09:30 mark -2.06 | exit unpriced hold on first bar after 4 sess | — |
+| 2026-09-28 09:30 ET | **SELL** | `ARHS` | 25 | $9.43 | $2.08 | $+9.10 | $1,572.04 | ▲ +9.10 after sell → book $7,626.64; vs 09:30 mark -2.08 | exit unpriced hold on first bar after 4 sess | — |
+| 2026-09-28 09:30 ET | **SELL** | `BTQ` | 78 | $2.74 | $2.25 | $-12.27 | $1,783.51 | ▼ -12.27 after sell → book $7,624.39; vs 09:30 mark -2.25 | exit unpriced hold on first bar after 4 sess | — |
+| 2026-09-28 09:30 ET | **SELL** | `INDP` | 12 | $3.78 | $0.51 | $-2.82 | $1,828.36 | ▼ -2.82 after sell → book $7,623.88; vs 09:30 mark -0.51 | exit unpriced hold on first bar after 3 sess | — |
+| 2026-09-28 09:30 ET | **SELL** | `NN` | 14 | $14.25 | $2.05 | $-25.22 | $2,025.81 | ▼ -25.22 after sell → book $7,621.83; vs 09:30 mark -2.05 | exit unpriced hold on first bar after 4 sess | — |
+| 2026-09-28 09:30 ET | **SELL** | `NTSK` | 12 | $17.15 | $2.05 | $-16.97 | $2,229.62 | ▼ -16.97 after sell → book $7,619.78; vs 09:30 mark -2.05 | exit unpriced hold on first bar after 4 sess | — |
+| 2026-09-28 09:30 ET | **SELL** | `SAIL` | 2 | $20.03 | $0.43 | $-3.82 | $2,269.26 | ▼ -3.82 after sell → book $7,619.36; vs 09:30 mark -0.42 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $2,269.26 | ▲ close $7,700.43 vs 09:30 $7,632.80 (session +81.07) | 16:00 close · cash $2,269.26 · equity $7,700.43 vs 09:30 $7,632.80 (+67.63; session marks +81.07) · 7 name(s) marked open→close (per-name table). BLFS×20 09:30 $38.13 → close $39.15 +20.40; HALO×6 09:30 $113.34 → close $112.89 -2.70; HLP×359 09:30 $2.22 → close $2.39 +61.03; MRVI×103 09:30 $7.49 → close $7.63 +14.42; PL×44 09:30 $17.17 → close $16.77 -17.60; SATL×131 09:30 $6.17 → close $6.05 -15.72; TXG×9 09:30 $86.14 → close $88.50 +21.24 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · short news🔴 ∩ prior MACD histogram > 0
 
-Cash book **-1.74%** ($9,826) · signal-only (no cash/fees) was +37.55%. Starts YES **29/30**. Fills 79 · skips 81 · realized $+1277.69.
+Cash book **+1.57%** ($10,157) · signal-only (no cash/fees) was +37.55%. Starts YES **29/30**. Fills 81 · skips 81 · realized $+1277.69.
 
 ## How this sleeve decides (like you are 10)
 
@@ -46,7 +46,7 @@ Imagine a kid with $10,000 at the 09:30 school bell. They look at the mixed morn
 Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 09:30 packet + leftover cash + lots on hand decide the ticket. Same-day Change% is outcome only.
 
 - **Universe** `union` — candidate list at 09:30 (flatten wish-list, union, probable, yday gainer, or OHLC hot).
-- **Gate** `news=bad,macd_up=True` · **rank** `list order` · **top_n** 8.
+- **Gate** `macd_up=True,news=bad` · **rank** `list order` · **top_n** 8.
 - **Size** `leftover` splits leftover cash among *new* names only. Rank-weight / top-heavy still cannot invent money.
 - **Sell** `list` after min-hold **3**. We never sell a ticker we do not hold. Early 🚨 / last-red / news🔴 can still exit inside the floor.
 - **Entry:** Research universe (not the live flatten gate). Cash/share/fee rules still apply.
@@ -212,6 +212,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-25 09:30 ET | **COVER** | `AEHL` | 310 | $9.05 | $4.00 | $-253.04 | $20,339.22 | ▼ -253.04 after sell → book $9,790.95; vs 09:30 mark -4.00 | dropped from list after 4 sess (min 3) | join🔴 sector🟡 gen🟢 news🔴 digest🟢 ab🔴 peer🔴 heat🔴 vol🔴 buy🟡 |
 | 2026-09-25 09:30 ET | **SHORT** | `RSKD` | 623 | $7.85 | $8.31 | — | $25,221.46 | — | short news🔴 ∩ prior MACD histogram > 0; gate news=bad,macd_up=True; list yday_gainer; 🔵; ⚪; ret5=+25.4; leftover $4895.48 | join🟢 sector🟢 gen🟢 news🔴 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-09-25 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $25,221.46 | ▲ close $9,826.25 vs 09:30 $9,794.95 (session +43.61) | 16:00 close · cash $25,221.46 · equity $9,826.25 vs 09:30 $9,794.95 (+31.30; session marks +43.61) · 3 name(s) marked open→close (per-name table). BAND×87 09:30 $61.83 → close $61.83 -0.00; FIVN×141 09:30 $36.66 → close $36.66 +0.00; RSKD×623 09:30 $7.85 → close $7.78 +43.61 | — |
+| 2026-09-28 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $25,221.46 | ▲ 09:30 equity $10,149.47 vs yday $9,826.25 (+323.22) | 09:30 open · cash $25,221.46 (unchanged overnight, no fees) · equity $10,149.47 vs prior close $9,826.25 (+323.22) · 3 name(s) re-marked at the open (per-name table). BAND×87 yday $61.83 → 09:30 $61.64 +16.53; FIVN×141 yday $36.66 → 09:30 $34.75 +269.31; RSKD×623 yday $7.78 → 09:30 $7.72 +37.38 | — |
+| 2026-09-28 09:30 ET | **COVER** | `BAND` | 87 | $61.64 | $2.25 | $-320.51 | $19,856.53 | ▼ -320.51 after sell → book $10,147.22; vs 09:30 mark -2.25 | exit unpriced hold on first bar after 3 sess | — |
+| 2026-09-28 09:30 ET | **COVER** | `FIVN` | 141 | $34.75 | $2.41 | $+329.14 | $14,954.37 | ▲ +329.14 after sell → book $10,144.81; vs 09:30 mark -2.41 | exit unpriced hold on first bar after 4 sess | — |
+| 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $14,954.37 | ▲ close $10,157.27 vs 09:30 $10,149.47 (session +12.46) | 16:00 close · cash $14,954.37 · equity $10,157.27 vs 09:30 $10,149.47 (+7.80; session marks +12.46) · 1 name(s) marked open→close (per-name table). RSKD×623 09:30 $7.72 → close $7.70 +12.46 | — |
 
 ## Not taken
 

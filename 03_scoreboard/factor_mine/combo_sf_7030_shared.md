@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared short_news_r_h3/flatten_h5 w=0.7,0.3 net=priority
 
-Cash book **-2.88%** ($9,712) · signal-only (no cash/fees) was —. Starts YES **8/30**. Fills 226 · skips 449 · realized $+750.35.
+Cash book **-3.49%** ($9,651) · signal-only (no cash/fees) was —. Starts YES **8/30**. Fills 232 · skips 449 · realized $+750.35.
 
 ## How this sleeve decides (like you are 10)
 
@@ -55,7 +55,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $-3,829.95.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $9,650.84.
 
 ## Every lot, every session (09:30 mark and same-day change)
 
@@ -361,6 +361,14 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-24 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $-4,938.95 | ▲ close $11,138.63 vs 09:30 $11,140.70 (session +10.50) | — | — |
 | 2026-09-25 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $-3,829.95 | ▲ 09:30 equity $9,711.88 vs yday $9,711.88 (+0.00) | 09:30 open · cash $-3,829.95 (unchanged overnight, no fees) · equity $9,711.88 vs prior close $9,711.88 (+0.00) | — |
 | 2026-09-25 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $-3,829.95 | ▲ close $9,711.88 vs 09:30 $9,711.88 (session +0.00) | 16:00 close · cash $-3,829.95 · equity $9,711.88 vs 09:30 $9,711.88 (+0.00; session marks +0.00) · 6 name(s) marked open→close (per-name table). DELL×3 09:30 $536.02 → close $536.02 +0.00; ECO×27 09:30 $78.22 → close $78.22 +0.00; FIVN×68 09:30 $36.66 → close $36.66 -0.00; GNRC×11 09:30 $198.05 → close $198.05 +0.00; RBRK×21 09:30 $113.80 → close $113.80 +0.00; VICR×10 09:30 $276.06 → close $276.06 -0.00 | — |
+| 2026-09-28 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $-3,829.95 | ▼ 09:30 equity $9,663.37 vs yday $9,711.88 (-48.51) | 09:30 open · cash $-3,829.95 (unchanged overnight, no fees) · equity $9,663.37 vs prior close $9,711.88 (-48.51) | — |
+| 2026-09-28 09:30 ET | **SELL** | `DELL` | 3 | $551.74 | $2.02 | $-128.25 | $-2,176.75 | ▼ -128.25 after sell → book $9,661.35; vs 09:30 mark -2.02 | flatten_h5: dropped from list after 6 sess (min 5) | — |
+| 2026-09-28 09:30 ET | **SELL** | `ECO` | 27 | $79.55 | $2.10 | $-151.32 | $-31.00 | ▼ -151.32 after sell → book $9,659.25; vs 09:30 mark -2.10 | flatten_h5: dropped from list after 6 sess (min 5) | — |
+| 2026-09-28 09:30 ET | **SELL** | `FIVN` | 68 | $34.75 | $2.22 | $+16.66 | $2,329.78 | ▲ +16.66 after sell → book $9,657.03; vs 09:30 mark -2.22 | flatten_h5: dropped from list after 6 sess (min 5) | — |
+| 2026-09-28 09:30 ET | **SELL** | `GNRC` | 11 | $207.41 | $2.05 | $-27.28 | $4,609.23 | ▼ -27.28 after sell → book $9,654.97; vs 09:30 mark -2.06 | flatten_h5: dropped from list after 6 sess (min 5) | — |
+| 2026-09-28 09:30 ET | **SELL** | `RBRK` | 21 | $106.94 | $2.08 | $-37.94 | $6,852.89 | ▼ -37.94 after sell → book $9,652.89; vs 09:30 mark -2.08 | flatten_h5: dropped from list after 6 sess (min 5) | — |
+| 2026-09-28 09:30 ET | **SELL** | `VICR` | 10 | $280.00 | $2.05 | $+599.73 | $9,650.84 | ▲ +599.73 after sell → book $9,650.84; vs 09:30 mark -2.05 | flatten_h5: dropped from list after 6 sess (min 5) | — |
+| 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,650.84 | ▲ close $9,650.84 vs 09:30 $9,663.37 (session +0.00) | 16:00 close · cash $9,650.84 · no lots left · equity $9,650.84. | — |
 
 ## Not taken
 

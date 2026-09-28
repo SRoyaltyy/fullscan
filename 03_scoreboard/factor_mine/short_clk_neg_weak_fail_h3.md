@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · Clock-B #4 neg catalyst + weakness + failed recovery
 
-Cash book **+0.73%** ($10,073) · signal-only (no cash/fees) was -21.45%. Starts YES **8/30**. Fills 209 · skips 270 · realized $-967.53.
+Cash book **-1.29%** ($9,871) · signal-only (no cash/fees) was -21.45%. Starts YES **8/30**. Fills 217 · skips 270 · realized $-967.53.
 
 ## How this sleeve decides (like you are 10)
 
@@ -341,6 +341,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-25 09:30 ET | **SHORT** | `SGMT` | 135 | $9.11 | $2.46 | — | $22,739.94 | — | Clock-B #4 neg catalyst + weakness + failed recovery; gate clk_neg_weak_fail=True; list yday_mover; 🔵; ⚪; ret5=-18.4; leftover $1238.77 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-09-25 09:30 ET | **SHORT** | `COST` | 1 | $887.00 | $2.04 | — | $23,624.90 | — | Clock-B #4 neg catalyst + weakness + failed recovery; gate clk_neg_weak_fail=True; list earn_react; 🔵; ret5=+0.3; leftover $1238.77 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
 | 2026-09-25 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $23,624.90 | ▲ close $10,073.23 vs 09:30 $9,910.13 (session +176.62) | 16:00 close · cash $23,624.90 · equity $10,073.23 vs 09:30 $9,910.13 (+163.10; session marks +176.62) · 12 name(s) marked open→close (per-name table). AEHL×89 09:30 $9.05 → close $9.36 -27.59; ALOY×72 09:30 $8.52 → close $8.52 -0.00; CMPX×3898 09:30 $1.14 → close $1.14 +0.00; DLO×46 09:30 $13.88 → close $13.88 -0.00; EU×642 09:30 $1.22 → close $1.22 -0.00; HELP×48 09:30 $12.59 → close $12.59 -0.00; NN×43 09:30 $14.45 → close $14.45 +0.00; USFD×7 09:30 $93.82 → close $93.82 +0.00; BRVE×52 09:30 $23.58 → close $20.62 +153.92; NEOV×518 09:30 $2.39 → close $2.19 +103.60; SGMT×135 09:30 $9.11 → close $9.24 -17.55; COST×1 09:30 $887.00 → close $922.76 -35.76 | — |
+| 2026-09-28 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $23,624.90 | ▲ 09:30 equity $10,131.25 vs yday $10,073.23 (+58.02) | 09:30 open · cash $23,624.90 (unchanged overnight, no fees) · equity $10,131.25 vs prior close $10,073.23 (+58.02) · 12 name(s) re-marked at the open (per-name table). AEHL×89 yday $9.36 → 09:30 $9.01 +31.15; ALOY×72 yday $8.52 → 09:30 $8.56 -2.88; BRVE×52 yday $20.62 → 09:30 $20.25 +19.24; CMPX×3898 yday $1.13 → 09:30 $1.14 -19.49; COST×1 yday $922.76 → 09:30 $924.88 -2.11; DLO×46 yday $13.88 → 09:30 $13.91 -1.38; EU×642 yday $1.22 → 09:30 $1.21 +6.42; HELP×48 yday $12.59 → 09:30 $12.47 +5.76; NEOV×518 yday $2.19 → 09:30 $2.20 -5.18; NN×43 yday $14.45 → 09:30 $14.25 +8.60; SGMT×135 yday $9.24 → 09:30 $9.15 +12.15; USFD×7 yday $93.82 → 09:30 $93.00 +5.74 | — |
+| 2026-09-28 09:30 ET | **COVER** | `AEHL` | 89 | $9.01 | $2.26 | $-127.38 | $22,820.75 | ▼ -127.38 after sell → book $10,128.99; vs 09:30 mark -2.26 | dropped from list after 4 sess (min 3) | — |
+| 2026-09-28 09:30 ET | **COVER** | `ALOY` | 72 | $8.56 | $2.21 | $+56.03 | $22,202.23 | ▲ +56.03 after sell → book $10,126.79; vs 09:30 mark -2.20 | exit unpriced hold on first bar after 4 sess | — |
+| 2026-09-28 09:30 ET | **COVER** | `CMPX` | 3898 | $1.14 | $50.28 | $+210.46 | $17,708.22 | ▲ +210.46 after sell → book $10,076.50; vs 09:30 mark -50.29 | exit unpriced hold on first bar after 3 sess | — |
+| 2026-09-28 09:30 ET | **COVER** | `DLO` | 46 | $13.91 | $2.13 | $+22.85 | $17,066.23 | ▲ +22.85 after sell → book $10,074.37; vs 09:30 mark -2.13 | exit unpriced hold on first bar after 4 sess | — |
+| 2026-09-28 09:30 ET | **COVER** | `EU` | 642 | $1.21 | $8.28 | $-113.00 | $16,281.13 | ▼ -113.00 after sell → book $10,066.09; vs 09:30 mark -8.28 | exit unpriced hold on first bar after 4 sess | — |
+| 2026-09-28 09:30 ET | **COVER** | `HELP` | 48 | $12.47 | $2.13 | $+69.61 | $15,680.43 | ▲ +69.61 after sell → book $10,063.96; vs 09:30 mark -2.13 | exit unpriced hold on first bar after 4 sess | — |
+| 2026-09-28 09:30 ET | **COVER** | `NN` | 43 | $14.25 | $2.12 | $+60.65 | $15,065.57 | ▲ +60.65 after sell → book $10,061.84; vs 09:30 mark -2.12 | exit unpriced hold on first bar after 4 sess | — |
+| 2026-09-28 09:30 ET | **COVER** | `USFD` | 7 | $93.00 | $2.01 | $+3.50 | $14,412.55 | ▲ +3.50 after sell → book $10,059.83; vs 09:30 mark -2.01 | exit unpriced hold on first bar after 4 sess | — |
+| 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $14,412.55 | ▼ close $9,871.05 vs 09:30 $10,131.25 (session -188.77) | 16:00 close · cash $14,412.55 · equity $9,871.05 vs 09:30 $10,131.25 (-260.20; session marks -188.77) · 4 name(s) marked open→close (per-name table). BRVE×52 09:30 $20.25 → close $21.07 -42.64; COST×1 09:30 $924.88 → close $922.92 +1.96; NEOV×518 09:30 $2.20 → close $2.28 -41.44; SGMT×135 09:30 $9.15 → close $9.94 -106.65 | — |
 
 ## Not taken
 

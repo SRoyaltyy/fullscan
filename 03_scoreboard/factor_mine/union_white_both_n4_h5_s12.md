@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 4 · rank `list` · size `leftover` · sell `list` · S-boost `none` · both+top4 hold5, stop −12% at 09:30 even inside hold
 
-Cash book **+3.53%** ($10,353) · signal-only (no cash/fees) was +22.84%. Starts YES **12/30**. Fills 67 · skips 137 · realized $+2194.89.
+Cash book **+2.91%** ($10,291) · signal-only (no cash/fees) was +22.84%. Starts YES **12/30**. Fills 74 · skips 137 · realized $+2194.89.
 
 ## How this sleeve decides (like you are 10)
 
@@ -204,6 +204,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-25 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $99.48 | ▼ 09:30 equity $10,368.60 vs yday $10,376.54 (-7.94) | 09:30 open · cash $99.48 (unchanged overnight, no fees) · equity $10,368.60 vs prior close $10,376.54 (-7.94) · 9 name(s) re-marked at the open (per-name table). A×12 yday $172.84 → 09:30 $171.98 -10.32; ARQT×71 yday $26.27 → 09:30 $26.27 +0.00; DXCM×22 yday $87.47 → 09:30 $87.47 +0.00; ECO×7 yday $78.22 → 09:30 $78.22 +0.00; FIVN×18 yday $36.66 → 09:30 $36.66 +0.00; HALO×17 yday $115.22 → 09:30 $115.36 +2.38; IOVA×4 yday $10.80 → 09:30 $10.80 +0.00; RARE×43 yday $14.77 → 09:30 $14.77 +0.00; RBRK×5 yday $113.80 → 09:30 $113.80 +0.00 | — |
 | 2026-09-25 09:30 ET | **BUY** | `MRVI` | 4 | $7.65 | $0.32 | — | $68.56 | — | both+top4 hold5, stop −12% at 09:30 even inside hold; gate cam_bad_max=0,yday_and_catalyst=True; rank list; list flatten; 🔵; ⚪; ret5=+5.2; leftover $33.16 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-09-25 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $68.56 | ▼ close $10,352.98 vs 09:30 $10,368.60 (session -15.30) | 16:00 close · cash $68.56 · equity $10,352.98 vs 09:30 $10,368.60 (-15.62; session marks -15.30) · 10 name(s) marked open→close (per-name table). A×12 09:30 $171.98 → close $172.79 +9.72; ARQT×71 09:30 $26.27 → close $26.27 +0.00; DXCM×22 09:30 $87.47 → close $87.47 +0.00; ECO×7 09:30 $78.22 → close $78.22 +0.00; FIVN×18 09:30 $36.66 → close $36.66 -0.00; HALO×17 09:30 $115.36 → close $113.90 -24.82; IOVA×4 09:30 $10.80 → close $10.80 +0.00; RARE×43 09:30 $14.77 → close $14.77 +0.00; RBRK×5 09:30 $113.80 → close $113.80 +0.00; MRVI×4 09:30 $7.65 → close $7.60 -0.20 | — |
+| 2026-09-28 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $68.56 | ▼ 09:30 equity $10,248.98 vs yday $10,352.98 (-104.00) | 09:30 open · cash $68.56 (unchanged overnight, no fees) · equity $10,248.98 vs prior close $10,352.98 (-104.00) · 10 name(s) re-marked at the open (per-name table). A×12 yday $172.79 → 09:30 $170.00 -33.48; ARQT×71 yday $26.27 → 09:30 $26.70 +30.53; DXCM×22 yday $87.47 → 09:30 $86.87 -13.20; ECO×7 yday $78.22 → 09:30 $79.55 +9.31; FIVN×18 yday $36.66 → 09:30 $34.75 -34.38; HALO×17 yday $113.90 → 09:30 $113.34 -9.52; IOVA×4 yday $10.80 → 09:30 $10.90 +0.40; MRVI×4 yday $7.60 → 09:30 $7.49 -0.44; RARE×43 yday $14.77 → 09:30 $14.33 -18.92; RBRK×5 yday $113.80 → 09:30 $106.94 -34.30 | — |
+| 2026-09-28 09:30 ET | **SELL** | `ARQT` | 71 | $26.70 | $2.23 | $-81.82 | $1,962.03 | ▼ -81.82 after sell → book $10,246.75; vs 09:30 mark -2.23 | exit unpriced hold on first bar after 3 sess | — |
+| 2026-09-28 09:30 ET | **SELL** | `DXCM` | 22 | $86.87 | $2.08 | $-62.00 | $3,871.09 | ▼ -62.00 after sell → book $10,244.67; vs 09:30 mark -2.08 | exit unpriced hold on first bar after 3 sess | — |
+| 2026-09-28 09:30 ET | **SELL** | `ECO` | 7 | $79.55 | $2.03 | $-42.19 | $4,425.91 | ▼ -42.19 after sell → book $10,242.64; vs 09:30 mark -2.03 | exit unpriced hold on first bar after 6 sess | — |
+| 2026-09-28 09:30 ET | **SELL** | `FIVN` | 18 | $34.75 | $2.06 | $+1.47 | $5,049.34 | ▲ +1.47 after sell → book $10,240.57; vs 09:30 mark -2.07 | exit unpriced hold on first bar after 6 sess | — |
+| 2026-09-28 09:30 ET | **SELL** | `IOVA` | 4 | $10.90 | $0.47 | $+0.98 | $5,092.48 | ▲ +0.98 after sell → book $10,240.11; vs 09:30 mark -0.46 | exit unpriced hold on first bar after 5 sess | join🟢 sector🟡 gen🔴 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-28 09:30 ET | **SELL** | `RARE` | 43 | $14.33 | $2.14 | $-24.04 | $5,706.53 | ▼ -24.04 after sell → book $10,237.97; vs 09:30 mark -2.14 | exit unpriced hold on first bar after 6 sess | — |
+| 2026-09-28 09:30 ET | **SELL** | `RBRK` | 5 | $106.94 | $2.02 | $-12.08 | $6,239.20 | ▼ -12.08 after sell → book $10,235.94; vs 09:30 mark -2.03 | exit unpriced hold on first bar after 6 sess | — |
+| 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6,239.20 | ▲ close $10,291.37 vs 09:30 $10,248.98 (session +55.43) | 16:00 close · cash $6,239.20 · equity $10,291.37 vs 09:30 $10,248.98 (+42.39; session marks +55.43) · 3 name(s) marked open→close (per-name table). A×12 09:30 $170.00 → close $175.21 +62.52; HALO×17 09:30 $113.34 → close $112.89 -7.65; MRVI×4 09:30 $7.49 → close $7.63 +0.56 | — |
 
 ## Not taken
 

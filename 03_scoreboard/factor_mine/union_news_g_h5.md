@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ news_g hold 5, no 🚨
 
-Cash book **-15.93%** ($8,407) · signal-only (no cash/fees) was +99.58%. Starts YES **1/30**. Fills 131 · skips 344 · realized $-1589.16.
+Cash book **-17.28%** ($8,272) · signal-only (no cash/fees) was +99.58%. Starts YES **1/30**. Fills 140 · skips 344 · realized $-1589.16.
 
 ## How this sleeve decides (like you are 10)
 
@@ -265,6 +265,17 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-25 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $68.47 | ▲ 09:30 equity $8,407.61 vs yday $8,407.11 (+0.50) | 09:30 open · cash $68.47 (unchanged overnight, no fees) · equity $8,407.61 vs prior close $8,407.11 (+0.50) · 10 name(s) re-marked at the open (per-name table). AMTX×4 yday $1.77 → 09:30 $1.77 +0.00; BHVN×3 yday $13.19 → 09:30 $13.19 +0.00; CMPX×1764 yday $1.13 → 09:30 $1.13 +0.00; DGXX×2 yday $4.53 → 09:30 $4.78 +0.50; FLNC×6 yday $7.46 → 09:30 $7.46 +0.00; IVVD×12 yday $0.91 → 09:30 $0.91 +0.00; PGEN×270 yday $7.70 → 09:30 $7.70 +0.00; RARE×3 yday $14.77 → 09:30 $14.77 +0.00; SGRY×136 yday $14.20 → 09:30 $14.20 +0.00; VERI×1632 yday $1.33 → 09:30 $1.33 +0.00 | — |
 | 2026-09-25 09:30 ET | **BUY** | `ZSQR` | 3 | $3.86 | $0.12 | — | $56.77 | — | union ∩ news_g hold 5, no 🚨; gate news=good; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+46.1; leftover $13.69 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-09-25 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $56.77 | ▼ close $8,406.86 vs 09:30 $8,407.61 (session -0.62) | 16:00 close · cash $56.77 · equity $8,406.86 vs 09:30 $8,407.61 (-0.75; session marks -0.62) · 11 name(s) marked open→close (per-name table). AMTX×4 09:30 $1.77 → close $1.77 -0.00; BHVN×3 09:30 $13.19 → close $13.19 -0.00; CMPX×1764 09:30 $1.14 → close $1.14 -0.00; DGXX×2 09:30 $4.78 → close $4.59 -0.38; FLNC×6 09:30 $7.46 → close $7.46 +0.00; IVVD×12 09:30 $0.91 → close $0.91 -0.00; PGEN×270 09:30 $7.70 → close $7.70 -0.00; RARE×3 09:30 $14.77 → close $14.77 +0.00; SGRY×136 09:30 $14.20 → close $14.20 -0.00; VERI×1632 09:30 $1.33 → close $1.33 +0.00; ZSQR×3 09:30 $3.86 → close $3.78 -0.24 | — |
+| 2026-09-28 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $56.77 | ▼ 09:30 equity $8,322.12 vs yday $8,406.86 (-84.74) | 09:30 open · cash $56.77 (unchanged overnight, no fees) · equity $8,322.12 vs prior close $8,406.86 (-84.74) · 11 name(s) re-marked at the open (per-name table). AMTX×4 yday $1.77 → 09:30 $1.84 +0.28; BHVN×3 yday $13.19 → 09:30 $12.82 -1.11; CMPX×1764 yday $1.13 → 09:30 $1.14 +8.82; DGXX×2 yday $4.59 → 09:30 $4.55 -0.08; FLNC×6 yday $7.46 → 09:30 $7.53 +0.42; IVVD×12 yday $0.91 → 09:30 $0.98 +0.76; PGEN×270 yday $7.70 → 09:30 $7.61 -24.30; RARE×3 yday $14.77 → 09:30 $14.33 -1.32; SGRY×136 yday $14.20 → 09:30 $14.18 -2.72; VERI×1632 yday $1.33 → 09:30 $1.29 -65.28; ZSQR×3 yday $3.78 → 09:30 $3.71 -0.21 | — |
+| 2026-09-28 09:30 ET | **SELL** | `AMTX` | 4 | $1.84 | $0.11 | $-1.44 | $64.02 | ▼ -1.44 after sell → book $8,322.02; vs 09:30 mark -0.10 | exit unpriced hold on first bar after 5 sess | — |
+| 2026-09-28 09:30 ET | **SELL** | `BHVN` | 3 | $12.82 | $0.41 | $-4.59 | $102.07 | ▼ -4.59 after sell → book $8,321.60; vs 09:30 mark -0.42 | exit unpriced hold on first bar after 6 sess | — |
+| 2026-09-28 09:30 ET | **SELL** | `CMPX` | 1764 | $1.14 | $23.06 | $-186.94 | $2,089.97 | ▼ -186.94 after sell → book $8,298.54; vs 09:30 mark -23.06 | exit unpriced hold on first bar after 3 sess | — |
+| 2026-09-28 09:30 ET | **SELL** | `FLNC` | 6 | $7.53 | $0.49 | $-0.99 | $2,134.66 | ▼ -0.99 after sell → book $8,298.05; vs 09:30 mark -0.49 | exit unpriced hold on first bar after 6 sess | — |
+| 2026-09-28 09:30 ET | **SELL** | `IVVD` | 12 | $0.98 | $0.17 | $-0.74 | $2,146.20 | ▼ -0.74 after sell → book $8,297.88; vs 09:30 mark -0.17 | exit unpriced hold on first bar after 4 sess | — |
+| 2026-09-28 09:30 ET | **SELL** | `PGEN` | 270 | $7.61 | $3.54 | $-98.83 | $4,197.35 | ▼ -98.83 after sell → book $8,294.33; vs 09:30 mark -3.55 | exit unpriced hold on first bar after 3 sess | — |
+| 2026-09-28 09:30 ET | **SELL** | `RARE` | 3 | $14.33 | $0.46 | $-2.29 | $4,239.88 | ▼ -2.29 after sell → book $8,293.87; vs 09:30 mark -0.46 | exit unpriced hold on first bar after 6 sess | — |
+| 2026-09-28 09:30 ET | **SELL** | `SGRY` | 136 | $14.18 | $2.44 | $-214.27 | $6,165.93 | ▼ -214.27 after sell → book $8,291.44; vs 09:30 mark -2.43 | exit unpriced hold on first bar after 3 sess | — |
+| 2026-09-28 09:30 ET | **SELL** | `VERI` | 1632 | $1.29 | $21.34 | $-58.71 | $8,249.87 | ▼ -58.71 after sell → book $8,270.10; vs 09:30 mark -21.34 | exit unpriced hold on first bar after 3 sess | — |
+| 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,249.87 | ▲ close $8,271.93 vs 09:30 $8,322.12 (session +1.83) | 16:00 close · cash $8,249.87 · equity $8,271.93 vs 09:30 $8,322.12 (-50.19; session marks +1.83) · 2 name(s) marked open→close (per-name table). DGXX×2 09:30 $4.55 → close $4.22 -0.66; ZSQR×3 09:30 $3.71 → close $4.54 +2.49 | — |
 
 ## Not taken
 

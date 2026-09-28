@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · packet🟢 OR headline🟢
 
-Cash book **-20.82%** ($7,918) · signal-only (no cash/fees) was +179.67%. Starts YES **1/30**. Fills 164 · skips 244 · realized $-1770.27.
+Cash book **-17.65%** ($8,235) · signal-only (no cash/fees) was +179.67%. Starts YES **1/30**. Fills 170 · skips 244 · realized $-1770.27.
 
 ## How this sleeve decides (like you are 10)
 
@@ -299,6 +299,14 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-25 09:30 ET | **BUY** | `COST` | 1 | $887.00 | $1.99 | — | $2,110.09 | — | packet🟢 OR headline🟢; gate news_or_headline=True; rank cond; list earn_react; 🔵; ret5=+0.3; leftover $1360.13 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
 | 2026-09-25 09:30 ET | **BUY** | `RKLB` | 18 | $74.15 | $2.04 | — | $773.35 | — | packet🟢 OR headline🟢; gate news_or_headline=True; rank cond; list ohlc_hot; ret5=+8.5; leftover $1360.13 | join🔴 sector🟡 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
 | 2026-09-25 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $773.35 | ▼ close $7,917.98 vs 09:30 $7,960.58 (session -25.39) | 16:00 close · cash $773.35 · equity $7,917.98 vs 09:30 $7,960.58 (-42.60; session marks -25.39) · 11 name(s) marked open→close (per-name table). CMPX×68 09:30 $1.14 → close $1.14 -0.00; IVVD×499 09:30 $0.91 → close $0.91 -0.00; MRNA×2 09:30 $194.82 → close $194.82 +0.00; PGEN×10 09:30 $7.70 → close $7.70 -0.00; SGRY×5 09:30 $14.20 → close $14.20 -0.00; VERI×64 09:30 $1.33 → close $1.33 +0.00; ZSQR×352 09:30 $3.86 → close $3.78 -28.16; ILMN×4 09:30 $272.16 → close $270.00 -8.64; SECZ×83 09:30 $16.21 → close $15.96 -20.75; COST×1 09:30 $887.00 → close $922.76 +35.76; RKLB×18 09:30 $74.15 → close $73.95 -3.60 | — |
+| 2026-09-28 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $773.35 | ▼ 09:30 equity $7,899.06 vs yday $7,917.98 (-18.92) | 09:30 open · cash $773.35 (unchanged overnight, no fees) · equity $7,899.06 vs prior close $7,917.98 (-18.92) · 11 name(s) re-marked at the open (per-name table). CMPX×68 yday $1.13 → 09:30 $1.14 +0.34; COST×1 yday $922.76 → 09:30 $924.88 +2.11; ILMN×4 yday $270.00 → 09:30 $265.95 -16.20; IVVD×499 yday $0.91 → 09:30 $0.98 +31.49; MRNA×2 yday $194.82 → 09:30 $195.68 +1.72; PGEN×10 yday $7.70 → 09:30 $7.61 -0.90; RKLB×18 yday $73.95 → 09:30 $73.20 -13.50; SECZ×83 yday $15.96 → 09:30 $16.00 +3.32; SGRY×5 yday $14.20 → 09:30 $14.18 -0.10; VERI×64 yday $1.33 → 09:30 $1.29 -2.56; ZSQR×352 yday $3.78 → 09:30 $3.71 -24.64 | — |
+| 2026-09-28 09:30 ET | **SELL** | `CMPX` | 68 | $1.14 | $1.00 | $-7.47 | $849.87 | ▼ -7.47 after sell → book $7,898.06; vs 09:30 mark -1.00 | exit unpriced hold on first bar after 3 sess | — |
+| 2026-09-28 09:30 ET | **SELL** | `IVVD` | 499 | $0.98 | $6.46 | $-29.81 | $1,330.48 | ▼ -29.81 after sell → book $7,891.60; vs 09:30 mark -6.46 | exit unpriced hold on first bar after 4 sess | — |
+| 2026-09-28 09:30 ET | **SELL** | `MRNA` | 2 | $195.68 | $2.02 | $+50.35 | $1,719.83 | ▲ +50.35 after sell → book $7,889.58; vs 09:30 mark -2.02 | exit unpriced hold on first bar after 4 sess | — |
+| 2026-09-28 09:30 ET | **SELL** | `PGEN` | 10 | $7.61 | $0.81 | $-5.04 | $1,795.12 | ▼ -5.04 after sell → book $7,888.77; vs 09:30 mark -0.81 | exit unpriced hold on first bar after 3 sess | — |
+| 2026-09-28 09:30 ET | **SELL** | `SGRY` | 5 | $14.18 | $0.74 | $-9.25 | $1,865.27 | ▼ -9.25 after sell → book $7,888.03; vs 09:30 mark -0.74 | exit unpriced hold on first bar after 3 sess | — |
+| 2026-09-28 09:30 ET | **SELL** | `VERI` | 64 | $1.29 | $1.04 | $-2.70 | $1,946.79 | ▼ -2.70 after sell → book $7,886.99; vs 09:30 mark -1.04 | exit unpriced hold on first bar after 3 sess | — |
+| 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1,946.79 | ▲ close $8,235.10 vs 09:30 $7,899.06 (session +348.11) | 16:00 close · cash $1,946.79 · equity $8,235.10 vs 09:30 $7,899.06 (+336.04; session marks +348.11) · 5 name(s) marked open→close (per-name table). COST×1 09:30 $924.88 → close $922.92 -1.96; ILMN×4 09:30 $265.95 → close $271.90 +23.80; RKLB×18 09:30 $73.20 → close $72.19 -18.18; SECZ×83 09:30 $16.00 → close $16.63 +52.29; ZSQR×352 09:30 $3.71 → close $4.54 +292.16 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · RSI overbought
 
-Cash book **-0.76%** ($9,924) · signal-only (no cash/fees) was -20.71%. Starts YES **6/30**. Fills 241 · skips 95 · realized $-976.57.
+Cash book **-0.79%** ($9,921) · signal-only (no cash/fees) was -20.71%. Starts YES **6/30**. Fills 248 · skips 95 · realized $-976.57.
 
 ## How this sleeve decides (like you are 10)
 
@@ -373,6 +373,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-25 09:30 ET | **SHORT** | `TWST` | 3 | $184.00 | $2.03 | — | $14,529.73 | — | RSI overbought; gate rsi_ob=True; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+18.3; leftover $616.25 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-09-25 09:30 ET | **SHORT** | `SECZ` | 38 | $16.21 | $2.14 | — | $15,143.57 | — | RSI overbought; gate rsi_ob=True; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+85.1; leftover $616.25 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 judge🟢 ab🟡 heat🟢 vol🟢 buy🟡 |
 | 2026-09-25 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $15,143.57 | ▲ close $9,924.14 vs 09:30 $9,860.05 (session +82.67) | 16:00 close · cash $15,143.57 · equity $9,924.14 vs 09:30 $9,860.05 (+64.09; session marks +82.67) · 9 name(s) marked open→close (per-name table). SVIA×133 09:30 $3.96 → close $3.96 -0.00; TXG×7 09:30 $83.76 → close $85.71 -13.65; HLP×280 09:30 $2.20 → close $2.21 -2.80; TEM×7 09:30 $83.69 → close $85.01 -9.21; GLND×101 09:30 $6.06 → close $5.54 +52.52; TJGC×20 09:30 $29.76 → close $26.24 +70.40; DNA×60 09:30 $10.20 → close $10.66 -27.60; TWST×3 09:30 $184.00 → close $182.83 +3.51; SECZ×38 09:30 $16.21 → close $15.96 +9.50 | — |
+| 2026-09-28 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $15,143.57 | ▲ 09:30 equity $9,994.24 vs yday $9,924.14 (+70.10) | 09:30 open · cash $15,143.57 (unchanged overnight, no fees) · equity $9,994.24 vs prior close $9,924.14 (+70.10) · 9 name(s) re-marked at the open (per-name table). DNA×60 yday $10.66 → 09:30 $10.38 +17.10; GLND×101 yday $5.54 → 09:30 $5.14 +40.60; HLP×280 yday $2.21 → 09:30 $2.22 -2.80; SECZ×38 yday $15.96 → 09:30 $16.00 -1.52; SVIA×133 yday $3.96 → 09:30 $3.87 +11.97; TEM×7 yday $85.01 → 09:30 $83.57 +10.08; TJGC×20 yday $26.24 → 09:30 $26.50 -5.20; TWST×3 yday $182.83 → 09:30 $181.87 +2.88; TXG×7 yday $85.71 → 09:30 $86.14 -3.01 | — |
+| 2026-09-28 09:30 ET | **COVER** | `DNA` | 60 | $10.38 | $2.17 | $-14.88 | $14,518.90 | ▼ -14.88 after sell → book $9,992.07; vs 09:30 mark -2.17 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-28 09:30 ET | **COVER** | `GLND` | 101 | $5.14 | $2.29 | $+88.49 | $13,997.67 | ▲ +88.49 after sell → book $9,989.78; vs 09:30 mark -2.29 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-28 09:30 ET | **COVER** | `SECZ` | 38 | $16.00 | $2.10 | $+3.74 | $13,387.57 | ▲ +3.74 after sell → book $9,987.67; vs 09:30 mark -2.11 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-28 09:30 ET | **COVER** | `SVIA` | 133 | $3.87 | $2.39 | $+77.63 | $12,870.47 | ▲ +77.63 after sell → book $9,985.29; vs 09:30 mark -2.38 | exit unpriced hold on first bar after 3 sess | — |
+| 2026-09-28 09:30 ET | **COVER** | `TJGC` | 20 | $26.50 | $2.05 | $+61.06 | $12,338.42 | ▲ +61.06 after sell → book $9,983.24; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-28 09:30 ET | **COVER** | `TWST` | 3 | $181.87 | $2.00 | $+2.36 | $11,790.81 | ▲ +2.36 after sell → book $9,981.24; vs 09:30 mark -2.00 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-28 09:30 ET | **COVER** | `TXG` | 7 | $86.14 | $2.01 | $-20.72 | $11,185.82 | ▼ -20.72 after sell → book $9,979.23; vs 09:30 mark -2.01 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $11,185.82 | ▼ close $9,921.06 vs 09:30 $9,994.24 (session -58.17) | 16:00 close · cash $11,185.82 · equity $9,921.06 vs 09:30 $9,994.24 (-73.18; session marks -58.17) · 2 name(s) marked open→close (per-name table). HLP×280 09:30 $2.22 → close $2.39 -47.60; TEM×7 09:30 $83.57 → close $85.08 -10.57 | — |
 
 ## Not taken
 

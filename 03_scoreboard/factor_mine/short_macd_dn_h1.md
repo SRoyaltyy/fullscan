@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · MACD histogram < 0
 
-Cash book **-0.33%** ($9,967) · signal-only (no cash/fees) was +6.85%. Starts YES **5/30**. Fills 259 · skips 108 · realized $-743.47.
+Cash book **-0.33%** ($9,967) · signal-only (no cash/fees) was +6.85%. Starts YES **5/30**. Fills 266 · skips 108 · realized $-743.47.
 
 ## How this sleeve decides (like you are 10)
 
@@ -391,6 +391,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-25 09:30 ET | **SHORT** | `LRMR` | 184 | $3.32 | $2.60 | — | $13,361.29 | — | MACD histogram < 0; gate macd_down=True; list yday_mover; 🔵; ret5=-12.6; leftover $610.93 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-09-25 09:30 ET | **SHORT** | `ACAD` | 27 | $22.21 | $2.11 | — | $13,958.85 | — | MACD histogram < 0; gate macd_down=True; list yday_mover; 🔵; ret5=-19.2; leftover $610.93 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-09-25 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $13,958.85 | ▲ close $9,967.18 vs 09:30 $9,774.88 (session +210.39) | 16:00 close · cash $13,958.85 · equity $9,967.18 vs 09:30 $9,774.88 (+192.30; session marks +210.39) · 7 name(s) marked open→close (per-name table). HALO×5 09:30 $115.36 → close $113.90 +7.30; AEHL×67 09:30 $9.05 → close $9.36 -20.77; BRVE×25 09:30 $23.58 → close $20.62 +74.00; NEOV×255 09:30 $2.39 → close $2.19 +51.00; SFIX×277 09:30 $2.20 → close $2.15 +12.47; LRMR×184 09:30 $3.32 → close $3.08 +45.08; ACAD×27 09:30 $22.21 → close $20.68 +41.31 | — |
+| 2026-09-28 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $13,958.85 | ▲ 09:30 equity $9,984.66 vs yday $9,967.18 (+17.48) | 09:30 open · cash $13,958.85 (unchanged overnight, no fees) · equity $9,984.66 vs prior close $9,967.18 (+17.48) · 7 name(s) re-marked at the open (per-name table). ACAD×27 yday $20.68 → 09:30 $20.53 +4.05; AEHL×67 yday $9.36 → 09:30 $9.01 +23.45; BRVE×25 yday $20.62 → 09:30 $20.25 +9.25; HALO×5 yday $113.90 → 09:30 $113.34 +2.80; LRMR×184 yday $3.08 → 09:30 $3.23 -28.67; NEOV×255 yday $2.19 → 09:30 $2.20 -2.55; SFIX×277 yday $2.15 → 09:30 $2.12 +9.14 | — |
+| 2026-09-28 09:30 ET | **COVER** | `ACAD` | 27 | $20.53 | $2.07 | $+41.18 | $13,402.47 | ▲ +41.18 after sell → book $9,982.59; vs 09:30 mark -2.07 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-28 09:30 ET | **COVER** | `AEHL` | 67 | $9.01 | $2.19 | $-1.74 | $12,796.61 | ▼ -1.74 after sell → book $9,980.40; vs 09:30 mark -2.19 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-28 09:30 ET | **COVER** | `BRVE` | 25 | $20.25 | $2.06 | $+79.08 | $12,288.29 | ▲ +79.08 after sell → book $9,978.33; vs 09:30 mark -2.07 | dropped from list after 1 sess (min 1) | join🟡 sector🟡 gen🔴 news🟡 digest🟢 judge🟢 ab🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-09-28 09:30 ET | **COVER** | `HALO` | 5 | $113.34 | $2.00 | $+6.05 | $11,719.59 | ▲ +6.05 after sell → book $9,976.33; vs 09:30 mark -2.00 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-28 09:30 ET | **COVER** | `LRMR` | 184 | $3.23 | $2.54 | $+11.27 | $11,122.58 | ▲ +11.27 after sell → book $9,973.78; vs 09:30 mark -2.55 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-28 09:30 ET | **COVER** | `NEOV` | 255 | $2.20 | $3.29 | $+41.80 | $10,558.29 | ▲ +41.80 after sell → book $9,970.50; vs 09:30 mark -3.28 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-28 09:30 ET | **COVER** | `SFIX` | 277 | $2.12 | $3.57 | $+14.39 | $9,966.92 | ▲ +14.39 after sell → book $9,966.92; vs 09:30 mark -3.58 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,966.92 | ▲ close $9,966.92 vs 09:30 $9,984.66 (session +0.00) | 16:00 close · cash $9,966.92 · no lots left · equity $9,966.92. | — |
 
 ## Not taken
 

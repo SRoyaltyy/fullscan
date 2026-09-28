@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 4 · rank `cond` · size `conviction` · sell `list` · S-boost `none` · merged news🟢 rank cameras; 70% leftover if #1 net ≥ 5
 
-Cash book **-14.55%** ($8,545) · signal-only (no cash/fees) was +282.84%. Starts YES **10/30**. Fills 84 · skips 137 · realized $-233.27.
+Cash book **-2.43%** ($9,757) · signal-only (no cash/fees) was +282.84%. Starts YES **10/30**. Fills 89 · skips 137 · realized $-233.27.
 
 ## How this sleeve decides (like you are 10)
 
@@ -219,6 +219,13 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-25 09:30 ET | **BUY** | `ILMN` | 3 | $272.16 | $2.00 | — | $1,714.10 | — | merged news🟢 rank cameras; 70% leftover if #1 net ≥ 5; gate news=good; rank cond; list ohlc_hot; 🔵; ⚪; ret5=+11.7; leftover $850.46 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-09-25 09:30 ET | **BUY** | `SECZ` | 52 | $16.21 | $2.15 | — | $869.03 | — | merged news🟢 rank cameras; 70% leftover if #1 net ≥ 5; gate news=good; rank cond; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+85.1; leftover $850.46 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 judge🟢 ab🟡 heat🟢 vol🟢 buy🟡 |
 | 2026-09-25 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $869.03 | ▼ close $8,545.33 vs 09:30 $8,712.48 (session -142.84) | 16:00 close · cash $869.03 · equity $8,545.33 vs 09:30 $8,712.48 (-167.15; session marks -142.84) · 8 name(s) marked open→close (per-name table). CMPX×14 09:30 $1.14 → close $1.14 -0.00; IVVD×49 09:30 $0.91 → close $0.91 -0.00; PGEN×15 09:30 $7.70 → close $7.70 -0.00; SGRY×1 09:30 $14.20 → close $14.20 -0.00; VERI×13 09:30 $1.33 → close $1.33 +0.00; ZSQR×1542 09:30 $3.86 → close $3.78 -123.36; ILMN×3 09:30 $272.16 → close $270.00 -6.48; SECZ×52 09:30 $16.21 → close $15.96 -13.00 | — |
+| 2026-09-28 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $869.03 | ▼ 09:30 equity $8,428.59 vs yday $8,545.33 (-116.74) | 09:30 open · cash $869.03 (unchanged overnight, no fees) · equity $8,428.59 vs prior close $8,545.33 (-116.74) · 8 name(s) re-marked at the open (per-name table). CMPX×14 yday $1.13 → 09:30 $1.14 +0.07; ILMN×3 yday $270.00 → 09:30 $265.95 -12.15; IVVD×49 yday $0.91 → 09:30 $0.98 +3.09; PGEN×15 yday $7.70 → 09:30 $7.61 -1.35; SECZ×52 yday $15.96 → 09:30 $16.00 +2.08; SGRY×1 yday $14.20 → 09:30 $14.18 -0.02; VERI×13 yday $1.33 → 09:30 $1.29 -0.52; ZSQR×1542 yday $3.78 → 09:30 $3.71 -107.94 | — |
+| 2026-09-28 09:30 ET | **SELL** | `CMPX` | 14 | $1.14 | $0.22 | $-1.55 | $884.77 | ▼ -1.55 after sell → book $8,428.37; vs 09:30 mark -0.22 | exit unpriced hold on first bar after 3 sess | — |
+| 2026-09-28 09:30 ET | **SELL** | `IVVD` | 49 | $0.98 | $0.65 | $-2.95 | $931.95 | ▼ -2.95 after sell → book $8,427.72; vs 09:30 mark -0.65 | exit unpriced hold on first bar after 4 sess | — |
+| 2026-09-28 09:30 ET | **SELL** | `PGEN` | 15 | $7.61 | $1.21 | $-7.54 | $1,044.90 | ▼ -7.54 after sell → book $8,426.52; vs 09:30 mark -1.20 | exit unpriced hold on first bar after 3 sess | — |
+| 2026-09-28 09:30 ET | **SELL** | `SGRY` | 1 | $14.18 | $0.16 | $-1.87 | $1,058.91 | ▼ -1.87 after sell → book $8,426.35; vs 09:30 mark -0.17 | exit unpriced hold on first bar after 3 sess | — |
+| 2026-09-28 09:30 ET | **SELL** | `VERI` | 13 | $1.29 | $0.23 | $-0.56 | $1,075.45 | ▼ -0.56 after sell → book $8,426.12; vs 09:30 mark -0.23 | exit unpriced hold on first bar after 3 sess | — |
+| 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1,075.45 | ▲ close $9,756.59 vs 09:30 $8,428.59 (session +1,330.47) | 16:00 close · cash $1,075.45 · equity $9,756.59 vs 09:30 $8,428.59 (+1328.00; session marks +1330.47) · 3 name(s) marked open→close (per-name table). ILMN×3 09:30 $265.95 → close $271.90 +17.85; SECZ×52 09:30 $16.00 → close $16.63 +32.76; ZSQR×1542 09:30 $3.71 → close $4.54 +1279.86 | — |
 
 ## Not taken
 

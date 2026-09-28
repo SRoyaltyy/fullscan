@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 4 · rank `cond` · size `conviction` · sell `list` · S-boost `none` · merged news🟢 rank cameras; 70% leftover if #1 net ≥ 5
 
-Cash book **-16.38%** ($8,362) · signal-only (no cash/fees) was +13.54%. Starts YES **26/30**. Fills 113 · skips 51 · realized $+1398.96.
+Cash book **-17.81%** ($8,219) · signal-only (no cash/fees) was +13.54%. Starts YES **26/30**. Fills 116 · skips 51 · realized $+1398.96.
 
 ## How this sleeve decides (like you are 10)
 
@@ -248,6 +248,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-25 09:30 ET | **BUY** | `ILMN` | 3 | $272.16 | $2.00 | — | $1,723.31 | — | merged news🟢 rank cameras; 70% leftover if #1 net ≥ 5; gate news=good; rank cond; list ohlc_hot; 🔵; ⚪; ret5=+11.7; leftover $852.93 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-09-25 09:30 ET | **BUY** | `SECZ` | 52 | $16.21 | $2.15 | — | $878.24 | — | merged news🟢 rank cameras; 70% leftover if #1 net ≥ 5; gate news=good; rank cond; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+85.1; leftover $852.93 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 judge🟢 ab🟡 heat🟢 vol🟢 buy🟡 |
 | 2026-09-25 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $878.24 | ▼ close $8,362.04 vs 09:30 $8,529.29 (session -143.16) | 16:00 close · cash $878.24 · equity $8,362.04 vs 09:30 $8,529.29 (-167.25; session marks -143.16) · 3 name(s) marked open→close (per-name table). ZSQR×1546 09:30 $3.86 → close $3.78 -123.68; ILMN×3 09:30 $272.16 → close $270.00 -6.48; SECZ×52 09:30 $16.21 → close $15.96 -13.00 | — |
+| 2026-09-28 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $878.24 | ▼ 09:30 equity $8,243.75 vs yday $8,362.04 (-118.29) | 09:30 open · cash $878.24 (unchanged overnight, no fees) · equity $8,243.75 vs prior close $8,362.04 (-118.29) · 3 name(s) re-marked at the open (per-name table). ILMN×3 yday $270.00 → 09:30 $265.95 -12.15; SECZ×52 yday $15.96 → 09:30 $16.00 +2.08; ZSQR×1546 yday $3.78 → 09:30 $3.71 -108.22 | — |
+| 2026-09-28 09:30 ET | **SELL** | `ILMN` | 3 | $265.95 | $2.02 | $-22.65 | $1,674.07 | ▼ -22.65 after sell → book $8,241.73; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-28 09:30 ET | **SELL** | `SECZ` | 52 | $16.00 | $2.17 | $-15.23 | $2,503.90 | ▼ -15.23 after sell → book $8,239.56; vs 09:30 mark -2.17 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-28 09:30 ET | **SELL** | `ZSQR` | 1546 | $3.71 | $20.25 | $-272.09 | $8,219.32 | ▼ -272.09 after sell → book $8,219.32; vs 09:30 mark -20.24 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,219.32 | ▲ close $8,219.32 vs 09:30 $8,243.75 (session +0.00) | 16:00 close · cash $8,219.32 · no lots left · equity $8,219.32. | — |
 
 ## Not taken
 

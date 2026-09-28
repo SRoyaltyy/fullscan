@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `hot_score` · size `leftover` · sell `list` · S-boost `none` · rank by hot_score
 
-Cash book **+13.76%** ($11,376) · signal-only (no cash/fees) was +392.57%. Starts YES **29/30**. Fills 190 · skips 265 · realized $+1176.18.
+Cash book **+13.49%** ($11,349) · signal-only (no cash/fees) was +392.57%. Starts YES **29/30**. Fills 199 · skips 265 · realized $+1176.18.
 
 ## How this sleeve decides (like you are 10)
 
@@ -323,6 +323,17 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-25 09:30 ET | **BUY** | `CYPH` | 421 | $4.00 | $5.43 | — | $1,759.26 | — | rank by hot_score; rank hot_score; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+32.9; leftover $1686.31 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-09-25 09:30 ET | **BUY** | `ZSQR` | 436 | $3.86 | $5.62 | — | $70.68 | — | rank by hot_score; rank hot_score; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+46.1; leftover $1686.31 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-09-25 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $70.68 | ▼ close $11,375.94 vs 09:30 $11,541.93 (session -148.29) | 16:00 close · cash $70.68 · equity $11,375.94 vs 09:30 $11,541.93 (-165.99; session marks -148.29) · 14 name(s) marked open→close (per-name table). BFLY×1 09:30 $9.41 → close $9.41 -0.00; DNA×1 09:30 $10.20 → close $10.66 +0.46; GLND×3 09:30 $6.06 → close $5.54 -1.56; INDP×2 09:30 $4.00 → close $4.00 +0.00; IVVD×8 09:30 $0.91 → close $0.91 -0.00; NUAI×1 09:30 $6.94 → close $6.94 +0.00; SVIA×2 09:30 $3.96 → close $3.96 +0.00; TJGC×102 09:30 $29.76 → close $26.24 -359.04; VNET×1 09:30 $6.92 → close $6.92 +0.00; SECZ×104 09:30 $16.21 → close $15.96 -26.00; USDE×108 09:30 $15.58 → close $17.25 +180.24; GRAL×13 09:30 $123.50 → close $126.89 +44.07; CYPH×421 09:30 $4.00 → close $4.12 +48.42; ZSQR×436 09:30 $3.86 → close $3.78 -34.88 | — |
+| 2026-09-28 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $70.68 | ▼ 09:30 equity $11,320.16 vs yday $11,375.94 (-55.78) | 09:30 open · cash $70.68 (unchanged overnight, no fees) · equity $11,320.16 vs prior close $11,375.94 (-55.78) · 14 name(s) re-marked at the open (per-name table). BFLY×1 yday $9.41 → 09:30 $9.28 -0.13; CYPH×421 yday $4.12 → 09:30 $4.03 -36.84; DNA×1 yday $10.66 → 09:30 $10.38 -0.29; GLND×3 yday $5.54 → 09:30 $5.14 -1.21; GRAL×13 yday $126.89 → 09:30 $128.90 +26.13; INDP×2 yday $4.00 → 09:30 $3.78 -0.44; IVVD×8 yday $0.91 → 09:30 $0.98 +0.50; NUAI×1 yday $6.94 → 09:30 $6.98 +0.04; SECZ×104 yday $15.96 → 09:30 $16.00 +4.16; SVIA×2 yday $3.96 → 09:30 $3.87 -0.18; TJGC×102 yday $26.24 → 09:30 $26.50 +26.52; USDE×108 yday $17.25 → 09:30 $16.85 -43.20; VNET×1 yday $6.92 → 09:30 $6.58 -0.34; ZSQR×436 yday $3.78 → 09:30 $3.71 -30.52 | — |
+| 2026-09-28 09:30 ET | **SELL** | `BFLY` | 1 | $9.28 | $0.12 | $-0.84 | $79.84 | ▼ -0.84 after sell → book $11,320.04; vs 09:30 mark -0.12 | exit unpriced hold on first bar after 3 sess | — |
+| 2026-09-28 09:30 ET | **SELL** | `DNA` | 1 | $10.38 | $0.13 | $+1.02 | $90.09 | ▲ +1.02 after sell → book $11,319.92; vs 09:30 mark -0.12 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-28 09:30 ET | **SELL** | `GLND` | 3 | $5.14 | $0.18 | $+7.04 | $105.32 | ▲ +7.04 after sell → book $11,319.73; vs 09:30 mark -0.19 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-28 09:30 ET | **SELL** | `INDP` | 2 | $3.78 | $0.10 | $+1.19 | $112.78 | ▲ +1.19 after sell → book $11,319.63; vs 09:30 mark -0.10 | exit unpriced hold on first bar after 4 sess | — |
+| 2026-09-28 09:30 ET | **SELL** | `IVVD` | 8 | $0.98 | $0.12 | $-0.50 | $120.47 | ▼ -0.50 after sell → book $11,319.51; vs 09:30 mark -0.12 | exit unpriced hold on first bar after 4 sess | — |
+| 2026-09-28 09:30 ET | **SELL** | `NUAI` | 1 | $6.98 | $0.09 | $-0.42 | $127.36 | ▼ -0.42 after sell → book $11,319.42; vs 09:30 mark -0.09 | exit unpriced hold on first bar after 4 sess | — |
+| 2026-09-28 09:30 ET | **SELL** | `SVIA` | 2 | $3.87 | $0.10 | $-1.44 | $134.99 | ▼ -1.44 after sell → book $11,319.31; vs 09:30 mark -0.11 | exit unpriced hold on first bar after 3 sess | — |
+| 2026-09-28 09:30 ET | **SELL** | `TJGC` | 102 | $26.50 | $2.33 | $+973.55 | $2,835.66 | ▲ +973.55 after sell → book $11,316.98; vs 09:30 mark -2.33 | dropped from list after 5 sess (min 3) | — |
+| 2026-09-28 09:30 ET | **SELL** | `VNET` | 1 | $6.58 | $0.09 | $-0.76 | $2,842.15 | ▼ -0.76 after sell → book $11,316.89; vs 09:30 mark -0.09 | exit unpriced hold on first bar after 4 sess | — |
+| 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $2,842.15 | ▲ close $11,349.29 vs 09:30 $11,320.16 (session +32.40) | 16:00 close · cash $2,842.15 · equity $11,349.29 vs 09:30 $11,320.16 (+29.13; session marks +32.40) · 5 name(s) marked open→close (per-name table). CYPH×421 09:30 $4.03 → close $3.31 -304.17; GRAL×13 09:30 $128.90 → close $132.63 +48.49; SECZ×104 09:30 $16.00 → close $16.63 +65.52; USDE×108 09:30 $16.85 → close $15.56 -139.32; ZSQR×436 09:30 $3.71 → close $4.54 +361.88 | — |
 
 ## Not taken
 

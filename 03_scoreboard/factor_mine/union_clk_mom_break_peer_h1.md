@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `hot_score` · size `leftover` · sell `list` · S-boost `none` · Clock-B #1 mom+breakout+peer/sector (research; not KEEP)
 
-Cash book **-5.33%** ($9,467) · signal-only (no cash/fees) was +1.42%. Starts YES **4/30**. Fills 237 · skips 96 · realized $-120.43.
+Cash book **-6.93%** ($9,307) · signal-only (no cash/fees) was +1.42%. Starts YES **4/30**. Fills 245 · skips 96 · realized $-120.43.
 
 ## How this sleeve decides (like you are 10)
 
@@ -373,6 +373,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-25 09:30 ET | **BUY** | `RGEN` | 6 | $189.92 | $2.01 | — | $1,260.95 | — | Clock-B #1 mom+breakout+peer/sector (research; not KEEP); gate clk_mom_break_peer=True; rank hot_score; list ohlc_hot; 🔵; ⚪; ret5=+7.0; leftover $1187.77 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-09-25 09:30 ET | **BUY** | `MRVI` | 155 | $7.65 | $2.46 | — | $72.75 | — | Clock-B #1 mom+breakout+peer/sector (research; not KEEP); gate clk_mom_break_peer=True; rank hot_score; list flatten; 🔵; ⚪; ret5=+5.2; leftover $1187.77 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-09-25 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $72.75 | ▼ close $9,466.99 vs 09:30 $9,502.14 (session -17.23) | 16:00 close · cash $72.75 · equity $9,466.99 vs 09:30 $9,502.14 (-35.15; session marks -17.23) · 8 name(s) marked open→close (per-name table). SAIL×53 09:30 $22.05 → close $20.64 -74.73; SATL×197 09:30 $6.00 → close $6.17 +33.49; WRBY×45 09:30 $26.27 → close $26.71 +19.80; PRGO×80 09:30 $14.81 → close $15.42 +48.80; SENS×115 09:30 $10.28 → close $10.00 -32.20; RKLB×16 09:30 $74.15 → close $73.95 -3.20; RGEN×6 09:30 $189.92 → close $189.68 -1.44; MRVI×155 09:30 $7.65 → close $7.60 -7.75 | — |
+| 2026-09-28 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $72.75 | ▼ 09:30 equity $9,325.03 vs yday $9,466.99 (-141.96) | 09:30 open · cash $72.75 (unchanged overnight, no fees) · equity $9,325.03 vs prior close $9,466.99 (-141.96) · 8 name(s) re-marked at the open (per-name table). MRVI×155 yday $7.60 → 09:30 $7.49 -17.05; PRGO×80 yday $15.42 → 09:30 $15.21 -16.80; RGEN×6 yday $189.68 → 09:30 $187.25 -14.58; RKLB×16 yday $73.95 → 09:30 $73.20 -12.00; SAIL×53 yday $20.64 → 09:30 $20.03 -32.33; SATL×197 yday $6.17 → 09:30 $6.17 +0.00; SENS×115 yday $10.00 → 09:30 $9.85 -17.25; WRBY×45 yday $26.71 → 09:30 $26.00 -31.95 | — |
+| 2026-09-28 09:30 ET | **SELL** | `MRVI` | 155 | $7.49 | $2.49 | $-29.75 | $1,231.21 | ▼ -29.75 after sell → book $9,322.54; vs 09:30 mark -2.49 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-28 09:30 ET | **SELL** | `PRGO` | 80 | $15.21 | $2.25 | $+27.52 | $2,445.76 | ▲ +27.52 after sell → book $9,320.29; vs 09:30 mark -2.25 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-28 09:30 ET | **SELL** | `RGEN` | 6 | $187.25 | $2.03 | $-20.06 | $3,567.23 | ▼ -20.06 after sell → book $9,318.26; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-28 09:30 ET | **SELL** | `RKLB` | 16 | $73.20 | $2.06 | $-19.30 | $4,736.37 | ▼ -19.30 after sell → book $9,316.20; vs 09:30 mark -2.06 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-28 09:30 ET | **SELL** | `SAIL` | 53 | $20.03 | $2.17 | $-111.38 | $5,795.79 | ▼ -111.38 after sell → book $9,314.03; vs 09:30 mark -2.17 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-28 09:30 ET | **SELL** | `SATL` | 197 | $6.17 | $2.62 | $+28.29 | $7,008.66 | ▲ +28.29 after sell → book $9,311.41; vs 09:30 mark -2.62 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-28 09:30 ET | **SELL** | `SENS` | 115 | $9.85 | $2.36 | $-54.15 | $8,139.04 | ▼ -54.15 after sell → book $9,309.04; vs 09:30 mark -2.37 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-28 09:30 ET | **SELL** | `WRBY` | 45 | $26.00 | $2.15 | $-16.42 | $9,306.90 | ▼ -16.42 after sell → book $9,306.90; vs 09:30 mark -2.14 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,306.90 | ▲ close $9,306.90 vs 09:30 $9,325.03 (session +0.00) | 16:00 close · cash $9,306.90 · no lots left · equity $9,306.90. | — |
 
 ## Not taken
 

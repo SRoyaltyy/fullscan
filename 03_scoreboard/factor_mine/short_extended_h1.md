@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · ret_5>15
 
-Cash book **-5.30%** ($9,470) · signal-only (no cash/fees) was -19.86%. Starts YES **3/30**. Fills 236 · skips 88 · realized $-1484.16.
+Cash book **-4.92%** ($9,508) · signal-only (no cash/fees) was -19.86%. Starts YES **3/30**. Fills 244 · skips 88 · realized $-1484.16.
 
 ## How this sleeve decides (like you are 10)
 
@@ -368,6 +368,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-25 09:30 ET | **SHORT** | `GRAL` | 4 | $123.50 | $2.04 | — | $13,356.58 | — | ret_5>15; gate ret_5_min=15.0; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+56.6; leftover $588.81 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-09-25 09:30 ET | **SHORT** | `QMCO` | 19 | $29.80 | $2.08 | — | $13,920.69 | — | ret_5>15; gate ret_5_min=15.0; list yday_gainer,yday_mover; 🔵; ret5=+18.2; leftover $588.81 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
 | 2026-09-25 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $13,920.69 | ▲ close $9,470.04 vs 09:30 $9,420.94 (session +66.49) | 16:00 close · cash $13,920.69 · equity $9,470.04 vs 09:30 $9,420.94 (+49.10; session marks +66.49) · 8 name(s) marked open→close (per-name table). GLND×97 09:30 $6.06 → close $5.54 +50.44; ZSQR×152 09:30 $3.86 → close $3.78 +12.16; TJGC×19 09:30 $29.76 → close $26.24 +66.88; DNA×57 09:30 $10.20 → close $10.66 -26.22; TWST×3 09:30 $184.00 → close $182.83 +3.51; SECZ×36 09:30 $16.21 → close $15.96 +9.00; GRAL×4 09:30 $123.50 → close $126.89 -13.56; QMCO×19 09:30 $29.80 → close $31.68 -35.72 | — |
+| 2026-09-28 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $13,920.69 | ▲ 09:30 equity $9,524.95 vs yday $9,470.04 (+54.91) | 09:30 open · cash $13,920.69 (unchanged overnight, no fees) · equity $9,524.95 vs prior close $9,470.04 (+54.91) · 8 name(s) re-marked at the open (per-name table). DNA×57 yday $10.66 → 09:30 $10.38 +16.25; GLND×97 yday $5.54 → 09:30 $5.14 +38.99; GRAL×4 yday $126.89 → 09:30 $128.90 -8.04; QMCO×19 yday $31.68 → 09:30 $31.65 +0.57; SECZ×36 yday $15.96 → 09:30 $16.00 -1.44; TJGC×19 yday $26.24 → 09:30 $26.50 -4.94; TWST×3 yday $182.83 → 09:30 $181.87 +2.88; ZSQR×152 yday $3.78 → 09:30 $3.71 +10.64 | — |
+| 2026-09-28 09:30 ET | **COVER** | `DNA` | 57 | $10.38 | $2.16 | $-14.33 | $13,327.15 | ▼ -14.33 after sell → book $9,522.79; vs 09:30 mark -2.16 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-28 09:30 ET | **COVER** | `GLND` | 97 | $5.14 | $2.28 | $+84.83 | $12,826.49 | ▲ +84.83 after sell → book $9,520.51; vs 09:30 mark -2.28 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-28 09:30 ET | **COVER** | `GRAL` | 4 | $128.90 | $2.00 | $-25.64 | $12,308.89 | ▼ -25.64 after sell → book $9,518.51; vs 09:30 mark -2.00 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-28 09:30 ET | **COVER** | `QMCO` | 19 | $31.65 | $2.05 | $-39.28 | $11,705.49 | ▼ -39.28 after sell → book $9,516.46; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | join🔴 sector🟢 gen🔴 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-09-28 09:30 ET | **COVER** | `SECZ` | 36 | $16.00 | $2.10 | $+3.33 | $11,127.39 | ▲ +3.33 after sell → book $9,514.36; vs 09:30 mark -2.10 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-28 09:30 ET | **COVER** | `TJGC` | 19 | $26.50 | $2.05 | $+57.81 | $10,621.84 | ▲ +57.81 after sell → book $9,512.31; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-28 09:30 ET | **COVER** | `TWST` | 3 | $181.87 | $2.00 | $+2.36 | $10,074.23 | ▲ +2.36 after sell → book $9,510.31; vs 09:30 mark -2.00 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-28 09:30 ET | **COVER** | `ZSQR` | 152 | $3.71 | $2.45 | $+17.86 | $9,507.87 | ▲ +17.86 after sell → book $9,507.87; vs 09:30 mark -2.44 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,507.87 | ▲ close $9,507.87 vs 09:30 $9,524.95 (session +0.00) | 16:00 close · cash $9,507.87 · no lots left · equity $9,507.87. | — |
 
 ## Not taken
 

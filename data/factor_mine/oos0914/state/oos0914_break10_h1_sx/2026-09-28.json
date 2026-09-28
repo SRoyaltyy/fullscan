@@ -1,0 +1,85 @@
+{
+  "buys": [],
+  "cash": 8032.41,
+  "date": "2026-09-28",
+  "equity": 8032.41,
+  "fees": 11.658,
+  "fills": [
+    {
+      "fees": 4.5744,
+      "fill_rule": "open",
+      "pnl": -330.85,
+      "price": 5.138,
+      "shares": 349,
+      "side": "SELL",
+      "ticker": "GLND"
+    },
+    {
+      "fees": 2.4182,
+      "fill_rule": "open",
+      "pnl": -32.1,
+      "price": 16.0,
+      "shares": 130,
+      "side": "SELL",
+      "ticker": "SECZ"
+    },
+    {
+      "fees": 2.2298,
+      "fill_rule": "open",
+      "pnl": -235.89,
+      "price": 26.5,
+      "shares": 71,
+      "side": "SELL",
+      "ticker": "TJGC"
+    },
+    {
+      "fees": 2.4356,
+      "fill_rule": "open",
+      "pnl": 166.47,
+      "price": 16.85,
+      "shares": 135,
+      "side": "SELL",
+      "ticker": "USDE"
+    }
+  ],
+  "holdings": [],
+  "mean": -2.2192,
+  "n_trades_today": 4,
+  "recipe": "oos0914_break10_h1_sx",
+  "sells": [
+    {
+      "fill_rule": "open",
+      "price": 5.138,
+      "shares": 349,
+      "side": "SELL",
+      "ticker": "GLND"
+    },
+    {
+      "fill_rule": "open",
+      "price": 16.0,
+      "shares": 130,
+      "side": "SELL",
+      "ticker": "SECZ"
+    },
+    {
+      "fill_rule": "open",
+      "price": 26.5,
+      "shares": 71,
+      "side": "SELL",
+      "ticker": "TJGC"
+    },
+    {
+      "fill_rule": "open",
+      "price": 16.85,
+      "shares": 135,
+      "side": "SELL",
+      "ticker": "USDE"
+    }
+  ],
+  "state": {
+    "after": "2026-09-28",
+    "cash": 8032.41,
+    "pos": {},
+    "yday_equity": 8032.41
+  }
+}

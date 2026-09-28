@@ -6,7 +6,7 @@ Buys the flatten **wish-list** even on io/HOLD mornings — live `flatten_robust
 
 Side **long** · universe `flatten` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · flatten looker: 0 red + yesterday up
 
-Cash book **-5.14%** ($9,486) · signal-only (no cash/fees) was +1.97%. Starts YES **12/30**. Fills 55 · skips 119 · realized $-62.52.
+Cash book **-6.16%** ($9,384) · signal-only (no cash/fees) was +1.97%. Starts YES **12/30**. Fills 65 · skips 119 · realized $-62.52.
 
 ## How this sleeve decides (like you are 10)
 
@@ -49,7 +49,7 @@ Imagine a kid with $10,000 at the 09:30 school bell. They look at the flatten wi
 Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 09:30 packet + leftover cash + lots on hand decide the ticket. Same-day Change% is outcome only.
 
 - **Universe** `flatten` — candidate list at 09:30 (flatten wish-list, union, probable, yday gainer, or OHLC hot).
-- **Gate** `zero_red=True,yday_up=True` · **rank** `cond` · **top_n** 8.
+- **Gate** `yday_up=True,zero_red=True` · **rank** `cond` · **top_n** 8.
 - **Size** `leftover` splits leftover cash among *new* names only. Rank-weight / top-heavy still cannot invent money.
 - **Sell** `list` after min-hold **5**. We never sell a ticker we do not hold. Early 🚨 / last-red / news🔴 can still exit inside the floor.
 - **Entry:** Buys the flatten **wish-list** even on io/HOLD mornings — live `flatten_robust` would not send 09:30 tickets those days. See `flatten_live_*` for the gated book.
@@ -191,6 +191,18 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-25 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $46.46 | ▲ 09:30 equity $9,525.26 vs yday $9,503.15 (+22.11) | 09:30 open · cash $46.46 (unchanged overnight, no fees) · equity $9,525.26 vs prior close $9,503.15 (+22.11) · 13 name(s) re-marked at the open (per-name table). A×7 yday $172.84 → 09:30 $171.98 -6.02; ADMA×119 yday $9.52 → 09:30 $9.52 +0.00; ARQT×42 yday $26.27 → 09:30 $26.27 +0.00; CYPH×2 yday $4.08 → 09:30 $4.00 -0.15; DXCM×13 yday $87.47 → 09:30 $87.47 +0.00; ECO×1 yday $78.22 → 09:30 $78.22 +0.00; FIVN×3 yday $36.66 → 09:30 $36.66 +0.00; FTRE×57 yday $20.02 → 09:30 $20.02 +0.00; HALO×10 yday $115.22 → 09:30 $115.36 +1.40; IOVA×1 yday $10.80 → 09:30 $10.80 +0.00; OMER×56 yday $20.13 → 09:30 $20.61 +26.88; PGEN×147 yday $7.70 → 09:30 $7.70 +0.00; RBRK×1 yday $113.80 → 09:30 $113.80 +0.00 | — |
 | 2026-09-25 09:30 ET | **BUY** | `MRVI` | 6 | $7.65 | $0.48 | — | $0.08 | — | flatten looker: 0 red + yesterday up; gate zero_red=True,yday_up=True; rank cond; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ⚪; ret5=+5.2; leftover $46.46 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-09-25 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $0.08 | ▼ close $9,486.10 vs 09:30 $9,525.26 (session -38.68) | 16:00 close · cash $0.08 · equity $9,486.10 vs 09:30 $9,525.26 (-39.16; session marks -38.68) · 14 name(s) marked open→close (per-name table). A×7 09:30 $171.98 → close $172.79 +5.67; ADMA×119 09:30 $9.52 → close $9.52 +0.00; ARQT×42 09:30 $26.27 → close $26.27 +0.00; CYPH×2 09:30 $4.00 → close $4.12 +0.23; DXCM×13 09:30 $87.47 → close $87.47 +0.00; ECO×1 09:30 $78.22 → close $78.22 +0.00; FIVN×3 09:30 $36.66 → close $36.66 -0.00; FTRE×57 09:30 $20.02 → close $20.02 +0.00; HALO×10 09:30 $115.36 → close $113.90 -14.60; IOVA×1 09:30 $10.80 → close $10.80 +0.00; OMER×56 09:30 $20.61 → close $20.08 -29.68; PGEN×147 09:30 $7.70 → close $7.70 -0.00; RBRK×1 09:30 $113.80 → close $113.80 +0.00; MRVI×6 09:30 $7.65 → close $7.60 -0.30 | — |
+| 2026-09-28 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $0.08 | ▼ 09:30 equity $9,387.99 vs yday $9,486.10 (-98.11) | 09:30 open · cash $0.08 (unchanged overnight, no fees) · equity $9,387.99 vs prior close $9,486.10 (-98.11) · 14 name(s) re-marked at the open (per-name table). A×7 yday $172.79 → 09:30 $170.00 -19.53; ADMA×119 yday $9.52 → 09:30 $9.38 -16.66; ARQT×42 yday $26.27 → 09:30 $26.70 +18.06; CYPH×2 yday $4.12 → 09:30 $4.03 -0.18; DXCM×13 yday $87.47 → 09:30 $86.87 -7.80; ECO×1 yday $78.22 → 09:30 $79.55 +1.33; FIVN×3 yday $36.66 → 09:30 $34.75 -5.73; FTRE×57 yday $20.02 → 09:30 $19.54 -27.36; HALO×10 yday $113.90 → 09:30 $113.34 -5.60; IOVA×1 yday $10.80 → 09:30 $10.90 +0.10; MRVI×6 yday $7.60 → 09:30 $7.49 -0.66; OMER×56 yday $20.08 → 09:30 $19.83 -14.00; PGEN×147 yday $7.70 → 09:30 $7.61 -13.23; RBRK×1 yday $113.80 → 09:30 $106.94 -6.86 | — |
+| 2026-09-28 09:30 ET | **SELL** | `ADMA` | 119 | $9.38 | $2.38 | $-55.89 | $1,113.92 | ▼ -55.89 after sell → book $9,385.61; vs 09:30 mark -2.38 | exit unpriced hold on first bar after 3 sess | — |
+| 2026-09-28 09:30 ET | **SELL** | `ARQT` | 42 | $26.70 | $2.14 | $-50.03 | $2,233.19 | ▼ -50.03 after sell → book $9,383.47; vs 09:30 mark -2.14 | exit unpriced hold on first bar after 3 sess | — |
+| 2026-09-28 09:30 ET | **SELL** | `CYPH` | 2 | $4.03 | $0.11 | $-0.13 | $2,241.15 | ▼ -0.13 after sell → book $9,383.37; vs 09:30 mark -0.10 | dropped from list after 5 sess (min 5) | join🟢 sector🟡 gen🔴 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-28 09:30 ET | **SELL** | `DXCM` | 13 | $86.87 | $2.05 | $-38.27 | $3,368.41 | ▼ -38.27 after sell → book $9,381.32; vs 09:30 mark -2.05 | exit unpriced hold on first bar after 3 sess | — |
+| 2026-09-28 09:30 ET | **SELL** | `ECO` | 1 | $79.55 | $0.82 | $-7.12 | $3,447.14 | ▼ -7.12 after sell → book $9,380.50; vs 09:30 mark -0.82 | exit unpriced hold on first bar after 6 sess | — |
+| 2026-09-28 09:30 ET | **SELL** | `FIVN` | 3 | $34.75 | $1.07 | $-1.18 | $3,550.32 | ▼ -1.18 after sell → book $9,379.43; vs 09:30 mark -1.07 | exit unpriced hold on first bar after 6 sess | — |
+| 2026-09-28 09:30 ET | **SELL** | `FTRE` | 57 | $19.54 | $2.18 | $-44.81 | $4,661.92 | ▼ -44.81 after sell → book $9,377.25; vs 09:30 mark -2.18 | exit unpriced hold on first bar after 3 sess | — |
+| 2026-09-28 09:30 ET | **SELL** | `IOVA` | 1 | $10.90 | $0.13 | $+0.23 | $4,672.68 | ▲ +0.23 after sell → book $9,377.11; vs 09:30 mark -0.14 | exit unpriced hold on first bar after 5 sess | join🟢 sector🟡 gen🔴 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-28 09:30 ET | **SELL** | `PGEN` | 147 | $7.61 | $2.47 | $-54.88 | $5,788.89 | ▼ -54.88 after sell → book $9,374.65; vs 09:30 mark -2.46 | exit unpriced hold on first bar after 3 sess | — |
+| 2026-09-28 09:30 ET | **SELL** | `RBRK` | 1 | $106.94 | $1.09 | $-3.79 | $5,894.74 | ▼ -3.79 after sell → book $9,373.56; vs 09:30 mark -1.09 | exit unpriced hold on first bar after 6 sess | — |
+| 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $5,894.74 | ▲ close $9,383.97 vs 09:30 $9,387.99 (session +10.41) | 16:00 close · cash $5,894.74 · equity $9,383.97 vs 09:30 $9,387.99 (-4.02; session marks +10.41) · 4 name(s) marked open→close (per-name table). A×7 09:30 $170.00 → close $175.21 +36.47; HALO×10 09:30 $113.34 → close $112.89 -4.50; MRVI×6 09:30 $7.49 → close $7.63 +0.84; OMER×56 09:30 $19.83 → close $19.43 -22.40 | — |
 
 ## Not taken
 

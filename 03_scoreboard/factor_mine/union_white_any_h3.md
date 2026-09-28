@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · −0 red + (yday up or major catalyst), then Score
 
-Cash book **-19.63%** ($8,037) · signal-only (no cash/fees) was -4.29%. Starts YES **2/30**. Fills 137 · skips 149 · realized $-1383.61.
+Cash book **-16.53%** ($8,347) · signal-only (no cash/fees) was -4.29%. Starts YES **2/30**. Fills 142 · skips 149 · realized $-1383.61.
 
 ## How this sleeve decides (like you are 10)
 
@@ -273,6 +273,13 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-25 09:30 ET | **BUY** | `SECZ` | 65 | $16.21 | $2.19 | — | $1,332.46 | — | −0 red + (yday up or major catalyst), then Score; gate cam_bad_max=0,yday_or_catalyst=True; rank list; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+85.1; leftover $1064.95 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 judge🟢 ab🟡 heat🟢 vol🟢 buy🟡 |
 | 2026-09-25 09:30 ET | **BUY** | `GRAL` | 8 | $123.50 | $2.01 | — | $342.45 | — | −0 red + (yday up or major catalyst), then Score; gate cam_bad_max=0,yday_or_catalyst=True; rank list; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+56.6; leftover $1064.95 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-09-25 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $342.45 | ▲ close $8,037.00 vs 09:30 $8,042.60 (session +10.61) | 16:00 close · cash $342.45 · equity $8,037.00 vs 09:30 $8,042.60 (-5.60; session marks +10.61) · 12 name(s) marked open→close (per-name table). ADMA×13 09:30 $9.52 → close $9.52 +0.00; ARQT×4 09:30 $26.27 → close $26.27 +0.00; FTRE×6 09:30 $20.02 → close $20.02 +0.00; HALO×1 09:30 $115.36 → close $113.90 -1.46; OMER×6 09:30 $20.61 → close $20.08 -3.18; MRVI×139 09:30 $7.65 → close $7.60 -6.95; TXG×12 09:30 $83.76 → close $85.71 +23.40; TEM×12 09:30 $83.69 → close $85.01 +15.78; ZSQR×275 09:30 $3.86 → close $3.78 -22.00; TWST×5 09:30 $184.00 → close $182.83 -5.85; SECZ×65 09:30 $16.21 → close $15.96 -16.25; GRAL×8 09:30 $123.50 → close $126.89 +27.12 | — |
+| 2026-09-28 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $342.45 | ▼ 09:30 equity $7,999.18 vs yday $8,037.00 (-37.82) | 09:30 open · cash $342.45 (unchanged overnight, no fees) · equity $7,999.18 vs prior close $8,037.00 (-37.82) · 12 name(s) re-marked at the open (per-name table). ADMA×13 yday $9.52 → 09:30 $9.38 -1.82; ARQT×4 yday $26.27 → 09:30 $26.70 +1.72; FTRE×6 yday $20.02 → 09:30 $19.54 -2.88; GRAL×8 yday $126.89 → 09:30 $128.90 +16.08; HALO×1 yday $113.90 → 09:30 $113.34 -0.56; MRVI×139 yday $7.60 → 09:30 $7.49 -15.29; OMER×6 yday $20.08 → 09:30 $19.83 -1.50; SECZ×65 yday $15.96 → 09:30 $16.00 +2.60; TEM×12 yday $85.01 → 09:30 $83.57 -17.28; TWST×5 yday $182.83 → 09:30 $181.87 -4.80; TXG×12 yday $85.71 → 09:30 $86.14 +5.16; ZSQR×275 yday $3.78 → 09:30 $3.71 -19.25 | — |
+| 2026-09-28 09:30 ET | **SELL** | `ADMA` | 13 | $9.38 | $1.28 | $-8.18 | $463.11 | ▼ -8.18 after sell → book $7,997.90; vs 09:30 mark -1.28 | exit unpriced hold on first bar after 3 sess | — |
+| 2026-09-28 09:30 ET | **SELL** | `ARQT` | 4 | $26.70 | $1.10 | $-6.58 | $568.81 | ▼ -6.58 after sell → book $7,996.80; vs 09:30 mark -1.10 | exit unpriced hold on first bar after 3 sess | — |
+| 2026-09-28 09:30 ET | **SELL** | `FTRE` | 6 | $19.54 | $1.21 | $-6.70 | $684.84 | ▼ -6.70 after sell → book $7,995.59; vs 09:30 mark -1.21 | exit unpriced hold on first bar after 3 sess | — |
+| 2026-09-28 09:30 ET | **SELL** | `HALO` | 1 | $113.34 | $1.16 | $-5.84 | $797.02 | ▼ -5.84 after sell → book $7,994.43; vs 09:30 mark -1.16 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-28 09:30 ET | **SELL** | `OMER` | 6 | $19.83 | $1.23 | $-7.40 | $914.78 | ▼ -7.40 after sell → book $7,993.21; vs 09:30 mark -1.22 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $914.78 | ▲ close $8,346.80 vs 09:30 $7,999.18 (session +353.59) | 16:00 close · cash $914.78 · equity $8,346.80 vs 09:30 $7,999.18 (+347.62; session marks +353.59) · 7 name(s) marked open→close (per-name table). GRAL×8 09:30 $128.90 → close $132.63 +29.84; MRVI×139 09:30 $7.49 → close $7.63 +19.46; SECZ×65 09:30 $16.00 → close $16.63 +40.95; TEM×12 09:30 $83.57 → close $85.08 +18.12; TWST×5 09:30 $181.87 → close $179.60 -11.35; TXG×12 09:30 $86.14 → close $88.50 +28.32; ZSQR×275 09:30 $3.71 → close $4.54 +228.25 | — |
 
 ## Not taken
 

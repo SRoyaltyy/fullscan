@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 4 · rank `list` · size `leftover` · sell `list` · S-boost `none` · −0 red + yday up AND catalyst, top 4 by Score
 
-Cash book **-3.12%** ($9,689) · signal-only (no cash/fees) was +20.82%. Starts YES **13/30**. Fills 76 · skips 47 · realized $+2113.32.
+Cash book **-2.76%** ($9,724) · signal-only (no cash/fees) was +20.82%. Starts YES **13/30**. Fills 79 · skips 47 · realized $+2113.32.
 
 ## How this sleeve decides (like you are 10)
 
@@ -212,6 +212,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-25 09:30 ET | **BUY** | `TXG` | 10 | $83.76 | $2.02 | — | $896.14 | — | −0 red + yday up AND catalyst, top 4 by Score; gate cam_bad_max=0,yday_and_catalyst=True; rank list; list probable,yday_gainer,ohlc_hot; 🔵; ⚪; ret5=+9.3; leftover $867.51 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-09-25 09:30 ET | **BUY** | `TEM` | 10 | $83.69 | $2.02 | — | $57.17 | — | −0 red + yday up AND catalyst, top 4 by Score; gate cam_bad_max=0,yday_and_catalyst=True; rank list; list probable,ohlc_hot; ⚪; ret5=+2.3; leftover $867.51 | join🟡 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-09-25 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $57.17 | ▼ close $9,688.52 vs 09:30 $9,700.61 (session -3.66) | 16:00 close · cash $57.17 · equity $9,688.52 vs 09:30 $9,700.61 (-12.09; session marks -3.66) · 6 name(s) marked open→close (per-name table). ARQT×88 09:30 $26.27 → close $26.27 +0.00; DXCM×27 09:30 $87.47 → close $87.47 +0.00; HALO×21 09:30 $115.36 → close $113.90 -30.66; MRVI×113 09:30 $7.65 → close $7.60 -5.65; TXG×10 09:30 $83.76 → close $85.71 +19.50; TEM×10 09:30 $83.69 → close $85.01 +13.15 | — |
+| 2026-09-28 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $57.17 | ▼ 09:30 equity $9,675.87 vs yday $9,688.52 (-12.65) | 09:30 open · cash $57.17 (unchanged overnight, no fees) · equity $9,675.87 vs prior close $9,688.52 (-12.65) · 6 name(s) re-marked at the open (per-name table). ARQT×88 yday $26.27 → 09:30 $26.70 +37.84; DXCM×27 yday $87.47 → 09:30 $86.87 -16.20; HALO×21 yday $113.90 → 09:30 $113.34 -11.76; MRVI×113 yday $7.60 → 09:30 $7.49 -12.43; TEM×10 yday $85.01 → 09:30 $83.57 -14.40; TXG×10 yday $85.71 → 09:30 $86.14 +4.30 | — |
+| 2026-09-28 09:30 ET | **SELL** | `ARQT` | 88 | $26.70 | $2.29 | $-100.46 | $2,404.48 | ▼ -100.46 after sell → book $9,673.58; vs 09:30 mark -2.29 | exit unpriced hold on first bar after 3 sess | — |
+| 2026-09-28 09:30 ET | **SELL** | `DXCM` | 27 | $86.87 | $2.10 | $-75.18 | $4,747.87 | ▼ -75.18 after sell → book $9,671.48; vs 09:30 mark -2.10 | exit unpriced hold on first bar after 3 sess | — |
+| 2026-09-28 09:30 ET | **SELL** | `HALO` | 21 | $113.34 | $2.08 | $-77.84 | $7,125.93 | ▼ -77.84 after sell → book $9,669.40; vs 09:30 mark -2.08 | dropped from list after 3 sess (min 2) | — |
+| 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,125.93 | ▲ close $9,723.92 vs 09:30 $9,675.87 (session +54.52) | 16:00 close · cash $7,125.93 · equity $9,723.92 vs 09:30 $9,675.87 (+48.05; session marks +54.52) · 3 name(s) marked open→close (per-name table). MRVI×113 09:30 $7.49 → close $7.63 +15.82; TEM×10 09:30 $83.57 → close $85.08 +15.10; TXG×10 09:30 $86.14 → close $88.50 +23.60 | — |
 
 ## Not taken
 

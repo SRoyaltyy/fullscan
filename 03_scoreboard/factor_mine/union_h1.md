@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · baseline list, no extra gate
 
-Cash book **-12.21%** ($8,779) · signal-only (no cash/fees) was -0.80%. Starts YES **0/30**. Fills 248 · skips 107 · realized $-106.46.
+Cash book **-13.65%** ($8,635) · signal-only (no cash/fees) was -0.80%. Starts YES **0/30**. Fills 256 · skips 107 · realized $-106.46.
 
 ## How this sleeve decides (like you are 10)
 
@@ -378,6 +378,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-25 09:30 ET | **BUY** | `TXG` | 13 | $83.76 | $2.03 | — | $1,492.53 | — | baseline list, no extra gate; list probable,yday_gainer,ohlc_hot; 🔵; ⚪; ret5=+9.3; leftover $1097.49 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-09-25 09:30 ET | **BUY** | `AEHL` | 121 | $9.05 | $2.35 | — | $395.12 | — | baseline list, no extra gate; list probable,yday_gainer; ret5=-27.1; leftover $1097.49 | join🔴 sector🟡 gen🟢 news🔴 digest🟢 ab🔴 peer🔴 heat🔴 vol🔴 buy🟡 |
 | 2026-09-25 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $395.12 | ▲ close $8,778.92 vs 09:30 $8,779.94 (session +16.13) | 16:00 close · cash $395.12 · equity $8,778.92 vs 09:30 $8,779.94 (-1.02; session marks +16.13) · 8 name(s) marked open→close (per-name table). REGN×1 09:30 $803.87 → close $788.04 -15.83; HALO×9 09:30 $115.36 → close $113.90 -13.14; OMER×53 09:30 $20.61 → close $20.08 -28.09; BLFS×28 09:30 $38.51 → close $38.49 -0.56; MRVI×143 09:30 $7.65 → close $7.60 -7.15; WRBY×41 09:30 $26.27 → close $26.71 +18.04; TXG×13 09:30 $83.76 → close $85.71 +25.35; AEHL×121 09:30 $9.05 → close $9.36 +37.51 | — |
+| 2026-09-28 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $395.12 | ▼ 09:30 equity $8,652.75 vs yday $8,778.92 (-126.17) | 09:30 open · cash $395.12 (unchanged overnight, no fees) · equity $8,652.75 vs prior close $8,778.92 (-126.17) · 8 name(s) re-marked at the open (per-name table). AEHL×121 yday $9.36 → 09:30 $9.01 -42.35; BLFS×28 yday $38.49 → 09:30 $38.13 -10.08; HALO×9 yday $113.90 → 09:30 $113.34 -5.04; MRVI×143 yday $7.60 → 09:30 $7.49 -15.73; OMER×53 yday $20.08 → 09:30 $19.83 -13.25; REGN×1 yday $788.04 → 09:30 $771.84 -16.20; TXG×13 yday $85.71 → 09:30 $86.14 +5.59; WRBY×41 yday $26.71 → 09:30 $26.00 -29.11 | — |
+| 2026-09-28 09:30 ET | **SELL** | `AEHL` | 121 | $9.01 | $2.38 | $-9.58 | $1,482.95 | ▼ -9.58 after sell → book $8,650.36; vs 09:30 mark -2.39 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-28 09:30 ET | **SELL** | `BLFS` | 28 | $38.13 | $2.09 | $-14.81 | $2,548.49 | ▼ -14.81 after sell → book $8,648.27; vs 09:30 mark -2.09 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-28 09:30 ET | **SELL** | `HALO` | 9 | $113.34 | $2.04 | $-22.23 | $3,566.52 | ▼ -22.23 after sell → book $8,646.23; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-28 09:30 ET | **SELL** | `MRVI` | 143 | $7.49 | $2.45 | $-27.75 | $4,635.13 | ▼ -27.75 after sell → book $8,643.78; vs 09:30 mark -2.45 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-28 09:30 ET | **SELL** | `OMER` | 53 | $19.83 | $2.17 | $-45.66 | $5,683.95 | ▼ -45.66 after sell → book $8,641.61; vs 09:30 mark -2.17 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-28 09:30 ET | **SELL** | `REGN` | 1 | $771.84 | $2.01 | $-36.04 | $6,453.78 | ▼ -36.04 after sell → book $8,639.60; vs 09:30 mark -2.01 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-28 09:30 ET | **SELL** | `TXG` | 13 | $86.14 | $2.05 | $+26.86 | $7,571.55 | ▲ +26.86 after sell → book $8,637.55; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-28 09:30 ET | **SELL** | `WRBY` | 41 | $26.00 | $2.13 | $-15.32 | $8,635.42 | ▼ -15.32 after sell → book $8,635.42; vs 09:30 mark -2.13 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,635.42 | ▲ close $8,635.42 vs 09:30 $8,652.75 (session +0.00) | 16:00 close · cash $8,635.42 · no lots left · equity $8,635.42. | — |
 
 ## Not taken
 

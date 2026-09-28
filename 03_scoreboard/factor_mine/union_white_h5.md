@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ white hold 5, no 🚨
 
-Cash book **-10.17%** ($8,983) · signal-only (no cash/fees) was +36.60%. Starts YES **2/30**. Fills 142 · skips 295 · realized $-24.31.
+Cash book **-10.90%** ($8,909) · signal-only (no cash/fees) was +36.60%. Starts YES **2/30**. Fills 147 · skips 295 · realized $-24.31.
 
 ## How this sleeve decides (like you are 10)
 
@@ -276,6 +276,13 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-25 09:30 ET | **BUY** | `ZSQR` | 15 | $3.86 | $0.62 | — | $298.46 | — | union ∩ white hold 5, no 🚨; gate zero_red=True; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+46.1; leftover $58.73 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-09-25 09:30 ET | **BUY** | `SECZ` | 3 | $16.21 | $0.50 | — | $249.33 | — | union ∩ white hold 5, no 🚨; gate zero_red=True; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+85.1; leftover $58.73 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 judge🟢 ab🟡 heat🟢 vol🟢 buy🟡 |
 | 2026-09-25 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $249.33 | ▼ close $8,983.11 vs 09:30 $9,024.52 (session -39.73) | 16:00 close · cash $249.33 · equity $8,983.11 vs 09:30 $9,024.52 (-41.41; session marks -39.73) · 11 name(s) marked open→close (per-name table). A×6 09:30 $171.98 → close $172.79 +4.86; ADMA×115 09:30 $9.52 → close $9.52 +0.00; ARQT×40 09:30 $26.27 → close $26.27 +0.00; DXCM×12 09:30 $87.47 → close $87.47 +0.00; FTRE×56 09:30 $20.02 → close $20.02 +0.00; HALO×9 09:30 $115.36 → close $113.90 -13.14; OMER×55 09:30 $20.61 → close $20.08 -29.15; PGEN×142 09:30 $7.70 → close $7.70 -0.00; MRVI×7 09:30 $7.65 → close $7.60 -0.35; ZSQR×15 09:30 $3.86 → close $3.78 -1.20; SECZ×3 09:30 $16.21 → close $15.96 -0.75 | — |
+| 2026-09-28 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $249.33 | ▼ 09:30 equity $8,900.12 vs yday $8,983.11 (-82.99) | 09:30 open · cash $249.33 (unchanged overnight, no fees) · equity $8,900.12 vs prior close $8,983.11 (-82.99) · 11 name(s) re-marked at the open (per-name table). A×6 yday $172.79 → 09:30 $170.00 -16.74; ADMA×115 yday $9.52 → 09:30 $9.38 -16.10; ARQT×40 yday $26.27 → 09:30 $26.70 +17.20; DXCM×12 yday $87.47 → 09:30 $86.87 -7.20; FTRE×56 yday $20.02 → 09:30 $19.54 -26.88; HALO×9 yday $113.90 → 09:30 $113.34 -5.04; MRVI×7 yday $7.60 → 09:30 $7.49 -0.77; OMER×55 yday $20.08 → 09:30 $19.83 -13.75; PGEN×142 yday $7.70 → 09:30 $7.61 -12.78; SECZ×3 yday $15.96 → 09:30 $16.00 +0.12; ZSQR×15 yday $3.78 → 09:30 $3.71 -1.05 | — |
+| 2026-09-28 09:30 ET | **SELL** | `ADMA` | 115 | $9.38 | $2.36 | $-54.15 | $1,325.67 | ▼ -54.15 after sell → book $8,897.76; vs 09:30 mark -2.36 | exit unpriced hold on first bar after 3 sess | — |
+| 2026-09-28 09:30 ET | **SELL** | `ARQT` | 40 | $26.70 | $2.13 | $-47.84 | $2,391.54 | ▼ -47.84 after sell → book $8,895.63; vs 09:30 mark -2.13 | exit unpriced hold on first bar after 3 sess | — |
+| 2026-09-28 09:30 ET | **SELL** | `DXCM` | 12 | $86.87 | $2.05 | $-35.63 | $3,431.93 | ▼ -35.63 after sell → book $8,893.58; vs 09:30 mark -2.05 | exit unpriced hold on first bar after 3 sess | — |
+| 2026-09-28 09:30 ET | **SELL** | `FTRE` | 56 | $19.54 | $2.18 | $-44.10 | $4,523.99 | ▼ -44.10 after sell → book $8,891.40; vs 09:30 mark -2.18 | exit unpriced hold on first bar after 3 sess | — |
+| 2026-09-28 09:30 ET | **SELL** | `PGEN` | 142 | $7.61 | $2.45 | $-53.15 | $5,602.16 | ▼ -53.15 after sell → book $8,888.95; vs 09:30 mark -2.45 | exit unpriced hold on first bar after 3 sess | — |
+| 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $5,602.16 | ▲ close $8,909.48 vs 09:30 $8,900.12 (session +20.53) | 16:00 close · cash $5,602.16 · equity $8,909.48 vs 09:30 $8,900.12 (+9.36; session marks +20.53) · 6 name(s) marked open→close (per-name table). A×6 09:30 $170.00 → close $175.21 +31.26; HALO×9 09:30 $113.34 → close $112.89 -4.05; MRVI×7 09:30 $7.49 → close $7.63 +0.98; OMER×55 09:30 $19.83 → close $19.43 -22.00; SECZ×3 09:30 $16.00 → close $16.63 +1.89; ZSQR×15 09:30 $3.71 → close $4.54 +12.45 | — |
 
 ## Not taken
 
