@@ -1,6 +1,6 @@
 {
   "date": "2026-09-28",
-  "generated_at": "2026-09-28T13:54:24.486374-04:00",
+  "generated_at": "2026-09-28T13:58:08.338965-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -12,81 +12,81 @@
   "buy_1d": [
     {
       "ticker": "CNQ",
-      "score": 0.2421714774534895
+      "score": 0.19164736847910935
     },
     {
       "ticker": "CVE",
-      "score": 0.18230041462908336
+      "score": 0.15559400587939987
     },
     {
       "ticker": "ASTH",
-      "score": 0.5593004910733419
+      "score": 0.5636433562476346
     },
     {
       "ticker": "SONO",
-      "score": 0.7277474987185046
+      "score": 0.7290545770592951
     },
     {
       "ticker": "FIVN",
-      "score": 0.5958555240790689
+      "score": 0.5994548357216387
     },
     {
       "ticker": "AMN",
-      "score": 0.6139082297236333
+      "score": 0.6161014880296676
     },
     {
       "ticker": "CON",
-      "score": 0.6041769515131301
+      "score": 0.605406335306123
     },
     {
       "ticker": "BAND",
-      "score": 0.6151821000350606
+      "score": 0.6194189319535168
     },
     {
       "ticker": "MQ",
-      "score": 0.6431089586605956
+      "score": 0.6451605840083299
     }
   ],
   "sell_1d": [
     {
       "ticker": "EOSE",
-      "score": -0.38093037305690153
-    },
-    {
-      "ticker": "TE",
-      "score": -0.3080314101860367
+      "score": -0.3817312765423017
     },
     {
       "ticker": "FCEL",
-      "score": -0.34797305489019464
+      "score": -0.35041308751736394
+    },
+    {
+      "ticker": "TE",
+      "score": -0.3081763507170246
     },
     {
       "ticker": "METC",
       "score": -0.35926161860311184
     },
     {
-      "ticker": "ARE",
-      "score": -0.3772381184544495
+      "ticker": "SOC",
+      "score": -0.2942264307685899
     },
     {
-      "ticker": "SOC",
-      "score": -0.26336947194895477
+      "ticker": "ARE",
+      "score": -0.37724675732763907
     },
     {
       "ticker": "EXK",
       "score": -0.13534527097428023
     },
     {
-      "ticker": "BAK",
-      "score": -0.5490766034044455
-    },
-    {
       "ticker": "QBTS",
-      "score": -0.07756314375879364
+      "score": -0.08178211006170005
     },
     {
-      "ticker": "TDUP",
-      "score": -0.5065319157311595
+      "ticker": "BAK",
+      "score": -0.5527352805861339
+    },
+    {
+      "ticker": "USAS",
+      "score": -0.45918161421790393
     }
   ],
   "flatten": {
@@ -1683,42 +1683,6 @@
         }
       ],
       "preview": "weather sectors 11 \u00b7 Technology={'score': -13.383, 'dir': 'down', 'conf': 0.65, 'source': 'llm'}, Basic Materials={'score': -6.779, 'dir': 'down', 'conf': 0.65, 'source': 'llm'}, Communication Services={'score': -4.633, 'dir': 'flat', 'conf': 0.55, 'source': 'llm'}, Consumer Cyclical={'score': -6.753, 'dir': 'down', 'conf': 0.65, 'source': 'llm'}, Consumer Defensive={'score': -0.622, 'dir': 'flat', 'conf': 0.525, 'source': 'llm'}, Energy={'score': 7.946, 'dir': 'up', 'conf': 0.65, 'source': 'llm'}, Financial={'score': -0.28, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.16, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-09-28\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
-    },
-    {
-      "key": "join",
-      "title": "Join / match rank",
-      "date": "2026-09-28",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-28T13:54:03.874384-04:00",
-      "files": [
-        {
-          "path": "data/join/2026-09-28_ranked.csv",
-          "ok": true,
-          "reason": "",
-          "size": 2255062,
-          "preview": "5899 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 ARGX, COP, REGN, AZN, DVN"
-        }
-      ],
-      "preview": "5899 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 ARGX, COP, REGN, AZN, DVN"
-    },
-    {
-      "key": "peer_rs",
-      "title": "Peer RS",
-      "date": "2026-09-28",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-28T13:54:10.934306-04:00",
-      "files": [
-        {
-          "path": "data/peers/2026-09-28_peer_rs.csv",
-          "ok": true,
-          "reason": "",
-          "size": 821609,
-          "preview": "5097 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
-        }
-      ],
-      "preview": "5097 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
     }
   ],
   "source": "publish_live_boards"
