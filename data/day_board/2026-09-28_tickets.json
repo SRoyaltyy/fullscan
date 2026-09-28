@@ -1,6 +1,6 @@
 {
   "date": "2026-09-28",
-  "generated_at": "2026-09-28T05:43:07.799490-04:00",
+  "generated_at": "2026-09-28T05:58:13.752701-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -11,65 +11,67 @@
   },
   "buy_1d": [
     {
-      "ticker": "HITI",
-      "score": 0.45593627614257604
+      "ticker": "ASTH",
+      "score": 0.600685324903272
     },
     {
-      "ticker": "SNPS",
-      "score": 0.5867202057343227
+      "ticker": "FIVN",
+      "score": 0.6576903219378318
     },
     {
-      "ticker": "SONO",
-      "score": 0.8007833140347225
+      "ticker": "GCT",
+      "score": 0.6268081671639238
     },
     {
-      "ticker": "INOD",
-      "score": 0.6216311252018027
+      "ticker": "TUYA",
+      "score": 0.6050669608333077
+    },
+    {
+      "ticker": "THC",
+      "score": 0.1678203514596714
     }
   ],
   "sell_1d": [
     {
       "ticker": "EOSE",
-      "score": -0.3949622968915913
+      "score": -0.424116881652071
+    },
+    {
+      "ticker": "FCEL",
+      "score": -0.3893283391665871
     },
     {
       "ticker": "TE",
-      "score": -0.307268477517126
-    },
-    {
-      "ticker": "NEOV",
-      "score": -0.3026075055530132
+      "score": -0.34239495506844914
     },
     {
       "ticker": "METC",
-      "score": -0.2302170443267199
+      "score": -0.16304821383995727
     },
     {
       "ticker": "SOC",
-      "score": -0.4055368107630624
+      "score": -0.39677414877993816
     },
     {
-      "ticker": "ACDC",
-      "score": -0.45735892472483347
+      "ticker": "ARE",
+      "score": -0.4382540152303856
     },
     {
-      "ticker": "MATW",
-      "score": -0.35415761730300316
+      "ticker": "EXK",
+      "score": 0.08574146788069488
     },
     {
-      "ticker": "RC",
-      "score": -0.4345022495610913
-    },
-    {
-      "ticker": "KGS",
-      "score": -0.1556129599672999
-    },
-    {
-      "ticker": "AMTX",
-      "score": -0.37399723607778423
+      "ticker": "QBTS",
+      "score": -0.09920151650487147
     }
   ],
-  "flatten": {},
+  "flatten": {
+    "said": "0 priced buys \u00b7 cash $67,378.63",
+    "bullets": [
+      "0 priced buys",
+      "cash $67,378.63"
+    ]
+  },
   "general": {
     "said": "DOWN  -6.14",
     "bullets": [
@@ -1038,6 +1040,168 @@
         }
       ],
       "preview": "# flatten_robust card \u2014 2026-09-28\n_Generated 2026-09-28T09:42:28 \u2014 live `flatten_robust`._\n**S=-6.14; hard-red: no new buys; holds and due 1d exits stay**\n- Score **-6.14** (DOWN) \u00b7 route **hold** \u00b7 HARD-RED\n- Cash leftover **$67,378.63** (after 09:30 $67,378.63 \u00b7 after 16:00 $101,470.11)\n- Prior close **$101,493.78** \u00b7 09:30 **$101,493.78** \u00b7 overnight **$+0.00** \u00b7 session **$-23.67** \u00b7 16:00 **$101,470.11**\n- Overnight lots **8** \u00b7 priced mover BUYs **0** \u00b7 prior book yes\n- Planned buy cost **$0.00** \u2264 leftover after sells **$101,470.11** \u00b7 2026-09-28 BUY \u2014 \u00b7 SELL \u2014 \u00b7 [{\"date\": \"2026-08-13\", \"route\": \"io\", \"score\": 8.525, \"predict\": \"UP\", \"yday_equity\": 100000.0, \"open_cash\": 100000.0, \"open_held\": 0, \"open_equity\": 100000.0, \"overnight_delta\": 0.0, \"session_delta\": -169.94, \"equity\": 99830.06, \"cash\": 9917.52, \"overnight_names\": \"\", \"overnight\": [], \"marks\": [{\"ticker\": \"BTSG\", \"sleeve\": \"io_core\", \"shares_open\": 0, \"shares_close\": 166, \"shares\": 166, \"side\": \"BUY\", \"yday_px\": null, \"open_px\": 59.8, \"close_px\": 60.23, \"entry_px\": 60.23, \"entry_date\": \"2026-08-13\", \"overnight\": 0.0, \"session\": 71.38, \"day\": 71.38, \"pct_overnight\": null, \"pct_session\": 0.719, \"held\": \"bought\"}, {"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-09-28",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-28T05:43:55.964818-04:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-09-28_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1158502,
+          "preview": "1d BUY HITI, SNPS, SONO, INOD \u00b7 SELL EOSE, TE, NEOV, METC, SOC, ACDC, MATW, RC"
+        },
+        {
+          "path": "data/stock_book/2026-09-28_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 585,
+          "preview": "green 0 \u00b7 "
+        },
+        {
+          "path": "data/stock_book/2026-09-28_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2454,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-09-28_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 8429,
+          "preview": "2026-09-28 BUY HITI, SNPS, SONO, INOD \u00b7 SELL EOSE, TE, NEOV, METC, SOC, ACDC, MATW, RC"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 8429,
+          "preview": "2026-09-28 BUY HITI, SNPS, SONO, INOD \u00b7 SELL EOSE, TE, NEOV, METC, SOC, ACDC, MATW, RC"
+        },
+        {
+          "path": "01_daily/2026-09-28_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 41292,
+          "preview": "# Stock book \u2014 2026-09-28\n_Generated 2026-09-28T05:43:02.476363-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY HITI, SNPS, SONO, INOD \u00b7 SELL EOSE, TE, NEOV, METC, SOC, ACDC, MATW, RC \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-09-28 BUY HITI, SNPS, SONO, INOD \u00b7 SELL EOSE, TE, NEOV, METC, SOC, ACDC, MATW, RC \u00b7 2026-09-28 BUY HITI, SNPS, SONO, INOD \u00b7 SELL EOSE, TE, NEOV, METC, SOC, ACDC, MATW, RC \u00b7 # Stock book \u2014 2026-09-28\n_Generated 2026-09-28T05:43:02.476363-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+    },
+    {
+      "key": "live_boards",
+      "title": "Live 1d BUY/SELL strip",
+      "date": "2026-09-28",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-28T05:44:19.576507-04:00",
+      "files": [
+        {
+          "path": "data/day_board/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 21417,
+          "preview": "2026-09-28 BUY HITI, SNPS, SONO, INOD \u00b7 SELL EOSE, TE, NEOV, METC, SOC, ACDC, MATW, RC"
+        },
+        {
+          "path": "data/day_board/latest.json",
+          "ok": true,
+          "reason": "",
+          "size": 755,
+          "preview": "keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages"
+        },
+        {
+          "path": "data/day_board/2026-09-28.json",
+          "ok": true,
+          "reason": "",
+          "size": 97530,
+          "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href"
+        },
+        {
+          "path": "data/day_board/2026-09-28_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 59752,
+          "preview": "2026-09-28 BUY HITI, SNPS, SONO, INOD \u00b7 SELL EOSE, TE, NEOV, METC, SOC, ACDC, MATW, RC"
+        },
+        {
+          "path": "data/day_board/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 242222,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "data/day_board/2026-09-28_strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 242222,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "data/day_board/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 218079,
+          "preview": "2026-09-28 BUY HITI, SNPS, SONO, INOD \u00b7 SELL EOSE, TE, NEOV, METC, SOC, ACDC, MATW, RC"
+        },
+        {
+          "path": "data/factor_mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 242222,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 59752,
+          "preview": "2026-09-28 BUY HITI, SNPS, SONO, INOD \u00b7 SELL EOSE, TE, NEOV, METC, SOC, ACDC, MATW, RC"
+        },
+        {
+          "path": "dashboard/factor-mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 242222,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 242222,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 218079,
+          "preview": "2026-09-28 BUY HITI, SNPS, SONO, INOD \u00b7 SELL EOSE, TE, NEOV, METC, SOC, ACDC, MATW, RC"
+        },
+        {
+          "path": "data/day_board/hold_live_px.json",
+          "ok": true,
+          "reason": "",
+          "size": 1668,
+          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
+        },
+        {
+          "path": "dashboard/factor-mine/hold_live_px.json",
+          "ok": true,
+          "reason": "",
+          "size": 1668,
+          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
+        }
+      ],
+      "preview": "2026-09-28 BUY HITI, SNPS, SONO, INOD \u00b7 SELL EOSE, TE, NEOV, METC, SOC, ACDC, MATW, RC \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href \u00b7 2026-09-28 BUY HITI, SNPS, SONO, INOD \u00b7 SELL EOSE, TE, NEOV, METC, SOC, ACDC, MATW, RC \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-28 BUY HITI, SNPS, SONO, INOD \u00b7 SELL EOSE, TE, NEOV, METC, SOC, ACDC, MATW, RC \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-28 BUY HITI, SNPS, SONO, INOD \u00b7 SELL EOSE, TE, NEOV, METC, SOC, ACDC, MATW, RC \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-28 BUY HITI, SNPS, S"
     }
   ],
   "source": "publish_live_boards"
