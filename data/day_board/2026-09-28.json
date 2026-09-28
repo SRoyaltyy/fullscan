@@ -1,6 +1,6 @@
 {
   "date": "2026-09-28",
-  "generated_at": "2026-09-28T04:24:54.243491-04:00",
+  "generated_at": "2026-09-28T04:25:55.040667-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -12,8 +12,8 @@
     "MISSING AB checklist enriched `data/ab_checklist/2026-09-28_ab_checklist_enriched.csv` \u2014 missing"
   ],
   "counts": {
-    "ok": 1,
-    "partial": 3,
+    "ok": 2,
+    "partial": 2,
     "fail": 4,
     "n": 8
   },
@@ -22,9 +22,9 @@
       "key": "postclose",
       "name": "Post-close research",
       "yaml": "map_heat_postclose.yml",
-      "status": "PARTIAL",
+      "status": "OK",
       "inputs_ready": true,
-      "n_req_ok": 1,
+      "n_req_ok": 2,
       "n_req": 2,
       "n_opt_ok": 2,
       "n_opt": 2,
@@ -59,10 +59,10 @@
           "name": "Map heat tables JSON",
           "path": "01_daily/map_heat/2026-09-28_map_heat.json",
           "role": "required",
-          "status": "FAIL",
-          "reason": "stale_map_heat_md",
-          "size": 0,
-          "said": "stale_map_heat_md \u00b7 morning_overlay \u00b7 11616 names \u00b7 hot Tobacco, Internet Content & Information, Electronic Gaming & Multimedia, Consumer Electronics \u00b7 cold Coking Coal, Utilities - Independent Power Producers, Metal Fabrication \u00b7 macro_gate",
+          "status": "OK",
+          "reason": "",
+          "size": 270793,
+          "said": "morning_overlay \u00b7 11616 names \u00b7 hot Tobacco, Internet Content & Information, Electronic Gaming & Multimedia, Consumer Electronics \u00b7 cold Coking Coal, Utilities - Independent Power Producers, Metal Fabrication \u00b7 macro_gate",
           "bullets": []
         },
         {
@@ -72,10 +72,10 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 16856,
-          "said": "MAP HEAT \u2014 2026-09-25",
+          "size": 17335,
+          "said": "MAP HEAT \u2014 2026-09-28",
           "bullets": [
-            "Export `finviz_2026-09-25.csv` \u00b7 11616 names \u00b7 generated 2026-09-25T04:20:36.576875-04:00",
+            "Export `finviz_2026-09-27.csv` \u00b7 11616 names \u00b7 generated 2026-09-28T04:25:54.797117-04:00",
             "TAPE (live futures)"
           ]
         }
@@ -101,11 +101,11 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 97073,
-          "said": "5881 tickers \u00b7 2096 signals \u00b7 top AJG, AMD, AME, AMGN, AMX, AON, APH, ARGX",
+          "size": 97183,
+          "said": "5882 tickers \u00b7 2087 signals \u00b7 top AJG, AMD, AME, AMGN, AMX, AON, APH, ARGX",
           "bullets": [
             "Banks have profited from idle cash for years. AI agents could change that.",
-            "Why Did AMD, HPE, MRNA Stocks Surge To 52-Week Highs Last Week?",
+            "AMD Just Hit $1 Trillion After A Blistering 194% Surge YTD  Beth Kindig Says The Dark Horse Still Has Room To Run",
             "AMETEK Completes Acquisition of Indicor Instrumentation"
           ]
         },
@@ -116,10 +116,10 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 11405,
+          "size": 11517,
           "said": "Finviz Daily Digest \u2014 2026-09-28",
           "bullets": [
-            "_Generated 2026-09-28T04:24:24.106578-04:00 \u00b7 export=data/exports/finviz_2026-09-28.csv \u00b7 ticker digests=5881 \u00b7 high-signal=2096_",
+            "_Generated 2026-09-28T04:24:25.706380-04:00 \u00b7 export=data/exports/finviz_2026-09-27.csv \u00b7 ticker digests=5882 \u00b7 high-signal=2087_",
             "Major indices (live quote page)"
           ]
         },
@@ -144,7 +144,7 @@
           "size": 2792,
           "said": "Finviz homepage market digest \u2014 2026-09-28",
           "bullets": [
-            "Generated:** 2026-09-28T04:24:54.031846-04:00 (America/New_York)",
+            "Generated:** 2026-09-28T04:24:34.262802-04:00 (America/New_York)",
             "Source:** `live`"
           ]
         },
@@ -171,10 +171,10 @@
           "bullets": []
         }
       ],
-      "said": "5881 tickers \u00b7 2096 signals \u00b7 top AJG, AMD, AME, AMGN, AMX, AON, APH, ARGX",
+      "said": "5882 tickers \u00b7 2087 signals \u00b7 top AJG, AMD, AME, AMGN, AMX, AON, APH, ARGX",
       "bullets": [
         "Banks have profited from idle cash for years. AI agents could change that.",
-        "Why Did AMD, HPE, MRNA Stocks Surge To 52-Week Highs Last Week?",
+        "AMD Just Hit $1 Trillion After A Blistering 194% Surge YTD  Beth Kindig Says The Dark Horse Still Has Room To Run",
         "AMETEK Completes Acquisition of Indicor Instrumentation"
       ]
     },
@@ -183,7 +183,7 @@
       "name": "Pre-Open ALL",
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
-      "inputs_ready": false,
+      "inputs_ready": true,
       "n_req_ok": 2,
       "n_req": 20,
       "n_opt_ok": 1,
@@ -196,11 +196,11 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 97073,
-          "said": "5881 tickers \u00b7 2096 signals \u00b7 top AJG, AMD, AME, AMGN, AMX, AON, APH, ARGX",
+          "size": 97183,
+          "said": "5882 tickers \u00b7 2087 signals \u00b7 top AJG, AMD, AME, AMGN, AMX, AON, APH, ARGX",
           "bullets": [
             "Banks have profited from idle cash for years. AI agents could change that.",
-            "Why Did AMD, HPE, MRNA Stocks Surge To 52-Week Highs Last Week?",
+            "AMD Just Hit $1 Trillion After A Blistering 194% Surge YTD  Beth Kindig Says The Dark Horse Still Has Room To Run",
             "AMETEK Completes Acquisition of Indicor Instrumentation"
           ]
         },
@@ -231,10 +231,10 @@
           "name": "Map heat tables JSON",
           "path": "01_daily/map_heat/2026-09-28_map_heat.json",
           "role": "input",
-          "status": "FAIL",
-          "reason": "stale_map_heat_md",
-          "size": 0,
-          "said": "stale_map_heat_md \u00b7 morning_overlay \u00b7 11616 names \u00b7 hot Tobacco, Internet Content & Information, Electronic Gaming & Multimedia, Consumer Electronics \u00b7 cold Coking Coal, Utilities - Independent Power Producers, Metal Fabrication \u00b7 macro_gate",
+          "status": "OK",
+          "reason": "",
+          "size": 270793,
+          "said": "morning_overlay \u00b7 11616 names \u00b7 hot Tobacco, Internet Content & Information, Electronic Gaming & Multimedia, Consumer Electronics \u00b7 cold Coking Coal, Utilities - Independent Power Producers, Metal Fabrication \u00b7 macro_gate",
           "bullets": []
         },
         {
@@ -332,8 +332,8 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 7563,
-          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 20 fail",
+          "size": 7546,
+          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 18 fail",
           "bullets": [
             "general_predict:missing",
             "events:missing",
@@ -508,11 +508,11 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 97073,
-          "said": "5881 tickers \u00b7 2096 signals \u00b7 top AJG, AMD, AME, AMGN, AMX, AON, APH, ARGX",
+          "size": 97183,
+          "said": "5882 tickers \u00b7 2087 signals \u00b7 top AJG, AMD, AME, AMGN, AMX, AON, APH, ARGX",
           "bullets": [
             "Banks have profited from idle cash for years. AI agents could change that.",
-            "Why Did AMD, HPE, MRNA Stocks Surge To 52-Week Highs Last Week?",
+            "AMD Just Hit $1 Trillion After A Blistering 194% Surge YTD  Beth Kindig Says The Dark Horse Still Has Room To Run",
             "AMETEK Completes Acquisition of Indicor Instrumentation"
           ]
         },
@@ -597,11 +597,11 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 97073,
-          "said": "5881 tickers \u00b7 2096 signals \u00b7 top AJG, AMD, AME, AMGN, AMX, AON, APH, ARGX",
+          "size": 97183,
+          "said": "5882 tickers \u00b7 2087 signals \u00b7 top AJG, AMD, AME, AMGN, AMX, AON, APH, ARGX",
           "bullets": [
             "Banks have profited from idle cash for years. AI agents could change that.",
-            "Why Did AMD, HPE, MRNA Stocks Surge To 52-Week Highs Last Week?",
+            "AMD Just Hit $1 Trillion After A Blistering 194% Surge YTD  Beth Kindig Says The Dark Horse Still Has Room To Run",
             "AMETEK Completes Acquisition of Indicor Instrumentation"
           ]
         },
@@ -671,11 +671,11 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 97073,
-          "said": "5881 tickers \u00b7 2096 signals \u00b7 top AJG, AMD, AME, AMGN, AMX, AON, APH, ARGX",
+          "size": 97183,
+          "said": "5882 tickers \u00b7 2087 signals \u00b7 top AJG, AMD, AME, AMGN, AMX, AON, APH, ARGX",
           "bullets": [
             "Banks have profited from idle cash for years. AI agents could change that.",
-            "Why Did AMD, HPE, MRNA Stocks Surge To 52-Week Highs Last Week?",
+            "AMD Just Hit $1 Trillion After A Blistering 194% Surge YTD  Beth Kindig Says The Dark Horse Still Has Room To Run",
             "AMETEK Completes Acquisition of Indicor Instrumentation"
           ]
         },
@@ -987,6 +987,31 @@
       "date": "2026-09-28",
       "ok": true,
       "pushed": true,
+      "at": "2026-09-28T04:24:34.276969-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-09-28_finviz_market_digest.json",
+          "ok": true,
+          "reason": "",
+          "size": 5642,
+          "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for"
+        },
+        {
+          "path": "01_daily/news/2026-09-28_finviz_market_digest.md",
+          "ok": true,
+          "reason": "",
+          "size": 2792,
+          "preview": "# Finviz homepage market digest \u2014 2026-09-28\n**Generated:** 2026-09-28T04:24:34.262802-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US equity futures point to a lower open as oil approaches $106\u2013107 and rising yields reinforce higher\u2011for\u2011longer rate expectations ahead of Dallas Fed data\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** Brent crude $106.0\n**CPI/Fed:** \u2014\n**Leaders:** GNS, NTWK\n**Next session:** housing no \u00b7 retail no \u00b7 Fed yes\n**Earnings slate:** \u2014\n**Geo/grain:** geo\n**Clock legal for:** 2026-09-28\n**Clock use:** `same_morning`"
+        }
+      ],
+      "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest \u2014 2026-09-28\n**Generated:** 2026-09-28T04:24:34.262802-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US equity futures point to a lower open as oil approaches $106\u2013107 and rising yields reinforce higher\u2011for\u2011longer rate expectations ahead of Dallas Fed data\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** Brent crude $106.0\n**CPI/Fed:** \u2014\n**Leaders:** GNS, NTWK\n**Next session:** housing no \u00b7 retail no \u00b7 Fed yes\n**Earnings slate:** \u2014\n**Geo/grain:** geo\n**Clock legal for:** 2026-09-28\n**Clock use:** `same_morning`"
+    },
+    {
+      "key": "finviz_market_digest",
+      "title": "Finviz homepage market digest",
+      "date": "2026-09-28",
+      "ok": true,
+      "pushed": true,
       "at": "2026-09-28T04:24:54.046621-04:00",
       "files": [
         {
@@ -1005,6 +1030,31 @@
         }
       ],
       "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest \u2014 2026-09-28\n**Generated:** 2026-09-28T04:24:54.031846-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US equity futures point to a lower open as oil approaches $106\u2013107 and rising yields reinforce higher\u2011for\u2011longer rate expectations ahead of Dallas Fed data\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** Brent crude $106.0\n**CPI/Fed:** \u2014\n**Leaders:** GNS, NTWK\n**Next session:** housing no \u00b7 retail no \u00b7 Fed yes\n**Earnings slate:** \u2014\n**Geo/grain:** geo\n**Clock legal for:** 2026-09-28\n**Clock use:** `same_morning`"
+    },
+    {
+      "key": "map_heat",
+      "title": "Map heat morning overlay",
+      "date": "2026-09-28",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-28T04:25:54.848496-04:00",
+      "files": [
+        {
+          "path": "01_daily/map_heat/2026-09-28_map_heat.json",
+          "ok": true,
+          "reason": "",
+          "size": 270793,
+          "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape"
+        },
+        {
+          "path": "01_daily/map_heat/2026-09-28_map_heat.md",
+          "ok": true,
+          "reason": "",
+          "size": 17700,
+          "preview": "# MAP HEAT \u2014 2026-09-28\nExport `finviz_2026-09-27.csv` \u00b7 11616 names \u00b7 generated 2026-09-28T04:25:54.797117-04:00"
+        }
+      ],
+      "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-09-28\nExport `finviz_2026-09-27.csv` \u00b7 11616 names \u00b7 generated 2026-09-28T04:25:54.797117-04:00"
     }
   ],
   "href": {
