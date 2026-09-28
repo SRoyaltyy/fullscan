@@ -271,6 +271,8 @@ def new_leg_action(view: dict, row: dict, held: set[str]) -> tuple[str, list[dic
 
 def fetch_yahoo(tickers: list[str], start: str, end: str) -> dict:
     """Split-adjusted Yahoo daily bars. ``end`` is exclusive. Missing names are listed."""
+    from research.hot_n4_clean_v4.forward.opens import ny_bar_date
+
     if AUTO_ADJUST:
         raise RuntimeError("auto_adjust must stay false so dividends are not applied")
     try:
@@ -320,9 +322,12 @@ def fetch_yahoo(tickers: list[str], start: str, end: str) -> dict:
                     continue
                 ticker = str(item.ticker).upper()
                 got.add(ticker)
+                when = ny_bar_date(item.date)
+                if when is None:
+                    continue
                 bars.append(_round_bar({
                     "close": close,
-                    "date": str(item.date)[:10],
+                    "date": when,
                     "high": high,
                     "low": low,
                     "open": opx,
