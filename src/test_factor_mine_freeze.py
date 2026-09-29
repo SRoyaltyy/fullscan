@@ -2367,6 +2367,136 @@ def test_held_names_are_fetched_even_when_they_are_not_candidates() -> None:
     assert discovered["tickers"] == ["AAA", "WTS"]
 
 
+def test_stale_bar_is_dropped_and_same_day_bar_passes() -> None:
+    """A previous-session bar is not today's open. A same-day bar is."""
+    from datetime import datetime, timezone
+
+    import pandas as pd
+
+    from src import factor_mine_send_inputs as fsi
+    from src import price_store as ps
+    from src.factor_mine_bars import (
+        STALE_BAR, accept_session_bar, classify_rows, ny_bar_date,
+    )
+
+    utc = datetime(2026, 9, 26, 1, 0, tzinfo=timezone.utc)
+    assert ny_bar_date(utc) == "2026-09-25"
+    assert ny_bar_date("2026-09-28") == "2026-09-28"
+    assert str(utc)[:10] == "2026-09-26"
+
+    session = "2026-09-28"
+    stale_rows = [{"date": "2026-09-25", "open": 0.9439, "close": 1.11}]
+    found, why = classify_rows(stale_rows, session)
+    assert found is None and why == STALE_BAR
+    assert accept_session_bar(stale_rows[-1], session) is None
+    same = {"date": session, "open": 1.125, "close": 1.19}
+    assert accept_session_bar(same, session)["open"] == 1.125
+    utc_bar = {"date": utc, "open": 16.21, "close": 15.96}
+    assert accept_session_bar(utc_bar, "2026-09-26") is None
+    assert accept_session_bar(utc_bar, "2026-09-25")["open"] == 16.21
+
+    day = session
+
+    def raw(ticker):
+        tick = str(ticker).upper()
+        if tick == "SRFM":
+            return [{"date": "2026-09-25", "open": 0.9439, "close": 1.11}]
+        if tick == "SECZ":
+            return [{"date": utc, "open": 16.21, "close": 15.96}]
+        if tick == "GLND":
+            return [{"date": day, "open": 5.138, "close": 5.2}]
+        return []
+
+    def official(ticker, date, bars=None):
+        if str(ticker).upper() == "GLND" and str(date)[:10] == day:
+            return {"open": 5.138, "high": 5.3, "low": 5.0, "close": 5.2}
+        return {"open": None, "high": None, "low": None, "close": None}
+
+    with mock.patch("src.price_store.ensure_through", return_value=None), \
+            mock.patch.object(fmf, "_raw_bars", side_effect=raw), \
+            mock.patch.object(tl, "_official_ohlc", side_effect=official):
+        gaps = fmf.ensure_candidate_bars(day, ["SRFM", "SECZ", "GLND"], also=[])
+    by = {g["ticker"]: g for g in gaps}
+    assert by["SRFM"]["reason"] == "stale_bar"
+    assert "stale_bar" in by["SRFM"]["missing"]
+    assert by["SECZ"]["reason"] == "stale_bar"
+    assert set(fmf._dropped_missing_tickers(gaps)) == {"SECZ", "SRFM"}
+    assert "stale_bar" not in (by.get("GLND") or {}).get("missing", [])
+
+    with mock.patch("src.price_store.ensure_through", return_value=None), \
+            mock.patch.object(fmf, "_raw_bars", return_value=[]), \
+            mock.patch.object(tl, "_official_ohlc",
+                              return_value={"open": None, "close": None,
+                                            "high": None, "low": None}):
+        try:
+            fmf.ensure_candidate_bars(day, ["AAA"], also=[])
+            held = False
+        except fmf.HoldDay as e:
+            held = True
+            assert e.missing == ["AAA"]
+            assert "entire universe missing yahoo bars" in e.reason
+            assert e.gaps[0]["reason"] == "missing yahoo bars"
+    assert held
+
+    passed = fmf.bars_for_decisions(
+        {"rows": [{"ticker": "GLND", "date": day, "open": 5.138, "close": 5.2}]},
+        day,
+        {"date": day, "names": {"GLND": {"date": day, "open": 5.138, "close": 5.2}}},
+        also=[],
+    )
+    assert passed[("GLND", day)]["open"] == 5.138
+    refused = fmf.bars_for_decisions(
+        {"rows": []},
+        day,
+        {"date": "2026-09-25", "names": {"SRFM": {"open": 0.9439, "close": 1.11}}},
+        also=[],
+    )
+    assert ("SRFM", day) not in refused
+    dated = fmf.bars_for_decisions(
+        {"rows": []},
+        day,
+        {"date": day, "names": {"SRFM": {
+            "date": "2026-09-25", "open": 0.9439, "close": 1.11,
+        }}},
+        also=[],
+    )
+    assert ("SRFM", day) not in dated
+
+    idx = pd.DatetimeIndex([utc])
+    frame = pd.DataFrame({
+        "Open": [16.21], "High": [16.5], "Low": [15.9],
+        "Close": [15.96], "Volume": [1000],
+    }, index=idx)
+    raw_frame = pd.concat({"SECZ": frame}, axis=1)
+    flat = ps._flatten_yf(raw_frame, ["SECZ"])
+    assert str(flat.iloc[0]["date"])[:10] == "2026-09-25"
+    assert float(flat.iloc[0]["open"]) == 16.21
+
+    naive = pd.DataFrame({
+        "Open": [1.125], "High": [1.2], "Low": [1.075],
+        "Close": [1.19], "Volume": [100],
+    }, index=pd.to_datetime(["2026-09-28"]))
+    naive_raw = pd.concat({"SRFM": naive}, axis=1)
+    naive_flat = ps._flatten_yf(naive_raw, ["SRFM"])
+    assert str(naive_flat.iloc[0]["date"])[:10] == "2026-09-28"
+
+    prices = fsi.sizing_prices({
+        "strategies": {"union_hot_n4_h1": {"buy": [
+            {"ticker": "SRFM", "px": 0.9439, "bar_date": "2026-09-25"},
+            {"ticker": "GLND", "px": 5.138, "open_px": 5.138, "bar_date": day},
+            {"ticker": "FEAM", "px": 2.75},
+        ], "sell": []}},
+    }, day)
+    assert [p["ticker"] for p in prices] == ["GLND", "FEAM"]
+    assert prices[0]["open_px"] == 5.138
+    kept = fsi.rows_for_record(day, {"rows": [
+        {"ticker": "GLND", "date": day},
+        {"ticker": "SRFM", "date": "2026-09-25"},
+        {"ticker": "SECZ", "date": utc},
+    ]})
+    assert [r["ticker"] for r in kept] == ["GLND"]
+
+
 if __name__ == "__main__":
     if os.environ.get("PYTHONHASHSEED") != "0":
         os.environ["PYTHONHASHSEED"] = "0"
@@ -2402,6 +2532,7 @@ if __name__ == "__main__":
     test_open_close_cross_check_sources_and_tolerances()
     test_cross_check_hold_writes_nothing()
     test_candidate_log_uses_morning_files_only()
+    test_stale_bar_is_dropped_and_same_day_bar_passes()
     test_stooq_fills_open_when_the_export_has_no_open_column()
     test_theme_radar_dated_file_rejects_current_and_a_bad_hash()
     test_webull_fill_outside_open_tolerance_holds()

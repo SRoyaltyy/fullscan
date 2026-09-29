@@ -32,3 +32,13 @@ RULE20_FORWARD_DROP 2026-09-26
 - reason: Rule 20 asks for the result without the strategy's single best stock. `_drop_compound` started that arithmetic at $10,000. The forward slice is a continuation, so the base is the equity at the 2026-09-11 close. The same miss hit the without-CYPH, without-GLND, and without-INDP figures. The window compound, win rate, up-day share, trade count, and reject status come from the daily return ratios and are unchanged.
 - reading: without the best stock, `union_hot_n4_h1_time__w0` is +4.23% (the committed figure was +40.57%), `union_hot_n4_h1__w0` is +5.62% (was +46.72%), `union_hot_n4_holdup__w0` is +11.25% (was +72.01%), and `union_hot_n4_h1_nonews__w0` is +5.04% (was +52.07%). A positive contribution from the removed stock now sits below the window's own return.
 - carry: unchanged. Still not rejected: `union_hot_n4_h1__w0`, `union_hot_n4_holdup__w0`, `union_hot_n4_h1_nonews__w0`. Still unproven: `union_hot_n4_h3__w0`, `union_hot_n4_h5__w0`, `union_hot_n4_h1_green__w0`. The tune leader `union_hot_n4_h1_time__w0` stays rejected. `union_hot_n4_holdup__w0` still carries because the window left it not rejected; it cleared 2 of 3 tuning starts.
+
+## Factor Mine stale-bar guard
+
+STALE_BAR_GUARD 2026-09-29
+
+- book: factor mine, including OOS0914. This entry does not restate a locked trading day.
+- approver: Cyrus
+- approved: 2026-09-28 ET
+- record: recipe names, locked days, ledgers, and results stay as they are. No day is rewritten.
+- reason: A session bar is usable only when its calendar date in America/New_York is that session. A bar from the previous session is dropped with reason `stale_bar`, the same slot-keeping drop as a missing Yahoo bar, or the day is refused when that was already the convention. The previous day is not substituted. This is a guard, not a rule change. It does not change a recipe, a weight, a gate, or a ranking. Locked days already store a bar dated the session, so picks, fills, and P&L are unchanged. The guard applies from the day it merges.

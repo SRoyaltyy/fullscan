@@ -39,6 +39,7 @@ from datetime import datetime, timedelta
 from pathlib import Path
 
 from . import ticker_lookback as tl
+from .factor_mine_bars import STALE_BAR, ny_bar_date, status_for_dates, usable_session_print
 
 ROOT = Path(__file__).resolve().parent.parent
 SNAP_DIR = ROOT / "data" / "factor_mine" / "snapshots"
@@ -388,31 +389,46 @@ def completeness_gaps(ticker: str, date: str) -> list[str]:
     return gaps
 
 
-def yahoo_session_missing(ticker: str, date: str) -> bool:
-    """True when Yahoo has no open or close for this name on ``date``."""
+def _session_bar_status(ticker: str, date: str) -> str:
+    """``ok``, ``stale_bar``, or ``missing`` for this name on ``date``.
+
+    A print counts only when its calendar date in America/New_York is
+    ``date``. History from another session, with no print on ``date``,
+    is ``stale_bar``. An empty history is ``missing``. The previous
+    session's open is not returned as today's.
+    """
     d = str(date or "")[:10]
     t = str(ticker or "").strip().upper()
     if not t or len(d) != 10:
-        return True
+        return "missing"
+    dates: list[str] = []
+    has = False
     for bar in _raw_bars(t):
-        if str(bar.get("date") or "")[:10] != d:
-            continue
-        if bar.get("open") is not None or bar.get("close") is not None:
-            return False
+        when = ny_bar_date(bar.get("date"))
+        if when:
+            dates.append(when)
+        if when == d and (bar.get("open") is not None or bar.get("close") is not None):
+            has = True
     official = tl._official_ohlc(t, d)
     if official.get("open") is not None or official.get("close") is not None:
-        return False
-    return True
+        has = True
+    return status_for_dates(dates, d, has_session_print=has)
+
+
+def yahoo_session_missing(ticker: str, date: str) -> bool:
+    """True when Yahoo has no open or close for this name on ``date``."""
+    return _session_bar_status(ticker, date) != "ok"
 
 
 def _dropped_missing_tickers(gaps: list | None) -> list[str]:
-    """Tickers whose Yahoo session bar was missing, in ticker order."""
+    """Tickers whose Yahoo session bar was missing or stale, in ticker order."""
     out = []
     seen: set[str] = set()
     for gap in gaps or []:
         if not isinstance(gap, dict):
             continue
-        if MISSING_YAHOO_BARS not in (gap.get("missing") or []):
+        missing = gap.get("missing") or []
+        if MISSING_YAHOO_BARS not in missing and STALE_BAR not in missing:
             continue
         tick = str(gap.get("ticker") or "").strip().upper()
         if not tick or tick in seen:
@@ -614,29 +630,38 @@ def ensure_candidate_bars(date: str, tickers: list[str], *,
             status="held_incomplete",
         ) from e
     reset_price_memory()
-    absent = [t for t in names if yahoo_session_missing(t, date)]
+    absent_reason: dict[str, str] = {}
+    for t in names:
+        status = _session_bar_status(t, date)
+        if status == "ok":
+            continue
+        absent_reason[t] = STALE_BAR if status == STALE_BAR else MISSING_YAHOO_BARS
+    absent = [t for t in names if t in absent_reason]
+    stale = [t for t in absent if absent_reason[t] == STALE_BAR]
+    if stale:
+        print(f"[factor-mine] {date} stale_bar {','.join(stale)}", flush=True)
     if len(absent) == len(names):
         raise HoldDay(
             date, absent, "entire universe missing yahoo bars",
             status="held_incomplete",
             gaps=[{
                 "ticker": t,
-                "missing": [MISSING_YAHOO_BARS],
-                "reason": MISSING_YAHOO_BARS,
+                "missing": [absent_reason[t]],
+                "reason": absent_reason[t],
             } for t in absent],
         )
     absent_set = set(absent)
     gaps = []
     for t in names:
         if t in absent_set:
-            missing = [MISSING_YAHOO_BARS]
+            missing = [absent_reason[t]]
             for item in completeness_gaps(t, date):
                 if item not in missing:
                     missing.append(item)
             gaps.append({
                 "ticker": t,
                 "missing": missing,
-                "reason": "; ".join(missing),
+                "reason": absent_reason[t] if absent_reason[t] == STALE_BAR else "; ".join(missing),
             })
             continue
         missing = completeness_gaps(t, date)
@@ -1849,6 +1874,9 @@ def pin_prices(date: str, tickers: list[str]) -> dict:
     names = {}
     for t in sorted({str(x) for x in tickers if x}):
         sess = tl.session_bar(t, date) or {}
+        if not usable_session_print(sess, date):
+            print(f"[factor-mine] {date} stale_bar {t}", flush=True)
+            sess = {}
         names[t] = {
             "prior": ohlc.prior_bars(t, date, n=60),
             "open": sess.get("open"),
@@ -1870,6 +1898,8 @@ def bars_from_panel(panel: dict) -> dict:
         t, d = row.get("ticker"), row.get("date")
         if not t or not d:
             continue
+        if ny_bar_date(d) != str(d)[:10]:
+            continue
         bar = {}
         if row.get("open") is not None:
             bar["open"] = row.get("open")
@@ -1890,7 +1920,15 @@ def bars_for_decisions(panel: dict, date: str, pinned: dict | None, *,
     stays out of the map so the lot carries at its last price.
     """
     bars = bars_from_panel(panel)
-    for t, info in ((pinned or {}).get("names") or {}).items():
+    pin_day = (pinned or {}).get("date")
+    pin_names = (pinned or {}).get("names") or {}
+    if pin_day not in (None, "") and ny_bar_date(pin_day) != str(date)[:10]:
+        print(f"[factor-mine] {date} stale_bar price pin dated {pin_day}", flush=True)
+        pin_names = {}
+    for t, info in pin_names.items():
+        if not usable_session_print(info, date):
+            print(f"[factor-mine] {date} stale_bar {t}", flush=True)
+            continue
         bars[(t, date)] = {
             "open": info.get("open"),
             "high": info.get("high"),
@@ -1903,6 +1941,9 @@ def bars_for_decisions(panel: dict, date: str, pinned: dict | None, *,
         if have.get("open") is not None or have.get("close") is not None:
             continue
         sess = tl.session_bar(t, date) or {}
+        if not usable_session_print(sess, date):
+            print(f"[factor-mine] {date} stale_bar {t}", flush=True)
+            continue
         if sess.get("open") is None and sess.get("close") is None:
             continue
         bars[key] = {

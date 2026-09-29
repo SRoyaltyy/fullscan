@@ -1492,8 +1492,12 @@ def _iwm_frame(raw) -> dict:
     cols = {str(c).lower(): c for c in frame.columns}
     date_col = cols.get("date") or cols.get("datetime") or frame.columns[0]
     out = {}
+    from .factor_mine_bars import ny_bar_date
+
     for _, row in frame.iterrows():
-        day = str(pd.Timestamp(row[date_col]).date())
+        day = ny_bar_date(row[date_col])
+        if not day:
+            continue
 
         def num(key, row=row):
             col = cols.get(key)
