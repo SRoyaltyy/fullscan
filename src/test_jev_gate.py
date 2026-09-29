@@ -710,10 +710,11 @@ def test_session_1703_false_keeps_not_classifiable():
 
 
 def test_decide_fact_vetoes_reprint():
-    """Session 1732: a first-class chokepoint status-change is keep."""
-    escalation = decide(
+    """Session 1732: a first-class chokepoint fact is not reprint-weather."""
+    # Title must not trip classifiable keep so decide() is the path under test.
+    scored = decide(
         {
-            "title": "US-Iran Strait of Hormuz conflict escalation",
+            "title": "Tensions persist as tankers transit the Strait of Hormuz",
             "_clock": {"has_new_verb": False, "hit": True, "place": "hormuz"},
         },
         {
@@ -723,8 +724,8 @@ def test_decide_fact_vetoes_reprint():
             "reprint_weather": 0.86,
         },
     )
-    assert escalation["decision"] == "keep", escalation
-    assert escalation["reason"] == "choke_fact", escalation
+    assert scored["decision"] == "keep", scored
+    assert scored["reason"] == "choke_fact", scored
     persist = decide(
         {
             "title": "Tensions persist as tankers transit the Strait of Hormuz",
@@ -756,7 +757,7 @@ def test_questions_encode_session_1732_criteria():
     assert "13F" in material["instructions"]
     assert "insider sale" in material["criteria"]["true"]
     assert "secondary sanctions" in material["criteria"]["true"]
-    assert "Tech stocks today" in material["criteria"]["false"]
+    assert "tech stocks today" in material["criteria"]["false"]
     assert "Secondary sanctions" in instrument
     assert "Form-4" in instrument
     assert "escalation" in geo["chokepoint"]
