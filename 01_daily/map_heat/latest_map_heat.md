@@ -1,6 +1,6 @@
 # MAP HEAT — 2026-09-29
 
-Export `finviz_2026-09-29.csv` · 11616 names · generated 2026-09-29T04:16:18.974974-04:00
+Export `finviz_2026-09-28.csv` · 11616 names · generated 2026-09-29T04:17:29.438028-04:00
 
 ## TAPE (live futures)
 | Contract | Last | Change |
@@ -274,19 +274,19 @@ COLD (1w):
 - **Real Estate** -0.5% 1d -1.9% 1w · VNQ, SCHH, XLRE
 
 ## TICKER-TAGGED NEWS (Finviz v=3)
-- 6 min **TSLA,AAPL,GOOGL,GOOG,MSFT** J.P. Morgan Drops Sharp Take on Magnificent 7 Stocks (GuruFocus.com)
-- 7 min **ORCL,OWL** Oracle's $18 Billion AI Project Just Hit a Major Hurdle (GuruFocus.com)
-- 8 min **META,LTH** Jefferies Says Meta Platform's Muse Is Not a Threat to Life Time (GuruFocus.com)
-- 10 min **AMD** Stock market today: Dow, S&P 500, Nasdaq futures waver as leaked Anthropic IPO details raise alarm about AI risks (Yahoo Finance)
-- 16 min **PSO** Pearson Acquires Workera, a Pioneer in AI-Native Enterprise Assessment and Skills Verification (PR Newswire)
-- 16 min **NDAQ** Nasdaq Calypso Launches Agentic Capabilities to Scale AI Adoption Across the Trade Lifecycle (GlobeNewswire)
-- 16 min **WTW** Willis launches RiskIQ Nexus, giving organizations a single trusted view of risk and insurance data to drive greater value (GlobeNewswire)
-- 16 min **LEN,BRK-B,CVCO,DHI,SKY** Berkshire Buys Lennar Stock; Its Clayton Homes Unit Could Be Worth $25 Billion (Barrons.com)
-- 16 min **III** German Firms Pair Application Modernization with AI Controls (Business Wire)
-- 35 min **SPCX** Anthropic's Own IPO Filing Warns AI Could Threaten Humanity (BeInCrypto)
-- 37 min **NVDA,PLTR** Michael Burry Says Jensen Huang Is 'Becoming A Bit Like' Palantir's Alex Karp After Nvidia CEO's Media Blitz (Stocktwits)
-- 37 min **TSLA** Safety group urges EU to reject Tesla FSD over speed offset (Reuters)
-- 46 min **BKYI** BIO-key Partners with Al Majlis Group to Expand Identity Security Across Arabian Gulf (GlobeNewswire)
+- 8 min **AAPL,TSLA,MSFT,GOOG,GOOGL** J.P. Morgan Drops Sharp Take on Magnificent 7 Stocks (GuruFocus.com)
+- 8 min **ORCL,OWL** Oracle's $18 Billion AI Project Just Hit a Major Hurdle (GuruFocus.com)
+- 9 min **META,LTH** Jefferies Says Meta Platform's Muse Is Not a Threat to Life Time (GuruFocus.com)
+- 11 min **AMD** Stock market today: Dow, S&P 500, Nasdaq futures waver as leaked Anthropic IPO details raise alarm about AI risks (Yahoo Finance)
+- 17 min **PSO** Pearson Acquires Workera, a Pioneer in AI-Native Enterprise Assessment and Skills Verification (PR Newswire)
+- 17 min **NDAQ** Nasdaq Calypso Launches Agentic Capabilities to Scale AI Adoption Across the Trade Lifecycle (GlobeNewswire)
+- 17 min **WTW** Willis launches RiskIQ Nexus, giving organizations a single trusted view of risk and insurance data to drive greater value (GlobeNewswire)
+- 17 min **LEN,BRK-B,CVCO,DHI,SKY** Berkshire Buys Lennar Stock; Its Clayton Homes Unit Could Be Worth $25 Billion (Barrons.com)
+- 17 min **III** German Firms Pair Application Modernization with AI Controls (Business Wire)
+- 36 min **SPCX** Anthropic's Own IPO Filing Warns AI Could Threaten Humanity (BeInCrypto)
+- 38 min **NVDA,PLTR** Michael Burry Says Jensen Huang Is 'Becoming A Bit Like' Palantir's Alex Karp After Nvidia CEO's Media Blitz (Stocktwits)
+- 38 min **TSLA** Safety group urges EU to reject Tesla FSD over speed offset (Reuters)
+- 47 min **BKYI** BIO-key Partners with Al Majlis Group to Expand Identity Security Across Arabian Gulf (GlobeNewswire)
 - 1 hour **XENE** Defence Therapeutics Appoints Finance Executive Sherry Aulin to Its Board of Directors (TMX Newsfile)
 - 1 hour **QQQ,SPY** Michael Burry Weighs Peter Schiffs S&P 500 Crash Warning As UBS Flags Fed Risk  Rare October Hike Odds Hit 70% (Stocktwits)
 - 1 hour **COUR** US Ranks Eighth Globally for AI Preparedness in Coursera's New AI-Human Skills Synergy Index (Business Wire)
