@@ -28,7 +28,7 @@
     },
     {
       "path": "01_daily/weather/2026-09-29_weather.json",
-      "sha256": "72121834acf2ab476e815ea45616d5a22d839a822407b1147190fdb3026a12f8"
+      "sha256": "80eeb670348ec95fdd757cbb06d75f65b6c88e31a31f50ec53113bc6ce0d0655"
     },
     {
       "path": "data/ab_checklist/2026-09-29_ab_checklist_enriched.csv",
@@ -50,6 +50,6 @@
   "prices": [],
   "reason": "no same-day panel rows for 2026-09-29 \u2014 sitting, no live lookup",
   "rows": [],
-  "sha256": "74cb027478fed599911242a95e1d163a5ef72918929deb94110917a89ec37fad",
+  "sha256": "410302cb2d8fee5c4da0eaf5226c64fb0b0d557349fa0e3265c67a2abc8a6451",
   "source": "no_same_day_panel"
 }
