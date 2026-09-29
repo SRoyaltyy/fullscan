@@ -1,6 +1,6 @@
 {
   "date": "2026-09-29",
-  "generated_at": "2026-09-29T05:20:00.457064-04:00",
+  "generated_at": "2026-09-29T07:19:31.722970-04:00",
   "run_id": "36541306530",
   "runner": "ecs-openclaw",
   "all_ok": false,
@@ -113,14 +113,30 @@
   "github_runs": [
     {
       "workflow": "preopen_all.yml",
-      "n_today": 1,
+      "n_today": 2,
       "latest": {
-        "id": 36541306530,
-        "status": "in_progress",
-        "conclusion": null,
+        "id": 36550385078,
+        "status": "completed",
+        "conclusion": "success",
         "event": "workflow_dispatch",
-        "html_url": "https://github.com/SRoyaltyy/fullscan/actions/runs/36541306530"
-      }
+        "html_url": "https://github.com/SRoyaltyy/fullscan/actions/runs/36550385078"
+      },
+      "runs": [
+        {
+          "id": 36541306530,
+          "status": "completed",
+          "conclusion": "success",
+          "event": "workflow_dispatch",
+          "html_url": "https://github.com/SRoyaltyy/fullscan/actions/runs/36541306530"
+        },
+        {
+          "id": 36550385078,
+          "status": "completed",
+          "conclusion": "success",
+          "event": "workflow_dispatch",
+          "html_url": "https://github.com/SRoyaltyy/fullscan/actions/runs/36550385078"
+        }
+      ]
     },
     {
       "workflow": "finviz_preopen_scrape.yml",
@@ -340,5 +356,6 @@
     ]
   },
   "news_mode": "on",
-  "news_mode_reason": ""
+  "news_mode_reason": "",
+  "restamp_note": "Status restamp only. Both Pre-Open runs finished. Essays were not re-run and stay 0/11. grok_ok stays false."
 }
