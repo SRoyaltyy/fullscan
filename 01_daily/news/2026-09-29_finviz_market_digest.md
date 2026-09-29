@@ -1,6 +1,6 @@
 # Finviz homepage market digest — 2026-09-29
 
-**Generated:** 2026-09-29T04:14:59.778169-04:00 (America/New_York)
+**Generated:** 2026-09-29T04:14:54.007235-04:00 (America/New_York)
 **Source:** `live`
 **Banner:** US stocks set for flat open as Treasury yields climb ahead of home price and confidence data in a quiet catalyst backdrop
 **Prior close:** SPX —  Nasdaq —  Dow —
