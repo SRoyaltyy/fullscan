@@ -14,6 +14,11 @@ from unittest import mock
 
 from src.jev_eval import gold_norms, jaccard, load_archive, title_id, tokens
 from src.jev_gate import gate, load_gold, normalize_title
+from src.jev_rubric import (
+    propose_one_change,
+    rubric_path,
+    upsert_rubric,
+)
 from src.jev_train import (
     BIT_ORDER,
     COMMIT_ALLOW,
@@ -568,6 +573,130 @@ def test_issue_body_has_counts_and_json_link():
     assert "| human | 3 | 27 |" in body
     assert "20260929_0130.json" in body
     assert "print" in body
+    assert "## Rubric (one Jev-analysis change)" in body
+    assert "closed lists" in body.lower() or "Closed lists" in body
+
+
+def test_session_409_proposes_action_material():
+    """Largest Jev miss bucket on #409 is low_material → action_material."""
+    grade = {
+        "stamp": "20260929_1223",
+        "draw_stamp": "20260929_1120",
+        "counts": {
+            "human_keep": 25, "human_drop": 75, "jev_keep": 3, "jev_drop": 97,
+            "false_keep": 0, "false_drop": 22,
+        },
+        "false_keep": [],
+        "false_drop": [
+            {"title": "Cyclospora fears", "human": "K", "reason": "opinion",
+             "human_reason": "Health scare--could trigger recalls, FDA, policies etc"},
+            {"title": "Anthropic IPO", "human": "K", "reason": "opinion",
+             "human_reason": "Major upcoming IPO"},
+            {"title": "OpenAI teens", "human": "K", "reason": "low_material",
+             "human_reason": "Product launch from major AI company"},
+            {"title": "CFTC rules", "human": "K", "reason": "low_material",
+             "human_reason": "CFTC part worth looking into"},
+            {"title": "Vanguard 4.6B", "human": "K", "reason": "low_material",
+             "human_reason": "potential merger/acquisition"},
+            {"title": "Basin rigs", "human": "K", "reason": "low_material",
+             "human_reason": "useful context for oil prices"},
+            {"title": "Fed holds rates", "human": "K", "reason": "low_material",
+             "human_reason": "US Fed action"},
+            {"title": "House CR", "human": "K", "reason": "low_material",
+             "human_reason": "House of representatives action"},
+            {"title": "UP-NS merger", "human": "K", "reason": "low_material",
+             "human_reason": "Merger involving US company"},
+            {"title": "EIA storage", "human": "K", "reason": "low_material",
+             "human_reason": "Oil and petrol information"},
+            {"title": "Wells Fargo", "human": "K", "reason": "low_material",
+             "human_reason": "Major company charges dismissed"},
+            {"title": "Chinese EVs", "human": "K", "reason": "low_material",
+             "human_reason": "Potential EV policy from Trump"},
+            {"title": "Azeri Light", "human": "K", "reason": "geo_other",
+             "human_reason": "Useful oil price context"},
+            {"title": "Nordic PE", "human": "K", "reason": "geo_other",
+             "human_reason": "Company acquisition/merger"},
+            {"title": "Hormuz reject", "human": "K", "reason": "reprint_weather",
+             "human_reason": "explicit acceptance/rejection of peace deals"},
+            {"title": "Tokyo yen", "human": "K", "reason": "crowd",
+             "human_reason": "Japanese Yen is a factor in US markets"},
+            {"title": "Social Security?", "human": "K", "reason": "punct",
+             "human_reason": "Trump-linked government policy"},
+            {"title": "Explainer CDS?", "human": "K", "reason": "punct",
+             "human_reason": "Credit default swaps"},
+            {"title": "simplywall tariffs", "human": "K", "reason": "source",
+             "human_reason": "US China Tariffs"},
+        ],
+    }
+    proposal = propose_one_change(grade)
+    assert proposal["question"] == "action_material"
+    assert proposal["kind"] == "criteria"
+    assert proposal["n"] == 10
+    assert "US Fed action" in proposal["text"]
+    assert "new_instrument" in proposal["text"]
+    assert any(row["reason"] == "punct" for row in proposal["code_notes"])
+    living = upsert_rubric(
+        Path("/tmp/does-not-write-rubric.md"), grade, proposal, write=False,
+    )
+    assert "## Session `20260929_1223`" in living
+    assert "action_material" in living
+    assert "jev_closed_lists.json" in living
+
+
+def test_write_grade_updates_living_rubric():
+    title = "August Core PCE print lands ahead of the Fed decision"
+    tape = "Gold falls as traders price another Fed hike"
+    rows = _quiet_rows(28)
+    rows.extend([
+        {
+            "title": title,
+            "source": "reuters",
+            "jev": "DROP",
+            "reason": "low_material",
+            "grade": "K",
+            "human_reason": "US Fed print — keep for Lane",
+        },
+        {
+            "title": tape,
+            "source": "reuters",
+            "jev": "KEEP",
+            "reason": "core_material",
+            "grade": "D",
+            "human_reason": "gold tape is trash",
+        },
+    ])
+    parsed = parse_grades_payload(json.dumps({
+        "schema": "jev-train-grades-1",
+        "draw_stamp": "20260929_0100",
+        "nonce": "rubric-nonce",
+        "rows": rows,
+    }))
+    with tempfile.TemporaryDirectory() as tmp:
+        root = Path(tmp)
+        ground = root / "00_grounding"
+        ground.mkdir()
+        closed = ground / "jev_closed_lists.json"
+        closed.write_text('{"shapes":["do-not-touch"]}\n', encoding="utf-8")
+        before = closed.read_bytes()
+        result = write_grade(
+            parsed, stamp="20260929_0160", now=NOW, root=root, ground=ground, write=True,
+        )
+        living = Path(result["paths"]["rubric"])
+        assert living == rubric_path(ground)
+        text = living.read_text(encoding="utf-8")
+        assert "## Session `20260929_0160`" in text
+        assert "US Fed print — keep for Lane" in text
+        assert result["rubric"]["question"] in {"action_material", "is_opinion", "geo"}
+        assert "## Rubric (one Jev-analysis change)" in result["issue_body"]
+        assert result["rubric"]["question"] in result["issue_body"]
+        assert closed.read_bytes() == before
+        again = write_grade(
+            parsed, stamp="20260929_0161", now=NOW, root=root, ground=ground, write=True,
+        )
+        twice = Path(again["paths"]["rubric"]).read_text(encoding="utf-8")
+        assert twice.count("## Session `20260929_0160`") == 1
+        assert twice.count("## Session `20260929_0161`") == 1
+        assert twice.count("## Pending one change") == 1
 
 
 def test_commit_allowlist_and_workflow_and_page():
@@ -957,6 +1086,8 @@ def main() -> None:
         test_grades_payload_accepts_base64_and_rejects_secrets,
         test_publish_issue_opens_or_updates_the_titled_issue,
         test_issue_body_has_counts_and_json_link,
+        test_session_409_proposes_action_material,
+        test_write_grade_updates_living_rubric,
         test_commit_allowlist_and_workflow_and_page,
         test_repo_holdout_and_hard_miss_bank_are_disjoint_from_gold,
         test_hard_miss_bank_builder_skips_gold_and_holdout,
