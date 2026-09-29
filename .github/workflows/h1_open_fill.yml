@@ -4,8 +4,9 @@ name: h1 open fill
 # 13:35 UTC = 09:35 ET during EDT (UTC-4, through 2026-11-01) and 08:35 ET
 # during EST (UTC-5, from 2026-11-01). Hong Kong Time is 9:35 PM the same
 # calendar day (UTC+8, no DST). GitHub cron does not follow DST. During EST
-# this is before the 09:30 open; a missing open appends nothing and the
-# 21:30 UTC fill writes the trades.
+# this is before the 09:30 open. A buy or sell leg whose bar is missing
+# or dated another session writes nothing and exits non-zero. The 21:30
+# UTC fill writes the trades.
 # Reads the h1 plan sealed at 13:05 UTC for today's session. No plan for
 # today, including 2026-09-28, appends nothing.
 

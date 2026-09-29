@@ -38,3 +38,12 @@ This enforces the PREREG's "seal on D before 09:30 ET" timing. A plan run whose 
 - rule: seal on D before 09:30 ET. The lower bound is 08:00 ET on D. After D's close fill, a run on D evening targets D+1 and writes nothing. A run at D+1 07:59 ET writes nothing. D+1 08:00–09:29 ET seals. At or after 09:30 ET the missing record is unchanged.
 - code: `plan_main` in `research/hot_n4_clean_v4/forward/forward.py`. Holdup and h1 share that entry point. `PLAN_ALLOW_EARLY=1` skips the lower bound for tests and is not set by any workflow.
 - sealed lines: unchanged. No ledger, log, price ledger, PREREG, IRONCLAD, or manifest line was edited.
+
+## 2026-09-28 — Open fill used the previous session's bar
+
+The 09:41 ET open fill sealed `yahoo_split_adjusted_daily_open` from bars that were still 2026-09-25 for two legs. SRFM was filled at 0.9439 and SECZ at 16.21, the 09-25 opens (09-25 closes were 1.11 and 15.96). The 09-28 opens are SRFM 1.125 and SECZ 16.00. GLND, SHMD, FEAM, and TJGC were the 09-28 opens. That night's close fill refused because the stored 09-28 open no longer matched the sealed fill. This entry does not correct that seal.
+
+- study: `hot_n4_clean_v4`, recipes `union_hot_n4_h1__w0` and `union_hot_n4_holdup__w0`
+- rule: every buy and sell leg's Yahoo bar must be dated the session in America/New_York. A missing bar or any other date does not seal. The run exits non-zero and writes nothing. A fill that equals the prior session's open or close while that session bar is absent is the same refusal.
+- code: `open_fill_main` in `research/hot_n4_clean_v4/forward/forward.py`. Holdup and h1 share that entry point.
+- sealed lines: unchanged. No 2026-09-28 correction was written.

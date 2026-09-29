@@ -18,7 +18,7 @@ from research.hot_n4_clean_v4.forward.ledger import (
     open_plan,
     plan_on,
 )
-from research.hot_n4_clean_v4.forward.opens import OPEN_SOURCE
+from research.hot_n4_clean_v4.forward.opens import OPEN_SOURCE, _positive, session_open
 from research.hot_n4_clean_v4.forward.planfill import book_state_before, fill_book
 from research.hot_n4_clean_v4.forward.book import current_book
 
@@ -141,6 +141,50 @@ def close_mark(plan: dict, opened: dict, prior: dict, bars: dict, fees: dict, in
 def _halt_names(records: list[dict], session: str) -> set[str]:
     """Held names and IWM. Their open has to be in hand before any fill is sealed."""
     return set(book_state_before(records, session)["pos"]) | {"IWM"}
+
+
+def open_legs(plan: dict, held: set[str]) -> list[str]:
+    """Buy and sell tickers this open fill would seal."""
+    held_names = {str(ticker).upper() for ticker in held}
+    sells = [str(row["ticker"]).upper() for row in plan.get("planned_sells") or []]
+    buys = [
+        str(row["ticker"]).upper()
+        for row in plan.get("picks") or []
+        if str(row["ticker"]).upper() not in held_names
+    ]
+    return sorted(set(sells) | set(buys))
+
+
+def refuse_stale_open(session: str, legs: list[str], live: dict, stored: dict) -> str | None:
+    """Why this open fill must not seal, or None when every leg's bar is ``session``.
+
+    Each buy and sell leg needs a bar dated ``session`` in America/New_York.
+    A missing bar or any other date refuses the whole fill. When that session
+    bar is absent and the open equals the prior session's open or close, the
+    reason says so.
+    """
+    from research.hot_n4_clean_v4.run_study import bar_on, prev_session
+
+    prior = prev_session(session)
+    lines = []
+    for ticker in legs:
+        if session_open(ticker, session, live, stored) is not None:
+            continue
+        bar = live.get(ticker) or {}
+        when = bar.get("date")
+        shown = when or "missing"
+        text = f"{ticker} bar {shown} is not {session}"
+        op = _positive(bar.get("open"))
+        prev = bar_on(stored.get(ticker), prior) if stored else None
+        if op is not None and prev and when != session:
+            if float(op) == float(prev["open"]):
+                text += "; fill equals the prior session open"
+            elif float(op) == float(prev["close"]):
+                text += "; fill equals the prior session close"
+        lines.append(text)
+    if not lines:
+        return None
+    return "open fill not sealed: " + "; ".join(lines)
 
 
 def decide_open_fill(

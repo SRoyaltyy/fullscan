@@ -41,8 +41,13 @@ from research.hot_n4_clean_v4.forward.ledger import (  # noqa: E402
     plan_on,
     session_dates,
 )
-from research.hot_n4_clean_v4.forward.openfill import decide_fill, decide_open_fill  # noqa: E402
-from research.hot_n4_clean_v4.forward.opens import collect_opens  # noqa: E402
+from research.hot_n4_clean_v4.forward.openfill import (  # noqa: E402
+    decide_fill,
+    decide_open_fill,
+    open_legs,
+    refuse_stale_open,
+)
+from research.hot_n4_clean_v4.forward.opens import fetched_bars, session_opens  # noqa: E402
 from research.hot_n4_clean_v4.forward.planfill import (  # noqa: E402
     book_state,
     book_state_before,
@@ -771,6 +776,11 @@ def open_fill_main() -> int:
     write the trades. 13:35 UTC is 09:35 ET only during EDT (UTC-4). During
     EST (from 2026-11-01, UTC-5) the same cron is 08:35 ET, before the open,
     and this run then finds no open.
+
+    Every buy and sell leg must be a Yahoo bar dated this session in
+    America/New_York. A missing bar or any other date does not seal: the
+    run exits non-zero and writes nothing, including no skip line. A later
+    run can still seal once the session bar is the one being read.
     """
     try:
         records = load()
@@ -805,7 +815,12 @@ def open_fill_main() -> int:
         | {row["ticker"] for row in plan.get("picks") or []}
         | {row["ticker"] for row in plan.get("planned_sells") or []}
     )
-    opens = collect_opens(names, target, bars["stored"], fetch_yahoo)
+    live = fetched_bars(names, target, fetch_yahoo)
+    stale = refuse_stale_open(target, open_legs(plan, held), live, bars["stored"])
+    if stale:
+        _fail(stale)
+        return 1
+    opens = session_opens(names, target, live, bars["stored"])
     fees = load_fees()
     try:
         bodies, why = decide_open_fill(records, target, opens, bars, fees, index)

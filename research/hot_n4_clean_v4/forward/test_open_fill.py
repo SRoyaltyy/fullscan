@@ -2,11 +2,14 @@
 
 Proves a missing plan appends nothing, a missing open appends nothing, a
 second run does not repeat a fill, and the post-close run does not append
-a buy or sell the open-fill already wrote. The append-only check passes on
-both sealed logs and fails if a seeded line is altered.
+a buy or sell the open-fill already wrote. A Yahoo bar dated another
+session is refused, a bar dated the session is sealed, and a mix of the
+two writes nothing. The append-only check passes on both sealed logs and
+fails if a seeded line is altered.
 """
 from __future__ import annotations
 
+import os
 import sys
 import tempfile
 from pathlib import Path
@@ -285,9 +288,198 @@ def _sealed() -> None:
     print("append-only ok on both logs")
 
 
+DAY = "2026-09-28"
+
+
+def _store() -> dict:
+    def blob() -> dict:
+        return {"adjusted": True, "close": [8.0], "date": [PRIOR], "open": [10.0]}
+
+    return {"feat": {}, "stored": {"AAA": blob(), "BBB": blob(), "IWM": blob()}}
+
+
+def _day_plan(book, index: dict[str, int]) -> dict:
+    payload = {
+        "bar_cutoff": PRIOR,
+        "candidates": [{
+            "fv_avg_volume": 1_000_000.0,
+            "fv_price": 20.0,
+            "ohlc_hot_score": 5.0,
+            "sources": ["yday_gainer"],
+            "ticker": "AAA",
+        }],
+        "excluded_unexplained_legs": [],
+        "morning_s": 1.0,
+        "session": DAY,
+    }
+    plan = build_plan(payload, book_state([_session(book.recipe)]), index)
+    if plan["date"] != DAY:
+        raise SystemExit(f"plan date {plan['date']}")
+    if [row["ticker"] for row in plan["picks"]] != ["AAA"]:
+        raise SystemExit(f"stale-bar picks {plan['picks']}")
+    if [row["ticker"] for row in plan["planned_sells"]] != ["BBB"]:
+        raise SystemExit(f"stale-bar sells {plan['planned_sells']}")
+    plan["sha256"] = "0" * 64
+    return plan
+
+
+def _ledgers() -> dict[str, bytes]:
+    import hashlib
+
+    found = {}
+    roots = (
+        ROOT / "research/hot_n4_clean_v4/forward",
+        ROOT / "research/hot_n4_clean_v4/forward_h1",
+        ROOT / "dashboard/holdup",
+        ROOT / "dashboard/h1",
+    )
+    for folder in roots:
+        if not folder.is_dir():
+            continue
+        for path in folder.iterdir():
+            if path.is_file() and path.suffix in {".jsonl", ".json"}:
+                found[str(path)] = hashlib.sha256(path.read_bytes()).digest()
+    return found
+
+
+def _run_open(book, yahoo: list[dict]) -> tuple[int, str, str, dict]:
+    import io
+    from contextlib import redirect_stderr, redirect_stdout
+    from research.hot_n4_clean_v4.forward import forward
+
+    index = _index()
+    records = [_session(book.recipe), _day_plan(book, index)]
+    calls = {"append": [], "page": 0, "skip": 0}
+
+    def load(folder=None):
+        return records
+
+    def append(bodies, folder=None):
+        calls["append"].append(list(bodies))
+        return bodies
+
+    def bars(rows, target):
+        return _store(), 0
+
+    def ready(rows):
+        return rows, 0
+
+    def page(*args, **kwargs):
+        calls["page"] += 1
+
+    def skip(*args, **kwargs):
+        calls["skip"] += 1
+
+    def fetch(tickers, start, end):
+        return {"bars": yahoo, "error": None, "missing": [], "splits": []}
+
+    saved = {
+        "append_records": forward.append_records,
+        "fetch_yahoo": forward.fetch_yahoo,
+        "load": forward.load,
+        "write_page": forward.write_page,
+        "_bars": forward._bars,
+        "_log_skip": forward._log_skip,
+        "_ready": forward._ready,
+    }
+    old_session = os.environ.get("FORWARD_SESSION")
+    token = use_book(book)
+    out = io.StringIO()
+    err = io.StringIO()
+    try:
+        os.environ["FORWARD_SESSION"] = DAY
+        for name, value in (
+            ("load", load),
+            ("append_records", append),
+            ("write_page", page),
+            ("_bars", bars),
+            ("_log_skip", skip),
+            ("_ready", ready),
+            ("fetch_yahoo", fetch),
+        ):
+            setattr(forward, name, value)
+        with redirect_stdout(out), redirect_stderr(err):
+            code = forward.open_fill_main()
+    finally:
+        reset_book(token)
+        for name, value in saved.items():
+            setattr(forward, name, value)
+        if old_session is None:
+            os.environ.pop("FORWARD_SESSION", None)
+        else:
+            os.environ["FORWARD_SESSION"] = old_session
+    return code, out.getvalue(), err.getvalue(), calls
+
+
+def _stale_session_bars() -> None:
+    from datetime import datetime, timezone
+
+    before = _ledgers()
+    # 2026-09-29 01:00 UTC is still 2026-09-28 in America/New_York.
+    session_stamp = datetime(2026, 9, 29, 1, 0, tzinfo=timezone.utc)
+    # 2026-09-26 01:00 UTC is still 2026-09-25 in America/New_York.
+    stale_stamp = datetime(2026, 9, 26, 1, 0, tzinfo=timezone.utc)
+    fresh = [
+        {"date": DAY, "open": 11.0, "ticker": "AAA"},
+        {"date": session_stamp, "open": 12.0, "ticker": "BBB"},
+        {"date": DAY, "open": 10.0, "ticker": "IWM"},
+    ]
+    stale = [
+        {"date": PRIOR, "open": 10.0, "ticker": "AAA"},
+        {"date": stale_stamp, "open": 8.0, "ticker": "BBB"},
+        {"date": PRIOR, "open": 10.0, "ticker": "IWM"},
+    ]
+    mixed = [
+        {"date": DAY, "open": 11.0, "ticker": "AAA"},
+        {"date": PRIOR, "open": 10.0, "ticker": "BBB"},
+        {"date": DAY, "open": 10.0, "ticker": "IWM"},
+    ]
+    for book in (HOLDUP, H1):
+        code, _text, err, calls = _run_open(book, stale)
+        if code == 0 or calls["append"] or calls["skip"] or calls["page"]:
+            raise SystemExit(f"{book.recipe} stale bar sealed {code} {calls} {err!r}")
+        if f"AAA bar {PRIOR} is not {DAY}" not in err:
+            raise SystemExit(f"{book.recipe} stale AAA {err!r}")
+        if "fill equals the prior session open" not in err:
+            raise SystemExit(f"{book.recipe} prior open {err!r}")
+        if f"BBB bar {PRIOR} is not {DAY}" not in err:
+            raise SystemExit(f"{book.recipe} stale BBB date {err!r}")
+        if "2026-09-26" in err:
+            raise SystemExit(f"{book.recipe} used the UTC date {err!r}")
+        if "fill equals the prior session close" not in err:
+            raise SystemExit(f"{book.recipe} prior close {err!r}")
+
+        code, text, err, calls = _run_open(book, fresh)
+        if code != 0 or calls["skip"] or calls["page"] != 1:
+            raise SystemExit(f"{book.recipe} fresh bar {code} {calls} {err!r} {text!r}")
+        if len(calls["append"]) != 1 or len(calls["append"][0]) != 1:
+            raise SystemExit(f"{book.recipe} fresh append {calls['append']}")
+        body = calls["append"][0][0]
+        if body["kind"] != "open_fill" or body["date"] != DAY or body["recipe"] != book.recipe:
+            raise SystemExit(f"{book.recipe} fresh body {body}")
+        buys = {row["ticker"]: row["fill"] for row in body["buys"]}
+        sells = {row["ticker"]: row["fill"] for row in body["sells"]}
+        if buys.get("AAA") != 11.0 or sells.get("BBB") != 12.0:
+            raise SystemExit(f"{book.recipe} fresh fills {buys} {sells}")
+        if "equity_primary" in body:
+            raise SystemExit(f"{book.recipe} fresh sealed a close P&L")
+
+        code, _text, err, calls = _run_open(book, mixed)
+        if code == 0 or calls["append"] or calls["skip"] or calls["page"]:
+            raise SystemExit(f"{book.recipe} mixed bar sealed {code} {calls} {err!r}")
+        if f"BBB bar {PRIOR} is not {DAY}" not in err:
+            raise SystemExit(f"{book.recipe} mixed BBB {err!r}")
+        if "AAA bar" in err:
+            raise SystemExit(f"{book.recipe} mixed refused a fresh bar {err!r}")
+    if _ledgers() != before:
+        raise SystemExit("stale-bar check wrote a sealed ledger")
+    print("stale session bar refused; fresh bar sealed; mix wrote nothing")
+
+
 def main() -> None:
     for book in (HOLDUP, H1):
         _run_book(book)
+    _stale_session_bars()
     _sealed()
     print("2026-09-29 open-fill ok")
 
