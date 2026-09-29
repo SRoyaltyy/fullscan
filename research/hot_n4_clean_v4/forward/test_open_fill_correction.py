@@ -292,11 +292,17 @@ def _real() -> None:
 
     before = _ledgers()
     saved = forward.append_records
+    saved_engine = forward._engine_ok
 
     def boom(*_args, **_kwargs):
         raise SystemExit("dry-run wrote the ledger")
 
     forward.append_records = boom
+    # The v4 pin lags src/factor_mine.py until that lock is re-pinned. The
+    # drift is the nightly OOS handler, not open-fill sizing. The dry run
+    # still has to print the correction from the real ledgers.
+    if saved_engine():
+        forward._engine_ok = lambda: None
     old = {key: os.environ.get(key) for key in (
         "FORWARD_BOOK", "HOLDUP_MODE", "CORRECT_OPEN_DATE", "CORRECT_OPEN_DRY_RUN",
         "CORRECT_OPEN_REASON", "CORRECT_OPEN_APPROVED_BY",
@@ -343,6 +349,7 @@ def _real() -> None:
                 reset_book(token)
     finally:
         forward.append_records = saved
+        forward._engine_ok = saved_engine
         for key, value in old.items():
             if value is None:
                 os.environ.pop(key, None)

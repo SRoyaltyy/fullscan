@@ -331,18 +331,78 @@ def correction_opens(plan: dict, held: set[str], bars: dict) -> dict[str, float]
     return found
 
 
+def _copy_bars(bars: dict) -> dict:
+    import numpy as np
+
+    out: dict = {"feat": {}, "stored": {}}
+    for side in ("feat", "stored"):
+        for ticker, blob in (bars.get(side) or {}).items():
+            copied = {}
+            for key, value in blob.items():
+                if key == "date":
+                    copied[key] = list(value)
+                elif key == "adjusted":
+                    copied[key] = value
+                else:
+                    copied[key] = np.array(value, dtype=float, copy=True)
+            out[side][ticker] = copied
+    return out
+
+
+def _prefer_price_rows(bars: dict, rows: list[dict]) -> dict:
+    """Copy ``bars`` and use each price-ledger row for that session.
+
+    The pinned file can already hold the same date as a float32 echo. The
+    book's ``prices.jsonl`` is the open the correction sizes from. A date
+    that is not in the copy yet is appended. Nothing is written.
+    """
+    from research.hot_n4_clean_v4.forward.prices import overlay_rows
+
+    out = _copy_bars(bars)
+    fields = {
+        "stored": ("open", "close"),
+        "feat": ("open", "high", "low", "close", "volume"),
+    }
+    append = []
+    for row in rows:
+        ticker = str(row["ticker"]).upper()
+        session = row["date"]
+        blob = out["stored"].get(ticker)
+        dates = list(blob["date"]) if blob else []
+        if session not in dates:
+            append.append(row)
+            continue
+        for side, keys in fields.items():
+            side_blob = out[side].get(ticker)
+            if side_blob is None or session not in side_blob["date"]:
+                continue
+            at = side_blob["date"].index(session)
+            for key in keys:
+                if key in row and key in side_blob:
+                    side_blob[key][at] = float(row[key])
+    if append:
+        out = overlay_rows(out, append)
+    return out
+
+
 def bars_with_stored_session(bars: dict, session: str, names: list[str]) -> dict:
     """Return ``bars`` with a stored session open for every name.
 
-    The book's own ``prices.jsonl`` wins. A name that is not in that file
-    is filled from the other forward book's ``prices.jsonl``. h1 has no
-    price file yet; the 2026-09-28 bars are already in the holdup file.
-    Nothing is written.
+    The book's own ``prices.jsonl`` wins, including when the pinned file
+    already has that date. A name that is not in that file is filled from
+    the other forward book's ``prices.jsonl``. Nothing is written.
     """
     from research.hot_n4_clean_v4.forward.book import BOOKS
     from research.hot_n4_clean_v4.forward.opens import stored_opens
     from research.hot_n4_clean_v4.forward.prices import load_price_rows, overlay_rows
 
+    want = {str(name).upper() for name in names}
+    own = [
+        row for row in load_price_rows()
+        if row.get("date") == session and row.get("ticker") in want
+    ]
+    if own:
+        bars = _prefer_price_rows(bars, own)
     found = stored_opens(bars["stored"], names, session)
     missing = [name for name in names if name not in found]
     if not missing:
