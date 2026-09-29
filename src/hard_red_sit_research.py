@@ -110,10 +110,14 @@ def yahoo_session_overlay(tickers: list[str], date: str) -> dict:
         recs = df.to_dict(orient="records")
     except Exception:
         return {}
+    from .factor_mine_bars import ny_bar_date
+    others: set[str] = set()
     for rec in recs:
         t = fm._tick(rec.get("ticker"))
-        d0 = str(rec.get("date") or "")[:10]
+        d0 = ny_bar_date(rec.get("date"))
         if not t or d0 != date:
+            if t and d0:
+                others.add(t)
             continue
         out[(t, date)] = {
             "open": fm._finite(rec.get("open")),
@@ -122,6 +126,9 @@ def yahoo_session_overlay(tickers: list[str], date: str) -> dict:
             "close": fm._finite(rec.get("close")),
             "src": "yahoo_session",
         }
+    stale = sorted(t for t in others if (t, date) not in out)
+    if stale:
+        print(f"[hard-red] {date} stale_bar {','.join(stale)}", flush=True)
     return out
 
 

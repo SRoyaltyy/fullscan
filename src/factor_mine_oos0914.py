@@ -304,6 +304,8 @@ def load_session_bars(path: Path, dates: list[str], tickers: set[str], *,
     keep_dates = {d for d in want if d <= max_date and (allow_test or d < CUTOFF)}
     names = {str(t).upper() for t in tickers if t}
     day = frame[frame["date"].isin(keep_dates) & frame["ticker"].isin(names)]
+    from .factor_mine_bars import ny_bar_date
+
     bars: dict = {}
     for rec in day.itertuples(index=False):
         ticker = str(getattr(rec, "ticker", "") or "").upper()
@@ -312,6 +314,8 @@ def load_session_bars(path: Path, dates: list[str], tickers: set[str], *,
             continue
         if not allow_test and stamp >= CUTOFF:
             raise FutureLeak(stamp)
+        if ny_bar_date(stamp) != stamp:
+            continue
         bars[(ticker, stamp)] = {
             "open": getattr(rec, "open", None),
             "high": getattr(rec, "high", None),
@@ -984,11 +988,21 @@ def _pin_bars(date: str, tickers: set[str]) -> dict:
         doc = json.loads(path.read_text(encoding="utf-8"))
     except (OSError, json.JSONDecodeError):
         return {}
+    if str(doc.get("date") or "")[:10] != str(date)[:10]:
+        print(
+            f"[oos0914] {date} stale_bar price pin dated {doc.get('date')}",
+            flush=True,
+        )
+        return {}
     names = doc.get("names") or {}
     out = {}
     for ticker in tickers:
         info = names.get(ticker)
         if not isinstance(info, dict) or not _has_print(info):
+            continue
+        from .factor_mine_bars import usable_session_print
+        if not usable_session_print(info, date):
+            print(f"[oos0914] {date} stale_bar {ticker}", flush=True)
             continue
         out[(ticker, date)] = {
             "open": info.get("open"),
@@ -1104,8 +1118,15 @@ def _ensure_iwm(dates: list[str], bars: dict, *, allow_test: bool) -> dict:
     parsed = retro._iwm_frame(raw)
     for date in dates:
         bar = parsed.get(("IWM", date))
-        if bar:
-            bars[("IWM", date)] = bar
+        if not bar:
+            others = sorted(d for (sym, d) in parsed if sym == "IWM")
+            if others:
+                print(
+                    f"[oos0914] IWM {date} stale_bar yahoo={others[-1]}",
+                    flush=True,
+                )
+            continue
+        bars[("IWM", date)] = bar
     return bars
 
 

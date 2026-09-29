@@ -15,6 +15,8 @@ import json
 from datetime import datetime
 from pathlib import Path
 
+from .factor_mine_bars import ny_bar_date
+
 ROOT = Path(__file__).resolve().parent.parent
 DIR = ROOT / "data" / "factor_mine" / "send_inputs"
 PANEL_REL = "data/factor_mine/panel.json"
@@ -45,9 +47,10 @@ def rows_for_record(date: str, doc: dict | None) -> list[dict]:
     for row in (doc or {}).get("rows") or []:
         if not isinstance(row, dict):
             continue
-        row_date = str(row.get("date") or day)[:10]
-        if row_date != day:
-            continue
+        raw_date = row.get("date")
+        if raw_date not in (None, ""):
+            if ny_bar_date(raw_date) != day:
+                continue
         out.append(row)
     return out
 
@@ -113,8 +116,13 @@ def input_files(payload: dict) -> list[dict]:
     return files
 
 
-def sizing_prices(payload: dict) -> list[dict]:
-    """Elite / open prices stamped on live buy and sell rows."""
+def sizing_prices(payload: dict, session: str | None = None) -> list[dict]:
+    """Elite / open prices stamped on live buy and sell rows.
+
+    A price that carries ``bar_date`` or ``date`` for another session
+    is dropped. An undated price is kept: the ticket stamp is not a bar.
+    """
+    day = str(session or "")[:10]
     out: list[dict] = []
     seen: set[str] = set()
     strategies = (payload or {}).get("strategies") or {}
@@ -131,6 +139,15 @@ def sizing_prices(payload: dict) -> list[dict]:
                 continue
             ticker = str(row.get("ticker") or "").upper()
             if not ticker or ticker in seen:
+                continue
+            stamp = row.get("bar_date")
+            if stamp in (None, "") and row.get("date") not in (None, ""):
+                stamp = row.get("date")
+            if day and stamp not in (None, "") and ny_bar_date(stamp) != day:
+                print(
+                    f"[factor-mine] {day} stale_bar {ticker} send_inputs",
+                    flush=True,
+                )
                 continue
             seen.add(ticker)
             item = {"ticker": ticker}
@@ -159,7 +176,7 @@ def build_document(date: str, payload: dict, session: dict) -> dict:
         "reason": str((session or {}).get("error") or ""),
         "files": input_files(payload),
         "rows": rows,
-        "prices": sizing_prices(payload),
+        "prices": sizing_prices(payload, day),
         "picks": picks,
     }
     doc["sha256"] = content_sha(doc)

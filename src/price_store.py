@@ -197,8 +197,13 @@ def _flatten_yf(raw: pd.DataFrame, tickers: list[str]) -> pd.DataFrame:
             return pd.DataFrame()
         part = part.reset_index()
         date_col = "Date" if "Date" in part.columns else part.columns[0]
+        # A timezone-aware Yahoo timestamp is the New York calendar date.
+        # A naive daily label is already that date. A row with no date is
+        # not stored, so a later session cannot inherit it.
+        from .factor_mine_bars import ny_bar_date
+        stamped = [ny_bar_date(value) for value in part[date_col]]
         out = pd.DataFrame({
-            "date": pd.to_datetime(part[date_col], errors="coerce"),
+            "date": pd.to_datetime(stamped, errors="coerce"),
             "ticker": sym,
             "open": part[need["open"]] if need["open"] is not None else None,
             "high": part[need["high"]] if need["high"] is not None else None,
@@ -206,7 +211,7 @@ def _flatten_yf(raw: pd.DataFrame, tickers: list[str]) -> pd.DataFrame:
             "close": part[need["close"]],
             "volume": part[need["volume"]] if need["volume"] is not None else None,
         })
-        return out.dropna(subset=["close"])
+        return out.dropna(subset=["close", "date"])
 
     if not isinstance(raw.columns, pd.MultiIndex):
         if len(tickers) == 1:
