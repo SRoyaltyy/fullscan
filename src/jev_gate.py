@@ -89,8 +89,8 @@ _CLASS_DEAL = re.compile(
     r"|\bbuyout\b"
     r"|\bproduct launch\b"
     r"|\bintroduces\b"
-    r"|\b(?:targets?|record|files?|prices?|launches?)\b.{0,40}\bipo\b"
-    r"|\bipo\b.{0,40}(?:targets?|files?|prices?)"
+    r"|\b(?:targets?|record|files?|launches?|prices its|priced)\b.{0,40}\bipo\b"
+    r"|\bipo\b.{0,40}(?:targets?|files?|priced|prices its)"
     r")"
 )
 _CLASS_POLICY = re.compile(
@@ -100,7 +100,8 @@ _CLASS_POLICY = re.compile(
     r"|\bcontinuing resolution\b"
     r"|\bhouse clears\b"
     r"|\bshutdown risk\b"
-    r"|\bsocial security\b"
+    r"|\bsocial security\b.{0,48}\b(?:tax|cut|change|plan|reform|benefits?|mulls)\b"
+    r"|\b(?:tax|cut|change|plan|reform|mulls)\b.{0,48}\bsocial security\b"
     r"|\bcredit default swaps?\b"
     r"|\bchinese evs\b"
     r"|\bcyclospora\b"
@@ -163,20 +164,32 @@ QUESTIONS: dict = {
                 "'Best move if the market crashes', celebrity, theme park. "
                 "Forecast / odds / live tape that only name-drops PCE, IPO, "
                 "or a rate-hike. Investor-rebuke or 'could still gain' "
-                "columns with no warn / hold / print."
+                "columns with no warn / hold / print. Leaders 'expected' "
+                "an outcome with no accept/reject/deal/escalation. Social "
+                "Security explainer with no tax/plan/reform. Reclaim / IPO "
+                "price of an already-public name. Open-bell '5 things' "
+                "listicle with no named print/deal/policy."
             ),
             "false": (
                 "Title contains a first-class fact even inside a listicle "
                 "or column frame: Fed / EIA / House / CFTC / FDA action, "
                 "named IPO or M&A or IPO delay, pathogen + consumers/recalls, "
-                "Fed officer + inflation or oil, jobs / rents as Fed-path "
+                "Fed officer sees/says/warns inflation or oil, Fed chair / "
+                "Jackson Hole remarks, jobs / rents as Fed-path "
                 "context, peace accept/reject, dated official print or hold, "
-                "court dismiss of a listed name, housing or credit freeze "
+                "Conference Board / consumer-confidence print, court dismiss "
+                "or listed-name litigation, housing or credit freeze "
                 "that if true changes a listed sector prior, EV / tariff / "
                 "Social Security policy, sitting-president foreign-policy "
-                "action (gambit, backing, corridor), US/China national "
+                "action (gambit, backing, corridor) or scheduled summit/"
+                "dinner with a counterpart, US/China national "
                 "industrial policy (AI / chips / capital markets), named-firm "
-                "mass layoff, G7/UK national fiscal budget or tax rise, "
+                "mass layoff, cost-cut / deleveraging, or Chapter 11, "
+                "G7/UK national fiscal budget or tax rise, "
+                "EU/G7 trade or Buy-European procurement rules, G10 CB "
+                "hawkish/dovish stance, national exchange trading debut, "
+                "outbreak + vaccination drive, food-import supply-shock, "
+                "tanker/newbuild cost inversion, yield-driven gold crash, "
                 "or CDS affecting a listed sector."
             ),
         },
@@ -205,8 +218,13 @@ QUESTIONS: dict = {
                 "oil-price print (Brent, WTI, Azeri Light, EIA storage, "
                 "basin rigs), G7/UK national fiscal budget or tax rise "
                 "(not a local coin / council story), sitting-US-president "
-                "action in Korea or on an India-Europe corridor, or a "
-                "named steel / freight trade-flow disruption"
+                "action in Korea or on an India-Europe corridor, a "
+                "named steel / freight trade-flow disruption, Conference "
+                "Board / consumer-confidence print, national exchange "
+                "trading debut, EU/G7 public-procurement or Buy-European "
+                "trade rules, yield-driven gold / Treasury move, tanker / "
+                "newbuild vessel-cost inversion, or a food-import "
+                "supply-shock"
             ),
             "chokepoint": (
                 "Hormuz, Red Sea / Bab el-Mandeb, Suez, Panama, Taiwan "
@@ -215,7 +233,10 @@ QUESTIONS: dict = {
             "other": (
                 "Anywhere else with no US / G10 / oil-print / G7-fiscal "
                 "hook and no named M&A or named-firm layoff. Yemen / "
-                "Palestine / UK-local politics stay other."
+                "Palestine / UK-local politics stay other. Leaders "
+                "'expected' an Iran/geo outcome with no accept/reject/"
+                "deal stays other and is not a fact. Africa outbreak "
+                "with no vaccination / pharma-contract hook stays other."
             ),
         },
     },
@@ -229,22 +250,31 @@ QUESTIONS: dict = {
             ),
             "regulator": (
                 "SEC, FDA, Fed, FOMC, CFTC, NHTSA, NBS, ECB, PBOC, EIA, "
-                "a named Fed governor, or a court with a binding order"
+                "a named Fed governor, Conference Board official print, "
+                "Fed chair / named governor sees/says, or a court with "
+                "a binding order"
             ),
             "listed_firm": (
                 "Named company that has or plausibly has a US ticker, "
                 "including a named acquirer, a major AI lab with a "
                 "dated product or IPO, or a named firm with an IPO "
-                "delay or mass layoff"
+                "delay, mass layoff, cost-cut / deleveraging, Chapter 11 "
+                "/ bankruptcy, authorized buyback, or listed-name going "
+                "to court"
             ),
             "infrastructure": (
                 "Port, strait, exchange, grid, pipeline operator, a "
-                "G10 FX pair / oil benchmark, or a named steel / "
-                "freight trade-flow channel"
+                "G10 FX pair / oil benchmark, a named steel / "
+                "freight trade-flow channel, a national exchange "
+                "trading debut, an industry-association network launch, "
+                "or a tanker / newbuild channel"
             ),
             "crowd": (
                 "Protesters, activists, tourists, unnamed residents. "
-                "Not FX tape + Fed hike bets, not a named firm or agency."
+                "Not FX tape + Fed hike bets, not a named firm or agency. "
+                "Not a Conference Board / consumer-confidence print. "
+                "Not an industry-wide association or state banking "
+                "association launching a network."
             ),
             "other_person": "Private individual with no state or corporate seat",
         },
@@ -266,10 +296,23 @@ QUESTIONS: dict = {
             "(AI / chips / capital markets) = yes. Named steel / freight "
             "trade-flow disruption = yes. IPO delay or listing limbo = yes. "
             "Sitting-president foreign-policy action (gambit, backing a "
-            "corridor) = yes. Named-firm mass layoff = yes. G7/UK national "
+            "corridor) or a scheduled summit/dinner with a counterpart = yes. "
+            "Named-firm mass layoff, cost-cut / deleveraging, Chapter 11, "
+            "or authorized buyback = yes. G7/UK national "
             "fiscal budget or tax rise = yes. Jobs / rents as Fed-path "
-            "context = yes. Celebrity, theme park, 'best move if crash', "
-            "gold-tumbles tape, earnings-look-right, or forecast / odds / "
+            "context = yes. Conference Board / consumer-confidence print = yes. "
+            "Industry-wide association launching a network = yes. "
+            "EU/G7 trade or Buy-European procurement rules = yes. "
+            "National exchange trading debut = yes. Fed officer "
+            "sees/says/warns inflation or oil, or Fed chair / Jackson Hole "
+            "remarks = yes. G10 CB hawkish/dovish stance = yes. "
+            "Outbreak + vaccination drive = yes. Food-import supply-shock = yes. "
+            "Tanker/newbuild cost inversion = yes. Yield-driven gold crash "
+            "(yields + gold plunge) = yes. Leaders 'expected' an outcome "
+            "with no accept/reject/deal = no. Social Security explainer "
+            "with no tax/plan/reform = no. Reclaim / IPO price of an "
+            "already-public name = no. Celebrity, theme park, 'best move if crash', "
+            "gold-tumbles forecast tape, earnings-look-right, or forecast / odds / "
             "live tape that only name-drops a print = no."
         ),
         "criteria": {
@@ -277,17 +320,29 @@ QUESTIONS: dict = {
                 "If true, could change prices, policy, cash flows, or the "
                 "prior for a US-listed name or a core macro / oil / FX / "
                 "steel-freight factor this week: dated print / hold / CR, "
-                "named M&A or IPO delay, regulator exploring rules, "
-                "major-AI product, court dismiss, pathogen-recall scare, "
-                "EV / tariff / Social Security / national industrial "
-                "policy, sitting-president foreign-policy action, named-firm "
-                "mass layoff, G7/UK fiscal budget or tax rise, jobs / rents "
-                "as Fed-path context."
+                "Conference Board / consumer-confidence print, named M&A or "
+                "IPO delay, regulator exploring rules, major-AI product, "
+                "court dismiss or listed-name litigation, pathogen-recall "
+                "scare or outbreak + vaccination drive, EV / tariff / "
+                "Social Security / national industrial policy, "
+                "sitting-president foreign-policy action or scheduled "
+                "summit/dinner, named-firm mass layoff / cost-cut / "
+                "Chapter 11 / authorized buyback, G7/UK fiscal budget or "
+                "tax rise, EU/G7 trade or Buy-European procurement rules, "
+                "G10 CB hawkish/dovish, national exchange trading debut, "
+                "food-import supply-shock, tanker/newbuild cost inversion, "
+                "yield-driven gold crash, jobs / rents as Fed-path context, "
+                "Fed officer sees/says/warns or Fed chair / Jackson Hole."
             ),
             "false": (
                 "Protester arrest, local rally, celebrity, theme park, "
-                "'best move if crash', gold-tumbles tape, earnings-look-right, "
-                "forecast / odds / live tape that only name-drops a print."
+                "'best move if crash', gold-tumbles forecast tape, "
+                "earnings-look-right, forecast / odds / live tape that "
+                "only name-drops a print, leaders 'expected' an outcome "
+                "with no accept/reject/deal, Social Security explainer "
+                "with no tax/plan/reform, reclaim / IPO price of an "
+                "already-public name, open-bell '5 things' listicle "
+                "with no named print/deal/policy."
             ),
         },
     },
@@ -302,9 +357,15 @@ QUESTIONS: dict = {
             "— not a speech, protest, or rumor? "
             "EIA storage, Fed holds rates, House CR, CFTC explores rules, "
             "FDA panel endorse = yes. 'Mulls' a named policy instrument "
-            "(EV, tariff, Social Security, CAFE) = yes. 'Mulls' with no "
-            "named instrument, a speech, a protest, a rumor, or forecast / "
-            "odds / live tape = no."
+            "(EV, tariff, Social Security, CAFE) = yes. Conference Board / "
+            "consumer-confidence print = yes. Chapter 11 / bankruptcy "
+            "filing = yes. Authorized dollar buyback = yes. National "
+            "exchange trading debut = yes. G10 CB hawkish/dovish = yes. "
+            "Published EU/G7 trade / procurement rule = yes. Official "
+            "vaccination drive = yes. 'Mulls' with no "
+            "named instrument, a speech, a protest, a rumor, forecast / "
+            "odds / live tape, leaders 'expected' an outcome, IPO-price "
+            "reclaim, or a Social Security explainer = no."
         ),
     },
     "reprint_weather": {
@@ -724,8 +785,15 @@ def decide(row: dict, answers: dict | None) -> dict:
         return pack("drop", "reaction")
     if tabloid >= TRASH_NOUL and actor not in POWERFUL:
         return pack("drop", "tabloid")
-    if actor == "crowd" and material < CROWD_DROP:
-        return pack("drop", "crowd")
+    # Session 1703: Conference Board prints and industry-body launches
+    # sat in actor=crowd. Skipping the crowd drop was not enough —
+    # core still requires a powerful actor for instrument-only keeps.
+    # A first-class fact is not crowd-trash.
+    if actor == "crowd":
+        if fact_keep:
+            return pack("keep", "crowd_fact")
+        if material < CROWD_DROP:
+            return pack("drop", "crowd")
     if actor == "state_head" and hints["head_action"]:
         return pack("keep", "state_head_action")
 

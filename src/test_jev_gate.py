@@ -592,6 +592,47 @@ def test_questions_encode_session_409_criteria():
     assert "forecast" in instrument.lower()
 
 
+def test_decide_fact_vetoes_crowd():
+    """Session 1703: a first-class print in actor=crowd is keep."""
+    confidence = decide(
+        {
+            "title": (
+                "US consumer confidence falls in August, "
+                "Conference Board says - Reuters"
+            ),
+        },
+        {
+            "is_opinion": 0.10, "is_tabloid": 0.04, "is_reaction": 0.05,
+            "geo": "core", "actor_power": "crowd",
+            "action_material": 0.42, "new_instrument": 0.71,
+            "reprint_weather": 0.08,
+        },
+    )
+    assert confidence["decision"] == "keep", confidence
+    assert confidence["reason"] == "crowd_fact", confidence
+    blockchain = decide(
+        {"title": "U.S. State Banking Associations To Launch Blockchain Network"},
+        {
+            "is_opinion": 0.08, "is_tabloid": 0.05, "is_reaction": 0.04,
+            "geo": "core", "actor_power": "crowd",
+            "action_material": 0.68, "new_instrument": 0.22,
+            "reprint_weather": 0.06,
+        },
+    )
+    assert blockchain["decision"] == "keep", blockchain
+    assert blockchain["reason"] == "crowd_fact", blockchain
+    protest = decide(
+        {"title": "Tourists and unnamed residents rally downtown"},
+        {
+            "is_opinion": 0.06, "is_tabloid": 0.12, "is_reaction": 0.04,
+            "geo": "core", "actor_power": "crowd",
+            "action_material": 0.28, "new_instrument": 0.04,
+            "reprint_weather": 0.10,
+        },
+    )
+    assert protest["decision"] == "drop" and protest["reason"] == "crowd", protest
+
+
 def test_questions_encode_session_1640_criteria():
     """Session 1640: national policy, steel flows, IPO delay, G7 fiscal."""
     opinion = QUESTIONS["is_opinion"]["criteria"]
@@ -608,6 +649,64 @@ def test_questions_encode_session_1640_criteria():
     assert "budget / tax rise" in instrument
     assert "G7/UK national fiscal" in geo["core"]
     assert "UK-local politics stay other" in geo["other"]
+
+
+def test_questions_encode_session_1703_criteria():
+    """Session 1703: court/litigation, Chapter 11, Conference Board, EU trade."""
+    opinion = QUESTIONS["is_opinion"]["criteria"]
+    material = QUESTIONS["action_material"]
+    instrument = QUESTIONS["new_instrument"]["instructions"]
+    geo = QUESTIONS["geo"]["criteria"]
+    actor = QUESTIONS["actor_power"]["criteria"]
+    assert "listed-name litigation" in opinion["false"]
+    assert "Chapter 11" in opinion["false"]
+    assert "hawkish/dovish" in opinion["false"]
+    assert "expected" in opinion["true"]
+    assert "IPO price" in opinion["true"]
+    assert "consumer-confidence" in material["instructions"].lower()
+    assert "Buy-European" in material["criteria"]["true"]
+    assert "yield-driven gold crash" in material["criteria"]["true"]
+    assert "expected" in material["criteria"]["false"]
+    assert "Chapter 11" in instrument
+    assert "consumer-confidence" in geo["core"]
+    assert "Conference Board" in actor["crowd"]
+    assert "Chapter 11" in actor["listed_firm"]
+
+
+def test_session_1703_false_keeps_not_classifiable():
+    """Safety net must not keep IPO-price reclaim or a Social Security explainer."""
+    trash = [
+        "SpaceX Stock Looks To Reclaim IPO Price After Earnings, Share Unlock",
+        "What Every 65-Year-Old Should Know About Social Security",
+    ]
+    for title in trash:
+        assert not classifiable_reason(title), (title, classifiable_reason(title))
+        decided = decide(
+            {"title": title, "source": "reuters"},
+            {
+                "is_opinion": 0.88, "is_tabloid": 0.08, "is_reaction": 0.06,
+                "geo": "core", "actor_power": "listed_firm",
+                "action_material": 0.18, "new_instrument": 0.08,
+                "reprint_weather": 0.10,
+            },
+        )
+        assert decided["decision"] == "drop", (title, decided)
+    still_keep = (
+        "No tax on Social Security? The facts about Trump’s plan are here "
+        "— and they could hurt US retirees the most"
+    )
+    assert classifiable_reason(still_keep), still_keep
+    expected = decide(
+        {"title": "US and Israeli leaders expected ‘swift outcome’ in Iran"},
+        {
+            "is_opinion": 0.20, "is_tabloid": 0.08, "is_reaction": 0.06,
+            "geo": "other", "actor_power": "state_head",
+            "action_material": 0.22, "new_instrument": 0.08,
+            "reprint_weather": 0.40,
+        },
+    )
+    assert expected["decision"] == "drop", expected
+    assert expected["reason"] == "geo_other", expected
 
 
 def test_session_409_forecast_tape_is_not_classifiable():
@@ -661,6 +760,7 @@ def main() -> None:
         test_decide_core_and_chokepoint,
         test_decide_fact_vetoes_opinion,
         test_decide_fact_vetoes_geo_other,
+        test_decide_fact_vetoes_crowd,
         test_live_shaped_gold_misses,
         test_code_hints_closed_lists,
         test_code_reason_short_circuits_jev,
@@ -677,6 +777,8 @@ def main() -> None:
         test_session_409_false_drops_are_keeps,
         test_questions_encode_session_409_criteria,
         test_questions_encode_session_1640_criteria,
+        test_questions_encode_session_1703_criteria,
+        test_session_1703_false_keeps_not_classifiable,
         test_session_409_forecast_tape_is_not_classifiable,
         test_workflow_wires_secret_and_stays_stdlib,
     ]

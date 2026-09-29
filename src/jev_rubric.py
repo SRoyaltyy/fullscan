@@ -22,6 +22,7 @@ REASON_TO_QUESTION = {
     "geo_other": "geo",
     "other_powerful": "geo",
     "crowd": "actor_power",
+    "crowd_fact": "actor_power",
     "state_head_action": "actor_power",
     "reprint_weather": "reprint_weather",
     "chokepoint": "reprint_weather",

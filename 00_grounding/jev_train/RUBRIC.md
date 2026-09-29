@@ -17,11 +17,12 @@ Thresholds stay put unless the pending block names one:
 <!-- PENDING_BEGIN -->
 ## Pending one change (session `20260929_1703`)
 
-- question: `action_material`
-- kind: `criteria`
-- misses on that question: 9
-- change: Rewrite `action_material` criteria from this session's misses. Score toward KEEP / false-opinion / core / powerful when: Meta going to court poses potential legal problems for a large AI company.; Company action. Should keep; Attendees of the Trump-Xi dinner indicate who is relevant in geopolitics. Should monitor for context; National Stock Exchange of an emerging economy is huge--worth watching because India never had this sort of thing before; Fed officer opinions--worth keeping; Gold crash is worth monitoring; Fed chair action--worth watching; EU trade policy--worth looking at. Sibling `new_instrument`: dated print / hold / CR / explores-rules / panel-endorse / named dollar deal is true. Do not edit closed lists. At most one decide() / threshold change.
-- do not edit `jev_closed_lists.json`
+Landed. `action_material` / sibling questions rewritten from the 1703
+misses. `decide()`: if `action_material >= 0.65` or
+`new_instrument >= 0.60` and actor is `crowd`, keep as `crowd_fact`
+(do not fall through to `low_material`). Code-keep tightened so
+"IPO price" reclaim and a Social Security explainer are not
+classifiable. Do not edit closed lists.
 <!-- PENDING_END -->
 
 ## How Jev is allowed to change
@@ -42,28 +43,38 @@ After every jev-train issue:
 `?` is not a miss. Blank `human_reason` on a disagreement is flagged
 on the issue but still allowed.
 
-## Current QUESTIONS (after session 1640)
+## Current QUESTIONS (after session 1703)
 
 ### is_opinion
 
 True only if the title is commentary / column / recap **and** has no
 first-class fact. False if the title contains Fed / EIA / House /
 CFTC / FDA action, a named IPO or M&A or IPO delay, pathogen +
-consumers/recalls, a Fed officer + inflation or oil, jobs / rents as
-Fed-path context, peace accept/reject, a dated print or hold, a
-court dismiss of a listed name, a housing or credit freeze that if
-true changes a listed sector prior, EV / tariff / Social Security
-policy, sitting-president foreign-policy action (gambit, backing,
-corridor), US/China national industrial policy (AI / chips / capital
-markets), named-firm mass layoff, G7/UK national fiscal budget or
-tax rise, or CDS affecting a listed sector — even inside a listicle
-or "what it means" frame.
+consumers/recalls, a Fed officer sees/says/warns inflation or oil,
+Fed chair / Jackson Hole remarks, jobs / rents as Fed-path context,
+peace accept/reject, a dated print or hold, a Conference Board /
+consumer-confidence print, court dismiss or listed-name litigation,
+a housing or credit freeze that if true changes a listed sector
+prior, EV / tariff / Social Security policy, sitting-president
+foreign-policy action or a scheduled summit/dinner with a
+counterpart, US/China national industrial policy (AI / chips /
+capital markets), named-firm mass layoff / cost-cut / Chapter 11,
+G7/UK national fiscal budget or tax rise, EU/G7 trade or
+Buy-European procurement rules, G10 CB hawkish/dovish stance,
+national exchange trading debut, outbreak + vaccination drive,
+food-import supply-shock, tanker/newbuild cost inversion,
+yield-driven gold crash, or CDS affecting a listed sector — even
+inside a listicle or "what it means" frame.
 
 Must stay true: "best move if the market crashes", celebrity, theme
-park, gold-tumbles tape, earnings-look-right, forecast / odds / live
-tape that only name-drops PCE, IPO, or a rate-hike, and
+park, gold-tumbles forecast tape, earnings-look-right, forecast /
+odds / live tape that only name-drops PCE, IPO, or a rate-hike,
 investor-rebuke or "could still gain" columns with no warn / hold /
-print (Warsh rebuked; Treasury/Bitcoin leftover).
+print (Warsh rebuked; Treasury/Bitcoin leftover), leaders
+"expected" an outcome with no accept/reject/deal, a Social Security
+explainer with no tax/plan/reform, reclaim / IPO price of an
+already-public name, and an open-bell "5 things" listicle with no
+named print/deal/policy.
 
 ### is_tabloid
 
@@ -81,25 +92,37 @@ Unchanged. Title only describes how stocks or traders already reacted.
   Azeri Light, EIA storage, basin rigs), G7/UK national fiscal
   budget or tax rise (not a local coin / council story),
   sitting-US-president action in Korea or on an India-Europe
-  corridor, named steel / freight trade-flow disruption.
+  corridor, named steel / freight trade-flow disruption, Conference
+  Board / consumer-confidence print, national exchange trading
+  debut, EU/G7 public-procurement or Buy-European trade rules,
+  yield-driven gold / Treasury move, tanker / newbuild vessel-cost
+  inversion, food-import supply-shock.
 - chokepoint: named strait / tanker / port.
 - other: no US / G10 / oil-print / G7-fiscal hook and no named M&A
   or named-firm layoff. Yemen / Palestine / UK-local stay other.
+  Leaders "expected" an Iran/geo outcome with no accept/reject/deal
+  stays other and is not a fact. Africa outbreak with no
+  vaccination / pharma-contract hook stays other.
 
 ### actor_power
 
 - state_head: president / PM / monarch / minister / central banker,
   US House or Senate acting as a body.
 - regulator: SEC FDA Fed FOMC CFTC NHTSA NBS ECB PBOC EIA, a named
-  Fed governor, court with a binding order.
+  Fed governor, Conference Board official print, Fed chair / named
+  governor sees/says, court with a binding order.
 - listed_firm: named US-ticker (or plausible), named acquirer,
   major AI lab with a dated product or IPO, named firm with an IPO
-  delay or mass layoff.
+  delay, mass layoff, cost-cut / deleveraging, Chapter 11,
+  authorized buyback, or listed-name going to court.
 - infrastructure: port / strait / exchange / grid / pipeline,
   G10 FX pair / oil benchmark, named steel / freight trade-flow
-  channel.
+  channel, national exchange debut, industry-association network
+  launch, tanker / newbuild channel.
 - crowd: protesters / activists / tourists / unnamed residents.
-  **Not** FX tape + Fed hike bets.
+  **Not** FX tape + Fed hike bets. **Not** a Conference Board /
+  consumer-confidence print. **Not** an industry-wide association
+  launching a network.
 - other_person: private individual with no seat.
 
 ### action_material
@@ -108,20 +131,31 @@ True if the headline, if true, could change prices, policy, cash
 flows, or the prior for a US-listed name **or** a core macro / oil /
 FX / steel-freight factor this week.
 
-Yes: weekly EIA / storage / rig count, Fed hold, House CR, named M&A
-or IPO delay, regulator exploring rules, major-AI product, court
-dismiss of a listed name, pathogen scare that can trigger FDA /
-recalls, EV / tariff / Social Security policy, "mulls" a named EV /
-tariff / Social Security instrument, housing or credit freeze that
-if true changes a listed sector prior, sitting-US-president arrest
-or foreign-policy action, US/China national industrial policy,
+Yes: weekly EIA / storage / rig count, Fed hold, House CR,
+Conference Board / consumer-confidence print, named M&A or IPO
+delay, regulator exploring rules, major-AI product, court dismiss
+or listed-name litigation, pathogen scare that can trigger FDA /
+recalls or outbreak + vaccination drive, EV / tariff / Social
+Security policy, "mulls" a named EV / tariff / Social Security
+instrument, housing or credit freeze that if true changes a listed
+sector prior, sitting-US-president arrest, foreign-policy action,
+or scheduled summit/dinner, US/China national industrial policy,
 named steel / freight trade-flow disruption, named-firm mass
-layoff, G7/UK national fiscal budget or tax rise, jobs / rents as
-Fed-path context, final CAFE.
+layoff / cost-cut / Chapter 11 / authorized buyback, G7/UK
+national fiscal budget or tax rise, EU/G7 trade or Buy-European
+procurement rules, G10 CB hawkish/dovish, national exchange
+trading debut, food-import supply-shock, tanker/newbuild cost
+inversion, yield-driven gold crash, jobs / rents as Fed-path
+context, Fed officer sees/says/warns, Fed chair / Jackson Hole,
+final CAFE.
 
 No: protester arrest, local rally, celebrity, theme park, "best move
-if crash", gold-tumbles tape, earnings-look-right, forecast / odds /
-live tape that only name-drops a print.
+if crash", gold-tumbles forecast tape, earnings-look-right,
+forecast / odds / live tape that only name-drops a print, leaders
+"expected" an outcome with no accept/reject/deal, Social Security
+explainer with no tax/plan/reform, reclaim / IPO price of an
+already-public name, open-bell "5 things" listicle with no named
+print/deal/policy.
 
 ### new_instrument
 
@@ -130,10 +164,14 @@ decision, weekly official figure, rate hold / hike / cut, CR through
 a date, regulator exploring or endorsing a rule, advisory-panel
 endorse, named dollar deal, court dismiss, IPO delay, dated G7/UK
 budget / tax rise, "mulls" a named policy instrument (EV, tariff,
-Social Security, CAFE).
+Social Security, CAFE), Conference Board / consumer-confidence
+print, Chapter 11 / bankruptcy filing, authorized dollar buyback,
+national exchange trading debut, G10 CB hawkish/dovish, published
+EU/G7 trade / procurement rule, official vaccination drive.
 
 No: speech, protest, rumor, "mulls" with no named instrument,
-forecast / odds / live tape.
+forecast / odds / live tape, leaders "expected" an outcome,
+IPO-price reclaim, Social Security explainer.
 
 ### reprint_weather
 
@@ -212,6 +250,38 @@ False keep: 0. Miss rate 10/98 = 10.2%. Do not loosen so 409 trash anchors becom
 `decide()` this round (one knob): if `action_material >= 0.65` or
 `new_instrument >= 0.60`, do not drop for `geo_other`. Yemen /
 UK-local with low material still drop.
+
+## Session 1703 → question map
+
+| You | reason | question | why the old rubric missed | human_reason |
+|---|---|---|---|---|
+| KEEP | low_material | action_material | listed-name court scored below 0.65 | Meta going to court poses potential legal problems for a large AI company. |
+| KEEP | low_material | action_material | named-firm cost-cut / deleveraging scored low | Company action. Should keep |
+| KEEP | crowd | actor_power | Conference Board print tagged crowd | Consumer confidence is a good indicator of market sentiment |
+| KEEP | crowd | actor_power | industry-association launch tagged crowd | State Banking Associations(and any industry-wide union) taking a new initiative is HUGE news and should not be dropped |
+| KEEP | geo_other | geo | Africa vaccination drive as other-trash | While Africa is normally outside the bounds of US market considerations, it is a huge testing ground for US phramaceutical companies. If US companies are contracted, could represent an opportunity |
+| KEEP | low_material | action_material | scheduled Trump-Xi dinner scored low | Attendees of the Trump-Xi dinner indicate who is relevant in geopolitics. Should monitor for context |
+| KEEP | low_material | action_material | India exchange debut scored low | National Stock Exchange of an emerging economy is huge--worth watching because India never had this sort of thing before |
+| KEEP | opinion | is_opinion | BoE hawkishness inside an FX forecast | Any dovish/hawkish movement of central banks in relevant regions should be monitored |
+| KEEP | low_material | action_material | Cook "sees" inflation scored low | Fed officer opinions--worth keeping |
+| KEEP | low_material | action_material | yield-driven gold crash treated as tape | Gold crash is worth monitoring |
+| KEEP | low_material | action_material | Fed chair / Jackson Hole scored low | Fed chair action--worth watching |
+| KEEP | low_material | action_material | EU Buy-European rules scored low | EU trade policy--worth looking at |
+| KEEP | low_material | action_material | Chapter 11 filing scored low | Corporate filing for bankruptcy--worth looking at |
+| KEEP | geo_other | geo | food-import supply-shock as other | Food import shocks is worth monitoring |
+| KEEP | geo_other | geo | tanker/newbuild cost inversion as other | Concerns shipbuilding stocks--worth looking at |
+| DROP | other_powerful | geo | 1640 other_powerful fired on "expected" Iran | Their expectations is irrelevant and usually noise--only concrete actions/policy(like escalation, peace deals, disarmament is real) |
+
+False keep: 3 (2 code-keep, 1 other_powerful). Miss rate 23/99 = 23.2%. Draw 1646 was scored before the 1640 land. Do not loosen so 409 trash anchors become keeps. Do not keep every open-bell "5 things" listicle.
+
+`decide()` this round (one knob): if actor is `crowd` and
+`action_material >= 0.65` or `new_instrument >= 0.60`, keep as
+`crowd_fact`. Protesters with low material still drop. 1640 already
+drops "expected" geo outcomes that lack fact_keep.
+
+Code-keep tightened (not a new keep-list): `_CLASS_DEAL` no longer
+matches "IPO price" / reclaim; `_CLASS_POLICY` needs a Social
+Security tax/plan/reform verb.
 
 <!-- SESSIONS_BEGIN -->
 
@@ -306,9 +376,7 @@ Draw `20260929_1646`. Human keep 43, drop 56. Jev keep 26, drop 74. False keep 3
 | DROP | code_policy | code:code_policy | While "Social Security" is mentioned, this makes no mention of any changes to Social Security. Likely just an explainer and should be discarded | What Every 65-Year-Old Should Know About Social Security |
 | DROP | other_powerful | geo | Their expectations is irrelevant and usually noise--only concrete actions/policy(like escalation, peace deals, disarmament is real) | US and Israeli leaders expected ‘swift outcome’ in Iran |
 
-Proposed one change: `action_material` (criteria, n=9).
-
-Rewrite `action_material` criteria from this session's misses. Score toward KEEP / false-opinion / core / powerful when: Meta going to court poses potential legal problems for a large AI company.; Company action. Should keep; Attendees of the Trump-Xi dinner indicate who is relevant in geopolitics. Should monitor for context; National Stock Exchange of an emerging economy is huge--worth watching because India never had this sort of thing before; Fed officer opinions--worth keeping; Gold crash is worth monitoring; Fed chair action--worth watching; EU trade policy--worth looking at. Sibling `new_instrument`: dated print / hold / CR / explores-rules / panel-endorse / named dollar deal is true. Do not edit closed lists. At most one decide() / threshold change.
+Proposed one change: `action_material` (criteria, n=9) + `crowd` fact_keep. Landed.
 
 Code-path misses (not the Jev knob this round):
 - `punct` — Almonty (ALM) Authorized a $300M Buyback Before Sangdong Fully Ramps. Is that the Best Use of Capital? (Stock buybacks should be considered as good news)
