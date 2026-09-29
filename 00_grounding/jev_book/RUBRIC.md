@@ -30,3 +30,7 @@ those candidates. Weather / `discard` / `regime` → empty book.
 A name that is not in the Finviz hit list is not in the book.
 When both sides attach, the book keeps up to 4 named + 2 peers,
 largest listed first. `keep.json` stays unwired.
+
+The unique-title tape check is `src/jev_backtest.py`: X / Y =
+n_bull / n_bear on one ticker in the entry session after
+`published_at`. Z is trading sessions after that open.

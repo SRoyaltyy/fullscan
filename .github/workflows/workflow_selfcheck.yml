@@ -20,6 +20,8 @@ on:
       - "src/jev_classify.py"
       - "src/test_jev_book.py"
       - "src/jev_book.py"
+      - "src/test_jev_backtest.py"
+      - "src/jev_backtest.py"
       - "02_lessons/lane/**"
   push:
     branches: [main]
@@ -37,6 +39,8 @@ on:
       - "src/jev_classify.py"
       - "src/test_jev_book.py"
       - "src/jev_book.py"
+      - "src/test_jev_backtest.py"
+      - "src/jev_backtest.py"
       - "02_lessons/lane/**"
 
 permissions:
@@ -62,3 +66,4 @@ jobs:
           PYTHONPATH=. python3 -m src.test_jev_gate
           PYTHONPATH=. python3 -m src.test_jev_classify
           PYTHONPATH=. python3 -m src.test_jev_book
+          PYTHONPATH=. python3 -m src.test_jev_backtest
