@@ -29170,18 +29170,113 @@
         "B7_OIL_DOLLAR": 0.5
       },
       "leading_sum": -2.0,
-      "actual_open": null,
-      "actual_close": null,
-      "actual_pct_change": null,
-      "actual_direction": null,
-      "actual_magnitude_band": null,
-      "direction_hit": null,
-      "magnitude_hit": null,
+      "actual_open": 7699.6,
+      "actual_close": 7670.84,
+      "actual_pct_change": -0.17,
+      "actual_direction": "down",
+      "actual_magnitude_band": "flat",
+      "direction_hit": false,
+      "magnitude_hit": false,
       "divergence_flagged": false,
       "divergence_verdict": null,
-      "per_factor_breakdown": [],
+      "per_factor_breakdown": [
+        {
+          "factor": "B0_ASIA",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B0_EUROPE",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B1_CATALYSTS",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B2_BONDS",
+          "score": -1.0,
+          "status": "hit"
+        },
+        {
+          "factor": "B3_FEDPATH",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B4_VIX",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B5_SENTIMENT",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B6_FUTURES",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B7_OIL_DOLLAR",
+          "score": 0.5,
+          "status": "miss"
+        }
+      ],
       "reflection_lesson_ref": null,
-      "sources_used": [],
+      "sources_used": [
+        {
+          "url": "https://www.morningstar.com/news/dow-jones/202609295962/us-30-year-treasury-yield-sets-new-24-year-high",
+          "date_accessed": "2026-09-29",
+          "summary": "The long end made a multi-decade high, the session's dominant negative force.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://investinglive.com/news/jolts-job-openings-7-079m-vs-7-225m-estimate/",
+          "date_accessed": "2026-09-29",
+          "summary": "A soft labor-demand print at 10:00 ET that failed to produce an equity rally.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOWmRyUTNQbW1FZWNZblJOdF9HaXliVFpXZnhsa2l4X2hISWpxQ3FTeGpyN0M1MWRmNHUwNlVZWTRvaDBabUZ4NU9SSzNiTzdfclhQdUxQOXFWcW00YktzaDNjeUM1RC1yMXlEaVN5RFhIU0tYWkZhVThkTlY4MjRIUXI5dmZXX3YxZnRFS3lnak1uNkdOdjZ6Ujd4NHM3SUZkd3YzZXdYbVg?oc=5",
+          "date_accessed": "2026-09-29",
+          "summary": "A second 10:00 ET print confirming a weakening consumer.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.cnbc.com/2026/09/29/oil-prices-today-brent-wti-hormuz.html",
+          "date_accessed": "2026-09-29",
+          "summary": "The supply restoration that drove Brent −8.9% and provided the session's main equity offset.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.bloomberg.com/news/articles/2026-09-29/fed-s-barr-says-more-hikes-likely-needed-as-growth-picks-up",
+          "date_accessed": "2026-09-29",
+          "summary": "A mid-session hawkish reaffirmation that reinforced the yield story.",
+          "verification": "http_403"
+        },
+        {
+          "url": "https://finance.yahoo.com/markets/stocks/articles/stock-market-news-sep-29-083000758.html",
+          "date_accessed": "2026-09-29",
+          "summary": "A sector-level AI-complex repricing that nonetheless left NDX the relative winner.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPT1VnSWcyaGx2WXRNaEc2NmhQVVhuVmFDaGN4MVkydU5yYTltYmMzd0RtMzFTUEdLSURWbGFjNlFSMUlEdjV3QjhaQ25oX0xJNFF0azNCck5sMThQaXdhQTg0aVYwRk1zWkEzTzM5WUI4dWlnc0hvdE11ajQ4Q1N2Y1pEYktxQTFSdC1lX01kYjVaOFNwak9yQQ?oc=5",
+          "date_accessed": "2026-09-29",
+          "summary": "An overnight AI-complex headline that fed the chip/AI repricing.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-sept-29-2026",
+          "date_accessed": "2026-09-29",
+          "summary": "Confirms the failed-open / distribution-chop structure of the session.",
+          "verification": "http_404"
+        }
+      ],
       "horizon_calls": {
         "HORIZON_3D": {
           "trading_days": 3,
@@ -29211,7 +29306,14 @@
       "news_judge_present": true,
       "engine": "v2",
       "anchor_score": 0.742,
-      "overlay_score": 0.55
+      "overlay_score": 0.55,
+      "ops_fail": false,
+      "path_shape": "choppy / range-bound",
+      "primary_driver": "30-year Treasury yield hitting a new 24-year intraday high (5.612%), capping every rally attempt",
+      "key_interaction": "Offsetting/masking — Brent -8.9% (equity-positive inflation relief) roughly cancelled the 30Y 24-year-high yield spike (equity-negative), producing a placid -0.17% close that masked a violent tug-of-war",
+      "knowable_at_9am": "yes — the dominant rates-vs-oil offsetting pair was fully visible in the premarket Channel 1 tape (BZ=F -8.66%, 1w DGS30 +15bp); the 10:00 ET data prints were unknowable but non-decisive",
+      "attribution_contested": "yes — Bloomberg/CNBC lead with oil, Yahoo with yields, TheStreet with consumer confidence, Reuters with tech",
+      "outlier_watch": "NDX (-0.09%) outperformed Dow (-0.26%) despite the \"tech selloff\" headline; and Channel 1 showed gold +0.90%/silver +1.96% while news outlets reported \"gold fell again / two-month low\""
     }
   ]
 }
