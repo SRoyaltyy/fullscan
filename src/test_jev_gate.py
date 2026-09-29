@@ -798,6 +798,112 @@ def test_session_1732_false_keep_not_classifiable():
         assert reason == "", (title, reason)
 
 
+def test_decide_reaction_not_skipped_by_material():
+    """Session 1803: a recap with high material still drops as reaction."""
+    recap = decide(
+        {
+            "title": (
+                "Stock Market Today: Nasdaq, S&P 500 Futures Surge After "
+                "Blockbuster Nvidia Earnings Report"
+            ),
+        },
+        {
+            "is_opinion": 0.12, "is_tabloid": 0.06, "is_reaction": 0.88,
+            "geo": "core", "actor_power": "listed_firm",
+            "action_material": 0.74, "new_instrument": 0.18,
+            "reprint_weather": 0.08,
+        },
+    )
+    assert recap["decision"] == "drop", recap
+    assert recap["reason"] == "reaction", recap
+    dated = decide(
+        {"title": "US Federal Reserve holds rates steady as inflation hawks call for hike"},
+        {
+            "is_opinion": 0.08, "is_tabloid": 0.04, "is_reaction": 0.82,
+            "geo": "core", "actor_power": "regulator",
+            "action_material": 0.40, "new_instrument": 0.66,
+            "reprint_weather": 0.06,
+        },
+    )
+    assert dated["decision"] == "keep", dated
+    assert dated["reason"] != "reaction", dated
+    cook = decide(
+        {"title": "Fed's Cook Warns AI Demand and Oil Prices to Keep Inflation Elevated"},
+        {
+            "is_opinion": 0.91, "is_tabloid": 0.04, "is_reaction": 0.05,
+            "geo": "core", "actor_power": "regulator",
+            "action_material": 0.72, "new_instrument": 0.20,
+            "reprint_weather": 0.10,
+        },
+    )
+    assert cook["decision"] == "keep", cook
+    assert cook["reason"] != "opinion", cook
+
+
+def test_questions_encode_session_1803_criteria():
+    """Session 1803: recaps / rumor-wants out; 401k / outlook / FID / pact in."""
+    opinion = QUESTIONS["is_opinion"]["criteria"]
+    material = QUESTIONS["action_material"]
+    instrument = QUESTIONS["new_instrument"]["instructions"]
+    reaction = QUESTIONS["is_reaction"]["instructions"]
+    geo = QUESTIONS["geo"]["criteria"]
+    actor = QUESTIONS["actor_power"]["criteria"]
+    assert "Reportedly wants" in opinion["true"]
+    assert "Stock market today" in opinion["true"]
+    assert "401k" in opinion["false"]
+    assert "outlook raise" in opinion["false"]
+    assert "Reportedly" in material["instructions"]
+    assert "401k" in material["criteria"]["true"]
+    assert "outlook raise" in material["criteria"]["true"]
+    assert "stock market today" in material["criteria"]["false"]
+    assert "401k" in instrument
+    assert "reportedly wants" in instrument
+    assert "stock market today" in reaction
+    assert "401k" in geo["core"]
+    assert "outlook raise" in actor["listed_firm"]
+    assert "FID" in actor["infrastructure"]
+
+
+def test_session_1803_false_keep_not_classifiable():
+    """Safety net: recap / rumor-wants stay trash; 401k / pact / FID keep."""
+    trash = [
+        "Tech stocks gain on Anthropic IPO optimism, offsetting high oil, yields - Yahoo Finance",
+        "Hugging Face Reportedly Wants to Be Acquired for About $13 Billion - Gizmodo",
+        "Stock Market Today: Nasdaq, S&P 500 Futures Surge After Blockbuster Nvidia Earnings Report; Salesforce, CrowdStrike Also Power Tech Gains - Yahoo Finance",
+    ]
+    for title in trash:
+        assert not classifiable_reason(title), (title, classifiable_reason(title))
+    still_keep = [
+        "Anthropic Targets $2 Trillion Record IPO: 8 Key Items Shaping the Stock Market Thursday - TheStreet Pro",
+        "Proposal backed by Trump administration would allow 401K and IRA funds to be used in riskier investments - Yahoo",
+        "Iran hits US in Jordan, US-Saudi strikes on Iraq: Is war spreading?",
+        "Saudi-Pakistan-Turkiye pact: A new shield or strategic signal?",
+        "TTM Technologies (TTMI) Shares Surge Following Strong Results and Outlook Raise",
+        "LNG Canada Phase 2: After FID key questions remain - Institute for Energy Economics and Financial Analysis (IEEFA)",
+    ]
+    asof = dt.date(2026, 9, 29)
+    state = load_chokepoint_state()
+    for title in still_keep:
+        assert classifiable_reason(title), (title, classifiable_reason(title))
+        reason = code_drop_reason(
+            {"title": title, "source": "reuters"}, asof=asof, state=state,
+        )
+        assert reason == "", (title, reason)
+    persist = decide(
+        {
+            "title": "Tensions persist as tankers transit the Strait of Hormuz",
+            "_clock": {"has_new_verb": False, "hit": True, "place": "hormuz"},
+        },
+        {
+            "is_opinion": 0.05, "is_tabloid": 0.03, "is_reaction": 0.06,
+            "geo": "chokepoint", "actor_power": "infrastructure",
+            "action_material": 0.40, "new_instrument": 0.10,
+            "reprint_weather": 0.86,
+        },
+    )
+    assert persist["decision"] == "drop" and persist["reason"] == "reprint_weather", persist
+
+
 def test_session_409_forecast_tape_is_not_classifiable():
     """Code-keep must not swallow forecast/odds/tape that name-drop a print."""
     trash = [
@@ -871,6 +977,9 @@ def main() -> None:
         test_decide_fact_vetoes_reprint,
         test_questions_encode_session_1732_criteria,
         test_session_1732_false_keep_not_classifiable,
+        test_decide_reaction_not_skipped_by_material,
+        test_questions_encode_session_1803_criteria,
+        test_session_1803_false_keep_not_classifiable,
         test_session_409_forecast_tape_is_not_classifiable,
         test_workflow_wires_secret_and_stays_stdlib,
     ]

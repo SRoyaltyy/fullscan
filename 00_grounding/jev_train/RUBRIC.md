@@ -15,12 +15,12 @@ Thresholds stay put unless the pending block names one:
 `CROWD_DROP=0.50`.
 
 <!-- PENDING_BEGIN -->
-## Pending one change (session `20260929_1803`)
+## Pending one change (session `20260929_1803`) — landed
 
-- question: `action_material`
-- kind: `criteria`
-- misses on that question: 7
-- change: Rewrite `action_material` criteria from this session's misses. Score toward KEEP / false-opinion / core / powerful when: Again, new 401K+IRA policy from Trump admin--worth looking into; analyst outlook raise and strong results---confluence of positive factors in one stock. Do not loosen so these become keeps: Although this may look like corporate acquisition, theres too many reportedly, wants. This means it hasnt found a buyer yet; While the establishment of Indian National Stock Market is newsworthy, its individual stocks are not; Gold fell to a seven-week low amid the threat of another rate hike in the United States - Українські Національні Новини (УНН); This is a description of how rate hikes affect something, not the action of rate hikes itself; This is "Stock Market today", which is merely a description of things already happened. However, stuff like "Things you should know before tomorrow's open" is acceptable since it hasn't happeend yet. Sibling `new_instrument`: dated print / hold / CR / explores-rules / panel-endorse / named dollar deal is true. Do not edit closed lists. At most one decide() / threshold change.
+- question: `action_material` + `is_reaction`
+- kind: `criteria` + `decide`
+- misses on that question: 7 material / 13 sheet
+- change: Recaps and rumor-wants are not facts. Rewrite `action_material` / `is_opinion` / `is_reaction` / `new_instrument` from this session. Score toward KEEP when: sitting-president 401k / IRA investment-rule proposal; named-ticker results plus outlook raise; named product launch; named LNG / project FID; named-state pact; Iran hits / war-spreading. Do not loosen so these become keeps: 'reportedly wants' a buyer; law-firm tombstone of a foreign IPO; gold-fell-amid a rate-hike threat; 'how rate hikes impact' explainer; 'stock market today' recap of already-printed earnings; Fed-hike odds / 'sees rising odds' tape (409 DROP anchor). `decide()` this round: drop `reaction` unless `new_instrument >= 0.60`. Material-only `fact_keep` no longer skips reaction. Opinion skip stays. Thresholds stay. Do not edit closed lists.
 - do not edit `jev_closed_lists.json`
 <!-- PENDING_END -->
 
@@ -42,7 +42,7 @@ After every jev-train issue:
 `?` is not a miss. Blank `human_reason` on a disagreement is flagged
 on the issue but still allowed.
 
-## Current QUESTIONS (after session 1732)
+## Current QUESTIONS (after session 1803)
 
 ### is_opinion
 
@@ -66,8 +66,12 @@ yield-driven gold crash, CDS affecting a listed sector,
 sitting-president secondary sanctions, Hormuz / Iran escalation
 or a named-strait status-change, named-fund / 13F / billionaire
 flow into a listed ticker, named-officer insider sale,
-named-broker downgrade plus price-target cut, or a national
-pump-price cut — even inside a listicle or "what it means" frame.
+named-broker downgrade plus price-target cut, a national
+pump-price cut, sitting-president 401k / IRA investment-rule
+proposal, named-ticker results plus outlook raise, named product
+launch, named LNG / project FID, named-state pact / alliance, or
+Iran hits / war-spreading strikes — even inside a listicle or
+"what it means" frame.
 
 Must stay true: "best move if the market crashes", celebrity, theme
 park, gold-tumbles forecast tape, earnings-look-right, forecast /
@@ -78,9 +82,14 @@ print (Warsh rebuked; Treasury/Bitcoin leftover), leaders
 explainer with no tax/plan/reform, reclaim / IPO price of an
 already-public name, an open-bell "5 things" listicle with no
 named print/deal/policy, a "tech stocks today" OpenAI / AI recap
-or "earnings provide next test" with no dated print, and a
+or "earnings provide next test" with no dated print, a
 "Should You?" whale / billionaire column with no named 13F /
-insider lot.
+insider lot, "reportedly wants" a buyer with no signed deal, a
+law-firm tombstone guiding a foreign IPO, "how rate hikes impact"
+with no new hike, a "stock market today" recap of already-printed
+earnings, gold-fell-amid a rate-hike threat (not a yield-driven
+crash), and Fed-hike odds / "sees rising odds" tape that only
+name-drops PCE.
 
 ### is_tabloid
 
@@ -89,7 +98,16 @@ company action. Messi, theme park stay drop.
 
 ### is_reaction
 
-Unchanged. Title only describes how stocks or traders already reacted.
+True if the title only describes how stocks or traders already
+reacted, with no new underlying event.
+
+Yes: "stock market today" recap of already-printed earnings,
+"tech stocks gain on" IPO optimism / aftereffects, gold-fell-amid
+a rate-hike threat, "how rate hikes impact" with no new hike.
+
+No: "things to know before the open", a dated Fed hold / EIA / CR,
+or a first-class print that has not happened yet. A yield-driven
+gold crash (yields + gold plunge) is a fact, not this tape.
 
 ### geo
 
@@ -103,7 +121,8 @@ Unchanged. Title only describes how stocks or traders already reacted.
   debut, EU/G7 public-procurement or Buy-European trade rules,
   yield-driven gold / Treasury move, tanker / newbuild vessel-cost
   inversion, food-import supply-shock, national fuel pump-price
-  cut.
+  cut, sitting-president 401k / IRA investment-rule proposal, a
+  US named product launch, named-state pact involving a US ally.
 - chokepoint: named strait / tanker / port, including an
   escalation or other status-change there.
 - other: no US / G10 / oil-print / G7-fiscal hook and no named M&A
@@ -111,7 +130,9 @@ Unchanged. Title only describes how stocks or traders already reacted.
   Leaders "expected" an Iran/geo outcome with no accept/reject/deal
   stays other and is not a fact. A named-strait escalation is
   chokepoint, not other. Africa outbreak with no
-  vaccination / pharma-contract hook stays other.
+  vaccination / pharma-contract hook stays other. A law-firm
+  tombstone guiding a foreign IPO is not the debut. Gold-fell-amid
+  a rate-hike threat is tape, not a yield-driven crash.
 
 ### actor_power
 
@@ -125,12 +146,13 @@ Unchanged. Title only describes how stocks or traders already reacted.
   delay, mass layoff, cost-cut / deleveraging, Chapter 11,
   authorized buyback, listed-name going to court, named-fund /
   13F / billionaire flow into that ticker, named-officer insider
-  sale, or named-broker downgrade plus price-target cut.
+  sale, named-broker downgrade plus price-target cut, named
+  product launch, or named-ticker results plus outlook raise.
 - infrastructure: port / strait / exchange / grid / pipeline,
   G10 FX pair / oil benchmark, named steel / freight trade-flow
   channel, national exchange debut, industry-association network
   launch, tanker / newbuild channel, national oil marketers
-  executing a posted pump-price cut.
+  executing a posted pump-price cut, named LNG / project FID.
 - crowd: protesters / activists / tourists / unnamed residents.
   **Not** FX tape + Fed hike bets. **Not** a Conference Board /
   consumer-confidence print. **Not** an industry-wide association
@@ -163,7 +185,10 @@ context, Fed officer sees/says/warns, Fed chair / Jackson Hole,
 final CAFE, sitting-president secondary sanctions, Hormuz / Iran
 escalation, named-fund / 13F / billionaire flow, named-officer
 insider sale, named-broker downgrade plus price-target cut,
-national pump-price cut.
+national pump-price cut, sitting-president 401k / IRA
+investment-rule proposal, named-ticker results plus outlook raise,
+named product launch, named LNG / project FID, named-state pact /
+alliance, Iran hits / war-spreading strikes.
 
 No: protester arrest, local rally, celebrity, theme park, "best move
 if crash", gold-tumbles forecast tape, earnings-look-right,
@@ -173,7 +198,10 @@ explainer with no tax/plan/reform, reclaim / IPO price of an
 already-public name, open-bell "5 things" listicle with no named
 print/deal/policy, "tech stocks today" OpenAI recap or "earnings
 provide next test", "Should You?" whale column with no named 13F
-/ insider lot.
+/ insider lot, "reportedly wants" a buyer with no signed deal,
+law-firm tombstone guiding a foreign IPO, "how rate hikes impact"
+with no new hike, "stock market today" recap of already-printed
+earnings, gold-fell-amid a rate-hike threat.
 
 ### new_instrument
 
@@ -187,11 +215,17 @@ print, Chapter 11 / bankruptcy filing, authorized dollar buyback,
 national exchange trading debut, G10 CB hawkish/dovish, published
 EU/G7 trade / procurement rule, official vaccination drive,
 secondary sanctions, named 13F / fund stake or Form-4 insider
-lot, named-broker rating plus price-target change.
+lot, named-broker rating plus price-target change, sitting-
+president 401k / IRA investment-rule proposal, named-ticker
+results plus outlook raise, named product launch, named LNG /
+project FID, named-state pact / alliance.
 
-No: speech, protest, rumor, "mulls" with no named instrument,
-forecast / odds / live tape, leaders "expected" an outcome,
-IPO-price reclaim, Social Security explainer.
+No: speech, protest, rumor, "reportedly wants" a buyer, law-firm
+tombstone, "mulls" with no named instrument, forecast / odds /
+live tape, "sees rising odds" of a Fed hike, "how rate hikes
+impact", "stock market today" recap, gold-fell-amid a threat,
+leaders "expected" an outcome, IPO-price reclaim, Social Security
+explainer.
 
 ### reprint_weather
 
@@ -332,6 +366,39 @@ Code-keep tightened (not a new keep-list): `_CLASS_AI` needs a
 first-class OpenAI/Anthropic verb, not a "tech stocks today"
 recap. `_CLASS_POLICY` matches secondary sanctions.
 `_CLASS_CHOKE_NEW` matches escalation.
+
+## Session 1803 → question map
+
+| You | reason | question | why the old rubric missed | human_reason |
+|---|---|---|---|---|
+| KEEP | punct | code:punct | `?` hid a named-state pact | geopolitical development |
+| KEEP | low_material | action_material | 401k / IRA investment-rule scored low | Again, new 401K+IRA policy from Trump admin--worth looking into |
+| KEEP | punct | code:punct | `?` hid Iran hits / war-spreading | escalation in major war |
+| KEEP | geo_other | geo | named product launch sat in other | new product launch |
+| KEEP | opinion | is_opinion | Fed-hike odds / sees-rising-odds (409 DROP; blank reason FLAG) |  |
+| KEEP | geo_other | geo | LNG After FID sat in other | LNG news |
+| KEEP | low_material | action_material | results + outlook raise scored low | analyst outlook raise and strong results---confluence of positive factors in one stock |
+| DROP | core_material | action_material | rumor-wants scored as a signed deal | Although this may look like corporate acquisition, theres too many reportedly, wants. This means it hasnt found a buyer yet |
+| DROP | core_material | action_material | law-firm tombstone scored as the NSE debut | While the establishment of Indian National Stock Market is newsworthy, its individual stocks are not |
+| DROP | core_material | action_material | gold-fell-amid scored as yield-driven crash |  |
+| DROP | core_material | action_material | how-rate-hikes-impact scored as the hike | This is a description of how rate hikes affect something, not the action of rate hikes itself |
+| DROP | code_ai | code:code_ai | Anthropic IPO optimism kept as the IPO | This is not Anthropic IPO. Just a description of the aftereffects of the news |
+| DROP | core_material | action_material | stock-market-today recap scored as the print | This is "Stock Market today", which is merely a description of things already happened. However, stuff like "Things you should know before tomorrow's open" is acceptable since it hasn't happeend yet |
+
+False keep: 6. False drop: 7. Miss rate 13/100 = 13.0%. Draw 1749 was scored after the 1732 land. Do not loosen so 409 trash anchors become keeps. Do not keep "reportedly wants", law-firm IPO tombstones, or Fed-hike odds / "sees rising odds" tape (409/1640 DROP). TD Securities KEEP has a blank `human_reason` FLAG — leave the opinion drop.
+
+`decide()` this round (one knob): if `is_reaction >= 0.70` and
+`new_instrument < 0.60`, drop as `reaction`. Material-only
+`fact_keep` no longer skips reaction. Dated instrument (Fed hold /
+EIA / CR) still keeps. Opinion skip stays (409).
+
+Code-keep tightened / expanded (not a new keep-list): `_CLASS_AI`
+no longer matches bare "ipo" after OpenAI/Anthropic — needs
+introduce / launch / file / targets / warn / product.
+`_CLASS_POLICY` matches 401k / IRA proposal, named-state pact,
+After FID. `_CLASS_DEAL` matches outlook raise / strong results +
+outlook. `_CLASS_CHOKE_NEW` matches hits / strikes / Iran / Iraq /
+Jordan / war-spreading.
 
 <!-- SESSIONS_BEGIN -->
 
@@ -480,9 +547,7 @@ Draw `20260929_1749`. Human keep 38, drop 62. Jev keep 37, drop 63. False keep 6
 | DROP | code_ai | code:code_ai | This is not Anthropic IPO. Just a description of the aftereffects of the news | Tech stocks gain on Anthropic IPO optimism, offsetting high oil, yields - Yahoo Finance |
 | DROP | core_material | action_material | This is "Stock Market today", which is merely a description of things already happened. However, stuff like "Things you should know before tomorrow's open" is acceptable since it hasn't happeend yet | Stock Market Today: Nasdaq, S&P 500 Futures Surge After Blockbuster Nvidia Earnings Report; Salesforce, CrowdStrike Also Power Tech Gains - Yahoo Finance |
 
-Proposed one change: `action_material` (criteria, n=7).
-
-Rewrite `action_material` criteria from this session's misses. Score toward KEEP / false-opinion / core / powerful when: Again, new 401K+IRA policy from Trump admin--worth looking into; analyst outlook raise and strong results---confluence of positive factors in one stock. Do not loosen so these become keeps: Although this may look like corporate acquisition, theres too many reportedly, wants. This means it hasnt found a buyer yet; While the establishment of Indian National Stock Market is newsworthy, its individual stocks are not; Gold fell to a seven-week low amid the threat of another rate hike in the United States - Українські Національні Новини (УНН); This is a description of how rate hikes affect something, not the action of rate hikes itself; This is "Stock Market today", which is merely a description of things already happened. However, stuff like "Things you should know before tomorrow's open" is acceptable since it hasn't happeend yet. Sibling `new_instrument`: dated print / hold / CR / explores-rules / panel-endorse / named dollar deal is true. Do not edit closed lists. At most one decide() / threshold change.
+Proposed one change: `action_material` (criteria, n=7) + reaction instrument-gate. Landed.
 
 Code-path misses (not the Jev knob this round):
 - `punct` — Saudi-Pakistan-Turkiye pact: A new shield or strategic signal? (geopolitical development)

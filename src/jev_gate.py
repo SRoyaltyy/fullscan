@@ -89,6 +89,8 @@ _CLASS_DEAL = re.compile(
     r"|\bbuyout\b"
     r"|\bproduct launch\b"
     r"|\bintroduces\b"
+    r"|\boutlook raise\b"
+    r"|\bstrong results\b.{0,32}\boutlook\b"
     r"|\b(?:targets?|record|files?|launches?|prices its|priced)\b.{0,40}\bipo\b"
     r"|\bipo\b.{0,40}(?:targets?|files?|priced|prices its)"
     r")"
@@ -106,6 +108,10 @@ _CLASS_POLICY = re.compile(
     r"|\bcredit default swaps?\b"
     r"|\bchinese evs\b"
     r"|\bcyclospora\b"
+    r"|\b(?:401k|401\(k\)|ira)\b.{0,56}\b(?:funds?|invest|rule|proposal|allow)\b"
+    r"|\b(?:saudi|pakistan|turkey|turkiye).{0,48}\bpact\b"
+    r"|\bafter fid\b"
+    r"|\bfinal investment decision\b"
     r")"
 )
 _CLASS_OIL = re.compile(
@@ -117,9 +123,9 @@ _CLASS_FX = re.compile(
 _CLASS_AI = re.compile(
     r"(?i)(?:"
     r"\b(?:openai|anthropic)\b.{0,56}"
-    r"\b(?:introduces?|launches?|files?|ipo|warns?|product)\b"
+    r"\b(?:introduces?|launches?|files?|targets?|warns?|product)\b"
     r"|"
-    r"\b(?:introduces?|launches?|files?|ipo|targets?)\b.{0,56}"
+    r"\b(?:introduces?|launches?|files?|targets?|prices?)\b.{0,56}"
     r"\b(?:openai|anthropic)\b"
     r")"
 )
@@ -128,10 +134,11 @@ _CLASS_FED_VOICE = re.compile(
     r"\b(?:warns?|holds rates)\b"
 )
 _CLASS_CHOKE_NEW = re.compile(
-    r"(?i)\b(?:rejects?|accepts?|seizes?|strikes?|escalat\w*)\b.{0,48}"
-    r"\b(?:peace|iran|hormuz)\b"
-    r"|\b(?:peace|iran|hormuz)\b.{0,48}"
-    r"\b(?:rejects?|accepts?|seizes?|escalat\w*)\b"
+    r"(?i)\b(?:rejects?|accepts?|seizes?|strikes?|hits?|escalat\w*)\b.{0,48}"
+    r"\b(?:peace|iran|hormuz|iraq|jordan)\b"
+    r"|\b(?:peace|iran|hormuz|iraq|jordan)\b.{0,48}"
+    r"\b(?:rejects?|accepts?|seizes?|strikes?|hits?|escalat\w*)\b"
+    r"|\b(?:war spreading|is war spreading)\b"
 )
 _CLASS_HOME = re.compile(
     r"(?i)\bbond market\b.{0,40}\bhomebuild"
@@ -179,7 +186,13 @@ QUESTIONS: dict = {
                 "listicle with no named print/deal/policy. 'Tech stocks "
                 "today' OpenAI / AI recap or 'earnings provide next test' "
                 "with no dated print. 'Should you' whale / billionaire "
-                "column with no named 13F / insider lot."
+                "column with no named 13F / insider lot. 'Reportedly wants' "
+                "a buyer with no signed deal. Law-firm tombstone guiding a "
+                "foreign IPO. 'How rate hikes impact' explainer with no "
+                "new hike. 'Stock market today' recap of already-printed "
+                "earnings. Gold-fell-amid a rate-hike threat (not a "
+                "yield-driven crash). Fed-hike odds / 'sees rising odds' "
+                "tape that only name-drops PCE."
             ),
             "false": (
                 "Title contains a first-class fact even inside a listicle "
@@ -206,7 +219,11 @@ QUESTIONS: dict = {
                 "named-strait status-change, named-fund / 13F / billionaire "
                 "flow into a listed ticker (not a 'should you' column), "
                 "named-officer insider sale, named-broker downgrade plus "
-                "price-target cut, or a national pump-price cut."
+                "price-target cut, a national pump-price cut, sitting-"
+                "president 401k / IRA investment-rule proposal, named-"
+                "ticker results plus outlook raise, named product launch, "
+                "named LNG / project FID, named-state pact / alliance, or "
+                "Iran hits / war-spreading strikes."
             ),
         },
     },
@@ -221,7 +238,12 @@ QUESTIONS: dict = {
         "type": "noul",
         "instructions": (
             "Does the title only describe how stocks or traders already "
-            "reacted, with no new underlying event?"
+            "reacted, with no new underlying event? True: 'stock market "
+            "today' recap of already-printed earnings, 'tech stocks gain "
+            "on' IPO optimism / aftereffects, gold-fell-amid a rate-hike "
+            "threat, or 'how rate hikes impact' with no new hike. False: "
+            "'things to know before the open', a dated Fed hold / EIA / "
+            "CR, or a first-class print that has not happened yet."
         ),
     },
     "geo": {
@@ -241,7 +263,9 @@ QUESTIONS: dict = {
                 "trade rules, yield-driven gold / Treasury move, tanker / "
                 "newbuild vessel-cost inversion, or a food-import "
                 "supply-shock, a named-strait escalation / status-change, "
-                "or a national fuel pump-price cut"
+                "or a national fuel pump-price cut, a sitting-president "
+                "401k / IRA investment-rule proposal, a US named product "
+                "launch, or a named-state pact involving a US ally"
             ),
             "chokepoint": (
                 "Hormuz, Red Sea / Bab el-Mandeb, Suez, Panama, Taiwan "
@@ -255,7 +279,10 @@ QUESTIONS: dict = {
                 "'expected' an Iran/geo outcome with no accept/reject/"
                 "deal/escalation stays other and is not a fact. A named "
                 "strait escalation is chokepoint, not other. Africa outbreak "
-                "with no vaccination / pharma-contract hook stays other."
+                "with no vaccination / pharma-contract hook stays other. "
+                "A law-firm tombstone guiding a foreign IPO is not the "
+                "debut. Gold-fell-amid a rate-hike threat is tape, not "
+                "a yield-driven crash."
             ),
         },
     },
@@ -280,16 +307,18 @@ QUESTIONS: dict = {
                 "delay, mass layoff, cost-cut / deleveraging, Chapter 11 "
                 "/ bankruptcy, authorized buyback, listed-name going "
                 "to court, a named-fund / 13F / billionaire flow into "
-                "that ticker, a named-officer insider sale, or a "
-                "named-broker downgrade plus price-target cut"
+                "that ticker, a named-officer insider sale, a "
+                "named-broker downgrade plus price-target cut, a named "
+                "product launch, or named-ticker results plus outlook raise"
             ),
             "infrastructure": (
                 "Port, strait, exchange, grid, pipeline operator, a "
                 "G10 FX pair / oil benchmark, a named steel / "
                 "freight trade-flow channel, a national exchange "
                 "trading debut, an industry-association network launch, "
-                "or a tanker / newbuild channel, or national oil "
-                "marketers executing a posted pump-price cut"
+                "or a tanker / newbuild channel, national oil "
+                "marketers executing a posted pump-price cut, or a "
+                "named LNG / project FID"
             ),
             "crowd": (
                 "Protesters, activists, tourists, unnamed residents. "
@@ -336,14 +365,23 @@ QUESTIONS: dict = {
             "status-change = yes. Named-fund / 13F / billionaire flow "
             "into a listed ticker = yes. Named-officer insider sale = yes. "
             "Named-broker downgrade plus price-target cut = yes. National "
-            "pump-price cut = yes. Leaders 'expected' an outcome "
+            "pump-price cut = yes. Sitting-president 401k / IRA "
+            "investment-rule proposal = yes. Named-ticker results plus "
+            "outlook raise = yes. Named product launch = yes. Named LNG / "
+            "project FID = yes. Named-state pact / alliance = yes. Iran "
+            "hits / war-spreading strikes = yes. Leaders 'expected' an outcome "
             "with no accept/reject/deal/escalation = no. Social Security explainer "
             "with no tax/plan/reform = no. Reclaim / IPO price of an "
             "already-public name = no. Celebrity, theme park, 'best move if crash', "
             "gold-tumbles forecast tape, earnings-look-right, or forecast / odds / "
             "live tape that only name-drops a print = no. 'Tech stocks today' "
             "OpenAI recap or 'earnings provide next test' = no. 'Should you' "
-            "whale column with no named 13F / insider lot = no."
+            "whale column with no named 13F / insider lot = no. 'Reportedly "
+            "wants' a buyer with no signed deal = no. Law-firm tombstone "
+            "guiding a foreign IPO = no. 'How rate hikes impact' explainer "
+            "with no new hike = no. 'Stock market today' recap of already-"
+            "printed earnings = no. Gold-fell-amid a rate-hike threat "
+            "(not a yield-driven crash) = no."
         ),
         "criteria": {
             "true": (
@@ -366,7 +404,11 @@ QUESTIONS: dict = {
                 "sitting-president secondary sanctions, Hormuz / Iran "
                 "escalation, named-fund / 13F / billionaire flow, "
                 "named-officer insider sale, named-broker downgrade plus "
-                "price-target cut, or a national pump-price cut."
+                "price-target cut, a national pump-price cut, sitting-"
+                "president 401k / IRA investment-rule proposal, named-"
+                "ticker results plus outlook raise, named product launch, "
+                "named LNG / project FID, named-state pact / alliance, or "
+                "Iran hits / war-spreading strikes."
             ),
             "false": (
                 "Protester arrest, local rally, celebrity, theme park, "
@@ -378,7 +420,11 @@ QUESTIONS: dict = {
                 "already-public name, open-bell '5 things' listicle "
                 "with no named print/deal/policy, 'tech stocks today' "
                 "OpenAI recap or 'earnings provide next test', 'should you' "
-                "whale column with no named 13F / insider lot."
+                "whale column with no named 13F / insider lot, 'reportedly "
+                "wants' a buyer with no signed deal, law-firm tombstone "
+                "guiding a foreign IPO, 'how rate hikes impact' explainer "
+                "with no new hike, 'stock market today' recap of already-"
+                "printed earnings, or gold-fell-amid a rate-hike threat."
             ),
         },
     },
@@ -400,10 +446,16 @@ QUESTIONS: dict = {
             "Published EU/G7 trade / procurement rule = yes. Official "
             "vaccination drive = yes. Secondary sanctions = yes. Named "
             "13F / fund stake or Form-4 insider lot = yes. Named-broker "
-            "rating plus price-target change = yes. 'Mulls' with no "
-            "named instrument, a speech, a protest, a rumor, forecast / "
-            "odds / live tape, leaders 'expected' an outcome, IPO-price "
-            "reclaim, or a Social Security explainer = no."
+            "rating plus price-target change = yes. Sitting-president "
+            "401k / IRA investment-rule proposal = yes. Named-ticker "
+            "results plus outlook raise = yes. Named product launch = yes. "
+            "Named LNG / project FID = yes. Named-state pact / alliance "
+            "= yes. 'Mulls' with no named instrument, a speech, a protest, "
+            "a rumor, 'reportedly wants' a buyer, a law-firm tombstone, "
+            "forecast / odds / live tape, 'sees rising odds' of a Fed "
+            "hike, 'how rate hikes impact', 'stock market today' recap, "
+            "gold-fell-amid a threat, leaders 'expected' an outcome, "
+            "IPO-price reclaim, or a Social Security explainer = no."
         ),
     },
     "reprint_weather": {
@@ -789,7 +841,9 @@ def decide(row: dict, answers: dict | None) -> dict:
     actor = str(answers.get("actor_power") or "other_person")
     # Closed-list agency/newness may lift instrument later. Opinion
     # veto uses Jev's own scores so a Fed-hinted column cannot sneak
-    # past (session 409 Treasury/Bitcoin leftover).
+    # past (session 409 Treasury/Bitcoin leftover). Session 1803
+    # reaction uses the same raw instrument, not the boost.
+    jev_instrument = instrument
     jev_fact = (
         material >= MATERIAL_KEEP or instrument >= INSTRUMENT_KEEP
     )
@@ -820,7 +874,10 @@ def decide(row: dict, answers: dict | None) -> dict:
     fact_keep = jev_fact
     if opinion >= TRASH_NOUL and not fact_keep:
         return pack("drop", "opinion")
-    if reaction >= TRASH_NOUL and not fact_keep:
+    # Session 1803: recaps ("stock market today", gold-fell-amid,
+    # how-rate-hikes-impact) scored material and skipped reaction.
+    # A dated instrument still keeps. Opinion skip stays (409).
+    if reaction >= TRASH_NOUL and jev_instrument < INSTRUMENT_KEEP:
         return pack("drop", "reaction")
     if tabloid >= TRASH_NOUL and actor not in POWERFUL:
         return pack("drop", "tabloid")
