@@ -16,6 +16,7 @@ Does not write keep.json and does not call Lane.
 from __future__ import annotations
 
 import hashlib
+import inspect
 import json
 import os
 import random
@@ -30,7 +31,6 @@ from pathlib import Path
 from xml.etree import ElementTree as ET
 
 from .jev_gate import (
-    ALLOWED_KNOBS,
     GROUND,
     INSTRUMENT_KEEP,
     JACCARD_DROP,
@@ -38,7 +38,6 @@ from .jev_gate import (
     NEWS_DIR,
     ROOT,
     TRASH_NOUL,
-    GateKnobs,
     _load_json,
     _write_json,
     calendar_day,
@@ -47,9 +46,28 @@ from .jev_gate import (
     load_chokepoint_state,
     load_gold,
     normalize_title,
-    state_for_knobs,
     tokens,
 )
+try:
+    from .jev_gate import ALLOWED_KNOBS, GateKnobs, state_for_knobs
+except ImportError:
+    # Live main gate has no eval knobs. Draw still uses gate() as it is.
+    from dataclasses import dataclass as _dataclass
+
+    ALLOWED_KNOBS = ()
+
+    @_dataclass
+    class GateKnobs:
+        action_material: float = MATERIAL_KEEP
+        new_instrument: float = INSTRUMENT_KEEP
+        reaction_regex: str | None = None
+        listed_token_in_title: bool = False
+        listed_tokens: frozenset = frozenset()
+        reprint_weather_days: int | None = None
+        new_verbs: list | None = None
+
+    def state_for_knobs(state: dict, knobs=None) -> dict:
+        return state
 import datetime as dt
 
 PARSED_N = 50
@@ -680,20 +698,28 @@ def _copy_row(row: dict) -> dict:
     }
 
 
-def score_sample(rows: list[dict], *, knobs: GateKnobs, live: bool, key: str,
-                 workers: int, poster, asof: dt.date) -> tuple[dict[str, dict], str]:
+def score_sample(rows: list[dict], *, live: bool, key: str,
+                 workers: int, poster, asof: dt.date,
+                 knobs: GateKnobs | None = None) -> tuple[dict[str, dict], str]:
     """Gate the sample. Retry leftovers that came back jev_error. Do not label."""
     by_norm: dict[str, dict] = {}
     model = ""
     pending = list(rows)
+    gate_kwargs = {
+        "code_only": not live,
+        "live": live,
+        "key": key,
+        "workers": workers,
+        "poster": poster,
+        "asof": asof,
+    }
+    if knobs is not None and "knobs" in inspect.signature(gate).parameters:
+        gate_kwargs["knobs"] = knobs
     for attempt in range(3):
         if not pending:
             break
         copies = [_copy_row(r) for r in pending]
-        decided = gate(
-            copies, code_only=not live, live=live, key=key, workers=workers,
-            poster=poster, asof=asof, knobs=knobs,
-        )
+        decided = gate(copies, **gate_kwargs)
         for row in copies:
             got = str(row.get("_jev_model") or "")
             if got and not got.startswith("error:"):
