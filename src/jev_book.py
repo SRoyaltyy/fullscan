@@ -19,10 +19,12 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 
 from .jev_gate import api_key, jev_post, parse_answers
-from .news_impact.finviz_linker import candidate_rows
+from .news_impact.finviz_linker import candidate_rows, get_index
 from .news_impact.schema import DISCARD_OR_WEATHER, EVENT_CLASSES, Q5_STATUS
 
 BOOK_LIMIT = 6
+LOOKUP_LIMIT = 40
+PEER_RESERVE = 2
 SIDES = ("up", "down", "mixed", "out")
 NAMED_WHY = ("ticker_in_text", "company:", "brand:", "hint_named")
 PEER_WHY = ("industry:", "peer:", "digest:")
@@ -159,16 +161,17 @@ def _named_or_peer(title: str, family: str, event_class: str,
 
 def lookup_candidates(title: str, *, family: str = "", event_class: str = "",
                       root: Path | None = None,
-                      limit: int = BOOK_LIMIT) -> list[dict]:
+                      limit: int = LOOKUP_LIMIT) -> list[dict]:
     """Finviz word + industry hit list. Never invents a ticker."""
     hit = candidate_rows(
         title or "",
         "",
         family=family,
         event_class=event_class,
-        limit=40,
+        limit=limit,
         root=root,
     )
+    index = get_index(root)
     out = []
     for row in hit.get("instruments") or []:
         tick = str(row.get("ticker") or "").upper().strip()
@@ -176,6 +179,7 @@ def lookup_candidates(title: str, *, family: str = "", event_class: str = "",
             continue
         why = str(row.get("why") or "")
         named, peer = _named_or_peer(title, family, event_class, why)
+        listed = index.by_ticker.get(tick) or {}
         out.append({
             "ticker": tick,
             "company": str(row.get("entity_name") or ""),
@@ -183,12 +187,39 @@ def lookup_candidates(title: str, *, family: str = "", event_class: str = "",
             "sector": str(row.get("sector") or ""),
             "why": why,
             "score": int(row.get("score") or 0),
+            "market_cap": float(listed.get("market_cap") or 0),
             "named": named,
             "peer": peer,
         })
         if len(out) >= limit:
             break
     return out
+
+
+def _cap(row: dict) -> float:
+    try:
+        return float(row.get("market_cap") or 0)
+    except (TypeError, ValueError):
+        return 0.0
+
+
+def _rank_listed(rows: list[dict]) -> list[dict]:
+    """Most likely = already listed, then larger. Not Jev's opinion."""
+    return sorted(rows, key=lambda row: (-_cap(row), row.get("ticker") or ""))
+
+
+def pick_book_rows(named: list[dict], peers: list[dict]) -> list[dict]:
+    """Keep both sides of the book. Unused slots go to the other side."""
+    named = _rank_listed(named)
+    peers = _rank_listed(peers)
+    if not peers:
+        return named[:BOOK_LIMIT]
+    if not named:
+        return peers[:BOOK_LIMIT]
+    named_n = min(len(named), BOOK_LIMIT - min(PEER_RESERVE, len(peers)))
+    picked_named = named[:named_n]
+    picked_peers = peers[: BOOK_LIMIT - len(picked_named)]
+    return picked_named + picked_peers
 
 
 def _clean_side(raw) -> str:
@@ -216,31 +247,40 @@ def decide_book(title: str, *, family: str = "", event_class: str = "",
             attach = peer_side != "out"
         if peer_side == "out":
             attach = False
-    book = []
+    named: list[dict] = []
+    peers: list[dict] = []
     for row in lookup_candidates(
         title, family=family, event_class=event_class, root=root,
     ):
         if row["named"]:
-            side = named_side
-            role = "named"
-        elif row["peer"] and attach:
-            side = peer_side
-            role = "substitute" if family == "blast" else "peer"
-        else:
-            continue
-        if side == "out":
-            continue
-        book.append({
-            "ticker": row["ticker"],
-            "company": row["company"],
-            "industry": row["industry"],
-            "sector": row["sector"],
-            "side": side,
-            "role": role,
-            "why": row["why"],
-        })
-        if len(book) >= BOOK_LIMIT:
-            break
+            if named_side == "out":
+                continue
+            named.append({
+                "ticker": row["ticker"],
+                "company": row["company"],
+                "industry": row["industry"],
+                "sector": row["sector"],
+                "side": named_side,
+                "role": "named",
+                "why": row["why"],
+                "market_cap": row.get("market_cap") or 0,
+            })
+        elif row["peer"] and attach and peer_side != "out":
+            peers.append({
+                "ticker": row["ticker"],
+                "company": row["company"],
+                "industry": row["industry"],
+                "sector": row["sector"],
+                "side": peer_side,
+                "role": "substitute" if family == "blast" else "peer",
+                "why": row["why"],
+                "market_cap": row.get("market_cap") or 0,
+            })
+    book = []
+    for row in pick_book_rows(named, peers):
+        book.append({k: row[k] for k in
+                     ("ticker", "company", "industry", "sector", "side",
+                      "role", "why")})
     return book
 
 

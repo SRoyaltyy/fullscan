@@ -15,7 +15,8 @@ or null. Themes (AI, geopolitics, China) are not classes. Second order
 is a role, not a class. A new class needs a new loser AND winner set.
 
 Hop-1 does not pick a ticker, polarity, or winner. It does not call
-Lane. `keep.json` is not written and is not wired into Lane.
+Lane. `keep.json` is not written and is not wired into Lane. Parse
+stays this closed enum so hop-2 can retrieve context cheaply.
 
 `discard` / `regime` here means "no tradeable mechanism," not "trash
 title." If hop-0 kept it, hop-1 still classifies it.

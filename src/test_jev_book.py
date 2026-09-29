@@ -9,6 +9,7 @@ from pathlib import Path
 from src.jev_book import (
     BOOK_LIMIT,
     FORBIDDEN_HOP2_BITS,
+    LOOKUP_LIMIT,
     QUESTIONS,
     SIDES,
     apply_code_book,
@@ -18,6 +19,7 @@ from src.jev_book import (
     decide_book,
     default_sides,
     lookup_candidates,
+    pick_book_rows,
     questions_are_hop2,
 )
 from src.jev_classify import QUESTIONS as HOP1_QUESTIONS
@@ -34,6 +36,30 @@ FIXTURE_ROWS = [
         "Ticker": "DAL", "Company": "Delta Air Lines Inc",
         "Sector": "Industrials", "Industry": "Airlines",
         "Market Cap": "30000", "Daily Digest": "", "Description": "",
+        "Country": "USA", "News Title": "",
+    },
+    {
+        "Ticker": "UAL", "Company": "United Airlines Holdings Inc",
+        "Sector": "Industrials", "Industry": "Airlines",
+        "Market Cap": "40000", "Daily Digest": "", "Description": "",
+        "Country": "USA", "News Title": "",
+    },
+    {
+        "Ticker": "LUV", "Company": "Southwest Airlines Co",
+        "Sector": "Industrials", "Industry": "Airlines",
+        "Market Cap": "20000", "Daily Digest": "", "Description": "",
+        "Country": "USA", "News Title": "",
+    },
+    {
+        "Ticker": "ALGT", "Company": "Allegiant Travel",
+        "Sector": "Industrials", "Industry": "Airlines",
+        "Market Cap": "200", "Daily Digest": "", "Description": "",
+        "Country": "USA", "News Title": "",
+    },
+    {
+        "Ticker": "FLYX", "Company": "flyExclusive Inc",
+        "Sector": "Industrials", "Industry": "Airlines",
+        "Market Cap": "100", "Daily Digest": "", "Description": "",
         "Country": "USA", "News Title": "",
     },
     {
@@ -113,7 +139,7 @@ def test_lookup_uses_title_words_and_industry(tmp_ok=True):
         assert ticks & {"AAL", "DAL"}
         assert "CAR" in ticks
         assert "XOM" not in ticks
-        assert len(cands) <= BOOK_LIMIT
+        assert len(cands) <= LOOKUP_LIMIT
     finally:
         _reset_index()
 
@@ -133,9 +159,31 @@ def test_blast_sides_named_down_peers_up():
         assert by["CAR"]["side"] == "up"
         assert by["CAR"]["role"] == "substitute"
         assert "XOM" not in by
+        assert "FLYX" not in by
+        assert "UAL" in by and "DAL" in by
+        assert len(book) <= BOOK_LIMIT
         assert "↑" in book_reason(book) and "↓" in book_reason(book)
     finally:
         _reset_index()
+
+
+def test_largest_listed_names_fill_the_book():
+    named = [
+        {"ticker": "FLYX", "market_cap": 100},
+        {"ticker": "UAL", "market_cap": 40000},
+        {"ticker": "AAL", "market_cap": 10000},
+        {"ticker": "DAL", "market_cap": 30000},
+        {"ticker": "LUV", "market_cap": 20000},
+    ]
+    peers = [
+        {"ticker": "HTZ", "market_cap": 2000},
+        {"ticker": "CAR", "market_cap": 5000},
+    ]
+    picked = pick_book_rows(named, peers)
+    assert [row["ticker"] for row in picked] == [
+        "UAL", "DAL", "LUV", "AAL", "CAR", "HTZ",
+    ]
+    assert pick_book_rows(named, [])[0]["ticker"] == "UAL"
 
 
 def test_jev_can_drop_peers_and_cannot_add_a_name():
@@ -251,6 +299,7 @@ def main() -> None:
         test_weather_and_discard_have_empty_book,
         test_lookup_uses_title_words_and_industry,
         test_blast_sides_named_down_peers_up,
+        test_largest_listed_names_fill_the_book,
         test_jev_can_drop_peers_and_cannot_add_a_name,
         test_apply_code_book_stamps_keeps_only,
         test_apply_jev_book_only_asks_on_classified_keeps,
