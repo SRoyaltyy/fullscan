@@ -1,0 +1,548 @@
+{
+  "schema": "jev-hard-misses-1",
+  "note": "Rotating exam bank for the Jev trainer. The frozen holdout in jev_holdout.json supplies the 20-title exam while 20 of its titles are still absent from 00_grounding/jev_train/. After that, each draw takes the next unseen slice, starting at cursor, and skips any title hash already stored under jev_train/ and any title in jev_gold.json. Graded false keeps and false drops are appended here as a record; a hash already in jev_train/ is not drawn again. This file is not a closed list. The trainer never edits jev_closed_lists.json, never rewrites an existing jev_holdout.json, and never writes keep.json. Initial items were stratified from the parsed archive with seed 20260929, excluding gold and the frozen holdout.",
+  "cursor": 0,
+  "seed": 20260929,
+  "items": [
+    {
+      "id": "d49a28350438b997",
+      "title": "Foster Electric (TSE:6794) Stock Faces Margin Squeeze After Earnings Drop - simplywall.st",
+      "source": "rss_google_markets",
+      "published_at": "Sat, 08 Aug 2026 23:46:03 GMT",
+      "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxPMlZUOTdTd0RjLWJXZmhOZWhfUWpkM2FPVW9KOWk1R1hFS0lPQjVCZXNxWjZDQ3Bqa0xxR1R1OTVGOHNPQWo5cEZWTTZicXNnRFljajBCbHJfMjdvX09uQnJ2Y01pZ2dQM0l6TDJ3QVk1eVFhT1NCR1JkR3dMVnhYU01YdFZmUXNsN1RIT1RLbUdvNFRYQ1RwbnJSN2pjbmhGMEUyNUVlOGxSRVlCRThiYWliUVVfeEhQRmhUUG4tVWhwNEhrYVVBdHBPbE02REJQSjFpaVdXZS1fMnZlel8ydtIB5gFBVV95cUxQeHlMeGY5bG5oV0pNUndsckc0eWd5Vlpkems5OUt1ZEt",
+      "date": "2026-08-08",
+      "archive": "parsed"
+    },
+    {
+      "id": "269063f36b680eeb",
+      "title": "Manulife Financial Q2 Earnings Call Highlights",
+      "source": "rss_yahoo_finance",
+      "published_at": "2026-08-08T18:03:53Z",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/manulife-financial-q2-earnings-call-180353491.html",
+      "date": "2026-08-08",
+      "archive": "parsed"
+    },
+    {
+      "id": "3762dd4b3fdb62e9",
+      "title": "Rocket Lab (RKLB) Won a Major Space Force Contract. Now It Has to Prove Neutron",
+      "source": "rss_yahoo_finance",
+      "published_at": "2026-08-08T12:02:52Z",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/rocket-lab-rklb-won-major-120252189.html",
+      "date": "2026-08-08",
+      "archive": "parsed"
+    },
+    {
+      "id": "58c40541d4673ede",
+      "title": "Robert Kiyosaki warned Americans who own 401(k)s that the US could be on the brink of ‘Great Depression.’ Prepare now",
+      "source": "rss_yahoo_finance",
+      "published_at": "2026-08-08T11:30:00Z",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/robert-kiyosaki-warned-americans-own-113000295.html",
+      "date": "2026-08-08",
+      "archive": "parsed"
+    },
+    {
+      "id": "6c2247e0f1c8bbd0",
+      "title": "Nvidia Scores 12% Weekly Gain As Taiwan Semiconductor Sales Soars; Is Nvidia A Buy Now?",
+      "source": "rss_yahoo_finance",
+      "published_at": "2026-08-10T14:00:36Z",
+      "url": "https://www.investors.com/research/nvidia-nvda-stock-earnings-august-2026/?src=A00220&yptr=yahoo",
+      "date": "2026-08-10",
+      "archive": "parsed"
+    },
+    {
+      "id": "80424192ff8020b3",
+      "title": "Student loan borrowers face steeper 'marriage penalty' under new repayment plan - CNBC",
+      "source": "rss_google_business",
+      "published_at": "Mon, 10 Aug 2026 12:15:01 GMT",
+      "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE1OMEtfVmphMnV6MVpJWGRFTnlDRUFrMFFGbDVUREswaW05WjlrZHJvdE9oYjZxMUVKUHRXY2sta29uUkkwQWZtNUFLSE9QeDhnSTB0MWJleVJCTU43V0pFQmxrOWJRdXNES3gzbUZwQUR3NnZmZDY2Y2Rn0gF_QVVfeXFMT3R4SzFGYy1UelpNN2VacUpPVE5zNUVja1A0N0JFQnZCZEdud0pqY1NfQ0dpb0hZYmgyUjQtUlJNMEtJbmdGMEFTWWY1OWwtS0dmSmZ1cUp1MF9kbi1pZkpsNTBHZ3VTRHVpSlVtWkt5RWJ0c0RpTE1wenQzQW5CTQ?oc=5",
+      "date": "2026-08-10",
+      "archive": "parsed"
+    },
+    {
+      "id": "472292a7b3e4a479",
+      "title": "What to know about the US primary election in Minnesota",
+      "source": "rss_aljazeera_economy",
+      "published_at": "Tue, 11 Aug 2026 12:56:41 +0000",
+      "url": "https://www.aljazeera.com/news/2026/8/11/what-to-know-about-us-primary-election-in-minnesota?traffic_source=rss",
+      "date": "2026-08-11",
+      "archive": "parsed"
+    },
+    {
+      "id": "d4c39b21fba58c26",
+      "title": "CoreWeave to report second quarter results amid spending, margin concerns",
+      "source": "rss_yahoo_finance",
+      "published_at": "2026-08-10T19:30:36Z",
+      "url": "https://finance.yahoo.com/technology/article/coreweave-to-report-second-quarter-results-amid-spending-margin-concerns-193036479.html",
+      "date": "2026-08-11",
+      "archive": "parsed"
+    },
+    {
+      "id": "6a1b46bd9ea90d0b",
+      "title": "Will US Consumer Price Index data reshape September Fed rate hike expectations? - FXStreet",
+      "source": "rss_google_macro",
+      "published_at": "Wed, 12 Aug 2026 11:00:00 GMT",
+      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxQRUVTTmZfYmhYMnNrVzRybXplN21YX3BrVHRlUVl2UmNGMUJGczRFb2sxaG5oY2w2SnQ3cGhZYUhndTBGNS1Vc1FQMWgzSDVlTmdjdWVaSVNLdGRsbTdreHdTX2JXZXZHb3lkMHVhRGNzZGZwSzR6RUswakVKT2dObFByblhKVWc4bjBzdUd6eWdocWRwWkZfdWp3SjdodV9BSXBsSVVDSU5CeG9RSDFqSnpLeTlXUEszTkc2MExNQzk3WEdtclJsOFhn?oc=5",
+      "date": "2026-08-12",
+      "archive": "parsed"
+    },
+    {
+      "id": "00b0d88b17a28e9e",
+      "title": "Materion (MTRN) Q2 2026 Earnings Call Transcript",
+      "source": "rss_yahoo_finance",
+      "published_at": "2026-08-12T14:30:37Z",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/materion-mtrn-q2-2026-earnings-143037533.html",
+      "date": "2026-08-12",
+      "archive": "parsed"
+    },
+    {
+      "id": "c0ed39d97b9711ed",
+      "title": "Bitcoin and ethereum prices today, Thursday, August 13, 2026: BTC price trends turn negative",
+      "source": "rss_yahoo_finance",
+      "published_at": "2026-08-13T12:44:06Z",
+      "url": "https://finance.yahoo.com/personal-finance/investing/article/bitcoin-and-ethereum-prices-today-thursday-august-13-2026-btc-price-trends-turn-negative-124406250.html",
+      "date": "2026-08-13",
+      "archive": "parsed"
+    },
+    {
+      "id": "22c0981398e200fa",
+      "title": "Ford boosts US Lincoln production as it phases out imports from China - foxbusiness.com",
+      "source": "rss_google_business",
+      "published_at": "Thu, 13 Aug 2026 00:11:00 GMT",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPQlo2Q3FrVVZzMVNEU2xyUjBHMlZBVTRGOFp3M3Atc2txenNCMzI3YXpkR1ZTaGFzbWg2R19nN3B5T2FxaDEzd3RTaUFCa0xNRDRmTHllTzg1MHF5OVVQOWItaEluamw4YlpQbHVpYzZnMGVPREpOQzVFZ0dIcnBHQlkzYUJjZmFDbkFHdkRsT09IRTZVUERXN1lqQnpxRG_SAaQBQVVfeXFMTndQdElCN25iVGlGaG1zbVNPWkZsUTluR09XWThFVzlwUUdHcGdHMFBPMERNVnJsQjlOZjhnTG9MOW16TVJ1cmpaMFNhbGlXMkhhQmtXYl9HenNWZWZjLVJTOUFNaDhoQ2J",
+      "date": "2026-08-13",
+      "archive": "parsed"
+    },
+    {
+      "id": "62847812b5b68678",
+      "title": "PodcastOne, Inc. Q1 2027 Earnings Call Summary",
+      "source": "rss_yahoo_finance",
+      "published_at": "2026-08-13T02:01:38Z",
+      "url": "https://finance.yahoo.com/media-advertising/articles/podcastone-inc-q1-2027-earnings-020138128.html",
+      "date": "2026-08-14",
+      "archive": "parsed"
+    },
+    {
+      "id": "9667c9ef81a1f823",
+      "title": "SpaceX’s Starbase is getting a few monuments dedicated to Elon Musk. Not all will be flattering. - Business Insider",
+      "source": "rss_google_business",
+      "published_at": "Fri, 14 Aug 2026 00:50:00 GMT",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPZ1VKNDh5VGtCY25DaWVadVoyNld0UTBZaWhxdnJ5LUtNeUNZUDFwcV9qdW5oNDlZYndaRHFvTmlMSmFXZ3lXVUtQNWkyekFULUNNc2N6Tkh3YlBKRWVKRzFWaXVEQWtOSzhySmRTaDNBTEdvSjh0YW5QdFc3NTROalNINDM1eVJxLUI2VWR4d1FMRWZfanp2a25VZnpGekdXelF5V0Q4Q0NrZFN1czdxZy13VnpEZw?oc=5",
+      "date": "2026-08-14",
+      "archive": "parsed"
+    },
+    {
+      "id": "09f628ce155a2ed4",
+      "title": "US Dollar Exceptionalism Fades as EUR/USD Eyes Breakout - FOREX.com",
+      "source": "rss_google_business",
+      "published_at": "Mon, 17 Aug 2026 00:41:28 GMT",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNVjhtVGZYeERIT3pfbjNkcXVHajJYVlJpQXZSb0FUS3o5U0RTS0VGZndiSmFNS2tublRjVWJEUGt1cy1GRUxOY2dUX1BzdjBYWHVjZmlGN25vTFpaSWkxOEdZVmU4ZnFTWDFYOFVBdjV1SWctTFVuak00WWlYWnI0TF9kNURVbHRKYVNqN0FpZWZDWXE5REMzXzAtZ2hIZ0RfdXp6NdIBsAFBVV95cUxOemVsUXdiXzE4dUJjV3hSQ2JOd2dXWW1TMHMxQ1owTE5aN0l4THJEN183TUQ1ZFBBd3kwZUxYWFRVV3JTZ2kzaXpPNmZ2OGMtUUliMnUxczdHdEdadXVDVXdlRTR",
+      "date": "2026-08-17",
+      "archive": "parsed"
+    },
+    {
+      "id": "4743b424327a4a3f",
+      "title": "Stock Market News for Aug 17, 2026 - Zacks Investment Research",
+      "source": "rss_google_markets",
+      "published_at": "Mon, 17 Aug 2026 13:50:02 GMT",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9sMDdxT0lnT0Z5WUpBMHdkLUZ5cWIzbC1CM1ctYWtjYmlFVFoyU2QycnhITHVZb3Z2UmNrSXpfSUljRmVGQzJuZ2lNM2JNSXd5bTlISHUxeHJZUHc4QlRQRzRVRTd4blU2aFROT2hQZWhwZEpyN3BqNEZpR05mZDg?oc=5",
+      "date": "2026-08-17",
+      "archive": "parsed"
+    },
+    {
+      "id": "7783c7ba132f642e",
+      "title": "What is keeping Gold between $4,200 and $4,500 as Federal Reserve pause bets build? - FXStreet",
+      "source": "rss_google_macro",
+      "published_at": "Tue, 18 Aug 2026 13:34:01 GMT",
+      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOVWlaZWlGWHNvaGdPYUl0U3o0cE9pWkZfejljeUpzNWxERHJVOFZOenRxY2g3dGhwRGtnc1RHSzVycjlTb3JwQlAtaFpPSHhZSVlVdU1ieV95bHhYNTl5RG9jQTEwTkJUaldpN1pMNEQxTVFOZlJPRzgzN3BRdUdRTUJDOW1uS3ZuMzZLbGpkSnZxaUtFVWIwTWxPVUxrQlVpYW1xcTMtQ040SFJwc0U2WVdsUm9FMFVzbkFyUTJ3?oc=5",
+      "date": "2026-08-18",
+      "archive": "parsed"
+    },
+    {
+      "id": "02ab12d2b602de52",
+      "title": "Could Legence (LGN) Be a Major Winner From the AI Data Center Construction Boom?",
+      "source": "rss_yahoo_finance",
+      "published_at": "2026-08-18T13:49:14Z",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/could-legence-lgn-major-winner-134914355.html",
+      "date": "2026-08-18",
+      "archive": "parsed"
+    },
+    {
+      "id": "c42e1f1e677e943b",
+      "title": "Dow rises 230 points after Treasury doubles bond buybacks",
+      "source": "rss_yahoo_finance",
+      "published_at": "2026-08-19T13:39:03Z",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/dow-rises-230-points-treasury-133903630.html",
+      "date": "2026-08-19",
+      "archive": "parsed"
+    },
+    {
+      "id": "382637a7f3319b21",
+      "title": "Moderna shares surge as melanoma vaccine with Merck succeeds in large trial - Reuters",
+      "source": "rss_google_business",
+      "published_at": "Wed, 19 Aug 2026 12:17:16 GMT",
+      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOV1VaQ05TQmRfMmJzTUkwU2puSHBUcE9FdzY2OW5SaXVFc2FpR25rclJEY1NHS1lrYWdaWE5OUVdhZ2VfTGVHak45akZnYm0wbEZVdXpOYjJEYkpVc3VXaDRrQnZBMDlJbWJLZUY2M2dFc0lycDc1LUtiSmxEWnlsVThSY1RRRG5WM050bEZLR1puWlhDMGlJczRZM0tXb2lHYzlSSmxTRFlQdm52THFDbG1zZlBWLUNUZG9qVjFoQlI?oc=5",
+      "date": "2026-08-19",
+      "archive": "parsed"
+    },
+    {
+      "id": "241f1abfbd78327e",
+      "title": "Stock Market Today (Aug. 19, 2026): S&P 500 rises despite tech weakness as health care, cyclicals jump - Yahoo Finance",
+      "source": "rss_google_markets",
+      "published_at": "Wed, 19 Aug 2026 13:50:24 GMT",
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPdjFCTjduOUx0U3kwRUpuWUNPbVhkTUlKSFQtazNFZWVCMXV6NVpPczZMTERRMGJTZGRmSWQ1amVjVkVhckstb3pPR1RsbnlZYndVck9XUnpoekdnTl9VMlJObzRtLTlGa1I1clBIN290azYwODdzbzNlaDdTUnRpMU5ZcVJzY3hPRlJqMG1sMkFmQXk4?oc=5",
+      "date": "2026-08-20",
+      "archive": "parsed"
+    },
+    {
+      "id": "ba1004683144fa03",
+      "title": "AMC stocks ICICI Prudential, NAM India surge up to 5% in weak market",
+      "source": "newsapi_Business Standard",
+      "published_at": "2026-08-19T09:40:26Z",
+      "url": "https://www.business-standard.com/markets/news/amc-stocks-icici-prudential-nam-india-surge-up-to-5-in-weak-market-126081900708_1.html",
+      "date": "2026-08-20",
+      "archive": "parsed"
+    },
+    {
+      "id": "7f62d9107cb2c01d",
+      "title": "Treasury Makes a Surprise Move to Bring Down Borrowing Costs",
+      "source": "rss_yahoo_finance",
+      "published_at": "2026-08-20T02:08:19Z",
+      "url": "https://finance.yahoo.com/economy/policy/articles/treasury-makes-surprise-move-bring-020819303.html",
+      "date": "2026-08-21",
+      "archive": "parsed"
+    },
+    {
+      "id": "214908ec1985f9a9",
+      "title": "Abacus FCF Advisors LLC Makes New Investment in Cardinal Health, Inc. $CAH",
+      "source": "newsapi_MarketBeat",
+      "published_at": "2026-08-20T09:36:04Z",
+      "url": "https://www.marketbeat.com/instant-alerts/filing-abacus-fcf-advisors-llc-makes-new-investment-in-cardinal-health-inc-cah-2026-08-20/",
+      "date": "2026-08-21",
+      "archive": "parsed"
+    },
+    {
+      "id": "a523352414749063",
+      "title": "Two Legendary Investors Just Bought Meta Platforms Stock. Is It Time for You to Buy?",
+      "source": "rss_yahoo_finance",
+      "published_at": "2026-08-24T11:47:00Z",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/two-legendary-investors-just-bought-114700849.html",
+      "date": "2026-08-24",
+      "archive": "parsed"
+    },
+    {
+      "id": "682d162d20d8352f",
+      "title": "Dow Jones futures edge higher as markets await PCE data and Nvidia earnings - eciks.org",
+      "source": "rss_google_macro",
+      "published_at": "Mon, 24 Aug 2026 10:37:14 GMT",
+      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5KVFlyMDRDSkd4djhtV2k5UXpEM0FUU1N5YllZNU9pQ194MzdyWHpzQ2VLbkdBQzZKMnlwTk40bW1kMWhJdnk1X05oZEJsdDR3YWdKcGI2aEQwQ3FqTm4zTFVZSjlzdVh0MVZ6cm13?oc=5",
+      "date": "2026-08-24",
+      "archive": "parsed"
+    },
+    {
+      "id": "5c7a40b651856eff",
+      "title": "New 10p coin enters circulation - will you spot one?",
+      "source": "rss_bbc_business",
+      "published_at": "Mon, 24 Aug 2026 23:03:42 GMT",
+      "url": "https://www.bbc.co.uk/news/articles/cn74lxrv110o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-08-25",
+      "archive": "parsed"
+    },
+    {
+      "id": "15990102fd9e4072",
+      "title": "Progyny (NASDAQ:PGNY): An Affordable Growth Stock With Strong Earnings and Reasonable Valuation - ChartMill",
+      "source": "rss_google_markets",
+      "published_at": "Tue, 25 Aug 2026 10:51:48 GMT",
+      "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxONHJsT2QzV3pFVjNGNnNsWjhHekh2Z1Uyd2JxZGhVWnRJVGR3MEE5ZTJ5cVdrZEROOFFaYU1yaEtVT2VNZ0NrU0dsakhGRDJoZGtzdnB2NDlwNkozVlJST0dGd0dkQ1p1TlVZRlNMeGZiSk9jRllpNTdaei0wVTJpMGQ3LVl4ejlQeE01U3FNUVotdHI5VjFSU0F0MlRpV2xuZU9MY3VGNVMyVklxZXlEVzVORTR5SzlxOWFfcHc4N0NfaXRJb3dKVUNYWi1GTm0zdE5NYmtzQnRZbkE?oc=5",
+      "date": "2026-08-25",
+      "archive": "parsed"
+    },
+    {
+      "id": "71c9c344755b9b19",
+      "title": "First Thing: New Fed chair Kevin Warsh faces early test amid bond market worries - The Guardian",
+      "source": "rss_google_business",
+      "published_at": "Mon, 24 Aug 2026 12:30:00 GMT",
+      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNWWtldzZmLVVIbXVwOFk3NXNqbWdDcDNXcXVzRDR0UkhWaEluVkg3LUFpZ2tVbTlNLU9BZjBVdTNtekxmNGlFMlQ5dzh4cHNkamIxUUhtSnlLdUU3dkhyb05GamZWTlZjd1ZZSnlkZUVfNjBkNDlSQUxncE96NXFxX0EyTi02OFNiakROOVB6ZEZOOWJqVHp1aHd4VmF3Zy0xUHhXZFBxdUFkS1JDWDJFckFHYmlfSnRmRUtDbTRhWEMzbmVpcVE?oc=5",
+      "date": "2026-08-25",
+      "archive": "parsed"
+    },
+    {
+      "id": "49acebb528e6cdef",
+      "title": "Burnham refuses to rule out tax rises in autumn Budget",
+      "source": "rss_bbc_business",
+      "published_at": "Tue, 25 Aug 2026 01:35:47 GMT",
+      "url": "https://www.bbc.co.uk/news/articles/cj06818jgzlo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-08-25",
+      "archive": "parsed"
+    },
+    {
+      "id": "be4c27a07039ad11",
+      "title": "Water crisis makes life in Sudan’s El Obeid refugee camps even worse",
+      "source": "rss_aljazeera_economy",
+      "published_at": "Wed, 26 Aug 2026 01:54:00 +0000",
+      "url": "https://www.aljazeera.com/video/newsfeed/2026/8/26/water-crisis-makes-life-in-sudans-el-obeid-refugee-camps-even-worse?traffic_source=rss",
+      "date": "2026-08-26",
+      "archive": "parsed"
+    },
+    {
+      "id": "d48613ac6757eb1a",
+      "title": "Gold holds steady as investors focus on US inflation data - Reuters",
+      "source": "rss_google_business",
+      "published_at": "Wed, 26 Aug 2026 00:30:00 GMT",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPcjZTTDRpNkRqVkd3eW9wY0dzSmhYM2ZDamhQYUQwT0l5S2M2NGVjMElYbUhIZ29YZ0g1R2ZadWhyS3NnWVZraHRRdmd2RGhaTUNTbWxjU0xOZDF1NGJGeE1vSndKVTZ3TDRaOXFJdjBXSlRfbEVNbW9zVU9Ba01zNU9zUkpyemh2MGlkcG5ZcHVhUnE2S2xsUjhhLWdZMk9ybUE?oc=5",
+      "date": "2026-08-26",
+      "archive": "parsed"
+    },
+    {
+      "id": "8c8a9dbbe788b40c",
+      "title": "Ford Motor (F) is Bringing Lincoln Production Home. Why is General Motors (GM) Walking Away From Its Battery Plant?",
+      "source": "rss_yahoo_finance",
+      "published_at": "2026-08-24T18:38:16Z",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/ford-motor-f-bringing-lincoln-183816663.html",
+      "date": "2026-08-26",
+      "archive": "parsed"
+    },
+    {
+      "id": "94d9855694dbb077",
+      "title": "Aramco Signs $3.7 Billion in Deals With French Companies",
+      "source": "rss_yahoo_finance",
+      "published_at": "2026-08-25T01:39:22Z",
+      "url": "https://finance.yahoo.com/energy/articles/aramco-signs-3-7-billion-013922265.html",
+      "date": "2026-08-26",
+      "archive": "parsed"
+    },
+    {
+      "id": "1425358ccadbe671",
+      "title": "Bill Gates warns ‘there is no plan’ for the ‘upheaval’ AI will cause - CNBC",
+      "source": "rss_google_business",
+      "published_at": "Wed, 26 Aug 2026 13:12:37 GMT",
+      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE1TWjRYRDczeHJMLWZEczhIdzZYQmJPcFEyU0RqUlNIVDJHbUZSM3paVDhIQmlXX296U0pJaWt4YWpNaXZDMl85SlFyWjNrU3JOV0U0aFhSQXN0NGdfcDhMYnFwS0hUc3ZRcVQtVkFSYUU1eXJicm96TkJhMFk5dw?oc=5",
+      "date": "2026-08-27",
+      "archive": "parsed"
+    },
+    {
+      "id": "325714f1653aa361",
+      "title": "Inflation Ticks Back Up, Reaches Nearly Double Fed’s 2% Goal - RISMedia",
+      "source": "rss_google_macro",
+      "published_at": "Wed, 26 Aug 2026 19:52:30 GMT",
+      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOZWxJNlNCeDNiZDFndy1lR3hnZzluX2RQRW80MzJMMkFhZzViTVI3N0FZMWdNWG15Y0dGWEktVG9TcnJlWC11dEhLMXVuUUZYWDA0VVlLbXlQRGtpWUN3NUtkdjhrYUFkdEdtNDFYN1JpWGhsaG0xU00tX1RHLXNsM0JRV1FMVUdSNXgxU05xeG95WGVRZEZrRjFR?oc=5",
+      "date": "2026-08-27",
+      "archive": "parsed"
+    },
+    {
+      "id": "d68f8861760327ce",
+      "title": "Stock market inches down as investors digest economic reports; eyes on Nvidia results (DJI:) - Seeking Alpha",
+      "source": "rss_google_markets",
+      "published_at": "Wed, 26 Aug 2026 13:31:00 GMT",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOWnJudFFudDZRRVdqdFlOZldqaEYxbnhhbVpfSGRjeGsyQUxTV2Y5YjVScHZkdnBYN0lWX2xLUmR4UlNQdnFRay1YRzhhN2E4WnZuOHZrMjZJdzFxVktuWHduVHFQdHRLakoycGpmY1Y2ZFk0MEJqVzF4UXByZXkwWXBrWUVlSHhR?oc=5",
+      "date": "2026-08-27",
+      "archive": "parsed"
+    },
+    {
+      "id": "defc2231ea62670e",
+      "title": "Sri Lanka salvage draw in second Test after battling Dinusha denies India",
+      "source": "rss_aljazeera_economy",
+      "published_at": "Thu, 27 Aug 2026 12:55:55 +0000",
+      "url": "https://www.aljazeera.com/sports/2026/8/27/sri-lanka-salvage-draw-in-second-test-after-battling-dinusha-denies-india?traffic_source=rss",
+      "date": "2026-08-28",
+      "archive": "parsed"
+    },
+    {
+      "id": "b7334dde882d585d",
+      "title": "nCino Q2 Earnings Call Highlights",
+      "source": "newsapi_MarketBeat",
+      "published_at": "2026-08-25T23:03:09Z",
+      "url": "https://www.marketbeat.com/instant-alerts/transcript-ncino-q2-earnings-call-highlights-2026-08-25/?utm_source=yahoofinance&amp;utm_medium=yahoofinance",
+      "date": "2026-08-28",
+      "archive": "parsed"
+    },
+    {
+      "id": "dc126e5d4a13ecea",
+      "title": "PG&E Stock Runs On A Legislative Calendar, Not The Market's",
+      "source": "finviz_export",
+      "published_at": "2026-08-29",
+      "url": "",
+      "date": "2026-08-29",
+      "archive": "digest"
+    },
+    {
+      "id": "c1af302c802ad03f",
+      "title": "Dear Netflix Stock Fans, Mark Your Calendars for August 27",
+      "source": "rss_yahoo_finance",
+      "published_at": "2026-08-26T19:49:54Z",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/dear-netflix-stock-fans-mark-194954966.html",
+      "date": "2026-08-31",
+      "archive": "parsed"
+    },
+    {
+      "id": "6a7c823cc043d581",
+      "title": "Stock Market Today, Aug. 27: Salesforce Surges 23% on Anthropic Partnership and Q2 Earnings Beat - Yahoo Finance",
+      "source": "rss_google_markets",
+      "published_at": "Thu, 27 Aug 2026 21:47:47 GMT",
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPRWoxUmlPMHRaUlhDRGpaVTB2U0NpaEx3ajdOT3EyTXZPRFVNdjhFNXBNTjVubFBfY2Y4QXhSRndHSkhUQXJSWmtrZFlJQkVVVGZzM2tJb2RjRTNiT2RoNlVKbC1VODZkMXJpSTNNVW5OdHF3ZFhlRmZpRm1JOUN3S1huU2ZzZjhpeEJfU0tLQTZMOGJ6?oc=5",
+      "date": "2026-08-31",
+      "archive": "parsed"
+    },
+    {
+      "id": "71139300f0f4b3ca",
+      "title": "Dow Jones Futures Rise With Fed Chief Warsh Due; Nvidia, These 7 Stocks Are In Buy Zones - Investor's Business Daily",
+      "source": "rss_google_markets",
+      "published_at": "Fri, 28 Aug 2026 05:01:00 GMT",
+      "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNNkw3UmhaS2RhbmFhQk9LSnVfa1dmMENsLUI3azdkZC1SRHlLbXd6d043LU1BSXJ0dFZsMndBMHQ1aEYwUEp1ZlI5dmFyZTFXSnpLWFJqQWN4VEg3RUVSbWdzRFlERjJQdnlTQ1RodkNqUEYxNjV1ay1NWnF1UEJwWEh5ZTVmdm01bU9FdXZYVE5WU3I4MTdoN0szZHNPMkgzQ014TkVhQW10dE56Q1RrV2JfTW5Od2d0RjFEcGMxSjVVTTJHY1A0UkVGRU5tcEN5SFE?oc=5",
+      "date": "2026-08-31",
+      "archive": "parsed"
+    },
+    {
+      "id": "a7d8f5ca7f8e5a50",
+      "title": "US Fed chair warns inflation progress insufficient, hints at rate hikes - Al Jazeera",
+      "source": "rss_google_macro",
+      "published_at": "Fri, 28 Aug 2026 17:24:35 GMT",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQd0NBQXVfMXZWdzF1ZENVa1FhMEJhaWZvZEdGWmZLMy1VVUZqSHN4cThGVGE2Y21HS29DMjQ0ZUp1Nkh0eHktN3plWE4xWndSUngtaXA4a1ZwS0lmVzNLbXVGa0lHLVpKZTVtYkpTSUFHOHpINVRjX3EyU2cwbGJnYjU5ZE9aWlhRMlNQc2xNQVVkMTJYWlpVR1loVFJNZ3l0bTdFcjU1TVRyeWhMZUtQLVAxNzPSAboBQVVfeXFMTWtVYVpZRlp5a3VpbW9RaWZmRF9VTl9jTGJfc0JXMFZKZTZNc0N2ZWtDMkdBLVdkaVNfdVVhMGxGeFQzSXRxRmZtY29kZWZDbTcySU8",
+      "date": "2026-08-31",
+      "archive": "parsed"
+    },
+    {
+      "id": "bec4c89ecb7f9b96",
+      "title": "US and Israeli leaders expected ‘swift outcome’ in Iran",
+      "source": "rss_aljazeera_economy",
+      "published_at": "Wed, 29 Jul 2026 14:27:45 +0000",
+      "url": "https://www.aljazeera.com/video/newsfeed/2026/7/29/us-and-israeli-leaders-expected-swift-outcome-in-iran?traffic_source=rss",
+      "date": "2026-09-03",
+      "archive": "parsed"
+    },
+    {
+      "id": "bd8fb0a69b7cda8c",
+      "title": "US interest rates held for fifth time in a row - BBC",
+      "source": "rss_google_macro",
+      "published_at": "Wed, 29 Jul 2026 18:02:02 GMT",
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE02WGR0SWxqV3dHcF9acFVJZHB2dWdjWXQ2ZGxaWUd3R0dRd0VzNGdRNHhVVldZaGg3aW9UR2VCUzYzWFlxVkI1R3hhSHhQV01nVzVwMGEzV3dfdw?oc=5",
+      "date": "2026-09-03",
+      "archive": "parsed"
+    },
+    {
+      "id": "2d87e1ef52652a6f",
+      "title": "Fed Likely Holding Interest Rates Steady Today—Here’s What To Watch For - Forbes",
+      "source": "rss_google_macro",
+      "published_at": "Wed, 29 Jul 2026 13:34:58 GMT",
+      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNOW1Mdm4wQ3IySk9EZzJLbVQ0SlZBZnRxSXlYcW9xZTNRa19STE90bHpjWHA2V0VFOW5nNXIxNHpFUjRJZ01iel90WWxZSk9wa1BpWmRUMEV6X3hCSDFPM2NWa0phdDdpeWVqdzdxa1kwNkE4V2tSSDZYU1pqZmxpSnJQMWdSajZtYWNsTmpjZVdfNEtKRW5hTlJYaTVDQ0NxcndzMTI0UUFUeDlFN3FHR0gwV1cybTMwZkh4RDZiNzRnYk5PUHc?oc=5",
+      "date": "2026-09-03",
+      "archive": "parsed"
+    },
+    {
+      "id": "6e8743dd2c9ee32b",
+      "title": "Warsh settles some nerves at Jackson Hole",
+      "source": "rss_ft_world",
+      "published_at": "Fri, 28 Aug 2026 16:38:14 GMT",
+      "url": "https://www.ft.com/content/646b812e-c9de-49ba-90f3-f9d12205f876?syn-25a6b1a6=1",
+      "date": "2026-09-08",
+      "archive": "parsed"
+    },
+    {
+      "id": "7842aa1cc798090f",
+      "title": "Eaton shares rise after UBS upgrades the stock to Buy from Neutral and raises its price target to $515, citing strong sales growth and expected margin improvement.",
+      "source": "finviz_export",
+      "published_at": "2026-09-09",
+      "url": "",
+      "date": "2026-09-09",
+      "archive": "parsed"
+    },
+    {
+      "id": "ce2d39000f80da40",
+      "title": "EU prepares 'Buy European' public-procurement rules aimed at China",
+      "source": "events",
+      "published_at": "2026-09-15",
+      "url": "",
+      "date": "2026-09-15",
+      "archive": "parsed"
+    },
+    {
+      "id": "5765bdc1cc775ecd",
+      "title": "Positive Jideytro ARROS-1 trial data for first-line ROS1+ NSCLC drives GSK premarket surge",
+      "source": "finviz_export",
+      "published_at": "2026-09-15",
+      "url": "",
+      "date": "2026-09-15",
+      "archive": "parsed"
+    },
+    {
+      "id": "2c941fafbc492319",
+      "title": "Thermo Fisher Scientific Inc. stock rises Thursday, outperforms market - MarketWatch",
+      "source": "rss_google_markets",
+      "published_at": "Thu, 24 Sep 2026 20:34:00 GMT",
+      "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxPQWc2cE91VFZJano2ZGo5RlBZUWkyMXRyN0RqZGpsN0EzUWhYU0dPQ3MtV2pMVWxwcVBjaFA5Q1NpaTRrTms2TVd4dzdRbzVfcmhESFFnZW1DOHAwMXhfNzZUV3l3QW0xUjJ6MFdzWWE3TDhGWm1SZmI3eEVQMk9IQ2NCOEVHaGVqVG5tX1puZFEwNVZMMVp3NURPRWNURjVjZlJHYk1WbTBGaVR6N0hfdXdnZ3psbnZDQnVsXzJEbWRyS1JnWVRuMXp3b1F3OXFOZVJSQm41d1E1UXdZUEVR?oc=5",
+      "date": "2026-09-25",
+      "archive": "parsed"
+    },
+    {
+      "id": "b7107280d89023a6",
+      "title": "Stock Market Today: Stock Market News And Analysis - Investor's Business Daily",
+      "source": "rss_google_markets",
+      "published_at": "Thu, 24 Sep 2026 14:29:00 GMT",
+      "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE8zdGl1MmxTM2JJa2pLNlFSWVhuZUd1ekRIeVpDcGVqckVJcloxaWlnRHJ3b0hqb291NXk4dlo0SmRQNlhDaGpubDh6ZWNTUHZiYVhjOVJINUxSYXE0NHRiNVE2OW51R2h4N1daaXRIdzVBR1UxT0g4?oc=5",
+      "date": "2026-09-25",
+      "archive": "parsed"
+    },
+    {
+      "id": "d81476cf32161565",
+      "title": "Treasury yields climb on Fed rate-hike bets; SNB holds rates steady - equiti.com",
+      "source": "rss_google_macro",
+      "published_at": "Fri, 25 Sep 2026 07:48:29 GMT",
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNUndTLWFuR3NEQ1lLNy1iTjQ4cWU3OFdHM1dQREFmcTZldHpMbVpkc3Z0NG1yenNxcU8yNU8zX2pFM2Z4cmNPZXQxaE5UNkhSVkptUGhUN2MyTjZ6LXZXdTQ5UU5zbkJNMlNiUi1seUJJeXNCT1NjNm5wbDAwOXliWHJ5eU9mb1gzRWF6eGt5TmdDVDZoblBR?oc=5",
+      "date": "2026-09-25",
+      "archive": "parsed"
+    },
+    {
+      "id": "74d6eedc5345363f",
+      "title": "Reports: Brightline preparing to file for Chapter 11 bankruptcy - WKMG",
+      "source": "rss_google_business",
+      "published_at": "Thu, 24 Sep 2026 16:09:05 GMT",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOMlhwdkhJU1FFMEdBZWw1dmhxaHh4WnN5OTUyWUVUUXVPS3l4dUtrWEpibTZlSmtsZHpteU5CRFQyYTg2UUx4M0F2M3M3WkZHZGNFQXFMbkk3aDBibi02MmdaVkNxVHRHTEZsdW1yd0M0ZS1YQWNZZ3JjYm9VUmNnM0FPdGlYbTdwVEs5RnFFWDE1eUVqVXprMW96MGplSUtjbFRlLUUzODZTQWg5NG5TNXFycFc?oc=5",
+      "date": "2026-09-25",
+      "archive": "parsed"
+    },
+    {
+      "id": "6205ca54ad06573c",
+      "title": "Primo Brands (PRMB) Stock May Be Undervalued On Earnings Power - Yahoo Finance",
+      "source": "rss_google_markets",
+      "published_at": "Sun, 27 Sep 2026 08:12:07 GMT",
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPZWZwQ2VudWJKSG02RlAzcnJ0ZDJqZ3A1c3JYTE1iRkpwNExQdk15dk8tYkx5aFRvalZmdzFUY1VDZE5QRkVlUU95VDY5aENNSlVZeWJ1YzhCdnpFZVRVTUxzTFBjbnF4RWZmN1hPYk5fQTU1R0xpeWFHNXV5dzZxaGx1aWk3R001bEx1RzA3aXF6VkVXYTJZ?oc=5",
+      "date": "2026-09-27",
+      "archive": "parsed"
+    },
+    {
+      "id": "5e6c040e1c36ac0c",
+      "title": "What It Would Take for Palantir Stock to Reach $500 - fool.com",
+      "source": "rss_google_markets",
+      "published_at": "Sun, 27 Sep 2026 18:57:28 GMT",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOY2NJQUE5M2l0U0pEdERLemh6WkVIME14LUNxX0tvRUh5NHowMXBLc1Qta2RYYzhzdGdVRHJCLS1EN0lJNkNlR1lGR2FKWFdwcWREdVlCemhNN01JcXAxZGZQZzFrTjFUcU1ZMHdwRzkwX1djX192c29ueGgyTlZHb3c1dlNDeEVXaHNDUmItSFZzek1yN08zdQ?oc=5",
+      "date": "2026-09-27",
+      "archive": "parsed"
+    },
+    {
+      "id": "52b378feae72ebb6",
+      "title": "Used oil supertanker prices surpass new vessel costs - finway.com.ua",
+      "source": "rss_google_commodities",
+      "published_at": "Sun, 27 Sep 2026 12:08:58 GMT",
+      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1xWGlac1BSY1dfX2ktMGNlLTcwOTZ3NEZNNWhxX2c1ME54aHJHTkxlQk9CTFBTSXUyUWtvM1N2Q2NmUm5PckRiRUVTbTY0anp1NmNwTjhCUlQxcW5scnFNWTNSQVJFRWs?oc=5",
+      "date": "2026-09-28",
+      "archive": "parsed"
+    },
+    {
+      "id": "dcc8c7808f803e8b",
+      "title": "30-Year U.S. Treasury Bond Yield Tops 5.5% Despite Oil Price Decline - eu.36kr.com",
+      "source": "rss_google_commodities",
+      "published_at": "Mon, 28 Sep 2026 05:00:55 GMT",
+      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFBuMGJlVHZ5YXM1bHFqdGRJWDZKNjRUTU5yQ0g3emplTjJKQW1tTGcxcXM3R09BWnF2aWhoMUYxLUhfa040V19ZMF9MbnYtZWNKejEw?oc=5",
+      "date": "2026-09-28",
+      "archive": "parsed"
+    },
+    {
+      "id": "cf70b60b8d43c906",
+      "title": "US and China Extend Trade Truce to January 2027 Amid Tariff Reduction Agreement - streamlinefeed.co.ke",
+      "source": "rss_google_geopolitics",
+      "published_at": "Mon, 28 Sep 2026 08:30:22 GMT",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQNHhZbXl4VlhNWTVLc3NiUktyekxnT3AxUF9Lb1NLbjBGN1JGU0Y1QnZ2dGVoVm1mMm1aQUNlSmNjaHgtMkJXTlJ4UGJVMlM5ZEptYjZHRk5MaUhkcnNfbkhwV2JTTzVNTWE3S3BTNHFCYTVwb0ZJWko2T21YejRIOEVtUTFQUmt6MDJyRjdaXzNQXzBiODhEandjUXdOVGU4Q2h6WTZqT2YwSVF0TF85Wm10Yw?oc=5",
+      "date": "2026-09-28",
+      "archive": "parsed"
+    }
+  ]
+}

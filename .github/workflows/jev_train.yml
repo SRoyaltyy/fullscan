@@ -1,0 +1,137 @@
+name: Jev train
+
+# Homework for the hop-0 gate. workflow_dispatch only.
+# No schedule. The weekday harvest workflow stays as it is.
+# The page has no API key. JEV_API_KEY is read here, on draw only.
+# Grades commit to main, which is the branch Deploy dashboard checks out.
+# [skip ci] keeps that commit from waking the trading workflows.
+# The page reads draw.json from raw main, so it does not need a Pages rebuild.
+# Allowlist: 00_grounding/jev_train/ 00_grounding/jev_hard_misses.json dashboard/jev-train/draw.json
+
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "draw or grade"
+        required: true
+        default: draw
+        type: choice
+        options:
+          - draw
+          - grade
+      stamp:
+        description: "YYYYMMDD_HHMM from the page. Blank lets the action stamp."
+        required: false
+        default: ""
+        type: string
+      grades_json:
+        description: "Base64 JSON grades for mode=grade. Empty for draw."
+        required: false
+        default: ""
+        type: string
+      seed:
+        description: "RNG seed for mode=draw. Blank draws a fresh seed."
+        required: false
+        default: ""
+        type: string
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: jev-train
+  cancel-in-progress: false
+
+jobs:
+  train:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 1
+          persist-credentials: true
+          sparse-checkout: |
+            src
+            00_grounding
+            01_daily/news
+            dashboard/jev-train
+            .github/workflows
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Unit tests (no key)
+        run: PYTHONPATH=. python3 -m src.test_jev_train
+
+      - name: Draw
+        id: draw
+        if: github.event.inputs.mode == 'draw'
+        env:
+          JEV_API_KEY: ${{ secrets.JEV_API_KEY }}
+          STAMP: ${{ github.event.inputs.stamp }}
+          SEED: ${{ github.event.inputs.seed }}
+        run: |
+          set -euo pipefail
+          PYTHONPATH=. python3 -m src.jev_train draw --stamp "$STAMP" --seed "$SEED" \
+            | tee "$RUNNER_TEMP/jev_train_out.txt"
+          stamp=$(awk -F= '/^JEV_TRAIN_STAMP=/{print $2}' "$RUNNER_TEMP/jev_train_out.txt" | tail -1)
+          echo "stamp=${stamp}" >> "$GITHUB_OUTPUT"
+
+      - name: Grade
+        id: grade
+        if: github.event.inputs.mode == 'grade'
+        env:
+          GRADES_JSON: ${{ github.event.inputs.grades_json }}
+          STAMP: ${{ github.event.inputs.stamp }}
+        run: |
+          set -euo pipefail
+          PYTHONPATH=. python3 -m src.jev_train grade --stamp "$STAMP" \
+            | tee "$RUNNER_TEMP/jev_train_out.txt"
+          stamp=$(awk -F= '/^JEV_TRAIN_STAMP=/{print $2}' "$RUNNER_TEMP/jev_train_out.txt" | tail -1)
+          echo "stamp=${stamp}" >> "$GITHUB_OUTPUT"
+
+      - name: Commit the sheet to main
+        run: |
+          set -euo pipefail
+          git config user.name "Market-Bot-Automaton"
+          git config user.email "bot@users.noreply.github.com"
+          git add -- 00_grounding/jev_train 00_grounding/jev_hard_misses.json
+          if [ -f dashboard/jev-train/draw.json ]; then
+            git add -- dashboard/jev-train/draw.json
+          fi
+          bad=$(git diff --cached --name-only | while read -r p; do
+            case "$p" in
+              00_grounding/jev_train/*|00_grounding/jev_hard_misses.json|dashboard/jev-train/draw.json) ;;
+              *) printf '%s\n' "$p" ;;
+            esac
+          done)
+          if [ -n "${bad}" ]; then
+            echo "refusing to commit paths outside the trainer allowlist"
+            echo "${bad}"
+            exit 1
+          fi
+          if git diff --cached --quiet; then
+            echo "no trainer output to commit"
+            exit 1
+          fi
+          if grep -R -E -n 'sk-[A-Za-z0-9]{8,}|ghp_[A-Za-z0-9]{8,}|github_pat_[A-Za-z0-9_]{8,}|JEV_API_KEY[[:space:]]*=|Bearer [A-Za-z0-9._-]{12,}' \
+              00_grounding/jev_train 00_grounding/jev_hard_misses.json dashboard/jev-train/draw.json; then
+            echo "refusing to commit secret-like material"
+            exit 1
+          fi
+          git commit -m "jev train: ${{ github.event.inputs.mode }} [skip ci]"
+          git push origin HEAD:main
+
+      - name: Open or update the jev-train issue
+        if: github.event.inputs.mode == 'grade'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          STAMP: ${{ steps.grade.outputs.stamp }}
+        run: |
+          set -euo pipefail
+          PYTHONPATH=. python3 -m src.jev_train issue --stamp "$STAMP"

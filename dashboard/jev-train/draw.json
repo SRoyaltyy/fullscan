@@ -1,0 +1,12 @@
+{
+  "schema": "jev-train-draw-1",
+  "stamp": "",
+  "generated_at": "",
+  "seed": null,
+  "model": "",
+  "exam_source": "",
+  "gate": "",
+  "sample": {},
+  "items": [],
+  "note": "No draw yet. New draw runs the current hop-0 gate and replaces this file on main. The page also reads the copy committed at dashboard/jev-train/draw.json."
+}
