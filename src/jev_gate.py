@@ -15,10 +15,12 @@ CLI:
   python -m src.jev_gate --date latest --limit 200
   python -m src.jev_gate --code-only --date 2026-09-28
   python -m src.jev_gate --mine
+  python -m src.jev_gate --eval
 """
 from __future__ import annotations
 
 import argparse
+import copy
 import csv
 import datetime as dt
 import json
@@ -29,6 +31,7 @@ import urllib.error
 import urllib.request
 from collections import Counter, defaultdict
 from concurrent.futures import ThreadPoolExecutor, as_completed
+from dataclasses import dataclass
 from email.utils import parsedate_to_datetime
 from pathlib import Path
 
@@ -74,6 +77,29 @@ POWERFUL = frozenset(
 CHOKE_HIT = re.compile(
     r"(?i)\b(oil|tanker|strait|canal|pipeline|port|shipping|lng)\b"
 )
+
+# Eval may move exactly one of these per round. Defaults reproduce the
+# current gate: empty reaction regex, listed-token keep off, reprint
+# clock and verb list taken from jev_chokepoint_state.json.
+ALLOWED_KNOBS = (
+    "action_material",
+    "reaction_regex",
+    "listed_token_in_title",
+    "new_instrument",
+    "reprint_weather_days",
+    "new_verbs",
+)
+
+
+@dataclass(frozen=True)
+class GateKnobs:
+    action_material: float = MATERIAL_KEEP
+    new_instrument: float = INSTRUMENT_KEEP
+    reaction_regex: str = ""
+    listed_token_in_title: bool = False
+    reprint_weather_days: int | None = None
+    new_verbs: tuple[str, ...] = ()
+    listed_tokens: frozenset[str] = frozenset()
 
 # Jev question ids. Do not add event_class / polarity / ticker.
 QUESTIONS: dict = {
@@ -402,18 +428,239 @@ def reprint_weather_code(title: str, asof: dt.date, state: dict) -> dict:
     }
 
 
+# Hop-0 is news. Earnings are a different pipe and never reach Jev.
+# Shapes below are tokens, not headlines. Closed lists stay untouched.
+_POLICY_CTX = re.compile(
+    r"(?i)\b(?:fda|fomc|fed|cpi|pce|ppi|nfp|nbs|pboc|ecb|boj|bis|nhtsa|"
+    r"epa|carb|sec|ftc|doj|cafe|wasde|eia|ism|gdp|ustr|treasury|cms|opec)\b"
+)
+_EARNINGS = re.compile(
+    r"(?i)(?:"
+    r"\bearnings\b"
+    r"|\bprice[- ]targets?\b"
+    r"|\beps\b"
+    r"|\bprofit warning\b"
+    r"|\brevenue\b.{0,24}\b(?:beat|miss)"
+    r"|\b(?:beats?|miss(?:es|ed)?)\b.{0,30}\b(?:earnings|estimates|expectations)\b"
+    r"|\bguidance\b"
+    r"|\b(?:raise[sd]?|cuts?|hikes?|lowers?|lowered|boosts?|boosted|slash(?:ed|es)?)\s+pt\b"
+    r"|\bpt\s+(?:raise[sd]?|cuts?|hikes?|lowers?|lowered|boosts?|boosted|slash(?:ed|es)?)\b"
+    r")"
+)
+_SHARE_PCT = re.compile(
+    r"(?i)(?:"
+    r"\b(?:shares|stock)\b.{0,24}(?:\+\d+(?:\.\d+)?%|up \d+(?:\.\d+)?%)"
+    r"|(?:\+\d+(?:\.\d+)?%|up \d+(?:\.\d+)?%).{0,24}\b(?:shares|stock)\b"
+    r")"
+)
+_EXTRA_JUNK = re.compile(
+    r"(?i)(?:"
+    r"what we.?re watching"
+    r"|\$\s*10[,.]?000"
+    r"|\b10k\b.{0,48}\btesla\b"
+    r"|\btesla\b.{0,48}\b10k\b"
+    r"|if you (?:had )?invested"
+    r"|sports?\s+stock\s+report"
+    r")"
+)
+_TAPE = re.compile(
+    r"(?i)(?:"
+    r"\bgold\b.{0,24}\b(?:falls?|drops?|plunges?|declines?|rises?|jumps?|fell|rose|slides?|slid)\b"
+    r"|\b(?:falls?|drops?|plunges?|rises?|jumps?|fell|rose)\b.{0,16}\bgold\b"
+    r"|\boil price today\b"
+    r"|\bbrent\b.{0,20}\b(?:rises?|falls?|jumps?|rose|fell)\b"
+    r"|\boil prices?\b.{0,24}\b(?:jump|jumps|jumped|rise|rises|rose|fall|falls|fell|climb|climbs|climbed|slide|slides|slid)\b"
+    r"|\boil\b.{0,12}\b(?:rises?|jumps?|climbs?|falls?|rose|fell)\b"
+    r"|\bstocks?\b.{0,40}\bhalt(?:s|ed)?\b"
+    r"|\bhalt (?:their|the) slide\b"
+    r"|\bstocks?\s+(?:jump|jumps|jumped|rally|rallies|rallied|fall|falls|fell)\s+as\b"
+    r")"
+)
+_INSTRUMENT = re.compile(
+    r"(?i)(?:"
+    r"\bexecutive orders?\b"
+    r"|\bfederal register\b"
+    r"|\bfinal rules?\b"
+    r"|\bcafe\b"
+    r"|\baccelerated approval\b"
+    r"|\bcomplete response letter\b"
+    r"|\bcrl\b"
+    r"|\badcomm\b"
+    r"|\bfda\b.{0,40}\b(?:approval|approves|approved|rejects|rejection)\b"
+    r"|\b(?:approval|approves|approved)\b.{0,40}\bfda\b"
+    r"|\b(?:sec|ftc|doj)\b.{0,50}\b(?:order|consent order|charges)\b"
+    r"|\b(?:consent order|charges)\b.{0,40}\b(?:sec|ftc|doj)\b"
+    r"|\bbis\b.{0,40}\b(?:export|entity)\b"
+    r"|\bcourt orders?\b"
+    r"|\bcourt rulings?\b"
+    r"|\binjunction\b"
+    r"|\btro\b"
+    r")"
+)
+_PRINT = re.compile(
+    r"(?i)(?:"
+    r"\b(?:cpi|pce|ppi|nfp)\b"
+    r"|\bnonfarm payrolls\b"
+    r"|\b(?:jobless|initial) claims\b"
+    r"|\bretail sales\b"
+    r"|\bgdp\b"
+    r"|\bwasde\b"
+    r"|\bindustrial profits\b"
+    r"|\bism\b"
+    r"|\beia\b"
+    r"|\bapi\b.{0,30}\b(?:crude|inventor(?:y|ies))\b"
+    r")"
+)
+_RATE = re.compile(
+    r"(?i)(?:"
+    r"\b(?:fomc|boj|ecb|pboc|federal reserve|fed)\b.{0,80}"
+    r"\b(?:holds?|hikes?|cuts?|pauses?|raises?|lowers?)\b.{0,40}"
+    r"\b(?:rates?|basis points?|bps|percent|%)\b"
+    r"|\b(?:fomc|boj|ecb|pboc|federal reserve|fed)\b.{0,60}\b(?:rate )?decision\b"
+    r"|\b(?:fomc|boj|ecb|pboc|federal reserve|fed)\b.{0,40}"
+    r"\d+(?:\.\d+)?\s*(?:%|percent|bps|basis points)\b"
+    r")"
+)
+_LEVER_ACTOR = re.compile(
+    r"(?i)\b(?:"
+    r"trump|biden|harris|powell|yellen|xi|lagarde|starmer|ishiba|modi|"
+    r"potus|president|white house|cabinet|fed official|federal reserve|"
+    r"fomc|warsh|pboc|ecb|boj|treasury|ustr|"
+    r"commerce secretary|energy secretary|defense secretary|"
+    r"secretary of commerce|secretary of energy|secretary of defense|"
+    r"secretary of the treasury|secretary of state"
+    r")\b"
+)
+_LEVER_VERB = re.compile(
+    r"(?i)\b(?:"
+    r"bans?|banned|tariffs?|sanctions?|quota|exports?|dut(?:y|ies)|"
+    r"ceasefire|hikes?|cuts?|pauses?|emergency|executive orders?|eo|rules?"
+    r")\b"
+)
+_OPS = re.compile(
+    r"(?i)(?:"
+    r"\b(?:plant|factory|refinery|pipeline|rig|mine)\b.{0,40}"
+    r"\b(?:explosion|fire|blast|explodes|exploded|outage)\b"
+    r"|\b(?:explosion|blast|explodes|exploded)\b.{0,40}"
+    r"\b(?:plant|factory|refinery|pipeline|rig|mine|terminal|port)\b"
+    r"|\bfaa\b.{0,40}\b(?:ground|grounds|grounding|grounded)\b"
+    r"|\b(?:port|rail) strike\b"
+    r"|\b(?:trading|exchange) halt\b"
+    r"|\bransomware\b"
+    r"|\bcyber ?attacks?\b"
+    r"|\bcyber\b.{0,20}\b(?:breach|hack)\b"
+    r"|\bzero[- ]day\b"
+    r"|\bmine outage\b"
+    r"|\bopec\b"
+    r")"
+)
+_STRUCTURE = re.compile(
+    r"(?i)(?:"
+    r"\btokenized\b.{0,20}\bstocks?\b"
+    r"|\bapp store\b"
+    r"|\bdigital markets act\b"
+    r"|\bdma ruling\b"
+    r"|\bdelisting\b"
+    r"|\bnew (?:exchange|venue)\b"
+    r"|\b(?:nasdaq|nyse)\b.{0,30}\b(?:listing|lists|delist)\b"
+    r")"
+)
+_SHAPE = re.compile(
+    r"(?i)(?:"
+    r"\b(?:tga|refunding|debt ceiling)\b"
+    r"|\b(?:coupon|auction|issuance)\b.{0,24}\bcalendar\b"
+    r"|\bcalendar\b.{0,24}\b(?:coupon|auction|issuance)\b"
+    r"|\b(?:bis|entity list|semiconductor export|export control|export[- ]licen[sc]e)\b"
+    r"|\b(?:cms|ira drug|drug price negotiation|medicare negotiation)\b"
+    r"|\b(?:nhtsa|carb|epa)\b"
+    r"|\bstrike authorization\b"
+    r"|\b(?:iam|ila)\b.{0,24}\bstrike\b"
+    r"|\b(?:failed auction|sovereign default|debt default)\b"
+    r"|\b(?:moody'?s|moodys|fitch|s\s*&\s*p)\b.{0,50}\b(?:cut|downgrade|rating)\b"
+    r"|\brating cut\b.{0,40}\b(?:sovereign|sifi|treasury)\b"
+    r"|\b(?:sovereign|sifi)\b.{0,40}\brating cut\b"
+    r"|\b(?:nasdaq|nyse|exchange)\b.{0,40}\b(?:hack|halt|outage|cyber)\b"
+    r"|\b(?:nbs|pboc|rrr|reserve requirement)\b"
+    r")"
+)
+
+
+def is_earnings(title: str) -> bool:
+    """Earnings, guidance, PT, and share-tape percents. Not a policy print."""
+    title = title or ""
+    if _SHARE_PCT.search(title) and not _POLICY_CTX.search(title):
+        return True
+    match = _EARNINGS.search(title)
+    if not match:
+        return False
+    hit = match.group(0).lower()
+    if "guidance" in hit and "earnings" not in title.lower() and _POLICY_CTX.search(title):
+        return False
+    return True
+
+
+def tape_hit(title: str) -> bool:
+    return bool(_TAPE.search(title or ""))
+
+
+def _instrument_hit(title: str) -> bool:
+    return bool(_INSTRUMENT.search(title or ""))
+
+
+def _print_hit(title: str) -> bool:
+    return bool(_PRINT.search(title or "") or _RATE.search(title or ""))
+
+
+def _lever_hit(title: str) -> bool:
+    """Actor plus a lever verb. 'Mulls' / 'considering' do not cancel or suffice."""
+    return bool(_LEVER_ACTOR.search(title or "") and _LEVER_VERB.search(title or ""))
+
+
+def _shape_hit(title: str) -> bool:
+    return bool(_SHAPE.search(title or ""))
+
+
+def code_keep_rule(title: str, clock: dict | None = None) -> str:
+    """Code keep. Empty string leaves the title for tape or for Jev."""
+    clock = clock or {}
+    if _instrument_hit(title):
+        return "code_instrument"
+    if _print_hit(title):
+        return "code_print"
+    if _OPS.search(title or ""):
+        return "code_ops"
+    if _STRUCTURE.search(title or ""):
+        return "code_structure"
+    if clock.get("hit") and clock.get("has_new_verb"):
+        return "code_choke"
+    if _shape_hit(title):
+        return "code_shape"
+    if not tape_hit(title) and _lever_hit(title):
+        return "code_lever"
+    return ""
+
+
 def code_drop_reason(row: dict, *, asof: dt.date, state: dict,
                      junk_rx: re.Pattern | None = None) -> str:
+    title = row.get("title") or ""
     if source_denied(row.get("source") or "", row.get("url") or ""):
         return "source"
-    if punct_trash(row.get("title") or ""):
+    if punct_trash(title):
         return "punct"
-    if junk_shape_hit(row.get("title") or "", junk_rx):
+    if is_earnings(title):
+        return "earnings"
+    if junk_shape_hit(title, junk_rx) or _EXTRA_JUNK.search(title):
         return "junk_shape"
-    clock = reprint_weather_code(row.get("title") or "", asof, state)
+    clock = reprint_weather_code(title, asof, state)
     row["_clock"] = clock
     if clock["hit"] and clock["stale"]:
         return "reprint_weather"
+    rule = code_keep_rule(title, clock)
+    if rule:
+        row["_code_keep"] = rule
+        return ""
+    if tape_hit(title):
+        return "tape"
     return ""
 
 
@@ -446,10 +693,36 @@ def answers_from_gold(item: dict) -> dict:
     return {k: raw[k] for k in QUESTIONS if k in raw}
 
 
-def decide(row: dict, answers: dict | None) -> dict:
+def listed_token_hit(title: str, listed: frozenset[str]) -> str:
+    """Whole-word Finviz ticker in the title. Empty when the knob is off."""
+    if not listed:
+        return ""
+    words = [
+        w for w in normalize_title(title).split()
+        if len(w) >= 2 and w not in STOP and w in listed
+    ]
+    return words[0] if words else ""
+
+
+def state_for_knobs(state: dict, knobs: GateKnobs | None) -> dict:
+    """Copy chokepoint state only when a reprint knob is actually set."""
+    if knobs is None:
+        return state
+    if knobs.reprint_weather_days is None and not knobs.new_verbs:
+        return state
+    out = copy.deepcopy(state)
+    if knobs.reprint_weather_days is not None:
+        out["days_threshold"] = int(knobs.reprint_weather_days)
+    if knobs.new_verbs:
+        out["new_verbs_default"] = [str(v).lower().strip() for v in knobs.new_verbs if str(v).strip()]
+    return out
+
+
+def decide(row: dict, answers: dict | None, knobs: GateKnobs | None = None) -> dict:
     """Pure keep/drop given a code-flagged row + optional Jev answers.
 
     Jev is not allowed to invent an event class or polarity here.
+    knobs=None is the current gate. A GateKnobs() with defaults matches it.
     """
     title = row.get("title") or ""
     code = row.get("code_reason") or ""
@@ -459,6 +732,8 @@ def decide(row: dict, answers: dict | None) -> dict:
     material = 0.0
     instrument = 0.0
     reprint = 0.0
+    material_keep = MATERIAL_KEEP if knobs is None else float(knobs.action_material)
+    instrument_keep = INSTRUMENT_KEEP if knobs is None else float(knobs.new_instrument)
 
     def pack(decision: str, reason: str, geo_out: str = "") -> dict:
         return {
@@ -482,7 +757,22 @@ def decide(row: dict, answers: dict | None) -> dict:
         geo_out = "chokepoint" if code == "reprint_weather" else ""
         return pack("drop", code, geo_out)
 
+    # Code already kept this title. Jev opinion / low material does not override.
+    keep_rule = row.get("_code_keep") or ""
+    if keep_rule:
+        return pack("keep", keep_rule)
+
+    if knobs is not None and knobs.reaction_regex:
+        try:
+            if re.search(knobs.reaction_regex, title, flags=re.IGNORECASE):
+                return pack("drop", "reaction_regex")
+        except re.error:
+            pass
+
     if not answers:
+        if knobs is not None and knobs.listed_token_in_title:
+            if listed_token_hit(title, knobs.listed_tokens):
+                return pack("keep", "listed_token")
         return pack("keep", "code_leftover")
 
     opinion = float(answers.get("is_opinion") or 0.0)
@@ -506,7 +796,7 @@ def decide(row: dict, answers: dict | None) -> dict:
         if geo == "other":
             geo = "core"
         if hints["newness"]:
-            instrument = max(instrument, INSTRUMENT_KEEP)
+            instrument = max(instrument, instrument_keep)
 
     # Jev over-fires Yemen/Palestine as Hormuz cousins. Place file or
     # tanker/strait keyword required to keep a chokepoint label.
@@ -524,10 +814,13 @@ def decide(row: dict, answers: dict | None) -> dict:
         return pack("drop", "crowd")
     if actor == "state_head" and hints["head_action"]:
         return pack("keep", "state_head_action")
+    if knobs is not None and knobs.listed_token_in_title:
+        if listed_token_hit(title, knobs.listed_tokens):
+            return pack("keep", "listed_token")
 
     if geo == "other":
         if actor in POWERFUL and (
-            material >= MATERIAL_KEEP or instrument >= INSTRUMENT_KEEP
+            material >= material_keep or instrument >= instrument_keep
         ):
             return pack("keep", "other_powerful")
         return pack("drop", "geo_other")
@@ -540,8 +833,8 @@ def decide(row: dict, answers: dict | None) -> dict:
         return pack("keep", "chokepoint")
 
     # core — high recall, but still require material or a real instrument
-    if material >= MATERIAL_KEEP or (
-        actor in POWERFUL and instrument >= INSTRUMENT_KEEP
+    if material >= material_keep or (
+        actor in POWERFUL and instrument >= instrument_keep
     ):
         return pack("keep", "core_material")
     return pack("drop", "low_material")
@@ -672,14 +965,18 @@ def jev_many(rows: list[dict], key: str, workers: int = 24,
 def gate(rows: list[dict], *, code_only: bool = False, live: bool = False,
          key: str = "", workers: int = 24, asof: dt.date | None = None,
          state: dict | None = None, poster=None,
-         gold_answers: dict | None = None) -> list[dict]:
+         gold_answers: dict | None = None,
+         knobs: GateKnobs | None = None) -> list[dict]:
     """Run hop-0. gold_answers maps row id → answer dict (tests / dry gold)."""
     asof = asof or dt.date.today()
-    state = state or load_chokepoint_state()
+    state = state_for_knobs(state or load_chokepoint_state(), knobs)
     rows = dedup_rows(list(rows), session_day=asof.isoformat())
     rows = apply_code(rows, asof=asof, state=state)
 
-    leftovers = [r for r in rows if not r.get("code_reason")]
+    leftovers = [
+        r for r in rows
+        if not r.get("code_reason") and not r.get("_code_keep")
+    ]
     answers_by_id: dict[str, dict] = gold_answers or {}
 
     if live and not code_only and leftovers:
@@ -706,7 +1003,7 @@ def gate(rows: list[dict], *, code_only: bool = False, live: bool = False,
 
     decided = []
     for row in rows:
-        decided.append(decide(row, row.get("_answers")))
+        decided.append(decide(row, row.get("_answers"), knobs))
     return decided
 
 
@@ -878,6 +1175,7 @@ def gold_check(decided: list[dict], rows: list[dict], *,
         note = ""
         code_kills = {
             "source", "punct", "junk_shape", "dup", "reprint_weather",
+            "earnings", "tape",
         }
         if code_must == "drop" and reason not in code_kills:
             ok = False
@@ -1108,12 +1406,21 @@ def build_parser() -> argparse.ArgumentParser:
                    help="Force Jev HTTP (default when a key is set and not --code-only)")
     p.add_argument("--mine", action="store_true")
     p.add_argument("--workers", type=int, default=24)
+    p.add_argument("--eval", action="store_true",
+                   help="Fresh hop-0 eval draw. Does not write keep.json or call Lane.")
+    p.add_argument("--seed", type=int, default=None,
+                   help="RNG seed for the eval draw. Default is a fresh seed.")
+    p.add_argument("--knob", action="append", default=None,
+                   help="One allowed knob, name=value. A second --knob is an error.")
     return p
 
 
 def main(argv: list[str] | None = None) -> int:
     args = build_parser().parse_args(argv)
     questions_are_hop0()
+    if args.eval:
+        from .jev_eval import run_eval_cli
+        return run_eval_cli(args)
     if args.mine:
         mined = mine_junk_shapes()
         print(f"[jev_gate] mined {len(mined.get('top') or [])} shapes "
