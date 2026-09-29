@@ -1,12 +1,12 @@
 {
   "date": "2026-09-29",
-  "generated_at": "2026-09-29T05:41:02.251285-04:00",
+  "generated_at": "2026-09-29T05:41:24.372666-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
   "counts": {
-    "ok": 4,
-    "partial": 3,
+    "ok": 6,
+    "partial": 1,
     "fail": 1,
     "n": 8
   },
@@ -693,11 +693,11 @@
       "key": "stock_book",
       "name": "Stock Book ALL",
       "yaml": "stock_book_all.yml",
-      "status": "PARTIAL",
+      "status": "OK",
       "inputs_ready": true,
-      "n_req_ok": 2,
+      "n_req_ok": 4,
       "n_req": 4,
-      "n_opt_ok": 1,
+      "n_opt_ok": 3,
       "n_opt": 3,
       "files": [
         {
@@ -836,10 +836,10 @@
           "name": "Stock book JSON",
           "path": "data/stock_book/2026-09-29_stock_book.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "horizons=5 names=230",
+          "size": 1535872,
+          "said": "1d BUY ARHS, SONO, SN, PDFS, SHOO, DT, GCT, OLLI \u00b7 SELL ROIV, PYXS, IKT, SOC, AXSM, CGEM \u00b7 0.4692",
           "bullets": []
         },
         {
@@ -847,21 +847,24 @@
           "name": "Stock book MD",
           "path": "01_daily/2026-09-29_stock_book.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 95608,
+          "said": "Stock book \u2014 2026-09-29",
+          "bullets": [
+            "_Generated 2026-09-29T05:41:14.501245-04:00_",
+            "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
+          ]
         },
         {
           "key": "green",
           "name": "Green-pile JSON",
           "path": "data/stock_book/2026-09-29_green.json",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "",
+          "size": 2698,
+          "said": "179 green \u00b7 TAL, GLBE, KEYS, SHOO, EMBJ, CVLT, NTNX, FIGS, AVT, SN",
           "bullets": []
         },
         {
@@ -883,10 +886,10 @@
           "name": "Dashboard HTML",
           "path": "dashboard/index.html",
           "role": "optional",
-          "status": "FAIL",
-          "reason": "session 2026-09-29 not in dashboard dates (last=2026-09-25)",
+          "status": "OK",
+          "reason": "live-book poller + today.json (2026-09-29)",
           "size": 8944875,
-          "said": "session 2026-09-29 not in dashboard dates (last=2026-09-25)",
+          "said": "live-book poller + today.json (2026-09-29)",
           "bullets": []
         }
       ],
@@ -899,9 +902,9 @@
       "key": "publish",
       "name": "Dashboard / .io",
       "yaml": "deploy-dashboard.yml",
-      "status": "PARTIAL",
-      "inputs_ready": false,
-      "n_req_ok": 1,
+      "status": "OK",
+      "inputs_ready": true,
+      "n_req_ok": 2,
       "n_req": 2,
       "n_opt_ok": 0,
       "n_opt": 1,
@@ -911,10 +914,10 @@
           "name": "Stock book JSON",
           "path": "data/stock_book/2026-09-29_stock_book.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "horizons=5 names=230",
+          "size": 1535872,
+          "said": "1d BUY ARHS, SONO, SN, PDFS, SHOO, DT, GCT, OLLI \u00b7 SELL ROIV, PYXS, IKT, SOC, AXSM, CGEM \u00b7 0.4692",
           "bullets": []
         },
         {
@@ -922,10 +925,10 @@
           "name": "Dashboard HTML (repo)",
           "path": "dashboard/index.html",
           "role": "required",
-          "status": "FAIL",
-          "reason": "session 2026-09-29 not in dashboard dates (last=2026-09-25)",
+          "status": "OK",
+          "reason": "live-book poller + today.json (2026-09-29)",
           "size": 8944875,
-          "said": "session 2026-09-29 not in dashboard dates (last=2026-09-25)",
+          "said": "live-book poller + today.json (2026-09-29)",
           "bullets": []
         },
         {
@@ -961,8 +964,130 @@
   "news_mode": "on",
   "news_mode_reason": "",
   "selections": {
-    "buy_1d": [],
-    "sell_1d": [],
+    "buy_1d": [
+      {
+        "ticker": "ARHS",
+        "score": 0.9013014936750097
+      },
+      {
+        "ticker": "SONO",
+        "score": 0.882807210417524
+      },
+      {
+        "ticker": "SN",
+        "score": 0.4632041695805488
+      },
+      {
+        "ticker": "PDFS",
+        "score": 0.8511534460930921
+      },
+      {
+        "ticker": "SHOO",
+        "score": 0.7988795225956768
+      },
+      {
+        "ticker": "DT",
+        "score": 0.41888615803821805
+      },
+      {
+        "ticker": "GCT",
+        "score": 0.800810216334066
+      },
+      {
+        "ticker": "OLLI",
+        "score": 0.7642739401100922
+      },
+      {
+        "ticker": "CAKE",
+        "score": 0.757941251392074
+      },
+      {
+        "ticker": "ARQT",
+        "score": 0.7733596676403423
+      },
+      {
+        "ticker": "CDNA",
+        "score": 0.8021608286801538
+      },
+      {
+        "ticker": "BJ",
+        "score": 0.515825807162678
+      },
+      {
+        "ticker": "TAL",
+        "score": 0.6559776656383001
+      },
+      {
+        "ticker": "CORT",
+        "score": 0.3172479380905753
+      },
+      {
+        "ticker": "CRON",
+        "score": 0.7328939330237798
+      }
+    ],
+    "sell_1d": [
+      {
+        "ticker": "ROIV",
+        "score": -0.48567275371093904
+      },
+      {
+        "ticker": "PYXS",
+        "score": -0.37230461872539494
+      },
+      {
+        "ticker": "IKT",
+        "score": -0.3678967045840857
+      },
+      {
+        "ticker": "SOC",
+        "score": -0.3630747262047275
+      },
+      {
+        "ticker": "AXSM",
+        "score": -0.3565667884619267
+      },
+      {
+        "ticker": "CGEM",
+        "score": -0.35246126077385126
+      },
+      {
+        "ticker": "IFRX",
+        "score": -0.3441666123280977
+      },
+      {
+        "ticker": "BIDU",
+        "score": -0.3436914114265927
+      },
+      {
+        "ticker": "RBLX",
+        "score": -0.34135244732990916
+      },
+      {
+        "ticker": "CNC",
+        "score": -0.33876614376715025
+      },
+      {
+        "ticker": "IMNM",
+        "score": -0.3340638706930467
+      },
+      {
+        "ticker": "ZNTL",
+        "score": -0.3284977583228431
+      },
+      {
+        "ticker": "CMPX",
+        "score": -0.3240353108758226
+      },
+      {
+        "ticker": "WVE",
+        "score": -0.3181899342286807
+      },
+      {
+        "ticker": "LXRX",
+        "score": -0.3167958620695655
+      }
+    ],
     "flatten": {},
     "general": {
       "said": "UP  1.292",
@@ -1724,6 +1849,59 @@
         }
       ],
       "preview": "2662 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 FPI, ERO, WAY, AVPT, FCX \u00b7 2662 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 BIIB, ARHS, RGEN, WST, ICLR"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-09-29",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-29T05:41:23.393163-04:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-09-29_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1535872,
+          "preview": "1d BUY ARHS, SONO, SN, PDFS, SHOO, DT, GCT, OLLI \u00b7 SELL ROIV, PYXS, IKT, SOC, AXSM, CGEM, IFRX, BIDU"
+        },
+        {
+          "path": "data/stock_book/2026-09-29_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 2698,
+          "preview": "green 179 \u00b7 TAL, GLBE, KEYS, SHOO, EMBJ, CVLT, NTNX, FIGS, AVT, SN"
+        },
+        {
+          "path": "data/stock_book/2026-09-29_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2454,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-09-29_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 13819,
+          "preview": "2026-09-29 BUY ARHS, SONO, SN, PDFS, SHOO, DT, GCT, OLLI \u00b7 SELL ROIV, PYXS, IKT, SOC, AXSM, CGEM, IFRX, BIDU"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 13819,
+          "preview": "2026-09-29 BUY ARHS, SONO, SN, PDFS, SHOO, DT, GCT, OLLI \u00b7 SELL ROIV, PYXS, IKT, SOC, AXSM, CGEM, IFRX, BIDU"
+        },
+        {
+          "path": "01_daily/2026-09-29_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 96822,
+          "preview": "# Stock book \u2014 2026-09-29\n_Generated 2026-09-29T05:41:14.501245-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY ARHS, SONO, SN, PDFS, SHOO, DT, GCT, OLLI \u00b7 SELL ROIV, PYXS, IKT, SOC, AXSM, CGEM, IFRX, BIDU \u00b7 green 179 \u00b7 TAL, GLBE, KEYS, SHOO, EMBJ, CVLT, NTNX, FIGS, AVT, SN \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-09-29 BUY ARHS, SONO, SN, PDFS, SHOO, DT, GCT, OLLI \u00b7 SELL ROIV, PYXS, IKT, SOC, AXSM, CGEM, IFRX, BIDU \u00b7 2026-09-29 BUY ARHS, SONO, SN, PDFS, SHOO, DT, GCT, OLLI \u00b7 SELL ROIV, PYXS, IKT, SOC, AXSM, CGEM, IFRX, BIDU \u00b7 # Stock book \u2014 2026-09-29\n_Generated 2026-09-29T05:41:14.501245-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "href": {
