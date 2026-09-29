@@ -16,6 +16,7 @@ from src.jev_gate import (
     answers_from_gold,
     api_key,
     calendar_day,
+    classifiable_reason,
     code_drop_reason,
     code_hints,
     decide,
@@ -426,6 +427,67 @@ def test_api_key_not_in_repo_and_env():
     assert "JEV_API_KEY" in text
 
 
+def test_session_409_false_drops_are_keeps():
+    """Round 1 homework: hop-0 keeps classifiable titles, still drops trash."""
+    asof = dt.date(2026, 9, 29)
+    state = load_chokepoint_state()
+    keeps = [
+        "Cyclospora fears lead consumers to lose their appetite for salads - CNBC",
+        "Anthropic Targets $2 Trillion Record IPO: 8 Key Items Shaping the Stock Market Thursday - TheStreet Pro",
+        "OpenAI Introduces ‘ChatGPT for Teens’ as Safety Concerns Grow - The New York Times",
+        "Bitcoin Rally Tops $79K. Crypto Shorts, ETF Flows Soar. CFTC Explores Crypto Rules. - Investor's Business Daily",
+        "Vanguard pays $4.6B for RIA software startup Altruist - Axios",
+        "Basin rig count steady as prices drop",
+        "US Federal Reserve holds rates steady as inflation hawks call for hike - CNA",
+        "House clears FY2027 CR through Dec. 11, shutdown risk off",
+        "Canadian National Railway outlines conditions to U.S. regulators for proposed Union Pacific–Norfolk Southern merger",
+        "EIA weekly petroleum and natural gas storage — crude -0.4mb, gas +40 Bcf to 3,254 Bcf",
+        "Azeri Light oil price decreases by 1.96% on world market - Report.az",
+        "Fed’s Lisa Cook Warns AI Won’t Save The Economy From Near-Term Inflation - TradingView",
+        "Oil Surges Over 3% as Trump Rejects Iran Peace Proposal and Hormuz Risk Returns - EnergyNow.com",
+        "Fed's Cook Warns AI Demand and Oil Prices to Keep Inflation Elevated - IndexBox",
+        "Tokyo yen trades in lower 157 range against dollar as U.S. rate hike bets fuel yen selling - finance.biggo.com",
+        "3 Export Stocks Linked To Lower US China Tariffs - simplywall.st",
+        "No tax on Social Security? The facts about Trump’s plan are here — and they could hurt US retirees the most",
+        "Seafood groups Nordian Group, Norvelita sold to PE firm",
+        "The Bond Market Sell-Off Is Freezing American Homebuilding",
+        "4th Circuit dismisses some charges against Wells Fargo after jury’s $22.1M fee",
+        "Explainer-What are credit default swaps and why are they spooking AI investors? - Yahoo Finance",
+        "As Trump mulls building Chinese EVs in U.S., automakers point to Germany as a cautionary tale - NBC News",
+    ]
+    for title in keeps:
+        assert classifiable_reason(title), title
+        reason = code_drop_reason(
+            {"title": title, "source": "simplywall.st"}, asof=asof, state=state,
+        )
+        assert reason == "", (title, reason)
+        row = {"title": title}
+        decided = decide(row, {
+            "is_opinion": 0.9, "is_tabloid": 0.1, "is_reaction": 0.1,
+            "geo": "other", "actor_power": "other_person",
+            "action_material": 0.1, "new_instrument": 0.1,
+            "reprint_weather": 0.9,
+        })
+        assert decided["decision"] == "keep", (title, decided)
+    trash = [
+        "Argentina star Messi not certain to play ‘much longer’ after father’s death",
+        "If a Stock Market Crash Is Coming, History Says This Is the Best Move Investors Can Make - Yahoo Finance",
+        "Gold tumbles below $4.150 as US bond yields, oil prices rise - tmgm.com",
+    ]
+    for title in trash:
+        assert not classifiable_reason(title), title
+        decided = decide(
+            {"title": title},
+            {
+                "is_opinion": 0.8, "is_tabloid": 0.1, "is_reaction": 0.1,
+                "geo": "other", "actor_power": "other_person",
+                "action_material": 0.1, "new_instrument": 0.1,
+                "reprint_weather": 0.1,
+            },
+        )
+        assert decided["decision"] == "drop", (title, decided)
+
+
 def test_workflow_wires_secret_and_stays_stdlib():
     yml = (ROOT / ".github" / "workflows" / "jev_hop0.yml").read_text(encoding="utf-8")
     assert "secrets.JEV_API_KEY" in yml
@@ -463,6 +525,7 @@ def main() -> None:
         test_load_titles_reads_parsed_all_items,
         test_mine_junk_shapes_runs,
         test_api_key_not_in_repo_and_env,
+        test_session_409_false_drops_are_keeps,
         test_workflow_wires_secret_and_stays_stdlib,
     ]
     failed = 0

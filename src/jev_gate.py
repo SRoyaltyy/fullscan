@@ -2,7 +2,9 @@
 
 Sorting, not classifying. Jev never picks a 52-class, polarity, or
 ticker expansion. Spend tokens only after dups / junk-shapes / source
-deny / chokepoint reprint-clock have already thrown most titles away.
+deny / chokepoint reprint-clock have thrown trash away. Dated prints,
+deals, and policy titles are kept in code so Jev cannot hide them as
+low_material. Hop-0 filters trash and holds what is worth classifying.
 
   harvest → normalize → Jaccard dedup → regex trash → reprint clock
         → one Jev pack (trash / geo / actor / material / instrument)
@@ -62,6 +64,75 @@ SOURCE_DENY = re.compile(
     r"marketbeat|insidermonkey)"
 )
 PUNCT_TRASH = re.compile(r"[?!]")
+
+# Hop-0 keeps anything Lane should classify. Trash still drops.
+# These fire before Jev so a low material score cannot hide a print,
+# a named deal, or a dated policy move.
+_CLASS_PRINT = re.compile(
+    r"(?i)(?:"
+    r"\b(?:cpi|pce|ppi|nfp|eia|wasde|gdp|ism)\b"
+    r"|\bnonfarm payrolls\b"
+    r"|\b(?:jobless|initial) claims\b"
+    r"|\bretail sales\b"
+    r"|\bholds? rates?\b"
+    r"|\brate (?:hike|cut|decision|hold|holds)\b"
+    r"|\bfederal reserve holds\b"
+    r"|\bfed holds rates\b"
+    r"|\bpetroleum and natural gas storage\b"
+    r"|\brig count\b"
+    r")"
+)
+_CLASS_DEAL = re.compile(
+    r"(?i)(?:"
+    r"\b(?:merger|acquisition|acquires?|ipo)\b"
+    r"|\bpays \$?\d"
+    r"|\bsold to\b"
+    r"|\bbuyout\b"
+    r"|\bproduct launch\b"
+    r"|\bintroduces\b"
+    r")"
+)
+_CLASS_POLICY = re.compile(
+    r"(?i)(?:"
+    r"\b(?:cftc|fda|ustr)\b"
+    r"|\btariffs?\b"
+    r"|\bcontinuing resolution\b"
+    r"|\bhouse clears\b"
+    r"|\bshutdown risk\b"
+    r"|\bsocial security\b"
+    r"|\bcredit default swaps?\b"
+    r"|\bchinese evs\b"
+    r"|\bcyclospora\b"
+    r")"
+)
+_CLASS_OIL = re.compile(
+    r"(?i)(?:azeri light|oil price|brent|wti|crude).{0,48}(?:\d|%|bcf|mb\b)"
+)
+_CLASS_FX = re.compile(
+    r"(?i)\byen\b.{0,48}\b(?:dollar|rate hike|fed|u\.s\.)\b"
+)
+_CLASS_AI = re.compile(
+    r"(?i)\b(?:openai|anthropic)\b"
+)
+_CLASS_FED_VOICE = re.compile(
+    r"(?i)\b(?:fed|federal reserve|cook|powell|warsh)\b.{0,56}"
+    r"\b(?:warns?|hike|inflation|holds rates)\b"
+)
+_CLASS_CHOKE_NEW = re.compile(
+    r"(?i)\b(?:rejects?|accepts?|seizes?|strikes?)\b.{0,48}"
+    r"\b(?:peace|iran|hormuz)\b"
+    r"|\b(?:peace|iran|hormuz)\b.{0,48}\b(?:rejects?|accepts?|seizes?)\b"
+)
+_CLASS_HOME = re.compile(
+    r"(?i)\bbond market\b.{0,40}\bhomebuild"
+    r"|\bcharges against\b"
+    r"|\bdismisses some charges\b"
+)
+CODE_KEEP = frozenset({
+    "code_print", "code_deal", "code_policy", "code_oil",
+    "code_fx", "code_ai", "code_fed", "code_choke", "code_home",
+    "classifiable",
+})
 
 JACCARD_DROP = 0.72
 TRASH_NOUL = 0.70
@@ -339,6 +410,34 @@ def punct_trash(title: str) -> bool:
     return bool(PUNCT_TRASH.search(title or ""))
 
 
+def classifiable_reason(title: str) -> str:
+    """Hop-0 keep: filter trash, hold anything worth a hop-1 look.
+
+    Empty string means Jev still has to score it. A hit means the title
+    is not trash and must not die as low_material, opinion, punct, or source.
+    """
+    title = title or ""
+    if _CLASS_PRINT.search(title):
+        return "code_print"
+    if _CLASS_OIL.search(title):
+        return "code_oil"
+    if _CLASS_POLICY.search(title):
+        return "code_policy"
+    if _CLASS_DEAL.search(title):
+        return "code_deal"
+    if _CLASS_AI.search(title):
+        return "code_ai"
+    if _CLASS_FED_VOICE.search(title):
+        return "code_fed"
+    if _CLASS_CHOKE_NEW.search(title):
+        return "code_choke"
+    if _CLASS_FX.search(title):
+        return "code_fx"
+    if _CLASS_HOME.search(title):
+        return "code_home"
+    return ""
+
+
 def junk_shape_hit(title: str, rx: re.Pattern | None = None) -> str:
     m = (rx or JUNK_RE).search(title or "")
     return (m.group(0) or "").lower() if m else ""
@@ -404,13 +503,20 @@ def reprint_weather_code(title: str, asof: dt.date, state: dict) -> dict:
 
 def code_drop_reason(row: dict, *, asof: dt.date, state: dict,
                      junk_rx: re.Pattern | None = None) -> str:
+    title = row.get("title") or ""
+    keep = classifiable_reason(title)
+    if keep:
+        row["_code_keep"] = keep
+        clock = reprint_weather_code(title, asof, state)
+        row["_clock"] = clock
+        return ""
     if source_denied(row.get("source") or "", row.get("url") or ""):
         return "source"
-    if punct_trash(row.get("title") or ""):
+    if punct_trash(title):
         return "punct"
-    if junk_shape_hit(row.get("title") or "", junk_rx):
+    if junk_shape_hit(title, junk_rx):
         return "junk_shape"
-    clock = reprint_weather_code(row.get("title") or "", asof, state)
+    clock = reprint_weather_code(title, asof, state)
     row["_clock"] = clock
     if clock["hit"] and clock["stale"]:
         return "reprint_weather"
@@ -478,6 +584,9 @@ def decide(row: dict, answers: dict | None) -> dict:
             "has_new_verb": bool(clock.get("has_new_verb")),
         }
 
+    keep = str(row.get("_code_keep") or "") or classifiable_reason(title)
+    if code in CODE_KEEP or (keep and code in {"", "punct", "source", "reprint_weather", "junk_shape"}):
+        return pack("keep", code if code in CODE_KEEP else keep)
     if code:
         geo_out = "chokepoint" if code == "reprint_weather" else ""
         return pack("drop", code, geo_out)
@@ -586,6 +695,8 @@ def apply_code(rows: list[dict], *, asof: dt.date | None = None,
         reason = code_drop_reason(row, asof=asof, state=state, junk_rx=junk_rx)
         if reason:
             row["code_reason"] = reason
+        elif row.get("_code_keep"):
+            row["code_reason"] = row["_code_keep"]
         elif "_clock" not in row:
             row["_clock"] = reprint_weather_code(
                 row.get("title") or "", asof, state
