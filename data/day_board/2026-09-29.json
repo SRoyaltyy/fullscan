@@ -1,12 +1,12 @@
 {
   "date": "2026-09-29",
-  "generated_at": "2026-09-29T05:42:04.781527-04:00",
+  "generated_at": "2026-09-29T05:42:09.816649-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
   "counts": {
-    "ok": 5,
-    "partial": 2,
+    "ok": 4,
+    "partial": 3,
     "fail": 1,
     "n": 8
   },
@@ -697,7 +697,7 @@
       "inputs_ready": true,
       "n_req_ok": 2,
       "n_req": 4,
-      "n_opt_ok": 2,
+      "n_opt_ok": 1,
       "n_opt": 3,
       "files": [
         {
@@ -883,10 +883,10 @@
           "name": "Dashboard HTML",
           "path": "dashboard/index.html",
           "role": "optional",
-          "status": "OK",
-          "reason": "live-book poller + today.json (2026-09-29)",
+          "status": "FAIL",
+          "reason": "session 2026-09-29 not in dashboard dates (last=2026-09-25)",
           "size": 8944875,
-          "said": "live-book poller + today.json (2026-09-29)",
+          "said": "session 2026-09-29 not in dashboard dates (last=2026-09-25)",
           "bullets": []
         }
       ],
@@ -899,9 +899,9 @@
       "key": "publish",
       "name": "Dashboard / .io",
       "yaml": "deploy-dashboard.yml",
-      "status": "OK",
+      "status": "PARTIAL",
       "inputs_ready": false,
-      "n_req_ok": 2,
+      "n_req_ok": 1,
       "n_req": 2,
       "n_opt_ok": 0,
       "n_opt": 1,
@@ -922,10 +922,10 @@
           "name": "Dashboard HTML (repo)",
           "path": "dashboard/index.html",
           "role": "required",
-          "status": "OK",
-          "reason": "live-book poller + today.json (2026-09-29)",
+          "status": "FAIL",
+          "reason": "session 2026-09-29 not in dashboard dates (last=2026-09-25)",
           "size": 8944875,
-          "said": "live-book poller + today.json (2026-09-29)",
+          "said": "session 2026-09-29 not in dashboard dates (last=2026-09-25)",
           "bullets": []
         },
         {
@@ -1929,6 +1929,24 @@
         }
       ],
       "preview": "5901 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 TAL, GLBE, KEYS, FORM, NVT"
+    },
+    {
+      "key": "peer_rs",
+      "title": "Peer RS",
+      "date": "2026-09-29",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-29T05:42:08.917520-04:00",
+      "files": [
+        {
+          "path": "data/peers/2026-09-29_peer_rs.csv",
+          "ok": true,
+          "reason": "",
+          "size": 817865,
+          "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+        }
+      ],
+      "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
     }
   ],
   "href": {
