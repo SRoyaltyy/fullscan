@@ -1,15 +1,13 @@
 {
   "date": "2026-09-29",
-  "generated_at": "2026-09-29T05:40:31.873892-04:00",
+  "generated_at": "2026-09-29T05:41:02.251285-04:00",
   "overall": "PARTIAL",
-  "ranker_ready": false,
-  "blockers": [
-    "MISSING AB checklist enriched `data/ab_checklist/2026-09-29_ab_checklist_enriched.csv` \u2014 missing"
-  ],
+  "ranker_ready": true,
+  "blockers": [],
   "counts": {
-    "ok": 3,
+    "ok": 4,
     "partial": 3,
-    "fail": 2,
+    "fail": 1,
     "n": 8
   },
   "processes": [
@@ -581,11 +579,11 @@
       "key": "ab",
       "name": "AB checklist",
       "yaml": "ab_checklist.yml",
-      "status": "FAIL",
+      "status": "OK",
       "inputs_ready": true,
-      "n_req_ok": 0,
+      "n_req_ok": 1,
       "n_req": 1,
-      "n_opt_ok": 0,
+      "n_opt_ok": 1,
       "n_opt": 1,
       "files": [
         {
@@ -593,26 +591,32 @@
           "name": "AB checklist raw",
           "path": "data/ab_checklist/2026-09-29_ab_checklist.csv",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "rows=2662",
+          "size": 7639942,
+          "said": "27 rows",
+          "bullets": [
+            "FPI, ERO, WAY, AVPT, FCX, TTEK, RTX, FUTU"
+          ]
         },
         {
           "key": "ab_enriched",
           "name": "AB checklist enriched",
           "path": "data/ab_checklist/2026-09-29_ab_checklist_enriched.csv",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "rows=2662",
+          "size": 8439447,
+          "said": "25 rows",
+          "bullets": [
+            "BIIB, ARHS, RGEN, WST, ICLR, ESI, NVS, A"
+          ]
         }
       ],
-      "said": "",
-      "bullets": []
+      "said": "25 rows",
+      "bullets": [
+        "BIIB, ARHS, RGEN, WST, ICLR"
+      ]
     },
     {
       "key": "catalyst",
@@ -690,7 +694,7 @@
       "name": "Stock Book ALL",
       "yaml": "stock_book_all.yml",
       "status": "PARTIAL",
-      "inputs_ready": false,
+      "inputs_ready": true,
       "n_req_ok": 2,
       "n_req": 4,
       "n_opt_ok": 1,
@@ -793,11 +797,13 @@
           "name": "AB checklist enriched",
           "path": "data/ab_checklist/2026-09-29_ab_checklist_enriched.csv",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "rows=2662",
+          "size": 8439447,
+          "said": "25 rows",
+          "bullets": [
+            "BIIB, ARHS, RGEN, WST, ICLR, ESI, NVS, A"
+          ]
         },
         {
           "key": "join",
@@ -1693,6 +1699,31 @@
         }
       ],
       "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+    },
+    {
+      "key": "ab",
+      "title": "AB checklist",
+      "date": "2026-09-29",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-29T05:41:01.344860-04:00",
+      "files": [
+        {
+          "path": "data/ab_checklist/2026-09-29_ab_checklist.csv",
+          "ok": true,
+          "reason": "",
+          "size": 7639942,
+          "preview": "2662 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 FPI, ERO, WAY, AVPT, FCX"
+        },
+        {
+          "path": "data/ab_checklist/2026-09-29_ab_checklist_enriched.csv",
+          "ok": true,
+          "reason": "",
+          "size": 8439447,
+          "preview": "2662 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 BIIB, ARHS, RGEN, WST, ICLR"
+        }
+      ],
+      "preview": "2662 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 FPI, ERO, WAY, AVPT, FCX \u00b7 2662 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 BIIB, ARHS, RGEN, WST, ICLR"
     }
   ],
   "href": {
