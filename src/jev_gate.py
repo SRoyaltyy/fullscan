@@ -151,12 +151,23 @@ QUESTIONS: dict = {
     "is_opinion": {
         "type": "noul",
         "instructions": (
-            "Is this commentary, a column, or a market-reaction recap "
-            "rather than a first report of a fact?"
+            "Is this ONLY commentary, a column, or a recap, with no "
+            "first-class fact, print, deal, or policy in the title?"
         ),
         "criteria": {
-            "true": "Column, recap, or 'what it means' commentary",
-            "false": "First report of a fact, print, filing, or decision",
+            "true": (
+                "Column, recap, or 'what it means' AND no dated print, "
+                "named IPO or M&A, regulator / Fed / House / CFTC / FDA "
+                "action, pathogen-recall scare, or peace accept/reject. "
+                "'Best move if the market crashes', celebrity, theme park."
+            ),
+            "false": (
+                "Title contains a first-class fact even inside a listicle "
+                "or column frame: Fed / EIA / House / CFTC / FDA action, "
+                "named IPO or M&A, pathogen + consumers/recalls, Fed "
+                "officer + inflation or oil, peace accept/reject, dated "
+                "official print or hold, court dismiss of a listed name."
+            ),
         },
     },
     "is_tabloid": {
@@ -178,16 +189,18 @@ QUESTIONS: dict = {
         "instructions": "Where is the event, for US-listed market relevance?",
         "criteria": {
             "core": (
-                "US, China, EU/EZ, Japan, Korea, India, or a G10 central "
-                "bank / regulator"
+                "US, China, EU/EZ, Japan, Korea, India, a G10 central "
+                "bank / regulator, G10 FX (yen + dollar + Fed), or a "
+                "numbered oil-price print (Brent, WTI, Azeri Light, EIA "
+                "storage, basin rigs)"
             ),
             "chokepoint": (
                 "Hormuz, Red Sea / Bab el-Mandeb, Suez, Panama, Taiwan "
                 "Strait, Malacca, or a named tanker/port there"
             ),
             "other": (
-                "Anywhere else, including Yemen/Palestine/UK-local "
-                "politics with no US/G10 hook"
+                "Anywhere else with no US / G10 / oil-print hook and no "
+                "named M&A. Yemen / Palestine / UK-local politics stay other."
             ),
         },
     },
@@ -195,38 +208,63 @@ QUESTIONS: dict = {
         "type": "choice",
         "instructions": "Who is the main actor in the title?",
         "criteria": {
-            "state_head": "President, PM, monarch, cabinet minister, central banker",
-            "regulator": (
-                "SEC, FDA, Fed, NHTSA, NBS, ECB, PBOC, court with binding order"
+            "state_head": (
+                "President, PM, monarch, cabinet minister, central banker, "
+                "US House or Senate acting as a body"
             ),
-            "listed_firm": "Named company that has or plausibly has a US ticker",
-            "infrastructure": "Port, strait, exchange, grid, pipeline operator",
-            "crowd": "Protesters, activists, tourists, unnamed residents",
+            "regulator": (
+                "SEC, FDA, Fed, FOMC, CFTC, NHTSA, NBS, ECB, PBOC, EIA, "
+                "a named Fed governor, or a court with a binding order"
+            ),
+            "listed_firm": (
+                "Named company that has or plausibly has a US ticker, "
+                "including a named acquirer or a major AI lab with a "
+                "dated product or IPO"
+            ),
+            "infrastructure": (
+                "Port, strait, exchange, grid, pipeline operator, or a "
+                "G10 FX pair / oil benchmark"
+            ),
+            "crowd": (
+                "Protesters, activists, tourists, unnamed residents. "
+                "Not FX tape + Fed hike bets, not a named firm or agency."
+            ),
             "other_person": "Private individual with no state or corporate seat",
         },
     },
     "action_material": {
         "type": "noul",
         "instructions": (
-            "If this headline is true, could it change cash flows or "
-            "rules for a US-listed name this week? Arrest of protesters = no. "
+            "If this headline is true, could it change prices, policy, "
+            "cash flows, or the prior for a US-listed name or a core "
+            "macro / oil / FX factor this week? Arrest of protesters = no. "
             "Arrest of a sitting US president = yes. A final CAFE rule = yes. "
-            "A local rally = no."
+            "A local rally = no. A weekly EIA print, Fed hold, House CR, "
+            "named M&A, regulator exploring rules, major-AI product or IPO, "
+            "court dismiss of a listed name, pathogen scare that can trigger "
+            "FDA/recalls, or EV / tariff / Social Security policy = yes. "
+            "Celebrity, theme park, 'best move if crash', gold-tumbles tape, "
+            "or earnings-look-right = no."
         ),
     },
     "new_instrument": {
         "type": "noul",
         "instructions": (
-            "Is there a signed rule, print, halt, filing, seizure, or "
-            "dated official decision in the title — not a speech, protest, "
-            "or rumor?"
+            "Is there a signed rule, print, halt, filing, seizure, dated "
+            "official decision, weekly official figure, rate hold/hike/cut, "
+            "continuing resolution through a date, regulator exploring or "
+            "endorsing a rule, advisory-panel endorse, named dollar deal, "
+            "or court dismiss — not a speech, protest, or rumor? "
+            "EIA storage, Fed holds rates, House CR, CFTC explores rules, "
+            "FDA panel endorse = yes. 'Mulls' without a named instrument, "
+            "a speech, a protest, or a rumor = no."
         ),
     },
     "reprint_weather": {
         "type": "noul",
         "instructions": (
             "Is this a rerun of a months-old situation with no new closure, "
-            "ceasefire, or first strike?"
+            "ceasefire, first strike, or new accept/reject/seize verb?"
         ),
     },
 }
@@ -623,9 +661,15 @@ def decide(row: dict, answers: dict | None) -> dict:
     if geo == "chokepoint" and not choke_kw:
         geo = "other"
 
-    if opinion >= TRASH_NOUL:
+    # A first-class fact in the title is not trash just because the
+    # frame is a column or listicle. Session 409: opinion dropped
+    # Cook / Anthropic IPO / Cyclospora / housing before material ran.
+    fact_keep = (
+        material >= MATERIAL_KEEP or instrument >= INSTRUMENT_KEEP
+    )
+    if opinion >= TRASH_NOUL and not fact_keep:
         return pack("drop", "opinion")
-    if reaction >= TRASH_NOUL:
+    if reaction >= TRASH_NOUL and not fact_keep:
         return pack("drop", "reaction")
     if tabloid >= TRASH_NOUL and actor not in POWERFUL:
         return pack("drop", "tabloid")

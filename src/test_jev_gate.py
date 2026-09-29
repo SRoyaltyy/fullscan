@@ -201,6 +201,31 @@ def test_decide_core_and_chokepoint():
     assert reprint["decision"] == "drop" and reprint["reason"] == "reprint_weather"
 
 
+def test_decide_fact_vetoes_opinion():
+    """Session 409: a column frame wrapping a first-class fact is keep."""
+    cook = decide(
+        {"title": "Fed's Cook Warns AI Demand and Oil Prices to Keep Inflation Elevated"},
+        {
+            "is_opinion": 0.91, "is_tabloid": 0.04, "is_reaction": 0.05,
+            "geo": "core", "actor_power": "regulator",
+            "action_material": 0.72, "new_instrument": 0.20,
+            "reprint_weather": 0.10,
+        },
+    )
+    assert cook["decision"] == "keep", cook
+    assert cook["reason"] != "opinion"
+    recap = decide(
+        {"title": "If a Stock Market Crash Is Coming, History Says This Is the Best Move"},
+        {
+            "is_opinion": 0.92, "is_tabloid": 0.08, "is_reaction": 0.06,
+            "geo": "core", "actor_power": "other_person",
+            "action_material": 0.12, "new_instrument": 0.04,
+            "reprint_weather": 0.08,
+        },
+    )
+    assert recap["decision"] == "drop" and recap["reason"] == "opinion"
+
+
 def test_live_shaped_gold_misses():
     """Recorded 2026-09-28 live Jev answers. Closed lists correct the four misses."""
     trump = decide(
@@ -277,6 +302,12 @@ def test_questions_are_hop0_only():
         "is_opinion", "is_tabloid", "is_reaction", "geo",
         "actor_power", "action_material", "new_instrument", "reprint_weather",
     }
+    assert "first-class fact" in QUESTIONS["is_opinion"]["instructions"]
+    assert "prices, policy" in QUESTIONS["action_material"]["instructions"]
+    assert "weekly official figure" in QUESTIONS["new_instrument"]["instructions"]
+    assert "accept/reject/seize" in QUESTIONS["reprint_weather"]["instructions"]
+    assert "yen + dollar + Fed" in QUESTIONS["geo"]["criteria"]["core"]
+    assert "CFTC" in QUESTIONS["actor_power"]["criteria"]["regulator"]
 
 
 def test_parse_answers_and_state():
@@ -512,6 +543,7 @@ def main() -> None:
         test_code_does_not_geo_drop_yemen_or_palestine,
         test_decide_palestine_vs_trump,
         test_decide_core_and_chokepoint,
+        test_decide_fact_vetoes_opinion,
         test_live_shaped_gold_misses,
         test_code_hints_closed_lists,
         test_code_reason_short_circuits_jev,
