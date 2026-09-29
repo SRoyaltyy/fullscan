@@ -26,7 +26,7 @@ Clock split: (A) short-only is a pre-open policy call — shorts fire at the clo
 
 ## RESEARCH per sleeve (paper, not a wire)
 
-**2026-09-28** — `1` sit sleeves with looked names / `1` sit sleeves total. Live policy sits. KEEP bar unchanged. Label: **RESEARCH**.
+**2026-09-29** — `1` sit sleeves with looked names / `1` sit sleeves total. Live policy sits. KEEP bar unchanged. Label: **RESEARCH**.
 
 Per-sleeve paper counterfactuals on looked names. Live sit stays default. KEEP bar unchanged. (A) short-only fires the short kid at the 09:30 open. (B) dip-scoop longs wait for open−X% (session low / Elite live). Close does not trigger.
 

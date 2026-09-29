@@ -2901,7 +2901,7 @@
   },
   "per_sleeve": {
     "tag": "RESEARCH",
-    "date": "2026-09-28",
+    "date": "2026-09-29",
     "live_sit": true,
     "keep_bar_unchanged": true,
     "n_sit": 1,
@@ -2929,7 +2929,7 @@
             "side": "long",
             "open": null,
             "px": 47.89,
-            "px_src": "session_export+elite_live_skipped",
+            "px_src": "session_export",
             "low": null,
             "scoops": {
               "0.5": {
@@ -2965,7 +2965,7 @@
             "side": "long",
             "open": null,
             "px": 35.01,
-            "px_src": "session_export+elite_live_skipped",
+            "px_src": "session_export",
             "low": null,
             "scoops": {
               "0.5": {
@@ -3001,7 +3001,7 @@
             "side": "long",
             "open": null,
             "px": 34.56,
-            "px_src": "session_export+elite_live_skipped",
+            "px_src": "session_export",
             "low": null,
             "scoops": {
               "0.5": {
@@ -3037,7 +3037,7 @@
             "side": "long",
             "open": null,
             "px": 187.9,
-            "px_src": "session_export+elite_live_skipped",
+            "px_src": "session_export",
             "low": null,
             "scoops": {
               "0.5": {
@@ -3073,7 +3073,7 @@
             "side": "long",
             "open": null,
             "px": 30.08,
-            "px_src": "session_export+elite_live_skipped",
+            "px_src": "session_export",
             "low": null,
             "scoops": {
               "0.5": {
@@ -3109,7 +3109,7 @@
             "side": "long",
             "open": null,
             "px": 18.17,
-            "px_src": "session_export+elite_live_skipped",
+            "px_src": "session_export",
             "low": null,
             "scoops": {
               "0.5": {
@@ -3145,7 +3145,7 @@
             "side": "long",
             "open": null,
             "px": 113.75,
-            "px_src": "session_export+elite_live_skipped",
+            "px_src": "session_export",
             "low": null,
             "scoops": {
               "0.5": {
@@ -3181,7 +3181,7 @@
             "side": "long",
             "open": null,
             "px": 26.9,
-            "px_src": "session_export+elite_live_skipped",
+            "px_src": "session_export",
             "low": null,
             "scoops": {
               "0.5": {
@@ -3217,7 +3217,7 @@
             "side": "long",
             "open": null,
             "px": 7.62,
-            "px_src": "session_export+elite_live_skipped",
+            "px_src": "session_export",
             "low": null,
             "scoops": {
               "0.5": {
@@ -3253,7 +3253,7 @@
             "side": "long",
             "open": null,
             "px": 9.2,
-            "px_src": "session_export+elite_live_skipped",
+            "px_src": "session_export",
             "low": null,
             "scoops": {
               "0.5": {
@@ -3289,7 +3289,7 @@
             "side": "long",
             "open": null,
             "px": 19.89,
-            "px_src": "session_export+elite_live_skipped",
+            "px_src": "session_export",
             "low": null,
             "scoops": {
               "0.5": {
@@ -3325,7 +3325,7 @@
             "side": "long",
             "open": null,
             "px": 20.1,
-            "px_src": "session_export+elite_live_skipped",
+            "px_src": "session_export",
             "low": null,
             "scoops": {
               "0.5": {
