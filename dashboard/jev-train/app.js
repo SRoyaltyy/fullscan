@@ -47,6 +47,8 @@
         sign: row.sign || null,
         family: row.family || "",
         class_reason: row.class_reason || "",
+        book_reason: row.book_reason || "",
+        book: row.book || [],
         grade: mark.grade || "?",
         human_reason: String(mark.human_reason || mark.note || "").slice(0, 500)
       };
@@ -193,8 +195,10 @@
         var bits = document.createElement("td");
         bits.className = "bits";
         var classReason = row.class_reason || "";
+        var bookReason = row.book_reason || "";
         var bitText = (row.bits || []).join(" ");
-        bits.textContent = classReason ? (classReason + (bitText ? " · " + bitText : "")) : bitText;
+        var shown = [classReason, bookReason, bitText].filter(Boolean).join(" · ");
+        bits.textContent = shown;
         var youTd = document.createElement("td");
         var you = document.createElement("div");
         you.className = "you";

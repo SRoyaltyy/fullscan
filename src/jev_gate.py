@@ -1087,7 +1087,8 @@ def gate(rows: list[dict], *, code_only: bool = False, live: bool = False,
     for row in rows:
         decided.append(decide(row, row.get("_answers")))
     from .jev_classify import apply_code_classify
-    return apply_code_classify(decided)
+    from .jev_book import apply_code_book
+    return apply_code_book(apply_code_classify(decided))
 
 
 def list_session_dates() -> list[str]:
@@ -1315,8 +1316,8 @@ def to_markdown(report: dict) -> str:
         f"keep={report.get('n_keep')} drop={report.get('n_drop')} "
         f"drop_rate={report.get('drop_rate')}",
         "",
-        "Hop-0 filters trash. Hop-1 names event_class|q5 on keeps. "
-        "No tickers. keep.json stays unwired.",
+        "Hop-0 filters trash. Hop-1 names event_class|q5. "
+        "Hop-2 sides Finviz names. keep.json stays unwired.",
         "",
         "## Reasons",
     ]

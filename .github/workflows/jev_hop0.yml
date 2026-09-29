@@ -16,6 +16,8 @@ on:
       - "src/test_jev_gate.py"
       - "src/jev_classify.py"
       - "src/test_jev_classify.py"
+      - "src/jev_book.py"
+      - "src/test_jev_book.py"
       - "00_grounding/jev_chokepoint_state.json"
       - "00_grounding/jev_gold.json"
       - "00_grounding/jev_junk_shapes.json"
@@ -76,6 +78,7 @@ jobs:
         run: |
           PYTHONPATH=. python3 -m src.test_jev_gate
           PYTHONPATH=. python3 -m src.test_jev_classify
+          PYTHONPATH=. python3 -m src.test_jev_book
       - name: Gold + capped harvest
         env:
           JEV_API_KEY: ${{ secrets.JEV_API_KEY }}

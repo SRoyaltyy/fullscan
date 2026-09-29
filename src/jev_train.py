@@ -11,7 +11,8 @@ Draw, per run, after gold titles and any title hash already stored under
        hard-misses file (00_grounding/jev_hard_misses.json)
 
 The current hop-0 gate (code bits + Jev) scores every title. Hop-1
-stamps event_class|q5 on keeps. This module
+stamps event_class|q5 on keeps. Hop-2 sides Finviz names on those
+keeps. This module
 does not write keep.json, does not call Lane, and does not edit
 jev_closed_lists.json or an existing holdout file.
 """
@@ -623,7 +624,11 @@ def annotate_gate(rows: list[dict], *, live: bool, key: str, workers: int,
     decided, model = _score_sample(rows, **score_kwargs)
     if live:
         from .jev_classify import apply_jev_classify
+        from .jev_book import apply_jev_book
         apply_jev_classify(
+            list(decided.values()), key=key, workers=workers, poster=poster,
+        )
+        apply_jev_book(
             list(decided.values()), key=key, workers=workers, poster=poster,
         )
     items = []
@@ -654,6 +659,9 @@ def annotate_gate(rows: list[dict], *, live: bool, key: str, workers: int,
             "family": dec.get("family") or "",
             "class_reason": dec.get("class_reason") or "",
             "class_source": dec.get("class_source") or "",
+            "book": list(dec.get("book") or []),
+            "book_reason": dec.get("book_reason") or "",
+            "book_source": dec.get("book_source") or "",
         }
         items.append(item)
     return items, model
@@ -1006,6 +1014,9 @@ def hydrate_grades(payload: dict, draw: dict | None) -> dict:
             "family": str(src.get("family") or row.get("family") or "")[:16],
             "class_reason": str(src.get("class_reason") or row.get("class_reason") or "")[:80],
             "class_source": str(src.get("class_source") or row.get("class_source") or "")[:16],
+            "book": list(src.get("book") or row.get("book") or []),
+            "book_reason": str(src.get("book_reason") or row.get("book_reason") or "")[:160],
+            "book_source": str(src.get("book_source") or row.get("book_source") or "")[:16],
         })
     out = dict(payload)
     out["rows"] = filled
@@ -1335,6 +1346,9 @@ def write_grade(
                 "sign": row.get("sign"),
                 "family": row.get("family") or "",
                 "class_reason": row.get("class_reason") or "",
+                "book": list(row.get("book") or []),
+                "book_reason": row.get("book_reason") or "",
+                "book_source": row.get("book_source") or "",
                 "grade": row.get("grade"),
                 "human_reason": row.get("human_reason") or "",
             }

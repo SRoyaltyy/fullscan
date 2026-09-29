@@ -499,6 +499,7 @@ def test_draw_writes_page_json_and_leaves_holdout_bytes_alone():
         assert pce["q5"] in {"impulse", "regime", "regime_break"}
         assert "|" in pce["class_reason"]
         assert pce["reason"] != pce["class_reason"]
+        assert isinstance(pce.get("book"), list)
         blast = next(item for item in page["items"] if "explosion" in item["title"])
         assert "blast" in blast["bits"]
         assert not (root / "keep.json").exists()
@@ -797,6 +798,7 @@ def test_commit_allowlist_and_workflow_and_page():
     assert "commit-tree" in yml
     assert "replay trainer blobs onto origin/main" in yml
     assert "decision_ready" not in yml
+    assert "data/exports/finviz_20" in yml
 
 
 def test_repo_holdout_and_hard_miss_bank_are_disjoint_from_gold():
@@ -1082,6 +1084,9 @@ def test_slim_grades_hydrate_from_draw():
             "event_class": "factor_impulse" if item_id == tid else "",
             "q5": "impulse" if item_id == tid else "",
             "class_reason": "factor_impulse|impulse" if item_id == tid else "",
+            "book": [{"ticker": "XOM", "side": "mixed", "role": "named"}] if item_id == tid else [],
+            "book_reason": "XOM~" if item_id == tid else "",
+            "book_source": "code" if item_id == tid else "",
         })
         slim_rows.append({
             "id": item_id,
@@ -1117,12 +1122,15 @@ def test_slim_grades_hydrate_from_draw():
         assert hit["human_reason"] == "print miss"
         assert hit["class_reason"] == "factor_impulse|impulse"
         assert hit["event_class"] == "factor_impulse"
+        assert hit["book_reason"] == "XOM~"
+        assert hit["book"][0]["ticker"] == "XOM"
         assert "print miss" in result["issue_body"]
     hydrated = hydrate_grades(parsed, {"stamp": "20260929_1120", "items": draw_items})
     assert hydrated["rows"][-1]["title"] == title
     assert hydrated["rows"][-1]["jev"] == "KEEP"
     assert hydrated["rows"][-1]["class_reason"] == "factor_impulse|impulse"
     assert hydrated["rows"][-1]["event_class"] == "factor_impulse"
+    assert hydrated["rows"][-1]["book_reason"] == "XOM~"
 
 
 def test_page_script_submit_threshold():
