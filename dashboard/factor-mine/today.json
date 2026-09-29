@@ -1,6 +1,6 @@
 {
   "date": "2026-09-29",
-  "generated_at": "2026-09-29T16:19:58.183626-04:00",
+  "generated_at": "2026-09-29T16:29:19.928814-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -2116,6 +2116,31 @@
         }
       ],
       "preview": "5901 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 TAL, GLBE, KEYS, FORM, NVT"
+    },
+    {
+      "key": "finviz_market_digest_close",
+      "title": "Finviz homepage market digest (close)",
+      "date": "2026-09-29",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-29T16:24:21.105562-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-09-29_finviz_market_digest_close.json",
+          "ok": true,
+          "reason": "",
+          "size": 8477,
+          "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for"
+        },
+        {
+          "path": "01_daily/news/2026-09-29_finviz_market_digest_close.md",
+          "ok": true,
+          "reason": "",
+          "size": 3925,
+          "preview": "# Finviz homepage market digest (close) \u2014 2026-09-29\n**Generated:** 2026-09-29T16:24:21.071939-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stocks ended mixed as long-term Treasury yields hit multi-decade highs while oil eased and AI news supported tech\n**Prior close:** SPX -0.18%  Nasdaq -0.41%  Dow -0.23%\n**SPX:** -0.18%  **Nasdaq:** -0.41%  **Dow:** -0.23%\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** JPM, GS, ADP, ANTW, OAIW, SMMT, AZN, CCL, KMX, FICO, PIPR, PWP, CNXC\n**Next session:** housing no \u00b7 retail no \u00b7 Fed yes\n**Earnings slate:** \u2014\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-09-30\n**Clock use:** `next_open`"
+        }
+      ],
+      "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest (close) \u2014 2026-09-29\n**Generated:** 2026-09-29T16:24:21.071939-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stocks ended mixed as long-term Treasury yields hit multi-decade highs while oil eased and AI news supported tech\n**Prior close:** SPX -0.18%  Nasdaq -0.41%  Dow -0.23%\n**SPX:** -0.18%  **Nasdaq:** -0.41%  **Dow:** -0.23%\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** JPM, GS, ADP, ANTW, OAIW, SMMT, AZN, CCL, KMX, FICO, PIPR, PWP, CNXC\n**Next session:** housing no \u00b7 retail no \u00b7 Fed yes\n**Earnings slate:** \u2014\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-09-30\n**Clock use:** `next_open`"
     }
   ],
   "source": "publish_live_boards"
