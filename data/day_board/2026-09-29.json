@@ -1,6 +1,6 @@
 {
   "date": "2026-09-29",
-  "generated_at": "2026-09-29T05:20:01.397005-04:00",
+  "generated_at": "2026-09-29T05:40:11.162686-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -562,8 +562,8 @@
           "path": "01_daily/weather/2026-09-29_weather.json",
           "role": "required",
           "status": "OK",
-          "reason": "sectors=11 bytes=9686 vix=falling yields=flat",
-          "size": 9686,
+          "reason": "sectors=11 bytes=9687 vix=falling yields=flat",
+          "size": 9687,
           "said": "hostile 6 \u00b7 neutral 5",
           "bullets": [
             "hostile: Basic Materials, Communication Services, Energy, Healthcare, Real Estate, Utilities",
@@ -780,8 +780,8 @@
           "path": "01_daily/weather/2026-09-29_weather.json",
           "role": "input",
           "status": "OK",
-          "reason": "sectors=11 bytes=9686 vix=falling yields=flat",
-          "size": 9686,
+          "reason": "sectors=11 bytes=9687 vix=falling yields=flat",
+          "size": 9687,
           "said": "hostile 6 \u00b7 neutral 5",
           "bullets": [
             "hostile: Basic Materials, Communication Services, Energy, Healthcare, Real Estate, Utilities",
@@ -1630,6 +1630,31 @@
         }
       ],
       "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok \u00b7 keys: date, generated_at, run_id, runner, all_ok, qc_all_ok, book_ok, grok_ok, grok_fails, missing_required, attempts, github_runs \u00b7 # Pre-open ALL status \u2014 2026-09-29\nall_ok=False  qc_all_ok=False  book_ok=False  grok_ok=False  news_mode=on  missing=['sector_predict']\nPredictive modules + stock book (must land before 09:30 ET).\nOutcome / learn / tonight's captain research = Post-Close ALL.\n- Weather / regime: exit 0\n- News parse: exit 0\n- Event scanner (primary): exit 0\n- Event catcher (gap hunt, no carry): exit 0\n- News actions: exit 0\n- News judge: exit 0\n- General market predict: exit 0\n- Per-sector predict (all 11): exit 1\n- Map heat morning delta refresh: exit 0\n- Catalyst dossiers (after book): exit 4"
+    },
+    {
+      "key": "weather",
+      "title": "Weather / regime",
+      "date": "2026-09-29",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-29T05:40:10.680926-04:00",
+      "files": [
+        {
+          "path": "01_daily/weather/2026-09-29_weather.json",
+          "ok": true,
+          "reason": "",
+          "size": 9687,
+          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -3.46, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -1.73, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -0.32, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -0.74, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.21, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -0.28, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.16, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -0.94, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}"
+        },
+        {
+          "path": "01_daily/weather/2026-09-29_weather.md",
+          "ok": true,
+          "reason": "",
+          "size": 5216,
+          "preview": "# Weather report \u2014 2026-09-29\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+        }
+      ],
+      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -3.46, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -1.73, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -0.32, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -0.74, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.21, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -0.28, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.16, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -0.94, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-09-29\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
     }
   ],
   "href": {
