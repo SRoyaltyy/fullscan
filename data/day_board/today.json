@@ -1,138 +1,16 @@
 {
   "date": "2026-09-29",
-  "generated_at": "2026-09-29T05:41:57.191570-04:00",
+  "generated_at": "2026-09-29T05:42:04.781527-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
-    "ok": 4,
-    "partial": 3,
+    "ok": 5,
+    "partial": 2,
     "fail": 1,
     "n": 8
   },
-  "buy_1d": [
-    {
-      "ticker": "ARHS",
-      "score": 0.9013014936750097
-    },
-    {
-      "ticker": "SONO",
-      "score": 0.882807210417524
-    },
-    {
-      "ticker": "SN",
-      "score": 0.4632041695805488
-    },
-    {
-      "ticker": "PDFS",
-      "score": 0.8511534460930921
-    },
-    {
-      "ticker": "SHOO",
-      "score": 0.7988795225956768
-    },
-    {
-      "ticker": "DT",
-      "score": 0.41888615803821805
-    },
-    {
-      "ticker": "GCT",
-      "score": 0.800810216334066
-    },
-    {
-      "ticker": "OLLI",
-      "score": 0.7642739401100922
-    },
-    {
-      "ticker": "CAKE",
-      "score": 0.757941251392074
-    },
-    {
-      "ticker": "ARQT",
-      "score": 0.7733596676403423
-    },
-    {
-      "ticker": "CDNA",
-      "score": 0.8021608286801538
-    },
-    {
-      "ticker": "BJ",
-      "score": 0.515825807162678
-    },
-    {
-      "ticker": "TAL",
-      "score": 0.6559776656383001
-    },
-    {
-      "ticker": "CORT",
-      "score": 0.3172479380905753
-    },
-    {
-      "ticker": "CRON",
-      "score": 0.7328939330237798
-    }
-  ],
-  "sell_1d": [
-    {
-      "ticker": "ROIV",
-      "score": -0.48567275371093904
-    },
-    {
-      "ticker": "PYXS",
-      "score": -0.37230461872539494
-    },
-    {
-      "ticker": "IKT",
-      "score": -0.3678967045840857
-    },
-    {
-      "ticker": "SOC",
-      "score": -0.3630747262047275
-    },
-    {
-      "ticker": "AXSM",
-      "score": -0.3565667884619267
-    },
-    {
-      "ticker": "CGEM",
-      "score": -0.35246126077385126
-    },
-    {
-      "ticker": "IFRX",
-      "score": -0.3441666123280977
-    },
-    {
-      "ticker": "BIDU",
-      "score": -0.3436914114265927
-    },
-    {
-      "ticker": "RBLX",
-      "score": -0.34135244732990916
-    },
-    {
-      "ticker": "CNC",
-      "score": -0.33876614376715025
-    },
-    {
-      "ticker": "IMNM",
-      "score": -0.3340638706930467
-    },
-    {
-      "ticker": "ZNTL",
-      "score": -0.3284977583228431
-    },
-    {
-      "ticker": "CMPX",
-      "score": -0.3240353108758226
-    },
-    {
-      "ticker": "WVE",
-      "score": -0.3181899342286807
-    },
-    {
-      "ticker": "LXRX",
-      "score": -0.3167958620695655
-    }
-  ],
+  "buy_1d": [],
+  "sell_1d": [],
   "flatten": {},
   "general": {
     "said": "UP  1.292",
@@ -163,38 +41,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "status",
-      "title": "Pre-open status packet",
-      "date": "2026-09-29",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-29T05:20:00.669767-04:00",
-      "files": [
-        {
-          "path": "01_daily/2026-09-29_preopen_qc.json",
-          "ok": true,
-          "reason": "",
-          "size": 7529,
-          "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok"
-        },
-        {
-          "path": "01_daily/2026-09-29_preopen_status.json",
-          "ok": true,
-          "reason": "",
-          "size": 8289,
-          "preview": "keys: date, generated_at, run_id, runner, all_ok, qc_all_ok, book_ok, grok_ok, grok_fails, missing_required, attempts, github_runs"
-        },
-        {
-          "path": "01_daily/2026-09-29_preopen_status.md",
-          "ok": true,
-          "reason": "",
-          "size": 590,
-          "preview": "# Pre-open ALL status \u2014 2026-09-29\nall_ok=False  qc_all_ok=False  book_ok=False  grok_ok=False  news_mode=on  missing=['sector_predict']\nPredictive modules + stock book (must land before 09:30 ET).\nOutcome / learn / tonight's captain research = Post-Close ALL.\n- Weather / regime: exit 0\n- News parse: exit 0\n- Event scanner (primary): exit 0\n- Event catcher (gap hunt, no carry): exit 0\n- News actions: exit 0\n- News judge: exit 0\n- General market predict: exit 0\n- Per-sector predict (all 11): exit 1\n- Map heat morning delta refresh: exit 0\n- Catalyst dossiers (after book): exit 4"
-        }
-      ],
-      "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok \u00b7 keys: date, generated_at, run_id, runner, all_ok, qc_all_ok, book_ok, grok_ok, grok_fails, missing_required, attempts, github_runs \u00b7 # Pre-open ALL status \u2014 2026-09-29\nall_ok=False  qc_all_ok=False  book_ok=False  grok_ok=False  news_mode=on  missing=['sector_predict']\nPredictive modules + stock book (must land before 09:30 ET).\nOutcome / learn / tonight's captain research = Post-Close ALL.\n- Weather / regime: exit 0\n- News parse: exit 0\n- Event scanner (primary): exit 0\n- Event catcher (gap hunt, no carry): exit 0\n- News actions: exit 0\n- News judge: exit 0\n- General market predict: exit 0\n- Per-sector predict (all 11): exit 1\n- Map heat morning delta refresh: exit 0\n- Catalyst dossiers (after book): exit 4"
-    },
     {
       "key": "weather",
       "title": "Weather / regime",
@@ -467,6 +313,24 @@
         }
       ],
       "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -3.46, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -1.73, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -0.32, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -0.74, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.21, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -0.28, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.16, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -0.94, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-09-29\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+    },
+    {
+      "key": "join",
+      "title": "Join / match rank",
+      "date": "2026-09-29",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-29T05:42:03.879486-04:00",
+      "files": [
+        {
+          "path": "data/join/2026-09-29_ranked.csv",
+          "ok": true,
+          "reason": "",
+          "size": 2239909,
+          "preview": "5901 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 TAL, GLBE, KEYS, FORM, NVT"
+        }
+      ],
+      "preview": "5901 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 TAL, GLBE, KEYS, FORM, NVT"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
