@@ -1,0 +1,55 @@
+{
+  "date": "2026-09-29",
+  "files": [
+    {
+      "bytes": 6668808,
+      "path": "data/factor_mine/panel.json",
+      "sha256": "100dd5023390bb4ce35d5056a75024d107f589e5b8ae48a09944174894f0539e"
+    },
+    {
+      "path": "01_daily/general/2026-09-29_predict.md",
+      "sha256": "ca7aecd713daa2469a9c7565128da657600b988cfb7a60f614be184d26540a11"
+    },
+    {
+      "path": "01_daily/news/2026-09-29_actions.json",
+      "sha256": "ae48cf21bfdec7ba9c5113192f639c55cefcfc86cc5912344338e0081191be93"
+    },
+    {
+      "path": "01_daily/news/2026-09-29_finviz_digest.json",
+      "sha256": "b6bf7b87699cbea7f49fe083fb0a839405875253081d10490f0a0f54249c318e"
+    },
+    {
+      "path": "01_daily/news/2026-09-29_judge.md",
+      "sha256": "b9a1a39f191d2aae5769278441d7c8b2a67ec25b4d51aab2beaed046e2c7087f"
+    },
+    {
+      "path": "01_daily/sectors/2026-09-29/_board.json",
+      "sha256": "3247d08f8e1e879c63c00028891d8292aab60548fdf86f50883d3998638fb084"
+    },
+    {
+      "path": "01_daily/weather/2026-09-29_weather.json",
+      "sha256": "72121834acf2ab476e815ea45616d5a22d839a822407b1147190fdb3026a12f8"
+    },
+    {
+      "path": "data/ab_checklist/2026-09-29_ab_checklist_enriched.csv",
+      "sha256": "685a93a8ca80a4ab58dad422710d86992c1825c7b5fd59d78740d8d908ec1ebb"
+    },
+    {
+      "path": "data/join/2026-09-29_ranked.csv",
+      "sha256": "e226819548f34f1f15fe19bd65be76d2a210f7e6d8fa50722d6dfbf0d8c7c955"
+    },
+    {
+      "path": "data/peers/2026-09-29_peer_rs.csv",
+      "sha256": "61b0ba08151e3949b253519f60c3dbcd01c7b0dd80c668268330e245f2623c64"
+    }
+  ],
+  "picks": {
+    "union_hot_n4_h1": [],
+    "union_hot_n4_holdup": []
+  },
+  "prices": [],
+  "reason": "no same-day panel rows for 2026-09-29 \u2014 sitting, no live lookup",
+  "rows": [],
+  "sha256": "74cb027478fed599911242a95e1d163a5ef72918929deb94110917a89ec37fad",
+  "source": "no_same_day_panel"
+}
