@@ -1,16 +1,138 @@
 {
   "date": "2026-09-29",
-  "generated_at": "2026-09-29T05:42:09.816649-04:00",
+  "generated_at": "2026-09-29T05:42:29.139571-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
-    "ok": 4,
-    "partial": 3,
+    "ok": 6,
+    "partial": 1,
     "fail": 1,
     "n": 8
   },
-  "buy_1d": [],
-  "sell_1d": [],
+  "buy_1d": [
+    {
+      "ticker": "ARHS",
+      "score": 0.9013014936750097
+    },
+    {
+      "ticker": "SONO",
+      "score": 0.882807210417524
+    },
+    {
+      "ticker": "SN",
+      "score": 0.4632041695805488
+    },
+    {
+      "ticker": "PDFS",
+      "score": 0.8511534460930921
+    },
+    {
+      "ticker": "SHOO",
+      "score": 0.7988795225956768
+    },
+    {
+      "ticker": "DT",
+      "score": 0.41888615803821805
+    },
+    {
+      "ticker": "GCT",
+      "score": 0.800810216334066
+    },
+    {
+      "ticker": "OLLI",
+      "score": 0.7642739401100922
+    },
+    {
+      "ticker": "CAKE",
+      "score": 0.757941251392074
+    },
+    {
+      "ticker": "ARQT",
+      "score": 0.7733596676403423
+    },
+    {
+      "ticker": "CDNA",
+      "score": 0.8021608286801538
+    },
+    {
+      "ticker": "BJ",
+      "score": 0.515825807162678
+    },
+    {
+      "ticker": "TAL",
+      "score": 0.6559776656383001
+    },
+    {
+      "ticker": "CORT",
+      "score": 0.3172479380905753
+    },
+    {
+      "ticker": "CRON",
+      "score": 0.7328939330237798
+    }
+  ],
+  "sell_1d": [
+    {
+      "ticker": "ROIV",
+      "score": -0.48567275371093904
+    },
+    {
+      "ticker": "PYXS",
+      "score": -0.37230461872539494
+    },
+    {
+      "ticker": "IKT",
+      "score": -0.3678967045840857
+    },
+    {
+      "ticker": "SOC",
+      "score": -0.3630747262047275
+    },
+    {
+      "ticker": "AXSM",
+      "score": -0.3565667884619267
+    },
+    {
+      "ticker": "CGEM",
+      "score": -0.35246126077385126
+    },
+    {
+      "ticker": "IFRX",
+      "score": -0.3441666123280977
+    },
+    {
+      "ticker": "BIDU",
+      "score": -0.3436914114265927
+    },
+    {
+      "ticker": "RBLX",
+      "score": -0.34135244732990916
+    },
+    {
+      "ticker": "CNC",
+      "score": -0.33876614376715025
+    },
+    {
+      "ticker": "IMNM",
+      "score": -0.3340638706930467
+    },
+    {
+      "ticker": "ZNTL",
+      "score": -0.3284977583228431
+    },
+    {
+      "ticker": "CMPX",
+      "score": -0.3240353108758226
+    },
+    {
+      "ticker": "WVE",
+      "score": -0.3181899342286807
+    },
+    {
+      "ticker": "LXRX",
+      "score": -0.3167958620695655
+    }
+  ],
   "flatten": {},
   "general": {
     "said": "UP  1.292",
@@ -41,24 +163,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "join",
-      "title": "Join / match rank",
-      "date": "2026-09-29",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-29T05:40:17.521639-04:00",
-      "files": [
-        {
-          "path": "data/join/2026-09-29_ranked.csv",
-          "ok": true,
-          "reason": "",
-          "size": 2239909,
-          "preview": "5901 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 TAL, GLBE, KEYS, FORM, NVT"
-        }
-      ],
-      "preview": "5901 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 TAL, GLBE, KEYS, FORM, NVT"
-    },
     {
       "key": "peer_rs",
       "title": "Peer RS",
@@ -324,6 +428,59 @@
         }
       ],
       "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-09-29",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-29T05:42:28.155994-04:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-09-29_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1535872,
+          "preview": "1d BUY ARHS, SONO, SN, PDFS, SHOO, DT, GCT, OLLI \u00b7 SELL ROIV, PYXS, IKT, SOC, AXSM, CGEM, IFRX, BIDU"
+        },
+        {
+          "path": "data/stock_book/2026-09-29_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 2698,
+          "preview": "green 179 \u00b7 TAL, GLBE, KEYS, SHOO, EMBJ, CVLT, NTNX, FIGS, AVT, SN"
+        },
+        {
+          "path": "data/stock_book/2026-09-29_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2454,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-09-29_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 13819,
+          "preview": "2026-09-29 BUY ARHS, SONO, SN, PDFS, SHOO, DT, GCT, OLLI \u00b7 SELL ROIV, PYXS, IKT, SOC, AXSM, CGEM, IFRX, BIDU"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 13819,
+          "preview": "2026-09-29 BUY ARHS, SONO, SN, PDFS, SHOO, DT, GCT, OLLI \u00b7 SELL ROIV, PYXS, IKT, SOC, AXSM, CGEM, IFRX, BIDU"
+        },
+        {
+          "path": "01_daily/2026-09-29_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 96822,
+          "preview": "# Stock book \u2014 2026-09-29\n_Generated 2026-09-29T05:42:19.080580-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY ARHS, SONO, SN, PDFS, SHOO, DT, GCT, OLLI \u00b7 SELL ROIV, PYXS, IKT, SOC, AXSM, CGEM, IFRX, BIDU \u00b7 green 179 \u00b7 TAL, GLBE, KEYS, SHOO, EMBJ, CVLT, NTNX, FIGS, AVT, SN \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-09-29 BUY ARHS, SONO, SN, PDFS, SHOO, DT, GCT, OLLI \u00b7 SELL ROIV, PYXS, IKT, SOC, AXSM, CGEM, IFRX, BIDU \u00b7 2026-09-29 BUY ARHS, SONO, SN, PDFS, SHOO, DT, GCT, OLLI \u00b7 SELL ROIV, PYXS, IKT, SOC, AXSM, CGEM, IFRX, BIDU \u00b7 # Stock book \u2014 2026-09-29\n_Generated 2026-09-29T05:42:19.080580-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
