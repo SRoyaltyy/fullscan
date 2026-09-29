@@ -1,6 +1,6 @@
 {
   "date": "2026-09-29",
-  "generated_at": "2026-09-29T05:53:56.960101-04:00",
+  "generated_at": "2026-09-29T05:59:13.526589-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -121,16 +121,16 @@
       "score": -0.3284977583228431
     },
     {
+      "ticker": "LUNG",
+      "score": -0.32614783185427215
+    },
+    {
       "ticker": "CMPX",
       "score": -0.3240353108758226
     },
     {
       "ticker": "WVE",
       "score": -0.3181899342286807
-    },
-    {
-      "ticker": "LXRX",
-      "score": -0.3167958620695655
     }
   ],
   "flatten": {

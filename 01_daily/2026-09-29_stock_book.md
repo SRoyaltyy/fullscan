@@ -1,6 +1,6 @@
 # Stock book — 2026-09-29
 
-_Generated 2026-09-29T05:53:53.548976-04:00_
+_Generated 2026-09-29T05:59:10.525912-04:00_
 
 This file is the **human read** of one run. CSV/JSON next to it are the machine files.
 
@@ -20,10 +20,10 @@ The existing red/yellow/green source graph remains visible. Its digest, judge an
 
 - Weather risk: **off**
 - General predict (same-day): +0.47 up (present)
-- Stand-down: **no** — 460 names qualified through standard,group_leader,catalyst (115 probable)
+- Stand-down: **no** — 459 names qualified through standard,group_leader,catalyst (115 probable)
 - Sector predicts this date: 0/11 (missing → sector layer is 0; Finviz week tape still sits in join)
 - News tickers in play: 90
-- AB coverage: 1940 names · peer RS: 1829
+- AB coverage: 1941 names · peer RS: 1829
 - Universe after liquidity: 2066
 - BUY window: $80M ADV, opportunity $400M–$20B, max 4/sector, 3/industry, 4 large/mega
 - News names after digest+judge: 43
@@ -56,8 +56,8 @@ Decision domains: **MKT · parent · child · company · setup · flow**. Measur
 | 2 | **CON** | 🟡🟡🟢🟡🟢🟢 | group_leader | no direct company event; Medical Care Facilities +0.6% d1 / +3.1% 1w / +5.6% vs parent | BUY GROUP_LEADER — market=YELLOW; parent=YELLOW; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=🔵,⚪,Cond green |
 | 3 | **SGRY** | 🟡🟡🟢🟡🟢🟢 | group_leader | no direct company event; Medical Care Facilities +0.6% d1 / +3.1% 1w / +5.6% vs parent | BUY GROUP_LEADER — market=YELLOW; parent=YELLOW; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=🔵,Cond green |
 | 4 | **ASTH** | 🟡🟡🟢🟡🟢🟢 | group_leader | no direct company event; Medical Care Facilities +0.6% d1 / +3.1% 1w / +5.6% vs parent | BUY GROUP_LEADER — market=YELLOW; parent=YELLOW; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=🔵,Cond green |
-| 5 | **GCT** | 🟡🔴🟢🟡🟢🟢 | group_leader | no direct company event; Software - Infrastructure +2.8% d1 / +1.4% 1w / +3.4% vs parent | BUY GROUP_LEADER — market=YELLOW; parent=RED; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=🔵,Cond green |
-| 6 | **PAYS** | 🟡🔴🟢🟡🟢🟢 | group_leader | no direct company event; Software - Infrastructure +2.8% d1 / +1.4% 1w / +3.4% vs parent | BUY GROUP_LEADER — market=YELLOW; parent=RED; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=🔵,Cond green |
+| 5 | **PAYS** | 🟡🔴🟢🟡🟢🟢 | group_leader | no direct company event; Software - Infrastructure +2.8% d1 / +1.4% 1w / +3.4% vs parent | BUY GROUP_LEADER — market=YELLOW; parent=RED; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=🔵,Cond green |
+| 6 | **GCT** | 🟡🔴🟢🟡🟢🟢 | group_leader | no direct company event; Software - Infrastructure +2.8% d1 / +1.4% 1w / +3.4% vs parent | BUY GROUP_LEADER — market=YELLOW; parent=RED; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=🔵,Cond green |
 | 7 | **SONO** | 🟡🔴🟢🟡🟢🟢 | group_leader | no direct company event; Consumer Electronics +0.3% d1 / +4.0% 1w / +6.0% vs parent | BUY GROUP_LEADER — market=YELLOW; parent=RED; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=🔵,Cond green |
 | 8 | **MQ** | 🟡🔴🟢🟡🟢🟢 | group_leader | no direct company event; Software - Infrastructure +2.8% d1 / +1.4% 1w / +3.4% vs parent | BUY GROUP_LEADER — market=YELLOW; parent=RED; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=🔵,Cond green |
 | 9 | **BAND** | 🟡🔴🟢🟡🟢🟢 | group_leader | no direct company event; Software - Infrastructure +2.8% d1 / +1.4% 1w / +3.4% vs parent | BUY GROUP_LEADER — market=YELLOW; parent=RED; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=🔵,Cond green |
@@ -637,6 +637,7 @@ If a row says **missing**, that layer scored 0 today. If it says **found**, it m
 - **CNC** (large, Healthcare, $30.2B) score -0.339. NO BEAR — market=YELLOW; red domains=flow
 - **IMNM** (mid, Healthcare, $2.4B) score -0.334. NO BEAR — market=YELLOW; red domains=setup
 - **ZNTL** (micro, Healthcare, $256M) score -0.328. NO BEAR — market=YELLOW; red domains=setup
+- **LUNG** (micro, Healthcare, $82M) score -0.326. NO BEAR — market=YELLOW; red domains=setup
 - **CMPX** (micro, Healthcare, $205M) score -0.324. SELL/AVOID — market=YELLOW; red domains=setup,flow
 - **WVE** (small, Healthcare, $731M) score -0.318. SELL/AVOID — market=YELLOW; red domains=setup,flow
 - **LXRX** (small, Healthcare, $799M) score -0.317. NO BEAR — market=YELLOW; red domains=setup
@@ -647,9 +648,8 @@ If a row says **missing**, that layer scored 0 today. If it says **found**, it m
 - **LXEO** (micro, Healthcare, $272M) score -0.307. NO BEAR — market=YELLOW; red domains=setup
 - **NRXP** (micro, Healthcare, $128M) score -0.305. SELL/AVOID — market=YELLOW; red domains=setup,flow
 - **LAB** (micro, Healthcare, $290M) score -0.305. NO BEAR — market=YELLOW; red domains=setup
+- **MIST** (micro, Healthcare, $98M) score -0.303. NO BEAR — market=YELLOW; red domains=setup
 - **IVVD** (micro, Healthcare, $280M) score -0.302. NO BEAR — market=YELLOW; red domains=setup
-- **LUNG** (micro, Healthcare, $82M) score -0.300. NO BEAR — market=YELLOW; red domains=setup
-- **AIRS** (micro, Healthcare, $141M) score -0.300. NO BEAR — market=YELLOW; red domains=setup
 
 ## 3d BUY (compact — same names, different weights)
 
@@ -1136,7 +1136,7 @@ If a row says **missing**, that layer scored 0 today. If it says **found**, it m
 - **EQ** (micro, Healthcare, $106M) score -0.572. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
 - **RC** (micro, Real Estate, $223M) score -0.571. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
 - **CHRS** (micro, Healthcare, $179M) score -0.567. this name **lagged its own correlated peers** this week; the peer basket itself was **up**; the Finviz industry was **down**
-- **CMPX** (micro, Healthcare, $205M) score -0.556. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
+- **MIST** (micro, Healthcare, $98M) score -0.556. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
 
 ## Files for this run
 
