@@ -712,7 +712,11 @@ def parse_grades_payload(raw: str) -> dict:
         if tid in seen:
             raise ValueError(f"duplicate title hash {tid}")
         seen.add(tid)
-        note = str(raw_row.get("note") or "").replace("\n", " ").strip()[:500]
+        if raw_row.get("human_reason") is not None:
+            human_reason = str(raw_row.get("human_reason") or "")
+        else:
+            human_reason = str(raw_row.get("note") or "")
+        human_reason = human_reason.replace("\n", " ").strip()[:500]
         try:
             instrument = float(raw_row.get("new_instrument") or 0.0)
         except (TypeError, ValueError):
@@ -731,7 +735,7 @@ def parse_grades_payload(raw: str) -> dict:
             "actor_power": str(raw_row.get("actor_power") or "")[:32],
             "new_instrument": instrument,
             "grade": grade,
-            "note": note,
+            "human_reason": human_reason,
         })
     return {
         "schema": SCHEMA_GRADES,
@@ -773,7 +777,7 @@ def score_grades(rows: list[dict]) -> dict:
             "human": grade,
             "reason": item.get("reason") or "",
             "bits": bits,
-            "note": item.get("note") or "",
+            "human_reason": item.get("human_reason") or "",
         }
         if jev == "KEEP" and grade == "D":
             false_keep.append(entry)
@@ -808,6 +812,26 @@ def score_grades(rows: list[dict]) -> dict:
     }
 
 
+def you_as_jev(grade: str) -> str:
+    """K lines up with KEEP and D with DROP. ? stays ?."""
+    return {"K": "KEEP", "D": "DROP"}.get(grade or "", grade or "")
+
+
+def marks_disagree(grade: str, jev: str) -> bool:
+    return you_as_jev(grade) != (jev or "")
+
+
+def blank_disagreements(rows: list[dict]) -> list[dict]:
+    """You != Jev and human_reason is blank. Empty reasons are still allowed."""
+    flagged = []
+    for row in rows:
+        if str(row.get("human_reason") or "").strip():
+            continue
+        if marks_disagree(str(row.get("grade") or "?"), str(row.get("jev") or "")):
+            flagged.append(row)
+    return flagged
+
+
 def _cell(text: str) -> str:
     return (text or "").replace("|", "/").replace("\n", " ").strip()
 
@@ -825,14 +849,15 @@ def render_session_md(session: dict) -> str:
         f"False keep {counts.get('false_keep', 0)}. "
         f"False drop {counts.get('false_drop', 0)}.",
         "",
-        "| # | jev | you | bits | source | title |",
-        "|---:|---|---|---|---|---|",
+        "| # | jev | you | bits | source | title | note |",
+        "|---:|---|---|---|---|---|---|",
     ]
     for index, row in enumerate(session.get("items") or [], start=1):
         bits = " ".join(row.get("bits") or [])
         lines.append(
             f"| {index} | {_cell(row.get('jev') or '')} | {_cell(row.get('grade') or '')} "
-            f"| {_cell(bits)} | {_cell(row.get('source') or '')} | {_cell(row.get('title') or '')} |"
+            f"| {_cell(bits)} | {_cell(row.get('source') or '')} | {_cell(row.get('title') or '')} "
+            f"| {_cell(row.get('human_reason') or '')} |"
         )
     lines.append("")
     return "\n".join(lines)
@@ -855,6 +880,39 @@ def issue_body(session: dict, grade: dict, *, json_url: str, grade_url: str) -> 
         f"False keep: {counts.get('false_keep', 0)}",
         f"False drop: {counts.get('false_drop', 0)}",
         f"Unsure: {counts.get('unsure', 0)}",
+        "",
+        "## Rows",
+        "",
+        "| title | Jev | You | human_reason |",
+        "|---|---|---|---|",
+    ]
+    items = list(session.get("items") or [])
+    if not items:
+        lines.append("|  |  |  | none |")
+    for row in items:
+        lines.append(
+            f"| {_cell(row.get('title') or '')} | {_cell(row.get('jev') or '')} "
+            f"| {_cell(row.get('grade') or '')} | {_cell(row.get('human_reason') or '')} |"
+        )
+    flagged = blank_disagreements(items)
+    lines += [
+        "",
+        "## FLAG blank reason",
+        "",
+        "Rows where You != Jev and human_reason is blank: "
+        f"{len(flagged)}.",
+        "",
+        "| title | Jev | You | human_reason |",
+        "|---|---|---|---|",
+    ]
+    if not flagged:
+        lines.append("|  |  |  | none |")
+    for row in flagged:
+        lines.append(
+            f"| {_cell(row.get('title') or '')} | {_cell(row.get('jev') or '')} "
+            f"| {_cell(row.get('grade') or '')} | |"
+        )
+    lines += [
         "",
         "## False keeps",
         "",
@@ -981,7 +1039,7 @@ def write_grade(
                 "new_instrument": row.get("new_instrument") or 0,
                 "bits": row.get("bits") or [],
                 "grade": row.get("grade"),
-                "note": row.get("note") or "",
+                "human_reason": row.get("human_reason") or "",
             }
             for row in scored["rows"]
         ],

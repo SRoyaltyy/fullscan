@@ -35,12 +35,12 @@
  .jev.KEEP{color:var(--pos)}
  .jev.DROP{color:var(--neg)}
  .bits{color:var(--gold);font-size:12px}
- .you{display:flex;gap:4px}
+ .you{display:flex;gap:4px;align-items:center;flex-wrap:wrap}
  .you button{padding:4px 8px;min-width:2rem}
+ .you input{flex:1;min-width:140px;padding:4px 8px}
  .you button.on.K{background:#14532d;border-color:var(--pos)}
  .you button.on.D{background:#7f1d1d;border-color:var(--neg)}
  .you button.on.Q{background:var(--chip);border-color:var(--gold);color:var(--gold)}
- td.note input{width:100%;min-width:120px}
  .src{color:var(--mut);font-size:12px}
  .pool{color:var(--dim)}
  .sticky{position:fixed;left:0;right:0;bottom:0;background:#121826;border-top:1px solid var(--line);padding:10px 14px;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
@@ -51,7 +51,7 @@
 <body>
 <div class="wrap">
  <h1>Jev train</h1>
- <p class="sub">Grade hop-0 like homework. K keep, D drop, ? skip. Submit stays off until 30 rows are K or D.</p>
+ <p class="sub">Grade hop-0 like homework. K keep, D drop, ? skip. A one-line reason sits next to those marks. Submit stays off until 30 rows are K or D. An empty reason is allowed.</p>
  <div class="bar">
   <button type="button" id="newDraw">New draw</button>
   <button type="button" id="reload">Reload draw</button>
@@ -75,7 +75,6 @@
      <th>Jev</th>
      <th>why bits</th>
      <th>You</th>
-     <th>note</th>
     </tr>
    </thead>
    <tbody></tbody>

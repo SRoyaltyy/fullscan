@@ -21,7 +21,7 @@
   function buildGrades(draw, marks, nonce) {
     var items = (draw && draw.items) || [];
     var rows = items.map(function (row) {
-      var mark = (marks && marks[row.id]) || { grade: "?", note: "" };
+      var mark = (marks && marks[row.id]) || { grade: "?", human_reason: "" };
       return {
         id: row.id,
         title: row.title,
@@ -37,7 +37,7 @@
         new_instrument: row.new_instrument || 0,
         bits: row.bits || [],
         grade: mark.grade || "?",
-        note: String(mark.note || "").slice(0, 500)
+        human_reason: String(mark.human_reason || mark.note || "").slice(0, 500)
       };
     });
     return {
@@ -105,7 +105,7 @@
     }
 
     function setGrade(id, grade) {
-      if (!state.marks[id]) state.marks[id] = { grade: "?", note: "" };
+      if (!state.marks[id]) state.marks[id] = { grade: "?", human_reason: "" };
       state.marks[id].grade = grade;
       var row = tbody.querySelector('tr[data-id="' + cssEscape(id) + '"]');
       if (row) paintYou(row.querySelector(".you"), id);
@@ -143,7 +143,7 @@
         " · rss " + (sample.rss != null ? sample.rss : "") +
         " · " + (draw.model || draw.gate || "");
       draw.items.forEach(function (row) {
-        if (!state.marks[row.id]) state.marks[row.id] = { grade: "?", note: "" };
+        if (!state.marks[row.id]) state.marks[row.id] = { grade: "?", human_reason: "" };
         var tr = document.createElement("tr");
         tr.dataset.id = row.id;
         var n = document.createElement("td");
@@ -178,18 +178,18 @@
           you.appendChild(button);
         });
         paintYou(you, row.id);
-        youTd.appendChild(you);
-        var noteTd = document.createElement("td");
-        noteTd.className = "note";
-        var input = document.createElement("input");
-        input.type = "text";
-        input.maxLength = 500;
-        input.value = state.marks[row.id].note || "";
-        input.addEventListener("input", function () {
-          state.marks[row.id].note = input.value.slice(0, 500);
+        var reasonInput = document.createElement("input");
+        reasonInput.type = "text";
+        reasonInput.maxLength = 500;
+        reasonInput.placeholder = "reason";
+        reasonInput.setAttribute("aria-label", "reason");
+        reasonInput.value = state.marks[row.id].human_reason || "";
+        reasonInput.addEventListener("input", function () {
+          state.marks[row.id].human_reason = reasonInput.value.replace(/\n/g, " ").slice(0, 500);
         });
-        noteTd.appendChild(input);
-        tr.append(n, title, source, jev, bits, youTd, noteTd);
+        you.appendChild(reasonInput);
+        youTd.appendChild(you);
+        tr.append(n, title, source, jev, bits, youTd);
         tbody.appendChild(tr);
       });
       refreshSubmit();

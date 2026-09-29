@@ -28,7 +28,7 @@ The hard-misses file shipped here is the initial rotating bank (seed `20260929`,
 
 ## Submit
 
-Submit stays disabled until at least 30 rows are `K` or `D`. `?` does not count.
+Submit stays disabled until at least 30 rows are `K` or `D`. `?` does not count. Each row has a one-line reason next to K / D / ?. An empty reason is allowed. The session JSON stores it as `human_reason`, the markdown sheet puts it in the `note` column, and the issue lists every row as title, Jev, You, human_reason. The issue flags rows where You does not match Jev (K is KEEP, D is DROP, ? matches neither) and `human_reason` is blank.
 
 The page builds the grades JSON in the browser and downloads it if dispatch fails. With a token, it POSTs `workflow_dispatch` on `jev_train.yml` at ref `main`, `mode=grade`, grades as base64 JSON. The bot token stays in Actions.
 

@@ -25,6 +25,7 @@ from src.jev_train import (
     hard_miss_path,
     holdout_path,
     issue_body,
+    blank_disagreements,
     parse_grades_payload,
     propose_hard_miss_bank,
     publish_issue,
@@ -242,7 +243,9 @@ def test_grade_files_need_thirty_marks_and_do_not_touch_closed_lists():
         assert grade["false_keep"][0]["id"] == title_id(title)
         assert "print" in grade["false_keep"][0]["bits"]
         assert "<table" not in md_path.read_text(encoding="utf-8")
-        assert "| # | jev | you | bits | source | title |" in md_path.read_text(encoding="utf-8")
+        md_text = md_path.read_text(encoding="utf-8")
+        assert "| # | jev | you | bits | source | title | note |" in md_text
+        assert "miss" in md_text
         assert closed.read_bytes() == before
         assert hold.read_bytes() == hold_before
         hard = json.loads(hard_miss_path(ground).read_text(encoding="utf-8"))
@@ -597,7 +600,7 @@ def test_commit_allowlist_and_workflow_and_page():
     assert "<table" in page
     assert ">title<" in page or ">Title<" in page or "title</th>" in page
     assert "Jev" in page
-    for column in ("title", "source", "bits", "note"):
+    for column in ("title", "source", "bits", "reason"):
         assert column in page.lower()
     assert "MIN_MARKS = 30" in script
     assert "JEV_API_KEY" not in script
@@ -661,6 +664,160 @@ def test_append_hard_misses_does_not_duplicate_or_drop():
     assert out["items"][0]["title"] == "Keep me"
 
 
+def _quiet_rows(n: int) -> list[dict]:
+    rows = []
+    for i in range(n):
+        rows.append({
+            "title": f"Quiet desk note {i} about municipal parking in city {i}",
+            "source": "reuters",
+            "pool": "parsed",
+            "jev": "DROP",
+            "reason": "low_material",
+            "geo": "other",
+            "grade": "D",
+            "human_reason": "",
+        })
+    return rows
+
+
+def test_human_reason_persists_in_json_md_and_issue():
+    title = "August Core PCE print lands ahead of the Fed decision"
+    rows = _quiet_rows(29)
+    rows.append({
+        "title": title,
+        "source": "reuters",
+        "pool": "holdout",
+        "jev": "KEEP",
+        "reason": "code_print",
+        "geo": "core",
+        "grade": "D",
+        "human_reason": "print is a false keep\nsecond line" + ("x" * 600),
+    })
+    parsed = parse_grades_payload(json.dumps({
+        "schema": "jev-train-grades-1",
+        "draw_stamp": "20260929_0100",
+        "nonce": "reason-nonce",
+        "rows": rows,
+    }))
+    hit = next(row for row in parsed["rows"] if row["title"] == title)
+    assert hit["human_reason"] == ("print is a false keep second line" + ("x" * 600))[:500]
+    assert "\n" not in hit["human_reason"]
+    legacy = parse_grades_payload(json.dumps({
+        "schema": "jev-train-grades-1",
+        "rows": [{
+            "title": "Brazil soy exports clear the Santos loading queue",
+            "jev": "DROP",
+            "grade": "D",
+            "note": "from note",
+        }],
+    }))
+    assert legacy["rows"][0]["human_reason"] == "from note"
+    explicit_blank = parse_grades_payload(json.dumps({
+        "schema": "jev-train-grades-1",
+        "rows": [{
+            "title": "Norway salmon farms report a quiet week on volumes",
+            "jev": "DROP",
+            "grade": "D",
+            "human_reason": "",
+            "note": "ignored when human_reason is set",
+        }],
+    }))
+    assert explicit_blank["rows"][0]["human_reason"] == ""
+    with tempfile.TemporaryDirectory() as tmp:
+        root = Path(tmp)
+        ground = root / "00_grounding"
+        ground.mkdir()
+        result = write_grade(
+            parsed, stamp="20260929_0140", now=NOW, root=root, ground=ground, write=True,
+        )
+        session = json.loads((ground / "jev_train" / "20260929_0140.json").read_text(encoding="utf-8"))
+        item = next(row for row in session["items"] if row["title"] == title)
+        assert item["human_reason"] == hit["human_reason"]
+        assert "note" not in item
+        md = (ground / "jev_train" / "20260929_0140.md").read_text(encoding="utf-8")
+        assert "| # | jev | you | bits | source | title | note |" in md
+        assert hit["human_reason"] in md
+        body = result["issue_body"]
+        rows_section = body.split("## Rows", 1)[1].split("## FLAG blank reason", 1)[0]
+        assert "| title | Jev | You | human_reason |" in rows_section
+        assert f"| {title} | KEEP | D | {hit['human_reason']} |" in rows_section
+        assert "Rows where You != Jev and human_reason is blank: 0." in body
+
+
+def test_blank_disagreement_is_flagged():
+    soy = "Brazil soy exports clear the Santos loading queue"
+    pce = "August Core PCE print lands ahead of the Fed decision"
+    tape = "Gold falls as traders price another Fed hike"
+    salmon = "Norway salmon farms report a quiet week on volumes"
+    battery = "Korean battery plant adds a second line in Georgia"
+    rows = _quiet_rows(27)
+    rows.extend([
+        {
+            "title": soy,
+            "source": "reuters",
+            "jev": "DROP",
+            "grade": "D",
+            "human_reason": "   ",
+        },
+        {
+            "title": pce,
+            "source": "reuters",
+            "jev": "KEEP",
+            "grade": "D",
+            "human_reason": "",
+        },
+        {
+            "title": tape,
+            "source": "reuters",
+            "jev": "DROP",
+            "grade": "K",
+            "human_reason": "real tape",
+        },
+        {
+            "title": salmon,
+            "source": "reuters",
+            "jev": "DROP",
+            "grade": "?",
+            "human_reason": "",
+        },
+        {
+            "title": battery,
+            "source": "reuters",
+            "jev": "KEEP",
+            "grade": "?",
+            "human_reason": "not sure",
+        },
+    ])
+    parsed = parse_grades_payload(json.dumps({
+        "schema": "jev-train-grades-1",
+        "draw_stamp": "20260929_0100",
+        "nonce": "flag-nonce",
+        "rows": rows,
+    }))
+    assert count_marks(parsed["rows"]) == 30
+    flagged = blank_disagreements(parsed["rows"])
+    flagged_titles = [row["title"] for row in flagged]
+    assert pce in flagged_titles
+    assert salmon in flagged_titles
+    assert soy not in flagged_titles
+    assert tape not in flagged_titles
+    assert battery not in flagged_titles
+    result = write_grade(parsed, stamp="20260929_0150", now=NOW, write=False)
+    body = result["issue_body"]
+    flag = body.split("## FLAG blank reason", 1)[1].split("## False keeps", 1)[0]
+    assert "Rows where You != Jev and human_reason is blank: 2." in flag
+    assert f"| {pce} | KEEP | D | |" in flag
+    assert f"| {salmon} | DROP | ? | |" in flag
+    assert soy not in flag
+    assert tape not in flag
+    assert battery not in flag
+    rows_section = body.split("## Rows", 1)[1].split("## FLAG blank reason", 1)[0]
+    assert f"| {soy} | DROP | D |  |" in rows_section
+    assert f"| {tape} | DROP | K | real tape |" in rows_section
+    assert f"| {battery} | KEEP | ? | not sure |" in rows_section
+    assert "nonce: flag-nonce" in body
+
+
 def test_page_script_submit_threshold():
     import shutil
     import subprocess
@@ -678,10 +835,17 @@ const draw = {stamp: "20260929_0130", items: [{
   jev: "KEEP", reason: "code_print", bits: ["print"], geo: "", actor_power: "",
   new_instrument: 0
 }]};
-const marks = {x: {grade: "D", note: "note"}};
+const marks = {x: {grade: "D", human_reason: "print miss"}};
 const payload = api.buildGrades(draw, marks, "nonce-9");
 const text = JSON.stringify(payload);
 if (payload.rows[0].grade !== "D") throw new Error("grade");
+if (payload.rows[0].human_reason !== "print miss") throw new Error("human_reason");
+if (Object.prototype.hasOwnProperty.call(payload.rows[0], "note")) throw new Error("note field");
+const legacy = api.buildGrades(draw, {x: {grade: "D", note: "from note"}}, "nonce-9");
+if (legacy.rows[0].human_reason !== "from note") throw new Error("note fallback");
+const blank = api.buildGrades(draw, {x: {grade: "D", human_reason: ""}}, "nonce-9");
+if (blank.rows[0].human_reason !== "") throw new Error("empty reason");
+if (!api.marksReady(Array.from({length: 30}, () => "D"))) throw new Error("empty reasons still count");
 if (!text.includes("nonce-9")) throw new Error("nonce");
 if (text.includes("ghp_") || text.includes("JEV_API_KEY") || text.includes("token")) {
   throw new Error("payload leaked a token field");
@@ -696,6 +860,8 @@ def main() -> None:
         test_why_bits_follow_the_current_gate,
         test_false_keep_and_false_drop_record_bits,
         test_grade_files_need_thirty_marks_and_do_not_touch_closed_lists,
+        test_human_reason_persists_in_json_md_and_issue,
+        test_blank_disagreement_is_flagged,
         test_trained_hash_and_gold_are_excluded_from_every_pool,
         test_hard_misses_rotate_when_holdout_is_used_up,
         test_draw_writes_page_json_and_leaves_holdout_bytes_alone,
