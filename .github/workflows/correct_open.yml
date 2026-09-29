@@ -1,0 +1,88 @@
+name: Correct open fill
+
+# Manual only. There is no schedule. A person triggers this after Cyrus
+# approves an open-fill correction. It appends one open_fill_correction
+# to each forward book and does not edit a sealed line. A second run of
+# the same correction appends nothing. It does not fetch Yahoo and it does
+# not run the close fill.
+
+on:
+  workflow_dispatch:
+    inputs:
+      session:
+        description: "Session whose sealed open fill is corrected"
+        required: true
+        default: "2026-09-28"
+      reason:
+        description: "Correction reason"
+        required: true
+        default: "stale_bar: previous-session bar used for SRFM, SECZ"
+      approved_by:
+        description: "Who approved the correction"
+        required: true
+        default: "Cyrus 2026-09-28 21:02 ET"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: correct-open
+  cancel-in-progress: false
+
+jobs:
+  correct:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install bar dependencies
+        run: pip install numpy pandas pyarrow
+      - name: Correct the holdup open fill
+        env:
+          CORRECT_OPEN_APPROVED_BY: ${{ inputs.approved_by }}
+          CORRECT_OPEN_DATE: ${{ inputs.session }}
+          CORRECT_OPEN_REASON: ${{ inputs.reason }}
+          FORWARD_BOOK: holdup
+          HOLDUP_MODE: correct_open
+        run: PYTHONHASHSEED=0 python3 research/hot_n4_clean_v4/forward/forward.py
+      - name: Correct the h1 open fill
+        env:
+          CORRECT_OPEN_APPROVED_BY: ${{ inputs.approved_by }}
+          CORRECT_OPEN_DATE: ${{ inputs.session }}
+          CORRECT_OPEN_REASON: ${{ inputs.reason }}
+          FORWARD_BOOK: h1
+          HOLDUP_MODE: correct_open
+        run: PYTHONHASHSEED=0 python3 research/hot_n4_clean_v4/forward/forward.py
+      - name: Commit the append
+        if: success()
+        run: |
+          set -euo pipefail
+          git config user.name "Market-Bot-Automaton"
+          git config user.email "bot@users.noreply.github.com"
+          files=(
+            research/hot_n4_clean_v4/forward/holdup_log.jsonl
+            research/hot_n4_clean_v4/forward/LEDGER.jsonl
+            dashboard/holdup/log.json
+            dashboard/holdup/status.json
+            research/hot_n4_clean_v4/forward_h1/h1_log.jsonl
+            research/hot_n4_clean_v4/forward_h1/LEDGER.jsonl
+            dashboard/h1/log.json
+            dashboard/h1/status.json
+          )
+          for path in "${files[@]}"; do
+            if [ -f "$path" ]; then
+              git add -- "$path"
+            fi
+          done
+          if git diff --staged --quiet; then
+            echo "no change"
+            exit 0
+          fi
+          git commit -m "Correct the 2026-09-28 open fill."
+          git pull --rebase origin main
+          git push origin HEAD:main

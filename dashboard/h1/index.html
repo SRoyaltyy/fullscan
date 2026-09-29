@@ -386,6 +386,9 @@ function execFor(rows, day){
     if (row.kind === "open_fill" || row.kind === "fill"){
       take(buys, row.buys);
       take(sells, row.sells);
+    } else if (row.kind === "open_fill_correction" && row.corrected){
+      take(buys, row.corrected.buys);
+      take(sells, row.corrected.sells);
     } else if (row.kind === "mark"){
       take(buys, row.added_buys);
       take(sells, row.added_sells);
@@ -430,7 +433,19 @@ function todayPlanHtml(rows){
   return `<section class="today-plan"><h2>Today's plan</h2><h3>${esc(plan.date || focus)} ${badge}</h3><div class="hd"><span>seal commit ${esc(seal)}</span>${clock}<span>${esc(morningLine(plan))}</span><span>holdup 2-day hold ${hold}</span></div><div class="lab">Planned sells</div><div class="pills">${sellPills}</div><div class="lab">Planned buys</div><div class="pills">${buyPills}</div></section>`;
 }
 
+function withCorrections(rows){
+  const latest = {};
+  rows.forEach(row => {
+    if (row.kind === "open_fill_correction" && row.corrected) latest[row.date] = row;
+  });
+  return rows.map(row => {
+    if (row.kind !== "open_fill" || !latest[row.date]) return row;
+    const corr = latest[row.date];
+    return Object.assign({}, corr.corrected, {sha256: corr.sha256});
+  });
+}
 function render(rows, status){
+  rows = withCorrections(rows);
   window.__rows = rows;
   const today = document.getElementById("todayPlan");
   if (today) today.innerHTML = todayPlanHtml(rows);

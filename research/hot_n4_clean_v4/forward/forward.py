@@ -12,8 +12,9 @@ does not skip the session: S stays null, holdup keeps min_hold 1, and the
 plan records the absence.
 
 HOLDUP_MODE=plan is the pre-open run. HOLDUP_MODE=open_fill is the 09:35 ET
-open-fill. HOLDUP_MODE=fill is the post-close run. FORWARD_BOOK selects
-holdup (default) or h1.
+open-fill. HOLDUP_MODE=fill is the post-close run. HOLDUP_MODE=correct_open
+appends an open-fill correction for CORRECT_OPEN_DATE. It does not edit a
+sealed line. FORWARD_BOOK selects holdup (default) or h1.
 """
 from __future__ import annotations
 
@@ -39,10 +40,15 @@ from research.hot_n4_clean_v4.forward.ledger import (  # noqa: E402
     load,
     open_plan,
     plan_on,
+    seal,
     session_dates,
 )
 from research.hot_n4_clean_v4.forward.openfill import (  # noqa: E402
+    STALE_OPEN_APPROVED_BY,
+    STALE_OPEN_REASON,
+    bars_with_stored_session,
     decide_fill,
+    decide_open_correction,
     decide_open_fill,
     open_legs,
     refuse_stale_open,
@@ -499,28 +505,69 @@ def _latest_bar(stored: dict) -> str:
     return latest
 
 
-def _history_ok(records: list[dict], bars: dict) -> str | None:
+def _history_ok(
+    records: list[dict],
+    bars: dict,
+    ignore_open_dates: set[str] | None = None,
+) -> str | None:
+    """Stored opens must still equal the fills readers use.
+
+    A sealed open fill that a later correction replaced is not checked.
+    The correction's fills are. ``ignore_open_dates`` skips a sealed open
+    fill that this run is about to correct, before that line exists.
+    """
     stored = bars["stored"]
+    ignore = ignore_open_dates or set()
+    latest: dict[str, dict] = {}
+    for record in records:
+        if record.get("kind") == "open_fill_correction":
+            latest[record["date"]] = record
     for record in records:
         kind = record["kind"]
-        if kind in ("session", "fill", "open_fill"):
-            rows = [(record["date"], row["ticker"], row["fill"]) for row in record.get("buys") or []]
-            rows += [(record["date"], row["ticker"], row["fill"]) for row in record.get("sells") or []]
+        if kind == "open_fill" and (record["date"] in latest or record["date"] in ignore):
+            continue
+        if kind == "open_fill_correction":
+            if latest.get(record["date"]) is not record:
+                continue
+            source = record.get("corrected") or {}
+            rows = [
+                (record["date"], row["ticker"], row["fill"], "open_fill")
+                for row in source.get("buys") or []
+            ]
+            rows += [
+                (record["date"], row["ticker"], row["fill"], "open_fill")
+                for row in source.get("sells") or []
+            ]
+        elif kind in ("session", "fill", "open_fill"):
+            rows = [
+                (record["date"], row["ticker"], row["fill"], kind)
+                for row in record.get("buys") or []
+            ]
+            rows += [
+                (record["date"], row["ticker"], row["fill"], kind)
+                for row in record.get("sells") or []
+            ]
         elif kind == "mark":
-            rows = [(record["date"], row["ticker"], row["fill"]) for row in record.get("added_buys") or []]
-            rows += [(record["date"], row["ticker"], row["fill"]) for row in record.get("added_sells") or []]
+            rows = [
+                (record["date"], row["ticker"], row["fill"], kind)
+                for row in record.get("added_buys") or []
+            ]
+            rows += [
+                (record["date"], row["ticker"], row["fill"], kind)
+                for row in record.get("added_sells") or []
+            ]
         elif kind == "close":
-            rows = [(record["date"], record["ticker"], record["fill"])]
+            rows = [(record["date"], record["ticker"], record["fill"], kind)]
         else:
             continue
-        for day, ticker, fill in rows:
+        for day, ticker, fill, row_kind in rows:
             op = open_px(stored, ticker, day)
             if op is None:
                 # The 09:35 open is sealed from the live Yahoo print. The
                 # daily bar is stored only once it is final, so an open-fill
                 # may not be in the file yet. A stored open that differs
                 # still fails below.
-                if kind == "open_fill":
+                if row_kind == "open_fill":
                     continue
                 return f"stored open for {ticker} on {day} no longer matches the sealed fill"
             if float(op) != float(fill):
@@ -927,12 +974,181 @@ def fill_main() -> int:
     return 0
 
 
+def _print_correction(session: str, body: dict, close_bodies: list[dict]) -> None:
+    book = current_book()
+    opened = body["corrected"]
+    print(f"correction {book.folder_name} {session} {book.recipe}")
+    print(f"reason: {body['reason']}")
+    print(f"approved_by: {body['approved_by']}")
+    print(f"open_fill_sha256: {body['open_fill_sha256']}")
+    print(f"plan_sha256: {body['plan_sha256']}")
+    if not body["changed_legs"]:
+        print("changed: none")
+    for leg in body["changed_legs"]:
+        sealed = leg.get("sealed") or {}
+        corrected = leg.get("corrected") or {}
+        print(
+            f"changed {leg['side']} {leg['ticker']} "
+            f"sealed_fill={sealed.get('fill')} sealed_shares={sealed.get('shares')} sealed_fee={sealed.get('fee')} "
+            f"corrected_fill={corrected.get('fill')} corrected_shares={corrected.get('shares')} "
+            f"corrected_fee={corrected.get('fee')}"
+        )
+    print(
+        "buys: "
+        + "; ".join(
+            f"{row['ticker']} shares={row['shares']} fill={row['fill']} fee={row.get('fee')}"
+            for row in opened.get("buys") or []
+        )
+    )
+    print(
+        "sells: "
+        + "; ".join(
+            f"{row['ticker']} shares={row['shares']} fill={row['fill']} fee={row.get('fee')}"
+            for row in opened.get("sells") or []
+        )
+    )
+    print(
+        "holdings: "
+        + "; ".join(f"{row['ticker']} shares={row['shares']}" for row in opened.get("holdings") or [])
+    )
+    print(f"cash_primary={opened['cash_primary']}")
+    mark = close_bodies[0]
+    closes = [row for row in close_bodies if row.get("kind") == "close"]
+    pnl = sum(float(row["pnl_primary"]) for row in closes)
+    print(
+        f"close cash_primary={mark['cash_primary']} equity_primary={mark['equity_primary']} "
+        f"pnl_primary={pnl}"
+    )
+    for row in closes:
+        print(
+            f"close {row['ticker']} shares={row['shares']} fill={row['fill']} "
+            f"pnl_primary={row['pnl_primary']} reason={row['reason']}"
+        )
+
+
+def correct_open_main() -> int:
+    """Append an open-fill correction. A second identical run appends nothing.
+
+    CORRECT_OPEN_DATE is the session. The share counts come from the open-fill
+    sizing code at the stored session opens. CORRECT_OPEN_DRY_RUN=1 prints
+    the correction and the close fill it would allow, and writes nothing.
+    """
+    session = os.environ.get("CORRECT_OPEN_DATE", "").strip()
+    if not session:
+        _fail("CORRECT_OPEN_DATE is required")
+        return 1
+    reason = os.environ.get("CORRECT_OPEN_REASON", STALE_OPEN_REASON)
+    approved = os.environ.get("CORRECT_OPEN_APPROVED_BY", STALE_OPEN_APPROVED_BY)
+    dry = os.environ.get("CORRECT_OPEN_DRY_RUN") == "1"
+    try:
+        records = load()
+    except RuntimeError as exc:
+        _fail(f"existing record hash does not match the ledger ({exc})")
+        return 1
+    records, code = _ready(records)
+    if records is None:
+        return code
+    print(f"correct open {session}", flush=True)
+    index = _index()
+    if session not in index:
+        _fail(f"{session} is outside the v4 session calendar through 2026-12-31")
+        return 1
+    try:
+        bars = overlay_forward(load_bars())
+    except Exception as exc:  # noqa: BLE001 — a missing price file is an input gap
+        _fail(f"price store could not be read ({exc})")
+        return 1
+    plan = plan_on(records, session)
+    if plan is None:
+        _fail(f"no plan for {session}")
+        return 1
+    held = set(book_state_before(records, session)["pos"])
+    names = sorted(
+        set(open_legs(plan, held))
+        | {str(ticker).upper() for ticker in held}
+        | {"IWM"}
+    )
+    try:
+        bars = bars_with_stored_session(bars, session, names)
+    except RuntimeError as exc:
+        _fail(str(exc))
+        return 1
+    drifted = _history_ok(records, bars, ignore_open_dates={session})
+    if drifted:
+        _fail(drifted)
+        return 1
+    fees = load_fees()
+    try:
+        bodies, why = decide_open_correction(
+            records, session, bars, fees, index, reason, approved,
+        )
+    except (Halt, RuntimeError) as exc:
+        _fail(str(exc))
+        return 1
+    if not bodies:
+        if why:
+            _fail(why)
+            return 1
+        print(f"open fill correction already sealed {session}")
+        return 0
+    body = bodies[0]
+    try:
+        preview, _line = seal(body)
+        virtual = list(records) + [preview]
+        drifted = _history_ok(virtual, bars)
+        if drifted:
+            _fail(drifted)
+            return 1
+        close_bodies, close_why = decide_fill(virtual, bars, fees, index)
+    except (Halt, RuntimeError) as exc:
+        _fail(str(exc))
+        return 1
+    if not close_bodies or close_bodies[0].get("kind") != "mark":
+        _fail(close_why or "close fill did not mark")
+        return 1
+    if float(close_bodies[0]["cash_primary"]) < 0:
+        _fail(f"close cash_primary {close_bodies[0]['cash_primary']} is negative")
+        return 1
+    _print_correction(session, body, close_bodies)
+    if dry:
+        print("dry-run: wrote nothing")
+        return 0
+    try:
+        current = load()
+    except RuntimeError as exc:
+        _fail(f"existing record hash does not match the ledger ({exc})")
+        return 1
+    try:
+        again, again_why = decide_open_correction(
+            current, session, bars, fees, index, reason, approved,
+        )
+    except (Halt, RuntimeError) as exc:
+        _fail(str(exc))
+        return 1
+    if not again:
+        if again_why:
+            _fail(again_why)
+            return 1
+        print(f"open fill correction already sealed {session}")
+        return 0
+    append_records(again)
+    written = load()
+    write_page(written, _status(session, session, None, "open_fill"))
+    print(
+        f"sealed open fill correction {session} cash {again[0]['corrected']['cash_primary']}",
+        flush=True,
+    )
+    return 0
+
+
 def main() -> int:
     mode = os.environ.get("HOLDUP_MODE", "plan")
     if mode == "fill":
         return fill_main()
     if mode == "open_fill":
         return open_fill_main()
+    if mode == "correct_open":
+        return correct_open_main()
     if mode != "plan":
         _fail(f"HOLDUP_MODE {mode}")
         return 1

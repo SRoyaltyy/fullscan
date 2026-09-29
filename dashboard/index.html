@@ -157,6 +157,9 @@
       if (!r || !r.date || r.date <= BACKFILL_LAST) return;
       if (r.kind === "plan") plans[r.date] = r;
       if (r.kind === "open_fill") opens[r.date] = r;
+      if (r.kind === "open_fill_correction" && r.corrected) {
+        opens[r.date] = Object.assign({}, r.corrected, {sha256: r.sha256});
+      }
       if (r.kind === "fill") fills[r.date] = r;
       if (r.kind === "mark") marks[r.date] = r;
     });

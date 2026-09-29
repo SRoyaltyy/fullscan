@@ -141,6 +141,12 @@ def sealed_bar_keys(records: list[dict]) -> set[tuple[str, str]]:
                 keys.add((row["ticker"], record["date"]))
             for row in record.get("holdings") or []:
                 keys.add((row["ticker"], record["date"]))
+        elif kind == "open_fill_correction":
+            source = record.get("corrected") or {}
+            for row in list(source.get("buys") or []) + list(source.get("sells") or []):
+                keys.add((row["ticker"], record["date"]))
+            for row in source.get("holdings") or []:
+                keys.add((row["ticker"], record["date"]))
         elif kind == "mark":
             for row in list(record.get("added_buys") or []) + list(record.get("added_sells") or []):
                 keys.add((row["ticker"], record["date"]))

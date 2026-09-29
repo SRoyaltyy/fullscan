@@ -16,6 +16,7 @@ on:
       - ".github/workflows/h1_forward.yml"
       - ".github/workflows/h1_open_fill.yml"
       - ".github/workflows/h1_fill.yml"
+      - ".github/workflows/correct_open.yml"
   push:
     branches: [main]
     paths:
@@ -32,6 +33,7 @@ on:
       - ".github/workflows/h1_forward.yml"
       - ".github/workflows/h1_open_fill.yml"
       - ".github/workflows/h1_fill.yml"
+      - ".github/workflows/correct_open.yml"
 
 permissions:
   contents: read
@@ -56,4 +58,5 @@ jobs:
           PYTHONHASHSEED=0 python3 research/hot_n4_clean_v4/forward/test_append_only.py
           PYTHONHASHSEED=0 python3 research/hot_n4_clean_v4/forward/test_plan_fill.py
           PYTHONHASHSEED=0 python3 research/hot_n4_clean_v4/forward/test_open_fill.py
+          PYTHONHASHSEED=0 python3 research/hot_n4_clean_v4/forward/test_open_fill_correction.py
           PYTHONHASHSEED=0 python3 research/hot_n4_clean_v4/forward/test_snapshot_plan.py

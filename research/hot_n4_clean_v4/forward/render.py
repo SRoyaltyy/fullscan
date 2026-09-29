@@ -70,7 +70,10 @@ def plan_for(records: list[dict], day: str) -> dict | None:
 
 
 def execution_for(records: list[dict], day: str) -> dict:
-    """Fill prices already written for ``day``. An unfilled name is absent."""
+    """Fill prices already written for ``day``. An unfilled name is absent.
+
+    A later open-fill correction replaces the sealed open fill for that day.
+    """
     buys: dict[str, dict] = {}
     sells: dict[str, dict] = {}
 
@@ -87,6 +90,10 @@ def execution_for(records: list[dict], day: str) -> dict:
         if kind in ("open_fill", "fill"):
             take(buys, row.get("buys"))
             take(sells, row.get("sells"))
+        elif kind == "open_fill_correction":
+            corrected = row.get("corrected") or {}
+            take(buys, corrected.get("buys"))
+            take(sells, corrected.get("sells"))
         elif kind == "mark":
             take(buys, row.get("added_buys"))
             take(sells, row.get("added_sells"))
