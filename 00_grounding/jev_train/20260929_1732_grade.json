@@ -1,0 +1,168 @@
+{
+  "schema": "jev-train-grade-1",
+  "stamp": "20260929_1732",
+  "draw_stamp": "20260929_1720",
+  "nonce": "b8305aa6-492b-43a2-817f-357fba32f7ba",
+  "generated_at": "2026-09-29T17:32:03.377638+00:00",
+  "counts": {
+    "rows": 100,
+    "human_keep": 36,
+    "human_drop": 64,
+    "unsure": 0,
+    "marked": 100,
+    "jev_keep": 29,
+    "jev_drop": 71,
+    "false_keep": 1,
+    "false_drop": 8
+  },
+  "false_keep": [
+    {
+      "id": "e6d2e41fe25e07c6",
+      "title": "Tech stocks today: OpenAI's growth disappoints, Nvidia earnings provide next test for AI trade",
+      "source": "rss_yahoo_finance",
+      "pool": "hard_miss",
+      "jev": "KEEP",
+      "human": "D",
+      "reason": "code_ai",
+      "bits": [
+        "earnings"
+      ],
+      "human_reason": "not exactly earnings surprise despite the presence of the word \"Earnings\""
+    }
+  ],
+  "false_drop": [
+    {
+      "id": "474bd55ab78f832f",
+      "title": "SGA Is Betting on Equinix (EQIX) as AI Demand Accelerates",
+      "source": "rss_yahoo_finance",
+      "pool": "parsed",
+      "jev": "DROP",
+      "human": "K",
+      "reason": "opinion",
+      "bits": [
+        "opinion",
+        "actor",
+        "geo"
+      ],
+      "human_reason": "investing in a specific firm. Worth looking at"
+    },
+    {
+      "id": "42d879c64cc9ed7a",
+      "title": "Trump threatens Iran’s partners: How do secondary sanctions work?",
+      "source": "rss_aljazeera_economy",
+      "pool": "parsed",
+      "jev": "DROP",
+      "human": "K",
+      "reason": "punct",
+      "bits": [
+        "lever",
+        "actor"
+      ],
+      "human_reason": "Secondary sanctions is a heavy hitter---see how it plays out"
+    },
+    {
+      "id": "bf2f41d166e95848",
+      "title": "US-Iran Strait of Hormuz conflict escalation",
+      "source": "events",
+      "pool": "parsed",
+      "jev": "DROP",
+      "human": "K",
+      "reason": "reprint_weather",
+      "bits": [
+        "chokepoint",
+        "geo"
+      ],
+      "human_reason": "Status change in major geopoplitical event"
+    },
+    {
+      "id": "b619f3299ceab105",
+      "title": "HSBC downgraded Amgen to Hold from Buy and cut its price target to $425 in a new biopharma catalyst review published today.",
+      "source": "finviz_export",
+      "pool": "parsed",
+      "jev": "DROP",
+      "human": "K",
+      "reason": "junk_shape",
+      "bits": [
+        "earnings"
+      ],
+      "human_reason": "Analyst downgrade of a firm"
+    },
+    {
+      "id": "844baadf6263f5d5",
+      "title": "FCT oil marketers begin pump price reduction by N20 - Realnews Magazine",
+      "source": "rss_google_commodities",
+      "pool": "parsed",
+      "jev": "DROP",
+      "human": "K",
+      "reason": "crowd",
+      "bits": [],
+      "human_reason": "price price reduction could mean things for the economy"
+    },
+    {
+      "id": "fd0c9d17172fcd53",
+      "title": "This Growth Stock Is Quietly Solving the AI Supercycle's Cooling Problem. Here's Why It Could Soar. - The Motley Fool",
+      "source": "The Motley Fool",
+      "pool": "rss",
+      "jev": "DROP",
+      "human": "K",
+      "reason": "source",
+      "bits": [],
+      "human_reason": "Interesting AI concept"
+    },
+    {
+      "id": "5d175b39a378a811",
+      "title": "Billionaire David Tepper Trimmed Micron and Sold out of SanDisk. Here’s the New AI Stocks He’s Buying",
+      "source": "rss_yahoo_finance",
+      "pool": "hard_miss",
+      "jev": "DROP",
+      "human": "K",
+      "reason": "low_material",
+      "bits": [
+        "geo"
+      ],
+      "human_reason": "Following trades of billionaires is generally good practice"
+    },
+    {
+      "id": "1e91f492c54d3a98",
+      "title": "Primerica President Sells 1,800 Shares for $562,770",
+      "source": "rss_yahoo_finance",
+      "pool": "hard_miss",
+      "jev": "DROP",
+      "human": "K",
+      "reason": "low_material",
+      "bits": [
+        "actor",
+        "geo"
+      ],
+      "human_reason": "Insider movements"
+    }
+  ],
+  "bits_on_misses": {
+    "false_keep": {
+      "opinion": 0,
+      "tape": 0,
+      "earnings": 1,
+      "print": 0,
+      "lever": 0,
+      "signed": 0,
+      "blast": 0,
+      "chokepoint": 0,
+      "actor": 0,
+      "geo": 0
+    },
+    "false_drop": {
+      "opinion": 1,
+      "tape": 0,
+      "earnings": 1,
+      "print": 0,
+      "lever": 1,
+      "signed": 0,
+      "blast": 0,
+      "chokepoint": 1,
+      "actor": 3,
+      "geo": 4
+    }
+  },
+  "json_url": "https://github.com/SRoyaltyy/fullscan/blob/main/00_grounding/jev_train/20260929_1732.json",
+  "grade_url": "https://github.com/SRoyaltyy/fullscan/blob/main/00_grounding/jev_train/20260929_1732_grade.json"
+}

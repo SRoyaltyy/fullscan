@@ -15,14 +15,13 @@ Thresholds stay put unless the pending block names one:
 `CROWD_DROP=0.50`.
 
 <!-- PENDING_BEGIN -->
-## Pending one change (session `20260929_1703`)
+## Pending one change (session `20260929_1732`)
 
-Landed. `action_material` / sibling questions rewritten from the 1703
-misses. `decide()`: if `action_material >= 0.65` or
-`new_instrument >= 0.60` and actor is `crowd`, keep as `crowd_fact`
-(do not fall through to `low_material`). Code-keep tightened so
-"IPO price" reclaim and a Social Security explainer are not
-classifiable. Do not edit closed lists.
+- question: `action_material`
+- kind: `criteria`
+- misses on that question: 2
+- change: Rewrite `action_material` criteria from this session's misses. Score toward KEEP / false-opinion / core / powerful when: Following trades of billionaires is generally good practice; Insider movements. Sibling `new_instrument`: dated print / hold / CR / explores-rules / panel-endorse / named dollar deal is true. Do not edit closed lists. At most one decide() / threshold change.
+- do not edit `jev_closed_lists.json`
 <!-- PENDING_END -->
 
 ## How Jev is allowed to change
@@ -385,3 +384,29 @@ Code-path misses (not the Jev knob this round):
 - `junk_shape` — Eaton shares rise after UBS upgrades the stock to Buy from Neutral and raises its price target to $515, citing strong sales growth and expected margin improvement. (Analyst upgrade of a certain company)
 - `code_deal` — SpaceX Stock Looks To Reclaim IPO Price After Earnings, Share Unlock (While the words "IPO" is present and SpaceX is a large company, theres a difference between "SpaceX embarks on upcoming IPO" and "SpaceX regaining IPO price". The IPO has already happened and Jev should make that distinction)
 - `code_policy` — What Every 65-Year-Old Should Know About Social Security (While "Social Security" is mentioned, this makes no mention of any changes to Social Security. Likely just an explainer and should be discarded)
+
+## Session `20260929_1732`
+
+Draw `20260929_1720`. Human keep 36, drop 64. Jev keep 29, drop 71. False keep 1, false drop 8.
+
+| You | reason | question | human_reason | title |
+|---|---|---|---|---|
+| KEEP | opinion | is_opinion | investing in a specific firm. Worth looking at | SGA Is Betting on Equinix (EQIX) as AI Demand Accelerates |
+| KEEP | punct | code:punct | Secondary sanctions is a heavy hitter---see how it plays out | Trump threatens Iran’s partners: How do secondary sanctions work? |
+| KEEP | reprint_weather | reprint_weather | Status change in major geopoplitical event | US-Iran Strait of Hormuz conflict escalation |
+| KEEP | junk_shape | code:junk_shape | Analyst downgrade of a firm | HSBC downgraded Amgen to Hold from Buy and cut its price target to $425 in a new biopharma catalyst review published today. |
+| KEEP | crowd | actor_power | price price reduction could mean things for the economy | FCT oil marketers begin pump price reduction by N20 - Realnews Magazine |
+| KEEP | source | code:source | Interesting AI concept | This Growth Stock Is Quietly Solving the AI Supercycle's Cooling Problem. Here's Why It Could Soar. - The Motley Fool |
+| KEEP | low_material | action_material | Following trades of billionaires is generally good practice | Billionaire David Tepper Trimmed Micron and Sold out of SanDisk. Here’s the New AI Stocks He’s Buying |
+| KEEP | low_material | action_material | Insider movements | Primerica President Sells 1,800 Shares for $562,770 |
+| DROP | code_ai | code:code_ai | not exactly earnings surprise despite the presence of the word "Earnings" | Tech stocks today: OpenAI's growth disappoints, Nvidia earnings provide next test for AI trade |
+
+Proposed one change: `action_material` (criteria, n=2).
+
+Rewrite `action_material` criteria from this session's misses. Score toward KEEP / false-opinion / core / powerful when: Following trades of billionaires is generally good practice; Insider movements. Sibling `new_instrument`: dated print / hold / CR / explores-rules / panel-endorse / named dollar deal is true. Do not edit closed lists. At most one decide() / threshold change.
+
+Code-path misses (not the Jev knob this round):
+- `punct` — Trump threatens Iran’s partners: How do secondary sanctions work? (Secondary sanctions is a heavy hitter---see how it plays out)
+- `junk_shape` — HSBC downgraded Amgen to Hold from Buy and cut its price target to $425 in a new biopharma catalyst review published today. (Analyst downgrade of a firm)
+- `source` — This Growth Stock Is Quietly Solving the AI Supercycle's Cooling Problem. Here's Why It Could Soar. - The Motley Fool (Interesting AI concept)
+- `code_ai` — Tech stocks today: OpenAI's growth disappoints, Nvidia earnings provide next test for AI trade (not exactly earnings surprise despite the presence of the word "Earnings")

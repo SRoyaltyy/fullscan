@@ -1133,6 +1133,66 @@
       "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQb1dMNnRPZ0JTNW00SjhqV1RlbHYwTFYtdngzWnRPNTVoMlRRVC01WWNILV9Ib0dHTk9ublhQX3VqeGlnekhxcDhDUjBNQ2dTcW5fMUw4SndIWUtxTU9GLW45TDJhVGpEMEI4TTBQYzRmY2I2Yk9UU3Y0R1ZHZzF5d3ZpdzY5NXhMNFVaSDVmTlJjelEyWWV2ZkVySQ?oc=5",
       "date": "2026-09-29",
       "archive": "parsed"
+    },
+    {
+      "id": "474bd55ab78f832f",
+      "title": "SGA Is Betting on Equinix (EQIX) as AI Demand Accelerates",
+      "source": "rss_yahoo_finance",
+      "published_at": "",
+      "url": "",
+      "date": "",
+      "archive": "hard_miss",
+      "from_grade": true
+    },
+    {
+      "id": "42d879c64cc9ed7a",
+      "title": "Trump threatens Iran’s partners: How do secondary sanctions work?",
+      "source": "rss_aljazeera_economy",
+      "published_at": "",
+      "url": "",
+      "date": "",
+      "archive": "hard_miss",
+      "from_grade": true
+    },
+    {
+      "id": "bf2f41d166e95848",
+      "title": "US-Iran Strait of Hormuz conflict escalation",
+      "source": "events",
+      "published_at": "",
+      "url": "",
+      "date": "",
+      "archive": "hard_miss",
+      "from_grade": true
+    },
+    {
+      "id": "b619f3299ceab105",
+      "title": "HSBC downgraded Amgen to Hold from Buy and cut its price target to $425 in a new biopharma catalyst review published today.",
+      "source": "finviz_export",
+      "published_at": "",
+      "url": "",
+      "date": "",
+      "archive": "hard_miss",
+      "from_grade": true
+    },
+    {
+      "id": "844baadf6263f5d5",
+      "title": "FCT oil marketers begin pump price reduction by N20 - Realnews Magazine",
+      "source": "rss_google_commodities",
+      "published_at": "",
+      "url": "",
+      "date": "",
+      "archive": "hard_miss",
+      "from_grade": true
+    },
+    {
+      "id": "fd0c9d17172fcd53",
+      "title": "This Growth Stock Is Quietly Solving the AI Supercycle's Cooling Problem. Here's Why It Could Soar. - The Motley Fool",
+      "source": "The Motley Fool",
+      "published_at": "",
+      "url": "",
+      "date": "",
+      "archive": "hard_miss",
+      "from_grade": true
     }
   ]
 }
