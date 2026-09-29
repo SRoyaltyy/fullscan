@@ -641,6 +641,12 @@ def decide(row: dict, answers: dict | None) -> dict:
     instrument = float(answers.get("new_instrument") or 0.0)
     geo = str(answers.get("geo") or "other")
     actor = str(answers.get("actor_power") or "other_person")
+    # Closed-list agency/newness may lift instrument later. Opinion
+    # veto uses Jev's own scores so a Fed-hinted column cannot sneak
+    # past (session 409 Treasury/Bitcoin leftover).
+    jev_fact = (
+        material >= MATERIAL_KEEP or instrument >= INSTRUMENT_KEEP
+    )
     hints = code_hints(title)
 
     if hints["state_head"]:
@@ -665,9 +671,7 @@ def decide(row: dict, answers: dict | None) -> dict:
     # A first-class fact in the title is not trash just because the
     # frame is a column or listicle. Session 409: opinion dropped
     # Cook / Anthropic IPO / Cyclospora / housing before material ran.
-    fact_keep = (
-        material >= MATERIAL_KEEP or instrument >= INSTRUMENT_KEEP
-    )
+    fact_keep = jev_fact
     if opinion >= TRASH_NOUL and not fact_keep:
         return pack("drop", "opinion")
     if reaction >= TRASH_NOUL and not fact_keep:

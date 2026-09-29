@@ -224,6 +224,19 @@ def test_decide_fact_vetoes_opinion():
         },
     )
     assert recap["decision"] == "drop" and recap["reason"] == "opinion"
+    bitcoin = decide(
+        {"title": (
+            "10-year Treasury yield may hit 6%, but Bitcoin could still "
+            "gain if rise is due to fiscal fears, not Fed hikes. - pluang.com"
+        )},
+        {
+            "is_opinion": 0.91, "is_tabloid": 0.06, "is_reaction": 0.05,
+            "geo": "other", "actor_power": "other_person",
+            "action_material": 0.12, "new_instrument": 0.08,
+            "reprint_weather": 0.10,
+        },
+    )
+    assert bitcoin["decision"] == "drop" and bitcoin["reason"] == "opinion", bitcoin
 
 
 def test_live_shaped_gold_misses():

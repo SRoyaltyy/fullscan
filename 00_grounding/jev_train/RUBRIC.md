@@ -19,7 +19,7 @@ Thresholds stay put unless the pending block names one:
 
 - question: `code:classifiable` (safety net, not a Jev knob)
 - kind: `criteria`
-- change: Replay of the 409 sheet on the live gate kept all 22 human K, but also kept 7 human D forecast/odds/tape titles (Warsh inflation column, Fed-hike odds, gold/platinum forecast + PCE, HK IPO revival, retail-sales live coverage). Tighten code-keep: drop bare `pce`/`cpi`/`retail sales`/`rate hike` and bare `ipo`; Fed voice is `warns` / `holds rates` only. Named `targets … IPO` and EIA / Fed hold / rig count still keep. Leave closed lists alone. Next Jev knob waits for a new Submit.
+- change: Replay of the 409 sheet on the live gate kept all 22 human K, but also kept 7 human D forecast/odds/tape titles (Warsh inflation column, Fed-hike odds, gold/platinum forecast + PCE, HK IPO revival, retail-sales live coverage). Tighten code-keep: drop bare `pce`/`cpi`/`retail sales`/`rate hike` and bare `ipo`; Fed voice is `warns` / `holds rates` only. Named `targets … IPO` and EIA / Fed hold / rig count still keep. Opinion veto uses Jev's own material/instrument, not a closed-list agency boost, so the Treasury/Bitcoin column drops. Leave closed lists alone. Next Jev knob waits for a new Submit.
 - do not edit `jev_closed_lists.json`
 <!-- PENDING_END -->
 
