@@ -844,18 +844,22 @@ def parse_grades_payload(raw: str) -> dict:
         if not isinstance(raw_row, dict):
             raise ValueError("grade row is not an object")
         title = str(raw_row.get("title") or "").strip()
-        if not title:
+        given_id = str(raw_row.get("id") or "").strip().lower()
+        if title:
+            tid = title_id(title)
+        elif ID_RE.match(given_id):
+            tid = given_id
+        else:
             raise ValueError("grade row missing title")
+        if tid in seen:
+            raise ValueError(f"duplicate title hash {tid}")
+        seen.add(tid)
         grade = str(raw_row.get("grade") or raw_row.get("human") or "").strip().upper()
         if grade not in {"K", "D", "?"}:
             raise ValueError(f"grade must be K, D, or ?, got {grade!r}")
         jev = str(raw_row.get("jev") or "").strip().upper()
-        if jev not in {"KEEP", "DROP"}:
+        if jev and jev not in {"KEEP", "DROP"}:
             raise ValueError(f"jev must be KEEP or DROP, got {jev!r}")
-        tid = title_id(title)
-        if tid in seen:
-            raise ValueError(f"duplicate title hash {tid}")
-        seen.add(tid)
         if raw_row.get("human_reason") is not None:
             human_reason = str(raw_row.get("human_reason") or "")
         else:
@@ -887,6 +891,84 @@ def parse_grades_payload(raw: str) -> dict:
         "nonce": str(blob.get("nonce") or "")[:80],
         "rows": rows,
     }
+
+
+def read_draw(*, stamp: str = "", root: Path | None = None,
+              ground: Path | None = None) -> dict | None:
+    """The page only sends id / grade / reason. The draw on main has the rest."""
+    root = root or ROOT
+    ground = ground or (root / "00_grounding")
+    paths: list[Path] = []
+    if stamp:
+        paths.append(train_dir(ground) / f"{stamp}_draw.json")
+    paths.append(root / "dashboard" / "jev-train" / DRAW_NAME)
+    for path in paths:
+        if not path.is_file():
+            continue
+        try:
+            blob = json.loads(path.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError):
+            continue
+        if not isinstance(blob, dict) or not isinstance(blob.get("items"), list):
+            continue
+        if stamp and blob.get("stamp") and blob.get("stamp") != stamp:
+            continue
+        return blob
+    return None
+
+
+def hydrate_grades(payload: dict, draw: dict | None) -> dict:
+    """Fill slim rows from the matching draw. Full rows stay as sent."""
+    rows = list(payload.get("rows") or [])
+    needs = any(not row.get("title") or row.get("jev") not in {"KEEP", "DROP"} for row in rows)
+    if not needs:
+        return payload
+    if not draw or not isinstance(draw.get("items"), list):
+        raise RuntimeError("slim grades need the matching draw.json on main")
+    by_id = {}
+    for item in draw.get("items") or []:
+        if not isinstance(item, dict):
+            continue
+        tid = str(item.get("id") or "").strip().lower()
+        if not tid and item.get("title"):
+            tid = title_id(str(item.get("title")))
+        if tid:
+            by_id[tid] = item
+    filled = []
+    for row in rows:
+        src = by_id.get(row.get("id") or "")
+        if src is None:
+            raise RuntimeError(f"grade id {row.get('id')} is not in draw {draw.get('stamp') or ''}")
+        jev = str(src.get("jev") or row.get("jev") or "").strip().upper()
+        if jev not in {"KEEP", "DROP"}:
+            raise RuntimeError(f"draw row {row.get('id')} has no Jev KEEP/DROP")
+        title = str(src.get("title") or row.get("title") or "").strip()
+        if not title:
+            raise RuntimeError(f"draw row {row.get('id')} has no title")
+        try:
+            instrument = float(src.get("new_instrument") or row.get("new_instrument") or 0.0)
+        except (TypeError, ValueError):
+            instrument = 0.0
+        filled.append({
+            **row,
+            "id": title_id(title),
+            "title": title[:400],
+            "source": str(src.get("source") or row.get("source") or "")[:160],
+            "pool": str(src.get("pool") or row.get("pool") or "")[:32],
+            "published_at": str(src.get("published_at") or row.get("published_at") or "")[:80],
+            "url": str(src.get("url") or row.get("url") or "")[:400],
+            "date": str(src.get("date") or row.get("date") or "")[:32],
+            "jev": jev,
+            "reason": str(src.get("reason") or row.get("reason") or "")[:80],
+            "geo": str(src.get("geo") or row.get("geo") or "")[:32],
+            "actor_power": str(src.get("actor_power") or row.get("actor_power") or "")[:32],
+            "new_instrument": instrument,
+        })
+    out = dict(payload)
+    out["rows"] = filled
+    if not out.get("draw_stamp"):
+        out["draw_stamp"] = str(draw.get("stamp") or "")[:32]
+    return out
 
 
 def count_marks(rows: list[dict]) -> int:
@@ -1149,6 +1231,10 @@ def write_grade(
         now = now.replace(tzinfo=dt.timezone.utc)
     root = root or ROOT
     ground = ground or (root / "00_grounding")
+    payload = hydrate_grades(
+        payload,
+        read_draw(stamp=str(payload.get("draw_stamp") or ""), root=root, ground=ground),
+    )
     rows = payload.get("rows") or []
     marked = count_marks(rows)
     if marked < minimum:
