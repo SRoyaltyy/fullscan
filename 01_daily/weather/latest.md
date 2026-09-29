@@ -5,8 +5,8 @@ Is today good for each *kind* of stock? Labels come from `data/universe/`; this 
 ## Snapshot
 
 - **Risk state:** OFF (general predict up score +1.3, conf 0.552)
-- **Yields:** flat (fred_dgs10) | **Dollar:** strong (dxy) | **Oil:** falling | **VIX:** falling (ratio 0.90 via vix/vix3m) spot 16.25
-- **Fear & Greed:** n/a | **Yield/SPX 5d corr:** -0.69
+- **Yields:** flat (fred_dgs10) | **Dollar:** strong (dxy) | **Oil:** falling | **VIX:** falling (ratio 0.89 via vix/vix3m) spot 16.16
+- **Fear & Greed:** n/a | **Yield/SPX 5d corr:** -0.73
 - **High-impact events:** 4 bullish vs 1 bearish | China: bull
 - ⚠️ **Data gaps:** risk tilted off by news_judge
 
