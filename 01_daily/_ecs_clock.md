@@ -1,6 +1,6 @@
 # ECS clock status
 
-- generated: 2026-09-28T08:33:28Z UTC / 2026-09-28 04:33 EDT
+- generated: 2026-09-29T08:25:30Z UTC / 2026-09-29 04:25 EDT
 - uid=0 user=root home=/home/gha
 - repo=/home/gha/actions-runner/_work/fullscan/fullscan
 - timer: enabled
@@ -11,8 +11,8 @@ n/a
 - defaults.timeoutSeconds: 10800 
 
 ```
-NEXT                        LEFT          LAST                        PASSED     UNIT                   ACTIVATES
-Mon 2026-09-28 17:55:00 CST 1h 21min left Fri 2026-09-25 17:55:04 CST 2 days ago fullscan-preopen.timer fullscan-preopen.service
+NEXT                        LEFT          LAST                        PASSED  UNIT                   ACTIVATES
+Tue 2026-09-29 17:55:00 CST 1h 29min left Mon 2026-09-28 17:55:04 CST 22h ago fullscan-preopen.timer fullscan-preopen.service
 
 1 timers listed.
 ```
