@@ -709,6 +709,95 @@ def test_session_1703_false_keeps_not_classifiable():
     assert expected["reason"] == "geo_other", expected
 
 
+def test_decide_fact_vetoes_reprint():
+    """Session 1732: a first-class chokepoint fact is not reprint-weather."""
+    # Title must not trip classifiable keep so decide() is the path under test.
+    scored = decide(
+        {
+            "title": "Tensions persist as tankers transit the Strait of Hormuz",
+            "_clock": {"has_new_verb": False, "hit": True, "place": "hormuz"},
+        },
+        {
+            "is_opinion": 0.08, "is_tabloid": 0.05, "is_reaction": 0.04,
+            "geo": "chokepoint", "actor_power": "infrastructure",
+            "action_material": 0.72, "new_instrument": 0.18,
+            "reprint_weather": 0.86,
+        },
+    )
+    assert scored["decision"] == "keep", scored
+    assert scored["reason"] == "choke_fact", scored
+    persist = decide(
+        {
+            "title": "Tensions persist as tankers transit the Strait of Hormuz",
+            "_clock": {"has_new_verb": False, "hit": True, "place": "hormuz"},
+        },
+        {
+            "is_opinion": 0.05, "is_tabloid": 0.03, "is_reaction": 0.06,
+            "geo": "chokepoint", "actor_power": "infrastructure",
+            "action_material": 0.40, "new_instrument": 0.10,
+            "reprint_weather": 0.86,
+        },
+    )
+    assert persist["decision"] == "drop" and persist["reason"] == "reprint_weather", persist
+
+
+def test_questions_encode_session_1732_criteria():
+    """Session 1732: 13F / insider / sanctions / Hormuz escalation / pump-price."""
+    opinion = QUESTIONS["is_opinion"]["criteria"]
+    material = QUESTIONS["action_material"]
+    instrument = QUESTIONS["new_instrument"]["instructions"]
+    geo = QUESTIONS["geo"]["criteria"]
+    actor = QUESTIONS["actor_power"]["criteria"]
+    reprint = QUESTIONS["reprint_weather"]["instructions"]
+    assert "13F" in opinion["false"]
+    assert "secondary sanctions" in opinion["false"]
+    assert "escalation" in opinion["false"]
+    assert "Tech stocks" in opinion["true"]
+    assert "Should you" in opinion["true"]
+    assert "13F" in material["instructions"]
+    assert "insider sale" in material["criteria"]["true"]
+    assert "secondary sanctions" in material["criteria"]["true"]
+    assert "tech stocks today" in material["criteria"]["false"]
+    assert "Secondary sanctions" in instrument
+    assert "Form-4" in instrument
+    assert "escalation" in geo["chokepoint"]
+    assert "pump-price" in actor["infrastructure"]
+    assert "pump-price" in actor["crowd"]
+    assert "escalation" in reprint
+
+
+def test_session_1732_false_keep_not_classifiable():
+    """Safety net: OpenAI name-drop recap is not a first-class AI fact."""
+    trash = (
+        "Tech stocks today: OpenAI's growth disappoints, Nvidia earnings "
+        "provide next test for AI trade"
+    )
+    assert not classifiable_reason(trash), classifiable_reason(trash)
+    decided = decide(
+        {"title": trash, "source": "reuters"},
+        {
+            "is_opinion": 0.88, "is_tabloid": 0.08, "is_reaction": 0.06,
+            "geo": "core", "actor_power": "listed_firm",
+            "action_material": 0.18, "new_instrument": 0.08,
+            "reprint_weather": 0.10,
+        },
+    )
+    assert decided["decision"] == "drop", decided
+    still_keep = [
+        "OpenAI Introduces ‘ChatGPT for Teens’ as Safety Concerns Grow - The New York Times",
+        "Trump threatens Iran’s partners: How do secondary sanctions work?",
+        "US-Iran Strait of Hormuz conflict escalation",
+    ]
+    asof = dt.date(2026, 9, 29)
+    state = load_chokepoint_state()
+    for title in still_keep:
+        assert classifiable_reason(title), (title, classifiable_reason(title))
+        reason = code_drop_reason(
+            {"title": title, "source": "reuters"}, asof=asof, state=state,
+        )
+        assert reason == "", (title, reason)
+
+
 def test_session_409_forecast_tape_is_not_classifiable():
     """Code-keep must not swallow forecast/odds/tape that name-drop a print."""
     trash = [
@@ -779,6 +868,9 @@ def main() -> None:
         test_questions_encode_session_1640_criteria,
         test_questions_encode_session_1703_criteria,
         test_session_1703_false_keeps_not_classifiable,
+        test_decide_fact_vetoes_reprint,
+        test_questions_encode_session_1732_criteria,
+        test_session_1732_false_keep_not_classifiable,
         test_session_409_forecast_tape_is_not_classifiable,
         test_workflow_wires_secret_and_stays_stdlib,
     ]
