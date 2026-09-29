@@ -1,8 +1,8 @@
 {
   "date": "2026-09-29",
-  "generated_at": "2026-09-29T04:16:18.974974-04:00",
+  "generated_at": "2026-09-29T04:17:29.438028-04:00",
   "phase": "morning_overlay",
-  "export": "finviz_2026-09-29.csv",
+  "export": "finviz_2026-09-28.csv",
   "n_tickers": 11616,
   "sectors": [
     {
@@ -8935,20 +8935,20 @@
   ],
   "ticker_news": [
     {
-      "time": "6 min",
+      "time": "8 min",
       "title": "J.P. Morgan Drops Sharp Take on Magnificent 7 Stocks",
       "url": "https://finance.yahoo.com/markets/stocks/articles/j-p-morgan-drops-sharp-080910133.html",
       "source": "GuruFocus.com",
       "tickers": [
-        "TSLA",
         "AAPL",
-        "GOOGL",
+        "TSLA",
+        "MSFT",
         "GOOG",
-        "MSFT"
+        "GOOGL"
       ]
     },
     {
-      "time": "7 min",
+      "time": "8 min",
       "title": "Oracle's $18 Billion AI Project Just Hit a Major Hurdle",
       "url": "https://finance.yahoo.com/technology/ai/articles/oracles-18-billion-ai-project-080820632.html",
       "source": "GuruFocus.com",
@@ -8958,7 +8958,7 @@
       ]
     },
     {
-      "time": "8 min",
+      "time": "9 min",
       "title": "Jefferies Says Meta Platform's Muse Is Not a Threat to Life Time",
       "url": "https://finance.yahoo.com/markets/stocks/articles/jefferies-says-meta-platforms-muse-080730324.html",
       "source": "GuruFocus.com",
@@ -8968,7 +8968,7 @@
       ]
     },
     {
-      "time": "10 min",
+      "time": "11 min",
       "title": "Stock market today: Dow, S&P 500, Nasdaq futures waver as leaked Anthropic IPO details raise alarm about AI risks",
       "url": "https://finance.yahoo.com/markets/live/stock-market-today-tuesday-september-29-dow-sp-500-nasdaq-080526442.html",
       "source": "Yahoo Finance",
@@ -8977,7 +8977,7 @@
       ]
     },
     {
-      "time": "16 min",
+      "time": "17 min",
       "title": "Pearson Acquires Workera, a Pioneer in AI-Native Enterprise Assessment and Skills Verification",
       "url": "/news/396232/pearson-acquires-workera-a-pioneer-in-ai-native-enterprise-assessment-and-skills-verification",
       "source": "PR Newswire",
@@ -8986,7 +8986,7 @@
       ]
     },
     {
-      "time": "16 min",
+      "time": "17 min",
       "title": "Nasdaq Calypso Launches Agentic Capabilities to Scale AI Adoption Across the Trade Lifecycle",
       "url": "/news/396233/nasdaq-calypso-launches-agentic-capabilities-to-scale-ai-adoption-across-the-trade-lifecycle",
       "source": "GlobeNewswire",
@@ -8995,7 +8995,7 @@
       ]
     },
     {
-      "time": "16 min",
+      "time": "17 min",
       "title": "Willis launches RiskIQ Nexus, giving organizations a single trusted view of risk and insurance data to drive greater value",
       "url": "/news/396234/willis-launches-riskiq-nexus-giving-organizations-a-single-trusted-view-of-risk-and-insurance-data-to-drive-greater-value",
       "source": "GlobeNewswire",
@@ -9004,7 +9004,7 @@
       ]
     },
     {
-      "time": "16 min",
+      "time": "17 min",
       "title": "Berkshire Buys Lennar Stock; Its Clayton Homes Unit Could Be Worth $25 Billion",
       "url": "https://www.barrons.com/articles/berkshire-hathaway-lennar-stock-clayton-homes-value-d85ab48c?mod=bar_FV",
       "source": "Barrons.com",
@@ -9017,7 +9017,7 @@
       ]
     },
     {
-      "time": "16 min",
+      "time": "17 min",
       "title": "German Firms Pair Application Modernization with AI Controls",
       "url": "https://www.businesswire.com/news/home/20260929891595/en/",
       "source": "Business Wire",
@@ -9026,7 +9026,7 @@
       ]
     },
     {
-      "time": "35 min",
+      "time": "36 min",
       "title": "Anthropic's Own IPO Filing Warns AI Could Threaten Humanity",
       "url": "https://finance.yahoo.com/technology/ai/articles/anthropics-own-ipo-filing-warns-074101950.html",
       "source": "BeInCrypto",
@@ -9035,7 +9035,7 @@
       ]
     },
     {
-      "time": "37 min",
+      "time": "38 min",
       "title": "Michael Burry Says Jensen Huang Is 'Becoming A Bit Like' Palantir's Alex Karp After Nvidia CEO's Media Blitz",
       "url": "https://finance.yahoo.com/markets/stocks/articles/michael-burry-says-jensen-huang-073842092.html",
       "source": "Stocktwits",
@@ -9045,7 +9045,7 @@
       ]
     },
     {
-      "time": "37 min",
+      "time": "38 min",
       "title": "Safety group urges EU to reject Tesla FSD over speed offset",
       "url": "https://finance.yahoo.com/news/safety-group-urges-eu-reject-073838822.html",
       "source": "Reuters",
@@ -9054,7 +9054,7 @@
       ]
     },
     {
-      "time": "46 min",
+      "time": "47 min",
       "title": "BIO-key Partners with Al Majlis Group to Expand Identity Security Across Arabian Gulf",
       "url": "/news/396231/bio-key-partners-with-al-majlis-group-to-expand-identity-security-across-arabian-gulf",
       "source": "GlobeNewswire",
@@ -9345,8 +9345,8 @@
       "url": "https://finance.yahoo.com/technology/ai/articles/morning-bid-products-could-end-043509416.html",
       "source": "Reuters",
       "tickers": [
-        "GOOGL",
-        "GOOG"
+        "GOOG",
+        "GOOGL"
       ]
     },
     {
@@ -10691,5 +10691,5 @@
   "calendar_window_days": 16,
   "econ_window_count": 218,
   "earnings_window_count": 64,
-  "overlay_at": "2026-09-29T04:16:18.974974-04:00"
+  "overlay_at": "2026-09-29T04:17:29.438028-04:00"
 }

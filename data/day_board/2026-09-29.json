@@ -1,6 +1,6 @@
 {
   "date": "2026-09-29",
-  "generated_at": "2026-09-29T04:16:19.106333-04:00",
+  "generated_at": "2026-09-29T04:17:29.623101-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -75,7 +75,7 @@
           "size": 17991,
           "said": "MAP HEAT \u2014 2026-09-29",
           "bullets": [
-            "Export `finviz_2026-09-29.csv` \u00b7 11616 names \u00b7 generated 2026-09-29T04:16:18.974974-04:00",
+            "Export `finviz_2026-09-28.csv` \u00b7 11616 names \u00b7 generated 2026-09-29T04:17:29.438028-04:00",
             "TAPE (live futures)"
           ]
         }
@@ -101,8 +101,8 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 97172,
-          "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
+          "size": 96986,
+          "said": "5887 tickers \u00b7 2047 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
           "bullets": [
             "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
             "Agnico Eagle Shares Fall 4.9% as Gold Prices Decline",
@@ -116,10 +116,10 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 11984,
+          "size": 11972,
           "said": "Finviz Daily Digest \u2014 2026-09-29",
           "bullets": [
-            "_Generated 2026-09-29T04:14:52.325670-04:00 \u00b7 export=data/exports/finviz_2026-09-29.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_",
+            "_Generated 2026-09-29T04:15:59.831908-04:00 \u00b7 export=data/exports/finviz_2026-09-28.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2047_",
             "Major indices (live quote page)"
           ]
         },
@@ -144,7 +144,7 @@
           "size": 2307,
           "said": "Finviz homepage market digest \u2014 2026-09-29",
           "bullets": [
-            "Generated:** 2026-09-29T04:14:59.778169-04:00 (America/New_York)",
+            "Generated:** 2026-09-29T04:16:07.835803-04:00 (America/New_York)",
             "Source:** `live`"
           ]
         },
@@ -171,7 +171,7 @@
           "bullets": []
         }
       ],
-      "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
+      "said": "5887 tickers \u00b7 2047 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
       "bullets": [
         "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
         "Agnico Eagle Shares Fall 4.9% as Gold Prices Decline",
@@ -196,8 +196,8 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 97172,
-          "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
+          "size": 96986,
+          "said": "5887 tickers \u00b7 2047 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
           "bullets": [
             "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
             "Agnico Eagle Shares Fall 4.9% as Gold Prices Decline",
@@ -508,8 +508,8 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 97172,
-          "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
+          "size": 96986,
+          "said": "5887 tickers \u00b7 2047 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
           "bullets": [
             "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
             "Agnico Eagle Shares Fall 4.9% as Gold Prices Decline",
@@ -597,8 +597,8 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 97172,
-          "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
+          "size": 96986,
+          "said": "5887 tickers \u00b7 2047 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
           "bullets": [
             "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
             "Agnico Eagle Shares Fall 4.9% as Gold Prices Decline",
@@ -671,8 +671,8 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 97172,
-          "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
+          "size": 96986,
+          "said": "5887 tickers \u00b7 2047 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
           "bullets": [
             "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
             "Agnico Eagle Shares Fall 4.9% as Gold Prices Decline",
@@ -1055,6 +1055,31 @@
         }
       ],
       "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-09-29\nExport `finviz_2026-09-29.csv` \u00b7 11616 names \u00b7 generated 2026-09-29T04:16:18.974974-04:00"
+    },
+    {
+      "key": "map_heat",
+      "title": "Map heat morning overlay",
+      "date": "2026-09-29",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-29T04:17:29.475747-04:00",
+      "files": [
+        {
+          "path": "01_daily/map_heat/2026-09-29_map_heat.json",
+          "ok": true,
+          "reason": "",
+          "size": 273096,
+          "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape"
+        },
+        {
+          "path": "01_daily/map_heat/2026-09-29_map_heat.md",
+          "ok": true,
+          "reason": "",
+          "size": 18356,
+          "preview": "# MAP HEAT \u2014 2026-09-29\nExport `finviz_2026-09-28.csv` \u00b7 11616 names \u00b7 generated 2026-09-29T04:17:29.438028-04:00"
+        }
+      ],
+      "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-09-29\nExport `finviz_2026-09-28.csv` \u00b7 11616 names \u00b7 generated 2026-09-29T04:17:29.438028-04:00"
     }
   ],
   "href": {
