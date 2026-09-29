@@ -42,3 +42,22 @@ The action then:
 Issue URL pattern: `https://github.com/SRoyaltyy/fullscan/issues/<number>` with title `jev-train YYYYMMDD_HHMM`.
 
 Those files are committed to `main` by the action only. The page never patches a closed list.
+
+## Rubric
+
+Submit records homework. It does not silently rewrite Jev. After each
+grade the action updates `00_grounding/jev_train/RUBRIC.md` and the
+issue grows a **Rubric (one Jev-analysis change)** block: which
+question missed, the `human_reason` lines, and exactly one proposed
+criteria or `decide()` change. Closed lists stay untouched.
+
+Paste the issue to Grok. Land that one change. New draw. The next
+grade appends another session to the same rubric. Same loop for every
+future batch.
+
+Hop-0 job: drop trash, keep anything Lane should classify. Jev is the
+question pack plus `decide()`, not more keep-regexes. Session 409
+rewrote `is_opinion`, `action_material`, `new_instrument`, `geo`,
+`actor_power`, and `reprint_weather`, and made `decide()` skip an
+opinion/reaction drop when material or instrument already clears its
+floor.

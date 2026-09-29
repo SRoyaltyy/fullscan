@@ -47,6 +47,12 @@ from .jev_gate import (
     normalize_title,
     tokens,
 )
+from .jev_rubric import (
+    propose_one_change,
+    render_issue_block,
+    rubric_path,
+    upsert_rubric,
+)
 try:
     from .jev_gate import GateKnobs
 except ImportError:
@@ -1089,7 +1095,14 @@ def render_session_md(session: dict) -> str:
     return "\n".join(lines)
 
 
-def issue_body(session: dict, grade: dict, *, json_url: str, grade_url: str) -> str:
+def issue_body(
+    session: dict,
+    grade: dict,
+    *,
+    json_url: str,
+    grade_url: str,
+    proposal: dict | None = None,
+) -> str:
     counts = grade.get("counts") or session.get("counts") or {}
     lines = [
         "Paste this to Grok to discuss.",
@@ -1175,9 +1188,11 @@ def issue_body(session: dict, grade: dict, *, json_url: str, grade_url: str) -> 
             if n
         ]
         lines.append(f"- {kind}: {', '.join(fired) if fired else 'none'}")
+    proposal = proposal if proposal is not None else propose_one_change(grade)
+    lines += ["", render_issue_block(proposal).rstrip(), ""]
     nonce = session.get("nonce") or ""
     if nonce:
-        lines += ["", f"nonce: {nonce}"]
+        lines += [f"nonce: {nonce}"]
     lines.append("")
     return "\n".join(lines)
 
@@ -1289,19 +1304,30 @@ def write_grade(
     session["json_url"] = json_url
     grade["json_url"] = json_url
     grade["grade_url"] = grade_url
-    body = issue_body(session, grade, json_url=json_url, grade_url=grade_url)
+    proposal = propose_one_change(grade)
+    body = issue_body(
+        session, grade, json_url=json_url, grade_url=grade_url, proposal=proposal,
+    )
     _reject_secrets(json.dumps(session) + json.dumps(grade) + body)
-    result = {"session": session, "grade": grade, "issue_body": body, "stamp": used}
+    result = {
+        "session": session,
+        "grade": grade,
+        "issue_body": body,
+        "stamp": used,
+        "rubric": proposal,
+    }
     if write:
         session_path = directory / f"{used}.json"
         md_path = directory / f"{used}.md"
         grade_path = directory / f"{used}_grade.json"
+        living = rubric_path(ground)
         for path in (session_path, md_path, grade_path):
             if path.exists():
                 raise FileExistsError(f"refusing to overwrite {path.name}")
         _write_json(session_path, session)
         md_path.write_text(render_session_md(session), encoding="utf-8")
         _write_json(grade_path, grade)
+        upsert_rubric(living, grade, proposal, write=True)
         hard_path = hard_miss_path(ground)
         ensure_pool_files(ground)
         hard_blob = read_hard_misses(hard_path)
@@ -1317,6 +1343,7 @@ def write_grade(
             "session": str(session_path),
             "markdown": str(md_path),
             "grade": str(grade_path),
+            "rubric": str(living),
         }
         result["closed_lists_untouched"] = closed
     print(
