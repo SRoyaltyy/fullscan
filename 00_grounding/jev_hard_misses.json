@@ -1,7 +1,7 @@
 {
   "schema": "jev-hard-misses-1",
   "note": "Rotating exam bank for the Jev trainer. The frozen holdout in jev_holdout.json supplies the 20-title exam while 20 of its titles are still absent from 00_grounding/jev_train/. After that, each draw takes the next unseen slice, starting at cursor, and skips any title hash already stored under jev_train/ and any title in jev_gold.json. Graded false keeps and false drops are appended here as a record; a hash already in jev_train/ is not drawn again. This file is not a closed list. The trainer never edits jev_closed_lists.json, never rewrites an existing jev_holdout.json, and never writes keep.json. Initial items were stratified from the parsed archive with seed 20260929, excluding gold and the frozen holdout.",
-  "cursor": 60,
+  "cursor": 0,
   "seed": 20260929,
   "items": [
     {
@@ -953,6 +953,186 @@
       "date": "",
       "archive": "hard_miss",
       "from_grade": true
+    },
+    {
+      "id": "5b5095c1931d6658",
+      "title": "Forget SMH. The Chip Fund That Owns Less Nvidia Is Beating It by 20 Points",
+      "source": "rss_yahoo_finance",
+      "published_at": "2026-08-08T22:41:06Z",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/forget-smh-chip-fund-owns-224106943.html",
+      "date": "2026-08-08",
+      "archive": "parsed"
+    },
+    {
+      "id": "39d8e196c38d52cb",
+      "title": "ADNOC Gas reports net income of $665m in Q2 2026",
+      "source": "rss_yahoo_finance",
+      "published_at": "2026-08-10T13:46:25Z",
+      "url": "https://finance.yahoo.com/energy/articles/adnoc-gas-reports-net-income-134625129.html",
+      "date": "2026-08-10",
+      "archive": "parsed"
+    },
+    {
+      "id": "5c1fe036d29ff11f",
+      "title": "Baron Discovery Fund Trimmed Advanced Energy Industries (AEIS) on Valuation Discipline",
+      "source": "rss_yahoo_finance",
+      "published_at": "2026-08-12T13:03:13Z",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/baron-discovery-fund-trimmed-advanced-130313405.html",
+      "date": "2026-08-12",
+      "archive": "parsed"
+    },
+    {
+      "id": "ee24828b928a2c58",
+      "title": "Nifty slips below 24,450 as Tata selloff weighs on benchmarks",
+      "source": "newsapi_Business Standard",
+      "published_at": "2026-08-12T12:01:11Z",
+      "url": "https://www.business-standard.com/markets/capital-market-news/nifty-slips-below-24-450-as-tata-selloff-weighs-on-benchmarks-126081201410_1.html",
+      "date": "2026-08-13",
+      "archive": "parsed"
+    },
+    {
+      "id": "3c9eccf4247d79ce",
+      "title": "Applied Materials shares are down on guidance and margin concerns. Analysts call it time to buy.",
+      "source": "rss_marketwatch_top",
+      "published_at": "Fri, 14 Aug 2026 12:09:00 GMT",
+      "url": "https://www.marketwatch.com/story/applied-materials-shares-are-down-on-elevated-expectations-heres-why-analysts-say-its-time-to-buy-bd34dd54?mod=mw_rss_topstories",
+      "date": "2026-08-14",
+      "archive": "parsed"
+    },
+    {
+      "id": "5d175b39a378a811",
+      "title": "Billionaire David Tepper Trimmed Micron and Sold out of SanDisk. Here’s the New AI Stocks He’s Buying",
+      "source": "rss_yahoo_finance",
+      "published_at": "2026-08-17T14:09:13Z",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/billionaire-david-tepper-trimmed-micron-140913563.html",
+      "date": "2026-08-17",
+      "archive": "parsed"
+    },
+    {
+      "id": "288a38b84b117149",
+      "title": "U.S. debt set to hit $40 trillion months earlier than expected - The Washington Post",
+      "source": "rss_google_business",
+      "published_at": "Tue, 18 Aug 2026 11:32:19 GMT",
+      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOYlhQbjVCWFFqOVFHRnloTTlvUFhISUFEcUJ5ZTJuckY4Z3JSaHowdW5fSzFuQ0Y3dWdFc3NNR2JSV1VrbGVJcHY2S2g0SDExdmF6a1FUXzZ4eVZKNWVKQU1RZGRscUcxZURhYUF6Z01nYUVnN3k4ZVZLQjczX1hpamhzdDFHNDRBakktd0hNN21GSGFwSjMtTXhoV3ROSmRRdDlmR1UxVXBqNDUy?oc=5",
+      "date": "2026-08-18",
+      "archive": "parsed"
+    },
+    {
+      "id": "8d1c70872763b20f",
+      "title": "Wealth Enhancement snaps up Weinand Financial",
+      "source": "rss_yahoo_finance",
+      "published_at": "2026-08-19T11:51:17Z",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/wealth-enhancement-snaps-weinand-financial-115117786.html",
+      "date": "2026-08-19",
+      "archive": "parsed"
+    },
+    {
+      "id": "e6d2e41fe25e07c6",
+      "title": "Tech stocks today: OpenAI's growth disappoints, Nvidia earnings provide next test for AI trade",
+      "source": "rss_yahoo_finance",
+      "published_at": "2026-08-17T13:29:45Z",
+      "url": "https://finance.yahoo.com/technology/live/tech-stocks-today-openais-growth-disappoints-nvidia-earnings-provide-next-test-for-ai-trade-132945569.html",
+      "date": "2026-08-20",
+      "archive": "parsed"
+    },
+    {
+      "id": "e9453ee33e9462cc",
+      "title": "Nvidia Stock Is Trading at 33X Earnings, Its Cheapest Price in 5 Years. Should You Buy It Before Aug. 26? - The Motley Fool",
+      "source": "rss_google_markets",
+      "published_at": "Fri, 21 Aug 2026 12:16:26 GMT",
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQMlNIcmRwMElBYmVpVkExaHdBZGRucUkwcDVvZmI4NVpwSklCNDBfbnJKRGd6akp1cmYyN1lxV2tnQnRYMGpuZGFnaC1kY3A2ZV96SU5CVTNYM1FUOVE0b2c5M08xdWx0eHRnVnhVNVZvbzNGZXJTNjM2NUFMXzU5LWphZFk3M3pHUlFrUEJoTQ?oc=5",
+      "date": "2026-08-21",
+      "archive": "parsed"
+    },
+    {
+      "id": "458116a3a6be93dd",
+      "title": "Strategy Remains Down 20% in 2026: A Prominent Analyst Still Sees 265% Upside After Downward Adjustment",
+      "source": "rss_yahoo_finance",
+      "published_at": "2026-08-24T11:33:04Z",
+      "url": "https://finance.yahoo.com/markets/crypto/articles/strategy-remains-down-20-2026-113304923.html",
+      "date": "2026-08-24",
+      "archive": "parsed"
+    },
+    {
+      "id": "5dc4be2f41f943ac",
+      "title": "Wells Fargo strongly resets Marvell stock target before earnings - Yahoo Finance",
+      "source": "rss_google_markets",
+      "published_at": "Mon, 24 Aug 2026 18:14:00 GMT",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQQUQ3cjNDNk1oMTczckZ3QmlJcWotZk1rUjJreWhUcmswWkcwVDlBN19ORFhCVFktMnRQUE4xa0NMWVpISGJIM0kwUWxYOTg4Qnc0ZENrQjNNaWxncUI1bms2RXZ5OXpjcU43dzh5MDZkd0MxcS1pTUJuQ0xtVjIyR2ExcEZ4T1lZakNwZEpBN21JSUdyRHQ4RGlqdndSVWJFTFE?oc=5",
+      "date": "2026-08-25",
+      "archive": "parsed"
+    },
+    {
+      "id": "1e91f492c54d3a98",
+      "title": "Primerica President Sells 1,800 Shares for $562,770",
+      "source": "rss_yahoo_finance",
+      "published_at": "2026-08-24T23:05:01Z",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/primerica-president-sells-1-800-230501813.html",
+      "date": "2026-08-26",
+      "archive": "parsed"
+    },
+    {
+      "id": "c30efa24dd1e7868",
+      "title": "Kremlin says CIA head met Russian intelligence officials, but not Putin",
+      "source": "rss_aljazeera_economy",
+      "published_at": "Wed, 26 Aug 2026 14:30:24 +0000",
+      "url": "https://www.aljazeera.com/news/2026/8/26/kremlin-says-cia-head-met-russian-intelligence-officials-but-not-putin?traffic_source=rss",
+      "date": "2026-08-27",
+      "archive": "parsed"
+    },
+    {
+      "id": "32e9d89b43892154",
+      "title": "Elliott Bets Multibillion-Dollar Position on Closing Synopsys’ (SNPS) Peer Discount",
+      "source": "rss_yahoo_finance",
+      "published_at": "2026-08-27T13:56:25Z",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/elliott-bets-multibillion-dollar-position-135625038.html",
+      "date": "2026-08-28",
+      "archive": "parsed"
+    },
+    {
+      "id": "726ade92eea3db57",
+      "title": "Jobs report, Broadcom results pose next hurdles for stock market rally - Yahoo Finance",
+      "source": "rss_google_markets",
+      "published_at": "Fri, 28 Aug 2026 20:22:06 GMT",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQeDA2cUZ0QzNPRTVuNzBlRVNTZFpJUTdTYldHb1BzYTJyd2k2T2dwVlZ5ZDJXTE9GX0dzMl8zTVhpYXljTXMwN1hlV2RlX05sUFA2YU42MWpEQkY5OElMdklmMUJBZ2tYbUR1OExkTXBpTzNvSFBqZGl5YkRabmJfUlNSeVVsVWN5R2hjaTlNM3pEaS0wRHlRVWIyR05UdXc?oc=5",
+      "date": "2026-08-31",
+      "archive": "parsed"
+    },
+    {
+      "id": "9ce1496623fa5c4f",
+      "title": "Hindus take holy dip in India’s rivers on sacred holiday",
+      "source": "rss_aljazeera_economy",
+      "published_at": "Wed, 29 Jul 2026 18:49:33 +0000",
+      "url": "https://www.aljazeera.com/video/newsfeed/2026/7/29/hindus-take-holy-dip-in-indias-rivers-on-sacred-holiday?traffic_source=rss",
+      "date": "2026-09-03",
+      "archive": "parsed"
+    },
+    {
+      "id": "8533daf476a97e15",
+      "title": "EUR/USD, Nasdaq Price Outlook: Reversal Risks Build - stonex.com",
+      "source": "rss_google_commodities",
+      "published_at": "Wed, 23 Sep 2026 14:25:12 GMT",
+      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQeV85Z3hDc1E0OU1DU3hZbEJYZFRBOXdZa0RWUElKYTI3X0R1dTU4TVc0LUkzTnI5YkdFZ3hsMG9pNmtiWnVadkY1WXA0XzV1R3gxN2h3VFZFNkswWm9ZU1VmVEZod2JtQkFDOGhJTUpfSElFMG5rdnBORjIwUGZEQUwwN3RQbllOZHZQamZ6Skw0UW5Ea2VZdWVYeUtqYWtEQ3NGQ1dYZTVmS1NL?oc=5",
+      "date": "2026-09-25",
+      "archive": "parsed"
+    },
+    {
+      "id": "67f06ed85ee95f20",
+      "title": "US Market: Wall Street rally faces fresh test as jobs, inflation data loom - The Economic Times",
+      "source": "rss_google_macro",
+      "published_at": "Mon, 28 Sep 2026 04:45:00 GMT",
+      "url": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxNMEtzcXhkMXJaOU1LaWRUUVM0MUFvd0d5UWE1OUJsc1FuWmliQzNRMVFURmxnd2M4eWdrT0VQZHJDOWVHS0ZGU2R5MG5WLU9qSE0xU0NIN203b05yb0wwd21XWkYxcGR0SUhoR3NhaVFNazBBN3lPYjN1UGNjVVZzNW9WRWg0S2dMa0ZQRnhoR0g2YmFFOXRCZzFJNEJjUFNlZHNOY2pzQTd4dlB3RWJIYXdfRHprVFhPbllzV2VqZ3h2RmJUWGIydjU0UUVOUGpTc01XODl4RnBaNDBsRzdnUks4WmlhaGkwMXI1aGVuTEJ6RXZaNVhxZHVn0gH6AUFVX3lxTE0wS3NxeGQ",
+      "date": "2026-09-28",
+      "archive": "parsed"
+    },
+    {
+      "id": "2fceb24dd63a5b4b",
+      "title": "Celsius (CELH) Stock Could Be Fully Priced On Its Earnings Story - finance.yahoo.com",
+      "source": "rss_google_markets",
+      "published_at": "Tue, 29 Sep 2026 02:08:00 GMT",
+      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQb1dMNnRPZ0JTNW00SjhqV1RlbHYwTFYtdngzWnRPNTVoMlRRVC01WWNILV9Ib0dHTk9ublhQX3VqeGlnekhxcDhDUjBNQ2dTcW5fMUw4SndIWUtxTU9GLW45TDJhVGpEMEI4TTBQYzRmY2I2Yk9UU3Y0R1ZHZzF5d3ZpdzY5NXhMNFVaSDVmTlJjelEyWWV2ZkVySQ?oc=5",
+      "date": "2026-09-29",
+      "archive": "parsed"
     }
   ]
 }
