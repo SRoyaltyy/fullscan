@@ -519,6 +519,31 @@ def test_session_409_false_drops_are_keeps():
         assert decided["decision"] == "drop", (title, decided)
 
 
+def test_session_409_forecast_tape_is_not_classifiable():
+    """Code-keep must not swallow forecast/odds/tape that name-drop a print."""
+    trash = [
+        "Fed’s Warsh Rebuked by Investors Craving a Real Inflation Fight - Bloomberg",
+        "Markets Price Roughly 69% Chance of October Fed Rate Hike - tokenpost.com",
+        "Gold Price Forecast — XAU/USD ($4,146) Plunges 3.3% as 5.22% Yields — $4,000 Test or $4,300 Rebound After PCE - TradingNEWS",
+        "Platinum Price Forecast: Fed Hike Bets Pressure Prices Below $1,700. - FXEmpire",
+        "Dollar Holds Steady in NY Trading as US-Iran Conflict Lifts Oil Prices and Rates; PCE and Jobs Report Due This Week - finance.biggo.com",
+        "Hong Kong’s IPO revival faces test as 3 new stocks stumble on debut - South China Morning Post",
+        "Stock Market Today: Dow Steady After Surprise Retail Sales; Applied Materials Dives On Earnings (Live Coverage)",
+    ]
+    for title in trash:
+        assert not classifiable_reason(title), (title, classifiable_reason(title))
+        decided = decide(
+            {"title": title, "source": "reuters"},
+            {
+                "is_opinion": 0.9, "is_tabloid": 0.1, "is_reaction": 0.1,
+                "geo": "other", "actor_power": "other_person",
+                "action_material": 0.1, "new_instrument": 0.1,
+                "reprint_weather": 0.1,
+            },
+        )
+        assert decided["decision"] == "drop", (title, decided)
+
+
 def test_workflow_wires_secret_and_stays_stdlib():
     yml = (ROOT / ".github" / "workflows" / "jev_hop0.yml").read_text(encoding="utf-8")
     assert "secrets.JEV_API_KEY" in yml
@@ -558,6 +583,7 @@ def main() -> None:
         test_mine_junk_shapes_runs,
         test_api_key_not_in_repo_and_env,
         test_session_409_false_drops_are_keeps,
+        test_session_409_forecast_tape_is_not_classifiable,
         test_workflow_wires_secret_and_stays_stdlib,
     ]
     failed = 0

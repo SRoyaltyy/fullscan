@@ -70,12 +70,11 @@ PUNCT_TRASH = re.compile(r"[?!]")
 # a named deal, or a dated policy move.
 _CLASS_PRINT = re.compile(
     r"(?i)(?:"
-    r"\b(?:cpi|pce|ppi|nfp|eia|wasde|gdp|ism)\b"
+    r"\beia\b"
+    r"|\bwasde\b"
     r"|\bnonfarm payrolls\b"
     r"|\b(?:jobless|initial) claims\b"
-    r"|\bretail sales\b"
     r"|\bholds? rates?\b"
-    r"|\brate (?:hike|cut|decision|hold|holds)\b"
     r"|\bfederal reserve holds\b"
     r"|\bfed holds rates\b"
     r"|\bpetroleum and natural gas storage\b"
@@ -84,12 +83,14 @@ _CLASS_PRINT = re.compile(
 )
 _CLASS_DEAL = re.compile(
     r"(?i)(?:"
-    r"\b(?:merger|acquisition|acquires?|ipo)\b"
+    r"\b(?:merger|acquisition|acquires?)\b"
     r"|\bpays \$?\d"
     r"|\bsold to\b"
     r"|\bbuyout\b"
     r"|\bproduct launch\b"
     r"|\bintroduces\b"
+    r"|\b(?:targets?|record|files?|prices?|launches?)\b.{0,40}\bipo\b"
+    r"|\bipo\b.{0,40}(?:targets?|files?|prices?)"
     r")"
 )
 _CLASS_POLICY = re.compile(
@@ -116,7 +117,7 @@ _CLASS_AI = re.compile(
 )
 _CLASS_FED_VOICE = re.compile(
     r"(?i)\b(?:fed|federal reserve|cook|powell|warsh)\b.{0,56}"
-    r"\b(?:warns?|hike|inflation|holds rates)\b"
+    r"\b(?:warns?|holds rates)\b"
 )
 _CLASS_CHOKE_NEW = re.compile(
     r"(?i)\b(?:rejects?|accepts?|seizes?|strikes?)\b.{0,48}"

@@ -15,12 +15,11 @@ Thresholds stay put unless the pending block names one:
 `CROWD_DROP=0.50`.
 
 <!-- PENDING_BEGIN -->
-## Pending one change (session `20260929_1223`)
+## Pending one change (session `20260929_1223` replay)
 
-- question: `action_material`
+- question: `code:classifiable` (safety net, not a Jev knob)
 - kind: `criteria`
-- misses on that question: 10
-- change: Rewrite `action_material` so a dated official print / hold / CR, named M&A, regulator exploring rules, major-AI product or IPO, court dismiss, pathogen-recall scare, or EV / tariff / Social Security policy is true — not only "cash flows to a US ticker this week." Sibling `new_instrument`: EIA figures, Fed holds rates, House CR through a date, CFTC explores rules, FDA panel endorse, named dollar deal, court dismiss are true. The one `decide()` change this round: do not drop `opinion` / `reaction` when `action_material >= 0.65` or `new_instrument >= 0.60`.
+- change: Replay of the 409 sheet on the live gate kept all 22 human K, but also kept 7 human D forecast/odds/tape titles (Warsh inflation column, Fed-hike odds, gold/platinum forecast + PCE, HK IPO revival, retail-sales live coverage). Tighten code-keep: drop bare `pce`/`cpi`/`retail sales`/`rate hike` and bare `ipo`; Fed voice is `warns` / `holds rates` only. Named `targets … IPO` and EIA / Fed hold / rig count still keep. Leave closed lists alone. Next Jev knob waits for a new Submit.
 - do not edit `jev_closed_lists.json`
 <!-- PENDING_END -->
 
