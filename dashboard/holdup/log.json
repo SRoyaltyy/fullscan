@@ -4558,5 +4558,242 @@
     ],
     "sha256": "c6b9e4e1532585c94acb57a632d98a153f6cca6dcca49031359795d6436acfd9",
     "unfilled": []
+  },
+  {
+    "approved_by": "Cyrus 2026-09-28 21:02 ET",
+    "changed_legs": [
+      {
+        "corrected": {
+          "fee": 5.8437,
+          "fill": 2.75,
+          "fill_basis": "open",
+          "liquidity_cap_shares": 7257,
+          "rank": 4,
+          "shares": 453,
+          "sources": [
+            "ohlc_hot"
+          ],
+          "ticker": "FEAM"
+        },
+        "sealed": {
+          "fee": 5.8566,
+          "fill": 2.75,
+          "fill_basis": "open",
+          "liquidity_cap_shares": 7257,
+          "rank": 4,
+          "shares": 454,
+          "sources": [
+            "ohlc_hot"
+          ],
+          "ticker": "FEAM"
+        },
+        "side": "buy",
+        "ticker": "FEAM"
+      },
+      {
+        "corrected": {
+          "fee": 3.4314,
+          "fill": 4.68,
+          "fill_basis": "open",
+          "liquidity_cap_shares": 5602,
+          "rank": 3,
+          "shares": 266,
+          "sources": [
+            "yday_gainer",
+            "yday_mover"
+          ],
+          "ticker": "SHMD"
+        },
+        "sealed": {
+          "fee": 3.4443,
+          "fill": 4.68,
+          "fill_basis": "open",
+          "liquidity_cap_shares": 5602,
+          "rank": 3,
+          "shares": 267,
+          "sources": [
+            "yday_gainer",
+            "yday_mover"
+          ],
+          "ticker": "SHMD"
+        },
+        "side": "buy",
+        "ticker": "SHMD"
+      },
+      {
+        "corrected": {
+          "fee": 14.19,
+          "fill": 1.125,
+          "fill_basis": "open",
+          "liquidity_cap_shares": 64761,
+          "rank": 2,
+          "shares": 1100,
+          "sources": [
+            "yday_gainer",
+            "yday_mover"
+          ],
+          "ticker": "SRFM"
+        },
+        "sealed": {
+          "fee": 16.3324,
+          "fill": 0.9439,
+          "fill_basis": "open",
+          "liquidity_cap_shares": 77186,
+          "rank": 2,
+          "shares": 1313,
+          "sources": [
+            "yday_gainer",
+            "yday_mover"
+          ],
+          "ticker": "SRFM"
+        },
+        "side": "buy",
+        "ticker": "SRFM"
+      },
+      {
+        "corrected": {
+          "fee": 2.184,
+          "fill": 16.0,
+          "reason": "hold-expired",
+          "shares": 58,
+          "ticker": "SECZ"
+        },
+        "sealed": {
+          "fee": 2.184,
+          "fill": 16.209999,
+          "reason": "hold-expired",
+          "shares": 58,
+          "ticker": "SECZ"
+        },
+        "side": "sell",
+        "ticker": "SECZ"
+      }
+    ],
+    "corrected": {
+      "buys": [
+        {
+          "fee": 14.19,
+          "fill": 1.125,
+          "fill_basis": "open",
+          "liquidity_cap_shares": 64761,
+          "rank": 2,
+          "shares": 1100,
+          "sources": [
+            "yday_gainer",
+            "yday_mover"
+          ],
+          "ticker": "SRFM"
+        },
+        {
+          "fee": 3.4314,
+          "fill": 4.68,
+          "fill_basis": "open",
+          "liquidity_cap_shares": 5602,
+          "rank": 3,
+          "shares": 266,
+          "sources": [
+            "yday_gainer",
+            "yday_mover"
+          ],
+          "ticker": "SHMD"
+        },
+        {
+          "fee": 5.8437,
+          "fill": 2.75,
+          "fill_basis": "open",
+          "liquidity_cap_shares": 7257,
+          "rank": 4,
+          "shares": 453,
+          "sources": [
+            "ohlc_hot"
+          ],
+          "ticker": "FEAM"
+        }
+      ],
+      "cash_primary": 5.77281002151085,
+      "cost_model": "futubull+0.5%/side",
+      "date": "2026-09-28",
+      "excluded_on_fill": [],
+      "holdings": [
+        {
+          "cost_primary": 1257.8224499999997,
+          "entry_date": "2026-09-28",
+          "entry_px": 2.75,
+          "last_px": 2.75,
+          "min_hold": 1,
+          "peak_px": 2.75,
+          "shares": 453,
+          "ticker": "FEAM"
+        },
+        {
+          "cost_primary": 1254.5357999999997,
+          "entry_date": "2026-09-28",
+          "entry_px": 4.68,
+          "last_px": 4.68,
+          "min_hold": 1,
+          "peak_px": 4.68,
+          "shares": 266,
+          "ticker": "SHMD"
+        },
+        {
+          "cost_primary": 1257.8774999999998,
+          "entry_date": "2026-09-28",
+          "entry_px": 1.125,
+          "last_px": 1.125,
+          "min_hold": 1,
+          "peak_px": 1.125,
+          "shares": 1100,
+          "ticker": "SRFM"
+        },
+        {
+          "cost_primary": 8149.391102416991,
+          "entry_date": "2026-09-25",
+          "entry_px": 15.581100463867188,
+          "last_px": 16.85,
+          "min_hold": 2,
+          "peak_px": 16.85,
+          "shares": 520,
+          "ticker": "USDE"
+        }
+      ],
+      "holdup_on": false,
+      "kind": "open_fill",
+      "morning_s": -6.14,
+      "open_source": "yahoo_split_adjusted_daily_open",
+      "plan_sha256": "b129d5505394941231f1e2c61c37949b9bad920fff9c9b09df3b51e6dd7b6951",
+      "pnl_status": "pending",
+      "recipe": "union_hot_n4_holdup__w0",
+      "sells": [
+        {
+          "fee": 4.9414,
+          "fill": 5.138,
+          "reason": "hold-expired",
+          "shares": 377,
+          "ticker": "GLND"
+        },
+        {
+          "fee": 2.184,
+          "fill": 16.0,
+          "reason": "hold-expired",
+          "shares": 58,
+          "ticker": "SECZ"
+        },
+        {
+          "fee": 2.115,
+          "fill": 26.5,
+          "reason": "hold-expired",
+          "shares": 35,
+          "ticker": "TJGC"
+        }
+      ],
+      "unfilled": []
+    },
+    "date": "2026-09-28",
+    "kind": "open_fill_correction",
+    "open_fill_sha256": "c6b9e4e1532585c94acb57a632d98a153f6cca6dcca49031359795d6436acfd9",
+    "plan_sha256": "b129d5505394941231f1e2c61c37949b9bad920fff9c9b09df3b51e6dd7b6951",
+    "reason": "stale_bar: previous-session bar used for SRFM, SECZ",
+    "recipe": "union_hot_n4_holdup__w0",
+    "sha256": "f62b7e79975736e924ad8f852fafbbad72ac930f7957ebb9885fe1ae44885bd4"
   }
 ]

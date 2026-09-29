@@ -2,6 +2,6 @@
   "date": "2026-09-28",
   "latest_skip": null,
   "pending": "2026-09-28",
-  "phase": "plan",
+  "phase": "open_fill",
   "recipe": "union_hot_n4_holdup__w0"
 }
