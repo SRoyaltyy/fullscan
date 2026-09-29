@@ -1,6 +1,6 @@
 {
   "date": "2026-09-29",
-  "generated_at": "2026-09-29T14:42:33.315506-04:00",
+  "generated_at": "2026-09-29T14:42:39.200800-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -3156,6 +3156,115 @@
         }
       ],
       "preview": "1d BUY ARHS, SONO, SN, PDFS, SHOO, DT, GCT, OLLI \u00b7 SELL ROIV, PYXS, IKT, SOC, AXSM, CGEM, IFRX, BIDU \u00b7 green 179 \u00b7 TAL, GLBE, KEYS, SHOO, EMBJ, CVLT, NTNX, FIGS, AVT, SN \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-09-29 BUY ARHS, SONO, SN, PDFS, SHOO, DT, GCT, OLLI \u00b7 SELL ROIV, PYXS, IKT, SOC, AXSM, CGEM, IFRX, BIDU \u00b7 2026-09-29 BUY ARHS, SONO, SN, PDFS, SHOO, DT, GCT, OLLI \u00b7 SELL ROIV, PYXS, IKT, SOC, AXSM, CGEM, IFRX, BIDU \u00b7 # Stock book \u2014 2026-09-29\n_Generated 2026-09-29T14:42:25.859879-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+    },
+    {
+      "key": "live_boards",
+      "title": "Live 1d BUY/SELL strip",
+      "date": "2026-09-29",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-29T14:42:38.420913-04:00",
+      "files": [
+        {
+          "path": "data/day_board/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 19292,
+          "preview": "2026-09-29 BUY ARHS, SONO, SN, PDFS, SHOO, DT, GCT, OLLI \u00b7 SELL ROIV, PYXS, IKT, SOC, AXSM, CGEM, IFRX, BIDU"
+        },
+        {
+          "path": "data/day_board/latest.json",
+          "ok": true,
+          "reason": "",
+          "size": 773,
+          "preview": "keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages"
+        },
+        {
+          "path": "data/day_board/2026-09-29.json",
+          "ok": true,
+          "reason": "",
+          "size": 160669,
+          "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href"
+        },
+        {
+          "path": "data/day_board/2026-09-29_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 121168,
+          "preview": "2026-09-29 BUY ARHS, SONO, SN, PDFS, SHOO, DT, GCT, OLLI \u00b7 SELL ROIV, PYXS, IKT, SOC, AXSM, CGEM, IFRX, BIDU"
+        },
+        {
+          "path": "data/day_board/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 299206,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "data/day_board/2026-09-29_strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 272849,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "data/day_board/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 314924,
+          "preview": "2026-09-29 BUY ARHS, SONO, SN, PDFS, SHOO, DT, GCT, OLLI \u00b7 SELL ROIV, PYXS, IKT, SOC, AXSM, CGEM, IFRX, BIDU"
+        },
+        {
+          "path": "data/factor_mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 299206,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 121168,
+          "preview": "2026-09-29 BUY ARHS, SONO, SN, PDFS, SHOO, DT, GCT, OLLI \u00b7 SELL ROIV, PYXS, IKT, SOC, AXSM, CGEM, IFRX, BIDU"
+        },
+        {
+          "path": "dashboard/factor-mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 299206,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 299206,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 314924,
+          "preview": "2026-09-29 BUY ARHS, SONO, SN, PDFS, SHOO, DT, GCT, OLLI \u00b7 SELL ROIV, PYXS, IKT, SOC, AXSM, CGEM, IFRX, BIDU"
+        },
+        {
+          "path": "data/day_board/hold_live_px.json",
+          "ok": true,
+          "reason": "",
+          "size": 1702,
+          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
+        },
+        {
+          "path": "dashboard/factor-mine/hold_live_px.json",
+          "ok": true,
+          "reason": "",
+          "size": 1702,
+          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
+        }
+      ],
+      "preview": "2026-09-29 BUY ARHS, SONO, SN, PDFS, SHOO, DT, GCT, OLLI \u00b7 SELL ROIV, PYXS, IKT, SOC, AXSM, CGEM, IFRX, BIDU \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href \u00b7 2026-09-29 BUY ARHS, SONO, SN, PDFS, SHOO, DT, GCT, OLLI \u00b7 SELL ROIV, PYXS, IKT, SOC, AXSM, CGEM, IFRX, BIDU \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-29 BUY ARHS, SONO, SN, PDFS, SHOO, DT, GCT, OLLI \u00b7 SELL ROIV, PYXS, IKT, SOC, AXSM, CGEM, IFRX, BIDU \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-29 BUY ARHS, SONO, SN, PDFS, SHOO, DT, GCT, OLLI \u00b7 SELL ROIV, PYXS, IKT, SOC, AXSM, CGEM, IFRX, BIDU \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, orde"
     }
   ],
   "href": {
