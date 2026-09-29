@@ -1,6 +1,6 @@
 # Lesson efficacy — did promoted lessons change outcomes?
 
-_Generated 2026-09-29T06:10:34.863526-04:00_ · window: 7 graded runs each side of activation · deltas within ±5pp count as flat.
+_Generated 2026-09-29T16:10:40.615770-04:00_ · window: 7 graded runs each side of activation · deltas within ±5pp count as flat.
 
 This is correlation, not proof — but a lesson whose topic got WORSE after promotion has no evidence of working and is a retirement candidate for the monthly distill.
 
@@ -312,7 +312,7 @@ This is correlation, not proof — but a lesson whose topic got WORSE after prom
 
 | Topic | prev 10 | last 10 |
 |-------|---------|---------|
-| general | 50% (n=10) | 60% (n=10) |
+| general | 60% (n=10) | 50% (n=10) |
 | sector:Basic Materials | 50% (n=10) | 20% (n=10) |
 | sector:Communication Services | 20% (n=10) | 10% (n=10) |
 | sector:Consumer Cyclical | 50% (n=10) | 30% (n=10) |
