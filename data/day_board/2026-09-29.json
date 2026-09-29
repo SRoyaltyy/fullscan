@@ -1,6 +1,6 @@
 {
   "date": "2026-09-29",
-  "generated_at": "2026-09-29T04:26:52.204781-04:00",
+  "generated_at": "2026-09-29T04:28:30.616444-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -183,7 +183,7 @@
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 1,
+      "n_req_ok": 2,
       "n_req": 20,
       "n_opt_ok": 1,
       "n_opt": 3,
@@ -241,11 +241,16 @@
           "name": "News parse JSON",
           "path": "01_daily/news/2026-09-29_parsed.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 391762,
+          "said": "news_mode: on \u00b7 400 raw / 91 usable \u00b7 Gold drops 3.4% amid rising U.S. Treasury yields; Bitcoin slips near $83,000 as",
+          "bullets": [
+            "Gold drops 3.4% amid rising U.S. Treasury yields; Bitcoin slips near $83,000 as Fed rate hike fears grow. - Pluang",
+            "Dow Jones futures drop as rising oil, US Treasury yields fuel Fed rate hike fears | FXStreet - \u0634\u0628\u0643\u0629 \u062a\u0648\u0627\u0635\u0644 \u0627\u0644\u0625\u062e\u0628\u0627\u0631\u064a\u0629",
+            "Silver Price Forecast: XAG/USD falls to near $62.00 amid Fed rate hike odds | FXStreet - \u0634\u0628\u0643\u0629 \u062a\u0648\u0627\u0635\u0644 \u0627\u0644\u0625\u062e\u0628\u0627\u0631\u064a\u0629",
+            "United States Dollar Index strengthens as oil surge bolster Fed rate hike bets | FXStreet - \u0634\u0628\u0643\u0629 \u062a\u0648\u0627\u0635\u0644 \u0627\u0644\u0625\u062e\u0628\u0627\u0631\u064a\u0629"
+          ]
         },
         {
           "key": "events",
@@ -331,13 +336,13 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 7546,
-          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 18 fail",
+          "size": 7544,
+          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 17 fail",
           "bullets": [
             "general_predict:missing",
             "events:missing",
             "news_judge:missing",
-            "news_parse:missing"
+            "news_actions:missing"
           ]
         },
         {
@@ -484,8 +489,13 @@
           "bullets": []
         }
       ],
-      "said": "",
-      "bullets": []
+      "said": "news news_mode: on \u00b7 400 raw / 91 usable \u00b7 Gold drops 3.4% amid rising U.S. Treasury yields; Bitcoin slips near $83,000 as ",
+      "bullets": [
+        "Gold drops 3.4% amid rising U.S. Treasury yields; Bitcoin slips near $83,000 as Fed rate hike fears grow. - Pluang",
+        "Dow Jones futures drop as rising oil, US Treasury yields fuel Fed rate hike fears | FXStreet - \u0634\u0628\u0643\u0629 \u062a\u0648\u0627\u0635\u0644 \u0627\u0644\u0625\u062e\u0628\u0627\u0631\u064a\u0629",
+        "Silver Price Forecast: XAG/USD falls to near $62.00 amid Fed rate hike odds | FXStreet - \u0634\u0628\u0643\u0629 \u062a\u0648\u0627\u0635\u0644 \u0627\u0644\u0625\u062e\u0628\u0627\u0631\u064a\u0629",
+        "United States Dollar Index strengthens as oil surge bolster Fed rate hike bets | FXStreet - \u0634\u0628\u0643\u0629 \u062a\u0648\u0627\u0635\u0644 \u0627\u0644\u0625\u062e\u0628\u0627\u0631\u064a\u0629"
+      ]
     },
     {
       "key": "weather",
@@ -877,7 +887,17 @@
     "flatten": {},
     "general": {},
     "sectors": {},
-    "news": {},
+    "news": {
+      "said": "news_mode: on \u00b7 400 raw / 91 usable \u00b7 Gold drops 3.4% amid rising U.S. Treasury yields; Bitcoin slips near $83,000 as ",
+      "bullets": [
+        "Gold drops 3.4% amid rising U.S. Treasury yields; Bitcoin slips near $83,000 as Fed rate hike fears grow. - Pluang",
+        "Dow Jones futures drop as rising oil, US Treasury yields fuel Fed rate hike fears | FXStreet - \u0634\u0628\u0643\u0629 \u062a\u0648\u0627\u0635\u0644 \u0627\u0644\u0625\u062e\u0628\u0627\u0631\u064a\u0629",
+        "Silver Price Forecast: XAG/USD falls to near $62.00 amid Fed rate hike odds | FXStreet - \u0634\u0628\u0643\u0629 \u062a\u0648\u0627\u0635\u0644 \u0627\u0644\u0625\u062e\u0628\u0627\u0631\u064a\u0629",
+        "United States Dollar Index strengthens as oil surge bolster Fed rate hike bets | FXStreet - \u0634\u0628\u0643\u0629 \u062a\u0648\u0627\u0635\u0644 \u0627\u0644\u0625\u062e\u0628\u0627\u0631\u064a\u0629",
+        "United States Dollar Index strengthens as oil surge bolster Fed rate hike bets - fxstreet.com",
+        "U.S. Treasury yield curve nears inversion as rate expectations rise - \u0648\u0643\u0627\u0644\u0629 \u0627\u0644\u0623\u0646\u0628\u0627\u0621 \u0627\u0644\u0633\u0648\u0631\u064a\u0629 \u2013 \u0633\u0627\u0646\u0627"
+      ]
+    },
     "weather": {
       "said": "favorable 2 \u00b7 hostile 7 \u00b7 neutral 2",
       "bullets": [
@@ -1250,6 +1270,41 @@
         }
       ],
       "preview": "5901 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 HALO, ONC, KEYS, FORM, SKHY"
+    },
+    {
+      "key": "ab",
+      "title": "AB checklist",
+      "date": "2026-09-29",
+      "ok": false,
+      "pushed": false,
+      "at": "2026-09-29T04:28:12.052928-04:00",
+      "files": [],
+      "preview": "no files"
+    },
+    {
+      "key": "news_parse",
+      "title": "News parse",
+      "date": "2026-09-29",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-29T04:28:30.127001-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-09-29_parsed.json",
+          "ok": true,
+          "reason": "",
+          "size": 391762,
+          "preview": "raw=400 usable=91 single=22 \u00b7 Gold drops 3.4% amid rising U.S. Treasury yields; Bitcoin slips near $83,000 as  | Dow Jones futures drop as rising oil, US Treasury yields fuel Fed rate hike fear | Silver Price Forecast: XAG/USD falls to near $62.00 amid Fed rate hike odds | FX | United States Dollar Index strengthens as oil surge bolster Fed rate hike bets | | United States Dollar Index strengthens as oil surge bolster Fed rate hike bets -"
+        },
+        {
+          "path": "01_daily/news/2026-09-29_parsed.md",
+          "ok": true,
+          "reason": "",
+          "size": 8474,
+          "preview": "# News Parse v2 \u2014 2026-09-29T04:28:30.030733-04:00\nWindow\u224848h | news_mode=on | raw=400 | usable=91 | single_name=22 | noise_dropped=287\nusable polarity={'+': 3, '-': 25, 'mixed': 3, 'neutral': 60}"
+        }
+      ],
+      "preview": "raw=400 usable=91 single=22 \u00b7 Gold drops 3.4% amid rising U.S. Treasury yields; Bitcoin slips near $83,000 as  | Dow Jones futures drop as rising oil, US Treasury yields fuel Fed rate hike fear | Silver Price Forecast: XAG/USD falls to near $62.00 amid Fed rate hike odds | FX | United States Dollar Index strengthens as oil surge bolster Fed rate hike bets | | United States Dollar Index strengthens as oil surge bolster Fed rate hike bets - \u00b7 # News Parse v2 \u2014 2026-09-29T04:28:30.030733-04:00\nWindow\u224848h | news_mode=on | raw=400 | usable=91 | single_name=22 | noise_dropped=287\nusable polarity={'+': 3, '-': 25, 'mixed': 3, 'neutral': 60}"
     }
   ],
   "href": {
