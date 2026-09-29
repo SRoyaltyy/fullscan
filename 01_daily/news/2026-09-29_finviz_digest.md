@@ -1,6 +1,6 @@
 # Finviz Daily Digest — 2026-09-29
 
-_Generated 2026-09-29T04:14:52.325670-04:00 · export=data/exports/finviz_2026-09-29.csv · ticker digests=5887 · high-signal=2046_
+_Generated 2026-09-29T04:15:59.831908-04:00 · export=data/exports/finviz_2026-09-28.csv · ticker digests=5887 · high-signal=2047_
 
 ## Major indices (live quote page)
 
@@ -15,18 +15,18 @@ _Generated 2026-09-29T04:14:52.325670-04:00 · export=data/exports/finviz_2026-0
 - **AEM** [Basic Materials]: Agnico Eagle shares fall after spot gold drops more than $100 as hawkish Federal Reserve comments boost expectations of an additional October rate hike.
 - **AJG** [Financial]: Arthur J. Gallagher & Co. announces acquisition of Colorado-based Innovise Business Consultants, expanding its commercial insurance and surety bonding capabilities in the Western U.S.
 - **AME** [Industrials]: AMETEK completes $5.0 billion all-cash acquisition of Indicor Instrumentation
-- **AMGN** [Healthcare]: Jefferies raises Amgen price target to $410 after positive Phase 3 dazodalibep data in systemic SjÃ¶gren's disease
+- **AMGN** [Healthcare]: Jefferies raises Amgen price target to $410 after positive Phase 3 dazodalibep data in systemic Sjögren's disease
 - **AMX** [Communication Serv]: JPMorgan upgrades America Movil to Overweight from Neutral and raises its price target to $32 from $30.
 - **AON** [Financial]: Aon disclosed in an SEC filing that it has secured a $4 billion term loan and a $3 billion revolving credit facility to help finance its pending acquisition of USI.
 - **APH** [Technology]: Fabrinet earnings weakness and rising yields spark 6.5% APH drop
 - **ARGX** [Healthcare]: argenx announces it has completed the acquisition of Forte Biosciences for $77 per share in cash, adding first-in-class anti-CD122 antibody FB102 to its immunology pipeline.
 - **BA** [Industrials]: Boeing 737 MAX 10 certification halted by FAA over flight software glitch, putting 31% of undelivered 737 order book at risk
-- **BDX** [Healthcare]: Becton Dickinson beats Q3 2026 estimates with EPS $3.23 on $5.0B revenue, raises FY26 EPS guidance to $12.62â$12.72
+- **BDX** [Healthcare]: Becton Dickinson beats Q3 2026 estimates with EPS $3.23 on $5.0B revenue, raises FY26 EPS guidance to $12.62–$12.72
 - **BNS** [Financial]: Bank of Nova Scotia posts record Q3 2026 EPS $2.28 as National Bank upgrades to Outperform, lifts target to C$142
 - **BNY** [Financial]: BNY announces it will raise its Prime Lending Rate by 25 basis points to 7.00% effective September 17, 2026.
 - **BSX** [Healthcare]: Citi downgrades Boston Scientific to Neutral, cuts target to $50 on pulsed field ablation and LAAC concerns
 - **BX** [Financial]: Blackstone Infrastructure and PNM file amended New Mexico PRC merger plan with $220M ratepayer credits and $80M community benefits for $11.5B TXNM deal
-- **CAH** [Healthcare]: Barronâs reports that Cardinal Health CEO Jason Hollar recently sold about $29 million of company stock following the post-earnings share surge to record levels.
+- **CAH** [Healthcare]: Barron’s reports that Cardinal Health CEO Jason Hollar recently sold about $29 million of company stock following the post-earnings share surge to record levels.
 - **CI** [Healthcare]: Jefferies downgrades Cigna to Hold from Buy, cuts price target to $307 from $336 on concern consensus too high post EviCore sale, Centene prescription drug plan shrinkage
 - **CM** [Financial]: Canadian Imperial Bank Of Commerce reports fiscal Q3 2026 results with non-GAAP EPS $1.97 (+25% YoY) and revenue $6.0B (+14% YoY), beats EPS and revenue estimates
 - **CMCSA** [Communication Serv]: Comcast shares fall after Citi cuts its price target to $27.50 and KeyBanc downgrades the stock to Underweight with an $18 target.
@@ -41,7 +41,7 @@ _Generated 2026-09-29T04:14:52.325670-04:00 · export=data/exports/finviz_2026-0
 - **DDOG** [Technology]: Snowflake's stronger-than-expected quarterly revenue and earnings support cloud and AI-focused enterprise software peers including Datadog
 - **DELL** [Technology]: Morgan Stanley raises probability of Dell $756 bull-case scenario after meeting with COO Jeff Clarke, citing sharply higher AI inference demand by 2030
 - **DUK** [Utilities]: Duke Energy's Florida subsidiary files to lower customer rates from January 2027, avoiding planned 2% base-rate hike and delivering about $50 million in savings next year
-- **E** [Energy]: Eni lifts 2026 hydrocarbon output growth target to ~5% and boosts 2026 buyback to â¬3.4B on stronger Q2 results
+- **E** [Energy]: Eni lifts 2026 hydrocarbon output growth target to ~5% and boosts 2026 buyback to €3.4B on stronger Q2 results
 - **ELV** [Healthcare]: Elevance Health disclosed in an SEC filing that it reaffirmed its 2026 guidance for at least $27.00 in adjusted EPS and a 90.2% benefit expense ratio.
 - **EQIX** [Real Estate]: Equinix, CPP Investments close US$4B atNorth acquisition with Equinix investing about US$895M for roughly 34% stake
 - **FAST** [Industrials]: Fastenal beats Q2 estimates with EPS $0.33 (+14% YoY), revenue $2.4B (+15% YoY), notes gross margin pressure and lowers 2026 digital sales mix target
@@ -56,9 +56,9 @@ _Generated 2026-09-29T04:14:52.325670-04:00 · export=data/exports/finviz_2026-0
 
 ### Healthcare (n=8)
 - ABBV: AbbVie announces U.S. FDA approval of JUVMO (tavapadon) as the first selective D1/D5 receptor agonist for the treatment of adults with Parkinson's disease.
-- AMGN: Jefferies raises Amgen price target to $410 after positive Phase 3 dazodalibep data in systemic SjÃ¶gren's disease
+- AMGN: Jefferies raises Amgen price target to $410 after positive Phase 3 dazodalibep data in systemic Sjögren's disease
 - ARGX: argenx announces it has completed the acquisition of Forte Biosciences for $77 per share in cash, adding first-in-class anti-CD122 antibody FB102 to its immunology pipeline.
-- BDX: Becton Dickinson beats Q3 2026 estimates with EPS $3.23 on $5.0B revenue, raises FY26 EPS guidance to $12.62â$12.72
+- BDX: Becton Dickinson beats Q3 2026 estimates with EPS $3.23 on $5.0B revenue, raises FY26 EPS guidance to $12.62–$12.72
 - BSX: Citi downgrades Boston Scientific to Neutral, cuts target to $50 on pulsed field ablation and LAAC concerns
 
 ### Industrials (n=8)
@@ -85,7 +85,7 @@ _Generated 2026-09-29T04:14:52.325670-04:00 · export=data/exports/finviz_2026-0
 ### Energy (n=4)
 - CNQ: Canadian Natural Resources posts record Q2 2026 results with EPS $1.58, raises 2026 production guidance and returns about $4B to shareholders
 - CVE: Cenovus Energy Q2 2026 non-GAAP EPS $1.08 misses estimates, revenue $14.7B beats, company raises full-year production guidance
-- E: Eni lifts 2026 hydrocarbon output growth target to ~5% and boosts 2026 buyback to â¬3.4B on stronger Q2 results
+- E: Eni lifts 2026 hydrocarbon output growth target to ~5% and boosts 2026 buyback to €3.4B on stronger Q2 results
 - KMI: KMI rebounds on pipeline project momentum and raised 2026 guidance
 
 ### Basic Materials (n=3)

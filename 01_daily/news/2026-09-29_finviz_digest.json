@@ -1,9 +1,9 @@
 {
   "date": "2026-09-29",
-  "generated_at": "2026-09-29T04:14:52.325670-04:00",
-  "export_used": "data/exports/finviz_2026-09-29.csv",
+  "generated_at": "2026-09-29T04:15:59.831908-04:00",
+  "export_used": "data/exports/finviz_2026-09-28.csv",
   "ticker_digest_count": 5887,
-  "signal_count": 2046,
+  "signal_count": 2047,
   "index_digests": [
     {
       "ticker": "SPY",
@@ -45,7 +45,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "AEM",
@@ -57,7 +57,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "AJG",
@@ -69,7 +69,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "AME",
@@ -81,11 +81,11 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "AMGN",
-      "digest": "Jefferies raises Amgen price target to $410 after positive Phase 3 dazodalibep data in systemic SjÃ¶gren's disease",
+      "digest": "Jefferies raises Amgen price target to $410 after positive Phase 3 dazodalibep data in systemic Sjögren's disease",
       "news_title": "KRAS Inhibitor Market Projected to Reach $7.8 Billion by 2034",
       "sector": "Healthcare",
       "industry": "Drug Manufacturers - General",
@@ -93,7 +93,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "AMX",
@@ -105,7 +105,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "AON",
@@ -117,7 +117,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "APH",
@@ -129,7 +129,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "ARGX",
@@ -141,7 +141,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "BA",
@@ -153,11 +153,11 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "BDX",
-      "digest": "Becton Dickinson beats Q3 2026 estimates with EPS $3.23 on $5.0B revenue, raises FY26 EPS guidance to $12.62â$12.72",
+      "digest": "Becton Dickinson beats Q3 2026 estimates with EPS $3.23 on $5.0B revenue, raises FY26 EPS guidance to $12.62–$12.72",
       "news_title": "How Big Could BSX Stock's Next Fall Be?",
       "sector": "Healthcare",
       "industry": "Medical Instruments & Supplies",
@@ -165,7 +165,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "BNS",
@@ -177,7 +177,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "BNY",
@@ -189,7 +189,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "BSX",
@@ -201,7 +201,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "BX",
@@ -213,11 +213,11 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "CAH",
-      "digest": "Barronâs reports that Cardinal Health CEO Jason Hollar recently sold about $29 million of company stock following the post-earnings share surge to record levels.",
+      "digest": "Barron’s reports that Cardinal Health CEO Jason Hollar recently sold about $29 million of company stock following the post-earnings share surge to record levels.",
       "news_title": "Cardinal Health CEO Sells $29 Million in Stock After Earnings Send Shares to Record",
       "sector": "Healthcare",
       "industry": "Medical Distribution",
@@ -225,7 +225,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "CI",
@@ -237,7 +237,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "CM",
@@ -249,7 +249,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "CMCSA",
@@ -261,7 +261,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "CNQ",
@@ -273,7 +273,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "COR",
@@ -285,7 +285,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "COST",
@@ -297,7 +297,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "CRH",
@@ -309,7 +309,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "CSCO",
@@ -321,7 +321,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "CSX",
@@ -333,7 +333,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "CTAS",
@@ -345,7 +345,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "CVE",
@@ -357,7 +357,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "DDOG",
@@ -369,7 +369,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "DELL",
@@ -381,7 +381,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "DUK",
@@ -393,11 +393,11 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "E",
-      "digest": "Eni lifts 2026 hydrocarbon output growth target to ~5% and boosts 2026 buyback to â¬3.4B on stronger Q2 results",
+      "digest": "Eni lifts 2026 hydrocarbon output growth target to ~5% and boosts 2026 buyback to €3.4B on stronger Q2 results",
       "news_title": "Eni Caps Italian Fuel Prices as Refining Crunch Drives Costs Higher",
       "sector": "Energy",
       "industry": "Oil & Gas Integrated",
@@ -405,7 +405,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "ELV",
@@ -417,7 +417,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "EQIX",
@@ -429,7 +429,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "FAST",
@@ -441,7 +441,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "FIX",
@@ -453,7 +453,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "GE",
@@ -465,7 +465,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "GEV",
@@ -477,7 +477,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "GSK",
@@ -489,7 +489,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "GWW",
@@ -501,7 +501,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "HCA",
@@ -513,7 +513,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "HD",
@@ -525,7 +525,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "HLT",
@@ -537,7 +537,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "HPE",
@@ -549,7 +549,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "HWM",
@@ -561,7 +561,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "ING",
@@ -573,7 +573,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "INTU",
@@ -585,7 +585,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "KMI",
@@ -597,7 +597,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "LIN",
@@ -609,7 +609,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "LITE",
@@ -621,31 +621,31 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "LLY",
-      "digest": "Eli Lilly says oral GLP-1 Foundayo 17.2 mg beats oral semaglutide 25 mg in 52-week weight loss, A1C in type 2 diabetes",
-      "news_title": "Lilly's Foundayo (orforglipron) 17.2 mg showed greater weight loss and A1C reduction than oral semaglutide 25 mg among adults with type 2 diabetes in a new indirect treatment comparison",
+      "digest": "Eli Lilly wins FDA approval to expand Olumiant’s U.S. label to pediatric patients 12 and older with severe alopecia areata",
+      "news_title": "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
       "sector": "Healthcare",
       "industry": "Drug Manufacturers - General",
       "is_dividend": false,
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "LYG",
       "digest": "Lloyds Banking Group misses Q2 estimates, raises interim dividend 30% and sets new 2030 profitability targets",
-      "news_title": "BMW facing Â£600m hit from car mis-selling scandal",
+      "news_title": "BMW facing £600m hit from car mis-selling scandal",
       "sector": "Financial",
       "industry": "Banks - Regional",
       "is_dividend": false,
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "MCD",
@@ -657,7 +657,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "MDT",
@@ -669,19 +669,19 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "META",
       "digest": "Monness, Crespi, Hardt raises Meta Platforms price target to $830 from $730, keeps Buy rating citing Muse AI traction at Meta Connect 2026",
-      "news_title": "J.P. Morgan Drops Sharp Take on Magnificent 7 Stocks",
+      "news_title": "MongoDB CEOs Surprise Exit 'Creates More Questions Than Answers,' Analyst Says Ahead Of Investor Day",
       "sector": "Communication Services",
       "industry": "Internet Content & Information",
       "is_dividend": false,
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "MMM",
@@ -693,7 +693,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "MNST",
@@ -705,7 +705,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "MRK",
@@ -717,7 +717,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "MRVL",
@@ -729,7 +729,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "MSI",
@@ -741,7 +741,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "MU",
@@ -753,7 +753,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     }
   ],
   "by_sector": {
@@ -768,11 +768,11 @@
         "has_signal": true,
         "rank": 2.8,
         "source": "finviz_export",
-        "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+        "scraped_at": "2026-09-28T05:41:51.052161-04:00"
       },
       {
         "ticker": "AMGN",
-        "digest": "Jefferies raises Amgen price target to $410 after positive Phase 3 dazodalibep data in systemic SjÃ¶gren's disease",
+        "digest": "Jefferies raises Amgen price target to $410 after positive Phase 3 dazodalibep data in systemic Sjögren's disease",
         "news_title": "KRAS Inhibitor Market Projected to Reach $7.8 Billion by 2034",
         "sector": "Healthcare",
         "industry": "Drug Manufacturers - General",
@@ -780,7 +780,7 @@
         "has_signal": true,
         "rank": 2.8,
         "source": "finviz_export",
-        "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+        "scraped_at": "2026-09-28T05:41:51.052161-04:00"
       },
       {
         "ticker": "ARGX",
@@ -792,11 +792,11 @@
         "has_signal": true,
         "rank": 2.8,
         "source": "finviz_export",
-        "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+        "scraped_at": "2026-09-28T05:41:51.052161-04:00"
       },
       {
         "ticker": "BDX",
-        "digest": "Becton Dickinson beats Q3 2026 estimates with EPS $3.23 on $5.0B revenue, raises FY26 EPS guidance to $12.62â$12.72",
+        "digest": "Becton Dickinson beats Q3 2026 estimates with EPS $3.23 on $5.0B revenue, raises FY26 EPS guidance to $12.62–$12.72",
         "news_title": "How Big Could BSX Stock's Next Fall Be?",
         "sector": "Healthcare",
         "industry": "Medical Instruments & Supplies",
@@ -804,7 +804,7 @@
         "has_signal": true,
         "rank": 2.8,
         "source": "finviz_export",
-        "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+        "scraped_at": "2026-09-28T05:41:51.052161-04:00"
       },
       {
         "ticker": "BSX",
@@ -816,11 +816,11 @@
         "has_signal": true,
         "rank": 2.8,
         "source": "finviz_export",
-        "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+        "scraped_at": "2026-09-28T05:41:51.052161-04:00"
       },
       {
         "ticker": "CAH",
-        "digest": "Barronâs reports that Cardinal Health CEO Jason Hollar recently sold about $29 million of company stock following the post-earnings share surge to record levels.",
+        "digest": "Barron’s reports that Cardinal Health CEO Jason Hollar recently sold about $29 million of company stock following the post-earnings share surge to record levels.",
         "news_title": "Cardinal Health CEO Sells $29 Million in Stock After Earnings Send Shares to Record",
         "sector": "Healthcare",
         "industry": "Medical Distribution",
@@ -828,7 +828,7 @@
         "has_signal": true,
         "rank": 2.8,
         "source": "finviz_export",
-        "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+        "scraped_at": "2026-09-28T05:41:51.052161-04:00"
       },
       {
         "ticker": "CI",
@@ -840,7 +840,7 @@
         "has_signal": true,
         "rank": 2.8,
         "source": "finviz_export",
-        "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+        "scraped_at": "2026-09-28T05:41:51.052161-04:00"
       },
       {
         "ticker": "COR",
@@ -852,7 +852,7 @@
         "has_signal": true,
         "rank": 2.8,
         "source": "finviz_export",
-        "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+        "scraped_at": "2026-09-28T05:41:51.052161-04:00"
       }
     ],
     "Industrials": [
@@ -866,7 +866,7 @@
         "has_signal": true,
         "rank": 2.8,
         "source": "finviz_export",
-        "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+        "scraped_at": "2026-09-28T05:41:51.052161-04:00"
       },
       {
         "ticker": "BA",
@@ -878,7 +878,7 @@
         "has_signal": true,
         "rank": 2.8,
         "source": "finviz_export",
-        "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+        "scraped_at": "2026-09-28T05:41:51.052161-04:00"
       },
       {
         "ticker": "CSX",
@@ -890,7 +890,7 @@
         "has_signal": true,
         "rank": 2.8,
         "source": "finviz_export",
-        "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+        "scraped_at": "2026-09-28T05:41:51.052161-04:00"
       },
       {
         "ticker": "CTAS",
@@ -902,7 +902,7 @@
         "has_signal": true,
         "rank": 2.8,
         "source": "finviz_export",
-        "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+        "scraped_at": "2026-09-28T05:41:51.052161-04:00"
       },
       {
         "ticker": "FAST",
@@ -914,7 +914,7 @@
         "has_signal": true,
         "rank": 2.8,
         "source": "finviz_export",
-        "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+        "scraped_at": "2026-09-28T05:41:51.052161-04:00"
       },
       {
         "ticker": "FIX",
@@ -926,7 +926,7 @@
         "has_signal": true,
         "rank": 2.8,
         "source": "finviz_export",
-        "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+        "scraped_at": "2026-09-28T05:41:51.052161-04:00"
       },
       {
         "ticker": "GE",
@@ -938,7 +938,7 @@
         "has_signal": true,
         "rank": 2.8,
         "source": "finviz_export",
-        "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+        "scraped_at": "2026-09-28T05:41:51.052161-04:00"
       },
       {
         "ticker": "GEV",
@@ -950,7 +950,7 @@
         "has_signal": true,
         "rank": 2.8,
         "source": "finviz_export",
-        "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+        "scraped_at": "2026-09-28T05:41:51.052161-04:00"
       }
     ],
     "Technology": [
@@ -964,7 +964,7 @@
         "has_signal": true,
         "rank": 2.8,
         "source": "finviz_export",
-        "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+        "scraped_at": "2026-09-28T05:41:51.052161-04:00"
       },
       {
         "ticker": "CSCO",
@@ -976,7 +976,7 @@
         "has_signal": true,
         "rank": 2.8,
         "source": "finviz_export",
-        "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+        "scraped_at": "2026-09-28T05:41:51.052161-04:00"
       },
       {
         "ticker": "DDOG",
@@ -988,7 +988,7 @@
         "has_signal": true,
         "rank": 2.8,
         "source": "finviz_export",
-        "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+        "scraped_at": "2026-09-28T05:41:51.052161-04:00"
       },
       {
         "ticker": "DELL",
@@ -1000,7 +1000,7 @@
         "has_signal": true,
         "rank": 2.8,
         "source": "finviz_export",
-        "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+        "scraped_at": "2026-09-28T05:41:51.052161-04:00"
       },
       {
         "ticker": "HPE",
@@ -1012,7 +1012,7 @@
         "has_signal": true,
         "rank": 2.8,
         "source": "finviz_export",
-        "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+        "scraped_at": "2026-09-28T05:41:51.052161-04:00"
       },
       {
         "ticker": "INTU",
@@ -1024,7 +1024,7 @@
         "has_signal": true,
         "rank": 2.8,
         "source": "finviz_export",
-        "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+        "scraped_at": "2026-09-28T05:41:51.052161-04:00"
       },
       {
         "ticker": "LITE",
@@ -1036,7 +1036,7 @@
         "has_signal": true,
         "rank": 2.8,
         "source": "finviz_export",
-        "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+        "scraped_at": "2026-09-28T05:41:51.052161-04:00"
       },
       {
         "ticker": "MRVL",
@@ -1048,7 +1048,7 @@
         "has_signal": true,
         "rank": 2.8,
         "source": "finviz_export",
-        "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+        "scraped_at": "2026-09-28T05:41:51.052161-04:00"
       }
     ],
     "Financial": [
@@ -1062,7 +1062,7 @@
         "has_signal": true,
         "rank": 2.8,
         "source": "finviz_export",
-        "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+        "scraped_at": "2026-09-28T05:41:51.052161-04:00"
       },
       {
         "ticker": "AON",
@@ -1074,7 +1074,7 @@
         "has_signal": true,
         "rank": 2.8,
         "source": "finviz_export",
-        "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+        "scraped_at": "2026-09-28T05:41:51.052161-04:00"
       },
       {
         "ticker": "BNS",
@@ -1086,7 +1086,7 @@
         "has_signal": true,
         "rank": 2.8,
         "source": "finviz_export",
-        "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+        "scraped_at": "2026-09-28T05:41:51.052161-04:00"
       },
       {
         "ticker": "BNY",
@@ -1098,7 +1098,7 @@
         "has_signal": true,
         "rank": 2.8,
         "source": "finviz_export",
-        "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+        "scraped_at": "2026-09-28T05:41:51.052161-04:00"
       },
       {
         "ticker": "BX",
@@ -1110,7 +1110,7 @@
         "has_signal": true,
         "rank": 2.8,
         "source": "finviz_export",
-        "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+        "scraped_at": "2026-09-28T05:41:51.052161-04:00"
       },
       {
         "ticker": "CM",
@@ -1122,7 +1122,7 @@
         "has_signal": true,
         "rank": 2.8,
         "source": "finviz_export",
-        "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+        "scraped_at": "2026-09-28T05:41:51.052161-04:00"
       },
       {
         "ticker": "ING",
@@ -1134,19 +1134,19 @@
         "has_signal": true,
         "rank": 2.8,
         "source": "finviz_export",
-        "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+        "scraped_at": "2026-09-28T05:41:51.052161-04:00"
       },
       {
         "ticker": "LYG",
         "digest": "Lloyds Banking Group misses Q2 estimates, raises interim dividend 30% and sets new 2030 profitability targets",
-        "news_title": "BMW facing Â£600m hit from car mis-selling scandal",
+        "news_title": "BMW facing £600m hit from car mis-selling scandal",
         "sector": "Financial",
         "industry": "Banks - Regional",
         "is_dividend": false,
         "has_signal": true,
         "rank": 2.8,
         "source": "finviz_export",
-        "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+        "scraped_at": "2026-09-28T05:41:51.052161-04:00"
       }
     ],
     "Energy": [
@@ -1160,7 +1160,7 @@
         "has_signal": true,
         "rank": 2.8,
         "source": "finviz_export",
-        "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+        "scraped_at": "2026-09-28T05:41:51.052161-04:00"
       },
       {
         "ticker": "CVE",
@@ -1172,11 +1172,11 @@
         "has_signal": true,
         "rank": 2.8,
         "source": "finviz_export",
-        "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+        "scraped_at": "2026-09-28T05:41:51.052161-04:00"
       },
       {
         "ticker": "E",
-        "digest": "Eni lifts 2026 hydrocarbon output growth target to ~5% and boosts 2026 buyback to â¬3.4B on stronger Q2 results",
+        "digest": "Eni lifts 2026 hydrocarbon output growth target to ~5% and boosts 2026 buyback to €3.4B on stronger Q2 results",
         "news_title": "Eni Caps Italian Fuel Prices as Refining Crunch Drives Costs Higher",
         "sector": "Energy",
         "industry": "Oil & Gas Integrated",
@@ -1184,7 +1184,7 @@
         "has_signal": true,
         "rank": 2.8,
         "source": "finviz_export",
-        "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+        "scraped_at": "2026-09-28T05:41:51.052161-04:00"
       },
       {
         "ticker": "KMI",
@@ -1196,7 +1196,7 @@
         "has_signal": true,
         "rank": 2.8,
         "source": "finviz_export",
-        "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+        "scraped_at": "2026-09-28T05:41:51.052161-04:00"
       }
     ],
     "Basic Materials": [
@@ -1210,7 +1210,7 @@
         "has_signal": true,
         "rank": 2.8,
         "source": "finviz_export",
-        "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+        "scraped_at": "2026-09-28T05:41:51.052161-04:00"
       },
       {
         "ticker": "CRH",
@@ -1222,7 +1222,7 @@
         "has_signal": true,
         "rank": 2.8,
         "source": "finviz_export",
-        "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+        "scraped_at": "2026-09-28T05:41:51.052161-04:00"
       },
       {
         "ticker": "LIN",
@@ -1234,7 +1234,7 @@
         "has_signal": true,
         "rank": 2.8,
         "source": "finviz_export",
-        "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+        "scraped_at": "2026-09-28T05:41:51.052161-04:00"
       }
     ],
     "Communication Services": [
@@ -1248,7 +1248,7 @@
         "has_signal": true,
         "rank": 2.8,
         "source": "finviz_export",
-        "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+        "scraped_at": "2026-09-28T05:41:51.052161-04:00"
       },
       {
         "ticker": "CMCSA",
@@ -1260,19 +1260,19 @@
         "has_signal": true,
         "rank": 2.8,
         "source": "finviz_export",
-        "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+        "scraped_at": "2026-09-28T05:41:51.052161-04:00"
       },
       {
         "ticker": "META",
         "digest": "Monness, Crespi, Hardt raises Meta Platforms price target to $830 from $730, keeps Buy rating citing Muse AI traction at Meta Connect 2026",
-        "news_title": "J.P. Morgan Drops Sharp Take on Magnificent 7 Stocks",
+        "news_title": "MongoDB CEOs Surprise Exit 'Creates More Questions Than Answers,' Analyst Says Ahead Of Investor Day",
         "sector": "Communication Services",
         "industry": "Internet Content & Information",
         "is_dividend": false,
         "has_signal": true,
         "rank": 2.8,
         "source": "finviz_export",
-        "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+        "scraped_at": "2026-09-28T05:41:51.052161-04:00"
       }
     ],
     "Consumer Cyclical": [
@@ -1286,7 +1286,7 @@
         "has_signal": true,
         "rank": 2.8,
         "source": "finviz_export",
-        "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+        "scraped_at": "2026-09-28T05:41:51.052161-04:00"
       },
       {
         "ticker": "HLT",
@@ -1298,7 +1298,7 @@
         "has_signal": true,
         "rank": 2.8,
         "source": "finviz_export",
-        "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+        "scraped_at": "2026-09-28T05:41:51.052161-04:00"
       },
       {
         "ticker": "MCD",
@@ -1310,7 +1310,7 @@
         "has_signal": true,
         "rank": 2.8,
         "source": "finviz_export",
-        "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+        "scraped_at": "2026-09-28T05:41:51.052161-04:00"
       }
     ],
     "Consumer Defensive": [
@@ -1324,7 +1324,7 @@
         "has_signal": true,
         "rank": 2.8,
         "source": "finviz_export",
-        "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+        "scraped_at": "2026-09-28T05:41:51.052161-04:00"
       },
       {
         "ticker": "MNST",
@@ -1336,7 +1336,7 @@
         "has_signal": true,
         "rank": 2.8,
         "source": "finviz_export",
-        "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+        "scraped_at": "2026-09-28T05:41:51.052161-04:00"
       }
     ],
     "Utilities": [
@@ -1350,7 +1350,7 @@
         "has_signal": true,
         "rank": 2.8,
         "source": "finviz_export",
-        "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+        "scraped_at": "2026-09-28T05:41:51.052161-04:00"
       }
     ],
     "Real Estate": [
@@ -1364,11 +1364,11 @@
         "has_signal": true,
         "rank": 2.8,
         "source": "finviz_export",
-        "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+        "scraped_at": "2026-09-28T05:41:51.052161-04:00"
       }
     ]
   },
-  "scraped_at": "2026-09-29T04:14:18.574400-04:00",
+  "scraped_at": "2026-09-28T05:41:51.052161-04:00",
   "all_ticker_digests_sample": [
     {
       "ticker": "ABBV",
@@ -1380,7 +1380,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "AEM",
@@ -1392,7 +1392,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "AJG",
@@ -1404,7 +1404,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "AME",
@@ -1416,11 +1416,11 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "AMGN",
-      "digest": "Jefferies raises Amgen price target to $410 after positive Phase 3 dazodalibep data in systemic SjÃ¶gren's disease",
+      "digest": "Jefferies raises Amgen price target to $410 after positive Phase 3 dazodalibep data in systemic Sjögren's disease",
       "news_title": "KRAS Inhibitor Market Projected to Reach $7.8 Billion by 2034",
       "sector": "Healthcare",
       "industry": "Drug Manufacturers - General",
@@ -1428,7 +1428,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "AMX",
@@ -1440,7 +1440,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "AON",
@@ -1452,7 +1452,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "APH",
@@ -1464,7 +1464,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "ARGX",
@@ -1476,7 +1476,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "BA",
@@ -1488,11 +1488,11 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "BDX",
-      "digest": "Becton Dickinson beats Q3 2026 estimates with EPS $3.23 on $5.0B revenue, raises FY26 EPS guidance to $12.62â$12.72",
+      "digest": "Becton Dickinson beats Q3 2026 estimates with EPS $3.23 on $5.0B revenue, raises FY26 EPS guidance to $12.62–$12.72",
       "news_title": "How Big Could BSX Stock's Next Fall Be?",
       "sector": "Healthcare",
       "industry": "Medical Instruments & Supplies",
@@ -1500,7 +1500,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "BNS",
@@ -1512,7 +1512,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "BNY",
@@ -1524,7 +1524,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "BSX",
@@ -1536,7 +1536,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "BX",
@@ -1548,11 +1548,11 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "CAH",
-      "digest": "Barronâs reports that Cardinal Health CEO Jason Hollar recently sold about $29 million of company stock following the post-earnings share surge to record levels.",
+      "digest": "Barron’s reports that Cardinal Health CEO Jason Hollar recently sold about $29 million of company stock following the post-earnings share surge to record levels.",
       "news_title": "Cardinal Health CEO Sells $29 Million in Stock After Earnings Send Shares to Record",
       "sector": "Healthcare",
       "industry": "Medical Distribution",
@@ -1560,7 +1560,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "CI",
@@ -1572,7 +1572,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "CM",
@@ -1584,7 +1584,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "CMCSA",
@@ -1596,7 +1596,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "CNQ",
@@ -1608,7 +1608,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "COR",
@@ -1620,7 +1620,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "COST",
@@ -1632,7 +1632,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "CRH",
@@ -1644,7 +1644,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "CSCO",
@@ -1656,7 +1656,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "CSX",
@@ -1668,7 +1668,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "CTAS",
@@ -1680,7 +1680,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "CVE",
@@ -1692,7 +1692,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "DDOG",
@@ -1704,7 +1704,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "DELL",
@@ -1716,7 +1716,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "DUK",
@@ -1728,11 +1728,11 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "E",
-      "digest": "Eni lifts 2026 hydrocarbon output growth target to ~5% and boosts 2026 buyback to â¬3.4B on stronger Q2 results",
+      "digest": "Eni lifts 2026 hydrocarbon output growth target to ~5% and boosts 2026 buyback to €3.4B on stronger Q2 results",
       "news_title": "Eni Caps Italian Fuel Prices as Refining Crunch Drives Costs Higher",
       "sector": "Energy",
       "industry": "Oil & Gas Integrated",
@@ -1740,7 +1740,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "ELV",
@@ -1752,7 +1752,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "EQIX",
@@ -1764,7 +1764,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "FAST",
@@ -1776,7 +1776,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "FIX",
@@ -1788,7 +1788,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "GE",
@@ -1800,7 +1800,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "GEV",
@@ -1812,7 +1812,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "GSK",
@@ -1824,7 +1824,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "GWW",
@@ -1836,7 +1836,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "HCA",
@@ -1848,7 +1848,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "HD",
@@ -1860,7 +1860,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "HLT",
@@ -1872,7 +1872,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "HPE",
@@ -1884,7 +1884,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "HWM",
@@ -1896,7 +1896,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "ING",
@@ -1908,7 +1908,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "INTU",
@@ -1920,7 +1920,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "KMI",
@@ -1932,7 +1932,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "LIN",
@@ -1944,7 +1944,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "LITE",
@@ -1956,31 +1956,31 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "LLY",
-      "digest": "Eli Lilly says oral GLP-1 Foundayo 17.2 mg beats oral semaglutide 25 mg in 52-week weight loss, A1C in type 2 diabetes",
-      "news_title": "Lilly's Foundayo (orforglipron) 17.2 mg showed greater weight loss and A1C reduction than oral semaglutide 25 mg among adults with type 2 diabetes in a new indirect treatment comparison",
+      "digest": "Eli Lilly wins FDA approval to expand Olumiant’s U.S. label to pediatric patients 12 and older with severe alopecia areata",
+      "news_title": "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
       "sector": "Healthcare",
       "industry": "Drug Manufacturers - General",
       "is_dividend": false,
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "LYG",
       "digest": "Lloyds Banking Group misses Q2 estimates, raises interim dividend 30% and sets new 2030 profitability targets",
-      "news_title": "BMW facing Â£600m hit from car mis-selling scandal",
+      "news_title": "BMW facing £600m hit from car mis-selling scandal",
       "sector": "Financial",
       "industry": "Banks - Regional",
       "is_dividend": false,
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "MCD",
@@ -1992,7 +1992,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "MDT",
@@ -2004,19 +2004,19 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "META",
       "digest": "Monness, Crespi, Hardt raises Meta Platforms price target to $830 from $730, keeps Buy rating citing Muse AI traction at Meta Connect 2026",
-      "news_title": "J.P. Morgan Drops Sharp Take on Magnificent 7 Stocks",
+      "news_title": "MongoDB CEOs Surprise Exit 'Creates More Questions Than Answers,' Analyst Says Ahead Of Investor Day",
       "sector": "Communication Services",
       "industry": "Internet Content & Information",
       "is_dividend": false,
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "MMM",
@@ -2028,7 +2028,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "MNST",
@@ -2040,7 +2040,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "MRK",
@@ -2052,7 +2052,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "MRVL",
@@ -2064,7 +2064,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "MSI",
@@ -2076,7 +2076,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "MU",
@@ -2088,7 +2088,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "MUFG",
@@ -2100,11 +2100,11 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "NFLX",
-      "digest": "HSBC downgraded Netflix to Hold from Buy and cut its price target to $76 from $96, citing YouTubeâs rising share of U.S. TV viewing as a growing competitive threat.",
+      "digest": "HSBC downgraded Netflix to Hold from Buy and cut its price target to $76 from $96, citing YouTube’s rising share of U.S. TV viewing as a growing competitive threat.",
       "news_title": "How Has Alphabet Stock's Story Changed?",
       "sector": "Communication Services",
       "industry": "Entertainment",
@@ -2112,7 +2112,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "NKE",
@@ -2124,7 +2124,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "NSC",
@@ -2136,7 +2136,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "NTES",
@@ -2148,19 +2148,19 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "NVDA",
       "digest": "NVIDIA adds $150B to share repurchase authorization, lifting buyback program to $235B through fiscal 2028",
-      "news_title": "Michael Burry Says Jensen Huang Is 'Becoming A Bit Like' Palantir's Alex Karp After Nvidia CEO's Media Blitz",
+      "news_title": "Nvidia turns to insurers to spread risk of AI build-out - FT",
       "sector": "Technology",
       "industry": "Semiconductors",
       "is_dividend": false,
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "NVS",
@@ -2172,7 +2172,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "O",
@@ -2184,11 +2184,11 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "ORLY",
-      "digest": "AutoZone earnings beat lifts OâReilly 4.3% in early trading despite softer same-store sales",
+      "digest": "AutoZone earnings beat lifts O’Reilly 4.3% in early trading despite softer same-store sales",
       "news_title": "AutoZone Stock Has One Thing Left To Prove",
       "sector": "Consumer Cyclical",
       "industry": "Auto Parts",
@@ -2196,7 +2196,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "PDD",
@@ -2208,7 +2208,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "PEP",
@@ -2220,7 +2220,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "PGR",
@@ -2232,11 +2232,11 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "PH",
-      "digest": "Parker-Hannifin prices $2.4B U.S. dollar and â¬2.025B euro senior notes to repay acquisition-related debt",
+      "digest": "Parker-Hannifin prices $2.4B U.S. dollar and €2.025B euro senior notes to repay acquisition-related debt",
       "news_title": "What Could Go Wrong With Eaton Stock?",
       "sector": "Industrials",
       "industry": "Specialty Industrial Machinery",
@@ -2244,7 +2244,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "RELX",
@@ -2256,7 +2256,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "RIO",
@@ -2268,7 +2268,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "ROST",
@@ -2280,7 +2280,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "RSG",
@@ -2292,7 +2292,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "RTX",
@@ -2304,7 +2304,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "RY",
@@ -2316,7 +2316,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     },
     {
       "ticker": "SAP",
@@ -2328,7 +2328,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-09-29T04:14:18.574400-04:00"
+      "scraped_at": "2026-09-28T05:41:51.052161-04:00"
     }
   ]
 }
