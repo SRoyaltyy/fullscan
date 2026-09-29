@@ -9,7 +9,7 @@ ROOT = Path(__file__).resolve().parents[3]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from research.hot_n4_clean_v4.forward.render import today_plan_html  # noqa: E402
+from research.hot_n4_clean_v4.forward.render import day_block_html, today_plan_html  # noqa: E402
 
 SESSION = "2026-09-28"
 SHA = "b129d5505394941231f1e2c61c37949b9bad920fff9c9b09df3b51e6dd7b6951"
@@ -171,6 +171,109 @@ def _absent() -> None:
     _need(quiet, "morning score -6.14")
 
 
+NOTE = (
+    "close fill held: SRFM and SECZ open prices were read from the previous "
+    "session's bar; awaiting correction decision"
+)
+
+
+def _opened_pending() -> None:
+    """2026-09-28 with a sealed plan and an open fill is not a missing day."""
+    opened = {
+        "buys": [
+            {"fill": 0.9439, "rank": 2, "shares": 1313, "ticker": "SRFM"},
+            {"fill": 4.68, "rank": 3, "shares": 267, "ticker": "SHMD"},
+            {"fill": 2.75, "rank": 4, "shares": 454, "ticker": "FEAM"},
+        ],
+        "date": SESSION,
+        "holdings": [
+            {"entry_date": "2026-09-28", "min_hold": 1, "shares": 454, "ticker": "FEAM"},
+            {"entry_date": "2026-09-28", "min_hold": 1, "shares": 267, "ticker": "SHMD"},
+            {"entry_date": "2026-09-28", "min_hold": 1, "shares": 1313, "ticker": "SRFM"},
+            {"entry_date": "2026-09-25", "min_hold": 2, "shares": 520, "ticker": "USDE"},
+        ],
+        "kind": "open_fill",
+        "sells": [
+            {"fill": 5.138, "reason": "hold-expired", "shares": 377, "ticker": "GLND"},
+            {"fill": 16.209999, "reason": "hold-expired", "shares": 58, "ticker": "SECZ"},
+            {"fill": 26.5, "reason": "hold-expired", "shares": 35, "ticker": "TJGC"},
+        ],
+    }
+    html = day_block_html([_plan(), opened], SESSION)
+    _need(html, "opened; close fill pending")
+    _need(html, "SRFM 1313 @ 0.9439")
+    _need(html, "SHMD 267 @ 4.68")
+    _need(html, "FEAM 454 @ 2.75")
+    _need(html, "GLND 377 @ 5.138 hold-expired")
+    _need(html, "SECZ 58 @ 16.21 hold-expired")
+    _need(html, "TJGC 35 @ 26.50 hold-expired")
+    _need(html, "FEAM 454 from 2026-09-28 hold 1 · P&L pending")
+    _need(html, "USDE 520 from 2026-09-25 hold 2 · P&L pending")
+    _need(html, ">pending<")
+    _need(html, NOTE)
+    if "plan not sealed before open" in html:
+        raise SystemExit("open day rendered as missing")
+    sealed = day_block_html([_plan()], SESSION)
+    _need(sealed, "plan sealed")
+    if "opened; close fill pending" in sealed:
+        raise SystemExit("sealed plan rendered as opened")
+    missing = day_block_html([{
+        "committed_at": "2026-09-29T13:30:01Z",
+        "date": "2026-09-29",
+        "kind": "missing",
+        "reason": "missing: plan not sealed before open",
+    }], "2026-09-29")
+    _need(missing, ">missing<")
+    _need(missing, "missing: plan not sealed before open")
+    closed = {
+        "buys": opened["buys"],
+        "date": SESSION,
+        "kind": "fill",
+        "sells": opened["sells"],
+    }
+    trade = {
+        "date": SESSION,
+        "entry_date": "2026-09-22",
+        "entry_px": 2.94,
+        "fill": 5.138,
+        "kind": "close",
+        "pnl_primary": 12.5,
+        "reason": "hold-expired",
+        "shares": 377,
+        "ticker": "GLND",
+    }
+    done = day_block_html([_plan(), opened, closed, trade], SESSION)
+    if "opened; close fill pending" in done:
+        raise SystemExit("close fill still pending")
+    _need(done, "GLND")
+    _need(done, "$12.50")
+    canonical = (ROOT / "research/hot_n4_clean_v4/forward/day_notes.json").read_text(encoding="utf-8")
+    if NOTE not in canonical:
+        raise SystemExit("notes file missing the 2026-09-28 line")
+    for path in (
+        ROOT / "dashboard/day_notes.json",
+        ROOT / "dashboard/h1/notes.json",
+        ROOT / "dashboard/holdup/notes.json",
+    ):
+        if path.read_text(encoding="utf-8") != canonical:
+            raise SystemExit(f"notes drifted {path.relative_to(ROOT)}")
+    for name in ("holdup", "h1"):
+        text = (ROOT / "dashboard" / name / "index.html").read_text(encoding="utf-8")
+        if "opened; close fill pending" not in text or "plan sealed" not in text:
+            raise SystemExit(f"{name} page does not derive day status from the log")
+        if "is missing. missing: plan not sealed before open" in text:
+            raise SystemExit(f"{name} page still hardcodes the 09-28 missing sentence")
+        if NOTE in text:
+            raise SystemExit(f"{name} page hardcodes the note in the template")
+        if "notes.json" not in text:
+            raise SystemExit(f"{name} page does not load day notes")
+    home = (ROOT / "dashboard/index.html").read_text(encoding="utf-8")
+    if "plan not sealed before open" in home:
+        raise SystemExit("home page still hardcodes the 09-28 missing sentence")
+    if "opened; close fill pending" not in home or "day_notes.json" not in home:
+        raise SystemExit("home page does not derive the open status from notes")
+
+
 def _pages() -> None:
     for name in ("holdup", "h1"):
         text = (ROOT / "dashboard" / name / "index.html").read_text(encoding="utf-8")
@@ -202,6 +305,7 @@ def main() -> None:
         _partial()
         _empty()
         _absent()
+        _opened_pending()
         _pages()
     finally:
         _sealed_unchanged(before)

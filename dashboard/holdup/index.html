@@ -47,6 +47,7 @@
  td:first-child,th:first-child{text-align:left}
  td.tick{font-family:ui-monospace,Menlo,Consolas,monospace;text-align:left}
  .note{color:var(--dim);font-size:11.5px;margin-top:8px}
+ .day-note{color:var(--gold);font-size:12px;margin:6px 0 0}
  .skip{color:var(--gold);margin:0 0 10px}
  .tbl-wrap{overflow-x:auto}
  .today-plan{background:#1c1810;border:1px solid var(--gold);border-radius:10px;padding:10px 12px;margin:0 0 12px}
@@ -108,6 +109,23 @@
 const CAPITAL = 10000;
 const BACKFILL_LAST = "2026-09-25";
 const BACKFILL_LABEL = "backfill (built afterwards, not sealed pre-open)";
+let DAY_NOTES = {};
+function noteLine(date){
+  const text = DAY_NOTES && DAY_NOTES[date];
+  if (!text) return "";
+  return `<p class="day-note">${esc(text)}</p>`;
+}
+function loadDayNotes(){
+  const paths = ["notes.json", "../day_notes.json", "/fullscan/dashboard/day_notes.json"];
+  let chain = Promise.reject();
+  paths.forEach(path => {
+    chain = chain.catch(() => fetch(path, {cache: "no-store"}).then(r => {
+      if (!r.ok) throw new Error(path);
+      return r.json();
+    }));
+  });
+  return chain.catch(() => ({}));
+}
 function money(n){
   const v = Number(n);
   const sign = v < 0 ? "-" : "";
@@ -198,9 +216,10 @@ function morningText(view){
 }
 function dayCard(view, prevEquity, byClose){
   if (view.mode === "missing"){
-    return `<article class="day pending">
-      <h3>${esc(view.date)} <span class="badge pending">no picks</span></h3>
+    return `<article class="day pending" data-date="${esc(view.date)}">
+      <h3>${esc(view.date)} <span class="badge pending">missing</span></h3>
       <div class="hd"><span>${esc(view.reason || "")}</span><span>committed ${esc(view.committed_at || "")}</span></div>
+      ${noteLine(view.date)}
     </article>`;
   }
   if (view.mode === "open"){
@@ -209,16 +228,19 @@ function dayCard(view, prevEquity, byClose){
       `<span class="pill buy">#${b.rank} ${esc(b.ticker)} ${b.shares} @ ${px(b.fill)}</span>`, "no buy");
     const sells = pills(day.sells, s =>
       `<span class="pill sell">${esc(s.ticker)} ${s.shares} @ ${px(s.fill)} ${esc(s.reason)}</span>`, "no sell");
-    return `<article class="day open">
-      <h3>${esc(day.date)} <span class="badge pending">filled at the open · P&amp;L pending</span></h3>
+    return `<article class="day open" data-date="${esc(day.date)}">
+      <h3>${esc(day.date)} <span class="badge pending">opened; close fill pending</span></h3>
       <div class="hd"><span>cash ${money(day.cash_primary)}</span><span>holdup ${day.holdup_on ? "on" : "off"}</span><span>${morningText(view)}</span><span class="mut">${esc((day.sha256 || "").slice(0, 12))}</span></div>
-      <div class="lab">Buys filled at the official open. P&amp;L stays pending until the close bar is saved.</div>
+      <div class="lab">Buys</div>
       <div class="pills">${picks}</div>
-      <div class="lab">Sells filled at the official open</div>
+      <div class="lab">Sells</div>
       <div class="pills">${sells}</div>
-      <div class="lab">Open positions</div>
+      <div class="lab">Held positions</div>
       <div class="pills">${positionPills(day.holdings, true)}</div>
+      <div class="lab">P&amp;L</div>
+      <div class="pills"><span class="pill flat">pending</span></div>
       ${(day.unfilled || []).length ? `<div class="lab">Not filled at the open</div><div class="pills">${(day.unfilled || []).map(u => `<span class="pill flat">${esc(u.side)} ${esc(u.ticker)} ${esc(u.reason)}</span>`).join("")}</div>` : ""}
+      ${noteLine(day.date)}
     </article>`;
   }
   if (view.mode === "pending"){
@@ -227,15 +249,16 @@ function dayCard(view, prevEquity, byClose){
       `<span class="pill buy">#${p.rank} ${esc(p.ticker)} ${(p.sources || []).join("+")}</span>`, "no pick");
     const sells = pills(day.planned_sells, s =>
       `<span class="pill sell">${esc(s.ticker)} ${s.shares} ${esc(s.reason)}</span>`, "no planned sell");
-    return `<article class="day pending">
-      <h3>${esc(day.date)} <span class="badge pending">pending</span></h3>
-      <div class="hd"><span>planned, not yet filled</span><span>committed ${esc(day.committed_at || "")}</span><span>holdup ${day.holdup_on ? "on" : "off"}</span><span>${morningText(view)}</span><span class="mut">${esc((day.sha256 || "").slice(0, 12))}</span></div>
+    return `<article class="day pending" data-date="${esc(day.date)}">
+      <h3>${esc(day.date)} <span class="badge pending">plan sealed</span></h3>
+      <div class="hd"><span>plan sealed</span><span>committed ${esc(day.committed_at || "")}</span><span>holdup ${day.holdup_on ? "on" : "off"}</span><span>${morningText(view)}</span><span class="mut">${esc((day.sha256 || "").slice(0, 12))}</span></div>
       <div class="lab">Ranked picks, sealed before the open. No prices from this session.</div>
       <div class="pills">${picks}</div>
       <div class="lab">Planned sells</div>
       <div class="pills">${sells}</div>
       <div class="lab">Excluded unexplained legs</div>
       <div class="pills">${legPills(day.excluded_unexplained_legs)}</div>
+      ${noteLine(day.date)}
     </article>`;
   }
   const day = view.book;
@@ -275,6 +298,7 @@ function dayCard(view, prevEquity, byClose){
     <div class="lab">Excluded unexplained legs</div>
     <div class="pills">${legPills(legs)}</div>
     ${missed ? `<div class="lab">Unfilled</div><div class="pills">${missed}</div>` : ""}
+    ${noteLine(day.date)}
   </article>`;
 }
 
@@ -511,7 +535,9 @@ function render(rows, status){
   }
   const backfillViews = sessions.filter(day => day.date <= BACKFILL_LAST).map(day => ({mode: "seeded", date: day.date, book: day}));
   const liveViews = plans.filter(plan => plan.date > BACKFILL_LAST).map(viewFor).concat(
-    rows.filter(row => row.kind === "missing" && row.date > BACKFILL_LAST).map(row => ({
+    rows.filter(row => row.kind === "missing" && row.date > BACKFILL_LAST
+      && !plans.some(plan => plan.date === row.date)
+      && !openBy[row.date] && !fillBy[row.date] && !markBy[row.date]).map(row => ({
       mode: "missing", date: row.date, reason: row.reason, committed_at: row.committed_at,
     }))
   );
@@ -553,11 +579,16 @@ function render(rows, status){
   }
 }
 
-fetch("log.json").then(r => {
-  if (!r.ok) throw new Error("log.json " + r.status);
-  return r.json();
-}).then(rows => {
-  return fetch("status.json").then(r => r.ok ? r.json() : null).catch(() => null).then(status => render(rows, status));
+Promise.all([
+  fetch("log.json").then(r => {
+    if (!r.ok) throw new Error("log.json " + r.status);
+    return r.json();
+  }),
+  fetch("status.json").then(r => r.ok ? r.json() : null).catch(() => null),
+  loadDayNotes(),
+]).then(([rows, status, notes]) => {
+  DAY_NOTES = notes && typeof notes === "object" ? notes : {};
+  render(rows, status);
 }).catch(err => {
   document.getElementById("days").textContent = "The log could not be read. " + err;
 });
