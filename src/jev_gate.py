@@ -8,7 +8,7 @@ low_material. Hop-0 filters trash and holds what is worth classifying.
 
   harvest → normalize → Jaccard dedup → regex trash → reprint clock
         → one Jev pack (trash / geo / actor / material / instrument)
-        → keep.json  (only keeps go to hop-1 / hop-2)
+        → hop-1 classify on keeps (q5 + event_class; keep.json unwired)
 
 Key lives in env JEV_API_KEY (or TYPESAFE_API_KEY). Never in git.
 
@@ -1086,7 +1086,8 @@ def gate(rows: list[dict], *, code_only: bool = False, live: bool = False,
     decided = []
     for row in rows:
         decided.append(decide(row, row.get("_answers")))
-    return decided
+    from .jev_classify import apply_code_classify
+    return apply_code_classify(decided)
 
 
 def list_session_dates() -> list[str]:
@@ -1314,7 +1315,8 @@ def to_markdown(report: dict) -> str:
         f"keep={report.get('n_keep')} drop={report.get('n_drop')} "
         f"drop_rate={report.get('drop_rate')}",
         "",
-        "Jev does not classify event types or polarity. Only keeps leave this hop.",
+        "Hop-0 filters trash. Hop-1 names event_class|q5 on keeps. "
+        "No tickers. keep.json stays unwired.",
         "",
         "## Reasons",
     ]
@@ -1338,7 +1340,7 @@ def to_markdown(report: dict) -> str:
     lines += ["", "## Keeps"]
     for row in (report.get("keeps") or [])[:80]:
         lines.append(
-            f"- [{row.get('reason')}|{row.get('geo')}] "
+            f"- [{row.get('class_reason') or row.get('reason')}|{row.get('geo')}] "
             f"{(row.get('title') or '')[:140]}"
         )
     if not report.get("keeps"):

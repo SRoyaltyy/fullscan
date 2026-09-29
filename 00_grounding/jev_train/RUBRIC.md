@@ -1,8 +1,9 @@
 # Jev hop-0 rubric
 
 Living criteria for how Jev analyses a title. Hop-0 filters trash and
-holds anything Lane should classify. Jev never picks event_class,
-polarity, or a ticker.
+holds anything Lane should classify. Hop-0 Jev never picks event_class,
+polarity, or a ticker. Hop-1 (`00_grounding/jev_classify/RUBRIC.md`)
+names `event_class|q5` on keeps.
 
 Each jev-train submit appends a session below and replaces the pending
 one-change block. Closed lists (`jev_closed_lists.json`) are never

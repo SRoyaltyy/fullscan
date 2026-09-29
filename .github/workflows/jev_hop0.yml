@@ -14,6 +14,8 @@ on:
       - ".github/workflows/jev_gate.yml"
       - "src/jev_gate.py"
       - "src/test_jev_gate.py"
+      - "src/jev_classify.py"
+      - "src/test_jev_classify.py"
       - "00_grounding/jev_chokepoint_state.json"
       - "00_grounding/jev_gold.json"
       - "00_grounding/jev_junk_shapes.json"
@@ -71,7 +73,9 @@ jobs:
         with:
           python-version: "3.12"
       - name: Unit tests (no key)
-        run: PYTHONPATH=. python3 -m src.test_jev_gate
+        run: |
+          PYTHONPATH=. python3 -m src.test_jev_gate
+          PYTHONPATH=. python3 -m src.test_jev_classify
       - name: Gold + capped harvest
         env:
           JEV_API_KEY: ${{ secrets.JEV_API_KEY }}

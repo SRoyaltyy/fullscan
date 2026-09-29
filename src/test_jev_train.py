@@ -495,6 +495,10 @@ def test_draw_writes_page_json_and_leaves_holdout_bytes_alone():
         pce = next(item for item in page["items"] if "PCE" in item["title"])
         assert pce["jev"] == "KEEP"
         assert "print" in pce["bits"]
+        assert pce["event_class"]
+        assert pce["q5"] in {"impulse", "regime", "regime_break"}
+        assert "|" in pce["class_reason"]
+        assert pce["reason"] != pce["class_reason"]
         blast = next(item for item in page["items"] if "explosion" in item["title"])
         assert "blast" in blast["bits"]
         assert not (root / "keep.json").exists()
@@ -1075,6 +1079,9 @@ def test_slim_grades_hydrate_from_draw():
             "geo": row.get("geo") or "",
             "actor_power": "",
             "new_instrument": 0,
+            "event_class": "factor_impulse" if item_id == tid else "",
+            "q5": "impulse" if item_id == tid else "",
+            "class_reason": "factor_impulse|impulse" if item_id == tid else "",
         })
         slim_rows.append({
             "id": item_id,
@@ -1108,10 +1115,14 @@ def test_slim_grades_hydrate_from_draw():
         assert hit["jev"] == "KEEP"
         assert hit["grade"] == "D"
         assert hit["human_reason"] == "print miss"
+        assert hit["class_reason"] == "factor_impulse|impulse"
+        assert hit["event_class"] == "factor_impulse"
         assert "print miss" in result["issue_body"]
     hydrated = hydrate_grades(parsed, {"stamp": "20260929_1120", "items": draw_items})
     assert hydrated["rows"][-1]["title"] == title
     assert hydrated["rows"][-1]["jev"] == "KEEP"
+    assert hydrated["rows"][-1]["class_reason"] == "factor_impulse|impulse"
+    assert hydrated["rows"][-1]["event_class"] == "factor_impulse"
 
 
 def test_page_script_submit_threshold():

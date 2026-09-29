@@ -1,0 +1,210 @@
+{
+  "updated": "2026-09-29",
+  "note": "Hop-1 gold. expect is the locked PR #301 enum. answers are the Jev pack. A new class needs a new loser AND winner set — do not add one from homework.",
+  "items": [
+    {
+      "id": "fda",
+      "title": "FDA approves Amneal lanreotide injection",
+      "source": "reuters",
+      "answers": {
+        "q5": "impulse",
+        "family": "permission",
+        "class_permission": "gate",
+        "sign": "open"
+      },
+      "expect": {
+        "event_class": "gate",
+        "q5": "impulse",
+        "family": "permission",
+        "sign": "open"
+      }
+    },
+    {
+      "id": "tokenized",
+      "title": "SEC grants exemptive relief for tokenized NMS stocks",
+      "source": "reuters",
+      "answers": {
+        "q5": "impulse",
+        "family": "structure",
+        "class_structure": "market_structure",
+        "sign": "open"
+      },
+      "expect": {
+        "event_class": "market_structure",
+        "q5": "impulse",
+        "family": "structure",
+        "sign": "open"
+      }
+    },
+    {
+      "id": "eia",
+      "title": "EIA crude inventory draw surprises the tape",
+      "source": "reuters",
+      "answers": {
+        "q5": "impulse",
+        "family": "quantity",
+        "class_quantity": "inventory_print",
+        "sign": "none"
+      },
+      "expect": {
+        "event_class": "inventory_print",
+        "q5": "impulse",
+        "family": "quantity",
+        "sign": null
+      }
+    },
+    {
+      "id": "fomc",
+      "title": "Fed holds rates at 4.25 percent after FOMC meeting",
+      "source": "reuters",
+      "answers": {
+        "q5": "impulse",
+        "family": "print",
+        "class_print": "factor_impulse",
+        "sign": "none"
+      },
+      "expect": {
+        "event_class": "factor_impulse",
+        "q5": "impulse",
+        "family": "print",
+        "sign": null
+      }
+    },
+    {
+      "id": "outlook",
+      "title": "TTM Technologies raises full-year outlook after strong results",
+      "source": "reuters",
+      "answers": {
+        "q5": "impulse",
+        "family": "print",
+        "class_print": "guidance",
+        "sign": "raise"
+      },
+      "expect": {
+        "event_class": "guidance",
+        "q5": "impulse",
+        "family": "print",
+        "sign": "raise"
+      }
+    },
+    {
+      "id": "acquire",
+      "title": "Union Pacific to acquire Norfolk Southern in a cash deal",
+      "source": "reuters",
+      "answers": {
+        "q5": "impulse",
+        "family": "firm",
+        "class_firm": "corporate_action_mna",
+        "sign": "none"
+      },
+      "expect": {
+        "event_class": "corporate_action_mna",
+        "q5": "impulse",
+        "family": "firm",
+        "sign": null
+      }
+    },
+    {
+      "id": "tsa",
+      "title": "TSA unpaid officers leave airport checkpoints in chaos",
+      "source": "reuters",
+      "answers": {
+        "q5": "impulse",
+        "family": "blast",
+        "class_blast": "blast_ops",
+        "sign": "none"
+      },
+      "expect": {
+        "event_class": "blast_ops",
+        "q5": "impulse",
+        "family": "blast",
+        "sign": null
+      }
+    },
+    {
+      "id": "ipo",
+      "title": "Anthropic Targets $2 Trillion Record IPO",
+      "source": "reuters",
+      "answers": {
+        "q5": "impulse",
+        "family": "flow",
+        "class_flow": "listing_flow",
+        "sign": "add"
+      },
+      "expect": {
+        "event_class": "listing_flow",
+        "q5": "impulse",
+        "family": "flow",
+        "sign": "add"
+      }
+    },
+    {
+      "id": "hormuz_weather",
+      "title": "Strait of Hormuz remains closed as talks stay elusive",
+      "source": "reuters",
+      "answers": {
+        "q5": "regime",
+        "family": "time",
+        "class_time": "regime_state",
+        "sign": "none"
+      },
+      "expect": {
+        "event_class": "regime_state",
+        "q5": "regime",
+        "family": "time",
+        "sign": null
+      }
+    },
+    {
+      "id": "hormuz_break",
+      "title": "Hormuz ceasefire as both navies leave and hulls move",
+      "source": "reuters",
+      "answers": {
+        "q5": "regime_break",
+        "family": "time",
+        "class_time": "regime_break",
+        "sign": "lift"
+      },
+      "expect": {
+        "event_class": "regime_break",
+        "q5": "regime_break",
+        "family": "time",
+        "sign": "lift"
+      }
+    },
+    {
+      "id": "stock_day",
+      "title": "Why this is the stock of the day after shares outperform competitors",
+      "source": "reuters",
+      "answers": {
+        "q5": "regime",
+        "family": "time",
+        "class_time": "discard",
+        "sign": "none"
+      },
+      "expect": {
+        "event_class": "discard",
+        "q5": "regime",
+        "family": "time",
+        "sign": null
+      }
+    },
+    {
+      "id": "recall",
+      "title": "Boeing issues a 737 MAX contamination recall",
+      "source": "reuters",
+      "answers": {
+        "q5": "impulse",
+        "family": "blast",
+        "class_blast": "product_harm",
+        "sign": "destroy"
+      },
+      "expect": {
+        "event_class": "product_harm",
+        "q5": "impulse",
+        "family": "blast",
+        "sign": "destroy"
+      }
+    }
+  ]
+}
