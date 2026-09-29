@@ -1,6 +1,6 @@
 {
   "date": "2026-09-29",
-  "generated_at": "2026-09-29T04:28:40.802414-04:00",
+  "generated_at": "2026-09-29T04:50:09.781749-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -15,56 +15,6 @@
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "finviz_digest",
-      "title": "Finviz digest",
-      "date": "2026-09-29",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-29T04:25:45.021474-04:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-09-29_finviz_digest.json",
-          "ok": true,
-          "reason": "",
-          "size": 96986,
-          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
-        },
-        {
-          "path": "01_daily/news/2026-09-29_finviz_digest.md",
-          "ok": true,
-          "reason": "",
-          "size": 11989,
-          "preview": "# Finviz Daily Digest \u2014 2026-09-29\n_Generated 2026-09-29T04:15:59.831908-04:00 \u00b7 export=data/exports/finviz_2026-09-28.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2047_"
-        }
-      ],
-      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-09-29\n_Generated 2026-09-29T04:15:59.831908-04:00 \u00b7 export=data/exports/finviz_2026-09-28.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2047_"
-    },
-    {
-      "key": "map_heat",
-      "title": "Map heat tables",
-      "date": "2026-09-29",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-29T04:25:53.937062-04:00",
-      "files": [
-        {
-          "path": "01_daily/map_heat/2026-09-29_map_heat.json",
-          "ok": true,
-          "reason": "",
-          "size": 273096,
-          "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape"
-        },
-        {
-          "path": "01_daily/map_heat/2026-09-29_map_heat.md",
-          "ok": true,
-          "reason": "",
-          "size": 18356,
-          "preview": "# MAP HEAT \u2014 2026-09-29\nExport `finviz_2026-09-28.csv` \u00b7 11616 names \u00b7 generated 2026-09-29T04:17:29.438028-04:00"
-        }
-      ],
-      "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-09-29\nExport `finviz_2026-09-28.csv` \u00b7 11616 names \u00b7 generated 2026-09-29T04:17:29.438028-04:00"
-    },
     {
       "key": "map_heat_baseline",
       "title": "Map heat night baseline",
@@ -185,6 +135,41 @@
         }
       ],
       "preview": "raw=400 usable=91 single=22 \u00b7 Gold drops 3.4% amid rising U.S. Treasury yields; Bitcoin slips near $83,000 as  | Dow Jones futures drop as rising oil, US Treasury yields fuel Fed rate hike fear | Silver Price Forecast: XAG/USD falls to near $62.00 amid Fed rate hike odds | FX | United States Dollar Index strengthens as oil surge bolster Fed rate hike bets | | United States Dollar Index strengthens as oil surge bolster Fed rate hike bets - \u00b7 # News Parse v2 \u2014 2026-09-29T04:28:30.030733-04:00\nWindow\u224848h | news_mode=on | raw=400 | usable=91 | single_name=22 | noise_dropped=287\nusable polarity={'+': 3, '-': 25, 'mixed': 3, 'neutral': 60}"
+    },
+    {
+      "key": "events",
+      "title": "Event scanner (primary)",
+      "date": "2026-09-29",
+      "ok": false,
+      "pushed": false,
+      "at": "2026-09-29T04:44:03.137182-04:00",
+      "files": [],
+      "preview": "no files"
+    },
+    {
+      "key": "events_catcher",
+      "title": "Event catcher (gap hunt, no carry)",
+      "date": "2026-09-29",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-29T04:50:08.983999-04:00",
+      "files": [
+        {
+          "path": "01_daily/events/2026-09-29_events.json",
+          "ok": true,
+          "reason": "",
+          "size": 15800,
+          "preview": "16 events \u00b7 FOMC hikes 25 bp to 3.75\u20134.00% | White House memo to restrict Canadian goods in U.S. federal procuremen | EDVA unseals Google ad-tech remedies (behavioral, no breakup) | H-1B $100,000 entry restriction extended 12 months | Trump\u2013Xi Washington summit extends U.S.\u2013China trade truce | BIS temporary rule restricts polysilicon stockpiling"
+        },
+        {
+          "path": "01_daily/events/2026-09-29_events.md",
+          "ok": true,
+          "reason": "",
+          "size": 5806,
+          "preview": "# Event Scan \u2014 2026-09-29 (catcher as primary)\n- events tracked: **16** (primary parse failed; catcher replaced it)"
+        }
+      ],
+      "preview": "16 events \u00b7 FOMC hikes 25 bp to 3.75\u20134.00% | White House memo to restrict Canadian goods in U.S. federal procuremen | EDVA unseals Google ad-tech remedies (behavioral, no breakup) | H-1B $100,000 entry restriction extended 12 months | Trump\u2013Xi Washington summit extends U.S.\u2013China trade truce | BIS temporary rule restricts polysilicon stockpiling \u00b7 # Event Scan \u2014 2026-09-29 (catcher as primary)\n- events tracked: **16** (primary parse failed; catcher replaced it)"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"

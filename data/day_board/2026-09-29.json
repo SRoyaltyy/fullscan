@@ -1,6 +1,6 @@
 {
   "date": "2026-09-29",
-  "generated_at": "2026-09-29T04:28:40.802414-04:00",
+  "generated_at": "2026-09-29T04:50:09.781749-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -183,7 +183,7 @@
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 2,
+      "n_req_ok": 3,
       "n_req": 20,
       "n_opt_ok": 1,
       "n_opt": 3,
@@ -257,11 +257,16 @@
           "name": "Events JSON",
           "path": "01_daily/events/2026-09-29_events.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 15800,
+          "said": "16 events",
+          "bullets": [
+            "FOMC hikes 25 bp to 3.75\u20134.00%",
+            "White House memo to restrict Canadian goods in U.S. federal procurement",
+            "EDVA unseals Google ad-tech remedies (behavioral, no breakup)",
+            "H-1B $100,000 entry restriction extended 12 months"
+          ]
         },
         {
           "key": "judge",
@@ -336,13 +341,13 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 7544,
-          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 17 fail",
+          "size": 7541,
+          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 16 fail",
           "bullets": [
             "general_predict:missing",
-            "events:missing",
             "news_judge:missing",
-            "news_actions:missing"
+            "news_actions:missing",
+            "finviz_market_digest:missing"
           ]
         },
         {
@@ -1305,6 +1310,41 @@
         }
       ],
       "preview": "raw=400 usable=91 single=22 \u00b7 Gold drops 3.4% amid rising U.S. Treasury yields; Bitcoin slips near $83,000 as  | Dow Jones futures drop as rising oil, US Treasury yields fuel Fed rate hike fear | Silver Price Forecast: XAG/USD falls to near $62.00 amid Fed rate hike odds | FX | United States Dollar Index strengthens as oil surge bolster Fed rate hike bets | | United States Dollar Index strengthens as oil surge bolster Fed rate hike bets - \u00b7 # News Parse v2 \u2014 2026-09-29T04:28:30.030733-04:00\nWindow\u224848h | news_mode=on | raw=400 | usable=91 | single_name=22 | noise_dropped=287\nusable polarity={'+': 3, '-': 25, 'mixed': 3, 'neutral': 60}"
+    },
+    {
+      "key": "events",
+      "title": "Event scanner (primary)",
+      "date": "2026-09-29",
+      "ok": false,
+      "pushed": false,
+      "at": "2026-09-29T04:44:03.137182-04:00",
+      "files": [],
+      "preview": "no files"
+    },
+    {
+      "key": "events_catcher",
+      "title": "Event catcher (gap hunt, no carry)",
+      "date": "2026-09-29",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-29T04:50:08.983999-04:00",
+      "files": [
+        {
+          "path": "01_daily/events/2026-09-29_events.json",
+          "ok": true,
+          "reason": "",
+          "size": 15800,
+          "preview": "16 events \u00b7 FOMC hikes 25 bp to 3.75\u20134.00% | White House memo to restrict Canadian goods in U.S. federal procuremen | EDVA unseals Google ad-tech remedies (behavioral, no breakup) | H-1B $100,000 entry restriction extended 12 months | Trump\u2013Xi Washington summit extends U.S.\u2013China trade truce | BIS temporary rule restricts polysilicon stockpiling"
+        },
+        {
+          "path": "01_daily/events/2026-09-29_events.md",
+          "ok": true,
+          "reason": "",
+          "size": 5806,
+          "preview": "# Event Scan \u2014 2026-09-29 (catcher as primary)\n- events tracked: **16** (primary parse failed; catcher replaced it)"
+        }
+      ],
+      "preview": "16 events \u00b7 FOMC hikes 25 bp to 3.75\u20134.00% | White House memo to restrict Canadian goods in U.S. federal procuremen | EDVA unseals Google ad-tech remedies (behavioral, no breakup) | H-1B $100,000 entry restriction extended 12 months | Trump\u2013Xi Washington summit extends U.S.\u2013China trade truce | BIS temporary rule restricts polysilicon stockpiling \u00b7 # Event Scan \u2014 2026-09-29 (catcher as primary)\n- events tracked: **16** (primary parse failed; catcher replaced it)"
     }
   ],
   "href": {
