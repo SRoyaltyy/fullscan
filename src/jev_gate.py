@@ -168,11 +168,15 @@ QUESTIONS: dict = {
             "false": (
                 "Title contains a first-class fact even inside a listicle "
                 "or column frame: Fed / EIA / House / CFTC / FDA action, "
-                "named IPO or M&A, pathogen + consumers/recalls, Fed "
-                "officer + inflation or oil, peace accept/reject, dated "
-                "official print or hold, court dismiss of a listed name, "
-                "housing or credit freeze that if true changes a listed "
-                "sector prior, EV / tariff / Social Security policy, "
+                "named IPO or M&A or IPO delay, pathogen + consumers/recalls, "
+                "Fed officer + inflation or oil, jobs / rents as Fed-path "
+                "context, peace accept/reject, dated official print or hold, "
+                "court dismiss of a listed name, housing or credit freeze "
+                "that if true changes a listed sector prior, EV / tariff / "
+                "Social Security policy, sitting-president foreign-policy "
+                "action (gambit, backing, corridor), US/China national "
+                "industrial policy (AI / chips / capital markets), named-firm "
+                "mass layoff, G7/UK national fiscal budget or tax rise, "
                 "or CDS affecting a listed sector."
             ),
         },
@@ -197,17 +201,21 @@ QUESTIONS: dict = {
         "criteria": {
             "core": (
                 "US, China, EU/EZ, Japan, Korea, India, a G10 central "
-                "bank / regulator, G10 FX (yen + dollar + Fed), or a "
-                "numbered oil-price print (Brent, WTI, Azeri Light, EIA "
-                "storage, basin rigs)"
+                "bank / regulator, G10 FX (yen + dollar + Fed), a numbered "
+                "oil-price print (Brent, WTI, Azeri Light, EIA storage, "
+                "basin rigs), G7/UK national fiscal budget or tax rise "
+                "(not a local coin / council story), sitting-US-president "
+                "action in Korea or on an India-Europe corridor, or a "
+                "named steel / freight trade-flow disruption"
             ),
             "chokepoint": (
                 "Hormuz, Red Sea / Bab el-Mandeb, Suez, Panama, Taiwan "
                 "Strait, Malacca, or a named tanker/port there"
             ),
             "other": (
-                "Anywhere else with no US / G10 / oil-print hook and no "
-                "named M&A. Yemen / Palestine / UK-local politics stay other."
+                "Anywhere else with no US / G10 / oil-print / G7-fiscal "
+                "hook and no named M&A or named-firm layoff. Yemen / "
+                "Palestine / UK-local politics stay other."
             ),
         },
     },
@@ -225,12 +233,14 @@ QUESTIONS: dict = {
             ),
             "listed_firm": (
                 "Named company that has or plausibly has a US ticker, "
-                "including a named acquirer or a major AI lab with a "
-                "dated product or IPO"
+                "including a named acquirer, a major AI lab with a "
+                "dated product or IPO, or a named firm with an IPO "
+                "delay or mass layoff"
             ),
             "infrastructure": (
-                "Port, strait, exchange, grid, pipeline operator, or a "
-                "G10 FX pair / oil benchmark"
+                "Port, strait, exchange, grid, pipeline operator, a "
+                "G10 FX pair / oil benchmark, or a named steel / "
+                "freight trade-flow channel"
             ),
             "crowd": (
                 "Protesters, activists, tourists, unnamed residents. "
@@ -252,10 +262,34 @@ QUESTIONS: dict = {
             "FDA/recalls, EV / tariff / Social Security policy, or 'mulls' "
             "a named EV / tariff / Social Security instrument = yes. "
             "A housing or credit freeze that if true changes a listed "
-            "sector prior = yes. Celebrity, theme park, 'best move if crash', "
+            "sector prior = yes. US/China national industrial policy "
+            "(AI / chips / capital markets) = yes. Named steel / freight "
+            "trade-flow disruption = yes. IPO delay or listing limbo = yes. "
+            "Sitting-president foreign-policy action (gambit, backing a "
+            "corridor) = yes. Named-firm mass layoff = yes. G7/UK national "
+            "fiscal budget or tax rise = yes. Jobs / rents as Fed-path "
+            "context = yes. Celebrity, theme park, 'best move if crash', "
             "gold-tumbles tape, earnings-look-right, or forecast / odds / "
             "live tape that only name-drops a print = no."
         ),
+        "criteria": {
+            "true": (
+                "If true, could change prices, policy, cash flows, or the "
+                "prior for a US-listed name or a core macro / oil / FX / "
+                "steel-freight factor this week: dated print / hold / CR, "
+                "named M&A or IPO delay, regulator exploring rules, "
+                "major-AI product, court dismiss, pathogen-recall scare, "
+                "EV / tariff / Social Security / national industrial "
+                "policy, sitting-president foreign-policy action, named-firm "
+                "mass layoff, G7/UK fiscal budget or tax rise, jobs / rents "
+                "as Fed-path context."
+            ),
+            "false": (
+                "Protester arrest, local rally, celebrity, theme park, "
+                "'best move if crash', gold-tumbles tape, earnings-look-right, "
+                "forecast / odds / live tape that only name-drops a print."
+            ),
+        },
     },
     "new_instrument": {
         "type": "noul",
@@ -264,7 +298,8 @@ QUESTIONS: dict = {
             "official decision, weekly official figure, rate hold/hike/cut, "
             "continuing resolution through a date, regulator exploring or "
             "endorsing a rule, advisory-panel endorse, named dollar deal, "
-            "or court dismiss — not a speech, protest, or rumor? "
+            "court dismiss, IPO delay, or a dated G7/UK budget / tax rise "
+            "— not a speech, protest, or rumor? "
             "EIA storage, Fed holds rates, House CR, CFTC explores rules, "
             "FDA panel endorse = yes. 'Mulls' a named policy instrument "
             "(EV, tariff, Social Security, CAFE) = yes. 'Mulls' with no "
@@ -694,11 +729,15 @@ def decide(row: dict, answers: dict | None) -> dict:
     if actor == "state_head" and hints["head_action"]:
         return pack("keep", "state_head_action")
 
+    # Session 1640: steel trade-flow / G7 fiscal / named-firm layoff
+    # scored material but sat in geo=other with no powerful actor, so
+    # other_powerful never fired. A first-class fact is not other-trash.
     if geo == "other":
-        if actor in POWERFUL and (
-            material >= MATERIAL_KEEP or instrument >= INSTRUMENT_KEEP
-        ):
-            return pack("keep", "other_powerful")
+        if fact_keep:
+            return pack(
+                "keep",
+                "other_powerful" if actor in POWERFUL else "other_fact",
+            )
         return pack("drop", "geo_other")
 
     if geo == "chokepoint":

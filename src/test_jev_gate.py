@@ -239,6 +239,51 @@ def test_decide_fact_vetoes_opinion():
     assert bitcoin["decision"] == "drop" and bitcoin["reason"] == "opinion", bitcoin
 
 
+def test_decide_fact_vetoes_geo_other():
+    """Session 1640: a first-class fact in geo=other is keep, Yemen stays drop."""
+    steel = decide(
+        {
+            "title": (
+                "Geopolitical disruptions push up freight costs and "
+                "alter steel trade flows - eurometal.net"
+            ),
+        },
+        {
+            "is_opinion": 0.12, "is_tabloid": 0.04, "is_reaction": 0.05,
+            "geo": "other", "actor_power": "other_person",
+            "action_material": 0.71, "new_instrument": 0.18,
+            "reprint_weather": 0.10,
+        },
+    )
+    assert steel["decision"] == "keep", steel
+    assert steel["reason"] != "geo_other"
+    stelco = decide(
+        {
+            "title": (
+                "Stelco layoffs put hundreds of Hamilton steel jobs "
+                "at risk - CTV News"
+            ),
+        },
+        {
+            "is_opinion": 0.08, "is_tabloid": 0.06, "is_reaction": 0.04,
+            "geo": "other", "actor_power": "listed_firm",
+            "action_material": 0.68, "new_instrument": 0.22,
+            "reprint_weather": 0.08,
+        },
+    )
+    assert stelco["decision"] == "keep", stelco
+    yemen = decide(
+        {"title": "Yemen bombed by terrorist group"},
+        {
+            "is_opinion": 0.04, "is_tabloid": 0.15, "is_reaction": 0.05,
+            "geo": "other", "actor_power": "other_person",
+            "action_material": 0.41, "new_instrument": 0.03,
+            "reprint_weather": 0.35,
+        },
+    )
+    assert yemen["decision"] == "drop" and yemen["reason"] == "geo_other", yemen
+
+
 def test_live_shaped_gold_misses():
     """Recorded 2026-09-28 live Jev answers. Closed lists correct the four misses."""
     trump = decide(
@@ -547,6 +592,24 @@ def test_questions_encode_session_409_criteria():
     assert "forecast" in instrument.lower()
 
 
+def test_questions_encode_session_1640_criteria():
+    """Session 1640: national policy, steel flows, IPO delay, G7 fiscal."""
+    opinion = QUESTIONS["is_opinion"]["criteria"]
+    material = QUESTIONS["action_material"]["instructions"]
+    instrument = QUESTIONS["new_instrument"]["instructions"]
+    geo = QUESTIONS["geo"]["criteria"]
+    assert "sitting-president foreign-policy" in opinion["false"]
+    assert "jobs / rents as Fed-path" in opinion["false"]
+    assert "mass layoff" in opinion["false"]
+    assert "steel / freight" in material.lower()
+    assert "ipo delay" in material.lower()
+    assert "national industrial policy" in material.lower()
+    assert "IPO delay" in instrument
+    assert "budget / tax rise" in instrument
+    assert "G7/UK national fiscal" in geo["core"]
+    assert "UK-local politics stay other" in geo["other"]
+
+
 def test_session_409_forecast_tape_is_not_classifiable():
     """Code-keep must not swallow forecast/odds/tape that name-drop a print."""
     trash = [
@@ -597,6 +660,7 @@ def main() -> None:
         test_decide_palestine_vs_trump,
         test_decide_core_and_chokepoint,
         test_decide_fact_vetoes_opinion,
+        test_decide_fact_vetoes_geo_other,
         test_live_shaped_gold_misses,
         test_code_hints_closed_lists,
         test_code_reason_short_circuits_jev,
@@ -612,6 +676,7 @@ def main() -> None:
         test_api_key_not_in_repo_and_env,
         test_session_409_false_drops_are_keeps,
         test_questions_encode_session_409_criteria,
+        test_questions_encode_session_1640_criteria,
         test_session_409_forecast_tape_is_not_classifiable,
         test_workflow_wires_secret_and_stays_stdlib,
     ]
