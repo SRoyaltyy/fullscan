@@ -1,12 +1,12 @@
 {
   "date": "2026-09-29",
-  "generated_at": "2026-09-29T05:53:56.960101-04:00",
+  "generated_at": "2026-09-29T12:13:56.467089-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
-    "ok": 6,
+    "ok": 7,
     "partial": 1,
-    "fail": 1,
+    "fail": 0,
     "n": 8
   },
   "buy_1d": [
@@ -121,16 +121,16 @@
       "score": -0.3284977583228431
     },
     {
+      "ticker": "LUNG",
+      "score": -0.32614783185427215
+    },
+    {
       "ticker": "CMPX",
       "score": -0.3240353108758226
     },
     {
       "ticker": "WVE",
       "score": -0.3181899342286807
-    },
-    {
-      "ticker": "LXRX",
-      "score": -0.3167958620695655
     }
   ],
   "flatten": {
@@ -1581,6 +1581,67 @@
         }
       ],
       "preview": "2026-09-29 BUY ARHS, SONO, SN, PDFS, SHOO, DT, GCT, OLLI \u00b7 SELL ROIV, PYXS, IKT, SOC, AXSM, CGEM, IFRX, BIDU \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href \u00b7 2026-09-29 BUY ARHS, SONO, SN, PDFS, SHOO, DT, GCT, OLLI \u00b7 SELL ROIV, PYXS, IKT, SOC, AXSM, CGEM, IFRX, BIDU \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-29 BUY ARHS, SONO, SN, PDFS, SHOO, DT, GCT, OLLI \u00b7 SELL ROIV, PYXS, IKT, SOC, AXSM, CGEM, IFRX, BIDU \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-29 BUY ARHS, SONO, SN, PDFS, SHOO, DT, GCT, OLLI \u00b7 SELL ROIV, PYXS, IKT, SOC, AXSM, CGEM, IFRX, BIDU \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, orde"
+    },
+    {
+      "key": "weather",
+      "title": "Weather / regime",
+      "date": "2026-09-29",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-29T12:13:29.450339-04:00",
+      "files": [
+        {
+          "path": "01_daily/weather/2026-09-29_weather.json",
+          "ok": true,
+          "reason": "",
+          "size": 9691,
+          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -3.46, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -1.73, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -0.32, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -0.74, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.21, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -0.28, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.16, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -0.94, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}"
+        },
+        {
+          "path": "01_daily/weather/2026-09-29_weather.md",
+          "ok": true,
+          "reason": "",
+          "size": 5219,
+          "preview": "# Weather report \u2014 2026-09-29\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+        }
+      ],
+      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -3.46, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -1.73, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -0.32, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -0.74, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.21, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -0.28, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.16, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -0.94, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-09-29\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+    },
+    {
+      "key": "join",
+      "title": "Join / match rank",
+      "date": "2026-09-29",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-29T12:13:37.964499-04:00",
+      "files": [
+        {
+          "path": "data/join/2026-09-29_ranked.csv",
+          "ok": true,
+          "reason": "",
+          "size": 2239909,
+          "preview": "5901 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 TAL, GLBE, KEYS, FORM, NVT"
+        }
+      ],
+      "preview": "5901 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 TAL, GLBE, KEYS, FORM, NVT"
+    },
+    {
+      "key": "peer_rs",
+      "title": "Peer RS",
+      "date": "2026-09-29",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-29T12:13:45.393400-04:00",
+      "files": [
+        {
+          "path": "data/peers/2026-09-29_peer_rs.csv",
+          "ok": true,
+          "reason": "",
+          "size": 817865,
+          "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+        }
+      ],
+      "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
     }
   ],
   "source": "publish_live_boards"
