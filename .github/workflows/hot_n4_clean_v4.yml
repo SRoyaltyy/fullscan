@@ -11,10 +11,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
+      with:
+        # The price pins are historical blobs. The row guard reads them
+        # with git cat-file, not the live files.
+        fetch-depth: 0
     - uses: actions/setup-python@v5
       with:
         python-version: "3.12"
     - name: Fingerprint
       run: PYTHONHASHSEED=0 python3 research/hot_n4_clean_v4/test_fingerprint.py
+    - name: Install parquet reader for the price row guard
+      run: pip install pyarrow
     - name: Ledger and locks
       run: PYTHONHASHSEED=0 python3 research/hot_n4_clean_v4/test_ledger.py
