@@ -15,12 +15,12 @@ Thresholds stay put unless the pending block names one:
 `CROWD_DROP=0.50`.
 
 <!-- PENDING_BEGIN -->
-## Pending one change (session `20260929_1640`) — landed
+## Pending one change (session `20260929_1703`)
 
 - question: `action_material`
-- kind: `criteria` + one `decide()` knob
-- misses on that question: 3 (plus opinion 2, geo 2)
-- change: Rewrite `action_material` so US/China national industrial policy, named steel/freight trade-flow disruption, IPO delay, sitting-president foreign-policy action, named-firm mass layoff, G7/UK national fiscal budget or tax rise, and jobs/rents as Fed-path context are true. Sibling `is_opinion` false for those facts. Sibling `geo` core for G7/UK fiscal and steel/freight flows (UK-local stays other). Sibling `new_instrument` true for IPO delay and dated budget/tax rise. The one `decide()` change this round: if `action_material >= 0.65` or `new_instrument >= 0.60`, do not drop for `geo_other`. Threshold numbers stay. Code punct/source stay on the code path.
+- kind: `criteria`
+- misses on that question: 9
+- change: Rewrite `action_material` criteria from this session's misses. Score toward KEEP / false-opinion / core / powerful when: Meta going to court poses potential legal problems for a large AI company.; Company action. Should keep; Attendees of the Trump-Xi dinner indicate who is relevant in geopolitics. Should monitor for context; National Stock Exchange of an emerging economy is huge--worth watching because India never had this sort of thing before; Fed officer opinions--worth keeping; Gold crash is worth monitoring; Fed chair action--worth watching; EU trade policy--worth looking at. Sibling `new_instrument`: dated print / hold / CR / explores-rules / panel-endorse / named dollar deal is true. Do not edit closed lists. At most one decide() / threshold change.
 - do not edit `jev_closed_lists.json`
 <!-- PENDING_END -->
 
@@ -275,3 +275,45 @@ Code-path misses (not the Jev knob this round):
 - `punct` — India-Europe trade corridor gets Trump’s backing, but can it survive war? - South China Morning Post (India Europe Trade corridor is worth watching as it may stimulate stock prices in multiple companies---in general, any policy by Trump is worth watching)
 - `source` — October Fed rate hike hinges on two looming economic reports - thestreet.com (Rate hike context---worth considering)
 - `source` — Abacus FCF Advisors LLC Makes New Investment in Cardinal Health, Inc. $CAH (investments in another firm--could be  bullish tailwind)
+
+## Session `20260929_1703`
+
+Draw `20260929_1646`. Human keep 43, drop 56. Jev keep 26, drop 74. False keep 3, false drop 20.
+
+| You | reason | question | human_reason | title |
+|---|---|---|---|---|
+| KEEP | low_material | action_material | Meta going to court poses potential legal problems for a large AI company. | Berkshire's Alphabet stake, Meta goes back to court, Europe's champagne problems and more in Morning Squawk - CNBC |
+| KEEP | low_material | action_material | Company action. Should keep | LANXESS Targets Deeper Cuts, Deleveraging as Chemical Markets Stay Weak |
+| KEEP | crowd | actor_power | Consumer confidence is a good indicator of market sentiment | US consumer confidence falls in August, Conference Board says - Reuters |
+| KEEP | crowd | actor_power | State Banking Associations(and any industry-wide union) taking a new initiative is HUGE news and should not be dropped | U.S. State Banking Associations To Launch Blockchain Network |
+| KEEP | punct | code:punct | Stock buybacks should be considered as good news | Almonty (ALM) Authorized a $300M Buyback Before Sangdong Fully Ramps. Is that the Best Use of Capital? |
+| KEEP | geo_other | geo | While Africa is normally outside the bounds of US market considerations, it is a huge testing ground for US phramaceutical companies. If US companies are contracted, could represent an opportunity | Congo launches Ebola vaccination drive to tackle deadly outbreak |
+| KEEP | low_material | action_material | Attendees of the Trump-Xi dinner indicate who is relevant in geopolitics. Should monitor for context | Here's who we know is going to the Trump-Xi dinner so far |
+| KEEP | low_material | action_material | National Stock Exchange of an emerging economy is huge--worth watching because India never had this sort of thing before | National Stock Exchange of India Rises in Trading Debut - WSJ |
+| KEEP | opinion | is_opinion | Any dovish/hawkish movement of central banks in relevant regions should be monitored | EUR/GBP Price Forecast: Fails at 0.8610 amid higher Oil prices, BoE hawkishness - tmgm.com |
+| KEEP | low_material | action_material | Fed officer opinions--worth keeping | Fed’s Cook sees AI, oil prices adding to inflation - Finance & Commerce |
+| KEEP | source | code:source | PCE Inflation Report is good context | Tomorrow's PCE Inflation Report May Boost Fed Hike Bets - Seeking Alpha |
+| KEEP | opinion | is_opinion | From sources like Investopedia, "5 things to know before market opens" is good context actually and should be considered | 5 Things to Know Before the Stock Market Opens on Tuesday - investopedia.com |
+| KEEP | source | code:source | Stock split action | Stock-Split Watch: Is Caterpillar Next? - The Motley Fool |
+| KEEP | geo_other | geo | Food import shocks is worth monitoring | Food imports raise supply shock risk - The Express Tribune |
+| KEEP | low_material | action_material | Gold crash is worth monitoring | Gold price crashes as 2007-era yields trigger brutal sell-off - tmgm.com |
+| KEEP | low_material | action_material | Fed chair action--worth watching | Warsh settles some nerves at Jackson Hole |
+| KEEP | junk_shape | code:junk_shape | Analyst upgrade of a certain company | Eaton shares rise after UBS upgrades the stock to Buy from Neutral and raises its price target to $515, citing strong sales growth and expected margin improvement. |
+| KEEP | low_material | action_material | EU trade policy--worth looking at | EU prepares 'Buy European' public-procurement rules aimed at China |
+| KEEP | low_material | action_material | Corporate filing for bankruptcy--worth looking at | Reports: Brightline preparing to file for Chapter 11 bankruptcy - WKMG |
+| KEEP | geo_other | geo | Concerns shipbuilding stocks--worth looking at | Used oil supertanker prices surpass new vessel costs - finway.com.ua |
+| DROP | code_deal | code:code_deal | While the words "IPO" is present and SpaceX is a large company, theres a difference between "SpaceX embarks on upcoming IPO" and "SpaceX regaining IPO price". The IPO has already happened and Jev should make that distinction | SpaceX Stock Looks To Reclaim IPO Price After Earnings, Share Unlock |
+| DROP | code_policy | code:code_policy | While "Social Security" is mentioned, this makes no mention of any changes to Social Security. Likely just an explainer and should be discarded | What Every 65-Year-Old Should Know About Social Security |
+| DROP | other_powerful | geo | Their expectations is irrelevant and usually noise--only concrete actions/policy(like escalation, peace deals, disarmament is real) | US and Israeli leaders expected ‘swift outcome’ in Iran |
+
+Proposed one change: `action_material` (criteria, n=9).
+
+Rewrite `action_material` criteria from this session's misses. Score toward KEEP / false-opinion / core / powerful when: Meta going to court poses potential legal problems for a large AI company.; Company action. Should keep; Attendees of the Trump-Xi dinner indicate who is relevant in geopolitics. Should monitor for context; National Stock Exchange of an emerging economy is huge--worth watching because India never had this sort of thing before; Fed officer opinions--worth keeping; Gold crash is worth monitoring; Fed chair action--worth watching; EU trade policy--worth looking at. Sibling `new_instrument`: dated print / hold / CR / explores-rules / panel-endorse / named dollar deal is true. Do not edit closed lists. At most one decide() / threshold change.
+
+Code-path misses (not the Jev knob this round):
+- `punct` — Almonty (ALM) Authorized a $300M Buyback Before Sangdong Fully Ramps. Is that the Best Use of Capital? (Stock buybacks should be considered as good news)
+- `source` — Tomorrow's PCE Inflation Report May Boost Fed Hike Bets - Seeking Alpha (PCE Inflation Report is good context)
+- `source` — Stock-Split Watch: Is Caterpillar Next? - The Motley Fool (Stock split action)
+- `junk_shape` — Eaton shares rise after UBS upgrades the stock to Buy from Neutral and raises its price target to $515, citing strong sales growth and expected margin improvement. (Analyst upgrade of a certain company)
+- `code_deal` — SpaceX Stock Looks To Reclaim IPO Price After Earnings, Share Unlock (While the words "IPO" is present and SpaceX is a large company, theres a difference between "SpaceX embarks on upcoming IPO" and "SpaceX regaining IPO price". The IPO has already happened and Jev should make that distinction)
+- `code_policy` — What Every 65-Year-Old Should Know About Social Security (While "Social Security" is mentioned, this makes no mention of any changes to Social Security. Likely just an explainer and should be discarded)

@@ -1,0 +1,356 @@
+{
+  "schema": "jev-train-grade-1",
+  "stamp": "20260929_1703",
+  "draw_stamp": "20260929_1646",
+  "nonce": "e4701078-a2ed-4143-9fe7-0547e4238526",
+  "generated_at": "2026-09-29T17:03:05.453831+00:00",
+  "counts": {
+    "rows": 100,
+    "human_keep": 43,
+    "human_drop": 56,
+    "unsure": 1,
+    "marked": 99,
+    "jev_keep": 26,
+    "jev_drop": 74,
+    "false_keep": 3,
+    "false_drop": 20
+  },
+  "false_keep": [
+    {
+      "id": "0f83c166a2dbd5d9",
+      "title": "SpaceX Stock Looks To Reclaim IPO Price After Earnings, Share Unlock",
+      "source": "rss_yahoo_finance",
+      "pool": "parsed",
+      "jev": "KEEP",
+      "human": "D",
+      "reason": "code_deal",
+      "bits": [
+        "earnings"
+      ],
+      "human_reason": "While the words \"IPO\" is present and SpaceX is a large company, theres a difference between \"SpaceX embarks on upcoming IPO\" and \"SpaceX regaining IPO price\". The IPO has already happened and Jev should make that distinction"
+    },
+    {
+      "id": "216c07c5b73ab8f3",
+      "title": "What Every 65-Year-Old Should Know About Social Security",
+      "source": "rss_yahoo_finance",
+      "pool": "parsed",
+      "jev": "KEEP",
+      "human": "D",
+      "reason": "code_policy",
+      "bits": [],
+      "human_reason": "While \"Social Security\" is mentioned, this makes no mention of any changes to Social Security. Likely just an explainer and should be discarded"
+    },
+    {
+      "id": "bec4c89ecb7f9b96",
+      "title": "US and Israeli leaders expected ‘swift outcome’ in Iran",
+      "source": "rss_aljazeera_economy",
+      "pool": "hard_miss",
+      "jev": "KEEP",
+      "human": "D",
+      "reason": "other_powerful",
+      "bits": [
+        "actor"
+      ],
+      "human_reason": "Their expectations is irrelevant and usually noise--only concrete actions/policy(like escalation, peace deals, disarmament is real)"
+    }
+  ],
+  "false_drop": [
+    {
+      "id": "ead07d0c1957f634",
+      "title": "Berkshire's Alphabet stake, Meta goes back to court, Europe's champagne problems and more in Morning Squawk - CNBC",
+      "source": "rss_google_markets",
+      "pool": "parsed",
+      "jev": "DROP",
+      "human": "K",
+      "reason": "low_material",
+      "bits": [
+        "actor",
+        "geo"
+      ],
+      "human_reason": "Meta going to court poses potential legal problems for a large AI company."
+    },
+    {
+      "id": "07f4e9c3b848aefc",
+      "title": "LANXESS Targets Deeper Cuts, Deleveraging as Chemical Markets Stay Weak",
+      "source": "rss_yahoo_finance",
+      "pool": "parsed",
+      "jev": "DROP",
+      "human": "K",
+      "reason": "low_material",
+      "bits": [
+        "actor",
+        "geo"
+      ],
+      "human_reason": "Company action. Should keep"
+    },
+    {
+      "id": "1e5e2baf499ebf03",
+      "title": "US consumer confidence falls in August, Conference Board says - Reuters",
+      "source": "rss_google_business",
+      "pool": "parsed",
+      "jev": "DROP",
+      "human": "K",
+      "reason": "crowd",
+      "bits": [
+        "geo"
+      ],
+      "human_reason": "Consumer confidence is a good indicator of market sentiment"
+    },
+    {
+      "id": "9c5127bba1db6935",
+      "title": "U.S. State Banking Associations To Launch Blockchain Network",
+      "source": "rss_yahoo_finance",
+      "pool": "parsed",
+      "jev": "DROP",
+      "human": "K",
+      "reason": "crowd",
+      "bits": [
+        "geo"
+      ],
+      "human_reason": "State Banking Associations(and any industry-wide union) taking a new initiative is HUGE news and should not be dropped"
+    },
+    {
+      "id": "d5456e5d98553ee9",
+      "title": "Almonty (ALM) Authorized a $300M Buyback Before Sangdong Fully Ramps. Is that the Best Use of Capital?",
+      "source": "rss_yahoo_finance",
+      "pool": "parsed",
+      "jev": "DROP",
+      "human": "K",
+      "reason": "punct",
+      "bits": [],
+      "human_reason": "Stock buybacks should be considered as good news"
+    },
+    {
+      "id": "b8ea74b74ab1291c",
+      "title": "Congo launches Ebola vaccination drive to tackle deadly outbreak",
+      "source": "rss_aljazeera_economy",
+      "pool": "parsed",
+      "jev": "DROP",
+      "human": "K",
+      "reason": "geo_other",
+      "bits": [
+        "actor"
+      ],
+      "human_reason": "While Africa is normally outside the bounds of US market considerations, it is a huge testing ground for US phramaceutical companies. If US companies are contracted, could represent an opportunity"
+    },
+    {
+      "id": "c87c9c8867663da3",
+      "title": "Here's who we know is going to the Trump-Xi dinner so far",
+      "source": "rss_cnbc_finance",
+      "pool": "parsed",
+      "jev": "DROP",
+      "human": "K",
+      "reason": "low_material",
+      "bits": [
+        "actor",
+        "geo"
+      ],
+      "human_reason": "Attendees of the Trump-Xi dinner indicate who is relevant in geopolitics. Should monitor for context"
+    },
+    {
+      "id": "6192e052250564d5",
+      "title": "National Stock Exchange of India Rises in Trading Debut - WSJ",
+      "source": "rss_google_markets",
+      "pool": "parsed",
+      "jev": "DROP",
+      "human": "K",
+      "reason": "low_material",
+      "bits": [
+        "actor",
+        "geo"
+      ],
+      "human_reason": "National Stock Exchange of an emerging economy is huge--worth watching because India never had this sort of thing before"
+    },
+    {
+      "id": "5f77b5525cbbfe90",
+      "title": "EUR/GBP Price Forecast: Fails at 0.8610 amid higher Oil prices, BoE hawkishness - tmgm.com",
+      "source": "rss_google_commodities",
+      "pool": "parsed",
+      "jev": "DROP",
+      "human": "K",
+      "reason": "opinion",
+      "bits": [
+        "opinion",
+        "actor",
+        "geo"
+      ],
+      "human_reason": "Any dovish/hawkish movement of central banks in relevant regions should be monitored"
+    },
+    {
+      "id": "ef0363df5fd485eb",
+      "title": "Fed’s Cook sees AI, oil prices adding to inflation - Finance & Commerce",
+      "source": "Finance & Commerce",
+      "pool": "rss",
+      "jev": "DROP",
+      "human": "K",
+      "reason": "low_material",
+      "bits": [
+        "actor",
+        "geo"
+      ],
+      "human_reason": "Fed officer opinions--worth keeping"
+    },
+    {
+      "id": "046f41692b40a012",
+      "title": "Tomorrow's PCE Inflation Report May Boost Fed Hike Bets - Seeking Alpha",
+      "source": "Seeking Alpha",
+      "pool": "rss",
+      "jev": "DROP",
+      "human": "K",
+      "reason": "source",
+      "bits": [
+        "print"
+      ],
+      "human_reason": "PCE Inflation Report is good context"
+    },
+    {
+      "id": "9a5d1fd52befdae2",
+      "title": "5 Things to Know Before the Stock Market Opens on Tuesday - investopedia.com",
+      "source": "investopedia.com",
+      "pool": "rss",
+      "jev": "DROP",
+      "human": "K",
+      "reason": "opinion",
+      "bits": [
+        "opinion",
+        "actor",
+        "geo"
+      ],
+      "human_reason": "From sources like Investopedia, \"5 things to know before market opens\" is good context actually and should be considered"
+    },
+    {
+      "id": "1eeca13c99e31d10",
+      "title": "Stock-Split Watch: Is Caterpillar Next? - The Motley Fool",
+      "source": "The Motley Fool",
+      "pool": "rss",
+      "jev": "DROP",
+      "human": "K",
+      "reason": "source",
+      "bits": [],
+      "human_reason": "Stock split action"
+    },
+    {
+      "id": "7c13e641f1a71153",
+      "title": "Food imports raise supply shock risk - The Express Tribune",
+      "source": "The Express Tribune",
+      "pool": "rss",
+      "jev": "DROP",
+      "human": "K",
+      "reason": "geo_other",
+      "bits": [
+        "actor"
+      ],
+      "human_reason": "Food import shocks is worth monitoring"
+    },
+    {
+      "id": "f06a671c16dbd840",
+      "title": "Gold price crashes as 2007-era yields trigger brutal sell-off - tmgm.com",
+      "source": "tmgm.com",
+      "pool": "rss",
+      "jev": "DROP",
+      "human": "K",
+      "reason": "low_material",
+      "bits": [
+        "actor",
+        "geo"
+      ],
+      "human_reason": "Gold crash is worth monitoring"
+    },
+    {
+      "id": "6e8743dd2c9ee32b",
+      "title": "Warsh settles some nerves at Jackson Hole",
+      "source": "rss_ft_world",
+      "pool": "hard_miss",
+      "jev": "DROP",
+      "human": "K",
+      "reason": "low_material",
+      "bits": [
+        "actor",
+        "geo"
+      ],
+      "human_reason": "Fed chair action--worth watching"
+    },
+    {
+      "id": "7842aa1cc798090f",
+      "title": "Eaton shares rise after UBS upgrades the stock to Buy from Neutral and raises its price target to $515, citing strong sales growth and expected margin improvement.",
+      "source": "finviz_export",
+      "pool": "hard_miss",
+      "jev": "DROP",
+      "human": "K",
+      "reason": "junk_shape",
+      "bits": [
+        "earnings"
+      ],
+      "human_reason": "Analyst upgrade of a certain company"
+    },
+    {
+      "id": "ce2d39000f80da40",
+      "title": "EU prepares 'Buy European' public-procurement rules aimed at China",
+      "source": "events",
+      "pool": "hard_miss",
+      "jev": "DROP",
+      "human": "K",
+      "reason": "low_material",
+      "bits": [
+        "actor",
+        "geo"
+      ],
+      "human_reason": "EU trade policy--worth looking at"
+    },
+    {
+      "id": "74d6eedc5345363f",
+      "title": "Reports: Brightline preparing to file for Chapter 11 bankruptcy - WKMG",
+      "source": "rss_google_business",
+      "pool": "hard_miss",
+      "jev": "DROP",
+      "human": "K",
+      "reason": "low_material",
+      "bits": [
+        "actor",
+        "geo"
+      ],
+      "human_reason": "Corporate filing for bankruptcy--worth looking at"
+    },
+    {
+      "id": "52b378feae72ebb6",
+      "title": "Used oil supertanker prices surpass new vessel costs - finway.com.ua",
+      "source": "rss_google_commodities",
+      "pool": "hard_miss",
+      "jev": "DROP",
+      "human": "K",
+      "reason": "geo_other",
+      "bits": [
+        "actor"
+      ],
+      "human_reason": "Concerns shipbuilding stocks--worth looking at"
+    }
+  ],
+  "bits_on_misses": {
+    "false_keep": {
+      "opinion": 0,
+      "tape": 0,
+      "earnings": 1,
+      "print": 0,
+      "lever": 0,
+      "signed": 0,
+      "blast": 0,
+      "chokepoint": 0,
+      "actor": 1,
+      "geo": 0
+    },
+    "false_drop": {
+      "opinion": 2,
+      "tape": 0,
+      "earnings": 1,
+      "print": 1,
+      "lever": 0,
+      "signed": 0,
+      "blast": 0,
+      "chokepoint": 0,
+      "actor": 14,
+      "geo": 13
+    }
+  },
+  "json_url": "https://github.com/SRoyaltyy/fullscan/blob/main/00_grounding/jev_train/20260929_1703.json",
+  "grade_url": "https://github.com/SRoyaltyy/fullscan/blob/main/00_grounding/jev_train/20260929_1703_grade.json"
+}
