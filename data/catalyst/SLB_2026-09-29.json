@@ -1,0 +1,224 @@
+{
+  "ticker": "SLB",
+  "analysis_date": "2026-09-29",
+  "current_price": "51.49",
+  "net_signal": "Strong Bullish",
+  "conviction": 56,
+  "catalyst_stack": "On 31 Aug 2026 SLB agreed to buy Kelvion for about $3.4 billion cash plus roughly $700 million of debt (close expected 1H 2027), after completing the Envirex subsea bolt-on (11 May), Tachyus (reported 24 Jul), and S&P Global\u2019s upstream software portfolio (1 Sep). Contract momentum stayed intact with a seven-year Kuwait Oil Company AIV technology award (30 Jun), OQEP\u2019s Bisat-B expansion to 548,000 bpd in Oman (23 Sep), and four multi-year Aramco well-construction packages (29 Sep), alongside a 14 Jul Liberty Energy data-center power alliance. Capital returns continued via a $0.295 quarterly dividend (23 Jul) and $648 million of Q2 buybacks (12 million shares, 24 Jul), while UBS lifted its target to $75 (14 Sep) and Rothschild to $68 (25 Sep). Offsets include Q1 Middle East disruptions that cut sequential revenue and margins (24 Apr), a $2 billion senior-notes issue (7 May), and CEO Olivier Le Peuch\u2019s 35,000-share sale at $60 on 1 Sep.",
+  "key_assumption": "Kelvion closes on the stated 1H 2027 timetable without a leverage or synergy scare, and Middle East disruptions remain a contained sequential hit rather than a lasting NOC-capex cut that would mute the Aramco/KOC/Oman awards.",
+  "catalyst_grid": [
+    {
+      "taxonomy": "Successful acquisition/synergy realization",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 7,
+      "adjusted_weight": 9,
+      "event_ids": [
+        16,
+        6,
+        12,
+        17,
+        4,
+        1
+      ],
+      "event_date": "2026-08-31",
+      "evidence_excerpt": "SLB will pay approximately $3.4 billion in cash to acquire Kelvion and assume another $700 million of debt.",
+      "source_urls": [
+        "https://www.slb.com/newsroom/press-release/2026/pr-2026-0831",
+        "https://oilprice.com/Latest-Energy-News/World-News/SLB-Makes-34-Billion-Bet-on-AI-Data-Center-Boom.html"
+      ],
+      "confidence": 95
+    },
+    {
+      "taxonomy": "Contract win/expansion",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 8,
+      "adjusted_weight": 6,
+      "event_ids": [
+        20,
+        8,
+        0
+      ],
+      "event_date": "2026-09-23",
+      "evidence_excerpt": "SLB has been awarded a contract by OQ Exploration & Production (OQEP) to deliver an expansion of the Bisat-B production facility in Oman",
+      "source_urls": [
+        "https://investorcenter.slb.com/news-releases/news-release-details/slb-awarded-major-contract-oqep-integrated-facility-expansion/",
+        "https://www.worldoil.com/news/2026/9/23/slb-wins-oqep-contract-for-548-000-bpd-bisat-field-expansion-in-oman/"
+      ],
+      "confidence": 94
+    },
+    {
+      "taxonomy": "Share repurchase program/increased dividend",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 5,
+      "event_ids": [
+        14,
+        10
+      ],
+      "event_date": "2026-07-24",
+      "evidence_excerpt": "SLB repurchased 12 million shares of its common stock for a total purchase price of $648 million.",
+      "source_urls": [
+        "https://www.nasdaq.com/press-release/slb-announces-second-quarter-2026-results-2026-07-24"
+      ],
+      "confidence": 94
+    },
+    {
+      "taxonomy": "Strategic partnership/alliance",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 6,
+      "adjusted_weight": 5,
+      "event_ids": [
+        9,
+        7
+      ],
+      "event_date": "2026-07-14",
+      "evidence_excerpt": "They agreed to form an alliance combining SLB\u2019s modular data-center infrastructure and project execution",
+      "source_urls": [
+        "https://www.slb.com/newsroom/press-release/2026/pr-2026-0714-slb-liberty-energy",
+        "https://www.reuters.com/business/energy/slb-partners-with-liberty-energy-supply-modular-parts-power-data-centers-2026-07-14/"
+      ],
+      "confidence": 88
+    },
+    {
+      "taxonomy": "Strategic pivot/rebranding to high-growth area",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 4,
+      "event_ids": [
+        13
+      ],
+      "event_date": "2026-07-24",
+      "evidence_excerpt": "Meta announced plans for a new 1GW data center in Canada, and we are proud to have been selected as a delivery partner",
+      "source_urls": [
+        "https://www.nasdaq.com/press-release/slb-announces-second-quarter-2026-results-2026-07-24"
+      ],
+      "confidence": 90
+    },
+    {
+      "taxonomy": "Analyst upgrade/PT increase",
+      "type": "positive",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 4,
+      "event_ids": [
+        19,
+        21,
+        15
+      ],
+      "event_date": "2026-09-14",
+      "evidence_excerpt": "Raised PT to $75 from $72 (Sep 14, 2026; Buy maintained)",
+      "source_urls": [
+        "https://www.pricetargets.com/NYSE/SLB/",
+        "https://stockanalysis.com/stocks/slb/"
+      ],
+      "confidence": 70
+    },
+    {
+      "taxonomy": "Geopolitical event that hurts sector",
+      "type": "negative",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 6,
+      "event_ids": [
+        3
+      ],
+      "event_date": "2026-04-24",
+      "evidence_excerpt": "Middle East disruptions cut sequential revenue and margins",
+      "source_urls": [
+        "https://www.businesswire.com/news/home/20260422463846/en/SLB-Announces-First-Quarter-2026-Results"
+      ],
+      "confidence": 92
+    },
+    {
+      "taxonomy": "Accumulation of debt/retention or deepening of toxic assets/failed divestiture",
+      "type": "negative",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 6,
+      "adjusted_weight": 5,
+      "event_ids": [
+        5
+      ],
+      "event_date": "2026-05-07",
+      "evidence_excerpt": "On or about May 7, 2026, Schlumberger Investment S.A. completed an SEC-registered offering of $2 billion",
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/87347/000119312526201211/d85569d424b3.htm",
+        "https://www.tipranks.com/news/company-announcements/schlumberger-issues-2-billion-in-new-senior-notes"
+      ],
+      "confidence": 78
+    },
+    {
+      "taxonomy": "Insider selling",
+      "type": "negative",
+      "category": "internal",
+      "status": "MISS",
+      "base_weight": 5,
+      "adjusted_weight": 0,
+      "event_ids": [
+        18
+      ],
+      "event_date": "2026-09-01",
+      "evidence_excerpt": "Sep 1, 2026: CEO Olivier Le Peuch sold 35,000 shares at $60.00 ($2.1M total)",
+      "source_urls": [
+        "https://www.secform4.com/insider-trading/87347.htm"
+      ],
+      "confidence": 0
+    },
+    {
+      "taxonomy": "Contract win/expansion",
+      "type": "positive",
+      "event_date": "2026-09-24",
+      "evidence_excerpt": "SLB has been awarded four integrated well construction contracts by Aramco covering more than 450 oil and gas wells across Saudi Arabia.",
+      "source_urls": [
+        "https://www.worldoil.com/news/2026/9/24/slb-to-deliver-more-than-450-wells-for-aramco-under-three-year-contracts/"
+      ],
+      "status": "HIT",
+      "base_weight": 8,
+      "adjusted_weight": 6,
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Lawsuit",
+      "type": "negative",
+      "event_date": "2026-04-20",
+      "evidence_excerpt": "Schlumberger Technology Corp. mismanages its 401(k) plan by using forfeited contributions to make its own payments to the plan",
+      "source_urls": [
+        "https://news.bloomberglaw.com/employee-benefits/schlumbergers-handling-of-401k-forfeitures-drives-new-lawsuit"
+      ],
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 5,
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Successful acquisition/synergy realization",
+      "type": "positive",
+      "event_date": "2026-07-24",
+      "evidence_excerpt": "During the quarter, SLB completed the acquisition of Tachyus Corp., a Houston-based technology company",
+      "source_urls": [
+        "https://www.nasdaq.com/press-release/slb-announces-second-quarter-2026-results-2026-07-24"
+      ],
+      "status": "HIT",
+      "base_weight": 7,
+      "adjusted_weight": 9,
+      "confidence": 80
+    }
+  ],
+  "grok_verdict": "Bullish",
+  "search_backend": "grok_native",
+  "generated_at": "2026-09-29",
+  "cutoff_date": null,
+  "role": "override_captain"
+}

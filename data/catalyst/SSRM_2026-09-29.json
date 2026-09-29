@@ -1,0 +1,201 @@
+{
+  "ticker": "SSRM",
+  "analysis_date": "2026-09-29",
+  "current_price": "33.84",
+  "net_signal": "Strong Bullish",
+  "conviction": 71,
+  "catalyst_stack": "On 24 Jun 2026 SSR closed the ~$1.49B sale of its 80% \u00c7\u00f6pler stake, and on 17 Jul 2026 it closed the Hod Maden 20% sale for an uncapped 4% NSR, finishing the T\u00fcrkiye exit. On 15 Jun 2026 the board added $500M of buybacks and reinstated a $0.03 quarterly dividend, after a 5 May 2026 Q1 print of ~110,000 GEOs, $2,433/oz AISC, $211M FCF and $1.16 diluted EPS on a debt-free balance sheet. RBC upgraded SSRM to Outperform on 3 Jun 2026 and raised its target to $43 on 16 Sep 2026, while a Colorado federal court on 27 Aug 2026 dismissed the \u00c7\u00f6pler securities class action with prejudice. An SSR affiliate took 9.9% of Phenom on 29 Jun 2026 and exercised the US$4M Dobbin 15% Nevada JV option on 29 Sep 2026, and on 28 Sep 2026 management lifted 2026 growth capex at Marigold, CC&V, Seabee and Puna without changing production guidance.",
+  "key_assumption": "Americas mines convert high gold prices and \u00c7\u00f6pler cash into sustained FCF and executed buybacks, with no new heap-leach/permit shock or Canadian class-action revival offsetting the US dismissal.",
+  "catalyst_grid": [
+    {
+      "taxonomy": "Favorable court ruling/patent grant",
+      "type": "positive",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 8,
+      "adjusted_weight": 9,
+      "event_ids": [
+        10
+      ],
+      "event_date": "2026-08-27",
+      "evidence_excerpt": "\"In August 2026, Chief Judge Daniel D. Domenico dismissed all claims with prejudice and closed the case\"",
+      "source_urls": [
+        "https://www.aoshearman.com/en/news/ao-shearman-secures-dismissal-with-prejudice-for-ssr-mining-in-securities-class-action"
+      ],
+      "confidence": 78
+    },
+    {
+      "taxonomy": "Strategic pivot/rebranding",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 6,
+      "event_ids": [
+        2,
+        3
+      ],
+      "event_date": "2026-07-17",
+      "evidence_excerpt": "\"closed the sale of its 20% ownership stake in the Hod Maden development project (the Project)\"",
+      "source_urls": [
+        "https://www.nasdaq.com/press-release/ssr-mining-completes-sale-its-20-equity-interest-hod-maden-2026-07-17"
+      ],
+      "confidence": 95
+    },
+    {
+      "taxonomy": "Share repurchase/dividend increase",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 6,
+      "event_ids": [
+        4
+      ],
+      "event_date": "2026-06-15",
+      "evidence_excerpt": "\"approved an additional $500 million for share repurchases and the reinstatement of a regular quarterly dividend\"",
+      "source_urls": [
+        "https://www.nasdaq.com/press-release/ssr-mining-announces-additional-500-million-share-buyback-and-reinstatement-quarterly",
+        "https://www.businesswire.com/news/home/20260615239775/en/SSR-Mining-Announces-Additional-%24500-Million-Share-Buyback-and-Reinstatement-of-Quarterly-Dividend"
+      ],
+      "confidence": 95
+    },
+    {
+      "taxonomy": "Capacity expansion",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 6,
+      "event_ids": [
+        12
+      ],
+      "event_date": "2026-09-28",
+      "evidence_excerpt": "\"Marigold (Nevada): Increased to $65 million (from $48 million) to support longer-term growth\"",
+      "source_urls": [
+        "https://www.minichart.com.sg/2026/09/28/ssr-mining-lifts-2026-growth-capital-budget-at-three-mines/",
+        "https://quartr.com/events/ssr-mining-inc-ssrm-mining-forum-americas-2026_ojCzxm4z"
+      ],
+      "confidence": 75
+    },
+    {
+      "taxonomy": "Earnings beat",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 5,
+      "event_ids": [
+        5
+      ],
+      "event_date": "2026-05-05",
+      "evidence_excerpt": "\"In the first quarter, we produced 110,000 gold equivalent ounces at all-in sustaining costs of $2,433 per ounce\"",
+      "source_urls": [
+        "https://www.fool.com/earnings/call-transcripts/2026/05/05/ssr-mining-ssrm-q1-2026-earnings-transcript/",
+        "https://s22.q4cdn.com/546540291/files/doc_earnings/2026/q1/earnings-result/SSR-MINING-REPORTS-FIRST-QUARTER-2026-RESULTS.pdf"
+      ],
+      "confidence": 90
+    },
+    {
+      "taxonomy": "Analyst upgrade/PT increase",
+      "type": "positive",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 5,
+      "event_ids": [
+        9,
+        11
+      ],
+      "event_date": "2026-09-16",
+      "evidence_excerpt": "\"maintained an Outperform rating on SSR Mining (NASDAQ: SSRM) and raised the price target from $39 to $43\"",
+      "source_urls": [
+        "https://www.marketbeat.com/instant-alerts/analyst-silver-standard-resources-nasdaq-ssrm-given-new-4300-price-target-at-royal-bank-of-canada-2026-09-16/",
+        "https://www.benzinga.com/quote/SSRM/price-targets"
+      ],
+      "confidence": 82
+    },
+    {
+      "taxonomy": "Strategic partnership/alliance",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 6,
+      "adjusted_weight": 5,
+      "event_ids": [
+        7,
+        0
+      ],
+      "event_date": "2026-09-29",
+      "evidence_excerpt": "\"The sole investor in the Private Placement was an affiliate of SSR Mining Inc. (SSR). SSR now holds approximately 9.9%\"",
+      "source_urls": [
+        "https://www.phenomresources.com/phenom-announces-closing-of-5-41-million-financing-strategic-investor-and-execution-of-framework-agreement-relating-to-the-dobbin-project/",
+        "https://finance.yahoo.com/markets/stocks/articles/phenom-announces-closing-5-41-120000176.html"
+      ],
+      "confidence": 92
+    },
+    {
+      "taxonomy": "Deleveraging/sale of toxic assets/spin-off",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 4,
+      "event_ids": [
+        1
+      ],
+      "event_date": "2026-06-24",
+      "evidence_excerpt": "\"completed the previously announced sale of its ownership stake in the \u00c7\u00f6pler mine and related properties in T\u00fcrkiye\"",
+      "source_urls": [
+        "https://www.otcmarkets.com/filing/html?id=19574664&guid=R-6-kWq7yFGRB3h",
+        "https://s22.q4cdn.com/546540291/files/doc_news/2026/Jun/24/SSR-MINING-COMPLETES-THE-SALE-OF-THE-PLER-MINE.pdf"
+      ],
+      "confidence": 95
+    },
+    {
+      "taxonomy": "Earnings miss",
+      "type": "negative",
+      "event_date": "2026-08-04",
+      "evidence_excerpt": "SSR Mining reports Q2 EPS 66c, consensus 68c",
+      "source_urls": [
+        "https://stockanalysis.com/stocks/ssrm/",
+        "https://www.tipranks.com/news/the-fly/ssr-mining-reports-q2-eps-66c-consensus-68c-thefly-news"
+      ],
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 5,
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Strategic partnership/alliance",
+      "type": "positive",
+      "event_date": "2026-09-23",
+      "evidence_excerpt": "an affiliate of SSR Mining Inc. (\u201cSSR\u201d) has now exercised its right to acquire a 15% interest in the Dobbin Project for US$4,000,000",
+      "source_urls": [
+        "https://www.phenomresources.com/ssr-mining-acquires-15-interest-in-dobbin-project-and-enters-into-joint-venture-arrangement-with-phenoms-subsidiary-copper-one-usa-inc/"
+      ],
+      "status": "HIT",
+      "base_weight": 6,
+      "adjusted_weight": 5,
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Analyst downgrade/PT decrease",
+      "type": "negative",
+      "event_date": "2026-09-28",
+      "evidence_excerpt": "reiterated his \"outperform\" rating on the gold and silver mining stock -- but removed his $41 price target",
+      "source_urls": [
+        "https://www.fool.com/investing/2026/09/28/why-ssr-mining-stock-dropped-today/"
+      ],
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 5,
+      "confidence": 80
+    }
+  ],
+  "grok_verdict": "Bullish",
+  "search_backend": "grok_native",
+  "generated_at": "2026-09-29",
+  "cutoff_date": null,
+  "role": "conflict"
+}

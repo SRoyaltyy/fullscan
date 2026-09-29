@@ -1,0 +1,224 @@
+{
+  "ticker": "BKR",
+  "analysis_date": "2026-09-29",
+  "current_price": "57.12",
+  "net_signal": "Strong Bullish",
+  "conviction": 81,
+  "catalyst_stack": "Baker Hughes closed Chart Industries on 2026-07-16, adding a third operating segment and targeting $325 million of annualized cost synergies by year three. Q1 and Q2 2026 results (2026-04-23 and 2026-07-26) showed higher revenue, record IET orders/RPO, and a 2026-09-09 FY 2026 revenue guide raise to $28.5\u2013$30.3 billion to include Chart. Award flow then clustered: Venture Global LNG/compression, Dynamis and Kodiak turbine packages, Kutei subsea trees, KOC digital work, and bp North Sea stimulation, plus Mantle Reach geothermal (2026-06-24) and Worley LNG (2026-05-11) alliances. Street action was mixed\u2014Barclays cut the rating on 2026-05-07 and Citi trimmed its PT on 2026-06-03\u2014while UBS lifted its PT to $72 on 2026-09-14, so operating and M&A news dominate the modest analyst noise.",
+  "key_assumption": "Chart delivers the stated $325 million of year-three synergies and IET LNG/power backlog converts on schedule, rather than slipping on FIDs, permits, or turbine-capacity constraints that would unwind the FY 2026 guide.",
+  "catalyst_grid": [
+    {
+      "taxonomy": "Successful acquisition/synergy realization",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 7,
+      "adjusted_weight": 9,
+      "event_ids": [
+        8
+      ],
+      "event_date": "2026-07-16",
+      "evidence_excerpt": "\"today announced the successful completion of its acquisition of Chart Industries, Inc. (NYSE: GTLS)\"",
+      "source_urls": [
+        "https://www.nasdaq.com/press-release/baker-hughes-completes-acquisition-chart-industries-2026-07-16",
+        "https://www.worldoil.com/news/2026/7/16/baker-hughes-closes-chart-acquisition-adds-third-operating-segment/"
+      ],
+      "confidence": 96
+    },
+    {
+      "taxonomy": "Earnings beat (revenue, EBITDA, EPS)",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 8,
+      "adjusted_weight": 7,
+      "event_ids": [
+        9,
+        2
+      ],
+      "event_date": "2026-07-26",
+      "evidence_excerpt": "\"Orders of $10.5 billion, including $7.1 billion of IET orders.\"",
+      "source_urls": [
+        "https://downstreamcalendar.com/industry_feed/baker-hughes-announces-second-quarter-2026-results/",
+        "https://www.nasdaq.com/articles/baker-hughes-q2-earnings-call-highlights"
+      ],
+      "confidence": 95
+    },
+    {
+      "taxonomy": "Contract win/expansion",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 8,
+      "adjusted_weight": 7,
+      "event_ids": [
+        7,
+        11,
+        12,
+        13,
+        14,
+        15,
+        17
+      ],
+      "event_date": "2026-09-13",
+      "evidence_excerpt": "\"will provide gas compression systems for the Cloud Connector Pipeline project in Louisiana, as well as a modular liquefaction solution\"",
+      "source_urls": [
+        "https://www.globenewswire.com/news-release/2026/09/13/3360667/0/en/baker-hughes-and-venture-global-advance-next-phase-of-u-s-gas-infrastructure-growth.html",
+        "https://seekingalpha.com/news/4642716-baker-hughes-scores-two-lng-infrastructure-deals-from-venture-global"
+      ],
+      "confidence": 95
+    },
+    {
+      "taxonomy": "Earnings guidance raise",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 7,
+      "adjusted_weight": 7,
+      "event_ids": [
+        16,
+        9
+      ],
+      "event_date": "2026-09-09",
+      "evidence_excerpt": "\"the company said it now expects FY 2026 revenue of $28.5B-$30.3B, up from\"",
+      "source_urls": [
+        "https://seekingalpha.com/news/4641160-baker-hughes-hikes-guidance-for-2026-revenue-ebitda-to-reflect-chart-industries-deal",
+        "https://www.reuters.com/business/energy/baker-hughes-raises-annual-forecasts-after-chart-acquisition-2026-09-09/"
+      ],
+      "confidence": 92
+    },
+    {
+      "taxonomy": "Deleveraging/sale of toxic assets/spin-off of loss-making unit",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 6,
+      "event_ids": [
+        1
+      ],
+      "event_date": "2026-04-13",
+      "evidence_excerpt": "\"The all-cash transaction is valued at approximately $1.45 billion, before customary closing adjustments.\"",
+      "source_urls": [
+        "https://www.globenewswire.com/news-release/2026/04/13/3272196/0/en/Baker-Hughes-Announces-Sale-of-Waygate-Technologies-to-Hexagon.html",
+        "https://www.turbomachinerymag.com/view/baker-hughes-divests-waygate-technologies-doubles-down-on-rotating-equipment-and-lng"
+      ],
+      "confidence": 95
+    },
+    {
+      "taxonomy": "Strategic partnership/alliance",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 6,
+      "adjusted_weight": 6,
+      "event_ids": [
+        6,
+        4
+      ],
+      "event_date": "2026-06-24",
+      "evidence_excerpt": "\"targets installation of up to 500 megawatts of power in the next five years\"",
+      "source_urls": [
+        "https://www.nasdaq.com/press-release/baker-hughes-and-mantle-reach-power-encap-energy-transition-company-announce",
+        "https://www.thinkgeoenergy.com/baker-hughes-to-back-large-scale-geothermal-plans-of-mantle-reach-power/"
+      ],
+      "confidence": 93
+    },
+    {
+      "taxonomy": "Analyst upgrade/PT increase",
+      "type": "positive",
+      "category": "external",
+      "status": "MISS",
+      "base_weight": 5,
+      "adjusted_weight": 0,
+      "event_ids": [
+        18
+      ],
+      "event_date": "2026-09-14",
+      "evidence_excerpt": "\"UBS analyst Josh Silverstein maintained a Neutral (Hold) rating on Baker Hughes Company (BKR) and raised the price target to $72 (from $70).\"",
+      "source_urls": [
+        "https://www.tipranks.com/news/blurbs/ubs-reaffirms-their-hold-rating-on-baker-hughes-company-bkr-blurbs-news",
+        "https://www.pricetargets.com/NASDAQ/BKR/"
+      ],
+      "confidence": 0
+    },
+    {
+      "taxonomy": "Analyst downgrade/price target cut",
+      "type": "negative",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 4,
+      "event_ids": [
+        5,
+        3
+      ],
+      "event_date": "2026-06-03",
+      "evidence_excerpt": "\"lowered its price target on Baker Hughes Company (NASDAQ: BKR) to $74 from $80 on June 3, 2026, while maintaining a Buy rating.\"",
+      "source_urls": [
+        "https://www.tipranks.com/news/the-fly/baker-hughes-price-target-lowered-to-74-from-80-at-citi-thefly-news",
+        "https://www.marketbeat.com/instant-alerts/citigroup-lowers-baker-hughes-nasdaqbkr-price-target-to-7400-2026-06-03/"
+      ],
+      "confidence": 78
+    },
+    {
+      "taxonomy": "workforce reductions",
+      "type": "negative",
+      "event_date": "2026-07-09",
+      "evidence_excerpt": "Houston-based energy technology company Baker Hughes is closing one of its Houston facilities, a move that will impact 174 employees.",
+      "source_urls": [
+        "https://www.click2houston.com/news/local/2026/07/09/baker-hughes-to-close-houston-facility-lay-off-174-employees/",
+        "https://www.houstonpublicmedia.org/articles/news/energy-environment/2026/07/09/556695/baker-hughes-to-layoff-174-workers-at-northwest-houston-plant/"
+      ],
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 5,
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Analyst downgrade/price target cut",
+      "type": "negative",
+      "event_date": "2026-05-07",
+      "evidence_excerpt": "Barclays lowered its rating on the energy technology company to \"Equalweight\" from a previous \"Overweight\" rating.",
+      "source_urls": [
+        "https://www.tradingview.com/news/stockstory:2a46cdcff094b:0-why-baker-hughes-bkr-shares-are-trading-lower-today/",
+        "https://www.tipranks.com/news/the-fly/baker-hughes-downgraded-to-equal-weight-from-overweight-at-barclays-thefly-news"
+      ],
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 4,
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Contract win/expansion",
+      "type": "positive",
+      "event_date": "2026-07-26",
+      "evidence_excerpt": "Received a major award from Dynamis Power Solutions, including 76 NovaLT\u212216 gas turbines, for approximately 1.3 GW of capacity",
+      "source_urls": [
+        "https://downstreamcalendar.com/industry_feed/baker-hughes-announces-second-quarter-2026-results/"
+      ],
+      "status": "HIT",
+      "base_weight": 8,
+      "adjusted_weight": 7,
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Earnings guidance raise",
+      "type": "positive",
+      "event_date": "2026-07-26",
+      "evidence_excerpt": "we are raising our full-year IET order guidance and increasing our Horizon 2(1) IET orders outlook to more than $45 billion.",
+      "source_urls": [
+        "https://downstreamcalendar.com/industry_feed/baker-hughes-announces-second-quarter-2026-results/"
+      ],
+      "status": "HIT",
+      "base_weight": 7,
+      "adjusted_weight": 7,
+      "confidence": 80
+    }
+  ],
+  "grok_verdict": "Bearish",
+  "search_backend": "grok_native",
+  "generated_at": "2026-09-29",
+  "cutoff_date": null,
+  "role": "override_captain"
+}

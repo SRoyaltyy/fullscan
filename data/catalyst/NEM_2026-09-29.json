@@ -1,0 +1,281 @@
+{
+  "ticker": "NEM",
+  "analysis_date": "2026-09-29",
+  "current_price": "116.05",
+  "net_signal": "Neutral",
+  "conviction": 12,
+  "catalyst_stack": "On Apr 23 and Jul 23, 2026, Newmont printed back-to-back record free cash flow of $3.1 billion and $2.2 billion, beat estimates, reaffirmed ~5.3 million ounces of 2026 gold guidance, and authorized a $6 billion buyback. On Jun 19, British Columbia granted Red Chris block-cave permits, and on Aug 10 Newmont and Barrick settled the Nevada Gold Mines dispute by contributing Fourmile, Fiberline and Mike into the JV for a $1.95 billion Newmont payment while keeping 38.5%/61.5% ownership. Cadia underground was impaired by the Apr 14 magnitude 4.5 earthquake and halted again after Jun 19 aftershocks, while CFO Tabolt sold stock on Aug 5 (within two weeks of the Q2 beat) and CEO Viljoen sold on Sep 1. Street targets from RBC ($155), CIBC ($170), Scotiabank and NBF still sit well above ~$116, but the Sep 29 strong jobs print lifted Fed hike odds and hit gold miners.",
+  "key_assumption": "2026 ounce/AISC guidance and the $6 billion buyback still hold after Cadia downtime, and gold does not break lower if real rates reprice higher.",
+  "catalyst_grid": [
+    {
+      "taxonomy": "Regulatory approval (FDA, FCC, FTC clearance)",
+      "type": "positive",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 9,
+      "adjusted_weight": 10,
+      "event_ids": [
+        7
+      ],
+      "event_date": "2026-06-19",
+      "evidence_excerpt": "The province\u2019s approvals include an amended Environmental Assessment Certificate (EAC), achieved through a consent-based process with the Tahltan Nation",
+      "source_urls": [
+        "https://www.canadianminingjournal.com/news/newmonts-red-chris-underground-expansion-gets-regulatory-green-light-in-bc/",
+        "https://www.newmont.com/investors/news-release/news-details/2026/Newmonts-Red-Chris-Block-Cave-Project-Receives-Major-Regulatory-Approvals/default.aspx"
+      ],
+      "confidence": 90
+    },
+    {
+      "taxonomy": "Earnings beat (revenue, EBITDA, EPS)",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 8,
+      "adjusted_weight": 8,
+      "event_ids": [
+        3,
+        11
+      ],
+      "event_date": "2026-07-23",
+      "evidence_excerpt": "generating record second-quarter free cash flow of $2.2 billion, while remaining on track to achieve our full-year 2026 guidance",
+      "source_urls": [
+        "https://www.kitco.com/news/article/2026-07-23/newmont-shrugs-13-gold-price-correction-record-second-quarter-free-cash",
+        "https://s24.q4cdn.com/382246808/files/doc_earnings/2026/q2/earnings-result/Newmont-Q2-2026-Earnings-Release_Final.pdf"
+      ],
+      "confidence": 95
+    },
+    {
+      "taxonomy": "Share repurchase program/increased dividend",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 6,
+      "event_ids": [
+        3
+      ],
+      "event_date": "2026-04-23",
+      "evidence_excerpt": "Free Cash Flow -- $3.1 billion, representing an all-time quarterly record even after $1.3 billion in cash tax payments.",
+      "source_urls": [
+        "https://www.fool.com/earnings/call-transcripts/2026/04/23/newmont-nem-q1-2026-earnings-transcript/",
+        "https://s24.q4cdn.com/382246808/files/doc_earnings/2026/q1/presentation/Newmont-Q1-2026-Earnings-Presentation_Final.pdf"
+      ],
+      "confidence": 95
+    },
+    {
+      "taxonomy": "Favorable court ruling/patent grant",
+      "type": "positive",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 8,
+      "adjusted_weight": 7,
+      "event_ids": [
+        15
+      ],
+      "event_date": "2026-08-14",
+      "evidence_excerpt": "On August 14, 2026, the court granted defendants\u2019 motion to dismiss the amended complaint, finding the pleadings insufficient regarding falsity or scienter.",
+      "source_urls": [
+        "https://www.tipranks.com/news/class-action/newmont-lawsuit-ruling-court-dismisses-investor-claims-over-newcrest-mine-disclosures",
+        "https://zlk.com/tickers/nem/litigation"
+      ],
+      "confidence": 78
+    },
+    {
+      "taxonomy": "Strategic partnership/alliance",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 6,
+      "adjusted_weight": 5,
+      "event_ids": [
+        13
+      ],
+      "event_date": "2026-08-10",
+      "evidence_excerpt": "Under the agreement announced Aug. 10, Newmont will pay Barrick $1.95 billion in cash after Fourmile is contributed to Nevada Gold Mines.",
+      "source_urls": [
+        "https://www.skillings.net/newmont-barrick-expand-nevada-gold-mines-joint-venture/",
+        "https://www.mining.com/barrick-newmont-settle-dispute-with-1-95b-deal/"
+      ],
+      "confidence": 96
+    },
+    {
+      "taxonomy": "Analyst upgrade/PT increase",
+      "type": "positive",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 4,
+      "event_ids": [
+        4,
+        9,
+        14,
+        16,
+        20,
+        21
+      ],
+      "event_date": "2026-09-16",
+      "evidence_excerpt": "9/16/2026 Royal Bank Of Canada Boost Target Outperform \u2192 Outperform $135.00 \u2192 $155.00",
+      "source_urls": [
+        "https://www.pricetargets.com/NYSE/NEM/"
+      ],
+      "confidence": 90
+    },
+    {
+      "taxonomy": "Positive personnel change (new CEO, CFO, board members)",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 4,
+      "adjusted_weight": 3,
+      "event_ids": [
+        5,
+        17
+      ],
+      "event_date": "2026-08-20",
+      "evidence_excerpt": "today announced the appointment of Peter Beaven to its Board of Directors, effective Sept. 1, 2026.",
+      "source_urls": [
+        "https://www.nasdaq.com/press-release/newmont-appoints-peter-beaven-board-directors-2026-08-20",
+        "https://www.australianmining.com.au/newmont-appoints-former-bhp-finance-chief-peter-beaven-to-board/"
+      ],
+      "confidence": 95
+    },
+    {
+      "taxonomy": "Rate hike/monetary tightening/liquidity withdrawal",
+      "type": "negative",
+      "category": "external",
+      "status": "MISS",
+      "base_weight": 9,
+      "adjusted_weight": 0,
+      "event_ids": [
+        0
+      ],
+      "event_date": "2026-09-29",
+      "evidence_excerpt": "Are You Sure You Understand Kinross Gold Stock's Risk?",
+      "source_urls": [
+        "https://finance.yahoo.com/markets/stocks/articles/sure-understand-kinross-gold-stocks-214531319.html"
+      ],
+      "confidence": 0
+    },
+    {
+      "taxonomy": "Operational setback (trial halted, satellite failure, production halt)",
+      "type": "negative",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 7,
+      "adjusted_weight": 9,
+      "event_ids": [
+        1,
+        8
+      ],
+      "event_date": "2026-04-14",
+      "evidence_excerpt": "A 4.5 magnitude tremor will impair gold production for more than three months at Newmont Corporation\u2019s Cadia mine",
+      "source_urls": [
+        "https://mining.com.au/earthquake-reduces-newmont-cadia-capacity-for-months/",
+        "https://www.fool.com/earnings/call-transcripts/2026/04/23/newmont-nem-q1-2026-earnings-transcript/"
+      ],
+      "confidence": 92
+    },
+    {
+      "taxonomy": "Insider selling (especially by CEO/CFO, or clustered sales)",
+      "type": "negative",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 7,
+      "adjusted_weight": 6,
+      "event_ids": [
+        12,
+        18
+      ],
+      "event_date": "2026-09-01",
+      "evidence_excerpt": "September 1, 2026: CEO/President Natascha Viljoen sold 3,882 shares at $123 (~$477K total)",
+      "source_urls": [
+        "https://www.stocktitan.net/sec-filings/NEM/form-4-newmont-corp-de-insider-trading-activity-e2feca2f0e8f.html",
+        "https://www.secform4.com/insider-trading/1164727.htm"
+      ],
+      "confidence": 82
+    },
+    {
+      "taxonomy": "Analyst downgrade/price target cut",
+      "type": "negative",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 4,
+      "event_ids": [
+        2,
+        6,
+        10,
+        19
+      ],
+      "event_date": "2026-09-09",
+      "evidence_excerpt": "9/9/2026 Sanford C. Bernstein Lower Target Outperform \u2192 Outperform $147.00 \u2192 $144.00",
+      "source_urls": [
+        "https://www.pricetargets.com/NYSE/NEM/"
+      ],
+      "confidence": 88
+    },
+    {
+      "taxonomy": "Insider-earnings divergence",
+      "type": "negative",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 1,
+      "adjusted_weight": 1,
+      "event_ids": [
+        11,
+        12
+      ],
+      "event_date": "2026-08-05",
+      "evidence_excerpt": "August 5, 2026: CFO Brian Tabolt sold 11,445 shares at ~$105.09 (~$1.2M)",
+      "source_urls": [
+        "https://www.secform4.com/insider-trading/1164727.htm"
+      ],
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Operational setback (trial halted, satellite failure, production halt)",
+      "type": "negative",
+      "event_date": "2026-09-09",
+      "evidence_excerpt": "la autoridad provincial dispuso seis ceses preventivos sobre \u00e1reas de bajo mina, plantas y laboratorios",
+      "source_urls": [
+        "https://www.abcdiario.com.ar/petroleo-mineria/alerta-en-santa-cruz-clausuraron-seis-areas-de-la-mina-de-newmont-tras-detectar-un-posible-derrame-de-cianuro/",
+        "https://noticias.santacruz.gob.ar/organismos/trabajo/finalizo-la-inspeccion-en-newmont-trabajo-volvera-a-fiscalizar-el-cumplimiento-de-las-correcciones-exigidas"
+      ],
+      "status": "HIT",
+      "base_weight": 7,
+      "adjusted_weight": 9,
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Analyst downgrade/price target cut",
+      "type": "negative",
+      "event_date": "2026-07-14",
+      "evidence_excerpt": "7/14/2026 Zacks Research Downgrade Strong-Buy \u279d Hold",
+      "source_urls": [
+        "https://www.pricetargets.com/NYSE/NEM/"
+      ],
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 4,
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Insider selling (especially by CEO/CFO, or clustered sales)",
+      "type": "negative",
+      "event_date": "2026-08-05",
+      "evidence_excerpt": "Viljoen Natascha President & CEO 7,764 $104 $807,456",
+      "source_urls": [
+        "https://www.secform4.com/insider-trading/1164727.htm"
+      ],
+      "status": "HIT",
+      "base_weight": 7,
+      "adjusted_weight": 6,
+      "confidence": 80
+    }
+  ],
+  "grok_verdict": "Bearish",
+  "search_backend": "grok_native",
+  "generated_at": "2026-09-29",
+  "cutoff_date": null,
+  "role": "conflict"
+}

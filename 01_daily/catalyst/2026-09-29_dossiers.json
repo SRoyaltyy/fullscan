@@ -1,14 +1,14 @@
 {
   "date": "2026-09-29",
-  "generated_at": "2026-09-29T05:17:42.720683-04:00",
+  "generated_at": "2026-09-29T07:35:30.729241-04:00",
   "max_n": 8,
   "routing": "Grok \u2192 DeepSeek",
   "grok": true,
-  "deepseek_fallback": false,
+  "deepseek_fallback": true,
   "gemini": false,
   "n_targets": 8,
-  "n_ok": 0,
-  "status": "FAIL",
+  "n_ok": 7,
+  "status": "OK",
   "targets": [
     {
       "ticker": "NE",
@@ -56,49 +56,442 @@
       "ticker": "NE",
       "role": "override_captain",
       "why": "OVERRIDE card Oil & Gas Drilling",
-      "error": "OpenClaw and DeepSeek both returned empty for CATALYST STEP1 NE"
+      "net_signal": "Bullish",
+      "conviction": 28,
+      "search_backend": "grok_native",
+      "catalyst_stack": "On 2026-07-27 Noble posted a Q2 net loss and cut FY2026 revenue and adjusted EBITDA guidance after a $43 million hit from Brazil suspensions of Noble Faye Kozack and Noble Courage. Backlog still rebuilt across 2026-04-26 ($565 million, including Petrobras extending Courage through December 2030), 2026-07-10 (Noble Viking Brunei, about $136 million), 2026-07-27 (bp UK Claus Bachmann at $320,000/day), and 2026-09-28 (Tullow booking Faye Kozack for up to 10 Ghana wells from mid-2027). Street remains split: Susquehanna cut its target to $40 on 2026-07-08, Fearnley upgraded to Buy/$50 on 2026-07-29, Citi only lifted a Neutral target to $50 on 2026-09-07, and Kirby McInerney opened a no-suit-yet securities probe on 2026-08-10. On 2026-09-29 Middle East tensions and a jump in oil lifted NE about 7%, a cyclical bid that does not erase 2026 idle-time and guide-down risk.",
+      "key_assumption": "2027\u201330 floater work (Petrobras, bp, Tullow, Brunei) starts on schedule at stated dayrates, Brazil idle does not persist into 2027, and oil stays high enough to support offshore FIDs.",
+      "n_pos": 8,
+      "n_neg": 6,
+      "top_hits": [
+        {
+          "type": "positive",
+          "taxonomy": "Contract win/expansion",
+          "event_date": "2026-09-28",
+          "headline": "\"The work will include up to 10 wells off Ghana, with the campaign expected to start in mid-2027.\"",
+          "weight": 10,
+          "confidence": 93
+        },
+        {
+          "type": "positive",
+          "taxonomy": "Contract win/expansion",
+          "event_date": "2026-04-26",
+          "headline": "Noble Courage was extended by Petrobras for an additional 1,115 days, extending through December 2030, for a net incremental backlog addition of $339 million.",
+          "weight": 10,
+          "confidence": 80
+        },
+        {
+          "type": "positive",
+          "taxonomy": "Contract win/expansion",
+          "event_date": "2026-07-27",
+          "headline": "Approximately $200 million in new contract value since the April fleet status report, including a 6-well contract for the Noble Viking",
+          "weight": 10,
+          "confidence": 80
+        },
+        {
+          "type": "negative",
+          "taxonomy": "Earnings guidance cut",
+          "event_date": "2026-07-27",
+          "headline": "\"Revenue guidance is reduced to $2,800-$2,900 million (versus $2,800-$3,000 million previously)\"",
+          "weight": 9,
+          "confidence": 95
+        },
+        {
+          "type": "positive",
+          "taxonomy": "Analyst upgrade/PT increase",
+          "event_date": "2026-09-07",
+          "headline": "\"Citigroup maintained a Neutral rating while raising its Noble Corporation price target from USD 45 to USD 50.\"",
+          "weight": 6,
+          "confidence": 80
+        },
+        {
+          "type": "positive",
+          "taxonomy": "Strategic partnership/alliance",
+          "event_date": "2026-05-05",
+          "headline": "\"secured multiple managed pressure drilling (MPD) contracts and a global aftermarket services agreement with Noble Corporation\"",
+          "weight": 6,
+          "confidence": 88
+        }
+      ],
+      "error": null
     },
     {
       "ticker": "RIG",
       "role": "override_captain",
       "why": "OVERRIDE card Oil & Gas Drilling",
-      "error": "OpenClaw and DeepSeek both returned empty for CATALYST STEP1 RIG"
+      "net_signal": "Strong Bullish",
+      "conviction": 83,
+      "search_backend": "grok_native",
+      "catalyst_stack": "On April 2 and June 30, 2026, Transocean stacked about $2 billion of harsh-environment and Brazil/Norway backlog through the V\u00e5r Energi/Petrobras fixtures and the Equinor Cat D package, then added Eastern Mediterranean, ONGC India, and Equatorial Guinea awards through September 29. August 5 Q2 results printed $966 million of contract drilling revenue, a beat versus estimates, $6.7 billion backlog, and a FY2026 revenue guidance raise to $3.900\u2013$3.975 billion. The Valaris path improved with CFIUS approval on June 29, DOJ Second Request certification on August 25, and September 21 reports of an early no-divestiture clearance, while a September 24 SDNY ruling dismissed the securities class action with leave to amend. Offsetting that, May 4 DOJ Second Requests and Brazil CADE\u2019s August 7 full-form review still gate the combination, and Barclays and Susquehanna cut price targets to $7 in July\u2013August.",
+      "key_assumption": "The Equinor Cat D licenses are approved and the Valaris combination closes without a DOJ or CADE block or forced divestitures, so the backlog and merger-synergy thesis is realized rather than reversed.",
+      "n_pos": 8,
+      "n_neg": 3,
+      "top_hits": [
+        {
+          "type": "positive",
+          "taxonomy": "Contract win/expansion",
+          "event_date": "2026-06-30",
+          "headline": "this agreement is worth over $1 billion in contract backlog over seven rig years, excluding additional services",
+          "weight": 10,
+          "confidence": 96
+        },
+        {
+          "type": "positive",
+          "taxonomy": "Contract win/expansion",
+          "event_date": "2026-09-20",
+          "headline": "Transocean (RIG) Scores an $80 Million Deepwater Contract in Africa",
+          "weight": 10,
+          "confidence": 80
+        },
+        {
+          "type": "positive",
+          "taxonomy": "Earnings guidance raise",
+          "event_date": "2026-08-05",
+          "headline": "Contract drilling revenues were $966 million with strong revenue efficiency(1) of 97.0%.",
+          "weight": 9,
+          "confidence": 96
+        },
+        {
+          "type": "positive",
+          "taxonomy": "Favorable court ruling/patent grant",
+          "event_date": "2026-09-24",
+          "headline": "Transocean Ltd. investors fell short in pleading that top executives intended to publicly overvalue two oil and gas rigs later sold at a loss",
+          "weight": 9,
+          "confidence": 90
+        },
+        {
+          "type": "positive",
+          "taxonomy": "Earnings beat",
+          "event_date": "2026-08-05",
+          "headline": "Contract drilling revenues were $966 million with strong revenue efficiency(1) of 97.0%.",
+          "weight": 7,
+          "confidence": 96
+        },
+        {
+          "type": "positive",
+          "taxonomy": "Analyst upgrade/PT increase",
+          "event_date": "2026-05-07",
+          "headline": "Barclays upgraded Transocean Ltd. (NYSE: RIG) from Equal-Weight to Overweight, raising its price target from $6.00 to $8.00",
+          "weight": 6,
+          "confidence": 88
+        }
+      ],
+      "error": null
     },
     {
       "ticker": "SLB",
       "role": "override_captain",
       "why": "OVERRIDE card Oil & Gas Equipment & Services",
-      "error": "OpenClaw and DeepSeek both returned empty for CATALYST STEP1 SLB"
+      "net_signal": "Strong Bullish",
+      "conviction": 56,
+      "search_backend": "grok_native",
+      "catalyst_stack": "On 31 Aug 2026 SLB agreed to buy Kelvion for about $3.4 billion cash plus roughly $700 million of debt (close expected 1H 2027), after completing the Envirex subsea bolt-on (11 May), Tachyus (reported 24 Jul), and S&P Global\u2019s upstream software portfolio (1 Sep). Contract momentum stayed intact with a seven-year Kuwait Oil Company AIV technology award (30 Jun), OQEP\u2019s Bisat-B expansion to 548,000 bpd in Oman (23 Sep), and four multi-year Aramco well-construction packages (29 Sep), alongside a 14 Jul Liberty Energy data-center power alliance. Capital returns continued via a $0.295 quarterly dividend (23 Jul) and $648 million of Q2 buybacks (12 million shares, 24 Jul), while UBS lifted its target to $75 (14 Sep) and Rothschild to $68 (25 Sep). Offsets include Q1 Middle East disruptions that cut sequential revenue and margins (24 Apr), a $2 billion senior-notes issue (7 May), and CEO Olivier Le Peuch\u2019s 35,000-share sale at $60 on 1 Sep.",
+      "key_assumption": "Kelvion closes on the stated 1H 2027 timetable without a leverage or synergy scare, and Middle East disruptions remain a contained sequential hit rather than a lasting NOC-capex cut that would mute the Aramco/KOC/Oman awards.",
+      "n_pos": 8,
+      "n_neg": 3,
+      "top_hits": [
+        {
+          "type": "positive",
+          "taxonomy": "Successful acquisition/synergy realization",
+          "event_date": "2026-08-31",
+          "headline": "SLB will pay approximately $3.4 billion in cash to acquire Kelvion and assume another $700 million of debt.",
+          "weight": 9,
+          "confidence": 95
+        },
+        {
+          "type": "positive",
+          "taxonomy": "Successful acquisition/synergy realization",
+          "event_date": "2026-07-24",
+          "headline": "During the quarter, SLB completed the acquisition of Tachyus Corp., a Houston-based technology company",
+          "weight": 9,
+          "confidence": 80
+        },
+        {
+          "type": "positive",
+          "taxonomy": "Contract win/expansion",
+          "event_date": "2026-09-23",
+          "headline": "SLB has been awarded a contract by OQ Exploration & Production (OQEP) to deliver an expansion of the Bisat-B production facility in Oman",
+          "weight": 6,
+          "confidence": 94
+        },
+        {
+          "type": "positive",
+          "taxonomy": "Contract win/expansion",
+          "event_date": "2026-09-24",
+          "headline": "SLB has been awarded four integrated well construction contracts by Aramco covering more than 450 oil and gas wells across Saudi Arabia.",
+          "weight": 6,
+          "confidence": 80
+        },
+        {
+          "type": "negative",
+          "taxonomy": "Geopolitical event that hurts sector",
+          "event_date": "2026-04-24",
+          "headline": "Middle East disruptions cut sequential revenue and margins",
+          "weight": 6,
+          "confidence": 92
+        },
+        {
+          "type": "positive",
+          "taxonomy": "Share repurchase program/increased dividend",
+          "event_date": "2026-07-24",
+          "headline": "SLB repurchased 12 million shares of its common stock for a total purchase price of $648 million.",
+          "weight": 5,
+          "confidence": 94
+        }
+      ],
+      "error": null
     },
     {
       "ticker": "BKR",
       "role": "override_captain",
       "why": "OVERRIDE card Oil & Gas Equipment & Services",
-      "error": "OpenClaw and DeepSeek both returned empty for CATALYST STEP1 BKR"
+      "net_signal": "Strong Bullish",
+      "conviction": 81,
+      "search_backend": "grok_native",
+      "catalyst_stack": "Baker Hughes closed Chart Industries on 2026-07-16, adding a third operating segment and targeting $325 million of annualized cost synergies by year three. Q1 and Q2 2026 results (2026-04-23 and 2026-07-26) showed higher revenue, record IET orders/RPO, and a 2026-09-09 FY 2026 revenue guide raise to $28.5\u2013$30.3 billion to include Chart. Award flow then clustered: Venture Global LNG/compression, Dynamis and Kodiak turbine packages, Kutei subsea trees, KOC digital work, and bp North Sea stimulation, plus Mantle Reach geothermal (2026-06-24) and Worley LNG (2026-05-11) alliances. Street action was mixed\u2014Barclays cut the rating on 2026-05-07 and Citi trimmed its PT on 2026-06-03\u2014while UBS lifted its PT to $72 on 2026-09-14, so operating and M&A news dominate the modest analyst noise.",
+      "key_assumption": "Chart delivers the stated $325 million of year-three synergies and IET LNG/power backlog converts on schedule, rather than slipping on FIDs, permits, or turbine-capacity constraints that would unwind the FY 2026 guide.",
+      "n_pos": 8,
+      "n_neg": 3,
+      "top_hits": [
+        {
+          "type": "positive",
+          "taxonomy": "Successful acquisition/synergy realization",
+          "event_date": "2026-07-16",
+          "headline": "\"today announced the successful completion of its acquisition of Chart Industries, Inc. (NYSE: GTLS)\"",
+          "weight": 9,
+          "confidence": 96
+        },
+        {
+          "type": "positive",
+          "taxonomy": "Earnings beat (revenue, EBITDA, EPS)",
+          "event_date": "2026-07-26",
+          "headline": "\"Orders of $10.5 billion, including $7.1 billion of IET orders.\"",
+          "weight": 7,
+          "confidence": 95
+        },
+        {
+          "type": "positive",
+          "taxonomy": "Contract win/expansion",
+          "event_date": "2026-09-13",
+          "headline": "\"will provide gas compression systems for the Cloud Connector Pipeline project in Louisiana, as well as a modular liquefaction solution\"",
+          "weight": 7,
+          "confidence": 95
+        },
+        {
+          "type": "positive",
+          "taxonomy": "Earnings guidance raise",
+          "event_date": "2026-09-09",
+          "headline": "\"the company said it now expects FY 2026 revenue of $28.5B-$30.3B, up from\"",
+          "weight": 7,
+          "confidence": 92
+        },
+        {
+          "type": "positive",
+          "taxonomy": "Contract win/expansion",
+          "event_date": "2026-07-26",
+          "headline": "Received a major award from Dynamis Power Solutions, including 76 NovaLT\u212216 gas turbines, for approximately 1.3 GW of capacity",
+          "weight": 7,
+          "confidence": 80
+        },
+        {
+          "type": "positive",
+          "taxonomy": "Earnings guidance raise",
+          "event_date": "2026-07-26",
+          "headline": "we are raising our full-year IET order guidance and increasing our Horizon 2(1) IET orders outlook to more than $45 billion.",
+          "weight": 7,
+          "confidence": 80
+        }
+      ],
+      "error": null
     },
     {
       "ticker": "KGS",
       "role": "override_captain",
       "why": "OVERRIDE card Oil & Gas Equipment & Services",
-      "error": "OpenClaw and DeepSeek both returned empty for CATALYST STEP1 KGS"
+      "net_signal": "Strong Bullish",
+      "conviction": 100,
+      "search_backend": "grok_native",
+      "catalyst_stack": "On 2026-04-01 Kodiak closed the Distributed Power Solutions acquisition, adding about 395 MW of generation and rebranding the unit as Kodiak Power Solutions. A 10.6 million-share offering priced at $71.00 on 2026-05-14 raised about $836 million net, a dilutive raise that sat alongside Q1/Q2 2026 record adjusted EBITDA and successive 2026 EBITDA guidance lifts to $830-$860 million by 2026-08-06. On 2026-07-08 Kodiak and Baker Hughes set a multi-year turbine framework for up to 1.8 GW, while Street PTs split between cuts (Barclays $72, Jefferies $69) and raises (Stifel $92, RBC $88). On 2026-09-29 Kodiak announced a six-year 76 MW baseload power-supply agreement with a West Texas data center, extending the behind-the-meter power backlog.",
+      "key_assumption": "DPS integration, Baker Hughes turbine deliveries, and the West Texas 76 MW contract convert into the raised 2026 EBITDA without another large equity raise or a drop in core compression utilization.",
+      "n_pos": 12,
+      "n_neg": 3,
+      "top_hits": [
+        {
+          "type": "positive",
+          "taxonomy": "Contract win/expansion",
+          "event_date": "2026-09-29",
+          "headline": "Kodiak Gas Services Announces Power Supply Agreement with West Texas Data Center",
+          "weight": 9,
+          "confidence": 75
+        },
+        {
+          "type": "positive",
+          "taxonomy": "Contract win/expansion",
+          "event_date": "2026-05-11",
+          "headline": "Completed 20,700 horsepower purchase-leaseback transaction with a leading oil and gas producer in the Permian Basin",
+          "weight": 9,
+          "confidence": 80
+        },
+        {
+          "type": "positive",
+          "taxonomy": "Successful acquisition/synergy realization",
+          "event_date": "2026-04-01",
+          "headline": "completed the previously announced acquisition of Distributed Power Solutions, LLC",
+          "weight": 8,
+          "confidence": 95
+        },
+        {
+          "type": "positive",
+          "taxonomy": "Capacity expansion announced (new factory, satellite constellation)",
+          "event_date": "2026-07-08",
+          "headline": "Strategic agreement establishes framework for deployment of up to 1.8 GW of power generation capacity",
+          "weight": 8,
+          "confidence": 95
+        },
+        {
+          "type": "positive",
+          "taxonomy": "Capacity expansion announced (new factory, satellite constellation)",
+          "event_date": "2026-05-11",
+          "headline": "procured over 260 megawatts (MWs) of additional power generation capacity",
+          "weight": 8,
+          "confidence": 80
+        },
+        {
+          "type": "positive",
+          "taxonomy": "Earnings beat (revenue, EBITDA, EPS)",
+          "event_date": "2026-08-06",
+          "headline": "Kodiak reported Q2 2026 revenue of $391.1 million and record adjusted EBITDA of $216.8 million",
+          "weight": 7,
+          "confidence": 95
+        }
+      ],
+      "error": null
     },
     {
       "ticker": "SSRM",
       "role": "conflict",
       "why": "actions buy net=1.4 vs heat sell",
-      "error": "OpenClaw and DeepSeek both returned empty for CATALYST STEP1 SSRM"
+      "net_signal": "Strong Bullish",
+      "conviction": 71,
+      "search_backend": "grok_native",
+      "catalyst_stack": "On 24 Jun 2026 SSR closed the ~$1.49B sale of its 80% \u00c7\u00f6pler stake, and on 17 Jul 2026 it closed the Hod Maden 20% sale for an uncapped 4% NSR, finishing the T\u00fcrkiye exit. On 15 Jun 2026 the board added $500M of buybacks and reinstated a $0.03 quarterly dividend, after a 5 May 2026 Q1 print of ~110,000 GEOs, $2,433/oz AISC, $211M FCF and $1.16 diluted EPS on a debt-free balance sheet. RBC upgraded SSRM to Outperform on 3 Jun 2026 and raised its target to $43 on 16 Sep 2026, while a Colorado federal court on 27 Aug 2026 dismissed the \u00c7\u00f6pler securities class action with prejudice. An SSR affiliate took 9.9% of Phenom on 29 Jun 2026 and exercised the US$4M Dobbin 15% Nevada JV option on 29 Sep 2026, and on 28 Sep 2026 management lifted 2026 growth capex at Marigold, CC&V, Seabee and Puna without changing production guidance.",
+      "key_assumption": "Americas mines convert high gold prices and \u00c7\u00f6pler cash into sustained FCF and executed buybacks, with no new heap-leach/permit shock or Canadian class-action revival offsetting the US dismissal.",
+      "n_pos": 9,
+      "n_neg": 2,
+      "top_hits": [
+        {
+          "type": "positive",
+          "taxonomy": "Favorable court ruling/patent grant",
+          "event_date": "2026-08-27",
+          "headline": "\"In August 2026, Chief Judge Daniel D. Domenico dismissed all claims with prejudice and closed the case\"",
+          "weight": 9,
+          "confidence": 78
+        },
+        {
+          "type": "positive",
+          "taxonomy": "Strategic pivot/rebranding",
+          "event_date": "2026-07-17",
+          "headline": "\"closed the sale of its 20% ownership stake in the Hod Maden development project (the Project)\"",
+          "weight": 6,
+          "confidence": 95
+        },
+        {
+          "type": "positive",
+          "taxonomy": "Share repurchase/dividend increase",
+          "event_date": "2026-06-15",
+          "headline": "\"approved an additional $500 million for share repurchases and the reinstatement of a regular quarterly dividend\"",
+          "weight": 6,
+          "confidence": 95
+        },
+        {
+          "type": "positive",
+          "taxonomy": "Capacity expansion",
+          "event_date": "2026-09-28",
+          "headline": "\"Marigold (Nevada): Increased to $65 million (from $48 million) to support longer-term growth\"",
+          "weight": 6,
+          "confidence": 75
+        },
+        {
+          "type": "positive",
+          "taxonomy": "Earnings beat",
+          "event_date": "2026-05-05",
+          "headline": "\"In the first quarter, we produced 110,000 gold equivalent ounces at all-in sustaining costs of $2,433 per ounce\"",
+          "weight": 5,
+          "confidence": 90
+        },
+        {
+          "type": "positive",
+          "taxonomy": "Analyst upgrade/PT increase",
+          "event_date": "2026-09-16",
+          "headline": "\"maintained an Outperform rating on SSR Mining (NASDAQ: SSRM) and raised the price target from $39 to $43\"",
+          "weight": 5,
+          "confidence": 82
+        }
+      ],
+      "error": null
     },
     {
       "ticker": "NEM",
       "role": "conflict",
       "why": "actions buy net=1.4 vs heat sell",
-      "error": "OpenClaw and DeepSeek both returned empty for CATALYST STEP1 NEM"
-    },
-    {
-      "ticker": "SM",
-      "role": "action_top",
-      "why": "news_actions buy net=6.8",
-      "error": "OpenClaw and DeepSeek both returned empty for CATALYST STEP1 SM"
+      "net_signal": "Neutral",
+      "conviction": 12,
+      "search_backend": "grok_native",
+      "catalyst_stack": "On Apr 23 and Jul 23, 2026, Newmont printed back-to-back record free cash flow of $3.1 billion and $2.2 billion, beat estimates, reaffirmed ~5.3 million ounces of 2026 gold guidance, and authorized a $6 billion buyback. On Jun 19, British Columbia granted Red Chris block-cave permits, and on Aug 10 Newmont and Barrick settled the Nevada Gold Mines dispute by contributing Fourmile, Fiberline and Mike into the JV for a $1.95 billion Newmont payment while keeping 38.5%/61.5% ownership. Cadia underground was impaired by the Apr 14 magnitude 4.5 earthquake and halted again after Jun 19 aftershocks, while CFO Tabolt sold stock on Aug 5 (within two weeks of the Q2 beat) and CEO Viljoen sold on Sep 1. Street targets from RBC ($155), CIBC ($170), Scotiabank and NBF still sit well above ~$116, but the Sep 29 strong jobs print lifted Fed hike odds and hit gold miners.",
+      "key_assumption": "2026 ounce/AISC guidance and the $6 billion buyback still hold after Cadia downtime, and gold does not break lower if real rates reprice higher.",
+      "n_pos": 7,
+      "n_neg": 7,
+      "top_hits": [
+        {
+          "type": "positive",
+          "taxonomy": "Regulatory approval (FDA, FCC, FTC clearance)",
+          "event_date": "2026-06-19",
+          "headline": "The province\u2019s approvals include an amended Environmental Assessment Certificate (EAC), achieved through a consent-based process with the Tahltan Nation",
+          "weight": 10,
+          "confidence": 90
+        },
+        {
+          "type": "negative",
+          "taxonomy": "Operational setback (trial halted, satellite failure, production halt)",
+          "event_date": "2026-04-14",
+          "headline": "A 4.5 magnitude tremor will impair gold production for more than three months at Newmont Corporation\u2019s Cadia mine",
+          "weight": 9,
+          "confidence": 92
+        },
+        {
+          "type": "negative",
+          "taxonomy": "Operational setback (trial halted, satellite failure, production halt)",
+          "event_date": "2026-09-09",
+          "headline": "la autoridad provincial dispuso seis ceses preventivos sobre \u00e1reas de bajo mina, plantas y laboratorios",
+          "weight": 9,
+          "confidence": 80
+        },
+        {
+          "type": "positive",
+          "taxonomy": "Earnings beat (revenue, EBITDA, EPS)",
+          "event_date": "2026-07-23",
+          "headline": "generating record second-quarter free cash flow of $2.2 billion, while remaining on track to achieve our full-year 2026 guidance",
+          "weight": 8,
+          "confidence": 95
+        },
+        {
+          "type": "positive",
+          "taxonomy": "Favorable court ruling/patent grant",
+          "event_date": "2026-08-14",
+          "headline": "On August 14, 2026, the court granted defendants\u2019 motion to dismiss the amended complaint, finding the pleadings insufficient regarding falsity or scienter.",
+          "weight": 7,
+          "confidence": 78
+        },
+        {
+          "type": "positive",
+          "taxonomy": "Share repurchase program/increased dividend",
+          "event_date": "2026-04-23",
+          "headline": "Free Cash Flow -- $3.1 billion, representing an all-time quarterly record even after $1.3 billion in cash tax payments.",
+          "weight": 6,
+          "confidence": 95
+        }
+      ],
+      "error": null
     }
   ]
 }
