@@ -1,6 +1,6 @@
 {
   "date": "2026-09-29",
-  "generated_at": "2026-09-29T05:01:25.327995-04:00",
+  "generated_at": "2026-09-29T05:09:36.484740-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -41,16 +41,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "ab",
-      "title": "AB checklist",
-      "date": "2026-09-29",
-      "ok": false,
-      "pushed": false,
-      "at": "2026-09-29T04:28:12.052928-04:00",
-      "files": [],
-      "preview": "no files"
-    },
     {
       "key": "news_parse",
       "title": "News parse",
@@ -196,6 +186,31 @@
         }
       ],
       "preview": "keys: date, generated_at, summary, sectors"
+    },
+    {
+      "key": "map_heat_research",
+      "title": "Map heat morning delta refresh",
+      "date": "2026-09-29",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-29T05:09:35.249527-04:00",
+      "files": [
+        {
+          "path": "01_daily/map_heat/2026-09-29_research.json",
+          "ok": true,
+          "reason": "",
+          "size": 37281,
+          "preview": "keys: date, phase, passthrough, source_baseline_generated_at, generated_at, n_targets, n_cards, n_refreshed, evidence_errors, morning_refresh_errors, cards, size_gate"
+        },
+        {
+          "path": "01_daily/map_heat/2026-09-29_research.md",
+          "ok": true,
+          "reason": "",
+          "size": 37281,
+          "preview": "# MAP HEAT RESEARCH \u2014 2026-09-29\n142 captain cards \u00b7 size_gate=True set by pre-open refresh"
+        }
+      ],
+      "preview": "keys: date, phase, passthrough, source_baseline_generated_at, generated_at, n_targets, n_cards, n_refreshed, evidence_errors, morning_refresh_errors, cards, size_gate \u00b7 # MAP HEAT RESEARCH \u2014 2026-09-29\n142 captain cards \u00b7 size_gate=True set by pre-open refresh"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
