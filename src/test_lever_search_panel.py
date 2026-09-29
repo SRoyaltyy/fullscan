@@ -582,6 +582,37 @@ def test_suggestions_signal_cell_is_frozen() -> None:
         raise AssertionError("changed first_open was accepted")
 
 
+def test_blank_first_open_fill_and_tracking_rewrite_passes() -> None:
+    """A blank first_open may be filled once while the four tracking cells move."""
+    from src.lever_search_inputs import assert_suggestions_signal_columns
+
+    header = (
+        "run_date,signal_date,ticker,side,strategy,exit_rule,ref_close,"
+        "first_open,current_price,ret_vs_close,ret_vs_open,days_held,signal_colors"
+    )
+    pinned = "2026-09-25,2026-09-25,CLM,LONG,L1,tp8,6.50,,6.50,+0.00%,,0,green"
+    live = "2026-09-25,2026-09-25,CLM,LONG,L1,tp8,6.50,6.4300,6.10,-6.15%,-5.13%,1,green"
+    assert_suggestions_signal_columns(header + "\n" + pinned + "\n", header + "\n" + live + "\n")
+
+
+def test_nonblank_first_open_change_fails() -> None:
+    """A first_open that already has a value must not change."""
+    from src.lever_search_inputs import InputHashError, assert_suggestions_signal_columns
+
+    header = (
+        "run_date,signal_date,ticker,side,strategy,exit_rule,ref_close,"
+        "first_open,current_price,ret_vs_close,ret_vs_open,days_held,signal_colors"
+    )
+    pinned = "2026-07-28,2026-07-24,AEP,LONG,L1,tp8,135.54,135.18,118.35,-1%,-2%,4,green"
+    live = "2026-07-28,2026-07-24,AEP,LONG,L1,tp8,135.54,9.0000,99.00,9%,8%,1,green"
+    try:
+        assert_suggestions_signal_columns(header + "\n" + pinned + "\n", header + "\n" + live + "\n")
+    except InputHashError:
+        pass
+    else:
+        raise AssertionError("changed non-blank first_open was accepted")
+
+
 def test_ohlc_pin_allows_new_rows_and_rejects_edits() -> None:
     """Pinned ticker-dates stay. A new row passes. A changed open fails."""
     import datetime
@@ -668,6 +699,8 @@ def main() -> None:
         test_initial_inputs_and_hash_guard,
         test_suggestions_hash_ignores_live_rewrite,
         test_suggestions_signal_cell_is_frozen,
+        test_blank_first_open_fill_and_tracking_rewrite_passes,
+        test_nonblank_first_open_change_fails,
         test_ohlc_pin_allows_new_rows_and_rejects_edits,
     ]
     failed = 0

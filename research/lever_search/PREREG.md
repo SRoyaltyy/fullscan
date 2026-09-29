@@ -4,7 +4,7 @@
 - written: 2026-09-26
 - fingerprint_sha256: 53c66fd1a73f3d8ec9c16f73b6a945aab36af5cbbd202e1f2fa64bb9a1d88607
 - fingerprint_scope: SHA-256 of the UTF-8 bytes after the line `<!-- BEGIN COVERED -->`, including the final newline. Line endings are LF.
-- restatement: 2026-09-28 ET, Cyrus approved. The ohlc pin stays the blob at `ff996f535`. The guard allows new ticker-dates when pinned OHLCV is unchanged. `data/prices/meta.json` may move forward with that append. A blank suggestions `first_open` may be filled once. See RESTATEMENTS.md.
+- restatement: 2026-09-28 ET, Cyrus approved. The ohlc pin stays the blob at `ff996f535`. The guard allows new ticker-dates when pinned OHLCV is unchanged. `data/prices/meta.json` may move forward with that append. A blank suggestions `first_open` may be filled once. `current_price`, `ret_vs_close`, `ret_vs_open`, and `days_held` are not frozen. See RESTATEMENTS.md.
 - scoring: do not start until Cyrus replies `go`. The initial Group 3 result is due by 23:00 HKT on Saturday 2026-09-26, with `research/audit/FULLSCAN_FILE_PROOF.csv` pinned at commit `1bf94d7dc3ce00c29667d0fae6fdb6bb8effb73c`.
 - live paths: not used. No edits to flatten_robust, Webull submit, Supabase, or Theme Radar. Output of the later run lives only under `research/lever_search/`.
 

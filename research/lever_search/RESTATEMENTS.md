@@ -21,3 +21,9 @@ Cyrus approved this on 2026-09-28 ET.
 `test_suggestions_signal_cell_is_frozen` failed on suggestions row 2669, CLM, signal date 2026-09-25: pinned `first_open` `''` versus live `'6.4300'`.
 
 `excel_bot` writes a new suggestion with a blank `first_open` and fills it once, on a later run, with the next session's open (`excel_bot/engine/daily_run.py`). A blank cell may become a value. A non-blank `first_open` that changes still fails. The other signal cells stay frozen: `run_date`, `signal_date`, `ticker`, `side`, `strategy`, `exit_rule`, `ref_close`, and `signal_colors`.
+
+## Tracking columns are not part of the freeze
+
+excel_bot rewrites `current_price`, `ret_vs_close`, `ret_vs_open`, and `days_held` every night. Those four columns are excluded from the frozen-cell check and from any byte comparison of the live `excel_bot/suggestions/suggestions.csv`. The manifest sha256 is still the preregistration blob, not a hash of the live file.
+
+Every other column on an existing row must match the pinned row. A blank `first_open` may be filled exactly once. A non-blank `first_open` must not change. Rows appended after the pin are not part of that comparison.

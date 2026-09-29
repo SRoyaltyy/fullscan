@@ -52,20 +52,10 @@ FULLSCAN_PROOF_PATH = "research/audit/FULLSCAN_FILE_PROOF.csv"
 # not the worktree file. That hash is never rewritten.
 SUGGESTIONS_CSV = "excel_bot/suggestions/suggestions.csv"
 
-# Cells that must match the pinned row. Daily commits may refresh only
-# SUGGESTION_TRACKING_COLUMNS on those rows. A blank first_open may be
-# filled once; a non-blank first_open may not change. See RESTATEMENTS.md.
-SUGGESTION_SIGNAL_COLUMNS: tuple[str, ...] = (
-    "run_date",
-    "signal_date",
-    "ticker",
-    "side",
-    "strategy",
-    "exit_rule",
-    "ref_close",
-    "first_open",
-    "signal_colors",
-)
+# excel_bot rewrites these four cells every night. They are left out of
+# the frozen-cell check and out of any byte comparison of the live file.
+# Every other column on an existing row stays put. A blank first_open may
+# be filled once; a non-blank first_open may not change. See RESTATEMENTS.md.
 SUGGESTION_TRACKING_COLUMNS: tuple[str, ...] = (
     "current_price",
     "ret_vs_close",
@@ -286,34 +276,55 @@ def load_pinned_suggestions(root: Path | None = None, manifest: dict | None = No
     return list(csv.DictReader(io.StringIO(text)))
 
 
-def _suggestion_rows(text: str) -> list[dict]:
+def _suggestion_table(text: str) -> tuple[list[str], list[dict]]:
     reader = csv.DictReader(io.StringIO(text))
-    rows = list(reader)
-    fields = reader.fieldnames or []
-    missing = [name for name in SUGGESTION_SIGNAL_COLUMNS if name not in fields]
+    fields = list(reader.fieldnames or [])
+    if not fields:
+        raise InputHashError("suggestions csv has no header")
+    missing = [name for name in SUGGESTION_TRACKING_COLUMNS if name not in fields]
+    if "first_open" not in fields:
+        missing.append("first_open")
     if missing:
         raise InputHashError(f"suggestions csv missing columns {missing}")
-    return rows
+    return fields, list(reader)
+
+
+def _frozen_suggestion_columns(pinned_fields: list[str], live_fields: list[str]) -> list[str]:
+    """Every column except the four nightly tracking marks.
+
+    ``current_price``, ``ret_vs_close``, ``ret_vs_open``, and ``days_held``
+    are left out of the frozen-cell check and out of any byte comparison.
+    excel_bot rewrites them every night.
+    """
+    tracking = set(SUGGESTION_TRACKING_COLUMNS)
+    frozen: list[str] = []
+    for name in list(pinned_fields) + list(live_fields):
+        if name in tracking or name in frozen:
+            continue
+        frozen.append(name)
+    return frozen
 
 
 def assert_suggestions_signal_columns(pinned_csv: str, live_csv: str) -> None:
-    """Pinned rows keep their signal cells in the live file.
+    """Pinned rows keep every cell except the four tracking columns.
 
-    ``current_price``, ``ret_vs_close``, ``ret_vs_open``, and ``days_held``
-    may change. A blank ``first_open`` may be filled once (excel_bot writes
-    the next session's open). A non-blank ``first_open`` must stay. Every
-    other listed cell on a pinned row must match the live row at the same
-    index. Rows appended after the pinned copy are ignored.
+    The live file is not hashed as a whole. ``current_price``,
+    ``ret_vs_close``, ``ret_vs_open``, and ``days_held`` are excluded from
+    the comparison because excel_bot rewrites them nightly. Every other
+    column on an existing row must match. A blank ``first_open`` may be
+    filled once. A non-blank ``first_open`` must not change. Rows appended
+    after the pinned copy are ignored.
     """
-    pinned = _suggestion_rows(pinned_csv)
-    live = _suggestion_rows(live_csv)
+    pinned_fields, pinned = _suggestion_table(pinned_csv)
+    live_fields, live = _suggestion_table(live_csv)
     if len(live) < len(pinned):
         raise InputHashError(
             f"live suggestions has {len(live)} rows; pinned copy has {len(pinned)}"
         )
+    frozen = _frozen_suggestion_columns(pinned_fields, live_fields)
     for index, prow in enumerate(pinned):
         lrow = live[index]
-        for name in SUGGESTION_SIGNAL_COLUMNS:
+        for name in frozen:
             left = prow.get(name) or ""
             right = lrow.get(name) or ""
             if left == right:
