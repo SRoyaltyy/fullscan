@@ -1,0 +1,111 @@
+{
+  "date": "2026-09-29",
+  "generated_at": "2026-09-29T16:24:21.071939-04:00",
+  "timezone": "America/New_York",
+  "source": "live",
+  "source_url": "https://elite.finviz.com/",
+  "archive_snapshot_ts": null,
+  "archive_snapshot_at": null,
+  "archive_url": null,
+  "clock_legal": true,
+  "clock_same_morning": false,
+  "clock_use": "next_open",
+  "clock_legal_for": "2026-09-30",
+  "capture_slot": "close",
+  "clock_rule": "Live post-close answer-key (~16:05 ET). Always next_open for the NEXT session (2026-09-30) — never same_morning. Writes *_finviz_market_digest_close.* only. Capture only — not tape_anchor / predict / #210.",
+  "kind": "finviz_homepage_market_digest_close",
+  "represents": "Finviz homepage post-close answer-key. clock_use is always next_open; clock_legal_for is the next NYSE session. Lives at *_finviz_market_digest_close.*. Does not replace the same_morning warm-up file. Not quote-page ticker blurbs.",
+  "error": null,
+  "headline": "US stocks ended mixed as long-term Treasury yields hit multi-decade highs while oil eased and AI news supported tech",
+  "raw_text": "- S&P 500 ($SPX) slipped about 0.18%, Dow Jones Industrial Average ($DJI) fell roughly 0.23% for a third straight decline, Nasdaq ($COMP) (with the Nasdaq 100 ($NDX) up around 0.16%) finished slightly higher, and Russell 2000 (IWM) dropped about 0.41%.\n- The 30-year Treasury yield climbed to its highest level since 2002 near 5.61% and the 10-year approached levels not seen since 2007 near 5.29%, pressuring financials including JPMorgan Chase (JPM) and Goldman Sachs (GS) and coinciding with consumer confidence falling to its weakest level in over 12 years.\n- Fed Governor Michael Barr signaled additional rate hikes are likely as growth accelerates, while prediction markets continued to price a strong September jobs report ahead of Wednesday’s ADP (ADP) private payrolls, ISM manufacturing PMI and further Fedspeak.\n- Oil (@CL) prices retreated after Saudi Arabia resumed East-West pipeline exports, helping limit broader equity losses.\n- Tech and AI-related names found support from optimism around Anthropic (ANTW)’s leaked IPO prospectus targeting a $2 trillion valuation and OpenAI (OAIW)’s DevDay launch of rebranded “Dots” AI agents, with OpenAI (OAIW) also reported to be nearing $70 billion in annualized revenue even as safety concerns delayed a new model rollout; Oura pulled its planned $15 billion IPO citing market conditions.\n- Summit Therapeutics (SMMT) advanced after AstraZeneca (AZN) agreed to a $2 billion investment to collaborate on its ivonescimab oncology treatment.\n- Carnival (CCL) gained after raising its full-year adjusted EPS forecast on record booked occupancy and strong pricing into 2027–2028.\n- CarMax (KMX) climbed as its Q2 report showed progress in its turnaround, including stronger used-vehicle margins.\n- Fair Isaac (FICO) dropped sharply after FHFA Director Bill Pulte moved to ease lender adoption of rival VantageScore, heightening competitive pressure on its FICO scoring franchise.\n- Piper Sandler (PIPR) fell on reports it is in talks to acquire Perella Weinberg Partners (PWP), while Concentrix (CNXC) reported its Q3 results after the bell.",
+  "raw_summary_md": "- **S&P 500** ([$SPX](https://finviz.com/index/SPX?p=d)) slipped about **0.18%**, **Dow Jones Industrial Average** ([$DJI](https://finviz.com/index/DJI?p=d)) fell roughly **0.23%** for a **third straight decline**, **Nasdaq** ([$COMP](https://finviz.com/index/COMP?p=d)) (with the **Nasdaq 100** ([$NDX](https://finviz.com/index/NDX?p=d)) up around **0.16%**) finished slightly higher, and **Russell 2000** ([IWM](https://finviz.com/quote?t=IWM)) dropped about **0.41%**.\n- The **30-year Treasury yield** climbed to its highest level **since 2002** near **5.61%** and the **10-year** approached levels not seen **since 2007** near **5.29%**, pressuring financials including **JPMorgan Chase** ([JPM](https://finviz.com/quote?t=JPM)) and **Goldman Sachs** ([GS](https://finviz.com/quote?t=GS)) and coinciding with **consumer confidence** falling to its weakest level in over **12 years**.\n- **Fed Governor Michael Barr** signaled **additional rate hikes** are likely as growth accelerates, while prediction markets continued to price a **strong September jobs report** ahead of Wednesday’s **ADP** ([ADP](https://finviz.com/quote?t=ADP)) private payrolls, **ISM manufacturing PMI** and further Fedspeak.\n- **Oil** ([@CL](https://finviz.com/futures_charts?t=CL)) prices retreated after **Saudi Arabia** resumed **East-West pipeline exports**, helping limit broader **equity losses**.\n- **Tech and AI-related names** found support from optimism around **Anthropic** ([ANTW](https://finviz.com/quote?t=ANTW))’s leaked IPO prospectus targeting a **$2 trillion valuation** and **OpenAI** ([OAIW](https://finviz.com/quote?t=OAIW))’s **DevDay** launch of rebranded “Dots” AI agents, with **OpenAI** ([OAIW](https://finviz.com/quote?t=OAIW)) also reported to be nearing **$70 billion in annualized revenue** even as **safety concerns** delayed a new model rollout; **Oura** pulled its planned **$15 billion IPO** citing market conditions.\n- **Summit Therapeutics** ([SMMT](https://finviz.com/quote?t=SMMT)) advanced after **AstraZeneca** ([AZN](https://finviz.com/quote?t=AZN)) agreed to a **$2 billion investment** to collaborate on its **ivonescimab oncology treatment**.\n- **Carnival** ([CCL](https://finviz.com/quote?t=CCL)) gained after raising its **full-year adjusted EPS forecast** on **record booked occupancy** and strong pricing into **2027–2028**.\n- **CarMax** ([KMX](https://finviz.com/quote?t=KMX)) climbed as its **Q2 report** showed progress in its **turnaround**, including **stronger used-vehicle margins**.\n- **Fair Isaac** ([FICO](https://finviz.com/quote?t=FICO)) dropped sharply after **FHFA Director Bill Pulte** moved to ease lender adoption of rival **VantageScore**, heightening competitive pressure on its **FICO scoring franchise**.\n- **Piper Sandler** ([PIPR](https://finviz.com/quote?t=PIPR)) fell on reports it is in talks to acquire **Perella Weinberg Partners** ([PWP](https://finviz.com/quote?t=PWP)), while **Concentrix** ([CNXC](https://finviz.com/quote?t=CNXC)) reported its **Q3 results** after the bell.",
+  "index_moves": [
+    {
+      "name": "S&P 500",
+      "code": "SPX",
+      "change_pct": -0.18,
+      "verb": "slipped"
+    },
+    {
+      "name": "Dow Jones Industrial Average",
+      "code": "DJI",
+      "change_pct": -0.23,
+      "verb": "fell"
+    },
+    {
+      "name": "Nasdaq",
+      "code": "COMP",
+      "change_pct": -0.41,
+      "verb": "dropped"
+    }
+  ],
+  "oil": null,
+  "cpi": null,
+  "fed_odds": null,
+  "named_tickers": [
+    "JPM",
+    "GS",
+    "ADP",
+    "ANTW",
+    "OAIW",
+    "SMMT",
+    "AZN",
+    "CCL",
+    "KMX",
+    "FICO",
+    "PIPR",
+    "PWP",
+    "CNXC"
+  ],
+  "named_leaders": [
+    "JPM",
+    "GS",
+    "ADP",
+    "ANTW",
+    "OAIW",
+    "SMMT",
+    "AZN",
+    "CCL",
+    "KMX",
+    "FICO",
+    "PIPR",
+    "PWP",
+    "CNXC"
+  ],
+  "calendar": [
+    "Fed Governor Michael Barr signaled additional rate hikes are likely as growth accelerates, while prediction markets continued to price a strong September jobs report ahead of Wednesday’s ADP (ADP) private payrolls, ISM manufacturing PMI and further Fedspeak."
+  ],
+  "prior_close": {
+    "spx": -0.18,
+    "nasdaq": -0.41,
+    "dow": -0.23
+  },
+  "cpi_fed": {
+    "cpi": null,
+    "fed_odds": null
+  },
+  "next_session_calendar": {
+    "housing": false,
+    "retail": false,
+    "fed": true,
+    "bullets": [
+      "Fed Governor Michael Barr signaled additional rate hikes are likely as growth accelerates, while prediction markets continued to price a strong September jobs report ahead of Wednesday’s ADP (ADP) private payrolls, ISM manufacturing PMI and further Fedspeak."
+    ],
+    "text": "Fed Governor Michael Barr signaled additional rate hikes are likely as growth accelerates, while prediction markets continued to price a strong September jobs report ahead of Wednesday’s ADP (ADP) private payrolls, ISM manufacturing PMI and further Fedspeak."
+  },
+  "earnings_slate": {
+    "tickers": [],
+    "text": ""
+  },
+  "geo_grain": {
+    "geo": false,
+    "grain": false,
+    "flags": [],
+    "text": ""
+  },
+  "finviz_id": 297514,
+  "finviz_ticker": "$MARKET",
+  "finviz_published_at": "2026-09-29T16:07:19.107",
+  "finviz_source": "market_summary",
+  "finviz_sentiment": "bad"
+}

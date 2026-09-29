@@ -1,6 +1,6 @@
 {
   "date": "2026-09-29",
-  "generated_at": "2026-09-29T14:47:09.537988-04:00",
+  "generated_at": "2026-09-29T16:24:22.012233-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -84,7 +84,7 @@
       "inputs_ready": true,
       "n_req_ok": 1,
       "n_req": 1,
-      "n_opt_ok": 3,
+      "n_opt_ok": 5,
       "n_opt": 5,
       "files": [
         {
@@ -146,10 +146,10 @@
           "name": "Close answer-key JSON (*_finviz_market_digest_close)",
           "path": "01_daily/news/2026-09-29_finviz_market_digest_close.json",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "",
+          "size": 8477,
+          "said": "US stocks ended mixed as long-term Treasury yields hit multi-decade highs while oil eased and AI news supported tech \u00b7 leaders JPM, GS, ADP, ANTW, OAIW, SMMT \u00b7 bad",
           "bullets": []
         },
         {
@@ -157,11 +157,14 @@
           "name": "Close answer-key MD (*_finviz_market_digest_close)",
           "path": "01_daily/news/2026-09-29_finviz_market_digest_close.md",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 3925,
+          "said": "Finviz homepage market digest (close) \u2014 2026-09-29",
+          "bullets": [
+            "Generated:** 2026-09-29T16:24:21.071939-04:00 (America/New_York)",
+            "Source:** `live`"
+          ]
         }
       ],
       "said": "5887 tickers \u00b7 2047 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
@@ -833,7 +836,7 @@
           "role": "required",
           "status": "OK",
           "reason": "horizons=5 names=230",
-          "size": 1535988,
+          "size": 1535987,
           "said": "1d BUY ARHS, SONO, SN, PDFS, SHOO, DT, GCT, OLLI \u00b7 SELL ROIV, PYXS, IKT, SOC, AXSM, CGEM \u00b7 0.4692",
           "bullets": []
         },
@@ -844,10 +847,10 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 95864,
+          "size": 95846,
           "said": "Stock book \u2014 2026-09-29",
           "bullets": [
-            "_Generated 2026-09-29T14:47:06.052578-04:00_",
+            "_Generated 2026-09-29T16:19:54.723863-04:00_",
             "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
           ]
         },
@@ -911,7 +914,7 @@
           "role": "input",
           "status": "OK",
           "reason": "horizons=5 names=230",
-          "size": 1535988,
+          "size": 1535987,
           "said": "1d BUY ARHS, SONO, SN, PDFS, SHOO, DT, GCT, OLLI \u00b7 SELL ROIV, PYXS, IKT, SOC, AXSM, CGEM \u00b7 0.4692",
           "bullets": []
         },
@@ -3085,6 +3088,31 @@
         }
       ],
       "preview": "5901 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 TAL, GLBE, KEYS, FORM, NVT"
+    },
+    {
+      "key": "finviz_market_digest_close",
+      "title": "Finviz homepage market digest (close)",
+      "date": "2026-09-29",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-29T16:24:21.105562-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-09-29_finviz_market_digest_close.json",
+          "ok": true,
+          "reason": "",
+          "size": 8477,
+          "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for"
+        },
+        {
+          "path": "01_daily/news/2026-09-29_finviz_market_digest_close.md",
+          "ok": true,
+          "reason": "",
+          "size": 3925,
+          "preview": "# Finviz homepage market digest (close) \u2014 2026-09-29\n**Generated:** 2026-09-29T16:24:21.071939-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stocks ended mixed as long-term Treasury yields hit multi-decade highs while oil eased and AI news supported tech\n**Prior close:** SPX -0.18%  Nasdaq -0.41%  Dow -0.23%\n**SPX:** -0.18%  **Nasdaq:** -0.41%  **Dow:** -0.23%\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** JPM, GS, ADP, ANTW, OAIW, SMMT, AZN, CCL, KMX, FICO, PIPR, PWP, CNXC\n**Next session:** housing no \u00b7 retail no \u00b7 Fed yes\n**Earnings slate:** \u2014\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-09-30\n**Clock use:** `next_open`"
+        }
+      ],
+      "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest (close) \u2014 2026-09-29\n**Generated:** 2026-09-29T16:24:21.071939-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stocks ended mixed as long-term Treasury yields hit multi-decade highs while oil eased and AI news supported tech\n**Prior close:** SPX -0.18%  Nasdaq -0.41%  Dow -0.23%\n**SPX:** -0.18%  **Nasdaq:** -0.41%  **Dow:** -0.23%\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** JPM, GS, ADP, ANTW, OAIW, SMMT, AZN, CCL, KMX, FICO, PIPR, PWP, CNXC\n**Next session:** housing no \u00b7 retail no \u00b7 Fed yes\n**Earnings slate:** \u2014\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-09-30\n**Clock use:** `next_open`"
     }
   ],
   "href": {
