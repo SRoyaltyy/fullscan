@@ -1,10 +1,9 @@
 {
   "date": "2026-09-29",
-  "generated_at": "2026-09-29T05:00:28.367890-04:00",
+  "generated_at": "2026-09-29T05:01:25.327995-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
-    "MISSING Sector board JSON `01_daily/sectors/2026-09-29/_board.json` \u2014 missing",
     "MISSING AB checklist enriched `data/ab_checklist/2026-09-29_ab_checklist_enriched.csv` \u2014 missing"
   ],
   "counts": {
@@ -182,7 +181,7 @@
       "inputs_ready": true,
       "n_req_ok": 5,
       "n_req": 20,
-      "n_opt_ok": 2,
+      "n_opt_ok": 3,
       "n_opt": 3,
       "files": [
         {
@@ -339,11 +338,16 @@
           "name": "Sector board JSON",
           "path": "01_daily/sectors/2026-09-29/_board.json",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 6085,
+          "said": "0 up / 0 down / 0 flat",
+          "bullets": [
+            "XLB missing",
+            "XLC missing",
+            "XLY missing",
+            "XLP missing"
+          ]
         },
         {
           "key": "qc",
@@ -505,17 +509,18 @@
           "bullets": []
         }
       ],
-      "said": "general UP  1.292 \u00b7 news news_mode: on \u00b7 400 raw / 91 usable \u00b7 Gold drops 3.4% amid rising U.S. Treasury yields; Bitcoin slips near $83,000 as ",
+      "said": "general UP  1.292 \u00b7 sectors 0 up / 0 down / 0 flat \u00b7 news news_mode: on \u00b7 400 raw / 91 usable \u00b7 Gold drops 3.4% amid rising U.S. Treasury yields; Bitcoin slips near $83,000 as ",
       "bullets": [
         "bad: 1w 10Y +16bp at 5.17 handle",
         "bad: Oct hike odds ~70% carried",
         "bad: leftover Hormuz",
         "good: Europe partial green",
         "good: NQ +0.18% vs cash",
-        "Gold drops 3.4% amid rising U.S. Treasury yields; Bitcoin slips near $83,000 as Fed rate hike fears grow. - Pluang",
-        "Dow Jones futures drop as rising oil, US Treasury yields fuel Fed rate hike fears | FXStreet - \u0634\u0628\u0643\u0629 \u062a\u0648\u0627\u0635\u0644 \u0627\u0644\u0625\u062e\u0628\u0627\u0631\u064a\u0629",
-        "Silver Price Forecast: XAG/USD falls to near $62.00 amid Fed rate hike odds | FXStreet - \u0634\u0628\u0643\u0629 \u062a\u0648\u0627\u0635\u0644 \u0627\u0644\u0625\u062e\u0628\u0627\u0631\u064a\u0629",
-        "United States Dollar Index strengthens as oil surge bolster Fed rate hike bets | FXStreet - \u0634\u0628\u0643\u0629 \u062a\u0648\u0627\u0635\u0644 \u0627\u0644\u0625\u062e\u0628\u0627\u0631\u064a\u0629"
+        "XLB missing",
+        "XLC missing",
+        "XLY missing",
+        "XLP missing",
+        "XLE missing"
       ]
     },
     {
@@ -700,11 +705,16 @@
           "name": "Sector board JSON",
           "path": "01_daily/sectors/2026-09-29/_board.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 6085,
+          "said": "0 up / 0 down / 0 flat",
+          "bullets": [
+            "XLB missing",
+            "XLC missing",
+            "XLY missing",
+            "XLP missing"
+          ]
         },
         {
           "key": "in_actions",
@@ -946,7 +956,22 @@
       "score": "1.292",
       "direction": "up"
     },
-    "sectors": {},
+    "sectors": {
+      "said": "0 up / 0 down / 0 flat",
+      "bullets": [
+        "XLB missing",
+        "XLC missing",
+        "XLY missing",
+        "XLP missing",
+        "XLE missing",
+        "XLF missing",
+        "XLV missing",
+        "XLI missing",
+        "XLRE missing",
+        "XLK missing",
+        "XLU missing"
+      ]
+    },
     "news": {
       "said": "news_mode: on \u00b7 400 raw / 91 usable \u00b7 Gold drops 3.4% amid rising U.S. Treasury yields; Bitcoin slips near $83,000 as ",
       "bullets": [
@@ -1468,6 +1493,24 @@
         }
       ],
       "preview": "# Premarket Prediction \u2014 2026-09-29\n- news_mode: **on**\n> ## \ud83d\udccb SNAPSHOT (human-readable)\n>\n> **Prediction: UP \ud83d\udcc8 \u2014 MILD** | total score 1.292 (uncertainty multiplier \u00d71.1) | confidence 0.552\n>\n> **Good news vs bad news:** good +0.5 pts vs bad -2.0 pts \u2192 bad news outweighs good\n>\n> **Good news driving this:**\n> - Europe partial green\n> - NQ +0.18% vs cash\n> - Brent offered -6.83%\n> - Li Qiang stimulus T+1\n> - US-China $60B tariff lists\n>\n> **Bad news driving this:**\n> - 1w 10Y +16bp at 5.17 handle\n> - Oct hike odds ~70% carried\n> - leftover Hormuz\n> - EPU 1w spike\n> - JOLTS/PCE unsigned hinge\n>\n> **market uncertainty: **elevated** | VIX 16.06 | policy-uncertainty index 628.37 (1d +420.06)**\n>\n> **Factor scoreboard** (score \u00d7 weight = contribution):\n> - \u26aa Asia overnight session: +0.0 \u00d7 2.0 = +0.0\n> - \u26aa Europe session: +0.0 \u00d7 2.0 = +0.0\n> - \u26aa Overnight news & catalysts: +0.0 \u00d7 3.0 = +0.0\n> -"
+    },
+    {
+      "key": "sector_board",
+      "title": "Sector board",
+      "date": "2026-09-29",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-29T05:01:24.794438-04:00",
+      "files": [
+        {
+          "path": "01_daily/sectors/2026-09-29/_board.json",
+          "ok": true,
+          "reason": "",
+          "size": 6085,
+          "preview": "keys: date, generated_at, summary, sectors"
+        }
+      ],
+      "preview": "keys: date, generated_at, summary, sectors"
     }
   ],
   "href": {
