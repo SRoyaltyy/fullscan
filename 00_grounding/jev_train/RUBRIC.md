@@ -15,12 +15,12 @@ Thresholds stay put unless the pending block names one:
 `CROWD_DROP=0.50`.
 
 <!-- PENDING_BEGIN -->
-## Pending one change (awaiting next Submit)
+## Pending one change (session `20260929_1640`)
 
-- question: `(none)`
-- kind: `none`
-- misses on that question: 0
-- change: Session `20260929_1223` is already landed — QUESTIONS rewrite, `fact_keep` so opinion/reaction cannot hide a first-class fact, and a tightened classifiable safety net so forecast/odds/tape that only name-drop PCE/IPO/rate-hike stay drop. The next one Jev-analysis change waits for a new jev-train issue. Do not invent a grade. Do not edit closed lists.
+- question: `action_material`
+- kind: `criteria`
+- misses on that question: 3
+- change: Rewrite `action_material` criteria from this session's misses. Score toward KEEP / false-opinion / core / powerful when: Potential national policy---worth keeping watch; Steel is a valuable commodity--disruption to trade flow worth watching; IPO delay by company can affect stock. Sibling `new_instrument`: dated print / hold / CR / explores-rules / panel-endorse / named dollar deal is true. Do not edit closed lists. At most one decide() / threshold change.
 - do not edit `jev_closed_lists.json`
 <!-- PENDING_END -->
 
@@ -217,3 +217,29 @@ Code-path misses (not the Jev knob this round):
 - `source` — 3 Export Stocks Linked To Lower US China Tariffs - simplywall.st (US China Tariffs)
 - `punct` — No tax on Social Security? The facts about Trump’s plan are here — and they could hurt US retirees the most (Trump-linked Social Security policy)
 - `punct` — Explainer-What are credit default swaps and why are they spooking AI investors? - Yahoo Finance (CDS affecting the AI market)
+
+## Session `20260929_1640`
+
+Draw `20260929_1627`. Human keep 33, drop 65. Jev keep 23, drop 77. False keep 0, false drop 10.
+
+| You | reason | question | human_reason | title |
+|---|---|---|---|---|
+| KEEP | low_material | action_material | Potential national policy---worth keeping watch | China uses capital markets to fund AI and chip race against U.S. - qz.com |
+| KEEP | opinion | is_opinion | Korean gambit by Trump? Worth watching | Trump’s Korean gambit exposes a shifting East Asian order |
+| KEEP | low_material | action_material | Steel is a valuable commodity--disruption to trade flow worth watching | Geopolitical disruptions push up freight costs and alter steel trade flows - eurometal.net |
+| KEEP | punct | code:punct | India Europe Trade corridor is worth watching as it may stimulate stock prices in multiple companies---in general, any policy by Trump is worth watching | India-Europe trade corridor gets Trump’s backing, but can it survive war? - South China Morning Post |
+| KEEP | source | code:source | Rate hike context---worth considering | October Fed rate hike hinges on two looming economic reports - thestreet.com |
+| KEEP | low_material | action_material | IPO delay by company can affect stock | Oura stock listing in limbo as smart ring startup delays IPO just days after launching it - Fast Company |
+| KEEP | opinion | is_opinion | Job data and rent data--good context | Jobs and rents could shape the Fed's 2027 path - TradingView |
+| KEEP | geo_other | geo | Company mass layoff action | Stelco layoffs put hundreds of Hamilton steel jobs at risk - CTV News |
+| KEEP | source | code:source | investments in another firm--could be  bullish tailwind | Abacus FCF Advisors LLC Makes New Investment in Cardinal Health, Inc. $CAH |
+| KEEP | geo_other | geo | UK tax rise could affect markets since UK is part of the developed economy | Burnham refuses to rule out tax rises in autumn Budget |
+
+Proposed one change: `action_material` (criteria, n=3).
+
+Rewrite `action_material` criteria from this session's misses. Score toward KEEP / false-opinion / core / powerful when: Potential national policy---worth keeping watch; Steel is a valuable commodity--disruption to trade flow worth watching; IPO delay by company can affect stock. Sibling `new_instrument`: dated print / hold / CR / explores-rules / panel-endorse / named dollar deal is true. Do not edit closed lists. At most one decide() / threshold change.
+
+Code-path misses (not the Jev knob this round):
+- `punct` — India-Europe trade corridor gets Trump’s backing, but can it survive war? - South China Morning Post (India Europe Trade corridor is worth watching as it may stimulate stock prices in multiple companies---in general, any policy by Trump is worth watching)
+- `source` — October Fed rate hike hinges on two looming economic reports - thestreet.com (Rate hike context---worth considering)
+- `source` — Abacus FCF Advisors LLC Makes New Investment in Cardinal Health, Inc. $CAH (investments in another firm--could be  bullish tailwind)

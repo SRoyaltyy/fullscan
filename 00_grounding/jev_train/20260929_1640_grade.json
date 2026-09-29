@@ -1,0 +1,181 @@
+{
+  "schema": "jev-train-grade-1",
+  "stamp": "20260929_1640",
+  "draw_stamp": "20260929_1627",
+  "nonce": "e5849ced-fabe-44c5-8a35-64bd70d481ea",
+  "generated_at": "2026-09-29T16:40:52.096236+00:00",
+  "counts": {
+    "rows": 100,
+    "human_keep": 33,
+    "human_drop": 65,
+    "unsure": 2,
+    "marked": 98,
+    "jev_keep": 23,
+    "jev_drop": 77,
+    "false_keep": 0,
+    "false_drop": 10
+  },
+  "false_keep": [],
+  "false_drop": [
+    {
+      "id": "70db0d424d9a2967",
+      "title": "China uses capital markets to fund AI and chip race against U.S. - qz.com",
+      "source": "rss_google_markets",
+      "pool": "parsed",
+      "jev": "DROP",
+      "human": "K",
+      "reason": "low_material",
+      "bits": [
+        "actor",
+        "geo"
+      ],
+      "human_reason": "Potential national policy---worth keeping watch"
+    },
+    {
+      "id": "155ca953515a3ae1",
+      "title": "Trump’s Korean gambit exposes a shifting East Asian order",
+      "source": "rss_aljazeera_economy",
+      "pool": "parsed",
+      "jev": "DROP",
+      "human": "K",
+      "reason": "opinion",
+      "bits": [
+        "opinion",
+        "actor",
+        "geo"
+      ],
+      "human_reason": "Korean gambit by Trump? Worth watching"
+    },
+    {
+      "id": "ba321497e9709543",
+      "title": "Geopolitical disruptions push up freight costs and alter steel trade flows - eurometal.net",
+      "source": "eurometal.net",
+      "pool": "rss",
+      "jev": "DROP",
+      "human": "K",
+      "reason": "low_material",
+      "bits": [
+        "geo"
+      ],
+      "human_reason": "Steel is a valuable commodity--disruption to trade flow worth watching"
+    },
+    {
+      "id": "75e33c2428cd6a6f",
+      "title": "India-Europe trade corridor gets Trump’s backing, but can it survive war? - South China Morning Post",
+      "source": "South China Morning Post",
+      "pool": "rss",
+      "jev": "DROP",
+      "human": "K",
+      "reason": "punct",
+      "bits": [
+        "actor"
+      ],
+      "human_reason": "India Europe Trade corridor is worth watching as it may stimulate stock prices in multiple companies---in general, any policy by Trump is worth watching"
+    },
+    {
+      "id": "8c54476f7dfcc133",
+      "title": "October Fed rate hike hinges on two looming economic reports - thestreet.com",
+      "source": "thestreet.com",
+      "pool": "rss",
+      "jev": "DROP",
+      "human": "K",
+      "reason": "source",
+      "bits": [],
+      "human_reason": "Rate hike context---worth considering"
+    },
+    {
+      "id": "08e633c74796e53e",
+      "title": "Oura stock listing in limbo as smart ring startup delays IPO just days after launching it - Fast Company",
+      "source": "Fast Company",
+      "pool": "rss",
+      "jev": "DROP",
+      "human": "K",
+      "reason": "low_material",
+      "bits": [
+        "actor",
+        "geo"
+      ],
+      "human_reason": "IPO delay by company can affect stock"
+    },
+    {
+      "id": "b6ae9f6b5366f9c1",
+      "title": "Jobs and rents could shape the Fed's 2027 path - TradingView",
+      "source": "TradingView",
+      "pool": "rss",
+      "jev": "DROP",
+      "human": "K",
+      "reason": "opinion",
+      "bits": [
+        "opinion",
+        "actor",
+        "geo"
+      ],
+      "human_reason": "Job data and rent data--good context"
+    },
+    {
+      "id": "e677e426ea5e642e",
+      "title": "Stelco layoffs put hundreds of Hamilton steel jobs at risk - CTV News",
+      "source": "CTV News",
+      "pool": "rss",
+      "jev": "DROP",
+      "human": "K",
+      "reason": "geo_other",
+      "bits": [
+        "actor"
+      ],
+      "human_reason": "Company mass layoff action"
+    },
+    {
+      "id": "214908ec1985f9a9",
+      "title": "Abacus FCF Advisors LLC Makes New Investment in Cardinal Health, Inc. $CAH",
+      "source": "newsapi_MarketBeat",
+      "pool": "hard_miss",
+      "jev": "DROP",
+      "human": "K",
+      "reason": "source",
+      "bits": [],
+      "human_reason": "investments in another firm--could be  bullish tailwind"
+    },
+    {
+      "id": "49acebb528e6cdef",
+      "title": "Burnham refuses to rule out tax rises in autumn Budget",
+      "source": "rss_bbc_business",
+      "pool": "hard_miss",
+      "jev": "DROP",
+      "human": "K",
+      "reason": "geo_other",
+      "bits": [
+        "actor"
+      ],
+      "human_reason": "UK tax rise could affect markets since UK is part of the developed economy"
+    }
+  ],
+  "bits_on_misses": {
+    "false_keep": {
+      "opinion": 0,
+      "tape": 0,
+      "earnings": 0,
+      "print": 0,
+      "lever": 0,
+      "signed": 0,
+      "blast": 0,
+      "chokepoint": 0,
+      "actor": 0,
+      "geo": 0
+    },
+    "false_drop": {
+      "opinion": 2,
+      "tape": 0,
+      "earnings": 0,
+      "print": 0,
+      "lever": 0,
+      "signed": 0,
+      "blast": 0,
+      "chokepoint": 0,
+      "actor": 7,
+      "geo": 5
+    }
+  },
+  "json_url": "https://github.com/SRoyaltyy/fullscan/blob/main/00_grounding/jev_train/20260929_1640.json",
+  "grade_url": "https://github.com/SRoyaltyy/fullscan/blob/main/00_grounding/jev_train/20260929_1640_grade.json"
+}
