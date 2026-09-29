@@ -1,7 +1,7 @@
 {
   "meta": {
     "date": "2026-09-29",
-    "generated_at": "2026-09-29T16:14:58.596989-04:00",
+    "generated_at": "2026-09-29T16:19:54.723863-04:00",
     "general_bias": 0.4692,
     "sector_bias": {},
     "accuracy_gates": {
@@ -246,7 +246,7 @@
       },
       {
         "name": "Learnings / mutable policy",
-        "found": false,
+        "found": true,
         "used_as": "next predict prompt, not a ticker score"
       }
     ],
