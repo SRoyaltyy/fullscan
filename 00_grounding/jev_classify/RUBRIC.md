@@ -26,4 +26,5 @@ on the enum.
 
 The visible reason on a keep is `event_class|q5` (and `|sign` when
 signed), not `core_material` / `choke_fact` / `code_print`. Hop-0
-`reason` stays the filter reason for the keep/drop sheet.
+`reason` stays the filter reason for the keep/drop sheet. Hop-2
+(`00_grounding/jev_book/RUBRIC.md`) sides Finviz names after that.

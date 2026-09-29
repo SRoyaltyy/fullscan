@@ -18,6 +18,8 @@ on:
       - "src/jev_gate.py"
       - "src/test_jev_classify.py"
       - "src/jev_classify.py"
+      - "src/test_jev_book.py"
+      - "src/jev_book.py"
       - "02_lessons/lane/**"
   push:
     branches: [main]
@@ -33,6 +35,8 @@ on:
       - "src/jev_gate.py"
       - "src/test_jev_classify.py"
       - "src/jev_classify.py"
+      - "src/test_jev_book.py"
+      - "src/jev_book.py"
       - "02_lessons/lane/**"
 
 permissions:
@@ -57,3 +61,4 @@ jobs:
           PYTHONPATH=. python3 -m src.test_openclaw_models
           PYTHONPATH=. python3 -m src.test_jev_gate
           PYTHONPATH=. python3 -m src.test_jev_classify
+          PYTHONPATH=. python3 -m src.test_jev_book
