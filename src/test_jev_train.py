@@ -791,6 +791,59 @@ def test_append_hard_misses_does_not_duplicate_or_drop():
     assert out["cursor"] == 4
     assert len(out["items"]) == 2
     assert out["items"][0]["title"] == "Keep me"
+    holdout_title = "Holdout merger involving a US railroad"
+    skipped = append_hard_misses(out, [
+        {"id": title_id(holdout_title), "title": holdout_title, "source": "reuters"},
+    ], skip_ids={title_id(holdout_title)})
+    assert len(skipped["items"]) == 2
+
+
+def test_write_grade_does_not_copy_holdout_misses_into_hard_bank():
+    holdout_title = "Holdout merger involving a US railroad"
+    leftover = "CFTC explores crypto rules after a named dollar deal"
+    rows = _quiet_rows(28)
+    rows.extend([
+        {
+            "title": holdout_title,
+            "source": "reuters",
+            "pool": "holdout",
+            "jev": "DROP",
+            "reason": "low_material",
+            "grade": "K",
+            "human_reason": "named M&A — keep",
+        },
+        {
+            "title": leftover,
+            "source": "reuters",
+            "pool": "parsed",
+            "jev": "DROP",
+            "reason": "low_material",
+            "grade": "K",
+            "human_reason": "regulator exploring rules",
+        },
+    ])
+    parsed = parse_grades_payload(json.dumps({
+        "schema": "jev-train-grades-1",
+        "draw_stamp": "20260929_0100",
+        "nonce": "holdout-skip-nonce",
+        "rows": rows,
+    }))
+    with tempfile.TemporaryDirectory() as tmp:
+        root = Path(tmp)
+        ground = root / "00_grounding"
+        ground.mkdir()
+        hid = title_id(holdout_title)
+        (ground / "jev_holdout.json").write_text(json.dumps({
+            "ids": [hid],
+            "items": [{"id": hid, "title": holdout_title}],
+        }), encoding="utf-8")
+        write_grade(
+            parsed, stamp="20260929_0170", now=NOW, root=root, ground=ground, write=True,
+        )
+        hard = json.loads((ground / "jev_hard_misses.json").read_text(encoding="utf-8"))
+        ids = {item["id"] for item in hard["items"]}
+        assert hid not in ids
+        assert title_id(leftover) in ids
 
 
 def _quiet_rows(n: int) -> list[dict]:
@@ -1092,6 +1145,7 @@ def main() -> None:
         test_repo_holdout_and_hard_miss_bank_are_disjoint_from_gold,
         test_hard_miss_bank_builder_skips_gold_and_holdout,
         test_append_hard_misses_does_not_duplicate_or_drop,
+        test_write_grade_does_not_copy_holdout_misses_into_hard_bank,
         test_page_script_submit_threshold,
     ]
     failed = 0

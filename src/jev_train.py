@@ -1197,13 +1197,23 @@ def issue_body(
     return "\n".join(lines)
 
 
-def append_hard_misses(blob: dict, misses: list[dict]) -> dict:
-    """Record misses. Does not delete items and does not touch closed lists."""
+def append_hard_misses(
+    blob: dict,
+    misses: list[dict],
+    *,
+    skip_ids: set[str] | frozenset[str] | None = None,
+) -> dict:
+    """Record misses. Does not delete items and does not touch closed lists.
+
+    Holdout titles stay in jev_holdout.json only. A grade must not copy
+    them into the rotating bank (session 409 did, and New draw died).
+    """
     items = [dict(it) for it in (blob.get("items") or []) if isinstance(it, dict)]
     have = {_row_id(it) for it in items}
+    skip = {str(x) for x in (skip_ids or ()) if x}
     for row in misses:
         tid = _row_id(row)
-        if tid in have:
+        if tid in have or tid in skip:
             continue
         items.append({
             "id": tid,
@@ -1332,8 +1342,13 @@ def write_grade(
         ensure_pool_files(ground)
         hard_blob = read_hard_misses(hard_path)
         before = json.dumps(hard_blob.get("items"), sort_keys=True)
+        hold_ids = {
+            _row_id(it) for it in read_holdout_items(holdout_path(ground))
+        }
         hard_blob = append_hard_misses(
-            hard_blob, scored["false_keep"] + scored["false_drop"],
+            hard_blob,
+            scored["false_keep"] + scored["false_drop"],
+            skip_ids=hold_ids,
         )
         after = json.dumps(hard_blob.get("items"), sort_keys=True)
         if after != before:
