@@ -1,6 +1,6 @@
 # Learnings report — 2026-09-28
 
-Generated: **2026-09-28T17:39:53.636083-04:00** by `src/learn_cycle.py`.
+Generated: **2026-09-28T21:09:33.508811-04:00** by `src/learn_cycle.py`.
 
 This is the human-readable digest of what the bot **actually learned** this cycle: graded evidence, hypotheses (wins and losses), promoted standing rules, and **how that changes every daily workflow**.
 
@@ -18,7 +18,7 @@ Machine policy file (injected into predicts): `00_grounding/mutable_policy.md`.
 | Lessons promoted to active | 0 |
 | Lessons retired (efficacy-gated) | 10 |
 | Active lesson files now | 203 |
-| Engine policy version | 27 |
+| Engine policy version | 31 |
 
 ## 2. Accuracy by topic (evidence this cycle learned from)
 
@@ -81,7 +81,7 @@ Each scope lists recent win and loss hypotheses: the **counterfactual ask**, the
 ### `news` — 0 wins, 1 losses
 
 #### LOSS — news
-- **When:** [news] Global 1d close win rate 52.0% (n=1660).
+- **When:** [news] Global 1d close win rate 51.5% (n=1609).
 - **Ask:** Entry timing, side mix, or event taxonomy noise?
 - **Experiment:** [news] Raise min net weight to map a ticker; drop weak edges.
 - **Do instead:** [news] Only emit actions with |net| above a higher floor.
@@ -533,7 +533,7 @@ Sectors (pooled S0–S4; per-sector overrides in engine_policy.json):
 - S2_BREADTH: n=152 sign-hit=0.62 → ×1.0
 - S3_FLOWS_POSITIONING: n=112 sign-hit=0.52 → ×0.5
 - S4_ETF_TAPE: n=162 sign-hit=0.62 → ×1.0
-Last change: Communication Services.S0_SHARED_MACRO: 0.5 -> 1.0 (n=16, hit=0.562); Communication Services.S1_SECTOR_FACTORS: 0.5 -> 1.0 (n=12, hit=0.583); Consumer Cyclical.S2_BREADTH: 1.0 -> 1.25 (n=12, hit=0.667); Energy.S0_SHARED_MACRO: 1.25 -> 1.0 (n=13, hit=0.615)
+Last change: hold
 
 Progress vs baselines: `03_scoreboard/IMPROVEMENT_TRACKER.md`.
 

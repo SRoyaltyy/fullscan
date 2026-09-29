@@ -19,6 +19,8 @@ from research.hot_n4_clean_v4.protocol import (  # noqa: E402
     CAP_V3_LUCK_N,
     ENGINE_SHA256,
     FEES_SHA256,
+    ACTIONS_BLOB,
+    OHLC_BLOB,
     DELISTED,
     ADV_SHARE_SCALE,
     EXCLUSIONS_PLAN,
@@ -335,6 +337,34 @@ def _ledger() -> None:
         verify_ledger(days)
 
 
+def _append_only_price(
+    path: str,
+    digest: str,
+    blob: str,
+    keys: tuple[str, ...],
+    values: tuple[str, ...],
+) -> None:
+    """The pin is the git blob. The live file may add rows, not change them."""
+    import subprocess
+
+    from src.lever_search_inputs import InputHashError, assert_parquet_rows_cover
+
+    raw = subprocess.check_output(["git", "-C", str(ROOT), "cat-file", "blob", blob])
+    got = hashlib.sha256(raw).hexdigest()
+    if got != digest:
+        raise SystemExit(f"pinned blob {path} sha256 {got} != {digest}")
+    try:
+        assert_parquet_rows_cover(
+            raw,
+            (ROOT / path).read_bytes(),
+            key_columns=keys,
+            value_columns=values,
+            label=path,
+        )
+    except InputHashError as exc:
+        raise SystemExit(str(exc)) from exc
+
+
 def main() -> None:
     text = PREREG.read_text(encoding="utf-8")
     _pins(text)
@@ -344,10 +374,23 @@ def main() -> None:
     _exclusions()
     _sources()
     _ledger()
-    # local price and audit bytes, when this checkout has them
+    # Historical price blobs. The live files may grow by new rows.
+    _append_only_price(
+        "data/prices/ohlc.parquet",
+        OHLC_SHA256,
+        OHLC_BLOB,
+        ("ticker", "date"),
+        ("open", "high", "low", "close", "volume"),
+    )
+    _append_only_price(
+        "data/prices/actions.parquet",
+        ACTIONS_SHA256,
+        ACTIONS_BLOB,
+        ("ticker", "date"),
+        ("dividend", "split", "close"),
+    )
+    # local audit bytes, when this checkout has them
     for path, digest in (
-        ("data/prices/ohlc.parquet", OHLC_SHA256),
-        ("data/prices/actions.parquet", ACTIONS_SHA256),
         ("data/factor_mine/retro_prices/actions.parquet", RETRO_ACTIONS_SHA256),
         ("00_grounding/futubull_fees.json", FEES_SHA256),
         ("research/audit/INPUT_PROVENANCE_336.md", PROVENANCE_SHA256),

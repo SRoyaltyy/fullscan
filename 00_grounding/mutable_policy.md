@@ -44,7 +44,7 @@ Sectors (pooled S0–S4; per-sector overrides in engine_policy.json):
 - S2_BREADTH: n=152 sign-hit=0.62 → ×1.0
 - S3_FLOWS_POSITIONING: n=112 sign-hit=0.52 → ×0.5
 - S4_ETF_TAPE: n=162 sign-hit=0.62 → ×1.0
-Last change: Communication Services.S0_SHARED_MACRO: 0.5 -> 1.0 (n=16, hit=0.562); Communication Services.S1_SECTOR_FACTORS: 0.5 -> 1.0 (n=12, hit=0.583); Consumer Cyclical.S2_BREADTH: 1.0 -> 1.25 (n=12, hit=0.667); Energy.S0_SHARED_MACRO: 1.25 -> 1.0 (n=13, hit=0.615)
+Last change: hold
 
 ## Active adjustments (newest promoted lessons, truncated)
 
