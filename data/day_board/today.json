@@ -1,11 +1,11 @@
 {
   "date": "2026-09-29",
-  "generated_at": "2026-09-29T05:41:29.404201-04:00",
+  "generated_at": "2026-09-29T05:41:57.191570-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
-    "ok": 6,
-    "partial": 1,
+    "ok": 4,
+    "partial": 3,
     "fail": 1,
     "n": 8
   },
@@ -163,31 +163,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "catalyst",
-      "title": "Catalyst dossiers (after book)",
-      "date": "2026-09-29",
-      "ok": false,
-      "pushed": true,
-      "at": "2026-09-29T05:17:43.563639-04:00",
-      "files": [
-        {
-          "path": "01_daily/catalyst/2026-09-29_dossiers.json",
-          "ok": false,
-          "reason": "catalyst_fail n_ok=0/8",
-          "size": 1275,
-          "preview": "keys: date, generated_at, max_n, routing, grok, deepseek_fallback, gemini, n_targets, n_ok, status, targets, dossiers"
-        },
-        {
-          "path": "01_daily/catalyst/2026-09-29_dossiers.md",
-          "ok": false,
-          "reason": "catalyst_fail n_ok=0/8",
-          "size": 1275,
-          "preview": "# CATALYST DAILY \u2014 2026-09-29\n0/8 dossiers \u00b7 max=8 \u00b7 routing=Grok \u2192 DeepSeek"
-        }
-      ],
-      "preview": "keys: date, generated_at, max_n, routing, grok, deepseek_fallback, gemini, n_targets, n_ok, status, targets, dossiers \u00b7 # CATALYST DAILY \u2014 2026-09-29\n0/8 dossiers \u00b7 max=8 \u00b7 routing=Grok \u2192 DeepSeek"
-    },
     {
       "key": "status",
       "title": "Pre-open status packet",
@@ -467,6 +442,31 @@
         }
       ],
       "preview": "2026-09-29 BUY ARHS, SONO, SN, PDFS, SHOO, DT, GCT, OLLI \u00b7 SELL ROIV, PYXS, IKT, SOC, AXSM, CGEM, IFRX, BIDU \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href \u00b7 2026-09-29 BUY ARHS, SONO, SN, PDFS, SHOO, DT, GCT, OLLI \u00b7 SELL ROIV, PYXS, IKT, SOC, AXSM, CGEM, IFRX, BIDU \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-29 BUY ARHS, SONO, SN, PDFS, SHOO, DT, GCT, OLLI \u00b7 SELL ROIV, PYXS, IKT, SOC, AXSM, CGEM, IFRX, BIDU \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-29 BUY ARHS, SONO, SN, PDFS, SHOO, DT, GCT, OLLI \u00b7 SELL ROIV, PYXS, IKT, SOC, AXSM, CGEM, IFRX, BIDU \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, orde"
+    },
+    {
+      "key": "weather",
+      "title": "Weather / regime",
+      "date": "2026-09-29",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-29T05:41:56.070085-04:00",
+      "files": [
+        {
+          "path": "01_daily/weather/2026-09-29_weather.json",
+          "ok": true,
+          "reason": "",
+          "size": 9687,
+          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -3.46, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -1.73, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -0.32, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -0.74, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.21, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -0.28, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.16, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -0.94, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}"
+        },
+        {
+          "path": "01_daily/weather/2026-09-29_weather.md",
+          "ok": true,
+          "reason": "",
+          "size": 5216,
+          "preview": "# Weather report \u2014 2026-09-29\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+        }
+      ],
+      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -3.46, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -1.73, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -0.32, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -0.74, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.21, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -0.28, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.16, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -0.94, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-09-29\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"

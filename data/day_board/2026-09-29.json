@@ -1,12 +1,12 @@
 {
   "date": "2026-09-29",
-  "generated_at": "2026-09-29T05:41:29.404201-04:00",
+  "generated_at": "2026-09-29T05:41:57.191570-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
   "counts": {
-    "ok": 6,
-    "partial": 1,
+    "ok": 4,
+    "partial": 3,
     "fail": 1,
     "n": 8
   },
@@ -693,11 +693,11 @@
       "key": "stock_book",
       "name": "Stock Book ALL",
       "yaml": "stock_book_all.yml",
-      "status": "OK",
+      "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 4,
+      "n_req_ok": 2,
       "n_req": 4,
-      "n_opt_ok": 3,
+      "n_opt_ok": 1,
       "n_opt": 3,
       "files": [
         {
@@ -836,10 +836,10 @@
           "name": "Stock book JSON",
           "path": "data/stock_book/2026-09-29_stock_book.json",
           "role": "required",
-          "status": "OK",
-          "reason": "horizons=5 names=230",
-          "size": 1535872,
-          "said": "1d BUY ARHS, SONO, SN, PDFS, SHOO, DT, GCT, OLLI \u00b7 SELL ROIV, PYXS, IKT, SOC, AXSM, CGEM \u00b7 0.4692",
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
           "bullets": []
         },
         {
@@ -847,24 +847,21 @@
           "name": "Stock book MD",
           "path": "01_daily/2026-09-29_stock_book.md",
           "role": "required",
-          "status": "OK",
-          "reason": "",
-          "size": 95608,
-          "said": "Stock book \u2014 2026-09-29",
-          "bullets": [
-            "_Generated 2026-09-29T05:41:14.501245-04:00_",
-            "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
-          ]
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "green",
           "name": "Green-pile JSON",
           "path": "data/stock_book/2026-09-29_green.json",
           "role": "optional",
-          "status": "OK",
-          "reason": "",
-          "size": 2698,
-          "said": "179 green \u00b7 TAL, GLBE, KEYS, SHOO, EMBJ, CVLT, NTNX, FIGS, AVT, SN",
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
           "bullets": []
         },
         {
@@ -886,10 +883,10 @@
           "name": "Dashboard HTML",
           "path": "dashboard/index.html",
           "role": "optional",
-          "status": "OK",
-          "reason": "live-book poller + today.json (2026-09-29)",
+          "status": "FAIL",
+          "reason": "session 2026-09-29 not in dashboard dates (last=2026-09-25)",
           "size": 8944875,
-          "said": "live-book poller + today.json (2026-09-29)",
+          "said": "session 2026-09-29 not in dashboard dates (last=2026-09-25)",
           "bullets": []
         }
       ],
@@ -902,9 +899,9 @@
       "key": "publish",
       "name": "Dashboard / .io",
       "yaml": "deploy-dashboard.yml",
-      "status": "OK",
-      "inputs_ready": true,
-      "n_req_ok": 2,
+      "status": "PARTIAL",
+      "inputs_ready": false,
+      "n_req_ok": 1,
       "n_req": 2,
       "n_opt_ok": 0,
       "n_opt": 1,
@@ -914,10 +911,10 @@
           "name": "Stock book JSON",
           "path": "data/stock_book/2026-09-29_stock_book.json",
           "role": "input",
-          "status": "OK",
-          "reason": "horizons=5 names=230",
-          "size": 1535872,
-          "said": "1d BUY ARHS, SONO, SN, PDFS, SHOO, DT, GCT, OLLI \u00b7 SELL ROIV, PYXS, IKT, SOC, AXSM, CGEM \u00b7 0.4692",
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
           "bullets": []
         },
         {
@@ -925,10 +922,10 @@
           "name": "Dashboard HTML (repo)",
           "path": "dashboard/index.html",
           "role": "required",
-          "status": "OK",
-          "reason": "live-book poller + today.json (2026-09-29)",
+          "status": "FAIL",
+          "reason": "session 2026-09-29 not in dashboard dates (last=2026-09-25)",
           "size": 8944875,
-          "said": "live-book poller + today.json (2026-09-29)",
+          "said": "session 2026-09-29 not in dashboard dates (last=2026-09-25)",
           "bullets": []
         },
         {
@@ -2011,6 +2008,31 @@
         }
       ],
       "preview": "2026-09-29 BUY ARHS, SONO, SN, PDFS, SHOO, DT, GCT, OLLI \u00b7 SELL ROIV, PYXS, IKT, SOC, AXSM, CGEM, IFRX, BIDU \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href \u00b7 2026-09-29 BUY ARHS, SONO, SN, PDFS, SHOO, DT, GCT, OLLI \u00b7 SELL ROIV, PYXS, IKT, SOC, AXSM, CGEM, IFRX, BIDU \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-29 BUY ARHS, SONO, SN, PDFS, SHOO, DT, GCT, OLLI \u00b7 SELL ROIV, PYXS, IKT, SOC, AXSM, CGEM, IFRX, BIDU \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-29 BUY ARHS, SONO, SN, PDFS, SHOO, DT, GCT, OLLI \u00b7 SELL ROIV, PYXS, IKT, SOC, AXSM, CGEM, IFRX, BIDU \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, orde"
+    },
+    {
+      "key": "weather",
+      "title": "Weather / regime",
+      "date": "2026-09-29",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-29T05:41:56.070085-04:00",
+      "files": [
+        {
+          "path": "01_daily/weather/2026-09-29_weather.json",
+          "ok": true,
+          "reason": "",
+          "size": 9687,
+          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -3.46, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -1.73, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -0.32, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -0.74, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.21, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -0.28, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.16, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -0.94, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}"
+        },
+        {
+          "path": "01_daily/weather/2026-09-29_weather.md",
+          "ok": true,
+          "reason": "",
+          "size": 5216,
+          "preview": "# Weather report \u2014 2026-09-29\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+        }
+      ],
+      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -3.46, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -1.73, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -0.32, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -0.74, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.21, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -0.28, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.16, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -0.94, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-09-29\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
     }
   ],
   "href": {
