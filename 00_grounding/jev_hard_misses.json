@@ -1373,6 +1373,116 @@
       "url": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxPWUtDZnNFWERqRnhwYi1DOTdWRXhPdEhwRjgxRXdDa3paclByUmVWb3ZuaXVpTHdKc3J3QjVzYnpjRVMxXzBmSWdwUEJuV3ZEdmVBVHRBeG9IVDVKbzR3czN5UTdSQjR3U2J0T1NIWGVrQ2U5SGdmMnNscXF6ZVdSSW1JaE1EakpLMEJteVVkMWNOQi1BQmdKYzRvUmJBVUNzWXJvOXpSVW1PdGtGSTk1bkNZak1yZkh2eVFyWE01dTF6X0YwbGJmTGtURnZ3bmxMQUlyTDZHR1ZkRXVXVlZVQVdwYi10eUhzdG5zMkNxWkxUUnM?oc=5",
       "date": "2026-09-29",
       "archive": "parsed"
+    },
+    {
+      "id": "d2c4795a83ee2eae",
+      "title": "Hugging Face Reportedly Wants to Be Acquired for About $13 Billion - Gizmodo",
+      "source": "rss_google_business",
+      "published_at": "",
+      "url": "",
+      "date": "",
+      "archive": "hard_miss",
+      "from_grade": true
+    },
+    {
+      "id": "88e26229d95c2e3e",
+      "title": "CAM, Latham, Khaitan, Sidley Guide India's National Stock Exchange Through $2.4B IPO - Law.com",
+      "source": "Law.com",
+      "published_at": "",
+      "url": "",
+      "date": "",
+      "archive": "hard_miss",
+      "from_grade": true
+    },
+    {
+      "id": "efbaa4e716445cd1",
+      "title": "Gold fell to a seven-week low amid the threat of another rate hike in the United States - Українські Національні Новини (УНН)",
+      "source": "Українські Національні Новини (УНН)",
+      "published_at": "",
+      "url": "",
+      "date": "",
+      "archive": "hard_miss",
+      "from_grade": true
+    },
+    {
+      "id": "1fd80a003f4a8fff",
+      "title": "How Federal Reserve Interest Rate Hikes Impact Global Assets - Bitget",
+      "source": "Bitget",
+      "published_at": "",
+      "url": "",
+      "date": "",
+      "archive": "hard_miss",
+      "from_grade": true
+    },
+    {
+      "id": "9e944a9da876d4ac",
+      "title": "Tech stocks gain on Anthropic IPO optimism, offsetting high oil, yields - Yahoo Finance",
+      "source": "Yahoo Finance",
+      "published_at": "",
+      "url": "",
+      "date": "",
+      "archive": "hard_miss",
+      "from_grade": true
+    },
+    {
+      "id": "6a7a1fc5e1f50fdf",
+      "title": "Saudi-Pakistan-Turkiye pact: A new shield or strategic signal?",
+      "source": "rss_aljazeera_economy",
+      "published_at": "",
+      "url": "",
+      "date": "",
+      "archive": "hard_miss",
+      "from_grade": true
+    },
+    {
+      "id": "2071e1b30eadf4cc",
+      "title": "Proposal backed by Trump administration would allow 401K and IRA funds to be used in riskier investments - Yahoo",
+      "source": "rss_google_business",
+      "published_at": "",
+      "url": "",
+      "date": "",
+      "archive": "hard_miss",
+      "from_grade": true
+    },
+    {
+      "id": "c6cb802bdb6c03c2",
+      "title": "Iran hits US in Jordan, US-Saudi strikes on Iraq: Is war spreading?",
+      "source": "rss_aljazeera_economy",
+      "published_at": "",
+      "url": "",
+      "date": "",
+      "archive": "hard_miss",
+      "from_grade": true
+    },
+    {
+      "id": "7c56ccf58f5445a1",
+      "title": "The New Miller Copilot Builder With Blue iQ Brings Adaptive Automation to Real-World Fabrication Environments",
+      "source": "finviz_export",
+      "published_at": "",
+      "url": "",
+      "date": "",
+      "archive": "hard_miss",
+      "from_grade": true
+    },
+    {
+      "id": "6e0f92ec9b309339",
+      "title": "TD Securities sees rising odds of October Fed hike as PCE inflation stays firm - vtmarkets.com",
+      "source": "rss_google_macro",
+      "published_at": "",
+      "url": "",
+      "date": "",
+      "archive": "hard_miss",
+      "from_grade": true
+    },
+    {
+      "id": "9f5046480e27a675",
+      "title": "LNG Canada Phase 2: After FID key questions remain - Institute for Energy Economics and Financial Analysis (IEEFA)",
+      "source": "Institute for Energy Economics and Financial Analysis (IEEFA)",
+      "published_at": "",
+      "url": "",
+      "date": "",
+      "archive": "hard_miss",
+      "from_grade": true
     }
   ]
 }

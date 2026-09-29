@@ -15,12 +15,12 @@ Thresholds stay put unless the pending block names one:
 `CROWD_DROP=0.50`.
 
 <!-- PENDING_BEGIN -->
-## Pending one change (session `20260929_1732`) — landed
+## Pending one change (session `20260929_1803`)
 
-- question: `action_material` + `reprint_weather` / `is_opinion` / `actor_power` / `new_instrument`
-- kind: `criteria` + one `decide()` knob
-- misses on that question: 2 material + 1 reprint + 1 opinion + 1 crowd (code punct/source/junk/code_ai are notes)
-- change: QUESTIONS now score named-fund / 13F / billionaire flow, named-officer insider sale, sitting-president secondary sanctions, Hormuz/Iran escalation, named-broker downgrade + PT cut, and a national pump-price cut toward KEEP. `decide()`: if `action_material >= 0.65` or `new_instrument >= 0.60`, do not drop a chokepoint reprint — keep as `choke_fact`. Months-old "tensions persist" with low material still drops. Code-keep tightened: `_CLASS_AI` needs a first-class OpenAI/Anthropic verb (not a "tech stocks today" recap). `_CLASS_POLICY` matches secondary sanctions. `_CLASS_CHOKE_NEW` matches escalation.
+- question: `action_material`
+- kind: `criteria`
+- misses on that question: 7
+- change: Rewrite `action_material` criteria from this session's misses. Score toward KEEP / false-opinion / core / powerful when: Again, new 401K+IRA policy from Trump admin--worth looking into; analyst outlook raise and strong results---confluence of positive factors in one stock. Do not loosen so these become keeps: Although this may look like corporate acquisition, theres too many reportedly, wants. This means it hasnt found a buyer yet; While the establishment of Indian National Stock Market is newsworthy, its individual stocks are not; Gold fell to a seven-week low amid the threat of another rate hike in the United States - Українські Національні Новини (УНН); This is a description of how rate hikes affect something, not the action of rate hikes itself; This is "Stock Market today", which is merely a description of things already happened. However, stuff like "Things you should know before tomorrow's open" is acceptable since it hasn't happeend yet. Sibling `new_instrument`: dated print / hold / CR / explores-rules / panel-endorse / named dollar deal is true. Do not edit closed lists. At most one decide() / threshold change.
 - do not edit `jev_closed_lists.json`
 <!-- PENDING_END -->
 
@@ -459,3 +459,32 @@ Code-path misses (not the Jev knob this round):
 - `junk_shape` — HSBC downgraded Amgen to Hold from Buy and cut its price target to $425 in a new biopharma catalyst review published today. (Analyst downgrade of a firm)
 - `source` — This Growth Stock Is Quietly Solving the AI Supercycle's Cooling Problem. Here's Why It Could Soar. - The Motley Fool (Interesting AI concept)
 - `code_ai` — Tech stocks today: OpenAI's growth disappoints, Nvidia earnings provide next test for AI trade (not exactly earnings surprise despite the presence of the word "Earnings")
+
+## Session `20260929_1803`
+
+Draw `20260929_1749`. Human keep 38, drop 62. Jev keep 37, drop 63. False keep 6, false drop 7.
+
+| You | reason | question | human_reason | title |
+|---|---|---|---|---|
+| KEEP | punct | code:punct | geopolitical development | Saudi-Pakistan-Turkiye pact: A new shield or strategic signal? |
+| KEEP | low_material | action_material | Again, new 401K+IRA policy from Trump admin--worth looking into | Proposal backed by Trump administration would allow 401K and IRA funds to be used in riskier investments - Yahoo |
+| KEEP | punct | code:punct | escalation in major war | Iran hits US in Jordan, US-Saudi strikes on Iraq: Is war spreading? |
+| KEEP | geo_other | geo | new product launch | The New Miller Copilot Builder With Blue iQ Brings Adaptive Automation to Real-World Fabrication Environments |
+| KEEP | opinion | is_opinion |  | TD Securities sees rising odds of October Fed hike as PCE inflation stays firm - vtmarkets.com |
+| KEEP | geo_other | geo | LNG news | LNG Canada Phase 2: After FID key questions remain - Institute for Energy Economics and Financial Analysis (IEEFA) |
+| KEEP | low_material | action_material | analyst outlook raise and strong results---confluence of positive factors in one stock | TTM Technologies (TTMI) Shares Surge Following Strong Results and Outlook Raise |
+| DROP | core_material | action_material | Although this may look like corporate acquisition, theres too many reportedly, wants. This means it hasnt found a buyer yet | Hugging Face Reportedly Wants to Be Acquired for About $13 Billion - Gizmodo |
+| DROP | core_material | action_material | While the establishment of Indian National Stock Market is newsworthy, its individual stocks are not | CAM, Latham, Khaitan, Sidley Guide India's National Stock Exchange Through $2.4B IPO - Law.com |
+| DROP | core_material | action_material |  | Gold fell to a seven-week low amid the threat of another rate hike in the United States - Українські Національні Новини (УНН) |
+| DROP | core_material | action_material | This is a description of how rate hikes affect something, not the action of rate hikes itself | How Federal Reserve Interest Rate Hikes Impact Global Assets - Bitget |
+| DROP | code_ai | code:code_ai | This is not Anthropic IPO. Just a description of the aftereffects of the news | Tech stocks gain on Anthropic IPO optimism, offsetting high oil, yields - Yahoo Finance |
+| DROP | core_material | action_material | This is "Stock Market today", which is merely a description of things already happened. However, stuff like "Things you should know before tomorrow's open" is acceptable since it hasn't happeend yet | Stock Market Today: Nasdaq, S&P 500 Futures Surge After Blockbuster Nvidia Earnings Report; Salesforce, CrowdStrike Also Power Tech Gains - Yahoo Finance |
+
+Proposed one change: `action_material` (criteria, n=7).
+
+Rewrite `action_material` criteria from this session's misses. Score toward KEEP / false-opinion / core / powerful when: Again, new 401K+IRA policy from Trump admin--worth looking into; analyst outlook raise and strong results---confluence of positive factors in one stock. Do not loosen so these become keeps: Although this may look like corporate acquisition, theres too many reportedly, wants. This means it hasnt found a buyer yet; While the establishment of Indian National Stock Market is newsworthy, its individual stocks are not; Gold fell to a seven-week low amid the threat of another rate hike in the United States - Українські Національні Новини (УНН); This is a description of how rate hikes affect something, not the action of rate hikes itself; This is "Stock Market today", which is merely a description of things already happened. However, stuff like "Things you should know before tomorrow's open" is acceptable since it hasn't happeend yet. Sibling `new_instrument`: dated print / hold / CR / explores-rules / panel-endorse / named dollar deal is true. Do not edit closed lists. At most one decide() / threshold change.
+
+Code-path misses (not the Jev knob this round):
+- `punct` — Saudi-Pakistan-Turkiye pact: A new shield or strategic signal? (geopolitical development)
+- `punct` — Iran hits US in Jordan, US-Saudi strikes on Iraq: Is war spreading? (escalation in major war)
+- `code_ai` — Tech stocks gain on Anthropic IPO optimism, offsetting high oil, yields - Yahoo Finance (This is not Anthropic IPO. Just a description of the aftereffects of the news)

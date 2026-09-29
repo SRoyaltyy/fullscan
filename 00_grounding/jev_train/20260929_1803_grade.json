@@ -1,0 +1,229 @@
+{
+  "schema": "jev-train-grade-1",
+  "stamp": "20260929_1803",
+  "draw_stamp": "20260929_1749",
+  "nonce": "fa869ec2-64ae-4626-b107-13c3dc252100",
+  "generated_at": "2026-09-29T18:03:39.898472+00:00",
+  "counts": {
+    "rows": 100,
+    "human_keep": 38,
+    "human_drop": 62,
+    "unsure": 0,
+    "marked": 100,
+    "jev_keep": 37,
+    "jev_drop": 63,
+    "false_keep": 6,
+    "false_drop": 7
+  },
+  "false_keep": [
+    {
+      "id": "d2c4795a83ee2eae",
+      "title": "Hugging Face Reportedly Wants to Be Acquired for About $13 Billion - Gizmodo",
+      "source": "rss_google_business",
+      "pool": "parsed",
+      "jev": "KEEP",
+      "human": "D",
+      "reason": "core_material",
+      "bits": [
+        "actor",
+        "geo"
+      ],
+      "human_reason": "Although this may look like corporate acquisition, theres too many reportedly, wants. This means it hasnt found a buyer yet"
+    },
+    {
+      "id": "88e26229d95c2e3e",
+      "title": "CAM, Latham, Khaitan, Sidley Guide India's National Stock Exchange Through $2.4B IPO - Law.com",
+      "source": "Law.com",
+      "pool": "rss",
+      "jev": "KEEP",
+      "human": "D",
+      "reason": "core_material",
+      "bits": [
+        "signed",
+        "actor",
+        "geo"
+      ],
+      "human_reason": "While the establishment of Indian National Stock Market is newsworthy, its individual stocks are not"
+    },
+    {
+      "id": "efbaa4e716445cd1",
+      "title": "Gold fell to a seven-week low amid the threat of another rate hike in the United States - Українські Національні Новини (УНН)",
+      "source": "Українські Національні Новини (УНН)",
+      "pool": "rss",
+      "jev": "KEEP",
+      "human": "D",
+      "reason": "core_material",
+      "bits": [
+        "tape",
+        "actor",
+        "geo"
+      ],
+      "human_reason": ""
+    },
+    {
+      "id": "1fd80a003f4a8fff",
+      "title": "How Federal Reserve Interest Rate Hikes Impact Global Assets - Bitget",
+      "source": "Bitget",
+      "pool": "rss",
+      "jev": "KEEP",
+      "human": "D",
+      "reason": "core_material",
+      "bits": [
+        "lever",
+        "signed",
+        "actor",
+        "geo"
+      ],
+      "human_reason": "This is a description of how rate hikes affect something, not the action of rate hikes itself"
+    },
+    {
+      "id": "9e944a9da876d4ac",
+      "title": "Tech stocks gain on Anthropic IPO optimism, offsetting high oil, yields - Yahoo Finance",
+      "source": "Yahoo Finance",
+      "pool": "rss",
+      "jev": "KEEP",
+      "human": "D",
+      "reason": "code_ai",
+      "bits": [],
+      "human_reason": "This is not Anthropic IPO. Just a description of the aftereffects of the news"
+    },
+    {
+      "id": "ca405ffebff2b34d",
+      "title": "Stock Market Today: Nasdaq, S&P 500 Futures Surge After Blockbuster Nvidia Earnings Report; Salesforce, CrowdStrike Also Power Tech Gains - Yahoo Finance",
+      "source": "rss_google_markets",
+      "pool": "hard_miss",
+      "jev": "KEEP",
+      "human": "D",
+      "reason": "core_material",
+      "bits": [
+        "earnings",
+        "signed",
+        "actor",
+        "geo"
+      ],
+      "human_reason": "This is \"Stock Market today\", which is merely a description of things already happened. However, stuff like \"Things you should know before tomorrow's open\" is acceptable since it hasn't happeend yet"
+    }
+  ],
+  "false_drop": [
+    {
+      "id": "6a7a1fc5e1f50fdf",
+      "title": "Saudi-Pakistan-Turkiye pact: A new shield or strategic signal?",
+      "source": "rss_aljazeera_economy",
+      "pool": "parsed",
+      "jev": "DROP",
+      "human": "K",
+      "reason": "punct",
+      "bits": [],
+      "human_reason": "geopolitical development"
+    },
+    {
+      "id": "2071e1b30eadf4cc",
+      "title": "Proposal backed by Trump administration would allow 401K and IRA funds to be used in riskier investments - Yahoo",
+      "source": "rss_google_business",
+      "pool": "parsed",
+      "jev": "DROP",
+      "human": "K",
+      "reason": "low_material",
+      "bits": [
+        "actor",
+        "geo"
+      ],
+      "human_reason": "Again, new 401K+IRA policy from Trump admin--worth looking into"
+    },
+    {
+      "id": "c6cb802bdb6c03c2",
+      "title": "Iran hits US in Jordan, US-Saudi strikes on Iraq: Is war spreading?",
+      "source": "rss_aljazeera_economy",
+      "pool": "parsed",
+      "jev": "DROP",
+      "human": "K",
+      "reason": "punct",
+      "bits": [],
+      "human_reason": "escalation in major war"
+    },
+    {
+      "id": "7c56ccf58f5445a1",
+      "title": "The New Miller Copilot Builder With Blue iQ Brings Adaptive Automation to Real-World Fabrication Environments",
+      "source": "finviz_export",
+      "pool": "parsed",
+      "jev": "DROP",
+      "human": "K",
+      "reason": "geo_other",
+      "bits": [
+        "actor"
+      ],
+      "human_reason": "new product launch"
+    },
+    {
+      "id": "6e0f92ec9b309339",
+      "title": "TD Securities sees rising odds of October Fed hike as PCE inflation stays firm - vtmarkets.com",
+      "source": "rss_google_macro",
+      "pool": "parsed",
+      "jev": "DROP",
+      "human": "K",
+      "reason": "opinion",
+      "bits": [
+        "opinion",
+        "print",
+        "actor",
+        "geo"
+      ],
+      "human_reason": ""
+    },
+    {
+      "id": "9f5046480e27a675",
+      "title": "LNG Canada Phase 2: After FID key questions remain - Institute for Energy Economics and Financial Analysis (IEEFA)",
+      "source": "Institute for Energy Economics and Financial Analysis (IEEFA)",
+      "pool": "rss",
+      "jev": "DROP",
+      "human": "K",
+      "reason": "geo_other",
+      "bits": [
+        "actor"
+      ],
+      "human_reason": "LNG news"
+    },
+    {
+      "id": "e1e9e4d81ceec28f",
+      "title": "TTM Technologies (TTMI) Shares Surge Following Strong Results and Outlook Raise",
+      "source": "rss_yahoo_finance",
+      "pool": "hard_miss",
+      "jev": "DROP",
+      "human": "K",
+      "reason": "low_material",
+      "bits": [
+        "actor",
+        "geo"
+      ],
+      "human_reason": "analyst outlook raise and strong results---confluence of positive factors in one stock"
+    }
+  ],
+  "bits_on_misses": {
+    "false_keep": {
+      "opinion": 0,
+      "tape": 1,
+      "earnings": 1,
+      "print": 0,
+      "lever": 1,
+      "signed": 3,
+      "blast": 0,
+      "chokepoint": 0,
+      "actor": 5,
+      "geo": 5
+    },
+    "false_drop": {
+      "opinion": 1,
+      "tape": 0,
+      "earnings": 0,
+      "print": 1,
+      "lever": 0,
+      "signed": 0,
+      "blast": 0,
+      "chokepoint": 0,
+      "actor": 5,
+      "geo": 3
+    }
+  },
+  "json_url": "https://github.com/SRoyaltyy/fullscan/blob/main/00_grounding/jev_train/20260929_1803.json",
+  "grade_url": "https://github.com/SRoyaltyy/fullscan/blob/main/00_grounding/jev_train/20260929_1803_grade.json"
+}
