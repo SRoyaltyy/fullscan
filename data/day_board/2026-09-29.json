@@ -1,6 +1,6 @@
 {
   "date": "2026-09-29",
-  "generated_at": "2026-09-29T04:16:07.996971-04:00",
+  "generated_at": "2026-09-29T04:16:19.106333-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -12,8 +12,8 @@
     "MISSING AB checklist enriched `data/ab_checklist/2026-09-29_ab_checklist_enriched.csv` \u2014 missing"
   ],
   "counts": {
-    "ok": 1,
-    "partial": 3,
+    "ok": 2,
+    "partial": 2,
     "fail": 4,
     "n": 8
   },
@@ -22,9 +22,9 @@
       "key": "postclose",
       "name": "Post-close research",
       "yaml": "map_heat_postclose.yml",
-      "status": "PARTIAL",
+      "status": "OK",
       "inputs_ready": true,
-      "n_req_ok": 1,
+      "n_req_ok": 2,
       "n_req": 2,
       "n_opt_ok": 2,
       "n_opt": 2,
@@ -59,10 +59,10 @@
           "name": "Map heat tables JSON",
           "path": "01_daily/map_heat/2026-09-29_map_heat.json",
           "role": "required",
-          "status": "FAIL",
-          "reason": "stale_map_heat_md",
-          "size": 0,
-          "said": "stale_map_heat_md \u00b7 morning_overlay \u00b7 11616 names \u00b7 hot Tobacco, Internet Content & Information, Electronic Gaming & Multimedia, Consumer Electronics \u00b7 cold Coking Coal, Utilities - Independent Power Producers, Metal Fabrication \u00b7 macro_gate",
+          "status": "OK",
+          "reason": "",
+          "size": 273096,
+          "said": "morning_overlay \u00b7 11616 names \u00b7 hot Tobacco, Internet Content & Information, Electronic Gaming & Multimedia, Consumer Electronics \u00b7 cold Coking Coal, Utilities - Independent Power Producers, Metal Fabrication \u00b7 macro_gate",
           "bullets": []
         },
         {
@@ -72,10 +72,10 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 17335,
-          "said": "MAP HEAT \u2014 2026-09-28",
+          "size": 17991,
+          "said": "MAP HEAT \u2014 2026-09-29",
           "bullets": [
-            "Export `finviz_2026-09-28.csv` \u00b7 11616 names \u00b7 generated 2026-09-28T04:26:14.563292-04:00",
+            "Export `finviz_2026-09-29.csv` \u00b7 11616 names \u00b7 generated 2026-09-29T04:16:18.974974-04:00",
             "TAPE (live futures)"
           ]
         }
@@ -101,8 +101,8 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 96986,
-          "said": "5887 tickers \u00b7 2047 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
+          "size": 97172,
+          "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
           "bullets": [
             "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
             "Agnico Eagle Shares Fall 4.9% as Gold Prices Decline",
@@ -116,10 +116,10 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 11972,
+          "size": 11984,
           "said": "Finviz Daily Digest \u2014 2026-09-29",
           "bullets": [
-            "_Generated 2026-09-29T04:15:59.831908-04:00 \u00b7 export=data/exports/finviz_2026-09-28.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2047_",
+            "_Generated 2026-09-29T04:14:52.325670-04:00 \u00b7 export=data/exports/finviz_2026-09-29.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_",
             "Major indices (live quote page)"
           ]
         },
@@ -144,7 +144,7 @@
           "size": 2307,
           "said": "Finviz homepage market digest \u2014 2026-09-29",
           "bullets": [
-            "Generated:** 2026-09-29T04:16:07.835803-04:00 (America/New_York)",
+            "Generated:** 2026-09-29T04:14:59.778169-04:00 (America/New_York)",
             "Source:** `live`"
           ]
         },
@@ -171,7 +171,7 @@
           "bullets": []
         }
       ],
-      "said": "5887 tickers \u00b7 2047 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
+      "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
       "bullets": [
         "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
         "Agnico Eagle Shares Fall 4.9% as Gold Prices Decline",
@@ -183,7 +183,7 @@
       "name": "Pre-Open ALL",
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
-      "inputs_ready": false,
+      "inputs_ready": true,
       "n_req_ok": 2,
       "n_req": 20,
       "n_opt_ok": 1,
@@ -196,8 +196,8 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 96986,
-          "said": "5887 tickers \u00b7 2047 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
+          "size": 97172,
+          "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
           "bullets": [
             "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
             "Agnico Eagle Shares Fall 4.9% as Gold Prices Decline",
@@ -231,10 +231,10 @@
           "name": "Map heat tables JSON",
           "path": "01_daily/map_heat/2026-09-29_map_heat.json",
           "role": "input",
-          "status": "FAIL",
-          "reason": "stale_map_heat_md",
-          "size": 0,
-          "said": "stale_map_heat_md \u00b7 morning_overlay \u00b7 11616 names \u00b7 hot Tobacco, Internet Content & Information, Electronic Gaming & Multimedia, Consumer Electronics \u00b7 cold Coking Coal, Utilities - Independent Power Producers, Metal Fabrication \u00b7 macro_gate",
+          "status": "OK",
+          "reason": "",
+          "size": 273096,
+          "said": "morning_overlay \u00b7 11616 names \u00b7 hot Tobacco, Internet Content & Information, Electronic Gaming & Multimedia, Consumer Electronics \u00b7 cold Coking Coal, Utilities - Independent Power Producers, Metal Fabrication \u00b7 macro_gate",
           "bullets": []
         },
         {
@@ -332,8 +332,8 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 7563,
-          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 20 fail",
+          "size": 7546,
+          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 18 fail",
           "bullets": [
             "general_predict:missing",
             "events:missing",
@@ -508,8 +508,8 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 96986,
-          "said": "5887 tickers \u00b7 2047 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
+          "size": 97172,
+          "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
           "bullets": [
             "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
             "Agnico Eagle Shares Fall 4.9% as Gold Prices Decline",
@@ -597,8 +597,8 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 96986,
-          "said": "5887 tickers \u00b7 2047 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
+          "size": 97172,
+          "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
           "bullets": [
             "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
             "Agnico Eagle Shares Fall 4.9% as Gold Prices Decline",
@@ -671,8 +671,8 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 96986,
-          "said": "5887 tickers \u00b7 2047 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
+          "size": 97172,
+          "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
           "bullets": [
             "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
             "Agnico Eagle Shares Fall 4.9% as Gold Prices Decline",
@@ -1030,6 +1030,31 @@
         }
       ],
       "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest \u2014 2026-09-29\n**Generated:** 2026-09-29T04:16:07.835803-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stocks set for flat open as Treasury yields climb ahead of home price and confidence data in a quiet catalyst backdrop\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** KMX, CCL, UEC, TRI, CMCSA, NWSA, GOOGL\n**Next session:** housing no \u00b7 retail no \u00b7 Fed no\n**Earnings slate:** KMX, CCL\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-09-29\n**Clock use:** `same_morning`"
+    },
+    {
+      "key": "map_heat",
+      "title": "Map heat morning overlay",
+      "date": "2026-09-29",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-29T04:16:19.005182-04:00",
+      "files": [
+        {
+          "path": "01_daily/map_heat/2026-09-29_map_heat.json",
+          "ok": true,
+          "reason": "",
+          "size": 273096,
+          "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape"
+        },
+        {
+          "path": "01_daily/map_heat/2026-09-29_map_heat.md",
+          "ok": true,
+          "reason": "",
+          "size": 18356,
+          "preview": "# MAP HEAT \u2014 2026-09-29\nExport `finviz_2026-09-29.csv` \u00b7 11616 names \u00b7 generated 2026-09-29T04:16:18.974974-04:00"
+        }
+      ],
+      "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-09-29\nExport `finviz_2026-09-29.csv` \u00b7 11616 names \u00b7 generated 2026-09-29T04:16:18.974974-04:00"
     }
   ],
   "href": {
