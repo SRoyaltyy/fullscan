@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-09-29T19:45:24.932165-04:00",
+  "generated_at": "2026-09-29T19:47:11.927544-04:00",
   "window": 7,
   "summary": {
-    "n_active": 203,
-    "n_judged": 167,
+    "n_active": 213,
+    "n_judged": 177,
     "improved": 66,
     "flat": 30,
-    "worse": 71,
-    "mean_delta": 0.011
+    "worse": 81,
+    "mean_delta": -0.022
   },
   "lessons": [
     {
@@ -156,6 +156,22 @@
       },
       "delta": 0.143,
       "verdict": "improved"
+    },
+    {
+      "lesson": "a-consumer-cyclical-down-call-is-driven-by-a-genuinely-negat.md",
+      "topic": "sector:Consumer Cyclical",
+      "active_since": "2026-08-19",
+      "error_category": "B",
+      "before": {
+        "hit": 0.857,
+        "n": 7
+      },
+      "after": {
+        "hit": 0.286,
+        "n": 7
+      },
+      "delta": -0.571,
+      "verdict": "WORSE"
     },
     {
       "lesson": "a-consumer-cyclical-xly-call-is-built-from-prior-period-cons.md",
@@ -840,6 +856,22 @@
       "verdict": "improved"
     },
     {
+      "lesson": "a-mega-cap-duration-heavy-consumer-cyclical-etf-xly-like-amz.md",
+      "topic": "sector:Consumer Cyclical",
+      "active_since": "2026-09-16",
+      "error_category": "D",
+      "before": {
+        "hit": 0.714,
+        "n": 7
+      },
+      "after": {
+        "hit": 0.143,
+        "n": 7
+      },
+      "delta": -0.571,
+      "verdict": "WORSE"
+    },
+    {
       "lesson": "a-predict-file-is-dated-on-a-us-cash-closed-day-weekend-holi.md",
       "topic": null,
       "active_since": "2026-08-27",
@@ -1180,6 +1212,54 @@
       },
       "delta": 0.0,
       "verdict": "flat"
+    },
+    {
+      "lesson": "a-sector-call-has-a-decisively-negative-fundamental-spine-fr.md",
+      "topic": "sector:Consumer Cyclical",
+      "active_since": "2026-08-18",
+      "error_category": "D",
+      "before": {
+        "hit": 0.833,
+        "n": 6
+      },
+      "after": {
+        "hit": 0.286,
+        "n": 7
+      },
+      "delta": -0.547,
+      "verdict": "WORSE"
+    },
+    {
+      "lesson": "a-sector-call-has-a-scheduled-8-30-et-high-impact-macro-rele.md",
+      "topic": "sector:Financial",
+      "active_since": "2026-08-17",
+      "error_category": "B",
+      "before": {
+        "hit": 0.6,
+        "n": 5
+      },
+      "after": {
+        "hit": 0.143,
+        "n": 7
+      },
+      "delta": -0.457,
+      "verdict": "WORSE"
+    },
+    {
+      "lesson": "a-sector-call-has-a-scheduled-8-30-et-macro-release-pending.md",
+      "topic": "sector:Financial",
+      "active_since": "2026-08-14",
+      "error_category": "B",
+      "before": {
+        "hit": 0.75,
+        "n": 4
+      },
+      "after": {
+        "hit": 0.143,
+        "n": 7
+      },
+      "delta": -0.607,
+      "verdict": "WORSE"
     },
     {
       "lesson": "a-sector-call-s-narrative-and-sector-scores-block-cap-magnit.md",
@@ -1630,6 +1710,38 @@
       "verdict": "flat"
     },
     {
+      "lesson": "a-utilities-xlu-call-is-built-after-a-stretch-of-risk-on-gro.md",
+      "topic": "sector:Utilities",
+      "active_since": "2026-08-17",
+      "error_category": "A",
+      "before": {
+        "hit": 0.8,
+        "n": 5
+      },
+      "after": {
+        "hit": 0.143,
+        "n": 7
+      },
+      "delta": -0.657,
+      "verdict": "WORSE"
+    },
+    {
+      "lesson": "a-utility-defensive-sector-call-is-built-on-a-carried-defens.md",
+      "topic": "sector:Utilities",
+      "active_since": "2026-08-18",
+      "error_category": "B",
+      "before": {
+        "hit": 0.667,
+        "n": 6
+      },
+      "after": {
+        "hit": 0.143,
+        "n": 7
+      },
+      "delta": -0.524,
+      "verdict": "WORSE"
+    },
+    {
       "lesson": "a-voting-fed-member-chair-or-governor-has-a-same-calendar-da.md",
       "topic": "general",
       "active_since": "2026-09-04",
@@ -2061,6 +2173,22 @@
         "n": 7
       },
       "delta": -0.143,
+      "verdict": "WORSE"
+    },
+    {
+      "lesson": "in-a-utilities-xlu-call-a-second-soft-inflation-print-has-al.md",
+      "topic": "sector:Utilities",
+      "active_since": "2026-08-14",
+      "error_category": "NONE",
+      "before": {
+        "hit": 0.75,
+        "n": 4
+      },
+      "after": {
+        "hit": 0.143,
+        "n": 7
+      },
+      "delta": -0.607,
       "verdict": "WORSE"
     },
     {
@@ -2532,6 +2660,22 @@
         "n": 7
       },
       "delta": -0.428,
+      "verdict": "WORSE"
+    },
+    {
+      "lesson": "sector-prediction-made-when-the-sector-s-dominant-commodity.md",
+      "topic": "sector:Energy",
+      "active_since": "2026-08-18",
+      "error_category": "NONE",
+      "before": {
+        "hit": 0.667,
+        "n": 6
+      },
+      "after": {
+        "hit": 0.143,
+        "n": 7
+      },
+      "delta": -0.524,
       "verdict": "WORSE"
     },
     {
@@ -3077,6 +3221,22 @@
       },
       "delta": 0.571,
       "verdict": "improved"
+    },
+    {
+      "lesson": "when-the-pre-fetched-commodity-tape-conflicts-with-live-sour.md",
+      "topic": "sector:Energy",
+      "active_since": "2026-08-19",
+      "error_category": "NONE",
+      "before": {
+        "hit": 0.714,
+        "n": 7
+      },
+      "after": {
+        "hit": 0.143,
+        "n": 7
+      },
+      "delta": -0.571,
+      "verdict": "WORSE"
     },
     {
       "lesson": "xlb-has-negative-1d-3d-relative-tape-china-demand-pmi-drag-a.md",
