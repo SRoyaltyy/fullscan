@@ -1,0 +1,354 @@
+{
+  "schema": "jev-train-grade-1",
+  "stamp": "20260929_1223",
+  "draw_stamp": "20260929_1120",
+  "nonce": "f73e4ac7-3e2a-426b-be70-722695ff748f",
+  "generated_at": "2026-09-29T12:23:13.199339+00:00",
+  "counts": {
+    "rows": 100,
+    "human_keep": 25,
+    "human_drop": 75,
+    "unsure": 0,
+    "marked": 100,
+    "jev_keep": 3,
+    "jev_drop": 97,
+    "false_keep": 0,
+    "false_drop": 22
+  },
+  "false_keep": [],
+  "false_drop": [
+    {
+      "id": "298333b4cdae4446",
+      "title": "Cyclospora fears lead consumers to lose their appetite for salads - CNBC",
+      "source": "rss_google_business",
+      "pool": "parsed",
+      "jev": "DROP",
+      "human": "K",
+      "reason": "opinion",
+      "bits": [
+        "opinion"
+      ],
+      "human_reason": "Health scare--could trigger recalls, FDA, policies etc"
+    },
+    {
+      "id": "9669d3d835c9fc8a",
+      "title": "Anthropic Targets $2 Trillion Record IPO: 8 Key Items Shaping the Stock Market Thursday - TheStreet Pro",
+      "source": "rss_google_markets",
+      "pool": "parsed",
+      "jev": "DROP",
+      "human": "K",
+      "reason": "opinion",
+      "bits": [
+        "opinion",
+        "actor",
+        "geo"
+      ],
+      "human_reason": "Major upcoming IPO of a geopolitically significant AI company"
+    },
+    {
+      "id": "0e5dd0c57f7a2ac8",
+      "title": "OpenAI Introduces ‘ChatGPT for Teens’ as Safety Concerns Grow - The New York Times",
+      "source": "rss_google_business",
+      "pool": "parsed",
+      "jev": "DROP",
+      "human": "K",
+      "reason": "low_material",
+      "bits": [
+        "actor",
+        "geo"
+      ],
+      "human_reason": "Product launch from major AI company---worth a watch"
+    },
+    {
+      "id": "bf31b339bef9ff83",
+      "title": "Bitcoin Rally Tops $79K. Crypto Shorts, ETF Flows Soar. CFTC Explores Crypto Rules. - Investor's Business Daily",
+      "source": "rss_google_markets",
+      "pool": "parsed",
+      "jev": "DROP",
+      "human": "K",
+      "reason": "low_material",
+      "bits": [
+        "actor",
+        "geo"
+      ],
+      "human_reason": "CFTC part worth looking into--gov department policy"
+    },
+    {
+      "id": "d042dbfca5c1d048",
+      "title": "Vanguard pays $4.6B for RIA software startup Altruist - Axios",
+      "source": "rss_google_business",
+      "pool": "parsed",
+      "jev": "DROP",
+      "human": "K",
+      "reason": "low_material",
+      "bits": [
+        "actor",
+        "geo"
+      ],
+      "human_reason": "potential merger/acquisition"
+    },
+    {
+      "id": "826a7a4b95bee558",
+      "title": "Basin rig count steady as prices drop",
+      "source": "finviz_export",
+      "pool": "parsed",
+      "jev": "DROP",
+      "human": "K",
+      "reason": "low_material",
+      "bits": [
+        "actor",
+        "geo"
+      ],
+      "human_reason": "Basin rig count steady--could serve as useful context for oil prices"
+    },
+    {
+      "id": "5293099813216ee8",
+      "title": "US Federal Reserve holds rates steady as inflation hawks call for hike - CNA",
+      "source": "rss_google_macro",
+      "pool": "parsed",
+      "jev": "DROP",
+      "human": "K",
+      "reason": "low_material",
+      "bits": [
+        "print",
+        "lever",
+        "actor",
+        "geo"
+      ],
+      "human_reason": "US Fed action"
+    },
+    {
+      "id": "a82bb78331b7f826",
+      "title": "House clears FY2027 CR through Dec. 11, shutdown risk off",
+      "source": "events",
+      "pool": "parsed",
+      "jev": "DROP",
+      "human": "K",
+      "reason": "low_material",
+      "bits": [
+        "actor",
+        "geo"
+      ],
+      "human_reason": "House of representatives action--affects policy"
+    },
+    {
+      "id": "adff7ac0eb88d23d",
+      "title": "Canadian National Railway outlines conditions to U.S. regulators for proposed Union Pacific–Norfolk Southern merger",
+      "source": "finviz_export",
+      "pool": "parsed",
+      "jev": "DROP",
+      "human": "K",
+      "reason": "low_material",
+      "bits": [
+        "actor",
+        "geo"
+      ],
+      "human_reason": "Merger involving US company"
+    },
+    {
+      "id": "51afaaf9b4a3df29",
+      "title": "EIA weekly petroleum and natural gas storage — crude -0.4mb, gas +40 Bcf to 3,254 Bcf",
+      "source": "events",
+      "pool": "parsed",
+      "jev": "DROP",
+      "human": "K",
+      "reason": "low_material",
+      "bits": [
+        "print",
+        "actor",
+        "geo"
+      ],
+      "human_reason": "Oil and petrol information"
+    },
+    {
+      "id": "f674c9f398fe5b29",
+      "title": "Azeri Light oil price decreases by 1.96% on world market - Report.az",
+      "source": "rss_google_commodities",
+      "pool": "parsed",
+      "jev": "DROP",
+      "human": "K",
+      "reason": "geo_other",
+      "bits": [
+        "actor"
+      ],
+      "human_reason": "Useful oil price context"
+    },
+    {
+      "id": "f9b64aad88a3af18",
+      "title": "Fed’s Lisa Cook Warns AI Won’t Save The Economy From Near-Term Inflation - TradingView",
+      "source": "TradingView",
+      "pool": "rss",
+      "jev": "DROP",
+      "human": "K",
+      "reason": "opinion",
+      "bits": [
+        "opinion",
+        "actor",
+        "geo"
+      ],
+      "human_reason": "Fed officer warning--worth useing as context"
+    },
+    {
+      "id": "983258722845d671",
+      "title": "Oil Surges Over 3% as Trump Rejects Iran Peace Proposal and Hormuz Risk Returns - EnergyNow.com",
+      "source": "EnergyNow.com",
+      "pool": "rss",
+      "jev": "DROP",
+      "human": "K",
+      "reason": "reprint_weather",
+      "bits": [
+        "chokepoint",
+        "actor",
+        "geo"
+      ],
+      "human_reason": "Although Hormuz is background weather at this point, explicit acceptance/rejection of peace deals do move oil, market fear and volatility in the short term"
+    },
+    {
+      "id": "a36dbc0f15b9b5cf",
+      "title": "Fed's Cook Warns AI Demand and Oil Prices to Keep Inflation Elevated - IndexBox",
+      "source": "IndexBox",
+      "pool": "rss",
+      "jev": "DROP",
+      "human": "K",
+      "reason": "opinion",
+      "bits": [
+        "opinion",
+        "actor",
+        "geo"
+      ],
+      "human_reason": "Fed officer opinion--use as context"
+    },
+    {
+      "id": "b0c5e40c8c9b2d90",
+      "title": "Tokyo yen trades in lower 157 range against dollar as U.S. rate hike bets fuel yen selling - finance.biggo.com",
+      "source": "finance.biggo.com",
+      "pool": "rss",
+      "jev": "DROP",
+      "human": "K",
+      "reason": "crowd",
+      "bits": [
+        "geo"
+      ],
+      "human_reason": "Japanese Yen is a factor in US markets and should not be skipped"
+    },
+    {
+      "id": "5417afe7f6cf855c",
+      "title": "3 Export Stocks Linked To Lower US China Tariffs - simplywall.st",
+      "source": "simplywall.st",
+      "pool": "rss",
+      "jev": "DROP",
+      "human": "K",
+      "reason": "source",
+      "bits": [],
+      "human_reason": "US China Tariffs"
+    },
+    {
+      "id": "9170d30a03f5205c",
+      "title": "No tax on Social Security? The facts about Trump’s plan are here — and they could hurt US retirees the most",
+      "source": "rss_yahoo_finance",
+      "pool": "holdout",
+      "jev": "DROP",
+      "human": "K",
+      "reason": "punct",
+      "bits": [
+        "actor"
+      ],
+      "human_reason": "Trump-linked government policy on Social Security--could massively affect consumer spending, sentiment, market mood etc"
+    },
+    {
+      "id": "5ecaeac802e1c937",
+      "title": "Seafood groups Nordian Group, Norvelita sold to PE firm",
+      "source": "rss_yahoo_finance",
+      "pool": "holdout",
+      "jev": "DROP",
+      "human": "K",
+      "reason": "geo_other",
+      "bits": [
+        "actor"
+      ],
+      "human_reason": "Company acquisition/merger"
+    },
+    {
+      "id": "98ce47b1396384be",
+      "title": "The Bond Market Sell-Off Is Freezing American Homebuilding",
+      "source": "rss_yahoo_finance",
+      "pool": "holdout",
+      "jev": "DROP",
+      "human": "K",
+      "reason": "opinion",
+      "bits": [
+        "opinion",
+        "actor",
+        "geo"
+      ],
+      "human_reason": "If true, could serve as context in homebuilding related stocks"
+    },
+    {
+      "id": "ebd5375dd6704bd0",
+      "title": "4th Circuit dismisses some charges against Wells Fargo after jury’s $22.1M fee",
+      "source": "rss_yahoo_finance",
+      "pool": "holdout",
+      "jev": "DROP",
+      "human": "K",
+      "reason": "low_material",
+      "bits": [
+        "actor",
+        "geo"
+      ],
+      "human_reason": "Major company charges dismissed--serves as bullish tailwind"
+    },
+    {
+      "id": "4c3fa3818f1c729c",
+      "title": "Explainer-What are credit default swaps and why are they spooking AI investors? - Yahoo Finance",
+      "source": "rss_google_business",
+      "pool": "holdout",
+      "jev": "DROP",
+      "human": "K",
+      "reason": "punct",
+      "bits": [],
+      "human_reason": "Credit default swaps is a policy that is now affecting the AI market"
+    },
+    {
+      "id": "75bf6674ee9b98aa",
+      "title": "As Trump mulls building Chinese EVs in U.S., automakers point to Germany as a cautionary tale - NBC News",
+      "source": "rss_google_business",
+      "pool": "holdout",
+      "jev": "DROP",
+      "human": "K",
+      "reason": "low_material",
+      "bits": [
+        "actor",
+        "geo"
+      ],
+      "human_reason": "Potential EV policy from Trump"
+    }
+  ],
+  "bits_on_misses": {
+    "false_keep": {
+      "opinion": 0,
+      "tape": 0,
+      "earnings": 0,
+      "print": 0,
+      "lever": 0,
+      "signed": 0,
+      "blast": 0,
+      "chokepoint": 0,
+      "actor": 0,
+      "geo": 0
+    },
+    "false_drop": {
+      "opinion": 5,
+      "tape": 0,
+      "earnings": 0,
+      "print": 2,
+      "lever": 1,
+      "signed": 0,
+      "blast": 0,
+      "chokepoint": 1,
+      "actor": 18,
+      "geo": 16
+    }
+  },
+  "json_url": "https://github.com/SRoyaltyy/fullscan/blob/main/00_grounding/jev_train/20260929_1223.json",
+  "grade_url": "https://github.com/SRoyaltyy/fullscan/blob/main/00_grounding/jev_train/20260929_1223_grade.json"
+}

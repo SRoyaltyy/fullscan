@@ -543,6 +543,226 @@
       "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQNHhZbXl4VlhNWTVLc3NiUktyekxnT3AxUF9Lb1NLbjBGN1JGU0Y1QnZ2dGVoVm1mMm1aQUNlSmNjaHgtMkJXTlJ4UGJVMlM5ZEptYjZHRk5MaUhkcnNfbkhwV2JTTzVNTWE3S3BTNHFCYTVwb0ZJWko2T21YejRIOEVtUTFQUmt6MDJyRjdaXzNQXzBiODhEandjUXdOVGU4Q2h6WTZqT2YwSVF0TF85Wm10Yw?oc=5",
       "date": "2026-09-28",
       "archive": "parsed"
+    },
+    {
+      "id": "298333b4cdae4446",
+      "title": "Cyclospora fears lead consumers to lose their appetite for salads - CNBC",
+      "source": "rss_google_business",
+      "published_at": "",
+      "url": "",
+      "date": "",
+      "archive": "hard_miss",
+      "from_grade": true
+    },
+    {
+      "id": "9669d3d835c9fc8a",
+      "title": "Anthropic Targets $2 Trillion Record IPO: 8 Key Items Shaping the Stock Market Thursday - TheStreet Pro",
+      "source": "rss_google_markets",
+      "published_at": "",
+      "url": "",
+      "date": "",
+      "archive": "hard_miss",
+      "from_grade": true
+    },
+    {
+      "id": "0e5dd0c57f7a2ac8",
+      "title": "OpenAI Introduces ‘ChatGPT for Teens’ as Safety Concerns Grow - The New York Times",
+      "source": "rss_google_business",
+      "published_at": "",
+      "url": "",
+      "date": "",
+      "archive": "hard_miss",
+      "from_grade": true
+    },
+    {
+      "id": "bf31b339bef9ff83",
+      "title": "Bitcoin Rally Tops $79K. Crypto Shorts, ETF Flows Soar. CFTC Explores Crypto Rules. - Investor's Business Daily",
+      "source": "rss_google_markets",
+      "published_at": "",
+      "url": "",
+      "date": "",
+      "archive": "hard_miss",
+      "from_grade": true
+    },
+    {
+      "id": "d042dbfca5c1d048",
+      "title": "Vanguard pays $4.6B for RIA software startup Altruist - Axios",
+      "source": "rss_google_business",
+      "published_at": "",
+      "url": "",
+      "date": "",
+      "archive": "hard_miss",
+      "from_grade": true
+    },
+    {
+      "id": "826a7a4b95bee558",
+      "title": "Basin rig count steady as prices drop",
+      "source": "finviz_export",
+      "published_at": "",
+      "url": "",
+      "date": "",
+      "archive": "hard_miss",
+      "from_grade": true
+    },
+    {
+      "id": "5293099813216ee8",
+      "title": "US Federal Reserve holds rates steady as inflation hawks call for hike - CNA",
+      "source": "rss_google_macro",
+      "published_at": "",
+      "url": "",
+      "date": "",
+      "archive": "hard_miss",
+      "from_grade": true
+    },
+    {
+      "id": "a82bb78331b7f826",
+      "title": "House clears FY2027 CR through Dec. 11, shutdown risk off",
+      "source": "events",
+      "published_at": "",
+      "url": "",
+      "date": "",
+      "archive": "hard_miss",
+      "from_grade": true
+    },
+    {
+      "id": "adff7ac0eb88d23d",
+      "title": "Canadian National Railway outlines conditions to U.S. regulators for proposed Union Pacific–Norfolk Southern merger",
+      "source": "finviz_export",
+      "published_at": "",
+      "url": "",
+      "date": "",
+      "archive": "hard_miss",
+      "from_grade": true
+    },
+    {
+      "id": "51afaaf9b4a3df29",
+      "title": "EIA weekly petroleum and natural gas storage — crude -0.4mb, gas +40 Bcf to 3,254 Bcf",
+      "source": "events",
+      "published_at": "",
+      "url": "",
+      "date": "",
+      "archive": "hard_miss",
+      "from_grade": true
+    },
+    {
+      "id": "f674c9f398fe5b29",
+      "title": "Azeri Light oil price decreases by 1.96% on world market - Report.az",
+      "source": "rss_google_commodities",
+      "published_at": "",
+      "url": "",
+      "date": "",
+      "archive": "hard_miss",
+      "from_grade": true
+    },
+    {
+      "id": "f9b64aad88a3af18",
+      "title": "Fed’s Lisa Cook Warns AI Won’t Save The Economy From Near-Term Inflation - TradingView",
+      "source": "TradingView",
+      "published_at": "",
+      "url": "",
+      "date": "",
+      "archive": "hard_miss",
+      "from_grade": true
+    },
+    {
+      "id": "983258722845d671",
+      "title": "Oil Surges Over 3% as Trump Rejects Iran Peace Proposal and Hormuz Risk Returns - EnergyNow.com",
+      "source": "EnergyNow.com",
+      "published_at": "",
+      "url": "",
+      "date": "",
+      "archive": "hard_miss",
+      "from_grade": true
+    },
+    {
+      "id": "a36dbc0f15b9b5cf",
+      "title": "Fed's Cook Warns AI Demand and Oil Prices to Keep Inflation Elevated - IndexBox",
+      "source": "IndexBox",
+      "published_at": "",
+      "url": "",
+      "date": "",
+      "archive": "hard_miss",
+      "from_grade": true
+    },
+    {
+      "id": "b0c5e40c8c9b2d90",
+      "title": "Tokyo yen trades in lower 157 range against dollar as U.S. rate hike bets fuel yen selling - finance.biggo.com",
+      "source": "finance.biggo.com",
+      "published_at": "",
+      "url": "",
+      "date": "",
+      "archive": "hard_miss",
+      "from_grade": true
+    },
+    {
+      "id": "5417afe7f6cf855c",
+      "title": "3 Export Stocks Linked To Lower US China Tariffs - simplywall.st",
+      "source": "simplywall.st",
+      "published_at": "",
+      "url": "",
+      "date": "",
+      "archive": "hard_miss",
+      "from_grade": true
+    },
+    {
+      "id": "9170d30a03f5205c",
+      "title": "No tax on Social Security? The facts about Trump’s plan are here — and they could hurt US retirees the most",
+      "source": "rss_yahoo_finance",
+      "published_at": "",
+      "url": "",
+      "date": "",
+      "archive": "hard_miss",
+      "from_grade": true
+    },
+    {
+      "id": "5ecaeac802e1c937",
+      "title": "Seafood groups Nordian Group, Norvelita sold to PE firm",
+      "source": "rss_yahoo_finance",
+      "published_at": "",
+      "url": "",
+      "date": "",
+      "archive": "hard_miss",
+      "from_grade": true
+    },
+    {
+      "id": "98ce47b1396384be",
+      "title": "The Bond Market Sell-Off Is Freezing American Homebuilding",
+      "source": "rss_yahoo_finance",
+      "published_at": "",
+      "url": "",
+      "date": "",
+      "archive": "hard_miss",
+      "from_grade": true
+    },
+    {
+      "id": "ebd5375dd6704bd0",
+      "title": "4th Circuit dismisses some charges against Wells Fargo after jury’s $22.1M fee",
+      "source": "rss_yahoo_finance",
+      "published_at": "",
+      "url": "",
+      "date": "",
+      "archive": "hard_miss",
+      "from_grade": true
+    },
+    {
+      "id": "4c3fa3818f1c729c",
+      "title": "Explainer-What are credit default swaps and why are they spooking AI investors? - Yahoo Finance",
+      "source": "rss_google_business",
+      "published_at": "",
+      "url": "",
+      "date": "",
+      "archive": "hard_miss",
+      "from_grade": true
+    },
+    {
+      "id": "75bf6674ee9b98aa",
+      "title": "As Trump mulls building Chinese EVs in U.S., automakers point to Germany as a cautionary tale - NBC News",
+      "source": "rss_google_business",
+      "published_at": "",
+      "url": "",
+      "date": "",
+      "archive": "hard_miss",
+      "from_grade": true
     }
   ]
 }
