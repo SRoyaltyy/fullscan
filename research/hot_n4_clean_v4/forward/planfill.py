@@ -39,11 +39,27 @@ from src.paper_trade import order_fees
 
 
 def book_state(records: list[dict]) -> dict:
-    """Cash and lots after the last seeded session or the last fill."""
+    """Cash and lots after the last seeded session or the last fill.
+
+    An ``open_fill_correction`` replaces that date's open fill for cash and
+    lots. A later close mark still wins, because the mark is the book after
+    the close. The sealed open-fill line is not edited.
+    """
     last = None
     for record in records:
-        if record["kind"] in ("session", "fill", "open_fill", "mark"):
+        kind = record.get("kind")
+        if kind in ("session", "fill", "open_fill", "mark"):
             last = record
+        elif (
+            kind == "open_fill_correction"
+            and last is not None
+            and last.get("kind") == "open_fill"
+            and last.get("date") == record.get("date")
+            and isinstance(record.get("corrected"), dict)
+        ):
+            last = dict(record["corrected"])
+            if record.get("sha256"):
+                last["sha256"] = record["sha256"]
     if last is None:
         from research.hot_n4_clean_v4.forward.step import fresh_state
         return fresh_state()
@@ -56,7 +72,7 @@ def book_state_before(records: list[dict], day: str) -> dict:
         row for row in records
         if not (
             row.get("date") == day
-            and row.get("kind") in ("plan", "open_fill", "fill", "mark", "close")
+            and row.get("kind") in ("plan", "open_fill", "open_fill_correction", "fill", "mark", "close")
         )
     ]
     return book_state(trimmed)

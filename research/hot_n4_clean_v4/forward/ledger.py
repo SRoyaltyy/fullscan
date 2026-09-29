@@ -117,6 +117,7 @@ def _new_state() -> dict:
         "closes": {},
         "fill_dates": [],
         "mark_dates": [],
+        "effective_open": {},
         "open_fill_dates": [],
         "open_fills": {},
         "parents": {},
@@ -206,6 +207,9 @@ def _note(state: dict, obj: dict) -> None:
         _unique_symbols(obj.get("buys") or [], obj.get("sells") or [])
         state["open_fill_dates"].append(obj["date"])
         state["open_fills"][obj["date"]] = obj
+        state["effective_open"][obj["date"]] = obj
+    elif kind == "open_fill_correction":
+        _note_correction(state, obj)
     elif kind == "fill":
         if obj["date"] not in state["plan_sha"]:
             raise RuntimeError("fill without plan")
@@ -226,7 +230,7 @@ def _note(state: dict, obj: dict) -> None:
             raise RuntimeError("duplicate mark")
         if state["mark_dates"] and obj["date"] <= state["mark_dates"][-1]:
             raise RuntimeError("mark order")
-        opened = state["open_fills"][obj["date"]]
+        opened = state["effective_open"][obj["date"]]
         if obj.get("open_fill_sha256") != opened.get("sha256"):
             raise RuntimeError("mark does not match open fill")
         if obj.get("plan_sha256") != state["plan_sha"].get(obj["date"]):
@@ -286,6 +290,57 @@ def _note(state: dict, obj: dict) -> None:
         state["missing_dates"].append(obj["date"])
     else:
         raise RuntimeError(f"kind {kind}")
+
+
+def _note_correction(state: dict, obj: dict) -> None:
+    """A later line replaces what readers use for that open fill. The sealed line stays."""
+    day = obj.get("date")
+    if day not in state["open_fills"]:
+        raise RuntimeError("correction without open fill")
+    if day in state["fill_dates"] or day in state["mark_dates"]:
+        raise RuntimeError("correction after close")
+    if any(plan_day > day for plan_day in state["plan_dates"]):
+        raise RuntimeError("correction after a later plan")
+    if any(session_day > day for session_day in state["session_dates"]):
+        raise RuntimeError("correction after a later session")
+    sealed = state["open_fills"][day]
+    if obj.get("open_fill_sha256") != sealed.get("sha256"):
+        raise RuntimeError("correction does not match open fill")
+    if obj.get("plan_sha256") != state["plan_sha"].get(day):
+        raise RuntimeError("correction does not match plan")
+    reason = obj.get("reason")
+    approved = obj.get("approved_by")
+    if not isinstance(reason, str) or not reason.strip():
+        raise RuntimeError("correction reason")
+    if not isinstance(approved, str) or not approved.strip():
+        raise RuntimeError("correction approved_by")
+    corrected = obj.get("corrected")
+    if not isinstance(corrected, dict):
+        raise RuntimeError("correction shape")
+    if corrected.get("kind") != "open_fill" or corrected.get("date") != day:
+        raise RuntimeError("correction shape")
+    if "equity_primary" in corrected:
+        raise RuntimeError("open fill has equity")
+    if corrected.get("pnl_status") != "pending":
+        raise RuntimeError("open fill pnl")
+    if corrected.get("plan_sha256") != obj.get("plan_sha256"):
+        raise RuntimeError("correction does not match plan")
+    try:
+        cash = float(corrected["cash_primary"])
+    except (KeyError, TypeError, ValueError) as exc:
+        raise RuntimeError("correction cash") from exc
+    if cash < 0:
+        raise RuntimeError(f"correction cash_primary {cash} is negative")
+    if not isinstance(obj.get("changed_legs"), list):
+        raise RuntimeError("correction changed_legs")
+    for leg in obj["changed_legs"]:
+        if not isinstance(leg, dict) or not leg.get("ticker") or leg.get("side") not in ("buy", "sell"):
+            raise RuntimeError("correction changed_legs")
+    _match_fill(state["plans"][day], corrected)
+    _unique_symbols(corrected.get("buys") or [], corrected.get("sells") or [])
+    view = dict(corrected)
+    view["sha256"] = obj["sha256"]
+    state["effective_open"][day] = view
 
 
 def _match_fill(plan: dict, fill: dict) -> None:
@@ -370,6 +425,35 @@ def kind_on(records: list[dict], day: str, kind: str) -> dict | None:
         if row["kind"] == kind and row["date"] == day:
             return row
     return None
+
+
+def latest_open_correction(records: list[dict], day: str) -> dict | None:
+    """The last ``open_fill_correction`` for ``day``. The sealed open fill is not this."""
+    found = None
+    for row in records:
+        if row.get("kind") == "open_fill_correction" and row.get("date") == day:
+            found = row
+    return found
+
+
+def effective_open_fill(records: list[dict], day: str) -> dict | None:
+    """Open fill readers use. A correction replaces the sealed line in memory only.
+
+    The sha256 on the result is the correction's when one exists, so a later
+    close mark points at the line whose fills it used. The sealed line is
+    left as it was written.
+    """
+    sealed = kind_on(records, day, "open_fill")
+    correction = latest_open_correction(records, day)
+    if correction is None:
+        return sealed
+    corrected = correction.get("corrected")
+    if not isinstance(corrected, dict):
+        return sealed
+    body = dict(corrected)
+    if correction.get("sha256"):
+        body["sha256"] = correction["sha256"]
+    return body
 
 
 def book_dates(records: list[dict]) -> list[str]:

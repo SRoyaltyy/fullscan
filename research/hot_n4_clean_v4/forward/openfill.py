@@ -14,10 +14,18 @@ import math
 
 from research.hot_n4_clean_v4.forward.ledger import (
     book_dates,
+    canonical_bytes,
+    effective_open_fill,
     kind_on,
+    latest_open_correction,
     open_plan,
     plan_on,
 )
+# Cyrus approved this restatement of the 2026-09-28 open fill. The sealed
+# line used the 2026-09-25 bar for SRFM and SECZ. A correction records these
+# words and the sizing code's result at the true session opens.
+STALE_OPEN_REASON = "stale_bar: previous-session bar used for SRFM, SECZ"
+STALE_OPEN_APPROVED_BY = "Cyrus 2026-09-28 21:02 ET"
 from research.hot_n4_clean_v4.forward.opens import OPEN_SOURCE, _positive, session_open
 from research.hot_n4_clean_v4.forward.planfill import book_state_before, fill_book
 from research.hot_n4_clean_v4.forward.book import current_book
@@ -253,7 +261,7 @@ def decide_fill(
             f"price store latest bar is {latest or 'empty'}; {session} open is not in the file yet"
         )
     prior = book_state_before(records, session)
-    opened = kind_on(records, session, "open_fill")
+    opened = effective_open_fill(records, session)
     if opened is None:
         fill, closes, _state = fill_book(pending, prior, bars, fees, index)
         return [fill, *closes], None
@@ -261,11 +269,210 @@ def decide_fill(
     return [mark, *closes], None
 
 
+def _leg_copy(row: dict | None) -> dict | None:
+    if row is None:
+        return None
+    copied = dict(row)
+    if "sources" in copied:
+        copied["sources"] = list(copied["sources"])
+    return copied
+
+
+def _leg_changed(old: dict | None, new: dict | None) -> bool:
+    if old is None or new is None:
+        return True
+    if int(old["shares"]) != int(new["shares"]):
+        return True
+    if float(old["fill"]) != float(new["fill"]):
+        return True
+    if float(old.get("fee") or 0) != float(new.get("fee") or 0):
+        return True
+    return False
+
+
+def changed_legs(sealed: dict, corrected: dict) -> list[dict]:
+    """Sealed versus corrected values for each buy or sell that moved."""
+    out = []
+    for side, key in (("buy", "buys"), ("sell", "sells")):
+        old = {row["ticker"]: row for row in sealed.get(key) or []}
+        new = {row["ticker"]: row for row in corrected.get(key) or []}
+        for ticker in sorted(set(old) | set(new)):
+            before = old.get(ticker)
+            after = new.get(ticker)
+            if not _leg_changed(before, after):
+                continue
+            out.append({
+                "corrected": _leg_copy(after),
+                "sealed": _leg_copy(before),
+                "side": side,
+                "ticker": ticker,
+            })
+    return out
+
+
+def require_nonnegative_cash(cash: float, label: str) -> float:
+    """Fail loudly when a correction would leave the book short cash."""
+    value = float(cash)
+    if value < 0:
+        raise RuntimeError(f"{label} cash_primary {value} is negative")
+    return value
+
+
+def correction_opens(plan: dict, held: set[str], bars: dict) -> dict[str, float]:
+    """True session opens from the stored bars, for every buy and sell leg."""
+    from research.hot_n4_clean_v4.forward.opens import stored_opens
+
+    legs = open_legs(plan, held)
+    names = sorted(set(legs) | {str(ticker).upper() for ticker in held} | {"IWM"})
+    found = stored_opens(bars["stored"], names, plan["date"])
+    missing = [name for name in legs if name not in found]
+    if missing:
+        raise RuntimeError("no stored session open for " + ", ".join(missing))
+    return found
+
+
+def bars_with_stored_session(bars: dict, session: str, names: list[str]) -> dict:
+    """Return ``bars`` with a stored session open for every name.
+
+    The book's own ``prices.jsonl`` wins. A name that is not in that file
+    is filled from the other forward book's ``prices.jsonl``. h1 has no
+    price file yet; the 2026-09-28 bars are already in the holdup file.
+    Nothing is written.
+    """
+    from research.hot_n4_clean_v4.forward.book import BOOKS
+    from research.hot_n4_clean_v4.forward.opens import stored_opens
+    from research.hot_n4_clean_v4.forward.prices import load_price_rows, overlay_rows
+
+    found = stored_opens(bars["stored"], names, session)
+    missing = [name for name in names if name not in found]
+    if not missing:
+        return bars
+    want = set(missing)
+    extra = []
+    seen = set()
+    for book in BOOKS:
+        if book.folder == current_book().folder:
+            continue
+        path = book.folder / "prices.jsonl"
+        if not path.is_file():
+            continue
+        for row in load_price_rows(book.folder):
+            if row.get("date") != session or row.get("ticker") not in want:
+                continue
+            key = row["ticker"]
+            if key in seen:
+                continue
+            seen.add(key)
+            extra.append(row)
+    if not extra:
+        return bars
+    return overlay_rows(bars, extra)
+
+
+def _fills_match_stored(body: dict, bars: dict) -> None:
+    from research.hot_n4_clean_v4.run_study import open_px
+
+    session = body["date"]
+    for row in list(body.get("buys") or []) + list(body.get("sells") or []):
+        op = open_px(bars["stored"], row["ticker"], session)
+        if op is None or float(op) != float(row["fill"]):
+            raise RuntimeError(
+                f"corrected open for {row['ticker']} on {session} does not match the stored bar"
+            )
+
+
+def correction_body(
+    plan: dict,
+    sealed_open: dict,
+    corrected_open: dict,
+    reason: str,
+    approved_by: str,
+) -> dict:
+    """One correction. ``corrected_open`` is the open-fill sizing result."""
+    require_nonnegative_cash(corrected_open["cash_primary"], corrected_open.get("recipe") or plan["date"])
+    return {
+        "approved_by": approved_by,
+        "changed_legs": changed_legs(sealed_open, corrected_open),
+        "corrected": corrected_open,
+        "date": plan["date"],
+        "kind": "open_fill_correction",
+        "open_fill_sha256": sealed_open["sha256"],
+        "plan_sha256": plan["sha256"],
+        "reason": reason,
+        "recipe": current_book().recipe,
+    }
+
+
+def same_correction(existing: dict, body: dict) -> bool:
+    """True when ``body`` would seal the same line ``existing`` already is."""
+    old = {key: value for key, value in existing.items() if key != "sha256"}
+    return canonical_bytes(old) == canonical_bytes(body)
+
+
+def decide_open_correction(
+    records: list[dict],
+    session: str,
+    bars: dict,
+    fees: dict,
+    index: dict[str, int],
+    reason: str = STALE_OPEN_REASON,
+    approved_by: str = STALE_OPEN_APPROVED_BY,
+) -> tuple[list[dict], str | None]:
+    """The correction to append, or nothing when that correction is already sealed.
+
+    ``None`` as the reason means a clean no-op. A reason means the correction
+    cannot be written. The body is the sizing code's open fill at the stored
+    session opens, not a hand-computed share count.
+    """
+    plan = plan_on(records, session)
+    if plan is None:
+        return [], f"no plan for {session}"
+    sealed = kind_on(records, session, "open_fill")
+    if sealed is None:
+        return [], f"no open fill for {session}"
+    if any(row["kind"] in ("fill", "mark") and row["date"] == session for row in records):
+        return [], f"{session} is already closed"
+    if any(
+        row.get("date", "") > session and row.get("kind") in ("plan", "session", "fill", "mark", "open_fill")
+        for row in records
+    ):
+        return [], f"correction after a later book record {session}"
+    state = book_state_before(records, session)
+    opens = correction_opens(plan, set(state["pos"]), bars)
+    corrected = open_fill_body(plan, state, bars, fees, index, opens)
+    _fills_match_stored(corrected, bars)
+    require_nonnegative_cash(corrected["cash_primary"], corrected["recipe"])
+    body = correction_body(plan, sealed, corrected, reason, approved_by)
+    latest = latest_open_correction(records, session)
+    if latest is not None and same_correction(latest, body):
+        return [], None
+    return [body], None
+
+
 def filled_symbols(records: list[dict]) -> list[tuple[str, str, str]]:
-    """(session, ticker, side) for every sealed fill. A duplicate is a bug."""
+    """(session, ticker, side) for every sealed fill. A duplicate is a bug.
+
+    A corrected open fill counts once, from the latest correction. The sealed
+    line is not counted again.
+    """
+    latest = {}
+    for record in records:
+        if record.get("kind") == "open_fill_correction":
+            latest[record["date"]] = record
     found = []
     for record in records:
         kind = record.get("kind")
+        if kind == "open_fill" and record["date"] in latest:
+            continue
+        if kind == "open_fill_correction":
+            if latest.get(record["date"]) is not record:
+                continue
+            source = record.get("corrected") or {}
+            for row in source.get("buys") or []:
+                found.append((record["date"], row["ticker"], "buy"))
+            for row in source.get("sells") or []:
+                found.append((record["date"], row["ticker"], "sell"))
+            continue
         if kind in ("session", "fill", "open_fill"):
             for row in record.get("buys") or []:
                 found.append((record["date"], row["ticker"], "buy"))
