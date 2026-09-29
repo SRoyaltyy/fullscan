@@ -82,6 +82,11 @@ jobs:
           ARGS=()
           [ -n "$DATE" ] && ARGS+=(--date "$DATE")
           [ -n "$SECTORS" ] && ARGS+=(--sectors "$SECTORS")
+          # Stage outcome writes per-sector markdown and leaves the
+          # scoreboard to Post-Close ALL. Stage all keeps the full path.
+          if [ "${{ github.event.inputs.stage }}" = "outcome" ]; then
+            ARGS+=(--skip-scoreboard)
+          fi
           echo "=== sector OUTCOME sequential ==="
           python -m src.run_sector_outcome "${ARGS[@]}"
 
@@ -102,8 +107,16 @@ jobs:
           python -m src.run_sector_reflect "${ARGS[@]}"
 
       - name: Commit
+        # Stage outcome may add only per-sector outcome markdown.
+        # Predict, reflect, and all keep the broad pack.
         run: |
-          bash scripts/safe_git_push.sh \
-            "auto: sector pipeline ${{ github.event.inputs.stage }}" \
-            01_daily/sectors/ 01_daily/_transcripts/ 02_lessons/ 03_scoreboard/ \
-            01_daily/*_preopen_qc.json
+          if [ "${{ github.event.inputs.stage }}" = "outcome" ]; then
+            bash scripts/safe_git_push.sh \
+              "auto: sector pipeline outcome" \
+              "01_daily/sectors/*/*_outcome.md"
+          else
+            bash scripts/safe_git_push.sh \
+              "auto: sector pipeline ${{ github.event.inputs.stage }}" \
+              01_daily/sectors/ 01_daily/_transcripts/ 02_lessons/ 03_scoreboard/ \
+              01_daily/*_preopen_qc.json
+          fi
