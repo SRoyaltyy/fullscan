@@ -15,12 +15,12 @@ Thresholds stay put unless the pending block names one:
 `CROWD_DROP=0.50`.
 
 <!-- PENDING_BEGIN -->
-## Pending one change (session `20260929_1732`)
+## Pending one change (session `20260929_1732`) — landed
 
-- question: `action_material`
-- kind: `criteria`
-- misses on that question: 2
-- change: Rewrite `action_material` criteria from this session's misses. Score toward KEEP / false-opinion / core / powerful when: Following trades of billionaires is generally good practice; Insider movements. Sibling `new_instrument`: dated print / hold / CR / explores-rules / panel-endorse / named dollar deal is true. Do not edit closed lists. At most one decide() / threshold change.
+- question: `action_material` + `reprint_weather` / `is_opinion` / `actor_power` / `new_instrument`
+- kind: `criteria` + one `decide()` knob
+- misses on that question: 2 material + 1 reprint + 1 opinion + 1 crowd (code punct/source/junk/code_ai are notes)
+- change: QUESTIONS now score named-fund / 13F / billionaire flow, named-officer insider sale, sitting-president secondary sanctions, Hormuz/Iran escalation, named-broker downgrade + PT cut, and a national pump-price cut toward KEEP. `decide()`: if `action_material >= 0.65` or `new_instrument >= 0.60`, do not drop a chokepoint reprint — keep as `choke_fact`. Months-old "tensions persist" with low material still drops. Code-keep tightened: `_CLASS_AI` needs a first-class OpenAI/Anthropic verb (not a "tech stocks today" recap). `_CLASS_POLICY` matches secondary sanctions. `_CLASS_CHOKE_NEW` matches escalation.
 - do not edit `jev_closed_lists.json`
 <!-- PENDING_END -->
 
@@ -42,7 +42,7 @@ After every jev-train issue:
 `?` is not a miss. Blank `human_reason` on a disagreement is flagged
 on the issue but still allowed.
 
-## Current QUESTIONS (after session 1703)
+## Current QUESTIONS (after session 1732)
 
 ### is_opinion
 
@@ -62,8 +62,12 @@ G7/UK national fiscal budget or tax rise, EU/G7 trade or
 Buy-European procurement rules, G10 CB hawkish/dovish stance,
 national exchange trading debut, outbreak + vaccination drive,
 food-import supply-shock, tanker/newbuild cost inversion,
-yield-driven gold crash, or CDS affecting a listed sector — even
-inside a listicle or "what it means" frame.
+yield-driven gold crash, CDS affecting a listed sector,
+sitting-president secondary sanctions, Hormuz / Iran escalation
+or a named-strait status-change, named-fund / 13F / billionaire
+flow into a listed ticker, named-officer insider sale,
+named-broker downgrade plus price-target cut, or a national
+pump-price cut — even inside a listicle or "what it means" frame.
 
 Must stay true: "best move if the market crashes", celebrity, theme
 park, gold-tumbles forecast tape, earnings-look-right, forecast /
@@ -72,8 +76,11 @@ investor-rebuke or "could still gain" columns with no warn / hold /
 print (Warsh rebuked; Treasury/Bitcoin leftover), leaders
 "expected" an outcome with no accept/reject/deal, a Social Security
 explainer with no tax/plan/reform, reclaim / IPO price of an
-already-public name, and an open-bell "5 things" listicle with no
-named print/deal/policy.
+already-public name, an open-bell "5 things" listicle with no
+named print/deal/policy, a "tech stocks today" OpenAI / AI recap
+or "earnings provide next test" with no dated print, and a
+"Should You?" whale / billionaire column with no named 13F /
+insider lot.
 
 ### is_tabloid
 
@@ -95,12 +102,15 @@ Unchanged. Title only describes how stocks or traders already reacted.
   Board / consumer-confidence print, national exchange trading
   debut, EU/G7 public-procurement or Buy-European trade rules,
   yield-driven gold / Treasury move, tanker / newbuild vessel-cost
-  inversion, food-import supply-shock.
-- chokepoint: named strait / tanker / port.
+  inversion, food-import supply-shock, national fuel pump-price
+  cut.
+- chokepoint: named strait / tanker / port, including an
+  escalation or other status-change there.
 - other: no US / G10 / oil-print / G7-fiscal hook and no named M&A
   or named-firm layoff. Yemen / Palestine / UK-local stay other.
   Leaders "expected" an Iran/geo outcome with no accept/reject/deal
-  stays other and is not a fact. Africa outbreak with no
+  stays other and is not a fact. A named-strait escalation is
+  chokepoint, not other. Africa outbreak with no
   vaccination / pharma-contract hook stays other.
 
 ### actor_power
@@ -113,15 +123,19 @@ Unchanged. Title only describes how stocks or traders already reacted.
 - listed_firm: named US-ticker (or plausible), named acquirer,
   major AI lab with a dated product or IPO, named firm with an IPO
   delay, mass layoff, cost-cut / deleveraging, Chapter 11,
-  authorized buyback, or listed-name going to court.
+  authorized buyback, listed-name going to court, named-fund /
+  13F / billionaire flow into that ticker, named-officer insider
+  sale, or named-broker downgrade plus price-target cut.
 - infrastructure: port / strait / exchange / grid / pipeline,
   G10 FX pair / oil benchmark, named steel / freight trade-flow
   channel, national exchange debut, industry-association network
-  launch, tanker / newbuild channel.
+  launch, tanker / newbuild channel, national oil marketers
+  executing a posted pump-price cut.
 - crowd: protesters / activists / tourists / unnamed residents.
   **Not** FX tape + Fed hike bets. **Not** a Conference Board /
   consumer-confidence print. **Not** an industry-wide association
-  launching a network.
+  launching a network. **Not** national fuel marketers posting a
+  pump-price cut.
 - other_person: private individual with no seat.
 
 ### action_material
@@ -146,7 +160,10 @@ procurement rules, G10 CB hawkish/dovish, national exchange
 trading debut, food-import supply-shock, tanker/newbuild cost
 inversion, yield-driven gold crash, jobs / rents as Fed-path
 context, Fed officer sees/says/warns, Fed chair / Jackson Hole,
-final CAFE.
+final CAFE, sitting-president secondary sanctions, Hormuz / Iran
+escalation, named-fund / 13F / billionaire flow, named-officer
+insider sale, named-broker downgrade plus price-target cut,
+national pump-price cut.
 
 No: protester arrest, local rally, celebrity, theme park, "best move
 if crash", gold-tumbles forecast tape, earnings-look-right,
@@ -154,7 +171,9 @@ forecast / odds / live tape that only name-drops a print, leaders
 "expected" an outcome with no accept/reject/deal, Social Security
 explainer with no tax/plan/reform, reclaim / IPO price of an
 already-public name, open-bell "5 things" listicle with no named
-print/deal/policy.
+print/deal/policy, "tech stocks today" OpenAI recap or "earnings
+provide next test", "Should You?" whale column with no named 13F
+/ insider lot.
 
 ### new_instrument
 
@@ -166,7 +185,9 @@ budget / tax rise, "mulls" a named policy instrument (EV, tariff,
 Social Security, CAFE), Conference Board / consumer-confidence
 print, Chapter 11 / bankruptcy filing, authorized dollar buyback,
 national exchange trading debut, G10 CB hawkish/dovish, published
-EU/G7 trade / procurement rule, official vaccination drive.
+EU/G7 trade / procurement rule, official vaccination drive,
+secondary sanctions, named 13F / fund stake or Form-4 insider
+lot, named-broker rating plus price-target change.
 
 No: speech, protest, rumor, "mulls" with no named instrument,
 forecast / odds / live tape, leaders "expected" an outcome,
@@ -175,8 +196,12 @@ IPO-price reclaim, Social Security explainer.
 ### reprint_weather
 
 True only if this is a months-old situation with **no** new closure,
-ceasefire, first strike, or new accept / reject / seize verb.
+ceasefire, first strike, escalation / de-escalation /
+status-change, or new accept / reject / seize verb.
 Trump rejects Iran peace / Hormuz is false (new verb).
+"US-Iran Strait of Hormuz conflict escalation" is false
+(status-change). "Tensions persist as tankers transit Hormuz"
+stays true.
 
 ## Anchors from session 409 (do not regress)
 
@@ -281,6 +306,32 @@ drops "expected" geo outcomes that lack fact_keep.
 Code-keep tightened (not a new keep-list): `_CLASS_DEAL` no longer
 matches "IPO price" / reclaim; `_CLASS_POLICY` needs a Social
 Security tax/plan/reform verb.
+
+## Session 1732 → question map
+
+| You | reason | question | why the old rubric missed | human_reason |
+|---|---|---|---|---|
+| KEEP | opinion | is_opinion | named-fund stake in EQIX read as a column | investing in a specific firm. Worth looking at |
+| KEEP | reprint_weather | reprint_weather | Hormuz escalation scored as months-old weather | Status change in major geopoplitical event |
+| KEEP | crowd | actor_power | national pump-price cut tagged crowd | price price reduction could mean things for the economy |
+| KEEP | low_material | action_material | billionaire 13F / ticker flow scored low | Following trades of billionaires is generally good practice |
+| KEEP | low_material | action_material | named-officer insider sale scored low | Insider movements |
+| KEEP | punct | code:punct | `?` hid sitting-president secondary sanctions | Secondary sanctions is a heavy hitter---see how it plays out |
+| KEEP | junk_shape | code:junk_shape | named-broker downgrade + PT cut died as junk | Analyst downgrade of a firm |
+| KEEP | source | code:source | Motley Fool deny hid an AI-cooling concept | Interesting AI concept |
+| DROP | code_ai | code:code_ai | bare OpenAI name-drop kept a tech-stocks recap | not exactly earnings surprise despite the presence of the word "Earnings" |
+
+False keep: 1 (code_ai). False drop: 8. Miss rate 9/100 = 9.0%. Draw 1720 was scored after the 1703 land. Do not loosen so 409 trash anchors become keeps. Do not keep every "Should You?" whale column.
+
+`decide()` this round (one knob): if `action_material >= 0.65` or
+`new_instrument >= 0.60`, do not drop a chokepoint reprint — keep
+as `choke_fact`. Months-old "tensions persist" with low material
+still drops.
+
+Code-keep tightened (not a new keep-list): `_CLASS_AI` needs a
+first-class OpenAI/Anthropic verb, not a "tech stocks today"
+recap. `_CLASS_POLICY` matches secondary sanctions.
+`_CLASS_CHOKE_NEW` matches escalation.
 
 <!-- SESSIONS_BEGIN -->
 
@@ -401,9 +452,7 @@ Draw `20260929_1720`. Human keep 36, drop 64. Jev keep 29, drop 71. False keep 1
 | KEEP | low_material | action_material | Insider movements | Primerica President Sells 1,800 Shares for $562,770 |
 | DROP | code_ai | code:code_ai | not exactly earnings surprise despite the presence of the word "Earnings" | Tech stocks today: OpenAI's growth disappoints, Nvidia earnings provide next test for AI trade |
 
-Proposed one change: `action_material` (criteria, n=2).
-
-Rewrite `action_material` criteria from this session's misses. Score toward KEEP / false-opinion / core / powerful when: Following trades of billionaires is generally good practice; Insider movements. Sibling `new_instrument`: dated print / hold / CR / explores-rules / panel-endorse / named dollar deal is true. Do not edit closed lists. At most one decide() / threshold change.
+Proposed one change: `action_material` (criteria, n=2) + `reprint` fact_keep. Landed.
 
 Code-path misses (not the Jev knob this round):
 - `punct` — Trump threatens Iran’s partners: How do secondary sanctions work? (Secondary sanctions is a heavy hitter---see how it plays out)

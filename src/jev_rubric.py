@@ -26,6 +26,7 @@ REASON_TO_QUESTION = {
     "state_head_action": "actor_power",
     "reprint_weather": "reprint_weather",
     "chokepoint": "reprint_weather",
+    "choke_fact": "reprint_weather",
     "geo_chokepoint_no_hit": "reprint_weather",
 }
 
