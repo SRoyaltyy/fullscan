@@ -1,6 +1,6 @@
 {
   "date": "2026-09-29",
-  "generated_at": "2026-09-29T05:09:36.484740-04:00",
+  "generated_at": "2026-09-29T05:12:56.691256-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -41,31 +41,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "news_parse",
-      "title": "News parse",
-      "date": "2026-09-29",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-29T04:28:40.300177-04:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-09-29_parsed.json",
-          "ok": true,
-          "reason": "",
-          "size": 391762,
-          "preview": "raw=400 usable=91 single=22 \u00b7 Gold drops 3.4% amid rising U.S. Treasury yields; Bitcoin slips near $83,000 as  | Dow Jones futures drop as rising oil, US Treasury yields fuel Fed rate hike fear | Silver Price Forecast: XAG/USD falls to near $62.00 amid Fed rate hike odds | FX | United States Dollar Index strengthens as oil surge bolster Fed rate hike bets | | United States Dollar Index strengthens as oil surge bolster Fed rate hike bets -"
-        },
-        {
-          "path": "01_daily/news/2026-09-29_parsed.md",
-          "ok": true,
-          "reason": "",
-          "size": 8474,
-          "preview": "# News Parse v2 \u2014 2026-09-29T04:28:30.030733-04:00\nWindow\u224848h | news_mode=on | raw=400 | usable=91 | single_name=22 | noise_dropped=287\nusable polarity={'+': 3, '-': 25, 'mixed': 3, 'neutral': 60}"
-        }
-      ],
-      "preview": "raw=400 usable=91 single=22 \u00b7 Gold drops 3.4% amid rising U.S. Treasury yields; Bitcoin slips near $83,000 as  | Dow Jones futures drop as rising oil, US Treasury yields fuel Fed rate hike fear | Silver Price Forecast: XAG/USD falls to near $62.00 amid Fed rate hike odds | FX | United States Dollar Index strengthens as oil surge bolster Fed rate hike bets | | United States Dollar Index strengthens as oil surge bolster Fed rate hike bets - \u00b7 # News Parse v2 \u2014 2026-09-29T04:28:30.030733-04:00\nWindow\u224848h | news_mode=on | raw=400 | usable=91 | single_name=22 | noise_dropped=287\nusable polarity={'+': 3, '-': 25, 'mixed': 3, 'neutral': 60}"
-    },
     {
       "key": "events",
       "title": "Event scanner (primary)",
@@ -211,6 +186,31 @@
         }
       ],
       "preview": "keys: date, phase, passthrough, source_baseline_generated_at, generated_at, n_targets, n_cards, n_refreshed, evidence_errors, morning_refresh_errors, cards, size_gate \u00b7 # MAP HEAT RESEARCH \u2014 2026-09-29\n142 captain cards \u00b7 size_gate=True set by pre-open refresh"
+    },
+    {
+      "key": "finviz",
+      "title": "Finviz universe export",
+      "date": "2026-09-29",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-29T05:12:55.900777-04:00",
+      "files": [
+        {
+          "path": "data/exports/finviz_2026-09-29.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11021276,
+          "preview": "11681 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC"
+        },
+        {
+          "path": "data/finviz/latest.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11486092,
+          "preview": "11681 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+        }
+      ],
+      "preview": "11681 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC \u00b7 11681 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
