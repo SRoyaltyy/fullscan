@@ -18,10 +18,16 @@
     return n >= MIN_MARKS;
   }
 
+  var DISPATCH_MAX = 55000;
+
+  function rowMark(marks, id) {
+    return (marks && marks[id]) || { grade: "?", human_reason: "" };
+  }
+
   function buildGrades(draw, marks, nonce) {
     var items = (draw && draw.items) || [];
     var rows = items.map(function (row) {
-      var mark = (marks && marks[row.id]) || { grade: "?", human_reason: "" };
+      var mark = rowMark(marks, row.id);
       return {
         id: row.id,
         title: row.title,
@@ -45,6 +51,23 @@
       draw_stamp: (draw && draw.stamp) || "",
       nonce: nonce || "",
       rows: rows
+    };
+  }
+
+  function buildDispatchGrades(draw, marks, nonce) {
+    var items = (draw && draw.items) || [];
+    return {
+      schema: "jev-train-grades-1",
+      draw_stamp: (draw && draw.stamp) || "",
+      nonce: nonce || "",
+      rows: items.map(function (row) {
+        var mark = rowMark(marks, row.id);
+        return {
+          id: row.id,
+          grade: mark.grade || "?",
+          human_reason: String(mark.human_reason || mark.note || "").slice(0, 500)
+        };
+      })
     };
   }
 
@@ -360,11 +383,11 @@
       setErr("");
       doneEl.hidden = true;
       state.nonce = (window.crypto && crypto.randomUUID) ? crypto.randomUUID() : String(Date.now());
-      var payload = buildGrades(state.draw, state.marks, state.nonce);
+      var payload = buildDispatchGrades(state.draw, state.marks, state.nonce);
       var packed = utf8ToB64(JSON.stringify(payload));
       try {
-        if (packed.length > 55000) {
-          throw new Error("Grades are too large to dispatch. Shorten notes or use Download grades JSON.");
+        if (packed.length > DISPATCH_MAX) {
+          throw new Error("Grades are too large to dispatch. Shorten reasons or use Download grades JSON.");
         }
         await dispatch({
           mode: "grade",
@@ -400,8 +423,10 @@
 
   return {
     MIN_MARKS: MIN_MARKS,
+    DISPATCH_MAX: DISPATCH_MAX,
     marksReady: marksReady,
     buildGrades: buildGrades,
+    buildDispatchGrades: buildDispatchGrades,
     boot: boot
   };
 });

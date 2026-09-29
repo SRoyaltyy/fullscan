@@ -26,6 +26,7 @@ from src.jev_train import (
     holdout_path,
     issue_body,
     blank_disagreements,
+    hydrate_grades,
     parse_grades_payload,
     propose_hard_miss_bank,
     publish_issue,
@@ -817,6 +818,73 @@ def test_blank_disagreement_is_flagged():
     assert "nonce: flag-nonce" in body
 
 
+def test_slim_grades_hydrate_from_draw():
+    title = "August Core PCE print lands ahead of the Fed decision"
+    tid = title_id(title)
+    rows = _quiet_rows(29)
+    rows.append({
+        "title": title,
+        "source": "reuters",
+        "pool": "holdout",
+        "jev": "KEEP",
+        "reason": "code_print",
+        "geo": "core",
+        "grade": "D",
+        "human_reason": "print miss",
+    })
+    draw_items = []
+    slim_rows = []
+    for row in rows:
+        item_id = title_id(row["title"])
+        draw_items.append({
+            "id": item_id,
+            "title": row["title"],
+            "source": row.get("source") or "",
+            "pool": row.get("pool") or "",
+            "jev": row["jev"],
+            "reason": row.get("reason") or "",
+            "geo": row.get("geo") or "",
+            "actor_power": "",
+            "new_instrument": 0,
+        })
+        slim_rows.append({
+            "id": item_id,
+            "grade": row["grade"],
+            "human_reason": row.get("human_reason") or "",
+        })
+    parsed = parse_grades_payload(json.dumps({
+        "schema": "jev-train-grades-1",
+        "draw_stamp": "20260929_1120",
+        "nonce": "slim-nonce",
+        "rows": slim_rows,
+    }))
+    assert parsed["rows"][0]["title"] == ""
+    assert parsed["rows"][0]["jev"] == ""
+    with tempfile.TemporaryDirectory() as tmp:
+        root = Path(tmp)
+        ground = root / "00_grounding"
+        train = ground / "jev_train"
+        train.mkdir(parents=True)
+        (train / "20260929_1120_draw.json").write_text(json.dumps({
+            "schema": "jev-train-draw-1",
+            "stamp": "20260929_1120",
+            "items": draw_items,
+        }), encoding="utf-8")
+        result = write_grade(
+            parsed, stamp="20260929_1121", now=NOW, root=root, ground=ground, write=True,
+        )
+        session = json.loads((train / "20260929_1121.json").read_text(encoding="utf-8"))
+        hit = next(row for row in session["items"] if row["id"] == tid)
+        assert hit["title"] == title
+        assert hit["jev"] == "KEEP"
+        assert hit["grade"] == "D"
+        assert hit["human_reason"] == "print miss"
+        assert "print miss" in result["issue_body"]
+    hydrated = hydrate_grades(parsed, {"stamp": "20260929_1120", "items": draw_items})
+    assert hydrated["rows"][-1]["title"] == title
+    assert hydrated["rows"][-1]["jev"] == "KEEP"
+
+
 def test_page_script_submit_threshold():
     import shutil
     import subprocess
@@ -850,6 +918,26 @@ if (text.includes("ghp_") || text.includes("JEV_API_KEY") || text.includes("toke
   throw new Error("payload leaked a token field");
 }
 if (typeof payload.token !== "undefined") throw new Error("token key");
+const slim = api.buildDispatchGrades(draw, marks, "nonce-9");
+if (slim.rows[0].title) throw new Error("dispatch sent title");
+if (slim.rows[0].jev) throw new Error("dispatch sent jev");
+if (slim.rows[0].human_reason !== "print miss") throw new Error("dispatch reason");
+const hundred = {stamp: "20260929_1120", items: Array.from({length: 100}, (_, i) => ({
+  id: ("0".repeat(15) + i.toString(16)).slice(-16),
+  title: "Fixture headline " + (i + 1) + " about a market move with extra words",
+  source: "fixture", pool: "parsed", jev: "KEEP", reason: "code_print",
+  bits: ["print"], geo: "", actor_power: "", new_instrument: 0,
+  url: "https://example.com/article/" + i, published_at: "2026-09-29T11:20:00Z"
+}))};
+const marks100 = {};
+hundred.items.forEach(function (row, i) {
+  marks100[row.id] = {grade: i % 2 ? "D" : "K", human_reason: i === 0 ? "health scare" : ""};
+});
+const fat = JSON.stringify(api.buildGrades(hundred, marks100, "nonce-100"));
+const packedFat = Buffer.from(fat).toString("base64");
+const packedSlim = Buffer.from(JSON.stringify(api.buildDispatchGrades(hundred, marks100, "nonce-100"))).toString("base64");
+if (packedFat.length <= packedSlim.length) throw new Error("full sheet should be larger than dispatch sheet");
+if (packedSlim.length > api.DISPATCH_MAX) throw new Error("slim 100-row payload still too large: " + packedSlim.length);
 """
     subprocess.check_call([node, "-e", script], cwd=str(ROOT))
 
@@ -861,6 +949,7 @@ def main() -> None:
         test_grade_files_need_thirty_marks_and_do_not_touch_closed_lists,
         test_human_reason_persists_in_json_md_and_issue,
         test_blank_disagreement_is_flagged,
+        test_slim_grades_hydrate_from_draw,
         test_trained_hash_and_gold_are_excluded_from_every_pool,
         test_hard_misses_rotate_when_holdout_is_used_up,
         test_draw_writes_page_json_and_leaves_holdout_bytes_alone,
