@@ -1,0 +1,836 @@
+{
+  "book": "jev_unique_title",
+  "date": "all",
+  "limit": 0,
+  "lane": "none",
+  "clock": "published_at → next RTH (not parse time)",
+  "assignment": "jev hop-0/1/2 code book; Finviz listed names only",
+  "inventory": {
+    "window": {
+      "earliest_on_disk": "2026-04-26",
+      "earliest_parse": "2026-08-08",
+      "latest": "2026-09-21",
+      "june_2026_parse": false,
+      "note": "No June 2026 *_parsed.json. Earliest parse is 2026-08-08. Earliest Finviz export is 2026-04-26 (one file). Window used = earliest on-disk news through latest."
+    },
+    "sources": [
+      {
+        "name": "parsed_json",
+        "path": "01_daily/news/*_parsed.json",
+        "n_files": 38,
+        "earliest": "2026-08-08",
+        "latest": "2026-09-29",
+        "status": "used"
+      },
+      {
+        "name": "finviz_export",
+        "path": "data/exports/finviz_YYYY-MM-DD.csv (News Title + Daily Digest)",
+        "n_files": 42,
+        "earliest": "2026-04-26",
+        "latest": "2026-09-29",
+        "status": "used"
+      },
+      {
+        "name": "finviz_digest",
+        "path": "01_daily/news/*finviz*digest*.json",
+        "n_files": 111,
+        "earliest": "2026-07-30",
+        "latest": "2026-09-29",
+        "status": "used"
+      },
+      {
+        "name": "events_json",
+        "path": "01_daily/events/*_events.json",
+        "n_files": 35,
+        "earliest": "2026-08-10",
+        "latest": "2026-09-29",
+        "status": "used"
+      },
+      {
+        "name": "actions_keep",
+        "path": "01_daily/news/*_actions.json (KEEP / conditional evidence)",
+        "n_files": 40,
+        "earliest": "2026-08-09",
+        "latest": "2026-09-29",
+        "status": "used"
+      },
+      {
+        "name": "grok_automations",
+        "path": "data/grok_automations/{date}_{slug}.json",
+        "n_files": 157,
+        "n_items": 157,
+        "earliest": "2026-08-13",
+        "latest": "2026-09-21",
+        "status": "used",
+        "note": "GH Actions tokens cannot call the Automations API. Ingest via bot/Cursor (Gmail noreply@x.ai or automation_get_results) then commit dumps. See docs/GROK_AUTOMATIONS_HARVEST.md."
+      },
+      {
+        "name": "rss_dumps",
+        "path": "collectors/rss_news.py (workflow exists; no dump dir on disk)",
+        "n_files": 0,
+        "status": "empty"
+      },
+      {
+        "name": "supabase_dumps",
+        "path": "src/db.py news pooler (no local dump on disk)",
+        "n_files": 0,
+        "status": "empty"
+      },
+      {
+        "name": "theme_radar_snapshots",
+        "path": "data/theme_radar_snapshots/*.csv.gz or vendor/theme-radar/data/snapshots/*.csv (read-only; repos are not merged)",
+        "n_files": 31,
+        "earliest": "2026-08-06",
+        "latest": "2026-09-21",
+        "status": "used",
+        "note": "Slim Elite headlines (Ticker, News Title, Daily Digest, News Time) are in the book when these files are present. Do not merge the repos. Scoreboard: 03_scoreboard/NEWS_IMPACT_THEME_RADAR.md."
+      }
+    ],
+    "theme_radar": {
+      "repo": "SRoyaltyy/theme-radar",
+      "readonly": true,
+      "paths": [
+        "data/snapshots/YYYY-MM-DD.csv (Finviz Elite snapshots, 2026-08-06..2026-09-18)",
+        "data/snapshots/manifest.json",
+        "01_daily/*_scan.md / *_universe.md (no headline export)"
+      ],
+      "status": "unused_here — read-only; no clone, no PR",
+      "export_ask": "Theme Radar: please export a headline pack (date, ticker, News Title, News Time, Daily Digest, News URL) from data/snapshots/*.csv into a JSON/CSV we can ingest in fullscan. Do not merge the repos."
+    }
+  },
+  "raw_meta": {
+    "n_raw": 697983,
+    "by_harvest_source": {
+      "parsed": 9986,
+      "finviz_export": 388503,
+      "finviz_digest": 4080,
+      "events": 1191,
+      "actions_keep": 503,
+      "grok_automations": 157,
+      "theme_radar_elite": 293563
+    }
+  },
+  "n_unique": 40020,
+  "n_keep": 34890,
+  "n_drop": 5130,
+  "n_booked": 582,
+  "n_signed_votes": 1871,
+  "reasons": {
+    "code_leftover": 33049,
+    "junk_shape": 2761,
+    "punct": 2190,
+    "code_deal": 1087,
+    "code_policy": 544,
+    "source": 98,
+    "code_oil": 90,
+    "reprint_weather": 81,
+    "code_print": 66,
+    "code_choke": 34,
+    "code_fed": 12,
+    "code_ai": 6,
+    "code_home": 2
+  },
+  "classes": {
+    "discard": 31131,
+    "regime_state": 901,
+    "print_vs_priced": 612,
+    "corporate_action_mna": 605,
+    "capital_return": 346,
+    "trial_readout": 286,
+    "dilution": 172,
+    "listing_flow": 167,
+    "guidance": 117,
+    "market_structure": 86,
+    "gate": 85,
+    "blast_legal": 80,
+    "access_control": 42,
+    "product_harm": 41,
+    "factor_impulse": 38,
+    "integrity": 36,
+    "labor_stop": 34,
+    "activist_campaign": 27,
+    "blast_cyber": 17,
+    "peer_spill": 16
+  },
+  "tape": {
+    "n_1d": 315,
+    "hit_1d": 160,
+    "hit_rate_1d": 0.5079,
+    "n_20d": 671,
+    "hit_20d": 323,
+    "hit_rate_20d": 0.4814,
+    "missing_tape": 252
+  },
+  "votes": {
+    "named": {
+      "0-1d": {
+        "hits": 734,
+        "n": 1502,
+        "hit_rate": 0.4887
+      },
+      "2d": {
+        "hits": 653,
+        "n": 1405,
+        "hit_rate": 0.4648
+      },
+      "3d": {
+        "hits": 648,
+        "n": 1359,
+        "hit_rate": 0.4768
+      },
+      "4d": {
+        "hits": 594,
+        "n": 1331,
+        "hit_rate": 0.4463
+      },
+      "5d": {
+        "hits": 593,
+        "n": 1293,
+        "hit_rate": 0.4586
+      },
+      "1-4w": {
+        "hits": 335,
+        "n": 699,
+        "hit_rate": 0.4793
+      }
+    },
+    "substitute": {
+      "0-1d": {
+        "hits": 55,
+        "n": 112,
+        "hit_rate": 0.4911
+      },
+      "2d": {
+        "hits": 52,
+        "n": 99,
+        "hit_rate": 0.5253
+      },
+      "3d": {
+        "hits": 53,
+        "n": 98,
+        "hit_rate": 0.5408
+      },
+      "4d": {
+        "hits": 46,
+        "n": 98,
+        "hit_rate": 0.4694
+      },
+      "5d": {
+        "hits": 44,
+        "n": 95,
+        "hit_rate": 0.4632
+      },
+      "1-4w": {
+        "hits": 22,
+        "n": 68,
+        "hit_rate": 0.3235
+      }
+    },
+    "all": {
+      "0-1d": {
+        "hits": 789,
+        "n": 1614,
+        "hit_rate": 0.4888
+      },
+      "2d": {
+        "hits": 705,
+        "n": 1504,
+        "hit_rate": 0.4688
+      },
+      "3d": {
+        "hits": 701,
+        "n": 1457,
+        "hit_rate": 0.4811
+      },
+      "4d": {
+        "hits": 640,
+        "n": 1429,
+        "hit_rate": 0.4479
+      },
+      "5d": {
+        "hits": 637,
+        "n": 1388,
+        "hit_rate": 0.4589
+      },
+      "1-4w": {
+        "hits": 357,
+        "n": 767,
+        "hit_rate": 0.4654
+      }
+    }
+  },
+  "ledger": {
+    "counts": {
+      "singleton": 1639,
+      "converge": 94,
+      "clash": 8,
+      "converge_up": 59,
+      "converge_down": 35
+    },
+    "hit_rates": {
+      "singleton": {
+        "0-1d": {
+          "hits": 171,
+          "n": 351,
+          "hit_rate": 0.4872
+        },
+        "2d": {
+          "hits": 166,
+          "n": 325,
+          "hit_rate": 0.5108
+        },
+        "3d": {
+          "hits": 155,
+          "n": 313,
+          "hit_rate": 0.4952
+        },
+        "4d": {
+          "hits": 144,
+          "n": 312,
+          "hit_rate": 0.4615
+        },
+        "5d": {
+          "hits": 147,
+          "n": 304,
+          "hit_rate": 0.4836
+        }
+      },
+      "converge": {
+        "0-1d": {
+          "hits": 21,
+          "n": 40,
+          "hit_rate": 0.525
+        },
+        "2d": {
+          "hits": 20,
+          "n": 38,
+          "hit_rate": 0.5263
+        },
+        "3d": {
+          "hits": 21,
+          "n": 38,
+          "hit_rate": 0.5526
+        },
+        "4d": {
+          "hits": 17,
+          "n": 38,
+          "hit_rate": 0.4474
+        },
+        "5d": {
+          "hits": 18,
+          "n": 38,
+          "hit_rate": 0.4737
+        }
+      },
+      "clash": {
+        "0-1d": {
+          "hits": 0,
+          "n": 0,
+          "hit_rate": null
+        },
+        "2d": {
+          "hits": 0,
+          "n": 0,
+          "hit_rate": null
+        },
+        "3d": {
+          "hits": 0,
+          "n": 0,
+          "hit_rate": null
+        },
+        "4d": {
+          "hits": 0,
+          "n": 0,
+          "hit_rate": null
+        },
+        "5d": {
+          "hits": 0,
+          "n": 0,
+          "hit_rate": null
+        }
+      }
+    },
+    "n_name_groups": 1741,
+    "top_converge": [
+      {
+        "ticker": "BLK",
+        "date": "2026-08-11",
+        "label": "converge_up",
+        "n_bull": 6,
+        "n_bear": 0,
+        "n_direct": 0,
+        "n_indirect": 6,
+        "net": 6,
+        "direction": "up",
+        "ret_1d": 1.61,
+        "ret_2d": 4.62,
+        "ret_5d": 2.1,
+        "titles": [
+          "Kaplan Fox & Kilsheimer LLP Alerts Embecta Corp. (NASDAQ: EMBC) Investors to a Securities Class Action Deadline on August 17, 2026",
+          "BTU Investor Announcement: Peabody Sued on behalf of Investors to Recover Losses after Mine Production Issues Lead to 10% Stock Drop",
+          "CAPR Investor Announcement: Capricor Therapeutics Sued on behalf of Investors to Recover Losses after Clinical Data Leads to 64% Stock Drop",
+          "EMBC Investor Announcement: Embecta Sued on behalf of Investors to Recover Losses after Insulin Pen Issues Lead to 57% Stock Drop",
+          "INTU Investor Announcement: Intuit Sued on behalf of Investors to Recover Losses after Pricing Issues Lead to 20% Stock Drop",
+          "PLNT Investor Announcement: Planet Fitness Sued on behalf of Investors to Recover Losses after Membership Growth Issues Lead to 31% Stock Drop"
+        ]
+      },
+      {
+        "ticker": "ITIC",
+        "date": "2026-08-11",
+        "label": "converge_down",
+        "n_bull": 0,
+        "n_bear": 6,
+        "n_direct": 6,
+        "n_indirect": 0,
+        "net": -6,
+        "direction": "down",
+        "ret_1d": -0.84,
+        "ret_2d": -1.04,
+        "ret_5d": 1.89,
+        "titles": [
+          "Kaplan Fox & Kilsheimer LLP Alerts Embecta Corp. (NASDAQ: EMBC) Investors to a Securities Class Action Deadline on August 17, 2026",
+          "BTU Investor Announcement: Peabody Sued on behalf of Investors to Recover Losses after Mine Production Issues Lead to 10% Stock Drop",
+          "CAPR Investor Announcement: Capricor Therapeutics Sued on behalf of Investors to Recover Losses after Clinical Data Leads to 64% Stock Drop",
+          "EMBC Investor Announcement: Embecta Sued on behalf of Investors to Recover Losses after Insulin Pen Issues Lead to 57% Stock Drop",
+          "INTU Investor Announcement: Intuit Sued on behalf of Investors to Recover Losses after Pricing Issues Lead to 20% Stock Drop",
+          "PLNT Investor Announcement: Planet Fitness Sued on behalf of Investors to Recover Losses after Membership Growth Issues Lead to 31% Stock Drop"
+        ]
+      },
+      {
+        "ticker": "GROW",
+        "date": "2026-08-11",
+        "label": "converge_down",
+        "n_bull": 0,
+        "n_bear": 5,
+        "n_direct": 5,
+        "n_indirect": 0,
+        "net": -5,
+        "direction": "down",
+        "ret_1d": 0.65,
+        "ret_2d": 1.29,
+        "ret_5d": 6.47,
+        "titles": [
+          "Kaplan Fox & Kilsheimer LLP Alerts Embecta Corp. (NASDAQ: EMBC) Investors to a Securities Class Action Deadline on August 17, 2026",
+          "BTU Investor Announcement: Peabody Sued on behalf of Investors to Recover Losses after Mine Production Issues Lead to 10% Stock Drop",
+          "CAPR Investor Announcement: Capricor Therapeutics Sued on behalf of Investors to Recover Losses after Clinical Data Leads to 64% Stock Drop",
+          "EMBC Investor Announcement: Embecta Sued on behalf of Investors to Recover Losses after Insulin Pen Issues Lead to 57% Stock Drop",
+          "INTU Investor Announcement: Intuit Sued on behalf of Investors to Recover Losses after Pricing Issues Lead to 20% Stock Drop"
+        ]
+      },
+      {
+        "ticker": "FSS",
+        "date": "2026-07-30",
+        "label": "converge_down",
+        "n_bull": 0,
+        "n_bear": 4,
+        "n_direct": 4,
+        "n_indirect": 0,
+        "net": -4,
+        "direction": "down",
+        "ret_1d": 3.06,
+        "ret_2d": 9.65,
+        "ret_5d": 6.09,
+        "titles": [
+          "US Federal Reserve holds rates steady as inflation hawks call for hike - CNA",
+          "Federal Reserve holds rates steady; three members dissent - Lee News Central",
+          "Federal Reserve holds rates steady in July 2026 decision - qz.com",
+          "Federal Reserve holds rates steady, punting inflation relief to the fall - Scotsman Guide"
+        ]
+      },
+      {
+        "ticker": "Q",
+        "date": "2026-08-07",
+        "label": "converge_up",
+        "n_bull": 4,
+        "n_bear": 0,
+        "n_direct": 4,
+        "n_indirect": 0,
+        "net": 4,
+        "direction": "up",
+        "ret_1d": 1.13,
+        "ret_2d": 1.3,
+        "ret_5d": 4.28,
+        "titles": [
+          "Ocugen Inc (OCGN) (Q2 2026) Earnings Call Highlights: FDA Clearance for OCU410 Phase 3 Trial ...",
+          "Relmada Therapeutics Inc (RLMD) (Q2 2026) Earnings Call Highlights: Strong Phase 2 Data and FDA ...",
+          "Praxis Precision Medicines Inc (PRAX) (Q2 2026) Earnings Call Highlights: FDA Approvals on ...",
+          "Scholar Rock Holding Corp (SRRK) (Q2 2026) Earnings Call Highlights: Dual Paths to FDA Approval ..."
+        ]
+      },
+      {
+        "ticker": "CPHI",
+        "date": "2026-08-24",
+        "label": "converge_down",
+        "n_bull": 0,
+        "n_bear": 3,
+        "n_direct": 3,
+        "n_indirect": 0,
+        "net": -3,
+        "direction": "down",
+        "ret_1d": -5.0,
+        "ret_2d": -10.0,
+        "ret_5d": -11.0,
+        "titles": [
+          "Tesla Recalls Nearly 3 Million Cars in China for Door Handles, Will Introduce Software Changes - Not a Tesla App",
+          "Tesla Faces Its Biggest-Ever China Recall",
+          "Tesla is leading China's biggest-ever EV recall over hidden emergency door handles"
+        ]
+      },
+      {
+        "ticker": "TSLA",
+        "date": "2026-08-24",
+        "label": "converge_down",
+        "n_bull": 0,
+        "n_bear": 3,
+        "n_direct": 3,
+        "n_indirect": 0,
+        "net": -3,
+        "direction": "down",
+        "ret_1d": -3.45,
+        "ret_2d": -4.31,
+        "ret_5d": 1.81,
+        "titles": [
+          "Tesla Recalls Nearly 3 Million Cars in China for Door Handles, Will Introduce Software Changes - Not a Tesla App",
+          "Tesla Faces Its Biggest-Ever China Recall",
+          "Tesla is leading China's biggest-ever EV recall over hidden emergency door handles"
+        ]
+      },
+      {
+        "ticker": "SAP",
+        "date": "2026-08-13",
+        "label": "converge_up",
+        "n_bull": 3,
+        "n_bear": 0,
+        "n_direct": 0,
+        "n_indirect": 3,
+        "net": 3,
+        "direction": "up",
+        "ret_1d": 2.37,
+        "ret_2d": 1.66,
+        "ret_5d": 6.19,
+        "titles": [
+          "Black Rock Coffee Bar, Inc. Sued for Securities Law Violations - Contact the DJS Law Group to Discuss Your Rights - BRCB",
+          "Cogent Communications Holdings, Inc. Sued for Securities Law Violations - Contact the DJS Law Group to Discuss Your Rights - CCOI",
+          "Trump Sued Over Truth Social's Real-Time Feed for Traders"
+        ]
+      },
+      {
+        "ticker": "MIRM",
+        "date": "2026-09-28",
+        "label": "converge_up",
+        "n_bull": 3,
+        "n_bear": 0,
+        "n_direct": 3,
+        "n_indirect": 0,
+        "net": 3,
+        "direction": "up",
+        "ret_1d": -2.27,
+        "ret_2d": null,
+        "ret_5d": null,
+        "titles": [
+          "Mirum Pharmaceuticals and Incyte Announce U.S. FDA Approval of Atebrioz (zilurgisertib) for Adult and Pediatric Patients with Fibrodysplasia Ossificans Progressiva",
+          "Mirum Pharmaceuticals Announces Primary Endpoint Met in Phase 3 AZURE-1 Study of Brelovitug in Chronic Hepatitis Delta Virus",
+          "Mirum Pharmaceuticals to Host Investor Call to Share Topline Results from the Phase 3 AZURE-1 Study of Brelovitug in Chronic Hepatitis Delta on September 28, 2026"
+        ]
+      },
+      {
+        "ticker": "NWS",
+        "date": "2026-07-30",
+        "label": "converge_down",
+        "n_bull": 0,
+        "n_bear": 3,
+        "n_direct": 3,
+        "n_indirect": 0,
+        "net": -3,
+        "direction": "down",
+        "ret_1d": -1.33,
+        "ret_2d": 1.52,
+        "ret_5d": 0.68,
+        "titles": [
+          "Fed Holds Rates Steady, but 3 Members Favored a Rate Hike | National News | U.S. News - U.S. News & World Report",
+          "Federal Reserve holds rates steady; three members dissent - Lee News Central",
+          "Fed holds rates steady at 3.5% to 3.75% as White House urges cuts, hike talk grows - National News Desk"
+        ]
+      },
+      {
+        "ticker": "YUMC",
+        "date": "2026-08-24",
+        "label": "converge_down",
+        "n_bull": 0,
+        "n_bear": 3,
+        "n_direct": 3,
+        "n_indirect": 0,
+        "net": -3,
+        "direction": "down",
+        "ret_1d": 1.2,
+        "ret_2d": -2.4,
+        "ret_5d": -7.72,
+        "titles": [
+          "Tesla Recalls Nearly 3 Million Cars in China for Door Handles, Will Introduce Software Changes - Not a Tesla App",
+          "Tesla Faces Its Biggest-Ever China Recall",
+          "Tesla is leading China's biggest-ever EV recall over hidden emergency door handles"
+        ]
+      },
+      {
+        "ticker": "YUMC",
+        "date": "2026-08-26",
+        "label": "converge_down",
+        "n_bull": 0,
+        "n_bear": 3,
+        "n_direct": 3,
+        "n_indirect": 0,
+        "net": -3,
+        "direction": "down",
+        "ret_1d": -1.15,
+        "ret_2d": -5.68,
+        "ret_5d": -6.24,
+        "titles": [
+          "China flexes its auto-safety chops with huge recall of Tesla, other cars - Reuters",
+          "Why Tesla has been caught up in a massive car recall in China",
+          "Tesla Rises as 2.98 Million-Car Recall Tests China"
+        ]
+      },
+      {
+        "ticker": "MSFT",
+        "date": "2026-09-28",
+        "label": "converge_up",
+        "n_bull": 3,
+        "n_bear": 0,
+        "n_direct": 0,
+        "n_indirect": 3,
+        "net": 3,
+        "direction": "up",
+        "ret_1d": 0.75,
+        "ret_2d": null,
+        "ret_5d": null,
+        "titles": [
+          "Beta Bionics, Inc. Sued for Securities Law Violations; Investors Who Lost Money Should Contact Block & Leviton LLP",
+          "Rackspace Technology, Inc. Sued for Securities Law Violations - Contact the DJS Law Group to Discuss Your Rights - RXT",
+          "Alibaba Group Holding Limited Sued for Securities Law Violations - Contact the DJS Law Group to Discuss Your Rights - BABA"
+        ]
+      },
+      {
+        "ticker": "NWSA",
+        "date": "2026-07-30",
+        "label": "converge_down",
+        "n_bull": 0,
+        "n_bear": 3,
+        "n_direct": 3,
+        "n_indirect": 0,
+        "net": -3,
+        "direction": "down",
+        "ret_1d": -0.46,
+        "ret_2d": -0.99,
+        "ret_5d": 5.14,
+        "titles": [
+          "Fed Holds Rates Steady, but 3 Members Favored a Rate Hike | National News | U.S. News - U.S. News & World Report",
+          "Federal Reserve holds rates steady; three members dissent - Lee News Central",
+          "Fed holds rates steady at 3.5% to 3.75% as White House urges cuts, hike talk grows - National News Desk"
+        ]
+      },
+      {
+        "ticker": "FNF",
+        "date": "2026-08-11",
+        "label": "converge_up",
+        "n_bull": 3,
+        "n_bear": 0,
+        "n_direct": 0,
+        "n_indirect": 3,
+        "net": 3,
+        "direction": "up",
+        "ret_1d": -0.42,
+        "ret_2d": 2.51,
+        "ret_5d": 1.47,
+        "titles": [
+          "CAPR Investor Announcement: Capricor Therapeutics Sued on behalf of Investors to Recover Losses after Clinical Data Leads to 64% Stock Drop",
+          "EMBC Investor Announcement: Embecta Sued on behalf of Investors to Recover Losses after Insulin Pen Issues Lead to 57% Stock Drop",
+          "INTU Investor Announcement: Intuit Sued on behalf of Investors to Recover Losses after Pricing Issues Lead to 20% Stock Drop"
+        ]
+      },
+      {
+        "ticker": "TSLA",
+        "date": "2026-08-26",
+        "label": "converge_down",
+        "n_bull": 0,
+        "n_bear": 3,
+        "n_direct": 3,
+        "n_indirect": 0,
+        "net": -3,
+        "direction": "down",
+        "ret_1d": 0.16,
+        "ret_2d": 1.01,
+        "ret_5d": 3.4,
+        "titles": [
+          "China flexes its auto-safety chops with huge recall of Tesla, other cars - Reuters",
+          "Why Tesla has been caught up in a massive car recall in China",
+          "Tesla Rises as 2.98 Million-Car Recall Tests China"
+        ]
+      },
+      {
+        "ticker": "MLSS",
+        "date": "2026-09-24",
+        "label": "converge_up",
+        "n_bull": 3,
+        "n_bear": 0,
+        "n_direct": 3,
+        "n_indirect": 0,
+        "net": 3,
+        "direction": "up",
+        "ret_1d": null,
+        "ret_2d": null,
+        "ret_5d": null,
+        "titles": [
+          "Mineralys Therapeutics' Transform-HTN Open-Label Extension Trial Data Selected for Late-Breaking Presentation at American Heart Association Scientific Sessions 2026",
+          "Annexon to Present Patient Baseline Characteristics from Vonaprument Phase 3 ARCHER II Pivotal Trial for Geographic Atrophy at The Retina Society 59th Annual Scientific Meeting",
+          "Milestone Pharmaceuticals Enrolls First Canadian Study Participant in ReVeRA-301 Phase 3 Pivotal Trial Evaluating Etripamil Nasal Spray for AFib-RVR"
+        ]
+      },
+      {
+        "ticker": "ADVB",
+        "date": "2026-08-10",
+        "label": "converge_up",
+        "n_bull": 2,
+        "n_bear": 0,
+        "n_direct": 2,
+        "n_indirect": 0,
+        "net": 2,
+        "direction": "up",
+        "ret_1d": 26.97,
+        "ret_2d": 21.99,
+        "ret_5d": 32.1,
+        "titles": [
+          "3D Systems Receives $9 Million Contract Award from U.S. Air Force for Advanced Large-Format Metal 3D Printing System",
+          "Labcorp Announces FDA Approval of Companion Diagnostic Supporting Patients with Advanced Melanoma"
+        ]
+      },
+      {
+        "ticker": "PLUG",
+        "date": "2026-08-11",
+        "label": "converge_up",
+        "n_bull": 2,
+        "n_bear": 0,
+        "n_direct": 2,
+        "n_indirect": 0,
+        "net": 2,
+        "direction": "up",
+        "ret_1d": -10.48,
+        "ret_2d": -7.26,
+        "ret_5d": -12.9,
+        "titles": [
+          "Earnings live updates: Plug Power stock jumps on improving margins, raised revenue guidance",
+          "Plug Power beats revenue estimates, raises guidance"
+        ]
+      },
+      {
+        "ticker": "MLSS",
+        "date": "2026-08-26",
+        "label": "converge_down",
+        "n_bull": 0,
+        "n_bear": 2,
+        "n_direct": 2,
+        "n_indirect": 0,
+        "net": -2,
+        "direction": "down",
+        "ret_1d": 8.0,
+        "ret_2d": 0.0,
+        "ret_5d": -8.0,
+        "titles": [
+          "Medical device maker Boston Scientific is being hit by a cyberattack. The shares are falling - CNBC",
+          "Boston Scientific hit by cyberattack, global operations affected"
+        ]
+      },
+      {
+        "ticker": "JL",
+        "date": "2026-08-26",
+        "label": "converge_up",
+        "n_bull": 2,
+        "n_bear": 0,
+        "n_direct": 2,
+        "n_indirect": 0,
+        "net": 2,
+        "direction": "up",
+        "ret_1d": 6.55,
+        "ret_2d": 2.84,
+        "ret_5d": 4.59,
+        "titles": [
+          "BridgeBio Announces First Participant Dosed in ASCEND-ATTR, a Phase 3b/4 Study Evaluating the Long-Term Effects of Acoramidis on Disease Regression in ATTR-CM",
+          "NOMAD Power Solutions, Inc. Receives DOE Authorization to Advance Vermont Long-Duration Energy Storage Project into Phase 3"
+        ]
+      },
+      {
+        "ticker": "XERS",
+        "date": "2026-09-21",
+        "label": "converge_up",
+        "n_bull": 2,
+        "n_bear": 0,
+        "n_direct": 2,
+        "n_indirect": 0,
+        "net": 2,
+        "direction": "up",
+        "ret_1d": 6.28,
+        "ret_2d": 4.59,
+        "ret_5d": 18.72,
+        "titles": [
+          "Cue Biopharma Announces Positive Topline Results from CUE-221 Phase 2 Study in Chronic Spontaneous Urticaria",
+          "Cue Biopharma Shares Jump 41.6% Premarket Following Phase 2 Trial Results"
+        ]
+      },
+      {
+        "ticker": "VITL",
+        "date": "2026-08-10",
+        "label": "converge_down",
+        "n_bull": 0,
+        "n_bear": 2,
+        "n_direct": 2,
+        "n_indirect": 0,
+        "net": -2,
+        "direction": "down",
+        "ret_1d": -6.24,
+        "ret_2d": -4.08,
+        "ret_5d": -7.08,
+        "titles": [
+          "Taylor Farms recalls jalapeño products due to salmonella risk - CNN",
+          "Taylor Farms recalls salsa, guacamole, citing salmonella risk - The Hill"
+        ]
+      },
+      {
+        "ticker": "ZBIO",
+        "date": "2026-08-18",
+        "label": "converge_up",
+        "n_bull": 2,
+        "n_bear": 0,
+        "n_direct": 2,
+        "n_indirect": 0,
+        "net": 2,
+        "direction": "up",
+        "ret_1d": 5.59,
+        "ret_2d": 4.63,
+        "ret_5d": 11.75,
+        "titles": [
+          "Propanc Biopharma Clears Path for World-First Phase 1b Clinical Study of Breakthrough Cancer Therapy PRP",
+          "Quantum BioPharma (QNTM) Reports Lower Q2 Expenses, Advances Lucid-MS Into Phase 2"
+        ]
+      },
+      {
+        "ticker": "FA",
+        "date": "2026-08-17",
+        "label": "converge_up",
+        "n_bull": 2,
+        "n_bear": 0,
+        "n_direct": 2,
+        "n_indirect": 0,
+        "net": 2,
+        "direction": "up",
+        "ret_1d": -4.92,
+        "ret_2d": -0.98,
+        "ret_5d": -3.09,
+        "titles": [
+          "NTHI's Nasdaq Advantage Takes on New Meaning After Its Breakthrough Phase 2a Results",
+          "ZenaTech Anticipates Competitive Advantage for ZenaDrone as U.S. Imposes Tariffs of Up to 100% on Imported Drones and Components"
+        ]
+      }
+    ],
+    "rule": "One entity per session. n_bull / n_bear count impulse up/down stories after title-normalize. Regime and weather do not vote. clash = both sides on that entity that session. converge = two or more stories, one side. Hit rates grade the entity once: converge uses that side, clash uses the net side (net 0 is ungraded). Long-horizon classes stay out of the 0-1d..5d denominator."
+  },
+  "note": "X = n_bull, Y = n_bear on one ticker in one entry session. Z is trading sessions after the next RTH open after published_at. No invented ticker. No Lane. keep.json unwired. Parquet tape only."
+}
