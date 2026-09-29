@@ -19,6 +19,8 @@ jobs:
         run: git fetch --no-tags origin "${{ github.event.pull_request.base.sha }}"
       - name: Append-only unit tests
         run: PYTHONHASHSEED=0 python3 -m src.test_lever_search_append
+      - name: Install parquet reader for the ohlc row guard
+        run: pip install pyarrow
       - name: Prereg panel tests
         run: PYTHONHASHSEED=0 python3 -m src.test_lever_search_panel
       - name: Same-day bar and proof-day tests
