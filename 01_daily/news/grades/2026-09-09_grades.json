@@ -15,8 +15,8 @@
       "window_through": "2026-09-29",
       "trading_days_elapsed": 13,
       "complete": false,
-      "latest_close": 194.48,
-      "current_return_pct": 4.99,
+      "latest_close": 194.5,
+      "current_return_pct": 5.0,
       "horizon_returns_pct": {
         "1d": 1.31,
         "3d": -0.81,
@@ -42,8 +42,8 @@
       "window_through": "2026-09-29",
       "trading_days_elapsed": 13,
       "complete": false,
-      "latest_close": 39.72,
-      "current_return_pct": 8.23,
+      "latest_close": 39.71,
+      "current_return_pct": 8.26,
       "horizon_returns_pct": {
         "1d": 1.42,
         "3d": 4.04,
