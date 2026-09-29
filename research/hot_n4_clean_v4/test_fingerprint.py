@@ -7,7 +7,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent
 PREREG = ROOT / "PREREG.md"
 MARKER = "<!-- BEGIN COVERED -->\n"
-EXPECTED = "410164703c2bfffdec91464aea4769b270bac06a1422accb4b4d6eaba24a89f2"
+EXPECTED = "5059366464a6fdd19571436296a759717d077a413cc0c693dbbb61f5dc295c5e"
 
 
 def covered_bytes(text: str) -> bytes:

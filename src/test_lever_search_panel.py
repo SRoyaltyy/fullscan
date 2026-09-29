@@ -570,6 +570,119 @@ def test_suggestions_signal_cell_is_frozen() -> None:
         pass
     else:
         raise AssertionError("changed signal cell was accepted")
+    blank = "2026-07-28,2026-07-24,AEP,LONG,L1,tp8,135.54,,118.35,-1%,-2%,4,green"
+    filled = "2026-07-28,2026-07-24,AEP,LONG,L1,tp8,135.54,6.4300,99.00,9%,8%,1,green"
+    assert_suggestions_signal_columns(header + "\n" + blank + "\n", header + "\n" + filled + "\n")
+    moved = "2026-07-28,2026-07-24,AEP,LONG,L1,tp8,135.54,9.0000,118.35,-1%,-2%,4,green"
+    try:
+        assert_suggestions_signal_columns(pin_text, header + "\n" + moved + "\n")
+    except InputHashError:
+        pass
+    else:
+        raise AssertionError("changed first_open was accepted")
+
+
+def test_blank_first_open_fill_and_tracking_rewrite_passes() -> None:
+    """A blank first_open may be filled once while the four tracking cells move."""
+    from src.lever_search_inputs import assert_suggestions_signal_columns
+
+    header = (
+        "run_date,signal_date,ticker,side,strategy,exit_rule,ref_close,"
+        "first_open,current_price,ret_vs_close,ret_vs_open,days_held,signal_colors"
+    )
+    pinned = "2026-09-25,2026-09-25,CLM,LONG,L1,tp8,6.50,,6.50,+0.00%,,0,green"
+    live = "2026-09-25,2026-09-25,CLM,LONG,L1,tp8,6.50,6.4300,6.10,-6.15%,-5.13%,1,green"
+    assert_suggestions_signal_columns(header + "\n" + pinned + "\n", header + "\n" + live + "\n")
+
+
+def test_nonblank_first_open_change_fails() -> None:
+    """A first_open that already has a value must not change."""
+    from src.lever_search_inputs import InputHashError, assert_suggestions_signal_columns
+
+    header = (
+        "run_date,signal_date,ticker,side,strategy,exit_rule,ref_close,"
+        "first_open,current_price,ret_vs_close,ret_vs_open,days_held,signal_colors"
+    )
+    pinned = "2026-07-28,2026-07-24,AEP,LONG,L1,tp8,135.54,135.18,118.35,-1%,-2%,4,green"
+    live = "2026-07-28,2026-07-24,AEP,LONG,L1,tp8,135.54,9.0000,99.00,9%,8%,1,green"
+    try:
+        assert_suggestions_signal_columns(header + "\n" + pinned + "\n", header + "\n" + live + "\n")
+    except InputHashError:
+        pass
+    else:
+        raise AssertionError("changed non-blank first_open was accepted")
+
+
+def test_ohlc_pin_allows_new_rows_and_rejects_edits() -> None:
+    """Pinned ticker-dates stay. A new row passes. A changed open fails."""
+    import datetime
+    import io
+
+    import pyarrow as pa
+    import pyarrow.parquet as pq
+
+    from src.lever_search_inputs import InputHashError, assert_parquet_rows_cover
+
+    def pack(rows: list[tuple]) -> bytes:
+        table = pa.table({
+            "date": pa.array([row[0] for row in rows], type=pa.timestamp("ms")),
+            "ticker": pa.array([row[1] for row in rows], type=pa.large_string()),
+            "open": pa.array([row[2] for row in rows], type=pa.float64()),
+            "high": pa.array([row[3] for row in rows], type=pa.float64()),
+            "low": pa.array([row[4] for row in rows], type=pa.float64()),
+            "close": pa.array([row[5] for row in rows], type=pa.float64()),
+            "volume": pa.array([row[6] for row in rows], type=pa.float64()),
+        })
+        buf = io.BytesIO()
+        pq.write_table(table, buf)
+        return buf.getvalue()
+
+    day = datetime.datetime(2026, 9, 1)
+    later = datetime.datetime(2026, 9, 2)
+    pinned = pack([(day, "AAA", 1.0, 2.0, 0.5, 1.5, 10.0)])
+    extra = pack([
+        (day, "AAA", 1.0, 2.0, 0.5, 1.5, 10.0),
+        (later, "BBB", 3.0, 4.0, 2.0, 3.5, 11.0),
+    ])
+    keys = ("ticker", "date")
+    values = ("open", "high", "low", "close", "volume")
+    assert_parquet_rows_cover(pinned, extra, key_columns=keys, value_columns=values, label="ohlc")
+    changed = pack([(day, "AAA", 9.0, 2.0, 0.5, 1.5, 10.0)])
+    try:
+        assert_parquet_rows_cover(
+            pinned, changed, key_columns=keys, value_columns=values, label="ohlc"
+        )
+    except InputHashError:
+        pass
+    else:
+        raise AssertionError("changed open was accepted")
+    dropped = pack([(later, "BBB", 3.0, 4.0, 2.0, 3.5, 11.0)])
+    try:
+        assert_parquet_rows_cover(
+            pinned, dropped, key_columns=keys, value_columns=values, label="ohlc"
+        )
+    except InputHashError:
+        pass
+    else:
+        raise AssertionError("dropped pinned row was accepted")
+    from src.lever_search_inputs import assert_price_meta_cover
+
+    pinned_meta = {
+        "last_date": "2026-09-25",
+        "first_date": "2024-03-04",
+        "n_rows": 3065066,
+        "n_tickers": 11712,
+        "updated": "2026-09-25T18:28:02.996749-04:00",
+    }
+    grown = dict(pinned_meta, last_date="2026-09-28", n_rows=3067812, updated="2026-09-28T17:56:18.045890-04:00")
+    assert_price_meta_cover(pinned_meta, grown)
+    shrunk = dict(pinned_meta, n_rows=pinned_meta["n_rows"] - 1)
+    try:
+        assert_price_meta_cover(pinned_meta, shrunk)
+    except InputHashError:
+        pass
+    else:
+        raise AssertionError("shrunk n_rows was accepted")
 
 
 def main() -> None:
@@ -586,6 +699,9 @@ def main() -> None:
         test_initial_inputs_and_hash_guard,
         test_suggestions_hash_ignores_live_rewrite,
         test_suggestions_signal_cell_is_frozen,
+        test_blank_first_open_fill_and_tracking_rewrite_passes,
+        test_nonblank_first_open_change_fails,
+        test_ohlc_pin_allows_new_rows_and_rejects_edits,
     ]
     failed = 0
     for fn in tests:

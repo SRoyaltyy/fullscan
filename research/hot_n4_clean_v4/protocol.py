@@ -112,7 +112,13 @@ AUG_BYTES = 55836833
 SEP_BYTES = 71452629
 
 ENGINE_SHA256 = {
-    "src/factor_mine.py": "ce4f1954b0c5e97009dedf6c2d7604d8c225a5633c96090d6e2b20f9e04a9272",
+    # Re-pinned 2026-09-28 ET, Cyrus approved. The previous sha256 was
+    # ce4f1954b0c5e97009dedf6c2d7604d8c225a5633c96090d6e2b20f9e04a9272.
+    # Commit 2916bf5e (#399) changed only the land_closed OOS0914 handler
+    # after land_closed() returns: except Exception became
+    # except (Exception, SystemExit), plus a two-line comment. That cannot
+    # affect picks, fills, or P&L. See RESTATEMENTS.md.
+    "src/factor_mine.py": "b51eed634fb5ce213e3a2e1f85c83749e97ee42519b33d1d60ad7ad0c0047860",
     "src/factor_mine_book.py": "1fc16961b2680ea7fa2b4f6939402176b27f20c38d0ceda85826d674f4ecb76a",
     "src/ohlc_ripper.py": "7b3d674b2f4b5f5e7c52331543b7e0abf24219c3a3d0f2a178476842783bf641",
     "src/gainer_capture.py": "ee03ea4d5cfad51dddcf3dc24b434b63fd19169ad0aacf657d505f5c5da82af5",
