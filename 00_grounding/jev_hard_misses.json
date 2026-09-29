@@ -1,7 +1,7 @@
 {
   "schema": "jev-hard-misses-1",
   "note": "Rotating exam bank for the Jev trainer. The frozen holdout in jev_holdout.json supplies the 20-title exam while 20 of its titles are still absent from 00_grounding/jev_train/. After that, each draw takes the next unseen slice, starting at cursor, and skips any title hash already stored under jev_train/ and any title in jev_gold.json. Graded false keeps and false drops are appended here as a record; a hash already in jev_train/ is not drawn again. This file is not a closed list. The trainer never edits jev_closed_lists.json, never rewrites an existing jev_holdout.json, and never writes keep.json. Initial items were stratified from the parsed archive with seed 20260929, excluding gold and the frozen holdout.",
-  "cursor": 0,
+  "cursor": 20,
   "seed": 20260929,
   "items": [
     {
