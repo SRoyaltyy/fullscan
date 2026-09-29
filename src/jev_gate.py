@@ -97,6 +97,7 @@ _CLASS_POLICY = re.compile(
     r"(?i)(?:"
     r"\b(?:cftc|fda|ustr)\b"
     r"|\btariffs?\b"
+    r"|\bsecondary sanctions?\b"
     r"|\bcontinuing resolution\b"
     r"|\bhouse clears\b"
     r"|\bshutdown risk\b"
@@ -114,16 +115,23 @@ _CLASS_FX = re.compile(
     r"(?i)\byen\b.{0,48}\b(?:dollar|rate hike|fed|u\.s\.)\b"
 )
 _CLASS_AI = re.compile(
-    r"(?i)\b(?:openai|anthropic)\b"
+    r"(?i)(?:"
+    r"\b(?:openai|anthropic)\b.{0,56}"
+    r"\b(?:introduces?|launches?|files?|ipo|warns?|product)\b"
+    r"|"
+    r"\b(?:introduces?|launches?|files?|ipo|targets?)\b.{0,56}"
+    r"\b(?:openai|anthropic)\b"
+    r")"
 )
 _CLASS_FED_VOICE = re.compile(
     r"(?i)\b(?:fed|federal reserve|cook|powell|warsh)\b.{0,56}"
     r"\b(?:warns?|holds rates)\b"
 )
 _CLASS_CHOKE_NEW = re.compile(
-    r"(?i)\b(?:rejects?|accepts?|seizes?|strikes?)\b.{0,48}"
+    r"(?i)\b(?:rejects?|accepts?|seizes?|strikes?|escalat\w*)\b.{0,48}"
     r"\b(?:peace|iran|hormuz)\b"
-    r"|\b(?:peace|iran|hormuz)\b.{0,48}\b(?:rejects?|accepts?|seizes?)\b"
+    r"|\b(?:peace|iran|hormuz)\b.{0,48}"
+    r"\b(?:rejects?|accepts?|seizes?|escalat\w*)\b"
 )
 _CLASS_HOME = re.compile(
     r"(?i)\bbond market\b.{0,40}\bhomebuild"
@@ -168,7 +176,10 @@ QUESTIONS: dict = {
                 "an outcome with no accept/reject/deal/escalation. Social "
                 "Security explainer with no tax/plan/reform. Reclaim / IPO "
                 "price of an already-public name. Open-bell '5 things' "
-                "listicle with no named print/deal/policy."
+                "listicle with no named print/deal/policy. 'Tech stocks "
+                "today' OpenAI / AI recap or 'earnings provide next test' "
+                "with no dated print. 'Should you' whale / billionaire "
+                "column with no named 13F / insider lot."
             ),
             "false": (
                 "Title contains a first-class fact even inside a listicle "
@@ -190,7 +201,12 @@ QUESTIONS: dict = {
                 "hawkish/dovish stance, national exchange trading debut, "
                 "outbreak + vaccination drive, food-import supply-shock, "
                 "tanker/newbuild cost inversion, yield-driven gold crash, "
-                "or CDS affecting a listed sector."
+                "or CDS affecting a listed sector, sitting-president "
+                "secondary sanctions, Hormuz / Iran escalation or other "
+                "named-strait status-change, named-fund / 13F / billionaire "
+                "flow into a listed ticker (not a 'should you' column), "
+                "named-officer insider sale, named-broker downgrade plus "
+                "price-target cut, or a national pump-price cut."
             ),
         },
     },
@@ -224,18 +240,21 @@ QUESTIONS: dict = {
                 "trading debut, EU/G7 public-procurement or Buy-European "
                 "trade rules, yield-driven gold / Treasury move, tanker / "
                 "newbuild vessel-cost inversion, or a food-import "
-                "supply-shock"
+                "supply-shock, a named-strait escalation / status-change, "
+                "or a national fuel pump-price cut"
             ),
             "chokepoint": (
                 "Hormuz, Red Sea / Bab el-Mandeb, Suez, Panama, Taiwan "
-                "Strait, Malacca, or a named tanker/port there"
+                "Strait, Malacca, or a named tanker/port there, including "
+                "an escalation or other status-change at that strait"
             ),
             "other": (
                 "Anywhere else with no US / G10 / oil-print / G7-fiscal "
                 "hook and no named M&A or named-firm layoff. Yemen / "
                 "Palestine / UK-local politics stay other. Leaders "
                 "'expected' an Iran/geo outcome with no accept/reject/"
-                "deal stays other and is not a fact. Africa outbreak "
+                "deal/escalation stays other and is not a fact. A named "
+                "strait escalation is chokepoint, not other. Africa outbreak "
                 "with no vaccination / pharma-contract hook stays other."
             ),
         },
@@ -259,22 +278,26 @@ QUESTIONS: dict = {
                 "including a named acquirer, a major AI lab with a "
                 "dated product or IPO, or a named firm with an IPO "
                 "delay, mass layoff, cost-cut / deleveraging, Chapter 11 "
-                "/ bankruptcy, authorized buyback, or listed-name going "
-                "to court"
+                "/ bankruptcy, authorized buyback, listed-name going "
+                "to court, a named-fund / 13F / billionaire flow into "
+                "that ticker, a named-officer insider sale, or a "
+                "named-broker downgrade plus price-target cut"
             ),
             "infrastructure": (
                 "Port, strait, exchange, grid, pipeline operator, a "
                 "G10 FX pair / oil benchmark, a named steel / "
                 "freight trade-flow channel, a national exchange "
                 "trading debut, an industry-association network launch, "
-                "or a tanker / newbuild channel"
+                "or a tanker / newbuild channel, or national oil "
+                "marketers executing a posted pump-price cut"
             ),
             "crowd": (
                 "Protesters, activists, tourists, unnamed residents. "
                 "Not FX tape + Fed hike bets, not a named firm or agency. "
                 "Not a Conference Board / consumer-confidence print. "
                 "Not an industry-wide association or state banking "
-                "association launching a network."
+                "association launching a network. Not national fuel "
+                "marketers posting a pump-price cut."
             ),
             "other_person": "Private individual with no state or corporate seat",
         },
@@ -308,12 +331,19 @@ QUESTIONS: dict = {
             "remarks = yes. G10 CB hawkish/dovish stance = yes. "
             "Outbreak + vaccination drive = yes. Food-import supply-shock = yes. "
             "Tanker/newbuild cost inversion = yes. Yield-driven gold crash "
-            "(yields + gold plunge) = yes. Leaders 'expected' an outcome "
-            "with no accept/reject/deal = no. Social Security explainer "
+            "(yields + gold plunge) = yes. Sitting-president secondary "
+            "sanctions = yes. Hormuz / Iran escalation or named-strait "
+            "status-change = yes. Named-fund / 13F / billionaire flow "
+            "into a listed ticker = yes. Named-officer insider sale = yes. "
+            "Named-broker downgrade plus price-target cut = yes. National "
+            "pump-price cut = yes. Leaders 'expected' an outcome "
+            "with no accept/reject/deal/escalation = no. Social Security explainer "
             "with no tax/plan/reform = no. Reclaim / IPO price of an "
             "already-public name = no. Celebrity, theme park, 'best move if crash', "
             "gold-tumbles forecast tape, earnings-look-right, or forecast / odds / "
-            "live tape that only name-drops a print = no."
+            "live tape that only name-drops a print = no. 'Tech stocks today' "
+            "OpenAI recap or 'earnings provide next test' = no. 'Should you' "
+            "whale column with no named 13F / insider lot = no."
         ),
         "criteria": {
             "true": (
@@ -332,7 +362,11 @@ QUESTIONS: dict = {
                 "G10 CB hawkish/dovish, national exchange trading debut, "
                 "food-import supply-shock, tanker/newbuild cost inversion, "
                 "yield-driven gold crash, jobs / rents as Fed-path context, "
-                "Fed officer sees/says/warns or Fed chair / Jackson Hole."
+                "Fed officer sees/says/warns or Fed chair / Jackson Hole, "
+                "sitting-president secondary sanctions, Hormuz / Iran "
+                "escalation, named-fund / 13F / billionaire flow, "
+                "named-officer insider sale, named-broker downgrade plus "
+                "price-target cut, or a national pump-price cut."
             ),
             "false": (
                 "Protester arrest, local rally, celebrity, theme park, "
@@ -342,7 +376,9 @@ QUESTIONS: dict = {
                 "with no accept/reject/deal, Social Security explainer "
                 "with no tax/plan/reform, reclaim / IPO price of an "
                 "already-public name, open-bell '5 things' listicle "
-                "with no named print/deal/policy."
+                "with no named print/deal/policy, 'tech stocks today' "
+                "OpenAI recap or 'earnings provide next test', 'should you' "
+                "whale column with no named 13F / insider lot."
             ),
         },
     },
@@ -362,7 +398,9 @@ QUESTIONS: dict = {
             "filing = yes. Authorized dollar buyback = yes. National "
             "exchange trading debut = yes. G10 CB hawkish/dovish = yes. "
             "Published EU/G7 trade / procurement rule = yes. Official "
-            "vaccination drive = yes. 'Mulls' with no "
+            "vaccination drive = yes. Secondary sanctions = yes. Named "
+            "13F / fund stake or Form-4 insider lot = yes. Named-broker "
+            "rating plus price-target change = yes. 'Mulls' with no "
             "named instrument, a speech, a protest, a rumor, forecast / "
             "odds / live tape, leaders 'expected' an outcome, IPO-price "
             "reclaim, or a Social Security explainer = no."
@@ -372,7 +410,8 @@ QUESTIONS: dict = {
         "type": "noul",
         "instructions": (
             "Is this a rerun of a months-old situation with no new closure, "
-            "ceasefire, first strike, or new accept/reject/seize verb?"
+            "ceasefire, first strike, escalation / de-escalation / "
+            "status-change, or new accept/reject/seize verb?"
         ),
     },
 }
@@ -808,8 +847,13 @@ def decide(row: dict, answers: dict | None) -> dict:
             )
         return pack("drop", "geo_other")
 
+    # Session 1732: Hormuz "escalation" is a status-change, not weather.
+    # Skipping the reprint drop only helps if Jev already scored a fact.
+    # Months-old "tensions persist" with low material still drops.
     if geo == "chokepoint":
         if reprint >= TRASH_NOUL and not clock.get("has_new_verb"):
+            if fact_keep:
+                return pack("keep", "choke_fact")
             return pack("drop", "reprint_weather")
         if clock.get("hit") and not clock.get("choke_keyword") and not clock.get("has_new_verb"):
             return pack("drop", "geo_chokepoint_no_hit")
