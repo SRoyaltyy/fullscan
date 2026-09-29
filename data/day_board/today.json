@@ -1,6 +1,6 @@
 {
   "date": "2026-09-28",
-  "generated_at": "2026-09-28T21:17:52.719700-04:00",
+  "generated_at": "2026-09-29T02:51:23.229768-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -125,59 +125,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "stock_book",
-      "title": "Stock book + green",
-      "date": "2026-09-28",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-28T13:59:06.005320-04:00",
-      "files": [
-        {
-          "path": "data/stock_book/2026-09-28_stock_book.json",
-          "ok": true,
-          "reason": "",
-          "size": 1362645,
-          "preview": "1d BUY CNQ, CVE, ASTH, SONO, FIVN, AMN, CON, BAND \u00b7 SELL EOSE, TE, FCEL, METC, ARE, SOC, EXK, BAK"
-        },
-        {
-          "path": "data/stock_book/2026-09-28_green.json",
-          "ok": true,
-          "reason": "",
-          "size": 585,
-          "preview": "green 0 \u00b7 "
-        },
-        {
-          "path": "data/stock_book/2026-09-28_input_health.json",
-          "ok": true,
-          "reason": "",
-          "size": 2453,
-          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
-        },
-        {
-          "path": "data/stock_book/2026-09-28_suggestions.json",
-          "ok": true,
-          "reason": "",
-          "size": 10614,
-          "preview": "2026-09-28 BUY CNQ, CVE, ASTH, SONO, FIVN, AMN, CON, BAND \u00b7 SELL EOSE, TE, FCEL, METC, ARE, SOC, EXK, BAK"
-        },
-        {
-          "path": "data/stock_book/latest_suggestions.json",
-          "ok": true,
-          "reason": "",
-          "size": 10614,
-          "preview": "2026-09-28 BUY CNQ, CVE, ASTH, SONO, FIVN, AMN, CON, BAND \u00b7 SELL EOSE, TE, FCEL, METC, ARE, SOC, EXK, BAK"
-        },
-        {
-          "path": "01_daily/2026-09-28_stock_book.md",
-          "ok": true,
-          "reason": "",
-          "size": 58225,
-          "preview": "# Stock book \u2014 2026-09-28\n_Generated 2026-09-28T13:58:57.356189-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
-        }
-      ],
-      "preview": "1d BUY CNQ, CVE, ASTH, SONO, FIVN, AMN, CON, BAND \u00b7 SELL EOSE, TE, FCEL, METC, ARE, SOC, EXK, BAK \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-09-28 BUY CNQ, CVE, ASTH, SONO, FIVN, AMN, CON, BAND \u00b7 SELL EOSE, TE, FCEL, METC, ARE, SOC, EXK, BAK \u00b7 2026-09-28 BUY CNQ, CVE, ASTH, SONO, FIVN, AMN, CON, BAND \u00b7 SELL EOSE, TE, FCEL, METC, ARE, SOC, EXK, BAK \u00b7 # Stock book \u2014 2026-09-28\n_Generated 2026-09-28T13:58:57.356189-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
-    },
     {
       "key": "live_boards",
       "title": "Live 1d BUY/SELL strip",
@@ -443,6 +390,52 @@
         }
       ],
       "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest (close) \u2014 2026-09-28\n**Generated:** 2026-09-28T16:38:15.182490-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stocks closed lower as 10-year yield topped 5.2% and oil rose after Trump rejected Iran Strait of Hormuz proposal\n**Prior close:** SPX -0.77%  Nasdaq -0.92%  Dow \u2014\n**SPX:** -0.77%  **Nasdaq:** -0.92%  **Dow:** \u2014\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** OXY, NVDA, MDB, META, INTC, AMD, KR, PG, SPCX, JEF\n**Next session:** housing no \u00b7 retail no \u00b7 Fed no\n**Earnings slate:** JEF\n**Geo/grain:** geo\n**Clock legal for:** 2026-09-29\n**Clock use:** `next_open`"
+    },
+    {
+      "key": "finviz_digest",
+      "title": "Finviz digest",
+      "date": "2026-09-28",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-29T02:51:22.188892-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-09-28_finviz_digest.json",
+          "ok": true,
+          "reason": "",
+          "size": 96963,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
+        },
+        {
+          "path": "01_daily/news/2026-09-28_finviz_digest.md",
+          "ok": true,
+          "reason": "",
+          "size": 11966,
+          "preview": "# Finviz Daily Digest \u2014 2026-09-28\n_Generated 2026-09-29T02:51:21.832173-04:00 \u00b7 export=data/exports/finviz_2026-09-28.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2047_"
+        },
+        {
+          "path": "data/exports/finviz_2026-09-28.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11486092,
+          "preview": "11681 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+        },
+        {
+          "path": "data/finviz/latest.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11486092,
+          "preview": "11681 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+        },
+        {
+          "path": "01_daily/news/2026-09-28_finviz_digest_preopen.json",
+          "ok": true,
+          "reason": "",
+          "size": 97073,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
+        }
+      ],
+      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-09-28\n_Generated 2026-09-29T02:51:21.832173-04:00 \u00b7 export=data/exports/finviz_2026-09-28.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2047_ \u00b7 11681 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\" \u00b7 11681 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\" \u00b7 keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"

@@ -1,6 +1,6 @@
 {
   "date": "2026-09-28",
-  "generated_at": "2026-09-28T06:02:00.630342-04:00",
+  "generated_at": "2026-09-29T02:51:22.172371-04:00",
   "run_id": "36396903970",
   "runner": "ecs-openclaw",
   "all_ok": false,
@@ -9,48 +9,8 @@
   "grok_ok": false,
   "grok_fails": [
     {
-      "path": "01_daily/sectors/2026-09-28/basic_materials_predict.md",
-      "reason": "missing; 0/11 sector predicts"
-    },
-    {
-      "path": "01_daily/sectors/2026-09-28/communication_services_predict.md",
-      "reason": "missing; 0/11 sector predicts"
-    },
-    {
-      "path": "01_daily/sectors/2026-09-28/consumer_cyclical_predict.md",
-      "reason": "missing; 0/11 sector predicts"
-    },
-    {
-      "path": "01_daily/sectors/2026-09-28/consumer_defensive_predict.md",
-      "reason": "missing; 0/11 sector predicts"
-    },
-    {
-      "path": "01_daily/sectors/2026-09-28/energy_predict.md",
-      "reason": "missing; 0/11 sector predicts"
-    },
-    {
-      "path": "01_daily/sectors/2026-09-28/financial_predict.md",
-      "reason": "missing; 0/11 sector predicts"
-    },
-    {
-      "path": "01_daily/sectors/2026-09-28/healthcare_predict.md",
-      "reason": "missing; 0/11 sector predicts"
-    },
-    {
-      "path": "01_daily/sectors/2026-09-28/industrials_predict.md",
-      "reason": "missing; 0/11 sector predicts"
-    },
-    {
-      "path": "01_daily/sectors/2026-09-28/real_estate_predict.md",
-      "reason": "missing; 0/11 sector predicts"
-    },
-    {
-      "path": "01_daily/sectors/2026-09-28/technology_predict.md",
-      "reason": "missing; 0/11 sector predicts"
-    },
-    {
-      "path": "01_daily/sectors/2026-09-28/utilities_predict.md",
-      "reason": "missing; 0/11 sector predicts"
+      "path": "(review)",
+      "reason": "empty_review_reply"
     }
   ],
   "missing_required": [
@@ -186,7 +146,7 @@
     }
   ],
   "qc": {
-    "sector_n_ok": 0,
+    "sector_n_ok": 6,
     "sector_n_total": 11,
     "items": [
       {
@@ -229,7 +189,7 @@
         "ok": true,
         "reason": "",
         "path": "01_daily/news/2026-09-28_finviz_digest.json",
-        "size": 97073
+        "size": 96963
       },
       {
         "kind": "finviz_market_digest",
@@ -240,10 +200,10 @@
       },
       {
         "kind": "finviz_market_digest",
-        "ok": false,
-        "reason": "missing",
+        "ok": true,
+        "reason": "",
         "path": "01_daily/news/2026-09-28_finviz_market_digest_close.json",
-        "size": 0
+        "size": 8038
       },
       {
         "kind": "map_heat",
@@ -268,38 +228,38 @@
       },
       {
         "kind": "sector_predict",
-        "ok": false,
-        "reason": "missing",
+        "ok": true,
+        "reason": "",
         "path": "01_daily/sectors/2026-09-28/basic_materials_predict.md",
-        "size": 0
+        "size": 21495
       },
       {
         "kind": "sector_predict",
-        "ok": false,
-        "reason": "missing",
+        "ok": true,
+        "reason": "",
         "path": "01_daily/sectors/2026-09-28/communication_services_predict.md",
-        "size": 0
+        "size": 20633
       },
       {
         "kind": "sector_predict",
-        "ok": false,
-        "reason": "missing",
+        "ok": true,
+        "reason": "",
         "path": "01_daily/sectors/2026-09-28/consumer_cyclical_predict.md",
-        "size": 0
+        "size": 19188
       },
       {
         "kind": "sector_predict",
-        "ok": false,
-        "reason": "missing",
+        "ok": true,
+        "reason": "",
         "path": "01_daily/sectors/2026-09-28/consumer_defensive_predict.md",
-        "size": 0
+        "size": 20050
       },
       {
         "kind": "sector_predict",
-        "ok": false,
-        "reason": "missing",
+        "ok": true,
+        "reason": "",
         "path": "01_daily/sectors/2026-09-28/energy_predict.md",
-        "size": 0
+        "size": 19203
       },
       {
         "kind": "sector_predict",
@@ -331,10 +291,10 @@
       },
       {
         "kind": "sector_predict",
-        "ok": false,
-        "reason": "missing",
+        "ok": true,
+        "reason": "",
         "path": "01_daily/sectors/2026-09-28/technology_predict.md",
-        "size": 0
+        "size": 19193
       },
       {
         "kind": "sector_predict",

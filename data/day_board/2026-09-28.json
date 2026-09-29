@@ -1,6 +1,6 @@
 {
   "date": "2026-09-28",
-  "generated_at": "2026-09-28T16:38:16.319240-04:00",
+  "generated_at": "2026-09-29T02:51:23.229768-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -94,12 +94,12 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 97073,
-          "said": "5881 tickers \u00b7 2096 signals \u00b7 top AJG, AMD, AME, AMGN, AMX, AON, APH, ARGX",
+          "size": 96963,
+          "said": "5887 tickers \u00b7 2047 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
           "bullets": [
-            "Banks have profited from idle cash for years. AI agents could change that.",
-            "Why Did AMD, HPE, MRNA Stocks Surge To 52-Week Highs Last Week?",
-            "AMETEK Completes Acquisition of Indicor Instrumentation"
+            "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
+            "Agnico Eagle Shares Fall 4.9% as Gold Prices Decline",
+            "Banks have profited from idle cash for years. AI agents could change that."
           ]
         },
         {
@@ -109,10 +109,10 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 11405,
+          "size": 11949,
           "said": "Finviz Daily Digest \u2014 2026-09-28",
           "bullets": [
-            "_Generated 2026-09-28T04:24:24.106578-04:00 \u00b7 export=data/exports/finviz_2026-09-28.csv \u00b7 ticker digests=5881 \u00b7 high-signal=2096_",
+            "_Generated 2026-09-29T02:51:21.832173-04:00 \u00b7 export=data/exports/finviz_2026-09-28.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2047_",
             "Major indices (live quote page)"
           ]
         },
@@ -167,11 +167,11 @@
           ]
         }
       ],
-      "said": "5881 tickers \u00b7 2096 signals \u00b7 top AJG, AMD, AME, AMGN, AMX, AON, APH, ARGX",
+      "said": "5887 tickers \u00b7 2047 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
       "bullets": [
-        "Banks have profited from idle cash for years. AI agents could change that.",
-        "Why Did AMD, HPE, MRNA Stocks Surge To 52-Week Highs Last Week?",
-        "AMETEK Completes Acquisition of Indicor Instrumentation"
+        "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
+        "Agnico Eagle Shares Fall 4.9% as Gold Prices Decline",
+        "Banks have profited from idle cash for years. AI agents could change that."
       ]
     },
     {
@@ -192,12 +192,12 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 97073,
-          "said": "5881 tickers \u00b7 2096 signals \u00b7 top AJG, AMD, AME, AMGN, AMX, AON, APH, ARGX",
+          "size": 96963,
+          "said": "5887 tickers \u00b7 2047 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
           "bullets": [
-            "Banks have profited from idle cash for years. AI agents could change that.",
-            "Why Did AMD, HPE, MRNA Stocks Surge To 52-Week Highs Last Week?",
-            "AMETEK Completes Acquisition of Indicor Instrumentation"
+            "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
+            "Agnico Eagle Shares Fall 4.9% as Gold Prices Decline",
+            "Banks have profited from idle cash for years. AI agents could change that."
           ]
         },
         {
@@ -346,7 +346,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 7109,
+          "size": 7223,
           "said": "1 up / 3 down / 2 flat",
           "bullets": [
             "XLB DOWN -6.8",
@@ -362,10 +362,10 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 7565,
-          "said": "all_ok=False \u00b7 sectors 6/11 \u00b7 6 fail",
+          "size": 7561,
+          "said": "all_ok=False \u00b7 sectors 6/11 \u00b7 5 fail",
           "bullets": [
-            "finviz_market_digest:missing",
+            "sector_predict:missing",
             "sector_predict:missing",
             "sector_predict:missing",
             "sector_predict:missing"
@@ -378,7 +378,7 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False missing=['sector_predict']",
-          "size": 8742,
+          "size": 7353,
           "said": "all_ok=False \u00b7 qc=False \u00b7 grok=False \u00b7 book=False \u00b7 missing sector_predict",
           "bullets": []
         },
@@ -388,11 +388,11 @@
           "path": "01_daily/2026-09-28_grok_review.json",
           "role": "required",
           "status": "OK",
-          "reason": "ok=False Core news/events/general/map-heat packets are same-day and usable (general DOWN/mild, events scan_date 2026-09-28 with n",
-          "size": 2054,
-          "said": "ok=False \u00b7 missing; 0/11 sector predicts 01_daily/sectors/2026-09-28/basic_materials_predict.md",
+          "reason": "ok=False Grok returned an empty review",
+          "size": 309,
+          "said": "ok=False \u00b7 empty_review_reply (review)",
           "bullets": [
-            "Core news/events/general/map-heat packets are same-day and usable (general DOWN/mild, events scan_date 2026-09-28 with new items, judge/parse/finviz/map-heat tape populated). All 11 sector essays are absent, so the 8/11 floor is missed and the day fails. Research reused last-night captain cards after a failed morning refresh; that is an enhancement note, not a core fail. Missing close-digest is not required."
+            "Grok returned an empty review"
           ]
         },
         {
@@ -561,12 +561,12 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 97073,
-          "said": "5881 tickers \u00b7 2096 signals \u00b7 top AJG, AMD, AME, AMGN, AMX, AON, APH, ARGX",
+          "size": 96963,
+          "said": "5887 tickers \u00b7 2047 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
           "bullets": [
-            "Banks have profited from idle cash for years. AI agents could change that.",
-            "Why Did AMD, HPE, MRNA Stocks Surge To 52-Week Highs Last Week?",
-            "AMETEK Completes Acquisition of Indicor Instrumentation"
+            "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
+            "Agnico Eagle Shares Fall 4.9% as Gold Prices Decline",
+            "Banks have profited from idle cash for years. AI agents could change that."
           ]
         },
         {
@@ -667,12 +667,12 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 97073,
-          "said": "5881 tickers \u00b7 2096 signals \u00b7 top AJG, AMD, AME, AMGN, AMX, AON, APH, ARGX",
+          "size": 96963,
+          "said": "5887 tickers \u00b7 2047 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
           "bullets": [
-            "Banks have profited from idle cash for years. AI agents could change that.",
-            "Why Did AMD, HPE, MRNA Stocks Surge To 52-Week Highs Last Week?",
-            "AMETEK Completes Acquisition of Indicor Instrumentation"
+            "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
+            "Agnico Eagle Shares Fall 4.9% as Gold Prices Decline",
+            "Banks have profited from idle cash for years. AI agents could change that."
           ]
         },
         {
@@ -733,7 +733,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 7109,
+          "size": 7223,
           "said": "1 up / 3 down / 2 flat",
           "bullets": [
             "XLB DOWN -6.8",
@@ -765,12 +765,12 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 97073,
-          "said": "5881 tickers \u00b7 2096 signals \u00b7 top AJG, AMD, AME, AMGN, AMX, AON, APH, ARGX",
+          "size": 96963,
+          "said": "5887 tickers \u00b7 2047 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
           "bullets": [
-            "Banks have profited from idle cash for years. AI agents could change that.",
-            "Why Did AMD, HPE, MRNA Stocks Surge To 52-Week Highs Last Week?",
-            "AMETEK Completes Acquisition of Indicor Instrumentation"
+            "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
+            "Agnico Eagle Shares Fall 4.9% as Gold Prices Decline",
+            "Banks have profited from idle cash for years. AI agents could change that."
           ]
         },
         {
@@ -848,7 +848,7 @@
           "role": "required",
           "status": "OK",
           "reason": "horizons=5 names=155",
-          "size": 1362644,
+          "size": 1362642,
           "said": "1d BUY CNQ, CVE, ASTH, SONO, FIVN, AMN, CON, BAND \u00b7 SELL EOSE, TE, FCEL, METC, ARE, SOC \u00b7 -0.6341",
           "bullets": []
         },
@@ -859,10 +859,10 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 57225,
+          "size": 57207,
           "said": "Stock book \u2014 2026-09-28",
           "bullets": [
-            "_Generated 2026-09-28T16:21:13.799233-04:00_",
+            "_Generated 2026-09-28T21:17:49.478610-04:00_",
             "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
           ]
         },
@@ -926,7 +926,7 @@
           "role": "input",
           "status": "OK",
           "reason": "horizons=5 names=155",
-          "size": 1362644,
+          "size": 1362642,
           "said": "1d BUY CNQ, CVE, ASTH, SONO, FIVN, AMN, CON, BAND \u00b7 SELL EOSE, TE, FCEL, METC, ARE, SOC \u00b7 -0.6341",
           "bullets": []
         },
@@ -3291,6 +3291,52 @@
         }
       ],
       "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest (close) \u2014 2026-09-28\n**Generated:** 2026-09-28T16:38:15.182490-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stocks closed lower as 10-year yield topped 5.2% and oil rose after Trump rejected Iran Strait of Hormuz proposal\n**Prior close:** SPX -0.77%  Nasdaq -0.92%  Dow \u2014\n**SPX:** -0.77%  **Nasdaq:** -0.92%  **Dow:** \u2014\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** OXY, NVDA, MDB, META, INTC, AMD, KR, PG, SPCX, JEF\n**Next session:** housing no \u00b7 retail no \u00b7 Fed no\n**Earnings slate:** JEF\n**Geo/grain:** geo\n**Clock legal for:** 2026-09-29\n**Clock use:** `next_open`"
+    },
+    {
+      "key": "finviz_digest",
+      "title": "Finviz digest",
+      "date": "2026-09-28",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-29T02:51:22.188892-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-09-28_finviz_digest.json",
+          "ok": true,
+          "reason": "",
+          "size": 96963,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
+        },
+        {
+          "path": "01_daily/news/2026-09-28_finviz_digest.md",
+          "ok": true,
+          "reason": "",
+          "size": 11966,
+          "preview": "# Finviz Daily Digest \u2014 2026-09-28\n_Generated 2026-09-29T02:51:21.832173-04:00 \u00b7 export=data/exports/finviz_2026-09-28.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2047_"
+        },
+        {
+          "path": "data/exports/finviz_2026-09-28.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11486092,
+          "preview": "11681 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+        },
+        {
+          "path": "data/finviz/latest.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11486092,
+          "preview": "11681 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+        },
+        {
+          "path": "01_daily/news/2026-09-28_finviz_digest_preopen.json",
+          "ok": true,
+          "reason": "",
+          "size": 97073,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
+        }
+      ],
+      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-09-28\n_Generated 2026-09-29T02:51:21.832173-04:00 \u00b7 export=data/exports/finviz_2026-09-28.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2047_ \u00b7 11681 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\" \u00b7 11681 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\" \u00b7 keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
     }
   ],
   "href": {
