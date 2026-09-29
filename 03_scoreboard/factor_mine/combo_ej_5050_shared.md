@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared union_e_fresh_h3/union_join_vol_green_h1 w=0.5,0.5 net=priority
 
-Cash book **-5.73%** ($9,427) · signal-only (no cash/fees) was —. Starts YES **26/30**. Fills 361 · skips 283 · realized $+3654.25.
+Cash book **-6.98%** ($9,302) · signal-only (no cash/fees) was —. Starts YES **26/30**. Fills 373 · skips 283 · realized $+3654.25.
 
 ## How this sleeve decides (like you are 10)
 
@@ -55,7 +55,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $8,503.98.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $367.08.
 
 ## Every lot, every session (09:30 mark and same-day change)
 
@@ -498,6 +498,20 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-28 09:30 ET | **SELL** | `WRBY` | 8 | $26.00 | $2.03 | $-6.21 | $8,302.10 | ▼ -6.21 after sell → book $9,431.03; vs 09:30 mark -2.03 | union_join_vol_green_h1: dropped from list after 1 sess (min 1) | — |
 | 2026-09-28 09:30 ET | **SELL** | `ZSQR` | 55 | $3.71 | $2.17 | $-12.58 | $8,503.98 | ▼ -12.58 after sell → book $9,428.85; vs 09:30 mark -2.18 | union_join_vol_green_h1: dropped from list after 1 sess (min 1) | — |
 | 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,503.98 | ▼ close $9,426.90 vs 09:30 $9,462.90 (session -1.96) | 16:00 close · cash $8,503.98 · equity $9,426.90 vs 09:30 $9,462.90 (-36.00; session marks -1.96) · 1 name(s) marked open→close (per-name table). COST×1 09:30 $924.88 → close $922.92 -1.96 | — |
+| 2026-09-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,503.98 | ▼ 09:30 equity $9,420.78 vs yday $9,426.90 (-6.12) | 09:30 open · cash $8,503.98 (unchanged overnight, no fees) · equity $9,420.78 vs prior close $9,426.90 (-6.12) | — |
+| 2026-09-29 09:30 ET | **BUY** | `CCL` | 34 | $24.39 | $2.09 | — | $7,672.63 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; 🔵; ret5=-0.8; combo leftover $850.40; owner union_e_fresh_h3 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `JEF` | 18 | $46.08 | $2.04 | — | $6,841.14 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; 🔵; ret5=-1.5; combo leftover $850.40; owner union_e_fresh_h3 | join🟢 sector🔴 gen🟢 news🟡 digest🟢 ab🟡 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `KMX` | 14 | $60.41 | $2.03 | — | $5,993.44 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; 🔵; ⚪; ret5=-2.3; combo leftover $850.40; owner union_e_fresh_h3 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🟡 heat🟢 vol🟢 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `MTN` | 6 | $138.42 | $2.01 | — | $5,160.91 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; 🔵; ret5=-1.7; combo leftover $850.40; owner union_e_fresh_h3 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟡 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `UEC` | 85 | $9.91 | $2.25 | — | $4,316.32 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=-8.6; combo leftover $850.40; owner union_e_fresh_h3 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `QNC` | 299 | $2.06 | $3.86 | — | $3,696.52 | — | combo gate; gate join=good,last_green=True,vol=good; list yday_gainer,yday_mover; ret5=+24.3; combo leftover $616.62; owner union_join_vol_green_h1 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `BB` | 69 | $8.86 | $2.20 | — | $3,082.98 | — | combo gate; gate join=good,last_green=True,vol=good; list yday_gainer; ⚪; ret5=+3.2; combo leftover $616.62; owner union_join_vol_green_h1 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟡 heat🟢 vol🟢 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `MDB` | 1 | $335.14 | $1.99 | — | $2,745.85 | — | combo gate; gate join=good,last_green=True,vol=good; list yday_mover; ⚪; ret5=-17.8; combo leftover $616.62; owner union_join_vol_green_h1 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `LTRX` | 84 | $7.34 | $2.24 | — | $2,127.04 | — | combo gate; gate join=good,last_green=True,vol=good; list ohlc_hot; ret5=+16.8; combo leftover $616.62; owner union_join_vol_green_h1 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `VFC` | 42 | $14.51 | $2.12 | — | $1,515.51 | — | combo gate; gate join=good,last_green=True,vol=good; list ohlc_hot; 🔵; ⚪; ret5=+10.5; combo leftover $616.62; owner union_join_vol_green_h1 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `AEO` | 35 | $17.36 | $2.10 | — | $905.81 | — | combo gate; gate join=good,last_green=True,vol=good; list ohlc_hot; 🔵; ret5=+12.0; combo leftover $616.62; owner union_join_vol_green_h1 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `BURL` | 2 | $268.37 | $2.00 | — | $367.08 | — | combo gate; gate join=good,last_green=True,vol=good; list ohlc_hot; 🔵; ret5=+5.8; combo leftover $616.62; owner union_join_vol_green_h1 | join🟢 sector🟡 gen🟢 news🟢 digest🟡 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-09-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $367.08 | ▼ close $9,301.98 vs 09:30 $9,420.78 (session -91.88) | 16:00 close · cash $367.08 · equity $9,301.98 vs 09:30 $9,420.78 (-118.80; session marks -91.88) · 13 name(s) marked open→close (per-name table). COST×1 09:30 $916.80 → close $924.59 +7.79; CCL×34 09:30 $24.39 → close $25.11 +24.48; JEF×18 09:30 $46.08 → close $46.52 +7.92; KMX×14 09:30 $60.41 → close $59.23 -16.45; MTN×6 09:30 $138.42 → close $141.29 +17.22; UEC×85 09:30 $9.91 → close $9.29 -52.70; QNC×299 09:30 $2.06 → close $1.75 -92.69; BB×69 09:30 $8.86 → close $8.72 -9.66; MDB×1 09:30 $335.14 → close $337.19 +2.05; LTRX×84 09:30 $7.34 → close $7.22 -10.08; VFC×42 09:30 $14.51 → close $14.50 -0.42; AEO×35 09:30 $17.36 → close $18.14 +27.30; BURL×2 09:30 $268.37 → close $270.05 +3.36 | — |
 
 ## Not taken
 

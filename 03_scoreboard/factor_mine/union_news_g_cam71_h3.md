@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · merged news🟢 and cameras +7 −≤1
 
-Cash book **-21.91%** ($7,810) · signal-only (no cash/fees) was -9.70%. Starts YES **2/30**. Fills 48 · skips 63 · realized $-1714.70.
+Cash book **-24.62%** ($7,538) · signal-only (no cash/fees) was -9.70%. Starts YES **2/30**. Fills 48 · skips 63 · realized $-1714.70.
 
 ## How this sleeve decides (like you are 10)
 
@@ -187,6 +187,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-25 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $287.50 | ▼ close $7,359.57 vs 09:30 $7,379.90 (session -7.84) | 16:00 close · cash $287.50 · equity $7,359.57 vs 09:30 $7,379.90 (-20.33; session marks -7.84) · 4 name(s) marked open→close (per-name table). ZSQR×477 09:30 $3.86 → close $3.78 -38.16; ILMN×6 09:30 $272.16 → close $270.00 -12.96; SECZ×113 09:30 $16.21 → close $15.96 -28.25; COST×2 09:30 $887.00 → close $922.76 +71.53 | — |
 | 2026-09-28 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $287.50 | ▼ 09:30 equity $7,310.62 vs yday $7,359.57 (-48.95) | 09:30 open · cash $287.50 (unchanged overnight, no fees) · equity $7,310.62 vs prior close $7,359.57 (-48.95) · 4 name(s) re-marked at the open (per-name table). COST×2 yday $922.76 → 09:30 $924.88 +4.22; ILMN×6 yday $270.00 → 09:30 $265.95 -24.30; SECZ×113 yday $15.96 → 09:30 $16.00 +4.52; ZSQR×477 yday $3.78 → 09:30 $3.71 -33.39 | — |
 | 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $287.50 | ▲ close $7,809.51 vs 09:30 $7,310.62 (session +498.89) | 16:00 close · cash $287.50 · equity $7,809.51 vs 09:30 $7,310.62 (+498.89; session marks +498.89) · 4 name(s) marked open→close (per-name table). COST×2 09:30 $924.88 → close $922.92 -3.91; ILMN×6 09:30 $265.95 → close $271.90 +35.70; SECZ×113 09:30 $16.00 → close $16.63 +71.19; ZSQR×477 09:30 $3.71 → close $4.54 +395.91 | — |
+| 2026-09-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $287.50 | ▼ 09:30 equity $7,753.96 vs yday $7,809.51 (-55.55) | 09:30 open · cash $287.50 (unchanged overnight, no fees) · equity $7,753.96 vs prior close $7,809.51 (-55.55) · 4 name(s) re-marked at the open (per-name table). COST×2 yday $922.92 → 09:30 $916.80 -12.24; ILMN×6 yday $271.90 → 09:30 $271.00 -5.40; SECZ×113 yday $16.63 → 09:30 $16.59 -4.52; ZSQR×477 yday $4.54 → 09:30 $4.47 -33.39 | — |
+| 2026-09-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $287.50 | ▼ close $7,538.15 vs 09:30 $7,753.96 (session -215.81) | 16:00 close · cash $287.50 · equity $7,538.15 vs 09:30 $7,753.96 (-215.81; session marks -215.81) · 4 name(s) marked open→close (per-name table). COST×2 09:30 $916.80 → close $924.59 +15.58; ILMN×6 09:30 $271.00 → close $272.00 +6.00; SECZ×113 09:30 $16.59 → close $15.84 -84.75; ZSQR×477 09:30 $4.47 → close $4.15 -152.64 | — |
 
 ## Not taken
 

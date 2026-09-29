@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `probable` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-5.67%** ($9,433) · signal-only (no cash/fees) was -9.22%. Starts YES **0/30**. Fills 182 · skips 53 · realized $-864.75.
+Cash book **-5.86%** ($9,414) · signal-only (no cash/fees) was -9.22%. Starts YES **0/30**. Fills 190 · skips 53 · realized $-864.75.
 
 ## How this sleeve decides (like you are 10)
 
@@ -320,6 +320,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-28 09:30 ET | **SELL** | `TXG` | 16 | $86.14 | $2.06 | $+33.98 | $8,083.12 | ▲ +33.98 after sell → book $9,435.12; vs 09:30 mark -2.06 | dropped from list after 1 sess (min 1) | — |
 | 2026-09-28 09:30 ET | **SELL** | `WRBY` | 52 | $26.00 | $2.17 | $-18.35 | $9,432.96 | ▼ -18.35 after sell → book $9,432.96; vs 09:30 mark -2.16 | dropped from list after 1 sess (min 1) | — |
 | 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,432.96 | ▲ close $9,432.96 vs 09:30 $9,454.86 (session +0.00) | 16:00 close · cash $9,432.96 · no lots left · equity $9,432.96. | — |
+| 2026-09-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,432.96 | ▲ 09:30 equity $9,432.96 vs yday $9,432.96 (+0.00) | 09:30 open · cash $9,432.96 · no holdings · equity $9,432.96 vs prior close $9,432.96 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-09-29 09:30 ET | **BUY** | `SFIX` | 477 | $2.47 | $6.15 | — | $8,248.62 | — | combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer,yday_mover; 🔵; ret5=-13.3; leftover $1179.12 | join🟡 sector🟡 gen🟢 news🟡 digest🟡 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `ANNX` | 295 | $3.99 | $3.81 | — | $7,067.76 | — | combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer; 🔵; ret5=-5.0; leftover $1179.12 | join🔴 sector🟡 gen🟢 news🟢 digest🟢 ab🔴 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `ABCL` | 83 | $14.12 | $2.24 | — | $5,893.56 | — | combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer,ohlc_hot; ret5=+10.0; leftover $1179.12 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🟡 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `BUR` | 298 | $3.95 | $3.84 | — | $4,712.62 | — | combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer; ret5=-0.3; leftover $1179.12 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `ADMA` | 117 | $10.04 | $2.34 | — | $3,535.60 | — | combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer,ohlc_hot; ⚪; ret5=+6.5; leftover $1179.12 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `SGMT` | 118 | $9.92 | $2.34 | — | $2,362.69 | — | combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer; ret5=-8.0; leftover $1179.12 | join🔴 sector🟡 gen🟢 news🟢 digest🟢 ab🔴 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `XNCR` | 45 | $25.84 | $2.12 | — | $1,197.54 | — | combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer; ret5=+2.3; leftover $1179.12 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `MBX` | 20 | $57.27 | $2.05 | — | $50.09 | — | combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer; ret5=-5.6; leftover $1179.12 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-09-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $50.09 | ▲ close $9,413.77 vs 09:30 $9,432.96 (session +5.72) | 16:00 close · cash $50.09 · equity $9,413.77 vs 09:30 $9,432.96 (-19.19; session marks +5.72) · 8 name(s) marked open→close (per-name table). SFIX×477 09:30 $2.47 → close $2.53 +28.62; ANNX×295 09:30 $3.99 → close $4.13 +41.30; ABCL×83 09:30 $14.12 → close $14.82 +58.10; BUR×298 09:30 $3.95 → close $3.90 -14.90; ADMA×117 09:30 $10.04 → close $9.96 -9.36; SGMT×118 09:30 $9.92 → close $9.33 -69.62; XNCR×45 09:30 $25.84 → close $25.00 -38.02; MBX×20 09:30 $57.27 → close $57.75 +9.60 | — |
 
 ## Not taken
 

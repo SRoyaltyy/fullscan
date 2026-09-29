@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · MACD histogram < 0
 
-Cash book **+4.79%** ($10,479) · signal-only (no cash/fees) was -1.81%. Starts YES **18/30**. Fills 262 · skips 334 · realized $-941.09.
+Cash book **+4.15%** ($10,415) · signal-only (no cash/fees) was -1.81%. Starts YES **18/30**. Fills 269 · skips 334 · realized $-941.09.
 
 ## How this sleeve decides (like you are 10)
 
@@ -396,6 +396,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-28 09:30 ET | **COVER** | `TTAN` | 9 | $57.00 | $2.02 | $+42.37 | $15,180.68 | ▲ +42.37 after sell → book $10,568.37; vs 09:30 mark -2.01 | exit unpriced hold on first bar after 3 sess | — |
 | 2026-09-28 09:30 ET | **COVER** | `USFD` | 6 | $93.00 | $2.01 | $+2.43 | $14,620.67 | ▲ +2.43 after sell → book $10,566.36; vs 09:30 mark -2.01 | exit unpriced hold on first bar after 4 sess | — |
 | 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $14,620.67 | ▼ close $10,478.68 vs 09:30 $10,613.34 (session -87.68) | 16:00 close · cash $14,620.67 · equity $10,478.68 vs 09:30 $10,613.34 (-134.66; session marks -87.68) · 6 name(s) marked open→close (per-name table). ACAD×32 09:30 $20.53 → close $20.53 -0.00; AEHL×80 09:30 $9.01 → close $8.23 +62.40; BRVE×30 09:30 $20.25 → close $21.07 -24.60; LRMR×218 09:30 $3.23 → close $3.17 +13.25; NEOV×303 09:30 $2.20 → close $2.28 -24.24; SFIX×329 09:30 $2.12 → close $2.47 -114.49 | — |
+| 2026-09-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $14,620.67 | ▲ 09:30 equity $10,489.59 vs yday $10,478.68 (+10.91) | 09:30 open · cash $14,620.67 (unchanged overnight, no fees) · equity $10,489.59 vs prior close $10,478.68 (+10.91) · 6 name(s) re-marked at the open (per-name table). ACAD×32 yday $20.53 → 09:30 $20.37 +5.12; AEHL×80 yday $8.23 → 09:30 $8.26 -2.00; BRVE×30 yday $21.07 → 09:30 $21.00 +2.10; LRMR×218 yday $3.17 → 09:30 $3.13 +8.72; NEOV×303 yday $2.28 → 09:30 $2.29 -3.03; SFIX×329 yday $2.47 → 09:30 $2.47 -0.00 | — |
+| 2026-09-29 09:30 ET | **SHORT** | `TOST` | 24 | $30.40 | $2.10 | — | $15,348.17 | — | MACD histogram < 0; gate macd_down=True; list flatten; ⚪; ret5=+1.9; leftover $749.26 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **SHORT** | `ANNX` | 187 | $3.99 | $2.61 | — | $16,091.69 | — | MACD histogram < 0; gate macd_down=True; list probable,yday_gainer; 🔵; ret5=-5.0; leftover $749.26 | join🔴 sector🟡 gen🟢 news🟢 digest🟢 ab🔴 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **SHORT** | `BUR` | 189 | $3.95 | $2.62 | — | $16,835.62 | — | MACD histogram < 0; gate macd_down=True; list probable,yday_gainer; ret5=-0.3; leftover $749.26 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-09-29 09:30 ET | **SHORT** | `SGMT` | 75 | $9.92 | $2.26 | — | $17,577.36 | — | MACD histogram < 0; gate macd_down=True; list probable,yday_gainer; ret5=-8.0; leftover $749.26 | join🔴 sector🟡 gen🟢 news🟢 digest🟢 ab🔴 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **SHORT** | `XNCR` | 28 | $25.84 | $2.11 | — | $18,298.91 | — | MACD histogram < 0; gate macd_down=True; list probable,yday_gainer; ret5=+2.3; leftover $749.26 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **SHORT** | `MBX` | 13 | $57.27 | $2.07 | — | $19,041.35 | — | MACD histogram < 0; gate macd_down=True; list probable,yday_gainer; ret5=-5.6; leftover $749.26 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-09-29 09:30 ET | **SHORT** | `MGNX` | 183 | $4.09 | $2.60 | — | $19,787.22 | — | MACD histogram < 0; gate macd_down=True; list yday_gainer; ret5=-1.5; leftover $749.26 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-09-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $19,787.22 | ▼ close $10,415.41 vs 09:30 $10,489.59 (session -57.81) | 16:00 close · cash $19,787.22 · equity $10,415.41 vs 09:30 $10,489.59 (-74.18; session marks -57.81) · 13 name(s) marked open→close (per-name table). ACAD×32 09:30 $20.37 → close $20.22 +4.80; AEHL×80 09:30 $8.26 → close $8.59 -26.80; BRVE×30 09:30 $21.00 → close $22.34 -40.20; LRMR×218 09:30 $3.13 → close $3.14 -2.18; NEOV×303 09:30 $2.29 → close $2.54 -75.75; SFIX×329 09:30 $2.47 → close $2.53 -19.74; TOST×24 09:30 $30.40 → close $30.46 -1.44; ANNX×187 09:30 $3.99 → close $4.13 -26.18; BUR×189 09:30 $3.95 → close $3.90 +9.45; SGMT×75 09:30 $9.92 → close $9.33 +44.25; XNCR×28 09:30 $25.84 → close $25.00 +23.66; MBX×13 09:30 $57.27 → close $57.75 -6.24; MGNX×183 09:30 $4.09 → close $3.77 +58.56 | — |
 
 ## Not taken
 

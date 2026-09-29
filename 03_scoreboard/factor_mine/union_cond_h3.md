@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · rank by cond
 
-Cash book **-18.86%** ($8,114) · signal-only (no cash/fees) was -15.16%. Starts YES **0/30**. Fills 201 · skips 307 · realized $-613.92.
+Cash book **-18.48%** ($8,152) · signal-only (no cash/fees) was -15.16%. Starts YES **0/30**. Fills 207 · skips 307 · realized $-613.92.
 
 ## How this sleeve decides (like you are 10)
 
@@ -336,6 +336,14 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-28 09:30 ET | **SELL** | `OMER` | 2 | $19.83 | $0.42 | $-2.48 | $977.54 | ▼ -2.48 after sell → book $8,190.44; vs 09:30 mark -0.42 | dropped from list after 3 sess (min 3) | — |
 | 2026-09-28 09:30 ET | **SELL** | `UPXI` | 71 | $1.18 | $1.07 | $-5.71 | $1,060.25 | ▼ -5.71 after sell → book $8,189.37; vs 09:30 mark -1.07 | exit unpriced hold on first bar after 4 sess | — |
 | 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1,060.25 | ▼ close $8,113.79 vs 09:30 $8,196.52 (session -75.58) | 16:00 close · cash $1,060.25 · equity $8,113.79 vs 09:30 $8,196.52 (-82.73; session marks -75.58) · 8 name(s) marked open→close (per-name table). CDNS×2 09:30 $318.99 → close $326.70 +15.42; CYPH×236 09:30 $4.03 → close $3.31 -170.51; DUOT×98 09:30 $8.99 → close $8.99 +0.00; GRAL×7 09:30 $128.90 → close $132.63 +26.11; HALO×8 09:30 $113.34 → close $112.89 -3.60; PACB×603 09:30 $1.60 → close $1.71 +66.33; PRGO×63 09:30 $15.21 → close $15.10 -6.93; RSKD×120 09:30 $7.72 → close $7.70 -2.40 | — |
+| 2026-09-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $1,060.25 | ▼ 09:30 equity $8,095.84 vs yday $8,113.79 (-17.95) | 09:30 open · cash $1,060.25 (unchanged overnight, no fees) · equity $8,095.84 vs prior close $8,113.79 (-17.95) · 8 name(s) re-marked at the open (per-name table). CDNS×2 yday $326.70 → 09:30 $321.20 -11.00; CYPH×236 yday $3.31 → 09:30 $3.34 +7.08; DUOT×98 yday $8.99 → 09:30 $9.00 +0.98; GRAL×7 yday $132.63 → 09:30 $133.49 +6.02; HALO×8 yday $112.89 → 09:30 $112.89 +0.00; PACB×603 yday $1.71 → 09:30 $1.67 -24.12; PRGO×63 yday $15.10 → 09:30 $15.13 +1.89; RSKD×120 yday $7.70 → 09:30 $7.71 +1.20 | — |
+| 2026-09-29 09:30 ET | **BUY** | `SONO` | 7 | $17.76 | $1.26 | — | $934.67 | — | rank by cond; rank cond; list flatten; ⚪; ret5=+9.8; leftover $132.53 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟢 |
+| 2026-09-29 09:30 ET | **BUY** | `AMC` | 39 | $3.32 | $1.41 | — | $803.77 | — | rank by cond; rank cond; list yday_gainer,yday_mover,ohlc_hot; 🔵; ret5=+13.8; leftover $132.53 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `ADMA` | 13 | $10.04 | $1.34 | — | $671.91 | — | rank by cond; rank cond; list probable,yday_gainer,ohlc_hot; ⚪; ret5=+6.5; leftover $132.53 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `BB` | 14 | $8.86 | $1.28 | — | $546.59 | — | rank by cond; rank cond; list yday_gainer; ⚪; ret5=+3.2; leftover $132.53 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟡 heat🟢 vol🟢 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `DT` | 2 | $57.39 | $1.15 | — | $430.65 | — | rank by cond; rank cond; list flatten; ⚪; ret5=+2.6; leftover $132.53 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `PDFS` | 2 | $50.25 | $1.01 | — | $329.14 | — | rank by cond; rank cond; list flatten; ⚪; ret5=+6.5; leftover $132.53 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $329.14 | ▲ close $8,152.21 vs 09:30 $8,095.84 (session +63.84) | 16:00 close · cash $329.14 · equity $8,152.21 vs 09:30 $8,095.84 (+56.37; session marks +63.84) · 14 name(s) marked open→close (per-name table). CDNS×2 09:30 $321.20 → close $324.17 +5.94; CYPH×236 09:30 $3.34 → close $3.23 -25.96; DUOT×98 09:30 $9.00 → close $8.97 -2.94; GRAL×7 09:30 $133.49 → close $136.57 +21.56; HALO×8 09:30 $112.89 → close $111.56 -10.64; PACB×603 09:30 $1.67 → close $1.83 +96.48; PRGO×63 09:30 $15.13 → close $15.00 -8.19; RSKD×120 09:30 $7.71 → close $7.71 +0.00; SONO×7 09:30 $17.76 → close $17.85 +0.63; AMC×39 09:30 $3.32 → close $3.08 -9.36; ADMA×13 09:30 $10.04 → close $9.96 -1.04; BB×14 09:30 $8.86 → close $8.72 -1.96; DT×2 09:30 $57.39 → close $57.53 +0.28; PDFS×2 09:30 $50.25 → close $49.77 -0.96 | — |
 
 ## Not taken
 

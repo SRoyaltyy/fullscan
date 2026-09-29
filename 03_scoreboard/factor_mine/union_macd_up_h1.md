@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ macd_up, no 🚨
 
-Cash book **-15.20%** ($8,480) · signal-only (no cash/fees) was +22.07%. Starts YES **11/30**. Fills 254 · skips 104 · realized $+158.57.
+Cash book **-14.58%** ($8,542) · signal-only (no cash/fees) was +22.07%. Starts YES **11/30**. Fills 262 · skips 104 · realized $+158.57.
 
 ## How this sleeve decides (like you are 10)
 
@@ -390,6 +390,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-28 09:30 ET | **SELL** | `TXG` | 12 | $86.14 | $2.05 | $+24.49 | $7,441.87 | ▲ +24.49 after sell → book $8,481.87; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | — |
 | 2026-09-28 09:30 ET | **SELL** | `WRBY` | 40 | $26.00 | $2.13 | $-15.04 | $8,479.74 | ▼ -15.04 after sell → book $8,479.74; vs 09:30 mark -2.13 | dropped from list after 1 sess (min 1) | — |
 | 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,479.74 | ▲ close $8,479.74 vs 09:30 $8,501.74 (session +0.00) | 16:00 close · cash $8,479.74 · no lots left · equity $8,479.74. | — |
+| 2026-09-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,479.74 | ▲ 09:30 equity $8,479.74 vs yday $8,479.74 (+0.00) | 09:30 open · cash $8,479.74 · no holdings · equity $8,479.74 vs prior close $8,479.74 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-09-29 09:30 ET | **BUY** | `SN` | 5 | $184.05 | $2.00 | — | $7,557.48 | — | union ∩ macd_up, no 🚨; gate macd_up=True; list flatten; 🔵; ⚪; ret5=+8.7; leftover $1059.97 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `DT` | 18 | $57.39 | $2.04 | — | $6,522.42 | — | union ∩ macd_up, no 🚨; gate macd_up=True; list flatten; ⚪; ret5=+2.6; leftover $1059.97 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `SONO` | 59 | $17.76 | $2.17 | — | $5,472.41 | — | union ∩ macd_up, no 🚨; gate macd_up=True; list flatten; ⚪; ret5=+9.8; leftover $1059.97 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟢 |
+| 2026-09-29 09:30 ET | **BUY** | `PDFS` | 21 | $50.25 | $2.05 | — | $4,415.11 | — | union ∩ macd_up, no 🚨; gate macd_up=True; list flatten; ⚪; ret5=+6.5; leftover $1059.97 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `SHOO` | 23 | $45.06 | $2.06 | — | $3,376.67 | — | union ∩ macd_up, no 🚨; gate macd_up=True; list flatten; 🔵; ⚪; ret5=+4.8; leftover $1059.97 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `ABCL` | 75 | $14.12 | $2.21 | — | $2,315.46 | — | union ∩ macd_up, no 🚨; gate macd_up=True; list probable,yday_gainer,ohlc_hot; ret5=+10.0; leftover $1059.97 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🟡 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `ADMA` | 105 | $10.04 | $2.31 | — | $1,258.95 | — | union ∩ macd_up, no 🚨; gate macd_up=True; list probable,yday_gainer,ohlc_hot; ⚪; ret5=+6.5; leftover $1059.97 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `KOD` | 12 | $87.50 | $2.03 | — | $206.93 | — | union ∩ macd_up, no 🚨; gate macd_up=True; list yday_gainer,yday_mover; 🔵; ret5=+177.4; leftover $1059.97 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-09-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $206.93 | ▲ close $8,541.95 vs 09:30 $8,479.74 (session +79.08) | 16:00 close · cash $206.93 · equity $8,541.95 vs 09:30 $8,479.74 (+62.21; session marks +79.08) · 8 name(s) marked open→close (per-name table). SN×5 09:30 $184.05 → close $182.44 -8.05; DT×18 09:30 $57.39 → close $57.53 +2.52; SONO×59 09:30 $17.76 → close $17.85 +5.31; PDFS×21 09:30 $50.25 → close $49.77 -10.08; SHOO×23 09:30 $45.06 → close $45.14 +1.84; ABCL×75 09:30 $14.12 → close $14.82 +52.50; ADMA×105 09:30 $10.04 → close $9.96 -8.40; KOD×12 09:30 $87.50 → close $91.12 +43.44 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-7.48%** ($9,252) · signal-only (no cash/fees) was +4.80%. Starts YES **2/30**. Fills 13 · skips 18 · realized $+210.43.
+Cash book **-9.30%** ($9,070) · signal-only (no cash/fees) was +4.80%. Starts YES **2/30**. Fills 14 · skips 18 · realized $+210.43.
 
 ## How this sleeve decides (like you are 10)
 
@@ -151,6 +151,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-28 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,228.37 | ▼ 09:30 equity $9,252.19 vs yday $9,254.56 (-2.37) | 09:30 open · cash $9,228.37 (unchanged overnight, no fees) · equity $9,252.19 vs prior close $9,254.56 (-2.37) · 1 name(s) re-marked at the open (per-name table). BB×3 yday $8.73 → 09:30 $7.94 -2.37 | — |
 | 2026-09-28 09:30 ET | **SELL** | `BB` | 3 | $7.94 | $0.27 | $-2.51 | $9,251.92 | ▼ -2.51 after sell → book $9,251.92; vs 09:30 mark -0.27 | exit unpriced hold on first bar after 3 sess | — |
 | 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,251.92 | ▲ close $9,251.92 vs 09:30 $9,252.19 (session +0.00) | 16:00 close · cash $9,251.92 · no lots left · equity $9,251.92. | — |
+| 2026-09-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,251.92 | ▲ 09:30 equity $9,251.92 vs yday $9,251.92 (+0.00) | 09:30 open · cash $9,251.92 · no holdings · equity $9,251.92 vs prior close $9,251.92 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-09-29 09:30 ET | **BUY** | `KMX` | 153 | $60.41 | $2.45 | — | $7.51 | — | combo gate; gate flow_in=True,zero_red=True; list earn_react; 🔵; ⚪; ret5=-2.3; leftover $9251.92 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🟡 heat🟢 vol🟢 buy🟡 |
+| 2026-09-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7.51 | ▼ close $9,069.70 vs 09:30 $9,251.92 (session -179.78) | 16:00 close · cash $7.51 · equity $9,069.70 vs 09:30 $9,251.92 (-182.22; session marks -179.78) · 1 name(s) marked open→close (per-name table). KMX×153 09:30 $60.41 → close $59.23 -179.78 | — |
 
 ## Not taken
 

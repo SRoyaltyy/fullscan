@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · packet🟢 and camera net ≥ 2
 
-Cash book **-12.89%** ($8,711) · signal-only (no cash/fees) was -9.47%. Starts YES **16/30**. Fills 42 · skips 82 · realized $-1172.71.
+Cash book **-12.74%** ($8,726) · signal-only (no cash/fees) was -9.47%. Starts YES **16/30**. Fills 42 · skips 82 · realized $-1172.71.
 
 ## How this sleeve decides (like you are 10)
 
@@ -180,6 +180,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-25 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $404.44 | ▲ close $8,709.33 vs 09:30 $8,389.46 (session +321.88) | 16:00 close · cash $404.44 · equity $8,709.33 vs 09:30 $8,389.46 (+319.87; session marks +321.88) · 1 name(s) marked open→close (per-name table). COST×9 09:30 $887.00 → close $922.76 +321.88 | — |
 | 2026-09-28 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $404.44 | ▲ 09:30 equity $8,728.32 vs yday $8,709.33 (+18.99) | 09:30 open · cash $404.44 (unchanged overnight, no fees) · equity $8,728.32 vs prior close $8,709.33 (+18.99) · 1 name(s) re-marked at the open (per-name table). COST×9 yday $922.76 → 09:30 $924.88 +18.99 | — |
 | 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $404.44 | ▼ close $8,710.72 vs 09:30 $8,728.32 (session -17.60) | 16:00 close · cash $404.44 · equity $8,710.72 vs 09:30 $8,728.32 (-17.60; session marks -17.60) · 1 name(s) marked open→close (per-name table). COST×9 09:30 $924.88 → close $922.92 -17.60 | — |
+| 2026-09-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $404.44 | ▼ 09:30 equity $8,655.64 vs yday $8,710.72 (-55.08) | 09:30 open · cash $404.44 (unchanged overnight, no fees) · equity $8,655.64 vs prior close $8,710.72 (-55.08) · 1 name(s) re-marked at the open (per-name table). COST×9 yday $922.92 → 09:30 $916.80 -55.08 | — |
+| 2026-09-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $404.44 | ▲ close $8,725.75 vs 09:30 $8,655.64 (session +70.11) | 16:00 close · cash $404.44 · equity $8,725.75 vs 09:30 $8,655.64 (+70.11; session marks +70.11) · 1 name(s) marked open→close (per-name table). COST×9 09:30 $916.80 → close $924.59 +70.11 | — |
 
 ## Not taken
 

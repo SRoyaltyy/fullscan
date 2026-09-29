@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ overnight, no 🚨
 
-Cash book **-17.07%** ($8,293) · signal-only (no cash/fees) was -45.53%. Starts YES **0/30**. Fills 92 · skips 176 · realized $-1797.14.
+Cash book **-19.18%** ($8,082) · signal-only (no cash/fees) was -45.53%. Starts YES **0/30**. Fills 93 · skips 176 · realized $-1797.14.
 
 ## How this sleeve decides (like you are 10)
 
@@ -228,6 +228,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-28 09:30 ET | **SELL** | `NEOV` | 4 | $2.20 | $0.12 | $-5.07 | $8,283.01 | ▼ -5.07 after sell → book $8,293.62; vs 09:30 mark -0.12 | dropped from list after 3 sess (min 3) | — |
 | 2026-09-28 09:30 ET | **SELL** | `SFIX` | 5 | $2.12 | $0.14 | $-4.65 | $8,293.48 | ▼ -4.65 after sell → book $8,293.48; vs 09:30 mark -0.14 | dropped from list after 3 sess (min 3) | — |
 | 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,293.48 | ▲ close $8,293.48 vs 09:30 $8,293.84 (session +0.00) | 16:00 close · cash $8,293.48 · no lots left · equity $8,293.48. | — |
+| 2026-09-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,293.48 | ▲ 09:30 equity $8,293.48 vs yday $8,293.48 (+0.00) | 09:30 open · cash $8,293.48 · no holdings · equity $8,293.48 vs prior close $8,293.48 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-09-29 09:30 ET | **BUY** | `CNXC` | 324 | $25.52 | $4.18 | — | $20.82 | — | union ∩ overnight, no 🚨; gate overnight=True; list overnight; ret5=-7.6; leftover $8293.48 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 peer🟡 heat🟢 vol🟢 buy🟡 |
+| 2026-09-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $20.82 | ▼ close $8,081.94 vs 09:30 $8,293.48 (session -207.36) | 16:00 close · cash $20.82 · equity $8,081.94 vs 09:30 $8,293.48 (-211.54; session marks -207.36) · 1 name(s) marked open→close (per-name table). CNXC×324 09:30 $25.52 → close $24.88 -207.36 | — |
 
 ## Not taken
 

@@ -1,0 +1,212 @@
+{
+  "buys": [
+    {
+      "fill_rule": "open",
+      "price": 4.47,
+      "shares": 571,
+      "side": "BUY",
+      "ticker": "ZSQR"
+    },
+    {
+      "fill_rule": "open",
+      "price": 196.0,
+      "shares": 13,
+      "side": "BUY",
+      "ticker": "RGEN"
+    },
+    {
+      "fill_rule": "open",
+      "price": 50.25,
+      "shares": 50,
+      "side": "BUY",
+      "ticker": "PDFS"
+    },
+    {
+      "fill_rule": "open",
+      "price": 335.145,
+      "shares": 7,
+      "side": "BUY",
+      "ticker": "MDB"
+    }
+  ],
+  "cash": 246.98,
+  "date": "2026-09-29",
+  "equity": 9994.87,
+  "fees": 25.255,
+  "fills": [
+    {
+      "fees": 2.0659,
+      "fill_rule": "open",
+      "pnl": 33.55,
+      "price": 174.49,
+      "shares": 15,
+      "side": "SELL",
+      "ticker": "A"
+    },
+    {
+      "fees": 2.0379,
+      "fill_rule": "open",
+      "pnl": 18.09,
+      "price": 413.69,
+      "shares": 6,
+      "side": "SELL",
+      "ticker": "NTRA"
+    },
+    {
+      "fees": 4.3059,
+      "fill_rule": "open",
+      "pnl": -54.46,
+      "price": 7.71,
+      "shares": 328,
+      "side": "SELL",
+      "ticker": "RSKD"
+    },
+    {
+      "fees": 3.2994,
+      "fill_rule": "open",
+      "pnl": -101.92,
+      "price": 9.9,
+      "shares": 251,
+      "side": "SELL",
+      "ticker": "SENS"
+    },
+    {
+      "fees": 7.3659,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 4.47,
+      "shares": 571,
+      "side": "BUY",
+      "ticker": "ZSQR"
+    },
+    {
+      "fees": 2.029,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 196.0,
+      "shares": 13,
+      "side": "BUY",
+      "ticker": "RGEN"
+    },
+    {
+      "fees": 2.14,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 50.25,
+      "shares": 50,
+      "side": "BUY",
+      "ticker": "PDFS"
+    },
+    {
+      "fees": 2.011,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 335.145,
+      "shares": 7,
+      "side": "BUY",
+      "ticker": "MDB"
+    }
+  ],
+  "holdings": [
+    "MDB",
+    "PDFS",
+    "RGEN",
+    "ZSQR"
+  ],
+  "mean": -2.1268,
+  "n_trades_today": 8,
+  "recipe": "oos0914_zero_candle_h2_sx",
+  "sells": [
+    {
+      "fill_rule": "open",
+      "price": 174.49,
+      "shares": 15,
+      "side": "SELL",
+      "ticker": "A"
+    },
+    {
+      "fill_rule": "open",
+      "price": 413.69,
+      "shares": 6,
+      "side": "SELL",
+      "ticker": "NTRA"
+    },
+    {
+      "fill_rule": "open",
+      "price": 7.71,
+      "shares": 328,
+      "side": "SELL",
+      "ticker": "RSKD"
+    },
+    {
+      "fill_rule": "open",
+      "price": 9.9,
+      "shares": 251,
+      "side": "SELL",
+      "ticker": "SENS"
+    }
+  ],
+  "state": {
+    "after": "2026-09-29",
+    "cash": 246.98,
+    "pos": {
+      "MDB": {
+        "close_px": 337.19,
+        "cost": 2348.026,
+        "entry_date": "2026-09-29",
+        "entry_px": 335.145,
+        "fee_in": 2.011,
+        "last_px": 335.145,
+        "min_hold": 2,
+        "notional": 2346.015,
+        "peak_px": 335.145,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate zero_red=True,last_green=True; rank candle_score; list yday_mover; \u26aa; ret5=-17.8; leftover $2554.85",
+        "shares": 7,
+        "ticker": "MDB"
+      },
+      "PDFS": {
+        "close_px": 49.77,
+        "cost": 2514.64,
+        "entry_date": "2026-09-29",
+        "entry_px": 50.25,
+        "fee_in": 2.14,
+        "last_px": 50.25,
+        "min_hold": 2,
+        "notional": 2512.5,
+        "peak_px": 50.25,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate zero_red=True,last_green=True; rank candle_score; list flatten; \u26aa; ret5=+6.5; leftover $2554.85",
+        "shares": 50,
+        "ticker": "PDFS"
+      },
+      "RGEN": {
+        "close_px": 194.57,
+        "cost": 2550.029,
+        "entry_date": "2026-09-29",
+        "entry_px": 196.0,
+        "fee_in": 2.029,
+        "last_px": 196.0,
+        "min_hold": 2,
+        "notional": 2548.0,
+        "peak_px": 196.0,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate zero_red=True,last_green=True; rank candle_score; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+7.4; leftover $2554.85",
+        "shares": 13,
+        "ticker": "RGEN"
+      },
+      "ZSQR": {
+        "close_px": 4.15,
+        "cost": 2559.7358999999997,
+        "entry_date": "2026-09-29",
+        "entry_px": 4.47,
+        "fee_in": 7.3659,
+        "last_px": 4.47,
+        "min_hold": 2,
+        "notional": 2552.37,
+        "peak_px": 4.47,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate zero_red=True,last_green=True; rank candle_score; list yday_gainer,yday_mover; \u26aa; ret5=+72.0; leftover $2554.85",
+        "shares": 571,
+        "ticker": "ZSQR"
+      }
+    },
+    "yday_equity": 9994.87
+  }
+}

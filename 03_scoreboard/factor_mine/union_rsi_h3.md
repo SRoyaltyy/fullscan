@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `rsi` · size `leftover` · sell `list` · S-boost `none` · rank by rsi
 
-Cash book **-16.28%** ($8,372) · signal-only (no cash/fees) was -34.58%. Starts YES **0/30**. Fills 183 · skips 269 · realized $-1699.80.
+Cash book **-15.86%** ($8,414) · signal-only (no cash/fees) was -34.58%. Starts YES **0/30**. Fills 189 · skips 269 · realized $-1699.80.
 
 ## How this sleeve decides (like you are 10)
 
@@ -318,6 +318,14 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-28 09:30 ET | **SELL** | `NMRA` | 41 | $0.65 | $0.41 | $-5.77 | $244.39 | ▼ -5.77 after sell → book $8,031.63; vs 09:30 mark -0.41 | exit unpriced hold on first bar after 3 sess | — |
 | 2026-09-28 09:30 ET | **SELL** | `XNDU` | 5 | $4.86 | $0.28 | $-6.24 | $268.41 | ▼ -6.24 after sell → book $8,031.36; vs 09:30 mark -0.27 | exit unpriced hold on first bar after 3 sess | — |
 | 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $268.41 | ▲ close $8,371.61 vs 09:30 $8,034.34 (session +340.26) | 16:00 close · cash $268.41 · equity $8,371.61 vs 09:30 $8,034.34 (+337.27; session marks +340.26) · 8 name(s) marked open→close (per-name table). ACAD×45 09:30 $20.53 → close $20.53 +0.00; GEN×44 09:30 $21.44 → close $20.85 -25.96; LRMR×305 09:30 $3.23 → close $3.17 -18.54; NEOV×424 09:30 $2.20 → close $2.28 +33.92; RZLT×254 09:30 $3.85 → close $4.18 +83.82; SFIX×461 09:30 $2.12 → close $2.47 +160.43; SGMT×111 09:30 $9.15 → close $9.94 +87.69; SMWB×135 09:30 $7.45 → close $7.59 +18.90 | — |
+| 2026-09-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $268.41 | ▲ 09:30 equity $8,466.39 vs yday $8,371.61 (+94.78) | 09:30 open · cash $268.41 (unchanged overnight, no fees) · equity $8,466.39 vs prior close $8,371.61 (+94.78) · 8 name(s) re-marked at the open (per-name table). ACAD×45 yday $20.53 → 09:30 $20.37 -7.20; GEN×44 yday $20.85 → 09:30 $21.20 +15.40; LRMR×305 yday $3.17 → 09:30 $3.13 -12.20; NEOV×424 yday $2.28 → 09:30 $2.29 +4.24; RZLT×254 yday $4.18 → 09:30 $4.54 +92.71; SFIX×461 yday $2.47 → 09:30 $2.47 +0.00; SGMT×111 yday $9.94 → 09:30 $9.92 -2.22; SMWB×135 yday $7.59 → 09:30 $7.62 +4.05 | — |
+| 2026-09-29 09:30 ET | **BUY** | `OCUL` | 4 | $7.76 | $0.32 | — | $237.05 | — | rank by rsi; rank rsi; list yday_mover; ret5=-23.4; leftover $33.55 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `SWMR` | 1 | $18.59 | $0.19 | — | $218.27 | — | rank by rsi; rank rsi; list yday_mover; ret5=-22.5; leftover $33.55 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `TDTH` | 37 | $0.89 | $0.44 | — | $184.90 | — | rank by rsi; rank rsi; list yday_mover; ret5=-36.6; leftover $33.55 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `MRLN` | 19 | $1.75 | $0.39 | — | $151.26 | — | rank by rsi; rank rsi; list yday_mover; 🔵; ret5=-5.9; leftover $33.55 | join🟡 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `AUR` | 6 | $5.32 | $0.34 | — | $119.00 | — | rank by rsi; rank rsi; list yday_mover; 🔵; ret5=-18.7; leftover $33.55 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `UEC` | 3 | $9.91 | $0.31 | — | $88.97 | — | rank by rsi; rank rsi; list earn_react; ret5=-8.6; leftover $33.55 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-09-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $88.97 | ▼ close $8,413.96 vs 09:30 $8,466.39 (session -50.45) | 16:00 close · cash $88.97 · equity $8,413.96 vs 09:30 $8,466.39 (-52.43; session marks -50.45) · 14 name(s) marked open→close (per-name table). ACAD×45 09:30 $20.37 → close $20.22 -6.75; GEN×44 09:30 $21.20 → close $20.85 -15.40; LRMR×305 09:30 $3.13 → close $3.14 +3.05; NEOV×424 09:30 $2.29 → close $2.54 +106.00; RZLT×254 09:30 $4.54 → close $4.09 -115.57; SFIX×461 09:30 $2.47 → close $2.53 +27.66; SGMT×111 09:30 $9.92 → close $9.33 -65.49; SMWB×135 09:30 $7.62 → close $7.69 +9.45; OCUL×4 09:30 $7.76 → close $7.87 +0.44; SWMR×1 09:30 $18.59 → close $16.37 -2.22; TDTH×37 09:30 $0.89 → close $1.14 +9.25; MRLN×19 09:30 $1.75 → close $1.78 +0.57; AUR×6 09:30 $5.32 → close $5.39 +0.42; UEC×3 09:30 $9.91 → close $9.29 -1.86 | — |
 
 ## Not taken
 

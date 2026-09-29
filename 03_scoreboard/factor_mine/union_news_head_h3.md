@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · prior-export headline🟢 only
 
-Cash book **-16.80%** ($8,320) · signal-only (no cash/fees) was +184.18%. Starts YES **1/30**. Fills 144 · skips 192 · realized $-2398.84.
+Cash book **-19.74%** ($8,026) · signal-only (no cash/fees) was +184.18%. Starts YES **1/30**. Fills 149 · skips 192 · realized $-2398.84.
 
 ## How this sleeve decides (like you are 10)
 
@@ -281,6 +281,13 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-28 09:30 ET | **SELL** | `SGRY` | 1 | $14.18 | $0.16 | $-1.87 | $1,326.87 | ▼ -1.87 after sell → book $7,874.88; vs 09:30 mark -0.17 | exit unpriced hold on first bar after 3 sess | — |
 | 2026-09-28 09:30 ET | **SELL** | `VERI` | 20 | $1.29 | $0.34 | $-0.86 | $1,352.33 | ▼ -0.86 after sell → book $7,874.54; vs 09:30 mark -0.34 | exit unpriced hold on first bar after 3 sess | — |
 | 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1,352.33 | ▲ close $8,320.20 vs 09:30 $7,885.04 (session +445.66) | 16:00 close · cash $1,352.33 · equity $8,320.20 vs 09:30 $7,885.04 (+435.16; session marks +445.66) · 4 name(s) marked open→close (per-name table). ILMN×6 09:30 $265.95 → close $271.90 +35.70; RKLB×22 09:30 $73.20 → close $72.19 -22.22; SECZ×105 09:30 $16.00 → close $16.63 +66.15; ZSQR×441 09:30 $3.71 → close $4.54 +366.03 | — |
+| 2026-09-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $1,352.33 | ▼ 09:30 equity $8,307.89 vs yday $8,320.20 (-12.31) | 09:30 open · cash $1,352.33 (unchanged overnight, no fees) · equity $8,307.89 vs prior close $8,320.20 (-12.31) · 4 name(s) re-marked at the open (per-name table). ILMN×6 yday $271.90 → 09:30 $271.00 -5.40; RKLB×22 yday $72.19 → 09:30 $73.47 +28.16; SECZ×105 yday $16.63 → 09:30 $16.59 -4.20; ZSQR×441 yday $4.54 → 09:30 $4.47 -30.87 | — |
+| 2026-09-29 09:30 ET | **BUY** | `LQDA` | 3 | $72.49 | $2.00 | — | $1,132.86 | — | prior-export headline🟢 only; gate headline=good; rank cond; list yday_gainer,ohlc_hot; ret5=+10.9; leftover $225.39 | join🔴 sector🟡 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `GLND` | 56 | $3.98 | $2.16 | — | $907.82 | — | prior-export headline🟢 only; gate headline=good; rank cond; list yday_mover; ret5=+55.9; leftover $225.39 | join🔴 sector🟡 gen🟢 news🟢 digest🟢 ab🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `ALVO` | 36 | $6.13 | $2.10 | — | $685.04 | — | prior-export headline🟢 only; gate headline=good; rank cond; list yday_gainer,ohlc_hot; ret5=+4.6; leftover $225.39 | join🔴 sector🟡 gen🟢 news🟢 digest🟢 ab🔴 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `ANNX` | 56 | $3.99 | $2.16 | — | $459.45 | — | prior-export headline🟢 only; gate headline=good; rank cond; list probable,yday_gainer; 🔵; ret5=-5.0; leftover $225.39 | join🔴 sector🟡 gen🟢 news🟢 digest🟢 ab🔴 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `SGMT` | 22 | $9.92 | $2.06 | — | $239.15 | — | prior-export headline🟢 only; gate headline=good; rank cond; list probable,yday_gainer; ret5=-8.0; leftover $225.39 | join🔴 sector🟡 gen🟢 news🟢 digest🟢 ab🔴 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $239.15 | ▼ close $8,025.63 vs 09:30 $8,307.89 (session -271.79) | 16:00 close · cash $239.15 · equity $8,025.63 vs 09:30 $8,307.89 (-282.26; session marks -271.79) · 9 name(s) marked open→close (per-name table). ILMN×6 09:30 $271.00 → close $272.00 +6.00; RKLB×22 09:30 $73.47 → close $69.70 -82.94; SECZ×105 09:30 $16.59 → close $15.84 -78.75; ZSQR×441 09:30 $4.47 → close $4.15 -141.12; LQDA×3 09:30 $72.49 → close $70.69 -5.40; GLND×56 09:30 $3.98 → close $4.75 +43.12; ALVO×36 09:30 $6.13 → close $5.92 -7.56; ANNX×56 09:30 $3.99 → close $4.13 +7.84; SGMT×22 09:30 $9.92 → close $9.33 -12.98 | — |
 
 ## Not taken
 

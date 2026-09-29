@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 4 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · top 4 by cond
 
-Cash book **-21.79%** ($7,821) · signal-only (no cash/fees) was -7.67%. Starts YES **1/30**. Fills 93 · skips 159 · realized $-515.67.
+Cash book **-22.45%** ($7,755) · signal-only (no cash/fees) was -7.67%. Starts YES **1/30**. Fills 96 · skips 159 · realized $-515.67.
 
 ## How this sleeve decides (like you are 10)
 
@@ -228,6 +228,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-28 09:30 ET | **SELL** | `FSLY` | 4 | $24.45 | $1.01 | $-16.42 | $211.56 | ▼ -16.42 after sell → book $8,145.46; vs 09:30 mark -1.01 | exit unpriced hold on first bar after 4 sess | — |
 | 2026-09-28 09:30 ET | **SELL** | `UPXI` | 98 | $1.18 | $1.48 | $-7.88 | $325.72 | ▼ -7.88 after sell → book $8,143.98; vs 09:30 mark -1.48 | exit unpriced hold on first bar after 4 sess | — |
 | 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $325.72 | ▼ close $7,820.96 vs 09:30 $8,146.97 (session -323.02) | 16:00 close · cash $325.72 · equity $7,820.96 vs 09:30 $8,146.97 (-326.01; session marks -323.02) · 4 name(s) marked open→close (per-name table). CDNS×6 09:30 $318.99 → close $326.70 +46.26; CYPH×504 09:30 $4.03 → close $3.31 -364.14; DUOT×210 09:30 $8.99 → close $8.99 +0.00; RSKD×257 09:30 $7.72 → close $7.70 -5.14 | — |
+| 2026-09-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $325.72 | ▼ 09:30 equity $7,807.75 vs yday $7,820.96 (-13.21) | 09:30 open · cash $325.72 (unchanged overnight, no fees) · equity $7,807.75 vs prior close $7,820.96 (-13.21) · 4 name(s) re-marked at the open (per-name table). CDNS×6 yday $326.70 → 09:30 $321.20 -33.00; CYPH×504 yday $3.31 → 09:30 $3.34 +15.12; DUOT×210 yday $8.99 → 09:30 $9.00 +2.10; RSKD×257 yday $7.70 → 09:30 $7.71 +2.57 | — |
+| 2026-09-29 09:30 ET | **BUY** | `SONO` | 4 | $17.76 | $0.72 | — | $253.96 | — | top 4 by cond; rank cond; list flatten; ⚪; ret5=+9.8; leftover $81.43 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟢 |
+| 2026-09-29 09:30 ET | **BUY** | `AMC` | 24 | $3.32 | $0.87 | — | $173.41 | — | top 4 by cond; rank cond; list yday_gainer,yday_mover,ohlc_hot; 🔵; ret5=+13.8; leftover $81.43 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `ADMA` | 8 | $10.04 | $0.83 | — | $92.26 | — | top 4 by cond; rank cond; list probable,yday_gainer,ohlc_hot; ⚪; ret5=+6.5; leftover $81.43 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $92.26 | ▼ close $7,755.37 vs 09:30 $7,807.75 (session -49.96) | 16:00 close · cash $92.26 · equity $7,755.37 vs 09:30 $7,807.75 (-52.38; session marks -49.96) · 7 name(s) marked open→close (per-name table). CDNS×6 09:30 $321.20 → close $324.17 +17.82; CYPH×504 09:30 $3.34 → close $3.23 -55.44; DUOT×210 09:30 $9.00 → close $8.97 -6.30; RSKD×257 09:30 $7.71 → close $7.71 +0.00; SONO×4 09:30 $17.76 → close $17.85 +0.36; AMC×24 09:30 $3.32 → close $3.08 -5.76; ADMA×8 09:30 $10.04 → close $9.96 -0.64 | — |
 
 ## Not taken
 

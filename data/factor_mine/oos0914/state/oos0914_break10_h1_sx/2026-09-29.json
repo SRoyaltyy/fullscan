@@ -1,0 +1,147 @@
+{
+  "buys": [
+    {
+      "fill_rule": "open",
+      "price": 87.5,
+      "shares": 22,
+      "side": "BUY",
+      "ticker": "KOD"
+    },
+    {
+      "fill_rule": "open",
+      "price": 1.19,
+      "shares": 1687,
+      "side": "BUY",
+      "ticker": "SRFM"
+    },
+    {
+      "fill_rule": "open",
+      "price": 4.47,
+      "shares": 449,
+      "side": "BUY",
+      "ticker": "ZSQR"
+    },
+    {
+      "fill_rule": "open",
+      "price": 2.41,
+      "shares": 833,
+      "side": "BUY",
+      "ticker": "HLP"
+    }
+  ],
+  "cash": 44.96,
+  "date": "2026-09-29",
+  "equity": 7978.2,
+  "fees": 40.3561,
+  "fills": [
+    {
+      "fees": 2.056,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 87.5,
+      "shares": 22,
+      "side": "BUY",
+      "ticker": "KOD"
+    },
+    {
+      "fees": 21.7623,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 1.19,
+      "shares": 1687,
+      "side": "BUY",
+      "ticker": "SRFM"
+    },
+    {
+      "fees": 5.7921,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 4.47,
+      "shares": 449,
+      "side": "BUY",
+      "ticker": "ZSQR"
+    },
+    {
+      "fees": 10.7457,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 2.41,
+      "shares": 833,
+      "side": "BUY",
+      "ticker": "HLP"
+    }
+  ],
+  "holdings": [
+    "HLP",
+    "KOD",
+    "SRFM",
+    "ZSQR"
+  ],
+  "mean": -0.6749,
+  "n_trades_today": 4,
+  "recipe": "oos0914_break10_h1_sx",
+  "sells": [],
+  "state": {
+    "after": "2026-09-29",
+    "cash": 44.96,
+    "pos": {
+      "HLP": {
+        "close_px": 2.45,
+        "cost": 2018.2757000000001,
+        "entry_date": "2026-09-29",
+        "entry_px": 2.41,
+        "fee_in": 10.7457,
+        "last_px": 2.41,
+        "min_hold": 1,
+        "notional": 2007.5300000000002,
+        "peak_px": 2.41,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate break_10=True; rank hot_score; list yday_gainer,ohlc_hot; ret5=+17.7; leftover $2008.10",
+        "shares": 833,
+        "ticker": "HLP"
+      },
+      "KOD": {
+        "close_px": 91.12,
+        "cost": 1927.056,
+        "entry_date": "2026-09-29",
+        "entry_px": 87.5,
+        "fee_in": 2.056,
+        "last_px": 87.5,
+        "min_hold": 1,
+        "notional": 1925.0,
+        "peak_px": 87.5,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate break_10=True; rank hot_score; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+177.4; leftover $2008.10",
+        "shares": 22,
+        "ticker": "KOD"
+      },
+      "SRFM": {
+        "close_px": 1.2,
+        "cost": 2029.2923,
+        "entry_date": "2026-09-29",
+        "entry_px": 1.19,
+        "fee_in": 21.7623,
+        "last_px": 1.19,
+        "min_hold": 1,
+        "notional": 2007.53,
+        "peak_px": 1.19,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate break_10=True; rank hot_score; list yday_gainer; ret5=+77.6; leftover $2008.10",
+        "shares": 1687,
+        "ticker": "SRFM"
+      },
+      "ZSQR": {
+        "close_px": 4.15,
+        "cost": 2012.8220999999999,
+        "entry_date": "2026-09-29",
+        "entry_px": 4.47,
+        "fee_in": 5.7921,
+        "last_px": 4.47,
+        "min_hold": 1,
+        "notional": 2007.03,
+        "peak_px": 4.47,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate break_10=True; rank hot_score; list yday_gainer,yday_mover; \u26aa; ret5=+72.0; leftover $2008.10",
+        "shares": 449,
+        "ticker": "ZSQR"
+      }
+    },
+    "yday_equity": 7978.2
+  }
+}

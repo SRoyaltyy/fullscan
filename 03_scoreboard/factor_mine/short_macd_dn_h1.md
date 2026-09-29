@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · MACD histogram < 0
 
-Cash book **-0.33%** ($9,967) · signal-only (no cash/fees) was +6.85%. Starts YES **5/30**. Fills 266 · skips 108 · realized $-743.47.
+Cash book **+0.18%** ($10,018) · signal-only (no cash/fees) was +6.85%. Starts YES **5/30**. Fills 274 · skips 108 · realized $-743.47.
 
 ## How this sleeve decides (like you are 10)
 
@@ -400,6 +400,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-28 09:30 ET | **COVER** | `NEOV` | 255 | $2.20 | $3.29 | $+41.80 | $10,558.29 | ▲ +41.80 after sell → book $9,970.50; vs 09:30 mark -3.28 | dropped from list after 1 sess (min 1) | — |
 | 2026-09-28 09:30 ET | **COVER** | `SFIX` | 277 | $2.12 | $3.57 | $+14.39 | $9,966.92 | ▲ +14.39 after sell → book $9,966.92; vs 09:30 mark -3.58 | dropped from list after 1 sess (min 1) | — |
 | 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,966.92 | ▲ close $9,966.92 vs 09:30 $9,984.66 (session +0.00) | 16:00 close · cash $9,966.92 · no lots left · equity $9,966.92. | — |
+| 2026-09-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,966.92 | ▲ 09:30 equity $9,966.92 vs yday $9,966.92 (+0.00) | 09:30 open · cash $9,966.92 · no holdings · equity $9,966.92 vs prior close $9,966.92 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-09-29 09:30 ET | **SHORT** | `TOST` | 20 | $30.40 | $2.09 | — | $10,572.83 | — | MACD histogram < 0; gate macd_down=True; list flatten; ⚪; ret5=+1.9; leftover $622.93 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **SHORT** | `SFIX` | 252 | $2.47 | $3.32 | — | $11,191.95 | — | MACD histogram < 0; gate macd_down=True; list probable,yday_gainer,yday_mover; 🔵; ret5=-13.3; leftover $622.93 | join🟡 sector🟡 gen🟢 news🟡 digest🟡 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-09-29 09:30 ET | **SHORT** | `ANNX` | 156 | $3.99 | $2.51 | — | $11,811.88 | — | MACD histogram < 0; gate macd_down=True; list probable,yday_gainer; 🔵; ret5=-5.0; leftover $622.93 | join🔴 sector🟡 gen🟢 news🟢 digest🟢 ab🔴 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **SHORT** | `BUR` | 157 | $3.95 | $2.51 | — | $12,429.52 | — | MACD histogram < 0; gate macd_down=True; list probable,yday_gainer; ret5=-0.3; leftover $622.93 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-09-29 09:30 ET | **SHORT** | `SGMT` | 62 | $9.92 | $2.21 | — | $13,042.35 | — | MACD histogram < 0; gate macd_down=True; list probable,yday_gainer; ret5=-8.0; leftover $622.93 | join🔴 sector🟡 gen🟢 news🟢 digest🟢 ab🔴 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **SHORT** | `XNCR` | 24 | $25.84 | $2.10 | — | $13,660.53 | — | MACD histogram < 0; gate macd_down=True; list probable,yday_gainer; ret5=+2.3; leftover $622.93 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **SHORT** | `MBX` | 10 | $57.27 | $2.06 | — | $14,231.17 | — | MACD histogram < 0; gate macd_down=True; list probable,yday_gainer; ret5=-5.6; leftover $622.93 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-09-29 09:30 ET | **SHORT** | `MGNX` | 152 | $4.09 | $2.50 | — | $14,850.35 | — | MACD histogram < 0; gate macd_down=True; list yday_gainer; ret5=-1.5; leftover $622.93 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-09-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $14,850.35 | ▲ close $10,018.01 vs 09:30 $9,966.92 (session +70.39) | 16:00 close · cash $14,850.35 · equity $10,018.01 vs 09:30 $9,966.92 (+51.09; session marks +70.39) · 8 name(s) marked open→close (per-name table). TOST×20 09:30 $30.40 → close $30.46 -1.20; SFIX×252 09:30 $2.47 → close $2.53 -15.12; ANNX×156 09:30 $3.99 → close $4.13 -21.84; BUR×157 09:30 $3.95 → close $3.90 +7.85; SGMT×62 09:30 $9.92 → close $9.33 +36.58; XNCR×24 09:30 $25.84 → close $25.00 +20.28; MBX×10 09:30 $57.27 → close $57.75 -4.80; MGNX×152 09:30 $4.09 → close $3.77 +48.64 | — |
 
 ## Not taken
 

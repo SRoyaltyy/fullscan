@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · RSI overbought
 
-Cash book **-14.18%** ($8,582) · signal-only (no cash/fees) was -115.85%. Starts YES **1/30**. Fills 229 · skips 279 · realized $-808.98.
+Cash book **-16.41%** ($8,359) · signal-only (no cash/fees) was -115.85%. Starts YES **1/30**. Fills 236 · skips 279 · realized $-808.98.
 
 ## How this sleeve decides (like you are 10)
 
@@ -363,6 +363,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-28 09:30 ET | **COVER** | `VGZ` | 233 | $2.62 | $3.01 | $+0.91 | $13,152.10 | ▲ +0.91 after sell → book $8,704.73; vs 09:30 mark -3.01 | exit unpriced hold on first bar after 4 sess | — |
 | 2026-09-28 09:30 ET | **COVER** | `VKTX` | 16 | $35.00 | $2.04 | $+104.05 | $12,590.07 | ▲ +104.05 after sell → book $8,702.70; vs 09:30 mark -2.03 | exit unpriced hold on first bar after 3 sess | — |
 | 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $12,590.07 | ▼ close $8,581.70 vs 09:30 $8,731.92 (session -121.00) | 16:00 close · cash $12,590.07 · equity $8,581.70 vs 09:30 $8,731.92 (-150.22; session marks -121.00) · 5 name(s) marked open→close (per-name table). HLP×375 09:30 $2.22 → close $2.39 -63.75; SECZ×50 09:30 $16.00 → close $16.63 -31.50; TEM×9 09:30 $83.57 → close $85.08 -13.59; TWST×4 09:30 $181.87 → close $179.60 +9.08; TXG×9 09:30 $86.14 → close $88.50 -21.24 | — |
+| 2026-09-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $12,590.07 | ▼ 09:30 equity $8,568.39 vs yday $8,581.70 (-13.32) | 09:30 open · cash $12,590.07 (unchanged overnight, no fees) · equity $8,568.39 vs prior close $8,581.70 (-13.32) · 5 name(s) re-marked at the open (per-name table). HLP×375 yday $2.39 → 09:30 $2.41 -7.50; SECZ×50 yday $16.63 → 09:30 $16.59 +2.00; TEM×9 yday $85.08 → 09:30 $85.48 -3.65; TWST×4 yday $179.60 → 09:30 $179.90 -1.20; TXG×9 yday $88.50 → 09:30 $88.83 -2.97 | — |
+| 2026-09-29 09:30 ET | **SHORT** | `ABCL` | 43 | $14.12 | $2.16 | — | $13,195.07 | — | RSI overbought; gate rsi_ob=True; list probable,yday_gainer,ohlc_hot; ret5=+10.0; leftover $612.03 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🟡 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **SHORT** | `KOD` | 6 | $87.50 | $2.04 | — | $13,718.03 | — | RSI overbought; gate rsi_ob=True; list yday_gainer,yday_mover; 🔵; ret5=+177.4; leftover $612.03 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-09-29 09:30 ET | **SHORT** | `AMC` | 184 | $3.32 | $2.60 | — | $14,326.31 | — | RSI overbought; gate rsi_ob=True; list yday_gainer,yday_mover,ohlc_hot; 🔵; ret5=+13.8; leftover $612.03 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-29 09:30 ET | **SHORT** | `AGEN` | 63 | $9.58 | $2.22 | — | $14,927.64 | — | RSI overbought; gate rsi_ob=True; list yday_gainer,ohlc_hot; ret5=+13.2; leftover $612.03 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-09-29 09:30 ET | **SHORT** | `TJGC` | 22 | $27.68 | $2.09 | — | $15,534.50 | — | RSI overbought; gate rsi_ob=True; list yday_gainer; 🔵; ret5=+62.3; leftover $612.03 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-09-29 09:30 ET | **SHORT** | `XERS` | 62 | $9.77 | $2.21 | — | $16,138.03 | — | RSI overbought; gate rsi_ob=True; list yday_gainer,ohlc_hot; ret5=+11.7; leftover $612.03 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-29 09:30 ET | **SHORT** | `SRFM` | 514 | $1.19 | $6.74 | — | $16,742.95 | — | RSI overbought; gate rsi_ob=True; list yday_gainer; ret5=+77.6; leftover $612.03 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-09-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $16,742.95 | ▼ close $8,359.28 vs 09:30 $8,568.39 (session -189.04) | 16:00 close · cash $16,742.95 · equity $8,359.28 vs 09:30 $8,568.39 (-209.11; session marks -189.04) · 12 name(s) marked open→close (per-name table). HLP×375 09:30 $2.41 → close $2.45 -15.00; SECZ×50 09:30 $16.59 → close $15.84 +37.50; TEM×9 09:30 $85.48 → close $82.58 +26.15; TWST×4 09:30 $179.90 → close $186.13 -24.92; TXG×9 09:30 $88.83 → close $90.04 -10.89; ABCL×43 09:30 $14.12 → close $14.82 -30.10; KOD×6 09:30 $87.50 → close $91.12 -21.72; AMC×184 09:30 $3.32 → close $3.08 +44.16; AGEN×63 09:30 $9.58 → close $9.89 -19.53; TJGC×22 09:30 $27.68 → close $34.80 -156.53; XERS×62 09:30 $9.77 → close $9.98 -13.02; SRFM×514 09:30 $1.19 → close $1.20 -5.14 | — |
 
 ## Not taken
 

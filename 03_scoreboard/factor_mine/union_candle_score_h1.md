@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `candle_score` · size `leftover` · sell `list` · S-boost `none` · rank by candle_score
 
-Cash book **-7.25%** ($9,275) · signal-only (no cash/fees) was +8.19%. Starts YES **0/30**. Fills 265 · skips 104 · realized $-563.45.
+Cash book **-7.97%** ($9,203) · signal-only (no cash/fees) was +8.19%. Starts YES **0/30**. Fills 273 · skips 104 · realized $-563.45.
 
 ## How this sleeve decides (like you are 10)
 
@@ -400,6 +400,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-28 09:30 ET | **SELL** | `NTRA` | 2 | $408.94 | $2.02 | $-6.13 | $8,144.47 | ▼ -6.13 after sell → book $9,277.22; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
 | 2026-09-28 09:30 ET | **SELL** | `SENS` | 115 | $9.85 | $2.36 | $-54.15 | $9,274.86 | ▼ -54.15 after sell → book $9,274.86; vs 09:30 mark -2.36 | dropped from list after 1 sess (min 1) | — |
 | 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,274.86 | ▲ close $9,274.86 vs 09:30 $9,300.61 (session +0.00) | 16:00 close · cash $9,274.86 · no lots left · equity $9,274.86. | — |
+| 2026-09-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,274.86 | ▲ 09:30 equity $9,274.86 vs yday $9,274.86 (+0.00) | 09:30 open · cash $9,274.86 · no holdings · equity $9,274.86 vs prior close $9,274.86 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-09-29 09:30 ET | **BUY** | `TER` | 2 | $410.85 | $2.00 | — | $8,451.16 | — | rank by candle_score; rank candle_score; list ohlc_hot; ret5=+5.2; leftover $1159.36 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `ZSQR` | 259 | $4.47 | $3.34 | — | $7,290.09 | — | rank by candle_score; rank candle_score; list yday_gainer,yday_mover; ⚪; ret5=+72.0; leftover $1159.36 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 ab🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `CRCT` | 183 | $6.31 | $2.54 | — | $6,132.82 | — | rank by candle_score; rank candle_score; list ohlc_hot; ret5=+12.0; leftover $1159.36 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `XERS` | 118 | $9.77 | $2.34 | — | $4,977.62 | — | rank by candle_score; rank candle_score; list yday_gainer,ohlc_hot; ret5=+11.7; leftover $1159.36 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `A` | 6 | $174.49 | $2.01 | — | $3,928.67 | — | rank by candle_score; rank candle_score; list ohlc_hot; ret5=+8.2; leftover $1159.36 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `SUIG` | 715 | $1.62 | $9.22 | — | $2,761.15 | — | rank by candle_score; rank candle_score; list ohlc_hot; ret5=+9.6; leftover $1159.36 | join🟡 sector🔴 gen🟢 news🟡 digest🟢 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `VSXY` | 12 | $89.78 | $2.03 | — | $1,681.76 | — | rank by candle_score; rank candle_score; list ohlc_hot; 🔵; ret5=+8.2; leftover $1159.36 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `FIRY` | 93 | $12.41 | $2.27 | — | $525.36 | — | rank by candle_score; rank candle_score; list ohlc_hot; 🔵; ret5=+16.9; leftover $1159.36 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-09-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $525.36 | ▼ close $9,203.31 vs 09:30 $9,274.86 (session -45.80) | 16:00 close · cash $525.36 · equity $9,203.31 vs 09:30 $9,274.86 (-71.55; session marks -45.80) · 8 name(s) marked open→close (per-name table). TER×2 09:30 $410.85 → close $403.02 -15.66; ZSQR×259 09:30 $4.47 → close $4.15 -82.88; CRCT×183 09:30 $6.31 → close $6.41 +18.30; XERS×118 09:30 $9.77 → close $9.98 +24.78; A×6 09:30 $174.49 → close $175.03 +3.24; SUIG×715 09:30 $1.62 → close $1.62 +0.00; VSXY×12 09:30 $89.78 → close $89.23 -6.60; FIRY×93 09:30 $12.41 → close $12.55 +13.02 | — |
 
 ## Not taken
 

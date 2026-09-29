@@ -193,6 +193,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-28 09:30 ET | **SELL** | `ILMN` | 19 | $265.95 | $2.10 | $-122.13 | $5,125.30 | ▼ -122.13 after sell → book $8,493.98; vs 09:30 mark -2.10 | dropped from list after 1 sess (min 1) | — |
 | 2026-09-28 09:30 ET | **SELL** | `ZSQR` | 908 | $3.71 | $11.89 | $-159.80 | $8,482.09 | ▼ -159.80 after sell → book $8,482.09; vs 09:30 mark -11.89 | dropped from list after 1 sess (min 1) | — |
 | 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,482.09 | ▲ close $8,482.09 vs 09:30 $8,496.08 (session +0.00) | 16:00 close · cash $8,482.09 · no lots left · equity $8,482.09. | — |
+| 2026-09-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,482.09 | ▲ 09:30 equity $8,482.09 vs yday $8,482.09 (+0.00) | 09:30 open · cash $8,482.09 · no holdings · equity $8,482.09 vs prior close $8,482.09 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-09-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,482.09 | ▲ close $8,482.09 vs 09:30 $8,482.09 (session +0.00) | 16:00 close · cash $8,482.09 · no lots left · equity $8,482.09. | — |
 
 ## Not taken
 

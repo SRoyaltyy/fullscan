@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `w_hot_candle` · size `leftover` · sell `list` · S-boost `none` · rank by w_hot_candle
 
-Cash book **+7.58%** ($10,758) · signal-only (no cash/fees) was +36.45%. Starts YES **29/30**. Fills 266 · skips 97 · realized $+14.68.
+Cash book **+14.14%** ($11,414) · signal-only (no cash/fees) was +36.45%. Starts YES **29/30**. Fills 275 · skips 97 · realized $+14.68.
 
 ## How this sleeve decides (like you are 10)
 
@@ -401,6 +401,17 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-28 09:30 ET | **SELL** | `USDE` | 65 | $16.85 | $2.21 | $+78.09 | $8,526.76 | ▲ +78.09 after sell → book $10,681.28; vs 09:30 mark -2.21 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🔴 news🟡 digest🟢 judge🔴 ab🟢 heat🔴 vol🟡 buy🟡 |
 | 2026-09-28 09:30 ET | **SELL** | `VICR` | 4 | $280.00 | $2.02 | $+49.98 | $9,644.74 | ▲ +49.98 after sell → book $10,679.26; vs 09:30 mark -2.02 | exit unpriced hold on first bar after 3 sess | — |
 | 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,644.74 | ▲ close $10,758.48 vs 09:30 $10,701.60 (session +79.22) | 16:00 close · cash $9,644.74 · equity $10,758.48 vs 09:30 $10,701.60 (+56.88; session marks +79.22) · 1 name(s) marked open→close (per-name table). HLP×466 09:30 $2.22 → close $2.39 +79.22 | — |
+| 2026-09-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,644.74 | ▲ 09:30 equity $10,767.80 vs yday $10,758.48 (+9.32) | 09:30 open · cash $9,644.74 (unchanged overnight, no fees) · equity $10,767.80 vs prior close $10,758.48 (+9.32) · 1 name(s) re-marked at the open (per-name table). HLP×466 yday $2.39 → 09:30 $2.41 +9.32 | — |
+| 2026-09-29 09:30 ET | **SELL** | `HLP` | 466 | $2.41 | $6.10 | $+85.75 | $10,761.70 | ▲ +85.75 after sell → book $10,761.70; vs 09:30 mark -6.10 | dropped from list after 2 sess (min 1) | join🔴 sector🟡 gen🟢 news🟡 digest🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `KOD` | 15 | $87.50 | $2.04 | — | $9,447.17 | — | rank by w_hot_candle; rank w_hot_candle; list yday_gainer,yday_mover; 🔵; ret5=+177.4; leftover $1345.21 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `SRFM` | 1130 | $1.19 | $14.58 | — | $8,087.89 | — | rank by w_hot_candle; rank w_hot_candle; list yday_gainer; ret5=+77.6; leftover $1345.21 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `GLND` | 337 | $3.98 | $4.35 | — | $6,742.28 | — | rank by w_hot_candle; rank w_hot_candle; list yday_mover; ret5=+55.9; leftover $1345.21 | join🔴 sector🟡 gen🟢 news🟢 digest🟢 ab🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `TJGC` | 48 | $27.68 | $2.13 | — | $5,411.51 | — | rank by w_hot_candle; rank w_hot_candle; list yday_gainer; 🔵; ret5=+62.3; leftover $1345.21 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `ZSQR` | 300 | $4.47 | $3.87 | — | $4,066.64 | — | rank by w_hot_candle; rank w_hot_candle; list yday_gainer,yday_mover; ⚪; ret5=+72.0; leftover $1345.21 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 ab🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `GRML` | 128 | $10.50 | $2.37 | — | $2,720.26 | — | rank by w_hot_candle; rank w_hot_candle; list yday_mover; ret5=+25.8; leftover $1345.21 | join🔴 sector🟡 gen🟢 news🟡 digest🔴 ab🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `FEAM` | 492 | $2.73 | $6.35 | — | $1,370.76 | — | rank by w_hot_candle; rank w_hot_candle; list ohlc_hot; ret5=+12.5; leftover $1345.21 | join🔴 sector🟡 gen🟢 news🟡 digest🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `LTRX` | 183 | $7.34 | $2.54 | — | $25.00 | — | rank by w_hot_candle; rank w_hot_candle; list ohlc_hot; ret5=+16.8; leftover $1345.21 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-09-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $25.00 | ▲ close $11,413.57 vs 09:30 $10,767.80 (session +690.09) | 16:00 close · cash $25.00 · equity $11,413.57 vs 09:30 $10,767.80 (+645.77; session marks +690.09) · 8 name(s) marked open→close (per-name table). KOD×15 09:30 $87.50 → close $91.12 +54.30; SRFM×1130 09:30 $1.19 → close $1.20 +11.30; GLND×337 09:30 $3.98 → close $4.75 +259.49; TJGC×48 09:30 $27.68 → close $34.80 +341.52; ZSQR×300 09:30 $4.47 → close $4.15 -96.00; GRML×128 09:30 $10.50 → close $10.38 -16.00; FEAM×492 09:30 $2.73 → close $3.05 +157.44; LTRX×183 09:30 $7.34 → close $7.22 -21.96 | — |
 
 ## Not taken
 

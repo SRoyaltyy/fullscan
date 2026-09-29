@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared short_news_r_h3/flatten_h5 w=0.7,0.3 net=priority
 
-Cash book **-3.49%** ($9,651) · signal-only (no cash/fees) was —. Starts YES **8/30**. Fills 232 · skips 449 · realized $+750.35.
+Cash book **-5.67%** ($9,433) · signal-only (no cash/fees) was —. Starts YES **8/30**. Fills 239 · skips 449 · realized $+750.35.
 
 ## How this sleeve decides (like you are 10)
 
@@ -55,7 +55,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $9,650.84.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $11,777.97.
 
 ## Every lot, every session (09:30 mark and same-day change)
 
@@ -369,6 +369,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-28 09:30 ET | **SELL** | `RBRK` | 21 | $106.94 | $2.08 | $-37.94 | $6,852.89 | ▼ -37.94 after sell → book $9,652.89; vs 09:30 mark -2.08 | flatten_h5: dropped from list after 6 sess (min 5) | — |
 | 2026-09-28 09:30 ET | **SELL** | `VICR` | 10 | $280.00 | $2.05 | $+599.73 | $9,650.84 | ▲ +599.73 after sell → book $9,650.84; vs 09:30 mark -2.05 | flatten_h5: dropped from list after 6 sess (min 5) | — |
 | 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,650.84 | ▲ close $9,650.84 vs 09:30 $9,663.37 (session +0.00) | 16:00 close · cash $9,650.84 · no lots left · equity $9,650.84. | — |
+| 2026-09-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,650.84 | ▲ 09:30 equity $9,650.84 vs yday $9,650.84 (+0.00) | 09:30 open · cash $9,650.84 (unchanged overnight, no fees) · equity $9,650.84 vs prior close $9,650.84 (+0.00) | — |
+| 2026-09-29 09:30 ET | **BUY** | `SN` | 2 | $184.05 | $2.00 | — | $9,280.74 | — | baseline list, no extra gate; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ⚪; ret5=+8.7; combo leftover $482.54; owner flatten_h5 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `DT` | 8 | $57.39 | $2.01 | — | $8,819.61 | — | baseline list, no extra gate; list flatten; wish-list (live io HOLD — not a ticket); ⚪; ret5=+2.6; combo leftover $482.54; owner flatten_h5 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `TOST` | 15 | $30.40 | $2.04 | — | $8,361.58 | — | baseline list, no extra gate; list flatten; wish-list (live io HOLD — not a ticket); ⚪; ret5=+1.9; combo leftover $482.54; owner flatten_h5 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `SONO` | 27 | $17.76 | $2.07 | — | $7,879.98 | — | baseline list, no extra gate; list flatten; wish-list (live io HOLD — not a ticket); ⚪; ret5=+9.8; combo leftover $482.54; owner flatten_h5 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟢 |
+| 2026-09-29 09:30 ET | **BUY** | `PDFS` | 9 | $50.25 | $2.02 | — | $7,425.72 | — | baseline list, no extra gate; list flatten; wish-list (live io HOLD — not a ticket); ⚪; ret5=+6.5; combo leftover $482.54; owner flatten_h5 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `SHOO` | 10 | $45.06 | $2.02 | — | $6,973.10 | — | baseline list, no extra gate; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ⚪; ret5=+4.8; combo leftover $482.54; owner flatten_h5 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **SHORT** | `AEHL` | 583 | $8.26 | $7.79 | — | $11,777.97 | — | news🔴; gate news=bad; list yday_mover; 🔵; ret5=+18.9; combo leftover $4819.34; owner short_news_r_h3 | join🟢 sector🟢 gen🟢 news🔴 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-09-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $11,777.97 | ▼ close $9,433.30 vs 09:30 $9,650.84 (session -197.59) | 16:00 close · cash $11,777.97 · equity $9,433.30 vs 09:30 $9,650.84 (-217.54; session marks -197.59) · 7 name(s) marked open→close (per-name table). SN×2 09:30 $184.05 → close $182.44 -3.22; DT×8 09:30 $57.39 → close $57.53 +1.12; TOST×15 09:30 $30.40 → close $30.46 +0.90; SONO×27 09:30 $17.76 → close $17.85 +2.43; PDFS×9 09:30 $50.25 → close $49.77 -4.32; SHOO×10 09:30 $45.06 → close $45.14 +0.80; AEHL×583 09:30 $8.26 → close $8.59 -195.30 | — |
 
 ## Not taken
 

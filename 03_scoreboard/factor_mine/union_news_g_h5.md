@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ news_g hold 5, no 🚨
 
-Cash book **-17.28%** ($8,272) · signal-only (no cash/fees) was +99.58%. Starts YES **1/30**. Fills 140 · skips 344 · realized $-1589.16.
+Cash book **-15.86%** ($8,414) · signal-only (no cash/fees) was +99.58%. Starts YES **1/30**. Fills 147 · skips 344 · realized $-1589.16.
 
 ## How this sleeve decides (like you are 10)
 
@@ -276,6 +276,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-28 09:30 ET | **SELL** | `SGRY` | 136 | $14.18 | $2.44 | $-214.27 | $6,165.93 | ▼ -214.27 after sell → book $8,291.44; vs 09:30 mark -2.43 | exit unpriced hold on first bar after 3 sess | — |
 | 2026-09-28 09:30 ET | **SELL** | `VERI` | 1632 | $1.29 | $21.34 | $-58.71 | $8,249.87 | ▼ -58.71 after sell → book $8,270.10; vs 09:30 mark -21.34 | exit unpriced hold on first bar after 3 sess | — |
 | 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,249.87 | ▲ close $8,271.93 vs 09:30 $8,322.12 (session +1.83) | 16:00 close · cash $8,249.87 · equity $8,271.93 vs 09:30 $8,322.12 (-50.19; session marks +1.83) · 2 name(s) marked open→close (per-name table). DGXX×2 09:30 $4.55 → close $4.22 -0.66; ZSQR×3 09:30 $3.71 → close $4.54 +2.49 | — |
+| 2026-09-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,249.87 | ▲ 09:30 equity $8,271.98 vs yday $8,271.93 (+0.05) | 09:30 open · cash $8,249.87 (unchanged overnight, no fees) · equity $8,271.98 vs prior close $8,271.93 (+0.05) · 2 name(s) re-marked at the open (per-name table). DGXX×2 yday $4.22 → 09:30 $4.35 +0.26; ZSQR×3 yday $4.54 → 09:30 $4.47 -0.21 | — |
+| 2026-09-29 09:30 ET | **SELL** | `DGXX` | 2 | $4.35 | $0.11 | $-0.06 | $8,258.46 | ▼ -0.06 after sell → book $8,271.87; vs 09:30 mark -0.11 | dropped from list after 5 sess (min 5) | — |
+| 2026-09-29 09:30 ET | **BUY** | `ANNX` | 344 | $3.99 | $4.44 | — | $6,881.46 | — | union ∩ news_g hold 5, no 🚨; gate news=good; list probable,yday_gainer; 🔵; ret5=-5.0; leftover $1376.41 | join🔴 sector🟡 gen🟢 news🟢 digest🟢 ab🔴 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `SGMT` | 138 | $9.92 | $2.40 | — | $5,510.10 | — | union ∩ news_g hold 5, no 🚨; gate news=good; list probable,yday_gainer; ret5=-8.0; leftover $1376.41 | join🔴 sector🟡 gen🟢 news🟢 digest🟢 ab🔴 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `LQDA` | 18 | $72.49 | $2.04 | — | $4,203.23 | — | union ∩ news_g hold 5, no 🚨; gate news=good; list yday_gainer,ohlc_hot; ret5=+10.9; leftover $1376.41 | join🔴 sector🟡 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `ALVO` | 224 | $6.13 | $2.89 | — | $2,827.22 | — | union ∩ news_g hold 5, no 🚨; gate news=good; list yday_gainer,ohlc_hot; ret5=+4.6; leftover $1376.41 | join🔴 sector🟡 gen🟢 news🟢 digest🟢 ab🔴 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `GLND` | 345 | $3.98 | $4.45 | — | $1,449.67 | — | union ∩ news_g hold 5, no 🚨; gate news=good; list yday_mover; ret5=+55.9; leftover $1376.41 | join🔴 sector🟡 gen🟢 news🟢 digest🟢 ab🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `BURL` | 5 | $268.37 | $2.00 | — | $105.82 | — | union ∩ news_g hold 5, no 🚨; gate news=good; list ohlc_hot; 🔵; ret5=+5.8; leftover $1376.41 | join🟢 sector🟡 gen🟢 news🟢 digest🟡 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-09-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $105.82 | ▲ close $8,414.03 vs 09:30 $8,271.98 (session +160.39) | 16:00 close · cash $105.82 · equity $8,414.03 vs 09:30 $8,271.98 (+142.05; session marks +160.39) · 7 name(s) marked open→close (per-name table). ZSQR×3 09:30 $4.47 → close $4.15 -0.96; ANNX×344 09:30 $3.99 → close $4.13 +48.16; SGMT×138 09:30 $9.92 → close $9.33 -81.42; LQDA×18 09:30 $72.49 → close $70.69 -32.40; ALVO×224 09:30 $6.13 → close $5.92 -47.04; GLND×345 09:30 $3.98 → close $4.75 +265.65; BURL×5 09:30 $268.37 → close $270.05 +8.40 | — |
 
 ## Not taken
 

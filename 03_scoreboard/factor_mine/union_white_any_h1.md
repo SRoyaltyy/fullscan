@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · −0 red + (yday up or major catalyst), then Score
 
-Cash book **-13.85%** ($8,615) · signal-only (no cash/fees) was -10.91%. Starts YES **0/30**. Fills 200 · skips 0 · realized $-1084.78.
+Cash book **-15.52%** ($8,449) · signal-only (no cash/fees) was -10.91%. Starts YES **0/30**. Fills 208 · skips 0 · realized $-1084.78.
 
 ## How this sleeve decides (like you are 10)
 
@@ -338,3 +338,13 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-28 09:30 ET | **SELL** | `TXG` | 12 | $86.14 | $2.05 | $+24.49 | $7,576.06 | ▲ +24.49 after sell → book $8,618.57; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | — |
 | 2026-09-28 09:30 ET | **SELL** | `ZSQR` | 281 | $3.71 | $3.68 | $-49.46 | $8,614.89 | ▼ -49.46 after sell → book $8,614.89; vs 09:30 mark -3.68 | dropped from list after 1 sess (min 1) | — |
 | 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,614.89 | ▲ close $8,614.89 vs 09:30 $8,633.42 (session +0.00) | 16:00 close · cash $8,614.89 · no lots left · equity $8,614.89. | — |
+| 2026-09-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,614.89 | ▲ 09:30 equity $8,614.89 vs yday $8,614.89 (+0.00) | 09:30 open · cash $8,614.89 · no holdings · equity $8,614.89 vs prior close $8,614.89 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-09-29 09:30 ET | **BUY** | `SN` | 5 | $184.05 | $2.00 | — | $7,692.63 | — | −0 red + (yday up or major catalyst), then Score; gate cam_bad_max=0,yday_or_catalyst=True; rank list; list flatten; 🔵; ⚪; ret5=+8.7; leftover $1076.86 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `PDFS` | 21 | $50.25 | $2.05 | — | $6,635.33 | — | −0 red + (yday up or major catalyst), then Score; gate cam_bad_max=0,yday_or_catalyst=True; rank list; list flatten; ⚪; ret5=+6.5; leftover $1076.86 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `ADMA` | 107 | $10.04 | $2.31 | — | $5,558.74 | — | −0 red + (yday up or major catalyst), then Score; gate cam_bad_max=0,yday_or_catalyst=True; rank list; list probable,yday_gainer,ohlc_hot; ⚪; ret5=+6.5; leftover $1076.86 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `ZSQR` | 240 | $4.47 | $3.10 | — | $4,482.85 | — | −0 red + (yday up or major catalyst), then Score; gate cam_bad_max=0,yday_or_catalyst=True; rank list; list yday_gainer,yday_mover; ⚪; ret5=+72.0; leftover $1076.86 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 ab🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `BB` | 121 | $8.86 | $2.35 | — | $3,408.43 | — | −0 red + (yday up or major catalyst), then Score; gate cam_bad_max=0,yday_or_catalyst=True; rank list; list yday_gainer; ⚪; ret5=+3.2; leftover $1076.86 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟡 heat🟢 vol🟢 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `VFC` | 74 | $14.51 | $2.21 | — | $2,332.48 | — | −0 red + (yday up or major catalyst), then Score; gate cam_bad_max=0,yday_or_catalyst=True; rank list; list ohlc_hot; 🔵; ⚪; ret5=+10.5; leftover $1076.86 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `RGEN` | 5 | $196.00 | $2.00 | — | $1,350.48 | — | −0 red + (yday up or major catalyst), then Score; gate cam_bad_max=0,yday_or_catalyst=True; rank list; list ohlc_hot; 🔵; ⚪; ret5=+7.4; leftover $1076.86 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `KMX` | 17 | $60.41 | $2.04 | — | $321.55 | — | −0 red + (yday up or major catalyst), then Score; gate cam_bad_max=0,yday_or_catalyst=True; rank list; list earn_react; 🔵; ⚪; ret5=-2.3; leftover $1076.86 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🟡 heat🟢 vol🟢 buy🟡 |
+| 2026-09-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $321.55 | ▼ close $8,448.52 vs 09:30 $8,614.89 (session -148.30) | 16:00 close · cash $321.55 · equity $8,448.52 vs 09:30 $8,614.89 (-166.37; session marks -148.30) · 8 name(s) marked open→close (per-name table). SN×5 09:30 $184.05 → close $182.44 -8.05; PDFS×21 09:30 $50.25 → close $49.77 -10.08; ADMA×107 09:30 $10.04 → close $9.96 -8.56; ZSQR×240 09:30 $4.47 → close $4.15 -76.80; BB×121 09:30 $8.86 → close $8.72 -16.94; VFC×74 09:30 $14.51 → close $14.50 -0.74; RGEN×5 09:30 $196.00 → close $194.57 -7.15; KMX×17 09:30 $60.41 → close $59.23 -19.98 | — |

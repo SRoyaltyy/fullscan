@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · short news🔴 ∩ prior MACD histogram > 0
 
-Cash book **+1.57%** ($10,157) · signal-only (no cash/fees) was +37.55%. Starts YES **29/30**. Fills 81 · skips 81 · realized $+1277.69.
+Cash book **+1.51%** ($10,151) · signal-only (no cash/fees) was +37.55%. Starts YES **29/30**. Fills 81 · skips 81 · realized $+1277.69.
 
 ## How this sleeve decides (like you are 10)
 
@@ -216,6 +216,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-28 09:30 ET | **COVER** | `BAND` | 87 | $61.64 | $2.25 | $-320.51 | $19,856.53 | ▼ -320.51 after sell → book $10,147.22; vs 09:30 mark -2.25 | exit unpriced hold on first bar after 3 sess | — |
 | 2026-09-28 09:30 ET | **COVER** | `FIVN` | 141 | $34.75 | $2.41 | $+329.14 | $14,954.37 | ▲ +329.14 after sell → book $10,144.81; vs 09:30 mark -2.41 | exit unpriced hold on first bar after 4 sess | — |
 | 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $14,954.37 | ▲ close $10,157.27 vs 09:30 $10,149.47 (session +12.46) | 16:00 close · cash $14,954.37 · equity $10,157.27 vs 09:30 $10,149.47 (+7.80; session marks +12.46) · 1 name(s) marked open→close (per-name table). RSKD×623 09:30 $7.72 → close $7.70 +12.46 | — |
+| 2026-09-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $14,954.37 | ▼ 09:30 equity $10,151.04 vs yday $10,157.27 (-6.23) | 09:30 open · cash $14,954.37 (unchanged overnight, no fees) · equity $10,151.04 vs prior close $10,157.27 (-6.23) · 1 name(s) re-marked at the open (per-name table). RSKD×623 yday $7.70 → 09:30 $7.71 -6.23 | — |
+| 2026-09-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $14,954.37 | ▲ close $10,151.04 vs 09:30 $10,151.04 (session +0.00) | 16:00 close · cash $14,954.37 · equity $10,151.04 vs 09:30 $10,151.04 (+0.00; session marks +0.00) · 1 name(s) marked open→close (per-name table). RSKD×623 09:30 $7.71 → close $7.71 -0.00 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `topheavy` · sell `list` · S-boost `none` · 40% to #1, rest split
 
-Cash book **-21.75%** ($7,825) · signal-only (no cash/fees) was -4.92%. Starts YES **0/30**. Fills 191 · skips 294 · realized $-410.95.
+Cash book **-20.86%** ($7,914) · signal-only (no cash/fees) was -4.92%. Starts YES **0/30**. Fills 199 · skips 294 · realized $-410.95.
 
 ## How this sleeve decides (like you are 10)
 
@@ -323,6 +323,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-28 09:30 ET | **SELL** | `PACS` | 3 | $41.27 | $1.27 | $-4.51 | $1,096.49 | ▼ -4.51 after sell → book $7,941.67; vs 09:30 mark -1.27 | exit unpriced hold on first bar after 4 sess | — |
 | 2026-09-28 09:30 ET | **SELL** | `PGEN` | 2 | $7.61 | $0.18 | $-1.02 | $1,111.53 | ▼ -1.02 after sell → book $7,941.49; vs 09:30 mark -0.18 | exit unpriced hold on first bar after 3 sess | — |
 | 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1,111.53 | ▼ close $7,825.00 vs 09:30 $7,943.94 (session -116.49) | 16:00 close · cash $1,111.53 · equity $7,825.00 vs 09:30 $7,943.94 (-118.94; session marks -116.49) · 8 name(s) marked open→close (per-name table). AEHL×74 09:30 $9.01 → close $8.23 -57.72; BLFS×17 09:30 $38.13 → close $39.15 +17.34; HALO×5 09:30 $113.34 → close $112.89 -2.25; MRVI×88 09:30 $7.49 → close $7.63 +12.32; OMER×32 09:30 $19.83 → close $19.43 -12.80; REGN×3 09:30 $771.84 → close $752.25 -58.76; TXG×8 09:30 $86.14 → close $88.50 +18.88; WRBY×25 09:30 $26.00 → close $24.66 -33.50 | — |
+| 2026-09-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $1,111.53 | ▼ 09:30 equity $7,799.55 vs yday $7,825.00 (-25.45) | 09:30 open · cash $1,111.53 (unchanged overnight, no fees) · equity $7,799.55 vs prior close $7,825.00 (-25.45) · 8 name(s) re-marked at the open (per-name table). AEHL×74 yday $8.23 → 09:30 $8.26 +1.85; BLFS×17 yday $39.15 → 09:30 $39.04 -1.87; HALO×5 yday $112.89 → 09:30 $112.89 +0.00; MRVI×88 yday $7.63 → 09:30 $7.52 -9.68; OMER×32 yday $19.43 → 09:30 $19.26 -5.44; REGN×3 yday $752.25 → 09:30 $745.85 -19.20; TXG×8 yday $88.50 → 09:30 $88.83 +2.64; WRBY×25 yday $24.66 → 09:30 $24.91 +6.25 | — |
+| 2026-09-29 09:30 ET | **BUY** | `SN` | 2 | $184.05 | $2.00 | — | $741.43 | — | 40% to #1, rest split; list flatten; 🔵; ⚪; ret5=+8.7; leftover $444.61 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `DT` | 1 | $57.39 | $0.58 | — | $683.47 | — | 40% to #1, rest split; list flatten; ⚪; ret5=+2.6; leftover $95.27 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `TOST` | 3 | $30.40 | $0.92 | — | $591.35 | — | 40% to #1, rest split; list flatten; ⚪; ret5=+1.9; leftover $95.27 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `SONO` | 5 | $17.76 | $0.90 | — | $501.64 | — | 40% to #1, rest split; list flatten; ⚪; ret5=+9.8; leftover $95.27 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟢 |
+| 2026-09-29 09:30 ET | **BUY** | `PDFS` | 1 | $50.25 | $0.51 | — | $450.89 | — | 40% to #1, rest split; list flatten; ⚪; ret5=+6.5; leftover $95.27 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `SHOO` | 2 | $45.06 | $0.91 | — | $359.86 | — | 40% to #1, rest split; list flatten; 🔵; ⚪; ret5=+4.8; leftover $95.27 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `SFIX` | 38 | $2.47 | $1.05 | — | $264.95 | — | 40% to #1, rest split; list probable,yday_gainer,yday_mover; 🔵; ret5=-13.3; leftover $95.27 | join🟡 sector🟡 gen🟢 news🟡 digest🟡 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `ANNX` | 23 | $3.99 | $0.99 | — | $172.19 | — | 40% to #1, rest split; list probable,yday_gainer; 🔵; ret5=-5.0; leftover $95.27 | join🔴 sector🟡 gen🟢 news🟢 digest🟢 ab🔴 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $172.19 | ▲ close $7,914.41 vs 09:30 $7,799.55 (session +122.71) | 16:00 close · cash $172.19 · equity $7,914.41 vs 09:30 $7,799.55 (+114.86; session marks +122.71) · 16 name(s) marked open→close (per-name table). AEHL×74 09:30 $8.26 → close $8.59 +24.79; BLFS×17 09:30 $39.04 → close $39.22 +3.06; HALO×5 09:30 $112.89 → close $111.56 -6.65; MRVI×88 09:30 $7.52 → close $7.65 +11.44; OMER×32 09:30 $19.26 → close $19.25 -0.32; REGN×3 09:30 $745.85 → close $750.51 +13.98; TXG×8 09:30 $88.83 → close $90.04 +9.68; WRBY×25 09:30 $24.91 → close $27.47 +64.00; SN×2 09:30 $184.05 → close $182.44 -3.22; DT×1 09:30 $57.39 → close $57.53 +0.14; TOST×3 09:30 $30.40 → close $30.46 +0.18; SONO×5 09:30 $17.76 → close $17.85 +0.45; PDFS×1 09:30 $50.25 → close $49.77 -0.48; SHOO×2 09:30 $45.06 → close $45.14 +0.16; SFIX×38 09:30 $2.47 → close $2.53 +2.28; ANNX×23 09:30 $3.99 → close $4.13 +3.22 | — |
 
 ## Not taken
 

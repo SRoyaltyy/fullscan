@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `topheavy` · sell `list` · S-boost `none` · 40% to #1, rest split
 
-Cash book **-10.45%** ($8,955) · signal-only (no cash/fees) was -0.80%. Starts YES **9/30**. Fills 256 · skips 107 · realized $+589.32.
+Cash book **-10.48%** ($8,952) · signal-only (no cash/fees) was -0.80%. Starts YES **9/30**. Fills 264 · skips 107 · realized $+589.32.
 
 ## How this sleeve decides (like you are 10)
 
@@ -388,6 +388,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-28 09:30 ET | **SELL** | `TXG` | 9 | $86.14 | $2.04 | $+17.37 | $8,202.85 | ▲ +17.37 after sell → book $8,956.85; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | — |
 | 2026-09-28 09:30 ET | **SELL** | `WRBY` | 29 | $26.00 | $2.10 | $-12.00 | $8,954.76 | ▼ -12.00 after sell → book $8,954.76; vs 09:30 mark -2.09 | dropped from list after 1 sess (min 1) | — |
 | 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,954.76 | ▲ close $8,954.76 vs 09:30 $8,971.74 (session +0.00) | 16:00 close · cash $8,954.76 · no lots left · equity $8,954.76. | — |
+| 2026-09-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,954.76 | ▲ 09:30 equity $8,954.76 vs yday $8,954.76 (+0.00) | 09:30 open · cash $8,954.76 · no holdings · equity $8,954.76 vs prior close $8,954.76 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-09-29 09:30 ET | **BUY** | `SN` | 19 | $184.05 | $2.05 | — | $5,455.76 | — | 40% to #1, rest split; list flatten; 🔵; ⚪; ret5=+8.7; leftover $3581.90 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `DT` | 13 | $57.39 | $2.03 | — | $4,707.66 | — | 40% to #1, rest split; list flatten; ⚪; ret5=+2.6; leftover $767.55 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `TOST` | 25 | $30.40 | $2.06 | — | $3,945.60 | — | 40% to #1, rest split; list flatten; ⚪; ret5=+1.9; leftover $767.55 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `SONO` | 43 | $17.76 | $2.12 | — | $3,179.80 | — | 40% to #1, rest split; list flatten; ⚪; ret5=+9.8; leftover $767.55 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟢 |
+| 2026-09-29 09:30 ET | **BUY** | `PDFS` | 15 | $50.25 | $2.04 | — | $2,424.01 | — | 40% to #1, rest split; list flatten; ⚪; ret5=+6.5; leftover $767.55 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `SHOO` | 17 | $45.06 | $2.04 | — | $1,655.95 | — | 40% to #1, rest split; list flatten; 🔵; ⚪; ret5=+4.8; leftover $767.55 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `SFIX` | 310 | $2.47 | $4.00 | — | $886.25 | — | 40% to #1, rest split; list probable,yday_gainer,yday_mover; 🔵; ret5=-13.3; leftover $767.55 | join🟡 sector🟡 gen🟢 news🟡 digest🟡 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `ANNX` | 192 | $3.99 | $2.57 | — | $117.61 | — | 40% to #1, rest split; list probable,yday_gainer; 🔵; ret5=-5.0; leftover $767.55 | join🔴 sector🟡 gen🟢 news🟢 digest🟢 ab🔴 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $117.61 | ▲ close $8,952.10 vs 09:30 $8,954.76 (session +16.24) | 16:00 close · cash $117.61 · equity $8,952.10 vs 09:30 $8,954.76 (-2.66; session marks +16.24) · 8 name(s) marked open→close (per-name table). SN×19 09:30 $184.05 → close $182.44 -30.59; DT×13 09:30 $57.39 → close $57.53 +1.82; TOST×25 09:30 $30.40 → close $30.46 +1.50; SONO×43 09:30 $17.76 → close $17.85 +3.87; PDFS×15 09:30 $50.25 → close $49.77 -7.20; SHOO×17 09:30 $45.06 → close $45.14 +1.36; SFIX×310 09:30 $2.47 → close $2.53 +18.60; ANNX×192 09:30 $3.99 → close $4.13 +26.88 | — |
 
 ## Not taken
 

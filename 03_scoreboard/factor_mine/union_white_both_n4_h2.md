@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 4 · rank `list` · size `leftover` · sell `list` · S-boost `none` · −0 red + yday up AND catalyst, top 4 by Score
 
-Cash book **-2.76%** ($9,724) · signal-only (no cash/fees) was +20.82%. Starts YES **13/30**. Fills 79 · skips 47 · realized $+2113.32.
+Cash book **-2.88%** ($9,712) · signal-only (no cash/fees) was +20.82%. Starts YES **13/30**. Fills 82 · skips 47 · realized $+2113.32.
 
 ## How this sleeve decides (like you are 10)
 
@@ -217,6 +217,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-28 09:30 ET | **SELL** | `DXCM` | 27 | $86.87 | $2.10 | $-75.18 | $4,747.87 | ▼ -75.18 after sell → book $9,671.48; vs 09:30 mark -2.10 | exit unpriced hold on first bar after 3 sess | — |
 | 2026-09-28 09:30 ET | **SELL** | `HALO` | 21 | $113.34 | $2.08 | $-77.84 | $7,125.93 | ▼ -77.84 after sell → book $9,669.40; vs 09:30 mark -2.08 | dropped from list after 3 sess (min 2) | — |
 | 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,125.93 | ▲ close $9,723.92 vs 09:30 $9,675.87 (session +54.52) | 16:00 close · cash $7,125.93 · equity $9,723.92 vs 09:30 $9,675.87 (+48.05; session marks +54.52) · 3 name(s) marked open→close (per-name table). MRVI×113 09:30 $7.49 → close $7.63 +15.82; TEM×10 09:30 $83.57 → close $85.08 +15.10; TXG×10 09:30 $86.14 → close $88.50 +23.60 | — |
+| 2026-09-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,125.93 | ▼ 09:30 equity $9,718.84 vs yday $9,723.92 (-5.08) | 09:30 open · cash $7,125.93 (unchanged overnight, no fees) · equity $9,718.84 vs prior close $9,723.92 (-5.08) · 3 name(s) re-marked at the open (per-name table). MRVI×113 yday $7.63 → 09:30 $7.52 -12.43; TEM×10 yday $85.08 → 09:30 $85.48 +4.05; TXG×10 yday $88.50 → 09:30 $88.83 +3.30 | — |
+| 2026-09-29 09:30 ET | **SELL** | `MRVI` | 113 | $7.52 | $2.36 | $-19.38 | $7,973.33 | ▼ -19.38 after sell → book $9,716.48; vs 09:30 mark -2.36 | dropped from list after 2 sess (min 2) | — |
+| 2026-09-29 09:30 ET | **SELL** | `TEM` | 10 | $85.48 | $2.04 | $+13.84 | $8,826.14 | ▲ +13.84 after sell → book $9,714.44; vs 09:30 mark -2.04 | dropped from list after 2 sess (min 2) | — |
+| 2026-09-29 09:30 ET | **SELL** | `TXG` | 10 | $88.83 | $2.04 | $+46.64 | $9,712.40 | ▲ +46.64 after sell → book $9,712.40; vs 09:30 mark -2.04 | dropped from list after 2 sess (min 2) | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,712.40 | ▲ close $9,712.40 vs 09:30 $9,718.84 (session +0.00) | 16:00 close · cash $9,712.40 · no lots left · equity $9,712.40. | — |
 
 ## Not taken
 

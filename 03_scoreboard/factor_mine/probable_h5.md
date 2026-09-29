@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `probable` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · baseline list, no extra gate
 
-Cash book **-10.77%** ($8,923) · signal-only (no cash/fees) was -15.54%. Starts YES **4/30**. Fills 201 · skips 495 · realized $-1482.45.
+Cash book **-10.96%** ($8,904) · signal-only (no cash/fees) was -15.54%. Starts YES **4/30**. Fills 209 · skips 495 · realized $-1482.45.
 
 ## How this sleeve decides (like you are 10)
 
@@ -333,6 +333,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-28 09:30 ET | **SELL** | `TNGX` | 46 | $24.92 | $2.15 | $-26.36 | $7,840.08 | ▼ -26.36 after sell → book $8,925.30; vs 09:30 mark -2.15 | exit unpriced hold on first bar after 3 sess | — |
 | 2026-09-28 09:30 ET | **SELL** | `TTAN` | 19 | $57.00 | $2.07 | $-102.15 | $8,921.02 | ▼ -102.15 after sell → book $8,923.24; vs 09:30 mark -2.06 | exit unpriced hold on first bar after 3 sess | — |
 | 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,921.02 | ▲ close $8,923.41 vs 09:30 $8,959.03 (session +0.17) | 16:00 close · cash $8,921.02 · equity $8,923.41 vs 09:30 $8,959.03 (-35.62; session marks +0.17) · 1 name(s) marked open→close (per-name table). HLP×1 09:30 $2.22 → close $2.39 +0.17 | — |
+| 2026-09-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,921.02 | ▲ 09:30 equity $8,923.43 vs yday $8,923.41 (+0.02) | 09:30 open · cash $8,921.02 (unchanged overnight, no fees) · equity $8,923.43 vs prior close $8,923.41 (+0.02) · 1 name(s) re-marked at the open (per-name table). HLP×1 yday $2.39 → 09:30 $2.41 +0.02 | — |
+| 2026-09-29 09:30 ET | **BUY** | `SFIX` | 451 | $2.47 | $5.82 | — | $7,801.23 | — | baseline list, no extra gate; list probable,yday_gainer,yday_mover; 🔵; ret5=-13.3; leftover $1115.13 | join🟡 sector🟡 gen🟢 news🟡 digest🟡 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `ANNX` | 279 | $3.99 | $3.60 | — | $6,684.42 | — | baseline list, no extra gate; list probable,yday_gainer; 🔵; ret5=-5.0; leftover $1115.13 | join🔴 sector🟡 gen🟢 news🟢 digest🟢 ab🔴 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `ABCL` | 78 | $14.12 | $2.22 | — | $5,580.84 | — | baseline list, no extra gate; list probable,yday_gainer,ohlc_hot; ret5=+10.0; leftover $1115.13 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🟡 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `BUR` | 282 | $3.95 | $3.64 | — | $4,463.30 | — | baseline list, no extra gate; list probable,yday_gainer; ret5=-0.3; leftover $1115.13 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `ADMA` | 111 | $10.04 | $2.32 | — | $3,346.54 | — | baseline list, no extra gate; list probable,yday_gainer,ohlc_hot; ⚪; ret5=+6.5; leftover $1115.13 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `SGMT` | 112 | $9.92 | $2.33 | — | $2,233.17 | — | baseline list, no extra gate; list probable,yday_gainer; ret5=-8.0; leftover $1115.13 | join🔴 sector🟡 gen🟢 news🟢 digest🟢 ab🔴 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `XNCR` | 43 | $25.84 | $2.12 | — | $1,119.72 | — | baseline list, no extra gate; list probable,yday_gainer; ret5=+2.3; leftover $1115.13 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `MBX` | 19 | $57.27 | $2.05 | — | $29.54 | — | baseline list, no extra gate; list probable,yday_gainer; ret5=-5.6; leftover $1115.13 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-09-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $29.54 | ▲ close $8,903.82 vs 09:30 $8,923.43 (session +4.49) | 16:00 close · cash $29.54 · equity $8,903.82 vs 09:30 $8,923.43 (-19.61; session marks +4.49) · 9 name(s) marked open→close (per-name table). HLP×1 09:30 $2.41 → close $2.45 +0.04; SFIX×451 09:30 $2.47 → close $2.53 +27.06; ANNX×279 09:30 $3.99 → close $4.13 +39.06; ABCL×78 09:30 $14.12 → close $14.82 +54.60; BUR×282 09:30 $3.95 → close $3.90 -14.10; ADMA×111 09:30 $10.04 → close $9.96 -8.88; SGMT×112 09:30 $9.92 → close $9.33 -66.08; XNCR×43 09:30 $25.84 → close $25.00 -36.33; MBX×19 09:30 $57.27 → close $57.75 +9.12 | — |
 
 ## Not taken
 

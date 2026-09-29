@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared overnight_mega_h1/union_hot_n4_holdup w=0.5,0.5 net=priority
 
-Cash book **+22.36%** ($12,236) · signal-only (no cash/fees) was —. Starts YES **29/30**. Fills 143 · skips 62 · realized $+1377.50.
+Cash book **+28.91%** ($12,891) · signal-only (no cash/fees) was —. Starts YES **29/30**. Fills 147 · skips 62 · realized $+1377.50.
 
 ## How this sleeve decides (like you are 10)
 
@@ -55,7 +55,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $12,236.00.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $41.65.
 
 ## Every lot, every session (09:30 mark and same-day change)
 
@@ -280,6 +280,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-28 09:30 ET | **SELL** | `USDE` | 102 | $16.85 | $2.33 | $+124.81 | $9,718.05 | ▲ +124.81 after sell → book $12,238.05; vs 09:30 mark -2.33 | union_hot_n4_holdup: dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🔴 news🟡 digest🟢 judge🔴 ab🟢 heat🔴 vol🟡 buy🟡 |
 | 2026-09-28 09:30 ET | **SELL** | `VICR` | 9 | $280.00 | $2.05 | $+117.44 | $12,236.00 | ▲ +117.44 after sell → book $12,236.00; vs 09:30 mark -2.05 | union_hot_n4_holdup: dropped from list after 3 sess (min 1) | — |
 | 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $12,236.00 | ▲ close $12,236.00 vs 09:30 $12,257.61 (session +0.00) | 16:00 close · cash $12,236.00 · no lots left · equity $12,236.00. | — |
+| 2026-09-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $12,236.00 | ▲ 09:30 equity $12,236.00 vs yday $12,236.00 (+0.00) | 09:30 open · cash $12,236.00 (unchanged overnight, no fees) · equity $12,236.00 vs prior close $12,236.00 (+0.00) | — |
+| 2026-09-29 09:30 ET | **BUY** | `KOD` | 34 | $87.50 | $2.09 | — | $9,258.91 | — | hot4; S>0 lots stay through the next 09:30 so the overnight gap is in the book; rank hot_score; list yday_gainer,yday_mover; 🔵; ret5=+177.4; combo leftover $3059.00; owner union_hot_n4_holdup | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `GLND` | 768 | $3.98 | $9.91 | — | $6,192.36 | — | hot4; S>0 lots stay through the next 09:30 so the overnight gap is in the book; rank hot_score; list yday_mover; ret5=+55.9; combo leftover $3059.00; owner union_hot_n4_holdup | join🔴 sector🟡 gen🟢 news🟢 digest🟢 ab🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `SRFM` | 2570 | $1.19 | $33.15 | — | $3,100.91 | — | hot4; S>0 lots stay through the next 09:30 so the overnight gap is in the book; rank hot_score; list yday_gainer; ret5=+77.6; combo leftover $3059.00; owner union_hot_n4_holdup | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `GRML` | 291 | $10.50 | $3.75 | — | $41.65 | — | hot4; S>0 lots stay through the next 09:30 so the overnight gap is in the book; rank hot_score; list yday_mover; ret5=+25.8; combo leftover $3059.00; owner union_hot_n4_holdup | join🔴 sector🟡 gen🟢 news🟡 digest🔴 ab🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-09-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $41.65 | ▲ close $12,890.86 vs 09:30 $12,236.00 (session +703.76) | 16:00 close · cash $41.65 · equity $12,890.86 vs 09:30 $12,236.00 (+654.86; session marks +703.76) · 4 name(s) marked open→close (per-name table). KOD×34 09:30 $87.50 → close $91.12 +123.08; GLND×768 09:30 $3.98 → close $4.75 +591.36; SRFM×2570 09:30 $1.19 → close $1.20 +25.70; GRML×291 09:30 $10.50 → close $10.38 -36.38 | — |
 
 ## Not taken
 

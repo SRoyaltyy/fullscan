@@ -261,6 +261,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-28 09:30 ET | **COVER** | `VGZ` | 246 | $2.62 | $3.17 | $+0.96 | $10,492.61 | ▲ +0.96 after sell → book $9,878.15; vs 09:30 mark -3.17 | exit unpriced hold on first bar after 4 sess | — |
 | 2026-09-28 09:30 ET | **COVER** | `YSS` | 66 | $9.31 | $2.19 | $+27.27 | $9,875.96 | ▲ +27.27 after sell → book $9,875.96; vs 09:30 mark -2.19 | exit unpriced hold on first bar after 4 sess | — |
 | 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,875.96 | ▲ close $9,875.96 vs 09:30 $9,891.90 (session +0.00) | 16:00 close · cash $9,875.96 · no lots left · equity $9,875.96. | — |
+| 2026-09-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,875.96 | ▲ 09:30 equity $9,875.96 vs yday $9,875.96 (+0.00) | 09:30 open · cash $9,875.96 · no holdings · equity $9,875.96 vs prior close $9,875.96 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-09-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,875.96 | ▲ close $9,875.96 vs 09:30 $9,875.96 (session +0.00) | 16:00 close · cash $9,875.96 · no lots left · equity $9,875.96. | — |
 
 ## Not taken
 

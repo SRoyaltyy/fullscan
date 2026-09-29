@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-20.17%** ($7,983) · signal-only (no cash/fees) was -4.35%. Starts YES **0/30**. Fills 164 · skips 0 · realized $-550.20.
+Cash book **-20.64%** ($7,936) · signal-only (no cash/fees) was -4.35%. Starts YES **0/30**. Fills 172 · skips 0 · realized $-550.20.
 
 ## How this sleeve decides (like you are 10)
 
@@ -303,3 +303,13 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-28 09:30 ET | **SELL** | `TEM` | 16 | $83.57 | $2.06 | $-6.10 | $6,606.71 | ▼ -6.10 after sell → book $7,984.95; vs 09:30 mark -2.06 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 digest🟢 judge🟢 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
 | 2026-09-28 09:30 ET | **SELL** | `TXG` | 16 | $86.14 | $2.06 | $+33.98 | $7,982.90 | ▲ +33.98 after sell → book $7,982.90; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | — |
 | 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,982.90 | ▲ close $7,982.90 vs 09:30 $7,996.22 (session +0.00) | 16:00 close · cash $7,982.90 · no lots left · equity $7,982.90. | — |
+| 2026-09-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,982.90 | ▲ 09:30 equity $7,982.90 vs yday $7,982.90 (+0.00) | 09:30 open · cash $7,982.90 · no holdings · equity $7,982.90 vs prior close $7,982.90 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-09-29 09:30 ET | **BUY** | `SN` | 5 | $184.05 | $2.00 | — | $7,060.64 | — | combo gate; gate ret_5_max=10.0,rvol_max=2.2,zero_red=True; list flatten; 🔵; ⚪; ret5=+8.7; leftover $997.86 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `DT` | 17 | $57.39 | $2.04 | — | $6,082.97 | — | combo gate; gate ret_5_max=10.0,rvol_max=2.2,zero_red=True; list flatten; ⚪; ret5=+2.6; leftover $997.86 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `TOST` | 32 | $30.40 | $2.09 | — | $5,108.09 | — | combo gate; gate ret_5_max=10.0,rvol_max=2.2,zero_red=True; list flatten; ⚪; ret5=+1.9; leftover $997.86 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `SONO` | 56 | $17.76 | $2.16 | — | $4,111.37 | — | combo gate; gate ret_5_max=10.0,rvol_max=2.2,zero_red=True; list flatten; ⚪; ret5=+9.8; leftover $997.86 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟢 |
+| 2026-09-29 09:30 ET | **BUY** | `PDFS` | 19 | $50.25 | $2.05 | — | $3,154.57 | — | combo gate; gate ret_5_max=10.0,rvol_max=2.2,zero_red=True; list flatten; ⚪; ret5=+6.5; leftover $997.86 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `SHOO` | 22 | $45.06 | $2.06 | — | $2,161.20 | — | combo gate; gate ret_5_max=10.0,rvol_max=2.2,zero_red=True; list flatten; 🔵; ⚪; ret5=+4.8; leftover $997.86 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `ADMA` | 99 | $10.04 | $2.29 | — | $1,164.95 | — | combo gate; gate ret_5_max=10.0,rvol_max=2.2,zero_red=True; list probable,yday_gainer,ohlc_hot; ⚪; ret5=+6.5; leftover $997.86 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `BB` | 112 | $8.86 | $2.33 | — | $170.30 | — | combo gate; gate ret_5_max=10.0,rvol_max=2.2,zero_red=True; list yday_gainer; ⚪; ret5=+3.2; leftover $997.86 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟡 heat🟢 vol🟢 buy🟡 |
+| 2026-09-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $170.30 | ▼ close $7,936.22 vs 09:30 $7,982.90 (session -29.67) | 16:00 close · cash $170.30 · equity $7,936.22 vs 09:30 $7,982.90 (-46.68; session marks -29.67) · 8 name(s) marked open→close (per-name table). SN×5 09:30 $184.05 → close $182.44 -8.05; DT×17 09:30 $57.39 → close $57.53 +2.38; TOST×32 09:30 $30.40 → close $30.46 +1.92; SONO×56 09:30 $17.76 → close $17.85 +5.04; PDFS×19 09:30 $50.25 → close $49.77 -9.12; SHOO×22 09:30 $45.06 → close $45.14 +1.76; ADMA×99 09:30 $10.04 → close $9.96 -7.92; BB×112 09:30 $8.86 → close $8.72 -15.68 | — |

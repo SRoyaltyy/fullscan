@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-8.24%** ($9,175) · signal-only (no cash/fees) was +139.18%. Starts YES **0/30**. Fills 96 · skips 133 · realized $-1334.78.
+Cash book **-14.13%** ($8,586) · signal-only (no cash/fees) was +139.18%. Starts YES **0/30**. Fills 97 · skips 133 · realized $-1334.78.
 
 ## How this sleeve decides (like you are 10)
 
@@ -234,6 +234,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-28 09:30 ET | **SELL** | `CMPX` | 4 | $1.14 | $0.08 | $-0.46 | $12.78 | ▼ -0.46 after sell → book $8,144.31; vs 09:30 mark -0.08 | exit unpriced hold on first bar after 3 sess | — |
 | 2026-09-28 09:30 ET | **SELL** | `IVVD` | 219 | $0.98 | $2.84 | $-13.09 | $223.71 | ▼ -13.09 after sell → book $8,141.47; vs 09:30 mark -2.84 | exit unpriced hold on first bar after 4 sess | — |
 | 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $223.71 | ▲ close $9,175.45 vs 09:30 $8,144.39 (session +1,033.98) | 16:00 close · cash $223.71 · equity $9,175.45 vs 09:30 $8,144.39 (+1031.06; session marks +1033.98) · 2 name(s) marked open→close (per-name table). SECZ×250 09:30 $16.00 → close $16.63 +157.50; ZSQR×1056 09:30 $3.71 → close $4.54 +876.48 | — |
+| 2026-09-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $223.71 | ▼ 09:30 equity $9,091.53 vs yday $9,175.45 (-83.92) | 09:30 open · cash $223.71 (unchanged overnight, no fees) · equity $9,091.53 vs prior close $9,175.45 (-83.92) · 2 name(s) re-marked at the open (per-name table). SECZ×250 yday $16.63 → 09:30 $16.59 -10.00; ZSQR×1056 yday $4.54 → 09:30 $4.47 -73.92 | — |
+| 2026-09-29 09:30 ET | **BUY** | `GLND` | 28 | $3.98 | $1.20 | — | $111.07 | — | combo gate; gate news=good,vol=good; list yday_mover; ret5=+55.9; leftover $111.86 | join🔴 sector🟡 gen🟢 news🟢 digest🟢 ab🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-09-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $111.07 | ▼ close $8,586.47 vs 09:30 $9,091.53 (session -503.86) | 16:00 close · cash $111.07 · equity $8,586.47 vs 09:30 $9,091.53 (-505.06; session marks -503.86) · 3 name(s) marked open→close (per-name table). SECZ×250 09:30 $16.59 → close $15.84 -187.50; ZSQR×1056 09:30 $4.47 → close $4.15 -337.92; GLND×28 09:30 $3.98 → close $4.75 +21.56 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ rsi_os, no 🚨
 
-Cash book **-11.66%** ($8,834) · signal-only (no cash/fees) was -42.97%. Starts YES **6/30**. Fills 75 · skips 88 · realized $-2389.72.
+Cash book **-11.24%** ($8,876) · signal-only (no cash/fees) was -42.97%. Starts YES **6/30**. Fills 78 · skips 88 · realized $-2389.72.
 
 ## How this sleeve decides (like you are 10)
 
@@ -211,6 +211,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-28 09:30 ET | **SELL** | `NMRA` | 22 | $0.65 | $0.23 | $-3.10 | $38.95 | ▼ -3.10 after sell → book $8,438.64; vs 09:30 mark -0.23 | exit unpriced hold on first bar after 3 sess | — |
 | 2026-09-28 09:30 ET | **SELL** | `XNDU` | 2 | $4.86 | $0.12 | $-2.51 | $48.55 | ▼ -2.51 after sell → book $8,438.52; vs 09:30 mark -0.12 | exit unpriced hold on first bar after 3 sess | — |
 | 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $48.55 | ▲ close $8,833.60 vs 09:30 $8,439.07 (session +395.08) | 16:00 close · cash $48.55 · equity $8,833.60 vs 09:30 $8,439.07 (+394.53; session marks +395.08) · 3 name(s) marked open→close (per-name table). ACAD×134 09:30 $20.53 → close $20.53 +0.00; GEN×129 09:30 $21.44 → close $20.85 -76.11; SFIX×1354 09:30 $2.12 → close $2.47 +471.19 | — |
+| 2026-09-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $48.55 | ▲ 09:30 equity $8,857.31 vs yday $8,833.60 (+23.71) | 09:30 open · cash $48.55 (unchanged overnight, no fees) · equity $8,857.31 vs prior close $8,833.60 (+23.71) · 3 name(s) re-marked at the open (per-name table). ACAD×134 yday $20.53 → 09:30 $20.37 -21.44; GEN×129 yday $20.85 → 09:30 $21.20 +45.15; SFIX×1354 yday $2.47 → 09:30 $2.47 +0.00 | — |
+| 2026-09-29 09:30 ET | **BUY** | `TDTH` | 10 | $0.89 | $0.12 | — | $39.53 | — | union ∩ rsi_os, no 🚨; gate rsi_os=True; list yday_mover; ret5=-36.6; leftover $9.71 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `OCUL` | 1 | $7.76 | $0.08 | — | $31.69 | — | union ∩ rsi_os, no 🚨; gate rsi_os=True; list yday_mover; ret5=-23.4; leftover $9.71 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `MRLN` | 5 | $1.75 | $0.10 | — | $22.84 | — | union ∩ rsi_os, no 🚨; gate rsi_os=True; list yday_mover; 🔵; ret5=-5.9; leftover $9.71 | join🟡 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-09-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $22.84 | ▲ close $8,875.76 vs 09:30 $8,857.31 (session +18.75) | 16:00 close · cash $22.84 · equity $8,875.76 vs 09:30 $8,857.31 (+18.45; session marks +18.75) · 6 name(s) marked open→close (per-name table). ACAD×134 09:30 $20.37 → close $20.22 -20.10; GEN×129 09:30 $21.20 → close $20.85 -45.15; SFIX×1354 09:30 $2.47 → close $2.53 +81.24; TDTH×10 09:30 $0.89 → close $1.14 +2.50; OCUL×1 09:30 $7.76 → close $7.87 +0.11; MRLN×5 09:30 $1.75 → close $1.78 +0.15 | — |
 
 ## Not taken
 

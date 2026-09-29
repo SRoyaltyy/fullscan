@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `macd_hist` · size `leftover` · sell `list` · S-boost `none` · rank by macd_hist
 
-Cash book **-11.58%** ($8,842) · signal-only (no cash/fees) was -17.17%. Starts YES **5/30**. Fills 179 · skips 257 · realized $-743.63.
+Cash book **-10.71%** ($8,929) · signal-only (no cash/fees) was -17.17%. Starts YES **5/30**. Fills 186 · skips 257 · realized $-743.63.
 
 ## How this sleeve decides (like you are 10)
 
@@ -314,6 +314,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-28 09:30 ET | **SELL** | `TWLO` | 1 | $267.85 | $2.01 | $-7.76 | $3,359.88 | ▼ -7.76 after sell → book $8,889.36; vs 09:30 mark -2.01 | exit unpriced hold on first bar after 4 sess | — |
 | 2026-09-28 09:30 ET | **SELL** | `VICR` | 4 | $280.00 | $2.02 | $+194.98 | $4,477.85 | ▲ +194.98 after sell → book $8,887.33; vs 09:30 mark -2.03 | exit unpriced hold on first bar after 5 sess | — |
 | 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $4,477.85 | ▼ close $8,841.77 vs 09:30 $8,903.91 (session -45.55) | 16:00 close · cash $4,477.85 · equity $8,841.77 vs 09:30 $8,903.91 (-62.14; session marks -45.55) · 7 name(s) marked open→close (per-name table). AMD×1 09:30 $624.89 → close $607.87 -17.02; CDNS×2 09:30 $318.99 → close $326.70 +15.42; CLS×2 09:30 $363.93 → close $356.53 -14.80; ILMN×2 09:30 $265.95 → close $271.90 +11.90; META×1 09:30 $750.42 → close $715.62 -34.80; NTRA×1 09:30 $408.94 → close $411.77 +2.83; TWST×4 09:30 $181.87 → close $179.60 -9.08 | — |
+| 2026-09-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $4,477.85 | ▲ 09:30 equity $8,862.31 vs yday $8,841.77 (+20.54) | 09:30 open · cash $4,477.85 (unchanged overnight, no fees) · equity $8,862.31 vs prior close $8,841.77 (+20.54) · 7 name(s) re-marked at the open (per-name table). AMD×1 yday $607.87 → 09:30 $616.74 +8.87; CDNS×2 yday $326.70 → 09:30 $321.20 -11.00; CLS×2 yday $356.53 → 09:30 $362.35 +11.64; ILMN×2 yday $271.90 → 09:30 $271.00 -1.80; META×1 yday $715.62 → 09:30 $725.34 +9.72; NTRA×1 yday $411.77 → 09:30 $413.69 +1.92; TWST×4 yday $179.60 → 09:30 $179.90 +1.20 | — |
+| 2026-09-29 09:30 ET | **BUY** | `BURL` | 2 | $268.37 | $2.00 | — | $3,939.11 | — | rank by macd_hist; rank macd_hist; list ohlc_hot; 🔵; ret5=+5.8; leftover $639.69 | join🟢 sector🟡 gen🟢 news🟢 digest🟡 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `TER` | 1 | $410.85 | $1.99 | — | $3,526.27 | — | rank by macd_hist; rank macd_hist; list ohlc_hot; ret5=+5.2; leftover $639.69 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `KOD` | 7 | $87.50 | $2.01 | — | $2,911.76 | — | rank by macd_hist; rank macd_hist; list yday_gainer,yday_mover; 🔵; ret5=+177.4; leftover $639.69 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `MRNA` | 3 | $197.61 | $2.00 | — | $2,316.93 | — | rank by macd_hist; rank macd_hist; list ohlc_hot; ret5=+14.1; leftover $639.69 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `P` | 4 | $130.26 | $2.00 | — | $1,793.89 | — | rank by macd_hist; rank macd_hist; list ohlc_hot; ret5=+13.8; leftover $639.69 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `A` | 3 | $174.49 | $2.00 | — | $1,268.42 | — | rank by macd_hist; rank macd_hist; list ohlc_hot; ret5=+8.2; leftover $639.69 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `UCTT` | 7 | $81.08 | $2.01 | — | $698.85 | — | rank by macd_hist; rank macd_hist; list ohlc_hot; ret5=+6.9; leftover $639.69 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-09-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $698.85 | ▲ close $8,929.38 vs 09:30 $8,862.31 (session +81.08) | 16:00 close · cash $698.85 · equity $8,929.38 vs 09:30 $8,862.31 (+67.07; session marks +81.08) · 14 name(s) marked open→close (per-name table). AMD×1 09:30 $616.74 → close $607.57 -9.16; CDNS×2 09:30 $321.20 → close $324.17 +5.94; CLS×2 09:30 $362.35 → close $366.47 +8.24; ILMN×2 09:30 $271.00 → close $272.00 +2.00; META×1 09:30 $725.34 → close $738.79 +13.45; NTRA×1 09:30 $413.69 → close $414.52 +0.83; TWST×4 09:30 $179.90 → close $186.13 +24.92; BURL×2 09:30 $268.37 → close $270.05 +3.36; TER×1 09:30 $410.85 → close $403.02 -7.83; KOD×7 09:30 $87.50 → close $91.12 +25.34; MRNA×3 09:30 $197.61 → close $203.46 +17.55; P×4 09:30 $130.26 → close $130.05 -0.84; A×3 09:30 $174.49 → close $175.03 +1.62; UCTT×7 09:30 $81.08 → close $80.46 -4.34 | — |
 
 ## Not taken
 

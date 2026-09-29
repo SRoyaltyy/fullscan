@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · Clock-B #7 insider/Form-4 + inst Tx + stabilize (if data)
 
-Cash book **-8.38%** ($9,162) · signal-only (no cash/fees) was -5.54%. Starts YES **0/30**. Fills 4 · skips 7 · realized $-603.63.
+Cash book **-6.51%** ($9,349) · signal-only (no cash/fees) was -5.54%. Starts YES **0/30**. Fills 5 · skips 7 · realized $-603.63.
 
 ## How this sleeve decides (like you are 10)
 
@@ -142,6 +142,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-25 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,162.19 | ▲ close $9,162.19 vs 09:30 $9,162.19 (session +0.00) | 16:00 close · cash $9,162.19 · no lots left · equity $9,162.19. | — |
 | 2026-09-28 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,162.19 | ▲ 09:30 equity $9,162.19 vs yday $9,162.19 (+0.00) | 09:30 open · cash $9,162.19 · no holdings · equity $9,162.19 vs prior close $9,162.19 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,162.19 | ▲ close $9,162.19 vs 09:30 $9,162.19 (session +0.00) | 16:00 close · cash $9,162.19 · no lots left · equity $9,162.19. | — |
+| 2026-09-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,162.19 | ▲ 09:30 equity $9,162.19 vs yday $9,162.19 (+0.00) | 09:30 open · cash $9,162.19 · no holdings · equity $9,162.19 vs prior close $9,162.19 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-09-29 09:30 ET | **BUY** | `MTN` | 66 | $138.42 | $2.19 | — | $24.28 | — | Clock-B #7 insider/Form-4 + inst Tx + stabilize (if data); gate clk_insider_cash_stab=True; rank cond; list earn_react; 🔵; ret5=-1.7; leftover $9162.19 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟡 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-09-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $24.28 | ▲ close $9,349.42 vs 09:30 $9,162.19 (session +189.42) | 16:00 close · cash $24.28 · equity $9,349.42 vs 09:30 $9,162.19 (+187.23; session marks +189.42) · 1 name(s) marked open→close (per-name table). MTN×66 09:30 $138.42 → close $141.29 +189.42 | — |
 
 ## Not taken
 

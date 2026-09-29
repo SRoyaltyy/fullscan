@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ white, no 🚨
 
-Cash book **-16.53%** ($8,347) · signal-only (no cash/fees) was +12.04%. Starts YES **3/30**. Fills 152 · skips 157 · realized $-1586.47.
+Cash book **-17.64%** ($8,236) · signal-only (no cash/fees) was +12.04%. Starts YES **3/30**. Fills 158 · skips 157 · realized $-1586.47.
 
 ## How this sleeve decides (like you are 10)
 
@@ -288,6 +288,14 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-28 09:30 ET | **SELL** | `HALO` | 1 | $113.34 | $1.16 | $-5.84 | $797.02 | ▼ -5.84 after sell → book $7,994.43; vs 09:30 mark -1.16 | dropped from list after 3 sess (min 3) | — |
 | 2026-09-28 09:30 ET | **SELL** | `OMER` | 6 | $19.83 | $1.23 | $-7.40 | $914.78 | ▼ -7.40 after sell → book $7,993.21; vs 09:30 mark -1.22 | dropped from list after 3 sess (min 3) | — |
 | 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $914.78 | ▲ close $8,346.80 vs 09:30 $7,999.18 (session +353.59) | 16:00 close · cash $914.78 · equity $8,346.80 vs 09:30 $7,999.18 (+347.62; session marks +353.59) · 7 name(s) marked open→close (per-name table). GRAL×8 09:30 $128.90 → close $132.63 +29.84; MRVI×139 09:30 $7.49 → close $7.63 +19.46; SECZ×65 09:30 $16.00 → close $16.63 +40.95; TEM×12 09:30 $83.57 → close $85.08 +18.12; TWST×5 09:30 $181.87 → close $179.60 -11.35; TXG×12 09:30 $86.14 → close $88.50 +28.32; ZSQR×275 09:30 $3.71 → close $4.54 +228.25 | — |
+| 2026-09-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $914.78 | ▼ 09:30 equity $8,326.86 vs yday $8,346.80 (-19.94) | 09:30 open · cash $914.78 (unchanged overnight, no fees) · equity $8,326.86 vs prior close $8,346.80 (-19.94) · 7 name(s) re-marked at the open (per-name table). GRAL×8 yday $132.63 → 09:30 $133.49 +6.88; MRVI×139 yday $7.63 → 09:30 $7.52 -15.29; SECZ×65 yday $16.63 → 09:30 $16.59 -2.60; TEM×12 yday $85.08 → 09:30 $85.48 +4.86; TWST×5 yday $179.60 → 09:30 $179.90 +1.50; TXG×12 yday $88.50 → 09:30 $88.83 +3.96; ZSQR×275 yday $4.54 → 09:30 $4.47 -19.25 | — |
+| 2026-09-29 09:30 ET | **BUY** | `DT` | 2 | $57.39 | $1.15 | — | $798.85 | — | union ∩ white, no 🚨; gate zero_red=True; list flatten; ⚪; ret5=+2.6; leftover $130.68 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `TOST` | 4 | $30.40 | $1.23 | — | $676.02 | — | union ∩ white, no 🚨; gate zero_red=True; list flatten; ⚪; ret5=+1.9; leftover $130.68 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `SONO` | 7 | $17.76 | $1.26 | — | $550.43 | — | union ∩ white, no 🚨; gate zero_red=True; list flatten; ⚪; ret5=+9.8; leftover $130.68 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟢 |
+| 2026-09-29 09:30 ET | **BUY** | `PDFS` | 2 | $50.25 | $1.01 | — | $448.92 | — | union ∩ white, no 🚨; gate zero_red=True; list flatten; ⚪; ret5=+6.5; leftover $130.68 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `SHOO` | 2 | $45.06 | $0.91 | — | $357.90 | — | union ∩ white, no 🚨; gate zero_red=True; list flatten; 🔵; ⚪; ret5=+4.8; leftover $130.68 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `ADMA` | 13 | $10.04 | $1.34 | — | $226.03 | — | union ∩ white, no 🚨; gate zero_red=True; list probable,yday_gainer,ohlc_hot; ⚪; ret5=+6.5; leftover $130.68 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $226.03 | ▼ close $8,236.03 vs 09:30 $8,326.86 (session -83.92) | 16:00 close · cash $226.03 · equity $8,236.03 vs 09:30 $8,326.86 (-90.83; session marks -83.92) · 13 name(s) marked open→close (per-name table). GRAL×8 09:30 $133.49 → close $136.57 +24.64; MRVI×139 09:30 $7.52 → close $7.65 +18.07; SECZ×65 09:30 $16.59 → close $15.84 -48.75; TEM×12 09:30 $85.48 → close $82.58 -34.86; TWST×5 09:30 $179.90 → close $186.13 +31.15; TXG×12 09:30 $88.83 → close $90.04 +14.52; ZSQR×275 09:30 $4.47 → close $4.15 -88.00; DT×2 09:30 $57.39 → close $57.53 +0.28; TOST×4 09:30 $30.40 → close $30.46 +0.24; SONO×7 09:30 $17.76 → close $17.85 +0.63; PDFS×2 09:30 $50.25 → close $49.77 -0.96; SHOO×2 09:30 $45.06 → close $45.14 +0.16; ADMA×13 09:30 $10.04 → close $9.96 -1.04 | — |
 
 ## Not taken
 

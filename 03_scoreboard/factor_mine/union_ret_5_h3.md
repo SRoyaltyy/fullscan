@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `ret_5` · size `leftover` · sell `list` · S-boost `none` · rank by ret_5
 
-Cash book **+6.80%** ($10,680) · signal-only (no cash/fees) was +97.62%. Starts YES **29/30**. Fills 206 · skips 293 · realized $+1779.39.
+Cash book **+5.16%** ($10,516) · signal-only (no cash/fees) was +97.62%. Starts YES **29/30**. Fills 213 · skips 293 · realized $+1779.39.
 
 ## How this sleeve decides (like you are 10)
 
@@ -341,6 +341,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-28 09:30 ET | **SELL** | `TJGC` | 87 | $26.50 | $2.28 | $+829.80 | $3,474.79 | ▲ +829.80 after sell → book $10,695.14; vs 09:30 mark -2.29 | dropped from list after 5 sess (min 3) | — |
 | 2026-09-28 09:30 ET | **SELL** | `VKTX` | 1 | $35.00 | $0.37 | $-7.55 | $3,509.42 | ▼ -7.55 after sell → book $10,694.77; vs 09:30 mark -0.37 | exit unpriced hold on first bar after 3 sess | — |
 | 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $3,509.42 | ▼ close $10,679.68 vs 09:30 $10,710.16 (session -15.09) | 16:00 close · cash $3,509.42 · equity $10,679.68 vs 09:30 $10,710.16 (-30.48; session marks -15.09) · 4 name(s) marked open→close (per-name table). CYPH×444 09:30 $4.03 → close $3.31 -320.79; SECZ×110 09:30 $16.00 → close $16.63 +69.30; USDE×114 09:30 $16.85 → close $15.56 -147.06; ZSQR×462 09:30 $3.71 → close $4.54 +383.46 | — |
+| 2026-09-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $3,509.42 | ▲ 09:30 equity $10,723.52 vs yday $10,679.68 (+43.84) | 09:30 open · cash $3,509.42 (unchanged overnight, no fees) · equity $10,723.52 vs prior close $10,679.68 (+43.84) · 4 name(s) re-marked at the open (per-name table). CYPH×444 yday $3.31 → 09:30 $3.34 +13.32; SECZ×110 yday $16.63 → 09:30 $16.59 -4.40; USDE×114 yday $15.56 → 09:30 $16.15 +67.26; ZSQR×462 yday $4.54 → 09:30 $4.47 -32.34 | — |
+| 2026-09-29 09:30 ET | **BUY** | `KOD` | 5 | $87.50 | $2.00 | — | $3,069.91 | — | rank by ret_5; rank ret_5; list yday_gainer,yday_mover; 🔵; ret5=+177.4; leftover $501.35 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `SRFM` | 421 | $1.19 | $5.43 | — | $2,563.49 | — | rank by ret_5; rank ret_5; list yday_gainer; ret5=+77.6; leftover $501.35 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `TJGC` | 18 | $27.68 | $2.04 | — | $2,063.21 | — | rank by ret_5; rank ret_5; list yday_gainer; 🔵; ret5=+62.3; leftover $501.35 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `GLND` | 125 | $3.98 | $2.37 | — | $1,563.35 | — | rank by ret_5; rank ret_5; list yday_mover; ret5=+55.9; leftover $501.35 | join🔴 sector🟡 gen🟢 news🟢 digest🟢 ab🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `GRML` | 47 | $10.50 | $2.13 | — | $1,067.71 | — | rank by ret_5; rank ret_5; list yday_mover; ret5=+25.8; leftover $501.35 | join🔴 sector🟡 gen🟢 news🟡 digest🔴 ab🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `QNC` | 243 | $2.06 | $3.13 | — | $564.00 | — | rank by ret_5; rank ret_5; list yday_gainer,yday_mover; ret5=+24.3; leftover $501.35 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `AEHL` | 60 | $8.26 | $2.17 | — | $66.53 | — | rank by ret_5; rank ret_5; list yday_mover; 🔵; ret5=+18.9; leftover $501.35 | join🟢 sector🟢 gen🟢 news🔴 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-09-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $66.53 | ▼ close $10,515.96 vs 09:30 $10,723.52 (session -188.28) | 16:00 close · cash $66.53 · equity $10,515.96 vs 09:30 $10,723.52 (-207.56; session marks -188.28) · 11 name(s) marked open→close (per-name table). CYPH×444 09:30 $3.34 → close $3.23 -48.84; SECZ×110 09:30 $16.59 → close $15.84 -82.50; USDE×114 09:30 $16.15 → close $15.32 -94.62; ZSQR×462 09:30 $4.47 → close $4.15 -147.84; KOD×5 09:30 $87.50 → close $91.12 +18.10; SRFM×421 09:30 $1.19 → close $1.20 +4.21; TJGC×18 09:30 $27.68 → close $34.80 +128.07; GLND×125 09:30 $3.98 → close $4.75 +96.25; GRML×47 09:30 $10.50 → close $10.38 -5.88; QNC×243 09:30 $2.06 → close $1.75 -75.33; AEHL×60 09:30 $8.26 → close $8.59 +20.10 | — |
 
 ## Not taken
 

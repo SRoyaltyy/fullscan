@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · packet🟢 OR headline🟢 and camera net ≥ 4
 
-Cash book **-21.63%** ($7,837) · signal-only (no cash/fees) was -6.67%. Starts YES **0/30**. Fills 144 · skips 35 · realized $-1049.49.
+Cash book **-24.11%** ($7,589) · signal-only (no cash/fees) was -6.67%. Starts YES **0/30**. Fills 147 · skips 35 · realized $-1049.49.
 
 ## How this sleeve decides (like you are 10)
 
@@ -282,6 +282,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-28 09:30 ET | **SELL** | `SECZ` | 122 | $16.00 | $2.39 | $-30.37 | $5,940.69 | ▼ -30.37 after sell → book $7,843.92; vs 09:30 mark -2.39 | dropped from list after 1 sess (min 1) | — |
 | 2026-09-28 09:30 ET | **SELL** | `ZSQR` | 513 | $3.71 | $6.72 | $-90.29 | $7,837.20 | ▼ -90.29 after sell → book $7,837.20; vs 09:30 mark -6.72 | dropped from list after 1 sess (min 1) | — |
 | 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,837.20 | ▲ close $7,837.20 vs 09:30 $7,850.37 (session +0.00) | 16:00 close · cash $7,837.20 · no lots left · equity $7,837.20. | — |
+| 2026-09-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,837.20 | ▲ 09:30 equity $7,837.20 vs yday $7,837.20 (+0.00) | 09:30 open · cash $7,837.20 · no holdings · equity $7,837.20 vs prior close $7,837.20 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-09-29 09:30 ET | **BUY** | `ZSQR` | 584 | $4.47 | $7.53 | — | $5,219.19 | — | packet🟢 OR headline🟢 and camera net ≥ 4; gate cam_net_min=4,news_or_headline=True; rank cond; list yday_gainer,yday_mover; ⚪; ret5=+72.0; leftover $2612.40 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 ab🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `BURL` | 9 | $268.37 | $2.02 | — | $2,801.84 | — | packet🟢 OR headline🟢 and camera net ≥ 4; gate cam_net_min=4,news_or_headline=True; rank cond; list ohlc_hot; 🔵; ret5=+5.8; leftover $2612.40 | join🟢 sector🟡 gen🟢 news🟢 digest🟡 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `LQDA` | 36 | $72.49 | $2.10 | — | $190.10 | — | packet🟢 OR headline🟢 and camera net ≥ 4; gate cam_net_min=4,news_or_headline=True; rank cond; list yday_gainer,ohlc_hot; ret5=+10.9; leftover $2612.40 | join🔴 sector🟡 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $190.10 | ▼ close $7,588.99 vs 09:30 $7,837.20 (session -236.56) | 16:00 close · cash $190.10 · equity $7,588.99 vs 09:30 $7,837.20 (-248.21; session marks -236.56) · 3 name(s) marked open→close (per-name table). ZSQR×584 09:30 $4.47 → close $4.15 -186.88; BURL×9 09:30 $268.37 → close $270.05 +15.12; LQDA×36 09:30 $72.49 → close $70.69 -64.80 | — |
 
 ## Not taken
 

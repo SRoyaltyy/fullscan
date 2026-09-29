@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ coil_off, no 🚨
 
-Cash book **-11.95%** ($8,806) · signal-only (no cash/fees) was -17.20%. Starts YES **0/30**. Fills 260 · skips 105 · realized $-1593.31.
+Cash book **-11.69%** ($8,831) · signal-only (no cash/fees) was -17.20%. Starts YES **0/30**. Fills 269 · skips 105 · realized $-1593.31.
 
 ## How this sleeve decides (like you are 10)
 
@@ -399,6 +399,17 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-28 09:30 ET | **SELL** | `SATL` | 183 | $6.17 | $2.58 | $+25.99 | $6,492.76 | ▲ +25.99 after sell → book $8,722.58; vs 09:30 mark -2.58 | dropped from list after 1 sess (min 1) | — |
 | 2026-09-28 09:30 ET | **SELL** | `TXG` | 13 | $86.14 | $2.05 | $+26.86 | $7,610.53 | ▲ +26.86 after sell → book $8,720.53; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | — |
 | 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,610.53 | ▲ close $8,805.53 vs 09:30 $8,735.96 (session +85.00) | 16:00 close · cash $7,610.53 · equity $8,805.53 vs 09:30 $8,735.96 (+69.57; session marks +85.00) · 1 name(s) marked open→close (per-name table). HLP×500 09:30 $2.22 → close $2.39 +85.00 | — |
+| 2026-09-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,610.53 | ▲ 09:30 equity $8,815.53 vs yday $8,805.53 (+10.00) | 09:30 open · cash $7,610.53 (unchanged overnight, no fees) · equity $8,815.53 vs prior close $8,805.53 (+10.00) · 1 name(s) re-marked at the open (per-name table). HLP×500 yday $2.39 → 09:30 $2.41 +10.00 | — |
+| 2026-09-29 09:30 ET | **SELL** | `HLP` | 500 | $2.41 | $6.54 | $+92.01 | $8,808.99 | ▲ +92.01 after sell → book $8,808.99; vs 09:30 mark -6.54 | dropped from list after 2 sess (min 1) | join🔴 sector🟡 gen🟢 news🟡 digest🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `SN` | 5 | $184.05 | $2.00 | — | $7,886.73 | — | union ∩ coil_off, no 🚨; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list flatten; 🔵; ⚪; ret5=+8.7; leftover $1101.12 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `DT` | 19 | $57.39 | $2.05 | — | $6,794.27 | — | union ∩ coil_off, no 🚨; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list flatten; ⚪; ret5=+2.6; leftover $1101.12 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `TOST` | 36 | $30.40 | $2.10 | — | $5,697.78 | — | union ∩ coil_off, no 🚨; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list flatten; ⚪; ret5=+1.9; leftover $1101.12 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `SONO` | 62 | $17.76 | $2.18 | — | $4,594.48 | — | union ∩ coil_off, no 🚨; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list flatten; ⚪; ret5=+9.8; leftover $1101.12 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟢 |
+| 2026-09-29 09:30 ET | **BUY** | `PDFS` | 21 | $50.25 | $2.05 | — | $3,537.18 | — | union ∩ coil_off, no 🚨; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list flatten; ⚪; ret5=+6.5; leftover $1101.12 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `SHOO` | 24 | $45.06 | $2.06 | — | $2,453.68 | — | union ∩ coil_off, no 🚨; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list flatten; 🔵; ⚪; ret5=+4.8; leftover $1101.12 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `ABCL` | 77 | $14.12 | $2.22 | — | $1,364.21 | — | union ∩ coil_off, no 🚨; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list probable,yday_gainer,ohlc_hot; ret5=+10.0; leftover $1101.12 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🟡 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `ADMA` | 109 | $10.04 | $2.32 | — | $267.54 | — | union ∩ coil_off, no 🚨; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list probable,yday_gainer,ohlc_hot; ⚪; ret5=+6.5; leftover $1101.12 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $267.54 | ▲ close $8,831.38 vs 09:30 $8,815.53 (session +39.37) | 16:00 close · cash $267.54 · equity $8,831.38 vs 09:30 $8,815.53 (+15.85; session marks +39.37) · 8 name(s) marked open→close (per-name table). SN×5 09:30 $184.05 → close $182.44 -8.05; DT×19 09:30 $57.39 → close $57.53 +2.66; TOST×36 09:30 $30.40 → close $30.46 +2.16; SONO×62 09:30 $17.76 → close $17.85 +5.58; PDFS×21 09:30 $50.25 → close $49.77 -10.08; SHOO×24 09:30 $45.06 → close $45.14 +1.92; ABCL×77 09:30 $14.12 → close $14.82 +53.90; ADMA×109 09:30 $10.04 → close $9.96 -8.72 | — |
 
 ## Not taken
 

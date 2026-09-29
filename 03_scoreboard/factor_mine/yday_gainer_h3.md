@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `yday_gainer` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · baseline list, no extra gate
 
-Cash book **-14.29%** ($8,571) · signal-only (no cash/fees) was +49.33%. Starts YES **2/30**. Fills 196 · skips 312 · realized $-869.27.
+Cash book **-9.31%** ($9,069) · signal-only (no cash/fees) was +49.33%. Starts YES **2/30**. Fills 204 · skips 312 · realized $-869.27.
 
 ## How this sleeve decides (like you are 10)
 
@@ -328,6 +328,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-28 09:30 ET | **SELL** | `NMRA` | 12 | $0.65 | $0.13 | $-1.70 | $1,154.29 | ▼ -1.70 after sell → book $8,338.50; vs 09:30 mark -0.14 | exit unpriced hold on first bar after 3 sess | — |
 | 2026-09-28 09:30 ET | **SELL** | `TLYS` | 2 | $4.27 | $0.11 | $-0.36 | $1,162.72 | ▼ -0.36 after sell → book $8,338.39; vs 09:30 mark -0.11 | exit unpriced hold on first bar after 3 sess | — |
 | 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1,162.72 | ▲ close $8,570.70 vs 09:30 $8,350.43 (session +232.31) | 16:00 close · cash $1,162.72 · equity $8,570.70 vs 09:30 $8,350.43 (+220.27; session marks +232.31) · 7 name(s) marked open→close (per-name table). AEHL×119 09:30 $9.01 → close $8.23 -92.82; BRVE×45 09:30 $20.25 → close $21.07 +36.90; DNA×106 09:30 $10.38 → close $10.46 +9.01; TJGC×36 09:30 $26.50 → close $28.54 +73.44; TXG×12 09:30 $86.14 → close $88.50 +28.32; WRBY×41 09:30 $26.00 → close $24.66 -54.94; ZSQR×280 09:30 $3.71 → close $4.54 +232.40 | — |
+| 2026-09-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $1,162.72 | ▼ 09:30 equity $8,542.65 vs yday $8,570.70 (-28.05) | 09:30 open · cash $1,162.72 (unchanged overnight, no fees) · equity $8,542.65 vs prior close $8,570.70 (-28.05) · 7 name(s) re-marked at the open (per-name table). AEHL×119 yday $8.23 → 09:30 $8.26 +2.98; BRVE×45 yday $21.07 → 09:30 $21.00 -3.15; DNA×106 yday $10.46 → 09:30 $10.54 +8.48; TJGC×36 yday $28.54 → 09:30 $27.68 -30.96; TXG×12 yday $88.50 → 09:30 $88.83 +3.96; WRBY×41 yday $24.66 → 09:30 $24.91 +10.25; ZSQR×280 yday $4.54 → 09:30 $4.47 -19.60 | — |
+| 2026-09-29 09:30 ET | **BUY** | `SFIX` | 58 | $2.47 | $1.61 | — | $1,017.85 | — | baseline list, no extra gate; list probable,yday_gainer,yday_mover; 🔵; ret5=-13.3; leftover $145.34 | join🟡 sector🟡 gen🟢 news🟡 digest🟡 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `ANNX` | 36 | $3.99 | $1.54 | — | $872.67 | — | baseline list, no extra gate; list probable,yday_gainer; 🔵; ret5=-5.0; leftover $145.34 | join🔴 sector🟡 gen🟢 news🟢 digest🟢 ab🔴 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `ABCL` | 10 | $14.12 | $1.44 | — | $730.03 | — | baseline list, no extra gate; list probable,yday_gainer,ohlc_hot; ret5=+10.0; leftover $145.34 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🟡 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `BUR` | 36 | $3.95 | $1.53 | — | $586.30 | — | baseline list, no extra gate; list probable,yday_gainer; ret5=-0.3; leftover $145.34 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `ADMA` | 14 | $10.04 | $1.45 | — | $444.29 | — | baseline list, no extra gate; list probable,yday_gainer,ohlc_hot; ⚪; ret5=+6.5; leftover $145.34 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `SGMT` | 14 | $9.92 | $1.43 | — | $303.98 | — | baseline list, no extra gate; list probable,yday_gainer; ret5=-8.0; leftover $145.34 | join🔴 sector🟡 gen🟢 news🟢 digest🟢 ab🔴 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `XNCR` | 5 | $25.84 | $1.31 | — | $173.45 | — | baseline list, no extra gate; list probable,yday_gainer; ret5=+2.3; leftover $145.34 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `MBX` | 2 | $57.27 | $1.15 | — | $57.76 | — | baseline list, no extra gate; list probable,yday_gainer; ret5=-5.6; leftover $145.34 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-09-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $57.76 | ▲ close $9,068.98 vs 09:30 $8,542.65 (session +537.78) | 16:00 close · cash $57.76 · equity $9,068.98 vs 09:30 $8,542.65 (+526.33; session marks +537.78) · 15 name(s) marked open→close (per-name table). AEHL×119 09:30 $8.26 → close $8.59 +39.86; BRVE×45 09:30 $21.00 → close $22.34 +60.30; DNA×106 09:30 $10.54 → close $11.96 +150.52; TJGC×36 09:30 $27.68 → close $34.80 +256.14; TXG×12 09:30 $88.83 → close $90.04 +14.52; WRBY×41 09:30 $24.91 → close $27.47 +104.96; ZSQR×280 09:30 $4.47 → close $4.15 -89.60; SFIX×58 09:30 $2.47 → close $2.53 +3.48; ANNX×36 09:30 $3.99 → close $4.13 +5.04; ABCL×10 09:30 $14.12 → close $14.82 +7.00; BUR×36 09:30 $3.95 → close $3.90 -1.80; ADMA×14 09:30 $10.04 → close $9.96 -1.12; SGMT×14 09:30 $9.92 → close $9.33 -8.26; XNCR×5 09:30 $25.84 → close $25.00 -4.22; MBX×2 09:30 $57.27 → close $57.75 +0.96 | — |
 
 ## Not taken
 

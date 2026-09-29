@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ news_present, no 🚨
 
-Cash book **-12.21%** ($8,779) · signal-only (no cash/fees) was -2.20%. Starts YES **0/30**. Fills 242 · skips 106 · realized $-251.67.
+Cash book **-11.83%** ($8,817) · signal-only (no cash/fees) was -2.20%. Starts YES **0/30**. Fills 250 · skips 106 · realized $-251.67.
 
 ## How this sleeve decides (like you are 10)
 
@@ -378,6 +378,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-28 09:30 ET | **SELL** | `TXG` | 13 | $86.14 | $2.05 | $+26.86 | $7,689.30 | ▲ +26.86 after sell → book $8,781.30; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | — |
 | 2026-09-28 09:30 ET | **SELL** | `WRBY` | 42 | $26.00 | $2.14 | $-15.59 | $8,779.17 | ▼ -15.59 after sell → book $8,779.17; vs 09:30 mark -2.13 | dropped from list after 1 sess (min 1) | — |
 | 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,779.17 | ▲ close $8,779.17 vs 09:30 $8,796.52 (session +0.00) | 16:00 close · cash $8,779.17 · no lots left · equity $8,779.17. | — |
+| 2026-09-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,779.17 | ▲ 09:30 equity $8,779.17 vs yday $8,779.17 (+0.00) | 09:30 open · cash $8,779.17 · no holdings · equity $8,779.17 vs prior close $8,779.17 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-09-29 09:30 ET | **BUY** | `SN` | 5 | $184.05 | $2.00 | — | $7,856.91 | — | union ∩ news_present, no 🚨; gate news_present=True; list flatten; 🔵; ⚪; ret5=+8.7; leftover $1097.40 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `DT` | 19 | $57.39 | $2.05 | — | $6,764.46 | — | union ∩ news_present, no 🚨; gate news_present=True; list flatten; ⚪; ret5=+2.6; leftover $1097.40 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `TOST` | 36 | $30.40 | $2.10 | — | $5,667.96 | — | union ∩ news_present, no 🚨; gate news_present=True; list flatten; ⚪; ret5=+1.9; leftover $1097.40 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `SONO` | 61 | $17.76 | $2.17 | — | $4,582.43 | — | union ∩ news_present, no 🚨; gate news_present=True; list flatten; ⚪; ret5=+9.8; leftover $1097.40 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟢 |
+| 2026-09-29 09:30 ET | **BUY** | `PDFS` | 21 | $50.25 | $2.05 | — | $3,525.12 | — | union ∩ news_present, no 🚨; gate news_present=True; list flatten; ⚪; ret5=+6.5; leftover $1097.40 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `SHOO` | 24 | $45.06 | $2.06 | — | $2,441.62 | — | union ∩ news_present, no 🚨; gate news_present=True; list flatten; 🔵; ⚪; ret5=+4.8; leftover $1097.40 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `SFIX` | 444 | $2.47 | $5.73 | — | $1,339.21 | — | union ∩ news_present, no 🚨; gate news_present=True; list probable,yday_gainer,yday_mover; 🔵; ret5=-13.3; leftover $1097.40 | join🟡 sector🟡 gen🟢 news🟡 digest🟡 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `ANNX` | 275 | $3.99 | $3.55 | — | $238.42 | — | union ∩ news_present, no 🚨; gate news_present=True; list probable,yday_gainer; 🔵; ret5=-5.0; leftover $1097.40 | join🔴 sector🟡 gen🟢 news🟢 digest🟢 ab🔴 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $238.42 | ▲ close $8,816.70 vs 09:30 $8,779.17 (session +59.24) | 16:00 close · cash $238.42 · equity $8,816.70 vs 09:30 $8,779.17 (+37.53; session marks +59.24) · 8 name(s) marked open→close (per-name table). SN×5 09:30 $184.05 → close $182.44 -8.05; DT×19 09:30 $57.39 → close $57.53 +2.66; TOST×36 09:30 $30.40 → close $30.46 +2.16; SONO×61 09:30 $17.76 → close $17.85 +5.49; PDFS×21 09:30 $50.25 → close $49.77 -10.08; SHOO×24 09:30 $45.06 → close $45.14 +1.92; SFIX×444 09:30 $2.47 → close $2.53 +26.64; ANNX×275 09:30 $3.99 → close $4.13 +38.50 | — |
 
 ## Not taken
 

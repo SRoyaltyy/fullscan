@@ -159,6 +159,11 @@
       "bytes": 175539,
       "sha256": "18dc9de3fd96f516750b803a065639419d481ca38b4d7b6669af5be9a0880d5d",
       "written_at": "2026-09-28T17:56:45.119423-04:00"
+    },
+    "2026-09-29": {
+      "bytes": 175440,
+      "sha256": "d43f5257a1d81c5736ac5444e3a869881b09e580586048efa9b7f9e610c17b60",
+      "written_at": "2026-09-29T16:56:59.564428-04:00"
     }
   },
   "excel_signals": {
@@ -1358,6 +1363,12 @@
       "encoding": "gzip",
       "sha256": "548bc8fdaa8bcd457307f5ced4da790c217ad28931c388733c9458a61fa12eec",
       "written_at": "2026-09-28T17:57:18.208269-04:00"
+    },
+    "2026-09-29": {
+      "bytes": 10223260,
+      "encoding": "gzip",
+      "sha256": "830e0d75d35082bb91fac5cd0d4447a3ac40b5e77c5e309c9d47eb17c4a9bf02",
+      "written_at": "2026-09-29T16:57:43.336913-04:00"
     }
   },
   "lineups": {
@@ -1520,6 +1531,11 @@
       "bytes": 929,
       "sha256": "4260f7df033cba527f2657d0fc5ca346af32b55e051b75c12a95ebdf7631613a",
       "written_at": "2026-09-28T17:57:35.234932-04:00"
+    },
+    "2026-09-29": {
+      "bytes": 865,
+      "sha256": "c30cf736981dd05e15ebf34cb6037af95e89544756335fd1156f3cc238e6dafa",
+      "written_at": "2026-09-29T16:58:07.061059-04:00"
     }
   },
   "prices": {
@@ -1532,6 +1548,11 @@
       "bytes": 519818,
       "sha256": "a15ea480ff7d513610ecd68a64fe908032e2dc413d974bff85355b89541ee3c3",
       "written_at": "2026-09-28T17:56:45.134482-04:00"
+    },
+    "2026-09-29": {
+      "bytes": 597306,
+      "sha256": "3fef82ca5bfef1967178225afe1f16a2bc306b7619188c086904add73dc80bc0",
+      "written_at": "2026-09-29T16:56:59.588241-04:00"
     }
   },
   "recipe_rules": {
@@ -6784,6 +6805,19 @@
       "sha256": "1b688c53e10f10b124300b00aa782167f7a7e76d93d16925d99ae137ca4ab7b1",
       "unpriced_held": [],
       "written_at": "2026-09-28T17:56:49.552124-04:00"
+    },
+    "2026-09-29": {
+      "bytes": 292364,
+      "dropped_missing_bars": [
+        "GBTG",
+        "HYAC-U",
+        "LEDRU"
+      ],
+      "heat_vintage": "2026-09-29",
+      "n_rows": 71,
+      "sha256": "5731c963911a7dd711a21a9f55c05c88c4b00062d90bf4a7b2ee0bb2b8631822",
+      "unpriced_held": [],
+      "written_at": "2026-09-29T16:57:03.980220-04:00"
     }
   },
   "version": 1

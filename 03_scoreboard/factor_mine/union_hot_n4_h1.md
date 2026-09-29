@@ -254,6 +254,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-28 09:30 ET | **SELL** | `USDE` | 102 | $16.85 | $2.33 | $+124.81 | $9,718.05 | ▲ +124.81 after sell → book $12,238.05; vs 09:30 mark -2.33 | dropped from list after 1 sess (min 1) | — |
 | 2026-09-28 09:30 ET | **SELL** | `VICR` | 9 | $280.00 | $2.05 | $+117.44 | $12,236.00 | ▲ +117.44 after sell → book $12,236.00; vs 09:30 mark -2.05 | exit unpriced hold on first bar after 3 sess | — |
 | 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $12,236.00 | ▲ close $12,236.00 vs 09:30 $12,257.61 (session +0.00) | 16:00 close · cash $12,236.00 · no lots left · equity $12,236.00. | — |
+| 2026-09-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $12,236.00 | ▲ 09:30 equity $12,236.00 vs yday $12,236.00 (+0.00) | 09:30 open · cash $12,236.00 · no holdings · equity $12,236.00 vs prior close $12,236.00 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-09-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $12,236.00 | ▲ close $12,236.00 vs 09:30 $12,236.00 (session +0.00) | 16:00 close · cash $12,236.00 · no lots left · equity $12,236.00. | — |
 
 ## Not taken
 

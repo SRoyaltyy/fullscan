@@ -6,7 +6,7 @@ Buys the flatten **wish-list** even on io/HOLD mornings — live `flatten_robust
 
 Side **long** · universe `flatten` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · baseline list, no extra gate
 
-Cash book **-22.99%** ($7,701) · signal-only (no cash/fees) was -10.41%. Starts YES **1/30**. Fills 146 · skips 216 · realized $-1149.04.
+Cash book **-23.19%** ($7,681) · signal-only (no cash/fees) was -10.41%. Starts YES **1/30**. Fills 151 · skips 216 · realized $-1149.04.
 
 ## How this sleeve decides (like you are 10)
 
@@ -278,6 +278,13 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-28 09:30 ET | **SELL** | `PGEN` | 3 | $7.61 | $0.26 | $-1.52 | $566.81 | ▼ -1.52 after sell → book $7,663.17; vs 09:30 mark -0.26 | exit unpriced hold on first bar after 3 sess | — |
 | 2026-09-28 09:30 ET | **SELL** | `TDC` | 1 | $28.34 | $0.31 | $-2.05 | $594.84 | ▼ -2.05 after sell → book $7,662.86; vs 09:30 mark -0.31 | exit unpriced hold on first bar after 4 sess | — |
 | 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $594.84 | ▲ close $7,700.91 vs 09:30 $7,665.85 (session +38.05) | 16:00 close · cash $594.84 · equity $7,700.91 vs 09:30 $7,665.85 (+35.06; session marks +38.05) · 4 name(s) marked open→close (per-name table). BLFS×49 09:30 $38.13 → close $39.15 +49.98; HALO×16 09:30 $113.34 → close $112.89 -7.20; MRVI×246 09:30 $7.49 → close $7.63 +34.44; REGN×2 09:30 $771.84 → close $752.25 -39.17 | — |
+| 2026-09-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $594.84 | ▼ 09:30 equity $7,655.66 vs yday $7,700.91 (-45.25) | 09:30 open · cash $594.84 (unchanged overnight, no fees) · equity $7,655.66 vs prior close $7,700.91 (-45.25) · 4 name(s) re-marked at the open (per-name table). BLFS×49 yday $39.15 → 09:30 $39.04 -5.39; HALO×16 yday $112.89 → 09:30 $112.89 +0.00; MRVI×246 yday $7.63 → 09:30 $7.52 -27.06; REGN×2 yday $752.25 → 09:30 $745.85 -12.80 | — |
+| 2026-09-29 09:30 ET | **BUY** | `DT` | 1 | $57.39 | $0.58 | — | $536.87 | — | baseline list, no extra gate; list flatten; wish-list (live io HOLD — not a ticket); ⚪; ret5=+2.6; leftover $99.14 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `TOST` | 3 | $30.40 | $0.92 | — | $444.75 | — | baseline list, no extra gate; list flatten; wish-list (live io HOLD — not a ticket); ⚪; ret5=+1.9; leftover $99.14 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `SONO` | 5 | $17.76 | $0.90 | — | $355.05 | — | baseline list, no extra gate; list flatten; wish-list (live io HOLD — not a ticket); ⚪; ret5=+9.8; leftover $99.14 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟢 |
+| 2026-09-29 09:30 ET | **BUY** | `PDFS` | 1 | $50.25 | $0.51 | — | $304.29 | — | baseline list, no extra gate; list flatten; wish-list (live io HOLD — not a ticket); ⚪; ret5=+6.5; leftover $99.14 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `SHOO` | 2 | $45.06 | $0.91 | — | $213.27 | — | baseline list, no extra gate; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ⚪; ret5=+4.8; leftover $99.14 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $213.27 | ▲ close $7,681.14 vs 09:30 $7,655.66 (session +29.29) | 16:00 close · cash $213.27 · equity $7,681.14 vs 09:30 $7,655.66 (+25.48; session marks +29.29) · 9 name(s) marked open→close (per-name table). BLFS×49 09:30 $39.04 → close $39.22 +8.82; HALO×16 09:30 $112.89 → close $111.56 -21.28; MRVI×246 09:30 $7.52 → close $7.65 +31.98; REGN×2 09:30 $745.85 → close $750.51 +9.32; DT×1 09:30 $57.39 → close $57.53 +0.14; TOST×3 09:30 $30.40 → close $30.46 +0.18; SONO×5 09:30 $17.76 → close $17.85 +0.45; PDFS×1 09:30 $50.25 → close $49.77 -0.48; SHOO×2 09:30 $45.06 → close $45.14 +0.16 | — |
 
 ## Not taken
 

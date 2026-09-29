@@ -194,6 +194,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-28 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $3.67 | ▼ 09:30 equity $10,295.44 vs yday $10,425.19 (-129.75) | 09:30 open · cash $3.67 (unchanged overnight, no fees) · equity $10,295.44 vs prior close $10,425.19 (-129.75) · 1 name(s) re-marked at the open (per-name table). OMER×519 yday $20.08 → 09:30 $19.83 -129.75 | — |
 | 2026-09-28 09:30 ET | **SELL** | `OMER` | 519 | $19.83 | $6.86 | $-418.38 | $10,288.58 | ▼ -418.38 after sell → book $10,288.58; vs 09:30 mark -6.86 | dropped from list after 1 sess (min 1) | — |
 | 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,288.58 | ▲ close $10,288.58 vs 09:30 $10,295.44 (session +0.00) | 16:00 close · cash $10,288.58 · no lots left · equity $10,288.58. | — |
+| 2026-09-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,288.58 | ▲ 09:30 equity $10,288.58 vs yday $10,288.58 (+0.00) | 09:30 open · cash $10,288.58 · no holdings · equity $10,288.58 vs prior close $10,288.58 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-09-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,288.58 | ▲ close $10,288.58 vs 09:30 $10,288.58 (session +0.00) | 16:00 close · cash $10,288.58 · no lots left · equity $10,288.58. | — |
 
 ## Not taken
 

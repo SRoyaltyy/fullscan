@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared union_hot_n4_h1/union_news_g_h1 w=0.7,0.3 net=priority
 
-Cash book **+8.22%** ($10,822) · signal-only (no cash/fees) was —. Starts YES **29/30**. Fills 305 · skips 126 · realized $+1716.61.
+Cash book **+11.32%** ($11,132) · signal-only (no cash/fees) was —. Starts YES **29/30**. Fills 315 · skips 126 · realized $+1716.61.
 
 ## How this sleeve decides (like you are 10)
 
@@ -55,7 +55,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $10,821.66.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $42.64.
 
 ## Every lot, every session (09:30 mark and same-day change)
 
@@ -442,6 +442,18 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-28 09:30 ET | **SELL** | `VICR` | 6 | $280.00 | $2.03 | $+76.96 | $10,389.96 | ▲ +76.96 after sell → book $10,824.03; vs 09:30 mark -2.03 | union_hot_n4_h1: dropped from list after 3 sess (min 1) | — |
 | 2026-09-28 09:30 ET | **SELL** | `ZSQR` | 117 | $3.71 | $2.37 | $-22.26 | $10,821.66 | ▼ -22.26 after sell → book $10,821.66; vs 09:30 mark -2.37 | union_news_g_h1: dropped from list after 1 sess (min 1) | — |
 | 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,821.66 | ▲ close $10,821.66 vs 09:30 $10,845.24 (session +0.00) | 16:00 close · cash $10,821.66 · no lots left · equity $10,821.66. | — |
+| 2026-09-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,821.66 | ▲ 09:30 equity $10,821.66 vs yday $10,821.66 (+0.00) | 09:30 open · cash $10,821.66 (unchanged overnight, no fees) · equity $10,821.66 vs prior close $10,821.66 (+0.00) | — |
+| 2026-09-29 09:30 ET | **BUY** | `KOD` | 21 | $87.50 | $2.05 | — | $8,982.11 | — | top 4 by hot; rank hot_score; list yday_gainer,yday_mover; 🔵; ret5=+177.4; combo leftover $1893.79; owner union_hot_n4_h1 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `GLND` | 475 | $3.98 | $6.13 | — | $7,085.48 | — | top 4 by hot; rank hot_score; list yday_mover; ret5=+55.9; combo leftover $1893.79; owner union_hot_n4_h1 | join🔴 sector🟡 gen🟢 news🟢 digest🟢 ab🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `SRFM` | 1591 | $1.19 | $20.52 | — | $5,171.67 | — | top 4 by hot; rank hot_score; list yday_gainer; ret5=+77.6; combo leftover $1893.79; owner union_hot_n4_h1 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `GRML` | 180 | $10.50 | $2.53 | — | $3,279.14 | — | top 4 by hot; rank hot_score; list yday_mover; ret5=+25.8; combo leftover $1893.79; owner union_hot_n4_h1 | join🔴 sector🟡 gen🟢 news🟡 digest🔴 ab🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `ANNX` | 136 | $3.99 | $2.40 | — | $2,734.10 | — | union ∩ news_g, no 🚨; gate news=good; list probable,yday_gainer; 🔵; ret5=-5.0; combo leftover $546.52; owner union_news_g_h1 | join🔴 sector🟡 gen🟢 news🟢 digest🟢 ab🔴 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `SGMT` | 55 | $9.92 | $2.15 | — | $2,186.34 | — | union ∩ news_g, no 🚨; gate news=good; list probable,yday_gainer; ret5=-8.0; combo leftover $546.52; owner union_news_g_h1 | join🔴 sector🟡 gen🟢 news🟢 digest🟢 ab🔴 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `ZSQR` | 122 | $4.47 | $2.36 | — | $1,638.65 | — | union ∩ news_g, no 🚨; gate news=good; list yday_gainer,yday_mover; ⚪; ret5=+72.0; combo leftover $546.52; owner union_news_g_h1 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 ab🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `LQDA` | 7 | $72.49 | $2.01 | — | $1,129.21 | — | union ∩ news_g, no 🚨; gate news=good; list yday_gainer,ohlc_hot; ret5=+10.9; combo leftover $546.52; owner union_news_g_h1 | join🔴 sector🟡 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `ALVO` | 89 | $6.13 | $2.26 | — | $581.38 | — | union ∩ news_g, no 🚨; gate news=good; list yday_gainer,ohlc_hot; ret5=+4.6; combo leftover $546.52; owner union_news_g_h1 | join🔴 sector🟡 gen🟢 news🟢 digest🟢 ab🔴 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `BURL` | 2 | $268.37 | $2.00 | — | $42.64 | — | union ∩ news_g, no 🚨; gate news=good; list ohlc_hot; 🔵; ret5=+5.8; combo leftover $546.52; owner union_news_g_h1 | join🟢 sector🟡 gen🟢 news🟢 digest🟡 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-09-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $42.64 | ▲ close $11,132.05 vs 09:30 $10,821.66 (session +354.80) | 16:00 close · cash $42.64 · equity $11,132.05 vs 09:30 $10,821.66 (+310.39; session marks +354.80) · 10 name(s) marked open→close (per-name table). KOD×21 09:30 $87.50 → close $91.12 +76.02; GLND×475 09:30 $3.98 → close $4.75 +365.75; SRFM×1591 09:30 $1.19 → close $1.20 +15.91; GRML×180 09:30 $10.50 → close $10.38 -22.50; ANNX×136 09:30 $3.99 → close $4.13 +19.04; SGMT×55 09:30 $9.92 → close $9.33 -32.45; ZSQR×122 09:30 $4.47 → close $4.15 -39.04; LQDA×7 09:30 $72.49 → close $70.69 -12.60; ALVO×89 09:30 $6.13 → close $5.92 -18.69; BURL×2 09:30 $268.37 → close $270.05 +3.36 | — |
 
 ## Not taken
 

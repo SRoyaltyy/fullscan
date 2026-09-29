@@ -1,0 +1,147 @@
+{
+  "buys": [
+    {
+      "fill_rule": "open",
+      "price": 87.5,
+      "shares": 25,
+      "side": "BUY",
+      "ticker": "KOD"
+    },
+    {
+      "fill_rule": "open",
+      "price": 9.58,
+      "shares": 234,
+      "side": "BUY",
+      "ticker": "AGEN"
+    },
+    {
+      "fill_rule": "open",
+      "price": 1.185,
+      "shares": 1893,
+      "side": "BUY",
+      "ticker": "NAUT"
+    },
+    {
+      "fill_rule": "open",
+      "price": 3.32,
+      "shares": 675,
+      "side": "BUY",
+      "ticker": "AMC"
+    }
+  ],
+  "cash": 22.58,
+  "date": "2026-09-29",
+  "equity": 9277.79,
+  "fees": 38.2108,
+  "fills": [
+    {
+      "fees": 2.065,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 87.5,
+      "shares": 25,
+      "side": "BUY",
+      "ticker": "KOD"
+    },
+    {
+      "fees": 3.0186,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 9.58,
+      "shares": 234,
+      "side": "BUY",
+      "ticker": "AGEN"
+    },
+    {
+      "fees": 24.4197,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 1.185,
+      "shares": 1893,
+      "side": "BUY",
+      "ticker": "NAUT"
+    },
+    {
+      "fees": 8.7075,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 3.32,
+      "shares": 675,
+      "side": "BUY",
+      "ticker": "AMC"
+    }
+  ],
+  "holdings": [
+    "AGEN",
+    "AMC",
+    "KOD",
+    "NAUT"
+  ],
+  "mean": 3.3827,
+  "n_trades_today": 4,
+  "recipe": "oos0914_rvol_lg_h1_sx",
+  "sells": [],
+  "state": {
+    "after": "2026-09-29",
+    "cash": 22.58,
+    "pos": {
+      "AGEN": {
+        "close_px": 9.89,
+        "cost": 2244.7385999999997,
+        "entry_date": "2026-09-29",
+        "entry_px": 9.58,
+        "fee_in": 3.0186,
+        "last_px": 9.58,
+        "min_hold": 1,
+        "notional": 2241.72,
+        "peak_px": 9.58,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate last_green=True,rvol_min=1.5; rank hot_score; list yday_gainer,ohlc_hot; ret5=+13.2; leftover $2243.55",
+        "shares": 234,
+        "ticker": "AGEN"
+      },
+      "AMC": {
+        "close_px": 3.08,
+        "cost": 2249.7075,
+        "entry_date": "2026-09-29",
+        "entry_px": 3.32,
+        "fee_in": 8.7075,
+        "last_px": 3.32,
+        "min_hold": 1,
+        "notional": 2241.0,
+        "peak_px": 3.32,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate last_green=True,rvol_min=1.5; rank hot_score; list yday_gainer,yday_mover,ohlc_hot; \ud83d\udd35; ret5=+13.8; leftover $2243.55",
+        "shares": 675,
+        "ticker": "AMC"
+      },
+      "KOD": {
+        "close_px": 91.12,
+        "cost": 2189.565,
+        "entry_date": "2026-09-29",
+        "entry_px": 87.5,
+        "fee_in": 2.065,
+        "last_px": 87.5,
+        "min_hold": 1,
+        "notional": 2187.5,
+        "peak_px": 87.5,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate last_green=True,rvol_min=1.5; rank hot_score; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+177.4; leftover $2243.55",
+        "shares": 25,
+        "ticker": "KOD"
+      },
+      "NAUT": {
+        "close_px": 1.365,
+        "cost": 2267.6247,
+        "entry_date": "2026-09-29",
+        "entry_px": 1.185,
+        "fee_in": 24.4197,
+        "last_px": 1.185,
+        "min_hold": 1,
+        "notional": 2243.205,
+        "peak_px": 1.185,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate last_green=True,rvol_min=1.5; rank hot_score; list yday_gainer,yday_mover; ret5=+16.2; leftover $2243.55",
+        "shares": 1893,
+        "ticker": "NAUT"
+      }
+    },
+    "yday_equity": 9277.79
+  }
+}

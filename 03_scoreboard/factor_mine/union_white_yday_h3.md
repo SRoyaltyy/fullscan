@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · union looker hold 3: 0 red + yesterday up
 
-Cash book **-12.99%** ($8,701) · signal-only (no cash/fees) was -11.78%. Starts YES **2/30**. Fills 126 · skips 140 · realized $-1313.49.
+Cash book **-12.41%** ($8,759) · signal-only (no cash/fees) was -11.78%. Starts YES **2/30**. Fills 131 · skips 140 · realized $-1313.49.
 
 ## How this sleeve decides (like you are 10)
 
@@ -264,6 +264,13 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-28 09:30 ET | **SELL** | `NEOG` | 13 | $13.75 | $1.85 | $-9.71 | $941.12 | ▼ -9.71 after sell → book $8,780.75; vs 09:30 mark -1.85 | exit unpriced hold on first bar after 3 sess | — |
 | 2026-09-28 09:30 ET | **SELL** | `OMER` | 9 | $19.83 | $1.83 | $-11.10 | $1,117.75 | ▼ -11.10 after sell → book $8,778.92; vs 09:30 mark -1.83 | dropped from list after 3 sess (min 3) | — |
 | 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1,117.75 | ▼ close $8,701.27 vs 09:30 $8,789.12 (session -77.65) | 16:00 close · cash $1,117.75 · equity $8,701.27 vs 09:30 $8,789.12 (-87.85; session marks -77.65) · 7 name(s) marked open→close (per-name table). CDNS×3 09:30 $318.99 → close $326.70 +23.13; CYPH×279 09:30 $4.03 → close $3.31 -201.58; DUOT×116 09:30 $8.99 → close $8.99 +0.00; GRAL×9 09:30 $128.90 → close $132.63 +33.57; PACB×712 09:30 $1.60 → close $1.71 +78.32; PRGO×75 09:30 $15.21 → close $15.10 -8.25; RSKD×142 09:30 $7.72 → close $7.70 -2.84 | — |
+| 2026-09-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $1,117.75 | ▼ 09:30 equity $8,677.23 vs yday $8,701.27 (-24.04) | 09:30 open · cash $1,117.75 (unchanged overnight, no fees) · equity $8,677.23 vs prior close $8,701.27 (-24.04) · 7 name(s) re-marked at the open (per-name table). CDNS×3 yday $326.70 → 09:30 $321.20 -16.50; CYPH×279 yday $3.31 → 09:30 $3.34 +8.37; DUOT×116 yday $8.99 → 09:30 $9.00 +1.16; GRAL×9 yday $132.63 → 09:30 $133.49 +7.74; PACB×712 yday $1.71 → 09:30 $1.67 -28.48; PRGO×75 yday $15.10 → 09:30 $15.13 +2.25; RSKD×142 yday $7.70 → 09:30 $7.71 +1.42 | — |
+| 2026-09-29 09:30 ET | **BUY** | `ADMA` | 15 | $10.04 | $1.55 | — | $965.60 | — | union looker hold 3: 0 red + yesterday up; gate yday_up=True,zero_red=True; rank cond; list probable,yday_gainer,ohlc_hot; ⚪; ret5=+6.5; leftover $159.68 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `BB` | 18 | $8.86 | $1.65 | — | $804.47 | — | union looker hold 3: 0 red + yesterday up; gate yday_up=True,zero_red=True; rank cond; list yday_gainer; ⚪; ret5=+3.2; leftover $159.68 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟡 heat🟢 vol🟢 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `PDFS` | 3 | $50.25 | $1.52 | — | $652.20 | — | union looker hold 3: 0 red + yesterday up; gate yday_up=True,zero_red=True; rank cond; list flatten; ⚪; ret5=+6.5; leftover $159.68 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `VFC` | 11 | $14.51 | $1.63 | — | $490.96 | — | union looker hold 3: 0 red + yesterday up; gate yday_up=True,zero_red=True; rank cond; list ohlc_hot; 🔵; ⚪; ret5=+10.5; leftover $159.68 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `ZSQR` | 35 | $4.47 | $1.67 | — | $332.85 | — | union looker hold 3: 0 red + yesterday up; gate yday_up=True,zero_red=True; rank cond; list yday_gainer,yday_mover; ⚪; ret5=+72.0; leftover $159.68 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 ab🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $332.85 | ▲ close $8,759.38 vs 09:30 $8,677.23 (session +90.16) | 16:00 close · cash $332.85 · equity $8,759.38 vs 09:30 $8,677.23 (+82.15; session marks +90.16) · 12 name(s) marked open→close (per-name table). CDNS×3 09:30 $321.20 → close $324.17 +8.91; CYPH×279 09:30 $3.34 → close $3.23 -30.69; DUOT×116 09:30 $9.00 → close $8.97 -3.48; GRAL×9 09:30 $133.49 → close $136.57 +27.72; PACB×712 09:30 $1.67 → close $1.83 +113.92; PRGO×75 09:30 $15.13 → close $15.00 -9.75; RSKD×142 09:30 $7.71 → close $7.71 +0.00; ADMA×15 09:30 $10.04 → close $9.96 -1.20; BB×18 09:30 $8.86 → close $8.72 -2.52; PDFS×3 09:30 $50.25 → close $49.77 -1.44; VFC×11 09:30 $14.51 → close $14.50 -0.11; ZSQR×35 09:30 $4.47 → close $4.15 -11.20 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `ohlc_hot` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · hot list ∩ not exploded
 
-Cash book **-9.39%** ($9,061) · signal-only (no cash/fees) was -11.86%. Starts YES **9/30**. Fills 157 · skips 74 · realized $-1849.08.
+Cash book **-9.42%** ($9,058) · signal-only (no cash/fees) was -11.86%. Starts YES **9/30**. Fills 165 · skips 74 · realized $-1849.08.
 
 ## How this sleeve decides (like you are 10)
 
@@ -295,6 +295,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-28 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10.48 | ▼ 09:30 equity $9,068.21 vs yday $9,815.44 (-747.23) | 09:30 open · cash $10.48 (unchanged overnight, no fees) · equity $9,068.21 vs prior close $9,815.44 (-747.23) · 1 name(s) re-marked at the open (per-name table). NTSK×528 yday $18.57 → 09:30 $17.15 -747.23 | — |
 | 2026-09-28 09:30 ET | **SELL** | `NTSK` | 528 | $17.15 | $6.97 | $-581.49 | $9,061.24 | ▼ -581.49 after sell → book $9,061.24; vs 09:30 mark -6.97 | exit unpriced hold on first bar after 4 sess | — |
 | 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,061.24 | ▲ close $9,061.24 vs 09:30 $9,068.21 (session +0.00) | 16:00 close · cash $9,061.24 · no lots left · equity $9,061.24. | — |
+| 2026-09-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,061.24 | ▲ 09:30 equity $9,061.24 vs yday $9,061.24 (+0.00) | 09:30 open · cash $9,061.24 · no holdings · equity $9,061.24 vs prior close $9,061.24 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-09-29 09:30 ET | **BUY** | `ABCL` | 80 | $14.12 | $2.23 | — | $7,929.41 | — | hot list ∩ not exploded; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2; list probable,yday_gainer,ohlc_hot; ret5=+10.0; leftover $1132.65 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🟡 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `ADMA` | 112 | $10.04 | $2.33 | — | $6,802.60 | — | hot list ∩ not exploded; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2; list probable,yday_gainer,ohlc_hot; ⚪; ret5=+6.5; leftover $1132.65 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `ALVO` | 184 | $6.13 | $2.54 | — | $5,672.14 | — | hot list ∩ not exploded; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2; list yday_gainer,ohlc_hot; ret5=+4.6; leftover $1132.65 | join🔴 sector🟡 gen🟢 news🟢 digest🟢 ab🔴 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `SUIG` | 699 | $1.62 | $9.02 | — | $4,530.74 | — | hot list ∩ not exploded; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2; list ohlc_hot; ret5=+9.6; leftover $1132.65 | join🟡 sector🔴 gen🟢 news🟡 digest🟢 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `RGEN` | 5 | $196.00 | $2.00 | — | $3,548.74 | — | hot list ∩ not exploded; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2; list ohlc_hot; 🔵; ⚪; ret5=+7.4; leftover $1132.65 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `VSXY` | 12 | $89.78 | $2.03 | — | $2,469.35 | — | hot list ∩ not exploded; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2; list ohlc_hot; 🔵; ret5=+8.2; leftover $1132.65 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `A` | 6 | $174.49 | $2.01 | — | $1,420.41 | — | hot list ∩ not exploded; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2; list ohlc_hot; ret5=+8.2; leftover $1132.65 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `GAP` | 49 | $23.07 | $2.14 | — | $287.84 | — | hot list ∩ not exploded; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2; list ohlc_hot; 🔵; ret5=+8.0; leftover $1132.65 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-09-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $287.84 | ▲ close $9,057.87 vs 09:30 $9,061.24 (session +20.92) | 16:00 close · cash $287.84 · equity $9,057.87 vs 09:30 $9,061.24 (-3.37; session marks +20.92) · 8 name(s) marked open→close (per-name table). ABCL×80 09:30 $14.12 → close $14.82 +56.00; ADMA×112 09:30 $10.04 → close $9.96 -8.96; ALVO×184 09:30 $6.13 → close $5.92 -38.64; SUIG×699 09:30 $1.62 → close $1.62 +0.00; RGEN×5 09:30 $196.00 → close $194.57 -7.15; VSXY×12 09:30 $89.78 → close $89.23 -6.60; A×6 09:30 $174.49 → close $175.03 +3.24; GAP×49 09:30 $23.07 → close $23.54 +23.03 | — |
 
 ## Not taken
 

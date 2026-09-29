@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ coil_off hold 5, no 🚨
 
-Cash book **-16.29%** ($8,371) · signal-only (no cash/fees) was -38.99%. Starts YES **0/30**. Fills 165 · skips 444 · realized $-915.44.
+Cash book **-16.06%** ($8,394) · signal-only (no cash/fees) was -38.99%. Starts YES **0/30**. Fills 173 · skips 444 · realized $-915.44.
 
 ## How this sleeve decides (like you are 10)
 
@@ -304,6 +304,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-28 09:30 ET | **SELL** | `SHLS` | 2 | $7.37 | $0.17 | $-0.87 | $4,270.25 | ▼ -0.87 after sell → book $8,264.31; vs 09:30 mark -0.17 | exit unpriced hold on first bar after 6 sess | — |
 | 2026-09-28 09:30 ET | **SELL** | `XE` | 1 | $15.00 | $0.17 | $-1.62 | $4,285.07 | ▼ -1.62 after sell → book $8,264.13; vs 09:30 mark -0.18 | exit unpriced hold on first bar after 6 sess | — |
 | 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $4,285.07 | ▲ close $8,371.43 vs 09:30 $8,280.01 (session +107.30) | 16:00 close · cash $4,285.07 · equity $8,371.43 vs 09:30 $8,280.01 (+91.42; session marks +107.30) · 4 name(s) marked open→close (per-name table). HLP×6 09:30 $2.22 → close $2.39 +1.02; MRVI×1 09:30 $7.49 → close $7.63 +0.14; SAIL×197 09:30 $20.03 → close $20.57 +106.38; SATL×2 09:30 $6.17 → close $6.05 -0.24 | — |
+| 2026-09-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $4,285.07 | ▼ 09:30 equity $8,336.30 vs yday $8,371.43 (-35.13) | 09:30 open · cash $4,285.07 (unchanged overnight, no fees) · equity $8,336.30 vs prior close $8,371.43 (-35.13) · 4 name(s) re-marked at the open (per-name table). HLP×6 yday $2.39 → 09:30 $2.41 +0.12; MRVI×1 yday $7.63 → 09:30 $7.52 -0.11; SAIL×197 yday $20.57 → 09:30 $20.39 -35.46; SATL×2 yday $6.05 → 09:30 $6.21 +0.32 | — |
+| 2026-09-29 09:30 ET | **BUY** | `SN` | 2 | $184.05 | $2.00 | — | $3,914.97 | — | union ∩ coil_off hold 5, no 🚨; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list flatten; 🔵; ⚪; ret5=+8.7; leftover $535.63 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `DT` | 9 | $57.39 | $2.02 | — | $3,396.45 | — | union ∩ coil_off hold 5, no 🚨; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list flatten; ⚪; ret5=+2.6; leftover $535.63 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `TOST` | 17 | $30.40 | $2.04 | — | $2,877.61 | — | union ∩ coil_off hold 5, no 🚨; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list flatten; ⚪; ret5=+1.9; leftover $535.63 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `SONO` | 30 | $17.76 | $2.08 | — | $2,342.73 | — | union ∩ coil_off hold 5, no 🚨; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list flatten; ⚪; ret5=+9.8; leftover $535.63 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟢 |
+| 2026-09-29 09:30 ET | **BUY** | `PDFS` | 10 | $50.25 | $2.02 | — | $1,838.21 | — | union ∩ coil_off hold 5, no 🚨; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list flatten; ⚪; ret5=+6.5; leftover $535.63 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `SHOO` | 11 | $45.06 | $2.02 | — | $1,340.52 | — | union ∩ coil_off hold 5, no 🚨; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list flatten; 🔵; ⚪; ret5=+4.8; leftover $535.63 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `ABCL` | 37 | $14.12 | $2.10 | — | $815.98 | — | union ∩ coil_off hold 5, no 🚨; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list probable,yday_gainer,ohlc_hot; ret5=+10.0; leftover $535.63 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🟡 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `ADMA` | 53 | $10.04 | $2.15 | — | $281.71 | — | union ∩ coil_off hold 5, no 🚨; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list probable,yday_gainer,ohlc_hot; ⚪; ret5=+6.5; leftover $535.63 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $281.71 | ▲ close $8,393.68 vs 09:30 $8,336.30 (session +73.81) | 16:00 close · cash $281.71 · equity $8,393.68 vs 09:30 $8,336.30 (+57.38; session marks +73.81) · 12 name(s) marked open→close (per-name table). HLP×6 09:30 $2.41 → close $2.45 +0.24; MRVI×1 09:30 $7.52 → close $7.65 +0.13; SAIL×197 09:30 $20.39 → close $20.67 +55.16; SATL×2 09:30 $6.21 → close $5.60 -1.22; SN×2 09:30 $184.05 → close $182.44 -3.22; DT×9 09:30 $57.39 → close $57.53 +1.26; TOST×17 09:30 $30.40 → close $30.46 +1.02; SONO×30 09:30 $17.76 → close $17.85 +2.70; PDFS×10 09:30 $50.25 → close $49.77 -4.80; SHOO×11 09:30 $45.06 → close $45.14 +0.88; ABCL×37 09:30 $14.12 → close $14.82 +25.90; ADMA×53 09:30 $10.04 → close $9.96 -4.24 | — |
 
 ## Not taken
 

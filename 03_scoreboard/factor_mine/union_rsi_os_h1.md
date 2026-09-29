@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ rsi_os, no 🚨
 
-Cash book **-30.90%** ($6,910) · signal-only (no cash/fees) was -7.54%. Starts YES **0/30**. Fills 96 · skips 20 · realized $-3180.18.
+Cash book **-28.44%** ($7,156) · signal-only (no cash/fees) was -7.54%. Starts YES **0/30**. Fills 101 · skips 20 · realized $-3180.18.
 
 ## How this sleeve decides (like you are 10)
 
@@ -232,6 +232,13 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-28 09:30 ET | **SELL** | `GEN` | 107 | $21.44 | $2.35 | $-161.95 | $4,554.41 | ▼ -161.95 after sell → book $6,924.68; vs 09:30 mark -2.35 | dropped from list after 1 sess (min 1) | — |
 | 2026-09-28 09:30 ET | **SELL** | `SFIX` | 1117 | $2.12 | $14.61 | $-116.15 | $6,910.07 | ▼ -116.15 after sell → book $6,910.07; vs 09:30 mark -14.61 | dropped from list after 1 sess (min 1) | — |
 | 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6,910.07 | ▲ close $6,910.07 vs 09:30 $6,929.38 (session +0.00) | 16:00 close · cash $6,910.07 · no lots left · equity $6,910.07. | — |
+| 2026-09-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $6,910.07 | ▲ 09:30 equity $6,910.07 vs yday $6,910.07 (+0.00) | 09:30 open · cash $6,910.07 · no holdings · equity $6,910.07 vs prior close $6,910.07 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-09-29 09:30 ET | **BUY** | `TDTH` | 1552 | $0.89 | $18.47 | — | $5,510.32 | — | union ∩ rsi_os, no 🚨; gate rsi_os=True; list yday_mover; ret5=-36.6; leftover $1382.01 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `OCUL` | 178 | $7.76 | $2.52 | — | $4,126.52 | — | union ∩ rsi_os, no 🚨; gate rsi_os=True; list yday_mover; ret5=-23.4; leftover $1382.01 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `GFI` | 37 | $36.38 | $2.10 | — | $2,778.36 | — | union ∩ rsi_os, no 🚨; gate rsi_os=True; list yday_mover; 🔵; ret5=-16.2; leftover $1382.01 | join🔴 sector🟡 gen🟢 news🟡 digest🔴 ab🟡 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `SWMR` | 74 | $18.59 | $2.21 | — | $1,400.48 | — | union ∩ rsi_os, no 🚨; gate rsi_os=True; list yday_mover; ret5=-22.5; leftover $1382.01 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `MRLN` | 789 | $1.75 | $10.18 | — | $9.56 | — | union ∩ rsi_os, no 🚨; gate rsi_os=True; list yday_mover; 🔵; ret5=-5.9; leftover $1382.01 | join🟡 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-09-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9.56 | ▲ close $7,156.36 vs 09:30 $6,910.07 (session +281.77) | 16:00 close · cash $9.56 · equity $7,156.36 vs 09:30 $6,910.07 (+246.29; session marks +281.77) · 5 name(s) marked open→close (per-name table). TDTH×1552 09:30 $0.89 → close $1.14 +388.00; OCUL×178 09:30 $7.76 → close $7.87 +19.58; GFI×37 09:30 $36.38 → close $36.78 +14.80; SWMR×74 09:30 $18.59 → close $16.37 -164.28; MRLN×789 09:30 $1.75 → close $1.78 +23.67 | — |
 
 ## Not taken
 

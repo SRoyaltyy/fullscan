@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · −0 red + (yday up or major catalyst), then Score
 
-Cash book **-16.53%** ($8,347) · signal-only (no cash/fees) was -4.29%. Starts YES **2/30**. Fills 142 · skips 149 · realized $-1383.61.
+Cash book **-17.69%** ($8,231) · signal-only (no cash/fees) was -4.29%. Starts YES **2/30**. Fills 147 · skips 149 · realized $-1383.61.
 
 ## How this sleeve decides (like you are 10)
 
@@ -280,6 +280,13 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-28 09:30 ET | **SELL** | `HALO` | 1 | $113.34 | $1.16 | $-5.84 | $797.02 | ▼ -5.84 after sell → book $7,994.43; vs 09:30 mark -1.16 | dropped from list after 3 sess (min 3) | — |
 | 2026-09-28 09:30 ET | **SELL** | `OMER` | 6 | $19.83 | $1.23 | $-7.40 | $914.78 | ▼ -7.40 after sell → book $7,993.21; vs 09:30 mark -1.22 | dropped from list after 3 sess (min 3) | — |
 | 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $914.78 | ▲ close $8,346.80 vs 09:30 $7,999.18 (session +353.59) | 16:00 close · cash $914.78 · equity $8,346.80 vs 09:30 $7,999.18 (+347.62; session marks +353.59) · 7 name(s) marked open→close (per-name table). GRAL×8 09:30 $128.90 → close $132.63 +29.84; MRVI×139 09:30 $7.49 → close $7.63 +19.46; SECZ×65 09:30 $16.00 → close $16.63 +40.95; TEM×12 09:30 $83.57 → close $85.08 +18.12; TWST×5 09:30 $181.87 → close $179.60 -11.35; TXG×12 09:30 $86.14 → close $88.50 +28.32; ZSQR×275 09:30 $3.71 → close $4.54 +228.25 | — |
+| 2026-09-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $914.78 | ▼ 09:30 equity $8,326.86 vs yday $8,346.80 (-19.94) | 09:30 open · cash $914.78 (unchanged overnight, no fees) · equity $8,326.86 vs prior close $8,346.80 (-19.94) · 7 name(s) re-marked at the open (per-name table). GRAL×8 yday $132.63 → 09:30 $133.49 +6.88; MRVI×139 yday $7.63 → 09:30 $7.52 -15.29; SECZ×65 yday $16.63 → 09:30 $16.59 -2.60; TEM×12 yday $85.08 → 09:30 $85.48 +4.86; TWST×5 yday $179.60 → 09:30 $179.90 +1.50; TXG×12 yday $88.50 → 09:30 $88.83 +3.96; ZSQR×275 yday $4.54 → 09:30 $4.47 -19.25 | — |
+| 2026-09-29 09:30 ET | **BUY** | `PDFS` | 2 | $50.25 | $1.01 | — | $813.27 | — | −0 red + (yday up or major catalyst), then Score; gate cam_bad_max=0,yday_or_catalyst=True; rank list; list flatten; ⚪; ret5=+6.5; leftover $130.68 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `ADMA` | 13 | $10.04 | $1.34 | — | $681.40 | — | −0 red + (yday up or major catalyst), then Score; gate cam_bad_max=0,yday_or_catalyst=True; rank list; list probable,yday_gainer,ohlc_hot; ⚪; ret5=+6.5; leftover $130.68 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `BB` | 14 | $8.86 | $1.28 | — | $556.08 | — | −0 red + (yday up or major catalyst), then Score; gate cam_bad_max=0,yday_or_catalyst=True; rank list; list yday_gainer; ⚪; ret5=+3.2; leftover $130.68 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟡 heat🟢 vol🟢 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `VFC` | 9 | $14.51 | $1.33 | — | $424.16 | — | −0 red + (yday up or major catalyst), then Score; gate cam_bad_max=0,yday_or_catalyst=True; rank list; list ohlc_hot; 🔵; ⚪; ret5=+10.5; leftover $130.68 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `KMX` | 2 | $60.41 | $1.21 | — | $302.14 | — | −0 red + (yday up or major catalyst), then Score; gate cam_bad_max=0,yday_or_catalyst=True; rank list; list earn_react; 🔵; ⚪; ret5=-2.3; leftover $130.68 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🟡 heat🟢 vol🟢 buy🟡 |
+| 2026-09-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $302.14 | ▼ close $8,231.05 vs 09:30 $8,326.86 (session -89.63) | 16:00 close · cash $302.14 · equity $8,231.05 vs 09:30 $8,326.86 (-95.81; session marks -89.63) · 12 name(s) marked open→close (per-name table). GRAL×8 09:30 $133.49 → close $136.57 +24.64; MRVI×139 09:30 $7.52 → close $7.65 +18.07; SECZ×65 09:30 $16.59 → close $15.84 -48.75; TEM×12 09:30 $85.48 → close $82.58 -34.86; TWST×5 09:30 $179.90 → close $186.13 +31.15; TXG×12 09:30 $88.83 → close $90.04 +14.52; ZSQR×275 09:30 $4.47 → close $4.15 -88.00; PDFS×2 09:30 $50.25 → close $49.77 -0.96; ADMA×13 09:30 $10.04 → close $9.96 -1.04; BB×14 09:30 $8.86 → close $8.72 -1.96; VFC×9 09:30 $14.51 → close $14.50 -0.09; KMX×2 09:30 $60.41 → close $59.23 -2.35 | — |
 
 ## Not taken
 

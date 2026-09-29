@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ news_g, no 🚨
 
-Cash book **-16.69%** ($8,331) · signal-only (no cash/fees) was +177.31%. Starts YES **1/30**. Fills 166 · skips 234 · realized $-2132.89.
+Cash book **-18.96%** ($8,104) · signal-only (no cash/fees) was +177.31%. Starts YES **1/30**. Fills 172 · skips 234 · realized $-2132.89.
 
 ## How this sleeve decides (like you are 10)
 
@@ -302,6 +302,14 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-28 09:30 ET | **SELL** | `SGRY` | 2 | $14.18 | $0.31 | $-3.71 | $1,700.64 | ▼ -3.71 after sell → book $7,973.91; vs 09:30 mark -0.31 | exit unpriced hold on first bar after 3 sess | — |
 | 2026-09-28 09:30 ET | **SELL** | `VERI` | 31 | $1.29 | $0.51 | $-1.32 | $1,740.12 | ▼ -1.32 after sell → book $7,973.40; vs 09:30 mark -0.51 | exit unpriced hold on first bar after 3 sess | — |
 | 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1,740.12 | ▲ close $8,330.58 vs 09:30 $7,983.65 (session +357.18) | 16:00 close · cash $1,740.12 · equity $8,330.58 vs 09:30 $7,983.65 (+346.93; session marks +357.18) · 5 name(s) marked open→close (per-name table). COST×1 09:30 $924.88 → close $922.92 -1.96; ILMN×5 09:30 $265.95 → close $271.90 +29.75; RKLB×18 09:30 $73.20 → close $72.19 -18.18; SECZ×84 09:30 $16.00 → close $16.63 +52.92; ZSQR×355 09:30 $3.71 → close $4.54 +294.65 | — |
+| 2026-09-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $1,740.12 | ▼ 09:30 equity $8,314.79 vs yday $8,330.58 (-15.79) | 09:30 open · cash $1,740.12 (unchanged overnight, no fees) · equity $8,314.79 vs prior close $8,330.58 (-15.79) · 5 name(s) re-marked at the open (per-name table). COST×1 yday $922.92 → 09:30 $916.80 -6.12; ILMN×5 yday $271.90 → 09:30 $271.00 -4.50; RKLB×18 yday $72.19 → 09:30 $73.47 +23.04; SECZ×84 yday $16.63 → 09:30 $16.59 -3.36; ZSQR×355 yday $4.54 → 09:30 $4.47 -24.85 | — |
+| 2026-09-29 09:30 ET | **BUY** | `ANNX` | 72 | $3.99 | $2.21 | — | $1,450.63 | — | union ∩ news_g, no 🚨; gate news=good; list probable,yday_gainer; 🔵; ret5=-5.0; leftover $290.02 | join🔴 sector🟡 gen🟢 news🟢 digest🟢 ab🔴 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `SGMT` | 29 | $9.92 | $2.08 | — | $1,160.88 | — | union ∩ news_g, no 🚨; gate news=good; list probable,yday_gainer; ret5=-8.0; leftover $290.02 | join🔴 sector🟡 gen🟢 news🟢 digest🟢 ab🔴 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `LQDA` | 4 | $72.49 | $2.00 | — | $868.91 | — | union ∩ news_g, no 🚨; gate news=good; list yday_gainer,ohlc_hot; ret5=+10.9; leftover $290.02 | join🔴 sector🟡 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `ALVO` | 47 | $6.13 | $2.13 | — | $578.67 | — | union ∩ news_g, no 🚨; gate news=good; list yday_gainer,ohlc_hot; ret5=+4.6; leftover $290.02 | join🔴 sector🟡 gen🟢 news🟢 digest🟢 ab🔴 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `GLND` | 72 | $3.98 | $2.21 | — | $289.91 | — | union ∩ news_g, no 🚨; gate news=good; list yday_mover; ret5=+55.9; leftover $290.02 | join🔴 sector🟡 gen🟢 news🟢 digest🟢 ab🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `BURL` | 1 | $268.37 | $1.99 | — | $19.54 | — | union ∩ news_g, no 🚨; gate news=good; list ohlc_hot; 🔵; ret5=+5.8; leftover $290.02 | join🟢 sector🟡 gen🟢 news🟢 digest🟡 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-09-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $19.54 | ▼ close $8,103.52 vs 09:30 $8,314.79 (session -198.65) | 16:00 close · cash $19.54 · equity $8,103.52 vs 09:30 $8,314.79 (-211.27; session marks -198.65) · 11 name(s) marked open→close (per-name table). COST×1 09:30 $916.80 → close $924.59 +7.79; ILMN×5 09:30 $271.00 → close $272.00 +5.00; RKLB×18 09:30 $73.47 → close $69.70 -67.86; SECZ×84 09:30 $16.59 → close $15.84 -63.00; ZSQR×355 09:30 $4.47 → close $4.15 -113.60; ANNX×72 09:30 $3.99 → close $4.13 +10.08; SGMT×29 09:30 $9.92 → close $9.33 -17.11; LQDA×4 09:30 $72.49 → close $70.69 -7.20; ALVO×47 09:30 $6.13 → close $5.92 -9.87; GLND×72 09:30 $3.98 → close $4.75 +55.44; BURL×1 09:30 $268.37 → close $270.05 +1.68 | — |
 
 ## Not taken
 

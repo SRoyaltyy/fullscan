@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · rank by cond
 
-Cash book **-14.08%** ($8,592) · signal-only (no cash/fees) was -4.88%. Starts YES **0/30**. Fills 279 · skips 105 · realized $-723.91.
+Cash book **-15.51%** ($8,449) · signal-only (no cash/fees) was -4.88%. Starts YES **0/30**. Fills 288 · skips 105 · realized $-723.91.
 
 ## How this sleeve decides (like you are 10)
 
@@ -414,6 +414,17 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-28 09:30 ET | **SELL** | `PRGO` | 72 | $15.21 | $2.23 | $+24.37 | $6,556.74 | ▲ +24.37 after sell → book $8,571.35; vs 09:30 mark -2.23 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-09-28 09:30 ET | **SELL** | `RSKD` | 137 | $7.72 | $2.43 | $-22.64 | $7,611.94 | ▼ -22.64 after sell → book $8,568.91; vs 09:30 mark -2.44 | dropped from list after 1 sess (min 1) | — |
 | 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,611.94 | ▲ close $8,592.04 vs 09:30 $8,592.51 (session +23.13) | 16:00 close · cash $7,611.94 · equity $8,592.04 vs 09:30 $8,592.51 (-0.47; session marks +23.13) · 1 name(s) marked open→close (per-name table). CDNS×3 09:30 $318.99 → close $326.70 +23.13 | — |
+| 2026-09-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,611.94 | ▼ 09:30 equity $8,575.54 vs yday $8,592.04 (-16.50) | 09:30 open · cash $7,611.94 (unchanged overnight, no fees) · equity $8,575.54 vs prior close $8,592.04 (-16.50) · 1 name(s) re-marked at the open (per-name table). CDNS×3 yday $326.70 → 09:30 $321.20 -16.50 | — |
+| 2026-09-29 09:30 ET | **SELL** | `CDNS` | 3 | $321.20 | $2.02 | $-15.33 | $8,573.52 | ▼ -15.33 after sell → book $8,573.52; vs 09:30 mark -2.02 | dropped from list after 2 sess (min 1) | — |
+| 2026-09-29 09:30 ET | **BUY** | `MDB` | 3 | $335.14 | $2.00 | — | $7,566.09 | — | rank by cond; rank cond; list yday_mover; ⚪; ret5=-17.8; leftover $1071.69 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `SONO` | 60 | $17.76 | $2.17 | — | $6,498.32 | — | rank by cond; rank cond; list flatten; ⚪; ret5=+9.8; leftover $1071.69 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟢 |
+| 2026-09-29 09:30 ET | **BUY** | `AMC` | 322 | $3.32 | $4.15 | — | $5,425.12 | — | rank by cond; rank cond; list yday_gainer,yday_mover,ohlc_hot; 🔵; ret5=+13.8; leftover $1071.69 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `ADMA` | 106 | $10.04 | $2.31 | — | $4,358.58 | — | rank by cond; rank cond; list probable,yday_gainer,ohlc_hot; ⚪; ret5=+6.5; leftover $1071.69 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `BB` | 120 | $8.86 | $2.35 | — | $3,293.03 | — | rank by cond; rank cond; list yday_gainer; ⚪; ret5=+3.2; leftover $1071.69 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟡 heat🟢 vol🟢 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `DT` | 18 | $57.39 | $2.04 | — | $2,257.96 | — | rank by cond; rank cond; list flatten; ⚪; ret5=+2.6; leftover $1071.69 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `PDFS` | 21 | $50.25 | $2.05 | — | $1,200.66 | — | rank by cond; rank cond; list flatten; ⚪; ret5=+6.5; leftover $1071.69 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `RGEN` | 5 | $196.00 | $2.00 | — | $218.65 | — | rank by cond; rank cond; list ohlc_hot; 🔵; ⚪; ret5=+7.4; leftover $1071.69 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $218.65 | ▼ close $8,448.70 vs 09:30 $8,575.54 (session -105.73) | 16:00 close · cash $218.65 · equity $8,448.70 vs 09:30 $8,575.54 (-126.84; session marks -105.73) · 8 name(s) marked open→close (per-name table). MDB×3 09:30 $335.14 → close $337.19 +6.14; SONO×60 09:30 $17.76 → close $17.85 +5.40; AMC×322 09:30 $3.32 → close $3.08 -77.28; ADMA×106 09:30 $10.04 → close $9.96 -8.48; BB×120 09:30 $8.86 → close $8.72 -16.80; DT×18 09:30 $57.39 → close $57.53 +2.52; PDFS×21 09:30 $50.25 → close $49.77 -10.08; RGEN×5 09:30 $196.00 → close $194.57 -7.15 | — |
 
 ## Not taken
 

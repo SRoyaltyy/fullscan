@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ macd_xup, no 🚨
 
-Cash book **-6.81%** ($9,319) · signal-only (no cash/fees) was -55.44%. Starts YES **5/30**. Fills 134 · skips 209 · realized $-2117.42.
+Cash book **-5.28%** ($9,472) · signal-only (no cash/fees) was -55.44%. Starts YES **5/30**. Fills 136 · skips 209 · realized $-2117.42.
 
 ## How this sleeve decides (like you are 10)
 
@@ -270,6 +270,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-28 09:30 ET | **SELL** | `SGRY` | 1 | $14.18 | $0.16 | $-1.87 | $1,440.41 | ▼ -1.87 after sell → book $9,363.94; vs 09:30 mark -0.16 | exit unpriced hold on first bar after 3 sess | — |
 | 2026-09-28 09:30 ET | **SELL** | `THM` | 7 | $2.64 | $0.23 | $-1.99 | $1,458.66 | ▼ -1.99 after sell → book $9,363.71; vs 09:30 mark -0.23 | exit unpriced hold on first bar after 3 sess | — |
 | 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1,458.66 | ▼ close $9,318.57 vs 09:30 $9,378.90 (session -45.14) | 16:00 close · cash $1,458.66 · equity $9,318.57 vs 09:30 $9,378.90 (-60.33; session marks -45.14) · 6 name(s) marked open→close (per-name table). CBRL×25 09:30 $52.25 → close $53.73 +37.00; MRVI×175 09:30 $7.49 → close $7.63 +24.50; OMER×65 09:30 $19.83 → close $19.43 -26.00; QMCO×44 09:30 $31.65 → close $31.40 -11.00; SENS×130 09:30 $9.85 → close $9.84 -1.30; WRBY×51 09:30 $26.00 → close $24.66 -68.34 | — |
+| 2026-09-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $1,458.66 | ▲ 09:30 equity $9,357.55 vs yday $9,318.57 (+38.98) | 09:30 open · cash $1,458.66 (unchanged overnight, no fees) · equity $9,357.55 vs prior close $9,318.57 (+38.98) · 6 name(s) re-marked at the open (per-name table). CBRL×25 yday $53.73 → 09:30 $54.06 +8.25; MRVI×175 yday $7.63 → 09:30 $7.52 -19.25; OMER×65 yday $19.43 → 09:30 $19.26 -11.05; QMCO×44 yday $31.40 → 09:30 $32.32 +40.48; SENS×130 yday $9.84 → 09:30 $9.90 +7.80; WRBY×51 yday $24.66 → 09:30 $24.91 +12.75 | — |
+| 2026-09-29 09:30 ET | **BUY** | `ABCL` | 51 | $14.12 | $2.14 | — | $736.40 | — | union ∩ macd_xup, no 🚨; gate macd_cross_up=True; list probable,yday_gainer,ohlc_hot; ret5=+10.0; leftover $729.33 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🟡 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `RZLT` | 160 | $4.54 | $2.47 | — | $6.73 | — | union ∩ macd_xup, no 🚨; gate macd_cross_up=True; list yday_gainer; ret5=+6.9; leftover $729.33 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6.73 | ▲ close $9,472.26 vs 09:30 $9,357.55 (session +119.32) | 16:00 close · cash $6.73 · equity $9,472.26 vs 09:30 $9,357.55 (+114.71; session marks +119.32) · 8 name(s) marked open→close (per-name table). CBRL×25 09:30 $54.06 → close $52.48 -39.50; MRVI×175 09:30 $7.52 → close $7.65 +22.75; OMER×65 09:30 $19.26 → close $19.25 -0.65; QMCO×44 09:30 $32.32 → close $32.86 +23.76; SENS×130 09:30 $9.90 → close $10.05 +19.50; WRBY×51 09:30 $24.91 → close $27.47 +130.56; ABCL×51 09:30 $14.12 → close $14.82 +35.70; RZLT×160 09:30 $4.54 → close $4.09 -72.80 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · news🔴
 
-Cash book **-2.03%** ($9,797) · signal-only (no cash/fees) was +4.61%. Starts YES **16/30**. Fills 115 · skips 28 · realized $+7.41.
+Cash book **-4.10%** ($9,590) · signal-only (no cash/fees) was +4.61%. Starts YES **16/30**. Fills 116 · skips 28 · realized $+7.41.
 
 ## How this sleeve decides (like you are 10)
 
@@ -249,6 +249,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-28 09:30 ET | **COVER** | `HALO` | 21 | $113.34 | $2.05 | $+38.22 | $12,186.23 | ▲ +38.22 after sell → book $9,800.75; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | — |
 | 2026-09-28 09:30 ET | **COVER** | `RSKD` | 309 | $7.72 | $3.99 | $+32.06 | $9,796.76 | ▲ +32.06 after sell → book $9,796.76; vs 09:30 mark -3.99 | dropped from list after 1 sess (min 1) | — |
 | 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,796.76 | ▲ close $9,796.76 vs 09:30 $9,806.66 (session +0.00) | 16:00 close · cash $9,796.76 · no lots left · equity $9,796.76. | — |
+| 2026-09-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,796.76 | ▲ 09:30 equity $9,796.76 vs yday $9,796.76 (+0.00) | 09:30 open · cash $9,796.76 · no holdings · equity $9,796.76 vs prior close $9,796.76 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-09-29 09:30 ET | **SHORT** | `AEHL` | 593 | $8.26 | $7.92 | — | $14,684.05 | — | news🔴; gate news=bad; list yday_mover; 🔵; ret5=+18.9; leftover $4898.38 | join🟢 sector🟢 gen🟢 news🔴 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-09-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $14,684.05 | ▼ close $9,590.18 vs 09:30 $9,796.76 (session -198.65) | 16:00 close · cash $14,684.05 · equity $9,590.18 vs 09:30 $9,796.76 (-206.58; session marks -198.65) · 1 name(s) marked open→close (per-name table). AEHL×593 09:30 $8.26 → close $8.59 -198.65 | — |
 
 ## Not taken
 

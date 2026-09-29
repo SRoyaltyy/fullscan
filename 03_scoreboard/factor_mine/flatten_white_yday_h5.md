@@ -6,7 +6,7 @@ Buys the flatten **wish-list** even on io/HOLD mornings — live `flatten_robust
 
 Side **long** · universe `flatten` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · flatten looker: 0 red + yesterday up
 
-Cash book **-6.16%** ($9,384) · signal-only (no cash/fees) was +1.97%. Starts YES **12/30**. Fills 65 · skips 119 · realized $-62.52.
+Cash book **-6.98%** ($9,302) · signal-only (no cash/fees) was +1.97%. Starts YES **12/30**. Fills 67 · skips 119 · realized $-62.52.
 
 ## How this sleeve decides (like you are 10)
 
@@ -203,6 +203,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-28 09:30 ET | **SELL** | `PGEN` | 147 | $7.61 | $2.47 | $-54.88 | $5,788.89 | ▼ -54.88 after sell → book $9,374.65; vs 09:30 mark -2.46 | exit unpriced hold on first bar after 3 sess | — |
 | 2026-09-28 09:30 ET | **SELL** | `RBRK` | 1 | $106.94 | $1.09 | $-3.79 | $5,894.74 | ▼ -3.79 after sell → book $9,373.56; vs 09:30 mark -1.09 | exit unpriced hold on first bar after 6 sess | — |
 | 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $5,894.74 | ▲ close $9,383.97 vs 09:30 $9,387.99 (session +10.41) | 16:00 close · cash $5,894.74 · equity $9,383.97 vs 09:30 $9,387.99 (-4.02; session marks +10.41) · 4 name(s) marked open→close (per-name table). A×7 09:30 $170.00 → close $175.21 +36.47; HALO×10 09:30 $113.34 → close $112.89 -4.50; MRVI×6 09:30 $7.49 → close $7.63 +0.84; OMER×56 09:30 $19.83 → close $19.43 -22.40 | — |
+| 2026-09-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $5,894.74 | ▼ 09:30 equity $9,368.75 vs yday $9,383.97 (-15.22) | 09:30 open · cash $5,894.74 (unchanged overnight, no fees) · equity $9,368.75 vs prior close $9,383.97 (-15.22) · 4 name(s) re-marked at the open (per-name table). A×7 yday $175.21 → 09:30 $174.49 -5.04; HALO×10 yday $112.89 → 09:30 $112.89 +0.00; MRVI×6 yday $7.63 → 09:30 $7.52 -0.66; OMER×56 yday $19.43 → 09:30 $19.26 -9.52 | — |
+| 2026-09-29 09:30 ET | **BUY** | `PDFS` | 58 | $50.25 | $2.16 | — | $2,978.08 | — | flatten looker: 0 red + yesterday up; gate yday_up=True,zero_red=True; rank cond; list flatten; wish-list (live io HOLD — not a ticket); ⚪; ret5=+6.5; leftover $2947.37 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `SN` | 16 | $184.05 | $2.04 | — | $31.24 | — | flatten looker: 0 red + yesterday up; gate yday_up=True,zero_red=True; rank cond; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ⚪; ret5=+8.7; leftover $2947.37 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $31.24 | ▼ close $9,301.65 vs 09:30 $9,368.75 (session -62.90) | 16:00 close · cash $31.24 · equity $9,301.65 vs 09:30 $9,368.75 (-67.10; session marks -62.90) · 6 name(s) marked open→close (per-name table). A×7 09:30 $174.49 → close $175.03 +3.78; HALO×10 09:30 $112.89 → close $111.56 -13.30; MRVI×6 09:30 $7.52 → close $7.65 +0.78; OMER×56 09:30 $19.26 → close $19.25 -0.56; PDFS×58 09:30 $50.25 → close $49.77 -27.84; SN×16 09:30 $184.05 → close $182.44 -25.76 | — |
 
 ## Not taken
 

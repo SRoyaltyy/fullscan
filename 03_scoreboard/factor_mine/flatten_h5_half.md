@@ -6,7 +6,7 @@ Buys the flatten **wish-list** even on io/HOLD mornings — live `flatten_robust
 
 Side **long** · universe `flatten` · top 8 · rank `list` · size `half` · sell `list` · S-boost `none` · deploy half leftover
 
-Cash book **-8.98%** ($9,102) · signal-only (no cash/fees) was +4.47%. Starts YES **1/30**. Fills 183 · skips 395 · realized $-47.54.
+Cash book **-9.19%** ($9,081) · signal-only (no cash/fees) was +4.47%. Starts YES **1/30**. Fills 189 · skips 395 · realized $-47.54.
 
 ## How this sleeve decides (like you are 10)
 
@@ -315,6 +315,14 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-28 09:30 ET | **SELL** | `USFD` | 1 | $93.00 | $0.95 | $-2.98 | $6,747.88 | ▼ -2.98 after sell → book $9,084.17; vs 09:30 mark -0.95 | exit unpriced hold on first bar after 4 sess | — |
 | 2026-09-28 09:30 ET | **SELL** | `VICR` | 1 | $280.00 | $2.01 | $+56.37 | $7,025.87 | ▲ +56.37 after sell → book $9,082.16; vs 09:30 mark -2.01 | exit unpriced hold on first bar after 6 sess | — |
 | 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,025.87 | ▲ close $9,101.93 vs 09:30 $9,114.09 (session +19.77) | 16:00 close · cash $7,025.87 · equity $9,101.93 vs 09:30 $9,114.09 (-12.16; session marks +19.77) · 4 name(s) marked open→close (per-name table). BLFS×17 09:30 $38.13 → close $39.15 +17.34; HALO×3 09:30 $113.34 → close $112.89 -1.35; MRVI×87 09:30 $7.49 → close $7.63 +12.18; OMER×21 09:30 $19.83 → close $19.43 -8.40 | — |
+| 2026-09-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,025.87 | ▼ 09:30 equity $9,086.92 vs yday $9,101.93 (-15.01) | 09:30 open · cash $7,025.87 (unchanged overnight, no fees) · equity $9,086.92 vs prior close $9,101.93 (-15.01) · 4 name(s) re-marked at the open (per-name table). BLFS×17 yday $39.15 → 09:30 $39.04 -1.87; HALO×3 yday $112.89 → 09:30 $112.89 +0.00; MRVI×87 yday $7.63 → 09:30 $7.52 -9.57; OMER×21 yday $19.43 → 09:30 $19.26 -3.57 | — |
+| 2026-09-29 09:30 ET | **BUY** | `SN` | 3 | $184.05 | $2.00 | — | $6,471.72 | — | deploy half leftover; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ⚪; ret5=+8.7; leftover $585.49 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `DT` | 10 | $57.39 | $2.02 | — | $5,895.80 | — | deploy half leftover; list flatten; wish-list (live io HOLD — not a ticket); ⚪; ret5=+2.6; leftover $585.49 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `TOST` | 19 | $30.40 | $2.05 | — | $5,316.15 | — | deploy half leftover; list flatten; wish-list (live io HOLD — not a ticket); ⚪; ret5=+1.9; leftover $585.49 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `SONO` | 32 | $17.76 | $2.09 | — | $4,745.75 | — | deploy half leftover; list flatten; wish-list (live io HOLD — not a ticket); ⚪; ret5=+9.8; leftover $585.49 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟢 |
+| 2026-09-29 09:30 ET | **BUY** | `PDFS` | 11 | $50.25 | $2.02 | — | $4,190.97 | — | deploy half leftover; list flatten; wish-list (live io HOLD — not a ticket); ⚪; ret5=+6.5; leftover $585.49 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `SHOO` | 12 | $45.06 | $2.03 | — | $3,648.23 | — | deploy half leftover; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ⚪; ret5=+4.8; leftover $585.49 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $3,648.23 | ▲ close $9,081.16 vs 09:30 $9,086.92 (session +6.44) | 16:00 close · cash $3,648.23 · equity $9,081.16 vs 09:30 $9,086.92 (-5.76; session marks +6.44) · 10 name(s) marked open→close (per-name table). BLFS×17 09:30 $39.04 → close $39.22 +3.06; HALO×3 09:30 $112.89 → close $111.56 -3.99; MRVI×87 09:30 $7.52 → close $7.65 +11.31; OMER×21 09:30 $19.26 → close $19.25 -0.21; SN×3 09:30 $184.05 → close $182.44 -4.83; DT×10 09:30 $57.39 → close $57.53 +1.40; TOST×19 09:30 $30.40 → close $30.46 +1.14; SONO×32 09:30 $17.76 → close $17.85 +2.88; PDFS×11 09:30 $50.25 → close $49.77 -5.28; SHOO×12 09:30 $45.06 → close $45.14 +0.96 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ overnight, no 🚨
 
-Cash book **-21.79%** ($7,821) · signal-only (no cash/fees) was -26.59%. Starts YES **0/30**. Fills 126 · skips 73 · realized $-2767.20.
+Cash book **-23.79%** ($7,621) · signal-only (no cash/fees) was -26.59%. Starts YES **0/30**. Fills 127 · skips 73 · realized $-2767.20.
 
 ## How this sleeve decides (like you are 10)
 
@@ -262,6 +262,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-25 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,820.74 | ▲ close $7,820.74 vs 09:30 $7,820.74 (session +0.00) | 16:00 close · cash $7,820.74 · no lots left · equity $7,820.74. | — |
 | 2026-09-28 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,820.74 | ▲ 09:30 equity $7,820.74 vs yday $7,820.74 (+0.00) | 09:30 open · cash $7,820.74 · no holdings · equity $7,820.74 vs prior close $7,820.74 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,820.74 | ▲ close $7,820.74 vs 09:30 $7,820.74 (session +0.00) | 16:00 close · cash $7,820.74 · no lots left · equity $7,820.74. | — |
+| 2026-09-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,820.74 | ▲ 09:30 equity $7,820.74 vs yday $7,820.74 (+0.00) | 09:30 open · cash $7,820.74 · no holdings · equity $7,820.74 vs prior close $7,820.74 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-09-29 09:30 ET | **BUY** | `CNXC` | 306 | $25.52 | $3.95 | — | $7.67 | — | union ∩ overnight, no 🚨; gate overnight=True; list overnight; ret5=-7.6; leftover $7820.74 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 peer🟡 heat🟢 vol🟢 buy🟡 |
+| 2026-09-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7.67 | ▼ close $7,620.95 vs 09:30 $7,820.74 (session -195.84) | 16:00 close · cash $7.67 · equity $7,620.95 vs 09:30 $7,820.74 (-199.79; session marks -195.84) · 1 name(s) marked open→close (per-name table). CNXC×306 09:30 $25.52 → close $24.88 -195.84 | — |
 
 ## Not taken
 

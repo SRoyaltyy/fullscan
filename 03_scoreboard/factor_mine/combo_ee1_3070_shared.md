@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared union_e_fresh_h3/union_e_fresh_h1 w=0.3,0.7 net=priority
 
-Cash book **-9.36%** ($9,064) · signal-only (no cash/fees) was —. Starts YES **29/30**. Fills 121 · skips 250 · realized $+4004.41.
+Cash book **-9.87%** ($9,013) · signal-only (no cash/fees) was —. Starts YES **29/30**. Fills 126 · skips 250 · realized $+4004.41.
 
 ## How this sleeve decides (like you are 10)
 
@@ -55,7 +55,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $9,064.35.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $36.18.
 
 ## Every lot, every session (09:30 mark and same-day change)
 
@@ -258,6 +258,13 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-28 09:30 ET | **SELL** | `MLKN` | 116 | $19.88 | $2.38 | $-95.19 | $6,702.02 | ▼ -95.19 after sell → book $9,066.47; vs 09:30 mark -2.38 | union_e_fresh_h3: dropped from list after 4 sess (min 3) | — |
 | 2026-09-28 09:30 ET | **SELL** | `THO` | 33 | $71.65 | $2.12 | $-33.25 | $9,064.35 | ▼ -33.25 after sell → book $9,064.35; vs 09:30 mark -2.12 | union_e_fresh_h3: dropped from list after 4 sess (min 3) | — |
 | 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,064.35 | ▲ close $9,064.35 vs 09:30 $9,073.08 (session +0.00) | 16:00 close · cash $9,064.35 · no lots left · equity $9,064.35. | — |
+| 2026-09-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,064.35 | ▲ 09:30 equity $9,064.35 vs yday $9,064.35 (+0.00) | 09:30 open · cash $9,064.35 (unchanged overnight, no fees) · equity $9,064.35 vs prior close $9,064.35 (+0.00) | — |
+| 2026-09-29 09:30 ET | **BUY** | `CCL` | 74 | $24.39 | $2.21 | — | $7,257.28 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; 🔵; ret5=-0.8; combo leftover $1812.87; owner union_e_fresh_h3 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `JEF` | 39 | $46.08 | $2.11 | — | $5,458.05 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; 🔵; ret5=-1.5; combo leftover $1812.87; owner union_e_fresh_h3 | join🟢 sector🔴 gen🟢 news🟡 digest🟢 ab🟡 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `KMX` | 30 | $60.41 | $2.08 | — | $3,643.82 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; 🔵; ⚪; ret5=-2.3; combo leftover $1812.87; owner union_e_fresh_h3 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🟡 heat🟢 vol🟢 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `MTN` | 13 | $138.42 | $2.03 | — | $1,842.33 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; 🔵; ret5=-1.7; combo leftover $1812.87; owner union_e_fresh_h3 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟡 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `UEC` | 182 | $9.91 | $2.54 | — | $36.18 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=-8.6; combo leftover $1812.87; owner union_e_fresh_h3 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-09-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $36.18 | ▼ close $9,013.05 vs 09:30 $9,064.35 (session -40.34) | 16:00 close · cash $36.18 · equity $9,013.05 vs 09:30 $9,064.35 (-51.30; session marks -40.34) · 5 name(s) marked open→close (per-name table). CCL×74 09:30 $24.39 → close $25.11 +53.28; JEF×39 09:30 $46.08 → close $46.52 +17.16; KMX×30 09:30 $60.41 → close $59.23 -35.25; MTN×13 09:30 $138.42 → close $141.29 +37.31; UEC×182 09:30 $9.91 → close $9.29 -112.84 | — |
 
 ## Not taken
 

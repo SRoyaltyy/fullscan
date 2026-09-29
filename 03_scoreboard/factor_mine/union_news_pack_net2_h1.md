@@ -204,6 +204,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-28 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $838.27 | ▲ 09:30 equity $9,162.15 vs yday $9,143.16 (+18.99) | 09:30 open · cash $838.27 (unchanged overnight, no fees) · equity $9,162.15 vs prior close $9,143.16 (+18.99) · 1 name(s) re-marked at the open (per-name table). COST×9 yday $922.76 → 09:30 $924.88 +18.99 | — |
 | 2026-09-28 09:30 ET | **SELL** | `COST` | 9 | $924.88 | $2.09 | $+336.76 | $9,160.05 | ▲ +336.76 after sell → book $9,160.05; vs 09:30 mark -2.10 | dropped from list after 1 sess (min 1) | — |
 | 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,160.05 | ▲ close $9,160.05 vs 09:30 $9,162.15 (session +0.00) | 16:00 close · cash $9,160.05 · no lots left · equity $9,160.05. | — |
+| 2026-09-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,160.05 | ▲ 09:30 equity $9,160.05 vs yday $9,160.05 (+0.00) | 09:30 open · cash $9,160.05 · no holdings · equity $9,160.05 vs prior close $9,160.05 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-09-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,160.05 | ▲ close $9,160.05 vs 09:30 $9,160.05 (session +0.00) | 16:00 close · cash $9,160.05 · no lots left · equity $9,160.05. | — |
 
 ## Not taken
 

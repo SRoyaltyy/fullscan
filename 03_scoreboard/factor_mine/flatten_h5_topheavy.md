@@ -6,7 +6,7 @@ Buys the flatten **wish-list** even on io/HOLD mornings — live `flatten_robust
 
 Side **long** · universe `flatten` · top 8 · rank `list` · size `topheavy` · sell `list` · S-boost `none` · 40% to #1, rest split
 
-Cash book **-18.19%** ($8,181) · signal-only (no cash/fees) was +4.47%. Starts YES **12/30**. Fills 136 · skips 345 · realized $+372.21.
+Cash book **-18.66%** ($8,134) · signal-only (no cash/fees) was +4.47%. Starts YES **12/30**. Fills 142 · skips 345 · realized $+372.21.
 
 ## How this sleeve decides (like you are 10)
 
@@ -268,6 +268,14 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-28 09:30 ET | **SELL** | `MGTX` | 2 | $10.79 | $0.24 | $-5.88 | $5,717.31 | ▼ -5.88 after sell → book $8,176.32; vs 09:30 mark -0.24 | exit unpriced hold on first bar after 5 sess | — |
 | 2026-09-28 09:30 ET | **SELL** | `PACS` | 1 | $41.27 | $0.44 | $-1.52 | $5,758.15 | ▼ -1.52 after sell → book $8,175.89; vs 09:30 mark -0.43 | exit unpriced hold on first bar after 4 sess | — |
 | 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $5,758.15 | ▲ close $8,181.02 vs 09:30 $8,185.64 (session +5.13) | 16:00 close · cash $5,758.15 · equity $8,181.02 vs 09:30 $8,185.64 (-4.62; session marks +5.13) · 5 name(s) marked open→close (per-name table). A×4 09:30 $170.00 → close $175.21 +20.84; BLFS×2 09:30 $38.13 → close $39.15 +2.04; HALO×7 09:30 $113.34 → close $112.89 -3.15; MRVI×10 09:30 $7.49 → close $7.63 +1.40; OMER×40 09:30 $19.83 → close $19.43 -16.00 | — |
+| 2026-09-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $5,758.15 | ▼ 09:30 equity $8,170.02 vs yday $8,181.02 (-11.00) | 09:30 open · cash $5,758.15 (unchanged overnight, no fees) · equity $8,170.02 vs prior close $8,181.02 (-11.00) · 5 name(s) re-marked at the open (per-name table). A×4 yday $175.21 → 09:30 $174.49 -2.88; BLFS×2 yday $39.15 → 09:30 $39.04 -0.22; HALO×7 yday $112.89 → 09:30 $112.89 +0.00; MRVI×10 yday $7.63 → 09:30 $7.52 -1.10; OMER×40 yday $19.43 → 09:30 $19.26 -6.80 | — |
+| 2026-09-29 09:30 ET | **BUY** | `SN` | 12 | $184.05 | $2.03 | — | $3,547.52 | — | 40% to #1, rest split; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ⚪; ret5=+8.7; leftover $2303.26 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `DT` | 12 | $57.39 | $2.03 | — | $2,856.82 | — | 40% to #1, rest split; list flatten; wish-list (live io HOLD — not a ticket); ⚪; ret5=+2.6; leftover $690.98 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `TOST` | 22 | $30.40 | $2.06 | — | $2,185.96 | — | 40% to #1, rest split; list flatten; wish-list (live io HOLD — not a ticket); ⚪; ret5=+1.9; leftover $690.98 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `SONO` | 38 | $17.76 | $2.10 | — | $1,508.98 | — | 40% to #1, rest split; list flatten; wish-list (live io HOLD — not a ticket); ⚪; ret5=+9.8; leftover $690.98 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟢 |
+| 2026-09-29 09:30 ET | **BUY** | `PDFS` | 13 | $50.25 | $2.03 | — | $853.70 | — | 40% to #1, rest split; list flatten; wish-list (live io HOLD — not a ticket); ⚪; ret5=+6.5; leftover $690.98 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `SHOO` | 15 | $45.06 | $2.04 | — | $175.76 | — | 40% to #1, rest split; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ⚪; ret5=+4.8; leftover $690.98 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $175.76 | ▼ close $8,133.91 vs 09:30 $8,170.02 (session -23.83) | 16:00 close · cash $175.76 · equity $8,133.91 vs 09:30 $8,170.02 (-36.11; session marks -23.83) · 11 name(s) marked open→close (per-name table). A×4 09:30 $174.49 → close $175.03 +2.16; BLFS×2 09:30 $39.04 → close $39.22 +0.36; HALO×7 09:30 $112.89 → close $111.56 -9.31; MRVI×10 09:30 $7.52 → close $7.65 +1.30; OMER×40 09:30 $19.26 → close $19.25 -0.40; SN×12 09:30 $184.05 → close $182.44 -19.32; DT×12 09:30 $57.39 → close $57.53 +1.68; TOST×22 09:30 $30.40 → close $30.46 +1.32; SONO×38 09:30 $17.76 → close $17.85 +3.42; PDFS×13 09:30 $50.25 → close $49.77 -6.24; SHOO×15 09:30 $45.06 → close $45.14 +1.20 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · Clock-B #4 neg catalyst + weakness + failed recovery
 
-Cash book **-1.29%** ($9,871) · signal-only (no cash/fees) was -21.45%. Starts YES **8/30**. Fills 217 · skips 270 · realized $-967.53.
+Cash book **-2.49%** ($9,751) · signal-only (no cash/fees) was -21.45%. Starts YES **8/30**. Fills 217 · skips 270 · realized $-967.53.
 
 ## How this sleeve decides (like you are 10)
 
@@ -351,6 +351,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-28 09:30 ET | **COVER** | `NN` | 43 | $14.25 | $2.12 | $+60.65 | $15,065.57 | ▲ +60.65 after sell → book $10,061.84; vs 09:30 mark -2.12 | exit unpriced hold on first bar after 4 sess | — |
 | 2026-09-28 09:30 ET | **COVER** | `USFD` | 7 | $93.00 | $2.01 | $+3.50 | $14,412.55 | ▲ +3.50 after sell → book $10,059.83; vs 09:30 mark -2.01 | exit unpriced hold on first bar after 4 sess | — |
 | 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $14,412.55 | ▼ close $9,871.05 vs 09:30 $10,131.25 (session -188.77) | 16:00 close · cash $14,412.55 · equity $9,871.05 vs 09:30 $10,131.25 (-260.20; session marks -188.77) · 4 name(s) marked open→close (per-name table). BRVE×52 09:30 $20.25 → close $21.07 -42.64; COST×1 09:30 $924.88 → close $922.92 +1.96; NEOV×518 09:30 $2.20 → close $2.28 -41.44; SGMT×135 09:30 $9.15 → close $9.94 -106.65 | — |
+| 2026-09-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $14,412.55 | ▲ 09:30 equity $9,878.33 vs yday $9,871.05 (+7.28) | 09:30 open · cash $14,412.55 (unchanged overnight, no fees) · equity $9,878.33 vs prior close $9,871.05 (+7.28) · 4 name(s) re-marked at the open (per-name table). BRVE×52 yday $21.07 → 09:30 $21.00 +3.64; COST×1 yday $922.92 → 09:30 $916.80 +6.12; NEOV×518 yday $2.28 → 09:30 $2.29 -5.18; SGMT×135 yday $9.94 → 09:30 $9.92 +2.70 | — |
+| 2026-09-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $14,412.55 | ▼ close $9,751.01 vs 09:30 $9,878.33 (session -127.32) | 16:00 close · cash $14,412.55 · equity $9,751.01 vs 09:30 $9,878.33 (-127.32; session marks -127.32) · 4 name(s) marked open→close (per-name table). BRVE×52 09:30 $21.00 → close $22.34 -69.68; COST×1 09:30 $916.80 → close $924.59 -7.79; NEOV×518 09:30 $2.29 → close $2.54 -129.50; SGMT×135 09:30 $9.92 → close $9.33 +79.65 | — |
 
 ## Not taken
 

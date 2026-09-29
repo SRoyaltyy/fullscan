@@ -229,6 +229,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-28 09:30 ET | **SELL** | `SECZ` | 122 | $16.00 | $2.39 | $-30.37 | $5,960.87 | ▼ -30.37 after sell → book $7,871.52; vs 09:30 mark -2.39 | dropped from list after 1 sess (min 1) | — |
 | 2026-09-28 09:30 ET | **SELL** | `ZSQR` | 515 | $3.71 | $6.74 | $-90.64 | $7,864.78 | ▼ -90.64 after sell → book $7,864.78; vs 09:30 mark -6.74 | dropped from list after 1 sess (min 1) | — |
 | 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,864.78 | ▲ close $7,864.78 vs 09:30 $7,877.97 (session +0.00) | 16:00 close · cash $7,864.78 · no lots left · equity $7,864.78. | — |
+| 2026-09-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,864.78 | ▲ 09:30 equity $7,864.78 vs yday $7,864.78 (+0.00) | 09:30 open · cash $7,864.78 · no holdings · equity $7,864.78 vs prior close $7,864.78 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-09-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,864.78 | ▲ close $7,864.78 vs 09:30 $7,864.78 (session +0.00) | 16:00 close · cash $7,864.78 · no lots left · equity $7,864.78. | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared union_e_fresh_h3/short_news_r_h3 w=0.8,0.2 net=priority
 
-Cash book **-10.04%** ($8,996) · signal-only (no cash/fees) was —. Starts YES **25/30**. Fills 256 · skips 324 · realized $+4030.07.
+Cash book **-11.28%** ($8,873) · signal-only (no cash/fees) was —. Starts YES **25/30**. Fills 262 · skips 324 · realized $+4030.07.
 
 ## How this sleeve decides (like you are 10)
 
@@ -55,7 +55,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $8,995.88.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $3,810.99.
 
 ## Every lot, every session (09:30 mark and same-day change)
 
@@ -393,6 +393,14 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-28 09:30 ET | **SELL** | `THO` | 44 | $71.65 | $2.16 | $-43.00 | $10,578.92 | ▼ -43.00 after sell → book $8,997.92; vs 09:30 mark -2.16 | union_e_fresh_h3: dropped from list after 4 sess (min 3) | — |
 | 2026-09-28 09:30 ET | **COVER** | `USFD` | 17 | $93.00 | $2.04 | $+14.21 | $8,995.88 | ▲ +14.21 after sell → book $8,995.88; vs 09:30 mark -2.04 | short_news_r_h3: dropped from list after 4 sess (min 3) | — |
 | 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,995.88 | ▲ close $8,995.88 vs 09:30 $9,025.14 (session +0.00) | 16:00 close · cash $8,995.88 · no lots left · equity $8,995.88. | — |
+| 2026-09-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,995.88 | ▲ 09:30 equity $8,995.88 vs yday $8,995.88 (+0.00) | 09:30 open · cash $8,995.88 (unchanged overnight, no fees) · equity $8,995.88 vs prior close $8,995.88 (+0.00) | — |
+| 2026-09-29 09:30 ET | **BUY** | `CCL` | 59 | $24.39 | $2.17 | — | $7,554.70 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; 🔵; ret5=-0.8; combo leftover $1439.34; owner union_e_fresh_h3 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `JEF` | 31 | $46.08 | $2.08 | — | $6,124.14 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; 🔵; ret5=-1.5; combo leftover $1439.34; owner union_e_fresh_h3 | join🟢 sector🔴 gen🟢 news🟡 digest🟢 ab🟡 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `KMX` | 23 | $60.41 | $2.06 | — | $4,732.77 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; 🔵; ⚪; ret5=-2.3; combo leftover $1439.34; owner union_e_fresh_h3 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🟡 heat🟢 vol🟢 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `MTN` | 10 | $138.42 | $2.02 | — | $3,346.55 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; 🔵; ret5=-1.7; combo leftover $1439.34; owner union_e_fresh_h3 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟡 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `UEC` | 145 | $9.91 | $2.42 | — | $1,907.17 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=-8.6; combo leftover $1439.34; owner union_e_fresh_h3 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **SHORT** | `AEHL` | 231 | $8.26 | $3.09 | — | $3,810.99 | — | news🔴; gate news=bad; list yday_mover; 🔵; ret5=+18.9; combo leftover $1907.17; owner short_news_r_h3 | join🟢 sector🟢 gen🟢 news🔴 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-09-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $3,810.99 | ▼ close $8,872.55 vs 09:30 $8,995.88 (session -109.49) | 16:00 close · cash $3,810.99 · equity $8,872.55 vs 09:30 $8,995.88 (-123.33; session marks -109.49) · 6 name(s) marked open→close (per-name table). CCL×59 09:30 $24.39 → close $25.11 +42.48; JEF×31 09:30 $46.08 → close $46.52 +13.64; KMX×23 09:30 $60.41 → close $59.23 -27.03; MTN×10 09:30 $138.42 → close $141.29 +28.70; UEC×145 09:30 $9.91 → close $9.29 -89.90; AEHL×231 09:30 $8.26 → close $8.59 -77.38 | — |
 
 ## Not taken
 

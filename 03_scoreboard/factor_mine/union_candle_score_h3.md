@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `candle_score` · size `leftover` · sell `list` · S-boost `none` · rank by candle_score
 
-Cash book **-9.80%** ($9,020) · signal-only (no cash/fees) was +43.18%. Starts YES **21/30**. Fills 199 · skips 288 · realized $+91.50.
+Cash book **-8.89%** ($9,111) · signal-only (no cash/fees) was +43.18%. Starts YES **21/30**. Fills 205 · skips 288 · realized $+91.50.
 
 ## How this sleeve decides (like you are 10)
 
@@ -334,6 +334,14 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-28 09:30 ET | **SELL** | `SVIA` | 9 | $3.87 | $0.40 | $-6.41 | $1,602.88 | ▼ -6.41 after sell → book $8,991.29; vs 09:30 mark -0.39 | exit unpriced hold on first bar after 3 sess | — |
 | 2026-09-28 09:30 ET | **SELL** | `XXI` | 14 | $6.71 | $1.00 | $-0.29 | $1,695.82 | ▼ -0.29 after sell → book $8,990.29; vs 09:30 mark -1.00 | exit unpriced hold on first bar after 4 sess | — |
 | 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1,695.82 | ▲ close $9,019.56 vs 09:30 $8,997.45 (session +29.28) | 16:00 close · cash $1,695.82 · equity $9,019.56 vs 09:30 $8,997.45 (+22.11; session marks +29.28) · 7 name(s) marked open→close (per-name table). A×7 09:30 $170.00 → close $175.21 +36.47; AMD×1 09:30 $624.89 → close $607.87 -17.02; CLS×3 09:30 $363.93 → close $356.53 -22.20; CURI×389 09:30 $3.07 → close $2.90 -66.13; HLP×551 09:30 $2.22 → close $2.39 +93.67; NTRA×2 09:30 $408.94 → close $411.77 +5.66; SENS×117 09:30 $9.85 → close $9.84 -1.17 | — |
+| 2026-09-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $1,695.82 | ▲ 09:30 equity $9,062.73 vs yday $9,019.56 (+43.17) | 09:30 open · cash $1,695.82 (unchanged overnight, no fees) · equity $9,062.73 vs prior close $9,019.56 (+43.17) · 7 name(s) re-marked at the open (per-name table). A×7 yday $175.21 → 09:30 $174.49 -5.04; AMD×1 yday $607.87 → 09:30 $616.74 +8.87; CLS×3 yday $356.53 → 09:30 $362.35 +17.46; CURI×389 yday $2.90 → 09:30 $2.90 +0.00; HLP×551 yday $2.39 → 09:30 $2.41 +11.02; NTRA×2 yday $411.77 → 09:30 $413.69 +3.84; SENS×117 yday $9.84 → 09:30 $9.90 +7.02 | — |
+| 2026-09-29 09:30 ET | **BUY** | `ZSQR` | 54 | $4.47 | $2.15 | — | $1,452.29 | — | rank by candle_score; rank candle_score; list yday_gainer,yday_mover; ⚪; ret5=+72.0; leftover $242.26 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 ab🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `CRCT` | 38 | $6.31 | $2.10 | — | $1,210.40 | — | rank by candle_score; rank candle_score; list ohlc_hot; ret5=+12.0; leftover $242.26 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `XERS` | 24 | $9.77 | $2.06 | — | $973.86 | — | rank by candle_score; rank candle_score; list yday_gainer,ohlc_hot; ret5=+11.7; leftover $242.26 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `SUIG` | 149 | $1.62 | $2.44 | — | $730.04 | — | rank by candle_score; rank candle_score; list ohlc_hot; ret5=+9.6; leftover $242.26 | join🟡 sector🔴 gen🟢 news🟡 digest🟢 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `VSXY` | 2 | $89.78 | $1.80 | — | $548.68 | — | rank by candle_score; rank candle_score; list ohlc_hot; 🔵; ret5=+8.2; leftover $242.26 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `FIRY` | 19 | $12.41 | $2.05 | — | $310.85 | — | rank by candle_score; rank candle_score; list ohlc_hot; 🔵; ret5=+16.9; leftover $242.26 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-09-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $310.85 | ▲ close $9,110.92 vs 09:30 $9,062.73 (session +60.80) | 16:00 close · cash $310.85 · equity $9,110.92 vs 09:30 $9,062.73 (+48.19; session marks +60.80) · 13 name(s) marked open→close (per-name table). A×7 09:30 $174.49 → close $175.03 +3.78; AMD×1 09:30 $616.74 → close $607.57 -9.16; CLS×3 09:30 $362.35 → close $366.47 +12.36; CURI×389 09:30 $2.90 → close $2.95 +19.45; HLP×551 09:30 $2.41 → close $2.45 +22.04; NTRA×2 09:30 $413.69 → close $414.52 +1.66; SENS×117 09:30 $9.90 → close $10.05 +17.55; ZSQR×54 09:30 $4.47 → close $4.15 -17.28; CRCT×38 09:30 $6.31 → close $6.41 +3.80; XERS×24 09:30 $9.77 → close $9.98 +5.04; SUIG×149 09:30 $1.62 → close $1.62 +0.00; VSXY×2 09:30 $89.78 → close $89.23 -1.10; FIRY×19 09:30 $12.41 → close $12.55 +2.66 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-20.34%** ($7,966) · signal-only (no cash/fees) was -4.91%. Starts YES **5/30**. Fills 248 · skips 78 · realized $-2.02.
+Cash book **-21.46%** ($7,854) · signal-only (no cash/fees) was -4.91%. Starts YES **5/30**. Fills 256 · skips 78 · realized $-2.02.
 
 ## How this sleeve decides (like you are 10)
 
@@ -386,6 +386,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-28 09:30 ET | **SELL** | `WRBY` | 39 | $26.00 | $2.13 | $-14.76 | $6,978.84 | ▼ -14.76 after sell → book $7,969.41; vs 09:30 mark -2.13 | dropped from list after 1 sess (min 1) | — |
 | 2026-09-28 09:30 ET | **SELL** | `ZSQR` | 267 | $3.71 | $3.50 | $-46.99 | $7,965.91 | ▼ -46.99 after sell → book $7,965.91; vs 09:30 mark -3.50 | dropped from list after 1 sess (min 1) | — |
 | 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,965.91 | ▲ close $7,965.91 vs 09:30 $7,984.85 (session +0.00) | 16:00 close · cash $7,965.91 · no lots left · equity $7,965.91. | — |
+| 2026-09-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,965.91 | ▲ 09:30 equity $7,965.91 vs yday $7,965.91 (+0.00) | 09:30 open · cash $7,965.91 · no holdings · equity $7,965.91 vs prior close $7,965.91 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-09-29 09:30 ET | **BUY** | `SFIX` | 403 | $2.47 | $5.20 | — | $6,965.30 | — | combo gate; gate last_green=True,vol=good; list probable,yday_gainer,yday_mover; 🔵; ret5=-13.3; leftover $995.74 | join🟡 sector🟡 gen🟢 news🟡 digest🟡 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `BUR` | 252 | $3.95 | $3.25 | — | $5,966.65 | — | combo gate; gate last_green=True,vol=good; list probable,yday_gainer; ret5=-0.3; leftover $995.74 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `KOD` | 11 | $87.50 | $2.02 | — | $5,002.13 | — | combo gate; gate last_green=True,vol=good; list yday_gainer,yday_mover; 🔵; ret5=+177.4; leftover $995.74 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `QNC` | 483 | $2.06 | $6.23 | — | $4,000.92 | — | combo gate; gate last_green=True,vol=good; list yday_gainer,yday_mover; ret5=+24.3; leftover $995.74 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `NAUT` | 840 | $1.19 | $10.84 | — | $2,994.68 | — | combo gate; gate last_green=True,vol=good; list yday_gainer,yday_mover; ret5=+16.2; leftover $995.74 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `AMC` | 299 | $3.32 | $3.86 | — | $1,998.14 | — | combo gate; gate last_green=True,vol=good; list yday_gainer,yday_mover,ohlc_hot; 🔵; ret5=+13.8; leftover $995.74 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `MGNX` | 243 | $4.09 | $3.13 | — | $1,001.14 | — | combo gate; gate last_green=True,vol=good; list yday_gainer; ret5=-1.5; leftover $995.74 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `XERS` | 101 | $9.77 | $2.29 | — | $12.08 | — | combo gate; gate last_green=True,vol=good; list yday_gainer,ohlc_hot; ret5=+11.7; leftover $995.74 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $12.08 | ▼ close $7,853.65 vs 09:30 $7,965.91 (session -75.44) | 16:00 close · cash $12.08 · equity $7,853.65 vs 09:30 $7,965.91 (-112.26; session marks -75.44) · 8 name(s) marked open→close (per-name table). SFIX×403 09:30 $2.47 → close $2.53 +24.18; BUR×252 09:30 $3.95 → close $3.90 -12.60; KOD×11 09:30 $87.50 → close $91.12 +39.82; QNC×483 09:30 $2.06 → close $1.75 -149.73; NAUT×840 09:30 $1.19 → close $1.36 +151.20; AMC×299 09:30 $3.32 → close $3.08 -71.76; MGNX×243 09:30 $4.09 → close $3.77 -77.76; XERS×101 09:30 $9.77 → close $9.98 +21.21 | — |
 
 ## Not taken
 

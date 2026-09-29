@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ last_green, no 🚨
 
-Cash book **-15.87%** ($8,413) · signal-only (no cash/fees) was +37.42%. Starts YES **3/30**. Fills 180 · skips 312 · realized $-335.16.
+Cash book **-13.40%** ($8,660) · signal-only (no cash/fees) was +37.42%. Starts YES **3/30**. Fills 184 · skips 312 · realized $-335.16.
 
 ## How this sleeve decides (like you are 10)
 
@@ -316,6 +316,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-28 09:30 ET | **SELL** | `PGEN` | 3 | $7.61 | $0.26 | $-1.52 | $243.71 | ▼ -1.52 after sell → book $8,367.37; vs 09:30 mark -0.25 | exit unpriced hold on first bar after 3 sess | — |
 | 2026-09-28 09:30 ET | **SELL** | `TDC` | 1 | $28.34 | $0.31 | $-2.05 | $271.74 | ▼ -2.05 after sell → book $8,367.06; vs 09:30 mark -0.31 | exit unpriced hold on first bar after 4 sess | — |
 | 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $271.74 | ▲ close $8,412.61 vs 09:30 $8,369.42 (session +45.55) | 16:00 close · cash $271.74 · equity $8,412.61 vs 09:30 $8,369.42 (+43.19; session marks +45.55) · 8 name(s) marked open→close (per-name table). AEHL×115 09:30 $9.01 → close $8.23 -89.70; BLFS×27 09:30 $38.13 → close $39.15 +27.54; BRVE×44 09:30 $20.25 → close $21.07 +36.08; HALO×9 09:30 $113.34 → close $112.89 -4.05; HLP×474 09:30 $2.22 → close $2.39 +80.58; MRVI×136 09:30 $7.49 → close $7.63 +19.04; TXG×12 09:30 $86.14 → close $88.50 +28.32; WRBY×39 09:30 $26.00 → close $24.66 -52.26 | — |
+| 2026-09-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $271.74 | ▲ 09:30 equity $8,417.67 vs yday $8,412.61 (+5.06) | 09:30 open · cash $271.74 (unchanged overnight, no fees) · equity $8,417.67 vs prior close $8,412.61 (+5.06) · 8 name(s) re-marked at the open (per-name table). AEHL×115 yday $8.23 → 09:30 $8.26 +2.88; BLFS×27 yday $39.15 → 09:30 $39.04 -2.97; BRVE×44 yday $21.07 → 09:30 $21.00 -3.08; HALO×9 yday $112.89 → 09:30 $112.89 +0.00; HLP×474 yday $2.39 → 09:30 $2.41 +9.48; MRVI×136 yday $7.63 → 09:30 $7.52 -14.96; TXG×12 yday $88.50 → 09:30 $88.83 +3.96; WRBY×39 yday $24.66 → 09:30 $24.91 +9.75 | — |
+| 2026-09-29 09:30 ET | **BUY** | `TOST` | 1 | $30.40 | $0.31 | — | $241.03 | — | union ∩ last_green, no 🚨; gate last_green=True; list flatten; ⚪; ret5=+1.9; leftover $33.97 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `SONO` | 1 | $17.76 | $0.18 | — | $223.09 | — | union ∩ last_green, no 🚨; gate last_green=True; list flatten; ⚪; ret5=+9.8; leftover $33.97 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟢 |
+| 2026-09-29 09:30 ET | **BUY** | `SFIX` | 13 | $2.47 | $0.36 | — | $190.62 | — | union ∩ last_green, no 🚨; gate last_green=True; list probable,yday_gainer,yday_mover; 🔵; ret5=-13.3; leftover $33.97 | join🟡 sector🟡 gen🟢 news🟡 digest🟡 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `ANNX` | 8 | $3.99 | $0.34 | — | $158.36 | — | union ∩ last_green, no 🚨; gate last_green=True; list probable,yday_gainer; 🔵; ret5=-5.0; leftover $33.97 | join🔴 sector🟡 gen🟢 news🟢 digest🟢 ab🔴 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $158.36 | ▲ close $8,659.90 vs 09:30 $8,417.67 (session +243.42) | 16:00 close · cash $158.36 · equity $8,659.90 vs 09:30 $8,417.67 (+242.23; session marks +243.42) · 12 name(s) marked open→close (per-name table). AEHL×115 09:30 $8.26 → close $8.59 +38.52; BLFS×27 09:30 $39.04 → close $39.22 +4.86; BRVE×44 09:30 $21.00 → close $22.34 +58.96; HALO×9 09:30 $112.89 → close $111.56 -11.97; HLP×474 09:30 $2.41 → close $2.45 +18.96; MRVI×136 09:30 $7.52 → close $7.65 +17.68; TXG×12 09:30 $88.83 → close $90.04 +14.52; WRBY×39 09:30 $24.91 → close $27.47 +99.84; TOST×1 09:30 $30.40 → close $30.46 +0.06; SONO×1 09:30 $17.76 → close $17.85 +0.09; SFIX×13 09:30 $2.47 → close $2.53 +0.78; ANNX×8 09:30 $3.99 → close $4.13 +1.12 | — |
 
 ## Not taken
 

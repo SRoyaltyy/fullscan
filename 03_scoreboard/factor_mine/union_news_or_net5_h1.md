@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · packet🟢 OR headline🟢 and camera net ≥ 5
 
-Cash book **-19.79%** ($8,021) · signal-only (no cash/fees) was -10.75%. Starts YES **1/30**. Fills 112 · skips 18 · realized $-1136.92.
+Cash book **-25.75%** ($7,425) · signal-only (no cash/fees) was -10.75%. Starts YES **1/30**. Fills 113 · skips 18 · realized $-1136.92.
 
 ## How this sleeve decides (like you are 10)
 
@@ -250,6 +250,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-28 09:30 ET | **SELL** | `SECZ` | 125 | $16.00 | $2.40 | $-31.02 | $6,079.99 | ▼ -31.02 after sell → book $8,027.74; vs 09:30 mark -2.40 | dropped from list after 1 sess (min 1) | — |
 | 2026-09-28 09:30 ET | **SELL** | `ZSQR` | 525 | $3.71 | $6.88 | $-92.40 | $8,020.87 | ▼ -92.40 after sell → book $8,020.87; vs 09:30 mark -6.87 | dropped from list after 1 sess (min 1) | — |
 | 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,020.87 | ▲ close $8,020.87 vs 09:30 $8,034.20 (session +0.00) | 16:00 close · cash $8,020.87 · no lots left · equity $8,020.87. | — |
+| 2026-09-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,020.87 | ▲ 09:30 equity $8,020.87 vs yday $8,020.87 (+0.00) | 09:30 open · cash $8,020.87 · no holdings · equity $8,020.87 vs prior close $8,020.87 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-09-29 09:30 ET | **BUY** | `ZSQR` | 1789 | $4.47 | $23.08 | — | $0.96 | — | packet🟢 OR headline🟢 and camera net ≥ 5; gate cam_net_min=5,news_or_headline=True; rank cond; list yday_gainer,yday_mover; ⚪; ret5=+72.0; leftover $8020.87 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 ab🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $0.96 | ▼ close $7,425.31 vs 09:30 $8,020.87 (session -572.48) | 16:00 close · cash $0.96 · equity $7,425.31 vs 09:30 $8,020.87 (-595.56; session marks -572.48) · 1 name(s) marked open→close (per-name table). ZSQR×1789 09:30 $4.47 → close $4.15 -572.48 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ macd_xup, no 🚨
 
-Cash book **-3.07%** ($9,693) · signal-only (no cash/fees) was -19.02%. Starts YES **0/30**. Fills 180 · skips 71 · realized $-1788.82.
+Cash book **-5.68%** ($9,432) · signal-only (no cash/fees) was -19.02%. Starts YES **0/30**. Fills 182 · skips 71 · realized $-1788.82.
 
 ## How this sleeve decides (like you are 10)
 
@@ -316,6 +316,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-28 09:30 ET | **SELL** | `SENS` | 158 | $9.85 | $2.50 | $-72.91 | $8,083.44 | ▼ -72.91 after sell → book $9,695.44; vs 09:30 mark -2.50 | dropped from list after 1 sess (min 1) | — |
 | 2026-09-28 09:30 ET | **SELL** | `WRBY` | 62 | $26.00 | $2.20 | $-21.12 | $9,693.24 | ▼ -21.12 after sell → book $9,693.24; vs 09:30 mark -2.20 | dropped from list after 1 sess (min 1) | — |
 | 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,693.24 | ▲ close $9,693.24 vs 09:30 $9,707.27 (session +0.00) | 16:00 close · cash $9,693.24 · no lots left · equity $9,693.24. | — |
+| 2026-09-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,693.24 | ▲ 09:30 equity $9,693.24 vs yday $9,693.24 (+0.00) | 09:30 open · cash $9,693.24 · no holdings · equity $9,693.24 vs prior close $9,693.24 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-09-29 09:30 ET | **BUY** | `ABCL` | 343 | $14.12 | $4.42 | — | $4,845.66 | — | union ∩ macd_xup, no 🚨; gate macd_cross_up=True; list probable,yday_gainer,ohlc_hot; ret5=+10.0; leftover $4846.62 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🟡 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `RZLT` | 1063 | $4.54 | $13.71 | — | $0.61 | — | union ∩ macd_xup, no 🚨; gate macd_cross_up=True; list yday_gainer; ret5=+6.9; leftover $4846.62 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $0.61 | ▼ close $9,431.54 vs 09:30 $9,693.24 (session -243.57) | 16:00 close · cash $0.61 · equity $9,431.54 vs 09:30 $9,693.24 (-261.70; session marks -243.57) · 2 name(s) marked open→close (per-name table). ABCL×343 09:30 $14.12 → close $14.82 +240.10; RZLT×1063 09:30 $4.54 → close $4.09 -483.67 | — |
 
 ## Not taken
 

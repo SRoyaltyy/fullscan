@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · Clock-B #2 fresh catalyst + limited extension (research; not KEEP)
 
-Cash book **-4.25%** ($9,575) · signal-only (no cash/fees) was -4.91%. Starts YES **13/30**. Fills 248 · skips 106 · realized $-137.13.
+Cash book **-4.74%** ($9,526) · signal-only (no cash/fees) was -4.91%. Starts YES **13/30**. Fills 255 · skips 106 · realized $-137.13.
 
 ## How this sleeve decides (like you are 10)
 
@@ -386,6 +386,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-28 09:30 ET | **SELL** | `SAIL` | 55 | $20.03 | $2.17 | $-115.43 | $8,362.80 | ▼ -115.43 after sell → book $9,577.15; vs 09:30 mark -2.18 | dropped from list after 1 sess (min 1) | — |
 | 2026-09-28 09:30 ET | **SELL** | `SMWB` | 163 | $7.45 | $2.52 | $-13.15 | $9,574.64 | ▼ -13.15 after sell → book $9,574.64; vs 09:30 mark -2.51 | dropped from list after 1 sess (min 1) | — |
 | 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,574.64 | ▲ close $9,574.64 vs 09:30 $9,592.20 (session +0.00) | 16:00 close · cash $9,574.64 · no lots left · equity $9,574.64. | — |
+| 2026-09-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,574.64 | ▲ 09:30 equity $9,574.64 vs yday $9,574.64 (+0.00) | 09:30 open · cash $9,574.64 · no holdings · equity $9,574.64 vs prior close $9,574.64 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-09-29 09:30 ET | **BUY** | `BURL` | 5 | $268.37 | $2.00 | — | $8,230.78 | — | Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list ohlc_hot; 🔵; ret5=+5.8; leftover $1367.81 | join🟢 sector🟡 gen🟢 news🟢 digest🟡 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `CCL` | 56 | $24.39 | $2.16 | — | $6,862.79 | — | Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list earn_react; 🔵; ret5=-0.8; leftover $1367.81 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `JEF` | 29 | $46.08 | $2.08 | — | $5,524.39 | — | Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list earn_react; 🔵; ret5=-1.5; leftover $1367.81 | join🟢 sector🔴 gen🟢 news🟡 digest🟢 ab🟡 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `MTN` | 9 | $138.42 | $2.02 | — | $4,276.59 | — | Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list earn_react; 🔵; ret5=-1.7; leftover $1367.81 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟡 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `ANNX` | 342 | $3.99 | $4.41 | — | $2,907.60 | — | Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list probable,yday_gainer; 🔵; ret5=-5.0; leftover $1367.81 | join🔴 sector🟡 gen🟢 news🟢 digest🟢 ab🔴 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `SGMT` | 137 | $9.92 | $2.40 | — | $1,546.16 | — | Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list probable,yday_gainer; ret5=-8.0; leftover $1367.81 | join🔴 sector🟡 gen🟢 news🟢 digest🟢 ab🔴 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `UEC` | 138 | $9.91 | $2.40 | — | $176.18 | — | Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list earn_react; ret5=-8.6; leftover $1367.81 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-09-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $176.18 | ▼ close $9,525.97 vs 09:30 $9,574.64 (session -31.20) | 16:00 close · cash $176.18 · equity $9,525.97 vs 09:30 $9,574.64 (-48.67; session marks -31.20) · 7 name(s) marked open→close (per-name table). BURL×5 09:30 $268.37 → close $270.05 +8.40; CCL×56 09:30 $24.39 → close $25.11 +40.32; JEF×29 09:30 $46.08 → close $46.52 +12.76; MTN×9 09:30 $138.42 → close $141.29 +25.83; ANNX×342 09:30 $3.99 → close $4.13 +47.88; SGMT×137 09:30 $9.92 → close $9.33 -80.83; UEC×138 09:30 $9.91 → close $9.29 -85.56 | — |
 
 ## Not taken
 

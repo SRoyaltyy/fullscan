@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ break10, no 🚨
 
-Cash book **-9.98%** ($9,002) · signal-only (no cash/fees) was +11.56%. Starts YES **14/30**. Fills 269 · skips 100 · realized $-529.03.
+Cash book **-10.60%** ($8,940) · signal-only (no cash/fees) was +11.56%. Starts YES **14/30**. Fills 277 · skips 100 · realized $-529.03.
 
 ## How this sleeve decides (like you are 10)
 
@@ -405,6 +405,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-28 09:30 ET | **SELL** | `TXG` | 13 | $86.14 | $2.05 | $+26.86 | $7,885.68 | ▲ +26.86 after sell → book $9,003.68; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | — |
 | 2026-09-28 09:30 ET | **SELL** | `WRBY` | 43 | $26.00 | $2.14 | $-15.87 | $9,001.54 | ▼ -15.87 after sell → book $9,001.54; vs 09:30 mark -2.14 | dropped from list after 1 sess (min 1) | — |
 | 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,001.54 | ▲ close $9,001.54 vs 09:30 $9,024.38 (session +0.00) | 16:00 close · cash $9,001.54 · no lots left · equity $9,001.54. | — |
+| 2026-09-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,001.54 | ▲ 09:30 equity $9,001.54 vs yday $9,001.54 (+0.00) | 09:30 open · cash $9,001.54 · no holdings · equity $9,001.54 vs prior close $9,001.54 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-09-29 09:30 ET | **BUY** | `SN` | 6 | $184.05 | $2.01 | — | $7,895.23 | — | union ∩ break10, no 🚨; gate break_10=True; list flatten; 🔵; ⚪; ret5=+8.7; leftover $1125.19 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `ABCL` | 79 | $14.12 | $2.23 | — | $6,777.53 | — | union ∩ break10, no 🚨; gate break_10=True; list probable,yday_gainer,ohlc_hot; ret5=+10.0; leftover $1125.19 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🟡 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `ADMA` | 112 | $10.04 | $2.33 | — | $5,650.72 | — | union ∩ break10, no 🚨; gate break_10=True; list probable,yday_gainer,ohlc_hot; ⚪; ret5=+6.5; leftover $1125.19 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `KOD` | 12 | $87.50 | $2.03 | — | $4,598.69 | — | union ∩ break10, no 🚨; gate break_10=True; list yday_gainer,yday_mover; 🔵; ret5=+177.4; leftover $1125.19 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `ZSQR` | 251 | $4.47 | $3.24 | — | $3,473.49 | — | union ∩ break10, no 🚨; gate break_10=True; list yday_gainer,yday_mover; ⚪; ret5=+72.0; leftover $1125.19 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 ab🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `QNC` | 546 | $2.06 | $7.04 | — | $2,341.68 | — | union ∩ break10, no 🚨; gate break_10=True; list yday_gainer,yday_mover; ret5=+24.3; leftover $1125.19 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `NAUT` | 949 | $1.19 | $12.24 | — | $1,204.87 | — | union ∩ break10, no 🚨; gate break_10=True; list yday_gainer,yday_mover; ret5=+16.2; leftover $1125.19 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `MX` | 282 | $3.99 | $3.64 | — | $76.06 | — | union ∩ break10, no 🚨; gate break_10=True; list yday_gainer,yday_mover; ret5=+18.4; leftover $1125.19 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟡 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-09-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $76.06 | ▼ close $8,939.95 vs 09:30 $9,001.54 (session -26.84) | 16:00 close · cash $76.06 · equity $8,939.95 vs 09:30 $9,001.54 (-61.59; session marks -26.84) · 8 name(s) marked open→close (per-name table). SN×6 09:30 $184.05 → close $182.44 -9.66; ABCL×79 09:30 $14.12 → close $14.82 +55.30; ADMA×112 09:30 $10.04 → close $9.96 -8.96; KOD×12 09:30 $87.50 → close $91.12 +43.44; ZSQR×251 09:30 $4.47 → close $4.15 -80.32; QNC×546 09:30 $2.06 → close $1.75 -169.26; NAUT×949 09:30 $1.19 → close $1.36 +170.82; MX×282 09:30 $3.99 → close $3.89 -28.20 | — |
 
 ## Not taken
 

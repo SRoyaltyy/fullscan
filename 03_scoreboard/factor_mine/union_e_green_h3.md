@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-4.11%** ($9,589) · signal-only (no cash/fees) was -18.73%. Starts YES **20/30**. Fills 68 · skips 104 · realized $-87.73.
+Cash book **-1.77%** ($9,823) · signal-only (no cash/fees) was -18.73%. Starts YES **20/30**. Fills 70 · skips 104 · realized $-87.73.
 
 ## How this sleeve decides (like you are 10)
 
@@ -206,6 +206,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-28 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $61.61 | ▲ 09:30 equity $9,591.06 vs yday $9,495.30 (+95.76) | 09:30 open · cash $61.61 (unchanged overnight, no fees) · equity $9,591.06 vs prior close $9,495.30 (+95.76) · 1 name(s) re-marked at the open (per-name table). THO×133 yday $70.93 → 09:30 $71.65 +95.76 | — |
 | 2026-09-28 09:30 ET | **SELL** | `THO` | 133 | $71.65 | $2.49 | $-121.92 | $9,588.57 | ▼ -121.92 after sell → book $9,588.57; vs 09:30 mark -2.49 | exit unpriced hold on first bar after 4 sess | — |
 | 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,588.57 | ▲ close $9,588.57 vs 09:30 $9,591.06 (session +0.00) | 16:00 close · cash $9,588.57 · no lots left · equity $9,588.57. | — |
+| 2026-09-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,588.57 | ▲ 09:30 equity $9,588.57 vs yday $9,588.57 (+0.00) | 09:30 open · cash $9,588.57 · no holdings · equity $9,588.57 vs prior close $9,588.57 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-09-29 09:30 ET | **BUY** | `CCL` | 196 | $24.39 | $2.58 | — | $4,805.55 | — | combo gate; gate earn_react=True,last_green=True; list earn_react; 🔵; ret5=-0.8; leftover $4794.28 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `MTN` | 34 | $138.42 | $2.09 | — | $97.18 | — | combo gate; gate earn_react=True,last_green=True; list earn_react; 🔵; ret5=-1.7; leftover $4794.28 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟡 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-09-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $97.18 | ▲ close $9,822.60 vs 09:30 $9,588.57 (session +238.70) | 16:00 close · cash $97.18 · equity $9,822.60 vs 09:30 $9,588.57 (+234.03; session marks +238.70) · 2 name(s) marked open→close (per-name table). CCL×196 09:30 $24.39 → close $25.11 +141.12; MTN×34 09:30 $138.42 → close $141.29 +97.58 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 4 · rank `list` · size `leftover` · sell `list` · S-boost `none` · −0 red + yday up AND catalyst, top 4 by Score
 
-Cash book **+1.97%** ($10,197) · signal-only (no cash/fees) was +22.84%. Starts YES **9/30**. Fills 75 · skips 141 · realized $+2101.03.
+Cash book **+1.68%** ($10,168) · signal-only (no cash/fees) was +22.84%. Starts YES **9/30**. Fills 75 · skips 141 · realized $+2101.03.
 
 ## How this sleeve decides (like you are 10)
 
@@ -213,6 +213,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-28 09:30 ET | **SELL** | `RARE` | 12 | $14.33 | $1.78 | $-9.11 | $5,327.07 | ▼ -9.11 after sell → book $10,133.24; vs 09:30 mark -1.77 | exit unpriced hold on first bar after 6 sess | — |
 | 2026-09-28 09:30 ET | **SELL** | `RBRK` | 1 | $106.94 | $1.09 | $-3.79 | $5,432.91 | ▼ -3.79 after sell → book $10,132.14; vs 09:30 mark -1.10 | exit unpriced hold on first bar after 6 sess | — |
 | 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $5,432.91 | ▲ close $10,197.06 vs 09:30 $10,143.27 (session +64.92) | 16:00 close · cash $5,432.91 · equity $10,197.06 vs 09:30 $10,143.27 (+53.79; session marks +64.92) · 3 name(s) marked open→close (per-name table). A×14 09:30 $170.00 → close $175.21 +72.94; HALO×20 09:30 $113.34 → close $112.89 -9.00; MRVI×7 09:30 $7.49 → close $7.63 +0.98 | — |
+| 2026-09-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $5,432.91 | ▼ 09:30 equity $10,186.21 vs yday $10,197.06 (-10.85) | 09:30 open · cash $5,432.91 (unchanged overnight, no fees) · equity $10,186.21 vs prior close $10,197.06 (-10.85) · 3 name(s) re-marked at the open (per-name table). A×14 yday $175.21 → 09:30 $174.49 -10.08; HALO×20 yday $112.89 → 09:30 $112.89 +0.00; MRVI×7 yday $7.63 → 09:30 $7.52 -0.77 | — |
+| 2026-09-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $5,432.91 | ▼ close $10,168.08 vs 09:30 $10,186.21 (session -18.13) | 16:00 close · cash $5,432.91 · equity $10,168.08 vs 09:30 $10,186.21 (-18.13; session marks -18.13) · 3 name(s) marked open→close (per-name table). A×14 09:30 $174.49 → close $175.03 +7.56; HALO×20 09:30 $112.89 → close $111.56 -26.60; MRVI×7 09:30 $7.52 → close $7.65 +0.91 | — |
 
 ## Not taken
 

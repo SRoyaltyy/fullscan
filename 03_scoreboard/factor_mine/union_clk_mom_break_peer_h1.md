@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `hot_score` · size `leftover` · sell `list` · S-boost `none` · Clock-B #1 mom+breakout+peer/sector (research; not KEEP)
 
-Cash book **-6.93%** ($9,307) · signal-only (no cash/fees) was +1.42%. Starts YES **4/30**. Fills 245 · skips 96 · realized $-120.43.
+Cash book **-7.47%** ($9,253) · signal-only (no cash/fees) was +1.42%. Starts YES **4/30**. Fills 253 · skips 96 · realized $-120.43.
 
 ## How this sleeve decides (like you are 10)
 
@@ -383,6 +383,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-28 09:30 ET | **SELL** | `SENS` | 115 | $9.85 | $2.36 | $-54.15 | $8,139.04 | ▼ -54.15 after sell → book $9,309.04; vs 09:30 mark -2.37 | dropped from list after 1 sess (min 1) | — |
 | 2026-09-28 09:30 ET | **SELL** | `WRBY` | 45 | $26.00 | $2.15 | $-16.42 | $9,306.90 | ▼ -16.42 after sell → book $9,306.90; vs 09:30 mark -2.14 | dropped from list after 1 sess (min 1) | — |
 | 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,306.90 | ▲ close $9,306.90 vs 09:30 $9,325.03 (session +0.00) | 16:00 close · cash $9,306.90 · no lots left · equity $9,306.90. | — |
+| 2026-09-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,306.90 | ▲ 09:30 equity $9,306.90 vs yday $9,306.90 (+0.00) | 09:30 open · cash $9,306.90 · no holdings · equity $9,306.90 vs prior close $9,306.90 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-09-29 09:30 ET | **BUY** | `UCTT` | 14 | $81.08 | $2.03 | — | $8,169.75 | — | Clock-B #1 mom+breakout+peer/sector (research; not KEEP); gate clk_mom_break_peer=True; rank hot_score; list ohlc_hot; ret5=+6.9; leftover $1163.36 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `BURL` | 4 | $268.37 | $2.00 | — | $7,094.27 | — | Clock-B #1 mom+breakout+peer/sector (research; not KEEP); gate clk_mom_break_peer=True; rank hot_score; list ohlc_hot; 🔵; ret5=+5.8; leftover $1163.36 | join🟢 sector🟡 gen🟢 news🟢 digest🟡 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `VTRS` | 63 | $18.25 | $2.18 | — | $5,942.34 | — | Clock-B #1 mom+breakout+peer/sector (research; not KEEP); gate clk_mom_break_peer=True; rank hot_score; list ohlc_hot; ret5=+6.8; leftover $1163.36 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `ADMA` | 115 | $10.04 | $2.33 | — | $4,785.40 | — | Clock-B #1 mom+breakout+peer/sector (research; not KEEP); gate clk_mom_break_peer=True; rank hot_score; list probable,yday_gainer,ohlc_hot; ⚪; ret5=+6.5; leftover $1163.36 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `BLFS` | 29 | $39.04 | $2.08 | — | $3,651.16 | — | Clock-B #1 mom+breakout+peer/sector (research; not KEEP); gate clk_mom_break_peer=True; rank hot_score; list ohlc_hot; ret5=+5.3; leftover $1163.36 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `SN` | 6 | $184.05 | $2.01 | — | $2,544.86 | — | Clock-B #1 mom+breakout+peer/sector (research; not KEEP); gate clk_mom_break_peer=True; rank hot_score; list flatten; 🔵; ⚪; ret5=+8.7; leftover $1163.36 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `SONO` | 65 | $17.76 | $2.19 | — | $1,388.27 | — | Clock-B #1 mom+breakout+peer/sector (research; not KEEP); gate clk_mom_break_peer=True; rank hot_score; list flatten; ⚪; ret5=+9.8; leftover $1163.36 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟢 |
+| 2026-09-29 09:30 ET | **BUY** | `BB` | 131 | $8.86 | $2.38 | — | $225.23 | — | Clock-B #1 mom+breakout+peer/sector (research; not KEEP); gate clk_mom_break_peer=True; rank hot_score; list yday_gainer; ⚪; ret5=+3.2; leftover $1163.36 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟡 heat🟢 vol🟢 buy🟡 |
+| 2026-09-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $225.23 | ▼ close $9,253.42 vs 09:30 $9,306.90 (session -36.28) | 16:00 close · cash $225.23 · equity $9,253.42 vs 09:30 $9,306.90 (-53.48; session marks -36.28) · 8 name(s) marked open→close (per-name table). UCTT×14 09:30 $81.08 → close $80.46 -8.68; BURL×4 09:30 $268.37 → close $270.05 +6.72; VTRS×63 09:30 $18.25 → close $18.12 -8.19; ADMA×115 09:30 $10.04 → close $9.96 -9.20; BLFS×29 09:30 $39.04 → close $39.22 +5.22; SN×6 09:30 $184.05 → close $182.44 -9.66; SONO×65 09:30 $17.76 → close $17.85 +5.85; BB×131 09:30 $8.86 → close $8.72 -18.34 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · Clock-B #6 stock holds while sector camera is red
 
-Cash book **-12.22%** ($8,778) · signal-only (no cash/fees) was -2.27%. Starts YES **25/30**. Fills 205 · skips 96 · realized $+387.41.
+Cash book **-13.61%** ($8,639) · signal-only (no cash/fees) was -2.27%. Starts YES **25/30**. Fills 206 · skips 96 · realized $+387.41.
 
 ## How this sleeve decides (like you are 10)
 
@@ -343,6 +343,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-28 09:30 ET | **SELL** | `DGXX` | 657 | $4.55 | $8.61 | $-168.19 | $6,118.07 | ▼ -168.19 after sell → book $8,784.69; vs 09:30 mark -8.61 | dropped from list after 1 sess (min 1) | — |
 | 2026-09-28 09:30 ET | **SELL** | `GLND` | 519 | $5.14 | $6.80 | $-492.02 | $8,777.89 | ▼ -492.02 after sell → book $8,777.89; vs 09:30 mark -6.80 | dropped from list after 1 sess (min 1) | — |
 | 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,777.89 | ▲ close $8,777.89 vs 09:30 $8,795.50 (session +0.00) | 16:00 close · cash $8,777.89 · no lots left · equity $8,777.89. | — |
+| 2026-09-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,777.89 | ▲ 09:30 equity $8,777.89 vs yday $8,777.89 (+0.00) | 09:30 open · cash $8,777.89 · no holdings · equity $8,777.89 vs prior close $8,777.89 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-09-29 09:30 ET | **BUY** | `BUR` | 2214 | $3.95 | $28.56 | — | $4.03 | — | Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list probable,yday_gainer; ret5=-0.3; leftover $8777.89 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-09-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $4.03 | ▼ close $8,638.63 vs 09:30 $8,777.89 (session -110.70) | 16:00 close · cash $4.03 · equity $8,638.63 vs 09:30 $8,777.89 (-139.26; session marks -110.70) · 1 name(s) marked open→close (per-name table). BUR×2214 09:30 $3.95 → close $3.90 -110.70 | — |
 
 ## Not taken
 

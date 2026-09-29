@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `ohlc_hot` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · baseline list, no extra gate
 
-Cash book **-8.95%** ($9,105) · signal-only (no cash/fees) was +107.52%. Starts YES **4/30**. Fills 195 · skips 271 · realized $-671.83.
+Cash book **-7.66%** ($9,234) · signal-only (no cash/fees) was +107.52%. Starts YES **4/30**. Fills 201 · skips 271 · realized $-671.83.
 
 ## How this sleeve decides (like you are 10)
 
@@ -327,6 +327,14 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-28 09:30 ET | **SELL** | `VERI` | 10 | $1.29 | $0.18 | $-0.44 | $416.49 | ▼ -0.44 after sell → book $8,898.83; vs 09:30 mark -0.18 | exit unpriced hold on first bar after 3 sess | — |
 | 2026-09-28 09:30 ET | **SELL** | `VNET` | 4 | $6.58 | $0.30 | $-2.99 | $442.51 | ▼ -2.99 after sell → book $8,898.53; vs 09:30 mark -0.30 | exit unpriced hold on first bar after 4 sess | — |
 | 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $442.51 | ▲ close $9,104.80 vs 09:30 $8,900.61 (session +206.27) | 16:00 close · cash $442.51 · equity $9,104.80 vs 09:30 $8,900.61 (+204.19; session marks +206.27) · 8 name(s) marked open→close (per-name table). CDNA×17 09:30 $62.30 → close $64.60 +39.10; HLP×490 09:30 $2.22 → close $2.39 +83.30; P×8 09:30 $124.60 → close $129.40 +38.40; PACB×687 09:30 $1.60 → close $1.71 +75.57; SATL×180 09:30 $6.17 → close $6.05 -21.60; TEM×12 09:30 $83.57 → close $85.08 +18.12; TXG×12 09:30 $86.14 → close $88.50 +28.32; WRBY×41 09:30 $26.00 → close $24.66 -54.94 | — |
+| 2026-09-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $442.51 | ▲ 09:30 equity $9,136.43 vs yday $9,104.80 (+31.63) | 09:30 open · cash $442.51 (unchanged overnight, no fees) · equity $9,136.43 vs prior close $9,104.80 (+31.63) · 8 name(s) re-marked at the open (per-name table). CDNA×17 yday $64.60 → 09:30 $64.28 -5.44; HLP×490 yday $2.39 → 09:30 $2.41 +9.80; P×8 yday $129.40 → 09:30 $130.26 +6.88; PACB×687 yday $1.71 → 09:30 $1.67 -27.48; SATL×180 yday $6.05 → 09:30 $6.21 +28.80; TEM×12 yday $85.08 → 09:30 $85.48 +4.86; TXG×12 yday $88.50 → 09:30 $88.83 +3.96; WRBY×41 yday $24.66 → 09:30 $24.91 +10.25 | — |
+| 2026-09-29 09:30 ET | **BUY** | `ABCL` | 4 | $14.12 | $0.58 | — | $385.45 | — | baseline list, no extra gate; list probable,yday_gainer,ohlc_hot; ret5=+10.0; leftover $63.22 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🟡 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `ADMA` | 6 | $10.04 | $0.62 | — | $324.59 | — | baseline list, no extra gate; list probable,yday_gainer,ohlc_hot; ⚪; ret5=+6.5; leftover $63.22 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `AMC` | 19 | $3.32 | $0.69 | — | $260.82 | — | baseline list, no extra gate; list yday_gainer,yday_mover,ohlc_hot; 🔵; ret5=+13.8; leftover $63.22 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `AGEN` | 6 | $9.58 | $0.59 | — | $202.75 | — | baseline list, no extra gate; list yday_gainer,ohlc_hot; ret5=+13.2; leftover $63.22 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `XERS` | 6 | $9.77 | $0.60 | — | $143.53 | — | baseline list, no extra gate; list yday_gainer,ohlc_hot; ret5=+11.7; leftover $63.22 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `QTRX` | 17 | $3.52 | $0.65 | — | $83.04 | — | baseline list, no extra gate; list yday_gainer,ohlc_hot; ret5=+15.8; leftover $63.22 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $83.04 | ▲ close $9,234.37 vs 09:30 $9,136.43 (session +101.67) | 16:00 close · cash $83.04 · equity $9,234.37 vs 09:30 $9,136.43 (+97.94; session marks +101.67) · 14 name(s) marked open→close (per-name table). CDNA×17 09:30 $64.28 → close $64.02 -4.42; HLP×490 09:30 $2.41 → close $2.45 +19.60; P×8 09:30 $130.26 → close $130.05 -1.68; PACB×687 09:30 $1.67 → close $1.83 +109.92; SATL×180 09:30 $6.21 → close $5.60 -109.80; TEM×12 09:30 $85.48 → close $82.58 -34.86; TXG×12 09:30 $88.83 → close $90.04 +14.52; WRBY×41 09:30 $24.91 → close $27.47 +104.96; ABCL×4 09:30 $14.12 → close $14.82 +2.80; ADMA×6 09:30 $10.04 → close $9.96 -0.48; AMC×19 09:30 $3.32 → close $3.08 -4.56; AGEN×6 09:30 $9.58 → close $9.89 +1.86; XERS×6 09:30 $9.77 → close $9.98 +1.26; QTRX×17 09:30 $3.52 → close $3.67 +2.55 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 4 · rank `hot_score` · size `leftover` · sell `list` · S-boost `holdup` · hot4; S>0 lots stay through the next 09:30 so the overnight gap is in the book
 
-Cash book **+48.29%** ($14,829) · signal-only (no cash/fees) was +89.81%. Starts YES **29/30**. Fills 95 · skips 79 · realized $+4974.44.
+Cash book **+48.28%** ($14,828) · signal-only (no cash/fees) was +89.81%. Starts YES **29/30**. Fills 98 · skips 79 · realized $+4974.44.
 
 ## How this sleeve decides (like you are 10)
 
@@ -231,6 +231,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-28 09:30 ET | **SELL** | `VICR` | 12 | $280.00 | $2.06 | $+157.91 | $9,654.79 | ▲ +157.91 after sell → book $14,811.49; vs 09:30 mark -2.06 | exit unpriced hold on first bar after 3 sess | — |
 | 2026-09-28 09:30 ET | **SELL** | `VKTX` | 79 | $35.00 | $2.26 | $-538.53 | $12,417.53 | ▼ -538.53 after sell → book $14,809.23; vs 09:30 mark -2.26 | exit unpriced hold on first bar after 3 sess | — |
 | 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $12,417.53 | ▲ close $14,828.73 vs 09:30 $14,829.64 (session +19.50) | 16:00 close · cash $12,417.53 · equity $14,828.73 vs 09:30 $14,829.64 (-0.91; session marks +19.50) · 3 name(s) marked open→close (per-name table). SECZ×50 09:30 $16.00 → close $16.63 +31.50; TJGC×27 09:30 $26.50 → close $28.54 +55.08; USDE×52 09:30 $16.85 → close $15.56 -67.08 | — |
+| 2026-09-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $12,417.53 | ▲ 09:30 equity $14,834.19 vs yday $14,828.73 (+5.46) | 09:30 open · cash $12,417.53 (unchanged overnight, no fees) · equity $14,834.19 vs prior close $14,828.73 (+5.46) · 3 name(s) re-marked at the open (per-name table). SECZ×50 yday $16.63 → 09:30 $16.59 -2.00; TJGC×27 yday $28.54 → 09:30 $27.68 -23.22; USDE×52 yday $15.56 → 09:30 $16.15 +30.68 | — |
+| 2026-09-29 09:30 ET | **SELL** | `SECZ` | 50 | $16.59 | $2.16 | $+14.70 | $13,244.87 | ▲ +14.70 after sell → book $14,832.03; vs 09:30 mark -2.16 | dropped from list after 2 sess (min 2) | — |
+| 2026-09-29 09:30 ET | **SELL** | `TJGC` | 27 | $27.68 | $2.09 | $-60.32 | $13,990.14 | ▼ -60.32 after sell → book $14,829.94; vs 09:30 mark -2.09 | dropped from list after 2 sess (min 2) | — |
+| 2026-09-29 09:30 ET | **SELL** | `USDE` | 52 | $16.15 | $2.17 | $+25.27 | $14,827.77 | ▲ +25.27 after sell → book $14,827.77; vs 09:30 mark -2.17 | dropped from list after 2 sess (min 2) | — |
+| 2026-09-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $14,827.77 | ▲ close $14,827.77 vs 09:30 $14,834.19 (session +0.00) | 16:00 close · cash $14,827.77 · no lots left · equity $14,827.77. | — |
 
 ## Not taken
 

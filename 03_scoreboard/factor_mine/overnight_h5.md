@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `overnight` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · baseline list, no extra gate
 
-Cash book **-22.29%** ($7,771) · signal-only (no cash/fees) was -37.95%. Starts YES **0/30**. Fills 34 · skips 179 · realized $-881.39.
+Cash book **-22.27%** ($7,773) · signal-only (no cash/fees) was -37.95%. Starts YES **0/30**. Fills 35 · skips 179 · realized $-881.39.
 
 ## How this sleeve decides (like you are 10)
 
@@ -166,6 +166,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-28 09:30 ET | **SELL** | `FUL` | 29 | $49.06 | $2.10 | $-46.23 | $4,249.66 | ▼ -46.23 after sell → book $7,565.72; vs 09:30 mark -2.10 | exit unpriced hold on first bar after 3 sess | — |
 | 2026-09-28 09:30 ET | **SELL** | `SNX` | 5 | $260.87 | $2.03 | $-116.98 | $5,551.98 | ▼ -116.98 after sell → book $7,563.69; vs 09:30 mark -2.03 | exit unpriced hold on first bar after 3 sess | — |
 | 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $5,551.98 | ▲ close $7,771.18 vs 09:30 $7,572.39 (session +207.49) | 16:00 close · cash $5,551.98 · equity $7,771.18 vs 09:30 $7,572.39 (+198.79; session marks +207.49) · 2 name(s) marked open→close (per-name table). NEOV×436 09:30 $2.20 → close $2.28 +34.88; SFIX×496 09:30 $2.12 → close $2.47 +172.61 | — |
+| 2026-09-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $5,551.98 | ▲ 09:30 equity $7,775.54 vs yday $7,771.18 (+4.36) | 09:30 open · cash $5,551.98 (unchanged overnight, no fees) · equity $7,775.54 vs prior close $7,771.18 (+4.36) · 2 name(s) re-marked at the open (per-name table). NEOV×436 yday $2.28 → 09:30 $2.29 +4.36; SFIX×496 yday $2.47 → 09:30 $2.47 +0.00 | — |
+| 2026-09-29 09:30 ET | **BUY** | `CNXC` | 217 | $25.52 | $2.80 | — | $11.34 | — | baseline list, no extra gate; list overnight; ret5=-7.6; leftover $5551.98 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 peer🟡 heat🟢 vol🟢 buy🟡 |
+| 2026-09-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $11.34 | ▼ close $7,772.62 vs 09:30 $7,775.54 (session -0.12) | 16:00 close · cash $11.34 · equity $7,772.62 vs 09:30 $7,775.54 (-2.92; session marks -0.12) · 3 name(s) marked open→close (per-name table). NEOV×436 09:30 $2.29 → close $2.54 +109.00; SFIX×496 09:30 $2.47 → close $2.53 +29.76; CNXC×217 09:30 $25.52 → close $24.88 -138.88 | — |
 
 ## Not taken
 

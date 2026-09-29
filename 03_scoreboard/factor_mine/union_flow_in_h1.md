@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ flow_in, no 🚨
 
-Cash book **+0.84%** ($10,084) · signal-only (no cash/fees) was +17.31%. Starts YES **6/30**. Fills 88 · skips 27 · realized $+766.09.
+Cash book **+0.30%** ($10,030) · signal-only (no cash/fees) was +17.31%. Starts YES **6/30**. Fills 90 · skips 27 · realized $+766.09.
 
 ## How this sleeve decides (like you are 10)
 
@@ -224,6 +224,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-25 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,084.16 | ▲ close $10,084.16 vs 09:30 $10,084.16 (session +0.00) | 16:00 close · cash $10,084.16 · no lots left · equity $10,084.16. | — |
 | 2026-09-28 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,084.16 | ▲ 09:30 equity $10,084.16 vs yday $10,084.16 (+0.00) | 09:30 open · cash $10,084.16 · no holdings · equity $10,084.16 vs prior close $10,084.16 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,084.16 | ▲ close $10,084.16 vs 09:30 $10,084.16 (session +0.00) | 16:00 close · cash $10,084.16 · no lots left · equity $10,084.16. | — |
+| 2026-09-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,084.16 | ▲ 09:30 equity $10,084.16 vs yday $10,084.16 (+0.00) | 09:30 open · cash $10,084.16 · no holdings · equity $10,084.16 vs prior close $10,084.16 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-09-29 09:30 ET | **BUY** | `JEF` | 109 | $46.08 | $2.32 | — | $5,059.12 | — | union ∩ flow_in, no 🚨; gate flow_in=True; list earn_react; 🔵; ret5=-1.5; leftover $5042.08 | join🟢 sector🔴 gen🟢 news🟡 digest🟢 ab🟡 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `KMX` | 83 | $60.41 | $2.24 | — | $43.27 | — | union ∩ flow_in, no 🚨; gate flow_in=True; list earn_react; 🔵; ⚪; ret5=-2.3; leftover $5042.08 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🟡 heat🟢 vol🟢 buy🟡 |
+| 2026-09-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $43.27 | ▼ close $10,030.04 vs 09:30 $10,084.16 (session -49.57) | 16:00 close · cash $43.27 · equity $10,030.04 vs 09:30 $10,084.16 (-54.12; session marks -49.57) · 2 name(s) marked open→close (per-name table). JEF×109 09:30 $46.08 → close $46.52 +47.96; KMX×83 09:30 $60.41 → close $59.23 -97.53 | — |
 
 ## Not taken
 

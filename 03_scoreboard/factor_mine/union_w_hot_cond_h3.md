@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `w_hot_cond` · size `leftover` · sell `list` · S-boost `none` · rank by w_hot_cond
 
-Cash book **+13.89%** ($11,389) · signal-only (no cash/fees) was +337.30%. Starts YES **29/30**. Fills 206 · skips 286 · realized $+834.44.
+Cash book **+14.34%** ($11,434) · signal-only (no cash/fees) was +337.30%. Starts YES **29/30**. Fills 213 · skips 286 · realized $+834.44.
 
 ## How this sleeve decides (like you are 10)
 
@@ -341,6 +341,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-28 09:30 ET | **SELL** | `TJGC` | 85 | $26.50 | $2.28 | $+810.63 | $2,663.39 | ▲ +810.63 after sell → book $11,371.14; vs 09:30 mark -2.28 | dropped from list after 5 sess (min 3) | — |
 | 2026-09-28 09:30 ET | **SELL** | `VICR` | 6 | $280.00 | $2.03 | $+294.46 | $4,341.36 | ▲ +294.46 after sell → book $11,369.11; vs 09:30 mark -2.03 | exit unpriced hold on first bar after 5 sess | — |
 | 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $4,341.36 | ▲ close $11,388.83 vs 09:30 $11,377.23 (session +19.72) | 16:00 close · cash $4,341.36 · equity $11,388.83 vs 09:30 $11,377.23 (+11.60; session marks +19.72) · 6 name(s) marked open→close (per-name table). CYPH×292 09:30 $4.03 → close $3.31 -210.97; GRAL×9 09:30 $128.90 → close $132.63 +33.57; RSKD×149 09:30 $7.72 → close $7.70 -2.98; SECZ×72 09:30 $16.00 → close $16.63 +45.36; USDE×75 09:30 $16.85 → close $15.56 -96.75; ZSQR×303 09:30 $3.71 → close $4.54 +251.49 | — |
+| 2026-09-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $4,341.36 | ▲ 09:30 equity $11,426.98 vs yday $11,388.83 (+38.15) | 09:30 open · cash $4,341.36 (unchanged overnight, no fees) · equity $11,426.98 vs prior close $11,388.83 (+38.15) · 6 name(s) re-marked at the open (per-name table). CYPH×292 yday $3.31 → 09:30 $3.34 +8.76; GRAL×9 yday $132.63 → 09:30 $133.49 +7.74; RSKD×149 yday $7.70 → 09:30 $7.71 +1.49; SECZ×72 yday $16.63 → 09:30 $16.59 -2.88; USDE×75 yday $15.56 → 09:30 $16.15 +44.25; ZSQR×303 yday $4.54 → 09:30 $4.47 -21.21 | — |
+| 2026-09-29 09:30 ET | **BUY** | `KOD` | 7 | $87.50 | $2.01 | — | $3,726.85 | — | rank by w_hot_cond; rank w_hot_cond; list yday_gainer,yday_mover; 🔵; ret5=+177.4; leftover $620.19 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `GLND` | 155 | $3.98 | $2.46 | — | $3,107.49 | — | rank by w_hot_cond; rank w_hot_cond; list yday_mover; ret5=+55.9; leftover $620.19 | join🔴 sector🟡 gen🟢 news🟢 digest🟢 ab🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `SRFM` | 521 | $1.19 | $6.72 | — | $2,480.78 | — | rank by w_hot_cond; rank w_hot_cond; list yday_gainer; ret5=+77.6; leftover $620.19 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `GRML` | 59 | $10.50 | $2.17 | — | $1,859.12 | — | rank by w_hot_cond; rank w_hot_cond; list yday_mover; ret5=+25.8; leftover $620.19 | join🔴 sector🟡 gen🟢 news🟡 digest🔴 ab🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `TJGC` | 22 | $27.68 | $2.06 | — | $1,248.10 | — | rank by w_hot_cond; rank w_hot_cond; list yday_gainer; 🔵; ret5=+62.3; leftover $620.19 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `AMC` | 186 | $3.32 | $2.55 | — | $628.03 | — | rank by w_hot_cond; rank w_hot_cond; list yday_gainer,yday_mover,ohlc_hot; 🔵; ret5=+13.8; leftover $620.19 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `LTRX` | 84 | $7.34 | $2.24 | — | $9.23 | — | rank by w_hot_cond; rank w_hot_cond; list ohlc_hot; ret5=+16.8; leftover $620.19 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-09-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9.23 | ▲ close $11,433.51 vs 09:30 $11,426.98 (session +26.72) | 16:00 close · cash $9.23 · equity $11,433.51 vs 09:30 $11,426.98 (+6.53; session marks +26.72) · 13 name(s) marked open→close (per-name table). CYPH×292 09:30 $3.34 → close $3.23 -32.12; GRAL×9 09:30 $133.49 → close $136.57 +27.72; RSKD×149 09:30 $7.71 → close $7.71 +0.00; SECZ×72 09:30 $16.59 → close $15.84 -54.00; USDE×75 09:30 $16.15 → close $15.32 -62.25; ZSQR×303 09:30 $4.47 → close $4.15 -96.96; KOD×7 09:30 $87.50 → close $91.12 +25.34; GLND×155 09:30 $3.98 → close $4.75 +119.35; SRFM×521 09:30 $1.19 → close $1.20 +5.21; GRML×59 09:30 $10.50 → close $10.38 -7.38; TJGC×22 09:30 $27.68 → close $34.80 +156.53; AMC×186 09:30 $3.32 → close $3.08 -44.64; LTRX×84 09:30 $7.34 → close $7.22 -10.08 | — |
 
 ## Not taken
 

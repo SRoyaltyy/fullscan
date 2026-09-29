@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · ret_5>15
 
-Cash book **-17.38%** ($8,262) · signal-only (no cash/fees) was -55.91%. Starts YES **1/30**. Fills 221 · skips 265 · realized $-1568.09.
+Cash book **-18.84%** ($8,117) · signal-only (no cash/fees) was -55.91%. Starts YES **1/30**. Fills 228 · skips 265 · realized $-1568.09.
 
 ## How this sleeve decides (like you are 10)
 
@@ -355,6 +355,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-28 09:30 ET | **COVER** | `VGZ` | 250 | $2.62 | $3.23 | $+0.98 | $13,084.70 | ▲ +0.98 after sell → book $8,501.52; vs 09:30 mark -3.23 | exit unpriced hold on first bar after 4 sess | — |
 | 2026-09-28 09:30 ET | **COVER** | `VKTX` | 18 | $35.00 | $2.04 | $+117.55 | $12,452.66 | ▲ +117.55 after sell → book $8,499.48; vs 09:30 mark -2.04 | exit unpriced hold on first bar after 3 sess | — |
 | 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $12,452.66 | ▼ close $8,261.98 vs 09:30 $8,531.02 (session -237.50) | 16:00 close · cash $12,452.66 · equity $8,261.98 vs 09:30 $8,531.02 (-269.04; session marks -237.50) · 4 name(s) marked open→close (per-name table). QMCO×34 09:30 $31.65 → close $31.40 +8.50; SECZ×62 09:30 $16.00 → close $16.63 -39.06; TWST×5 09:30 $181.87 → close $179.60 +11.35; ZSQR×263 09:30 $3.71 → close $4.54 -218.29 | — |
+| 2026-09-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $12,452.66 | ▼ 09:30 equity $8,250.09 vs yday $8,261.98 (-11.89) | 09:30 open · cash $12,452.66 (unchanged overnight, no fees) · equity $8,250.09 vs prior close $8,261.98 (-11.89) · 4 name(s) re-marked at the open (per-name table). QMCO×34 yday $31.40 → 09:30 $32.32 -31.28; SECZ×62 yday $16.63 → 09:30 $16.59 +2.48; TWST×5 yday $179.60 → 09:30 $179.90 -1.50; ZSQR×263 yday $4.54 → 09:30 $4.47 +18.41 | — |
+| 2026-09-29 09:30 ET | **SHORT** | `KOD` | 6 | $87.50 | $2.04 | — | $12,975.62 | — | ret_5>15; gate ret_5_min=15.0; list yday_gainer,yday_mover; 🔵; ret5=+177.4; leftover $589.29 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-09-29 09:30 ET | **SHORT** | `QNC` | 286 | $2.06 | $3.76 | — | $13,561.01 | — | ret_5>15; gate ret_5_min=15.0; list yday_gainer,yday_mover; ret5=+24.3; leftover $589.29 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-09-29 09:30 ET | **SHORT** | `NAUT` | 497 | $1.19 | $6.52 | — | $14,143.44 | — | ret_5>15; gate ret_5_min=15.0; list yday_gainer,yday_mover; ret5=+16.2; leftover $589.29 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-09-29 09:30 ET | **SHORT** | `MX` | 147 | $3.99 | $2.48 | — | $14,727.49 | — | ret_5>15; gate ret_5_min=15.0; list yday_gainer,yday_mover; ret5=+18.4; leftover $589.29 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟡 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-09-29 09:30 ET | **SHORT** | `TJGC` | 21 | $27.68 | $2.09 | — | $15,306.68 | — | ret_5>15; gate ret_5_min=15.0; list yday_gainer; 🔵; ret5=+62.3; leftover $589.29 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-09-29 09:30 ET | **SHORT** | `HLP` | 244 | $2.41 | $3.21 | — | $15,891.51 | — | ret_5>15; gate ret_5_min=15.0; list yday_gainer,ohlc_hot; ret5=+17.7; leftover $589.29 | join🔴 sector🟡 gen🟢 news🟡 digest🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-09-29 09:30 ET | **SHORT** | `QTRX` | 167 | $3.52 | $2.54 | — | $16,476.80 | — | ret_5>15; gate ret_5_min=15.0; list yday_gainer,ohlc_hot; ret5=+15.8; leftover $589.29 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $16,476.80 | ▼ close $8,116.54 vs 09:30 $8,250.09 (session -110.90) | 16:00 close · cash $16,476.80 · equity $8,116.54 vs 09:30 $8,250.09 (-133.55; session marks -110.90) · 11 name(s) marked open→close (per-name table). QMCO×34 09:30 $32.32 → close $32.86 -18.36; SECZ×62 09:30 $16.59 → close $15.84 +46.50; TWST×5 09:30 $179.90 → close $186.13 -31.15; ZSQR×263 09:30 $4.47 → close $4.15 +84.16; KOD×6 09:30 $87.50 → close $91.12 -21.72; QNC×286 09:30 $2.06 → close $1.75 +88.66; NAUT×497 09:30 $1.19 → close $1.36 -89.46; MX×147 09:30 $3.99 → close $3.89 +14.70; TJGC×21 09:30 $27.68 → close $34.80 -149.42; HLP×244 09:30 $2.41 → close $2.45 -9.76; QTRX×167 09:30 $3.52 → close $3.67 -25.05 | — |
 
 ## Not taken
 

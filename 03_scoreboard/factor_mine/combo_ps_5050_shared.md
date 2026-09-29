@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared union_news_pack_h1/short_news_r_h3 w=0.5,0.5 net=priority
 
-Cash book **-12.31%** ($8,769) · signal-only (no cash/fees) was —. Starts YES **2/30**. Fills 182 · skips 146 · realized $+903.47.
+Cash book **-14.21%** ($8,579) · signal-only (no cash/fees) was —. Starts YES **2/30**. Fills 183 · skips 146 · realized $+903.47.
 
 ## How this sleeve decides (like you are 10)
 
@@ -55,7 +55,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $12,804.06.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $17,172.13.
 
 ## Every lot, every session (09:30 mark and same-day change)
 
@@ -319,6 +319,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-28 09:30 ET | **COVER** | `PAYX` | 18 | $100.08 | $2.04 | $+277.17 | $14,852.11 | ▲ +277.17 after sell → book $8,760.83; vs 09:30 mark -2.05 | short_news_r_h3: dropped from list after 4 sess (min 3) | — |
 | 2026-09-28 09:30 ET | **COVER** | `USFD` | 22 | $93.00 | $2.06 | $+19.56 | $12,804.06 | ▲ +19.56 after sell → book $8,758.78; vs 09:30 mark -2.05 | short_news_r_h3: dropped from list after 4 sess (min 3) | — |
 | 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $12,804.06 | ▲ close $8,769.26 vs 09:30 $8,772.60 (session +10.48) | 16:00 close · cash $12,804.06 · equity $8,769.26 vs 09:30 $8,772.60 (-3.34; session marks +10.48) · 1 name(s) marked open→close (per-name table). RSKD×524 09:30 $7.72 → close $7.70 +10.48 | — |
+| 2026-09-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $12,804.06 | ▼ 09:30 equity $8,764.02 vs yday $8,769.26 (-5.24) | 09:30 open · cash $12,804.06 (unchanged overnight, no fees) · equity $8,764.02 vs prior close $8,769.26 (-5.24) | — |
+| 2026-09-29 09:30 ET | **SHORT** | `AEHL` | 530 | $8.26 | $7.08 | — | $17,172.13 | — | news🔴; gate news=bad; list yday_mover; 🔵; ret5=+18.9; combo leftover $4382.01; owner short_news_r_h3 | join🟢 sector🟢 gen🟢 news🔴 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-09-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $17,172.13 | ▼ close $8,579.39 vs 09:30 $8,764.02 (session -177.55) | 16:00 close · cash $17,172.13 · equity $8,579.39 vs 09:30 $8,764.02 (-184.63; session marks -177.55) · 2 name(s) marked open→close (per-name table). RSKD×524 09:30 $7.71 → close $7.71 -0.00; AEHL×530 09:30 $8.26 → close $8.59 -177.55 | — |
 
 ## Not taken
 

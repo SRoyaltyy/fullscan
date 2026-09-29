@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-14.80%** ($8,520) · signal-only (no cash/fees) was -21.78%. Starts YES **2/30**. Fills 176 · skips 248 · realized $-1054.91.
+Cash book **-12.89%** ($8,711) · signal-only (no cash/fees) was -21.78%. Starts YES **2/30**. Fills 182 · skips 248 · realized $-1054.91.
 
 ## How this sleeve decides (like you are 10)
 
@@ -314,6 +314,14 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-28 09:30 ET | **SELL** | `IVVD` | 305 | $0.98 | $3.95 | $-18.23 | $424.84 | ▼ -18.23 after sell → book $8,320.60; vs 09:30 mark -3.95 | exit unpriced hold on first bar after 4 sess | — |
 | 2026-09-28 09:30 ET | **SELL** | `NMRA` | 6 | $0.65 | $0.08 | $-0.86 | $428.65 | ▼ -0.86 after sell → book $8,320.52; vs 09:30 mark -0.08 | exit unpriced hold on first bar after 3 sess | — |
 | 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $428.65 | ▲ close $8,520.00 vs 09:30 $8,324.61 (session +199.48) | 16:00 close · cash $428.65 · equity $8,520.00 vs 09:30 $8,324.61 (+195.39; session marks +199.48) · 8 name(s) marked open→close (per-name table). DNA×98 09:30 $10.38 → close $10.46 +8.33; GRAL×8 09:30 $128.90 → close $132.63 +29.84; PL×56 09:30 $17.17 → close $16.77 -22.40; QMCO×33 09:30 $31.65 → close $31.40 -8.25; SECZ×61 09:30 $16.00 → close $16.63 +38.43; TWST×5 09:30 $181.87 → close $179.60 -11.35; WRBY×38 09:30 $26.00 → close $24.66 -50.92; ZSQR×260 09:30 $3.71 → close $4.54 +215.80 | — |
+| 2026-09-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $428.65 | ▲ 09:30 equity $8,571.12 vs yday $8,520.00 (+51.12) | 09:30 open · cash $428.65 (unchanged overnight, no fees) · equity $8,571.12 vs prior close $8,520.00 (+51.12) · 8 name(s) re-marked at the open (per-name table). DNA×98 yday $10.46 → 09:30 $10.54 +7.84; GRAL×8 yday $132.63 → 09:30 $133.49 +6.88; PL×56 yday $16.77 → 09:30 $17.05 +15.68; QMCO×33 yday $31.40 → 09:30 $32.32 +30.36; SECZ×61 yday $16.63 → 09:30 $16.59 -2.44; TWST×5 yday $179.60 → 09:30 $179.90 +1.50; WRBY×38 yday $24.66 → 09:30 $24.91 +9.50; ZSQR×260 yday $4.54 → 09:30 $4.47 -18.20 | — |
+| 2026-09-29 09:30 ET | **BUY** | `SFIX` | 21 | $2.47 | $0.58 | — | $376.20 | — | combo gate; gate blue=True,vol=good; list probable,yday_gainer,yday_mover; 🔵; ret5=-13.3; leftover $53.58 | join🟡 sector🟡 gen🟢 news🟡 digest🟡 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `AMC` | 16 | $3.32 | $0.58 | — | $322.50 | — | combo gate; gate blue=True,vol=good; list yday_gainer,yday_mover,ohlc_hot; 🔵; ret5=+13.8; leftover $53.58 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `GFI` | 1 | $36.38 | $0.37 | — | $285.75 | — | combo gate; gate blue=True,vol=good; list yday_mover; 🔵; ret5=-16.2; leftover $53.58 | join🔴 sector🟡 gen🟢 news🟡 digest🔴 ab🟡 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `AUR` | 10 | $5.32 | $0.56 | — | $231.99 | — | combo gate; gate blue=True,vol=good; list yday_mover; 🔵; ret5=-18.7; leftover $53.58 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `MRLN` | 30 | $1.75 | $0.61 | — | $178.88 | — | combo gate; gate blue=True,vol=good; list yday_mover; 🔵; ret5=-5.9; leftover $53.58 | join🟡 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `VFC` | 3 | $14.51 | $0.44 | — | $134.90 | — | combo gate; gate blue=True,vol=good; list ohlc_hot; 🔵; ⚪; ret5=+10.5; leftover $53.58 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $134.90 | ▲ close $8,710.94 vs 09:30 $8,571.12 (session +142.97) | 16:00 close · cash $134.90 · equity $8,710.94 vs 09:30 $8,571.12 (+139.82; session marks +142.97) · 14 name(s) marked open→close (per-name table). DNA×98 09:30 $10.54 → close $11.96 +139.16; GRAL×8 09:30 $133.49 → close $136.57 +24.64; PL×56 09:30 $17.05 → close $16.38 -37.52; QMCO×33 09:30 $32.32 → close $32.86 +17.82; SECZ×61 09:30 $16.59 → close $15.84 -45.75; TWST×5 09:30 $179.90 → close $186.13 +31.15; WRBY×38 09:30 $24.91 → close $27.47 +97.28; ZSQR×260 09:30 $4.47 → close $4.15 -83.20; SFIX×21 09:30 $2.47 → close $2.53 +1.26; AMC×16 09:30 $3.32 → close $3.08 -3.84; GFI×1 09:30 $36.38 → close $36.78 +0.40; AUR×10 09:30 $5.32 → close $5.39 +0.70; MRLN×30 09:30 $1.75 → close $1.78 +0.90; VFC×3 09:30 $14.51 → close $14.50 -0.03 | — |
 
 ## Not taken
 

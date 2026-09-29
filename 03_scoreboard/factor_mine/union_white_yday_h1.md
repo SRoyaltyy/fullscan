@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · union looker: 0 red cameras + yesterday up, rank +G−R
 
-Cash book **-13.88%** ($8,612) · signal-only (no cash/fees) was +1.95%. Starts YES **3/30**. Fills 192 · skips 2 · realized $-327.39.
+Cash book **-15.52%** ($8,448) · signal-only (no cash/fees) was +1.95%. Starts YES **3/30**. Fills 199 · skips 2 · realized $-327.39.
 
 ## How this sleeve decides (like you are 10)
 
@@ -330,6 +330,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-28 09:30 ET | **SELL** | `PRGO` | 73 | $15.21 | $2.23 | $+24.76 | $7,549.47 | ▲ +24.76 after sell → book $8,614.83; vs 09:30 mark -2.23 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-09-28 09:30 ET | **SELL** | `RSKD` | 138 | $7.72 | $2.44 | $-22.78 | $8,612.39 | ▼ -22.78 after sell → book $8,612.39; vs 09:30 mark -2.44 | dropped from list after 1 sess (min 1) | — |
 | 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,612.39 | ▲ close $8,612.39 vs 09:30 $8,638.10 (session +0.00) | 16:00 close · cash $8,612.39 · no lots left · equity $8,612.39. | — |
+| 2026-09-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,612.39 | ▲ 09:30 equity $8,612.39 vs yday $8,612.39 (+0.00) | 09:30 open · cash $8,612.39 · no holdings · equity $8,612.39 vs prior close $8,612.39 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-09-29 09:30 ET | **BUY** | `ADMA` | 122 | $10.04 | $2.36 | — | $7,385.15 | — | union looker: 0 red cameras + yesterday up, rank +G−R; gate yday_up=True,zero_red=True; rank cond; list probable,yday_gainer,ohlc_hot; ⚪; ret5=+6.5; leftover $1230.34 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `BB` | 138 | $8.86 | $2.40 | — | $6,160.07 | — | union looker: 0 red cameras + yesterday up, rank +G−R; gate yday_up=True,zero_red=True; rank cond; list yday_gainer; ⚪; ret5=+3.2; leftover $1230.34 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟡 heat🟢 vol🟢 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `PDFS` | 24 | $50.25 | $2.06 | — | $4,952.01 | — | union looker: 0 red cameras + yesterday up, rank +G−R; gate yday_up=True,zero_red=True; rank cond; list flatten; ⚪; ret5=+6.5; leftover $1230.34 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `RGEN` | 6 | $196.00 | $2.01 | — | $3,774.00 | — | union looker: 0 red cameras + yesterday up, rank +G−R; gate yday_up=True,zero_red=True; rank cond; list ohlc_hot; 🔵; ⚪; ret5=+7.4; leftover $1230.34 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `VFC` | 84 | $14.51 | $2.24 | — | $2,552.92 | — | union looker: 0 red cameras + yesterday up, rank +G−R; gate yday_up=True,zero_red=True; rank cond; list ohlc_hot; 🔵; ⚪; ret5=+10.5; leftover $1230.34 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `SN` | 6 | $184.05 | $2.01 | — | $1,446.61 | — | union looker: 0 red cameras + yesterday up, rank +G−R; gate yday_up=True,zero_red=True; rank cond; list flatten; 🔵; ⚪; ret5=+8.7; leftover $1230.34 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `ZSQR` | 275 | $4.47 | $3.55 | — | $213.81 | — | union looker: 0 red cameras + yesterday up, rank +G−R; gate yday_up=True,zero_red=True; rank cond; list yday_gainer,yday_mover; ⚪; ret5=+72.0; leftover $1230.34 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 ab🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $213.81 | ▼ close $8,448.08 vs 09:30 $8,612.39 (session -147.68) | 16:00 close · cash $213.81 · equity $8,448.08 vs 09:30 $8,612.39 (-164.31; session marks -147.68) · 7 name(s) marked open→close (per-name table). ADMA×122 09:30 $10.04 → close $9.96 -9.76; BB×138 09:30 $8.86 → close $8.72 -19.32; PDFS×24 09:30 $50.25 → close $49.77 -11.52; RGEN×6 09:30 $196.00 → close $194.57 -8.58; VFC×84 09:30 $14.51 → close $14.50 -0.84; SN×6 09:30 $184.05 → close $182.44 -9.66; ZSQR×275 09:30 $4.47 → close $4.15 -88.00 | — |
 
 ## Not taken
 

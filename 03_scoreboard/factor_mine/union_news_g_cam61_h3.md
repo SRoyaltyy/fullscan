@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · merged news🟢 and cameras +6 −≤1
 
-Cash book **-22.03%** ($7,797) · signal-only (no cash/fees) was -22.84%. Starts YES **1/30**. Fills 72 · skips 85 · realized $-2058.05.
+Cash book **-24.66%** ($7,534) · signal-only (no cash/fees) was -22.84%. Starts YES **1/30**. Fills 72 · skips 85 · realized $-2058.05.
 
 ## How this sleeve decides (like you are 10)
 
@@ -211,6 +211,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-28 09:30 ET | **SELL** | `PGEN` | 16 | $7.61 | $1.29 | $-8.05 | $280.65 | ▼ -8.05 after sell → book $7,313.56; vs 09:30 mark -1.29 | exit unpriced hold on first bar after 3 sess | — |
 | 2026-09-28 09:30 ET | **SELL** | `SGRY` | 8 | $14.18 | $1.18 | $-14.78 | $392.92 | ▼ -14.78 after sell → book $7,312.39; vs 09:30 mark -1.17 | exit unpriced hold on first bar after 3 sess | — |
 | 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $392.92 | ▲ close $7,796.94 vs 09:30 $7,314.85 (session +484.55) | 16:00 close · cash $392.92 · equity $7,796.94 vs 09:30 $7,314.85 (+482.09; session marks +484.55) · 4 name(s) marked open→close (per-name table). COST×2 09:30 $924.88 → close $922.92 -3.91; ILMN×6 09:30 $265.95 → close $271.90 +35.70; SECZ×110 09:30 $16.00 → close $16.63 +69.30; ZSQR×462 09:30 $3.71 → close $4.54 +383.46 | — |
+| 2026-09-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $392.92 | ▼ 09:30 equity $7,742.56 vs yday $7,796.94 (-54.38) | 09:30 open · cash $392.92 (unchanged overnight, no fees) · equity $7,742.56 vs prior close $7,796.94 (-54.38) · 4 name(s) re-marked at the open (per-name table). COST×2 yday $922.92 → 09:30 $916.80 -12.24; ILMN×6 yday $271.90 → 09:30 $271.00 -5.40; SECZ×110 yday $16.63 → 09:30 $16.59 -4.40; ZSQR×462 yday $4.54 → 09:30 $4.47 -32.34 | — |
+| 2026-09-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $392.92 | ▼ close $7,533.80 vs 09:30 $7,742.56 (session -208.76) | 16:00 close · cash $392.92 · equity $7,533.80 vs 09:30 $7,742.56 (-208.76; session marks -208.76) · 4 name(s) marked open→close (per-name table). COST×2 09:30 $916.80 → close $924.59 +15.58; ILMN×6 09:30 $271.00 → close $272.00 +6.00; SECZ×110 09:30 $16.59 → close $15.84 -82.50; ZSQR×462 09:30 $4.47 → close $4.15 -147.84 | — |
 
 ## Not taken
 

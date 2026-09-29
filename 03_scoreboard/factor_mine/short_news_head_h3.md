@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · short prior-export headline🔴
 
-Cash book **-7.12%** ($9,288) · signal-only (no cash/fees) was +2.90%. Starts YES **2/30**. Fills 84 · skips 94 · realized $+602.64.
+Cash book **-9.13%** ($9,087) · signal-only (no cash/fees) was +2.90%. Starts YES **2/30**. Fills 85 · skips 94 · realized $+602.64.
 
 ## How this sleeve decides (like you are 10)
 
@@ -218,6 +218,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-28 09:30 ET | **COVER** | `PAYX` | 20 | $100.08 | $2.05 | $+308.41 | $16,081.52 | ▲ +308.41 after sell → book $9,278.92; vs 09:30 mark -2.05 | exit unpriced hold on first bar after 4 sess | — |
 | 2026-09-28 09:30 ET | **COVER** | `USFD` | 25 | $93.00 | $2.06 | $+22.78 | $13,754.46 | ▲ +22.78 after sell → book $9,276.86; vs 09:30 mark -2.06 | exit unpriced hold on first bar after 4 sess | — |
 | 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $13,754.46 | ▲ close $9,288.46 vs 09:30 $9,288.97 (session +11.60) | 16:00 close · cash $13,754.46 · equity $9,288.46 vs 09:30 $9,288.97 (-0.51; session marks +11.60) · 1 name(s) marked open→close (per-name table). RSKD×580 09:30 $7.72 → close $7.70 +11.60 | — |
+| 2026-09-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $13,754.46 | ▼ 09:30 equity $9,282.66 vs yday $9,288.46 (-5.80) | 09:30 open · cash $13,754.46 (unchanged overnight, no fees) · equity $9,282.66 vs prior close $9,288.46 (-5.80) · 1 name(s) re-marked at the open (per-name table). RSKD×580 yday $7.70 → 09:30 $7.71 -5.80 | — |
+| 2026-09-29 09:30 ET | **SHORT** | `AEHL` | 562 | $8.26 | $7.51 | — | $18,386.26 | — | short prior-export headline🔴; gate headline=bad; list yday_mover; 🔵; ret5=+18.9; leftover $4641.33 | join🟢 sector🟢 gen🟢 news🔴 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-09-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $18,386.26 | ▼ close $9,086.88 vs 09:30 $9,282.66 (session -188.27) | 16:00 close · cash $18,386.26 · equity $9,086.88 vs 09:30 $9,282.66 (-195.78; session marks -188.27) · 2 name(s) marked open→close (per-name table). RSKD×580 09:30 $7.71 → close $7.71 -0.00; AEHL×562 09:30 $8.26 → close $8.59 -188.27 | — |
 
 ## Not taken
 

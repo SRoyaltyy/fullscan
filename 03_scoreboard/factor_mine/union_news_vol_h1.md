@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-22.42%** ($7,758) · signal-only (no cash/fees) was +0.74%. Starts YES **0/30**. Fills 118 · skips 41 · realized $-847.98.
+Cash book **-14.83%** ($8,517) · signal-only (no cash/fees) was +0.74%. Starts YES **0/30**. Fills 120 · skips 41 · realized $-847.98.
 
 ## How this sleeve decides (like you are 10)
 
@@ -256,6 +256,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-28 09:30 ET | **SELL** | `SECZ` | 245 | $16.00 | $3.23 | $-57.84 | $3,928.33 | ▼ -57.84 after sell → book $7,771.89; vs 09:30 mark -3.23 | dropped from list after 1 sess (min 1) | — |
 | 2026-09-28 09:30 ET | **SELL** | `ZSQR` | 1036 | $3.71 | $13.57 | $-182.33 | $7,758.32 | ▼ -182.33 after sell → book $7,758.32; vs 09:30 mark -13.57 | dropped from list after 1 sess (min 1) | — |
 | 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,758.32 | ▲ close $7,758.32 vs 09:30 $7,775.12 (session +0.00) | 16:00 close · cash $7,758.32 · no lots left · equity $7,758.32. | — |
+| 2026-09-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,758.32 | ▲ 09:30 equity $7,758.32 vs yday $7,758.32 (+0.00) | 09:30 open · cash $7,758.32 · no holdings · equity $7,758.32 vs prior close $7,758.32 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-09-29 09:30 ET | **BUY** | `GLND` | 974 | $3.98 | $12.56 | — | $3,869.24 | — | combo gate; gate news=good,vol=good; list yday_mover; ret5=+55.9; leftover $3879.16 | join🔴 sector🟡 gen🟢 news🟢 digest🟢 ab🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-09-29 09:30 ET | **BUY** | `BURL` | 14 | $268.37 | $2.03 | — | $110.02 | — | combo gate; gate news=good,vol=good; list ohlc_hot; 🔵; ret5=+5.8; leftover $3879.16 | join🟢 sector🟡 gen🟢 news🟢 digest🟡 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-09-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $110.02 | ▲ close $8,517.22 vs 09:30 $7,758.32 (session +773.50) | 16:00 close · cash $110.02 · equity $8,517.22 vs 09:30 $7,758.32 (+758.90; session marks +773.50) · 2 name(s) marked open→close (per-name table). GLND×974 09:30 $3.98 → close $4.75 +749.98; BURL×14 09:30 $268.37 → close $270.05 +23.52 | — |
 
 ## Not taken
 
