@@ -497,21 +497,35 @@ def select_draw(
         return kept
 
     hold_kept = absorb(_split(holdout_items, gold, banned_ids))
+    hard_working = list(hard_items)
     if len(hold_kept) >= exam_n:
         exam = [_tag(row, "holdout") for row in hold_kept[:exam_n]]
         exam_source = "holdout"
         new_cursor = int(hard_cursor or 0)
     else:
         picked, new_cursor = take_rotating(
-            hard_items, exam_n, hard_cursor, gold, banned_ids,
+            hard_working, exam_n, hard_cursor, gold, banned_ids,
         )
+        if len(picked) < exam_n:
+            # Holdout and the rotating bank are exhausted (every remaining
+            # hash already lives under jev_train/). Top up from the archive
+            # so New draw can still put 20 unseen titles on the exam.
+            extra = set(banned_ids) | {_row_id(row) for row in hard_working}
+            add_n = max(exam_n, exam_n - len(picked))
+            added = propose_hard_miss_bank(
+                archive, holdout_items, gold, add_n, rng, extra_banned=extra,
+            )
+            hard_working.extend(added)
+            picked, new_cursor = take_rotating(
+                hard_working, exam_n, hard_cursor, gold, banned_ids,
+            )
         # Count skips inside the rotation for the report.
-        absorb(_split(hard_items, gold, banned_ids))
+        absorb(_split(hard_working, gold, banned_ids))
         if len(picked) < exam_n:
             raise RuntimeError(
                 f"exam short {len(picked)}/{exam_n}: "
                 f"holdout unseen {len(hold_kept)}, "
-                f"hard-misses {len(hard_items)} (cursor {hard_cursor}). "
+                f"hard-misses {len(hard_working)} (cursor {hard_cursor}). "
                 "Add unseen titles to 00_grounding/jev_hard_misses.json. "
                 "Graded hashes in 00_grounding/jev_train/ stay excluded."
             )
@@ -521,7 +535,7 @@ def select_draw(
     exam_ids = {row["id"] for row in exam}
     reserved = set(banned_ids) | exam_ids
     reserved |= {_row_id(row) for row in holdout_items}
-    reserved |= {_row_id(row) for row in hard_items}
+    reserved |= {_row_id(row) for row in hard_working}
     tuning = absorb(_split(archive, gold, reserved))
     blocked = [tokens(row.get("title") or "") for row in exam]
     parsed, _gold_n = stratified_draw(
@@ -575,6 +589,7 @@ def select_draw(
         "exam": exam,
         "exam_source": exam_source,
         "hard_cursor": new_cursor,
+        "hard_items": hard_working,
         "gold_excluded": len(gold_hit),
         "trained_excluded": len(trained_hit),
         "rss_fetched": rss_fetched,
@@ -658,9 +673,12 @@ def allocate_stamp(directory: Path, requested: str, now: dt.datetime, *,
 
 
 def propose_hard_miss_bank(archive: list[dict], holdout_items: list[dict],
-                           gold: set[str], n: int, rng: random.Random) -> list[dict]:
+                           gold: set[str], n: int, rng: random.Random,
+                           extra_banned: set[str] | frozenset[str] | None = None,
+                           ) -> list[dict]:
     """Unseen archive titles for the rotating bank. Does not write."""
     reserved = {_row_id(row) for row in holdout_items}
+    reserved |= {str(x) for x in (extra_banned or ()) if x}
     eligible, _, _ = _split(archive, gold, reserved)
     blocked = [tokens(row.get("title") or "") for row in holdout_items]
     picked, _gold_n = stratified_draw(
@@ -784,6 +802,7 @@ def run_draw(
         dash = dashboard_draw_path(root)
         _write_json(dash, report)
         if sample["exam_source"] == "hard_miss":
+            hard_blob["items"] = sample.get("hard_items") or hard_blob.get("items") or []
             hard_blob["cursor"] = sample["hard_cursor"]
             hard_blob["schema"] = SCHEMA_HARD
             _write_json(hard_miss_path(ground), hard_blob)

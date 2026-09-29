@@ -387,6 +387,47 @@ def test_hard_misses_rotate_when_holdout_is_used_up():
     assert cursor == 3
 
 
+def test_hard_miss_bank_tops_up_when_trained_hashes_exhaust_it():
+    """New draw must not die after the rotating bank is fully trained-out."""
+    gold: set[str] = set()
+    hard_titles = [
+        "Shipping insurance rates jump after a hull loss",
+        "Grid interconnect queues lengthen in west Texas",
+    ]
+    hard = [_row(title, f"2026-09-{10+i:02d}") for i, title in enumerate(hard_titles)]
+    banned = {row["id"] for row in hard}
+    holdout = [_row("August Core PCE print lands ahead of the Fed decision", "2026-08-01")]
+    banned.add(holdout[0]["id"])
+    archive_titles = [
+        ("2026-09-01", "Copper mine in Chile raises output after a new shaft opens"),
+        ("2026-09-02", "Japan cabinet approves a supplemental budget for chip tools"),
+        ("2026-09-03", "Rotterdam port labor talks stay on the calendar"),
+        ("2026-09-04", "Brazil soy exports clear the Santos loading queue"),
+        ("2026-09-05", "Indian refiners book extra October crude cargoes"),
+        ("2026-09-06", "Norway salmon farms report a quiet week on volumes"),
+        ("2026-09-07", "Korean battery plant adds a second line in Georgia"),
+        ("2026-09-08", "Mexico auto plants schedule a maintenance Sunday"),
+    ]
+    archive = [_row(title, day) for day, title in archive_titles]
+    rss = _rss(
+        "First wire about cobalt shipments from the Congo",
+        "Second wire about canola crush margins",
+        "Third wire about container dwell in Savannah",
+    )
+    sample = select_draw(
+        archive=archive, rss_rows=rss, holdout_items=holdout, hard_items=hard,
+        hard_cursor=0, gold=gold, banned_ids=banned, rng=random.Random(2),
+        parsed_n=3, rss_n=2, exam_n=2,
+    )
+    assert sample["exam_source"] == "hard_miss"
+    exam_ids = {row["id"] for row in sample["exam"]}
+    assert len(exam_ids) == 2
+    assert exam_ids.isdisjoint(banned)
+    assert len(sample["hard_items"]) >= len(hard) + 2
+    added_ids = {row["id"] for row in sample["hard_items"]} - {row["id"] for row in hard}
+    assert exam_ids <= added_ids
+
+
 def test_draw_writes_page_json_and_leaves_holdout_bytes_alone():
     with tempfile.TemporaryDirectory() as tmp:
         root = Path(tmp)
@@ -1140,6 +1181,7 @@ def main() -> None:
         test_slim_grades_hydrate_from_draw,
         test_trained_hash_and_gold_are_excluded_from_every_pool,
         test_hard_misses_rotate_when_holdout_is_used_up,
+        test_hard_miss_bank_tops_up_when_trained_hashes_exhaust_it,
         test_draw_writes_page_json_and_leaves_holdout_bytes_alone,
         test_ensure_pool_files_does_not_rewrite_existing_holdout,
         test_grades_payload_accepts_base64_and_rejects_secrets,
