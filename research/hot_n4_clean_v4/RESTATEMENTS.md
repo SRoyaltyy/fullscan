@@ -29,3 +29,12 @@ The ledger test used to hash the live `data/prices/ohlc.parquet` and `data/price
 
 - `data/prices/ohlc.parquet`: pin sha256 `559c8cf099808930bef2b4de4280b4e902883c9a1de85c8a417074f11aaefa55`, git blob `3456f7f489a6fa7033e8ae5cc942d8279f0113e3`. Live sha256 `a3bb6172ad4abc6aa43bd7f4727e6f889bdfbb2e3151d397609f680ed65a0d4c`. The live file gained 2,746 ticker-dates. No pinned row's open, high, low, close, or volume changed.
 - `data/prices/actions.parquet`: pin sha256 `0471b2d76c30960eb494134a7bd34eea499bb5c696190f5fb3628c4becd94e4a`, git blob `ebbda85df7e4ee81f78adf04208ca9d5ea148c48`. Live sha256 `9013d58989e8d1efdbf9b5ed5f6751aaaf0b124aa88488acecd76f4b5e40e1d6`. The live file gained 8 rows, all dividends on 2026-09-25 with split 0. No pinned row changed.
+
+## 2026-09-28 — Seal only inside D's 08:00–09:30 ET window
+
+This enforces the PREREG's "seal on D before 09:30 ET" timing. A plan run whose clock is before 08:00 ET on the target session's own calendar date does not seal. It changes no picks, so the study name is unchanged.
+
+- study: `hot_n4_clean_v4`, recipes `union_hot_n4_h1__w0` and `union_hot_n4_holdup__w0`
+- rule: seal on D before 09:30 ET. The lower bound is 08:00 ET on D. After D's close fill, a run on D evening targets D+1 and writes nothing. A run at D+1 07:59 ET writes nothing. D+1 08:00–09:29 ET seals. At or after 09:30 ET the missing record is unchanged.
+- code: `plan_main` in `research/hot_n4_clean_v4/forward/forward.py`. Holdup and h1 share that entry point. `PLAN_ALLOW_EARLY=1` skips the lower bound for tests and is not set by any workflow.
+- sealed lines: unchanged. No ledger, log, price ledger, PREREG, IRONCLAD, or manifest line was edited.

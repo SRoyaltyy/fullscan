@@ -279,6 +279,8 @@ def _gap_fill() -> None:
 
 
 def main() -> None:
+    from research.hot_n4_clean_v4.forward.test_plan_window import main as plan_window
+    plan_window()
     _clock()
     import tempfile
     with tempfile.TemporaryDirectory() as tmp:

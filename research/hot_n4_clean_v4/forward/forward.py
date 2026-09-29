@@ -1,12 +1,15 @@
 """Seal a plan before the open, or a fill after the close.
 
 The pre-open run writes one plan for session D. It uses the ranked picks,
-the planned sells, and the excluded names, and no print from D. The
-post-close run writes the fill for that plan at D's open, plus close
-records, and does not edit the plan. A rerun of a sealed plan or fill does
-nothing. Missing bars, a calendar miss, and the other skips still append
-nothing. A missing or unreadable morning file does not skip the session:
-S stays null, holdup keeps min_hold 1, and the plan records the absence.
+the planned sells, and the excluded names, and no print from D. The seal
+is allowed only on D's own calendar date, from 08:00 ET until 09:30 ET.
+Earlier than that, including a late run that would target the next
+session, writes nothing. The post-close run writes the fill for that plan
+at D's open, plus close records, and does not edit the plan. A rerun of a
+sealed plan or fill does nothing. Missing bars, a calendar miss, and the
+other skips still append nothing. A missing or unreadable morning file
+does not skip the session: S stays null, holdup keeps min_hold 1, and the
+plan records the absence.
 
 HOLDUP_MODE=plan is the pre-open run. HOLDUP_MODE=open_fill is the 09:35 ET
 open-fill. HOLDUP_MODE=fill is the post-close run. FORWARD_BOOK selects
@@ -109,15 +112,52 @@ def _git(repo: Path, args: list[str]) -> subprocess.CompletedProcess:
     )
 
 
+def utc_now() -> datetime:
+    return datetime.now(timezone.utc)
+
+
 def session_open_utc(session: str) -> datetime:
     """09:30 America/New_York on ``session``, as UTC. EDT is 13:30 UTC; EST is 14:30 UTC."""
     local = datetime.fromisoformat(f"{session}T09:30:00").replace(tzinfo=ET)
     return local.astimezone(timezone.utc)
 
 
+def plan_too_early(session: str, now: datetime | None = None) -> str | None:
+    """Refuse a seal before 08:00 ET on ``session``.
+
+    A clock on an earlier calendar date is before that instant, so a run
+    after the previous close does not seal the next session. None means the
+    lower bound is met. The 09:30 ET upper bound stays in ``plan_clock``.
+    ``PLAN_ALLOW_EARLY=1`` skips this check for tests. No workflow sets it.
+    """
+    if os.environ.get("PLAN_ALLOW_EARLY", "").strip() == "1":
+        return None
+    now = now or utc_now()
+    if now.tzinfo is None:
+        now = now.replace(tzinfo=timezone.utc)
+    local = now.astimezone(ET)
+    start = datetime.fromisoformat(f"{session}T08:00:00").replace(tzinfo=ET)
+    if local < start:
+        shown = local.strftime("%Y-%m-%d %H:%M ET")
+        return (
+            f"too early to plan {session}: now {shown}; "
+            f"plan window is {session} 08:00-09:30 ET"
+        )
+    return None
+
+
+def _early_stop(session: str) -> bool:
+    """Print and stop when the plan window has not opened. Writes nothing."""
+    why = plan_too_early(session)
+    if not why:
+        return False
+    print(why, flush=True)
+    return True
+
+
 def plan_clock(session: str, now: datetime | None = None) -> str | None:
     """Refuse a plan at or after 09:30 ET. Earlier than that returns None."""
-    now = now or datetime.now(timezone.utc)
+    now = now or utc_now()
     if now.tzinfo is None:
         now = now.replace(tzinfo=timezone.utc)
     open_at = session_open_utc(session)
@@ -149,7 +189,7 @@ def seal_decision(plan: dict, now: datetime | None = None) -> dict:
     The check uses the session being sealed, on every day. A job that started
     for 2026-09-28 and is still running on 2026-09-29 is late for 2026-09-28.
     """
-    now = now or datetime.now(timezone.utc)
+    now = now or utc_now()
     if now.tzinfo is None:
         now = now.replace(tzinfo=timezone.utc)
     stamp = now.astimezone(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
@@ -604,7 +644,12 @@ def _status(session: str, pending: str | None, skip: str | None, phase: str) -> 
 
 
 def plan_main() -> int:
-    """Seal session D from inputs available before 13:30 UTC. No prices from D."""
+    """Seal session D from inputs available before 13:30 UTC. No prices from D.
+
+    America/New_York must be on D and at or after 08:00 ET, and still before
+    09:30 ET. Earlier than that exits 0 and writes nothing. At or after
+    09:30 ET the missing record is unchanged.
+    """
     try:
         records = load()
     except RuntimeError as exc:
@@ -623,6 +668,10 @@ def plan_main() -> int:
     if why or target is None:
         _fail(why or "no session")
         return 1
+    # Before any input is built. A late schedule that has already filled D,
+    # or a run before 08:00 ET on the target date, must not seal that date.
+    if _early_stop(target):
+        return 0
     print(f"plan {target}", flush=True)
     index = _index()
     if target not in index:
@@ -678,8 +727,11 @@ def plan_main() -> int:
         return 0
     # Re-read the clock here, after the inputs are built. A schedule that
     # started late, or a run that crossed 09:30 ET while working, does not
-    # commit the picks it just computed.
+    # commit the picks it just computed. A clock that is still before 08:00
+    # ET on the target date writes nothing, including no missing line.
     body = seal_decision(plan)
+    if _early_stop(target):
+        return 0
     if body["kind"] == "missing":
         append_records([body])
         written = load()
