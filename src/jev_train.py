@@ -41,20 +41,16 @@ from .jev_gate import (
     NEWS_DIR,
     POWERFUL,
     ROOT,
-    GateKnobs,
-    _LEVER_ACTOR,
-    _OPS,
-    _instrument_hit,
-    _lever_hit,
     _load_json,
-    _print_hit,
     _write_json,
     api_key,
-    is_earnings,
     normalize_title,
-    tape_hit,
     tokens,
 )
+try:
+    from .jev_gate import GateKnobs
+except ImportError:
+    GateKnobs = None
 
 PARSED_N = 40
 RSS_N = 40
@@ -109,6 +105,152 @@ _CHOKE_REASONS = frozenset({
     "code_choke", "chokepoint", "reprint_weather", "geo_chokepoint_no_hit",
 })
 _ACTOR_REASONS = frozenset({"state_head_action", "other_powerful"})
+
+# Bit detectors used when the live gate has not imported hop-0 code rules.
+# Same shapes as the eval gate so the homework columns stay stable.
+_POLICY_CTX = re.compile(
+    r"(?i)\b(?:fda|fomc|fed|cpi|pce|ppi|nfp|nbs|pboc|ecb|boj|bis|nhtsa|"
+    r"epa|carb|sec|ftc|doj|cafe|wasde|eia|ism|gdp|ustr|treasury|cms|opec)\b"
+)
+_EARNINGS = re.compile(
+    r"(?i)(?:"
+    r"\bearnings\b"
+    r"|\bprice[- ]targets?\b"
+    r"|\beps\b"
+    r"|\bprofit warning\b"
+    r"|\brevenue\b.{0,24}\b(?:beat|miss)"
+    r"|\b(?:beats?|miss(?:es|ed)?)\b.{0,30}\b(?:earnings|estimates|expectations)\b"
+    r"|\bguidance\b"
+    r"|\b(?:raise[sd]?|cuts?|hikes?|lowers?|lowered|boosts?|boosted|slash(?:ed|es)?)\s+pt\b"
+    r"|\bpt\s+(?:raise[sd]?|cuts?|hikes?|lowers?|lowered|boosts?|boosted|slash(?:ed|es)?)\b"
+    r")"
+)
+_SHARE_PCT = re.compile(
+    r"(?i)(?:"
+    r"\b(?:shares|stock)\b.{0,24}(?:\+\d+(?:\.\d+)?%|up \d+(?:\.\d+)?%)"
+    r"|(?:\+\d+(?:\.\d+)?%|up \d+(?:\.\d+)?%).{0,24}\b(?:shares|stock)\b"
+    r")"
+)
+_TAPE = re.compile(
+    r"(?i)(?:"
+    r"\bgold\b.{0,24}\b(?:falls?|drops?|plunges?|declines?|rises?|jumps?|fell|rose|slides?|slid)\b"
+    r"|\b(?:falls?|drops?|plunges?|rises?|jumps?|fell|rose)\b.{0,16}\bgold\b"
+    r"|\boil price today\b"
+    r"|\bbrent\b.{0,20}\b(?:rises?|falls?|jumps?|rose|fell)\b"
+    r"|\boil prices?\b.{0,24}\b(?:jump|jumps|jumped|rise|rises|rose|fall|falls|fell|climb|climbs|climbed|slide|slides|slid)\b"
+    r"|\boil\b.{0,12}\b(?:rises?|jumps?|climbs?|falls?|rose|fell)\b"
+    r"|\bstocks?\b.{0,40}\bhalt(?:s|ed)?\b"
+    r"|\bhalt (?:their|the) slide\b"
+    r"|\bstocks?\s+(?:jump|jumps|jumped|rally|rallies|rallied|fall|falls|fell)\s+as\b"
+    r")"
+)
+_INSTRUMENT = re.compile(
+    r"(?i)(?:"
+    r"\bexecutive orders?\b"
+    r"|\bfederal register\b"
+    r"|\bfinal rules?\b"
+    r"|\bcafe\b"
+    r"|\baccelerated approval\b"
+    r"|\bcomplete response letter\b"
+    r"|\bcrl\b"
+    r"|\badcomm\b"
+    r"|\bfda\b.{0,40}\b(?:approval|approves|approved|rejects|rejection)\b"
+    r"|\b(?:approval|approves|approved)\b.{0,40}\bfda\b"
+    r"|\b(?:sec|ftc|doj)\b.{0,50}\b(?:order|consent order|charges)\b"
+    r"|\b(?:consent order|charges)\b.{0,40}\b(?:sec|ftc|doj)\b"
+    r"|\bbis\b.{0,40}\b(?:export|entity)\b"
+    r"|\bcourt orders?\b"
+    r"|\bcourt rulings?\b"
+    r"|\binjunction\b"
+    r"|\btro\b"
+    r")"
+)
+_PRINT = re.compile(
+    r"(?i)(?:"
+    r"\b(?:cpi|pce|ppi|nfp)\b"
+    r"|\bnonfarm payrolls\b"
+    r"|\b(?:jobless|initial) claims\b"
+    r"|\bretail sales\b"
+    r"|\bgdp\b"
+    r"|\bwasde\b"
+    r"|\bindustrial profits\b"
+    r"|\bism\b"
+    r"|\beia\b"
+    r"|\bapi\b.{0,30}\b(?:crude|inventor(?:y|ies))\b"
+    r")"
+)
+_RATE = re.compile(
+    r"(?i)(?:"
+    r"\b(?:fomc|boj|ecb|pboc|federal reserve|fed)\b.{0,80}"
+    r"\b(?:holds?|hikes?|cuts?|pauses?|raises?|lowers?)\b.{0,40}"
+    r"\b(?:rates?|basis points?|bps|percent|%)\b"
+    r"|\b(?:fomc|boj|ecb|pboc|federal reserve|fed)\b.{0,60}\b(?:rate )?decision\b"
+    r"|\b(?:fomc|boj|ecb|pboc|federal reserve|fed)\b.{0,40}"
+    r"\d+(?:\.\d+)?\s*(?:%|percent|bps|basis points)\b"
+    r")"
+)
+_LEVER_ACTOR = re.compile(
+    r"(?i)\b(?:"
+    r"trump|biden|harris|powell|yellen|xi|lagarde|starmer|ishiba|modi|"
+    r"potus|president|white house|cabinet|fed official|federal reserve|"
+    r"fomc|warsh|pboc|ecb|boj|treasury|ustr|"
+    r"commerce secretary|energy secretary|defense secretary|"
+    r"secretary of commerce|secretary of energy|secretary of defense|"
+    r"secretary of the treasury|secretary of state"
+    r")\b"
+)
+_LEVER_VERB = re.compile(
+    r"(?i)\b(?:"
+    r"bans?|banned|tariffs?|sanctions?|quota|exports?|dut(?:y|ies)|"
+    r"ceasefire|hikes?|cuts?|pauses?|emergency|executive orders?|eo|rules?"
+    r")\b"
+)
+_OPS = re.compile(
+    r"(?i)(?:"
+    r"\b(?:plant|factory|refinery|pipeline|rig|mine)\b.{0,40}"
+    r"\b(?:explosion|fire|blast|explodes|exploded|outage)\b"
+    r"|\b(?:explosion|blast|explodes|exploded)\b.{0,40}"
+    r"\b(?:plant|factory|refinery|pipeline|rig|mine|terminal|port)\b"
+    r"|\bfaa\b.{0,40}\b(?:ground|grounds|grounding|grounded)\b"
+    r"|\b(?:port|rail) strike\b"
+    r"|\b(?:trading|exchange) halt\b"
+    r"|\bransomware\b"
+    r"|\bcyber ?attacks?\b"
+    r"|\bcyber\b.{0,20}\b(?:breach|hack)\b"
+    r"|\bzero[- ]day\b"
+    r"|\bmine outage\b"
+    r"|\bopec\b"
+    r")"
+)
+
+
+def is_earnings(title: str) -> bool:
+    title = title or ""
+    if _SHARE_PCT.search(title) and not _POLICY_CTX.search(title):
+        return True
+    match = _EARNINGS.search(title)
+    if not match:
+        return False
+    hit = match.group(0).lower()
+    if "guidance" in hit and "earnings" not in title.lower() and _POLICY_CTX.search(title):
+        return False
+    return True
+
+
+def tape_hit(title: str) -> bool:
+    return bool(_TAPE.search(title or ""))
+
+
+def _instrument_hit(title: str) -> bool:
+    return bool(_INSTRUMENT.search(title or ""))
+
+
+def _print_hit(title: str) -> bool:
+    return bool(_PRINT.search(title or "") or _RATE.search(title or ""))
+
+
+def _lever_hit(title: str) -> bool:
+    return bool(_LEVER_ACTOR.search(title or "") and _LEVER_VERB.search(title or ""))
 
 
 def train_dir(ground: Path | None = None) -> Path:
@@ -451,10 +593,12 @@ def _decision_view(row: dict) -> dict:
 
 def annotate_gate(rows: list[dict], *, live: bool, key: str, workers: int,
                   poster, asof: dt.date) -> tuple[list[dict], str]:
-    decided, model = _score_sample(
-        rows, knobs=GateKnobs(), live=live, key=key, workers=workers,
-        poster=poster, asof=asof,
-    )
+    score_kwargs = {
+        "live": live, "key": key, "workers": workers, "poster": poster, "asof": asof,
+    }
+    if GateKnobs is not None:
+        score_kwargs["knobs"] = GateKnobs()
+    decided, model = _score_sample(rows, **score_kwargs)
     items = []
     for index, row in enumerate(rows, start=1):
         dec = decided.get(normalize_title(row.get("title") or ""))
