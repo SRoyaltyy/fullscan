@@ -1,6 +1,6 @@
 {
   "date": "2026-09-29",
-  "generated_at": "2026-09-29T05:12:56.691256-04:00",
+  "generated_at": "2026-09-29T05:17:44.269709-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -8,8 +8,8 @@
   ],
   "counts": {
     "ok": 3,
-    "partial": 4,
-    "fail": 1,
+    "partial": 3,
+    "fail": 2,
     "n": 8
   },
   "processes": [
@@ -313,7 +313,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 35037,
+          "size": 35095,
           "said": "45 ticker actions \u00b7 3 events \u00b7 400 headlines \u00b7 COP BUY, EOG BUY, RRC BUY, SM BUY, HPK BUY, REPX BUY, OXY BUY, FANG BUY",
           "bullets": [
             "BUY COP",
@@ -560,18 +560,18 @@
           "path": "01_daily/weather/2026-09-29_weather.json",
           "role": "required",
           "status": "OK",
-          "reason": "sectors=11 bytes=9689 vix=falling yields=flat",
-          "size": 9689,
-          "said": "hostile 8 \u00b7 neutral 3",
+          "reason": "sectors=11 bytes=9686 vix=falling yields=flat",
+          "size": 9686,
+          "said": "hostile 6 \u00b7 neutral 5",
           "bullets": [
-            "hostile: Basic Materials, Communication Services, Energy, Healthcare, Industrials, Real Estate, Technology, Utilities",
+            "hostile: Basic Materials, Communication Services, Energy, Healthcare, Real Estate, Utilities",
             "events bull 4 / bear 1"
           ]
         }
       ],
-      "said": "hostile 8 \u00b7 neutral 3",
+      "said": "hostile 6 \u00b7 neutral 5",
       "bullets": [
-        "hostile: Basic Materials, Communication Services, Energy, Healthcare, Industrials, Real Estate, Technology, Utilities",
+        "hostile: Basic Materials, Communication Services, Energy, Healthcare, Real Estate, Utilities",
         "events bull 4 / bear 1"
       ]
     },
@@ -616,7 +616,7 @@
       "key": "catalyst",
       "name": "Catalyst dossiers",
       "yaml": "catalyst_daily.yml",
-      "status": "PARTIAL",
+      "status": "FAIL",
       "inputs_ready": true,
       "n_req_ok": 0,
       "n_req": 0,
@@ -630,7 +630,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 35037,
+          "size": 35095,
           "said": "45 ticker actions \u00b7 3 events \u00b7 400 headlines \u00b7 COP BUY, EOG BUY, RRC BUY, SM BUY, HPK BUY, REPX BUY, OXY BUY, FANG BUY",
           "bullets": [
             "BUY COP",
@@ -659,11 +659,16 @@
           "name": "Catalyst dossiers JSON",
           "path": "01_daily/catalyst/2026-09-29_dossiers.json",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "FAIL",
+          "reason": "zero usable dossiers (n=8)",
+          "size": 2847,
+          "said": "zero usable dossiers (n=8) \u00b7 0/8 usable \u00b7 Grok \u2192 DeepSeek \u00b7 NE, RIG, SLB, BKR, KGS, SSRM, NEM, SM",
+          "bullets": [
+            "NE: OpenClaw and DeepSeek both returned empty for CATALYST STEP1 NE",
+            "RIG: OpenClaw and DeepSeek both returned empty for CATALYST STEP1 RIG",
+            "SLB: OpenClaw and DeepSeek both returned empty for CATALYST STEP1 SLB",
+            "BKR: OpenClaw and DeepSeek both returned empty for CATALYST STEP1 BKR"
+          ]
         }
       ],
       "said": "45 ticker actions \u00b7 3 events \u00b7 400 headlines \u00b7 COP BUY, EOG BUY, RRC BUY, SM BUY, HPK BUY, REPX BUY, OXY BUY, FANG BUY",
@@ -728,7 +733,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 35037,
+          "size": 35095,
           "said": "45 ticker actions \u00b7 3 events \u00b7 400 headlines \u00b7 COP BUY, EOG BUY, RRC BUY, SM BUY, HPK BUY, REPX BUY, OXY BUY, FANG BUY",
           "bullets": [
             "BUY COP",
@@ -773,11 +778,11 @@
           "path": "01_daily/weather/2026-09-29_weather.json",
           "role": "input",
           "status": "OK",
-          "reason": "sectors=11 bytes=9689 vix=falling yields=flat",
-          "size": 9689,
-          "said": "hostile 8 \u00b7 neutral 3",
+          "reason": "sectors=11 bytes=9686 vix=falling yields=flat",
+          "size": 9686,
+          "said": "hostile 6 \u00b7 neutral 5",
           "bullets": [
-            "hostile: Basic Materials, Communication Services, Energy, Healthcare, Industrials, Real Estate, Technology, Utilities",
+            "hostile: Basic Materials, Communication Services, Energy, Healthcare, Real Estate, Utilities",
             "events bull 4 / bear 1"
           ]
         },
@@ -989,9 +994,9 @@
       ]
     },
     "weather": {
-      "said": "hostile 8 \u00b7 neutral 3",
+      "said": "hostile 6 \u00b7 neutral 5",
       "bullets": [
-        "hostile: Basic Materials, Communication Services, Energy, Healthcare, Industrials, Real Estate, Technology, Utilities",
+        "hostile: Basic Materials, Communication Services, Energy, Healthcare, Real Estate, Utilities",
         "events bull 4 / bear 1"
       ]
     }
@@ -1566,6 +1571,31 @@
         }
       ],
       "preview": "11681 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC \u00b7 11681 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+    },
+    {
+      "key": "catalyst",
+      "title": "Catalyst dossiers (after book)",
+      "date": "2026-09-29",
+      "ok": false,
+      "pushed": true,
+      "at": "2026-09-29T05:17:43.563639-04:00",
+      "files": [
+        {
+          "path": "01_daily/catalyst/2026-09-29_dossiers.json",
+          "ok": false,
+          "reason": "catalyst_fail n_ok=0/8",
+          "size": 1275,
+          "preview": "keys: date, generated_at, max_n, routing, grok, deepseek_fallback, gemini, n_targets, n_ok, status, targets, dossiers"
+        },
+        {
+          "path": "01_daily/catalyst/2026-09-29_dossiers.md",
+          "ok": false,
+          "reason": "catalyst_fail n_ok=0/8",
+          "size": 1275,
+          "preview": "# CATALYST DAILY \u2014 2026-09-29\n0/8 dossiers \u00b7 max=8 \u00b7 routing=Grok \u2192 DeepSeek"
+        }
+      ],
+      "preview": "keys: date, generated_at, max_n, routing, grok, deepseek_fallback, gemini, n_targets, n_ok, status, targets, dossiers \u00b7 # CATALYST DAILY \u2014 2026-09-29\n0/8 dossiers \u00b7 max=8 \u00b7 routing=Grok \u2192 DeepSeek"
     }
   ],
   "href": {
