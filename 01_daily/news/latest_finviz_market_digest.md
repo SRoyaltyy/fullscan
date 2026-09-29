@@ -1,46 +1,43 @@
-# Finviz homepage market digest — 2026-09-28
+# Finviz homepage market digest — 2026-09-29
 
-**Generated:** 2026-09-28T04:24:34.262802-04:00 (America/New_York)
+**Generated:** 2026-09-29T04:14:54.007235-04:00 (America/New_York)
 **Source:** `live`
-**Banner:** US equity futures point to a lower open as oil approaches $106–107 and rising yields reinforce higher‑for‑longer rate expectations ahead of Dallas Fed data
+**Banner:** US stocks set for flat open as Treasury yields climb ahead of home price and confidence data in a quiet catalyst backdrop
 **Prior close:** SPX —  Nasdaq —  Dow —
 **SPX:** —  **Nasdaq:** —  **Dow:** —
-**Oil:** Brent crude $106.0
+**Oil:** —
 **CPI/Fed:** —
-**Leaders:** GNS, NTWK
-**Next session:** housing no · retail no · Fed yes
-**Earnings slate:** —
-**Geo/grain:** geo
-**Clock legal for:** 2026-09-28
+**Leaders:** KMX, CCL, UEC, TRI, CMCSA, NWSA, GOOGL
+**Next session:** housing no · retail no · Fed no
+**Earnings slate:** KMX, CCL
+**Geo/grain:** —
+**Clock legal for:** 2026-09-29
 **Clock use:** `same_morning`
 
 ## Clock
 
-Capture is **before 09:30 ET on this date**, so it is legal for that morning's Pre-Open (`clock_legal_for` = 2026-09-28).
+Capture is **before 09:30 ET on this date**, so it is legal for that morning's Pre-Open (`clock_legal_for` = 2026-09-29).
 
 Homepage `$MARKET` prose — **not** `YYYY-MM-DD_finviz_digest.md` (quote-page headlines + ticker blurbs). Capture only. Not wired into tape_anchor / predict / #210.
 
 ## Theme Radar
 
 - **Prior close:** SPX — · Nasdaq — · Dow —
-- **Oil:** Brent crude $106.0
+- **Oil:** —
 - **CPI / Fed-odds:** —
-- **Named leaders:** GNS, NTWK
-- **Next-session calendar:** housing no · retail no · Fed yes
-  - The Dallas Fed Manufacturing Business Index is scheduled for release at 10:30 AM ET and is the main item on today’s US economic calendar
-  - Investors remain focused on how elevated oil prices may feed inflation and support expectations for higher‑for‑longer Federal Reserve policy rates
-- **Earnings slate:** —
-- **Geo / grain:** geo
+- **Named leaders:** KMX, CCL, UEC, TRI, CMCSA, NWSA, GOOGL
+- **Next-session calendar:** housing no · retail no · Fed no
+- **Earnings slate:** KMX, CCL
+- **Geo / grain:** —
 
 ## Narrative
 
-**US equity futures point to a lower open as oil approaches $106–107 and rising yields reinforce higher‑for‑longer rate expectations ahead of Dallas Fed data**
+**US stocks set for flat open as Treasury yields climb ahead of home price and confidence data in a quiet catalyst backdrop**
 
-- S&P 500 Futures (@ES) are down 0.40%, Dow Jones Futures (@YM) decline 0.30%, Nasdaq 100 Futures (@NQ) fall 0.87%, and Russell 2000 Futures (@ER2) slip 0.49% in early trading
-- South Korea’s Kospi drops over 2% while Japan’s Nikkei (@NKD) is little changed after the Asian overnight session
-- Brent crude (@QA) trades toward $106–107 per barrel as reduced prospects for a swift US‑Iran truce add geopolitical pressure to oil markets
-- European equity futures edge modestly higher despite weaker sentiment in Asia and higher crude prices
-- No major US pre‑market stock movers with confirmed catalysts are cited in authoritative coverage after 4 AM ET
-- Overnight earnings activity is limited, with smaller names such as GNS (GNS) and NTWK (NTWK) reporting before the bell and few details versus estimates available
-- The Dallas Fed Manufacturing Business Index is scheduled for release at 10:30 AM ET and is the main item on today’s US economic calendar
-- Investors remain focused on how elevated oil prices may feed inflation and support expectations for higher‑for‑longer Federal Reserve policy rates
+- S&P 500 futures (@ES) are down 0.03%, Dow Jones futures (@YM) are down 0.10%, Nasdaq 100 futures (@NQ) are up 0.07%, and Russell 2000 futures (@ER2) are down 0.12%
+- Bond yields moved higher as of 4:04 AM ET, raising concerns about how much additional pressure tech stocks can absorb
+- CarMax (KMX) is scheduled to report earnings before the bell, offering potential early trading setups in KMX
+- Carnival (CCL) reports earnings before the bell, putting CCL in focus for pre-market reaction
+- Uranium Energy (UEC) has results scheduled, setting up possible early moves in UEC
+- The S&P/Case-Shiller Home Price Index is due at 9:00 AM ET and Consumer Confidence data at 10:00 AM ET, both seen as potential intraday volatility drivers
+- Overnight trading showed mixed Asian equity performance alongside rising oil prices, with no major pre-market single-stock movers flagged by Reuters (TRI), CNBC (CMCSA), MarketWatch (NWSA), Bloomberg or Yahoo Finance (GOOGL) after 4 AM ET
