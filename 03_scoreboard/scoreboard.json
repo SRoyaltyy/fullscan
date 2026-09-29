@@ -23322,6 +23322,18 @@
           "predicted_direction": "down",
           "predicted_magnitude_band": "mild",
           "confidence": 0.55
+        },
+        "HORIZON_2W": {
+          "label": "2w",
+          "target_date": "2026-09-29",
+          "actual_pct": 1.12,
+          "actual_direction": "up",
+          "actual_magnitude_band": "mild",
+          "direction_hit": false,
+          "magnitude_hit": true,
+          "predicted_direction": "flat",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.45
         }
       },
       "lesson_schema_ok": true
@@ -26542,6 +26554,18 @@
           "predicted_direction": "flat",
           "predicted_magnitude_band": "mild",
           "confidence": 0.52
+        },
+        "HORIZON_1W": {
+          "label": "1w",
+          "target_date": "2026-09-29",
+          "actual_pct": -1.21,
+          "actual_direction": "down",
+          "actual_magnitude_band": "mild",
+          "direction_hit": false,
+          "magnitude_hit": true,
+          "predicted_direction": "flat",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.48
         }
       },
       "lesson_schema_ok": true
@@ -27754,7 +27778,20 @@
       "knowable_at_9am": "partially",
       "attribution_contested": "yes",
       "outlier_watch": "Dow refused the V (-0.31% choppy); China sold the summit, US did not; NDX green at 5.12% 10Y; Oracle/AI-infra sold while Meta recovered",
-      "horizon_grades": {},
+      "horizon_grades": {
+        "HORIZON_3D": {
+          "label": "3d",
+          "target_date": "2026-09-29",
+          "actual_pct": -0.43,
+          "actual_direction": "down",
+          "actual_magnitude_band": "flat",
+          "direction_hit": true,
+          "magnitude_hit": false,
+          "predicted_direction": "down",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.5
+        }
+      },
       "lesson_schema_ok": true
     },
     {
@@ -29226,7 +29263,7 @@
           "status": "miss"
         }
       ],
-      "reflection_lesson_ref": null,
+      "reflection_lesson_ref": "02_lessons/candidate/2026-09-29_lesson.md",
       "sources_used": [
         {
           "url": "https://www.morningstar.com/news/dow-jones/202609295962/us-30-year-treasury-yield-sets-new-24-year-high",
@@ -29313,7 +29350,9 @@
       "key_interaction": "Offsetting/masking — Brent -8.9% (equity-positive inflation relief) roughly cancelled the 30Y 24-year-high yield spike (equity-negative), producing a placid -0.17% close that masked a violent tug-of-war",
       "knowable_at_9am": "yes — the dominant rates-vs-oil offsetting pair was fully visible in the premarket Channel 1 tape (BZ=F -8.66%, 1w DGS30 +15bp); the 10:00 ET data prints were unknowable but non-decisive",
       "attribution_contested": "yes — Bloomberg/CNBC lead with oil, Yahoo with yields, TheStreet with consumer confidence, Reuters with tech",
-      "outlier_watch": "NDX (-0.09%) outperformed Dow (-0.26%) despite the \"tech selloff\" headline; and Channel 1 showed gold +0.90%/silver +1.96% while news outlets reported \"gold fell again / two-month low\""
+      "outlier_watch": "NDX (-0.09%) outperformed Dow (-0.26%) despite the \"tech selloff\" headline; and Channel 1 showed gold +0.90%/silver +1.96% while news outlets reported \"gold fell again / two-month low\"",
+      "horizon_grades": {},
+      "lesson_schema_ok": true
     }
   ]
 }
