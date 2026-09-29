@@ -934,6 +934,7 @@ def test_workflow_wires_secret_and_stays_stdlib():
     assert "secrets.JEV_API_KEY" in yml
     assert "src.jev_gate" in yml
     assert "src.test_jev_gate" in yml
+    assert "src.test_jev_classify" in yml
     assert "src.factor_mine" not in yml
     assert "src.flatten" not in yml
     # no unindented print-in-pipe footgun

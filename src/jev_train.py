@@ -10,7 +10,8 @@ Draw, per run, after gold titles and any title hash already stored under
        titles remain; otherwise the next slice of the rotating
        hard-misses file (00_grounding/jev_hard_misses.json)
 
-The current hop-0 gate (code bits + Jev) scores every title. This module
+The current hop-0 gate (code bits + Jev) scores every title. Hop-1
+stamps event_class|q5 on keeps. This module
 does not write keep.json, does not call Lane, and does not edit
 jev_closed_lists.json or an existing holdout file.
 """
@@ -620,6 +621,11 @@ def annotate_gate(rows: list[dict], *, live: bool, key: str, workers: int,
     if GateKnobs is not None:
         score_kwargs["knobs"] = GateKnobs()
     decided, model = _score_sample(rows, **score_kwargs)
+    if live:
+        from .jev_classify import apply_jev_classify
+        apply_jev_classify(
+            list(decided.values()), key=key, workers=workers, poster=poster,
+        )
     items = []
     for index, row in enumerate(rows, start=1):
         dec = decided.get(normalize_title(row.get("title") or ""))
@@ -642,6 +648,12 @@ def annotate_gate(rows: list[dict], *, live: bool, key: str, workers: int,
             "actor_power": dec.get("actor_power") or "",
             "new_instrument": dec.get("new_instrument") or 0,
             "bits": why_bits(row.get("title") or "", dec),
+            "event_class": dec.get("event_class") or "",
+            "q5": dec.get("q5") or "",
+            "sign": dec.get("sign"),
+            "family": dec.get("family") or "",
+            "class_reason": dec.get("class_reason") or "",
+            "class_source": dec.get("class_source") or "",
         }
         items.append(item)
     return items, model
@@ -773,7 +785,7 @@ def run_draw(
         "seed": seed,
         "model": model,
         "exam_source": sample["exam_source"],
-        "gate": "hop0-code-bits+jev" if live else "hop0-code-bits",
+        "gate": "hop0+hop1-jev" if live else "hop0+hop1-code",
         "sample": {
             "parsed": len(sample["parsed"]),
             "rss": len(sample["rss"]),
@@ -988,6 +1000,12 @@ def hydrate_grades(payload: dict, draw: dict | None) -> dict:
             "geo": str(src.get("geo") or row.get("geo") or "")[:32],
             "actor_power": str(src.get("actor_power") or row.get("actor_power") or "")[:32],
             "new_instrument": instrument,
+            "event_class": str(src.get("event_class") or row.get("event_class") or "")[:40],
+            "q5": str(src.get("q5") or row.get("q5") or "")[:16],
+            "sign": src.get("sign") if src.get("sign") is not None else row.get("sign"),
+            "family": str(src.get("family") or row.get("family") or "")[:16],
+            "class_reason": str(src.get("class_reason") or row.get("class_reason") or "")[:80],
+            "class_source": str(src.get("class_source") or row.get("class_source") or "")[:16],
         })
     out = dict(payload)
     out["rows"] = filled
@@ -1312,6 +1330,11 @@ def write_grade(
                 "actor_power": row.get("actor_power") or "",
                 "new_instrument": row.get("new_instrument") or 0,
                 "bits": row.get("bits") or [],
+                "event_class": row.get("event_class") or "",
+                "q5": row.get("q5") or "",
+                "sign": row.get("sign"),
+                "family": row.get("family") or "",
+                "class_reason": row.get("class_reason") or "",
                 "grade": row.get("grade"),
                 "human_reason": row.get("human_reason") or "",
             }

@@ -42,6 +42,11 @@
         actor_power: row.actor_power || "",
         new_instrument: row.new_instrument || 0,
         bits: row.bits || [],
+        event_class: row.event_class || "",
+        q5: row.q5 || "",
+        sign: row.sign || null,
+        family: row.family || "",
+        class_reason: row.class_reason || "",
         grade: mark.grade || "?",
         human_reason: String(mark.human_reason || mark.note || "").slice(0, 500)
       };
@@ -187,7 +192,9 @@
         jev.textContent = row.jev || "";
         var bits = document.createElement("td");
         bits.className = "bits";
-        bits.textContent = (row.bits || []).join(" ");
+        var classReason = row.class_reason || "";
+        var bitText = (row.bits || []).join(" ");
+        bits.textContent = classReason ? (classReason + (bitText ? " · " + bitText : "")) : bitText;
         var youTd = document.createElement("td");
         var you = document.createElement("div");
         you.className = "you";
