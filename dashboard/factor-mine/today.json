@@ -1,6 +1,6 @@
 {
   "date": "2026-09-29",
-  "generated_at": "2026-09-29T12:37:31.868339-04:00",
+  "generated_at": "2026-09-29T12:42:52.656013-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -134,10 +134,10 @@
     }
   ],
   "flatten": {
-    "said": "0 priced buys \u00b7 cash $102,271.92",
+    "said": "0 priced buys \u00b7 cash $101,681.15",
     "bullets": [
       "0 priced buys",
-      "cash $102,271.92"
+      "cash $101,681.15"
     ]
   },
   "general": {
