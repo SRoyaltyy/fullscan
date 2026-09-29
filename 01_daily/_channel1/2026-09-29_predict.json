@@ -1,6 +1,6 @@
 {
   "stage": "predict",
-  "fetched_at": "2026-09-29T12:18:30.763974-04:00",
+  "fetched_at": "2026-09-29T12:32:21.904862-04:00",
   "fred": {
     "DGS30": {
       "available": true,
@@ -70,45 +70,45 @@
   "vix": {
     "vix": {
       "date": "2026-09-29",
-      "current": 16.37,
-      "delta_1d": 0.3,
-      "delta_1w": 2.16
+      "current": 16.25,
+      "delta_1d": 0.18,
+      "delta_1w": 2.04
     },
     "vix3m": {
       "date": "2026-09-29",
-      "current": 18.22,
+      "current": 18.15,
       "source": "^VIX3M"
     },
-    "ratio": 0.898,
+    "ratio": 0.895,
     "ratio_source": "vix/vix3m",
-    "vix_ma20": 15.74,
-    "ratio_ma20": 1.04
+    "vix_ma20": 15.73,
+    "ratio_ma20": 1.033
   },
   "commodities_fx": {
     "CL=F": {
       "available": true,
       "date": "2026-09-29",
-      "last": 90.7,
-      "pct_1d": -2.05
+      "last": 90.4,
+      "pct_1d": -2.38
     },
     "BZ=F": {
       "available": true,
       "date": "2026-09-29",
-      "last": 96.78,
-      "pct_1d": -8.07
+      "last": 96.82,
+      "pct_1d": -8.04
     },
     "GC=F": {
       "available": true,
       "date": "2026-09-29",
-      "last": 4183.2,
-      "pct_1d": 0.36
+      "last": 4181.7,
+      "pct_1d": 0.32
     },
     "DXY": {
       "available": true,
       "date": "2026-09-29",
       "source": "DX-Y.NYB",
-      "pct_1d": 0.27,
-      "pct_1m": 1.78
+      "pct_1d": 0.3,
+      "pct_1m": 1.81
     }
   },
   "futures": {
@@ -121,8 +121,8 @@
     "NQ=F": {
       "available": true,
       "date": "2026-09-29",
-      "last": 30576.25,
-      "pct_1d": 0.03
+      "last": 30566.0,
+      "pct_1d": -0.0
     }
   },
   "finviz_futures_tape": {
@@ -626,7 +626,7 @@
   },
   "yield_spx_corr": {
     "available": true,
-    "corr_5d": -0.692,
+    "corr_5d": -0.695,
     "window": "2026-09-22..2026-09-29"
   },
   "fear_greed": {
