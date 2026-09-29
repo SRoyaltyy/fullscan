@@ -532,6 +532,21 @@ def test_session_409_false_drops_are_keeps():
         assert decided["decision"] == "drop", (title, decided)
 
 
+def test_questions_encode_session_409_criteria():
+    """Jev, not only code-keep, must be told which 409 facts are keep vs tape."""
+    opinion = QUESTIONS["is_opinion"]["criteria"]
+    material = QUESTIONS["action_material"]["instructions"]
+    instrument = QUESTIONS["new_instrument"]["instructions"]
+    assert "housing or credit freeze" in opinion["false"]
+    assert "Social Security policy" in opinion["false"]
+    assert "Forecast / odds / live tape" in opinion["true"]
+    assert "could still gain" in opinion["true"]
+    assert "mulls" in material.lower()
+    assert "forecast" in material.lower()
+    assert "named policy instrument" in instrument
+    assert "forecast" in instrument.lower()
+
+
 def test_session_409_forecast_tape_is_not_classifiable():
     """Code-keep must not swallow forecast/odds/tape that name-drop a print."""
     trash = [
@@ -596,6 +611,7 @@ def main() -> None:
         test_mine_junk_shapes_runs,
         test_api_key_not_in_repo_and_env,
         test_session_409_false_drops_are_keeps,
+        test_questions_encode_session_409_criteria,
         test_session_409_forecast_tape_is_not_classifiable,
         test_workflow_wires_secret_and_stays_stdlib,
     ]

@@ -15,11 +15,12 @@ Thresholds stay put unless the pending block names one:
 `CROWD_DROP=0.50`.
 
 <!-- PENDING_BEGIN -->
-## Pending one change (session `20260929_1223` replay)
+## Pending one change (awaiting next Submit)
 
-- question: `code:classifiable` (safety net, not a Jev knob)
-- kind: `criteria`
-- change: Replay of the 409 sheet on the live gate kept all 22 human K, but also kept 7 human D forecast/odds/tape titles (Warsh inflation column, Fed-hike odds, gold/platinum forecast + PCE, HK IPO revival, retail-sales live coverage). Tighten code-keep: drop bare `pce`/`cpi`/`retail sales`/`rate hike` and bare `ipo`; Fed voice is `warns` / `holds rates` only. Named `targets … IPO` and EIA / Fed hold / rig count still keep. Opinion veto uses Jev's own material/instrument, not a closed-list agency boost, so the Treasury/Bitcoin column drops. Leave closed lists alone. Next Jev knob waits for a new Submit.
+- question: `(none)`
+- kind: `none`
+- misses on that question: 0
+- change: Session `20260929_1223` is already landed — QUESTIONS rewrite, `fact_keep` so opinion/reaction cannot hide a first-class fact, and a tightened classifiable safety net so forecast/odds/tape that only name-drop PCE/IPO/rate-hike stay drop. The next one Jev-analysis change waits for a new jev-train issue. Do not invent a grade. Do not edit closed lists.
 - do not edit `jev_closed_lists.json`
 <!-- PENDING_END -->
 
@@ -41,7 +42,7 @@ After every jev-train issue:
 `?` is not a miss. Blank `human_reason` on a disagreement is flagged
 on the issue but still allowed.
 
-## Current QUESTIONS (after session 409)
+## Current QUESTIONS (after session 409 + replay)
 
 ### is_opinion
 
@@ -49,11 +50,16 @@ True only if the title is commentary / column / recap **and** has no
 first-class fact. False if the title contains Fed / EIA / House /
 CFTC / FDA action, a named IPO or M&A, pathogen + consumers/recalls,
 a Fed officer + inflation or oil, peace accept/reject, a dated print
-or hold, or a court dismiss of a listed name — even inside a listicle
-or "what it means" frame.
+or hold, a court dismiss of a listed name, a housing or credit freeze
+that if true changes a listed sector prior, EV / tariff / Social
+Security policy, or CDS affecting a listed sector — even inside a
+listicle or "what it means" frame.
 
 Must stay true: "best move if the market crashes", celebrity, theme
-park, gold-tumbles tape, earnings-look-right.
+park, gold-tumbles tape, earnings-look-right, forecast / odds / live
+tape that only name-drops PCE, IPO, or a rate-hike, and
+investor-rebuke or "could still gain" columns with no warn / hold /
+print (Warsh rebuked; Treasury/Bitcoin leftover).
 
 ### is_tabloid
 
@@ -96,20 +102,25 @@ FX factor this week.
 Yes: weekly EIA / storage / rig count, Fed hold, House CR, named M&A,
 regulator exploring rules, major-AI product or IPO, court dismiss of
 a listed name, pathogen scare that can trigger FDA / recalls, EV /
-tariff / Social Security policy, sitting-US-president arrest, final
+tariff / Social Security policy, "mulls" a named EV / tariff /
+Social Security instrument, housing or credit freeze that if true
+changes a listed sector prior, sitting-US-president arrest, final
 CAFE.
 
 No: protester arrest, local rally, celebrity, theme park, "best move
-if crash", gold-tumbles tape, earnings-look-right.
+if crash", gold-tumbles tape, earnings-look-right, forecast / odds /
+live tape that only name-drops a print.
 
 ### new_instrument
 
 Yes: signed rule, print, halt, filing, seizure, dated official
 decision, weekly official figure, rate hold / hike / cut, CR through
 a date, regulator exploring or endorsing a rule, advisory-panel
-endorse, named dollar deal, court dismiss.
+endorse, named dollar deal, court dismiss, "mulls" a named policy
+instrument (EV, tariff, Social Security, CAFE).
 
-No: speech, protest, rumor, "mulls" without a named instrument.
+No: speech, protest, rumor, "mulls" with no named instrument,
+forecast / odds / live tape.
 
 ### reprint_weather
 
@@ -130,6 +141,8 @@ Human DROP — leave these trash:
 - Messi / theme park / footballer drowning / Ugandan king
 - gold-tumbles tape, "best move if crash", earnings look-right
 - Seeking Alpha / Motley Fool / tip-sheet / theme-park / personality-hire
+- Warsh inflation column, Fed-hike odds, gold/platinum forecast + PCE
+- HK IPO revival, retail-sales live tape, Treasury/Bitcoin leftover
 
 ## Session 409 → question map
 
@@ -162,6 +175,45 @@ False keep: 0. Do not loosen so the trash anchors become keeps.
 
 `decide()` this round (one knob): if `action_material >= 0.65` or
 `new_instrument >= 0.60`, do not drop for `opinion` or `reaction`.
-Threshold numbers stay. Code punct/source stay on the code path.
+Use Jev's own material/instrument, not a closed-list agency boost.
+Threshold numbers stay. Code punct/source stay on the code path;
+classifiable keep is a safety net, not the long-term fix.
 
 <!-- SESSIONS_BEGIN -->
+
+## Session `20260929_1223`
+
+Draw `20260929_1120`. Human keep 25, drop 75. Jev keep 3, drop 97. False keep 0, false drop 22.
+
+| You | reason | question | human_reason | title |
+|---|---|---|---|---|
+| KEEP | opinion | is_opinion | Health scare--could trigger recalls, FDA, policies etc | Cyclospora fears lead consumers to lose their appetite for salads - CNBC |
+| KEEP | opinion | is_opinion | Major upcoming IPO of a geopolitically significant AI company | Anthropic Targets $2 Trillion Record IPO: 8 Key Items Shaping the Stock Market Thursday - TheStreet Pro |
+| KEEP | low_material | action_material | Product launch from major AI company---worth a watch | OpenAI Introduces ‘ChatGPT for Teens’ as Safety Concerns Grow - The New York Times |
+| KEEP | low_material | action_material | CFTC part worth looking into--gov department policy | Bitcoin Rally Tops $79K. Crypto Shorts, ETF Flows Soar. CFTC Explores Crypto Rules. - Investor's Business Daily |
+| KEEP | low_material | action_material | potential merger/acquisition | Vanguard pays $4.6B for RIA software startup Altruist - Axios |
+| KEEP | low_material | action_material | Basin rig count steady--could serve as useful context for oil prices | Basin rig count steady as prices drop |
+| KEEP | low_material | action_material | US Fed action | US Federal Reserve holds rates steady as inflation hawks call for hike - CNA |
+| KEEP | low_material | action_material | House of representatives action--affects policy | House clears FY2027 CR through Dec. 11, shutdown risk off |
+| KEEP | low_material | action_material | Merger involving US company | Canadian National Railway outlines conditions to U.S. regulators for proposed Union Pacific–Norfolk Southern merger |
+| KEEP | low_material | action_material | Oil and petrol information | EIA weekly petroleum and natural gas storage — crude -0.4mb, gas +40 Bcf to 3,254 Bcf |
+| KEEP | geo_other | geo | Useful oil price context | Azeri Light oil price decreases by 1.96% on world market - Report.az |
+| KEEP | opinion | is_opinion | Fed officer warning--worth useing as context | Fed’s Lisa Cook Warns AI Won’t Save The Economy From Near-Term Inflation - TradingView |
+| KEEP | reprint_weather | reprint_weather | Although Hormuz is background weather at this point, explicit acceptance/rejection of peace deals do move oil, market fear and volatility in the short term | Oil Surges Over 3% as Trump Rejects Iran Peace Proposal and Hormuz Risk Returns - EnergyNow.com |
+| KEEP | opinion | is_opinion | Fed officer opinion--use as context | Fed's Cook Warns AI Demand and Oil Prices to Keep Inflation Elevated - IndexBox |
+| KEEP | crowd | actor_power | Japanese Yen is a factor in US markets and should not be skipped | Tokyo yen trades in lower 157 range against dollar as U.S. rate hike bets fuel yen selling - finance.biggo.com |
+| KEEP | source | code:source | US China Tariffs | 3 Export Stocks Linked To Lower US China Tariffs - simplywall.st |
+| KEEP | punct | code:punct | Trump-linked government policy on Social Security--could massively affect consumer spending, sentiment, market mood etc | No tax on Social Security? The facts about Trump’s plan are here — and they could hurt US retirees the most |
+| KEEP | geo_other | geo | Company acquisition/merger | Seafood groups Nordian Group, Norvelita sold to PE firm |
+| KEEP | opinion | is_opinion | If true, could serve as context in homebuilding related stocks | The Bond Market Sell-Off Is Freezing American Homebuilding |
+| KEEP | low_material | action_material | Major company charges dismissed--serves as bullish tailwind | 4th Circuit dismisses some charges against Wells Fargo after jury’s $22.1M fee |
+| KEEP | punct | code:punct | Credit default swaps is a policy that is now affecting the AI market | Explainer-What are credit default swaps and why are they spooking AI investors? - Yahoo Finance |
+| KEEP | low_material | action_material | Potential EV policy from Trump | As Trump mulls building Chinese EVs in U.S., automakers point to Germany as a cautionary tale - NBC News |
+
+Proposed one change: `action_material` (criteria, n=10). Landed.
+
+Code-path misses (not the Jev knob this round):
+
+- `source` — 3 Export Stocks Linked To Lower US China Tariffs - simplywall.st (US China Tariffs)
+- `punct` — No tax on Social Security? The facts about Trump’s plan are here — and they could hurt US retirees the most (Trump-linked Social Security policy)
+- `punct` — Explainer-What are credit default swaps and why are they spooking AI investors? - Yahoo Finance (CDS affecting the AI market)

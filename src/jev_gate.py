@@ -160,14 +160,20 @@ QUESTIONS: dict = {
                 "Column, recap, or 'what it means' AND no dated print, "
                 "named IPO or M&A, regulator / Fed / House / CFTC / FDA "
                 "action, pathogen-recall scare, or peace accept/reject. "
-                "'Best move if the market crashes', celebrity, theme park."
+                "'Best move if the market crashes', celebrity, theme park. "
+                "Forecast / odds / live tape that only name-drops PCE, IPO, "
+                "or a rate-hike. Investor-rebuke or 'could still gain' "
+                "columns with no warn / hold / print."
             ),
             "false": (
                 "Title contains a first-class fact even inside a listicle "
                 "or column frame: Fed / EIA / House / CFTC / FDA action, "
                 "named IPO or M&A, pathogen + consumers/recalls, Fed "
                 "officer + inflation or oil, peace accept/reject, dated "
-                "official print or hold, court dismiss of a listed name."
+                "official print or hold, court dismiss of a listed name, "
+                "housing or credit freeze that if true changes a listed "
+                "sector prior, EV / tariff / Social Security policy, "
+                "or CDS affecting a listed sector."
             ),
         },
     },
@@ -243,9 +249,12 @@ QUESTIONS: dict = {
             "A local rally = no. A weekly EIA print, Fed hold, House CR, "
             "named M&A, regulator exploring rules, major-AI product or IPO, "
             "court dismiss of a listed name, pathogen scare that can trigger "
-            "FDA/recalls, or EV / tariff / Social Security policy = yes. "
-            "Celebrity, theme park, 'best move if crash', gold-tumbles tape, "
-            "or earnings-look-right = no."
+            "FDA/recalls, EV / tariff / Social Security policy, or 'mulls' "
+            "a named EV / tariff / Social Security instrument = yes. "
+            "A housing or credit freeze that if true changes a listed "
+            "sector prior = yes. Celebrity, theme park, 'best move if crash', "
+            "gold-tumbles tape, earnings-look-right, or forecast / odds / "
+            "live tape that only name-drops a print = no."
         ),
     },
     "new_instrument": {
@@ -257,8 +266,10 @@ QUESTIONS: dict = {
             "endorsing a rule, advisory-panel endorse, named dollar deal, "
             "or court dismiss — not a speech, protest, or rumor? "
             "EIA storage, Fed holds rates, House CR, CFTC explores rules, "
-            "FDA panel endorse = yes. 'Mulls' without a named instrument, "
-            "a speech, a protest, or a rumor = no."
+            "FDA panel endorse = yes. 'Mulls' a named policy instrument "
+            "(EV, tariff, Social Security, CAFE) = yes. 'Mulls' with no "
+            "named instrument, a speech, a protest, a rumor, or forecast / "
+            "odds / live tape = no."
         ),
     },
     "reprint_weather": {
