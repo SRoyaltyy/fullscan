@@ -747,6 +747,11 @@ def test_commit_allowlist_and_workflow_and_page():
     # This change must not have enabled the harvest by deleting its cron,
     # and the trainer workflow must not point at it.
     assert "jev_hop0" not in yml
+    # 16:19 draw wrote the sheet then lost the push race with auto-lands.
+    assert "git fetch origin main" in yml
+    assert "commit-tree" in yml
+    assert "replay trainer blobs onto origin/main" in yml
+    assert "decision_ready" not in yml
 
 
 def test_repo_holdout_and_hard_miss_bank_are_disjoint_from_gold():

@@ -51,7 +51,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           ref: main
-          fetch-depth: 1
+          fetch-depth: 0
           persist-credentials: true
           sparse-checkout: |
             src
@@ -124,7 +124,39 @@ jobs:
             exit 1
           fi
           git commit -m "jev train: ${{ github.event.inputs.mode }} [skip ci]"
-          git push origin HEAD:main
+          # main auto-lands race this push (16:19 draw died on a stale tip).
+          # Replay only allowlisted blobs onto origin/main. Do not rebase
+          # the sparse work tree.
+          n=0
+          while [ "$n" -lt 6 ]; do
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+            n=$((n + 1))
+            echo "push rejected (attempt ${n}); replay trainer blobs onto origin/main"
+            git fetch origin main
+            parent=$(git rev-parse origin/main)
+            tmp=$(mktemp)
+            GIT_INDEX_FILE="$tmp" git read-tree "$parent"
+            git diff-tree --no-commit-id --name-only -r HEAD | while IFS= read -r f; do
+              case "$f" in
+                00_grounding/jev_train/*|00_grounding/jev_hard_misses.json|dashboard/jev-train/draw.json)
+                  rec=$(git ls-tree HEAD -- "$f")
+                  [ -n "$rec" ] || continue
+                  mode=$(printf '%s\n' "$rec" | awk '{print $1}')
+                  sha=$(printf '%s\n' "$rec" | awk '{print $3}')
+                  printf '%s %s\t%s\0' "$mode" "$sha" "$f"
+                  ;;
+              esac
+            done | GIT_INDEX_FILE="$tmp" git update-index -z --add --index-info
+            tree=$(GIT_INDEX_FILE="$tmp" git write-tree)
+            rm -f "$tmp"
+            new=$(git commit-tree "$tree" -p "$parent" \
+              -m "jev train: ${{ github.event.inputs.mode }} [skip ci]")
+            git update-ref HEAD "$new"
+          done
+          echo "could not push trainer sheet after ${n} attempts"
+          exit 1
 
       - name: Open or update the jev-train issue
         if: github.event.inputs.mode == 'grade'
