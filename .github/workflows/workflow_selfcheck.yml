@@ -51,4 +51,4 @@ jobs:
           PYTHONPATH=. python3 -m src.test_workflow_fromjson
           PYTHONPATH=. python3 -m src.test_lane_news_scan
           PYTHONPATH=. python3 -m src.test_openclaw_models
-          PYTHONPATH=. python3 -m src.test_jev_gate
+          PYTHONPATH=. python3 -m src.test_jev_bits
