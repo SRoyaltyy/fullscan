@@ -1,16 +1,138 @@
 {
   "date": "2026-09-30",
-  "generated_at": "2026-09-30T05:40:14.614024-04:00",
+  "generated_at": "2026-09-30T05:40:29.280092-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
-    "ok": 4,
-    "partial": 4,
+    "ok": 6,
+    "partial": 2,
     "fail": 0,
     "n": 8
   },
-  "buy_1d": [],
-  "sell_1d": [],
+  "buy_1d": [
+    {
+      "ticker": "SN",
+      "score": 0.40738746658522834
+    },
+    {
+      "ticker": "MHK",
+      "score": 0.7691394568985594
+    },
+    {
+      "ticker": "FIGS",
+      "score": 0.7005316003507109
+    },
+    {
+      "ticker": "CAKE",
+      "score": 0.7024866202537032
+    },
+    {
+      "ticker": "AVPT",
+      "score": 0.7490482787635973
+    },
+    {
+      "ticker": "IT",
+      "score": 0.4906406421885817
+    },
+    {
+      "ticker": "CORT",
+      "score": 0.27268137805039655
+    },
+    {
+      "ticker": "CDNA",
+      "score": 0.719535740441015
+    },
+    {
+      "ticker": "ETON",
+      "score": 0.6610383072961854
+    },
+    {
+      "ticker": "ADMA",
+      "score": 0.6593557886497445
+    },
+    {
+      "ticker": "RXO",
+      "score": 0.6008070526974063
+    },
+    {
+      "ticker": "VLO",
+      "score": 0.25129331161549284
+    },
+    {
+      "ticker": "PAYS",
+      "score": 0.5755556159961815
+    },
+    {
+      "ticker": "QNST",
+      "score": 0.5496817827362139
+    },
+    {
+      "ticker": "RELY",
+      "score": 0.5636341058537824
+    }
+  ],
+  "sell_1d": [
+    {
+      "ticker": "RBLX",
+      "score": -0.4067211767120881
+    },
+    {
+      "ticker": "BIDU",
+      "score": -0.3756688866014659
+    },
+    {
+      "ticker": "SOC",
+      "score": -0.3669718644892282
+    },
+    {
+      "ticker": "GH",
+      "score": -0.3513055688648049
+    },
+    {
+      "ticker": "CMTG",
+      "score": -0.3475591464406803
+    },
+    {
+      "ticker": "BAK",
+      "score": -0.3461080088545898
+    },
+    {
+      "ticker": "GOGO",
+      "score": -0.34008320130187925
+    },
+    {
+      "ticker": "META",
+      "score": -0.33598328568535907
+    },
+    {
+      "ticker": "RC",
+      "score": -0.33426339323099863
+    },
+    {
+      "ticker": "LFMD",
+      "score": -0.3316406212144468
+    },
+    {
+      "ticker": "NRXP",
+      "score": -0.32952121793564804
+    },
+    {
+      "ticker": "AIRS",
+      "score": -0.3288375108313597
+    },
+    {
+      "ticker": "VNET",
+      "score": -0.32630882157358415
+    },
+    {
+      "ticker": "ROIV",
+      "score": -0.32292284533510995
+    },
+    {
+      "ticker": "WVE",
+      "score": -0.32214366930664723
+    }
+  ],
   "flatten": {},
   "general": {
     "said": "UP  2.009",
@@ -41,31 +163,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "weather",
-      "title": "Weather / regime",
-      "date": "2026-09-30",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-30T05:36:19.924917-04:00",
-      "files": [
-        {
-          "path": "01_daily/weather/2026-09-30_weather.json",
-          "ok": true,
-          "reason": "",
-          "size": 9712,
-          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}"
-        },
-        {
-          "path": "01_daily/weather/2026-09-30_weather.md",
-          "ok": true,
-          "reason": "",
-          "size": 5319,
-          "preview": "# Weather report \u2014 2026-09-30\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
-        }
-      ],
-      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-09-30\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
-    },
     {
       "key": "join",
       "title": "Join / match rank",
@@ -240,6 +337,59 @@
         }
       ],
       "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-09-30",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-30T05:40:28.499096-04:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-09-30_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1452544,
+          "preview": "1d BUY SN, MHK, FIGS, CAKE, AVPT, IT, CORT, CDNA \u00b7 SELL RBLX, BIDU, SOC, GH, CMTG, BAK, GOGO, META"
+        },
+        {
+          "path": "data/stock_book/2026-09-30_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 2152,
+          "preview": "green 130 \u00b7 GTES, EMBJ, AAON, PWR, TRI, DLB, CNH, VVX, DY, CRS"
+        },
+        {
+          "path": "data/stock_book/2026-09-30_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2492,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-09-30_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 13819,
+          "preview": "2026-09-30 BUY SN, MHK, FIGS, CAKE, AVPT, IT, CORT, CDNA \u00b7 SELL RBLX, BIDU, SOC, GH, CMTG, BAK, GOGO, META"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 13819,
+          "preview": "2026-09-30 BUY SN, MHK, FIGS, CAKE, AVPT, IT, CORT, CDNA \u00b7 SELL RBLX, BIDU, SOC, GH, CMTG, BAK, GOGO, META"
+        },
+        {
+          "path": "01_daily/2026-09-30_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 77621,
+          "preview": "# Stock book \u2014 2026-09-30\n_Generated 2026-09-30T05:40:21.973664-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY SN, MHK, FIGS, CAKE, AVPT, IT, CORT, CDNA \u00b7 SELL RBLX, BIDU, SOC, GH, CMTG, BAK, GOGO, META \u00b7 green 130 \u00b7 GTES, EMBJ, AAON, PWR, TRI, DLB, CNH, VVX, DY, CRS \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-09-30 BUY SN, MHK, FIGS, CAKE, AVPT, IT, CORT, CDNA \u00b7 SELL RBLX, BIDU, SOC, GH, CMTG, BAK, GOGO, META \u00b7 2026-09-30 BUY SN, MHK, FIGS, CAKE, AVPT, IT, CORT, CDNA \u00b7 SELL RBLX, BIDU, SOC, GH, CMTG, BAK, GOGO, META \u00b7 # Stock book \u2014 2026-09-30\n_Generated 2026-09-30T05:40:21.973664-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
