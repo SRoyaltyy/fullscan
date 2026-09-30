@@ -2,7 +2,8 @@ name: Jev train
 
 # Homework for the hop-0 gate. workflow_dispatch only.
 # No schedule. The weekday harvest workflow stays as it is.
-# The page has no API key. JEV_API_KEY is read here, on draw only.
+# The page has no API key. JEV_API_KEY is read here, on mixed draw only.
+# A day draw is code-first (no live Jev). Chips read 01_daily/news on the page.
 # Grades commit to main, which is the branch Deploy dashboard checks out.
 # [skip ci] keeps that commit from waking the trading workflows.
 # The page reads draw.json from raw main, so it does not need a Pages rebuild.
@@ -56,7 +57,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           ref: main
-          fetch-depth: 0
+          fetch-depth: 1
           persist-credentials: true
           sparse-checkout: |
             src
@@ -70,7 +71,9 @@ jobs:
           python-version: "3.12"
 
       - name: Unit tests (no key)
-        run: PYTHONPATH=. python3 -m src.test_jev_train
+        run: |
+          PYTHONPATH=. python3 -m src.test_jev_train
+          PYTHONPATH=. python3 -m src.test_jev_day
 
       - name: Draw
         id: draw

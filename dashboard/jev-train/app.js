@@ -3,6 +3,7 @@
 (function (root, factory) {
   var api = factory();
   if (typeof module !== "undefined" && module.exports) module.exports = api;
+  if (root) root.JevTrain = api;
   if (typeof document !== "undefined") api.boot();
 })(typeof globalThis !== "undefined" ? globalThis : this, function () {
   var MIN_MARKS = 30;
@@ -85,8 +86,23 @@
     return fetch(url, opts).finally(function () { clearTimeout(timer); });
   }
 
+  var api = {
+    MIN_MARKS: MIN_MARKS,
+    DISPATCH_MAX: DISPATCH_MAX,
+    marksReady: marksReady,
+    buildGrades: buildGrades,
+    buildDispatchGrades: buildDispatchGrades,
+    boot: function () {},
+    setFilterDay: function () {},
+    getFilterDay: function () { return ""; },
+    showLocalDraw: function () {},
+    reloadDraw: function () { return Promise.resolve(); }
+  };
+
   function boot() {
     var state = { draw: null, marks: {}, nonce: "", busy: false };
+    var filterDay = "";
+    var mixedDraw = null;
     var errEl = document.getElementById("err");
     var metaEl = document.getElementById("meta");
     var emptyEl = document.getElementById("empty");
@@ -122,7 +138,7 @@
       var n = markedCount();
       var ready = marksReady(gradesList());
       countEl.textContent = n + " / " + MIN_MARKS + " marked K or D";
-      submitBtn.disabled = !ready || state.busy || !state.draw;
+      submitBtn.disabled = !ready || state.busy || !state.draw || !!(state.draw && state.draw.preview);
       document.getElementById("download").disabled = !state.draw;
       document.getElementById("newDraw").disabled = state.busy;
     }
@@ -160,11 +176,18 @@
       emptyEl.hidden = true;
       table.hidden = false;
       var sample = draw.sample || {};
-      metaEl.textContent = "Draw " + (draw.stamp || "") +
-        " · exam " + (draw.exam_source || sample.exam_source || "") +
-        " · parsed " + (sample.parsed != null ? sample.parsed : "") +
-        " · rss " + (sample.rss != null ? sample.rss : "") +
-        " · " + (draw.model || draw.gate || "");
+      if (draw.preview) {
+        metaEl.textContent = "Parse " + (draw.day || "") +
+          " · " + draw.items.length + " titles from the repo" +
+          (draw.day_n && draw.day_n > draw.items.length ? " (showing " + draw.items.length + " of " + draw.day_n + ")" : "") +
+          " · hop-0 not run yet. Load that day writes KEEP/DROP and why bits.";
+      } else {
+        metaEl.textContent = "Draw " + (draw.stamp || "") +
+          " · exam " + (draw.exam_source || sample.exam_source || "") +
+          " · parsed " + (sample.parsed != null ? sample.parsed : "") +
+          " · rss " + (sample.rss != null ? sample.rss : "") +
+          " · " + (draw.model || draw.gate || "");
+      }
       draw.items.forEach(function (row) {
         if (!state.marks[row.id]) state.marks[row.id] = { grade: "?", human_reason: "" };
         var tr = document.createElement("tr");
@@ -172,6 +195,9 @@
         var n = document.createElement("td");
         n.className = "n";
         n.textContent = String(row.n || "");
+        var when = document.createElement("td");
+        when.className = "when";
+        when.textContent = row.date || String(row.published_at || "").slice(0, 10);
         var title = document.createElement("td");
         title.className = "title";
         title.textContent = row.title || "";
@@ -184,7 +210,7 @@
         source.appendChild(document.createTextNode(row.source || ""));
         var jev = document.createElement("td");
         jev.className = "jev " + (row.jev || "");
-        jev.textContent = row.jev || "";
+        jev.textContent = row.jev || "—";
         var bits = document.createElement("td");
         bits.className = "bits";
         bits.textContent = (row.bits || []).join(" ");
@@ -212,7 +238,7 @@
         });
         you.appendChild(reasonInput);
         youTd.appendChild(you);
-        tr.append(n, title, source, jev, bits, youTd);
+        tr.append(n, when, title, source, jev, bits, youTd);
         tbody.appendChild(tr);
       });
       refreshSubmit();
@@ -298,7 +324,42 @@
       return best;
     }
 
+    function rememberMixed(draw) {
+      if (draw && !draw.preview) mixedDraw = draw;
+    }
+
+    function getFilterDay() {
+      return filterDay;
+    }
+
+    function setFilterDay(day) {
+      filterDay = day || "";
+      if (window.JevTrainDay && window.JevTrainDay.paintChips) window.JevTrainDay.paintChips();
+      if (!mixedDraw) {
+        render();
+        return;
+      }
+      if (!filterDay) {
+        showDraw(mixedDraw, false);
+        return;
+      }
+      showDraw(Object.assign({}, mixedDraw, {
+        items: (mixedDraw.items || []).filter(function (row) {
+          return (row.date || "") === filterDay;
+        })
+      }), false);
+    }
+
+    function showLocalDraw(draw) {
+      filterDay = (draw && draw.day) || filterDay;
+      state.marks = {};
+      state.draw = draw;
+      render();
+      if (window.JevTrainDay && window.JevTrainDay.paintChips) window.JevTrainDay.paintChips();
+    }
+
     async function showDraw(draw, resetMarks) {
+      if (draw && !draw.preview) rememberMixed(draw);
       if (resetMarks || !state.draw || state.draw.stamp !== (draw && draw.stamp)) {
         state.marks = {};
       }
@@ -308,8 +369,10 @@
 
     async function reload() {
       setErr("");
+      filterDay = "";
       var draw = await loadDraw();
       await showDraw(draw, false);
+      if (window.JevTrainDay && window.JevTrainDay.paintChips) window.JevTrainDay.paintChips();
     }
 
     async function pollDraw(previous) {
@@ -418,15 +481,13 @@
     document.getElementById("clearToken").addEventListener("click", function () {
       document.getElementById("token").value = "";
     });
+    api.setFilterDay = setFilterDay;
+    api.getFilterDay = getFilterDay;
+    api.showLocalDraw = showLocalDraw;
+    api.reloadDraw = reload;
     reload().catch(function (err) { setErr(String(err && err.message ? err.message : err)); });
   }
 
-  return {
-    MIN_MARKS: MIN_MARKS,
-    DISPATCH_MAX: DISPATCH_MAX,
-    marksReady: marksReady,
-    buildGrades: buildGrades,
-    buildDispatchGrades: buildDispatchGrades,
-    boot: boot
-  };
+  api.boot = boot;
+  return api;
 });

@@ -793,6 +793,15 @@ def test_commit_allowlist_and_workflow_and_page():
     assert "commit-tree" in yml
     assert "replay trainer blobs onto origin/main" in yml
     assert "decision_ready" not in yml
+    assert "fetch-depth: 1" in yml
+    assert "src.test_jev_day" in yml
+    assert "src.jev_day" in yml
+    assert "setFilterDay" in script
+    assert "showLocalDraw" in script
+    day_js = (ROOT / "dashboard" / "jev-train" / "day.js").read_text(encoding="utf-8")
+    assert "01_daily/news" in day_js
+    assert "JEV_API_KEY" not in day_js
+    assert "ghp_" not in day_js
 
 
 def test_repo_holdout_and_hard_miss_bank_are_disjoint_from_gold():
