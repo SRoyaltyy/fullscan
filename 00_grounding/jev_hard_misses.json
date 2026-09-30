@@ -2203,6 +2203,186 @@
       "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPOG5Yems4aVNjWGItbG1GYUh2aXhoYm5hUld2VnRscTYzTnRzNmFWSTh0dG9ENU9QcnJ1WHFZUDBsc0VOcFlPX0VKdC1hR3pKcmUwd0xtQ0xOWlAyd1RzRjBSaUVyUFRuNHlVVjVVbG5FR3dZcXlOOHFiN3g1emhueXNzTEtWN01RandUc2dPeXRXeS14RVpCVXBKcHJDbDRtZ0RIYw?oc=5",
       "date": "2026-09-29",
       "archive": "parsed"
+    },
+    {
+      "id": "c3164742abacf4ff",
+      "title": "This TSX stock soared 28% this week with one analyst seeing 'durable, profitable growth'",
+      "source": "newsapi_Financial Post",
+      "published_at": "2026-08-07T21:35:30Z",
+      "url": "https://financialpost.com/investing/tsx-stock-soared-analysts-share-price-upside",
+      "date": "2026-08-08",
+      "archive": "parsed"
+    },
+    {
+      "id": "5e20cb6a76510cfd",
+      "title": "Apple downgraded, HPE upgraded: Wall Street's top analyst calls",
+      "source": "rss_yahoo_finance",
+      "published_at": "2026-08-10T13:39:34Z",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/apple-downgraded-hpe-upgraded-wall-133934661.html",
+      "date": "2026-08-10",
+      "archive": "parsed"
+    },
+    {
+      "id": "15b4b1ddb8bb01d7",
+      "title": "Syrian court sentences Bashar al-Assad to death in absentia",
+      "source": "rss_aljazeera_economy",
+      "published_at": "Tue, 11 Aug 2026 11:46:21 +0000",
+      "url": "https://www.aljazeera.com/video/newsfeed/2026/8/11/syrian-court-sentences-bashar-al-assad-to-death-in-absentia?traffic_source=rss",
+      "date": "2026-08-11",
+      "archive": "parsed"
+    },
+    {
+      "id": "699cb5cb213e7478",
+      "title": "Fidelity Drops Sharp Take On Stock Market - TradingView",
+      "source": "rss_google_markets",
+      "published_at": "Wed, 12 Aug 2026 14:06:34 GMT",
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQc2k0S19YUUZxZFBHRnN4UEhBa2UxNkE2TkNkZWFLcDh2XzZra2RCQlRqMTBpYmJLRVRRbHhYbk0zRm16dFVfSXBZYUtUeHJucE5YZ3pKSkZxVDlteGhyTnFITWw5UjlzaC1WSTlja21BMDhtYnZiVWtuZG00Z2pDdGZrWWVWTlBTa01MaEFMRUFVa0NLY2ZpWUtlOHNQN1BlM1gw?oc=5",
+      "date": "2026-08-12",
+      "archive": "parsed"
+    },
+    {
+      "id": "3371f442011a986c",
+      "title": "Musk and Zuckerberg claw back into AI race with new model momentum - Axios",
+      "source": "rss_google_business",
+      "published_at": "Thu, 13 Aug 2026 10:38:41 GMT",
+      "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTFBkdHFCTFNvb0d0RkhFdG5palVLck1JbFlXOTV3d3FLSzdYbnl1YzVfMGJhMW1tS1I1WVhmQUhYN29wdzlxbThRZFRyR1UzeTVJVi14Uk5yWFlPLTdNam5kd2N5Mm9IeG1nNWtkWThJLW1LckZRZlJnYjdn?oc=5",
+      "date": "2026-08-13",
+      "archive": "parsed"
+    },
+    {
+      "id": "76e407b16e7bff3f",
+      "title": "Beth Hammack urges Fed rate hike to fight above-3% inflation - qz.com",
+      "source": "rss_google_macro",
+      "published_at": "Fri, 14 Aug 2026 11:34:16 GMT",
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBuWXlNLWswVVdZOGVmSkxQa2tldmpXaklJcDZXVVdHdzdyQjZWREY0LXBjMlMybEFaQkVrQmVzVU9IbElPNElVb01IMm83Q2RjUGdGVHNLUjVmMFZ0RWEtRzZoa2l2dnZVT25zR0J4VGQ?oc=5",
+      "date": "2026-08-14",
+      "archive": "parsed"
+    },
+    {
+      "id": "add123b9d7046a5a",
+      "title": "Harvard endowment discloses $2.2 billion SpaceX stake",
+      "source": "rss_yahoo_finance",
+      "published_at": "2026-08-17T12:39:14Z",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/harvard-endowment-discloses-2-2-123914722.html",
+      "date": "2026-08-17",
+      "archive": "parsed"
+    },
+    {
+      "id": "d5379e79004e1993",
+      "title": "Japanese activist keeps protesting against Israel’s genocide in Gaza",
+      "source": "rss_aljazeera_economy",
+      "published_at": "Tue, 18 Aug 2026 12:47:41 +0000",
+      "url": "https://www.aljazeera.com/video/newsfeed/2026/8/18/japanese-activist-keeps-protesting-against-israels-genocide-in-gaza?traffic_source=rss",
+      "date": "2026-08-18",
+      "archive": "parsed"
+    },
+    {
+      "id": "14b43868fc7dec1f",
+      "title": "Amazon (AMZN) Sees Bigger AWS Growth, but Rising Competition Could Pressure Returns",
+      "source": "rss_yahoo_finance",
+      "published_at": "2026-08-19T13:13:38Z",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/amazon-amzn-sees-bigger-aws-131338687.html",
+      "date": "2026-08-19",
+      "archive": "parsed"
+    },
+    {
+      "id": "d14c423b74db792c",
+      "title": "After Moderna stock surge of 177% on cancer drug breakthrough, here's what Wall Street thinks happens next - Yahoo Finance",
+      "source": "rss_google_business",
+      "published_at": "Thu, 20 Aug 2026 09:10:40 GMT",
+      "url": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxQbXI4VFJadTRmMEFHYnY0bUlDcUxLZGt2ZGdLcXBMQlRIazA3YjJ5VTM2dURFTFlFajNic1c5R182WGhpV3RkQWFLcTV0clN5VDFJTXhJdFdFZk1OdXBZMWRFbGR0WjBBQWktQnpZZ0ItU2h5UktHdHlNRHFac2drcTNRVVJ1NkRiay1xbzBEYU56VHQ3NTVMX2drMGhKOFEwYk5kWVU5TmpGRGZ6bmNvOWJEam9iRlY1NXdFdXdtVkt1R1Y5U0Q1LTBZX0l3cEEzRFBTclFzQ3BPNEQ2SWgxYUVsb1BXOE42aEpTT3hpeTRSeUh0eEE?oc=5",
+      "date": "2026-08-20",
+      "archive": "parsed"
+    },
+    {
+      "id": "53286e26a5520cd9",
+      "title": "Navios Maritime (NMM) Q2 2026 Earnings Call Transcript",
+      "source": "rss_yahoo_finance",
+      "published_at": "2026-08-24T13:14:40Z",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/navios-maritime-nmm-q2-2026-131440181.html",
+      "date": "2026-08-24",
+      "archive": "parsed"
+    },
+    {
+      "id": "4ab849d0e5f7b5b7",
+      "title": "Here's how Thomson Reuters is loosening Claude's costly grip - Business Insider",
+      "source": "rss_google_business",
+      "published_at": "Mon, 24 Aug 2026 19:21:19 GMT",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQNTlJeGxyakhWMlAyR0JTaEV6UDVnaTZmWVMxYk9SSk5wNktnU3gyVnZWdzRBek5CMjJsdExoWXBkNzJlQlZUQWVsbmVoTkcyQWZlX1p4ZUo1YUdkajlXUkw2TV83eTM1WFdsSUphQmU0eWo0dXExYjlKSXgwNlZzSzRRMDBOLWthMTNVbTFlU3JuTURNZ0tpWA?oc=5",
+      "date": "2026-08-25",
+      "archive": "parsed"
+    },
+    {
+      "id": "05f6bbbae07b8ad3",
+      "title": "Sunshine Pictures gains on market debut",
+      "source": "newsapi_Business Standard",
+      "published_at": "2026-08-25T05:02:52Z",
+      "url": "https://www.business-standard.com/markets/capital-market-news/sunshine-pictures-gains-on-market-debut-126082500259_1.html",
+      "date": "2026-08-26",
+      "archive": "parsed"
+    },
+    {
+      "id": "b98aa7504e13dac8",
+      "title": "Here's how much traders think Nvidia will move off earnings — and in which direction - CNBC",
+      "source": "rss_google_markets",
+      "published_at": "Wed, 26 Aug 2026 18:13:33 GMT",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOdmw1d2ZKTzBOTWNRWjY4ekV5VzJrODFUWEpVMjAzZmdZalhQYV85cHlZMldRSS1vbjdRRFVHalcxZ3NoaUtPdW84b2lXWTJUazIyVTFmNV9WVG9xMVlOb0tVYms2ZkNXUmdDbkdLdFJlRVVUWjBSOERTNDE0dktXclVnRHJ3enQ5Ylk0eXV5Q0diaUFjbnFPMVpOZTRKWk9SemlEdWl2UllJZy1LaFhtai1PWEdQXzRoalHSAb8BQVVfeXFMTi05bmJ3NmZJaXdtb1hnOXJyOWxDc1BGNUxPbU05RUlnaHliaWxXOGVQQ0tfd2JmV3JhYkdLQlBJMXhjcjFnT2FOS20wQ0t",
+      "date": "2026-08-27",
+      "archive": "parsed"
+    },
+    {
+      "id": "b3d431535273e142",
+      "title": "Nvidia’s $10.2 Billion Quarterly Profit Increase Topped Its Entire 2022 Operating Profit - inc.com",
+      "source": "rss_google_markets",
+      "published_at": "Thu, 27 Aug 2026 11:38:33 GMT",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNM2tMZkVyZktNWjRDNWtmTEdyYVJEcFFXRUdxZGxCbmdfWGRmWU5iNlFQWUthbVlyVWJJaWo0Y05adXp0R2duZkRqX3JYU2pXbHExREstQ0g1bkg2c1d3cjRjSDFUVmh0d1dmcXd0VGZ3dzg4M3pfYzFIV2txRlJfc0JrNHpVNVpteFFOM21wd0JacXlFcEQ2ZUEtdlQxak5oa0d5X01jcE92dEZjdURVNTQtdEM?oc=5",
+      "date": "2026-08-28",
+      "archive": "parsed"
+    },
+    {
+      "id": "9d60afa25dff4147",
+      "title": "As Jackson Hole conference kicks off, three Fed officials issue inflation warnings - Reuters",
+      "source": "rss_google_macro",
+      "published_at": "Thu, 27 Aug 2026 18:54:48 GMT",
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNZ2dmdW1ZbC1FdlZnZmloZUhxOFAyaGtNT3dOZzBlMVEwWEhKODBzREpxZElwaFNMM1RhNjQySHE0eS1lTENCbk1ob0ZUb2RzbzRiaDhDYXdLaE05dEt5dWpBYWs5RF93XzU5MW84OS1kX3ctdURqdTh6a2RlYXVJU0tkSGNrRU5rSldCZ092ZFhITGxPSWtaSGJFR3U5RmpGR2NiUExZcnNPVjdPX056OXF2RHRwSEp6?oc=5",
+      "date": "2026-08-31",
+      "archive": "parsed"
+    },
+    {
+      "id": "5e8ace914e7905f1",
+      "title": "General Dynamics Stock Rises After a Big Earnings Beat - Barron's",
+      "source": "rss_google_markets",
+      "published_at": "Wed, 29 Jul 2026 11:55:00 GMT",
+      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQQlUwWktLUW53eUdaOGRyZlZxZ1owXy1LRzVsOWQ0NHRVYm1UYXpYWTV0dkRrUVh2bEptSzRoMlk2cHExWU9HYmUzeWdMeDVmUncwaDZtVzBSRE1qeDNvQUJiU2NNcGl4SXRFWXRPVzZMd0NILXhJcDFvSzJ1YkNOS05iM1dOUQ?oc=5",
+      "date": "2026-09-03",
+      "archive": "parsed"
+    },
+    {
+      "id": "bfeb126807b21ba3",
+      "title": "There's a reason Trump is the only one talking about 1% interest rates - Reuters",
+      "source": "rss_google_macro",
+      "published_at": "Wed, 23 Sep 2026 11:05:00 GMT",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPYjQ0bXJDcnFwd3RhY2JmdnRjTVJvT3g4WEc3UGNDZ05mLUN6eGMtSjdSdzdkaFJPYjdKX3BZQWoyM2hVbUJfRjJaWERxNHZaSTNOQnJiblVRd1dKOFBUWXZHSnh5RzBCOUJYR0U3LXBGaTVvQ2RRcUNSMkhVU1o3Q1ZUYURqcFlwQ0R3bVNYTTlSZWdoOWl1SkVsbkUyTm8?oc=5",
+      "date": "2026-09-25",
+      "archive": "parsed"
+    },
+    {
+      "id": "3fac9ca5af7fa3a0",
+      "title": "China Won't Move Chip Stocks Anymore (NASDAQ:SMH) - Seeking Alpha",
+      "source": "rss_google_geopolitics",
+      "published_at": "Sat, 26 Sep 2026 14:50:47 GMT",
+      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOWG8yQjlIMktpSVJIVXFrZERiMEFIX29yaTVLYW5JaDlOMHFjOWU4LXh3Q2stTW1qVlpqX2tFWmtTNm1xQVVHY2VuUmZsaVhUNllXRzRZV20tNGRjdWVSbVRmdVQ3T2p0MktXQUpSV3pUb19YRnIyMW1QZGdpdHpZTVh3?oc=5",
+      "date": "2026-09-28",
+      "archive": "parsed"
+    },
+    {
+      "id": "03e1bd457e287519",
+      "title": "3 Financial Mutual Funds to Consider as Fed Signals More Rate Hikes - TradingView",
+      "source": "rss_google_macro",
+      "published_at": "Mon, 28 Sep 2026 11:04:00 GMT",
+      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOSVByd2trSnM1LWZVTUxtMVFEeGwwMDN5aHI3VWdnYUp0Z0hFRGJ1OWRqNkREbHFfZ0pnV0tocnBlQ2Z2Yks4Z1RnN1hGUFc1Sm01QmI2di1fVWVMSXFWdmZHcTF2SUhmaUlucHJ2bWxPZGRaU1NSVkdQd0lCR2ZoaldaZXVGejcwa2JacjFjWlFpRXhNN1ZTT3ZjZzBGbWNGTTZIVXZhdzlXZXY0TjBpU3JOZUtVYlpXRGI3SjVCOXA?oc=5",
+      "date": "2026-09-29",
+      "archive": "parsed"
     }
   ]
 }
