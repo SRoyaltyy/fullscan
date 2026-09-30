@@ -1,28 +1,28 @@
 {
   "n": 100,
   "gold_keep": 26,
-  "pred_keep": 8,
-  "precision": 1.0,
-  "recall_print_done": 0.3077,
-  "tp": 8,
-  "fp": 0,
-  "fn": 18,
+  "pred_keep": 18,
+  "precision": 0.6667,
+  "recall_print_done": 0.4615,
+  "tp": 12,
+  "fp": 6,
+  "fn": 14,
   "banned_keeps": [],
   "pass": false,
   "misses": [
     {
-      "title": "Fed’s Williams Hints Next Rate Increase Can Wait - WSJ",
+      "title": "Fed’s Barr Says More Hikes Likely Needed as Growth Picks Up - Bloomberg.com",
       "label": "officer_voice",
       "gold": "keep",
       "pred": "drop",
-      "reason": "no_keep_bit",
+      "reason": "soft",
       "noul": {
-        "tape": 0.22,
-        "soft": 0.38,
-        "tip": 0.3,
-        "done": 0.47,
-        "print": 0.53,
-        "listed": 0.78
+        "tape": 0.26,
+        "soft": 0.53,
+        "tip": 0.37,
+        "done": 0.48,
+        "print": 0.73,
+        "listed": 0.66
       }
     },
     {
@@ -32,12 +32,12 @@
       "pred": "drop",
       "reason": "no_keep_bit",
       "noul": {
-        "tape": 0.26,
-        "soft": 0.28,
-        "tip": 0.24,
+        "tape": 0.24,
+        "soft": 0.27,
+        "tip": 0.26,
         "done": 0.47,
-        "print": 0.43,
-        "listed": 0.71
+        "print": 0.46,
+        "listed": 0.72
       }
     },
     {
@@ -47,12 +47,27 @@
       "pred": "drop",
       "reason": "soft",
       "noul": {
-        "tape": 0.24,
-        "soft": 0.6,
-        "tip": 0.39,
+        "tape": 0.22,
+        "soft": 0.59,
+        "tip": 0.36,
         "done": 0.47,
-        "print": 0.56,
-        "listed": 0.64
+        "print": 0.58,
+        "listed": 0.58
+      }
+    },
+    {
+      "title": "Fed governor Lisa Cook says AI boom is creating broader inflation pressures - TheGrio",
+      "label": "officer_voice",
+      "gold": "keep",
+      "pred": "drop",
+      "reason": "soft",
+      "noul": {
+        "tape": 0.26,
+        "soft": 0.56,
+        "tip": 0.28,
+        "done": 0.51,
+        "print": 0.66,
+        "listed": 0.34
       }
     },
     {
@@ -62,57 +77,27 @@
       "pred": "drop",
       "reason": "soft",
       "noul": {
-        "tape": 0.18,
-        "soft": 0.66,
-        "tip": 0.31,
+        "tape": 0.21,
+        "soft": 0.68,
+        "tip": 0.28,
         "done": 0.46,
-        "print": 0.62,
-        "listed": 0.58
+        "print": 0.63,
+        "listed": 0.62
       }
     },
     {
-      "title": "US consumer confidence sinks to 12-year low over inflation, stagnant wages - South China Morning Post",
-      "label": "official_print",
+      "title": "Federal Reserve Board Member Says More Rate Hikes May Be Needed - tokenpost.com",
+      "label": "officer_voice",
       "gold": "keep",
       "pred": "drop",
-      "reason": "no_keep_bit",
+      "reason": "soft",
       "noul": {
-        "tape": 0.42,
-        "soft": 0.35,
-        "tip": 0.24,
-        "done": 0.53,
-        "print": 0.44,
-        "listed": 0.28
-      }
-    },
-    {
-      "title": "FDA Announces Nationwide Cheese Recall—Products Linked to Multistate E. Coli Outbreak - health.com",
-      "label": "official_print",
-      "gold": "keep",
-      "pred": "drop",
-      "reason": "no_keep_bit",
-      "noul": {
-        "tape": 0.12,
-        "soft": 0.27,
-        "tip": 0.09,
+        "tape": 0.18,
+        "soft": 0.6,
+        "tip": 0.41,
         "done": 0.48,
-        "print": 0.51,
-        "listed": 0.55
-      }
-    },
-    {
-      "title": "Fed holds interest rates steady as inflation hits 3-year high - ABC News - Breaking News, Latest News and Videos",
-      "label": "official_print",
-      "gold": "keep",
-      "pred": "drop",
-      "reason": "no_keep_bit",
-      "noul": {
-        "tape": 0.27,
-        "soft": 0.3,
-        "tip": 0.19,
-        "done": 0.54,
-        "print": 0.54,
-        "listed": 0.71
+        "print": 0.65,
+        "listed": 0.8
       }
     },
     {
@@ -122,12 +107,12 @@
       "pred": "drop",
       "reason": "no_keep_bit",
       "noul": {
-        "tape": 0.19,
-        "soft": 0.42,
-        "tip": 0.19,
-        "done": 0.46,
-        "print": 0.45,
-        "listed": 0.84
+        "tape": 0.18,
+        "soft": 0.41,
+        "tip": 0.18,
+        "done": 0.47,
+        "print": 0.41,
+        "listed": 0.85
       }
     },
     {
@@ -137,12 +122,12 @@
       "pred": "drop",
       "reason": "no_keep_bit",
       "noul": {
-        "tape": 0.22,
-        "soft": 0.31,
-        "tip": 0.09,
-        "done": 0.4,
-        "print": 0.38,
-        "listed": 0.83
+        "tape": 0.27,
+        "soft": 0.29,
+        "tip": 0.1,
+        "done": 0.41,
+        "print": 0.34,
+        "listed": 0.84
       }
     },
     {
@@ -152,12 +137,12 @@
       "pred": "drop",
       "reason": "no_keep_bit",
       "noul": {
-        "tape": 0.25,
-        "soft": 0.33,
+        "tape": 0.23,
+        "soft": 0.34,
         "tip": 0.16,
         "done": 0.48,
-        "print": 0.4,
-        "listed": 0.82
+        "print": 0.41,
+        "listed": 0.81
       }
     },
     {
@@ -168,26 +153,11 @@
       "reason": "source",
       "noul": {
         "tape": 0.19,
-        "soft": 0.34,
-        "tip": 0.19,
-        "done": 0.51,
+        "soft": 0.33,
+        "tip": 0.17,
+        "done": 0.49,
         "print": 0.37,
-        "listed": 0.44
-      }
-    },
-    {
-      "title": "China unveils rate cut, mortgage subsidies to spur growth - CNA",
-      "label": "finished_act",
-      "gold": "keep",
-      "pred": "drop",
-      "reason": "no_keep_bit",
-      "noul": {
-        "tape": 0.22,
-        "soft": 0.36,
-        "tip": 0.19,
-        "done": 0.53,
-        "print": 0.4,
-        "listed": 0.59
+        "listed": 0.4
       }
     },
     {
@@ -198,9 +168,9 @@
       "reason": "no_keep_bit",
       "noul": {
         "tape": 0.17,
-        "soft": 0.35,
-        "tip": 0.15,
-        "done": 0.48,
+        "soft": 0.3,
+        "tip": 0.13,
+        "done": 0.47,
         "print": 0.34,
         "listed": 0.18
       }
@@ -210,13 +180,13 @@
       "label": "finished_act",
       "gold": "keep",
       "pred": "drop",
-      "reason": "no_keep_bit",
+      "reason": "tape",
       "noul": {
-        "tape": 0.53,
-        "soft": 0.29,
-        "tip": 0.28,
-        "done": 0.51,
-        "print": 0.38,
+        "tape": 0.55,
+        "soft": 0.3,
+        "tip": 0.3,
+        "done": 0.53,
+        "print": 0.42,
         "listed": 0.77
       }
     },
@@ -227,12 +197,12 @@
       "pred": "drop",
       "reason": "tape",
       "noul": {
-        "tape": 0.62,
-        "soft": 0.3,
-        "tip": 0.38,
-        "done": 0.44,
-        "print": 0.42,
-        "listed": 0.71
+        "tape": 0.64,
+        "soft": 0.29,
+        "tip": 0.41,
+        "done": 0.45,
+        "print": 0.38,
+        "listed": 0.7
       }
     },
     {
@@ -240,44 +210,104 @@
       "label": "finished_act",
       "gold": "keep",
       "pred": "drop",
-      "reason": "no_keep_bit",
+      "reason": "soft",
       "noul": {
-        "tape": 0.17,
-        "soft": 0.53,
-        "tip": 0.17,
-        "done": 0.43,
-        "print": 0.38,
-        "listed": 0.4
-      }
-    },
-    {
-      "title": "Geopolitical disruptions push up freight costs and alter steel trade flows - EUROMETAL",
-      "label": "finished_act",
-      "gold": "keep",
-      "pred": "drop",
-      "reason": "no_keep_bit",
-      "noul": {
-        "tape": 0.33,
-        "soft": 0.45,
-        "tip": 0.36,
-        "done": 0.54,
+        "tape": 0.19,
+        "soft": 0.55,
+        "tip": 0.16,
+        "done": 0.44,
         "print": 0.39,
-        "listed": 0.17
+        "listed": 0.39
       }
     },
     {
-      "title": "Selected steel intake transiting through the Strait of Hormuz dropped - Shanghai Metals Market",
-      "label": "finished_act",
-      "gold": "keep",
-      "pred": "drop",
-      "reason": "no_keep_bit",
+      "title": "Crystal Jade holding companies in S’pore, Hong Kong placed under receivership - The Straits Times",
+      "label": "junk",
+      "gold": "drop",
+      "pred": "keep",
+      "reason": "done",
+      "noul": {
+        "tape": 0.16,
+        "soft": 0.22,
+        "tip": 0.12,
+        "done": 0.5,
+        "print": 0.33,
+        "listed": 0.15
+      }
+    },
+    {
+      "title": "Pressure on U.S. Treasurys eases after 30-year yield hits highest level since 2002 - CNBC",
+      "label": "tape",
+      "gold": "drop",
+      "pred": "keep",
+      "reason": "done",
+      "noul": {
+        "tape": 0.47,
+        "soft": 0.31,
+        "tip": 0.33,
+        "done": 0.55,
+        "print": 0.41,
+        "listed": 0.82
+      }
+    },
+    {
+      "title": "Caltex follows Shell's lead, raises petrol prices, Money News - AsiaOne",
+      "label": "tape",
+      "gold": "drop",
+      "pred": "keep",
+      "reason": "done",
+      "noul": {
+        "tape": 0.31,
+        "soft": 0.25,
+        "tip": 0.19,
+        "done": 0.54,
+        "print": 0.32,
+        "listed": 0.22
+      }
+    },
+    {
+      "title": "Real estate expert reacts to Federal Reserve's rate hike and how it affects housing market - CBS News",
+      "label": "junk",
+      "gold": "drop",
+      "pred": "keep",
+      "reason": "print",
+      "noul": {
+        "tape": 0.32,
+        "soft": 0.44,
+        "tip": 0.33,
+        "done": 0.54,
+        "print": 0.5,
+        "listed": 0.75
+      }
+    },
+    {
+      "title": "Citi Credit Cards offering S$288 cash rebate for FCY spend - The MileLion",
+      "label": "junk",
+      "gold": "drop",
+      "pred": "keep",
+      "reason": "done",
       "noul": {
         "tape": 0.35,
-        "soft": 0.34,
-        "tip": 0.29,
+        "soft": 0.47,
+        "tip": 0.26,
         "done": 0.5,
-        "print": 0.29,
+        "print": 0.27,
         "listed": 0.13
+      }
+    },
+    {
+      "title": "Around 100 businesses caught buying fake reviews in largest probe by Singapore's competition watchdog - CNA",
+      "label": "junk",
+      "gold": "drop",
+      "pred": "keep",
+      "reason": "done",
+      "noul": {
+        "tape": 0.2,
+        "soft": 0.27,
+        "tip": 0.16,
+        "done": 0.57,
+        "print": 0.32,
+        "listed": 0.08
       }
     }
   ]
