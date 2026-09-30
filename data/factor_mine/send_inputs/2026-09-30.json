@@ -16,7 +16,7 @@
     },
     {
       "path": "01_daily/news/2026-09-30_finviz_digest.json",
-      "sha256": "ee2a1f4757f958d6bf7c13ff9c180b98bd0860e4138dd5da9bd750bc2c1438f9"
+      "sha256": "e34711677328d0b99a453d3aa2d98801a39abb9aa9106e53c67ec13760355ea8"
     },
     {
       "path": "01_daily/news/2026-09-30_judge.md",
@@ -28,7 +28,7 @@
     },
     {
       "path": "01_daily/weather/2026-09-30_weather.json",
-      "sha256": "b51e284657186085059ee6345a657d7d89271441a921490e75746559a2f06fa5"
+      "sha256": "62887c0cccf1d166ab136c6983f447b9a589b3d29a0e9422cceed34b8e6a0625"
     },
     {
       "path": "data/ab_checklist/2026-09-30_ab_checklist_enriched.csv",
@@ -36,7 +36,7 @@
     },
     {
       "path": "data/join/2026-09-30_ranked.csv",
-      "sha256": "b27b7c5971c4b12f0168f2d5a16c669f2ee9fe9856d6debe17b4849cb88cc470"
+      "sha256": "7aa7eb12045d03b82ce2c4369b830105ff893199be7d40b34eac261610b97102"
     },
     {
       "path": "data/peers/2026-09-30_peer_rs.csv",
@@ -50,6 +50,6 @@
   "prices": [],
   "reason": "no same-day panel rows for 2026-09-30 \u2014 sitting, no live lookup",
   "rows": [],
-  "sha256": "c10d21a3df617b6223134b3592814a29f153489a361a806a0b75ea56a78c9ccc",
+  "sha256": "eb288aba4cb312ec1b64af0a7834f289afee0200ace61fad3d3f105b0a06db83",
   "source": "no_same_day_panel"
 }
