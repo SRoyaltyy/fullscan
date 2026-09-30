@@ -1,0 +1,6 @@
+{
+  "date": "2026-09-30",
+  "status": "blocked",
+  "error": "float() argument must be a string or a real number, not 'NoneType'",
+  "standing": true
+}
