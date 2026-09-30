@@ -1,6 +1,6 @@
 # MAP HEAT — 2026-09-30
 
-Export `finviz_2026-09-30.csv` · 11616 names · generated 2026-09-30T04:16:17.412421-04:00
+Export `finviz_2026-09-29.csv` · 11616 names · generated 2026-09-30T04:22:14.006127-04:00
 
 ## TAPE (live futures)
 | Contract | Last | Change |
@@ -278,19 +278,21 @@ COLD (1w):
 - **Real Estate** -0.5% 1d -1.9% 1w · VNQ, SCHH, XLRE
 
 ## TICKER-TAGGED NEWS (Finviz v=3)
-- 2 min **SHEL** Transaction in Own Shares (GlobeNewswire)
-- 8 min **NKE** NKE Ticks Higher Ahead Of Q1 As Short Interest Hits Record 87M Shares  Could Earnings Squeeze The Bears? (Stocktwits)
-- 12 min **CME** Stock market today: Dow, S&P 500, Nasdaq futures little changed ahead of PCE inflation data (Yahoo Finance)
-- 16 min **P** Everpure Announces New Data Management Capabilities for Production AI at Scale (PR Newswire)
-- 16 min **P** 88% of Executives Fear Data Sovereignty Failures Could Cost Them Their Jobs (PR Newswire)
-- 16 min **WTW** Nearly US$100 trillion of investment will depend on decisions made under uncertainty, says new Willis report (GlobeNewswire)
-- 27 min **MU,NVDA,AVGO,INTC,AMD** Chip Stocks Roar Back: AMD, Intel Power SOXX Toward Best Month Since June (Stocktwits)
-- 42 min **GOOGL,GOOG** Chief Telecom, Google Cloud launch backup services to bolster cable resilience (DigiTimes)
-- 43 min **SKHY** SK Hynix resumes DDR4, DDR5 packaging orders with Winpac (DigiTimes)
-- 43 min **MU** Stock Market Today: Dow set for 200-point rise, S&P 500 and Nasdaq to rise ahead of PCE inflation data; Micron results on tap (MarketWatch)
-- 44 min **MU** Dow set to climb ahead of PCE inflation data (MarketWatch)
-- 48 min **CAT** Why Caterpillar Stock Has Surged 75% Over the Past Year on AI Power Demand (TIKR)
-- 56 min **VCRE** Increase in Number of Shares and Votes in Vicore Pharma (ACCESSWIRE)
+- 8 min **SHEL** Transaction in Own Shares (GlobeNewswire)
+- 12 min **E** SLB OneSubsea wins Rovuma LNG subsea systems contract (Offshore Technology)
+- 14 min **NKE** NKE Ticks Higher Ahead Of Q1 As Short Interest Hits Record 87M Shares  Could Earnings Squeeze The Bears? (Stocktwits)
+- 15 min **CRM** Salesforce Stock Fell 8% in a Year. Heres Where the Streets Target Sits Now. (TIKR)
+- 18 min **CME** Stock market today: Dow, S&P 500, Nasdaq futures little changed ahead of PCE inflation data (Yahoo Finance)
+- 22 min **P** Everpure Announces New Data Management Capabilities for Production AI at Scale (PR Newswire)
+- 22 min **P** 88% of Executives Fear Data Sovereignty Failures Could Cost Them Their Jobs (PR Newswire)
+- 22 min **WTW** Nearly US$100 trillion of investment will depend on decisions made under uncertainty, says new Willis report (GlobeNewswire)
+- 33 min **NVDA,MU,AVGO,AMD,INTC** Chip Stocks Roar Back: AMD, Intel Power SOXX Toward Best Month Since June (Stocktwits)
+- 48 min **GOOG,GOOGL** Chief Telecom, Google Cloud launch backup services to bolster cable resilience (DigiTimes)
+- 49 min **SKHY** SK Hynix resumes DDR4, DDR5 packaging orders with Winpac (DigiTimes)
+- 49 min **MU** Stock Market Today: Dow set for 200-point rise, S&P 500 and Nasdaq to rise ahead of PCE inflation data; Micron results on tap (MarketWatch)
+- 50 min **MU** Dow set to climb ahead of PCE inflation data (MarketWatch)
+- 54 min **CAT** Why Caterpillar Stock Has Surged 75% Over the Past Year on AI Power Demand (TIKR)
+- 1 hour **VCRE** Increase in Number of Shares and Votes in Vicore Pharma (ACCESSWIRE)
 - 1 hour **CCL** CCL Stock Heads For Best Month Since May: Record Bookings And Strong Q3 Defy Cruise Doubts (Stocktwits)
 - 1 hour **ZS** New Zscaler Report Reveals AI-Assisted Attackers Move to Massive Data Theft, Executive Targeting, and Millions in Extortion Payments (GlobeNewswire)
 - 1 hour **LOGI** New Zone Vibe Pro: Logitech's All-Day Headset That Shifts Between Work and Life (Business Wire)
@@ -301,8 +303,6 @@ COLD (1w):
 - 1 hour **FIS** Kredittbanken Selects FIS Total Issuing PRIME in the Cloud to Modernize its Platform (Business Wire)
 - 1 hour **CVX,CHAR** Chariot says production pivot set to deliver cashflow in 2027 (Proactive)
 - 1 hour **ASTS,GLW,VZ,SPCX,T** ASTS Stock Rises Overnight: Partner AT&T Questions SpaceXs Plan To Disrupt Wireless Carriers (Stocktwits)
-- 1 hour **AEG** Active Energy highlights growth in UAE venture in first half (Proactive)
-- 1 hour **ELF** rhode Launches at Sephora in Europe, Marking Its First Retail Presence Across 19 New Markets (Business Wire)
 
 ## NOTES
 - Captains = top 2 by market cap. RUT needs ≥ $5m 20-day dollar volume.

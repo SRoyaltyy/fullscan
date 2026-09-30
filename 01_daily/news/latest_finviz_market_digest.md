@@ -1,6 +1,6 @@
 # Finviz homepage market digest — 2026-09-30
 
-**Generated:** 2026-09-30T04:14:59.188541-04:00 (America/New_York)
+**Generated:** 2026-09-30T04:20:52.325544-04:00 (America/New_York)
 **Source:** `live`
 **Banner:** US stocks set to open higher as futures gain ahead of ADP jobs report, GDP update and core PCE inflation data
 **Prior close:** SPX —  Nasdaq —  Dow —
