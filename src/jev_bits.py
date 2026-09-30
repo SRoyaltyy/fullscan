@@ -237,8 +237,8 @@ BIT_QUESTIONS: dict = {
         ),
         "criteria": {
             "true": (
-                "Nasdaq to Buy Dark Pool Stock Venue LeveL. "
-                "Guardant ordered to pay $245m."
+                "Apple ordered to pay $5.7bn in haptic tech patent case. "
+                "Oura becomes latest US IPO hopeful to delay listing."
             ),
             "false": (
                 "Capita Flags CSPS Costs but Touts Contract Wins. "
