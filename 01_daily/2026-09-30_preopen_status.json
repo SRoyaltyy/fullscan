@@ -1,0 +1,116 @@
+{
+  "date": "2026-09-30",
+  "generated_at": "2026-09-30T07:06:00-04:00",
+  "run_id": "36688284790",
+  "runner": "ecs-openclaw",
+  "all_ok": false,
+  "qc_all_ok": false,
+  "book_ok": true,
+  "grok_ok": false,
+  "grok_fails": [
+    {
+      "path": "(review)",
+      "reason": "empty_review_reply"
+    }
+  ],
+  "missing_required": [
+    "sector_predict"
+  ],
+  "qc": {
+    "sector_n_ok": 0,
+    "sector_n_total": 11,
+    "items": [
+      {
+        "kind": "sector_predict",
+        "ok": false,
+        "reason": "missing",
+        "path": "01_daily/sectors/2026-09-30/basic_materials_predict.md",
+        "size": 0
+      },
+      {
+        "kind": "sector_predict",
+        "ok": false,
+        "reason": "missing",
+        "path": "01_daily/sectors/2026-09-30/communication_services_predict.md",
+        "size": 0
+      },
+      {
+        "kind": "sector_predict",
+        "ok": false,
+        "reason": "missing",
+        "path": "01_daily/sectors/2026-09-30/consumer_cyclical_predict.md",
+        "size": 0
+      },
+      {
+        "kind": "sector_predict",
+        "ok": false,
+        "reason": "missing",
+        "path": "01_daily/sectors/2026-09-30/consumer_defensive_predict.md",
+        "size": 0
+      },
+      {
+        "kind": "sector_predict",
+        "ok": false,
+        "reason": "missing",
+        "path": "01_daily/sectors/2026-09-30/energy_predict.md",
+        "size": 0
+      },
+      {
+        "kind": "sector_predict",
+        "ok": false,
+        "reason": "missing",
+        "path": "01_daily/sectors/2026-09-30/financial_predict.md",
+        "size": 0
+      },
+      {
+        "kind": "sector_predict",
+        "ok": false,
+        "reason": "missing",
+        "path": "01_daily/sectors/2026-09-30/healthcare_predict.md",
+        "size": 0
+      },
+      {
+        "kind": "sector_predict",
+        "ok": false,
+        "reason": "missing",
+        "path": "01_daily/sectors/2026-09-30/industrials_predict.md",
+        "size": 0
+      },
+      {
+        "kind": "sector_predict",
+        "ok": false,
+        "reason": "missing",
+        "path": "01_daily/sectors/2026-09-30/real_estate_predict.md",
+        "size": 0
+      },
+      {
+        "kind": "sector_predict",
+        "ok": false,
+        "reason": "missing",
+        "path": "01_daily/sectors/2026-09-30/technology_predict.md",
+        "size": 0
+      },
+      {
+        "kind": "sector_predict",
+        "ok": false,
+        "reason": "missing",
+        "path": "01_daily/sectors/2026-09-30/utilities_predict.md",
+        "size": 0
+      }
+    ]
+  },
+  "github_runs": [
+    {
+      "workflow": "preopen_all.yml",
+      "n_today": 1,
+      "latest": {
+        "id": 36688284790,
+        "status": "completed",
+        "conclusion": "failure",
+        "event": "workflow_dispatch",
+        "html_url": "https://github.com/SRoyaltyy/fullscan/actions/runs/36688284790"
+      }
+    }
+  ],
+  "restamp_note": "Status restamp only. Pre-Open 36688284790 finished failure. Essays were not re-run and stay 0/11. grok_ok stays false. No second Pre-Open."
+}
