@@ -1,6 +1,6 @@
 {
   "date": "2026-09-30",
-  "generated_at": "2026-09-30T05:34:32.480713-04:00",
+  "generated_at": "2026-09-30T05:36:05.326302-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -560,19 +560,19 @@
           "path": "01_daily/weather/2026-09-30_weather.json",
           "role": "required",
           "status": "OK",
-          "reason": "sectors=11 bytes=9568 vix=falling yields=rising",
-          "size": 9568,
-          "said": "hostile 11",
+          "reason": "sectors=11 bytes=9762 vix=falling yields=rising",
+          "size": 9762,
+          "said": "favorable 1 \u00b7 hostile 10",
           "bullets": [
-            "hostile: Basic Materials, Communication Services, Consumer Cyclical, Consumer Defensive, Energy, Financial, Healthcare, Industrials, Real Estate, Technology, Utilities",
-            "events bull 4 / bear 1"
+            "hostile: Basic Materials, Communication Services, Consumer Cyclical, Consumer Defensive, Energy, Financial, Healthcare, Real Estate, Technology, Utilities",
+            "events bull 3 / bear 2"
           ]
         }
       ],
-      "said": "hostile 11",
+      "said": "favorable 1 \u00b7 hostile 10",
       "bullets": [
-        "hostile: Basic Materials, Communication Services, Consumer Cyclical, Consumer Defensive, Energy, Financial, Healthcare, Industrials, Real Estate, Technology, Utilities",
-        "events bull 4 / bear 1"
+        "hostile: Basic Materials, Communication Services, Consumer Cyclical, Consumer Defensive, Energy, Financial, Healthcare, Real Estate, Technology, Utilities",
+        "events bull 3 / bear 2"
       ]
     },
     {
@@ -773,12 +773,12 @@
           "path": "01_daily/weather/2026-09-30_weather.json",
           "role": "input",
           "status": "OK",
-          "reason": "sectors=11 bytes=9568 vix=falling yields=rising",
-          "size": 9568,
-          "said": "hostile 11",
+          "reason": "sectors=11 bytes=9762 vix=falling yields=rising",
+          "size": 9762,
+          "said": "favorable 1 \u00b7 hostile 10",
           "bullets": [
-            "hostile: Basic Materials, Communication Services, Consumer Cyclical, Consumer Defensive, Energy, Financial, Healthcare, Industrials, Real Estate, Technology, Utilities",
-            "events bull 4 / bear 1"
+            "hostile: Basic Materials, Communication Services, Consumer Cyclical, Consumer Defensive, Energy, Financial, Healthcare, Real Estate, Technology, Utilities",
+            "events bull 3 / bear 2"
           ]
         },
         {
@@ -799,10 +799,10 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=5903",
-          "size": 2313491,
-          "said": "200 rows",
+          "size": 2320488,
+          "said": "204 rows",
           "bullets": [
-            "EXEL, BPOP, REGN, TAL, NUTX, GLBE, ANF, ALL"
+            "FIX, ASC, NVT, GTES, SBLK, MATX, EMBJ, ELMT"
           ]
         },
         {
@@ -875,9 +875,9 @@
           "bullets": []
         }
       ],
-      "said": "200 rows",
+      "said": "204 rows",
       "bullets": [
-        "EXEL, BPOP, REGN, TAL, NUTX"
+        "FIX, ASC, NVT, GTES, SBLK"
       ]
     },
     {
@@ -989,10 +989,10 @@
       ]
     },
     "weather": {
-      "said": "hostile 11",
+      "said": "favorable 1 \u00b7 hostile 10",
       "bullets": [
-        "hostile: Basic Materials, Communication Services, Consumer Cyclical, Consumer Defensive, Energy, Financial, Healthcare, Industrials, Real Estate, Technology, Utilities",
-        "events bull 4 / bear 1"
+        "hostile: Basic Materials, Communication Services, Consumer Cyclical, Consumer Defensive, Energy, Financial, Healthcare, Real Estate, Technology, Utilities",
+        "events bull 3 / bear 2"
       ]
     }
   },
@@ -1531,6 +1531,31 @@
         }
       ],
       "preview": "keys: date, phase, passthrough, source_baseline_generated_at, generated_at, n_targets, n_cards, n_refreshed, evidence_errors, morning_refresh_errors, cards, size_gate \u00b7 # MAP HEAT RESEARCH \u2014 2026-09-30\n142 captain cards \u00b7 size_gate=True set by pre-open refresh"
+    },
+    {
+      "key": "finviz",
+      "title": "Finviz universe export",
+      "date": "2026-09-30",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-30T05:36:04.571497-04:00",
+      "files": [
+        {
+          "path": "data/exports/finviz_2026-09-30.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11030866,
+          "preview": "11686 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC"
+        },
+        {
+          "path": "data/finviz/latest.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11481957,
+          "preview": "11686 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+        }
+      ],
+      "preview": "11686 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC \u00b7 11686 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
     }
   ],
   "href": {
