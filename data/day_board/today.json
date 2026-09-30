@@ -1,6 +1,6 @@
 {
   "date": "2026-09-30",
-  "generated_at": "2026-09-30T14:42:47.513289-04:00",
+  "generated_at": "2026-09-30T16:19:14.730501-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -11,122 +11,58 @@
   },
   "buy_1d": [
     {
-      "ticker": "SN",
-      "score": 0.4073457967320305
-    },
-    {
-      "ticker": "MHK",
-      "score": 0.7690725311979123
-    },
-    {
-      "ticker": "FIGS",
-      "score": 0.700516669665681
-    },
-    {
-      "ticker": "CAKE",
-      "score": 0.7023634212459011
+      "ticker": "AMN",
+      "score": 0.611244210274493
     },
     {
       "ticker": "AVPT",
-      "score": 0.7487675669305989
+      "score": 0.7733844288336755
     },
     {
-      "ticker": "CORT",
-      "score": 0.2723342622063239
+      "ticker": "MD",
+      "score": 0.4705764124026185
     },
     {
-      "ticker": "CDNA",
-      "score": 0.7190083106914829
+      "ticker": "RELY",
+      "score": 0.5911221390096641
     },
     {
-      "ticker": "ETON",
-      "score": 0.6605912863927867
-    },
-    {
-      "ticker": "IT",
-      "score": 0.47574890489589805
-    },
-    {
-      "ticker": "ADMA",
-      "score": 0.658997842304293
-    },
-    {
-      "ticker": "RXO",
-      "score": 0.6007827788450852
-    },
-    {
-      "ticker": "VLO",
-      "score": 0.2507881051923505
-    },
-    {
-      "ticker": "PAYS",
-      "score": 0.5751296908386978
-    },
-    {
-      "ticker": "GDYN",
-      "score": 0.5304861503282776
+      "ticker": "FTNT",
+      "score": 0.11542025277020634
     }
   ],
   "sell_1d": [
     {
-      "ticker": "ROIV",
-      "score": -0.4328038252769715
+      "ticker": "OKLO",
+      "score": -0.23725331239652048
     },
     {
-      "ticker": "RBLX",
-      "score": -0.4068206368673203
+      "ticker": "NEOV",
+      "score": -0.02356831439580255
     },
     {
-      "ticker": "VSAT",
-      "score": -0.38374260458794995
+      "ticker": "NRGV",
+      "score": -0.32507482194020837
     },
     {
-      "ticker": "BIDU",
-      "score": -0.375740435478367
+      "ticker": "INDI",
+      "score": -0.17248055241321286
     },
     {
-      "ticker": "SOC",
-      "score": -0.36953275173989925
+      "ticker": "NNDM",
+      "score": 0.1797296030331017
     },
     {
-      "ticker": "AXSM",
-      "score": -0.35541631324806167
+      "ticker": "HNRG",
+      "score": -0.2348037316639055
     },
     {
-      "ticker": "GH",
-      "score": -0.3516493457938129
+      "ticker": "METC",
+      "score": -0.29763564271862597
     },
     {
-      "ticker": "BAK",
-      "score": -0.34650180543090925
-    },
-    {
-      "ticker": "CMTG",
-      "score": -0.34227628736380966
-    },
-    {
-      "ticker": "SKHY",
-      "score": -0.3408454051262758
-    },
-    {
-      "ticker": "GOGO",
-      "score": -0.34037882877149644
-    },
-    {
-      "ticker": "RC",
-      "score": -0.334586977063431
-    },
-    {
-      "ticker": "LFMD",
-      "score": -0.331936248684064
-    },
-    {
-      "ticker": "NRXP",
-      "score": -0.32989201678100877
-    },
-    {
-      "ticker": "AIRS",
-      "score": -0.32915882858277057
+      "ticker": "FCEL",
+      "score": 0.019886510814705563
     }
   ],
   "flatten": {
