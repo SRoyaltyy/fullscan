@@ -144,12 +144,9 @@ def main(argv: list[str] | None = None) -> int:
         print(f"JEV_SIXBIT_STOP_PASS={int(report['pass'])}")
         out_dir = Path(__file__).resolve().parent.parent / "00_grounding" / "jev_train"
         if out_dir.is_dir():
-            slim = {k: report[k] for k in report if k != "rows"}
-            slim["misses"] = [
-                row for row in report["rows"] if row["gold"] != row["pred"]
-            ]
+            payload = {k: report[k] for k in report}
             (out_dir / "sixbit_stop.json").write_text(
-                json.dumps(slim, indent=2, ensure_ascii=False) + "\n",
+                json.dumps(payload, indent=2, ensure_ascii=False) + "\n",
                 encoding="utf-8",
             )
         return 0 if report["pass"] else 3
