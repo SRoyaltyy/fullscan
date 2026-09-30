@@ -32,6 +32,7 @@
  th{color:var(--mut);font-size:12px;font-weight:600;position:sticky;top:0;background:#121826}
  td.n{color:var(--dim);width:2.5rem}
  td.title{min-width:220px}
+ td.when{color:var(--mut);font-size:12px;white-space:nowrap}
  .jev{font-weight:700}
  .jev.KEEP{color:var(--pos)}
  .jev.DROP{color:var(--neg)}
@@ -48,33 +49,41 @@
  .count{color:var(--mut)}
  .empty{padding:16px;border:1px dashed var(--line);border-radius:10px;color:var(--mut)}
  .warn{color:var(--gold)}
+ .days{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 12px}
+ .days button{padding:4px 9px;font-size:12px;border-radius:999px;background:var(--chip)}
+ .days button.on{background:#1d4ed8;border-color:#1d4ed8;color:#fff}
+ .days .kind{color:var(--dim);font-size:10px;margin-left:4px}
 </style>
 </head>
 <body>
 <div class="wrap">
  <h1>Jev train</h1>
- <p class="sub">Grade hop-0 like homework. K keep, D drop, ? skip. Mixed draw stays available. Train by day loads that calendar day's parse (parsed, else digest, else judge titles). Submit needs 30 K/D marks.</p>
+ <p class="sub">Grade hop-0 like homework. K keep, D drop, ? skip. Click a scan date to show only titles from that parse day. Mixed draw stays available. Load that day runs Jev on that day's full parse. Submit needs 30 K/D marks.</p>
  <div class="bar">
   <button type="button" id="newDraw">New draw</button>
   <button type="button" id="reload">Reload draw</button>
   <label>Train by day <input id="dayPick" type="date" list="dayList"></label>
   <datalist id="dayList"></datalist>
-  <button type="button" id="loadDay">Load that day</button>
+  <button type="button" id="filterDay">Show that date</button>
+  <button type="button" id="clearDay">All dates</button>
+  <button type="button" id="loadDay">Load that day (Jev)</button>
   <label>GitHub token <input id="token" type="password" autocomplete="off" placeholder="workflow scope, this tab only"></label>
   <button type="button" id="clearToken">Clear</button>
  </div>
+ <div class="days" id="dayChips" aria-label="scan dates"></div>
  <p class="meta" id="meta">No draw loaded.</p>
  <p class="err" id="err"></p>
  <div class="done" id="done" hidden>
   <p>Paste this to Grok to discuss.</p>
   <a id="issueUrl" href="" target="_blank" rel="noopener"></a>
  </div>
- <div class="empty" id="empty">No draw yet. New draw is the mixed sample. Load that day grades one parse date.</div>
+ <div class="empty" id="empty">No draw yet. New draw is the mixed sample. A date chip filters titles already on the page. Load that day grades one parse date.</div>
  <div style="overflow-x:auto">
   <table id="sheet" hidden>
    <thead>
     <tr>
      <th>#</th>
+     <th>date</th>
      <th>title</th>
      <th>source</th>
      <th>Jev</th>
