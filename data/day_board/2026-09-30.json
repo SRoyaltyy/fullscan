@@ -1,6 +1,6 @@
 {
   "date": "2026-09-30",
-  "generated_at": "2026-09-30T12:32:12.704603-04:00",
+  "generated_at": "2026-09-30T14:33:14.179987-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -847,7 +847,7 @@
           "size": 73450,
           "said": "Stock book \u2014 2026-09-30",
           "bullets": [
-            "_Generated 2026-09-30T12:32:10.383563-04:00_",
+            "_Generated 2026-09-30T13:42:38.836434-04:00_",
             "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
           ]
         },
@@ -1786,7 +1786,7 @@
       "date": "2026-09-30",
       "ok": true,
       "pushed": true,
-      "at": "2026-09-30T12:10:27.071031-04:00",
+      "at": "2026-09-30T14:33:13.591903-04:00",
       "files": [
         {
           "path": "01_daily/weather/2026-09-30_weather.json",
