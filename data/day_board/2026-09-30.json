@@ -1,6 +1,6 @@
 {
   "date": "2026-09-30",
-  "generated_at": "2026-09-30T05:44:36.204850-04:00",
+  "generated_at": "2026-09-30T05:54:28.985024-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -94,12 +94,12 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 97751,
-          "said": "5890 tickers \u00b7 2008 signals \u00b7 top AEM, AJG, AME, AMGN, AMX, AON, APH, APO",
+          "size": 97081,
+          "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
           "bullets": [
+            "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
             "Agnico Eagle Shares Fall 4.9% as Gold Prices Decline",
-            "Banks have profited from idle cash for years. AI agents could change that.",
-            "AMETEK Completes Acquisition of Indicor Instrumentation"
+            "Banks have profited from idle cash for years. AI agents could change that."
           ]
         },
         {
@@ -109,10 +109,10 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 11887,
+          "size": 11893,
           "said": "Finviz Daily Digest \u2014 2026-09-30",
           "bullets": [
-            "_Generated 2026-09-30T04:20:44.615025-04:00 \u00b7 export=data/exports/finviz_2026-09-29.csv \u00b7 ticker digests=5890 \u00b7 high-signal=2008_",
+            "_Generated 2026-09-30T05:40:32.094815-04:00 \u00b7 export=data/exports/finviz_2026-09-30.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_",
             "Major indices (live quote page)"
           ]
         },
@@ -123,8 +123,8 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 4532,
-          "said": "US stocks set to open higher as futures gain ahead of ADP jobs report, GDP update and core PCE inflation data \u00b7 leaders JBL, FDS, CAG, CALM \u00b7 good",
+          "size": 6248,
+          "said": "US futures point to a modestly higher open as Treasury yields ease ahead of core PCE inflation and Q2 GDP data \u00b7 leaders GS, FDS, JBL, CAG \u00b7 good",
           "bullets": []
         },
         {
@@ -134,10 +134,10 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 2170,
+          "size": 2915,
           "said": "Finviz homepage market digest \u2014 2026-09-30",
           "bullets": [
-            "Generated:** 2026-09-30T04:20:52.325544-04:00 (America/New_York)",
+            "Generated:** 2026-09-30T05:40:46.583321-04:00 (America/New_York)",
             "Source:** `live`"
           ]
         },
@@ -164,11 +164,11 @@
           "bullets": []
         }
       ],
-      "said": "5890 tickers \u00b7 2008 signals \u00b7 top AEM, AJG, AME, AMGN, AMX, AON, APH, APO",
+      "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
       "bullets": [
+        "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
         "Agnico Eagle Shares Fall 4.9% as Gold Prices Decline",
-        "Banks have profited from idle cash for years. AI agents could change that.",
-        "AMETEK Completes Acquisition of Indicor Instrumentation"
+        "Banks have profited from idle cash for years. AI agents could change that."
       ]
     },
     {
@@ -189,12 +189,12 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 97751,
-          "said": "5890 tickers \u00b7 2008 signals \u00b7 top AEM, AJG, AME, AMGN, AMX, AON, APH, APO",
+          "size": 97081,
+          "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
           "bullets": [
+            "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
             "Agnico Eagle Shares Fall 4.9% as Gold Prices Decline",
-            "Banks have profited from idle cash for years. AI agents could change that.",
-            "AMETEK Completes Acquisition of Indicor Instrumentation"
+            "Banks have profited from idle cash for years. AI agents could change that."
           ]
         },
         {
@@ -204,8 +204,8 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 4532,
-          "said": "US stocks set to open higher as futures gain ahead of ADP jobs report, GDP update and core PCE inflation data \u00b7 leaders JBL, FDS, CAG, CALM \u00b7 good",
+          "size": 6248,
+          "said": "US futures point to a modestly higher open as Treasury yields ease ahead of core PCE inflation and Q2 GDP data \u00b7 leaders GS, FDS, JBL, CAG \u00b7 good",
           "bullets": []
         },
         {
@@ -359,11 +359,11 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 7532,
-          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 13 fail",
+          "size": 7529,
+          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 12 fail",
           "bullets": [
             "finviz_market_digest:missing",
-            "map_heat_research:missing",
+            "sector_predict:missing",
             "sector_predict:missing",
             "sector_predict:missing"
           ]
@@ -386,7 +386,7 @@
           "role": "required",
           "status": "OK",
           "reason": "ok=False Grok returned an empty review",
-          "size": 308,
+          "size": 309,
           "said": "ok=False \u00b7 empty_review_reply (review)",
           "bullets": [
             "Grok returned an empty review"
@@ -546,12 +546,12 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 97751,
-          "said": "5890 tickers \u00b7 2008 signals \u00b7 top AEM, AJG, AME, AMGN, AMX, AON, APH, APO",
+          "size": 97081,
+          "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
           "bullets": [
+            "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
             "Agnico Eagle Shares Fall 4.9% as Gold Prices Decline",
-            "Banks have profited from idle cash for years. AI agents could change that.",
-            "AMETEK Completes Acquisition of Indicor Instrumentation"
+            "Banks have profited from idle cash for years. AI agents could change that."
           ]
         },
         {
@@ -560,19 +560,19 @@
           "path": "01_daily/weather/2026-09-30_weather.json",
           "role": "required",
           "status": "OK",
-          "reason": "sectors=11 bytes=9712 vix=falling yields=rising",
-          "size": 9712,
+          "reason": "sectors=11 bytes=9734 vix=falling yields=rising",
+          "size": 9734,
           "said": "favorable 1 \u00b7 hostile 8 \u00b7 neutral 2",
           "bullets": [
             "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Real Estate, Technology, Utilities",
-            "events bull 3 / bear 2"
+            "events bull 4 / bear 1"
           ]
         }
       ],
       "said": "favorable 1 \u00b7 hostile 8 \u00b7 neutral 2",
       "bullets": [
         "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Real Estate, Technology, Utilities",
-        "events bull 3 / bear 2"
+        "events bull 4 / bear 1"
       ]
     },
     {
@@ -652,12 +652,12 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 97751,
-          "said": "5890 tickers \u00b7 2008 signals \u00b7 top AEM, AJG, AME, AMGN, AMX, AON, APH, APO",
+          "size": 97081,
+          "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
           "bullets": [
+            "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
             "Agnico Eagle Shares Fall 4.9% as Gold Prices Decline",
-            "Banks have profited from idle cash for years. AI agents could change that.",
-            "AMETEK Completes Acquisition of Indicor Instrumentation"
+            "Banks have profited from idle cash for years. AI agents could change that."
           ]
         },
         {
@@ -750,12 +750,12 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 97751,
-          "said": "5890 tickers \u00b7 2008 signals \u00b7 top AEM, AJG, AME, AMGN, AMX, AON, APH, APO",
+          "size": 97081,
+          "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
           "bullets": [
+            "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
             "Agnico Eagle Shares Fall 4.9% as Gold Prices Decline",
-            "Banks have profited from idle cash for years. AI agents could change that.",
-            "AMETEK Completes Acquisition of Indicor Instrumentation"
+            "Banks have profited from idle cash for years. AI agents could change that."
           ]
         },
         {
@@ -779,12 +779,12 @@
           "path": "01_daily/weather/2026-09-30_weather.json",
           "role": "input",
           "status": "OK",
-          "reason": "sectors=11 bytes=9712 vix=falling yields=rising",
-          "size": 9712,
+          "reason": "sectors=11 bytes=9734 vix=falling yields=rising",
+          "size": 9734,
           "said": "favorable 1 \u00b7 hostile 8 \u00b7 neutral 2",
           "bullets": [
             "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Real Estate, Technology, Utilities",
-            "events bull 3 / bear 2"
+            "events bull 4 / bear 1"
           ]
         },
         {
@@ -806,11 +806,11 @@
           "path": "data/join/2026-09-30_ranked.csv",
           "role": "required",
           "status": "OK",
-          "reason": "rows=5903",
-          "size": 2280317,
+          "reason": "rows=5901",
+          "size": 2279323,
           "said": "204 rows",
           "bullets": [
-            "FIX, ASC, NVT, GTES, SBLK, MATX, EMBJ, ELMT"
+            "MATX, EMBJ, IESC, NVT, SBLK, ASC, GTES, FIX"
           ]
         },
         {
@@ -832,9 +832,9 @@
           "path": "data/stock_book/2026-09-30_stock_book.json",
           "role": "required",
           "status": "OK",
-          "reason": "horizons=5 names=200",
-          "size": 1452327,
-          "said": "1d BUY SN, MHK, FIGS, CAKE, AVPT, IT, CORT, CDNA \u00b7 SELL RBLX, BIDU, SOC, GH, CMTG, BAK \u00b7 0.49299999999999994",
+          "reason": "horizons=5 names=195",
+          "size": 1435085,
+          "said": "1d BUY SN, MHK, FIGS, CAKE, AVPT, CORT, CDNA, ETON \u00b7 SELL ROIV, RBLX, VSAT, BIDU, SOC, AXSM \u00b7 0.49299999999999994",
           "bullets": []
         },
         {
@@ -844,10 +844,10 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 76554,
+          "size": 73103,
           "said": "Stock book \u2014 2026-09-30",
           "bullets": [
-            "_Generated 2026-09-30T05:44:33.299915-04:00_",
+            "_Generated 2026-09-30T05:49:42.686615-04:00_",
             "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
           ]
         },
@@ -858,8 +858,8 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 2174,
-          "said": "132 green \u00b7 GTES, EMBJ, AAON, PWR, TRI, DLB, CNH, VVX, DY, CRS",
+          "size": 2187,
+          "said": "133 green \u00b7 EMBJ, GTES, AAON, CXW, PWR, TRI, WMS, CNH, DLB, VVX",
           "bullets": []
         },
         {
@@ -882,15 +882,15 @@
           "path": "dashboard/index.html",
           "role": "optional",
           "status": "OK",
-          "reason": "live-book poller + 2026-09-30_suggestions.json (2026-09-30)",
+          "reason": "live-book poller + today.json (2026-09-30)",
           "size": 8945021,
-          "said": "live-book poller + 2026-09-30_suggestions.json (2026-09-30)",
+          "said": "live-book poller + today.json (2026-09-30)",
           "bullets": []
         }
       ],
       "said": "204 rows",
       "bullets": [
-        "FIX, ASC, NVT, GTES, SBLK"
+        "MATX, EMBJ, IESC, NVT, SBLK"
       ]
     },
     {
@@ -910,9 +910,9 @@
           "path": "data/stock_book/2026-09-30_stock_book.json",
           "role": "input",
           "status": "OK",
-          "reason": "horizons=5 names=200",
-          "size": 1452327,
-          "said": "1d BUY SN, MHK, FIGS, CAKE, AVPT, IT, CORT, CDNA \u00b7 SELL RBLX, BIDU, SOC, GH, CMTG, BAK \u00b7 0.49299999999999994",
+          "reason": "horizons=5 names=195",
+          "size": 1435085,
+          "said": "1d BUY SN, MHK, FIGS, CAKE, AVPT, CORT, CDNA, ETON \u00b7 SELL ROIV, RBLX, VSAT, BIDU, SOC, AXSM \u00b7 0.49299999999999994",
           "bullets": []
         },
         {
@@ -921,9 +921,9 @@
           "path": "dashboard/index.html",
           "role": "required",
           "status": "OK",
-          "reason": "live-book poller + 2026-09-30_suggestions.json (2026-09-30)",
+          "reason": "live-book poller + today.json (2026-09-30)",
           "size": 8945021,
-          "said": "live-book poller + 2026-09-30_suggestions.json (2026-09-30)",
+          "said": "live-book poller + today.json (2026-09-30)",
           "bullets": []
         },
         {
@@ -962,128 +962,130 @@
     "buy_1d": [
       {
         "ticker": "SN",
-        "score": 0.4075915074669561
+        "score": 0.4073457967320305
       },
       {
         "ticker": "MHK",
-        "score": 0.7694203860317406
+        "score": 0.7690725311979123
       },
       {
         "ticker": "FIGS",
-        "score": 0.7006328271818087
+        "score": 0.700516669665681
       },
       {
         "ticker": "CAKE",
-        "score": 0.702926102878515
+        "score": 0.7023634212459011
       },
       {
         "ticker": "AVPT",
-        "score": 0.7498576632051368
-      },
-      {
-        "ticker": "IT",
-        "score": 0.49158274518004974
+        "score": 0.7487675669305989
       },
       {
         "ticker": "CORT",
-        "score": 0.2735845857622498
+        "score": 0.2723342622063239
       },
       {
         "ticker": "CDNA",
-        "score": 0.7207076437952746
+        "score": 0.7190083106914829
       },
       {
         "ticker": "ETON",
-        "score": 0.662121393867612
+        "score": 0.6605912863927867
+      },
+      {
+        "ticker": "IT",
+        "score": 0.47574890489589805
       },
       {
         "ticker": "ADMA",
-        "score": 0.6602978916412126
+        "score": 0.658997842304293
       },
       {
         "ticker": "RXO",
-        "score": 0.600940748946456
+        "score": 0.6007827788450852
       },
       {
         "ticker": "VLO",
-        "score": 0.2524565967327298
+        "score": 0.2507881051923505
       },
       {
         "ticker": "PAYS",
-        "score": 0.5766041533574494
+        "score": 0.5751296908386978
       },
       {
-        "ticker": "QNST",
-        "score": 0.5507184913066006
-      },
-      {
-        "ticker": "RELY",
-        "score": 0.5648094626042475
+        "ticker": "GDYN",
+        "score": 0.5304861503282776
       }
     ],
     "sell_1d": [
       {
+        "ticker": "ROIV",
+        "score": -0.4328038252769715
+      },
+      {
         "ticker": "RBLX",
-        "score": -0.40658606399833397
+        "score": -0.4068206368673203
+      },
+      {
+        "ticker": "VSAT",
+        "score": -0.38374260458794995
       },
       {
         "ticker": "BIDU",
-        "score": -0.3784058918986275
+        "score": -0.375740435478367
       },
       {
         "ticker": "SOC",
-        "score": -0.36685959384696903
+        "score": -0.36953275173989925
+      },
+      {
+        "ticker": "AXSM",
+        "score": -0.35541631324806167
       },
       {
         "ticker": "GH",
-        "score": -0.3507471260110735
-      },
-      {
-        "ticker": "CMTG",
-        "score": -0.34721250537525694
+        "score": -0.3516493457938129
       },
       {
         "ticker": "BAK",
-        "score": -0.3454453076393602
+        "score": -0.34650180543090925
+      },
+      {
+        "ticker": "CMTG",
+        "score": -0.34227628736380966
+      },
+      {
+        "ticker": "SKHY",
+        "score": -0.3408454051262758
       },
       {
         "ticker": "GOGO",
-        "score": -0.33961911048893584
-      },
-      {
-        "ticker": "META",
-        "score": -0.33503239960827247
+        "score": -0.34037882877149644
       },
       {
         "ticker": "RC",
-        "score": -0.3337376121741831
+        "score": -0.334586977063431
       },
       {
         "ticker": "LFMD",
-        "score": -0.3311765304015034
+        "score": -0.331936248684064
       },
       {
         "ticker": "NRXP",
-        "score": -0.32890825450331485
-      },
-      {
-        "ticker": "VNET",
-        "score": -0.328500556719394
+        "score": -0.32989201678100877
       },
       {
         "ticker": "AIRS",
-        "score": -0.3283244799238284
-      },
-      {
-        "ticker": "ROIV",
-        "score": -0.32257714374752317
-      },
-      {
-        "ticker": "WVE",
-        "score": -0.32167366585912543
+        "score": -0.32915882858277057
       }
     ],
-    "flatten": {},
+    "flatten": {
+      "said": "0 priced buys \u00b7 cash $21,070.91",
+      "bullets": [
+        "0 priced buys",
+        "cash $21,070.91"
+      ]
+    },
     "general": {
       "said": "UP  2.009",
       "bullets": [
@@ -1127,7 +1129,7 @@
       "said": "favorable 1 \u00b7 hostile 8 \u00b7 neutral 2",
       "bullets": [
         "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Real Estate, Technology, Utilities",
-        "events bull 3 / bear 2"
+        "events bull 4 / bear 1"
       ]
     }
   },
@@ -1777,6 +1779,31 @@
         }
       ],
       "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 GMAB, FPI, KBR, PBR-A, ATRC \u00b7 2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 ATRC, FIGS, WST, LLY, CVLT"
+    },
+    {
+      "key": "weather",
+      "title": "Weather / regime",
+      "date": "2026-09-30",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-30T05:54:27.923471-04:00",
+      "files": [
+        {
+          "path": "01_daily/weather/2026-09-30_weather.json",
+          "ok": true,
+          "reason": "",
+          "size": 9734,
+          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}"
+        },
+        {
+          "path": "01_daily/weather/2026-09-30_weather.md",
+          "ok": true,
+          "reason": "",
+          "size": 5357,
+          "preview": "# Weather report \u2014 2026-09-30\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+        }
+      ],
+      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-09-30\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
     }
   ],
   "href": {

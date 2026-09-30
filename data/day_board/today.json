@@ -1,6 +1,6 @@
 {
   "date": "2026-09-30",
-  "generated_at": "2026-09-30T05:49:45.628886-04:00",
+  "generated_at": "2026-09-30T05:54:28.985024-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -166,24 +166,6 @@
   },
   "lands": [
     {
-      "key": "general_predict",
-      "title": "General market predict",
-      "date": "2026-09-30",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-30T04:46:47.824689-04:00",
-      "files": [
-        {
-          "path": "01_daily/general/2026-09-30_predict.md",
-          "ok": true,
-          "reason": "",
-          "size": 15785,
-          "preview": "# Premarket Prediction \u2014 2026-09-30\n- news_mode: **on**\n> ## \ud83d\udccb SNAPSHOT (human-readable)\n>\n> **Prediction: UP \ud83d\udcc8 \u2014 MILD** | total score 2.009 (uncertainty multiplier \u00d71.1) | confidence 0.58\n>\n> **Good news vs bad news:** good +1.5 pts vs bad -2.0 pts \u2192 bad news outweighs good\n>\n> **Good news driving this:**\n> - Asia composite +0.61%\n> - China PMI back above 50\n> - Brent offered\n> - Williams no Oct urgency\n> - DXY 1d soft\n>\n> **Bad news driving this:**\n> - 1w 10Y +28bp at 5.24\n> - 30Y multi-decade high\n> - Barr still hike-leaning\n> - leftover Hormuz\n> - PCE 8:30 unsigned\n>\n> **market uncertainty: **elevated** | VIX 15.92 | policy-uncertainty index 193.14 (1d -264.77)**\n>\n> **Factor scoreboard** (score \u00d7 weight = contribution):\n> - \ud83d\udfe2 Asia overnight session: +0.5 \u00d7 2.0 = +1.0\n> - \u26aa Europe session: +0.0 \u00d7 2.0 = +0.0\n> - \u26aa Overnight news & catalysts: +0.0 \u00d7 3.0 = +0.0\n> - \ud83d\udd34 Bond yields: -1.0 \u00d7"
-        }
-      ],
-      "preview": "# Premarket Prediction \u2014 2026-09-30\n- news_mode: **on**\n> ## \ud83d\udccb SNAPSHOT (human-readable)\n>\n> **Prediction: UP \ud83d\udcc8 \u2014 MILD** | total score 2.009 (uncertainty multiplier \u00d71.1) | confidence 0.58\n>\n> **Good news vs bad news:** good +1.5 pts vs bad -2.0 pts \u2192 bad news outweighs good\n>\n> **Good news driving this:**\n> - Asia composite +0.61%\n> - China PMI back above 50\n> - Brent offered\n> - Williams no Oct urgency\n> - DXY 1d soft\n>\n> **Bad news driving this:**\n> - 1w 10Y +28bp at 5.24\n> - 30Y multi-decade high\n> - Barr still hike-leaning\n> - leftover Hormuz\n> - PCE 8:30 unsigned\n>\n> **market uncertainty: **elevated** | VIX 15.92 | policy-uncertainty index 193.14 (1d -264.77)**\n>\n> **Factor scoreboard** (score \u00d7 weight = contribution):\n> - \ud83d\udfe2 Asia overnight session: +0.5 \u00d7 2.0 = +1.0\n> - \u26aa Europe session: +0.0 \u00d7 2.0 = +0.0\n> - \u26aa Overnight news & catalysts: +0.0 \u00d7 3.0 = +0.0\n> - \ud83d\udd34 Bond yields: -1.0 \u00d7"
-    },
-    {
       "key": "sector_board",
       "title": "Sector board",
       "date": "2026-09-30",
@@ -336,6 +318,31 @@
         }
       ],
       "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 GMAB, FPI, KBR, PBR-A, ATRC \u00b7 2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 ATRC, FIGS, WST, LLY, CVLT"
+    },
+    {
+      "key": "weather",
+      "title": "Weather / regime",
+      "date": "2026-09-30",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-30T05:54:27.923471-04:00",
+      "files": [
+        {
+          "path": "01_daily/weather/2026-09-30_weather.json",
+          "ok": true,
+          "reason": "",
+          "size": 9734,
+          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}"
+        },
+        {
+          "path": "01_daily/weather/2026-09-30_weather.md",
+          "ok": true,
+          "reason": "",
+          "size": 5357,
+          "preview": "# Weather report \u2014 2026-09-30\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+        }
+      ],
+      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-09-30\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
