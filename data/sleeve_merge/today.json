@@ -1,7 +1,7 @@
 {
   "date": "2026-09-30",
   "policy": "flatten_robust",
-  "generated": "2026-09-30T09:41:34",
+  "generated": "2026-09-30T09:56:15",
   "score": 2.009,
   "predict": "UP",
   "hard_red": false,
@@ -259,7 +259,7 @@
   "holds_after": [],
   "would_buy": {
     "equity": 101731.18,
-    "spent": 101377.18,
+    "spent": 101316.24,
     "source": "io 3d_size (holdings disregarded)",
     "clock": "16:00 ET",
     "sleeve": "io_core",
@@ -292,22 +292,6 @@
         "notional": 16928.34,
         "fee": 3.69,
         "cost": 16932.03,
-        "reason": "io 3d_size (holdings disregarded)",
-        "blocked": "cash tied",
-        "status": "would"
-      },
-      {
-        "date": "2026-09-30",
-        "clock": "16:00 ET",
-        "side": "BUY",
-        "ticker": "CRON",
-        "shares": 5016,
-        "px": 3.38,
-        "px_kind": "last_close",
-        "sleeve": "io_core",
-        "notional": 16954.08,
-        "fee": 64.71,
-        "cost": 17018.79,
         "reason": "io 3d_size (holdings disregarded)",
         "blocked": "cash tied",
         "status": "would"
@@ -356,6 +340,22 @@
         "notional": 16853.4,
         "fee": 2.4,
         "cost": 16855.79,
+        "reason": "io 3d_size (holdings disregarded)",
+        "blocked": "cash tied",
+        "status": "would"
+      },
+      {
+        "date": "2026-09-30",
+        "clock": "16:00 ET",
+        "side": "BUY",
+        "ticker": "FIGS",
+        "shares": 1205,
+        "px": 14.06,
+        "px_kind": "last_close",
+        "sleeve": "io_core",
+        "notional": 16942.3,
+        "fee": 15.54,
+        "cost": 16957.85,
         "reason": "io 3d_size (holdings disregarded)",
         "blocked": "cash tied",
         "status": "would"
