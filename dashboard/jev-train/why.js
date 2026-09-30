@@ -1,0 +1,93 @@
+/* Relabel the why-bits column on the trainer page.
+   Keep iff (done OR print OR spoke) AND NOT tip.
+   Old mapped tags (signed/lever/earnings/blast) are not shown. */
+(function () {
+  var SIX = ["tape", "soft", "tip", "done", "print", "spoke"];
+  var NOUL = 0.60;
+  var lastDraw = null;
+
+  function paintWhy(row) {
+    var reason = String((row && row.reason) || "").trim();
+    var noul = (row && row.noul) || {};
+    var on = [];
+    for (var i = 0; i < SIX.length; i++) {
+      var name = SIX[i];
+      var score = Number(noul[name]);
+      if (isFinite(score) && score >= NOUL) on.push(name);
+    }
+    if (!on.length && row && Array.isArray(row.bits)) {
+      for (var j = 0; j < SIX.length; j++) {
+        if (row.bits.indexOf(SIX[j]) !== -1) on.push(SIX[j]);
+      }
+    }
+    if (reason && SIX.indexOf(reason) !== -1 && on.indexOf(reason) === -1) {
+      on.unshift(reason);
+    }
+    if (reason && on.indexOf(reason) === -1) {
+      return on.length ? (reason + " · " + on.join(" ")) : reason;
+    }
+    return on.join(" ") || reason || "—";
+  }
+
+  function relabel() {
+    if (!lastDraw || !lastDraw.items) return;
+    var byId = {};
+    lastDraw.items.forEach(function (row) {
+      if (row && row.id) byId[row.id] = row;
+    });
+    document.querySelectorAll("#sheet tbody tr").forEach(function (tr) {
+      var row = byId[tr.dataset.id];
+      var td = tr.querySelector("td.bits");
+      if (row && td) td.textContent = paintWhy(row);
+    });
+  }
+
+  function remember(draw) {
+    if (draw && Array.isArray(draw.items)) lastDraw = draw;
+    relabel();
+  }
+
+  function hookApi() {
+    var api = window.JevTrain;
+    if (!api || api.__sixBitWhy) return;
+    api.__sixBitWhy = true;
+    api.paintWhy = paintWhy;
+    var show = api.showLocalDraw;
+    if (typeof show === "function") {
+      api.showLocalDraw = function (draw) {
+        var out = show.apply(this, arguments);
+        remember(draw);
+        return out;
+      };
+    }
+    var tbody = document.querySelector("#sheet tbody");
+    if (tbody) {
+      new MutationObserver(function () { relabel(); }).observe(tbody, { childList: true });
+    }
+  }
+
+  function loadDraw() {
+    var urls = [
+      "https://raw.githubusercontent.com/SRoyaltyy/fullscan/main/dashboard/jev-train/draw.json?t=" + Date.now(),
+      "draw.json?t=" + Date.now()
+    ];
+    urls.forEach(function (url) {
+      fetch(url, { cache: "no-store" }).then(function (res) {
+        if (!res.ok) return null;
+        return res.json();
+      }).then(function (data) {
+        if (data && Array.isArray(data.items)) remember(data);
+      }).catch(function () {});
+    });
+  }
+
+  function boot() {
+    hookApi();
+    loadDraw();
+  }
+
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", boot);
+  else boot();
+  setTimeout(boot, 0);
+  setTimeout(boot, 300);
+})();
