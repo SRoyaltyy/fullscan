@@ -172,6 +172,8 @@ def formula_reason(answers) -> tuple[str, str]:
 
 
 def decide(row: dict, answers=None) -> dict:
+    from .jev_why_bits import patch_train
+    patch_train()
     title = row.get("title") or ""
     source = row.get("source") or ""
     blob = f"{title} {source}"
