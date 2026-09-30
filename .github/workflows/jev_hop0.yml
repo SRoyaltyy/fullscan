@@ -73,6 +73,7 @@ jobs:
       - name: Unit tests (no key)
         run: |
           PYTHONPATH=. python3 -m src.test_jev_bits
+          PYTHONPATH=. python3 -m src.test_jev_sixbit_stop
       - name: Gold + capped harvest
         env:
           JEV_API_KEY: ${{ secrets.JEV_API_KEY }}
@@ -94,6 +95,16 @@ jobs:
           if [ "${{ github.event.inputs.mine }}" = "1" ]; then
             PYTHONPATH=. python3 -m src.jev_gate --mine
           fi
+      - name: Six-bit stop test (fresh unseen 100)
+        if: success()
+        continue-on-error: true
+        env:
+          JEV_API_KEY: ${{ secrets.JEV_API_KEY }}
+          TYPESAFE_API_KEY: ${{ secrets.JEV_API_KEY }}
+        run: |
+          set -euo pipefail
+          PYTHONPATH=. python3 -m src.jev_sixbit_stop --live \
+            | tee 03_scoreboard/JEV_SIXBIT_STOP.md
       - name: Preview
         if: always()
         run: |
@@ -109,3 +120,4 @@ jobs:
             01_daily/news/*jev_keep*
             01_daily/news/*jev_junk*
             03_scoreboard/JEV_GATE.md
+            03_scoreboard/JEV_SIXBIT_STOP.md
