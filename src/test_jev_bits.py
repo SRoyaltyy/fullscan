@@ -1,13 +1,13 @@
 """0808 sheet comments plus the lock so later patches cannot unfix 0720.
 
-Live path tests mock Jev BIT_QUESTIONS answers (no HTTP).
+Live path tests mock the six frozen bits (no HTTP). Offline lock uses regex.
 """
 from __future__ import annotations
 
 import json
 from pathlib import Path
 
-from .jev_bits import BIT_QUESTIONS, cheap_keep, decide
+from .jev_bits import BIT_QUESTIONS, SIX_BITS, decide, formula_reason
 from .jev_gate import gate
 
 LOCK_PATH = Path(__file__).with_name("jev_bits_lock.json")
@@ -25,6 +25,34 @@ def _ans(**fired: float) -> dict:
 
 def _dj(title: str, answers: dict, source: str = "") -> dict:
     return decide({"title": title, "source": source}, answers)
+
+
+def test_six_frozen_questions() -> None:
+    assert tuple(BIT_QUESTIONS) == SIX_BITS
+    assert len(BIT_QUESTIONS) == 6
+    for key, spec in BIT_QUESTIONS.items():
+        assert spec["type"] == "noul"
+        crit = spec["criteria"]
+        assert crit["true"] and crit["false"]
+
+
+def test_formula_keep_is_done_or_print_without_vetoes() -> None:
+    assert formula_reason(_ans(done=0.9)) == ("keep", "done")
+    assert formula_reason(_ans(print=0.9)) == ("keep", "print")
+    assert formula_reason(_ans(done=0.9, print=0.9)) == ("keep", "print")
+    assert formula_reason(_ans(listed=0.95)) == ("drop", "no_keep_bit")
+    assert formula_reason(_ans(done=0.9, tape=0.9)) == ("drop", "tape")
+    assert formula_reason(_ans(print=0.9, soft=0.9)) == ("drop", "soft")
+    assert formula_reason(_ans(print=0.9, tip=0.9)) == ("drop", "tip")
+
+
+def test_listed_alone_does_not_keep() -> None:
+    got = _dj(
+        "Bakery buys comedian's former sites after closure",
+        _ans(listed=0.92),
+    )
+    assert got["decision"] == "drop"
+    assert got["reason"] == "no_keep_bit"
 
 
 def test_locked_titles_do_not_flip() -> None:
@@ -84,50 +112,50 @@ def test_sheet_0808_stay_drop() -> None:
     )["decision"] == "drop"
 
 
-def test_cheap_keep_official_print_not_calendar() -> None:
-    assert _d("US July PPI Below Expectations as Producer Inflation Cools")["reason"] == "k_print"
-    assert _d("Consumer confidence sags to 12-year low, eroded by inflation")["reason"] == "k_print"
-    assert cheap_keep("Asia stocks gain ahead of U.S. PCE inflation") == ""
-    assert cheap_keep("US core PCE inflation expected to increase") == ""
-    assert _d(
-        "Nvidia’s $10.2 Billion Quarterly Profit Increase Topped Its Entire 2022 Operating Profit"
-    )["reason"] == "k_earn"
-    assert _d(
-        "As Jackson Hole conference kicks off, three Fed officials issue inflation warnings"
-    )["reason"] == "k_print"
-    assert _d(
-        "Fed's Williams: No Rush on Rate Hikes, But One More Increase Likely This Year"
-    )["reason"] == "k_print"
+def test_formula_keeps_barr_iran_and_drops_transcript() -> None:
+    barr = _dj(
+        "Barr Says Further Fed Rate Hikes Likely Needed As Inflation Remains Too High",
+        _ans(print=0.91),
+    )
+    assert barr["decision"] == "keep" and barr["reason"] == "print"
+    iran = _dj(
+        "Oil climbs as Trump denies Iran sanctions easing reports - Invezz",
+        _ans(done=0.88),
+    )
+    assert iran["decision"] == "keep" and iran["reason"] == "done"
+    transcript = _dj("Chiron Q2 Earnings Call Transcript", _ans(soft=0.93, done=0.2))
+    assert transcript["decision"] == "drop"
+    assert transcript["reason"] in {"v_week", "soft"}
 
 
-def test_hard_keep_beats_jev_fluff() -> None:
+def test_done_beats_ignored_legacy_keys() -> None:
     title = "Nasdaq to Buy Dark Pool Stock Venue LeveL for Equity Trading"
-    got = _dj(title, _ans(k_done=0.91, v_fluff=0.88))
+    got = _dj(title, _ans(done=0.91, v_fluff=0.88))
     assert got["decision"] == "keep"
-    assert got["reason"] == "k_done"
+    assert got["reason"] == "done"
 
 
-def test_answers_unsure_falls_back_to_code_print() -> None:
+def test_answers_do_not_fall_back_to_code_print() -> None:
     title = "Barr Says Further Fed Rate Hikes Likely Needed As Inflation Remains Too High"
     got = _dj(title, _ans())
-    assert got["decision"] == "keep"
-    assert got["reason"] == "k_print"
+    assert got["decision"] == "drop"
+    assert got["reason"] == "no_keep_bit"
     assert got.get("noul")
 
 
 def test_jev_answers_keep_the_sheet_misses() -> None:
-    """Frontier-shaped answers keep the last-sheet false drops."""
+    """Frontier-shaped six-bit answers keep the last-sheet false drops."""
     cases = [
-        ("Nasdaq to Buy Dark Pool Stock Venue LeveL for Equity Trading", {"k_done": 0.92}),
-        ("US July PPI Below Expectations as Producer Inflation Cools Significantly", {"k_print": 0.91}),
-        ("Nigeria's Dangote Refinery secures $1 billion underwriting ahead of IPO", {"k_done": 0.90}),
-        ("Guardant ordered to pay $245m in DNA sequencing patent dispute", {"k_done": 0.88}),
-        ("Bitdeer shares edge higher despite Q2 earnings and revenue miss", {"k_earn": 0.86}),
-        ("Nvidia’s $10.2 Billion Quarterly Profit Increase Topped Its Entire 2022 Operating Profit", {"k_earn": 0.87}),
-        ("Fed's Williams: No Rush on Rate Hikes, But One More Increase Likely This Year", {"k_print": 0.90}),
-        ("Beth Hammack urges Fed rate hike to fight above-3% inflation", {"k_print": 0.85}),
-        ("As Jackson Hole conference kicks off, three Fed officials issue inflation warnings", {"k_print": 0.88}),
-        ("Consumer confidence sags to 12-year low, eroded by inflation, job anxiety", {"k_print": 0.84}),
+        ("Nasdaq to Buy Dark Pool Stock Venue LeveL for Equity Trading", {"done": 0.92}),
+        ("US July PPI Below Expectations as Producer Inflation Cools Significantly", {"print": 0.91}),
+        ("Nigeria's Dangote Refinery secures $1 billion underwriting ahead of IPO", {"done": 0.90}),
+        ("Guardant ordered to pay $245m in DNA sequencing patent dispute", {"done": 0.88}),
+        ("Bitdeer shares edge higher despite Q2 earnings and revenue miss", {"done": 0.86}),
+        ("Nvidia’s $10.2 Billion Quarterly Profit Increase Topped Its Entire 2022 Operating Profit", {"done": 0.87}),
+        ("Fed's Williams: No Rush on Rate Hikes, But One More Increase Likely This Year", {"print": 0.90}),
+        ("Beth Hammack urges Fed rate hike to fight above-3% inflation", {"print": 0.85}),
+        ("As Jackson Hole conference kicks off, three Fed officials issue inflation warnings", {"print": 0.88}),
+        ("Consumer confidence sags to 12-year low, eroded by inflation, job anxiety", {"print": 0.84}),
     ]
     for title, fired in cases:
         got = _dj(title, _ans(**fired))
@@ -136,12 +164,14 @@ def test_jev_answers_keep_the_sheet_misses() -> None:
 
 def test_jev_answers_drop_the_sheet_false_keeps() -> None:
     cases = [
-        ("Capita Flags CSPS Costs but Touts Contract Wins, Savings and AI Growth", {"v_fluff": 0.82}),
-        ("‘Impact on bilateral relations’: India flags concerns over 100% US tariffs", {"v_fluff": 0.80}),
-        ("Asia stocks gain ahead of U.S. PCE inflation; regional data in focus", {"v_week": 0.88}),
-        ("US core PCE inflation expected to increase, challenging the Fed", {"v_odds": 0.86}),
+        ("Capita Flags CSPS Costs but Touts Contract Wins, Savings and AI Growth", {}),
+        ("‘Impact on bilateral relations’: India flags concerns over 100% US tariffs", {}),
+        ("Asia stocks gain ahead of U.S. PCE inflation; regional data in focus", {"soft": 0.88}),
+        ("US core PCE inflation expected to increase, challenging the Fed", {"soft": 0.86}),
         ("China Won't Move Chip Stocks Anymore (NASDAQ:SMH) - Seeking Alpha", {}, "Seeking Alpha"),
-        ("3 Financial Mutual Funds to Consider as Fed Signals More Rate Hikes", {"v_tipsheet": 0.93, "k_print": 0.80}),
+        ("3 Financial Mutual Funds to Consider as Fed Signals More Rate Hikes", {"tip": 0.93, "print": 0.80}),
+        ("Kadant Q2 Earnings Call Highlights", {"soft": 0.94}),
+        ("Archer Aviation vs. AST SpaceMobile: Which Industrials Stock Is a Better Buy in 2026?", {"tip": 0.91}),
     ]
     for row in cases:
         title, fired = row[0], row[1]
@@ -153,20 +183,23 @@ def test_jev_answers_drop_the_sheet_false_keeps() -> None:
 def test_jev_answers_override_regex_false_keep() -> None:
     title = "Capita Flags CSPS Costs but Touts Contract Wins, Savings and AI Growth"
     assert _d(title)["decision"] == "keep"
-    assert _dj(title, _ans(v_fluff=0.9))["decision"] == "drop"
+    assert _dj(title, _ans())["decision"] == "drop"
 
 
 def test_gate_uses_posted_bit_answers() -> None:
     title = "Nasdaq to Buy Dark Pool Stock Venue LeveL for Equity Trading"
 
     def poster(state, questions, key):
-        assert "k_done" in questions
+        assert "done" in questions
+        assert "print" in questions
+        assert len(questions) == 6
+        assert "k_done" not in questions
         assert "event_class" not in questions
         return {
             "model": "jev-test",
             "answers": {
-                "k_done": {"type": "noul", "noul": 0.91},
-                "v_tipsheet": {"type": "noul", "noul": 0.04},
+                "done": {"type": "noul", "noul": 0.91},
+                "tip": {"type": "noul", "noul": 0.04},
             },
         }
 
@@ -175,21 +208,33 @@ def test_gate_uses_posted_bit_answers() -> None:
         code_only=False, live=True, key="x", poster=poster,
     )
     assert out[0]["decision"] == "keep"
-    assert out[0]["reason"] == "k_done"
+    assert out[0]["reason"] == "done"
+
+
+def test_no_cheap_keep() -> None:
+    import src.jev_bits as bits
+
+    assert not hasattr(bits, "cheap_keep")
+    assert not hasattr(bits, "FED_COLON_RE")
+    assert not hasattr(bits, "OFFICIAL_PRINT_RE")
 
 
 def main() -> None:
     tests = [
+        test_six_frozen_questions,
+        test_formula_keep_is_done_or_print_without_vetoes,
+        test_listed_alone_does_not_keep,
         test_locked_titles_do_not_flip,
         test_sheet_0808_commented_keeps,
         test_sheet_0808_stay_drop,
-        test_cheap_keep_official_print_not_calendar,
-        test_hard_keep_beats_jev_fluff,
-        test_answers_unsure_falls_back_to_code_print,
+        test_formula_keeps_barr_iran_and_drops_transcript,
+        test_done_beats_ignored_legacy_keys,
+        test_answers_do_not_fall_back_to_code_print,
         test_jev_answers_keep_the_sheet_misses,
         test_jev_answers_drop_the_sheet_false_keeps,
         test_jev_answers_override_regex_false_keep,
         test_gate_uses_posted_bit_answers,
+        test_no_cheap_keep,
     ]
     failed = 0
     for fn in tests:

@@ -1,15 +1,18 @@
 """Hop-0 for every harvest.
 
-Live path: cheap structural veto, then Jev BIT_QUESTIONS decide keep/drop.
+Live path: six frozen bits. Keep iff (done OR print) AND NOT tape
+AND NOT soft AND NOT tip. Criteria are 2 true + 2 false.
 Code-only / no-answers path: the regex pack (also the lock fallback).
 """
 from __future__ import annotations
 
 import re
 
+BIT_NOUL = 0.60
 TRASH_NOUL = 0.70
-KEEP_NOUL = 0.50
+KEEP_NOUL = BIT_NOUL
 DUP_JACCARD = 0.72
+SIX_BITS = ("tape", "soft", "tip", "done", "print", "listed")
 
 SOURCE_DENY = re.compile(
     r"(?i)(seeking.?alpha|benzinga|motley|fool\.com|the.?fool|"
@@ -171,103 +174,111 @@ KEEP_RES: list[tuple[str, re.Pattern]] = [
 HARD_KEEP = frozenset({"k_print", "k_policy", "k_done", "k_earn", "k_rating", "k_choke"})
 
 BIT_QUESTIONS: dict = {
-    "v_tipsheet": {
+    "tape": {
         "type": "noul",
         "instructions": (
-            "TRUE if this is a buy/sell list, 'N funds/stocks to consider', "
-            "better-buy matchup, or 'what investors should do'. "
-            "FALSE if a named company closed a deal or printed results."
+            "TRUE if the price move is already in the title: a percent, "
+            "'surges', 'stock today', or a close recap. FALSE if the title "
+            "is the act or the official print itself."
         ),
         "criteria": {
-            "true": "3 Financial Mutual Funds to Consider as Fed Signals More Rate Hikes. 5 Best Plastics Stocks.",
-            "false": "AMETEK completes acquisition.",
+            "true": (
+                "FuelCell Energy Inc. stock falls Wednesday, underperforms market. "
+                "DOCS Stock Surges 40% Following Earnings."
+            ),
+            "false": (
+                "Nasdaq to Buy Dark Pool Stock Venue LeveL. "
+                "US July PPI Below Expectations."
+            ),
         },
     },
-    "v_quote": {"type": "noul", "instructions": "Quote/history landing page?",
-        "criteria": {"true": "WELL stock price, news, quote.", "false": "Raytheon Gets $20.7 Billion Contract."}},
-    "v_week": {
+    "soft": {
         "type": "noul",
         "instructions": (
-            "TRUE if the title is a calendar, preview, 'ahead of' a print, "
-            "'will be released', 'what to expect', live stream, or earnings "
-            "call highlights/transcript. FALSE if the official print or "
-            "company results already happened in this headline."
+            "TRUE if this is a preview: 'may', 'could', 'what to watch', "
+            "'ahead of', or earnings call highlights/transcript. FALSE if "
+            "the official print or the finished act already happened here."
         ),
         "criteria": {
-            "true": "Asia stocks gain ahead of U.S. PCE. The Fed's main inflation measure will be released Wednesday. Chiron Q2 Earnings Call Transcript.",
-            "false": "US July PPI Below Expectations. ACV Auctions Reports Record Revenue.",
+            "true": (
+                "Asia stocks gain ahead of U.S. PCE. "
+                "Kadant Q2 Earnings Call Highlights."
+            ),
+            "false": (
+                "US July PPI Below Expectations. "
+                "Fed's Williams: No Rush on Rate Hikes."
+            ),
         },
     },
-    "v_odds": {"type": "noul", "instructions": "Odds, 'traders think', or forecast-only?",
-        "criteria": {"true": "October Hike Odds at 70%. Here's how much traders think Nvidia will move off earnings.",
-                     "false": "Fed Governor Cook Says inflation persists."}},
-    "v_tape": {"type": "noul", "instructions": "Already-moved price tape or 'stock market today' recap?",
-        "criteria": {"true": "DOCS Stock Surges 40% Following Earnings.",
-                     "false": "Huang forecasts 70% fiscal 2028 revenue growth."}},
-    "v_ask": {"type": "noul", "instructions": "Rhetorical question column?",
-        "criteria": {"true": "Is Its Future Worth Buying Into?", "false": "Fed cuts 25bp."}},
-    "v_fluff": {"type": "noul", "instructions": "Not a US-listed market act (crime, lifestyle, protest)?",
-        "criteria": {"true": "ICE agent gun in airport bathroom.", "false": "EU waste packaging rules."}},
-    "k_done": {
+    "tip": {
         "type": "noul",
         "instructions": (
-            "TRUE if a named firm finished or announced a real act: buy/acquire, "
-            "IPO raise/aim/debut/underwriting, court order to pay, launch of a "
-            "dollar facility, layoff, settlement. FALSE if someone merely "
-            "'touts wins', 'is now worth', or recaps an old verdict."
+            "TRUE if this is a buy/sell list, 'which is better', or a "
+            "column. FALSE if a named firm closed a deal or an official "
+            "print landed."
         ),
         "criteria": {
-            "true": "Nasdaq to Buy Dark Pool Stock Venue LeveL. Guardant ordered to pay $245m. Dangote secures $1 billion underwriting ahead of IPO. Anthropic aiming for $2 trillion IPO.",
-            "false": "Capita Touts Contract Wins. $10,000 invested at SpaceX IPO is now worth.",
+            "true": (
+                "3 Financial Mutual Funds to Consider as Fed Signals More Rate Hikes. "
+                "Archer Aviation vs. AST SpaceMobile: Which Industrials Stock Is a Better Buy in 2026?"
+            ),
+            "false": (
+                "Nasdaq to Buy Dark Pool Stock Venue LeveL. "
+                "AMETEK completes acquisition."
+            ),
         },
     },
-    "k_earn": {
+    "done": {
         "type": "noul",
         "instructions": (
-            "TRUE if this IS the company print: beat, miss, revenue miss, "
-            "quarterly profit, EPS, guidance raise/cut. FALSE if highlights, "
-            "transcript, 'may show', 'hard to call on earnings today', or "
-            "a column about earnings."
+            "TRUE if the act already happened: deal closed, listing pulled, "
+            "rate was raised, company printed results, court ordered a pay. "
+            "FALSE if someone touts wins or recaps an old IPO price."
         ),
         "criteria": {
-            "true": "Bitdeer Q2 earnings and revenue miss. Nvidia $10.2 Billion Quarterly Profit Increase Topped Its Entire 2022 Operating Profit. CrowdStrike strong earnings spark a rally.",
-            "false": "Earnings call highlights. Here's how much traders think Nvidia will move off earnings. Micron: Earnings May Show Why $100 Billion Won't Save The Rally.",
+            "true": (
+                "Nasdaq to Buy Dark Pool Stock Venue LeveL. "
+                "Guardant ordered to pay $245m."
+            ),
+            "false": (
+                "Capita Flags CSPS Costs but Touts Contract Wins. "
+                "$10,000 invested at SpaceX stock IPO is now worth."
+            ),
         },
     },
-    "k_rating": {"type": "noul", "instructions": "Named upgrade, downgrade, or PT change?",
-        "criteria": {"true": "Apple downgraded, HPE upgraded. Analysts Are Slashing Price Targets on AppLovin.",
-                     "false": "Top analyst reports. Bank of America Sees ASML Stock's Next Big AI Trigger."}},
-    "k_print": {
+    "print": {
         "type": "noul",
         "instructions": (
-            "TRUE if this title IS the official print or a named Fed official "
-            "speaking. July PPI below expectations, consumer confidence at a "
-            "12-year low, Beige Book, FOMC hold/hike/cut that already happened, "
-            "and Williams/Barr/Cook/Hammack/Fed officials say, see, urge, or "
-            "warn (colon titles count) are TRUE. FALSE if the print is only "
-            "upcoming, expected, 'ahead of', 'what to expect', or a tip sheet "
-            "that mentions the Fed."
+            "TRUE if this sentence is a numbered official release or a "
+            "named Fed officer speaking. FALSE if the print is only "
+            "upcoming, expected, or a tip sheet that mentions the Fed."
         ),
         "criteria": {
-            "true": "US July PPI Below Expectations. Fed's Williams: No Rush on Rate Hikes. Beth Hammack urges Fed rate hike. three Fed officials issue inflation warnings. Consumer confidence sags to 12-year low.",
-            "false": "Asia stocks gain ahead of U.S. PCE. US core PCE inflation expected to increase. 3 Financial Mutual Funds to Consider as Fed Signals More Rate Hikes.",
+            "true": (
+                "US July PPI Below Expectations. "
+                "Barr Says Further Fed Rate Hikes Likely Needed As Inflation Remains Too High."
+            ),
+            "false": (
+                "Asia stocks gain ahead of U.S. PCE. "
+                "3 Financial Mutual Funds to Consider as Fed Signals More Rate Hikes."
+            ),
         },
     },
-    "k_dollar": {"type": "noul", "instructions": "Money AND a finished act?",
-        "criteria": {"true": "Raytheon $20.7 Billion Contract.", "false": "$10 Billion ETF theme. Harvard discloses $2.2 billion SpaceX stake."}},
-    "k_choke": {"type": "noul", "instructions": "New strait/sanctions/peace verb, shut pipeline, or steel/freight shock?",
-        "criteria": {"true": "Trump denies Iran sanctions relief. Pipeline still shut after drone strikes.",
-                     "false": "Hormuz tensions linger. Crude oil price today Brent $103."}},
-    "k_policy": {
+    "listed": {
         "type": "noul",
         "instructions": (
-            "TRUE if a state/EU act landed (tax credit, tariff rule, sanctions "
-            "deny, packaging rules, peace deal). FALSE if someone only 'flags "
-            "concerns', or an opinion column about China/chips/tariffs."
+            "TRUE if a US-tradable name or a policy lever that hits one "
+            "is in the title. FALSE if this is local color or a protest."
         ),
         "criteria": {
-            "true": "California offers new tax credit for electric vehicles. Trump denies Iran sanctions easing.",
-            "false": "India flags concerns over 100% US tariffs. China Won't Move Chip Stocks Anymore.",
+            "true": (
+                "Nasdaq to Buy Dark Pool Stock Venue LeveL. "
+                "Nvidia’s $10.2 Billion Quarterly Profit Increase."
+            ),
+            "false": (
+                "Bakery buys comedian's former sites after closure. "
+                "RSS chief’s US visit faces protests over Hindu nationalism."
+            ),
         },
     },
 }
@@ -335,26 +346,6 @@ def cheap_veto(title: str) -> str:
     return ""
 
 
-AHEAD_RE = re.compile(
-    r"(?i)\bahead of\b|\bexpected to\b|\bwill be released\b|"
-    r"\bwhat to expect\b|\bweek ahead\b"
-)
-OFFICIAL_PRINT_RE = re.compile(
-    r"(?i)\b(?:ppi|cpi|nfp|beige book|consumer confidence)\b"
-)
-FED_COLON_RE = re.compile(r"(?i)\bfed(?:eral reserve)?'?s\s+[A-Za-z]+:")
-
-
-def cheap_keep(title: str) -> str:
-    """Official prints that already landed. Skip the Jev HTTP."""
-    t = title or ""
-    if not t or AHEAD_RE.search(t):
-        return ""
-    if OFFICIAL_PRINT_RE.search(t) or FED_COLON_RE.search(t):
-        return "k_print"
-    return ""
-
-
 def _noul(answers: dict | None, key: str) -> float:
     if not answers:
         return 0.0
@@ -367,31 +358,23 @@ def _noul(answers: dict | None, key: str) -> float:
         return 0.0
 
 
-def answers_keep(answers: dict | None) -> str:
-    best = ""
-    score = 0.0
-    for name in (
-        "k_print", "k_policy", "k_done", "k_earn",
-        "k_rating", "k_choke", "k_dollar",
-    ):
-        got = _noul(answers, name)
-        if got >= KEEP_NOUL and got > score:
-            best = name
-            score = got
-    return best
+def bit_on(answers: dict | None, name: str) -> bool:
+    return _noul(answers, name) >= BIT_NOUL
 
 
-def answers_veto(answers: dict | None, hard: bool) -> str:
-    for name in (
-        "v_tipsheet", "v_quote", "v_week", "v_odds",
-        "v_tape", "v_ask", "v_fluff",
-    ):
-        if _noul(answers, name) < TRASH_NOUL:
-            continue
-        if hard and name in {"v_tape", "v_odds", "v_fluff"}:
-            continue
-        return name
-    return ""
+def formula_reason(answers: dict | None) -> tuple[str, str]:
+    """Keep iff (done OR print) AND NOT tape AND NOT soft AND NOT tip."""
+    if bit_on(answers, "tape"):
+        return "drop", "tape"
+    if bit_on(answers, "soft"):
+        return "drop", "soft"
+    if bit_on(answers, "tip"):
+        return "drop", "tip"
+    if bit_on(answers, "print"):
+        return "keep", "print"
+    if bit_on(answers, "done"):
+        return "keep", "done"
+    return "drop", "no_keep_bit"
 
 
 def has_bit_answers(answers: dict | None) -> bool:
@@ -431,26 +414,20 @@ def decide(row: dict, answers: dict | None = None) -> dict:
     cheap = cheap_veto(blob)
     if cheap:
         return pack("drop", cheap)
-    landed = cheap_keep(title)
-    if landed:
-        return pack("keep", landed)
 
     if has_bit_answers(answers):
-        keep = answers_keep(answers)
-        hard = keep in HARD_KEEP
+        done = bit_on(answers, "done")
+        printed = bit_on(answers, "print")
+        hard = (
+            (done or printed)
+            and not bit_on(answers, "tape")
+            and not bit_on(answers, "soft")
+            and not bit_on(answers, "tip")
+        )
         if SOURCE_DENY.search(blob) and not hard:
             return pack("drop", "source")
-        if title.rstrip().endswith("?") and not hard:
-            return pack("drop", "v_ask")
-        veto = answers_veto(answers, hard)
-        if veto:
-            return pack("drop", veto)
-        if keep:
-            return pack("keep", keep)
-        code = code_keep(title)
-        if code in {"k_print", "k_earn"}:
-            return pack("keep", code)
-        return pack("drop", "no_keep_bit")
+        decision, reason = formula_reason(answers)
+        return pack(decision, reason)
 
     veto = code_veto(blob)
     if veto:

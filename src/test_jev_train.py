@@ -507,21 +507,24 @@ def test_replay_uses_posted_bit_answers():
     nasdaq = "Nasdaq to Buy Dark Pool Stock Venue LeveL for Equity Trading"
 
     def poster(state, questions, key):
-        assert "k_done" in questions
+        assert "done" in questions
+        assert "print" in questions
+        assert len(questions) == 6
+        assert "k_done" not in questions
         assert "event_class" not in questions
         if "Capita" in state:
             return {
                 "model": "jev-test",
                 "answers": {
-                    "v_fluff": {"type": "noul", "noul": 0.88},
-                    "k_done": {"type": "noul", "noul": 0.12},
+                    "soft": {"type": "noul", "noul": 0.12},
+                    "done": {"type": "noul", "noul": 0.12},
                 },
             }
         return {
             "model": "jev-test",
             "answers": {
-                "k_done": {"type": "noul", "noul": 0.91},
-                "v_fluff": {"type": "noul", "noul": 0.04},
+                "done": {"type": "noul", "noul": 0.91},
+                "tip": {"type": "noul", "noul": 0.04},
             },
         }
 
@@ -562,7 +565,7 @@ def test_replay_uses_posted_bit_answers():
         by_title = {item["title"]: item for item in report["items"]}
         assert by_title[capita]["jev"] == "DROP"
         assert by_title[nasdaq]["jev"] == "KEEP"
-        assert by_title[nasdaq]["reason"] == "k_done"
+        assert by_title[nasdaq]["reason"] == "done"
         page = json.loads((dash / "draw.json").read_text(encoding="utf-8"))
         assert page["stamp"] == "20260930_0920"
         assert page["items"][0]["jev"] == "DROP"
