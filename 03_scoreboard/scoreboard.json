@@ -24002,6 +24002,18 @@
           "predicted_direction": "down",
           "predicted_magnitude_band": "mild",
           "confidence": 0.55
+        },
+        "HORIZON_2W": {
+          "label": "2w",
+          "target_date": "2026-09-30",
+          "actual_pct": 1.32,
+          "actual_direction": "up",
+          "actual_magnitude_band": "mild",
+          "direction_hit": false,
+          "magnitude_hit": true,
+          "predicted_direction": "flat",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.48
         }
       },
       "lesson_schema_ok": true
@@ -27181,6 +27193,18 @@
           "predicted_direction": "flat",
           "predicted_magnitude_band": "mild",
           "confidence": 0.45
+        },
+        "HORIZON_1W": {
+          "label": "1w",
+          "target_date": "2026-09-30",
+          "actual_pct": -0.71,
+          "actual_direction": "down",
+          "actual_magnitude_band": "mild",
+          "direction_hit": false,
+          "magnitude_hit": true,
+          "predicted_direction": "flat",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.42
         }
       },
       "lesson_schema_ok": true
@@ -28354,7 +28378,20 @@
       "knowable_at_9am": "partially — oil was already offered and the phased-deal report was dated 09-24, so the direction was foreseeable; the magnitude of the equity response and the cyclical-over-tech leadership were not",
       "attribution_contested": "yes — AP/WSJ lead with oil relief, Bloomberg/CNN lead with bond-market stabilization, Yahoo frames equities as shrugging off the selloff",
       "outlier_watch": "NDX (+0.48%) lagged the Dow (+0.93%) despite the premarket tape showing NQ leadership, and HY spreads widened (2.73→2.80) even as equities rallied — credit did not confirm the risk-on",
-      "horizon_grades": {},
+      "horizon_grades": {
+        "HORIZON_3D": {
+          "label": "3d",
+          "target_date": "2026-09-30",
+          "actual_pct": -1.19,
+          "actual_direction": "down",
+          "actual_magnitude_band": "mild",
+          "direction_hit": false,
+          "magnitude_hit": true,
+          "predicted_direction": "flat",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.54
+        }
+      },
       "lesson_schema_ok": true
     },
     {
@@ -29374,7 +29411,7 @@
       "divergence_flagged": false,
       "divergence_verdict": null,
       "per_factor_breakdown": [],
-      "reflection_lesson_ref": null,
+      "reflection_lesson_ref": "02_lessons/candidate/2026-09-30_lesson.md",
       "sources_used": [
         {
           "url": "https://www.reuters.com/markets/us/us-inflation-rises-less-than-expected-august-consumer-spending-surges-2026-09-30/",
@@ -29437,7 +29474,8 @@
       "key_interaction": "The dovish PCE surprise (positive) and the hot growth data (hawkish offset) roughly cancelled, and the long-end yield spike then tipped the balance negative into the close — a two-sided macro session masked by a calm −0.25% headline",
       "knowable_at_9am": "partially — the long-end yield regime was flagged in the morning packet as the spine, but the specific two-sided data mix (cool PCE + hot growth) that produced the reversal was not knowable",
       "attribution_contested": "yes — CNBC/Reuters led with inflation data, Bloomberg/Zacks led with yields, stockmarketwatch led with sector rotation, propfirmscan led with corporate debt issuance",
-      "outlier_watch": "NDX closed green (+0.24%) while Dow closed −0.86% — a 110bp divergence with no single-stock catalyst, signaling rotation rather than macro; also short-end yields fell while long-end spiked (curve steepening)"
+      "outlier_watch": "NDX closed green (+0.24%) while Dow closed −0.86% — a 110bp divergence with no single-stock catalyst, signaling rotation rather than macro; also short-end yields fell while long-end spiked (curve steepening)",
+      "lesson_schema_ok": true
     }
   ]
 }
