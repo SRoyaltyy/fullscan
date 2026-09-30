@@ -1,12 +1,12 @@
 {
   "date": "2026-09-30",
-  "generated_at": "2026-09-30T05:40:00.925660-04:00",
+  "generated_at": "2026-09-30T05:40:08.130180-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
   "counts": {
-    "ok": 4,
-    "partial": 4,
+    "ok": 5,
+    "partial": 3,
     "fail": 0,
     "n": 8
   },
@@ -692,7 +692,7 @@
       "inputs_ready": true,
       "n_req_ok": 2,
       "n_req": 4,
-      "n_opt_ok": 1,
+      "n_opt_ok": 2,
       "n_opt": 3,
       "files": [
         {
@@ -807,7 +807,7 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=5903",
-          "size": 2280317,
+          "size": 2282458,
           "said": "204 rows",
           "bullets": [
             "FIX, ASC, NVT, GTES, SBLK, MATX, EMBJ, ELMT"
@@ -878,10 +878,10 @@
           "name": "Dashboard HTML",
           "path": "dashboard/index.html",
           "role": "optional",
-          "status": "FAIL",
-          "reason": "session 2026-09-30 not in dashboard dates (last=2026-09-25)",
+          "status": "OK",
+          "reason": "live-book poller + today.json (2026-09-30)",
           "size": 8945021,
-          "said": "session 2026-09-30 not in dashboard dates (last=2026-09-25)",
+          "said": "live-book poller + today.json (2026-09-30)",
           "bullets": []
         }
       ],
@@ -894,9 +894,9 @@
       "key": "publish",
       "name": "Dashboard / .io",
       "yaml": "deploy-dashboard.yml",
-      "status": "PARTIAL",
+      "status": "OK",
       "inputs_ready": false,
-      "n_req_ok": 1,
+      "n_req_ok": 2,
       "n_req": 2,
       "n_opt_ok": 0,
       "n_opt": 1,
@@ -917,10 +917,10 @@
           "name": "Dashboard HTML (repo)",
           "path": "dashboard/index.html",
           "role": "required",
-          "status": "FAIL",
-          "reason": "session 2026-09-30 not in dashboard dates (last=2026-09-25)",
+          "status": "OK",
+          "reason": "live-book poller + today.json (2026-09-30)",
           "size": 8945021,
-          "said": "session 2026-09-30 not in dashboard dates (last=2026-09-25)",
+          "said": "live-book poller + today.json (2026-09-30)",
           "bullets": []
         },
         {
@@ -956,126 +956,8 @@
   "news_mode": "on",
   "news_mode_reason": "",
   "selections": {
-    "buy_1d": [
-      {
-        "ticker": "SN",
-        "score": 0.4075915074669561
-      },
-      {
-        "ticker": "MHK",
-        "score": 0.7694203860317406
-      },
-      {
-        "ticker": "FIGS",
-        "score": 0.7006328271818087
-      },
-      {
-        "ticker": "CAKE",
-        "score": 0.702926102878515
-      },
-      {
-        "ticker": "AVPT",
-        "score": 0.7498576632051368
-      },
-      {
-        "ticker": "IT",
-        "score": 0.49158274518004974
-      },
-      {
-        "ticker": "CORT",
-        "score": 0.2735845857622498
-      },
-      {
-        "ticker": "CDNA",
-        "score": 0.7207076437952746
-      },
-      {
-        "ticker": "ETON",
-        "score": 0.662121393867612
-      },
-      {
-        "ticker": "ADMA",
-        "score": 0.6602978916412126
-      },
-      {
-        "ticker": "RXO",
-        "score": 0.600940748946456
-      },
-      {
-        "ticker": "PAYS",
-        "score": 0.5766041533574494
-      },
-      {
-        "ticker": "QNST",
-        "score": 0.5507184913066006
-      },
-      {
-        "ticker": "RELY",
-        "score": 0.5648094626042475
-      }
-    ],
-    "sell_1d": [
-      {
-        "ticker": "RBLX",
-        "score": -0.40658606399833397
-      },
-      {
-        "ticker": "BIDU",
-        "score": -0.3784058918986275
-      },
-      {
-        "ticker": "SOC",
-        "score": -0.36685959384696903
-      },
-      {
-        "ticker": "GH",
-        "score": -0.3507471260110735
-      },
-      {
-        "ticker": "CMTG",
-        "score": -0.34721250537525694
-      },
-      {
-        "ticker": "BAK",
-        "score": -0.3454453076393602
-      },
-      {
-        "ticker": "GOGO",
-        "score": -0.33961911048893584
-      },
-      {
-        "ticker": "META",
-        "score": -0.33503239960827247
-      },
-      {
-        "ticker": "RC",
-        "score": -0.3337376121741831
-      },
-      {
-        "ticker": "LFMD",
-        "score": -0.3311765304015034
-      },
-      {
-        "ticker": "NRXP",
-        "score": -0.32890825450331485
-      },
-      {
-        "ticker": "VNET",
-        "score": -0.328500556719394
-      },
-      {
-        "ticker": "AIRS",
-        "score": -0.3283244799238284
-      },
-      {
-        "ticker": "ROIV",
-        "score": -0.32257714374752317
-      },
-      {
-        "ticker": "WVE",
-        "score": -0.32167366585912543
-      }
-    ],
+    "buy_1d": [],
+    "sell_1d": [],
     "flatten": {},
     "general": {
       "said": "UP  2.009",
@@ -1120,7 +1002,7 @@
       "said": "favorable 1 \u00b7 hostile 8 \u00b7 neutral 2",
       "bullets": [
         "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Real Estate, Technology, Utilities",
-        "events bull 3 / bear 2"
+        "events bull 4 / bear 1"
       ]
     }
   },
@@ -1848,6 +1730,24 @@
         }
       ],
       "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-09-30\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+    },
+    {
+      "key": "join",
+      "title": "Join / match rank",
+      "date": "2026-09-30",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-30T05:40:07.381446-04:00",
+      "files": [
+        {
+          "path": "data/join/2026-09-30_ranked.csv",
+          "ok": true,
+          "reason": "",
+          "size": 2282458,
+          "preview": "5903 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 FIX, ASC, NVT, GTES, SBLK"
+        }
+      ],
+      "preview": "5903 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 FIX, ASC, NVT, GTES, SBLK"
     }
   ],
   "href": {
