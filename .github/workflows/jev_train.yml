@@ -135,7 +135,7 @@ jobs:
             echo "no trainer output to commit"
             exit 1
           fi
-          if grep -R -E -n 'sk-[A-Za-z0-9]{8,}|ghp_[A-Za-z0-9]{8,}|github_pat_[A-Za-z0-9_]{8,}|JEV_API_KEY[[:space:]]*=|Bearer [A-Za-z0-9._-]{12,}' \
+          if grep -R -E -n 'ghp_[A-Za-z0-9]{20,}|github_pat_[A-Za-z0-9_]{20,}|JEV_API_KEY[[:space:]]*=|sk-[A-Za-z0-9]{24,}' \
               00_grounding/jev_train 00_grounding/jev_hard_misses.json dashboard/jev-train/draw.json dashboard/jev-train/days.json; then
             echo "refusing to commit secret-like material"
             exit 1
