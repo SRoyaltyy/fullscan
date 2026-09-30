@@ -261,12 +261,14 @@ BIT_QUESTIONS: dict = {
         "criteria": {
             "true": (
                 "A numbered official release already printed: CPI, PPI, PCE, "
-                "NFP, consumer confidence, or an agency recall. "
+                "NFP, consumer confidence that already sank, or an agency "
+                "nationwide recall already announced. "
                 "A named Fed officer is speaking in this sentence: says, "
                 "hints, sees, warns, or backs."
             ),
             "false": (
-                "The print is only upcoming, expected, ahead of, or a preview. "
+                "The print is only upcoming, expected, ahead of, odds, or "
+                "traders cutting bets after an officer comment. "
                 "A tip sheet or mutual-fund list that only mentions the Fed."
             ),
         },
