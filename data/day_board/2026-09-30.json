@@ -1,6 +1,6 @@
 {
   "date": "2026-09-30",
-  "generated_at": "2026-09-30T04:34:02.655641-04:00",
+  "generated_at": "2026-09-30T04:39:33.853113-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -183,7 +183,7 @@
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 2,
+      "n_req_ok": 3,
       "n_req": 20,
       "n_opt_ok": 1,
       "n_opt": 3,
@@ -257,11 +257,16 @@
           "name": "Events JSON",
           "path": "01_daily/events/2026-09-30_events.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 34034,
+          "said": "34 events \u00b7 elevated uncertainty \u00b7 The tape is still digesting a unanimous Sept 16 FOMC hike to 3.75\u20134.00% against an unfinished Iran/Hormuz oil shock, with today's PCE/GDP an",
+          "bullets": [
+            "FOMC hikes 25 bp to 3.75\u20134.00%",
+            "White House memo to restrict Canadian goods in U.S. federal procurement",
+            "EDVA unseals Google ad-tech remedies (behavioral, no breakup)",
+            "BOJ hikes policy rate 25 bp to 1.25%"
+          ]
         },
         {
           "key": "judge",
@@ -336,13 +341,13 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 7544,
-          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 17 fail",
+          "size": 7541,
+          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 16 fail",
           "bullets": [
             "general_predict:missing",
-            "events:missing",
             "news_judge:missing",
-            "news_actions:missing"
+            "news_actions:missing",
+            "finviz_market_digest:missing"
           ]
         },
         {
@@ -1305,6 +1310,31 @@
         }
       ],
       "preview": "raw=400 usable=95 single=22 \u00b7 Despite falling oil prices and dovish signals from Federal Reserve officials, U. | Cardiff, Inc. Helps Small Businesses Navigate Latest Fed Rate Hike - PR Undergro | Robust U.S. Economy Drives Treasury Yield Surge - \uc870\uc120\uc77c\ubcf4 | Fed rate hike bets for Oct fall sharply on soft data, dovish comments - Investin | Gold's Rebound Limited as Experts Warn of Fed Rate Hike Overhang - finance.biggo \u00b7 # News Parse v2 \u2014 2026-09-30T04:33:50.384628-04:00\nWindow\u224848h | news_mode=on | raw=400 | usable=95 | single_name=22 | noise_dropped=283\nusable polarity={'+': 3, '-': 28, 'mixed': 1, 'neutral': 63}"
+    },
+    {
+      "key": "events",
+      "title": "Event scanner (primary)",
+      "date": "2026-09-30",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-30T04:39:33.039324-04:00",
+      "files": [
+        {
+          "path": "01_daily/events/2026-09-30_events.json",
+          "ok": true,
+          "reason": "",
+          "size": 34034,
+          "preview": "34 events \u00b7 FOMC hikes 25 bp to 3.75\u20134.00% | White House memo to restrict Canadian goods in U.S. federal procuremen | EDVA unseals Google ad-tech remedies (behavioral, no breakup) | BOJ hikes policy rate 25 bp to 1.25% | H-1B $100,000 entry restriction extended 12 months | Graham Act signed: up to 500% Russia tariffs and secondary energy-buye"
+        },
+        {
+          "path": "01_daily/events/2026-09-30_events.md",
+          "ok": true,
+          "reason": "",
+          "size": 21202,
+          "preview": "# Event Scan \u2014 2026-09-30\n- events tracked: **34** (via openclaw)\n- uncertainty: **elevated**\n- summary: The tape is still digesting a unanimous Sept 16 FOMC hike to 3.75\u20134.00% against an unfinished Iran/Hormuz oil shock, with today's PCE/GDP and Friday's NFP the first hard tests of whether another hike is live. A modest U.S.\u2013China truce extension to Jan 10, 2027 and China's mortgage/PSL mini-stimulus cut near-term policy-cliff risk, but the Graham Act's secondary-tariff authorities and still-restricted Hormuz flows keep a fat left tail. Quality over drama: shutdown risk is off (CR through Dec 11), debt ceiling is a 2027 issue, and Atlantic hurricane season remains unusually quiet."
+        }
+      ],
+      "preview": "34 events \u00b7 FOMC hikes 25 bp to 3.75\u20134.00% | White House memo to restrict Canadian goods in U.S. federal procuremen | EDVA unseals Google ad-tech remedies (behavioral, no breakup) | BOJ hikes policy rate 25 bp to 1.25% | H-1B $100,000 entry restriction extended 12 months | Graham Act signed: up to 500% Russia tariffs and secondary energy-buye \u00b7 # Event Scan \u2014 2026-09-30\n- events tracked: **34** (via openclaw)\n- uncertainty: **elevated**\n- summary: The tape is still digesting a unanimous Sept 16 FOMC hike to 3.75\u20134.00% against an unfinished Iran/Hormuz oil shock, with today's PCE/GDP and Friday's NFP the first hard tests of whether another hike is live. A modest U.S.\u2013China truce extension to Jan 10, 2027 and China's mortgage/PSL mini-stimulus cut near-term policy-cliff risk, but the Graham Act's secondary-tariff authorities and still-restricted Hormuz flows keep a fat left tail. Quality over drama: shutdown risk is off (CR through Dec 11), debt ceiling is a 2027 issue, and Atlantic hurricane season remains unusually quiet."
     }
   ],
   "href": {
