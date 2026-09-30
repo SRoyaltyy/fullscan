@@ -1,0 +1,114 @@
+{
+  "date": "2026-09-30",
+  "generated_at": "2026-09-30T19:44:49.230502-04:00",
+  "timezone": "America/New_York",
+  "source": "live",
+  "source_url": "https://elite.finviz.com/",
+  "archive_snapshot_ts": null,
+  "archive_snapshot_at": null,
+  "archive_url": null,
+  "clock_legal": true,
+  "clock_same_morning": false,
+  "clock_use": "next_open",
+  "clock_legal_for": "2026-10-01",
+  "capture_slot": "close",
+  "clock_rule": "Live post-close answer-key (~16:05 ET). Always next_open for the NEXT session (2026-10-01) — never same_morning. Writes *_finviz_market_digest_close.* only. Capture only — not tape_anchor / predict / #210.",
+  "kind": "finviz_homepage_market_digest_close",
+  "represents": "Finviz homepage post-close answer-key. clock_use is always next_open; clock_legal_for is the next NYSE session. Lives at *_finviz_market_digest_close.*. Does not replace the same_morning warm-up file. Not quote-page ticker blurbs.",
+  "error": null,
+  "headline": "US stocks ended mixed on final day of Q3 as cooler PCE data eased Fed hike odds but 10-year yield hit 24-year high",
+  "raw_text": "- The S&P 500 ($SPX) fell 0.25% to 7,651.54, the Dow Jones Industrial Average ($DJI) lost 0.86% to 50,906.05, and the Nasdaq Composite ($COMP) rose 0.24% to 26,861.06 on Wednesday\n- The August PCE price index rose 3.4% year-over-year, below the 3.7% consensus, pulling October Federal Reserve hike probabilities below 40%\n- ADP (ADP) reported 90,000 private-sector jobs added in September, while Q2 GDP was revised to a 2.2% annualized rate with stronger consumer spending, helping drive the 10-year Treasury yield to a 24-year high and contributing to the bond market’s worst quarter in decades\n- Information technology outperformed as Hewlett Packard Enterprise (HPE) gained 4.2%, C3.ai (AI) advanced 6.4%, and Intel (INTC) rose 3.8%, supporting the Nasdaq\n- Carnival (CCL) fell 2.3% despite reporting record Q3 net income and raising full-year guidance\n- Fair Isaac (FICO) fell about 4% after Bank of America downgraded the stock to Neutral from Buy on FHFA changes\n- Moderna (MRNA) fell 5.5% after Citigroup (C) downgraded the stock to sell\n- After-hours, Micron Technology (MU) reported fiscal Q4 results above top- and bottom-line estimates and issued strong Q1 guidance, including revenue of $54.23 billion versus $51.33 billion expected and adjusted EPS of $33.42 versus $31.72 expected, though shares were little changed following a capex warning\n- Leslie’s (LESL) plunged after filing for bankruptcy to restructure and cut 90% of its debt\n- For the month, the S&P 500 ($SPX) fell 0.45%, its weakest performance since June, while both the S&P 500 ($SPX) and Nasdaq logged their second straight quarterly gains ahead of Thursday’s September jobs report and additional earnings releases",
+  "raw_summary_md": "- The **S&P 500** ([$SPX](https://finviz.com/index/SPX?p=d)) fell **0.25%** to **7,651.54**, the **Dow Jones Industrial Average** ([$DJI](https://finviz.com/index/DJI?p=d)) lost **0.86%** to **50,906.05**, and the **Nasdaq Composite** ([$COMP](https://finviz.com/index/COMP?p=d)) rose **0.24%** to **26,861.06** on Wednesday\n- The **August PCE price index** rose **3.4% year-over-year**, below the **3.7% consensus**, pulling **October Federal Reserve hike probabilities below 40%**\n- **ADP** ([ADP](https://finviz.com/quote?t=ADP)) reported **90,000 private-sector jobs added in September**, while **Q2 GDP** was revised to a **2.2% annualized rate** with stronger consumer spending, helping drive the **10-year Treasury yield to a 24-year high** and contributing to the **bond market’s worst quarter in decades**\n- **Information technology outperformed** as **Hewlett Packard Enterprise** ([HPE](https://finviz.com/quote?t=HPE)) gained **4.2%**, **C3.ai** ([AI](https://finviz.com/quote?t=AI)) advanced **6.4%**, and **Intel** ([INTC](https://finviz.com/quote?t=INTC)) rose **3.8%**, supporting the **Nasdaq**\n- **Carnival** ([CCL](https://finviz.com/quote?t=CCL)) fell **2.3%** despite reporting **record Q3 net income** and **raising full-year guidance**\n- **Fair Isaac** ([FICO](https://finviz.com/quote?t=FICO)) fell about **4%** after **Bank of America downgraded the stock to Neutral from Buy** on **FHFA changes**\n- **Moderna** ([MRNA](https://finviz.com/quote?t=MRNA)) fell **5.5%** after **Citigroup** ([C](https://finviz.com/quote?t=C)) **downgraded the stock to sell**\n- After-hours, **Micron Technology** ([MU](https://finviz.com/quote?t=MU)) reported **fiscal Q4 results above top- and bottom-line estimates** and issued **strong Q1 guidance**, including revenue of **$54.23 billion versus $51.33 billion expected** and adjusted EPS of **$33.42 versus $31.72 expected**, though shares were **little changed** following a **capex warning**\n- **Leslie’s** ([LESL](https://finviz.com/quote?t=LESL)) **plunged** after **filing for bankruptcy** to restructure and **cut 90% of its debt**\n- For the month, the **S&P 500** ([$SPX](https://finviz.com/index/SPX?p=d)) fell **0.45%**, its **weakest performance since June**, while both the **S&P 500** ([$SPX](https://finviz.com/index/SPX?p=d)) and **Nasdaq** logged their **second straight quarterly gains** ahead of **Thursday’s September jobs report** and **additional earnings releases**",
+  "index_moves": [
+    {
+      "name": "S&P 500",
+      "code": "SPX",
+      "change_pct": -0.25,
+      "verb": "fell"
+    },
+    {
+      "name": "Dow Jones Industrial Average",
+      "code": "DJI",
+      "change_pct": -0.86,
+      "verb": "lost"
+    },
+    {
+      "name": "Nasdaq Composite",
+      "code": "COMP",
+      "change_pct": 0.24,
+      "verb": "rose"
+    }
+  ],
+  "oil": null,
+  "cpi": null,
+  "fed_odds": {
+    "pct": 3.7,
+    "action": "hike",
+    "text": "3.7% consensus, pulling October Federal Reserve hike"
+  },
+  "named_tickers": [
+    "ADP",
+    "HPE",
+    "INTC",
+    "CCL",
+    "FICO",
+    "MRNA",
+    "C",
+    "MU",
+    "LESL"
+  ],
+  "named_leaders": [
+    "ADP",
+    "HPE",
+    "INTC",
+    "CCL",
+    "FICO",
+    "MRNA",
+    "C",
+    "MU",
+    "LESL"
+  ],
+  "calendar": [
+    "The S&P 500 ($SPX) fell 0.25% to 7,651.54, the Dow Jones Industrial Average ($DJI) lost 0.86% to 50,906.05, and the Nasdaq Composite ($COMP) rose 0.24% to 26,861.06 on Wednesday",
+    "For the month, the S&P 500 ($SPX) fell 0.45%, its weakest performance since June, while both the S&P 500 ($SPX) and Nasdaq logged their second straight quarterly gains ahead of Thursday’s September jobs report and additional earnings releases"
+  ],
+  "prior_close": {
+    "spx": -0.25,
+    "nasdaq": 0.24,
+    "dow": -0.86
+  },
+  "cpi_fed": {
+    "cpi": null,
+    "fed_odds": {
+      "pct": 3.7,
+      "action": "hike",
+      "text": "3.7% consensus, pulling October Federal Reserve hike"
+    }
+  },
+  "next_session_calendar": {
+    "housing": false,
+    "retail": false,
+    "fed": true,
+    "bullets": [
+      "The S&P 500 ($SPX) fell 0.25% to 7,651.54, the Dow Jones Industrial Average ($DJI) lost 0.86% to 50,906.05, and the Nasdaq Composite ($COMP) rose 0.24% to 26,861.06 on Wednesday",
+      "The August PCE price index rose 3.4% year-over-year, below the 3.7% consensus, pulling October Federal Reserve hike probabilities below 40%",
+      "For the month, the S&P 500 ($SPX) fell 0.45%, its weakest performance since June, while both the S&P 500 ($SPX) and Nasdaq logged their second straight quarterly gains ahead of Thursday’s September jobs report and additional earnings releases"
+    ],
+    "text": "The S&P 500 ($SPX) fell 0.25% to 7,651.54, the Dow Jones Industrial Average ($DJI) lost 0.86% to 50,906.05, and the Nasdaq Composite ($COMP) rose 0.24% to 26,861.06 on Wednesday The August PCE price index rose 3.4% year-over-year, below the 3.7% consensus, pulling October Federal Reserve hike probabilities below 40% For the month, the S&P 500 ($SPX) fell 0.45%, its weakest performance since June, while both the S&P 500 ($SPX) and Nasdaq logged their second straight quarterly gains ahead of Thursday’s September jobs report and additional earnings releases"
+  },
+  "earnings_slate": {
+    "tickers": [],
+    "text": ""
+  },
+  "geo_grain": {
+    "geo": false,
+    "grain": false,
+    "flags": [],
+    "text": ""
+  },
+  "finviz_id": 298835,
+  "finviz_ticker": "$MARKET",
+  "finviz_published_at": "2026-09-30T19:36:42.457",
+  "finviz_source": "market_summary",
+  "finviz_sentiment": "neutral"
+}
