@@ -1,6 +1,6 @@
 {
   "date": "2026-09-30",
-  "generated_at": "2026-09-30T05:40:29.280092-04:00",
+  "generated_at": "2026-09-30T05:40:33.894647-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -163,24 +163,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "join",
-      "title": "Join / match rank",
-      "date": "2026-09-30",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-30T05:36:31.649878-04:00",
-      "files": [
-        {
-          "path": "data/join/2026-09-30_ranked.csv",
-          "ok": true,
-          "reason": "",
-          "size": 2280317,
-          "preview": "5903 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 FIX, ASC, NVT, GTES, SBLK"
-        }
-      ],
-      "preview": "5903 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 FIX, ASC, NVT, GTES, SBLK"
-    },
     {
       "key": "peer_rs",
       "title": "Peer RS",
@@ -390,6 +372,115 @@
         }
       ],
       "preview": "1d BUY SN, MHK, FIGS, CAKE, AVPT, IT, CORT, CDNA \u00b7 SELL RBLX, BIDU, SOC, GH, CMTG, BAK, GOGO, META \u00b7 green 130 \u00b7 GTES, EMBJ, AAON, PWR, TRI, DLB, CNH, VVX, DY, CRS \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-09-30 BUY SN, MHK, FIGS, CAKE, AVPT, IT, CORT, CDNA \u00b7 SELL RBLX, BIDU, SOC, GH, CMTG, BAK, GOGO, META \u00b7 2026-09-30 BUY SN, MHK, FIGS, CAKE, AVPT, IT, CORT, CDNA \u00b7 SELL RBLX, BIDU, SOC, GH, CMTG, BAK, GOGO, META \u00b7 # Stock book \u2014 2026-09-30\n_Generated 2026-09-30T05:40:21.973664-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+    },
+    {
+      "key": "live_boards",
+      "title": "Live 1d BUY/SELL strip",
+      "date": "2026-09-30",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-30T05:40:33.078019-04:00",
+      "files": [
+        {
+          "path": "data/day_board/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 14944,
+          "preview": "2026-09-30 BUY SN, MHK, FIGS, CAKE, AVPT, IT, CORT, CDNA \u00b7 SELL RBLX, BIDU, SOC, GH, CMTG, BAK, GOGO, META"
+        },
+        {
+          "path": "data/day_board/latest.json",
+          "ok": true,
+          "reason": "",
+          "size": 791,
+          "preview": "keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages"
+        },
+        {
+          "path": "data/day_board/2026-09-30.json",
+          "ok": true,
+          "reason": "",
+          "size": 87586,
+          "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href"
+        },
+        {
+          "path": "data/day_board/2026-09-30_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 49133,
+          "preview": "2026-09-30 BUY SN, MHK, FIGS, CAKE, AVPT, IT, CORT, CDNA \u00b7 SELL RBLX, BIDU, SOC, GH, CMTG, BAK, GOGO, META"
+        },
+        {
+          "path": "data/day_board/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 272931,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "data/day_board/2026-09-30_strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 272931,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "data/day_board/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 272789,
+          "preview": "2026-09-30 BUY SN, MHK, FIGS, CAKE, AVPT, IT, CORT, CDNA \u00b7 SELL RBLX, BIDU, SOC, GH, CMTG, BAK, GOGO, META"
+        },
+        {
+          "path": "data/factor_mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 272931,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 49133,
+          "preview": "2026-09-30 BUY SN, MHK, FIGS, CAKE, AVPT, IT, CORT, CDNA \u00b7 SELL RBLX, BIDU, SOC, GH, CMTG, BAK, GOGO, META"
+        },
+        {
+          "path": "dashboard/factor-mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 272931,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 272931,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 272789,
+          "preview": "2026-09-30 BUY SN, MHK, FIGS, CAKE, AVPT, IT, CORT, CDNA \u00b7 SELL RBLX, BIDU, SOC, GH, CMTG, BAK, GOGO, META"
+        },
+        {
+          "path": "data/day_board/hold_live_px.json",
+          "ok": true,
+          "reason": "",
+          "size": 1668,
+          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
+        },
+        {
+          "path": "dashboard/factor-mine/hold_live_px.json",
+          "ok": true,
+          "reason": "",
+          "size": 1668,
+          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
+        }
+      ],
+      "preview": "2026-09-30 BUY SN, MHK, FIGS, CAKE, AVPT, IT, CORT, CDNA \u00b7 SELL RBLX, BIDU, SOC, GH, CMTG, BAK, GOGO, META \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href \u00b7 2026-09-30 BUY SN, MHK, FIGS, CAKE, AVPT, IT, CORT, CDNA \u00b7 SELL RBLX, BIDU, SOC, GH, CMTG, BAK, GOGO, META \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-30 BUY SN, MHK, FIGS, CAKE, AVPT, IT, CORT, CDNA \u00b7 SELL RBLX, BIDU, SOC, GH, CMTG, BAK, GOGO, META \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-30 BUY SN, MHK, FIGS, CAKE, AVPT, IT, CORT, CDNA \u00b7 SELL RBLX, BIDU, SOC, GH, CMTG, BAK, GOGO, META \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, error"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
