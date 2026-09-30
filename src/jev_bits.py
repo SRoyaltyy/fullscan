@@ -1,6 +1,8 @@
-"""Short veto/keep bits for Jev hop-0.
+"""Hop-0 bits matching the 2026-09-30 Finviz sheet labels.
 
-Vetoes are trash only. Deals, prints, ratings, settlements keep.
+Order: source / tip / week / tape / ask / fluff veto.
+Then keep deal, earn, rating, print, policy.
+Same-day near-dup of a keep is dropped.
 """
 from __future__ import annotations
 
@@ -8,6 +10,7 @@ import re
 
 TRASH_NOUL = 0.70
 KEEP_NOUL = 0.60
+DUP_JACCARD = 0.72
 
 SOURCE_DENY = re.compile(
     r"(?i)(seeking.?alpha|benzinga|motley|fool\.com|the.?fool|"
@@ -24,19 +27,24 @@ DONE_RE = re.compile(
     r"prime lending rate|trial data|settles?|settled|settlement|"
     r"closes? (?:the )?(?:acquisition|deal|purchase|merger)|"
     r"closed (?:the )?(?:acquisition|deal|purchase|merger)|"
-    r"merger plan|credit facility|term loan)\b"
+    r"close us\$|merger plan|merger benefits|merger package|"
+    r"credit facility|term loan|revolving credit|"
+    r"sues?|sued|lawsuit|sells? \$\d)\b"
 )
 
 EARN_RE = re.compile(
     r"(?i)\beps\b|beats estimates|misses estimates|non-gaap|"
-    r"quarterly results|q[1-4] 20\d{2}|raises? .{0,24}guidance|"
-    r"reaffirms? .{0,24}guidance|issues? .{0,24}guidance"
+    r"quarterly results|q[1-4] 20\d{2}|raises? .{0,32}guidance|"
+    r"reaffirms? .{0,32}guidance|issues? .{0,32}guidance|"
+    r"posts record|record (?:q[1-4]|revenue|eps)|boosts 20\d{2} buyback"
 )
 
 RATING_RE = re.compile(
     r"(?i)price targets?|raises? (?:its )?price target|"
     r"cuts? (?:its )?price target|upgrades? to|downgrades? to|"
-    r"initiates .{0,24}with (?:buy|sell|hold|overweight|underweight)"
+    r"\bupgraded\b|\bdowngrade\b|\bdowngraded\b|"
+    r"initiates .{0,40}with (?:buy|sell|hold|overweight|underweight|neutral)|"
+    r"reiterates (?:buy|sell|hold|outperform)|keeps buy"
 )
 
 DOLLAR_RE = re.compile(
@@ -48,9 +56,12 @@ VETO_RES: list[tuple[str, re.Pattern | None]] = [
         "v_tipsheet",
         re.compile(
             r"(?i)should you buy|better stock to buy|is it a buy|"
-            r"where will .{0,48} be|prediction:|i'd still buy|"
-            r"top dividend stocks|stocks to buy and hold|"
-            r"could it set you up|top (?:research|analyst|stock) reports"
+            r"where will .{0,48} be|where it can go|prediction:|"
+            r"i'd still buy|top dividend stocks|stocks to buy and hold|"
+            r"could it set you up|top (?:research|analyst|stock) reports|"
+            r"\d+ stocks put traders|moonshot|plus \d+ more|"
+            r"these stocks stand to gain|stocks could break out|"
+            r"3 things investors"
         ),
     ),
     ("v_quote", re.compile(r"(?i)stock price,\s*news,\s*quote")),
@@ -58,23 +69,31 @@ VETO_RES: list[tuple[str, re.Pattern | None]] = [
         "v_week",
         re.compile(
             r"(?i)week ahead|all eyes on|what to watch|"
-            r"markets brace|what to expect in markets this week|"
-            r"what to expect in markets"
+            r"markets brace|what to expect in markets|"
+            r"to report earnings today|before market open"
         ),
     ),
     (
         "v_odds",
         re.compile(
             r"(?i)\bodds\b|polymarket|forecast:|sees rising|"
-            r"could slide|could dethrone|rising odds"
+            r"could slide|could dethrone|rising odds|could reset"
         ),
     ),
     (
         "v_tape",
         re.compile(
-            r"(?i)stocks? rise as|gold ends week|impacts your wallet|"
-            r"sinking even though|on track for weekly|how the latest .{0,24} impacts|"
-            r"stock outperforms competitors|jumps to close at record"
+            r"(?i)\d+(?:\.\d+)?\s*%|"
+            r"gold price (?:surge|slide)|prices slide|"
+            r"stocks? rise as|gold ends week|impacts your wallet|"
+            r"sinking even though|on track for weekly|"
+            r"stock outperforms competitors|jumps to close at record|"
+            r"in focus|stock market today|"
+            r"fuel\w* .{0,40}gain|spark\w* .{0,40}drop|"
+            r"pressures .{0,24}shares|"
+            r"stock (?:drops|dropped|climbs|fell|slips|lost) on|"
+            r"outperforms competitors|support\w* .{0,40}peers including|"
+            r"reportedly"
         ),
     ),
     ("v_ask", None),
@@ -83,7 +102,8 @@ VETO_RES: list[tuple[str, re.Pattern | None]] = [
         re.compile(
             r"(?i)puppy|patio stuff|el charro|football star shot|"
             r"richest people in america|polar bear cub|"
-            r"heartbreaking update|dividend analysis"
+            r"heartbreaking update|dividend analysis|"
+            r"appoints .{0,40} as |disclosed in an sec filing that it reaffirmed"
         ),
     ),
 ]
@@ -97,7 +117,8 @@ KEEP_RES: list[tuple[str, re.Pattern]] = [
         re.compile(
             r"(?i)fed holds|federal reserve holds|\bfomc\b|"
             r"\bcpi\b|\bpce\b|\bnfp\b|\beia\b|\bfda\b|\bsec\b|"
-            r"\bema\b|\bchmp\b|\bcafe\b|budget boost|chips act"
+            r"\bema\b|\bchmp\b|\bcafe\b|budget boost|chips act|"
+            r"mis-selling"
         ),
     ),
     ("k_dollar", DOLLAR_RE),
@@ -143,23 +164,23 @@ BIT_QUESTIONS: dict = {
         "type": "noul",
         "instructions": "Calendar preview?",
         "criteria": {
-            "true": "The Week Ahead: PCE and payrolls.",
-            "false": "Fed holds interest rates steady.",
+            "true": "Cintas to report earnings today before market open.",
+            "false": "Fastenal beats Q2 estimates with EPS $0.33.",
         },
     },
     "v_odds": {
         "type": "noul",
         "instructions": "Odds or forecast only?",
         "criteria": {
-            "true": "Fed October Rate Hike Odds Exceed 60%.",
+            "true": "Trump-Xi Summit Could Reset Trade Tensions.",
             "false": "JPMorgan upgrades America Movil to Overweight.",
         },
     },
     "v_tape": {
         "type": "noul",
-        "instructions": "Already-moved tape or wallet recap?",
+        "instructions": "Already-moved tape? Percent move in the title?",
         "criteria": {
-            "true": "U.S. stocks rise as Fed signals hikes.",
+            "true": "Surprise inventory build drive 5.63% DVN drop. NFLX drops on HSBC cut.",
             "false": "GE Vernova settles over $300 million Vineyard Wind dispute.",
         },
     },
@@ -167,7 +188,7 @@ BIT_QUESTIONS: dict = {
         "type": "noul",
         "instructions": "Question column?",
         "criteria": {
-            "true": "Is AI really fueling inflation?",
+            "true": "How far can BSX stock swing?",
             "false": "Cenovus Q2 EPS $1.08 misses estimates.",
         },
     },
@@ -175,15 +196,15 @@ BIT_QUESTIONS: dict = {
         "type": "noul",
         "instructions": "Not a market act?",
         "criteria": {
-            "true": "South32 Ltd's Dividend Analysis.",
+            "true": "South32 Ltd's Dividend Analysis. Aon Appoints a CCO.",
             "false": "Arthur J. Gallagher acquires Innovise.",
         },
     },
     "k_done": {
         "type": "noul",
-        "instructions": "Deal, settlement, or finished act?",
+        "instructions": "Deal, settlement, lawsuit, or finished act?",
         "criteria": {
-            "true": "acquires, completes acquisition, settles $300 million, closes $4B deal.",
+            "true": "acquires, closes $4B acquisition, settles $300m, hospitals sue.",
             "false": "odds, could, should you buy.",
         },
     },
@@ -191,15 +212,15 @@ BIT_QUESTIONS: dict = {
         "type": "noul",
         "instructions": "Company earnings print or guidance?",
         "criteria": {
-            "true": "Cenovus Q2 EPS $1.08 misses estimates. Salesforce issues FY27 guidance.",
-            "false": "Should you buy the dip after earnings?",
+            "true": "Cenovus Q2 EPS $1.08 misses estimates. CSX raises 2026 outlook.",
+            "false": "Cintas to report earnings today.",
         },
     },
     "k_rating": {
         "type": "noul",
         "instructions": "Named analyst upgrade, downgrade, or price target?",
         "criteria": {
-            "true": "JPMorgan upgrades America Movil and raises PT to $32.",
+            "true": "JPMorgan upgrades America Movil. HSBC downgraded Netflix to Hold.",
             "false": "Top analyst reports for AMD, Linde and Amgen.",
         },
     },
@@ -207,16 +228,16 @@ BIT_QUESTIONS: dict = {
         "type": "noul",
         "instructions": "Official print or rule?",
         "criteria": {
-            "true": "Fed holds rates. FDA approval. EMA CHMP. CHIPS Act.",
+            "true": "FDA approval. CHIPS Act award. EMA CHMP.",
             "false": "Barr says more hikes likely needed.",
         },
     },
     "k_dollar": {
         "type": "noul",
-        "instructions": "Money amount AND a finished act verb?",
+        "instructions": "Money amount AND a finished act?",
         "criteria": {
             "true": "AMETEK completes $5.0 billion acquisition.",
-            "false": "Gold ends week lower at $4,285.",
+            "false": "US landlords face a $1.8 trillion debt wall.",
         },
     },
     "k_choke": {
@@ -224,14 +245,14 @@ BIT_QUESTIONS: dict = {
         "instructions": "New strait verb?",
         "criteria": {
             "true": "Trump rejects Iran proposal to reopen Hormuz.",
-            "false": "Iran war live: world holds breath for new Hormuz resolution.",
+            "false": "Tensions persist as tankers transit Hormuz.",
         },
     },
     "k_policy": {
         "type": "noul",
         "instructions": "State plus named policy object?",
         "criteria": {
-            "true": "Pfizer to share revenue with HHS on overseas drug prices.",
+            "true": "Pfizer share revenue with HHS on overseas drug prices.",
             "false": "How Trump became mob boss of the United States.",
         },
     },
@@ -326,3 +347,25 @@ def decide(row: dict, answers: dict | None = None) -> dict:
     if keep:
         return pack("keep", keep)
     return pack("drop", "no_keep_bit")
+
+
+def collapse_dupes(items: list[dict], threshold: float = DUP_JACCARD) -> list[dict]:
+    """Second keep that overlaps an earlier keep is a rewrite. Drop it."""
+    try:
+        from .jev_gate import jaccard, tokens
+    except Exception:
+        return items
+    kept_toks: list[frozenset[str]] = []
+    out: list[dict] = []
+    for raw in items:
+        item = dict(raw)
+        title = item.get("title") or ""
+        toks = tokens(title)
+        if item.get("decision") == "keep":
+            if any(jaccard(toks, prev) >= threshold for prev in kept_toks):
+                item["decision"] = "drop"
+                item["reason"] = "dup"
+            else:
+                kept_toks.append(toks)
+        out.append(item)
+    return out
