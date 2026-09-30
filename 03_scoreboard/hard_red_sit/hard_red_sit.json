@@ -2921,14 +2921,14 @@
         "sit": true,
         "hard_red": false,
         "side": "long",
-        "s": 1.292,
+        "s": 2.009,
         "short_only": [],
         "dip_scoop": [
           {
-            "ticker": "SN",
+            "ticker": "SDEV",
             "side": "long",
             "open": null,
-            "px": 181.99,
+            "px": 1.62,
             "px_src": "session_export",
             "low": null,
             "scoops": {
@@ -2961,10 +2961,10 @@
             "tag": "RESEARCH"
           },
           {
-            "ticker": "DT",
+            "ticker": "EGG",
             "side": "long",
             "open": null,
-            "px": 57.2,
+            "px": 4.67,
             "px_src": "session_export",
             "low": null,
             "scoops": {
@@ -2997,10 +2997,10 @@
             "tag": "RESEARCH"
           },
           {
-            "ticker": "TOST",
+            "ticker": "SFIX",
             "side": "long",
             "open": null,
-            "px": 30.38,
+            "px": 2.47,
             "px_src": "session_export",
             "low": null,
             "scoops": {
@@ -3033,10 +3033,10 @@
             "tag": "RESEARCH"
           },
           {
-            "ticker": "SONO",
+            "ticker": "ANNX",
             "side": "long",
             "open": null,
-            "px": 17.18,
+            "px": 3.92,
             "px_src": "session_export",
             "low": null,
             "scoops": {
@@ -3069,10 +3069,10 @@
             "tag": "RESEARCH"
           },
           {
-            "ticker": "PDFS",
+            "ticker": "REGN",
             "side": "long",
             "open": null,
-            "px": 56.43,
+            "px": 751.95,
             "px_src": "session_export",
             "low": null,
             "scoops": {
@@ -3105,10 +3105,46 @@
             "tag": "RESEARCH"
           },
           {
-            "ticker": "SHOO",
+            "ticker": "BLFS",
             "side": "long",
             "open": null,
-            "px": 44.9,
+            "px": 39.15,
+            "px_src": "session_export",
+            "low": null,
+            "scoops": {
+              "0.5": {
+                "kind": "no_open",
+                "x": 0.5,
+                "fill": null
+              },
+              "1.0": {
+                "kind": "no_open",
+                "x": 1.0,
+                "fill": null
+              },
+              "1.5": {
+                "kind": "no_open",
+                "x": 1.5,
+                "fill": null
+              },
+              "2.0": {
+                "kind": "no_open",
+                "x": 2.0,
+                "fill": null
+              },
+              "3.0": {
+                "kind": "no_open",
+                "x": 3.0,
+                "fill": null
+              }
+            },
+            "tag": "RESEARCH"
+          },
+          {
+            "ticker": "MRVI",
+            "side": "long",
+            "open": null,
+            "px": 7.59,
             "px_src": "session_export",
             "low": null,
             "scoops": {
