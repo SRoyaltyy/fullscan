@@ -4,6 +4,93 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Jev train</title>
+<style>
+ :root{
+  --bg:#0f1420; --card:#171e2e; --line:#262f45; --line2:#232c42;
+  --fg:#dfe6f2; --mut:#8b96ab; --dim:#66708a; --pos:#4ade80; --neg:#f87171;
+  --gold:#fbbf24; --chip:#2a3450;
+ }
+ *{box-sizing:border-box}
+ html,body{margin:0;background:var(--bg);color:var(--fg);font:14px/1.45 -apple-system,Segoe UI,Roboto,sans-serif}
+ .wrap{max-width:1180px;margin:0 auto;padding:16px 14px 96px}
+ h1{font-size:20px;margin:0 0 4px}
+ .sub{color:var(--mut);margin:0 0 12px}
+ .bar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 0 12px}
+ button,input[type=password],input[type=text],input[type=date]{font:inherit;color:var(--fg);background:var(--card);border:1px solid var(--line);border-radius:8px}
+ button{padding:7px 12px;cursor:pointer}
+ button:disabled{opacity:.45;cursor:not-allowed}
+ button.primary{background:#1d4ed8;border-color:#1d4ed8}
+ input[type=password]{padding:7px 10px;min-width:min(280px,100%)}
+ input[type=date]{padding:6px 10px}
+ .meta{color:var(--mut);font-size:12px;margin:0 0 10px}
+ .err{color:var(--neg);white-space:pre-wrap}
+ .done{margin:12px 0;padding:12px;border:1px solid var(--gold);border-radius:10px;background:#1c1810}
+ .done p{margin:0 0 6px;font-size:18px}
+ .done a{font-size:22px;color:var(--gold);word-break:break-all}
+ table{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);border-radius:10px}
+ th,td{padding:8px;border-bottom:1px solid var(--line2);vertical-align:top;text-align:left}
+ th{color:var(--mut);font-size:12px;font-weight:600;position:sticky;top:0;background:#121826}
+ td.n{color:var(--dim);width:2.5rem}
+ td.title{min-width:220px}
+ .jev{font-weight:700}
+ .jev.KEEP{color:var(--pos)}
+ .jev.DROP{color:var(--neg)}
+ .bits{color:var(--gold);font-size:12px}
+ .you{display:flex;gap:4px;align-items:center;flex-wrap:wrap}
+ .you button{padding:4px 8px;min-width:2rem}
+ .you input{flex:1;min-width:140px;padding:4px 8px}
+ .you button.on.K{background:#14532d;border-color:var(--pos)}
+ .you button.on.D{background:#7f1d1d;border-color:var(--neg)}
+ .you button.on.Q{background:var(--chip);border-color:var(--gold);color:var(--gold)}
+ .src{color:var(--mut);font-size:12px}
+ .pool{color:var(--dim)}
+ .sticky{position:fixed;left:0;right:0;bottom:0;background:#121826;border-top:1px solid var(--line);padding:10px 14px;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+ .count{color:var(--mut)}
+ .empty{padding:16px;border:1px dashed var(--line);border-radius:10px;color:var(--mut)}
+ .warn{color:var(--gold)}
+</style>
 </head>
-<body>placeholder</body>
+<body>
+<div class="wrap">
+ <h1>Jev train</h1>
+ <p class="sub">Grade hop-0 like homework. K keep, D drop, ? skip. A one-line reason sits next to those marks. Submit stays off until 30 rows are K or D. Mixed draw stays available. Train by day loads that calendar day's parse (parsed, else digest, else judge titles), not a mixed RSS sample. Empty reasons on rows where you disagree with Jev are flagged.</p>
+ <div class="bar">
+  <button type="button" id="newDraw">New draw</button>
+  <button type="button" id="reload">Reload draw</button>
+  <label>Train by day <input id="dayPick" type="date" list="dayList"></label>
+  <datalist id="dayList"></datalist>
+  <button type="button" id="loadDay">Load that day</button>
+  <label>GitHub token <input id="token" type="password" autocomplete="off" placeholder="workflow scope, this tab only"></label>
+  <button type="button" id="clearToken">Clear</button>
+ </div>
+ <p class="meta" id="meta">No draw loaded.</p>
+ <p class="err" id="err"></p>
+ <div class="done" id="done" hidden>
+  <p>Paste this to Grok to discuss.</p>
+  <a id="issueUrl" href="" target="_blank" rel="noopener"></a>
+ </div>
+ <div class="empty" id="empty">No draw yet. New draw asks GitHub to run the hop-0 gate and write draw.json on main. Load that day grades one parse date instead.</div>
+ <div style="overflow-x:auto">
+  <table id="sheet" hidden>
+   <thead>
+    <tr>
+     <th>#</th>
+     <th>title</th>
+     <th>source</th>
+     <th>Jev</th>
+     <th>why bits</th>
+     <th>You</th>
+    </tr>
+   </thead>
+   <tbody></tbody>
+  </table>
+ </div>
+</div>
+<div class="sticky">
+ <span class="count" id="count">0 / 30 marked K or D</span>
+ <button type="button" id="submit" class="primary" disabled>Submit</button>
+ <button type="button" id="download">Download grades JSON</button>
+</div>
+<script src="app.js"></script>
+</body>
 </html>
