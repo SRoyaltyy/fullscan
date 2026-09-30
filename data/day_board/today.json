@@ -1,6 +1,6 @@
 {
   "date": "2026-09-30",
-  "generated_at": "2026-09-30T12:21:48.014384-04:00",
+  "generated_at": "2026-09-30T12:26:14.555474-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -130,10 +130,10 @@
     }
   ],
   "flatten": {
-    "said": "0 priced buys \u00b7 cash $21,070.91",
+    "said": "0 priced buys \u00b7 cash $12,282.42",
     "bullets": [
       "0 priced buys",
-      "cash $21,070.91"
+      "cash $12,282.42"
     ]
   },
   "general": {
@@ -325,7 +325,7 @@
       "date": "2026-09-30",
       "ok": true,
       "pushed": true,
-      "at": "2026-09-30T12:10:27.071031-04:00",
+      "at": "2026-09-30T12:26:13.472762-04:00",
       "files": [
         {
           "path": "01_daily/weather/2026-09-30_weather.json",
