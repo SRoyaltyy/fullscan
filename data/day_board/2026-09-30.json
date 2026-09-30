@@ -1,15 +1,13 @@
 {
   "date": "2026-09-30",
-  "generated_at": "2026-09-30T05:36:55.175765-04:00",
+  "generated_at": "2026-09-30T05:38:23.366189-04:00",
   "overall": "PARTIAL",
-  "ranker_ready": false,
-  "blockers": [
-    "MISSING AB checklist enriched `data/ab_checklist/2026-09-30_ab_checklist_enriched.csv` \u2014 missing"
-  ],
+  "ranker_ready": true,
+  "blockers": [],
   "counts": {
-    "ok": 3,
+    "ok": 4,
     "partial": 4,
-    "fail": 1,
+    "fail": 0,
     "n": 8
   },
   "processes": [
@@ -579,11 +577,11 @@
       "key": "ab",
       "name": "AB checklist",
       "yaml": "ab_checklist.yml",
-      "status": "FAIL",
+      "status": "OK",
       "inputs_ready": true,
-      "n_req_ok": 0,
+      "n_req_ok": 1,
       "n_req": 1,
-      "n_opt_ok": 0,
+      "n_opt_ok": 1,
       "n_opt": 1,
       "files": [
         {
@@ -591,26 +589,32 @@
           "name": "AB checklist raw",
           "path": "data/ab_checklist/2026-09-30_ab_checklist.csv",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "rows=2629",
+          "size": 7544304,
+          "said": "28 rows",
+          "bullets": [
+            "GMAB, FPI, KBR, PBR-A, ATRC, AVPT, SFL, BNL"
+          ]
         },
         {
           "key": "ab_enriched",
           "name": "AB checklist enriched",
           "path": "data/ab_checklist/2026-09-30_ab_checklist_enriched.csv",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "rows=2629",
+          "size": 8335042,
+          "said": "25 rows",
+          "bullets": [
+            "ATRC, FIGS, WST, LLY, CVLT, FPI, PANW, BJ"
+          ]
         }
       ],
-      "said": "",
-      "bullets": []
+      "said": "25 rows",
+      "bullets": [
+        "ATRC, FIGS, WST, LLY, CVLT"
+      ]
     },
     {
       "key": "catalyst",
@@ -683,7 +687,7 @@
       "name": "Stock Book ALL",
       "yaml": "stock_book_all.yml",
       "status": "PARTIAL",
-      "inputs_ready": false,
+      "inputs_ready": true,
       "n_req_ok": 2,
       "n_req": 4,
       "n_opt_ok": 1,
@@ -786,11 +790,13 @@
           "name": "AB checklist enriched",
           "path": "data/ab_checklist/2026-09-30_ab_checklist_enriched.csv",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "rows=2629",
+          "size": 8335042,
+          "said": "25 rows",
+          "bullets": [
+            "ATRC, FIGS, WST, LLY, CVLT, FPI, PANW, BJ"
+          ]
         },
         {
           "key": "join",
@@ -1619,6 +1625,31 @@
         }
       ],
       "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+    },
+    {
+      "key": "ab",
+      "title": "AB checklist",
+      "date": "2026-09-30",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-30T05:38:19.940966-04:00",
+      "files": [
+        {
+          "path": "data/ab_checklist/2026-09-30_ab_checklist.csv",
+          "ok": true,
+          "reason": "",
+          "size": 7544304,
+          "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 GMAB, FPI, KBR, PBR-A, ATRC"
+        },
+        {
+          "path": "data/ab_checklist/2026-09-30_ab_checklist_enriched.csv",
+          "ok": true,
+          "reason": "",
+          "size": 8335042,
+          "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 ATRC, FIGS, WST, LLY, CVLT"
+        }
+      ],
+      "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 GMAB, FPI, KBR, PBR-A, ATRC \u00b7 2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 ATRC, FIGS, WST, LLY, CVLT"
     }
   ],
   "href": {
