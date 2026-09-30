@@ -1,0 +1,39 @@
+name: Restore jev_gate
+on:
+  workflow_dispatch:
+jobs:
+  restore:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 20
+      - name: Restore src/jev_gate.py from before placeholder
+        run: |
+          set -euo pipefail
+          git checkout 0a62e3a23d45374e69371aacf7043161ad06145b^ -- src/jev_gate.py
+          python3 - <<'PY'
+          from pathlib import Path
+          p = Path('src/jev_gate.py')
+          t = p.read_text()
+          if t.strip() == 'PLACEHOLDER':
+              raise SystemExit('still placeholder after checkout parent')
+          a = '''    keep = str(row.get("_code_keep") or "") or classifiable_reason(title)\n    if code in CODE_KEEP or (keep and code in {"", "punct", "source", "reprint_weather", "junk_shape"}):\n        return pack("keep", code if code in CODE_KEEP else keep)\n    if code:\n'''
+          b = '''    keep = str(row.get("_code_keep") or "") or classifiable_reason(title)\n    # Tip-sheet / junk-shape is hop-0 trash. A Fool title that name-drops\n    # earnings must not ride classifiable_reason back to KEEP.\n    if code in {"source", "junk_shape"}:\n        return pack("drop", code)\n    if code in CODE_KEEP or (keep and code in {"", "punct"}):\n        return pack("keep", code if code in CODE_KEEP else keep)\n    if code:\n'''
+          c = '''    jev_fact = (\n        material >= MATERIAL_KEEP or instrument >= INSTRUMENT_KEEP\n    )\n'''
+          d = '''    # Concrete action only. Material ("could this matter this week")\n    # is what let week-ahead / wallet / odds columns through.\n    jev_fact = instrument >= INSTRUMENT_KEEP\n'''
+          if a not in t:
+              raise SystemExit('block a missing')
+          if c not in t:
+              raise SystemExit('block c missing')
+          p.write_text(t.replace(a, b).replace(c, d))
+          print('patched', p.stat().st_size)
+          PY
+          git config user.name "Market-Bot-Automaton"
+          git config user.email "bot@users.noreply.github.com"
+          git add src/jev_gate.py
+          git diff --staged --quiet && echo nochange && exit 0
+          git commit -m "jev: keep only a concrete instrument; restore file"
+          git push origin HEAD:main
