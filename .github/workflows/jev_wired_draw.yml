@@ -3,7 +3,7 @@ name: Jev wired-path replay
 # Cloud agents cannot workflow_dispatch. Landing this file on main
 # scores the unseen-100 six-bit stop test, then replays the last sheet.
 # No schedule. Mixed New draw stays on jev_train.yml (dispatch only).
-# POKE 2026-09-30-done-swap
+# POKE 2026-09-30-noul-050
 
 on:
   push:
