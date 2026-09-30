@@ -1,0 +1,74 @@
+{
+  "date": "2026-09-30",
+  "generated_at": "2026-09-30T04:14:59.188541-04:00",
+  "timezone": "America/New_York",
+  "source": "live",
+  "source_url": "https://elite.finviz.com/",
+  "archive_snapshot_ts": null,
+  "archive_snapshot_at": null,
+  "archive_url": null,
+  "clock_legal": true,
+  "clock_same_morning": true,
+  "clock_use": "same_morning",
+  "clock_legal_for": "2026-09-30",
+  "clock_rule": "Live: Generated must be before 09:30 ET on this date or leave missing. Wayback: capture before 09:30 ET that day is legal for that morning's Pre-Open. Afternoon Wayback is legal for the NEXT session open only (prior-day close recap), marked by clock_legal_for. Gaps stay gaps. Capture only — not tape_anchor / predict / #210.",
+  "kind": "finviz_homepage_market_digest",
+  "represents": "Finviz homepage market-day prose. Same-morning Pre-Open when Generated is before 09:30 ET; afternoon Wayback is a prior-day close recap legal for the next session only. Not quote-page ticker blurbs.",
+  "error": null,
+  "headline": "US stocks set to open higher as futures gain ahead of ADP jobs report, GDP update and core PCE inflation data",
+  "raw_text": "- S&P 500 Futures (@ES) rise 0.28%, Dow Jones Futures (@YM) climb 0.46%, Nasdaq 100 Futures (@NQ) gain 0.22%, and Russell 2000 Futures (@ER2) advance 0.36% in early trading\n- ADP Employment Change for September is due at 8:15 AM ET and is expected to set the tone for labor-market expectations\n- A full data slate hits at 8:30 AM ET, including the Q2 GDP third estimate, August personal income and spending, and core PCE inflation readings\n- Asian equities trade mixed overnight, with Japan’s Nikkei index (@NKD) advancing nearly 2%\n- European stock markets trade mostly higher in early sessions, echoing the firmer tone in US futures\n- Oil (@CL) and gold (@GC) prices edge modestly higher in overnight trading\n- Earnings before the bell are due from Jabil (JBL), FactSet (FDS), Conagra Brands (CAG), and Cal-Maine Foods (CALM), setting up potential pre-market stock reactions",
+  "raw_summary_md": "- **S&P 500 Futures** ([@ES](https://finviz.com/futures_charts?t=ES)) rise **0.28%**, **Dow Jones Futures** ([@YM](https://finviz.com/futures_charts?t=YM)) climb **0.46%**, **Nasdaq 100 Futures** ([@NQ](https://finviz.com/futures_charts?t=NQ)) gain **0.22%**, and **Russell 2000 Futures** ([@ER2](https://finviz.com/futures_charts?t=ER2)) advance **0.36%** in early trading\n- **ADP Employment Change for September** is due at **8:15 AM ET** and is expected to set the tone for labor-market expectations\n- A full data slate hits at **8:30 AM ET**, including the **Q2 GDP third estimate**, **August personal income and spending**, and **core PCE inflation** readings\n- **Asian equities** trade mixed overnight, with **Japan’s Nikkei index** ([@NKD](https://finviz.com/futures_charts?t=NKD)) advancing **nearly 2%**\n- **European stock markets** trade **mostly higher** in early sessions, echoing the firmer tone in **US futures**\n- **Oil** ([@CL](https://finviz.com/futures_charts?t=CL)) and **gold** ([@GC](https://finviz.com/futures_charts?t=GC)) prices edge **modestly higher** in overnight trading\n- **Earnings before the bell** are due from **Jabil** ([JBL](https://finviz.com/quote?t=JBL)), **FactSet** ([FDS](https://finviz.com/quote?t=FDS)), **Conagra Brands** ([CAG](https://finviz.com/quote?t=CAG)), and **Cal-Maine Foods** ([CALM](https://finviz.com/quote?t=CALM)), setting up potential **pre-market stock reactions**",
+  "index_moves": [],
+  "oil": null,
+  "cpi": null,
+  "fed_odds": null,
+  "named_tickers": [
+    "JBL",
+    "FDS",
+    "CAG",
+    "CALM"
+  ],
+  "named_leaders": [
+    "JBL",
+    "FDS",
+    "CAG",
+    "CALM"
+  ],
+  "calendar": [],
+  "prior_close": {
+    "spx": null,
+    "nasdaq": null,
+    "dow": null
+  },
+  "cpi_fed": {
+    "cpi": null,
+    "fed_odds": null
+  },
+  "next_session_calendar": {
+    "housing": false,
+    "retail": false,
+    "fed": false,
+    "bullets": [],
+    "text": ""
+  },
+  "earnings_slate": {
+    "tickers": [
+      "JBL",
+      "FDS",
+      "CAG",
+      "CALM"
+    ],
+    "text": "Earnings before the bell are due from Jabil (JBL), FactSet (FDS), Conagra Brands (CAG), and Cal-Maine Foods (CALM), setting up potential pre-market stock reactions"
+  },
+  "geo_grain": {
+    "geo": false,
+    "grain": false,
+    "flags": [],
+    "text": ""
+  },
+  "finviz_id": 297861,
+  "finviz_ticker": "$MARKET",
+  "finviz_published_at": "2026-09-30T04:06:19.673",
+  "finviz_source": "market_summary",
+  "finviz_sentiment": "good"
+}
