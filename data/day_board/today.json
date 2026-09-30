@@ -1,6 +1,6 @@
 {
   "date": "2026-09-30",
-  "generated_at": "2026-09-30T05:36:20.608218-04:00",
+  "generated_at": "2026-09-30T05:36:32.332052-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -41,31 +41,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "events",
-      "title": "Event scanner (primary)",
-      "date": "2026-09-30",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-30T04:39:33.039324-04:00",
-      "files": [
-        {
-          "path": "01_daily/events/2026-09-30_events.json",
-          "ok": true,
-          "reason": "",
-          "size": 34034,
-          "preview": "34 events \u00b7 FOMC hikes 25 bp to 3.75\u20134.00% | White House memo to restrict Canadian goods in U.S. federal procuremen | EDVA unseals Google ad-tech remedies (behavioral, no breakup) | BOJ hikes policy rate 25 bp to 1.25% | H-1B $100,000 entry restriction extended 12 months | Graham Act signed: up to 500% Russia tariffs and secondary energy-buye"
-        },
-        {
-          "path": "01_daily/events/2026-09-30_events.md",
-          "ok": true,
-          "reason": "",
-          "size": 21202,
-          "preview": "# Event Scan \u2014 2026-09-30\n- events tracked: **34** (via openclaw)\n- uncertainty: **elevated**\n- summary: The tape is still digesting a unanimous Sept 16 FOMC hike to 3.75\u20134.00% against an unfinished Iran/Hormuz oil shock, with today's PCE/GDP and Friday's NFP the first hard tests of whether another hike is live. A modest U.S.\u2013China truce extension to Jan 10, 2027 and China's mortgage/PSL mini-stimulus cut near-term policy-cliff risk, but the Graham Act's secondary-tariff authorities and still-restricted Hormuz flows keep a fat left tail. Quality over drama: shutdown risk is off (CR through Dec 11), debt ceiling is a 2027 issue, and Atlantic hurricane season remains unusually quiet."
-        }
-      ],
-      "preview": "34 events \u00b7 FOMC hikes 25 bp to 3.75\u20134.00% | White House memo to restrict Canadian goods in U.S. federal procuremen | EDVA unseals Google ad-tech remedies (behavioral, no breakup) | BOJ hikes policy rate 25 bp to 1.25% | H-1B $100,000 entry restriction extended 12 months | Graham Act signed: up to 500% Russia tariffs and secondary energy-buye \u00b7 # Event Scan \u2014 2026-09-30\n- events tracked: **34** (via openclaw)\n- uncertainty: **elevated**\n- summary: The tape is still digesting a unanimous Sept 16 FOMC hike to 3.75\u20134.00% against an unfinished Iran/Hormuz oil shock, with today's PCE/GDP and Friday's NFP the first hard tests of whether another hike is live. A modest U.S.\u2013China truce extension to Jan 10, 2027 and China's mortgage/PSL mini-stimulus cut near-term policy-cliff risk, but the Graham Act's secondary-tariff authorities and still-restricted Hormuz flows keep a fat left tail. Quality over drama: shutdown risk is off (CR through Dec 11), debt ceiling is a 2027 issue, and Atlantic hurricane season remains unusually quiet."
-    },
     {
       "key": "news_actions",
       "title": "News actions",
@@ -226,6 +201,24 @@
         }
       ],
       "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-09-30\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+    },
+    {
+      "key": "join",
+      "title": "Join / match rank",
+      "date": "2026-09-30",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-30T05:36:31.649878-04:00",
+      "files": [
+        {
+          "path": "data/join/2026-09-30_ranked.csv",
+          "ok": true,
+          "reason": "",
+          "size": 2280317,
+          "preview": "5903 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 FIX, ASC, NVT, GTES, SBLK"
+        }
+      ],
+      "preview": "5903 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 FIX, ASC, NVT, GTES, SBLK"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
