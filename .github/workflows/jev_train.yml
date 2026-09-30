@@ -82,8 +82,13 @@ jobs:
           DAY: ${{ github.event.inputs.day }}
         run: |
           set -euo pipefail
-          PYTHONPATH=. python3 -m src.jev_train draw --stamp "$STAMP" --seed "$SEED" --day "$DAY" \
-            | tee "$RUNNER_TEMP/jev_train_out.txt"
+          if [ -n "${DAY}" ]; then
+            PYTHONPATH=. python3 -m src.jev_day draw --stamp "$STAMP" --day "$DAY" \
+              | tee "$RUNNER_TEMP/jev_train_out.txt"
+          else
+            PYTHONPATH=. python3 -m src.jev_train draw --stamp "$STAMP" --seed "$SEED" \
+              | tee "$RUNNER_TEMP/jev_train_out.txt"
+          fi
           stamp=$(awk -F= '/^JEV_TRAIN_STAMP=/{print $2}' "$RUNNER_TEMP/jev_train_out.txt" | tail -1)
           echo "stamp=${stamp}" >> "$GITHUB_OUTPUT"
 
