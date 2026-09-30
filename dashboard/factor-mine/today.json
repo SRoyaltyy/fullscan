@@ -1,6 +1,6 @@
 {
   "date": "2026-09-30",
-  "generated_at": "2026-09-30T17:37:06.555187-04:00",
+  "generated_at": "2026-09-30T19:48:59.347773-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -789,6 +789,31 @@
         }
       ],
       "preview": "5901 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 MATX, EMBJ, IESC, NVT, SBLK"
+    },
+    {
+      "key": "finviz_market_digest_close",
+      "title": "Finviz homepage market digest (close)",
+      "date": "2026-09-30",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-30T19:44:49.257672-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-09-30_finviz_market_digest_close.json",
+          "ok": true,
+          "reason": "",
+          "size": 8396,
+          "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for"
+        },
+        {
+          "path": "01_daily/news/2026-09-30_finviz_market_digest_close.md",
+          "ok": true,
+          "reason": "",
+          "size": 3898,
+          "preview": "# Finviz homepage market digest (close) \u2014 2026-09-30\n**Generated:** 2026-09-30T19:44:49.230502-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stocks ended mixed on final day of Q3 as cooler PCE data eased Fed hike odds but 10-year yield hit 24-year high\n**Prior close:** SPX -0.25%  Nasdaq +0.24%  Dow -0.86%\n**SPX:** -0.25%  **Nasdaq:** +0.24%  **Dow:** -0.86%\n**Oil:** \u2014\n**CPI/Fed:** 3.7% hike (3.7% consensus, pulling October Federal Reserve hike)\n**Leaders:** ADP, HPE, INTC, CCL, FICO, MRNA, C, MU, LESL\n**Next session:** housing no \u00b7 retail no \u00b7 Fed yes\n**Earnings slate:** \u2014\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-10-01\n**Clock use:** `next_open`"
+        }
+      ],
+      "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest (close) \u2014 2026-09-30\n**Generated:** 2026-09-30T19:44:49.230502-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stocks ended mixed on final day of Q3 as cooler PCE data eased Fed hike odds but 10-year yield hit 24-year high\n**Prior close:** SPX -0.25%  Nasdaq +0.24%  Dow -0.86%\n**SPX:** -0.25%  **Nasdaq:** +0.24%  **Dow:** -0.86%\n**Oil:** \u2014\n**CPI/Fed:** 3.7% hike (3.7% consensus, pulling October Federal Reserve hike)\n**Leaders:** ADP, HPE, INTC, CCL, FICO, MRNA, C, MU, LESL\n**Next session:** housing no \u00b7 retail no \u00b7 Fed yes\n**Earnings slate:** \u2014\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-10-01\n**Clock use:** `next_open`"
     }
   ],
   "source": "publish_live_boards"
