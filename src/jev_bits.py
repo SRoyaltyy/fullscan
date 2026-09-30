@@ -238,7 +238,7 @@ BIT_QUESTIONS: dict = {
         "criteria": {
             "true": (
                 "Apple ordered to pay $5.7bn in haptic tech patent case. "
-                "U.S. Taps Strategic Oil Reserve Again as Diesel Tops $6."
+                "Fed holds interest rates steady as inflation hits 3-year high."
             ),
             "false": (
                 "Capita Flags CSPS Costs but Touts Contract Wins. "
