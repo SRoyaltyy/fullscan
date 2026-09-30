@@ -7,9 +7,9 @@ import re
 from pathlib import Path
 
 from .jev_eval import _digest_items, _parsed_items, _row as _eval_row, title_id
-from .jev_gate import NEWS_DIR, ROOT, _load_json, _write_json, api_key
+from .jev_gate import NEWS_DIR, ROOT, _load_json, _write_json
 
-DAY_CAP = 150
+DAY_CAP = 500
 DAY_RE = re.compile(r"^20\d{2}-\d{2}-\d{2}$")
 
 
@@ -129,7 +129,8 @@ def load_day_rows(day: str, news_dir: Path | None = None,
     return out, kind or "day"
 
 
-def run_day_draw(*, day: str, stamp: str = "", write: bool = True) -> dict:
+def run_day_draw(*, day: str, stamp: str = "", write: bool = True,
+                 root: Path | None = None) -> dict:
     from .jev_train import (
         allocate_stamp,
         annotate_gate,
@@ -140,15 +141,12 @@ def run_day_draw(*, day: str, stamp: str = "", write: bool = True) -> dict:
         SCHEMA_DRAW,
     )
     now = dt.datetime.now(dt.timezone.utc)
-    root = ROOT
+    root = root or ROOT
     news_dir = root / "01_daily" / "news"
     ground = root / "00_grounding"
     day_rows, day_kind = load_day_rows(day, news_dir=news_dir)
-    key = api_key()
-    if not key:
-        raise RuntimeError("JEV_API_KEY / TYPESAFE_API_KEY is empty")
     items, model = annotate_gate(
-        day_rows, live=True, key=key, workers=16, poster=None, asof=now.date(),
+        day_rows, live=False, key="", workers=1, poster=None, asof=now.date(),
     )
     directory = train_dir(ground)
     directory.mkdir(parents=True, exist_ok=True)
@@ -163,7 +161,7 @@ def run_day_draw(*, day: str, stamp: str = "", write: bool = True) -> dict:
         "day": day,
         "day_kind": day_kind,
         "day_n": len(day_rows),
-        "gate": "hop0-code-bits+jev",
+        "gate": "hop0-code-bits",
         "sample": {
             "parsed": len(day_rows) if day_kind == "parsed" else 0,
             "rss": 0,
