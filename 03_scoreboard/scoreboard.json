@@ -29353,6 +29353,91 @@
       "outlier_watch": "NDX (-0.09%) outperformed Dow (-0.26%) despite the \"tech selloff\" headline; and Channel 1 showed gold +0.90%/silver +1.96% while news outlets reported \"gold fell again / two-month low\"",
       "horizon_grades": {},
       "lesson_schema_ok": true
+    },
+    {
+      "date": "2026-09-30",
+      "topic": "general",
+      "predicted_direction": null,
+      "predicted_magnitude_band": null,
+      "confidence_score": null,
+      "total_score": null,
+      "multiplier": null,
+      "components": {},
+      "leading_sum": null,
+      "actual_open": 7688.99,
+      "actual_close": 7651.54,
+      "actual_pct_change": -0.25,
+      "actual_direction": "down",
+      "actual_magnitude_band": "flat",
+      "direction_hit": null,
+      "magnitude_hit": null,
+      "divergence_flagged": false,
+      "divergence_verdict": null,
+      "per_factor_breakdown": [],
+      "reflection_lesson_ref": null,
+      "sources_used": [
+        {
+          "url": "https://www.reuters.com/markets/us/us-inflation-rises-less-than-expected-august-consumer-spending-surges-2026-09-30/",
+          "date_accessed": "2026-09-30",
+          "summary": "The Fed's preferred inflation gauge cooled more than expected in August, with July revised down, reducing hike urgency.",
+          "verification": "http_401"
+        },
+        {
+          "url": "https://www.bea.gov/news/2026/gdp-third-estimate-industries-corporate-profits-state-gdp-and-state-personal-income-2nd",
+          "date_accessed": "2026-09-30",
+          "summary": "The final Q2 GDP estimate showed a 70bp upward revision, signaling a stronger economy than previously reported.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.reuters.com/business/us-private-payrolls-growth-picks-up-september-adp-says-2026-09-30/",
+          "date_accessed": "2026-09-30",
+          "summary": "Private hiring accelerated in September, indicating labor market stabilization.",
+          "verification": "http_401"
+        },
+        {
+          "url": "https://propfirmscan.com/news/us-30-year-yield-hits-561-in-historic-sell-off",
+          "date_accessed": "2026-09-30",
+          "summary": "The long end sold off hard, with the 30Y reaching a multi-decade high.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.bloomberg.com/news/articles/2026-09-29/stock-market-today-dow-s-p-live-updates",
+          "date_accessed": "2026-09-30",
+          "summary": "The session reversed in the final hour, with the S&P 500 closing −0.25% after an intraday rally.",
+          "verification": "http_403"
+        },
+        {
+          "url": "https://www.theguardian.com/business/2026/sep/30/inflation-report-interest-rates-fed",
+          "date_accessed": "2026-09-30",
+          "summary": "The dovish repricing was real but did not hold into the equity close.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.cnbc.com/2026/09/29/stock-market-today-live-updates.html",
+          "date_accessed": "2026-09-30",
+          "summary": "CNBC framed the day as a puzzle — good inflation news but a lower S&P close.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://stockmarketwatch.com/live/stock-market-today",
+          "date_accessed": "2026-09-30",
+          "summary": "The day featured a clear rotation out of blue chips into tech/energy.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.zacks.com/stock/news/2997866/stock-market-news-for-sep-30-2026",
+          "date_accessed": "2026-09-30",
+          "summary": "The curve steepened sharply — long-end up, short-end down — a term-premium signal, not a growth signal.",
+          "verification": "quote_not_found"
+        }
+      ],
+      "ops_fail": true,
+      "path_shape": "reversal down (intraday spike faded, closed near low)",
+      "primary_driver": "Long-end Treasury yield regime — 30Y spiked to ~5.61–5.63% (highest since 2002) on corporate issuance and inflation/fiscal fears, overwhelming a dovish PCE surprise",
+      "key_interaction": "The dovish PCE surprise (positive) and the hot growth data (hawkish offset) roughly cancelled, and the long-end yield spike then tipped the balance negative into the close — a two-sided macro session masked by a calm −0.25% headline",
+      "knowable_at_9am": "partially — the long-end yield regime was flagged in the morning packet as the spine, but the specific two-sided data mix (cool PCE + hot growth) that produced the reversal was not knowable",
+      "attribution_contested": "yes — CNBC/Reuters led with inflation data, Bloomberg/Zacks led with yields, stockmarketwatch led with sector rotation, propfirmscan led with corporate debt issuance",
+      "outlier_watch": "NDX closed green (+0.24%) while Dow closed −0.86% — a 110bp divergence with no single-stock catalyst, signaling rotation rather than macro; also short-end yields fell while long-end spiked (curve steepening)"
     }
   ]
 }
