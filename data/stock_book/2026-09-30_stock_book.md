@@ -1,6 +1,6 @@
 # Stock book — 2026-09-30
 
-_Generated 2026-09-30T05:56:39.283788-04:00_
+_Generated 2026-09-30T06:01:25.675688-04:00_
 
 This file is the **human read** of one run. CSV/JSON next to it are the machine files.
 
@@ -20,10 +20,10 @@ The existing red/yellow/green source graph remains visible. Its digest, judge an
 
 - Weather risk: **off**
 - General predict (same-day): +0.49 up (present)
-- Stand-down: **no** — 261 names qualified through standard,group_leader,catalyst (16 probable)
+- Stand-down: **no** — 263 names qualified through standard,group_leader,catalyst (17 probable)
 - Sector predicts this date: 0/11 (missing → sector layer is 0; Finviz week tape still sits in join)
 - News tickers in play: 89
-- AB coverage: 1896 names · peer RS: 1804
+- AB coverage: 1893 names · peer RS: 1804
 - Universe after liquidity: 2035
 - BUY window: $80M ADV, opportunity $400M–$20B, max 4/sector, 3/industry, 4 large/mega
 - News names after digest+judge: 42
@@ -64,7 +64,7 @@ Decision domains: **MKT · parent · child · company · setup · flow**. Measur
 | 12 | **IT** | 🟡🔴🟢🟡🟢🟢 | group_leader | no direct company event; Information Technology Services +2.9% d1 / +1.9% 1w / +3.9% vs parent | BUY GROUP_LEADER — market=YELLOW; parent=RED; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=Cond green |
 | 13 | **PACS** | 🟡🟡🟢🟡🟢🟡 | group_leader | no direct company event; Medical Care Facilities +0.6% d1 / +3.1% 1w / +5.6% vs parent | BUY GROUP_LEADER — market=YELLOW; parent=YELLOW; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=YELLOW; lookback=Cond green |
 | 14 | **ACIW** | 🟡🔴🟢🟡🟢🟡 | group_leader | no direct company event; Software - Infrastructure +2.8% d1 / +1.4% 1w / +3.4% vs parent | BUY GROUP_LEADER — market=YELLOW; parent=RED; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=YELLOW; lookback=🔵 |
-| 15 | **GDYN** | 🟡🔴🟢🟡🟢🟢 | group_leader | no direct company event; Information Technology Services +2.9% d1 / +1.9% 1w / +3.9% vs parent | BUY GROUP_LEADER — market=YELLOW; parent=RED; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=Cond green |
+| 15 | **PAYS** | 🟡🔴🟢🟡🟢🟢 | group_leader | no direct company event; Software - Infrastructure +2.8% d1 / +1.4% 1w / +3.4% vs parent | BUY GROUP_LEADER — market=YELLOW; parent=RED; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=Cond green |
 
 ### Bear decisions
 
@@ -521,7 +521,7 @@ If a row says **missing**, that layer scored 0 today. If it says **found**, it m
 - **BORR** (small, Energy, $1.2B) score -0.321. SELL/AVOID — market=YELLOW; red domains=child,setup; child lags parent -5.4%
 - **PYXS** (micro, Healthcare, $242M) score -0.318. NO BEAR — market=YELLOW; red domains=setup
 - **SSP** (micro, Communication Services, $249M) score -0.317. NO BEAR — market=YELLOW; red domains=setup; child lags parent -4.6%
-- **ALMS** (small, Healthcare, $953M) score -0.312. NO BEAR — market=YELLOW; red domains=setup
+- **WRAP** (micro, Technology, $83M) score -0.314. SELL/AVOID — market=YELLOW; red domains=parent,child,setup
 
 ## 3d BUY (compact — same names, different weights)
 
