@@ -8,7 +8,7 @@ from __future__ import annotations
 
 import re
 
-BIT_NOUL = 0.50
+BIT_NOUL = 0.60
 TRASH_NOUL = 0.70
 KEEP_NOUL = BIT_NOUL
 DUP_JACCARD = 0.72
