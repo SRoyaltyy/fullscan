@@ -1,12 +1,12 @@
 {
   "date": "2026-09-30",
-  "generated_at": "2026-09-30T04:31:33.985141-04:00",
+  "generated_at": "2026-09-30T04:31:49.792915-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
-    "ok": 2,
+    "ok": 3,
     "partial": 2,
-    "fail": 4,
+    "fail": 3,
     "n": 8
   },
   "buy_1d": [],
@@ -15,45 +15,6 @@
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "finviz_digest",
-      "title": "Finviz digest",
-      "date": "2026-09-30",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-30T04:20:44.723784-04:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-09-30_finviz_digest.json",
-          "ok": true,
-          "reason": "",
-          "size": 97751,
-          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
-        },
-        {
-          "path": "01_daily/news/2026-09-30_finviz_digest.md",
-          "ok": true,
-          "reason": "",
-          "size": 11902,
-          "preview": "# Finviz Daily Digest \u2014 2026-09-30\n_Generated 2026-09-30T04:20:44.615025-04:00 \u00b7 export=data/exports/finviz_2026-09-29.csv \u00b7 ticker digests=5890 \u00b7 high-signal=2008_"
-        },
-        {
-          "path": "data/finviz/latest.csv",
-          "ok": true,
-          "reason": "",
-          "size": 11481957,
-          "preview": "11686 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
-        },
-        {
-          "path": "01_daily/news/2026-09-30_finviz_digest_preopen.json",
-          "ok": true,
-          "reason": "",
-          "size": 97751,
-          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
-        }
-      ],
-      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-09-30\n_Generated 2026-09-30T04:20:44.615025-04:00 \u00b7 export=data/exports/finviz_2026-09-29.csv \u00b7 ticker digests=5890 \u00b7 high-signal=2008_ \u00b7 11686 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\" \u00b7 keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
-    },
     {
       "key": "finviz_market_digest",
       "title": "Finviz homepage market digest",
@@ -214,6 +175,31 @@
         }
       ],
       "preview": "5903 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
+    },
+    {
+      "key": "weather",
+      "title": "Weather / regime",
+      "date": "2026-09-30",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-30T04:31:49.385138-04:00",
+      "files": [
+        {
+          "path": "01_daily/weather/2026-09-30_weather.json",
+          "ok": true,
+          "reason": "",
+          "size": 9568,
+          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -7.21, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -3.0, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -2.48, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -2.71, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -3.0599999999999996, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.66, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -4.44, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -2.7, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}"
+        },
+        {
+          "path": "01_daily/weather/2026-09-30_weather.md",
+          "ok": true,
+          "reason": "",
+          "size": 5293,
+          "preview": "# Weather report \u2014 2026-09-30\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+        }
+      ],
+      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -7.21, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -3.0, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -2.48, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -2.71, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -3.0599999999999996, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.66, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -4.44, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -2.7, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-09-30\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
