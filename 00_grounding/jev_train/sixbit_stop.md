@@ -17,8 +17,8 @@ Need precision ≥ 0.85, print/done recall ≥ 0.8, zero call-highlights / shoul
 - gold=keep pred=drop/no_keep_bit label=finished_act | Merck, Daiichi pull lung cancer filing after FDA pushback deals another blow to $4B deal - Fierce Biotech
 - gold=keep pred=drop/source label=finished_act | Only US private passenger train files Chapter 11 bankruptcy - thestreet.com
 - gold=keep pred=drop/no_keep_bit label=finished_act | Oura becomes latest US IPO hopeful to delay listing as market jitters deepen - Reuters
+- gold=keep pred=drop/no_keep_bit label=finished_act | China unveils rate cut, mortgage subsidies to spur growth - CNA
 - gold=keep pred=drop/no_keep_bit label=finished_act | Singapore gets its first advanced semiconductor materials plant to meet AI demand - The Straits Times
-- gold=keep pred=drop/no_keep_bit label=finished_act | U.S. Taps Strategic Oil Reserve Again as Diesel Tops $6 - Crude Oil Prices Today | OilPrice.com
 - gold=keep pred=drop/tape label=finished_act | Oil Gains after Trump Denies He Is Willing to Ease Sanctions on Iran - twaslnews1.twaslnews.com
 - gold=keep pred=drop/no_keep_bit label=finished_act | Anthropic warns AI may pose ‘existential risks to humanity’ in IPO filing - The Straits Times
 - gold=keep pred=drop/no_keep_bit label=finished_act | Geopolitical disruptions push up freight costs and alter steel trade flows - EUROMETAL
