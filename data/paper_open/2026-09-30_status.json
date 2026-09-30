@@ -1,5 +1,6 @@
 {
   "date": "2026-09-30",
-  "status": "missed_deadline",
-  "observed_at": "2026-09-30T14:01:19.680794-04:00"
+  "status": "blocked",
+  "error": "float() argument must be a string or a real number, not 'NoneType'",
+  "standing": true
 }
