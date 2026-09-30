@@ -1,6 +1,6 @@
 {
   "date": "2026-09-30",
-  "generated_at": "2026-09-30T12:26:27.576904-04:00",
+  "generated_at": "2026-09-30T12:26:46.909292-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -166,31 +166,6 @@
   },
   "lands": [
     {
-      "key": "finviz",
-      "title": "Finviz universe export",
-      "date": "2026-09-30",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-30T05:36:04.571497-04:00",
-      "files": [
-        {
-          "path": "data/exports/finviz_2026-09-30.csv",
-          "ok": true,
-          "reason": "",
-          "size": 11030866,
-          "preview": "11686 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC"
-        },
-        {
-          "path": "data/finviz/latest.csv",
-          "ok": true,
-          "reason": "",
-          "size": 11481957,
-          "preview": "11686 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
-        }
-      ],
-      "preview": "11686 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC \u00b7 11686 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
-    },
-    {
       "key": "weather",
       "title": "Weather / regime",
       "date": "2026-09-30",
@@ -336,6 +311,59 @@
         }
       ],
       "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-09-30",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-30T12:26:45.916099-04:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-09-30_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1436209,
+          "preview": "1d BUY SN, MHK, FIGS, CAKE, AVPT, CORT, CDNA, ETON \u00b7 SELL ROIV, RBLX, VSAT, BIDU, SOC, AXSM, GH, BAK"
+        },
+        {
+          "path": "data/stock_book/2026-09-30_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 2187,
+          "preview": "green 133 \u00b7 EMBJ, GTES, AAON, CXW, PWR, TRI, WMS, CNH, DLB, VVX"
+        },
+        {
+          "path": "data/stock_book/2026-09-30_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2492,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-09-30_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 13359,
+          "preview": "2026-09-30 BUY SN, MHK, FIGS, CAKE, AVPT, CORT, CDNA, ETON \u00b7 SELL ROIV, RBLX, VSAT, BIDU, SOC, AXSM, GH, BAK"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 13359,
+          "preview": "2026-09-30 BUY SN, MHK, FIGS, CAKE, AVPT, CORT, CDNA, ETON \u00b7 SELL ROIV, RBLX, VSAT, BIDU, SOC, AXSM, GH, BAK"
+        },
+        {
+          "path": "01_daily/2026-09-30_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 74538,
+          "preview": "# Stock book \u2014 2026-09-30\n_Generated 2026-09-30T12:26:36.970041-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY SN, MHK, FIGS, CAKE, AVPT, CORT, CDNA, ETON \u00b7 SELL ROIV, RBLX, VSAT, BIDU, SOC, AXSM, GH, BAK \u00b7 green 133 \u00b7 EMBJ, GTES, AAON, CXW, PWR, TRI, WMS, CNH, DLB, VVX \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-09-30 BUY SN, MHK, FIGS, CAKE, AVPT, CORT, CDNA, ETON \u00b7 SELL ROIV, RBLX, VSAT, BIDU, SOC, AXSM, GH, BAK \u00b7 2026-09-30 BUY SN, MHK, FIGS, CAKE, AVPT, CORT, CDNA, ETON \u00b7 SELL ROIV, RBLX, VSAT, BIDU, SOC, AXSM, GH, BAK \u00b7 # Stock book \u2014 2026-09-30\n_Generated 2026-09-30T12:26:36.970041-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
