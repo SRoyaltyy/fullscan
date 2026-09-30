@@ -1,15 +1,14 @@
 # Jev six-bit stop test
 
-n=100 gold_keep=26 pred_keep=7 precision=1.0 recall_print_done=0.2692 pass=False
+n=100 gold_keep=26 pred_keep=8 precision=1.0 recall_print_done=0.3077 pass=False
 
 Need precision ≥ 0.85, print/done recall ≥ 0.8, zero call-highlights / should-you-buy keeps.
 
 ## Misses
 - gold=keep pred=drop/no_keep_bit label=officer_voice | Fed’s Williams Hints Next Rate Increase Can Wait - WSJ
 - gold=keep pred=drop/no_keep_bit label=officer_voice | New York Fed president sees no need to rush another rate hike — Channel NewsAsia - ua.news
-- gold=keep pred=drop/no_keep_bit label=officer_voice | St. Louis Fed President Warns: Excessive Silence from the Fed Could Push Up Rates and Inflation - finance.biggo.com
+- gold=keep pred=drop/soft label=officer_voice | St. Louis Fed President Warns: Excessive Silence from the Fed Could Push Up Rates and Inflation - finance.biggo.com
 - gold=keep pred=drop/soft label=officer_voice | Horizon over which FOMC can achieve dual mandate could be communicated: St. Louis Fed's Musalem - tradingview.com
-- gold=keep pred=drop/soft label=officer_voice | Federal Reserve Board Member Says More Rate Hikes May Be Needed - tokenpost.com
 - gold=keep pred=drop/no_keep_bit label=official_print | US consumer confidence sinks to 12-year low over inflation, stagnant wages - South China Morning Post
 - gold=keep pred=drop/no_keep_bit label=official_print | FDA Announces Nationwide Cheese Recall—Products Linked to Multistate E. Coli Outbreak - health.com
 - gold=keep pred=drop/no_keep_bit label=official_print | Fed holds interest rates steady as inflation hits 3-year high - ABC News - Breaking News, Latest News and Videos

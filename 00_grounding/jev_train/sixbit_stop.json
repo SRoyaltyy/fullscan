@@ -1,15 +1,75 @@
 {
   "n": 100,
   "gold_keep": 26,
-  "pred_keep": 7,
+  "pred_keep": 8,
   "precision": 1.0,
-  "recall_print_done": 0.2692,
-  "tp": 7,
+  "recall_print_done": 0.3077,
+  "tp": 8,
   "fp": 0,
-  "fn": 19,
+  "fn": 18,
   "banned_keeps": [],
   "pass": false,
-  "misses": [
+  "rows": [
+    {
+      "title": "Fed’s Barr Says More Hikes Likely Needed as Growth Picks Up - Bloomberg.com",
+      "label": "officer_voice",
+      "gold": "keep",
+      "pred": "keep",
+      "reason": "print",
+      "noul": {
+        "tape": 0.22,
+        "soft": 0.5,
+        "tip": 0.37,
+        "done": 0.47,
+        "print": 0.73,
+        "listed": 0.67
+      }
+    },
+    {
+      "title": "Fed’s Barr says more rate hikes likely to be needed to curb inflation - 101 WIXX",
+      "label": "officer_voice",
+      "gold": "keep",
+      "pred": "keep",
+      "reason": "print",
+      "noul": {
+        "tape": 0.24,
+        "soft": 0.49,
+        "tip": 0.36,
+        "done": 0.49,
+        "print": 0.79,
+        "listed": 0.77
+      }
+    },
+    {
+      "title": "US Market: Fed’s Barr backs further rate hikes as inflation risks remain elevated - The Economic Times",
+      "label": "officer_voice",
+      "gold": "keep",
+      "pred": "keep",
+      "reason": "print",
+      "noul": {
+        "tape": 0.21,
+        "soft": 0.42,
+        "tip": 0.36,
+        "done": 0.46,
+        "print": 0.65,
+        "listed": 0.79
+      }
+    },
+    {
+      "title": "Fed’s Williams says worst inflation shocks have passed - FXStreet",
+      "label": "officer_voice",
+      "gold": "keep",
+      "pred": "keep",
+      "reason": "print",
+      "noul": {
+        "tape": 0.28,
+        "soft": 0.36,
+        "tip": 0.33,
+        "done": 0.49,
+        "print": 0.65,
+        "listed": 0.7
+      }
+    },
     {
       "title": "Fed’s Williams Hints Next Rate Increase Can Wait - WSJ",
       "label": "officer_voice",
@@ -17,12 +77,12 @@
       "pred": "drop",
       "reason": "no_keep_bit",
       "noul": {
-        "tape": 0.22,
-        "soft": 0.37,
-        "tip": 0.35,
-        "done": 0.46,
-        "print": 0.53,
-        "listed": 0.71
+        "tape": 0.23,
+        "soft": 0.39,
+        "tip": 0.34,
+        "done": 0.47,
+        "print": 0.5,
+        "listed": 0.74
       }
     },
     {
@@ -32,12 +92,12 @@
       "pred": "drop",
       "reason": "no_keep_bit",
       "noul": {
-        "tape": 0.26,
-        "soft": 0.27,
-        "tip": 0.24,
-        "done": 0.46,
-        "print": 0.46,
-        "listed": 0.72
+        "tape": 0.24,
+        "soft": 0.28,
+        "tip": 0.25,
+        "done": 0.47,
+        "print": 0.47,
+        "listed": 0.73
       }
     },
     {
@@ -45,14 +105,29 @@
       "label": "officer_voice",
       "gold": "keep",
       "pred": "drop",
-      "reason": "no_keep_bit",
+      "reason": "soft",
       "noul": {
         "tape": 0.25,
-        "soft": 0.59,
-        "tip": 0.34,
+        "soft": 0.6,
+        "tip": 0.37,
         "done": 0.46,
-        "print": 0.55,
-        "listed": 0.62
+        "print": 0.57,
+        "listed": 0.64
+      }
+    },
+    {
+      "title": "Fed governor Lisa Cook says AI boom is creating broader inflation pressures - TheGrio",
+      "label": "officer_voice",
+      "gold": "keep",
+      "pred": "keep",
+      "reason": "print",
+      "noul": {
+        "tape": 0.25,
+        "soft": 0.54,
+        "tip": 0.26,
+        "done": 0.49,
+        "print": 0.68,
+        "listed": 0.35
       }
     },
     {
@@ -62,11 +137,11 @@
       "pred": "drop",
       "reason": "soft",
       "noul": {
-        "tape": 0.18,
-        "soft": 0.69,
-        "tip": 0.32,
-        "done": 0.45,
-        "print": 0.58,
+        "tape": 0.17,
+        "soft": 0.67,
+        "tip": 0.28,
+        "done": 0.44,
+        "print": 0.64,
         "listed": 0.59
       }
     },
@@ -74,15 +149,15 @@
       "title": "Federal Reserve Board Member Says More Rate Hikes May Be Needed - tokenpost.com",
       "label": "officer_voice",
       "gold": "keep",
-      "pred": "drop",
-      "reason": "soft",
+      "pred": "keep",
+      "reason": "print",
       "noul": {
-        "tape": 0.17,
-        "soft": 0.6,
-        "tip": 0.39,
-        "done": 0.46,
+        "tape": 0.2,
+        "soft": 0.57,
+        "tip": 0.4,
+        "done": 0.47,
         "print": 0.64,
-        "listed": 0.79
+        "listed": 0.76
       }
     },
     {
@@ -92,12 +167,12 @@
       "pred": "drop",
       "reason": "no_keep_bit",
       "noul": {
-        "tape": 0.38,
-        "soft": 0.33,
+        "tape": 0.41,
+        "soft": 0.34,
         "tip": 0.27,
         "done": 0.51,
-        "print": 0.45,
-        "listed": 0.26
+        "print": 0.48,
+        "listed": 0.28
       }
     },
     {
@@ -107,12 +182,12 @@
       "pred": "drop",
       "reason": "no_keep_bit",
       "noul": {
-        "tape": 0.13,
-        "soft": 0.26,
-        "tip": 0.11,
-        "done": 0.49,
-        "print": 0.53,
-        "listed": 0.55
+        "tape": 0.15,
+        "soft": 0.25,
+        "tip": 0.1,
+        "done": 0.48,
+        "print": 0.52,
+        "listed": 0.48
       }
     },
     {
@@ -122,12 +197,27 @@
       "pred": "drop",
       "reason": "no_keep_bit",
       "noul": {
-        "tape": 0.27,
-        "soft": 0.31,
-        "tip": 0.21,
-        "done": 0.56,
-        "print": 0.57,
-        "listed": 0.74
+        "tape": 0.25,
+        "soft": 0.29,
+        "tip": 0.2,
+        "done": 0.57,
+        "print": 0.56,
+        "listed": 0.73
+      }
+    },
+    {
+      "title": "Apple ordered to pay $5.7bn in haptic tech patent case - BBC",
+      "label": "finished_act",
+      "gold": "keep",
+      "pred": "keep",
+      "reason": "done",
+      "noul": {
+        "tape": 0.21,
+        "soft": 0.29,
+        "tip": 0.12,
+        "done": 0.62,
+        "print": 0.4,
+        "listed": 0.88
       }
     },
     {
@@ -137,12 +227,12 @@
       "pred": "drop",
       "reason": "no_keep_bit",
       "noul": {
-        "tape": 0.21,
-        "soft": 0.41,
-        "tip": 0.19,
-        "done": 0.42,
-        "print": 0.38,
-        "listed": 0.85
+        "tape": 0.18,
+        "soft": 0.39,
+        "tip": 0.2,
+        "done": 0.44,
+        "print": 0.4,
+        "listed": 0.87
       }
     },
     {
@@ -152,12 +242,12 @@
       "pred": "drop",
       "reason": "no_keep_bit",
       "noul": {
-        "tape": 0.25,
-        "soft": 0.3,
-        "tip": 0.1,
-        "done": 0.42,
-        "print": 0.34,
-        "listed": 0.82
+        "tape": 0.26,
+        "soft": 0.28,
+        "tip": 0.09,
+        "done": 0.4,
+        "print": 0.36,
+        "listed": 0.81
       }
     },
     {
@@ -167,12 +257,12 @@
       "pred": "drop",
       "reason": "no_keep_bit",
       "noul": {
-        "tape": 0.22,
-        "soft": 0.32,
-        "tip": 0.16,
-        "done": 0.43,
-        "print": 0.36,
-        "listed": 0.82
+        "tape": 0.23,
+        "soft": 0.37,
+        "tip": 0.15,
+        "done": 0.41,
+        "print": 0.4,
+        "listed": 0.83
       }
     },
     {
@@ -183,11 +273,11 @@
       "reason": "source",
       "noul": {
         "tape": 0.2,
-        "soft": 0.35,
+        "soft": 0.33,
         "tip": 0.18,
-        "done": 0.49,
-        "print": 0.38,
-        "listed": 0.45
+        "done": 0.51,
+        "print": 0.39,
+        "listed": 0.43
       }
     },
     {
@@ -199,7 +289,7 @@
       "noul": {
         "tape": 0.16,
         "soft": 0.44,
-        "tip": 0.26,
+        "tip": 0.25,
         "done": 0.41,
         "print": 0.32,
         "listed": 0.76
@@ -212,12 +302,12 @@
       "pred": "drop",
       "reason": "no_keep_bit",
       "noul": {
-        "tape": 0.22,
-        "soft": 0.39,
-        "tip": 0.2,
-        "done": 0.5,
-        "print": 0.41,
-        "listed": 0.56
+        "tape": 0.23,
+        "soft": 0.31,
+        "tip": 0.21,
+        "done": 0.49,
+        "print": 0.44,
+        "listed": 0.51
       }
     },
     {
@@ -228,11 +318,26 @@
       "reason": "no_keep_bit",
       "noul": {
         "tape": 0.16,
-        "soft": 0.34,
+        "soft": 0.32,
         "tip": 0.14,
-        "done": 0.41,
-        "print": 0.34,
+        "done": 0.4,
+        "print": 0.36,
         "listed": 0.17
+      }
+    },
+    {
+      "title": "U.S. Taps Strategic Oil Reserve Again as Diesel Tops $6 - Crude Oil Prices Today | OilPrice.com",
+      "label": "finished_act",
+      "gold": "keep",
+      "pred": "keep",
+      "reason": "done",
+      "noul": {
+        "tape": 0.53,
+        "soft": 0.33,
+        "tip": 0.27,
+        "done": 0.74,
+        "print": 0.41,
+        "listed": 0.8
       }
     },
     {
@@ -242,11 +347,11 @@
       "pred": "drop",
       "reason": "tape",
       "noul": {
-        "tape": 0.64,
-        "soft": 0.27,
+        "tape": 0.62,
+        "soft": 0.32,
         "tip": 0.41,
-        "done": 0.46,
-        "print": 0.39,
+        "done": 0.47,
+        "print": 0.42,
         "listed": 0.74
       }
     },
@@ -257,12 +362,12 @@
       "pred": "drop",
       "reason": "no_keep_bit",
       "noul": {
-        "tape": 0.17,
-        "soft": 0.51,
-        "tip": 0.16,
-        "done": 0.44,
+        "tape": 0.19,
+        "soft": 0.53,
+        "tip": 0.18,
+        "done": 0.42,
         "print": 0.36,
-        "listed": 0.42
+        "listed": 0.4
       }
     },
     {
@@ -272,12 +377,12 @@
       "pred": "drop",
       "reason": "no_keep_bit",
       "noul": {
-        "tape": 0.33,
-        "soft": 0.39,
-        "tip": 0.39,
-        "done": 0.54,
-        "print": 0.39,
-        "listed": 0.17
+        "tape": 0.35,
+        "soft": 0.43,
+        "tip": 0.38,
+        "done": 0.53,
+        "print": 0.38,
+        "listed": 0.19
       }
     },
     {
@@ -287,12 +392,1115 @@
       "pred": "drop",
       "reason": "no_keep_bit",
       "noul": {
-        "tape": 0.34,
-        "soft": 0.31,
-        "tip": 0.26,
+        "tape": 0.36,
+        "soft": 0.33,
+        "tip": 0.24,
         "done": 0.5,
-        "print": 0.3,
+        "print": 0.26,
         "listed": 0.14
+      }
+    },
+    {
+      "title": "Crystal Jade holding companies in S’pore, Hong Kong placed under receivership - The Straits Times",
+      "label": "junk",
+      "gold": "drop",
+      "pred": "drop",
+      "reason": "no_keep_bit",
+      "noul": {
+        "tape": 0.18,
+        "soft": 0.24,
+        "tip": 0.12,
+        "done": 0.54,
+        "print": 0.32,
+        "listed": 0.15
+      }
+    },
+    {
+      "title": "Robust U.S. Economy Drives Treasury Yield Surge - 조선일보",
+      "label": "tape",
+      "gold": "drop",
+      "pred": "drop",
+      "reason": "tape",
+      "noul": {
+        "tape": 0.68,
+        "soft": 0.38,
+        "tip": 0.47,
+        "done": 0.53,
+        "print": 0.41,
+        "listed": 0.78
+      }
+    },
+    {
+      "title": "Stocks dip, 2-year US yield falls after Fed's Williams cools rate hike bets - Reuters",
+      "label": "tape",
+      "gold": "drop",
+      "pred": "drop",
+      "reason": "tape",
+      "noul": {
+        "tape": 0.67,
+        "soft": 0.19,
+        "tip": 0.25,
+        "done": 0.48,
+        "print": 0.58,
+        "listed": 0.82
+      }
+    },
+    {
+      "title": "Gold Holds Near Seven-Week Low as Treasury Yields and Fed Rate Expectations Rise - Yahoo Finance",
+      "label": "tape",
+      "gold": "drop",
+      "pred": "drop",
+      "reason": "no_keep_bit",
+      "noul": {
+        "tape": 0.57,
+        "soft": 0.36,
+        "tip": 0.33,
+        "done": 0.47,
+        "print": 0.35,
+        "listed": 0.72
+      }
+    },
+    {
+      "title": "Stock Market Today: Treasury Yields Rise Despite Falling Oil Prices as Dow Slips - Eurasia Business News",
+      "label": "tape",
+      "gold": "drop",
+      "pred": "drop",
+      "reason": "tape",
+      "noul": {
+        "tape": 0.66,
+        "soft": 0.31,
+        "tip": 0.4,
+        "done": 0.49,
+        "print": 0.41,
+        "listed": 0.71
+      }
+    },
+    {
+      "title": "Stock Market Today: Major Indexes Decline as Treasury Yields Rise Further; Oil Prices Slip - Yahoo Finance",
+      "label": "tape",
+      "gold": "drop",
+      "pred": "drop",
+      "reason": "tape",
+      "noul": {
+        "tape": 0.7,
+        "soft": 0.28,
+        "tip": 0.38,
+        "done": 0.53,
+        "print": 0.39,
+        "listed": 0.73
+      }
+    },
+    {
+      "title": "Gold hits seven-week low as oil surge fuels rate hike bets - Reuters",
+      "label": "tape",
+      "gold": "drop",
+      "pred": "drop",
+      "reason": "no_keep_bit",
+      "noul": {
+        "tape": 0.58,
+        "soft": 0.32,
+        "tip": 0.38,
+        "done": 0.5,
+        "print": 0.41,
+        "listed": 0.71
+      }
+    },
+    {
+      "title": "HOOD Stock Rises Overnight: Robinhood Unveils Weekend Trading, AI Agents And Earnings Prediction Markets - Yahoo Finance",
+      "label": "tape",
+      "gold": "drop",
+      "pred": "drop",
+      "reason": "tape",
+      "noul": {
+        "tape": 0.69,
+        "soft": 0.48,
+        "tip": 0.29,
+        "done": 0.4,
+        "print": 0.35,
+        "listed": 0.84
+      }
+    },
+    {
+      "title": "Micron Stock Gains 1.3% as AI Memory Faces Earnings Reality - Yahoo Finance",
+      "label": "tape",
+      "gold": "drop",
+      "pred": "drop",
+      "reason": "tape",
+      "noul": {
+        "tape": 0.87,
+        "soft": 0.42,
+        "tip": 0.31,
+        "done": 0.46,
+        "print": 0.38,
+        "listed": 0.88
+      }
+    },
+    {
+      "title": "Dollar Jumps to 8-Week High on Fed Rate-Hike Bets - WSJ",
+      "label": "tape",
+      "gold": "drop",
+      "pred": "drop",
+      "reason": "tape",
+      "noul": {
+        "tape": 0.6,
+        "soft": 0.36,
+        "tip": 0.36,
+        "done": 0.48,
+        "print": 0.36,
+        "listed": 0.79
+      }
+    },
+    {
+      "title": "Gold Trades Near Seven-Week Low as Rate-Hike Pressure Mounts - Bloomberg.com",
+      "label": "tape",
+      "gold": "drop",
+      "pred": "drop",
+      "reason": "no_keep_bit",
+      "noul": {
+        "tape": 0.59,
+        "soft": 0.34,
+        "tip": 0.37,
+        "done": 0.47,
+        "print": 0.41,
+        "listed": 0.71
+      }
+    },
+    {
+      "title": "Oil Holds Decline as Middle East Exports Seen Near Pre-War Level - Bloomberg.com",
+      "label": "tape",
+      "gold": "drop",
+      "pred": "drop",
+      "reason": "no_keep_bit",
+      "noul": {
+        "tape": 0.59,
+        "soft": 0.47,
+        "tip": 0.35,
+        "done": 0.46,
+        "print": 0.42,
+        "listed": 0.39
+      }
+    },
+    {
+      "title": "Bitcoin, Ethereum Lose Ground As High US Yields Keep Crypto Under Pressure - BusinessToday Malaysia",
+      "label": "tape",
+      "gold": "drop",
+      "pred": "drop",
+      "reason": "no_keep_bit",
+      "noul": {
+        "tape": 0.57,
+        "soft": 0.38,
+        "tip": 0.41,
+        "done": 0.51,
+        "print": 0.41,
+        "listed": 0.7
+      }
+    },
+    {
+      "title": "Hero Motors share price jumps over 7%, newly listed stock up 78% from IPO price | What's driving the rally? - tradingview.com",
+      "label": "tape",
+      "gold": "drop",
+      "pred": "drop",
+      "reason": "tape",
+      "noul": {
+        "tape": 0.88,
+        "soft": 0.39,
+        "tip": 0.32,
+        "done": 0.36,
+        "print": 0.29,
+        "listed": 0.15
+      }
+    },
+    {
+      "title": "TSLA Stock Slips Overnight: SpaceX IPO Hype Is Starting To Look Like Amazon's Dot-Com Bubble Peak In 2000, Warns Ex-Lehman Trader - Stocktwits",
+      "label": "tape",
+      "gold": "drop",
+      "pred": "drop",
+      "reason": "tape",
+      "noul": {
+        "tape": 0.7,
+        "soft": 0.41,
+        "tip": 0.36,
+        "done": 0.38,
+        "print": 0.32,
+        "listed": 0.89
+      }
+    },
+    {
+      "title": "WTI rises above $93.00 after Trump rejects Iran peace deal - tmgm.com",
+      "label": "tape",
+      "gold": "drop",
+      "pred": "drop",
+      "reason": "tape",
+      "noul": {
+        "tape": 0.66,
+        "soft": 0.32,
+        "tip": 0.32,
+        "done": 0.45,
+        "print": 0.4,
+        "listed": 0.83
+      }
+    },
+    {
+      "title": "Brent Crude Surpasses $107; Gold Drops to $4,198 - خبرگزاری صدای افغان(آوا)",
+      "label": "tape",
+      "gold": "drop",
+      "pred": "drop",
+      "reason": "tape",
+      "noul": {
+        "tape": 0.7,
+        "soft": 0.26,
+        "tip": 0.27,
+        "done": 0.53,
+        "print": 0.33,
+        "listed": 0.47
+      }
+    },
+    {
+      "title": "Dollar Powers to Best Month Since June on Fed’s Inflation Fight - Bloomberg.com",
+      "label": "tape",
+      "gold": "drop",
+      "pred": "drop",
+      "reason": "tape",
+      "noul": {
+        "tape": 0.62,
+        "soft": 0.39,
+        "tip": 0.4,
+        "done": 0.49,
+        "print": 0.47,
+        "listed": 0.73
+      }
+    },
+    {
+      "title": "China Hardware Stocks Set for Worst Quarter as AI Rally Unravels - Bloomberg.com",
+      "label": "tape",
+      "gold": "drop",
+      "pred": "drop",
+      "reason": "no_keep_bit",
+      "noul": {
+        "tape": 0.47,
+        "soft": 0.51,
+        "tip": 0.38,
+        "done": 0.43,
+        "print": 0.37,
+        "listed": 0.39
+      }
+    },
+    {
+      "title": "Dow Jones Futures: Trump Sparks Stock Market Losses; Elon Musk-Led SpaceX, Tesla Sell Off - Investor's Business Daily",
+      "label": "tape",
+      "gold": "drop",
+      "pred": "drop",
+      "reason": "no_keep_bit",
+      "noul": {
+        "tape": 0.49,
+        "soft": 0.32,
+        "tip": 0.37,
+        "done": 0.45,
+        "print": 0.35,
+        "listed": 0.81
+      }
+    },
+    {
+      "title": "Pressure on U.S. Treasurys eases after 30-year yield hits highest level since 2002 - CNBC",
+      "label": "tape",
+      "gold": "drop",
+      "pred": "drop",
+      "reason": "no_keep_bit",
+      "noul": {
+        "tape": 0.52,
+        "soft": 0.29,
+        "tip": 0.31,
+        "done": 0.56,
+        "print": 0.42,
+        "listed": 0.81
+      }
+    },
+    {
+      "title": "Caltex follows Shell's lead, raises petrol prices, Money News - AsiaOne",
+      "label": "tape",
+      "gold": "drop",
+      "pred": "drop",
+      "reason": "no_keep_bit",
+      "noul": {
+        "tape": 0.31,
+        "soft": 0.25,
+        "tip": 0.21,
+        "done": 0.52,
+        "print": 0.33,
+        "listed": 0.2
+      }
+    },
+    {
+      "title": "Asian Equities Mostly Rise as Reduced Fed Rate-Hike Prospects Bolster Risk Appetite - WSJ",
+      "label": "tape",
+      "gold": "drop",
+      "pred": "drop",
+      "reason": "no_keep_bit",
+      "noul": {
+        "tape": 0.52,
+        "soft": 0.31,
+        "tip": 0.31,
+        "done": 0.49,
+        "print": 0.24,
+        "listed": 0.71
+      }
+    },
+    {
+      "title": "NSE Shares Slip Below IPO Price After Lackluster India Debut - Bloomberg",
+      "label": "tape",
+      "gold": "drop",
+      "pred": "drop",
+      "reason": "tape",
+      "noul": {
+        "tape": 0.72,
+        "soft": 0.31,
+        "tip": 0.31,
+        "done": 0.43,
+        "print": 0.38,
+        "listed": 0.21
+      }
+    },
+    {
+      "title": "Mortgages Soar as Fed Hikes Interest Rates - WTTW News",
+      "label": "tape",
+      "gold": "drop",
+      "pred": "drop",
+      "reason": "no_keep_bit",
+      "noul": {
+        "tape": 0.55,
+        "soft": 0.37,
+        "tip": 0.29,
+        "done": 0.53,
+        "print": 0.52,
+        "listed": 0.68
+      }
+    },
+    {
+      "title": "US core PCE inflation expected to increase, challenging the Fed - FXStreet",
+      "label": "preview",
+      "gold": "drop",
+      "pred": "drop",
+      "reason": "soft",
+      "noul": {
+        "tape": 0.31,
+        "soft": 0.75,
+        "tip": 0.36,
+        "done": 0.47,
+        "print": 0.44,
+        "listed": 0.68
+      }
+    },
+    {
+      "title": "Gold heads for monthly decline as investors await US inflation data - Latest news from Azerbaijan",
+      "label": "preview",
+      "gold": "drop",
+      "pred": "drop",
+      "reason": "soft",
+      "noul": {
+        "tape": 0.43,
+        "soft": 0.67,
+        "tip": 0.37,
+        "done": 0.43,
+        "print": 0.35,
+        "listed": 0.54
+      }
+    },
+    {
+      "title": "Hot PCE, High Rates: Tech Stocks on Alert - Bitget",
+      "label": "preview",
+      "gold": "drop",
+      "pred": "drop",
+      "reason": "soft",
+      "noul": {
+        "tape": 0.48,
+        "soft": 0.65,
+        "tip": 0.48,
+        "done": 0.51,
+        "print": 0.36,
+        "listed": 0.65
+      }
+    },
+    {
+      "title": "Dollar Steady in New York FX as U.S.-Iran Tensions Drive Oil Higher, Lifting Yields; PCE and Jobs Report Due This Week - finance.biggo.com",
+      "label": "preview",
+      "gold": "drop",
+      "pred": "drop",
+      "reason": "no_keep_bit",
+      "noul": {
+        "tape": 0.54,
+        "soft": 0.53,
+        "tip": 0.37,
+        "done": 0.5,
+        "print": 0.34,
+        "listed": 0.63
+      }
+    },
+    {
+      "title": "US Stocks Rise as PCE and Micron Pose Key Tests: Markets Wrap - Bloomberg.com",
+      "label": "preview",
+      "gold": "drop",
+      "pred": "drop",
+      "reason": "tape",
+      "noul": {
+        "tape": 0.66,
+        "soft": 0.36,
+        "tip": 0.33,
+        "done": 0.49,
+        "print": 0.43,
+        "listed": 0.82
+      }
+    },
+    {
+      "title": "US August PCE Preview: Inflation May Remain Sticky, How Will US Stocks, Dollar, and Gold React? - TradingKey",
+      "label": "preview",
+      "gold": "drop",
+      "pred": "drop",
+      "reason": "soft",
+      "noul": {
+        "tape": 0.23,
+        "soft": 0.81,
+        "tip": 0.52,
+        "done": 0.48,
+        "print": 0.35,
+        "listed": 0.73
+      }
+    },
+    {
+      "title": "TD Securities sees rising odds of October Fed hike as PCE inflation stays firm - vtmarkets.com",
+      "label": "preview",
+      "gold": "drop",
+      "pred": "drop",
+      "reason": "soft",
+      "noul": {
+        "tape": 0.31,
+        "soft": 0.64,
+        "tip": 0.42,
+        "done": 0.43,
+        "print": 0.36,
+        "listed": 0.83
+      }
+    },
+    {
+      "title": "September NFP: August Rebound Test? - Bitget",
+      "label": "preview",
+      "gold": "drop",
+      "pred": "drop",
+      "reason": "soft",
+      "noul": {
+        "tape": 0.32,
+        "soft": 0.66,
+        "tip": 0.44,
+        "done": 0.49,
+        "print": 0.4,
+        "listed": 0.54
+      }
+    },
+    {
+      "title": "August Core PCE: Fed's Key Rate Test - Bitget",
+      "label": "preview",
+      "gold": "drop",
+      "pred": "drop",
+      "reason": "soft",
+      "noul": {
+        "tape": 0.24,
+        "soft": 0.68,
+        "tip": 0.35,
+        "done": 0.49,
+        "print": 0.37,
+        "listed": 0.8
+      }
+    },
+    {
+      "title": "August Kicks Off: Palantir, AMD, SanDisk Earnings and NFP Jobs Report - 5 Stocks and 3 Macro Events to Watch - TradingKey",
+      "label": "preview",
+      "gold": "drop",
+      "pred": "drop",
+      "reason": "soft",
+      "noul": {
+        "tape": 0.22,
+        "soft": 0.75,
+        "tip": 0.61,
+        "done": 0.5,
+        "print": 0.37,
+        "listed": 0.84
+      }
+    },
+    {
+      "title": "Here’s How Much Nike Stock Is Expected to Move After Earnings - Investopedia",
+      "label": "preview",
+      "gold": "drop",
+      "pred": "drop",
+      "reason": "soft",
+      "noul": {
+        "tape": 0.34,
+        "soft": 0.64,
+        "tip": 0.54,
+        "done": 0.46,
+        "print": 0.29,
+        "listed": 0.86
+      }
+    },
+    {
+      "title": "Micron’s Earnings Guidance May Look Weak Tomorrow. Buy MU Stock Anyway - Yahoo Finance",
+      "label": "preview",
+      "gold": "drop",
+      "pred": "drop",
+      "reason": "soft",
+      "noul": {
+        "tape": 0.36,
+        "soft": 0.75,
+        "tip": 0.67,
+        "done": 0.41,
+        "print": 0.29,
+        "listed": 0.89
+      }
+    },
+    {
+      "title": "Micron to report Q4 earnings, as memory boom powers on - Yahoo Finance",
+      "label": "preview",
+      "gold": "drop",
+      "pred": "drop",
+      "reason": "soft",
+      "noul": {
+        "tape": 0.21,
+        "soft": 0.62,
+        "tip": 0.31,
+        "done": 0.46,
+        "print": 0.32,
+        "listed": 0.86
+      }
+    },
+    {
+      "title": "Markets Brace For Two More Fed Rate Hikes In 2026 - Forbes",
+      "label": "preview",
+      "gold": "drop",
+      "pred": "drop",
+      "reason": "soft",
+      "noul": {
+        "tape": 0.24,
+        "soft": 0.61,
+        "tip": 0.54,
+        "done": 0.41,
+        "print": 0.22,
+        "listed": 0.75
+      }
+    },
+    {
+      "title": "Will the Fed Raise Interest Rates in October? Key Signal Arrives - BeInCrypto",
+      "label": "preview",
+      "gold": "drop",
+      "pred": "drop",
+      "reason": "soft",
+      "noul": {
+        "tape": 0.25,
+        "soft": 0.7,
+        "tip": 0.53,
+        "done": 0.44,
+        "print": 0.41,
+        "listed": 0.8
+      }
+    },
+    {
+      "title": "Fed rate hike bets for Oct fall sharply on soft data, dovish comments - Investing.com",
+      "label": "preview",
+      "gold": "drop",
+      "pred": "drop",
+      "reason": "no_keep_bit",
+      "noul": {
+        "tape": 0.42,
+        "soft": 0.5,
+        "tip": 0.32,
+        "done": 0.51,
+        "print": 0.4,
+        "listed": 0.81
+      }
+    },
+    {
+      "title": "Odds of October Rate Increase Drop as Fed’s Williams Signals He’s Open to a Pause - Barron's",
+      "label": "preview",
+      "gold": "drop",
+      "pred": "drop",
+      "reason": "no_keep_bit",
+      "noul": {
+        "tape": 0.28,
+        "soft": 0.47,
+        "tip": 0.36,
+        "done": 0.4,
+        "print": 0.4,
+        "listed": 0.77
+      }
+    },
+    {
+      "title": "Traders Cut October Fed Rate-Hike Bets After Williams Comment - tokenpost.com",
+      "label": "preview",
+      "gold": "drop",
+      "pred": "drop",
+      "reason": "no_keep_bit",
+      "noul": {
+        "tape": 0.26,
+        "soft": 0.31,
+        "tip": 0.41,
+        "done": 0.42,
+        "print": 0.51,
+        "listed": 0.77
+      }
+    },
+    {
+      "title": "J.P. Morgan sees Fed rate hikes going out with a bang this year - Yahoo Finance",
+      "label": "preview",
+      "gold": "drop",
+      "pred": "drop",
+      "reason": "soft",
+      "noul": {
+        "tape": 0.28,
+        "soft": 0.6,
+        "tip": 0.42,
+        "done": 0.4,
+        "print": 0.36,
+        "listed": 0.82
+      }
+    },
+    {
+      "title": "Meta Stock Pulls Back After Muse-Fueled Rally. What Investors Are Watching Next. - Investor's Business Daily",
+      "label": "preview",
+      "gold": "drop",
+      "pred": "drop",
+      "reason": "tape",
+      "noul": {
+        "tape": 0.66,
+        "soft": 0.57,
+        "tip": 0.51,
+        "done": 0.46,
+        "print": 0.36,
+        "listed": 0.83
+      }
+    },
+    {
+      "title": "Fed Interest Rate Forecast: PCE Report Nears as 10-Year Yield Remains Above 5% - FXEmpire",
+      "label": "preview",
+      "gold": "drop",
+      "pred": "drop",
+      "reason": "soft",
+      "noul": {
+        "tape": 0.57,
+        "soft": 0.73,
+        "tip": 0.49,
+        "done": 0.51,
+        "print": 0.36,
+        "listed": 0.82
+      }
+    },
+    {
+      "title": "Crude Oil Price Prediction: $100 Next? WTI Teases a Major Breakout - coingabbar.com",
+      "label": "preview",
+      "gold": "drop",
+      "pred": "drop",
+      "reason": "no_keep_bit",
+      "noul": {
+        "tape": 0.37,
+        "soft": 0.59,
+        "tip": 0.5,
+        "done": 0.39,
+        "print": 0.3,
+        "listed": 0.69
+      }
+    },
+    {
+      "title": "Crude Oil Price Prediction October 2026: Can Oil Hit $100 on Iran War? - coingabbar.com",
+      "label": "preview",
+      "gold": "drop",
+      "pred": "drop",
+      "reason": "soft",
+      "noul": {
+        "tape": 0.35,
+        "soft": 0.66,
+        "tip": 0.49,
+        "done": 0.45,
+        "print": 0.34,
+        "listed": 0.47
+      }
+    },
+    {
+      "title": "Blue Owl Capital Q2 Earnings Call Highlights - Yahoo Finance",
+      "label": "preview",
+      "gold": "drop",
+      "pred": "drop",
+      "reason": "v_week",
+      "noul": {}
+    },
+    {
+      "title": "X-Energy vs. GE Vernova: Is the New IPO the Better Buy? - The Motley Fool",
+      "label": "junk",
+      "gold": "drop",
+      "pred": "drop",
+      "reason": "source",
+      "noul": {
+        "tape": 0.26,
+        "soft": 0.57,
+        "tip": 0.85,
+        "done": 0.44,
+        "print": 0.35,
+        "listed": 0.82
+      }
+    },
+    {
+      "title": "These 3 AI Stocks Are Poised to Be Big Winners from Amazon's Choice to Block Meta's Muse - The Motley Fool",
+      "label": "junk",
+      "gold": "drop",
+      "pred": "drop",
+      "reason": "source",
+      "noul": {
+        "tape": 0.27,
+        "soft": 0.58,
+        "tip": 0.82,
+        "done": 0.44,
+        "print": 0.29,
+        "listed": 0.76
+      }
+    },
+    {
+      "title": "History Says Broadcom Stock's Best Season Starts Now. It Has Risen in 13 Straight Fourth Quarters. - The Motley Fool",
+      "label": "junk",
+      "gold": "drop",
+      "pred": "drop",
+      "reason": "source",
+      "noul": {
+        "tape": 0.48,
+        "soft": 0.54,
+        "tip": 0.72,
+        "done": 0.41,
+        "print": 0.25,
+        "listed": 0.91
+      }
+    },
+    {
+      "title": "Annaly Capital: The Fed Just Changed The Game (Rating Downgrade) (NYSE:NLY) - Seeking Alpha",
+      "label": "junk",
+      "gold": "drop",
+      "pred": "drop",
+      "reason": "source",
+      "noul": {
+        "tape": 0.21,
+        "soft": 0.45,
+        "tip": 0.45,
+        "done": 0.4,
+        "print": 0.36,
+        "listed": 0.9
+      }
+    },
+    {
+      "title": "What Does the Fed Rate Hike Mean for FHN's Net Interest Income? - tradingview.com",
+      "label": "junk",
+      "gold": "drop",
+      "pred": "drop",
+      "reason": "soft",
+      "noul": {
+        "tape": 0.25,
+        "soft": 0.63,
+        "tip": 0.46,
+        "done": 0.53,
+        "print": 0.48,
+        "listed": 0.87
+      }
+    },
+    {
+      "title": "How the Fed interest rate hike will hit your wallet - The Week",
+      "label": "junk",
+      "gold": "drop",
+      "pred": "drop",
+      "reason": "soft",
+      "noul": {
+        "tape": 0.3,
+        "soft": 0.62,
+        "tip": 0.63,
+        "done": 0.53,
+        "print": 0.41,
+        "listed": 0.81
+      }
+    },
+    {
+      "title": "How Wars and Geopolitical Conflicts Can Affect Stock Market Performance: What History Shows | Chase - Chase Bank",
+      "label": "junk",
+      "gold": "drop",
+      "pred": "drop",
+      "reason": "no_keep_bit",
+      "noul": {
+        "tape": 0.29,
+        "soft": 0.54,
+        "tip": 0.55,
+        "done": 0.49,
+        "print": 0.38,
+        "listed": 0.37
+      }
+    },
+    {
+      "title": "Cardiff, Inc. Helps Small Businesses Navigate Latest Fed Rate Hike - PR Underground",
+      "label": "junk",
+      "gold": "drop",
+      "pred": "drop",
+      "reason": "no_keep_bit",
+      "noul": {
+        "tape": 0.22,
+        "soft": 0.56,
+        "tip": 0.32,
+        "done": 0.46,
+        "print": 0.51,
+        "listed": 0.54
+      }
+    },
+    {
+      "title": "Real estate expert reacts to Federal Reserve's rate hike and how it affects housing market - CBS News",
+      "label": "junk",
+      "gold": "drop",
+      "pred": "drop",
+      "reason": "no_keep_bit",
+      "noul": {
+        "tape": 0.31,
+        "soft": 0.42,
+        "tip": 0.31,
+        "done": 0.52,
+        "print": 0.51,
+        "listed": 0.76
+      }
+    },
+    {
+      "title": "Electricity tariff for S’pore households to fall by 10.4% in 4th quarter of 2026 - The Straits Times",
+      "label": "junk",
+      "gold": "drop",
+      "pred": "drop",
+      "reason": "tape",
+      "noul": {
+        "tape": 0.79,
+        "soft": 0.39,
+        "tip": 0.18,
+        "done": 0.34,
+        "print": 0.26,
+        "listed": 0.07
+      }
+    },
+    {
+      "title": "Citi Credit Cards offering S$288 cash rebate for FCY spend - The MileLion",
+      "label": "junk",
+      "gold": "drop",
+      "pred": "drop",
+      "reason": "no_keep_bit",
+      "noul": {
+        "tape": 0.32,
+        "soft": 0.48,
+        "tip": 0.26,
+        "done": 0.43,
+        "print": 0.3,
+        "listed": 0.13
+      }
+    },
+    {
+      "title": "Around 100 businesses caught buying fake reviews in largest probe by Singapore's competition watchdog - CNA",
+      "label": "junk",
+      "gold": "drop",
+      "pred": "drop",
+      "reason": "no_keep_bit",
+      "noul": {
+        "tape": 0.2,
+        "soft": 0.27,
+        "tip": 0.16,
+        "done": 0.56,
+        "print": 0.36,
+        "listed": 0.09
+      }
+    },
+    {
+      "title": "From serial collectors to reluctant recyclers: How Singapore’s beverage container return scheme is shifting habits - CNA",
+      "label": "junk",
+      "gold": "drop",
+      "pred": "drop",
+      "reason": "no_keep_bit",
+      "noul": {
+        "tape": 0.25,
+        "soft": 0.48,
+        "tip": 0.18,
+        "done": 0.52,
+        "print": 0.42,
+        "listed": 0.08
+      }
+    },
+    {
+      "title": "‘Don’t go with a fund, go with a solution’: CEO’s tips from decades of global investing - CNBC",
+      "label": "junk",
+      "gold": "drop",
+      "pred": "drop",
+      "reason": "no_keep_bit",
+      "noul": {
+        "tape": 0.21,
+        "soft": 0.44,
+        "tip": 0.58,
+        "done": 0.4,
+        "print": 0.36,
+        "listed": 0.23
+      }
+    },
+    {
+      "title": "I'm Updating My Outlook on Alphabet Stock - The Motley Fool",
+      "label": "junk",
+      "gold": "drop",
+      "pred": "drop",
+      "reason": "source",
+      "noul": {
+        "tape": 0.22,
+        "soft": 0.54,
+        "tip": 0.73,
+        "done": 0.44,
+        "print": 0.37,
+        "listed": 0.79
+      }
+    },
+    {
+      "title": "Palantir Is Worth About as Much as Oracle on Less Than a Tenth of Oracle's Revenue - The Motley Fool",
+      "label": "junk",
+      "gold": "drop",
+      "pred": "drop",
+      "reason": "source",
+      "noul": {
+        "tape": 0.41,
+        "soft": 0.48,
+        "tip": 0.78,
+        "done": 0.45,
+        "print": 0.28,
+        "listed": 0.86
+      }
+    },
+    {
+      "title": "Microsoft Stock Has Grown Roughly 14-Fold Since Satya Nadella Became CEO in 2014, a 23% Annual Growth Rate That Ended 14 Years of Negative G",
+      "label": "junk",
+      "gold": "drop",
+      "pred": "drop",
+      "reason": "tape",
+      "noul": {
+        "tape": 0.8,
+        "soft": 0.26,
+        "tip": 0.39,
+        "done": 0.47,
+        "print": 0.32,
+        "listed": 0.86
+      }
+    },
+    {
+      "title": "Crescent Energy (CRGY) Stock Could Be Above Fair Value On Earnings - Yahoo Finance",
+      "label": "junk",
+      "gold": "drop",
+      "pred": "drop",
+      "reason": "soft",
+      "noul": {
+        "tape": 0.37,
+        "soft": 0.74,
+        "tip": 0.5,
+        "done": 0.46,
+        "print": 0.34,
+        "listed": 0.84
+      }
+    },
+    {
+      "title": "MPLX (MPLX) Stock Could Trade At A Discount To Earnings Value - Yahoo Finance",
+      "label": "junk",
+      "gold": "drop",
+      "pred": "drop",
+      "reason": "soft",
+      "noul": {
+        "tape": 0.35,
+        "soft": 0.72,
+        "tip": 0.52,
+        "done": 0.41,
+        "print": 0.31,
+        "listed": 0.84
+      }
+    },
+    {
+      "title": "DaVita (DVA) Stock May Be Undervalued On Its Earnings Power - Yahoo Finance",
+      "label": "junk",
+      "gold": "drop",
+      "pred": "drop",
+      "reason": "soft",
+      "noul": {
+        "tape": 0.28,
+        "soft": 0.72,
+        "tip": 0.57,
+        "done": 0.44,
+        "print": 0.3,
+        "listed": 0.85
+      }
+    },
+    {
+      "title": "Did Earnings Estimate Upgrade Just Shift Illinois Tool Works Stock Investment Narrative? - simplywall.st",
+      "label": "junk",
+      "gold": "drop",
+      "pred": "drop",
+      "reason": "source",
+      "noul": {
+        "tape": 0.3,
+        "soft": 0.58,
+        "tip": 0.51,
+        "done": 0.49,
+        "print": 0.36,
+        "listed": 0.81
+      }
+    },
+    {
+      "title": "Property is Power! What does the Fed’s latest interest rate increase mean for Black America? - New Pittsburgh Courier",
+      "label": "junk",
+      "gold": "drop",
+      "pred": "drop",
+      "reason": "no_keep_bit",
+      "noul": {
+        "tape": 0.33,
+        "soft": 0.54,
+        "tip": 0.56,
+        "done": 0.53,
+        "print": 0.39,
+        "listed": 0.65
+      }
+    },
+    {
+      "title": "Higher interest rates will make life harder for workers, not investors - Washington Times",
+      "label": "junk",
+      "gold": "drop",
+      "pred": "drop",
+      "reason": "tip",
+      "noul": {
+        "tape": 0.3,
+        "soft": 0.5,
+        "tip": 0.75,
+        "done": 0.47,
+        "print": 0.37,
+        "listed": 0.63
+      }
+    },
+    {
+      "title": "Singapore Airlines Launches Flight Deals From SGD198 to Asia, Australia and Europe, Book by October 7 - Great Deals Singapore",
+      "label": "junk",
+      "gold": "drop",
+      "pred": "drop",
+      "reason": "no_keep_bit",
+      "noul": {
+        "tape": 0.22,
+        "soft": 0.45,
+        "tip": 0.15,
+        "done": 0.39,
+        "print": 0.28,
+        "listed": 0.11
+      }
+    },
+    {
+      "title": "Should You Buy Sandisk Stock After Its $14 Billion Buyback Announcement? - The Motley Fool",
+      "label": "junk",
+      "gold": "drop",
+      "pred": "drop",
+      "reason": "source",
+      "noul": {
+        "tape": 0.3,
+        "soft": 0.52,
+        "tip": 0.71,
+        "done": 0.43,
+        "print": 0.3,
+        "listed": 0.87
       }
     }
   ]
