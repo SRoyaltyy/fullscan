@@ -8,7 +8,7 @@ from __future__ import annotations
 import re
 
 TRASH_NOUL = 0.70
-KEEP_NOUL = 0.60
+KEEP_NOUL = 0.50
 DUP_JACCARD = 0.72
 
 SOURCE_DENY = re.compile(
@@ -44,7 +44,7 @@ EARN_RE = re.compile(
     r"raised outlook|raises outlook|beat, raised|"
     r"forecasts .{0,28}(?:revenue|growth|eps)|"
     r"posts record|record (?:q[1-4]|second quarter |third quarter |first quarter )?(?:revenue|eps|earnings)|per diluted share|boosts 20\d{2} buyback|"
-    r"strong earnings|earnings (?:spark|beat|miss)\b"
+    r"strong earnings|earnings (?:spark|beat|miss)\b|quarterly profit"
 )
 
 RATING_RE = re.compile(
@@ -66,8 +66,8 @@ PRINT_RE = re.compile(
     r"\bema\b|\bchmp\b|\bcafe\b|budget boost|chips act|"
     r"mis-selling|retail sales|inflation gauge posts|"
     r"strategic (?:petroleum |oil )?reserve|\bspr\b|"
-    r"(?:fed|federal reserve).{0,48}(?:says|see[s]?|signals|backs|warns)|"
-    r"(?:says|see[s]?|signals|backs|warns).{0,48}(?:fed|federal reserve)|"
+    r"(?:fed|federal reserve).{0,48}(?:says|see[s]?|signals|backs|warns?)|"
+    r"(?:says|see[s]?|signals|backs|warns?).{0,48}(?:fed|federal reserve)|"
     r"raised (?:its )?benchmark|federal reserve raised|fed raised|"
     r"(?:treasury|yield|30-year|10-year|cpi|pce|nfp|payrolls).{0,48}(?:highest|lowest).{0,24}since|"
     r"cyclospor|\d[\d,]* (?:suspected )?cases"
@@ -230,8 +230,8 @@ BIT_QUESTIONS: dict = {
             "a column about earnings."
         ),
         "criteria": {
-            "true": "Bitdeer Q2 earnings and revenue miss. Nvidia $10.2 Billion Quarterly Profit Increase. CrowdStrike strong earnings spark a rally.",
-            "false": "Earnings call highlights. Micron: Earnings May Show Why $100 Billion Won't Save The Rally.",
+            "true": "Bitdeer Q2 earnings and revenue miss. Nvidia $10.2 Billion Quarterly Profit Increase Topped Its Entire 2022 Operating Profit. CrowdStrike strong earnings spark a rally.",
+            "false": "Earnings call highlights. Here's how much traders think Nvidia will move off earnings. Micron: Earnings May Show Why $100 Billion Won't Save The Rally.",
         },
     },
     "k_rating": {"type": "noul", "instructions": "Named upgrade, downgrade, or PT change?",
@@ -240,12 +240,13 @@ BIT_QUESTIONS: dict = {
     "k_print": {
         "type": "noul",
         "instructions": (
-            "TRUE only if this title IS the official print or a named Fed "
-            "official speaking (PPI/CPI/PCE/NFP/Beige Book/FOMC hold-hike-cut "
-            "that already happened; Williams/Barr/Cook/Hammack/Fed officials "
-            "say, see, urge, or warn — colon titles count). FALSE if the print "
-            "is only upcoming, expected, 'ahead of', 'what to expect', or a "
-            "tip sheet that mentions the Fed."
+            "TRUE if this title IS the official print or a named Fed official "
+            "speaking. July PPI below expectations, consumer confidence at a "
+            "12-year low, Beige Book, FOMC hold/hike/cut that already happened, "
+            "and Williams/Barr/Cook/Hammack/Fed officials say, see, urge, or "
+            "warn (colon titles count) are TRUE. FALSE if the print is only "
+            "upcoming, expected, 'ahead of', 'what to expect', or a tip sheet "
+            "that mentions the Fed."
         ),
         "criteria": {
             "true": "US July PPI Below Expectations. Fed's Williams: No Rush on Rate Hikes. Beth Hammack urges Fed rate hike. three Fed officials issue inflation warnings. Consumer confidence sags to 12-year low.",
@@ -334,6 +335,25 @@ def cheap_veto(title: str) -> str:
     return ""
 
 
+AHEAD_RE = re.compile(
+    r"(?i)\bahead of\b|\bexpected to\b|\bwill be released\b|"
+    r"\bwhat to expect\b|\bweek ahead\b"
+)
+OFFICIAL_PRINT_RE = re.compile(
+    r"(?i)\b(?:ppi|cpi|nfp|beige book|consumer confidence)\b"
+)
+
+
+def cheap_keep(title: str) -> str:
+    """Official prints that already landed. Skip the Jev HTTP."""
+    t = title or ""
+    if not t or AHEAD_RE.search(t):
+        return ""
+    if OFFICIAL_PRINT_RE.search(t):
+        return "k_print"
+    return ""
+
+
 def _noul(answers: dict | None, key: str) -> float:
     if not answers:
         return 0.0
@@ -385,7 +405,7 @@ def decide(row: dict, answers: dict | None = None) -> dict:
     blob = f"{title} {source}"
 
     def pack(decision: str, reason: str) -> dict:
-        return {
+        out = {
             "title": title,
             "source": source,
             "published_at": row.get("published_at") or "",
@@ -401,10 +421,18 @@ def decide(row: dict, answers: dict | None = None) -> dict:
             "place": "",
             "has_new_verb": False,
         }
+        if has_bit_answers(answers):
+            out["noul"] = {
+                key: round(_noul(answers, key), 3) for key in BIT_QUESTIONS
+            }
+        return out
 
     cheap = cheap_veto(blob)
     if cheap:
         return pack("drop", cheap)
+    landed = cheap_keep(title)
+    if landed:
+        return pack("keep", landed)
 
     if has_bit_answers(answers):
         keep = answers_keep(answers)
@@ -418,6 +446,9 @@ def decide(row: dict, answers: dict | None = None) -> dict:
             return pack("drop", veto)
         if keep:
             return pack("keep", keep)
+        code = code_keep(title)
+        if code in {"k_print", "k_earn"}:
+            return pack("keep", code)
         return pack("drop", "no_keep_bit")
 
     veto = code_veto(blob)

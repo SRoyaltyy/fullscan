@@ -33,7 +33,7 @@ from collections import Counter, defaultdict
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from email.utils import parsedate_to_datetime
 from pathlib import Path
-from .jev_bits import BIT_QUESTIONS, cheap_veto, decide as bits_decide
+from .jev_bits import BIT_QUESTIONS, cheap_keep, cheap_veto, decide as bits_decide
 
 ROOT = Path(__file__).resolve().parent.parent
 NEWS_DIR = ROOT / "01_daily" / "news"
@@ -1070,6 +1070,7 @@ def gate(rows: list[dict], *, code_only: bool = False, live: bool = False,
     need_jev = [
         r for r in rows
         if not cheap_veto(f"{r.get('title') or ''} {r.get('source') or ''}")
+        and not cheap_keep(r.get("title") or "")
     ]
 
     if live and not code_only and need_jev:

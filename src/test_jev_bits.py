@@ -7,7 +7,7 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
-from .jev_bits import BIT_QUESTIONS, decide
+from .jev_bits import BIT_QUESTIONS, cheap_keep, decide
 from .jev_gate import gate
 
 LOCK_PATH = Path(__file__).with_name("jev_bits_lock.json")
@@ -84,6 +84,27 @@ def test_sheet_0808_stay_drop() -> None:
     )["decision"] == "drop"
 
 
+def test_cheap_keep_official_print_not_calendar() -> None:
+    assert _d("US July PPI Below Expectations as Producer Inflation Cools")["reason"] == "k_print"
+    assert _d("Consumer confidence sags to 12-year low, eroded by inflation")["reason"] == "k_print"
+    assert cheap_keep("Asia stocks gain ahead of U.S. PCE inflation") == ""
+    assert cheap_keep("US core PCE inflation expected to increase") == ""
+    assert _d(
+        "Nvidia’s $10.2 Billion Quarterly Profit Increase Topped Its Entire 2022 Operating Profit"
+    )["reason"] == "k_earn"
+    assert _d(
+        "As Jackson Hole conference kicks off, three Fed officials issue inflation warnings"
+    )["reason"] == "k_print"
+
+
+def test_answers_unsure_falls_back_to_code_print() -> None:
+    title = "Barr Says Further Fed Rate Hikes Likely Needed As Inflation Remains Too High"
+    got = _dj(title, _ans())
+    assert got["decision"] == "keep"
+    assert got["reason"] == "k_print"
+    assert got.get("noul")
+
+
 def test_jev_answers_keep_the_sheet_misses() -> None:
     """Frontier-shaped answers keep the last-sheet false drops."""
     cases = [
@@ -152,6 +173,8 @@ def main() -> None:
         test_locked_titles_do_not_flip,
         test_sheet_0808_commented_keeps,
         test_sheet_0808_stay_drop,
+        test_cheap_keep_official_print_not_calendar,
+        test_answers_unsure_falls_back_to_code_print,
         test_jev_answers_keep_the_sheet_misses,
         test_jev_answers_drop_the_sheet_false_keeps,
         test_jev_answers_override_regex_false_keep,
