@@ -1,8 +1,54 @@
 {
-  "date": "2026-09-29",
+  "date": "2026-09-30",
   "policy": "flatten_robust",
-  "generated": "2026-09-29T18:55:27",
-  "cash": 102271.92,
-  "io": [],
+  "generated": "2026-09-30T09:41:34",
+  "cash": 21070.91,
+  "io": [
+    {
+      "ticker": "REGN",
+      "sleeve": "io_core",
+      "shares": 25,
+      "entry_px": 788.04,
+      "entry_date": "2026-09-25",
+      "last_px": 750.51,
+      "yday_px": 750.51,
+      "open_px": 750.51,
+      "overnight": 0.0,
+      "pct": 0.0,
+      "mv": 18762.75,
+      "exit_date": "2026-09-30",
+      "reason": ""
+    },
+    {
+      "ticker": "BLFS",
+      "sleeve": "io_core",
+      "shares": 528,
+      "entry_px": 38.49,
+      "entry_date": "2026-09-25",
+      "last_px": 39.22,
+      "yday_px": 39.22,
+      "open_px": 39.22,
+      "overnight": 0.0,
+      "pct": 0.0,
+      "mv": 20708.16,
+      "exit_date": "2026-09-30",
+      "reason": ""
+    },
+    {
+      "ticker": "MRVI",
+      "sleeve": "io_core",
+      "shares": 2675,
+      "entry_px": 7.6,
+      "entry_date": "2026-09-25",
+      "last_px": 7.65,
+      "yday_px": 7.65,
+      "open_px": 7.65,
+      "overnight": 0.0,
+      "pct": 0.0,
+      "mv": 20463.75,
+      "exit_date": "2026-09-30",
+      "reason": ""
+    }
+  ],
   "mover": []
 }
