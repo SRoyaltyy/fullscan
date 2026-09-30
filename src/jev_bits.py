@@ -237,14 +237,15 @@ BIT_QUESTIONS: dict = {
         ),
         "criteria": {
             "true": (
-                "A court already ordered a pay, or a named firm already launched, "
-                "delivered a buyout, or pulled or delayed a listing or filing. "
+                "A court already ordered a pay, or a named firm already launches "
+                "a product, a buyout delivers, a plant opened, or a listing or "
+                "filing is pulled or delayed. "
                 "A rate was already held or cut, a reserve was tapped, or a "
-                "choke-point flow already dropped."
+                "choke-point or freight flow already dropped."
             ),
             "false": (
-                "A firm touts contract wins or savings with no close. "
-                "A local receivership, or an old IPO price recap."
+                "A local pump price follows a competitor, not an official act. "
+                "An expert or column reacts to a rate hike that already happened."
             ),
         },
     },
