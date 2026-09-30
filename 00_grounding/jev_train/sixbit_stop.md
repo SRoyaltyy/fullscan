@@ -7,7 +7,7 @@ Need precision ≥ 0.85, print/done recall ≥ 0.8, zero call-highlights / shoul
 ## Misses
 - gold=keep pred=drop/no_keep_bit label=officer_voice | Fed’s Williams Hints Next Rate Increase Can Wait - WSJ
 - gold=keep pred=drop/no_keep_bit label=officer_voice | New York Fed president sees no need to rush another rate hike — Channel NewsAsia - ua.news
-- gold=keep pred=drop/no_keep_bit label=officer_voice | St. Louis Fed President Warns: Excessive Silence from the Fed Could Push Up Rates and Inflation - finance.biggo.com
+- gold=keep pred=drop/soft label=officer_voice | St. Louis Fed President Warns: Excessive Silence from the Fed Could Push Up Rates and Inflation - finance.biggo.com
 - gold=keep pred=drop/soft label=officer_voice | Horizon over which FOMC can achieve dual mandate could be communicated: St. Louis Fed's Musalem - tradingview.com
 - gold=keep pred=drop/no_keep_bit label=official_print | US consumer confidence sinks to 12-year low over inflation, stagnant wages - South China Morning Post
 - gold=keep pred=drop/no_keep_bit label=official_print | FDA Announces Nationwide Cheese Recall—Products Linked to Multistate E. Coli Outbreak - health.com
