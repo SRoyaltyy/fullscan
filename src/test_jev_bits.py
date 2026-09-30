@@ -211,6 +211,25 @@ def test_gate_uses_posted_bit_answers() -> None:
     assert out[0]["reason"] == "done"
 
 
+def test_gate_live_error_does_not_regex_keep() -> None:
+    """A failed live call is no_keep_bit, not PRINT_RE / POLICY_RE."""
+
+    def poster(state, questions, key):
+        raise RuntimeError("jev down")
+
+    out = gate(
+        [{
+            "title": "US core PCE inflation expected to increase, challenging the Fed",
+            "source": "FXStreet",
+            "id": "pce-preview",
+        }],
+        code_only=False, live=True, key="x", poster=poster,
+    )
+    assert out[0]["decision"] == "drop"
+    assert out[0]["reason"] == "no_keep_bit"
+    assert out[0].get("noul")
+
+
 def test_no_cheap_keep() -> None:
     import src.jev_bits as bits
 
@@ -234,6 +253,7 @@ def main() -> None:
         test_jev_answers_drop_the_sheet_false_keeps,
         test_jev_answers_override_regex_false_keep,
         test_gate_uses_posted_bit_answers,
+        test_gate_live_error_does_not_regex_keep,
         test_no_cheap_keep,
     ]
     failed = 0

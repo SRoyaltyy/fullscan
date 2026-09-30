@@ -33,7 +33,12 @@ from collections import Counter, defaultdict
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from email.utils import parsedate_to_datetime
 from pathlib import Path
-from .jev_bits import BIT_QUESTIONS, cheap_veto, decide as bits_decide
+from .jev_bits import (
+    BIT_QUESTIONS,
+    cheap_veto,
+    decide as bits_decide,
+    has_bit_answers,
+)
 
 ROOT = Path(__file__).resolve().parent.parent
 NEWS_DIR = ROOT / "01_daily" / "news"
@@ -1078,9 +1083,10 @@ def gate(rows: list[dict], *, code_only: bool = False, live: bool = False,
             raise RuntimeError("JEV_API_KEY / TYPESAFE_API_KEY is empty")
         for row, answers, model in jev_many(need_jev, key, workers, poster):
             row["_jev_model"] = model
-            if answers is None:
-                row["code_reason"] = "jev_error"
-                row["_answers"] = {}
+            # Live miss must stay on the six bits. Empty answers used to
+            # fall through decide() into regex k_print / k_policy.
+            if not has_bit_answers(answers):
+                row["_answers"] = {key: 0.0 for key in BIT_QUESTIONS}
             else:
                 row["_answers"] = answers
     else:
