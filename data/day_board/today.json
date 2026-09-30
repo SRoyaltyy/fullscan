@@ -1,12 +1,12 @@
 {
   "date": "2026-09-30",
-  "generated_at": "2026-09-30T04:32:01.524490-04:00",
+  "generated_at": "2026-09-30T04:32:11.863590-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
     "ok": 3,
-    "partial": 2,
-    "fail": 3,
+    "partial": 3,
+    "fail": 2,
     "n": 8
   },
   "buy_1d": [],
@@ -15,31 +15,6 @@
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "finviz_market_digest",
-      "title": "Finviz homepage market digest",
-      "date": "2026-09-30",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-30T04:20:52.334066-04:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-09-30_finviz_market_digest.json",
-          "ok": true,
-          "reason": "",
-          "size": 4532,
-          "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for"
-        },
-        {
-          "path": "01_daily/news/2026-09-30_finviz_market_digest.md",
-          "ok": true,
-          "reason": "",
-          "size": 2170,
-          "preview": "# Finviz homepage market digest \u2014 2026-09-30\n**Generated:** 2026-09-30T04:20:52.325544-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stocks set to open higher as futures gain ahead of ADP jobs report, GDP update and core PCE inflation data\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** JBL, FDS, CAG, CALM\n**Next session:** housing no \u00b7 retail no \u00b7 Fed no\n**Earnings slate:** JBL, FDS, CAG, CALM\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-09-30\n**Clock use:** `same_morning`"
-        }
-      ],
-      "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest \u2014 2026-09-30\n**Generated:** 2026-09-30T04:20:52.325544-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stocks set to open higher as futures gain ahead of ADP jobs report, GDP update and core PCE inflation data\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** JBL, FDS, CAG, CALM\n**Next session:** housing no \u00b7 retail no \u00b7 Fed no\n**Earnings slate:** JBL, FDS, CAG, CALM\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-09-30\n**Clock use:** `same_morning`"
-    },
     {
       "key": "map_heat",
       "title": "Map heat morning overlay",
@@ -200,6 +175,24 @@
         }
       ],
       "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -7.21, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -3.0, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -2.48, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -2.71, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -3.0599999999999996, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.66, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -4.44, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -2.7, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-09-30\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+    },
+    {
+      "key": "join",
+      "title": "Join / match rank",
+      "date": "2026-09-30",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-30T04:32:11.415543-04:00",
+      "files": [
+        {
+          "path": "data/join/2026-09-30_ranked.csv",
+          "ok": true,
+          "reason": "",
+          "size": 2313491,
+          "preview": "5903 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 EXEL, BPOP, REGN, TAL, NUTX"
+        }
+      ],
+      "preview": "5903 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 EXEL, BPOP, REGN, TAL, NUTX"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
