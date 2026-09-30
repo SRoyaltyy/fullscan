@@ -1,6 +1,6 @@
 # Stock book — 2026-09-30
 
-_Generated 2026-09-30T07:10:21.555387-04:00_
+_Generated 2026-09-30T12:10:47.656048-04:00_
 
 This file is the **human read** of one run. CSV/JSON next to it are the machine files.
 
@@ -50,21 +50,21 @@ Decision domains: **MKT · parent · child · company · setup · flow**. Measur
 
 | # | Ticker | Domains | Lane | Company / group | Decision |
 |---:|--------|---------|------|-----------------|----------|
-| 1 | **AMN** | 🟡🟡🟢🟡🟢🟢 | group_leader | no direct company event; Medical Care Facilities +0.6% d1 / +3.1% 1w / +5.6% vs parent | BUY GROUP_LEADER — market=YELLOW; parent=YELLOW; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=🔵,Cond green |
-| 2 | **AVPT** | 🟡🔴🟢🟡🟢🟢 | group_leader | no direct company event; Software - Infrastructure +2.8% d1 / +1.4% 1w / +3.4% vs parent | BUY GROUP_LEADER — market=YELLOW; parent=RED; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=🔵,Cond green |
-| 3 | **PLTR** | 🟡🔴🟢🟡🟢🟢 | group_leader | no direct company event; Software - Infrastructure +2.8% d1 / +1.4% 1w / +3.4% vs parent | BUY GROUP_LEADER — market=YELLOW; parent=RED; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=🔵,Cond green |
-| 4 | **MD** | 🟡🟡🟢🟡🟢🟢 | group_leader | no direct company event; Medical Care Facilities +0.6% d1 / +3.1% 1w / +5.6% vs parent | BUY GROUP_LEADER — market=YELLOW; parent=YELLOW; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=🔵,Cond green |
-| 5 | **RELY** | 🟡🔴🟢🟡🟢🟢 | group_leader | no direct company event; Software - Infrastructure +2.8% d1 / +1.4% 1w / +3.4% vs parent | BUY GROUP_LEADER — market=YELLOW; parent=RED; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=🔵,Cond green |
-| 6 | **FTNT** | 🟡🔴🟢🟡🟢🟢 | group_leader | no direct company event; Software - Infrastructure +2.8% d1 / +1.4% 1w / +3.4% vs parent | BUY GROUP_LEADER — market=YELLOW; parent=RED; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=🔵,Cond green |
-| 7 | **RBRK** | 🟡🔴🟢🟡🟢🟢 | group_leader | no direct company event; Software - Infrastructure +2.8% d1 / +1.4% 1w / +3.4% vs parent | BUY GROUP_LEADER — market=YELLOW; parent=RED; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=🔵,Cond green |
-| 8 | **BB** | 🟡🔴🟢🟡🟢🟢 | group_leader | no direct company event; Software - Infrastructure +2.8% d1 / +1.4% 1w / +3.4% vs parent | BUY GROUP_LEADER — market=YELLOW; parent=RED; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=🔵 |
-| 9 | **EPAM** | 🟡🔴🟢🟡🟢🟢 | group_leader | no direct company event; Information Technology Services +2.9% d1 / +1.9% 1w / +3.9% vs parent | BUY GROUP_LEADER — market=YELLOW; parent=RED; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=🔵 |
-| 10 | **HITI** | 🟡🟡🟢🟡🟢🟢 | group_leader | no direct company event; Pharmaceutical Retailers +3.6% d1 / +1.0% 1w / +3.5% vs parent | BUY GROUP_LEADER — market=YELLOW; parent=YELLOW; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=Cond green |
-| 11 | **PRGS** | 🟡🔴🟢🟡🟢🟢 | group_leader | no direct company event; Software - Infrastructure +2.8% d1 / +1.4% 1w / +3.4% vs parent | BUY GROUP_LEADER — market=YELLOW; parent=RED; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=🔵,Cond green |
-| 12 | **IT** | 🟡🔴🟢🟡🟢🟢 | group_leader | no direct company event; Information Technology Services +2.9% d1 / +1.9% 1w / +3.9% vs parent | BUY GROUP_LEADER — market=YELLOW; parent=RED; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=Cond green |
-| 13 | **PACS** | 🟡🟡🟢🟡🟢🟡 | group_leader | no direct company event; Medical Care Facilities +0.6% d1 / +3.1% 1w / +5.6% vs parent | BUY GROUP_LEADER — market=YELLOW; parent=YELLOW; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=YELLOW; lookback=Cond green |
-| 14 | **ACIW** | 🟡🔴🟢🟡🟢🟡 | group_leader | no direct company event; Software - Infrastructure +2.8% d1 / +1.4% 1w / +3.4% vs parent | BUY GROUP_LEADER — market=YELLOW; parent=RED; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=YELLOW; lookback=🔵 |
-| 15 | **PAYS** | 🟡🔴🟢🟡🟢🟢 | group_leader | no direct company event; Software - Infrastructure +2.8% d1 / +1.4% 1w / +3.4% vs parent | BUY GROUP_LEADER — market=YELLOW; parent=RED; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=Cond green |
+| 1 | **BKR** | 🟡🟡🔴🟡🟢🟢 | blocked | usable dossier Strong Bullish conv=100; Oil & Gas Equipment & Services -4.4% d1 / -6.8% 1w / -7.7% vs parent | BLOCK BUY — child industry/theme RED; direct catalyst lacks price confirmation / market=YELLOW; parent=YELLOW; child=RED/rel=RED; company=YELLOW(1.00); setup=GREEN; flow=GREEN |
+| 2 | **KGS** | 🟡🟡🔴🟡🔴🟡 | blocked | usable dossier Strong Bullish conv=89; Oil & Gas Equipment & Services -4.4% d1 / -6.8% 1w / -7.7% vs parent | BLOCK BUY — child industry/theme RED; setup RED; direct catalyst lacks price confirmation; legacy region red; v2 domain region red / market=YELLOW; parent=YELLOW; child=RED/rel=RED; company=YELLOW(0.89); setup=RED; flow=YELLOW |
+| 3 | **SLB** | 🟡🟡🔴🟢🟢🔴 | blocked | usable dossier Bullish conv=35; Oil & Gas Equipment & Services -4.4% d1 / -6.8% 1w / -7.7% vs parent | BLOCK BUY — child industry/theme RED; flow RED; direct catalyst lacks price confirmation; legacy Cond red / market=YELLOW; parent=YELLOW; child=RED/rel=RED; company=GREEN(0.80); setup=GREEN; flow=RED |
+| 4 | **SSRM** | 🟡🔴🔴🟡🟢🟡 | blocked | usable dossier Strong Bullish conv=73; Gold -2.8% d1 / -5.0% 1w / -0.2% vs parent | BLOCK BUY — parent sector RED; child industry/theme RED; direct catalyst lacks price confirmation / market=YELLOW; parent=RED; child=RED/rel=YELLOW; company=YELLOW(0.80); setup=GREEN; flow=YELLOW |
+| 5 | **RIG** | 🟡🟡🔴🟡🟡🟢 | blocked | usable dossier Strong Bullish conv=51; Oil & Gas Drilling -3.3% d1 / -4.4% 1w / -5.4% vs parent | BLOCK BUY — child industry/theme RED; setup YELLOW; direct catalyst lacks price confirmation / market=YELLOW; parent=YELLOW; child=RED/rel=RED; company=YELLOW(0.80); setup=YELLOW; flow=GREEN |
+| 6 | **AMN** | 🟡🟡🟢🟡🟢🟢 | group_leader | no direct company event; Medical Care Facilities +0.6% d1 / +3.1% 1w / +5.6% vs parent | BUY GROUP_LEADER — market=YELLOW; parent=YELLOW; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=🔵,Cond green |
+| 7 | **AVPT** | 🟡🔴🟢🟡🟢🟢 | group_leader | no direct company event; Software - Infrastructure +2.8% d1 / +1.4% 1w / +3.4% vs parent | BUY GROUP_LEADER — market=YELLOW; parent=RED; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=🔵,Cond green |
+| 8 | **PLTR** | 🟡🔴🟢🟡🟢🟢 | group_leader | no direct company event; Software - Infrastructure +2.8% d1 / +1.4% 1w / +3.4% vs parent | BUY GROUP_LEADER — market=YELLOW; parent=RED; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=🔵,Cond green |
+| 9 | **MD** | 🟡🟡🟢🟡🟢🟢 | group_leader | no direct company event; Medical Care Facilities +0.6% d1 / +3.1% 1w / +5.6% vs parent | BUY GROUP_LEADER — market=YELLOW; parent=YELLOW; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=🔵,Cond green |
+| 10 | **RELY** | 🟡🔴🟢🟡🟢🟢 | group_leader | no direct company event; Software - Infrastructure +2.8% d1 / +1.4% 1w / +3.4% vs parent | BUY GROUP_LEADER — market=YELLOW; parent=RED; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=🔵,Cond green |
+| 11 | **FTNT** | 🟡🔴🟢🟡🟢🟢 | group_leader | no direct company event; Software - Infrastructure +2.8% d1 / +1.4% 1w / +3.4% vs parent | BUY GROUP_LEADER — market=YELLOW; parent=RED; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=🔵,Cond green |
+| 12 | **RBRK** | 🟡🔴🟢🟡🟢🟢 | group_leader | no direct company event; Software - Infrastructure +2.8% d1 / +1.4% 1w / +3.4% vs parent | BUY GROUP_LEADER — market=YELLOW; parent=RED; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=🔵,Cond green |
+| 13 | **BB** | 🟡🔴🟢🟡🟢🟢 | group_leader | no direct company event; Software - Infrastructure +2.8% d1 / +1.4% 1w / +3.4% vs parent | BUY GROUP_LEADER — market=YELLOW; parent=RED; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=🔵 |
+| 14 | **EPAM** | 🟡🔴🟢🟡🟢🟢 | group_leader | no direct company event; Information Technology Services +2.9% d1 / +1.9% 1w / +3.9% vs parent | BUY GROUP_LEADER — market=YELLOW; parent=RED; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=🔵 |
+| 15 | **HITI** | 🟡🟡🟢🟡🟢🟢 | group_leader | no direct company event; Pharmaceutical Retailers +3.6% d1 / +1.0% 1w / +3.5% vs parent | BUY GROUP_LEADER — market=YELLOW; parent=YELLOW; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=Cond green |
 
 ### Bear decisions
 
@@ -79,12 +79,12 @@ Decision domains: **MKT · parent · child · company · setup · flow**. Measur
 | 7 | **METC** | 🟡🔴🔴🟡🔴🟡 | Coking Coal | SELL/AVOID — market=YELLOW; red domains=parent,child,setup; child lags parent -5.7% |
 | 8 | **FCEL** | 🟡🔴🔴🟡🔴🔴 | Electrical Equipment & Parts | SELL/AVOID — market=YELLOW; red domains=parent,child,setup,flow; child lags parent -4.7% |
 | 9 | **AMPG** | 🟡🔴🔴🟡🔴🔴 | Communication Equipment | SELL/AVOID — market=YELLOW; red domains=parent,child,setup,flow |
-| 10 | **EXK** | 🟡🔴🔴🟡🔴🟡 | Silver | SELL/AVOID — market=YELLOW; red domains=parent,child,setup; child lags parent -4.5% |
-| 11 | **LPTH** | 🟡🔴🔴🟡🔴🔴 | Electronic Components | SELL/AVOID — market=YELLOW; red domains=parent,child,setup,flow |
-| 12 | **NRG** | 🟡🔴🔴🟡🔴🟡 | Utilities - Independent Power Producers | SELL/AVOID — market=YELLOW; red domains=parent,child,setup; child lags parent -6.3% |
-| 13 | **QUBT** | 🟡🔴🔴🟡🔴🟡 | Computer Hardware | SELL/AVOID — market=YELLOW; red domains=parent,child,setup; child lags parent -3.1% |
-| 14 | **POWL** | 🟡🔴🔴🟡🔴🔴 | Electrical Equipment & Parts | SELL/AVOID — market=YELLOW; red domains=parent,child,setup,flow; child lags parent -4.7% |
-| 15 | **QBTS** | 🟡🔴🔴🟡🔴🟡 | Computer Hardware | SELL/AVOID — market=YELLOW; red domains=parent,child,setup; child lags parent -3.1% |
+| 10 | **NE** | 🟡🟡🔴🔴🔴🟡 | Oil & Gas Drilling | SELL/AVOID — market=YELLOW; red domains=child,company,setup; child lags parent -5.4% |
+| 11 | **EXK** | 🟡🔴🔴🟡🔴🟡 | Silver | SELL/AVOID — market=YELLOW; red domains=parent,child,setup; child lags parent -4.5% |
+| 12 | **LPTH** | 🟡🔴🔴🟡🔴🔴 | Electronic Components | SELL/AVOID — market=YELLOW; red domains=parent,child,setup,flow |
+| 13 | **NRG** | 🟡🔴🔴🟡🔴🟡 | Utilities - Independent Power Producers | SELL/AVOID — market=YELLOW; red domains=parent,child,setup; child lags parent -6.3% |
+| 14 | **QUBT** | 🟡🔴🔴🟡🔴🟡 | Computer Hardware | SELL/AVOID — market=YELLOW; red domains=parent,child,setup; child lags parent -3.1% |
+| 15 | **POWL** | 🟡🔴🔴🟡🔴🔴 | Electrical Equipment & Parts | SELL/AVOID — market=YELLOW; red domains=parent,child,setup,flow; child lags parent -4.7% |
 
 ## Finviz outperform board (industry + theme)
 
