@@ -95,6 +95,16 @@ def test_cheap_keep_official_print_not_calendar() -> None:
     assert _d(
         "As Jackson Hole conference kicks off, three Fed officials issue inflation warnings"
     )["reason"] == "k_print"
+    assert _d(
+        "Fed's Williams: No Rush on Rate Hikes, But One More Increase Likely This Year"
+    )["reason"] == "k_print"
+
+
+def test_hard_keep_beats_jev_fluff() -> None:
+    title = "Nasdaq to Buy Dark Pool Stock Venue LeveL for Equity Trading"
+    got = _dj(title, _ans(k_done=0.91, v_fluff=0.88))
+    assert got["decision"] == "keep"
+    assert got["reason"] == "k_done"
 
 
 def test_answers_unsure_falls_back_to_code_print() -> None:
@@ -174,6 +184,7 @@ def main() -> None:
         test_sheet_0808_commented_keeps,
         test_sheet_0808_stay_drop,
         test_cheap_keep_official_print_not_calendar,
+        test_hard_keep_beats_jev_fluff,
         test_answers_unsure_falls_back_to_code_print,
         test_jev_answers_keep_the_sheet_misses,
         test_jev_answers_drop_the_sheet_false_keeps,

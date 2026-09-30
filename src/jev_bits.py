@@ -342,6 +342,7 @@ AHEAD_RE = re.compile(
 OFFICIAL_PRINT_RE = re.compile(
     r"(?i)\b(?:ppi|cpi|nfp|beige book|consumer confidence)\b"
 )
+FED_COLON_RE = re.compile(r"(?i)\bfed(?:eral reserve)?'?s\s+[A-Za-z]+:")
 
 
 def cheap_keep(title: str) -> str:
@@ -349,7 +350,7 @@ def cheap_keep(title: str) -> str:
     t = title or ""
     if not t or AHEAD_RE.search(t):
         return ""
-    if OFFICIAL_PRINT_RE.search(t):
+    if OFFICIAL_PRINT_RE.search(t) or FED_COLON_RE.search(t):
         return "k_print"
     return ""
 
@@ -387,7 +388,7 @@ def answers_veto(answers: dict | None, hard: bool) -> str:
     ):
         if _noul(answers, name) < TRASH_NOUL:
             continue
-        if hard and name in {"v_tape", "v_odds"}:
+        if hard and name in {"v_tape", "v_odds", "v_fluff"}:
             continue
         return name
     return ""
