@@ -1,0 +1,20 @@
+{
+ "risk_tilt": "off",
+ "macros": [
+  "bearish",
+  "mixed",
+  "bearish",
+  "mixed"
+ ],
+ "sector_tilts": {
+  "Defense": "bullish",
+  "Healthcare": "mixed",
+  "Industrials": "bullish"
+ },
+ "tickers": {
+  "XLI": 4.0,
+  "AMGN": 1.5
+ },
+ "b1_inject": "NEWS_JUDGE: n=7 rescued=3\nMACRO fed_path: [dovish] Williams no-urgency Oct hike, odds ~coin flip, 2Y down (session/1d-1w)\nMACRO long_end: [bearish] 30Y hit highest since 2002; SPX/Dow losses from elevated yields (session/1d-1w)\nMACRO fed_split: [mixed] Barr still hike-leaning; gold -$100 overhang \u2014 not a full pivot (session/1d-1w)\nSECTOR defense: [bullish] Boeing F/A-XX >$20B Navy award (ITA/XAR)\nSECTOR healthcare: [mixed] AMGN Ph3 Sjogren's vs CI/BSX downgrades; XBI lag (XBI/XLV)\nSECTOR ai_infra: [mixed] CIEN upgrade vs APH/Fabrinet miss + China AI-hardware unwind (SMH/optical)\nSECTOR industrials: [bullish] AMETEK $5B Indicor cash deal (XLI)\nINTERACTION: Williams front-end dovish + long-end still tight = one rates cluster; do not buy duration/cyclicals on hike-odds cut\nWATCH: Core PCE expected higher is not a same-session print; usable minus tags on Williams are parser-hawkish language, not committee hawkishness",
+ "date": "2026-09-30"
+}

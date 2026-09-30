@@ -1,12 +1,11 @@
 {
   "date": "2026-09-30",
-  "generated_at": "2026-09-30T04:39:56.900631-04:00",
+  "generated_at": "2026-09-30T04:42:06.927056-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
     "MISSING General predict MD `01_daily/general/2026-09-30_predict.md` \u2014 missing",
     "MISSING Sector board JSON `01_daily/sectors/2026-09-30/_board.json` \u2014 missing",
-    "MISSING News judge MD `01_daily/news/2026-09-30_judge.md` \u2014 missing",
     "MISSING AB checklist enriched `data/ab_checklist/2026-09-30_ab_checklist_enriched.csv` \u2014 missing"
   ],
   "counts": {
@@ -182,7 +181,7 @@
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 3,
+      "n_req_ok": 4,
       "n_req": 20,
       "n_opt_ok": 2,
       "n_opt": 3,
@@ -272,11 +271,15 @@
           "name": "News judge MD",
           "path": "01_daily/news/2026-09-30_judge.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 11318,
+          "said": "1. **NY Fed Williams: no urgency for an October hike; one more late-2026; Oct odds ~coin flip, 2Y yield falls** \u2014 Session-defining Fed-path repricing for SPX du",
+          "bullets": [
+            "2. **Long-end still biting: 30Y hit highest since 2002 then eases; SPX/Dow extend losses from elevated yields** \u2014 Binding risk-appetite channel is the long end, not the Williams cut in near-term odds. Channel: rates",
+            "3. **Split Fed: Barr still backs further hikes; gold \u2212$100+ on hawkish overhang (AEM)** \u2014 Stops a full dovish-pivot read; real-rate / gold / miner tape stays two-sided. Channel: rates",
+            "4. **Boeing wins U.S. Navy F/A-XX sixth-gen fighter, >$20B** \u2014 Large defense-prime award with aerospace/defense basket force, not only BA. Channel: sector_fundamental"
+          ]
         },
         {
           "key": "research_json",
@@ -345,13 +348,13 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 7541,
-          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 16 fail",
+          "size": 7535,
+          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 14 fail",
           "bullets": [
             "general_predict:missing",
-            "news_judge:missing",
-            "news_actions:missing",
-            "finviz_market_digest:missing"
+            "finviz_market_digest:missing",
+            "map_heat_research:missing",
+            "sector_predict:missing"
           ]
         },
         {
@@ -725,11 +728,15 @@
           "name": "News judge MD",
           "path": "01_daily/news/2026-09-30_judge.md",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 11318,
+          "said": "1. **NY Fed Williams: no urgency for an October hike; one more late-2026; Oct odds ~coin flip, 2Y yield falls** \u2014 Session-defining Fed-path repricing for SPX du",
+          "bullets": [
+            "2. **Long-end still biting: 30Y hit highest since 2002 then eases; SPX/Dow extend losses from elevated yields** \u2014 Binding risk-appetite channel is the long end, not the Williams cut in near-term odds. Channel: rates",
+            "3. **Split Fed: Barr still backs further hikes; gold \u2212$100+ on hawkish overhang (AEM)** \u2014 Stops a full dovish-pivot read; real-rate / gold / miner tape stays two-sided. Channel: rates",
+            "4. **Boeing wins U.S. Navy F/A-XX sixth-gen fighter, >$20B** \u2014 Large defense-prime award with aerospace/defense basket force, not only BA. Channel: sector_fundamental"
+          ]
         },
         {
           "key": "in_weather",
@@ -1383,6 +1390,31 @@
         }
       ],
       "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions \u00b7 # News \u2192 Actions v4 (full framework) \u2014 2026-09-30T04:39:46.134153-04:00\nraw=400 unique_events=3 tickers=42"
+    },
+    {
+      "key": "news_judge",
+      "title": "News judge",
+      "date": "2026-09-30",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-30T04:42:06.370506-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-09-30_judge.md",
+          "ok": true,
+          "reason": "",
+          "size": 11318,
+          "preview": "# News Judge \u2014 2026-09-30"
+        },
+        {
+          "path": "01_daily/news/2026-09-30_judge.json",
+          "ok": true,
+          "reason": "",
+          "size": 1213,
+          "preview": "keys: risk_tilt, macros, sector_tilts, tickers, b1_inject, date"
+        }
+      ],
+      "preview": "# News Judge \u2014 2026-09-30 \u00b7 keys: risk_tilt, macros, sector_tilts, tickers, b1_inject, date"
     }
   ],
   "href": {
