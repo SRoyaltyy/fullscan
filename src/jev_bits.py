@@ -1,7 +1,9 @@
-"""Hop-0 bits. Grade notes from draw 20260930_0720 wired here.
+"""Hop-0 for every harvest, every day. Not a one-draw patch.
 
-Veto tape/tips first, unless the title also has a print/policy/deal.
-Source-deny does not kill a priced IPO or an official print.
+Veto tape/tips/live-coverage/geo-fluff.
+Keep prints, policy, deals, IPO pricing, earnings, ratings, Fed officers.
+Source-deny cannot kill a hard keep.
+Live Jev answers do not override this pack.
 """
 from __future__ import annotations
 
@@ -156,118 +158,43 @@ KEEP_RES: list[tuple[str, re.Pattern]] = [
 HARD_KEEP = frozenset({"k_print", "k_policy", "k_done", "k_earn", "k_rating", "k_choke"})
 
 BIT_QUESTIONS: dict = {
-    "v_tipsheet": {
-        "type": "noul",
-        "instructions": "Tip sheet pick?",
-        "criteria": {
-            "true": "Should You Buy Palantir.",
-            "false": "AMETEK completes $5.0 billion acquisition.",
-        },
-    },
-    "v_quote": {
-        "type": "noul",
-        "instructions": "Quote page?",
-        "criteria": {
-            "true": "Sony stock price, news, quote and history.",
-            "false": "Boeing identifies 737 MAX software glitch.",
-        },
-    },
-    "v_week": {
-        "type": "noul",
-        "instructions": "Calendar or live coverage?",
-        "criteria": {
-            "true": "WATCH LIVE: Fed chair holds news conference.",
-            "false": "Federal Reserve cuts interest rates by 0.25 percentage points.",
-        },
-    },
-    "v_odds": {
-        "type": "noul",
-        "instructions": "Odds or forecast only?",
-        "criteria": {
-            "true": "Next price spike could roil economies.",
-            "false": "JPMorgan upgrades America Movil to Overweight.",
-        },
-    },
-    "v_tape": {
-        "type": "noul",
-        "instructions": "Already-moved tape? Percent move in the title?",
-        "criteria": {
-            "true": "US stocks hold steady after Fed speech. Dollar Holds Near High.",
-            "false": "Federal Reserve cuts interest rates by 0.25 percentage points.",
-        },
-    },
-    "v_ask": {
-        "type": "noul",
-        "instructions": "Question column?",
-        "criteria": {
-            "true": "How far can BSX stock swing?",
-            "false": "Cenovus Q2 EPS $1.08 misses estimates.",
-        },
-    },
-    "v_fluff": {
-        "type": "noul",
-        "instructions": "Not a US-listed market act?",
-        "criteria": {
-            "true": "Rwanda genocide: Dutch court sentences man. Meta legal fight color.",
-            "false": "Arthur J. Gallagher acquires Innovise.",
-        },
-    },
-    "k_done": {
-        "type": "noul",
-        "instructions": "Deal, IPO pricing, layoff, settlement?",
-        "criteria": {
-            "true": "Raising $540 million in IPO. Oracle planning layoffs.",
-            "false": "odds, could, should you buy.",
-        },
-    },
-    "k_earn": {
-        "type": "noul",
-        "instructions": "Company earnings print or guidance?",
-        "criteria": {
-            "true": "Marvell Q2 earnings: record revenue, raised guidance.",
-            "false": "Earnings call highlights.",
-        },
-    },
-    "k_rating": {
-        "type": "noul",
-        "instructions": "Named analyst upgrade, downgrade, or price target?",
-        "criteria": {
-            "true": "HSBC downgraded Netflix to Hold.",
-            "false": "Top analyst reports for AMD.",
-        },
-    },
-    "k_print": {
-        "type": "noul",
-        "instructions": "Official print, FOMC decision, or named Fed officer?",
-        "criteria": {
-            "true": "Fed cuts 25bp. Retail sales fall. Barr signals further hikes.",
-            "false": "Markets figure out the Fed next move.",
-        },
-    },
-    "k_dollar": {
-        "type": "noul",
-        "instructions": "Money amount AND a finished act?",
-        "criteria": {
-            "true": "Raytheon Gets $20.7 Billion Contract.",
-            "false": "US landlords face a $1.8 trillion debt wall.",
-        },
-    },
-    "k_choke": {
-        "type": "noul",
-        "instructions": "New strait or sanctions verb?",
-        "criteria": {
-            "true": "Trump denies Iran sanctions easing reports.",
-            "false": "Tensions persist as tankers transit Hormuz.",
-        },
-    },
-    "k_policy": {
-        "type": "noul",
-        "instructions": "State plus named policy object?",
-        "criteria": {
-            "true": "California offers new tax credit for electric vehicles.",
-            "false": "Trump slams Canada as trade war persists.",
-        },
-    },
+    "v_tipsheet": {"type": "noul", "instructions": "Tip sheet pick?",
+        "criteria": {"true": "Should You Buy Palantir.", "false": "AMETEK completes acquisition."}},
+    "v_quote": {"type": "noul", "instructions": "Quote page?",
+        "criteria": {"true": "Sony stock price, news, quote.", "false": "Boeing identifies 737 MAX glitch."}},
+    "v_week": {"type": "noul", "instructions": "Calendar or live coverage?",
+        "criteria": {"true": "WATCH LIVE: Fed chair holds news conference.",
+                     "false": "Federal Reserve cuts interest rates by 0.25 percentage points."}},
+    "v_odds": {"type": "noul", "instructions": "Odds or forecast only?",
+        "criteria": {"true": "Next price spike could roil economies.", "false": "JPMorgan upgrades AMX."}},
+    "v_tape": {"type": "noul", "instructions": "Already-moved tape?",
+        "criteria": {"true": "US stocks hold steady after Fed speech.",
+                     "false": "Federal Reserve cuts interest rates by 0.25 percentage points."}},
+    "v_ask": {"type": "noul", "instructions": "Question column?",
+        "criteria": {"true": "How far can BSX stock swing?", "false": "Cenovus Q2 EPS $1.08 misses."}},
+    "v_fluff": {"type": "noul", "instructions": "Not a US-listed market act?",
+        "criteria": {"true": "Rwanda genocide sentence. Meta legal-fight color.",
+                     "false": "Arthur J. Gallagher acquires Innovise."}},
+    "k_done": {"type": "noul", "instructions": "Deal, IPO pricing, layoff, settlement?",
+        "criteria": {"true": "Raising $540 million in IPO. Oracle planning layoffs.",
+                     "false": "odds, could, should you buy."}},
+    "k_earn": {"type": "noul", "instructions": "Company earnings print or guidance?",
+        "criteria": {"true": "Marvell Q2 earnings: record revenue, raised guidance.",
+                     "false": "Earnings call highlights."}},
+    "k_rating": {"type": "noul", "instructions": "Named analyst upgrade, downgrade, or PT?",
+        "criteria": {"true": "HSBC downgraded Netflix to Hold.", "false": "Top analyst reports for AMD."}},
+    "k_print": {"type": "noul", "instructions": "Official print, FOMC, or named Fed officer?",
+        "criteria": {"true": "Fed cuts 25bp. Retail sales fall. Barr signals further hikes.",
+                     "false": "Markets figure out the Fed next move."}},
+    "k_dollar": {"type": "noul", "instructions": "Money amount AND a finished act?",
+        "criteria": {"true": "Raytheon Gets $20.7 Billion Contract.",
+                     "false": "US landlords face a $1.8 trillion debt wall."}},
+    "k_choke": {"type": "noul", "instructions": "New strait or sanctions verb?",
+        "criteria": {"true": "Trump denies Iran sanctions easing reports.",
+                     "false": "Tensions persist as tankers transit Hormuz."}},
+    "k_policy": {"type": "noul", "instructions": "State plus named policy object?",
+        "criteria": {"true": "California offers new tax credit for electric vehicles.",
+                     "false": "Trump slams Canada as trade war persists."}},
 }
 
 
@@ -313,9 +240,7 @@ def code_veto(title: str) -> str:
     if t.rstrip().endswith("?") and not hard:
         return "v_ask"
     for name, rx in VETO_RES:
-        if name == "v_ask":
-            continue
-        if rx is None:
+        if name == "v_ask" or rx is None:
             continue
         if rx.search(t):
             if hard and name in {"v_tape", "v_odds"}:
@@ -350,24 +275,7 @@ def decide(row: dict, answers: dict | None = None) -> dict:
     veto = code_veto(blob)
     if veto:
         return pack("drop", veto)
-
-    if answers:
-        keep_now = code_keep(title)
-        if keep_now not in HARD_KEEP:
-            for name, _rx in VETO_RES:
-                if _noul(answers, name) >= TRASH_NOUL:
-                    return pack("drop", name)
-
     keep = code_keep(title)
-    if answers:
-        for name, _rx in KEEP_RES:
-            if name == "k_dollar" and not (
-                _noul(answers, "k_done") >= KEEP_NOUL or DONE_RE.search(title)
-            ):
-                continue
-            if _noul(answers, name) >= KEEP_NOUL:
-                keep = keep or name
-
     if keep:
         return pack("keep", keep)
     return pack("drop", "no_keep_bit")
