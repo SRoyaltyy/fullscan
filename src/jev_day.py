@@ -155,8 +155,12 @@ def run_day_draw(*, day: str, stamp: str = "", write: bool = True,
     news_dir = root / "01_daily" / "news"
     ground = root / "00_grounding"
     day_rows, day_kind = load_day_rows(day, news_dir=news_dir)
+    from .jev_gate import api_key
+    key = api_key()
+    live = bool(key)
     items, model = annotate_gate(
-        day_rows, live=False, key="", workers=1, poster=None, asof=now.date(),
+        day_rows, live=live, key=key or "", workers=16 if live else 1,
+        poster=None, asof=now.date(),
     )
     items = collapse_dupes(items)
     directory = train_dir(ground)
@@ -172,7 +176,7 @@ def run_day_draw(*, day: str, stamp: str = "", write: bool = True,
         "day": day,
         "day_kind": day_kind,
         "day_n": len(day_rows),
-        "gate": "hop0-code-bits",
+        "gate": "hop0-bits+jev" if live else "hop0-code-bits",
         "sample": {
             "parsed": len(day_rows) if day_kind == "parsed" else 0,
             "rss": 0,

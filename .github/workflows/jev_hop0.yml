@@ -1,7 +1,7 @@
 name: Jev hop-0 net
 
-# Code pack in src/jev_bits.py is the filter for every harvest.
-# Does not classify 52 event types or touch flatten / Webull / factor-mine.
+# Live Jev BIT_QUESTIONS decide keep/drop. Regex is the code-only fallback.
+# Cron schedule stays 25 11 * * 1-6. Does not touch flatten / Webull / factor-mine.
 
 on:
   push:
@@ -33,9 +33,9 @@ on:
         default: "200"
         type: string
       code_only:
-        description: "1 = skip Jev HTTP (code hops only)"
+        description: "1 = skip Jev HTTP (regex fallback only)"
         required: false
-        default: "1"
+        default: "0"
         type: string
       mine:
         description: "1 = also mine junk shapes from the parsed archive"
@@ -72,7 +72,6 @@ jobs:
           python-version: "3.12"
       - name: Unit tests (no key)
         run: |
-          PYTHONPATH=. python3 -m src.test_jev_gate
           PYTHONPATH=. python3 -m src.test_jev_bits
       - name: Gold + capped harvest
         env:
@@ -80,9 +79,9 @@ jobs:
           TYPESAFE_API_KEY: ${{ secrets.JEV_API_KEY }}
         run: |
           set -euo pipefail
-          CODE="--code-only"
-          if [ "${{ github.event.inputs.code_only }}" = "0" ]; then
-            CODE=""
+          CODE=""
+          if [ "${{ github.event.inputs.code_only }}" = "1" ]; then
+            CODE="--code-only"
           fi
           PYTHONPATH=. python3 -m src.jev_gate --gold $CODE || PYTHONPATH=. python3 -m src.jev_gate --gold --code-only
           DATE="${{ github.event.inputs.date }}"

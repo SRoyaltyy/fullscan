@@ -3,7 +3,8 @@ name: Jev train
 # Homework for the hop-0 gate. workflow_dispatch only.
 # No schedule. The weekday harvest workflow stays as it is.
 # The page has no API key. JEV_API_KEY is read here, on mixed draw only.
-# A day draw is code-first (no live Jev). Chips read 01_daily/news on the page.
+# A day draw asks live Jev when the secret is present; else regex fallback.
+# Chips read 01_daily/news on the page.
 # Grades commit to main, which is the branch Deploy dashboard checks out.
 # [skip ci] keeps that commit from waking the trading workflows.
 # The page reads draw.json from raw main, so it does not need a Pages rebuild.

@@ -33,7 +33,7 @@ from collections import Counter, defaultdict
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from email.utils import parsedate_to_datetime
 from pathlib import Path
-from .jev_bits import BIT_QUESTIONS, decide as bits_decide
+from .jev_bits import BIT_QUESTIONS, cheap_veto, decide as bits_decide
 
 ROOT = Path(__file__).resolve().parent.parent
 NEWS_DIR = ROOT / "01_daily" / "news"
@@ -1066,14 +1066,17 @@ def gate(rows: list[dict], *, code_only: bool = False, live: bool = False,
     rows = dedup_rows(list(rows), session_day=asof.isoformat())
     rows = apply_code(rows, asof=asof, state=state)
 
-    leftovers = [r for r in rows if not r.get("code_reason")]
     answers_by_id: dict[str, dict] = gold_answers or {}
+    need_jev = [
+        r for r in rows
+        if not cheap_veto(f"{r.get('title') or ''} {r.get('source') or ''}")
+    ]
 
-    if live and not code_only and leftovers:
+    if live and not code_only and need_jev:
         key = key or api_key()
         if not key:
             raise RuntimeError("JEV_API_KEY / TYPESAFE_API_KEY is empty")
-        for row, answers, model in jev_many(leftovers, key, workers, poster):
+        for row, answers, model in jev_many(need_jev, key, workers, poster):
             row["_jev_model"] = model
             if answers is None:
                 row["code_reason"] = "jev_error"
@@ -1081,14 +1084,13 @@ def gate(rows: list[dict], *, code_only: bool = False, live: bool = False,
             else:
                 row["_answers"] = answers
     else:
-        for row in leftovers:
+        for row in need_jev:
             rid = str(row.get("id") or "")
             if code_only:
                 row["_answers"] = None
             elif rid and rid in answers_by_id:
                 row["_answers"] = answers_by_id[rid]
             else:
-                # dry gold path uses per-row answers already attached
                 row["_answers"] = row.get("answers") or answers_by_id.get(rid)
 
     decided = []
