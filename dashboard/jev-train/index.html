@@ -53,7 +53,7 @@
 <body>
 <div class="wrap">
  <h1>Jev train</h1>
- <p class="sub">Grade hop-0 like homework. K keep, D drop, ? skip. A one-line reason sits next to those marks. Submit stays off until 30 rows are K or D. Mixed draw stays available. Train by day loads that calendar day's parse (parsed, else digest, else judge titles), not a mixed RSS sample. Empty reasons on rows where you disagree with Jev are flagged.</p>
+ <p class="sub">Grade hop-0 like homework. K keep, D drop, ? skip. Mixed draw stays available. Train by day loads that calendar day's parse (parsed, else digest, else judge titles). Submit needs 30 K/D marks.</p>
  <div class="bar">
   <button type="button" id="newDraw">New draw</button>
   <button type="button" id="reload">Reload draw</button>
@@ -69,7 +69,7 @@
   <p>Paste this to Grok to discuss.</p>
   <a id="issueUrl" href="" target="_blank" rel="noopener"></a>
  </div>
- <div class="empty" id="empty">No draw yet. New draw asks GitHub to run the hop-0 gate and write draw.json on main. Load that day grades one parse date instead.</div>
+ <div class="empty" id="empty">No draw yet. New draw is the mixed sample. Load that day grades one parse date.</div>
  <div style="overflow-x:auto">
   <table id="sheet" hidden>
    <thead>
@@ -92,5 +92,6 @@
  <button type="button" id="download">Download grades JSON</button>
 </div>
 <script src="app.js"></script>
+<script src="day.js"></script>
 </body>
 </html>
