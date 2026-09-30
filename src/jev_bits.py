@@ -1,7 +1,6 @@
 """Short veto/keep bits for Jev hop-0.
 
-Jev only sees one line per question plus a true/false example.
-Vetoes win. A keep bit cannot override a veto.
+Vetoes are trash only. Deals, prints, ratings, settlements keep.
 """
 from __future__ import annotations
 
@@ -18,11 +17,26 @@ SOURCE_DENY = re.compile(
 
 DONE_RE = re.compile(
     r"(?i)\b(?:holds?|held|agrees?|agreed|rejects?|rejected|"
-    r"ended|recalled|identifies|filed|files to|acquires?|"
+    r"ended|recalled|identifies|filed|files?|acquires?|acquisition|"
     r"priced|launched|verdict|cut tariffs|tariff cuts?|"
     r"completes?|completed|approved|wins?|won|divests?|divested|"
     r"stockholders approve|positive opinion|now live|rollout|"
-    r"prime lending rate|trial data)\b"
+    r"prime lending rate|trial data|settles?|settled|settlement|"
+    r"closes? (?:the )?(?:acquisition|deal|purchase|merger)|"
+    r"closed (?:the )?(?:acquisition|deal|purchase|merger)|"
+    r"merger plan|credit facility|term loan)\b"
+)
+
+EARN_RE = re.compile(
+    r"(?i)\beps\b|beats estimates|misses estimates|non-gaap|"
+    r"quarterly results|q[1-4] 20\d{2}|raises? .{0,24}guidance|"
+    r"reaffirms? .{0,24}guidance|issues? .{0,24}guidance"
+)
+
+RATING_RE = re.compile(
+    r"(?i)price targets?|raises? (?:its )?price target|"
+    r"cuts? (?:its )?price target|upgrades? to|downgrades? to|"
+    r"initiates .{0,24}with (?:buy|sell|hold|overweight|underweight)"
 )
 
 DOLLAR_RE = re.compile(
@@ -36,7 +50,7 @@ VETO_RES: list[tuple[str, re.Pattern | None]] = [
             r"(?i)should you buy|better stock to buy|is it a buy|"
             r"where will .{0,48} be|prediction:|i'd still buy|"
             r"top dividend stocks|stocks to buy and hold|"
-            r"could it set you up"
+            r"could it set you up|top (?:research|analyst|stock) reports"
         ),
     ),
     ("v_quote", re.compile(r"(?i)stock price,\s*news,\s*quote")),
@@ -59,21 +73,8 @@ VETO_RES: list[tuple[str, re.Pattern | None]] = [
         "v_tape",
         re.compile(
             r"(?i)stocks? rise as|gold ends week|impacts your wallet|"
-            r"sinking even though|on track for weekly|how the latest .{0,24} impacts"
-        ),
-    ),
-    (
-        "v_pt",
-        re.compile(
-            r"(?i)price targets?|raises? (?:its )?price target|"
-            r"cuts? (?:its )?price target|upgrades? to|downgrades? to"
-        ),
-    ),
-    (
-        "v_earnings",
-        re.compile(
-            r"(?i)\beps\b|beats estimates|misses estimates|"
-            r"non-gaap|quarterly results|q[1-4] 20\d{2}"
+            r"sinking even though|on track for weekly|how the latest .{0,24} impacts|"
+            r"stock outperforms competitors|jumps to close at record"
         ),
     ),
     ("v_ask", None),
@@ -82,13 +83,15 @@ VETO_RES: list[tuple[str, re.Pattern | None]] = [
         re.compile(
             r"(?i)puppy|patio stuff|el charro|football star shot|"
             r"richest people in america|polar bear cub|"
-            r"heartbreaking update"
+            r"heartbreaking update|dividend analysis"
         ),
     ),
 ]
 
 KEEP_RES: list[tuple[str, re.Pattern]] = [
     ("k_done", DONE_RE),
+    ("k_earn", EARN_RE),
+    ("k_rating", RATING_RE),
     (
         "k_print",
         re.compile(
@@ -124,8 +127,8 @@ BIT_QUESTIONS: dict = {
         "type": "noul",
         "instructions": "Tip sheet pick?",
         "criteria": {
-            "true": "Should You Buy Palantir. Better stock to buy.",
-            "false": "Apple hit with $5.7 billion verdict.",
+            "true": "Should You Buy Palantir. Top research reports for AMD.",
+            "false": "AMETEK completes $5.0 billion acquisition.",
         },
     },
     "v_quote": {
@@ -149,7 +152,7 @@ BIT_QUESTIONS: dict = {
         "instructions": "Odds or forecast only?",
         "criteria": {
             "true": "Fed October Rate Hike Odds Exceed 60%.",
-            "false": "Fed holds interest rates steady.",
+            "false": "JPMorgan upgrades America Movil to Overweight.",
         },
     },
     "v_tape": {
@@ -157,23 +160,7 @@ BIT_QUESTIONS: dict = {
         "instructions": "Already-moved tape or wallet recap?",
         "criteria": {
             "true": "U.S. stocks rise as Fed signals hikes.",
-            "false": "Trump rejects Iran proposal to reopen Hormuz.",
-        },
-    },
-    "v_pt": {
-        "type": "noul",
-        "instructions": "Analyst price target or rating change only?",
-        "criteria": {
-            "true": "JPMorgan upgrades America Movil and raises PT to $32.",
-            "false": "AMETEK completes $5.0 billion acquisition of Indicor.",
-        },
-    },
-    "v_earnings": {
-        "type": "noul",
-        "instructions": "Earnings print or estimate beat/miss?",
-        "criteria": {
-            "true": "Cenovus Q2 2026 non-GAAP EPS $1.08 misses estimates.",
-            "false": "Amgen gets FDA approval to update IMDELLTRA label.",
+            "false": "GE Vernova settles over $300 million Vineyard Wind dispute.",
         },
     },
     "v_ask": {
@@ -181,23 +168,39 @@ BIT_QUESTIONS: dict = {
         "instructions": "Question column?",
         "criteria": {
             "true": "Is AI really fueling inflation?",
-            "false": "China, U.S. agree to tariff cuts on $30 billion in goods.",
+            "false": "Cenovus Q2 EPS $1.08 misses estimates.",
         },
     },
     "v_fluff": {
         "type": "noul",
         "instructions": "Not a market act?",
         "criteria": {
-            "true": "Golden retriever puppy looks like a polar bear.",
-            "false": "Buckhead tuna recalled across 5 states.",
+            "true": "South32 Ltd's Dividend Analysis.",
+            "false": "Arthur J. Gallagher acquires Innovise.",
         },
     },
     "k_done": {
         "type": "noul",
-        "instructions": "Finished act verb?",
+        "instructions": "Deal, settlement, or finished act?",
         "criteria": {
-            "true": "completes, approved, wins, divests, stockholders approve, now live.",
-            "false": "odds, could, price target, EPS beat.",
+            "true": "acquires, completes acquisition, settles $300 million, closes $4B deal.",
+            "false": "odds, could, should you buy.",
+        },
+    },
+    "k_earn": {
+        "type": "noul",
+        "instructions": "Company earnings print or guidance?",
+        "criteria": {
+            "true": "Cenovus Q2 EPS $1.08 misses estimates. Salesforce issues FY27 guidance.",
+            "false": "Should you buy the dip after earnings?",
+        },
+    },
+    "k_rating": {
+        "type": "noul",
+        "instructions": "Named analyst upgrade, downgrade, or price target?",
+        "criteria": {
+            "true": "JPMorgan upgrades America Movil and raises PT to $32.",
+            "false": "Top analyst reports for AMD, Linde and Amgen.",
         },
     },
     "k_print": {
@@ -213,7 +216,7 @@ BIT_QUESTIONS: dict = {
         "instructions": "Money amount AND a finished act verb?",
         "criteria": {
             "true": "AMETEK completes $5.0 billion acquisition.",
-            "false": "Gold ends week lower at $4,285. EPS $1.08 misses.",
+            "false": "Gold ends week lower at $4,285.",
         },
     },
     "k_choke": {
@@ -262,8 +265,12 @@ def code_keep(title: str) -> str:
     t = title or ""
     if DONE_RE.search(t):
         return "k_done"
+    if EARN_RE.search(t):
+        return "k_earn"
+    if RATING_RE.search(t):
+        return "k_rating"
     for name, rx in KEEP_RES:
-        if name == "k_done":
+        if name in {"k_done", "k_earn", "k_rating"}:
             continue
         if name == "k_dollar":
             if rx.search(t) and DONE_RE.search(t):
@@ -275,7 +282,6 @@ def code_keep(title: str) -> str:
 
 
 def decide(row: dict, answers: dict | None = None) -> dict:
-    """Veto first. Keep only if a keep bit fires and no veto did."""
     title = row.get("title") or ""
     source = row.get("source") or ""
     blob = f"{title} {source}"
@@ -309,9 +315,10 @@ def decide(row: dict, answers: dict | None = None) -> dict:
 
     keep = code_keep(title)
     if answers:
-        done_yes = _noul(answers, "k_done") >= KEEP_NOUL or bool(DONE_RE.search(title))
         for name, _rx in KEEP_RES:
-            if name == "k_dollar" and not done_yes:
+            if name == "k_dollar" and not (
+                _noul(answers, "k_done") >= KEEP_NOUL or DONE_RE.search(title)
+            ):
                 continue
             if _noul(answers, name) >= KEEP_NOUL:
                 keep = keep or name
