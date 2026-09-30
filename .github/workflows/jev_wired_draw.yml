@@ -1,9 +1,9 @@
 name: Jev wired-path replay
 
 # Cloud agents cannot workflow_dispatch. Landing this file on main
-# replays the last trainer sheet through live BIT_QUESTIONS.
+# scores the unseen-100 six-bit stop test, then replays the last sheet.
 # No schedule. Mixed New draw stays on jev_train.yml (dispatch only).
-# POKE 2026-09-30-hard-fluff
+# POKE 2026-09-30-six-stop
 
 on:
   push:
@@ -42,7 +42,19 @@ jobs:
       - name: Unit tests (no key)
         run: |
           PYTHONPATH=. python3 -m src.test_jev_bits
+          PYTHONPATH=. python3 -m src.test_jev_sixbit_stop
           PYTHONPATH=. python3 -m src.test_jev_train
+
+      - name: Six-bit stop test (fresh unseen 100)
+        id: stop
+        continue-on-error: true
+        env:
+          JEV_API_KEY: ${{ secrets.JEV_API_KEY }}
+          TYPESAFE_API_KEY: ${{ secrets.JEV_API_KEY }}
+        run: |
+          set -euo pipefail
+          PYTHONPATH=. python3 -m src.jev_sixbit_stop --live \
+            | tee 00_grounding/jev_train/sixbit_stop.md
 
       - name: Replay last sheet through live BIT_QUESTIONS
         id: draw
