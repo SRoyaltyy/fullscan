@@ -1,15 +1,13 @@
 {
   "date": "2026-09-30",
-  "generated_at": "2026-09-30T05:40:47.008234-04:00",
+  "generated_at": "2026-09-30T05:41:35.949787-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
-  "blockers": [
-    "MISSING AB checklist enriched `data/ab_checklist/2026-09-30_ab_checklist_enriched.csv` \u2014 missing"
-  ],
+  "blockers": [],
   "counts": {
-    "ok": 4,
-    "partial": 3,
-    "fail": 1,
+    "ok": 6,
+    "partial": 2,
+    "fail": 0,
     "n": 8
   },
   "processes": [
@@ -96,12 +94,12 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 97081,
-          "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
+          "size": 97751,
+          "said": "5890 tickers \u00b7 2008 signals \u00b7 top AEM, AJG, AME, AMGN, AMX, AON, APH, APO",
           "bullets": [
-            "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
             "Agnico Eagle Shares Fall 4.9% as Gold Prices Decline",
-            "Banks have profited from idle cash for years. AI agents could change that."
+            "Banks have profited from idle cash for years. AI agents could change that.",
+            "AMETEK Completes Acquisition of Indicor Instrumentation"
           ]
         },
         {
@@ -111,10 +109,10 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 11893,
+          "size": 11887,
           "said": "Finviz Daily Digest \u2014 2026-09-30",
           "bullets": [
-            "_Generated 2026-09-30T05:40:32.094815-04:00 \u00b7 export=data/exports/finviz_2026-09-30.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_",
+            "_Generated 2026-09-30T04:20:44.615025-04:00 \u00b7 export=data/exports/finviz_2026-09-29.csv \u00b7 ticker digests=5890 \u00b7 high-signal=2008_",
             "Major indices (live quote page)"
           ]
         },
@@ -125,8 +123,8 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 6248,
-          "said": "US futures point to a modestly higher open as Treasury yields ease ahead of core PCE inflation and Q2 GDP data \u00b7 leaders GS, FDS, JBL, CAG \u00b7 good",
+          "size": 4532,
+          "said": "US stocks set to open higher as futures gain ahead of ADP jobs report, GDP update and core PCE inflation data \u00b7 leaders JBL, FDS, CAG, CALM \u00b7 good",
           "bullets": []
         },
         {
@@ -136,10 +134,10 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 2915,
+          "size": 2170,
           "said": "Finviz homepage market digest \u2014 2026-09-30",
           "bullets": [
-            "Generated:** 2026-09-30T05:40:46.583321-04:00 (America/New_York)",
+            "Generated:** 2026-09-30T04:20:52.325544-04:00 (America/New_York)",
             "Source:** `live`"
           ]
         },
@@ -166,11 +164,11 @@
           "bullets": []
         }
       ],
-      "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
+      "said": "5890 tickers \u00b7 2008 signals \u00b7 top AEM, AJG, AME, AMGN, AMX, AON, APH, APO",
       "bullets": [
-        "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
         "Agnico Eagle Shares Fall 4.9% as Gold Prices Decline",
-        "Banks have profited from idle cash for years. AI agents could change that."
+        "Banks have profited from idle cash for years. AI agents could change that.",
+        "AMETEK Completes Acquisition of Indicor Instrumentation"
       ]
     },
     {
@@ -191,12 +189,12 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 97081,
-          "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
+          "size": 97751,
+          "said": "5890 tickers \u00b7 2008 signals \u00b7 top AEM, AJG, AME, AMGN, AMX, AON, APH, APO",
           "bullets": [
-            "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
             "Agnico Eagle Shares Fall 4.9% as Gold Prices Decline",
-            "Banks have profited from idle cash for years. AI agents could change that."
+            "Banks have profited from idle cash for years. AI agents could change that.",
+            "AMETEK Completes Acquisition of Indicor Instrumentation"
           ]
         },
         {
@@ -206,8 +204,8 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 6248,
-          "said": "US futures point to a modestly higher open as Treasury yields ease ahead of core PCE inflation and Q2 GDP data \u00b7 leaders GS, FDS, JBL, CAG \u00b7 good",
+          "size": 4532,
+          "said": "US stocks set to open higher as futures gain ahead of ADP jobs report, GDP update and core PCE inflation data \u00b7 leaders JBL, FDS, CAG, CALM \u00b7 good",
           "bullets": []
         },
         {
@@ -361,11 +359,11 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 7529,
-          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 12 fail",
+          "size": 7532,
+          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 13 fail",
           "bullets": [
             "finviz_market_digest:missing",
-            "sector_predict:missing",
+            "map_heat_research:missing",
             "sector_predict:missing",
             "sector_predict:missing"
           ]
@@ -388,7 +386,7 @@
           "role": "required",
           "status": "OK",
           "reason": "ok=False Grok returned an empty review",
-          "size": 309,
+          "size": 308,
           "said": "ok=False \u00b7 empty_review_reply (review)",
           "bullets": [
             "Grok returned an empty review"
@@ -548,12 +546,12 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 97081,
-          "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
+          "size": 97751,
+          "said": "5890 tickers \u00b7 2008 signals \u00b7 top AEM, AJG, AME, AMGN, AMX, AON, APH, APO",
           "bullets": [
-            "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
             "Agnico Eagle Shares Fall 4.9% as Gold Prices Decline",
-            "Banks have profited from idle cash for years. AI agents could change that."
+            "Banks have profited from idle cash for years. AI agents could change that.",
+            "AMETEK Completes Acquisition of Indicor Instrumentation"
           ]
         },
         {
@@ -562,30 +560,30 @@
           "path": "01_daily/weather/2026-09-30_weather.json",
           "role": "required",
           "status": "OK",
-          "reason": "sectors=11 bytes=9712 vix=falling yields=rising",
-          "size": 9712,
+          "reason": "sectors=11 bytes=9736 vix=falling yields=rising",
+          "size": 9736,
           "said": "favorable 1 \u00b7 hostile 8 \u00b7 neutral 2",
           "bullets": [
             "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Real Estate, Technology, Utilities",
-            "events bull 3 / bear 2"
+            "events bull 4 / bear 1"
           ]
         }
       ],
       "said": "favorable 1 \u00b7 hostile 8 \u00b7 neutral 2",
       "bullets": [
         "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Real Estate, Technology, Utilities",
-        "events bull 3 / bear 2"
+        "events bull 4 / bear 1"
       ]
     },
     {
       "key": "ab",
       "name": "AB checklist",
       "yaml": "ab_checklist.yml",
-      "status": "FAIL",
+      "status": "OK",
       "inputs_ready": true,
-      "n_req_ok": 0,
+      "n_req_ok": 1,
       "n_req": 1,
-      "n_opt_ok": 0,
+      "n_opt_ok": 1,
       "n_opt": 1,
       "files": [
         {
@@ -593,26 +591,32 @@
           "name": "AB checklist raw",
           "path": "data/ab_checklist/2026-09-30_ab_checklist.csv",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "rows=2629",
+          "size": 7544304,
+          "said": "28 rows",
+          "bullets": [
+            "GMAB, FPI, KBR, PBR-A, ATRC, AVPT, SFL, BNL"
+          ]
         },
         {
           "key": "ab_enriched",
           "name": "AB checklist enriched",
           "path": "data/ab_checklist/2026-09-30_ab_checklist_enriched.csv",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "rows=2629",
+          "size": 8335042,
+          "said": "25 rows",
+          "bullets": [
+            "ATRC, FIGS, WST, LLY, CVLT, FPI, PANW, BJ"
+          ]
         }
       ],
-      "said": "",
-      "bullets": []
+      "said": "25 rows",
+      "bullets": [
+        "ATRC, FIGS, WST, LLY, CVLT"
+      ]
     },
     {
       "key": "catalyst",
@@ -648,12 +652,12 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 97081,
-          "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
+          "size": 97751,
+          "said": "5890 tickers \u00b7 2008 signals \u00b7 top AEM, AJG, AME, AMGN, AMX, AON, APH, APO",
           "bullets": [
-            "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
             "Agnico Eagle Shares Fall 4.9% as Gold Prices Decline",
-            "Banks have profited from idle cash for years. AI agents could change that."
+            "Banks have profited from idle cash for years. AI agents could change that.",
+            "AMETEK Completes Acquisition of Indicor Instrumentation"
           ]
         },
         {
@@ -684,11 +688,11 @@
       "key": "stock_book",
       "name": "Stock Book ALL",
       "yaml": "stock_book_all.yml",
-      "status": "PARTIAL",
-      "inputs_ready": false,
-      "n_req_ok": 2,
+      "status": "OK",
+      "inputs_ready": true,
+      "n_req_ok": 4,
       "n_req": 4,
-      "n_opt_ok": 2,
+      "n_opt_ok": 3,
       "n_opt": 3,
       "files": [
         {
@@ -746,12 +750,12 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 97081,
-          "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
+          "size": 97751,
+          "said": "5890 tickers \u00b7 2008 signals \u00b7 top AEM, AJG, AME, AMGN, AMX, AON, APH, APO",
           "bullets": [
-            "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
             "Agnico Eagle Shares Fall 4.9% as Gold Prices Decline",
-            "Banks have profited from idle cash for years. AI agents could change that."
+            "Banks have profited from idle cash for years. AI agents could change that.",
+            "AMETEK Completes Acquisition of Indicor Instrumentation"
           ]
         },
         {
@@ -775,12 +779,12 @@
           "path": "01_daily/weather/2026-09-30_weather.json",
           "role": "input",
           "status": "OK",
-          "reason": "sectors=11 bytes=9712 vix=falling yields=rising",
-          "size": 9712,
+          "reason": "sectors=11 bytes=9736 vix=falling yields=rising",
+          "size": 9736,
           "said": "favorable 1 \u00b7 hostile 8 \u00b7 neutral 2",
           "bullets": [
             "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Real Estate, Technology, Utilities",
-            "events bull 3 / bear 2"
+            "events bull 4 / bear 1"
           ]
         },
         {
@@ -788,11 +792,13 @@
           "name": "AB checklist enriched",
           "path": "data/ab_checklist/2026-09-30_ab_checklist_enriched.csv",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "rows=2629",
+          "size": 8335042,
+          "said": "25 rows",
+          "bullets": [
+            "ATRC, FIGS, WST, LLY, CVLT, FPI, PANW, BJ"
+          ]
         },
         {
           "key": "join",
@@ -801,7 +807,7 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=5903",
-          "size": 2280317,
+          "size": 2282458,
           "said": "204 rows",
           "bullets": [
             "FIX, ASC, NVT, GTES, SBLK, MATX, EMBJ, ELMT"
@@ -825,10 +831,10 @@
           "name": "Stock book JSON",
           "path": "data/stock_book/2026-09-30_stock_book.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "horizons=5 names=200",
+          "size": 1452544,
+          "said": "1d BUY SN, MHK, FIGS, CAKE, AVPT, IT, CORT, CDNA \u00b7 SELL RBLX, BIDU, SOC, GH, CMTG, BAK \u00b7 0.49299999999999994",
           "bullets": []
         },
         {
@@ -836,21 +842,24 @@
           "name": "Stock book MD",
           "path": "01_daily/2026-09-30_stock_book.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 76513,
+          "said": "Stock book \u2014 2026-09-30",
+          "bullets": [
+            "_Generated 2026-09-30T05:40:21.973664-04:00_",
+            "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
+          ]
         },
         {
           "key": "green",
           "name": "Green-pile JSON",
           "path": "data/stock_book/2026-09-30_green.json",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "",
+          "size": 2152,
+          "said": "130 green \u00b7 GTES, EMBJ, AAON, PWR, TRI, DLB, CNH, VVX, DY, CRS",
           "bullets": []
         },
         {
@@ -889,7 +898,7 @@
       "name": "Dashboard / .io",
       "yaml": "deploy-dashboard.yml",
       "status": "OK",
-      "inputs_ready": false,
+      "inputs_ready": true,
       "n_req_ok": 2,
       "n_req": 2,
       "n_opt_ok": 0,
@@ -900,10 +909,10 @@
           "name": "Stock book JSON",
           "path": "data/stock_book/2026-09-30_stock_book.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "horizons=5 names=200",
+          "size": 1452544,
+          "said": "1d BUY SN, MHK, FIGS, CAKE, AVPT, IT, CORT, CDNA \u00b7 SELL RBLX, BIDU, SOC, GH, CMTG, BAK \u00b7 0.49299999999999994",
           "bullets": []
         },
         {
@@ -1074,7 +1083,13 @@
         "score": -0.32214366930664723
       }
     ],
-    "flatten": {},
+    "flatten": {
+      "said": "0 priced buys \u00b7 cash $21,070.91",
+      "bullets": [
+        "0 priced buys",
+        "cash $21,070.91"
+      ]
+    },
     "general": {
       "said": "UP  2.009",
       "bullets": [
@@ -2224,6 +2239,52 @@
         }
       ],
       "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest \u2014 2026-09-30\n**Generated:** 2026-09-30T05:40:46.583321-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US futures point to a modestly higher open as Treasury yields ease ahead of core PCE inflation and Q2 GDP data\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** WTI crude $90.0\n**CPI/Fed:** 3.4% hold (hold around 3.4%)\n**Leaders:** GS, FDS, JBL, CAG\n**Next session:** housing no \u00b7 retail no \u00b7 Fed yes\n**Earnings slate:** \u2014\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-09-30\n**Clock use:** `same_morning`"
+    },
+    {
+      "key": "flatten",
+      "title": "Flatten live card",
+      "date": "2026-09-30",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-30T05:41:35.155141-04:00",
+      "files": [
+        {
+          "path": "01_daily/2026-09-30_flatten_card.md",
+          "ok": true,
+          "reason": "",
+          "size": 3412,
+          "preview": "# flatten_robust card \u2014 2026-09-30\n_Generated 2026-09-30T09:41:34 \u2014 live `flatten_robust`._\n**S=+2.01; no flatten (0 priced BUYs, prior book=yes); 16:00 refill robust:3d_size from leftover cash; skip names already held**\n- Score **+2.01** (UP) \u00b7 route **io**\n- Cash leftover **$21,070.91** (after 09:30 $661.57 \u00b7 after 16:00 $81,191.07)\n- Prior close **$101,731.18** \u00b7 09:30 **$101,731.18** \u00b7 overnight **$+0.00** \u00b7 session **$-20,540.11** \u00b7 16:00 **$81,191.07**\n- Overnight lots **5** \u00b7 priced mover BUYs **0** \u00b7 prior book yes\n- Planned buy cost **$20,409.34** \u2264 leftover after sells **$101,600.41**"
+        },
+        {
+          "path": "data/sleeve_merge/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 12104,
+          "preview": "2026-09-30 BUY \u2014 \u00b7 SELL \u2014"
+        },
+        {
+          "path": "data/sleeve_merge/daily_marks.json",
+          "ok": true,
+          "reason": "",
+          "size": 161757,
+          "preview": "[{\"date\": \"2026-08-13\", \"route\": \"io\", \"score\": 8.525, \"predict\": \"UP\", \"yday_equity\": 100000.0, \"open_cash\": 100000.0, \"open_held\": 0, \"open_equity\": 100000.0, \"overnight_delta\": 0.0, \"session_delta\": -169.94, \"equity\": 99830.06, \"cash\": 9917.52, \"overnight_names\": \"\", \"overnight\": [], \"marks\": [{\"ticker\": \"BTSG\", \"sleeve\": \"io_core\", \"shares_open\": 0, \"shares_close\": 166, \"shares\": 166, \"side\": \"BUY\", \"yday_px\": null, \"open_px\": 59.8, \"close_px\": 60.23, \"entry_px\": 60.23, \"entry_date\": \"2026-08-13\", \"overnight\": 0.0, \"session\": 71.38, \"day\": 71.38, \"pct_overnight\": null, \"pct_session\": 0.719, \"held\": \"bought\"}, {\"ticker\": \"IREN\", \"sleeve\": \"io_core\", \"shares_open\": 0, \"shares_close\": 223, \"shares\": 223, \"side\": \"BUY\", \"yday_px\": null, \"open_px\": 45.98, \"close_px\": 44.76, \"entry_px\": 44.76, \"entry_date\": \"2026-08-13\", \"overnight\": 0.0, \"session\": -272.06, \"day\": -272.06, \"pct_overnight\""
+        },
+        {
+          "path": "data/sleeve_merge/equity_curve.csv",
+          "ok": true,
+          "reason": "",
+          "size": 4033,
+          "preview": "25 rows \u00b7 date,equity,cash,core_n,tac_io_n,tac_n,core_mv,tac_mv,route,score,predict,open_held,open_cash,open_equity,yday_equity,ov \u00b7 2026-08-13, 2026-08-14, 2026-08-17, 2026-08-18, 2026-08-19"
+        },
+        {
+          "path": "dashboard/sleeve-merge/index.html",
+          "ok": true,
+          "reason": "",
+          "size": 54761,
+          "preview": "<!doctype html>\n<html><head><meta charset=\"utf-8\">\n<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n<title>Combined sleeve \u2014 .io \u00d7 mover</title>\n<style>\n:root{--bg:#0b1020;--card:#131b31;--line:#2b3552;--text:#edf2ff;--muted:#9cabc9}\n*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:15px/1.45 system-ui}\nmain{max-width:1240px;margin:auto;padding:16px}h1,h2{margin:.4em 0}\n.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin:14px 0}\n.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px}\n.card b{display:block;font-size:22px;margin-top:4px}\n.muted{color:var(--muted)}a{color:#93c5fd}\n.sheet{overflow-x:auto;border:1px solid var(--line);border-radius:12px;margin:14px 0}\ntable{border-collapse:separate;border-spacing:0;width:100%;background:var(--card)}\nth,td{padding:7px 8"
+        }
+      ],
+      "preview": "# flatten_robust card \u2014 2026-09-30\n_Generated 2026-09-30T09:41:34 \u2014 live `flatten_robust`._\n**S=+2.01; no flatten (0 priced BUYs, prior book=yes); 16:00 refill robust:3d_size from leftover cash; skip names already held**\n- Score **+2.01** (UP) \u00b7 route **io**\n- Cash leftover **$21,070.91** (after 09:30 $661.57 \u00b7 after 16:00 $81,191.07)\n- Prior close **$101,731.18** \u00b7 09:30 **$101,731.18** \u00b7 overnight **$+0.00** \u00b7 session **$-20,540.11** \u00b7 16:00 **$81,191.07**\n- Overnight lots **5** \u00b7 priced mover BUYs **0** \u00b7 prior book yes\n- Planned buy cost **$20,409.34** \u2264 leftover after sells **$101,600.41** \u00b7 2026-09-30 BUY \u2014 \u00b7 SELL \u2014 \u00b7 [{\"date\": \"2026-08-13\", \"route\": \"io\", \"score\": 8.525, \"predict\": \"UP\", \"yday_equity\": 100000.0, \"open_cash\": 100000.0, \"open_held\": 0, \"open_equity\": 100000.0, \"overnight_delta\": 0.0, \"session_delta\": -169.94, \"equity\": 99830.06, \"cash\": 9917.52, \"overnight_names\": \"\", \"overnight\": [], \"marks\": [{\"ticker\": \"BTSG\", \"sleeve\": \"io_core\", \"shares_open\": 0, \"shares_close\": 166, \"shares\": 166, \"side\": \"BUY\", \"yday_px\": null, \"open_px\": 59.8, \"close_px\": 60.23, \"entry_px\": 60.23, \"entry_date\": \"2026-08-13\", \"overnight\": 0.0, \"session\": 71.38, \"day\": 71.38, \"pct_overni"
     }
   ],
   "href": {
