@@ -1,6 +1,6 @@
 ---
 status: living_policy
-updated: 2026-09-29
+updated: 2026-09-30
 source: src/learn_cycle.py
 covers: general, sectors, news
 note: Injected into general + sector PREDICT. Core output formats unchanged.
@@ -9,7 +9,7 @@ see_also: 03_scoreboard/LEARNINGS.md
 
 # Mutable policy (all workflows)
 
-Last learn_cycle: **2026-09-29**. Promoted: 0. Retired: 10. Active lessons: 193. Human digest: `03_scoreboard/LEARNINGS.md`.
+Last learn_cycle: **2026-09-30**. Promoted: 1. Retired: 10. Active lessons: 204. Human digest: `03_scoreboard/LEARNINGS.md`.
 
 ## Accuracy by topic (graded window)
 
@@ -48,6 +48,13 @@ Last change: hold
 
 ## Active adjustments (newest promoted lessons, truncated)
 
+### a-scheduled-us-cash-session-where-a-valid-premarket-predicti.md
+## RULE
+Before finalizing any ops_fail=True grade, the grader MUST scan the run packet for a valid SCORES_BEGIN block. If one exists, do NOT mark ops_fail — instead flag a timing/path mismatch to the ops log, attempt to pair the artifact to the session, and grade against it. Only mark ops_fail=True when no valid SCORES_BEGIN block exists anywhere in the packet. This is a grader-boundary check, not a generation check.
+
+## WHEN IT FIRES
+A scheduled US cash session where a valid premarket predictio …
+
 ### all-zero-leading-s0-s4-on-a-t-1-digestion-session-where-es-a.md
 ## RULE
 When leading_sum=0 and both ES and NQ are inside ±0.5% vs prior close with no 09-21-style cross-asset confirmation, suppress tape_anchor and index_carry from flipping the official call off the unsigned factor-card band (flat). Apply symmetrically to leftover-green and leftover-red anchors. Do not write a new XLY prompt rule — enforce 09-16 in the engine.
@@ -73,6 +80,13 @@ A low-beta bond-proxy defensive (XLP-like) posts a net-negative leading S0–S4 
 ### a-low-beta-defensive-healthcare-etf-xlv-like-posts-a-net-non.md
 ## RULE
 No direction/band correction. Keep 09-11 S0 as the relative funding-source read; keep 08-13 as a ban on leftover-RS up/notable. Do not extend 09-16’s force-flat past an unprinted path-binary. When FOMC is paid and PM:XLV is already in the mild band (~+0.4%) on a confirmed NQ-led risk-on tape, official absolute may follow tape_anchor up/mild; relative is the S0 object. Do not rewrite S0 as a duration bid from same-session yield relief, and do not promote XBI/high-beta sleeve or single-nam …
+
+### a-cyclical-industrials-etf-xli-like-posts-an-all-zero-s0-s4.md
+## RULE
+No signed-call change. Keep flat/flat on an unsigned post-event industrials card. Do not promote the overnight ES gap into up, and do not promote the post-close relative lag into down — both were path, not pre-open factors. A ~0.2% faded-gap print that misses the flat/up direction threshold is banding noise, not a mandate to lift direction.
+
+## WHEN IT FIRES
+A cyclical industrials ETF (XLI-like) posts an all-zero S0–S4 card on the session AFTER a paid FOMC/SEP, with 1w/1m relative lag fo …
 
 ### a-sector-etf-posts-an-all-zero-or-net-zero-s0-s4-leading-car.md
 ## RULE
@@ -115,15 +129,7 @@ No correction required — this is a validated positive pattern. The three stack
 ## RULE
 When a defensive sector carries a multi-day relative lag (3d/1w rel negative) into a risk-on macro catalyst, score S0 at 0 to −0.3, not positive. Risk-on is a ROTATION signal: capital flows into high-beta/cyclical and OUT of defensives, so a defensive sector is a funding source, not a destination. Additionally: (a) do not score S2/S3/S4 at 0.0 when the rotation-out flow is intact — a lower-high tape (two small positive rel prints then a fade) is distribution, not a base; (b) require a po …
 
-### a-rate-sensitive-bond-proxy-sector-xlre-xlu-xlp-enters-a-ses.md
-## RULE
-When S0 is genuinely 0 (mixed macro) and the live, knowable-at-open tape is positive (green futures ≥ +0.5%, oil offered, live curve flat-to-easing), a down call requires a LIVE negative input. A stale multi-horizon relative lag (1w/1m) is a structural descriptor, not a same-day tape signal — it must not be scored into S2 or S4. The absence of a positive cushion (09-08 override not firing) is NOT the presence of a negative signal; "no cushion ≠ headwind." If the only negatives are stale …
-
-### a-scheduled-high-impact-macro-binary-cpi-nfp-fomc-is-pending.md
-## RULE
-When the dominant binary is a scheduled macro release and the sector is a defensive bond-proxy, test the sign of EACH branch against the sector's factor exposure before calling it symmetric. If both branches are negative-to-neutral (in-line CPI → risk-on rotation away from defensives; hot CPI → rates up → bond-proxy down), score the asymmetry: S0 = −1 (not 0), raise S1 rotation-away from PARTIAL to full weight, weight the LIVE 1d/1m relative tape over stale 3d/1w positives in S2, raise S …
-
-_(+178 older active lessons not excerpted; each predict receives only its own topic's lessons via lesson_select)_
+_(+189 older active lessons not excerpted; each predict receives only its own topic's lessons via lesson_select)_
 
 ## Per-scope DO-INSTEAD
 
@@ -215,13 +221,13 @@ _(+178 older active lessons not excerpted; each predict receives only its own to
 
 ## Retired / falsified (efficacy-gated, automatic)
 
-- 2026-09-29: `a-fresh-top-holding-legal-regulatory-catalyst-e-g-a-trial-op.md` (sector:Communication Services) — topic hit 43% → 0% after activation; retired.
-- 2026-09-29: `a-defensive-bond-proxy-sector-utilities-faces-a-risk-off-tap.md` (sector:Utilities) — topic hit 57% → 14% after activation; retired.
-- 2026-09-29: `a-healthcare-xlv-call-with-s0-0-flat-mixed-es-nq-leftover-te.md` (sector:Healthcare) — topic hit 71% → 29% after activation; retired.
-- 2026-09-29: `a-live-macro-shock-oil-geopolitical-is-present-at-the-open-t.md` (sector:Consumer Cyclical) — topic hit 57% → 14% after activation; retired.
-- 2026-09-29: `a-long-duration-rate-sensitive-sector-reits-faces-a-live-rat.md` (sector:Real Estate) — topic hit 71% → 29% after activation; retired.
-- 2026-09-29: `a-single-macro-shock-oil-rates-is-scored-as-multiple-indepen.md` (sector:Consumer Cyclical) — topic hit 57% → 14% after activation; retired.
-- 2026-09-29: `a-technology-xlk-down-call-has-strongly-negative-leading-com.md` (sector:Technology) — topic hit 57% → 14% after activation; retired.
-- 2026-09-29: `sector-etf-prediction-where-the-prior-session-had-a-modest-p.md` (sector:Healthcare) — topic hit 71% → 29% after activation; retired.
-- 2026-09-29: `sector-prediction-emits-flat-flat-when-broad-market-tape-is.md` (sector:Healthcare) — topic hit 71% → 29% after activation; retired.
-- 2026-09-29: `a-cyclical-industrials-etf-xli-like-posts-an-all-zero-s0-s4.md` (sector:Industrials) — topic hit 71% → 33% after activation; retired.
+- 2026-09-30: `a-utilities-xlu-call-is-built-after-a-stretch-of-risk-on-gro.md` (sector:Utilities) — topic hit 80% → 14% after activation; retired.
+- 2026-09-30: `a-sector-call-has-a-scheduled-8-30-et-macro-release-pending.md` (sector:Financial) — topic hit 75% → 14% after activation; retired.
+- 2026-09-30: `in-a-utilities-xlu-call-a-second-soft-inflation-print-has-al.md` (sector:Utilities) — topic hit 75% → 14% after activation; retired.
+- 2026-09-30: `a-consumer-cyclical-down-call-is-driven-by-a-genuinely-negat.md` (sector:Consumer Cyclical) — topic hit 86% → 29% after activation; retired.
+- 2026-09-30: `a-mega-cap-duration-heavy-consumer-cyclical-etf-xly-like-amz.md` (sector:Consumer Cyclical) — topic hit 71% → 14% after activation; retired.
+- 2026-09-30: `when-the-pre-fetched-commodity-tape-conflicts-with-live-sour.md` (sector:Energy) — topic hit 71% → 14% after activation; retired.
+- 2026-09-30: `a-sector-call-has-a-decisively-negative-fundamental-spine-fr.md` (sector:Consumer Cyclical) — topic hit 83% → 29% after activation; retired.
+- 2026-09-30: `a-utility-defensive-sector-call-is-built-on-a-carried-defens.md` (sector:Utilities) — topic hit 67% → 14% after activation; retired.
+- 2026-09-30: `sector-prediction-made-when-the-sector-s-dominant-commodity.md` (sector:Energy) — topic hit 67% → 14% after activation; retired.
+- 2026-09-30: `a-sector-call-has-a-scheduled-8-30-et-high-impact-macro-rele.md` (sector:Financial) — topic hit 60% → 14% after activation; retired.
