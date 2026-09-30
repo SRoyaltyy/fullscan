@@ -237,12 +237,14 @@ BIT_QUESTIONS: dict = {
         ),
         "criteria": {
             "true": (
-                "Apple ordered to pay $5.7bn in haptic tech patent case. "
-                "Fed holds interest rates steady as inflation hits 3-year high."
+                "A court already ordered a pay, or a named firm already launched, "
+                "delivered a buyout, or pulled or delayed a listing or filing. "
+                "A rate was already held or cut, a reserve was tapped, or a "
+                "choke-point flow already dropped."
             ),
             "false": (
-                "Capita Flags CSPS Costs but Touts Contract Wins. "
-                "Crystal Jade holding companies in S’pore, Hong Kong placed under receivership."
+                "A firm touts contract wins or savings with no close. "
+                "A local receivership, or an old IPO price recap."
             ),
         },
     },
