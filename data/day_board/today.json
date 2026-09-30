@@ -1,16 +1,134 @@
 {
   "date": "2026-09-30",
-  "generated_at": "2026-09-30T05:38:23.366189-04:00",
+  "generated_at": "2026-09-30T05:39:51.820776-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
-    "ok": 4,
-    "partial": 4,
+    "ok": 6,
+    "partial": 2,
     "fail": 0,
     "n": 8
   },
-  "buy_1d": [],
-  "sell_1d": [],
+  "buy_1d": [
+    {
+      "ticker": "SN",
+      "score": 0.4075915074669561
+    },
+    {
+      "ticker": "MHK",
+      "score": 0.7694203860317406
+    },
+    {
+      "ticker": "FIGS",
+      "score": 0.7006328271818087
+    },
+    {
+      "ticker": "CAKE",
+      "score": 0.702926102878515
+    },
+    {
+      "ticker": "AVPT",
+      "score": 0.7498576632051368
+    },
+    {
+      "ticker": "IT",
+      "score": 0.49158274518004974
+    },
+    {
+      "ticker": "CORT",
+      "score": 0.2735845857622498
+    },
+    {
+      "ticker": "CDNA",
+      "score": 0.7207076437952746
+    },
+    {
+      "ticker": "ETON",
+      "score": 0.662121393867612
+    },
+    {
+      "ticker": "ADMA",
+      "score": 0.6602978916412126
+    },
+    {
+      "ticker": "RXO",
+      "score": 0.600940748946456
+    },
+    {
+      "ticker": "PAYS",
+      "score": 0.5766041533574494
+    },
+    {
+      "ticker": "QNST",
+      "score": 0.5507184913066006
+    },
+    {
+      "ticker": "RELY",
+      "score": 0.5648094626042475
+    }
+  ],
+  "sell_1d": [
+    {
+      "ticker": "RBLX",
+      "score": -0.40658606399833397
+    },
+    {
+      "ticker": "BIDU",
+      "score": -0.3784058918986275
+    },
+    {
+      "ticker": "SOC",
+      "score": -0.36685959384696903
+    },
+    {
+      "ticker": "GH",
+      "score": -0.3507471260110735
+    },
+    {
+      "ticker": "CMTG",
+      "score": -0.34721250537525694
+    },
+    {
+      "ticker": "BAK",
+      "score": -0.3454453076393602
+    },
+    {
+      "ticker": "GOGO",
+      "score": -0.33961911048893584
+    },
+    {
+      "ticker": "META",
+      "score": -0.33503239960827247
+    },
+    {
+      "ticker": "RC",
+      "score": -0.3337376121741831
+    },
+    {
+      "ticker": "LFMD",
+      "score": -0.3311765304015034
+    },
+    {
+      "ticker": "NRXP",
+      "score": -0.32890825450331485
+    },
+    {
+      "ticker": "VNET",
+      "score": -0.328500556719394
+    },
+    {
+      "ticker": "AIRS",
+      "score": -0.3283244799238284
+    },
+    {
+      "ticker": "ROIV",
+      "score": -0.32257714374752317
+    },
+    {
+      "ticker": "WVE",
+      "score": -0.32167366585912543
+    }
+  ],
   "flatten": {},
   "general": {
     "said": "UP  2.009",
@@ -41,24 +159,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "general_predict",
-      "title": "General market predict",
-      "date": "2026-09-30",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-30T04:46:47.824689-04:00",
-      "files": [
-        {
-          "path": "01_daily/general/2026-09-30_predict.md",
-          "ok": true,
-          "reason": "",
-          "size": 15785,
-          "preview": "# Premarket Prediction \u2014 2026-09-30\n- news_mode: **on**\n> ## \ud83d\udccb SNAPSHOT (human-readable)\n>\n> **Prediction: UP \ud83d\udcc8 \u2014 MILD** | total score 2.009 (uncertainty multiplier \u00d71.1) | confidence 0.58\n>\n> **Good news vs bad news:** good +1.5 pts vs bad -2.0 pts \u2192 bad news outweighs good\n>\n> **Good news driving this:**\n> - Asia composite +0.61%\n> - China PMI back above 50\n> - Brent offered\n> - Williams no Oct urgency\n> - DXY 1d soft\n>\n> **Bad news driving this:**\n> - 1w 10Y +28bp at 5.24\n> - 30Y multi-decade high\n> - Barr still hike-leaning\n> - leftover Hormuz\n> - PCE 8:30 unsigned\n>\n> **market uncertainty: **elevated** | VIX 15.92 | policy-uncertainty index 193.14 (1d -264.77)**\n>\n> **Factor scoreboard** (score \u00d7 weight = contribution):\n> - \ud83d\udfe2 Asia overnight session: +0.5 \u00d7 2.0 = +1.0\n> - \u26aa Europe session: +0.0 \u00d7 2.0 = +0.0\n> - \u26aa Overnight news & catalysts: +0.0 \u00d7 3.0 = +0.0\n> - \ud83d\udd34 Bond yields: -1.0 \u00d7"
-        }
-      ],
-      "preview": "# Premarket Prediction \u2014 2026-09-30\n- news_mode: **on**\n> ## \ud83d\udccb SNAPSHOT (human-readable)\n>\n> **Prediction: UP \ud83d\udcc8 \u2014 MILD** | total score 2.009 (uncertainty multiplier \u00d71.1) | confidence 0.58\n>\n> **Good news vs bad news:** good +1.5 pts vs bad -2.0 pts \u2192 bad news outweighs good\n>\n> **Good news driving this:**\n> - Asia composite +0.61%\n> - China PMI back above 50\n> - Brent offered\n> - Williams no Oct urgency\n> - DXY 1d soft\n>\n> **Bad news driving this:**\n> - 1w 10Y +28bp at 5.24\n> - 30Y multi-decade high\n> - Barr still hike-leaning\n> - leftover Hormuz\n> - PCE 8:30 unsigned\n>\n> **market uncertainty: **elevated** | VIX 15.92 | policy-uncertainty index 193.14 (1d -264.77)**\n>\n> **Factor scoreboard** (score \u00d7 weight = contribution):\n> - \ud83d\udfe2 Asia overnight session: +0.5 \u00d7 2.0 = +1.0\n> - \u26aa Europe session: +0.0 \u00d7 2.0 = +0.0\n> - \u26aa Overnight news & catalysts: +0.0 \u00d7 3.0 = +0.0\n> - \ud83d\udd34 Bond yields: -1.0 \u00d7"
-    },
     {
       "key": "sector_board",
       "title": "Sector board",
@@ -212,6 +312,59 @@
         }
       ],
       "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 GMAB, FPI, KBR, PBR-A, ATRC \u00b7 2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 ATRC, FIGS, WST, LLY, CVLT"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-09-30",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-30T05:39:47.116206-04:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-09-30_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1439301,
+          "preview": "1d BUY SN, MHK, FIGS, CAKE, AVPT, IT, CORT, CDNA \u00b7 SELL RBLX, BIDU, SOC, GH, CMTG, BAK, GOGO, META"
+        },
+        {
+          "path": "data/stock_book/2026-09-30_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 2140,
+          "preview": "green 129 \u00b7 GTES, EMBJ, AAON, PWR, TRI, DLB, CNH, VVX, DY, CRS"
+        },
+        {
+          "path": "data/stock_book/2026-09-30_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2454,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-09-30_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 13364,
+          "preview": "2026-09-30 BUY SN, MHK, FIGS, CAKE, AVPT, IT, CORT, CDNA \u00b7 SELL RBLX, BIDU, SOC, GH, CMTG, BAK, GOGO, META"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 13364,
+          "preview": "2026-09-30 BUY SN, MHK, FIGS, CAKE, AVPT, IT, CORT, CDNA \u00b7 SELL RBLX, BIDU, SOC, GH, CMTG, BAK, GOGO, META"
+        },
+        {
+          "path": "01_daily/2026-09-30_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 74448,
+          "preview": "# Stock book \u2014 2026-09-30\n_Generated 2026-09-30T05:38:49.478110-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY SN, MHK, FIGS, CAKE, AVPT, IT, CORT, CDNA \u00b7 SELL RBLX, BIDU, SOC, GH, CMTG, BAK, GOGO, META \u00b7 green 129 \u00b7 GTES, EMBJ, AAON, PWR, TRI, DLB, CNH, VVX, DY, CRS \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-09-30 BUY SN, MHK, FIGS, CAKE, AVPT, IT, CORT, CDNA \u00b7 SELL RBLX, BIDU, SOC, GH, CMTG, BAK, GOGO, META \u00b7 2026-09-30 BUY SN, MHK, FIGS, CAKE, AVPT, IT, CORT, CDNA \u00b7 SELL RBLX, BIDU, SOC, GH, CMTG, BAK, GOGO, META \u00b7 # Stock book \u2014 2026-09-30\n_Generated 2026-09-30T05:38:49.478110-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
