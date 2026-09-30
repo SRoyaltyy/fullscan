@@ -28,6 +28,7 @@ DONE_RE = re.compile(
     r"close us\$|merger plan|merger benefits|merger package|"
     r"credit facility|term loan|revolving credit|"
     r"sues?|sued|lawsuit|sells? \$\d|layoffs?|uplisting|"
+    r"gets? \$\d|billion contract|wins? .{0,32}contract|"
     r"raising .{0,24}\bipo\b|\bipo\b.{0,24}(?:raising|priced|pricing|debut)|"
     r"ipo debut|set to list|ipo pricing|pulls .{0,40}listing|withdraws .{0,40}(?:ipo|listing)|"
     r"aiming for .{0,40}\bipo\b|targets? .{0,40}\bipo\b|\$[\d,.]+ trillion ipo)\b"
@@ -62,8 +63,8 @@ PRINT_RE = re.compile(
     r"\bema\b|\bchmp\b|\bcafe\b|budget boost|chips act|"
     r"mis-selling|retail sales|inflation gauge posts|"
     r"strategic (?:petroleum |oil )?reserve|\bspr\b|"
-    r"(?:fed|federal reserve).{0,48}(?:says|sees|signals|backs|warns)|"
-    r"(?:says|sees|signals|backs|warns).{0,48}(?:fed|federal reserve)|"
+    r"(?:fed|federal reserve).{0,48}(?:says|see[s]?|signals|backs|warns)|"
+    r"(?:says|see[s]?|signals|backs|warns).{0,48}(?:fed|federal reserve)|"
     r"raised (?:its )?benchmark|federal reserve raised|fed raised|"
     r"(?:treasury|yield|30-year|10-year|cpi|pce|nfp|payrolls).{0,48}(?:highest|lowest).{0,24}since|"
     r"cyclospor|\d[\d,]* (?:suspected )?cases"
@@ -100,6 +101,7 @@ VETO_RES: list[tuple[str, re.Pattern | None]] = [
         re.compile(
             r"(?i)week ahead|all eyes on|what to watch|"
             r"markets brace|what to expect in markets|"
+            r"what it means|why this matters|"
             r"to report earnings today|before market open|watch live|"
             r"earnings call (?:highlights|transcript)"
         ),

@@ -1,11 +1,29 @@
-"""0808 sheet comments: only these keep holes, working vetoes stay."""
+"""0808 sheet comments plus the lock so later patches cannot unfix 0720."""
 from __future__ import annotations
 
+import json
+from pathlib import Path
+
 from .jev_bits import decide
+
+LOCK_PATH = Path(__file__).with_name("jev_bits_lock.json")
 
 
 def _d(title: str, source: str = "") -> dict:
     return decide({"title": title, "source": source}, None)
+
+
+def test_locked_titles_do_not_flip() -> None:
+    blob = json.loads(LOCK_PATH.read_text(encoding="utf-8"))
+    assert blob.get("schema") == "jev-bits-lock-1"
+    failed = []
+    for item in blob.get("items") or []:
+        title = item["title"]
+        expect = item["expect"]
+        got = _d(title)["decision"]
+        if got != expect:
+            failed.append(f"{item.get('lock')} want={expect} got={got} | {title[:90]}")
+    assert not failed, "bits regression:\n" + "\n".join(failed)
 
 
 def test_sheet_0808_commented_keeps() -> None:
@@ -53,7 +71,11 @@ def test_sheet_0808_stay_drop() -> None:
 
 
 def main() -> None:
-    tests = [test_sheet_0808_commented_keeps, test_sheet_0808_stay_drop]
+    tests = [
+        test_locked_titles_do_not_flip,
+        test_sheet_0808_commented_keeps,
+        test_sheet_0808_stay_drop,
+    ]
     failed = 0
     for fn in tests:
         try:
