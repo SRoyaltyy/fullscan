@@ -39,20 +39,39 @@ def test_six_frozen_questions() -> None:
 def test_formula_keep_is_done_or_print_without_vetoes() -> None:
     assert formula_reason(_ans(done=0.9)) == ("keep", "done")
     assert formula_reason(_ans(print=0.9)) == ("keep", "print")
+    assert formula_reason(_ans(spoke=0.9)) == ("keep", "spoke")
     assert formula_reason(_ans(done=0.9, print=0.9)) == ("keep", "print")
-    assert formula_reason(_ans(listed=0.95)) == ("drop", "no_keep_bit")
-    assert formula_reason(_ans(done=0.9, tape=0.9)) == ("drop", "tape")
-    assert formula_reason(_ans(print=0.9, soft=0.9)) == ("drop", "soft")
+    assert formula_reason(_ans(done=0.9, tape=0.9)) == ("keep", "done")
+    assert formula_reason(_ans(print=0.9, soft=0.9)) == ("keep", "print")
+    assert formula_reason(_ans(spoke=0.9, soft=0.9)) == ("keep", "spoke")
     assert formula_reason(_ans(print=0.9, tip=0.9)) == ("drop", "tip")
 
 
 def test_listed_alone_does_not_keep() -> None:
     got = _dj(
         "Bakery buys comedian's former sites after closure",
-        _ans(listed=0.92),
+        _ans(),
     )
     assert got["decision"] == "drop"
     assert got["reason"] == "no_keep_bit"
+
+
+def test_spoke_keeps_and_beats_soft() -> None:
+    got = _dj(
+        "New York Fed president sees no need to rush another rate hike",
+        _ans(spoke=0.88, soft=0.81),
+    )
+    assert got["decision"] == "keep"
+    assert got["reason"] == "spoke"
+
+
+def test_done_beats_tape_wrapper() -> None:
+    got = _dj(
+        "Oil Prices React as Trump Denies Easing Sanctions on Iran",
+        _ans(done=0.84, tape=0.90),
+    )
+    assert got["decision"] == "keep"
+    assert got["reason"] == "done"
 
 
 def test_locked_titles_do_not_flip() -> None:
@@ -144,7 +163,6 @@ def test_answers_do_not_fall_back_to_code_print() -> None:
 
 
 def test_jev_answers_keep_the_sheet_misses() -> None:
-    """Frontier-shaped six-bit answers keep the last-sheet false drops."""
     cases = [
         ("Nasdaq to Buy Dark Pool Stock Venue LeveL for Equity Trading", {"done": 0.92}),
         ("US July PPI Below Expectations as Producer Inflation Cools Significantly", {"print": 0.91}),
@@ -192,6 +210,8 @@ def test_gate_uses_posted_bit_answers() -> None:
     def poster(state, questions, key):
         assert "done" in questions
         assert "print" in questions
+        assert "spoke" in questions
+        assert "listed" not in questions
         assert len(questions) == 6
         assert "k_done" not in questions
         assert "event_class" not in questions
@@ -212,8 +232,6 @@ def test_gate_uses_posted_bit_answers() -> None:
 
 
 def test_gate_live_error_does_not_regex_keep() -> None:
-    """A failed live call is no_keep_bit, not PRINT_RE / POLICY_RE."""
-
     def poster(state, questions, key):
         raise RuntimeError("jev down")
 
@@ -243,6 +261,8 @@ def main() -> None:
         test_six_frozen_questions,
         test_formula_keep_is_done_or_print_without_vetoes,
         test_listed_alone_does_not_keep,
+        test_spoke_keeps_and_beats_soft,
+        test_done_beats_tape_wrapper,
         test_locked_titles_do_not_flip,
         test_sheet_0808_commented_keeps,
         test_sheet_0808_stay_drop,
