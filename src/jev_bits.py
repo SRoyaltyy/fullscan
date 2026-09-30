@@ -1,9 +1,4 @@
-"""Hop-0 for every harvest, every day. Not a one-draw patch.
-
-Veto tape/tips/live-coverage/geo-fluff.
-Keep prints, policy, deals, IPO pricing, earnings, ratings, Fed officers.
-Source-deny cannot kill a hard keep.
-Live Jev answers do not override this pack.
+"""Hop-0 for every harvest. Patterns, not a title list.
 """
 from __future__ import annotations
 
@@ -24,7 +19,7 @@ DONE_RE = re.compile(
     r"agrees?|agreed|rejects?|rejected|"
     r"ended|recalled|identifies|filed|files? to|filed to|"
     r"acquires?|acquisition|"
-    r"priced|launched|verdict|cut tariffs|tariff cuts?|"
+    r"priced|launched|court verdict|jury verdict|cut tariffs|tariff cuts?|"
     r"completes?|completed|approved|wins?|won|divests?|divested|"
     r"stockholders approve|positive opinion|now live|rollout|"
     r"prime lending rate|trial data|settles?|settled|settlement|"
@@ -33,14 +28,16 @@ DONE_RE = re.compile(
     r"close us\$|merger plan|merger benefits|merger package|"
     r"credit facility|term loan|revolving credit|"
     r"sues?|sued|lawsuit|sells? \$\d|layoffs?|uplisting|"
-    r"raising .{0,24}\bipo\b|\bipo\b.{0,24}(?:raising|priced|pricing)|"
-    r"set to list|ipo pricing)\b"
+    r"raising .{0,24}\bipo\b|\bipo\b.{0,24}(?:raising|priced|pricing|debut)|"
+    r"ipo debut|set to list|ipo pricing)\b"
 )
 
 EARN_RE = re.compile(
     r"(?i)\beps\b|beats estimates|misses estimates|non-gaap|"
     r"quarterly results|q[1-4] 20\d{2}|raises? .{0,32}guidance|"
     r"reaffirms? .{0,32}guidance|issues? .{0,32}guidance|"
+    r"raised outlook|raises outlook|beat, raised|"
+    r"forecasts .{0,28}(?:revenue|growth|eps)|"
     r"posts record|record (?:q[1-4]|revenue|eps)|boosts 20\d{2} buyback"
 )
 
@@ -49,7 +46,7 @@ RATING_RE = re.compile(
     r"cuts? (?:its )?price target|upgrades? to|downgrades? to|"
     r"\bupgraded\b|\bdowngrade\b|\bdowngraded\b|"
     r"initiates .{0,40}with (?:buy|sell|hold|overweight|underweight|neutral)|"
-    r"reiterates (?:buy|sell|hold|outperform)|keeps buy"
+    r"reiterates (?:buy|sell|hold|outperform)|keeps buy|slashing price targets"
 )
 
 DOLLAR_RE = re.compile(
@@ -63,19 +60,20 @@ PRINT_RE = re.compile(
     r"\bema\b|\bchmp\b|\bcafe\b|budget boost|chips act|"
     r"mis-selling|retail sales|"
     r"strategic (?:petroleum |oil )?reserve|\bspr\b|"
-    r"fed'?s? \w+ (?:says|sees|signals)|"
-    r"federal reserve'?s? \w+ (?:says|sees|signals)|"
-    r"fed officials (?:see|says?|signal)"
+    r"(?:fed|federal reserve).{0,48}(?:says|sees|signals|backs)|"
+    r"cyclospor|\d[\d,]* (?:suspected )?cases"
 )
 
 POLICY_RE = re.compile(
-    r"(?i)tax credit|electric vehicles|"
-    r"(?:trump|china|u\.?s\.?|united states|hhs|california).{0,56}"
+    r"(?i)tax credit|electric vehicles|eu .{0,40}rules|"
+    r"waste packaging|trump adviser|"
+    r"(?:us-iran|iran).{0,40}peace deal|peace deal.{0,40}iran|"
+    r"(?:trump|china|u\.?s\.?|united states|hhs|california|eu).{0,56}"
     r"(?:chips?|tariffs?|ev rule|fuel economy|export ban|"
-    r"weighs allowing|drug prices|sanctions|denies)|"
+    r"weighs allowing|drug prices|sanctions|denies|lobbyists)|"
     r"(?:chips?|tariffs?|ev rule|fuel economy|export ban|"
-    r"weighs allowing|drug prices|sanctions|denies).{0,56}"
-    r"(?:trump|china|u\.?s\.?|hhs|california)"
+    r"weighs allowing|drug prices|sanctions|denies|lobbyists).{0,56}"
+    r"(?:trump|china|u\.?s\.?|hhs|california|eu)"
 )
 
 VETO_RES: list[tuple[str, re.Pattern | None]] = [
@@ -88,7 +86,7 @@ VETO_RES: list[tuple[str, re.Pattern | None]] = [
             r"could it set you up|top (?:research|analyst|stock) reports|"
             r"\d+ stocks put traders|moonshot|plus \d+ more|"
             r"these stocks stand to gain|stocks could break out|"
-            r"3 things investors"
+            r"3 stocks that offer|3 things investors"
         ),
     ),
     ("v_quote", re.compile(r"(?i)stock price,\s*news,\s*quote")),
@@ -97,7 +95,8 @@ VETO_RES: list[tuple[str, re.Pattern | None]] = [
         re.compile(
             r"(?i)week ahead|all eyes on|what to watch|"
             r"markets brace|what to expect in markets|"
-            r"to report earnings today|before market open|watch live"
+            r"to report earnings today|before market open|watch live|"
+            r"earnings call (?:highlights|transcript)"
         ),
     ),
     (
@@ -118,7 +117,7 @@ VETO_RES: list[tuple[str, re.Pattern | None]] = [
             r"in focus|stock market today|"
             r"fuel\w* .{0,40}gain|spark\w* .{0,40}drop|"
             r"pressures .{0,24}shares|"
-            r"stock (?:drops|dropped|climbs|fell|slips|lost) on|"
+            r"stock (?:drops|dropped|climbs|fell|slips|lost|jumps|surges) on|"
             r"outperforms competitors|support\w* .{0,40}peers including|"
             r"reportedly|dollar holds near"
         ),
@@ -146,10 +145,10 @@ KEEP_RES: list[tuple[str, re.Pattern]] = [
     (
         "k_choke",
         re.compile(
-            r"(?i)(?:rejects?|accepts?|seizes?|strikes?|denies?).{0,40}"
-            r"(?:iran|hormuz|strait|sanctions)|"
-            r"(?:iran|hormuz|strait|sanctions).{0,40}"
-            r"(?:rejects?|accepts?|seizes?|strikes?|denies?)"
+            r"(?i)(?:rejects?|accepts?|seizes?|strikes?|denies?|dropped).{0,40}"
+            r"(?:iran|hormuz|strait|sanctions|peace)|"
+            r"(?:iran|hormuz|strait|sanctions|peace).{0,40}"
+            r"(?:rejects?|accepts?|seizes?|strikes?|denies?|dropped)"
         ),
     ),
     ("k_policy", POLICY_RE),
@@ -158,53 +157,42 @@ KEEP_RES: list[tuple[str, re.Pattern]] = [
 HARD_KEEP = frozenset({"k_print", "k_policy", "k_done", "k_earn", "k_rating", "k_choke"})
 
 BIT_QUESTIONS: dict = {
-    "v_tipsheet": {"type": "noul", "instructions": "Tip sheet pick?",
-        "criteria": {"true": "Should You Buy Palantir.", "false": "AMETEK completes acquisition."}},
+    "v_tipsheet": {"type": "noul", "instructions": "Tip sheet?",
+        "criteria": {"true": "3 Stocks That Offer AI Exposure.", "false": "AMETEK completes acquisition."}},
     "v_quote": {"type": "noul", "instructions": "Quote page?",
-        "criteria": {"true": "Sony stock price, news, quote.", "false": "Boeing identifies 737 MAX glitch."}},
-    "v_week": {"type": "noul", "instructions": "Calendar or live coverage?",
-        "criteria": {"true": "WATCH LIVE: Fed chair holds news conference.",
-                     "false": "Federal Reserve cuts interest rates by 0.25 percentage points."}},
+        "criteria": {"true": "WELL stock price, news, quote.", "false": "Raytheon Gets $20.7 Billion Contract."}},
+    "v_week": {"type": "noul", "instructions": "Calendar, live, or call transcript?",
+        "criteria": {"true": "Chiron Q2 Earnings Call Transcript.",
+                     "false": "ACV Auctions Reports Record Revenue."}},
     "v_odds": {"type": "noul", "instructions": "Odds or forecast only?",
-        "criteria": {"true": "Next price spike could roil economies.", "false": "JPMorgan upgrades AMX."}},
+        "criteria": {"true": "October Hike Odds at 70%.", "false": "Fed Governor Cook Says inflation persists."}},
     "v_tape": {"type": "noul", "instructions": "Already-moved tape?",
-        "criteria": {"true": "US stocks hold steady after Fed speech.",
-                     "false": "Federal Reserve cuts interest rates by 0.25 percentage points."}},
+        "criteria": {"true": "DOCS Stock Surges 40% Following Earnings.",
+                     "false": "Huang forecasts 70% fiscal 2028 revenue growth."}},
     "v_ask": {"type": "noul", "instructions": "Question column?",
-        "criteria": {"true": "How far can BSX stock swing?", "false": "Cenovus Q2 EPS $1.08 misses."}},
+        "criteria": {"true": "Is Its Future Worth Buying Into?", "false": "Fed cuts 25bp."}},
     "v_fluff": {"type": "noul", "instructions": "Not a US-listed market act?",
-        "criteria": {"true": "Rwanda genocide sentence. Meta legal-fight color.",
-                     "false": "Arthur J. Gallagher acquires Innovise."}},
-    "k_done": {"type": "noul", "instructions": "Deal, IPO pricing, layoff, settlement?",
-        "criteria": {"true": "Raising $540 million in IPO. Oracle planning layoffs.",
-                     "false": "odds, could, should you buy."}},
-    "k_earn": {"type": "noul", "instructions": "Company earnings print or guidance?",
-        "criteria": {"true": "Marvell Q2 earnings: record revenue, raised guidance.",
+        "criteria": {"true": "ICE agent gun in airport bathroom.", "false": "EU waste packaging rules."}},
+    "k_done": {"type": "noul", "instructions": "Deal, IPO debut, layoff, court verdict?",
+        "criteria": {"true": "Unitree soars in Shanghai IPO debut.", "false": "JPMorgan doubles down on SpaceX verdict."}},
+    "k_earn": {"type": "noul", "instructions": "Company print, outlook, or named growth forecast?",
+        "criteria": {"true": "Garmin beat, raised outlook. Huang forecasts 70% growth.",
                      "false": "Earnings call highlights."}},
-    "k_rating": {"type": "noul", "instructions": "Named analyst upgrade, downgrade, or PT?",
-        "criteria": {"true": "HSBC downgraded Netflix to Hold.", "false": "Top analyst reports for AMD."}},
-    "k_print": {"type": "noul", "instructions": "Official print, FOMC, or named Fed officer?",
-        "criteria": {"true": "Fed cuts 25bp. Retail sales fall. Barr signals further hikes.",
-                     "false": "Markets figure out the Fed next move."}},
-    "k_dollar": {"type": "noul", "instructions": "Money amount AND a finished act?",
-        "criteria": {"true": "Raytheon Gets $20.7 Billion Contract.",
-                     "false": "US landlords face a $1.8 trillion debt wall."}},
-    "k_choke": {"type": "noul", "instructions": "New strait or sanctions verb?",
-        "criteria": {"true": "Trump denies Iran sanctions easing reports.",
-                     "false": "Tensions persist as tankers transit Hormuz."}},
-    "k_policy": {"type": "noul", "instructions": "State plus named policy object?",
-        "criteria": {"true": "California offers new tax credit for electric vehicles.",
-                     "false": "Trump slams Canada as trade war persists."}},
+    "k_rating": {"type": "noul", "instructions": "Named PT slash, upgrade, downgrade?",
+        "criteria": {"true": "Analysts Are Slashing Price Targets on AppLovin.",
+                     "false": "Top analyst reports."}},
+    "k_print": {"type": "noul", "instructions": "Official print or named Fed officer voice?",
+        "criteria": {"true": "Fed Governor Cook Says. Fed Barr backs further hikes.",
+                     "false": "2 forces knocking the Fed off course."}},
+    "k_dollar": {"type": "noul", "instructions": "Money AND a finished act?",
+        "criteria": {"true": "Raytheon $20.7 Billion Contract.", "false": "$10 Billion ETF theme."}},
+    "k_choke": {"type": "noul", "instructions": "New strait/sanctions/peace verb?",
+        "criteria": {"true": "Trump rejects Iran peace. Steel intake through Hormuz dropped.",
+                     "false": "Hormuz tensions linger."}},
+    "k_policy": {"type": "noul", "instructions": "State/EU plus named policy object?",
+        "criteria": {"true": "EU waste packaging rules. Fresh US-Iran peace deal reports.",
+                     "false": "Americans Are Right: Inflation Is Not Just the Fed."}},
 }
-
-
-def _noul(answers: dict | None, key: str) -> float:
-    if not answers:
-        return 0.0
-    try:
-        return float(answers.get(key) or 0.0)
-    except (TypeError, ValueError):
-        return 0.0
 
 
 def code_keep(title: str) -> str:
