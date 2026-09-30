@@ -258,12 +258,14 @@ BIT_QUESTIONS: dict = {
         ),
         "criteria": {
             "true": (
-                "US July PPI Below Expectations. "
-                "Barr Says Further Fed Rate Hikes Likely Needed As Inflation Remains Too High."
+                "A numbered official release already printed: CPI, PPI, PCE, "
+                "NFP, consumer confidence, or an agency recall. "
+                "A named Fed officer is speaking in this sentence: says, "
+                "hints, sees, warns, or backs."
             ),
             "false": (
-                "Asia stocks gain ahead of U.S. PCE. "
-                "3 Financial Mutual Funds to Consider as Fed Signals More Rate Hikes."
+                "The print is only upcoming, expected, ahead of, or a preview. "
+                "A tip sheet or mutual-fund list that only mentions the Fed."
             ),
         },
     },
