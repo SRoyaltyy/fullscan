@@ -1,15 +1,15 @@
 # Finviz homepage market digest — 2026-09-30
 
-**Generated:** 2026-09-30T04:20:52.325544-04:00 (America/New_York)
+**Generated:** 2026-09-30T05:40:46.583321-04:00 (America/New_York)
 **Source:** `live`
-**Banner:** US stocks set to open higher as futures gain ahead of ADP jobs report, GDP update and core PCE inflation data
+**Banner:** US futures point to a modestly higher open as Treasury yields ease ahead of core PCE inflation and Q2 GDP data
 **Prior close:** SPX —  Nasdaq —  Dow —
 **SPX:** —  **Nasdaq:** —  **Dow:** —
-**Oil:** —
-**CPI/Fed:** —
-**Leaders:** JBL, FDS, CAG, CALM
-**Next session:** housing no · retail no · Fed no
-**Earnings slate:** JBL, FDS, CAG, CALM
+**Oil:** WTI crude $90.0
+**CPI/Fed:** 3.4% hold (hold around 3.4%)
+**Leaders:** GS, FDS, JBL, CAG
+**Next session:** housing no · retail no · Fed yes
+**Earnings slate:** —
 **Geo/grain:** —
 **Clock legal for:** 2026-09-30
 **Clock use:** `same_morning`
@@ -23,21 +23,24 @@ Homepage `$MARKET` prose — **not** `YYYY-MM-DD_finviz_digest.md` (quote-page h
 ## Theme Radar
 
 - **Prior close:** SPX — · Nasdaq — · Dow —
-- **Oil:** —
-- **CPI / Fed-odds:** —
-- **Named leaders:** JBL, FDS, CAG, CALM
-- **Next-session calendar:** housing no · retail no · Fed no
-- **Earnings slate:** JBL, FDS, CAG, CALM
+- **Oil:** WTI crude $90.0
+- **CPI / Fed-odds:** 3.4% hold (hold around 3.4%)
+- **Named leaders:** GS, FDS, JBL, CAG
+- **Next-session calendar:** housing no · retail no · Fed yes
+  - Treasury yields slip after what Goldman Sachs (GS) described as one of the more disturbing sessions of late on Tuesday and a bruising month for bonds
+- **Earnings slate:** —
 - **Geo / grain:** —
 
 ## Narrative
 
-**US stocks set to open higher as futures gain ahead of ADP jobs report, GDP update and core PCE inflation data**
+**US futures point to a modestly higher open as Treasury yields ease ahead of core PCE inflation and Q2 GDP data**
 
-- S&P 500 Futures (@ES) rise 0.28%, Dow Jones Futures (@YM) climb 0.46%, Nasdaq 100 Futures (@NQ) gain 0.22%, and Russell 2000 Futures (@ER2) advance 0.36% in early trading
-- ADP Employment Change for September is due at 8:15 AM ET and is expected to set the tone for labor-market expectations
-- A full data slate hits at 8:30 AM ET, including the Q2 GDP third estimate, August personal income and spending, and core PCE inflation readings
-- Asian equities trade mixed overnight, with Japan’s Nikkei index (@NKD) advancing nearly 2%
-- European stock markets trade mostly higher in early sessions, echoing the firmer tone in US futures
-- Oil (@CL) and gold (@GC) prices edge modestly higher in overnight trading
-- Earnings before the bell are due from Jabil (JBL), FactSet (FDS), Conagra Brands (CAG), and Cal-Maine Foods (CALM), setting up potential pre-market stock reactions
+- S&P 500 futures (@ES) rise 0.13%, Dow Jones futures (@YM) gain 0.21%, Nasdaq 100 futures (@NQ) edge up 0.01%, and Russell 2000 futures (@ER2) add 0.09% in early US trading
+- Treasury yields slip after what Goldman Sachs (GS) described as one of the more disturbing sessions of late on Tuesday and a bruising month for bonds
+- The 8:30 AM ET data slate includes the final third estimate of Q2 GDP and August personal income, outlays, and PCE inflation
+- Economists expect the August core PCE deflator to hold around 3.4% YoY, with the release and month‑end flows seen driving intraday volatility
+- Japan’s Nikkei (@NKD) advances nearly 2%, leading Asian markets on technology strength and reduced expectations for near‑term Fed rate hikes
+- European equities trade mixed with small gains in Germany’s DAX (@DY) and the EuroStoxx 50 (@EX)
+- WTI crude (@CL) trades near $90 while gold (@GC) ticks higher, amid reports of some funds cutting China exposure and calling for lower oil prices to support a potential year‑end equity rally
+- Pre‑market single‑stock action is muted, with no major earnings‑driven reactions yet from FactSet (FDS), Jabil (JBL), or Conagra Brands (CAG), all scheduled to report before the bell
+- US equities continue to show resilience despite record leverage concerns and recent Treasury yield pressure in what is expected to be a relatively quiet session ahead of the key inflation data

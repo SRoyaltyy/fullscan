@@ -1,6 +1,6 @@
 {
   "date": "2026-09-30",
-  "generated_at": "2026-09-30T04:20:52.325544-04:00",
+  "generated_at": "2026-09-30T05:40:46.583321-04:00",
   "timezone": "America/New_York",
   "source": "live",
   "source_url": "https://elite.finviz.com/",
@@ -15,26 +15,37 @@
   "kind": "finviz_homepage_market_digest",
   "represents": "Finviz homepage market-day prose. Same-morning Pre-Open when Generated is before 09:30 ET; afternoon Wayback is a prior-day close recap legal for the next session only. Not quote-page ticker blurbs.",
   "error": null,
-  "headline": "US stocks set to open higher as futures gain ahead of ADP jobs report, GDP update and core PCE inflation data",
-  "raw_text": "- S&P 500 Futures (@ES) rise 0.28%, Dow Jones Futures (@YM) climb 0.46%, Nasdaq 100 Futures (@NQ) gain 0.22%, and Russell 2000 Futures (@ER2) advance 0.36% in early trading\n- ADP Employment Change for September is due at 8:15 AM ET and is expected to set the tone for labor-market expectations\n- A full data slate hits at 8:30 AM ET, including the Q2 GDP third estimate, August personal income and spending, and core PCE inflation readings\n- Asian equities trade mixed overnight, with Japan’s Nikkei index (@NKD) advancing nearly 2%\n- European stock markets trade mostly higher in early sessions, echoing the firmer tone in US futures\n- Oil (@CL) and gold (@GC) prices edge modestly higher in overnight trading\n- Earnings before the bell are due from Jabil (JBL), FactSet (FDS), Conagra Brands (CAG), and Cal-Maine Foods (CALM), setting up potential pre-market stock reactions",
-  "raw_summary_md": "- **S&P 500 Futures** ([@ES](https://finviz.com/futures_charts?t=ES)) rise **0.28%**, **Dow Jones Futures** ([@YM](https://finviz.com/futures_charts?t=YM)) climb **0.46%**, **Nasdaq 100 Futures** ([@NQ](https://finviz.com/futures_charts?t=NQ)) gain **0.22%**, and **Russell 2000 Futures** ([@ER2](https://finviz.com/futures_charts?t=ER2)) advance **0.36%** in early trading\n- **ADP Employment Change for September** is due at **8:15 AM ET** and is expected to set the tone for labor-market expectations\n- A full data slate hits at **8:30 AM ET**, including the **Q2 GDP third estimate**, **August personal income and spending**, and **core PCE inflation** readings\n- **Asian equities** trade mixed overnight, with **Japan’s Nikkei index** ([@NKD](https://finviz.com/futures_charts?t=NKD)) advancing **nearly 2%**\n- **European stock markets** trade **mostly higher** in early sessions, echoing the firmer tone in **US futures**\n- **Oil** ([@CL](https://finviz.com/futures_charts?t=CL)) and **gold** ([@GC](https://finviz.com/futures_charts?t=GC)) prices edge **modestly higher** in overnight trading\n- **Earnings before the bell** are due from **Jabil** ([JBL](https://finviz.com/quote?t=JBL)), **FactSet** ([FDS](https://finviz.com/quote?t=FDS)), **Conagra Brands** ([CAG](https://finviz.com/quote?t=CAG)), and **Cal-Maine Foods** ([CALM](https://finviz.com/quote?t=CALM)), setting up potential **pre-market stock reactions**",
+  "headline": "US futures point to a modestly higher open as Treasury yields ease ahead of core PCE inflation and Q2 GDP data",
+  "raw_text": "- S&P 500 futures (@ES) rise 0.13%, Dow Jones futures (@YM) gain 0.21%, Nasdaq 100 futures (@NQ) edge up 0.01%, and Russell 2000 futures (@ER2) add 0.09% in early US trading\n- Treasury yields slip after what Goldman Sachs (GS) described as one of the more disturbing sessions of late on Tuesday and a bruising month for bonds\n- The 8:30 AM ET data slate includes the final third estimate of Q2 GDP and August personal income, outlays, and PCE inflation\n- Economists expect the August core PCE deflator to hold around 3.4% YoY, with the release and month‑end flows seen driving intraday volatility\n- Japan’s Nikkei (@NKD) advances nearly 2%, leading Asian markets on technology strength and reduced expectations for near‑term Fed rate hikes\n- European equities trade mixed with small gains in Germany’s DAX (@DY) and the EuroStoxx 50 (@EX)\n- WTI crude (@CL) trades near $90 while gold (@GC) ticks higher, amid reports of some funds cutting China exposure and calling for lower oil prices to support a potential year‑end equity rally\n- Pre‑market single‑stock action is muted, with no major earnings‑driven reactions yet from FactSet (FDS), Jabil (JBL), or Conagra Brands (CAG), all scheduled to report before the bell\n- US equities continue to show resilience despite record leverage concerns and recent Treasury yield pressure in what is expected to be a relatively quiet session ahead of the key inflation data",
+  "raw_summary_md": "- **S&P 500 futures** ([@ES](https://finviz.com/futures_charts?t=ES)) **rise 0.13%**, **Dow Jones futures** ([@YM](https://finviz.com/futures_charts?t=YM)) **gain 0.21%**, **Nasdaq 100 futures** ([@NQ](https://finviz.com/futures_charts?t=NQ)) edge up **0.01%**, and **Russell 2000 futures** ([@ER2](https://finviz.com/futures_charts?t=ER2)) add **0.09%** in early US trading\n- Treasury yields slip after what **Goldman Sachs** ([GS](https://finviz.com/quote?t=GS)) described as **one of the more disturbing sessions** of late on Tuesday and a **bruising month for bonds**\n- The **8:30 AM ET data slate** includes the **final third estimate of Q2 GDP** and **August personal income, outlays, and PCE inflation**\n- Economists expect the **August core PCE deflator** to hold around **3.4% YoY**, with the release and **month‑end flows** seen driving **intraday volatility**\n- **Japan’s Nikkei** ([@NKD](https://finviz.com/futures_charts?t=NKD)) advances **nearly 2%**, leading Asian markets on **technology strength** and **reduced expectations for near‑term Fed rate hikes**\n- **European equities trade mixed** with small gains in **Germany’s DAX** ([@DY](https://finviz.com/futures_charts?t=DY)) and the **EuroStoxx 50** ([@EX](https://finviz.com/futures_charts?t=EX))\n- **WTI crude** ([@CL](https://finviz.com/futures_charts?t=CL)) trades near **$90** while **gold** ([@GC](https://finviz.com/futures_charts?t=GC)) ticks higher, amid reports of some funds **cutting China exposure** and calling for **lower oil prices** to support a potential **year‑end equity rally**\n- Pre‑market **single‑stock action is muted**, with no major **earnings‑driven reactions** yet from **FactSet** ([FDS](https://finviz.com/quote?t=FDS)), **Jabil** ([JBL](https://finviz.com/quote?t=JBL)), or **Conagra Brands** ([CAG](https://finviz.com/quote?t=CAG)), all scheduled to report **before the bell**\n- US equities continue to show **resilience** despite **record leverage concerns** and recent **Treasury yield pressure** in what is expected to be a relatively **quiet session** ahead of the **key inflation data**",
   "index_moves": [],
-  "oil": null,
+  "oil": {
+    "name": "WTI crude",
+    "price": 90.0,
+    "verb": null,
+    "direction": null
+  },
   "cpi": null,
-  "fed_odds": null,
+  "fed_odds": {
+    "pct": 3.4,
+    "action": "hold",
+    "text": "hold around 3.4%"
+  },
   "named_tickers": [
-    "JBL",
+    "GS",
     "FDS",
-    "CAG",
-    "CALM"
+    "JBL",
+    "CAG"
   ],
   "named_leaders": [
-    "JBL",
+    "GS",
     "FDS",
-    "CAG",
-    "CALM"
+    "JBL",
+    "CAG"
   ],
-  "calendar": [],
+  "calendar": [
+    "Treasury yields slip after what Goldman Sachs (GS) described as one of the more disturbing sessions of late on Tuesday and a bruising month for bonds"
+  ],
   "prior_close": {
     "spx": null,
     "nasdaq": null,
@@ -42,23 +53,24 @@
   },
   "cpi_fed": {
     "cpi": null,
-    "fed_odds": null
+    "fed_odds": {
+      "pct": 3.4,
+      "action": "hold",
+      "text": "hold around 3.4%"
+    }
   },
   "next_session_calendar": {
     "housing": false,
     "retail": false,
-    "fed": false,
-    "bullets": [],
-    "text": ""
+    "fed": true,
+    "bullets": [
+      "Treasury yields slip after what Goldman Sachs (GS) described as one of the more disturbing sessions of late on Tuesday and a bruising month for bonds"
+    ],
+    "text": "Treasury yields slip after what Goldman Sachs (GS) described as one of the more disturbing sessions of late on Tuesday and a bruising month for bonds"
   },
   "earnings_slate": {
-    "tickers": [
-      "JBL",
-      "FDS",
-      "CAG",
-      "CALM"
-    ],
-    "text": "Earnings before the bell are due from Jabil (JBL), FactSet (FDS), Conagra Brands (CAG), and Cal-Maine Foods (CALM), setting up potential pre-market stock reactions"
+    "tickers": [],
+    "text": ""
   },
   "geo_grain": {
     "geo": false,
@@ -66,9 +78,9 @@
     "flags": [],
     "text": ""
   },
-  "finviz_id": 297861,
+  "finviz_id": 297894,
   "finviz_ticker": "$MARKET",
-  "finviz_published_at": "2026-09-30T04:06:19.673",
+  "finviz_published_at": "2026-09-30T05:36:17.453",
   "finviz_source": "market_summary",
   "finviz_sentiment": "good"
 }
