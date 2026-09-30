@@ -1,0 +1,237 @@
+{
+  "ticker": "SLB",
+  "analysis_date": "2026-09-30",
+  "current_price": "49.87",
+  "net_signal": "Bullish",
+  "conviction": 35,
+  "catalyst_stack": "On September 29, 2026 OneSubsea won ExxonMobil\u2019s Rovuma LNG Phase 1 subsea systems award, extending a late-quarter booking run that also included OQEP\u2019s Bisat-B expansion (September 23) and Equinor Johan Sverdrup monitoring (September 16). Portfolio mix shifted toward software and data-center adjacencies as SLB closed the S&P Global geoscience suite on September 1 and agreed on August 31 to buy Kelvion (~$4.1B EV) for thermal management. Q2 2026 results on July 24 beat estimates ($8.972B revenue, $0.55 adjusted EPS), after which UBS lifted its target to $75 on September 14. Offsets remain Q1 2026 profits hit by Iran-war demobilizations (April 24), CEO 10b5-1 sales on May 27 and September 1, a $2B senior-notes issue on May 7, and a September 6 opt-out from Malvinas/Falkland hydrocarbon tenders.",
+  "key_assumption": "International NOC/IOC awards and Kelvion/digital mix continue to offset residual Middle East disruption, with announced M&A closing without synergy or leverage disappointment.",
+  "catalyst_grid": [
+    {
+      "taxonomy": "Earnings beat (revenue, EBITDA, EPS)",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 8,
+      "adjusted_weight": 9,
+      "event_ids": [
+        10
+      ],
+      "event_date": "2026-07-24",
+      "evidence_excerpt": "Adjusted EPS (excluding charges & credits): $0.55; Q2 2026 revenue $8.972 billion, beating estimates.",
+      "source_urls": [
+        "https://www.businesswire.com/news/home/20260722694386/en/SLB-Announces-Second-Quarter-2026-Results",
+        "https://www.reuters.com/business/energy/top-us-oilfield-services-firm-slb-beats-quarterly-profit-estimates-2026-07-24/"
+      ],
+      "confidence": 94
+    },
+    {
+      "taxonomy": "Successful acquisition/synergy realization",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 7,
+      "adjusted_weight": 8,
+      "event_ids": [
+        3,
+        6,
+        15
+      ],
+      "event_date": "2026-09-01",
+      "evidence_excerpt": "S&P Global (NYSE: SPGI) today announced the completion of the divestment of its geoscience and petroleum engineering software portfolio to Schlumberger (SLB)",
+      "source_urls": [
+        "https://www.prnewswire.com/news-releases/sp-global-completes-divestiture-of-upstream-energy-software-portfolio-to-slb-302866534.html",
+        "https://www.onesubsea.slb.com/resources/news/2026/slb-onesubsea-completes-acquisition-of-subsea-business-of-envirex-group-as"
+      ],
+      "confidence": 95
+    },
+    {
+      "taxonomy": "Contract win/expansion",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 8,
+      "adjusted_weight": 7,
+      "event_ids": [
+        9,
+        19,
+        20,
+        22
+      ],
+      "event_date": "2026-09-29",
+      "evidence_excerpt": "HOUSTON, September 29, 2026 \u2014 Global energy technology company SLB (NYSE: SLB) today announced that its OneSubsea joint venture has been awarded a contract",
+      "source_urls": [
+        "https://www.onesubsea.slb.com/resources/news/2026/slb-onesubsea-awarded-major-subsea-systems-contract-for-rovuma-basin-development",
+        "https://www.worldoil.com/news/2026/9/29/slb-onesubsea-wins-exxonmobil-subsea-systems-contract-for-rovuma-lng/"
+      ],
+      "confidence": 95
+    },
+    {
+      "taxonomy": "Product launch/FDA approval/regulatory greenlight",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 9,
+      "adjusted_weight": 7,
+      "event_ids": [
+        12
+      ],
+      "event_date": "2026-08-24",
+      "evidence_excerpt": "SLB (Schlumberger) launched the ExaCT electrical downhole coiled tubing (CT) control system on August 24, 2026.",
+      "source_urls": [
+        "https://www.slb.com/newsroom/press-release/2026/slb-launches-exact-electrical-downhole-ct-control-system",
+        "https://www.offshore-mag.com/business-briefs/equipment-engineering/news/55400931/slb-ons-2026-slb-launches-electrical-coiled-tubing-intervention-system-for-greater-downhole-control"
+      ],
+      "confidence": 90
+    },
+    {
+      "taxonomy": "Strategic pivot/rebranding to high-growth area",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 6,
+      "event_ids": [
+        14
+      ],
+      "event_date": "2026-08-31",
+      "evidence_excerpt": "on August 31, 2026, SLB (formerly Schlumberger) announced an agreement to acquire Kelvion",
+      "source_urls": [
+        "https://www.reuters.com/business/energy/slb-acquire-kelvion-34-billion-2026-08-31/",
+        "https://www.kelvion.com/stories-media/news/detail/apollo-funds-agree-to-sell-kelvion"
+      ],
+      "confidence": 93
+    },
+    {
+      "taxonomy": "Strategic partnership/alliance",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 6,
+      "adjusted_weight": 5,
+      "event_ids": [
+        2,
+        8
+      ],
+      "event_date": "2026-04-07",
+      "evidence_excerpt": "HOUSTON, April 7, 2026 \u2014 Global energy technology company SLB (NYSE: SLB) today announced the signing of a strategic collaboration agreement",
+      "source_urls": [
+        "https://www.onesubsea.slb.com/resources/news/2026/slb-onesubsea-and-subsea7-sign-strategic-collaboration-agreement-with-petronas-suriname",
+        "https://www.reuters.com/business/energy/slb-strikes-deal-with-venezuelas-pdvsa-modernise-oil-sector-with-ai-push-2026-06-11/"
+      ],
+      "confidence": 95
+    },
+    {
+      "taxonomy": "Analyst upgrade/PT increase",
+      "type": "positive",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 4,
+      "event_ids": [
+        11,
+        13,
+        18,
+        21
+      ],
+      "event_date": "2026-09-14",
+      "evidence_excerpt": "UBS (Josh Silverstein): Boosted PT to $75 from $72 (maintained Buy) on Sep 14",
+      "source_urls": [
+        "https://www.pricetargets.com/NYSE/SLB/",
+        "https://tickernerd.com/stock/slb-forecast/"
+      ],
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Geopolitical event that hurts sector (sanctions, conflict disrupting supply chain)",
+      "type": "negative",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 8,
+      "adjusted_weight": 10,
+      "event_ids": [
+        4
+      ],
+      "event_date": "2026-04-24",
+      "evidence_excerpt": "Revenue: $8.721 billion (+3% YoY from $8.490 billion; -11% sequentially from $9.745 billion).",
+      "source_urls": [
+        "https://www.reuters.com/business/energy/oilfield-services-provider-slb-posts-lower-quarterly-profit-iran-war-hit-2026-04-24/",
+        "https://www.businesswire.com/news/home/20260422463846/en/SLB-Announces-First-Quarter-2026-Results"
+      ],
+      "confidence": 93
+    },
+    {
+      "taxonomy": "Policy reversal/new regulation/tax increase",
+      "type": "negative",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 7,
+      "adjusted_weight": 8,
+      "event_ids": [
+        17
+      ],
+      "event_date": "2026-09-06",
+      "evidence_excerpt": "it will not participate in any hydrocarbon exploration, production, or related bidding/tender processes in the Malvinas/Falkland Islands",
+      "source_urls": [
+        "https://www.infobae.com/america/agencias/2026/09/06/la-empresa-petrolifera-slb-anuncia-que-no-participara-en-ninguna-actividad-en-las-islas-malvinas/",
+        "https://www.lanacion.com.ar/economia/la-empresa-de-servicios-petroleros-slb-confirmo-que-no-participara-en-ninguna-actividad-en-malvinas-nid05092026/"
+      ],
+      "confidence": 82
+    },
+    {
+      "taxonomy": "Insider selling (especially by CEO/CFO, or clustered sales)",
+      "type": "negative",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 7,
+      "adjusted_weight": 6,
+      "event_ids": [
+        7,
+        16
+      ],
+      "event_date": "2026-09-01",
+      "evidence_excerpt": "Sep 1, 2026: Sold 35,000 shares at $60.00 (~$2.1 million). Post-sale direct holdings: 1,296,328 shares.",
+      "source_urls": [
+        "https://www.secform4.com/insider-trading/87347.htm",
+        "https://www.stocktitan.net/sec-filings/SLB/form-4.html"
+      ],
+      "confidence": 85
+    },
+    {
+      "taxonomy": "Accumulation of debt/retention or deepening of toxic assets/failed divestiture",
+      "type": "negative",
+      "category": "internal",
+      "status": "MISS",
+      "base_weight": 6,
+      "adjusted_weight": 0,
+      "event_ids": [
+        5
+      ],
+      "event_date": "2026-05-07",
+      "evidence_excerpt": "SLB (Schlumberger) completed a $2 billion senior notes issuance with settlement on May 7, 2026.",
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/87347/000119312526201211/d85569d424b3.htm",
+        "https://investorcenter.slb.com/node/31551/html"
+      ],
+      "confidence": 0
+    },
+    {
+      "taxonomy": "Lawsuit/legal action",
+      "type": "negative",
+      "event_date": "2026-04-20",
+      "evidence_excerpt": "Schlumberger Technology Corp. mismanages its 401(k) plan by using forfeited contributions to make its own payments to the plan",
+      "source_urls": [
+        "https://news.bloomberglaw.com/employee-benefits/schlumbergers-handling-of-401k-forfeitures-drives-new-lawsuit"
+      ],
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 5,
+      "confidence": 80
+    }
+  ],
+  "grok_verdict": "Bearish",
+  "search_backend": "grok_native",
+  "generated_at": "2026-09-30",
+  "cutoff_date": null,
+  "role": "override_captain"
+}

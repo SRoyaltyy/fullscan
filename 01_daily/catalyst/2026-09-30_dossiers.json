@@ -1,0 +1,497 @@
+{
+  "date": "2026-09-30",
+  "generated_at": "2026-09-30T08:02:13.173964-04:00",
+  "max_n": 8,
+  "routing": "Grok \u2192 DeepSeek",
+  "grok": true,
+  "deepseek_fallback": true,
+  "gemini": false,
+  "n_targets": 8,
+  "n_ok": 7,
+  "status": "OK",
+  "targets": [
+    {
+      "ticker": "NE",
+      "role": "override_captain",
+      "why": "OVERRIDE card Oil & Gas Drilling"
+    },
+    {
+      "ticker": "RIG",
+      "role": "override_captain",
+      "why": "OVERRIDE card Oil & Gas Drilling"
+    },
+    {
+      "ticker": "SLB",
+      "role": "override_captain",
+      "why": "OVERRIDE card Oil & Gas Equipment & Services"
+    },
+    {
+      "ticker": "BKR",
+      "role": "override_captain",
+      "why": "OVERRIDE card Oil & Gas Equipment & Services"
+    },
+    {
+      "ticker": "KGS",
+      "role": "override_captain",
+      "why": "OVERRIDE card Oil & Gas Equipment & Services"
+    },
+    {
+      "ticker": "SKYW",
+      "role": "conflict",
+      "why": "actions sell net=-4.76 vs heat buy"
+    },
+    {
+      "ticker": "SSRM",
+      "role": "conflict",
+      "why": "actions buy net=1.4 vs heat sell"
+    },
+    {
+      "ticker": "NEM",
+      "role": "conflict",
+      "why": "actions buy net=1.4 vs heat sell"
+    }
+  ],
+  "dossiers": [
+    {
+      "ticker": "NE",
+      "role": "override_captain",
+      "why": "OVERRIDE card Oil & Gas Drilling",
+      "net_signal": "Bearish",
+      "conviction": 24,
+      "search_backend": "grok_native",
+      "catalyst_stack": "On 26 Apr 2026 Noble added about $565 million of backlog, including a Petrobras extension of Noble Courage through December 2030 and a Woodside award for Noble Deliverer, then booked about $200 million more on 27 Jul and a Tullow Ghana campaign for Faye Kozack on 28 Sep. The 27 Jul Q2 print flipped the year: $720 million of revenue, a $37 million net loss, $43 million of Brazil idle time on Faye Kozack and Courage, and a cut in FY2026 revenue and adjusted EBITDA guidance. Street followed, with Citi and Susquehanna cutting targets in late June and early July, Barclays staying Overweight but trimming its PT after the miss, and the stock dropping 9.07% to $39.20 on 28 Jul. Cleanup was mixed\u2014an 11 Jun refinancing into 6.250% 2034 notes versus a $42 million Ocean Apex scrap impairment\u2014while the 30 Sep geo/oil bounce is sector beta, not a company-specific inflection.",
+      "key_assumption": "Brazil suspensions and the 2026 guide-down are a utilization air pocket rather than lost franchise, so 2027\u201330 contracts (Courage, Tullow, Viking, Deliverer) hold without a second guidance cut or a break in the $2.00 dividend.",
+      "n_pos": 6,
+      "n_neg": 8,
+      "top_hits": [
+        {
+          "type": "positive",
+          "taxonomy": "Contract win/expansion",
+          "event_date": "2026-04-26",
+          "headline": "\"new contracts with a total contract value of approximately $565 million\"",
+          "weight": 10,
+          "confidence": 94
+        },
+        {
+          "type": "positive",
+          "taxonomy": "Contract win/expansion",
+          "event_date": "2026-07-27",
+          "headline": "Approximately $200 million in new contract value since the April fleet status report, including a 6-well contract for the Noble Viking",
+          "weight": 10,
+          "confidence": 80
+        },
+        {
+          "type": "negative",
+          "taxonomy": "Contract loss/non-renewal/reduction in scope",
+          "event_date": "2026-04-12",
+          "headline": "\"On April 12, we received notice of early release from the customer, Qatari LNG\"",
+          "weight": 10,
+          "confidence": 88
+        },
+        {
+          "type": "negative",
+          "taxonomy": "Earnings guidance cut",
+          "event_date": "2026-07-27",
+          "headline": "\"Revenue guidance is reduced to $2,800-$2,900 million (versus $2,800-$3,000 million previously)\"",
+          "weight": 9,
+          "confidence": 95
+        },
+        {
+          "type": "negative",
+          "taxonomy": "Failed acquisition/overpayment/goodwill impairment",
+          "event_date": "2026-07-27",
+          "headline": "\"Ocean Apex was sold for scrapping in July, with net sale proceeds of approximately $5 million\"",
+          "weight": 7,
+          "confidence": 92
+        },
+        {
+          "type": "positive",
+          "taxonomy": "Capacity expansion announced",
+          "event_date": "2026-04-26",
+          "headline": "\"guidance for capital expenditures is increased to $615-$665 million\"",
+          "weight": 6,
+          "confidence": 92
+        }
+      ],
+      "error": null
+    },
+    {
+      "ticker": "RIG",
+      "role": "override_captain",
+      "why": "OVERRIDE card Oil & Gas Drilling",
+      "net_signal": "Strong Bullish",
+      "conviction": 51,
+      "search_backend": "grok_native",
+      "catalyst_stack": "Transocean added more than $2 billion of floater backlog between April 2 and August 20, capped by the June 30 Equinor seven-rig-year package worth over $1 billion at a $399,000 base day rate plus ONGC\u2019s $300 million KG2 award. On August 5 the company reported Q2 non-GAAP EPS of $0.03 and $966 million of contract-drilling revenue, both beats, and raised full-year 2026 revenue guidance to $3,900\u2013$3,975 million, prompting Fearnley\u2019s August 7 upgrade to Buy. CFIUS approved the Valaris combination on June 29, but the May 4 DOJ Second Request still extends HSR review and remains the principal negative binary. The September 24 SDNY dismissal of the securities class action, a 30% short float, and continued fixture flow leave the near-term setup skewed to the upside if antitrust clearance holds.",
+      "key_assumption": "Valaris receives DOJ/HSR clearance and Equinor\u2019s license-conditional seven-rig-year agreement plus 2026\u201327 fixtures convert at stated backlog without an oil-driven offshore capex freeze.",
+      "n_pos": 8,
+      "n_neg": 5,
+      "top_hits": [
+        {
+          "type": "positive",
+          "taxonomy": "Contract win/expansion",
+          "event_date": "2026-06-30",
+          "headline": "this agreement is worth over $1 billion in contract backlog over seven rig years, excluding additional services",
+          "weight": 10,
+          "confidence": 95
+        },
+        {
+          "type": "positive",
+          "taxonomy": "Contract win/expansion",
+          "event_date": "2026-09-15",
+          "headline": "The campaign is estimated to last 170 days and will add approximately $80 million to the company\u2019s backlog.",
+          "weight": 10,
+          "confidence": 80
+        },
+        {
+          "type": "negative",
+          "taxonomy": "Regulatory denial or delay/antitrust block",
+          "event_date": "2026-05-04",
+          "headline": "Both companies received a DOJ Second Request on May 4, 2026 and agreed not to certify substantial compliance before July 31, 2026.",
+          "weight": 10,
+          "confidence": 91
+        },
+        {
+          "type": "negative",
+          "taxonomy": "Regulatory denial or delay/antitrust block",
+          "event_date": "2026-08-07",
+          "headline": "Brazil\u2019s competition authority has started examining a business combination agreement between international offshore companies Transocean and Valaris.",
+          "weight": 10,
+          "confidence": 80
+        },
+        {
+          "type": "positive",
+          "taxonomy": "Earnings guidance raise",
+          "event_date": "2026-08-05",
+          "headline": "Contract drilling revenues were $966 million with strong revenue efficiency(1) of 97.0%.",
+          "weight": 9,
+          "confidence": 94
+        },
+        {
+          "type": "positive",
+          "taxonomy": "Favorable court ruling/patent grant",
+          "event_date": "2026-09-24",
+          "headline": "The court granted defendants\u2019 motion to dismiss the amended complaint on September 24, 2026, without prejudice",
+          "weight": 9,
+          "confidence": 90
+        }
+      ],
+      "error": null
+    },
+    {
+      "ticker": "SLB",
+      "role": "override_captain",
+      "why": "OVERRIDE card Oil & Gas Equipment & Services",
+      "net_signal": "Bullish",
+      "conviction": 35,
+      "search_backend": "grok_native",
+      "catalyst_stack": "On September 29, 2026 OneSubsea won ExxonMobil\u2019s Rovuma LNG Phase 1 subsea systems award, extending a late-quarter booking run that also included OQEP\u2019s Bisat-B expansion (September 23) and Equinor Johan Sverdrup monitoring (September 16). Portfolio mix shifted toward software and data-center adjacencies as SLB closed the S&P Global geoscience suite on September 1 and agreed on August 31 to buy Kelvion (~$4.1B EV) for thermal management. Q2 2026 results on July 24 beat estimates ($8.972B revenue, $0.55 adjusted EPS), after which UBS lifted its target to $75 on September 14. Offsets remain Q1 2026 profits hit by Iran-war demobilizations (April 24), CEO 10b5-1 sales on May 27 and September 1, a $2B senior-notes issue on May 7, and a September 6 opt-out from Malvinas/Falkland hydrocarbon tenders.",
+      "key_assumption": "International NOC/IOC awards and Kelvion/digital mix continue to offset residual Middle East disruption, with announced M&A closing without synergy or leverage disappointment.",
+      "n_pos": 7,
+      "n_neg": 4,
+      "top_hits": [
+        {
+          "type": "negative",
+          "taxonomy": "Geopolitical event that hurts sector (sanctions, conflict disrupting supply chain)",
+          "event_date": "2026-04-24",
+          "headline": "Revenue: $8.721 billion (+3% YoY from $8.490 billion; -11% sequentially from $9.745 billion).",
+          "weight": 10,
+          "confidence": 93
+        },
+        {
+          "type": "positive",
+          "taxonomy": "Earnings beat (revenue, EBITDA, EPS)",
+          "event_date": "2026-07-24",
+          "headline": "Adjusted EPS (excluding charges & credits): $0.55; Q2 2026 revenue $8.972 billion, beating estimates.",
+          "weight": 9,
+          "confidence": 94
+        },
+        {
+          "type": "positive",
+          "taxonomy": "Successful acquisition/synergy realization",
+          "event_date": "2026-09-01",
+          "headline": "S&P Global (NYSE: SPGI) today announced the completion of the divestment of its geoscience and petroleum engineering software portfolio to Schlumberger (SLB)",
+          "weight": 8,
+          "confidence": 95
+        },
+        {
+          "type": "negative",
+          "taxonomy": "Policy reversal/new regulation/tax increase",
+          "event_date": "2026-09-06",
+          "headline": "it will not participate in any hydrocarbon exploration, production, or related bidding/tender processes in the Malvinas/Falkland Islands",
+          "weight": 8,
+          "confidence": 82
+        },
+        {
+          "type": "positive",
+          "taxonomy": "Contract win/expansion",
+          "event_date": "2026-09-29",
+          "headline": "HOUSTON, September 29, 2026 \u2014 Global energy technology company SLB (NYSE: SLB) today announced that its OneSubsea joint venture has been awarded a contract",
+          "weight": 7,
+          "confidence": 95
+        },
+        {
+          "type": "positive",
+          "taxonomy": "Product launch/FDA approval/regulatory greenlight",
+          "event_date": "2026-08-24",
+          "headline": "SLB (Schlumberger) launched the ExaCT electrical downhole coiled tubing (CT) control system on August 24, 2026.",
+          "weight": 7,
+          "confidence": 90
+        }
+      ],
+      "error": null
+    },
+    {
+      "ticker": "BKR",
+      "role": "override_captain",
+      "why": "OVERRIDE card Oil & Gas Equipment & Services",
+      "net_signal": "Strong Bullish",
+      "conviction": 100,
+      "search_backend": "grok_native",
+      "catalyst_stack": "Baker Hughes closed Chart Industries on 2026-07-16 after EU approval on 2026-07-10, targeting $325 million of annualized cost synergies by year three. On 2026-09-09 it raised FY 2026 guidance to $28.50\u2013$30.30 billion of revenue and $4.88\u2013$5.48 billion of adjusted EBITDA to reflect Chart. Commercial momentum included the 2026-07-08 Kodiak framework for up to 1.8 GW of turbines, 2026-09-13 Venture Global LNG/compression awards, plus bp, KOC, and OGDC contracts, and the 2026-04-13 $1.45 billion Waygate sale. Goldman Sachs resumed coverage at Buy/$71 on 2026-09-29, while Citi, Jefferies, and TD Cowen cut price targets but kept Buy ratings.",
+      "key_assumption": "Chart integration delivers the stated $325 million cost synergies and IET LNG/power awards convert to revenue without material OFSE weakness or synergy slippage.",
+      "n_pos": 11,
+      "n_neg": 2,
+      "top_hits": [
+        {
+          "type": "positive",
+          "taxonomy": "Contract win/expansion",
+          "event_date": "2026-09-13",
+          "headline": "will provide gas compression systems for the Cloud Connector Pipeline project in Louisiana",
+          "weight": 8,
+          "confidence": 95
+        },
+        {
+          "type": "positive",
+          "taxonomy": "Successful acquisition/synergy realization",
+          "event_date": "2026-07-16",
+          "headline": "today announced the successful completion of its acquisition of Chart Industries",
+          "weight": 8,
+          "confidence": 96
+        },
+        {
+          "type": "positive",
+          "taxonomy": "Contract win/expansion",
+          "event_date": "2026-07-10",
+          "headline": "Baker Hughes has secured three substantial equipment and services contracts tied to the expansion of Cheniere Energy's Sabine Pass LNG",
+          "weight": 8,
+          "confidence": 80
+        },
+        {
+          "type": "positive",
+          "taxonomy": "Contract win/expansion",
+          "event_date": "2026-07-27",
+          "headline": "Baker Hughes has secured a major order from Venture Global LNG to supply liquefaction technology for the CP2 LNG expansion project in Louisiana",
+          "weight": 8,
+          "confidence": 80
+        },
+        {
+          "type": "positive",
+          "taxonomy": "Contract win/expansion",
+          "event_date": "2026-07-26",
+          "headline": "Received a major award from Dynamis Power Solutions, including 76 NovaLT\u212216 gas turbines, for approximately 1.3 GW of capacity",
+          "weight": 8,
+          "confidence": 80
+        },
+        {
+          "type": "positive",
+          "taxonomy": "Earnings guidance raise",
+          "event_date": "2026-09-09",
+          "headline": "now expects FY 2026 revenue of $28.5B-$30.3B, up from",
+          "weight": 7,
+          "confidence": 93
+        }
+      ],
+      "error": null
+    },
+    {
+      "ticker": "KGS",
+      "role": "override_captain",
+      "why": "OVERRIDE card Oil & Gas Equipment & Services",
+      "net_signal": "Strong Bullish",
+      "conviction": 89,
+      "search_backend": "grok_native",
+      "catalyst_stack": "On April 1, 2026 Kodiak closed the $587 million Distributed Power Solutions deal (~395 MW, stock-and-cash), then on May 15 sold about 12.2 million primary shares at $71.00 for $836.1 million of net proceeds. Q1 (May 11) and Q2 (August 6) prints posted record adjusted EBITDA and lifted 2026 EBITDA guidance in two steps to $830\u2013$860 million. The July 8 Baker Hughes framework (up to 1.8 GW, initial ~1 GW of turbines by 2030) and the September 30 six-year 76 MW West Texas data-center power-supply agreement extend the behind-the-meter growth story. Street tone is still constructive but uneven: Piper, Stifel, and RBC initiated or raised $78\u2013$88/$92 targets, while Jefferies kept Buy and cut its target to $69 on August 10 versus a $51.75 tape.",
+      "key_assumption": "DPS megawatts, Baker Hughes turbine deliveries, and data-center PSAs convert into contracted cash flow without another large primary raise or a utilization break on the already 97\u201398% fleet.",
+      "n_pos": 10,
+      "n_neg": 3,
+      "top_hits": [
+        {
+          "type": "positive",
+          "taxonomy": "Successful acquisition/synergy realization",
+          "event_date": "2026-04-01",
+          "headline": "completed the previously announced acquisition of Distributed Power Solutions, LLC",
+          "weight": 9,
+          "confidence": 95
+        },
+        {
+          "type": "positive",
+          "taxonomy": "Contract win/expansion",
+          "event_date": "2026-09-30",
+          "headline": "Kodiak Gas Services Announces Power Supply Agreement with West Texas Data Center",
+          "weight": 9,
+          "confidence": 75
+        },
+        {
+          "type": "negative",
+          "taxonomy": "Dilutive offering/distressed fundraising/down round",
+          "event_date": "2026-05-15",
+          "headline": "The Company received aggregate net proceeds of approximately $836.1 million",
+          "weight": 9,
+          "confidence": 92
+        },
+        {
+          "type": "positive",
+          "taxonomy": "Earnings guidance raise",
+          "event_date": "2026-08-06",
+          "headline": "raised 2026 adjusted EBITDA guidance to $830-$860 million and discretionary cash flow to $570-$600 million",
+          "weight": 8,
+          "confidence": 95
+        },
+        {
+          "type": "positive",
+          "taxonomy": "Earnings guidance raise",
+          "event_date": "2026-05-11",
+          "headline": "raised full-year 2026 adjusted EBITDA guidance to $820\u2013$860 million.",
+          "weight": 8,
+          "confidence": 80
+        },
+        {
+          "type": "positive",
+          "taxonomy": "Strategic partnership/alliance",
+          "event_date": "2026-07-08",
+          "headline": "Initial major award includes approximately 1 GW of gas turbines and generators delivered by 2030",
+          "weight": 7,
+          "confidence": 95
+        }
+      ],
+      "error": null
+    },
+    {
+      "ticker": "SKYW",
+      "role": "conflict",
+      "why": "actions sell net=-4.76 vs heat buy",
+      "net_signal": "Neutral",
+      "conviction": 10,
+      "search_backend": "grok_native",
+      "catalyst_stack": "On July 23, 2026, SkyWest raised its buyback authorization by $250 million and agreed to purchase and operate 11 new E175s for American Airlines, even after April 23 guidance eased full-year GAAP EPS to about $11 on fuel and slightly lower summer block hours. Goldman Sachs cut the stock to Neutral and a $108 target on July 2 citing weaker partner-driven block-hour growth, while TD Cowen later lifted its Buy target to $123 on August 24 after earlier Citi and Cowen hikes. Governance and signaling turned mixed in July: the Fifth Circuit on July 9 affirmed an EEOC Title VII judgment with punitive damages, Wade Steel became airline President and COO the same day, and CEO Chip Childs and CFO Robert Simmons sold 50,500 and 25,000 shares on July 28\u201329. Sioux City\u2019s council on September 28 recommended a four-year EAS award for SkyWest from January 2027, and airline shares caught a bid on September 30 as oil prices dropped.",
+      "key_assumption": "Most jet-fuel cost remains CPA-reimbursed, the American E175s and Sioux City EAS recommendation convert into flown block hours, and July officer sales plus Goldman\u2019s growth cut do not foreshadow a 2027 utilization or rate reset.",
+      "n_pos": 5,
+      "n_neg": 7,
+      "top_hits": [
+        {
+          "type": "positive",
+          "taxonomy": "Contract win/expansion",
+          "event_date": "2026-07-23",
+          "headline": "Announced agreement to purchase and operate 11 new E175s for American Airlines",
+          "weight": 10,
+          "confidence": 88
+        },
+        {
+          "type": "negative",
+          "taxonomy": "Earnings guidance cut",
+          "event_date": "2026-04-23",
+          "headline": "Full-year 2026 GAAP EPS anticipated around $11, slightly down from prior color",
+          "weight": 9,
+          "confidence": 88
+        },
+        {
+          "type": "positive",
+          "taxonomy": "Government policy (tariffs/subsidies/mandates)",
+          "event_date": "2026-09-28",
+          "headline": "the Sioux City City Council approved a recommendation, to the United States Department of Transportation, to keep SkyWest Airlines",
+          "weight": 6,
+          "confidence": 92
+        },
+        {
+          "type": "positive",
+          "taxonomy": "Share repurchase program/increased dividend",
+          "event_date": "2026-07-23",
+          "headline": "Board approved a $250 million increase to the stock repurchase program",
+          "weight": 6,
+          "confidence": 90
+        },
+        {
+          "type": "positive",
+          "taxonomy": "Analyst upgrade/PT increase",
+          "event_date": "2026-08-24",
+          "headline": "raised the price target on SkyWest (SKYW) to $123 from $115 while maintaining a Buy rating.",
+          "weight": 6,
+          "confidence": 80
+        },
+        {
+          "type": "negative",
+          "taxonomy": "Analyst downgrade/PT cut",
+          "event_date": "2026-07-02",
+          "headline": "Goldman Sachs lowered SkyWest\u2019s rating to Neutral from Buy and reduced its price target to $108 from $126.",
+          "weight": 5,
+          "confidence": 90
+        }
+      ],
+      "error": null
+    },
+    {
+      "ticker": "SSRM",
+      "role": "conflict",
+      "why": "actions buy net=1.4 vs heat sell",
+      "net_signal": "Strong Bullish",
+      "conviction": 73,
+      "search_backend": "grok_native",
+      "catalyst_stack": "On June 15, 2026 the board added a $500 million buyback and reinstated a $0.03 quarterly dividend, then closed the \u00c7\u00f6pler sale on June 24 for about $1.49 billion cash and finished the Hod Maden exit on July 17 via an uncapped 4% NSR. First-half 2026 results (May 5 and August 4) showed continuing-operations earnings power, with Q2 net income of $137 million, $1.78 billion cash and no long-term debt. Jurisdictional and legal overhangs faded further when Colorado\u2019s federal court dismissed the \u00c7\u00f6pler securities class action with prejudice on August 27, and RBC moved to Outperform in June before lifting its target to $43 on September 16. Growth capex was raised on September 28 at Marigold, CC&V, Seabee and Puna without changing production guidance, while the Phenom/Dobbin Nevada option (June 29\u2013September 30) is a small bolt-on around a cash-rich Americas portfolio.",
+      "key_assumption": "Gold prices and H2-weighted 2026 mine delivery hold, so the Turkey-exit cash, buyback, and U.S. case dismissal keep the re-rating without an AISC/guidance cut or a heap-leach/Puna shock.",
+      "n_pos": 9,
+      "n_neg": 1,
+      "top_hits": [
+        {
+          "type": "positive",
+          "taxonomy": "Favorable court ruling/patent grant",
+          "event_date": "2026-08-27",
+          "headline": "In August 2026, Chief Judge Daniel D. Domenico dismissed all claims with prejudice and closed the case",
+          "weight": 9,
+          "confidence": 78
+        },
+        {
+          "type": "positive",
+          "taxonomy": "Share repurchase program/increased dividend",
+          "event_date": "2026-06-15",
+          "headline": "approved an additional $500 million authorization for share repurchases and reinstated a regular quarterly dividend",
+          "weight": 6,
+          "confidence": 92
+        },
+        {
+          "type": "positive",
+          "taxonomy": "Capacity expansion",
+          "event_date": "2026-09-28",
+          "headline": "Marigold (Nevada): Growth capital raised to $65 million (from $48 million) to support longer-term growth",
+          "weight": 6,
+          "confidence": 88
+        },
+        {
+          "type": "positive",
+          "taxonomy": "Earnings beat",
+          "event_date": "2026-05-05",
+          "headline": "adjusted net income per diluted share was $1.15",
+          "weight": 6,
+          "confidence": 80
+        },
+        {
+          "type": "negative",
+          "taxonomy": "Earnings miss",
+          "event_date": "2026-08-04",
+          "headline": "reporting an EPS of $0.66, which missed the consensus estimate of $0.67 by $0.01",
+          "weight": 6,
+          "confidence": 80
+        },
+        {
+          "type": "positive",
+          "taxonomy": "Strategic partnership/alliance",
+          "event_date": "2026-06-29",
+          "headline": "The sole investor in the Private Placement was an affiliate of SSR Mining Inc. (\"SSR\"). SSR now holds approximately 9.9%",
+          "weight": 5,
+          "confidence": 95
+        }
+      ],
+      "error": null
+    }
+  ]
+}

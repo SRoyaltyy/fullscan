@@ -1,0 +1,260 @@
+{
+  "ticker": "RIG",
+  "analysis_date": "2026-09-30",
+  "current_price": "5.21",
+  "net_signal": "Strong Bullish",
+  "conviction": 51,
+  "catalyst_stack": "Transocean added more than $2 billion of floater backlog between April 2 and August 20, capped by the June 30 Equinor seven-rig-year package worth over $1 billion at a $399,000 base day rate plus ONGC\u2019s $300 million KG2 award. On August 5 the company reported Q2 non-GAAP EPS of $0.03 and $966 million of contract-drilling revenue, both beats, and raised full-year 2026 revenue guidance to $3,900\u2013$3,975 million, prompting Fearnley\u2019s August 7 upgrade to Buy. CFIUS approved the Valaris combination on June 29, but the May 4 DOJ Second Request still extends HSR review and remains the principal negative binary. The September 24 SDNY dismissal of the securities class action, a 30% short float, and continued fixture flow leave the near-term setup skewed to the upside if antitrust clearance holds.",
+  "key_assumption": "Valaris receives DOJ/HSR clearance and Equinor\u2019s license-conditional seven-rig-year agreement plus 2026\u201327 fixtures convert at stated backlog without an oil-driven offshore capex freeze.",
+  "catalyst_grid": [
+    {
+      "taxonomy": "Contract win/expansion",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 8,
+      "adjusted_weight": 10,
+      "event_ids": [
+        0,
+        1,
+        2,
+        6,
+        8,
+        15
+      ],
+      "event_date": "2026-06-30",
+      "evidence_excerpt": "this agreement is worth over $1 billion in contract backlog over seven rig years, excluding additional services",
+      "source_urls": [
+        "https://markets.businessinsider.com/news/stocks/transocean-ltd-announces-agreement-with-equinor-valued-at-over-1-billion-1036288137",
+        "https://worldoil.com/news/2026/6/30/transocean-lands-seven-year-1-billion-equinor-rig-deal/"
+      ],
+      "confidence": 95
+    },
+    {
+      "taxonomy": "Earnings guidance raise",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 7,
+      "adjusted_weight": 9,
+      "event_ids": [
+        11
+      ],
+      "event_date": "2026-08-05",
+      "evidence_excerpt": "Contract drilling revenues were $966 million with strong revenue efficiency(1) of 97.0%.",
+      "source_urls": [
+        "https://www.nasdaq.com/press-release/transocean-ltd-reports-second-quarter-2026-results-2026-08-05",
+        "https://seekingalpha.com/news/4626856-transocean-non-gaap-eps-of-0_03-beats-by-0_02-revenue-of-966m-beats-by-3_12m"
+      ],
+      "confidence": 94
+    },
+    {
+      "taxonomy": "Favorable court ruling/patent grant",
+      "type": "positive",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 8,
+      "adjusted_weight": 9,
+      "event_ids": [
+        18
+      ],
+      "event_date": "2026-09-24",
+      "evidence_excerpt": "The court granted defendants\u2019 motion to dismiss the amended complaint on September 24, 2026, without prejudice",
+      "source_urls": [
+        "https://news.bloomberglaw.com/securities-law/transocean-dodges-investor-suit-over-rust-bucket-rig-valuation",
+        "https://www.courtlistener.com/docket/69499211/in-re-transocean-ltd-securities-litigation/"
+      ],
+      "confidence": 90
+    },
+    {
+      "taxonomy": "Earnings beat",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 6,
+      "event_ids": [
+        11
+      ],
+      "event_date": "2026-08-05",
+      "evidence_excerpt": "Contract drilling revenues were $966 million with strong revenue efficiency(1) of 97.0%.",
+      "source_urls": [
+        "https://www.nasdaq.com/press-release/transocean-ltd-reports-second-quarter-2026-results-2026-08-05",
+        "https://seekingalpha.com/news/4626856-transocean-non-gaap-eps-of-0_03-beats-by-0_02-revenue-of-966m-beats-by-3_12m"
+      ],
+      "confidence": 94
+    },
+    {
+      "taxonomy": "Customer concentration expansion",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 6,
+      "event_ids": [
+        1,
+        8,
+        15
+      ],
+      "event_date": "2026-06-30",
+      "evidence_excerpt": "this agreement is worth over $1 billion in contract backlog over seven rig years, excluding additional services",
+      "source_urls": [
+        "https://markets.businessinsider.com/news/stocks/transocean-ltd-announces-agreement-with-equinor-valued-at-over-1-billion-1036288137",
+        "https://www.sec.gov/Archives/edgar/data/1451505/000145150526000064/rig-20260820xex99d1.htm"
+      ],
+      "confidence": 95
+    },
+    {
+      "taxonomy": "Regulatory approval",
+      "type": "positive",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 6,
+      "event_ids": [
+        7
+      ],
+      "event_date": "2026-06-29",
+      "evidence_excerpt": "CFIUS issued written approval on June 29, 2026, satisfying the CFIUS condition to the Transocean merger.",
+      "source_urls": [
+        "https://www.mlex.com/mlex/articles/2496100/transocean-valaris-received-cfius-approval-entered-timing-agreement-with-us-doj",
+        "https://www.sec.gov/Archives/edgar/data/314808/000114036126027091/ef20077172_8k.htm"
+      ],
+      "confidence": 91
+    },
+    {
+      "taxonomy": "Analyst upgrade/PT increase",
+      "type": "positive",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 6,
+      "event_ids": [
+        12
+      ],
+      "event_date": "2026-08-07",
+      "evidence_excerpt": "Fearnley Fonds/Fearnley Securities upgraded Transocean Ltd. (NYSE: RIG) to Buy (or Strong-Buy) from Hold",
+      "source_urls": [
+        "https://www.tipranks.com/news/the-fly/transocean-upgraded-to-buy-from-hold-at-fearnley-thefly-news",
+        "https://www.marketbeat.com/instant-alerts/transocean-nyserig-raised-to-strong-buy-at-fearnley-fonds-2026-08-08/"
+      ],
+      "confidence": 78
+    },
+    {
+      "taxonomy": "Short squeeze potential",
+      "type": "positive",
+      "category": "external",
+      "status": "MISS",
+      "base_weight": 5,
+      "adjusted_weight": 0,
+      "event_ids": [
+        8,
+        11,
+        12,
+        7
+      ],
+      "event_date": "2026-09-30",
+      "evidence_excerpt": "Short float ~30% and days-to-cover 6.9 with a live positive-catalyst cluster (merger progress, FCF, utilization).",
+      "source_urls": [
+        "https://www.nasdaq.com/press-release/transocean-ltd-reports-second-quarter-2026-results-2026-08-05",
+        "https://worldoil.com/news/2026/6/30/transocean-lands-seven-year-1-billion-equinor-rig-deal/"
+      ],
+      "confidence": 0
+    },
+    {
+      "taxonomy": "Analyst downgrade/price target cut",
+      "type": "negative",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 5,
+      "event_ids": [
+        10,
+        13
+      ],
+      "event_date": "2026-08-12",
+      "evidence_excerpt": "August 12: Barclays maintains Overweight/Buy, lowers target to $7 (from $8)",
+      "source_urls": [
+        "https://stockanalysis.com/stocks/rig/forecast/",
+        "https://www.pricetargets.com/NYSE/RIG/"
+      ],
+      "confidence": 73
+    },
+    {
+      "taxonomy": "Regulatory denial or delay/antitrust block",
+      "type": "negative",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 9,
+      "adjusted_weight": 10,
+      "event_ids": [
+        4
+      ],
+      "event_date": "2026-05-04",
+      "evidence_excerpt": "Both companies received a DOJ Second Request on May 4, 2026 and agreed not to certify substantial compliance before July 31, 2026.",
+      "source_urls": [
+        "https://www.tipranks.com/news/company-announcements/valaris-transocean-merger-faces-extended-doj-antitrust-review",
+        "https://www.sec.gov/Archives/edgar/data/314808/000114036126027092/ef20077172_defa14a.htm"
+      ],
+      "confidence": 91
+    },
+    {
+      "taxonomy": "Contract win/expansion",
+      "type": "positive",
+      "event_date": "2026-09-15",
+      "evidence_excerpt": "The campaign is estimated to last 170 days and will add approximately $80 million to the company\u2019s backlog.",
+      "source_urls": [
+        "https://inspenet.com/en/news/transocean-secures-80-million-contract-for-deepwater-conqueror-in-equatorial-guinea/",
+        "https://www.sec.gov/Archives/edgar/data/1451505/000145150526000068/0001451505-26-000068.txt"
+      ],
+      "status": "HIT",
+      "base_weight": 8,
+      "adjusted_weight": 10,
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Earnings miss",
+      "type": "negative",
+      "event_date": "2026-05-04",
+      "evidence_excerpt": "Q1 Non-GAAP EPS of -$0.03 misses by $0.11.",
+      "source_urls": [
+        "https://seekingalpha.com/news/4585257-transocean-non-gaap-eps-of-0_03-misses-by-0_11-revenue-of-1_08b-beats-by-50m"
+      ],
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 6,
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Insider selling",
+      "type": "negative",
+      "event_date": "2026-05-21",
+      "evidence_excerpt": "The most recent sale was by Brady Long who sold 81,741 shares on May 21, 2026.",
+      "source_urls": [
+        "https://altindex.com/ticker/rig/insider-transactions"
+      ],
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 5,
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Regulatory denial or delay/antitrust block",
+      "type": "negative",
+      "event_date": "2026-08-07",
+      "evidence_excerpt": "Brazil\u2019s competition authority has started examining a business combination agreement between international offshore companies Transocean and Valaris.",
+      "source_urls": [
+        "https://www.mlex.com/mlex/articles/2511314/review-of-transocean-valaris-offshore-drilling-deal-opened-by-brazil-cade"
+      ],
+      "status": "HIT",
+      "base_weight": 9,
+      "adjusted_weight": 10,
+      "confidence": 80
+    }
+  ],
+  "grok_verdict": "Bullish",
+  "search_backend": "grok_native",
+  "generated_at": "2026-09-30",
+  "cutoff_date": null,
+  "role": "override_captain"
+}

@@ -1,0 +1,252 @@
+{
+  "ticker": "SKYW",
+  "analysis_date": "2026-09-30",
+  "current_price": "98.90",
+  "net_signal": "Neutral",
+  "conviction": 10,
+  "catalyst_stack": "On July 23, 2026, SkyWest raised its buyback authorization by $250 million and agreed to purchase and operate 11 new E175s for American Airlines, even after April 23 guidance eased full-year GAAP EPS to about $11 on fuel and slightly lower summer block hours. Goldman Sachs cut the stock to Neutral and a $108 target on July 2 citing weaker partner-driven block-hour growth, while TD Cowen later lifted its Buy target to $123 on August 24 after earlier Citi and Cowen hikes. Governance and signaling turned mixed in July: the Fifth Circuit on July 9 affirmed an EEOC Title VII judgment with punitive damages, Wade Steel became airline President and COO the same day, and CEO Chip Childs and CFO Robert Simmons sold 50,500 and 25,000 shares on July 28\u201329. Sioux City\u2019s council on September 28 recommended a four-year EAS award for SkyWest from January 2027, and airline shares caught a bid on September 30 as oil prices dropped.",
+  "key_assumption": "Most jet-fuel cost remains CPA-reimbursed, the American E175s and Sioux City EAS recommendation convert into flown block hours, and July officer sales plus Goldman\u2019s growth cut do not foreshadow a 2027 utilization or rate reset.",
+  "catalyst_grid": [
+    {
+      "taxonomy": "Contract win/expansion",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 8,
+      "adjusted_weight": 10,
+      "event_ids": [
+        12
+      ],
+      "event_date": "2026-07-23",
+      "evidence_excerpt": "Announced agreement to purchase and operate 11 new E175s for American Airlines",
+      "source_urls": [
+        "https://quartr.com/events/skywest-inc-skyw-q2-2026_3PZv1G7Z",
+        "https://www.sec.gov/Archives/edgar/data/793733/000110465926086251/skyw-20260723xex99d1.htm"
+      ],
+      "confidence": 88
+    },
+    {
+      "taxonomy": "Government policy (tariffs/subsidies/mandates)",
+      "type": "positive",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 6,
+      "event_ids": [
+        16
+      ],
+      "event_date": "2026-09-28",
+      "evidence_excerpt": "the Sioux City City Council approved a recommendation, to the United States Department of Transportation, to keep SkyWest Airlines",
+      "source_urls": [
+        "https://www.ktiv.com/2026/09/29/city-council-recommends-skywest-stay-airline-service-sioux-gateway-airport/"
+      ],
+      "confidence": 92
+    },
+    {
+      "taxonomy": "Share repurchase program/increased dividend",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 6,
+      "event_ids": [
+        11
+      ],
+      "event_date": "2026-07-23",
+      "evidence_excerpt": "Board approved a $250 million increase to the stock repurchase program",
+      "source_urls": [
+        "https://quartr.com/events/skywest-inc-skyw-q2-2026_3PZv1G7Z",
+        "https://www.sec.gov/Archives/edgar/data/793733/000110465926086251/skyw-20260723xex99d1.htm"
+      ],
+      "confidence": 90
+    },
+    {
+      "taxonomy": "Capacity expansion announced",
+      "type": "positive",
+      "category": "internal",
+      "status": "MISS",
+      "base_weight": 5,
+      "adjusted_weight": 0,
+      "event_ids": [
+        3
+      ],
+      "event_date": "2026-04-23",
+      "evidence_excerpt": "United has announced the CRJ450, a premium 41-seat variant of the CRJ200, entering service in fall 2026",
+      "source_urls": [
+        "https://www.fool.com/earnings/call-transcripts/2026/04/23/skywest-skyw-q1-2026-earnings-call-transcript/"
+      ],
+      "confidence": 0
+    },
+    {
+      "taxonomy": "Analyst upgrade/PT increase",
+      "type": "positive",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 6,
+      "event_ids": [
+        5,
+        7,
+        15
+      ],
+      "event_date": "2026-08-24",
+      "evidence_excerpt": "raised the price target on SkyWest (SKYW) to $123 from $115 while maintaining a Buy rating.",
+      "source_urls": [
+        "https://www.tipranks.com/news/the-fly/skywest-price-target-raised-to-123-from-115-at-td-cowen-thefly-news"
+      ],
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Positive personnel change",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 4,
+      "event_ids": [
+        8
+      ],
+      "event_date": "2026-07-09",
+      "evidence_excerpt": "Wade Steel was appointed President and Chief Operating Officer (COO) of SkyWest Airlines, Inc.",
+      "source_urls": [
+        "https://inc.skywest.com/assets/Uploads/PressReleases/Wade-Steel-COO-7.9.26.pdf",
+        "https://aviationnews-online.com/public/article/skywest-airlines-appoints-wade-steel-as-president-coo"
+      ],
+      "confidence": 84
+    },
+    {
+      "taxonomy": "Commodity price move favorable",
+      "type": "positive",
+      "category": "external",
+      "status": "MISS",
+      "base_weight": 5,
+      "adjusted_weight": 0,
+      "event_ids": [
+        0
+      ],
+      "event_date": "2026-09-30",
+      "evidence_excerpt": "Airline stocks bounce back in a big way as oil prices drop",
+      "source_urls": [
+        "https://www.marketwatch.com/livecoverage/stock-market-today-dow-s-p-500-nasdaq-alphabet-tesla-results-magnificent-seven-900-billion/card/airline-stocks-bounce-back-in-a-big-way-as-oil-prices-drop-GqUR2y8XYcukF3sriXdv?mod=mw_FV"
+      ],
+      "confidence": 0
+    },
+    {
+      "taxonomy": "Earnings guidance cut",
+      "type": "negative",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 7,
+      "adjusted_weight": 9,
+      "event_ids": [
+        2
+      ],
+      "event_date": "2026-04-23",
+      "evidence_excerpt": "Full-year 2026 GAAP EPS anticipated around $11, slightly down from prior color",
+      "source_urls": [
+        "https://www.fool.com/earnings/call-transcripts/2026/04/23/skywest-skyw-q1-2026-earnings-call-transcript/"
+      ],
+      "confidence": 88
+    },
+    {
+      "taxonomy": "Analyst downgrade/PT cut",
+      "type": "negative",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 5,
+      "event_ids": [
+        6
+      ],
+      "event_date": "2026-07-02",
+      "evidence_excerpt": "Goldman Sachs lowered SkyWest\u2019s rating to Neutral from Buy and reduced its price target to $108 from $126.",
+      "source_urls": [
+        "https://www.tradingpedia.com/2026/07/02/goldman-sachs-downgrades-skywest-on-weaker-growth-outlook/",
+        "https://www.tipranks.com/news/the-fly/skywest-downgraded-to-neutral-from-buy-at-goldman-sachs-thefly-news"
+      ],
+      "confidence": 90
+    },
+    {
+      "taxonomy": "Insider selling (cluster)",
+      "type": "negative",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 5,
+      "event_ids": [
+        13,
+        14
+      ],
+      "event_date": "2026-07-29",
+      "evidence_excerpt": "Chief Financial Officer Robert J. Simmons sold 25,000 shares of SkyWest, Inc.",
+      "source_urls": [
+        "https://www.fool.com/coverage/filings/2026/08/02/skywest-is-buying-back-stock-while-its-executives-sell-here-s-how-to-read-it/",
+        "https://www.sec.gov/Archives/edgar/data/793733/000111049926000003/0001110499-26-000003-index.htm"
+      ],
+      "confidence": 88
+    },
+    {
+      "taxonomy": "Adverse litigation/antitrust",
+      "type": "negative",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 5,
+      "event_ids": [
+        9
+      ],
+      "event_date": "2026-07-09",
+      "evidence_excerpt": "the U.S. Court of Appeals for the Fifth Circuit affirmed the district court\u2019s judgment in EEOC v. SkyWest Airlines, Inc.",
+      "source_urls": [
+        "https://law.justia.com/cases/federal/appellate-courts/ca5/25-10491/25-10491-2026-07-09.html",
+        "https://gordonarata.com/fifth-circuit-holds-title-vii-plaintiffs-have-no-duty-to-mitigate-emotional-distress-damages-and-highlights-deficiencies-in-hr-workplace-investigations/"
+      ],
+      "confidence": 86
+    },
+    {
+      "taxonomy": "Insider selling (cluster)",
+      "type": "negative",
+      "event_date": "2026-07-28",
+      "evidence_excerpt": "Russell A. Childs, the president and CEO of SkyWest, Inc. sold 50,500 shares of common stock on July 28",
+      "source_urls": [
+        "https://www.fool.com/coverage/filings/2026/08/02/skywest-s-ceo-just-sold-usd5-7-million-in-stock-here-s-what-long-term-investors-should-know/"
+      ],
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 5,
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Earnings miss vs consensus",
+      "type": "negative",
+      "event_date": "2026-07-23",
+      "evidence_excerpt": "reported $2.54 EPS for the quarter, missing analysts' consensus estimates of $2.70 by $0.16",
+      "source_urls": [
+        "https://www.marketbeat.com/stocks/NASDAQ/SKYW/"
+      ],
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 5,
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Analyst downgrade/PT cut",
+      "type": "negative",
+      "event_date": "2026-04-30",
+      "evidence_excerpt": "Citi analyst John Godyn lowered the price target on SkyWest (NASDAQ: SKYW) to $95 from $101",
+      "source_urls": [
+        "https://www.tipranks.com/news/the-fly/skywest-price-target-lowered-to-95-from-101-at-citi-thefly-news",
+        "https://www.gurufocus.com/news/8833304/skyw-maintained-by-citigroup-price-target-lowered-to-95"
+      ],
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 5,
+      "confidence": 80
+    }
+  ],
+  "grok_verdict": "Unclear",
+  "search_backend": "grok_native",
+  "generated_at": "2026-09-30",
+  "cutoff_date": null,
+  "role": "conflict"
+}

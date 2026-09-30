@@ -1,0 +1,203 @@
+{
+  "ticker": "SSRM",
+  "analysis_date": "2026-09-30",
+  "current_price": "33.94",
+  "net_signal": "Strong Bullish",
+  "conviction": 73,
+  "catalyst_stack": "On June 15, 2026 the board added a $500 million buyback and reinstated a $0.03 quarterly dividend, then closed the \u00c7\u00f6pler sale on June 24 for about $1.49 billion cash and finished the Hod Maden exit on July 17 via an uncapped 4% NSR. First-half 2026 results (May 5 and August 4) showed continuing-operations earnings power, with Q2 net income of $137 million, $1.78 billion cash and no long-term debt. Jurisdictional and legal overhangs faded further when Colorado\u2019s federal court dismissed the \u00c7\u00f6pler securities class action with prejudice on August 27, and RBC moved to Outperform in June before lifting its target to $43 on September 16. Growth capex was raised on September 28 at Marigold, CC&V, Seabee and Puna without changing production guidance, while the Phenom/Dobbin Nevada option (June 29\u2013September 30) is a small bolt-on around a cash-rich Americas portfolio.",
+  "key_assumption": "Gold prices and H2-weighted 2026 mine delivery hold, so the Turkey-exit cash, buyback, and U.S. case dismissal keep the re-rating without an AISC/guidance cut or a heap-leach/Puna shock.",
+  "catalyst_grid": [
+    {
+      "taxonomy": "Share repurchase program/increased dividend",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 6,
+      "event_ids": [
+        4
+      ],
+      "event_date": "2026-06-15",
+      "evidence_excerpt": "approved an additional $500 million authorization for share repurchases and reinstated a regular quarterly dividend",
+      "source_urls": [
+        "https://s22.q4cdn.com/546540291/files/doc_news/2026/Jun/15/SSR-MINING-ANNOUNCES-ADDITIONAL-500-MILLION-SHARE-BUYBACK-AND-REINSTATEMENT-OF-QUARTERLY-DIVIDEND.pdf",
+        "https://finance.yahoo.com/markets/stocks/articles/ssr-mining-announces-additional-500-210000969.html"
+      ],
+      "confidence": 92
+    },
+    {
+      "taxonomy": "Deleveraging/sale of toxic assets/spin-off",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 4,
+      "event_ids": [
+        2,
+        5,
+        8
+      ],
+      "event_date": "2026-06-24",
+      "evidence_excerpt": "The transaction closed on June 24, 2026. SSR Mining received approximately $1.49 billion in cash after working capital",
+      "source_urls": [
+        "https://s22.q4cdn.com/546540291/files/doc_news/2026/Jun/24/SSR-MINING-COMPLETES-THE-SALE-OF-THE-PLER-MINE.pdf",
+        "https://www.tipranks.com/news/company-announcements/ssr-mining-completes-major-sale-of-copler-mine-assets"
+      ],
+      "confidence": 92
+    },
+    {
+      "taxonomy": "Strategic partnership/alliance",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 6,
+      "adjusted_weight": 5,
+      "event_ids": [
+        6,
+        0
+      ],
+      "event_date": "2026-06-29",
+      "evidence_excerpt": "The sole investor in the Private Placement was an affiliate of SSR Mining Inc. (\"SSR\"). SSR now holds approximately 9.9%",
+      "source_urls": [
+        "https://www.newsfilecorp.com/release/303232/Phenom-Announces-Closing-of-5.41-Million-Financing-Strategic-Investor-and-Execution-of-Framework-Agreement-Relating-to-the-Dobbin-Project"
+      ],
+      "confidence": 95
+    },
+    {
+      "taxonomy": "Institutional ownership increase",
+      "type": "positive",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 5,
+      "event_ids": [
+        7
+      ],
+      "event_date": "2026-07-08",
+      "evidence_excerpt": "Amendment No. 6 to 13G filed July 8, 2026, reporting 20.77 million shares (10.0% of the class) as of June 30, 2026",
+      "source_urls": [
+        "https://www.secform4.com/13dg-history/921638.html"
+      ],
+      "confidence": 72
+    },
+    {
+      "taxonomy": "Earnings beat",
+      "type": "positive",
+      "category": "internal",
+      "status": "MISS",
+      "base_weight": 5,
+      "adjusted_weight": 0,
+      "event_ids": [
+        1,
+        10
+      ],
+      "event_date": "2026-08-04",
+      "evidence_excerpt": "Net income and adjusted net income attributable to SSR Mining shareholders: $137.0 million, or $0.66 per diluted share.",
+      "source_urls": [
+        "https://s22.q4cdn.com/546540291/files/doc_earnings/2026/q2/earnings-result/SSR-MINING-REPORTS-SECOND-QUARTER-2026-RESULTS.pdf",
+        "https://seekingalpha.com/pr/20606909-ssr-mining-reports-second-quarter-2026-results"
+      ],
+      "confidence": 0
+    },
+    {
+      "taxonomy": "Favorable court ruling/patent grant",
+      "type": "positive",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 8,
+      "adjusted_weight": 9,
+      "event_ids": [
+        11
+      ],
+      "event_date": "2026-08-27",
+      "evidence_excerpt": "In August 2026, Chief Judge Daniel D. Domenico dismissed all claims with prejudice and closed the case",
+      "source_urls": [
+        "https://www.aoshearman.com/en/news/ao-shearman-secures-dismissal-with-prejudice-for-ssr-mining-in-securities-class-action"
+      ],
+      "confidence": 78
+    },
+    {
+      "taxonomy": "Analyst upgrade/PT increase",
+      "type": "positive",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 5,
+      "event_ids": [
+        3,
+        12
+      ],
+      "event_date": "2026-09-16",
+      "evidence_excerpt": "Sep 16, 2026: RBC Capital (Josh Wolfson) maintained Outperform and raised the PT from $39 to $43.",
+      "source_urls": [
+        "https://es.benzinga.com/quote/SSRM/price-targets",
+        "https://stockanalysis.com/stocks/ssrm/forecast/"
+      ],
+      "confidence": 70
+    },
+    {
+      "taxonomy": "Capacity expansion",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 6,
+      "event_ids": [
+        13
+      ],
+      "event_date": "2026-09-28",
+      "evidence_excerpt": "Marigold (Nevada): Growth capital raised to $65 million (from $48 million) to support longer-term growth",
+      "source_urls": [
+        "https://www.minichart.com.sg/2026/09/28/ssr-mining-lifts-2026-growth-capital-budget-at-three-mines/",
+        "https://s22.q4cdn.com/546540291/files/doc_presentations/2026/Sep/28/SSR-Mining-DGF-Conference-2026-Investor-Presentation.pdf"
+      ],
+      "confidence": 88
+    },
+    {
+      "taxonomy": "Deleveraging/sale of toxic assets/spin-off",
+      "type": "positive",
+      "event_date": "2026-07-17",
+      "evidence_excerpt": "on July 17, 2026, the Company closed the sale of its 20% ownership stake in the Hod Maden development project",
+      "source_urls": [
+        "https://s22.q4cdn.com/546540291/files/doc_earnings/2026/q2/earnings-result/SSR-MINING-REPORTS-SECOND-QUARTER-2026-RESULTS.pdf",
+        "https://www.nasdaq.com/press-release/ssr-mining-completes-sale-its-20-equity-interest-hod-maden-2026-07-17"
+      ],
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 4,
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Earnings beat",
+      "type": "positive",
+      "event_date": "2026-05-05",
+      "evidence_excerpt": "adjusted net income per diluted share was $1.15",
+      "source_urls": [
+        "https://www.marketbeat.com/earnings/reports/2026-5-5-ssr-mining-inc-stock/",
+        "https://www.marketbeat.com/stocks/NASDAQ/SSRM/earnings/"
+      ],
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 6,
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Earnings miss",
+      "type": "negative",
+      "event_date": "2026-08-04",
+      "evidence_excerpt": "reporting an EPS of $0.66, which missed the consensus estimate of $0.67 by $0.01",
+      "source_urls": [
+        "https://www.marketbeat.com/stocks/NASDAQ/SSRM/earnings/"
+      ],
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 6,
+      "confidence": 80
+    }
+  ],
+  "grok_verdict": "Bearish",
+  "search_backend": "grok_native",
+  "generated_at": "2026-09-30",
+  "cutoff_date": null,
+  "role": "conflict"
+}
