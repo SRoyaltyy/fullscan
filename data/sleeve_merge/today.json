@@ -1,7 +1,7 @@
 {
   "date": "2026-09-30",
   "policy": "flatten_robust",
-  "generated": "2026-09-30T16:31:09",
+  "generated": "2026-09-30T18:31:16",
   "score": 2.009,
   "predict": "UP",
   "hard_red": false,
