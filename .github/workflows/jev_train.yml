@@ -6,7 +6,7 @@ name: Jev train
 # Grades commit to main, which is the branch Deploy dashboard checks out.
 # [skip ci] keeps that commit from waking the trading workflows.
 # The page reads draw.json from raw main, so it does not need a Pages rebuild.
-# Allowlist: 00_grounding/jev_train/ 00_grounding/jev_hard_misses.json dashboard/jev-train/draw.json
+# Allowlist: 00_grounding/jev_train/ 00_grounding/jev_hard_misses.json dashboard/jev-train/draw.json dashboard/jev-train/days.json
 
 on:
   workflow_dispatch:
@@ -31,6 +31,11 @@ on:
         type: string
       seed:
         description: "RNG seed for mode=draw. Blank draws a fresh seed."
+        required: false
+        default: ""
+        type: string
+      day:
+        description: "YYYY-MM-DD parse to grade. Blank keeps the mixed draw."
         required: false
         default: ""
         type: string
@@ -74,9 +79,10 @@ jobs:
           JEV_API_KEY: ${{ secrets.JEV_API_KEY }}
           STAMP: ${{ github.event.inputs.stamp }}
           SEED: ${{ github.event.inputs.seed }}
+          DAY: ${{ github.event.inputs.day }}
         run: |
           set -euo pipefail
-          PYTHONPATH=. python3 -m src.jev_train draw --stamp "$STAMP" --seed "$SEED" \
+          PYTHONPATH=. python3 -m src.jev_train draw --stamp "$STAMP" --seed "$SEED" --day "$DAY" \
             | tee "$RUNNER_TEMP/jev_train_out.txt"
           stamp=$(awk -F= '/^JEV_TRAIN_STAMP=/{print $2}' "$RUNNER_TEMP/jev_train_out.txt" | tail -1)
           echo "stamp=${stamp}" >> "$GITHUB_OUTPUT"
@@ -103,9 +109,12 @@ jobs:
           if [ -f dashboard/jev-train/draw.json ]; then
             git add -- dashboard/jev-train/draw.json
           fi
+          if [ -f dashboard/jev-train/days.json ]; then
+            git add -- dashboard/jev-train/days.json
+          fi
           bad=$(git diff --cached --name-only | while read -r p; do
             case "$p" in
-              00_grounding/jev_train/*|00_grounding/jev_hard_misses.json|dashboard/jev-train/draw.json) ;;
+              00_grounding/jev_train/*|00_grounding/jev_hard_misses.json|dashboard/jev-train/draw.json|dashboard/jev-train/days.json) ;;
               *) printf '%s\n' "$p" ;;
             esac
           done)
@@ -119,14 +128,11 @@ jobs:
             exit 1
           fi
           if grep -R -E -n 'sk-[A-Za-z0-9]{8,}|ghp_[A-Za-z0-9]{8,}|github_pat_[A-Za-z0-9_]{8,}|JEV_API_KEY[[:space:]]*=|Bearer [A-Za-z0-9._-]{12,}' \
-              00_grounding/jev_train 00_grounding/jev_hard_misses.json dashboard/jev-train/draw.json; then
+              00_grounding/jev_train 00_grounding/jev_hard_misses.json dashboard/jev-train/draw.json dashboard/jev-train/days.json; then
             echo "refusing to commit secret-like material"
             exit 1
           fi
           git commit -m "jev train: ${{ github.event.inputs.mode }} [skip ci]"
-          # main auto-lands race this push (16:19 draw died on a stale tip).
-          # Replay only allowlisted blobs onto origin/main. Do not rebase
-          # the sparse work tree.
           n=0
           while [ "$n" -lt 6 ]; do
             if git push origin HEAD:main; then
@@ -140,7 +146,7 @@ jobs:
             GIT_INDEX_FILE="$tmp" git read-tree "$parent"
             git diff-tree --no-commit-id --name-only -r HEAD | while IFS= read -r f; do
               case "$f" in
-                00_grounding/jev_train/*|00_grounding/jev_hard_misses.json|dashboard/jev-train/draw.json)
+                00_grounding/jev_train/*|00_grounding/jev_hard_misses.json|dashboard/jev-train/draw.json|dashboard/jev-train/days.json)
                   rec=$(git ls-tree HEAD -- "$f")
                   [ -n "$rec" ] || continue
                   mode=$(printf '%s\n' "$rec" | awk '{print $1}')
