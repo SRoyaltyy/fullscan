@@ -255,8 +255,8 @@ BIT_QUESTIONS: dict = {
         ),
         "criteria": {
             "true": (
-                "US consumer confidence sinks to 12-year low over inflation, stagnant wages. "
-                "Fed holds interest rates steady as inflation hits 3-year high."
+                "US July PPI Below Expectations. "
+                "Barr Says Further Fed Rate Hikes Likely Needed As Inflation Remains Too High."
             ),
             "false": (
                 "Asia stocks gain ahead of U.S. PCE. "
