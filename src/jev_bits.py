@@ -29,7 +29,8 @@ DONE_RE = re.compile(
     r"credit facility|term loan|revolving credit|"
     r"sues?|sued|lawsuit|sells? \$\d|layoffs?|uplisting|"
     r"raising .{0,24}\bipo\b|\bipo\b.{0,24}(?:raising|priced|pricing|debut)|"
-    r"ipo debut|set to list|ipo pricing|pulls .{0,40}listing|withdraws .{0,40}(?:ipo|listing))\b"
+    r"ipo debut|set to list|ipo pricing|pulls .{0,40}listing|withdraws .{0,40}(?:ipo|listing)|"
+    r"aiming for .{0,40}\bipo\b|targets? .{0,40}\bipo\b|\$[\d,.]+ trillion ipo)\b"
 )
 
 EARN_RE = re.compile(
@@ -38,7 +39,8 @@ EARN_RE = re.compile(
     r"reaffirms? .{0,32}guidance|issues? .{0,32}guidance|"
     r"raised outlook|raises outlook|beat, raised|"
     r"forecasts .{0,28}(?:revenue|growth|eps)|"
-    r"posts record|record (?:q[1-4]|second quarter |third quarter |first quarter )?(?:revenue|eps|earnings)|per diluted share|boosts 20\d{2} buyback"
+    r"posts record|record (?:q[1-4]|second quarter |third quarter |first quarter )?(?:revenue|eps|earnings)|per diluted share|boosts 20\d{2} buyback|"
+    r"strong earnings|earnings (?:spark|beat|miss)\b"
 )
 
 RATING_RE = re.compile(
@@ -63,6 +65,7 @@ PRINT_RE = re.compile(
     r"(?:fed|federal reserve).{0,48}(?:says|sees|signals|backs|warns)|"
     r"(?:says|sees|signals|backs|warns).{0,48}(?:fed|federal reserve)|"
     r"raised (?:its )?benchmark|federal reserve raised|fed raised|"
+    r"(?:treasury|yield|30-year|10-year|cpi|pce|nfp|payrolls).{0,48}(?:highest|lowest).{0,24}since|"
     r"cyclospor|\d[\d,]* (?:suspected )?cases"
 )
 
@@ -150,7 +153,11 @@ KEEP_RES: list[tuple[str, re.Pattern]] = [
             r"(?i)(?:rejects?|accepts?|seizes?|strikes?|denies?|dropped).{0,40}"
             r"(?:iran|hormuz|strait|sanctions|peace)|"
             r"(?:iran|hormuz|strait|sanctions|peace).{0,40}"
-            r"(?:rejects?|accepts?|seizes?|strikes?|denies?|dropped)"
+            r"(?:rejects?|accepts?|seizes?|strikes?|denies?|dropped)|"
+            r"pipeline.{0,40}(?:shut|closed|halted|struck)|"
+            r"(?:drone strikes?|strikes).{0,32}pipeline|"
+            r"(?:freight|transportation) costs?|cost of transportation|"
+            r"steel (?:trade )?flows|flow of steel"
         ),
     ),
     ("k_policy", POLICY_RE),
@@ -176,20 +183,21 @@ BIT_QUESTIONS: dict = {
     "v_fluff": {"type": "noul", "instructions": "Not a US-listed market act?",
         "criteria": {"true": "ICE agent gun in airport bathroom.", "false": "EU waste packaging rules."}},
     "k_done": {"type": "noul", "instructions": "Deal, IPO debut, layoff, court verdict?",
-        "criteria": {"true": "Unitree soars in Shanghai IPO debut.", "false": "JPMorgan doubles down on SpaceX verdict."}},
+        "criteria": {"true": "Unitree soars in Shanghai IPO debut. Anthropic aiming for $2 trillion IPO.",
+                     "false": "JPMorgan doubles down on SpaceX verdict. $10,000 invested at SpaceX IPO is now worth."}},
     "k_earn": {"type": "noul", "instructions": "Company print, outlook, or named growth forecast?",
-        "criteria": {"true": "Garmin beat, raised outlook. Huang forecasts 70% growth.",
+        "criteria": {"true": "Garmin beat, raised outlook. CrowdStrike strong earnings spark a rally.",
                      "false": "Earnings call highlights."}},
     "k_rating": {"type": "noul", "instructions": "Named PT slash, upgrade, downgrade?",
         "criteria": {"true": "Analysts Are Slashing Price Targets on AppLovin.",
                      "false": "Top analyst reports."}},
-    "k_print": {"type": "noul", "instructions": "Official print or named Fed officer voice?",
-        "criteria": {"true": "Fed Governor Cook Says. Fed Barr backs further hikes.",
+    "k_print": {"type": "noul", "instructions": "Official print, named Fed officer voice, or a series extreme?",
+        "criteria": {"true": "Fed Governor Cook Says. 30-year Treasury yield hits highest level since 2004.",
                      "false": "2 forces knocking the Fed off course."}},
     "k_dollar": {"type": "noul", "instructions": "Money AND a finished act?",
         "criteria": {"true": "Raytheon $20.7 Billion Contract.", "false": "$10 Billion ETF theme."}},
-    "k_choke": {"type": "noul", "instructions": "New strait/sanctions/peace verb?",
-        "criteria": {"true": "Trump rejects Iran peace. Steel intake through Hormuz dropped.",
+    "k_choke": {"type": "noul", "instructions": "New strait/sanctions/peace verb, shut pipeline, or steel/freight shock?",
+        "criteria": {"true": "Trump rejects Iran peace. Pipeline still shut after drone strikes.",
                      "false": "Hormuz tensions linger."}},
     "k_policy": {"type": "noul", "instructions": "State/EU plus named policy object?",
         "criteria": {"true": "EU waste packaging rules. Fresh US-Iran peace deal reports.",
