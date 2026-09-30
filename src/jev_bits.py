@@ -16,6 +16,19 @@ SOURCE_DENY = re.compile(
     r"marketbeat|insidermonkey)"
 )
 
+DONE_RE = re.compile(
+    r"(?i)\b(?:holds?|held|agrees?|agreed|rejects?|rejected|"
+    r"ended|recalled|identifies|filed|files to|acquires?|"
+    r"priced|launched|verdict|cut tariffs|tariff cuts?|"
+    r"completes?|completed|approved|wins?|won|divests?|divested|"
+    r"stockholders approve|positive opinion|now live|rollout|"
+    r"prime lending rate|trial data)\b"
+)
+
+DOLLAR_RE = re.compile(
+    r"\$[\d,.]+|\b\d+(?:\.\d+)?\s*(?:billion|million)\b"
+)
+
 VETO_RES: list[tuple[str, re.Pattern | None]] = [
     (
         "v_tipsheet",
@@ -49,6 +62,20 @@ VETO_RES: list[tuple[str, re.Pattern | None]] = [
             r"sinking even though|on track for weekly|how the latest .{0,24} impacts"
         ),
     ),
+    (
+        "v_pt",
+        re.compile(
+            r"(?i)price targets?|raises? (?:its )?price target|"
+            r"cuts? (?:its )?price target|upgrades? to|downgrades? to"
+        ),
+    ),
+    (
+        "v_earnings",
+        re.compile(
+            r"(?i)\beps\b|beats estimates|misses estimates|"
+            r"non-gaap|quarterly results|q[1-4] 20\d{2}"
+        ),
+    ),
     ("v_ask", None),
     (
         "v_fluff",
@@ -61,26 +88,16 @@ VETO_RES: list[tuple[str, re.Pattern | None]] = [
 ]
 
 KEEP_RES: list[tuple[str, re.Pattern]] = [
-    (
-        "k_done",
-        re.compile(
-            r"(?i)\b(?:holds?|held|agrees?|agreed|rejects?|rejected|"
-            r"ended|recalled|identifies|filed|acquires?|priced|"
-            r"launched|verdict|cut tariffs|tariff cuts?)\b"
-        ),
-    ),
+    ("k_done", DONE_RE),
     (
         "k_print",
         re.compile(
             r"(?i)fed holds|federal reserve holds|\bfomc\b|"
             r"\bcpi\b|\bpce\b|\bnfp\b|\beia\b|\bfda\b|\bsec\b|"
-            r"\bcafe\b|budget boost"
+            r"\bema\b|\bchmp\b|\bcafe\b|budget boost|chips act"
         ),
     ),
-    (
-        "k_dollar",
-        re.compile(r"\$[\d,.]+|\b\d+(?:\.\d+)?\s*(?:billion|million)\b"),
-    ),
+    ("k_dollar", DOLLAR_RE),
     (
         "k_choke",
         re.compile(
@@ -93,10 +110,11 @@ KEEP_RES: list[tuple[str, re.Pattern]] = [
     (
         "k_policy",
         re.compile(
-            r"(?i)(?:trump|china|u\.?s\.?|united states).{0,56}"
-            r"(?:chips?|tariffs?|ev rule|fuel economy|export ban|weighs allowing)|"
-            r"(?:chips?|tariffs?|ev rule|fuel economy|export ban|weighs allowing)"
-            r".{0,56}(?:trump|china|u\.?s\.?)"
+            r"(?i)(?:trump|china|u\.?s\.?|united states|hhs).{0,56}"
+            r"(?:chips?|tariffs?|ev rule|fuel economy|export ban|"
+            r"weighs allowing|drug prices)|"
+            r"(?:chips?|tariffs?|ev rule|fuel economy|export ban|"
+            r"weighs allowing|drug prices).{0,56}(?:trump|china|u\.?s\.?|hhs)"
         ),
     ),
 ]
@@ -106,7 +124,7 @@ BIT_QUESTIONS: dict = {
         "type": "noul",
         "instructions": "Tip sheet pick?",
         "criteria": {
-            "true": "Should You Buy Palantir. Better stock to buy. Prediction: crash.",
+            "true": "Should You Buy Palantir. Better stock to buy.",
             "false": "Apple hit with $5.7 billion verdict.",
         },
     },
@@ -122,7 +140,7 @@ BIT_QUESTIONS: dict = {
         "type": "noul",
         "instructions": "Calendar preview?",
         "criteria": {
-            "true": "The Week Ahead: PCE and payrolls. All eyes on jobs data.",
+            "true": "The Week Ahead: PCE and payrolls.",
             "false": "Fed holds interest rates steady.",
         },
     },
@@ -130,7 +148,7 @@ BIT_QUESTIONS: dict = {
         "type": "noul",
         "instructions": "Odds or forecast only?",
         "criteria": {
-            "true": "Fed October Rate Hike Odds Exceed 60%. Polymarket 64%.",
+            "true": "Fed October Rate Hike Odds Exceed 60%.",
             "false": "Fed holds interest rates steady.",
         },
     },
@@ -138,8 +156,24 @@ BIT_QUESTIONS: dict = {
         "type": "noul",
         "instructions": "Already-moved tape or wallet recap?",
         "criteria": {
-            "true": "U.S. stocks rise as Fed signals hikes. How the hike impacts your wallet.",
+            "true": "U.S. stocks rise as Fed signals hikes.",
             "false": "Trump rejects Iran proposal to reopen Hormuz.",
+        },
+    },
+    "v_pt": {
+        "type": "noul",
+        "instructions": "Analyst price target or rating change only?",
+        "criteria": {
+            "true": "JPMorgan upgrades America Movil and raises PT to $32.",
+            "false": "AMETEK completes $5.0 billion acquisition of Indicor.",
+        },
+    },
+    "v_earnings": {
+        "type": "noul",
+        "instructions": "Earnings print or estimate beat/miss?",
+        "criteria": {
+            "true": "Cenovus Q2 2026 non-GAAP EPS $1.08 misses estimates.",
+            "false": "Amgen gets FDA approval to update IMDELLTRA label.",
         },
     },
     "v_ask": {
@@ -154,7 +188,7 @@ BIT_QUESTIONS: dict = {
         "type": "noul",
         "instructions": "Not a market act?",
         "criteria": {
-            "true": "Golden retriever puppy looks like a polar bear. Patio storage.",
+            "true": "Golden retriever puppy looks like a polar bear.",
             "false": "Buckhead tuna recalled across 5 states.",
         },
     },
@@ -162,24 +196,24 @@ BIT_QUESTIONS: dict = {
         "type": "noul",
         "instructions": "Finished act verb?",
         "criteria": {
-            "true": "holds, agreed, rejects, ended, recalled, identifies, verdict, acquires.",
-            "false": "odds, could, may, should, watch, forecast.",
+            "true": "completes, approved, wins, divests, stockholders approve, now live.",
+            "false": "odds, could, price target, EPS beat.",
         },
     },
     "k_print": {
         "type": "noul",
         "instructions": "Official print or rule?",
         "criteria": {
-            "true": "Fed holds rates. FDA outbreak. CAFE rule. $6b budget.",
+            "true": "Fed holds rates. FDA approval. EMA CHMP. CHIPS Act.",
             "false": "Barr says more hikes likely needed.",
         },
     },
     "k_dollar": {
         "type": "noul",
-        "instructions": "Named name plus money?",
+        "instructions": "Money amount AND a finished act verb?",
         "criteria": {
-            "true": "Apple $5.7 billion verdict. Akamai $11.6B deal.",
-            "false": "Gold ends week lower at $4,285.",
+            "true": "AMETEK completes $5.0 billion acquisition.",
+            "false": "Gold ends week lower at $4,285. EPS $1.08 misses.",
         },
     },
     "k_choke": {
@@ -194,7 +228,7 @@ BIT_QUESTIONS: dict = {
         "type": "noul",
         "instructions": "State plus named policy object?",
         "criteria": {
-            "true": "China weighs allowing Nvidia chips. Trump ended EV rule.",
+            "true": "Pfizer to share revenue with HHS on overseas drug prices.",
             "false": "How Trump became mob boss of the United States.",
         },
     },
@@ -226,7 +260,15 @@ def code_veto(title: str) -> str:
 
 def code_keep(title: str) -> str:
     t = title or ""
+    if DONE_RE.search(t):
+        return "k_done"
     for name, rx in KEEP_RES:
+        if name == "k_done":
+            continue
+        if name == "k_dollar":
+            if rx.search(t) and DONE_RE.search(t):
+                return "k_dollar"
+            continue
         if rx.search(t):
             return name
     return ""
@@ -267,7 +309,10 @@ def decide(row: dict, answers: dict | None = None) -> dict:
 
     keep = code_keep(title)
     if answers:
+        done_yes = _noul(answers, "k_done") >= KEEP_NOUL or bool(DONE_RE.search(title))
         for name, _rx in KEEP_RES:
+            if name == "k_dollar" and not done_yes:
+                continue
             if _noul(answers, name) >= KEEP_NOUL:
                 keep = keep or name
 
