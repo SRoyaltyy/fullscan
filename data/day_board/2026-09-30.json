@@ -1,12 +1,12 @@
 {
   "date": "2026-09-30",
-  "generated_at": "2026-09-30T05:56:41.023395-04:00",
+  "generated_at": "2026-09-30T12:10:27.716877-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
   "counts": {
-    "ok": 6,
-    "partial": 2,
+    "ok": 7,
+    "partial": 1,
     "fail": 0,
     "n": 8
   },
@@ -177,7 +177,7 @@
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 8,
+      "n_req_ok": 9,
       "n_req": 20,
       "n_opt_ok": 3,
       "n_opt": 3,
@@ -373,10 +373,10 @@
           "name": "Pre-open status JSON",
           "path": "01_daily/2026-09-30_preopen_status.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "all_ok=False missing=['sector_predict']",
+          "size": 3029,
+          "said": "all_ok=False \u00b7 qc=False \u00b7 grok=False \u00b7 book=True \u00b7 missing sector_predict",
           "bullets": []
         },
         {
@@ -560,8 +560,8 @@
           "path": "01_daily/weather/2026-09-30_weather.json",
           "role": "required",
           "status": "OK",
-          "reason": "sectors=11 bytes=9693 vix=falling yields=rising",
-          "size": 9693,
+          "reason": "sectors=11 bytes=9735 vix=falling yields=rising",
+          "size": 9735,
           "said": "favorable 1 \u00b7 hostile 8 \u00b7 neutral 2",
           "bullets": [
             "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Real Estate, Technology, Utilities",
@@ -593,10 +593,10 @@
           "role": "optional",
           "status": "OK",
           "reason": "rows=2629",
-          "size": 7544304,
+          "size": 7544433,
           "said": "28 rows",
           "bullets": [
-            "GMAB, FPI, KBR, PBR-A, ATRC, AVPT, SFL, BNL"
+            "FPI, GMAB, ATRC, KBR, PBR-A, SFL, AVPT, PM"
           ]
         },
         {
@@ -606,27 +606,27 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=2629",
-          "size": 8335042,
+          "size": 8335167,
           "said": "25 rows",
           "bullets": [
-            "ATRC, FIGS, WST, LLY, CVLT, FPI, PANW, BJ"
+            "ATRC, FIGS, WST, GMAB, FPI, TLYS, PANW, PCRX"
           ]
         }
       ],
       "said": "25 rows",
       "bullets": [
-        "ATRC, FIGS, WST, LLY, CVLT"
+        "ATRC, FIGS, WST, GMAB, FPI"
       ]
     },
     {
       "key": "catalyst",
       "name": "Catalyst dossiers",
       "yaml": "catalyst_daily.yml",
-      "status": "PARTIAL",
+      "status": "OK",
       "inputs_ready": true,
       "n_req_ok": 0,
       "n_req": 0,
-      "n_opt_ok": 0,
+      "n_opt_ok": 1,
       "n_opt": 1,
       "files": [
         {
@@ -665,10 +665,10 @@
           "name": "Catalyst dossiers JSON",
           "path": "01_daily/catalyst/2026-09-30_dossiers.json",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "usable=7/7",
+          "size": 24554,
+          "said": "7/8 usable \u00b7 Grok \u2192 DeepSeek \u00b7 NE, RIG, SLB, BKR, KGS, SKYW, SSRM, NEM",
           "bullets": []
         }
       ],
@@ -779,8 +779,8 @@
           "path": "01_daily/weather/2026-09-30_weather.json",
           "role": "input",
           "status": "OK",
-          "reason": "sectors=11 bytes=9693 vix=falling yields=rising",
-          "size": 9693,
+          "reason": "sectors=11 bytes=9735 vix=falling yields=rising",
+          "size": 9735,
           "said": "favorable 1 \u00b7 hostile 8 \u00b7 neutral 2",
           "bullets": [
             "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Real Estate, Technology, Utilities",
@@ -794,10 +794,10 @@
           "role": "input",
           "status": "OK",
           "reason": "rows=2629",
-          "size": 8335042,
+          "size": 8335167,
           "said": "25 rows",
           "bullets": [
-            "ATRC, FIGS, WST, LLY, CVLT, FPI, PANW, BJ"
+            "ATRC, FIGS, WST, GMAB, FPI, TLYS, PANW, PCRX"
           ]
         },
         {
@@ -833,7 +833,7 @@
           "role": "required",
           "status": "OK",
           "reason": "horizons=5 names=195",
-          "size": 1435085,
+          "size": 1435522,
           "said": "1d BUY SN, MHK, FIGS, CAKE, AVPT, CORT, CDNA, ETON \u00b7 SELL ROIV, RBLX, VSAT, BIDU, SOC, AXSM \u00b7 0.49299999999999994",
           "bullets": []
         },
@@ -844,10 +844,10 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 73109,
+          "size": 73118,
           "said": "Stock book \u2014 2026-09-30",
           "bullets": [
-            "_Generated 2026-09-30T05:56:39.283788-04:00_",
+            "_Generated 2026-09-30T07:10:21.555387-04:00_",
             "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
           ]
         },
@@ -911,7 +911,7 @@
           "role": "input",
           "status": "OK",
           "reason": "horizons=5 names=195",
-          "size": 1435085,
+          "size": 1435522,
           "said": "1d BUY SN, MHK, FIGS, CAKE, AVPT, CORT, CDNA, ETON \u00b7 SELL ROIV, RBLX, VSAT, BIDU, SOC, AXSM \u00b7 0.49299999999999994",
           "bullets": []
         },
@@ -1779,6 +1779,31 @@
         }
       ],
       "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 GMAB, FPI, KBR, PBR-A, ATRC \u00b7 2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 ATRC, FIGS, WST, LLY, CVLT"
+    },
+    {
+      "key": "weather",
+      "title": "Weather / regime",
+      "date": "2026-09-30",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-30T12:10:27.071031-04:00",
+      "files": [
+        {
+          "path": "01_daily/weather/2026-09-30_weather.json",
+          "ok": true,
+          "reason": "",
+          "size": 9735,
+          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}"
+        },
+        {
+          "path": "01_daily/weather/2026-09-30_weather.md",
+          "ok": true,
+          "reason": "",
+          "size": 5360,
+          "preview": "# Weather report \u2014 2026-09-30\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+        }
+      ],
+      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-09-30\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
     }
   ],
   "href": {
