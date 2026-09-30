@@ -242,7 +242,7 @@ BIT_QUESTIONS: dict = {
             ),
             "false": (
                 "Capita Flags CSPS Costs but Touts Contract Wins. "
-                "$10,000 invested at SpaceX stock IPO is now worth."
+                "Crystal Jade holding companies in S’pore, Hong Kong placed under receivership."
             ),
         },
     },
