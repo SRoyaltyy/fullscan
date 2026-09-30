@@ -1,17 +1,16 @@
 # Finviz Daily Digest — 2026-09-29
 
-_Generated 2026-09-29T04:15:59.831908-04:00 · export=data/exports/finviz_2026-09-28.csv · ticker digests=5887 · high-signal=2047_
+_Generated 2026-09-30T02:40:22.420884-04:00 · export=data/exports/finviz_2026-09-29.csv · ticker digests=5890 · high-signal=2008_
 
 ## Major indices (live quote page)
 
-- **S&P 500 (SPY)**: Michael Burry Weighs Peter Schiffs S&P 500 Crash Warning As UBS Flags Fed Risk  Rare October Hike Odds Hit 70%
-- **Nasdaq-100 (QQQ)**: Michael Burry Weighs Peter Schiffs S&P 500 Crash Warning As UBS Flags Fed Risk  Rare October Hike Odds Hit 70%
-- **Dow Jones (DIA)**: S&P 500, Dow, Nasdaq Drop Under Pressure From Elevated Yields As Investors Shrug Off Trumps Iran Sanction Relief  NVDA, BA, AMD, NVTS, CBRS In Focus
+- **S&P 500 (SPY)**: Stock Market: Will S&P 500 Open Up or Down Today?
+- **Nasdaq-100 (QQQ)**: Biotech Lagged The Broader Market In September  Did Retail Favorites SLS, IBRX, VNDA And IOVA Dodge XBIs Slump?
+- **Dow Jones (DIA)**: S&P 500, Dow Extend Losses From Elevated Yield Pressure  SPCX, TGT, AAPL, MU, NTAP In Focus
 - **Russell 2000 (IWM)**: Evolution Metals Just Joined the Indexes Behind $12.2 Trillion in Invested Assets (NASDAQ: EMAT)
 
 ## High-signal ticker digests (ranked)
 
-- **ABBV** [Healthcare]: AbbVie announces U.S. FDA approval of JUVMO (tavapadon) as the first selective D1/D5 receptor agonist for the treatment of adults with Parkinson's disease.
 - **AEM** [Basic Materials]: Agnico Eagle shares fall after spot gold drops more than $100 as hawkish Federal Reserve comments boost expectations of an additional October rate hike.
 - **AJG** [Financial]: Arthur J. Gallagher & Co. announces acquisition of Colorado-based Innovise Business Consultants, expanding its commercial insurance and surety bonding capabilities in the Western U.S.
 - **AME** [Industrials]: AMETEK completes $5.0 billion all-cash acquisition of Indicor Instrumentation
@@ -19,17 +18,18 @@ _Generated 2026-09-29T04:15:59.831908-04:00 · export=data/exports/finviz_2026-0
 - **AMX** [Communication Serv]: JPMorgan upgrades America Movil to Overweight from Neutral and raises its price target to $32 from $30.
 - **AON** [Financial]: Aon disclosed in an SEC filing that it has secured a $4 billion term loan and a $3 billion revolving credit facility to help finance its pending acquisition of USI.
 - **APH** [Technology]: Fabrinet earnings weakness and rising yields spark 6.5% APH drop
-- **ARGX** [Healthcare]: argenx announces it has completed the acquisition of Forte Biosciences for $77 per share in cash, adding first-in-class anti-CD122 antibody FB102 to its immunology pipeline.
-- **BA** [Industrials]: Boeing 737 MAX 10 certification halted by FAA over flight software glitch, putting 31% of undelivered 737 order book at risk
-- **BDX** [Healthcare]: Becton Dickinson beats Q3 2026 estimates with EPS $3.23 on $5.0B revenue, raises FY26 EPS guidance to $12.62–$12.72
+- **APO** [Financial]: Apollo funds complete acquisition of Nippon Sheet Glass, launching new management structure at the glass maker
+- **BA** [Industrials]: Boeing wins U.S. Navy F/A-XX sixth-generation fighter contract valued at more than $20 billion
 - **BNS** [Financial]: Bank of Nova Scotia posts record Q3 2026 EPS $2.28 as National Bank upgrades to Outperform, lifts target to C$142
 - **BNY** [Financial]: BNY announces it will raise its Prime Lending Rate by 25 basis points to 7.00% effective September 17, 2026.
 - **BSX** [Healthcare]: Citi downgrades Boston Scientific to Neutral, cuts target to $50 on pulsed field ablation and LAAC concerns
+- **BTI** [Consumer Defensive]: British American Tobacco cuts its 2026 revenue and profit growth outlook to the lower end of prior guidance at its Capital Markets Day, and shares fall after the update.
 - **BX** [Financial]: Blackstone Infrastructure and PNM file amended New Mexico PRC merger plan with $220M ratepayer credits and $80M community benefits for $11.5B TXNM deal
 - **CAH** [Healthcare]: Barron’s reports that Cardinal Health CEO Jason Hollar recently sold about $29 million of company stock following the post-earnings share surge to record levels.
 - **CI** [Healthcare]: Jefferies downgrades Cigna to Hold from Buy, cuts price target to $307 from $336 on concern consensus too high post EviCore sale, Centene prescription drug plan shrinkage
+- **CIEN** [Technology]: Evercore ISI upgrades Ciena to Outperform, raises price target to $550 from $375
 - **CM** [Financial]: Canadian Imperial Bank Of Commerce reports fiscal Q3 2026 results with non-GAAP EPS $1.97 (+25% YoY) and revenue $6.0B (+14% YoY), beats EPS and revenue estimates
-- **CMCSA** [Communication Serv]: Comcast shares fall after Citi cuts its price target to $27.50 and KeyBanc downgrades the stock to Underweight with an $18 target.
+- **CMCSA** [Communication Serv]: Barclays cuts Comcast price target to $24, keeps Equal Weight on broadband competition, NBCUniversal/Sky separation uncertainty
 - **CNQ** [Energy]: Canadian Natural Resources posts record Q2 2026 results with EPS $1.58, raises 2026 production guidance and returns about $4B to shareholders
 - **COR** [Healthcare]: Cencora reaffirms fiscal 2026 adjusted EPS guidance despite Walgreens prescription volume shift
 - **COST** [Consumer Defensive]: Freedom Broker, Truist and Raymond James cut Costco price targets on valuation, moderating membership growth after Q4 results
@@ -48,39 +48,46 @@ _Generated 2026-09-29T04:15:59.831908-04:00 · export=data/exports/finviz_2026-0
 - **FIX** [Industrials]: Zacks Strong Buy upgrade and AI data center backlog drive 11% FIX surge
 - **GE** [Industrials]: GE Aerospace plans $225 million upgrade of Niskayuna research center for AI, robotics and propulsion projects
 - **GEV** [Industrials]: GE Vernova settles over $300 million Vineyard Wind payment dispute, withdraws contract-termination notice and legal claims on Massachusetts offshore project
+- **GM** [Consumer Cyclical]: GM and LG Energy to upgrade Tennessee Ultium Cells plant for lower-cost lithium manganese-rich EV battery cells
 - **GSK** [Healthcare]: Positive Jideytro ARROS-1 trial data for first-line ROS1+ NSCLC drives GSK premarket surge
 - **GWW** [Industrials]: Barclays cuts Grainger target to $1,172, sending shares down 2.7% during Friday trading
-- **HCA** [Healthcare]: HCA Healthcare announces it has completed the previously announced acquisition of The College of Health Care Professions, expanding its healthcare education platform.
 
 ## By sector (top signal)
 
-### Healthcare (n=8)
-- ABBV: AbbVie announces U.S. FDA approval of JUVMO (tavapadon) as the first selective D1/D5 receptor agonist for the treatment of adults with Parkinson's disease.
-- AMGN: Jefferies raises Amgen price target to $410 after positive Phase 3 dazodalibep data in systemic Sjögren's disease
-- ARGX: argenx announces it has completed the acquisition of Forte Biosciences for $77 per share in cash, adding first-in-class anti-CD122 antibody FB102 to its immunology pipeline.
-- BDX: Becton Dickinson beats Q3 2026 estimates with EPS $3.23 on $5.0B revenue, raises FY26 EPS guidance to $12.62–$12.72
-- BSX: Citi downgrades Boston Scientific to Neutral, cuts target to $50 on pulsed field ablation and LAAC concerns
+### Financial (n=8)
+- AJG: Arthur J. Gallagher & Co. announces acquisition of Colorado-based Innovise Business Consultants, expanding its commercial insurance and surety bonding capabilities in the Western U.S.
+- AON: Aon disclosed in an SEC filing that it has secured a $4 billion term loan and a $3 billion revolving credit facility to help finance its pending acquisition of USI.
+- APO: Apollo funds complete acquisition of Nippon Sheet Glass, launching new management structure at the glass maker
+- BNS: Bank of Nova Scotia posts record Q3 2026 EPS $2.28 as National Bank upgrades to Outperform, lifts target to C$142
+- BNY: BNY announces it will raise its Prime Lending Rate by 25 basis points to 7.00% effective September 17, 2026.
 
 ### Industrials (n=8)
 - AME: AMETEK completes $5.0 billion all-cash acquisition of Indicor Instrumentation
-- BA: Boeing 737 MAX 10 certification halted by FAA over flight software glitch, putting 31% of undelivered 737 order book at risk
+- BA: Boeing wins U.S. Navy F/A-XX sixth-generation fighter contract valued at more than $20 billion
 - CSX: CSX delivers record revenue, raises 2026 margin and free cash flow outlook
 - CTAS: Cintas posts record margins, raises FY27 guidance on broad-based organic growth
 - FAST: Fastenal beats Q2 estimates with EPS $0.33 (+14% YoY), revenue $2.4B (+15% YoY), notes gross margin pressure and lowers 2026 digital sales mix target
 
 ### Technology (n=8)
 - APH: Fabrinet earnings weakness and rising yields spark 6.5% APH drop
+- CIEN: Evercore ISI upgrades Ciena to Outperform, raises price target to $550 from $375
 - CSCO: Cisco wins multiyear deal to upgrade University of Notre Dame campus network with nearly 1,000 Catalyst 9300X switches
 - DDOG: Snowflake's stronger-than-expected quarterly revenue and earnings support cloud and AI-focused enterprise software peers including Datadog
 - DELL: Morgan Stanley raises probability of Dell $756 bull-case scenario after meeting with COO Jeff Clarke, citing sharply higher AI inference demand by 2030
-- HPE: ITC opens investigation into Netlist claims HPE DDR5 RDIMM and MRDIMM products infringe four patents, exposing HPE to import exclusion, cease-and-desist orders
 
-### Financial (n=8)
-- AJG: Arthur J. Gallagher & Co. announces acquisition of Colorado-based Innovise Business Consultants, expanding its commercial insurance and surety bonding capabilities in the Western U.S.
-- AON: Aon disclosed in an SEC filing that it has secured a $4 billion term loan and a $3 billion revolving credit facility to help finance its pending acquisition of USI.
-- BNS: Bank of Nova Scotia posts record Q3 2026 EPS $2.28 as National Bank upgrades to Outperform, lifts target to C$142
-- BNY: BNY announces it will raise its Prime Lending Rate by 25 basis points to 7.00% effective September 17, 2026.
-- BX: Blackstone Infrastructure and PNM file amended New Mexico PRC merger plan with $220M ratepayer credits and $80M community benefits for $11.5B TXNM deal
+### Healthcare (n=8)
+- AMGN: Jefferies raises Amgen price target to $410 after positive Phase 3 dazodalibep data in systemic Sjögren's disease
+- BSX: Citi downgrades Boston Scientific to Neutral, cuts target to $50 on pulsed field ablation and LAAC concerns
+- CAH: Barron’s reports that Cardinal Health CEO Jason Hollar recently sold about $29 million of company stock following the post-earnings share surge to record levels.
+- CI: Jefferies downgrades Cigna to Hold from Buy, cuts price target to $307 from $336 on concern consensus too high post EviCore sale, Centene prescription drug plan shrinkage
+- COR: Cencora reaffirms fiscal 2026 adjusted EPS guidance despite Walgreens prescription volume shift
+
+### Consumer Cyclical (n=5)
+- GM: GM and LG Energy to upgrade Tennessee Ultium Cells plant for lower-cost lithium manganese-rich EV battery cells
+- HD: Home Depot announces the nationwide rollout of its Magic Apron AI-powered in-store assistant with localized, personalized shopping guidance now live in all U.S. stores.
+- HLT: Deutsche Bank upgrades Hilton Worldwide to Buy from Hold, raises price target to $365
+- MCD: Morgan Stanley and Melius cut McDonald's price targets to $297 and $230 after NEXT strategy investor day
+- NKE: Nike to cut ties with thousands of third-party online distributors in China, boosting focus on own digital channels
 
 ### Energy (n=4)
 - CNQ: Canadian Natural Resources posts record Q2 2026 results with EPS $1.58, raises 2026 production guidance and returns about $4B to shareholders
@@ -95,15 +102,11 @@ _Generated 2026-09-29T04:15:59.831908-04:00 · export=data/exports/finviz_2026-0
 
 ### Communication Services (n=3)
 - AMX: JPMorgan upgrades America Movil to Overweight from Neutral and raises its price target to $32 from $30.
-- CMCSA: Comcast shares fall after Citi cuts its price target to $27.50 and KeyBanc downgrades the stock to Underweight with an $18 target.
-- META: Monness, Crespi, Hardt raises Meta Platforms price target to $830 from $730, keeps Buy rating citing Muse AI traction at Meta Connect 2026
+- CMCSA: Barclays cuts Comcast price target to $24, keeps Equal Weight on broadband competition, NBCUniversal/Sky separation uncertainty
+- NFLX: Deutsche Bank upgrades Netflix to Buy from Hold, cuts price target to $95 from $100
 
-### Consumer Cyclical (n=3)
-- HD: Home Depot announces the nationwide rollout of its Magic Apron AI-powered in-store assistant with localized, personalized shopping guidance now live in all U.S. stores.
-- HLT: Deutsche Bank upgrades Hilton Worldwide to Buy from Hold, raises price target to $365
-- MCD: Morgan Stanley and Melius cut McDonald's price targets to $297 and $230 after NEXT strategy investor day
-
-### Consumer Defensive (n=2)
+### Consumer Defensive (n=3)
+- BTI: British American Tobacco cuts its 2026 revenue and profit growth outlook to the lower end of prior guidance at its Capital Markets Day, and shares fall after the update.
 - COST: Freedom Broker, Truist and Raymond James cut Costco price targets on valuation, moderating membership growth after Q4 results
 - MNST: Q2 earnings momentum and recent stock split fuel MNST 4.09% gain
 
