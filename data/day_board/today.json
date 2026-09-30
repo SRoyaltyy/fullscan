@@ -1,468 +1,48 @@
 {
-  "date": "2026-09-29",
-  "generated_at": "2026-09-30T02:40:23.733585-04:00",
+  "date": "2026-09-30",
+  "generated_at": "2026-09-30T04:14:53.605935-04:00",
   "overall": "PARTIAL",
-  "ranker_ready": true,
+  "ranker_ready": false,
   "counts": {
-    "ok": 7,
-    "partial": 1,
-    "fail": 0,
+    "ok": 1,
+    "partial": 3,
+    "fail": 4,
     "n": 8
   },
-  "buy_1d": [
-    {
-      "ticker": "ARHS",
-      "score": 0.9013014936750097
-    },
-    {
-      "ticker": "SONO",
-      "score": 0.882807210417524
-    },
-    {
-      "ticker": "SN",
-      "score": 0.4632041695805488
-    },
-    {
-      "ticker": "PDFS",
-      "score": 0.8511534460930921
-    },
-    {
-      "ticker": "SHOO",
-      "score": 0.7988795225956768
-    },
-    {
-      "ticker": "DT",
-      "score": 0.41888615803821805
-    },
-    {
-      "ticker": "GCT",
-      "score": 0.800810216334066
-    },
-    {
-      "ticker": "OLLI",
-      "score": 0.7642739401100922
-    },
-    {
-      "ticker": "CAKE",
-      "score": 0.757941251392074
-    },
-    {
-      "ticker": "ARQT",
-      "score": 0.7733596676403423
-    },
-    {
-      "ticker": "CDNA",
-      "score": 0.8021608286801538
-    },
-    {
-      "ticker": "BJ",
-      "score": 0.515825807162678
-    },
-    {
-      "ticker": "TAL",
-      "score": 0.6559776656383001
-    },
-    {
-      "ticker": "CORT",
-      "score": 0.3172479380905753
-    },
-    {
-      "ticker": "CRON",
-      "score": 0.7328939330237798
-    }
-  ],
-  "sell_1d": [
-    {
-      "ticker": "ROIV",
-      "score": -0.48567275371093904
-    },
-    {
-      "ticker": "PYXS",
-      "score": -0.37230461872539494
-    },
-    {
-      "ticker": "IKT",
-      "score": -0.3678967045840857
-    },
-    {
-      "ticker": "SOC",
-      "score": -0.3630747262047275
-    },
-    {
-      "ticker": "AXSM",
-      "score": -0.3565667884619267
-    },
-    {
-      "ticker": "CGEM",
-      "score": -0.35246126077385126
-    },
-    {
-      "ticker": "IFRX",
-      "score": -0.3441666123280977
-    },
-    {
-      "ticker": "BIDU",
-      "score": -0.3436914114265927
-    },
-    {
-      "ticker": "RBLX",
-      "score": -0.34135244732990916
-    },
-    {
-      "ticker": "CNC",
-      "score": -0.33876614376715025
-    },
-    {
-      "ticker": "IMNM",
-      "score": -0.3340638706930467
-    },
-    {
-      "ticker": "ZNTL",
-      "score": -0.3284977583228431
-    },
-    {
-      "ticker": "LUNG",
-      "score": -0.32614783185427215
-    },
-    {
-      "ticker": "CMPX",
-      "score": -0.3240353108758226
-    },
-    {
-      "ticker": "WVE",
-      "score": -0.3181899342286807
-    }
-  ],
-  "flatten": {
-    "said": "0 priced buys \u00b7 cash $102,271.92",
-    "bullets": [
-      "0 priced buys",
-      "cash $102,271.92"
-    ]
-  },
-  "general": {
-    "said": "UP  1.292",
-    "bullets": [
-      "bad: 1w 10Y +16bp at 5.17 handle",
-      "bad: Oct hike odds ~70% carried",
-      "bad: leftover Hormuz",
-      "good: Europe partial green",
-      "good: NQ +0.18% vs cash"
-    ],
-    "score": "1.292",
-    "direction": "up"
-  },
-  "sectors": {
-    "said": "0 up / 0 down / 0 flat",
-    "bullets": [
-      "XLB missing",
-      "XLC missing",
-      "XLY missing",
-      "XLP missing",
-      "XLE missing",
-      "XLF missing",
-      "XLV missing",
-      "XLI missing",
-      "XLRE missing",
-      "XLK missing",
-      "XLU missing"
-    ]
-  },
+  "buy_1d": [],
+  "sell_1d": [],
+  "flatten": {},
+  "general": {},
+  "sectors": {},
   "lands": [
-    {
-      "key": "join",
-      "title": "Join / match rank",
-      "date": "2026-09-29",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-29T12:18:38.838285-04:00",
-      "files": [
-        {
-          "path": "data/join/2026-09-29_ranked.csv",
-          "ok": true,
-          "reason": "",
-          "size": 2239909,
-          "preview": "5901 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 TAL, GLBE, KEYS, FORM, NVT"
-        }
-      ],
-      "preview": "5901 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 TAL, GLBE, KEYS, FORM, NVT"
-    },
-    {
-      "key": "peer_rs",
-      "title": "Peer RS",
-      "date": "2026-09-29",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-29T12:18:46.265492-04:00",
-      "files": [
-        {
-          "path": "data/peers/2026-09-29_peer_rs.csv",
-          "ok": true,
-          "reason": "",
-          "size": 817865,
-          "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
-        }
-      ],
-      "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
-    },
-    {
-      "key": "stock_book",
-      "title": "Stock book + green",
-      "date": "2026-09-29",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-29T12:19:04.609928-04:00",
-      "files": [
-        {
-          "path": "data/stock_book/2026-09-29_stock_book.json",
-          "ok": true,
-          "reason": "",
-          "size": 1535989,
-          "preview": "1d BUY ARHS, SONO, SN, PDFS, SHOO, DT, GCT, OLLI \u00b7 SELL ROIV, PYXS, IKT, SOC, AXSM, CGEM, IFRX, BIDU"
-        },
-        {
-          "path": "data/stock_book/2026-09-29_green.json",
-          "ok": true,
-          "reason": "",
-          "size": 2698,
-          "preview": "green 179 \u00b7 TAL, GLBE, KEYS, SHOO, EMBJ, CVLT, NTNX, FIGS, AVT, SN"
-        },
-        {
-          "path": "data/stock_book/2026-09-29_input_health.json",
-          "ok": true,
-          "reason": "",
-          "size": 2454,
-          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
-        },
-        {
-          "path": "data/stock_book/2026-09-29_suggestions.json",
-          "ok": true,
-          "reason": "",
-          "size": 13820,
-          "preview": "2026-09-29 BUY ARHS, SONO, SN, PDFS, SHOO, DT, GCT, OLLI \u00b7 SELL ROIV, PYXS, IKT, SOC, AXSM, CGEM, IFRX, BIDU"
-        },
-        {
-          "path": "data/stock_book/latest_suggestions.json",
-          "ok": true,
-          "reason": "",
-          "size": 13820,
-          "preview": "2026-09-29 BUY ARHS, SONO, SN, PDFS, SHOO, DT, GCT, OLLI \u00b7 SELL ROIV, PYXS, IKT, SOC, AXSM, CGEM, IFRX, BIDU"
-        },
-        {
-          "path": "01_daily/2026-09-29_stock_book.md",
-          "ok": true,
-          "reason": "",
-          "size": 97063,
-          "preview": "# Stock book \u2014 2026-09-29\n_Generated 2026-09-29T12:18:56.161340-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
-        }
-      ],
-      "preview": "1d BUY ARHS, SONO, SN, PDFS, SHOO, DT, GCT, OLLI \u00b7 SELL ROIV, PYXS, IKT, SOC, AXSM, CGEM, IFRX, BIDU \u00b7 green 179 \u00b7 TAL, GLBE, KEYS, SHOO, EMBJ, CVLT, NTNX, FIGS, AVT, SN \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-09-29 BUY ARHS, SONO, SN, PDFS, SHOO, DT, GCT, OLLI \u00b7 SELL ROIV, PYXS, IKT, SOC, AXSM, CGEM, IFRX, BIDU \u00b7 2026-09-29 BUY ARHS, SONO, SN, PDFS, SHOO, DT, GCT, OLLI \u00b7 SELL ROIV, PYXS, IKT, SOC, AXSM, CGEM, IFRX, BIDU \u00b7 # Stock book \u2014 2026-09-29\n_Generated 2026-09-29T12:18:56.161340-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
-    },
-    {
-      "key": "live_boards",
-      "title": "Live 1d BUY/SELL strip",
-      "date": "2026-09-29",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-29T12:19:10.882410-04:00",
-      "files": [
-        {
-          "path": "data/day_board/today.json",
-          "ok": true,
-          "reason": "",
-          "size": 23845,
-          "preview": "2026-09-29 BUY ARHS, SONO, SN, PDFS, SHOO, DT, GCT, OLLI \u00b7 SELL ROIV, PYXS, IKT, SOC, AXSM, CGEM, IFRX, BIDU"
-        },
-        {
-          "path": "data/day_board/latest.json",
-          "ok": true,
-          "reason": "",
-          "size": 773,
-          "preview": "keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages"
-        },
-        {
-          "path": "data/day_board/2026-09-29.json",
-          "ok": true,
-          "reason": "",
-          "size": 148717,
-          "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href"
-        },
-        {
-          "path": "data/day_board/2026-09-29_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 109216,
-          "preview": "2026-09-29 BUY ARHS, SONO, SN, PDFS, SHOO, DT, GCT, OLLI \u00b7 SELL ROIV, PYXS, IKT, SOC, AXSM, CGEM, IFRX, BIDU"
-        },
-        {
-          "path": "data/day_board/strategy_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 278811,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "data/day_board/2026-09-29_strategy_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 272849,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "data/day_board/today_strategies.json",
-          "ok": true,
-          "reason": "",
-          "size": 285209,
-          "preview": "2026-09-29 BUY ARHS, SONO, SN, PDFS, SHOO, DT, GCT, OLLI \u00b7 SELL ROIV, PYXS, IKT, SOC, AXSM, CGEM, IFRX, BIDU"
-        },
-        {
-          "path": "data/factor_mine/strategy_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 278811,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "dashboard/factor-mine/today.json",
-          "ok": true,
-          "reason": "",
-          "size": 109216,
-          "preview": "2026-09-29 BUY ARHS, SONO, SN, PDFS, SHOO, DT, GCT, OLLI \u00b7 SELL ROIV, PYXS, IKT, SOC, AXSM, CGEM, IFRX, BIDU"
-        },
-        {
-          "path": "dashboard/factor-mine/strategy_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 278811,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "dashboard/factor-mine/today_strategies.json",
-          "ok": true,
-          "reason": "",
-          "size": 278811,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "dashboard/today_strategies.json",
-          "ok": true,
-          "reason": "",
-          "size": 285209,
-          "preview": "2026-09-29 BUY ARHS, SONO, SN, PDFS, SHOO, DT, GCT, OLLI \u00b7 SELL ROIV, PYXS, IKT, SOC, AXSM, CGEM, IFRX, BIDU"
-        },
-        {
-          "path": "data/day_board/hold_live_px.json",
-          "ok": true,
-          "reason": "",
-          "size": 1702,
-          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
-        },
-        {
-          "path": "dashboard/factor-mine/hold_live_px.json",
-          "ok": true,
-          "reason": "",
-          "size": 1702,
-          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
-        }
-      ],
-      "preview": "2026-09-29 BUY ARHS, SONO, SN, PDFS, SHOO, DT, GCT, OLLI \u00b7 SELL ROIV, PYXS, IKT, SOC, AXSM, CGEM, IFRX, BIDU \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href \u00b7 2026-09-29 BUY ARHS, SONO, SN, PDFS, SHOO, DT, GCT, OLLI \u00b7 SELL ROIV, PYXS, IKT, SOC, AXSM, CGEM, IFRX, BIDU \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-29 BUY ARHS, SONO, SN, PDFS, SHOO, DT, GCT, OLLI \u00b7 SELL ROIV, PYXS, IKT, SOC, AXSM, CGEM, IFRX, BIDU \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-29 BUY ARHS, SONO, SN, PDFS, SHOO, DT, GCT, OLLI \u00b7 SELL ROIV, PYXS, IKT, SOC, AXSM, CGEM, IFRX, BIDU \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, orde"
-    },
-    {
-      "key": "weather",
-      "title": "Weather / regime",
-      "date": "2026-09-29",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-29T14:42:01.590388-04:00",
-      "files": [
-        {
-          "path": "01_daily/weather/2026-09-29_weather.json",
-          "ok": true,
-          "reason": "",
-          "size": 9690,
-          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -3.46, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -1.73, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -0.32, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -0.74, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.21, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -0.28, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.16, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -0.94, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}"
-        },
-        {
-          "path": "01_daily/weather/2026-09-29_weather.md",
-          "ok": true,
-          "reason": "",
-          "size": 5219,
-          "preview": "# Weather report \u2014 2026-09-29\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
-        }
-      ],
-      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -3.46, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -1.73, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -0.32, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -0.74, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.21, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -0.28, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.16, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -0.94, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-09-29\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
-    },
-    {
-      "key": "join",
-      "title": "Join / match rank",
-      "date": "2026-09-29",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-29T14:42:09.525937-04:00",
-      "files": [
-        {
-          "path": "data/join/2026-09-29_ranked.csv",
-          "ok": true,
-          "reason": "",
-          "size": 2239909,
-          "preview": "5901 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 TAL, GLBE, KEYS, FORM, NVT"
-        }
-      ],
-      "preview": "5901 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 TAL, GLBE, KEYS, FORM, NVT"
-    },
-    {
-      "key": "finviz_market_digest_close",
-      "title": "Finviz homepage market digest (close)",
-      "date": "2026-09-29",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-29T16:24:21.105562-04:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-09-29_finviz_market_digest_close.json",
-          "ok": true,
-          "reason": "",
-          "size": 8477,
-          "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for"
-        },
-        {
-          "path": "01_daily/news/2026-09-29_finviz_market_digest_close.md",
-          "ok": true,
-          "reason": "",
-          "size": 3925,
-          "preview": "# Finviz homepage market digest (close) \u2014 2026-09-29\n**Generated:** 2026-09-29T16:24:21.071939-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stocks ended mixed as long-term Treasury yields hit multi-decade highs while oil eased and AI news supported tech\n**Prior close:** SPX -0.18%  Nasdaq -0.41%  Dow -0.23%\n**SPX:** -0.18%  **Nasdaq:** -0.41%  **Dow:** -0.23%\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** JPM, GS, ADP, ANTW, OAIW, SMMT, AZN, CCL, KMX, FICO, PIPR, PWP, CNXC\n**Next session:** housing no \u00b7 retail no \u00b7 Fed yes\n**Earnings slate:** \u2014\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-09-30\n**Clock use:** `next_open`"
-        }
-      ],
-      "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest (close) \u2014 2026-09-29\n**Generated:** 2026-09-29T16:24:21.071939-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stocks ended mixed as long-term Treasury yields hit multi-decade highs while oil eased and AI news supported tech\n**Prior close:** SPX -0.18%  Nasdaq -0.41%  Dow -0.23%\n**SPX:** -0.18%  **Nasdaq:** -0.41%  **Dow:** -0.23%\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** JPM, GS, ADP, ANTW, OAIW, SMMT, AZN, CCL, KMX, FICO, PIPR, PWP, CNXC\n**Next session:** housing no \u00b7 retail no \u00b7 Fed yes\n**Earnings slate:** \u2014\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-09-30\n**Clock use:** `next_open`"
-    },
     {
       "key": "finviz_digest",
       "title": "Finviz digest",
-      "date": "2026-09-29",
+      "date": "2026-09-30",
       "ok": true,
       "pushed": true,
-      "at": "2026-09-30T02:40:22.687375-04:00",
+      "at": "2026-09-30T04:14:53.374487-04:00",
       "files": [
         {
-          "path": "01_daily/news/2026-09-29_finviz_digest.json",
+          "path": "01_daily/news/2026-09-30_finviz_digest.json",
           "ok": true,
           "reason": "",
-          "size": 97751,
+          "size": 97055,
           "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
         },
         {
-          "path": "01_daily/news/2026-09-29_finviz_digest.md",
+          "path": "01_daily/news/2026-09-30_finviz_digest.md",
           "ok": true,
           "reason": "",
-          "size": 11902,
-          "preview": "# Finviz Daily Digest \u2014 2026-09-29\n_Generated 2026-09-30T02:40:22.420884-04:00 \u00b7 export=data/exports/finviz_2026-09-29.csv \u00b7 ticker digests=5890 \u00b7 high-signal=2008_"
+          "size": 11891,
+          "preview": "# Finviz Daily Digest \u2014 2026-09-30\n_Generated 2026-09-30T04:14:53.233502-04:00 \u00b7 export=data/exports/finviz_2026-09-30.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_"
         },
         {
-          "path": "data/exports/finviz_2026-09-29.csv",
+          "path": "data/exports/finviz_2026-09-30.csv",
           "ok": true,
           "reason": "",
-          "size": 11481957,
-          "preview": "11686 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+          "size": 11030866,
+          "preview": "11686 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC"
         },
         {
           "path": "data/finviz/latest.csv",
@@ -472,14 +52,14 @@
           "preview": "11686 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
         },
         {
-          "path": "01_daily/news/2026-09-29_finviz_digest_preopen.json",
+          "path": "01_daily/news/2026-09-30_finviz_digest_preopen.json",
           "ok": true,
           "reason": "",
-          "size": 96986,
+          "size": 97055,
           "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
         }
       ],
-      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-09-29\n_Generated 2026-09-30T02:40:22.420884-04:00 \u00b7 export=data/exports/finviz_2026-09-29.csv \u00b7 ticker digests=5890 \u00b7 high-signal=2008_ \u00b7 11686 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\" \u00b7 11686 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\" \u00b7 keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
+      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-09-30\n_Generated 2026-09-30T04:14:53.233502-04:00 \u00b7 export=data/exports/finviz_2026-09-30.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_ \u00b7 11686 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC \u00b7 11686 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\" \u00b7 keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
