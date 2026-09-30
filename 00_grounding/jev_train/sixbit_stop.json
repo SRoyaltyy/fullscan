@@ -1,12 +1,12 @@
 {
   "n": 100,
   "gold_keep": 24,
-  "pred_keep": 23,
-  "precision": 0.7826,
-  "recall_print_done": 0.75,
-  "tp": 18,
-  "fp": 5,
-  "fn": 6,
+  "pred_keep": 21,
+  "precision": 0.9048,
+  "recall_print_done": 0.7917,
+  "tp": 19,
+  "fp": 2,
+  "fn": 5,
   "banned_keeps": [],
   "pass": false,
   "rows": [
@@ -18,11 +18,11 @@
       "reason": "print",
       "noul": {
         "tape": 0.23,
-        "soft": 0.47,
+        "soft": 0.57,
         "tip": 0.36,
-        "done": 0.35,
-        "print": 0.91,
-        "listed": 0.7
+        "done": 0.27,
+        "print": 0.92,
+        "listed": 0.69
       }
     },
     {
@@ -32,12 +32,12 @@
       "pred": "keep",
       "reason": "print",
       "noul": {
-        "tape": 0.22,
-        "soft": 0.48,
-        "tip": 0.36,
-        "done": 0.29,
+        "tape": 0.24,
+        "soft": 0.49,
+        "tip": 0.35,
+        "done": 0.23,
         "print": 0.92,
-        "listed": 0.71
+        "listed": 0.75
       }
     },
     {
@@ -47,12 +47,12 @@
       "pred": "keep",
       "reason": "print",
       "noul": {
-        "tape": 0.2,
-        "soft": 0.41,
-        "tip": 0.39,
-        "done": 0.34,
+        "tape": 0.22,
+        "soft": 0.42,
+        "tip": 0.37,
+        "done": 0.23,
         "print": 0.88,
-        "listed": 0.81
+        "listed": 0.8
       }
     },
     {
@@ -62,12 +62,12 @@
       "pred": "keep",
       "reason": "print",
       "noul": {
-        "tape": 0.27,
-        "soft": 0.34,
-        "tip": 0.35,
-        "done": 0.37,
-        "print": 0.94,
-        "listed": 0.64
+        "tape": 0.25,
+        "soft": 0.39,
+        "tip": 0.32,
+        "done": 0.3,
+        "print": 0.93,
+        "listed": 0.65
       }
     },
     {
@@ -78,11 +78,11 @@
       "reason": "print",
       "noul": {
         "tape": 0.22,
-        "soft": 0.36,
-        "tip": 0.33,
-        "done": 0.32,
-        "print": 0.9,
-        "listed": 0.74
+        "soft": 0.37,
+        "tip": 0.35,
+        "done": 0.23,
+        "print": 0.89,
+        "listed": 0.76
       }
     },
     {
@@ -92,27 +92,27 @@
       "pred": "keep",
       "reason": "print",
       "noul": {
-        "tape": 0.23,
-        "soft": 0.29,
-        "tip": 0.24,
-        "done": 0.34,
+        "tape": 0.26,
+        "soft": 0.25,
+        "tip": 0.26,
+        "done": 0.24,
         "print": 0.88,
-        "listed": 0.74
+        "listed": 0.72
       }
     },
     {
       "title": "St. Louis Fed President Warns: Excessive Silence from the Fed Could Push Up Rates and Inflation - finance.biggo.com",
       "label": "officer_voice",
       "gold": "keep",
-      "pred": "drop",
-      "reason": "soft",
+      "pred": "keep",
+      "reason": "print",
       "noul": {
-        "tape": 0.29,
-        "soft": 0.62,
-        "tip": 0.37,
-        "done": 0.28,
-        "print": 0.82,
-        "listed": 0.63
+        "tape": 0.25,
+        "soft": 0.58,
+        "tip": 0.38,
+        "done": 0.2,
+        "print": 0.83,
+        "listed": 0.59
       }
     },
     {
@@ -122,12 +122,12 @@
       "pred": "keep",
       "reason": "print",
       "noul": {
-        "tape": 0.27,
-        "soft": 0.53,
+        "tape": 0.26,
+        "soft": 0.5,
         "tip": 0.28,
-        "done": 0.36,
+        "done": 0.29,
         "print": 0.93,
-        "listed": 0.34
+        "listed": 0.38
       }
     },
     {
@@ -137,27 +137,27 @@
       "pred": "drop",
       "reason": "soft",
       "noul": {
-        "tape": 0.18,
-        "soft": 0.67,
-        "tip": 0.29,
-        "done": 0.27,
-        "print": 0.9,
-        "listed": 0.59
+        "tape": 0.17,
+        "soft": 0.69,
+        "tip": 0.25,
+        "done": 0.2,
+        "print": 0.91,
+        "listed": 0.65
       }
     },
     {
       "title": "Federal Reserve Board Member Says More Rate Hikes May Be Needed - tokenpost.com",
       "label": "officer_voice",
       "gold": "keep",
-      "pred": "keep",
-      "reason": "print",
+      "pred": "drop",
+      "reason": "soft",
       "noul": {
         "tape": 0.19,
-        "soft": 0.58,
-        "tip": 0.4,
-        "done": 0.3,
+        "soft": 0.6,
+        "tip": 0.36,
+        "done": 0.2,
         "print": 0.75,
-        "listed": 0.79
+        "listed": 0.74
       }
     },
     {
@@ -167,12 +167,12 @@
       "pred": "drop",
       "reason": "no_keep_bit",
       "noul": {
-        "tape": 0.4,
+        "tape": 0.43,
         "soft": 0.33,
-        "tip": 0.28,
-        "done": 0.37,
+        "tip": 0.27,
+        "done": 0.38,
         "print": 0.45,
-        "listed": 0.26
+        "listed": 0.24
       }
     },
     {
@@ -182,12 +182,12 @@
       "pred": "drop",
       "reason": "no_keep_bit",
       "noul": {
-        "tape": 0.12,
-        "soft": 0.23,
-        "tip": 0.1,
-        "done": 0.57,
-        "print": 0.58,
-        "listed": 0.56
+        "tape": 0.13,
+        "soft": 0.21,
+        "tip": 0.11,
+        "done": 0.53,
+        "print": 0.56,
+        "listed": 0.49
       }
     },
     {
@@ -198,11 +198,11 @@
       "reason": "done",
       "noul": {
         "tape": 0.27,
-        "soft": 0.32,
-        "tip": 0.2,
-        "done": 0.75,
-        "print": 0.44,
-        "listed": 0.75
+        "soft": 0.3,
+        "tip": 0.19,
+        "done": 0.73,
+        "print": 0.41,
+        "listed": 0.72
       }
     },
     {
@@ -212,12 +212,12 @@
       "pred": "keep",
       "reason": "done",
       "noul": {
-        "tape": 0.22,
-        "soft": 0.28,
-        "tip": 0.11,
-        "done": 0.75,
-        "print": 0.13,
-        "listed": 0.89
+        "tape": 0.2,
+        "soft": 0.25,
+        "tip": 0.12,
+        "done": 0.76,
+        "print": 0.12,
+        "listed": 0.87
       }
     },
     {
@@ -228,11 +228,11 @@
       "reason": "done",
       "noul": {
         "tape": 0.18,
-        "soft": 0.4,
+        "soft": 0.43,
         "tip": 0.18,
-        "done": 0.63,
-        "print": 0.13,
-        "listed": 0.84
+        "done": 0.64,
+        "print": 0.14,
+        "listed": 0.86
       }
     },
     {
@@ -243,11 +243,11 @@
       "reason": "done",
       "noul": {
         "tape": 0.25,
-        "soft": 0.3,
-        "tip": 0.09,
-        "done": 0.61,
-        "print": 0.11,
-        "listed": 0.81
+        "soft": 0.34,
+        "tip": 0.1,
+        "done": 0.63,
+        "print": 0.12,
+        "listed": 0.82
       }
     },
     {
@@ -257,10 +257,10 @@
       "pred": "keep",
       "reason": "done",
       "noul": {
-        "tape": 0.22,
-        "soft": 0.34,
-        "tip": 0.16,
-        "done": 0.75,
+        "tape": 0.23,
+        "soft": 0.35,
+        "tip": 0.17,
+        "done": 0.74,
         "print": 0.12,
         "listed": 0.82
       }
@@ -272,12 +272,12 @@
       "pred": "keep",
       "reason": "done",
       "noul": {
-        "tape": 0.21,
-        "soft": 0.34,
-        "tip": 0.2,
-        "done": 0.63,
-        "print": 0.1,
-        "listed": 0.47
+        "tape": 0.19,
+        "soft": 0.35,
+        "tip": 0.18,
+        "done": 0.64,
+        "print": 0.09,
+        "listed": 0.43
       }
     },
     {
@@ -287,12 +287,12 @@
       "pred": "keep",
       "reason": "done",
       "noul": {
-        "tape": 0.19,
-        "soft": 0.44,
-        "tip": 0.27,
-        "done": 0.68,
+        "tape": 0.2,
+        "soft": 0.45,
+        "tip": 0.26,
+        "done": 0.69,
         "print": 0.11,
-        "listed": 0.77
+        "listed": 0.76
       }
     },
     {
@@ -303,9 +303,9 @@
       "reason": "done",
       "noul": {
         "tape": 0.21,
-        "soft": 0.36,
-        "tip": 0.2,
-        "done": 0.63,
+        "soft": 0.38,
+        "tip": 0.22,
+        "done": 0.64,
         "print": 0.14,
         "listed": 0.58
       }
@@ -318,11 +318,11 @@
       "reason": "no_keep_bit",
       "noul": {
         "tape": 0.16,
-        "soft": 0.29,
+        "soft": 0.32,
         "tip": 0.14,
-        "done": 0.57,
-        "print": 0.1,
-        "listed": 0.19
+        "done": 0.54,
+        "print": 0.11,
+        "listed": 0.17
       }
     },
     {
@@ -332,12 +332,12 @@
       "pred": "keep",
       "reason": "done",
       "noul": {
-        "tape": 0.52,
-        "soft": 0.33,
-        "tip": 0.31,
+        "tape": 0.51,
+        "soft": 0.31,
+        "tip": 0.29,
         "done": 0.74,
-        "print": 0.19,
-        "listed": 0.77
+        "print": 0.18,
+        "listed": 0.78
       }
     },
     {
@@ -347,27 +347,27 @@
       "pred": "drop",
       "reason": "tape",
       "noul": {
-        "tape": 0.62,
+        "tape": 0.63,
         "soft": 0.28,
-        "tip": 0.4,
+        "tip": 0.42,
         "done": 0.47,
-        "print": 0.18,
-        "listed": 0.74
+        "print": 0.17,
+        "listed": 0.72
       }
     },
     {
       "title": "Anthropic warns AI may pose ‘existential risks to humanity’ in IPO filing - The Straits Times",
       "label": "finished_act",
       "gold": "keep",
-      "pred": "drop",
-      "reason": "no_keep_bit",
+      "pred": "keep",
+      "reason": "done",
       "noul": {
         "tape": 0.18,
         "soft": 0.51,
-        "tip": 0.17,
-        "done": 0.49,
+        "tip": 0.18,
+        "done": 0.6,
         "print": 0.15,
-        "listed": 0.38
+        "listed": 0.39
       }
     },
     {
@@ -377,10 +377,10 @@
       "pred": "drop",
       "reason": "no_keep_bit",
       "noul": {
-        "tape": 0.35,
-        "soft": 0.45,
-        "tip": 0.39,
-        "done": 0.44,
+        "tape": 0.33,
+        "soft": 0.46,
+        "tip": 0.35,
+        "done": 0.42,
         "print": 0.12,
         "listed": 0.18
       }
@@ -392,12 +392,12 @@
       "pred": "keep",
       "reason": "done",
       "noul": {
-        "tape": 0.34,
-        "soft": 0.29,
-        "tip": 0.26,
-        "done": 0.7,
+        "tape": 0.36,
+        "soft": 0.33,
+        "tip": 0.29,
+        "done": 0.71,
         "print": 0.11,
-        "listed": 0.14
+        "listed": 0.15
       }
     },
     {
@@ -407,12 +407,12 @@
       "pred": "drop",
       "reason": "no_keep_bit",
       "noul": {
-        "tape": 0.17,
+        "tape": 0.18,
         "soft": 0.24,
-        "tip": 0.13,
-        "done": 0.35,
+        "tip": 0.12,
+        "done": 0.52,
         "print": 0.09,
-        "listed": 0.14
+        "listed": 0.16
       }
     },
     {
@@ -423,11 +423,11 @@
       "reason": "tape",
       "noul": {
         "tape": 0.69,
-        "soft": 0.33,
-        "tip": 0.46,
-        "done": 0.47,
-        "print": 0.22,
-        "listed": 0.77
+        "soft": 0.43,
+        "tip": 0.45,
+        "done": 0.37,
+        "print": 0.2,
+        "listed": 0.76
       }
     },
     {
@@ -437,12 +437,12 @@
       "pred": "drop",
       "reason": "tape",
       "noul": {
-        "tape": 0.65,
-        "soft": 0.19,
+        "tape": 0.64,
+        "soft": 0.18,
         "tip": 0.27,
-        "done": 0.57,
-        "print": 0.8,
-        "listed": 0.82
+        "done": 0.47,
+        "print": 0.79,
+        "listed": 0.85
       }
     },
     {
@@ -452,12 +452,12 @@
       "pred": "drop",
       "reason": "no_keep_bit",
       "noul": {
-        "tape": 0.57,
-        "soft": 0.35,
-        "tip": 0.33,
-        "done": 0.41,
-        "print": 0.19,
-        "listed": 0.72
+        "tape": 0.56,
+        "soft": 0.38,
+        "tip": 0.3,
+        "done": 0.36,
+        "print": 0.2,
+        "listed": 0.71
       }
     },
     {
@@ -467,12 +467,12 @@
       "pred": "drop",
       "reason": "tape",
       "noul": {
-        "tape": 0.68,
-        "soft": 0.31,
-        "tip": 0.39,
-        "done": 0.45,
-        "print": 0.18,
-        "listed": 0.73
+        "tape": 0.67,
+        "soft": 0.33,
+        "tip": 0.42,
+        "done": 0.4,
+        "print": 0.19,
+        "listed": 0.72
       }
     },
     {
@@ -483,11 +483,11 @@
       "reason": "tape",
       "noul": {
         "tape": 0.69,
-        "soft": 0.28,
-        "tip": 0.35,
-        "done": 0.45,
+        "soft": 0.23,
+        "tip": 0.32,
+        "done": 0.41,
         "print": 0.16,
-        "listed": 0.7
+        "listed": 0.72
       }
     },
     {
@@ -497,12 +497,12 @@
       "pred": "drop",
       "reason": "tape",
       "noul": {
-        "tape": 0.62,
-        "soft": 0.34,
-        "tip": 0.33,
-        "done": 0.42,
-        "print": 0.21,
-        "listed": 0.74
+        "tape": 0.6,
+        "soft": 0.35,
+        "tip": 0.37,
+        "done": 0.4,
+        "print": 0.19,
+        "listed": 0.69
       }
     },
     {
@@ -512,11 +512,11 @@
       "pred": "drop",
       "reason": "tape",
       "noul": {
-        "tape": 0.65,
-        "soft": 0.5,
-        "tip": 0.29,
-        "done": 0.52,
-        "print": 0.15,
+        "tape": 0.67,
+        "soft": 0.46,
+        "tip": 0.28,
+        "done": 0.5,
+        "print": 0.12,
         "listed": 0.86
       }
     },
@@ -527,12 +527,12 @@
       "pred": "drop",
       "reason": "tape",
       "noul": {
-        "tape": 0.87,
-        "soft": 0.38,
+        "tape": 0.88,
+        "soft": 0.4,
         "tip": 0.29,
-        "done": 0.46,
+        "done": 0.44,
         "print": 0.16,
-        "listed": 0.89
+        "listed": 0.88
       }
     },
     {
@@ -542,12 +542,12 @@
       "pred": "drop",
       "reason": "tape",
       "noul": {
-        "tape": 0.61,
-        "soft": 0.44,
-        "tip": 0.39,
-        "done": 0.43,
-        "print": 0.18,
-        "listed": 0.81
+        "tape": 0.63,
+        "soft": 0.32,
+        "tip": 0.4,
+        "done": 0.36,
+        "print": 0.19,
+        "listed": 0.8
       }
     },
     {
@@ -557,10 +557,10 @@
       "pred": "drop",
       "reason": "no_keep_bit",
       "noul": {
-        "tape": 0.58,
-        "soft": 0.28,
-        "tip": 0.37,
-        "done": 0.39,
+        "tape": 0.57,
+        "soft": 0.3,
+        "tip": 0.36,
+        "done": 0.33,
         "print": 0.21,
         "listed": 0.67
       }
@@ -572,12 +572,12 @@
       "pred": "drop",
       "reason": "no_keep_bit",
       "noul": {
-        "tape": 0.58,
-        "soft": 0.45,
-        "tip": 0.31,
-        "done": 0.43,
-        "print": 0.12,
-        "listed": 0.45
+        "tape": 0.54,
+        "soft": 0.48,
+        "tip": 0.36,
+        "done": 0.42,
+        "print": 0.11,
+        "listed": 0.43
       }
     },
     {
@@ -587,12 +587,12 @@
       "pred": "drop",
       "reason": "no_keep_bit",
       "noul": {
-        "tape": 0.57,
-        "soft": 0.42,
-        "tip": 0.38,
-        "done": 0.46,
+        "tape": 0.54,
+        "soft": 0.37,
+        "tip": 0.41,
+        "done": 0.36,
         "print": 0.18,
-        "listed": 0.69
+        "listed": 0.66
       }
     },
     {
@@ -602,12 +602,12 @@
       "pred": "drop",
       "reason": "tape",
       "noul": {
-        "tape": 0.86,
-        "soft": 0.39,
-        "tip": 0.31,
-        "done": 0.5,
-        "print": 0.11,
-        "listed": 0.15
+        "tape": 0.87,
+        "soft": 0.42,
+        "tip": 0.32,
+        "done": 0.54,
+        "print": 0.1,
+        "listed": 0.16
       }
     },
     {
@@ -617,12 +617,12 @@
       "pred": "drop",
       "reason": "tape",
       "noul": {
-        "tape": 0.7,
-        "soft": 0.48,
-        "tip": 0.4,
+        "tape": 0.71,
+        "soft": 0.42,
+        "tip": 0.38,
         "done": 0.23,
-        "print": 0.13,
-        "listed": 0.9
+        "print": 0.12,
+        "listed": 0.89
       }
     },
     {
@@ -633,10 +633,10 @@
       "reason": "tape",
       "noul": {
         "tape": 0.66,
-        "soft": 0.35,
-        "tip": 0.32,
-        "done": 0.47,
-        "print": 0.12,
+        "soft": 0.34,
+        "tip": 0.3,
+        "done": 0.48,
+        "print": 0.14,
         "listed": 0.81
       }
     },
@@ -649,10 +649,10 @@
       "noul": {
         "tape": 0.69,
         "soft": 0.28,
-        "tip": 0.28,
+        "tip": 0.3,
         "done": 0.46,
-        "print": 0.15,
-        "listed": 0.47
+        "print": 0.16,
+        "listed": 0.42
       }
     },
     {
@@ -662,12 +662,12 @@
       "pred": "drop",
       "reason": "tape",
       "noul": {
-        "tape": 0.61,
-        "soft": 0.37,
-        "tip": 0.39,
-        "done": 0.51,
-        "print": 0.25,
-        "listed": 0.72
+        "tape": 0.6,
+        "soft": 0.35,
+        "tip": 0.42,
+        "done": 0.5,
+        "print": 0.26,
+        "listed": 0.77
       }
     },
     {
@@ -677,11 +677,11 @@
       "pred": "drop",
       "reason": "no_keep_bit",
       "noul": {
-        "tape": 0.47,
-        "soft": 0.53,
-        "tip": 0.39,
+        "tape": 0.45,
+        "soft": 0.54,
+        "tip": 0.37,
         "done": 0.3,
-        "print": 0.13,
+        "print": 0.15,
         "listed": 0.41
       }
     },
@@ -692,11 +692,11 @@
       "pred": "drop",
       "reason": "no_keep_bit",
       "noul": {
-        "tape": 0.47,
-        "soft": 0.37,
-        "tip": 0.35,
-        "done": 0.42,
-        "print": 0.14,
+        "tape": 0.49,
+        "soft": 0.3,
+        "tip": 0.34,
+        "done": 0.39,
+        "print": 0.16,
         "listed": 0.83
       }
     },
@@ -704,30 +704,30 @@
       "title": "Pressure on U.S. Treasurys eases after 30-year yield hits highest level since 2002 - CNBC",
       "label": "tape",
       "gold": "drop",
-      "pred": "keep",
-      "reason": "done",
+      "pred": "drop",
+      "reason": "no_keep_bit",
       "noul": {
-        "tape": 0.51,
+        "tape": 0.46,
         "soft": 0.26,
-        "tip": 0.32,
-        "done": 0.62,
-        "print": 0.16,
-        "listed": 0.81
+        "tip": 0.33,
+        "done": 0.52,
+        "print": 0.18,
+        "listed": 0.79
       }
     },
     {
       "title": "Caltex follows Shell's lead, raises petrol prices, Money News - AsiaOne",
       "label": "tape",
       "gold": "drop",
-      "pred": "keep",
-      "reason": "done",
+      "pred": "drop",
+      "reason": "no_keep_bit",
       "noul": {
-        "tape": 0.32,
-        "soft": 0.29,
-        "tip": 0.2,
-        "done": 0.69,
-        "print": 0.11,
-        "listed": 0.2
+        "tape": 0.31,
+        "soft": 0.31,
+        "tip": 0.19,
+        "done": 0.5,
+        "print": 0.13,
+        "listed": 0.22
       }
     },
     {
@@ -737,12 +737,12 @@
       "pred": "drop",
       "reason": "no_keep_bit",
       "noul": {
-        "tape": 0.54,
-        "soft": 0.32,
-        "tip": 0.31,
-        "done": 0.43,
-        "print": 0.13,
-        "listed": 0.67
+        "tape": 0.53,
+        "soft": 0.3,
+        "tip": 0.3,
+        "done": 0.41,
+        "print": 0.12,
+        "listed": 0.68
       }
     },
     {
@@ -752,12 +752,12 @@
       "pred": "drop",
       "reason": "tape",
       "noul": {
-        "tape": 0.72,
-        "soft": 0.3,
-        "tip": 0.31,
-        "done": 0.59,
+        "tape": 0.73,
+        "soft": 0.29,
+        "tip": 0.34,
+        "done": 0.61,
         "print": 0.11,
-        "listed": 0.22
+        "listed": 0.23
       }
     },
     {
@@ -767,12 +767,12 @@
       "pred": "drop",
       "reason": "no_keep_bit",
       "noul": {
-        "tape": 0.54,
-        "soft": 0.37,
-        "tip": 0.31,
-        "done": 0.55,
-        "print": 0.26,
-        "listed": 0.66
+        "tape": 0.52,
+        "soft": 0.4,
+        "tip": 0.29,
+        "done": 0.54,
+        "print": 0.27,
+        "listed": 0.7
       }
     },
     {
@@ -782,12 +782,12 @@
       "pred": "drop",
       "reason": "soft",
       "noul": {
-        "tape": 0.31,
-        "soft": 0.74,
-        "tip": 0.36,
-        "done": 0.29,
-        "print": 0.09,
-        "listed": 0.67
+        "tape": 0.32,
+        "soft": 0.73,
+        "tip": 0.34,
+        "done": 0.25,
+        "print": 0.08,
+        "listed": 0.73
       }
     },
     {
@@ -797,12 +797,12 @@
       "pred": "drop",
       "reason": "soft",
       "noul": {
-        "tape": 0.42,
+        "tape": 0.46,
         "soft": 0.67,
-        "tip": 0.38,
-        "done": 0.28,
-        "print": 0.1,
-        "listed": 0.53
+        "tip": 0.37,
+        "done": 0.27,
+        "print": 0.09,
+        "listed": 0.56
       }
     },
     {
@@ -812,11 +812,11 @@
       "pred": "drop",
       "reason": "soft",
       "noul": {
-        "tape": 0.49,
-        "soft": 0.63,
+        "tape": 0.47,
+        "soft": 0.64,
         "tip": 0.49,
-        "done": 0.38,
-        "print": 0.36,
+        "done": 0.31,
+        "print": 0.35,
         "listed": 0.63
       }
     },
@@ -827,12 +827,12 @@
       "pred": "drop",
       "reason": "no_keep_bit",
       "noul": {
-        "tape": 0.53,
-        "soft": 0.54,
-        "tip": 0.38,
-        "done": 0.39,
+        "tape": 0.56,
+        "soft": 0.57,
+        "tip": 0.36,
+        "done": 0.33,
         "print": 0.09,
-        "listed": 0.65
+        "listed": 0.63
       }
     },
     {
@@ -842,12 +842,12 @@
       "pred": "drop",
       "reason": "tape",
       "noul": {
-        "tape": 0.66,
-        "soft": 0.36,
-        "tip": 0.32,
-        "done": 0.43,
+        "tape": 0.67,
+        "soft": 0.34,
+        "tip": 0.35,
+        "done": 0.4,
         "print": 0.29,
-        "listed": 0.79
+        "listed": 0.81
       }
     },
     {
@@ -857,12 +857,12 @@
       "pred": "drop",
       "reason": "soft",
       "noul": {
-        "tape": 0.24,
-        "soft": 0.82,
-        "tip": 0.56,
-        "done": 0.29,
+        "tape": 0.25,
+        "soft": 0.81,
+        "tip": 0.54,
+        "done": 0.26,
         "print": 0.06,
-        "listed": 0.71
+        "listed": 0.72
       }
     },
     {
@@ -873,11 +873,11 @@
       "reason": "soft",
       "noul": {
         "tape": 0.3,
-        "soft": 0.63,
-        "tip": 0.41,
-        "done": 0.23,
+        "soft": 0.62,
+        "tip": 0.42,
+        "done": 0.16,
         "print": 0.21,
-        "listed": 0.81
+        "listed": 0.83
       }
     },
     {
@@ -888,11 +888,11 @@
       "reason": "soft",
       "noul": {
         "tape": 0.31,
-        "soft": 0.67,
-        "tip": 0.43,
-        "done": 0.36,
-        "print": 0.13,
-        "listed": 0.54
+        "soft": 0.66,
+        "tip": 0.41,
+        "done": 0.35,
+        "print": 0.14,
+        "listed": 0.52
       }
     },
     {
@@ -902,12 +902,12 @@
       "pred": "drop",
       "reason": "soft",
       "noul": {
-        "tape": 0.22,
-        "soft": 0.66,
-        "tip": 0.38,
-        "done": 0.39,
+        "tape": 0.24,
+        "soft": 0.67,
+        "tip": 0.39,
+        "done": 0.37,
         "print": 0.25,
-        "listed": 0.77
+        "listed": 0.78
       }
     },
     {
@@ -917,10 +917,10 @@
       "pred": "drop",
       "reason": "soft",
       "noul": {
-        "tape": 0.22,
-        "soft": 0.75,
-        "tip": 0.62,
-        "done": 0.33,
+        "tape": 0.21,
+        "soft": 0.73,
+        "tip": 0.63,
+        "done": 0.29,
         "print": 0.15,
         "listed": 0.84
       }
@@ -933,10 +933,10 @@
       "reason": "soft",
       "noul": {
         "tape": 0.35,
-        "soft": 0.64,
-        "tip": 0.53,
-        "done": 0.32,
-        "print": 0.1,
+        "soft": 0.66,
+        "tip": 0.55,
+        "done": 0.29,
+        "print": 0.11,
         "listed": 0.84
       }
     },
@@ -947,12 +947,12 @@
       "pred": "drop",
       "reason": "soft",
       "noul": {
-        "tape": 0.33,
-        "soft": 0.74,
-        "tip": 0.66,
-        "done": 0.24,
+        "tape": 0.35,
+        "soft": 0.75,
+        "tip": 0.64,
+        "done": 0.21,
         "print": 0.08,
-        "listed": 0.91
+        "listed": 0.9
       }
     },
     {
@@ -962,11 +962,11 @@
       "pred": "drop",
       "reason": "soft",
       "noul": {
-        "tape": 0.23,
-        "soft": 0.63,
-        "tip": 0.27,
-        "done": 0.32,
-        "print": 0.08,
+        "tape": 0.21,
+        "soft": 0.65,
+        "tip": 0.28,
+        "done": 0.33,
+        "print": 0.1,
         "listed": 0.86
       }
     },
@@ -978,9 +978,9 @@
       "reason": "soft",
       "noul": {
         "tape": 0.23,
-        "soft": 0.63,
-        "tip": 0.53,
-        "done": 0.19,
+        "soft": 0.6,
+        "tip": 0.55,
+        "done": 0.15,
         "print": 0.09,
         "listed": 0.76
       }
@@ -992,12 +992,12 @@
       "pred": "drop",
       "reason": "soft",
       "noul": {
-        "tape": 0.26,
-        "soft": 0.71,
+        "tape": 0.27,
+        "soft": 0.72,
         "tip": 0.54,
-        "done": 0.3,
-        "print": 0.18,
-        "listed": 0.81
+        "done": 0.25,
+        "print": 0.16,
+        "listed": 0.78
       }
     },
     {
@@ -1007,12 +1007,12 @@
       "pred": "drop",
       "reason": "no_keep_bit",
       "noul": {
-        "tape": 0.5,
-        "soft": 0.49,
-        "tip": 0.34,
-        "done": 0.4,
-        "print": 0.26,
-        "listed": 0.84
+        "tape": 0.49,
+        "soft": 0.48,
+        "tip": 0.33,
+        "done": 0.3,
+        "print": 0.25,
+        "listed": 0.79
       }
     },
     {
@@ -1022,12 +1022,12 @@
       "pred": "keep",
       "reason": "print",
       "noul": {
-        "tape": 0.27,
-        "soft": 0.48,
-        "tip": 0.34,
-        "done": 0.26,
-        "print": 0.84,
-        "listed": 0.73
+        "tape": 0.29,
+        "soft": 0.46,
+        "tip": 0.33,
+        "done": 0.19,
+        "print": 0.83,
+        "listed": 0.75
       }
     },
     {
@@ -1037,12 +1037,12 @@
       "pred": "keep",
       "reason": "print",
       "noul": {
-        "tape": 0.27,
+        "tape": 0.28,
         "soft": 0.33,
         "tip": 0.39,
-        "done": 0.37,
-        "print": 0.75,
-        "listed": 0.75
+        "done": 0.26,
+        "print": 0.74,
+        "listed": 0.76
       }
     },
     {
@@ -1054,10 +1054,10 @@
       "noul": {
         "tape": 0.27,
         "soft": 0.59,
-        "tip": 0.46,
-        "done": 0.27,
-        "print": 0.3,
-        "listed": 0.85
+        "tip": 0.42,
+        "done": 0.14,
+        "print": 0.31,
+        "listed": 0.83
       }
     },
     {
@@ -1067,12 +1067,12 @@
       "pred": "drop",
       "reason": "tape",
       "noul": {
-        "tape": 0.67,
-        "soft": 0.57,
-        "tip": 0.51,
-        "done": 0.47,
-        "print": 0.16,
-        "listed": 0.85
+        "tape": 0.66,
+        "soft": 0.56,
+        "tip": 0.49,
+        "done": 0.42,
+        "print": 0.18,
+        "listed": 0.82
       }
     },
     {
@@ -1084,10 +1084,10 @@
       "noul": {
         "tape": 0.58,
         "soft": 0.72,
-        "tip": 0.48,
-        "done": 0.33,
-        "print": 0.1,
-        "listed": 0.8
+        "tip": 0.49,
+        "done": 0.2,
+        "print": 0.09,
+        "listed": 0.82
       }
     },
     {
@@ -1097,12 +1097,12 @@
       "pred": "drop",
       "reason": "no_keep_bit",
       "noul": {
-        "tape": 0.41,
-        "soft": 0.59,
-        "tip": 0.52,
-        "done": 0.2,
-        "print": 0.12,
-        "listed": 0.66
+        "tape": 0.37,
+        "soft": 0.58,
+        "tip": 0.51,
+        "done": 0.18,
+        "print": 0.13,
+        "listed": 0.67
       }
     },
     {
@@ -1112,11 +1112,11 @@
       "pred": "drop",
       "reason": "soft",
       "noul": {
-        "tape": 0.37,
+        "tape": 0.4,
         "soft": 0.65,
-        "tip": 0.46,
-        "done": 0.22,
-        "print": 0.12,
+        "tip": 0.5,
+        "done": 0.18,
+        "print": 0.13,
         "listed": 0.47
       }
     },
@@ -1135,12 +1135,12 @@
       "pred": "drop",
       "reason": "source",
       "noul": {
-        "tape": 0.26,
+        "tape": 0.27,
         "soft": 0.58,
         "tip": 0.84,
-        "done": 0.34,
+        "done": 0.36,
         "print": 0.15,
-        "listed": 0.84
+        "listed": 0.81
       }
     },
     {
@@ -1150,12 +1150,12 @@
       "pred": "drop",
       "reason": "source",
       "noul": {
-        "tape": 0.28,
-        "soft": 0.57,
-        "tip": 0.82,
-        "done": 0.22,
+        "tape": 0.31,
+        "soft": 0.6,
+        "tip": 0.84,
+        "done": 0.23,
         "print": 0.1,
-        "listed": 0.79
+        "listed": 0.78
       }
     },
     {
@@ -1165,12 +1165,12 @@
       "pred": "drop",
       "reason": "source",
       "noul": {
-        "tape": 0.48,
-        "soft": 0.52,
-        "tip": 0.74,
-        "done": 0.21,
+        "tape": 0.47,
+        "soft": 0.51,
+        "tip": 0.7,
+        "done": 0.2,
         "print": 0.07,
-        "listed": 0.9
+        "listed": 0.91
       }
     },
     {
@@ -1180,10 +1180,10 @@
       "pred": "drop",
       "reason": "source",
       "noul": {
-        "tape": 0.21,
-        "soft": 0.43,
+        "tape": 0.22,
+        "soft": 0.47,
         "tip": 0.47,
-        "done": 0.47,
+        "done": 0.41,
         "print": 0.22,
         "listed": 0.9
       }
@@ -1195,11 +1195,11 @@
       "pred": "drop",
       "reason": "soft",
       "noul": {
-        "tape": 0.27,
-        "soft": 0.67,
-        "tip": 0.43,
-        "done": 0.47,
-        "print": 0.18,
+        "tape": 0.25,
+        "soft": 0.64,
+        "tip": 0.45,
+        "done": 0.32,
+        "print": 0.17,
         "listed": 0.88
       }
     },
@@ -1210,12 +1210,12 @@
       "pred": "drop",
       "reason": "soft",
       "noul": {
-        "tape": 0.29,
-        "soft": 0.63,
-        "tip": 0.61,
-        "done": 0.46,
-        "print": 0.17,
-        "listed": 0.79
+        "tape": 0.28,
+        "soft": 0.66,
+        "tip": 0.6,
+        "done": 0.29,
+        "print": 0.16,
+        "listed": 0.78
       }
     },
     {
@@ -1225,12 +1225,12 @@
       "pred": "drop",
       "reason": "no_keep_bit",
       "noul": {
-        "tape": 0.29,
-        "soft": 0.53,
-        "tip": 0.54,
-        "done": 0.32,
-        "print": 0.16,
-        "listed": 0.35
+        "tape": 0.32,
+        "soft": 0.52,
+        "tip": 0.48,
+        "done": 0.31,
+        "print": 0.17,
+        "listed": 0.34
       }
     },
     {
@@ -1241,26 +1241,26 @@
       "reason": "no_keep_bit",
       "noul": {
         "tape": 0.23,
-        "soft": 0.58,
-        "tip": 0.31,
-        "done": 0.44,
+        "soft": 0.54,
+        "tip": 0.29,
+        "done": 0.31,
         "print": 0.19,
-        "listed": 0.57
+        "listed": 0.63
       }
     },
     {
       "title": "Real estate expert reacts to Federal Reserve's rate hike and how it affects housing market - CBS News",
       "label": "junk",
       "gold": "drop",
-      "pred": "keep",
-      "reason": "done",
+      "pred": "drop",
+      "reason": "no_keep_bit",
       "noul": {
-        "tape": 0.31,
-        "soft": 0.38,
-        "tip": 0.33,
-        "done": 0.61,
-        "print": 0.26,
-        "listed": 0.75
+        "tape": 0.33,
+        "soft": 0.43,
+        "tip": 0.31,
+        "done": 0.24,
+        "print": 0.24,
+        "listed": 0.72
       }
     },
     {
@@ -1270,12 +1270,12 @@
       "pred": "drop",
       "reason": "tape",
       "noul": {
-        "tape": 0.77,
+        "tape": 0.76,
         "soft": 0.42,
-        "tip": 0.21,
-        "done": 0.24,
-        "print": 0.07,
-        "listed": 0.07
+        "tip": 0.17,
+        "done": 0.25,
+        "print": 0.08,
+        "listed": 0.06
       }
     },
     {
@@ -1286,8 +1286,8 @@
       "reason": "no_keep_bit",
       "noul": {
         "tape": 0.35,
-        "soft": 0.45,
-        "tip": 0.26,
+        "soft": 0.49,
+        "tip": 0.27,
         "done": 0.51,
         "print": 0.08,
         "listed": 0.12
@@ -1300,12 +1300,12 @@
       "pred": "drop",
       "reason": "no_keep_bit",
       "noul": {
-        "tape": 0.24,
-        "soft": 0.3,
-        "tip": 0.15,
-        "done": 0.34,
+        "tape": 0.18,
+        "soft": 0.27,
+        "tip": 0.16,
+        "done": 0.46,
         "print": 0.12,
-        "listed": 0.09
+        "listed": 0.1
       }
     },
     {
@@ -1315,9 +1315,9 @@
       "pred": "drop",
       "reason": "no_keep_bit",
       "noul": {
-        "tape": 0.24,
-        "soft": 0.46,
-        "tip": 0.18,
+        "tape": 0.23,
+        "soft": 0.43,
+        "tip": 0.17,
         "done": 0.38,
         "print": 0.14,
         "listed": 0.08
@@ -1328,12 +1328,12 @@
       "label": "junk",
       "gold": "drop",
       "pred": "drop",
-      "reason": "no_keep_bit",
+      "reason": "tip",
       "noul": {
         "tape": 0.18,
-        "soft": 0.44,
-        "tip": 0.57,
-        "done": 0.24,
+        "soft": 0.43,
+        "tip": 0.6,
+        "done": 0.23,
         "print": 0.09,
         "listed": 0.24
       }
@@ -1345,11 +1345,11 @@
       "pred": "drop",
       "reason": "source",
       "noul": {
-        "tape": 0.21,
+        "tape": 0.22,
         "soft": 0.51,
-        "tip": 0.75,
-        "done": 0.36,
-        "print": 0.14,
+        "tip": 0.78,
+        "done": 0.32,
+        "print": 0.16,
         "listed": 0.8
       }
     },
@@ -1361,10 +1361,10 @@
       "reason": "source",
       "noul": {
         "tape": 0.44,
-        "soft": 0.47,
-        "tip": 0.8,
-        "done": 0.26,
-        "print": 0.11,
+        "soft": 0.49,
+        "tip": 0.78,
+        "done": 0.24,
+        "print": 0.09,
         "listed": 0.87
       }
     },
@@ -1375,11 +1375,11 @@
       "pred": "drop",
       "reason": "tape",
       "noul": {
-        "tape": 0.79,
-        "soft": 0.26,
-        "tip": 0.36,
-        "done": 0.53,
-        "print": 0.08,
+        "tape": 0.78,
+        "soft": 0.28,
+        "tip": 0.33,
+        "done": 0.54,
+        "print": 0.07,
         "listed": 0.86
       }
     },
@@ -1390,12 +1390,12 @@
       "pred": "drop",
       "reason": "soft",
       "noul": {
-        "tape": 0.36,
+        "tape": 0.37,
         "soft": 0.75,
-        "tip": 0.51,
-        "done": 0.28,
+        "tip": 0.5,
+        "done": 0.25,
         "print": 0.12,
-        "listed": 0.88
+        "listed": 0.86
       }
     },
     {
@@ -1405,12 +1405,12 @@
       "pred": "drop",
       "reason": "soft",
       "noul": {
-        "tape": 0.33,
+        "tape": 0.34,
         "soft": 0.7,
-        "tip": 0.51,
-        "done": 0.23,
+        "tip": 0.5,
+        "done": 0.2,
         "print": 0.11,
-        "listed": 0.83
+        "listed": 0.84
       }
     },
     {
@@ -1421,11 +1421,11 @@
       "reason": "soft",
       "noul": {
         "tape": 0.29,
-        "soft": 0.72,
+        "soft": 0.73,
         "tip": 0.59,
-        "done": 0.25,
-        "print": 0.12,
-        "listed": 0.83
+        "done": 0.22,
+        "print": 0.15,
+        "listed": 0.81
       }
     },
     {
@@ -1435,12 +1435,12 @@
       "pred": "drop",
       "reason": "source",
       "noul": {
-        "tape": 0.31,
+        "tape": 0.3,
         "soft": 0.58,
-        "tip": 0.52,
-        "done": 0.47,
-        "print": 0.18,
-        "listed": 0.84
+        "tip": 0.51,
+        "done": 0.46,
+        "print": 0.16,
+        "listed": 0.82
       }
     },
     {
@@ -1450,12 +1450,12 @@
       "pred": "drop",
       "reason": "no_keep_bit",
       "noul": {
-        "tape": 0.31,
-        "soft": 0.52,
-        "tip": 0.59,
-        "done": 0.53,
-        "print": 0.22,
-        "listed": 0.61
+        "tape": 0.32,
+        "soft": 0.53,
+        "tip": 0.58,
+        "done": 0.29,
+        "print": 0.24,
+        "listed": 0.58
       }
     },
     {
@@ -1466,10 +1466,10 @@
       "reason": "tip",
       "noul": {
         "tape": 0.3,
-        "soft": 0.49,
-        "tip": 0.73,
-        "done": 0.26,
-        "print": 0.14,
+        "soft": 0.47,
+        "tip": 0.69,
+        "done": 0.16,
+        "print": 0.15,
         "listed": 0.66
       }
     },
@@ -1480,12 +1480,12 @@
       "pred": "drop",
       "reason": "no_keep_bit",
       "noul": {
-        "tape": 0.26,
-        "soft": 0.48,
-        "tip": 0.15,
-        "done": 0.54,
+        "tape": 0.25,
+        "soft": 0.4,
+        "tip": 0.14,
+        "done": 0.56,
         "print": 0.07,
-        "listed": 0.09
+        "listed": 0.12
       }
     },
     {
@@ -1495,11 +1495,11 @@
       "pred": "drop",
       "reason": "source",
       "noul": {
-        "tape": 0.3,
+        "tape": 0.31,
         "soft": 0.53,
-        "tip": 0.74,
-        "done": 0.45,
-        "print": 0.14,
+        "tip": 0.73,
+        "done": 0.41,
+        "print": 0.15,
         "listed": 0.88
       }
     }
