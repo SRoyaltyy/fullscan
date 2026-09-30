@@ -1,12 +1,12 @@
 {
   "date": "2026-09-30",
-  "generated_at": "2026-09-30T04:39:33.853113-04:00",
+  "generated_at": "2026-09-30T04:39:46.691125-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
     "ok": 3,
-    "partial": 3,
-    "fail": 2,
+    "partial": 4,
+    "fail": 1,
     "n": 8
   },
   "buy_1d": [],
@@ -15,31 +15,6 @@
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "map_heat",
-      "title": "Map heat tables",
-      "date": "2026-09-30",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-30T04:31:09.509147-04:00",
-      "files": [
-        {
-          "path": "01_daily/map_heat/2026-09-30_map_heat.json",
-          "ok": true,
-          "reason": "",
-          "size": 278563,
-          "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape"
-        },
-        {
-          "path": "01_daily/map_heat/2026-09-30_map_heat.md",
-          "ok": true,
-          "reason": "",
-          "size": 18263,
-          "preview": "# MAP HEAT \u2014 2026-09-30\nExport `finviz_2026-09-29.csv` \u00b7 11616 names \u00b7 generated 2026-09-30T04:22:14.006127-04:00"
-        }
-      ],
-      "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-09-30\nExport `finviz_2026-09-29.csv` \u00b7 11616 names \u00b7 generated 2026-09-30T04:22:14.006127-04:00"
-    },
     {
       "key": "map_heat_baseline",
       "title": "Map heat night baseline",
@@ -185,6 +160,31 @@
         }
       ],
       "preview": "34 events \u00b7 FOMC hikes 25 bp to 3.75\u20134.00% | White House memo to restrict Canadian goods in U.S. federal procuremen | EDVA unseals Google ad-tech remedies (behavioral, no breakup) | BOJ hikes policy rate 25 bp to 1.25% | H-1B $100,000 entry restriction extended 12 months | Graham Act signed: up to 500% Russia tariffs and secondary energy-buye \u00b7 # Event Scan \u2014 2026-09-30\n- events tracked: **34** (via openclaw)\n- uncertainty: **elevated**\n- summary: The tape is still digesting a unanimous Sept 16 FOMC hike to 3.75\u20134.00% against an unfinished Iran/Hormuz oil shock, with today's PCE/GDP and Friday's NFP the first hard tests of whether another hike is live. A modest U.S.\u2013China truce extension to Jan 10, 2027 and China's mortgage/PSL mini-stimulus cut near-term policy-cliff risk, but the Graham Act's secondary-tariff authorities and still-restricted Hormuz flows keep a fat left tail. Quality over drama: shutdown risk is off (CR through Dec 11), debt ceiling is a 2027 issue, and Atlantic hurricane season remains unusually quiet."
+    },
+    {
+      "key": "news_actions",
+      "title": "News actions",
+      "date": "2026-09-30",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-30T04:39:46.145927-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-09-30_actions.json",
+          "ok": true,
+          "reason": "",
+          "size": 33627,
+          "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions"
+        },
+        {
+          "path": "01_daily/news/2026-09-30_actions.md",
+          "ok": true,
+          "reason": "",
+          "size": 8824,
+          "preview": "# News \u2192 Actions v4 (full framework) \u2014 2026-09-30T04:39:46.134153-04:00\nraw=400 unique_events=3 tickers=42"
+        }
+      ],
+      "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions \u00b7 # News \u2192 Actions v4 (full framework) \u2014 2026-09-30T04:39:46.134153-04:00\nraw=400 unique_events=3 tickers=42"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"

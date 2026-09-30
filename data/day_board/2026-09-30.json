@@ -1,19 +1,18 @@
 {
   "date": "2026-09-30",
-  "generated_at": "2026-09-30T04:39:33.853113-04:00",
+  "generated_at": "2026-09-30T04:39:46.691125-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
     "MISSING General predict MD `01_daily/general/2026-09-30_predict.md` \u2014 missing",
     "MISSING Sector board JSON `01_daily/sectors/2026-09-30/_board.json` \u2014 missing",
-    "MISSING News actions JSON `01_daily/news/2026-09-30_actions.json` \u2014 missing",
     "MISSING News judge MD `01_daily/news/2026-09-30_judge.md` \u2014 missing",
     "MISSING AB checklist enriched `data/ab_checklist/2026-09-30_ab_checklist_enriched.csv` \u2014 missing"
   ],
   "counts": {
     "ok": 3,
-    "partial": 3,
-    "fail": 2,
+    "partial": 4,
+    "fail": 1,
     "n": 8
   },
   "processes": [
@@ -185,7 +184,7 @@
       "inputs_ready": true,
       "n_req_ok": 3,
       "n_req": 20,
-      "n_opt_ok": 1,
+      "n_opt_ok": 2,
       "n_opt": 3,
       "files": [
         {
@@ -306,11 +305,16 @@
           "name": "News actions JSON",
           "path": "01_daily/news/2026-09-30_actions.json",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 33627,
+          "said": "42 ticker actions \u00b7 3 events \u00b7 400 headlines \u00b7 COP BUY, EOG BUY, RRC BUY, SM BUY, HPK BUY, REPX BUY, OXY BUY, FANG BUY",
+          "bullets": [
+            "BUY COP",
+            "BUY EOG",
+            "BUY RRC",
+            "BUY SM"
+          ]
         },
         {
           "key": "general",
@@ -590,8 +594,8 @@
       "key": "catalyst",
       "name": "Catalyst dossiers",
       "yaml": "catalyst_daily.yml",
-      "status": "FAIL",
-      "inputs_ready": false,
+      "status": "PARTIAL",
+      "inputs_ready": true,
       "n_req_ok": 0,
       "n_req": 0,
       "n_opt_ok": 0,
@@ -602,11 +606,16 @@
           "name": "News actions JSON",
           "path": "01_daily/news/2026-09-30_actions.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 33627,
+          "said": "42 ticker actions \u00b7 3 events \u00b7 400 headlines \u00b7 COP BUY, EOG BUY, RRC BUY, SM BUY, HPK BUY, REPX BUY, OXY BUY, FANG BUY",
+          "bullets": [
+            "BUY COP",
+            "BUY EOG",
+            "BUY RRC",
+            "BUY SM"
+          ]
         },
         {
           "key": "in_digest",
@@ -635,8 +644,17 @@
           "bullets": []
         }
       ],
-      "said": "",
-      "bullets": []
+      "said": "42 ticker actions \u00b7 3 events \u00b7 400 headlines \u00b7 COP BUY, EOG BUY, RRC BUY, SM BUY, HPK BUY, REPX BUY, OXY BUY, FANG BUY",
+      "bullets": [
+        "BUY COP",
+        "BUY EOG",
+        "BUY RRC",
+        "BUY SM",
+        "BUY HPK",
+        "BUY REPX",
+        "BUY OXY",
+        "BUY FANG"
+      ]
     },
     {
       "key": "stock_book",
@@ -676,11 +694,16 @@
           "name": "News actions JSON",
           "path": "01_daily/news/2026-09-30_actions.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 33627,
+          "said": "42 ticker actions \u00b7 3 events \u00b7 400 headlines \u00b7 COP BUY, EOG BUY, RRC BUY, SM BUY, HPK BUY, REPX BUY, OXY BUY, FANG BUY",
+          "bullets": [
+            "BUY COP",
+            "BUY EOG",
+            "BUY RRC",
+            "BUY SM"
+          ]
         },
         {
           "key": "in_digest",
@@ -1335,6 +1358,31 @@
         }
       ],
       "preview": "34 events \u00b7 FOMC hikes 25 bp to 3.75\u20134.00% | White House memo to restrict Canadian goods in U.S. federal procuremen | EDVA unseals Google ad-tech remedies (behavioral, no breakup) | BOJ hikes policy rate 25 bp to 1.25% | H-1B $100,000 entry restriction extended 12 months | Graham Act signed: up to 500% Russia tariffs and secondary energy-buye \u00b7 # Event Scan \u2014 2026-09-30\n- events tracked: **34** (via openclaw)\n- uncertainty: **elevated**\n- summary: The tape is still digesting a unanimous Sept 16 FOMC hike to 3.75\u20134.00% against an unfinished Iran/Hormuz oil shock, with today's PCE/GDP and Friday's NFP the first hard tests of whether another hike is live. A modest U.S.\u2013China truce extension to Jan 10, 2027 and China's mortgage/PSL mini-stimulus cut near-term policy-cliff risk, but the Graham Act's secondary-tariff authorities and still-restricted Hormuz flows keep a fat left tail. Quality over drama: shutdown risk is off (CR through Dec 11), debt ceiling is a 2027 issue, and Atlantic hurricane season remains unusually quiet."
+    },
+    {
+      "key": "news_actions",
+      "title": "News actions",
+      "date": "2026-09-30",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-30T04:39:46.145927-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-09-30_actions.json",
+          "ok": true,
+          "reason": "",
+          "size": 33627,
+          "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions"
+        },
+        {
+          "path": "01_daily/news/2026-09-30_actions.md",
+          "ok": true,
+          "reason": "",
+          "size": 8824,
+          "preview": "# News \u2192 Actions v4 (full framework) \u2014 2026-09-30T04:39:46.134153-04:00\nraw=400 unique_events=3 tickers=42"
+        }
+      ],
+      "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions \u00b7 # News \u2192 Actions v4 (full framework) \u2014 2026-09-30T04:39:46.134153-04:00\nraw=400 unique_events=3 tickers=42"
     }
   ],
   "href": {
