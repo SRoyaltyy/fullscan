@@ -1,6 +1,6 @@
 {
   "date": "2026-09-30",
-  "generated_at": "2026-09-30T04:32:11.863590-04:00",
+  "generated_at": "2026-09-30T04:33:51.319309-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -15,49 +15,6 @@
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "map_heat",
-      "title": "Map heat morning overlay",
-      "date": "2026-09-30",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-30T04:22:14.041811-04:00",
-      "files": [
-        {
-          "path": "01_daily/map_heat/2026-09-30_map_heat.json",
-          "ok": true,
-          "reason": "",
-          "size": 278563,
-          "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape"
-        },
-        {
-          "path": "01_daily/map_heat/2026-09-30_map_heat.md",
-          "ok": true,
-          "reason": "",
-          "size": 18263,
-          "preview": "# MAP HEAT \u2014 2026-09-30\nExport `finviz_2026-09-29.csv` \u00b7 11616 names \u00b7 generated 2026-09-30T04:22:14.006127-04:00"
-        }
-      ],
-      "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-09-30\nExport `finviz_2026-09-29.csv` \u00b7 11616 names \u00b7 generated 2026-09-30T04:22:14.006127-04:00"
-    },
-    {
-      "key": "universe",
-      "title": "Universe labels",
-      "date": "2026-09-30",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-30T04:24:31.705442-04:00",
-      "files": [
-        {
-          "path": "data/universe/2026-09-30_membership.csv",
-          "ok": true,
-          "reason": "",
-          "size": 1122908,
-          "preview": "5901 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
-        }
-      ],
-      "preview": "5901 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
-    },
     {
       "key": "finviz_digest",
       "title": "Finviz digest",
@@ -193,6 +150,41 @@
         }
       ],
       "preview": "5903 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 EXEL, BPOP, REGN, TAL, NUTX"
+    },
+    {
+      "key": "ab",
+      "title": "AB checklist",
+      "date": "2026-09-30",
+      "ok": false,
+      "pushed": false,
+      "at": "2026-09-30T04:33:31.526983-04:00",
+      "files": [],
+      "preview": "no files"
+    },
+    {
+      "key": "news_parse",
+      "title": "News parse",
+      "date": "2026-09-30",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-30T04:33:50.538763-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-09-30_parsed.json",
+          "ok": true,
+          "reason": "",
+          "size": 392687,
+          "preview": "raw=400 usable=95 single=22 \u00b7 Despite falling oil prices and dovish signals from Federal Reserve officials, U. | Cardiff, Inc. Helps Small Businesses Navigate Latest Fed Rate Hike - PR Undergro | Robust U.S. Economy Drives Treasury Yield Surge - \uc870\uc120\uc77c\ubcf4 | Fed rate hike bets for Oct fall sharply on soft data, dovish comments - Investin | Gold's Rebound Limited as Experts Warn of Fed Rate Hike Overhang - finance.biggo"
+        },
+        {
+          "path": "01_daily/news/2026-09-30_parsed.md",
+          "ok": true,
+          "reason": "",
+          "size": 7948,
+          "preview": "# News Parse v2 \u2014 2026-09-30T04:33:50.384628-04:00\nWindow\u224848h | news_mode=on | raw=400 | usable=95 | single_name=22 | noise_dropped=283\nusable polarity={'+': 3, '-': 28, 'mixed': 1, 'neutral': 63}"
+        }
+      ],
+      "preview": "raw=400 usable=95 single=22 \u00b7 Despite falling oil prices and dovish signals from Federal Reserve officials, U. | Cardiff, Inc. Helps Small Businesses Navigate Latest Fed Rate Hike - PR Undergro | Robust U.S. Economy Drives Treasury Yield Surge - \uc870\uc120\uc77c\ubcf4 | Fed rate hike bets for Oct fall sharply on soft data, dovish comments - Investin | Gold's Rebound Limited as Experts Warn of Fed Rate Hike Overhang - finance.biggo \u00b7 # News Parse v2 \u2014 2026-09-30T04:33:50.384628-04:00\nWindow\u224848h | news_mode=on | raw=400 | usable=95 | single_name=22 | noise_dropped=283\nusable polarity={'+': 3, '-': 28, 'mixed': 1, 'neutral': 63}"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"

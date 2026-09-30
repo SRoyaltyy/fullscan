@@ -1,6 +1,6 @@
 {
   "date": "2026-09-30",
-  "generated_at": "2026-09-30T04:32:11.863590-04:00",
+  "generated_at": "2026-09-30T04:33:51.319309-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -183,7 +183,7 @@
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 1,
+      "n_req_ok": 2,
       "n_req": 20,
       "n_opt_ok": 1,
       "n_opt": 3,
@@ -241,11 +241,16 @@
           "name": "News parse JSON",
           "path": "01_daily/news/2026-09-30_parsed.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 392687,
+          "said": "news_mode: on \u00b7 400 raw / 95 usable \u00b7 Despite falling oil prices and dovish signals from Federal Reserve officials, U.",
+          "bullets": [
+            "Despite falling oil prices and dovish signals from Federal Reserve officials, U.S. Treasury yields continue to rise. - \u5bcc\u9014\u725b\u725b",
+            "Cardiff, Inc. Helps Small Businesses Navigate Latest Fed Rate Hike - PR Underground",
+            "Robust U.S. Economy Drives Treasury Yield Surge - \uc870\uc120\uc77c\ubcf4",
+            "Fed rate hike bets for Oct fall sharply on soft data, dovish comments - Investing.com"
+          ]
         },
         {
           "key": "events",
@@ -331,13 +336,13 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 7546,
-          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 18 fail",
+          "size": 7544,
+          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 17 fail",
           "bullets": [
             "general_predict:missing",
             "events:missing",
             "news_judge:missing",
-            "news_parse:missing"
+            "news_actions:missing"
           ]
         },
         {
@@ -484,8 +489,13 @@
           "bullets": []
         }
       ],
-      "said": "",
-      "bullets": []
+      "said": "news news_mode: on \u00b7 400 raw / 95 usable \u00b7 Despite falling oil prices and dovish signals from Federal Reserve officials, U.",
+      "bullets": [
+        "Despite falling oil prices and dovish signals from Federal Reserve officials, U.S. Treasury yields continue to rise. - \u5bcc\u9014\u725b\u725b",
+        "Cardiff, Inc. Helps Small Businesses Navigate Latest Fed Rate Hike - PR Underground",
+        "Robust U.S. Economy Drives Treasury Yield Surge - \uc870\uc120\uc77c\ubcf4",
+        "Fed rate hike bets for Oct fall sharply on soft data, dovish comments - Investing.com"
+      ]
     },
     {
       "key": "weather",
@@ -877,7 +887,17 @@
     "flatten": {},
     "general": {},
     "sectors": {},
-    "news": {},
+    "news": {
+      "said": "news_mode: on \u00b7 400 raw / 95 usable \u00b7 Despite falling oil prices and dovish signals from Federal Reserve officials, U.",
+      "bullets": [
+        "Despite falling oil prices and dovish signals from Federal Reserve officials, U.S. Treasury yields continue to rise. - \u5bcc\u9014\u725b\u725b",
+        "Cardiff, Inc. Helps Small Businesses Navigate Latest Fed Rate Hike - PR Underground",
+        "Robust U.S. Economy Drives Treasury Yield Surge - \uc870\uc120\uc77c\ubcf4",
+        "Fed rate hike bets for Oct fall sharply on soft data, dovish comments - Investing.com",
+        "Gold's Rebound Limited as Experts Warn of Fed Rate Hike Overhang - finance.biggo.com",
+        "New York Fed president sees no need to rush another rate hike \u2014 Channel NewsAsia - ua.news"
+      ]
+    },
     "weather": {
       "said": "hostile 11",
       "bullets": [
@@ -1250,6 +1270,41 @@
         }
       ],
       "preview": "5903 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 EXEL, BPOP, REGN, TAL, NUTX"
+    },
+    {
+      "key": "ab",
+      "title": "AB checklist",
+      "date": "2026-09-30",
+      "ok": false,
+      "pushed": false,
+      "at": "2026-09-30T04:33:31.526983-04:00",
+      "files": [],
+      "preview": "no files"
+    },
+    {
+      "key": "news_parse",
+      "title": "News parse",
+      "date": "2026-09-30",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-30T04:33:50.538763-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-09-30_parsed.json",
+          "ok": true,
+          "reason": "",
+          "size": 392687,
+          "preview": "raw=400 usable=95 single=22 \u00b7 Despite falling oil prices and dovish signals from Federal Reserve officials, U. | Cardiff, Inc. Helps Small Businesses Navigate Latest Fed Rate Hike - PR Undergro | Robust U.S. Economy Drives Treasury Yield Surge - \uc870\uc120\uc77c\ubcf4 | Fed rate hike bets for Oct fall sharply on soft data, dovish comments - Investin | Gold's Rebound Limited as Experts Warn of Fed Rate Hike Overhang - finance.biggo"
+        },
+        {
+          "path": "01_daily/news/2026-09-30_parsed.md",
+          "ok": true,
+          "reason": "",
+          "size": 7948,
+          "preview": "# News Parse v2 \u2014 2026-09-30T04:33:50.384628-04:00\nWindow\u224848h | news_mode=on | raw=400 | usable=95 | single_name=22 | noise_dropped=283\nusable polarity={'+': 3, '-': 28, 'mixed': 1, 'neutral': 63}"
+        }
+      ],
+      "preview": "raw=400 usable=95 single=22 \u00b7 Despite falling oil prices and dovish signals from Federal Reserve officials, U. | Cardiff, Inc. Helps Small Businesses Navigate Latest Fed Rate Hike - PR Undergro | Robust U.S. Economy Drives Treasury Yield Surge - \uc870\uc120\uc77c\ubcf4 | Fed rate hike bets for Oct fall sharply on soft data, dovish comments - Investin | Gold's Rebound Limited as Experts Warn of Fed Rate Hike Overhang - finance.biggo \u00b7 # News Parse v2 \u2014 2026-09-30T04:33:50.384628-04:00\nWindow\u224848h | news_mode=on | raw=400 | usable=95 | single_name=22 | noise_dropped=283\nusable polarity={'+': 3, '-': 28, 'mixed': 1, 'neutral': 63}"
     }
   ],
   "href": {
