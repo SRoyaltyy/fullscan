@@ -237,8 +237,8 @@ BIT_QUESTIONS: dict = {
         ),
         "criteria": {
             "true": (
-                "Guardant ordered to pay $245m in DNA sequencing patent dispute. "
-                "Oura pulls $15bn stock market listing days after announcement."
+                "Apple ordered to pay $5.7bn in haptic tech patent case. "
+                "Fed holds interest rates steady as inflation hits 3-year high."
             ),
             "false": (
                 "Capita Flags CSPS Costs but Touts Contract Wins. "
