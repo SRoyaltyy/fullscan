@@ -1,6 +1,6 @@
 {
  "date": "2026-09-30",
- "generated_at": "2026-09-30T05:36:19.637857-04:00",
+ "generated_at": "2026-09-30T05:39:59.986836-04:00",
  "stance_vocabulary": [
   "favorable",
   "neutral",
@@ -23,13 +23,13 @@
   "dgs10_current": 5.24,
   "dollar": "flat",
   "dollar_source": "dxy",
-  "dxy_pct_1d": -0.13,
+  "dxy_pct_1d": -0.12,
   "vix_ratio": 0.884,
-  "vix_spot": 15.99,
-  "vix_delta_1d": -0.05,
+  "vix_spot": 16.0,
+  "vix_delta_1d": -0.04,
   "vix_ratio_source": "vix/vix3m",
   "vix": "falling",
-  "oil_pct_1d": 1.16,
+  "oil_pct_1d": 1.05,
   "oil": "rising",
   "fear_greed": null,
   "fear_greed_label": null,
@@ -115,9 +115,9 @@
    "Technology": -2.625,
    "Utilities": -3.43
   },
-  "events_bull": 3,
-  "events_bear": 2,
-  "china_event_dir": null,
+  "events_bull": 4,
+  "events_bear": 1,
+  "china_event_dir": "bull",
   "risk_source": "news_judge"
  },
  "stances": {
@@ -239,9 +239,9 @@
     "why": "mirrors general risk-mixed [general predict]"
    },
    "ADR-China": {
-    "stance": "neutral",
-    "confidence": "low",
-    "why": "no high-impact China event flagged"
+    "stance": "favorable",
+    "confidence": "medium",
+    "why": "high-impact China event(s) lean bull [event scanner]"
    }
   },
   "beta": {
