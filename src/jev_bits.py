@@ -16,11 +16,11 @@ SOURCE_DENY = re.compile(
 
 DONE_RE = re.compile(
     r"(?i)\b(?:holds? rates|fed holds|federal reserve holds|"
-    r"agrees?|agreed|rejects?|rejected|"
+    r"agrees?|agreed|rejects?|rejected|launches?|"
     r"ended|recalled|identifies|filed|files? to|filed to|"
     r"acquires?|acquisition|"
     r"priced|launched|court verdict|jury verdict|cut tariffs|tariff cuts?|"
-    r"completes?|completed|approved|wins?|won|divests?|divested|"
+    r"completes?|completed|approved|wins?(?!['’]t)|won(?!['’]t)|divests?|divested|"
     r"stockholders approve|positive opinion|now live|rollout|"
     r"prime lending rate|trial data|settles?|settled|settlement|"
     r"closes? (?:the )?(?:acquisition|deal|purchase|merger)|"
@@ -29,16 +29,16 @@ DONE_RE = re.compile(
     r"credit facility|term loan|revolving credit|"
     r"sues?|sued|lawsuit|sells? \$\d|layoffs?|uplisting|"
     r"raising .{0,24}\bipo\b|\bipo\b.{0,24}(?:raising|priced|pricing|debut)|"
-    r"ipo debut|set to list|ipo pricing)\b"
+    r"ipo debut|set to list|ipo pricing|pulls .{0,40}listing|withdraws .{0,40}(?:ipo|listing))\b"
 )
 
 EARN_RE = re.compile(
-    r"(?i)\beps\b|beats estimates|misses estimates|non-gaap|"
+    r"(?i)\beps\b|beats estimates|beats expectations|misses estimates|misses expectations|non-gaap|"
     r"quarterly results|q[1-4] 20\d{2}|raises? .{0,32}guidance|"
     r"reaffirms? .{0,32}guidance|issues? .{0,32}guidance|"
     r"raised outlook|raises outlook|beat, raised|"
     r"forecasts .{0,28}(?:revenue|growth|eps)|"
-    r"posts record|record (?:q[1-4]|revenue|eps)|boosts 20\d{2} buyback"
+    r"posts record|record (?:q[1-4]|second quarter |third quarter |first quarter )?(?:revenue|eps|earnings)|per diluted share|boosts 20\d{2} buyback"
 )
 
 RATING_RE = re.compile(
@@ -58,9 +58,11 @@ PRINT_RE = re.compile(
     r"cuts? interest rates|fed cuts|\bfomc\b|"
     r"\bcpi\b|\bpce\b|\bnfp\b|\beia\b|\bfda\b|\bsec\b|"
     r"\bema\b|\bchmp\b|\bcafe\b|budget boost|chips act|"
-    r"mis-selling|retail sales|"
+    r"mis-selling|retail sales|inflation gauge posts|"
     r"strategic (?:petroleum |oil )?reserve|\bspr\b|"
-    r"(?:fed|federal reserve).{0,48}(?:says|sees|signals|backs)|"
+    r"(?:fed|federal reserve).{0,48}(?:says|sees|signals|backs|warns)|"
+    r"(?:says|sees|signals|backs|warns).{0,48}(?:fed|federal reserve)|"
+    r"raised (?:its )?benchmark|federal reserve raised|fed raised|"
     r"cyclospor|\d[\d,]* (?:suspected )?cases"
 )
 
@@ -129,7 +131,7 @@ VETO_RES: list[tuple[str, re.Pattern | None]] = [
             r"(?i)puppy|patio stuff|el charro|football star shot|"
             r"richest people in america|polar bear cub|"
             r"heartbreaking update|dividend analysis|"
-            r"rwanda genocide|legal fight|critical moment|"
+            r"rwanda genocide|legal fight|critical moment|hush-money|"
             r"astronomical. consequences|"
             r"appoints .{0,40} as "
         ),
