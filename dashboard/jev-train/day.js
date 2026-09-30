@@ -3,6 +3,7 @@
   var REPO = "SRoyaltyy/fullscan";
   var WORKFLOW = "jev_train.yml";
   var RAW_DAYS = "https://raw.githubusercontent.com/" + REPO + "/main/dashboard/jev-train/days.json";
+  var daysCache = [];
 
   function tokenValue() {
     var el = document.getElementById("token");
@@ -19,27 +20,73 @@
     if (el) el.textContent = text || "";
   }
 
-  async function loadDays() {
+  function currentDay() {
+    if (window.JevTrain && window.JevTrain.getFilterDay) return window.JevTrain.getFilterDay() || "";
+    var pick = document.getElementById("dayPick");
+    return pick ? String(pick.value || "") : "";
+  }
+
+  function applyFilter(day) {
+    if (window.JevTrain && window.JevTrain.setFilterDay) window.JevTrain.setFilterDay(day || "");
+    else {
+      var pick = document.getElementById("dayPick");
+      if (pick) pick.value = day || "";
+    }
+    paintChips();
+  }
+
+  function paintChips() {
+    var box = document.getElementById("dayChips");
     var list = document.getElementById("dayList");
-    if (!list) return;
+    if (!box) return;
+    box.replaceChildren();
+    var selected = currentDay();
+    var all = document.createElement("button");
+    all.type = "button";
+    all.textContent = "All dates";
+    all.className = selected ? "" : "on";
+    all.addEventListener("click", function () { applyFilter(""); });
+    box.appendChild(all);
+    daysCache.forEach(function (row) {
+      var day = row.date || row;
+      var btn = document.createElement("button");
+      btn.type = "button";
+      btn.dataset.day = day;
+      btn.className = selected === day ? "on" : "";
+      var flags = [];
+      if (row.parsed) flags.push("parsed");
+      if (row.digest) flags.push("digest");
+      if (row.judge) flags.push("judge");
+      btn.appendChild(document.createTextNode(day.slice(5)));
+      if (flags.length) {
+        var kind = document.createElement("span");
+        kind.className = "kind";
+        kind.textContent = flags[0][0];
+        btn.appendChild(kind);
+      }
+      btn.title = day + (flags.length ? " " + flags.join("/") : "");
+      btn.addEventListener("click", function () { applyFilter(day); });
+      box.appendChild(btn);
+    });
+    if (list) {
+      list.replaceChildren();
+      daysCache.forEach(function (row) {
+        var opt = document.createElement("option");
+        opt.value = row.date || row;
+        list.appendChild(opt);
+      });
+    }
+  }
+
+  async function loadDays() {
     var urls = [RAW_DAYS + "?t=" + Date.now(), "days.json?t=" + Date.now()];
     for (var i = 0; i < urls.length; i++) {
       try {
         var res = await fetch(urls[i], { cache: "no-store" });
         if (!res.ok) continue;
         var data = await res.json();
-        var days = (data && data.days) || [];
-        list.replaceChildren();
-        days.forEach(function (row) {
-          var opt = document.createElement("option");
-          opt.value = row.date || row;
-          var flags = [];
-          if (row.parsed) flags.push("parsed");
-          if (row.digest) flags.push("digest");
-          if (row.judge) flags.push("judge");
-          opt.label = flags.length ? opt.value + " " + flags.join("/") : opt.value;
-          list.appendChild(opt);
-        });
+        daysCache = (data && data.days) || [];
+        paintChips();
         return;
       } catch (err) { /* try next */ }
     }
@@ -68,19 +115,37 @@
 
   document.addEventListener("DOMContentLoaded", function () {
     loadDays();
-    var btn = document.getElementById("loadDay");
-    if (!btn) return;
-    btn.addEventListener("click", function () {
-      var day = (document.getElementById("dayPick") || {}).value || "";
-      if (!/^\d{4}-\d{2}-\d{2}$/.test(day)) {
-        setErr("Pick a YYYY-MM-DD date first.");
-        return;
-      }
-      setErr("");
-      setMeta("Day " + day + " dispatched. When the action finishes, click Reload draw.");
-      dispatchDay(day).catch(function (err) {
-        setErr(String(err && err.message ? err.message : err));
+    var filterBtn = document.getElementById("filterDay");
+    if (filterBtn) {
+      filterBtn.addEventListener("click", function () {
+        var day = (document.getElementById("dayPick") || {}).value || "";
+        if (day && !/^\d{4}-\d{2}-\d{2}$/.test(day)) {
+          setErr("Pick a YYYY-MM-DD date first.");
+          return;
+        }
+        setErr("");
+        applyFilter(day);
       });
-    });
+    }
+    var clearBtn = document.getElementById("clearDay");
+    if (clearBtn) clearBtn.addEventListener("click", function () { applyFilter(""); });
+    var btn = document.getElementById("loadDay");
+    if (btn) {
+      btn.addEventListener("click", function () {
+        var day = (document.getElementById("dayPick") || {}).value || "";
+        if (!/^\d{4}-\d{2}-\d{2}$/.test(day)) {
+          setErr("Pick a YYYY-MM-DD date first.");
+          return;
+        }
+        setErr("");
+        applyFilter(day);
+        setMeta("Day " + day + " dispatched. When the action finishes, click Reload draw.");
+        dispatchDay(day).catch(function (err) {
+          setErr(String(err && err.message ? err.message : err));
+        });
+      });
+    }
   });
+
+  window.JevTrainDay = { paintChips: paintChips, loadDays: loadDays };
 })();
