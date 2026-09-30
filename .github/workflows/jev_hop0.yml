@@ -11,6 +11,7 @@ on:
       - ".github/workflows/jev_gate.yml"
       - "src/jev_gate.py"
       - "src/jev_bits.py"
+      - "src/jev_bits_lock.json"
       - "src/test_jev_bits.py"
       - "src/test_jev_gate.py"
       - "00_grounding/jev_chokepoint_state.json"
