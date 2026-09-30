@@ -1,6 +1,6 @@
 {
   "schema": "jev-sixbit-stop-1",
-  "note": "Fresh unseen 100. One teacher label each. Keep iff label in {finished_act, official_print, officer_voice}.",
+  "note": "Fresh unseen 100. Frontier-pass labels. Keep iff label in {finished_act, official_print, officer_voice}.",
   "items": [
     {"label": "officer_voice", "title": "Fed’s Barr Says More Hikes Likely Needed as Growth Picks Up - Bloomberg.com"},
     {"label": "officer_voice", "title": "Fed’s Barr says more rate hikes likely to be needed to curb inflation - 101 WIXX"},
@@ -24,9 +24,9 @@
     {"label": "finished_act", "title": "China unveils rate cut, mortgage subsidies to spur growth - CNA"},
     {"label": "finished_act", "title": "Singapore gets its first advanced semiconductor materials plant to meet AI demand - The Straits Times"},
     {"label": "finished_act", "title": "U.S. Taps Strategic Oil Reserve Again as Diesel Tops $6 - Crude Oil Prices Today | OilPrice.com"},
-    {"label": "finished_act", "title": "Oil Gains after Trump Denies He Is Willing to Ease Sanctions on Iran - twaslnews1.twaslnews.com"},
+    {"label": "tape", "title": "Oil Gains after Trump Denies He Is Willing to Ease Sanctions on Iran - twaslnews1.twaslnews.com"},
     {"label": "finished_act", "title": "Anthropic warns AI may pose ‘existential risks to humanity’ in IPO filing - The Straits Times"},
-    {"label": "finished_act", "title": "Geopolitical disruptions push up freight costs and alter steel trade flows - EUROMETAL"},
+    {"label": "junk", "title": "Geopolitical disruptions push up freight costs and alter steel trade flows - EUROMETAL"},
     {"label": "finished_act", "title": "Selected steel intake transiting through the Strait of Hormuz dropped - Shanghai Metals Market"},
     {"label": "junk", "title": "Crystal Jade holding companies in S’pore, Hong Kong placed under receivership - The Straits Times"},
     {"label": "tape", "title": "Robust U.S. Economy Drives Treasury Yield Surge - 조선일보"},
