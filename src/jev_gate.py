@@ -33,6 +33,7 @@ from collections import Counter, defaultdict
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from email.utils import parsedate_to_datetime
 from pathlib import Path
+from .jev_bits import BIT_QUESTIONS, decide as bits_decide
 
 ROOT = Path(__file__).resolve().parent.parent
 NEWS_DIR = ROOT / "01_daily" / "news"
@@ -163,8 +164,9 @@ CHOKE_HIT = re.compile(
     r"(?i)\b(oil|tanker|strait|canal|pipeline|port|shipping|lng)\b"
 )
 
-# Jev question ids. Do not add event_class / polarity / ticker.
-QUESTIONS: dict = {
+# Legacy questions kept below as _LEGACY_QUESTIONS. Live pack is BIT_QUESTIONS.
+QUESTIONS = BIT_QUESTIONS
+_LEGACY_QUESTIONS: dict = {
     "is_opinion": {
         "type": "noul",
         "instructions": (
@@ -790,6 +792,8 @@ def answers_from_gold(item: dict) -> dict:
 
 
 def decide(row: dict, answers: dict | None) -> dict:
+    return bits_decide(row, answers)
+    # legacy body unused
     """Pure keep/drop given a code-flagged row + optional Jev answers.
 
     Jev is not allowed to invent an event class or polarity here.
