@@ -17,11 +17,11 @@
       "pred": "keep",
       "reason": "print",
       "noul": {
-        "tape": 0.22,
+        "tape": 0.23,
         "soft": 0.5,
         "tip": 0.37,
-        "done": 0.47,
-        "print": 0.73,
+        "done": 0.46,
+        "print": 0.74,
         "listed": 0.67
       }
     },
@@ -32,12 +32,12 @@
       "pred": "keep",
       "reason": "print",
       "noul": {
-        "tape": 0.24,
-        "soft": 0.49,
-        "tip": 0.36,
-        "done": 0.49,
-        "print": 0.79,
-        "listed": 0.77
+        "tape": 0.2,
+        "soft": 0.44,
+        "tip": 0.33,
+        "done": 0.44,
+        "print": 0.8,
+        "listed": 0.73
       }
     },
     {
@@ -47,12 +47,12 @@
       "pred": "keep",
       "reason": "print",
       "noul": {
-        "tape": 0.21,
-        "soft": 0.42,
-        "tip": 0.36,
-        "done": 0.46,
+        "tape": 0.19,
+        "soft": 0.38,
+        "tip": 0.41,
+        "done": 0.42,
         "print": 0.65,
-        "listed": 0.79
+        "listed": 0.81
       }
     },
     {
@@ -62,12 +62,12 @@
       "pred": "keep",
       "reason": "print",
       "noul": {
-        "tape": 0.28,
+        "tape": 0.24,
         "soft": 0.36,
-        "tip": 0.33,
-        "done": 0.49,
-        "print": 0.65,
-        "listed": 0.7
+        "tip": 0.32,
+        "done": 0.5,
+        "print": 0.63,
+        "listed": 0.67
       }
     },
     {
@@ -78,11 +78,11 @@
       "reason": "no_keep_bit",
       "noul": {
         "tape": 0.23,
-        "soft": 0.39,
-        "tip": 0.34,
-        "done": 0.47,
-        "print": 0.5,
-        "listed": 0.74
+        "soft": 0.38,
+        "tip": 0.32,
+        "done": 0.45,
+        "print": 0.51,
+        "listed": 0.76
       }
     },
     {
@@ -92,12 +92,12 @@
       "pred": "drop",
       "reason": "no_keep_bit",
       "noul": {
-        "tape": 0.24,
+        "tape": 0.25,
         "soft": 0.28,
-        "tip": 0.25,
-        "done": 0.47,
-        "print": 0.47,
-        "listed": 0.73
+        "tip": 0.28,
+        "done": 0.46,
+        "print": 0.49,
+        "listed": 0.71
       }
     },
     {
@@ -107,11 +107,11 @@
       "pred": "drop",
       "reason": "soft",
       "noul": {
-        "tape": 0.25,
+        "tape": 0.26,
         "soft": 0.6,
-        "tip": 0.37,
-        "done": 0.46,
-        "print": 0.57,
+        "tip": 0.38,
+        "done": 0.47,
+        "print": 0.59,
         "listed": 0.64
       }
     },
@@ -122,12 +122,12 @@
       "pred": "keep",
       "reason": "print",
       "noul": {
-        "tape": 0.25,
+        "tape": 0.28,
         "soft": 0.54,
-        "tip": 0.26,
-        "done": 0.49,
-        "print": 0.68,
-        "listed": 0.35
+        "tip": 0.29,
+        "done": 0.48,
+        "print": 0.71,
+        "listed": 0.37
       }
     },
     {
@@ -137,12 +137,12 @@
       "pred": "drop",
       "reason": "soft",
       "noul": {
-        "tape": 0.17,
-        "soft": 0.67,
-        "tip": 0.28,
+        "tape": 0.16,
+        "soft": 0.68,
+        "tip": 0.31,
         "done": 0.44,
-        "print": 0.64,
-        "listed": 0.59
+        "print": 0.59,
+        "listed": 0.58
       }
     },
     {
@@ -153,11 +153,11 @@
       "reason": "print",
       "noul": {
         "tape": 0.2,
-        "soft": 0.57,
-        "tip": 0.4,
-        "done": 0.47,
-        "print": 0.64,
-        "listed": 0.76
+        "soft": 0.59,
+        "tip": 0.42,
+        "done": 0.43,
+        "print": 0.66,
+        "listed": 0.77
       }
     },
     {
@@ -167,12 +167,12 @@
       "pred": "drop",
       "reason": "no_keep_bit",
       "noul": {
-        "tape": 0.41,
-        "soft": 0.34,
-        "tip": 0.27,
-        "done": 0.51,
-        "print": 0.48,
-        "listed": 0.28
+        "tape": 0.45,
+        "soft": 0.37,
+        "tip": 0.28,
+        "done": 0.53,
+        "print": 0.44,
+        "listed": 0.25
       }
     },
     {
@@ -182,27 +182,27 @@
       "pred": "drop",
       "reason": "no_keep_bit",
       "noul": {
-        "tape": 0.15,
-        "soft": 0.25,
+        "tape": 0.14,
+        "soft": 0.27,
         "tip": 0.1,
-        "done": 0.48,
-        "print": 0.52,
-        "listed": 0.48
+        "done": 0.49,
+        "print": 0.55,
+        "listed": 0.55
       }
     },
     {
       "title": "Fed holds interest rates steady as inflation hits 3-year high - ABC News - Breaking News, Latest News and Videos",
       "label": "official_print",
       "gold": "keep",
-      "pred": "drop",
-      "reason": "no_keep_bit",
+      "pred": "keep",
+      "reason": "done",
       "noul": {
-        "tape": 0.25,
-        "soft": 0.29,
+        "tape": 0.24,
+        "soft": 0.36,
         "tip": 0.2,
-        "done": 0.57,
-        "print": 0.56,
-        "listed": 0.73
+        "done": 0.73,
+        "print": 0.55,
+        "listed": 0.74
       }
     },
     {
@@ -212,12 +212,12 @@
       "pred": "keep",
       "reason": "done",
       "noul": {
-        "tape": 0.21,
-        "soft": 0.29,
+        "tape": 0.22,
+        "soft": 0.3,
         "tip": 0.12,
-        "done": 0.62,
-        "print": 0.4,
-        "listed": 0.88
+        "done": 0.65,
+        "print": 0.43,
+        "listed": 0.87
       }
     },
     {
@@ -227,11 +227,11 @@
       "pred": "drop",
       "reason": "no_keep_bit",
       "noul": {
-        "tape": 0.18,
-        "soft": 0.39,
-        "tip": 0.2,
-        "done": 0.44,
-        "print": 0.4,
+        "tape": 0.2,
+        "soft": 0.43,
+        "tip": 0.18,
+        "done": 0.45,
+        "print": 0.42,
         "listed": 0.87
       }
     },
@@ -242,12 +242,12 @@
       "pred": "drop",
       "reason": "no_keep_bit",
       "noul": {
-        "tape": 0.26,
+        "tape": 0.23,
         "soft": 0.28,
-        "tip": 0.09,
-        "done": 0.4,
-        "print": 0.36,
-        "listed": 0.81
+        "tip": 0.1,
+        "done": 0.45,
+        "print": 0.35,
+        "listed": 0.82
       }
     },
     {
@@ -257,12 +257,12 @@
       "pred": "drop",
       "reason": "no_keep_bit",
       "noul": {
-        "tape": 0.23,
-        "soft": 0.37,
-        "tip": 0.15,
-        "done": 0.41,
+        "tape": 0.24,
+        "soft": 0.34,
+        "tip": 0.17,
+        "done": 0.44,
         "print": 0.4,
-        "listed": 0.83
+        "listed": 0.81
       }
     },
     {
@@ -273,11 +273,11 @@
       "reason": "source",
       "noul": {
         "tape": 0.2,
-        "soft": 0.33,
+        "soft": 0.31,
         "tip": 0.18,
-        "done": 0.51,
-        "print": 0.39,
-        "listed": 0.43
+        "done": 0.48,
+        "print": 0.36,
+        "listed": 0.46
       }
     },
     {
@@ -287,12 +287,12 @@
       "pred": "drop",
       "reason": "no_keep_bit",
       "noul": {
-        "tape": 0.16,
-        "soft": 0.44,
-        "tip": 0.25,
-        "done": 0.41,
-        "print": 0.32,
-        "listed": 0.76
+        "tape": 0.2,
+        "soft": 0.43,
+        "tip": 0.24,
+        "done": 0.43,
+        "print": 0.34,
+        "listed": 0.78
       }
     },
     {
@@ -303,11 +303,11 @@
       "reason": "no_keep_bit",
       "noul": {
         "tape": 0.23,
-        "soft": 0.31,
-        "tip": 0.21,
+        "soft": 0.38,
+        "tip": 0.2,
         "done": 0.49,
-        "print": 0.44,
-        "listed": 0.51
+        "print": 0.41,
+        "listed": 0.57
       }
     },
     {
@@ -319,25 +319,25 @@
       "noul": {
         "tape": 0.16,
         "soft": 0.32,
-        "tip": 0.14,
-        "done": 0.4,
-        "print": 0.36,
-        "listed": 0.17
+        "tip": 0.13,
+        "done": 0.41,
+        "print": 0.33,
+        "listed": 0.19
       }
     },
     {
       "title": "U.S. Taps Strategic Oil Reserve Again as Diesel Tops $6 - Crude Oil Prices Today | OilPrice.com",
       "label": "finished_act",
       "gold": "keep",
-      "pred": "keep",
-      "reason": "done",
+      "pred": "drop",
+      "reason": "no_keep_bit",
       "noul": {
-        "tape": 0.53,
-        "soft": 0.33,
+        "tape": 0.52,
+        "soft": 0.31,
         "tip": 0.27,
-        "done": 0.74,
-        "print": 0.41,
-        "listed": 0.8
+        "done": 0.52,
+        "print": 0.43,
+        "listed": 0.79
       }
     },
     {
@@ -345,14 +345,14 @@
       "label": "finished_act",
       "gold": "keep",
       "pred": "drop",
-      "reason": "tape",
+      "reason": "no_keep_bit",
       "noul": {
-        "tape": 0.62,
-        "soft": 0.32,
-        "tip": 0.41,
-        "done": 0.47,
-        "print": 0.42,
-        "listed": 0.74
+        "tape": 0.59,
+        "soft": 0.26,
+        "tip": 0.42,
+        "done": 0.44,
+        "print": 0.34,
+        "listed": 0.72
       }
     },
     {
@@ -362,12 +362,12 @@
       "pred": "drop",
       "reason": "no_keep_bit",
       "noul": {
-        "tape": 0.19,
-        "soft": 0.53,
-        "tip": 0.18,
-        "done": 0.42,
-        "print": 0.36,
-        "listed": 0.4
+        "tape": 0.17,
+        "soft": 0.51,
+        "tip": 0.16,
+        "done": 0.44,
+        "print": 0.37,
+        "listed": 0.36
       }
     },
     {
@@ -377,11 +377,11 @@
       "pred": "drop",
       "reason": "no_keep_bit",
       "noul": {
-        "tape": 0.35,
-        "soft": 0.43,
-        "tip": 0.38,
-        "done": 0.53,
-        "print": 0.38,
+        "tape": 0.34,
+        "soft": 0.44,
+        "tip": 0.34,
+        "done": 0.51,
+        "print": 0.44,
         "listed": 0.19
       }
     },
@@ -392,11 +392,11 @@
       "pred": "drop",
       "reason": "no_keep_bit",
       "noul": {
-        "tape": 0.36,
-        "soft": 0.33,
-        "tip": 0.24,
+        "tape": 0.3,
+        "soft": 0.3,
+        "tip": 0.26,
         "done": 0.5,
-        "print": 0.26,
+        "print": 0.29,
         "listed": 0.14
       }
     },
@@ -407,12 +407,12 @@
       "pred": "drop",
       "reason": "no_keep_bit",
       "noul": {
-        "tape": 0.18,
-        "soft": 0.24,
+        "tape": 0.16,
+        "soft": 0.22,
         "tip": 0.12,
-        "done": 0.54,
-        "print": 0.32,
-        "listed": 0.15
+        "done": 0.52,
+        "print": 0.31,
+        "listed": 0.16
       }
     },
     {
@@ -422,11 +422,11 @@
       "pred": "drop",
       "reason": "tape",
       "noul": {
-        "tape": 0.68,
+        "tape": 0.69,
         "soft": 0.38,
-        "tip": 0.47,
-        "done": 0.53,
-        "print": 0.41,
+        "tip": 0.48,
+        "done": 0.51,
+        "print": 0.42,
         "listed": 0.78
       }
     },
@@ -437,12 +437,12 @@
       "pred": "drop",
       "reason": "tape",
       "noul": {
-        "tape": 0.67,
-        "soft": 0.19,
-        "tip": 0.25,
-        "done": 0.48,
-        "print": 0.58,
-        "listed": 0.82
+        "tape": 0.65,
+        "soft": 0.17,
+        "tip": 0.26,
+        "done": 0.51,
+        "print": 0.55,
+        "listed": 0.83
       }
     },
     {
@@ -452,11 +452,11 @@
       "pred": "drop",
       "reason": "no_keep_bit",
       "noul": {
-        "tape": 0.57,
-        "soft": 0.36,
-        "tip": 0.33,
-        "done": 0.47,
-        "print": 0.35,
+        "tape": 0.55,
+        "soft": 0.37,
+        "tip": 0.32,
+        "done": 0.45,
+        "print": 0.4,
         "listed": 0.72
       }
     },
@@ -467,12 +467,12 @@
       "pred": "drop",
       "reason": "tape",
       "noul": {
-        "tape": 0.66,
+        "tape": 0.68,
         "soft": 0.31,
-        "tip": 0.4,
+        "tip": 0.41,
         "done": 0.49,
-        "print": 0.41,
-        "listed": 0.71
+        "print": 0.48,
+        "listed": 0.74
       }
     },
     {
@@ -482,12 +482,12 @@
       "pred": "drop",
       "reason": "tape",
       "noul": {
-        "tape": 0.7,
-        "soft": 0.28,
-        "tip": 0.38,
-        "done": 0.53,
-        "print": 0.39,
-        "listed": 0.73
+        "tape": 0.71,
+        "soft": 0.27,
+        "tip": 0.36,
+        "done": 0.5,
+        "print": 0.38,
+        "listed": 0.7
       }
     },
     {
@@ -495,13 +495,13 @@
       "label": "tape",
       "gold": "drop",
       "pred": "drop",
-      "reason": "no_keep_bit",
+      "reason": "tape",
       "noul": {
-        "tape": 0.58,
-        "soft": 0.32,
+        "tape": 0.61,
+        "soft": 0.37,
         "tip": 0.38,
-        "done": 0.5,
-        "print": 0.41,
+        "done": 0.49,
+        "print": 0.42,
         "listed": 0.71
       }
     },
@@ -512,11 +512,11 @@
       "pred": "drop",
       "reason": "tape",
       "noul": {
-        "tape": 0.69,
-        "soft": 0.48,
-        "tip": 0.29,
-        "done": 0.4,
-        "print": 0.35,
+        "tape": 0.68,
+        "soft": 0.5,
+        "tip": 0.3,
+        "done": 0.39,
+        "print": 0.31,
         "listed": 0.84
       }
     },
@@ -527,12 +527,12 @@
       "pred": "drop",
       "reason": "tape",
       "noul": {
-        "tape": 0.87,
-        "soft": 0.42,
-        "tip": 0.31,
-        "done": 0.46,
-        "print": 0.38,
-        "listed": 0.88
+        "tape": 0.88,
+        "soft": 0.38,
+        "tip": 0.32,
+        "done": 0.44,
+        "print": 0.44,
+        "listed": 0.87
       }
     },
     {
@@ -544,10 +544,10 @@
       "noul": {
         "tape": 0.6,
         "soft": 0.36,
-        "tip": 0.36,
-        "done": 0.48,
-        "print": 0.36,
-        "listed": 0.79
+        "tip": 0.39,
+        "done": 0.47,
+        "print": 0.35,
+        "listed": 0.8
       }
     },
     {
@@ -559,10 +559,10 @@
       "noul": {
         "tape": 0.59,
         "soft": 0.34,
-        "tip": 0.37,
-        "done": 0.47,
+        "tip": 0.39,
+        "done": 0.45,
         "print": 0.41,
-        "listed": 0.71
+        "listed": 0.69
       }
     },
     {
@@ -570,14 +570,14 @@
       "label": "tape",
       "gold": "drop",
       "pred": "drop",
-      "reason": "no_keep_bit",
+      "reason": "tape",
       "noul": {
-        "tape": 0.59,
-        "soft": 0.47,
-        "tip": 0.35,
-        "done": 0.46,
-        "print": 0.42,
-        "listed": 0.39
+        "tape": 0.61,
+        "soft": 0.45,
+        "tip": 0.33,
+        "done": 0.48,
+        "print": 0.4,
+        "listed": 0.45
       }
     },
     {
@@ -585,14 +585,14 @@
       "label": "tape",
       "gold": "drop",
       "pred": "drop",
-      "reason": "no_keep_bit",
+      "reason": "tape",
       "noul": {
-        "tape": 0.57,
-        "soft": 0.38,
+        "tape": 0.62,
+        "soft": 0.39,
         "tip": 0.41,
-        "done": 0.51,
-        "print": 0.41,
-        "listed": 0.7
+        "done": 0.49,
+        "print": 0.43,
+        "listed": 0.67
       }
     },
     {
@@ -602,12 +602,12 @@
       "pred": "drop",
       "reason": "tape",
       "noul": {
-        "tape": 0.88,
-        "soft": 0.39,
-        "tip": 0.32,
-        "done": 0.36,
-        "print": 0.29,
-        "listed": 0.15
+        "tape": 0.87,
+        "soft": 0.38,
+        "tip": 0.34,
+        "done": 0.37,
+        "print": 0.31,
+        "listed": 0.14
       }
     },
     {
@@ -617,12 +617,12 @@
       "pred": "drop",
       "reason": "tape",
       "noul": {
-        "tape": 0.7,
-        "soft": 0.41,
-        "tip": 0.36,
-        "done": 0.38,
-        "print": 0.32,
-        "listed": 0.89
+        "tape": 0.69,
+        "soft": 0.43,
+        "tip": 0.38,
+        "done": 0.36,
+        "print": 0.33,
+        "listed": 0.88
       }
     },
     {
@@ -633,10 +633,10 @@
       "reason": "tape",
       "noul": {
         "tape": 0.66,
-        "soft": 0.32,
-        "tip": 0.32,
-        "done": 0.45,
-        "print": 0.4,
+        "soft": 0.31,
+        "tip": 0.35,
+        "done": 0.47,
+        "print": 0.43,
         "listed": 0.83
       }
     },
@@ -647,12 +647,12 @@
       "pred": "drop",
       "reason": "tape",
       "noul": {
-        "tape": 0.7,
-        "soft": 0.26,
-        "tip": 0.27,
-        "done": 0.53,
-        "print": 0.33,
-        "listed": 0.47
+        "tape": 0.71,
+        "soft": 0.3,
+        "tip": 0.29,
+        "done": 0.5,
+        "print": 0.34,
+        "listed": 0.42
       }
     },
     {
@@ -662,12 +662,12 @@
       "pred": "drop",
       "reason": "tape",
       "noul": {
-        "tape": 0.62,
-        "soft": 0.39,
-        "tip": 0.4,
-        "done": 0.49,
-        "print": 0.47,
-        "listed": 0.73
+        "tape": 0.61,
+        "soft": 0.38,
+        "tip": 0.41,
+        "done": 0.51,
+        "print": 0.45,
+        "listed": 0.7
       }
     },
     {
@@ -677,12 +677,12 @@
       "pred": "drop",
       "reason": "no_keep_bit",
       "noul": {
-        "tape": 0.47,
-        "soft": 0.51,
-        "tip": 0.38,
-        "done": 0.43,
-        "print": 0.37,
-        "listed": 0.39
+        "tape": 0.44,
+        "soft": 0.54,
+        "tip": 0.4,
+        "done": 0.44,
+        "print": 0.36,
+        "listed": 0.4
       }
     },
     {
@@ -692,12 +692,12 @@
       "pred": "drop",
       "reason": "no_keep_bit",
       "noul": {
-        "tape": 0.49,
-        "soft": 0.32,
-        "tip": 0.37,
+        "tape": 0.51,
+        "soft": 0.34,
+        "tip": 0.34,
         "done": 0.45,
-        "print": 0.35,
-        "listed": 0.81
+        "print": 0.32,
+        "listed": 0.83
       }
     },
     {
@@ -707,12 +707,12 @@
       "pred": "drop",
       "reason": "no_keep_bit",
       "noul": {
-        "tape": 0.52,
-        "soft": 0.29,
+        "tape": 0.5,
+        "soft": 0.28,
         "tip": 0.31,
         "done": 0.56,
-        "print": 0.42,
-        "listed": 0.81
+        "print": 0.41,
+        "listed": 0.8
       }
     },
     {
@@ -722,12 +722,12 @@
       "pred": "drop",
       "reason": "no_keep_bit",
       "noul": {
-        "tape": 0.31,
-        "soft": 0.25,
+        "tape": 0.3,
+        "soft": 0.26,
         "tip": 0.21,
         "done": 0.52,
-        "print": 0.33,
-        "listed": 0.2
+        "print": 0.27,
+        "listed": 0.22
       }
     },
     {
@@ -737,12 +737,12 @@
       "pred": "drop",
       "reason": "no_keep_bit",
       "noul": {
-        "tape": 0.52,
-        "soft": 0.31,
-        "tip": 0.31,
-        "done": 0.49,
-        "print": 0.24,
-        "listed": 0.71
+        "tape": 0.55,
+        "soft": 0.32,
+        "tip": 0.32,
+        "done": 0.48,
+        "print": 0.23,
+        "listed": 0.67
       }
     },
     {
@@ -752,12 +752,12 @@
       "pred": "drop",
       "reason": "tape",
       "noul": {
-        "tape": 0.72,
-        "soft": 0.31,
-        "tip": 0.31,
-        "done": 0.43,
-        "print": 0.38,
-        "listed": 0.21
+        "tape": 0.69,
+        "soft": 0.29,
+        "tip": 0.33,
+        "done": 0.46,
+        "print": 0.37,
+        "listed": 0.24
       }
     },
     {
@@ -767,11 +767,11 @@
       "pred": "drop",
       "reason": "no_keep_bit",
       "noul": {
-        "tape": 0.55,
-        "soft": 0.37,
-        "tip": 0.29,
-        "done": 0.53,
-        "print": 0.52,
+        "tape": 0.52,
+        "soft": 0.4,
+        "tip": 0.32,
+        "done": 0.49,
+        "print": 0.51,
         "listed": 0.68
       }
     },
@@ -782,12 +782,12 @@
       "pred": "drop",
       "reason": "soft",
       "noul": {
-        "tape": 0.31,
+        "tape": 0.32,
         "soft": 0.75,
         "tip": 0.36,
-        "done": 0.47,
-        "print": 0.44,
-        "listed": 0.68
+        "done": 0.46,
+        "print": 0.38,
+        "listed": 0.72
       }
     },
     {
@@ -797,12 +797,12 @@
       "pred": "drop",
       "reason": "soft",
       "noul": {
-        "tape": 0.43,
+        "tape": 0.44,
         "soft": 0.67,
-        "tip": 0.37,
-        "done": 0.43,
-        "print": 0.35,
-        "listed": 0.54
+        "tip": 0.38,
+        "done": 0.44,
+        "print": 0.36,
+        "listed": 0.52
       }
     },
     {
@@ -812,12 +812,12 @@
       "pred": "drop",
       "reason": "soft",
       "noul": {
-        "tape": 0.48,
-        "soft": 0.65,
-        "tip": 0.48,
-        "done": 0.51,
-        "print": 0.36,
-        "listed": 0.65
+        "tape": 0.45,
+        "soft": 0.62,
+        "tip": 0.47,
+        "done": 0.5,
+        "print": 0.35,
+        "listed": 0.63
       }
     },
     {
@@ -827,12 +827,12 @@
       "pred": "drop",
       "reason": "no_keep_bit",
       "noul": {
-        "tape": 0.54,
-        "soft": 0.53,
-        "tip": 0.37,
-        "done": 0.5,
-        "print": 0.34,
-        "listed": 0.63
+        "tape": 0.53,
+        "soft": 0.56,
+        "tip": 0.36,
+        "done": 0.49,
+        "print": 0.4,
+        "listed": 0.62
       }
     },
     {
@@ -842,12 +842,12 @@
       "pred": "drop",
       "reason": "tape",
       "noul": {
-        "tape": 0.66,
+        "tape": 0.64,
         "soft": 0.36,
         "tip": 0.33,
-        "done": 0.49,
-        "print": 0.43,
-        "listed": 0.82
+        "done": 0.52,
+        "print": 0.45,
+        "listed": 0.81
       }
     },
     {
@@ -858,11 +858,11 @@
       "reason": "soft",
       "noul": {
         "tape": 0.23,
-        "soft": 0.81,
-        "tip": 0.52,
-        "done": 0.48,
-        "print": 0.35,
-        "listed": 0.73
+        "soft": 0.82,
+        "tip": 0.55,
+        "done": 0.46,
+        "print": 0.38,
+        "listed": 0.67
       }
     },
     {
@@ -872,12 +872,12 @@
       "pred": "drop",
       "reason": "soft",
       "noul": {
-        "tape": 0.31,
+        "tape": 0.27,
         "soft": 0.64,
-        "tip": 0.42,
-        "done": 0.43,
-        "print": 0.36,
-        "listed": 0.83
+        "tip": 0.41,
+        "done": 0.4,
+        "print": 0.32,
+        "listed": 0.81
       }
     },
     {
@@ -887,12 +887,12 @@
       "pred": "drop",
       "reason": "soft",
       "noul": {
-        "tape": 0.32,
-        "soft": 0.66,
-        "tip": 0.44,
-        "done": 0.49,
-        "print": 0.4,
-        "listed": 0.54
+        "tape": 0.31,
+        "soft": 0.71,
+        "tip": 0.45,
+        "done": 0.45,
+        "print": 0.41,
+        "listed": 0.56
       }
     },
     {
@@ -903,11 +903,11 @@
       "reason": "soft",
       "noul": {
         "tape": 0.24,
-        "soft": 0.68,
-        "tip": 0.35,
-        "done": 0.49,
-        "print": 0.37,
-        "listed": 0.8
+        "soft": 0.66,
+        "tip": 0.37,
+        "done": 0.48,
+        "print": 0.42,
+        "listed": 0.78
       }
     },
     {
@@ -917,11 +917,11 @@
       "pred": "drop",
       "reason": "soft",
       "noul": {
-        "tape": 0.22,
-        "soft": 0.75,
-        "tip": 0.61,
-        "done": 0.5,
-        "print": 0.37,
+        "tape": 0.21,
+        "soft": 0.76,
+        "tip": 0.64,
+        "done": 0.49,
+        "print": 0.35,
         "listed": 0.84
       }
     },
@@ -932,12 +932,12 @@
       "pred": "drop",
       "reason": "soft",
       "noul": {
-        "tape": 0.34,
-        "soft": 0.64,
-        "tip": 0.54,
-        "done": 0.46,
-        "print": 0.29,
-        "listed": 0.86
+        "tape": 0.35,
+        "soft": 0.66,
+        "tip": 0.55,
+        "done": 0.43,
+        "print": 0.28,
+        "listed": 0.85
       }
     },
     {
@@ -947,12 +947,12 @@
       "pred": "drop",
       "reason": "soft",
       "noul": {
-        "tape": 0.36,
-        "soft": 0.75,
-        "tip": 0.67,
-        "done": 0.41,
-        "print": 0.29,
-        "listed": 0.89
+        "tape": 0.33,
+        "soft": 0.74,
+        "tip": 0.66,
+        "done": 0.38,
+        "print": 0.26,
+        "listed": 0.9
       }
     },
     {
@@ -963,10 +963,10 @@
       "reason": "soft",
       "noul": {
         "tape": 0.21,
-        "soft": 0.62,
-        "tip": 0.31,
-        "done": 0.46,
-        "print": 0.32,
+        "soft": 0.65,
+        "tip": 0.29,
+        "done": 0.43,
+        "print": 0.3,
         "listed": 0.86
       }
     },
@@ -975,14 +975,14 @@
       "label": "preview",
       "gold": "drop",
       "pred": "drop",
-      "reason": "soft",
+      "reason": "no_keep_bit",
       "noul": {
-        "tape": 0.24,
-        "soft": 0.61,
+        "tape": 0.22,
+        "soft": 0.59,
         "tip": 0.54,
-        "done": 0.41,
-        "print": 0.22,
-        "listed": 0.75
+        "done": 0.34,
+        "print": 0.25,
+        "listed": 0.78
       }
     },
     {
@@ -992,12 +992,12 @@
       "pred": "drop",
       "reason": "soft",
       "noul": {
-        "tape": 0.25,
-        "soft": 0.7,
-        "tip": 0.53,
-        "done": 0.44,
-        "print": 0.41,
-        "listed": 0.8
+        "tape": 0.27,
+        "soft": 0.72,
+        "tip": 0.55,
+        "done": 0.45,
+        "print": 0.4,
+        "listed": 0.79
       }
     },
     {
@@ -1007,12 +1007,12 @@
       "pred": "drop",
       "reason": "no_keep_bit",
       "noul": {
-        "tape": 0.42,
-        "soft": 0.5,
-        "tip": 0.32,
-        "done": 0.51,
-        "print": 0.4,
-        "listed": 0.81
+        "tape": 0.46,
+        "soft": 0.47,
+        "tip": 0.33,
+        "done": 0.44,
+        "print": 0.39,
+        "listed": 0.82
       }
     },
     {
@@ -1024,10 +1024,10 @@
       "noul": {
         "tape": 0.28,
         "soft": 0.47,
-        "tip": 0.36,
-        "done": 0.4,
-        "print": 0.4,
-        "listed": 0.77
+        "tip": 0.34,
+        "done": 0.39,
+        "print": 0.43,
+        "listed": 0.76
       }
     },
     {
@@ -1037,12 +1037,12 @@
       "pred": "drop",
       "reason": "no_keep_bit",
       "noul": {
-        "tape": 0.26,
-        "soft": 0.31,
-        "tip": 0.41,
-        "done": 0.42,
-        "print": 0.51,
-        "listed": 0.77
+        "tape": 0.29,
+        "soft": 0.32,
+        "tip": 0.38,
+        "done": 0.44,
+        "print": 0.5,
+        "listed": 0.75
       }
     },
     {
@@ -1050,14 +1050,14 @@
       "label": "preview",
       "gold": "drop",
       "pred": "drop",
-      "reason": "soft",
+      "reason": "no_keep_bit",
       "noul": {
-        "tape": 0.28,
-        "soft": 0.6,
-        "tip": 0.42,
-        "done": 0.4,
-        "print": 0.36,
-        "listed": 0.82
+        "tape": 0.27,
+        "soft": 0.58,
+        "tip": 0.41,
+        "done": 0.36,
+        "print": 0.34,
+        "listed": 0.83
       }
     },
     {
@@ -1067,12 +1067,12 @@
       "pred": "drop",
       "reason": "tape",
       "noul": {
-        "tape": 0.66,
-        "soft": 0.57,
-        "tip": 0.51,
-        "done": 0.46,
-        "print": 0.36,
-        "listed": 0.83
+        "tape": 0.64,
+        "soft": 0.59,
+        "tip": 0.48,
+        "done": 0.43,
+        "print": 0.32,
+        "listed": 0.84
       }
     },
     {
@@ -1080,13 +1080,13 @@
       "label": "preview",
       "gold": "drop",
       "pred": "drop",
-      "reason": "soft",
+      "reason": "tape",
       "noul": {
-        "tape": 0.57,
-        "soft": 0.73,
-        "tip": 0.49,
-        "done": 0.51,
-        "print": 0.36,
+        "tape": 0.6,
+        "soft": 0.74,
+        "tip": 0.46,
+        "done": 0.49,
+        "print": 0.34,
         "listed": 0.82
       }
     },
@@ -1097,12 +1097,12 @@
       "pred": "drop",
       "reason": "no_keep_bit",
       "noul": {
-        "tape": 0.37,
+        "tape": 0.4,
         "soft": 0.59,
-        "tip": 0.5,
-        "done": 0.39,
+        "tip": 0.52,
+        "done": 0.37,
         "print": 0.3,
-        "listed": 0.69
+        "listed": 0.66
       }
     },
     {
@@ -1112,12 +1112,12 @@
       "pred": "drop",
       "reason": "soft",
       "noul": {
-        "tape": 0.35,
-        "soft": 0.66,
-        "tip": 0.49,
-        "done": 0.45,
-        "print": 0.34,
-        "listed": 0.47
+        "tape": 0.38,
+        "soft": 0.63,
+        "tip": 0.47,
+        "done": 0.42,
+        "print": 0.37,
+        "listed": 0.44
       }
     },
     {
@@ -1135,12 +1135,12 @@
       "pred": "drop",
       "reason": "source",
       "noul": {
-        "tape": 0.26,
+        "tape": 0.25,
         "soft": 0.57,
-        "tip": 0.85,
-        "done": 0.44,
-        "print": 0.35,
-        "listed": 0.82
+        "tip": 0.86,
+        "done": 0.42,
+        "print": 0.33,
+        "listed": 0.81
       }
     },
     {
@@ -1150,12 +1150,12 @@
       "pred": "drop",
       "reason": "source",
       "noul": {
-        "tape": 0.27,
+        "tape": 0.28,
         "soft": 0.58,
-        "tip": 0.82,
-        "done": 0.44,
+        "tip": 0.81,
+        "done": 0.37,
         "print": 0.29,
-        "listed": 0.76
+        "listed": 0.77
       }
     },
     {
@@ -1165,12 +1165,12 @@
       "pred": "drop",
       "reason": "source",
       "noul": {
-        "tape": 0.48,
-        "soft": 0.54,
+        "tape": 0.5,
+        "soft": 0.53,
         "tip": 0.72,
-        "done": 0.41,
-        "print": 0.25,
-        "listed": 0.91
+        "done": 0.33,
+        "print": 0.26,
+        "listed": 0.89
       }
     },
     {
@@ -1180,11 +1180,11 @@
       "pred": "drop",
       "reason": "source",
       "noul": {
-        "tape": 0.21,
-        "soft": 0.45,
-        "tip": 0.45,
-        "done": 0.4,
-        "print": 0.36,
+        "tape": 0.23,
+        "soft": 0.44,
+        "tip": 0.43,
+        "done": 0.42,
+        "print": 0.37,
         "listed": 0.9
       }
     },
@@ -1196,11 +1196,11 @@
       "reason": "soft",
       "noul": {
         "tape": 0.25,
-        "soft": 0.63,
-        "tip": 0.46,
-        "done": 0.53,
+        "soft": 0.64,
+        "tip": 0.44,
+        "done": 0.44,
         "print": 0.48,
-        "listed": 0.87
+        "listed": 0.88
       }
     },
     {
@@ -1210,12 +1210,12 @@
       "pred": "drop",
       "reason": "soft",
       "noul": {
-        "tape": 0.3,
+        "tape": 0.28,
         "soft": 0.62,
-        "tip": 0.63,
-        "done": 0.53,
-        "print": 0.41,
-        "listed": 0.81
+        "tip": 0.61,
+        "done": 0.44,
+        "print": 0.43,
+        "listed": 0.8
       }
     },
     {
@@ -1225,12 +1225,12 @@
       "pred": "drop",
       "reason": "no_keep_bit",
       "noul": {
-        "tape": 0.29,
-        "soft": 0.54,
-        "tip": 0.55,
-        "done": 0.49,
-        "print": 0.38,
-        "listed": 0.37
+        "tape": 0.3,
+        "soft": 0.53,
+        "tip": 0.53,
+        "done": 0.46,
+        "print": 0.45,
+        "listed": 0.35
       }
     },
     {
@@ -1240,12 +1240,12 @@
       "pred": "drop",
       "reason": "no_keep_bit",
       "noul": {
-        "tape": 0.22,
-        "soft": 0.56,
-        "tip": 0.32,
-        "done": 0.46,
-        "print": 0.51,
-        "listed": 0.54
+        "tape": 0.21,
+        "soft": 0.57,
+        "tip": 0.33,
+        "done": 0.44,
+        "print": 0.47,
+        "listed": 0.55
       }
     },
     {
@@ -1255,11 +1255,11 @@
       "pred": "drop",
       "reason": "no_keep_bit",
       "noul": {
-        "tape": 0.31,
-        "soft": 0.42,
-        "tip": 0.31,
-        "done": 0.52,
-        "print": 0.51,
+        "tape": 0.33,
+        "soft": 0.41,
+        "tip": 0.32,
+        "done": 0.53,
+        "print": 0.49,
         "listed": 0.76
       }
     },
@@ -1270,12 +1270,12 @@
       "pred": "drop",
       "reason": "tape",
       "noul": {
-        "tape": 0.79,
-        "soft": 0.39,
+        "tape": 0.77,
+        "soft": 0.42,
         "tip": 0.18,
-        "done": 0.34,
-        "print": 0.26,
-        "listed": 0.07
+        "done": 0.33,
+        "print": 0.27,
+        "listed": 0.06
       }
     },
     {
@@ -1285,12 +1285,12 @@
       "pred": "drop",
       "reason": "no_keep_bit",
       "noul": {
-        "tape": 0.32,
-        "soft": 0.48,
-        "tip": 0.26,
-        "done": 0.43,
-        "print": 0.3,
-        "listed": 0.13
+        "tape": 0.29,
+        "soft": 0.51,
+        "tip": 0.25,
+        "done": 0.44,
+        "print": 0.32,
+        "listed": 0.16
       }
     },
     {
@@ -1300,11 +1300,11 @@
       "pred": "drop",
       "reason": "no_keep_bit",
       "noul": {
-        "tape": 0.2,
+        "tape": 0.19,
         "soft": 0.27,
-        "tip": 0.16,
-        "done": 0.56,
-        "print": 0.36,
+        "tip": 0.17,
+        "done": 0.59,
+        "print": 0.35,
         "listed": 0.09
       }
     },
@@ -1315,11 +1315,11 @@
       "pred": "drop",
       "reason": "no_keep_bit",
       "noul": {
-        "tape": 0.25,
-        "soft": 0.48,
-        "tip": 0.18,
-        "done": 0.52,
-        "print": 0.42,
+        "tape": 0.22,
+        "soft": 0.43,
+        "tip": 0.21,
+        "done": 0.49,
+        "print": 0.4,
         "listed": 0.08
       }
     },
@@ -1331,11 +1331,11 @@
       "reason": "no_keep_bit",
       "noul": {
         "tape": 0.21,
-        "soft": 0.44,
-        "tip": 0.58,
-        "done": 0.4,
-        "print": 0.36,
-        "listed": 0.23
+        "soft": 0.45,
+        "tip": 0.56,
+        "done": 0.37,
+        "print": 0.34,
+        "listed": 0.24
       }
     },
     {
@@ -1346,11 +1346,11 @@
       "reason": "source",
       "noul": {
         "tape": 0.22,
-        "soft": 0.54,
-        "tip": 0.73,
+        "soft": 0.53,
+        "tip": 0.75,
         "done": 0.44,
-        "print": 0.37,
-        "listed": 0.79
+        "print": 0.4,
+        "listed": 0.76
       }
     },
     {
@@ -1360,12 +1360,12 @@
       "pred": "drop",
       "reason": "source",
       "noul": {
-        "tape": 0.41,
-        "soft": 0.48,
-        "tip": 0.78,
-        "done": 0.45,
-        "print": 0.28,
-        "listed": 0.86
+        "tape": 0.47,
+        "soft": 0.49,
+        "tip": 0.8,
+        "done": 0.42,
+        "print": 0.27,
+        "listed": 0.87
       }
     },
     {
@@ -1375,12 +1375,12 @@
       "pred": "drop",
       "reason": "tape",
       "noul": {
-        "tape": 0.8,
-        "soft": 0.26,
-        "tip": 0.39,
-        "done": 0.47,
+        "tape": 0.79,
+        "soft": 0.29,
+        "tip": 0.38,
+        "done": 0.46,
         "print": 0.32,
-        "listed": 0.86
+        "listed": 0.88
       }
     },
     {
@@ -1390,12 +1390,12 @@
       "pred": "drop",
       "reason": "soft",
       "noul": {
-        "tape": 0.37,
-        "soft": 0.74,
-        "tip": 0.5,
-        "done": 0.46,
-        "print": 0.34,
-        "listed": 0.84
+        "tape": 0.36,
+        "soft": 0.73,
+        "tip": 0.49,
+        "done": 0.42,
+        "print": 0.32,
+        "listed": 0.86
       }
     },
     {
@@ -1405,12 +1405,12 @@
       "pred": "drop",
       "reason": "soft",
       "noul": {
-        "tape": 0.35,
-        "soft": 0.72,
-        "tip": 0.52,
-        "done": 0.41,
-        "print": 0.31,
-        "listed": 0.84
+        "tape": 0.34,
+        "soft": 0.71,
+        "tip": 0.49,
+        "done": 0.38,
+        "print": 0.28,
+        "listed": 0.85
       }
     },
     {
@@ -1421,11 +1421,11 @@
       "reason": "soft",
       "noul": {
         "tape": 0.28,
-        "soft": 0.72,
-        "tip": 0.57,
-        "done": 0.44,
-        "print": 0.3,
-        "listed": 0.85
+        "soft": 0.7,
+        "tip": 0.6,
+        "done": 0.4,
+        "print": 0.32,
+        "listed": 0.83
       }
     },
     {
@@ -1435,12 +1435,12 @@
       "pred": "drop",
       "reason": "source",
       "noul": {
-        "tape": 0.3,
+        "tape": 0.29,
         "soft": 0.58,
-        "tip": 0.51,
-        "done": 0.49,
-        "print": 0.36,
-        "listed": 0.81
+        "tip": 0.56,
+        "done": 0.48,
+        "print": 0.37,
+        "listed": 0.84
       }
     },
     {
@@ -1450,11 +1450,11 @@
       "pred": "drop",
       "reason": "no_keep_bit",
       "noul": {
-        "tape": 0.33,
-        "soft": 0.54,
-        "tip": 0.56,
-        "done": 0.53,
-        "print": 0.39,
+        "tape": 0.31,
+        "soft": 0.46,
+        "tip": 0.58,
+        "done": 0.46,
+        "print": 0.35,
         "listed": 0.65
       }
     },
@@ -1465,12 +1465,12 @@
       "pred": "drop",
       "reason": "tip",
       "noul": {
-        "tape": 0.3,
-        "soft": 0.5,
-        "tip": 0.75,
-        "done": 0.47,
-        "print": 0.37,
-        "listed": 0.63
+        "tape": 0.31,
+        "soft": 0.51,
+        "tip": 0.73,
+        "done": 0.45,
+        "print": 0.38,
+        "listed": 0.65
       }
     },
     {
@@ -1480,12 +1480,12 @@
       "pred": "drop",
       "reason": "no_keep_bit",
       "noul": {
-        "tape": 0.22,
-        "soft": 0.45,
-        "tip": 0.15,
-        "done": 0.39,
-        "print": 0.28,
-        "listed": 0.11
+        "tape": 0.28,
+        "soft": 0.44,
+        "tip": 0.14,
+        "done": 0.41,
+        "print": 0.27,
+        "listed": 0.1
       }
     },
     {
@@ -1495,12 +1495,12 @@
       "pred": "drop",
       "reason": "source",
       "noul": {
-        "tape": 0.3,
-        "soft": 0.52,
-        "tip": 0.71,
+        "tape": 0.32,
+        "soft": 0.51,
+        "tip": 0.73,
         "done": 0.43,
         "print": 0.3,
-        "listed": 0.87
+        "listed": 0.88
       }
     }
   ]
