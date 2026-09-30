@@ -817,6 +817,143 @@ def run_draw(
     return report
 
 
+def _rows_from_draw(blob: dict) -> list[dict]:
+    rows = []
+    seen: set[str] = set()
+    for raw in blob.get("items") or []:
+        if not isinstance(raw, dict):
+            continue
+        title = str(raw.get("title") or "").strip()
+        if not title:
+            continue
+        tid = str(raw.get("id") or "").strip().lower()
+        if not ID_RE.match(tid):
+            tid = title_id(title)
+        if tid in seen:
+            continue
+        seen.add(tid)
+        rows.append({
+            "id": tid,
+            "title": title,
+            "source": raw.get("source") or "",
+            "published_at": raw.get("published_at") or "",
+            "url": raw.get("url") or "",
+            "date": raw.get("date") or "",
+            "pool": raw.get("pool") or "",
+            "query": raw.get("query") or "",
+        })
+    return rows
+
+
+def _decision_flips(before: list[dict], after: list[dict]) -> dict:
+    old = {str(row.get("id") or ""): row for row in before}
+    keep_to_drop = []
+    drop_to_keep = []
+    for row in after:
+        prev = old.get(str(row.get("id") or ""))
+        if not prev:
+            continue
+        was = str(prev.get("jev") or "").upper()
+        now = str(row.get("jev") or "").upper()
+        if was == now:
+            continue
+        line = (
+            f"{was}->{now} {prev.get('reason') or ''}->{row.get('reason') or ''} "
+            f"| {(row.get('title') or '')[:90]}"
+        )
+        if was == "KEEP" and now == "DROP":
+            keep_to_drop.append(line)
+        elif was == "DROP" and now == "KEEP":
+            drop_to_keep.append(line)
+    return {
+        "keep_to_drop": keep_to_drop,
+        "drop_to_keep": drop_to_keep,
+        "n": len(keep_to_drop) + len(drop_to_keep),
+    }
+
+
+def run_replay(
+    *,
+    live: bool,
+    key: str = "",
+    workers: int = 16,
+    stamp: str = "",
+    poster=None,
+    now: dt.datetime | None = None,
+    root: Path | None = None,
+    ground: Path | None = None,
+    source: Path | None = None,
+    write: bool = False,
+) -> dict:
+    """Re-score an existing trainer sheet through the current hop-0 gate."""
+    now = now or dt.datetime.now(dt.timezone.utc)
+    if now.tzinfo is None:
+        now = now.replace(tzinfo=dt.timezone.utc)
+    root = root or ROOT
+    ground = ground or (root / "00_grounding")
+    source = source or dashboard_draw_path(root)
+    blob = _load_json(source)
+    if not isinstance(blob, dict):
+        raise RuntimeError(f"draw is not an object: {source}")
+    rows = _rows_from_draw(blob)
+    if not rows:
+        raise RuntimeError("draw has no titles to replay")
+    items, model = annotate_gate(
+        rows, live=live, key=key, workers=workers, poster=poster, asof=now.date(),
+    )
+    flips = _decision_flips(list(blob.get("items") or []), items)
+    directory = train_dir(ground)
+    if write:
+        directory.mkdir(parents=True, exist_ok=True)
+        used = allocate_stamp(directory, stamp, now, kind="draw")
+    else:
+        used = stamp if STAMP_RE.match(stamp or "") else _stamp_now(now)
+    sample = dict(blob.get("sample") or {})
+    sample.setdefault(
+        "exam_source",
+        blob.get("exam_source") or "replay",
+    )
+    sample.setdefault("parsed", len(items))
+    sample.setdefault("rss", 0)
+    sample.setdefault("exam", 0)
+    report = {
+        "schema": SCHEMA_DRAW,
+        "stamp": used,
+        "generated_at": now.isoformat(),
+        "seed": blob.get("seed") or 0,
+        "model": model,
+        "exam_source": blob.get("exam_source") or sample.get("exam_source") or "replay",
+        "gate": "hop0-bits+jev" if live else "hop0-code-bits",
+        "replay_of": blob.get("stamp") or "",
+        "flips": flips["n"],
+        "sample": sample,
+        "items": items,
+    }
+    _reject_secrets(json.dumps(report))
+    if write:
+        draw_path = directory / f"{used}_draw.json"
+        if draw_path.exists():
+            raise FileExistsError(f"refusing to overwrite {draw_path.name}")
+        _write_json(draw_path, report)
+        _write_json(dashboard_draw_path(root), report)
+        report["paths"] = {
+            "draw": str(draw_path.relative_to(root)) if _under(draw_path, root) else str(draw_path),
+            "page": str(dashboard_draw_path(root).relative_to(root))
+            if _under(dashboard_draw_path(root), root) else str(dashboard_draw_path(root)),
+        }
+    _print_draw(report)
+    print(
+        f"[jev_train] replay of={report.get('replay_of')} "
+        f"flips={flips['n']} keep->drop={len(flips['keep_to_drop'])} "
+        f"drop->keep={len(flips['drop_to_keep'])} model={model or 'none'}"
+    )
+    for line in flips["keep_to_drop"][:20]:
+        print(f"[jev_train] flip {line}")
+    for line in flips["drop_to_keep"][:20]:
+        print(f"[jev_train] flip {line}")
+    return report
+
+
 def _under(path: Path, root: Path) -> bool:
     try:
         path.resolve().relative_to(root.resolve())
@@ -1486,6 +1623,23 @@ def cmd_draw(args) -> int:
     return 0
 
 
+def cmd_replay(args) -> int:
+    key = api_key()
+    if not key:
+        print("[jev_train] JEV_API_KEY / TYPESAFE_API_KEY is empty")
+        return 1
+    source = Path(args.source) if str(args.source or "").strip() else None
+    try:
+        run_replay(
+            live=True, key=key, workers=max(1, int(args.workers or 16)),
+            stamp=args.stamp or "", source=source, write=True,
+        )
+    except Exception as exc:  # noqa: BLE001 — CLI boundary
+        print(f"[jev_train] {type(exc).__name__}: {exc}")
+        return 1
+    return 0
+
+
 def cmd_grade(args) -> int:
     raw = os.environ.get("GRADES_JSON") or ""
     if args.grades:
@@ -1527,6 +1681,14 @@ def build_parser():
     draw.add_argument("--seed", default="")
     draw.add_argument("--workers", type=int, default=16)
     draw.set_defaults(func=cmd_draw)
+    replay = sub.add_parser(
+        "replay",
+        help="Re-score the last trainer sheet through live BIT_QUESTIONS",
+    )
+    replay.add_argument("--stamp", default="")
+    replay.add_argument("--source", default="", help="Path to an existing draw.json")
+    replay.add_argument("--workers", type=int, default=16)
+    replay.set_defaults(func=cmd_replay)
     grade = sub.add_parser("grade", help="Write the session, markdown, and grade JSON")
     grade.add_argument("--stamp", default="")
     grade.add_argument("--grades", default="", help="Path to grades JSON. Default: GRADES_JSON env.")

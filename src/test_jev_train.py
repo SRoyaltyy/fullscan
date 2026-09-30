@@ -37,6 +37,7 @@ from src.jev_train import (
     publish_issue,
     read_holdout_items,
     run_draw,
+    run_replay,
     score_grades,
     select_draw,
     take_rotating,
@@ -499,6 +500,73 @@ def test_draw_writes_page_json_and_leaves_holdout_bytes_alone():
         assert "blast" in blast["bits"]
         assert not (root / "keep.json").exists()
         assert not list(ground.glob("keep.json"))
+
+
+def test_replay_uses_posted_bit_answers():
+    capita = "Capita Flags CSPS Costs but Touts Contract Wins, Savings and AI Growth"
+    nasdaq = "Nasdaq to Buy Dark Pool Stock Venue LeveL for Equity Trading"
+
+    def poster(state, questions, key):
+        assert "k_done" in questions
+        assert "event_class" not in questions
+        if "Capita" in state:
+            return {
+                "model": "jev-test",
+                "answers": {
+                    "v_fluff": {"type": "noul", "noul": 0.88},
+                    "k_done": {"type": "noul", "noul": 0.12},
+                },
+            }
+        return {
+            "model": "jev-test",
+            "answers": {
+                "k_done": {"type": "noul", "noul": 0.91},
+                "v_fluff": {"type": "noul", "noul": 0.04},
+            },
+        }
+
+    with tempfile.TemporaryDirectory() as tmp:
+        root = Path(tmp)
+        dash = root / "dashboard" / "jev-train"
+        dash.mkdir(parents=True)
+        ground = root / "00_grounding"
+        ground.mkdir()
+        (dash / "draw.json").write_text(json.dumps({
+            "schema": "jev-train-draw-1",
+            "stamp": "20260930_0858",
+            "seed": 1,
+            "exam_source": "hard_miss",
+            "gate": "hop0-code-bits+jev",
+            "sample": {"parsed": 2, "rss": 0, "exam": 0},
+            "items": [
+                {
+                    "n": 1, "id": title_id(capita), "pool": "parsed",
+                    "title": capita, "source": "MarketBeat",
+                    "jev": "KEEP", "reason": "k_done",
+                },
+                {
+                    "n": 2, "id": title_id(nasdaq), "pool": "parsed",
+                    "title": nasdaq, "source": "Bloomberg",
+                    "jev": "DROP", "reason": "no_keep_bit",
+                },
+            ],
+        }), encoding="utf-8")
+        report = run_replay(
+            live=True, key="x", workers=1, stamp="20260930_0920",
+            poster=poster, now=NOW, root=root, ground=ground, write=True,
+        )
+        assert report["gate"] == "hop0-bits+jev"
+        assert report["replay_of"] == "20260930_0858"
+        assert report["model"] == "jev-test"
+        assert report["flips"] == 2
+        by_title = {item["title"]: item for item in report["items"]}
+        assert by_title[capita]["jev"] == "DROP"
+        assert by_title[nasdaq]["jev"] == "KEEP"
+        assert by_title[nasdaq]["reason"] == "k_done"
+        page = json.loads((dash / "draw.json").read_text(encoding="utf-8"))
+        assert page["stamp"] == "20260930_0920"
+        assert page["items"][0]["jev"] == "DROP"
+        assert not (root / "keep.json").exists()
 
 
 def test_ensure_pool_files_does_not_rewrite_existing_holdout():
@@ -1192,6 +1260,7 @@ def main() -> None:
         test_hard_misses_rotate_when_holdout_is_used_up,
         test_hard_miss_bank_tops_up_when_trained_hashes_exhaust_it,
         test_draw_writes_page_json_and_leaves_holdout_bytes_alone,
+        test_replay_uses_posted_bit_answers,
         test_ensure_pool_files_does_not_rewrite_existing_holdout,
         test_grades_payload_accepts_base64_and_rejects_secrets,
         test_publish_issue_opens_or_updates_the_titled_issue,

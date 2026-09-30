@@ -1,0 +1,118 @@
+name: Jev wired-path replay
+
+# Cloud agents cannot workflow_dispatch. Landing this file on main
+# replays the last trainer sheet through live BIT_QUESTIONS.
+# No schedule. Mixed New draw stays on jev_train.yml (dispatch only).
+# POKE 2026-09-30-wired
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/jev_wired_draw.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: jev-train
+  cancel-in-progress: false
+
+jobs:
+  train:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 1
+          persist-credentials: true
+          sparse-checkout: |
+            src
+            00_grounding
+            01_daily/news
+            dashboard/jev-train
+            .github/workflows
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Unit tests (no key)
+        run: |
+          PYTHONPATH=. python3 -m src.test_jev_bits
+          PYTHONPATH=. python3 -m src.test_jev_train
+
+      - name: Replay last sheet through live BIT_QUESTIONS
+        id: draw
+        env:
+          JEV_API_KEY: ${{ secrets.JEV_API_KEY }}
+          STAMP: ""
+        run: |
+          set -euo pipefail
+          PYTHONPATH=. python3 -m src.jev_train replay --stamp "$STAMP" \
+            | tee "$RUNNER_TEMP/jev_train_out.txt"
+          stamp=$(awk -F= '/^JEV_TRAIN_STAMP=/{print $2}' "$RUNNER_TEMP/jev_train_out.txt" | tail -1)
+          echo "stamp=${stamp}" >> "$GITHUB_OUTPUT"
+
+      - name: Commit the sheet to main
+        run: |
+          set -euo pipefail
+          git config user.name "Market-Bot-Automaton"
+          git config user.email "bot@users.noreply.github.com"
+          git add -- 00_grounding/jev_train
+          if [ -f dashboard/jev-train/draw.json ]; then
+            git add -- dashboard/jev-train/draw.json
+          fi
+          bad=$(git diff --cached --name-only | while read -r p; do
+            case "$p" in
+              00_grounding/jev_train/*|dashboard/jev-train/draw.json) ;;
+              *) printf '%s\n' "$p" ;;
+            esac
+          done)
+          if [ -n "${bad}" ]; then
+            echo "refusing to commit paths outside the trainer allowlist"
+            echo "${bad}"
+            exit 1
+          fi
+          if git diff --cached --quiet; then
+            echo "no trainer output to commit"
+            exit 1
+          fi
+          if grep -R -E -n 'ghp_[A-Za-z0-9]{20,}|github_pat_[A-Za-z0-9_]{20,}|JEV_API_KEY[[:space:]]*=|sk-[A-Za-z0-9]{24,}' \
+              00_grounding/jev_train dashboard/jev-train/draw.json; then
+            echo "refusing to commit secret-like material"
+            exit 1
+          fi
+          git commit -m "jev train: replay [skip ci]"
+          n=0
+          while [ "$n" -lt 6 ]; do
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+            n=$((n + 1))
+            echo "push rejected (attempt ${n}); replay trainer blobs onto origin/main"
+            git fetch origin main
+            parent=$(git rev-parse origin/main)
+            tmp=$(mktemp)
+            GIT_INDEX_FILE="$tmp" git read-tree "$parent"
+            git diff-tree --no-commit-id --name-only -r HEAD | while IFS= read -r f; do
+              case "$f" in
+                00_grounding/jev_train/*|dashboard/jev-train/draw.json)
+                  rec=$(git ls-tree HEAD -- "$f")
+                  [ -n "$rec" ] || continue
+                  mode=$(printf '%s\n' "$rec" | awk '{print $1}')
+                  sha=$(printf '%s\n' "$rec" | awk '{print $3}')
+                  printf '%s %s\t%s\0' "$mode" "$sha" "$f"
+                  ;;
+              esac
+            done | GIT_INDEX_FILE="$tmp" git update-index -z --add --index-info
+            tree=$(GIT_INDEX_FILE="$tmp" git write-tree)
+            rm -f "$tmp"
+            new=$(git commit-tree "$tree" -p "$parent" \
+              -m "jev train: replay [skip ci]")
+            git update-ref HEAD "$new"
+          done
+          echo "could not push trainer sheet after ${n} attempts"
+          exit 1
