@@ -1,12 +1,12 @@
 {
   "n": 100,
   "gold_keep": 26,
-  "pred_keep": 6,
+  "pred_keep": 8,
   "precision": 1.0,
-  "recall_print_done": 0.2308,
-  "tp": 6,
+  "recall_print_done": 0.3077,
+  "tp": 8,
   "fp": 0,
-  "fn": 20,
+  "fn": 18,
   "banned_keeps": [],
   "pass": false,
   "misses": [
@@ -18,11 +18,11 @@
       "reason": "no_keep_bit",
       "noul": {
         "tape": 0.22,
-        "soft": 0.36,
-        "tip": 0.32,
-        "done": 0.42,
+        "soft": 0.38,
+        "tip": 0.3,
+        "done": 0.47,
         "print": 0.53,
-        "listed": 0.7
+        "listed": 0.78
       }
     },
     {
@@ -32,12 +32,12 @@
       "pred": "drop",
       "reason": "no_keep_bit",
       "noul": {
-        "tape": 0.24,
-        "soft": 0.26,
-        "tip": 0.25,
-        "done": 0.42,
-        "print": 0.46,
-        "listed": 0.73
+        "tape": 0.26,
+        "soft": 0.28,
+        "tip": 0.24,
+        "done": 0.47,
+        "print": 0.43,
+        "listed": 0.71
       }
     },
     {
@@ -49,8 +49,8 @@
       "noul": {
         "tape": 0.24,
         "soft": 0.6,
-        "tip": 0.35,
-        "done": 0.43,
+        "tip": 0.39,
+        "done": 0.47,
         "print": 0.56,
         "listed": 0.64
       }
@@ -63,11 +63,11 @@
       "reason": "soft",
       "noul": {
         "tape": 0.18,
-        "soft": 0.69,
-        "tip": 0.29,
-        "done": 0.43,
-        "print": 0.61,
-        "listed": 0.62
+        "soft": 0.66,
+        "tip": 0.31,
+        "done": 0.46,
+        "print": 0.62,
+        "listed": 0.58
       }
     },
     {
@@ -77,12 +77,12 @@
       "pred": "drop",
       "reason": "no_keep_bit",
       "noul": {
-        "tape": 0.44,
-        "soft": 0.32,
-        "tip": 0.27,
-        "done": 0.48,
-        "print": 0.48,
-        "listed": 0.25
+        "tape": 0.42,
+        "soft": 0.35,
+        "tip": 0.24,
+        "done": 0.53,
+        "print": 0.44,
+        "listed": 0.28
       }
     },
     {
@@ -92,12 +92,12 @@
       "pred": "drop",
       "reason": "no_keep_bit",
       "noul": {
-        "tape": 0.13,
-        "soft": 0.24,
+        "tape": 0.12,
+        "soft": 0.27,
         "tip": 0.09,
-        "done": 0.41,
-        "print": 0.54,
-        "listed": 0.54
+        "done": 0.48,
+        "print": 0.51,
+        "listed": 0.55
       }
     },
     {
@@ -107,27 +107,12 @@
       "pred": "drop",
       "reason": "no_keep_bit",
       "noul": {
-        "tape": 0.26,
+        "tape": 0.27,
         "soft": 0.3,
-        "tip": 0.21,
-        "done": 0.49,
-        "print": 0.53,
-        "listed": 0.7
-      }
-    },
-    {
-      "title": "Apple ordered to pay $5.7bn in haptic tech patent case - BBC",
-      "label": "finished_act",
-      "gold": "keep",
-      "pred": "drop",
-      "reason": "no_keep_bit",
-      "noul": {
-        "tape": 0.21,
-        "soft": 0.28,
-        "tip": 0.12,
-        "done": 0.53,
-        "print": 0.39,
-        "listed": 0.86
+        "tip": 0.19,
+        "done": 0.54,
+        "print": 0.54,
+        "listed": 0.71
       }
     },
     {
@@ -138,11 +123,11 @@
       "reason": "no_keep_bit",
       "noul": {
         "tape": 0.19,
-        "soft": 0.43,
+        "soft": 0.42,
         "tip": 0.19,
-        "done": 0.4,
-        "print": 0.41,
-        "listed": 0.85
+        "done": 0.46,
+        "print": 0.45,
+        "listed": 0.84
       }
     },
     {
@@ -152,12 +137,12 @@
       "pred": "drop",
       "reason": "no_keep_bit",
       "noul": {
-        "tape": 0.25,
-        "soft": 0.3,
+        "tape": 0.22,
+        "soft": 0.31,
         "tip": 0.09,
-        "done": 0.36,
-        "print": 0.35,
-        "listed": 0.81
+        "done": 0.4,
+        "print": 0.38,
+        "listed": 0.83
       }
     },
     {
@@ -167,11 +152,11 @@
       "pred": "drop",
       "reason": "no_keep_bit",
       "noul": {
-        "tape": 0.23,
-        "soft": 0.32,
+        "tape": 0.25,
+        "soft": 0.33,
         "tip": 0.16,
-        "done": 0.37,
-        "print": 0.39,
+        "done": 0.48,
+        "print": 0.4,
         "listed": 0.82
       }
     },
@@ -182,27 +167,12 @@
       "pred": "drop",
       "reason": "source",
       "noul": {
-        "tape": 0.21,
+        "tape": 0.19,
         "soft": 0.34,
-        "tip": 0.2,
-        "done": 0.46,
+        "tip": 0.19,
+        "done": 0.51,
         "print": 0.37,
-        "listed": 0.42
-      }
-    },
-    {
-      "title": "Oura becomes latest US IPO hopeful to delay listing as market jitters deepen - Reuters",
-      "label": "finished_act",
-      "gold": "keep",
-      "pred": "drop",
-      "reason": "no_keep_bit",
-      "noul": {
-        "tape": 0.21,
-        "soft": 0.39,
-        "tip": 0.27,
-        "done": 0.39,
-        "print": 0.35,
-        "listed": 0.76
+        "listed": 0.44
       }
     },
     {
@@ -213,11 +183,11 @@
       "reason": "no_keep_bit",
       "noul": {
         "tape": 0.22,
-        "soft": 0.41,
-        "tip": 0.21,
-        "done": 0.44,
-        "print": 0.43,
-        "listed": 0.57
+        "soft": 0.36,
+        "tip": 0.19,
+        "done": 0.53,
+        "print": 0.4,
+        "listed": 0.59
       }
     },
     {
@@ -228,11 +198,11 @@
       "reason": "no_keep_bit",
       "noul": {
         "tape": 0.17,
-        "soft": 0.34,
-        "tip": 0.13,
-        "done": 0.39,
+        "soft": 0.35,
+        "tip": 0.15,
+        "done": 0.48,
         "print": 0.34,
-        "listed": 0.16
+        "listed": 0.18
       }
     },
     {
@@ -242,11 +212,11 @@
       "pred": "drop",
       "reason": "no_keep_bit",
       "noul": {
-        "tape": 0.5,
+        "tape": 0.53,
         "soft": 0.29,
-        "tip": 0.27,
-        "done": 0.46,
-        "print": 0.41,
+        "tip": 0.28,
+        "done": 0.51,
+        "print": 0.38,
         "listed": 0.77
       }
     },
@@ -257,12 +227,12 @@
       "pred": "drop",
       "reason": "tape",
       "noul": {
-        "tape": 0.61,
-        "soft": 0.28,
-        "tip": 0.39,
-        "done": 0.42,
+        "tape": 0.62,
+        "soft": 0.3,
+        "tip": 0.38,
+        "done": 0.44,
         "print": 0.42,
-        "listed": 0.73
+        "listed": 0.71
       }
     },
     {
@@ -272,12 +242,12 @@
       "pred": "drop",
       "reason": "no_keep_bit",
       "noul": {
-        "tape": 0.21,
-        "soft": 0.5,
-        "tip": 0.16,
-        "done": 0.38,
-        "print": 0.37,
-        "listed": 0.38
+        "tape": 0.17,
+        "soft": 0.53,
+        "tip": 0.17,
+        "done": 0.43,
+        "print": 0.38,
+        "listed": 0.4
       }
     },
     {
@@ -287,12 +257,12 @@
       "pred": "drop",
       "reason": "no_keep_bit",
       "noul": {
-        "tape": 0.37,
-        "soft": 0.47,
-        "tip": 0.38,
-        "done": 0.47,
-        "print": 0.38,
-        "listed": 0.19
+        "tape": 0.33,
+        "soft": 0.45,
+        "tip": 0.36,
+        "done": 0.54,
+        "print": 0.39,
+        "listed": 0.17
       }
     },
     {
@@ -302,12 +272,12 @@
       "pred": "drop",
       "reason": "no_keep_bit",
       "noul": {
-        "tape": 0.39,
-        "soft": 0.27,
-        "tip": 0.26,
-        "done": 0.47,
-        "print": 0.3,
-        "listed": 0.16
+        "tape": 0.35,
+        "soft": 0.34,
+        "tip": 0.29,
+        "done": 0.5,
+        "print": 0.29,
+        "listed": 0.13
       }
     }
   ]

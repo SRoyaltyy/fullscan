@@ -1,6 +1,6 @@
 # Jev six-bit stop test
 
-n=100 gold_keep=26 pred_keep=6 precision=1.0 recall_print_done=0.2308 pass=False
+n=100 gold_keep=26 pred_keep=8 precision=1.0 recall_print_done=0.3077 pass=False
 
 Need precision ≥ 0.85, print/done recall ≥ 0.8, zero call-highlights / should-you-buy keeps.
 
@@ -12,12 +12,10 @@ Need precision ≥ 0.85, print/done recall ≥ 0.8, zero call-highlights / shoul
 - gold=keep pred=drop/no_keep_bit label=official_print | US consumer confidence sinks to 12-year low over inflation, stagnant wages - South China Morning Post
 - gold=keep pred=drop/no_keep_bit label=official_print | FDA Announces Nationwide Cheese Recall—Products Linked to Multistate E. Coli Outbreak - health.com
 - gold=keep pred=drop/no_keep_bit label=official_print | Fed holds interest rates steady as inflation hits 3-year high - ABC News - Breaking News, Latest News and Videos
-- gold=keep pred=drop/no_keep_bit label=finished_act | Apple ordered to pay $5.7bn in haptic tech patent case - BBC
 - gold=keep pred=drop/no_keep_bit label=finished_act | Nvidia launches security platform to keep AI agents from going rogue - Fox Business
 - gold=keep pred=drop/no_keep_bit label=finished_act | AbbVie's Cerevel buyout delivers as FDA gives go-ahead to 1st-in-class Juvmo in Parkinson's disease - Fierce Pharma
 - gold=keep pred=drop/no_keep_bit label=finished_act | Merck, Daiichi pull lung cancer filing after FDA pushback deals another blow to $4B deal - Fierce Biotech
 - gold=keep pred=drop/source label=finished_act | Only US private passenger train files Chapter 11 bankruptcy - thestreet.com
-- gold=keep pred=drop/no_keep_bit label=finished_act | Oura becomes latest US IPO hopeful to delay listing as market jitters deepen - Reuters
 - gold=keep pred=drop/no_keep_bit label=finished_act | China unveils rate cut, mortgage subsidies to spur growth - CNA
 - gold=keep pred=drop/no_keep_bit label=finished_act | Singapore gets its first advanced semiconductor materials plant to meet AI demand - The Straits Times
 - gold=keep pred=drop/no_keep_bit label=finished_act | U.S. Taps Strategic Oil Reserve Again as Diesel Tops $6 - Crude Oil Prices Today | OilPrice.com
