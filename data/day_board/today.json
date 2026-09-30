@@ -1,6 +1,6 @@
 {
   "date": "2026-09-30",
-  "generated_at": "2026-09-30T12:10:54.010598-04:00",
+  "generated_at": "2026-09-30T12:10:59.634256-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -165,31 +165,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "weather",
-      "title": "Weather / regime",
-      "date": "2026-09-30",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-30T05:36:19.924917-04:00",
-      "files": [
-        {
-          "path": "01_daily/weather/2026-09-30_weather.json",
-          "ok": true,
-          "reason": "",
-          "size": 9712,
-          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}"
-        },
-        {
-          "path": "01_daily/weather/2026-09-30_weather.md",
-          "ok": true,
-          "reason": "",
-          "size": 5319,
-          "preview": "# Weather report \u2014 2026-09-30\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
-        }
-      ],
-      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-09-30\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
-    },
     {
       "key": "join",
       "title": "Join / match rank",
@@ -364,6 +339,115 @@
         }
       ],
       "preview": "1d BUY SN, MHK, FIGS, CAKE, AVPT, CORT, CDNA, ETON \u00b7 SELL ROIV, RBLX, VSAT, BIDU, SOC, AXSM, GH, BAK \u00b7 green 133 \u00b7 EMBJ, GTES, AAON, CXW, PWR, TRI, WMS, CNH, DLB, VVX \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-09-30 BUY SN, MHK, FIGS, CAKE, AVPT, CORT, CDNA, ETON \u00b7 SELL ROIV, RBLX, VSAT, BIDU, SOC, AXSM, GH, BAK \u00b7 2026-09-30 BUY SN, MHK, FIGS, CAKE, AVPT, CORT, CDNA, ETON \u00b7 SELL ROIV, RBLX, VSAT, BIDU, SOC, AXSM, GH, BAK \u00b7 # Stock book \u2014 2026-09-30\n_Generated 2026-09-30T12:10:47.656048-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+    },
+    {
+      "key": "live_boards",
+      "title": "Live 1d BUY/SELL strip",
+      "date": "2026-09-30",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-30T12:10:59.063136-04:00",
+      "files": [
+        {
+          "path": "data/day_board/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 14737,
+          "preview": "2026-09-30 BUY SN, MHK, FIGS, CAKE, AVPT, CORT, CDNA, ETON \u00b7 SELL ROIV, RBLX, VSAT, BIDU, SOC, AXSM, GH, BAK"
+        },
+        {
+          "path": "data/day_board/latest.json",
+          "ok": true,
+          "reason": "",
+          "size": 791,
+          "preview": "keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages"
+        },
+        {
+          "path": "data/day_board/2026-09-30.json",
+          "ok": true,
+          "reason": "",
+          "size": 85284,
+          "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href"
+        },
+        {
+          "path": "data/day_board/2026-09-30_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 46561,
+          "preview": "2026-09-30 BUY SN, MHK, FIGS, CAKE, AVPT, CORT, CDNA, ETON \u00b7 SELL ROIV, RBLX, VSAT, BIDU, SOC, AXSM, GH, BAK"
+        },
+        {
+          "path": "data/day_board/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 277285,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "data/day_board/2026-09-30_strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 271475,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "data/day_board/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 281867,
+          "preview": "2026-09-30 BUY SN, MHK, FIGS, CAKE, AVPT, CORT, CDNA, ETON \u00b7 SELL ROIV, RBLX, VSAT, BIDU, SOC, AXSM, GH, BAK"
+        },
+        {
+          "path": "data/factor_mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 277285,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 46561,
+          "preview": "2026-09-30 BUY SN, MHK, FIGS, CAKE, AVPT, CORT, CDNA, ETON \u00b7 SELL ROIV, RBLX, VSAT, BIDU, SOC, AXSM, GH, BAK"
+        },
+        {
+          "path": "dashboard/factor-mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 277285,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 277285,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 281867,
+          "preview": "2026-09-30 BUY SN, MHK, FIGS, CAKE, AVPT, CORT, CDNA, ETON \u00b7 SELL ROIV, RBLX, VSAT, BIDU, SOC, AXSM, GH, BAK"
+        },
+        {
+          "path": "data/day_board/hold_live_px.json",
+          "ok": true,
+          "reason": "",
+          "size": 1702,
+          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
+        },
+        {
+          "path": "dashboard/factor-mine/hold_live_px.json",
+          "ok": true,
+          "reason": "",
+          "size": 1702,
+          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
+        }
+      ],
+      "preview": "2026-09-30 BUY SN, MHK, FIGS, CAKE, AVPT, CORT, CDNA, ETON \u00b7 SELL ROIV, RBLX, VSAT, BIDU, SOC, AXSM, GH, BAK \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href \u00b7 2026-09-30 BUY SN, MHK, FIGS, CAKE, AVPT, CORT, CDNA, ETON \u00b7 SELL ROIV, RBLX, VSAT, BIDU, SOC, AXSM, GH, BAK \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-30 BUY SN, MHK, FIGS, CAKE, AVPT, CORT, CDNA, ETON \u00b7 SELL ROIV, RBLX, VSAT, BIDU, SOC, AXSM, GH, BAK \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-30 BUY SN, MHK, FIGS, CAKE, AVPT, CORT, CDNA, ETON \u00b7 SELL ROIV, RBLX, VSAT, BIDU, SOC, AXSM, GH, BAK \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, orde"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
