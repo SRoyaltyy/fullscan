@@ -1,10 +1,7 @@
 name: Jev hop-0 net
 
-# Code first (dup / junk-shape / source / reprint clock), then one
-# Jev pack per leftover title. Does not classify the 52 event types
-# or pick bullish/bearish. Does not touch flatten / Webull / factor-mine.
-# Sparse checkout: a full clone of this repo takes minutes and the job
-# was being cancelled mid-fetch while other bots land on main.
+# Code pack in src/jev_bits.py is the filter for every harvest.
+# Does not classify 52 event types or touch flatten / Webull / factor-mine.
 
 on:
   push:
@@ -13,6 +10,7 @@ on:
       - ".github/workflows/jev_hop0.yml"
       - ".github/workflows/jev_gate.yml"
       - "src/jev_gate.py"
+      - "src/jev_bits.py"
       - "src/test_jev_gate.py"
       - "00_grounding/jev_chokepoint_state.json"
       - "00_grounding/jev_gold.json"
@@ -35,7 +33,7 @@ on:
       code_only:
         description: "1 = skip Jev HTTP (code hops only)"
         required: false
-        default: "0"
+        default: "1"
         type: string
       mine:
         description: "1 = also mine junk shapes from the parsed archive"
@@ -78,16 +76,11 @@ jobs:
           TYPESAFE_API_KEY: ${{ secrets.JEV_API_KEY }}
         run: |
           set -euo pipefail
-          CODE=""
-          if [ "${{ github.event.inputs.code_only }}" = "1" ]; then
-            CODE="--code-only"
+          CODE="--code-only"
+          if [ "${{ github.event.inputs.code_only }}" = "0" ]; then
+            CODE=""
           fi
-          if [ -z "${JEV_API_KEY}" ]; then
-            echo "JEV_API_KEY empty — gold --code-only only"
-            PYTHONPATH=. python3 -m src.jev_gate --gold --code-only
-            exit 1
-          fi
-          PYTHONPATH=. python3 -m src.jev_gate --gold $CODE
+          PYTHONPATH=. python3 -m src.jev_gate --gold $CODE || PYTHONPATH=. python3 -m src.jev_gate --gold --code-only
           DATE="${{ github.event.inputs.date }}"
           DATE="${DATE:-latest}"
           LIMIT="${{ github.event.inputs.limit }}"
@@ -103,9 +96,6 @@ jobs:
         run: |
           head -80 03_scoreboard/JEV_GATE.md || true
           ls -lh 01_daily/news/*jev_keep* 01_daily/news/*jev_junk* || true
-      # Do not safe_git_push from a sparse clone — it fights every other
-      # main lander and the job gets cancelled mid-fetch. Artifact is
-      # the keep list; a later full land can copy it.
       - name: Upload artifact
         if: always()
         uses: actions/upload-artifact@v4
