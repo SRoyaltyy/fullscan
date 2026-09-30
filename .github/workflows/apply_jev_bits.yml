@@ -1,0 +1,51 @@
+name: Apply Jev veto/keep bits
+on:
+  workflow_dispatch:
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - name: Point jev_gate at short bits
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          from pathlib import Path
+          p = Path("src/jev_gate.py")
+          t = p.read_text()
+          if "from .jev_bits import" in t and "return bits_decide(" in t:
+              print("already wired")
+              raise SystemExit(0)
+          needle = "from email.utils import parsedate_to_datetime\nfrom pathlib import Path\n"
+          insert = needle + "from .jev_bits import BIT_QUESTIONS, decide as bits_decide\n"
+          if needle not in t:
+              raise SystemExit("import anchor missing")
+          t = t.replace(needle, insert, 1)
+          t = t.replace(
+              "# Jev question ids. Do not add event_class / polarity / ticker.\nQUESTIONS: dict = {",
+              "# Legacy questions kept below as _LEGACY_QUESTIONS. Live pack is BIT_QUESTIONS.\nQUESTIONS = BIT_QUESTIONS\n_LEGACY_QUESTIONS: dict = {",
+              1,
+          )
+          old = "def decide(row: dict, answers: dict | None) -> dict:\n"
+          new = (
+              "def decide(row: dict, answers: dict | None) -> dict:\n"
+              "    return bits_decide(row, answers)\n"
+              "    # legacy body unused\n"
+          )
+          if old not in t:
+              raise SystemExit("decide anchor missing")
+          t = t.replace(old, new, 1)
+          p.write_text(t)
+          print("wired", p.stat().st_size)
+          PY
+          git config user.name "Market-Bot-Automaton"
+          git config user.email "bot@users.noreply.github.com"
+          git add src/jev_gate.py
+          git diff --staged --quiet && echo nochange && exit 0
+          git commit -m "jev: route hop-0 decide through short veto/keep bits"
+          git pull --rebase origin main
+          git push origin HEAD:main
