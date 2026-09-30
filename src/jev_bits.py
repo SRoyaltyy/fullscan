@@ -238,7 +238,7 @@ BIT_QUESTIONS: dict = {
         "criteria": {
             "true": (
                 "Apple ordered to pay $5.7bn in haptic tech patent case. "
-                "Oura becomes latest US IPO hopeful to delay listing."
+                "China unveils rate cut, mortgage subsidies to spur growth."
             ),
             "false": (
                 "Capita Flags CSPS Costs but Touts Contract Wins. "
