@@ -1,6 +1,6 @@
 {
   "date": "2026-09-30",
-  "generated_at": "2026-09-30T04:46:48.427425-04:00",
+  "generated_at": "2026-09-30T05:26:19.475304-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -24,33 +24,23 @@
     "score": "2.009",
     "direction": "up"
   },
-  "sectors": {},
+  "sectors": {
+    "said": "0 up / 0 down / 0 flat",
+    "bullets": [
+      "XLB missing",
+      "XLC missing",
+      "XLY missing",
+      "XLP missing",
+      "XLE missing",
+      "XLF missing",
+      "XLV missing",
+      "XLI missing",
+      "XLRE missing",
+      "XLK missing",
+      "XLU missing"
+    ]
+  },
   "lands": [
-    {
-      "key": "weather",
-      "title": "Weather / regime (offline retry)",
-      "date": "2026-09-30",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-30T04:32:01.120351-04:00",
-      "files": [
-        {
-          "path": "01_daily/weather/2026-09-30_weather.json",
-          "ok": true,
-          "reason": "",
-          "size": 9568,
-          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -7.21, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -3.0, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -2.48, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -2.71, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -3.0599999999999996, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.66, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -4.44, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -2.7, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}"
-        },
-        {
-          "path": "01_daily/weather/2026-09-30_weather.md",
-          "ok": true,
-          "reason": "",
-          "size": 5293,
-          "preview": "# Weather report \u2014 2026-09-30\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
-        }
-      ],
-      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -7.21, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -3.0, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -2.48, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -2.71, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -3.0599999999999996, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.66, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -4.44, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -2.7, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-09-30\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
-    },
     {
       "key": "join",
       "title": "Join / match rank",
@@ -196,6 +186,24 @@
         }
       ],
       "preview": "# Premarket Prediction \u2014 2026-09-30\n- news_mode: **on**\n> ## \ud83d\udccb SNAPSHOT (human-readable)\n>\n> **Prediction: UP \ud83d\udcc8 \u2014 MILD** | total score 2.009 (uncertainty multiplier \u00d71.1) | confidence 0.58\n>\n> **Good news vs bad news:** good +1.5 pts vs bad -2.0 pts \u2192 bad news outweighs good\n>\n> **Good news driving this:**\n> - Asia composite +0.61%\n> - China PMI back above 50\n> - Brent offered\n> - Williams no Oct urgency\n> - DXY 1d soft\n>\n> **Bad news driving this:**\n> - 1w 10Y +28bp at 5.24\n> - 30Y multi-decade high\n> - Barr still hike-leaning\n> - leftover Hormuz\n> - PCE 8:30 unsigned\n>\n> **market uncertainty: **elevated** | VIX 15.92 | policy-uncertainty index 193.14 (1d -264.77)**\n>\n> **Factor scoreboard** (score \u00d7 weight = contribution):\n> - \ud83d\udfe2 Asia overnight session: +0.5 \u00d7 2.0 = +1.0\n> - \u26aa Europe session: +0.0 \u00d7 2.0 = +0.0\n> - \u26aa Overnight news & catalysts: +0.0 \u00d7 3.0 = +0.0\n> - \ud83d\udd34 Bond yields: -1.0 \u00d7"
+    },
+    {
+      "key": "sector_board",
+      "title": "Sector board",
+      "date": "2026-09-30",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-30T05:26:18.902815-04:00",
+      "files": [
+        {
+          "path": "01_daily/sectors/2026-09-30/_board.json",
+          "ok": true,
+          "reason": "",
+          "size": 6363,
+          "preview": "keys: date, generated_at, summary, sectors"
+        }
+      ],
+      "preview": "keys: date, generated_at, summary, sectors"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"

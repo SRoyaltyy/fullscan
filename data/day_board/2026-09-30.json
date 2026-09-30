@@ -1,10 +1,9 @@
 {
   "date": "2026-09-30",
-  "generated_at": "2026-09-30T04:46:48.427425-04:00",
+  "generated_at": "2026-09-30T05:26:19.475304-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
-    "MISSING Sector board JSON `01_daily/sectors/2026-09-30/_board.json` \u2014 missing",
     "MISSING AB checklist enriched `data/ab_checklist/2026-09-30_ab_checklist_enriched.csv` \u2014 missing"
   ],
   "counts": {
@@ -182,7 +181,7 @@
       "inputs_ready": true,
       "n_req_ok": 5,
       "n_req": 20,
-      "n_opt_ok": 2,
+      "n_opt_ok": 3,
       "n_opt": 3,
       "files": [
         {
@@ -339,11 +338,16 @@
           "name": "Sector board JSON",
           "path": "01_daily/sectors/2026-09-30/_board.json",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 6363,
+          "said": "0 up / 0 down / 0 flat",
+          "bullets": [
+            "XLB missing",
+            "XLC missing",
+            "XLY missing",
+            "XLP missing"
+          ]
         },
         {
           "key": "qc",
@@ -352,7 +356,7 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 7532,
+          "size": 8327,
           "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 13 fail",
           "bullets": [
             "finviz_market_digest:missing",
@@ -505,17 +509,18 @@
           "bullets": []
         }
       ],
-      "said": "general UP  2.009 \u00b7 news news_mode: on \u00b7 400 raw / 95 usable \u00b7 Despite falling oil prices and dovish signals from Federal Reserve officials, U.",
+      "said": "general UP  2.009 \u00b7 sectors 0 up / 0 down / 0 flat \u00b7 news news_mode: on \u00b7 400 raw / 95 usable \u00b7 Despite falling oil prices and dovish signals from Federal Reserve officials, U.",
       "bullets": [
         "bad: 1w 10Y +28bp at 5.24",
         "bad: 30Y multi-decade high",
         "bad: Barr still hike-leaning",
         "good: Asia composite +0.61%",
         "good: China PMI back above 50",
-        "Despite falling oil prices and dovish signals from Federal Reserve officials, U.S. Treasury yields continue to rise. - \u5bcc\u9014\u725b\u725b",
-        "Cardiff, Inc. Helps Small Businesses Navigate Latest Fed Rate Hike - PR Underground",
-        "Robust U.S. Economy Drives Treasury Yield Surge - \uc870\uc120\uc77c\ubcf4",
-        "Fed rate hike bets for Oct fall sharply on soft data, dovish comments - Investing.com"
+        "XLB missing",
+        "XLC missing",
+        "XLY missing",
+        "XLP missing",
+        "XLE missing"
       ]
     },
     {
@@ -700,11 +705,16 @@
           "name": "Sector board JSON",
           "path": "01_daily/sectors/2026-09-30/_board.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 6363,
+          "said": "0 up / 0 down / 0 flat",
+          "bullets": [
+            "XLB missing",
+            "XLC missing",
+            "XLY missing",
+            "XLP missing"
+          ]
         },
         {
           "key": "in_actions",
@@ -946,7 +956,22 @@
       "score": "2.009",
       "direction": "up"
     },
-    "sectors": {},
+    "sectors": {
+      "said": "0 up / 0 down / 0 flat",
+      "bullets": [
+        "XLB missing",
+        "XLC missing",
+        "XLY missing",
+        "XLP missing",
+        "XLE missing",
+        "XLF missing",
+        "XLV missing",
+        "XLI missing",
+        "XLRE missing",
+        "XLK missing",
+        "XLU missing"
+      ]
+    },
     "news": {
       "said": "news_mode: on \u00b7 400 raw / 95 usable \u00b7 Despite falling oil prices and dovish signals from Federal Reserve officials, U.",
       "bullets": [
@@ -1458,6 +1483,24 @@
         }
       ],
       "preview": "# Premarket Prediction \u2014 2026-09-30\n- news_mode: **on**\n> ## \ud83d\udccb SNAPSHOT (human-readable)\n>\n> **Prediction: UP \ud83d\udcc8 \u2014 MILD** | total score 2.009 (uncertainty multiplier \u00d71.1) | confidence 0.58\n>\n> **Good news vs bad news:** good +1.5 pts vs bad -2.0 pts \u2192 bad news outweighs good\n>\n> **Good news driving this:**\n> - Asia composite +0.61%\n> - China PMI back above 50\n> - Brent offered\n> - Williams no Oct urgency\n> - DXY 1d soft\n>\n> **Bad news driving this:**\n> - 1w 10Y +28bp at 5.24\n> - 30Y multi-decade high\n> - Barr still hike-leaning\n> - leftover Hormuz\n> - PCE 8:30 unsigned\n>\n> **market uncertainty: **elevated** | VIX 15.92 | policy-uncertainty index 193.14 (1d -264.77)**\n>\n> **Factor scoreboard** (score \u00d7 weight = contribution):\n> - \ud83d\udfe2 Asia overnight session: +0.5 \u00d7 2.0 = +1.0\n> - \u26aa Europe session: +0.0 \u00d7 2.0 = +0.0\n> - \u26aa Overnight news & catalysts: +0.0 \u00d7 3.0 = +0.0\n> - \ud83d\udd34 Bond yields: -1.0 \u00d7"
+    },
+    {
+      "key": "sector_board",
+      "title": "Sector board",
+      "date": "2026-09-30",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-30T05:26:18.902815-04:00",
+      "files": [
+        {
+          "path": "01_daily/sectors/2026-09-30/_board.json",
+          "ok": true,
+          "reason": "",
+          "size": 6363,
+          "preview": "keys: date, generated_at, summary, sectors"
+        }
+      ],
+      "preview": "keys: date, generated_at, summary, sectors"
     }
   ],
   "href": {
