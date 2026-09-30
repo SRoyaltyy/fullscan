@@ -1,8 +1,8 @@
 {
   "date": "2026-09-30",
-  "generated_at": "2026-09-30T04:16:17.412421-04:00",
+  "generated_at": "2026-09-30T04:22:14.006127-04:00",
   "phase": "morning_overlay",
-  "export": "finviz_2026-09-30.csv",
+  "export": "finviz_2026-09-29.csv",
   "n_tickers": 11616,
   "sectors": [
     {
@@ -8935,7 +8935,7 @@
   ],
   "ticker_news": [
     {
-      "time": "2 min",
+      "time": "8 min",
       "title": "Transaction in Own Shares",
       "url": "/news/396842/transaction-in-own-shares",
       "source": "GlobeNewswire",
@@ -8944,7 +8944,16 @@
       ]
     },
     {
-      "time": "8 min",
+      "time": "12 min",
+      "title": "SLB OneSubsea wins Rovuma LNG subsea systems contract",
+      "url": "https://finance.yahoo.com/energy/articles/slb-onesubsea-wins-rovuma-lng-080937540.html",
+      "source": "Offshore Technology",
+      "tickers": [
+        "E"
+      ]
+    },
+    {
+      "time": "14 min",
       "title": "NKE Ticks Higher Ahead Of Q1 As Short Interest Hits Record 87M Shares  Could Earnings Squeeze The Bears?",
       "url": "https://finance.yahoo.com/markets/stocks/articles/nke-ticks-higher-ahead-q1-080734899.html",
       "source": "Stocktwits",
@@ -8953,7 +8962,16 @@
       ]
     },
     {
-      "time": "12 min",
+      "time": "15 min",
+      "title": "Salesforce Stock Fell 8% in a Year. Heres Where the Streets Target Sits Now.",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/salesforce-stock-fell-8-where-080610117.html",
+      "source": "TIKR",
+      "tickers": [
+        "CRM"
+      ]
+    },
+    {
+      "time": "18 min",
       "title": "Stock market today: Dow, S&P 500, Nasdaq futures little changed ahead of PCE inflation data",
       "url": "https://finance.yahoo.com/markets/live/stock-market-today-wednesday-september-30-dow-sp-500-nasdaq-080339262.html",
       "source": "Yahoo Finance",
@@ -8962,7 +8980,7 @@
       ]
     },
     {
-      "time": "16 min",
+      "time": "22 min",
       "title": "Everpure Announces New Data Management Capabilities for Production AI at Scale",
       "url": "/news/396839/everpure-announces-new-data-management-capabilities-for-production-ai-at-scale",
       "source": "PR Newswire",
@@ -8971,7 +8989,7 @@
       ]
     },
     {
-      "time": "16 min",
+      "time": "22 min",
       "title": "88% of Executives Fear Data Sovereignty Failures Could Cost Them Their Jobs",
       "url": "/news/396840/88-of-executives-fear-data-sovereignty-failures-could-cost-them-their-jobs",
       "source": "PR Newswire",
@@ -8980,7 +8998,7 @@
       ]
     },
     {
-      "time": "16 min",
+      "time": "22 min",
       "title": "Nearly US$100 trillion of investment will depend on decisions made under uncertainty, says new Willis report",
       "url": "/news/396841/nearly-us100-trillion-of-investment-will-depend-on-decisions-made-under-uncertainty-says-new-willis-report",
       "source": "GlobeNewswire",
@@ -8989,30 +9007,30 @@
       ]
     },
     {
-      "time": "27 min",
+      "time": "33 min",
       "title": "Chip Stocks Roar Back: AMD, Intel Power SOXX Toward Best Month Since June",
       "url": "https://finance.yahoo.com/markets/stocks/articles/chip-stocks-roar-back-amd-074855493.html",
       "source": "Stocktwits",
       "tickers": [
-        "MU",
         "NVDA",
+        "MU",
         "AVGO",
-        "INTC",
-        "AMD"
+        "AMD",
+        "INTC"
       ]
     },
     {
-      "time": "42 min",
+      "time": "48 min",
       "title": "Chief Telecom, Google Cloud launch backup services to bolster cable resilience",
       "url": "https://www.digitimes.com/news/a20260930PD235/chief-telecom-google-cloud-taiwan-google-cybersecurity.html",
       "source": "DigiTimes",
       "tickers": [
-        "GOOGL",
-        "GOOG"
+        "GOOG",
+        "GOOGL"
       ]
     },
     {
-      "time": "43 min",
+      "time": "49 min",
       "title": "SK Hynix resumes DDR4, DDR5 packaging orders with Winpac",
       "url": "https://www.digitimes.com/news/a20260930VL218/sk-hynix-packaging-ddr5-ddr4-outsourcing.html",
       "source": "DigiTimes",
@@ -9021,7 +9039,7 @@
       ]
     },
     {
-      "time": "43 min",
+      "time": "49 min",
       "title": "Stock Market Today: Dow set for 200-point rise, S&P 500 and Nasdaq to rise ahead of PCE inflation data; Micron results on tap",
       "url": "https://www.marketwatch.com/livecoverage/stock-market-today-dow-s-p-500-nasdaq-steady-start-pce-inflation-data-micron-results?mod=mw_FV",
       "source": "MarketWatch",
@@ -9030,7 +9048,7 @@
       ]
     },
     {
-      "time": "44 min",
+      "time": "50 min",
       "title": "Dow set to climb ahead of PCE inflation data",
       "url": "https://www.marketwatch.com/livecoverage/stock-market-today-dow-s-p-500-nasdaq-steady-start-pce-inflation-data-micron-results/card/dow-set-to-climb-ahead-of-pce-inflation-data-RUbf4MUyNjjjuKawqaEb?mod=mw_FV",
       "source": "MarketWatch",
@@ -9039,7 +9057,7 @@
       ]
     },
     {
-      "time": "48 min",
+      "time": "54 min",
       "title": "Why Caterpillar Stock Has Surged 75% Over the Past Year on AI Power Demand",
       "url": "https://finance.yahoo.com/markets/stocks/articles/why-caterpillar-stock-surged-75-072735590.html",
       "source": "TIKR",
@@ -9048,7 +9066,7 @@
       ]
     },
     {
-      "time": "56 min",
+      "time": "1 hour",
       "title": "Increase in Number of Shares and Votes in Vicore Pharma",
       "url": "/news/396838/increase-in-number-of-shares-and-votes-in-vicore-pharma",
       "source": "ACCESSWIRE",
@@ -9170,7 +9188,7 @@
       ]
     },
     {
-      "time": "1 hour",
+      "time": "2 hours",
       "title": "Autoliv Retires Repurchased Shares, Decreases Number of Issued Shares",
       "url": "/news/396830/autoliv-retires-repurchased-shares-decreases-number-of-issued-shares",
       "source": "PR Newswire",
@@ -9275,8 +9293,8 @@
       "url": "https://www.aboveavalon.com/notes/2026/9/30/john-ternus-sits-down-with-clique-five-takeaways",
       "source": "Above Avalon",
       "tickers": [
-        "GOOGL",
         "GOOG",
+        "GOOGL",
         "AAPL"
       ]
     },
@@ -9435,7 +9453,7 @@
       ]
     },
     {
-      "time": "3 hours",
+      "time": "4 hours",
       "title": "VSMC bets on value over cost as Singapore fab builds next-generation R&D and IP capabilities",
       "url": "https://www.digitimes.com/news/a20260930PD212/singapore-fab-cost-nxp-vis-joint-venture.html",
       "source": "DigiTimes",
@@ -9750,38 +9768,20 @@
       "tickers": [
         "FFAI"
       ]
-    },
-    {
-      "time": "Sep-29",
-      "title": "Robbins LLP is Investigating Allegations that Fractyl Health, Inc. Misled Investors Regarding the Viability and Efficacy of its Revita DMR System",
-      "url": "https://www.newsfilecorp.com/release/316715/Robbins-LLP-is-Investigating-Allegations-that-Fractyl-Health-Inc.-Misled-Investors-Regarding-the-Viability-and-Efficacy-of-its-Revita-DMR-System",
-      "source": "Newsfile",
-      "tickers": [
-        "GUTS"
-      ]
-    },
-    {
-      "time": "Sep-29",
-      "title": "Jim Cramer Says the AI Trade's Real Threat Is the Story, Not the Spend",
-      "url": "https://finance.yahoo.com/technology/ai/articles/jim-cramer-says-ai-trades-004930815.html",
-      "source": "BeInCrypto",
-      "tickers": [
-        "NVDA"
-      ]
     }
   ],
   "major_news_tickers": [
     "NVDA",
     "GOOG",
     "GOOGL",
+    "MU",
     "AAPL",
     "HOOD",
     "BA",
-    "MU",
-    "TSLA",
     "SPGI",
     "MSFT",
     "META",
+    "TSLA",
     "SPCX",
     "CNS",
     "BE",
@@ -10840,5 +10840,5 @@
   "calendar_window_days": 16,
   "econ_window_count": 215,
   "earnings_window_count": 67,
-  "overlay_at": "2026-09-30T04:16:17.412421-04:00"
+  "overlay_at": "2026-09-30T04:22:14.006127-04:00"
 }
