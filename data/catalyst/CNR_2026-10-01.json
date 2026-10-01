@@ -1,0 +1,224 @@
+{
+  "ticker": "CNR",
+  "analysis_date": "2026-10-01",
+  "current_price": "N/A",
+  "net_signal": "Bullish",
+  "conviction": 21,
+  "catalyst_stack": "CNR delivered a blowout Q2 2026 on 2026-08-06, with EPS of $2.51 beating the $0.61 consensus by $1.91 and revenue of $1.14B topping estimates, following a Q1 2026 print on 2026-05-07 that also beat by 13.6%. Capital return remains intact, with a $0.10 quarterly dividend declared 2026-08-05 (ex-date 2026-08-31) and buybacks running alongside a ~75% FCF return framework. Leadership was reshuffled twice \u2014 an executive succession update on 2026-08-19 and a further expansion of President Mitesh Thakkar's operating duties plus new CFO Nathan Tucker on 2026-10-01 \u2014 a neutral-to-slightly-positive continuity signal. Offsetting this, CNR was flagged among the steepest-declining energy stocks in September 2026 (2026-09-30) and drew P/E valuation doubts after the profit rebound (2026-08-08), leaving the net signal modestly bullish but with the stock in a corrective tape.",
+  "key_assumption": "Coal price realizations and export logistics hold near Q2 2026 levels; the Q2 EPS blowout is treated as a genuine earnings beat rather than a one-off, and the September 2026 price decline is assumed to be sector rotation rather than company-specific deterioration.",
+  "catalyst_grid": [
+    {
+      "taxonomy": "Earnings beat (revenue, EBITDA, EPS)",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 8,
+      "adjusted_weight": 10,
+      "event_ids": [
+        1,
+        2
+      ],
+      "event_date": "2026-08-06",
+      "evidence_excerpt": "reported net income of $126.5 million, or $2.51 per diluted share, in the second quarter of 2026; EPS beat consensus of $0.61 by $1.91",
+      "source_urls": [
+        "https://investors.corenaturalresources.com/2026-08-06-Core-Natural-Resources-Reports-Second-Quarter-2026-Results",
+        "https://www.marketbeat.com/stocks/NYSE/CNR/earnings/"
+      ],
+      "confidence": 95
+    },
+    {
+      "taxonomy": "Earnings beat (revenue, EBITDA, EPS)",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 8,
+      "adjusted_weight": 10,
+      "event_ids": [
+        3,
+        13
+      ],
+      "event_date": "2026-05-07",
+      "evidence_excerpt": "reported net income of $21.0 million, or $0.41 per diluted share, in the first quarter of 2026; EPS beat estimates by 13.6%",
+      "source_urls": [
+        "https://investors.corenaturalresources.com/2026-05-07-Core-Natural-Resources-Reports-First-Quarter-2026-Results",
+        "https://www.prnewswire.com/news-releases/core-natural-resources-reports-first-quarter-2026-results-302764883.html"
+      ],
+      "confidence": 95
+    },
+    {
+      "taxonomy": "Share repurchase program/increased dividend",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 6,
+      "event_ids": [
+        5,
+        10
+      ],
+      "event_date": "2026-08-05",
+      "evidence_excerpt": "announced on August 5, 2026 that shareholders of record as of August 31, 2026 would receive a dividend of $0.10 per share on September 18, 2026",
+      "source_urls": [
+        "https://www.zacks.com/stock/research/CNR/dividend-history",
+        "https://www.marketbeat.com/stocks/NYSE/CNR/dividend/"
+      ],
+      "confidence": 90
+    },
+    {
+      "taxonomy": "Positive personnel change (new CEO, CFO, board members)",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 4,
+      "adjusted_weight": 4,
+      "event_ids": [
+        4,
+        0
+      ],
+      "event_date": "2026-08-19",
+      "evidence_excerpt": "Core Natural Resources Advances its Executive Succession Plan; expands President's responsibilities and appoints new CFO",
+      "source_urls": [
+        "https://elite.finviz.com/news/383710/core-natural-resources-expands-presidents-responsibilities-and-appoints-new-cfo"
+      ],
+      "confidence": 85
+    },
+    {
+      "taxonomy": "Analyst upgrade/PT increase",
+      "type": "positive",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 6,
+      "event_ids": [
+        6
+      ],
+      "event_date": "2026-09-29",
+      "evidence_excerpt": "Core Natural Resources, Inc. (NYSE:CNR) Stock Has Average Price Target of $115.00",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMi1gFBVV95cUxOYkZYekZHcExweXNpQ2ZXbmhjM29BYjlsUVpXeHFwdWhMX1dxOHRsNmszN05rS3FPQVFtN3I0V0dnWllnMG9PLU96Mk5QNHBJRXFidlliOE9JaFBydDM3MzViNl9Gb3hTZDYxRjBTbmx0YnQ2dTJGOWR1QXJ5RWlGTW95bVpJSmFBT2hYT0ktYlZ6OFlGMEdpQU9BcTVPb2lLb1NyNF9uWDBGT3lRUkVFOC1WWGNmZkprNkV0Umd6dzl4RVNESXlTWG83b1dzMzMwYUZpQ1VB?oc=5"
+      ],
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Government policy (tariffs, subsidies, mandates)",
+      "type": "positive",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 7,
+      "adjusted_weight": 10,
+      "event_ids": [
+        8
+      ],
+      "event_date": "2026-09-28",
+      "evidence_excerpt": "3 U.S. Energy Stocks Tied To America First Policy Shifts",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMixAFBVV95cUxOOEp6R2ZtM3Rwa2JBTVdMcVNnWlBDWFBqRW5oTGZzNl9KdmdsYnJINUFhSEZETjVlLTJDbkRMbHRxWi1Sa0p0NkowenFFQmxsM0dvQlo1Z05VS1pGeWtQNVFFc1JuUF83ajdwUlVHMU1EQkYzZVJvRnp6eHhwZ3lqSFFZRUNvUWx0Y1l1dC0walRqeVZzZ1Q4Ui1ZeHJXcTdKNm44OGg0dnFvRVhMS3AtOGJ0Y05rMXViTEN1MjRoZW5ScGlE0gHEAUFVX3lxTE44SnpHZm0zdHBrYkFNV0xxU2daUENYUGpFbmhMZnM2X0p2Z2xickg1QWFIRkRONWUtMkNuRExsdHFaLVJrSnQ2SjB6cUVCbGwzR29CWjVnTlVLWkZ5a1A1UUVzUm5QXzdqN3BSVUcxTURCRjNlUm9Genp4eHBneWpIUVlFQ29RbHRjWXV0LTBqVGp5VnNnVDhSLVl4cldxN0o2bjg4aDR2cW9FWExLcC04YnRjTmsxdWJMQ3UyNGhlblJwaUQ?oc=5"
+      ],
+      "confidence": 65
+    },
+    {
+      "taxonomy": "Sector headwind/index exclusion/rotation away",
+      "type": "negative",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 6,
+      "adjusted_weight": 7,
+      "event_ids": [
+        7
+      ],
+      "event_date": "2026-09-30",
+      "evidence_excerpt": "These ten energy stocks suffered the steepest September declines",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMixgFBVV95cUxPSFVSbmxkMVAzeXp0eENoeTdFNHZQNDNRQkVNLWZJMkVuaVctRFdNZm9mcUJKSHFNUUN4akNBbnQzbUhTRmotZ05WNUpVYXNYa3ZoTzljRW5Ba1FjUk55NGNvN3pnQWlEMnR3MjhuS19NTjdHWnEwWnJzVkVpeVE0VWJzc0tlbDRtVnFDZkNCNExVZ19tZHhKYVRzNkVCa1FnQjRNRG91ZjlCUUFrTldPb3pJdU10cHNXSlpGYmQ4WnB5YUt0c0E?oc=5"
+      ],
+      "confidence": 70
+    },
+    {
+      "taxonomy": "Analyst downgrade/price target cut",
+      "type": "negative",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 6,
+      "event_ids": [
+        11
+      ],
+      "event_date": "2026-08-08",
+      "evidence_excerpt": "Core Natural Resources (CNR) Stock Faces P E Doubts After Profit Rebound",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMi0gFBVV95cUxOWEdrRExOU3FreFFqYVlibDUwcm14X29nU04xbGtja3cwLXJ3dGxHNldEbHE5UFAwa3lrRVRFUjZXNDJwOWR4R1M0SEIxR0U1QTNiYVdsQ0VHNGdiQnl4QnkxY2NXX0ZERFpPc0QzNlk3MkdrZFdEc09DUThZS050VUhmUnRNUEduM0l6SVJmcW9WR2FLV2dlVnZuSlJORXU2dnN4SEVqeVpwWWhIc3MyVG9yQXhrNEpnZ3d4Qm1LOGl5MGZfMkhJV2FQX0lXUHdWNVHSAdcBQVVfeXFMVk04VFZiTmJqQXR5YzE3QkVrRXM2S1lPSUlJSUQxMDl2bkpQdXIzN3RHeWtwQmZVbjlKcXFMWDhDRGpOLWdmeTRZOTE2WEpvTjNGb0xCMWJpekwxMmRqNjBUaFI3YnFyZHp0VGU0aWRCS2lPYmYzVEVhdmlqaGdmWVpFY0RHWWM5T1QxWGF1cHYzYUtOUC1qMDR0THZJb0M0dTZneW5OWVFlS3EtMXV1bk9CM2dlMkloWE9FeG1wSWtfODVxb2paNjJFNlR5dTljS2I5NzdGT3M?oc=5"
+      ],
+      "confidence": 60
+    },
+    {
+      "taxonomy": "Insider selling",
+      "type": "negative",
+      "event_date": "2026-07-03",
+      "evidence_excerpt": "Core Natural Resources Insiders Sell US$7.4m Of Stock, Possibly Signalling Caution",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMimwFBVV95cUxOallZbDVxeFQzZlF1cWN1MzJpcTZCXy1URUFNVUlfcWRIeWNxbE5UZFRJM0pjTklUY2t6Tk8tSnN0bnRXOUVYTFhJVDFSNHVBMTkwaWVRNFNPYS1VdlVnb1ZpcVFpM1BsT1dOdTBhb0sxUmNEVVI1bi1vV3FYX3hjc3llcWdLLXhQb3RYZGZVVXNWSWRnenB3d3psNA?oc=5"
+      ],
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 5,
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Safety issues",
+      "type": "negative",
+      "event_date": "2026-07-11",
+      "evidence_excerpt": "July 11, 2026 Fatality Accident Classification: Falling, Rolling, or Sliding Rock or Material of Any Kind Location: Bailey Mine - Wind Ridge, Pennsylvania Mine Controller: Core Natural Resources Inc",
+      "source_urls": [
+        "https://www.msha.gov/data-reports/fatality-reports/2026/july-11-2026-fatality"
+      ],
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 5,
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Regulatory actions",
+      "type": "negative",
+      "event_date": "2026-05-04",
+      "evidence_excerpt": "On April 29, 2026, the mine received an imminent danger order under section 107 (a) of the Federal Mine Safety and Health Act of 1977. The order followed an inspector's finding of elevated methane levels at an air intake entry",
+      "source_urls": [
+        "https://www.stocktitan.net/sec-filings/CNR/8-k-core-natural-resources-inc-reports-material-event-98e394718393.html"
+      ],
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 5,
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Lawsuits",
+      "type": "negative",
+      "event_date": "2026-08-20",
+      "evidence_excerpt": "A former mine foreman at Bailey Mine is suing Consol Energy and its newly-rebranded company claiming he and another supervisor were fired after they raised concerns about safety at the sprawling underground coal operation in Greene County following the death of a miner in May.",
+      "source_urls": [
+        "https://www.observer-reporter.com/news/local-news/2026/aug/20/miner-sues-for-wrongful-termination-following-fatal-bailey-mine-accident/"
+      ],
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 5,
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Lawsuits",
+      "type": "negative",
+      "event_date": "2026-08-29",
+      "evidence_excerpt": "Miners sue over safety concern discipline ... Two days after 1,000 pounds of rock broke loose from a mine wall and crushed 34-year-old Zachary",
+      "source_urls": [
+        "https://www.pressreader.com/usa/pittsburgh-post-gazette/20260829/281492168176323"
+      ],
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 5,
+      "confidence": 80
+    }
+  ],
+  "grok_verdict": null,
+  "search_backend": "deepseek_fallback",
+  "generated_at": "2026-10-01",
+  "cutoff_date": null,
+  "role": "override_captain"
+}

@@ -1,15 +1,15 @@
 {
   "date": "2026-10-01",
-  "generated_at": "2026-10-01T05:41:52.310142-04:00",
+  "generated_at": "2026-10-01T07:11:51.625811-04:00",
   "ok": false,
   "fails": [
     {
-      "path": "(review)",
-      "reason": "empty_review_reply"
+      "path": "01_daily/map_heat/2026-10-01_research.md",
+      "reason": "phase=morning_refresh but self-declares failure: 'Morning delta refresh failed captain-evidence QC (coverage:0/28<required:23). Using last night's post-close captain cards... Overnight tape/news was not re-scored.' This is a carry-forward of the prior post-close cards, not a same-day refresh \u2014 malformed/unsupported evidence for a claimed morning_refresh."
     }
   ],
-  "notes": "Grok returned an empty review",
-  "prompt_chars": 44881,
-  "reply_chars": 0,
+  "notes": "Core is otherwise a real, same-day, complete packet: general predict takes a direction (down/mild) with MEMORY_CONFIRM/SCORES markers; events JSON is a genuine 2026-10-01 scan (scan_date today, repaired=true); news judge and 397KB news parse are fresh (generated 2026-10-01, live_rss, 82% recent); finviz digest and map-heat tables are populated with a live futures tape; all 11 sector essays are distinct, dated, and signed. The one fail is map_heat_research: it claims phase=morning_refresh yet explicitly states the refresh failed QC and it fell back to last night's post-close captain cards with overnight tape/news not re-scored \u2014 a carry-forward, which the rules say must fail a morning_refresh artifact. Note also the missing finviz_market_digest_close.json (post-close, not required pre-open)",
+  "prompt_chars": 264798,
+  "reply_chars": 1300,
   "reviewer": "grok-4.6-text"
 }

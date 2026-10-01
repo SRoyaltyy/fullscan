@@ -1,44 +1,40 @@
 # CATALYST DAILY — 2026-10-01
 
-5/5 dossiers · max=8 · routing=Grok → DeepSeek
+3/8 dossiers · max=8 · routing=Grok → DeepSeek
 
 ## TARGETS
-- **UEC** [override_captain] OVERRIDE Uranium
-- **UUUU** [override_captain] OVERRIDE Uranium
-- **SLB** [override_captain] OVERRIDE Oil & Gas Equipment & Services
-- **BKR** [override_captain] OVERRIDE Oil & Gas Equipment & Services
-- **KGS** [override_captain] OVERRIDE Oil & Gas Equipment & Services
+- **NE** [override_captain] OVERRIDE card Oil & Gas Drilling
+- **RIG** [override_captain] OVERRIDE card Oil & Gas Drilling
+- **SLB** [override_captain] OVERRIDE card Oil & Gas Equipment & Services
+- **BKR** [override_captain] OVERRIDE card Oil & Gas Equipment & Services
+- **CNR** [override_captain] OVERRIDE card Thermal Coal
+- **SKYW** [conflict] actions sell net=-4.76 vs heat buy
+- **SLAB** [conflict] actions buy net=2.52 vs heat sell
+- **NVDA** [conflict] actions buy net=2.52 vs heat sell
 
 ## DOSSIERS
-- **UEC** Strong Bullish conv=63 +6/-2 [override_captain] backend=grok_native
-  On 2026-04-08 UEC received TCEQ approval and commenced production at Burke Hollow, the first new U.S. ISR uranium mine in more than a decade. Wyoming on 2026-09-28 issued final approvals for four Christensen Ranch header houses, and FY2026 results reported 2026-09-29 showed 229,294 pounds produced and 400,000 pounds sold at $93.13/lb. UEC closed a US$40 million exclusive URC subscription-receipt placement on 2026-05-01 (potential stake ~18.4%) and disclosed a SaskPower definition-study agreement plus 36,000 meters of Roughrider drilling in that same FY print. Offsetting the ramp, Q3 FY2026 on 2026-06-09 printed $0 revenue and a $52.3 million loss, and the 2026-10-01 Q4 snapshot missed EPS at -$0.12 even as HC Wainwright reiterated Buy / $26.75 on 2026-09-30.
-  - positive Product launch/FDA approval/regulatory greenlight 2026-04-08: received approval from the Texas Commission on Environmental Quality ("TCEQ") and commence
-  - positive Successful acquisition/synergy realization 2026-05-01: closed its previously announced private placement of subscription receipts of the Company 
-  - positive Operational milestone 2026-09-29: Sold 400,000 pounds from inventory at a weighted average realized price of $93.13 per poun
-  - positive Regulatory approval 2026-09-28: On September 28, 2026, final regulatory approvals were issued for four of these.
-- **UUUU** Strong Bullish conv=85 +9/-3 [override_captain] backend=grok_native
-  On 2026-06-18 Energy Fuels received a conditional $725 million OSC/Department of War loan to expand White Mesa rare-earth processing, and on 2026-06-23 it signed a ~$1.9 billion cash-and-stock deal to buy VAC’s magnet manufacturing. Construction of the ~$104 million heavy-REE mill expansion began 2026-07-29, ASM shareholders approved the scheme on 2026-08-12, and White Mesa terbium oxide was fully qualified by a major Japanese magnet maker on 2026-08-19. Offsetting that, Q2 results on 2026-08-05 showed only $25.1 million of revenue and a wider $33.6 million loss, and House Democrats opened a Bears Ears trading inquiry on 2026-08-10 after CEO Bhappu’s 2026-07-07 share purchases. Street opinion split after the miss—Roth upgraded to Buy on 2026-08-07 and BMO initiated Outperform on 2026-08-14, while Zacks cut to Strong Sell on 2026-08-11—leaving a still-unprofitable, ~21% short-float name whose re-rating hinges on closing and integrating the mine-to-magnet deals.
-  - positive Government policy (tariffs, subsidies, mandates) 2026-06-18: The Company has received a conditional $725 million financing commitment from the Departme
-  - positive Product launch/FDA approval/regulatory greenlight 2026-08-19: its terbium (Tb) oxide has successfully passed all qualifications for use by one of the wo
-  - negative Earnings miss (revenue, EBITDA, EPS) 2026-08-05: The Company incurred a net loss of $33.6 million ($0.13 per share) during the quarter
-  - positive Successful acquisition/synergy realization 2026-06-23: today announced a definitive agreement to acquire 100% of Vacuumschmelze GmbH & Co. KG, Ar
-- **SLB** Strong Bullish conv=54 +7/-2 [override_captain] backend=grok_native
-  On April 24, 2026, Q1 results flagged Middle East conflict disruptions that cut sequential revenue about $200 million more than forecast, even as revenue rose 3% year on year. On July 24, Q2 adjusted EPS of $0.55 beat the $0.51 consensus as Digital and Production Systems grew, while the July 14 Liberty Energy alliance and August 31 $3.4 billion Kelvion deal pushed SLB further into AI data-center infrastructure. SLB closed the S&P Global geoscience and petroleum-engineering software acquisition on September 1, adding Kingdom, Petra, Harmony Enterprise and an upstream AI alliance. Backlog firmed on September 22–24 with OQEP’s Bisat-B facility expansion in Oman and four Aramco well-construction contracts covering more than 450 wells, and UBS raised its price target to $75 on September 14.
-  - positive Successful acquisition/synergy realization 2026-09-01: S&P Global (NYSE: SPGI) today announced the completion of the divestment of its geoscience
-  - positive Contract win/expansion 2026-09-24: SLB has been awarded four integrated well construction contracts by Aramco covering more t
-  - positive Contract win/expansion 2026-09-29: its OneSubsea™ joint venture has been awarded a contract by ExxonMobil Moçambique, Limitad
-  - negative Geopolitical event that hurts sector 2026-04-24: Middle East conflict disruptions that cut sequential revenue about $200 million more than 
-- **BKR** Bullish conv=37 +8/-6 [override_captain] backend=grok_native
-  Baker Hughes closed Chart Industries on 2026-07-16, naming Chart a third segment with a $325 million year-three cost-synergy target, then lifted FY2026 revenue guidance to $28.5–$30.3 billion on 2026-09-09. Consecutive beats on 2026-04-23 and 2026-07-26, including Q2 adjusted EPS of $0.64 versus ~$0.51 and revenue of $6.74 billion versus ~$6.54 billion, support the IET-heavy print. Order flow followed: a 2026-07-08 Kodiak gas-turbine framework up to 1.8 GW for U.S. data-center power, plus 2026-08-11 KOC and 2026-09-02 OGDC multi-year production contracts, and LNG/geothermal MOUs with Worley, Mantle Reach, H&P, and DTEK. Offsetting tape includes Lorenzo Simonelli’s 2026-06-22 option exercise and sale of 181,411 shares (~$10.6 million) and late-September PT cuts from TD Cowen, Jefferies, UBS, and Barclays, even as Goldman Sachs reinstated Buy at $71 on 2026-09-29.
-  - positive Successful acquisition/synergy realization 2026-07-16: today announced the successful completion of its acquisition of Chart Industries, Inc. (NY
-  - positive Contract win/expansion 2026-07-08: framework for deployment of up to 1.8 GW of power generation capacity
-  - positive Contract win/expansion 2026-07-29: Dynamis Power Solutions has awarded Baker Hughes an order for 76 NovaLT™16 industrial gas 
-  - positive Earnings beat (revenue, EBITDA, EPS) 2026-07-26: reported $0.64 earnings per share for the quarter, beating the consensus estimate of $0.51
-- **KGS** Strong Bullish conv=100 +11/-3 [override_captain] backend=grok_native
-  On 2026-04-01 Kodiak closed Distributed Power Solutions, adding about 395 MW for $587 million cash plus 2.4 million shares. Q1 (2026-05-11) and Q2 (2026-08-06) printed record adjusted EBITDA of $190.1 million then $216.8 million and lifted 2026 adjusted EBITDA guidance to $830-$860 million, after a 2026-05-14/15 follow-on at $71.00 that raised about $836.1 million net but diluted the share count. On 2026-07-08 Kodiak and Baker Hughes announced a multi-year turbine agreement anchored by ~1 GW of equipment by 2030 (framework up to 1.8 GW), and on 2026-10-01 Kodiak signed a six-year 76 MW baseload supply deal with a West Texas data center. Buy-side coverage stayed crowded, including Wells Fargo’s 2026-05-27 Overweight initiation at $93, while Jefferies cut its target to $69 on 2026-08-10.
-  - positive Successful acquisition/synergy realization 2026-04-01: Closing consideration consisted of $587 million of cash consideration ... and the issuance
-  - positive Earnings guidance raise 2026-08-06: raised 2026 adjusted EBITDA guidance to $830–$860 million and discretionary cash flow guid
-  - positive Contract win/expansion 2026-10-01: Kodiak Gas Services Announces Power Supply Agreement with West Texas Data Center
-  - positive Earnings guidance raise 2026-05-11: raised full-year 2026 adjusted EBITDA guidance to $820–$860 million.
+- **NE** ERROR OpenClaw and DeepSeek both returned empty for CATALYST STEP1 NE
+- **RIG** ERROR OpenClaw and DeepSeek both returned empty for CATALYST STEP1 RIG
+- **SLB** ERROR OpenClaw and DeepSeek both returned empty for CATALYST STEP2 SLB
+- **BKR** Bullish conv=28 +8/-8 [override_captain] backend=deepseek_fallback
+  On 2026-04-23, Baker Hughes reported Q1 2026 adjusted EBITDA of $1.16B (+12% YoY) and adjusted EPS of $0.58, beating the $0.49 estimate, which drove a 7% stock jump by 2026-04-27 on a record $33B backlog. On 2026-07-16, BKR completed its $13.6B acquisition of Chart Industries, and on 2026-07-27 it posted Q2 2026 EPS of $0.64 versus the $0.51 consensus, with revenue up 2.4% YoY to $6.74B. On 2026-09-09, management raised 2026 revenue and EBITDA guidance to reflect Chart, though the stock fell 5.92% on 2026-09-10 as investors questioned the deal's near-term accretion. Contract momentum continued with a bp offshore production enhancement award on 2026-09-04, a multi-year OGDC contract on 2026-09-07, and a data-center turbine supply deal for up to 1.8 GW announced 2026-07-08.
+  - positive Contract win/expansion 2026-09-04: Baker Hughes Awarded Offshore Production Enhancement and Stimulation Services Contract by 
+  - positive Earnings beat (revenue, EBITDA, EPS) 2026-04-23: Q1 2026 adjusted EBITDA of $1.16B (up 12% YoY) and adjusted EPS of $0.58 (up 13% YoY), exc
+  - positive Successful acquisition/synergy realization 2026-07-16: Baker Hughes completed the $13.6B acquisition of Chart Industries on July 16, 2026.
+  - positive Earnings guidance raise 2026-09-09: Baker Hughes hikes guidance for 2026 revenue, EBITDA to reflect Chart Industries deal.
+- **CNR** Bullish conv=21 +6/-7 [override_captain] backend=deepseek_fallback
+  CNR delivered a blowout Q2 2026 on 2026-08-06, with EPS of $2.51 beating the $0.61 consensus by $1.91 and revenue of $1.14B topping estimates, following a Q1 2026 print on 2026-05-07 that also beat by 13.6%. Capital return remains intact, with a $0.10 quarterly dividend declared 2026-08-05 (ex-date 2026-08-31) and buybacks running alongside a ~75% FCF return framework. Leadership was reshuffled twice — an executive succession update on 2026-08-19 and a further expansion of President Mitesh Thakkar's operating duties plus new CFO Nathan Tucker on 2026-10-01 — a neutral-to-slightly-positive continuity signal. Offsetting this, CNR was flagged among the steepest-declining energy stocks in September 2026 (2026-09-30) and drew P/E valuation doubts after the profit rebound (2026-08-08), leaving the net signal modestly bullish but with the stock in a corrective tape.
+  - positive Earnings beat (revenue, EBITDA, EPS) 2026-08-06: reported net income of $126.5 million, or $2.51 per diluted share, in the second quarter o
+  - positive Earnings beat (revenue, EBITDA, EPS) 2026-05-07: reported net income of $21.0 million, or $0.41 per diluted share, in the first quarter of 
+  - positive Government policy (tariffs, subsidies, mandates) 2026-09-28: 3 U.S. Energy Stocks Tied To America First Policy Shifts
+  - negative Sector headwind/index exclusion/rotation away 2026-09-30: These ten energy stocks suffered the steepest September declines
+- **SKYW** ERROR OpenClaw and DeepSeek both returned empty for CATALYST STEP1 SKYW
+- **SLAB** ERROR OpenClaw and DeepSeek both returned empty for CATALYST STEP1 SLAB
+- **NVDA** Bullish conv=19 +10/-8 [conflict] backend=deepseek_fallback
+  On 2026-08-26 NVIDIA reported Q2 FY2027 revenue of $96.2B (+106% YoY) with Data Center revenue of $89.0B (+117%) and guided Q3 to $108.0B, a blowout beat-and-raise that anchors the bull case. On 2026-09-02 NVIDIA signed a definitive agreement to acquire Hugging Face for ~$12.9B, deepening its AI software moat, while on 2026-07-24 and 2026-08-10 it unveiled a $500B+ SK Group memory/AI-infrastructure partnership and $500B+ of third-party compute financing with Apollo, BlackRock, Blackstone, Brookfield, Goldman Sachs and KKR. Offsetting these positives, the DOJ formally opened an antitrust probe into the $17-20B Groq licensing deal on 2026-09-10, and on 2026-09-28/29 Michael Burry disclosed NVDA puts, Nvidia was sued over five data center networking patents, and Netlist sought a U.S. import ban on Micron chips used in Nvidia AI systems. Net insider selling of $832.2M (last filing 2026-09-21) and a 25% U.S. tariff on H200 chips bound for China add further overhang, but the fundamental beat-and-raise plus the capital-return expansion ($150B added to buybacks, lifting the program to $235B) keep the risk/reward skewed positive.
+  - positive Product launch/FDA approval/regulatory greenlight 2026-05-31: NVIDIA's next-generation Vera Rubin AI computing platform is ramping into full production,
+  - negative Adverse litigation outcome/patent invalidation/antitrust ruling 2026-09-10: The U.S. Department of Justice has formally opened an antitrust investigation into Nvidia'
+  - negative Policy reversal/new regulation/tax increase 2026-07-31: The US imposed a 25% tariff on Nvidia H200 AI chips bound for China, with almost none of t
+  - negative Geopolitical event that hurts sector (sanctions, conflict disrupting supply chain) 2026-06-05: Nvidia lost $4.5B in one quarter to chip export controls; US imposed a 25% tariff on H200 
 
 CATALYST_DAILY_OK

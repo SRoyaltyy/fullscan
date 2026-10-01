@@ -1,75 +1,160 @@
-# News Judge — 2026-09-29
+# News Judge — 2026-10-01
 
 ### IMPORTANT NEWS (my ranking)
-1. **October Fed hike odds ~70% (UBS; market ~69%)** — Dominant US financial-conditions driver; outranks all single-name and FX color. Channel: rates
-2. **US equities slide as the Treasury selloff / elevated yields deepen** — Live risk-transmission into SPX/Dow/Nasdaq, not just a rates headline. Channel: risk
-3. **Oil surge + DXY strength reinforcing hike bets** — Commodity inflation feeding the same hawkish path; splits energy vs duration. Channel: rates
-4. **Gold −3.4% to a 7-week low (AEM follows) as real yields jump** — Crowded substitution hedge unwinding confirms the hike/real-yield shock. Channel: substitution
-5. **This week’s US data / August PCE as the October-hike hinge** — Binary that can lock or fade the 70% hike price; still unresolved. Channel: rates
-6. **No-cuts-before-2028 pricing; yield curve near inversion** — Regime “higher-for-longer,” not a one-meeting tweak. Channel: rates
-7. **Boeing 737 MAX 10 FAA certification halt (software glitch; ~31% of undelivered 737 book)** — Index-heavy industrial with aerospace-basket force. Channel: sector_fundamental
-8. **US-China to cut tariffs on $60B of goods** — Policy item the mechanical filter dropped; modest trade impulse vs the rates tape. Channel: sector_policy
 
-RULES_APPLIED: none (WHEN clauses need B6/futures, a fresh kinetic increment, a same-day Chair/Governor print, or a mega-cap beat — none of those are in this set). Adjacent only: PCE/data this week is an unresolved high-impact macro binary — do not lean through it as if already printed.
+1. **Fed hike-odds collapse after cooler PCE — October hike now <50%, December pushed out (Goldman)** — This is the single dominant rates/risk-appetite driver for the session; it reprices the whole curve and every duration-sensitive sector. `channel: rates`
+2. **US 10Y yield at 24-year high / global bonds gripped by fiscal worries (Reuters)** — Directly contradicts the dovish PCE read; the yield level is the binding constraint on equity multiples and small-caps. `channel: rates`
+3. **Gold drops >$100 on hawkish Fed comments; hawkish repricing resumes (AEM digest)** — Gold is the cleanest real-time read on the rates/hike-odds fight and a sector signal for miners (AEM, NEM, GDX). `channel: substitution`
+4. **Boeing 737 MAX 10 certification halted by FAA over software glitch — 31% of undelivered 737 order book at risk** — Hard, fresh, index-relevant industrial/defense-aero catalyst with supply-chain read-through (BA, SPR, suppliers). `channel: sector_fundamental`
+5. **AbbVie FDA approval of JUVMO (tavapadon), first selective D1/D5 agonist for Parkinson's** — Large-cap pharma label expansion; supports Healthcare sector tone and the neuro/PD basket. `channel: sector_fundamental`
+6. **Amgen Phase 3 dazodalibep positive in Sjögren's; Jefferies PT to $410** — Second large-cap biotech Phase 3 readout same day; reinforces Healthcare sector_fundamental, not pure single-name. `channel: sector_fundamental`
+7. **US tells France/Germany to release diesel stocks or face US export ban (Reuters exclusive)** — Under-covered energy/refined-products policy shock; supports refining margins and diesel-crack plays, adds to inflation narrative. `channel: sector_policy`
+8. **Micron "dazzling" quarter but stock not moving; Fabrinet weakness + rising yields spark APH −6.5%** — AI/semi demand intact but multiple compression from yields is the live tension; semis mixed, not a clean long. `channel: sector_fundamental`
+
+---
 
 ### STEP 1 — FRAMEWORK SCORE
-1. **October hike odds ~70%** — keep | us_relevance: high — US policy path pricing | channel: rates | geography: us_domestic | severity: regime | horizon: 1d-1w | action_object: spx | action_object_detail: SPX beta / duration (TLT, rate-sensitive growth) | polarity: hawkish | polarity_why: 70% October hike tightens conditions into cash equities | confidence: 0.85
-2. **Stocks slide on Treasury selloff / elevated yields** — keep | us_relevance: high — already hitting the tape | channel: risk | geography: us_domestic | severity: session | horizon: 1d | action_object: spx | action_object_detail: SPX beta; IWM/high-beta | polarity: bearish | polarity_why: yield backup is printing in index weakness, Iran relief ignored | confidence: 0.82
-3. **Oil surge + DXY hike confirmation** — keep | us_relevance: high — inflation input into Fed path | channel: rates | geography: global_priced | severity: session | horizon: 1d-1w | action_object: sector_etf | action_object_detail: XLE vs XLY/IGV duration | polarity: mixed | polarity_why: oil bid supports energy but feeds hawkish USD/yields | confidence: 0.76
-4. **Gold −3.4% / 7-week low** — keep | us_relevance: high — real-yield proxy for the hike shock | channel: substitution | geography: global_priced | severity: session | horizon: 1d-1w | action_object: sector_etf | action_object_detail: GLD/GDX; AEM | polarity: bearish | polarity_why: hawkish real yields dumping the anti-hike hedge | confidence: 0.84
-5. **PCE / two looming reports as hike hinge** — conditional | us_relevance: high — next print can reprice the 70% odds | channel: rates | geography: us_domestic | severity: session | horizon: 1d-1w | action_object: spx | action_object_detail: SPX beta into PCE | polarity: hawkish | polarity_why: preview tape says sticky inflation bolsters October hike, but it has not printed | confidence: 0.62
-6. **No cuts before 2028 / curve near inversion** — keep | us_relevance: high — term-structure regime | channel: rates | geography: us_domestic | severity: regime | horizon: 1w-1m | action_object: spx | action_object_detail: SPX duration; KRE/housing rate-sensitives | polarity: hawkish | polarity_why: strips the cut-rally bid for months, not days | confidence: 0.70
-7. **BA MAX 10 FAA halt** — keep | us_relevance: high — large US industrial, order-book hit | channel: sector_fundamental | geography: us_domestic | severity: session | horizon: 1w-1m | action_object: sector_etf | action_object_detail: ITA/XLI; BA | polarity: bearish | polarity_why: certification stoppage puts ~31% of undelivered 737 book at risk | confidence: 0.74
-8. **US-China $60B tariff cut** — conditional | us_relevance: medium — real policy but small vs rates tape | channel: sector_policy | geography: us_supply_chain | severity: session | horizon: 1w-1m | action_object: basket | action_object_detail: tariff-sensitive goods/retail/semis supply chain | polarity: bullish | polarity_why: modest easing of goods tariffs, easily dominated by yields | confidence: 0.55
+
+**1. Fed hike-odds collapse after cooler PCE**
+- keep | us_relevance: high — reprices front-end and hike path directly
+- channel: rates | geography: us_domestic | severity: regime | horizon: 1d-1w
+- action_object: spx | detail: SPX beta, IWM, TLT, rate-sensitive baskets
+- polarity: dovish | polarity_why: October hike odds fell below coin-flip, December pushed out
+- confidence: 0.75
+
+**2. US 10Y at 24-year high / fiscal worries**
+- keep | us_relevance: high — yield level caps multiple expansion regardless of hike odds
+- channel: rates | geography: global_priced | severity: regime | horizon: 1w-1m
+- action_object: spx | detail: SPX multiple, regional banks, small-caps
+- polarity: bearish | polarity_why: 24-yr high yield is a valuation headwind even with dovish hike odds
+- confidence: 0.7
+
+**3. Gold −$100 on hawkish Fed comments**
+- keep | us_relevance: medium — cleanest real-time rates/hike-odds cross-check
+- channel: substitution | geography: global_priced | severity: session | horizon: 1d-1w
+- action_object: basket | detail: GDX, AEM, NEM, gold miners
+- polarity: bearish | polarity_why: hawkish repricing lifts real yields, pressures gold
+- confidence: 0.65
+
+**4. Boeing 737 MAX 10 certification halted**
+- keep | us_relevance: high — index-relevant industrial with supply-chain read-through
+- channel: sector_fundamental | geography: us_supply_chain | severity: session | horizon: 1d-1w
+- action_object: single_name | detail: BA, SPR, aero-supplier basket
+- polarity: bearish | polarity_why: 31% of undelivered 737 order book at risk
+- confidence: 0.7
+
+**5. AbbVie JUVMO FDA approval**
+- keep | us_relevance: medium — large-cap pharma label expansion, sector tone
+- channel: sector_fundamental | geography: us_domestic | severity: session | horizon: 1d-1w
+- action_object: sector_etf | detail: XLV, large-cap pharma, PD/neuro basket
+- polarity: bullish | polarity_why: first-in-class approval expands ABBV neuro franchise
+- confidence: 0.6
+
+**6. Amgen Phase 3 dazodalibep positive**
+- keep | us_relevance: medium — second large-cap biotech Phase 3 same day, sector sympathy
+- channel: sector_fundamental | geography: us_domestic | severity: session | horizon: 1d-1w
+- action_object: sector_etf | detail: XLV, XBI, large-cap biotech
+- polarity: bullish | polarity_why: positive Phase 3 in Sjögren's, PT raised
+- confidence: 0.6
+
+**7. US diesel export-ban threat to France/Germany**
+- conditional | us_relevance: medium — refined-products policy shock, inflation read-through
+- channel: sector_policy | geography: global_priced | severity: session | horizon: 1d-1w
+- action_object: basket | detail: refiners (VLO, PSX, MPC), diesel crack
+- polarity: mixed | polarity_why: bullish refiners/margins, bearish if it escalates into trade retaliation
+- confidence: 0.5
+
+**8. Micron beat / Fabrinet weakness / APH −6.5%**
+- conditional | us_relevance: medium — AI demand intact but multiple compression live
+- channel: sector_fundamental | geography: us_supply_chain | severity: session | horizon: 1d-1w
+- action_object: sector_etf | detail: SMH, SOXX, AI-infra basket
+- polarity: mixed | polarity_why: demand beat vs. yield-driven multiple compression
+- confidence: 0.55
+
+---
 
 ### STEP 2 — INTERACTIONS
-- Fed hike-odds + pending PCE/data → treat as **ONE rates cluster** (do not stack B1 + B3).
-- Yields **up** + oil **up** → opposite of “yields down + cyclicals/small-caps risk-on”; duration/growth risk-off, XLE bid — do not buy IWM/cyclicals on this tape.
-- Gold crash + Treasury selloff → same real-yield impulse; do not double-count as separate risk-off.
-- Trump Iran sanction relief shrugged off + oil still bid → **do not** score geo-relief as risk-on; oil is feeding the hike path, not a fresh Hormuz kinetic (kinetic lessons do not fire).
-- NVDA/AMD “in focus” + APH/Fabrinet weakness + rising yields → semis **mixed**; mega-cap-earnings-over-macro-drag does **not** fire (no fresh AI-infra beat).
+
+- **Fed path + weak labor + cooler PCE → treat as ONE rates cluster.** Do not double-count dovish PCE and dovish hike-odds as two separate bullish inputs; they are the same repricing.
+- **Yields at 24-yr high + dovish hike-odds → conflicting rates signal.** Do not buy duration-sensitive cyclicals/small-caps on dovish-hope alone while the 10Y is at a 24-yr high; the level dominates the path for multiples.
+- **AI chip demand (Micron) + rising yields (Fabrinet/APH) → semis mixed.** Do not double-count AI demand as a clean long; multiple compression is the live offset.
+- **Two large-cap biotech Phase 3/approval wins same day (ABBV, AMGN) → Healthcare sector sympathy.** Trade XLV/XBI basket, not only the single names.
+- **Boeing MAX 10 halt + diesel export threat → supply-chain/industrial drag cluster.** Both are fresh, hard, and additive to a stagflation-adjacent narrative.
+- **Gold −$100 + hawkish Fed comments → substitution channel confirms rates repricing.** Use gold as the cross-check on whether the dovish PCE read is actually winning.
+
+---
 
 ### STEP 3 — RECLASSIFY AUDIT
-**DROP from usable (still noise/consumer/duplicate):** Student-loan 1% cut; “how the hike hits your wallet” / credit-card / HYSA explainers; New Orleans local-expert piece; Nomi Prins long-term gold; duplicate CHF/DXY FXStreet copies; KuCoin “what really drives stocks.”
-**RESCUE from noise:** U.S. Stocks Slide as Treasury Selloff Deepens (WSJ); Treasuries Stabilize After Selloff, Stocks Decline (Bloomberg) — live equity/rates tape; U.S., China to lower tariffs on $60B — sector_policy false negative; Gold slides as oil surge and Fed path — gold confirmation (usable already had the drop, keep as one cluster). Half of SPX “at cross purposes” → sentiment/breadth only, leave **conditional/not ranked**. China humanoid IPO criteria, Meta pullback, Asia-tightening commentary → remain drop/single_name/foreign.
 
-Finviz elevated (ABBV FDA, AMGN Phase 3, APH −6.5%) are real but **single_name / thin sector** vs the rates regime; not promoted over SPX-beta items. BNY prime-rate hike effective Sep 17 is stale vs 2026-09-29.
+**DROPPED from usable (mechanical marked usable, I drop):**
+- All "Fed watchdog / Powell renovation / no criminal wrongdoing" items (5+ duplicates) — pure political noise, no market transmission.
+- "Elizabeth Warren blames Trump's failed policies" — political color, no channel.
+- "Fed Rate Hike: What Women Entrepreneurs Should Do Now" — advice content, no market signal.
+- "Real estate expert reacts to Fed rate hike" — local color, no sector ETF force.
+- "Fed Vice Chair discusses financial regulation modernization (C-SPAN)" — no fresh policy content.
+- "Will the Bank of Canada follow the Fed" — foreign central bank, weak US link.
+- Duplicate gold-steady headlines (Reuters/Bloomberg/Business Times/Yahoo) — collapse to one; the AEM digest gold −$100 item is the real signal.
+
+**RESCUED from noise:**
+- **US diesel export-ban threat to France/Germany (Reuters exclusive)** — genuine sector_policy shock for refiners and inflation narrative; mechanical filter dropped it as foreign news.
+- **Micron "dazzling" quarter, stock not moving (Barron's)** — AI/semi demand read-through; mechanical filter treated as single-name.
+- **"Actually, AI Is Boosting US Interest Rates, Not Inflation" (Morningstar)** — regime-level framing on the AI-capex/rates nexus; relevant to the rates cluster.
+- **"Morning Bid: Inflation relief gives bonds little reprieve" (Reuters)** — captures the exact tension in my #1 vs #2 ranking; useful confirmation.
+
+**RESCUED from single_name (Finviz digest, elevated):**
+- **ABBV JUVMO approval** → Healthcare sector_fundamental (large-cap pharma, PD basket).
+- **AMGN Phase 3 dazodalibep** → Healthcare sector_fundamental (large-cap biotech sympathy).
+- **BA 737 MAX 10 halt** → Industrials/supply-chain, index-relevant.
+- **AEM gold −$100** → substitution channel, miners basket.
+
+---
 
 ### STEP 4 — B1 / SECTOR INJECT
-NEWS_JUDGE: n=8 rescued=3
-MACRO hike-odds: [hawkish] ~70% October hike (UBS/market ~69%) into sticky-PCE week (regime/1d-1w)
-MACRO yields-equities: [bearish] Treasury selloff already dropping SPX/Dow/Nasdaq; Iran relief ignored (session/1d)
-MACRO oil-USD: [mixed] oil surge + DXY feeding hike bets; XLE bid vs duration (session/1d-1w)
-MACRO gold: [bearish] gold −3.4% / 7-week low as real yields jump (session/1d-1w)
-MACRO term-structure: [hawkish] no-cut-before-2028 + curve near inversion (regime/1w-1m)
-SECTOR aerospace: [bearish] BA MAX 10 FAA halt, ~31% undelivered 737 book (ITA/XLI)
-SECTOR trade: [bullish] US-China $60B tariff cut, modest vs rates (basket)
-INTERACTION: hike-odds+PCE+yields+gold+oil = one hawkish cluster; do not buy cyclicals/IWM; no kinetic B1; no mega-cap-beat offset
-WATCH: PCE still unresolved — do not emit through the binary; late “yields ease” CNBC vs selloff is two-sided noise
+
+```
+NEWS_JUDGE: n=8 rescued=6
+MACRO rates: [dovish] Cooler PCE + Goldman pushing Dec hike → Oct odds <50% (regime/1d-1w)
+MACRO rates: [bearish] 10Y at 24-yr high, fiscal worries cap multiple expansion (regime/1w-1m)
+SECTOR Healthcare: [bullish] ABBV JUVMO FDA approval + AMGN Phase 3 dazodalibep → XLV/XBI sympathy (XLV, XBI)
+SECTOR Industrials: [bearish] BA 737 MAX 10 cert halted, 31% of undelivered order book at risk (BA, SPR, aero basket)
+SECTOR Energy: [mixed] US diesel export-ban threat to FR/DE → refiners/crack bullish, retaliation risk (VLO, PSX, MPC)
+SECTOR Semis: [mixed] Micron beat vs Fabrinet/APH −6.5% on rising yields → SMH mixed, no clean long (SMH, SOXX)
+SECTOR Materials: [bearish] Gold −$100 on hawkish Fed comments → GDX/AEM/NEM pressure (GDX)
+INTERACTION: Dovish hike-odds vs 24-yr high 10Y = conflicting rates signal; do not buy duration-sensitives on dovish-hope alone
+INTERACTION: Two large-cap biotech wins same day → trade XLV/XBI basket, not single names only
+WATCH: Gold −$100 is the cleanest cross-check on whether dovish PCE read is actually winning the tape
+```
+
+---
 
 NEWS_PARSE_BEGIN
 IMPORTANT_COUNT: 8
 TOP_ITEMS:
-- October Fed hike odds ~70% | keep=keep | channel=rates | severity=regime | horizon=1d-1w | object=spx:SPX beta/duration | pol=hawkish | conf=0.85
-- US stocks slide as Treasury selloff deepens | keep=keep | channel=risk | severity=session | horizon=1d | object=spx:SPX beta/IWM | pol=bearish | conf=0.82
-- Oil surge + DXY strength reinforcing hike bets | keep=keep | channel=rates | severity=session | horizon=1d-1w | object=sector_etf:XLE vs duration | pol=mixed | conf=0.76
-- Gold -3.4% to 7-week low as real yields jump | keep=keep | channel=substitution | severity=session | horizon=1d-1w | object=sector_etf:GLD/GDX | pol=bearish | conf=0.84
-- August PCE / this week's data as October-hike hinge | keep=conditional | channel=rates | severity=session | horizon=1d-1w | object=spx:SPX beta into PCE | pol=hawkish | conf=0.62
-- No Fed cuts before 2028; curve near inversion | keep=keep | channel=rates | severity=regime | horizon=1w-1m | object=spx:duration/rate-sensitives | pol=hawkish | conf=0.70
-- Boeing 737 MAX 10 FAA certification halt | keep=keep | channel=sector_fundamental | severity=session | horizon=1w-1m | object=sector_etf:ITA/XLI | pol=bearish | conf=0.74
-- US-China tariff cut on $60B of goods | keep=conditional | channel=sector_policy | severity=session | horizon=1w-1m | object=basket:tariff-sensitive supply chain | pol=bullish | conf=0.55
-INTERACTIONS: hike-odds+PCE=one rates cluster; yields-up+oil-up≠cyclical risk-on (XLE bid, duration/IWM off); gold dump+UST selloff=same real-yield impulse; Iran relief ignored so no geo risk-on/no kinetic B1; NVDA/AMD+APH/yields=semis mixed no mega-cap-beat offset
-RESCUED_FROM_NOISE: U.S. Stocks Slide as Treasury Selloff Deepens; Treasuries Stabilize After Selloff, Stocks Decline; U.S., China to lower tariffs on $60 billion of goods
-DROPPED_FROM_USABLE: Student Loan Borrowers 1% Interest Rate Cut; How the Fed interest rate hike will hit your wallet; George Kamel credit-card warning; high-yield savings/money market boost; New Orleans financial expert Fed hike; Nomi Prins gold long-term outlook; Fed Rate Hike and Market Highs KuCoin; duplicate Swiss Franc/DXY FXStreet copies
+- Fed hike-odds collapse after cooler PCE; Goldman pushes Dec hike | keep=keep | channel=rates | severity=regime | horizon=1d-1w | object=spx:SPX beta, IWM, TLT | pol=dovish | conf=0.75
+- US 10Y yield at 24-year high; global bonds gripped by fiscal worries | keep=keep | channel=rates | severity=regime | horizon=1w-1m | object=spx:SPX multiple, regional banks, small-caps | pol=bearish | conf=0.7
+- Gold drops >$100 on hawkish Fed comments | keep=keep | channel=substitution | severity=session | horizon=1d-1w | object=basket:GDX, AEM, NEM | pol=bearish | conf=0.65
+- Boeing 737 MAX 10 certification halted by FAA over software glitch | keep=keep | channel=sector_fundamental | severity=session | horizon=1d-1w | object=single_name:BA, SPR, aero basket | pol=bearish | conf=0.7
+- AbbVie FDA approval of JUVMO (tavapadon) for Parkinson's | keep=keep | channel=sector_fundamental | severity=session | horizon=1d-1w | object=sector_etf:XLV, PD/neuro basket | pol=bullish | conf=0.6
+- Amgen Phase 3 dazodalibep positive in Sjogren's; Jefferies PT to $410 | keep=keep | channel=sector_fundamental | severity=session | horizon=1d-1w | object=sector_etf:XLV, XBI | pol=bullish | conf=0.6
+- US tells France/Germany to release diesel stocks or face export ban | keep=conditional | channel=sector_policy | severity=session | horizon=1d-1w | object=basket:VLO, PSX, MPC, diesel crack | pol=mixed | conf=0.5
+- Micron beat but stock flat; Fabrinet weakness + rising yields spark APH -6.5% | keep=conditional | channel=sector_fundamental | severity=session | horizon=1d-1w | object=sector_etf:SMH, SOXX | pol=mixed | conf=0.55
+INTERACTIONS: Fed path + cooler PCE = ONE rates cluster, do not double-count; 24-yr high 10Y vs dovish hike-odds = conflicting rates signal, do not buy duration-sensitives on dovish-hope alone; AI chip demand (Micron) vs rising yields (Fabrinet/APH) = semis mixed; ABBV + AMGN same-day wins = Healthcare sector sympathy, trade XLV/XBI basket; BA MAX 10 halt + diesel export threat = supply-chain/industrial drag cluster; gold -$100 = substitution cross-check on rates repricing
+RESCUED_FROM_NOISE: US tells France/Germany to release diesel stocks or face US export ban (Reuters); Micron Reports Another Dazzling Earnings Quarter, stock isn't moving (Barron's); Actually AI Is Boosting US Interest Rates, Not Inflation (Morningstar); Morning Bid: Inflation relief gives bonds little reprieve (Reuters)
+DROPPED_FROM_USABLE: Fed watchdog/Powell renovation items (5+ duplicates, no market transmission); Elizabeth Warren blames Trump's failed policies (political color); Fed Rate Hike: What Women Entrepreneurs Should Do Now (advice content); Real estate expert reacts to Fed rate hike (local color); Fed Vice Chair discusses financial regulation modernization C-SPAN (no fresh policy); Will Bank of Canada follow Fed (foreign central bank, weak US link); duplicate gold-steady headlines (Reuters/Bloomberg/Business Times/Yahoo collapsed to one)
 B1_INJECT:
-NEWS_JUDGE: n=8 rescued=3
-MACRO hike-odds: [hawkish] ~70% October hike (UBS/market ~69%) into sticky-PCE week (regime/1d-1w)
-MACRO yields-equities: [bearish] Treasury selloff already dropping SPX/Dow/Nasdaq; Iran relief ignored (session/1d)
-MACRO oil-USD: [mixed] oil surge + DXY feeding hike bets; XLE bid vs duration (session/1d-1w)
-MACRO gold: [bearish] gold −3.4% / 7-week low as real yields jump (session/1d-1w)
-MACRO term-structure: [hawkish] no-cut-before-2028 + curve near inversion (regime/1w-1m)
-SECTOR aerospace: [bearish] BA MAX 10 FAA halt, ~31% undelivered 737 book (ITA/XLI)
-SECTOR trade: [bullish] US-China $60B tariff cut, modest vs rates (basket)
-INTERACTION: hike-odds+PCE+yields+gold+oil = one hawkish cluster; do not buy cyclicals/IWM; no kinetic B1; no mega-cap-beat offset
-WATCH: PCE still unresolved — do not emit through the binary; late “yields ease” CNBC vs selloff is two-sided noise
+NEWS_JUDGE: n=8 rescued=6
+MACRO rates: [dovish] Cooler PCE + Goldman pushing Dec hike → Oct odds <50% (regime/1d-1w)
+MACRO rates: [bearish] 10Y at 24-yr high, fiscal worries cap multiple expansion (regime/1w-1m)
+SECTOR Healthcare: [bullish] ABBV JUVMO FDA approval + AMGN Phase 3 dazodalibep → XLV/XBI sympathy (XLV, XBI)
+SECTOR Industrials: [bearish] BA 737 MAX 10 cert halted, 31% of undelivered order book at risk (BA, SPR, aero basket)
+SECTOR Energy: [mixed] US diesel export-ban threat to FR/DE → refiners/crack bullish, retaliation risk (VLO, PSX, MPC)
+SECTOR Semis: [mixed] Micron beat vs Fabrinet/APH -6.5% on rising yields → SMH mixed, no clean long (SMH, SOXX)
+SECTOR Materials: [bearish] Gold -$100 on hawkish Fed comments → GDX/AEM/NEM pressure (GDX)
+INTERACTION: Dovish hike-odds vs 24-yr high 10Y = conflicting rates signal; do not buy duration-sensitives on dovish-hope alone
+INTERACTION: Two large-cap biotech wins same day → trade XLV/XBI basket, not single names only
+WATCH: Gold -$100 is the cleanest cross-check on whether dovish PCE read is actually winning the tape
 NEWS_PARSE_END
+
+---
+
+**RULES_APPLIED: none** — No standing lesson's WHEN trigger matches today's tape. The scheduled-macro-release lessons (CPI/NFP/FOMC) do not fire because today's PCE is a *released* print, not a pending binary at the open; the kinetic/oil-supply lessons do not fire (no fresh Iran/Hormuz escalation); the mega-cap-earnings-over-macro-drag lesson does not fire (no index-relevant mega-cap earnings catalyst today — Micron is a semi bellwether but the stock is flat, not a positive catalyst); the Fed-appearance lesson does not fire (no same-day Chair/Governor appearance flagged in the input set).

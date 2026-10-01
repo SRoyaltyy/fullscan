@@ -927,7 +927,7 @@
     },
     {
       "ticker": "NVDA",
-      "buy_score": 2.52,
+      "buy_score": 2.97,
       "sell_score": 0.0,
       "events": [
         {
@@ -935,11 +935,22 @@
           "side": "buy",
           "weight": 2.52,
           "bucket": "semiconductors"
+        },
+        {
+          "event": "catalyst",
+          "side": "buy",
+          "weight": 0.45,
+          "bucket": "conflict",
+          "net_signal": "Bullish",
+          "conviction": 19
         }
       ],
-      "net": 2.52,
+      "net": 2.97,
       "side": "buy",
-      "size": "mega"
+      "size": "mega",
+      "catalyst_signal": "Bullish",
+      "catalyst_conviction": 19,
+      "catalyst_stack": "On 2026-08-26 NVIDIA reported Q2 FY2027 revenue of $96.2B (+106% YoY) with Data Center revenue of $89.0B (+117%) and guided Q3 to $108.0B, a blowout beat-and-raise that anchors the bull case. On 2026-09-02 NVIDIA signed a definitive agreement to acquire Hugging Face for ~$12.9B, "
     },
     {
       "ticker": "AVGO",
@@ -1664,6 +1675,48 @@
       "net": -1.43,
       "side": "sell",
       "size": "large"
+    },
+    {
+      "ticker": "BKR",
+      "buy_score": 0.5,
+      "sell_score": 0.0,
+      "events": [
+        {
+          "event": "catalyst",
+          "side": "buy",
+          "weight": 0.5,
+          "bucket": "override_captain",
+          "net_signal": "Bullish",
+          "conviction": 28
+        }
+      ],
+      "net": 0.5,
+      "side": "buy",
+      "catalyst_signal": "Bullish",
+      "catalyst_conviction": 28,
+      "catalyst_stack": "On 2026-04-23, Baker Hughes reported Q1 2026 adjusted EBITDA of $1.16B (+12% YoY) and adjusted EPS of $0.58, beating the $0.49 estimate, which drove a 7% stock jump by 2026-04-27 on a record $33B backlog. On 2026-07-16, BKR completed its $13.6B acquisition of Chart Industries, an"
+    },
+    {
+      "ticker": "CNR",
+      "buy_score": 0.45,
+      "sell_score": 0.0,
+      "events": [
+        {
+          "event": "catalyst",
+          "side": "buy",
+          "weight": 0.45,
+          "bucket": "override_captain",
+          "net_signal": "Bullish",
+          "conviction": 21
+        }
+      ],
+      "net": 0.45,
+      "side": "buy",
+      "catalyst_signal": "Bullish",
+      "catalyst_conviction": 21,
+      "catalyst_stack": "CNR delivered a blowout Q2 2026 on 2026-08-06, with EPS of $2.51 beating the $0.61 consensus by $1.91 and revenue of $1.14B topping estimates, following a Q1 2026 print on 2026-05-07 that also beat by 13.6%. Capital return remains intact, with a $0.10 quarterly dividend declared "
     }
-  ]
+  ],
+  "catalyst_tickers": 3,
+  "catalyst_date": "2026-10-01"
 }
