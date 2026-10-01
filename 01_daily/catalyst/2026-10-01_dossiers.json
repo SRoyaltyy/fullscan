@@ -1,0 +1,356 @@
+{
+  "date": "2026-10-01",
+  "generated_at": "2026-10-01T07:00:08.534303-04:00",
+  "max_n": 8,
+  "routing": "Grok \u2192 DeepSeek",
+  "grok": true,
+  "deepseek_fallback": true,
+  "gemini": false,
+  "n_targets": 5,
+  "n_ok": 5,
+  "status": "OK",
+  "targets": [
+    {
+      "ticker": "UEC",
+      "role": "override_captain",
+      "why": "OVERRIDE Uranium"
+    },
+    {
+      "ticker": "UUUU",
+      "role": "override_captain",
+      "why": "OVERRIDE Uranium"
+    },
+    {
+      "ticker": "SLB",
+      "role": "override_captain",
+      "why": "OVERRIDE Oil & Gas Equipment & Services"
+    },
+    {
+      "ticker": "BKR",
+      "role": "override_captain",
+      "why": "OVERRIDE Oil & Gas Equipment & Services"
+    },
+    {
+      "ticker": "KGS",
+      "role": "override_captain",
+      "why": "OVERRIDE Oil & Gas Equipment & Services"
+    }
+  ],
+  "dossiers": [
+    {
+      "ticker": "UEC",
+      "role": "override_captain",
+      "why": "OVERRIDE Uranium",
+      "net_signal": "Strong Bullish",
+      "conviction": 63,
+      "search_backend": "grok_native",
+      "catalyst_stack": "On 2026-04-08 UEC received TCEQ approval and commenced production at Burke Hollow, the first new U.S. ISR uranium mine in more than a decade. Wyoming on 2026-09-28 issued final approvals for four Christensen Ranch header houses, and FY2026 results reported 2026-09-29 showed 229,294 pounds produced and 400,000 pounds sold at $93.13/lb. UEC closed a US$40 million exclusive URC subscription-receipt placement on 2026-05-01 (potential stake ~18.4%) and disclosed a SaskPower definition-study agreement plus 36,000 meters of Roughrider drilling in that same FY print. Offsetting the ramp, Q3 FY2026 on 2026-06-09 printed $0 revenue and a $52.3 million loss, and the 2026-10-01 Q4 snapshot missed EPS at -$0.12 even as HC Wainwright reiterated Buy / $26.75 on 2026-09-30.",
+      "key_assumption": "Burke Hollow and the newly approved Christensen Ranch header houses convert permits into a rising ISR run-rate at still-elevated realized prices, so lumpy inventory-driven EPS misses do not cap the U.S. hub-and-spoke rerating.",
+      "n_pos": 6,
+      "n_neg": 2,
+      "top_hits": [
+        {
+          "type": "positive",
+          "taxonomy": "Product launch/FDA approval/regulatory greenlight",
+          "event_date": "2026-04-08",
+          "headline": "received approval from the Texas Commission on Environmental Quality (\"TCEQ\") and commenced production at its Burke Hollow project",
+          "weight": 10,
+          "confidence": 95
+        },
+        {
+          "type": "positive",
+          "taxonomy": "Successful acquisition/synergy realization",
+          "event_date": "2026-05-01",
+          "headline": "closed its previously announced private placement of subscription receipts of the Company (the \"Subscription Receipts\") to Uranium Energy Corp. (\"UEC\") at a pri",
+          "weight": 9,
+          "confidence": 85
+        },
+        {
+          "type": "positive",
+          "taxonomy": "Operational milestone",
+          "event_date": "2026-09-29",
+          "headline": "Sold 400,000 pounds from inventory at a weighted average realized price of $93.13 per pound",
+          "weight": 7,
+          "confidence": 95
+        },
+        {
+          "type": "positive",
+          "taxonomy": "Regulatory approval",
+          "event_date": "2026-09-28",
+          "headline": "On September 28, 2026, final regulatory approvals were issued for four of these.",
+          "weight": 7,
+          "confidence": 95
+        },
+        {
+          "type": "positive",
+          "taxonomy": "Strategic partnership/alliance",
+          "event_date": "2026-09-29",
+          "headline": "In August 2026, the Company entered into a Definition Study Agreement with Saskatchewan Power Corporation",
+          "weight": 7,
+          "confidence": 88
+        },
+        {
+          "type": "negative",
+          "taxonomy": "Earnings miss",
+          "event_date": "2026-10-01",
+          "headline": "Uranium Energy Corp (UEC) (Q4 2026) Earnings Call Highlights: Record Realized Prices, 157% ...",
+          "weight": 6,
+          "confidence": 75
+        }
+      ],
+      "error": null
+    },
+    {
+      "ticker": "UUUU",
+      "role": "override_captain",
+      "why": "OVERRIDE Uranium",
+      "net_signal": "Strong Bullish",
+      "conviction": 85,
+      "search_backend": "grok_native",
+      "catalyst_stack": "On 2026-06-18 Energy Fuels received a conditional $725 million OSC/Department of War loan to expand White Mesa rare-earth processing, and on 2026-06-23 it signed a ~$1.9 billion cash-and-stock deal to buy VAC\u2019s magnet manufacturing. Construction of the ~$104 million heavy-REE mill expansion began 2026-07-29, ASM shareholders approved the scheme on 2026-08-12, and White Mesa terbium oxide was fully qualified by a major Japanese magnet maker on 2026-08-19. Offsetting that, Q2 results on 2026-08-05 showed only $25.1 million of revenue and a wider $33.6 million loss, and House Democrats opened a Bears Ears trading inquiry on 2026-08-10 after CEO Bhappu\u2019s 2026-07-07 share purchases. Street opinion split after the miss\u2014Roth upgraded to Buy on 2026-08-07 and BMO initiated Outperform on 2026-08-14, while Zacks cut to Strong Sell on 2026-08-11\u2014leaving a still-unprofitable, ~21% short-float name whose re-rating hinges on closing and integrating the mine-to-magnet deals.",
+      "key_assumption": "VAC and ASM close and integrate without a regulatory block or crippling dilution, the OSC $725 million commitment is actually funded, and the Bears Ears trading inquiry stays political rather than becoming a mill-license or enforcement event.",
+      "n_pos": 9,
+      "n_neg": 3,
+      "top_hits": [
+        {
+          "type": "positive",
+          "taxonomy": "Government policy (tariffs, subsidies, mandates)",
+          "event_date": "2026-06-18",
+          "headline": "The Company has received a conditional $725 million financing commitment from the Department of War, U.S. Office of Strategic Capital",
+          "weight": 10,
+          "confidence": 95
+        },
+        {
+          "type": "positive",
+          "taxonomy": "Product launch/FDA approval/regulatory greenlight",
+          "event_date": "2026-08-19",
+          "headline": "its terbium (Tb) oxide has successfully passed all qualifications for use by one of the world's largest manufacturers of rare earth permanent magnets",
+          "weight": 10,
+          "confidence": 95
+        },
+        {
+          "type": "negative",
+          "taxonomy": "Earnings miss (revenue, EBITDA, EPS)",
+          "event_date": "2026-08-05",
+          "headline": "The Company incurred a net loss of $33.6 million ($0.13 per share) during the quarter",
+          "weight": 10,
+          "confidence": 95
+        },
+        {
+          "type": "positive",
+          "taxonomy": "Successful acquisition/synergy realization",
+          "event_date": "2026-06-23",
+          "headline": "today announced a definitive agreement to acquire 100% of Vacuumschmelze GmbH & Co. KG, Ara VAC TopCo US LLC",
+          "weight": 9,
+          "confidence": 95
+        },
+        {
+          "type": "positive",
+          "taxonomy": "Successful acquisition/synergy realization",
+          "event_date": "2026-08-28",
+          "headline": "today announced it has completed its acquisition of Australian Strategic Materials Limited (ASM)",
+          "weight": 9,
+          "confidence": 80
+        },
+        {
+          "type": "positive",
+          "taxonomy": "Capacity expansion announced (new factory, satellite constellation)",
+          "event_date": "2026-07-29",
+          "headline": "construction has begun on an expansion of its White Mesa Mill in Utah (Mill) to enable the large-scale production of heavy rare earth oxides",
+          "weight": 8,
+          "confidence": 95
+        }
+      ],
+      "error": null
+    },
+    {
+      "ticker": "SLB",
+      "role": "override_captain",
+      "why": "OVERRIDE Oil & Gas Equipment & Services",
+      "net_signal": "Strong Bullish",
+      "conviction": 54,
+      "search_backend": "grok_native",
+      "catalyst_stack": "On April 24, 2026, Q1 results flagged Middle East conflict disruptions that cut sequential revenue about $200 million more than forecast, even as revenue rose 3% year on year. On July 24, Q2 adjusted EPS of $0.55 beat the $0.51 consensus as Digital and Production Systems grew, while the July 14 Liberty Energy alliance and August 31 $3.4 billion Kelvion deal pushed SLB further into AI data-center infrastructure. SLB closed the S&P Global geoscience and petroleum-engineering software acquisition on September 1, adding Kingdom, Petra, Harmony Enterprise and an upstream AI alliance. Backlog firmed on September 22\u201324 with OQEP\u2019s Bisat-B facility expansion in Oman and four Aramco well-construction contracts covering more than 450 wells, and UBS raised its price target to $75 on September 14.",
+      "key_assumption": "Kelvion closes in 1H 2027 on stated terms, S&P software/ChampionX synergies are realized, and Middle East NOC activity stabilizes so Aramco/KOC/Oman awards offset residual Iran-war and MEA volume risk.",
+      "n_pos": 7,
+      "n_neg": 2,
+      "top_hits": [
+        {
+          "type": "positive",
+          "taxonomy": "Successful acquisition/synergy realization",
+          "event_date": "2026-09-01",
+          "headline": "S&P Global (NYSE: SPGI) today announced the completion of the divestment of its geoscience and petroleum engineering software portfolio to Schlumberger (SLB)",
+          "weight": 9,
+          "confidence": 95
+        },
+        {
+          "type": "positive",
+          "taxonomy": "Contract win/expansion",
+          "event_date": "2026-09-24",
+          "headline": "SLB has been awarded four integrated well construction contracts by Aramco covering more than 450 oil and gas wells across Saudi Arabia.",
+          "weight": 7,
+          "confidence": 94
+        },
+        {
+          "type": "positive",
+          "taxonomy": "Contract win/expansion",
+          "event_date": "2026-09-29",
+          "headline": "its OneSubsea\u2122 joint venture has been awarded a contract by ExxonMobil Mo\u00e7ambique, Limitada, on behalf of its Area 4 partners",
+          "weight": 7,
+          "confidence": 80
+        },
+        {
+          "type": "negative",
+          "taxonomy": "Geopolitical event that hurts sector",
+          "event_date": "2026-04-24",
+          "headline": "Middle East conflict disruptions that cut sequential revenue about $200 million more than forecast",
+          "weight": 7,
+          "confidence": 95
+        },
+        {
+          "type": "positive",
+          "taxonomy": "Strategic pivot/rebranding to high-growth area",
+          "event_date": "2026-08-31",
+          "headline": "SLB said Monday it will acquire German cooling equipment maker Kelvion",
+          "weight": 6,
+          "confidence": 94
+        },
+        {
+          "type": "positive",
+          "taxonomy": "Strategic partnership/alliance",
+          "event_date": "2026-07-14",
+          "headline": "SLB (Schlumberger) and Liberty Energy Inc. announced a strategic alliance to deliver modular infrastructure and integrated power generation solutions",
+          "weight": 5,
+          "confidence": 90
+        }
+      ],
+      "error": null
+    },
+    {
+      "ticker": "BKR",
+      "role": "override_captain",
+      "why": "OVERRIDE Oil & Gas Equipment & Services",
+      "net_signal": "Bullish",
+      "conviction": 37,
+      "search_backend": "grok_native",
+      "catalyst_stack": "Baker Hughes closed Chart Industries on 2026-07-16, naming Chart a third segment with a $325 million year-three cost-synergy target, then lifted FY2026 revenue guidance to $28.5\u2013$30.3 billion on 2026-09-09. Consecutive beats on 2026-04-23 and 2026-07-26, including Q2 adjusted EPS of $0.64 versus ~$0.51 and revenue of $6.74 billion versus ~$6.54 billion, support the IET-heavy print. Order flow followed: a 2026-07-08 Kodiak gas-turbine framework up to 1.8 GW for U.S. data-center power, plus 2026-08-11 KOC and 2026-09-02 OGDC multi-year production contracts, and LNG/geothermal MOUs with Worley, Mantle Reach, H&P, and DTEK. Offsetting tape includes Lorenzo Simonelli\u2019s 2026-06-22 option exercise and sale of 181,411 shares (~$10.6 million) and late-September PT cuts from TD Cowen, Jefferies, UBS, and Barclays, even as Goldman Sachs reinstated Buy at $71 on 2026-09-29.",
+      "key_assumption": "Chart synergy capture and conversion of IET/data-center awards remain on track, and clustered PT trims reflect multiple compression after the all-cash Chart deal rather than a break in the earnings/backlog thesis.",
+      "n_pos": 8,
+      "n_neg": 6,
+      "top_hits": [
+        {
+          "type": "positive",
+          "taxonomy": "Successful acquisition/synergy realization",
+          "event_date": "2026-07-16",
+          "headline": "today announced the successful completion of its acquisition of Chart Industries, Inc. (NYSE: GTLS)",
+          "weight": 9,
+          "confidence": 96
+        },
+        {
+          "type": "positive",
+          "taxonomy": "Contract win/expansion",
+          "event_date": "2026-07-08",
+          "headline": "framework for deployment of up to 1.8 GW of power generation capacity",
+          "weight": 7,
+          "confidence": 95
+        },
+        {
+          "type": "positive",
+          "taxonomy": "Contract win/expansion",
+          "event_date": "2026-07-29",
+          "headline": "Dynamis Power Solutions has awarded Baker Hughes an order for 76 NovaLT\u212216 industrial gas turbines\u2014totaling approximately 1.3 GW",
+          "weight": 7,
+          "confidence": 80
+        },
+        {
+          "type": "positive",
+          "taxonomy": "Earnings beat (revenue, EBITDA, EPS)",
+          "event_date": "2026-07-26",
+          "headline": "reported $0.64 earnings per share for the quarter, beating the consensus estimate of $0.51 by $0.13",
+          "weight": 6,
+          "confidence": 93
+        },
+        {
+          "type": "positive",
+          "taxonomy": "Earnings guidance raise",
+          "event_date": "2026-09-09",
+          "headline": "now expects FY 2026 revenue of $28.5B-$30.3B, up from",
+          "weight": 6,
+          "confidence": 92
+        },
+        {
+          "type": "negative",
+          "taxonomy": "Insider selling (especially by CEO/CFO, or clustered sales)",
+          "event_date": "2026-06-22",
+          "headline": "sold 181,411 shares at $58.43 (~$10.60M proceeds)",
+          "weight": 6,
+          "confidence": 78
+        }
+      ],
+      "error": null
+    },
+    {
+      "ticker": "KGS",
+      "role": "override_captain",
+      "why": "OVERRIDE Oil & Gas Equipment & Services",
+      "net_signal": "Strong Bullish",
+      "conviction": 100,
+      "search_backend": "grok_native",
+      "catalyst_stack": "On 2026-04-01 Kodiak closed Distributed Power Solutions, adding about 395 MW for $587 million cash plus 2.4 million shares. Q1 (2026-05-11) and Q2 (2026-08-06) printed record adjusted EBITDA of $190.1 million then $216.8 million and lifted 2026 adjusted EBITDA guidance to $830-$860 million, after a 2026-05-14/15 follow-on at $71.00 that raised about $836.1 million net but diluted the share count. On 2026-07-08 Kodiak and Baker Hughes announced a multi-year turbine agreement anchored by ~1 GW of equipment by 2030 (framework up to 1.8 GW), and on 2026-10-01 Kodiak signed a six-year 76 MW baseload supply deal with a West Texas data center. Buy-side coverage stayed crowded, including Wells Fargo\u2019s 2026-05-27 Overweight initiation at $93, while Jefferies cut its target to $69 on 2026-08-10.",
+      "key_assumption": "The power pivot (DPS fleet, Baker Hughes turbine slots, and the 76 MW West Texas data-center contract) converts to fee-based EBITDA without another large equity raise or a drop in ~98% compression utilization.",
+      "n_pos": 11,
+      "n_neg": 3,
+      "top_hits": [
+        {
+          "type": "positive",
+          "taxonomy": "Successful acquisition/synergy realization",
+          "event_date": "2026-04-01",
+          "headline": "Closing consideration consisted of $587 million of cash consideration ... and the issuance of approximately 2.4 million shares",
+          "weight": 9,
+          "confidence": 95
+        },
+        {
+          "type": "positive",
+          "taxonomy": "Earnings guidance raise",
+          "event_date": "2026-08-06",
+          "headline": "raised 2026 adjusted EBITDA guidance to $830\u2013$860 million and discretionary cash flow guidance to $570\u2013$600 million",
+          "weight": 9,
+          "confidence": 95
+        },
+        {
+          "type": "positive",
+          "taxonomy": "Contract win/expansion",
+          "event_date": "2026-10-01",
+          "headline": "Kodiak Gas Services Announces Power Supply Agreement with West Texas Data Center",
+          "weight": 9,
+          "confidence": 75
+        },
+        {
+          "type": "positive",
+          "taxonomy": "Earnings guidance raise",
+          "event_date": "2026-05-11",
+          "headline": "raised full-year 2026 adjusted EBITDA guidance to $820\u2013$860 million.",
+          "weight": 9,
+          "confidence": 80
+        },
+        {
+          "type": "positive",
+          "taxonomy": "Capacity expansion announced",
+          "event_date": "2026-07-08",
+          "headline": "initial ~1 GW equipment award deliverable by 2030, with a framework for up to 1.8 GW of distributed power capacity",
+          "weight": 7,
+          "confidence": 95
+        },
+        {
+          "type": "positive",
+          "taxonomy": "Capacity expansion announced",
+          "event_date": "2026-05-11",
+          "headline": "Procured over 260 megawatts of additional power generation capacity with plans to deliver 61 MW in 2026",
+          "weight": 7,
+          "confidence": 80
+        }
+      ],
+      "error": null
+    }
+  ]
+}

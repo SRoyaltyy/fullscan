@@ -1,0 +1,174 @@
+{
+  "ticker": "UEC",
+  "analysis_date": "2026-10-01",
+  "current_price": "9.45",
+  "net_signal": "Strong Bullish",
+  "conviction": 63,
+  "catalyst_stack": "On 2026-04-08 UEC received TCEQ approval and commenced production at Burke Hollow, the first new U.S. ISR uranium mine in more than a decade. Wyoming on 2026-09-28 issued final approvals for four Christensen Ranch header houses, and FY2026 results reported 2026-09-29 showed 229,294 pounds produced and 400,000 pounds sold at $93.13/lb. UEC closed a US$40 million exclusive URC subscription-receipt placement on 2026-05-01 (potential stake ~18.4%) and disclosed a SaskPower definition-study agreement plus 36,000 meters of Roughrider drilling in that same FY print. Offsetting the ramp, Q3 FY2026 on 2026-06-09 printed $0 revenue and a $52.3 million loss, and the 2026-10-01 Q4 snapshot missed EPS at -$0.12 even as HC Wainwright reiterated Buy / $26.75 on 2026-09-30.",
+  "key_assumption": "Burke Hollow and the newly approved Christensen Ranch header houses convert permits into a rising ISR run-rate at still-elevated realized prices, so lumpy inventory-driven EPS misses do not cap the U.S. hub-and-spoke rerating.",
+  "catalyst_grid": [
+    {
+      "taxonomy": "Product launch/FDA approval/regulatory greenlight",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 9,
+      "adjusted_weight": 10,
+      "event_ids": [
+        1
+      ],
+      "event_date": "2026-04-08",
+      "evidence_excerpt": "received approval from the Texas Commission on Environmental Quality (\"TCEQ\") and commenced production at its Burke Hollow project",
+      "source_urls": [
+        "https://www.prnewswire.com/news-releases/uranium-energy-corp-commences-production-at-burke-hollow-the-worlds-newest-operating-isr-uranium-mine-302736496.html",
+        "https://world-nuclear-news.org/articles/production-begins-at-us-uranium-project"
+      ],
+      "confidence": 95
+    },
+    {
+      "taxonomy": "Successful acquisition/synergy realization",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 7,
+      "adjusted_weight": 9,
+      "event_ids": [
+        2
+      ],
+      "event_date": "2026-05-01",
+      "evidence_excerpt": "closed its previously announced private placement of subscription receipts of the Company (the \"Subscription Receipts\") to Uranium Energy Corp. (\"UEC\") at a price of US$3.64",
+      "source_urls": [
+        "https://www.prnewswire.com/news-releases/uranium-royalty-announces-closing-of-subscription-receipt-private-placement-302760477.html"
+      ],
+      "confidence": 85
+    },
+    {
+      "taxonomy": "Operational milestone",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 7,
+      "event_ids": [
+        1,
+        9,
+        10
+      ],
+      "event_date": "2026-09-29",
+      "evidence_excerpt": "Sold 400,000 pounds from inventory at a weighted average realized price of $93.13 per pound",
+      "source_urls": [
+        "https://www.prnewswire.com/news-releases/uranium-energy-corp-reports-fiscal-2026-results-302892131.html",
+        "https://www.fool.com/earnings/call-transcripts/2026/09/30/uranium-energy-uec-q4-2026-earnings-call-transcript/"
+      ],
+      "confidence": 95
+    },
+    {
+      "taxonomy": "Regulatory approval",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 7,
+      "event_ids": [
+        9
+      ],
+      "event_date": "2026-09-28",
+      "evidence_excerpt": "On September 28, 2026, final regulatory approvals were issued for four of these.",
+      "source_urls": [
+        "https://www.prnewswire.com/news-releases/uranium-energy-corp-reports-fiscal-2026-results-302892131.html",
+        "https://www.fool.com/earnings/call-transcripts/2026/09/30/uranium-energy-uec-q4-2026-earnings-call-transcript/"
+      ],
+      "confidence": 95
+    },
+    {
+      "taxonomy": "Strategic partnership/alliance",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 6,
+      "adjusted_weight": 7,
+      "event_ids": [
+        11
+      ],
+      "event_date": "2026-09-29",
+      "evidence_excerpt": "In August 2026, the Company entered into a Definition Study Agreement with Saskatchewan Power Corporation",
+      "source_urls": [
+        "https://www.prnewswire.com/news-releases/uranium-energy-corp-reports-fiscal-2026-results-302892131.html",
+        "https://www.fool.com/earnings/call-transcripts/2026/09/30/uranium-energy-uec-q4-2026-earnings-call-transcript/"
+      ],
+      "confidence": 88
+    },
+    {
+      "taxonomy": "Analyst upgrade/PT increase",
+      "type": "positive",
+      "category": "external",
+      "status": "MISS",
+      "base_weight": 5,
+      "adjusted_weight": 0,
+      "event_ids": [
+        12,
+        5
+      ],
+      "event_date": "2026-09-30",
+      "evidence_excerpt": "HC Wainwright reiterated a \"buy\" rating and set a $26.75 price objective on shares of Uranium Energy in a research note on Wednesday.",
+      "source_urls": [
+        "https://www.marketbeat.com/instant-alerts/analyst-uranium-energy-nyseamerican-uec-given-buy-rating-at-hc-wainwright-2026-09-30/"
+      ],
+      "confidence": 0
+    },
+    {
+      "taxonomy": "Positive personnel change",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 4,
+      "event_ids": [
+        3
+      ],
+      "event_date": "2026-05-28",
+      "evidence_excerpt": "is pleased to announce the appointment of Bradley Williams as Vice President of Government Affairs.",
+      "source_urls": [
+        "https://www.prnewswire.com/news-releases/uranium-energy-corp-announces-appointment-of-vice-president-government-affairs-302783881.html",
+        "https://www.boardroomalpha.com/sec/uec-8-k-2026-05-28-0001437749-26-018759"
+      ],
+      "confidence": 92
+    },
+    {
+      "taxonomy": "Earnings miss",
+      "type": "negative",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 6,
+      "event_ids": [
+        0,
+        4
+      ],
+      "event_date": "2026-10-01",
+      "evidence_excerpt": "Uranium Energy Corp (UEC) (Q4 2026) Earnings Call Highlights: Record Realized Prices, 157% ...",
+      "source_urls": [
+        "https://finance.yahoo.com/markets/commodities/articles/uranium-energy-corp-uec-q4-030039281.html"
+      ],
+      "confidence": 75
+    },
+    {
+      "taxonomy": "Analyst initiation/Hold rating",
+      "type": "negative",
+      "event_date": "2026-09-03",
+      "evidence_excerpt": "began coverage on shares of Uranium Energy in a research note on Thursday, September 3rd. They set a \"hold\" rating and a $11.50 price objective",
+      "source_urls": [
+        "https://www.marketbeat.com/instant-alerts/analyst-uranium-energy-nyseamerican-uec-given-buy-rating-at-hc-wainwright-2026-09-30/"
+      ],
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 5,
+      "confidence": 80
+    }
+  ],
+  "grok_verdict": "Bearish",
+  "search_backend": "grok_native",
+  "generated_at": "2026-10-01",
+  "cutoff_date": null,
+  "role": "override_captain"
+}

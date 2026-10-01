@@ -1,0 +1,175 @@
+{
+  "ticker": "SLB",
+  "analysis_date": "2026-10-01",
+  "current_price": "48.72",
+  "net_signal": "Strong Bullish",
+  "conviction": 54,
+  "catalyst_stack": "On April 24, 2026, Q1 results flagged Middle East conflict disruptions that cut sequential revenue about $200 million more than forecast, even as revenue rose 3% year on year. On July 24, Q2 adjusted EPS of $0.55 beat the $0.51 consensus as Digital and Production Systems grew, while the July 14 Liberty Energy alliance and August 31 $3.4 billion Kelvion deal pushed SLB further into AI data-center infrastructure. SLB closed the S&P Global geoscience and petroleum-engineering software acquisition on September 1, adding Kingdom, Petra, Harmony Enterprise and an upstream AI alliance. Backlog firmed on September 22\u201324 with OQEP\u2019s Bisat-B facility expansion in Oman and four Aramco well-construction contracts covering more than 450 wells, and UBS raised its price target to $75 on September 14.",
+  "key_assumption": "Kelvion closes in 1H 2027 on stated terms, S&P software/ChampionX synergies are realized, and Middle East NOC activity stabilizes so Aramco/KOC/Oman awards offset residual Iran-war and MEA volume risk.",
+  "catalyst_grid": [
+    {
+      "taxonomy": "Successful acquisition/synergy realization",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 7,
+      "adjusted_weight": 9,
+      "event_ids": [
+        2,
+        5,
+        12
+      ],
+      "event_date": "2026-09-01",
+      "evidence_excerpt": "S&P Global (NYSE: SPGI) today announced the completion of the divestment of its geoscience and petroleum engineering software portfolio to Schlumberger (SLB)",
+      "source_urls": [
+        "https://www.prnewswire.com/news-releases/sp-global-completes-divestiture-of-upstream-energy-software-portfolio-to-slb-302866534.html",
+        "https://www.securities.io/sp-global-hands-geoscience-and-petroleum-software-portfolio-to-slb/"
+      ],
+      "confidence": 95
+    },
+    {
+      "taxonomy": "Contract win/expansion",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 8,
+      "adjusted_weight": 7,
+      "event_ids": [
+        8,
+        14,
+        15
+      ],
+      "event_date": "2026-09-24",
+      "evidence_excerpt": "SLB has been awarded four integrated well construction contracts by Aramco covering more than 450 oil and gas wells across Saudi Arabia.",
+      "source_urls": [
+        "https://www.worldoil.com/news/2026/9/24/slb-to-deliver-more-than-450-wells-for-aramco-under-three-year-contracts/",
+        "https://www.slb.com/newsroom/press-release/2026/pr-2026-0924-slb-aramco"
+      ],
+      "confidence": 94
+    },
+    {
+      "taxonomy": "Geopolitical event that hurts sector",
+      "type": "negative",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 7,
+      "event_ids": [
+        3
+      ],
+      "event_date": "2026-04-24",
+      "evidence_excerpt": "Middle East conflict disruptions that cut sequential revenue about $200 million more than forecast",
+      "source_urls": [
+        "https://www.reuters.com/business/energy/oilfield-services-provider-slb-posts-lower-quarterly-profit-iran-war-hit-2026-04-24/",
+        "https://www.nasdaq.com/press-release/slb-announces-first-quarter-2026-results-2026-04-24"
+      ],
+      "confidence": 95
+    },
+    {
+      "taxonomy": "Strategic pivot/rebranding to high-growth area",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 6,
+      "event_ids": [
+        11
+      ],
+      "event_date": "2026-08-31",
+      "evidence_excerpt": "SLB said Monday it will acquire German cooling equipment maker Kelvion",
+      "source_urls": [
+        "https://www.reuters.com/business/energy/slb-acquire-kelvion-34-billion-2026-08-31/",
+        "https://www.slb.com/newsroom/press-release/2026/pr-2026-0831"
+      ],
+      "confidence": 94
+    },
+    {
+      "taxonomy": "Strategic partnership/alliance",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 6,
+      "adjusted_weight": 5,
+      "event_ids": [
+        1,
+        6,
+        7,
+        9
+      ],
+      "event_date": "2026-07-14",
+      "evidence_excerpt": "SLB (Schlumberger) and Liberty Energy Inc. announced a strategic alliance to deliver modular infrastructure and integrated power generation solutions",
+      "source_urls": [
+        "https://www.slb.com/newsroom/press-release/2026/pr-2026-0714-slb-liberty-energy",
+        "https://www.reuters.com/business/energy/slb-partners-with-liberty-energy-supply-modular-parts-power-data-centers-2026-07-14/"
+      ],
+      "confidence": 90
+    },
+    {
+      "taxonomy": "Earnings beat",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 4,
+      "event_ids": [
+        10
+      ],
+      "event_date": "2026-07-24",
+      "evidence_excerpt": "SLB N.V. SLB reported second-quarter 2026 adjusted earnings per share (EPS) of 55 cents, which beat the Zacks Consensus Estimate of 51 cents",
+      "source_urls": [
+        "https://www.tradingview.com/news/zacks:cd549438c094b:0-slb-q2-earnings-beat-estimates-on-digital-production-systems-growth/",
+        "https://www.reuters.com/business/energy/top-us-oilfield-services-firm-slb-beats-quarterly-profit-estimates-2026-07-24/"
+      ],
+      "confidence": 94
+    },
+    {
+      "taxonomy": "Analyst upgrade/PT increase",
+      "type": "positive",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 4,
+      "event_ids": [
+        13
+      ],
+      "event_date": "2026-09-14",
+      "evidence_excerpt": "UBS analyst Josh Silverstein raised his price target on SLB (Schlumberger) to $75 from $72 on September 14, 2026, while maintaining a Buy rating.",
+      "source_urls": [
+        "https://www.tipranks.com/news/the-fly/slb-price-target-raised-to-75-from-72-at-ubs-thefly-news",
+        "https://www.marketscreener.com/news/ubs-adjusts-price-target-on-slb-to-72-from-66-keeps-buy-rating-ce785bd9de8afe22"
+      ],
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Contract win/expansion",
+      "type": "positive",
+      "event_date": "2026-09-29",
+      "evidence_excerpt": "its OneSubsea\u2122 joint venture has been awarded a contract by ExxonMobil Mo\u00e7ambique, Limitada, on behalf of its Area 4 partners",
+      "source_urls": [
+        "https://www.onesubsea.slb.com/resources/news/2026/slb-onesubsea-awarded-major-subsea-systems-contract-for-rovuma-basin-development"
+      ],
+      "status": "HIT",
+      "base_weight": 8,
+      "adjusted_weight": 7,
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Lawsuits",
+      "type": "negative",
+      "event_date": "2026-04-20",
+      "evidence_excerpt": "Schlumberger Technology Corp. mismanages its 401(k) plan by using forfeited contributions to make its own payments to the plan",
+      "source_urls": [
+        "https://news.bloomberglaw.com/employee-benefits/schlumbergers-handling-of-401k-forfeitures-drives-new-lawsuit"
+      ],
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 5,
+      "confidence": 80
+    }
+  ],
+  "grok_verdict": "Bearish",
+  "search_backend": "grok_native",
+  "generated_at": "2026-10-01",
+  "cutoff_date": null,
+  "role": "override_captain"
+}
