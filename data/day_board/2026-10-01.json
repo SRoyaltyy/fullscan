@@ -1,6 +1,6 @@
 {
   "date": "2026-10-01",
-  "generated_at": "2026-10-01T05:46:26.276421-04:00",
+  "generated_at": "2026-10-01T05:46:30.393521-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -12,8 +12,8 @@
     "MISSING AB checklist enriched `data/ab_checklist/2026-10-01_ab_checklist_enriched.csv` \u2014 missing"
   ],
   "counts": {
-    "ok": 2,
-    "partial": 2,
+    "ok": 3,
+    "partial": 1,
     "fail": 4,
     "n": 8
   },
@@ -626,7 +626,7 @@
       "inputs_ready": false,
       "n_req_ok": 0,
       "n_req": 4,
-      "n_opt_ok": 1,
+      "n_opt_ok": 2,
       "n_opt": 3,
       "files": [
         {
@@ -784,10 +784,10 @@
           "name": "Dashboard HTML",
           "path": "dashboard/index.html",
           "role": "optional",
-          "status": "FAIL",
-          "reason": "session 2026-10-01 not in dashboard dates (last=2026-09-25)",
+          "status": "OK",
+          "reason": "live-book poller + today.json (2026-10-01)",
           "size": 8945021,
-          "said": "session 2026-10-01 not in dashboard dates (last=2026-09-25)",
+          "said": "live-book poller + today.json (2026-10-01)",
           "bullets": []
         }
       ],
@@ -798,9 +798,9 @@
       "key": "publish",
       "name": "Dashboard / .io",
       "yaml": "deploy-dashboard.yml",
-      "status": "PARTIAL",
+      "status": "OK",
       "inputs_ready": false,
-      "n_req_ok": 1,
+      "n_req_ok": 2,
       "n_req": 2,
       "n_opt_ok": 0,
       "n_opt": 1,
@@ -821,10 +821,10 @@
           "name": "Dashboard HTML (repo)",
           "path": "dashboard/index.html",
           "role": "required",
-          "status": "FAIL",
-          "reason": "session 2026-10-01 not in dashboard dates (last=2026-09-25)",
+          "status": "OK",
+          "reason": "live-book poller + today.json (2026-10-01)",
           "size": 8945021,
-          "said": "session 2026-10-01 not in dashboard dates (last=2026-09-25)",
+          "said": "live-book poller + today.json (2026-10-01)",
           "bullets": []
         },
         {
@@ -860,77 +860,13 @@
   "news_mode": "on",
   "news_mode_reason": "",
   "selections": {
-    "buy_1d": [
-      {
-        "ticker": "HITI",
-        "score": 0.511885370211601
-      },
-      {
-        "ticker": "CON",
-        "score": 0.720692354148363
-      },
-      {
-        "ticker": "AMN",
-        "score": 0.7170174197664942
-      },
-      {
-        "ticker": "NTAP",
-        "score": 0.3724340989579077
-      },
-      {
-        "ticker": "MQ",
-        "score": 0.7182163906090637
-      },
-      {
-        "ticker": "TWLO",
-        "score": 0.3191121567070214
-      }
-    ],
-    "sell_1d": [
-      {
-        "ticker": "OKLO",
-        "score": -0.3033173156184255
-      },
-      {
-        "ticker": "NEOV",
-        "score": -0.26036673502258956
-      },
-      {
-        "ticker": "FCEL",
-        "score": -0.31489473489740943
-      },
-      {
-        "ticker": "POWL",
-        "score": -0.13061544376578688
-      },
-      {
-        "ticker": "EOSE",
-        "score": -0.3732501371274795
-      },
-      {
-        "ticker": "NNDM",
-        "score": 0.1797296030331017
-      },
-      {
-        "ticker": "NRGV",
-        "score": -0.3215361248741783
-      },
-      {
-        "ticker": "INDI",
-        "score": -0.16508112959537674
-      }
-    ],
+    "buy_1d": [],
+    "sell_1d": [],
     "flatten": {},
     "general": {},
     "sectors": {},
     "news": {},
-    "weather": {
-      "said": "hostile 9 \u00b7 neutral 2",
-      "bullets": [
-        "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Industrials, Real Estate, Technology, Utilities",
-        "events bull 4 / bear 1"
-      ]
-    }
+    "weather": {}
   },
   "lands": [
     {
@@ -1390,6 +1326,31 @@
         }
       ],
       "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-10-01\n_Generated 2026-10-01T05:40:10.416811-04:00 \u00b7 export=data/exports/finviz_2026-10-01.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_"
+    },
+    {
+      "key": "map_heat",
+      "title": "Map heat tables",
+      "date": "2026-10-01",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-01T05:46:30.218814-04:00",
+      "files": [
+        {
+          "path": "01_daily/map_heat/2026-10-01_map_heat.json",
+          "ok": true,
+          "reason": "",
+          "size": 274970,
+          "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape"
+        },
+        {
+          "path": "01_daily/map_heat/2026-10-01_map_heat.md",
+          "ok": true,
+          "reason": "",
+          "size": 18280,
+          "preview": "# MAP HEAT \u2014 2026-10-01\nExport `finviz_2026-10-01.csv` \u00b7 11616 names \u00b7 generated 2026-10-01T05:41:52.261525-04:00"
+        }
+      ],
+      "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-10-01\nExport `finviz_2026-10-01.csv` \u00b7 11616 names \u00b7 generated 2026-10-01T05:41:52.261525-04:00"
     }
   ],
   "href": {

@@ -1,103 +1,20 @@
 {
   "date": "2026-10-01",
-  "generated_at": "2026-10-01T05:46:26.276421-04:00",
+  "generated_at": "2026-10-01T05:46:30.393521-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
-    "ok": 2,
-    "partial": 2,
+    "ok": 3,
+    "partial": 1,
     "fail": 4,
     "n": 8
   },
-  "buy_1d": [
-    {
-      "ticker": "HITI",
-      "score": 0.511885370211601
-    },
-    {
-      "ticker": "CON",
-      "score": 0.720692354148363
-    },
-    {
-      "ticker": "AMN",
-      "score": 0.7170174197664942
-    },
-    {
-      "ticker": "NTAP",
-      "score": 0.3724340989579077
-    },
-    {
-      "ticker": "MQ",
-      "score": 0.7182163906090637
-    },
-    {
-      "ticker": "TWLO",
-      "score": 0.3191121567070214
-    }
-  ],
-  "sell_1d": [
-    {
-      "ticker": "OKLO",
-      "score": -0.3033173156184255
-    },
-    {
-      "ticker": "NEOV",
-      "score": -0.26036673502258956
-    },
-    {
-      "ticker": "FCEL",
-      "score": -0.31489473489740943
-    },
-    {
-      "ticker": "POWL",
-      "score": -0.13061544376578688
-    },
-    {
-      "ticker": "EOSE",
-      "score": -0.3732501371274795
-    },
-    {
-      "ticker": "NNDM",
-      "score": 0.1797296030331017
-    },
-    {
-      "ticker": "NRGV",
-      "score": -0.3215361248741783
-    },
-    {
-      "ticker": "INDI",
-      "score": -0.16508112959537674
-    }
-  ],
+  "buy_1d": [],
+  "sell_1d": [],
   "flatten": {},
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "map_heat",
-      "title": "Map heat morning overlay",
-      "date": "2026-10-01",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-01T05:41:52.310886-04:00",
-      "files": [
-        {
-          "path": "01_daily/map_heat/2026-10-01_map_heat.json",
-          "ok": true,
-          "reason": "",
-          "size": 274970,
-          "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape"
-        },
-        {
-          "path": "01_daily/map_heat/2026-10-01_map_heat.md",
-          "ok": true,
-          "reason": "",
-          "size": 18280,
-          "preview": "# MAP HEAT \u2014 2026-10-01\nExport `finviz_2026-10-01.csv` \u00b7 11616 names \u00b7 generated 2026-10-01T05:41:52.261525-04:00"
-        }
-      ],
-      "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-10-01\nExport `finviz_2026-10-01.csv` \u00b7 11616 names \u00b7 generated 2026-10-01T05:41:52.261525-04:00"
-    },
     {
       "key": "weather",
       "title": "Weather / regime",
@@ -370,6 +287,31 @@
         }
       ],
       "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-10-01\n_Generated 2026-10-01T05:40:10.416811-04:00 \u00b7 export=data/exports/finviz_2026-10-01.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_"
+    },
+    {
+      "key": "map_heat",
+      "title": "Map heat tables",
+      "date": "2026-10-01",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-01T05:46:30.218814-04:00",
+      "files": [
+        {
+          "path": "01_daily/map_heat/2026-10-01_map_heat.json",
+          "ok": true,
+          "reason": "",
+          "size": 274970,
+          "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape"
+        },
+        {
+          "path": "01_daily/map_heat/2026-10-01_map_heat.md",
+          "ok": true,
+          "reason": "",
+          "size": 18280,
+          "preview": "# MAP HEAT \u2014 2026-10-01\nExport `finviz_2026-10-01.csv` \u00b7 11616 names \u00b7 generated 2026-10-01T05:41:52.261525-04:00"
+        }
+      ],
+      "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-10-01\nExport `finviz_2026-10-01.csv` \u00b7 11616 names \u00b7 generated 2026-10-01T05:41:52.261525-04:00"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
