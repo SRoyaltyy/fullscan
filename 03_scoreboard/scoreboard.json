@@ -15293,6 +15293,18 @@
           "predicted_direction": "down",
           "predicted_magnitude_band": "mild",
           "confidence": 0.5
+        },
+        "HORIZON_1M": {
+          "label": "1m",
+          "target_date": "2026-10-01",
+          "actual_pct": 0.46,
+          "actual_direction": "up",
+          "actual_magnitude_band": "flat",
+          "direction_hit": false,
+          "magnitude_hit": false,
+          "predicted_direction": "flat",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.4
         }
       },
       "lesson_schema_ok": true
@@ -24635,6 +24647,18 @@
           "predicted_direction": "down",
           "predicted_magnitude_band": "mild",
           "confidence": 0.52
+        },
+        "HORIZON_2W": {
+          "label": "2w",
+          "target_date": "2026-10-01",
+          "actual_pct": 0.38,
+          "actual_direction": "up",
+          "actual_magnitude_band": "flat",
+          "direction_hit": false,
+          "magnitude_hit": false,
+          "predicted_direction": "down",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.5
         }
       },
       "lesson_schema_ok": true
@@ -27814,6 +27838,18 @@
           "predicted_direction": "down",
           "predicted_magnitude_band": "mild",
           "confidence": 0.5
+        },
+        "HORIZON_1W": {
+          "label": "1w",
+          "target_date": "2026-10-01",
+          "actual_pct": -0.49,
+          "actual_direction": "down",
+          "actual_magnitude_band": "flat",
+          "direction_hit": false,
+          "magnitude_hit": false,
+          "predicted_direction": "flat",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.45
         }
       },
       "lesson_schema_ok": true
@@ -28987,7 +29023,20 @@
       "knowable_at_9am": "yes",
       "attribution_contested": "yes",
       "outlier_watch": "NVDA +1.7% on a $150bn buyback while other chips dumped; gold -3.6% on a geo day; Europe flat; energy only modest as oil faded",
-      "horizon_grades": {},
+      "horizon_grades": {
+        "HORIZON_3D": {
+          "label": "3d",
+          "target_date": "2026-10-01",
+          "actual_pct": -0.22,
+          "actual_direction": "flat",
+          "actual_magnitude_band": "flat",
+          "direction_hit": false,
+          "magnitude_hit": false,
+          "predicted_direction": "down",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.55
+        }
+      },
       "lesson_schema_ok": true
     },
     {
@@ -29553,7 +29602,7 @@
           "status": "miss"
         }
       ],
-      "reflection_lesson_ref": null,
+      "reflection_lesson_ref": "02_lessons/candidate/2026-10-01_lesson.md",
       "sources_used": [
         {
           "url": "https://www.fool.com/coverage/stock-market-today/2026/10/01/stock-market-midday-oct-1-stocks-edge-lower-as-treasury-yields-surge-to-24-year-high/",
@@ -29634,7 +29683,9 @@
       "key_interaction": "Yield-spike stack (ISM prices+claims+oil+fiscal) offset by Accenture/AI, then the yield fade flipped a midday down day into a V-close",
       "knowable_at_9am": "partially",
       "attribution_contested": "yes",
-      "outlier_watch": "Micron beat but stock sank; NDX only +0.04% despite AI headlines; Europe stayed red while US recovered"
+      "outlier_watch": "Micron beat but stock sank; NDX only +0.04% despite AI headlines; Europe stayed red while US recovered",
+      "horizon_grades": {},
+      "lesson_schema_ok": true
     },
     {
       "date": "2026-10-01",
