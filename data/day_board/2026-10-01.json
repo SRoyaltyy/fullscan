@@ -1,17 +1,18 @@
 {
   "date": "2026-10-01",
-  "generated_at": "2026-10-01T05:47:24.079244-04:00",
+  "generated_at": "2026-10-01T05:47:37.694353-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
     "MISSING General predict MD `01_daily/general/2026-10-01_predict.md` \u2014 missing",
     "MISSING Sector board JSON `01_daily/sectors/2026-10-01/_board.json` \u2014 missing",
     "MISSING News actions JSON `01_daily/news/2026-10-01_actions.json` \u2014 missing",
-    "MISSING News judge MD `01_daily/news/2026-10-01_judge.md` \u2014 missing"
+    "MISSING News judge MD `01_daily/news/2026-10-01_judge.md` \u2014 missing",
+    "MISSING AB checklist enriched `data/ab_checklist/2026-10-01_ab_checklist_enriched.csv` \u2014 missing"
   ],
   "counts": {
-    "ok": 6,
-    "partial": 0,
+    "ok": 3,
+    "partial": 3,
     "fail": 2,
     "n": 8
   },
@@ -180,9 +181,9 @@
       "key": "preopen",
       "name": "Pre-Open ALL",
       "yaml": "preopen_all.yml",
-      "status": "FAIL",
+      "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 0,
+      "n_req_ok": 2,
       "n_req": 20,
       "n_opt_ok": 1,
       "n_opt": 3,
@@ -240,11 +241,16 @@
           "name": "News parse JSON",
           "path": "01_daily/news/2026-10-01_parsed.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 397678,
+          "said": "news_mode: on \u00b7 400 raw / 95 usable \u00b7 Why are US treasury yields falling today? Federal Reserve interest rate hike in",
+          "bullets": [
+            "Why are US treasury yields falling today? Federal Reserve interest rate hike in October expectations drop - economictimes.com",
+            "Gold steadies as cooler US inflation data counters higher Treasury yields - Reuters",
+            "US 10-Year Treasury Yield Soars To 24-Year High: Will The Selloff Continue? - TradingView",
+            "Elizabeth Warren Blames Trump's 'Failed' Policies for Fed Rate Hike - Benzinga"
+          ]
         },
         {
           "key": "events",
@@ -328,11 +334,16 @@
           "name": "Pre-open QC JSON",
           "path": "01_daily/2026-10-01_preopen_qc.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "all_ok=False",
+          "size": 7544,
+          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 17 fail",
+          "bullets": [
+            "general_predict:missing",
+            "events:missing",
+            "news_judge:missing",
+            "news_actions:missing"
+          ]
         },
         {
           "key": "status",
@@ -478,8 +489,13 @@
           "bullets": []
         }
       ],
-      "said": "",
-      "bullets": []
+      "said": "news news_mode: on \u00b7 400 raw / 95 usable \u00b7 Why are US treasury yields falling today? Federal Reserve interest rate hike in ",
+      "bullets": [
+        "Why are US treasury yields falling today? Federal Reserve interest rate hike in October expectations drop - economictimes.com",
+        "Gold steadies as cooler US inflation data counters higher Treasury yields - Reuters",
+        "US 10-Year Treasury Yield Soars To 24-Year High: Will The Selloff Continue? - TradingView",
+        "Elizabeth Warren Blames Trump's 'Failed' Policies for Fed Rate Hike - Benzinga"
+      ]
     },
     {
       "key": "weather",
@@ -513,18 +529,18 @@
           "path": "01_daily/weather/2026-10-01_weather.json",
           "role": "required",
           "status": "OK",
-          "reason": "sectors=11 bytes=9291 vix=calm yields=flat",
-          "size": 9291,
+          "reason": "sectors=11 bytes=9299 vix=falling yields=flat",
+          "size": 9299,
           "said": "hostile 9 \u00b7 neutral 2",
           "bullets": [
-            "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Industrials, Real Estate, Technology, Utilities",
+            "hostile: Basic Materials, Communication Services, Consumer Cyclical, Consumer Defensive, Energy, Healthcare, Industrials, Real Estate, Technology",
             "events bull 4 / bear 1"
           ]
         }
       ],
       "said": "hostile 9 \u00b7 neutral 2",
       "bullets": [
-        "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Industrials, Real Estate, Technology, Utilities",
+        "hostile: Basic Materials, Communication Services, Consumer Cyclical, Consumer Defensive, Energy, Healthcare, Industrials, Real Estate, Technology",
         "events bull 4 / bear 1"
       ]
     },
@@ -532,11 +548,11 @@
       "key": "ab",
       "name": "AB checklist",
       "yaml": "ab_checklist.yml",
-      "status": "OK",
+      "status": "FAIL",
       "inputs_ready": true,
-      "n_req_ok": 1,
+      "n_req_ok": 0,
       "n_req": 1,
-      "n_opt_ok": 1,
+      "n_opt_ok": 0,
       "n_opt": 1,
       "files": [
         {
@@ -544,32 +560,26 @@
           "name": "AB checklist raw",
           "path": "data/ab_checklist/2026-10-01_ab_checklist.csv",
           "role": "optional",
-          "status": "OK",
-          "reason": "rows=2629",
-          "size": 7547302,
-          "said": "27 rows",
-          "bullets": [
-            "GMAB, FPI, AVPT, ATRC, SFL, PBR-A, KBR, CRMD"
-          ]
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "ab_enriched",
           "name": "AB checklist enriched",
           "path": "data/ab_checklist/2026-10-01_ab_checklist_enriched.csv",
           "role": "required",
-          "status": "OK",
-          "reason": "rows=2629",
-          "size": 8338035,
-          "said": "25 rows",
-          "bullets": [
-            "FIGS, ATRC, LLY, WST, GMAB, FPI, BJ, PANW"
-          ]
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         }
       ],
-      "said": "25 rows",
-      "bullets": [
-        "FIGS, ATRC, LLY, WST, GMAB"
-      ]
+      "said": "",
+      "bullets": []
     },
     {
       "key": "catalyst",
@@ -627,11 +637,11 @@
       "key": "stock_book",
       "name": "Stock Book ALL",
       "yaml": "stock_book_all.yml",
-      "status": "OK",
+      "status": "PARTIAL",
       "inputs_ready": false,
-      "n_req_ok": 4,
+      "n_req_ok": 1,
       "n_req": 4,
-      "n_opt_ok": 3,
+      "n_opt_ok": 1,
       "n_opt": 3,
       "files": [
         {
@@ -699,11 +709,11 @@
           "path": "01_daily/weather/2026-10-01_weather.json",
           "role": "input",
           "status": "OK",
-          "reason": "sectors=11 bytes=9291 vix=calm yields=flat",
-          "size": 9291,
+          "reason": "sectors=11 bytes=9299 vix=falling yields=flat",
+          "size": 9299,
           "said": "hostile 9 \u00b7 neutral 2",
           "bullets": [
-            "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Industrials, Real Estate, Technology, Utilities",
+            "hostile: Basic Materials, Communication Services, Consumer Cyclical, Consumer Defensive, Energy, Healthcare, Industrials, Real Estate, Technology",
             "events bull 4 / bear 1"
           ]
         },
@@ -712,13 +722,11 @@
           "name": "AB checklist enriched",
           "path": "data/ab_checklist/2026-10-01_ab_checklist_enriched.csv",
           "role": "input",
-          "status": "OK",
-          "reason": "rows=2629",
-          "size": 8338035,
-          "said": "25 rows",
-          "bullets": [
-            "FIGS, ATRC, LLY, WST, GMAB, FPI, BJ, PANW"
-          ]
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "join",
@@ -726,11 +734,11 @@
           "path": "data/join/2026-10-01_ranked.csv",
           "role": "required",
           "status": "OK",
-          "reason": "rows=5901",
-          "size": 2222202,
-          "said": "220 rows",
+          "reason": "rows=5904",
+          "size": 2245048,
+          "said": "216 rows",
           "bullets": [
-            "GLBE, SHOO, HLNE, VCTR, WT, HOOD, RGA, ANF"
+            "VCTR, WT, AAMI, AGM, UMBF, HOOD, BNY, RGA"
           ]
         },
         {
@@ -738,23 +746,21 @@
           "name": "Peer RS CSV",
           "path": "data/peers/2026-10-01_peer_rs.csv",
           "role": "required",
-          "status": "OK",
-          "reason": "rows=5096",
-          "size": 821534,
-          "said": "489 rows",
-          "bullets": [
-            "A, AA, AACG, AAL, AAME, AAMI, AAOI, AAON"
-          ]
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "book_json",
           "name": "Stock book JSON",
           "path": "data/stock_book/2026-10-01_stock_book.json",
           "role": "required",
-          "status": "OK",
-          "reason": "horizons=5 names=214",
-          "size": 1451287,
-          "said": "1d BUY HITI, CON, AMN, NTAP, MQ, TWLO \u00b7 SELL OKLO, NEOV, FCEL, POWL, EOSE, NNDM",
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
           "bullets": []
         },
         {
@@ -762,24 +768,21 @@
           "name": "Stock book MD",
           "path": "01_daily/2026-10-01_stock_book.md",
           "role": "required",
-          "status": "OK",
-          "reason": "",
-          "size": 81564,
-          "said": "Stock book \u2014 2026-10-01",
-          "bullets": [
-            "_Generated 2026-10-01T05:44:39.805583-04:00_",
-            "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
-          ]
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "green",
           "name": "Green-pile JSON",
           "path": "data/stock_book/2026-10-01_green.json",
           "role": "optional",
-          "status": "OK",
-          "reason": "",
-          "size": 585,
-          "said": "0 green \u00b7",
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
           "bullets": []
         },
         {
@@ -801,25 +804,25 @@
           "name": "Dashboard HTML",
           "path": "dashboard/index.html",
           "role": "optional",
-          "status": "OK",
-          "reason": "live-book poller + today.json (2026-10-01)",
+          "status": "FAIL",
+          "reason": "session 2026-10-01 not in dashboard dates (last=2026-09-25)",
           "size": 8945021,
-          "said": "live-book poller + today.json (2026-10-01)",
+          "said": "session 2026-10-01 not in dashboard dates (last=2026-09-25)",
           "bullets": []
         }
       ],
-      "said": "220 rows",
+      "said": "216 rows",
       "bullets": [
-        "GLBE, SHOO, HLNE, VCTR, WT"
+        "VCTR, WT, AAMI, AGM, UMBF"
       ]
     },
     {
       "key": "publish",
       "name": "Dashboard / .io",
       "yaml": "deploy-dashboard.yml",
-      "status": "OK",
-      "inputs_ready": true,
-      "n_req_ok": 2,
+      "status": "PARTIAL",
+      "inputs_ready": false,
+      "n_req_ok": 1,
       "n_req": 2,
       "n_opt_ok": 0,
       "n_opt": 1,
@@ -829,10 +832,10 @@
           "name": "Stock book JSON",
           "path": "data/stock_book/2026-10-01_stock_book.json",
           "role": "input",
-          "status": "OK",
-          "reason": "horizons=5 names=214",
-          "size": 1451287,
-          "said": "1d BUY HITI, CON, AMN, NTAP, MQ, TWLO \u00b7 SELL OKLO, NEOV, FCEL, POWL, EOSE, NNDM",
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
           "bullets": []
         },
         {
@@ -840,10 +843,10 @@
           "name": "Dashboard HTML (repo)",
           "path": "dashboard/index.html",
           "role": "required",
-          "status": "OK",
-          "reason": "live-book poller + today.json (2026-10-01)",
+          "status": "FAIL",
+          "reason": "session 2026-10-01 not in dashboard dates (last=2026-09-25)",
           "size": 8945021,
-          "said": "live-book poller + today.json (2026-10-01)",
+          "said": "session 2026-10-01 not in dashboard dates (last=2026-09-25)",
           "bullets": []
         },
         {
@@ -1573,6 +1576,41 @@
         }
       ],
       "preview": "# flatten_robust card \u2014 2026-10-01\n_Generated 2026-10-01T09:47:22 \u2014 live `flatten_robust`._\n**morning S missing; no flatten (0 priced BUYs, prior book=yes); 16:00 refill robust:3d_size from leftover cash; skip names already held**\n- Score **\u2014** (\u2014) \u00b7 route **io**\n- Cash leftover **$81,251.01** (after 09:30 $81,251.01 \u00b7 after 16:00 $101,466.38)\n- Prior close **$101,635.61** \u00b7 09:30 **$101,635.61** \u00b7 overnight **$+0.00** \u00b7 session **$-169.24** \u00b7 16:00 **$101,466.38**\n- Overnight lots **2** \u00b7 priced mover BUYs **0** \u00b7 prior book yes\n- Planned buy cost **$0.00** \u2264 leftover after sells **$101,466.37** \u00b7 2026-10-01 BUY \u2014 \u00b7 SELL \u2014 \u00b7 [{\"date\": \"2026-08-13\", \"route\": \"io\", \"score\": 8.525, \"predict\": \"UP\", \"yday_equity\": 100000.0, \"open_cash\": 100000.0, \"open_held\": 0, \"open_equity\": 100000.0, \"overnight_delta\": 0.0, \"session_delta\": -169.94, \"equity\": 99830.06, \"cash\": 9917.52, \"overnight_names\": \"\", \"overnight\": [], \"marks\": [{\"ticker\": \"BTSG\", \"sleeve\": \"io_core\", \"shares_open\": 0, \"shares_close\": 166, \"shares\": 166, \"side\": \"BUY\", \"yday_px\": null, \"open_px\": 59.8, \"close_px\": 60.23, \"entry_px\": 60.23, \"entry_date\": \"2026-08-13\", \"overnight\": 0.0, \"session\": 71.38, \"day\": 71.38, \"pct_over"
+    },
+    {
+      "key": "ab",
+      "title": "AB checklist",
+      "date": "2026-10-01",
+      "ok": false,
+      "pushed": false,
+      "at": "2026-10-01T05:47:24.148928-04:00",
+      "files": [],
+      "preview": "no files"
+    },
+    {
+      "key": "news_parse",
+      "title": "News parse",
+      "date": "2026-10-01",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-01T05:47:37.470346-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-10-01_parsed.json",
+          "ok": true,
+          "reason": "",
+          "size": 397678,
+          "preview": "raw=400 usable=95 single=14 \u00b7 Why are US treasury yields falling today? Federal Reserve interest rate hike in  | Gold steadies as cooler US inflation data counters higher Treasury yields - Reut | US 10-Year Treasury Yield Soars To 24-Year High: Will The Selloff Continue? - Tr | Elizabeth Warren Blames Trump's 'Failed' Policies for Fed Rate Hike - Benzinga | Goldman Sachs pushes Fed rate hike forecast to December - Reuters"
+        },
+        {
+          "path": "01_daily/news/2026-10-01_parsed.md",
+          "ok": true,
+          "reason": "",
+          "size": 8040,
+          "preview": "# News Parse v2 \u2014 2026-10-01T05:47:37.425711-04:00\nWindow\u224848h | news_mode=on | raw=400 | usable=95 | single_name=14 | noise_dropped=291\nusable polarity={'+': 6, '-': 16, 'mixed': 1, 'neutral': 72}"
+        }
+      ],
+      "preview": "raw=400 usable=95 single=14 \u00b7 Why are US treasury yields falling today? Federal Reserve interest rate hike in  | Gold steadies as cooler US inflation data counters higher Treasury yields - Reut | US 10-Year Treasury Yield Soars To 24-Year High: Will The Selloff Continue? - Tr | Elizabeth Warren Blames Trump's 'Failed' Policies for Fed Rate Hike - Benzinga | Goldman Sachs pushes Fed rate hike forecast to December - Reuters \u00b7 # News Parse v2 \u2014 2026-10-01T05:47:37.425711-04:00\nWindow\u224848h | news_mode=on | raw=400 | usable=95 | single_name=14 | noise_dropped=291\nusable polarity={'+': 6, '-': 16, 'mixed': 1, 'neutral': 72}"
     }
   ],
   "href": {
