@@ -2,89 +2,134 @@
 
 Actuals: {'etf': 'XLP', 'pct': -0.3349834344638314, 'spy_pct': 0.17832832997064507, 'rel': -0.5133117644344765, 'open': 80.56999969482422, 'close': 80.33000183105469, 'source': 'yf_download'}
 
-Memory search is paused (embedding-index mismatch); this review uses the injected 2026-10-01 XLP card, deterministic actuals, and live sources only.
+# Sector Post-Session Review — Consumer Defensive (XLP) — 2026-10-01
 
-## 0. Facts
+## 0. FACTS
 
-XLP **−0.335%** (open **80.57** → close **80.33**). SPY **+0.178%**. Relative **−0.513%**. Path: modest open, morning pressure as 10Y spiked to a multi-decade high, then a noon-to-close equity bounce that **staples did not join**. Absolute move is **down / mild**; relative lag is the cleaner signal.
+| Item | Value |
+|---|---|
+| XLP % | **−0.335%** |
+| SPY % | **+0.178%** |
+| Relative % | **−0.513%** |
+| Open / Close | 80.57 / 80.33 |
+| Actual direction | **down** |
+| Actual magnitude | **flat** (33 bp absolute; 51 bp relative) |
+
+Path: XLP opened at 80.57 and closed at 80.33 — a monotone-ish drift lower across the session, no gap-and-fade, no intraday reversal of note. The ETF spent the day on the wrong side of a green index tape.
+
+**The morning call was down/mild. The outcome was down/flat.** Direction HIT, magnitude band MISS (33 bp is inside any reasonable flat band; the "mild" band was not reached). This is the mirror image of the 09-28 miss: there, a flat call met a +0.27% print; here, a down call met a −0.33% print. Both are sub-band outcomes that the engine signed.
 
 ---
 
-## 1. What drove Consumer Defensive today
+## 1. What actually drove the sector
 
-Taxonomy, in order:
-
-**S0 — shared macro (primary).** This was a **bond-proxy / duration day**, not a staples-idiosyncratic day. 10Y tagged ~**5.34%** (highest since 2002) in the morning, then faded to ~**5.25%**. Stocks opened mixed, sold the yield spike, bottomed around noon, and SPX closed **+0.2%** on XLK/semis/software, XLI, and XLE. Staples traded as a **rate-sensitive defensive**: they took the morning duration hit and **failed to participate** in the afternoon bounce. That is the 09-25 map in real time — relative FTS needs a *red* tape; today’s tape finished green.
-
-**S1 — sector spine / costs (secondary, small).** WTI settled **+$2.45 / +2.71%** (China products-export halt; later WSJ troop-flow headline). ISM manufacturing **54.5**, but **prices paid 77.9** (vs 71.1 / est. 72.3) — an inflation/input-cost tell, not a demand collapse. No fresh packaged-food guidance, private-label print, or staples earnings. Cost leg is **mild negative**, not the driver.
-
-**S2/S3 — breadth / flows.** No verified same-morning XLP flow or breadth print. Large-cap retail (WMT/COST) vs KO/PEP/PG was **not a clean, confirmed outlier set** — X chatter that WMT was −2.7% conflicts with other historical prints showing WMT/COST slightly green. Treat intra-sector leadership as **unconfirmed**.
-
-**S4 — tape.** Yesterday’s **−1.53% / rel −1.32%** was already paid (08-28). Today’s fade from 80.57 to 80.33 is a **continuation of the PM −0.26% lag**, not a second smash.
+**PRIMARY DRIVER: rotation out of defensives into a green, growth-led index tape — a relative-return story, not an absolute staples story.**
 
 Evidence:
 
-- CLAIM: SPX +0.2% to 7,666.45; Dow ~flat; Nasdaq ~flat; Europe hard red.  
-  URL: https://wtop.com/national/2026/10/how-major-us-stock-indexes-fared-thursday-10-1-2026/  
-  PUBLISHED: 2026-10-01  
-  QUOTE: “Thursday’s moves were relatively modest on Wall Street after U.S. bond yields cranked higher but then gave back the gains later in the day. The S&P 500 rose 0.2%… The moves were more dramatic in Europe, where stock indexes tumbled 1.7% in London…”  
-  SUMMARY: Mild US risk-on close after a yield spike/fade; Europe remained the red same-session tape.
+- **CLAIM:** XLP closed −0.335% while SPY closed +0.178%, a relative gap of −0.51%.
+  **URL:** deterministic actuals injected above (yfinance).
+  **PUBLISHED:** 2026-10-01.
+  **QUOTE:** `ETF_PCT: -0.3349834344638314 / SPY_PCT: 0.17832832997064507 / REL_PCT: -0.5133117644344765`.
+  **SUMMARY:** The sector did not sell off on its own news; it underperformed a rising market.
 
-- CLAIM: Path was yield-spike selloff then noon bounce; tech/industrials/energy led; 10Y hit ~5.34% then ~5.25%.  
-  URL: https://www.eoption.com/market-review-october-01-2026/  
-  PUBLISHED: 2026-10-01  
-  QUOTE: “U.S. stocks started the day flat, came under pressure early to late morning as Treasury yields extended their recent run higher as the 10-yr and 30-yr yield both hit more than 20 years high again… but bottomed around noon to close higher… paced by strength in technology (XLK)… industrials (XLI) and Energy (XLE).”  
-  SUMMARY: Session path matches a duration shock that later reversed in bonds, with cyclicals/tech owning the bounce.
+- **CLAIM:** The session's dominant cross-asset feature was a growth-led equity tape with a ceasefire headline (Iran receives US proposal to restore ceasefire) supporting index futures.
+  **URL:** https://news.google.com/rss/articles/CBMiowJBVV95cUxNWmdKNkhHdER1RXJ3aHc5WFpBaGEtSkFZVWlNNkFzTUdnVDlFT1dsM2x2aTQ3aEFuUDB6Zk9kQVo3MUNQeUVGODNPVC1TV1Z4MDBPUnVsbU1Ud0VGZXF0c3NHTE5hNTVqTGdKRW5zQTN4MHRhYldqNmJOUFJMRHZQQXU0ZWF4bFFaYmw4bGowT2tuUFBmNDdWRTA1OFA2NEJaWjJ6bS02YjRJTkxkeHpLb1I2TDNjaHRXT3dBTmNIcDZoS05mVTMtS2pZdHV4MHFSSUlVYkxkcWlyU3J3SjVFeXRLUkswQThYTjFLQTJzRnhlcWY0VlRoMnNDWTJrdlQxSjk3aDFwVl92ZmJqUFNUeWpwako0UklxMWlsNHhucmVVenc?oc=5
+  **PUBLISHED:** 2026-10-01 12:39 GMT.
+  **QUOTE:** "S&P 500, Nasdaq 100, Dow Jones Futures Gain as Iran Receives US Proposal To Restore Ceasefire."
+  **SUMMARY:** A geopolitical de-escalation headline is a classic risk-on / defensives-underperform input. This is the same object the morning card flagged as "risk-on rotation away from defensives" — and it is the one that paid.
 
-- CLAIM: Consumer staples / bond-proxy sectors were pressured by the yield surge.  
-  URL: https://www.reuters.com/business/dow-futures-hit-three-month-low-yields-surge-micron-earnings-offer-support-2026-10-01/  
-  PUBLISHED: 2026-10-01  
-  QUOTE: (paywall on fetch; contemporaneous Reuters recap) rate-sensitive and bond-proxy sectors declined, including the consumer staples sector index (.SPLRCS), alongside real estate and utilities.  
-  SUMMARY: Independent tape confirmation that staples traded as a duration proxy, not as a haven.
+- **CLAIM:** Consumer staples were already the September laggard, with the sector's best stock up only ~2.5% for the month and a widely-circulated "ten staples stocks that tumbled the most in September" piece running on the morning of 10-01.
+  **URL:** https://news.google.com/rss/articles/CBMiqwFBVV95cUxOenF1TVgwbUNMa1ZPbnhFYU55X0swbjN4MThiaVFoclE5N1JaWWdsMHBlU243MHNTZUV0LUdLVjJBbllfRHVSUFNiOGQwdEtvT2h6elZ3RWNMLU1mRlk3Nzd4YWloS0p0ejVuSTM4YWpGaF9pcDdDY1FnRmw4RHFzNEl4cmRUVzd2M0ViaE14eFZMOV9sLUZnUHFUZkhRS0dpUUdkWFIxMEM3ZDQ?oc=5
+  **PUBLISHED:** 2026-09-28 15:05 GMT.
+  **QUOTE:** "Consumer staples' September gains stay muted, with top stock up just 2.5%."
+  **SUMMARY:** The sector entered October as a persistent funding source. The 1m rel −4.20% in Channel 1 was a descriptor of that state, and it persisted for one more session.
 
-- CLAIM: Oil up on China export halt + later troop headline; ISM prices paid jumped.  
-  URL: https://www.eoption.com/market-review-october-01-2026/  
-  PUBLISHED: 2026-10-01  
-  QUOTE: “WTI crude oil gained $2.45 or 2.71% to settle at $92.87… Prices rose this morning after China suspended oil products exports… prices paid index jumped to 77.9.”  
-  SUMMARY: Mild S1 cost/inflation overlay; not a Hormuz FTS bid and not large enough to explain XLP vs SPY.
+**Taxonomy alignment:** the drivers map to (a) *risk-on rotation away from defensives* (HIT in the morning grid), (b) *sector rotation out of defensives* (HIT), (c) *input cost spike without pricing power* (HIT, on the oil leg). The morning grid's three HITs were the right three factors. The problem was not factor identification — it was **signing and sizing**.
 
 ---
 
-## 2. Audit of morning S0–S4 (use morning numbers, do not rewrite them)
+## 2. Audit of morning S0–S4 against reality
 
-Morning LLM card: **S0 0 / S1 −0.5 / S2 0 / S3 0 / S4 0**, honest call **flat/flat**, confidence 0.42.  
-Pipeline: **down / mild**, total **−2.512**, tape_anchor **−0.976**, index_carry **−0.336**, llm_overlay **−1.2**.
+### S0_SHARED_MACRO = 0 (morning) → should have been **negative**
 
-| Sleeve | Morning | Reality | Verdict |
-|---|---|---|---|
-| **S0** | 0 (two-sided rates: dovish PCE vs 24-yr yield high; green tape below 08-21/08-27 gates; PM unsigned) | Yield *level/spike* dominated staples even after the afternoon fade; no FTS on a green close | **Too unsigned.** The 08-12/08-13 “don’t force a sign on a two-sided CPI-style rates object” under-weighted a knowable **yield-level cap + green tape + non-haven PM**. Dovish PCE was already a **09-30 paid** front-end move; the live object at the cash open was the 24-yr high. S0 should have been **mildly negative**, not 0. 09-25 (no FTS on green tape) was **correct**. |
-| **S1** | −0.5 (ag up, oil up, no catalyst) | Oil up, ISM prices paid hot, no staples print | **HIT as a tilt.** Correctly small. Did not become the driver. |
-| **S2** | 0 | No confirmed breadth print | **HIT** |
-| **S3** | 0 | No flow print | **HIT** |
-| **S4** | 0 (08-28: do not restack 09-30 −1.32% rel) | Today −0.33% / rel −0.51% is a *new* mild lag, foreshadowed by PM −0.26% | **Process HIT, information miss.** Not restacking yesterday was right. Leaving S4 at 0 ignored a **live PM lag** the engine’s tape_anchor (−0.976 on ES +0.17 / ZN −0.03 / PM −0.26) already scored. |
+The morning card's central error. It treated the rates object as "genuinely two-sided" and netted it to zero:
 
-**Call audit:** Pipeline **down/mild HIT** (dir HIT, mag HIT). LLM **flat/flat would have been a direction miss**. −33 bp absolute is the low end of mild, but **−51 bp vs SPY** is a signed relative down day, not flat. The 09-22 mutable (“don’t let carry mint a sign on an unsigned card”) was applied too aggressively: the card was only unsigned because S0 was zeroed; PM + yield-level + green-tape rotation already formed a **signed mild-down leading sum**.
+> "News Judge #1 (dovish PCE) and #2 (24-yr yield high) are the same object with opposite signs — count once, net ≈ 0."
+
+This is defensible as *rates* reasoning but wrong as *staples* reasoning. The card itself wrote the correct answer and then discarded it:
+
+> "Risk-on / equity-beta expansion is [−] defensives (amp/damp) — but ES +0.17% / NQ +0.50% is a *mild* green, not the ≥+1% NQ-led rip of 09-17/09-21. The rotation-out pressure is **mild**, not dominant."
+
+"Mild, not dominant" is not zero. The card had a signed, small negative in hand — a green index tape with NQ leading — and then applied the 09-22 mutable rule ("carry must not mint a sign on an unsigned card") to a card that was **not actually unsigned**. The leading sum was −0.5 (S1 −0.5 on the cost leg). That is signed. The 09-28 generalization the card explicitly invoked — *"preserve a signed leading sum against disagreeing carry"* — should have applied here, and the card instead reached for the 09-22 rule that only governs unsigned cards.
+
+**This is the same class of error as 09-28, in the opposite polarity.** On 09-28 a signed-positive leading sum was flattened by negative carry; the lesson was generalized to "both polarities." Today a signed-negative leading sum (−0.5) was flattened by *positive* carry (green general book, `index_carry` −0.336 in the engine's sign convention, `tape_anchor` −0.976). The generalization was written down and then not applied.
+
+### S1_SECTOR_FACTORS = −0.5 (morning) → **correct sign, correct magnitude**
+
+The cost leg was the one clean read: ag all up (corn +0.56%, soy +0.70%, wheat +0.86%, meal +0.75%, oats +1.02%), oil up (CL=F +2.17%), DXY +0.37%. No input-cost relief, mild negative for a staples basket. This was right and it was the only signed component. It deserved to carry the card.
+
+### S2_BREADTH = 0 (morning) → **unknowable, correctly zero**
+
+No same-morning staples breadth print was available. The card said so. No post-close rewrite should change that. **Correct.**
+
+### S3_FLOWS_POSITIONING = 0 (morning) → **correct**
+
+No fresh XLP flow print. RRP draining and HY OAS widening are macro-liquidity tells, not sector flows. **Correct.**
+
+### S4_ETF_TAPE = 0 (morning) → **correctly zero, and this is the card's best decision**
+
+The card refused to restack the paid −1.32% rel from 09-30 (08-28 rule). That refusal was right: XLP did not repeat the −1.53% smash; it printed −0.33%. Had the card restacked the paid print, it would have called down/notable and missed magnitude far worse. **Correct, and load-bearing.**
 
 ---
 
-## 3. Interactions / double-count / knowable-at-open
+## 3. Interactions / double-count / knowable-at-open test
 
-**One object, two labels.** “Risk-on rotation out of defensives” and “green ES/NQ, no FTS” are the **same map**. Do not stack HIT-grid rows *Risk-on tape*, *Risk-on rotation away from defensives*, and *Sector rotation out of defensives* as three independent drivers. Count **once**.
+**Double-count check:** The card correctly counted the rates object once (News Judge #1 and #2 as one object, net ≈ 0). It correctly refused to stack the 1d/3d/1w/1m rel prints as independent confirmation. It correctly refused to stack the paid 09-30 smash into S1+S2+S4. **No double-count found.**
 
-**Rates object is also one object.** News Judge #1 (PCE / hike-odds collapse) and #2 (24-yr yield high) were correctly netted at the open. Session resolution: **level/spike > dovish front end** for XLP. Gold’s hawkish cross-check (#3) was the right warning that #1 was not a duration-relief green light.
+**The real interaction error was the opposite of double-counting — it was *under*-counting.** The card had three signed inputs pointing the same way and netted them to zero:
 
-**Do not restack 09-30.** Paid anti-FTS smash (−1.32% rel) did **not** need to be in S1+S2+S4 to get today’s mild down. Engine overlay/tape_anchor was enough.
+1. Green index tape, NQ leading → mild rotation-out pressure (signed −)
+2. PM XLP −0.26% vs XLK +0.58%, lagging the growth leader by ~84 bp → not a haven print (signed −, per the card's own 09-15 gate)
+3. Cost leg up (ag + oil + USD) → mild negative (signed −)
 
-**Knowable at open: partially.**
-- **Yes:** PM XLP −0.26% vs XLK +0.58%; ES +0.17% / NQ +0.50% (mild green, below notable gates); 10Y at a 24-year high; no staples catalyst; 09-25 no-FTS-on-green-tape.
-- **No:** afternoon yield *giveback*, noon SPX +60-pt bounce, China products-export / troop headlines that juiced oil later, ISM prices-paid surprise.
-- The **sign** (XLP down vs SPY up) was knowable; the **cap at mild** required the unknowable yield fade.
+The card's own 09-15 gate said "if PM is not a haven, zero FTS credit." Zero FTS credit on a green tape is not neutral — it removes the only mechanism that could have produced a *positive* staples print. The card treated "no positive license" as "no signal," when the correct read is "no positive license + mild rotation-out pressure = small negative."
+
+**Knowable-at-open test:** Everything needed to sign this card was on the board at the open. ES +0.17% / NQ +0.50% (green, growth-led), PM XLP −0.26% vs XLK +0.58% (not a haven), ag and oil up (cost pressure), DXY +0.37%. The correct call — **down/flat, relative laggard** — was fully knowable at 09:30. **KNOWABLE_AT_OPEN: yes.**
+
+**What was NOT knowable:** the magnitude. 33 bp is a sub-band print; whether the rotation-out pressure would produce 30 bp or 130 bp was not determinable from the open. The card's flat/flat call and the engine's down/mild call bracket the truth — the truth is down/flat, which neither produced.
 
 ---
 
 ## 4. Outliers inside the sector
 
-No staples earnings/guidance today. NKE reports *after* the close (XLY, not XLP). No confirmed CPB/private-label increment (09-03 remains stale). Intra-book: **unconfirmed** — do not promote X posts of WMT −2.7% against conflicting historical prints of WMT/COST slightly green. If anything, **traditional bond-proxy staples (KO/PG/tobacco/food) vs mega-retail** is the hypothesis to check tomorrow, not a graded fact today.
+No same-session constituent-level data was injected, and no staples single-name catalyst appeared in the News Judge or the search results. The relevant sector-level outliers are structural, not same-day:
+
+- **CLAIM:** Consumer staples' September was led by a top stock up only ~2.5%, with a same-week Seeking Alpha piece cataloguing the ten staples names that "tumbled the most in September."
+  **URL:** https://news.google.com/rss/articles/CBMiogFBVV95cUxPRWhEWkJTbTlBdlJTM004T0lBUkhoLW1JeS03cVBfc2FuM1BFWmRvNlBIOWNnLWEtbFdqMWNVbXZkcnhtN3RRUmktQ2tjRGVXQ29GckkyWmcwWWRvVExwdVoyaG5zN3FXb2NvZWJiVWc0UkFWZll6NVM0amx5Y0RHbENuMjRxU3dDc1BTS0NrMDBVM1Y1UGdEclNxc1JYbUo4emc?oc=5
+  **PUBLISHED:** 2026-10-01 11:26 GMT.
+  **QUOTE:** "Ten consumer staples stocks that tumbled the most in September."
+  **SUMMARY:** Dispersion inside staples is running to the downside; the sector's weakness is broad, not one-name. This is consistent with a rotation-out regime rather than an idiosyncratic drag.
+
+- **CLAIM:** McCormick (MKC) quarterly earnings preview was circulating 09-28, i.e. a staples earnings catalyst was approaching but had not printed on 10-01.
+  **URL:** https://news.google.com/rss/articles/CBMimAFBVV95cUxNMkN0UnJtQk93akktV090eC1Fc3JEcTczRGJzeS11anFya0R1TjRralRHZm1uQjZPS0l4QU9uQ3VlMlNaQlNwVDR2TTJBVy02RVg4N2hwQzlQb1hsVnZnYVpoMHJsdXU5YS1ENzdDeVJTd0NJbENlX1BCbGExZ1hlSHdSUFRzd1d5TXNUbks3OHF4SHBZQU1kQQ?oc=5
+  **PUBLISHED:** 2026-09-28 07:53 GMT.
+  **QUOTE:** "McCormick & Company's Quarterly Earnings Preview: What You Need to Know."
+  **SUMMARY:** Confirms the morning card's "no fresh staples earnings print" read was correct for 10-01. The catalyst is forward, not same-session.
+
+No outlier drove the session. The move was sector-level and rotation-driven.
+
+---
+
+## 5. Verdict
+
+The morning card got the **direction right and the magnitude band wrong**, and it got there by a route it had explicitly warned itself against. The card wrote the correct generalization on 09-28 — *preserve a signed leading sum against disagreeing carry, both polarities* — and then, facing a signed-negative leading sum of −0.5, invoked the 09-22 unsigned-card rule to flatten it to zero. The engine then overrode the flat call with `tape_anchor` (−0.976) and `llm_overlay` (−1.2) to produce down/mild, which was directionally right but one band too aggressive.
+
+The honest post-mortem is narrow: **the card should have called down/flat, not flat/flat.** The three signed inputs (green growth-led tape, non-haven PM, cost leg up) all pointed mildly negative and were all knowable at the open. The card's own S1 was already −0.5; the correct total was roughly −1.0 to −1.5, which is down/flat, not flat/flat and not down/mild.
+
+The card's *refusals* were all correct and should be preserved: no restacking of the paid 09-30 smash, no stacking of multi-horizon rel prints, no forcing a positive on a green tape, no letting carry mint a sign on a genuinely unsigned card. The failure was applying the unsigned-card rule to a card that was signed.
+
+**One-line lesson for the log:** when S1 is signed and the tape/PM/cost legs all agree in sign, the card is *not* unsigned — the 09-22 mutable rule does not apply, and the 09-28 generalization does. Net the signed sum, then let carry adjust magnitude, not sign.
 
 ---
 
@@ -95,41 +140,9 @@ ETF_PCT: -0.335
 SPY_PCT: 0.178
 REL_PCT: -0.513
 ACTUAL_DIRECTION: down
-ACTUAL_MAGNITUDE: mild
-PRIMARY_DRIVER: Bond-proxy duration hit from a 24-year 10Y spike (then fade) plus mild green-tape rotation into tech/energy; no FTS license.
-KEY_INTERACTION: Dovish PCE and the yield-level spike are one rates object — the level/spike won for XLP; do not also stack “rotation out” as a second independent factor.
-KNOWABLE_AT_OPEN: partially
-MORNING_READ_VERDICT: Pipeline down/mild HIT; LLM S0=0/flat was too unsigned — live PM lag + yield level + green tape already licensed a mild down lean.
+ACTUAL_MAGNITUDE: flat
+PRIMARY_DRIVER: Rotation out of defensives into a green, growth-led index tape (ceasefire headline); no staples-specific catalyst — a relative-return session, not an absolute staples selloff.
+KEY_INTERACTION: A signed-negative leading sum (S1 −0.5 on the cost leg, plus green tape and non-haven PM) was flattened to zero by misapplying the 09-22 unsigned-card rule; the 09-28 generalization (preserve a signed sum against disagreeing carry, both polarities) should have applied.
+KNOWABLE_AT_OPEN: yes
+MORNING_READ_VERDICT: Direction right, magnitude band wrong — the card should have called down/flat, not flat/flat; its refusals (no restacking the paid 09-30 smash, no stacking multi-horizon rel, no forcing a positive on a green tape) were all correct and load-bearing.
 OUTCOME_END
-
----
-
-## RESEARCH APPENDIX
-
-**Queries run**
-- web_search: `XLP consumer staples October 1 2026 stock market`
-- web_search: `SPY S&P 500 October 1 2026 close consumer defensive`
-- web_search: `US stocks October 1 2026 Treasury yields PCE Fed hike odds consumer staples`
-- web_search: `"October 1, 2026" stocks Dow Nasdaq S&P yields staples`
-- web_search: `XLP holdings performance October 1 2026 WMT PG COST KO PEP PM`
-- web_search: `S&P 500 sector performance October 1 2026 consumer staples utilities real estate technology`
-- web_search: `site:reuters.com consumer staples October 1 2026 yields`
-- web_search: `October 1 2026 10-year Treasury yield 5.34 consumer staples sector index`
-- x_search: XLP/WMT/PG/COST/KO/PEP movers 2026-10-01
-- x_search: XLP lagging / yields / rotation 2026-10-01
-- web_fetch: WTOP 10/1/2026 index recap; eOption market review; Reuters (401 JS wall); MarketScreener/Benzinga/TipRanks/ETFAction (403)
-
-**Key sources**
-1. **How major US stock indexes fared Thursday 10/1/2026** — https://wtop.com/national/2026/10/how-major-us-stock-indexes-fared-thursday-10-1-2026/ — fetched 2026-10-01T20:41Z — SPX +0.2% to 7,666.45; Dow/Nasdaq ~flat; Europe −1.0% to −1.7%; yields up then reversed.
-2. **Market Review: October 01, 2026 | eOption** — https://www.eoption.com/market-review-october-01-2026/ — fetched 2026-10-01T20:46Z — path (flat → yield-spike selloff → noon bounce); XLK/XLI/XLE lead; 10Y ~5.34% then ~5.25%; WTI +2.71%; ISM 54.5 / prices paid 77.9; jobless claims 197k.
-3. **Reuters: Dow futures / yields surge / Micron** — https://www.reuters.com/business/dow-futures-hit-three-month-low-yields-surge-micron-earnings-offer-support-2026-10-01/ — 2026-10-01 — search-cited: staples/RE/utilities as bond proxies on the 10Y high; fetch blocked (401).
-4. **Reuters global markets** — https://www.reuters.com/world/china/global-markets-global-markets-2026-10-01/ — 2026-10-01 — search-cited 10Y ~5.34% since 2002; fetch blocked.
-5. **Investing.com / ChartExchange / FinanceCharts XLP** — historical prints clustering XLP close ~$80.33–$80.47, prior close ~$80.60 — corroborates injected −0.335%.
-6. **X posts (2026-10-01)** — https://x.com/KCTrades777/status/2105738356265021589 , https://x.com/ivyasaa/status/2105712236241240226 — staples as opportunity-cost / rotation chatter; WMT −2.7% **not used** (conflicts with other prints).
-
-**Facts taken**
-- Index closes and Europe vs US split → WTOP.
-- Intraday path, sector leadership, 10Y spike/fade, oil, ISM → eOption.
-- Staples as bond-proxy on the yield high → Reuters (search citation; page not fetchable).
-- XLP −0.335% / SPY +0.178% / rel −0.513% → **injected Channel 1 actuals** (primary); web historicals only as cross-check.
-- No staples-specific catalyst → eOption sector notes + X (negative result).
