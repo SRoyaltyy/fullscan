@@ -1,6 +1,6 @@
 {
   "date": "2026-10-01",
-  "generated_at": "2026-10-01T13:00:07.676095-04:00",
+  "generated_at": "2026-10-01T13:04:19.292947-04:00",
   "overall": "OK",
   "ranker_ready": true,
   "counts": {
@@ -66,10 +66,10 @@
     }
   ],
   "flatten": {
-    "said": "0 priced buys \u00b7 cash $81,251.01",
+    "said": "0 priced buys \u00b7 cash $101,291.08",
     "bullets": [
       "0 priced buys",
-      "cash $81,251.01"
+      "cash $101,291.08"
     ]
   },
   "general": {
@@ -443,13 +443,13 @@
       "date": "2026-10-01",
       "ok": true,
       "pushed": true,
-      "at": "2026-10-01T12:46:25.159322-04:00",
+      "at": "2026-10-01T13:04:18.230608-04:00",
       "files": [
         {
           "path": "data/day_board/today.json",
           "ok": true,
           "reason": "",
-          "size": 32935,
+          "size": 32953,
           "preview": "2026-10-01 BUY BKR, CNR, NTAP, BAND, NTSK \u00b7 SELL NEOV, FCEL, OKLO, EOSE, POWL, TE, SKYX, AMSC"
         },
         {
@@ -463,21 +463,21 @@
           "path": "data/day_board/2026-10-01.json",
           "ok": true,
           "reason": "",
-          "size": 143223,
+          "size": 148623,
           "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href"
         },
         {
           "path": "data/day_board/2026-10-01_tickets.json",
           "ok": true,
           "reason": "",
-          "size": 105173,
+          "size": 110573,
           "preview": "2026-10-01 BUY BKR, CNR, NTAP, BAND, NTSK \u00b7 SELL NEOV, FCEL, OKLO, EOSE, POWL, TE, SKYX, AMSC"
         },
         {
           "path": "data/day_board/strategy_tickets.json",
           "ok": true,
           "reason": "",
-          "size": 256854,
+          "size": 254408,
           "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
         },
         {
@@ -491,42 +491,42 @@
           "path": "data/day_board/today_strategies.json",
           "ok": true,
           "reason": "",
-          "size": 244807,
+          "size": 241845,
           "preview": "2026-10-01 BUY BKR, CNR, NTAP, BAND, NTSK \u00b7 SELL NEOV, FCEL, OKLO, EOSE, POWL, TE, SKYX, AMSC"
         },
         {
           "path": "data/factor_mine/strategy_tickets.json",
           "ok": true,
           "reason": "",
-          "size": 256854,
+          "size": 254408,
           "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
         },
         {
           "path": "dashboard/factor-mine/today.json",
           "ok": true,
           "reason": "",
-          "size": 105173,
+          "size": 110573,
           "preview": "2026-10-01 BUY BKR, CNR, NTAP, BAND, NTSK \u00b7 SELL NEOV, FCEL, OKLO, EOSE, POWL, TE, SKYX, AMSC"
         },
         {
           "path": "dashboard/factor-mine/strategy_tickets.json",
           "ok": true,
           "reason": "",
-          "size": 256854,
+          "size": 254408,
           "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
         },
         {
           "path": "dashboard/factor-mine/today_strategies.json",
           "ok": true,
           "reason": "",
-          "size": 256854,
+          "size": 254408,
           "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
         },
         {
           "path": "dashboard/today_strategies.json",
           "ok": true,
           "reason": "",
-          "size": 244807,
+          "size": 241845,
           "preview": "2026-10-01 BUY BKR, CNR, NTAP, BAND, NTSK \u00b7 SELL NEOV, FCEL, OKLO, EOSE, POWL, TE, SKYX, AMSC"
         },
         {
