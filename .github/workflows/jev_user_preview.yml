@@ -1,0 +1,61 @@
+name: Prepare fresh JEV user test
+on:
+  push:
+    branches: [codex/jev-news-triage]
+    paths: ['.github/workflows/jev_user_preview.yml']
+permissions:
+  contents: write
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          sparse-checkout: |
+            src
+            00_grounding
+            01_daily/news
+            dashboard/jev-train
+            validation
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Draw 100 fresh items through the accepted filter
+        env:
+          JEV_API_KEY: ${{ secrets.JEV_API_KEY }}
+          JEV_MODEL: jev-1.13.0
+          JEV_GATE_POLICY: candidate-v2
+        run: |
+          python - <<'PY'
+          import json,datetime
+          from pathlib import Path
+          from src.jev_acceptance_draw import draw
+          from src.jev_acceptance import identity
+          from src.jev_gate import gate
+          from src.jev_train import SCHEMA_DRAW
+          now=datetime.datetime.now(datetime.timezone.utc)
+          stamp=now.strftime('%Y%m%d_%H%M%S')
+          rows=draw(Path.cwd(),433026,n_rounds=1)['rounds'][0]['items']
+          for row in rows:row.update(id=identity(row),date=row.get('published_at','')[:10],pool='parsed')
+          results=gate(rows,live=True,policy='candidate-v2',workers=12)
+          if any(r.get('review_required') or r.get('model')!='jev-1.13.0' for r in results):raise SystemExit('Incomplete live preview; refusing to publish')
+          items=[]
+          for i,(row,result) in enumerate(zip(rows,results),1):
+              items.append({**row,**result,'n':i,'jev':'KEEP' if result['decision']=='keep' else 'DROP','bits':[]})
+          report={'schema':SCHEMA_DRAW,'stamp':stamp,'generated_at':now.isoformat(),'seed':433026,'model':'jev-1.13.0','gate':'candidate-v2','exam_source':'fresh user preview; development feedback, not acceptance','sample':{'parsed':100,'rss':0,'exam':0},'items':items}
+          text=json.dumps(report,ensure_ascii=False,indent=2)+'\n'
+          Path('dashboard/jev-train/draw.json').write_text(text)
+          Path('00_grounding/jev_train').mkdir(parents=True,exist_ok=True)
+          Path('00_grounding/jev_train/'+stamp+'_draw.json').write_text(text)
+          print('Prepared',stamp,len(items),'items')
+          PY
+      - name: Publish the user test data
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add dashboard/jev-train/draw.json 00_grounding/jev_train/*_draw.json
+          git commit -m 'Prepare 100 fresh headlines for blind JEV user testing [skip ci]'
+          git pull --rebase origin main
+          git push origin HEAD:main
