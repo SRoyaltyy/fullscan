@@ -180,10 +180,17 @@ def load_frame(date: str) -> pd.DataFrame | None:
 
 
 def _components_for(df: pd.DataFrame, h: str) -> np.ndarray:
-    """(n, 6) matrix; per-horizon sector/general columns when present."""
+    """(n, 6) matrix; per-horizon sector/general columns when present.
+    Prefers the lesson-executed *_lx copies so the learner trains on the
+    same inputs the live ranker actually traded."""
     sec_col = f"s_sector_{h}" if f"s_sector_{h}" in df.columns else "s_sector"
     gen_col = f"s_general_{h}" if f"s_general_{h}" in df.columns else "s_general"
-    cols = ["s_join", sec_col, gen_col, "s_news", "s_ab", "s_peer"]
+
+    def _lx(base: str) -> str:
+        col = f"{base}_lx"
+        return col if col in df.columns else base
+
+    cols = [_lx("s_join"), sec_col, gen_col, _lx("s_news"), _lx("s_ab"), _lx("s_peer")]
     return df[cols].to_numpy(dtype=float)
 
 
@@ -230,6 +237,10 @@ def _select_buys(df: pd.DataFrame, score: np.ndarray, top_n: int) -> list[int]:
     inds = df["industry"].astype(str).to_numpy() if "industry" in df.columns \
         else np.array([""] * len(df))
     mcaps = pd.to_numeric(df["market_cap_m"], errors="coerce").fillna(0).to_numpy()
+    lesson_micro = (
+        df["lesson_admit_micro"].astype(bool).to_numpy()
+        if "lesson_admit_micro" in df.columns else None
+    )
     try:
         veto = _buy_veto_mask(df).to_numpy(dtype=bool)
     except Exception:
@@ -242,7 +253,8 @@ def _select_buys(df: pd.DataFrame, score: np.ndarray, top_n: int) -> list[int]:
         if i < len(veto) and veto[i]:
             continue
         size, mcap = sizes[i], float(mcaps[i])
-        if size == "micro" or mcap < MIN_OPP_MCAP_M:
+        admit_micro = bool(lesson_micro[i]) if lesson_micro is not None else False
+        if (size == "micro" or mcap < MIN_OPP_MCAP_M) and not admit_micro:
             continue
         is_large = size in ("large", "mega") or mcap > MAX_OPP_MCAP_M
         if is_large and large_n >= MAX_LARGE_MEGA:
