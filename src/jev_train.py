@@ -643,7 +643,7 @@ def annotate_gate(rows: list[dict], *, live: bool, key: str, workers: int,
             "new_instrument": dec.get("new_instrument") or 0,
             "bits": why_bits(row.get("title") or "", dec),
         }
-        for field in ("noul", "routing", "review_required", "policy_version", "prompt_sha256", "answers", "usage"):
+        for field in ("noul", "routing", "review_required", "policy_version", "prompt_sha256", "protocol_sha256", "signals", "answers", "usage"):
             if field in dec:
                 item[field] = dec[field]
         items.append(item)
@@ -776,7 +776,7 @@ def run_draw(
         "seed": seed,
         "model": model,
         "exam_source": sample["exam_source"],
-        "gate": "hop0-code-bits+jev" if live else "hop0-code-bits",
+        "gate": os.environ.get("JEV_GATE_POLICY", "sixbit") if live else "hop0-code-bits",
         "sample": {
             "parsed": len(sample["parsed"]),
             "rss": len(sample["rss"]),
@@ -926,7 +926,7 @@ def run_replay(
         "seed": blob.get("seed") or 0,
         "model": model,
         "exam_source": blob.get("exam_source") or sample.get("exam_source") or "replay",
-        "gate": "hop0-bits+jev" if live else "hop0-code-bits",
+        "gate": os.environ.get("JEV_GATE_POLICY", "sixbit") if live else "hop0-code-bits",
         "replay_of": blob.get("stamp") or "",
         "flips": flips["n"],
         "sample": sample,
@@ -1686,7 +1686,7 @@ def build_parser():
     draw.set_defaults(func=cmd_draw)
     replay = sub.add_parser(
         "replay",
-        help="Re-score the last trainer sheet through live BIT_QUESTIONS",
+        help="Re-score the last trainer sheet through the configured live JEV policy",
     )
     replay.add_argument("--stamp", default="")
     replay.add_argument("--source", default="", help="Path to an existing draw.json")

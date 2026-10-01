@@ -33,6 +33,11 @@ class Candidate(unittest.TestCase):
         p=payload(.5,.3,.7)
         p["answers"].update(evidence={"type":"choice","choice":"narrative","probabilities":{"reported":.3,"narrative":.7,"calendar_artifact":0.}},context={"type":"noul","noul":.8},link={"type":"noul","noul":.9})
         self.assertEqual(v2.decide({"title":"Survey shows investors shifting into stocks"},p)["decision"],"keep")
+        from .jev_gate import gate
+        out=gate([{"title":"Survey shows investors shifting into stocks"}],live=True,key="test",policy="candidate-v2",poster=lambda *args:p)
+        self.assertEqual(out[0]["policy_version"],v2.VERSION)
+        self.assertEqual(out[0]["protocol_sha256"],v2.protocol_sha())
+        self.assertFalse(out[0]["review_required"])
         self.assertEqual(v2.decide({"title":"Company Q2 FY2026 earnings"},p)["decision"],"drop")
         self.assertEqual(v2.decide({"title":"Company Earnings Call Summary"},p)["decision"],"drop")
         p["answers"]["link"]["noul"]=True

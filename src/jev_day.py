@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import datetime as dt
 import json
+import os
 import re
 from pathlib import Path
 
@@ -176,7 +177,7 @@ def run_day_draw(*, day: str, stamp: str = "", write: bool = True,
         "day": day,
         "day_kind": day_kind,
         "day_n": len(day_rows),
-        "gate": "hop0-bits+jev" if live else "hop0-code-bits",
+        "gate": os.environ.get("JEV_GATE_POLICY", "sixbit") if live else "hop0-code-bits",
         "sample": {
             "parsed": len(day_rows) if day_kind == "parsed" else 0,
             "rss": 0,

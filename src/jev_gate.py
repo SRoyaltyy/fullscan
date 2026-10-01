@@ -1072,18 +1072,27 @@ def gate(rows: list[dict], *, code_only: bool = False, live: bool = False,
          reviewer=None, deduplicate: bool = True) -> list[dict]:
     """Run hop-0. gold_answers maps row id → answer dict (tests / dry gold)."""
     policy = policy or os.environ.get("JEV_GATE_POLICY", "sixbit")
-    if policy not in {"sixbit", "triage"}:
+    if policy not in {"sixbit", "triage", "candidate", "candidate-v2"}:
         raise ValueError(f"Unknown JEV_GATE_POLICY: {policy}")
-    if policy == "triage" and live and not code_only:
+    if policy in {"triage", "candidate", "candidate-v2"} and live and not code_only:
         from . import jev_triage
+        if policy == "candidate-v2":
+            from . import jev_candidate_v2 as classifier
+        elif policy == "candidate":
+            from . import jev_candidate as classifier
+        else:
+            classifier = jev_triage
         key = key or api_key()
         if not key:
             raise RuntimeError("JEV_API_KEY / TYPESAFE_API_KEY is empty")
         def one(row):
             try:
-                payload = (poster or jev_post)(make_state(row), jev_triage.QUESTIONS, key)
+                payload = (poster or jev_post)(make_state(row), classifier.QUESTIONS, key)
                 row["_jev_model"] = payload.get("model") or JEV_MODEL
-                return jev_triage.decide(row, payload, reviewer)
+                if policy in {"candidate", "candidate-v2"}:
+                    result=classifier.decide(row,payload)
+                    return {**result,"routing":"automatic","review_required":False}
+                return classifier.decide(row, payload, reviewer)
             except Exception:
                 row["_jev_model"] = "error:request_failed"
                 return jev_triage.review(row, "jev_error")

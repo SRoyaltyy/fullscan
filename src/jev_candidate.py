@@ -4,9 +4,51 @@ Taxonomy supplies a broad view; atomic questions recover factual developments.
 A separate pure-noise answer resolves wrappers. Probabilities are not multiplied.
 """
 import math,re
-from .jev_experiments import VARIANTS
 from .jev_acceptance import sha,RUBRIC
-QUESTIONS={**VARIANTS['taxonomy'],**VARIANTS['atomic']}
+QUESTIONS={
+  "kind": {
+    "type": "choice",
+    "instructions": "Identify what this headline reports. Look through stock-price and investing-advice wording to the underlying information. A broad market wrap is still a recap. Use only the supplied headline.",
+    "criteria": {
+      "company_news": "Company results or guidance, deal talks or announcements, product launch, clinical results, layoffs, hiring/leadership departure, financing/IPO, analyst rating/target changes, insider transaction, recall or legal ruling.",
+      "policy_data": "Official central bank/government economic or monetary views, policy proposal or decision, trade/sanctions action, or economic data released. Includes major foreign economies and global commodity policy.",
+      "industry_fact": "Specific factual supply/demand, capacity, competition, credit or operational change in an industry relevant to US equities or global commodities/supply chains.",
+      "noise": "Only price/market recap, preview, picks, opinion, evergreen advice/explanation, transcript, vague promotion, or unrelated local/nonfinancial news."
+    }
+  },
+  "company": {
+    "type": "noul",
+    "instructions": "Does this headline report a company development? Ignore stock-reaction or advice framing. An announced plan is a development, even before completion.",
+    "criteria": {
+      "true": "A firm reports results/guidance; launches, hires/fires, expands/closes, finances/files IPO, buys/sells/negotiates a deal, changes a rating/target, trades insider shares, releases clinical data, recalls a product, or faces a new legal/regulatory ruling.",
+      "false": "Only stock performance, valuation, a price forecast, picks, future earnings preview, general promotion without an identifiable development, or unrelated nonfinancial news."
+    }
+  },
+  "macro": {
+    "type": "noul",
+    "instructions": "Does this headline report economic data or an official economic policy action, proposal or view? Official speech can be news without a completed policy change.",
+    "criteria": {
+      "true": "Fed/central bank official speaks about rates/inflation; official economic data released; government announces/proposes fiscal, trade, sanction, energy, financial or technology regulation. Includes major foreign economies and global commodities.",
+      "false": "Only an expert/columnist opinion, upcoming data preview, market rate-hike odds, price recap with no policy details, general evergreen explanation, or unrelated politics."
+    }
+  },
+  "industry": {
+    "type": "noul",
+    "instructions": "Does this headline state a factual industry/economic change with a concrete market link? A factual structural change need not be a discrete completed deal.",
+    "criteria": {
+      "true": "Specific supply, demand, capacity, credit, costs, competitive or operational change for US businesses, major global sectors, commodities or supply chains. A new credit-rate milestone or industry adoption/capacity change counts.",
+      "false": "Only a generic price recap, vague 'could transform' prediction, investment advice, evergreen mechanism explanation, or an unrelated local story."
+    }
+  },
+  "noise": {
+    "type": "noul",
+    "instructions": "Is this headline ONLY noise, with no specific underlying financial/economic development? A company event or official economic statement makes this false even inside a price or advice wrapper.",
+    "criteria": {
+      "true": "Only a generic price/market recap, broad live wrap, future earnings/data preview, transcript, evergreen advice/explanation, investment picks/opinion, vague promotion with no identifiable development, or unrelated local/nonfinancial news.",
+      "false": "Reports company results/guidance, launches, layoffs, expansion/closure, financing, deal talks/announcements, insider trades, broker rating/target changes, clinical data, recalls or legal rulings. Also official monetary/fiscal/trade policy proposals/statements, economic releases, or factual industry supply/demand/credit/competition changes. Includes major global sectors, economies, commodities and supply chains. Actions may be planned or proposed; price/advice wrappers do not erase reported facts."
+    }
+  }
+}
 VERSION='taxonomy-atomic-v1'
 NEWS_THRESHOLD=.90
 FACT_THRESHOLD=.70

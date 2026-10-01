@@ -1,6 +1,6 @@
 name: Jev hop-0 net
 
-# Live Jev BIT_QUESTIONS decide keep/drop. Regex is the code-only fallback.
+# Frozen evidence-context-v2 decides live keep/drop. Regex is the code-only fallback.
 # Cron schedule stays 25 11 * * 1-6. Does not touch flatten / Webull / factor-mine.
 
 on:
@@ -74,9 +74,13 @@ jobs:
         run: |
           PYTHONPATH=. python3 -m src.test_jev_bits
           PYTHONPATH=. python3 -m src.test_jev_sixbit_stop
+          PYTHONPATH=. python3 -m src.test_jev_candidate
+          PYTHONPATH=. python3 -m src.test_jev_acceptance
       - name: Gold + capped harvest
         env:
           JEV_API_KEY: ${{ secrets.JEV_API_KEY }}
+          JEV_GATE_POLICY: candidate-v2
+          JEV_MODEL: jev-1.13.0
           TYPESAFE_API_KEY: ${{ secrets.JEV_API_KEY }}
         run: |
           set -euo pipefail
@@ -100,6 +104,8 @@ jobs:
         continue-on-error: true
         env:
           JEV_API_KEY: ${{ secrets.JEV_API_KEY }}
+          JEV_GATE_POLICY: candidate-v2
+          JEV_MODEL: jev-1.13.0
           TYPESAFE_API_KEY: ${{ secrets.JEV_API_KEY }}
         run: |
           set -euo pipefail
