@@ -1,0 +1,67 @@
+name: Jev five-round acceptance
+on:
+  push:
+    branches: [codex/jev-news-triage]
+    paths:
+      - 'src/jev_acceptance.py'
+      - 'src/jev_candidate_v2.py'
+      - '00_grounding/jev_acceptance/candidate_v2_extension_gold.json'
+      - '.github/workflows/jev_acceptance.yml'
+permissions:
+  contents: write
+concurrency:
+  group: jev-five-round-acceptance
+  cancel-in-progress: false
+jobs:
+  acceptance:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            src
+            00_grounding
+            dashboard/jev-train
+            validation
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Protocol tests
+        run: python -m src.test_jev_acceptance
+      - name: Five frozen paired rounds
+        env:
+          JEV_API_KEY: ${{ secrets.JEV_API_KEY }}
+          JEV_MODEL: jev-1.13.0
+        run: |
+          python -m src.jev_acceptance --input 00_grounding/jev_acceptance/candidate_v2_extension_gold.json --output validation/jev_acceptance_report.json --policy candidate-v2
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          report=json.loads(Path('validation/jev_acceptance_report.json').read_text())
+          summary={**report['summary'], 'evidence_scope':report['evidence_scope'], 'protocol_sha256':report['rounds'][-1]['protocol_sha256'], 'teacher_model':report['rounds'][-1]['teacher_model'], 'jev_model':report['rounds'][-1]['jev_model']}
+          Path('dashboard/jev-train/acceptance.json').write_text(json.dumps(summary,indent=2)+'\n')
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: jev-five-round-acceptance
+          path: validation/jev_acceptance_report.json
+      - name: Save candidate branch results
+        if: github.ref == 'refs/heads/codex/jev-news-triage'
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add validation/jev_acceptance_report.json dashboard/jev-train/acceptance.json
+          git diff --cached --quiet && exit 0
+          git commit -m 'Record strict five-round JEV acceptance [skip ci]'
+          git push origin HEAD:codex/jev-news-triage
+      - name: Require five consecutive passes
+        run: |
+          python - <<'PYTHON'
+          import json
+          from pathlib import Path
+          result=json.loads(Path('validation/jev_acceptance_report.json').read_text())
+          if not result['summary']['accepted']:
+              raise SystemExit('Acceptance target unmet: both class recalls must exceed 80% for five fresh consecutive rounds')
+          PYTHON

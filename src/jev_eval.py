@@ -695,6 +695,7 @@ def _copy_row(row: dict) -> dict:
         "published_at": row.get("published_at") or "",
         "url": row.get("url") or "",
         "date": row.get("date") or "",
+        **{k: row[k] for k in ("summary", "description", "snippet", "content") if row.get(k)},
     }
 
 
@@ -728,7 +729,7 @@ def score_sample(rows: list[dict], *, live: bool, key: str,
         nxt = []
         for row in pending:
             dec = mapped.get(normalize_title(row.get("title") or ""))
-            if dec is None or (dec.get("reason") == "jev_error" and attempt < 2):
+            if dec is None or dec.get("reason") == "jev_error":
                 nxt.append(row)
                 continue
             by_norm[normalize_title(row.get("title") or "")] = dec
@@ -777,6 +778,8 @@ def _join_items(sample: dict, decided: dict[str, dict]) -> list[dict]:
                 "published_at": row.get("published_at") or "",
                 "url": row.get("url") or "",
                 "predicted": dec.get("decision") or "",
+                "routing": dec.get("routing") or "automatic",
+                "review_required": bool(dec.get("review_required")),
                 "reason": dec.get("reason") or "",
                 "keep_via": keep_via(dec.get("decision") or "", dec.get("reason") or ""),
                 "label": "",

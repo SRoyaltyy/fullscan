@@ -9,6 +9,11 @@
 
   function paintWhy(row) {
     var reason = String((row && row.reason) || "").trim();
+    if (row && row.signals) {
+      return reason + " · " + Object.keys(row.signals).map(function (key) {
+        return key + ": " + Number(row.signals[key]).toFixed(2);
+      }).join(" · ");
+    }
     var noul = (row && row.noul) || {};
     var on = [];
     for (var i = 0; i < SIX.length; i++) {
@@ -45,7 +50,7 @@
       var title = titleEl ? titleEl.textContent : "";
       var row = byId[tr.dataset.id] || byTitle[title];
       var td = tr.querySelector("td.bits");
-      if (row && td) td.textContent = paintWhy(row);
+      if (row && td) td.textContent = tr.dataset.blind === "true" ? "" : paintWhy(row);
     });
   }
 

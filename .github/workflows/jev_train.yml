@@ -75,12 +75,15 @@ jobs:
         run: |
           PYTHONPATH=. python3 -m src.test_jev_train
           PYTHONPATH=. python3 -m src.test_jev_day
+          PYTHONPATH=. python3 -m src.test_jev_candidate
 
       - name: Draw
         id: draw
         if: github.event.inputs.mode == 'draw'
         env:
           JEV_API_KEY: ${{ secrets.JEV_API_KEY }}
+          JEV_GATE_POLICY: candidate-v2
+          JEV_MODEL: jev-1.13.0
           STAMP: ${{ github.event.inputs.stamp }}
           SEED: ${{ github.event.inputs.seed }}
           DAY: ${{ github.event.inputs.day }}

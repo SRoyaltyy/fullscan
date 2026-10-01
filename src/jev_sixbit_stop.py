@@ -1,4 +1,4 @@
-"""Fresh-100 stop test for the six frozen bits.
+"""Development-100 regression test for the six frozen bits.
 
 Teacher labels only: tape / preview / finished_act / official_print /
 officer_voice / junk. Keep iff the label is a finished act or a print.
@@ -39,6 +39,7 @@ def banned_keep(title: str) -> bool:
 def score(items: list[dict], decided: list[dict]) -> dict:
     by_title = {(d.get("title") or ""): d for d in decided}
     rows = []
+    unresolved = []
     tp = fp = fn = 0
     gold_pos = 0
     banned = []
@@ -46,7 +47,10 @@ def score(items: list[dict], decided: list[dict]) -> dict:
         title = item["title"]
         gold = teacher_keep(item["label"])
         got = by_title.get(title) or {}
-        pred = got.get("decision") == "keep"
+        valid = bool(got) and not got.get("review_required")
+        if not valid:
+            unresolved.append(title)
+        pred = valid and got.get("decision") == "keep"
         if gold:
             gold_pos += 1
         if pred and gold:
@@ -69,6 +73,8 @@ def score(items: list[dict], decided: list[dict]) -> dict:
     rec = tp / gold_pos if gold_pos else 0.0
     return {
         "n": len(items),
+        "dataset_role": "development (reused during prompt tuning)",
+        "unresolved": unresolved,
         "gold_keep": gold_pos,
         "pred_keep": tp + fp,
         "precision": round(prec, 4),
@@ -81,6 +87,7 @@ def score(items: list[dict], decided: list[dict]) -> dict:
             prec >= PREC_MIN
             and rec >= RECALL_MIN
             and not banned
+            and not unresolved
         ),
         "rows": rows,
     }
@@ -100,7 +107,12 @@ def run_live(key: str = "", workers: int = 24, poster=None) -> dict:
         workers=workers,
         poster=poster,
     )
-    return score(blob["items"], decided)
+    from .jev_triage import fingerprint
+    from .jev_bits import BIT_QUESTIONS
+    report = score(blob["items"], decided)
+    report["prompt_sha256"] = fingerprint(BIT_QUESTIONS)
+    report["models"] = sorted({r.get("_jev_model", "unknown") for r in rows})
+    return report
 
 
 def to_markdown(report: dict) -> str:
@@ -134,7 +146,7 @@ def to_markdown(report: dict) -> str:
 
 
 def main(argv: list[str] | None = None) -> int:
-    p = argparse.ArgumentParser(description="Six-bit unseen-100 stop test")
+    p = argparse.ArgumentParser(description="Six-bit development-100 regression test")
     p.add_argument("--live", action="store_true")
     p.add_argument("--workers", type=int, default=24)
     args = p.parse_args(argv)

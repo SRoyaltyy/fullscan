@@ -516,6 +516,7 @@ def test_replay_uses_posted_bit_answers():
             return {
                 "model": "jev-test",
                 "answers": {
+                    **{k: {"type": "noul", "noul": 0.02} for k in ("tape", "tip", "print", "spoke")},
                     "soft": {"type": "noul", "noul": 0.12},
                     "done": {"type": "noul", "noul": 0.12},
                 },
@@ -523,6 +524,7 @@ def test_replay_uses_posted_bit_answers():
         return {
             "model": "jev-test",
             "answers": {
+                **{k: {"type": "noul", "noul": 0.02} for k in ("tape", "soft", "print", "spoke")},
                 "done": {"type": "noul", "noul": 0.91},
                 "tip": {"type": "noul", "noul": 0.04},
             },

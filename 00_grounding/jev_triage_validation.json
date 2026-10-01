@@ -1,0 +1,711 @@
+{
+  "schema": 1,
+  "provenance": "Frontier assistant labeled the October 1 03:26 draw before running triage-v1. This draw was already scored by the older six-bit policy, so this is an independently labeled validation set, not a prospective unseen holdout. Labels reflect reported market information, not completed actions alone. Title-only ambiguous cases are review. Training grades are development, never relabeled to pass. No demonstrated frontier-equivalence claim.",
+  "rubric": {
+    "keep": "Specific new company, economic, policy or industry development with a direct US-market link or concrete global sector/commodity/trade transmission. Announced/proposed acts and analyst revisions count. A reaction or advice wrapper cannot erase a concrete underlying development.",
+    "drop": "Only market/price recap, preview, evergreen advice, speculative picks, transcript, or clearly unrelated/local nonfinancial story.",
+    "review": "Title lacks enough evidence about novelty, content or market connection; excerpt or article review required."
+  },
+  "items": [
+    {
+      "title": "Japan Transcity (TSE:9310) Stock Rallies As Earnings Strength Meets Valuation Scrutiny - simplywall.st",
+      "source": "rss_google_markets",
+      "published_at": "Sat, 08 Aug 2026 22:36:19 GMT",
+      "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxOd1hBRTh2enJjSmkzM3V2QVBVcFU1RUE1Um9ka3ozblg3Uk82bnJtZGV5U2ZaRjhjcGxrb2RtVTRQMHZTVDRuYmN4OG5DTDljd3F4Y0lQRXIwQkd6QWdUb0wwb3BZSk1NLVdfV04taG1QTnl4NG1fYjgzSXJDZ3c2eWUyYjNWQjdBVmVjaE5pNlM2MUdzMVRDMXhKWVhlS25Zc2tNZlUyWGVaaU01bWxCdVNQYnBCNWlGQk5pZDNTNERmM1lRUXdqOWpFRkVtS0p6NUl1OEVxcC1GSDBU0gHiAUFVX3lxTE05eUthNm1OMHVjeGRzOHRuTGZOTXI5YXdqT05yZWM0cm9VQWx",
+      "gold": "drop"
+    },
+    {
+      "title": "BofA points to the Eli Lilly market that could outsize the U.S.",
+      "source": "rss_yahoo_finance",
+      "published_at": "2026-08-08T18:33:00Z",
+      "url": "https://finance.yahoo.com/healthcare/articles/bofa-points-eli-lilly-market-183300957.html",
+      "gold": "review"
+    },
+    {
+      "title": "Canopy Growth Q1 Earnings Call Highlights",
+      "source": "newsapi_MarketBeat",
+      "published_at": "2026-08-07T16:04:22Z",
+      "url": "https://www.marketbeat.com/instant-alerts/canopy-growth-q1-earnings-call-highlights-2026-08-07/?utm_source=yahoofinance&amp;utm_medium=yahoofinance",
+      "gold": "drop"
+    },
+    {
+      "title": "How the US far-right weaponised ‘inshallah’ against Abdul El-Sayed",
+      "source": "rss_aljazeera_economy",
+      "published_at": "Mon, 10 Aug 2026 14:13:00 +0000",
+      "url": "https://www.aljazeera.com/news/2026/8/10/how-the-us-far-right-weaponised-inshallah-against-abdul-el-sayed?traffic_source=rss",
+      "gold": "drop"
+    },
+    {
+      "title": "Nvidia (NVDA) Is Going Beyond GPUs in the $500 Billion AI Boom, Wells Fargo Says",
+      "source": "rss_yahoo_finance",
+      "published_at": "2026-08-11T13:53:53Z",
+      "url": "https://finance.yahoo.com/technology/ai/articles/nvidia-nvda-going-beyond-gpus-135353236.html",
+      "gold": "review"
+    },
+    {
+      "title": "Quantinuum Rises Amid First Post-IPO Earnings Report, Oracle System Sale",
+      "source": "rss_yahoo_finance",
+      "published_at": "2026-08-12T13:10:30Z",
+      "url": "https://www.investors.com/news/technology/quantinuum-stock-qnt-quantinuum-earnings-q22026/?src=A00220&yptr=yahoo",
+      "gold": "keep"
+    },
+    {
+      "title": "Stock market today: Dow, S&P 500, Nasdaq gain on soft inflation data, earnings",
+      "source": "rss_yahoo_finance",
+      "published_at": "2026-08-13T10:01:45Z",
+      "url": "https://finance.yahoo.com/markets/live/stock-market-today-dow-sp-500-nasdaq-gain-on-soft-inflation-data-earnings-100145282.html",
+      "gold": "drop"
+    },
+    {
+      "title": "Opinion: Tesla’s stock is bouncing. Here’s what the options market says you should do. - MarketWatch",
+      "source": "rss_google_markets",
+      "published_at": "Fri, 14 Aug 2026 11:44:00 GMT",
+      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPUUZaV2VYZTQ1ZjZ0RFdYOUhsWjc2YkYwWTBibVRBd042ME91Umg5Wk9yeHdEQXNzdUpVbE12R1IwRVNpaGxXSHowUC1zQ0pXMWhLdlpqQTJOVHhsUzZTVUNHQWtNT1ZaQ3JoOW1DQllVczhPVnptNVZOdjUtdVFTTWdPRTNLLVNlZTBsbkdrWmFHbjQ4bkNpekxnbUZILXJmR3ZWN3dmenRqLUllSnZkczJpWjktT0E?oc=5",
+      "gold": "drop"
+    },
+    {
+      "title": "Sungrow to supply 152MW/606MWh BESS for Chile’s Observatorio project",
+      "source": "rss_yahoo_finance",
+      "published_at": "2026-08-17T13:22:27Z",
+      "url": "https://finance.yahoo.com/energy/articles/sungrow-supply-152mw-606mwh-bess-132227634.html",
+      "gold": "keep"
+    },
+    {
+      "title": "What to know about Gaza working groups and their mandate?",
+      "source": "rss_aljazeera_economy",
+      "published_at": "Tue, 18 Aug 2026 13:58:58 +0000",
+      "url": "https://www.aljazeera.com/news/2026/8/18/what-to-know-about-gaza-working-groups-and-their-mandate?traffic_source=rss",
+      "gold": "drop"
+    },
+    {
+      "title": "Moderna’s stock doubles on promising cancer-vaccine results",
+      "source": "rss_marketwatch_top",
+      "published_at": "Wed, 19 Aug 2026 12:15:00 GMT",
+      "url": "https://www.marketwatch.com/story/modernas-stock-doubles-on-promising-cancer-vaccine-results-896b1f2c?mod=mw_rss_topstories",
+      "gold": "keep"
+    },
+    {
+      "title": "Could EQT (EQT) Be a Major Winner From LNG and Data Center Power Demand?",
+      "source": "rss_yahoo_finance",
+      "published_at": "2026-08-20T12:55:43Z",
+      "url": "https://finance.yahoo.com/energy/articles/could-eqt-eqt-major-winner-125543750.html",
+      "gold": "drop"
+    },
+    {
+      "title": "Alibaba Cloud Revenue Jumps 45%. Is the Profit Plunge and China E-Commerce Slide Cause for Concern? - The Motley Fool",
+      "source": "rss_google_business",
+      "published_at": "Fri, 21 Aug 2026 02:28:00 GMT",
+      "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNdjdBLWlWWEd4TXdSNTdRLWVuR25nLV9TVFg1TkR1cHU5dnZwbHBsanBYbnpVSW4zaEZtVXpuV0VlMGk4ZDMyYjRicjR1V1JETm5uLWljdjZaUEFPckltMHNIWEU4Q25DWkF5MlFMTEF4d1R0a2lEZGpRZ3VXN1IxcFJ4OElrWlNlTFB0X1d0UVJtcjloWTRscE91N1pqaGl2VU02dUJQazdqZC1Ja281MWNmQ3psRVJWV3I4c3d1MTdvdDd1Y3BMSXBmRmVSZFJpSUV6eFVn?oc=5",
+      "gold": "keep"
+    },
+    {
+      "title": "KLA (KLAC) Gains From Advanced Nodes, HBM and Packaging",
+      "source": "rss_yahoo_finance",
+      "published_at": "2026-08-24T13:24:24Z",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/kla-klac-gains-advanced-nodes-132424736.html",
+      "gold": "review"
+    },
+    {
+      "title": "Is AIPAC’s political standing declining in the US?",
+      "source": "rss_aljazeera_economy",
+      "published_at": "Tue, 25 Aug 2026 10:55:43 +0000",
+      "url": "https://www.aljazeera.com/news/2026/8/25/is-aipacs-political-standing-declining-in-the-us?traffic_source=rss",
+      "gold": "drop"
+    },
+    {
+      "title": "Cboe Global Markets Inc. stock outperforms competitors on strong trading day - MarketWatch",
+      "source": "rss_google_markets",
+      "published_at": "Mon, 24 Aug 2026 20:57:00 GMT",
+      "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxOaU1hR2hwYkREMUk3YWZBZkF3MlptVlFsRE80aDE3MTFxc20yUG50V3pqNlNpR2p0SGtTLVFGNC1PRG5OR0xfR2R2Yk8xcmxzekJCb0IteXR4Z240Sm9mWlI5Mjd1Mk56QVVzN1hJdjFEWVpZaVVoM3FCdEhoM3JFNDBVVndabkFMYlpqX1MxUDVYQkNDbHBaNllWcml6dzZ0YnFROHJNZHpWMmU3R2E2ZjZoLTA0eFVtTU1qV3VoOXIzNGdNU3E1OFpzV2dkMFhuSC00V3JkUzVLY1ctNU9BWThzemJJc0cy?oc=5",
+      "gold": "drop"
+    },
+    {
+      "title": "Sensex today | Stock Market Live: Stock to buy today: IndusInd Bank",
+      "source": "newsapi_BusinessLine",
+      "published_at": "2026-08-24T01:17:56Z",
+      "url": "https://www.thehindubusinessline.com/markets/sensex-nifty50-today-stock-market-live-updates-24-august-2026/article71380598.ece",
+      "gold": "drop"
+    },
+    {
+      "title": "Walmart’s Rare Comparable-Sales Miss: Should Investors Worry?",
+      "source": "rss_yahoo_finance",
+      "published_at": "2026-08-25T01:20:34Z",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/walmart-rare-comparable-sales-miss-012034048.html",
+      "gold": "keep"
+    },
+    {
+      "title": "Carnival (CCL) Laps the Stock Market: Here's Why - Yahoo Finance UK",
+      "source": "rss_google_markets",
+      "published_at": "Tue, 25 Aug 2026 21:45:03 GMT",
+      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNTUQyZllMT2VadkZRN21OMzZWdW44TGMtaU8wLU1OQlFYTE4xWHRhS3I3RDZxYXRyNjV2ZjFFb3JvUDEzZFpmSml0bXJ6R1FzZWNITTl2UGI5ODBWMk1nWFFCT3Z1N2p3TUNrLUVCWlE4b1VVenF3aEhWWEJDb2x2UTkzdzBidw?oc=5",
+      "gold": "drop"
+    },
+    {
+      "title": "New Layoffs Just Hit Apple’s Vision Pro Staff. What That Means for AAPL Stock.",
+      "source": "rss_yahoo_finance",
+      "published_at": "2026-08-24T18:55:05Z",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/layoffs-just-hit-apple-vision-185505999.html",
+      "gold": "keep"
+    },
+    {
+      "title": "Gold Has Soared to $4,600. Is It Too Late to Buy This ETF?",
+      "source": "rss_yahoo_finance",
+      "published_at": "2026-08-26T15:35:00Z",
+      "url": "https://finance.yahoo.com/markets/commodities/articles/gold-soared-4-600-too-153500986.html",
+      "gold": "drop"
+    },
+    {
+      "title": "BLMN or SHAK: Which Is the Better Value Stock Right Now? - Yahoo Finance Singapore",
+      "source": "rss_google_markets",
+      "published_at": "Wed, 26 Aug 2026 15:40:02 GMT",
+      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQM2dJVWROQUtjS2E2OHlTUkgyaEFjOGlVUkJ6a0ZaMDRaSkpZSWdrU2Qyd3B3Y2d4R2VQTkJ4eG5CNUJmb3RXOUh3Q3ZnTGFsaVVBMkxFeVRmX1lQZ1VKOGdBN09XUEZMRE15YUNIOWRwZEV1QmRkczVEMmhfZV9iOWNGVQ?oc=5",
+      "gold": "drop"
+    },
+    {
+      "title": "Here’s How Much CrowdStrike Stock Is Expected to Move After Earnings - Investopedia",
+      "source": "rss_google_markets",
+      "published_at": "Wed, 26 Aug 2026 16:31:58 GMT",
+      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPNFhBOGoyelRYR3JKMG9FV3YybVR4SkVHMExKZ1Z0T09DbzduNmtOZXlxQTBuc3NCUlEwUTUyemNVS2Z4dVRHVzBUcWwzUmp3U25seFZONDUtWW5vOHljR3Q4ZV9SVG90ZTU4b3BwVm9DYjROQWRTOGwwempOOHRUa2c5YlhCYV9wTFM5M0x4aWZfUU14MFhkS2tqOW9xQVpWR1Y4VVBOc3cxd294c3JYSEZKTy0zT1dxQXdNa25wTHY5bDdpOUpuUA?oc=5",
+      "gold": "drop"
+    },
+    {
+      "title": "Nasdaq futures jump as Nvidia earnings lift chip stocks: Live updates - CNBC",
+      "source": "rss_google_business",
+      "published_at": "Thu, 27 Aug 2026 12:58:02 GMT",
+      "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE81OFdpS2tFUVh1NFJWZVBOdHV1VDZINjFmVmZxUnF2TVFRVnVDV1VXYnN1OS0xTURpMTl6S1NvMllsWVlHSVpCUU4yRmJZcDYtNUVVV1p2U2ZXOEpuSHlkM3lkTGNtWjBSdlVtUUZxLW9PbUZpbHBF0gF8QVVfeXFMTVE4T2JoblkzUGJXTFEyZjFHYk5adlZyYmUzcXhMRDZUSUJMU1FUNDRsT2RPNzc2MUcxT2V5M3RoeUgxS2xGRi1oWXdsLVkxOWYyRUZiSVdjNnVLbktoYWtoUmRBWGpZTW5PUnMyYUZLamt2aHlLSmtmQmZPXw?oc=5",
+      "gold": "drop"
+    },
+    {
+      "title": "Intuit downgraded, SolarEdge upgraded: Wall Street's top analyst calls",
+      "source": "finviz_export",
+      "published_at": "2026-08-29",
+      "url": "",
+      "gold": "keep"
+    },
+    {
+      "title": "September Fed decision is now a coin flip as rate hike odds increase post Warsh",
+      "source": "rss_cnbc_finance",
+      "published_at": "Fri, 28 Aug 2026 15:22:10 GMT",
+      "url": "https://www.cnbc.com/2026/08/28/-september-fed-decision-now-a-coin-flip-as-rate-hike-odds-increase.html",
+      "gold": "drop"
+    },
+    {
+      "title": "Canada Economy Grows 3.3% in Second Quarter, Fastest Since '23 - Bloomberg.com",
+      "source": "rss_google_business",
+      "published_at": "Fri, 28 Aug 2026 13:52:28 GMT",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxObE1UbE5IUnZ6SE5ZWlFqVVhzVkdudWU3QWFqMGhTSGI1OEJvRkl4QmdxYXpKbjM5SC0wYUV4dVpzWGtfSlA4TXcxZGM4OTRwdm45b3lGYUFGSmcyYWpiYXRVQjFuTTVXWms1dmQ0dXNMVjNNLVdCcWRlUTFaWjNkQ2NrVkJ1TGo4N3ZGRzhkdVV6UGZSSWZMYXhVQUtxUGhvdGNsQjdPNEZFRnhWaVFv?oc=5",
+      "gold": "keep"
+    },
+    {
+      "title": "Federal Reserve is Highly Anticipated to Raise Interest Rates in Late 2026 - Norada Real Estate Investments",
+      "source": "rss_google_macro",
+      "published_at": "Fri, 28 Aug 2026 17:18:12 GMT",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQYlV2VUc5TzFCdy1wLTdJVHY3akdWNlE5RFRWdnVhZHZBYnhqeUpwekVmazY0Z0ZYeXIxUVNJeDZiVmM0VGJZVnJ2c1FyYW5ib0dSRlJMV1NWSWU4UjdRamlncDJqR0ljdjIzbU53X0cwMnhOcFlILUJEX1FJOEZXY0pZRDBrVG1WdllYM2diYUZyRmJLckVRRW8yRlFnVEo5N2g2c1VudUc0UU16TUtPV0t6VQ?oc=5",
+      "gold": "drop"
+    },
+    {
+      "title": "The Federal Reserve is expected to keep rates unchanged for now despite high prices - ABC7 Los Angeles",
+      "source": "rss_google_macro",
+      "published_at": "Wed, 29 Jul 2026 11:47:50 GMT",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPQnEyZnQ5dWh6NGJkdk0wNGlXY3NfSWswOWhlZmp0Y1lUSnhqdjl6VGVoWkR3OHNOdWs1YVZJaWVIS2xxd1dlMWtkU2kwRFplX25PU3pldS14c1BYeS1WSkU2cVBxUXpDNFV2eFk2YXZoTDh5ajRsT216Sk91cXMzaGFvTkF1TnI3ajFLdnNETk5HRF9IY1BUTmwyRFZkVi0tbWp0d2Nvd9IBrAFBVV95cUxOeUItMlRiT0NXQjFoZS0xMndmWUpHOTNsM0ZabWJkZ0JRMEZxb0ZvLXVkTWEydk1KRlRGSXhYUWNvc3dHSjNsRmp1OEtrLXpDdERCVnBuUXlLNXdXWnFJeXh",
+      "gold": "drop"
+    },
+    {
+      "title": "Is United Parcel Service (UPS) Stock A Bargain Before Earnings? - finance.yahoo.com",
+      "source": "rss_google_markets",
+      "published_at": "Wed, 29 Jul 2026 21:09:44 GMT",
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQSF9BUU0xdEtWeDR6NEJrUUg5TGpWUlFsd3ZQTjJjNWxzYU5XM19jVS1McTFtRFUxNmhBeklaOW84b3pETzRIVDRjeGxqTHhzV2t3dDZoWllzZC1IWVkxT2NiTHRPNEpPOGF5Vy16cEY3M0N1WGhJSlBsakczNWhVdWRvajdlWGpncHZDVk9ab2Q0SW83a0FYV2tiZkk?oc=5",
+      "gold": "drop"
+    },
+    {
+      "title": "A Town Council Turns to a Deck of Cards to Break a Tie - The New York Times",
+      "source": "rss_google_us",
+      "published_at": "Fri, 28 Aug 2026 09:02:39 GMT",
+      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTFBoQVVBSGVvaDVia1NCRDhyWTBHaUtrRnR3MXVmVmc3LVQxN3BJLUVTVEFRWU54TnBJTnhhU2hncERmeGZERmlOWEpvYmJNbjdDZ1RFSzhJQXNhUXJDR3FyeDZEa0U1cXJLcVFwcDNGaWlPY291UEZuY3RpYlQ?oc=5",
+      "gold": "drop"
+    },
+    {
+      "title": "Bank of America cuts Broadcom price target despite raising earnings estimates, cites rising exposure to Anthropic and OpenAI",
+      "source": "finviz_export",
+      "published_at": "2026-09-09",
+      "url": "",
+      "gold": "keep"
+    },
+    {
+      "title": "NAHB/Wells Fargo Housing Market Index (September)",
+      "source": "events",
+      "published_at": "2026-09-15",
+      "url": "",
+      "gold": "review"
+    },
+    {
+      "title": "I spend my time and money caring for my aging mother — yet she gave my brother $100,000. Should I pull back?",
+      "source": "rss_marketwatch_top",
+      "published_at": "Thu, 24 Sep 2026 23:16:00 GMT",
+      "url": "https://www.marketwatch.com/story/i-spend-my-time-and-money-caring-for-my-aging-mother-yet-she-gave-my-brother-100-000-should-i-pull-back-7e4a3185?mod=mw_rss_topstories",
+      "gold": "drop"
+    },
+    {
+      "title": "WTO warns rival trade blocs could shave 7% off global GDP - semafor.com",
+      "source": "rss_google_geopolitics",
+      "published_at": "Wed, 23 Sep 2026 20:08:00 GMT",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQVkd2cU00a2dCRzVPdUhHMC1yZk1va0pvbG9HaXQzdHY5eF9UUE1aQTUwZ1A1WC1lMXN4UFZic3BuUVhnbE9nN2VhSm4wdlpmWkY5VVFVSHR0TzBuN0lOSE5QcHNKa2duZTNHNmFTUWdlb0w1Zzhjb3FtRk9GV0doTDVYX3J0VUREUUxmYnRKMDlNRmlFWXlxY0tnNTh4RzA?oc=5",
+      "gold": "keep"
+    },
+    {
+      "title": "Bulldog Stock Market: Who’s rising and falling after Rice University? - The Collegian",
+      "source": "rss_google_markets",
+      "published_at": "Sun, 27 Sep 2026 18:33:13 GMT",
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQWW1XSXV4cVhYYkRwQ2xxUFRDUGcxTlhjTEtPckctaTFBRDJGUU5qZ2dYVWV0YlJGcWtkRHJwS2hSdU01V1VmS1V2eHBKNm9Na29KSXFMQnhESXMyRnE3VkFRdHhvdTZXRWVTQ2pLYjdOZ0hQcXF4alNrR3cwa1Jkd0dLeXdfYVgzcFlSSG5YOURqYU1qMVc3M1lMLVlJSnZN?oc=5",
+      "gold": "drop"
+    },
+    {
+      "title": "A $10,000 Investment in SpaceX Will Be Worth This Much by 2030 - The Motley Fool",
+      "source": "rss_google_markets",
+      "published_at": "Mon, 28 Sep 2026 00:12:00 GMT",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNSEU4YU9hSHlMellHU0xoMkI3N3ZMeFQxb0taOEprT25sd21SY2dOaGl1Z3F5Y3lrajZVRzVGVzFPSUx1clh2ZlktZ2RzcmVISVVnenVualVUNDhjLVMtSzl5eVNybVBGR3lIMTZFWjVHcGsxRWJlTzZmZWFUcldlMUJUcXZ6YUlyelY2M21iSEFfN0pBUGplNg?oc=5",
+      "gold": "drop"
+    },
+    {
+      "title": "Rethinking the Fed’s Path Sends Bond Yields Higher, But a Data Test Is Looming - Bloomberg.com",
+      "source": "rss_google_macro",
+      "published_at": "Mon, 28 Sep 2026 11:00:01 GMT",
+      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNb2dNZ3RXUVVaX21XNmY4TmVyWVFkZlQ4aUtPZC1aN29hR0w4LWxvNldLZFRoYW9kZlBpWW1xaHpEazFBM0lFNXZmRTZ5MzdRY0tSZHhxU2MzcDFKUEZZcktvRlU2UGN3YThaZHlMSHJvdHhfQjR2UzNfTXJQazZLdEVMSlZpdW1PRVRsTURwNWVnSHZubjZTTjNDTzF1eWFoOU5pcXVnWWpJa01KcjNBUHR0VVZFMmMwRUkzS3I1MUJSeFFGZEotX3lB?oc=5",
+      "gold": "drop"
+    },
+    {
+      "title": "U.S., China to lower tariffs on $60 billion of goods. Here's what qualifies",
+      "source": "rss_cnbc_finance",
+      "published_at": "Mon, 28 Sep 2026 08:31:33 GMT",
+      "url": "https://www.cnbc.com/2026/09/28/us-china-lower-tariffs-trump-xi-meeting.html",
+      "gold": "keep"
+    },
+    {
+      "title": "Trump 'No' to Iran's peace offer sends oil soaring - Livemint",
+      "source": "rss_google_commodities",
+      "published_at": "Mon, 28 Sep 2026 14:29:53 GMT",
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQX1lrTWY4Mi11Yl9nd0Z1TkJwVVdIUTFjMUJlUmhLcWtPVndxR1RiOGg0TUJVOVVTWjBIbjBLWVZZYW1ZOHVfdXVrN1dRX2M0V2t5aU1KSlFlb3JCUnkxUE95OFdmbDhKRVFtYXJDU01pU2EtMVhxcFRVdW03U0JrWk52NmFPdDZ2d3drS0pDMTF3ZzkyNjRDUTFCZFJxSWliUThQRDBsOXNrejTSAasBQVVfeXFMUF9Za01mODItdWJfZ3dGdU5CcFVXSFExYzFCZVJoS3FrT1Z3cUdUYjhoNE1CVTlVU1owSG4wS1lWWWFtWTh1X3V1azdXUV9jNFdreWlNSkpRZW9yQlJ",
+      "gold": "keep"
+    },
+    {
+      "title": "Wall Street rises amid a decline in bets for a Federal Reserve rate hike - InsuranceNewsNet",
+      "source": "InsuranceNewsNet",
+      "published_at": "Wed, 30 Sep 2026 18:16:38 GMT",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQdE01NnJYX2I2WndCYzhudkpWcmk2emJCVjdodDh2UWFsYkVfTTFoQWNzNWQxMlcyNFllWmxlWThxaTFOQmFwM3Nha2F6dFdmT2lFbkRSb3NYenpnS0dxaENwRjEybGNVUXliSTA2di1NWXRzc3lhTWlFSmpvd2Qwa1FYQVJWZ1dFbHJkOUlsdVU2MkNZNU1aU0pveWhkaFpnSFRwODhacEUzbWRWMWcw?oc=5",
+      "gold": "drop"
+    },
+    {
+      "title": "Indian Oil Corp. Share Price Today Live NSE/BSE - Stock Price, News and Chart Updates 30 September 2026 - ET Now",
+      "source": "ET Now",
+      "published_at": "Wed, 30 Sep 2026 16:24:52 GMT",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQLXN0eU1iOWVGNGZrUlVUd1Ffbmx4R0x4Yi1xY1RmeVpDVHRtd3R2TTdrMWEtSDd2amgwSWoweTkyWjJfcmMxOGp5b19DN3BRN253TGtMZXM1V1VENzBhQzNPc3JBSTlCVUhfbTZnTGh2T3BuRk11aldlcUpITy1OSnhUV1BsLU1RV1Nv?oc=5",
+      "gold": "drop"
+    },
+    {
+      "title": "CIPS, SWIFT and the fashion supply chain's new money map - Fibre2Fashion",
+      "source": "Fibre2Fashion",
+      "published_at": "Wed, 30 Sep 2026 04:53:44 GMT",
+      "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxQa3JYempSeG9FbjZUSHNyS28wWklQYTVvcTlzbktlYnJXdHN6RGxpdjJDbi1TLWFLeDV3UjllNk9NRW9OUzc1VUJFR3d4STY1cFFaWjhQZmtMZGF2c3pmMEJUc3lOUDhET2VEYmQ3S2xyZFQ0Q1V0TVZNdmlQUmZUanNVQ0ctZXQ2cDBIRV9iNGhFUHIzbG8yZXZfaWNOQklKNUNELTJUMGlYNlNBanNfaHJKWmtHNVRTbFdsR1p4UEQ2em5Fb0wtSU90TmNLWVBrWUZV?oc=5",
+      "gold": "review"
+    },
+    {
+      "title": "UAE announces fuel prices: Here’s how much you will pay from October 1 - Gulf Business",
+      "source": "Gulf Business",
+      "published_at": "Wed, 30 Sep 2026 08:53:51 GMT",
+      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNV05DT3BPYm5WOVlxYjJwOGd3Tm1HWDFnUnFIclYyZjlyZ2lUQWFFNUFiejhjUWZlUGh0X3FBalRVZnpmUE5IOE81MkFmSjlfdUFZNXVaMF9rZnl3dmMzRVpMWWhMYkZXa3dHS2ZhZUM3TWhqSGFCUGxKZmtaLW8tbXNXV043T2g3bjI2SmRqMVU5QUR4R0ZPaU5KOWwxMjJ3X1Z0NUZ3OUE1U2hv?oc=5",
+      "gold": "review"
+    },
+    {
+      "title": "Veralto Corp. stock falls Wednesday, underperforms market - MarketWatch",
+      "source": "MarketWatch",
+      "published_at": "Wed, 30 Sep 2026 21:03:00 GMT",
+      "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQOVR5LWt0TGhteDZvWF9ZU0xBbDNzdTFPVFdDZEl2VGFJZnF0OG15VnBxMDRRUzZSLXVrTVpZWGNnOEhpVVZYV05GYWdfbDdjWWI4c19uUVU0U0N0ZUtrbldjYnVfd3RkeXpfVkxhZmlPTHVIMk1TRWNCQU03d190U1M0Z0lLRUx0Nk11bmkxRk9qdHFlbS1TbWZwT0MweFBKQWVMUEhncU0ta1VJM3NLUHhCWVFpUDg0UHMwYlRrZWxoMTlCMmNvdmprSlRtUQ?oc=5",
+      "gold": "drop"
+    },
+    {
+      "title": "UAE fuel prices over Dh4: Why residents pay up to Dh125 more per tank - gulfnews.com",
+      "source": "gulfnews.com",
+      "published_at": "Wed, 30 Sep 2026 08:54:22 GMT",
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPa1d5a3BLVXZfNWdJeTNyM1BZdkNtY2ZYc1d1X2dYUnd2QzhhNlNpWnFESElqOGtISXE3RUI5UUpEcmtGX0VIYndTRVhIZ1hEYlUwUWlqbnlJYmx6aFY5MVQ5Q1dzV2g4Njg1N2MzVlZOSFJRMmd0TzllLV9WaURpZm1nNE10WWZDWjU2QklXWV9pWnVodTFER3R5VEx3NjBBOVdrb0x4VkZxcXpBVWZsbng4Ni1YVHZq?oc=5",
+      "gold": "drop"
+    },
+    {
+      "title": "Gap Between Calm Market, Single-Stock Vol Harkens Back to 2000 - Bloomberg.com",
+      "source": "Bloomberg.com",
+      "published_at": "Wed, 30 Sep 2026 13:38:22 GMT",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQaXRVR3ZVQlhZcm1uTDZmc2JGdjBEaUNHRmVxM1hPRHAycy1ObWh6N3dYMXZ4dW1DOHVVVUM2VTNDTVpRZWZRTnFyWXZuZU5oaExILVdqWER4OE9jOG1oSWl0SGpWM3ZHdmE0QUptLVZzd0pSQmVwVHJMZ2RuOXZqR1BXcFBEVkl0U0ZXRXBPa1ExWHp6ZElLWmpHSXJDeGxEV1BRY01ZOTR1NWQ3eFpkNl9B?oc=5",
+      "gold": "review"
+    },
+    {
+      "title": "Share Market Live, Share Market Today: Latest Share Market News, Share Market Live Updates on The Economic Times - The Economic Times",
+      "source": "The Economic Times",
+      "published_at": "Wed, 30 Sep 2026 20:43:02 GMT",
+      "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTFBvU1A3YXdwdkdEeEhvQ1lLLVhhUk9sWUdXUFdDb1F4NjUxRDlnVDFkOUNjdFVjbTBBc09kNmNkRl9UbzkyOFVvbjIxYjFoMVQ3MUNJNGFmOA?oc=5",
+      "gold": "drop"
+    },
+    {
+      "title": "Bill Ackman Just Said 4 Words Blasting the Fed's Latest Rate Hike: \"Just Made a Mistake.\" Here's Why He Thinks Higher Rates Could Backfire on AI-Driven Inflation. - The Motley Fool",
+      "source": "The Motley Fool",
+      "published_at": "Wed, 30 Sep 2026 15:23:00 GMT",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNVmVHR0U3Q1ZLYlpuR1VMVnl5MDlnR0lFN1o3aWxnTWd0QVQ2d2s2RjFtN1RUUjlPZHlSRTAxbnZKa25aZkVTeXAwMElPTUQwVnBnLXJfZV9jRGZMMVRKWmloMG5iZ2REYlBfempSWlNsMVVvWk04Y2NCeXhINVFEWjNkeGJKckliNTFRNTdPbVc2SnRuYmlvbA?oc=5",
+      "gold": "drop"
+    },
+    {
+      "title": "Two Measures of Inflation: August 2026 - ETF Database",
+      "source": "ETF Database",
+      "published_at": "Wed, 30 Sep 2026 23:15:49 GMT",
+      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOX19Ja2c1VktfV2lJbnJEM3Z4VDZXUUFXcFFCRHZiaElXT2MxUjhsT3NoeWFXRkZfcXlRTEtvTkxPZHRNTUY5ZU1leG9VdnduUndHNXQ2RGFmMll3R1NyUVh2eUF3bWt3cS02WkMyd0RRV3hId1VucXFiSnViOVY0c3NybXdKeDA?oc=5",
+      "gold": "review"
+    },
+    {
+      "title": "India Gold price today: Gold steadies, according to FXStreet data - tmgm.com",
+      "source": "tmgm.com",
+      "published_at": "Wed, 30 Sep 2026 05:24:02 GMT",
+      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPb05LT1R5YWRibUN3aDNoMndMd1pkZEV1d2hGa09YM1ZfRWtnX3RMQ2ZBQXhQQm1VT2lkTXE1Tzh0VUJkaXhkeU5rZnZpcEc0OE50VG9qbk9DZGhiLWlzSWJVMmN1eldWTlVBekJOcURiZmtXMHI1UFpaQmU5MUNvOVlxU1VHN25hS1lPb1ZTb0RVODBpcjR6NWk2bXVoSUdpa1JpcG9CR3JhdmxwOFRVckdhcVVFb1JKdGFObU00Qmt5S3V4MW9saQ?oc=5",
+      "gold": "drop"
+    },
+    {
+      "title": "Chinese Business Chamber Voices Concern Over European Protectionism - teleSUR English",
+      "source": "teleSUR English",
+      "published_at": "Wed, 30 Sep 2026 15:26:15 GMT",
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQOHFfWWY3MmFXSVcyRjYydi12WS1iTkdhQ29PWnhIdDNFLU9RMGwyaVpQZExUcnFVQk9JM2FES2tkTTk4dlg4cTJGVGJlQ0tGNVI5RzNqTm9vOWRNZHVJLVhzX3VsYUsyanlyWUNSY2ljWW4yajJITXBhTExIOHU1YkQxN2NxMDNBYXI2QVBsd2NSdlhoRGtVNmdvU0dDR280?oc=5",
+      "gold": "review"
+    },
+    {
+      "title": "Crude Oil Pares Early Gains - WSJ",
+      "source": "WSJ",
+      "published_at": "Wed, 30 Sep 2026 21:19:44 GMT",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNXzdaLXFnaVViR0hva1RuVHJkVzFRakpFUlRUZmsyUHZHM3h4OG9vYXdhejV5RGlmY2VURnFUQmNoYTk4MW5Jb0Y5ZnpGSkNTR1RwbHRMSkpia2pkVnNIX0dtUlRNR1VoV2FsbnVaSEx1T3gtc01FcEY5VzRjMmtRZ1JuY2djS0pOQ0JVQXNvaWFCeTRSVlRoWXBpWGVwb01SOUNrU3VuM2E4Zw?oc=5",
+      "gold": "drop"
+    },
+    {
+      "title": "Diwali stock picks: Urban Company among 5 stock ideas from Ambareesh Baliga for up to 38% upside - The Economic Times",
+      "source": "The Economic Times",
+      "published_at": "Wed, 30 Sep 2026 10:04:18 GMT",
+      "url": "https://news.google.com/rss/articles/CBMiugJBVV95cUxOQU94Y1dZSlZqdXZIcERZUENLZXQwQl8wanlNZXRYcXlsQzMzSnJ3VF9TQ0RTZkppUVl4VnE2bDVtTW5qeXRFeFpHb1JYejR3WFh3LTZSblJhYjVHYU9RQ25udF9ERGZGclA5OUtuVUdjVTVGS2tscUlGVWRpd1ZDTFRvRjNUdnl1TUV6ZUZNWE5seElDbDY4aHQ4Wjd0N1FXMDQwYlVKQjNsQmVHSlZxWkIxMDBRbE1kX0FWRlRqZ2V3ZW9GSjJLQUt2OExrbVREOEI3azNqQjJUN0djQ1paMGVIOTQ1Y2N5Slk5LW9UbzloWjNXWUJwU3ZVelIzb3VkbkFKelRhcU1MSFJ",
+      "gold": "drop"
+    },
+    {
+      "title": "MU Stock Rises Ahead Of Crucial Q4 Earnings Report: Investors, Analysts Look For Clues On How Long Memory Boom Can Last - Yahoo Finance",
+      "source": "Yahoo Finance",
+      "published_at": "Wed, 30 Sep 2026 08:47:29 GMT",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQcGZpbXZMSzV5Q21pMEYzY3hxV3AydDd5azVTRmVfQVdPYUJhWmtybVdRREtNVllTcjZwaTNjbW9yYW5taFVpU1ozbzh0T1djdFNQblo5VHhDWkFURmZjUHV5UFJUQ2JGbUI5MjZDRTgtc3RLNTRialhiYllabXpwVkhLeVctSHR6YnAtemFSdWVVUk9ZT2ZYRw?oc=5",
+      "gold": "drop"
+    },
+    {
+      "title": "Why Celcuity Stock Was a Winner on Wednesday - The Motley Fool",
+      "source": "The Motley Fool",
+      "published_at": "Wed, 30 Sep 2026 22:21:00 GMT",
+      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNTlpaT214OXZUOXpzeEZGRkFsQWc1RDdvN1ZuQkxtUUxzekZBNmQ4Slg0NkdiczlZaFI0MjVqOGN1VFRzMnJUaUNtTFhHSXhGbHJaZXFCMWMxWDNXV1Z5SWpHUVRya2YxRjNyV3NKdE51VjhINFRra0R6Ykg1ZWExQTYxSUZnYjk1SWh2V0tLdW0?oc=5",
+      "gold": "drop"
+    },
+    {
+      "title": "GCash owner Mynt prices Philippine IPO at 6.6 pesos per share, sources say - Reuters",
+      "source": "Reuters",
+      "published_at": "Thu, 01 Oct 2026 02:23:00 GMT",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPLWNlVXVnQjNZYXItcm4wNW1TTFVnM2MydjRBVElTOTNVSDVSZ25DbnRYdEd3b0tMMm9QbXdPbzZrZVFLTWxnT2Z3eHJHX0p2Ujh5UW9vVHhXaVVDNDBOZk9qekhtclEtdlFodGUyZ00tN3E0YjM3SC1hRHllTHRxbi1YMk1GTXVtUV8tNFo3djlhem1SbzU5UU1nTjloMkpaZndvZzhORF92MnZlNVE3ZzVKTGw3R2pab0JBQk5jaWY1UQ?oc=5",
+      "gold": "review"
+    },
+    {
+      "title": "Why Are Bond Yields Soaring? - Yale Insights",
+      "source": "Yale Insights",
+      "published_at": "Wed, 30 Sep 2026 16:05:37 GMT",
+      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5ZREZrUG9ic1pFZFBwajBOM0dUbDBBNmhpR1l4VzFEZkhSZkdBLXVfVXZCS0dtQUxidjZNUUh5VWNFY1hTRjI2RjB3NGJnVHVlMHJpVlIwN1ViZU83SGNzNXJTYXlVY195bFlFWGs4U0NjQndr?oc=5",
+      "gold": "drop"
+    },
+    {
+      "title": "Micron Technology Tops Lofty Fiscal Q4 Goals, Guides Above Views - Investor's Business Daily",
+      "source": "Investor's Business Daily",
+      "published_at": "Wed, 30 Sep 2026 20:39:00 GMT",
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOZk5KdTRTNHNfVHp5TGozWW1HdU5BbVVReGsxZmloM3laR2tRNkFPNlJyMzlEb2VXVTlmemwta3lqdEUyNFlUMWpBTTNXdVBkTzN1dU44Wm5FR0NKbGkwSEM4N195bU1IelNCNmhZZGxUVHpVdERvZHZ6ay11WlNxODRHdDRzZ0FuY3c?oc=5",
+      "gold": "keep"
+    },
+    {
+      "title": "The Best Dividend ETF to Buy and Hold Through Every Market Cycle for the Next 30 Years - The Motley Fool",
+      "source": "The Motley Fool",
+      "published_at": "Wed, 30 Sep 2026 20:32:00 GMT",
+      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPUWNwSUdFYW12S2VHQjZyMGVMSDhmUExxNDg1S1g1UEktbTZoOFo5UVRmX3ZyajRrcWU4VFJEcUg0NmkxYmF1N0VNbUNMUXMtc1YzVDNaa1NadGctRE1GaDV3WnZnZWNTSVJFeVR5cm52OWNTZ3NQZVRPOFdSbGNiWmF2UTJ1YzVGVlpUdTQ5RU5wQUZPLVE?oc=5",
+      "gold": "drop"
+    },
+    {
+      "title": "August PCE inflation comes in lower, but with a twist - American Banker",
+      "source": "American Banker",
+      "published_at": "Wed, 30 Sep 2026 13:43:00 GMT",
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPTEEzcFI2bWcwNXpkUGw5RS1XQ3ZPUTNOMm9qc0hkeUhndG5ROHpGWEl3MTVPZERIOVFBNkdWRWhWaTBDNEdMWmRqQldLVkpXN0FJdzhwcWJXVmNieDhwRTBJaWRWSEpzaHVVazFLbFNNQmhQTVBCclQ4S2ZWVkNYc0lubm9KUVpVb0YwOVhDSlI2M01TNkZTZWVTS0s?oc=5",
+      "gold": "keep"
+    },
+    {
+      "title": "Where did the peace dividend go? - Defence24.com",
+      "source": "Defence24.com",
+      "published_at": "Wed, 30 Sep 2026 05:30:01 GMT",
+      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9aX2dCSzJYMjE5Ym9ieURsamsxQVI4dEZsTzRBcnFBTFh2aTV4OHlfTGZYd0VSUUdYMngzWER2Q3hYRzFDQ3BBRmFpajJXWHFVOEo1em5OUmduQS0ta3RXcEJOWE9oY24zZTlUUDJKbW0yNVU?oc=5",
+      "gold": "drop"
+    },
+    {
+      "title": "global market updates us stocks crude oil gold prices - zeebiz.com",
+      "source": "zeebiz.com",
+      "published_at": "Wed, 30 Sep 2026 05:18:01 GMT",
+      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNRkRpVFhhUWdNQ3BZUFFER0dGQTc0dlVvQWhmdmdScE5RRlVhT2dSRV9vQTJBd1VheTFJZEJacVM2UjBKTTVERV9oYTMxT3hYekFoU016SUVKZzZzUFkwSWd0bnRObG5aQ09nNEhuY2kwQVgzYjJTcUV4dy1CV2tRaUVyNlFUdnJYTzBoLXdMcDdGUXloRklGdnM3N2pBVzBYamhMdF9YZkQ0YWNlY0E?oc=5",
+      "gold": "drop"
+    },
+    {
+      "title": "Fed’s Preferred Inflation Gauge Points to Continued Price Pressures - The New York Times",
+      "source": "The New York Times",
+      "published_at": "Wed, 30 Sep 2026 14:38:12 GMT",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQYlhkRWRnNTd1WFFKa3k0RF8yNmVNSG5MNHdRZk1PVi1na01fMHB4bldhb2JZeTdWc0gwZmhWbE5wWkVzWHF6eHBHUThHc1hnNWN3ZEJQN0FYVGFlRW1RQl9MMEZfaFhIeGY1OUl6Nk9aM3VURmFlVFZQNEJhU2hGU01VZ2ZOdWlX?oc=5",
+      "gold": "keep"
+    },
+    {
+      "title": "Is Carmax a Buy After Its Latest Earnings Report? - The Motley Fool",
+      "source": "The Motley Fool",
+      "published_at": "Thu, 01 Oct 2026 02:02:37 GMT",
+      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQOTNOQlVRTDJZTkNWLUJ5b28tTTZvamQxZ2t1MnlwZEFsLVdvb01rWGdXOGhaQXRDT1N2c0MzakFORDlMZll0aHIxTVNCNEx2UjJYVzZoeUNTUnowdXY4TVFIcVB4Rm03SExocWVEekp4YUVOWktjTnhKQzFUTDlOQmtTTE5SdHVGbWYyUG5FWFRxaDhyZ3c?oc=5",
+      "gold": "drop"
+    },
+    {
+      "title": "Fed watchdog finds no crimes in $2.4B building renovation, only mismanagement - The Virginian-Pilot",
+      "source": "The Virginian-Pilot",
+      "published_at": "Wed, 30 Sep 2026 22:21:02 GMT",
+      "url": "https://news.google.com/rss/articles/CBMiswJBVV95cUxOQVloMG42SU1uYnZJR3ROSDM4VHpBNzlRZGU4SE5NOV8tRVFQMVhxUWRDUTYtY1RfazNvWG5teXVoaVh0Zm9NS0c2WWt6UmJfblVUOWFwUjBMbjRIUXVEVzU2RldSRWZYangzNzBFYkRweFpuY0hNdnNEcEd1cjNQdGdyMEN4QXRlVHdLdmVSLWU4SW9zY2QwRHVFZmJReGRhRXpPMlJ1NU9TZ3NPeHhWdGJQc2FhZ2lTb2pkc2Z3blpiUHF4WTdkaUxXYWtCb3dqQkJ3TE5Oak53d1RGYXJyMm1iVEVKTmNpMEt6RWdJZGlaSTVHX19zRUdsaGR1bFJpZWpLOHdMcVQxX3J",
+      "gold": "review"
+    },
+    {
+      "title": "Geopolitical volatility and shifting trade dynamics - Indian Transport & Logistics",
+      "source": "Indian Transport & Logistics",
+      "published_at": "Wed, 30 Sep 2026 08:30:33 GMT",
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNTGN4ekdPOVEyVkpqaFEzeWZKaENvbTA4UGlld2doYnR3ZVhZaEFyRjZUamlJd1d1MXhUVU8ybnNzeVZfdHE0NUJiUU5ncXhnNHRINklhTkFJWTJYSGwxSDFRSGxsM3BfYVN5YWdFLWxlbS1POGU1S0tPRGQ3OWpuRVNLVzVjQy1fa1g2ZE13UdIBlAFBVV95cUxNVkR2OExta2hFQWxUOEtJZWlvS0p6Y0tpay1oX0xjRVV2dGU0aGotYno5aGtNOTRPRndRbTFtWnZEVUNyWUstcDQtZkU2cjBQdTFsRnBfQkVjZTZSNmlZMXFJcUFoT2t5MHE4TVdncEtNYnVNQ0xSbmg",
+      "gold": "drop"
+    },
+    {
+      "title": "Rivian Stock Is Going to $19 According to This Wall Street Analyst. Here's Why They May Be Right. - The Motley Fool",
+      "source": "The Motley Fool",
+      "published_at": "Wed, 30 Sep 2026 22:30:00 GMT",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQWm1GMmdfMlJ5VlN4SjBQWXQzc1hjLWk2V0psQU9VRWlueDR1aWd5V0h3Z2lObE9qdFN0WUk3ak00Yk1keGhDV0lCY013bVM4VGloZGpENVY5VkJxLWtRV1BvZDA1TDd6TFR5ZVlBQ1BRSUlkQWpSUTNDNUR5Z1o5ck9mbXJzT0JYbGdMRUhOanNoeU80S3F0eQ?oc=5",
+      "gold": "drop"
+    },
+    {
+      "title": "Most US stocks fall after the bond market cranks the pressure even higher - FOX4KC.com",
+      "source": "FOX4KC.com",
+      "published_at": "Wed, 30 Sep 2026 21:04:12 GMT",
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPLVFGY1dPdUJCY1M3WFd0WElxd0RyNGZRNkxUM3VHR0ZWNGZRUHF2V0JGcXlJYjZBYjZ3dmdrZ0ZlSGR1OTdYcXFaMzdpdUJXUVl2bkhuSm13TGJDR3FwT2JMZlFiMHhmMkd3ME03RXFuZk1rdnlxLWwwZXVBWW01R3RBdlRDZUNtb0JfemVNQXFTN3dHUzBfY3hCaEFMSzhISHVtLWR30gGrAUFVX3lxTE1RTVRYMXJDRlM0R0s4eXZyZ2RVNUlmLUU0dWVLTGhqR0RPd0F5SWE1bzYwd2FWN1B3SnRoaVRXVXB3X0c3UHNoY3dIUTZ4WmxzZkN3NDQ5cm83ekdfNVpXblR",
+      "gold": "drop"
+    },
+    {
+      "title": "Fed rate odds: Traders flip to an October hold at 65% after PCE report - Kalshi News",
+      "source": "Kalshi News",
+      "published_at": "Wed, 30 Sep 2026 22:51:05 GMT",
+      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOdmptNlYtZl84LXl4bUhESG8ybWNjbW1mS2FzSjNVQ0tmRzZobVFCQ2FzRTBkT0RUWV8wSDhQSWZ2em9Ca0hlQW9XVDNRRXpWRjFGMFVOb3dsc0UydE56aHUwdXNhWWEwZHRxal84TWdqWU4xY0JSS01RbzlfbEgzbjVKZTg2UC1neUVpU3g1XzBaVnRsc2c?oc=5",
+      "gold": "drop"
+    },
+    {
+      "title": "No criminal wrongdoing in Federal Reserve building renovation, watchdog says, but it was mismanaged - pbs.org",
+      "source": "pbs.org",
+      "published_at": "Wed, 30 Sep 2026 18:25:56 GMT",
+      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxNZXB3YWY5MFhtZkhIYng3V0k5VWF5blVPTzdBdmNoX3EwaUxQT2RXdWhySHliOUpyXzZIVnh2c05DN09WRVBwZXVTTXgyVGxNcHh6NmFqNl9QN21hM2txbzFnM1NacWhyR2lNRGkwbm4wQWZzUk1IN1VyWm5RVTBDNHJFZkY4THl5LUFVc1BMVFdURzYxXzVpVkpnQXlsdmFGLXVQYWg3R19CY3IzWC1ab0xrUGJieUlDMm1VRWN0c0VXNUloTWRycXFEbFAyR0ZB0gHWAUFVX3lxTFA4MjRZM05sZjkxZE1zOW9YMFpHLS1mV1l1WG0yaFBWcm8yQUhSSTEtUVlaU3JKT0Y",
+      "gold": "review"
+    },
+    {
+      "title": "Best of BS Opinion: After trade policy clashes, is a capital war imminent? - Business Standard",
+      "source": "Business Standard",
+      "published_at": "Thu, 01 Oct 2026 00:45:56 GMT",
+      "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxPUnpiSmIxdHdxM0JzbkRyc2Z5VmVaZ25aVWFSOC13Vi1RVEJhd0w5aVdMdVdEUFhrR0dOZ1MxWnRwdUYybjZGSGY5ZTNMdGFiQ3E0QUNWUk84bnFDMWtDLUYwQzRIdVgwN2Q4anlGVFcyU3RMbkhWR0FXR2JkQ3ZwQXQ2R0RRTzVSeHdMYzVjajNzWG5oeDVIVHlNQ3ozOU5iTk9OR3BJVDA0WmhWa0JBU1NlLW1GVVZhOFFuZzVPNmF0ME5iaTd2UGNGOVJtSWs4cDEtNEpFbXhlekpRRGZR0gHkAUFVX3lxTE8wcUZIa0MyRktKOEpTcVFoQW9FWkpCRDVoN1lCSlBCVjU",
+      "gold": "drop"
+    },
+    {
+      "title": "Breaking| The US inflation preferred by the Federal Reserve slows down from expectations What did the data show - المتداول العربي",
+      "source": "المتداول العربي",
+      "published_at": "Wed, 30 Sep 2026 13:46:05 GMT",
+      "url": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxQVWdoRUpTUXk0WjBDTFhwdExwRUdGYUVuNGxLajRTRWttZE5kMzNNS0xMblB6TWpXbzNUWDVmME5UdG5VdlVqWnRhcjl2N3JBN2VJd3VoX1FyeXVIcks5UGNJYm95Y2kydzJhLXZBd3JybUVjUFQwU29WQnUzU3d3VkVtMkFDZjdaaDRvTjlFMVFCSHBHb2dDSl9jMEF5QXV1WFhhQjRCTDQ0WEdpX0V3Y0JjZVZLYzFCeVhHbnZnMUhtZER5TnZwNW90cDl3azhrQlBLNXlRdlEzc0RsdVhNSzd5cGpQOU05b1lfT3VoSTJnWFdV?oc=5",
+      "gold": "keep"
+    },
+    {
+      "title": "Furnace Oil Price Increased - Energy Bangla",
+      "source": "Energy Bangla",
+      "published_at": "Wed, 30 Sep 2026 14:06:47 GMT",
+      "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1tTU1qUEdPOHpERllERUxDVVBKTl9mdHJFamZRQmluT25XcHB4UTY3SEx1UGN5bXVxekx6S1kxMGdRTS0tc0g3dm5wR0N3cjFUMUdya0lERENvM0NoSW1kd3QtbDNUZw?oc=5",
+      "gold": "review"
+    },
+    {
+      "title": "Inflation cooled slightly last month even as consumers stepped up spending - ABC News - Breaking News, Latest News and Videos",
+      "source": "ABC News - Breaking News, Latest News and Videos",
+      "published_at": "Wed, 30 Sep 2026 12:59:55 GMT",
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNcG5MQjR6NGVfa2NBdTFKN0FOUE9IRTQ4b1d0Wnh0V2lUT0xmTlZscFlucFFVaDl5dnpSeW1ZMFJXaXJHYWlZbHo4MUhVSGFIaGJkTzROZTIycGYxRTFYcUtxYmNjbjMxOXpVSURaeFcwRjAxX3hXckNQY2s4SFExUGI3U2N4MzlmVUhsTl96WjY3dktoLWhEei0wSmpmd2pUUTZV0gGoAUFVX3lxTE8yTGw4eVpVdkRQdFdTc3hrODM2enNDdWhIY1p6NlA1d1FrdG1wT1RlZnhHdFlYU2hjTHhTWmEyTVEzMlQwbVI5TmZ5QTV6OXdyVy1FX3JXT1Frd0hPWDgxa29VLVh",
+      "gold": "keep"
+    },
+    {
+      "title": "FNDE: Still A Leader In EM Value With High Geopolitical Risk (NYSEARCA:FNDE) - Seeking Alpha",
+      "source": "Seeking Alpha",
+      "published_at": "Wed, 30 Sep 2026 21:55:18 GMT",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNYUZMcU9MSXVfRlJTWm9jOEJ6THJhTi1BMkFtZ1FoRGdzLTJvOGxGY3VIaFZYVVB5UzI3RGZVckJObGpDbS1WamdzYV9WU3QzSzRfZW5vZkhQbnpyN1NwMzloNU1PdGp2S3YyMFp1dWdEV2VISjZQaG5ReTRMSEtoVEN0Snc0ZHNnMk1RQUR4VmF5dkRiLUZWWHFEalFZb1E?oc=5",
+      "gold": "drop"
+    },
+    {
+      "title": "Gold ETF GLD drops nearly 4%, hitting lowest in 2 months amid rising rates and oil price fears. - Pluang",
+      "source": "Pluang",
+      "published_at": "Wed, 30 Sep 2026 11:34:46 GMT",
+      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOejBBR2FveVB2STVqc08xUkttQlBQQTFEbkw1MWR5U0txazdFVk1YaW1xUTFIZFptcVcyYTYwVUZqdkQyVDFkR0paWU43NmFQUWVvRE1kUFU2WUkyZVVHM3ZGMTktazljNl9HbU9UaW5XRUMzOU12dzV5ZDJoQTZYUVVYVjZVNWwwT1lacnBvUklFaU5TRkhRcDlDcw?oc=5",
+      "gold": "drop"
+    },
+    {
+      "title": "Viking Therapeutics Stock Soars 36% on Weight-Loss Drug Data. Why It's Not Too Late to Buy the Stock. - The Motley Fool",
+      "source": "The Motley Fool",
+      "published_at": "Wed, 30 Sep 2026 22:00:00 GMT",
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQck1vNmZhVDRQS1gwejdFbnJXMTNHR0lUNFVvTl9ZeENTY0xQS2NoYy1ta0xFM2YtNVROTUFsNDRyMFcwY0dXM0c4cXZiczM1d0drekF4dVJWLVJzb0lUOFZSS3daamlIa2tHVGJmcDg0Y1lBYVA5a3UtVHhoUWx1THFnWVNLd1FjS280SGQ5VVRGd09USWln?oc=5",
+      "gold": "keep"
+    },
+    {
+      "title": "Goldman Sachs Updated Its Forecast for the Fed’s October Interest Rate Decision Following Recent Developments - Cryptonews.net",
+      "source": "Cryptonews.net",
+      "published_at": "Wed, 30 Sep 2026 20:08:31 GMT",
+      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5IWkZZSzBhN01PUEtXWjZuUjVTRlVHal85cjEwdEN5TG5GTUhvWWZQclM3OVJpT1REdk8xMGxOdkVONFozdTVTQXZycm5ua0R0TU9Tdld3VXI?oc=5",
+      "gold": "review"
+    },
+    {
+      "title": "Dividend income at risk? 8 stocks with inconsistent dividend payout: Indian Oil, Sanofi India, UTI AMC, and more - Livemint",
+      "source": "Livemint",
+      "published_at": "Wed, 30 Sep 2026 12:43:22 GMT",
+      "url": "https://news.google.com/rss/articles/CBMijgJBVV95cUxPeWxWZUN1b0YtRVlsTzI1UnVIV2ZaM1BaVTVHc1FaXzNQeXpOWjRqZHBZVmRvQU91YXhDVURENTJCaU1ycEltd3M0YUtlbWlPaGszRXJIWkVLV2ctcS1jWkQ1ajVNdloxRWdiMHZVcTl0djBsNWZRUWdNOTBsSkpKRWYtak5sajlzWjdqazNjN1lyNjN5RUxJNVVSQkRDTU1iWVR0ZlprZFJPZ0hVU0RVR0FlODVCZFpOZUF0VG1Bb3JfOUJPMTRuVjRncFEyVG9CSmwzemE3ZnZ3bVg1blFRNGFjVDU1M3Qwano4bGRkZzA5OVluWll6T042WmZoM2h4VFgwUXA5QzFhRGd",
+      "gold": "drop"
+    },
+    {
+      "title": "A Savers Insider Cashed In Options Struck at $1.41. Here's What to Know",
+      "source": "rss_yahoo_finance",
+      "published_at": "2026-08-08T18:35:46Z",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/savers-insider-cashed-options-struck-183546940.html",
+      "gold": "keep"
+    },
+    {
+      "title": "War on Iran: Phase II: Day 30",
+      "source": "rss_aljazeera_economy",
+      "published_at": "Mon, 10 Aug 2026 14:07:04 +0000",
+      "url": "https://www.aljazeera.com/video/newsfeed/2026/8/10/war-on-iran-phase-ii-day-30?traffic_source=rss",
+      "gold": "drop"
+    },
+    {
+      "title": "Inflation Continues to Moderate But Remains Elevated - U.S. News & World Report",
+      "source": "rss_google_macro",
+      "published_at": "Wed, 12 Aug 2026 13:13:00 GMT",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQNGlqNTRlcTBkYnNNU3RIdVBDX3hlaFpMNVdKQXdHakI2a0dJbExpZm0zVnV6R1VoMUVHUzFkUFVOYTUyYXVZZnhzRTF4bDVmYl9OU292RFc5b3YyMWFhN0gxU1g1VklFUTAzeElMODVtZ1JINEM0Z2FUcjdfSUJTa3lSZGR6dW9SRklKMXNfWTZyT1dSdzZ2a1BVYlFKMXBEZzllRTFHVVY2T1hFbzNYT2k0VVY?oc=5",
+      "gold": "keep"
+    },
+    {
+      "title": "Stock Market Today: Dow Rises Ahead Of Inflation Data; Cisco, AI Name Cerebras Plunge On Earnings (Live Coverage) - Investor's Business Daily",
+      "source": "rss_google_business",
+      "published_at": "Thu, 13 Aug 2026 12:14:00 GMT",
+      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPYmZLem1YYklRdGhndWxzVkJyQ2o5WDF4b0pvVThTRmZsbFRocmpFakx2enRqY01MSXNjNnZVLW81aXY2R2JmRk8wMlpHNTRtY1JxSGl5VXNuN0lXdlFmNWRpU1cxd1l2Wi02cTZvUmM4eXZNajNId25uT3RBRzhFSXZ4YVNGbFVOVE92ZjhzVHFQWG8yMTF2MjFIZ0ZncnNJTEtHWF9tbDhlNmttYVJPdk5maGFySGxMNVJ4Ug?oc=5",
+      "gold": "drop"
+    },
+    {
+      "title": "Spero Therapeutics Q2 Earnings Call Highlights",
+      "source": "rss_yahoo_finance",
+      "published_at": "2026-08-13T02:04:10Z",
+      "url": "https://finance.yahoo.com/healthcare/articles/spero-therapeutics-q2-earnings-call-020410343.html",
+      "gold": "drop"
+    },
+    {
+      "title": "Gold holds near $4,400 as fading Fed rate hike bets weigh on US Dollar - FXStreet",
+      "source": "rss_google_macro",
+      "published_at": "Mon, 17 Aug 2026 11:28:11 GMT",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQTzV0WHFzU1g3UTZ6bHBHZEdYN3VCWHpyaVN0N2JHc3JxMDh1dUJUYUl5aV9zaXZFNnE1RExQak11aTgtOHQ0V3haeWIwWDBBS2FJLVVkdEJWRk96eVB5RjRSdFdiMzFkaHBQa3lnS0EtOW9ZSWxoOFl3em5zYzBpeXlkVU1ObjV2eGk4cjVKcE1EUE1JdnlPakY0bXdHdkp3N3V0cWM1VXg2RzBldG9BWkZn?oc=5",
+      "gold": "drop"
+    },
+    {
+      "title": "From jumpers to slug pellets - how British wool is back in demand",
+      "source": "rss_bbc_business",
+      "published_at": "Tue, 18 Aug 2026 11:18:39 GMT",
+      "url": "https://www.bbc.co.uk/news/articles/c8xnkjwdn5wo?at_medium=RSS&at_campaign=rss",
+      "gold": "review"
+    },
+    {
+      "title": "Palestinian factions explore broad alliance for November elections",
+      "source": "rss_aljazeera_economy",
+      "published_at": "Wed, 19 Aug 2026 13:00:43 +0000",
+      "url": "https://www.aljazeera.com/news/2026/8/19/palestinian-factions-explore-broad-alliance-for-november-elections?traffic_source=rss",
+      "gold": "drop"
+    },
+    {
+      "title": "Walmart stock drops as sales growth slows, customers make 'trade-offs' amid high fuel costs",
+      "source": "rss_yahoo_finance",
+      "published_at": "2026-08-19T18:23:27Z",
+      "url": "https://finance.yahoo.com/markets/stocks/article/walmart-stock-drops-as-sales-growth-slows-customers-make-trade-offs-amid-high-fuel-costs-182327744.html",
+      "gold": "keep"
+    },
+    {
+      "title": "Shanghai’s answer to Nasdaq outstrips Hong Kong amid Chinese tech frenzy - Financial Times",
+      "source": "rss_google_business",
+      "published_at": "Fri, 21 Aug 2026 02:18:57 GMT",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPZGowMWk5N2xTT3VQa3ZHcXplOFZoSTZiaXM5a0UwelFKQUNpRGpMdTB4dzkwcExvWVAtR1hGR0RtZXJRN0VmbXRYOGNpUEpvbHVNZnJwSW5KNkNFSnJyVlVTTWh4Si1UajFOb3VfQUtzbU1NSkJSbUo4bU45OGR4S0RtSlU?oc=5",
+      "gold": "review"
+    },
+    {
+      "title": "YMTC files for $4.9 billion IPO on Shanghai Stock Exchange - qz.com",
+      "source": "rss_google_markets",
+      "published_at": "Mon, 24 Aug 2026 13:45:28 GMT",
+      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBEZlcxckxoWFh4M1AySHYyekpIaFp1aUh2N1FlRWYxTEg1Rnk1OTFJcnZfdzFLQWFJWldBc2JjVy1ERHQ1bnRYZ2JJZ3JDS1JTUm55Vk1JbzRXcU9wMjJ3ZjktNUc1aVNKWVRwaVNB?oc=5",
+      "gold": "keep"
+    },
+    {
+      "title": "World shares mostly gain and oil prices slip as the US raises pressure on Iran - AP News",
+      "source": "rss_google_business",
+      "published_at": "Tue, 25 Aug 2026 09:14:00 GMT",
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQUnkxV2Y3U2loLXNvZXJ1RGplTnM3OFdWb0F4dHpGT3Z5MmxLVlg1NkczOUI4ME5ldmZWWTY3ZWxxRDFvdWpaOEsxSXRXdk5ISGpYNkY2Q0JvWGVwYmdHakpuRDQxWDBGb3BLcnF1MG9jYzNsNVItLW1tQ2tXZEc1c0tMUkhzQjVPZlgyRXFWMUl4eDg2c1F4NVp6bkN2S1FK?oc=5",
+      "gold": "drop"
+    },
+    {
+      "title": "Treasury yields little changed ahead of key inflation data - CNBC",
+      "source": "rss_google_macro",
+      "published_at": "Wed, 26 Aug 2026 08:30:55 GMT",
+      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1yVnZpcllwNFdGcDd1Zk8xcTVYNEZTc3AzemdzWVdRWU1iT1EtY3VhcHEyWGpqNEdpN1ZFUTNTSkEwQm1rZlhuNjM4QzVldlZRcnBja0dDeXppTkxLRXhaUG5hbTVvLVFuZkNxTTNSNUJBVnZm0gF6QVVfeXFMUEJsdXRXUFc1Vkl0OWFibE45MTRQQTR0clJsVG14Q1lkOHM0a09Oa0swUlFuQ0ZSZlBsWWNKVC1pZ3VpTW5FRVdqYU42SV9lN0FqSXM2Y1JKQUtWalBDRzhuOWloMUJwNHc5SE1KbjFSc0pwSS1ZQ004aHc?oc=5",
+      "gold": "drop"
+    },
+    {
+      "title": "Salesforce’s stock surges as AI momentum fuels revenue growth",
+      "source": "rss_marketwatch_top",
+      "published_at": "Wed, 26 Aug 2026 21:04:00 GMT",
+      "url": "https://www.marketwatch.com/story/salesforces-stock-surges-as-ai-momentums-fuel-revenue-growth-8c96eef3?mod=mw_rss_topstories",
+      "gold": "review"
+    },
+    {
+      "title": "Al Jazeera reports from hospital in flood-hit Nepal",
+      "source": "rss_aljazeera_economy",
+      "published_at": "Thu, 27 Aug 2026 12:05:00 +0000",
+      "url": "https://www.aljazeera.com/video/newsfeed/2026/8/27/al-jazeera-reports-from-hospital-in-flood-hit-nepal?traffic_source=rss",
+      "gold": "drop"
+    },
+    {
+      "title": "HPE to Report Q3 Earnings: What's in the Cards for the Stock? - Yahoo Finance",
+      "source": "rss_google_markets",
+      "published_at": "Fri, 28 Aug 2026 15:27:00 GMT",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPbmVzbUlXU3JhczNMNnBOeDdIV3RuM0RLMV9WY2Y4N3IxcU96dDNqaGhSZDBWaWVWVUZ4QnBNWGU4YW9wdU5HcVNKRkVoeXd5T0hDSVFBU3VESS1jelBWakVlb1FfY2JZTUFrZ01Rbkh6WGs0QkI5VmVEci00UkFCcjBkdmZCOHE3dVFEWnFnV1J6LXBxSXFnaA?oc=5",
+      "gold": "drop"
+    },
+    {
+      "title": "YUM, YUMC & BJRI: Which Restaurant Stock Will Shine in Q2 Earnings? - TradingView",
+      "source": "rss_google_markets",
+      "published_at": "Wed, 29 Jul 2026 14:18:00 GMT",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOSm4xNWM2X2xneUpRcjZ5Mlh6T1Z1T1QxZjF0aFgtN2dISldPVTNmWTZ6cTF3Si1uSXZ6LUtSTkQwOEFuUnpmS2dQSTZBZXhveGp5cE9JOE9EMFpxM1MyNEZZMHBiSUJHcDlpaEM0RV9xT0ZWR2ZTUkg4X251TTJDVEZWNjZwQ3pfMmtTYXBoMnBIRm9JQ256ZEU3OS1MdGZRb1loUHFBbFdPZi1MdnA3bnlvMkczRlVZVmc?oc=5",
+      "gold": "drop"
+    },
+    {
+      "title": "Mark Zuckerberg says Meta found a way to make more money - thestreet.com",
+      "source": "rss_google_business",
+      "published_at": "Thu, 24 Sep 2026 14:07:00 GMT",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNSkZIQ0xZUXZDTjNvU3c5N3c2OG9vUVItV09FUmRGMU5LT1lsdU9MLUxGa1F4WGNnUEJuWE83bzQ4WS1xOTREVV81Y24yZF9teVhQd0Zya3dqa0V5UE56S1BlS0MzYUctbzlEUHNKXzhIT0dpakY4Z0d5YWIxN2wyZm02UzhPS2JQV3d3?oc=5",
+      "gold": "review"
+    },
+    {
+      "title": "Healey to promise 'new age of industrialisation' for UK in conference speech",
+      "source": "rss_bbc_business",
+      "published_at": "Mon, 28 Sep 2026 07:19:48 GMT",
+      "url": "https://www.bbc.co.uk/news/articles/cjdx53edkglgo?at_medium=RSS&at_campaign=rss",
+      "gold": "review"
+    },
+    {
+      "title": "Amazon just dropped new early October Prime Day deals — here’s 41+ that are actually worth it - NBC News",
+      "source": "rss_google_business",
+      "published_at": "Mon, 28 Sep 2026 19:22:44 GMT",
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOZk5kVHNHZ3FCZWxLZDVnZTFvOEhhaGdYbTlUZW03eUVVZzJZQmJza2F3NExpamFmWmJ3Nk0wckVJd0NnNnk0NjhzNnd2d05MYjZFdGI3WU1VenJNUWFpaEVWWE1EUzZSTUlpU2VRR0VEenJ5b3UxdzVqdU0zSklwTXdvd0pJdmh2NlZyQlRR?oc=5",
+      "gold": "drop"
+    }
+  ]
+}

@@ -276,7 +276,7 @@
         }
         setErr("");
         applyFilter(day);
-        setMeta("Day " + day + " dispatched (code gate). When the action finishes, click Reload draw.");
+        setMeta("Day " + day + " dispatched (live JEV when the key is available). When the action finishes, click Reload draw.");
         dispatchDay(day).catch(function (err) {
           setErr(String(err && err.message ? err.message : err));
         });
