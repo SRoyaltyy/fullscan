@@ -8,7 +8,7 @@ def payload():
  for k,q in QUESTIONS.items():
   if q['type']=='noul':out['answers'][k]={'type':'noul','noul':0.0}
   else:
-   selected='change' if k=='q5' else 'investigate' if k=='screen' else 'event_main'
+   selected='change' if k=='q5' else 'investigate' if k=='screen' else 'qualifying' if k=='eligibility' else 'event_main'
    out['answers'][k]={'type':'choice','choice':selected,'probabilities':{c:float(c==selected) for c in q['criteria']}}
  out['answers']['mechanism']['noul']=.9
  return out
@@ -44,6 +44,7 @@ class Tests(unittest.TestCase):
  def test_weather_veto_blocks_generic_atomic_false_positive(self):
   p=payload();p['answers']['q5']={'type':'choice','choice':'weather','probabilities':{'weather':.98,'change':.02,'junk':0,'rumor':0}}
   p['answers']['reported_fact']['noul']=.9
+  p['answers']['eligibility']={'type':'choice','choice':'qualifying','probabilities':{'qualifying':.4,'not_new':.3,'not_a_fact':.1,'out_of_book':.1,'packaging':.1}}
   self.assertEqual(decide({'title':'Treasuries dip ahead of inflation data'},p)['decision'],'drop')
  def test_teacher_audit_invalidates_acceptance_without_relabeling(self):
   b=round_(0);b.update(rubric_sha256=sha(RUBRIC),protocol_sha256=protocol_sha(),gold_audit_invalid=True)

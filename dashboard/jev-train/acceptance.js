@@ -18,14 +18,14 @@
       ' · Both class recalls must be strictly above 80%; every round has 100 labels.';
     panel.appendChild(models);
     var table = document.createElement('table');
-    var headings = ['Round', 'Role', 'Useful kept', 'Trash discarded', 'Keep precision', 'Overall', 'Fresh', 'Result', 'Streak'];
+    var headings = ['Round', 'Role', 'Policy', 'Useful kept', 'Trash discarded', 'Keep precision', 'Overall', 'Fresh', 'Result', 'Streak'];
     var header = document.createElement('tr');
     headings.forEach(function (name) { var cell = document.createElement('th'); cell.textContent = name; header.appendChild(cell); });
     var head = document.createElement('thead'); head.appendChild(header); table.appendChild(head);
     var body = document.createElement('tbody');
     report.rounds.forEach(function (round) {
       var row = document.createElement('tr');
-      [round.round, round.dataset_role || 'acceptance', percent(round.useful_recall), percent(round.trash_recall), percent(round.keep_precision),
+      [round.round, round.dataset_role || 'acceptance', round.policy_version || 'unknown', percent(round.useful_recall), percent(round.trash_recall), percent(round.keep_precision),
        percent(round.overall_accuracy), round.fresh ? 'Yes' : 'No', round.gold_audit_invalid ? 'INVALID: teacher audit' : round.pass ? 'PASS' : 'FAIL', round.streak].forEach(function (value) {
         var cell = document.createElement('td'); cell.textContent = String(value); row.appendChild(cell);
       });
@@ -45,7 +45,7 @@
  var table=document.createElement('table');box.appendChild(table);
  fetch('grade-records.json?t='+Date.now(),{cache:'no-store'}).then(function(r){if(!r.ok)throw Error('Records unavailable');return r.json();}).then(function(d){
  Array.from(new Set(d.records.map(function(r){return r.round;}))).forEach(function(n){var o=document.createElement('option');o.value=n;o.textContent=String(n).replace('historical-','Old rubric round ').replace('lane-','Lane batch ');select.appendChild(o);});
- function render(){table.replaceChildren();var tr=document.createElement('tr');['ID / role','Exact headline / source / date','Frontier','JEV','Outcome','JEV reason / audit'].forEach(function(s){var th=document.createElement('th');th.textContent=s;tr.appendChild(th);});var head=document.createElement('thead');head.appendChild(tr);table.appendChild(head);var body=document.createElement('tbody');d.records.filter(function(r){return String(r.round)===select.value;}).forEach(function(r){var tr=document.createElement('tr');[r.id+' / '+(r.dataset_role||'acceptance'),r.title+' — '+r.source+' — '+r.published_at,r.frontier_grade,r.jev_grade,r.match?'Match':(r.frontier_grade==='keep'?'Miss: useful discarded':'Miss: trash kept'),r.jev_reason+(r.teacher_audit_note?' · '+r.teacher_audit_note:'')].forEach(function(s,i){var td=document.createElement('td');if(i===1&&r.url){var a=document.createElement('a');a.href=r.url;a.textContent=s;a.target='_blank';a.rel='noopener';td.appendChild(a);}else td.textContent=s;tr.appendChild(td);});body.appendChild(tr);});table.appendChild(body);}
+ function render(){table.replaceChildren();var tr=document.createElement('tr');['ID / role','Exact headline / source / date','Frontier','JEV','Outcome','JEV reason / audit'].forEach(function(s){var th=document.createElement('th');th.textContent=s;tr.appendChild(th);});var head=document.createElement('thead');head.appendChild(tr);table.appendChild(head);var body=document.createElement('tbody');d.records.filter(function(r){return String(r.round)===select.value;}).forEach(function(r){var tr=document.createElement('tr');[r.id+' / '+(r.dataset_role||'acceptance')+' / '+(r.policy_version||'unknown'),r.title+' — '+r.source+' — '+r.published_at,r.frontier_grade,r.jev_grade,r.match?'Match':(r.frontier_grade==='keep'?'Miss: useful discarded':'Miss: trash kept'),r.jev_reason+(r.teacher_audit_note?' · '+r.teacher_audit_note:'')].forEach(function(s,i){var td=document.createElement('td');if(i===1&&r.url){var a=document.createElement('a');a.href=r.url;a.textContent=s;a.target='_blank';a.rel='noopener';td.appendChild(a);}else td.textContent=s;tr.appendChild(td);});body.appendChild(tr);});table.appendChild(body);}
  var latest=d.records.filter(function(r){return r.rubric_group==='lane'&&r.dataset_role==='acceptance';}).slice(-1)[0];if(latest)select.value=String(latest.round);select.onchange=render;render();
  }).catch(function(e){var p=document.createElement('p');p.textContent=e.message;box.appendChild(p);});
 })();
