@@ -7,7 +7,7 @@ error_category: "D"
 falsifier: "If 09-25 conditions recur and XLY still closes ≤ −0.3% absolute (down/mild or worse) while SPY is green, flattening the graded/engine emit is wrong and must be revised rather than defended."
 sector: "Consumer Cyclical"
 date: "2026-10-01"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Consumer Cyclical — 2026-10-01

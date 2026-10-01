@@ -9,7 +9,7 @@ see_also: 03_scoreboard/LEARNINGS.md
 
 # Mutable policy (all workflows)
 
-Last learn_cycle: **2026-10-01**. Promoted: 0. Retired: 10. Active lessons: 204. Human digest: `03_scoreboard/LEARNINGS.md`.
+Last learn_cycle: **2026-10-01**. Promoted: 1. Retired: 10. Active lessons: 205. Human digest: `03_scoreboard/LEARNINGS.md`.
 
 ## Accuracy by topic (graded window)
 
@@ -47,6 +47,10 @@ Sectors (pooled S0–S4; per-sector overrides in engine_policy.json):
 Last change: general.B0_ASIA: 0.5 -> 1.0 (n=20, hit=0.55); general.B3_FEDPATH: 0.0 -> 0.5 (n=31, hit=0.452); Basic Materials.S2_BREADTH: 0.5 -> 1.0 (n=16, hit=0.562); Basic Materials.S3_FLOWS_POSITIONING: 1.0 -> 1.25 (n=12, hit=0.667); Communication Services.S0_SHARED_MACRO: 1.0 -> 0.5 (n=17, hit=0.529); Communication Services.S1_SECTOR_FACTORS: 1.0 -> 0.5 (n=13, hit=0.538)
 
 ## Active adjustments (newest promoted lessons, truncated)
+
+### mega-cap-concentrated-cyclical-etf-xly-like-amzn-tsla-40-ai.md
+## RULE
+When official OFFICIAL_DIRECTION/BAND and engine predicted_direction/band diverge, grade the official block. If 09-25 conditions hold (net-negative factor sum + green ES/NQ + VIX contango + AI/index-beta top-2), the engine emit must also be flat/flat with relative lean down. Do not let skill_multipliers or index_carry promote a modest negative leading sum into an absolute down/mild the official block already rejected. Do not write a new S0/S1 weighting lesson from this scoreboard line. …
 
 ### a-scheduled-us-cash-session-where-a-valid-premarket-predicti.md
 ## RULE
@@ -125,11 +129,7 @@ When a binding lesson's causal precondition is explicitly identified as absent o
 ## RULE
 No correction required — this is a validated positive pattern. The three stacked corrections (09-09 emit-directional, 09-10 decay-laggard, 09-04 score-once) all fired in the same direction and all helped. The one honest nuance to carry forward: the +1.07% was a gap-and-hold (close 172.37 < open 172.45), so the entire gain was captured overnight and the intraday path was flat-to-down. "Mild" correctly implied no trend day, but a reader interpreting "up/mild" as an intraday grind would hav …
 
-### a-defensive-sector-healthcare-staples-utilities-is-a-multi-d.md
-## RULE
-When a defensive sector carries a multi-day relative lag (3d/1w rel negative) into a risk-on macro catalyst, score S0 at 0 to −0.3, not positive. Risk-on is a ROTATION signal: capital flows into high-beta/cyclical and OUT of defensives, so a defensive sector is a funding source, not a destination. Additionally: (a) do not score S2/S3/S4 at 0.0 when the rotation-out flow is intact — a lower-high tape (two small positive rel prints then a fade) is distribution, not a base; (b) require a po …
-
-_(+189 older active lessons not excerpted; each predict receives only its own topic's lessons via lesson_select)_
+_(+190 older active lessons not excerpted; each predict receives only its own topic's lessons via lesson_select)_
 
 ## Per-scope DO-INSTEAD
 

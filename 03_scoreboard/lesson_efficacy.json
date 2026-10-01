@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-10-01T17:34:18.310246-04:00",
+  "generated_at": "2026-10-01T18:06:42.888472-04:00",
   "window": 7,
   "summary": {
-    "n_active": 214,
+    "n_active": 215,
     "n_judged": 177,
     "improved": 69,
     "flat": 27,
@@ -2226,6 +2226,21 @@
       "after": {
         "hit": 0.429,
         "n": 7
+      },
+      "verdict": "insufficient"
+    },
+    {
+      "lesson": "mega-cap-concentrated-cyclical-etf-xly-like-amzn-tsla-40-ai.md",
+      "topic": "sector:Consumer Cyclical",
+      "active_since": "2026-10-01",
+      "error_category": "D",
+      "before": {
+        "hit": 0.286,
+        "n": 7
+      },
+      "after": {
+        "hit": null,
+        "n": 0
       },
       "verdict": "insufficient"
     },

@@ -1,6 +1,6 @@
 {
   "date": "2026-10-01",
-  "generated_at": "2026-10-01T17:33:51.515461-04:00",
+  "generated_at": "2026-10-01T18:06:26.766387-04:00",
   "summary": "11/11 via deepseek (fallback: prefer_deepseek)",
   "sectors": [
     {
@@ -17,7 +17,7 @@
       "direction_hit": true,
       "magnitude_hit": true,
       "has_predict_md": true,
-      "has_outcome_md": false,
+      "has_outcome_md": true,
       "components": {
         "S0_SHARED_MACRO": 0.0,
         "S1_SECTOR_FACTORS": 0.0,
@@ -43,7 +43,7 @@
       "direction_hit": false,
       "magnitude_hit": true,
       "has_predict_md": true,
-      "has_outcome_md": false,
+      "has_outcome_md": true,
       "components": {
         "S0_SHARED_MACRO": 1.0,
         "S1_SECTOR_FACTORS": 1.0,
@@ -251,7 +251,7 @@
       "direction_hit": true,
       "magnitude_hit": false,
       "has_predict_md": true,
-      "has_outcome_md": false,
+      "has_outcome_md": true,
       "components": {
         "S0_SHARED_MACRO": 0.5,
         "S1_SECTOR_FACTORS": 0.0,
@@ -277,7 +277,7 @@
       "direction_hit": false,
       "magnitude_hit": true,
       "has_predict_md": true,
-      "has_outcome_md": false,
+      "has_outcome_md": true,
       "components": {
         "S0_SHARED_MACRO": -0.5,
         "S1_SECTOR_FACTORS": -0.5,
