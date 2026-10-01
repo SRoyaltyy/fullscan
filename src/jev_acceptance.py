@@ -37,9 +37,9 @@ def protocol_sha():
     return sha({"rubric":RUBRIC,"questions":QUESTIONS,"decision":"argmax; no abstention credit", "version":VERSION})
 
 
-def score(items):
+def score(items, *, require_unique=True):
     if len(items)!=100: raise ValueError("Acceptance requires exactly 100 items")
-    if len({identity(r) for r in items})!=100: raise ValueError("Duplicate articles")
+    if require_unique and len({identity(r) for r in items})!=100: raise ValueError("Duplicate articles")
     if any(r.get("gold") not in {"keep","drop"} for r in items):
         raise ValueError("All 100 need independent binary frontier labels")
     nk=sum(r["gold"]=="keep" for r in items); nd=100-nk
@@ -62,8 +62,9 @@ def summarize(rounds, historical_seen=()):
         if config!=active: streak=0; active=config
         ids={identity(r) for r in round_["items"]}
         overlap=ids & seen
-        scores=score(round_["items"])
-        valid=(not overlap and round_.get("teacher_blind") is True
+        unique=len(ids)==len(round_["items"])
+        scores=score(round_["items"],require_unique=False)
+        valid=(unique and not overlap and round_.get("teacher_blind") is True
                and round_.get("rubric_sha256")==sha(RUBRIC)
                and config[1] not in {"unknown", "mixed-or-missing", ""}
                and scores["errors_or_reviews"]==0
@@ -73,7 +74,7 @@ def summarize(rounds, historical_seen=()):
         passed=valid and scores["pass"]
         streak=streak+1 if passed else 0
         summaries.append({"round":index,**scores,"fresh":not overlap,"overlap_count":len(overlap),
-                          "valid_protocol":valid,"pass":passed,"streak":streak})
+                          "unique":unique,"valid_protocol":valid,"pass":passed,"streak":streak})
     return {"required_rounds":5,"required_items":100,"threshold":.80,"strictly_above":True,
             "streak":streak,"accepted":streak>=5,"rounds":summaries}
 
@@ -117,8 +118,10 @@ def run(input_path,output_path,workers=8,candidate=False):
         models={r["jev_model"] for r in round_["items"] if r.get("jev_model")}
         round_["jev_model"]=next(iter(models)) if len(models)==1 else "mixed-or-missing"
     data["rounds"]=prior+rounds
-    data["summary"]=summarize(data["rounds"],data.get("historical_seen",[]))
     Path(output_path).parent.mkdir(parents=True,exist_ok=True)
+    # Persist expensive answers even if later scoring encounters malformed history.
+    Path(output_path).write_text(json.dumps(data,indent=2,ensure_ascii=False)+"\n")
+    data["summary"]=summarize(data["rounds"],data.get("historical_seen",[]))
     Path(output_path).write_text(json.dumps(data,indent=2,ensure_ascii=False)+"\n")
     print(json.dumps(data["summary"],indent=2))
 

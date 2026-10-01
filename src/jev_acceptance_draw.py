@@ -4,16 +4,24 @@ Run before teacher grading. Gold labels must be supplied before live evaluation.
 Known trainer, gold and result files permanently exclude previously exposed items.
 """
 import argparse,json,random
+from urllib.parse import urlsplit,urlunsplit
 from pathlib import Path
 from .jev_acceptance import identity,protocol_sha,sha,RUBRIC
 from .jev_gate import tokens,jaccard
 
+def canonical_url(row):
+    url=row.get("url", "")
+    if not url:return ""
+    parts=urlsplit(url)
+    return urlunsplit((parts.scheme.lower(),parts.netloc.lower(),parts.path.rstrip("/"),"",""))
+
 def draw(root, seed, n_rounds=5):
-    exposed=set(); oldtokens=set()
+    exposed=set(); oldtokens=set(); oldurls=set()
     def collect(value):
         if isinstance(value,dict):
             if value.get('title'):
                 exposed.add(identity(value));oldtokens.add(tokens(value['title']))
+                if canonical_url(value):oldurls.add(canonical_url(value))
             for child in value.values():collect(child)
         elif isinstance(value,list):
             for child in value:collect(child)
@@ -29,14 +37,16 @@ def draw(root, seed, n_rounds=5):
             if not row.get('title'):continue
             item={k:row[k] for k in ('title','source','published_at','url','summary','description','snippet','content') if row.get(k)}
             key=identity(item);t=tokens(item['title'])
-            if key in exposed or any(jaccard(t,old)>=.8 for old in oldtokens):continue
+            if key in exposed or (canonical_url(item) and canonical_url(item) in oldurls) or any(jaccard(t,old)>=.8 for old in oldtokens):continue
             candidates.setdefault(key,item)
     candidates=list(candidates.values());random.Random(seed).shuffle(candidates)
-    selected=[];seen=[]
+    selected=[];seen=[];seenurls=set()
     for item in candidates:
         t=tokens(item['title'])
-        if any(jaccard(t,old)>=.8 for old in seen):continue
+        url=canonical_url(item)
+        if (url and url in seenurls) or any(jaccard(t,old)>=.8 for old in seen):continue
         selected.append(item);seen.append(t)
+        if url:seenurls.add(url)
         if len(selected)==100*n_rounds:break
     if len(selected)!=100*n_rounds:raise ValueError('Insufficient fresh items; collect more articles instead of recycling tests')
     return {'schema':1,'seed':seed,'rubric':RUBRIC,'historical_seen':sorted(exposed),
