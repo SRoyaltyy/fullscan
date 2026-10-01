@@ -2,7 +2,7 @@
 import math,re
 from .jev_acceptance import sha
 from .jev_lane_contract import RUBRIC, CONTRACT_VERSION
-VERSION='lane-hop0-v7'
+VERSION='lane-hop0-v8'
 QUESTIONS={
  'q5':{'type':'choice','instructions':RUBRIC,'criteria':{
   'change':'A specific new fact changes a tradable constraint, or a verified physical/legal regime break. Includes committed company expansion, actual results/guidance, deal announcement/cancellation, approval, court ruling, leadership/control, financing, actual disruption, official data or concrete new policy path.',
@@ -29,11 +29,11 @@ QUESTIONS['eligibility']={'type':'choice','instructions':'Audit the underlying e
  'out_of_book':'An actual but unlinked small private/local business event, minor private foreign airline/fintech restructuring, local hospital portal/hack, foreign domestic GDP/CPI/debt without a major US/cross-market or stated global commodity channel, private small venture finance even with famous investors, routine junior administrative hires/auditor changes, individual/crime sanctions or personal lawsuits with no market pipe. An important noun, large sounding percentage or politician alone does not establish transmission. A private systemic AI supplier or multibillion-dollar global commodity funding commitment may qualify; ordinary private startup funding does not.',
  'packaging':'The actual story is price tape (including mortgage rates, bond yields, fund inflows, voluntary portfolio allocations or trading turnover), valuation/advice/PT without an actual issuer print, stock registry/financial indicator webpage, transcript, roundup of unrelated facts, conference/webinar/earnings preview, amenities/prototype/product promotion, or general color. A stated actual official data direction, corporate deal or legal decision inside a price wrapper can qualify; merely after earnings/data or amid inflation cannot.'}}
 
-THRESHOLDS={'q5':.35,'action':.65,'print':.65,'policy_path':.65,'reported_fact':.50,'path_signal':.80,'screen':.85,'mechanism':.20,'junk':.90,'rumor':.60,'weather':.85,'eligibility':.20,'eligibility_override':.85}
+THRESHOLDS={'q5':.35,'action':.65,'print':.65,'policy_path':.65,'reported_fact':.50,'path_signal':.80,'screen':.85,'mechanism':.10,'junk':.90,'rumor':.60,'weather':.95,'eligibility':.10,'eligibility_override':.85}
 ARTIFACT=re.compile(r'(?i)earnings call (?:transcript|highlights|summary)|morning squawk|\b\d+ key items shaping|earnings live updates|\bopinions on\b|what we know about|today.s news:|lead earnings movers')
 BARE_CALENDAR=re.compile(r'(?i)^.{1,100}\b(?:Q[1-4]\s+(?:FY)?20\d{2}|FQ[1-4]\s+20\d{2})\s+earnings(?:\s+\([^)]*\))?$')
 FORMULA='mechanism >= cutoff AND q5 junk/rumor/weather below veto thresholds AND any q5-change/action/print/policy_path/reported_fact/screen support above their respective thresholds'
-def protocol_sha():return sha(dict(version=VERSION,contract=CONTRACT_VERSION,rubric=RUBRIC,questions=QUESTIONS,thresholds=THRESHOLDS,formula=FORMULA,retries=3,weather_override='path_signal >= .90 or eligibility_qualifying >= override',eligibility_gate='qualifying >= cutoff; strong qualifying may supply support; mechanism remains >= .10',form_veto=[.50,.70],artifacts=[ARTIFACT.pattern,BARE_CALENDAR.pattern]))
+def protocol_sha():return sha(dict(version=VERSION,contract=CONTRACT_VERSION,rubric=RUBRIC,questions=QUESTIONS,thresholds=THRESHOLDS,formula=FORMULA,retries=3,weather_override='path_signal >= .90 or eligibility_qualifying >= override',eligibility_gate='qualifying >= cutoff; strong qualifying may supply support; mechanism remains >= .10',form_veto=[.50,.80],artifacts=[ARTIFACT.pattern,BARE_CALENDAR.pattern]))
 def decide(row,payload):
  answers=payload['answers'];s={}
  for key,q in QUESTIONS.items():
@@ -51,7 +51,7 @@ def decide(row,payload):
   else:s[key]=values[0]
  t=THRESHOLDS
  veto=next((key for key in ('junk','rumor','weather') if s[key]>=t[key] and not(key=='weather' and (s['path_signal']>=.90 or s['eligibility_qualifying']>=THRESHOLDS['eligibility_override']))),'')
- if s['form_packaging']>=.50 or s['form_recycled']>=.70:veto='packaging_or_recycled'
+ if s['form_packaging']>=.50 or s['form_recycled']>=.80:veto='packaging_or_recycled'
  if s['eligibility_qualifying']<t['eligibility']:veto='no_eligible_constraint'
  if ARTIFACT.search(row.get('title','')) or BARE_CALENDAR.search(row.get('title','')):veto='packaging_or_calendar'
  supported=s['eligibility_qualifying']>=t['eligibility_override'] or s['change']>=t['q5'] or any(s[k]>=t[k] for k in ('action','print','policy_path','reported_fact','screen','path_signal'))
