@@ -1,12 +1,12 @@
 {
   "date": "2026-10-01",
-  "generated_at": "2026-10-01T07:11:43.541938-04:00",
-  "overall": "PARTIAL",
+  "generated_at": "2026-10-01T07:11:57.428929-04:00",
+  "overall": "OK",
   "ranker_ready": true,
   "blockers": [],
   "counts": {
-    "ok": 7,
-    "partial": 1,
+    "ok": 8,
+    "partial": 0,
     "fail": 0,
     "n": 8
   },
@@ -175,9 +175,9 @@
       "key": "preopen",
       "name": "Pre-Open ALL",
       "yaml": "preopen_all.yml",
-      "status": "PARTIAL",
+      "status": "OK",
       "inputs_ready": true,
-      "n_req_ok": 18,
+      "n_req_ok": 20,
       "n_req": 20,
       "n_opt_ok": 3,
       "n_opt": 3,
@@ -359,11 +359,10 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=True",
-          "size": 8247,
-          "said": "all_ok=True \u00b7 sectors 11/11 \u00b7 2 fail",
+          "size": 8244,
+          "said": "all_ok=True \u00b7 sectors 11/11 \u00b7 1 fail",
           "bullets": [
-            "finviz_market_digest:missing",
-            "map_heat_research:missing"
+            "finviz_market_digest:missing"
           ]
         },
         {
@@ -371,10 +370,10 @@
           "name": "Pre-open status JSON",
           "path": "01_daily/2026-10-01_preopen_status.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "all_ok=False",
+          "size": 7707,
+          "said": "all_ok=False \u00b7 qc=True \u00b7 grok=False \u00b7 book=True",
           "bullets": []
         },
         {
@@ -382,11 +381,13 @@
           "name": "Grok review JSON",
           "path": "01_daily/2026-10-01_grok_review.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "ok=False Core is otherwise a real, same-day, complete packet: general predict takes a direction (down/mild) with MEMORY_CONFIRM/S",
+          "size": 1463,
+          "said": "ok=False \u00b7 phase=morning_refresh but self-declares failure: 'Morning delta refresh failed captain-evidence QC (coverage:0/28<required:23). Using last night's post-close captain cards... Overnight tape/news was not re-scored.' This is a carry-forward of the prior post-close cards\u2026",
+          "bullets": [
+            "Core is otherwise a real, same-day, complete packet: general predict takes a direction (down/mild) with MEMORY_CONFIRM/SCORES markers; events JSON is a genuine 2026-10-01 scan (scan_date today, repaired=true); news judge and 397KB news parse are fresh (generated 2026-10-01, live_rss, 82% recent); finviz digest and map-heat tables are populated with a live futures tape; all 11 sector essays are distinct, dated, and signed. The one fail is map_heat_research: it claims phase=morning_refresh yet explicitly states the refresh failed QC and it fell back to last night's post-close captain cards with overnight tape/news not re-scored \u2014 a carry-forward, which the rules say must fail a morning_refresh artifact. Note also the missing finviz_market_digest_close.json (post-close, not required pre-open)"
+          ]
         },
         {
           "key": "sector_basic_materials",
@@ -2670,6 +2671,38 @@
         }
       ],
       "preview": "keys: date, generated_at, max_n, routing, grok, deepseek_fallback, gemini, n_targets, n_ok, status, targets, dossiers \u00b7 # CATALYST DAILY \u2014 2026-10-01\n3/8 dossiers \u00b7 max=8 \u00b7 routing=Grok \u2192 DeepSeek"
+    },
+    {
+      "key": "status",
+      "title": "Pre-open status packet",
+      "date": "2026-10-01",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-01T07:11:56.373694-04:00",
+      "files": [
+        {
+          "path": "01_daily/2026-10-01_preopen_qc.json",
+          "ok": true,
+          "reason": "",
+          "size": 8244,
+          "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok"
+        },
+        {
+          "path": "01_daily/2026-10-01_preopen_status.json",
+          "ok": true,
+          "reason": "",
+          "size": 7707,
+          "preview": "keys: date, generated_at, run_id, runner, all_ok, qc_all_ok, book_ok, grok_ok, grok_fails, missing_required, attempts, github_runs"
+        },
+        {
+          "path": "01_daily/2026-10-01_preopen_status.md",
+          "ok": true,
+          "reason": "",
+          "size": 574,
+          "preview": "# Pre-open ALL status \u2014 2026-10-01\nall_ok=False  qc_all_ok=True  book_ok=True  grok_ok=False  news_mode=on  missing=none\nPredictive modules + stock book (must land before 09:30 ET).\nOutcome / learn / tonight's captain research = Post-Close ALL.\n- Weather / regime: exit 0\n- News parse: exit 0\n- Event scanner (primary): exit 0\n- Event catcher (gap hunt, no carry): exit 0\n- News actions: exit 0\n- News judge: exit 0\n- General market predict: exit 0\n- Per-sector predict (all 11): exit 0\n- Map heat morning delta refresh: exit 0\n- Catalyst dossiers (after book): exit 0"
+        }
+      ],
+      "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok \u00b7 keys: date, generated_at, run_id, runner, all_ok, qc_all_ok, book_ok, grok_ok, grok_fails, missing_required, attempts, github_runs \u00b7 # Pre-open ALL status \u2014 2026-10-01\nall_ok=False  qc_all_ok=True  book_ok=True  grok_ok=False  news_mode=on  missing=none\nPredictive modules + stock book (must land before 09:30 ET).\nOutcome / learn / tonight's captain research = Post-Close ALL.\n- Weather / regime: exit 0\n- News parse: exit 0\n- Event scanner (primary): exit 0\n- Event catcher (gap hunt, no carry): exit 0\n- News actions: exit 0\n- News judge: exit 0\n- General market predict: exit 0\n- Per-sector predict (all 11): exit 0\n- Map heat morning delta refresh: exit 0\n- Catalyst dossiers (after book): exit 0"
     }
   ],
   "href": {
