@@ -1,14 +1,14 @@
 {
   "date": "2026-10-01",
-  "generated_at": "2026-10-01T06:19:40.840218-04:00",
+  "generated_at": "2026-10-01T06:19:50.011439-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
     "MISSING AB checklist enriched `data/ab_checklist/2026-10-01_ab_checklist_enriched.csv` \u2014 missing"
   ],
   "counts": {
-    "ok": 4,
-    "partial": 3,
+    "ok": 3,
+    "partial": 4,
     "fail": 1,
     "n": 8
   },
@@ -706,7 +706,7 @@
       "inputs_ready": false,
       "n_req_ok": 1,
       "n_req": 4,
-      "n_opt_ok": 2,
+      "n_opt_ok": 1,
       "n_opt": 3,
       "files": [
         {
@@ -888,10 +888,10 @@
           "name": "Dashboard HTML",
           "path": "dashboard/index.html",
           "role": "optional",
-          "status": "OK",
-          "reason": "live-book poller + today.json (2026-10-01)",
+          "status": "FAIL",
+          "reason": "session 2026-10-01 not in dashboard dates (last=2026-09-25)",
           "size": 8945021,
-          "said": "live-book poller + today.json (2026-10-01)",
+          "said": "session 2026-10-01 not in dashboard dates (last=2026-09-25)",
           "bullets": []
         }
       ],
@@ -904,9 +904,9 @@
       "key": "publish",
       "name": "Dashboard / .io",
       "yaml": "deploy-dashboard.yml",
-      "status": "OK",
+      "status": "PARTIAL",
       "inputs_ready": false,
-      "n_req_ok": 2,
+      "n_req_ok": 1,
       "n_req": 2,
       "n_opt_ok": 0,
       "n_opt": 1,
@@ -927,10 +927,10 @@
           "name": "Dashboard HTML (repo)",
           "path": "dashboard/index.html",
           "role": "required",
-          "status": "OK",
-          "reason": "live-book poller + today.json (2026-10-01)",
+          "status": "FAIL",
+          "reason": "session 2026-10-01 not in dashboard dates (last=2026-09-25)",
           "size": 8945021,
-          "said": "live-book poller + today.json (2026-10-01)",
+          "said": "session 2026-10-01 not in dashboard dates (last=2026-09-25)",
           "bullets": []
         },
         {
@@ -2046,6 +2046,31 @@
         }
       ],
       "preview": "11686 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC \u00b7 11695 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+    },
+    {
+      "key": "weather",
+      "title": "Weather / regime",
+      "date": "2026-10-01",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-01T06:19:49.549642-04:00",
+      "files": [
+        {
+          "path": "01_daily/weather/2026-10-01_weather.json",
+          "ok": true,
+          "reason": "",
+          "size": 9749,
+          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -0.769, 'dir': 'down', 'conf': 0.431, 'source': 'llm'}, Communication Services={'score': 7.467, 'dir': 'up', 'conf': 0.799, 'source': 'llm'}, Consumer Cyclical={'score': -6.764, 'dir': 'down', 'conf': 0.771, 'source': 'llm'}, Consumer Defensive={'score': -2.512, 'dir': 'down', 'conf': 0.6, 'source': 'llm'}, Energy={'score': -2.413, 'dir': 'down', 'conf': 0.497, 'source': 'llm'}, Financial={'score': -5.156, 'dir': 'down', 'conf': 0.706, 'source': 'llm'}, Healthcare={'score': -3.878, 'dir': 'down', 'conf': 0.655, 'source': 'llm'}, Industrials={'score': -0.378, 'dir': 'down', 'conf': 0.415, 'source': 'llm'}"
+        },
+        {
+          "path": "01_daily/weather/2026-10-01_weather.md",
+          "ok": true,
+          "reason": "",
+          "size": 5374,
+          "preview": "# Weather report \u2014 2026-10-01\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+        }
+      ],
+      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -0.769, 'dir': 'down', 'conf': 0.431, 'source': 'llm'}, Communication Services={'score': 7.467, 'dir': 'up', 'conf': 0.799, 'source': 'llm'}, Consumer Cyclical={'score': -6.764, 'dir': 'down', 'conf': 0.771, 'source': 'llm'}, Consumer Defensive={'score': -2.512, 'dir': 'down', 'conf': 0.6, 'source': 'llm'}, Energy={'score': -2.413, 'dir': 'down', 'conf': 0.497, 'source': 'llm'}, Financial={'score': -5.156, 'dir': 'down', 'conf': 0.706, 'source': 'llm'}, Healthcare={'score': -3.878, 'dir': 'down', 'conf': 0.655, 'source': 'llm'}, Industrials={'score': -0.378, 'dir': 'down', 'conf': 0.415, 'source': 'llm'} \u00b7 # Weather report \u2014 2026-10-01\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
     }
   ],
   "href": {
