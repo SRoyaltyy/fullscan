@@ -1,6 +1,6 @@
 {
   "date": "2026-10-01",
-  "generated_at": "2026-10-01T06:19:50.011439-04:00",
+  "generated_at": "2026-10-01T06:19:56.063965-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -41,73 +41,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "sector_one",
-      "title": "Sector predict Consumer Defensive (4/11)",
-      "date": "2026-10-01",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-01T05:54:17.135140-04:00",
-      "files": [
-        {
-          "path": "01_daily/sectors/2026-10-01/consumer_defensive_predict.md",
-          "ok": true,
-          "reason": "",
-          "size": 14750,
-          "preview": "# Sector Prediction \u2014 Consumer Defensive \u2014 2026-10-01\n- news_mode: **on**\n- ETF: **XLP**\n- rubric: `00_grounding/sectors/consumer_defensive.md`\n- predicted_direction: **down**\n- predicted_magnitude_band: **mild**\n- total_score: **-2.512** (mult 0.8)\n- regime: mixed\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **-0.976** (ES +0.17%, ZN -0.03%, PM:XLP -0.26%) \u00b7 index_carry **-0.336** (general -1.343) \u00b7 llm_overlay **-1.2** (raw -1.2)"
-        },
-        {
-          "path": "01_daily/sectors/2026-10-01/consumer_defensive_predict_trace.md",
-          "ok": true,
-          "reason": "",
-          "size": 450,
-          "preview": "# Reasoning trace \u2014 SECTOR PREDICT Consumer Defensive 2026-10-01\nprovider: deepseek\nfallback_reason: prefer_deepseek\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (127,077 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Done researching.** The model stopped searching and wrote its full analysis (12,975 characters)."
-        },
-        {
-          "path": "01_daily/_transcripts/2026-10-01_sector_consumer_defensive_predict.json",
-          "ok": true,
-          "reason": "",
-          "size": 143716,
-          "preview": "keys: model, messages, provider, fallback_reason"
-        },
-        {
-          "path": "01_daily/2026-10-01_preopen_qc.json",
-          "ok": true,
-          "reason": "",
-          "size": 7496,
-          "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok"
-        },
-        {
-          "path": "01_daily/sectors/2026-10-01/_qc.json",
-          "ok": true,
-          "reason": "",
-          "size": 1515,
-          "preview": "keys: date, n_ok, n_total, summary, sectors"
-        },
-        {
-          "path": "01_daily/sectors/2026-10-01/_BOARD.md",
-          "ok": true,
-          "reason": "",
-          "size": 1819,
-          "preview": "# Sector Board \u2014 2026-10-01\nGenerated: **2026-10-01T05:54:17.119626-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.)."
-        },
-        {
-          "path": "01_daily/sectors/2026-10-01/_board.json",
-          "ok": true,
-          "reason": "",
-          "size": 6760,
-          "preview": "keys: date, generated_at, summary, sectors"
-        },
-        {
-          "path": "03_scoreboard/scoreboard.json",
-          "ok": true,
-          "reason": "",
-          "size": 964331,
-          "preview": "keys: runs"
-        }
-      ],
-      "preview": "# Sector Prediction \u2014 Consumer Defensive \u2014 2026-10-01\n- news_mode: **on**\n- ETF: **XLP**\n- rubric: `00_grounding/sectors/consumer_defensive.md`\n- predicted_direction: **down**\n- predicted_magnitude_band: **mild**\n- total_score: **-2.512** (mult 0.8)\n- regime: mixed\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **-0.976** (ES +0.17%, ZN -0.03%, PM:XLP -0.26%) \u00b7 index_carry **-0.336** (general -1.343) \u00b7 llm_overlay **-1.2** (raw -1.2) \u00b7 # Reasoning trace \u2014 SECTOR PREDICT Consumer Defensive 2026-10-01\nprovider: deepseek\nfallback_reason: prefer_deepseek\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (127,077 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Done researching.** The model stopped searching and wrote its full analysis (12,975 characters). \u00b7 keys: model, messages, provider, fallback_reason \u00b7 keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok \u00b7 keys: date, n_ok, n_total, summary, sectors \u00b7 # Sector Board \u2014 2026-10-01\nGenerated: **2026-10-01T05:54:17.119626-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Indi"
-    },
     {
       "key": "sector_one",
       "title": "Sector predict Healthcare (7/11)",
@@ -352,6 +285,24 @@
         }
       ],
       "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -0.769, 'dir': 'down', 'conf': 0.431, 'source': 'llm'}, Communication Services={'score': 7.467, 'dir': 'up', 'conf': 0.799, 'source': 'llm'}, Consumer Cyclical={'score': -6.764, 'dir': 'down', 'conf': 0.771, 'source': 'llm'}, Consumer Defensive={'score': -2.512, 'dir': 'down', 'conf': 0.6, 'source': 'llm'}, Energy={'score': -2.413, 'dir': 'down', 'conf': 0.497, 'source': 'llm'}, Financial={'score': -5.156, 'dir': 'down', 'conf': 0.706, 'source': 'llm'}, Healthcare={'score': -3.878, 'dir': 'down', 'conf': 0.655, 'source': 'llm'}, Industrials={'score': -0.378, 'dir': 'down', 'conf': 0.415, 'source': 'llm'} \u00b7 # Weather report \u2014 2026-10-01\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+    },
+    {
+      "key": "join",
+      "title": "Join / match rank",
+      "date": "2026-10-01",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-01T06:19:55.615880-04:00",
+      "files": [
+        {
+          "path": "data/join/2026-10-01_ranked.csv",
+          "ok": true,
+          "reason": "",
+          "size": 2311332,
+          "preview": "5904 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 ONC, HALO, NVDA, ACMR, AVPT"
+        }
+      ],
+      "preview": "5904 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 ONC, HALO, NVDA, ACMR, AVPT"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
