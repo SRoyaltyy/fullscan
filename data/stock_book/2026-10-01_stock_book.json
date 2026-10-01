@@ -1,7 +1,7 @@
 {
   "meta": {
     "date": "2026-10-01",
-    "generated_at": "2026-10-01T16:43:13.801965-04:00",
+    "generated_at": "2026-10-01T16:48:11.938468-04:00",
     "general_bias": -0.47090000000000004,
     "sector_bias": {
       "Basic Materials": -0.36635,
@@ -28,8 +28,8 @@
         "gate": 0.85
       },
       "sector:Communication Services": {
-        "hit_rate": 0.214,
-        "n": 28,
+        "hit_rate": 0.207,
+        "n": 29,
         "gate": 0.5
       },
       "sector:Consumer Cyclical": {
