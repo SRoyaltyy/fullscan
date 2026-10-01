@@ -560,7 +560,7 @@ def test_replay_uses_posted_bit_answers():
             live=True, key="x", workers=1, stamp="20260930_0920",
             poster=poster, now=NOW, root=root, ground=ground, write=True,
         )
-        assert report["gate"] == "hop0-bits+jev"
+        assert report["gate"] == "sixbit"
         assert report["replay_of"] == "20260930_0858"
         assert report["model"] == "jev-test"
         assert report["flips"] == 2
@@ -862,9 +862,9 @@ def test_commit_allowlist_and_workflow_and_page():
     # and the trainer workflow must not point at it.
     assert "jev_hop0" not in yml
     # 16:19 draw wrote the sheet then lost the push race with auto-lands.
-    assert "git fetch origin main" in yml
+    assert "git fetch origin codex/jev-lane-hop0" in yml
     assert "commit-tree" in yml
-    assert "replay trainer blobs onto origin/main" in yml
+    assert "replay trainer blobs onto origin/codex/jev-lane-hop0" in yml
     assert "decision_ready" not in yml
     assert "fetch-depth: 1" in yml
     assert "src.test_jev_day" in yml

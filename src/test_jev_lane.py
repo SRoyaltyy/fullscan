@@ -24,6 +24,16 @@ class Tests(unittest.TestCase):
   result=gate([{'title':'Company completes acquisition','gold':'drop'}],live=True,policy='lane-hop0',key='mock',poster=poster)
   self.assertEqual(result[0]['protocol_sha256'],protocol_sha());self.assertEqual(result[0]['decision'],'keep')
   self.assertNotIn('GOLD',calls[0]);self.assertNotIn('drop',calls[0])
+ def test_manual_trainer_retains_headline_identity(self):
+  import os,datetime
+  from unittest.mock import patch
+  from .jev_train import annotate_gate
+  row={'id':'fixture-1','title':'Company completes acquisition','source':'Fixture'}
+  with patch.dict(os.environ,{'JEV_GATE_POLICY':'lane-hop0'}):
+   items,model=annotate_gate([row],live=True,key='mock',workers=1,poster=lambda *args:payload(),asof=datetime.date(2026,10,1))
+  self.assertEqual(items[0]['id'],row['id']);self.assertEqual(items[0]['title'],row['title'])
+  self.assertEqual(items[0]['jev'],'KEEP');self.assertEqual(items[0]['protocol_sha256'],protocol_sha())
+  self.assertEqual(model,'test')
  def test_invalid_missing_answer_fails(self):
   p=payload();del p['answers']['mechanism']
   with self.assertRaises(KeyError):decide({'title':'X'},p)

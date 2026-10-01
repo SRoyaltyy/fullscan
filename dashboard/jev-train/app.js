@@ -9,7 +9,7 @@
   var MIN_MARKS = 30;
   var REPO = "SRoyaltyy/fullscan";
   var WORKFLOW = "jev_train.yml";
-  var RAW_DRAW = "https://raw.githubusercontent.com/" + REPO + "/main/dashboard/jev-train/draw.json";
+  var RAW_DRAW = "https://raw.githubusercontent.com/" + REPO + "/codex/jev-lane-hop0/dashboard/jev-train/draw.json";
 
   function marksReady(grades) {
     var n = 0;
@@ -170,7 +170,7 @@
       if (!draw || !draw.items || !draw.items.length) {
         table.hidden = true;
         emptyEl.hidden = false;
-        metaEl.textContent = "No draw yet. New draw asks GitHub to run the hop-0 gate and write draw.json on main.";
+        metaEl.textContent = "No draw yet. New draw asks GitHub to run the hop-0 gate and write draw.json on codex/jev-lane-hop0.";
         refreshSubmit();
         return;
       }
@@ -264,12 +264,12 @@
       var res = await fetchTimeout("https://api.github.com/repos/" + REPO + "/actions/workflows/" + WORKFLOW + "/dispatches", {
         method: "POST",
         headers: Object.assign({ "Content-Type": "application/json" }, authHeaders()),
-        body: JSON.stringify({ ref: "main", inputs: inputs })
+        body: JSON.stringify({ ref: "codex/jev-lane-hop0", inputs: inputs })
       }, 20000);
       if (res.status === 204) return;
       var text = await res.text();
       if (res.status === 404) {
-        throw new Error("GitHub 404. jev_train.yml has to be on main before New draw or Submit can run. Download the grades JSON and use it after that merge.");
+        throw new Error("GitHub 404. jev_train.yml has to be on codex/jev-lane-hop0 before New draw or Submit can run. Download the grades JSON and use it after that merge.");
       }
       throw new Error("GitHub " + res.status + " " + text.slice(0, 240));
     }
@@ -285,7 +285,7 @@
       };
       if (tokenValue()) headers.Authorization = "Bearer " + tokenValue();
       var res = await fetchTimeout(
-        "https://api.github.com/repos/" + REPO + "/contents/dashboard/jev-train/draw.json?ref=main",
+        "https://api.github.com/repos/" + REPO + "/contents/dashboard/jev-train/draw.json?ref=codex/jev-lane-hop0",
         { headers: headers, cache: "no-store" },
         8000
       );
@@ -390,7 +390,7 @@
           return;
         }
       }
-      throw new Error("Timed out waiting for draw.json on main. The action may still be running the gate.");
+      throw new Error("Timed out waiting for draw.json on codex/jev-lane-hop0. The action may still be running the gate.");
     }
 
     async function pollIssue(nonce) {
@@ -433,7 +433,7 @@
       var previous = state.draw && state.draw.stamp;
       try {
         await dispatch({ mode: "draw", stamp: "", grades_json: "", seed: "" });
-        metaEl.textContent = "Draw dispatched. Waiting for draw.json on main.";
+        metaEl.textContent = "Draw dispatched. Waiting for draw.json on codex/jev-lane-hop0.";
         await pollDraw(previous);
       } catch (err) {
         setErr(String(err && err.message ? err.message : err));

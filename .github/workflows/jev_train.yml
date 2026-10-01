@@ -5,9 +5,9 @@ name: Jev train
 # The page has no API key. JEV_API_KEY is read here, on mixed draw only.
 # A day draw asks live Jev when the secret is present; else regex fallback.
 # Chips read 01_daily/news on the page.
-# Grades commit to main, which is the branch Deploy dashboard checks out.
+# Grades commit to codex/jev-lane-hop0, which is the branch Deploy dashboard checks out.
 # [skip ci] keeps that commit from waking the trading workflows.
-# The page reads draw.json from raw main, so it does not need a Pages rebuild.
+# The page reads draw.json from raw codex/jev-lane-hop0, so it does not need a Pages rebuild.
 # Allowlist: 00_grounding/jev_train/ 00_grounding/jev_hard_misses.json dashboard/jev-train/draw.json dashboard/jev-train/days.json
 
 on:
@@ -57,7 +57,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: main
+          ref: codex/jev-lane-hop0
           fetch-depth: 1
           persist-credentials: true
           sparse-checkout: |
@@ -112,7 +112,7 @@ jobs:
           stamp=$(awk -F= '/^JEV_TRAIN_STAMP=/{print $2}' "$RUNNER_TEMP/jev_train_out.txt" | tail -1)
           echo "stamp=${stamp}" >> "$GITHUB_OUTPUT"
 
-      - name: Commit the sheet to main
+      - name: Commit the sheet to codex/jev-lane-hop0
         run: |
           set -euo pipefail
           git config user.name "Market-Bot-Automaton"
@@ -147,13 +147,13 @@ jobs:
           git commit -m "jev train: ${{ github.event.inputs.mode }} [skip ci]"
           n=0
           while [ "$n" -lt 6 ]; do
-            if git push origin HEAD:main; then
+            if git push origin HEAD:codex/jev-lane-hop0; then
               exit 0
             fi
             n=$((n + 1))
-            echo "push rejected (attempt ${n}); replay trainer blobs onto origin/main"
-            git fetch origin main
-            parent=$(git rev-parse origin/main)
+            echo "push rejected (attempt ${n}); replay trainer blobs onto origin/codex/jev-lane-hop0"
+            git fetch origin codex/jev-lane-hop0
+            parent=$(git rev-parse origin/codex/jev-lane-hop0)
             tmp=$(mktemp)
             GIT_INDEX_FILE="$tmp" git read-tree "$parent"
             git diff-tree --no-commit-id --name-only -r HEAD | while IFS= read -r f; do

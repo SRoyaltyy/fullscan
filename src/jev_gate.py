@@ -1092,12 +1092,12 @@ def gate(rows: list[dict], *, code_only: bool = False, live: bool = False,
                 if policy == "lane-hop0":
                     result=classifier.evaluate(row,poster or jev_post,key)
                     row["_jev_model"]=result['model']
-                    return {**result,"routing":"automatic","review_required":False}
+                    return {**row,**result,"routing":"automatic","review_required":False}
                 payload = (poster or jev_post)(make_state(row), classifier.QUESTIONS, key)
                 row["_jev_model"] = payload.get("model") or JEV_MODEL
                 if policy in {"candidate", "candidate-v2", "lane-hop0"}:
                     result=classifier.decide(row,payload)
-                    return {**result,"routing":"automatic","review_required":False}
+                    return {**row,**result,"routing":"automatic","review_required":False}
                 return classifier.decide(row, payload, reviewer)
             except Exception:
                 row["_jev_model"] = "error:request_failed"

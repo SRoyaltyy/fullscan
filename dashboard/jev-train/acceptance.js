@@ -26,7 +26,7 @@
     report.rounds.forEach(function (round) {
       var row = document.createElement('tr');
       [round.round, round.dataset_role || 'acceptance', round.policy_version || 'unknown', percent(round.useful_recall), percent(round.trash_recall), percent(round.keep_precision),
-       percent(round.overall_accuracy), round.fresh ? 'Yes' : 'No', round.gold_audit_invalid ? 'INVALID: teacher audit' : round.pass ? 'PASS' : 'FAIL', round.streak].forEach(function (value) {
+       percent(round.overall_accuracy), round.fresh ? 'Yes' : 'No', round.gold_audit_invalid ? 'INVALID: teacher audit' : round.dataset_role === 'development' ? 'DEVELOPMENT' : round.pass ? 'PASS' : 'FAIL', round.streak].forEach(function (value) {
         var cell = document.createElement('td'); cell.textContent = String(value); row.appendChild(cell);
       });
       body.appendChild(row);

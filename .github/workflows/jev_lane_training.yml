@@ -84,6 +84,22 @@ jobs:
               git push origin HEAD:codex/jev-lane-hop0
             fi
           done
+      - name: Verify manual trainer uses the accepted candidate
+        env:
+          JEV_API_KEY: ${{ secrets.JEV_API_KEY }}
+          JEV_MODEL: jev-1.13.0
+          JEV_GATE_POLICY: lane-hop0
+        run: |
+          python -m src.jev_train replay --workers 8
+          python - <<'PY'
+          import json
+          from src.jev_lane_candidate import VERSION,protocol_sha
+          draw=json.load(open('dashboard/jev-train/draw.json'))
+          assert len(draw['items']) == 100
+          assert all(r.get('policy_version') == VERSION and r.get('protocol_sha256') == protocol_sha() and not r.get('review_required') for r in draw['items'])
+          print('Manual trainer: 100 successful decisions under',VERSION)
+          PY
+          git add 00_grounding/jev_train dashboard/jev-train/draw.json
       - name: Publish all records and status
         run: python -m src.jev_lane_publish
       - name: Preserve all completed evaluations

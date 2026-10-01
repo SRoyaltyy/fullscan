@@ -10,7 +10,7 @@
 })(typeof globalThis !== "undefined" ? globalThis : this, function () {
   var REPO = "SRoyaltyy/fullscan";
   var WORKFLOW = "jev_train.yml";
-  var RAW_DAYS = "https://raw.githubusercontent.com/" + REPO + "/main/dashboard/jev-train/days.json";
+  var RAW_DAYS = "https://raw.githubusercontent.com/" + REPO + "/codex/jev-lane-hop0/dashboard/jev-train/days.json";
   var RAW_NEWS = "https://raw.githubusercontent.com/" + REPO + "/main/01_daily/news/";
   var DAY_CAP = 500;
   var daysCache = [];
@@ -241,7 +241,7 @@
         Authorization: "Bearer " + token
       },
       body: JSON.stringify({
-        ref: "main",
+        ref: "codex/jev-lane-hop0",
         inputs: { mode: "draw", stamp: "", grades_json: "", seed: "", day: day }
       })
     });
