@@ -29,6 +29,24 @@ jobs:
         run: |
           python -m src.test_jev_acceptance
           python -m src.test_jev_lane
+      - name: Record v9 development replay separately
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          from src.jev_lane_candidate import decide,protocol_sha
+          from src.jev_lane_contract import RUBRIC
+          from src.jev_acceptance import summarize
+          data=json.load(open('validation/jev_lane_report.json'))
+          data['rounds']=data['rounds'][41:51]
+          assert len(data['rounds']) == 10
+          for batch in data['rounds']:
+              batch.update(dataset_role='development',protocol_sha256=protocol_sha(),replay_note='v9 cutoff calibrated on exposed v8 acceptance rounds 42-51; no fresh acceptance credit')
+              for row in batch['items']:
+                  row.update(decide(row,{'answers':row['answers'],'model':row['jev_model']}))
+          data['summary']=summarize(data['rounds'],[],RUBRIC)
+          Path('validation/jev_lane_development_v9_report.json').write_text(json.dumps(data,ensure_ascii=False,indent=2)+'\n')
+          PY
       - name: Evaluate frozen blind labels
         env:
           JEV_API_KEY: ${{ secrets.JEV_API_KEY }}

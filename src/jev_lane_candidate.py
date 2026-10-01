@@ -2,7 +2,7 @@
 import math,re
 from .jev_acceptance import sha
 from .jev_lane_contract import RUBRIC, CONTRACT_VERSION
-VERSION='lane-hop0-v8'
+VERSION='lane-hop0-v9'
 QUESTIONS={
  'q5':{'type':'choice','instructions':RUBRIC,'criteria':{
   'change':'A specific new fact changes a tradable constraint, or a verified physical/legal regime break. Includes committed company expansion, actual results/guidance, deal announcement/cancellation, approval, court ruling, leadership/control, financing, actual disruption, official data or concrete new policy path.',
@@ -29,7 +29,7 @@ QUESTIONS['eligibility']={'type':'choice','instructions':'Audit the underlying e
  'out_of_book':'An actual but unlinked small private/local business event, minor private foreign airline/fintech restructuring, local hospital portal/hack, foreign domestic GDP/CPI/debt without a major US/cross-market or stated global commodity channel, private small venture finance even with famous investors, routine junior administrative hires/auditor changes, individual/crime sanctions or personal lawsuits with no market pipe. An important noun, large sounding percentage or politician alone does not establish transmission. A private systemic AI supplier or multibillion-dollar global commodity funding commitment may qualify; ordinary private startup funding does not.',
  'packaging':'The actual story is price tape (including mortgage rates, bond yields, fund inflows, voluntary portfolio allocations or trading turnover), valuation/advice/PT without an actual issuer print, stock registry/financial indicator webpage, transcript, roundup of unrelated facts, conference/webinar/earnings preview, amenities/prototype/product promotion, or general color. A stated actual official data direction, corporate deal or legal decision inside a price wrapper can qualify; merely after earnings/data or amid inflation cannot.'}}
 
-THRESHOLDS={'q5':.35,'action':.65,'print':.65,'policy_path':.65,'reported_fact':.50,'path_signal':.80,'screen':.85,'mechanism':.10,'junk':.90,'rumor':.60,'weather':.95,'eligibility':.10,'eligibility_override':.85}
+THRESHOLDS={'q5':.35,'action':.65,'print':.65,'policy_path':.65,'reported_fact':.50,'path_signal':.80,'screen':.85,'mechanism':.10,'junk':.90,'rumor':.60,'weather':.95,'eligibility':.17,'eligibility_override':.85}
 ARTIFACT=re.compile(r'(?i)earnings call (?:transcript|highlights|summary)|morning squawk|\b\d+ key items shaping|earnings live updates|\bopinions on\b|what we know about|today.s news:|lead earnings movers')
 BARE_CALENDAR=re.compile(r'(?i)^.{1,100}\b(?:Q[1-4]\s+(?:FY)?20\d{2}|FQ[1-4]\s+20\d{2})\s+earnings(?:\s+\([^)]*\))?$')
 FORMULA='mechanism >= cutoff AND q5 junk/rumor/weather below veto thresholds AND any q5-change/action/print/policy_path/reported_fact/screen support above their respective thresholds'
