@@ -5,10 +5,16 @@
   "bearish"
  ],
  "sector_tilts": {
-  "Aerospace": "bearish",
-  "Trade": "bullish"
+  "Healthcare": "bullish",
+  "Industrials": "bearish",
+  "Energy": "mixed",
+  "Technology": "mixed",
+  "Basic Materials": "bearish"
  },
- "tickers": {},
- "b1_inject": "NEWS_JUDGE: n=8 rescued=3\nMACRO hike-odds: [hawkish] ~70% October hike (UBS/market ~69%) into sticky-PCE week (regime/1d-1w)\nMACRO yields-equities: [bearish] Treasury selloff already dropping SPX/Dow/Nasdaq; Iran relief ignored (session/1d)\nMACRO oil-USD: [mixed] oil surge + DXY feeding hike bets; XLE bid vs duration (session/1d-1w)\nMACRO gold: [bearish] gold \u22123.4% / 7-week low as real yields jump (session/1d-1w)\nMACRO term-structure: [hawkish] no-cut-before-2028 + curve near inversion (regime/1w-1m)\nSECTOR aerospace: [bearish] BA MAX 10 FAA halt, ~31% undelivered 737 book (ITA/XLI)\nSECTOR trade: [bullish] US-China $60B tariff cut, modest vs rates (basket)\nINTERACTION: hike-odds+PCE+yields+gold+oil = one hawkish cluster; do not buy cyclicals/IWM; no kinetic B1; no mega-cap-beat offset\nWATCH: PCE still unresolved \u2014 do not emit through the binary; late \u201cyields ease\u201d CNBC vs selloff is two-sided noise",
+ "tickers": {
+  "GDX": -4.0,
+  "AMGN": 1.5
+ },
+ "b1_inject": "NEWS_JUDGE: n=8 rescued=6\nMACRO rates: [dovish] Cooler PCE + Goldman pushing Dec hike \u2192 Oct odds <50% (regime/1d-1w)\nMACRO rates: [bearish] 10Y at 24-yr high, fiscal worries cap multiple expansion (regime/1w-1m)\nSECTOR Healthcare: [bullish] ABBV JUVMO FDA approval + AMGN Phase 3 dazodalibep \u2192 XLV/XBI sympathy (XLV, XBI)\nSECTOR Industrials: [bearish] BA 737 MAX 10 cert halted, 31% of undelivered order book at risk (BA, SPR, aero basket)\nSECTOR Energy: [mixed] US diesel export-ban threat to FR/DE \u2192 refiners/crack bullish, retaliation risk (VLO, PSX, MPC)\nSECTOR Semis: [mixed] Micron beat vs Fabrinet/APH -6.5% on rising yields \u2192 SMH mixed, no clean long (SMH, SOXX)\nSECTOR Materials: [bearish] Gold -$100 on hawkish Fed comments \u2192 GDX/AEM/NEM pressure (GDX)\nINTERACTION: Dovish hike-odds vs 24-yr high 10Y = conflicting rates signal; do not buy duration-sensitives on dovish-hope alone\nINTERACTION: Two large-cap biotech wins same day \u2192 trade XLV/XBI basket, not single names only\nWATCH: Gold -$100 is the cleanest cross-check on whether dovish PCE read is actually winning the tape",
  "date": "2026-10-01"
 }

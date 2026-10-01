@@ -1,12 +1,11 @@
 {
   "date": "2026-10-01",
-  "generated_at": "2026-10-01T05:50:12.237532-04:00",
+  "generated_at": "2026-10-01T05:50:33.695640-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
     "MISSING General predict MD `01_daily/general/2026-10-01_predict.md` \u2014 missing",
     "MISSING Sector board JSON `01_daily/sectors/2026-10-01/_board.json` \u2014 missing",
-    "MISSING News judge MD `01_daily/news/2026-10-01_judge.md` \u2014 missing",
     "MISSING AB checklist enriched `data/ab_checklist/2026-10-01_ab_checklist_enriched.csv` \u2014 missing"
   ],
   "counts": {
@@ -182,7 +181,7 @@
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 3,
+      "n_req_ok": 4,
       "n_req": 20,
       "n_opt_ok": 2,
       "n_opt": 3,
@@ -272,11 +271,15 @@
           "name": "News judge MD",
           "path": "01_daily/news/2026-10-01_judge.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 14124,
+          "said": "1. **Fed hike-odds collapse after cooler PCE \u2014 October hike now <50%, December pushed out (Goldman)** \u2014 This is the single dominant rates/risk-appetite driver f",
+          "bullets": [
+            "2. **US 10Y yield at 24-year high / global bonds gripped by fiscal worries (Reuters)** \u2014 Directly contradicts the dovish PCE read; the yield level is the binding constraint on equity multiples and small-caps. `channel: rates`",
+            "3. **Gold drops >$100 on hawkish Fed comments; hawkish repricing resumes (AEM digest)** \u2014 Gold is the cleanest real-time read on the rates/hike-odds fight and a sector signal for miners (AEM, NEM, GDX). `channel: substitution`",
+            "4. **Boeing 737 MAX 10 certification halted by FAA over software glitch \u2014 31% of undelivered 737 order book at risk** \u2014 Hard, fresh, index-relevant industrial/defense-aero catalyst with supply-chain read-through (BA, SPR, suppliers). `channel: sector_fundamental`"
+          ]
         },
         {
           "key": "research_json",
@@ -345,13 +348,13 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 7541,
-          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 16 fail",
+          "size": 7535,
+          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 14 fail",
           "bullets": [
             "general_predict:missing",
-            "news_judge:missing",
-            "news_actions:missing",
-            "finviz_market_digest:missing"
+            "finviz_market_digest:missing",
+            "map_heat_research:missing",
+            "sector_predict:missing"
           ]
         },
         {
@@ -725,11 +728,15 @@
           "name": "News judge MD",
           "path": "01_daily/news/2026-10-01_judge.md",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 14124,
+          "said": "1. **Fed hike-odds collapse after cooler PCE \u2014 October hike now <50%, December pushed out (Goldman)** \u2014 This is the single dominant rates/risk-appetite driver f",
+          "bullets": [
+            "2. **US 10Y yield at 24-year high / global bonds gripped by fiscal worries (Reuters)** \u2014 Directly contradicts the dovish PCE read; the yield level is the binding constraint on equity multiples and small-caps. `channel: rates`",
+            "3. **Gold drops >$100 on hawkish Fed comments; hawkish repricing resumes (AEM digest)** \u2014 Gold is the cleanest real-time read on the rates/hike-odds fight and a sector signal for miners (AEM, NEM, GDX). `channel: substitution`",
+            "4. **Boeing 737 MAX 10 certification halted by FAA over software glitch \u2014 31% of undelivered 737 order book at risk** \u2014 Hard, fresh, index-relevant industrial/defense-aero catalyst with supply-chain read-through (BA, SPR, suppliers). `channel: sector_fundamental`"
+          ]
         },
         {
           "key": "in_weather",
@@ -1634,6 +1641,31 @@
         }
       ],
       "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions \u00b7 # News \u2192 Actions v4 (full framework) \u2014 2026-10-01T05:50:06.374085-04:00\nraw=400 unique_events=4 tickers=66"
+    },
+    {
+      "key": "news_judge",
+      "title": "News judge",
+      "date": "2026-10-01",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-01T05:50:33.449271-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-10-01_judge.md",
+          "ok": true,
+          "reason": "",
+          "size": 14124,
+          "preview": "# News Judge \u2014 2026-10-01"
+        },
+        {
+          "path": "01_daily/news/2026-10-01_judge.json",
+          "ok": true,
+          "reason": "",
+          "size": 1435,
+          "preview": "keys: risk_tilt, macros, sector_tilts, tickers, b1_inject, date"
+        }
+      ],
+      "preview": "# News Judge \u2014 2026-10-01 \u00b7 keys: risk_tilt, macros, sector_tilts, tickers, b1_inject, date"
     }
   ],
   "href": {
