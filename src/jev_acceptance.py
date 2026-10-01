@@ -1,4 +1,4 @@
-"""Strict five-round acceptance for a frozen JEV rubric.
+"""Strict ten-round acceptance for a frozen JEV rubric.
 
 Exactly 100 independently labeled items per round; both class recalls must be
 STRICTLY greater than .80. Review/error is wrong, never an oracle success.
