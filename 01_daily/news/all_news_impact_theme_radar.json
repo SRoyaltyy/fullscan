@@ -12,97 +12,97 @@
     }
   },
   "watermark": {
-    "deterministic::news_impact_v2::theme_radar_elite": 40041
+    "deterministic::news_impact_v2::theme_radar_elite": 40964
   },
   "funnel": {
-    "elite_raw_titles": 350505,
-    "unique": 40041,
-    "non_weather": 18614,
-    "reaction_in_title": 662,
-    "impulse_updown_listed": 10415,
+    "elite_raw_titles": 360015,
+    "unique": 40964,
+    "non_weather": 18957,
+    "reaction_in_title": 673,
+    "impulse_updown_listed": 10581,
     "graded_articles": {
-      "0-1d": 1201,
-      "2d": 1142,
-      "3d": 1112,
-      "4d": 1082,
-      "5d": 1064,
-      "1-4w": 4971
+      "0-1d": 1210,
+      "2d": 1146,
+      "3d": 1121,
+      "4d": 1093,
+      "5d": 1071,
+      "1-4w": 4995
     }
   },
   "hit_rates": {
     "0-1d": {
-      "hits": 1057,
-      "n_calls": 2237,
-      "hit_rate": 0.4725,
-      "graded_articles": 1201
+      "hits": 1063,
+      "n_calls": 2249,
+      "hit_rate": 0.4727,
+      "graded_articles": 1210
     },
     "2d": {
-      "hits": 1046,
-      "n_calls": 2067,
-      "hit_rate": 0.506,
-      "graded_articles": 1142
+      "hits": 1048,
+      "n_calls": 2073,
+      "hit_rate": 0.5055,
+      "graded_articles": 1146
     },
     "3d": {
-      "hits": 960,
-      "n_calls": 1985,
-      "hit_rate": 0.4836,
-      "graded_articles": 1112
+      "hits": 968,
+      "n_calls": 1994,
+      "hit_rate": 0.4855,
+      "graded_articles": 1121
     },
     "4d": {
-      "hits": 946,
-      "n_calls": 1900,
-      "hit_rate": 0.4979,
-      "graded_articles": 1082
+      "hits": 960,
+      "n_calls": 1916,
+      "hit_rate": 0.501,
+      "graded_articles": 1093
     },
     "5d": {
-      "hits": 927,
-      "n_calls": 1867,
+      "hits": 931,
+      "n_calls": 1875,
       "hit_rate": 0.4965,
-      "graded_articles": 1064
+      "graded_articles": 1071
     },
     "1-4w": {
-      "hits": 3291,
-      "n_calls": 7151,
-      "hit_rate": 0.4602,
-      "graded_articles": 4971
+      "hits": 3306,
+      "n_calls": 7178,
+      "hit_rate": 0.4606,
+      "graded_articles": 4995
     }
   },
   "hit_rates_broad_short": {
     "0-1d": {
-      "hits": 5466,
-      "n_calls": 11265,
-      "hit_rate": 0.4852,
-      "graded_articles": 7191
+      "hits": 5487,
+      "n_calls": 11312,
+      "hit_rate": 0.4851,
+      "graded_articles": 7227
     },
     "2d": {
-      "hits": 5344,
-      "n_calls": 10886,
-      "hit_rate": 0.4909,
-      "graded_articles": 7029
+      "hits": 5357,
+      "n_calls": 10930,
+      "hit_rate": 0.4901,
+      "graded_articles": 7054
     },
     "3d": {
-      "hits": 5233,
-      "n_calls": 10710,
-      "hit_rate": 0.4886,
-      "graded_articles": 6955
+      "hits": 5261,
+      "n_calls": 10745,
+      "hit_rate": 0.4896,
+      "graded_articles": 6977
     },
     "4d": {
-      "hits": 5109,
-      "n_calls": 10472,
-      "hit_rate": 0.4879,
-      "graded_articles": 6844
+      "hits": 5151,
+      "n_calls": 10533,
+      "hit_rate": 0.489,
+      "graded_articles": 6880
     },
     "5d": {
-      "hits": 4997,
-      "n_calls": 10335,
-      "hit_rate": 0.4835,
-      "graded_articles": 6770
+      "hits": 5006,
+      "n_calls": 10370,
+      "hit_rate": 0.4827,
+      "graded_articles": 6793
     }
   },
   "rippers": {
     "0-1d": {
-      "ge_5_n": 513,
-      "ge_10_n": 286,
+      "ge_5_n": 517,
+      "ge_10_n": 287,
       "ge_5": [
         {
           "ticker": "ORBS",
@@ -939,6 +939,15 @@
           "entry_date": "2026-09-10",
           "published_at": "2026-09-10 08:30:00",
           "title": "Lakeland Industries, Inc. Q2 2027 Earnings Call Summary",
+          "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "MNTS",
+          "direction": "down",
+          "ret": -8.42,
+          "entry_date": "2026-09-29",
+          "published_at": "2026-09-29 08:30:00",
+          "title": "Momentus Demonstrates AI-Enabled LiDAR and Imaging Suite During Successful On-Orbit RPO Mission with NASA Satellite",
           "event_class": "print_vs_priced"
         },
         {
@@ -2409,6 +2418,33 @@
           "event_class": "print_vs_priced"
         },
         {
+          "ticker": "IDT",
+          "direction": "up",
+          "ret": 6.69,
+          "entry_date": "2026-09-29",
+          "published_at": "2026-09-28 16:36:00",
+          "title": "IDT Corporation Reports Record Fourth Quarter and Fiscal Year 2026 Results",
+          "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "IDT",
+          "direction": "up",
+          "ret": 6.69,
+          "entry_date": "2026-09-29",
+          "published_at": "2026-09-28 16:56:05",
+          "title": "IDT: Fiscal Q4 Earnings Snapshot",
+          "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "IDT",
+          "direction": "up",
+          "ret": 6.69,
+          "entry_date": "2026-09-29",
+          "published_at": "2026-09-29 08:30:00",
+          "title": "IDT Corporation Q4 2026 Earnings Call Summary",
+          "event_class": "print_vs_priced"
+        },
+        {
           "ticker": "CAL",
           "direction": "down",
           "ret": -6.68,
@@ -3228,6 +3264,15 @@
           "event_class": "print_vs_priced"
         },
         {
+          "ticker": "TTAN",
+          "direction": "up",
+          "ret": 5.79,
+          "entry_date": "2026-09-29",
+          "published_at": "2026-09-29 09:00:00",
+          "title": "ServiceTitan Report Finds Contractors Shifting Focus From AI Adoption to Implementation and Productivity",
+          "event_class": "print_vs_priced"
+        },
+        {
           "ticker": "AAON",
           "direction": "down",
           "ret": -5.78,
@@ -3235,15 +3280,6 @@
           "published_at": "2026-08-11 08:30:00",
           "title": "AAON, Inc. Q2 2026 Earnings Call Summary",
           "event_class": "guidance"
-        },
-        {
-          "ticker": "TTAN",
-          "direction": "up",
-          "ret": 5.78,
-          "entry_date": "2026-09-29",
-          "published_at": "2026-09-29 09:00:00",
-          "title": "ServiceTitan Report Finds Contractors Shifting Focus From AI Adoption to Implementation and Productivity",
-          "event_class": "print_vs_priced"
         },
         {
           "ticker": "LZM",
@@ -4920,6 +4956,15 @@
           "published_at": "2026-08-06 01:11:35",
           "title": "Myomo Inc (MYO) (Q2 2026) Earnings Call Highlights: Record Orders and Margin Expansion Drive ...",
           "event_class": "guidance"
+        },
+        {
+          "ticker": "NIVF",
+          "direction": "down",
+          "ret": -28.0,
+          "entry_date": "2026-09-29",
+          "published_at": "2026-09-28 22:30:00",
+          "title": "NewGen Announces Pricing of $1.25 Million Public Offering",
+          "event_class": "dilution"
         },
         {
           "ticker": "ZONE",
@@ -20646,8 +20691,8 @@
       ]
     },
     "3d": {
-      "ge_5_n": 1052,
-      "ge_10_n": 620,
+      "ge_5_n": 1053,
+      "ge_10_n": 624,
       "ge_5": [
         {
           "ticker": "HOOD",
@@ -22466,6 +22511,15 @@
           "published_at": "2026-08-06 14:12:00",
           "title": "PancakeSwap Expands Tokenized Equity Offerings with 10 New 'bStocks' on BNB Chain",
           "event_class": "market_structure"
+        },
+        {
+          "ticker": "MKTW",
+          "direction": "up",
+          "ret": 8.57,
+          "entry_date": "2026-09-24",
+          "published_at": "2026-09-24 09:00:00",
+          "title": "MarketWise, Inc. Posts Updated Investor Presentation",
+          "event_class": "guidance"
         },
         {
           "ticker": "JBI",
@@ -30849,6 +30903,15 @@
           "event_class": "print_vs_priced"
         },
         {
+          "ticker": "GCTK",
+          "direction": "down",
+          "ret": -28.4,
+          "entry_date": "2026-09-24",
+          "published_at": "2026-09-24 08:45:00",
+          "title": "Glucotrack, Inc. Announces Pricing of $3 Million Public Offering",
+          "event_class": "dilution"
+        },
+        {
           "ticker": "PRPL",
           "direction": "down",
           "ret": -27.8,
@@ -30873,6 +30936,15 @@
           "entry_date": "2026-08-17",
           "published_at": "2026-08-15 08:30:00",
           "title": "Precipio, Inc. Q2 2026 Earnings Call Summary",
+          "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "INSE",
+          "direction": "down",
+          "ret": -27.05,
+          "entry_date": "2026-09-24",
+          "published_at": "2026-09-24 09:05:00",
+          "title": "Inspired Showcases Latest Retail and iGaming Content, Platforms and Virtual Sports at G2E 2026 - Booth #4216",
           "event_class": "print_vs_priced"
         },
         {
@@ -31206,6 +31278,15 @@
           "entry_date": "2026-08-13",
           "published_at": "2026-08-13 06:38:00",
           "title": "Shoe Station names chief marketing officer",
+          "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "PARA",
+          "direction": "down",
+          "ret": -23.78,
+          "entry_date": "2026-09-24",
+          "published_at": "2026-09-23 11:18:27",
+          "title": "WBD Stock Is Running. Is There Fuel Left?",
           "event_class": "print_vs_priced"
         },
         {
@@ -33540,6 +33621,15 @@
           "event_class": "gate"
         },
         {
+          "ticker": "MNTS",
+          "direction": "down",
+          "ret": -12.94,
+          "entry_date": "2026-09-24",
+          "published_at": "2026-09-24 08:00:00",
+          "title": "Momentus Awarded NASA Task Order Contract in Support of Initial Phase of FALCON-Lidar Mission to Study Earth's Atmosphere",
+          "event_class": "print_vs_priced"
+        },
+        {
           "ticker": "HBM",
           "direction": "up",
           "ret": 12.92,
@@ -35702,8 +35792,8 @@
       ]
     },
     "4d": {
-      "ge_5_n": 1116,
-      "ge_10_n": 771,
+      "ge_5_n": 1120,
+      "ge_10_n": 774,
       "ge_5": [
         {
           "ticker": "RGEN",
@@ -38638,6 +38728,24 @@
           "published_at": "2026-09-09 08:00:00",
           "title": "An 'IPO stampede' is coming: Why one name will be an important test",
           "event_class": "listing_flow"
+        },
+        {
+          "ticker": "INNV",
+          "direction": "down",
+          "ret": -7.66,
+          "entry_date": "2026-09-23",
+          "published_at": "2026-09-22 16:02:00",
+          "title": "InnovAge Announces Launch of Proposed Secondary Offering of Common Stock by Selling Stockholders",
+          "event_class": "dilution"
+        },
+        {
+          "ticker": "INNV",
+          "direction": "down",
+          "ret": -7.66,
+          "entry_date": "2026-09-23",
+          "published_at": "2026-09-22 20:46:00",
+          "title": "InnovAge Announces Pricing of Secondary Offering of Common Stock by Selling Stockholders",
+          "event_class": "dilution"
         },
         {
           "ticker": "PDYN",
@@ -43716,6 +43824,15 @@
           "event_class": "capacity"
         },
         {
+          "ticker": "VEON",
+          "direction": "up",
+          "ret": 5.67,
+          "entry_date": "2026-09-23",
+          "published_at": "2026-09-23 07:38:00",
+          "title": "VEON increases Share Buyback and Accelerates share cancellations",
+          "event_class": "capital_return"
+        },
+        {
           "ticker": "BETR",
           "direction": "down",
           "ret": -5.66,
@@ -45381,6 +45498,15 @@
           "event_class": "print_vs_priced"
         },
         {
+          "ticker": "IHG",
+          "direction": "up",
+          "ret": 5.09,
+          "entry_date": "2026-09-23",
+          "published_at": "2026-09-23 02:00:00",
+          "title": "InterContinental Hotels Group PLC Announces Transaction in Own Shares - September 23",
+          "event_class": "capital_return"
+        },
+        {
           "ticker": "BCPC",
           "direction": "up",
           "ret": 5.08,
@@ -46902,6 +47028,24 @@
           "published_at": "2026-08-14 08:30:00",
           "title": "Veritone, Inc. Q2 2026 Earnings Call Summary",
           "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "BMEA",
+          "direction": "down",
+          "ret": -25.88,
+          "entry_date": "2026-09-23",
+          "published_at": "2026-09-22 16:05:00",
+          "title": "Biomea Fusion Announces Proposed Public Offering of Securities",
+          "event_class": "dilution"
+        },
+        {
+          "ticker": "BMEA",
+          "direction": "down",
+          "ret": -25.88,
+          "entry_date": "2026-09-23",
+          "published_at": "2026-09-23 07:03:00",
+          "title": "Biomea Fusion Announces Termination of Proposed Public Offering of Securities",
+          "event_class": "dilution"
         },
         {
           "ticker": "NIQ",
@@ -50252,6 +50396,15 @@
           "event_class": "guidance"
         },
         {
+          "ticker": "INAB",
+          "direction": "up",
+          "ret": 12.61,
+          "entry_date": "2026-09-23",
+          "published_at": "2026-09-22 16:00:00",
+          "title": "IN8bio to Present at Sidoti Small-Cap Virtual Conference",
+          "event_class": "print_vs_priced"
+        },
+        {
           "ticker": "SPRY",
           "direction": "down",
           "ret": -12.58,
@@ -52693,8 +52846,8 @@
       ]
     },
     "5d": {
-      "ge_5_n": 1145,
-      "ge_10_n": 832,
+      "ge_5_n": 1148,
+      "ge_10_n": 833,
       "ge_5": [
         {
           "ticker": "SGI",
@@ -55368,6 +55521,15 @@
           "published_at": "2026-09-18 16:01:00",
           "title": "Amneal Announces FDA Approval and Launch of Lanreotide Injection",
           "event_class": "gate"
+        },
+        {
+          "ticker": "MSGM",
+          "direction": "up",
+          "ret": 8.1,
+          "entry_date": "2026-09-22",
+          "published_at": "2026-09-22 09:00:00",
+          "title": "Le Mans Ultimate Adds Second US Track Pack DLC to Build on Commercial Success of V1.4",
+          "event_class": "print_vs_priced"
         },
         {
           "ticker": "EBF",
@@ -61418,6 +61580,24 @@
           "event_class": "guidance"
         },
         {
+          "ticker": "IRMD",
+          "direction": "up",
+          "ret": 5.46,
+          "entry_date": "2026-09-22",
+          "published_at": "2026-09-21 12:26:00",
+          "title": "Market Strategist Julie Biel: The AI Craze Is Making These Quality Stocks More Affordable",
+          "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "IRMD",
+          "direction": "up",
+          "ret": 5.46,
+          "entry_date": "2026-09-22",
+          "published_at": "2026-09-21 12:26:00",
+          "title": "Market Strategist Julie Biel: The AI Craze Is Making These Quality Stocks More Affordable",
+          "event_class": "print_vs_priced"
+        },
+        {
           "ticker": "NBIX",
           "direction": "down",
           "ret": -5.45,
@@ -65603,6 +65783,15 @@
           "published_at": "2026-08-18 07:30:00",
           "title": "Prenetics' IM8 Reports Q2 2026 Revenue Growth of 288% YoY; Raises FY 2026 IM8 Revenue Guidance to $220-230 Million; July Was the First Month of Positive Consolidated Adjusted Free ",
           "event_class": "guidance"
+        },
+        {
+          "ticker": "XTIA",
+          "direction": "down",
+          "ret": -18.61,
+          "entry_date": "2026-09-22",
+          "published_at": "2026-09-21 15:36:00",
+          "title": "XTIA Stockholders Have Rights If you Lost Money Investing XTI Aerospace, Inc. Contact Robbins LLP For Information About Recovering Your Assets",
+          "event_class": "blast_legal"
         },
         {
           "ticker": "AMPL",
@@ -70528,53 +70717,53 @@
   },
   "harvest_source_mix": {
     "raw": {
-      "theme_radar_elite": 350505
+      "theme_radar_elite": 360015
     },
     "unique": {
-      "theme_radar_elite": 40041
+      "theme_radar_elite": 40964
     }
   },
   "ledger": {
     "counts": {
-      "singleton": 6575,
-      "converge": 544,
-      "clash": 74,
-      "converge_up": 372,
-      "converge_down": 172
+      "singleton": 6684,
+      "converge": 551,
+      "clash": 75,
+      "converge_up": 376,
+      "converge_down": 175
     },
     "hit_rates": {
       "singleton": {
         "0-1d": {
-          "hits": 505,
-          "n": 1089,
-          "hit_rate": 0.4637
+          "hits": 511,
+          "n": 1099,
+          "hit_rate": 0.465
         },
         "2d": {
-          "hits": 524,
-          "n": 1034,
-          "hit_rate": 0.5068
+          "hits": 525,
+          "n": 1038,
+          "hit_rate": 0.5058
         },
         "3d": {
-          "hits": 503,
-          "n": 1009,
-          "hit_rate": 0.4985
+          "hits": 509,
+          "n": 1016,
+          "hit_rate": 0.501
         },
         "4d": {
-          "hits": 499,
-          "n": 989,
-          "hit_rate": 0.5046
+          "hits": 504,
+          "n": 996,
+          "hit_rate": 0.506
         },
         "5d": {
-          "hits": 499,
-          "n": 969,
-          "hit_rate": 0.515
+          "hits": 503,
+          "n": 977,
+          "hit_rate": 0.5148
         }
       },
       "converge": {
         "0-1d": {
           "hits": 66,
-          "n": 126,
-          "hit_rate": 0.5238
+          "n": 127,
+          "hit_rate": 0.5197
         },
         "2d": {
           "hits": 57,
@@ -70582,14 +70771,14 @@
           "hit_rate": 0.479
         },
         "3d": {
-          "hits": 58,
-          "n": 113,
-          "hit_rate": 0.5133
+          "hits": 59,
+          "n": 114,
+          "hit_rate": 0.5175
         },
         "4d": {
-          "hits": 53,
-          "n": 104,
-          "hit_rate": 0.5096
+          "hits": 56,
+          "n": 107,
+          "hit_rate": 0.5234
         },
         "5d": {
           "hits": 53,
@@ -71140,8 +71329,8 @@
         ]
       }
     ],
-    "n_name_groups": 7193,
-    "n_theme_groups": 11,
+    "n_name_groups": 7310,
+    "n_theme_groups": 12,
     "theme_note": "Theme groups are router factor/macro keys only. They are not a second trade. The Elite Sector column is not a key.",
     "amrx_week": {
       "ok": true,
@@ -71177,7 +71366,7 @@
     "rule": "One entity per session. n_bull / n_bear count impulse up/down stories after title-normalize. Regime and weather do not vote. clash = both sides on that entity that session. converge = two or more stories, one side. Hit rates grade the entity once: converge uses that side, clash uses the net side (net 0 is ungraded). Long-horizon classes stay out of the 0-1d..5d denominator."
   },
   "macro_headline": {
-    "n_stories": 12,
+    "n_stories": 13,
     "reprints_collapsed": 5,
     "headline_n_1d": 0,
     "headline_hit_1d": 0,
