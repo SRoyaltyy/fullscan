@@ -30,6 +30,13 @@ class Tests(unittest.TestCase):
         summary=summarize([r,round_(100)])
         self.assertFalse(summary["rounds"][0]["valid_protocol"])
         self.assertEqual(summary["streak"],1)
+    def test_append_exclusions_do_not_erase_valid_prior_passes(self):
+        from .jev_acceptance import merge_exposure_history,identity
+        old={"rounds":[round_(),round_(100)],"historical_seen":["old-development"]}
+        new_seen=[identity(r) for b in old["rounds"] for r in b["items"]]+["new-development"]
+        merged=merge_exposure_history(old,new_seen)
+        self.assertEqual(set(merged),{"old-development","new-development"})
+        self.assertEqual(summarize(old["rounds"],merged)["streak"],2)
     def test_model_change_resets_streak(self):
         r=round_(100);r["jev_model"]="new-model"
         self.assertEqual(summarize([round_(),r])["streak"],1)

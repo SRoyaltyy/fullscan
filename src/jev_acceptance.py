@@ -55,6 +55,10 @@ def score(items, *, require_unique=True):
             "pass":tk/nk>.80 and td/nd>.80}
 
 
+def merge_exposure_history(old_report, new_seen):
+    exposed={identity(row) for batch in old_report.get("rounds",[]) for row in batch["items"]}
+    return sorted(set(old_report.get("historical_seen",[])) | (set(new_seen)-exposed))
+
 def summarize(rounds, historical_seen=()):
     seen=set(historical_seen); streak=0; active=None; summaries=[]
     for index,round_ in enumerate(rounds,1):
@@ -91,12 +95,22 @@ def run(input_path,output_path,workers=8,candidate=False,policy=None):
     if any(r["protocol_sha256"]!=fingerprint() for r in rounds): raise ValueError("Frozen rubric mismatch")
     prior=[]
     if Path(output_path).exists():
-        prior=json.loads(Path(output_path).read_text()).get("rounds", [])
+        old_report=json.loads(Path(output_path).read_text())
+        prior=old_report.get("rounds", [])
         exposed={identity(row) for old in prior for row in old["items"]}
         if any(identity(row) in exposed for batch in rounds for row in batch["items"]):
             raise ValueError("These articles were already evaluated; rescore cannot start a fresh streak")
+        # A new draw excludes prior evaluation rows. They were unseen at their
+        # own evaluation time; do not retroactively invalidate their passes.
+        data["historical_seen"]=merge_exposure_history(old_report,data.get("historical_seen",[]))
     # Validate complete independent labels and uniqueness before any paid calls.
-    for batch in rounds: score([{**row,"decision":"error"} for row in batch["items"]])
+    seen=set(data.get("historical_seen",[]))
+    for batch in rounds:
+        score([{**row,"decision":"error"} for row in batch["items"]])
+        ids={identity(row) for row in batch["items"]}
+        if ids & seen:raise ValueError("Input is not fresh against history or earlier batches")
+        if batch.get("teacher_blind") is not True or not batch.get("teacher_model") or batch.get("rubric_sha256")!=sha(RUBRIC):raise ValueError("Missing frozen blind frontier grading metadata")
+        seen.update(ids)
     key=api_key()
     if not key: raise RuntimeError("JEV_API_KEY required; regex cannot qualify")
     # Labels never enter JEV state. All gold was frozen before this request run.
