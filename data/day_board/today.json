@@ -1,82 +1,17 @@
 {
   "date": "2026-10-01",
-  "generated_at": "2026-10-01T05:47:37.694353-04:00",
+  "generated_at": "2026-10-01T05:47:43.588196-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
-    "ok": 3,
-    "partial": 3,
+    "ok": 4,
+    "partial": 2,
     "fail": 2,
     "n": 8
   },
-  "buy_1d": [
-    {
-      "ticker": "HITI",
-      "score": 0.511885370211601
-    },
-    {
-      "ticker": "CON",
-      "score": 0.720692354148363
-    },
-    {
-      "ticker": "AMN",
-      "score": 0.7170174197664942
-    },
-    {
-      "ticker": "NTAP",
-      "score": 0.3724340989579077
-    },
-    {
-      "ticker": "MQ",
-      "score": 0.7182163906090637
-    },
-    {
-      "ticker": "TWLO",
-      "score": 0.3191121567070214
-    }
-  ],
-  "sell_1d": [
-    {
-      "ticker": "OKLO",
-      "score": -0.3033173156184255
-    },
-    {
-      "ticker": "NEOV",
-      "score": -0.26036673502258956
-    },
-    {
-      "ticker": "FCEL",
-      "score": -0.31489473489740943
-    },
-    {
-      "ticker": "POWL",
-      "score": -0.13061544376578688
-    },
-    {
-      "ticker": "EOSE",
-      "score": -0.3732501371274795
-    },
-    {
-      "ticker": "NNDM",
-      "score": 0.1797296030331017
-    },
-    {
-      "ticker": "NRGV",
-      "score": -0.3215361248741783
-    },
-    {
-      "ticker": "INDI",
-      "score": -0.16508112959537674
-    }
-  ],
-  "flatten": {
-    "said": "0 priced buys \u00b7 cash $81,251.01 \u00b7 morning S missing",
-    "bullets": [
-      "0 priced buys",
-      "cash $81,251.01",
-      "morning S missing"
-    ]
-  },
+  "buy_1d": [],
+  "sell_1d": [],
+  "flatten": {},
   "general": {},
   "sectors": {},
   "lands": [
@@ -253,7 +188,7 @@
       "date": "2026-10-01",
       "ok": true,
       "pushed": true,
-      "at": "2026-10-01T05:47:37.470346-04:00",
+      "at": "2026-10-01T05:47:43.361533-04:00",
       "files": [
         {
           "path": "01_daily/news/2026-10-01_parsed.json",

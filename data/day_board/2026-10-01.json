@@ -1,6 +1,6 @@
 {
   "date": "2026-10-01",
-  "generated_at": "2026-10-01T05:47:37.694353-04:00",
+  "generated_at": "2026-10-01T05:47:43.588196-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -11,8 +11,8 @@
     "MISSING AB checklist enriched `data/ab_checklist/2026-10-01_ab_checklist_enriched.csv` \u2014 missing"
   ],
   "counts": {
-    "ok": 3,
-    "partial": 3,
+    "ok": 4,
+    "partial": 2,
     "fail": 2,
     "n": 8
   },
@@ -641,7 +641,7 @@
       "inputs_ready": false,
       "n_req_ok": 1,
       "n_req": 4,
-      "n_opt_ok": 1,
+      "n_opt_ok": 2,
       "n_opt": 3,
       "files": [
         {
@@ -804,10 +804,10 @@
           "name": "Dashboard HTML",
           "path": "dashboard/index.html",
           "role": "optional",
-          "status": "FAIL",
-          "reason": "session 2026-10-01 not in dashboard dates (last=2026-09-25)",
+          "status": "OK",
+          "reason": "live-book poller + today.json (2026-10-01)",
           "size": 8945021,
-          "said": "session 2026-10-01 not in dashboard dates (last=2026-09-25)",
+          "said": "live-book poller + today.json (2026-10-01)",
           "bullets": []
         }
       ],
@@ -820,9 +820,9 @@
       "key": "publish",
       "name": "Dashboard / .io",
       "yaml": "deploy-dashboard.yml",
-      "status": "PARTIAL",
+      "status": "OK",
       "inputs_ready": false,
-      "n_req_ok": 1,
+      "n_req_ok": 2,
       "n_req": 2,
       "n_opt_ok": 0,
       "n_opt": 1,
@@ -843,10 +843,10 @@
           "name": "Dashboard HTML (repo)",
           "path": "dashboard/index.html",
           "role": "required",
-          "status": "FAIL",
-          "reason": "session 2026-10-01 not in dashboard dates (last=2026-09-25)",
+          "status": "OK",
+          "reason": "live-book poller + today.json (2026-10-01)",
           "size": 8945021,
-          "said": "session 2026-10-01 not in dashboard dates (last=2026-09-25)",
+          "said": "live-book poller + today.json (2026-10-01)",
           "bullets": []
         },
         {
@@ -882,81 +882,26 @@
   "news_mode": "on",
   "news_mode_reason": "",
   "selections": {
-    "buy_1d": [
-      {
-        "ticker": "HITI",
-        "score": 0.511885370211601
-      },
-      {
-        "ticker": "CON",
-        "score": 0.720692354148363
-      },
-      {
-        "ticker": "AMN",
-        "score": 0.7170174197664942
-      },
-      {
-        "ticker": "NTAP",
-        "score": 0.3724340989579077
-      },
-      {
-        "ticker": "MQ",
-        "score": 0.7182163906090637
-      },
-      {
-        "ticker": "TWLO",
-        "score": 0.3191121567070214
-      }
-    ],
-    "sell_1d": [
-      {
-        "ticker": "OKLO",
-        "score": -0.3033173156184255
-      },
-      {
-        "ticker": "NEOV",
-        "score": -0.26036673502258956
-      },
-      {
-        "ticker": "FCEL",
-        "score": -0.31489473489740943
-      },
-      {
-        "ticker": "POWL",
-        "score": -0.13061544376578688
-      },
-      {
-        "ticker": "EOSE",
-        "score": -0.3732501371274795
-      },
-      {
-        "ticker": "NNDM",
-        "score": 0.1797296030331017
-      },
-      {
-        "ticker": "NRGV",
-        "score": -0.3215361248741783
-      },
-      {
-        "ticker": "INDI",
-        "score": -0.16508112959537674
-      }
-    ],
-    "flatten": {
-      "said": "0 priced buys \u00b7 cash $81,251.01 \u00b7 morning S missing",
-      "bullets": [
-        "0 priced buys",
-        "cash $81,251.01",
-        "morning S missing"
-      ]
-    },
+    "buy_1d": [],
+    "sell_1d": [],
+    "flatten": {},
     "general": {},
     "sectors": {},
-    "news": {},
+    "news": {
+      "said": "news_mode: on \u00b7 400 raw / 95 usable \u00b7 Why are US treasury yields falling today? Federal Reserve interest rate hike in ",
+      "bullets": [
+        "Why are US treasury yields falling today? Federal Reserve interest rate hike in October expectations drop - economictimes.com",
+        "Gold steadies as cooler US inflation data counters higher Treasury yields - Reuters",
+        "US 10-Year Treasury Yield Soars To 24-Year High: Will The Selloff Continue? - TradingView",
+        "Elizabeth Warren Blames Trump's 'Failed' Policies for Fed Rate Hike - Benzinga",
+        "Goldman Sachs pushes Fed rate hike forecast to December - Reuters",
+        "Asian Stocks Split as Softer US Inflation Cools Fed Rate Hike Bets, Bond Yields Stay High - \u041c\u0435\u0436\u0430. \u041d\u043e\u0432\u0438\u043d\u0438 \u0423\u043a\u0440\u0430\u0457\u043d\u0438."
+      ]
+    },
     "weather": {
       "said": "hostile 9 \u00b7 neutral 2",
       "bullets": [
-        "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Industrials, Real Estate, Technology, Utilities",
+        "hostile: Basic Materials, Communication Services, Consumer Cyclical, Consumer Defensive, Energy, Healthcare, Industrials, Real Estate, Technology",
         "events bull 4 / bear 1"
       ]
     }
@@ -1593,7 +1538,7 @@
       "date": "2026-10-01",
       "ok": true,
       "pushed": true,
-      "at": "2026-10-01T05:47:37.470346-04:00",
+      "at": "2026-10-01T05:47:43.361533-04:00",
       "files": [
         {
           "path": "01_daily/news/2026-10-01_parsed.json",
