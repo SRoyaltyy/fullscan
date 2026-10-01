@@ -22,7 +22,9 @@
       "overlap_count": 0,
       "unique": true,
       "valid_protocol": false,
-      "streak": 0
+      "streak": 0,
+      "dataset_role": "development",
+      "protocol_sha256": "c459233b388427977b3b0c6eeba0eb574f3abe0ce189dec6987a8861b9eb7c80"
     },
     {
       "round": 2,
@@ -40,7 +42,9 @@
       "overlap_count": 0,
       "unique": true,
       "valid_protocol": true,
-      "streak": 1
+      "streak": 1,
+      "dataset_role": "acceptance",
+      "protocol_sha256": "18e8861dfc6aa37da95e1e8797011285de380219addeaeb0430f5831f35da3a7"
     },
     {
       "round": 3,
@@ -58,7 +62,9 @@
       "overlap_count": 0,
       "unique": true,
       "valid_protocol": true,
-      "streak": 2
+      "streak": 2,
+      "dataset_role": "acceptance",
+      "protocol_sha256": "18e8861dfc6aa37da95e1e8797011285de380219addeaeb0430f5831f35da3a7"
     },
     {
       "round": 4,
@@ -76,7 +82,9 @@
       "overlap_count": 0,
       "unique": true,
       "valid_protocol": true,
-      "streak": 3
+      "streak": 3,
+      "dataset_role": "acceptance",
+      "protocol_sha256": "18e8861dfc6aa37da95e1e8797011285de380219addeaeb0430f5831f35da3a7"
     },
     {
       "round": 5,
@@ -94,7 +102,9 @@
       "overlap_count": 0,
       "unique": true,
       "valid_protocol": true,
-      "streak": 4
+      "streak": 4,
+      "dataset_role": "acceptance",
+      "protocol_sha256": "18e8861dfc6aa37da95e1e8797011285de380219addeaeb0430f5831f35da3a7"
     },
     {
       "round": 6,
@@ -112,7 +122,9 @@
       "overlap_count": 0,
       "unique": true,
       "valid_protocol": true,
-      "streak": 5
+      "streak": 5,
+      "dataset_role": "acceptance",
+      "protocol_sha256": "18e8861dfc6aa37da95e1e8797011285de380219addeaeb0430f5831f35da3a7"
     },
     {
       "round": 7,
@@ -130,7 +142,9 @@
       "overlap_count": 0,
       "unique": true,
       "valid_protocol": true,
-      "streak": 6
+      "streak": 6,
+      "dataset_role": "acceptance",
+      "protocol_sha256": "18e8861dfc6aa37da95e1e8797011285de380219addeaeb0430f5831f35da3a7"
     },
     {
       "round": 8,
@@ -148,7 +162,9 @@
       "overlap_count": 0,
       "unique": true,
       "valid_protocol": false,
-      "streak": 0
+      "streak": 0,
+      "dataset_role": "acceptance",
+      "protocol_sha256": "18e8861dfc6aa37da95e1e8797011285de380219addeaeb0430f5831f35da3a7"
     },
     {
       "round": 9,
@@ -166,7 +182,9 @@
       "overlap_count": 0,
       "unique": true,
       "valid_protocol": true,
-      "streak": 0
+      "streak": 0,
+      "dataset_role": "acceptance",
+      "protocol_sha256": "18e8861dfc6aa37da95e1e8797011285de380219addeaeb0430f5831f35da3a7"
     },
     {
       "round": 10,
@@ -184,7 +202,9 @@
       "overlap_count": 0,
       "unique": true,
       "valid_protocol": true,
-      "streak": 1
+      "streak": 1,
+      "dataset_role": "acceptance",
+      "protocol_sha256": "18e8861dfc6aa37da95e1e8797011285de380219addeaeb0430f5831f35da3a7"
     },
     {
       "round": 11,
@@ -202,7 +222,9 @@
       "overlap_count": 0,
       "unique": true,
       "valid_protocol": true,
-      "streak": 0
+      "streak": 0,
+      "dataset_role": "acceptance",
+      "protocol_sha256": "18e8861dfc6aa37da95e1e8797011285de380219addeaeb0430f5831f35da3a7"
     }
   ],
   "evidence_scope": "Headline-only; prior-event novelty and article bodies unverified. Old-rubric passes do not count.",
