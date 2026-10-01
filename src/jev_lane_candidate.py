@@ -2,7 +2,7 @@
 import math,re
 from .jev_acceptance import sha
 from .jev_lane_contract import RUBRIC, CONTRACT_VERSION
-VERSION='lane-hop0-v3'
+VERSION='lane-hop0-v4'
 QUESTIONS={
  'q5':{'type':'choice','instructions':RUBRIC,'criteria':{
   'change':'A specific new fact changes a tradable constraint, or a verified physical/legal regime break. Includes committed company expansion, actual results/guidance, deal announcement/cancellation, approval, court ruling, leadership/control, financing, actual disruption, official data or concrete new policy path.',
@@ -18,11 +18,15 @@ QUESTIONS={
 QUESTIONS['reported_fact']={'type':'noul','instructions':'Ignore framing and identify the actual underlying fact supplied. Is there a concrete report of an actual event/result with a potential market constraint? Do not select an event class. Do not require a numeric figure when an actual result direction or discrete event is explicit.', 'criteria':{'true':'Actual company earnings beat/miss/profit/revenue growth/decline or blowout/record quarter; released official economic data even unchanged/in-line; issued or cut/raised company guidance; actual central-bank rate decision including a hold; appointment, departure or death of a consequential corporate leader; a legal trial starts, lawsuit/settlement/ruling/probe; an authority sets an operative trade deadline or new rule; actual company customer losses/operational changes; funding, buybacks, acquisition/asset sale, committed capacity, trial result, approval, recall, cyberattack or an operational disruption. A stated event can sit inside price reaction, question or commentary framing.','false':'Only forecast/valuation/stock movement, advice, target-price/rating change, voluntary fund allocations/sentiment, future earnings/calendar, transcript, generic official inflation objective, vague teaser, routine product amenity, uncommitted hope/rumor or an existing-condition explainer without a discrete actual fact.'}}
 QUESTIONS['screen']={'type':'choice','instructions':'Separate whether an article deserves deeper analysis from whether it is a trade. Keep genuine company/official macro events including actual rate decisions even holds, real earnings/result directions even without numbers, new legal/operating/control/capital/supply constraints, and specific new authoritative hike/cut signals. Look through framing to the actual supplied event. Drop pure advice/PT, preview, roundup/transcript, price tape, generic policy weather, rumor and small/local facts with no US/global-sector/listed channel. Do not invent missing events or assumed priced surprise. A small private local subsidiary or unrelated foreign telecom story is insufficient; an issuer result, financing or actual operations change merits deeper investigation.', 'criteria':{'investigate':'An actual specific event/result with a plausible listed/US/global-sector mechanism merits deeper analysis, even if the price moved the other way or commentary surrounds it.','discard':'No concrete underlying event/result; only tape/color/advice/preview/rumor/reprint, packaging, local irrelevant private story or tiny amenity/subsidiary.'}}
 
-THRESHOLDS={'q5':.40,'action':.65,'print':.65,'policy_path':.65,'reported_fact':.55,'screen':.70,'mechanism':.25,'junk':.80,'rumor':.60,'weather':.99}
-ARTIFACT=re.compile(r'(?i)earnings call (?:transcript|highlights|summary)|morning squawk|\b\d+ key items shaping|earnings live updates')
+
+QUESTIONS['path_signal']={'type':'noul','instructions':'Does an empowered central-bank/government actor give a specific policy-path signal in this headline? This asks what was said, not whether rates already changed. Treat explicit hike/cut possibilities as signals; do not downgrade them merely because they are conditional.', 'criteria':{'true':'A Fed/central-bank chair, governor, voting official or rate panel says hikes/cuts may be needed, sees scope for more hikes/cuts, leaves the door open for a specified rate move, signals impending hikes/cuts, or says a rate increase is possible/needed. Also an actual signed/announced official rate/trade/fiscal decision. A named institution or its authorized officials can be the actor.','false':'Only an analyst/strategist or market odds predicting rates; generic inflation too high, pledges to tame inflation, pivotal moment, puts nation on alert, expert warnings, lawmakers urging, or an unspecified speech without a concrete rate/action path.'}}
+QUESTIONS['form']={'type':'choice','instructions':'What does the headline itself provide? A direct actual result/action can appear inside reaction or advice wording. A passing mention of earnings or an old event is insufficient. Distinguish actual beat/miss/growth/guidance/corporate/legal facts from only price after earnings. Do not invent missing facts.', 'criteria':{'event_main':'An actual specific underlying event/result is supplied, including earnings beat/miss/growth, official data direction, guidance revision, binding deal, approval, leadership or operational/legal change, or a specific authorized rate-path signal.','recycled':'A feature, opinions on a previous earnings report, how an already-known event changed things, what we know about an old recall/case, generic existing regime, or a causal price narrative with no stated actual result/change.','packaging':'Roundup/list of multiple unrelated news items/earnings movers, transcript/call highlights/summary, upcoming earnings/calendar, pure price target/picks or vague teaser without an actual underlying event/result.'}}
+
+THRESHOLDS={'q5':.35,'action':.65,'print':.65,'policy_path':.65,'reported_fact':.50,'path_signal':.65,'screen':.70,'mechanism':.10,'junk':.98,'rumor':.60,'weather':.99}
+ARTIFACT=re.compile(r'(?i)earnings call (?:transcript|highlights|summary)|morning squawk|\b\d+ key items shaping|earnings live updates|\bopinions on\b|what we know about|today.s news:|lead earnings movers')
 BARE_CALENDAR=re.compile(r'(?i)^.{1,100}\b(?:Q[1-4]\s+(?:FY)?20\d{2}|FQ[1-4]\s+20\d{2})\s+earnings(?:\s+\([^)]*\))?$')
 FORMULA='mechanism >= cutoff AND q5 junk/rumor/weather below veto thresholds AND any q5-change/action/print/policy_path/reported_fact/screen support above their respective thresholds'
-def protocol_sha():return sha(dict(version=VERSION,contract=CONTRACT_VERSION,rubric=RUBRIC,questions=QUESTIONS,thresholds=THRESHOLDS,formula=FORMULA,artifacts=[ARTIFACT.pattern,BARE_CALENDAR.pattern]))
+def protocol_sha():return sha(dict(version=VERSION,contract=CONTRACT_VERSION,rubric=RUBRIC,questions=QUESTIONS,thresholds=THRESHOLDS,formula=FORMULA,retries=3,form_veto=[.80,.90],artifacts=[ARTIFACT.pattern,BARE_CALENDAR.pattern]))
 def decide(row,payload):
  answers=payload['answers'];s={}
  for key,q in QUESTIONS.items():
@@ -36,11 +40,26 @@ def decide(row,payload):
   if any(isinstance(v,bool) or not isinstance(v,(int,float)) or not math.isfinite(v) or not 0<=v<=1 for v in values):raise ValueError('invalid probabilities')
   if q['type']=='choice':
    if abs(sum(values)-1)>.02 or a.get('choice') not in probs or probs[a['choice']]<max(values):raise ValueError('invalid choice')
-   s.update(probs) if key=='q5' else s.update(screen=probs['investigate'])
+   s.update(probs) if key=='q5' else s.update(screen=probs['investigate']) if key=='screen' else s.update({'form_'+k:v for k,v in probs.items()})
   else:s[key]=values[0]
  t=THRESHOLDS
  veto=next((key for key in ('junk','rumor','weather') if s[key]>=t[key]),'')
+ if s['form_packaging']>=.80 or s['form_recycled']>=.90:veto='packaging_or_recycled'
  if ARTIFACT.search(row.get('title','')) or BARE_CALENDAR.search(row.get('title','')):veto='packaging_or_calendar'
- supported=s['change']>=t['q5'] or any(s[k]>=t[k] for k in ('action','print','policy_path','reported_fact','screen'))
+ supported=s['change']>=t['q5'] or any(s[k]>=t[k] for k in ('action','print','policy_path','reported_fact','screen','path_signal'))
  keep=not veto and s['mechanism']>=t['mechanism'] and supported
  return dict(decision='keep' if keep else 'drop',reason=veto or ('constraint_change' if keep else 'no_supported_constraint'),policy_version=VERSION,protocol_sha256=protocol_sha(),model=payload.get('model','unknown'),answers=answers,signals=s,usage=payload.get('usage',{}),novelty_verified=bool(row.get('prior_events')))
+
+def evaluate(row,poster,key):
+ """Retry malformed/failed responses, never consult gold; retain charged usage."""
+ from .jev_gate import make_state
+ usage={};last=None
+ for attempt in range(3):
+  try:
+   payload=poster(make_state(row),QUESTIONS,key)
+   for k,v in payload.get('usage',{}).items():
+    if isinstance(v,(int,float)):usage[k]=usage.get(k,0)+v
+   result=decide(row,payload);result.update(usage=usage,retry_count=attempt)
+   return result
+  except Exception as exc:last=exc
+ raise RuntimeError('Lane evaluation failed after 3 attempts: '+type(last).__name__+': '+str(last)[:160]) from last

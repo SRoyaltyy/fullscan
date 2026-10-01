@@ -122,6 +122,10 @@ def run(input_path,output_path,workers=8,candidate=False,policy=None):
     def one(item):
         evidence={k:v for k,v in item.items() if k in {"title","source","published_at","url","snippet","summary","description","content"}}
         try:
+            if policy == "lane-hop0":
+                from .jev_lane_candidate import evaluate
+                result=evaluate(evidence,jev_post,key)
+                return {**item,**result,"jev_model":result["model"]}
             payload=jev_post(make_state(evidence),questions,key)
             if candidate:
                 result=decide(evidence,payload)
@@ -133,7 +137,7 @@ def run(input_path,output_path,workers=8,candidate=False,policy=None):
             if answer.get("type")!="choice" or choice not in probs or abs(sum(probs.values())-1)>.02 or probs[choice]<max(probs.values()):raise ValueError("invalid Choice answer")
             return {**item,"decision":choice,"jev_model":payload.get("model","unknown"),"answer":answer,"usage":payload.get("usage",{})}
         except Exception as exc:
-            return {**item,"decision":"error","error_type":type(exc).__name__}
+            return {**item,"decision":"error","error_type":type(exc).__name__,"error_detail":str(exc)[:200]}
     for round_ in rounds:
         with ThreadPoolExecutor(max_workers=max(1,min(workers,24))) as pool:
             round_["items"]=list(pool.map(one,round_["items"]))

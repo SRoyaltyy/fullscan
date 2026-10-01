@@ -39,7 +39,7 @@ jobs:
           from src.jev_acceptance import run
           data=json.load(open('00_grounding/jev_lane/latest_gold.json'))
           output=data.get('evaluation_output','validation/jev_lane_report.json')
-          assert output in {'validation/jev_lane_report.json','validation/jev_lane_development_v2_report.json'}
+          assert output in {'validation/jev_lane_report.json','validation/jev_lane_development_v2_report.json','validation/jev_lane_development_v4_report.json'}
           run('00_grounding/jev_lane/latest_gold.json',output,policy='lane-hop0')
           PYTHON
       - name: Publish all records and status

@@ -8,6 +8,7 @@ old=json.loads((root/'validation/jev_acceptance_report.json').read_text())
 f=root/'validation/jev_lane_report.json'
 lane=json.loads(f.read_text()) if f.exists() else dict(rounds=[],historical_seen=[])
 summary=summarize(lane['rounds'],lane.get('historical_seen',[]),rubric=RUBRIC)
+for status,batch in zip(summary['rounds'],lane['rounds']):status.update(dataset_role=batch.get('dataset_role','acceptance'),protocol_sha256=batch['protocol_sha256'])
 summary.update(evidence_scope='Headline-only; prior-event novelty and article bodies unverified. Old-rubric passes do not count.',rubric=RUBRIC,contract_version=CONTRACT_VERSION,jev_model=lane['rounds'][-1]['jev_model'] if lane['rounds'] else 'jev-1.13.0',teacher_model='GPT-6 frontier assistant / Lane contract')
 (site/'acceptance.json').write_text(json.dumps(summary,indent=2)+'\n')
 rows=[];blind=[]

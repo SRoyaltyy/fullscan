@@ -1072,11 +1072,13 @@ def gate(rows: list[dict], *, code_only: bool = False, live: bool = False,
          reviewer=None, deduplicate: bool = True) -> list[dict]:
     """Run hop-0. gold_answers maps row id → answer dict (tests / dry gold)."""
     policy = policy or os.environ.get("JEV_GATE_POLICY", "sixbit")
-    if policy not in {"sixbit", "triage", "candidate", "candidate-v2"}:
+    if policy not in {"sixbit", "triage", "candidate", "candidate-v2", "lane-hop0"}:
         raise ValueError(f"Unknown JEV_GATE_POLICY: {policy}")
-    if policy in {"triage", "candidate", "candidate-v2"} and live and not code_only:
+    if policy in {"triage", "candidate", "candidate-v2", "lane-hop0"} and live and not code_only:
         from . import jev_triage
-        if policy == "candidate-v2":
+        if policy == "lane-hop0":
+            from . import jev_lane_candidate as classifier
+        elif policy == "candidate-v2":
             from . import jev_candidate_v2 as classifier
         elif policy == "candidate":
             from . import jev_candidate as classifier
@@ -1087,9 +1089,13 @@ def gate(rows: list[dict], *, code_only: bool = False, live: bool = False,
             raise RuntimeError("JEV_API_KEY / TYPESAFE_API_KEY is empty")
         def one(row):
             try:
+                if policy == "lane-hop0":
+                    result=classifier.evaluate(row,poster or jev_post,key)
+                    row["_jev_model"]=result['model']
+                    return {**result,"routing":"automatic","review_required":False}
                 payload = (poster or jev_post)(make_state(row), classifier.QUESTIONS, key)
                 row["_jev_model"] = payload.get("model") or JEV_MODEL
-                if policy in {"candidate", "candidate-v2"}:
+                if policy in {"candidate", "candidate-v2", "lane-hop0"}:
                     result=classifier.decide(row,payload)
                     return {**result,"routing":"automatic","review_required":False}
                 return classifier.decide(row, payload, reviewer)
