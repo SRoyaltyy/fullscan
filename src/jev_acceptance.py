@@ -25,7 +25,12 @@ def sha(value):
 
 def identity(row):
     from .jev_gate import normalize_title
-    return sha(normalize_title(row.get("title", "")))
+    title=row.get("title", "")
+    # Publisher suffixes are metadata; apostrophes/Unicode used to defeat
+    # the legacy suffix regex and let the same headline appear unseen.
+    import re
+    title=re.split(r"\s+[-–—|]\s+(?=[^\n]{2,80}$)",title)[0]
+    return sha(normalize_title(title))
 
 
 def protocol_sha():
@@ -73,9 +78,13 @@ def summarize(rounds, historical_seen=()):
             "streak":streak,"accepted":streak>=5,"rounds":summaries}
 
 
-def run(input_path,output_path,workers=8):
+def run(input_path,output_path,workers=8,candidate=False):
+    if candidate:
+        from .jev_candidate import QUESTIONS as questions, protocol_sha as fingerprint, decide
+    else:
+        questions, fingerprint = QUESTIONS, protocol_sha
     data=json.loads(Path(input_path).read_text()); rounds=data["rounds"]
-    if any(r["protocol_sha256"]!=protocol_sha() for r in rounds): raise ValueError("Frozen rubric mismatch")
+    if any(r["protocol_sha256"]!=fingerprint() for r in rounds): raise ValueError("Frozen rubric mismatch")
     prior=[]
     if Path(output_path).exists():
         prior=json.loads(Path(output_path).read_text()).get("rounds", [])
@@ -90,7 +99,10 @@ def run(input_path,output_path,workers=8):
     def one(item):
         evidence={k:v for k,v in item.items() if k in {"title","source","published_at","url","snippet","summary","description","content"}}
         try:
-            payload=jev_post(make_state(evidence),QUESTIONS,key)
+            payload=jev_post(make_state(evidence),questions,key)
+            if candidate:
+                result=decide(evidence,payload)
+                return {**item,**result,"jev_model":result["model"]}
             answer=payload["answers"]["decision"]; probs=answer["probabilities"]
             if set(probs)!={"keep","drop"}: raise ValueError("incomplete probabilities")
             if any(isinstance(p,bool) or not isinstance(p,(float,int)) or not math.isfinite(p) or not 0<=p<=1 for p in probs.values()):raise ValueError("invalid probabilities")
@@ -112,4 +124,5 @@ def run(input_path,output_path,workers=8):
 
 if __name__=="__main__":
     p=argparse.ArgumentParser();p.add_argument("--input",required=True);p.add_argument("--output",required=True)
-    a=p.parse_args();run(a.input,a.output)
+    p.add_argument("--candidate",action="store_true")
+    a=p.parse_args();run(a.input,a.output,candidate=a.candidate)

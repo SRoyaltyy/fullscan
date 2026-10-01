@@ -4,7 +4,8 @@ on:
     branches: [codex/jev-news-triage]
     paths:
       - 'src/jev_acceptance.py'
-      - '00_grounding/jev_acceptance/five_rounds_gold.json'
+      - 'src/jev_candidate.py'
+      - '00_grounding/jev_acceptance/candidate_v1_gold.json'
       - '.github/workflows/jev_acceptance.yml'
 permissions:
   contents: write
@@ -33,12 +34,12 @@ jobs:
           JEV_API_KEY: ${{ secrets.JEV_API_KEY }}
           JEV_MODEL: jev-1.13.0
         run: |
-          python -m src.jev_acceptance --input 00_grounding/jev_acceptance/five_rounds_gold.json --output validation/jev_acceptance_report.json
+          python -m src.jev_acceptance --input 00_grounding/jev_acceptance/candidate_v1_gold.json --output validation/jev_acceptance_report.json --candidate
           python - <<'PY'
           import json
           from pathlib import Path
           report=json.loads(Path('validation/jev_acceptance_report.json').read_text())
-          summary={**report['summary'], 'evidence_scope':report['evidence_scope'], 'protocol_sha256':report['rounds'][0]['protocol_sha256'], 'teacher_model':report['rounds'][0]['teacher_model'], 'jev_model':report['rounds'][0]['jev_model']}
+          summary={**report['summary'], 'evidence_scope':report['evidence_scope'], 'protocol_sha256':report['rounds'][-1]['protocol_sha256'], 'teacher_model':report['rounds'][-1]['teacher_model'], 'jev_model':report['rounds'][-1]['jev_model']}
           Path('dashboard/jev-train/acceptance.json').write_text(json.dumps(summary,indent=2)+'\n')
           PY
       - uses: actions/upload-artifact@v4
