@@ -49,6 +49,23 @@ class TriageTests(unittest.TestCase):
         with patch("src.jev_eval.time.sleep"):
             with self.assertRaises(RuntimeError):
                 score_sample([{"title":"Micron reports record earnings"}],live=True,key="test",workers=1,poster=lambda *a:{},asof=dt.date.today())
+    def test_review_is_not_scored_as_automatic_correct(self):
+        from .jev_triage_eval import metrics
+        items = [{"title":"A", "gold":"keep"}, {"title":"B", "gold":"drop"}]
+        decisions = [t.review(items[0]), {"title":"B", "decision":"drop"}]
+        score = metrics(items, decisions)
+        self.assertEqual(score["automatic_labeled"], 1)
+        self.assertEqual(score["automatic_keep_recall"], 0)
+        self.assertEqual(score["retained_keep_recall"], 1)
+    def test_old_stop_cannot_pass_with_errors(self):
+        from .jev_sixbit_stop import score
+        items=[{"title":"A", "label":"finished_act"}]
+        report=score(items,[t.review(items[0], "jev_error")])
+        self.assertFalse(report["pass"])
+        self.assertEqual(report["unresolved"],["A"])
+    def test_teacher_failure_stays_review(self):
+        def fail(row): raise RuntimeError("teacher down")
+        self.assertEqual(t.decide({},payload(probability=.7),fail)["reason"], "teacher_error")
     def test_only_news_context_enters_prompt(self):
         state = make_state({"title":"X", "snippet":"Actual earnings details", "grade":"K", "human_reason":"keep", "known_class":"earnings"})
         self.assertIn("Actual earnings details",state)

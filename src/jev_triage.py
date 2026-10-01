@@ -65,7 +65,8 @@ def review(row, reason="uncertain", **metadata):
 
 def decide(row, payload, reviewer=None):
     meta = {"policy_version": POLICY_VERSION, "prompt_sha256": fingerprint(),
-            "model": payload.get("model", ""), "answers": payload.get("answers", {})}
+            "model": payload.get("model", ""), "answers": payload.get("answers", {}),
+            "usage": payload.get("usage", {})}
     try:
         answers = payload["answers"]
         info, ip, ic = choice_answer(answers.get("information"), QUESTIONS["information"]["criteria"])
@@ -84,7 +85,11 @@ def decide(row, payload, reviewer=None):
         if reviewer is not None:
             # Explicitly injected teacher; no implicit paid calls. Only news evidence
             # is supplied, so a teacher cannot anchor on the student's answer.
-            judged = reviewer(dict(row))
+            try:
+                judged = reviewer(dict(row))
+            except Exception:
+                out["reason"] = "teacher_error"
+                return out
             if judged in {"keep", "drop"}:
                 out.update(decision=judged, routing="teacher", review_required=False,
                            reason="teacher", teacher_decision=judged)

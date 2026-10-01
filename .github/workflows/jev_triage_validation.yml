@@ -19,6 +19,12 @@ jobs:
     timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            src
+            00_grounding
+            validation
+            .github/workflows
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'

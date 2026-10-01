@@ -643,8 +643,9 @@ def annotate_gate(rows: list[dict], *, live: bool, key: str, workers: int,
             "new_instrument": dec.get("new_instrument") or 0,
             "bits": why_bits(row.get("title") or "", dec),
         }
-        if dec.get("noul"):
-            item["noul"] = dec["noul"]
+        for field in ("noul", "routing", "review_required", "policy_version", "prompt_sha256", "answers", "usage"):
+            if field in dec:
+                item[field] = dec[field]
         items.append(item)
     return items, model
 

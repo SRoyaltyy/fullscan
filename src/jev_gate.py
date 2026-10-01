@@ -1363,9 +1363,10 @@ def to_markdown(report: dict) -> str:
         f"mode={report.get('mode')} code_only={report.get('code_only')} "
         f"live={report.get('live')} in={report.get('n_in')} "
         f"keep={report.get('n_keep')} drop={report.get('n_drop')} "
+        f"review={report.get('n_review', 0)} errors={report.get('n_errors', 0)} "
         f"drop_rate={report.get('drop_rate')}",
         "",
-        "Jev does not classify event types or polarity. Only keeps leave this hop.",
+        "Jev does not classify event types or polarity. Keeps include unresolved review rows.",
         "",
         "## Reasons",
     ]
