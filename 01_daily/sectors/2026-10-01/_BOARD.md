@@ -1,15 +1,15 @@
 # Sector Board — 2026-10-01
 
-Generated: **2026-10-01T06:04:28.958540-04:00** (America/New_York)
+Generated: **2026-10-01T06:04:54.515147-04:00** (America/New_York)
 
 Birds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.).
 
 ## Summary
 
-- Predicts present: **9/11**
+- Predicts present: **10/11**
 - Outcomes graded: **0/11**
 - Direction hits (when graded): **0/0**
-- Predicted up / down / flat-or-missing: **1** / **8** / **2**
+- Predicted up / down / flat-or-missing: **2** / **8** / **1**
 
 ## Full table
 
@@ -24,12 +24,13 @@ Birds-eye of all 11 Finviz sectors. Individual write-ups live next to this file 
 | Healthcare | XLV | down | mild | -3.88 | 0.66 | — | — | — | P |
 | Industrials | XLI | down | mild | -0.38 | 0.41 | — | — | — | P |
 | Real Estate | XLRE | down | mild | -5.86 | 0.63 | — | — | — | P |
-| Technology | XLK | — | — | — | — | — | — | — | — |
+| Technology | XLK | up | mild | 5.04 | 0.70 | — | — | — | P |
 | Utilities | XLU | — | — | — | — | — | — | — | — |
 
 ## Predicted leaders (up)
 
 - **Communication Services** (XLC): score=7.47, mag=mild, conf=0.80
+- **Technology** (XLK): score=5.04, mag=mild, conf=0.70
 
 ## Predicted laggards (down)
 

@@ -1,6 +1,6 @@
 {
   "date": "2026-10-01",
-  "generated_at": "2026-10-01T06:04:29.285120-04:00",
+  "generated_at": "2026-10-01T06:04:54.848848-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -179,7 +179,7 @@
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 14,
+      "n_req_ok": 15,
       "n_req": 20,
       "n_opt_ok": 3,
       "n_opt": 3,
@@ -340,8 +340,8 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 7617,
-          "said": "1 up / 8 down / 0 flat",
+          "size": 7784,
+          "said": "2 up / 8 down / 0 flat",
           "bullets": [
             "XLB DOWN -0.8",
             "XLC UP +7.5",
@@ -356,12 +356,11 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=True",
-          "size": 7450,
-          "said": "all_ok=True \u00b7 sectors 9/11 \u00b7 4 fail",
+          "size": 7442,
+          "said": "all_ok=True \u00b7 sectors 10/11 \u00b7 3 fail",
           "bullets": [
             "finviz_market_digest:missing",
             "map_heat_research:missing",
-            "sector_predict:missing",
             "sector_predict:missing"
           ]
         },
@@ -509,11 +508,13 @@
           "name": "Sector predict \u2014 technology",
           "path": "01_daily/sectors/2026-10-01/technology_predict.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 15864,
+          "said": "UP mild 5.037",
+          "bullets": [
+            "- news_mode: **on"
+          ]
         },
         {
           "key": "sector_utilities",
@@ -527,7 +528,7 @@
           "bullets": []
         }
       ],
-      "said": "general DOWN  -1.343 \u00b7 sectors 1 up / 8 down / 0 flat \u00b7 news news_mode: on \u00b7 400 raw / 95 usable \u00b7 Why are US treasury yields falling today? Federal Reserve interest rate hike in ",
+      "said": "general DOWN  -1.343 \u00b7 sectors 2 up / 8 down / 0 flat \u00b7 news news_mode: on \u00b7 400 raw / 95 usable \u00b7 Why are US treasury yields falling today? Federal Reserve interest rate hike in ",
       "bullets": [
         "bad: 10Y at 24-year high 5.34% on global bond selloff",
         "bad: Boeing MAX 10 certification halted",
@@ -725,8 +726,8 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 7617,
-          "said": "1 up / 8 down / 0 flat",
+          "size": 7784,
+          "said": "2 up / 8 down / 0 flat",
           "bullets": [
             "XLB DOWN -0.8",
             "XLC UP +7.5",
@@ -975,7 +976,7 @@
       "direction": "down"
     },
     "sectors": {
-      "said": "1 up / 8 down / 0 flat",
+      "said": "2 up / 8 down / 0 flat",
       "bullets": [
         "XLB DOWN -0.8",
         "XLC UP +7.5",
@@ -986,7 +987,7 @@
         "XLV DOWN -3.9",
         "XLI DOWN -0.4",
         "XLRE DOWN -5.9",
-        "XLK missing",
+        "XLK UP +5.0",
         "XLU missing"
       ]
     },
@@ -1822,70 +1823,70 @@
     },
     {
       "key": "sector_one",
-      "title": "Sector predict Real Estate (9/11)",
+      "title": "Sector predict Technology (10/11)",
       "date": "2026-10-01",
       "ok": true,
       "pushed": true,
-      "at": "2026-10-01T06:04:28.973793-04:00",
+      "at": "2026-10-01T06:04:54.530956-04:00",
       "files": [
         {
-          "path": "01_daily/sectors/2026-10-01/real_estate_predict.md",
+          "path": "01_daily/sectors/2026-10-01/technology_predict.md",
           "ok": true,
           "reason": "",
-          "size": 16723,
-          "preview": "# Sector Prediction \u2014 Real Estate \u2014 2026-10-01\n- news_mode: **on**\n- ETF: **XLRE**\n- rubric: `00_grounding/sectors/real_estate.md`\n- predicted_direction: **down**\n- predicted_magnitude_band: **mild**\n- total_score: **-5.858** (mult 0.85)\n- regime: mixed\n- divergence_flagged: **True**\n- engine: v2 \u00b7 tape_anchor **0.375** (ES +0.17%, ZN -0.03%) \u00b7 index_carry **-0.336** (general -1.343) \u00b7 llm_overlay **-5.897** (raw -5.897)"
+          "size": 15864,
+          "preview": "# Sector Prediction \u2014 Technology \u2014 2026-10-01\n- news_mode: **on**\n- ETF: **XLK**\n- rubric: `00_grounding/sectors/technology.md`\n- predicted_direction: **up**\n- predicted_magnitude_band: **mild**\n- total_score: **5.037** (mult 0.85)\n- regime: mixed\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **3.248** (NQ +0.50%, ES +0.17%, PM:XLK +0.58%) \u00b7 index_carry **-0.336** (general -1.343) \u00b7 llm_overlay **2.125** (raw 2.125)"
         },
         {
-          "path": "01_daily/sectors/2026-10-01/real_estate_predict_trace.md",
+          "path": "01_daily/sectors/2026-10-01/technology_predict_trace.md",
           "ok": true,
           "reason": "",
-          "size": 443,
-          "preview": "# Reasoning trace \u2014 SECTOR PREDICT Real Estate 2026-10-01\nprovider: deepseek\nfallback_reason: prefer_deepseek\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (123,922 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Done researching.** The model stopped searching and wrote its full analysis (14,922 characters)."
+          "size": 442,
+          "preview": "# Reasoning trace \u2014 SECTOR PREDICT Technology 2026-10-01\nprovider: deepseek\nfallback_reason: prefer_deepseek\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (134,691 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Done researching.** The model stopped searching and wrote its full analysis (14,081 characters)."
         },
         {
-          "path": "01_daily/_transcripts/2026-10-01_sector_real_estate_predict.json",
+          "path": "01_daily/_transcripts/2026-10-01_sector_technology_predict.json",
           "ok": true,
           "reason": "",
-          "size": 142589,
+          "size": 152643,
           "preview": "keys: model, messages, provider, fallback_reason"
         },
         {
           "path": "01_daily/2026-10-01_preopen_qc.json",
           "ok": true,
           "reason": "",
-          "size": 7450,
+          "size": 7442,
           "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok"
         },
         {
           "path": "01_daily/sectors/2026-10-01/_qc.json",
           "ok": true,
           "reason": "",
-          "size": 1485,
+          "size": 1480,
           "preview": "keys: date, n_ok, n_total, summary, sectors"
         },
         {
           "path": "01_daily/sectors/2026-10-01/_BOARD.md",
           "ok": true,
           "reason": "",
-          "size": 1944,
-          "preview": "# Sector Board \u2014 2026-10-01\nGenerated: **2026-10-01T06:04:28.958540-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.)."
+          "size": 2001,
+          "preview": "# Sector Board \u2014 2026-10-01\nGenerated: **2026-10-01T06:04:54.515147-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.)."
         },
         {
           "path": "01_daily/sectors/2026-10-01/_board.json",
           "ok": true,
           "reason": "",
-          "size": 7617,
+          "size": 7784,
           "preview": "keys: date, generated_at, summary, sectors"
         },
         {
           "path": "03_scoreboard/scoreboard.json",
           "ok": true,
           "reason": "",
-          "size": 969738,
+          "size": 970815,
           "preview": "keys: runs"
         }
       ],
-      "preview": "# Sector Prediction \u2014 Real Estate \u2014 2026-10-01\n- news_mode: **on**\n- ETF: **XLRE**\n- rubric: `00_grounding/sectors/real_estate.md`\n- predicted_direction: **down**\n- predicted_magnitude_band: **mild**\n- total_score: **-5.858** (mult 0.85)\n- regime: mixed\n- divergence_flagged: **True**\n- engine: v2 \u00b7 tape_anchor **0.375** (ES +0.17%, ZN -0.03%) \u00b7 index_carry **-0.336** (general -1.343) \u00b7 llm_overlay **-5.897** (raw -5.897) \u00b7 # Reasoning trace \u2014 SECTOR PREDICT Real Estate 2026-10-01\nprovider: deepseek\nfallback_reason: prefer_deepseek\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (123,922 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Done researching.** The model stopped searching and wrote its full analysis (14,922 characters). \u00b7 keys: model, messages, provider, fallback_reason \u00b7 keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok \u00b7 keys: date, n_ok, n_total, summary, sectors \u00b7 # Sector Board \u2014 2026-10-01\nGenerated: **2026-10-01T06:04:28.958540-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to th"
+      "preview": "# Sector Prediction \u2014 Technology \u2014 2026-10-01\n- news_mode: **on**\n- ETF: **XLK**\n- rubric: `00_grounding/sectors/technology.md`\n- predicted_direction: **up**\n- predicted_magnitude_band: **mild**\n- total_score: **5.037** (mult 0.85)\n- regime: mixed\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **3.248** (NQ +0.50%, ES +0.17%, PM:XLK +0.58%) \u00b7 index_carry **-0.336** (general -1.343) \u00b7 llm_overlay **2.125** (raw 2.125) \u00b7 # Reasoning trace \u2014 SECTOR PREDICT Technology 2026-10-01\nprovider: deepseek\nfallback_reason: prefer_deepseek\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (134,691 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Done researching.** The model stopped searching and wrote its full analysis (14,081 characters). \u00b7 keys: model, messages, provider, fallback_reason \u00b7 keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok \u00b7 keys: date, n_ok, n_total, summary, sectors \u00b7 # Sector Board \u2014 2026-10-01\nGenerated: **2026-10-01T06:04:54.515147-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live nex"
     }
   ],
   "href": {

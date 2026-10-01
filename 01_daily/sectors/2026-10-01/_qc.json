@@ -1,6 +1,6 @@
 {
   "date": "2026-10-01",
-  "n_ok": 9,
+  "n_ok": 10,
   "n_total": 11,
   "summary": "",
   "sectors": [
@@ -69,10 +69,10 @@
     },
     {
       "sector": "Technology",
-      "ok": false,
-      "reason": "missing",
-      "size": 0,
-      "status": "FAIL"
+      "ok": true,
+      "reason": "",
+      "size": 15864,
+      "status": "OK"
     },
     {
       "sector": "Utilities",

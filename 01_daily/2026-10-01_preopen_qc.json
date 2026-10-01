@@ -1,6 +1,6 @@
 {
   "date": "2026-10-01",
-  "generated_at": "2026-10-01T06:04:28.949909-04:00",
+  "generated_at": "2026-10-01T06:04:54.506072-04:00",
   "items": [
     {
       "ok": true,
@@ -223,14 +223,14 @@
       "missing_markers": []
     },
     {
-      "ok": false,
+      "ok": true,
       "kind": "sector_predict",
       "path": "01_daily/sectors/2026-10-01/technology_predict.md",
-      "reason": "missing",
-      "size": 0,
+      "reason": "",
+      "size": 15864,
       "carried": false,
       "timeout": false,
-      "empty": true,
+      "empty": false,
       "missing_markers": []
     },
     {
@@ -311,10 +311,10 @@
     },
     {
       "sector": "Technology",
-      "ok": false,
-      "reason": "missing",
-      "size": 0,
-      "status": "FAIL"
+      "ok": true,
+      "reason": "",
+      "size": 15864,
+      "status": "OK"
     },
     {
       "sector": "Utilities",
@@ -324,7 +324,7 @@
       "status": "FAIL"
     }
   ],
-  "sector_n_ok": 9,
+  "sector_n_ok": 10,
   "sector_n_total": 11,
   "all_ok": true
 }
