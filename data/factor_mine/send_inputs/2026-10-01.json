@@ -12,7 +12,7 @@
     },
     {
       "path": "01_daily/news/2026-10-01_actions.json",
-      "sha256": "97f74616f9bec1fc03a5d382f618a2a119ed329600debf2a342af380207ddaab"
+      "sha256": "1d980528d6db3a2e95cd6ac618161db2047a64fd15d9d032ad403c6b00cfb9fc"
     },
     {
       "path": "01_daily/news/2026-10-01_finviz_digest.json",
@@ -50,6 +50,6 @@
   "prices": [],
   "reason": "no same-day panel rows for 2026-10-01 \u2014 sitting, no live lookup",
   "rows": [],
-  "sha256": "caa90703ebf0ebdfa8b9c3c11614b720a09cfb26f8dc69a48827e74d9c7232bd",
+  "sha256": "a8ee26e96efde5741883b35c1dfa708ae6b69d27b5791dc10b76f0482541c450",
   "source": "no_same_day_panel"
 }

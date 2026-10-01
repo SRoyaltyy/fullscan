@@ -1,6 +1,6 @@
 # Stock book — 2026-10-01
 
-_Generated 2026-10-01T06:20:43.949755-04:00_
+_Generated 2026-10-01T07:17:14.004731-04:00_
 
 This file is the **human read** of one run. CSV/JSON next to it are the machine files.
 
@@ -20,13 +20,13 @@ The existing red/yellow/green source graph remains visible. Its digest, judge an
 
 - Weather risk: **off**
 - General predict (same-day): -0.47 down (present)
-- Stand-down: **no** — 39 names qualified through group_leader,catalyst,probable (22 probable)
+- Stand-down: **no** — 41 names qualified through group_leader,catalyst,probable (24 probable)
 - Sector predicts this date: 11/11 (ok)
-- News tickers in play: 111
+- News tickers in play: 113
 - AB coverage: 1906 names · peer RS: 1804
 - Universe after liquidity: 2035
 - BUY window: $80M ADV, opportunity $400M–$20B, max 4/sector, 3/industry, 4 large/mega
-- News names after digest+judge: 56
+- News names after digest+judge: 58
 
 ## All-green BUY / SELL
 
@@ -52,21 +52,21 @@ Decision domains: **MKT · parent · child · company · setup · flow**. Measur
 
 | # | Ticker | Domains | Lane | Company / group | Decision |
 |---:|--------|---------|------|-----------------|----------|
-| 1 | **NTAP** | 🔴🟡🟢🟡🟢🟢 | group_leader | no direct company event; Software - Infrastructure +2.8% d1 / +1.4% 1w / +3.4% vs parent | BUY GROUP_LEADER — market=RED; parent=YELLOW; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=Cond green |
-| 2 | **BAND** | 🔴🟡🟢🟡🟢🟢 | group_leader | no direct company event; Software - Infrastructure +2.8% d1 / +1.4% 1w / +3.4% vs parent | BUY GROUP_LEADER — market=RED; parent=YELLOW; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=Cond green |
-| 3 | **OKTA** | 🔴🟡🟢🟡🟢🟢 | group_leader | no direct company event; Software - Infrastructure +2.8% d1 / +1.4% 1w / +3.4% vs parent | BUY GROUP_LEADER — market=RED; parent=YELLOW; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=Cond green |
-| 4 | **BB** | 🔴🟡🟢🟡🟢🟢 | group_leader | no direct company event; Software - Infrastructure +2.8% d1 / +1.4% 1w / +3.4% vs parent | BUY GROUP_LEADER — market=RED; parent=YELLOW; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=Cond green |
-| 5 | **EPAM** | 🔴🟡🟢🟡🟢🟢 | group_leader | no direct company event; Information Technology Services +2.9% d1 / +1.9% 1w / +3.9% vs parent | BUY GROUP_LEADER — market=RED; parent=YELLOW; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=Cond green |
-| 6 | **NTSK** | 🔴🟡🟢🟡🟢🟢 | group_leader | no direct company event; Software - Infrastructure +2.8% d1 / +1.4% 1w / +3.4% vs parent | BUY GROUP_LEADER — market=RED; parent=YELLOW; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=Cond green |
-| 7 | **FIS** | 🔴🟡🟢🟡🟢🟢 | group_leader | no direct company event; Information Technology Services +2.9% d1 / +1.9% 1w / +3.9% vs parent | BUY GROUP_LEADER — market=RED; parent=YELLOW; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=Cond green |
-| 8 | **NBIS** | 🔴🟡🟢🟡🟢🟢 | group_leader | no direct company event; Software - Infrastructure +2.8% d1 / +1.4% 1w / +3.4% vs parent | BUY GROUP_LEADER — market=RED; parent=YELLOW; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN |
-| 9 | **PENG** | 🔴🟡🟢🟡🟢🟡 | group_leader | no direct company event; Information Technology Services +2.9% d1 / +1.9% 1w / +3.9% vs parent | BUY GROUP_LEADER — market=RED; parent=YELLOW; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=YELLOW; lookback=Cond green |
-| 10 | **BLZE** | 🔴🟡🟢🟡🟢🟡 | group_leader | no direct company event; Software - Infrastructure +2.8% d1 / +1.4% 1w / +3.4% vs parent | BUY GROUP_LEADER — market=RED; parent=YELLOW; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=YELLOW; lookback=Cond green |
-| 11 | **TENB** | 🔴🟡🟢🟡🟢🟡 | group_leader | no direct company event; Software - Infrastructure +2.8% d1 / +1.4% 1w / +3.4% vs parent | BUY GROUP_LEADER — market=RED; parent=YELLOW; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=YELLOW; lookback=Cond green |
-| 12 | **GDS** | 🔴🟡🟢🟡🟢🟡 | group_leader | no direct company event; Information Technology Services +2.9% d1 / +1.9% 1w / +3.9% vs parent | BUY GROUP_LEADER — market=RED; parent=YELLOW; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=YELLOW; lookback=Cond green |
-| 13 | **VRSN** | 🔴🟡🟢🟡🟢🟡 | group_leader | no direct company event; Software - Infrastructure +2.8% d1 / +1.4% 1w / +3.4% vs parent | BUY GROUP_LEADER — market=RED; parent=YELLOW; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=YELLOW; lookback=Cond green |
-| 14 | **BLSH** | 🔴🟡🟢🟡🟢🟢 | group_leader | no direct company event; Software - Infrastructure +2.8% d1 / +1.4% 1w / +3.4% vs parent | BUY GROUP_LEADER — market=RED; parent=YELLOW; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN |
-| 15 | **ZS** | 🔴🟡🟢🟡🟢🟡 | group_leader | no direct company event; Software - Infrastructure +2.8% d1 / +1.4% 1w / +3.4% vs parent | BUY GROUP_LEADER — market=RED; parent=YELLOW; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=YELLOW; lookback=Cond green |
+| 1 | **BKR** | 🔴🔴🔴🟢🟢🟢 | probable | usable dossier Bullish conv=28; Oil & Gas Equipment & Services -4.4% d1 / -6.8% 1w / -7.7% vs parent | BUY PROBABLE — most-probable long on RED (size ×0.35); clocks: company news fresh (0.80) — market=RED; parent=RED; child=RED/rel=RED; company=GREEN(0.80); setup=GREEN; flow=GREEN; lookback=🔵,Cond green |
+| 2 | **CNR** | 🔴🔴🔴🟢🟡🟢 | probable | usable dossier Bullish conv=21; Thermal Coal -1.8% d1 / -3.4% 1w / -4.4% vs parent | BUY PROBABLE — most-probable long on RED (size ×0.35); clocks: company news fresh (0.80) — market=RED; parent=RED; child=RED/rel=RED; company=GREEN(0.80); setup=YELLOW; flow=GREEN; lookback=🔵,Cond green |
+| 3 | **NTAP** | 🔴🟡🟢🟡🟢🟢 | group_leader | no direct company event; Software - Infrastructure +2.8% d1 / +1.4% 1w / +3.4% vs parent | BUY GROUP_LEADER — market=RED; parent=YELLOW; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=Cond green |
+| 4 | **BAND** | 🔴🟡🟢🟡🟢🟢 | group_leader | no direct company event; Software - Infrastructure +2.8% d1 / +1.4% 1w / +3.4% vs parent | BUY GROUP_LEADER — market=RED; parent=YELLOW; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=Cond green |
+| 5 | **OKTA** | 🔴🟡🟢🟡🟢🟢 | group_leader | no direct company event; Software - Infrastructure +2.8% d1 / +1.4% 1w / +3.4% vs parent | BUY GROUP_LEADER — market=RED; parent=YELLOW; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=Cond green |
+| 6 | **BB** | 🔴🟡🟢🟡🟢🟢 | group_leader | no direct company event; Software - Infrastructure +2.8% d1 / +1.4% 1w / +3.4% vs parent | BUY GROUP_LEADER — market=RED; parent=YELLOW; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=Cond green |
+| 7 | **EPAM** | 🔴🟡🟢🟡🟢🟢 | group_leader | no direct company event; Information Technology Services +2.9% d1 / +1.9% 1w / +3.9% vs parent | BUY GROUP_LEADER — market=RED; parent=YELLOW; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=Cond green |
+| 8 | **NTSK** | 🔴🟡🟢🟡🟢🟢 | group_leader | no direct company event; Software - Infrastructure +2.8% d1 / +1.4% 1w / +3.4% vs parent | BUY GROUP_LEADER — market=RED; parent=YELLOW; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=Cond green |
+| 9 | **FIS** | 🔴🟡🟢🟡🟢🟢 | group_leader | no direct company event; Information Technology Services +2.9% d1 / +1.9% 1w / +3.9% vs parent | BUY GROUP_LEADER — market=RED; parent=YELLOW; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=Cond green |
+| 10 | **NBIS** | 🔴🟡🟢🟡🟢🟢 | group_leader | no direct company event; Software - Infrastructure +2.8% d1 / +1.4% 1w / +3.4% vs parent | BUY GROUP_LEADER — market=RED; parent=YELLOW; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN |
+| 11 | **PENG** | 🔴🟡🟢🟡🟢🟡 | group_leader | no direct company event; Information Technology Services +2.9% d1 / +1.9% 1w / +3.9% vs parent | BUY GROUP_LEADER — market=RED; parent=YELLOW; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=YELLOW; lookback=Cond green |
+| 12 | **BLZE** | 🔴🟡🟢🟡🟢🟡 | group_leader | no direct company event; Software - Infrastructure +2.8% d1 / +1.4% 1w / +3.4% vs parent | BUY GROUP_LEADER — market=RED; parent=YELLOW; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=YELLOW; lookback=Cond green |
+| 13 | **TENB** | 🔴🟡🟢🟡🟢🟡 | group_leader | no direct company event; Software - Infrastructure +2.8% d1 / +1.4% 1w / +3.4% vs parent | BUY GROUP_LEADER — market=RED; parent=YELLOW; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=YELLOW; lookback=Cond green |
+| 14 | **GDS** | 🔴🟡🟢🟡🟢🟡 | group_leader | no direct company event; Information Technology Services +2.9% d1 / +1.9% 1w / +3.9% vs parent | BUY GROUP_LEADER — market=RED; parent=YELLOW; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=YELLOW; lookback=Cond green |
+| 15 | **VRSN** | 🔴🟡🟢🟡🟢🟡 | group_leader | no direct company event; Software - Infrastructure +2.8% d1 / +1.4% 1w / +3.4% vs parent | BUY GROUP_LEADER — market=RED; parent=YELLOW; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=YELLOW; lookback=Cond green |
 
 ### Bear decisions
 
@@ -254,7 +254,43 @@ If a row says **missing**, that layer scored 0 today. If it says **found**, it m
 
 ## 1d BUY — why these names
 
-### 1. NTAP · $40.2B large · Technology
+### 1. BKR · $56.6B large · Energy
+
+**1d score +0.126**
+
+**BKR** is a liquid **large-cap** Energy name (Oil & Gas Equipment & Services) at $56.6B, ADV ~8443k shares/day. Setup: still in the **mid** of its 52-week range (room left), tape is **downtrend** (50/200DMA), extension **neutral**. Last earnings were a **big beat**. AB/peer context: this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**. Labels × today's weather **fit** this environment.
+
+| Layer | Weight | Signal | Contribution | Means |
+|-------|-------:|-------:|-------------:|-------|
+| join × weather | 0.12 | +0.68 | +0.082 | does this *kind* of stock fit today's regime? |
+| sector predict | 0.10 | -0.50 | -0.050 | same-day sector LLM, 0 if that file is missing |
+| general predict | 0.08 | -0.24 | -0.019 | same-day SPX call × this stock's beta |
+| news / judge | 0.25 | +0.10 | +0.025 | headlines + news-judge ticker tilts |
+| AB checklist | 0.25 | +0.36 | +0.090 | structure + P01–P04 peer/industry/sector |
+| peer RS | 0.20 | +0.09 | +0.018 | this week vs its correlated basket |
+| map heat / captains | 1.00 | -0.07 | -0.070 | nested OVERRIDE + captain research (additive) |
+| mid-cap opportunity | add | +0.00 | +0.000 | liquid small/mid, room to run |
+| **1d total** | | | **+0.126** | |
+
+### 2. CNR · $4.4B mid · Energy
+
+**1d score +0.253**
+
+**CNR** is a liquid **mid-cap** Energy name (Thermal Coal) at $4.4B, ADV ~536k shares/day. Setup: still in the **low** of its 52-week range (room left), tape is **downtrend** (50/200DMA), extension **neutral**. Last earnings were a **big beat**. AB/peer context: this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **advancing**. Labels × today's weather **fit** this environment.
+
+| Layer | Weight | Signal | Contribution | Means |
+|-------|-------:|-------:|-------------:|-------|
+| join × weather | 0.12 | +0.73 | +0.088 | does this *kind* of stock fit today's regime? |
+| sector predict | 0.10 | -0.50 | -0.050 | same-day sector LLM, 0 if that file is missing |
+| general predict | 0.08 | -0.07 | -0.006 | same-day SPX call × this stock's beta |
+| news / judge | 0.25 | +0.09 | +0.022 | headlines + news-judge ticker tilts |
+| AB checklist | 0.25 | +0.64 | +0.159 | structure + P01–P04 peer/industry/sector |
+| peer RS | 0.20 | +0.09 | +0.017 | this week vs its correlated basket |
+| map heat / captains | 1.00 | -0.03 | -0.028 | nested OVERRIDE + captain research (additive) |
+| mid-cap opportunity | add | +0.00 | +0.000 | liquid small/mid, room to run |
+| **1d total** | | | **+0.253** | |
+
+### 3. NTAP · $40.2B large · Technology
 
 **1d score +0.368**
 
@@ -272,7 +308,7 @@ If a row says **missing**, that layer scored 0 today. If it says **found**, it m
 | mid-cap opportunity | add | -0.11 | -0.110 | liquid small/mid, room to run |
 | **1d total** | | | **+0.368** | |
 
-### 2. BAND · $2.0B small · Technology
+### 4. BAND · $2.0B small · Technology
 
 **1d score +0.692**
 
@@ -290,7 +326,7 @@ If a row says **missing**, that layer scored 0 today. If it says **found**, it m
 | mid-cap opportunity | add | +0.20 | +0.200 | liquid small/mid, room to run |
 | **1d total** | | | **+0.692** | |
 
-### 3. NTSK · $7.4B mid · Technology
+### 5. NTSK · $7.4B mid · Technology
 
 **1d score +0.474**
 
@@ -307,24 +343,6 @@ If a row says **missing**, that layer scored 0 today. If it says **found**, it m
 | map heat / captains | 1.00 | +0.00 | +0.000 | nested OVERRIDE + captain research (additive) |
 | mid-cap opportunity | add | +0.20 | +0.200 | liquid small/mid, room to run |
 | **1d total** | | | **+0.474** | |
-
-### 4. FIS · $17.8B large · Technology
-
-**1d score +0.402**
-
-**FIS** is a liquid **large-cap** Technology name (Information Technology Services) at $17.8B, ADV ~6040k shares/day. Setup: still in the **deep low** of its 52-week range (room left), tape is **downtrend** (50/200DMA), extension **washed**. AB/peer context: this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**. Labels × today's weather **fit** this environment.
-
-| Layer | Weight | Signal | Contribution | Means |
-|-------|-------:|-------:|-------------:|-------|
-| join × weather | 0.12 | +0.98 | +0.117 | does this *kind* of stock fit today's regime? |
-| sector predict | 0.10 | +0.55 | +0.055 | same-day sector LLM, 0 if that file is missing |
-| general predict | 0.08 | -0.24 | -0.019 | same-day SPX call × this stock's beta |
-| news / judge | 0.25 | +0.00 | +0.000 | headlines + news-judge ticker tilts |
-| AB checklist | 0.25 | +0.36 | +0.090 | structure + P01–P04 peer/industry/sector |
-| peer RS | 0.20 | +0.24 | +0.049 | this week vs its correlated basket |
-| map heat / captains | 1.00 | +0.00 | +0.000 | nested OVERRIDE + captain research (additive) |
-| mid-cap opportunity | add | +0.11 | +0.110 | liquid small/mid, room to run |
-| **1d total** | | | **+0.402** | |
 
 
 ## 1d AVOID — bottom of the same rank
@@ -346,6 +364,8 @@ If a row says **missing**, that layer scored 0 today. If it says **found**, it m
 | 2 | AVPT | +0.808 | mid | Technology | this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down** |
 | 3 | BAND | +0.797 | small | Technology | this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down** |
 | 4 | SONO | +0.753 | mid | Technology | this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down** |
+| 5 | CNR | +0.266 | mid | Energy | this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **advancing** |
+| 6 | BKR | +0.146 | large | Energy | this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down** |
 
 ## 1w BUY (compact — same names, different weights)
 
@@ -355,6 +375,8 @@ If a row says **missing**, that layer scored 0 today. If it says **found**, it m
 | 2 | AVPT | +0.843 | mid | Technology | this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down** |
 | 3 | BAND | +0.814 | small | Technology | this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down** |
 | 4 | SONO | +0.771 | mid | Technology | this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down** |
+| 5 | CNR | +0.274 | mid | Energy | this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **advancing** |
+| 6 | BKR | +0.136 | large | Energy | this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down** |
 
 ## 2w BUY (compact — same names, different weights)
 
@@ -364,6 +386,8 @@ If a row says **missing**, that layer scored 0 today. If it says **found**, it m
 | 2 | AVPT | +0.874 | mid | Technology | this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down** |
 | 3 | BAND | +0.843 | small | Technology | this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down** |
 | 4 | SONO | +0.802 | mid | Technology | this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down** |
+| 5 | CNR | +0.275 | mid | Energy | this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **advancing** |
+| 6 | BKR | +0.136 | large | Energy | this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down** |
 
 ## 1m BUY — why these names
 
@@ -438,6 +462,42 @@ If a row says **missing**, that layer scored 0 today. If it says **found**, it m
 | map heat / captains | 1.00 | +0.03 | +0.028 | nested OVERRIDE + captain research (additive) |
 | mid-cap opportunity | add | +0.20 | +0.200 | liquid small/mid, room to run |
 | **1m total** | | | **+0.854** | |
+
+### 5. CNR · $4.4B mid · Energy
+
+**1m score +0.287**
+
+**CNR** is a liquid **mid-cap** Energy name (Thermal Coal) at $4.4B, ADV ~536k shares/day. Setup: still in the **low** of its 52-week range (room left), tape is **downtrend** (50/200DMA), extension **neutral**. Last earnings were a **big beat**. AB/peer context: this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **advancing**. Labels × today's weather **fit** this environment.
+
+| Layer | Weight | Signal | Contribution | Means |
+|-------|-------:|-------:|-------------:|-------|
+| join × weather | 0.22 | +0.73 | +0.161 | does this *kind* of stock fit today's regime? |
+| sector predict | 0.20 | -0.50 | -0.099 | same-day sector LLM, 0 if that file is missing |
+| general predict | 0.08 | -0.05 | -0.004 | same-day SPX call × this stock's beta |
+| news / judge | 0.00 | +0.09 | +0.000 | headlines + news-judge ticker tilts |
+| AB checklist | 0.30 | +0.64 | +0.191 | structure + P01–P04 peer/industry/sector |
+| peer RS | 0.20 | +0.09 | +0.017 | this week vs its correlated basket |
+| map heat / captains | 1.00 | -0.03 | -0.028 | nested OVERRIDE + captain research (additive) |
+| mid-cap opportunity | add | +0.00 | +0.000 | liquid small/mid, room to run |
+| **1m total** | | | **+0.287** | |
+
+### 6. BKR · $56.6B large · Energy
+
+**1m score +0.142**
+
+**BKR** is a liquid **large-cap** Energy name (Oil & Gas Equipment & Services) at $56.6B, ADV ~8443k shares/day. Setup: still in the **mid** of its 52-week range (room left), tape is **downtrend** (50/200DMA), extension **neutral**. Last earnings were a **big beat**. AB/peer context: this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**. Labels × today's weather **fit** this environment.
+
+| Layer | Weight | Signal | Contribution | Means |
+|-------|-------:|-------:|-------------:|-------|
+| join × weather | 0.22 | +0.68 | +0.150 | does this *kind* of stock fit today's regime? |
+| sector predict | 0.20 | -0.50 | -0.099 | same-day sector LLM, 0 if that file is missing |
+| general predict | 0.08 | -0.17 | -0.014 | same-day SPX call × this stock's beta |
+| news / judge | 0.00 | +0.10 | +0.000 | headlines + news-judge ticker tilts |
+| AB checklist | 0.30 | +0.36 | +0.108 | structure + P01–P04 peer/industry/sector |
+| peer RS | 0.20 | +0.09 | +0.018 | this week vs its correlated basket |
+| map heat / captains | 1.00 | -0.07 | -0.070 | nested OVERRIDE + captain research (additive) |
+| mid-cap opportunity | add | +0.00 | +0.000 | liquid small/mid, room to run |
+| **1m total** | | | **+0.142** | |
 
 
 ## 1m AVOID — bottom of the same rank
