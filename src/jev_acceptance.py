@@ -59,7 +59,7 @@ def merge_exposure_history(old_report, new_seen):
     exposed={identity(row) for batch in old_report.get("rounds",[]) for row in batch["items"]}
     return sorted(set(old_report.get("historical_seen",[])) | (set(new_seen)-exposed))
 
-def summarize(rounds, historical_seen=()):
+def summarize(rounds, historical_seen=(), rubric=RUBRIC):
     seen=set(historical_seen); streak=0; active=None; summaries=[]
     for index,round_ in enumerate(rounds,1):
         config=(round_["protocol_sha256"],round_["jev_model"],round_["teacher_model"])
@@ -69,7 +69,7 @@ def summarize(rounds, historical_seen=()):
         unique=len(ids)==len(round_["items"])
         scores=score(round_["items"],require_unique=False)
         valid=(unique and not overlap and round_.get("teacher_blind") is True
-               and round_.get("rubric_sha256")==sha(RUBRIC)
+               and round_.get("rubric_sha256")==sha(rubric)
                and config[1] not in {"unknown", "mixed-or-missing", ""}
                and scores["errors_or_reviews"]==0
                and round_.get("dataset_role", "acceptance") == "acceptance")
@@ -84,7 +84,12 @@ def summarize(rounds, historical_seen=()):
 
 
 def run(input_path,output_path,workers=8,candidate=False,policy=None):
-    if policy == "candidate-v2":
+    rubric=RUBRIC
+    if policy == "lane-hop0":
+        from .jev_lane_candidate import QUESTIONS as questions, protocol_sha as fingerprint, decide
+        from .jev_lane_contract import RUBRIC as rubric
+        candidate=True
+    elif policy == "candidate-v2":
         from .jev_candidate_v2 import QUESTIONS as questions, protocol_sha as fingerprint, decide
         candidate=True
     elif candidate:
@@ -109,7 +114,7 @@ def run(input_path,output_path,workers=8,candidate=False,policy=None):
         score([{**row,"decision":"error"} for row in batch["items"]])
         ids={identity(row) for row in batch["items"]}
         if ids & seen:raise ValueError("Input is not fresh against history or earlier batches")
-        if batch.get("teacher_blind") is not True or not batch.get("teacher_model") or batch.get("rubric_sha256")!=sha(RUBRIC):raise ValueError("Missing frozen blind frontier grading metadata")
+        if batch.get("teacher_blind") is not True or not batch.get("teacher_model") or batch.get("rubric_sha256")!=sha(rubric):raise ValueError("Missing frozen blind frontier grading metadata")
         seen.update(ids)
     key=api_key()
     if not key: raise RuntimeError("JEV_API_KEY required; regex cannot qualify")
@@ -138,12 +143,12 @@ def run(input_path,output_path,workers=8,candidate=False,policy=None):
     Path(output_path).parent.mkdir(parents=True,exist_ok=True)
     # Persist expensive answers even if later scoring encounters malformed history.
     Path(output_path).write_text(json.dumps(data,indent=2,ensure_ascii=False)+"\n")
-    data["summary"]=summarize(data["rounds"],data.get("historical_seen",[]))
+    data["summary"]=summarize(data["rounds"],data.get("historical_seen",[]),rubric=rubric)
     Path(output_path).write_text(json.dumps(data,indent=2,ensure_ascii=False)+"\n")
     print(json.dumps(data["summary"],indent=2))
 
 if __name__=="__main__":
     p=argparse.ArgumentParser();p.add_argument("--input",required=True);p.add_argument("--output",required=True)
     p.add_argument("--candidate",action="store_true")
-    p.add_argument("--policy",choices=["candidate-v2"])
+    p.add_argument("--policy",choices=["candidate-v2","lane-hop0"])
     a=p.parse_args();run(a.input,a.output,candidate=a.candidate,policy=a.policy)

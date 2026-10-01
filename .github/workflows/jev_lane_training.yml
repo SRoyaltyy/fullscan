@@ -1,0 +1,46 @@
+name: Lane-aligned JEV hop-0 training
+on:
+  push:
+    branches: [codex/jev-lane-hop0]
+    paths:
+      - '00_grounding/jev_lane/latest_gold.json'
+      - '.github/workflows/jev_lane_training.yml'
+permissions:
+  contents: write
+concurrency:
+  group: jev-lane-training
+  cancel-in-progress: false
+jobs:
+  evaluate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Protocol tests
+        run: python -m src.test_jev_acceptance
+      - name: Evaluate frozen blind labels
+        env:
+          JEV_API_KEY: ${{ secrets.JEV_API_KEY }}
+          JEV_MODEL: jev-1.13.0
+        run: python -m src.jev_acceptance --input 00_grounding/jev_lane/latest_gold.json --output validation/jev_lane_report.json --policy lane-hop0
+      - name: Publish all records and status
+        run: python -m src.jev_lane_publish
+      - name: Preserve all completed evaluations
+        if: always()
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add validation dashboard/jev-train
+          git diff --cached --quiet && exit 0
+          git commit -m 'Record Lane JEV paired grades including failures [skip ci]'
+          git push origin HEAD:codex/jev-lane-hop0
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: lane-jev-all-records
+          path: |
+            validation/jev_lane_report.json
+            dashboard/jev-train/grade-records.*
