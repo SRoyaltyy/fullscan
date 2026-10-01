@@ -50,9 +50,8 @@ SCOREBOARD = ROOT / "03_scoreboard" / "JEV_GATE.md"
 
 JEV_HOSTS = (
     "https://api.typesafe.ai/v1/systemone",
-    "https://thejevai.com/v1/systemone",
 )
-JEV_MODEL = "jev-latest"
+JEV_MODEL = os.environ.get("JEV_MODEL", "jev-latest")
 
 STOP = frozenset(
     {
@@ -771,7 +770,9 @@ def make_state(row: dict) -> str:
     return (
         f"TITLE: {row.get('title') or ''}\n"
         f"SOURCE: {row.get('source') or ''}\n"
-        f"DATE: {row.get('published_at') or row.get('date') or ''}"
+        f"DATE: {row.get('published_at') or row.get('date') or ''}\n"
+        + "\n".join(f"{k.upper()}: {str(row[k])[:6000]}" for k in
+                    ("summary", "description", "snippet", "content") if row.get(k))
     )
 
 
@@ -782,10 +783,13 @@ def parse_answers(payload: dict) -> dict:
             continue
         kind = ans.get("type")
         if kind == "noul":
-            try:
-                out[key] = float(ans.get("noul") or 0.0)
-            except (TypeError, ValueError):
-                out[key] = 0.0
+            import math
+            value = ans.get("noul")
+            if isinstance(value, bool) or not isinstance(value, (float, int)):
+                raise ValueError("invalid Noul answer")
+            if not math.isfinite(value) or not 0 <= value <= 1:
+                raise ValueError("invalid Noul probability")
+            out[key] = float(value)
         elif kind == "choice":
             out[key] = str(ans.get("choice") or "")
     return out
@@ -1011,17 +1015,17 @@ def jev_post(state: str, questions: dict, key: str,
                 last = exc
                 if exc.code in (401, 403):
                     raise RuntimeError("Jev auth failed (check JEV_API_KEY)") from None
-                if exc.code == 429:
-                    wait = exc.headers.get("Retry-After") or exc.headers.get(
-                        "retry-after-ms"
-                    )
+                if exc.code in (429, 500, 502, 503, 504, 529):
+                    wait = exc.headers.get("Retry-After")
+                    milliseconds = exc.headers.get("retry-after-ms") if wait is None else None
+                    wait = wait if wait is not None else milliseconds
                     try:
                         sleep_s = float(wait)
-                        if sleep_s > 100:
+                        if milliseconds is not None:
                             sleep_s = sleep_s / 1000.0
                     except (TypeError, ValueError):
                         sleep_s = min(2 ** attempt, 20)
-                    time.sleep(sleep_s)
+                    time.sleep(max(0, min(sleep_s, 30)))
                     continue
                 break
             except (urllib.error.URLError, TimeoutError, json.JSONDecodeError) as exc:
@@ -1064,11 +1068,30 @@ def jev_many(rows: list[dict], key: str, workers: int = 24,
 def gate(rows: list[dict], *, code_only: bool = False, live: bool = False,
          key: str = "", workers: int = 24, asof: dt.date | None = None,
          state: dict | None = None, poster=None,
-         gold_answers: dict | None = None) -> list[dict]:
+         gold_answers: dict | None = None, policy: str | None = None,
+         reviewer=None, deduplicate: bool = True) -> list[dict]:
     """Run hop-0. gold_answers maps row id → answer dict (tests / dry gold)."""
+    policy = policy or os.environ.get("JEV_GATE_POLICY", "sixbit")
+    if policy not in {"sixbit", "triage"}:
+        raise ValueError(f"Unknown JEV_GATE_POLICY: {policy}")
+    if policy == "triage" and live and not code_only:
+        from . import jev_triage
+        key = key or api_key()
+        if not key:
+            raise RuntimeError("JEV_API_KEY / TYPESAFE_API_KEY is empty")
+        def one(row):
+            try:
+                payload = (poster or jev_post)(make_state(row), jev_triage.QUESTIONS, key)
+                row["_jev_model"] = payload.get("model") or JEV_MODEL
+                return jev_triage.decide(row, payload, reviewer)
+            except Exception:
+                row["_jev_model"] = "error:request_failed"
+                return jev_triage.review(row, "jev_error")
+        with ThreadPoolExecutor(max_workers=max(1, min(int(workers), 50))) as pool:
+            return list(pool.map(one, rows))
     asof = asof or dt.date.today()
     state = state or load_chokepoint_state()
-    rows = dedup_rows(list(rows), session_day=asof.isoformat())
+    rows = dedup_rows(list(rows), session_day=asof.isoformat()) if deduplicate else list(rows)
     rows = apply_code(rows, asof=asof, state=state)
 
     answers_by_id: dict[str, dict] = gold_answers or {}
@@ -1085,10 +1108,15 @@ def gate(rows: list[dict], *, code_only: bool = False, live: bool = False,
             row["_jev_model"] = model
             # Live miss must stay on the six bits. Empty answers used to
             # fall through decide() into regex k_print / k_policy.
-            if not has_bit_answers(answers):
-                row["_answers"] = {key: 0.0 for key in BIT_QUESTIONS}
-            else:
-                row["_answers"] = answers
+            import math
+            try:
+                valid = isinstance(answers, dict) and all(
+                    name in answers and math.isfinite(float(answers[name]))
+                    and 0 <= float(answers[name]) <= 1 for name in BIT_QUESTIONS)
+            except (TypeError, ValueError, OverflowError):
+                valid = False
+            row["_jev_error"] = not valid
+            row["_answers"] = answers if valid else None
     else:
         for row in need_jev:
             rid = str(row.get("id") or "")
@@ -1101,7 +1129,11 @@ def gate(rows: list[dict], *, code_only: bool = False, live: bool = False,
 
     decided = []
     for row in rows:
-        decided.append(decide(row, row.get("_answers")))
+        if row.get("_jev_error"):
+            from .jev_triage import review
+            decided.append(review(row, "jev_error"))
+        else:
+            decided.append(decide(row, row.get("_answers")))
     return decided
 
 
@@ -1159,7 +1191,8 @@ def load_titles(date: str) -> list[dict]:
                     str(it.get("source") or ""),
                     str(it.get("published_at") or ""),
                     str(it.get("url") or ""),
-                    {"known_class": it.get("class") or ""},
+                    {"known_class": it.get("class") or "", **{k: it[k] for k in
+                     ("summary", "description", "snippet", "content") if it.get(k)}},
                 )
     digest = _load_json(NEWS_DIR / f"{date}_finviz_digest.json")
     if isinstance(digest, dict):
@@ -1248,6 +1281,8 @@ def summarize(decided: list[dict], *, date: str, mode: str,
         "n_in": n_in,
         "n_keep": len(keeps),
         "n_drop": len(drops),
+        "n_review": sum(bool(r.get("review_required")) for r in decided),
+        "n_errors": sum(r.get("reason") == "jev_error" for r in decided),
         "drop_rate": round(len(drops) / n_in, 4) if n_in else 0.0,
         "reasons": dict(reasons),
         "keeps": keeps,

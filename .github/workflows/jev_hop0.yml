@@ -95,7 +95,7 @@ jobs:
           if [ "${{ github.event.inputs.mine }}" = "1" ]; then
             PYTHONPATH=. python3 -m src.jev_gate --mine
           fi
-      - name: Six-bit stop test (fresh unseen 100)
+      - name: Six-bit development regression (reused 100)
         if: success()
         continue-on-error: true
         env:

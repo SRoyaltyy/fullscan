@@ -220,6 +220,7 @@ def test_gate_uses_posted_bit_answers() -> None:
             "answers": {
                 "done": {"type": "noul", "noul": 0.91},
                 "tip": {"type": "noul", "noul": 0.04},
+                **{k: {"type": "noul", "noul": 0.02} for k in ("tape", "soft", "print", "spoke")},
             },
         }
 
@@ -243,9 +244,9 @@ def test_gate_live_error_does_not_regex_keep() -> None:
         }],
         code_only=False, live=True, key="x", poster=poster,
     )
-    assert out[0]["decision"] == "drop"
-    assert out[0]["reason"] == "no_keep_bit"
-    assert out[0].get("noul")
+    assert out[0]["decision"] == "keep"
+    assert out[0]["reason"] == "jev_error"
+    assert out[0]["review_required"] is True
 
 
 def test_no_cheap_keep() -> None:

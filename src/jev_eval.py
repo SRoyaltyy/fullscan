@@ -728,7 +728,7 @@ def score_sample(rows: list[dict], *, live: bool, key: str,
         nxt = []
         for row in pending:
             dec = mapped.get(normalize_title(row.get("title") or ""))
-            if dec is None or (dec.get("reason") == "jev_error" and attempt < 2):
+            if dec is None or dec.get("reason") == "jev_error":
                 nxt.append(row)
                 continue
             by_norm[normalize_title(row.get("title") or "")] = dec
