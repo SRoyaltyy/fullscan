@@ -13,7 +13,7 @@ concurrency:
 jobs:
   evaluate:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 45
     steps:
       - uses: actions/checkout@v4
         with:
@@ -34,14 +34,38 @@ jobs:
           JEV_API_KEY: ${{ secrets.JEV_API_KEY }}
           JEV_MODEL: jev-1.13.0
         run: |
-          python - <<'PYTHON'
-          import json
-          from src.jev_acceptance import run
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          for round_index in $(seq 0 9); do
+            ROUND_INDEX="$round_index" python - <<'PYTHON'
+          import json,os
+          from pathlib import Path
+          from src.jev_acceptance import run,identity
           data=json.load(open('00_grounding/jev_lane/latest_gold.json'))
           output=data.get('evaluation_output','validation/jev_lane_report.json')
-          assert output in {'validation/jev_lane_report.json','validation/jev_lane_development_v2_report.json','validation/jev_lane_development_v4_report.json','validation/jev_lane_development_v7_report.json'}
-          run('00_grounding/jev_lane/latest_gold.json',output,policy='lane-hop0')
+          assert output == 'validation/jev_lane_report.json'
+          batch=data['rounds'][int(os.environ['ROUND_INDEX'])]
+          existing=json.loads(Path(output).read_text()).get('rounds',[]) if Path(output).exists() else []
+          ids={identity(r) for r in batch['items']}
+          matches=[b for b in existing if {identity(r) for r in b['items']}==ids]
+          if matches:
+              assert len(matches)==1
+              old=matches[0]
+              assert old['protocol_sha256']==batch['protocol_sha256']
+              assert {identity(r):r['gold'] for r in old['items']}=={identity(r):r['gold'] for r in batch['items']}
+              print('Already recorded; skipping paid calls',os.environ['ROUND_INDEX'])
+          else:
+              data['rounds']=[batch]
+              Path('/tmp/jev-single-round.json').write_text(json.dumps(data))
+              run('/tmp/jev-single-round.json',output,policy='lane-hop0')
           PYTHON
+            python -m src.jev_lane_publish > /tmp/jev-publication-status.json
+            git add validation dashboard/jev-train
+            if ! git diff --cached --quiet; then
+              git commit -m "Checkpoint Lane evaluation round $round_index [skip ci]"
+              git push origin HEAD:codex/jev-lane-hop0
+            fi
+          done
       - name: Publish all records and status
         run: python -m src.jev_lane_publish
       - name: Preserve all completed evaluations
@@ -60,3 +84,30 @@ jobs:
           path: |
             validation/jev_lane_report.json
             dashboard/jev-train/grade-records.*
+
+  publish:
+    needs: evaluate
+    if: always()
+    runs-on: ubuntu-latest
+    concurrency:
+      group: gh-pages-deploy
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: codex/jev-lane-hop0
+          sparse-checkout: dashboard/jev-train
+          fetch-depth: 1
+      - name: Publish trainer while preserving other pages
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git fetch origin gh-pages:refs/remotes/origin/gh-pages
+          git worktree add /tmp/jev-pages origin/gh-pages
+          mkdir -p /tmp/jev-pages/dashboard/jev-train
+          cp -a dashboard/jev-train/. /tmp/jev-pages/dashboard/jev-train/
+          cd /tmp/jev-pages
+          git add dashboard/jev-train
+          git diff --cached --quiet && exit 0
+          git commit -m 'Publish Lane training audit and current acceptance status'
+          git push origin HEAD:gh-pages

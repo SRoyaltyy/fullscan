@@ -138,11 +138,21 @@ def run(input_path,output_path,workers=8,candidate=False,policy=None):
             return {**item,"decision":choice,"jev_model":payload.get("model","unknown"),"answer":answer,"usage":payload.get("usage",{})}
         except Exception as exc:
             return {**item,"decision":"error","error_type":type(exc).__name__,"error_detail":str(exc)[:200]}
+    completed=[]
     for round_ in rounds:
         with ThreadPoolExecutor(max_workers=max(1,min(workers,24))) as pool:
             round_["items"]=list(pool.map(one,round_["items"]))
         models={r["jev_model"] for r in round_["items"] if r.get("jev_model")}
         round_["jev_model"]=next(iter(models)) if len(models)==1 else "mixed-or-missing"
+        completed.append(round_)
+        checkpoint={**data,"rounds":prior+completed}
+        checkpoint["summary"]=summarize(checkpoint["rounds"],checkpoint.get("historical_seen",[]),rubric=rubric)
+        target=Path(output_path)
+        target.parent.mkdir(parents=True,exist_ok=True)
+        temporary=target.with_suffix(target.suffix+".tmp")
+        temporary.write_text(json.dumps(checkpoint,indent=2,ensure_ascii=False)+"\n")
+        temporary.replace(target)
+        print(json.dumps({"completed_rounds":len(completed),"streak":checkpoint["summary"]["streak"],"latest":checkpoint["summary"]["rounds"][-1]}),flush=True)
     data["rounds"]=prior+rounds
     Path(output_path).parent.mkdir(parents=True,exist_ok=True)
     # Persist expensive answers even if later scoring encounters malformed history.
