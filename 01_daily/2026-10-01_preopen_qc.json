@@ -1,6 +1,6 @@
 {
   "date": "2026-10-01",
-  "generated_at": "2026-10-01T05:57:49.295104-04:00",
+  "generated_at": "2026-10-01T06:00:10.200853-04:00",
   "items": [
     {
       "ok": true,
@@ -190,14 +190,14 @@
       "missing_markers": []
     },
     {
-      "ok": false,
+      "ok": true,
       "kind": "sector_predict",
       "path": "01_daily/sectors/2026-10-01/healthcare_predict.md",
-      "reason": "missing",
-      "size": 0,
+      "reason": "",
+      "size": 17024,
       "carried": false,
       "timeout": false,
-      "empty": true,
+      "empty": false,
       "missing_markers": []
     },
     {
@@ -290,10 +290,10 @@
     },
     {
       "sector": "Healthcare",
-      "ok": false,
-      "reason": "missing",
-      "size": 0,
-      "status": "FAIL"
+      "ok": true,
+      "reason": "",
+      "size": 17024,
+      "status": "OK"
     },
     {
       "sector": "Industrials",
@@ -324,7 +324,7 @@
       "status": "FAIL"
     }
   ],
-  "sector_n_ok": 6,
+  "sector_n_ok": 7,
   "sector_n_total": 11,
   "all_ok": false
 }
