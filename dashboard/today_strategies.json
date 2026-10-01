@@ -1,6 +1,6 @@
 {
   "date": "2026-10-01",
-  "generated_at": "2026-10-01T14:57:16.733283-04:00",
+  "generated_at": "2026-10-01T15:03:10.636324-04:00",
   "clock_use": "session_open",
   "clock_legal_for": "2026-10-01",
   "session_open": "2026-10-01",
@@ -8,11 +8,11 @@
   "n": 355,
   "n_ok": 355,
   "quote": {
-    "src": "session_export+finviz_session: No module named 'requests'",
-    "at": "2026-10-01T14:57:16.733968-04:00",
+    "src": "elite_live",
+    "at": "2026-10-01T15:03:10.638748-04:00",
     "after_open": true,
-    "n": 11668,
-    "error": "finviz_session: No module named 'requests'",
+    "n": 11695,
+    "error": null,
     "clock_rule": "px is Finviz Elite Price from a fresh post-09:30 Overview export when live is allowed. Theme Radar close dump and yesterday Price are never live."
   },
   "decision_readiness": {
@@ -32,7 +32,7 @@
       "data/factor_mine/panel.json": "4e0e87ff406ee112317bbf7222942e7d945c30730482f18abe8c71d58f39ec79"
     },
     "blockers": [],
-    "completed_at": "2026-10-01T14:57:19.000505-04:00"
+    "completed_at": "2026-10-01T15:03:12.685984-04:00"
   },
   "scan": {
     "methodology": "oppset_union+clock_b",
@@ -51,41 +51,41 @@
       "ticker": "BKR",
       "side": "long",
       "predict": "UP",
-      "px": 57.03,
-      "px_src": "session_export+finviz_session: No module named 'requests'",
-      "px_asof": "2026-10-01T14:57:16.733968-04:00"
+      "px": 55.64,
+      "px_src": "elite_live",
+      "px_asof": "2026-10-01T15:03:10.638748-04:00"
     },
     {
       "ticker": "CNR",
       "side": "long",
       "predict": "UP",
-      "px": 88.4,
-      "px_src": "session_export+finviz_session: No module named 'requests'",
-      "px_asof": "2026-10-01T14:57:16.733968-04:00"
+      "px": 87.98,
+      "px_src": "elite_live",
+      "px_asof": "2026-10-01T15:03:10.638748-04:00"
     },
     {
       "ticker": "NTAP",
       "side": "long",
       "predict": "UP",
-      "px": 204.5,
-      "px_src": "session_export+finviz_session: No module named 'requests'",
-      "px_asof": "2026-10-01T14:57:16.733968-04:00"
+      "px": 213.76,
+      "px_src": "elite_live",
+      "px_asof": "2026-10-01T15:03:10.638748-04:00"
     },
     {
       "ticker": "BAND",
       "side": "long",
       "predict": "UP",
-      "px": 61.34,
-      "px_src": "session_export+finviz_session: No module named 'requests'",
-      "px_asof": "2026-10-01T14:57:16.733968-04:00"
+      "px": 63.4,
+      "px_src": "elite_live",
+      "px_asof": "2026-10-01T15:03:10.638748-04:00"
     },
     {
       "ticker": "NTSK",
       "side": "long",
       "predict": "UP",
-      "px": 18.06,
-      "px_src": "session_export+finviz_session: No module named 'requests'",
-      "px_asof": "2026-10-01T14:57:16.733968-04:00"
+      "px": 17.64,
+      "px_src": "elite_live",
+      "px_asof": "2026-10-01T15:03:10.638748-04:00"
     }
   ],
   "sell_1d": [
@@ -93,65 +93,65 @@
       "ticker": "NEOV",
       "side": "short",
       "predict": "DOWN",
-      "px": 2.25,
-      "px_src": "session_export+finviz_session: No module named 'requests'",
-      "px_asof": "2026-10-01T14:57:16.733968-04:00"
+      "px": 2.56,
+      "px_src": "elite_live",
+      "px_asof": "2026-10-01T15:03:10.638748-04:00"
     },
     {
       "ticker": "FCEL",
       "side": "short",
       "predict": "DOWN",
-      "px": 16.16,
-      "px_src": "session_export+finviz_session: No module named 'requests'",
-      "px_asof": "2026-10-01T14:57:16.733968-04:00"
+      "px": 16.62,
+      "px_src": "elite_live",
+      "px_asof": "2026-10-01T15:03:10.638748-04:00"
     },
     {
       "ticker": "OKLO",
       "side": "short",
       "predict": "DOWN",
-      "px": 37.26,
-      "px_src": "session_export+finviz_session: No module named 'requests'",
-      "px_asof": "2026-10-01T14:57:16.733968-04:00"
+      "px": 36.04,
+      "px_src": "elite_live",
+      "px_asof": "2026-10-01T15:03:10.638748-04:00"
     },
     {
       "ticker": "EOSE",
       "side": "short",
       "predict": "DOWN",
-      "px": 3.1,
-      "px_src": "session_export+finviz_session: No module named 'requests'",
-      "px_asof": "2026-10-01T14:57:16.733968-04:00"
+      "px": 3.12,
+      "px_src": "elite_live",
+      "px_asof": "2026-10-01T15:03:10.638748-04:00"
     },
     {
       "ticker": "POWL",
       "side": "short",
       "predict": "DOWN",
-      "px": 194.91,
-      "px_src": "session_export+finviz_session: No module named 'requests'",
-      "px_asof": "2026-10-01T14:57:16.733968-04:00"
+      "px": 190.26,
+      "px_src": "elite_live",
+      "px_asof": "2026-10-01T15:03:10.638748-04:00"
     },
     {
       "ticker": "TE",
       "side": "short",
       "predict": "DOWN",
-      "px": 3.62,
-      "px_src": "session_export+finviz_session: No module named 'requests'",
-      "px_asof": "2026-10-01T14:57:16.733968-04:00"
+      "px": 3.71,
+      "px_src": "elite_live",
+      "px_asof": "2026-10-01T15:03:10.638748-04:00"
     },
     {
       "ticker": "SKYX",
       "side": "short",
       "predict": "DOWN",
-      "px": 1.17,
-      "px_src": "session_export+finviz_session: No module named 'requests'",
-      "px_asof": "2026-10-01T14:57:16.733968-04:00"
+      "px": 1.16,
+      "px_src": "elite_live",
+      "px_asof": "2026-10-01T15:03:10.638748-04:00"
     },
     {
       "ticker": "AMSC",
       "side": "short",
       "predict": "DOWN",
-      "px": 29.0,
-      "px_src": "session_export+finviz_session: No module named 'requests'",
-      "px_asof": "2026-10-01T14:57:16.733968-04:00"
+      "px": 29.52,
+      "px_src": "elite_live",
+      "px_asof": "2026-10-01T15:03:10.638748-04:00"
     }
   ],
   "strategies": {
@@ -161,41 +161,41 @@
           "ticker": "BKR",
           "side": "long",
           "predict": "UP",
-          "px": 57.03,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 55.64,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "CNR",
           "side": "long",
           "predict": "UP",
-          "px": 88.4,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 87.98,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "NTAP",
           "side": "long",
           "predict": "UP",
-          "px": 204.5,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 213.76,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "BAND",
           "side": "long",
           "predict": "UP",
-          "px": 61.34,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 63.4,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "NTSK",
           "side": "long",
           "predict": "UP",
-          "px": 18.06,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 17.64,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         }
       ],
       "sell": [
@@ -203,65 +203,65 @@
           "ticker": "NEOV",
           "side": "short",
           "predict": "DOWN",
-          "px": 2.25,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 2.56,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "FCEL",
           "side": "short",
           "predict": "DOWN",
-          "px": 16.16,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 16.62,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "OKLO",
           "side": "short",
           "predict": "DOWN",
-          "px": 37.26,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 36.04,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "EOSE",
           "side": "short",
           "predict": "DOWN",
-          "px": 3.1,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 3.12,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "POWL",
           "side": "short",
           "predict": "DOWN",
-          "px": 194.91,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 190.26,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "TE",
           "side": "short",
           "predict": "DOWN",
-          "px": 3.62,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 3.71,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "SKYX",
           "side": "short",
           "predict": "DOWN",
-          "px": 1.17,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 1.16,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "AMSC",
           "side": "short",
           "predict": "DOWN",
-          "px": 29.0,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 29.52,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         }
       ],
       "sit": false,
@@ -279,117 +279,117 @@
           "side": "long",
           "predict": "UP",
           "take": "BUY",
-          "px": 57.03,
+          "px": 55.64,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "CNR",
           "side": "long",
           "predict": "UP",
           "take": "BUY",
-          "px": 88.4,
+          "px": 87.98,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "NTAP",
           "side": "long",
           "predict": "UP",
           "take": "BUY",
-          "px": 204.5,
+          "px": 213.76,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "BAND",
           "side": "long",
           "predict": "UP",
           "take": "BUY",
-          "px": 61.34,
+          "px": 63.4,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "NTSK",
           "side": "long",
           "predict": "UP",
           "take": "BUY",
-          "px": 18.06,
+          "px": 17.64,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "NEOV",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 2.25,
+          "px": 2.56,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "FCEL",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 16.16,
+          "px": 16.62,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "OKLO",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 37.26,
+          "px": 36.04,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "EOSE",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 3.1,
+          "px": 3.12,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "POWL",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 194.91,
+          "px": 190.26,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "TE",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 3.62,
+          "px": 3.71,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "SKYX",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 1.17,
+          "px": 1.16,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "AMSC",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 29.0,
+          "px": 29.52,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         }
       ],
       "research": null
@@ -400,41 +400,41 @@
           "ticker": "BKR",
           "side": "long",
           "predict": "UP",
-          "px": 57.03,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 55.64,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "CNR",
           "side": "long",
           "predict": "UP",
-          "px": 88.4,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 87.98,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "NTAP",
           "side": "long",
           "predict": "UP",
-          "px": 204.5,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 213.76,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "BAND",
           "side": "long",
           "predict": "UP",
-          "px": 61.34,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 63.4,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "NTSK",
           "side": "long",
           "predict": "UP",
-          "px": 18.06,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 17.64,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         }
       ],
       "sell": [
@@ -442,65 +442,65 @@
           "ticker": "NEOV",
           "side": "short",
           "predict": "DOWN",
-          "px": 2.25,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 2.56,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "FCEL",
           "side": "short",
           "predict": "DOWN",
-          "px": 16.16,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 16.62,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "OKLO",
           "side": "short",
           "predict": "DOWN",
-          "px": 37.26,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 36.04,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "EOSE",
           "side": "short",
           "predict": "DOWN",
-          "px": 3.1,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 3.12,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "POWL",
           "side": "short",
           "predict": "DOWN",
-          "px": 194.91,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 190.26,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "TE",
           "side": "short",
           "predict": "DOWN",
-          "px": 3.62,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 3.71,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "SKYX",
           "side": "short",
           "predict": "DOWN",
-          "px": 1.17,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 1.16,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "AMSC",
           "side": "short",
           "predict": "DOWN",
-          "px": 29.0,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 29.52,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         }
       ],
       "sit": false,
@@ -518,117 +518,117 @@
           "side": "long",
           "predict": "UP",
           "take": "BUY",
-          "px": 57.03,
+          "px": 55.64,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "CNR",
           "side": "long",
           "predict": "UP",
           "take": "BUY",
-          "px": 88.4,
+          "px": 87.98,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "NTAP",
           "side": "long",
           "predict": "UP",
           "take": "BUY",
-          "px": 204.5,
+          "px": 213.76,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "BAND",
           "side": "long",
           "predict": "UP",
           "take": "BUY",
-          "px": 61.34,
+          "px": 63.4,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "NTSK",
           "side": "long",
           "predict": "UP",
           "take": "BUY",
-          "px": 18.06,
+          "px": 17.64,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "NEOV",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 2.25,
+          "px": 2.56,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "FCEL",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 16.16,
+          "px": 16.62,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "OKLO",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 37.26,
+          "px": 36.04,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "EOSE",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 3.1,
+          "px": 3.12,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "POWL",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 194.91,
+          "px": 190.26,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "TE",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 3.62,
+          "px": 3.71,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "SKYX",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 1.17,
+          "px": 1.16,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "AMSC",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 29.0,
+          "px": 29.52,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         }
       ],
       "research": null
@@ -639,49 +639,49 @@
           "ticker": "MQ",
           "side": "long",
           "predict": "UP",
-          "px": 16.89,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 16.92,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "AVPT",
           "side": "long",
           "predict": "UP",
-          "px": 13.67,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 14.06,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "BAND",
           "side": "long",
           "predict": "UP",
-          "px": 61.34,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 63.4,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "SONO",
           "side": "long",
           "predict": "UP",
-          "px": 17.18,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 17.86,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "CNR",
           "side": "long",
           "predict": "UP",
-          "px": 88.4,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 87.98,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "BKR",
           "side": "long",
           "predict": "UP",
-          "px": 57.03,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 55.64,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         }
       ],
       "sell": [
@@ -689,121 +689,121 @@
           "ticker": "SUPV",
           "side": "short",
           "predict": "DOWN",
-          "px": 6.96,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 6.84,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "BETR",
           "side": "short",
           "predict": "DOWN",
-          "px": 10.08,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 11.02,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "LDI",
           "side": "short",
           "predict": "DOWN",
-          "px": 0.64,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 0.61,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "ARE",
           "side": "short",
           "predict": "DOWN",
-          "px": 48.57,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 46.47,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "AUR",
           "side": "short",
           "predict": "DOWN",
-          "px": 5.33,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 5.54,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "STEP",
           "side": "short",
           "predict": "DOWN",
-          "px": 43.11,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 44.84,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "RC",
           "side": "short",
           "predict": "DOWN",
-          "px": 1.32,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 1.09,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "CMTG",
           "side": "short",
           "predict": "DOWN",
-          "px": 1.27,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 1.22,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "OI",
           "side": "short",
           "predict": "DOWN",
-          "px": 5.8,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 5.69,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "LCID",
           "side": "short",
           "predict": "DOWN",
-          "px": 3.91,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 4.19,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "BORR",
           "side": "short",
           "predict": "DOWN",
           "px": 4.05,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "ACDC",
           "side": "short",
           "predict": "DOWN",
-          "px": 4.49,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 4.39,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "FLUT",
           "side": "short",
           "predict": "DOWN",
-          "px": 76.9,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 75.83,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "CWH",
           "side": "short",
           "predict": "DOWN",
-          "px": 5.17,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 4.99,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "QFIN",
           "side": "short",
           "predict": "DOWN",
-          "px": 7.07,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 6.46,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         }
       ],
       "sit": false,
@@ -821,144 +821,144 @@
           "side": "long",
           "predict": "UP",
           "take": "BUY",
-          "px": 16.89,
+          "px": 16.92,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "AVPT",
           "side": "long",
           "predict": "UP",
           "take": "BUY",
-          "px": 13.67,
+          "px": 14.06,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "BAND",
           "side": "long",
           "predict": "UP",
           "take": "BUY",
-          "px": 61.34,
+          "px": 63.4,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "SONO",
           "side": "long",
           "predict": "UP",
           "take": "BUY",
-          "px": 17.18,
+          "px": 17.86,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "CNR",
           "side": "long",
           "predict": "UP",
           "take": "BUY",
-          "px": 88.4,
+          "px": 87.98,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "BKR",
           "side": "long",
           "predict": "UP",
           "take": "BUY",
-          "px": 57.03,
+          "px": 55.64,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "SUPV",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 6.96,
+          "px": 6.84,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "BETR",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 10.08,
+          "px": 11.02,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "LDI",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 0.64,
+          "px": 0.61,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "ARE",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 48.57,
+          "px": 46.47,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "AUR",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 5.33,
+          "px": 5.54,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "STEP",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 43.11,
+          "px": 44.84,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "RC",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 1.32,
+          "px": 1.09,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "CMTG",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 1.27,
+          "px": 1.22,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "OI",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 5.8,
+          "px": 5.69,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "LCID",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 3.91,
+          "px": 4.19,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "BORR",
@@ -967,43 +967,43 @@
           "take": "SELL",
           "px": 4.05,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "ACDC",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 4.49,
+          "px": 4.39,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "FLUT",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 76.9,
+          "px": 75.83,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "CWH",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 5.17,
+          "px": 4.99,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "QFIN",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 7.07,
+          "px": 6.46,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         }
       ],
       "research": null
@@ -1014,49 +1014,49 @@
           "ticker": "MQ",
           "side": "long",
           "predict": "UP",
-          "px": 16.89,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 16.92,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "AVPT",
           "side": "long",
           "predict": "UP",
-          "px": 13.67,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 14.06,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "BAND",
           "side": "long",
           "predict": "UP",
-          "px": 61.34,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 63.4,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "SONO",
           "side": "long",
           "predict": "UP",
-          "px": 17.18,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 17.86,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "CNR",
           "side": "long",
           "predict": "UP",
-          "px": 88.4,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 87.98,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "BKR",
           "side": "long",
           "predict": "UP",
-          "px": 57.03,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 55.64,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         }
       ],
       "sell": [
@@ -1064,121 +1064,121 @@
           "ticker": "SUPV",
           "side": "short",
           "predict": "DOWN",
-          "px": 6.96,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 6.84,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "BETR",
           "side": "short",
           "predict": "DOWN",
-          "px": 10.08,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 11.02,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "LDI",
           "side": "short",
           "predict": "DOWN",
-          "px": 0.64,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 0.61,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "ARE",
           "side": "short",
           "predict": "DOWN",
-          "px": 48.57,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 46.47,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "AUR",
           "side": "short",
           "predict": "DOWN",
-          "px": 5.33,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 5.54,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "STEP",
           "side": "short",
           "predict": "DOWN",
-          "px": 43.11,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 44.84,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "RC",
           "side": "short",
           "predict": "DOWN",
-          "px": 1.32,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 1.09,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "CMTG",
           "side": "short",
           "predict": "DOWN",
-          "px": 1.27,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 1.22,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "OI",
           "side": "short",
           "predict": "DOWN",
-          "px": 5.8,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 5.69,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "LCID",
           "side": "short",
           "predict": "DOWN",
-          "px": 3.91,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 4.19,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "BORR",
           "side": "short",
           "predict": "DOWN",
           "px": 4.05,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "ACDC",
           "side": "short",
           "predict": "DOWN",
-          "px": 4.49,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 4.39,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "FLUT",
           "side": "short",
           "predict": "DOWN",
-          "px": 76.9,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 75.83,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "CWH",
           "side": "short",
           "predict": "DOWN",
-          "px": 5.17,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 4.99,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "QFIN",
           "side": "short",
           "predict": "DOWN",
-          "px": 7.07,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 6.46,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         }
       ],
       "sit": false,
@@ -1196,144 +1196,144 @@
           "side": "long",
           "predict": "UP",
           "take": "BUY",
-          "px": 16.89,
+          "px": 16.92,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "AVPT",
           "side": "long",
           "predict": "UP",
           "take": "BUY",
-          "px": 13.67,
+          "px": 14.06,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "BAND",
           "side": "long",
           "predict": "UP",
           "take": "BUY",
-          "px": 61.34,
+          "px": 63.4,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "SONO",
           "side": "long",
           "predict": "UP",
           "take": "BUY",
-          "px": 17.18,
+          "px": 17.86,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "CNR",
           "side": "long",
           "predict": "UP",
           "take": "BUY",
-          "px": 88.4,
+          "px": 87.98,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "BKR",
           "side": "long",
           "predict": "UP",
           "take": "BUY",
-          "px": 57.03,
+          "px": 55.64,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "SUPV",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 6.96,
+          "px": 6.84,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "BETR",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 10.08,
+          "px": 11.02,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "LDI",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 0.64,
+          "px": 0.61,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "ARE",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 48.57,
+          "px": 46.47,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "AUR",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 5.33,
+          "px": 5.54,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "STEP",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 43.11,
+          "px": 44.84,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "RC",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 1.32,
+          "px": 1.09,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "CMTG",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 1.27,
+          "px": 1.22,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "OI",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 5.8,
+          "px": 5.69,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "LCID",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 3.91,
+          "px": 4.19,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "BORR",
@@ -1342,43 +1342,43 @@
           "take": "SELL",
           "px": 4.05,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "ACDC",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 4.49,
+          "px": 4.39,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "FLUT",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 76.9,
+          "px": 75.83,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "CWH",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 5.17,
+          "px": 4.99,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "QFIN",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 7.07,
+          "px": 6.46,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         }
       ],
       "research": null
@@ -1389,49 +1389,49 @@
           "ticker": "MQ",
           "side": "long",
           "predict": "UP",
-          "px": 16.89,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 16.92,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "AVPT",
           "side": "long",
           "predict": "UP",
-          "px": 13.67,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 14.06,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "BAND",
           "side": "long",
           "predict": "UP",
-          "px": 61.34,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 63.4,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "SONO",
           "side": "long",
           "predict": "UP",
-          "px": 17.18,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 17.86,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "CNR",
           "side": "long",
           "predict": "UP",
-          "px": 88.4,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 87.98,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "BKR",
           "side": "long",
           "predict": "UP",
-          "px": 57.03,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 55.64,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         }
       ],
       "sell": [
@@ -1439,121 +1439,121 @@
           "ticker": "SUPV",
           "side": "short",
           "predict": "DOWN",
-          "px": 6.96,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 6.84,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "BETR",
           "side": "short",
           "predict": "DOWN",
-          "px": 10.08,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 11.02,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "LDI",
           "side": "short",
           "predict": "DOWN",
-          "px": 0.64,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 0.61,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "AUR",
           "side": "short",
           "predict": "DOWN",
-          "px": 5.33,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 5.54,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "RC",
           "side": "short",
           "predict": "DOWN",
-          "px": 1.32,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 1.09,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "STEP",
           "side": "short",
           "predict": "DOWN",
-          "px": 43.11,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 44.84,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "CMTG",
           "side": "short",
           "predict": "DOWN",
-          "px": 1.27,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 1.22,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "CWH",
           "side": "short",
           "predict": "DOWN",
-          "px": 5.17,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 4.99,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "HIVE",
           "side": "short",
           "predict": "DOWN",
-          "px": 3.04,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 2.9,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "ACDC",
           "side": "short",
           "predict": "DOWN",
-          "px": 4.49,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 4.39,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "LCID",
           "side": "short",
           "predict": "DOWN",
-          "px": 3.91,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 4.19,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "ARE",
           "side": "short",
           "predict": "DOWN",
-          "px": 48.57,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 46.47,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "OI",
           "side": "short",
           "predict": "DOWN",
-          "px": 5.8,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 5.69,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "BORR",
           "side": "short",
           "predict": "DOWN",
           "px": 4.05,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "FLUT",
           "side": "short",
           "predict": "DOWN",
-          "px": 76.9,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 75.83,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         }
       ],
       "sit": false,
@@ -1571,171 +1571,171 @@
           "side": "long",
           "predict": "UP",
           "take": "BUY",
-          "px": 16.89,
+          "px": 16.92,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "AVPT",
           "side": "long",
           "predict": "UP",
           "take": "BUY",
-          "px": 13.67,
+          "px": 14.06,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "BAND",
           "side": "long",
           "predict": "UP",
           "take": "BUY",
-          "px": 61.34,
+          "px": 63.4,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "SONO",
           "side": "long",
           "predict": "UP",
           "take": "BUY",
-          "px": 17.18,
+          "px": 17.86,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "CNR",
           "side": "long",
           "predict": "UP",
           "take": "BUY",
-          "px": 88.4,
+          "px": 87.98,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "BKR",
           "side": "long",
           "predict": "UP",
           "take": "BUY",
-          "px": 57.03,
+          "px": 55.64,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "SUPV",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 6.96,
+          "px": 6.84,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "BETR",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 10.08,
+          "px": 11.02,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "LDI",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 0.64,
+          "px": 0.61,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "AUR",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 5.33,
+          "px": 5.54,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "RC",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 1.32,
+          "px": 1.09,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "STEP",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 43.11,
+          "px": 44.84,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "CMTG",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 1.27,
+          "px": 1.22,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "CWH",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 5.17,
+          "px": 4.99,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "HIVE",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 3.04,
+          "px": 2.9,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "ACDC",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 4.49,
+          "px": 4.39,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "LCID",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 3.91,
+          "px": 4.19,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "ARE",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 48.57,
+          "px": 46.47,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "OI",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 5.8,
+          "px": 5.69,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "BORR",
@@ -1744,16 +1744,16 @@
           "take": "SELL",
           "px": 4.05,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "FLUT",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 76.9,
+          "px": 75.83,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         }
       ],
       "research": null
@@ -1764,49 +1764,49 @@
           "ticker": "MQ",
           "side": "long",
           "predict": "UP",
-          "px": 16.89,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 16.92,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "AVPT",
           "side": "long",
           "predict": "UP",
-          "px": 13.67,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 14.06,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "BAND",
           "side": "long",
           "predict": "UP",
-          "px": 61.34,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 63.4,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "SONO",
           "side": "long",
           "predict": "UP",
-          "px": 17.18,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 17.86,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "CNR",
           "side": "long",
           "predict": "UP",
-          "px": 88.4,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 87.98,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "BKR",
           "side": "long",
           "predict": "UP",
-          "px": 57.03,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 55.64,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         }
       ],
       "sell": [
@@ -1814,121 +1814,121 @@
           "ticker": "SUPV",
           "side": "short",
           "predict": "DOWN",
-          "px": 6.96,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 6.84,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "BETR",
           "side": "short",
           "predict": "DOWN",
-          "px": 10.08,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 11.02,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "LDI",
           "side": "short",
           "predict": "DOWN",
-          "px": 0.64,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 0.61,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "AUR",
           "side": "short",
           "predict": "DOWN",
-          "px": 5.33,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 5.54,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "RC",
           "side": "short",
           "predict": "DOWN",
-          "px": 1.32,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 1.09,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "STEP",
           "side": "short",
           "predict": "DOWN",
-          "px": 43.11,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 44.84,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "CMTG",
           "side": "short",
           "predict": "DOWN",
-          "px": 1.27,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 1.22,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "CWH",
           "side": "short",
           "predict": "DOWN",
-          "px": 5.17,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 4.99,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "HIVE",
           "side": "short",
           "predict": "DOWN",
-          "px": 3.04,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 2.9,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "ACDC",
           "side": "short",
           "predict": "DOWN",
-          "px": 4.49,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 4.39,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "LCID",
           "side": "short",
           "predict": "DOWN",
-          "px": 3.91,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 4.19,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "ARE",
           "side": "short",
           "predict": "DOWN",
-          "px": 48.57,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 46.47,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "OI",
           "side": "short",
           "predict": "DOWN",
-          "px": 5.8,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 5.69,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "BORR",
           "side": "short",
           "predict": "DOWN",
           "px": 4.05,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "FLUT",
           "side": "short",
           "predict": "DOWN",
-          "px": 76.9,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 75.83,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         }
       ],
       "sit": false,
@@ -1946,171 +1946,171 @@
           "side": "long",
           "predict": "UP",
           "take": "BUY",
-          "px": 16.89,
+          "px": 16.92,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "AVPT",
           "side": "long",
           "predict": "UP",
           "take": "BUY",
-          "px": 13.67,
+          "px": 14.06,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "BAND",
           "side": "long",
           "predict": "UP",
           "take": "BUY",
-          "px": 61.34,
+          "px": 63.4,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "SONO",
           "side": "long",
           "predict": "UP",
           "take": "BUY",
-          "px": 17.18,
+          "px": 17.86,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "CNR",
           "side": "long",
           "predict": "UP",
           "take": "BUY",
-          "px": 88.4,
+          "px": 87.98,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "BKR",
           "side": "long",
           "predict": "UP",
           "take": "BUY",
-          "px": 57.03,
+          "px": 55.64,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "SUPV",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 6.96,
+          "px": 6.84,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "BETR",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 10.08,
+          "px": 11.02,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "LDI",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 0.64,
+          "px": 0.61,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "AUR",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 5.33,
+          "px": 5.54,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "RC",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 1.32,
+          "px": 1.09,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "STEP",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 43.11,
+          "px": 44.84,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "CMTG",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 1.27,
+          "px": 1.22,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "CWH",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 5.17,
+          "px": 4.99,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "HIVE",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 3.04,
+          "px": 2.9,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "ACDC",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 4.49,
+          "px": 4.39,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "LCID",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 3.91,
+          "px": 4.19,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "ARE",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 48.57,
+          "px": 46.47,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "OI",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 5.8,
+          "px": 5.69,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "BORR",
@@ -2119,16 +2119,16 @@
           "take": "SELL",
           "px": 4.05,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "FLUT",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 76.9,
+          "px": 75.83,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         }
       ],
       "research": null
@@ -2139,49 +2139,49 @@
           "ticker": "MQ",
           "side": "long",
           "predict": "UP",
-          "px": 16.89,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 16.92,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "AVPT",
           "side": "long",
           "predict": "UP",
-          "px": 13.67,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 14.06,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "BAND",
           "side": "long",
           "predict": "UP",
-          "px": 61.34,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 63.4,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "SONO",
           "side": "long",
           "predict": "UP",
-          "px": 17.18,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 17.86,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "CNR",
           "side": "long",
           "predict": "UP",
-          "px": 88.4,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 87.98,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "BKR",
           "side": "long",
           "predict": "UP",
-          "px": 57.03,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 55.64,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         }
       ],
       "sell": [
@@ -2189,121 +2189,121 @@
           "ticker": "SUPV",
           "side": "short",
           "predict": "DOWN",
-          "px": 6.96,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 6.84,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "LDI",
           "side": "short",
           "predict": "DOWN",
-          "px": 0.64,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 0.61,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "BETR",
           "side": "short",
           "predict": "DOWN",
-          "px": 10.08,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 11.02,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "AUR",
           "side": "short",
           "predict": "DOWN",
-          "px": 5.33,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 5.54,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "STEP",
           "side": "short",
           "predict": "DOWN",
-          "px": 43.11,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 44.84,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "RC",
           "side": "short",
           "predict": "DOWN",
-          "px": 1.32,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 1.09,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "HIVE",
           "side": "short",
           "predict": "DOWN",
-          "px": 3.04,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 2.9,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "CMTG",
           "side": "short",
           "predict": "DOWN",
-          "px": 1.27,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 1.22,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "CWH",
           "side": "short",
           "predict": "DOWN",
-          "px": 5.17,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 4.99,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "LCID",
           "side": "short",
           "predict": "DOWN",
-          "px": 3.91,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 4.19,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "ACDC",
           "side": "short",
           "predict": "DOWN",
-          "px": 4.49,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 4.39,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "OI",
           "side": "short",
           "predict": "DOWN",
-          "px": 5.8,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 5.69,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "OPEN",
           "side": "short",
           "predict": "DOWN",
-          "px": 2.42,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 2.4,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "BORR",
           "side": "short",
           "predict": "DOWN",
           "px": 4.05,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "FLUT",
           "side": "short",
           "predict": "DOWN",
-          "px": 76.9,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 75.83,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         }
       ],
       "sit": false,
@@ -2321,171 +2321,171 @@
           "side": "long",
           "predict": "UP",
           "take": "BUY",
-          "px": 16.89,
+          "px": 16.92,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "AVPT",
           "side": "long",
           "predict": "UP",
           "take": "BUY",
-          "px": 13.67,
+          "px": 14.06,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "BAND",
           "side": "long",
           "predict": "UP",
           "take": "BUY",
-          "px": 61.34,
+          "px": 63.4,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "SONO",
           "side": "long",
           "predict": "UP",
           "take": "BUY",
-          "px": 17.18,
+          "px": 17.86,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "CNR",
           "side": "long",
           "predict": "UP",
           "take": "BUY",
-          "px": 88.4,
+          "px": 87.98,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "BKR",
           "side": "long",
           "predict": "UP",
           "take": "BUY",
-          "px": 57.03,
+          "px": 55.64,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "SUPV",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 6.96,
+          "px": 6.84,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "LDI",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 0.64,
+          "px": 0.61,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "BETR",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 10.08,
+          "px": 11.02,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "AUR",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 5.33,
+          "px": 5.54,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "STEP",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 43.11,
+          "px": 44.84,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "RC",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 1.32,
+          "px": 1.09,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "HIVE",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 3.04,
+          "px": 2.9,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "CMTG",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 1.27,
+          "px": 1.22,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "CWH",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 5.17,
+          "px": 4.99,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "LCID",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 3.91,
+          "px": 4.19,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "ACDC",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 4.49,
+          "px": 4.39,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "OI",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 5.8,
+          "px": 5.69,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "OPEN",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 2.42,
+          "px": 2.4,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "BORR",
@@ -2494,16 +2494,16 @@
           "take": "SELL",
           "px": 4.05,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "FLUT",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 76.9,
+          "px": 75.83,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         }
       ],
       "research": null
@@ -2514,49 +2514,49 @@
           "ticker": "MQ",
           "side": "long",
           "predict": "UP",
-          "px": 16.89,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 16.92,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "AVPT",
           "side": "long",
           "predict": "UP",
-          "px": 13.67,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 14.06,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "BAND",
           "side": "long",
           "predict": "UP",
-          "px": 61.34,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 63.4,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "SONO",
           "side": "long",
           "predict": "UP",
-          "px": 17.18,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 17.86,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "CNR",
           "side": "long",
           "predict": "UP",
-          "px": 88.4,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 87.98,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "BKR",
           "side": "long",
           "predict": "UP",
-          "px": 57.03,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 55.64,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         }
       ],
       "sell": [
@@ -2564,121 +2564,121 @@
           "ticker": "SUPV",
           "side": "short",
           "predict": "DOWN",
-          "px": 6.96,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 6.84,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "LDI",
           "side": "short",
           "predict": "DOWN",
-          "px": 0.64,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 0.61,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "BETR",
           "side": "short",
           "predict": "DOWN",
-          "px": 10.08,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 11.02,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "AUR",
           "side": "short",
           "predict": "DOWN",
-          "px": 5.33,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 5.54,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "STEP",
           "side": "short",
           "predict": "DOWN",
-          "px": 43.11,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 44.84,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "RC",
           "side": "short",
           "predict": "DOWN",
-          "px": 1.32,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 1.09,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "HIVE",
           "side": "short",
           "predict": "DOWN",
-          "px": 3.04,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 2.9,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "CMTG",
           "side": "short",
           "predict": "DOWN",
-          "px": 1.27,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 1.22,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "CWH",
           "side": "short",
           "predict": "DOWN",
-          "px": 5.17,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 4.99,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "LCID",
           "side": "short",
           "predict": "DOWN",
-          "px": 3.91,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 4.19,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "ACDC",
           "side": "short",
           "predict": "DOWN",
-          "px": 4.49,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 4.39,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "OI",
           "side": "short",
           "predict": "DOWN",
-          "px": 5.8,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 5.69,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "OPEN",
           "side": "short",
           "predict": "DOWN",
-          "px": 2.42,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 2.4,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "BORR",
           "side": "short",
           "predict": "DOWN",
           "px": 4.05,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "FLUT",
           "side": "short",
           "predict": "DOWN",
-          "px": 76.9,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 75.83,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         }
       ],
       "sit": false,
@@ -2696,171 +2696,171 @@
           "side": "long",
           "predict": "UP",
           "take": "BUY",
-          "px": 16.89,
+          "px": 16.92,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "AVPT",
           "side": "long",
           "predict": "UP",
           "take": "BUY",
-          "px": 13.67,
+          "px": 14.06,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "BAND",
           "side": "long",
           "predict": "UP",
           "take": "BUY",
-          "px": 61.34,
+          "px": 63.4,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "SONO",
           "side": "long",
           "predict": "UP",
           "take": "BUY",
-          "px": 17.18,
+          "px": 17.86,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "CNR",
           "side": "long",
           "predict": "UP",
           "take": "BUY",
-          "px": 88.4,
+          "px": 87.98,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "BKR",
           "side": "long",
           "predict": "UP",
           "take": "BUY",
-          "px": 57.03,
+          "px": 55.64,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "SUPV",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 6.96,
+          "px": 6.84,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "LDI",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 0.64,
+          "px": 0.61,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "BETR",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 10.08,
+          "px": 11.02,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "AUR",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 5.33,
+          "px": 5.54,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "STEP",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 43.11,
+          "px": 44.84,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "RC",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 1.32,
+          "px": 1.09,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "HIVE",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 3.04,
+          "px": 2.9,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "CMTG",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 1.27,
+          "px": 1.22,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "CWH",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 5.17,
+          "px": 4.99,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "LCID",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 3.91,
+          "px": 4.19,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "ACDC",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 4.49,
+          "px": 4.39,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "OI",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 5.8,
+          "px": 5.69,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "OPEN",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 2.42,
+          "px": 2.4,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "BORR",
@@ -2869,16 +2869,16 @@
           "take": "SELL",
           "px": 4.05,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "FLUT",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 76.9,
+          "px": 75.83,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         }
       ],
       "research": null
@@ -2889,49 +2889,49 @@
           "ticker": "MQ",
           "side": "long",
           "predict": "UP",
-          "px": 16.89,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 16.92,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "AVPT",
           "side": "long",
           "predict": "UP",
-          "px": 13.67,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 14.06,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "BAND",
           "side": "long",
           "predict": "UP",
-          "px": 61.34,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 63.4,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "SONO",
           "side": "long",
           "predict": "UP",
-          "px": 17.18,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 17.86,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "CNR",
           "side": "long",
           "predict": "UP",
-          "px": 88.4,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 87.98,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "BKR",
           "side": "long",
           "predict": "UP",
-          "px": 57.03,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 55.64,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         }
       ],
       "sell": [
@@ -2939,121 +2939,121 @@
           "ticker": "SUPV",
           "side": "short",
           "predict": "DOWN",
-          "px": 6.96,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 6.84,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "LDI",
           "side": "short",
           "predict": "DOWN",
-          "px": 0.64,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 0.61,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "BETR",
           "side": "short",
           "predict": "DOWN",
-          "px": 10.08,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 11.02,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "AUR",
           "side": "short",
           "predict": "DOWN",
-          "px": 5.33,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 5.54,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "STEP",
           "side": "short",
           "predict": "DOWN",
-          "px": 43.11,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 44.84,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "RC",
           "side": "short",
           "predict": "DOWN",
-          "px": 1.32,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 1.09,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "HIVE",
           "side": "short",
           "predict": "DOWN",
-          "px": 3.04,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 2.9,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "CMTG",
           "side": "short",
           "predict": "DOWN",
-          "px": 1.27,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 1.22,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "CWH",
           "side": "short",
           "predict": "DOWN",
-          "px": 5.17,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 4.99,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "LCID",
           "side": "short",
           "predict": "DOWN",
-          "px": 3.91,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 4.19,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "OI",
           "side": "short",
           "predict": "DOWN",
-          "px": 5.8,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 5.69,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "OPEN",
           "side": "short",
           "predict": "DOWN",
-          "px": 2.42,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 2.4,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "ACDC",
           "side": "short",
           "predict": "DOWN",
-          "px": 4.49,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 4.39,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "HUT",
           "side": "short",
           "predict": "DOWN",
-          "px": 93.75,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 85.98,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "FWDI",
           "side": "short",
           "predict": "DOWN",
-          "px": 8.12,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 7.87,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         }
       ],
       "sit": false,
@@ -3071,189 +3071,189 @@
           "side": "long",
           "predict": "UP",
           "take": "BUY",
-          "px": 16.89,
+          "px": 16.92,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "AVPT",
           "side": "long",
           "predict": "UP",
           "take": "BUY",
-          "px": 13.67,
+          "px": 14.06,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "BAND",
           "side": "long",
           "predict": "UP",
           "take": "BUY",
-          "px": 61.34,
+          "px": 63.4,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "SONO",
           "side": "long",
           "predict": "UP",
           "take": "BUY",
-          "px": 17.18,
+          "px": 17.86,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "CNR",
           "side": "long",
           "predict": "UP",
           "take": "BUY",
-          "px": 88.4,
+          "px": 87.98,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "BKR",
           "side": "long",
           "predict": "UP",
           "take": "BUY",
-          "px": 57.03,
+          "px": 55.64,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "SUPV",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 6.96,
+          "px": 6.84,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "LDI",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 0.64,
+          "px": 0.61,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "BETR",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 10.08,
+          "px": 11.02,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "AUR",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 5.33,
+          "px": 5.54,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "STEP",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 43.11,
+          "px": 44.84,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "RC",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 1.32,
+          "px": 1.09,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "HIVE",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 3.04,
+          "px": 2.9,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "CMTG",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 1.27,
+          "px": 1.22,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "CWH",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 5.17,
+          "px": 4.99,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "LCID",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 3.91,
+          "px": 4.19,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "OI",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 5.8,
+          "px": 5.69,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "OPEN",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 2.42,
+          "px": 2.4,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "ACDC",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 4.49,
+          "px": 4.39,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "HUT",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 93.75,
+          "px": 85.98,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "FWDI",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 8.12,
+          "px": 7.87,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         }
       ],
       "research": null
@@ -3264,49 +3264,49 @@
           "ticker": "MQ",
           "side": "long",
           "predict": "UP",
-          "px": 16.89,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 16.92,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "AVPT",
           "side": "long",
           "predict": "UP",
-          "px": 13.67,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 14.06,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "BAND",
           "side": "long",
           "predict": "UP",
-          "px": 61.34,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 63.4,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "SONO",
           "side": "long",
           "predict": "UP",
-          "px": 17.18,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 17.86,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "CNR",
           "side": "long",
           "predict": "UP",
-          "px": 88.4,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 87.98,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "BKR",
           "side": "long",
           "predict": "UP",
-          "px": 57.03,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 55.64,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         }
       ],
       "sell": [
@@ -3314,121 +3314,121 @@
           "ticker": "SUPV",
           "side": "short",
           "predict": "DOWN",
-          "px": 6.96,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 6.84,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "LDI",
           "side": "short",
           "predict": "DOWN",
-          "px": 0.64,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 0.61,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "BETR",
           "side": "short",
           "predict": "DOWN",
-          "px": 10.08,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 11.02,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "AUR",
           "side": "short",
           "predict": "DOWN",
-          "px": 5.33,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 5.54,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "STEP",
           "side": "short",
           "predict": "DOWN",
-          "px": 43.11,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 44.84,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "RC",
           "side": "short",
           "predict": "DOWN",
-          "px": 1.32,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 1.09,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "HIVE",
           "side": "short",
           "predict": "DOWN",
-          "px": 3.04,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 2.9,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "CMTG",
           "side": "short",
           "predict": "DOWN",
-          "px": 1.27,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 1.22,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "CWH",
           "side": "short",
           "predict": "DOWN",
-          "px": 5.17,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 4.99,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "LCID",
           "side": "short",
           "predict": "DOWN",
-          "px": 3.91,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 4.19,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "OI",
           "side": "short",
           "predict": "DOWN",
-          "px": 5.8,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 5.69,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "OPEN",
           "side": "short",
           "predict": "DOWN",
-          "px": 2.42,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 2.4,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "ACDC",
           "side": "short",
           "predict": "DOWN",
-          "px": 4.49,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 4.39,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "HUT",
           "side": "short",
           "predict": "DOWN",
-          "px": 93.75,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 85.98,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "FWDI",
           "side": "short",
           "predict": "DOWN",
-          "px": 8.12,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 7.87,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         }
       ],
       "sit": false,
@@ -3446,189 +3446,189 @@
           "side": "long",
           "predict": "UP",
           "take": "BUY",
-          "px": 16.89,
+          "px": 16.92,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "AVPT",
           "side": "long",
           "predict": "UP",
           "take": "BUY",
-          "px": 13.67,
+          "px": 14.06,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "BAND",
           "side": "long",
           "predict": "UP",
           "take": "BUY",
-          "px": 61.34,
+          "px": 63.4,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "SONO",
           "side": "long",
           "predict": "UP",
           "take": "BUY",
-          "px": 17.18,
+          "px": 17.86,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "CNR",
           "side": "long",
           "predict": "UP",
           "take": "BUY",
-          "px": 88.4,
+          "px": 87.98,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "BKR",
           "side": "long",
           "predict": "UP",
           "take": "BUY",
-          "px": 57.03,
+          "px": 55.64,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "SUPV",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 6.96,
+          "px": 6.84,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "LDI",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 0.64,
+          "px": 0.61,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "BETR",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 10.08,
+          "px": 11.02,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "AUR",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 5.33,
+          "px": 5.54,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "STEP",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 43.11,
+          "px": 44.84,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "RC",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 1.32,
+          "px": 1.09,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "HIVE",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 3.04,
+          "px": 2.9,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "CMTG",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 1.27,
+          "px": 1.22,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "CWH",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 5.17,
+          "px": 4.99,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "LCID",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 3.91,
+          "px": 4.19,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "OI",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 5.8,
+          "px": 5.69,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "OPEN",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 2.42,
+          "px": 2.4,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "ACDC",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 4.49,
+          "px": 4.39,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "HUT",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 93.75,
+          "px": 85.98,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "FWDI",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL",
-          "px": 8.12,
+          "px": 7.87,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         }
       ],
       "research": null
@@ -3639,145 +3639,145 @@
           "ticker": "EFT",
           "side": "long",
           "predict": "UP",
-          "px": 10.41,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 10.73,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "PSO",
           "side": "long",
           "predict": "UP",
-          "px": 15.94,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 16.13,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "TCI",
           "side": "long",
           "predict": "UP",
-          "px": 43.12,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 44.93,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "TIL",
           "side": "long",
           "predict": "UP",
-          "px": 7.04,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 7.3,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "EFT",
           "side": "long",
           "predict": "UP",
-          "px": 10.41,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 10.73,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "PSO",
           "side": "long",
           "predict": "UP",
-          "px": 15.94,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 16.13,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "TCI",
           "side": "long",
           "predict": "UP",
-          "px": 43.12,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 44.93,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "TIL",
           "side": "long",
           "predict": "UP",
-          "px": 7.04,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 7.3,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "AVPT",
           "side": "long",
           "predict": "UP",
-          "px": 13.67,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 14.06,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "HAFN",
           "side": "long",
           "predict": "UP",
-          "px": 9.28,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 10.0,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "MAZE",
           "side": "long",
           "predict": "UP",
-          "px": 26.85,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 26.8,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "NAT",
           "side": "long",
           "predict": "UP",
-          "px": 7.92,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 8.18,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "TK",
           "side": "long",
           "predict": "UP",
-          "px": 13.98,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 14.63,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "TRMD",
           "side": "long",
           "predict": "UP",
-          "px": 35.37,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 38.79,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "VRNS",
           "side": "long",
           "predict": "UP",
-          "px": 47.92,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 47.19,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "YOU",
           "side": "long",
           "predict": "UP",
-          "px": 40.47,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 42.11,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "KOD",
           "side": "long",
           "predict": "UP",
-          "px": 85.3,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 99.08,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "MAZE",
           "side": "long",
           "predict": "UP",
-          "px": 26.85,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 26.8,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         }
       ],
       "sell": [],
@@ -3796,162 +3796,162 @@
           "side": "long",
           "predict": "UP",
           "take": "BUY",
-          "px": 10.41,
+          "px": 10.73,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "PSO",
           "side": "long",
           "predict": "UP",
           "take": "BUY",
-          "px": 15.94,
+          "px": 16.13,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "TCI",
           "side": "long",
           "predict": "UP",
           "take": "BUY",
-          "px": 43.12,
+          "px": 44.93,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "TIL",
           "side": "long",
           "predict": "UP",
           "take": "BUY",
-          "px": 7.04,
+          "px": 7.3,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "EFT",
           "side": "long",
           "predict": "UP",
           "take": "BUY",
-          "px": 10.41,
+          "px": 10.73,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "PSO",
           "side": "long",
           "predict": "UP",
           "take": "BUY",
-          "px": 15.94,
+          "px": 16.13,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "TCI",
           "side": "long",
           "predict": "UP",
           "take": "BUY",
-          "px": 43.12,
+          "px": 44.93,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "TIL",
           "side": "long",
           "predict": "UP",
           "take": "BUY",
-          "px": 7.04,
+          "px": 7.3,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "AVPT",
           "side": "long",
           "predict": "UP",
           "take": "BUY",
-          "px": 13.67,
+          "px": 14.06,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "HAFN",
           "side": "long",
           "predict": "UP",
           "take": "BUY",
-          "px": 9.28,
+          "px": 10.0,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "MAZE",
           "side": "long",
           "predict": "UP",
           "take": "BUY",
-          "px": 26.85,
+          "px": 26.8,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "NAT",
           "side": "long",
           "predict": "UP",
           "take": "BUY",
-          "px": 7.92,
+          "px": 8.18,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "TK",
           "side": "long",
           "predict": "UP",
           "take": "BUY",
-          "px": 13.98,
+          "px": 14.63,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "TRMD",
           "side": "long",
           "predict": "UP",
           "take": "BUY",
-          "px": 35.37,
+          "px": 38.79,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "VRNS",
           "side": "long",
           "predict": "UP",
           "take": "BUY",
-          "px": 47.92,
+          "px": 47.19,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "YOU",
           "side": "long",
           "predict": "UP",
           "take": "BUY",
-          "px": 40.47,
+          "px": 42.11,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "KOD",
           "side": "long",
           "predict": "UP",
           "take": "BUY",
-          "px": 85.3,
+          "px": 99.08,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "MAZE",
           "side": "long",
           "predict": "UP",
           "take": "BUY",
-          "px": 26.85,
+          "px": 26.8,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         }
       ],
       "research": null
@@ -3962,33 +3962,33 @@
           "ticker": "EFT",
           "side": "long",
           "predict": "UP",
-          "px": 10.41,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 10.73,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "PSO",
           "side": "long",
           "predict": "UP",
-          "px": 15.94,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 16.13,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "TCI",
           "side": "long",
           "predict": "UP",
-          "px": 43.12,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 44.93,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "TIL",
           "side": "long",
           "predict": "UP",
-          "px": 7.04,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 7.3,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         }
       ],
       "sell": [],
@@ -4007,36 +4007,36 @@
           "side": "long",
           "predict": "UP",
           "take": "BUY",
-          "px": 10.41,
+          "px": 10.73,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "PSO",
           "side": "long",
           "predict": "UP",
           "take": "BUY",
-          "px": 15.94,
+          "px": 16.13,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "TCI",
           "side": "long",
           "predict": "UP",
           "take": "BUY",
-          "px": 43.12,
+          "px": 44.93,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "TIL",
           "side": "long",
           "predict": "UP",
           "take": "BUY",
-          "px": 7.04,
+          "px": 7.3,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         }
       ],
       "research": null
@@ -4047,33 +4047,33 @@
           "ticker": "EFT",
           "side": "long",
           "predict": "UP",
-          "px": 10.41,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 10.73,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "PSO",
           "side": "long",
           "predict": "UP",
-          "px": 15.94,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 16.13,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "TCI",
           "side": "long",
           "predict": "UP",
-          "px": 43.12,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 44.93,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "TIL",
           "side": "long",
           "predict": "UP",
-          "px": 7.04,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 7.3,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         }
       ],
       "sell": [],
@@ -4092,36 +4092,36 @@
           "side": "long",
           "predict": "UP",
           "take": "BUY",
-          "px": 10.41,
+          "px": 10.73,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "PSO",
           "side": "long",
           "predict": "UP",
           "take": "BUY",
-          "px": 15.94,
+          "px": 16.13,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "TCI",
           "side": "long",
           "predict": "UP",
           "take": "BUY",
-          "px": 43.12,
+          "px": 44.93,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "TIL",
           "side": "long",
           "predict": "UP",
           "take": "BUY",
-          "px": 7.04,
+          "px": 7.3,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         }
       ],
       "research": null
@@ -4132,65 +4132,65 @@
           "ticker": "AVPT",
           "side": "long",
           "predict": "UP",
-          "px": 13.67,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 14.06,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "HAFN",
           "side": "long",
           "predict": "UP",
-          "px": 9.28,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 10.0,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "MAZE",
           "side": "long",
           "predict": "UP",
-          "px": 26.85,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 26.8,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "NAT",
           "side": "long",
           "predict": "UP",
-          "px": 7.92,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 8.18,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "TK",
           "side": "long",
           "predict": "UP",
-          "px": 13.98,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 14.63,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "TRMD",
           "side": "long",
           "predict": "UP",
-          "px": 35.37,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 38.79,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "VRNS",
           "side": "long",
           "predict": "UP",
-          "px": 47.92,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 47.19,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "YOU",
           "side": "long",
           "predict": "UP",
-          "px": 40.47,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 42.11,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         }
       ],
       "sell": [],
@@ -4209,72 +4209,72 @@
           "side": "long",
           "predict": "UP",
           "take": "BUY",
-          "px": 13.67,
+          "px": 14.06,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "HAFN",
           "side": "long",
           "predict": "UP",
           "take": "BUY",
-          "px": 9.28,
+          "px": 10.0,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "MAZE",
           "side": "long",
           "predict": "UP",
           "take": "BUY",
-          "px": 26.85,
+          "px": 26.8,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "NAT",
           "side": "long",
           "predict": "UP",
           "take": "BUY",
-          "px": 7.92,
+          "px": 8.18,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "TK",
           "side": "long",
           "predict": "UP",
           "take": "BUY",
-          "px": 13.98,
+          "px": 14.63,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "TRMD",
           "side": "long",
           "predict": "UP",
           "take": "BUY",
-          "px": 35.37,
+          "px": 38.79,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "VRNS",
           "side": "long",
           "predict": "UP",
           "take": "BUY",
-          "px": 47.92,
+          "px": 47.19,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "YOU",
           "side": "long",
           "predict": "UP",
           "take": "BUY",
-          "px": 40.47,
+          "px": 42.11,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         }
       ],
       "research": null
@@ -4285,17 +4285,17 @@
           "ticker": "KOD",
           "side": "long",
           "predict": "UP",
-          "px": 85.3,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 99.08,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "MAZE",
           "side": "long",
           "predict": "UP",
-          "px": 26.85,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 26.8,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         }
       ],
       "sell": [],
@@ -4314,18 +4314,18 @@
           "side": "long",
           "predict": "UP",
           "take": "BUY",
-          "px": 85.3,
+          "px": 99.08,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "MAZE",
           "side": "long",
           "predict": "UP",
           "take": "BUY",
-          "px": 26.85,
+          "px": 26.8,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         }
       ],
       "research": null
@@ -4336,49 +4336,49 @@
           "ticker": "IT",
           "side": "long",
           "predict": "UP",
-          "px": 185.73,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 195.36,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "KSPI",
           "side": "long",
           "predict": "UP",
-          "px": 95.82,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 91.96,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "IOT",
           "side": "long",
           "predict": "UP",
-          "px": 37.93,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 40.03,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "AVPT",
           "side": "long",
           "predict": "UP",
-          "px": 13.67,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 14.06,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "SONO",
           "side": "long",
           "predict": "UP",
-          "px": 17.18,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 17.86,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         },
         {
           "ticker": "RELY",
           "side": "long",
           "predict": "UP",
-          "px": 21.89,
-          "px_src": "session_export+finviz_session: No module named 'requests'",
-          "px_asof": "2026-10-01T14:57:16.733968-04:00"
+          "px": 21.51,
+          "px_src": "elite_live",
+          "px_asof": "2026-10-01T15:03:10.638748-04:00"
         }
       ],
       "sell": [],
@@ -4397,54 +4397,54 @@
           "side": "long",
           "predict": "UP",
           "take": "BUY",
-          "px": 185.73,
+          "px": 195.36,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "KSPI",
           "side": "long",
           "predict": "UP",
           "take": "BUY",
-          "px": 95.82,
+          "px": 91.96,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "IOT",
           "side": "long",
           "predict": "UP",
           "take": "BUY",
-          "px": 37.93,
+          "px": 40.03,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "AVPT",
           "side": "long",
           "predict": "UP",
           "take": "BUY",
-          "px": 13.67,
+          "px": 14.06,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "SONO",
           "side": "long",
           "predict": "UP",
           "take": "BUY",
-          "px": 17.18,
+          "px": 17.86,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         },
         {
           "ticker": "RELY",
           "side": "long",
           "predict": "UP",
           "take": "BUY",
-          "px": 21.89,
+          "px": 21.51,
           "open_px": null,
-          "px_src": "session_export+finviz_session: No module named 'requests'"
+          "px_src": "elite_live"
         }
       ],
       "research": {
@@ -4458,8 +4458,8 @@
             "ticker": "IT",
             "side": "long",
             "open": null,
-            "px": 185.73,
-            "px_src": "session_export+finviz_session: No module named 'requests'",
+            "px": 195.36,
+            "px_src": "elite_live",
             "low": null,
             "scoops": {
               "0.5": {
@@ -4494,8 +4494,8 @@
             "ticker": "KSPI",
             "side": "long",
             "open": null,
-            "px": 95.82,
-            "px_src": "session_export+finviz_session: No module named 'requests'",
+            "px": 91.96,
+            "px_src": "elite_live",
             "low": null,
             "scoops": {
               "0.5": {
@@ -4530,8 +4530,8 @@
             "ticker": "IOT",
             "side": "long",
             "open": null,
-            "px": 37.93,
-            "px_src": "session_export+finviz_session: No module named 'requests'",
+            "px": 40.03,
+            "px_src": "elite_live",
             "low": null,
             "scoops": {
               "0.5": {
@@ -4566,8 +4566,8 @@
             "ticker": "AVPT",
             "side": "long",
             "open": null,
-            "px": 13.67,
-            "px_src": "session_export+finviz_session: No module named 'requests'",
+            "px": 14.06,
+            "px_src": "elite_live",
             "low": null,
             "scoops": {
               "0.5": {
@@ -4602,8 +4602,8 @@
             "ticker": "SONO",
             "side": "long",
             "open": null,
-            "px": 17.18,
-            "px_src": "session_export+finviz_session: No module named 'requests'",
+            "px": 17.86,
+            "px_src": "elite_live",
             "low": null,
             "scoops": {
               "0.5": {
@@ -4638,8 +4638,8 @@
             "ticker": "RELY",
             "side": "long",
             "open": null,
-            "px": 21.89,
-            "px_src": "session_export+finviz_session: No module named 'requests'",
+            "px": 21.51,
+            "px_src": "elite_live",
             "low": null,
             "scoops": {
               "0.5": {
