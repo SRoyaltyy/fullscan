@@ -132,3 +132,53 @@ labels to match predictions. Confirm the rubric, add article evidence, then
 collect an independent prospective test for the complete JEV-plus-reviewer
 system. The candidate remains opt-in; error-handling fixes apply to the
 existing default immediately when this PR is merged.
+
+## User's acceptance criterion: five consecutive fresh 100-item rounds
+
+This supersedes the earlier review-heavy validation as the success criterion.
+For each fully frontier-labeled batch, useful recall is correctly kept useful
+items divided by all frontier-useful items; trash recall is correctly discarded
+trash divided by all frontier-trash items. Both must be **strictly greater than
+80%**, five rounds consecutively. Exactly 80% fails. Overall accuracy and
+precision are also recorded but cannot substitute for either class recall.
+An abstention does not count as a correct prediction. An API error invalidates
+the round. A change to the question/rubric, JEV model or teacher resets the
+streak. Repeated items and partial/unlabeled batches cannot qualify.
+
+`src/jev_acceptance.py` implements this protocol. The new binary candidate
+`binary-news-v1` and 500 frontier-assistant labels were frozen before the live
+JEV requests. Selection excluded known trainer/gold/previous evaluation
+headlines and token near duplicates (Jaccard >= .8). Both models receive the
+same news evidence; teacher grades do not enter JEV's prompt. The five batches
+have 25, 33, 31, 34 and 30 useful items respectively, and all have 100 binary
+labels. No unclear labels are silently removed from denominators. The input
+archive and existing webpage contain headlines and URLs, not article bodies;
+this is therefore a **headline-level** test, not full-article equivalence.
+
+| Round | Useful kept | Trash discarded | Overall accuracy | Pass |
+|---|---:|---:|---:|---|
+| 1 | 48.0% | 94.7% | 83% | No |
+| 2 | 48.5% | 98.5% | 82% | No |
+| 3 | 64.5% | 98.6% | 88% | No |
+| 4 | 41.2% | 95.5% | 77% | No |
+| 5 | 73.3% | 97.1% | 90% | No |
+
+There were zero API errors. The streak is 0/5. Results are in
+`validation/jev_acceptance_report.json`; the page summary is
+`dashboard/jev-train/acceptance.json`. The direct binary prompt still rejects
+too much useful information. These 500 items are now development data; any
+revised candidate needs fresh acceptance batches, and these failed results
+must remain in its history. Lowering a cutoff on these same results and
+calling that five unseen successes would violate the criterion.
+
+The webpage now displays class recalls, precision, freshness and the streak.
+Manual 30-label feedback remains available but is explicitly distinct from
+acceptance. Blind grading hides both JEV decisions and the separate why-bit
+script until all items have been labeled, unless the reviewer explicitly
+turns off hiding. Actual test labels here were prepared independently before
+JEV was requested, rather than through the manual page.
+
+The acceptance protocol is functional; the model accuracy target remains
+unmet. Neither the two-question abstaining candidate nor the new binary
+candidate is switched into the live filter. Deployment of the webpage changes
+requires merging the PR and the repository's normal dashboard deployment.

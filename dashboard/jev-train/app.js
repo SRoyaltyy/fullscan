@@ -149,6 +149,7 @@
       var row = tbody.querySelector('tr[data-id="' + cssEscape(id) + '"]');
       if (row) paintYou(row.querySelector(".you"), id);
       refreshSubmit();
+      if (state.draw && markedCount() >= state.draw.items.length - 1) render();
     }
 
     function cssEscape(value) {
@@ -209,11 +210,14 @@
         source.appendChild(pool);
         source.appendChild(document.createTextNode(row.source || ""));
         var jev = document.createElement("td");
-        jev.className = "jev " + (row.jev || "");
-        jev.textContent = row.jev || "—";
+        var blindControl = document.getElementById("blindGrade");
+        var blind = blindControl && blindControl.checked && markedCount() < draw.items.length;
+        tr.dataset.blind = blind ? "true" : "false";
+        jev.className = blind ? "jev" : "jev " + (row.jev || "");
+        jev.textContent = blind ? "Hidden" : row.jev || "—";
         var bits = document.createElement("td");
         bits.className = "bits";
-        bits.textContent = (row.bits || []).join(" ");
+        bits.textContent = blind ? "" : (row.bits || []).join(" ");
         var youTd = document.createElement("td");
         var you = document.createElement("div");
         you.className = "you";
@@ -472,6 +476,8 @@
       }
     }
 
+    var blindControl = document.getElementById("blindGrade");
+    if (blindControl) blindControl.addEventListener("change", render);
     document.getElementById("newDraw").addEventListener("click", onNewDraw);
     document.getElementById("reload").addEventListener("click", function () {
       reload().catch(function (err) { setErr(String(err && err.message ? err.message : err)); });

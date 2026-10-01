@@ -45,7 +45,7 @@
       var title = titleEl ? titleEl.textContent : "";
       var row = byId[tr.dataset.id] || byTitle[title];
       var td = tr.querySelector("td.bits");
-      if (row && td) td.textContent = paintWhy(row);
+      if (row && td) td.textContent = tr.dataset.blind === "true" ? "" : paintWhy(row);
     });
   }
 

@@ -19,6 +19,12 @@ class Tests(unittest.TestCase):
         self.assertFalse(score(r)["pass"])
     def test_partial_batch_rejected(self):
         with self.assertRaises(ValueError):score(rows()[:99])
+    def test_development_cannot_count(self):
+        r=round_();r["dataset_role"]="development"
+        self.assertFalse(summarize([r])["rounds"][0]["pass"])
+    def test_unknown_model_cannot_count(self):
+        r=round_();r["jev_model"]="unknown"
+        self.assertFalse(summarize([r])["rounds"][0]["pass"])
     def test_old_exposure_rejected(self):
         from .jev_acceptance import identity
         self.assertFalse(summarize([round_()],historical_seen=[identity(rows()[0])])["rounds"][0]["pass"])

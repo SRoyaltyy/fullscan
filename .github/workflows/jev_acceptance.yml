@@ -54,3 +54,12 @@ jobs:
           git diff --cached --quiet && exit 0
           git commit -m 'Record strict five-round JEV acceptance [skip ci]'
           git push origin HEAD:codex/jev-news-triage
+      - name: Require five consecutive passes
+        run: |
+          python - <<'PYTHON'
+          import json
+          from pathlib import Path
+          result=json.loads(Path('validation/jev_acceptance_report.json').read_text())
+          if not result['summary']['accepted']:
+              raise SystemExit('Acceptance target unmet: both class recalls must exceed 80% for five fresh consecutive rounds')
+          PYTHON

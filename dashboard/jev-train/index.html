@@ -59,6 +59,11 @@
 <div class="wrap">
  <h1>Jev train</h1>
  <p class="sub">Grade hop-0 like homework. K keep, D drop, ? skip. Keep iff (done OR print OR spoke) AND NOT tip. tape/soft cannot veto a keep bit. Why bits are the live six: tape soft tip done print spoke. Reason is the decide() winner. Click a scan date to load that day's parse titles from the repo (no token). Mixed draw stays available. Load that day runs the code gate on that parse. Submit needs 30 K/D marks.</p>
+ <h2>Five-round acceptance</h2>
+ <p class="sub">Each round: 100 fresh articles, independent frontier labels, useful-item recall and trash-rejection recall both strictly above 80%. Five consecutive passes under one frozen rubric. Manual 30-label feedback does not count as acceptance.</p>
+ <div id="acceptance" style="overflow-x:auto">Loading acceptance results…</div>
+ <h2>Manual feedback</h2>
+ <label><input type="checkbox" id="blindGrade" checked> Hide JEV decisions until every item is labeled</label>
  <div class="bar">
   <button type="button" id="newDraw">New draw</button>
   <button type="button" id="reload">Reload draw</button>
@@ -101,6 +106,7 @@
  <button type="button" id="download">Download grades JSON</button>
 </div>
 <script src="app.js"></script>
+<script src="acceptance.js"></script>
 <script src="why.js"></script>
 <script src="day.js"></script>
 </body>

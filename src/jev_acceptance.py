@@ -58,7 +58,11 @@ def summarize(rounds, historical_seen=()):
         ids={identity(r) for r in round_["items"]}
         overlap=ids & seen
         scores=score(round_["items"])
-        valid=not overlap and round_.get("teacher_blind") is True and round_.get("rubric_sha256")==sha(RUBRIC)
+        valid=(not overlap and round_.get("teacher_blind") is True
+               and round_.get("rubric_sha256")==sha(RUBRIC)
+               and config[1] not in {"unknown", "mixed-or-missing", ""}
+               and scores["errors_or_reviews"]==0
+               and round_.get("dataset_role", "acceptance") == "acceptance")
         # Earlier evaluated draws, including failures, are permanently exposed.
         seen.update(ids)
         passed=valid and scores["pass"]
@@ -72,6 +76,14 @@ def summarize(rounds, historical_seen=()):
 def run(input_path,output_path,workers=8):
     data=json.loads(Path(input_path).read_text()); rounds=data["rounds"]
     if any(r["protocol_sha256"]!=protocol_sha() for r in rounds): raise ValueError("Frozen rubric mismatch")
+    prior=[]
+    if Path(output_path).exists():
+        prior=json.loads(Path(output_path).read_text()).get("rounds", [])
+        exposed={identity(row) for old in prior for row in old["items"]}
+        if any(identity(row) in exposed for batch in rounds for row in batch["items"]):
+            raise ValueError("These articles were already evaluated; rescore cannot start a fresh streak")
+    # Validate complete independent labels and uniqueness before any paid calls.
+    for batch in rounds: score([{**row,"decision":"error"} for row in batch["items"]])
     key=api_key()
     if not key: raise RuntimeError("JEV_API_KEY required; regex cannot qualify")
     # Labels never enter JEV state. All gold was frozen before this request run.
@@ -92,7 +104,8 @@ def run(input_path,output_path,workers=8):
             round_["items"]=list(pool.map(one,round_["items"]))
         models={r["jev_model"] for r in round_["items"] if r.get("jev_model")}
         round_["jev_model"]=next(iter(models)) if len(models)==1 else "mixed-or-missing"
-    data["summary"]=summarize(rounds,data.get("historical_seen",[]))
+    data["rounds"]=prior+rounds
+    data["summary"]=summarize(data["rounds"],data.get("historical_seen",[]))
     Path(output_path).parent.mkdir(parents=True,exist_ok=True)
     Path(output_path).write_text(json.dumps(data,indent=2,ensure_ascii=False)+"\n")
     print(json.dumps(data["summary"],indent=2))
