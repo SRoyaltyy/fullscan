@@ -1,0 +1,38 @@
+name: JEV rubric development experiments
+on:
+  push:
+    branches: [codex/jev-news-triage]
+    paths: ['src/jev_experiments.py', '.github/workflows/jev_experiments.yml']
+permissions:
+  contents: write
+jobs:
+  experiment:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            src
+            00_grounding/jev_acceptance
+            validation
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Compare questions on exposed development data
+        env:
+          JEV_API_KEY: ${{ secrets.JEV_API_KEY }}
+          JEV_MODEL: jev-1.13.0
+        run: python -m src.jev_experiments --output validation/jev_development_experiments.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: jev-development-experiments
+          path: validation/jev_development_experiments.json
+      - name: Save feature branch results
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add validation/jev_development_experiments.json
+          git diff --cached --quiet && exit 0
+          git commit -m 'Record development rubric comparisons [skip ci]'
+          git push origin HEAD:codex/jev-news-triage
