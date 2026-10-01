@@ -1,6 +1,6 @@
 {
   "date": "2026-10-01",
-  "generated_at": "2026-10-01T05:54:17.119626-04:00",
+  "generated_at": "2026-10-01T05:57:24.052873-04:00",
   "summary": "",
   "sectors": [
     {
@@ -110,20 +110,26 @@
     {
       "sector": "Energy",
       "etf": "XLE",
-      "predicted_direction": null,
-      "predicted_magnitude_band": null,
-      "total_score": null,
-      "confidence_score": null,
-      "multiplier": null,
-      "divergence_flagged": null,
+      "predicted_direction": "down",
+      "predicted_magnitude_band": "mild",
+      "total_score": -2.413,
+      "confidence_score": 0.497,
+      "multiplier": 0.85,
+      "divergence_flagged": true,
       "actual_pct_change": null,
       "actual_direction": null,
       "direction_hit": null,
       "magnitude_hit": null,
-      "has_predict_md": false,
+      "has_predict_md": true,
       "has_outcome_md": false,
-      "components": {},
-      "status": "FAIL",
+      "components": {
+        "S0_SHARED_MACRO": -0.5,
+        "S1_SECTOR_FACTORS": 1.0,
+        "S2_BREADTH": -0.5,
+        "S3_FLOWS_POSITIONING": -0.5,
+        "S4_ETF_TAPE": -0.5
+      },
+      "status": "OK",
       "provider": "",
       "fallback_reason": ""
     },
