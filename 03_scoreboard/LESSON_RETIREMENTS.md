@@ -2,10 +2,20 @@
 
 A lesson retires when its topic's direction hit rate fell by more than 5% in the 4+ graded runs after it went active vs before (lesson_efficacy verdict WORSE). Max 10 per night, worst first. Files move to `02_lessons/retired/`; nothing is deleted.
 
-Total retired: **430**
+Total retired: **440**
 
 | Retired at | Lesson | Topic | Active since | Before | After | Δ |
 |---|---|---|---|---:|---:|---:|
+| 2026-10-01 | `a-sector-call-has-a-scheduled-8-30-et-high-impact-macro-` | sector:Financial | 2026-08-17 | 60% (n=5) | 14% (n=7) | -46% |
+| 2026-10-01 | `sector-prediction-made-when-the-sector-s-dominant-commod` | sector:Energy | 2026-08-18 | 67% (n=6) | 14% (n=7) | -52% |
+| 2026-10-01 | `a-utility-defensive-sector-call-is-built-on-a-carried-de` | sector:Utilities | 2026-08-18 | 67% (n=6) | 14% (n=7) | -52% |
+| 2026-10-01 | `a-sector-call-has-a-decisively-negative-fundamental-spin` | sector:Consumer Cyclical | 2026-08-18 | 83% (n=6) | 29% (n=7) | -55% |
+| 2026-10-01 | `when-the-pre-fetched-commodity-tape-conflicts-with-live-` | sector:Energy | 2026-08-19 | 71% (n=7) | 14% (n=7) | -57% |
+| 2026-10-01 | `a-mega-cap-duration-heavy-consumer-cyclical-etf-xly-like` | sector:Consumer Cyclical | 2026-09-16 | 71% (n=7) | 14% (n=7) | -57% |
+| 2026-10-01 | `a-consumer-cyclical-down-call-is-driven-by-a-genuinely-n` | sector:Consumer Cyclical | 2026-08-19 | 86% (n=7) | 29% (n=7) | -57% |
+| 2026-10-01 | `in-a-utilities-xlu-call-a-second-soft-inflation-print-ha` | sector:Utilities | 2026-08-14 | 75% (n=4) | 14% (n=7) | -61% |
+| 2026-10-01 | `a-sector-call-has-a-scheduled-8-30-et-macro-release-pend` | sector:Financial | 2026-08-14 | 75% (n=4) | 14% (n=7) | -61% |
+| 2026-10-01 | `a-utilities-xlu-call-is-built-after-a-stretch-of-risk-on` | sector:Utilities | 2026-08-17 | 80% (n=5) | 14% (n=7) | -66% |
 | 2026-10-01 | `a-cyclical-industrials-etf-xli-like-posts-an-all-zero-s0` | sector:Industrials | 2026-09-17 | 71% (n=7) | 33% (n=6) | -38% |
 | 2026-10-01 | `sector-prediction-emits-flat-flat-when-broad-market-tape` | sector:Healthcare | 2026-09-04 | 71% (n=7) | 29% (n=7) | -43% |
 | 2026-10-01 | `sector-etf-prediction-where-the-prior-session-had-a-mode` | sector:Healthcare | 2026-09-04 | 71% (n=7) | 29% (n=7) | -43% |
@@ -196,13 +206,3 @@ Total retired: **430**
 | 2026-09-25 | `in-a-utilities-xlu-call-a-second-soft-inflation-print-ha` | sector:Utilities | 2026-08-14 | 75% (n=4) | 14% (n=7) | -61% |
 | 2026-09-25 | `a-sector-call-has-a-scheduled-8-30-et-macro-release-pend` | sector:Financial | 2026-08-14 | 75% (n=4) | 14% (n=7) | -61% |
 | 2026-09-25 | `a-utilities-xlu-call-is-built-after-a-stretch-of-risk-on` | sector:Utilities | 2026-08-17 | 80% (n=5) | 14% (n=7) | -66% |
-| 2026-09-24 | `a-sector-call-has-a-scheduled-8-30-et-high-impact-macro-` | sector:Financial | 2026-08-17 | 60% (n=5) | 14% (n=7) | -46% |
-| 2026-09-24 | `sector-prediction-made-when-the-sector-s-dominant-commod` | sector:Energy | 2026-08-18 | 67% (n=6) | 14% (n=7) | -52% |
-| 2026-09-24 | `a-utility-defensive-sector-call-is-built-on-a-carried-de` | sector:Utilities | 2026-08-18 | 67% (n=6) | 14% (n=7) | -52% |
-| 2026-09-24 | `a-sector-call-has-a-decisively-negative-fundamental-spin` | sector:Consumer Cyclical | 2026-08-18 | 83% (n=6) | 29% (n=7) | -55% |
-| 2026-09-24 | `a-mega-cap-duration-heavy-consumer-cyclical-etf-xly-like` | sector:Consumer Cyclical | 2026-09-16 | 71% (n=7) | 17% (n=6) | -55% |
-| 2026-09-24 | `when-the-pre-fetched-commodity-tape-conflicts-with-live-` | sector:Energy | 2026-08-19 | 71% (n=7) | 14% (n=7) | -57% |
-| 2026-09-24 | `a-consumer-cyclical-down-call-is-driven-by-a-genuinely-n` | sector:Consumer Cyclical | 2026-08-19 | 86% (n=7) | 29% (n=7) | -57% |
-| 2026-09-24 | `in-a-utilities-xlu-call-a-second-soft-inflation-print-ha` | sector:Utilities | 2026-08-14 | 75% (n=4) | 14% (n=7) | -61% |
-| 2026-09-24 | `a-sector-call-has-a-scheduled-8-30-et-macro-release-pend` | sector:Financial | 2026-08-14 | 75% (n=4) | 14% (n=7) | -61% |
-| 2026-09-24 | `a-utilities-xlu-call-is-built-after-a-stretch-of-risk-on` | sector:Utilities | 2026-08-17 | 80% (n=5) | 14% (n=7) | -66% |
