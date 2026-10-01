@@ -230,13 +230,16 @@ def _reasoning(
 
 
 def _llm_hop(tmpl: str, art: dict, family: str = "", cls: Classification | None = None,
-             pack: dict | None = None, *, use_openclaw: bool = False,
+             pack: dict | None = None, questions: list | None = None,
+             *, use_openclaw: bool = False,
              use_lane: bool = False) -> tuple[dict | None, str, str, list[dict]]:
     """OpenClaw / SuperGrok first when asked; Lane only if OpenClaw is off."""
     hops: list[dict] = []
     if use_openclaw:
         from .openclaw_hop import hop as oc_hop
-        parsed, lane, model, log = oc_hop(tmpl, art, family=family, cls=cls, pack=pack)
+        parsed, lane, model, log = oc_hop(
+            tmpl, art, family=family, cls=cls, pack=pack, questions=questions,
+        )
         hops.extend(log)
         if parsed is not None:
             return parsed, lane, model, hops
@@ -258,7 +261,6 @@ def analyze_article(
 ) -> dict[str, Any]:
     title = str(art.get("title") or "")
     body = str(art.get("body") or "")
-    # Honesty: never copy retrieved into published_at.
     published = str(art.get("published_at") or "")
     retrieved = str(art.get("retrieved_at") or "")
     known = str(art.get("known_at") or published or retrieved or "")
@@ -282,7 +284,24 @@ def analyze_article(
             cls = merge_lane_class(cls, lane_cls_parsed)
             mark = _watermark(hop, model)
 
+    meta_parsed: dict | None = None
+    if use_openclaw and cls.event_class not in {"discard", "regime_state"}:
+        meta_parsed, hop, model, hops = _llm_hop(
+            "news_meta", art, family=cls.family, cls=cls,
+            use_openclaw=True, use_lane=False,
+        )
+        hop_chain.extend(hops)
+
     pack = pack_for_article(title, body, enabled=use_search)
+    if use_openclaw and cls.event_class not in {"discard", "regime_state"}:
+        qs = (meta_parsed or {}).get("m2") or []
+        _, hop, model, hops = _llm_hop(
+            "news_pack_complete", art, family=cls.family, cls=cls, pack=pack,
+            questions=qs if isinstance(qs, list) else [],
+            use_openclaw=True, use_lane=False,
+        )
+        hop_chain.extend(hops)
+
     entities = analyze(art, cls, pack)
     if (use_openclaw or use_lane) and cls.q5 != "regime" and cls.event_class not in {
         "discard", "regime_state", "rumor",
