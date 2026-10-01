@@ -1,14 +1,14 @@
 {
   "date": "2026-10-01",
-  "generated_at": "2026-10-01T06:07:49.481349-04:00",
+  "generated_at": "2026-10-01T06:07:56.142603-04:00",
   "overall": "PARTIAL",
-  "ranker_ready": true,
+  "ranker_ready": false,
   "blockers": [
     "MISSING AB checklist enriched `data/ab_checklist/2026-10-01_ab_checklist_enriched.csv` \u2014 missing"
   ],
   "counts": {
-    "ok": 3,
-    "partial": 4,
+    "ok": 4,
+    "partial": 3,
     "fail": 1,
     "n": 8
   },
@@ -356,7 +356,7 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=True",
-          "size": 7433,
+          "size": 8247,
           "said": "all_ok=True \u00b7 sectors 11/11 \u00b7 2 fail",
           "bullets": [
             "finviz_market_digest:missing",
@@ -701,7 +701,7 @@
       "inputs_ready": false,
       "n_req_ok": 1,
       "n_req": 4,
-      "n_opt_ok": 1,
+      "n_opt_ok": 2,
       "n_opt": 3,
       "files": [
         {
@@ -883,10 +883,10 @@
           "name": "Dashboard HTML",
           "path": "dashboard/index.html",
           "role": "optional",
-          "status": "FAIL",
-          "reason": "session 2026-10-01 not in dashboard dates (last=2026-09-25)",
+          "status": "OK",
+          "reason": "live-book poller + today.json (2026-10-01)",
           "size": 8945021,
-          "said": "session 2026-10-01 not in dashboard dates (last=2026-09-25)",
+          "said": "live-book poller + today.json (2026-10-01)",
           "bullets": []
         }
       ],
@@ -899,9 +899,9 @@
       "key": "publish",
       "name": "Dashboard / .io",
       "yaml": "deploy-dashboard.yml",
-      "status": "PARTIAL",
+      "status": "OK",
       "inputs_ready": false,
-      "n_req_ok": 1,
+      "n_req_ok": 2,
       "n_req": 2,
       "n_opt_ok": 0,
       "n_opt": 1,
@@ -922,10 +922,10 @@
           "name": "Dashboard HTML (repo)",
           "path": "dashboard/index.html",
           "role": "required",
-          "status": "FAIL",
-          "reason": "session 2026-10-01 not in dashboard dates (last=2026-09-25)",
+          "status": "OK",
+          "reason": "live-book poller + today.json (2026-10-01)",
           "size": 8945021,
-          "said": "session 2026-10-01 not in dashboard dates (last=2026-09-25)",
+          "said": "live-book poller + today.json (2026-10-01)",
           "bullets": []
         },
         {
@@ -962,48 +962,8 @@
   "news_mode_reason": "",
   "selections": {
     "buy_1d": [],
-    "sell_1d": [
-      {
-        "ticker": "NEOV",
-        "score": -0.17828666315379646
-      },
-      {
-        "ticker": "FCEL",
-        "score": -0.2411697007660305
-      },
-      {
-        "ticker": "SOC",
-        "score": -0.5537884549773978
-      },
-      {
-        "ticker": "EOSE",
-        "score": -0.2903118725336945
-      },
-      {
-        "ticker": "POWL",
-        "score": -0.06853636509325672
-      },
-      {
-        "ticker": "INDI",
-        "score": -0.1413249335849469
-      },
-      {
-        "ticker": "ACDC",
-        "score": -0.5594004912064034
-      },
-      {
-        "ticker": "TE",
-        "score": -0.28621899857607735
-      }
-    ],
-    "flatten": {
-      "said": "0 priced buys \u00b7 cash $81,251.01 \u00b7 morning S missing",
-      "bullets": [
-        "0 priced buys",
-        "cash $81,251.01",
-        "morning S missing"
-      ]
-    },
+    "sell_1d": [],
+    "flatten": {},
     "general": {
       "said": "DOWN  -1.343",
       "bullets": [
@@ -1017,7 +977,7 @@
       "direction": "down"
     },
     "sectors": {
-      "said": "1 up / 6 down / 0 flat",
+      "said": "2 up / 9 down / 0 flat",
       "bullets": [
         "XLB DOWN -0.8",
         "XLC UP +7.5",
@@ -1026,10 +986,10 @@
         "XLE DOWN -2.4",
         "XLF DOWN -5.2",
         "XLV DOWN -3.9",
-        "XLI missing",
-        "XLRE missing",
-        "XLK missing",
-        "XLU missing"
+        "XLI DOWN -0.4",
+        "XLRE DOWN -5.9",
+        "XLK UP +5.0",
+        "XLU DOWN -0.8"
       ]
     },
     "news": {
@@ -1995,6 +1955,24 @@
         }
       ],
       "preview": "# Sector Prediction \u2014 Utilities \u2014 2026-10-01\n- news_mode: **on**\n- ETF: **XLU**\n- rubric: `00_grounding/sectors/utilities.md`\n- predicted_direction: **down**\n- predicted_magnitude_band: **mild**\n- total_score: **-0.795** (mult 0.9)\n- regime: mixed\n- divergence_flagged: **True**\n- engine: v2 \u00b7 tape_anchor **0.891** (ES +0.17%, ZN -0.03%, PM:XLU +0.20%) \u00b7 index_carry **-0.336** (general -1.343) \u00b7 llm_overlay **-1.35** (raw -1.35) \u00b7 # Reasoning trace \u2014 SECTOR PREDICT Utilities 2026-10-01\nprovider: deepseek\nfallback_reason: prefer_deepseek\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (123,942 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Research.** The model wanted to know: *\"10 year Treasury yield October 1 2026\"* \u2192 got 6 results (via gnews_rss)\n- 10-year Treasury yield hits highest level since 2002 as global bond rout gathers pace - cnbc.com (https://news.google.com/rss/articles/CBMia0FVX3lxTE9PM09zdU1xNE92dWFpOHlmNElQbnpGUTJvalgtNlhyVkRPaFFpcDNYZ3RHUVdQNHdVSW5Va3FQVzNxMzdveHc0cjBMLXVhdHE5V0NWNEdKREM0aWJMNEdmSzdjX280bkJHSEhz0gFwQVVfeXFMT2p0Uk1TT2ZMTV9LTkR5ai1QSTlXM"
+    },
+    {
+      "key": "sector_predict",
+      "title": "Per-sector predict (all 11)",
+      "date": "2026-10-01",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-01T06:07:55.819350-04:00",
+      "files": [
+        {
+          "path": "01_daily/sectors/2026-10-01",
+          "ok": true,
+          "reason": "",
+          "size": 4096,
+          "preview": "11/11 sector predicts ok: basic_materials, communication_services, consumer_cyclical, consumer_defensive, energy, financial, healthcare, industrials"
+        }
+      ],
+      "preview": "11/11 sector predicts ok: basic_materials, communication_services, consumer_cyclical, consumer_defensive, energy, financial, healthcare, industrials"
     }
   ],
   "href": {

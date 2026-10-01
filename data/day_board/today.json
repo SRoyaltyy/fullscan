@@ -1,57 +1,17 @@
 {
   "date": "2026-10-01",
-  "generated_at": "2026-10-01T06:07:49.481349-04:00",
+  "generated_at": "2026-10-01T06:07:56.142603-04:00",
   "overall": "PARTIAL",
-  "ranker_ready": true,
+  "ranker_ready": false,
   "counts": {
-    "ok": 3,
-    "partial": 4,
+    "ok": 4,
+    "partial": 3,
     "fail": 1,
     "n": 8
   },
   "buy_1d": [],
-  "sell_1d": [
-    {
-      "ticker": "NEOV",
-      "score": -0.17828666315379646
-    },
-    {
-      "ticker": "FCEL",
-      "score": -0.2411697007660305
-    },
-    {
-      "ticker": "SOC",
-      "score": -0.5537884549773978
-    },
-    {
-      "ticker": "EOSE",
-      "score": -0.2903118725336945
-    },
-    {
-      "ticker": "POWL",
-      "score": -0.06853636509325672
-    },
-    {
-      "ticker": "INDI",
-      "score": -0.1413249335849469
-    },
-    {
-      "ticker": "ACDC",
-      "score": -0.5594004912064034
-    },
-    {
-      "ticker": "TE",
-      "score": -0.28621899857607735
-    }
-  ],
-  "flatten": {
-    "said": "0 priced buys \u00b7 cash $81,251.01 \u00b7 morning S missing",
-    "bullets": [
-      "0 priced buys",
-      "cash $81,251.01",
-      "morning S missing"
-    ]
-  },
+  "sell_1d": [],
+  "flatten": {},
   "general": {
     "said": "DOWN  -1.343",
     "bullets": [
@@ -65,7 +25,7 @@
     "direction": "down"
   },
   "sectors": {
-    "said": "1 up / 6 down / 0 flat",
+    "said": "2 up / 9 down / 0 flat",
     "bullets": [
       "XLB DOWN -0.8",
       "XLC UP +7.5",
@@ -74,38 +34,13 @@
       "XLE DOWN -2.4",
       "XLF DOWN -5.2",
       "XLV DOWN -3.9",
-      "XLI missing",
-      "XLRE missing",
-      "XLK missing",
-      "XLU missing"
+      "XLI DOWN -0.4",
+      "XLRE DOWN -5.9",
+      "XLK UP +5.0",
+      "XLU DOWN -0.8"
     ]
   },
   "lands": [
-    {
-      "key": "news_parse",
-      "title": "News parse",
-      "date": "2026-10-01",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-01T05:47:43.361533-04:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-10-01_parsed.json",
-          "ok": true,
-          "reason": "",
-          "size": 397678,
-          "preview": "raw=400 usable=95 single=14 \u00b7 Why are US treasury yields falling today? Federal Reserve interest rate hike in  | Gold steadies as cooler US inflation data counters higher Treasury yields - Reut | US 10-Year Treasury Yield Soars To 24-Year High: Will The Selloff Continue? - Tr | Elizabeth Warren Blames Trump's 'Failed' Policies for Fed Rate Hike - Benzinga | Goldman Sachs pushes Fed rate hike forecast to December - Reuters"
-        },
-        {
-          "path": "01_daily/news/2026-10-01_parsed.md",
-          "ok": true,
-          "reason": "",
-          "size": 8040,
-          "preview": "# News Parse v2 \u2014 2026-10-01T05:47:37.425711-04:00\nWindow\u224848h | news_mode=on | raw=400 | usable=95 | single_name=14 | noise_dropped=291\nusable polarity={'+': 6, '-': 16, 'mixed': 1, 'neutral': 72}"
-        }
-      ],
-      "preview": "raw=400 usable=95 single=14 \u00b7 Why are US treasury yields falling today? Federal Reserve interest rate hike in  | Gold steadies as cooler US inflation data counters higher Treasury yields - Reut | US 10-Year Treasury Yield Soars To 24-Year High: Will The Selloff Continue? - Tr | Elizabeth Warren Blames Trump's 'Failed' Policies for Fed Rate Hike - Benzinga | Goldman Sachs pushes Fed rate hike forecast to December - Reuters \u00b7 # News Parse v2 \u2014 2026-10-01T05:47:37.425711-04:00\nWindow\u224848h | news_mode=on | raw=400 | usable=95 | single_name=14 | noise_dropped=291\nusable polarity={'+': 6, '-': 16, 'mixed': 1, 'neutral': 72}"
-    },
     {
       "key": "events",
       "title": "Event scanner (primary)",
@@ -399,6 +334,24 @@
         }
       ],
       "preview": "# Sector Prediction \u2014 Utilities \u2014 2026-10-01\n- news_mode: **on**\n- ETF: **XLU**\n- rubric: `00_grounding/sectors/utilities.md`\n- predicted_direction: **down**\n- predicted_magnitude_band: **mild**\n- total_score: **-0.795** (mult 0.9)\n- regime: mixed\n- divergence_flagged: **True**\n- engine: v2 \u00b7 tape_anchor **0.891** (ES +0.17%, ZN -0.03%, PM:XLU +0.20%) \u00b7 index_carry **-0.336** (general -1.343) \u00b7 llm_overlay **-1.35** (raw -1.35) \u00b7 # Reasoning trace \u2014 SECTOR PREDICT Utilities 2026-10-01\nprovider: deepseek\nfallback_reason: prefer_deepseek\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (123,942 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Research.** The model wanted to know: *\"10 year Treasury yield October 1 2026\"* \u2192 got 6 results (via gnews_rss)\n- 10-year Treasury yield hits highest level since 2002 as global bond rout gathers pace - cnbc.com (https://news.google.com/rss/articles/CBMia0FVX3lxTE9PM09zdU1xNE92dWFpOHlmNElQbnpGUTJvalgtNlhyVkRPaFFpcDNYZ3RHUVdQNHdVSW5Va3FQVzNxMzdveHc0cjBMLXVhdHE5V0NWNEdKREM0aWJMNEdmSzdjX280bkJHSEhz0gFwQVVfeXFMT2p0Uk1TT2ZMTV9LTkR5ai1QSTlXM"
+    },
+    {
+      "key": "sector_predict",
+      "title": "Per-sector predict (all 11)",
+      "date": "2026-10-01",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-01T06:07:55.819350-04:00",
+      "files": [
+        {
+          "path": "01_daily/sectors/2026-10-01",
+          "ok": true,
+          "reason": "",
+          "size": 4096,
+          "preview": "11/11 sector predicts ok: basic_materials, communication_services, consumer_cyclical, consumer_defensive, energy, financial, healthcare, industrials"
+        }
+      ],
+      "preview": "11/11 sector predicts ok: basic_materials, communication_services, consumer_cyclical, consumer_defensive, energy, financial, healthcare, industrials"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"

@@ -1,104 +1,69 @@
 {
   "date": "2026-10-01",
-  "n_ok": 11,
-  "n_total": 11,
   "summary": "11/11 via deepseek (fallback: prefer_deepseek)",
   "sectors": [
     {
       "sector": "Basic Materials",
-      "ok": true,
-      "reason": "",
-      "size": 16347,
       "status": "OK",
       "provider": "deepseek",
       "fallback_reason": "prefer_deepseek"
     },
     {
       "sector": "Communication Services",
-      "ok": true,
-      "reason": "",
-      "size": 17910,
       "status": "OK",
       "provider": "deepseek",
       "fallback_reason": "prefer_deepseek"
     },
     {
       "sector": "Consumer Cyclical",
-      "ok": true,
-      "reason": "",
-      "size": 15816,
       "status": "OK",
       "provider": "deepseek",
       "fallback_reason": "prefer_deepseek"
     },
     {
       "sector": "Consumer Defensive",
-      "ok": true,
-      "reason": "",
-      "size": 14750,
       "status": "OK",
       "provider": "deepseek",
       "fallback_reason": "prefer_deepseek"
     },
     {
       "sector": "Energy",
-      "ok": true,
-      "reason": "",
-      "size": 17152,
       "status": "OK",
       "provider": "deepseek",
       "fallback_reason": "prefer_deepseek"
     },
     {
       "sector": "Financial",
-      "ok": true,
-      "reason": "",
-      "size": 15011,
       "status": "OK",
       "provider": "deepseek",
       "fallback_reason": "prefer_deepseek"
     },
     {
       "sector": "Healthcare",
-      "ok": true,
-      "reason": "",
-      "size": 17024,
       "status": "OK",
       "provider": "deepseek",
       "fallback_reason": "prefer_deepseek"
     },
     {
       "sector": "Industrials",
-      "ok": true,
-      "reason": "",
-      "size": 28172,
       "status": "OK",
       "provider": "deepseek",
       "fallback_reason": "prefer_deepseek"
     },
     {
       "sector": "Real Estate",
-      "ok": true,
-      "reason": "",
-      "size": 16723,
       "status": "OK",
       "provider": "deepseek",
       "fallback_reason": "prefer_deepseek"
     },
     {
       "sector": "Technology",
-      "ok": true,
-      "reason": "",
-      "size": 15864,
       "status": "OK",
       "provider": "deepseek",
       "fallback_reason": "prefer_deepseek"
     },
     {
       "sector": "Utilities",
-      "ok": true,
-      "reason": "",
-      "size": 14126,
       "status": "OK",
       "provider": "deepseek",
       "fallback_reason": "prefer_deepseek"
