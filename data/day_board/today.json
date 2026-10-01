@@ -1,6 +1,6 @@
 {
   "date": "2026-10-01",
-  "generated_at": "2026-10-01T06:20:59.666610-04:00",
+  "generated_at": "2026-10-01T06:21:23.779303-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -12,56 +12,63 @@
   "buy_1d": [
     {
       "ticker": "NTAP",
-      "score": 0.36809651152058465
+      "score": 0.2998156899309371
     },
     {
       "ticker": "BAND",
-      "score": 0.691714825316514
+      "score": 0.5345256446690594
     },
     {
       "ticker": "NTSK",
-      "score": 0.4740209302059006
+      "score": 0.3626937314380062
     },
     {
       "ticker": "FIS",
-      "score": 0.4022715054834943
+      "score": 0.26295798835946055
     }
   ],
   "sell_1d": [
     {
       "ticker": "NEOV",
-      "score": -0.24052186293777258
+      "score": -0.1835366631537965
     },
     {
       "ticker": "FCEL",
-      "score": -0.24771562557005317
+      "score": -0.24641970076603054
     },
     {
-      "ticker": "OKLO",
-      "score": -0.18134426558401684
+      "ticker": "SOC",
+      "score": -0.5567884549773978
     },
     {
       "ticker": "EOSE",
-      "score": -0.3109103308907018
+      "score": -0.2955618725336944
     },
     {
       "ticker": "POWL",
-      "score": -0.08916943434921615
+      "score": -0.0737863650932567
+    },
+    {
+      "ticker": "ACDC",
+      "score": -0.5636504912064034
     },
     {
       "ticker": "TE",
-      "score": -0.3016308080727555
+      "score": -0.2914689985760774
     },
     {
-      "ticker": "SKYX",
-      "score": -0.29385284503774367
-    },
-    {
-      "ticker": "AMSC",
-      "score": -0.1446083275283982
+      "ticker": "PUMP",
+      "score": -0.5314066123990697
     }
   ],
-  "flatten": {},
+  "flatten": {
+    "said": "0 priced buys \u00b7 cash $81,251.01 \u00b7 morning S missing",
+    "bullets": [
+      "0 priced buys",
+      "cash $81,251.01",
+      "morning S missing"
+    ]
+  },
   "general": {
     "said": "DOWN  -1.343",
     "bullets": [
@@ -92,6 +99,286 @@
   },
   "lands": [
     {
+      "key": "news_judge",
+      "title": "News judge",
+      "date": "2026-10-01",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-01T05:50:39.195578-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-10-01_judge.md",
+          "ok": true,
+          "reason": "",
+          "size": 14124,
+          "preview": "# News Judge \u2014 2026-10-01"
+        },
+        {
+          "path": "01_daily/news/2026-10-01_judge.json",
+          "ok": true,
+          "reason": "",
+          "size": 1435,
+          "preview": "keys: risk_tilt, macros, sector_tilts, tickers, b1_inject, date"
+        }
+      ],
+      "preview": "# News Judge \u2014 2026-10-01 \u00b7 keys: risk_tilt, macros, sector_tilts, tickers, b1_inject, date"
+    },
+    {
+      "key": "general_predict",
+      "title": "General market predict",
+      "date": "2026-10-01",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-01T05:51:25.207684-04:00",
+      "files": [
+        {
+          "path": "01_daily/general/2026-10-01_predict.md",
+          "ok": true,
+          "reason": "",
+          "size": 11823,
+          "preview": "# Premarket Prediction \u2014 2026-10-01\n- news_mode: **on**\n> ## \ud83d\udccb SNAPSHOT (human-readable)\n>\n> **Prediction: DOWN \ud83d\udcc9 \u2014 MILD** | total score -1.343 (uncertainty multiplier \u00d71.1) | confidence 0.554\n>\n> **Good news vs bad news:** good +2.25 pts vs bad -4.5 pts \u2192 bad news outweighs good\n>\n> **Good news driving this:**\n> - Micron record Q4 validates AI-memory\n> - China PMI back above 50\n> - US-China truce extended to Jan 10\n> - Goldman pushes next hike to December (Oct odds ~38%)\n> - Nikkei +3.3%\n>\n> **Bad news driving this:**\n> - 10Y at 24-year high 5.34% on global bond selloff\n> - Boeing MAX 10 certification halted\n> - Europe broadly red\n> - HY spreads widening +0.40 1w\n> - Trump rejects Iran ceasefire (leftover)\n>\n> **market uncertainty: **elevated** | VIX 16.52 | policy-uncertainty index 120.6 (1d -43.89)**\n>\n> **Factor scoreboard** (score \u00d7 weight = contribution):\n> - \ud83d\udfe2 Asia overnight sessi"
+        }
+      ],
+      "preview": "# Premarket Prediction \u2014 2026-10-01\n- news_mode: **on**\n> ## \ud83d\udccb SNAPSHOT (human-readable)\n>\n> **Prediction: DOWN \ud83d\udcc9 \u2014 MILD** | total score -1.343 (uncertainty multiplier \u00d71.1) | confidence 0.554\n>\n> **Good news vs bad news:** good +2.25 pts vs bad -4.5 pts \u2192 bad news outweighs good\n>\n> **Good news driving this:**\n> - Micron record Q4 validates AI-memory\n> - China PMI back above 50\n> - US-China truce extended to Jan 10\n> - Goldman pushes next hike to December (Oct odds ~38%)\n> - Nikkei +3.3%\n>\n> **Bad news driving this:**\n> - 10Y at 24-year high 5.34% on global bond selloff\n> - Boeing MAX 10 certification halted\n> - Europe broadly red\n> - HY spreads widening +0.40 1w\n> - Trump rejects Iran ceasefire (leftover)\n>\n> **market uncertainty: **elevated** | VIX 16.52 | policy-uncertainty index 120.6 (1d -43.89)**\n>\n> **Factor scoreboard** (score \u00d7 weight = contribution):\n> - \ud83d\udfe2 Asia overnight sessi"
+    },
+    {
+      "key": "sector_one",
+      "title": "Sector predict Consumer Defensive (4/11)",
+      "date": "2026-10-01",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-01T05:54:17.135140-04:00",
+      "files": [
+        {
+          "path": "01_daily/sectors/2026-10-01/consumer_defensive_predict.md",
+          "ok": true,
+          "reason": "",
+          "size": 14750,
+          "preview": "# Sector Prediction \u2014 Consumer Defensive \u2014 2026-10-01\n- news_mode: **on**\n- ETF: **XLP**\n- rubric: `00_grounding/sectors/consumer_defensive.md`\n- predicted_direction: **down**\n- predicted_magnitude_band: **mild**\n- total_score: **-2.512** (mult 0.8)\n- regime: mixed\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **-0.976** (ES +0.17%, ZN -0.03%, PM:XLP -0.26%) \u00b7 index_carry **-0.336** (general -1.343) \u00b7 llm_overlay **-1.2** (raw -1.2)"
+        },
+        {
+          "path": "01_daily/sectors/2026-10-01/consumer_defensive_predict_trace.md",
+          "ok": true,
+          "reason": "",
+          "size": 450,
+          "preview": "# Reasoning trace \u2014 SECTOR PREDICT Consumer Defensive 2026-10-01\nprovider: deepseek\nfallback_reason: prefer_deepseek\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (127,077 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Done researching.** The model stopped searching and wrote its full analysis (12,975 characters)."
+        },
+        {
+          "path": "01_daily/_transcripts/2026-10-01_sector_consumer_defensive_predict.json",
+          "ok": true,
+          "reason": "",
+          "size": 143716,
+          "preview": "keys: model, messages, provider, fallback_reason"
+        },
+        {
+          "path": "01_daily/2026-10-01_preopen_qc.json",
+          "ok": true,
+          "reason": "",
+          "size": 7496,
+          "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok"
+        },
+        {
+          "path": "01_daily/sectors/2026-10-01/_qc.json",
+          "ok": true,
+          "reason": "",
+          "size": 1515,
+          "preview": "keys: date, n_ok, n_total, summary, sectors"
+        },
+        {
+          "path": "01_daily/sectors/2026-10-01/_BOARD.md",
+          "ok": true,
+          "reason": "",
+          "size": 1819,
+          "preview": "# Sector Board \u2014 2026-10-01\nGenerated: **2026-10-01T05:54:17.119626-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.)."
+        },
+        {
+          "path": "01_daily/sectors/2026-10-01/_board.json",
+          "ok": true,
+          "reason": "",
+          "size": 6760,
+          "preview": "keys: date, generated_at, summary, sectors"
+        },
+        {
+          "path": "03_scoreboard/scoreboard.json",
+          "ok": true,
+          "reason": "",
+          "size": 964331,
+          "preview": "keys: runs"
+        }
+      ],
+      "preview": "# Sector Prediction \u2014 Consumer Defensive \u2014 2026-10-01\n- news_mode: **on**\n- ETF: **XLP**\n- rubric: `00_grounding/sectors/consumer_defensive.md`\n- predicted_direction: **down**\n- predicted_magnitude_band: **mild**\n- total_score: **-2.512** (mult 0.8)\n- regime: mixed\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **-0.976** (ES +0.17%, ZN -0.03%, PM:XLP -0.26%) \u00b7 index_carry **-0.336** (general -1.343) \u00b7 llm_overlay **-1.2** (raw -1.2) \u00b7 # Reasoning trace \u2014 SECTOR PREDICT Consumer Defensive 2026-10-01\nprovider: deepseek\nfallback_reason: prefer_deepseek\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (127,077 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Done researching.** The model stopped searching and wrote its full analysis (12,975 characters). \u00b7 keys: model, messages, provider, fallback_reason \u00b7 keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok \u00b7 keys: date, n_ok, n_total, summary, sectors \u00b7 # Sector Board \u2014 2026-10-01\nGenerated: **2026-10-01T05:54:17.119626-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Indi"
+    },
+    {
+      "key": "sector_one",
+      "title": "Sector predict Healthcare (7/11)",
+      "date": "2026-10-01",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-01T06:00:10.224905-04:00",
+      "files": [
+        {
+          "path": "01_daily/sectors/2026-10-01/healthcare_predict.md",
+          "ok": true,
+          "reason": "",
+          "size": 17024,
+          "preview": "# Sector Prediction \u2014 Healthcare \u2014 2026-10-01\n- news_mode: **on**\n- ETF: **XLV**\n- rubric: `00_grounding/sectors/healthcare.md`\n- predicted_direction: **down**\n- predicted_magnitude_band: **mild**\n- total_score: **-3.878** (mult 0.8)\n- regime: mixed\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **-2.042** (ES +0.17%, PM:XLV -0.53%) \u00b7 index_carry **-0.336** (general -1.343) \u00b7 llm_overlay **-1.5** (raw -1.5)"
+        },
+        {
+          "path": "01_daily/sectors/2026-10-01/healthcare_predict_trace.md",
+          "ok": true,
+          "reason": "",
+          "size": 6056,
+          "preview": "# Reasoning trace \u2014 SECTOR PREDICT Healthcare 2026-10-01\nprovider: deepseek\nfallback_reason: prefer_deepseek\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (115,714 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Research.** The model wanted to know: *\"XLV healthcare sector October 1 2026 premarket\"* \u2192 got 6 results (via gnews_rss)\n- Sector Update: Healthcare Stocks Edge Higher Premarket Friday - Yahoo Finance (https://news.google.com/rss/articles/CBMingFBVV95cUxQUlJOaG5NSThSSmt4bHI4NFlFQURjTGttd3JaTi05ZjRiLWFOcXkzUDVuNG4xR0Z3cXNsaXBRTFNDRHNDUXVlc3c0MnotUkhHdFlxanJ3ZGpLYzVNNWRnbkk2cENnYVRINjdpMXQ0dTBrZy1fak93QUY4c3Y5Y1VFZVN1MGwtaEZsUjlWOWVTcE5XNWUzN0lTNUVjRGszZw?oc=5)\n- Sector Update: Healthcare Stocks Mixed Premarket Wednesday - Yahoo Finance (https://news.google.com/rss/a"
+        },
+        {
+          "path": "01_daily/_transcripts/2026-10-01_sector_healthcare_predict.json",
+          "ok": true,
+          "reason": "",
+          "size": 163486,
+          "preview": "keys: model, messages, provider, fallback_reason"
+        },
+        {
+          "path": "01_daily/2026-10-01_preopen_qc.json",
+          "ok": true,
+          "reason": "",
+          "size": 7469,
+          "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok"
+        },
+        {
+          "path": "01_daily/sectors/2026-10-01/_qc.json",
+          "ok": true,
+          "reason": "",
+          "size": 1497,
+          "preview": "keys: date, n_ok, n_total, summary, sectors"
+        },
+        {
+          "path": "01_daily/sectors/2026-10-01/_BOARD.md",
+          "ok": true,
+          "reason": "",
+          "size": 1932,
+          "preview": "# Sector Board \u2014 2026-10-01\nGenerated: **2026-10-01T06:00:10.209310-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.)."
+        },
+        {
+          "path": "01_daily/sectors/2026-10-01/_board.json",
+          "ok": true,
+          "reason": "",
+          "size": 7275,
+          "preview": "keys: date, generated_at, summary, sectors"
+        },
+        {
+          "path": "03_scoreboard/scoreboard.json",
+          "ok": true,
+          "reason": "",
+          "size": 967566,
+          "preview": "keys: runs"
+        }
+      ],
+      "preview": "# Sector Prediction \u2014 Healthcare \u2014 2026-10-01\n- news_mode: **on**\n- ETF: **XLV**\n- rubric: `00_grounding/sectors/healthcare.md`\n- predicted_direction: **down**\n- predicted_magnitude_band: **mild**\n- total_score: **-3.878** (mult 0.8)\n- regime: mixed\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **-2.042** (ES +0.17%, PM:XLV -0.53%) \u00b7 index_carry **-0.336** (general -1.343) \u00b7 llm_overlay **-1.5** (raw -1.5) \u00b7 # Reasoning trace \u2014 SECTOR PREDICT Healthcare 2026-10-01\nprovider: deepseek\nfallback_reason: prefer_deepseek\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (115,714 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Research.** The model wanted to know: *\"XLV healthcare sector October 1 2026 premarket\"* \u2192 got 6 results (via gnews_rss)\n- Sector Update: Healthcare Stocks Edge Higher Premarket Friday - Yahoo Finance (https://news.google.com/rss/articles/CBMingFBVV95cUxQUlJOaG5NSThSSmt4bHI4NFlFQURjTGttd3JaTi05ZjRiLWFOcXkzUDVuNG4xR0Z3cXNsaXBRTFNDRHNDUXVlc3c0MnotUkhHdFlxanJ3ZGpLYzVNNWRnbkk2cENnYVRINjdpMXQ0dTBrZy1fak93QUY4c3Y5Y1VFZVN1MGwtaEZsUjlWOWVTcE5XNWUzN0l"
+    },
+    {
+      "key": "sector_one",
+      "title": "Sector predict Utilities (11/11)",
+      "date": "2026-10-01",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-01T06:07:49.152879-04:00",
+      "files": [
+        {
+          "path": "01_daily/sectors/2026-10-01/utilities_predict.md",
+          "ok": true,
+          "reason": "",
+          "size": 14126,
+          "preview": "# Sector Prediction \u2014 Utilities \u2014 2026-10-01\n- news_mode: **on**\n- ETF: **XLU**\n- rubric: `00_grounding/sectors/utilities.md`\n- predicted_direction: **down**\n- predicted_magnitude_band: **mild**\n- total_score: **-0.795** (mult 0.9)\n- regime: mixed\n- divergence_flagged: **True**\n- engine: v2 \u00b7 tape_anchor **0.891** (ES +0.17%, ZN -0.03%, PM:XLU +0.20%) \u00b7 index_carry **-0.336** (general -1.343) \u00b7 llm_overlay **-1.35** (raw -1.35)"
+        },
+        {
+          "path": "01_daily/sectors/2026-10-01/utilities_predict_trace.md",
+          "ok": true,
+          "reason": "",
+          "size": 7752,
+          "preview": "# Reasoning trace \u2014 SECTOR PREDICT Utilities 2026-10-01\nprovider: deepseek\nfallback_reason: prefer_deepseek\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (123,942 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Research.** The model wanted to know: *\"10 year Treasury yield October 1 2026\"* \u2192 got 6 results (via gnews_rss)\n- 10-year Treasury yield hits highest level since 2002 as global bond rout gathers pace - cnbc.com (https://news.google.com/rss/articles/CBMia0FVX3lxTE9PM09zdU1xNE92dWFpOHlmNElQbnpGUTJvalgtNlhyVkRPaFFpcDNYZ3RHUVdQNHdVSW5Va3FQVzNxMzdveHc0cjBMLXVhdHE5V0NWNEdKREM0aWJMNEdmSzdjX280bkJHSEhz0gFwQVVfeXFMT2p0Uk1TT2ZMTV9LTkR5ai1QSTlXMFVIN2ZFSmo1d2tjNEljVExVVlBRRlRIYjBzTnh0Ri1nd2VCZzdZOXBtZFI0SlhCOWJEekI3MHZrT1Rlcnlyb1lRdHBTajlqZXN4cE5tMUs1RlA4ZA?oc=5)\n- VIEW Bond ma"
+        },
+        {
+          "path": "01_daily/_transcripts/2026-10-01_sector_utilities_predict.json",
+          "ok": true,
+          "reason": "",
+          "size": 163848,
+          "preview": "keys: model, messages, provider, fallback_reason"
+        },
+        {
+          "path": "01_daily/2026-10-01_preopen_qc.json",
+          "ok": true,
+          "reason": "",
+          "size": 7433,
+          "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok"
+        },
+        {
+          "path": "01_daily/sectors/2026-10-01/_qc.json",
+          "ok": true,
+          "reason": "",
+          "size": 1474,
+          "preview": "keys: date, n_ok, n_total, summary, sectors"
+        },
+        {
+          "path": "01_daily/sectors/2026-10-01/_BOARD.md",
+          "ok": true,
+          "reason": "",
+          "size": 2004,
+          "preview": "# Sector Board \u2014 2026-10-01\nGenerated: **2026-10-01T06:07:49.137627-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.)."
+        },
+        {
+          "path": "01_daily/sectors/2026-10-01/_board.json",
+          "ok": true,
+          "reason": "",
+          "size": 7954,
+          "preview": "keys: date, generated_at, summary, sectors"
+        },
+        {
+          "path": "03_scoreboard/scoreboard.json",
+          "ok": true,
+          "reason": "",
+          "size": 971893,
+          "preview": "keys: runs"
+        }
+      ],
+      "preview": "# Sector Prediction \u2014 Utilities \u2014 2026-10-01\n- news_mode: **on**\n- ETF: **XLU**\n- rubric: `00_grounding/sectors/utilities.md`\n- predicted_direction: **down**\n- predicted_magnitude_band: **mild**\n- total_score: **-0.795** (mult 0.9)\n- regime: mixed\n- divergence_flagged: **True**\n- engine: v2 \u00b7 tape_anchor **0.891** (ES +0.17%, ZN -0.03%, PM:XLU +0.20%) \u00b7 index_carry **-0.336** (general -1.343) \u00b7 llm_overlay **-1.35** (raw -1.35) \u00b7 # Reasoning trace \u2014 SECTOR PREDICT Utilities 2026-10-01\nprovider: deepseek\nfallback_reason: prefer_deepseek\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (123,942 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Research.** The model wanted to know: *\"10 year Treasury yield October 1 2026\"* \u2192 got 6 results (via gnews_rss)\n- 10-year Treasury yield hits highest level since 2002 as global bond rout gathers pace - cnbc.com (https://news.google.com/rss/articles/CBMia0FVX3lxTE9PM09zdU1xNE92dWFpOHlmNElQbnpGUTJvalgtNlhyVkRPaFFpcDNYZ3RHUVdQNHdVSW5Va3FQVzNxMzdveHc0cjBMLXVhdHE5V0NWNEdKREM0aWJMNEdmSzdjX280bkJHSEhz0gFwQVVfeXFMT2p0Uk1TT2ZMTV9LTkR5ai1QSTlXM"
+    },
+    {
+      "key": "sector_predict",
+      "title": "Per-sector predict (all 11)",
+      "date": "2026-10-01",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-01T06:07:55.819350-04:00",
+      "files": [
+        {
+          "path": "01_daily/sectors/2026-10-01",
+          "ok": true,
+          "reason": "",
+          "size": 4096,
+          "preview": "11/11 sector predicts ok: basic_materials, communication_services, consumer_cyclical, consumer_defensive, energy, financial, healthcare, industrials"
+        }
+      ],
+      "preview": "11/11 sector predicts ok: basic_materials, communication_services, consumer_cyclical, consumer_defensive, energy, financial, healthcare, industrials"
+    },
+    {
+      "key": "sector_board",
+      "title": "Sector board",
+      "date": "2026-10-01",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-01T06:08:01.241353-04:00",
+      "files": [
+        {
+          "path": "01_daily/sectors/2026-10-01/_board.json",
+          "ok": true,
+          "reason": "",
+          "size": 8253,
+          "preview": "keys: date, generated_at, summary, sectors"
+        }
+      ],
+      "preview": "keys: date, generated_at, summary, sectors"
+    },
+    {
       "key": "map_heat_research",
       "title": "Map heat morning delta refresh",
       "date": "2026-10-01",
@@ -115,279 +402,6 @@
         }
       ],
       "preview": "keys: date, phase, passthrough, source_baseline_generated_at, generated_at, n_targets, n_cards, n_refreshed, evidence_errors, morning_refresh_errors, cards, size_gate \u00b7 # MAP HEAT RESEARCH \u2014 2026-10-01\n142 captain cards \u00b7 size_gate=True set by pre-open refresh"
-    },
-    {
-      "key": "finviz",
-      "title": "Finviz universe export",
-      "date": "2026-10-01",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-01T06:19:40.385378-04:00",
-      "files": [
-        {
-          "path": "data/exports/finviz_2026-10-01.csv",
-          "ok": true,
-          "reason": "",
-          "size": 11030866,
-          "preview": "11686 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC"
-        },
-        {
-          "path": "data/finviz/latest.csv",
-          "ok": true,
-          "reason": "",
-          "size": 11496924,
-          "preview": "11695 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
-        }
-      ],
-      "preview": "11686 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC \u00b7 11695 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
-    },
-    {
-      "key": "weather",
-      "title": "Weather / regime",
-      "date": "2026-10-01",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-01T06:19:49.549642-04:00",
-      "files": [
-        {
-          "path": "01_daily/weather/2026-10-01_weather.json",
-          "ok": true,
-          "reason": "",
-          "size": 9749,
-          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -0.769, 'dir': 'down', 'conf': 0.431, 'source': 'llm'}, Communication Services={'score': 7.467, 'dir': 'up', 'conf': 0.799, 'source': 'llm'}, Consumer Cyclical={'score': -6.764, 'dir': 'down', 'conf': 0.771, 'source': 'llm'}, Consumer Defensive={'score': -2.512, 'dir': 'down', 'conf': 0.6, 'source': 'llm'}, Energy={'score': -2.413, 'dir': 'down', 'conf': 0.497, 'source': 'llm'}, Financial={'score': -5.156, 'dir': 'down', 'conf': 0.706, 'source': 'llm'}, Healthcare={'score': -3.878, 'dir': 'down', 'conf': 0.655, 'source': 'llm'}, Industrials={'score': -0.378, 'dir': 'down', 'conf': 0.415, 'source': 'llm'}"
-        },
-        {
-          "path": "01_daily/weather/2026-10-01_weather.md",
-          "ok": true,
-          "reason": "",
-          "size": 5374,
-          "preview": "# Weather report \u2014 2026-10-01\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
-        }
-      ],
-      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -0.769, 'dir': 'down', 'conf': 0.431, 'source': 'llm'}, Communication Services={'score': 7.467, 'dir': 'up', 'conf': 0.799, 'source': 'llm'}, Consumer Cyclical={'score': -6.764, 'dir': 'down', 'conf': 0.771, 'source': 'llm'}, Consumer Defensive={'score': -2.512, 'dir': 'down', 'conf': 0.6, 'source': 'llm'}, Energy={'score': -2.413, 'dir': 'down', 'conf': 0.497, 'source': 'llm'}, Financial={'score': -5.156, 'dir': 'down', 'conf': 0.706, 'source': 'llm'}, Healthcare={'score': -3.878, 'dir': 'down', 'conf': 0.655, 'source': 'llm'}, Industrials={'score': -0.378, 'dir': 'down', 'conf': 0.415, 'source': 'llm'} \u00b7 # Weather report \u2014 2026-10-01\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
-    },
-    {
-      "key": "join",
-      "title": "Join / match rank",
-      "date": "2026-10-01",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-01T06:19:55.615880-04:00",
-      "files": [
-        {
-          "path": "data/join/2026-10-01_ranked.csv",
-          "ok": true,
-          "reason": "",
-          "size": 2311332,
-          "preview": "5904 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 ONC, HALO, NVDA, ACMR, AVPT"
-        }
-      ],
-      "preview": "5904 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 ONC, HALO, NVDA, ACMR, AVPT"
-    },
-    {
-      "key": "peer_rs",
-      "title": "Peer RS",
-      "date": "2026-10-01",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-01T06:20:07.378295-04:00",
-      "files": [
-        {
-          "path": "data/peers/2026-10-01_peer_rs.csv",
-          "ok": true,
-          "reason": "",
-          "size": 821534,
-          "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
-        }
-      ],
-      "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
-    },
-    {
-      "key": "ab",
-      "title": "AB checklist",
-      "date": "2026-10-01",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-01T06:20:31.693251-04:00",
-      "files": [
-        {
-          "path": "data/ab_checklist/2026-10-01_ab_checklist.csv",
-          "ok": true,
-          "reason": "",
-          "size": 7547302,
-          "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 FPI, GMAB, ATRC, SFL, PBR-A"
-        },
-        {
-          "path": "data/ab_checklist/2026-10-01_ab_checklist_enriched.csv",
-          "ok": true,
-          "reason": "",
-          "size": 8382618,
-          "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 PANW, CVLT, AVPT, ATRC, FIGS"
-        }
-      ],
-      "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 FPI, GMAB, ATRC, SFL, PBR-A \u00b7 2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 PANW, CVLT, AVPT, ATRC, FIGS"
-    },
-    {
-      "key": "stock_book",
-      "title": "Stock book + green",
-      "date": "2026-10-01",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-01T06:20:53.822868-04:00",
-      "files": [
-        {
-          "path": "data/stock_book/2026-10-01_stock_book.json",
-          "ok": true,
-          "reason": "",
-          "size": 1195778,
-          "preview": "1d BUY NTAP, BAND, NTSK, FIS \u00b7 SELL NEOV, FCEL, OKLO, EOSE, POWL, TE, SKYX, AMSC"
-        },
-        {
-          "path": "data/stock_book/2026-10-01_green.json",
-          "ok": true,
-          "reason": "",
-          "size": 585,
-          "preview": "green 0 \u00b7 "
-        },
-        {
-          "path": "data/stock_book/2026-10-01_input_health.json",
-          "ok": true,
-          "reason": "",
-          "size": 2443,
-          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
-        },
-        {
-          "path": "data/stock_book/2026-10-01_suggestions.json",
-          "ok": true,
-          "reason": "",
-          "size": 8223,
-          "preview": "2026-10-01 BUY NTAP, BAND, NTSK, FIS \u00b7 SELL NEOV, FCEL, OKLO, EOSE, POWL, TE, SKYX, AMSC"
-        },
-        {
-          "path": "data/stock_book/latest_suggestions.json",
-          "ok": true,
-          "reason": "",
-          "size": 8223,
-          "preview": "2026-10-01 BUY NTAP, BAND, NTSK, FIS \u00b7 SELL NEOV, FCEL, OKLO, EOSE, POWL, TE, SKYX, AMSC"
-        },
-        {
-          "path": "01_daily/2026-10-01_stock_book.md",
-          "ok": true,
-          "reason": "",
-          "size": 39770,
-          "preview": "# Stock book \u2014 2026-10-01\n_Generated 2026-10-01T06:20:43.949755-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
-        }
-      ],
-      "preview": "1d BUY NTAP, BAND, NTSK, FIS \u00b7 SELL NEOV, FCEL, OKLO, EOSE, POWL, TE, SKYX, AMSC \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-10-01 BUY NTAP, BAND, NTSK, FIS \u00b7 SELL NEOV, FCEL, OKLO, EOSE, POWL, TE, SKYX, AMSC \u00b7 2026-10-01 BUY NTAP, BAND, NTSK, FIS \u00b7 SELL NEOV, FCEL, OKLO, EOSE, POWL, TE, SKYX, AMSC \u00b7 # Stock book \u2014 2026-10-01\n_Generated 2026-10-01T06:20:43.949755-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
-    },
-    {
-      "key": "live_boards",
-      "title": "Live 1d BUY/SELL strip",
-      "date": "2026-10-01",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-01T06:20:58.627265-04:00",
-      "files": [
-        {
-          "path": "data/day_board/today.json",
-          "ok": true,
-          "reason": "",
-          "size": 12339,
-          "preview": "2026-10-01 BUY NTAP, BAND, NTSK, FIS \u00b7 SELL NEOV, FCEL, OKLO, EOSE, POWL, TE, SKYX, AMSC"
-        },
-        {
-          "path": "data/day_board/latest.json",
-          "ok": true,
-          "reason": "",
-          "size": 809,
-          "preview": "keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages"
-        },
-        {
-          "path": "data/day_board/2026-10-01.json",
-          "ok": true,
-          "reason": "",
-          "size": 110561,
-          "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href"
-        },
-        {
-          "path": "data/day_board/2026-10-01_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 71724,
-          "preview": "2026-10-01 BUY NTAP, BAND, NTSK, FIS \u00b7 SELL NEOV, FCEL, OKLO, EOSE, POWL, TE, SKYX, AMSC"
-        },
-        {
-          "path": "data/day_board/strategy_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 244257,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "data/day_board/2026-10-01_strategy_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 244257,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "data/day_board/today_strategies.json",
-          "ok": true,
-          "reason": "",
-          "size": 219688,
-          "preview": "2026-10-01 BUY NTAP, BAND, NTSK, FIS \u00b7 SELL NEOV, FCEL, OKLO, EOSE, POWL, TE, SKYX, AMSC"
-        },
-        {
-          "path": "data/factor_mine/strategy_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 244257,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "dashboard/factor-mine/today.json",
-          "ok": true,
-          "reason": "",
-          "size": 71724,
-          "preview": "2026-10-01 BUY NTAP, BAND, NTSK, FIS \u00b7 SELL NEOV, FCEL, OKLO, EOSE, POWL, TE, SKYX, AMSC"
-        },
-        {
-          "path": "dashboard/factor-mine/strategy_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 244257,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "dashboard/factor-mine/today_strategies.json",
-          "ok": true,
-          "reason": "",
-          "size": 244257,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "dashboard/today_strategies.json",
-          "ok": true,
-          "reason": "",
-          "size": 219688,
-          "preview": "2026-10-01 BUY NTAP, BAND, NTSK, FIS \u00b7 SELL NEOV, FCEL, OKLO, EOSE, POWL, TE, SKYX, AMSC"
-        },
-        {
-          "path": "data/day_board/hold_live_px.json",
-          "ok": true,
-          "reason": "",
-          "size": 1668,
-          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
-        },
-        {
-          "path": "dashboard/factor-mine/hold_live_px.json",
-          "ok": true,
-          "reason": "",
-          "size": 1668,
-          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
-        }
-      ],
-      "preview": "2026-10-01 BUY NTAP, BAND, NTSK, FIS \u00b7 SELL NEOV, FCEL, OKLO, EOSE, POWL, TE, SKYX, AMSC \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href \u00b7 2026-10-01 BUY NTAP, BAND, NTSK, FIS \u00b7 SELL NEOV, FCEL, OKLO, EOSE, POWL, TE, SKYX, AMSC \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-10-01 BUY NTAP, BAND, NTSK, FIS \u00b7 SELL NEOV, FCEL, OKLO, EOSE, POWL, TE, SKYX, AMSC \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-10-01 BUY NTAP, BAND, NTSK, FIS \u00b7 SELL NEOV, FCEL, OKLO, EOSE, POWL, TE, SKYX, AMSC \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-10-01 BUY NTAP,"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"

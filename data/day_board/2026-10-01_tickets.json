@@ -1,6 +1,6 @@
 {
   "date": "2026-10-01",
-  "generated_at": "2026-10-01T06:10:07.613499-04:00",
+  "generated_at": "2026-10-01T06:21:23.779303-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -30,35 +30,35 @@
   "sell_1d": [
     {
       "ticker": "NEOV",
-      "score": -0.1990366631537965
+      "score": -0.1835366631537965
     },
     {
       "ticker": "FCEL",
-      "score": -0.26191970076603055
+      "score": -0.24641970076603054
     },
     {
       "ticker": "SOC",
-      "score": -0.5537884549773978
+      "score": -0.5567884549773978
     },
     {
       "ticker": "EOSE",
-      "score": -0.3110618725336944
+      "score": -0.2955618725336944
     },
     {
       "ticker": "POWL",
-      "score": -0.08928636509325671
+      "score": -0.0737863650932567
     },
     {
       "ticker": "ACDC",
-      "score": -0.5594004912064034
+      "score": -0.5636504912064034
     },
     {
       "ticker": "TE",
-      "score": -0.30696899857607735
+      "score": -0.2914689985760774
     },
     {
       "ticker": "PUMP",
-      "score": -0.5271566123990697
+      "score": -0.5314066123990697
     }
   ],
   "flatten": {
@@ -82,7 +82,7 @@
     "direction": "down"
   },
   "sectors": {
-    "said": "2 up / 8 down / 0 flat",
+    "said": "2 up / 9 down / 0 flat",
     "bullets": [
       "XLB DOWN -0.8",
       "XLC UP +7.5",
@@ -94,7 +94,7 @@
       "XLI DOWN -0.4",
       "XLRE DOWN -5.9",
       "XLK UP +5.0",
-      "XLU missing"
+      "XLU DOWN -0.8"
     ]
   },
   "lands": [
@@ -974,6 +974,134 @@
         }
       ],
       "preview": "# Sector Prediction \u2014 Healthcare \u2014 2026-10-01\n- news_mode: **on**\n- ETF: **XLV**\n- rubric: `00_grounding/sectors/healthcare.md`\n- predicted_direction: **down**\n- predicted_magnitude_band: **mild**\n- total_score: **-3.878** (mult 0.8)\n- regime: mixed\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **-2.042** (ES +0.17%, PM:XLV -0.53%) \u00b7 index_carry **-0.336** (general -1.343) \u00b7 llm_overlay **-1.5** (raw -1.5) \u00b7 # Reasoning trace \u2014 SECTOR PREDICT Healthcare 2026-10-01\nprovider: deepseek\nfallback_reason: prefer_deepseek\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (115,714 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Research.** The model wanted to know: *\"XLV healthcare sector October 1 2026 premarket\"* \u2192 got 6 results (via gnews_rss)\n- Sector Update: Healthcare Stocks Edge Higher Premarket Friday - Yahoo Finance (https://news.google.com/rss/articles/CBMingFBVV95cUxQUlJOaG5NSThSSmt4bHI4NFlFQURjTGttd3JaTi05ZjRiLWFOcXkzUDVuNG4xR0Z3cXNsaXBRTFNDRHNDUXVlc3c0MnotUkhHdFlxanJ3ZGpLYzVNNWRnbkk2cENnYVRINjdpMXQ0dTBrZy1fak93QUY4c3Y5Y1VFZVN1MGwtaEZsUjlWOWVTcE5XNWUzN0l"
+    },
+    {
+      "key": "sector_one",
+      "title": "Sector predict Utilities (11/11)",
+      "date": "2026-10-01",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-01T06:07:49.152879-04:00",
+      "files": [
+        {
+          "path": "01_daily/sectors/2026-10-01/utilities_predict.md",
+          "ok": true,
+          "reason": "",
+          "size": 14126,
+          "preview": "# Sector Prediction \u2014 Utilities \u2014 2026-10-01\n- news_mode: **on**\n- ETF: **XLU**\n- rubric: `00_grounding/sectors/utilities.md`\n- predicted_direction: **down**\n- predicted_magnitude_band: **mild**\n- total_score: **-0.795** (mult 0.9)\n- regime: mixed\n- divergence_flagged: **True**\n- engine: v2 \u00b7 tape_anchor **0.891** (ES +0.17%, ZN -0.03%, PM:XLU +0.20%) \u00b7 index_carry **-0.336** (general -1.343) \u00b7 llm_overlay **-1.35** (raw -1.35)"
+        },
+        {
+          "path": "01_daily/sectors/2026-10-01/utilities_predict_trace.md",
+          "ok": true,
+          "reason": "",
+          "size": 7752,
+          "preview": "# Reasoning trace \u2014 SECTOR PREDICT Utilities 2026-10-01\nprovider: deepseek\nfallback_reason: prefer_deepseek\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (123,942 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Research.** The model wanted to know: *\"10 year Treasury yield October 1 2026\"* \u2192 got 6 results (via gnews_rss)\n- 10-year Treasury yield hits highest level since 2002 as global bond rout gathers pace - cnbc.com (https://news.google.com/rss/articles/CBMia0FVX3lxTE9PM09zdU1xNE92dWFpOHlmNElQbnpGUTJvalgtNlhyVkRPaFFpcDNYZ3RHUVdQNHdVSW5Va3FQVzNxMzdveHc0cjBMLXVhdHE5V0NWNEdKREM0aWJMNEdmSzdjX280bkJHSEhz0gFwQVVfeXFMT2p0Uk1TT2ZMTV9LTkR5ai1QSTlXMFVIN2ZFSmo1d2tjNEljVExVVlBRRlRIYjBzTnh0Ri1nd2VCZzdZOXBtZFI0SlhCOWJEekI3MHZrT1Rlcnlyb1lRdHBTajlqZXN4cE5tMUs1RlA4ZA?oc=5)\n- VIEW Bond ma"
+        },
+        {
+          "path": "01_daily/_transcripts/2026-10-01_sector_utilities_predict.json",
+          "ok": true,
+          "reason": "",
+          "size": 163848,
+          "preview": "keys: model, messages, provider, fallback_reason"
+        },
+        {
+          "path": "01_daily/2026-10-01_preopen_qc.json",
+          "ok": true,
+          "reason": "",
+          "size": 7433,
+          "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok"
+        },
+        {
+          "path": "01_daily/sectors/2026-10-01/_qc.json",
+          "ok": true,
+          "reason": "",
+          "size": 1474,
+          "preview": "keys: date, n_ok, n_total, summary, sectors"
+        },
+        {
+          "path": "01_daily/sectors/2026-10-01/_BOARD.md",
+          "ok": true,
+          "reason": "",
+          "size": 2004,
+          "preview": "# Sector Board \u2014 2026-10-01\nGenerated: **2026-10-01T06:07:49.137627-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.)."
+        },
+        {
+          "path": "01_daily/sectors/2026-10-01/_board.json",
+          "ok": true,
+          "reason": "",
+          "size": 7954,
+          "preview": "keys: date, generated_at, summary, sectors"
+        },
+        {
+          "path": "03_scoreboard/scoreboard.json",
+          "ok": true,
+          "reason": "",
+          "size": 971893,
+          "preview": "keys: runs"
+        }
+      ],
+      "preview": "# Sector Prediction \u2014 Utilities \u2014 2026-10-01\n- news_mode: **on**\n- ETF: **XLU**\n- rubric: `00_grounding/sectors/utilities.md`\n- predicted_direction: **down**\n- predicted_magnitude_band: **mild**\n- total_score: **-0.795** (mult 0.9)\n- regime: mixed\n- divergence_flagged: **True**\n- engine: v2 \u00b7 tape_anchor **0.891** (ES +0.17%, ZN -0.03%, PM:XLU +0.20%) \u00b7 index_carry **-0.336** (general -1.343) \u00b7 llm_overlay **-1.35** (raw -1.35) \u00b7 # Reasoning trace \u2014 SECTOR PREDICT Utilities 2026-10-01\nprovider: deepseek\nfallback_reason: prefer_deepseek\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (123,942 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Research.** The model wanted to know: *\"10 year Treasury yield October 1 2026\"* \u2192 got 6 results (via gnews_rss)\n- 10-year Treasury yield hits highest level since 2002 as global bond rout gathers pace - cnbc.com (https://news.google.com/rss/articles/CBMia0FVX3lxTE9PM09zdU1xNE92dWFpOHlmNElQbnpGUTJvalgtNlhyVkRPaFFpcDNYZ3RHUVdQNHdVSW5Va3FQVzNxMzdveHc0cjBMLXVhdHE5V0NWNEdKREM0aWJMNEdmSzdjX280bkJHSEhz0gFwQVVfeXFMT2p0Uk1TT2ZMTV9LTkR5ai1QSTlXM"
+    },
+    {
+      "key": "sector_predict",
+      "title": "Per-sector predict (all 11)",
+      "date": "2026-10-01",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-01T06:07:55.819350-04:00",
+      "files": [
+        {
+          "path": "01_daily/sectors/2026-10-01",
+          "ok": true,
+          "reason": "",
+          "size": 4096,
+          "preview": "11/11 sector predicts ok: basic_materials, communication_services, consumer_cyclical, consumer_defensive, energy, financial, healthcare, industrials"
+        }
+      ],
+      "preview": "11/11 sector predicts ok: basic_materials, communication_services, consumer_cyclical, consumer_defensive, energy, financial, healthcare, industrials"
+    },
+    {
+      "key": "sector_board",
+      "title": "Sector board",
+      "date": "2026-10-01",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-01T06:08:01.241353-04:00",
+      "files": [
+        {
+          "path": "01_daily/sectors/2026-10-01/_board.json",
+          "ok": true,
+          "reason": "",
+          "size": 8253,
+          "preview": "keys: date, generated_at, summary, sectors"
+        }
+      ],
+      "preview": "keys: date, generated_at, summary, sectors"
+    },
+    {
+      "key": "map_heat_research",
+      "title": "Map heat morning delta refresh",
+      "date": "2026-10-01",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-01T06:16:28.200521-04:00",
+      "files": [
+        {
+          "path": "01_daily/map_heat/2026-10-01_research.json",
+          "ok": true,
+          "reason": "",
+          "size": 43536,
+          "preview": "keys: date, phase, passthrough, source_baseline_generated_at, generated_at, n_targets, n_cards, n_refreshed, evidence_errors, morning_refresh_errors, cards, size_gate"
+        },
+        {
+          "path": "01_daily/map_heat/2026-10-01_research.md",
+          "ok": true,
+          "reason": "",
+          "size": 43536,
+          "preview": "# MAP HEAT RESEARCH \u2014 2026-10-01\n142 captain cards \u00b7 size_gate=True set by pre-open refresh"
+        }
+      ],
+      "preview": "keys: date, phase, passthrough, source_baseline_generated_at, generated_at, n_targets, n_cards, n_refreshed, evidence_errors, morning_refresh_errors, cards, size_gate \u00b7 # MAP HEAT RESEARCH \u2014 2026-10-01\n142 captain cards \u00b7 size_gate=True set by pre-open refresh"
     }
   ],
   "source": "publish_live_boards"
