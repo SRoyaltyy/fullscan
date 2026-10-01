@@ -1,6 +1,6 @@
 {
   "date": "2026-10-01",
-  "generated_at": "2026-10-01T05:57:24.355887-04:00",
+  "generated_at": "2026-10-01T05:57:49.609866-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -25,14 +25,14 @@
     "direction": "down"
   },
   "sectors": {
-    "said": "1 up / 4 down / 0 flat",
+    "said": "1 up / 5 down / 0 flat",
     "bullets": [
       "XLB DOWN -0.8",
       "XLC UP +7.5",
       "XLY DOWN -6.8",
       "XLP DOWN -2.5",
       "XLE DOWN -2.4",
-      "XLF missing",
+      "XLF DOWN -5.2",
       "XLV missing",
       "XLI missing",
       "XLRE missing",
@@ -217,70 +217,70 @@
     },
     {
       "key": "sector_one",
-      "title": "Sector predict Energy (5/11)",
+      "title": "Sector predict Financial (6/11)",
       "date": "2026-10-01",
       "ok": true,
       "pushed": true,
-      "at": "2026-10-01T05:57:24.068922-04:00",
+      "at": "2026-10-01T05:57:49.318714-04:00",
       "files": [
         {
-          "path": "01_daily/sectors/2026-10-01/energy_predict.md",
+          "path": "01_daily/sectors/2026-10-01/financial_predict.md",
           "ok": true,
           "reason": "",
-          "size": 17152,
-          "preview": "# Sector Prediction \u2014 Energy \u2014 2026-10-01\n- news_mode: **on**\n- ETF: **XLE**\n- rubric: `00_grounding/sectors/energy.md`\n- predicted_direction: **down**\n- predicted_magnitude_band: **mild**\n- total_score: **-2.413** (mult 0.85)\n- regime: mixed\n- divergence_flagged: **True**\n- engine: v2 \u00b7 tape_anchor **-2.396** (CL -1.59%, QA -1.02%, ES +0.17%, PM:XLE -0.31%) \u00b7 index_carry **-0.336** (general -1.343) \u00b7 llm_overlay **0.319** (raw 0.319)"
+          "size": 15011,
+          "preview": "# Sector Prediction \u2014 Financial \u2014 2026-10-01\n- news_mode: **on**\n- ETF: **XLF**\n- rubric: `00_grounding/sectors/financial.md`\n- predicted_direction: **down**\n- predicted_magnitude_band: **mild**\n- total_score: **-5.156** (mult 0.9)\n- regime: mixed\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **-1.445** (ES +0.17%, ZN -0.03%, PM:XLF -0.41%) \u00b7 index_carry **-0.336** (general -1.343) \u00b7 llm_overlay **-3.375** (raw -3.375)"
         },
         {
-          "path": "01_daily/sectors/2026-10-01/energy_predict_trace.md",
+          "path": "01_daily/sectors/2026-10-01/financial_predict_trace.md",
           "ok": true,
           "reason": "",
-          "size": 16007,
-          "preview": "# Reasoning trace \u2014 SECTOR PREDICT Energy 2026-10-01\nprovider: deepseek\nfallback_reason: prefer_deepseek\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (132,915 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Research.** The model wanted to know: *\"WTI crude oil price today October 1 2026\"* \u2192 got 6 results (via ddg)\n- WTI Crude Oil Price Today: $92.55 +2.42% (October 1, 2026) (https://convextrade.com/today/oil-price)\n- WTI Crude Oil: $92.55 (Oct 1, 2026) | Convex (https://convextrade.com/metrics/wti)\n- WTI Crude Oil price information - FT.com (https://markets.ft.com/data/commodities/tearsheet/summary?c=WTI+Crude+Oil)\n**Step 2 \u2014 Research.** The model wanted to know: *\"OPEC+ meeting October 2026 production quota decision\"* \u2192 got 6 results (via gnews_rss)\n- OPEC+ likely to pau"
+          "size": 441,
+          "preview": "# Reasoning trace \u2014 SECTOR PREDICT Financial 2026-10-01\nprovider: deepseek\nfallback_reason: prefer_deepseek\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (120,397 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Done researching.** The model stopped searching and wrote its full analysis (13,190 characters)."
         },
         {
-          "path": "01_daily/_transcripts/2026-10-01_sector_energy_predict.json",
+          "path": "01_daily/_transcripts/2026-10-01_sector_financial_predict.json",
           "ok": true,
           "reason": "",
-          "size": 216234,
+          "size": 137224,
           "preview": "keys: model, messages, provider, fallback_reason"
         },
         {
           "path": "01_daily/2026-10-01_preopen_qc.json",
           "ok": true,
           "reason": "",
-          "size": 7487,
+          "size": 7478,
           "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok"
         },
         {
           "path": "01_daily/sectors/2026-10-01/_qc.json",
           "ok": true,
           "reason": "",
-          "size": 1509,
+          "size": 1503,
           "preview": "keys: date, n_ok, n_total, summary, sectors"
         },
         {
           "path": "01_daily/sectors/2026-10-01/_BOARD.md",
           "ok": true,
           "reason": "",
-          "size": 1875,
-          "preview": "# Sector Board \u2014 2026-10-01\nGenerated: **2026-10-01T05:57:24.052873-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.)."
+          "size": 1934,
+          "preview": "# Sector Board \u2014 2026-10-01\nGenerated: **2026-10-01T05:57:49.303767-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.)."
         },
         {
           "path": "01_daily/sectors/2026-10-01/_board.json",
           "ok": true,
           "reason": "",
-          "size": 6932,
+          "size": 7104,
           "preview": "keys: date, generated_at, summary, sectors"
         },
         {
           "path": "03_scoreboard/scoreboard.json",
           "ok": true,
           "reason": "",
-          "size": 965402,
+          "size": 966484,
           "preview": "keys: runs"
         }
       ],
-      "preview": "# Sector Prediction \u2014 Energy \u2014 2026-10-01\n- news_mode: **on**\n- ETF: **XLE**\n- rubric: `00_grounding/sectors/energy.md`\n- predicted_direction: **down**\n- predicted_magnitude_band: **mild**\n- total_score: **-2.413** (mult 0.85)\n- regime: mixed\n- divergence_flagged: **True**\n- engine: v2 \u00b7 tape_anchor **-2.396** (CL -1.59%, QA -1.02%, ES +0.17%, PM:XLE -0.31%) \u00b7 index_carry **-0.336** (general -1.343) \u00b7 llm_overlay **0.319** (raw 0.319) \u00b7 # Reasoning trace \u2014 SECTOR PREDICT Energy 2026-10-01\nprovider: deepseek\nfallback_reason: prefer_deepseek\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (132,915 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Research.** The model wanted to know: *\"WTI crude oil price today October 1 2026\"* \u2192 got 6 results (via ddg)\n- WTI Crude Oil Price Today: $92.55 +2.42% (October 1, 2026) (https://convextrade.com/today/oil-price)\n- WTI Crude Oil: $92.55 (Oct 1, 2026) | Convex (https://convextrade.com/metrics/wti)\n- WTI Crude Oil price information - FT.com (https://markets.ft.com/data/commodities/tearsheet/summary?c=WTI+Crude+Oil)\n**Step 2 \u2014 Researc"
+      "preview": "# Sector Prediction \u2014 Financial \u2014 2026-10-01\n- news_mode: **on**\n- ETF: **XLF**\n- rubric: `00_grounding/sectors/financial.md`\n- predicted_direction: **down**\n- predicted_magnitude_band: **mild**\n- total_score: **-5.156** (mult 0.9)\n- regime: mixed\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **-1.445** (ES +0.17%, ZN -0.03%, PM:XLF -0.41%) \u00b7 index_carry **-0.336** (general -1.343) \u00b7 llm_overlay **-3.375** (raw -3.375) \u00b7 # Reasoning trace \u2014 SECTOR PREDICT Financial 2026-10-01\nprovider: deepseek\nfallback_reason: prefer_deepseek\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (120,397 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Done researching.** The model stopped searching and wrote its full analysis (13,190 characters). \u00b7 keys: model, messages, provider, fallback_reason \u00b7 keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok \u00b7 keys: date, n_ok, n_total, summary, sectors \u00b7 # Sector Board \u2014 2026-10-01\nGenerated: **2026-10-01T05:57:49.303767-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live n"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
