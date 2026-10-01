@@ -1,11 +1,11 @@
 {
   "date": "2026-10-01",
-  "generated_at": "2026-10-01T06:04:02.356099-04:00",
+  "generated_at": "2026-10-01T06:04:29.285120-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
-    "ok": 4,
-    "partial": 3,
+    "ok": 3,
+    "partial": 4,
     "fail": 1,
     "n": 8
   },
@@ -25,7 +25,7 @@
     "direction": "down"
   },
   "sectors": {
-    "said": "1 up / 7 down / 0 flat",
+    "said": "1 up / 8 down / 0 flat",
     "bullets": [
       "XLB DOWN -0.8",
       "XLC UP +7.5",
@@ -35,7 +35,7 @@
       "XLF DOWN -5.2",
       "XLV DOWN -3.9",
       "XLI DOWN -0.4",
-      "XLRE missing",
+      "XLRE DOWN -5.9",
       "XLK missing",
       "XLU missing"
     ]
@@ -238,70 +238,70 @@
     },
     {
       "key": "sector_one",
-      "title": "Sector predict Industrials (8/11)",
+      "title": "Sector predict Real Estate (9/11)",
       "date": "2026-10-01",
       "ok": true,
       "pushed": true,
-      "at": "2026-10-01T06:04:02.051366-04:00",
+      "at": "2026-10-01T06:04:28.973793-04:00",
       "files": [
         {
-          "path": "01_daily/sectors/2026-10-01/industrials_predict.md",
+          "path": "01_daily/sectors/2026-10-01/real_estate_predict.md",
           "ok": true,
           "reason": "",
-          "size": 28172,
-          "preview": "# Sector Prediction \u2014 Industrials \u2014 2026-10-01\n- news_mode: **on**\n- ETF: **XLI**\n- rubric: `00_grounding/sectors/industrials.md`\n- predicted_direction: **down**\n- predicted_magnitude_band: **mild**\n- total_score: **-0.378** (mult 0.9)\n- regime: mixed\n- divergence_flagged: **True**\n- engine: v2 \u00b7 tape_anchor **1.308** (ES +0.17%, ER2 +0.08%, HG +0.66%) \u00b7 index_carry **-0.336** (general -1.343) \u00b7 llm_overlay **-1.35** (raw -1.35)"
+          "size": 16723,
+          "preview": "# Sector Prediction \u2014 Real Estate \u2014 2026-10-01\n- news_mode: **on**\n- ETF: **XLRE**\n- rubric: `00_grounding/sectors/real_estate.md`\n- predicted_direction: **down**\n- predicted_magnitude_band: **mild**\n- total_score: **-5.858** (mult 0.85)\n- regime: mixed\n- divergence_flagged: **True**\n- engine: v2 \u00b7 tape_anchor **0.375** (ES +0.17%, ZN -0.03%) \u00b7 index_carry **-0.336** (general -1.343) \u00b7 llm_overlay **-5.897** (raw -5.897)"
         },
         {
-          "path": "01_daily/sectors/2026-10-01/industrials_predict_trace.md",
+          "path": "01_daily/sectors/2026-10-01/real_estate_predict_trace.md",
           "ok": true,
           "reason": "",
-          "size": 12990,
-          "preview": "# Reasoning trace \u2014 SECTOR PREDICT Industrials 2026-10-01\nprovider: deepseek\nfallback_reason: prefer_deepseek\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (127,600 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Research.** The model wanted to know: *\"ISM manufacturing PMI September 2026 new orders\"* \u2192 got 6 results (via gnews_rss)\n- Services PMI\u00ae at 55.4%; August 2026 ISM\u00ae Services PMI\u00ae Report - PR Newswire (https://news.google.com/rss/articles/CBMisgFBVV95cUxPbG9rdVlZcEx5d0dXaXAxLW9iNkhPTGNkeHlfakZSdzdOR0lxelg3NGhPT256WGVmcTVyTUlYSExzRFBndnM2S0RRY05zb3ZjY1FQN1RIeUVRRmhGNlROX0pjYXJZTjlrWno3NEh0WVJFbzlRY2ZDYUNUcEFQZHJPMzBOM3RHMlZXRFRWclQ4WkpRbUJFR3pzSjdybnZ5cEUzNEJrTkRHMmJoakluclBsNUF3?oc=5)\n- KPI \u2013 September 2026: State of Manufacturing - theshopmag.com (https://news.goo"
+          "size": 443,
+          "preview": "# Reasoning trace \u2014 SECTOR PREDICT Real Estate 2026-10-01\nprovider: deepseek\nfallback_reason: prefer_deepseek\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (123,922 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Done researching.** The model stopped searching and wrote its full analysis (14,922 characters)."
         },
         {
-          "path": "01_daily/_transcripts/2026-10-01_sector_industrials_predict.json",
+          "path": "01_daily/_transcripts/2026-10-01_sector_real_estate_predict.json",
           "ok": true,
           "reason": "",
-          "size": 220012,
+          "size": 142589,
           "preview": "keys: model, messages, provider, fallback_reason"
         },
         {
           "path": "01_daily/2026-10-01_preopen_qc.json",
           "ok": true,
           "reason": "",
-          "size": 7459,
+          "size": 7450,
           "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok"
         },
         {
           "path": "01_daily/sectors/2026-10-01/_qc.json",
           "ok": true,
           "reason": "",
-          "size": 1491,
+          "size": 1485,
           "preview": "keys: date, n_ok, n_total, summary, sectors"
         },
         {
           "path": "01_daily/sectors/2026-10-01/_BOARD.md",
           "ok": true,
           "reason": "",
-          "size": 1935,
-          "preview": "# Sector Board \u2014 2026-10-01\nGenerated: **2026-10-01T06:04:02.031512-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.)."
+          "size": 1944,
+          "preview": "# Sector Board \u2014 2026-10-01\nGenerated: **2026-10-01T06:04:28.958540-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.)."
         },
         {
           "path": "01_daily/sectors/2026-10-01/_board.json",
           "ok": true,
           "reason": "",
-          "size": 7444,
+          "size": 7617,
           "preview": "keys: date, generated_at, summary, sectors"
         },
         {
           "path": "03_scoreboard/scoreboard.json",
           "ok": true,
           "reason": "",
-          "size": 968649,
+          "size": 969738,
           "preview": "keys: runs"
         }
       ],
-      "preview": "# Sector Prediction \u2014 Industrials \u2014 2026-10-01\n- news_mode: **on**\n- ETF: **XLI**\n- rubric: `00_grounding/sectors/industrials.md`\n- predicted_direction: **down**\n- predicted_magnitude_band: **mild**\n- total_score: **-0.378** (mult 0.9)\n- regime: mixed\n- divergence_flagged: **True**\n- engine: v2 \u00b7 tape_anchor **1.308** (ES +0.17%, ER2 +0.08%, HG +0.66%) \u00b7 index_carry **-0.336** (general -1.343) \u00b7 llm_overlay **-1.35** (raw -1.35) \u00b7 # Reasoning trace \u2014 SECTOR PREDICT Industrials 2026-10-01\nprovider: deepseek\nfallback_reason: prefer_deepseek\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (127,600 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Research.** The model wanted to know: *\"ISM manufacturing PMI September 2026 new orders\"* \u2192 got 6 results (via gnews_rss)\n- Services PMI\u00ae at 55.4%; August 2026 ISM\u00ae Services PMI\u00ae Report - PR Newswire (https://news.google.com/rss/articles/CBMisgFBVV95cUxPbG9rdVlZcEx5d0dXaXAxLW9iNkhPTGNkeHlfakZSdzdOR0lxelg3NGhPT256WGVmcTVyTUlYSExzRFBndnM2S0RRY05zb3ZjY1FQN1RIeUVRRmhGNlROX0pjYXJZTjlrWno3NEh0WVJFbzlRY2ZDYUNUcEFQZHJPMzBOM3RHMlZXRFRWclQ4W"
+      "preview": "# Sector Prediction \u2014 Real Estate \u2014 2026-10-01\n- news_mode: **on**\n- ETF: **XLRE**\n- rubric: `00_grounding/sectors/real_estate.md`\n- predicted_direction: **down**\n- predicted_magnitude_band: **mild**\n- total_score: **-5.858** (mult 0.85)\n- regime: mixed\n- divergence_flagged: **True**\n- engine: v2 \u00b7 tape_anchor **0.375** (ES +0.17%, ZN -0.03%) \u00b7 index_carry **-0.336** (general -1.343) \u00b7 llm_overlay **-5.897** (raw -5.897) \u00b7 # Reasoning trace \u2014 SECTOR PREDICT Real Estate 2026-10-01\nprovider: deepseek\nfallback_reason: prefer_deepseek\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (123,922 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Done researching.** The model stopped searching and wrote its full analysis (14,922 characters). \u00b7 keys: model, messages, provider, fallback_reason \u00b7 keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok \u00b7 keys: date, n_ok, n_total, summary, sectors \u00b7 # Sector Board \u2014 2026-10-01\nGenerated: **2026-10-01T06:04:28.958540-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to th"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
