@@ -1,6 +1,6 @@
 {
   "date": "2026-10-01",
-  "generated_at": "2026-10-01T05:40:15.519410-04:00",
+  "generated_at": "2026-10-01T05:40:34.120946-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -101,10 +101,10 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 96489,
-          "said": "5893 tickers \u00b7 1952 signals \u00b7 top ABT, AEM, AJG, AME, AMGN, AON, APH, APO",
+          "size": 97000,
+          "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
           "bullets": [
-            "Abbott launches Freenomes colorectal cancer screening test",
+            "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
             "Agnico Eagle Shares Fall 4.9% as Gold Prices Decline",
             "Banks have profited from idle cash for years. AI agents could change that."
           ]
@@ -116,10 +116,10 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 11634,
+          "size": 11812,
           "said": "Finviz Daily Digest \u2014 2026-10-01",
           "bullets": [
-            "_Generated 2026-10-01T05:40:09.075074-04:00 \u00b7 export=data/exports/finviz_2026-09-30.csv \u00b7 ticker digests=5893 \u00b7 high-signal=1952_",
+            "_Generated 2026-10-01T05:40:10.416811-04:00 \u00b7 export=data/exports/finviz_2026-10-01.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_",
             "Major indices (live quote page)"
           ]
         },
@@ -144,7 +144,7 @@
           "size": 2791,
           "said": "Finviz homepage market digest \u2014 2026-10-01",
           "bullets": [
-            "Generated:** 2026-10-01T05:40:15.301728-04:00 (America/New_York)",
+            "Generated:** 2026-10-01T05:40:33.905244-04:00 (America/New_York)",
             "Source:** `live`"
           ]
         },
@@ -171,9 +171,9 @@
           "bullets": []
         }
       ],
-      "said": "5893 tickers \u00b7 1952 signals \u00b7 top ABT, AEM, AJG, AME, AMGN, AON, APH, APO",
+      "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
       "bullets": [
-        "Abbott launches Freenomes colorectal cancer screening test",
+        "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
         "Agnico Eagle Shares Fall 4.9% as Gold Prices Decline",
         "Banks have profited from idle cash for years. AI agents could change that."
       ]
@@ -196,10 +196,10 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 96489,
-          "said": "5893 tickers \u00b7 1952 signals \u00b7 top ABT, AEM, AJG, AME, AMGN, AON, APH, APO",
+          "size": 97000,
+          "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
           "bullets": [
-            "Abbott launches Freenomes colorectal cancer screening test",
+            "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
             "Agnico Eagle Shares Fall 4.9% as Gold Prices Decline",
             "Banks have profited from idle cash for years. AI agents could change that."
           ]
@@ -508,10 +508,10 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 96489,
-          "said": "5893 tickers \u00b7 1952 signals \u00b7 top ABT, AEM, AJG, AME, AMGN, AON, APH, APO",
+          "size": 97000,
+          "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
           "bullets": [
-            "Abbott launches Freenomes colorectal cancer screening test",
+            "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
             "Agnico Eagle Shares Fall 4.9% as Gold Prices Decline",
             "Banks have profited from idle cash for years. AI agents could change that."
           ]
@@ -597,10 +597,10 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 96489,
-          "said": "5893 tickers \u00b7 1952 signals \u00b7 top ABT, AEM, AJG, AME, AMGN, AON, APH, APO",
+          "size": 97000,
+          "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
           "bullets": [
-            "Abbott launches Freenomes colorectal cancer screening test",
+            "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
             "Agnico Eagle Shares Fall 4.9% as Gold Prices Decline",
             "Banks have profited from idle cash for years. AI agents could change that."
           ]
@@ -671,10 +671,10 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 96489,
-          "said": "5893 tickers \u00b7 1952 signals \u00b7 top ABT, AEM, AJG, AME, AMGN, AON, APH, APO",
+          "size": 97000,
+          "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
           "bullets": [
-            "Abbott launches Freenomes colorectal cancer screening test",
+            "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
             "Agnico Eagle Shares Fall 4.9% as Gold Prices Decline",
             "Banks have profited from idle cash for years. AI agents could change that."
           ]
@@ -962,7 +962,7 @@
       "date": "2026-10-01",
       "ok": true,
       "pushed": true,
-      "at": "2026-10-01T05:40:15.317471-04:00",
+      "at": "2026-10-01T05:40:33.921793-04:00",
       "files": [
         {
           "path": "01_daily/news/2026-10-01_finviz_market_digest.json",
@@ -976,10 +976,10 @@
           "ok": true,
           "reason": "",
           "size": 2791,
-          "preview": "# Finviz homepage market digest \u2014 2026-10-01\n**Generated:** 2026-10-01T05:40:15.301728-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US futures trade mixed as 10-year yield hits highest since 2002 while AI strength underpins tech ahead of jobless claims and ISM data\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** UTHR, CBOE, SNPS, AMZN, JBL, MU, LRCX, AMAT, NVDA, AMD, GOOGL, ACN, MKC, AYI\n**Next session:** housing no \u00b7 retail no \u00b7 Fed no\n**Earnings slate:** ACN, MKC, AYI\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-10-01\n**Clock use:** `same_morning`"
+          "preview": "# Finviz homepage market digest \u2014 2026-10-01\n**Generated:** 2026-10-01T05:40:33.905244-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US futures trade mixed as 10-year yield hits highest since 2002 while AI strength underpins tech ahead of jobless claims and ISM data\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** UTHR, CBOE, SNPS, AMZN, JBL, MU, LRCX, AMAT, NVDA, AMD, GOOGL, ACN, MKC, AYI\n**Next session:** housing no \u00b7 retail no \u00b7 Fed no\n**Earnings slate:** ACN, MKC, AYI\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-10-01\n**Clock use:** `same_morning`"
         }
       ],
-      "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest \u2014 2026-10-01\n**Generated:** 2026-10-01T05:40:15.301728-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US futures trade mixed as 10-year yield hits highest since 2002 while AI strength underpins tech ahead of jobless claims and ISM data\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** UTHR, CBOE, SNPS, AMZN, JBL, MU, LRCX, AMAT, NVDA, AMD, GOOGL, ACN, MKC, AYI\n**Next session:** housing no \u00b7 retail no \u00b7 Fed no\n**Earnings slate:** ACN, MKC, AYI\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-10-01\n**Clock use:** `same_morning`"
+      "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest \u2014 2026-10-01\n**Generated:** 2026-10-01T05:40:33.905244-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US futures trade mixed as 10-year yield hits highest since 2002 while AI strength underpins tech ahead of jobless claims and ISM data\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** UTHR, CBOE, SNPS, AMZN, JBL, MU, LRCX, AMAT, NVDA, AMD, GOOGL, ACN, MKC, AYI\n**Next session:** housing no \u00b7 retail no \u00b7 Fed no\n**Earnings slate:** ACN, MKC, AYI\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-10-01\n**Clock use:** `same_morning`"
     }
   ],
   "href": {
