@@ -1,6 +1,6 @@
 {
   "date": "2026-10-01",
-  "generated_at": "2026-10-01T05:41:52.504904-04:00",
+  "generated_at": "2026-10-01T05:43:59.351799-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -8,13 +8,12 @@
     "MISSING Sector board JSON `01_daily/sectors/2026-10-01/_board.json` \u2014 missing",
     "MISSING News actions JSON `01_daily/news/2026-10-01_actions.json` \u2014 missing",
     "MISSING News judge MD `01_daily/news/2026-10-01_judge.md` \u2014 missing",
-    "MISSING Weather JSON `01_daily/weather/2026-10-01_weather.json` \u2014 missing",
     "MISSING AB checklist enriched `data/ab_checklist/2026-10-01_ab_checklist_enriched.csv` \u2014 missing"
   ],
   "counts": {
-    "ok": 2,
+    "ok": 3,
     "partial": 2,
-    "fail": 4,
+    "fail": 3,
     "n": 8
   },
   "processes": [
@@ -182,9 +181,9 @@
       "key": "preopen",
       "name": "Pre-Open ALL",
       "yaml": "preopen_all.yml",
-      "status": "PARTIAL",
+      "status": "FAIL",
       "inputs_ready": true,
-      "n_req_ok": 2,
+      "n_req_ok": 0,
       "n_req": 20,
       "n_opt_ok": 1,
       "n_opt": 3,
@@ -330,16 +329,11 @@
           "name": "Pre-open QC JSON",
           "path": "01_daily/2026-10-01_preopen_qc.json",
           "role": "required",
-          "status": "OK",
-          "reason": "all_ok=False",
-          "size": 7546,
-          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 18 fail",
-          "bullets": [
-            "general_predict:missing",
-            "events:missing",
-            "news_judge:missing",
-            "news_parse:missing"
-          ]
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "status",
@@ -357,13 +351,11 @@
           "name": "Grok review JSON",
           "path": "01_daily/2026-10-01_grok_review.json",
           "role": "required",
-          "status": "OK",
-          "reason": "ok=False Grok returned an empty review",
-          "size": 308,
-          "said": "ok=False \u00b7 empty_review_reply (review)",
-          "bullets": [
-            "Grok returned an empty review"
-          ]
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "sector_basic_materials",
@@ -494,9 +486,9 @@
       "key": "weather",
       "name": "Label + weather",
       "yaml": "label_weather.yml",
-      "status": "FAIL",
+      "status": "OK",
       "inputs_ready": true,
-      "n_req_ok": 0,
+      "n_req_ok": 1,
       "n_req": 1,
       "n_opt_ok": 0,
       "n_opt": 0,
@@ -521,15 +513,21 @@
           "name": "Weather JSON",
           "path": "01_daily/weather/2026-10-01_weather.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "sectors=11 bytes=9291 vix=calm yields=flat",
+          "size": 9291,
+          "said": "hostile 9 \u00b7 neutral 2",
+          "bullets": [
+            "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Industrials, Real Estate, Technology, Utilities",
+            "events bull 4 / bear 1"
+          ]
         }
       ],
-      "said": "",
-      "bullets": []
+      "said": "hostile 9 \u00b7 neutral 2",
+      "bullets": [
+        "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Industrials, Real Estate, Technology, Utilities",
+        "events bull 4 / bear 1"
+      ]
     },
     {
       "key": "ab",
@@ -624,9 +622,9 @@
       "key": "stock_book",
       "name": "Stock Book ALL",
       "yaml": "stock_book_all.yml",
-      "status": "FAIL",
+      "status": "PARTIAL",
       "inputs_ready": false,
-      "n_req_ok": 0,
+      "n_req_ok": 1,
       "n_req": 4,
       "n_opt_ok": 1,
       "n_opt": 3,
@@ -695,11 +693,14 @@
           "name": "Weather JSON",
           "path": "01_daily/weather/2026-10-01_weather.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "sectors=11 bytes=9291 vix=calm yields=flat",
+          "size": 9291,
+          "said": "hostile 9 \u00b7 neutral 2",
+          "bullets": [
+            "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Industrials, Real Estate, Technology, Utilities",
+            "events bull 4 / bear 1"
+          ]
         },
         {
           "key": "in_ab",
@@ -717,11 +718,13 @@
           "name": "Join ranked CSV",
           "path": "data/join/2026-10-01_ranked.csv",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "rows=5901",
+          "size": 2222202,
+          "said": "220 rows",
+          "bullets": [
+            "GLBE, SHOO, HLNE, VCTR, WT, HOOD, AAMI, ANF"
+          ]
         },
         {
           "key": "peers",
@@ -793,8 +796,10 @@
           "bullets": []
         }
       ],
-      "said": "",
-      "bullets": []
+      "said": "220 rows",
+      "bullets": [
+        "GLBE, SHOO, HLNE, VCTR, WT"
+      ]
     },
     {
       "key": "publish",
@@ -868,7 +873,13 @@
     "general": {},
     "sectors": {},
     "news": {},
-    "weather": {}
+    "weather": {
+      "said": "hostile 9 \u00b7 neutral 2",
+      "bullets": [
+        "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Industrials, Real Estate, Technology, Utilities",
+        "events bull 4 / bear 1"
+      ]
+    }
   },
   "lands": [
     {
@@ -1055,6 +1066,31 @@
         }
       ],
       "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-10-01\nExport `finviz_2026-10-01.csv` \u00b7 11616 names \u00b7 generated 2026-10-01T05:41:52.261525-04:00"
+    },
+    {
+      "key": "weather",
+      "title": "Weather / regime",
+      "date": "2026-10-01",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-01T05:43:59.170551-04:00",
+      "files": [
+        {
+          "path": "01_daily/weather/2026-10-01_weather.json",
+          "ok": true,
+          "reason": "",
+          "size": 9291,
+          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}"
+        },
+        {
+          "path": "01_daily/weather/2026-10-01_weather.md",
+          "ok": true,
+          "reason": "",
+          "size": 5043,
+          "preview": "# Weather report \u2014 2026-10-01\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+        }
+      ],
+      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-10-01\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
     }
   ],
   "href": {
