@@ -29497,18 +29497,107 @@
         "B7_OIL_DOLLAR": -0.5
       },
       "leading_sum": -3.0,
-      "actual_open": null,
-      "actual_close": null,
-      "actual_pct_change": null,
-      "actual_direction": null,
-      "actual_magnitude_band": null,
-      "direction_hit": null,
-      "magnitude_hit": null,
+      "actual_open": 7666.47,
+      "actual_close": 7666.45,
+      "actual_pct_change": 0.19,
+      "actual_direction": "up",
+      "actual_magnitude_band": "flat",
+      "direction_hit": false,
+      "magnitude_hit": false,
       "divergence_flagged": false,
       "divergence_verdict": null,
-      "per_factor_breakdown": [],
+      "per_factor_breakdown": [
+        {
+          "factor": "B0_ASIA",
+          "score": 0.5,
+          "status": "hit"
+        },
+        {
+          "factor": "B0_EUROPE",
+          "score": -1.0,
+          "status": "miss"
+        },
+        {
+          "factor": "B1_CATALYSTS",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B2_BONDS",
+          "score": -1.0,
+          "status": "miss"
+        },
+        {
+          "factor": "B3_FEDPATH",
+          "score": 0.5,
+          "status": "hit"
+        },
+        {
+          "factor": "B4_VIX",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B5_SENTIMENT",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B6_FUTURES",
+          "score": 0.5,
+          "status": "hit"
+        },
+        {
+          "factor": "B7_OIL_DOLLAR",
+          "score": -0.5,
+          "status": "miss"
+        }
+      ],
       "reflection_lesson_ref": null,
-      "sources_used": [],
+      "sources_used": [
+        {
+          "url": "https://www.fool.com/coverage/stock-market-today/2026/10/01/stock-market-midday-oct-1-stocks-edge-lower-as-treasury-yields-surge-to-24-year-high/",
+          "date_accessed": "2026-10-01",
+          "summary": "Midday tape matches Channel 1’s SPX low: this was a down-day look before the V.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.cnbc.com/2026/10/01/us-treasury-bond-yield.html",
+          "date_accessed": "2026-10-01",
+          "summary": "The equity V is the bond reversal with a lag.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.prnewswire.com/news-releases/manufacturing-pmi-at-54-5-september-2026-ism-manufacturing-pmi-report-302894520.html",
+          "date_accessed": "2026-10-01",
+          "summary": "10:00 ET inflation impulse, not the 54.5 headline, is the data shock.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.bostonherald.com/2026/10/01/unemployment-claims-dip/",
+          "date_accessed": "2026-10-01",
+          "summary": "Pre-open/8:30 labor resilience that feeds the bad-news-is-good-news yield bid.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.cnbc.com/2026/10/01/accenture-rallies-more-than-20percent-after-earnings-beat-heads-for-best-day-ever.html",
+          "date_accessed": "2026-10-01",
+          "summary": "Same-day earnings offset that the morning B1=0 bucket did not have.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.fool.com/coverage/stock-market-today/2026/10/01/stock-market-midday-oct-1-stocks-edge-lower-as-treasury-yields-surge-to-24-year-high/",
+          "date_accessed": "2026-10-01",
+          "summary": "AI-memory was a narrative floor, not price leadership.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.cnbc.com/2026/10/01/us-treasury-bond-yield.html",
+          "date_accessed": "2026-10-01",
+          "summary": "Shared-root with the long end, not a separate equity catalyst.",
+          "verification": "quote_not_found"
+        }
+      ],
       "horizon_calls": {
         "HORIZON_3D": {
           "trading_days": 3,
@@ -29538,7 +29627,14 @@
       "news_judge_present": true,
       "engine": "v2",
       "anchor_score": -0.793,
-      "overlay_score": -0.55
+      "overlay_score": -0.55,
+      "ops_fail": false,
+      "path_shape": "V-shape (deep intraday drop, closed near high)",
+      "primary_driver": "10Y spike to ~5.34% (24-year high) then afternoon reversal to ~5.25%",
+      "key_interaction": "Yield-spike stack (ISM prices+claims+oil+fiscal) offset by Accenture/AI, then the yield fade flipped a midday down day into a V-close",
+      "knowable_at_9am": "partially",
+      "attribution_contested": "yes",
+      "outlier_watch": "Micron beat but stock sank; NDX only +0.04% despite AI headlines; Europe stayed red while US recovered"
     },
     {
       "date": "2026-10-01",
