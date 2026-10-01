@@ -1,12 +1,12 @@
 {
   "date": "2026-10-01",
-  "generated_at": "2026-10-01T05:44:48.985992-04:00",
+  "generated_at": "2026-10-01T05:46:26.276421-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
-    "ok": 6,
-    "partial": 0,
-    "fail": 2,
+    "ok": 2,
+    "partial": 2,
+    "fail": 4,
     "n": 8
   },
   "buy_1d": [
@@ -73,31 +73,6 @@
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "map_heat",
-      "title": "Map heat morning overlay",
-      "date": "2026-10-01",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-01T05:41:34.937691-04:00",
-      "files": [
-        {
-          "path": "01_daily/map_heat/2026-10-01_map_heat.json",
-          "ok": true,
-          "reason": "",
-          "size": 274970,
-          "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape"
-        },
-        {
-          "path": "01_daily/map_heat/2026-10-01_map_heat.md",
-          "ok": true,
-          "reason": "",
-          "size": 18280,
-          "preview": "# MAP HEAT \u2014 2026-10-01\nExport `finviz_2026-09-30.csv` \u00b7 11616 names \u00b7 generated 2026-10-01T05:41:34.891454-04:00"
-        }
-      ],
-      "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-10-01\nExport `finviz_2026-09-30.csv` \u00b7 11616 names \u00b7 generated 2026-10-01T05:41:34.891454-04:00"
-    },
     {
       "key": "map_heat",
       "title": "Map heat morning overlay",
@@ -370,6 +345,31 @@
         }
       ],
       "preview": "2026-10-01 BUY HITI, CON, AMN, NTAP, MQ, TWLO \u00b7 SELL OKLO, NEOV, FCEL, POWL, EOSE, NNDM, NRGV, INDI \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href \u00b7 2026-10-01 BUY HITI, CON, AMN, NTAP, MQ, TWLO \u00b7 SELL OKLO, NEOV, FCEL, POWL, EOSE, NNDM, NRGV, INDI \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-10-01 BUY HITI, CON, AMN, NTAP, MQ, TWLO \u00b7 SELL OKLO, NEOV, FCEL, POWL, EOSE, NNDM, NRGV, INDI \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-10-01 BUY HITI, CON, AMN, NTAP, MQ, TWLO \u00b7 SELL OKLO, NEOV, FCEL, POWL, EOSE, NNDM, NRGV, INDI \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_le"
+    },
+    {
+      "key": "finviz_digest",
+      "title": "Finviz digest",
+      "date": "2026-10-01",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-01T05:46:25.998624-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-10-01_finviz_digest.json",
+          "ok": true,
+          "reason": "",
+          "size": 97000,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
+        },
+        {
+          "path": "01_daily/news/2026-10-01_finviz_digest.md",
+          "ok": true,
+          "reason": "",
+          "size": 11836,
+          "preview": "# Finviz Daily Digest \u2014 2026-10-01\n_Generated 2026-10-01T05:40:10.416811-04:00 \u00b7 export=data/exports/finviz_2026-10-01.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_"
+        }
+      ],
+      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-10-01\n_Generated 2026-10-01T05:40:10.416811-04:00 \u00b7 export=data/exports/finviz_2026-10-01.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
