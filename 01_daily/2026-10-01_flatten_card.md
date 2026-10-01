@@ -1,10 +1,10 @@
 # flatten_robust card — 2026-10-01
 
-_Generated 2026-10-01T09:47:22 — live `flatten_robust`._
+_Generated 2026-10-01T10:23:38 — live `flatten_robust`._
 
-**morning S missing; no flatten (0 priced BUYs, prior book=yes); 16:00 refill robust:3d_size from leftover cash; skip names already held**
+**S=-1.34; no flatten (0 priced BUYs, prior book=yes); 16:00 refill robust:3d_size from leftover cash; skip names already held**
 
-- Score **—** (—) · route **io**
+- Score **-1.34** (DOWN) · route **io**
 - Cash leftover **$81,251.01** (after 09:30 $81,251.01 · after 16:00 $101,466.38)
 - Prior close **$101,635.61** · 09:30 **$101,635.61** · overnight **$+0.00** · session **$-169.24** · 16:00 **$101,466.38**
 - Overnight lots **2** · priced mover BUYs **0** · prior book yes
@@ -43,11 +43,11 @@ Sized from marked equity **$101,635.61** as if the book were flat. `io 3d_size (
 
 | Clock | Ticker | Sleeve | Shares | Px | $ | Blocked live by |
 |---|---|---|---:|---:|---:|---|
-| 16:00 ET | CDNA | io_core | 260 | $65.00 | $16,900.00 | cash tied |
-| 16:00 ET | ETON | io_core | 312 | $54.20 | $16,910.40 | cash tied |
-| 16:00 ET | AMN | io_core | 472 | $35.87 | $16,930.64 | cash tied |
-| 16:00 ET | WDAY | io_core | 88 | $190.46 | $16,760.48 | cash tied |
 | 16:00 ET | IT | io_core | 90 | $187.14 | $16,842.60 | cash tied |
-| 16:00 ET | SN | io_core | 93 | $181.62 | $16,890.20 | cash tied |
+| 16:00 ET | KSPI | io_core | 180 | $94.06 | $16,930.80 | cash tied |
+| 16:00 ET | IOT | io_core | 444 | $38.13 | $16,929.72 | cash tied |
+| 16:00 ET | AVPT | io_core | 1203 | $14.08 | $16,938.24 | cash tied |
+| 16:00 ET | SONO | io_core | 946 | $17.89 | $16,923.94 | cash tied |
+| 16:00 ET | RELY | io_core | 793 | $21.34 | $16,922.62 | cash tied |
 
 Dashboard: https://sroyaltyy.github.io/fullscan/dashboard/sleeve-merge/
