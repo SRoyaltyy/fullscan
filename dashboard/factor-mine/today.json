@@ -1,6 +1,6 @@
 {
   "date": "2026-10-01",
-  "generated_at": "2026-10-01T06:10:07.613499-04:00",
+  "generated_at": "2026-10-01T06:15:16.075411-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -82,7 +82,7 @@
     "direction": "down"
   },
   "sectors": {
-    "said": "2 up / 8 down / 0 flat",
+    "said": "2 up / 9 down / 0 flat",
     "bullets": [
       "XLB DOWN -0.8",
       "XLC UP +7.5",
@@ -94,7 +94,7 @@
       "XLI DOWN -0.4",
       "XLRE DOWN -5.9",
       "XLK UP +5.0",
-      "XLU missing"
+      "XLU DOWN -0.8"
     ]
   },
   "lands": [

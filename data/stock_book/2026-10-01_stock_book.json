@@ -1,7 +1,7 @@
 {
   "meta": {
     "date": "2026-10-01",
-    "generated_at": "2026-10-01T06:10:05.005187-04:00",
+    "generated_at": "2026-10-01T06:15:13.983076-04:00",
     "general_bias": -0.47090000000000004,
     "sector_bias": {
       "Basic Materials": -0.2155,
@@ -13,7 +13,8 @@
       "Healthcare": -0.55675,
       "Industrials": -0.2075,
       "Real Estate": -0.5389,
-      "Technology": 0.3505
+      "Technology": 0.3505,
+      "Utilities": -0.216
     },
     "accuracy_gates": {
       "general": {
@@ -83,7 +84,7 @@
     "n_ab": 1891,
     "n_peer": 1804,
     "same_day_general": true,
-    "same_day_sectors": 10,
+    "same_day_sectors": 11,
     "weather_risk": "unknown",
     "n_universe": 2035,
     "weights": {
@@ -145,7 +146,7 @@
         "peer": "ok",
         "heat": "degraded",
         "general": "ok",
-        "sector": "degraded"
+        "sector": "ok"
       },
       "learn_grade": true
     },
@@ -1509,53 +1510,6 @@
           "region": "good"
         },
         {
-          "ticker": "GDYN",
-          "sector": "Technology",
-          "industry": "Information Technology Services",
-          "size": "small",
-          "lane": "probable",
-          "eligible": true,
-          "bull_rank": 13.966,
-          "bear_rank": 2.064,
-          "domains": {
-            "market": "bad",
-            "parent": "neutral",
-            "child": "good",
-            "company": "neutral",
-            "setup": "good",
-            "flow": "good"
-          },
-          "source_boxes": {
-            "join": "bad",
-            "sector": "neutral",
-            "gen": "bad",
-            "news": "missing",
-            "digest": "missing",
-            "judge": "missing",
-            "ab": "good",
-            "peer": "good",
-            "heat": "good",
-            "vol": "missing",
-            "catal": "missing"
-          },
-          "company": "no direct company event",
-          "company_strength": 0.0,
-          "company_direct": false,
-          "company_fresh": false,
-          "company_price_confirmed": false,
-          "group": "Information Technology Services",
-          "child_d1": 2.94,
-          "child_w1": 1.86,
-          "child_residual": 3.93,
-          "bull_decision": "BUY PROBABLE \u2014 most-probable long on RED (size \u00d70.35); clocks: child/theme outperform +1.9% 1w / +3.9% rel \u2014 market=RED; parent=YELLOW; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=Cond green",
-          "bear_decision": "NO BEAR \u2014 market=RED",
-          "blue": false,
-          "white": true,
-          "alarm": false,
-          "cond": "good",
-          "region": "neutral"
-        },
-        {
           "ticker": "PAYS",
           "sector": "Technology",
           "industry": "Software - Infrastructure",
@@ -1601,6 +1555,53 @@
           "alarm": false,
           "cond": "good",
           "region": "good"
+        },
+        {
+          "ticker": "GDYN",
+          "sector": "Technology",
+          "industry": "Information Technology Services",
+          "size": "small",
+          "lane": "probable",
+          "eligible": true,
+          "bull_rank": 13.966,
+          "bear_rank": 2.064,
+          "domains": {
+            "market": "bad",
+            "parent": "neutral",
+            "child": "good",
+            "company": "neutral",
+            "setup": "good",
+            "flow": "good"
+          },
+          "source_boxes": {
+            "join": "bad",
+            "sector": "neutral",
+            "gen": "bad",
+            "news": "missing",
+            "digest": "missing",
+            "judge": "missing",
+            "ab": "good",
+            "peer": "good",
+            "heat": "good",
+            "vol": "missing",
+            "catal": "missing"
+          },
+          "company": "no direct company event",
+          "company_strength": 0.0,
+          "company_direct": false,
+          "company_fresh": false,
+          "company_price_confirmed": false,
+          "group": "Information Technology Services",
+          "child_d1": 2.94,
+          "child_w1": 1.86,
+          "child_residual": 3.93,
+          "bull_decision": "BUY PROBABLE \u2014 most-probable long on RED (size \u00d70.35); clocks: child/theme outperform +1.9% 1w / +3.9% rel \u2014 market=RED; parent=YELLOW; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=Cond green",
+          "bear_decision": "NO BEAR \u2014 market=RED",
+          "blue": false,
+          "white": true,
+          "alarm": false,
+          "cond": "good",
+          "region": "neutral"
         }
       ],
       "bear_watch": [
@@ -4932,12 +4933,12 @@
           },
           {
             "ticker": "OKLO",
-            "score": -0.1360477959220514,
+            "score": -0.15764779592205141,
             "sector": "Utilities",
             "industry": "Utilities - Independent Power Producers",
             "size": "mid",
             "side": "sell",
-            "reasons": "join=-0.16; gen1d=-0.24; ab=-0.76; LAG,peers\u2193,ind\u2193; peer=-0.43; mid_opp=+0.20; \ud83d\udea8; cond=bad; continuation; lane=blocked; blocked=RED market: no confirmed catalyst, group leader, or probable clock; parent sector RED; child industry/theme RED; setup RED; flow RED; \ud83d\udea8 alarm; featured fade; legacy Cond red; legacy region red; v2 domain alarm; v2 domain region red",
+            "reasons": "join=-0.16; sector1d=-0.22; gen1d=-0.24; ab=-0.76; LAG,peers\u2193,ind\u2193; peer=-0.43; mid_opp=+0.20; \ud83d\udea8; cond=bad; continuation; lane=blocked; blocked=RED market: no confirmed catalyst, group leader, or probable clock; parent sector RED; child industry/theme RED; setup RED; flow RED; \ud83d\udea8 alarm; featured fade; legacy Cond red; legacy region red; v2 domain alarm; v2 domain region red",
             "rebound": false,
             "market_cap_m": 6931.02,
             "avg_vol_k": 9523.95,
@@ -4946,8 +4947,8 @@
             "s_general": -0.23545000000000002,
             "s_ab": -0.7615941559557649,
             "s_peer": -0.43364323758900625,
-            "s_sector": 0.0,
-            "s_sector_essay": 0.0,
+            "s_sector": -0.216,
+            "s_sector_essay": -0.216,
             "s_news": 0.0,
             "s_heat": -0.021,
             "s_ab_intrinsic": -0.5545997223493823,

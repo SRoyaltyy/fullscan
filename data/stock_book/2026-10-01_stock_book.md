@@ -1,6 +1,6 @@
 # Stock book — 2026-10-01
 
-_Generated 2026-10-01T06:10:05.005187-04:00_
+_Generated 2026-10-01T06:15:13.983076-04:00_
 
 This file is the **human read** of one run. CSV/JSON next to it are the machine files.
 
@@ -21,7 +21,7 @@ The existing red/yellow/green source graph remains visible. Its digest, judge an
 - Weather risk: **unknown**
 - General predict (same-day): -0.47 down (present)
 - Stand-down: **no** — 35 names qualified through group_leader,catalyst,probable (22 probable)
-- Sector predicts this date: 10/11 (ok)
+- Sector predicts this date: 11/11 (ok)
 - News tickers in play: 111
 - AB coverage: 1891 names · peer RS: 1804
 - Universe after liquidity: 2035
@@ -109,7 +109,7 @@ This is the live Finviz groups tape — child industry vs parent sector, plus th
 | Industrials | -1.6% | -2.7% | -0.21 |  |
 | Real Estate | -0.6% | -2.1% | -0.54 |  |
 | Technology | -2.0% | -2.1% | +0.35 | essay UP, tape DOWN |
-| Utilities | -1.5% | -3.2% | — |  |
+| Utilities | -1.5% | -3.2% | -0.22 |  |
 
 ### Industry heat (1w vs parent)
 
@@ -221,6 +221,7 @@ If a row says **missing**, that layer scored 0 today. If it says **found**, it m
 | Energy | -0.50 |
 | Communication Services | +0.40 |
 | Technology | +0.35 |
+| Utilities | -0.22 |
 | Basic Materials | -0.22 |
 | Industrials | -0.21 |
 
