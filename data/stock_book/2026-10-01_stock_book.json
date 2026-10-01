@@ -1,7 +1,7 @@
 {
   "meta": {
     "date": "2026-10-01",
-    "generated_at": "2026-10-01T12:54:27.415612-04:00",
+    "generated_at": "2026-10-01T13:00:04.470211-04:00",
     "general_bias": -0.47090000000000004,
     "sector_bias": {
       "Basic Materials": -0.2155,
@@ -522,10 +522,10 @@
           "region": "neutral"
         },
         {
-          "ticker": "BAND",
+          "ticker": "NTAP",
           "sector": "Technology",
           "industry": "Software - Infrastructure",
-          "size": "small",
+          "size": "large",
           "lane": "group_leader",
           "eligible": true,
           "bull_rank": 15.55,
@@ -569,10 +569,10 @@
           "region": "good"
         },
         {
-          "ticker": "NTAP",
+          "ticker": "BAND",
           "sector": "Technology",
           "industry": "Software - Infrastructure",
-          "size": "large",
+          "size": "small",
           "lane": "group_leader",
           "eligible": true,
           "bull_rank": 15.55,
