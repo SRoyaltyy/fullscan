@@ -82,7 +82,7 @@
   }
 
   function loadDraw() {
-    fetch("https://raw.githubusercontent.com/SRoyaltyy/fullscan/main/dashboard/jev-train/draw.json?t=" + Date.now(), { cache: "no-store" })
+    fetch("https://raw.githubusercontent.com/SRoyaltyy/fullscan/codex/jev-lane-hop0/dashboard/jev-train/draw.json?t=" + Date.now(), { cache: "no-store" })
       .then(function (res) { return res.ok ? res.json() : null; })
       .then(remember)
       .catch(function () {});
