@@ -9,7 +9,8 @@ def round_(offset=0,correct=100,version="v1"):
             "jev_model":"test","teacher_model":"frontier","teacher_blind":True}
 class Tests(unittest.TestCase):
     def test_strict_threshold(self): self.assertFalse(score(rows(correct=90))["pass"])
-    def test_five_fresh_rounds(self): self.assertTrue(summarize([round_(i*100) for i in range(5)])["accepted"])
+    def test_five_fresh_rounds_not_enough(self): self.assertFalse(summarize([round_(i*100) for i in range(5)])["accepted"])
+    def test_ten_fresh_rounds(self): self.assertTrue(summarize([round_(i*100) for i in range(10)])["accepted"])
     def test_repeat_does_not_count(self): self.assertFalse(summarize([round_() for _ in range(5)])["accepted"])
     def test_failure_resets(self): self.assertEqual(summarize([round_(0),round_(100,90),round_(200)])["streak"],1)
     def test_rubric_change_resets(self):self.assertEqual(summarize([round_(0),round_(100,version="v2")])["streak"],1)

@@ -79,8 +79,8 @@ def summarize(rounds, historical_seen=()):
         streak=streak+1 if passed else 0
         summaries.append({"round":index,**scores,"fresh":not overlap,"overlap_count":len(overlap),
                           "unique":unique,"valid_protocol":valid,"pass":passed,"streak":streak})
-    return {"required_rounds":5,"required_items":100,"threshold":.80,"strictly_above":True,
-            "streak":streak,"accepted":streak>=5,"rounds":summaries}
+    return {"required_rounds":10,"required_items":100,"threshold":.80,"strictly_above":True,
+            "streak":streak,"accepted":streak>=10,"rounds":summaries}
 
 
 def run(input_path,output_path,workers=8,candidate=False,policy=None):

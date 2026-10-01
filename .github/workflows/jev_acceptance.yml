@@ -1,4 +1,4 @@
-name: Jev five-round acceptance
+name: Jev ten-round acceptance
 on:
   push:
     branches: [codex/jev-news-triage]
@@ -10,7 +10,7 @@ on:
 permissions:
   contents: write
 concurrency:
-  group: jev-five-round-acceptance
+  group: jev-ten-round-acceptance
   cancel-in-progress: false
 jobs:
   acceptance:
@@ -29,12 +29,13 @@ jobs:
           python-version: '3.12'
       - name: Protocol tests
         run: python -m src.test_jev_acceptance
-      - name: Five frozen paired rounds
+      - name: Frozen paired rounds
         env:
           JEV_API_KEY: ${{ secrets.JEV_API_KEY }}
           JEV_MODEL: jev-1.13.0
         run: |
           python -m src.jev_acceptance --input 00_grounding/jev_acceptance/candidate_v2_extension_gold.json --output validation/jev_acceptance_report.json --policy candidate-v2
+          python -m src.jev_grade_records
           python - <<'PY'
           import json
           from pathlib import Path
@@ -45,23 +46,23 @@ jobs:
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: jev-five-round-acceptance
+          name: jev-ten-round-acceptance
           path: validation/jev_acceptance_report.json
       - name: Save candidate branch results
         if: github.ref == 'refs/heads/codex/jev-news-triage'
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add validation/jev_acceptance_report.json dashboard/jev-train/acceptance.json
+          git add validation/jev_acceptance_report.json dashboard/jev-train
           git diff --cached --quiet && exit 0
-          git commit -m 'Record strict five-round JEV acceptance [skip ci]'
+          git commit -m 'Record strict ten-round JEV acceptance [skip ci]'
           git push origin HEAD:codex/jev-news-triage
-      - name: Require five consecutive passes
+      - name: Require ten consecutive passes
         run: |
           python - <<'PYTHON'
           import json
           from pathlib import Path
           result=json.loads(Path('validation/jev_acceptance_report.json').read_text())
           if not result['summary']['accepted']:
-              raise SystemExit('Acceptance target unmet: both class recalls must exceed 80% for five fresh consecutive rounds')
+              raise SystemExit('Acceptance target unmet: both class recalls must exceed 80% for ten fresh consecutive rounds')
           PYTHON

@@ -67,3 +67,10 @@ For the final 500 rows, recorded JEV usage was 892,045 input tokens and 94,330 o
 ## Verification
 
 Candidate and error-routing tests, strict acceptance/history tests, existing six-bit/overlay regression tests, trainer and day-draw tests pass. Dashboard JavaScript parses successfully. Live acceptance run: https://github.com/SRoyaltyy/fullscan/actions/runs/36824145095 . Raw reports, frozen gold files and all earlier failures are included in this PR.
+
+
+## Ten-round target and public audit records
+
+The acceptance target is now ten consecutive fresh 100-headline rounds, with useful recall and trash rejection both strictly above 80% in every round. The existing streak is five, so the raised target is not yet met. Changing the target does not change the frozen classifier or erase valid prior passes.
+
+The trainer publishes all 1,800 historical comparisons, including failures, in `grade-records.json`, `grade-records.csv` and `grade-records.md`. `blind-regrade.json` contains the rubric and identical headline/source/date/URL evidence without either grader’s labels. Freeze external grades before opening comparison records. Historical regrading is audit/development, not unseen acceptance; supplied headlines were graded, not fetched full article bodies.
