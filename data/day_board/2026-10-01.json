@@ -1,6 +1,6 @@
 {
   "date": "2026-10-01",
-  "generated_at": "2026-10-01T05:46:52.674578-04:00",
+  "generated_at": "2026-10-01T05:46:58.577583-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -12,8 +12,8 @@
   ],
   "counts": {
     "ok": 3,
-    "partial": 2,
-    "fail": 3,
+    "partial": 3,
+    "fail": 2,
     "n": 8
   },
   "processes": [
@@ -627,9 +627,9 @@
       "key": "stock_book",
       "name": "Stock Book ALL",
       "yaml": "stock_book_all.yml",
-      "status": "FAIL",
+      "status": "PARTIAL",
       "inputs_ready": false,
-      "n_req_ok": 0,
+      "n_req_ok": 1,
       "n_req": 4,
       "n_opt_ok": 1,
       "n_opt": 3,
@@ -723,11 +723,13 @@
           "name": "Join ranked CSV",
           "path": "data/join/2026-10-01_ranked.csv",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "rows=5904",
+          "size": 2245048,
+          "said": "216 rows",
+          "bullets": [
+            "VCTR, WT, AAMI, AGM, UMBF, HOOD, BNY, RGA"
+          ]
         },
         {
           "key": "peers",
@@ -799,8 +801,10 @@
           "bullets": []
         }
       ],
-      "said": "",
-      "bullets": []
+      "said": "216 rows",
+      "bullets": [
+        "VCTR, WT, AAMI, AGM, UMBF"
+      ]
     },
     {
       "key": "publish",
@@ -1433,6 +1437,24 @@
         }
       ],
       "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -5.14, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -1.72, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.92, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -2.13, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -3.64, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -0.97, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -1.64, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -2.37, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-10-01\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+    },
+    {
+      "key": "join",
+      "title": "Join / match rank",
+      "date": "2026-10-01",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-01T05:46:58.371567-04:00",
+      "files": [
+        {
+          "path": "data/join/2026-10-01_ranked.csv",
+          "ok": true,
+          "reason": "",
+          "size": 2245048,
+          "preview": "5904 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 VCTR, WT, AAMI, AGM, UMBF"
+        }
+      ],
+      "preview": "5904 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 VCTR, WT, AAMI, AGM, UMBF"
     }
   ],
   "href": {
