@@ -1,6 +1,6 @@
 {
   "date": "2026-10-01",
-  "generated_at": "2026-10-01T06:04:44.887804-04:00",
+  "generated_at": "2026-10-01T06:10:07.613499-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -9,15 +9,32 @@
     "fail": 0,
     "n": 8
   },
-  "buy_1d": [],
+  "buy_1d": [
+    {
+      "ticker": "NTAP",
+      "score": 0.2998156899309371
+    },
+    {
+      "ticker": "BAND",
+      "score": 0.5345256446690594
+    },
+    {
+      "ticker": "NTSK",
+      "score": 0.3626937314380062
+    },
+    {
+      "ticker": "FIS",
+      "score": 0.26295798835946055
+    }
+  ],
   "sell_1d": [
     {
       "ticker": "NEOV",
-      "score": -0.17828666315379646
+      "score": -0.1990366631537965
     },
     {
       "ticker": "FCEL",
-      "score": -0.2411697007660305
+      "score": -0.26191970076603055
     },
     {
       "ticker": "SOC",
@@ -25,15 +42,11 @@
     },
     {
       "ticker": "EOSE",
-      "score": -0.2903118725336945
+      "score": -0.3110618725336944
     },
     {
       "ticker": "POWL",
-      "score": -0.06853636509325672
-    },
-    {
-      "ticker": "INDI",
-      "score": -0.1413249335849469
+      "score": -0.08928636509325671
     },
     {
       "ticker": "ACDC",
@@ -41,7 +54,11 @@
     },
     {
       "ticker": "TE",
-      "score": -0.28621899857607735
+      "score": -0.30696899857607735
+    },
+    {
+      "ticker": "PUMP",
+      "score": -0.5271566123990697
     }
   ],
   "flatten": {
@@ -65,7 +82,7 @@
     "direction": "down"
   },
   "sectors": {
-    "said": "1 up / 6 down / 0 flat",
+    "said": "2 up / 8 down / 0 flat",
     "bullets": [
       "XLB DOWN -0.8",
       "XLC UP +7.5",
@@ -74,9 +91,9 @@
       "XLE DOWN -2.4",
       "XLF DOWN -5.2",
       "XLV DOWN -3.9",
-      "XLI missing",
-      "XLRE missing",
-      "XLK missing",
+      "XLI DOWN -0.4",
+      "XLRE DOWN -5.9",
+      "XLK UP +5.0",
       "XLU missing"
     ]
   },
