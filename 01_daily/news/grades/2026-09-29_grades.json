@@ -92,7 +92,7 @@
       "horizon_returns_pct": {
         "1d": 3.27
       },
-      "mfe_pct": 6.42,
+      "mfe_pct": 6.7,
       "mfe_day": "2026-09-30",
       "ever_profitable": true,
       "first_profitable_day": "2026-09-29"
@@ -332,7 +332,7 @@
       "horizon_returns_pct": {
         "1d": 2.46
       },
-      "mfe_pct": 3.01,
+      "mfe_pct": 3.03,
       "mfe_day": "2026-09-30",
       "ever_profitable": true,
       "first_profitable_day": "2026-09-29"
@@ -692,7 +692,7 @@
       "horizon_returns_pct": {
         "1d": -2.09
       },
-      "mfe_pct": 0.96,
+      "mfe_pct": 1.77,
       "mfe_day": "2026-09-30",
       "ever_profitable": true,
       "first_profitable_day": "2026-09-29"
@@ -788,7 +788,7 @@
       "horizon_returns_pct": {
         "1d": 1.78
       },
-      "mfe_pct": 1.87,
+      "mfe_pct": 1.86,
       "mfe_day": "2026-09-30",
       "ever_profitable": true,
       "first_profitable_day": "2026-09-29"
@@ -836,7 +836,7 @@
       "horizon_returns_pct": {
         "1d": 0.71
       },
-      "mfe_pct": 1.01,
+      "mfe_pct": 1.0,
       "mfe_day": "2026-09-30",
       "ever_profitable": true,
       "first_profitable_day": "2026-09-29"
@@ -908,7 +908,7 @@
       "horizon_returns_pct": {
         "1d": 1.01
       },
-      "mfe_pct": 2.84,
+      "mfe_pct": 2.86,
       "mfe_day": "2026-09-30",
       "ever_profitable": true,
       "first_profitable_day": "2026-09-29"
@@ -932,7 +932,7 @@
       "horizon_returns_pct": {
         "1d": 2.43
       },
-      "mfe_pct": 3.23,
+      "mfe_pct": 3.25,
       "mfe_day": "2026-09-30",
       "ever_profitable": true,
       "first_profitable_day": "2026-09-29"
@@ -1076,7 +1076,7 @@
       "horizon_returns_pct": {
         "1d": 2.53
       },
-      "mfe_pct": 5.15,
+      "mfe_pct": 5.16,
       "mfe_day": "2026-09-30",
       "ever_profitable": true,
       "first_profitable_day": "2026-09-29"
@@ -1105,7 +1105,7 @@
         "n": 30,
         "wins": 30,
         "win_rate": 100.0,
-        "avg": 2.31
+        "avg": 2.35
       },
       "close_5d": null
     },
