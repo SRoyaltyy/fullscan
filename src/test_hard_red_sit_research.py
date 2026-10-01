@@ -160,6 +160,23 @@ def test_dip_limit_clock_clean() -> None:
     assert fill is None and kind == "no_dip"
 
 
+def test_rally_limit_clock_clean() -> None:
+    fill, kind = fmc.rally_limit_px(100.0, 102.0, 1.5)
+    assert kind == "fade" and abs(fill - 101.5) < 1e-9
+    fill, kind = fmc.rally_limit_px(100.0, 101.0, 1.5)
+    assert fill is None and kind == "no_rally"
+    fill, kind = fmc.rally_limit_px(None, 110.0, 1.0)
+    assert fill is None and kind == "no_open"
+    fill, kind = fmc.rally_limit_px(100.0, None, 1.0)
+    assert fill is None and kind == "no_high"
+    # Close must never be used as the open reference.
+    fill, kind = fmc.rally_limit_px(100.0, 100.0, 0.5)
+    assert fill is None and kind == "no_rally"
+    import inspect
+    names = inspect.signature(fmc.rally_limit_px).parameters
+    assert "close" not in names and "last" not in names
+
+
 def test_hard_red_skip_modes() -> None:
     assert fmc.hard_red_skip_new("long", "sit") is True
     assert fmc.hard_red_skip_new("short", "sit") is True
@@ -169,6 +186,11 @@ def test_hard_red_skip_modes() -> None:
     assert fmc.hard_red_skip_new("short", "dip_scoop") is True
     assert fmc.hard_red_skip_new("long", "short_and_scoop") is False
     assert fmc.hard_red_skip_new("short", "short_and_scoop") is False
+    assert fmc.hard_red_skip_new("long", "allow") is False
+    assert fmc.hard_red_skip_new("short", "allow") is False
+    # Unknown / missing mode stays live sit.
+    assert fmc.hard_red_skip_new("long", "nope") is True
+    assert fmc.hard_red_skip_new("short", None) is True
 
 
 def test_default_sit_still_blocks_long_and_short() -> None:
@@ -450,6 +472,7 @@ def main() -> None:
     test_excel_letters_are_open_knowable_only()
     test_scoop_trigger_ignores_close()
     test_dip_limit_clock_clean()
+    test_rally_limit_clock_clean()
     test_hard_red_skip_modes()
     test_default_sit_still_blocks_long_and_short()
     test_short_only_fires_short_sits_long()
@@ -459,7 +482,7 @@ def main() -> None:
     test_run_synthetic_board()
     test_md_lists_the_gate()
     test_per_sleeve_research_section_is_tagged()
-    print("test_hard_red_sit_research: 13 ok")
+    print("test_hard_red_sit_research: 14 ok")
 
 
 if __name__ == "__main__":
