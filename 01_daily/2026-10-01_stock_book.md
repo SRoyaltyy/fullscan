@@ -1,6 +1,6 @@
 # Stock book — 2026-10-01
 
-_Generated 2026-10-01T16:37:24.780358-04:00_
+_Generated 2026-10-01T16:43:13.801965-04:00_
 
 This file is the **human read** of one run. CSV/JSON next to it are the machine files.
 
@@ -99,7 +99,7 @@ This is the live Finviz groups tape — child industry vs parent sector, plus th
 
 | Sector | Finviz 1d | Finviz 1w | LLM 1d | Tape vs essay |
 |--------|----------:|----------:|-------:|---------------|
-| Basic Materials | -2.1% | -4.8% | -0.22 |  |
+| Basic Materials | -2.1% | -4.8% | -0.37 |  |
 | Communication Services | +2.7% | +3.5% | +0.40 |  |
 | Consumer Cyclical | -0.4% | -2.0% | -0.66 |  |
 | Consumer Defensive | +1.4% | +0.5% | -0.51 |  |
@@ -220,9 +220,9 @@ If a row says **missing**, that layer scored 0 today. If it says **found**, it m
 | Consumer Defensive | -0.51 |
 | Energy | -0.50 |
 | Communication Services | +0.40 |
+| Basic Materials | -0.37 |
 | Technology | +0.35 |
 | Utilities | -0.22 |
-| Basic Materials | -0.22 |
 | Industrials | -0.21 |
 
 ### How much each predictor is trusted (graded hit rate)
@@ -230,7 +230,7 @@ If a row says **missing**, that layer scored 0 today. If it says **found**, it m
 | Topic | hit rate | n | weight |
 |-------|----------|---|--------|
 | general | 50% | 42 | ×0.85 |
-| sector:Basic Materials | 45% | 29 | ×0.50 |
+| sector:Basic Materials | 47% | 30 | ×0.85 |
 | sector:Communication Services | 21% | 28 | ×0.50 |
 | sector:Consumer Cyclical | 48% | 29 | ×0.85 |
 | sector:Consumer Defensive | 46% | 28 | ×0.85 |
@@ -505,9 +505,14 @@ If a row says **missing**, that layer scored 0 today. If it says **found**, it m
 - **SUPV** (small, Financial, $530M) score -0.811. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
 - **LDI** (micro, Financial, $216M) score -0.778. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
 - **BETR** (micro, Financial, $192M) score -0.774. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
+- **TMC** (small, Basic Materials, $1.7B) score -0.754. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
 - **AUR** (large, Consumer Cyclical, $10.7B) score -0.747. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
 - **STEP** (mid, Financial, $5.2B) score -0.739. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
+- **ASPI** (small, Basic Materials, $402M) score -0.734. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
 - **RC** (micro, Real Estate, $218M) score -0.730. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
+- **BAK** (micro, Basic Materials, $257M) score -0.729. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
+- **PRM** (mid, Basic Materials, $4.6B) score -0.728. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
+- **LWLG** (small, Basic Materials, $771M) score -0.723. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
 - **HIVE** (small, Financial, $834M) score -0.714. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
 - **CMTG** (micro, Real Estate, $179M) score -0.708. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
 - **CWH** (small, Consumer Cyclical, $534M) score -0.704. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
@@ -521,12 +526,7 @@ If a row says **missing**, that layer scored 0 today. If it says **found**, it m
 - **QFIN** (small, Financial, $862M) score -0.683. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
 - **FLUT** (large, Consumer Cyclical, $13.3B) score -0.678. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
 - **RKT** (large, Financial, $33.1B) score -0.674. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
-- **DHC** (small, Real Estate, $1.9B) score -0.662. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
-- **GT** (small, Consumer Cyclical, $1.4B) score -0.660. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
-- **MBC** (small, Consumer Cyclical, $1.4B) score -0.658. this name **lagged its own correlated peers** this week; the peer basket itself was **up**; the Finviz industry was **advancing**
-- **FUN** (small, Consumer Cyclical, $1.2B) score -0.657. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **advancing**
-- **XPEV** (mid, Consumer Cyclical, $7.6B) score -0.644. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
-- **WULF** (mid, Financial, $7.7B) score -0.644. this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
+- **UAMY** (small, Basic Materials, $648M) score -0.674. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
 
 ## Files for this run
 
