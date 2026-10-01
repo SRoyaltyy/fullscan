@@ -5,7 +5,7 @@ Is today good for each *kind* of stock? Labels come from `data/universe/`; this 
 ## Snapshot
 
 - **Risk state:** UNKNOWN
-- **Yields:** unknown (llm_factor_fallback) | **Dollar:** strong (dxy) | **Oil:** rising | **VIX:** calm (ratio 0.90 via vix/vix3m) spot 16.55
+- **Yields:** flat (fred_dgs10) | **Dollar:** strong (dxy) | **Oil:** rising | **VIX:** calm (ratio 0.90 via vix/vix3m) spot 16.55
 - **Fear & Greed:** n/a | **Yield/SPX 5d corr:** -0.63
 - **High-impact events:** 4 bullish vs 1 bearish | China: bull
 - ⚠️ **Data gaps:** general predict run, general predict factor scoreboard
@@ -57,26 +57,26 @@ Is today good for each *kind* of stock? Labels come from `data/universe/`; this 
 
 | Label | Weather | Conf | Why |
 |---|---|---|---|
-| profit:no | ❔ unknown | low | no yields/risk signals |
-| profit:thin | ❔ unknown | low | no yields/risk signals |
-| profit:yes | ❔ unknown | low | no yields/risk signals |
+| profit:no | ⛅ neutral | low | risk-unknown, F&G None |
+| profit:yes | ⛅ neutral | low | — |
+| profit:thin | ⛅ neutral | low | — |
 
 ## Style (growth/value)
 
 | Label | Weather | Conf | Why |
 |---|---|---|---|
-| style:growth | ❔ unknown | low | no yields/risk signals |
-| style:blend | ❔ unknown | low | no yields/risk signals |
-| style:value | ❔ unknown | low | no yields/risk signals |
+| style:growth | ⛅ neutral | low | yields flat/unknown |
+| style:value | ⛅ neutral | low | yields flat/unknown |
+| style:blend | ⛅ neutral | low | — |
 
 ## Leverage
 
 | Label | Weather | Conf | Why |
 |---|---|---|---|
-| lev:low | ❔ unknown | low | no signals |
-| lev:mid | ❔ unknown | low | no signals |
-| lev:high | ❔ unknown | low | no signals |
-| lev:neg_equity | ❔ unknown | low | no signals |
+| lev:high | ⛅ neutral | low | — |
+| lev:low | ⛅ neutral | low | — |
+| lev:mid | ⛅ neutral | low | — |
+| lev:neg_equity | 🌧️ hostile | low | negative equity is distressed in any regime |
 
 ## Momentum state
 
