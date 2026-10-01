@@ -1,0 +1,111 @@
+{
+  "date": "2026-10-01",
+  "generated_at": "2026-10-01T16:22:53.120993-04:00",
+  "timezone": "America/New_York",
+  "source": "live",
+  "source_url": "https://elite.finviz.com/",
+  "archive_snapshot_ts": null,
+  "archive_snapshot_at": null,
+  "archive_url": null,
+  "clock_legal": true,
+  "clock_same_morning": false,
+  "clock_use": "next_open",
+  "clock_legal_for": "2026-10-02",
+  "capture_slot": "close",
+  "clock_rule": "Live post-close answer-key (~16:05 ET). Always next_open for the NEXT session (2026-10-02) — never same_morning. Writes *_finviz_market_digest_close.* only. Capture only — not tape_anchor / predict / #210.",
+  "kind": "finviz_homepage_market_digest_close",
+  "represents": "Finviz homepage post-close answer-key. clock_use is always next_open; clock_legal_for is the next NYSE session. Lives at *_finviz_market_digest_close.*. Does not replace the same_morning warm-up file. Not quote-page ticker blurbs.",
+  "error": null,
+  "headline": "US stocks closed higher as tech rebounded on pullback in 10-year yield from 2002-era highs ahead of September jobs report",
+  "raw_text": "- The S&P 500 ($SPX) rose 0.24% to 7,665.76, the Dow ($DJI) added about 0.10%, the Nasdaq ($COMP) and Nasdaq 100 ($NDX) gained roughly 0.36%, and the Russell 2000 (IWM) advanced 0.37% after a late rebound led by software and chip stocks.\n- The 10-year Treasury yield spiked to 5.3445%, its highest level since 2002, before retreating from multi-decade highs, easing pressure on equities after earlier weighing on rate-sensitive real estate investment trusts and utilities and pushing 30-year mortgage rates to nearly 7.3%.\n- Weekly initial jobless claims held at 197,000 for the week, the fourth straight weekly decline, while the four-week average rose to 200,000 and continuing claims fell to 1.701 million, reinforcing labor-market resilience even as manufacturing data highlighted sustained inflation pressures.\n- Accenture (ACN) jumped about 17–17.4% after fiscal Q4 adjusted EPS of $3.29 beat the $3.18 consensus on revenue of $18.68 billion versus $18.03 billion expected, supported by record managed services bookings of $12.8 billion and upbeat fiscal 2027 guidance, lifting Cognizant (CTSH) roughly 7% on read-across.\n- Synopsys (SNPS) climbed about 13–13.1% on a strong growth outlook and news of a licensing deal worth more than $1 billion with Amazon Web Services (AMZN) plus an AI-chip partnership with OpenAI (OAIW).\n- Coherent (COHR) gained 10% after unveiling its PhotonLink optics platform for AI data centers and receiving a new Outperform rating from Bernstein.\n- Micron (MU) ultimately joined the chip rally as investors digested earnings that beat estimates with nearly quadrupled revenue, roughly $32 billion in AI-related customer commitments, and a raised Q1 outlook following an initially mixed, near-flat reaction.\n- Corteva (CTVA) plunged 84%, wiping out more than $42 billion in market value in a move tied to a major corporate action.\n- After the close, Nike (NKE) reported quarterly results, while Anthropic (ANTW) advanced initial public offering plans targeting a mid-November listing.\n- Investors looked ahead to tomorrow’s September employment report and several scheduled Federal Reserve speeches as the next key macro catalysts.",
+  "raw_summary_md": "- The **S&P 500** ([$SPX](https://finviz.com/index/SPX?p=d)) **rose 0.24% to 7,665.76**, the **Dow** ([$DJI](https://finviz.com/index/DJI?p=d)) **added about 0.10%**, the **Nasdaq** ([$COMP](https://finviz.com/index/COMP?p=d)) and **Nasdaq 100** ([$NDX](https://finviz.com/index/NDX?p=d)) **gained roughly 0.36%**, and the **Russell 2000** ([IWM](https://finviz.com/quote?t=IWM)) **advanced 0.37% after a late rebound led by software and chip stocks**.\n- The **10-year Treasury yield spiked to 5.3445%, its highest level since 2002**, before retreating from multi-decade highs, easing pressure on equities after earlier weighing on rate-sensitive real estate investment trusts and utilities and pushing **30-year mortgage rates to nearly 7.3%**.\n- Weekly **initial jobless claims held at 197,000 for the week, the fourth straight weekly decline**, while the **four-week average rose to 200,000** and **continuing claims fell to 1.701 million**, reinforcing **labor-market resilience** even as **manufacturing data highlighted sustained inflation pressures**.\n- **Accenture** ([ACN](https://finviz.com/quote?t=ACN)) **jumped about 17–17.4%** after **fiscal Q4 adjusted EPS of $3.29 beat the $3.18 consensus** on **revenue of $18.68 billion versus $18.03 billion expected**, supported by **record managed services bookings of $12.8 billion** and **upbeat fiscal 2027 guidance**, lifting **Cognizant** ([CTSH](https://finviz.com/quote?t=CTSH)) **roughly 7% on read-across**.\n- **Synopsys** ([SNPS](https://finviz.com/quote?t=SNPS)) **climbed about 13–13.1%** on a strong growth outlook and news of a **licensing deal worth more than $1 billion with Amazon Web Services** ([AMZN](https://finviz.com/quote?t=AMZN)) plus an **AI-chip partnership with OpenAI** ([OAIW](https://finviz.com/quote?t=OAIW)).\n- **Coherent** ([COHR](https://finviz.com/quote?t=COHR)) **gained 10%** after unveiling its **PhotonLink optics platform for AI data centers** and receiving a new **Outperform rating from Bernstein**.\n- **Micron** ([MU](https://finviz.com/quote?t=MU)) ultimately **joined the chip rally** as investors digested **earnings that beat estimates with nearly quadrupled revenue**, roughly **$32 billion in AI-related customer commitments**, and a **raised Q1 outlook** following an initially mixed, near-flat reaction.\n- **Corteva** ([CTVA](https://finviz.com/quote?t=CTVA)) **plunged 84%, wiping out more than $42 billion in market value** in a move tied to a **major corporate action**.\n- After the close, **Nike** ([NKE](https://finviz.com/quote?t=NKE)) **reported quarterly results**, while **Anthropic** ([ANTW](https://finviz.com/quote?t=ANTW)) **advanced initial public offering plans targeting a mid-November listing**.\n- Investors looked ahead to **tomorrow’s September employment report** and several scheduled **Federal Reserve speeches** as the **next key macro catalysts**.",
+  "index_moves": [
+    {
+      "name": "S&P 500",
+      "code": "SPX",
+      "change_pct": 0.24,
+      "verb": "rose"
+    },
+    {
+      "name": "Dow",
+      "code": "DJI",
+      "change_pct": 0.1,
+      "verb": "added"
+    },
+    {
+      "name": "Nasdaq",
+      "code": "COMP",
+      "change_pct": 0.36,
+      "verb": "gained"
+    },
+    {
+      "name": "Russell 2000",
+      "code": "RUT",
+      "change_pct": 0.37,
+      "verb": "advanced"
+    }
+  ],
+  "oil": null,
+  "cpi": null,
+  "fed_odds": null,
+  "named_tickers": [
+    "ACN",
+    "CTSH",
+    "SNPS",
+    "AMZN",
+    "OAIW",
+    "COHR",
+    "MU",
+    "CTVA",
+    "NKE",
+    "ANTW"
+  ],
+  "named_leaders": [
+    "ACN",
+    "CTSH",
+    "SNPS",
+    "AMZN",
+    "OAIW",
+    "COHR",
+    "MU",
+    "CTVA",
+    "NKE",
+    "ANTW"
+  ],
+  "calendar": [
+    "Investors looked ahead to tomorrow’s September employment report and several scheduled Federal Reserve speeches as the next key macro catalysts."
+  ],
+  "prior_close": {
+    "spx": 0.24,
+    "nasdaq": 0.36,
+    "dow": 0.1
+  },
+  "cpi_fed": {
+    "cpi": null,
+    "fed_odds": null
+  },
+  "next_session_calendar": {
+    "housing": false,
+    "retail": false,
+    "fed": true,
+    "bullets": [
+      "Investors looked ahead to tomorrow’s September employment report and several scheduled Federal Reserve speeches as the next key macro catalysts."
+    ],
+    "text": "Investors looked ahead to tomorrow’s September employment report and several scheduled Federal Reserve speeches as the next key macro catalysts."
+  },
+  "earnings_slate": {
+    "tickers": [],
+    "text": ""
+  },
+  "geo_grain": {
+    "geo": false,
+    "grain": false,
+    "flags": [],
+    "text": ""
+  },
+  "finviz_id": 299785,
+  "finviz_ticker": "$MARKET",
+  "finviz_published_at": "2026-10-01T16:06:54.517",
+  "finviz_source": "market_summary",
+  "finviz_sentiment": "good"
+}

@@ -1,6 +1,6 @@
 {
   "date": "2026-10-01",
-  "generated_at": "2026-10-01T14:57:21.719572-04:00",
+  "generated_at": "2026-10-01T16:22:54.279708-04:00",
   "overall": "OK",
   "ranker_ready": true,
   "blockers": [],
@@ -84,7 +84,7 @@
       "inputs_ready": true,
       "n_req_ok": 1,
       "n_req": 1,
-      "n_opt_ok": 3,
+      "n_opt_ok": 5,
       "n_opt": 5,
       "files": [
         {
@@ -146,10 +146,10 @@
           "name": "Close answer-key JSON (*_finviz_market_digest_close)",
           "path": "01_daily/news/2026-10-01_finviz_market_digest_close.json",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "",
+          "size": 8060,
+          "said": "US stocks closed higher as tech rebounded on pullback in 10-year yield from 2002-era highs ahead of September jobs report \u00b7 leaders ACN, CTSH, SNPS, AMZN, OAIW, COHR \u00b7 good",
           "bullets": []
         },
         {
@@ -157,11 +157,14 @@
           "name": "Close answer-key MD (*_finviz_market_digest_close)",
           "path": "01_daily/news/2026-10-01_finviz_market_digest_close.md",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 3858,
+          "said": "Finviz homepage market digest (close) \u2014 2026-10-01",
+          "bullets": [
+            "Generated:** 2026-10-01T16:22:53.120993-04:00 (America/New_York)",
+            "Source:** `live`"
+          ]
         }
       ],
       "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
@@ -871,7 +874,7 @@
           "size": 44432,
           "said": "Stock book \u2014 2026-10-01",
           "bullets": [
-            "_Generated 2026-10-01T14:07:59.872433-04:00_",
+            "_Generated 2026-10-01T15:03:07.493933-04:00_",
             "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
           ]
         },
@@ -2816,6 +2819,31 @@
         }
       ],
       "preview": "2026-10-01 BUY BKR, CNR, NTAP, BAND, NTSK \u00b7 SELL NEOV, FCEL, OKLO, EOSE, POWL, TE, SKYX, AMSC \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href \u00b7 2026-10-01 BUY BKR, CNR, NTAP, BAND, NTSK \u00b7 SELL NEOV, FCEL, OKLO, EOSE, POWL, TE, SKYX, AMSC \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-10-01 BUY BKR, CNR, NTAP, BAND, NTSK \u00b7 SELL NEOV, FCEL, OKLO, EOSE, POWL, TE, SKYX, AMSC \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-10-01 BUY BKR, CNR, NTAP, BAND, NTSK \u00b7 SELL NEOV, FCEL, OKLO, EOSE, POWL, TE, SKYX, AMSC \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 "
+    },
+    {
+      "key": "finviz_market_digest_close",
+      "title": "Finviz homepage market digest (close)",
+      "date": "2026-10-01",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-01T16:22:53.150792-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-10-01_finviz_market_digest_close.json",
+          "ok": true,
+          "reason": "",
+          "size": 8060,
+          "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for"
+        },
+        {
+          "path": "01_daily/news/2026-10-01_finviz_market_digest_close.md",
+          "ok": true,
+          "reason": "",
+          "size": 3858,
+          "preview": "# Finviz homepage market digest (close) \u2014 2026-10-01\n**Generated:** 2026-10-01T16:22:53.120993-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stocks closed higher as tech rebounded on pullback in 10-year yield from 2002-era highs ahead of September jobs report\n**Prior close:** SPX +0.24%  Nasdaq +0.36%  Dow +0.10%\n**SPX:** +0.24%  **Nasdaq:** +0.36%  **Dow:** +0.10%\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** ACN, CTSH, SNPS, AMZN, OAIW, COHR, MU, CTVA, NKE, ANTW\n**Next session:** housing no \u00b7 retail no \u00b7 Fed yes\n**Earnings slate:** \u2014\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-10-02\n**Clock use:** `next_open`"
+        }
+      ],
+      "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest (close) \u2014 2026-10-01\n**Generated:** 2026-10-01T16:22:53.120993-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stocks closed higher as tech rebounded on pullback in 10-year yield from 2002-era highs ahead of September jobs report\n**Prior close:** SPX +0.24%  Nasdaq +0.36%  Dow +0.10%\n**SPX:** +0.24%  **Nasdaq:** +0.36%  **Dow:** +0.10%\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** ACN, CTSH, SNPS, AMZN, OAIW, COHR, MU, CTVA, NKE, ANTW\n**Next session:** housing no \u00b7 retail no \u00b7 Fed yes\n**Earnings slate:** \u2014\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-10-02\n**Clock use:** `next_open`"
     }
   ],
   "href": {
