@@ -1,6 +1,6 @@
 {
   "date": "2026-10-01",
-  "generated_at": "2026-10-01T05:41:35.130564-04:00",
+  "generated_at": "2026-10-01T05:41:52.504904-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -75,7 +75,7 @@
           "size": 17897,
           "said": "MAP HEAT \u2014 2026-10-01",
           "bullets": [
-            "Export `finviz_2026-09-30.csv` \u00b7 11616 names \u00b7 generated 2026-10-01T05:41:34.891454-04:00",
+            "Export `finviz_2026-10-01.csv` \u00b7 11616 names \u00b7 generated 2026-10-01T05:41:52.261525-04:00",
             "TAPE (live futures)"
           ]
         }
@@ -101,10 +101,10 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 96489,
-          "said": "5893 tickers \u00b7 1952 signals \u00b7 top ABT, AEM, AJG, AME, AMGN, AON, APH, APO",
+          "size": 97000,
+          "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
           "bullets": [
-            "Abbott launches Freenomes colorectal cancer screening test",
+            "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
             "Agnico Eagle Shares Fall 4.9% as Gold Prices Decline",
             "Banks have profited from idle cash for years. AI agents could change that."
           ]
@@ -116,10 +116,10 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 11634,
+          "size": 11812,
           "said": "Finviz Daily Digest \u2014 2026-10-01",
           "bullets": [
-            "_Generated 2026-10-01T05:40:09.075074-04:00 \u00b7 export=data/exports/finviz_2026-09-30.csv \u00b7 ticker digests=5893 \u00b7 high-signal=1952_",
+            "_Generated 2026-10-01T05:40:10.416811-04:00 \u00b7 export=data/exports/finviz_2026-10-01.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_",
             "Major indices (live quote page)"
           ]
         },
@@ -144,7 +144,7 @@
           "size": 2791,
           "said": "Finviz homepage market digest \u2014 2026-10-01",
           "bullets": [
-            "Generated:** 2026-10-01T05:40:15.301728-04:00 (America/New_York)",
+            "Generated:** 2026-10-01T05:40:33.905244-04:00 (America/New_York)",
             "Source:** `live`"
           ]
         },
@@ -171,9 +171,9 @@
           "bullets": []
         }
       ],
-      "said": "5893 tickers \u00b7 1952 signals \u00b7 top ABT, AEM, AJG, AME, AMGN, AON, APH, APO",
+      "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
       "bullets": [
-        "Abbott launches Freenomes colorectal cancer screening test",
+        "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
         "Agnico Eagle Shares Fall 4.9% as Gold Prices Decline",
         "Banks have profited from idle cash for years. AI agents could change that."
       ]
@@ -196,10 +196,10 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 96489,
-          "said": "5893 tickers \u00b7 1952 signals \u00b7 top ABT, AEM, AJG, AME, AMGN, AON, APH, APO",
+          "size": 97000,
+          "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
           "bullets": [
-            "Abbott launches Freenomes colorectal cancer screening test",
+            "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
             "Agnico Eagle Shares Fall 4.9% as Gold Prices Decline",
             "Banks have profited from idle cash for years. AI agents could change that."
           ]
@@ -508,10 +508,10 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 96489,
-          "said": "5893 tickers \u00b7 1952 signals \u00b7 top ABT, AEM, AJG, AME, AMGN, AON, APH, APO",
+          "size": 97000,
+          "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
           "bullets": [
-            "Abbott launches Freenomes colorectal cancer screening test",
+            "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
             "Agnico Eagle Shares Fall 4.9% as Gold Prices Decline",
             "Banks have profited from idle cash for years. AI agents could change that."
           ]
@@ -597,10 +597,10 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 96489,
-          "said": "5893 tickers \u00b7 1952 signals \u00b7 top ABT, AEM, AJG, AME, AMGN, AON, APH, APO",
+          "size": 97000,
+          "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
           "bullets": [
-            "Abbott launches Freenomes colorectal cancer screening test",
+            "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
             "Agnico Eagle Shares Fall 4.9% as Gold Prices Decline",
             "Banks have profited from idle cash for years. AI agents could change that."
           ]
@@ -671,10 +671,10 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 96489,
-          "said": "5893 tickers \u00b7 1952 signals \u00b7 top ABT, AEM, AJG, AME, AMGN, AON, APH, APO",
+          "size": 97000,
+          "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
           "bullets": [
-            "Abbott launches Freenomes colorectal cancer screening test",
+            "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
             "Agnico Eagle Shares Fall 4.9% as Gold Prices Decline",
             "Banks have profited from idle cash for years. AI agents could change that."
           ]
@@ -1030,6 +1030,31 @@
         }
       ],
       "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-10-01\nExport `finviz_2026-09-30.csv` \u00b7 11616 names \u00b7 generated 2026-10-01T05:41:34.891454-04:00"
+    },
+    {
+      "key": "map_heat",
+      "title": "Map heat morning overlay",
+      "date": "2026-10-01",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-01T05:41:52.310886-04:00",
+      "files": [
+        {
+          "path": "01_daily/map_heat/2026-10-01_map_heat.json",
+          "ok": true,
+          "reason": "",
+          "size": 274970,
+          "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape"
+        },
+        {
+          "path": "01_daily/map_heat/2026-10-01_map_heat.md",
+          "ok": true,
+          "reason": "",
+          "size": 18280,
+          "preview": "# MAP HEAT \u2014 2026-10-01\nExport `finviz_2026-10-01.csv` \u00b7 11616 names \u00b7 generated 2026-10-01T05:41:52.261525-04:00"
+        }
+      ],
+      "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-10-01\nExport `finviz_2026-10-01.csv` \u00b7 11616 names \u00b7 generated 2026-10-01T05:41:52.261525-04:00"
     }
   ],
   "href": {
