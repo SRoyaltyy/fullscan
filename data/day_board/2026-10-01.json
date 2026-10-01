@@ -1,6 +1,6 @@
 {
   "date": "2026-10-01",
-  "generated_at": "2026-10-01T05:52:16.328437-04:00",
+  "generated_at": "2026-10-01T05:52:44.742417-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -179,7 +179,7 @@
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 6,
+      "n_req_ok": 7,
       "n_req": 20,
       "n_opt_ok": 3,
       "n_opt": 3,
@@ -340,11 +340,11 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 6255,
-          "said": "0 up / 1 down / 0 flat",
+          "size": 6421,
+          "said": "1 up / 1 down / 0 flat",
           "bullets": [
             "XLB DOWN -0.8",
-            "XLC missing",
+            "XLC UP +7.5",
             "XLY missing",
             "XLP missing"
           ]
@@ -356,8 +356,8 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 7523,
-          "said": "all_ok=False \u00b7 sectors 1/11 \u00b7 12 fail",
+          "size": 7514,
+          "said": "all_ok=False \u00b7 sectors 2/11 \u00b7 11 fail",
           "bullets": [
             "finviz_market_digest:missing",
             "map_heat_research:missing",
@@ -405,11 +405,13 @@
           "name": "Sector predict \u2014 communication_services",
           "path": "01_daily/sectors/2026-10-01/communication_services_predict.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 17910,
+          "said": "UP mild 7.467",
+          "bullets": [
+            "- news_mode: **on"
+          ]
         },
         {
           "key": "sector_consumer_cyclical",
@@ -511,7 +513,7 @@
           "bullets": []
         }
       ],
-      "said": "general DOWN  -1.343 \u00b7 sectors 0 up / 1 down / 0 flat \u00b7 news news_mode: on \u00b7 400 raw / 95 usable \u00b7 Why are US treasury yields falling today? Federal Reserve interest rate hike in ",
+      "said": "general DOWN  -1.343 \u00b7 sectors 1 up / 1 down / 0 flat \u00b7 news news_mode: on \u00b7 400 raw / 95 usable \u00b7 Why are US treasury yields falling today? Federal Reserve interest rate hike in ",
       "bullets": [
         "bad: 10Y at 24-year high 5.34% on global bond selloff",
         "bad: Boeing MAX 10 certification halted",
@@ -519,7 +521,7 @@
         "good: Micron record Q4 validates AI-memory",
         "good: China PMI back above 50",
         "XLB DOWN -0.8",
-        "XLC missing",
+        "XLC UP +7.5",
         "XLY missing",
         "XLP missing",
         "XLE missing"
@@ -709,11 +711,11 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 6255,
-          "said": "0 up / 1 down / 0 flat",
+          "size": 6421,
+          "said": "1 up / 1 down / 0 flat",
           "bullets": [
             "XLB DOWN -0.8",
-            "XLC missing",
+            "XLC UP +7.5",
             "XLY missing",
             "XLP missing"
           ]
@@ -959,10 +961,10 @@
       "direction": "down"
     },
     "sectors": {
-      "said": "0 up / 1 down / 0 flat",
+      "said": "1 up / 1 down / 0 flat",
       "bullets": [
         "XLB DOWN -0.8",
-        "XLC missing",
+        "XLC UP +7.5",
         "XLY missing",
         "XLP missing",
         "XLE missing",
@@ -1739,70 +1741,70 @@
     },
     {
       "key": "sector_one",
-      "title": "Sector predict Basic Materials (1/11)",
+      "title": "Sector predict Communication Services (2/11)",
       "date": "2026-10-01",
       "ok": true,
       "pushed": true,
-      "at": "2026-10-01T05:52:16.067075-04:00",
+      "at": "2026-10-01T05:52:44.474699-04:00",
       "files": [
         {
-          "path": "01_daily/sectors/2026-10-01/basic_materials_predict.md",
+          "path": "01_daily/sectors/2026-10-01/communication_services_predict.md",
           "ok": true,
           "reason": "",
-          "size": 16347,
-          "preview": "# Sector Prediction \u2014 Basic Materials \u2014 2026-10-01\n- news_mode: **on**\n- ETF: **XLB**\n- rubric: `00_grounding/sectors/basic_materials.md`\n- predicted_direction: **down**\n- predicted_magnitude_band: **mild**\n- total_score: **-0.769** (mult 0.85)\n- regime: mixed\n- divergence_flagged: **True**\n- engine: v2 \u00b7 tape_anchor **0.629** (ES +0.17%, HG +0.66%, GC +0.90%, DX -0.02%, PM:XLB -0.02%) \u00b7 index_carry **-0.336** (general -1.343) \u00b7 llm_overlay **-1.062** (raw -1.062)"
+          "size": 17910,
+          "preview": "# Sector Prediction \u2014 Communication Services \u2014 2026-10-01\n- news_mode: **on**\n- ETF: **XLC**\n- rubric: `00_grounding/sectors/communication_services.md`\n- predicted_direction: **up**\n- predicted_magnitude_band: **mild**\n- total_score: **7.467** (mult 0.85)\n- regime: mixed\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **2.703** (NQ +0.50%, ES +0.17%, PM:XLC +0.50%) \u00b7 index_carry **-0.336** (general -1.343) \u00b7 llm_overlay **5.1** (raw 5.1)"
         },
         {
-          "path": "01_daily/sectors/2026-10-01/basic_materials_predict_trace.md",
+          "path": "01_daily/sectors/2026-10-01/communication_services_predict_trace.md",
           "ok": true,
           "reason": "",
-          "size": 5508,
-          "preview": "# Reasoning trace \u2014 SECTOR PREDICT Basic Materials 2026-10-01\nprovider: deepseek\nfallback_reason: prefer_deepseek\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (129,386 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Research.** The model wanted to know: *\"copper price LME October 2026 record backwardation inventories\"* \u2192 got 6 results (via gnews_rss)\n- COMMENTARY: Copper is pricing scarcity at a time of plenty - Reuters (https://news.google.com/rss/articles/CBMimgFBVV95cUxORGloVktmNEZpdzZiYlFBV0s0MnNMNk9zSXdnQzB1cHBPOEdveEJvXzI1enVZWFFzVUtkb1VEd3poVU1aWmRRQ3hLa1dtODF5NzNhN2xLdEJsbVppeHNkaEFpTTc4NGtkcFdiMFpnaGJMaTl5VDh5Q2pfaWJOc0RaaG56Q0w3ZXdCZ0pVNHd3YkoxVWZmdm5RamV3?oc=5)\n- Could copper lose its tariff premium? - think.ing.com (https://news.google.com/rss/articles/CBMid0F"
+          "size": 454,
+          "preview": "# Reasoning trace \u2014 SECTOR PREDICT Communication Services 2026-10-01\nprovider: deepseek\nfallback_reason: prefer_deepseek\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (136,278 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Done researching.** The model stopped searching and wrote its full analysis (16,112 characters)."
         },
         {
-          "path": "01_daily/_transcripts/2026-10-01_sector_basic_materials_predict.json",
+          "path": "01_daily/_transcripts/2026-10-01_sector_communication_services_predict.json",
           "ok": true,
           "reason": "",
-          "size": 174692,
+          "size": 156230,
           "preview": "keys: model, messages, provider, fallback_reason"
         },
         {
           "path": "01_daily/2026-10-01_preopen_qc.json",
           "ok": true,
           "reason": "",
-          "size": 7523,
+          "size": 7514,
           "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok"
         },
         {
           "path": "01_daily/sectors/2026-10-01/_qc.json",
           "ok": true,
           "reason": "",
-          "size": 1533,
+          "size": 1527,
           "preview": "keys: date, n_ok, n_total, summary, sectors"
         },
         {
           "path": "01_daily/sectors/2026-10-01/_BOARD.md",
           "ok": true,
           "reason": "",
-          "size": 1624,
-          "preview": "# Sector Board \u2014 2026-10-01\nGenerated: **2026-10-01T05:52:16.052192-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.)."
+          "size": 1684,
+          "preview": "# Sector Board \u2014 2026-10-01\nGenerated: **2026-10-01T05:52:44.459231-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.)."
         },
         {
           "path": "01_daily/sectors/2026-10-01/_board.json",
           "ok": true,
           "reason": "",
-          "size": 6255,
+          "size": 6421,
           "preview": "keys: date, generated_at, summary, sectors"
         },
         {
           "path": "03_scoreboard/scoreboard.json",
           "ok": true,
           "reason": "",
-          "size": 961015,
+          "size": 962125,
           "preview": "keys: runs"
         }
       ],
-      "preview": "# Sector Prediction \u2014 Basic Materials \u2014 2026-10-01\n- news_mode: **on**\n- ETF: **XLB**\n- rubric: `00_grounding/sectors/basic_materials.md`\n- predicted_direction: **down**\n- predicted_magnitude_band: **mild**\n- total_score: **-0.769** (mult 0.85)\n- regime: mixed\n- divergence_flagged: **True**\n- engine: v2 \u00b7 tape_anchor **0.629** (ES +0.17%, HG +0.66%, GC +0.90%, DX -0.02%, PM:XLB -0.02%) \u00b7 index_carry **-0.336** (general -1.343) \u00b7 llm_overlay **-1.062** (raw -1.062) \u00b7 # Reasoning trace \u2014 SECTOR PREDICT Basic Materials 2026-10-01\nprovider: deepseek\nfallback_reason: prefer_deepseek\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (129,386 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Research.** The model wanted to know: *\"copper price LME October 2026 record backwardation inventories\"* \u2192 got 6 results (via gnews_rss)\n- COMMENTARY: Copper is pricing scarcity at a time of plenty - Reuters (https://news.google.com/rss/articles/CBMimgFBVV95cUxORGloVktmNEZpdzZiYlFBV0s0MnNMNk9zSXdnQzB1cHBPOEdveEJvXzI1enVZWFFzVUtkb1VEd3poVU1aWmRRQ3hLa1dtODF5NzNhN2xLdEJsbVppeHNkaEFpTTc4NGtkcFdiM"
+      "preview": "# Sector Prediction \u2014 Communication Services \u2014 2026-10-01\n- news_mode: **on**\n- ETF: **XLC**\n- rubric: `00_grounding/sectors/communication_services.md`\n- predicted_direction: **up**\n- predicted_magnitude_band: **mild**\n- total_score: **7.467** (mult 0.85)\n- regime: mixed\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **2.703** (NQ +0.50%, ES +0.17%, PM:XLC +0.50%) \u00b7 index_carry **-0.336** (general -1.343) \u00b7 llm_overlay **5.1** (raw 5.1) \u00b7 # Reasoning trace \u2014 SECTOR PREDICT Communication Services 2026-10-01\nprovider: deepseek\nfallback_reason: prefer_deepseek\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (136,278 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Done researching.** The model stopped searching and wrote its full analysis (16,112 characters). \u00b7 keys: model, messages, provider, fallback_reason \u00b7 keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok \u00b7 keys: date, n_ok, n_total, summary, sectors \u00b7 # Sector Board \u2014 2026-10-01\nGenerated: **2026-10-01T05:52:44.459231-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sector"
     }
   ],
   "href": {
