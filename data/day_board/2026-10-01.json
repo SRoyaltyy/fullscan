@@ -1,12 +1,12 @@
 {
   "date": "2026-10-01",
-  "generated_at": "2026-10-01T06:20:32.687565-04:00",
+  "generated_at": "2026-10-01T06:20:54.878524-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
   "counts": {
-    "ok": 4,
-    "partial": 4,
+    "ok": 6,
+    "partial": 2,
     "fail": 0,
     "n": 8
   },
@@ -706,11 +706,11 @@
       "key": "stock_book",
       "name": "Stock Book ALL",
       "yaml": "stock_book_all.yml",
-      "status": "PARTIAL",
+      "status": "OK",
       "inputs_ready": true,
-      "n_req_ok": 2,
+      "n_req_ok": 4,
       "n_req": 4,
-      "n_opt_ok": 1,
+      "n_opt_ok": 3,
       "n_opt": 3,
       "files": [
         {
@@ -849,10 +849,10 @@
           "name": "Stock book JSON",
           "path": "data/stock_book/2026-10-01_stock_book.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "horizons=5 names=128",
+          "size": 1195778,
+          "said": "1d BUY NTAP, BAND, NTSK, FIS \u00b7 SELL NEOV, FCEL, OKLO, EOSE, POWL, TE \u00b7 -0.47090000000000004",
           "bullets": []
         },
         {
@@ -860,21 +860,24 @@
           "name": "Stock book MD",
           "path": "01_daily/2026-10-01_stock_book.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 38902,
+          "said": "Stock book \u2014 2026-10-01",
+          "bullets": [
+            "_Generated 2026-10-01T06:20:43.949755-04:00_",
+            "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
+          ]
         },
         {
           "key": "green",
           "name": "Green-pile JSON",
           "path": "data/stock_book/2026-10-01_green.json",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "",
+          "size": 585,
+          "said": "0 green \u00b7",
           "bullets": []
         },
         {
@@ -896,10 +899,10 @@
           "name": "Dashboard HTML",
           "path": "dashboard/index.html",
           "role": "optional",
-          "status": "FAIL",
-          "reason": "session 2026-10-01 not in dashboard dates (last=2026-09-25)",
+          "status": "OK",
+          "reason": "live-book poller + today.json (2026-10-01)",
           "size": 8945021,
-          "said": "session 2026-10-01 not in dashboard dates (last=2026-09-25)",
+          "said": "live-book poller + today.json (2026-10-01)",
           "bullets": []
         }
       ],
@@ -912,9 +915,9 @@
       "key": "publish",
       "name": "Dashboard / .io",
       "yaml": "deploy-dashboard.yml",
-      "status": "PARTIAL",
-      "inputs_ready": false,
-      "n_req_ok": 1,
+      "status": "OK",
+      "inputs_ready": true,
+      "n_req_ok": 2,
       "n_req": 2,
       "n_opt_ok": 0,
       "n_opt": 1,
@@ -924,10 +927,10 @@
           "name": "Stock book JSON",
           "path": "data/stock_book/2026-10-01_stock_book.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "horizons=5 names=128",
+          "size": 1195778,
+          "said": "1d BUY NTAP, BAND, NTSK, FIS \u00b7 SELL NEOV, FCEL, OKLO, EOSE, POWL, TE \u00b7 -0.47090000000000004",
           "bullets": []
         },
         {
@@ -935,10 +938,10 @@
           "name": "Dashboard HTML (repo)",
           "path": "dashboard/index.html",
           "role": "required",
-          "status": "FAIL",
-          "reason": "session 2026-10-01 not in dashboard dates (last=2026-09-25)",
+          "status": "OK",
+          "reason": "live-book poller + today.json (2026-10-01)",
           "size": 8945021,
-          "said": "session 2026-10-01 not in dashboard dates (last=2026-09-25)",
+          "said": "live-book poller + today.json (2026-10-01)",
           "bullets": []
         },
         {
@@ -974,8 +977,58 @@
   "news_mode": "on",
   "news_mode_reason": "",
   "selections": {
-    "buy_1d": [],
-    "sell_1d": [],
+    "buy_1d": [
+      {
+        "ticker": "NTAP",
+        "score": 0.36809651152058465
+      },
+      {
+        "ticker": "BAND",
+        "score": 0.691714825316514
+      },
+      {
+        "ticker": "NTSK",
+        "score": 0.4740209302059006
+      },
+      {
+        "ticker": "FIS",
+        "score": 0.4022715054834943
+      }
+    ],
+    "sell_1d": [
+      {
+        "ticker": "NEOV",
+        "score": -0.24052186293777258
+      },
+      {
+        "ticker": "FCEL",
+        "score": -0.24771562557005317
+      },
+      {
+        "ticker": "OKLO",
+        "score": -0.18134426558401684
+      },
+      {
+        "ticker": "EOSE",
+        "score": -0.3109103308907018
+      },
+      {
+        "ticker": "POWL",
+        "score": -0.08916943434921615
+      },
+      {
+        "ticker": "TE",
+        "score": -0.3016308080727555
+      },
+      {
+        "ticker": "SKYX",
+        "score": -0.29385284503774367
+      },
+      {
+        "ticker": "AMSC",
+        "score": -0.1446083275283982
+      }
+    ],
     "flatten": {},
     "general": {
       "said": "DOWN  -1.343",
@@ -2140,6 +2193,59 @@
         }
       ],
       "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 FPI, GMAB, ATRC, SFL, PBR-A \u00b7 2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 PANW, CVLT, AVPT, ATRC, FIGS"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-10-01",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-01T06:20:53.822868-04:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-10-01_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1195778,
+          "preview": "1d BUY NTAP, BAND, NTSK, FIS \u00b7 SELL NEOV, FCEL, OKLO, EOSE, POWL, TE, SKYX, AMSC"
+        },
+        {
+          "path": "data/stock_book/2026-10-01_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 585,
+          "preview": "green 0 \u00b7 "
+        },
+        {
+          "path": "data/stock_book/2026-10-01_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2443,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-10-01_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 8223,
+          "preview": "2026-10-01 BUY NTAP, BAND, NTSK, FIS \u00b7 SELL NEOV, FCEL, OKLO, EOSE, POWL, TE, SKYX, AMSC"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 8223,
+          "preview": "2026-10-01 BUY NTAP, BAND, NTSK, FIS \u00b7 SELL NEOV, FCEL, OKLO, EOSE, POWL, TE, SKYX, AMSC"
+        },
+        {
+          "path": "01_daily/2026-10-01_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 39770,
+          "preview": "# Stock book \u2014 2026-10-01\n_Generated 2026-10-01T06:20:43.949755-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY NTAP, BAND, NTSK, FIS \u00b7 SELL NEOV, FCEL, OKLO, EOSE, POWL, TE, SKYX, AMSC \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-10-01 BUY NTAP, BAND, NTSK, FIS \u00b7 SELL NEOV, FCEL, OKLO, EOSE, POWL, TE, SKYX, AMSC \u00b7 2026-10-01 BUY NTAP, BAND, NTSK, FIS \u00b7 SELL NEOV, FCEL, OKLO, EOSE, POWL, TE, SKYX, AMSC \u00b7 # Stock book \u2014 2026-10-01\n_Generated 2026-10-01T06:20:43.949755-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "href": {

@@ -1,16 +1,66 @@
 {
   "date": "2026-10-01",
-  "generated_at": "2026-10-01T06:20:32.687565-04:00",
+  "generated_at": "2026-10-01T06:20:54.878524-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
-    "ok": 4,
-    "partial": 4,
+    "ok": 6,
+    "partial": 2,
     "fail": 0,
     "n": 8
   },
-  "buy_1d": [],
-  "sell_1d": [],
+  "buy_1d": [
+    {
+      "ticker": "NTAP",
+      "score": 0.36809651152058465
+    },
+    {
+      "ticker": "BAND",
+      "score": 0.691714825316514
+    },
+    {
+      "ticker": "NTSK",
+      "score": 0.4740209302059006
+    },
+    {
+      "ticker": "FIS",
+      "score": 0.4022715054834943
+    }
+  ],
+  "sell_1d": [
+    {
+      "ticker": "NEOV",
+      "score": -0.24052186293777258
+    },
+    {
+      "ticker": "FCEL",
+      "score": -0.24771562557005317
+    },
+    {
+      "ticker": "OKLO",
+      "score": -0.18134426558401684
+    },
+    {
+      "ticker": "EOSE",
+      "score": -0.3109103308907018
+    },
+    {
+      "ticker": "POWL",
+      "score": -0.08916943434921615
+    },
+    {
+      "ticker": "TE",
+      "score": -0.3016308080727555
+    },
+    {
+      "ticker": "SKYX",
+      "score": -0.29385284503774367
+    },
+    {
+      "ticker": "AMSC",
+      "score": -0.1446083275283982
+    }
+  ],
   "flatten": {},
   "general": {
     "said": "DOWN  -1.343",
@@ -41,24 +91,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "sector_predict",
-      "title": "Per-sector predict (all 11)",
-      "date": "2026-10-01",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-01T06:07:55.819350-04:00",
-      "files": [
-        {
-          "path": "01_daily/sectors/2026-10-01",
-          "ok": true,
-          "reason": "",
-          "size": 4096,
-          "preview": "11/11 sector predicts ok: basic_materials, communication_services, consumer_cyclical, consumer_defensive, energy, financial, healthcare, industrials"
-        }
-      ],
-      "preview": "11/11 sector predicts ok: basic_materials, communication_services, consumer_cyclical, consumer_defensive, energy, financial, healthcare, industrials"
-    },
     {
       "key": "sector_board",
       "title": "Sector board",
@@ -212,6 +244,59 @@
         }
       ],
       "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 FPI, GMAB, ATRC, SFL, PBR-A \u00b7 2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 PANW, CVLT, AVPT, ATRC, FIGS"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-10-01",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-01T06:20:53.822868-04:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-10-01_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1195778,
+          "preview": "1d BUY NTAP, BAND, NTSK, FIS \u00b7 SELL NEOV, FCEL, OKLO, EOSE, POWL, TE, SKYX, AMSC"
+        },
+        {
+          "path": "data/stock_book/2026-10-01_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 585,
+          "preview": "green 0 \u00b7 "
+        },
+        {
+          "path": "data/stock_book/2026-10-01_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2443,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-10-01_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 8223,
+          "preview": "2026-10-01 BUY NTAP, BAND, NTSK, FIS \u00b7 SELL NEOV, FCEL, OKLO, EOSE, POWL, TE, SKYX, AMSC"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 8223,
+          "preview": "2026-10-01 BUY NTAP, BAND, NTSK, FIS \u00b7 SELL NEOV, FCEL, OKLO, EOSE, POWL, TE, SKYX, AMSC"
+        },
+        {
+          "path": "01_daily/2026-10-01_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 39770,
+          "preview": "# Stock book \u2014 2026-10-01\n_Generated 2026-10-01T06:20:43.949755-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY NTAP, BAND, NTSK, FIS \u00b7 SELL NEOV, FCEL, OKLO, EOSE, POWL, TE, SKYX, AMSC \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-10-01 BUY NTAP, BAND, NTSK, FIS \u00b7 SELL NEOV, FCEL, OKLO, EOSE, POWL, TE, SKYX, AMSC \u00b7 2026-10-01 BUY NTAP, BAND, NTSK, FIS \u00b7 SELL NEOV, FCEL, OKLO, EOSE, POWL, TE, SKYX, AMSC \u00b7 # Stock book \u2014 2026-10-01\n_Generated 2026-10-01T06:20:43.949755-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
