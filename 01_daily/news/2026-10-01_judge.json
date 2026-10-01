@@ -1,0 +1,14 @@
+{
+ "risk_tilt": "off",
+ "macros": [
+  "bearish",
+  "bearish"
+ ],
+ "sector_tilts": {
+  "Aerospace": "bearish",
+  "Trade": "bullish"
+ },
+ "tickers": {},
+ "b1_inject": "NEWS_JUDGE: n=8 rescued=3\nMACRO hike-odds: [hawkish] ~70% October hike (UBS/market ~69%) into sticky-PCE week (regime/1d-1w)\nMACRO yields-equities: [bearish] Treasury selloff already dropping SPX/Dow/Nasdaq; Iran relief ignored (session/1d)\nMACRO oil-USD: [mixed] oil surge + DXY feeding hike bets; XLE bid vs duration (session/1d-1w)\nMACRO gold: [bearish] gold \u22123.4% / 7-week low as real yields jump (session/1d-1w)\nMACRO term-structure: [hawkish] no-cut-before-2028 + curve near inversion (regime/1w-1m)\nSECTOR aerospace: [bearish] BA MAX 10 FAA halt, ~31% undelivered 737 book (ITA/XLI)\nSECTOR trade: [bullish] US-China $60B tariff cut, modest vs rates (basket)\nINTERACTION: hike-odds+PCE+yields+gold+oil = one hawkish cluster; do not buy cyclicals/IWM; no kinetic B1; no mega-cap-beat offset\nWATCH: PCE still unresolved \u2014 do not emit through the binary; late \u201cyields ease\u201d CNBC vs selloff is two-sided noise",
+ "date": "2026-10-01"
+}
