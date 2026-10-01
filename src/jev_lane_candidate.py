@@ -33,7 +33,7 @@ THRESHOLDS={'q5':.35,'action':.65,'print':.65,'policy_path':.65,'reported_fact':
 ARTIFACT=re.compile(r'(?i)earnings call (?:transcript|highlights|summary)|morning squawk|\b\d+ key items shaping|earnings live updates|\bopinions on\b|what we know about|today.s news:|lead earnings movers')
 BARE_CALENDAR=re.compile(r'(?i)^.{1,100}\b(?:Q[1-4]\s+(?:FY)?20\d{2}|FQ[1-4]\s+20\d{2})\s+earnings(?:\s+\([^)]*\))?$')
 FORMULA='mechanism >= cutoff AND q5 junk/rumor/weather below veto thresholds AND any q5-change/action/print/policy_path/reported_fact/screen support above their respective thresholds'
-def protocol_sha():return sha(dict(version=VERSION,contract=CONTRACT_VERSION,rubric=RUBRIC,questions=QUESTIONS,thresholds=THRESHOLDS,formula=FORMULA,retries=3,weather_override='path_signal >= .90 or eligibility_qualifying >= override',eligibility_gate='qualifying >= cutoff; strong qualifying may supply missing support/mechanism',form_veto=[.50,.70],artifacts=[ARTIFACT.pattern,BARE_CALENDAR.pattern]))
+def protocol_sha():return sha(dict(version=VERSION,contract=CONTRACT_VERSION,rubric=RUBRIC,questions=QUESTIONS,thresholds=THRESHOLDS,formula=FORMULA,retries=3,weather_override='path_signal >= .90 or eligibility_qualifying >= override',eligibility_gate='qualifying >= cutoff; strong qualifying may supply support; mechanism remains >= .10',form_veto=[.50,.70],artifacts=[ARTIFACT.pattern,BARE_CALENDAR.pattern]))
 def decide(row,payload):
  answers=payload['answers'];s={}
  for key,q in QUESTIONS.items():
@@ -55,7 +55,7 @@ def decide(row,payload):
  if s['eligibility_qualifying']<t['eligibility']:veto='no_eligible_constraint'
  if ARTIFACT.search(row.get('title','')) or BARE_CALENDAR.search(row.get('title','')):veto='packaging_or_calendar'
  supported=s['eligibility_qualifying']>=t['eligibility_override'] or s['change']>=t['q5'] or any(s[k]>=t[k] for k in ('action','print','policy_path','reported_fact','screen','path_signal'))
- keep=not veto and (s['mechanism']>=t['mechanism'] or s['eligibility_qualifying']>=t['eligibility_override']) and supported
+ keep=not veto and (s['mechanism']>=t['mechanism'] or (s['eligibility_qualifying']>=t['eligibility_override'] and s['mechanism']>=.10)) and supported
  return dict(decision='keep' if keep else 'drop',reason=veto or ('constraint_change' if keep else 'no_supported_constraint'),policy_version=VERSION,protocol_sha256=protocol_sha(),model=payload.get('model','unknown'),answers=answers,signals=s,usage=payload.get('usage',{}),novelty_verified=bool(row.get('prior_events')))
 
 def evaluate(row,poster,key):

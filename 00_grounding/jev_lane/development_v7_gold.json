@@ -7043,7 +7043,7 @@
   "rounds": [
     {
       "round": 1,
-      "protocol_sha256": "af9d64f0bcd395414afaa3bc50aac82e7261d2655da62c9533549d126e13c773",
+      "protocol_sha256": "8adf85aa83e40ed83e1497b09460ba7c06cfee8bcf3b5e89fa17f040e5580e12",
       "rubric_sha256": "6295cd55f8b3de29053e4503239a3d446a5091107f5489386b72d082edac1d23",
       "jev_model": "jev-1.13.0",
       "teacher_model": "GPT-6 frontier assistant / Lane contract",
@@ -7754,7 +7754,7 @@
     },
     {
       "round": 2,
-      "protocol_sha256": "af9d64f0bcd395414afaa3bc50aac82e7261d2655da62c9533549d126e13c773",
+      "protocol_sha256": "8adf85aa83e40ed83e1497b09460ba7c06cfee8bcf3b5e89fa17f040e5580e12",
       "rubric_sha256": "6295cd55f8b3de29053e4503239a3d446a5091107f5489386b72d082edac1d23",
       "jev_model": "jev-1.13.0",
       "teacher_model": "GPT-6 frontier assistant / Lane contract",
@@ -8465,7 +8465,7 @@
     },
     {
       "round": 3,
-      "protocol_sha256": "af9d64f0bcd395414afaa3bc50aac82e7261d2655da62c9533549d126e13c773",
+      "protocol_sha256": "8adf85aa83e40ed83e1497b09460ba7c06cfee8bcf3b5e89fa17f040e5580e12",
       "rubric_sha256": "6295cd55f8b3de29053e4503239a3d446a5091107f5489386b72d082edac1d23",
       "jev_model": "jev-1.13.0",
       "teacher_model": "GPT-6 frontier assistant / Lane contract",
@@ -9178,7 +9178,7 @@
     },
     {
       "round": 4,
-      "protocol_sha256": "af9d64f0bcd395414afaa3bc50aac82e7261d2655da62c9533549d126e13c773",
+      "protocol_sha256": "8adf85aa83e40ed83e1497b09460ba7c06cfee8bcf3b5e89fa17f040e5580e12",
       "rubric_sha256": "6295cd55f8b3de29053e4503239a3d446a5091107f5489386b72d082edac1d23",
       "jev_model": "jev-1.13.0",
       "teacher_model": "GPT-6 frontier assistant / Lane contract",
@@ -9889,7 +9889,7 @@
     },
     {
       "round": 5,
-      "protocol_sha256": "af9d64f0bcd395414afaa3bc50aac82e7261d2655da62c9533549d126e13c773",
+      "protocol_sha256": "8adf85aa83e40ed83e1497b09460ba7c06cfee8bcf3b5e89fa17f040e5580e12",
       "rubric_sha256": "6295cd55f8b3de29053e4503239a3d446a5091107f5489386b72d082edac1d23",
       "jev_model": "jev-1.13.0",
       "teacher_model": "GPT-6 frontier assistant / Lane contract",
@@ -10602,7 +10602,7 @@
     },
     {
       "round": 6,
-      "protocol_sha256": "af9d64f0bcd395414afaa3bc50aac82e7261d2655da62c9533549d126e13c773",
+      "protocol_sha256": "8adf85aa83e40ed83e1497b09460ba7c06cfee8bcf3b5e89fa17f040e5580e12",
       "rubric_sha256": "6295cd55f8b3de29053e4503239a3d446a5091107f5489386b72d082edac1d23",
       "jev_model": "jev-1.13.0",
       "teacher_model": "GPT-6 frontier assistant / Lane contract",
@@ -11315,7 +11315,7 @@
     },
     {
       "round": 7,
-      "protocol_sha256": "af9d64f0bcd395414afaa3bc50aac82e7261d2655da62c9533549d126e13c773",
+      "protocol_sha256": "8adf85aa83e40ed83e1497b09460ba7c06cfee8bcf3b5e89fa17f040e5580e12",
       "rubric_sha256": "6295cd55f8b3de29053e4503239a3d446a5091107f5489386b72d082edac1d23",
       "jev_model": "jev-1.13.0",
       "teacher_model": "GPT-6 frontier assistant / Lane contract",
@@ -12024,7 +12024,7 @@
     },
     {
       "round": 8,
-      "protocol_sha256": "af9d64f0bcd395414afaa3bc50aac82e7261d2655da62c9533549d126e13c773",
+      "protocol_sha256": "8adf85aa83e40ed83e1497b09460ba7c06cfee8bcf3b5e89fa17f040e5580e12",
       "rubric_sha256": "6295cd55f8b3de29053e4503239a3d446a5091107f5489386b72d082edac1d23",
       "jev_model": "jev-1.13.0",
       "teacher_model": "GPT-6 frontier assistant / Lane contract",
@@ -12737,7 +12737,7 @@
     },
     {
       "round": 9,
-      "protocol_sha256": "af9d64f0bcd395414afaa3bc50aac82e7261d2655da62c9533549d126e13c773",
+      "protocol_sha256": "8adf85aa83e40ed83e1497b09460ba7c06cfee8bcf3b5e89fa17f040e5580e12",
       "rubric_sha256": "6295cd55f8b3de29053e4503239a3d446a5091107f5489386b72d082edac1d23",
       "jev_model": "jev-1.13.0",
       "teacher_model": "GPT-6 frontier assistant / Lane contract",
@@ -13444,7 +13444,7 @@
     },
     {
       "round": 10,
-      "protocol_sha256": "af9d64f0bcd395414afaa3bc50aac82e7261d2655da62c9533549d126e13c773",
+      "protocol_sha256": "8adf85aa83e40ed83e1497b09460ba7c06cfee8bcf3b5e89fa17f040e5580e12",
       "rubric_sha256": "6295cd55f8b3de29053e4503239a3d446a5091107f5489386b72d082edac1d23",
       "jev_model": "jev-1.13.0",
       "teacher_model": "GPT-6 frontier assistant / Lane contract",
