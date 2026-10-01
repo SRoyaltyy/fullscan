@@ -1,14 +1,14 @@
 {
   "date": "2026-10-01",
-  "generated_at": "2026-10-01T06:07:56.142603-04:00",
+  "generated_at": "2026-10-01T06:08:01.564071-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
     "MISSING AB checklist enriched `data/ab_checklist/2026-10-01_ab_checklist_enriched.csv` \u2014 missing"
   ],
   "counts": {
-    "ok": 4,
-    "partial": 3,
+    "ok": 3,
+    "partial": 4,
     "fail": 1,
     "n": 8
   },
@@ -340,7 +340,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 7954,
+          "size": 8253,
           "said": "2 up / 9 down / 0 flat",
           "bullets": [
             "XLB DOWN -0.8",
@@ -701,7 +701,7 @@
       "inputs_ready": false,
       "n_req_ok": 1,
       "n_req": 4,
-      "n_opt_ok": 2,
+      "n_opt_ok": 1,
       "n_opt": 3,
       "files": [
         {
@@ -727,7 +727,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 7954,
+          "size": 8253,
           "said": "2 up / 9 down / 0 flat",
           "bullets": [
             "XLB DOWN -0.8",
@@ -883,10 +883,10 @@
           "name": "Dashboard HTML",
           "path": "dashboard/index.html",
           "role": "optional",
-          "status": "OK",
-          "reason": "live-book poller + today.json (2026-10-01)",
+          "status": "FAIL",
+          "reason": "session 2026-10-01 not in dashboard dates (last=2026-09-25)",
           "size": 8945021,
-          "said": "live-book poller + today.json (2026-10-01)",
+          "said": "session 2026-10-01 not in dashboard dates (last=2026-09-25)",
           "bullets": []
         }
       ],
@@ -899,9 +899,9 @@
       "key": "publish",
       "name": "Dashboard / .io",
       "yaml": "deploy-dashboard.yml",
-      "status": "OK",
+      "status": "PARTIAL",
       "inputs_ready": false,
-      "n_req_ok": 2,
+      "n_req_ok": 1,
       "n_req": 2,
       "n_opt_ok": 0,
       "n_opt": 1,
@@ -922,10 +922,10 @@
           "name": "Dashboard HTML (repo)",
           "path": "dashboard/index.html",
           "role": "required",
-          "status": "OK",
-          "reason": "live-book poller + today.json (2026-10-01)",
+          "status": "FAIL",
+          "reason": "session 2026-10-01 not in dashboard dates (last=2026-09-25)",
           "size": 8945021,
-          "said": "live-book poller + today.json (2026-10-01)",
+          "said": "session 2026-10-01 not in dashboard dates (last=2026-09-25)",
           "bullets": []
         },
         {
@@ -1973,6 +1973,24 @@
         }
       ],
       "preview": "11/11 sector predicts ok: basic_materials, communication_services, consumer_cyclical, consumer_defensive, energy, financial, healthcare, industrials"
+    },
+    {
+      "key": "sector_board",
+      "title": "Sector board",
+      "date": "2026-10-01",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-01T06:08:01.241353-04:00",
+      "files": [
+        {
+          "path": "01_daily/sectors/2026-10-01/_board.json",
+          "ok": true,
+          "reason": "",
+          "size": 8253,
+          "preview": "keys: date, generated_at, summary, sectors"
+        }
+      ],
+      "preview": "keys: date, generated_at, summary, sectors"
     }
   ],
   "href": {

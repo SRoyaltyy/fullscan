@@ -1,7 +1,7 @@
 {
   "date": "2026-10-01",
-  "generated_at": "2026-10-01T06:07:49.137627-04:00",
-  "summary": "",
+  "generated_at": "2026-10-01T06:08:01.229023-04:00",
+  "summary": "11/11 via deepseek (fallback: prefer_deepseek)",
   "sectors": [
     {
       "sector": "Basic Materials",
@@ -26,8 +26,8 @@
         "S4_ETF_TAPE": 0.0
       },
       "status": "OK",
-      "provider": "",
-      "fallback_reason": ""
+      "provider": "deepseek",
+      "fallback_reason": "prefer_deepseek"
     },
     {
       "sector": "Communication Services",
@@ -52,8 +52,8 @@
         "S4_ETF_TAPE": 1.0
       },
       "status": "OK",
-      "provider": "",
-      "fallback_reason": ""
+      "provider": "deepseek",
+      "fallback_reason": "prefer_deepseek"
     },
     {
       "sector": "Consumer Cyclical",
@@ -78,8 +78,8 @@
         "S4_ETF_TAPE": -0.5
       },
       "status": "OK",
-      "provider": "",
-      "fallback_reason": ""
+      "provider": "deepseek",
+      "fallback_reason": "prefer_deepseek"
     },
     {
       "sector": "Consumer Defensive",
@@ -104,8 +104,8 @@
         "S4_ETF_TAPE": 0.0
       },
       "status": "OK",
-      "provider": "",
-      "fallback_reason": ""
+      "provider": "deepseek",
+      "fallback_reason": "prefer_deepseek"
     },
     {
       "sector": "Energy",
@@ -130,8 +130,8 @@
         "S4_ETF_TAPE": -0.5
       },
       "status": "OK",
-      "provider": "",
-      "fallback_reason": ""
+      "provider": "deepseek",
+      "fallback_reason": "prefer_deepseek"
     },
     {
       "sector": "Financial",
@@ -156,8 +156,8 @@
         "S4_ETF_TAPE": -0.5
       },
       "status": "OK",
-      "provider": "",
-      "fallback_reason": ""
+      "provider": "deepseek",
+      "fallback_reason": "prefer_deepseek"
     },
     {
       "sector": "Healthcare",
@@ -182,8 +182,8 @@
         "S4_ETF_TAPE": -0.5
       },
       "status": "OK",
-      "provider": "",
-      "fallback_reason": ""
+      "provider": "deepseek",
+      "fallback_reason": "prefer_deepseek"
     },
     {
       "sector": "Industrials",
@@ -208,8 +208,8 @@
         "S4_ETF_TAPE": 0.0
       },
       "status": "OK",
-      "provider": "",
-      "fallback_reason": ""
+      "provider": "deepseek",
+      "fallback_reason": "prefer_deepseek"
     },
     {
       "sector": "Real Estate",
@@ -234,8 +234,8 @@
         "S4_ETF_TAPE": -1.0
       },
       "status": "OK",
-      "provider": "",
-      "fallback_reason": ""
+      "provider": "deepseek",
+      "fallback_reason": "prefer_deepseek"
     },
     {
       "sector": "Technology",
@@ -260,8 +260,8 @@
         "S4_ETF_TAPE": 1.0
       },
       "status": "OK",
-      "provider": "",
-      "fallback_reason": ""
+      "provider": "deepseek",
+      "fallback_reason": "prefer_deepseek"
     },
     {
       "sector": "Utilities",
@@ -286,8 +286,8 @@
         "S4_ETF_TAPE": -0.5
       },
       "status": "OK",
-      "provider": "",
-      "fallback_reason": ""
+      "provider": "deepseek",
+      "fallback_reason": "prefer_deepseek"
     }
   ]
 }

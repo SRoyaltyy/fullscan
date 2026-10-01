@@ -1,11 +1,11 @@
 {
   "date": "2026-10-01",
-  "generated_at": "2026-10-01T06:07:56.142603-04:00",
+  "generated_at": "2026-10-01T06:08:01.564071-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
-    "ok": 4,
-    "partial": 3,
+    "ok": 3,
+    "partial": 4,
     "fail": 1,
     "n": 8
   },
@@ -41,31 +41,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "events",
-      "title": "Event scanner (primary)",
-      "date": "2026-10-01",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-01T05:49:59.444695-04:00",
-      "files": [
-        {
-          "path": "01_daily/events/2026-10-01_events.json",
-          "ok": true,
-          "reason": "",
-          "size": 21486,
-          "preview": "20 events \u00b7 US\u2013Iran war: ceasefire talks stall, Trump rejects Iran's 7-day proposa | Brent crude tops $100 then slips below $98 on Iran-talk swings | September jobs report (NFP) \u2014 consensus ~84k, U3 ~4.1% | OPEC+ ministerial meeting \u2014 output policy decision | FOMC minutes of the September 15\u201316 hike meeting | PepsiCo Q3 2026 earnings"
-        },
-        {
-          "path": "01_daily/events/2026-10-01_events.md",
-          "ok": true,
-          "reason": "",
-          "size": 7889,
-          "preview": "# Event Scan \u2014 2026-10-01\n- events tracked: **20** (via repair, repaired)\n- uncertainty: **elevated**\n- summary: Markets are dominated by the US\u2013Iran war and oil above $100, with ceasefire talks stalled after Trump rejected Iran's 7-day proposal. The Fed's September hike to 3.75\u20134.00% and ~73% odds of another move on Oct 27\u201328 make the upcoming NFP (Oct 2) and CPI (Oct 13\u201314) pivotal. US\u2013China trade tensions eased via a truce extension and a $60bn tariff-relief list, while China's mini-stimulus aims to secure its GDP target. Q3 earnings season kicks off with PepsiCo, big banks, UnitedHealth and ASML, and Micron's record results validated the AI memory trade. Key idiosyncratic risks include a Boeing SPEEA strike and OPEC+ output policy."
-        }
-      ],
-      "preview": "20 events \u00b7 US\u2013Iran war: ceasefire talks stall, Trump rejects Iran's 7-day proposa | Brent crude tops $100 then slips below $98 on Iran-talk swings | September jobs report (NFP) \u2014 consensus ~84k, U3 ~4.1% | OPEC+ ministerial meeting \u2014 output policy decision | FOMC minutes of the September 15\u201316 hike meeting | PepsiCo Q3 2026 earnings \u00b7 # Event Scan \u2014 2026-10-01\n- events tracked: **20** (via repair, repaired)\n- uncertainty: **elevated**\n- summary: Markets are dominated by the US\u2013Iran war and oil above $100, with ceasefire talks stalled after Trump rejected Iran's 7-day proposal. The Fed's September hike to 3.75\u20134.00% and ~73% odds of another move on Oct 27\u201328 make the upcoming NFP (Oct 2) and CPI (Oct 13\u201314) pivotal. US\u2013China trade tensions eased via a truce extension and a $60bn tariff-relief list, while China's mini-stimulus aims to secure its GDP target. Q3 earnings season kicks off with PepsiCo, big banks, UnitedHealth and ASML, and Micron's record results validated the AI memory trade. Key idiosyncratic risks include a Boeing SPEEA strike and OPEC+ output policy."
-    },
     {
       "key": "news_actions",
       "title": "News actions",
@@ -352,6 +327,24 @@
         }
       ],
       "preview": "11/11 sector predicts ok: basic_materials, communication_services, consumer_cyclical, consumer_defensive, energy, financial, healthcare, industrials"
+    },
+    {
+      "key": "sector_board",
+      "title": "Sector board",
+      "date": "2026-10-01",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-01T06:08:01.241353-04:00",
+      "files": [
+        {
+          "path": "01_daily/sectors/2026-10-01/_board.json",
+          "ok": true,
+          "reason": "",
+          "size": 8253,
+          "preview": "keys: date, generated_at, summary, sectors"
+        }
+      ],
+      "preview": "keys: date, generated_at, summary, sectors"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
