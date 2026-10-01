@@ -1,6 +1,6 @@
 {
   "date": "2026-10-01",
-  "generated_at": "2026-10-01T07:22:19.963476-04:00",
+  "generated_at": "2026-10-01T12:46:22.197069-04:00",
   "n": 351,
   "n_ok": 350,
   "families": [
@@ -23,8 +23,8 @@
           "side": "long",
           "predict": "UP",
           "px": 57.03,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "CNR",
@@ -32,8 +32,8 @@
           "side": "long",
           "predict": "UP",
           "px": 88.4,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "NTAP",
@@ -41,8 +41,8 @@
           "side": "long",
           "predict": "UP",
           "px": 204.5,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "BAND",
@@ -50,8 +50,8 @@
           "side": "long",
           "predict": "UP",
           "px": 61.34,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "NTSK",
@@ -59,8 +59,8 @@
           "side": "long",
           "predict": "UP",
           "px": 18.06,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         }
       ],
       "sell": [
@@ -70,8 +70,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 2.25,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "FCEL",
@@ -79,8 +79,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 16.16,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "OKLO",
@@ -88,8 +88,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 37.26,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "EOSE",
@@ -97,8 +97,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 3.1,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "POWL",
@@ -106,8 +106,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 194.91,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "TE",
@@ -115,8 +115,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 3.62,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "SKYX",
@@ -124,8 +124,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 1.17,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "AMSC",
@@ -133,8 +133,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 29.0,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         }
       ],
       "buy_n": 5,
@@ -158,8 +158,8 @@
           "side": "long",
           "predict": "UP",
           "px": 57.03,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "CNR",
@@ -167,8 +167,8 @@
           "side": "long",
           "predict": "UP",
           "px": 88.4,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "NTAP",
@@ -176,8 +176,8 @@
           "side": "long",
           "predict": "UP",
           "px": 204.5,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "BAND",
@@ -185,8 +185,8 @@
           "side": "long",
           "predict": "UP",
           "px": 61.34,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "NTSK",
@@ -194,8 +194,8 @@
           "side": "long",
           "predict": "UP",
           "px": 18.06,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         }
       ],
       "sell": [
@@ -205,8 +205,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 2.25,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "FCEL",
@@ -214,8 +214,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 16.16,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "OKLO",
@@ -223,8 +223,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 37.26,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "EOSE",
@@ -232,8 +232,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 3.1,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "POWL",
@@ -241,8 +241,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 194.91,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "TE",
@@ -250,8 +250,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 3.62,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "SKYX",
@@ -259,8 +259,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 1.17,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "AMSC",
@@ -268,8 +268,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 29.0,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         }
       ],
       "buy_n": 5,
@@ -293,8 +293,8 @@
           "side": "long",
           "predict": "UP",
           "px": 16.89,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "AVPT",
@@ -302,8 +302,8 @@
           "side": "long",
           "predict": "UP",
           "px": 13.67,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "BAND",
@@ -311,8 +311,8 @@
           "side": "long",
           "predict": "UP",
           "px": 61.34,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "SONO",
@@ -320,8 +320,8 @@
           "side": "long",
           "predict": "UP",
           "px": 17.18,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "CNR",
@@ -329,8 +329,8 @@
           "side": "long",
           "predict": "UP",
           "px": 88.4,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "BKR",
@@ -338,8 +338,8 @@
           "side": "long",
           "predict": "UP",
           "px": 57.03,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         }
       ],
       "sell": [
@@ -349,8 +349,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 6.96,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "BETR",
@@ -358,8 +358,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 10.08,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "LDI",
@@ -367,8 +367,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 0.64,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "ARE",
@@ -376,8 +376,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 48.57,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "AUR",
@@ -385,8 +385,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 5.33,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "STEP",
@@ -394,8 +394,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 43.11,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "RC",
@@ -403,8 +403,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 1.32,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "CMTG",
@@ -412,8 +412,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 1.27,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "OI",
@@ -421,8 +421,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 5.8,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "LCID",
@@ -430,8 +430,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 3.91,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "BORR",
@@ -439,8 +439,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 4.05,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "ACDC",
@@ -448,8 +448,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 4.49,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "FLUT",
@@ -457,8 +457,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 76.9,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "CWH",
@@ -466,8 +466,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 5.17,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "QFIN",
@@ -475,8 +475,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 7.07,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         }
       ],
       "buy_n": 6,
@@ -500,8 +500,8 @@
           "side": "long",
           "predict": "UP",
           "px": 16.89,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "AVPT",
@@ -509,8 +509,8 @@
           "side": "long",
           "predict": "UP",
           "px": 13.67,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "BAND",
@@ -518,8 +518,8 @@
           "side": "long",
           "predict": "UP",
           "px": 61.34,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "SONO",
@@ -527,8 +527,8 @@
           "side": "long",
           "predict": "UP",
           "px": 17.18,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "CNR",
@@ -536,8 +536,8 @@
           "side": "long",
           "predict": "UP",
           "px": 88.4,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "BKR",
@@ -545,8 +545,8 @@
           "side": "long",
           "predict": "UP",
           "px": 57.03,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         }
       ],
       "sell": [
@@ -556,8 +556,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 6.96,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "BETR",
@@ -565,8 +565,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 10.08,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "LDI",
@@ -574,8 +574,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 0.64,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "ARE",
@@ -583,8 +583,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 48.57,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "AUR",
@@ -592,8 +592,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 5.33,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "STEP",
@@ -601,8 +601,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 43.11,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "RC",
@@ -610,8 +610,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 1.32,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "CMTG",
@@ -619,8 +619,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 1.27,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "OI",
@@ -628,8 +628,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 5.8,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "LCID",
@@ -637,8 +637,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 3.91,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "BORR",
@@ -646,8 +646,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 4.05,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "ACDC",
@@ -655,8 +655,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 4.49,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "FLUT",
@@ -664,8 +664,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 76.9,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "CWH",
@@ -673,8 +673,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 5.17,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "QFIN",
@@ -682,8 +682,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 7.07,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         }
       ],
       "buy_n": 6,
@@ -707,8 +707,8 @@
           "side": "long",
           "predict": "UP",
           "px": 16.89,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "AVPT",
@@ -716,8 +716,8 @@
           "side": "long",
           "predict": "UP",
           "px": 13.67,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "BAND",
@@ -725,8 +725,8 @@
           "side": "long",
           "predict": "UP",
           "px": 61.34,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "SONO",
@@ -734,8 +734,8 @@
           "side": "long",
           "predict": "UP",
           "px": 17.18,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "CNR",
@@ -743,8 +743,8 @@
           "side": "long",
           "predict": "UP",
           "px": 88.4,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "BKR",
@@ -752,8 +752,8 @@
           "side": "long",
           "predict": "UP",
           "px": 57.03,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         }
       ],
       "sell": [
@@ -763,8 +763,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 6.96,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "BETR",
@@ -772,8 +772,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 10.08,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "LDI",
@@ -781,8 +781,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 0.64,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "AUR",
@@ -790,8 +790,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 5.33,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "RC",
@@ -799,8 +799,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 1.32,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "STEP",
@@ -808,8 +808,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 43.11,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "CMTG",
@@ -817,8 +817,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 1.27,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "CWH",
@@ -826,8 +826,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 5.17,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "HIVE",
@@ -835,8 +835,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 3.04,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "ACDC",
@@ -844,8 +844,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 4.49,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "LCID",
@@ -853,8 +853,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 3.91,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "ARE",
@@ -862,8 +862,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 48.57,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "OI",
@@ -871,8 +871,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 5.8,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "BORR",
@@ -880,8 +880,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 4.05,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "FLUT",
@@ -889,8 +889,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 76.9,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         }
       ],
       "buy_n": 6,
@@ -914,8 +914,8 @@
           "side": "long",
           "predict": "UP",
           "px": 16.89,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "AVPT",
@@ -923,8 +923,8 @@
           "side": "long",
           "predict": "UP",
           "px": 13.67,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "BAND",
@@ -932,8 +932,8 @@
           "side": "long",
           "predict": "UP",
           "px": 61.34,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "SONO",
@@ -941,8 +941,8 @@
           "side": "long",
           "predict": "UP",
           "px": 17.18,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "CNR",
@@ -950,8 +950,8 @@
           "side": "long",
           "predict": "UP",
           "px": 88.4,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "BKR",
@@ -959,8 +959,8 @@
           "side": "long",
           "predict": "UP",
           "px": 57.03,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         }
       ],
       "sell": [
@@ -970,8 +970,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 6.96,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "BETR",
@@ -979,8 +979,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 10.08,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "LDI",
@@ -988,8 +988,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 0.64,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "AUR",
@@ -997,8 +997,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 5.33,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "RC",
@@ -1006,8 +1006,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 1.32,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "STEP",
@@ -1015,8 +1015,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 43.11,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "CMTG",
@@ -1024,8 +1024,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 1.27,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "CWH",
@@ -1033,8 +1033,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 5.17,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "HIVE",
@@ -1042,8 +1042,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 3.04,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "ACDC",
@@ -1051,8 +1051,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 4.49,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "LCID",
@@ -1060,8 +1060,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 3.91,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "ARE",
@@ -1069,8 +1069,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 48.57,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "OI",
@@ -1078,8 +1078,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 5.8,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "BORR",
@@ -1087,8 +1087,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 4.05,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "FLUT",
@@ -1096,8 +1096,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 76.9,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         }
       ],
       "buy_n": 6,
@@ -1121,8 +1121,8 @@
           "side": "long",
           "predict": "UP",
           "px": 16.89,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "AVPT",
@@ -1130,8 +1130,8 @@
           "side": "long",
           "predict": "UP",
           "px": 13.67,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "BAND",
@@ -1139,8 +1139,8 @@
           "side": "long",
           "predict": "UP",
           "px": 61.34,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "SONO",
@@ -1148,8 +1148,8 @@
           "side": "long",
           "predict": "UP",
           "px": 17.18,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "CNR",
@@ -1157,8 +1157,8 @@
           "side": "long",
           "predict": "UP",
           "px": 88.4,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "BKR",
@@ -1166,8 +1166,8 @@
           "side": "long",
           "predict": "UP",
           "px": 57.03,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         }
       ],
       "sell": [
@@ -1177,8 +1177,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 6.96,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "LDI",
@@ -1186,8 +1186,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 0.64,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "BETR",
@@ -1195,8 +1195,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 10.08,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "AUR",
@@ -1204,8 +1204,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 5.33,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "STEP",
@@ -1213,8 +1213,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 43.11,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "RC",
@@ -1222,8 +1222,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 1.32,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "HIVE",
@@ -1231,8 +1231,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 3.04,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "CMTG",
@@ -1240,8 +1240,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 1.27,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "CWH",
@@ -1249,8 +1249,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 5.17,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "LCID",
@@ -1258,8 +1258,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 3.91,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "ACDC",
@@ -1267,8 +1267,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 4.49,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "OI",
@@ -1276,8 +1276,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 5.8,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "OPEN",
@@ -1285,8 +1285,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 2.42,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "BORR",
@@ -1294,8 +1294,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 4.05,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "FLUT",
@@ -1303,8 +1303,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 76.9,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         }
       ],
       "buy_n": 6,
@@ -1328,8 +1328,8 @@
           "side": "long",
           "predict": "UP",
           "px": 16.89,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "AVPT",
@@ -1337,8 +1337,8 @@
           "side": "long",
           "predict": "UP",
           "px": 13.67,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "BAND",
@@ -1346,8 +1346,8 @@
           "side": "long",
           "predict": "UP",
           "px": 61.34,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "SONO",
@@ -1355,8 +1355,8 @@
           "side": "long",
           "predict": "UP",
           "px": 17.18,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "CNR",
@@ -1364,8 +1364,8 @@
           "side": "long",
           "predict": "UP",
           "px": 88.4,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "BKR",
@@ -1373,8 +1373,8 @@
           "side": "long",
           "predict": "UP",
           "px": 57.03,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         }
       ],
       "sell": [
@@ -1384,8 +1384,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 6.96,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "LDI",
@@ -1393,8 +1393,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 0.64,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "BETR",
@@ -1402,8 +1402,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 10.08,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "AUR",
@@ -1411,8 +1411,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 5.33,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "STEP",
@@ -1420,8 +1420,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 43.11,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "RC",
@@ -1429,8 +1429,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 1.32,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "HIVE",
@@ -1438,8 +1438,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 3.04,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "CMTG",
@@ -1447,8 +1447,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 1.27,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "CWH",
@@ -1456,8 +1456,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 5.17,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "LCID",
@@ -1465,8 +1465,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 3.91,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "ACDC",
@@ -1474,8 +1474,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 4.49,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "OI",
@@ -1483,8 +1483,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 5.8,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "OPEN",
@@ -1492,8 +1492,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 2.42,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "BORR",
@@ -1501,8 +1501,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 4.05,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "FLUT",
@@ -1510,8 +1510,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 76.9,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         }
       ],
       "buy_n": 6,
@@ -1535,8 +1535,8 @@
           "side": "long",
           "predict": "UP",
           "px": 16.89,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "AVPT",
@@ -1544,8 +1544,8 @@
           "side": "long",
           "predict": "UP",
           "px": 13.67,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "BAND",
@@ -1553,8 +1553,8 @@
           "side": "long",
           "predict": "UP",
           "px": 61.34,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "SONO",
@@ -1562,8 +1562,8 @@
           "side": "long",
           "predict": "UP",
           "px": 17.18,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "CNR",
@@ -1571,8 +1571,8 @@
           "side": "long",
           "predict": "UP",
           "px": 88.4,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "BKR",
@@ -1580,8 +1580,8 @@
           "side": "long",
           "predict": "UP",
           "px": 57.03,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         }
       ],
       "sell": [
@@ -1591,8 +1591,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 6.96,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "LDI",
@@ -1600,8 +1600,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 0.64,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "BETR",
@@ -1609,8 +1609,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 10.08,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "AUR",
@@ -1618,8 +1618,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 5.33,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "STEP",
@@ -1627,8 +1627,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 43.11,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "RC",
@@ -1636,8 +1636,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 1.32,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "HIVE",
@@ -1645,8 +1645,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 3.04,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "CMTG",
@@ -1654,8 +1654,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 1.27,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "CWH",
@@ -1663,8 +1663,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 5.17,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "LCID",
@@ -1672,8 +1672,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 3.91,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "OI",
@@ -1681,8 +1681,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 5.8,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "OPEN",
@@ -1690,8 +1690,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 2.42,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "ACDC",
@@ -1699,8 +1699,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 4.49,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "HUT",
@@ -1708,8 +1708,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 93.75,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "FWDI",
@@ -1717,8 +1717,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 8.12,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         }
       ],
       "buy_n": 6,
@@ -1742,8 +1742,8 @@
           "side": "long",
           "predict": "UP",
           "px": 16.89,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "AVPT",
@@ -1751,8 +1751,8 @@
           "side": "long",
           "predict": "UP",
           "px": 13.67,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "BAND",
@@ -1760,8 +1760,8 @@
           "side": "long",
           "predict": "UP",
           "px": 61.34,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "SONO",
@@ -1769,8 +1769,8 @@
           "side": "long",
           "predict": "UP",
           "px": 17.18,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "CNR",
@@ -1778,8 +1778,8 @@
           "side": "long",
           "predict": "UP",
           "px": 88.4,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "BKR",
@@ -1787,8 +1787,8 @@
           "side": "long",
           "predict": "UP",
           "px": 57.03,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         }
       ],
       "sell": [
@@ -1798,8 +1798,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 6.96,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "LDI",
@@ -1807,8 +1807,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 0.64,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "BETR",
@@ -1816,8 +1816,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 10.08,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "AUR",
@@ -1825,8 +1825,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 5.33,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "STEP",
@@ -1834,8 +1834,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 43.11,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "RC",
@@ -1843,8 +1843,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 1.32,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "HIVE",
@@ -1852,8 +1852,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 3.04,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "CMTG",
@@ -1861,8 +1861,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 1.27,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "CWH",
@@ -1870,8 +1870,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 5.17,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "LCID",
@@ -1879,8 +1879,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 3.91,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "OI",
@@ -1888,8 +1888,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 5.8,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "OPEN",
@@ -1897,8 +1897,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 2.42,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "ACDC",
@@ -1906,8 +1906,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 4.49,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "HUT",
@@ -1915,8 +1915,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 93.75,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "FWDI",
@@ -1924,8 +1924,8 @@
           "side": "short",
           "predict": "DOWN",
           "px": 8.12,
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         }
       ],
       "buy_n": 6,
@@ -1965,48 +1965,48 @@
           "side": "long",
           "px": 185.73,
           "predict": "UP",
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "KSPI",
           "side": "long",
           "px": 95.82,
           "predict": "UP",
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "IOT",
           "side": "long",
           "px": 37.93,
           "predict": "UP",
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "AVPT",
           "side": "long",
           "px": 13.67,
           "predict": "UP",
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "SONO",
           "side": "long",
           "px": 17.18,
           "predict": "UP",
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "RELY",
           "side": "long",
           "px": 21.89,
           "predict": "UP",
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         }
       ],
       "sell": [
@@ -2015,16 +2015,16 @@
           "side": "long",
           "px": 2.25,
           "predict": "UP",
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         },
         {
           "ticker": "BZFD",
           "side": "long",
           "px": 1.06,
           "predict": "UP",
-          "px_src": "session_export",
-          "px_asof": "2026-10-01T07:22:19.966266-04:00"
+          "px_src": "session_export+finviz_session: No module named 'requests'",
+          "px_asof": "2026-10-01T12:46:22.197625-04:00"
         }
       ],
       "buy_n": 6,
@@ -2050,7 +2050,7 @@
             "side": "long",
             "open": null,
             "px": 185.73,
-            "px_src": "session_export",
+            "px_src": "session_export+finviz_session: No module named 'requests'",
             "low": null,
             "scoops": {
               "0.5": {
@@ -2086,7 +2086,7 @@
             "side": "long",
             "open": null,
             "px": 95.82,
-            "px_src": "session_export",
+            "px_src": "session_export+finviz_session: No module named 'requests'",
             "low": null,
             "scoops": {
               "0.5": {
@@ -2122,7 +2122,7 @@
             "side": "long",
             "open": null,
             "px": 37.93,
-            "px_src": "session_export",
+            "px_src": "session_export+finviz_session: No module named 'requests'",
             "low": null,
             "scoops": {
               "0.5": {
@@ -2158,7 +2158,7 @@
             "side": "long",
             "open": null,
             "px": 13.67,
-            "px_src": "session_export",
+            "px_src": "session_export+finviz_session: No module named 'requests'",
             "low": null,
             "scoops": {
               "0.5": {
@@ -2194,7 +2194,7 @@
             "side": "long",
             "open": null,
             "px": 17.18,
-            "px_src": "session_export",
+            "px_src": "session_export+finviz_session: No module named 'requests'",
             "low": null,
             "scoops": {
               "0.5": {
@@ -2230,7 +2230,7 @@
             "side": "long",
             "open": null,
             "px": 21.89,
-            "px_src": "session_export",
+            "px_src": "session_export+finviz_session: No module named 'requests'",
             "low": null,
             "scoops": {
               "0.5": {
@@ -2266,7 +2266,7 @@
             "side": "long",
             "open": null,
             "px": 2.25,
-            "px_src": "session_export",
+            "px_src": "session_export+finviz_session: No module named 'requests'",
             "low": null,
             "scoops": {
               "0.5": {
@@ -2302,7 +2302,7 @@
             "side": "long",
             "open": null,
             "px": 1.06,
-            "px_src": "session_export",
+            "px_src": "session_export+finviz_session: No module named 'requests'",
             "low": null,
             "scoops": {
               "0.5": {
@@ -8489,11 +8489,11 @@
     "note": "Research factor-mine sleeves may use the KEEP aisle + Clock-B gates. Webull HOT4 (union_hot_n4_h1) uses the Factor Mine cash-start recipe (pick_day on the session panel) for buys and continuous-book list-drop sells. flatten_robust stays LIVE money."
   },
   "quote": {
-    "src": "session_export",
-    "at": "2026-10-01T07:22:19.966266-04:00",
-    "after_open": false,
+    "src": "session_export+finviz_session: No module named 'requests'",
+    "at": "2026-10-01T12:46:22.197625-04:00",
+    "after_open": true,
     "n": 11668,
-    "error": null,
+    "error": "finviz_session: No module named 'requests'",
     "clock_rule": "px is Finviz Elite Price from a fresh post-09:30 Overview export when live is allowed. Theme Radar close dump and yesterday Price are never live."
   },
   "decision_readiness": {
@@ -8513,6 +8513,6 @@
       "data/factor_mine/panel.json": "4e0e87ff406ee112317bbf7222942e7d945c30730482f18abe8c71d58f39ec79"
     },
     "blockers": [],
-    "completed_at": "2026-10-01T07:22:22.293501-04:00"
+    "completed_at": "2026-10-01T12:46:23.946697-04:00"
   }
 }
