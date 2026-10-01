@@ -25,7 +25,15 @@ jobs:
         env:
           JEV_API_KEY: ${{ secrets.JEV_API_KEY }}
           JEV_MODEL: jev-1.13.0
-        run: python -m src.jev_acceptance --input 00_grounding/jev_lane/latest_gold.json --output validation/jev_lane_report.json --policy lane-hop0
+        run: |
+          python - <<'PYTHON'
+          import json
+          from src.jev_acceptance import run
+          data=json.load(open('00_grounding/jev_lane/latest_gold.json'))
+          output=data.get('evaluation_output','validation/jev_lane_report.json')
+          assert output in {'validation/jev_lane_report.json','validation/jev_lane_development_v2_report.json'}
+          run('00_grounding/jev_lane/latest_gold.json',output,policy='lane-hop0')
+          PYTHON
       - name: Publish all records and status
         run: python -m src.jev_lane_publish
       - name: Preserve all completed evaluations
