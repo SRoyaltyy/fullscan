@@ -2,7 +2,7 @@ name: JEV rubric development experiments
 on:
   push:
     branches: [codex/jev-news-triage]
-    paths: ['src/jev_experiments.py', '.github/workflows/jev_experiments.yml']
+    paths: ['src/jev_recovery.py', '.github/workflows/jev_experiments.yml']
 permissions:
   contents: write
 jobs:
@@ -23,16 +23,16 @@ jobs:
         env:
           JEV_API_KEY: ${{ secrets.JEV_API_KEY }}
           JEV_MODEL: jev-1.13.0
-        run: python -m src.jev_experiments --output validation/jev_development_experiments.json
+        run: python -m src.jev_recovery --output validation/jev_recovery_development.json
       - uses: actions/upload-artifact@v4
         with:
           name: jev-development-experiments
-          path: validation/jev_development_experiments.json
+          path: validation/jev_recovery_development.json
       - name: Save feature branch results
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add validation/jev_development_experiments.json
+          git add validation/jev_recovery_development.json
           git diff --cached --quiet && exit 0
           git commit -m 'Record development rubric comparisons [skip ci]'
           git push origin HEAD:codex/jev-news-triage
